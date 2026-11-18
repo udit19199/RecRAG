@@ -1,0 +1,63 @@
+[
+  {"id": "cae5f935c0b1af7e", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "stated", "evidence": [
+      {"item": 2, "quote": "After already raising its main interest rate to the highest level since 2001"},
+      {"item": 1, "quote": "The Fed put such pressure on the economy intentionally, hoping to starve inflation of its fuel."}
+    ]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "166cd669d6286be7", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [
+      {"item": 5, "quote": "In the wake of the Wallabies’ World Cup flop, the Queensland Rugby Union have reaffirmed their position"}
+    ]},
+    {"fact": "0.1", "status": "stated", "evidence": [
+      {"item": 5, "quote": "the Queensland Rugby Union have reaffirmed their position"}
+    ]},
+    {"fact": "0.2", "status": "stated", "evidence": [
+      {"item": 5, "quote": "they are committed to moving to a centralised high-performance model"}
+    ]},
+    {"fact": "0.3", "status": "stated", "evidence": [
+      {"item": 5, "quote": "but won’t follow the NSW Waratahs by handing over the keys to Rugby Australia."}
+    ]},
+    {"fact": "0.4", "status": "stated", "evidence": [
+      {"item": 10, "quote": "By doing so, the NSW Waratahs, who were on the brink of insolvency, handed over their commercial and high-performance property."},
+      {"item": 10, "quote": "the New South Wales Rugby Union was in the latter stages of handing over their license to RA."}
+    ]},
+    {"fact": "1.0", "status": "stated", "evidence": [
+      {"item": 9, "quote": "He will also be tasked with “integrating” the programs"}
+    ]},
+    {"fact": "1.1", "status": "stated", "evidence": [
+      {"item": 9, "quote": "with RA trying to centralise all of the Super Rugby’s high-performance programs."}
+    ]}
+  ]},
+  {"id": "b4857857f648590f", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [
+      {"item": 2, "quote": "cheering emphatically when No. 87 scored a touchdown in the first game she attended last month."}
+    ]},
+    {"fact": "1.0", "status": "stated", "evidence": [
+      {"item": 3, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}
+    ]},
+    {"fact": "1.1", "status": "stated", "evidence": [
+      {"item": 3, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}
+    ]},
+    {"fact": "1.2", "status": "stated", "evidence": [
+      {"item": 3, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}
+    ]},
+    {"fact": "2.0", "status": "stated", "evidence": [
+      {"item": 1, "quote": "This all started when Travis very adorably put me on blast on his podcast"},
+      {"item": 1, "quote": "she was already dating the NFL star"}
+    ]},
+    {"fact": "2.1", "status": "stated", "evidence": [
+      {"item": 1, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}
+    ]},
+    {"fact": "2.2", "status": "stated", "evidence": [
+      {"item": 1, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."},
+      {"item": 1, "quote": "she was already dating the NFL star"}
+    ]}
+  ]}
+]

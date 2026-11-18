@@ -1,0 +1,546 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "05765dda5fa7881d",
+   "kind": "answer",
+   "question": "Where was the air-cooled version of a weapon system used on the HMAS \"Narani\" found?",
+   "gold_answers": [
+    "World War I fighter aircraft."
+   ],
+   "model_answer": "Allied World War I fighter aircraft"
+  },
+  {
+   "id": "257c95d4b40ad102",
+   "kind": "answer",
+   "question": "What country of origin does  Dana Ivey and Two Weeks Notice have in common?",
+   "gold_answers": [
+    "American"
+   ],
+   "model_answer": "United States"
+  },
+  {
+   "id": "e648c23713c74cb2",
+   "kind": "answer",
+   "question": "Which dialect spoken in the province of Scania calls Spettekaka, \"spiddekaga\"?",
+   "gold_answers": [
+    "Scanian dialects"
+   ],
+   "model_answer": "Scanian dialect"
+  },
+  {
+   "id": "7dc6e348493284c8",
+   "kind": "answer",
+   "question": "That Darn Cat and Honey, I Blew Up the Kid are both what?",
+   "gold_answers": [
+    "comedy"
+   ],
+   "model_answer": "Disney comedy films"
+  },
+  {
+   "id": "f44b0d378d9b7d42",
+   "kind": "answer",
+   "question": "Who was Chamberlain and Colonel of the military staff of The Merrie Monarch?",
+   "gold_answers": [
+    "Colonel Charles Hastings Judd"
+   ],
+   "model_answer": "Charles Gerard, 1st Earl of Macclesfield"
+  },
+  {
+   "id": "d1f18b19fba9ae10",
+   "kind": "answer",
+   "question": "Who starred in more films Margaret Landon or Elizabeth Taylor?",
+   "gold_answers": [
+    "Dame Elizabeth Rosemond Taylor"
+   ],
+   "model_answer": "Elizabeth Taylor"
+  },
+  {
+   "id": "830e22747cdb7eaf",
+   "kind": "answer",
+   "question": "What is in both the Lithocarpus and Duranta species?",
+   "gold_answers": [
+    "trees"
+   ],
+   "model_answer": "Plants"
+  },
+  {
+   "id": "e614911ce2fb319b",
+   "kind": "answer",
+   "question": "What current NHL team owner played for the team that won the Stanley cup in 1992?",
+   "gold_answers": [
+    "Mario Lemieux"
+   ],
+   "model_answer": "Mario Lemieux — Pittsburgh Penguins"
+  },
+  {
+   "id": "bc2499cbe3d86cd6",
+   "kind": "answer",
+   "question": "Both Ralph Bakshi and Béla Gaál had what roll in film making?",
+   "gold_answers": [
+    "film director"
+   ],
+   "model_answer": "Film directors"
+  },
+  {
+   "id": "fc894aa9be987322",
+   "kind": "answer",
+   "question": "Both Mulled wine and Blue Lagoon are considered primarily alcoholic or non-alcoholic?",
+   "gold_answers": [
+    "alcoholic"
+   ],
+   "model_answer": "Primarily alcoholic\n"
+  },
+  {
+   "id": "d548ab34bcb94c16",
+   "kind": "answer",
+   "question": "Pirates Plunge, at the Grace O'Malley-inspired Pirates Adventure Park in Westport, holds which notable record?",
+   "gold_answers": [
+    "first flume ride in Ireland"
+   ],
+   "model_answer": "Ireland’s first flume ride\n"
+  },
+  {
+   "id": "d2a7d1bdeb23f7a3",
+   "kind": "answer",
+   "question": "What star if the Burbs was Canadian?",
+   "gold_answers": [
+    "Richard \"Rick\" Ducommun"
+   ],
+   "model_answer": "Rick Ducommun"
+  },
+  {
+   "id": "352fdfd10759fa7f",
+   "kind": "answer",
+   "question": "Which became a Cathedral first St Chad's Cathedral, Birmingham or Chelmsford Cathedral?",
+   "gold_answers": [
+    "Metropolitan Cathedral Church and Basilica of Saint Chad"
+   ],
+   "model_answer": "St Chad’s Cathedral, Birmingham"
+  },
+  {
+   "id": "591fa81296aeb188",
+   "kind": "answer",
+   "question": "Operalia, The World Opera Competition helped launch the career of an operatic soprano of what nationality?",
+   "gold_answers": [
+    "Bulgarian"
+   ],
+   "model_answer": "American"
+  },
+  {
+   "id": "637ee9e7c7a585b5",
+   "kind": "answer",
+   "question": "What is the name of the largest shipping facility in the Northeastern United States, where the Boston Red Socks play?",
+   "gold_answers": [
+    "Port of Boston"
+   ],
+   "model_answer": "Fenway Park"
+  },
+  {
+   "id": "947bf5cf4837c9c3",
+   "kind": "answer",
+   "question": "Martin Flavin and Peter Benchley both did what occupation?",
+   "gold_answers": [
+    "novelist"
+   ],
+   "model_answer": "Authors"
+  },
+  {
+   "id": "87a84bae5ce15628",
+   "kind": "answer",
+   "question": "What made the man who abolished the Consell in 1718 resume the throne?",
+   "gold_answers": [
+    "upon his son's death"
+   ],
+   "model_answer": "His son Louis’s death."
+  },
+  {
+   "id": "983a5bd7aa68953c",
+   "kind": "answer",
+   "question": "That Darn Cat and Honey, I Blew Up the Kid are both what?",
+   "gold_answers": [
+    "comedy"
+   ],
+   "model_answer": "American comedy films"
+  },
+  {
+   "id": "a7e010bc6f691b8d",
+   "kind": "answer",
+   "question": "The Cat in the Hat was a comedy film directed by which production designer and director?",
+   "gold_answers": [
+    "Robert W. \"Bo\" Welch III"
+   ],
+   "model_answer": "Bo Welch"
+  },
+  {
+   "id": "e881e62d42ec72f9",
+   "kind": "answer",
+   "question": "What country does Haringey Heartlands and The Mall Wood Green have in common?",
+   "gold_answers": [
+    "London"
+   ],
+   "model_answer": "United Kingdom"
+  },
+  {
+   "id": "22ba7800955ea1de",
+   "kind": "answer",
+   "question": "Where are Catcha Lake and Hedley Mascot Mine located?",
+   "gold_answers": [
+    "British Columbia, Canada"
+   ],
+   "model_answer": "Catcha Lake is in Halifax Regional Municipality, Nova Scotia; Hedley Mascot Mine is in Hedley, British Columbia."
+  },
+  {
+   "id": "502300027867d486",
+   "kind": "answer",
+   "question": "Who has a longer middle name, Alice Walker or Michael Herr?",
+   "gold_answers": [
+    "Walker"
+   ],
+   "model_answer": "Alice Walker"
+  },
+  {
+   "id": "adecdc162d51794b",
+   "kind": "answer",
+   "question": "How many more singles titles did Kim Warwick win than Jorge Lozano?",
+   "gold_answers": [
+    "three singles titles"
+   ],
+   "model_answer": "2 titles"
+  },
+  {
+   "id": "041f5e32d607b632",
+   "kind": "answer",
+   "question": "Which occupations did Ralph Smart and Trey Parker have in common?",
+   "gold_answers": [
+    "producer, director, and writer"
+   ],
+   "model_answer": "Writer, director, and producer"
+  },
+  {
+   "id": "502cba94ce218225",
+   "kind": "answer",
+   "question": "What do the Church of St. Mary of the Spring and Hagia Irene have in common?",
+   "gold_answers": [
+    "Greek Eastern Orthodox church"
+   ],
+   "model_answer": "Both are Byzantine-era churches in Istanbul."
+  },
+  {
+   "id": "c4d6c9dea5afb4d5",
+   "kind": "answer",
+   "question": "Have singers Yang Yo-seob and Kim Tae-yeon both appeared in group bands?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both have appeared in groups."
+  },
+  {
+   "id": "37d0163379ecb7c0",
+   "kind": "answer",
+   "question": "Cherie Currie and Steve Augeri were both what?",
+   "gold_answers": [
+    "American musician"
+   ],
+   "model_answer": "Rock singers"
+  },
+  {
+   "id": "3729a36f3839e7b1",
+   "kind": "answer",
+   "question": "In what movie did the male star of a movie about a widowed 37-year-old woman also star in in the year 1993?",
+   "gold_answers": [
+    "\"Red Rock West\""
+   ],
+   "model_answer": "Deadfall"
+  },
+  {
+   "id": "3c9ec016e4def0fb",
+   "kind": "answer",
+   "question": "Dean Mills Reservoir is on the slopes of the hill located in what town?",
+   "gold_answers": [
+    "Rivington Moor"
+   ],
+   "model_answer": "Kingston"
+  },
+  {
+   "id": "ad3a754b91d62245",
+   "kind": "answer",
+   "question": "Who was born first D. Ross Lederman or Stefan Ruzowitzky?",
+   "gold_answers": [
+    "David Ross Lederman"
+   ],
+   "model_answer": "D. Ross Lederman"
+  },
+  {
+   "id": "0a187b92a6179c65",
+   "kind": "answer",
+   "question": "Are Eryngium and Arnebia in the same kingdom of life forms?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both are in the plant kingdom."
+  },
+  {
+   "id": "de7ecb8c7dd3e477",
+   "kind": "answer",
+   "question": "To what group of plants do both Dieffenbachia and Carlina belong?",
+   "gold_answers": [
+    "flowering plants"
+   ],
+   "model_answer": "Flowering plants (angiosperms)"
+  },
+  {
+   "id": "914341cea4fe708f",
+   "kind": "answer",
+   "question": "Who was the wife of the United States Army lieutenant general who received the Distinguished Service Cross, and was the first of his West Point class to be promoted to brigadier general, major general, and lieutenant general",
+   "gold_answers": [
+    "Julia Compton Moore"
+   ],
+   "model_answer": "Mary Elizabeth Mullen"
+  },
+  {
+   "id": "e3f125f5a38b3f28",
+   "kind": "answer",
+   "question": "What football club was owned by the singer of \"Grow Some Funk of Your Own\"?",
+   "gold_answers": [
+    "Watford Football Club"
+   ],
+   "model_answer": "Watford FC"
+  },
+  {
+   "id": "52b9743fd1617b8d",
+   "kind": "answer",
+   "question": "Bandit was built in 1988 by which Japanese amusement ride company that built roller coasters, giant wheels, carousels, flumes, dark rides, sky cycles and other amusement rides?",
+   "gold_answers": [
+    "TOGO company"
+   ],
+   "model_answer": "Togo International Co., Ltd."
+  },
+  {
+   "id": "8bbe5f035808aee4",
+   "kind": "answer",
+   "question": "What type of group does Pablo Carballo and Argentine Air Force have in common?",
+   "gold_answers": [
+    "military"
+   ],
+   "model_answer": "Military personnel"
+  },
+  {
+   "id": "e8f20ac100afd818",
+   "kind": "answer",
+   "question": "Are Giuseppe Verdi and Ambroise Thomas both Opera composers ?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both are opera composers."
+  },
+  {
+   "id": "f8a32d3ad4c16b15",
+   "kind": "answer",
+   "question": "Is Edison Sault Power Canal somehow linked with or used with the Cayuga–Seneca Canal?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No; they are separate canals."
+  },
+  {
+   "id": "46fb56b604613d98",
+   "kind": "answer",
+   "question": "Nicole Gordon won a silver medal with Sara Petersen int he women's doubles at a competition held in what city?",
+   "gold_answers": [
+    "Manchester"
+   ],
+   "model_answer": "Melbourne"
+  },
+  {
+   "id": "bd4d9109ccc4e319",
+   "kind": "answer",
+   "question": "Not Richard, But Dick was an album by the band formed in what city?",
+   "gold_answers": [
+    "Philadelphia"
+   ],
+   "model_answer": "Los Angeles, California"
+  },
+  {
+   "id": "74edb9ec8b59de5a",
+   "kind": "answer",
+   "question": "Why is Minister Pool important to Black Country and the West Midlands in England?",
+   "gold_answers": [
+    "defence of the Cathedral"
+   ],
+   "model_answer": "It historically defended Lichfield Cathedral Close and powered a mill; it is now a public amenity."
+  },
+  {
+   "id": "d27341caa20deb5c",
+   "kind": "answer",
+   "question": "Who had more pen names, George Orwell or Nelson DeMille?",
+   "gold_answers": [
+    "Nelson Richard DeMille"
+   ],
+   "model_answer": "Nelson DeMille\n"
+  },
+  {
+   "id": "aa2adc8275d9e6b3",
+   "kind": "answer",
+   "question": "Who was the wife of the United States Army lieutenant general who received the Distinguished Service Cross, and was the first of his West Point class to be promoted to brigadier general, major general, and lieutenant general",
+   "gold_answers": [
+    "Julia Compton Moore"
+   ],
+   "model_answer": "Beatrice Banning Ayer Patton"
+  },
+  {
+   "id": "2c81a684bf55ff6f",
+   "kind": "answer",
+   "question": "Which town is named after the developers of Monmouth Heights at Manalapan?",
+   "gold_answers": [
+    "Levittown"
+   ],
+   "model_answer": "Levittown, New York"
+  },
+  {
+   "id": "4398bca3b910db13",
+   "kind": "answer",
+   "question": "What is Rachelle Amy Beinart's role in the film that follows a group of rebels on a mission?",
+   "gold_answers": [
+    "stunt performances"
+   ],
+   "model_answer": "Rebel soldier"
+  },
+  {
+   "id": "8f4adf920162dfce",
+   "kind": "answer",
+   "question": "What award won by only twelve people has a man who Ted Kooshian has performed with won?",
+   "gold_answers": [
+    "EGOT"
+   ],
+   "model_answer": "EGOT (Emmy, Grammy, Oscar, and Tony awards)"
+  },
+  {
+   "id": "8441a1d3f7ae3d05",
+   "kind": "answer",
+   "question": "What aspect of the board game Diplomacy is not found in the board game Uncle Wiggily?",
+   "gold_answers": [
+    "negotiation phases"
+   ],
+   "model_answer": "Negotiation and alliance-forming phases"
+  },
+  {
+   "id": "e71a0e903ae87100",
+   "kind": "answer",
+   "question": "What American politician from Tennessee born December 13, 1943 is related to former United States Congressman Harold Ford Jr. as well as former Congressman Harold Ford Sr.",
+   "gold_answers": [
+    "Emmitt H. Ford"
+   ],
+   "model_answer": "Joe Ford"
+  },
+  {
+   "id": "26c12e2c1bfd6da5",
+   "kind": "answer",
+   "question": "What type of group does Pablo Carballo and Argentine Air Force have in common?",
+   "gold_answers": [
+    "military"
+   ],
+   "model_answer": "Argentine Air Force personnel\n"
+  },
+  {
+   "id": "6b7c394aefd82a0a",
+   "kind": "answer",
+   "question": "Janet Williams has performed with an internationally recognized solo pianist whose recordings have earned him five what?",
+   "gold_answers": [
+    "Grammy awards"
+   ],
+   "model_answer": "Grammy nominations"
+  },
+  {
+   "id": "42b680451ef9013f",
+   "kind": "answer",
+   "question": "Who is the grandfather to Frederick II and was the Holy Roman Emperor until death?",
+   "gold_answers": [
+    "Frederick I"
+   ],
+   "model_answer": "Frederick Barbarossa"
+  },
+  {
+   "id": "50c14e4c10abdbe5",
+   "kind": "answer",
+   "question": "What are the professions of Tom Johnston and Daryl Palumbo?",
+   "gold_answers": [
+    "American musician"
+   ],
+   "model_answer": "Singer-songwriters and musicians."
+  },
+  {
+   "id": "37086bd5ff022b42",
+   "kind": "answer",
+   "question": "What is the central institution of Cheyenne Indian tribal governance that Ehyophsta was not a member of?",
+   "gold_answers": [
+    "the Council of Forty-four"
+   ],
+   "model_answer": "Council of Forty-Four Chiefs"
+  },
+  {
+   "id": "5b845711c4dfa2e2",
+   "kind": "answer",
+   "question": "What are the professions of Tom Johnston and Daryl Palumbo?",
+   "gold_answers": [
+    "American musician"
+   ],
+   "model_answer": "Musicians, guitarists, and vocalists."
+  },
+  {
+   "id": "97f87e5448ec9180",
+   "kind": "answer",
+   "question": "Are the 1908 Ex parte Young and 1948 McCollum v. Board of Education United States Supreme Court cases related to each other in any way?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Both are U.S. Supreme Court cases."
+  },
+  {
+   "id": "821a75157f546f86",
+   "kind": "answer",
+   "question": "Are Fastbacks and Local Natives both from the same US state?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No, they’re from different states."
+  },
+  {
+   "id": "c30a425d6865915c",
+   "kind": "answer",
+   "question": " Are Isaac Asimov and Michael Cunningham both American writers?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes, both are American writers."
+  },
+  {
+   "id": "62295d28ee65f0fc",
+   "kind": "answer",
+   "question": "What is the given name of the character depicted as Juliet Hulme in Heavenly Creatures?",
+   "gold_answers": [
+    "Anne Perry"
+   ],
+   "model_answer": "Kate Winslet"
+  },
+  {
+   "id": "9b4d0de10efdf48c",
+   "kind": "answer",
+   "question": "Elizabeth Austin wrote for a fitness magazine founded by who?",
+   "gold_answers": [
+    "Christine MacIntyre"
+   ],
+   "model_answer": "Bob Anderson"
+  },
+  {
+   "id": "96848c90eb301a35",
+   "kind": "answer",
+   "question": "Who is the English Professional Footballer that is the niece of a former footballer born in the same place as where he plays? ",
+   "gold_answers": [
+    "Trent Alexander-Arnold"
+   ],
+   "model_answer": "Natasha Dowie"
+  }
+ ],
+ "evidence": []
+}

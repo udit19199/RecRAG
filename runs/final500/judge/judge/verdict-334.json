@@ -1,0 +1,61 @@
+[
+  {"id": "eb9fdb6f65904685", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "The All Blacks had their chances, but their usual safe handling, a feature throughout the World Cup after their first-up loss to France, evaded them against the Springboks’ blitz defence in the wet conditions."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "The All Blacks had their chances, but their usual safe handling, a feature throughout the World Cup after their first-up loss to France, evaded them against the Springboks’ blitz defence in the wet conditions."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "The All Blacks had their chances, but their usual safe handling, a feature throughout the World Cup after their first-up loss to France, evaded them against the Springboks’ blitz defence in the wet conditions."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "The All Blacks had their chances, but their usual safe handling, a feature throughout the World Cup after their first-up loss to France, evaded them against the Springboks’ blitz defence in the wet conditions."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]}
+  ]},
+  {"id": "cbadfe95337c4f7e", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "b4d8098d9dd18527", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "whether he’s guilty of seven counts of fraud and conspiracy"}]},
+    {"fact": "3.0", "status": "missing", "evidence": []},
+    {"fact": "3.1", "status": "missing", "evidence": []},
+    {"fact": "3.2", "status": "missing", "evidence": []},
+    {"fact": "3.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "dbd891a52a829d59", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Prince William (played by Rufus Kampa)"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "William (Rufus Kampa) is left heartbroken with grief"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 9, "quote": "William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "The latest installment takes place between the late 1990s to mid-2000s"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Princess Diana’s fatal Paris car crash in 1997"}]}
+  ]},
+  {"id": "0b1f3038a9de6a6e", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "She admits that she may have misinterpreted the evidence"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "but maintains that Google manipulates Search to maximise ad revenue"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "their readers and ad revenue through anticompetitive means"}]}
+  ]},
+  {"id": "00116bee0f2ceffc", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The All Blacks had their chances, but their usual safe handling, a feature throughout the World Cup after their first-up loss to France, evaded them against the Springboks’ blitz defence in the wet conditions."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The All Blacks had their chances, but their usual safe handling, a feature throughout the World Cup after their first-up loss to France, evaded them against the Springboks’ blitz defence in the wet conditions."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "a feature throughout the World Cup after their first-up loss to France"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "The All Blacks had their chances, but their usual safe handling, a feature throughout the World Cup after their first-up loss to France, evaded them against the Springboks’ blitz defence in the wet conditions."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 8, "quote": "evaded them against the Springboks’ blitz defence in the wet conditions."}]}
+  ]}
+]

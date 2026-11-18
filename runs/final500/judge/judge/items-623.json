@@ -1,0 +1,434 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "e5261c5e7ef702c8",
+   "gold": [
+    {
+     "sentence": " His American superior, General Dwight D. Eisenhower, wrote that he was \"blunt, at times to the point of rudeness\".",
+     "facts": {
+      "0.0": "The unnamed subject's American superior was General Dwight D. Eisenhower.",
+      "0.1": "Dwight D. Eisenhower wrote that the unnamed subject was 'blunt, at times to the point of rudeness'."
+     }
+    },
+    {
+     "sentence": "Dwight David \"Ike\" Eisenhower ( ; October 14, 1890 – March 28, 1969) was an American politician and Army general who served as the 34th President of the United States from 1953 until 1961.",
+     "facts": {
+      "1.0": "Dwight David 'Ike' Eisenhower was born on October 14, 1890.",
+      "1.1": "Dwight David 'Ike' Eisenhower died on March 28, 1969.",
+      "1.2": "Dwight David 'Ike' Eisenhower was an American politician.",
+      "1.3": "Dwight David 'Ike' Eisenhower was an Army general.",
+      "1.4": "Dwight David 'Ike' Eisenhower served as the 34th President of the United States.",
+      "1.5": "Dwight David 'Ike' Eisenhower served as President from 1953 until 1961."
+     }
+    }
+   ],
+   "items": [
+    "Gerald Ford\nGerald Rudolph Ford Jr. (born Leslie Lynch King Jr.; July 14, 1913 – December 26, 2006) was an American politician who served as the 38th President of the United States from August 1974 to January 1977, following the resignation of Richard Nixon.\n\n Prior to this he served eight months as the 40th Vice President of the United States, following the resignation of Spiro Agnew.\n\n He was the first person appointed to the vice presidency under the terms of the 25th Amendment, and consequently the only person to have served as both Vice President and President of the United States without being elected to executive office.\n\n Before his appointment to the vice presidency, Ford served 25 years as U.S. Representative from Michigan's 5th congressional district, the final nine of them as the House Minority Leader.",
+    "Andrew Davis Bruce\nLieutenant General Andrew Davis Bruce (September 14, 1894 – July 28, 1969) was an American academic and soldier who served as the third president of the University of Houston.\n\n He retired from the United States Army in 1954 as a lieutenant general after seeing action in both World War I and World War II and founding Fort Hood, Texas.\n\n Three countries, France, the Philippines, and the United States, awarded him service medals, including the Distinguished Service Cross, the U.S. Army's second highest military decoration.\n\n Bruce is interred in Arlington National Cemetery.",
+    "Kenneth Anderson (British Army officer)\nGeneral Sir Kenneth Arthur Noel Anderson, (25 December 1891 – 29 April 1959) was a senior British Army officer who saw service in both World wars.\n\n He is mainly remembered as the commander of the British First Army during Operation Torch, the Allied invasion of North Africa.\n\n He had an outwardly reserved character and did not court popularity either with his superiors or with the public.\n\n His American superior, General Dwight D. Eisenhower, wrote that he was \"blunt, at times to the point of rudeness\".\n\n In consequence he is less well known than many of his contemporaries.\n\n Richard Mead wrote that \"He handled a difficult campaign more competently than his critics suggest, but competence without flair was not good enough for a top commander in 1944\".",
+    "Presidency of Ronald Reagan\nThe presidency of Ronald Reagan began on January 20, 1981, when Ronald Reagan was inaugurated as President of the United States, and ended on January 20, 1989.\n\n Reagan, a Republican, took office as the 40th United States president following a landslide win over Democratic incumbent President Jimmy Carter in the 1980 presidential election.\n\n Reagan was succeeded by his vice president, George H. W. Bush, who won the 1988 presidential election with Reagan's support.",
+    "John F. Anderson\nJohn Francis Anderson was an officer in the Union Army during the American Civil War.\n\n When the war broke out, Anderson who was the son of Maine's former Governor Hugh J. Anderson was initially commissioned First Lieutenant in the militia; and on September 2, 1861, Anderson became the adjutant of the 24th Regiment Massachusetts Volunteer Infantry.\n\n He was appointed to Maj. Gen. John G. Foster's staff as a major and an aide-de-camp on June 9, 1863 and served with that officer for most of the remainder of the war, resigning on March 27, 1865.\n\n On December 11, 1866, President Andrew Johnson nominated Major Anderson to the honorary grade of brevet brigadier general, to rank from March 13, 1865 and the United States Senate confirmed the award on February 6, 1867.",
+    "George McMillin\nGeorge Johnson McMillin (November 25, 1889 – August 29, 1983 ) was a United States Navy Rear Admiral who served as the 38th and final Naval Governor of Guam.\n\n He graduated from the United States Naval Academy in 1911 and served as an officer during four separate conflicts: World War I, the occupation of the Dominican Republic, the United States occupation of Veracruz, and World War II.\n\n He served on the staff of both the Naval Academy and the Naval War College as well.\n\n He is most remembered as the commander who surrendered Guamanian forces to a much larger Japanese force during the First Battle of Guam, only the second battle of World War II involving the United States.\n\n He had previously evacuated all but one civilian American citizen from the island and attempted to rebuild defenses after a strong typhoon devastated the island the year before.\n\n On December 8, 1941, Japanese forces invaded Guam and McMillin surrendered two days later.\n\n He spent the rest of the war at various Japanese prisoner of war camps.",
+    "Bill Clinton\nWilliam Jefferson Clinton (born William Jefferson Blythe III; August 19, 1946) is an American politician who served as the 42nd President of the United States from 1993 to 2001.\n\n Prior to the presidency, he was the Governor of Arkansas during two separate terms, from 1979 to 1981, and again from 1983 to 1992.\n\n Before that, he served as Arkansas attorney general, from 1977 to 1979.\n\n A member of the Democratic Party, Clinton was ideologically a New Democrat and many of his policies reflected a centrist \"Third Way\" political philosophy.",
+    "Dwight D. Eisenhower\nDwight David \"Ike\" Eisenhower ( ; October 14, 1890 – March 28, 1969) was an American politician and Army general who served as the 34th President of the United States from 1953 until 1961.\n\n During World War II, he was a five-star general in the United States Army and served as Supreme Commander of the Allied Expeditionary Forces in Europe.\n\n He was responsible for planning and supervising the invasion of North Africa in Operation Torch in 1942–43 and the successful invasion of France and Germany in 1944–45 from the Western Front.",
+    "John Biddle (United States Army general)\nJohn Biddle (February 2, 1859 – January 18, 1936) was career United States Army officer who became superintendent of the United States Military Academy.",
+    "George H. W. Bush\nGeorge Herbert Walker Bush (born June 12, 1924) is an American politician who was the 41st President of the United States from 1989 to 1993 and the 43rd Vice President of the United States from 1981 to 1989.\n\n A member of the Republican Party, he was previously a congressman, ambassador, and Director of Central Intelligence.\n\n He is the oldest living former President and Vice President.\n\n Previously known as simply \"George Bush\", since 2001, Bush has often been referred to as \"George H. W. Bush\", \"Bush 41\", \"Bush the Elder\", or \"George Bush Senior\" to distinguish him from his eldest son, George W. Bush, the 43rd President of the United States."
+   ]
+  },
+  {
+   "id": "ee56541339bc73f0",
+   "gold": [
+    {
+     "sentence": "Vytautas Kevin Gerulaitis (July 26, 1954 – September 17, 1994) was an American professional tennis player.",
+     "facts": {
+      "0.0": "Vytautas Kevin Gerulaitis was born on July 26, 1954.",
+      "0.1": "Vytautas Kevin Gerulaitis died on September 17, 1994.",
+      "0.2": "Vytautas Kevin Gerulaitis was an American professional tennis player."
+     }
+    },
+    {
+     "sentence": "Heather Miriam Watson (born 19 May 1992) is a British tennis player and a Wimbledon Mixed Doubles Champion.",
+     "facts": {
+      "1.0": "Heather Miriam Watson was born on 19 May 1992.",
+      "1.1": "Heather Miriam Watson is a British tennis player.",
+      "1.2": "Heather Miriam Watson is a Wimbledon Mixed Doubles Champion."
+     }
+    }
+   ],
+   "items": [
+    "2014 Rogers Cup – Women's Doubles\nJelena Janković and Katarina Srebotnik were the defending champions, but they chose not to compete together.\n\n Janković played alongside Klára Koukalová, but lost in the second round to Michaëlla Krajicek and Barbora Záhlavová-Strýcová.\n\n Srebotnik teamed up with Květa Peschke, but lost in the second round to Chan Hao-ching and Chan Yung-jan.\n\n<br>",
+    "Vitas Gerulaitis\nVytautas Kevin Gerulaitis (July 26, 1954 – September 17, 1994) was an American professional tennis player.\n\n In 1975, Gerulaitis won the men's doubles title at Wimbledon, partnering with Sandy Mayer.\n\n He won the men's singles title at one of the two Australian Open tournaments held in 1977 (Gerulaitis won the tournament that was held in December, while Roscoe Tanner won the earlier January tournament).\n\n Gerulaitis also won two Italian Open titles, in 1977 and 1979, and the WCT Finals in Dallas, in 1978.",
+    "Heather Watson\nHeather Miriam Watson (born 19 May 1992) is a British tennis player and a Wimbledon Mixed Doubles Champion.\n\n She is a former British No.1 and current British No. 2 behind Johanna Konta.",
+    "Iveta Benešová\nIveta Benešová (] ) (formerly Melzer, Czech: Melzerová ; born 1 February 1983) is a Czech former professional tennis player.\n\n She began playing tennis at age of 7 and turned professional in 1998 in Prague.\n\n She has won two WTA Tour events and one Grand Slam in mixed doubles partnering with Jürgen Melzer at the 2011 Wimbledon Championships.\n\n On 14 September 2012 she married Jürgen Melzer and adopted his family name.\n\n She announced her retirement from professional tennis via her Facebook page 13/08/2014.\n\n In 2015, she divorced Melzer and reverted to using her maiden name.",
+    "2013 Aegon Classic – Doubles\nTímea Babos and Hsieh Su-wei were the defending champions, but Babos decided not to participate.\n\n<br>",
+    "Sharon Walraven\nSharon Walraven (born 19 June 1970, Schaesberg) is a Dutch wheelchair tennis player.\n\n She became paraplegic at age 23 after complications following a fall while she was ice-skating.\n\n She has won seven Grand Slams doubles titles partnering compatriot Esther Vergeer.\n\n At the 2008 Paralympics in Beijing she won the Gold medal in the women's doubles competition.\n\n At the 2000 Paralympics in Sydney she won a Silver medal in the women's singles competition.\n\n Walraven has a highest ranking of No.2 in singles and No.1 in doubles.",
+    "Kim Warwick\nKim Warwick (born 8 April 1952) is an Australian former professional male tennis player who competed on the ATP Tour from 1970–1987 reaching the final of the singles Australian Open in 1980.\n\n He defeated over 35 players ranked in the top 10 including Guillermo Vilas, Raul Ramerez, Vitas Gerulaitis, Jan Kodeš, Bob Lutz and Arthur Ashe.\n\n Warwick's career-high singles ranking was World No. 15, achieved in 1981.\n\n He won three singles titles and 26 doubles, including Australian Open 1978 (with Wojtek Fibak) and Australian Open 1980 and 1981, Roland Garros 1986 and also a runner-up in Australian Open 1985, all of them partnering fellow countryman Mark Edmondson.\n\n Partnering with Evonne Goolagong, he won the French Open 1972, defeating Françoise Dürr and Jean-Claude Barclay in the final 6–2, 6–4.\n\n Evonne and Kim were finalists in 1972 at Wimbledon against Rosie Casals and Ilie Năstase who won 6–4, 6–4.",
+    "2015 Apia International Sydney – Women's Doubles\nTímea Babos and Lucie Šafářová were the defending champions, but chose not to participate together.\n\n Babos played alongside Kristina Mladenovic, but lost in the semifinals to Raquel Kops-Jones and Abigail Spears.\n\n Šafářová teamed up with Belinda Bencic, but lost in the first round to Kimiko Date-Krumm and Karolína Plíšková.\n\n<br>",
+    "1974 Stadthalle Open – Singles\nVitas Gerulaitis won in the final 6–4, 3–6, 6–3, 6–2 against Andrew Pattison.",
+    "1979 World Championship Tennis Finals – Singles\nVitas Gerulaitis was the defending champion but lost in the semifinals to Björn Borg."
+   ]
+  },
+  {
+   "id": "fc4a7fcb93e2fd0e",
+   "gold": [
+    {
+     "sentence": "Guitar World is a monthly music magazine devoted to guitarists, published since July 1980.",
+     "facts": {
+      "0.0": "Guitar World is a monthly music magazine.",
+      "0.1": "Guitar World is devoted to guitarists.",
+      "0.2": "Guitar World has been published since July 1980."
+     }
+    },
+    {
+     "sentence": "Golf Digest is a monthly golf magazine published by Condé Nast Publications in the United States.",
+     "facts": {
+      "1.0": "Golf Digest is a monthly golf magazine.",
+      "1.1": "Golf Digest is published by Condé Nast Publications.",
+      "1.2": "Golf Digest is published in the United States."
+     }
+    },
+    {
+     "sentence": " The magazine started in 1950, and was sold to The New York Times Company in 1969.",
+     "facts": {
+      "2.0": "The magazine started in 1950.",
+      "2.1": "The magazine was sold to The New York Times Company in 1969."
+     }
+    },
+    {
+     "sentence": " The headquarters of \"Golf Digest\" is in Des Moines, Iowa.",
+     "facts": {
+      "3.0": "The headquarters of Golf Digest is in Des Moines, Iowa."
+     }
+    }
+   ],
+   "items": [
+    "Graph query row:\npublication: Guitar World\nstart_publication_date: July 1980",
+    "PC Magazine\nPC Magazine (shortened as PCMag) is an American computer magazine published by Ziff Davis.\n\n A print edition was published from 1982 to January 2009.\n\n Publication of online editions started in late 1994 and continues to this day.",
+    "World Soccer (magazine)\nWorld Soccer is an English language football magazine published by IPC Media.\n\n The magazine was established in 1960.\n\n It specialises in the international football scene.\n\n Its regular contributing writers include Brian Glanville, Sid Lowe and Tim Vickery.\n\n \"World Soccer\" is a member of the European Sports Magazines (ESM), an umbrella group of similar magazines printed in other languages.\n\n Other members include \"A Bola\", \"Don Balón\", \"Kicker\", \"La Gazzetta dello Sport\" and \"Sport Express\".\n\n The members of this group elect a European \"Team of the Month\" and a European \"Team of the Year\".",
+    "Girlfriends (magazine)\nGirlfriends was a women's magazine that provided critical coverage of culture, entertainment and world events from a lesbian perspective.\n\n It was founded by Jacob Anderson-Minshall, Diane Anderson-Minshall and Heather Findlay.\n\n It also offered relationship, health and travel advice.\n\n Published monthly from San Francisco since 1993, it was distributed nationwide by Disticor.\n\n It had the same publisher as lesbian erotica magazine \"On Our Backs\", but distanced itself from its pornographic counterpart by refusing to carry sexual ads.\n\n \"Girlfriends\" magazine ceased publication in 2006.",
+    "Esquire (magazine)\nEsquire is an American men's magazine, published by the Hearst Corporation in the United States.\n\n Founded in 1933, it flourished during the Great Depression under the guidance of founders Arnold Gingrich, David A. Smart and Henry L. Jackson.",
+    "Golf Digest\nGolf Digest is a monthly golf magazine published by Condé Nast Publications in the United States.\n\n It is a generalist golf publication covering recreational golf and men's and women's competitive golf.\n\n Condé Nast Publications also publishes the more specialized \"Golf for Women\", \"Golf World\" and \"Golf World Business\".\n\n The magazine started in 1950, and was sold to The New York Times Company in 1969.\n\n The Times company sold their magazine division to Condé Nast in 2001.\n\n The headquarters of \"Golf Digest\" is in Des Moines, Iowa.",
+    "Guitar World\nGuitar World is a monthly music magazine devoted to guitarists, published since July 1980.\n\n It contains original interviews, album and gear reviews, and guitar and bass tablature of approximately five songs each month.\n\n The magazine is published 13 times per year (12 monthly issues and a holiday issue).\n\n Formerly owned by Harris Publications, Future US bought the magazine in 2003.\n\n In 2012, NewBay Media bought the Music division of Future US.\n\n The latter company also published a spin-off title, Guitar Legends, each issue of which typically combined past articles from \"Guitar World\" under a specific theme.",
+    "Graph query row:\npublication: Golf Digest\nstart_publication_date: 1950",
+    "El Gráfico\nEl Gráfico is a classic monthly Argentine sports magazine.\n\n The magazine was originally published as a weekly newspaper in May 1919, and then turned to a sports magazine exclusively.\n\n It has been scheduled monthly from 2002.\n\n \"El Gráfico\" is one of the most regarded sports magazines not only in Argentina but in Latin America.\n\n The magazine was nicknamed \"La Biblia del deporte\" (\"The Bible of sports\") due to its chronicles, notable journalists and collaborators and its photography.",
+    "Football World\nFootball World, later renamed \"Athletic World\", was an American magazine devoted to the coverage of inter-collegiate sports.\n\n Its masthead described it as \"A Magazine With a Mission to Serve the College Man,\" a publication \"devoted to Inter-collegiate Athletics and sports of Amateur standing only.\"\n\n It was founded in 1921 by J. D. Fetzer.\n\n The name of the magazine was later changed to \"Athletic World\" as the coverage extended to a broader range of sports, including women's swimming.\n\n Unlike other sports magazines of the era, which focused on promoting a healthy lifestyle, \"Football World/Athletic World\" celebrated the entertainment value of sports with a special emphasis on the personalities of famous athletes.\n\n The magazine was renamed \"Outing\" in December 1924, reflecting a change in its focus."
+   ]
+  },
+  {
+   "id": "ee00fe95ee45bfa3",
+   "gold": [
+    {
+     "sentence": "And There's More is a comedy sketch show starring Jimmy Cricket produced by Central Independent Television for ITV from 1985 till 1988.",
+     "facts": {
+      "0.0": "And There's More is a comedy sketch show.",
+      "0.1": "And There's More stars Jimmy Cricket.",
+      "0.2": "And There's More was produced by Central Independent Television.",
+      "0.3": "And There's More was produced for ITV.",
+      "0.4": "And There's More was produced from 1985 till 1988."
+     }
+    },
+    {
+     "sentence": " He currently lives with his family in Rochdale, North West England.",
+     "facts": {
+      "1.0": "The person described in this passage currently lives with his family in Rochdale, North West England.",
+      "1.1": "The person described in this passage currently lives in Rochdale.",
+      "1.2": "Rochdale is in North West England."
+     }
+    }
+   ],
+   "items": [
+    "And There's More\nAnd There's More is a comedy sketch show starring Jimmy Cricket produced by Central Independent Television for ITV from 1985 till 1988.",
+    "Catsmeat Potter-Pirbright\nClaude Cattermole \"Catsmeat\" Potter-Pirbright is a recurring fictional character from the Jeeves stories of British comic writer P. G. Wodehouse, being a member of the Drones Club and a longtime school friend of Jeeves's master Bertie Wooster.\n\n An actor also known as Claude Cattermole on stage or Claude Pirbright from his birth name Claude Cattermole Pirbright, he has the nickname Catsmeat (i.e. lights - lung-based cat food).",
+    "List of Jimmy Fallon games and sketches\nThe following is a list of recurring games, sketches, and other comedy routines from the NBC late night talk show \"The Tonight Show Starring Jimmy Fallon\", and its predecessor, \"Late Night with Jimmy Fallon\".\n\n The sketches feature host Jimmy Fallon, house band The Roots, announcer/sidekick Steve Higgins, the show's writers, celebrity guests, and audience members.\n\n Most of the skits below appeared only on \"Late Night\", while some have carried over to the \"Tonight Show\".",
+    "Mazzy Star\nMazzy Star is an American alternative rock band formed in Santa Monica, California, in 1989 from the group Opal, a collaboration of guitarist David Roback and bassist Kendra Smith.\n\n Roback's friend Hope Sandoval became the group's vocalist when Smith left the band.",
+    "Amy O'Neill\nAmy O'Neill (born July 8, 1971) is an American performer and former actress.\n\n After appearing in several sitcoms and starring as Molly Stark on \"The Young and the Restless\" in 1986, she was cast in her notable role as Amy Szalinski in the 1989 Disney film, \"Honey, I Shrunk the Kids\", for which she was nominated for a Young Artist Award.\n\n She reprised her role as Amy Szalinski in the 1992 sequel, \"Honey, I Blew Up the Kid\" and appeared as Lisa Barnes in \"Where's Rodney?\n\n\".",
+    "Sheila Levine Is Dead and Living in New York\nSheila Levine Is Dead and Living in New York is a 1975 film directed by Sidney J. Furie, about a shy young woman who moves to New York City and falls in love with the boyfriend of her extroverted roommate.\n\n The film was co-written by Kenny Solms and Gail Parent, and based on her novel.\n\n The film was shot on location in New York City.",
+    "Jimmy Cricket\nJames Mulgrew (born 17 October 1945), known professionally as Jimmy Cricket, is an Irish comedian.\n\n He currently lives with his family in Rochdale, North West England.",
+    "Live in Old Smokey\nLive in Old Smokey is a live CD by English singer/songwriter Linda Lewis recorded at Ronnie Scott's in London and issued in 2006.",
+    "Dan Clark\nDaniel Gregory Clark (born 3 July 1976 in Bromley, London) is an English actor, comedian, writer, director, and singer.\n\n He is best known for playing Don Danbury on the BBC Three sitcom \"How Not to Live Your Life\", which he also wrote, co-produced, and sometimes directed.\n\n He has been a regular on the British comedy scene as both a sketch and stand-up comedian.",
+    "A Cream Cracker under the Settee\n\"A Cream Cracker Under The Settee\" is a dramatic monologue written by Alan Bennett in 1987 for television, as part of his \"Talking Heads\" series for the BBC.\n\n The series became very popular, moving onto BBC Radio, international theatre, becoming one of the best-selling audio book releases of all time and included as part of both the A-level and GCSE English syllabus.\n\n It was the sixth and final episode of the first series of \"Talking Heads\"."
+   ]
+  },
+  {
+   "id": "19ae1e8443b1f301",
+   "gold": [
+    {
+     "sentence": "Jelena Janković (Serbian Cyrillic: Јелена Јанковић, ] , born 28 February 1985) is a Serbian professional tennis player.",
+     "facts": {
+      "0.0": "Jelena Janković was born on 28 February 1985.",
+      "0.1": "Jelena Janković's name is written in Serbian Cyrillic as Јелена Јанковић.",
+      "0.2": "Jelena Janković is a Serbian professional tennis player."
+     }
+    },
+    {
+     "sentence": "Marat Mubinovich Safin (Russian: Мара́т Муби́нович Са́фин ; ] , Tatar: Марат Мөбин улы Сафин \"Marat Möbin uğlı Safin\" ; born 27 January 1980) is a Russian politician and retired professional tennis player.",
+     "facts": {
+      "1.0": "Marat Mubinovich Safin's name is written in Russian as Мара́т Муби́нович Са́фин.",
+      "1.1": "Marat Mubinovich Safin's name is written in Tatar as Марат Мөбин улы Сафин.",
+      "1.2": "Marat Mubinovich Safin's Tatar name is romanized as Marat Möbin uğlı Safin.",
+      "1.3": "Marat Mubinovich Safin was born on 27 January 1980.",
+      "1.4": "Marat Mubinovich Safin is a Russian politician.",
+      "1.5": "Marat Mubinovich Safin is a retired professional tennis player."
+     }
+    }
+   ],
+   "items": [
+    "Dinara Safina career statistics\nThis is a list of the main career statistics of retired, Russian professional tennis player, Dinara Safina.\n\n Throughout her career, Safina won twelve WTA singles titles including three Tier I singles titles at the 2008 Qatar Telecom German Open, Rogers Cup and Toray Pan Pacific Open respectively; one Premier Mandatory singles title at the 2009 Mutua Madrileña Madrid Open and one Premier 5 singles title at the 2009 Internazionali BNL d'Italia.\n\n She was also the runner-up at the 2008 French Open and the 2009 Australian Open and French Open as well as a silver medalist in singles at the 2008 Beijing Olympics.",
+    "Marat Safin\nMarat Mubinovich Safin (Russian: Мара́т Муби́нович Са́фин ; ] , Tatar: Марат Мөбин улы Сафин \"Marat Möbin uğlı Safin\" ; born 27 January 1980) is a Russian politician and retired professional tennis player.\n\n He achieved the Association of Tennis Professionals (ATP) world No. 1 singles ranking on November 20, 2000.\n\n Nobody taller than Safin has ever reached his world number-one ranking.\n\n Safin is the older brother of former world No. 1 WTA player, Dinara Safina.\n\n They are the first and only brother–sister tandem in tennis history who have both achieved No. 1 rankings.\n\n On court, Safin was famous for his emotional outbursts and sometimes fiery temper.",
+    "Jelenin svet\nJelenin svet (\"Jelena's World\") is a 2008 independent documentary film written and directed by Tanja Brzaković, about former World No. 1 female tennis player, Jelena Janković.",
+    "Ana Ivanovic career statistics\nThis is a list of the main career statistics of Serbian professional tennis player, Ana Ivanovic.\n\n Ivanovic won fifteen WTA singles titles including one grand slam singles title at the 2008 French Open and three WTA Tier I singles titles.\n\n She was also the runner-up at the 2007 French Open and 2008 Australian Open and a semi-finalist at the 2007 Wimbledon Championships and 2007 WTA Tour Championships.\n\n On June 9, 2008 Ivanovic became the world No. 1 for the first time in her career.",
+    "Victoria Azarenka career statistics\nThis is a list of the main career statistics of Belarusian professional tennis player, Victoria Azarenka.\n\n To date, Azarenka has won twenty WTA singles titles including two grand slam singles titles, six WTA Premier Mandatory singles titles and three WTA Premier 5 singles titles.\n\n She was also the runner-up at the 2011 WTA Tour Championships, 2012 US Open and 2013 US Open.\n\n Among other achievements, Azarenka was the bronze medalist in women's singles and Gold medalist in mixed doubles with her compatriot, Max Mirnyi at the 2012 London Olympics.",
+    "2008 Wimbledon Championships – Mixed Doubles\nJamie Murray and Jelena Janković were the defending champions, but Janković chose not to participate, and only Murray competed that year.",
+    "Jelena Janković\nJelena Janković (Serbian Cyrillic: Јелена Јанковић, ] , born 28 February 1985) is a Serbian professional tennis player.\n\n Janković is a former World No. 1 in singles, a ranking achieved preceding her finals appearance at the 2008 US Open.\n\n Janković's career highlights include winning the 2007 Wimbledon Mixed Doubles title with Jamie Murray, the 2010 Indian Wells Masters, the Internazionali BNL d'Italia twice, in 2007 and 2008, and the aforementioned appearance in the finals of the 2008 US Open.\n\n She is coached by her brother Marko.",
+    "2014 Rogers Cup – Women's Doubles\nJelena Janković and Katarina Srebotnik were the defending champions, but they chose not to compete together.\n\n Janković played alongside Klára Koukalová, but lost in the second round to Michaëlla Krajicek and Barbora Záhlavová-Strýcová.\n\n Srebotnik teamed up with Květa Peschke, but lost in the second round to Chan Hao-ching and Chan Yung-jan.\n\n<br>",
+    "Ivanovic–Janković rivalry\nSerbian tennis players Ana Ivanovic and Jelena Janković are both former world No. 1 and have met 12 times so far.\n\n Their overall head-to-head series is 9–3, in Ivanovic's favor.\n\n Janković is two years older than Ivanovic, so their paths connect them to play each other.\n\n They are the first female players to achieve major successes for independent Serbia.",
+    "Jelena Janković career statistics\nThis is a list of the main career statistics of Serbian professional tennis player and former World No. 1, Jelena Janković.\n\n To date, Janković has won 15 WTA singles titles including four WTA Tier I singles titles, one WTA Premier Mandatory singles title and one WTA Premier 5 singles title.\n\n Janković was also the runner-up in singles at the 2008 US Open, a semi-finalist at the year-ending WTA Tour Championships in 2008, 2009 and 2013 and a quarterfinalist at the 2008 Beijing Olympics."
+   ]
+  },
+  {
+   "id": "5e994651e986fbbf",
+   "gold": [
+    {
+     "sentence": "Robert Suettinger was United States President Bill Clinton's national intelligence officer for East Asia at the National Intelligence Council (NIC) from 1997-1998.",
+     "facts": {
+      "0.0": "Robert Suettinger was the national intelligence officer for East Asia at the National Intelligence Council (NIC).",
+      "0.1": "Robert Suettinger held the role of national intelligence officer for East Asia for United States President Bill Clinton.",
+      "0.2": "Robert Suettinger held the role from 1997 to 1998."
+     }
+    },
+    {
+     "sentence": "William Jefferson Clinton (born William Jefferson Blythe III; August 19, 1946) is an American politician who served as the 42nd President of the United States from 1993 to 2001.",
+     "facts": {
+      "1.0": "William Jefferson Clinton was born William Jefferson Blythe III.",
+      "1.1": "William Jefferson Clinton was born on August 19, 1946.",
+      "1.2": "William Jefferson Clinton is an American politician.",
+      "1.3": "William Jefferson Clinton served as the 42nd President of the United States.",
+      "1.4": "William Jefferson Clinton served as President from 1993 to 2001."
+     }
+    },
+    {
+     "sentence": " Prior to the presidency, he was the Governor of Arkansas during two separate terms, from 1979 to 1981, and again from 1983 to 1992.",
+     "facts": {
+      "2.0": "Before the presidency, William Jefferson Clinton was Governor of Arkansas.",
+      "2.1": "William Jefferson Clinton was Governor of Arkansas during two separate terms.",
+      "2.2": "William Jefferson Clinton's first term as Governor of Arkansas was from 1979 to 1981.",
+      "2.3": "William Jefferson Clinton's second term as Governor of Arkansas was from 1983 to 1992."
+     }
+    }
+   ],
+   "items": [
+    "Susan Combs\nSusan Combs (born February 26, 1945) is a Republican politician from the U.S. state of Texas, who served from 2007 to 2015 as the state's Comptroller of Public Accounts.\n\n Prior to her tenure as Comptroller, Combs had served two terms as Commissioner of the Texas Department of Agriculture from 1999–2007, taking the reins as the first woman elected to that office in 1998.\n\n Combs also served two terms in the Texas House of Representatives.\n\n On July 10, 2017, Combs was nominated by U.S. President Donald Trump to be the Assistant Secretary of the Interior for Policy, Management and Budget.",
+    "Wayne W. Lambert\nThe Brigadier General retired from the US Air Force in 1989.\n\n Lambert also holds an MBA from Chapman College (’76).\n\n In retirement, Lambert publicly supported U.S. presidential candidate Mitt Romney and U.S. vice presidential candidate Paul Ryan in the 2012 general election.",
+    "Robert Suettinger\nRobert Suettinger was United States President Bill Clinton's national intelligence officer for East Asia at the National Intelligence Council (NIC) from 1997-1998.\n\n While there, Suettinger oversaw the preparation of national intelligence estimates for the director of the Central Intelligence Agency.\n\n His areas of specialty included the People's Republic of China and the North Korean nuclear weapons program.\n\n After working in the Clinton administration, Suettinger has been a senior analyst for the Brookings Institution where he wrote the book \"Beyond Tiananmen – The Politics of U.S.-China Relations, 1989-2000\".\n\n He also is a senior advisor at The Stimson Center.",
+    "Otto Reich\nOtto Juan Reich (born October 16, 1945), is an American former senior official in the administrations of Presidents Ronald Reagan, George H. W. Bush, and George W. Bush.\n\n Among other positions held, he has been the President's Special Envoy for the Western Hemisphere; Assistant Secretary of State for Western Hemisphere Affairs; United States Ambassador to Venezuela; and Assistant Administrator of the US Agency for International Development, a recess appointment.\n\n In 2003, Bush appointed him US Special Envoy to the Western Hemisphere.\n\n Since leaving the White House in 2004, he has headed his own international consulting firm, Otto Reich Associates, LLC, based in Washington, D.C..",
+    "Steven K. Galson\nSteven Kenneth Galson (born 1956) is an American public health physician.\n\n He is currently Senior Vice President for Global Regulatory Affairs at Amgen, the S. California-based innovative global biopharmaceutical company.\n\n He is also Professor-at-Large at the Keck Graduate Institute for Applied Life Sciences in Clarmont, California.\n\n He is a retired rear admiral in the United States Public Health Service Commissioned Corps and public health administrator who served as the acting Surgeon General of the United States from October 1, 2007 – October 1, 2009.\n\n He served concurrently as acting Assistant Secretary for Health from January 22, 2009 to June 25, 2009, and as the Deputy Director and Director of the Center for Drug Evaluation and Research (CDER) at the Food and Drug Administration from 2001 to 2007.\n\n As the Acting Surgeon General, he was the commander of the United States Public Health Service Commissioned Corps and, while serving as the Assistant Secretary for Health, was the operational head of the Public Health Service.",
+    "Lawrence Eagleburger\nLawrence Sidney Eagleburger (August 1, 1930 – June 4, 2011) was an American statesman and career diplomat, who served briefly as the Secretary of State under President George H. W. Bush.\n\n Previously, he had served in lesser capacities under Presidents Richard Nixon, Jimmy Carter, and Ronald Reagan, and as Deputy Secretary of State under George H. W. Bush.",
+    "William Flynn Martin\nWilliam Flynn Martin (born October 4, 1950) is an American energy economist, educator and international diplomat.\n\n Martin served as Special Assistant to President Reagan for National Security Affairs, Executive Secretary of the National Security Council in the West Wing of the White House and Deputy Secretary of the Department of Energy during the Ronald Reagan administration.\n\n He was President of the Council of the University for Peace, appointed to the Council by Secretary General of the United Nations Kofi Annan and served as the Executive Director of the Republican Platform Committee during the re-election bid of George H.W. Bush.\n\n He has held senior appointments and advisory positions under several Presidents including: Ronald Reagan, George H.W. Bush and George W. Bush.",
+    "Bill Clinton\nWilliam Jefferson Clinton (born William Jefferson Blythe III; August 19, 1946) is an American politician who served as the 42nd President of the United States from 1993 to 2001.\n\n Prior to the presidency, he was the Governor of Arkansas during two separate terms, from 1979 to 1981, and again from 1983 to 1992.\n\n Before that, he served as Arkansas attorney general, from 1977 to 1979.\n\n A member of the Democratic Party, Clinton was ideologically a New Democrat and many of his policies reflected a centrist \"Third Way\" political philosophy.",
+    "George G. Finch\nArmy in September, 1941, with Major Finch as commander.\n\n After World War II, he was a leading critic of efforts to eliminate the air arm of the National Guard during peacetime.\n\n General Finch gained the respect and admiration of Air National Guardsmen throughout the nation with his steadfast support and successful efforts to preserve the Air Guard.\n\n He became the first Chief of the Air Force Division of the National Guard Bureau in 1948.\n\n Under his leadership, the Air National Guard built to combat readiness and was among the first components called into service after the outbreak of the Korean War.\n\n As a result of General Finch's vision and perseverance, 45,000 highly trained officers and airmen of 22 wings and 65 squadrons gave the Air Force the strength it needed in the early, critical phases of the Communist drive down the Korean peninsula.General Finch served as the senior Air Force member of the United Nations negotiating team at the peace talks at Panmunjom, Korea, and received the Legion of Merit for outstanding service in 1955; General Finch assumed command of Fourteenth Air Force, Robins AFB, Georgia, becoming the nation's first Air National Guardsman to head a numbered air force.",
+    "Director of the Defense Intelligence Agency\nThe Director of the Defense Intelligence Agency is an intelligence officer who, upon nomination by the President and confirmation by the Senate, serves as the nation's highest-ranking military intelligence officer.\n\n As the chief of the Defense Intelligence Agency, the Director is the primary intelligence adviser to the Secretary of Defense and the Chairman of the Joint Chiefs of Staff and also answers to the Director of National Intelligence through the civilian Under Secretary of Defense for Intelligence.\n\n The Director is also the Commander of the Joint Functional Component Command for Intelligence, Surveillance and Reconnaissance, a subordinate command of United States Strategic Command.\n\n Additionally, he chairs the Military Intelligence Board, which coordinates activities of the entire defense intelligence community."
+   ]
+  },
+  {
+   "id": "e1bf1e1082dd8e90",
+   "gold": [
+    {
+     "sentence": "The Night of the Arts (Finnish: \"Taiteiden yö\" , Swedish: \"Konstens natt\" ) is an annual event held in several major cities in Finland, in late August.",
+     "facts": {
+      "0.0": "The Night of the Arts is an annual event.",
+      "0.1": "The Night of the Arts is known in Finnish as 'Taiteiden yö'.",
+      "0.2": "The Night of the Arts is known in Swedish as 'Konstens natt'.",
+      "0.3": "The Night of the Arts is held in several major cities in Finland.",
+      "0.4": "The Night of the Arts is held in late August."
+     }
+    },
+    {
+     "sentence": " It is one of many White Night festivals held worldwide.",
+     "facts": {
+      "1.0": "The Night of the Arts is one of many White Night festivals.",
+      "1.1": "White Night festivals are held worldwide."
+     }
+    },
+    {
+     "sentence": "The White Nights are a kind of all-night arts festival held in many cities in the summer.",
+     "facts": {
+      "2.0": "The White Nights are a kind of all-night arts festival.",
+      "2.1": "The White Nights festival is held in many cities.",
+      "2.2": "The White Nights festival is held in the summer."
+     }
+    },
+    {
+     "sentence": " The \"white nights\" is the name given in areas of high latitude to the weeks around the summer solstice in June during which sunsets are late, sunrises are early and darkness is never complete.",
+     "facts": {
+      "3.0": "'White nights' is the name given in areas of high latitude to the weeks around the summer solstice in June.",
+      "3.1": "During white nights, sunsets are late.",
+      "3.2": "During white nights, sunrises are early.",
+      "3.3": "During white nights, darkness is never complete."
+     }
+    }
+   ],
+   "items": [
+    "Joulupöytä\nJoulupöytä (translated \"Yule table\") is the traditional assortment of foods served at Christmas in Finland, similar to the Swedish julbord.\n\n It contains many different dishes, most of them typical for the season.\n\n The main dish is usually a large Christmas ham, which is eaten with mustard or bread along with the other dishes.\n\n Fish is also served (often lutefisk and gravlax), and the ham is served with \"laatikko\"s, casseroles made with swede, potato and carrot, occasionally liver.\n\n The traditional Christmas beverage is either alcoholic or non-alcoholic mulled wine (\"glögi\" in Finnish).",
+    "- **Woody Guthrie Folk Festival:** Mid-July in Okemah, Oklahoma, honors Guthrie’s birth and legacy; organized by a nonprofit coalition, with indoor and outdoor performances.\n- **FLIP Animation Festival:** Held each November in Wolverhampton, UK; international screenings, talks, workshops and industry events. Founded in 2004; won a 2009 tourism award.\n- **Green Man:** Independent four-day music and arts festival in Wales’ Brecon Beacons since",
+    "Scandinavian folklore\nScandinavian folklore or Nordic folklore is the folklore of Norway, Sweden, Finland, Denmark, Iceland and the Faroe Islands.",
+    "Night of the Arts\nThe Night of the Arts (Finnish: \"Taiteiden yö\" , Swedish: \"Konstens natt\" ) is an annual event held in several major cities in Finland, in late August.\n\n It is one of many White Night festivals held worldwide.",
+    "Green Man Festival\nGreen Man is an independent music and arts festival held annually in mid-August in the Brecon Beacons, Wales since 2003.\n\n It has evolved into a 20,000 capacity 4-day event, showcasing predominantly live music (in particular alternative, indie, rock, folk, dance and americana), with additional events showcasing literature, film, comedy, theatre and poetry.\n\n 2015 saw 1,500 multi-arts acts perform across 17 stages.\n\n The festival site is divided into 10 areas, each offering a unique festival experience.\n\n Ceilidhs, all-night bonfires and secret gigs all add to the festival's unique identity.",
+    "Great Northern Arts Festival\nThe Great Northern Arts Festival is held each year in Inuvik, Northwest Territories.\n\n Lasting approximately ten days, it is an annual event held each summer.\n\n It was established in 1989 by Sharlene Alexander and Sue Rose.\n\n While the festival's mandate is to serve Northern artists and craftspeople, artists from around the world also attend.\n\n The festival is designed as a venue for artists to see each other's work and to experiment with new applications.\n\n It includes arts of all types, such as fiber art and Music of the Northwest Territories.\n\n Artists partake in demonstrations, masterclasses, seminars, and workshops.\n\n The festival's gallery offers pieces for sale.\n\n There are cultural presentations each evening which include concerts, dance, fashion, music, and storytelling.\n\n Media coverage brings festival highlights to viewing audiences.",
+    "White Night festivals\nThe White Nights are a kind of all-night arts festival held in many cities in the summer.\n\n The original festival is the White Nights Festival held in Saint Petersburg, Russia.\n\n The \"white nights\" is the name given in areas of high latitude to the weeks around the summer solstice in June during which sunsets are late, sunrises are early and darkness is never complete.\n\n In Saint Petersburg, the Sun does not set until after 10 p.m., and the twilight lasts almost all night.",
+    "Flip Animation Festival\nFLIP is an animation festival primarily hosted by the Light House Media Centre in Wolverhampton, UK.\n\n It is one of two festivals hosted by Light House, the other of which is Deaffest.\n\n Official literature for the festival says that FLIP occurs annually at the beginning of November and attracts submissions from more than 30 countries world wide.\n\n As well as screening the selected open submissions, FLIP also consists of special screenings, talks from professionals within the animation world, workshops, industry panels, portfolio reviews and competitions.\n\n The festival was set up, managed and programmed by Peter McLuskie between 2004 and 2011.\n\n It grew out of the 'Animation Forum', also based at Light House and which was later rebranded as Animation Forum West Midlands and found a home at Birmingham City University.\n\n In 2009 the festival was awarded a Black Country Tourism Award for Event of the Year.",
+    "Hellfest was a socially conscious U.S. hardcore festival known for barrier-free stage diving; canceled in 2005, it sparked refund lawsuits. CZW, founded in 1999, became a leading American ultraviolent wrestling promotion. Essence Festival, launched in 1995, celebrates Black music and culture, mainly in New Orleans. Australia’s Easter Offshore Festival ran near Torquay through 2001. Newfoundland’s Atlantis Prize honors album artistry. Saint Nicholas Day gift-giving",
+    "Kerala School Kalolsavam\nSchool Arts Festival of Kerala (Malayalam: കേരള സ്കൂൾ കലോത്സവം) is an annual event conducted by the state government of Kerala, featuring several art competitions for high school and higher secondary school students of Kerala.\n\n The festival was started in 1956, and till 2008, it was called as \"Kerala State School Youth Festival\".\n\n The participants are students from classes 8th to 12th.\n\n Winners from different revenue districts for a particular event will be competing in state level competition.\n\n The event is usually conducted in December–January months of a year and is considered to be the biggest cultural event of Asia.\n\n 57th edition of Kerala School Kalolsavam 2017 is scheduled for January 16 to 22 at Kannur."
+   ]
+  },
+  {
+   "id": "bdbcad582c7e691e",
+   "gold": [
+    {
+     "sentence": " He played college football at Hampton University and attended Riverdale High School in Riverdale, Georgia.",
+     "facts": {
+      "0.0": "He played college football at Hampton University.",
+      "0.1": "He attended Riverdale High School.",
+      "0.2": "Riverdale High School is in Riverdale, Georgia."
+     }
+    },
+    {
+     "sentence": "Riverdale is a city in Clayton County, Georgia, United States.",
+     "facts": {
+      "1.0": "Riverdale is a city.",
+      "1.1": "Riverdale is in Clayton County, Georgia.",
+      "1.2": "Clayton County, Georgia is in the United States."
+     }
+    }
+   ],
+   "items": [
+    "International Polytechnic High School\nInternational Polytechnic High School, commonly abbreviated merely as iPoly, is a public college preparatory demonstration high school (9-12) located on the California State Polytechnic University, Pomona (Cal Poly Pomona) campus and operated by the Los Angeles County Office of Education (LACOE) in conjunction with the College of Education and Integrative Studies at the university.\n\n iPoly's curriculum is fully accredited by the Western Association of Schools and Colleges and is approved by the University of California and California State University.\n\n It maintains a unique affiliation with the Los Angeles County High School for the Arts (LACHSA), which is also run by LACOE.\n\n Since iPoly does not lie in a fixed school district, it draws students from throughout Los Angeles, San Bernardino, Orange and Riverside counties.\n\n The majority of students come from the Pomona and San Gabriel valleys.\n\n In 2009 and 2013, iPoly was honored as a California Distinguished School by the California Department of Education.",
+    "Two Rivers High School (Arkansas)\nTwo Rivers High School is a public high school for students in grades 7 through 12 located in Ola, Arkansas, United States.\n\n Two Rivers High School is administered by the Two Rivers School District.\n\n The Two Rivers High School and school district serves 650 sqmi of rural communities including Ola, Plainview, Rover, and Casa.\n\n Two Rivers High School is one of four high schools within Yell County and the sole high school administered by the Two Rivers School District.",
+    "Riverdale, Georgia\nRiverdale is a city in Clayton County, Georgia, United States.\n\n The population was 15,134 at the 2010 census, up from 12,478 in 2000.\n\n Riverdale is a suburb just south of Hartsfield–Jackson Atlanta International Airport and is part of the Atlanta metropolitan area.",
+    "College of Coastal Georgia\nThe College of Coastal Georgia (also known as CCGA) is a public college located at historical Brunswick, Georgia, United States and the surrounding historical Golden Isles.\n\n The College was established in 1961 and opened in 1964, making it one of Georgia's newest state colleges.\n\n The college transitioned from a two-year community college into a four-year comprehensive institution and conferred its first baccalaureate degrees on May 7, 2011.",
+    "Atlanta South Regional Airport\nHenry County Airport (FAA LID: KHMP) , is a public-use county airport located three nautical miles (6 km) west of the central business district of Hampton, a city in Henry County, Georgia, United States.\n\n It was known as Clayton County Airport – Tara Field, which was the name still used by the Federal Aviation Administration (FAA) and the Georgia Department of Transportation (GDOT) until approval of the Atlanta South Regional Airport name.\n\n The airport was renamed Atlanta South Regional Airport, which was approved by the airport board of commissioners in December 2011, and was approved by the GDOT and the FAA before it went into effect.",
+    "St. Mary's High School (Manhasset, New York)\nSaint Mary's High School is a private Catholic high school in Manhasset, New York.\n\n St. Mary's parish is part of the Roman Catholic Diocese of Rockville Centre yet the High School serves families of the Roman Catholic Archdiocese of New York, the Diocese of Brooklyn and the Diocese of Rockville Centre.\n\n It is located off Northern Boulevard at 51 Clapham Avenue, Manhasset, near the Miracle Mile.\n\n St. Mary's Men's Varsity Ice Hockey is the all-time leader in State Championships.",
+    "Brunswick Old Town Historic District\nBrunswick Old Town Historic District is a historic district in Brunswick, Georgia.\n\n It was added to the National Register of Historic Places on April 26, 1979 and includes an area bounded by 1st Street, Bay Street, New Bay Street, H Street, and Cochran Street (4th Ave. and G St., according to one source).\n\n Brunswick is one of Georgia's two deep-water ports and is the mainland city associated with the Golden Isles of Georgia, at the junction of I-95 and US 82.",
+    "Michael Ola\nMichael Ola (born April 19, 1988) is an American football offensive tackle for the Buffalo Bills of the National Football League (NFL).\n\n He played college football at Hampton University and attended Riverdale High School in Riverdale, Georgia.\n\n He has also been a member of the Jacksonville Sharks, Montreal Alouettes, Miami Dolphins, Chicago Bears, San Diego Chargers, Detroit Lions, Seattle Seahawks and New York Giants.",
+    "Lake Worth Community High School\nLake Worth Community High School is a B State of Florida rated public high school located in Lake Worth, Florida.\n\n Established in 1922 as Lake Worth High School, it is currently one of Palm Beach County's largest schools.\n\n It has six magnet programs: the award-winning Air Force JROTC led by former Multi-National Award-winning Drill Teams, Tyranny and Fidelis; Medicine and Allied Health; Child Care and Development; Criminal Justice; Culinary and Drafting and Design.\n\n The Palm Beach County School Board added the word Community to the names of all public high schools, including Lake Worth High School, in the 1980s.",
+    "Rich Central High School\nRich Central High School or RCHS is a public four-year high school located in Olympia Fields, Illinois, a southern suburb of Chicago, Illinois, in the United States.\n\n The Rich Central Campus serves the cities of Matteson, Richton Park, Country Club Hills, Chicago Heights, Tinley Park, and parts of Olympia Fields.\n\n It is a part of Rich Township District 227, which also includes Rich East High School and Rich South High School.\n\n Although the school is located in Olympia Fields, it does not serve the entire village.\n\n Some Olympia Fields students attend high school at Homewood-Flossmoor High School and Bloom High School, depending on the subdivision where the student resides."
+   ]
+  },
+  {
+   "id": "6dd169cffa629c51",
+   "gold": [
+    {
+     "sentence": "Aleksandr Ivanovsky (1881–1968) was a Russian screenwriter and film director who worked during the Soviet era.",
+     "facts": {
+      "0.0": "Aleksandr Ivanovsky lived from 1881 to 1968.",
+      "0.1": "Aleksandr Ivanovsky was a Russian screenwriter.",
+      "0.2": "Aleksandr Ivanovsky was a Russian film director.",
+      "0.3": "Aleksandr Ivanovsky worked during the Soviet era."
+     }
+    },
+    {
+     "sentence": "Arthur Lubin (July 25, 1898 – May 12, 1995) was an American film director and producer who directed several \"Abbott & Costello\" films, \"Phantom of the Opera\" (1943), the \"Francis the Talking Mule\" series and created the talking-horse TV series \"Mister Ed\".",
+     "facts": {
+      "1.0": "Arthur Lubin was born on July 25, 1898.",
+      "1.1": "Arthur Lubin died on May 12, 1995.",
+      "1.2": "Arthur Lubin was an American film director.",
+      "1.3": "Arthur Lubin was an American producer.",
+      "1.4": "Arthur Lubin directed several 'Abbott & Costello' films.",
+      "1.5": "Arthur Lubin directed 'Phantom of the Opera', released in 1943.",
+      "1.6": "Arthur Lubin directed the 'Francis the Talking Mule' series.",
+      "1.7": "Arthur Lubin created the talking-horse TV series 'Mister Ed'."
+     }
+    }
+   ],
+   "items": [
+    "Richard Lund\nRichard Lund (9 July 1885 – 27 September 1960) was a Swedish film and theatre actor.\n\n He made his stage debut at Stora Teatern in Gothenburg in 1904 and later appeared in 73 films between 1912 and 1952, making his most important roles during the silent film era.\n\n Among his best-known roles is that of Sir Archie in Mauritz Stiller's \"Sir Arne's Treasure\" (1919).\n\n He was the most prominent \"first lover\" of Swedish film during his heyday.",
+    "Vladimir Danilevich\nVladimir Petrovich Danilevich (Russian: Владимир Петрович Данилевич ; 4 September 1924 — 9 October 2001) was well-known Soviet and Russian Animator: who successfully worked as the film director, the screenwriter, the art director and the animator.",
+    "Elem Klimov\nElem Germanovich Klimov (Russian: Эле́м Ге́рманович Кли́мов ; 9 July 1933 – 26 October 2003) was a Soviet Russian film director.\n\n He studied at VGIK, and was married to film director Larisa Shepitko.\n\n Klimov is best known in the West for his final film, 1985's \"Come and See\" (\"Иди и смотри\"), which follows a teenage boy in German-occupied Belarus during the German-Soviet War and is often considered one of the greatest war films ever made.\n\n He also directed dark comedies, children's movies, and historical pictures.",
+    "Aleksandr Ivanovsky\nAleksandr Ivanovsky (1881–1968) was a Russian screenwriter and film director who worked during the Soviet era.\n\n Ivanovsky was awarded the Stalin Prize in 1941, for his work on the 1940 film \"Musical Story\".\n\n His 1944 operetta film \"Silva\" was one of the most popular releases in the Soviet Union that year.",
+    "Stefan Ruzowitzky\nStefan Ruzowitzky (born 25 December 1961) is an Austrian film director and screenwriter.",
+    "Aleksandra Sokolovskaya\nAleksandra Lvovna Sokolovskaya (Russian: Александра Львовна Соколовская ; 1872 – c. 1938) was a Russian Marxist revolutionary and Leon Trotsky's first wife.\n\n She perished in the Great Purges no earlier than 1938.",
+    "Lev Kuleshov\nLev Vladimirovich Kuleshov (Russian: Лев Влади́мирович Кулешо́в ; 13 January [O.S. 1 January] 1899 – 29 March 1970) was a Russian and Soviet filmmaker and film theorist, one of the founders of the world's first film school, the Moscow Film School.\n\n He was given the title People's Artist of the RSFSR in 1969.\n\n He was intimately involved in development of the style of film making known as Soviet montage, especially it's psychological underpinning, including the use of editing and the cut to emotionally influence the audience, a principle known as the Kuleshov effect.\n\n He also developed the theory of creative geography, which is the use of the action around a cut to connect otherwise disparate settings into a cohesive narrative.",
+    "Arthur Lubin\nArthur Lubin (July 25, 1898 – May 12, 1995) was an American film director and producer who directed several \"Abbott & Costello\" films, \"Phantom of the Opera\" (1943), the \"Francis the Talking Mule\" series and created the talking-horse TV series \"Mister Ed\".\n\n A prominent director for Universal Pictures in the 1940s and 1950s, he is perhaps best known today as the man who gave Clint Eastwood his first contract in film.",
+    "A Successful Failure\nA Successful Failure (1934) is an American film directed by Arthur Lubin.\n\n It was Lubin's first movie as director.",
+    "Anatoly Lunacharsky\nAnatoly Vasilyevich Lunacharsky (Russian: Анато́лий Васи́льевич Лунача́рский , , 23 November [O.S. 11 November] 1875 – 26 December 1933) was a Russian Marxist revolutionary and the first Soviet People's Commissar of Education responsible for culture and education.\n\n He was active as an art critic and journalist throughout his career."
+   ]
+  },
+  {
+   "id": "6618b78959991322",
+   "gold": [
+    {
+     "sentence": " He was awarded the 2012 Nobel Prize in Physics, jointly with Serge Haroche, for \"ground-breaking experimental methods that enable measuring and manipulation of individual quantum systems.\"",
+     "facts": {
+      "0.0": "The recipient was awarded the 2012 Nobel Prize in Physics.",
+      "0.1": "The recipient shared the 2012 Nobel Prize in Physics jointly with Serge Haroche.",
+      "0.2": "The 2012 Nobel Prize in Physics was awarded for ground-breaking experimental methods that enable measuring and manipulation of individual quantum systems."
+     }
+    },
+    {
+     "sentence": " Since 2001, Haroche is a Professor at the Collège de France and holds the Chair of Quantum Physics.",
+     "facts": {
+      "1.0": "Since 2001, Serge Haroche has been a Professor at the Collège de France.",
+      "1.1": "Since 2001, Serge Haroche has held the Chair of Quantum Physics."
+     }
+    }
+   ],
+   "items": [
+    "Nobel Prize in Physics\nThe Nobel Prize in Physics (Swedish: \"Nobelpriset i fysik\" ) is a yearly award given by the Royal Swedish Academy of Sciences for those who conferred the most outstanding contributions for mankind in the field of physics.\n\n It is one of the five Nobel Prizes established by the will of Alfred Nobel in 1895 and awarded since 1901; the others being the Nobel Prize in Chemistry, Nobel Prize in Literature, Nobel Peace Prize, and Nobel Prize in Physiology or Medicine.",
+    "List of Nobel laureates in Physiology or Medicine\nEach recipient receives a medal, a diploma and a monetary award that has varied throughout the years.\n\n In 1901, von Behring received 150,782 SEK, which is equal to 7,731,004 SEK in December 2008.\n\n In 2013, the prize was awarded to James E. Rothman, Randy W. Schekman and Thomas C. Südhof; they were recognised \"after discovering how cells precisely transport material\".\n\n The award is presented in Stockholm at an annual ceremony on December 10, the anniversary of Nobel's death.",
+    "Brian Josephson\nBrian David Josephson, {'1': \", '2': \", '3': \", '4': \"} (born 4 January 1940), is a Welsh theoretical physicist and professor emeritus of physics at the University of Cambridge.\n\n Best known for his pioneering work on superconductivity and quantum tunnelling, he was awarded the Nobel Prize in Physics in 1973 for his prediction of the Josephson effect, made in 1962 when he was a 22-year-old PhD student at Cambridge University.\n\n Josephson is the only Welshman to have won a Nobel Prize in Physics.\n\n He shared the prize with physicists Leo Esaki and Ivar Giaever, who jointly received half the award for their own work on quantum tunnelling.",
+    "List of Nobel laureates in Chemistry\nThe Nobel Prize in Chemistry (Swedish: \"Nobelpriset i kemi\" ) is awarded annually by the Royal Swedish Academy of Sciences to scientists in the various fields of chemistry.\n\n It is one of the five Nobel Prizes established by the 1895 will of Alfred Nobel, who died in 1896.\n\n These prizes are awarded for outstanding contributions in chemistry, physics, literature, peace, and physiology or medicine.\n\n As dictated by Nobel's will, the award is administered by the Nobel Foundation and awarded by a committee that consists of five members elected by the Royal Swedish Academy of Sciences.\n\n The first Nobel Prize in Chemistry was awarded in 1901 to Jacobus Henricus van 't Hoff, of the Netherlands.\n\n Each recipient receives a medal, a diploma and a monetary award prize that has varied throughout the years.\n\n In 1901, van 't Hoff received 150,782 SEK, which is equal to 7,731,004 SEK in December 2007.\n\n The award is presented in Stockholm at an annual ceremony on December 10, the anniversary of Nobel's death.",
+    "Richard W. Aldrich\nRichard Warren Aldrich is an American neuroscientist who is currently the Karl Folkers Chair of Interdisciplinary Medical Research and Professor of Neurobiology in the School of Biological Sciences at the University of Texas.\n\n Graduating from the University of Arizona with a BS in Biological Sciences (1975), Aldrich went on to earn a Ph. D. in Neuroscience from Stanford University (1980).\n\n After completing a post-doctoral fellowship in physiology at Yale University under the direction of W. Knox Chandler and Charles F. Stevens, Aldrich was hired to teach at Yale, instructing in the Department of Molecular Neurobiology.\n\n In 1985, Aldrich returned to Stanford to teach neurobiology and physiology, eventually serving as Chair of the Department of Molecular and Cellular Physiology from 2001 to 2004.\n\n He was an Investigator in the Howard Hughes Medical Institute from 1990 until 2006.\n\n Aldrich's research has focused on the \"molecular mechanisms of ion channel function and their role in electrical signaling.\"\n\n Aldrich has served as the President of the Society of General Physiologists and the Biophysical Society.",
+    "Serge Haroche\nSerge Haroche (born 11 September 1944) is a French physicist who was awarded the 2012 Nobel Prize for Physics jointly with David J. Wineland for \"ground-breaking experimental methods that enable measuring and manipulation of individual quantum systems\", a study of the particle of light, the photon.\n\n This and his other works developed laser spectroscopy.\n\n Since 2001, Haroche is a Professor at the Collège de France and holds the Chair of Quantum Physics.\n\n In 1971 he defended his doctoral thesis in physics at the University of Paris VI, his research has been conducted under the direction of Claude Cohen-Tannoudji.",
+    "David J. Wineland\nDavid Jeffrey Wineland (born February 24, 1944) is an American Nobel-laureate physicist at the National Institute of Standards and Technology (NIST) physics laboratory.\n\n His work has included advances in optics, specifically laser cooling trapped ions and using ions for quantum computing operations.\n\n He was awarded the 2012 Nobel Prize in Physics, jointly with Serge Haroche, for \"ground-breaking experimental methods that enable measuring and manipulation of individual quantum systems.\"",
+    "François Englert\nFrançois Baron Englert (] ; born 6 November 1932) is a Belgian theoretical physicist and 2013 Nobel prize laureate (shared with Peter Higgs).\n\n He is Professor emeritus at the Université libre de Bruxelles (ULB) where he is member of the Service de Physique Théorique.\n\n He is also a Sackler Professor by Special Appointment in the School of Physics and Astronomy at Tel Aviv University and a member of the Institute for Quantum Studies at Chapman University in California.\n\n He was awarded the 2010 J. J. Sakurai Prize for Theoretical Particle Physics (with Gerry Guralnik, C. R. Hagen, Tom Kibble, Peter Higgs, and Robert Brout), the Wolf Prize in Physics in 2004 (with Brout and Higgs) and the High Energy and Particle Prize of the European Physical Society (with Brout and Higgs) in 1997 for the mechanism which unifies short and long range interactions by generating massive gauge vector bosons.\n\n He has made contributions in statistical physics, quantum field theory, cosmology, string theory and supergravity.",
+    "Duncan Haldane\nFrederick Duncan Michael Haldane {'1': \", '2': \", '3': \", '4': \"} (born 14 September 1951), known as F. Duncan Haldane, is a British born physicist who is Eugene Higgins Professor of Physics at the physics department of Princeton University, and a Distinguished Visiting Research Chair at Perimeter Institute for Theoretical Physics.\n\n He won the 2016 Nobel Prize in Physics with David J. Thouless and John Michael Kosterlitz.",
+    "François Englert\nHe is the recipient of the 2013 Prince of Asturias Award in technical and scientific research, together with Peter Higgs and the CERN."
+   ]
+  },
+  {
+   "id": "27729462759ccf98",
+   "gold": [
+    {
+     "sentence": " He appeared in 57 films between 1919 and 1932.",
+     "facts": {
+      "0.0": "The person described appeared in 57 films.",
+      "0.1": "The person described appeared in 57 films between 1919 and 1932."
+     }
+    },
+    {
+     "sentence": " He also directed 54 films between 1920 and 1933, including one Harry Langdon short, two of the Tay Garnett- penned comedies Stan Laurel made for Joe Rock, and fifteen of the earliest entries in the Edgar Kennedy \"Average Man\" series.",
+     "facts": {
+      "1.0": "The person described directed 54 films.",
+      "1.1": "The person described directed these films between 1920 and 1933.",
+      "1.2": "The person's directed films include one Harry Langdon short.",
+      "1.3": "The person's directed films include two of the Tay Garnett-penned comedies Stan Laurel made for Joe Rock.",
+      "1.4": "The person's directed films include fifteen of the earliest entries in the Edgar Kennedy \"Average Man\" series."
+     }
+    },
+    {
+     "sentence": "John Scott Biddle (1925–2008) was a foremost yachting cinematographer and lecturer, establishing a film-making career that spanned more than forty years.",
+     "facts": {
+      "2.0": "John Scott Biddle lived from 1925 to 2008.",
+      "2.1": "John Scott Biddle was a foremost yachting cinematographer.",
+      "2.2": "John Scott Biddle was a lecturer.",
+      "2.3": "John Scott Biddle established a film-making career.",
+      "2.4": "John Scott Biddle's film-making career spanned more than forty years."
+     }
+    }
+   ],
+   "items": [
+    "Alexander Butler\nAlexander Butler was a British film director who made over sixty features and short films during the 1910s and 1920s including many for G.B. Samuelson's production company.\n\n Butler directed several British films in Hollywood in 1920, where Samuelson had made an arrangement with Universal Pictures.\n\n Amongst his notable films are the Sherlock Holmes adaptation \"The Valley of Fear\" (1916) and the early British horror film \"The Beetle\" (1919).",
+    "John Biddle (Michigan politician)\nJohn Biddle (March 2, 1792 – August 25, 1859) was a delegate to the United States Congress from the Michigan Territory.",
+    "John Biddle (Unitarian)\nJohn Biddle or Bidle (born Wotton-under-Edge, Gloucestershire, England, 14 January 1615 – died 22 September 1662) was an influential English nontrinitarian, and Unitarian.\n\n He is often called \"the Father of English Unitarianism\".",
+    "John Biddle (yachting cinematographer)\nJohn Scott Biddle (1925–2008) was a foremost yachting cinematographer and lecturer, establishing a film-making career that spanned more than forty years.\n\n His films captured not only the technical aspects of sailing but also the human story in events as tranquil as a Nova Scotia cruise and as grand as the America's Cup Races.",
+    "John Biddle (United States Army general)\nJohn Biddle (February 2, 1859 – January 18, 1936) was career United States Army officer who became superintendent of the United States Military Academy.",
+    "Millard Webb\nMillard Webb (6 December 1893 – 21 April 1935), was an American screenwriter and director.\n\n He directed 20 films between 1920 and 1933.\n\n His best-known film is the 1926 silent John Barrymore adventure \"The Sea Beast\" costarring Dolores Costello.\n\n Webb also directed the early sound Florenz Ziegfeld produced talkie \"Glorifying the American Girl\" released by Paramount in 1929.\n\n His active years were from 1916 to 1933.",
+    "Biddle family\nThe American Biddle family of Philadelphia began when William Biddle (1630–1712) and Sarah Kempe (1634–1709), Quakers, emigrated from England to America in 1681, in part, to avoid religious persecution.\n\n Having acquired extensive rights to over 43000 acre of lands in Quaker West Jersey, they settled first at Burlington.\n\n Two third generation brothers, William Biddle, 3rd (1698–1756), and John Biddle (1707–1789), moved from Mount Hope (1684) near Bordentown to Philadelphia in the 1720s and 1730s and constituted the first generation of the Philadelphia Biddle family.",
+    "Charles J. Biddle (aviator)\nMajor Charles John Biddle (13 May 1890 – 22 March 1972) was an American aviator, attorney, and author.\n\n He was a flying ace during World War I.\n\n Postwar, he launched a career in law and wrote his memoirs.",
+    "Charles John Biddle\nCharles John Biddle (April 30, 1819 – September 28, 1873) was an American soldier, lawyer, congressman, and newspaper editor.",
+    "Harry Sweet\nHarry Sweet (October 2, 1901 – June 18, 1933) was an American actor, director and screenwriter.\n\n He appeared in 57 films between 1919 and 1932.\n\n He also directed 54 films between 1920 and 1933, including one Harry Langdon short, two of the Tay Garnett- penned comedies Stan Laurel made for Joe Rock, and fifteen of the earliest entries in the Edgar Kennedy \"Average Man\" series."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,546 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "feecbdd8efcd23c3",
+   "kind": "answer",
+   "question": "What band is a tribute to a band originally known as the Grizzly River Boys?",
+   "gold_answers": [
+    "Nashville Tribute Band"
+   ],
+   "model_answer": "Diamond Rio"
+  },
+  {
+   "id": "7ebb8da7908472a8",
+   "kind": "answer",
+   "question": "Do both Changle District and Longkou face water?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both face water."
+  },
+  {
+   "id": "88a98e5118efff9f",
+   "kind": "answer",
+   "question": "What other things did  blind Arab philosopher who is also  Abd Allah ibn al-Fadl teacher do ",
+   "gold_answers": [
+    "poet, and writer"
+   ],
+   "model_answer": "He was also a poet and writer."
+  },
+  {
+   "id": "28703bc331338b7a",
+   "kind": "answer",
+   "question": "Are Pterostyrax and Dregea both native to Asia?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both are native to Asia."
+  },
+  {
+   "id": "c06e809a1a164e21",
+   "kind": "answer",
+   "question": "Suicide's 1977 released album features a song based on what brand's comic character?",
+   "gold_answers": [
+    "Marvel"
+   ],
+   "model_answer": "Marvel Comics character Ghost Rider"
+  },
+  {
+   "id": "0fa3b4d576378f99",
+   "kind": "answer",
+   "question": "Who was born first Edward Keonjian or Aram Saroyan?",
+   "gold_answers": [
+    "Dr. Edward Keonjian"
+   ],
+   "model_answer": "Edward Keonjian"
+  },
+  {
+   "id": "7ea89b119f77233d",
+   "kind": "answer",
+   "question": "Where are Teide National Park and Garajonay National Park located?",
+   "gold_answers": [
+    "Canary Islands, Spain"
+   ],
+   "model_answer": "Tenerife and La Gomera, respectively."
+  },
+  {
+   "id": "a671883244adf832",
+   "kind": "answer",
+   "question": "Are Yucca and Rodgersia both perennials?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both are perennials."
+  },
+  {
+   "id": "4e680aa77631a967",
+   "kind": "answer",
+   "question": "Which is larger, Garajonay National Park or Guadarrama National Park?",
+   "gold_answers": [
+    "Sierra de Guadarrama National Park"
+   ],
+   "model_answer": "Guadarrama National Park"
+  },
+  {
+   "id": "616e510f40e243b1",
+   "kind": "answer",
+   "question": "Which astronaut, Jean-François Clervoy or Ulrich Walter, was born first?",
+   "gold_answers": [
+    "Prof. Dr. Ulrich Hans Walter"
+   ],
+   "model_answer": "Ulrich Walter"
+  },
+  {
+   "id": "3653417e57f82c56",
+   "kind": "answer",
+   "question": "Near what ocean does the highway carried by the Long-Allen bridge terminate near?",
+   "gold_answers": [
+    "the Atlantic Ocean"
+   ],
+   "model_answer": "Gulf of Mexico"
+  },
+  {
+   "id": "fd3db69d3f1459b2",
+   "kind": "answer",
+   "question": "Are Sunset Strip and American Hardcore both music documentaries?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "e38e63b97da61135",
+   "kind": "answer",
+   "question": "Tritonia and Phyteuma are both names for a what of plants?",
+   "gold_answers": [
+    "genus"
+   ],
+   "model_answer": "genus of plants"
+  },
+  {
+   "id": "7e1886d6784cdc61",
+   "kind": "answer",
+   "question": "Was the band The Shins formed before the band Paramore?  ",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, The Shins were formed before Paramore."
+  },
+  {
+   "id": "d1280666f634fb0a",
+   "kind": "answer",
+   "question": "Who is the grandfather to Frederick II and was the Holy Roman Emperor until death?",
+   "gold_answers": [
+    "Frederick I"
+   ],
+   "model_answer": "Frederick I Barbarossa"
+  },
+  {
+   "id": "8f39e477634d3721",
+   "kind": "answer",
+   "question": "In between Remember the Titans and My Favorite Martian which film film grossed $36.8 million domestically?",
+   "gold_answers": [
+    "My Favorite Martian"
+   ],
+   "model_answer": "Titan A.E."
+  },
+  {
+   "id": "e5b5c4d9b566007d",
+   "kind": "answer",
+   "question": "Tritonia and Phyteuma are both names for a what of plants?",
+   "gold_answers": [
+    "genus"
+   ],
+   "model_answer": "genus of flowering plants"
+  },
+  {
+   "id": "1631c40dbe0eb806",
+   "kind": "answer",
+   "question": "In what movie did the male star of a movie about a widowed 37-year-old woman also star in in the year 1993?",
+   "gold_answers": [
+    "\"Red Rock West\""
+   ],
+   "model_answer": "Deadfall (1993)"
+  },
+  {
+   "id": "26e015a7922a7c9d",
+   "kind": "answer",
+   "question": "What was the Volvo S70 essentially modeled after and was the first all wheel drive Volvo?",
+   "gold_answers": [
+    "Volvo 850"
+   ],
+   "model_answer": "A facelifted Volvo 850 saloon; the 850 was Volvo’s first all-wheel-drive model."
+  },
+  {
+   "id": "4ea9354e921ab994",
+   "kind": "answer",
+   "question": "What was the Canadian movie called in Italy that stared a professional American football defensive end of the National Football League along with Michael Ironside?",
+   "gold_answers": [
+    "Anno 2053"
+   ],
+   "model_answer": "Roboman"
+  },
+  {
+   "id": "93bdf4cb0c0ae430",
+   "kind": "answer",
+   "question": "What type of group does Pablo Carballo and Argentine Air Force have in common?",
+   "gold_answers": [
+    "military"
+   ],
+   "model_answer": "Argentine Air Force members"
+  },
+  {
+   "id": "bc73947fb1951ab2",
+   "kind": "answer",
+   "question": "What is in both the Lithocarpus and Duranta species?",
+   "gold_answers": [
+    "trees"
+   ],
+   "model_answer": "They are both plants."
+  },
+  {
+   "id": "3484b6e8903216a7",
+   "kind": "answer",
+   "question": "Who is younger, Pelle Almqvist or Steve Winwood?",
+   "gold_answers": [
+    "Pelle Almqvist"
+   ],
+   "model_answer": "Steve Winwood is older; Pelle Almqvist is younger."
+  },
+  {
+   "id": "f397e2d5367b9832",
+   "kind": "answer",
+   "question": "when was Quiet in Heaven/Song of Liberty recorded?",
+   "gold_answers": [
+    "Before settling on their current name in 1982"
+   ],
+   "model_answer": "1982"
+  },
+  {
+   "id": "4fecac565f1479a5",
+   "kind": "answer",
+   "question": "Which Western action-adventure video game by Rockstar did Tyler Bunch act for?",
+   "gold_answers": [
+    "Red Dead Redemption"
+   ],
+   "model_answer": "Red Dead Redemption and Red Dead Revolver"
+  },
+  {
+   "id": "c083f152dae73fd3",
+   "kind": "answer",
+   "question": "Have Marc Rosset and Max Mirnyi both been professional tennis players?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both have been professional tennis players."
+  },
+  {
+   "id": "c45c8c5f396e71d6",
+   "kind": "answer",
+   "question": "Which head coach has led their team for a longer period of time, Tim Cluess or Steve Prohm?",
+   "gold_answers": [
+    "Tim Cluess"
+   ],
+   "model_answer": "Steve Prohm"
+  },
+  {
+   "id": "98877f9c44d0dab8",
+   "kind": "answer",
+   "question": "What organization does Rosyth Dockyard and Queen Elizabeth-class aircraft carrier have in common?",
+   "gold_answers": [
+    "Navy"
+   ],
+   "model_answer": "Royal Navy"
+  },
+  {
+   "id": "5545a8e5620cd9d1",
+   "kind": "answer",
+   "question": "Where was the capital of the Arab country, in which the Aulacodes peribocalis moth is found, relocated to?  ",
+   "gold_answers": [
+    "Aden"
+   ],
+   "model_answer": "Port Sudan"
+  },
+  {
+   "id": "551ac2cd0f7a2b8f",
+   "kind": "answer",
+   "question": "Who had a longer film career, Harry Sweet or John Biddle?",
+   "gold_answers": [
+    "John Scott Biddle"
+   ],
+   "model_answer": "John Biddle"
+  },
+  {
+   "id": "d0ed7dd783a87324",
+   "kind": "answer",
+   "question": "What is 25 miles south of Groom Lake?",
+   "gold_answers": [
+    "Rachel, Nevada"
+   ],
+   "model_answer": "Papoose Lake"
+  },
+  {
+   "id": "d0978edf71368213",
+   "kind": "answer",
+   "question": "What is the given name of the character depicted as Juliet Hulme in Heavenly Creatures?",
+   "gold_answers": [
+    "Anne Perry"
+   ],
+   "model_answer": "Kate"
+  },
+  {
+   "id": "61b67cc3d40b90e0",
+   "kind": "answer",
+   "question": "Which former Republican won the presidential nomination at the 2012 United States Libertarian National Convention? ",
+   "gold_answers": [
+    "Gary Earl Johnson"
+   ],
+   "model_answer": "Gary Johnson"
+  },
+  {
+   "id": "738452c57b2ffc04",
+   "kind": "answer",
+   "question": "OU812 was the second album to feature a vocalist that also played what instrument in \"Finish What Ya Started\"?",
+   "gold_answers": [
+    "rhythm guitar"
+   ],
+   "model_answer": "Gibson acoustic guitar"
+  },
+  {
+   "id": "d744c89b55486734",
+   "kind": "answer",
+   "question": "What are the professions of Tom Johnston and Daryl Palumbo?",
+   "gold_answers": [
+    "American musician"
+   ],
+   "model_answer": "Musicians and singers-songwriter’s"
+  },
+  {
+   "id": "cb385e0379c6a0f5",
+   "kind": "answer",
+   "question": "What man won an Academy Award for his work on a drama based on the life of Rocky Graziano?",
+   "gold_answers": [
+    "Francis Keogh Gleason"
+   ],
+   "model_answer": "F. Keogh Gleason"
+  },
+  {
+   "id": "f3d1a0e3e9f012f0",
+   "kind": "answer",
+   "question": "The Church of the Guanche People was founded in the city that is on the most populated island of what larger area?",
+   "gold_answers": [
+    "Macaronesia"
+   ],
+   "model_answer": "Spain"
+  },
+  {
+   "id": "7c4adbc8ae112684",
+   "kind": "answer",
+   "question": "Which film came out first, Still Kicking: Six Artistic Women of Project Arts & Longevity or Time Bombs?",
+   "gold_answers": [
+    "Still Kicking: Six Artistic Women of Project Arts & Longevity"
+   ],
+   "model_answer": "Time Bombs??"
+  },
+  {
+   "id": "433a36d5ec958a87",
+   "kind": "answer",
+   "question": "Which film was directed by Wayne Coles-Janess, Tender Fictions or Bougainville – Our Island Our Fight?",
+   "gold_answers": [
+    "Bougainville"
+   ],
+   "model_answer": "Bougainville – Our Island Our Fight"
+  },
+  {
+   "id": "b6e35997d9f62242",
+   "kind": "answer",
+   "question": "What other things did  blind Arab philosopher who is also  Abd Allah ibn al-Fadl teacher do ",
+   "gold_answers": [
+    "poet, and writer"
+   ],
+   "model_answer": "Poet and writer; he expressed an irreligious worldview."
+  },
+  {
+   "id": "2499b392d5f9717f",
+   "kind": "answer",
+   "question": "What region has the indigenous language that includes the word Catuaba?",
+   "gold_answers": [
+    "South America"
+   ],
+   "model_answer": "Paraguay, South America"
+  },
+  {
+   "id": "24aaf7cd2bab11d7",
+   "kind": "answer",
+   "question": "Which English actor, comedian and singer is featured in Chalk and Cheese?",
+   "gold_answers": [
+    "Michael Patrick Smith"
+   ],
+   "model_answer": "John Inman"
+  },
+  {
+   "id": "9b133a8cd8260032",
+   "kind": "answer",
+   "question": "What aspect of the board game Diplomacy is not found in the board game Uncle Wiggily?",
+   "gold_answers": [
+    "negotiation phases"
+   ],
+   "model_answer": "Negotiation phases and alliance-forming\n"
+  },
+  {
+   "id": "f0e9429fa71c88d5",
+   "kind": "answer",
+   "question": "Which became a Cathedral first St Chad's Cathedral, Birmingham or Chelmsford Cathedral?",
+   "gold_answers": [
+    "Metropolitan Cathedral Church and Basilica of Saint Chad"
+   ],
+   "model_answer": "St Chad's Cathedral, Birmingham"
+  },
+  {
+   "id": "c420ffbb69fe1321",
+   "kind": "answer",
+   "question": "Were either Hou Hsiao-hsien or Kenny Ortega winners of an Academy Award?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Neither."
+  },
+  {
+   "id": "579ccacec6eebfd5",
+   "kind": "answer",
+   "question": "What are the professions of Tom Johnston and Daryl Palumbo?",
+   "gold_answers": [
+    "American musician"
+   ],
+   "model_answer": "Musicians and singers."
+  },
+  {
+   "id": "a7dc5a4ebcd26f54",
+   "kind": "answer",
+   "question": "The brother of Ferdinand Alfred Friedrich Jodl served as what position in World War II?",
+   "gold_answers": [
+    "Chief of the Operations Staff of the Armed Forces High Command"
+   ],
+   "model_answer": "Chief of the Operations Staff of the OKW\n"
+  },
+  {
+   "id": "94909b3e8270fa37",
+   "kind": "answer",
+   "question": "What do Victor Salva and Emilio Fernández have in common?",
+   "gold_answers": [
+    "director and screenwriter."
+   ],
+   "model_answer": "Both are film directors."
+  },
+  {
+   "id": "6b543ae9adeeb6bb",
+   "kind": "answer",
+   "question": "Erving Goffman was cited as higher than a literary critic on which guide?",
+   "gold_answers": [
+    "The Times Higher Education Guide"
+   ],
+   "model_answer": "The Social Science Citation Index"
+  },
+  {
+   "id": "7254e3559c7cf184",
+   "kind": "answer",
+   "question": "Was Talking Heads and Man or Astro-man? formed further north?",
+   "gold_answers": [
+    "Talking Heads"
+   ],
+   "model_answer": "Yes, Talking Heads formed further north."
+  },
+  {
+   "id": "f67b309f41232bc3",
+   "kind": "answer",
+   "question": "Edmund Robert Harris is the principal benefactor of a museum located where ?",
+   "gold_answers": [
+    "Preston"
+   ],
+   "model_answer": "Preston, Lancashire, England"
+  },
+  {
+   "id": "9d66647cfea29266",
+   "kind": "answer",
+   "question": "Which was published more frequently, Popular Science or Girlfriends?",
+   "gold_answers": [
+    "Girlfriends"
+   ],
+   "model_answer": "Neither—both were published monthly."
+  },
+  {
+   "id": "57ebb1d09867de4d",
+   "kind": "answer",
+   "question": "Jim Sharman and Ava DuVernay both share what title concerning their actions leading actors in film or stage?",
+   "gold_answers": [
+    "director"
+   ],
+   "model_answer": "Director and theatre director"
+  },
+  {
+   "id": "18e673862c63ed1c",
+   "kind": "answer",
+   "question": "When Copsi was made earl of Northumbria he went back to reside in a town at the confluence of which two rivers?",
+   "gold_answers": [
+    "Ouse and Foss"
+   ],
+   "model_answer": "The Ouse and Foss rivers"
+  },
+  {
+   "id": "62d906409a2ccf14",
+   "kind": "answer",
+   "question": "Which film was released first, Summer Magic or Around the World in 80 Days?",
+   "gold_answers": [
+    "Summer Magic"
+   ],
+   "model_answer": "Around the World in 80 Days (1956 film)"
+  },
+  {
+   "id": "5cab9b826c24718b",
+   "kind": "answer",
+   "question": "what is the english name of Émile Verdets editorial?",
+   "gold_answers": [
+    "Annals of Chemistry and of Physics"
+   ],
+   "model_answer": "Annals of Chemistry and Physics"
+  },
+  {
+   "id": "264acab91731e632",
+   "kind": "answer",
+   "question": "The House of Hanover held the British throne until after Victoria's death, when it was past to the dynasty that ruled which duchy?",
+   "gold_answers": [
+    "Ernestine"
+   ],
+   "model_answer": "Duchy of Saxe-Coburg and Gotha"
+  },
+  {
+   "id": "3e615067b21c6ca7",
+   "kind": "answer",
+   "question": "What two singers who worked together on the song I Would Like to See You Again also performed as part of a country music group which was active between 1985 and 1995?",
+   "gold_answers": [
+    "Johnny Cash, Waylon Jennings"
+   ],
+   "model_answer": "Johnny Cash and Waylon Jennings"
+  },
+  {
+   "id": "b5ee6d7a7d1f7e73",
+   "kind": "answer",
+   "question": "Who was most well-known as a radio personality and disc jockey, John Garabedian or Charles A. Agemian?",
+   "gold_answers": [
+    "John H. Garabedian"
+   ],
+   "model_answer": "John Garabedian"
+  },
+  {
+   "id": "27d6712cafec6ed7",
+   "kind": "answer",
+   "question": "Did Nicholas Hytner and Maya Deren work in the same role in the film industry?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes, both worked as film directors."
+  }
+ ],
+ "evidence": []
+}

@@ -1,0 +1,355 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "476ef4ac59de5048",
+   "kind": "answer",
+   "question": "where does the story the great gatsby take place",
+   "gold_answers": [
+    "the fictional town of West Egg on prosperous Long Island",
+    "Long Island of 1922"
+   ],
+   "model_answer": "West Egg, Long Island, New York."
+  },
+  {
+   "id": "b809011656516a72",
+   "kind": "answer",
+   "question": "who is rose in the fall season 2",
+   "gold_answers": [
+    "a woman who had a sexual relationship with Paul whilst at university",
+    "Valene Kane"
+   ],
+   "model_answer": "Rose Stagg, a woman Paul Spector previously tried to strangle and later kidnapped."
+  },
+  {
+   "id": "b9490dea813c40af",
+   "kind": "answer",
+   "question": "who has the most podium finishes in australia",
+   "gold_answers": [
+    "Michael Schumacher"
+   ],
+   "model_answer": "Lewis Hamilton"
+  },
+  {
+   "id": "52503388cc0bf54d",
+   "kind": "answer",
+   "question": "all i want for christmas is you mariah carey tour",
+   "gold_answers": [
+    "All I Want for Christmas Is You , a Night of Joy and Festivity is the first concert residency by American singer Mariah Carey . Performed annually at the Beacon Theatre in Manhattan , New York , the residency began on December 15 , 2014 , and will conclude on December 22 , 2017 , after completing six legs and thirty - four shows . Billboard revealed that the six dates had sold out with a total of 16,196 tickets while grossing $1.5 million during the first leg of the residency . The main set list for the show encompassed songs from Merry Christmas and Merry Christmas II You , with additional non-holiday tracks . The show also included `` a cast of forty , including a gospel choir , a clutch of carolers , several acrobats and a hyperactive round of kid singer / dancers . ''"
+   ],
+   "model_answer": "All I Want for Christmas Is You, a Night of Joy and Festivity (concert residency)"
+  },
+  {
+   "id": "b0b8830be2133d63",
+   "kind": "answer",
+   "question": "where does the word fore in golf originated",
+   "gold_answers": [
+    "`` Fore ! '' , originally an Australian interjection , is used to warn anyone standing or moving in the flight of a golf ball . The mention of the term in an 1881 Australian Golf Museum indicates that the term was in use at least as early as that period ."
+   ],
+   "model_answer": "Its origin is uncertain; theories include the military warning “beware before” and “fore-caddie.”"
+  },
+  {
+   "id": "41c73927921cd94a",
+   "kind": "answer",
+   "question": "where is deforestation occurring in the united states",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Across the United States, including the Eastern forests."
+  },
+  {
+   "id": "5ad79bfaff48cf03",
+   "kind": "answer",
+   "question": "fear the walking dead season 1 episode 4 explained",
+   "gold_answers": [
+    "No . overall No. in season Title Directed by Written by Original air date U.S. viewers ( millions ) `` Pilot '' Adam Davidson Robert Kirkman & Dave Erickson August 23 , 2015 ( 2015 - 08 - 23 ) 10.13 Nick awakens in a heroin den in an abandoned church , to find his girlfriend Gloria eating a corpse . While fleeing , he is hit by a car and hospitalized . The doctor tells Madison and Travis that Nick 's claims about the incident are heroin hallucinations , but Travis believes Nick after visiting the church himself . Alicia becomes more worried about Nick 's chemical dependency . The next day , school closes early due to the high levels of absenteeism and rumors of an epidemic . Nick escapes from the hospital and meets with Calvin , hoping to learn if the drugs Calvin sold him caused him to hallucinate in the church . Calvin tries to kill Nick to prevent him from exposing Calvin as a drug dealer or impugning the quality of his drugs . In the ensuing struggle , Calvin is mortally shot . After Travis and Madison arrive , the zombified Calvin attacks them . Nick runs over Calvin repeatedly with Travis ' truck , and the three watch in disbelief as the mutilated Calvin is still able to turn his head towards them . `` So Close , Yet So Far '' Adam Davidson Marco Ramirez August 30 , 2015 ( 2015 - 08 - 30 ) 8.18 After the run - in with zombified Calvin , Nick , Madison , and Travis choose to flee to the desert , and they want Alicia , Liza , and Chris to follow . Alicia finds Matt ill in his disheveled house . Travis arrives and sees a bite on Matt , who convinces Alicia to leave . The group returns to Madison 's home to gather supplies . Nick suffers from heroin withdrawal , so Madison drives to her school to get him Oxycodone . There , she encounters Tobias scavenging food . A zombified Artie tries to bite Tobias , so Madison kills Artie and drives Tobias home . Chris ' bus is trapped in a traffic jam caused by a zombie shooting by the police . He films the event and joins in a protest against that and other recent fatal police shootings , when Travis and Liza meet up with him . A riot erupts after police shoot down another zombie , but the three Manawas find refuge with the Salazars in their gated barbershop - home . Travis tells Madison to take the kids to the desert without him ; he will catch up . Alicia witnesses her zombified neighbor , Mr. Dawson , attacking Mrs. Cruz across the street , but Madison prevents her from intervening . The group inside the barbershop remains trapped , while the riot outside intensifies . `` The Dog '' Adam Davidson Jack LoGiudice September 13 , 2015 ( 2015 - 09 - 13 ) 7.19 While a riot rages outside , a mob sets fire to the store adjoining the barbershop , forcing the Salazars and Manawas to flee . The group reaches Travis ' truck and escapes , but not before Griselda is injured by a collapsing scaffold . Unable to reach a hospital , the group drives to Madison 's house , where Nick , Madison , and Alicia temporarily flee when the zombified Mr. Dawson attempts to enter , attracted by the barking dog Nick had let in . Nick leads Madison and Alicia to the Trans ' house next door , where they take a shotgun . Travis arrives and is attacked by Mr. Dawson , who is shot and killed by Daniel . All three families decide to stay the night and evacuate in the morning . Nurse Liza tends to Griselda 's injured foot but notes that Griselda will die if not treated by a doctor . Ofelia tells Daniel they should flee with Travis , but Daniel insists his family can survive alone and will join his cousin later . The next morning , as the Clarks and Manawas start driving away , the National Guard arrives and quarantines the block . While Travis says , `` It 's going to get better , '' Daniel laments that it 's , `` too late , '' as he watches a guardsman mark the neighboring house . `` Not Fade Away '' Kari Skogland Meaghan Oppenheimer September 20 , 2015 ( 2015 - 09 - 20 ) 6.62 Days after the National Guard quarantines the neighborhood into a Safe Zone , residents try to live normally . Tensions build under the military rule . Madison is stressed by extra work caused by her home 's being overcrowded and Travis ' new role as civilian liaison . Chris shows a video to Travis and Madison of a light signaling from the Dead Zone . Travis talks Doug into getting mental help . Liza medically helps neighbors . Nick steals morphine from Hector via IV drip . Ofelia kisses Adams , who was unable to get Griselda 's medicine . Madison exchanges signals with the flashing light in the Dead Zone . She sneaks outside the fence to investigate and finds evidence that the guardsmen killed civilians , even the uninfected . Travis learns that Doug has been hospitalized for his mental issues . Dr. Exner determines that Liza is not technically a nurse . Daniel warns Madison of his El Salvador experience , when the sick were taken under the guise of receiving hospitalization but instead killed . Soldiers take Griselda and Nick to a hospital , but Nick 's family protests his departure . Liza agrees to go to assist the medical team , despite not wanting to leave her son . Travis retreats to the roof and sees the signal from the Dead Zone . Seconds later , he sees and hears gunfire , followed by darkness . 5 5 `` Cobalt '' Kari Skogland David Wiener September 27 , 2015 ( 2015 - 09 - 27 ) 6.66 In a military cell , Strand bribes a guardsman to save feverish Nick from being moved . Liza helps Dr. Exner with patients at the hospital . Chris is devastated that Liza left voluntarily to help at the hospital , but Travis promises to bring her back . Madison discovers Daniel detaining Adams in the Trans ' basement . Alicia and Chris get drunk in and vandalize the abandoned home of a wealthy family . Strand recruits Nick for an escape plot . Travis convinces Moyers ' squad to take him to the hospital to check on his friends . While en route , Moyers encourages Travis to shoot a zombie , but Travis is emotionally unable to pull the trigger . The soldiers stop to assist another squad in a building infested by zombies , and most of those soldiers , including Moyers , are overcome . The few survivors flee and drop off Travis near the Safe Zone . Travis learns that Daniel tortured Adams into revealing what `` Cobalt '' means : in the morning , all civilians will be killed , and the guardsmen will evacuate the city . Griselda dies of septic shock at the hospital ; Liza shoots her brain to prevent reanimation . Daniel visits a nearby sports arena to verify Adams ' story that it was sealed with 2,000 now - zombified civilians inside . 6 6 `` The Good Man '' Stefan Schwartz Robert Kirkman & Dave Erickson October 4 , 2015 ( 2015 - 10 - 04 ) 6.86 The group drives to the National Guard 's headquarters to rescue Liza , Griselda , and Nick . Adams agrees to be their guide when let go by Travis . The group infiltrates the base after Daniel distracts the guards by leading a horde of walkers from the arena . Travis , Madison , Daniel , and Ofelia go inside , while Alicia and Chris stay behind . Meanwhile , the walkers breach the perimeter defenses and swarm the base . Travis ' group reach the holding cells and set the detainees free before reuniting with Nick , Liza , and Strand . They try to escape through the medical ward , where they discover Dr. Exner has euthanized all of the patients . Dr. Exner tells them of an escape route before presumably committing suicide . Before they can escape , the group encounters Adams , who shoots Ofelia in the arm . Enraged , Travis brutally beats Adams and leaves him for dead . Strand leads the group to his oceanside mansion , where he reveals to Nick that he owns a yacht which he plans to escape on , called the Abigail . On the beach , Liza reveals to Madison that she had been bitten during the escape . Liza pleads with Madison and Travis to euthanize her before she turns . Travis promises to protect Chris before shooting Liza ."
+   ],
+   "model_answer": "The National Guard quarantines the neighborhood, while Madison investigates the Dead Zone and discovers soldiers have killed civilians."
+  },
+  {
+   "id": "cf7a0807e67c916e",
+   "kind": "answer",
+   "question": "the chinese restaurant. season 2 episode 11",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Yes, Season 2, Episode 11."
+  },
+  {
+   "id": "ea633c8f187ba4da",
+   "kind": "answer",
+   "question": "how much does.it cost to raise a child",
+   "gold_answers": [
+    "Dual - Parent Family - USDA Average Spending per Child ( not the basic cost of raising ) Age of Child Housing Food Transport . Clothing Health Child Care / Education Misc . Total Before - tax income : Less than $59,410 ( Average = $38,000 ) 0 to 2 2,990 1,160 1,170 640 630 2,040 420 9,050 3 to 5 2,990 1,260 1,230 500 590 1,910 620 9,100 6 to 8 2,990 1,710 1,350 570 660 1,290 630 8,760 9 to 11 2,990 1,970 1,350 580 710 1,910 630 9,520 12 to 14 2,990 2,130 1,480 690 1,090 1,110 700 9,960 15 to 17 2,990 2,120 1,630 730 1,010 1,290 580 9,970 Total 53,820 31,050 24,630 11,130 14,070 23,640 10,740 169,080 Before - tax income : $59,410 to $102,870 ( Average = $79,940 ) 0 to 2 3,920 1,405 1,690 760 850 2,860 890 12,370 3 to 5 3,920 1,490 1,740 610 800 2,740 1,090 12,390 6 to 8 3,920 2,100 1,860 680 940 1,680 1,110 12,290 9 to 11 3,920 2,400 1,870 710 1,000 2,110 1,100 13,110 12 to 14 3,920 2,580 1,990 840 1,410 1,910 1,170 13,820 15 to 17 3,920 2,570 2,150 900 1,330 2,400 1,050 14,320 Total 70,560 37,620 33,900 13,500 18,990 41,100 19,230 234,900 Before - tax income : More than $102,870 ( Average = $180,040 ) 0 to 2 7,100 1,900 2,550 1,050 980 5,090 1,790 20,460 3 to 5 7,100 2,000 2,610 880 930 4,970 1,990 20,480 6 to 8 7,100 2,630 2,730 970 1,080 3,910 2,000 20,420 9 to 11 7,100 2,980 2,730 1,010 1,150 4,350 2,000 21,320 12 to 14 7,100 3,190 2,860 1,170 1,610 4,700 2,070 22,700 15 to 17 7,100 3,180 3,020 1,280 1,520 6,460 1,950 24,510 Total 127,800 47,640 49,500 19,080 21,810 88,440 35,400 389,670"
+   ],
+   "model_answer": "About $169,080 in the U.S. through age 18."
+  },
+  {
+   "id": "64ced8b12309eb02",
+   "kind": "answer",
+   "question": "where does the story the great gatsby take place",
+   "gold_answers": [
+    "the fictional town of West Egg on prosperous Long Island",
+    "Long Island of 1922"
+   ],
+   "model_answer": "West Egg, Long Island, in the summer of 1922."
+  },
+  {
+   "id": "a89ec02f9bf6d392",
+   "kind": "answer",
+   "question": "when's the last time the philadelphia eagles played the new england patriots",
+   "gold_answers": [
+    "in Super Bowl LII"
+   ],
+   "model_answer": "September 10, 2023"
+  },
+  {
+   "id": "51d0a443c9aef63c",
+   "kind": "answer",
+   "question": "who is rose in the fall season 2",
+   "gold_answers": [
+    "a woman who had a sexual relationship with Paul whilst at university",
+    "Valene Kane"
+   ],
+   "model_answer": "Rose Stagg, a woman Paul Spector previously had a sexual relationship with."
+  },
+  {
+   "id": "9cb13454a9a6e16f",
+   "kind": "answer",
+   "question": "who has the rights to alice in wonderland",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Disney purchased the rights to Sir John Tenniel’s illustrations."
+  },
+  {
+   "id": "5418511d45db2074",
+   "kind": "answer",
+   "question": "superhero names that start with the letter b",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Beast, Bishop, Batwing, Baymax, Battlestar"
+  },
+  {
+   "id": "bf2fd15d8bc2d89f",
+   "kind": "answer",
+   "question": "where is the north pole on the world map",
+   "gold_answers": [
+    "90°N 0°W﻿ / ﻿90°N -0°E",
+    "latitude 90° North"
+   ],
+   "model_answer": "At the top of the map, in the Arctic Ocean."
+  },
+  {
+   "id": "78b643bda608685b",
+   "kind": "answer",
+   "question": "where does the autobahn have no speed limit",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Mostly outside densely populated areas in Germany."
+  },
+  {
+   "id": "cd08a400f7d74eba",
+   "kind": "answer",
+   "question": "all i want for christmas is you mariah carey tour",
+   "gold_answers": [
+    "All I Want for Christmas Is You , a Night of Joy and Festivity is the first concert residency by American singer Mariah Carey . Performed annually at the Beacon Theatre in Manhattan , New York , the residency began on December 15 , 2014 , and will conclude on December 22 , 2017 , after completing six legs and thirty - four shows . Billboard revealed that the six dates had sold out with a total of 16,196 tickets while grossing $1.5 million during the first leg of the residency . The main set list for the show encompassed songs from Merry Christmas and Merry Christmas II You , with additional non-holiday tracks . The show also included `` a cast of forty , including a gospel choir , a clutch of carolers , several acrobats and a hyperactive round of kid singer / dancers . ''"
+   ],
+   "model_answer": "“All I Want for Christmas Is You, a Night of Joy and Festivity” was Mariah Carey’s Christmas concert residency, held from 2014 to 2017."
+  },
+  {
+   "id": "26024ff6e1572fd7",
+   "kind": "answer",
+   "question": "dean koontz dark rivers of the heart summary",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "A former cop and a hacker uncover a deadly government conspiracy while fleeing ruthless agents."
+  },
+  {
+   "id": "4a68a1c246b6b5b0",
+   "kind": "answer",
+   "question": "where in the constitution is the concept of federalism established",
+   "gold_answers": [
+    "Because the states were preexisting political entities , the U.S. Constitution did not need to define or explain federalism in any one section but it often mentions the rights and responsibilities of state governments and state officials in relation to the federal government . The federal government has certain express powers ( also called enumerated powers ) which are powers spelled out in the Constitution , including the right to levy taxes , declare war , and regulate interstate and foreign commerce . In addition , the Necessary and Proper Clause gives the federal government the implied power to pass any law `` necessary and proper '' for the execution of its express powers . Other powers -- the reserved powers -- are reserved to the people or the states . The power delegated to the federal government was significantly expanded by the Supreme Court decision in McCulloch v. Maryland ( 1819 ) , amendments to the Constitution following the Civil War , and by some later amendments -- as well as the overall claim of the Civil War , that the states were legally subject to the final dictates of the federal government ."
+   ],
+   "model_answer": "Throughout the Constitution, especially in the Tenth Amendment."
+  },
+  {
+   "id": "146fc080ea724e0a",
+   "kind": "answer",
+   "question": "when did australia get rid of the death penalty",
+   "gold_answers": [
+    "Capital punishment in Australia has been abolished in all jurisdictions . Queensland abolished the death penalty in 1922 . Tasmania did the same in 1968 , the federal government abolished the death penalty in 1973 , with application also in the Australian Capital Territory and the Northern Territory . Victoria did so in 1975 , South Australia in 1976 , and Western Australia in 1984 . New South Wales abolished the death penalty for murder in 1955 , and for all crimes in 1985 . In 2010 , the federal government passed legislation prohibiting the re-establishment of capital punishment by any state or territory . Neither the Commonwealth nor any of the states will extradite or deport a prisoner to another jurisdiction if they will face the death penalty , and police co-operation with other countries which have the death penalty has been questioned ."
+   ],
+   "model_answer": "1985 (when New South Wales abolished it for all crimes)"
+  },
+  {
+   "id": "1fca31d661d2fa47",
+   "kind": "answer",
+   "question": "my girl don't lie to me american gods",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "“Where Did You Sleep Last Night?” (“In the Pines”)"
+  },
+  {
+   "id": "962c9234ce086f32",
+   "kind": "answer",
+   "question": "whens the last time the patriots played the eagles",
+   "gold_answers": [
+    "Super Bowl LII"
+   ],
+   "model_answer": "December 17, 2023"
+  },
+  {
+   "id": "368065c2c987ce08",
+   "kind": "answer",
+   "question": "head over boots for you by jon pardi",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Yes, “Head Over Boots” is by Jon Pardi."
+  },
+  {
+   "id": "64445718ade3e67b",
+   "kind": "answer",
+   "question": "when do you hear the lub and dub sounds of the heart",
+   "gold_answers": [
+    "the closing of the atrioventricular valves and semilunar valves, respectively"
+   ],
+   "model_answer": "Lub: beginning of systole; dub: beginning of diastole."
+  },
+  {
+   "id": "a3852613d5bdbcdb",
+   "kind": "answer",
+   "question": "where are the winter olympics and when do they start",
+   "gold_answers": [
+    "Pyeongchang County, South Korea",
+    "9 to 25 February 2018",
+    "Pyeongchang, South Korea",
+    "9 February",
+    "from 9 to 25 February 2018 in Pyeongchang County, South Korea"
+   ],
+   "model_answer": "Pyeongchang, South Korea; February 9, 2018."
+  },
+  {
+   "id": "4b2fd86c362a1862",
+   "kind": "answer",
+   "question": "when are two events said to be independent",
+   "gold_answers": [
+    "if the occurrence of one does not affect the probability of occurrence of the other",
+    "if the occurrence of one does not affect the probability of occurrence of the other."
+   ],
+   "model_answer": "When \\(P(A \\cap B) = P(A)P(B)\\)."
+  },
+  {
+   "id": "1e5652a112f90cee",
+   "kind": "answer",
+   "question": "where does the autobahn have no speed limit",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "On stretches outside densely populated areas."
+  },
+  {
+   "id": "f50f8e70997e5d23",
+   "kind": "answer",
+   "question": "law & order criminal intent season 8 episode 8",
+   "gold_answers": [
+    "No. in series No. in season Title Directed by Written by Original air date Production code U.S. viewers ( millions ) 156 `` Playing Dead '' Michael Smith Antoinette Stella April 19 , 2009 ( 2009 - 04 - 19 ) ( USA ) May 6 , 2009 ( 2009 - 05 - 06 ) ( NBC ) 08009 4.57 Detectives Goren and Eames investigate the shooting of Stacy Hayes - Fitzgerald and her boyfriend Rick Siebert , two drug addicts who are blackmailing Stacy 's stepfather , Neil Hayes - Fitzgerald ( Scott Cohen ) , a politician running for mayor . Rick was killed in the shooting , but Stacy survived by playing dead for hours under his bleeding corpse until they were found by Stacy 's mother , Josie . After returning home from the hospital , Stacy attempts to commit suicide . After seeing how she reacts when Neil is around , Goren asks Stacy if she has been abused , but she denies it . Goren discovers that Stacy and her family moved to Switzerland for a year when she was in high school , and realizes that Stacy 's younger sister Sophie is actually her daughter by Neil . While questioning Neil and his mother , Camille ( Kathy Baker ) , it is revealed that she had Rick killed because he was threatening to expose Neil 's family scandal , thwarting his mayoral bid . 157 `` Rock Star '' Bill D'Elia Ed Zuckerman April 26 , 2009 ( 2009 - 04 - 26 ) ( USA ) May 13 , 2009 ( 2009 - 05 - 13 ) ( NBC ) 08008 4.10 Detective Wheeler and her new partner , Detective Zack Nichols , investigate the stabbing of an artist , who was found in a neighborhood rife with ethnic tensions . 158 `` Identity Crisis '' Michael Smith Pamela Wechsler May 3 , 2009 ( 2009 - 05 - 03 ) ( USA ) May 20 , 2009 ( 2009 - 05 - 20 ) ( NBC ) 08005 3.14 Two young brothers live with their schizophrenic mother , who dies in the bathtub by electrocution . They are questioned about the turn of events , and the younger brother Anthony tells police that he saw his brother Tommy push the electric heater into the tub . The two are subsequently separated and put into foster care . Twenty years later , Anthony reappears in Tommy 's life , and Tommy responds by shooting him . Goren and Eames are brought in to investigate the murder , and Rodgers tells them that the victim , Anthony , was dying from lymphoma . Meanwhile , over the years Tommy ( Sam Trammell ) has been living a mysterious life , pretending that he is a graduate of Princeton University and taking on false identities . He rents a house on Nantucket under the name Tyler Chisholm , and the owner 's daughter takes a liking to him . The owner is suspicious and runs a background credit check on `` Tyler . '' The credit check is reported to the detectives , as Tyler Chisholm was one of the names noted when interviewing people at the Princeton Eating Club . They travel to Nantucket , where they find Tommy and take him into custody . Back in New York , Eames questions the owner 's daughter and asks if there was anything strange or out of the ordinary that she could recall . She tells Eames that she remembers Tommy throwing something into the water and staring at it . Goren then questions Tommy and reveals that Anthony did not return to bring back old memories and haunt Tommy , but to make amends because of his imminent death . 159 `` In Treatment '' Jean de Segonzac Timothy J. Lea May 10 , 2009 ( 2009 - 05 - 10 ) ( USA ) May 27 , 2009 ( 2009 - 05 - 27 ) ( NBC ) 08010 3.14 Detectives Nichols and Wheeler investigate the murder of a Wall Street executive who is murdered during a gala . Nichols believes that his company is more involved with the case than they have admitted to the police . During the investigation the detectives discover that news of a falling stock , which plunged more after news of a fraud investigation , is tied to this murder . However , their investigation leads them to a treatment clinic , where their prime suspect is under the care of a controlling psychiatrist ( Dennis Boutsikaris ) . 160 5 `` Faithfully '' Jean de Segonzac Antoinette Stella May 17 , 2009 ( 2009 - 05 - 17 ) ( USA ) June 29 , 2009 ( 2009 - 06 - 29 ) ( NBC ) 08001 3.70 When a devout celebrity doctor is murdered , Goren and Eames enter the unexpectedly steamy world behind the pulpit . 161 6 `` Astoria Helen '' Norberto Barba Timothy J. Lea May 31 , 2009 ( 2009 - 05 - 31 ) ( USA ) July 6 , 2009 ( 2009 - 07 - 06 ) ( NBC ) 08004 3.97 A charming con man named Joe Gallagher ( Creighton James ) targets a lonely , single mother named Helen Bramer ( Arija Bareikis ) to try to hit an armored truck carrying millions of dollars , Bramer worked for the company of the armored truck . Detectives Nichols and Wheeler investigate when one of the con man 's partners dies weeks later in a bomb blast . Bramer and Gallagher become the prime suspects in the case when a van owner named Frank Stroup ( Domenick Lombardozzi ) is ripped off and later shot . But the detectives later learn that Bramer and Gallagher are n't the prime suspects when Bramer 's son Kevin gets abducted by Frank Stroup , and to rescue the boy , Detective Nichols has to put himself in the middle of a hostage situation . 162 7 `` Folie à Deux '' David Manson Michael S. Chernuchin June 7 , 2009 ( 2009 - 06 - 07 ) ( USA ) July 13 , 2009 ( 2009 - 07 - 13 ) ( NBC ) 08003 4.01 Detectives Goren and Eames investigate when a couple 's 2 - year - old daughter mysteriously disappears from her room during a robbery at the hotel , where her parents dined . They learn that a family member ( Lynn Redgrave ) is financially supporting the couple , while also dying of a heart condition . Glass fragments and a stolen key - card become substantial evidence which leads them to the robber , although there is no child with him . Further investigation leads Goren and Eames to receive a ransom call . However , they learn that someone relatively close to the family was taking advantage of the crime , attempting to win money over in the process . The detectives find out the parents have been giving a false description . There never was a child at the hotel . As they uncover a shocking conspiracy , Goren and Eames learn that the unstable mother ( Piper Perabo ) has been delusional about the months - ago accidental death of her daughter , prompting her husband ( Luke Kirby ) to exploit her condition in order to continue receiving financial support from his rich but childless aunt . Partially inspired by the Madeleine McCann and Caylee Anthony cases . 163 8 `` The Glory That Was ... '' Norberto Barba Robert Nathan June 14 , 2009 ( 2009 - 06 - 14 ) ( USA ) July 20 , 2009 ( 2009 - 07 - 20 ) ( NBC ) 08002 4.14 What should have been a simple meeting turns to murder , leaving Detectives Wheeler and Nichols to question an embassy , a security company , the victim 's relatives , and how it all connects to the Olympic Site Selection Committee . This episode is omitted in the DVD release of season 8 . 164 9 `` Family Values '' Jean de Segonzac Teleplay by : Walon Green Story by : Walon Green & Antoinette Stella June 21 , 2009 ( 2009 - 06 - 21 ) ( USA ) August 3 , 2009 ( 2009 - 08 - 03 ) ( NBC ) 08015 3.44 When a flier from a local Catholic high school drama production connects three murders , Detectives Goren and Eames are back on the case to understand the psychology of a religious fanatic before he claims another victim . 165 10 `` Salome in Manhattan '' `` Salome '' Steve Shill Andrew Lipsitz June 28 , 2009 ( 2009 - 06 - 28 ) ( USA ) August 10 , 2009 ( 2009 - 08 - 10 ) ( NBC ) 08006 N / A A celebrity chef 's star is on the rise as he plans the opening of a trendy restaurant with powerful partners . Yet his world is upended when his tabloid - friendly , gorgeous girlfriend and business partner is killed under mysterious circumstances . Detectives Nichols and Wheeler enter the seductive world of power and privilege and discover desperation and murder , but the more they learn about the victim and the men in her life , the more they learn about who the true killer is . 166 11 `` Lady 's Man '' Ken Girotti Michael S. Chernuchin June 28 , 2009 ( 2009 - 06 - 28 ) ( USA ) August 17 , 2009 ( 2009 - 08 - 17 ) ( NBC ) 08011 N / A Detectives Goren and Eames are back on the case to investigate the killing of a man who became famous for dodging a murder conviction because of a mishandled trial . The man spun his notoriety into a TV show but turned up dead on his birthday . Eames had worked the case of his first wife 's murder 10 years earlier . The case also involves an ADA ( Raul Esparza ) who has proven a thorn in Eames ' side more than once . 167 12 `` Passion '' Jonathan Herron Michael S. Chernuchin July 12 , 2009 ( 2009 - 07 - 12 ) ( USA ) August 24 , 2009 ( 2009 - 08 - 24 ) ( NBC ) 08012 3.47 Egocentric poet Jacob Garrety ( Will Chase ) would do anything to keep his poetry journal , `` The Village Quarterly '' , afloat . When foundation president Don McCallum shows up and announces he is cutting funding to the journal , Jacob appeals to assistant and lover Lauren to use her sexuality to change Don 's mind . Though reluctant , she agrees . While Jacob enjoys the advances of arts patron Sandra Dunbar ( Sarah Rafferty ) at a poetry reading , Lauren carries out Jacob 's wish , and winds up dead on the street . Detectives Nichols and Wheeler discover the deadly passion that exists behind the arts . 168 13 `` All In '' David Manson Teleplay by : Pamela Wechsler , Antoinette Stella , & Walon Green Story by : Pamela Wechsler July 19 , 2009 ( 2009 - 07 - 19 ) ( USA ) August 31 , 2009 ( 2009 - 08 - 31 ) ( NBC ) 08013 4.14 When poker genius Josh Snow ( Aaron Stanford ) loses $80,000 in a card game , backer and bookie Lou Cardinale ( Boris McGiver ) forces him into collections to work off the losses . Lou gives him a . 38 and a box of blanks to extract gambling debts , and sends along his mistress , Angela ( Aleksa Palladino ) , to keep an eye on the money . When Josh first collects from a guy in the local neighborhood , he shoots a blank at him . The guy gave him twenty thousand dollars and then he collects from Kip McGonagle ( Robert Leeshock ) . He fires the gun expecting a blank , but a real bullet kills Kip in the street . Detectives Goren and Eames , who know Snow from a former case ( identical historical plot elements , but different actor and character 's name , from season five 's `` Cruise to Nowhere '' ) , enter an elaborate game where they must join in the play , or be played . 169 14 `` Major Case '' Chris Zalla Andrew Lipsitz July 26 , 2009 ( 2009 - 07 - 26 ) ( USA ) August 31 , 2009 ( 2009 - 08 - 31 ) ( NBC ) 08014 4.63 A drug dealer is killed the night before she plans to leave town to live on her cousin 's farm . After Wheeler goes into labor , Eames pairs up with Nichols to investigate and find the girl 's killer . But when Nichols suspects the girl 's killer is an old friend ( Dylan Baker ) who works in the medical examiner 's office , Nichols does all he can to prove that he killed the victim , but it could cost Nichols his job in the process . Last episode to feature Julianne Nicholson ( Detective Megan Wheeler ) ; she is replaced by Kathryn Erbe ( Detective Alexandra Eames ) for the remainder of season eight . As of season nine , she is replaced by Saffron Burrows ( Detective Serena Stevens ) . 170 15 `` Alpha Dog '' Norberto Barba Walon Green August 2 , 2009 ( 2009 - 08 - 02 ) ( USA ) September 7 , 2009 ( 2009 - 09 - 07 ) ( NBC ) 08007 4.23 A hunky posterboy with a million - dollar torso has what others crave : sex appeal . When he shows up dead after a night of sex and drugs with an elusive woman , detectives Goren and Eames uncover the sexual paranoia behind the murder . 171 16 `` Revolution '' John David Coles Michael S. Chernuchin August 9 , 2009 ( 2009 - 08 - 09 ) ( USA ) September 7 , 2009 ( 2009 - 09 - 07 ) ( NBC ) 08016 4.83 A revolutionary plans the kidnapping of a powerful banking executive , but the heist goes wrong and the executive is killed . While probing the murder , Nichols and Eames must also prevent a terrorist campaign . After this episode , Ed Zuckerman and Michael S. Chernuchin leave the show as executive producers . Zuckerman returned to Law & Order as its executive producer and Chernuchin as its co-executive producer . Walon Green takes over as executive producer / show runner for all episodes ."
+   ],
+   "model_answer": "The Glory That Was..."
+  },
+  {
+   "id": "476be250e3907e72",
+   "kind": "answer",
+   "question": "where do car factories tend to be located and why",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Near urban areas and transportation routes, to access labor, materials, energy, and markets."
+  },
+  {
+   "id": "e86bd5f169a52c82",
+   "kind": "answer",
+   "question": "who was the buccaneers qb when they won the superbowl",
+   "gold_answers": [
+    "Brad Johnson"
+   ],
+   "model_answer": "Brad Johnson and Tom Brady"
+  },
+  {
+   "id": "5102b6461e391779",
+   "kind": "answer",
+   "question": "a legislative act passed by congress is an example of",
+   "gold_answers": [
+    "statutory law"
+   ],
+   "model_answer": "A federal statute\n"
+  },
+  {
+   "id": "a0a20f79aed7f7b0",
+   "kind": "answer",
+   "question": "where is deforestation occurring in the united states",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Primarily in the southeastern United States."
+  },
+  {
+   "id": "6a768f6a872a38fd",
+   "kind": "answer",
+   "question": "why did government sponsored surveys and land acts encourage migration to the west",
+   "gold_answers": [
+    "The Homestead Acts were several United States federal laws that gave an applicant ownership of land , typically called a `` homestead , '' at no cost . In all , more than 270 million acres of public land , or nearly 10 % of the total area of the U.S. , was given away free to 1.6 million homesteaders ; most of the homesteads were west of the Mississippi River .",
+    "An extension of the Homestead Principle in law , the Homestead Acts were an expression of the `` Free Soil '' policy of Northerners who wanted individual farmers to own and operate their own farms , as opposed to Southern slave - owners who wanted to buy up large tracts of land and use slave labor , thereby shutting out free white men ."
+   ],
+   "model_answer": "They made western land available cheaply or for free to settlers willing to claim and farm it."
+  },
+  {
+   "id": "c11b1d3c0c955ef4",
+   "kind": "answer",
+   "question": "who has the rights to alice in wonderland",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Disney, to John Tenniel’s illustrations."
+  },
+  {
+   "id": "f75e9bc93b527c3a",
+   "kind": "answer",
+   "question": "who was on the first season of dwts",
+   "gold_answers": [
+    "Trista Sutter",
+    "Evander Holyfield",
+    "Rachel Hunter",
+    "Joey McIntyre",
+    "John O'Hurley",
+    "Kelly Monaco"
+   ],
+   "model_answer": "Trista Sutter and Louis Van Amstel; Evander Holyfield and Edyta Sliwinska; Rachel Hunter and Jonathan Roberts; Joey McIntyre and Ashly DelGrosso; John O’Hurley and Charlotte Jorgensen; Kelly Monaco and Alec Mazo."
+  },
+  {
+   "id": "e0fbe17df1f325d8",
+   "kind": "answer",
+   "question": "when does bloom find out who she is",
+   "gold_answers": [
+    "Addio Magix!\"  / \"The Font of Dragon Fire"
+   ],
+   "model_answer": "Episode 13, “A Great Secret Revealed.”"
+  },
+  {
+   "id": "abb6489561c06549",
+   "kind": "answer",
+   "question": "when do you hear the lub and dub sounds of the heart",
+   "gold_answers": [
+    "the closing of the atrioventricular valves and semilunar valves, respectively"
+   ],
+   "model_answer": "“Lub” at the start of systole; “dub” at the end of systole."
+  }
+ ],
+ "evidence": []
+}

@@ -1,0 +1,60 @@
+[
+  {"id": "b65d7296336b17c1", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "stated", "evidence": [
+      {"item": 2, "quote": "After already raising its main interest rate to the highest level since 2001"},
+      {"item": 1, "quote": "The Fed put such pressure on the economy intentionally, hoping to starve inflation of its fuel."}
+    ]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "bc4bb12f69ef33cf", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [
+      {"item": 3, "quote": "In the wake of the Wallabies’ World Cup flop"}
+    ]},
+    {"fact": "0.1", "status": "stated", "evidence": [
+      {"item": 3, "quote": "the Queensland Rugby Union have reaffirmed their position"}
+    ]},
+    {"fact": "0.2", "status": "stated", "evidence": [
+      {"item": 3, "quote": "the Queensland Rugby Union have reaffirmed their position that they are committed to moving to a centralised high-performance model"}
+    ]},
+    {"fact": "0.3", "status": "stated", "evidence": [
+      {"item": 3, "quote": "the Queensland Rugby Union have reaffirmed their position that they are committed to moving to a centralised high-performance model but won’t follow the NSW Waratahs by handing over the keys to Rugby Australia"}
+    ]},
+    {"fact": "0.4", "status": "stated", "evidence": [
+      {"item": 6, "quote": "the New South Wales Rugby Union was in the latter stages of handing over their license to RA."},
+      {"item": 6, "quote": "By doing so, the NSW Waratahs, who were on the brink of insolvency, handed over their commercial and high-performance property."}
+    ]},
+    {"fact": "1.0", "status": "stated", "evidence": [
+      {"item": 7, "quote": "He will also be tasked with “integrating” the programs"}
+    ]},
+    {"fact": "1.1", "status": "stated", "evidence": [
+      {"item": 7, "quote": "RA trying to centralise all of the Super Rugby’s high-performance programs"}
+    ]}
+  ]},
+  {"id": "1862de397a2f9967", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [
+      {"item": 3, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}
+    ]},
+    {"fact": "1.1", "status": "stated", "evidence": [
+      {"item": 3, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}
+    ]},
+    {"fact": "1.2", "status": "stated", "evidence": [
+      {"item": 3, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}
+    ]},
+    {"fact": "2.0", "status": "stated", "evidence": [
+      {"item": 1, "quote": "Swift also confirmed that when she famously first attended Kelce’s game at Arrowhead Stadium in September, she was already dating the NFL star."}
+    ]},
+    {"fact": "2.1", "status": "stated", "evidence": [
+      {"item": 1, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}
+    ]},
+    {"fact": "2.2", "status": "stated", "evidence": [
+      {"item": 1, "quote": "By the time I went to that first game, we were a couple."},
+      {"item": 1, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}
+    ]}
+  ]}
+]

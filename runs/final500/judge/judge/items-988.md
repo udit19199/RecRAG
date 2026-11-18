@@ -1,0 +1,924 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=19adf017607cd4f0 ===
+Gold sentences and facts:
+Sentence 0: The Rana rulers of Nepal made Vikram Samvat the official Hindu calendar in 1901 CE , which started as Samvat 1958 . In Nepal , the new year begins with the first day of the month of Baishakh , which usually falls within the months of April -- May in the Gregorian calendar . The first day of the new year is passionately celebrated in a historical carnival that takes place every year in Bhaktapur , called Bisket Jatra.As before , from 2007 AD Nepal Sambat is recognized as the national calender .
+  Fact 0.0: The Rana rulers of Nepal made Vikram Samvat the official Hindu calendar.
+  Fact 0.1: The Rana rulers made Vikram Samvat the official Hindu calendar in 1901 CE.
+  Fact 0.2: Vikram Samvat started as Samvat 1958.
+  Fact 0.3: In Nepal the new year begins on the first day of the month of Baishakh.
+  Fact 0.4: Baishakh usually falls within April to May in the Gregorian calendar.
+  Fact 0.5: The first day of the new year is passionately celebrated in a historical carnival called Bisket Jatra.
+  Fact 0.6: The Bisket Jatra carnival takes place every year in Bhaktapur.
+  Fact 0.7: As before, from 2007 AD, Nepal Sambat is recognized as the national calendar.
+Sentence 1: Vikram Samvat ( Hindi : विक्रम सम्वत् , Nepali : विक्रम सम्वत् ) ( abbreviated as V.S. ( or VS ) or B.S. ( or BS ) ) ; Listen ( help info ) ) is the historical Hindu calendar of India and Nepal . It uses lunar months and solar sidereal year ( see : Vedic time keeping ) . It is used as the official calendar in Nepal .
+  Fact 1.0: Vikram Samvat is written in Hindi as विक्रम सम्वत्.
+  Fact 1.1: Vikram Samvat is written in Nepali as विक्रम सम्वत्.
+  Fact 1.2: Vikram Samvat is abbreviated as V.S. or VS.
+  Fact 1.3: Vikram Samvat is abbreviated as B.S. or BS.
+  Fact 1.4: Vikram Samvat is the historical Hindu calendar of India and Nepal.
+  Fact 1.5: Vikram Samvat uses lunar months.
+  Fact 1.6: Vikram Samvat uses the solar sidereal year.
+  Fact 1.7: Vikram Samvat is used as the official calendar in Nepal.
+
+Retrieved items:
+<item 1>
+Vikram Samvat
+Vikram Samvat - Wikipedia Vikram Samvat Jump to : navigation , search It has been requested that the title of this article be changed to Bikram Sambat . Please
+see the relevant discussion on the discussion page . Do not move the page until the discussion has reached consensus for the change and is closed . It has been
+suggested that Bikrami calendar be merged into this article . ( Discuss ) Proposed since October 2017 . Vikram Samvat ( Hindi : विक्रम सम्वत् , Nepali : विक्रम
+सम्वत् ) ( abbreviated as V.S. ( or VS ) or B.S. ( or BS ) ) ; Listen ( help info ) ) is the historical Hindu calendar of India and Nepal . It uses lunar months
+and solar sidereal year ( see : Vedic time keeping ) . It is used as the official calendar in Nepal . The Vikram Samvat has two alternative systems . It started
+in 56 BCE in southern ( purnimanta ) and 57 -- 56 BCE in northern ( amanta ) systems of Hindu calendar .
+</item 1>
+
+<item 2>
+Vikram Samvat
+See also ( edit ) Bikrami calendar Hindu calendars Vira Nirvana Samvat References ( edit ) Jump up ^ Richard Salomon ( 1398 ) . Indian Epigraphy : A Guide to
+the Study of Inscriptions in Sanskrit , Prakrit , and the other Indo - Aryan Languages . Oxford University Press . pp. 181 -- 183 . ISBN 978 - 0 - 19 - 535666 -
+3 . ^ Jump up to : Ashvini Agrawal ( 1989 ) . Rise and Fall of the Imperial Guptas . Motilal Banarsidass Publ . pp. 174 -- 175 . ISBN 978 - 81 - 208 - 0592 - 7
+. Jump up ^ Encyclopedia of New Year 's Holidays Worldwide , William D. Crump , Publisher McFarland , 2014 p. 38 Jump up ^ `` Vikram Samvat should be declared
+national calendar '' . The Free Press Journal . 15 February 2012 . Archived from the original on 26 April 2014 . Retrieved 28 March 2012 .
+</item 2>
+
+<item 3>
+Vikram Samvat
+Republican Germanic Greek Hindu Inca Macedonian Maya Haab ' Tzolk'in Muisca Pentecontad Pisan Rapa Nui Roman calendar Rumi Soviet Swedish Turkmen By specialty
+Holocene ( anthropological ) Proleptic Gregorian / Proleptic Julian ( historiographical ) Darian ( Martian ) Dreamspell ( New Age ) Discordian / Pataphysical (
+surreal ) Proposals Calendar reform Hanke -- Henry Permanent International Fixed Pax Positivist Symmetry454 Tranquility World New Earth Time Fictional Discworld
+Greyhawk Middle - earth Stardate Star Wars ( Galactic Standard Calendar ) Displays and applications Electronic Perpetual Wall Year naming and numbering
+Terminology Era Epoch Regnal name Regnal year Year zero Systems Ab urbe condita Anno Domini / Common Era Anno Mundi Assyrian Before Present Chinese Imperial
+Chinese Minguo Human Era Japanese Korean Seleucid Spanish Yugas Satya Treta Dvapara Kali Vietnamese List of calendars Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Vikram_Samvat&oldid=822253746 '' Categories : Specific calendars Nepali calendar Hindu calendar Memorials to
+Vikramaditya Calendar eras
+</item 3>
+
+<item 4>
+Vikram Samvat
+Converting Vikram Samvat to CE ( edit ) While an approximate conversion can be made by subtracting 56 or 57 , a precise computation requires identification of
+the version of Vikam Samvat that was used : Year expired ( default ) or current Kartikadi ( older or western India ) or Chaitradi ( modern Northern India ) .
+Kartikadi starts 7 months later in Kartika . Until 12th century Kartikadi year was common even in North India . Months Amanta ( south ) or Purminata ( North ) .
+Amanta Chaitra Krishna Paksha is Purminata Vaishakh Krishna Paksha . For the Shukla Paksh , the month is the same . Software named Pancanga is available to make
+the calculations . Thus the date Vikram 1208 ( Kartikadi , expired ) , Vaishakh Krishna 5 ( Purnimanta ) , Thursday , is equivalent to Vikram 1209 ( Chaitradi ,
+expired ) , Chaitra Krishna 5 ( Amanta ) , and to Thursday March 27 , 1152 .
+</item 4>
+
+<item 5>
+Vikram Samvat
+According to Rudolf Hoernlé , the king responsible for this change was Yashodharman : Hoernlé also believed that he conquered Kashmir , and is same person as
+the `` Harsha Vikramaditya '' mentioned in Kalhana 's Rajatarangini . Earlier , some scholars believed that the Vikrama Samavat corresponded to the Azes era of
+the Indo - Scythian ( Śaka ) king King Azes . However , this was disputed by Robert Bracey following discovery of an inscription of Vijayamitra , which is dated
+in two eras . The theory seems to be now thoroughly discredited by Falk and Bennett , who place the inception of the Azes era in 47 -- 46 BCE . Culture ( edit )
+The traditional New Year of Vikram Samvat is one of the many festivals of Nepal , marked by parties , family gatherings , the exchange of good wishes , and
+participation in rituals to ensure good fortune in the coming year .
+</item 5>
+
+<item 6>
+Vikram Samvat
+It occurs in mid-April each year , and coincides with the traditional new year in Assam , Bengal , Burma , Cambodia , Kerala , Kashmir , Manipur , Odisha ,
+Punjab , Sri Lanka , Tamil Nadu and Thailand . In addition to Nepal , the Vikram Samvat calendar is also recognized in North and East India , and in Gujarat
+among Hindus . In Buddhist communities , the month of Baishakh is associated with Vesak or Buddha 's Birthday . It commemorates the birth , Enlightenment and
+passing of Gautama Buddha on the first full moon day in May , except in a leap year when the festival is held in June . Although this festival is not held on
+the same day as Pahela Baishakh , the holidays typically fall in the same month ( Baishakh ) of the Bengali , Hindu , and Theravada Buddhist calendars , and are
+related historically through the spread of Hinduism and Buddhism in South Asia . In Gujarat , the second day of Diwali is celebrated as the first day of the
+Vikram Samvat calendar which is the first day of the month Kartik .
+</item 6>
+
+<item 7>
+Vikram Samvat
+New International Encyclopedia . 1905 . ( hide ) Calendars Systems Lunar Lunisolar Solar In wide use Astronomical Bengali Chinese Ethiopian Gregorian Hebrew
+Hindu Iranian Islamic ISO Unix time In more limited use Akan Armenian Assyrian Bahá'í ( Badí ' ) Balinese pawukon Balinese saka Berber Buddhist Burmese Chinese
+Coptic Gaelic Germanic Heathen Georgian Hebrew Hindu or Indian Vikram Samvat Saka Igbo Iranian Jalali ( medieval ) Hijri ( modern ) Zoroastrian Islamic Fasli
+Tabular Jain Japanese Javanese Korean Juche Kurdish Lithuanian Malayalam Mongolian Melanau Nanakshahi Nepal Sambat Nisg̱a'a Oromo Romanian Somali Sesotho Slavic
+Slavic Native Faith Tamil Thai lunar solar Tibetan Vietnamese Xhosa Yoruba Types Runic Mesoamerican Long Count Calendar round Christian variants Julian Revised
+Liturgical year Eastern Orthodox Saints Historical Attic Aztec Tonalpohualli Xiuhpohualli Babylonian Bulgar Byzantine Celtic Cham Culāsakaraj Egyptian
+Florentine French Republican Germanic Greek Hindu Inca Macedonian Maya Haab ' Tzolk'in Muisca
+</item 7>
+
+<item 8>
+Vikram Samvat
+BRILL . p. 103 . ISBN 90 - 04 - 18566 - 6 . Jump up ^ Falk and Bennett ( 2009 ) , pp. 197 - 215 . Jump up ^ `` Gujarat CM to exchange Diwali - New Year
+greetings with people '' . 19 October 2014 . Retrieved 24 October 2014 . Jump up ^ Pancanga ( version 3.14 ) Jump up ^ On a Jain Statue in the Horniman Museum ,
+F. Kielhorn , Journal of the Royal Asiatic Society of Great Britain and Ireland , 1898 , p. 101 - 102 Further reading ( edit ) Wikisource has the text of the
+1911 Encyclopædia Britannica article Vikramaditya . Harry Falk and Chris Bennett ( 2009 ) . `` Macedonian Intercalary Months and the Era of Azes . '' Acta
+Orientalia 70 , pp. 197 -- 215 . `` The Dynastic Art of the Kushan '' , John Rosenfield . `` Samvat '' . New International Encyclopedia . 1905 . ( hide )
+Calendars Systems
+</item 8>
+
+<item 9>
+Vikram Samvat
+In India , the reformulated Saka Calendar is officially used ( although not for computing the dates of the traditional festivals ) , although in the Hindi
+version of the Preamble of the Constitution of India , the date of adoption of the constitution , 26 November 1949 , is presented in Vikram Samvat ( Margsheersh
+Shukla Saptami Samvat 2006 ) . There have been calls for the Vikram Samvat to replace Saka as India 's official calendar . Contents ( hide ) 1 Divisions of a
+year 1.1 Lunar metrics 2 History 2.1 Vikramaditya legends 2.2 Historicity of the legends 3 Culture 4 Converting Vikram Samvat to CE 5 See also 6 References 7
+Further reading Divisions of a year ( edit ) The classical Vikram Samvat uses lunar months and solar sidereal years . Because 12 months do not match a sidereal
+year exactly , correctional months ( adhika māsa ) are added , or occasionally subtracted ( kshaya masa ) .
+</item 9>
+
+<item 10>
+Vikram Samvat
+The Shukla Paksha in both systems coincides , most festivals occur in the Shukla Paksha . The era is named after King Vikramaditya of India . The lunisolar
+Vikram Samvat calendar is 56.7 years ahead ( in count ) of the solar Gregorian calendar . For example , the year 2074 VS began in 2017 CE and will end in 2018
+CE . The Rana rulers of Nepal made Vikram Samvat the official Hindu calendar in 1901 CE , which started as Samvat 1958 . In Nepal , the new year begins with the
+first day of the month of Baishakh , which usually falls within the months of April -- May in the Gregorian calendar . The first day of the new year is
+passionately celebrated in a historical carnival that takes place every year in Bhaktapur , called Bisket Jatra.As before , from 2007 AD Nepal Sambat is
+recognized as the national calender .
+</item 10>
+=== END ITEM id=19adf017607cd4f0 ===
+
+=== ITEM id=c3e6658ad9c962ca ===
+Gold sentences and facts:
+Sentence 0: Coordinates : 90 ° N 0 ° W ﻿ / ﻿ 90 ° N - 0 ° E ﻿ / 90 ; - 0
+  Fact 0.0: The coordinates are listed as 90 degrees N, 0 degrees W.
+  Fact 0.1: The coordinates are listed as 90 degrees N, 0 degrees E.
+  Fact 0.2: The coordinates are listed as 90, -0.
+Sentence 1: The North Pole is the northernmost point on the Earth , lying diametrically opposite the South Pole . It defines geodetic latitude 90 ° North , as well as the direction of true north . At the North Pole all directions point south ; all lines of longitude converge there , so its longitude can be defined as any degree value . Along tight latitude circles , counterclockwise is east and clockwise is west . The North Pole is at the center of the Northern Hemisphere .
+  Fact 1.0: The North Pole is the northernmost point on the Earth.
+  Fact 1.1: The North Pole lies diametrically opposite the South Pole.
+  Fact 1.2: The North Pole defines geodetic latitude 90 degrees North.
+  Fact 1.3: The North Pole defines the direction of true north.
+  Fact 1.4: At the North Pole all directions point south.
+  Fact 1.5: At the North Pole all lines of longitude converge.
+  Fact 1.6: The longitude of the North Pole can be defined as any degree value.
+  Fact 1.7: Along tight latitude circles, counterclockwise is east.
+  Fact 1.8: Along tight latitude circles, clockwise is west.
+  Fact 1.9: The North Pole is at the center of the Northern Hemisphere.
+
+Retrieved items:
+<item 1>
+North Pole
+2 MLAE 2009 Expedition 2.4. 3 MLAE 2013 Expedition 3 Day and night 4 Time 5 Climate 6 Flora and fauna 7 Territorial claims to the North Pole and Arctic regions
+8 Cultural associations 9 See also 10 Notes 11 References 12 Further reading 13 External links Precise definition ( edit ) See also : Polar motion The Earth 's
+axis of rotation -- and hence the position of the North Pole -- was commonly believed to be fixed ( relative to the surface of the Earth ) until , in the 18th
+century , the mathematician Leonhard Euler predicted that the axis might `` wobble '' slightly . Around the beginning of the 20th century astronomers noticed a
+small apparent `` variation of latitude , '' as determined for a fixed point on Earth from the observation of stars . Part of this variation could be attributed
+to a wandering of the Pole across the Earth 's surface , by a range of a few metres . The wandering has several periodic components and an irregular component .
+</item 1>
+
+<item 2>
+South Pole
+The geographic coordinates of the South Pole are usually given simply as 90 ° S , since its longitude is geometrically undefined and irrelevant . When a
+longitude is desired , it may be given as 0 ° . At the South Pole , all directions face north . For this reason , directions at the Pole are given relative to
+`` grid north '' , which points northwards along the prime meridian . Along tight latitude circles , clockwise is east , and counterclockwise is west , opposite
+to the North Pole . The Geographic South Pole is located on the continent of Antarctica ( although this has not been the case for all of Earth 's history
+because of continental drift ) . It sits atop a featureless , barren , windswept and icy plateau at an altitude of 2,835 metres ( 9,301 ft ) above sea level ,
+and is located about 1,300 km ( 800 mi ) from the nearest open sea at Bay of Whales . The ice is estimated to be about 2,700 metres ( 9,000 ft ) thick at the
+Pole , so the land surface under the ice sheet is actually near sea level .
+</item 2>
+
+<item 3>
+North Pole
+Exploration ( edit ) See also : Arctic exploration , Farthest North , List of Arctic expeditions , and List of firsts in the Geographic North Pole Pre-1900 (
+edit ) Gerardus Mercator 's map of the North Pole from 1595 C.G. Zorgdragers map of the North Pole from 1720 As early as the 16th century , many prominent
+people correctly believed that the North Pole was in a sea , which in the 19th century was called the Polynya or Open Polar Sea . It was therefore hoped that
+passage could be found through ice floes at favorable times of the year . Several expeditions set out to find the way , generally with whaling ships , already
+commonly used in the cold northern latitudes . One of the earliest expeditions to set out with the explicit intention of reaching the North Pole was that of
+British naval officer William Edward Parry , who in 1827 reached latitude 82 ° 45 ′ North . In 1871 the Polaris expedition , a US attempt on the Pole led by
+Charles Francis Hall , ended in disaster .
+</item 3>
+
+<item 4>
+North Pole
+Finding the North Pole . The Lyons press . ISBN 1 - 59228 - 072 - 2 . CS1 maint : Multiple names : authors list ( link ) Pal , Christopher ( 2002 ) . The Oddest
+Place on Earth : Rediscovering the North Pole . Writer 's Showcase . ISBN 0 - 595 - 21454 - 1 . Fairfield , William ( 1885 ) . Paradise Found a Cradle of the
+Human Race at the North Pole a Study of the Prehistoric World . Houghton , Mifflin . ISBN 0 - 665 - 37759 - 2 . External links ( edit ) Wikimedia Commons has
+media related to North Pole . Arctic Council The Northern Forum North Pole Web Cam FAQ on the Arctic and the North Pole Daylight , Darkness and Changing of the
+Seasons at the North Pole Video of the Nuclear Icebreaker Yamal visiting the North Pole in 2001 Polar Discovery : North Pole Observatory Expedition Polar
+exploration Arctic Ocean History Expeditions Research stations Farthest North North Pole Barentsz Hudson Marmaduke Carolus Parry North Magnetic Pole J. Ross
+J.C.
+</item 4>
+
+<item 5>
+North Pole
+^ Data is from a Greenlandic Weather Station at 83 ° 38 ′ N 033 ° 22 ′ W ﻿ / ﻿ 83.633 ° N 33.367 ° W ﻿ / 83.633 ; - 33.367 ﻿ ( Greenlandic Weather Station )
+located 709 km ( 441 mi ) from the North Pole . References ( edit ) Jump up ^ Black , Richard ( 8 April 2001 ) . New warning on Arctic sea ice melt . BBC Jump
+up ^ Ljunggren , David ( 5 March 2009 ) . Arctic summer ice could vanish by 2013 : expert . Reuters Jump up ^ Russian sub plants flag at North Pole , Reuters ,
+2 August 2007 Jump up ^ Андерсон , Уильям Роберт ( 1965 ) . `` '' Наутилус '' у Северного полюса `` . Воениздат . Retrieved 12 January 2012 . Jump up ^ Mouton ,
+M.W. ( 1968 ) . The International Regime of the Polar Regions .
+</item 5>
+
+<item 6>
+North Pole
+There is no permanent human presence at the North Pole and no particular time zone has been assigned . Polar expeditions may use any time zone that is
+convenient , such as Greenwich Mean Time , or the time zone of the country from which they departed . Climate ( edit ) Arctic ice shrinkages of 2007 compared to
+2005 and also compared to the 1979 -- 2000 average . Main article : Climate of the Arctic See also : Climate change in the Arctic The North Pole is
+substantially warmer than the South Pole because it lies at sea level in the middle of an ocean ( which acts as a reservoir of heat ) , rather than at altitude
+on a continental land mass . Despite being an ice cap , it shares some characteristics with a tundra climate ( ETf ) due to the July and August temperatures
+peaking just above freezing . Winter temperatures at the North Pole can range from about − 50 to − 13 ° C ( − 58 to 9 ° F ) , averaging around − 31 ° C ( − 24 °
+F ) .
+</item 6>
+
+<item 7>
+North Pole
+North Pole - wikipedia North Pole Jump to : navigation , search For other uses , see North Pole ( disambiguation ) . Not to be confused with North Magnetic Pole
+. Coordinates : 90 ° N 0 ° W ﻿ / ﻿ 90 ° N - 0 ° E ﻿ / 90 ; - 0 An azimuthal projection showing the Arctic Ocean and the North Pole . The map also shows the 75th
+parallel north and 60th parallel north . Sea ice at the North Pole in 2006 The North Pole , also known as the Geographic North Pole or Terrestrial North Pole ,
+is ( subject to the caveats explained below ) defined as the point in the Northern Hemisphere where the Earth 's axis of rotation meets its surface . The North
+Pole is the northernmost point on the Earth , lying diametrically opposite the South Pole . It defines geodetic latitude 90 ° North , as well as the direction
+of true north . At the North Pole all directions point south ; all lines of longitude converge there , so its longitude can be defined as any degree value .
+Along tight latitude circles , counterclockwise is east and clockwise is west .
+</item 7>
+
+<item 8>
+North Pole
+Along tight latitude circles , counterclockwise is east and clockwise is west . The North Pole is at the center of the Northern Hemisphere . While the South
+Pole lies on a continental land mass , the North Pole is located in the middle of the Arctic Ocean amid waters that are almost permanently covered with
+constantly shifting sea ice . This makes it impractical to construct a permanent station at the North Pole ( unlike the South Pole ) . However , the Soviet
+Union , and later Russia , constructed a number of manned drifting stations on a generally annual basis since 1937 , some of which have passed over or very
+close to the Pole . Since 2002 , the Russians have also annually established a base , Barneo , close to the Pole . This operates for a few weeks during early
+spring . Studies in the 2000s predicted that the North Pole may become seasonally ice - free because of Arctic ice shrinkage , with timescales varying from 2016
+to the late 21st century or later .
+</item 8>
+
+<item 9>
+South Pole
+The Geographic South Pole is distinct from the South Magnetic Pole , the position of which is defined based on the Earth 's magnetic field . The South Pole is
+at the center of the Southern Hemisphere . Contents ( hide ) 1 Geography 1.1 Ceremonial South Pole 1.2 Historic monuments 2 Exploration 2.1 Pre-1900 2.2 1900 --
+1950 2.3 1950 -- present 3 Climate and day and night 4 Time 5 Flora and fauna 6 See also 7 References 8 External links Geography ( edit ) The Ceremonial South
+Pole in 1998 . The Ceremonial South Pole as of February 2008 . For most purposes , the Geographic South Pole is defined as the southern point of the two points
+where the Earth 's axis of rotation intersects its surface ( the other being the Geographic North Pole ) . However , the Earth 's axis of rotation is actually
+subject to very small `` wobbles '' ( polar motion ) , so this definition is not adequate for very precise work .
+</item 9>
+
+<item 10>
+North Pole
+The sea depth at the North Pole has been measured at 4,261 m ( 13,980 ft ) by the Russian Mir submersible in 2007 and at 4,087 m ( 13,410 ft ) by USS Nautilus
+in 1958 . The nearest land is usually said to be Kaffeklubben Island , off the northern coast of Greenland about 700 km ( 430 mi ) away , though some perhaps
+semi permanent gravel banks lie slightly closer . The nearest permanently inhabited place is Alert in the Qikiqtaaluk Region , Nunavut , Canada , which is
+located 817 km ( 508 mi ) from the Pole . Contents ( hide ) 1 Precise definition 2 Exploration 2.1 Pre-1900 2.2 1900 -- 40 2.3 1940 -- 2000 2.4 21st century
+2.4. 1 2007 descent to the North Pole seabed 2.4. 2 MLAE 2009 Expedition 2.4.
+</item 10>
+=== END ITEM id=c3e6658ad9c962ca ===
+
+=== ITEM id=1ec011bbfa7f197b ===
+Gold sentences and facts:
+Sentence 0: Daren Maxwell Kagasoff ( KA - guh - sawf ) ( born September 16 , 1987 ) is an American actor . He is known for starring as Ricky Underwood on the ABC Family teen drama series The Secret Life of the American Teenager from 2008 to 2013 .
+  Fact 0.0: Daren Maxwell Kagasoff is pronounced KA-guh-sawf.
+  Fact 0.1: Daren Maxwell Kagasoff was born September 16, 1987.
+  Fact 0.2: Daren Maxwell Kagasoff is an American actor.
+  Fact 0.3: Daren Maxwell Kagasoff is known for starring as Ricky Underwood.
+  Fact 0.4: Daren Maxwell Kagasoff starred as Ricky Underwood on The Secret Life of the American Teenager.
+  Fact 0.5: The Secret Life of the American Teenager is an ABC Family teen drama series.
+  Fact 0.6: Daren Maxwell Kagasoff starred on The Secret Life of the American Teenager from 2008 to 2013.
+
+Retrieved items:
+<item 1>
+Krysten Ritter
+The The Last International Playboy Ozzy 2008 27 Dresses Gina the goth 2008 What Happens in Vegas Kelly 2009 Glock Beretta Short film 2009 Confessions of a
+Shopaholic Suze Cleath - Stuart She 's Out of My League Patty How to Make Love to a Woman Lauren 2011 Killing Bono Gloria 2011 Life Happens Kim Also writer and
+co-producer 2011 Margaret Shopgirl 2012 BuzzKill Nicole 2012 Vamps Stacy Daimen 2012 Refuge Amy 2014 Listen Up Philip Melanie 2014 Veronica Mars Gia Goodman
+2014 Asthma Ruby 2014 Search Party Christy 2014 Big Eyes DeAnn 2017 Hero , The The Hero Lucy Television ( edit ) Year Title Role Notes Whoopi Brynn Episode : ``
+The Squatters '' One Life to Live Kay 4 episodes Law & Order Tracy Warren Episode : `` Everybody Loves Raimondo 's '' Tanner on Tanner Saleswoman 2 episodes
+2005 Jonny Zero Quinn Episode : `` Pilot '' 2005 -- 2006 Veronica Mars Gia Goodman Recurring role ; 8 episodes 2006 Bedford Diaries ,
+</item 1>
+
+<item 2>
+Daren Kagasoff
+^ Jump up to : Ng , Philiana ( 3 June 2013 ) . `` ' Secret Life of the American Teenager ' : Daren Kagasoff on Series Finale ( Exclusive Video ) '' . The
+Hollywood Reporter . Retrieved 24 February 2015 . Jump up ^ Hibberd , James ( 8 May 2013 ) . `` Fox rejects ' Delirium ' pilot starring Emma Roberts '' .
+Entertainment Weekly . Retrieved 8 May 2013 . Jump up ^ Goldberg , Lesley ( 25 February 2013 ) . `` Fox 's ' Delirium ' Finds Co-Lead in ' Secret Life of the
+American Teenager ' Star '' . The Hollywood Reporter . Retrieved 24 February 2015 . Jump up ^ The Deadline Team ( 4 December 2013 ) . `` Daren Kagasoff Joins '
+Ouija ' '' . Deadline.com . Retrieved 5 February 2014 . Jump up ^ Thompson , Avery ( 12 November 2014 ) .
+</item 2>
+
+<item 3>
+Daren Kagasoff
+Daren Kagasoff - wikipedia Daren Kagasoff Jump to : navigation , search Daren Kagasoff At the Twilight premiere Daren Maxwell Kagasoff ( 1987 - 09 - 16 )
+September 16 , 1987 ( age 30 ) Encino , California , U.S. Occupation Actor Years active 2008 -- present Daren Maxwell Kagasoff ( KA - guh - sawf ) ( born
+September 16 , 1987 ) is an American actor . He is known for starring as Ricky Underwood on the ABC Family teen drama series The Secret Life of the American
+Teenager from 2008 to 2013 . Contents ( hide ) 1 Early life 2 Career 3 Filmography 4 Awards and nominations 5 References 6 External links Early Life ( edit )
+Kagasoff was born in Encino , California to Elise Kagasoff ( née Levy ) and Barry Kagasoff , a diamond merchant . He is the middle of three children ; he has an
+older brother , Justin , and a younger sister , Natalie .
+</item 3>
+
+<item 4>
+Daren Kagasoff (born September 16, 1987, in Encino, California) is an American actor. After playing baseball in high school and attending San Francisco State
+University, he pursued acting. He is best known as Ricky Underwood in ABC Family’s *The Secret Life of the American Teenager* (2008–2013), a role that earned
+him a 2009 Teen Choice Award. His other credits include the film *Ouija* (2014),
+</item 4>
+
+<item 5>
+Krysten Ritter
+8 episodes 2006 Bedford Diaries , The The Bedford Diaries Erin Kavenaugh 2 episodes 2006 -- 2007 Gilmore Girls Lucy Recurring role ; 8 episodes 2006 -- 2007 '
+Til Death Allison Stark 5 episodes 2006 Justice Eva Episode : `` Christmas Party '' 2007 Big Day Ellen Episode : `` The Ceremony '' 2009 -- 2010 Breaking Bad
+Jane Margolis Recurring role ; 9 episodes 2009 Gossip Girl Young Carol Rhodes Episode : `` Valley Girls '' Gravity Lily Champagne Main role ; 10 episodes 2011
+Love Bites Cassie Episode : `` Firsts '' 2012 -- 2013 Do n't Trust the B -- -- in Apartment 23 Chloe Lead role ; 26 episodes 2013 Robot Chicken Dana Polk (
+voice ) Episode : `` Immortal '' 2013 Cleveland Show , The The Cleveland Show Gina ( voice ) Episode : `` California Dreamin ' ( All the Cleves Are Brown ) ''
+2013 Eric Andre Show , The The Eric Andre Show Herself Episode : `` Krysten Ritter ; Dominic Monaghan '' 2014 Blacklist ,
+</item 5>
+
+<item 6>
+Daren Kagasoff
+Gordon Episode : `` Imposters '' Awards and nominations ( edit ) Year Award Work Result 2009 Teen Choice Award Choice TV Breakout Star : Male The Secret Life of
+the American Teenager Nominated 2009 Teen Choice Award Choice Summer TV Star : Male The Secret Life of the American Teenager Won Teen Choice Award Choice TV
+Actor : Drama The Secret Life of the American Teenager Nominated Teen Choice Award Teen Choice Award The Secret Life of the American Teenager Nominated 2011
+Teen Choice Award Choice TV Actor : Drama The Secret Life of the American Teenager Nominated 2012 Teen Choice Award Choice Summer TV Star : Male The Secret Life
+of the American Teenager Nominated References ( edit ) Jump up ^ `` Daren Maxwell Kagasoff - California , Birth Index '' . FamilySearch . Retrieved 24 February
+2015 . Jump up ^ `` Barry H Kagasoff mentioned in the record of Barry H Kagasoff and Elise Levy '' . FamilySearch . Retrieved 24 February 2015 . Jump up ^
+Matsushita , Elaine ( 22 March 2009 ) .
+</item 6>
+
+<item 7>
+Krysten Ritter
+She also played the first iteration of Allison Stark on the Fox sitcom ' Til Death ( which eventually had four actresses play that role through its run ) .
+Ritter at the premiere of 27 Dresses in January 2008 Ritter continued working in film , often cast as the best friend of the lead character . In 2008 , she had
+supporting roles in the romantic comedies What Happens in Vegas and 27 Dresses . She co-starred in the 2009 film Confessions of a Shopaholic as Suze , the best
+friend of Isla Fisher 's character . Ritter spent three months shooting She 's Out of My League in Pittsburgh in 2008 . She played Patty , the cynical best
+friend of Alice Eve 's character Molly . Ritter was cast as a young Carol Rhodes in an episode of The CW 's teen drama series Gossip Girl titled `` Valley Girls
+'' , which aired May 11 , 2009 . The episode was a backdoor pilot for a proposed spin - off series of the same title , set in 1980s Los Angeles , that would
+chronicle the teenage years of the character Lily van der Woodsen .
+</item 7>
+
+<item 8>
+Daren Kagasoff
+Kagasoff graduated from Montclair Preparatory High School in 2005 where he played on his school 's baseball team . While attending school at San Francisco State
+University , Kagasoff decided to become an actor . Career ( edit ) After deciding to return to Los Angeles , Kagasoff landed the lead role in a local theater
+production of Suburbia , a play that the eponymous 1996 film was based upon . After studying acting , he began auditioning for television and film roles .
+During one of his first auditions , he impressed producer Brenda Hampton so much that she hand - picked him to star as Ricky Underwood in the ABC Family series
+The Secret Life of the American Teenager . The show ran for five seasons . It was announced on February 24 , 2013 that Kagasoff had been cast as Alex in the Fox
+pilot Delirium , based on the novel by Lauren Oliver . However , the pilot was not picked up to series . Kagasoff co-starred as Trevor in the supernatural
+horror film Ouija , directed by Stiles White and co-written by Juliet Snowden and White . The film was released in October 2014 .
+</item 8>
+
+<item 9>
+Krysten Ritter
+Ritter told Philadelphia Style that she felt her `` outgoing and bubbly and funny '' personality as a performer helped her transition into acting naturally by
+letting her entertain the casting people . She won several bit film roles starting in 2001 , and then played a 1950s art history student in Julia Roberts ' Mona
+Lisa Smile ( 2003 ) . In 2006 , she appeared in All This Intimacy , a two - act , Off - Broadway play by Rajiv Joseph , at the Second Stage Theatre . Ritter
+signed on to star in the premiere of Zach Braff 's play , All New People , at Second Stage Theatre . Anna Camp , David Wilson Barnes and Justin Bartha
+co-starred in the production under the direction of Peter DuBois . Ritter had a number of guest starring roles on television , and appeared on the second season
+of Veronica Mars , playing Gia Goodman , the daughter of mayor Woody Goodman ( Steve Guttenberg ) . Ritter guest - starred on Gilmore Girls for eight episodes
+from 2006 to 2007 as Rory Gilmore 's friend , Lucy .
+</item 9>
+
+<item 10>
+Daren Kagasoff
+The film was released in October 2014 . In September 2014 , Kagasoff joined the cast of the Red Band Society , a comedy - drama series on Fox for the 2014 -- 15
+American television season developed by Margaret Nagle . He had a recurring role playing Kara 's love interest , Hunter Cole . The series premiered on September
+17 , 2014 and was canceled after one season . Filmography ( edit ) Television and film roles Year Title Role Notes 2008 -- 2013 Secret Life of the American
+Teenager , The The Secret Life of the American Teenager Richard `` Ricky '' Underwood Main role 2014 Ouija Trevor Film 2014 Blue Daren Web series ; 2 episodes
+2014 Delirium Alex Sheathes Unsold television pilot ( FOX ) 2014 Stalker Eric Bates Episode : Pilot 2014 -- 2015 Red Band Society Hunter Cole Recurring role , 7
+episodes 2015 Paradise Pictures Wyatt Osborne Unsold television pilot ( USA ) 2017 S.W.A.T.
+</item 10>
+=== END ITEM id=1ec011bbfa7f197b ===
+
+=== ITEM id=7ea21b8bd1f35356 ===
+Gold sentences and facts:
+Sentence 0: Angular cheilitis can be caused by infection , irritation , or allergies . Infections include by fungi such as Candida albicans and bacteria such as Staph . aureus . Irritants include poorly fitting dentures , licking the lips or drooling , mouth breathing resulting in a dry mouth , sun exposure , overclosure of the mouth , smoking , and minor trauma . Allergies may include substances like toothpaste , makeup , and food . Often a number of factors are involved . Other factors may include poor nutrition or poor immune function . Diagnosis may be helped by testing for infections and patch testing for allergies .
+  Fact 0.0: Angular cheilitis can be caused by infection.
+  Fact 0.1: Angular cheilitis can be caused by irritation.
+  Fact 0.2: Angular cheilitis can be caused by allergies.
+  Fact 0.3: Infections that cause angular cheilitis include infection by fungi such as Candida albicans.
+  Fact 0.4: Infections that cause angular cheilitis include infection by bacteria such as Staph. aureus.
+  Fact 0.5: Irritants that cause angular cheilitis include poorly fitting dentures.
+  Fact 0.6: Irritants that cause angular cheilitis include licking the lips or drooling.
+  Fact 0.7: Irritants that cause angular cheilitis include mouth breathing resulting in a dry mouth.
+  Fact 0.8: Irritants that cause angular cheilitis include sun exposure.
+  Fact 0.9: Irritants that cause angular cheilitis include overclosure of the mouth.
+  Fact 0.10: Irritants that cause angular cheilitis include smoking.
+  Fact 0.11: Irritants that cause angular cheilitis include minor trauma.
+  Fact 0.12: Allergies that cause angular cheilitis may include substances like toothpaste.
+  Fact 0.13: Allergies that cause angular cheilitis may include substances like makeup.
+  Fact 0.14: Allergies that cause angular cheilitis may include substances like food.
+  Fact 0.15: Often a number of factors are involved in angular cheilitis.
+  Fact 0.16: Other factors may include poor nutrition.
+  Fact 0.17: Other factors may include poor immune function.
+  Fact 0.18: Diagnosis of angular cheilitis may be helped by testing for infections.
+  Fact 0.19: Diagnosis of angular cheilitis may be helped by patch testing for allergies.
+
+Retrieved items:
+<item 1>
+Angular cheilitis
+zinc oxide paste ) at night . Thirdly , treatment of the infection and inflammation of the lesions themselves is addressed . This is usually with topical
+antifungal medication , such as clotrimazole , amphotericin B , ketoconazole , or nystatin cream . Some antifungal creams are combined with corticosteroids such
+as hydrocortisone or triamcinolone to reduce inflammation , and certain antifungals such as miconazole also have some antibacterial action .
+Diiodohydroxyquinoline is another topical therapy for angular cheilitis . If Staphylococcus aureus infection is demonstrated by microbiological culture to be
+responsible ( or suspected ) , the treatment may be changed to fusidic acid cream , an antibiotic which is effective against this type of bacteria . Aside from
+fusidic acid , neomycin , mupirocin , metronidazole , and chlorhexidine are alternative options in this scenario . Finally , if the condition appears resistant
+to treatment , investigations for underlying causes such as anemia or nutrient deficiencies or HIV infection . Identification of the underlying cause is
+essential for treating chronic cases .
+</item 1>
+
+<item 2>
+Angular cheilitis
+Examples include cocaine , methamphetamines , heroin , and hallucinogens . Allergic contact dermatitis ( edit ) See also : Allergic contact cheilitis , Allergic
+contact dermatitis , and Allergic contact stomatitis Patch test Allergic reactions may account for about 25 -- 34 % of cases of generalized cheilitis ( i.e. ,
+inflammation not confined to the angles of the mouth ) . It is unknown how frequently allergic reactions are responsible for cases of angular cheilitis , but
+any substance capable of causing generalized allergic cheilitis may present involving the corners of the mouth alone . Examples of potential allergens include
+substances that may be present in some types of lipstick , toothpaste , acne products , cosmetics , chewing gum , mouthwash , foods , dental appliances , and
+materials from dentures or mercury containing amalgam fillings . It is usually impossible to tell the difference between irritant contact dermatitis and
+allergic contact dermatitis without a patch test . Diagnosis ( edit ) Photographic Comparison of : 1 ) a Canker Sore - inside the mouth , 2 ) Herpes , 3 )
+Angular Cheilitis and 4 ) Chapped Lips .
+</item 2>
+
+<item 3>
+Angular cheilitis
+It is thought that reduced vertical dimension of the lower face may be a contributing factor in up to 11 % of elderly persons with angular cheilitis and in up
+to 18 % of denture wearers who have angular cheilitis . Reduced vertical dimension can also be caused by tooth migration , wearing orthodontic appliances , and
+elastic tissue damage caused by ultraviolet light exposure and smoking . Habits or conditions that keep the corners of the mouth moist might include chronic lip
+licking , thumb sucking ( or sucking on other objects such as pens , pipes , lollipops ) , dental cleaning ( e.g. flossing ) , chewing gum , hypersalivation ,
+drooling and mouth breathing . Some consider habitual lip licking or picking to be a form of nervous tic , and do not consider this to be true angular cheilitis
+, instead calling it perlèche ( derived from the French word pourlècher meaning `` to lick one 's lips '' ) , or `` factitious cheilitis '' is applied to this
+habit .
+</item 3>
+
+<item 4>
+Angular cheilitis
+The term `` cheilocandidiasis '' describes exfoliative ( flaking ) lesions of the lips and the skin around the lips , and is caused by a superficial candidal
+infection due to chronic lip licking . Less severe cases occur during cold , dry weather , and is a form of chapped lips . Individuals may lick their lips in an
+attempt to provide a temporary moment of relief , only serving to worsen the condition . The sunscreen in some types of lip balm degrades over time into an
+irritant . Using expired lipbalm can initiate mild angular cheilitis , and when the person applies more lipbalm to alleviate the cracking , it only aggravates
+it . Because of the delayed onset of contact dermatitis and the recovery period lasting days to weeks , people typically do not make the connection between the
+causative agent and the symptoms . Nutritional deficiencies ( edit ) Several different nutritional deficiency states of vitamins or minerals have been linked to
+AC . It is thought that in about 25 % of people with AC , iron deficiency or deficiency of B vitamins are involved . Nutritional deficiencies may be a more
+common cause of AC in Third World countries .
+</item 4>
+
+<item 5>
+Angular cheilitis
+Such examples include people with anorexia nervosa . Other disorders may cause lip enlargement ( e.g. orofacial granulomatosis ) , which alters the local
+anatomy and extenuates the skin folds at the corners of the mouth . More still may be involved because they affect the immune system , allowing normally
+harmless organisms like Candida to become pathogenic and cause an infection . Xerostomia ( dry mouth ) is thought to account for about 5 % of cases of AC .
+Xerostomia itself has many possible causes , but commonly the cause may be side effects of medications , or conditions such as Sjögren 's syndrome . Conversely
+, conditions which cause drooling or sialorrhoea ( excessive salivation ) can cause angular cheilitis by creating a constant wet environment in the corners of
+the mouth . About 25 % of people with Down syndrome appear to have AC . This is due to relative macroglossia , an apparently large tongue in a small mouth ,
+which may constantly stick out of the mouth causing maceration of the corners of the mouth with saliva .
+</item 5>
+
+<item 6>
+Angular cheilitis
+The corner of the mouth is normally exposed to saliva more than any other part of the lips . Reduced lower facial height ( vertical dimension or facial support
+) is usually caused by edentulism ( tooth loss ) , or wearing worn down , old dentures or ones which are not designed optimally . This results in overclosure of
+the mandible ( collapse of the jaws ) , which extenuates the angular skin folds at the corners of the mouth , in effect creating an intertriginous skin crease .
+The tendency of saliva to pool in these areas is increased , constantly wetting the area , which may cause tissue maceration and favors the development of a
+yeast infection . As such , angular cheilitis is more commonly seen in edentulous people ( people without any teeth ) . It is by contrast uncommon in persons
+who retain their natural teeth . Angular cheilitis is also commonly seen in denture wearers . Angular cheilitis is present in about 30 % of people with denture
+- related stomatitis .
+</item 6>
+
+<item 7>
+Angular cheilitis
+A cold sore at the corner of the mouth behaves similarly to elsewhere on the lips , and follows a pattern of vesicle ( blister ) formation followed by rupture
+leaving a crusted sore which resolves in about 7 -- 10 days , and recurs in the same spot periodically , especially during periods of stress . Rather than
+utilizing antifungal creams , angular herpes simplex is treated in the same way as a cold sore , with topical antiviral drugs such as aciclovir . Irritation
+contact dermatitis ( edit ) A famous sketch by Leonardo da Vinci in preparation to depict the face of Judas Iscariot in The Last supper . The subject shows
+overclosure of the jaws and loss of facial support around the mouth . Pronounced skin folds extending from the corner of the mouth . Main article : Irritant
+contact dermatitis 22 % of cases of angular cheilitis are due to irritants . Saliva contains digestive enzymes , which may have a degree of digestive action on
+tissues if they are left in contact . The corner of the mouth is normally exposed to saliva more than any other part of the lips .
+</item 7>
+
+<item 8>
+Angular cheilitis
+In the developing world , iron and vitamin deficiencies are a common cause . Contents ( hide ) 1 Signs and symptoms 2 Causes 2.1 Infection 2.2 Irritation
+contact dermatitis 2.3 Nutritional deficiencies 2.4 Systemic disorders 2.5 Drugs 2.6 Allergic contact dermatitis 3 Diagnosis 3.1 Classification 4 Management 5
+Prognosis 6 Epidemiology 7 References 8 External links Signs and symptoms ( edit ) Angular cheilitis -- a fissure running in the corner of the mouth with
+reddened , irritated facial skin adjacent . A fairly mild case of angular cheilitis extending onto the facial skin in a young person ( affected area is within
+the black oval ) . Angular cheilitis is a fairly non specific term which describes the presence of an inflammatory lesion in a particular anatomic site ( i.e.
+the corner of the mouth ) . As there are different possible causes and contributing factors from one person to the next , the appearance of the lesion is
+somewhat variable . The lesions are more commonly symmetrically present on both sides of the mouth , but sometimes only one side may be affected .
+</item 8>
+
+<item 9>
+Angular cheilitis
+In some cases , the lesion may be confined to the mucosa of the lips , and in other cases the lesion may extend past the vermilion border ( the edge where the
+lining on the lips becomes the skin on the face ) onto the facial skin . Initially , the corners of the mouth develop a gray - white thickening and adjacent
+erythema ( redness ) . Later , the usual appearance is a roughly triangular area of erythema , edema ( swelling ) and breakdown of skin at either corner of the
+mouth . The mucosa of the lip may become fissured ( cracked ) , crusted , ulcerated or atrophied . There is not usually any bleeding . Where the skin is
+involved , there may be radiating rhagades ( linear fissures ) from the corner of the mouth . Infrequently , the dermatitis ( which may resemble eczema ) can
+extend from the corner of the mouth to the skin of the cheek or chin . If Staphylococcus aureus is involved , the lesion may show golden yellow crusts .
+</item 9>
+
+<item 10>
+Angular cheilitis
+Angular cheilitis - wikipedia Angular cheilitis Jump to : navigation , search Angular cheilitis Synonyms Rhagades , perlèche , cheilosis , angular cheilosis ,
+commissural cheilitis , angular stomatitis Bilateral angular cheilitis in an elderly individual with false teeth , iron deficiency anemia and dry mouth
+Pronunciation / kaɪˈlaɪtɪs / Specialty Dermatology Symptoms Redness , skin breakdown and crusting at the corner of the mouth Usual onset Children , 30s to 60s
+Duration Days to years Causes Infection , irritation , allergies Treatment Based on cause , barrier cream Frequency 0.7 % of the population Angular cheilitis (
+AC ) , is inflammation of one or both corners of the mouth . Often the corners are red with skin breakdown and crusting . It can also be itchy or painful . The
+condition can last for days to years . Angular cheilitis is a type of cheilitis ( inflammation of the lips ) . Angular cheilitis can be caused by infection ,
+irritation , or allergies . Infections include by fungi such as Candida albicans and bacteria such as Staph .
+</item 10>
+=== END ITEM id=7ea21b8bd1f35356 ===
+
+=== ITEM id=f0b96711a5d48fe8 ===
+Gold sentences and facts:
+Sentence 0: The Walking Dead Cover of The Walking Dead No. 1 . Art by Tony Moore . Publication information Publisher Image Comics Schedule Monthly Format Ongoing series Genre Post-apocalyptic Publication date October 2003 -- present No. of issues 178 Creative team Created by Robert Kirkman Tony Moore Written by Robert Kirkman Artist ( s ) Tony Moore ( # 1 -- 6 ) Charlie Adlard ( # 7 -- present ) Penciller ( s ) Tony Moore ( # 1 -- 6 ) Charlie Adlard ( # 7 -- present ) Inker ( s ) Tony Moore ( # 1 -- 6 ) Charlie Adlard ( # 7 -- present ) Stefano Gaudiano ( # 115 -- present ) Letterer ( s ) Robert Kirkman ( # 1 -- 19 ) Rus Wooton ( # 20 -- present ) Colorist ( s ) Tony Moore ( # 1 -- 5 ) Cliff Rathburn ( # 6 -- present ) Editor ( s ) Aubrey Sitterson ( # 55 -- 70 ) Sina Grace ( # 67 -- 96 ) Sean Mackiewicz ( # 97 -- present )
+  Fact 0.0: The Walking Dead No. 1 has a cover with art by Tony Moore.
+  Fact 0.1: The Walking Dead is published by Image Comics.
+  Fact 0.2: The Walking Dead has a monthly publication schedule.
+  Fact 0.3: The Walking Dead is an ongoing series.
+  Fact 0.4: The Walking Dead is a post-apocalyptic comic.
+  Fact 0.5: The Walking Dead was published from October 2003 to the present.
+  Fact 0.6: The Walking Dead has 178 issues.
+  Fact 0.7: The Walking Dead was created by Robert Kirkman and Tony Moore.
+  Fact 0.8: Robert Kirkman wrote The Walking Dead.
+  Fact 0.9: Tony Moore was the artist for issues 1 to 6 of The Walking Dead.
+  Fact 0.10: Charlie Adlard was the artist from issue 7 of The Walking Dead to the present.
+  Fact 0.11: Tony Moore was the penciller for issues 1 to 6 of The Walking Dead.
+  Fact 0.12: Charlie Adlard was the penciller from issue 7 of The Walking Dead to the present.
+  Fact 0.13: Tony Moore was the inker for issues 1 to 6 of The Walking Dead.
+  Fact 0.14: Charlie Adlard was the inker from issue 7 of The Walking Dead to the present.
+  Fact 0.15: Stefano Gaudiano was an inker of The Walking Dead from issue 115 to the present.
+  Fact 0.16: Robert Kirkman was the letterer of The Walking Dead for issues 1 to 19.
+  Fact 0.17: Rus Wooton was the letterer of The Walking Dead from issue 20 to the present.
+  Fact 0.18: Tony Moore was the colorist of The Walking Dead for issues 1 to 5.
+  Fact 0.19: Cliff Rathburn was the colorist of The Walking Dead from issue 6 to the present.
+  Fact 0.20: Aubrey Sitterson was an editor of The Walking Dead for issues 55 to 70.
+  Fact 0.21: Sina Grace was an editor of The Walking Dead for issues 67 to 96.
+  Fact 0.22: Sean Mackiewicz was an editor of The Walking Dead from issue 97 to the present.
+Sentence 1: The Walking Dead debuted in 2003 , published by Image Comics , with art by Tony Moore for the first six issues and Cliff Rathburn shading the art after issue five . Charlie Adlard took over as artist on issue # 7 , after he was approached by Kirkman . Moore also did the cover art for the first twenty - four issues and the first four trade paperbacks . The remainder were done by Adlard .
+  Fact 1.0: The Walking Dead debuted in 2003.
+  Fact 1.1: The Walking Dead was published by Image Comics.
+  Fact 1.2: Tony Moore did the art for the first six issues of The Walking Dead.
+  Fact 1.3: Cliff Rathburn shaded the art of The Walking Dead after issue five.
+  Fact 1.4: Charlie Adlard took over as artist of The Walking Dead on issue 7.
+  Fact 1.5: Robert Kirkman approached Charlie Adlard before Adlard took over as artist on issue 7.
+  Fact 1.6: Tony Moore did the cover art for the first twenty-four issues of The Walking Dead.
+  Fact 1.7: Tony Moore did the cover art for the first four trade paperbacks of The Walking Dead.
+  Fact 1.8: Charlie Adlard did the remainder of the cover art of The Walking Dead.
+
+Retrieved items:
+<item 1>
+The Walking Dead (comic book)
+2008 The Walking Dead # 37 -- 48 Lori and Judith The Walking Dead : Book Five 978 - 1607061717 May 5 , 2010 The Walking Dead # 49 -- 60 Abraham The Walking Dead
+: Book Six 978 - 1607063278 October 26 , 2010 The Walking Dead # 61 -- 72 Carl The Walking Dead : Book Seven 978 - 1607064398 October 18 , 2011 The Walking Dead
+# 73 -- 84 Rick The Walking Dead : Book Eight 978 - 1607065937 September 26 , 2012 The Walking Dead # 85 -- 96 Andrea The Walking Dead : Book Nine 978 -
+1607067986 September 17 , 2013 The Walking Dead # 97 -- 108 Negan The Walking Dead : Book Ten 978 - 1632150349 September 3 , 2014 The Walking Dead # 109 -- 120
+Ezekiel The Walking Dead : Book Eleven 978 - 1632152718 February 25 ,
+</item 1>
+
+<item 2>
+The Walking Dead (comic book)
+21 : All Out War ( Part Two ) 1 - 63215 - 030 - 1 July 29 , 2014 The Walking Dead # 121 -- 126 February 2014 -- April 2014 11 6 The Walking Dead Vol. 22 : A New
+Beginning 1 - 63215 - 041 - 7 November 5 , 2014 The Walking Dead # 127 -- 132 May 2014 -- October 2014 The Walking Dead Vol. 23 : Whispers Into Screams 1 -
+63215 - 258 - 4 May 12 , 2015 The Walking Dead # 133 -- 138 October 2014 -- March 2015 12 The Walking Dead Vol. 24 : Life And Death 1 - 63215 - 402 - 1 August
+26 , 2015 The Walking Dead # 139 -- 144 March 2015 -- July 2015 The Walking Dead Vol.
+</item 2>
+
+<item 3>
+The Walking Dead (comic book)
+7 : The Calm Before 1 - 58240 - 828 - 9 September 26 , 2007 The Walking Dead # 37 -- 42 April 2007 -- September 2007 The Walking Dead Vol. 8 : Made To Suffer 1
+- 58240 - 883 - 1 June 25 , 2008 The Walking Dead # 43 -- 48 October 2007 -- April 2008 The Walking Dead Vol. 9 : Here We Remain 1 - 60706 - 022 - 1 January 21
+, 2009 The Walking Dead # 49 -- 54 May 2008 -- November 2008 5 The Walking Dead Vol. 10 : What We Become 1 - 60706 - 075 - 2 August 12 , 2009 The Walking Dead #
+55 -- 60 November 2008 -- April 2009 The Walking Dead Vol. 11 : Fear The Hunters 1 - 60706 - 122 - 8 January 6 , 2010 The Walking Dead # 61 -- 66 May 2009 --
+October 2009 6 The Walking Dead Vol.
+</item 3>
+
+<item 4>
+The Walking Dead (comic book)
+17 : Something To Fear 1 - 60706 - 615 - 7 November 21 , 2012 The Walking Dead # 97 -- 102 May 2012 -- September 2012 9 5 The Walking Dead Vol. 18 : What Comes
+After 1 - 60706 - 687 - 4 June 18 , 2013 The Walking Dead # 103 -- 108 October 2012 -- March 2013 The Walking Dead Vol. 19 : March To War 1 - 60706 - 818 - 4
+November 13 , 2013 The Walking Dead # 109 -- 114 April 2013 -- September 2013 10 The Walking Dead Vol. 20 : All Out War ( Part One ) 1 - 60706 - 882 - 6 March
+11 , 2014 The Walking Dead # 115 -- 120 October 2013 -- January 2014 The Walking Dead Vol.
+</item 4>
+
+<item 5>
+The Walking Dead (comic book)
+2005 Collects # 1 -- 24 The Walking Dead : Volume 2 Deluxe HC 1 - 60706 - 029 - 9 February 17 , 2009 Collects # 25 -- 48 The Walking Dead : Volume 3 Deluxe HC 1
+- 60706 - 330 - 1 February 2 , 2011 Collects # 49 -- 72 The Walking Dead : Volume 4 Deluxe HC 1 - 60706 - 616 - 5 December 12 , 2012 Collects # 73 -- 96 The
+Walking Dead : Volume 5 Deluxe HC 1 - 63215 - 042 - 5 November 19 , 2014 Collects # 97 -- 120 The Walking Dead : Volume 6 Deluxe HC 1 - 63215 - 521 - 4 December
+2 , 2015 Collects # 121 -- 144 The Walking Dead : Volume 7 Deluxe HC 1 - 53430 - 335 - 9 November 7 , 2017 Collects # 145 -- 168 Compendium editions ( edit )
+Softcover compendium editions collect 48 comic issues each .
+</item 5>
+
+<item 6>
+The Walking Dead (comic book)
+Charlie Adlard took over as artist on issue # 7 , after he was approached by Kirkman . Moore also did the cover art for the first twenty - four issues and the
+first four trade paperbacks . The remainder were done by Adlard . When the television series premiered in October 2010 , Image Comics announced The Walking Dead
+Weekly . The first 52 issues of the series began to be reprinted on January 5 , 2011 , with one issue per week for a year . The series is periodically
+re-published in trade paperbacks which contain six issues each , hardcover books with twelve issues and occasional bonus material , omnibus editions of twenty -
+four issues , and compendium editions of forty - eight issues . Story arcs ( edit ) Volume 1 : Days Gone Bye ( Issues 1 -- 6 ) Rick Grimes , a sheriff 's deputy
+from Kentucky , is wounded in the line of duty and emerges from a coma to find the world overrun by the undead . He returns home to find his house ransacked and
+his wife and son gone .
+</item 6>
+
+<item 7>
+The Walking Dead (comic book)
+25 : No Turning Back 1 - 63215 - 659 - 8 April 5 , 2016 The Walking Dead # 145 -- 150 August 2015 -- January 2016 13 7 The Walking Dead Vol. 26 : Call To Arms 1
+- 63215 - 917 - 1 September 14 , 2016 The Walking Dead # 151 -- 156 February 2016 -- July 2016 The Walking Dead Vol. 27 : The Whisperer War 1 - 53430 - 052 - X
+March 7 , 2017 The Walking Dead # 157 -- 162 August 2016 -- January 2017 14 The Walking Dead Vol. 28 : A Certain Doom 1 - 53430 - 244 - 1 October 3 , 2017 The
+Walking Dead # 163 -- 168 February 2017 -- June 2017 The Walking Dead Vol.
+</item 7>
+
+<item 8>
+The Walking Dead (comic book)
+The Walking Dead ( comic book ) - Wikipedia The Walking Dead ( comic book ) Jump to : navigation , search The Walking Dead Cover of The Walking Dead No. 1 . Art
+by Tony Moore . Publication information Publisher Image Comics Schedule Monthly Format Ongoing series Genre Post-apocalyptic Publication date October 2003 --
+present No.
+</item 8>
+
+<item 9>
+The Walking Dead (comic book)
+29 : Lines We Cross 1 - 53430 - 497 - 5 March 13 , 2018 The Walking Dead # 169 -- 174 July 2017 -- December 2017 15 8 Hardcovers ( edit ) All hardcovers contain
+the contents of the comics , including the covers , and in some cases bonus material . The books ' trim size is larger than the paperbacks . Each hardcover
+contains two story arcs from the series . Signed versions of the books are available , each limited to 310 pieces . Title ISBN Release Date Collected Material
+Cover Character The Walking Dead : Book One 978 - 1582406190 July 19 , 2006 The Walking Dead # 1 -- 12 Rick The Walking Dead : Book Two 978 - 1582406985 March 7
+, 2007 The Walking Dead # 13 -- 24 Michonne The Walking Dead : Book Three 978 - 1582408255 December 19 , 2007 The Walking Dead # 25 -- 36 The Governor The
+Walking Dead : Book Four 978 - 1607060000 October 29 ,
+</item 9>
+
+<item 10>
+The Walking Dead (comic book)
+12 : Life Among Them 1 - 60706 - 254 - 2 August 3 , 2010 The Walking Dead # 67 -- 72 November 2009 -- May 2010 The Walking Dead Vol. 13 : Too Far Gone 1 - 60706
+- 329 - 8 November 23 , 2010 The Walking Dead # 73 -- 78 June 2010 -- October 2010 7 The Walking Dead Vol. 14 : No Way Out 1 - 60706 - 392 - 1 June 22 , 2011
+The Walking Dead # 79 -- 84 November 2010 -- April 2011 The Walking Dead Vol. 15 : We Find Ourselves 1 - 60706 - 440 - 5 December 27 , 2011 The Walking Dead #
+85 -- 90 May 2011 -- October 2011 8 The Walking Dead Vol. 16 : A Larger World 1 - 60706 - 559 - 2 June 6 , 2012 The Walking Dead # 91 -- 96 November 2011 --
+April 2012 The Walking Dead Vol.
+</item 10>
+=== END ITEM id=f0b96711a5d48fe8 ===
+
+=== ITEM id=1fcb77dc76521ff7 ===
+Gold sentences and facts:
+Sentence 0: Barbara Eden as Stella Johnson , a widowed cosmetics salesperson with a young daughter , whose joie de vivre , her principles , and her individuality anger most of the powerful people in town and on the Parent Teachers Association board . She inevitably becomes PTA president after embarrassing Flora , the snobby former President and her equally snobby friends . Ronny Cox as Willis `` Will '' Newton , a wealthy member of the PTA who does n't agree with Flora and her snobby allies and is in love with Stella . He and Stella get married at the end of the movie . Nanette Fabray as Alice Finley , Stella 's best friend and co-conspirator against the snobs of Harper Valley . She owns and operates the La Moderne Beauty Shop . Louis Nye as Kirby Baker , a local real estate agent who is allied with Flora and her friends . Notorious for being a lecherous playboy and infamous for impregnating his secretaries , one of whom , Gladys Wilmot , left town to see an abortionist in Cincinnati . As part of a plan to discredit Stella , he tries to foreclose on Stella 's house , which infuriates her . He then gets arrested and jailed for attacking Myrna Wong , a friend of Stella 's , who rebuffs his advances , throwing him by use of martial arts and destroying the office . John Fiedler as Bobby Taylor , a man on the PTA who lusts after Stella . Overly dominated by his wife , Holly . Although open to allow Stella to speak , he is not above having a fellow PTA board member kidnapped to commit election fraud . He was arrested for indecent exposure after being set up by Stella . Ron Masak as Herbie Maddox , the head bartender at Kelly 's bar , and Stella 's ally against Flora and her friends . He has a crush on Stella , and is one of her friends . Clint Howard as Corley , a young delivery person , who works for the local florist shop , who brings Stella flowers from Will . Susan Swift as Dee Johnson , Stella 's 14 - year - old daughter , who is threatened with expulsion from school if her mother does n't conform to the way the PTA wants her to behave . She has a hand in assisting her mother and Alice with one of their revenge schemes . She loses her braces , gets a makeover , and ends up with a boyfriend , Carlyle . Pat Paulsen as Otis Harper , the descendant of the founding family of Harper Valley . A PTA member who is allied with Flora and her friends . Has a tendency to drink all the time , which annoys his wife , Bertha . He had a stampede of elephants , painted pink , stormed through his house , destroying it . Amzie Strickland as Shirley Thompson , a member of the PTA board who tends to drink a lot of gin . Though she is allied with Flora and her friends , she is one of four PTA members ( Will , Skeeter and Holly Taylor are the others ) who are spared any retribution from Stella . She was seen as the most sympathetic of the board , as she tended to be more manipulated as opposed to being manipulative . It was never revealed whether or not she retained her seat on the PTA , but it is presumed that she became more sympathetic towards Stella as she was seen waving goodbye at Olive as she was being arrested . Bob Hastings as Skeeter Duggan , a member of the PTA board , and the town 's Notary public who is sympathetic to Stella . He is kidnapped by Dutch and Tex at Flora Simpson Reilly 's orders . Audrey Christie as Flora Simpson - Reilly , The movie 's main antagonist . She is the pompous and extremely snobbish president of the PTA board who thoroughly despises Stella ( who defeats her for president at the end of the movie ) and all she stands for . So desperate is she to retain her power and prestige in the community that she has a fellow member of the PTA ( Skeeter Duggan ) kidnapped so she and her allies can commit election fraud . She is embarrassed when her permanent set is destroyed by a hair depilatory at the beauty salon . Molly Dodd as Olive Glover , the recording secretary of the PTA who is a gambling addict . Clearly the most corrupt and most vindictive member of the PTA board , she is eventually arrested for embezzlement after having a load of hay and horse manure dumped on top of her . She is the one who initially angers Stella by sending her the letter denouncing her , and tries to get Dee 's friend , Mavis , arrested for embezzlement . Fay DeWitt as Willamae Jones , a snide biology teacher at the junior high school who is also a member of the PTA . She makes no secret of the fact that she favors the Reilly twins , due to the connections between her and Flora . Notorious for being a nymphomaniac ( though she hides it under a prim - and - proper façade ) , she is caught in flagrante delicto with Barney Crunk , the town 's mailman , on film . DeVera Marcus as Holly Taylor , Bobby 's obviously overbearing wife , who tends to drink a lot when Bobby is out of town , and does n't approve of Bobby 's lusting , or of anything else he does ( this is different from the character in the song , who `` seems to use a lot of ice whenever ( her husband ) 's away '' , implying adultery with the iceman ) . However , despite her ties to Flora and her scheming friends , she , like Shirley Thompson , is spared any retribution from Stella , due to Stella refusing to date Bobby . Louise Foley as Mavis , Dee Johnson 's best friend , who is nearly framed for a crime she did not commit by the vindictive Olive Glover . Brian Cook as Carlyle , a popular track star who chooses Dee , after she gets a makeover , and angers Bettina Reilly in the process . Laura Teige as Bettina Reilly , One of Flora 's twin granddaughters , who wants to be with Carlyle , and is jealous when he chooses Dee over her . She tends to be as snotty as her grandmother . Jan Teige as Edwina Reilly , Bettina 's twin sister , who is just as snotty as her . Irene Yah - Ling Sun as Myrna Wong , a friend of Stella 's who is a judo expert ; she is assaulted by Kirby Baker ( after leading him on ; she destroys him and his office in retaliation ) and has him sent to jail for assault . Tobias Anderson as `` Cranky '' Barney Crunk , the town 's nosy mailman who had the bad habit of peeking in everyone 's mail . He is caught in flagrante delicto on film with Willamae Jones . Royce D. Applegate as Dutch , one of two kidnappers who abduct Skeeter Duggan at Flora Simpson - Reilly 's orders . J.J. Barry as Tex , the mastermind of the kidnap plot to get Skeeter Duggan out of the way so Flora Simpson - Reilly and her friends could commit election fraud . He and his accomplice Dutch are arrested and the two of them rat out Flora and her friends on their scheme . Pitt Herbert as Henry Reilly , Flora 's overly dominated husband and grandfather to Edwina and Bettina . Henry is wealthy , but is very weak - willed and is known for acquiescing to his wife 's schemes . Arlen Stuart as Bertha Harper , wife of Otis Harper , who gets annoyed by her husband 's continual drinking . She is terrified when her house is destroyed by pink - painted elephants .
+  Fact 0.0: Barbara Eden plays Stella Johnson.
+  Fact 0.1: Stella Johnson is a widowed cosmetics salesperson.
+  Fact 0.2: Stella Johnson has a young daughter.
+  Fact 0.3: Stella Johnson's joie de vivre angers most of the powerful people in town and on the Parent Teachers Association board.
+  Fact 0.4: Stella Johnson's principles anger most of the powerful people in town and on the Parent Teachers Association board.
+  Fact 0.5: Stella Johnson's individuality angers most of the powerful people in town and on the Parent Teachers Association board.
+  Fact 0.6: Stella Johnson inevitably becomes PTA president after embarrassing Flora, the snobby former President.
+  Fact 0.7: Stella Johnson inevitably becomes PTA president after embarrassing Flora's equally snobby friends.
+  Fact 0.8: Ronny Cox plays Willis 'Will' Newton.
+  Fact 0.9: Will Newton is a wealthy member of the PTA.
+  Fact 0.10: Will Newton does not agree with Flora.
+  Fact 0.11: Will Newton does not agree with Flora's snobby allies.
+  Fact 0.12: Will Newton is in love with Stella.
+  Fact 0.13: Will Newton and Stella get married at the end of the movie.
+  Fact 0.14: Nanette Fabray plays Alice Finley.
+  Fact 0.15: Alice Finley is Stella's best friend.
+  Fact 0.16: Alice Finley is Stella's co-conspirator against the snobs of Harper Valley.
+  Fact 0.17: Alice Finley owns the La Moderne Beauty Shop.
+  Fact 0.18: Alice Finley operates the La Moderne Beauty Shop.
+  Fact 0.19: Louis Nye plays Kirby Baker.
+  Fact 0.20: Kirby Baker is a local real estate agent.
+  Fact 0.21: Kirby Baker is allied with Flora and her friends.
+  Fact 0.22: Kirby Baker is notorious for being a lecherous playboy.
+  Fact 0.23: Kirby Baker is infamous for impregnating his secretaries.
+  Fact 0.24: Gladys Wilmot is one of Kirby Baker's secretaries.
+  Fact 0.25: Kirby Baker impregnated Gladys Wilmot.
+  Fact 0.26: Gladys Wilmot left town to see an abortionist in Cincinnati.
+  Fact 0.27: As part of a plan to discredit Stella, Kirby Baker tries to foreclose on Stella's house.
+  Fact 0.28: Stella is infuriated by Kirby Baker's attempt to foreclose on her house.
+  Fact 0.29: Kirby Baker gets arrested and jailed for attacking Myrna Wong.
+  Fact 0.30: Myrna Wong is a friend of Stella's.
+  Fact 0.31: Myrna Wong rebuffs Kirby Baker's advances.
+  Fact 0.32: Myrna Wong throws Kirby Baker by use of martial arts.
+  Fact 0.33: Myrna Wong destroys Kirby Baker's office.
+  Fact 0.34: John Fiedler plays Bobby Taylor.
+  Fact 0.35: Bobby Taylor is a man on the PTA.
+  Fact 0.36: Bobby Taylor lusts after Stella.
+  Fact 0.37: Bobby Taylor is overly dominated by his wife, Holly.
+  Fact 0.38: Bobby Taylor is open to allowing Stella to speak.
+  Fact 0.39: Bobby Taylor is not above having a fellow PTA board member kidnapped to commit election fraud.
+  Fact 0.40: Bobby Taylor was arrested for indecent exposure.
+  Fact 0.41: Bobby Taylor was set up by Stella.
+  Fact 0.42: Ron Masak plays Herbie Maddox.
+  Fact 0.43: Herbie Maddox is the head bartender at Kelly's bar.
+  Fact 0.44: Herbie Maddox is Stella's ally against Flora and her friends.
+  Fact 0.45: Herbie Maddox has a crush on Stella.
+  Fact 0.46: Herbie Maddox is one of Stella's friends.
+  Fact 0.47: Clint Howard plays Corley.
+  Fact 0.48: Corley is a young delivery person.
+  Fact 0.49: Corley works for the local florist shop.
+  Fact 0.50: Corley brings Stella flowers from Will.
+  Fact 0.51: Susan Swift plays Dee Johnson.
+  Fact 0.52: Dee Johnson is Stella's 14-year-old daughter.
+  Fact 0.53: Dee Johnson is threatened with expulsion from school if her mother does not conform to the way the PTA wants her to behave.
+  Fact 0.54: Dee Johnson has a hand in assisting her mother and Alice with one of their revenge schemes.
+  Fact 0.55: Dee Johnson loses her braces.
+  Fact 0.56: Dee Johnson gets a makeover.
+  Fact 0.57: Dee Johnson ends up with a boyfriend, Carlyle.
+  Fact 0.58: Pat Paulsen plays Otis Harper.
+  Fact 0.59: Otis Harper is the descendant of the founding family of Harper Valley.
+  Fact 0.60: Otis Harper is a PTA member allied with Flora and her friends.
+  Fact 0.61: Otis Harper has a tendency to drink all the time.
+  Fact 0.62: Otis Harper's drinking annoys his wife, Bertha.
+  Fact 0.63: Otis Harper had a stampede of pink-painted elephants storm through his house.
+  Fact 0.64: The stampede of pink-painted elephants destroyed Otis Harper's house.
+  Fact 0.65: Amzie Strickland plays Shirley Thompson.
+  Fact 0.66: Shirley Thompson is a member of the PTA board.
+  Fact 0.67: Shirley Thompson tends to drink a lot of gin.
+  Fact 0.68: Shirley Thompson is allied with Flora and her friends.
+  Fact 0.69: Shirley Thompson is one of four PTA members spared any retribution from Stella.
+  Fact 0.70: The other three PTA members spared any retribution from Stella are Will, Skeeter and Holly Taylor.
+  Fact 0.71: Shirley Thompson was seen as the most sympathetic member of the board.
+  Fact 0.72: Shirley Thompson tended to be more manipulated than manipulative.
+  Fact 0.73: It was never revealed whether Shirley Thompson retained her seat on the PTA.
+  Fact 0.74: It is presumed that Shirley Thompson became more sympathetic towards Stella.
+  Fact 0.75: Shirley Thompson was seen waving goodbye at Olive as Olive was being arrested.
+  Fact 0.76: Bob Hastings plays Skeeter Duggan.
+  Fact 0.77: Skeeter Duggan is a member of the PTA board.
+  Fact 0.78: Skeeter Duggan is the town's Notary public.
+  Fact 0.79: Skeeter Duggan is sympathetic to Stella.
+  Fact 0.80: Dutch and Tex kidnap Skeeter Duggan at Flora Simpson-Reilly's orders.
+  Fact 0.81: Audrey Christie plays Flora Simpson-Reilly.
+  Fact 0.82: Flora Simpson-Reilly is the movie's main antagonist.
+  Fact 0.83: Flora Simpson-Reilly is the pompous and extremely snobbish president of the PTA board.
+  Fact 0.84: Flora Simpson-Reilly thoroughly despises Stella.
+  Fact 0.85: Stella defeats Flora Simpson-Reilly for president at the end of the movie.
+  Fact 0.86: Flora Simpson-Reilly despises all that Stella stands for.
+  Fact 0.87: Flora Simpson-Reilly is desperate to retain her power and prestige in the community.
+  Fact 0.88: Flora Simpson-Reilly has a fellow PTA member, Skeeter Duggan, kidnapped so she and her allies can commit election fraud.
+  Fact 0.89: Flora Simpson-Reilly is embarrassed when her permanent set is destroyed by a hair depilatory at the beauty salon.
+  Fact 0.90: Molly Dodd plays Olive Glover.
+  Fact 0.91: Olive Glover is the recording secretary of the PTA.
+  Fact 0.92: Olive Glover is a gambling addict.
+  Fact 0.93: Olive Glover is clearly the most corrupt and most vindictive member of the PTA board.
+  Fact 0.94: Olive Glover is eventually arrested for embezzlement after having a load of hay and horse manure dumped on top of her.
+  Fact 0.95: Olive Glover initially angers Stella by sending her the letter denouncing her.
+  Fact 0.96: Olive Glover tries to get Dee's friend, Mavis, arrested for embezzlement.
+  Fact 0.97: Fay DeWitt plays Willamae Jones.
+  Fact 0.98: Willamae Jones is a snide biology teacher at the junior high school.
+  Fact 0.99: Willamae Jones is a member of the PTA.
+  Fact 0.100: Willamae Jones favors the Reilly twins.
+  Fact 0.101: Willamae Jones favors the Reilly twins due to the connections between her and Flora.
+  Fact 0.102: Willamae Jones is notorious for being a nymphomaniac.
+  Fact 0.103: Willamae Jones hides being a nymphomaniac under a prim-and-proper facade.
+  Fact 0.104: Willamae Jones is caught in flagrante delicto with Barney Crunk, the town's mailman, on film.
+  Fact 0.105: DeVera Marcus plays Holly Taylor.
+  Fact 0.106: Holly Taylor is Bobby's obviously overbearing wife.
+  Fact 0.107: Holly Taylor tends to drink a lot when Bobby is out of town.
+  Fact 0.108: Holly Taylor does not approve of Bobby's lusting.
+  Fact 0.109: Holly Taylor does not approve of anything else Bobby does.
+  Fact 0.110: The Holly Taylor character differs from the character in the song, who seems to use a lot of ice whenever her husband is away, implying adultery with the iceman.
+  Fact 0.111: Holly Taylor has ties to Flora and her scheming friends.
+  Fact 0.112: Holly Taylor, like Shirley Thompson, is spared any retribution from Stella.
+  Fact 0.113: Stella spares Holly Taylor due to Stella refusing to date Bobby.
+  Fact 0.114: Louise Foley plays Mavis.
+  Fact 0.115: Mavis is Dee Johnson's best friend.
+  Fact 0.116: Mavis is nearly framed for a crime she did not commit by the vindictive Olive Glover.
+  Fact 0.117: Brian Cook plays Carlyle.
+  Fact 0.118: Carlyle is a popular track star.
+  Fact 0.119: Carlyle chooses Dee after she gets a makeover.
+  Fact 0.120: Carlyle's choice of Dee angers Bettina Reilly in the process.
+  Fact 0.121: Laura Teige plays Bettina Reilly.
+  Fact 0.122: Bettina Reilly is one of Flora's twin granddaughters.
+  Fact 0.123: Bettina Reilly wants to be with Carlyle.
+  Fact 0.124: Bettina Reilly is jealous when Carlyle chooses Dee over her.
+  Fact 0.125: Bettina Reilly tends to be as snotty as her grandmother.
+  Fact 0.126: Jan Teige plays Edwina Reilly.
+  Fact 0.127: Edwina Reilly is Bettina's twin sister.
+  Fact 0.128: Edwina Reilly is just as snotty as Bettina.
+  Fact 0.129: Irene Yah-Ling Sun plays Myrna Wong.
+  Fact 0.130: Myrna Wong is a friend of Stella's.
+  Fact 0.131: Myrna Wong is a judo expert.
+  Fact 0.132: Myrna Wong is assaulted by Kirby Baker after she leads him on.
+  Fact 0.133: Myrna Wong destroys Kirby Baker and his office in retaliation.
+  Fact 0.134: Myrna Wong has Kirby Baker sent to jail for assault.
+  Fact 0.135: Tobias Anderson plays 'Cranky' Barney Crunk.
+  Fact 0.136: Barney Crunk is the town's nosy mailman.
+  Fact 0.137: Barney Crunk had the bad habit of peeking in everyone's mail.
+  Fact 0.138: Barney Crunk is caught in flagrante delicto on film with Willamae Jones.
+  Fact 0.139: Royce D. Applegate plays Dutch.
+  Fact 0.140: Dutch is one of two kidnappers who abduct Skeeter Duggan at Flora Simpson-Reilly's orders.
+  Fact 0.141: J.J. Barry plays Tex.
+  Fact 0.142: Tex is the mastermind of the kidnap plot to get Skeeter Duggan out of the way.
+  Fact 0.143: The kidnap plot lets Flora Simpson-Reilly and her friends commit election fraud.
+  Fact 0.144: Tex is arrested.
+  Fact 0.145: Dutch is arrested.
+  Fact 0.146: Tex and Dutch rat out Flora and her friends on their scheme.
+  Fact 0.147: Pitt Herbert plays Henry Reilly.
+  Fact 0.148: Henry Reilly is Flora's overly dominated husband.
+  Fact 0.149: Henry Reilly is the grandfather of Edwina and Bettina.
+  Fact 0.150: Henry Reilly is wealthy.
+  Fact 0.151: Henry Reilly is very weak-willed.
+  Fact 0.152: Henry Reilly is known for acquiescing to his wife's schemes.
+  Fact 0.153: Arlen Stuart plays Bertha Harper.
+  Fact 0.154: Bertha Harper is the wife of Otis Harper.
+  Fact 0.155: Bertha Harper gets annoyed by her husband's continual drinking.
+  Fact 0.156: Bertha Harper is terrified when her house is destroyed by pink-painted elephants.
+
+Retrieved items:
+<item 1>
+Harper Valley PTA (film)
+The film starred Barbara Eden , Nanette Fabray , Ronny Cox , Louis Nye and Susan Swift , directed by Richard Bennett , and was mainly released to drive - in
+theaters throughout the summer of 1978 . The film has a cult following in fans of the original song . The film 's promotional tagline is : `` The song was
+scandalous . The movie is hilarious ! '' Contents ( hide ) 1 Plot 2 Cast and characters 3 Production and release 3.1 Filming 3.2 Release 4 Soundtrack 5
+Television series 6 References 7 External links Plot ( edit ) Stella Johnson is a beautiful widowed single mother who lives in the town of Harper Valley , Ohio
+. She sells cosmetics door - to - door for the fictitious AngelGlo Cosmetics and is not afraid to enjoy life . Her fourteen - year - old daughter , Dee , is a
+student at Harper Valley Junior High School . After leaving school , Dee brings her mother a letter from the school 's Parent Teacher Association board , which
+is led by the pompous and snobbish Flora Simpson - Reilly .
+</item 1>
+
+<item 2>
+*Harper Valley PTA* is a 1978 American comedy inspired by Tom T. Hall’s hit song, directed by Richard Bennett and starring Barbara Eden as Stella Johnson, a
+widowed single mother. When the hypocritical PTA threatens her daughter’s schooling over Stella’s unconventional lifestyle, she exposes its members’ secrets,
+foils election fraud, and becomes PTA president. Ronny Cox and Nanette Fabray co-star. Filmed in Ohio and Los Angeles, it grossed about
+</item 2>
+
+<item 3>
+Harper Valley PTA (film)
+Harper Valley PTA ( film ) - wikipedia Harper Valley PTA ( film ) Jump to : navigation , search Harper Valley PTA Theatrical release poster Directed by Richard
+Bennett Produced by George Edwards Written by George Edwards Barry Schneider Starring Barbara Eden Nanette Fabray Ronny Cox Louis Nye Susan Swift Pat Paulsen
+Music by Nelson Riddle Cinematography Willy Kurant Edited by Michael Economou Distributed by April Fools Productions Release date May 23 , 1978 ( 1978 - 05 - 23
+) ( Midwest ) June 2 , 1978 ( 1978 - 06 - 02 ) ( Canada ) August 2 , 1978 ( 1978 - 08 - 02 ) ( Los Angeles ) January 12 , 1979 ( 1979 - 01 - 12 ) ( New York
+City ) Running time 93 minutes Country United States Language English Budget $1 million Box office $25 million ( USA ) Harper Valley PTA is a 1978 American
+comedy film inspired by the popular 1968 country song `` Harper Valley PTA '' written by Tom T. Hall and performed by country singer Jeannie C. Riley .
+</item 3>
+
+<item 4>
+Harper Valley PTA (film)
+He had a stampede of elephants , painted pink , stormed through his house , destroying it . Amzie Strickland as Shirley Thompson , a member of the PTA board who
+tends to drink a lot of gin . Though she is allied with Flora and her friends , she is one of four PTA members ( Will , Skeeter and Holly Taylor are the others
+) who are spared any retribution from Stella . She was seen as the most sympathetic of the board , as she tended to be more manipulated as opposed to being
+manipulative . It was never revealed whether or not she retained her seat on the PTA , but it is presumed that she became more sympathetic towards Stella as she
+was seen waving goodbye at Olive as she was being arrested . Bob Hastings as Skeeter Duggan , a member of the PTA board , and the town 's Notary public who is
+sympathetic to Stella . He is kidnapped by Dutch and Tex at Flora Simpson Reilly 's orders . Audrey Christie as Flora Simpson - Reilly , The movie 's main
+antagonist .
+</item 4>
+
+<item 5>
+Harper Valley PTA (film)
+The film grossed over $2 million its opening weekend , $5.8 million in its first three weeks and over $16 million after twelve weeks . The film opened in Los
+Angeles on August 2 , 1978 and in New York City on January 12 , 1979 . Soundtrack ( edit ) Harper Valley PTA : Original Soundtrack Recording Soundtrack album by
+various artists Released June 1978 Recorded Singleton Sound Studios Nashville , Tennessee Genre Soundtrack Length 29 : 50 Label Plantation Records Producer
+Shelby S. Singleton , Jr . Singles from Harper Valley PTA `` Harper Valley PTA ( re-issue ) '' Released : July 1978 In June 1978 , a soundtrack album was
+released on vinyl , cassette and 8 - track tape by Plantation Records . To promote the film 's release and its soundtrack , the title song by Jeannie C. Riley
+was re-issued as a single . The album made its compact disc premiere through Varèse Sarabande on October 27 , 2017 .
+</item 5>
+
+<item 6>
+Harper Valley PTA (film)
+Barbara Eden reprised her role as Stella Johnson for the series which lasted two seasons and a total of 30 episodes were produced . References ( edit ) Jump up
+^ St. Petersburg Times Jump up ^ Milwaukee Sentinel : Elephant injures Nanette Fabray Jump up ^ Observer Reporter External links ( edit ) Harper Valley PTA on
+IMDb Harper Valley PTA at the TCM Movie Database Harper Valley PTA at AllMovie Harper Valley PTA at the American Film Institute Catalog Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Harper_Valley_PTA_(film)&oldid=818590841 '' Categories : 1978 films English - language films 1970s comedy films
+American comedy films American films American independent films Feminist films Films about revenge Films adapted into television programs Films based on songs
+Films set in Ohio Films shot in Ohio Films shot in Los Angeles 1978 soundtracks Film soundtracks Hidden categories : Articles with hAudio microformats Album
+infoboxes lacking a cover Music infoboxes with deprecated parameters Talk Contents About Wikipedia Add links This page was last edited on 4 January 2018 , at 12
+: 58 .
+</item 6>
+
+<item 7>
+Harper Valley PTA (film)
+Side 1 `` Harper Valley PTA '' -- performed by Jeannie C. Riley `` Dee 's Visit '' ( instrumental ) -- performed by Nelson Riddle `` Mr. Harper '' -- performed
+by Barbara Eden `` Alice 's Place '' ( instrumental ) -- performed by Nelson Riddle `` High School Confidential '' -- performed by Jerry Lee Lewis `` Willie Mae
+'' ( instrumental ) -- performed by Nelson Riddle Side 2 `` Harper Valley PTA '' ( instrumental ) -- performed by Nelson Riddle `` Widow Jones '' -- performed
+by Barbara Eden `` Twin Tune '' ( instrumental ) -- performed by Nelson Riddle `` Ballad of a Teenage Queen '' -- performed by Johnny Cash `` Ice Cream Disco ''
+( instrumental ) -- performed by Nelson Riddle `` Whatever Happened to Charlie Brown '' -- performed by Rita Remington & Carol Channing `` Ending ( Reprise :
+Harper Valley PTA ) '' ( instrumental ) -- performed by Nelson Riddle Television series ( edit ) Main article : Harper Valley PTA ( TV series ) In 1981 , Harper
+Valley PTA was made into a television sitcom ( created by Sherwood Schwartz ) which aired on NBC from January 1981 to May 1982 .
+</item 7>
+
+<item 8>
+Harper Valley PTA (film)
+He was arrested for indecent exposure after being set up by Stella . Ron Masak as Herbie Maddox , the head bartender at Kelly 's bar , and Stella 's ally
+against Flora and her friends . He has a crush on Stella , and is one of her friends . Clint Howard as Corley , a young delivery person , who works for the
+local florist shop , who brings Stella flowers from Will . Susan Swift as Dee Johnson , Stella 's 14 - year - old daughter , who is threatened with expulsion
+from school if her mother does n't conform to the way the PTA wants her to behave . She has a hand in assisting her mother and Alice with one of their revenge
+schemes . She loses her braces , gets a makeover , and ends up with a boyfriend , Carlyle . Pat Paulsen as Otis Harper , the descendant of the founding family
+of Harper Valley . A PTA member who is allied with Flora and her friends . Has a tendency to drink all the time , which annoys his wife , Bertha . He had a
+stampede of elephants , painted pink , stormed through his house , destroying it .
+</item 8>
+
+<item 9>
+Harper Valley PTA (film)
+She is terrified when her house is destroyed by pink - painted elephants . Production and release ( edit ) Filming ( edit ) Harper Valley PTA was filmed in
+twenty - seven days from October 3 , 1977 to December 8 , 1977 . It was filmed on location for one week in the town of Lebanon , Ohio and then continued in Los
+Angeles , California . The track meet scene was filmed at Simi Valley High School On October 31 , 1977 , production ceased temporarily when Nanette Fabray was
+knocked to the ground by a spooked elephant while shooting a scene involving pink elephants in the Hancock Park neighborhood of Los Angeles , California ; she
+suffered a severe concussion , bruises and back sprains and was taken to Cedars - Sinai Medical Center where her condition was reported as serious but stable .
+Following her recovery , filming resumed on November 30 . Release ( edit ) Harper Valley PTA opened in six theaters in Lebanon , Cincinnati and Dayton , Ohio on
+May 23 , 1978 in accordance with executive producer Phil Borack 's plan to release the film first in smaller markets , where regional success could encourage
+exhibitors in bigger cities to book the film .
+</item 9>
+
+<item 10>
+Harper Valley PTA (film)
+Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use
+and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 10>
+=== END ITEM id=1fcb77dc76521ff7 ===

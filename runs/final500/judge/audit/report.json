@@ -1,0 +1,150 @@
+{
+ "overall": {
+  "n": 200,
+  "agree": 196,
+  "agreement": 0.98,
+  "kappa": 0.96,
+  "haiku_found_opus_found": 101,
+  "haiku_found_opus_not": 0,
+  "haiku_not_opus_found": 4,
+  "haiku_not_opus_not": 95
+ },
+ "by_dataset": {
+  "hotpotqa": {
+   "n": 67,
+   "agree": 66,
+   "agreement": 0.985,
+   "kappa": 0.97,
+   "haiku_found_opus_found": 34,
+   "haiku_found_opus_not": 0,
+   "haiku_not_opus_found": 1,
+   "haiku_not_opus_not": 32
+  },
+  "multihop_rag": {
+   "n": 67,
+   "agree": 67,
+   "agreement": 1.0,
+   "kappa": 1.0,
+   "haiku_found_opus_found": 34,
+   "haiku_found_opus_not": 0,
+   "haiku_not_opus_found": 0,
+   "haiku_not_opus_not": 33
+  },
+  "natural_questions": {
+   "n": 66,
+   "agree": 63,
+   "agreement": 0.955,
+   "kappa": 0.909,
+   "haiku_found_opus_found": 33,
+   "haiku_found_opus_not": 0,
+   "haiku_not_opus_found": 3,
+   "haiku_not_opus_not": 30
+  }
+ },
+ "by_method": {
+  "graphrag": {
+   "n": 48,
+   "agree": 48,
+   "agreement": 1.0,
+   "kappa": 1.0,
+   "haiku_found_opus_found": 24,
+   "haiku_found_opus_not": 0,
+   "haiku_not_opus_found": 0,
+   "haiku_not_opus_not": 24
+  },
+  "hipporag": {
+   "n": 48,
+   "agree": 47,
+   "agreement": 0.979,
+   "kappa": 0.958,
+   "haiku_found_opus_found": 24,
+   "haiku_found_opus_not": 0,
+   "haiku_not_opus_found": 1,
+   "haiku_not_opus_not": 23
+  },
+  "rag": {
+   "n": 54,
+   "agree": 52,
+   "agreement": 0.963,
+   "kappa": 0.926,
+   "haiku_found_opus_found": 27,
+   "haiku_found_opus_not": 0,
+   "haiku_not_opus_found": 2,
+   "haiku_not_opus_not": 25
+  },
+  "raptor": {
+   "n": 50,
+   "agree": 49,
+   "agreement": 0.98,
+   "kappa": 0.96,
+   "haiku_found_opus_found": 26,
+   "haiku_found_opus_not": 0,
+   "haiku_not_opus_found": 1,
+   "haiku_not_opus_not": 23
+  }
+ },
+ "disagreements": [
+  {
+   "id": "a078-6e40b089c813d766",
+   "dataset": "hotpotqa",
+   "method": "rag",
+   "fact": "1.1",
+   "gold": "Chowder was created by C. H. Greenblatt",
+   "haiku_found": false,
+   "haiku_status": "stated",
+   "opus_found": true,
+   "opus_status": "stated",
+   "haiku_quotes": [
+    "Chowder is an American animated television series created by C. H. Greenblatt for Cartoon Network."
+   ],
+   "opus_quotes": [
+    "Chowder is an American animated television series created by C. H. Greenblatt for Cartoon Network."
+   ]
+  },
+  {
+   "id": "a150-650566f46dc0626c",
+   "dataset": "natural_questions",
+   "method": "rag",
+   "fact": "0.1",
+   "gold": "'Can't Get You Out of My Head' is recorded by Australian singer Kylie Minogue.",
+   "haiku_found": false,
+   "haiku_status": "missing",
+   "opus_found": true,
+   "opus_status": "stated",
+   "haiku_quotes": [],
+   "opus_quotes": [
+    "It also topped the charts of Minogue 's native country Australia , Canada and New Zealand . In the United States , the song peaked at number seven on the US Billboard Hot 100 chart , becoming Minogue 's biggest hit in the region"
+   ]
+  },
+  {
+   "id": "a165-a057620d4a3b7ef1",
+   "dataset": "natural_questions",
+   "method": "raptor",
+   "fact": "0.220",
+   "gold": "Washington's drinking age was 21 from after Prohibition onward.",
+   "haiku_found": false,
+   "haiku_status": "missing",
+   "opus_found": true,
+   "opus_status": "stated",
+   "haiku_quotes": [],
+   "opus_quotes": [
+    "Washington `` Age of majority '' since 1877 21 21 21 21"
+   ]
+  },
+  {
+   "id": "a176-d2f6521da5f57b8c",
+   "dataset": "natural_questions",
+   "method": "hipporag",
+   "fact": "0.150",
+   "gold": "Eaton sets a test lap.",
+   "haiku_found": false,
+   "haiku_status": "missing",
+   "opus_found": true,
+   "opus_status": "stated",
+   "haiku_quotes": [],
+   "opus_quotes": [
+    "before Eaton takes it round the track setting a fast time"
+   ]
+  }
+ ]
+}

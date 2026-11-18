@@ -1,0 +1,34 @@
+[
+  {
+    "id": "cbd686d31814c10f",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 3, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 3, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 8, "quote": "When registering your new Caesars Sportsbook account, enter the bonus code NEWS1000"},
+          {"item": 8, "quote": "Place a first bet within 30 days and if it loses, receive back the equivalent amount in the form of a Bonus Bet worth up to $1,000"}
+        ]
+      }
+    ]
+  }
+]

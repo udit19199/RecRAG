@@ -1,0 +1,46 @@
+[
+ {"id": "multihop-rag-446", "sentences": [
+   ["Altman's exit is indeed shocking", "Altman has been the face of generative AI technology", "Arun Chandrasekaran, a Gartner analyst, said this"],
+   ["Altman has been telling investors that he is planning to launch a new venture", "The Information is the source of this report"],
+   ["The prevailing theory is based on the board's language", "The prevailing theory is based on the way giant tech companies work", "The prevailing theory is floating around right now"]
+ ]},
+ {"id": "multihop-rag-304", "sentences": [
+   ["The stores' usual hours of operation are from 6am to 9pm", "The stores' opening and closing times on the holiday vary based on location"],
+   ["Thanksgiving is celebrated every year", "Thanksgiving is celebrated on the fourth Thursday of the month", "Thanksgiving falls on 23 November this year"]
+ ]},
+ {"id": "5ae1412a55429920d523434c", "sentences": [
+   ["In the middle of 1984, a Brazilian company called Prológica brought a new equipment to the Brazilian market", "Prológica made its own versions of 8 bits US computers", "The new equipment was for Prológica's personal computer series", "The new equipment was called \"CP\"", "CP is short for Personal Computer in Portuguese"],
+   ["The Atari ST is a line of home computers from Atari Corporation", "The Atari ST is the successor to the Atari 8-bit family"],
+   ["The Atari ST is the first personal computer to come with a bitmapped color GUI", "The Atari ST's bitmapped color GUI uses a version of Digital Research's GEM", "The version of Digital Research's GEM used by the Atari ST was released in February 1985"]
+ ]},
+ {"id": "-5202826780373179694", "sentences": [
+   ["Before 1940, 'jeep' had been used as U.S. Army slang for new recruits or vehicles", "The World War II 'jeep' that went into production in 1941 specifically tied the name to a light military 4x4", "The World War II jeep arguably made these vehicles the oldest four-wheel drive mass-production vehicles now known as SUVs", "The Jeep became the primary light four-wheel-drive vehicle of the United States Army during World War II", "The Jeep became the primary light four-wheel-drive vehicle of the Allies during World War II", "The Jeep was the primary light four-wheel-drive vehicle of the United States Army and the Allies in the postwar period", "The term 'jeep' became common worldwide in the wake of the war", "Doug Stewart noted that the spartan, cramped, and unstintingly functional jeep became the ubiquitous World War II four-wheeled personification of Yankee ingenuity and cocky, can-do determination"],
+   ["At least two Jeep models, the CJ-5 and the SJ Wagoneer, enjoyed extraordinary three-decade production runs", "The CJ-5 and the SJ Wagoneer each had a production run of a single body generation", "Jeeps have inspired a number of other light utility vehicles since the war, such as the Land Rover", "Many Jeep variants serving similar military and civilian roles have since been designed in other nations", "In lowercase, the term 'jeep' continues to be used as a generic term", "The generic term 'jeep' refers to vehicles inspired by the Jeep that are suitable for use on rough terrain"],
+   ["Jeep's current product range consists solely of sport utility vehicles and off-road vehicles", "Jeep's product range has also included pickup trucks in the past", "Some of Jeep's vehicles, such as the Grand Cherokee and the Wagoneer, reach into the luxury segment", "Jeep sold 1.4 million SUVs globally in 2016", "Jeep sold 500,000 SUVs globally in 2008", "Two-thirds of the 1.4 million SUVs Jeep sold globally in 2016 were sold in North America", "Jeep was Fiat-Chrysler's best selling brand in the U.S. during the first half of 2017", "In the U.S. alone, over 2400 dealerships hold franchise rights to sell Jeep-branded vehicles", "If Jeep were spun off into a separate company, it is estimated to be worth between $22 and $33.5 billion", "That estimated value is slightly more than all of FCA (US)"]
+ ]},
+ {"id": "5ab6f0c25542995eadef00ea", "sentences": [
+   ["Buried Country is a highly regarded documentary film", "Buried Country is a highly regarded book", "Buried Country is a highly regarded soundtrack album", "Buried Country is now also a stageshow"],
+   ["South of the Border is a documentary film", "South of the Border is American", "South of the Border is from 2009", "South of the Border was directed by Oliver Stone"]
+ ]},
+ {"id": "multihop-rag-2279", "sentences": [
+   ["Google's public documentation says Google uses three categories to rank results that are local to a searcher", "The three categories are relevance, distance, and prominence"],
+   ["The last roundup reported that Google spent $26.3 billion in 2021 making Google the default search engine across platforms", "The last roundup reported that Google tried to have Chrome preinstalled on iPhones"],
+   ["A case was filed by Arkansas-based publisher Helena World Chronicle", "The case argues that Google \"siphons off\" news publishers' content", "The case argues that Google siphons off news publishers' readers", "The case argues that Google siphons off news publishers' ad revenue", "The case argues that Google does this through anticompetitive means"]
+ ]},
+ {"id": "5a761e855542994ccc9186e0", "sentences": [
+   ["Catcha Lake is a Canadian lake", "Catcha Lake is located in the central part of Nova Scotia's Halifax Regional Municipality"],
+   ["The Hedley Mascot Mine was a gold mine", "The Hedley Mascot Mine was in Hedley, British Columbia, Canada"]
+ ]},
+ {"id": "6821570137676147296", "sentences": [
+   ["Mount Baker-Snoqualmie National Forest is in the North Cascades range of Washington", "Nooksack Falls is in the North Cascades range of Washington", "Deer hunting scenes are associated with Mount Baker-Snoqualmie National Forest", "Deer hunting scenes are associated with Nooksack Falls"],
+   ["St. Theodosius Russian Orthodox Cathedral is in the Tremont neighborhood of Cleveland, Ohio", "The name plaque of St. Theodosius Russian Orthodox Cathedral is clearly visible in one scene", "Lemko Hall is in Cleveland, Ohio", "Lemko Hall is also located in Tremont", "The wedding banquet was filmed at Lemko Hall", "The name of Lemko Hall is clearly visible in one scene", "U.S. Steel Central Furnaces are in Cleveland, Ohio", "Opening sequence steel mill scenes are at U.S. Steel Central Furnaces", "Patpong, Bangkok, Thailand is the area used to represent Saigon's red light district", "Sai Yok is a location in Kanchanaburi Province, Thailand", "Mount Baker-Snoqualmie National Forest is in the North Cascades range of Washington", "Nooksack Falls is in the North Cascades range of Washington", "Deer hunting scenes are associated with Mount Baker-Snoqualmie National Forest", "Deer hunting scenes are associated with Nooksack Falls", "Steubenville, Ohio is a location used for some mill and neighborhood shots", "Struthers, Ohio is a location used for external house and long-range road shots", "The town's bowling alley is the Bowladrome Lanes", "The Bowladrome Lanes are located at 56 State Street, Struthers, Ohio", "Weirton, West Virginia is a location used for mill and trailer shots", "River Kwai, Thailand is the location of the prison camp and initial Russian roulette scene"]
+ ]},
+ {"id": "5350383719875421584", "sentences": [
+   ["Bo, played by Seann William Scott, is a cousin", "Luke, played by Johnny Knoxville, is a cousin", "Daisy Duke, played by Jessica Simpson, is a cousin", "Bo, Luke, and Daisy Duke run a moonshine business", "Bo, Luke, and Daisy Duke run the moonshine business for their Uncle Jesse", "Uncle Jesse, played by Willie Nelson, is their uncle", "The moonshine business is in Hazzard County, Georgia", "The cousins' primary mode of transportation is an orange 1969 Dodge Charger", "The boys affectionately refer to the orange 1969 Dodge Charger as the 'General Lee'", "The family is tormented by corrupt Hazzard County Commissioner Jefferson Davis Hogg", "Jefferson Davis Hogg is widely known as 'Boss Hogg'", "Boss Hogg is played by Burt Reynolds", "Boss Hogg has a willing but dimwitted henchman, Sheriff Rosco P. Coltrane", "Sheriff Rosco P. Coltrane is played by M.C. Gainey", "Sheriff Rosco P. Coltrane is willing but dimwitted"],
+   ["Jessica Simpson plays Daisy Duke"]
+ ]},
+ {"id": "5ac079e9554299294b218fff", "sentences": [
+   ["Rosyth Dockyard is a large naval dockyard", "Rosyth Dockyard is on the Firth of Forth", "Rosyth Dockyard is at Rosyth, Fife, Scotland", "Rosyth Dockyard is owned by Babcock Marine", "Rosyth Dockyard formerly undertook refitting of Royal Navy surface vessels", "Rosyth Dockyard formerly undertook refitting of Royal Navy submarines"],
+   ["The Queen Elizabeth class is a class of two aircraft carriers", "The Queen Elizabeth class aircraft carriers belong to the United Kingdom's Royal Navy"]
+ ]}
+]

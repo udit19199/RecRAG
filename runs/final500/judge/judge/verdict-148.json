@@ -1,0 +1,55 @@
+[
+  {"id": "fda816f61f059f7b", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "After successful clinical trials , the FDA approved the drug in 2019 as a medication for treatment-resistant depression."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "If it worked with the fish, they might then be able to figure out how the diet effects behavior and improve the effectiveness of the treatment for humans."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "If it worked with the fish, they might then be able to figure out how the diet effects behavior and improve the effectiveness of the treatment for humans."}]}
+  ]},
+  {"id": "4e65b3876eb9dab2", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "“I’m here until the end,” she said in her press conference on Friday."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "4a2d225e7d348263", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "as Alvaro Barreal's 78th-minute goal is enough to secure victory for FC Cincinnati."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "as Alvaro Barreal's 78th-minute goal is enough to secure victory for FC Cincinnati."}, {"item": 4, "quote": "In the process, Inter Miami are officially OUT of the MLS playoff race"}]},
+    {"fact": "1.2", "status": "contradicted", "evidence": [{"item": 4, "quote": "as tonight's defeat coupled with CF Montreal's 4-0 victory over Portland"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]}
+  ]},
+  {"id": "0c8a2340c6f18c41", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "3.0", "status": "stated", "evidence": [{"item": 4, "quote": "“all of that, all of it, was built on lies,” Rehn declared to the jury."}, {"item": 4, "quote": "how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to political candidates, and finance risky bets."}]},
+    {"fact": "3.1", "status": "missing", "evidence": []},
+    {"fact": "3.2", "status": "missing", "evidence": []},
+    {"fact": "3.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "858040ae4e796e31", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Before we go into some of these tidbits"}, {"item": 7, "quote": "Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company."}]},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "He hoped to make Google and Apple’s services so connected as to be inseparable."}]},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 8, "quote": "Bellshaw pulled up a message exchange in 2021 where Pichai asked for history to be turned off in a group chat."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "ultimately keeps users in Google’s “walled garden” as it “plagiarizes” their content."}, {"item": 6, "quote": "The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,"}]}
+  ]}
+]

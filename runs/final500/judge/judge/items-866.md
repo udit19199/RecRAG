@@ -1,0 +1,742 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=14aea0c3b31d15c3 ===
+Gold sentences and facts:
+Sentence 0: The Ming dynasty also engaged in a thriving trade with both Europe and Japan . The amount of silver flowing into the Ming dynasty was estimated by Joseph Needham at 300 million taels , which is equivalent to more than 190 billion dollars in today 's money . In addition to silver , the Ming also imported many European firearms , in order to ensure the modernness of their weapons .
+  Fact 0.0: The Ming dynasty engaged in a thriving trade with both Europe and Japan.
+  Fact 0.1: Joseph Needham estimated the amount of silver flowing into the Ming dynasty at 300 million taels.
+  Fact 0.2: 300 million taels is equivalent to more than 190 billion dollars in today's money.
+  Fact 0.3: In addition to silver, the Ming dynasty imported many European firearms.
+  Fact 0.4: The Ming dynasty imported European firearms in order to ensure the modernness of their weapons.
+
+Retrieved items:
+<item 1>
+Economy of the Ming dynasty
+A new class of wage laborers sprung up where none had existed before . In Jingde alone , it was reported that there were no less than 300 pottery factories ,
+all operated by wage laborers . Early encouragement of agriculture under Hongwu ( edit ) In order to recover from rule of the Mongols and the wars that followed
+them , the Hongwu Emperor enacted pro-agricultural policies . The state invested extensively in agricultural canals , reduced taxes on agriculture to 1 / 30 of
+the output , and later to 1.5 % of agricultural output . Ming farmers also introduced many innovations such as water - powered plows , and new agricultural
+methods such as crop rotation . This led to a massive agricultural surplus that became the basis of a market economy . Emergence of commercial plantations (
+edit ) The Ming saw the rise of commercial plantations who produced crops suitable to their regions . Tea , fruits , paint and other goods were produced on a
+massive scale by these agricultural plantations . Regional patterns of production established during this period continued into the Qing dynasty . The Columbian
+exchange brought crops such as corn with these foreign crops .
+</item 1>
+
+<item 2>
+Economy of the Ming dynasty
+Believing that agriculture was the basis of the economy , Hongwu favored that industry over all else , including that of merchants . After his death , most of
+his policies were reversed by his successors . By the late Ming , the state was losing power to the very merchants which Hongwu had wanted to restrict . The
+Ming dynasty also engaged in a thriving trade with both Europe and Japan . The amount of silver flowing into the Ming dynasty was estimated by Joseph Needham at
+300 million taels , which is equivalent to more than 190 billion dollars in today 's money . In addition to silver , the Ming also imported many European
+firearms , in order to ensure the modernness of their weapons . Trade and commerce thrived in this liberalized economy , and was aided by the construction of
+canals , roads , and bridges by the Ming government . The Ming saw the rise of several merchant clans such as the Huai and Jin clans , who disposed of large
+amounts of wealth . The gentry and merchant classes started to fuse , and the merchants gained power at the expense of the state . Some merchants were reputed
+to have a treasure of 30 million taels .
+</item 2>
+
+<item 3>
+Economy of the Ming dynasty
+However , a second silver contraction occurred in the mid-17th century when King Philip IV began enforcing laws limiting direct trade between Spanish South
+America and China at about the same time the new Tokugawa shogunate in Japan restricted most of its foreign exports , cutting off Dutch and Portuguese access to
+its silver . The dramatic spike in silver 's value in China made payment of taxes nearly impossible for most provinces . In extremis , the government even
+resumed use of paper currency amid Li Zicheng 's rebellion . Manufactures ( edit ) Privatization ( edit ) Another key feature of the Ming manufacturing industry
+was privatization . Unlike the Song , in which state - owned enterprises played a large role , the Ming reverted to the old laissez faire policies of the Han by
+privatizing the salt and tea industries . By the middle of the Ming dynasty , powerful groups of wealthy merchants had replaced the state as the dominant movers
+behind Chinese industry . Emergence of wage labor ( edit ) The Ming government abolished the mandatory forced labor by peasants used in early dynasties and
+replaced it with wage labor . A new class of wage laborers sprung up where none had existed before .
+</item 3>
+
+<item 4>
+Economy of the Ming dynasty
+( eds . ) , The Ming Dynasty , 1 398 -- 1644 , Part 2 , The Cambridge History of China , 8 , Cambridge : Cambridge University Press , pp. 106 -- 172 , ISBN 978
+- 0 - 521 - 24333 - 9 CS1 maint : Uses editors parameter ( link ) External links ( edit ) China 's GDP in the Ming Dynasty Guan Hanhui David Daokui Li Ming
+dynasty topics History Early ( 1368 -- 1435 ) Red Turban Rebellion Ming conquest of Yunnan Ming - Mong Mao War Ming campaign against the Uriankhai Battle of
+Buir Lake Ming -- Mong Mao Intervention Jingnan Campaign Ming treasure voyages Ming -- Turpan conflict Ming -- Hồ War Battle of Kherlen Ming -- Kotte War Lam
+Sơn uprising Yongle Emperor 's campaigns against the Mongols Rule of Ren and Xuan Middle ( 1435 -- 1572 ) Luchuan -- Pingmian campaigns Tumu Crisis Rebellion of
+Cao Qin Miao Rebellions Prince of Anhua rebellion Prince of Ning rebellion Malayan -- Portuguese war Japanese missions to Ming China Ningbo Incident Great Rites
+Controversy
+</item 4>
+
+<item 5>
+Economy of the Ming dynasty
+rebellion Malayan -- Portuguese war Japanese missions to Ming China Ningbo Incident Great Rites Controversy Renyin Plot Jiajing wokou raids Single whip law Late
+( 1572 -- 1683 ) Bozhou rebellion Ordos Campaign Japanese invasions of Korea Donglin movement Sino - Dutch conflicts She - An Rebellion Battle of Beijing Qing
+conquest of the Ming Battle of Shanhai Pass Southern Ming Government Emperor List Family tree Grand Secretariat Eastern Depot Imperial Clan Court Imperial
+Commissioner Grand coordinator Jinyiwei Tusi Military Military conquests of the Ming dynasty Nine Garrisons of the Ming dynasty Shenjiying Gunpowder weapons in
+the Ming dynasty Army of the Ming dynasty Special regions Yunnan under Ming rule Fourth Chinese domination of Vietnam Manchuria under Ming rule Compilations &
+Documents History of Yuan The Hundred - word Eulogy Huang - Ming Zuxun Yongle Encyclopedia Collected Statutes of the Ming Dynasty Ming Shilu Luso - Chinese
+agreement ( 1554 ) Palaces and Mausoleums Forbidden City Chaotian Palace Ming Xiaoling Mausoleum Ming Ancestors Mausoleum Ming tombs Imperial Tombs of the Ming
+and Qing Dynasties Society & Culture Ming poetry Ming
+</item 5>
+
+<item 6>
+Economy of the Ming dynasty
+Many of these markets appeared in the rural countryside , where goods were exchanged and bartered . A second type of market that developed in China was the
+urban - rural type , in which rural goods were sold to urban dwellers . This was particular the case when landlords decided to reside in the cities , and use
+income coming from rural land holding to facilitate exchange in the cities . Another way this type of market was used was professional merchants who bought
+rural goods in large quantities . The third type of market was the `` national market '' which was developed during the Song dynasty but particularly enhanced
+during the Ming . This market involved not only the exchange described above , but also products produced directly for the market . Unlike earlier dynasties ,
+many Ming peasants were no longer producing only products they needed ; many of them produced products for the market , which then they sold at a profit . Trade
+and investment ( edit ) Main article : Haijin In the early Ming , after the devastation of the war which expelled the Mongols , the Hongwu Emperor imposed
+severe restrictions on trade ( the `` haijin '' ) .
+</item 6>
+
+<item 7>
+Economy of the Ming dynasty
+The entire foreign trade , which was estimated at up to 300 million taels , provided the Ming with a tax of only about 40,000 taels a year . When the Wanli
+Emperor sought to increase the salt tax , his measures were opposed by violence and the eunuchs he sent to collect the tax were beheaded by local officials .
+Sprouts of capitalism ( edit ) Investment and capital moved off the land and were poured into ventures . Continuing the trend from the Song , Ming investors
+poured large amounts of capital into ventures and reaped high profits . Many Chinese scholars believe the Ming was the dynasty in which the `` sprouts of
+capitalism '' emerged in China , only to be suppressed by the Qing Dynastry . This theory was widely promoted by Communist scholars during the Maoist period ,
+and suffers from that period 's general condemnation of the Manchu Qing , who were accused of mis - managing the Chinese state in the face of foreign
+encroachment .
+</item 7>
+
+<item 8>
+Economy of the Ming dynasty
+These privately made `` sycee '' first came into use in Guangdong , spreading to the lower Yangtze sometime before 1423 , the year it became acceptable for
+payment of tax obligations . In the mid-15th century , the paucity of circulating silver caused a monetary contraction and extensive reversion to barter . The
+problem was met through smuggled , then legal , importation of Japanese silver ( mostly through the Portuguese and Dutch ) and Spanish silver from Potosí
+carried on the Manila galleons . Provincial taxes were required to be paid in silver in 1465 ; the salt tax , in 1475 ; and corvée exemptions , in 1485 . By the
+late Ming , the amount of silver being used was extraordinary : at a time when English traders considered tens of thousands of pounds an exceptional fortune ,
+the Zheng clan of merchants regularly engaged in transactions valued at millions of taels .
+</item 8>
+
+<item 9>
+Economy of the Ming dynasty
+Economy of the Ming dynasty - wikipedia Economy of the Ming dynasty Jump to : navigation , search This article needs additional citations for verification .
+Please help improve this article by adding citations to reliable sources . Unsourced material may be challenged and removed . ( October 2010 ) ( Learn how and
+when to remove this template message ) The Ming Empire around 1580 The economy of the Ming dynasty ( 1368 -- 1644 ) of China was the largest in the world during
+that period . It is regarded as one of China 's three golden ages ( the other two being the Han and Song periods ) . The period was marked by the increasing
+political influence of the merchants , the gradual weakening of imperial rule , and technological advances .
+</item 9>
+
+<item 10>
+Economy of the Ming dynasty
+The Columbian exchange brought crops such as corn with these foreign crops . During the Ming , specialized areas also popped up planting large numbers of cash
+crops that could be sold at markets . Large numbers of peasants abandoned the land to become artisans . The population of the Ming boomed ; estimates for the
+population of the Ming range from 160 to 200 million . Rural markets during the Ming ( edit ) Ming agriculture was much changed from the earlier areas ; firstly
+, gigantic areas , devoting and specializing in cash crops , sprung up to demand from the new market economy . Secondly , agricultural tools and carts , some
+water - powered , help to create a gigantic agricultural surplus which formed the basis of the rural economy . Besides rice , other crops were grown on a large
+scale . Although images of autarkic farmers who had no connection to the rest of China may have some merit for the earlier Han and T'ang dynasties , this was
+certainly not the case for the Ming dynasty . During the Ming dynasty , the increase in population and the decrease in quality land made it necessary that
+farmers make a living off cash crops .
+</item 10>
+=== END ITEM id=14aea0c3b31d15c3 ===
+
+=== ITEM id=344c6d1b4e7f1fb9 ===
+Gold sentences and facts:
+Sentence 0: The film is based loosely on Eminem 's actual upbringing , and follows white rapper B - Rabbit ( Eminem ) and his attempt to launch a career in a genre dominated by African - Americans . The title is derived from 8 Mile Road , the highway between the predominantly black city of Detroit and Wayne County and the predominantly White Oakland County and Macomb County suburbs . It was filmed mostly on location .
+  Fact 0.0: The film is based loosely on Eminem's actual upbringing.
+  Fact 0.1: The film follows white rapper B-Rabbit (Eminem).
+  Fact 0.2: B-Rabbit (Eminem) attempts to launch a career in a genre dominated by African-Americans.
+  Fact 0.3: The title of the film is derived from 8 Mile Road.
+  Fact 0.4: 8 Mile Road is the highway between the predominantly black city of Detroit and Wayne County.
+  Fact 0.5: 8 Mile Road is the highway between the predominantly White Oakland County and Macomb County suburbs.
+  Fact 0.6: The film was filmed mostly on location.
+
+Retrieved items:
+<item 1>
+8 Mile (film)
+8 Mile ( film ) - wikipedia 8 Mile ( film ) Jump to : navigation , search 8 Mile Theatrical release poster Directed by Curtis Hanson Produced by Curtis Hanson
+Brian Grazer Jimmy Iovine Written by Scott Silver Starring Eminem Kim Basinger Brittany Murphy Mekhi Phifer Music by Eminem Cinematography Rodrigo Prieto Edited
+by Jay Rabinowitz Production company Imagine Entertainment Distributed by Universal Pictures Release date November 8 , 2002 ( 2002 - 11 - 08 ) Running time 110
+minutes Country United States Language English Budget $41 million Box office $242.9 million 8 Mile is a 2002 American hip hop drama film written by Scott Silver
+, directed by Curtis Hanson , and starring Eminem , Mekhi Phifer , Brittany Murphy , Michael Shannon , and Kim Basinger . The film is based loosely on Eminem 's
+actual upbringing , and follows white rapper B - Rabbit ( Eminem ) and his attempt to launch a career in a genre dominated by African - Americans .
+</item 1>
+
+<item 2>
+8 Mile (film)
+The title is derived from 8 Mile Road , the highway between the predominantly black city of Detroit and Wayne County and the predominantly White Oakland County
+and Macomb County suburbs . It was filmed mostly on location . 8 Mile was a critical and commercial success . Eminem won the Academy Award for Best Original
+Song for `` Lose Yourself . '' Contents ( hide ) 1 Plot 2 Cast 3 Music 4 Reception 4.1 Box office 4.2 Critical reception 4.3 Top lists 4.4 Awards and honors 5
+References 6 External links Plot ( edit ) In 1995 in Detroit , Jimmy `` B - Rabbit '' Smith Jr. is a blue - collar worker from a poor family . He has moved back
+north of 8 Mile Road to the run - down trailer home in Warren , Michigan of his alcoholic mother Stephanie , his little sister Lily , and Stephanie 's abusive
+live - in boyfriend Greg . Although encouraged by his friends , Jimmy worries about his potential as a rapper . He falters during a rap battle one night at a
+local venue , the Shelter , and he leaves the stage humiliated . Jimmy works at a car factory .
+</item 2>
+
+<item 3>
+8 Mile (film)
+Ronnie Specter , Matiki Anoff MTV Movie Awards Best Movie Nominated 8 Mile Best Male Performance Won Eminem Breakthrough Male Performance Won Eminem Online Film
+Critics Society Awards Best Breakthrough Performance Nominated Eminem Phoenix Film Critics Society Awards Best Original Song -- Lose Yourself Nominated Eminem
+Satellite Awards Best Original Song -- Lose Yourself Nominated Eminem Teen Choice Awards Choice Movie : Drama Nominated 8 Mile Choice Movie Actor : Drama Won
+Eminem Choice Movie : Male Breakout Star Won Eminem Choice Crossover Artist Nominated Eminem Choice Movie : Liplock Nominated Eminem and Brittany Murphy World
+Soundtrack Awards Best Original Song Written for a Film -- Lose Yourself Nominated Eminem ASCAP Awards Most Performed Song from a Motion Picture -- Lose
+Yourself Won Eminem Grammy Award Grammy Award for Record of the Year -- Lose Yourself Nominated Eminem Grammy Award for Song of the Year -- Lose Yourself
+Nominated Jeff Bass , Eminem & Luis Resto Grammy Award for Best Rap Song -- Lose Yourself Won Jeff Bass , Eminem & Luis Resto Grammy Award for Best Male Rap
+Solo Performance -- Lose Yourself Won Eminem Grammy Award for Best Song Written for Visual Media -- Lose Yourself Nominated Jeff Bass ,
+</item 3>
+
+<item 4>
+8 Mile (film)
+American Film Institute . Retrieved 2016 - 08 - 14 . Jump up ^ `` AFI 's 100 Years ... 100 Cheers Nominees '' ( PDF ) . Retrieved 2016 - 08 - 14 . External
+links ( edit ) Detroit portal Film portal 2000s portal Hip hop portal Eminem portal Wikiquote has quotations related to : 8 Mile Official website 8 Mile on IMDb
+8 Mile at AllMovie 8 Mile at Box Office Mojo 8 Mile at Rotten Tomatoes 8 Mile at Metacritic Films directed by Curtis Hanson Sweet Kill ( 1973 ) The Little
+Dragons ( 1979 ) Losin ' It ( 1983 ) The Children of Times Square ( 1986 ) The Bedroom Window ( 1987 ) Bad Influence ( 1990 ) The Hand That Rocks the Cradle (
+1992 ) The River Wild ( 1994 ) L.A.
+</item 4>
+
+<item 5>
+8 Mile (film)
+He praised Hanson 's directing and the performances , and compared the final battle with Papa Doc to the fight between Rocky Balboa and Apollo Creed in Rocky .
+Top lists ( edit ) 8 Mile has been named in various year - end and all - time top lists : 2nd -- Billboard ( Erika Ramirez ) : Top 10 Best Hip - Hop Movies Ever
+7th -- The New York Observer ( Andrew Sarris ) : The 10 Best English - Language Films of 2002 9th -- Time ( Richard Schickel ) : Top 10 Movies of 2002 10th --
+Rolling Stone ( Peter Travers ) : The Best Movies of 2002 N / A -- The Daily Californian : Best Films of 2002 Awards and honors ( edit ) In 2003 , Eminem won
+the Academy Award for Best Original Song at the 75th Academy Awards , for his single `` Lose Yourself '' from the soundtrack of 8 Mile . Thus he became the
+first hip hop artist ever to win an Academy Award . He was not present at the ceremony , but musician Luis Resto accepted the award .
+</item 5>
+
+<item 6>
+8 Mile (film)
+Eminem features on five tracks from the album . It was released under the Shady / Interscope label and spawned Eminem 's first number 1 US single `` Lose
+Yourself '' . The album debuted at number one on the U.S. Billboard 200 Albums Chart that year with over 702,000 copies sold and 507,000 sold in the second week
+also finishing the year as the fifth best - selling album of 2002 with US sales of 3.2 million , despite only two months of release . It also reached # 1 on the
+UK Compilations Chart and the Australian ARIAnet Albums Chart . It also spawned a follow up soundtrack , More Music from 8 Mile , consisting of songs that
+appear in 8 Mile that were current singles during the film 's time setting of 1995 . The album was also made in a clean edition removing most of the strong
+profanity and violent content . Reception ( edit ) Box Office ( edit ) 8 Mile opened at # 1 with $51,240,555 in its opening weekend , the then second highest
+opening for an R - rated movie in the U.S.
+</item 6>
+
+<item 7>
+8 Mile (film)
+Eminem & Luis Resto The film is recognized by American Film Institute in these lists : 2004 : AFI 's 100 Years ... 100 Songs : `` Lose Yourself '' -- # 93 2006
+: AFI 's 100 Years ... 100 Cheers -- Nominated References ( edit ) Jump up ^ `` 8 Mile '' . British Board of Film Classification . Retrieved 2012 - 01 - 29 . ^
+Jump up to : 8 Mile at Box Office Mojo Jump up ^ `` Eminem . '' Encyclopedia of Popular Music , 4th ed . Ed . Colin Larkin . Oxford Music Online . Oxford
+University Press . Web . 27 Sep. 2016 . Jump up ^ `` Eminem movie tops at US box office '' . RTÉ. 2002 - 11 - 12 . Retrieved 2011 - 10 - 06 . Jump up ^ Hettrick
+, Scott ( 2003 - 03 - 24 ) . `` ' 8 Mile ' DVD 's going far '' . Variety .
+</item 7>
+
+<item 8>
+8 Mile (film)
+Mekhi Phifer as Future , Jimmy 's closest friend and the rap battle host Brittany Murphy as Alex Latourno , Jimmy 's love interest Kim Basinger as Stephanie ,
+Jimmy and Lily 's mother Anthony Mackie as Papa Doc Michael Shannon as Greg Buehl , Stephanie 's boyfriend Eugene Byrd as Wink Evan Jones as Cheddar Bob , Jimmy
+'s friend Omar Benson Miller as Sol George , Jimmy 's friend and Iz 's brother De'Angelo Wilson as DJ Iz , Jimmy 's friend and Sol 's brother Taryn Manning as
+Janeane , Jimmy 's ex-girlfriend Proof as Lil ' Tic Xzibit as Mike ( Male Lunch Truck Rapper ) Craig Chandler as Paul Obie Trice as Male parking lot rapper
+Chloe Greenfield as Lily , Jimmy 's sister John Singleton as Bouncer Miz Korona as Vanessa ( Female Lunch Truck Rapper ) Brandon T. Jackson ( uncredited ) as a
+Chin Tiki club - foe Music ( edit ) Main article : Music from and Inspired by the Motion Picture 8 Mile Music from and Inspired by the Motion Picture 8 Mile is
+the soundtrack to 8 Mile .
+</item 8>
+
+<item 9>
+8 Mile (film)
+He said that Eminem , as an actor , is `` convincing without being too electric '' and `` survives the X-ray truth - telling of the movie camera '' In the At
+the Movies with Ebert and Roeper review , both Ebert and Richard Roeper gave the film a thumbs up ; Roeper said that Eminem has a `` winning screen presence ''
+and `` raw magic '' to him . He was happy with Rabbit 's `` tender side '' presented through his relationship with the `` adorable '' Greenfield as his sister ,
+but felt that Basinger was `` really miscast '' . Roeper said : `` 8 Mile probably wo n't win converts to rap , but it should thrill Eminem fans . '' Peter
+Travers gave the film 3.5 out of 4 stars . He said that 8 Mile `` is a real movie , not a fast - buck package to exploit the fan base of a rap nonentity '' that
+`` qualifies as a cinematic event by tapping into the roots of Eminem and the fury and feeling that inform his rap . ''
+</item 9>
+
+<item 10>
+8 Mile (film)
+In all rounds of the rap battle , Jimmy has to compete against one member of `` the Leaders . '' After winning the first two rounds , he has to challenge Papa
+Doc . He wins by exposing his opponent 's weaknesses as well as his own . With nothing to say in rebuttal , Papa Doc hands the microphone back to Future ,
+embarrassed . After being congratulated by Alex and his friends , Jimmy is offered a position by Future , hosting battles at The Shelter . Jimmy declines ,
+saying he has to get back to work and to find success his own way . Cast ( edit ) Eminem as Jimmy `` B - Rabbit '' Smith , Jr .
+</item 10>
+=== END ITEM id=344c6d1b4e7f1fb9 ===
+
+=== ITEM id=c23c4b1957ed1e10 ===
+Gold sentences and facts:
+Sentence 0: Only Mexico , Italy , France , Germany ( West Germany until shortly after the 1990 World Cup ) and Brazil have hosted the event on two occasions . Mexico City 's Estadio Azteca and Rio de Janeiro 's Maracanã are the only venues ever to have hosted two FIFA World Cup finals . Only the 2002 FIFA World Cup had more than one host , being split between Japan and South Korea .
+  Fact 0.0: Only Mexico has hosted the event on two occasions.
+  Fact 0.1: Only Italy has hosted the event on two occasions.
+  Fact 0.2: Only France has hosted the event on two occasions.
+  Fact 0.3: Only Germany has hosted the event on two occasions.
+  Fact 0.4: Only Brazil has hosted the event on two occasions.
+  Fact 0.5: Germany's hosting covers West Germany until shortly after the 1990 World Cup.
+  Fact 0.6: Mexico City's Estadio Azteca is one of the only venues ever to have hosted two FIFA World Cup finals.
+  Fact 0.7: Rio de Janeiro's Maracanã is one of the only venues ever to have hosted two FIFA World Cup finals.
+  Fact 0.8: Estadio Azteca and the Maracanã are the only venues ever to have hosted two FIFA World Cup finals.
+  Fact 0.9: Only the 2002 FIFA World Cup had more than one host.
+  Fact 0.10: The 2002 FIFA World Cup was split between Japan and South Korea.
+
+Retrieved items:
+<item 1>
+FIFA World Cup hosts
+1 Accusations of bribery 21 2026 FIFA World Cup 22 2030 FIFA World Cup 23 2034 FIFA World Cup 24 Total bids by country 25 Host country performances 26
+References 27 External links List of hosts ( edit ) Year Host Continent Winner 1930 Uruguay South America Uruguay 1934 Italy Europe Italy 1938 France Europe
+Italy 1942 Cancelled due to World War II 1946 Cancelled due to World War II 1950 Brazil South America Uruguay 1954 Switzerland Europe West Germany 1958 Sweden
+Europe Brazil 1962 Chile South America Brazil 1966 England Europe England 1970 Mexico North America Brazil West Germany Europe West Germany 1978 Argentina South
+America Argentina 1982 Spain Europe Italy 1986 Mexico North America Argentina 1990 Italy Europe West Germany 1994 United States North America Brazil 1998 France
+Europe France 2002 South Korea / Japan Asia Brazil 2006 Germany Europe Italy South Africa Africa Spain 2014 Brazil South America Germany 2018 Russia Europe 2022
+Qatar Asia 2026 TBD 2030 TBD 1930 FIFA World Cup ( edit ) Main article : 1930 FIFA World Cup Bids : Hungary Italy
+</item 1>
+
+<item 2>
+FIFA World Cup hosts
+^ Jump up to : Joint bid by Libya and Tunisia . Host country performances ( edit ) Further information : National team appearances in the FIFA World Cup It is
+widely considered that home advantage is common in the World Cup , with the host team usually performing above average . Of the eight countries that have won
+the tournament , only Brazil and Spain were not champions at home , and both England and France had their only titles as hosts . Further , Sweden got to its
+only final as hosts of the 1958 tournament , and only the Swedes and Brazilians finished as runner - up in home soil . The host country reached the semi-finals
+thirteen times in twenty tournaments , and both Chile and South Korea had their only finishes on the top four at home . Only South Africa in 2010 managed to not
+go past the group stage . # Performance Team Year Pld Win % GF GA GD GD / M GF / M Champion Uruguay 1930 0 0 100 % 15 12 3.8 Champion France 1998 7 6 0 93 % 15
+13 1.9 2.
+</item 2>
+
+<item 3>
+FIFA World Cup hosts
+Contents ( hide ) 1 List of hosts 2 1930 FIFA World Cup 3 1934 FIFA World Cup 4 1938 FIFA World Cup 5 Cancelled FIFA World Cups 1942 and 1946 6 1950 and 1954
+FIFA World Cups 6.1 1949 bid 6.2 1951 bid 7 1958 FIFA World Cup 8 1962 FIFA World Cup 9 1966 FIFA World Cup 10 1970 FIFA World Cup 11 1974 , 1978 , 1982 FIFA
+World Cups 11.1 1974 results 11.2 1978 results 11.3 1982 results 12 1986 FIFA World Cup 13 1990 FIFA World Cup 14 1994 FIFA World Cup 15 1998 FIFA World Cup 16
+2002 FIFA World Cup 17 2006 FIFA World Cup 17.1 Controversy 18 2010 FIFA World Cup 18.1 Controversy 19 2014 FIFA World Cup 20 2018 and 2022 FIFA World Cups 20.1
+Accusations of bribery 21
+</item 3>
+
+<item 4>
+FIFA World Cup hosts
+1938 Brazil 1950 Switzerland 1954 Sweden 1958 Chile 1962 England 1966 Mexico 1970 West Germany 1974 Argentina 1978 Spain 1982 Mexico 1986 Italy 1990 United
+States 1994 France 1998 South Korea / Japan 2002 Germany 2006 South Africa 2010 Brazil 2014 Russia 2018 Qatar 2022 2026 2030 2034 Qualification 1930 1934 1938
+1950 1954 1958 1962 1966 1970 1978 1982 1986 1990 1994 1998 2002 2006 2014 2018 Finals 1930 1934 1938 1950 1954 1958 1962 1966 1970 1978 1982 1986 1990 1994
+1998 2002 2006 2014 2018 Squads 1930 1934 1938 1950 1954 1958 1962 1966 1970 1978 1982 1986
+</item 4>
+
+<item 5>
+FIFA World Cup hosts
+1962 , 1966 , 1974 , 1982 , 2006 Argentina 5 1938 , 1962 , 1970 , 1978 , 2030 Mexico 1970 , 1978 , 1986 , 2002 , 2026 Morocco 1994 , 1998 , 2006 , 2010 , 2026
+Spain 1930 , 1966 , 1974 , 1982 , 2018 Brazil 1950 , 1994 , 2006 , 2014 England 1966 , 1990 , 2006 , 2018 United States 1986 , 1994 , 2022 , 2026 Italy 1930 ,
+1934 , 1990 Japan 1970 , 2002 , 2022 Canada 1986 , 2026 Chile 1962 , 2014 Colombia 1986 , 2014 France 1938 , 1998 Netherlands 1930 , 2018 Russia 1990 , 2018
+South Africa 2006 , 2010 South Korea 2002 , 2022 Switzerland 1954 ,
+</item 5>
+
+<item 6>
+FIFA World Cup hosts
+FIFA World Cup bids 1930 Hungary Italy Netherlands Spain Sweden Uruguay 1934 Italy Sweden 1938 Argentina France Germany 1942 Brazil Germany 1946 None 1950
+Brazil 1954 Switzerland 1958 Sweden 1962 Argentina Chile West Germany 1966 England West Germany Spain 1970 Argentina Mexico Italy Netherlands Spain West Germany
+1978 Argentina Mexico 1982 Spain West Germany 1986 Canada Colombia Mexico United States 1990 Austria England France Greece Italy Soviet Union West Germany
+Yugoslavia 1994 Brazil Morocco United States 1998 France Morocco Switzerland 2002 Japan -- South Korea Mexico 2006 Brazil England Germany Morocco South Africa
+Egypt Libya -- Tunisia Morocco Nigeria South Africa 2014 Brazil Colombia 2018 Belgium -- Netherlands England Portugal -- Spain Russia 2022 Australia Japan Qatar
+South Korea United States 2026 Canada -- Mexico -- United States Morocco 2030 Argentina -- Paraguay -- Uruguay England Notes : Bold entries are those chosen as
+hosts Event cancelled due to World War II Colombia withdrew after being award event , which was re-awarded to Mexico Retrieved from ``
+https://en.wikipedia.org/w/index.
+</item 6>
+
+<item 7>
+FIFA World Cup hosts
+FIFA World Cup hosts - wikipedia FIFA World Cup hosts Jump to : navigation , search Map of FIFA World Cup final hosts , 1930 -- 2014 . Dark green : twice ;
+middle green : once ; light green : planned until 2022 Sixteen countries have been FIFA World Cup hosts in the competition 's twenty tournaments since the
+inaugural World Cup in 1930 . The organization at first awarded hosting to countries at meetings of FIFA 's congress . The choice of location was controversial
+in the earliest tournaments , given the three - week boat journey between South America and Europe , the two centers of strength in football at the time . The
+decision to hold the first cup in Uruguay , for example , led to only four European nations competing . The next two World Cups were both held in Europe . The
+decision to hold the second of these , the 1938 FIFA World Cup , in France was controversial , as the South American countries had been led to understand that
+the World Cup would rotate between the two continents . Both Argentina and Uruguay thus boycotted the tournament .
+</item 7>
+
+<item 8>
+FIFA World Cup hosts
+33 1.3 12 Fourth place South Korea 2002 7 57 % 8 6 0.3 1.1 13 Fourth place Brazil 2014 7 57 % 11 14 − 3 − 0.4 1.57 14 Quarter - final Mexico 1986 5 0 80 % 6 0.8
+15 Quarter - final Mexico 1970 63 % 6 0.5 1.5 16 Quarter - final Switzerland 1954 0 50 % 11 11 0 0 2.8 17 Quarter - final France 1938 0 50 % 0 0 18 Second round
+Spain 1982 5 40 % 5 − 1 − 0.2 0.8 19 Round of 16 Japan 2002 63 % 5 0.5 1.25 20 Round of 16 United States 1994 38 % − 1 − 0.3 0.8 21 Group stage South Africa 50
+% 5 − 2 − 0.
+</item 8>
+
+<item 9>
+FIFA World Cup hosts
+( PDF ) . PricewaterhouseCoopers . May 2010 . pp. 6 -- 7 . Retrieved 2 August 2014 . Jump up ^ Smallwood , John ( 11 June 2014 ) . `` Ultimate home field
+advantage : Host nation luck '' . Philadelphia Daily News . Retrieved 2 August 2014 . External links ( edit ) FIFA World Cup Host Announcement Decision ( PDF )
+FIFA World Cup hosts 1930 : Uruguay 1934 : Italy 1938 : France 1950 : Brazil 1954 : Switzerland 1958 : Sweden 1962 : Chile 1966 : England 1970 : Mexico 1974 :
+West Germany 1978 : Argentina 1982 : Spain 1986 : Mexico 1990 : Italy 1994 : United States 1998 : France 2002 : South Korea & Japan 2006 : Germany 2010 : South
+Africa 2014 : Brazil 2018 : Russia 2022 : Qatar FIFA World Cup Tournaments Uruguay 1930 Italy 1934 France 1938 Brazil 1950 Switzerland 1954 Sweden 1958 Chile
+1962 England
+</item 9>
+
+<item 10>
+FIFA World Cup hosts
+9 2.1 Champion England 1966 6 5 0 92 % 11 8 1.3 1.8 Champion Italy 1934 5 0 90 % 12 9 1.8 2.4 5 Champion West Germany 7 6 0 86 % 13 9 1.3 1.9 6 Champion
+Argentina 1978 7 5 79 % 15 9 1.3 2.1 7 Runner - up Brazil 1950 6 75 % 22 6 16 2.7 3.7 8 Runner - up Sweden 1958 6 75 % 12 7 5 0.8 9 Third place Italy 1990 7 6 0
+93 % 10 8 1.1 1.4 10 Third place Germany 2006 7 5 79 % 14 6 8 1.1 11 Third place Chile 1962 6 0 67 % 10 8 0.33 1.
+</item 10>
+=== END ITEM id=c23c4b1957ed1e10 ===
+
+=== ITEM id=56f511adfcbce278 ===
+Gold sentences and facts:
+Sentence 0: The optic chiasm or optic chiasma ( / ɒptɪk kaɪæzəm / ; Greek χίασμα , `` crossing '' , from the Greek χιάζω ' to mark with an X ' , after the Greek letter ' Χ ' , chi ) is the part of the brain where the optic nerves partially cross . The optic chiasm is located at the bottom of the brain immediately below the hypothalamus . The optic chiasm is found in all vertebrates , although in cyclostomes ( lampreys and hagfishes ) it is located within the brain .
+  Fact 0.0: The optic chiasm is also called the optic chiasma.
+  Fact 0.1: The name optic chiasm comes from the Greek word chiasma, meaning crossing.
+  Fact 0.2: The name optic chiasm comes from the Greek word chiazo, meaning to mark with an X.
+  Fact 0.3: The name optic chiasm is after the Greek letter chi.
+  Fact 0.4: The optic chiasm is the part of the brain where the optic nerves partially cross.
+  Fact 0.5: The optic chiasm is located at the bottom of the brain.
+  Fact 0.6: The optic chiasm is located immediately below the hypothalamus.
+  Fact 0.7: The optic chiasm is found in all vertebrates.
+  Fact 0.8: In cyclostomes (lampreys and hagfishes), the optic chiasm is located within the brain.
+
+Retrieved items:
+<item 1>
+Optic chiasm
+Optic chiasm - wikipedia Optic chiasm Jump to : navigation , search For other meanings of `` chiasm '' , see Chiasm . Optic chiasma Brain viewed from below ;
+the front of the brain is above . Visual pathway with optic chiasm ( X shape ) is shown in red ( 1543 image from Andreas Vesalius ' Fabrica ) Optic nerves ,
+chiasm , and optic tracts Details Part of Visual system Identifiers Latin chiasma opticum MeSH A08. 800.800. 120.680. 600 NeuroLex ID Optic chiasm TA A14. 1.08.
+403 FMA 62045 Anatomical terms of neuroanatomy ( edit on Wikidata ) The optic chiasm or optic chiasma ( / ɒptɪk kaɪæzəm / ; Greek χίασμα , `` crossing '' , from
+the Greek χιάζω ' to mark with an X ' , after the Greek letter ' Χ ' , chi ) is the part of the brain where the optic nerves partially cross .
+</item 1>
+
+<item 2>
+Retina
+At each synaptic stage there are also laterally connecting horizontal and amacrine cells . The optic nerve is a central tract of many axons of ganglion cells
+connecting primarily to the lateral geniculate body , a visual relay station in the diencephalon ( the rear of the forebrain ) . It also projects to the
+superior colliculus , the suprachiasmatic nucleus , and the nucleus of the optic tract . It passes through the other layers , creating the optic disc in
+primates . Additional structures , not directly associated with vision , are found as outgrowths of the retina in some vertebrate groups . In birds , the pecten
+is a vascular structure of complex shape that projects from the retina into the vitreous humour ; it supplies oxygen and nutrients to the eye , and may also aid
+in vision . Reptiles have a similar , but much simpler , structure . In adult humans , the entire retina is approximately 72 % of a sphere about 22 mm in
+diameter . The entire retina contains about 7 million cones and 75 to 150 million rods .
+</item 2>
+
+<item 3>
+Optic chiasm
+See also ( edit ) Wikimedia Commons has media related to Optic chiasm . Chiasmal syndrome References ( edit ) Jump up ^ Colman , Andrew M. ( 2006 ) . Oxford
+Dictionary of Psychology ( 2nd ed . ) . Oxford University Press . p. 530 . ISBN 0 - 19 - 861035 - 1 . Jump up ^ Bainbridge , David ( 30 June 2009 ) . Beyond the
+Zonules of Zinn : A Fantastic Journey Through Your Brain . Harvard University Press . p. 162 . ISBN 978 - 0 - 674 - 02042 - 9 . Retrieved 22 November 2015 .
+Jump up ^ de Lussanet , Marc H.E. ; Osse , Jan W.M. ( 2012 ) . `` An ancestral axial twist explains the contralateral forebrain and the optic chiasm in
+vertebrates '' . Animal Biology . 62 ( 2 ) : 193 -- 216 . arXiv : 1003.1872 .
+</item 3>
+
+<item 4>
+Optic chiasm
+J Comp Neurol. 427 ( 2 ) : 209 -- 19 . doi : 10.1002 / 1096 - 9861 ( 20001113 ) 427 : 2 < 209 : : aid - cne4 > 3.0.co ; 2 - 3 . PMID 11054689 . Jump up ^
+Guillery , RW ; Kaas , JH ( June 1973 ) . `` Genetic abnormality of the visual pathways in a `` white '' tiger `` . Science . 180 ( 4092 ) : 1287 -- 9 . Bibcode
+: 1973Sci ... 180.1287 G . doi : 10.1126 / science. 180.4092. 1287 . PMID 4707916 . Jump up ^ Guillery RW ( May 1974 ) . `` Visual pathways in albinos '' . Sci.
+Am. 230 ( 5 ) : 44 -- 54 . doi : 10.1038 / scientificamerican0574 - 44 . PMID 4822986 .
+</item 4>
+
+<item 5>
+Optic chiasm
+Other animals ( edit ) In Siamese cats with certain genotypes of the albino gene , this wiring is disrupted , with more of the nerve - crossing than is normal ,
+as a number of scholars have reported . To compensate for lack of crossing in their brains , they cross their eyes ( strabismus ) . This is also seen in albino
+tigers , as Guillery & Kaas report . Additional images ( edit ) Scheme showing central connections of the optic nerves and optic tracts . Base of brain . 3D
+schematic representation of optic tracts Transformations of the visual field toward the visual map on the primary visual cortex . Human brainstem anterior view
+Optic chiasm Optic chiasma Cerebrum. Inferior view. Deep dissection . Cerebrum. Inferior view . Deep dissection . History ( edit ) The crossing of nerve fibres
+, and the impact on vision that this had , was probably first identified by Persian physician `` Esmail Jorjani '' , who appears to be Zayn al - Din Gorgani (
+1042 -- 1137 ) .
+</item 5>
+
+<item 6>
+Optic chiasm
+arXiv : 1003.1872 . doi : 10.1163 / 157075611X617102 . ISSN 1570 - 7555 . Jump up ^ Purves , Dale ; Augustine , George ; Fitzpatrick , David ; Hall , William ;
+LaMantia , Anthony - Samuel ; White , Leonard ( 2012 ) . Neuroscience . Sinauer Associates . p. 261 . ISBN 978 - 0 - 87893 - 695 - 3 . Jump up ^ `` eye , human
+. '' Encyclopædia Britannica from Encyclopædia Britannica 2006 Ultimate Reference Suite DVD 2009 Jump up ^ Schmolesky MT , Wang Y , Creel DJ , Leventhal AG . ``
+Abnormal retinotopic organization of the dorsal lateral geniculate nucleus of the tyrosinase - negative albino cat '' . J Comp Neurol. 427 ( 2 ) : 209 -- 19 .
+</item 6>
+
+<item 7>
+Optic chiasm
+For example , the right visual cortex receives the temporal visual field from the left eye , and the nasal visual field from the right eye , which results in
+the right visual cortex producing a binocular image of the left hemispheric visual field . The net result of optic nerve crossing over at the optic chiasm is
+for the right cerebral hemisphere to sense and process left hemispheric vision , and for the left cerebral hemisphere to sense and process right hemispheric
+vision . This crossing is an adaptive feature of frontally oriented eyes , found mostly in predatory animals requiring precise visual depth perception . ( Prey
+animals , with laterally positioned eyes , have little binocular vision , so there is a more complete crossover of visual signals . ) Beyond the optic chiasm ,
+with crossed and uncrossed fibers , the optic nerves become optic tracts . The signals are passed on to the lateral geniculate body , in turn giving them to the
+occipital cortex ( the outer matter of the rear brain ) .
+</item 7>
+
+<item 8>
+Optic chiasm
+The cranial nerves terminal Nuclei Septal nuclei Course no significant branches olfactory Nuclei Anterior olfactory nucleus Course olfactory bulb olfactory
+tract optic Nuclei Lateral geniculate nucleus Course optic chiasm optic tract oculomotor Nuclei Oculomotor nucleus Edinger -- Westphal nucleus Branches superior
+parasympathetic root of ciliary ganglion / ciliary ganglion inferior trochlear Nucleus Branches no significant branches trigeminal Nuclei PSN Spinal trigeminal
+nucleus MN TMN Course trigeminal ganglion Branches ophthalmic maxillary mandibular abducens Nucleus Branches no significant branches facial near origin
+intermediate nerve geniculate inside facial canal greater petrosal pterygopalatine ganglion nerve to the stapedius chorda tympani lingual nerve submandibular
+ganglion at stylomastoid foramen posterior auricular suprahyoid digastric stylohyoid parotid plexus temporal zygomatic buccal mandibular cervical Nuclei Facial
+motor nucleus Solitary nucleus Superior salivary nucleus vestibulocochlear Nuclei Vestibular nuclei Cochlear
+</item 8>
+
+<item 9>
+Optic chiasm
+PMID 4822986 . Jump up ^ Davis , Matthew C. ; Griessenauer , Christoph J. ; Bosmia , Anand N. ; Tubbs , R. Shane ; Shoja , Mohammadali M. ( 2014 - 01 - 01 ) .
+`` The naming of the cranial nerves : A historical review '' . Clinical Anatomy. 27 ( 1 ) : 14 -- 19 . doi : 10.1002 / ca. 22345 . ISSN 1098 - 2353 . Jeffery G
+( October 2001 ) . `` Architecture of the optic chiasm and the mechanisms that sculpt its development '' . Physiol. Rev. 81 ( 4 ) : 1393 -- 414 . PMID 11581492
+. External links ( edit ) `` Anatomy diagram : 13048.000 - 1 '' . Roche Lexicon - illustrated navigator . Elsevier . Archived from the original on 2014 - 01 -
+01 . ( hide ) The cranial nerves terminal Nuclei Septal nuclei Course no significant branches olfactory Nuclei
+</item 9>
+
+<item 10>
+Optic chiasm
+The optic chiasm is located at the bottom of the brain immediately below the hypothalamus . The optic chiasm is found in all vertebrates , although in
+cyclostomes ( lampreys and hagfishes ) it is located within the brain . Contents ( hide ) 1 Structure 2 Other animals 3 Additional images 4 History 5 See also 6
+References 7 External links Structure ( edit ) The optic nerve fibres on the nasal sides of each retina cross over ( decussate ) to the opposite side of the
+brain via the optic nerve at the optic chiasm ( decussation of medial fibers ) . The temporal hemiretina , on the other hand , stays on the same side . The
+inferonasal retina are related to anterior portion of the optic chiasm whereas superonasal retinal fibers are related to the posterior portion of the optic
+chiasm . The crossing over of optic nerve fibres at the optic chiasm allows the visual cortex to receive the same hemispheric visual field from both eyes .
+Superimposing and processing these monocular visual signals allow the visual cortex to generate binocular and stereoscopic vision .
+</item 10>
+=== END ITEM id=56f511adfcbce278 ===
+
+=== ITEM id=94c7531cac245763 ===
+Gold sentences and facts:
+Sentence 0: Their first video arcade game was 1975 's EVR Race ; a handful of others followed in the next several years , Radar Scope and Donkey Kong being among the most famous of these . The early 1980s saw Nintendo 's video game division ( led by Yokoi ) creating some of its most famous arcade titles . The massively popular Donkey Kong was created in 1981 , with Shigeru Miyamoto as its mastermind , and released in the arcades and on the Atari 2600 , Intellivision , and ColecoVision video game systems ( although Nintendo themselves generally had no involvement with these early console ports ) . This release method would be used on several later Nintendo arcade games of this same period , including the original Mario Bros. ( not to be confused with the later Super Mario Bros . ) In addition to this arcade and dedicated console game activity , Nintendo was testing the consumer handheld video game waters with the Game & Watch .
+  Fact 0.0: Nintendo's first video arcade game was EVR Race, released in 1975.
+  Fact 0.1: A handful of other arcade games followed Nintendo's first video arcade game in the next several years.
+  Fact 0.2: Radar Scope and Donkey Kong were among the most famous of those arcade games.
+  Fact 0.3: In the early 1980s, Nintendo's video game division, led by Yokoi, created some of Nintendo's most famous arcade titles.
+  Fact 0.4: Donkey Kong was massively popular.
+  Fact 0.5: Donkey Kong was created in 1981.
+  Fact 0.6: Shigeru Miyamoto was the mastermind behind Donkey Kong.
+  Fact 0.7: Donkey Kong was released in the arcades.
+  Fact 0.8: Donkey Kong was released on the Atari 2600, Intellivision, and ColecoVision video game systems.
+  Fact 0.9: Nintendo themselves generally had no involvement with the early console ports of Donkey Kong.
+  Fact 0.10: The release method used for Donkey Kong, arcade plus console, was used on several later Nintendo arcade games of the same period.
+  Fact 0.11: The original Mario Bros. was one of these later Nintendo arcade games, and it is not to be confused with the later Super Mario Bros.
+  Fact 0.12: Alongside its arcade and dedicated console game activity, Nintendo was testing the consumer handheld video game market with the Game & Watch.
+Sentence 1: In 1972 , the first commercially available video game console , the Magnavox Odyssey , had a light gun accessory , the Shooting Gallery . This was the first involvement of Nintendo in video games . According to Martin Picard in the International Journal of Computer Game Research : `` in 1971 , Nintendo had -- even before the marketing of the first home console in the United States -- an alliance with the American pioneer Magnavox to develop and produce optoelectronic guns for the Odyssey ( released in 1972 ) , since it was similar to what Nintendo was able to offer in the Japanese toy market in 1970s '' .
+  Fact 1.0: The Magnavox Odyssey was the first commercially available video game console, and it was released in 1972.
+  Fact 1.1: In 1972, the Magnavox Odyssey had a light gun accessory called the Shooting Gallery.
+  Fact 1.2: The Shooting Gallery was the first involvement of Nintendo in video games.
+  Fact 1.3: According to Martin Picard in the International Journal of Computer Game Research, in 1971 Nintendo had an alliance with the American pioneer Magnavox.
+  Fact 1.4: The alliance was formed even before the marketing of the first home console in the United States.
+  Fact 1.5: The alliance was to develop and produce optoelectronic guns for the Odyssey.
+  Fact 1.6: The Odyssey was released in 1972.
+  Fact 1.7: The alliance existed because Nintendo was able to offer something similar in the Japanese toy market in the 1970s.
+
+Retrieved items:
+<item 1>
+History of Nintendo
+The massively popular Donkey Kong was created in 1981 , with Shigeru Miyamoto as its mastermind , and released in the arcades and on the Atari 2600 ,
+Intellivision , and ColecoVision video game systems ( although Nintendo themselves generally had no involvement with these early console ports ) . This release
+method would be used on several later Nintendo arcade games of this same period , including the original Mario Bros. ( not to be confused with the later Super
+Mario Bros . ) In addition to this arcade and dedicated console game activity , Nintendo was testing the consumer handheld video game waters with the Game &
+Watch . Game & Watch and Nintendo Entertainment system ( edit ) Main articles : Game & Watch , Nintendo Entertainment System , and History of the Nintendo
+Entertainment System Game & Watch or G&W is a line of handheld electronic games produced by Nintendo from 1980 to 1991 . Created by game designer Gunpei Yokoi ,
+each Game & Watch features a single game to be played on an LCD screen in addition to a clock and / or an alarm . It was the earliest Nintendo product to garner
+major success , with 43.4 million units sold worldwide .
+</item 1>
+
+<item 2>
+History of Nintendo
+These devices had a much higher novelty value than traditional toys , allowing Nintendo to charge a higher price margin for each product . Yokoi went on to
+develop many other toys , including the Ten Billion Barrel puzzle , a baseball throwing machine called the Ultra Machine , and a Love Tester . Another invention
+of his , in collaboration with Masayuki Uemura from Sharp , was the Nintendo Beam Gun Game , the precursor to the NES Zapper ( which was used in games like Duck
+Hunt . ) . Nintendo released the first solar - powered light gun , the Nintendo Beam Gun , in 1970 ; this was the first commercially available light - gun for
+home use , produced in partnership with Sharp . In 1972 , Nintendo released the Ele - Conga , one of the first programmable drum machines . It could play
+pre-programmed rhythms from disc - shaped punch cards , which could be altered or programmed by the user , to play different patterns . 1972 -- present :
+electronic games ( edit ) In 1972 , the first commercially available video game console , the Magnavox Odyssey , had a light gun accessory , the Shooting
+Gallery . This was the first involvement of Nintendo in video games .
+</item 2>
+
+<item 3>
+History of Nintendo
+Konami , the first third - party company that was allowed to make cartridges for the Famicom , would later circumvent this rule by creating a spinoff company ,
+Ultra Games , to release additional games in a single year . Other manufacturers soon employed the same tactic . Also in 1985 , Super Mario Bros. was released
+for the Famicom in Japan and became a large success . Nintendo test marketed the Nintendo Entertainment System in the New York area on October 18 , 1985 . They
+expanded the test to Los Angeles in February 1986 , followed by tests in Chicago and San Francisco . They would go national by the end of 1986 , along with 15
+games , sold separately . In the US and Canada , it outsold its competitors by a wide margin . This was also the year that Metroid and Super Mario Bros. 2 ( the
+Japanese version ) were released . In 1987 , The Legend of Zelda was released to much critical acclaim . In 1988 , Nintendo of America unveiled Nintendo Power ,
+a monthly news and strategy magazine from Nintendo that served to advertise new games .
+</item 3>
+
+<item 4>
+Founded in Kyoto in 1889, Nintendo began by making handmade hanafuda playing cards. The Japanese company later became a major force in the video game industry
+and, according to the text, the world’s largest video game company by revenue. The article notes that it needs additional citations.
+</item 4>
+
+<item 5>
+History of Nintendo
+This was the first involvement of Nintendo in video games . According to Martin Picard in the International Journal of Computer Game Research : `` in 1971 ,
+Nintendo had -- even before the marketing of the first home console in the United States -- an alliance with the American pioneer Magnavox to develop and
+produce optoelectronic guns for the Odyssey ( released in 1972 ) , since it was similar to what Nintendo was able to offer in the Japanese toy market in 1970s
+'' . In 1973 , its focus shifted to family entertainment venues with the Laser Clay Shooting System , using the same light gun technology used in Nintendo 's
+Kousenjuu series of toys , and set up in abandoned bowling alleys . Following some success , Nintendo developed several more light gun machines for the emerging
+arcade scene . While the Laser Clay Shooting System ranges had to be shut down following excessive costs , Nintendo had found a new market . In 1974 , Nintendo
+secured the rights to distribute the Magnavox Odyssey video game console in Japan .
+</item 5>
+
+<item 6>
+History of Nintendo
+Color TV - game 6 ( edit ) Main article : Color TV Game Nintendo 's first video game system , the Color TV Game 6 Nintendo at this time saw how successful video
+games were and began to dabble in them . Their first step in that field was to secure the rights to distribute the Magnavox Odyssey in Japan in 1975 . At the
+time , home video game consoles were extremely rare -- even the seminal Atari Pong console had yet to be produced . After experiencing reasonable success at
+this , Nintendo began developing its own video games , both for home and for arcades . In the 1970s , Mitsubishi Electric proposed joint development of `` Color
+TV Game Machine '' . In 1977 , they released `` Color TV Game 6 '' and `` Color TV Game 15 '' ( 6 and 15 indicates the number of games ) . Their first video
+arcade game was 1975 's EVR Race ; a handful of others followed in the next several years , Radar Scope and Donkey Kong being among the most famous of these .
+The early 1980s saw Nintendo 's video game division ( led by Yokoi ) creating some of its most famous arcade titles .
+</item 6>
+
+<item 7>
+History of Nintendo
+The first issue published was the July / August edition , which spotlighted the NES game Super Mario Bros. 2 . Nintendo Power has since ceased publication with
+its December 2012 edition . Game Boy and Super NES ( edit ) Main articles : Game Boy and Super Nintendo Entertainment System The original Game Boy In 1989 ,
+Nintendo ( which had seen a large amount of success from the Game & Watch ) released the Game Boy ( both created by Gunpei Yokoi ) , along with the accompanying
+game Tetris . Due to the price , the game and its durability ( unlike the prior Microvision from Milton Bradley Company , which was prone to static and screen
+rot ) , the Game Boy line sold extremely well , eventually amassing sales of 118 million units . Later , Super Mario Land was also released for the Game Boy ,
+which sold 14 million copies worldwide . 1989 was also the year that Nintendo announced a sequel to the Famicom , to be called the Super Famicom . The last
+major first - party game for the NES , Super Mario Bros. 3 , was released in early 1990 , and went on to sell over 18 million units .
+</item 7>
+
+<item 8>
+History of Nintendo
+The Nintendo Entertainment System ( NES ) , released in 1985 , is one of the most popular consoles of all time . Nintendo was determined not to make the same
+mistakes in the US that Atari had . Because of massive influxes of games that were regarded as some of the worst ever created , gaming had almost completely
+died out in America . Nintendo decided that to avoid facing the same problems , they would only allow games that received their `` Seal of Quality '' to be sold
+for the Famicom . In 1985 , Nintendo announced that they were releasing the Famicom worldwide with a different design under the name the Nintendo Entertainment
+System ( NES ) . They used a creative tactic to counter the bad view that the media was giving on video games , and released the NES with R.O.B. units that
+connected to the console and were synchronised to the games . To ensure the localization of the highest - quality games by third - party developers , Nintendo
+of America limited the number of game titles third - party developers could release in a single year to five .
+</item 8>
+
+<item 9>
+Founded in Kyoto in 1889 by Fusajiro Yamauchi, Nintendo began making handmade Hanafuda playing cards. Under Hiroshi Yamauchi, it expanded into toys and other
+businesses, ultimately focusing on toys after several ventures failed. Gunpei Yokoi’s inventive electronic toys helped lead Nintendo toward video games. From
+arcade hits such as Donkey Kong, it grew into a global gaming company with Game & Watch, the Famicom/NES, Game Boy, and Super NES. Later
+</item 9>
+
+<item 10>
+History of Nintendo
+In 1982 , Nintendo developed a prototype system dubbed the `` Advanced Video System '' ( or AVS for short ) and had controllers much like the NES . There were
+accessories such as a tape drive , a joystick and a lightgun , and along with all of that , the system was made of a computer , much like the Atari 400 ,
+Commodore Vic - 20 and Commodore 64 . It was never released and is on display at the Nintendo World Store in New York . In July 1983 , Nintendo released the
+Famicom ( Family Computer ) system in Japan , which was its first attempt at a cartridge - based video game console . The system sold over 500,000 units within
+two months at a price around $100 USD . However , after a few months of favorable sales , Nintendo received complaints that some Famicom consoles would freeze
+when the player attempted to play certain games . The fault was found in a malfunctioning chip and Nintendo decided to recall all Famicom units that were
+currently on store shelves , which ultimately cost them approximately half a million USD .
+</item 10>
+=== END ITEM id=94c7531cac245763 ===
+
+=== ITEM id=5047a459e08180d6 ===
+Gold sentences and facts:
+Sentence 0: When Hoyt Axton performed the song to the group , two of the three main vocalists -- Danny Hutton and Cory Wells -- rejected the song , but Chuck Negron felt that the band needed a `` silly song '' to help bring the band back together as a working unit . Negron also felt that the song `` was n't even close to our best record , but it might have been one of our most honest . ''
+  Fact 0.0: Hoyt Axton performed the song to the group.
+  Fact 0.1: Two of the three main vocalists, Danny Hutton and Cory Wells, rejected the song.
+  Fact 0.2: Chuck Negron felt that the band needed a 'silly song' to help bring the band back together as a working unit.
+  Fact 0.3: Chuck Negron also felt that the song was not even close to the band's best record.
+  Fact 0.4: Chuck Negron also felt that the song might have been one of the band's most honest.
+Sentence 1: The song , which has been described by members of Three Dog Night as a `` kid 's song '' and a `` silly song '' , topped the main singles charts in North America , was certified gold by the RIAA , and has since been covered by multiple artists .
+  Fact 1.0: Members of Three Dog Night have described the song as a 'kid's song'.
+  Fact 1.1: Members of Three Dog Night have described the song as a 'silly song'.
+  Fact 1.2: The song topped the main singles charts in North America.
+  Fact 1.3: The song was certified gold by the RIAA.
+  Fact 1.4: The song has since been covered by multiple artists.
+
+Retrieved items:
+<item 1>
+Joy to the World (Three Dog Night song)
+It appears in 2017 and 2018 TV commercials for Big Lots . Preceded by `` Just My Imagination ( Running Away with Me ) '' by The Temptations Billboard Hot 100
+number - one single April 17 , 1971 ( six weeks ) Succeeded by `` Brown Sugar '' by The Rolling Stones References ( edit ) ^ Jump up to : Celebrate : The Three
+Dog Night Story , 1965 -- 1975 ( CD liner ) . Three Dog Night . United States : MCA Records . 1993 . pp. 27 , 30 , 31 . MCAD2 - 10956 . ^ Jump up to : Leaf ,
+David ( 1993 ) . Celebrate : The Three Dog Night Story , 1965 -- 1975 ( CD liner ) . Three Dog Night . United States : MCA Records . p. 20 . MCAD2 - 10956 .
+Jump up ^ `` Three Dog Night Headlines the Fair Tonight '' . Bainbridge Island Review . Entertainment section . August 20 , 2008 .
+</item 1>
+
+<item 2>
+Joy to the World (Three Dog Night song)
+Genre Rock Length 3 : 50 ( album ) 3 : 17 ( single ) Label Dunhill Songwriter ( s ) Hoyt Axton Producer ( s ) Richard Podolor Three Dog Night singles chronology
+`` One Man Band '' ( 1970 ) `` Joy to the World '' ( 1971 ) `` Liar '' ( 1971 ) `` One Man Band '' ( 1970 ) `` Joy to the World '' ( 1971 ) `` Liar '' ( 1971 )
+`` Joy to the World '' is a song written by Hoyt Axton , and made famous by the band Three Dog Night . The song is also popularly known by its opening lyric ,
+`` Jeremiah was a bullfrog '' . Three Dog Night originally released the song on their fourth studio album , Naturally in November 1970 and subsequently released
+an edited version of the song as a single in February 1971 .
+</item 2>
+
+<item 3>
+Joy to the World (Three Dog Night song)
+Entertainment section . August 20 , 2008 . ISSN 1053 - 2889 . Retrieved April 5 , 2011 . Jump up ^ `` Jackson v. Axton '' . Law.justia.com . Retrieved 2016 - 10
+- 04 . Jump up ^ `` Forum - 1970 ( ARIA Charts : Special Occasion Charts ) '' . Australian-charts.com . Archived from the original on 2016 - 10 - 20 . Retrieved
+2017 - 05 - 07 . Jump up ^ `` 100 Singles '' ( PHP ) . RPM. 15 ( 15 ) . May 29 , 1971 . Retrieved April 5 , 2011 . Jump up ^ `` Musicline.de -- Three Dog Night
+Single - Chartverfolgung '' ( in German ) . Media Control Charts . PhonoNet GmbH . Jump up ^ `` Dutchcharts.nl -- Three Dog Night -- Joy To The World '' ( in
+Dutch ) . Single Top 100 .
+</item 3>
+
+<item 4>
+Joy to the World (Three Dog Night song)
+The single went on to sell 5 million copies worldwide , making it one of the best - selling singles of all time . In popular culture ( edit ) Singer -
+songwriter Daniel Johnston likes this song , which inspired his own character Jeremiah the bullfrog , whom he often draws in his artwork and advertisements .
+The frog is also featured on the cover of his album Hi , How Are You ( 1983 ) and has become an official music mascot for Johnston . It is sung by the son of
+one of the main characters at the start of the film The Big Chill ( 1983 ) and is featured on the soundtrack . In The X-Files TV series ( Detour - S05E04 ) ,
+Scully sings this song while she 's lost in a forest with Mulder to show him she is awake and he can rest . It is played during the end credits of the R - rated
+animated film , Sausage Party ( 2016 ) , and later in the end credits of the PG - 13 - rated animated film A Very Spooky Night . It appears in 2017 and 2018 TV
+commercials for Big Lots .
+</item 4>
+
+<item 5>
+Joy to the World (Three Dog Night song)
+wikipedia.org/w/index.php?title=Joy_to_the_World_(Three_Dog_Night_song)&oldid=835489072 '' Categories : 1971 singles Billboard Hot 100 number - one singles
+Three Dog Night songs Dunhill Records singles Songs written by Hoyt Axton Songs about animals Novelty songs RPM Top Singles number - one singles 1970 songs
+Hidden categories : Articles needing additional references from June 2008 All articles needing additional references Articles with hAudio microformats
+Singlechart usages for German Singlechart usages for Dutch100 Singlechart usages for UK Singlechart usages for Billboardhot100 Singlechart called without song
+Talk Contents About Wikipedia 日本 語 Edit links This page was last edited on 9 April 2018 , at 00 : 34 . Text is available under the Creative Commons Attribution
+- ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered
+trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 5>
+
+<item 6>
+Joy to the World (Three Dog Night song)
+Axton wanted to persuade his record producers to record a new melody he had written and the producers asked him to sing any words to the tune . A member of
+Three Dog Night said that the original lyrics to the song were `` Jeremiah was a prophet '' but `` no one liked that '' . When Hoyt Axton performed the song to
+the group , two of the three main vocalists -- Danny Hutton and Cory Wells -- rejected the song , but Chuck Negron felt that the band needed a `` silly song ''
+to help bring the band back together as a working unit . Negron also felt that the song `` was n't even close to our best record , but it might have been one of
+our most honest . '' The song was recorded by Three Dog Night at American Recording Company , produced by Richard Podolor , and engineered by Bill Cooper .
+Unlike most Three Dog Night songs recorded at that point , instead of having just the three main vocalists singing harmony , the song was recorded with all
+seven members of the band singing . Drummer Floyd Sneed sings the deep lyric `` I wan na tell you '' towards the end of the song .
+</item 6>
+
+<item 7>
+Joy to the World (Three Dog Night song)
+ispot.tv . Retrieved December 24 , 2017 . External links ( edit ) Lyrics of this song at MetroLyrics Three Dog Night Danny Hutton Michael Allsup Paul Kingery
+Pat Bautz Eddie Reasoner David Morgan Cory Wells Chuck Negron Jimmy Greenspoon Floyd Sneed Joe Schermie Skip Konte Al Ciner Gary Moon Richard Campbell Studio
+albums Three Dog Night ( 1968 ) Suitable for Framing ( 1969 ) It Ai n't Easy ( 1970 ) Naturally ( 1970 ) Harmony ( 1971 ) Seven Separate Fools ( 1972 ) Cyan (
+1973 ) Hard Labor ( 1974 ) Coming Down Your Way ( 1975 ) American Pastime ( 1976 ) It 's a Jungle ( 1983 ) Live albums Captured Live at the Forum ( 1969 )
+Around the World with Three Dog Night ( 1973 ) Compilations Golden Bisquits ( 1971 ) Joy to the World : Their Greatest Hits ( 1975 ) The Best of 3 Dog Night (
+1982 ) Celebrate : The Three Dog Night Story , 1965 -- 1975 (
+</item 7>
+
+<item 8>
+Joy to the World (Three Dog Night song)
+1965 -- 1975 ( 1993 ) 20th Century Masters -- The Millennium Collection : The Best of Three Dog Night ( 1999 ) Singles `` Nobody '' `` Try a Little Tenderness
+'' `` One '' `` Easy to Be Hard '' `` Eli 's Coming '' `` Celebrate '' `` Mama Told Me ( Not to Come ) '' `` Out in the Country '' `` One Man Band '' `` Joy to
+the World '' `` Liar '' `` An Old Fashioned Love Song '' `` Never Been to Spain '' `` The Family of Man '' `` Black & White '' `` Pieces of April '' `` Shambala
+'' `` Let Me Serenade You '' `` The Show Must Go On '' `` Sure As I 'm Sittin ' Here '' `` Play Something Sweet ( Brickyard Blues ) '' `` Til the World Ends ''
+`` Everybody Is a Masterpiece '' `` It 's a Jungle Out There '' Discography Book Billboard Year - End number one singles ( 1960 -- 1979 ) 1960 : `` Theme from A
+Summer Place '' -- Percy Faith 1961 : `` Tossin ' and Turnin ' '' -- Bobby Lewis 1962 : ``
+</item 8>
+
+<item 9>
+Joy to the World (Three Dog Night song)
+The song , which has been described by members of Three Dog Night as a `` kid 's song '' and a `` silly song '' , topped the main singles charts in North
+America , was certified gold by the RIAA , and has since been covered by multiple artists . The song is featured prominently in the film The Big Chill . It is
+sung by a child character at the beginning and the Three Dog Night recording is played over the end credits . It is also played at the end of every Denver
+Broncos home victory . Notable playings of this song after Broncos victories included then - Chicago Bears head coach Abe Gibron 's singing along with the song
+in 1973 ; and at the end of Super Bowl XXXII , played at Qualcomm Stadium in San Diego . It was also played at the end of Super Bowl XXXIII at Pro Player ( now
+Hard Rock ) Stadium in Miami Gardens , Florida and Super Bowl 50 in Santa Clara , California . Contents ( hide ) 1 Background and recording 2 Charts and awards
+3 In popular culture 4 References 5 External links Background and Recording ( edit ) Some of the words are nonsensical .
+</item 9>
+
+<item 10>
+Joy to the World (Three Dog Night song)
+Joy to the World ( Three Dog Night song ) - wikipedia Joy to the World ( Three Dog Night song ) Jump to : navigation , search This article needs additional
+citations for verification . Please help improve this article by adding citations to reliable sources . Unsourced material may be challenged and removed . (
+June 2008 ) ( Learn how and when to remove this template message ) `` Joy to the World '' 1971 French release Single by Three Dog Night from the album Naturally
+B - side `` I Can Hear You Calling '' Released February 1971 ( 1971 - 02 ) Format 7 '' 45 RPM Recorded 1970 at American Recording Co .
+</item 10>
+=== END ITEM id=5047a459e08180d6 ===

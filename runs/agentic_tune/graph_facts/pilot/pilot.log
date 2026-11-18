@@ -1,0 +1,5 @@
+graphrag: saved retrieval for multihop-rag-306
+graphrag: saved retrieval for multihop-rag-352
+graphrag record 0: EM=1.00, F1=1.00
+graphrag record 1: EM=1.00, F1=1.00
+RESULTS /Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/agentic_tune/graphrag/20261113T091856489394Z/results.jsonl

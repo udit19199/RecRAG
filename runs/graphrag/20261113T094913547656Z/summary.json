@@ -1,0 +1,42 @@
+{
+  "method": "graphrag",
+  "dataset": "multihop_rag",
+  "count": 84,
+  "precision": 0.8333333333333334,
+  "recall": 0.8333333333333334,
+  "f1": 0.8333333333333334,
+  "exact_match": 0.7857142857142857,
+  "overlap_accuracy": 0.8333333333333334,
+  "retrieval_accuracy": 0.6785714285714286,
+  "total_construction_seconds": 0.0,
+  "mean_retrieval_seconds": 30.215217334381514,
+  "mean_answer_seconds": 2.017272536273508,
+  "mean_retrieved_tokens": 2231.714285714286,
+  "total_storage_mb": 0.006413,
+  "categories": [
+    {
+      "question_type": "inference_query",
+      "count": 42,
+      "accuracy": 0.9523809523809523,
+      "complexity": null
+    },
+    {
+      "question_type": "temporal_query",
+      "count": 42,
+      "accuracy": 0.7142857142857143,
+      "complexity": null
+    }
+  ],
+  "total_question_cost_usd": 0.240096165,
+  "mean_question_cost_usd": 0.0028582876785714284,
+  "mean_retrieval_and_answer_seconds": 32.23248987065502,
+  "options": {
+    "top_k": 10,
+    "rerank": false,
+    "rerank_candidate_k": 20,
+    "rerank_top_k": 10,
+    "ircot": false,
+    "max_steps": 2
+  },
+  "novelqa_categories": []
+}

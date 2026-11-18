@@ -1,0 +1,1958 @@
+[
+ {
+  "id": "ae6ce4a0e8d37f70",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "directors exercise control and management over the organization"
+     },
+     {
+      "item": 2,
+      "quote": "the powers apply to the board jointly"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "State law may specify a minimum number of directors , maximum number of directors"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.7",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "95bf24a6d1499399",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.5",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "139996cd6d820173",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Algeria Fennec fox Vulpes zerda"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Angola Red - crested turaco ( national bird ) Tauraco erythrolophus"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Anguilla Zenaida dove Zenaida aurita"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Antigua and Barbuda Fallow deer ( national animal ) Dama dama"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Antigua and Barbuda Fallow deer ( national animal ) Dama dama Frigate ( national bird ) Fregata magnificens"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Antigua and Barbuda Fallow deer ( national animal ) Dama dama Frigate ( national bird ) Fregata magnificens Hawksbill turtle ( national sea creature ) Eretmochelys imbricata"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Argentina Rufous hornero Furnarius rufus"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Australia Red kangaroo ( national animal ) Macropus rufus"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Australia Red kangaroo ( national animal ) Macropus rufus Emu ( national bird ) Dromaius novaehollandiae"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Austria Black eagle Ictinaetus malaiensis"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Azerbaijan Karabakh horse Equus ferus caballus"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Bangladesh Royal Bengal tiger ( national animal ) Panthera tigris tigris"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Bangladesh Royal Bengal tiger ( national animal ) Panthera tigris tigris Magpie robin ( national bird ) Copsychus saularis"
+     }
+    ]
+   },
+   {
+    "fact": "0.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Bangladesh Royal Bengal tiger ( national animal ) Panthera tigris tigris Magpie robin ( national bird ) Copsychus saularis Ilish ( national fish )"
+     },
+     {
+      "item": 2,
+      "quote": "Ilish ( national fish ) Tenualosa ilisha"
+     }
+    ]
+   },
+   {
+    "fact": "0.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Belarus European bison Bison bonasus"
+     }
+    ]
+   },
+   {
+    "fact": "0.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Belgium Lion ( heraldic Leo Belgicus ) Panthera leo"
+     }
+    ]
+   },
+   {
+    "fact": "0.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Belize Baird 's tapir ( national animal ) Tapirus bairdii"
+     }
+    ]
+   },
+   {
+    "fact": "0.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Belize Baird 's tapir ( national animal ) Tapirus bairdii Keel - billed toucan ( national bird ) Ramphastos sulfuratus"
+     }
+    ]
+   },
+   {
+    "fact": "0.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Bhutan Druk Mythical Takin Budorcas taxicolor"
+     }
+    ]
+   },
+   {
+    "fact": "0.19",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Bhutan Druk Mythical Takin Budorcas taxicolor"
+     }
+    ]
+   },
+   {
+    "fact": "0.20",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Brazil Rufous - bellied thrush Turdus rufiventris"
+     }
+    ]
+   },
+   {
+    "fact": "0.21",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Cambodia Kouprey Bos sauveli"
+     }
+    ]
+   },
+   {
+    "fact": "0.22",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Canada North American beaver ( sovereignty animal symbol ) Castor canadensis"
+     }
+    ]
+   },
+   {
+    "fact": "0.23",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Canada North American beaver ( sovereignty animal symbol ) Castor canadensis Canadian horse ( national horse ) Equus ferus caballus"
+     }
+    ]
+   },
+   {
+    "fact": "0.24",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "China Giant panda ( national animal ) Ailuropoda melanoleuca"
+     }
+    ]
+   },
+   {
+    "fact": "0.25",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "China Giant panda ( national animal ) Ailuropoda melanoleuca Chinese dragon ( national animal ) Mythical"
+     }
+    ]
+   },
+   {
+    "fact": "0.26",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "China Giant panda ( national animal ) Ailuropoda melanoleuca Chinese dragon ( national animal ) Mythical Red - crowned crane ( national bird ) Grus japonensis"
+     }
+    ]
+   },
+   {
+    "fact": "0.27",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Democratic Republic of the Congo Okapi Okapia johnstoni"
+     }
+    ]
+   },
+   {
+    "fact": "0.28",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Colombia Andean condor Vultur gryphus"
+     }
+    ]
+   },
+   {
+    "fact": "0.29",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Costa Rica Yigüirro ( national bird ) Turdus grayi"
+     }
+    ]
+   },
+   {
+    "fact": "0.30",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Costa Rica Yigüirro ( national bird ) Turdus grayi White - tailed deer ( national animal ) Odocoileus virginianus"
+     }
+    ]
+   },
+   {
+    "fact": "0.31",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Costa Rica Yigüirro ( national bird ) Turdus grayi White - tailed deer ( national animal ) Odocoileus virginianus West Indian manatee ( national aquatic animal ) Trichechus manatus"
+     }
+    ]
+   },
+   {
+    "fact": "0.32",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.33",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.34",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.35",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.36",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.37",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.38",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.39",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.40",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.41",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.42",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.43",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.44",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.45",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.46",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.47",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.48",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.49",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.50",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Greece Phoenix Mythical Dolphins Delphinus"
+     }
+    ]
+   },
+   {
+    "fact": "0.51",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Greece Phoenix Mythical Dolphins Delphinus"
+     }
+    ]
+   },
+   {
+    "fact": "0.52",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Guatemala Quetzal Pharomachrus mocinno"
+     }
+    ]
+   },
+   {
+    "fact": "0.53",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Haiti Hispaniolan Trogan Priotelus roseigaster"
+     }
+    ]
+   },
+   {
+    "fact": "0.54",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Honduras White - tailed deer Odocoileus virginianus"
+     }
+    ]
+   },
+   {
+    "fact": "0.55",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Hungary Turul Mythical ( most probably Falco cherrug )"
+     }
+    ]
+   },
+   {
+    "fact": "0.56",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Iceland Gyrfalcon Falco rusticolus"
+     }
+    ]
+   },
+   {
+    "fact": "0.57",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "India Bengal tiger ( National predator ) Panthera tigris tigris"
+     }
+    ]
+   },
+   {
+    "fact": "0.58",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "India Bengal tiger ( National predator ) Panthera tigris tigris Indian peafowl ( National bird ) Pavo cristatus"
+     }
+    ]
+   },
+   {
+    "fact": "0.59",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "India Bengal tiger ( National predator ) Panthera tigris tigris Indian peafowl ( National bird ) Pavo cristatus King cobra ( National reptile ) Ophiophagus hannah"
+     }
+    ]
+   },
+   {
+    "fact": "0.60",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "India Bengal tiger ( National predator ) Panthera tigris tigris Indian peafowl ( National bird ) Pavo cristatus King cobra ( National reptile ) Ophiophagus hannah Ganges river dolphin ( National aquatic animal ) Platanista gangetica gangetica"
+     }
+    ]
+   },
+   {
+    "fact": "0.61",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "India Bengal tiger ( National predator ) Panthera tigris tigris Indian peafowl ( National bird ) Pavo cristatus King cobra ( National reptile ) Ophiophagus hannah Ganges river dolphin ( National aquatic animal ) Platanista gangetica gangetica Indian elephant ( National heritage animal ) Elephas maximus indicus"
+     }
+    ]
+   },
+   {
+    "fact": "0.62",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Indonesia Komodo dragon ( national animal ) Varanus komodoensis"
+     }
+    ]
+   },
+   {
+    "fact": "0.63",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Indonesia Komodo dragon ( national animal ) Varanus komodoensis Garuda ( historic national animal ) Mythical"
+     }
+    ]
+   },
+   {
+    "fact": "0.64",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Iran Persian lion Panthera leo persica"
+     }
+    ]
+   },
+   {
+    "fact": "0.65",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Iraq Chukar partridge Alectoris chukar"
+     }
+    ]
+   },
+   {
+    "fact": "0.66",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Iraq Chukar partridge Alectoris chukar Goat ( KRG ) Capra aegagrus"
+     }
+    ]
+   },
+   {
+    "fact": "0.67",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Israel Hoopoe ( national bird ) Upupa epops"
+     }
+    ]
+   },
+   {
+    "fact": "0.68",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Jamaica Red - billed streamertail Trochilus polytmus"
+     }
+    ]
+   },
+   {
+    "fact": "0.69",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Japan Green pheasant ( national bird ) Phasianus versicolor"
+     }
+    ]
+   },
+   {
+    "fact": "0.70",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Japan Green pheasant ( national bird ) Phasianus versicolor Carp ( national fish ) Cyprinus carpio"
+     }
+    ]
+   },
+   {
+    "fact": "0.71",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Latvia White wagtail ( national bird ) Motacilla alba"
+     }
+    ]
+   },
+   {
+    "fact": "0.72",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Latvia White wagtail ( national bird ) Motacilla alba Two - spotted ladybird ( national insect ) Adalia bipunctata"
+     }
+    ]
+   },
+   {
+    "fact": "0.73",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Lithuania White stork Ciconia ciconia"
+     }
+    ]
+   },
+   {
+    "fact": "0.74",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Macedonia Lion ( in Macedonian heraldry ) Panthera leo"
+     }
+    ]
+   },
+   {
+    "fact": "0.75",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Madagascar Zebu ( in Malagasy heraldry ) Bos primigenius indicus"
+     }
+    ]
+   },
+   {
+    "fact": "0.76",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Madagascar Zebu ( in Malagasy heraldry ) Bos primigenius indicus Ring - tailed lemur ( national animal ) Lemur catta"
+     }
+    ]
+   },
+   {
+    "fact": "0.77",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Malaysia Malayan tiger ( national animal ) Panthera tigris jacksoni"
+     }
+    ]
+   },
+   {
+    "fact": "0.78",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Malta Pharaoh Hound ( national animal ) Canis lupus familiaris ( 1 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.79",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Moldova Aurochs ( national animal ) Bos primigenius"
+     }
+    ]
+   },
+   {
+    "fact": "0.80",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Mauritius Dodo Raphus cucullatus"
+     }
+    ]
+   },
+   {
+    "fact": "0.81",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Mexico Golden eagle ( national animal ) Aquila chrysaetos"
+     }
+    ]
+   },
+   {
+    "fact": "0.82",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Mexico Golden eagle ( national animal ) Aquila chrysaetos Xoloitzcuintli ( national dog ) Canis lupus familiaris"
+     }
+    ]
+   },
+   {
+    "fact": "0.83",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Mexico Golden eagle ( national animal ) Aquila chrysaetos Xoloitzcuintli ( national dog ) Canis lupus familiaris Jaguar ( national mammal ) Panthera onca"
+     }
+    ]
+   },
+   {
+    "fact": "0.84",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Mexico Golden eagle ( national animal ) Aquila chrysaetos Xoloitzcuintli ( national dog ) Canis lupus familiaris Jaguar ( national mammal ) Panthera onca Grasshopper ( national arthropod ) Sphenarium purpurascens"
+     }
+    ]
+   },
+   {
+    "fact": "0.85",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Mexico Golden eagle ( national animal ) Aquila chrysaetos Xoloitzcuintli ( national dog ) Canis lupus familiaris Jaguar ( national mammal ) Panthera onca Grasshopper ( national arthropod ) Sphenarium purpurascens Vaquita ( national marine mammal ) Phocoena sinus"
+     }
+    ]
+   },
+   {
+    "fact": "0.86",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Nepal Cow ( national animal ) Bos taurus indicus"
+     }
+    ]
+   },
+   {
+    "fact": "0.87",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Nepal Cow ( national animal ) Bos taurus indicus Danphe ( national bird ) Lophophorus impejanus"
+     }
+    ]
+   },
+   {
+    "fact": "0.88",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Netherlands Lion ( heraldic symbol ) Panthera leo"
+     }
+    ]
+   },
+   {
+    "fact": "0.89",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Netherlands Lion ( heraldic symbol ) Panthera leo Black - tailed godwit ( national bird ) Limosa limosa"
+     }
+    ]
+   },
+   {
+    "fact": "0.90",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "New Zealand Kiwi Apteryx sp ."
+     }
+    ]
+   },
+   {
+    "fact": "0.91",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "North Korea Chollima Mythical"
+     }
+    ]
+   },
+   {
+    "fact": "0.92",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Norway Lion ( royal national animal ) Panthera leo"
+     }
+    ]
+   },
+   {
+    "fact": "0.93",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Norway Lion ( royal national animal ) Panthera leo White - throated dipper ( national bird ) Cinclus cinclus"
+     }
+    ]
+   },
+   {
+    "fact": "0.94",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Norway Lion ( royal national animal ) Panthera leo White - throated dipper ( national bird ) Cinclus cinclus Fjord horse ( national horse ) Equus ferus caballus"
+     }
+    ]
+   },
+   {
+    "fact": "0.95",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Oman Arabian oryx ( national animal ) Oryx leucoryx"
+     }
+    ]
+   },
+   {
+    "fact": "0.96",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Pakistan Markhor ( National animal ) Capra falconeri"
+     }
+    ]
+   },
+   {
+    "fact": "0.97",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Pakistan Markhor ( National animal ) Capra falconeri Indus river dolphin ( National aquatic mammal ) Platanista indicus minor minor"
+     }
+    ]
+   },
+   {
+    "fact": "0.98",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Pakistan Markhor ( National animal ) Capra falconeri Indus river dolphin ( National aquatic mammal ) Platanista indicus minor minor Chukar ( National bird ) Alectoris chukar"
+     }
+    ]
+   },
+   {
+    "fact": "0.99",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Pakistan Markhor ( National animal ) Capra falconeri Indus river dolphin ( National aquatic mammal ) Platanista indicus minor minor Chukar ( National bird ) Alectoris chukar Indus crocodile ( National reptile ) Crocodylus palustris"
+     }
+    ]
+   },
+   {
+    "fact": "0.100",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Indus crocodile ( National reptile ) Crocodylus palustris Shaheen falcon ( Heritage bird ) Falco peregrinus peregrinator"
+     }
+    ]
+   },
+   {
+    "fact": "0.101",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Shaheen falcon ( Heritage bird ) Falco peregrinus peregrinator Snow leopard ( National predator ) Panthera uncia"
+     }
+    ]
+   },
+   {
+    "fact": "0.102",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Panama Harpy eagle Harpia harpyja"
+     }
+    ]
+   },
+   {
+    "fact": "0.103",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Papua New Guinea Dugong ( national marine mammal ) Dugong dugon"
+     }
+    ]
+   },
+   {
+    "fact": "0.104",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Peru Vicuña ( national animal ) Vicugna vicugna"
+     }
+    ]
+   },
+   {
+    "fact": "0.105",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Philippines Carabao ( national animal ) Bubalus bubalis"
+     }
+    ]
+   },
+   {
+    "fact": "0.106",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Philippines Carabao ( national animal ) Bubalus bubalis Philippine eagle ( national bird ) Pithecophaga jefferyi"
+     }
+    ]
+   },
+   {
+    "fact": "0.107",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Poland White - tailed eagle ( national bird ) Haliaeetus albicilla"
+     }
+    ]
+   },
+   {
+    "fact": "0.108",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Poland White - tailed eagle ( national bird ) Haliaeetus albicilla White stork ( national bird ) Ciconia ciconia"
+     }
+    ]
+   },
+   {
+    "fact": "0.109",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Poland White - tailed eagle ( national bird ) Haliaeetus albicilla White stork ( national bird ) Ciconia ciconia European bison ( national animal ) Bison bonasus"
+     }
+    ]
+   },
+   {
+    "fact": "0.110",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Qatar Arabian oryx Oryx leucoryx"
+     }
+    ]
+   },
+   {
+    "fact": "0.111",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Romania Lynx Lynx lynx"
+     }
+    ]
+   },
+   {
+    "fact": "0.112",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Russia Eurasian brown bear Ursus arctos arctos"
+     }
+    ]
+   },
+   {
+    "fact": "0.113",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Rwanda Leopard Panthera pardus"
+     }
+    ]
+   },
+   {
+    "fact": "0.114",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Saint Vincent and the Grenadines Saint Vincent amazon Amazona guildingii"
+     }
+    ]
+   },
+   {
+    "fact": "0.115",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Serbia Wolf Canis lupus lupus"
+     }
+    ]
+   },
+   {
+    "fact": "0.116",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Serbia Wolf Canis lupus lupus White eagle Mythical"
+     }
+    ]
+   },
+   {
+    "fact": "0.117",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Serbia Wolf Canis lupus lupus White eagle Mythical Lynx Lynx lynx"
+     }
+    ]
+   },
+   {
+    "fact": "0.118",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Somalia Leopard ( national animal ) Panthera pardus"
+     }
+    ]
+   },
+   {
+    "fact": "0.119",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "South Africa Springbok ( national animal ) Antidorcas marsupialis"
+     }
+    ]
+   },
+   {
+    "fact": "0.120",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "South Africa Springbok ( national animal ) Antidorcas marsupialis Blue crane ( national bird ) Anthropoides paradiseus"
+     }
+    ]
+   },
+   {
+    "fact": "0.121",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "South Africa Springbok ( national animal ) Antidorcas marsupialis Blue crane ( national bird ) Anthropoides paradiseus Galjoen ( national fish ) Dichistius capensis"
+     }
+    ]
+   },
+   {
+    "fact": "0.122",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "South Korea Siberian tiger Panthera tigris altaica"
+     }
+    ]
+   },
+   {
+    "fact": "0.123",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Korean magpie ( national bird ) Pica ( pica ) sericea"
+     }
+    ]
+   },
+   {
+    "fact": "0.124",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Sri Lanka Sri Lankan junglefowl ( national bird ) Gallus lafayettii"
+     }
+    ]
+   },
+   {
+    "fact": "0.125",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Tanzania Giraffe Giraffa camelopardalis"
+     }
+    ]
+   },
+   {
+    "fact": "0.126",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Thailand Elephant Elephas maximus"
+     }
+    ]
+   },
+   {
+    "fact": "0.127",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "United Arab Emirates Arabian oryx ( national animal ) Oryx leucoryx"
+     }
+    ]
+   },
+   {
+    "fact": "0.128",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "United Arab Emirates Arabian oryx ( national animal ) Oryx leucoryx Peregrine falcon ( national bird ) Falco peregrinus"
+     }
+    ]
+   },
+   {
+    "fact": "0.129",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "United Kingdom Lion ( United Kingdom , England , Scotland , Wales ) Panthera leo"
+     }
+    ]
+   },
+   {
+    "fact": "0.130",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Bulldog ( Britain as `` British Bulldog '' ) Canis lupus familiaris"
+     }
+    ]
+   },
+   {
+    "fact": "0.131",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Red kite ( Wales ) Milvus milvus"
+     }
+    ]
+   },
+   {
+    "fact": "0.132",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Unicorn ( Scotland ) Mythical"
+     }
+    ]
+   },
+   {
+    "fact": "0.133",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Y Ddraig Goch ( Welsh Dragon Wales ) Mythical"
+     }
+    ]
+   },
+   {
+    "fact": "0.134",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "United States Bald eagle ( national bird ) Haliaeetus leucocephalus"
+     }
+    ]
+   },
+   {
+    "fact": "0.135",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "American bison ( national mammal ) Bison bison"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "18f0e3ceee3fbcca",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "This article covers the professional life of George W. Bush , the 43rd President of the United States"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "This article covers the professional life of George W. Bush , the 43rd President of the United States"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Prior to his election as President in 2000 , Bush held numerous other positions , including being an oil executive , an owner of the Texas Rangers baseball team , and Governor of Texas"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Prior to his election as President in 2000 , Bush held numerous other positions , including being an oil executive , an owner of the Texas Rangers baseball team , and Governor of Texas"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Prior to his election as President in 2000 , Bush held numerous other positions , including being an oil executive , an owner of the Texas Rangers baseball team , and Governor of Texas"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Prior to his election as President in 2000 , Bush held numerous other positions , including being an oil executive , an owner of the Texas Rangers baseball team , and Governor of Texas"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Prior to his election as President in 2000 , Bush held numerous other positions , including being an oil executive , an owner of the Texas Rangers baseball team , and Governor of Texas"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "( Also see Governorship of George W. Bush . )"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "23bc95abd99453d8",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Dollree Mapp was an employee in the illegal gambling rackets dominated by Cleveland rackets kingpin Shon Birns"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Dollree Mapp was an employee in the illegal gambling rackets dominated by Cleveland rackets kingpin Shon Birns"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "On May 23 , 1957 , police officers in Cleveland , Ohio , received an anonymous tip by phone"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Virgil Ogletree , a numbers operator who was wanted for questioning in the bombing of rival numbers racketeer and future boxing promoter Don King 's home three days earlier , might be found at Mapp 's house"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Virgil Ogletree , a numbers operator who was wanted for questioning in the bombing of rival numbers racketeer and future boxing promoter Don King 's home three days earlier , might be found at Mapp 's house"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Virgil Ogletree , a numbers operator who was wanted for questioning in the bombing of rival numbers racketeer and future boxing promoter Don King 's home three days earlier , might be found at Mapp 's house"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Virgil Ogletree , a numbers operator who was wanted for questioning in the bombing of rival numbers racketeer and future boxing promoter Don King 's home three days earlier , might be found at Mapp 's house"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Virgil Ogletree , a numbers operator who was wanted for questioning in the bombing of rival numbers racketeer and future boxing promoter Don King 's home three days earlier , might be found at Mapp 's house"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "might be found at Mapp 's house , as well as illegal betting slips and equipment employed in the `` California Gold '' numbers operation set up by Mapp 's boyfriend Edward Keeling"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "might be found at Mapp 's house , as well as illegal betting slips and equipment employed in the `` California Gold '' numbers operation set up by Mapp 's boyfriend Edward Keeling"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "might be found at Mapp 's house , as well as illegal betting slips and equipment employed in the `` California Gold '' numbers operation set up by Mapp 's boyfriend Edward Keeling"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "might be found at Mapp 's house , as well as illegal betting slips and equipment employed in the `` California Gold '' numbers operation set up by Mapp 's boyfriend Edward Keeling"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Three officers went to the home and asked for permission to enter"
+     }
+    ]
+   },
+   {
+    "fact": "0.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Three officers went to the home and asked for permission to enter"
+     }
+    ]
+   },
+   {
+    "fact": "0.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "but Mapp , after consulting her lawyer by telephone , refused to admit them without a search warrant"
+     }
+    ]
+   },
+   {
+    "fact": "0.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "but Mapp , after consulting her lawyer by telephone , refused to admit them without a search warrant"
+     }
+    ]
+   },
+   {
+    "fact": "0.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Two officers left , and one remained , watching the house from across the street"
+     }
+    ]
+   },
+   {
+    "fact": "0.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Two officers left , and one remained , watching the house from across the street"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "93c956d73bdd3488",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "`` Baby , Now That I 've Found You '' ( Tony Macaulay , John MacLeod ) -- 3 : 49 ( Previously Unreleased )"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "`` Baby , Now That I 've Found You '' ( Tony Macaulay , John MacLeod ) -- 3 : 49 ( Previously Unreleased )"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "`` Baby , Now That I 've Found You '' ( Tony Macaulay , John MacLeod ) -- 3 : 49 ( Previously Unreleased )"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "`` Oh ,"
+     },
+     {
+      "item": 2,
+      "quote": "Atlanta '' ( Mick Ralphs ) -- 4 : 41 ( Previously Unreleased )"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "`` Oh ,"
+     },
+     {
+      "item": 2,
+      "quote": "Atlanta '' ( Mick Ralphs ) -- 4 : 41 ( Previously Unreleased )"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Atlanta '' ( Mick Ralphs ) -- 4 : 41 ( Previously Unreleased )"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "`` Broadway '' ( Sidney & Suzanne Cox ) -- 3 : 57 ( Previously Unreleased )"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "`` Broadway '' ( Sidney & Suzanne Cox ) -- 3 : 57 ( Previously Unreleased )"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "`` Broadway '' ( Sidney & Suzanne Cox ) -- 3 : 57 ( Previously Unreleased )"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "`` Every Time You Say Goodbye '' ( John Pennell ) -- 3 : 13 ( From the Album `` Every Time You Say Goodbye '' by Alison Krauss & Union Station )"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "`` Every Time You Say Goodbye '' ( John Pennell ) -- 3 : 13 ( From the Album `` Every Time You Say Goodbye '' by Alison Krauss & Union Station )"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "`` Every Time You Say Goodbye '' ( John Pennell ) -- 3 : 13 ( From the Album `` Every Time You Say Goodbye '' by Alison Krauss & Union Station )"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "`` Tonight I 'll Be Lonely Too '' ( Sidney Cox ) -- 3 : 25 ( From the Album `` I 've Got That Old Feeling '' by Alison Krauss )"
+     }
+    ]
+   },
+   {
+    "fact": "0.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "`` Tonight I 'll Be Lonely Too '' ( Sidney Cox ) -- 3 : 25 ( From the Album `` I 've Got That Old Feeling '' by Alison Krauss )"
+     }
+    ]
+   },
+   {
+    "fact": "0.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "`` Tonight I 'll Be Lonely Too '' ( Sidney Cox ) -- 3 : 25 ( From the Album `` I 've Got That Old Feeling '' by Alison Krauss )"
+     }
+    ]
+   },
+   {
+    "fact": "0.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "`` Teardrops Will Kiss the Morning Dew '' ( Paul Craft ) -- 3 : 38 ( From the Album `` Two Highways '' by Alison Krauss & Union Station )"
+     }
+    ]
+   },
+   {
+    "fact": "0.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "`` Teardrops Will Kiss the Morning Dew '' ( Paul Craft ) -- 3 : 38 ( From the Album `` Two Highways '' by Alison Krauss & Union Station )"
+     }
+    ]
+   },
+   {
+    "fact": "0.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "`` Teardrops Will Kiss the Morning Dew '' ( Paul Craft ) -- 3 : 38 ( From the Album `` Two Highways '' by Alison Krauss & Union Station )"
+     }
+    ]
+   },
+   {
+    "fact": "0.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "`` Sleep On '' ( Nelson Mandrell ) -- 2 : 23 ( From the Album `` Too Late to Cry '' by Alison Krauss )"
+     }
+    ]
+   },
+   {
+    "fact": "0.19",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "`` Sleep On '' ( Nelson Mandrell ) -- 2 : 23 ( From the Album `` Too Late to Cry '' by Alison Krauss )"
+     }
+    ]
+   },
+   {
+    "fact": "0.20",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "`` Sleep On '' ( Nelson Mandrell ) -- 2 : 23 ( From the Album `` Too Late to Cry '' by Alison Krauss )"
+     }
+    ]
+   },
+   {
+    "fact": "0.21",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "`` When God Dips His Pen of Love in My Heart '' ( Cleavant Derricks ) -- 2 : 26 ( From the Album `` Everybody 's Reaching Out for Someone '' by The Cox Family )"
+     }
+    ]
+   },
+   {
+    "fact": "0.22",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "`` When God Dips His Pen of Love in My Heart '' ( Cleavant Derricks ) -- 2 : 26 ( From the Album `` Everybody 's Reaching Out for Someone '' by The Cox Family )"
+     }
+    ]
+   },
+   {
+    "fact": "0.23",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "`` When God Dips His Pen of Love in My Heart '' ( Cleavant Derricks ) -- 2 : 26 ( From the Album `` Everybody 's Reaching Out for Someone '' by The Cox Family )"
+     }
+    ]
+   },
+   {
+    "fact": "0.24",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.25",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.26",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.27",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.28",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.29",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.30",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.31",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.32",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.33",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.34",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.35",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ }
+]

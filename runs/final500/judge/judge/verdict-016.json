@@ -1,0 +1,67 @@
+[
+{"id": "218ce625adb1046a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Sam Bankman-Fried, the former CEO of crypto exchange FTX"}]},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, has been found guilty on seven counts including charges of wire fraud"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy"}, {"item": 3, "quote": "for the trial of Sam Bankman-Fried"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy"}, {"item": 3, "quote": "for the trial of Sam Bankman-Fried"}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 6, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 6, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]},
+{"fact": "3.2", "status": "stated", "evidence": [{"item": 6, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]},
+{"fact": "3.3", "status": "stated", "evidence": [{"item": 6, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]}
+]},
+{"id": "6755c2032dec93d8", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising"}, {"item": 4, "quote": "including its deal with Apple and other partners to make Google the default search engine"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "from companies including Apple, Samsung and Mozilla"}, {"item": 4, "quote": "The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "from companies including Apple, Samsung and Mozilla"}, {"item": 4, "quote": "The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "paid $26.3 billion in 2021 to multiple browsers, phones and platforms"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 8, "quote": "making itself the default search engine across platforms"}, {"item": 4, "quote": "including its deal with Apple and other partners to make Google the default search engine"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]}
+]},
+{"id": "6d718c746389478f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "former CEO of FTX oversaw a supposedly thriving crypto exchange"}, {"item": 2, "quote": "Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "FTX was a failed cryptocurrency exchange founded in 2019"}]},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 1, "quote": "is facing seven counts of criminal charges: two counts of wire fraud, and five counts of conspiracy"}, {"item": 2, "quote": "has been found guilty on seven counts including charges of wire fraud"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 3, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]}
+]},
+{"id": "ec82390114496afc", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter"}]}
+]},
+{"id": "2c672fd08a9fb98f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Erik ten Hag is a top coach from Ajax"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Erik ten Hag is a top coach from Ajax but they need a top blueprint not only for now but for the next five years, and work towards that, and sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right things"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Erik ten Hag is a top coach from Ajax but they need a top blueprint not only for now but for the next five years, and work towards that, and sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right things"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "Erik ten Hag is a top coach from Ajax but they need a top blueprint not only for now but for the next five years, and work towards that, and sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right things"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "Erik ten Hag is a top coach from Ajax but they need a top blueprint not only for now but for the next five years, and work towards that, and sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right things"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "they find themselves out of Europe altogether"}, {"item": 8, "quote": "Manchester United out of Europe after defeat to Bayern Munich"}]},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []}
+]}
+]

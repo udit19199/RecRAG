@@ -1,0 +1,56 @@
+[
+{"id": "f06bed8742e4860f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "With inflation down from its peak two summers ago"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "With inflation down from its peak two summers ago, Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates and could soon turn to cutting them."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates and could soon turn to cutting them."}]}
+]},
+{"id": "b0bdb8ee929ebf93", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "tying FTX CEO Sam Bankman-Fried to the conspiracy to take FTX customer funds"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "the trial of Sam Bankman-Fried"}, {"item": 3, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "the trial of Sam Bankman-Fried"}, {"item": 3, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 2, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 2, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "3.2", "status": "stated", "evidence": [{"item": 2, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "3.3", "status": "stated", "evidence": [{"item": 2, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "3.4", "status": "stated", "evidence": [{"item": 2, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+]},
+{"id": "1d29481b04933826", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "The post came after Swift was seen enthusiastically cheering him on in the box seats at Arrowhead Stadium"}, {"item": 5, "quote": "Fans have spotted Travis Kelce wearing a friendship bracelet with Taylor Swift lyrics on it"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "The post came after Swift was seen enthusiastically cheering him on in the box seats at Arrowhead Stadium, fuelling speculation that she and the athlete are dating."}, {"item": 5, "quote": "Fans have spotted Travis Kelce wearing a friendship bracelet with Taylor Swift lyrics on it"}]}
+]},
+{"id": "792ce09665cfb005", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Proposition bets, or props, are easy to understand, numerous, and cover both player props and team props to give you plenty of variety."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Proposition bets, or props, are easy to understand, numerous, and cover both player props and team props to give you plenty of variety."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Then, team props can range from which team will score the first bucket to the total points scored in a quarter to which team will lead at halftime."}]},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "beb24946382055d0", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX?"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "Of course everyone who had money trapped on the FTX exchange when it collapsed"}, {"item": 5, "quote": "Even if they are made whole by the bankruptcy proceedings"}]},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 10, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+]}
+]

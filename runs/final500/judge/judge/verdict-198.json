@@ -1,0 +1,68 @@
+[
+{"id": "74be4ddc78fff2a1", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "in the hundreds of million dollars because a trader had exploited its system, Wang moved that loss onto Alameda’s balance sheet."}, {"item": 7, "quote": "instead, because FTX’s balance sheets were visible to investors and Alameda’s weren’t."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "contradicted", "evidence": [{"item": 6, "quote": "Alameda could have negative balances and unlimited withdrawals."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []}
+]},
+{"id": "a7d06825f2285a59", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "OpenAI announced that GPT-4 with vision will become available alongside the upcoming launch of GPT-4 Turbo API."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "OpenAI announced that GPT-4 with vision will become available alongside the upcoming launch of GPT-4 Turbo API."}]}
+]},
+{"id": "ec07111266e7abf1", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []},
+{"fact": "3.2", "status": "missing", "evidence": []},
+{"fact": "3.3", "status": "missing", "evidence": []}
+]},
+{"id": "dcd8b4c5f01719f3", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "for the trial of Sam Bankman-Fried, the disgraced cryptocurrency entrepreneur accused of"}, {"item": 10, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "85d7533bfe006408", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "he tried and failed to give her a friendship bracelet with"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "his phone number on it during one of her Eras Tour shows."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "he tried and failed to give her a friendship bracelet with"}]},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "Taylor Swift has revealed when her relationship with Travis Kelce really started."}]},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "184f0a74da8f807d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Megan says that while she doesn’t have as many followers on Twitch as she does on her YouTube channel,"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "there are elements of Twitch she prefers to YouTube, including the"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "ability to be herself and engage with fans more closely."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "ability to be herself and engage with fans more closely."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Twitch cut that deal in favor of the platform’s ad revenue program"}]}
+]}
+]

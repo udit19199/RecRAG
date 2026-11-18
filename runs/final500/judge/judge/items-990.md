@@ -1,0 +1,980 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 7 items.
+
+=== ITEM id=25d0099e67ad201d ===
+Gold sentences and facts:
+Sentence 0: 1924 Winter Olympics medal table Rank NOC Gold Silver Bronze Total Norway ( NOR ) 7 6 17 Finland ( FIN ) 11 Austria ( AUT ) 0 Switzerland ( SUI ) 0 United States ( USA ) 6 Great Britain ( GBR ) 7 Sweden ( SWE ) 0 8 Canada ( CAN ) 0 0 9 France ( FRA ) * 0 0 10 Belgium ( BEL ) 0 0 Total ( 10 NOCs ) 16 16 17 49
+  Fact 0.0: The 1924 Winter Olympics medal table has the columns Rank, NOC, Gold, Silver, Bronze, and Total.
+  Fact 0.1: The medal table lists Norway (NOR) with the values 7, 6, and 17.
+  Fact 0.2: The medal table lists Finland (FIN) with the value 11.
+  Fact 0.3: The medal table lists Austria (AUT) with the value 0.
+  Fact 0.4: The medal table lists Switzerland (SUI) with the value 0.
+  Fact 0.5: The medal table lists United States (USA) with the value 6.
+  Fact 0.6: The medal table lists Great Britain (GBR) with the value 7.
+  Fact 0.7: The medal table lists Sweden (SWE) with the values 0 and 8.
+  Fact 0.8: The medal table lists Canada (CAN) with the values 0, 0, and 9.
+  Fact 0.9: The medal table lists France (FRA), marked with an asterisk, with the values 0, 0, and 10.
+  Fact 0.10: The medal table lists Belgium (BEL) with the values 0 and 0.
+  Fact 0.11: The medal table's total row for the 10 NOCs lists the values 16, 16, 17, and 49.
+Sentence 1: The 1924 Winter Olympics , officially known as the I Olympic Winter Games , and known at the time as Semaine Internationale des Sports d'Hiver ( `` International Winter Sports Week '' ) , was a winter multi-sport event held in Chamonix , France , from 25 January to 5 February 1924 . Norway topped the table , collecting seventeen medals in total , including four gold , three of which were won by Thorleif Haug in the nordic combined and cross-country skiing events . Norway also achieved two podium sweeps , winning all three medals in both the 50 km cross-country skiing and the nordic combined . This remained a record at the Winter Olympics until 2014 .
+  Fact 1.0: The 1924 Winter Olympics was officially known as the I Olympic Winter Games.
+  Fact 1.1: At the time, the 1924 Winter Olympics was known as Semaine Internationale des Sports d'Hiver ("International Winter Sports Week").
+  Fact 1.2: The 1924 Winter Olympics was a winter multi-sport event.
+  Fact 1.3: The 1924 Winter Olympics was held in Chamonix, France.
+  Fact 1.4: The 1924 Winter Olympics was held from 25 January to 5 February 1924.
+  Fact 1.5: Norway topped the medal table of the 1924 Winter Olympics.
+  Fact 1.6: Norway collected seventeen medals in total at the 1924 Winter Olympics.
+  Fact 1.7: Norway collected four gold medals at the 1924 Winter Olympics.
+  Fact 1.8: Three of Norway's four gold medals at the 1924 Winter Olympics were won by Thorleif Haug.
+  Fact 1.9: Thorleif Haug won his gold medals in the nordic combined and cross-country skiing events.
+  Fact 1.10: Norway achieved two podium sweeps at the 1924 Winter Olympics.
+  Fact 1.11: Norway won all three medals in the 50 km cross-country skiing event at the 1924 Winter Olympics.
+  Fact 1.12: Norway won all three medals in the nordic combined event at the 1924 Winter Olympics.
+  Fact 1.13: Norway's two podium sweeps at the 1924 Winter Olympics remained a record at the Winter Olympics until 2014.
+
+Retrieved items:
+<item 1>
+1924 Winter Olympics medal table
+Partly due to this , varying figures are reported for the number of participants . The International Olympic Committee ( IOC ) website suggests that 258
+athletes from 16 nations participated in 16 events across 9 sports . In contrast , the Sports - Reference website lists 313 participants from 19 countries .
+Bill Mallon , a prominent Olympic Games historian , quotes a figure of 291 competitors in his Historical Dictionary of the Olympic Movement . Meanwhile the
+official report for the 1924 Summer and Winter Olympics listed 293 athletes from 17 nations . Finland placed second on the table , collecting four gold medals
+amongst a total of eleven . Clas Thunberg won five of their medals , achieving a medal in each of the speed skating events he took part in ; collecting three
+gold medals , one silver and one bronze . Eight of the competing nations achieved at least one gold medal , with only Belgium and the hosts , France , medalling
+without winning a gold medal . One medal was reallocated in 1974 ; during the games , Thorleif Haug of Norway had been awarded the bronze medal in ski jumping ,
+along with his three gold medals .
+</item 1>
+
+<item 2>
+1924 Winter Olympics medal table
+By using this site , you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit
+organization . About Wikipedia
+</item 2>
+
+<item 3>
+1924 Winter Olympics medal table
+Two bronze medals were awarded in the 500 metres speed skating event for the third place tie . Key * Host nation ( France ) 1924 Winter Olympics medal table
+Rank NOC Gold Silver Bronze Total Norway ( NOR ) 7 6 17 Finland ( FIN ) 11 Austria ( AUT ) 0 Switzerland ( SUI ) 0 United States ( USA ) 6 Great Britain ( GBR )
+7 Sweden ( SWE ) 0 8 Canada ( CAN ) 0 0 9 France ( FRA ) * 0 0 10 Belgium ( BEL ) 0 0 Total ( 10 NOCs ) 16 16 17 49 See also ( edit ) List of 1924 Winter
+Olympics medal winners Notes ( edit ) Jump up ^ No country achieved more than two podium sweeps until the Netherlands in 2014 , but the record was tied prior to
+that ; by Norway themselves in 1928 and 1932 , the Soviet Union in 1964 , East Germany in 1972 and 1984 , and Germany in 1998 . References ( edit ) ^ Jump up to
+: `` 1924 Medal Tally '' .
+</item 3>
+
+<item 4>
+1924 Winter Olympics medal table
+1924 Winter Olympics medal table - wikipedia 1924 Winter Olympics medal table Jump to : navigation , search Publicity poster for the event The 1924 Winter
+Olympics , officially known as the I Olympic Winter Games , and known at the time as Semaine Internationale des Sports d'Hiver ( `` International Winter Sports
+Week '' ) , was a winter multi-sport event held in Chamonix , France , from 25 January to 5 February 1924 . Norway topped the table , collecting seventeen
+medals in total , including four gold , three of which were won by Thorleif Haug in the nordic combined and cross-country skiing events . Norway also achieved
+two podium sweeps , winning all three medals in both the 50 km cross-country skiing and the nordic combined . This remained a record at the Winter Olympics
+until 2014 . When it was held , the games were not formally recognised as being the Olympics , but acknowledged that they were held under the `` high patronage
+of the International Olympic Committee '' . Partly due to this , varying figures are reported for the number of participants .
+</item 4>
+
+<item 5>
+1924 Winter Olympics medal table
+International Olympic Committee . Archived from the original on 4 December 2008 . Retrieved 22 October 2017 . ( hide ) Olympic Games medal tables Olympic medal
+All - time Olympic Games medal table Pierre de Coubertin medal Intercalated Games ( 1906 ) Summer Olympic Games 1896 1900 1904 1908 1912 1920 1924 1928 1932
+1936 1948 1952 1956 1960 1964 1968 1972 1976 1980 1984 1988 1992 2000 2008 2012 2016 Winter Olympic Games 1924 1928 1932 1936 1948 1952 1956 1960 1964 1968 1972
+1976 1980 1984 1988 1992 1998 2002 2006 2014 2018 Lists of Olympic medalists List of stripped Olympic medals List of Olympic medals by host nation List of ties
+for medals at the Olympics Retrieved from `` https://en.wikipedia.
+</item 5>
+
+<item 6>
+1924 Winter Olympics medal table
+Sports Reference . Archived from the original on 25 August 2017 . Retrieved 25 August 2017 . Jump up ^ Mallon , Bill ; Heijmans , Jereon ( 2011 ) . Historical
+Dictionary of the Olympic Movement . Plymouth , UK : Scarecrow Press . p. 46 . ISBN 978 - 0 - 8108 - 7522 - 7 . Archived from the original on 14 October 2017 .
+Jump up ^ `` Official Report of the 1924 Olympic Games ( PDF ) ( in French ) . International Olympic Committee . 1924 . p. 662 . Archived ( PDF ) from the
+original on 26 February 2016 . Jump up ^ Jorsett , Per ( 13 February 2009 ) . `` Thorleif Haug '' . Norsk biografisk leksikon ( in Norwegian ) . Oslo :
+Kunnskapsforlaget . Archived from the original on 21 September 2017 . Retrieved 20 September 2017 .
+</item 6>
+
+<item 7>
+1924 Winter Olympics medal table
+A Norwegian historian discovered that there had been a scoring error , and an American , Anders Haugen , had actually finished in third place . As Haug had died
+in 1934 , his daughter presented Haugen , aged 83 , with his medal . In the official report , the classification of nations is ranked not by medals , but rather
+by `` points '' , which were awarded for each position from first to sixth ; not exclusively for gold , silver and bronze . Due to this , Czechoslovakia were
+included in the table ahead of Belgium , due to two fourth - place finishes , one fifth and one sixth . Italy were also present , in twelfth , for their
+solitary sixth place . Contents ( hide ) 1 Medal table 2 See also 3 Notes 4 References Medal table ( edit ) Clas Thunberg won five speed skating medals at the
+games for Finland . The medal table is based on information provided by the IOC and is consistent with IOC convention in its published medal tables . By default
+, the table is ordered by the number of gold medals the athletes from a nation have won ( in this context , a nation is an entity represented by a National
+Olympic Committee ) .
+</item 7>
+
+<item 8>
+1924 Winter Olympics medal table
+References ( edit ) ^ Jump up to : `` 1924 Medal Tally '' . Topend Sports . Archived from the original on 25 August 2017 . Retrieved 25 August 2017 . ^ Jump up
+to : `` Chamonix 1924 '' . International Olympic Committee . Archived from the original on 1 September 2017 . Retrieved 24 August 2017 . Jump up ^ BMallon ( 18
+February 2014 ) . `` Netherlands Speed Skating Medal Sweeps '' . OlympStats . Archived from the original on 25 August 2017 . Retrieved 25 August 2017 . Jump up
+^ `` Bergsma breaks Olympic record to lead fourth Dutch medal sweep '' . Xinhuanet. 19 February 2014 . Archived from the original on 23 September 2015 .
+Retrieved 25 August 2017 . ^ Jump up to : `` 1924 Chamonix Winter Games '' . Sports Reference . Archived from the original on 25 August 2017 .
+</item 8>
+
+<item 9>
+1924 Winter Olympics medal table
+wikipedia.org/w/index.php?title=1924_Winter_Olympics_medal_table&oldid=824811466 '' Categories : 1924 Winter Olympics Winter Olympics medal tables Hidden
+categories : CS1 French - language sources ( fr ) CS1 Norwegian - language sources ( no ) Use dmy dates from October 2017 Use British English from October 2017
+Featured lists Talk Contents About Wikipedia Беларуская Български Català Čeština Deutsch Español Esperanto فارسی Français 한국어 हिन्दी Magyar Македонски
+Nederlands 日本 語 Polski Português Русский Slovenščina Suomi Svenska ไทย Türkçe Українська اردو 中文 17 more Edit links This page was last edited on 9 February 2018
+, at 17 : 05 . Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree to
+the Terms of Use and Privacy Policy .
+</item 9>
+
+<item 10>
+1924 Winter Olympics medal table
+The number of silver medals is taken into consideration next and then the number of bronze medals . If nations are still tied , equal ranking is given and they
+are listed alphabetically . Two bronze medals were awarded in the 500 metres speed skating event for the third place tie .
+</item 10>
+=== END ITEM id=25d0099e67ad201d ===
+
+=== ITEM id=b88066bac7dbf387 ===
+Gold sentences and facts:
+Sentence 0: Human fertilization is the union of a human egg and sperm , usually occurring in the ampulla of the fallopian tube . The result of this union is the production of a zygote cell , or fertilized egg , initiating prenatal development . Scientists discovered the dynamics of human fertilization in the nineteenth century .
+  Fact 0.0: Human fertilization is the union of a human egg and sperm.
+  Fact 0.1: Human fertilization usually occurs in the ampulla of the fallopian tube.
+  Fact 0.2: The result of the union of a human egg and sperm is a zygote cell, also called a fertilized egg.
+  Fact 0.3: The union of a human egg and sperm initiates prenatal development.
+  Fact 0.4: Scientists discovered the dynamics of human fertilization in the nineteenth century.
+Sentence 1: The process of fertilization involves a sperm fusing with an ovum . The most common sequence begins with ejaculation during copulation , follows with ovulation , and finishes with fertilization . Various exceptions to this sequence are possible , including artificial insemination , in vitro fertilization , external ejaculation without copulation , or copulation shortly after ovulation . Upon encountering the secondary oocyte , the acrosome of the sperm produces enzymes which allow it to burrow through the outer jelly coat of the egg . The sperm plasma then fuses with the egg 's plasma membrane , the sperm head disconnects from its flagellum and the egg travels down the Fallopian tube to reach the uterus .
+  Fact 1.0: The process of fertilization involves a sperm fusing with an ovum.
+  Fact 1.1: The most common sequence of fertilization begins with ejaculation during copulation.
+  Fact 1.2: The most common sequence of fertilization is followed by ovulation.
+  Fact 1.3: The most common sequence of fertilization finishes with fertilization.
+  Fact 1.4: Various exceptions to the most common sequence of fertilization are possible.
+  Fact 1.5: One exception to the sequence of fertilization is artificial insemination.
+  Fact 1.6: One exception to the sequence of fertilization is in vitro fertilization.
+  Fact 1.7: One exception to the sequence of fertilization is external ejaculation without copulation.
+  Fact 1.8: One exception to the sequence of fertilization is copulation shortly after ovulation.
+  Fact 1.9: Upon encountering the secondary oocyte, the acrosome of the sperm produces enzymes.
+  Fact 1.10: The enzymes from the acrosome of the sperm allow the sperm to burrow through the outer jelly coat of the egg.
+  Fact 1.11: The sperm plasma fuses with the egg's plasma membrane.
+  Fact 1.12: The sperm head disconnects from its flagellum.
+  Fact 1.13: The egg travels down the Fallopian tube to reach the uterus.
+
+Retrieved items:
+<item 1>
+Human fertilization
+This is why all mitochondria in humans are of maternal origin . Still , a considerable amount of RNA from the sperm is delivered to the resulting embryo and
+likely influences embryo development and the phenotype of the offspring . Replication ( edit ) The pronuclei migrate toward the center of the oocyte , rapidly
+replicating their DNA as they do so to prepare the zygote for its first mitotic division . Mitosis ( edit ) Usually 23 chromosomes from spermatozoon and 23
+chromosomes from egg cell fuse ( half of spermatozoons carry X chromosome and the other half Y chromosome ) . Their membranes dissolve , leaving no barriers
+between the male and female chromosomes . During this dissolution , a mitotic spindle forms between them . The spindle captures the chromosomes before they
+disperse in the egg cytoplasm . Upon subsequently undergoing mitosis ( which includes pulling of chromatids towards centrioles in anaphase ) the cell gathers
+genetic material from the male and female together . Thus , the first mitosis of the union of sperm and oocyte is the actual fusion of their chromosomes .
+</item 1>
+
+<item 2>
+Human fertilization
+Sperm preparation ( edit ) Further information : Acrosome reaction At the beginning of the process , the sperm undergoes a series of changes , as freshly
+ejaculated sperm is unable or poorly able to fertilize . The sperm must undergo capacitation in the female 's reproductive tract over several hours , which
+increases its motility and destabilizes its membrane , preparing it for the acrosome reaction , the enzymatic penetration of the egg 's tough membrane , the
+zona pellucida , which surrounds the oocyte . Zona pellucida ( edit ) After binding to the corona radiata the sperm reaches the zona pellucida , which is an
+extra-cellular matrix of glycoproteins . A special complementary molecule on the surface of the sperm head binds to a ZP3 glycoprotein in the zona pellucida .
+This binding triggers the acrosome to burst , releasing enzymes that help the sperm get through the zona pellucida . Some sperm cells consume their acrosome
+prematurely on the surface of the egg cell , facilitating the penetration by other sperm cells .
+</item 2>
+
+<item 3>
+Human fertilization
+doi : 10.1016 / j. jpeds. 2004.07. 010 . External links ( edit ) Fertilization ( Conception ) ( hide ) Human physiology of sexual reproduction Menstrual cycle
+Menarche Menstruation Follicular phase Ovulation Luteal phase Gametogenesis Spermatogenesis ( spermatogonium spermatocyte spermatid sperm ) Oogenesis ( oogonium
+oocyte ootid ovum ) Germ cell ( gonocyte gamete ) Human sexual behavior Sexual arousal Sexual intercourse Masturbation Erection Orgasm Ejaculation Insemination
+Fertilisation / Fertility Implantation Pregnancy Postpartum period Mechanics of sex Life span Prenatal development / Sexual dimorphism / Sexual differentiation
+( Feminization Virilization ) Puberty ( Gonadarche Pubarche Menarche Spermarche Adrenarche ) Maternal age / Paternal age Climacteric ( Menopause Late - onset
+hypogonadism ) Tanner scale Egg Ovum Oviposition Oviparity Ovoviviparity Vivipary Reproductive endocrinology and infertility Hypothalamic -- pituitary --
+gonadal axis Hypothalamic
+</item 3>
+
+<item 4>
+Human fertilization
+As a population , sperm cells have on average 50 % genome similarity so the premature acrosomal reactions aid fertilization by a member of the same cohort . It
+may be regarded as a mechanism of kin selection . Recent studies have shown that the egg is not passive during this process . Cortical reaction ( edit ) Once
+the sperm cells find their way past the zona pellucida , the cortical reaction occurs . Cortical granules inside the secondary oocyte fuse with the plasma
+membrane of the cell , causing enzymes inside these granules to be expelled by exocytosis to the zona pellucida . This in turn causes the glyco - proteins in
+the zona pellucida to cross-link with each other -- i.e. the enzymes cause the ZP2 to hydrolyse into ZP2f -- making the whole matrix hard and impermeable to
+sperm . This prevents fertilization of an egg by more than one sperm . The cortical reaction and acrosome reaction are both essential to ensure that only one
+sperm will fertilize an egg . Fusion ( edit ) Fertilization and implantation in humans .
+</item 4>
+
+<item 5>
+Human fertilization
+The process of fertilization involves a sperm fusing with an ovum . The most common sequence begins with ejaculation during copulation , follows with ovulation
+, and finishes with fertilization . Various exceptions to this sequence are possible , including artificial insemination , in vitro fertilization , external
+ejaculation without copulation , or copulation shortly after ovulation . Upon encountering the secondary oocyte , the acrosome of the sperm produces enzymes
+which allow it to burrow through the outer jelly coat of the egg . The sperm plasma then fuses with the egg 's plasma membrane , the sperm head disconnects from
+its flagellum and the egg travels down the Fallopian tube to reach the uterus . In vitro fertilization ( IVF ) is a process by which egg cells are fertilized by
+sperm outside the womb , in vitro . Contents ( hide ) 1 Anatomy 1.1 Corona radiata 1.2 Cone of attraction and perivitelline membrane 1.3 Sperm preparation 1.4
+Zona pellucida 1.4.
+</item 5>
+
+<item 6>
+Gamete
+Gamete - wikipedia Gamete Jump to : navigation , search Part of a series on Sex Biological terms Sexual dimorphism Sexual differentiation Feminization
+Virilization Sex - determination system XY X0 ZW Z0 Temperature - dependent Haplodiploidy Heterogametic sex Homogametic sex Sex chromosome X chromosome Y
+chromosome Testis - determining factor Hermaphrodite Sequential hermaphroditism Intersex Sexual reproduction Evolution of sexual reproduction Anisogamy Isogamy
+Germ cell Meiosis Gametogenesis Spermatogenesis Oogenesis Gamete spermatozoon ovum Fertilization External fertilization Internal fertilization Sexual selection
+Plant reproduction Fungal reproduction Sexual reproduction in animals Sexual intercourse Copulation Human reproduction Sexuality Plant sexuality Animal
+sexuality Human sexuality Mechanics Differentiation Activity Sex portal Biology portal A gamete ( from Ancient Greek γαμετή gamete from gamein `` to marry '' )
+is a haploid cell that fuses with another haploid cell during fertilization ( conception ) in organisms that sexually reproduce .
+</item 6>
+
+<item 7>
+Gamete
+Retrieved 8 March 2015 . ( hide ) Human physiology of sexual reproduction Menstrual cycle Menarche Menstruation Follicular phase Ovulation Luteal phase
+Gametogenesis Spermatogenesis ( spermatogonium spermatocyte spermatid sperm ) Oogenesis ( oogonium oocyte ootid ovum ) Germ cell ( gonocyte gamete ) Human
+sexual behavior Sexual arousal Sexual intercourse Masturbation Erection Orgasm Ejaculation Insemination Fertilisation / Fertility Implantation Pregnancy
+Postpartum period Mechanics of sex Life span Prenatal development / Sexual dimorphism / Sexual differentiation ( Feminization Virilization ) Puberty (
+Gonadarche Pubarche Menarche Spermarche Adrenarche ) Maternal age / Paternal age Climacteric ( Menopause Late - onset hypogonadism ) Tanner scale Egg Ovum
+Oviposition Oviparity Ovoviviparity Vivipary Reproductive endocrinology and infertility Hypothalamic -- pituitary -- gonadal axis Hypothalamic -- pituitary --
+prolactin axis Andrology Hormone Breast Thelarche Breast development Lactation Breastfeeding Retrieved from `` https://en.
+</item 7>
+
+<item 8>
+Human fertilization
+1 Cortical reaction 2 Fusion 2.1 Cell membranes 2.2 Transformations 2.3 Replication 2.4 Mitosis 3 Fertilization age 4 Diseases 5 See also 6 References 7
+External links Anatomy ( edit ) Corona radiata ( edit ) The sperm binds through the corona radiata , a layer of follicle cells on the outside of the secondary
+oocyte . Fertilization occurs when the nucleus of both a sperm and an egg fuse to form a diploid cell , known as zygote . The successful fusion of gametes forms
+a new organism . Cone of attraction and perivitelline membrane ( edit ) Where the spermatozoon is about to pierce , the yolk ( ooplasm ) is drawn out into a
+conical elevation , termed the cone of attraction or reception cone . Once the spermatozoon has entered , the peripheral portion of the yolk changes into a
+membrane , the perivitelline membrane , which prevents the passage of additional spermatozoa .
+</item 8>
+
+<item 9>
+Human fertilization
+Human fertilization - wikipedia Human fertilization Jump to : navigation , search Part of a series on Human growth and development Stages Human embryogenesis
+Fetus Infant Toddler Early childhood Child Preadolescence Adolescence Adult Middle age Old age Biological milestones Fertilization Childbirth Walking Language
+acquisition Puberty Menopause Ageing Death Development and psychology Pre - and perinatal Infant and child Adolescent Youth Young adult Adult Maturity
+Developmental stage theories Attachment Ecological Psychosocial Psychosexual development Moral Cognitive Cultural - historical Evolutionary Human body portal
+The acrosome reaction for a sea urchin , a similar process . Note that the picture shows several stages of one and the same spermatozoon - only one penetrates
+the ovum Illustration depicting ovulation and fertilization . Human fertilization is the union of a human egg and sperm , usually occurring in the ampulla of
+the fallopian tube . The result of this union is the production of a zygote cell , or fertilized egg , initiating prenatal development . Scientists discovered
+the dynamics of human fertilization in the nineteenth century . The process of fertilization involves a sperm fusing with an ovum .
+</item 9>
+
+<item 10>
+Human fertilization
+Fusion ( edit ) Fertilization and implantation in humans . After the sperm enters the cytoplasm of the oocyte ( also called ovocyte ) , the tail and the outer
+coating of the sperm disintegrate and the cortical reaction takes place , preventing other sperm from fertilizing the same egg . The oocyte now undergoes its
+second meiotic division producing the haploid ovum and releasing a polar body . The sperm nucleus then fuses with the ovum , enabling fusion of their genetic
+material . Cell membranes ( edit ) The fusion of cell membranes of the secondary oocyte and sperm takes place . Transformations ( edit ) In preparation for the
+fusion of their genetic material both the oocyte and the sperm undergo transformations as a reaction to the fusion of cell membranes . The oocyte completes its
+second meiotic division . This results in a mature ovum . The nucleus of the oocyte is called a pronucleus in this process , to distinguish it from the nuclei
+that are the result of fertilization . The sperm 's tail and mitochondria degenerate with the formation of the male pronucleus . This is why all mitochondria in
+humans are of maternal origin .
+</item 10>
+=== END ITEM id=b88066bac7dbf387 ===
+
+=== ITEM id=54e0efcad31cded9 ===
+Gold sentences and facts:
+Sentence 0: Year Winning team Losing team Score Site Notes 1909 Pittsburgh Pirates Detroit Tigers 8 -- 0 Bennett Park , Detroit Rookie Babe Adams tosses a six hit shutout for his third win of the series . 1912 Boston Red Sox New York Giants 3 -- 2 F / 10 Fenway Park , Boston This decisive contest was actually game eight , as game two had ended in a tie . 1924 Washington Senators New York Giants 4 -- 3 F / 12 Griffith Stadium , Washington , D.C. Longest game seven in innings . In the 12th , Muddy Ruel doubled after a dropped foul popfly by Giants catcher Hank Gowdy . Ruel scored on a game - winning RBI double by Earl McNeely . 1925 Pittsburgh Pirates Washington Senators 9 -- 7 Forbes Field , Pittsburgh Pittsburgh became the first team in a best of seven to win the series when trailing three games to one . 1926 St. Louis Cardinals New York Yankees 3 -- 2 Yankee Stadium , the Bronx , New York City Grover Cleveland Alexander strikes out Tony Lazzeri with the bases loaded to end the seventh and preserve the Cardinals lead . Two innings later Babe Ruth is caught stealing to end the World Series . 1931 St. Louis Cardinals Philadelphia Athletics 4 -- 2 St. Louis , Missouri Last postseason game for the Athletics while based in Philadelphia . 1934 St. Louis Cardinals Detroit Tigers 11 -- 0 Navin Field , Detroit Dizzy Dean 's second win , a six - hit shutout on one day of rest , gives the Cardinals the title . 1940 Cincinnati Reds Detroit Tigers 2 -- 1 Crosley Field , Cincinnati This game was over in a snappy 1 : 47 while a sacrifice bunt and sacrifice fly scored the winning runs . 1945 Detroit Tigers Chicago Cubs 9 -- 3 Wrigley Field , Chicago Cubs last World Series appearance until 2016 . See also : Curse of the Billy Goat 1946 St. Louis Cardinals Boston Red Sox 4 -- 3 Sportsman 's Park III , St. Louis , Missouri Enos Slaughter 's famous mad dash scored the deciding run to win the game and the series . 1947 New York Yankees Brooklyn Dodgers 5 -- 2 Yankee Stadium , the Bronx , New York City This was the Series that featured Cookie Lavagetto 's pinch - hit that spoiled Bill Bevens ' no - hit bid and Al Gionfriddo 's catch to rob Joe DiMaggio of a home run . 1952 New York Yankees Brooklyn Dodgers 4 -- 2 Ebbets Field , Brooklyn , New York City Billy Martin 's game saving infield catch preserves the Yankees lead and helps win the game and the series . 1955 Brooklyn Dodgers New York Yankees 2 -- 0 Yankee Stadium , the Bronx , New York City Dodgers ' only championship in Brooklyn . The home team won all games of the series , except for game seven . 1956 New York Yankees Brooklyn Dodgers 9 -- 0 Ebbets Field , Brooklyn , New York City Jackie Robinson 's final Major League game . Last postseason game at Ebbets Field and Dodgers ' last postseason game before moving to Los Angeles . The home team won all games of the series , except for game seven . 1957 Milwaukee Braves New York Yankees 5 -- 0 Yankee Stadium , the Bronx , New York City The Braves ' only championship in Milwaukee . 1958 New York Yankees Milwaukee Braves 6 -- 2 County Stadium , Milwaukee The Yankees win their 18th World Series title after being down three games to one . This was the Braves ' last postseason game in Milwaukee . 1960 Pittsburgh Pirates New York Yankees 10 -- 9 Forbes Field , Pittsburgh Bill Mazeroski hit the walk - off home run to win the Pirates the championship . Last postseason game in Forbes Field . Last postseason game for Yankees ' manager Casey Stengel . Highest scoring game seven . 1962 New York Yankees San Francisco Giants 1 -- 0 Candlestick Park , San Francisco With runners on second and third and two outs , Willie McCovey 's line drive to Bobby Richardson ended the game . First game seven that ended with a 1 - 0 score . 1964 St. Louis Cardinals New York Yankees 7 -- 5 Busch Stadium I , St. Louis , Missouri The Yankees ' last World Series appearance until 1976 . Last postseason game at Busch Stadium I . 1965 Los Angeles Dodgers Minnesota Twins 2 -- 0 Metropolitan Stadium , Bloomington , Minnesota Pitching through immense pain and on two days rest , Sandy Koufax throws a 3 hit shutout to win the Series and World Series MVP . The home team won all games of the series , except for game seven . 1967 St. Louis Cardinals Boston Red Sox 7 -- 2 Fenway Park , Boston Bob Gibson wins his third game of the Series and also homers . 1968 Detroit Tigers St. Louis Cardinals 4 -- 1 Busch Stadium II , St. Louis , Missouri Mickey Lolich out - duels Bob Gibson . The Tigers rallied from a 3 - 1 deficit to win the series . First game seven loss by the Cardinals in the World Series . 1971 Pittsburgh Pirates Baltimore Orioles 2 -- 1 Memorial Stadium , Baltimore The home team won all games of the series , except for game seven . 1972 Oakland Athletics Cincinnati Reds 3 -- 2 Riverfront Stadium , Cincinnati The A 's first championship in Oakland . The A 's were the last American League team to win a World Series game seven on the road until 2017 . 1973 Oakland Athletics New York Mets 5 -- 2 Oakland -- Alameda County Coliseum , Oakland , California Bert Campaneris and Reggie Jackson hit the only Oakland home runs in this game to set the tone for victory and the series . Cincinnati Reds Boston Red Sox 4 -- 3 Fenway Park , Boston One night after Carlton Fisk 's famous home run , the Reds rebound to take the Series . 1979 Pittsburgh Pirates Baltimore Orioles 4 -- 1 Memorial Stadium , Baltimore The Pittsburgh Pirates , powered by NLCS and World Series MVP Willie Stargell , rally from a 3 - 1 deficit to win the series . The Pirates were the last team to win a road game seven until 2014 . 1982 St. Louis Cardinals Milwaukee Brewers 6 -- 3 Busch Stadium II , St. Louis , Missouri Joaquín Andújar earns his second win of the Series and Bruce Sutter his second save . 1985 Kansas City Royals St. Louis Cardinals 11 -- 0 Royals Stadium , Kansas City , Missouri Second World Series held entirely in the state of Missouri . The Royals also won the 1985 American League Championship Series in seven games . Royals became first team to win the World Series after losing the first two games at home . The Royals were the last team to come back from 3 -- 1 down to win a title , in any of the five major men 's professional sports leagues , until the Cleveland Cavaliers won the 2016 NBA Finals after trailing 3 -- 1 . The 1985 Royals were the last team to win a World Series after trailing 3 -- 1 until the Cubs did so in 2016 . 1986 New York Mets Boston Red Sox 8 -- 5 Shea Stadium , Flushing , Queens , New York Mets become the first team to be one strike away from elimination and come back to win the series . They also become the second team to win the series after losing the first two at home . Minnesota Twins St. Louis Cardinals 4 -- 2 Hubert H. Humphrey Metrodome , Minneapolis The home team won all seven games of the series for the first time in MLB history . 1991 Minnesota Twins Atlanta Braves 1 -- 0 F / 10 Hubert H. Humphrey Metrodome , Minneapolis Like in 1987 , the home team won all games of the series . The Twins won in the bottom of the 10th on a walk - off single by Gene Larkin scoring Dan Gladden after ​ 9 ⁄ scoreless innings of play . Jack Morris goes all ten innings for the Twins and is named the Series MVP . Twins Centerfielder Kirby Puckett hit a famous walk - off home run in the bottom of the eleventh inning of the previous night 's game to force this decisive game . 1997 Florida Marlins Cleveland Indians 3 -- 2 F / 11 Pro Player Stadium , Miami Gardens , Florida Florida becomes the first wild card team to win the World Series . The Marlins rallied for one run in the bottom of the ninth to tie and won in the eleventh on an Édgar Rentería RBI single off Charles Nagy . 2001 Arizona Diamondbacks New York Yankees 3 -- 2 Bank One Ballpark , Phoenix , Arizona Arizona becomes the fastest expansion team to win the World Series , rallying for two runs in the bottom of the ninth for a come - from - behind win , capped off by Luis Gonzalez hitting the winning RBI single off closer Mariano Rivera . The home team won every game of the series . 2002 Anaheim Angels San Francisco Giants 4 -- 1 Edison International Field , Anaheim , California Both World Series teams were wild card entrants into the playoffs . John Lackey became the second rookie pitcher to win a World Series game seven . 2011 St. Louis Cardinals Texas Rangers 6 -- 2 Busch Stadium , St. Louis , Missouri Cardinals became the second team to be one strike away from elimination and come back to win the series , which they did twice . Just like the 1991 series , a walk - off home run in the bottom of the eleventh inning of game six , forced this decisive game with David Freese providing the fire power . Most recent game seven won by the home team . 2014 San Francisco Giants Kansas City Royals 3 -- 2 Kauffman Stadium , Kansas City , Missouri Like in 2002 , both World Series teams were wild card entrants into the playoffs . The Giants became the first NL team to win a game seven on the road since 1979 . NLCS MVP and eventual World Series MVP Madison Bumgarner , normally a starter , pitched five scoreless innings of relief on two days rest to save the Giants ' third title in five years . 2016 Chicago Cubs Cleveland Indians 8 -- 7 F / 10 Progressive Field , Cleveland , Ohio Chicago Cubs ' first World Series win since 1908 . Game played between the two teams ( Cleveland Indians and Chicago Cubs ) with the longest active championship droughts . The Cubs are the first Major League Baseball team to come back to win the World Series from a 3 -- 1 series deficit since the 1985 Royals . Most recent World Series game seven to be decided in extra innings . First extra innings game seven to be won by the road team . 2017 Houston Astros Los Angeles Dodgers 5 -- 1 Dodger Stadium , Los Angeles First instance of back - to - back game sevens since 2001 -- 2002 . First World Series championship for the Astros , who became the first AL team to win a World Series game 7 on the road since 1972 . The Astros became the second team to win two winner - take - all game sevens in the same postseason since the Kansas City Royals in 1985 .
+  Fact 0.0: 1909 World Series: Pittsburgh Pirates beat Detroit Tigers 8-0 at Bennett Park, Detroit.
+  Fact 0.1: 1909 World Series: Rookie Babe Adams tossed a six-hit shutout for his third win of the series.
+  Fact 0.2: 1912 World Series: Boston Red Sox beat New York Giants 3-2 in 10 innings (F/10) at Fenway Park, Boston.
+  Fact 0.3: 1912 World Series: The decisive contest was actually game eight, as game two had ended in a tie.
+  Fact 0.4: 1924 World Series: Washington Senators beat New York Giants 4-3 in 12 innings (F/12) at Griffith Stadium, Washington, D.C.
+  Fact 0.5: 1924 World Series: It was the longest game seven in innings.
+  Fact 0.6: 1924 World Series: In the 12th inning, Muddy Ruel doubled after a dropped foul popfly by Giants catcher Hank Gowdy.
+  Fact 0.7: 1924 World Series: Muddy Ruel scored on a game-winning RBI double by Earl McNeely.
+  Fact 0.8: 1925 World Series: Pittsburgh Pirates beat Washington Senators 9-7 at Forbes Field, Pittsburgh.
+  Fact 0.9: 1925 World Series: Pittsburgh became the first team in a best-of-seven series to win when trailing three games to one.
+  Fact 0.10: 1926 World Series: St. Louis Cardinals beat New York Yankees 3-2 at Yankee Stadium, the Bronx, New York City.
+  Fact 0.11: 1926 World Series: Grover Cleveland Alexander struck out Tony Lazzeri with the bases loaded to end the seventh inning and preserve the Cardinals lead.
+  Fact 0.12: 1926 World Series: Two innings later, Babe Ruth was caught stealing to end the World Series.
+  Fact 0.13: 1931 World Series: St. Louis Cardinals beat Philadelphia Athletics 4-2 at St. Louis, Missouri.
+  Fact 0.14: 1931 World Series: It was the last postseason game for the Athletics while based in Philadelphia.
+  Fact 0.15: 1934 World Series: St. Louis Cardinals beat Detroit Tigers 11-0 at Navin Field, Detroit.
+  Fact 0.16: 1934 World Series: Dizzy Dean's second win, a six-hit shutout on one day of rest, gave the Cardinals the title.
+  Fact 0.17: 1940 World Series: Cincinnati Reds beat Detroit Tigers 2-1 at Crosley Field, Cincinnati.
+  Fact 0.18: 1940 World Series: The game was over in a snappy 1:47.
+  Fact 0.19: 1940 World Series: A sacrifice bunt and a sacrifice fly scored the winning runs.
+  Fact 0.20: 1945 World Series: Detroit Tigers beat Chicago Cubs 9-3 at Wrigley Field, Chicago.
+  Fact 0.21: 1945 World Series: It was the Cubs' last World Series appearance until 2016.
+  Fact 0.22: 1945 World Series: The row has a see-also note for the Curse of the Billy Goat.
+  Fact 0.23: 1946 World Series: St. Louis Cardinals beat Boston Red Sox 4-3 at Sportsman's Park III, St. Louis, Missouri.
+  Fact 0.24: 1946 World Series: Enos Slaughter's famous mad dash scored the deciding run to win the game and the series.
+  Fact 0.25: 1947 World Series: New York Yankees beat Brooklyn Dodgers 5-2 at Yankee Stadium, the Bronx, New York City.
+  Fact 0.26: 1947 World Series: This was the Series that featured Cookie Lavagetto's pinch-hit that spoiled Bill Bevens' no-hit bid.
+  Fact 0.27: 1947 World Series: Al Gionfriddo's catch robbed Joe DiMaggio of a home run.
+  Fact 0.28: 1952 World Series: New York Yankees beat Brooklyn Dodgers 4-2 at Ebbets Field, Brooklyn, New York City.
+  Fact 0.29: 1952 World Series: Billy Martin's game-saving infield catch preserved the Yankees lead and helped win the game and the series.
+  Fact 0.30: 1955 World Series: Brooklyn Dodgers beat New York Yankees 2-0 at Yankee Stadium, the Bronx, New York City.
+  Fact 0.31: 1955 World Series: It was the Dodgers' only championship in Brooklyn.
+  Fact 0.32: 1955 World Series: The home team won all games of the series except game seven.
+  Fact 0.33: 1956 World Series: New York Yankees beat Brooklyn Dodgers 9-0 at Ebbets Field, Brooklyn, New York City.
+  Fact 0.34: 1956 World Series: It was Jackie Robinson's final Major League game.
+  Fact 0.35: 1956 World Series: It was the last postseason game at Ebbets Field.
+  Fact 0.36: 1956 World Series: It was the Dodgers' last postseason game before moving to Los Angeles.
+  Fact 0.37: 1956 World Series: The home team won all games of the series except game seven.
+  Fact 0.38: 1957 World Series: Milwaukee Braves beat New York Yankees 5-0 at Yankee Stadium, the Bronx, New York City.
+  Fact 0.39: 1957 World Series: It was the Braves' only championship in Milwaukee.
+  Fact 0.40: 1958 World Series: New York Yankees beat Milwaukee Braves 6-2 at County Stadium, Milwaukee.
+  Fact 0.41: 1958 World Series: The Yankees won their 18th World Series title after being down three games to one.
+  Fact 0.42: 1958 World Series: It was the Braves' last postseason game in Milwaukee.
+  Fact 0.43: 1960 World Series: Pittsburgh Pirates beat New York Yankees 10-9 at Forbes Field, Pittsburgh.
+  Fact 0.44: 1960 World Series: Bill Mazeroski hit the walk-off home run to win the Pirates the championship.
+  Fact 0.45: 1960 World Series: It was the last postseason game in Forbes Field.
+  Fact 0.46: 1960 World Series: It was the last postseason game for Yankees' manager Casey Stengel.
+  Fact 0.47: 1960 World Series: It was the highest scoring game seven.
+  Fact 0.48: 1962 World Series: New York Yankees beat San Francisco Giants 1-0 at Candlestick Park, San Francisco.
+  Fact 0.49: 1962 World Series: With runners on second and third and two outs, Willie McCovey's line drive to Bobby Richardson ended the game.
+  Fact 0.50: 1962 World Series: It was the first game seven that ended with a 1-0 score.
+  Fact 0.51: 1964 World Series: St. Louis Cardinals beat New York Yankees 7-5 at Busch Stadium I, St. Louis, Missouri.
+  Fact 0.52: 1964 World Series: It was the Yankees' last World Series appearance until 1976.
+  Fact 0.53: 1964 World Series: It was the last postseason game at Busch Stadium I.
+  Fact 0.54: 1965 World Series: Los Angeles Dodgers beat Minnesota Twins 2-0 at Metropolitan Stadium, Bloomington, Minnesota.
+  Fact 0.55: 1965 World Series: Sandy Koufax pitched through immense pain and on two days rest.
+  Fact 0.56: 1965 World Series: Sandy Koufax threw a 3-hit shutout to win the Series.
+  Fact 0.57: 1965 World Series: Sandy Koufax was named World Series MVP.
+  Fact 0.58: 1965 World Series: The home team won all games of the series except game seven.
+  Fact 0.59: 1967 World Series: St. Louis Cardinals beat Boston Red Sox 7-2 at Fenway Park, Boston.
+  Fact 0.60: 1967 World Series: Bob Gibson wins his third game of the Series.
+  Fact 0.61: 1967 World Series: Bob Gibson also homers in this game.
+  Fact 0.62: 1968 World Series: Detroit Tigers beat St. Louis Cardinals 4-1 at Busch Stadium II, St. Louis, Missouri.
+  Fact 0.63: 1968 World Series: Mickey Lolich out-dueled Bob Gibson.
+  Fact 0.64: 1968 World Series: The Tigers rallied from a 3-1 deficit to win the series.
+  Fact 0.65: 1968 World Series: It was the first game seven loss by the Cardinals in the World Series.
+  Fact 0.66: 1971 World Series: Pittsburgh Pirates beat Baltimore Orioles 2-1 at Memorial Stadium, Baltimore.
+  Fact 0.67: 1971 World Series: The home team won all games of the series except game seven.
+  Fact 0.68: 1972 World Series: Oakland Athletics beat Cincinnati Reds 3-2 at Riverfront Stadium, Cincinnati.
+  Fact 0.69: 1972 World Series: It was the A's first championship in Oakland.
+  Fact 0.70: 1972 World Series: The A's were the last American League team to win a World Series game seven on the road until 2017.
+  Fact 0.71: 1973 World Series: Oakland Athletics beat New York Mets 5-2 at Oakland-Alameda County Coliseum, Oakland, California.
+  Fact 0.72: 1973 World Series: Bert Campaneris and Reggie Jackson hit the only Oakland home runs in this game.
+  Fact 0.73: 1973 World Series: Those home runs set the tone for victory and the series.
+  Fact 0.74: A row with no year listed: Cincinnati Reds beat Boston Red Sox 4-3 at Fenway Park, Boston.
+  Fact 0.75: A row with no year listed: It was one night after Carlton Fisk's famous home run.
+  Fact 0.76: A row with no year listed: The Reds rebounded to take the Series.
+  Fact 0.77: 1979 World Series: Pittsburgh Pirates beat Baltimore Orioles 4-1 at Memorial Stadium, Baltimore.
+  Fact 0.78: 1979 World Series: The Pirates were powered by NLCS and World Series MVP Willie Stargell.
+  Fact 0.79: 1979 World Series: The Pirates rallied from a 3-1 deficit to win the series.
+  Fact 0.80: 1979 World Series: The Pirates were the last team to win a road game seven until 2014.
+  Fact 0.81: 1982 World Series: St. Louis Cardinals beat Milwaukee Brewers 6-3 at Busch Stadium II, St. Louis, Missouri.
+  Fact 0.82: 1982 World Series: Joaquín Andújar earned his second win of the Series.
+  Fact 0.83: 1982 World Series: Bruce Sutter earned his second save.
+  Fact 0.84: 1985 World Series: Kansas City Royals beat St. Louis Cardinals 11-0 at Royals Stadium, Kansas City, Missouri.
+  Fact 0.85: 1985 World Series: It was the second World Series held entirely in the state of Missouri.
+  Fact 0.86: 1985 Royals also won the 1985 American League Championship Series in seven games.
+  Fact 0.87: 1985 Royals became the first team to win the World Series after losing the first two games at home.
+  Fact 0.88: 1985 Royals were the last team to come back from 3-1 down to win a title in any of the five major men's professional sports leagues until the Cleveland Cavaliers won the 2016 NBA Finals after trailing 3-1.
+  Fact 0.89: 1985 Royals were the last team to win a World Series after trailing 3-1 until the Cubs did so in 2016.
+  Fact 0.90: 1986 World Series: New York Mets beat Boston Red Sox 8-5 at Shea Stadium, Flushing, Queens, New York.
+  Fact 0.91: 1986 World Series: The Mets became the first team to be one strike away from elimination and come back to win the series.
+  Fact 0.92: 1986 World Series: The Mets became the second team to win the series after losing the first two games at home.
+  Fact 0.93: A row with no year listed: Minnesota Twins beat St. Louis Cardinals 4-2 at Hubert H. Humphrey Metrodome, Minneapolis.
+  Fact 0.94: A row with no year listed: The home team won all seven games of the series for the first time in MLB history.
+  Fact 0.95: 1991 World Series: Minnesota Twins beat Atlanta Braves 1-0 in 10 innings (F/10) at Hubert H. Humphrey Metrodome, Minneapolis.
+  Fact 0.96: 1991 World Series: Like in 1987, the home team won all games of the series.
+  Fact 0.97: 1991 World Series: The Twins won in the bottom of the 10th on a walk-off single by Gene Larkin scoring Dan Gladden after 9 and a fraction scoreless innings of play.
+  Fact 0.98: 1991 World Series: Jack Morris went all ten innings for the Twins and was named Series MVP.
+  Fact 0.99: 1991 World Series: Twins centerfielder Kirby Puckett hit a famous walk-off home run in the bottom of the eleventh inning of the previous night's game to force this decisive game.
+  Fact 0.100: 1997 World Series: Florida Marlins beat Cleveland Indians 3-2 in 11 innings (F/11) at Pro Player Stadium, Miami Gardens, Florida.
+  Fact 0.101: 1997 World Series: Florida became the first wild card team to win the World Series.
+  Fact 0.102: 1997 World Series: The Marlins rallied for one run in the bottom of the ninth to tie.
+  Fact 0.103: 1997 World Series: The Marlins won in the eleventh on an Édgar Rentería RBI single off Charles Nagy.
+  Fact 0.104: 2001 World Series: Arizona Diamondbacks beat New York Yankees 3-2 at Bank One Ballpark, Phoenix, Arizona.
+  Fact 0.105: 2001 World Series: Arizona became the fastest expansion team to win the World Series.
+  Fact 0.106: 2001 World Series: Arizona rallied for two runs in the bottom of the ninth for a come-from-behind win.
+  Fact 0.107: 2001 World Series: Luis Gonzalez hit the winning RBI single off closer Mariano Rivera.
+  Fact 0.108: 2001 World Series: The home team won every game of the series.
+  Fact 0.109: 2002 World Series: Anaheim Angels beat San Francisco Giants 4-1 at Edison International Field, Anaheim, California.
+  Fact 0.110: 2002 World Series: Both World Series teams were wild card entrants into the playoffs.
+  Fact 0.111: 2002 World Series: John Lackey became the second rookie pitcher to win a World Series game seven.
+  Fact 0.112: 2011 World Series: St. Louis Cardinals beat Texas Rangers 6-2 at Busch Stadium, St. Louis, Missouri.
+  Fact 0.113: 2011 World Series: The Cardinals became the second team to be one strike away from elimination and come back to win the series.
+  Fact 0.114: 2011 World Series: The Cardinals did come back to win the series twice.
+  Fact 0.115: 2011 World Series: Just like the 1991 series, a walk-off home run in the bottom of the eleventh inning of game six forced this decisive game.
+  Fact 0.116: 2011 World Series: David Freese provided the firepower in that game six walk-off home run.
+  Fact 0.117: 2011 World Series: The most recent game seven was won by the home team.
+  Fact 0.118: 2014 World Series: San Francisco Giants beat Kansas City Royals 3-2 at Kauffman Stadium, Kansas City, Missouri.
+  Fact 0.119: 2014 World Series: Like in 2002, both World Series teams were wild card entrants into the playoffs.
+  Fact 0.120: 2014 World Series: The Giants became the first NL team to win a game seven on the road since 1979.
+  Fact 0.121: 2014 World Series: Madison Bumgarner was the NLCS MVP and eventual World Series MVP.
+  Fact 0.122: 2014 World Series: Madison Bumgarner is normally a starter.
+  Fact 0.123: 2014 World Series: Madison Bumgarner pitched five scoreless innings of relief on two days rest.
+  Fact 0.124: 2014 World Series: Madison Bumgarner's relief pitching saved the Giants' third title in five years.
+  Fact 0.125: 2016 World Series: Chicago Cubs beat Cleveland Indians 8-7 in 10 innings (F/10) at Progressive Field, Cleveland, Ohio.
+  Fact 0.126: 2016 World Series: It was the Cubs' first World Series win since 1908.
+  Fact 0.127: 2016 World Series: The game was played between the two teams with the longest active championship droughts.
+  Fact 0.128: 2016 World Series: The Cubs are the first Major League Baseball team to come back to win the World Series from a 3-1 series deficit since the 1985 Royals.
+  Fact 0.129: 2016 World Series: It was the most recent World Series game seven to be decided in extra innings.
+  Fact 0.130: 2016 World Series: It was the first extra innings game seven to be won by the road team.
+  Fact 0.131: 2017 World Series: Houston Astros beat Los Angeles Dodgers 5-1 at Dodger Stadium, Los Angeles.
+  Fact 0.132: 2017 World Series: It was the first instance of back-to-back game sevens since 2001-2002.
+  Fact 0.133: 2017 World Series: It was the first World Series championship for the Astros.
+  Fact 0.134: 2017 World Series: The Astros became the first AL team to win a World Series game 7 on the road since 1972.
+  Fact 0.135: 2017 World Series: The Astros became the second team to win two winner-take-all game sevens in the same postseason since the 1985 Kansas City Royals.
+
+Retrieved items:
+<item 1>
+2005 World Series
+1977 1978 1979 1980s -- 1990s 1980 1981 1982 1984 1985 1986 1988 1989 1990 1991 1992 1993 1994 1995 1997 1998 1999 2000s -- 2010s 2000 2001 2002 2003 2005 2006
+2007 2008 2009 2011 2012 2013 2014 2015 2016 2017 See also Pre-World Series champions World Series champions Most Valuable Players Starting pitchers Babe Ruth
+Award Commissioner 's Trophy World Series ring Appearances Streaks Droughts Series ( by franchise ) Broadcasters TV ratings ALCS NLCS ALDS NLDS ALWC NLWC Game 7
+1989 Loma Prieta earthquake Dauvray Cup Temple Cup Chronicle - Telegraph Cup Book : World Series Category : World Series Chicago White Sox Based in Chicago ,
+</item 1>
+
+<item 2>
+Game seven
+League Championship Series that were decided on a game seven : Year Series Winning team Losing team Score Site Notes 1985 ALCS Kansas City Royals Toronto Blue
+Jays 6 -- 2 Exhibition Stadium , Toronto The Royals rallied from a 3 - 1 deficit , including taking the last two on the road to win the pennant . They would go
+on to win the 1985 World Series in seven games , becoming the first team in MLB history to win two game sevens in a single postseason . 1986 ALCS Boston Red Sox
+California Angels 8 -- 1 Fenway Park , Boston , Massachusetts Dave Henderson 's famous home run off of Donnie Moore turned the tide as Boston rallied from a 3 -
+1 deficit to win the series . Boston would lose the 1986 World Series in seven games . NLCS St. Louis Cardinals San Francisco Giants 6 -- 0 Busch Stadium ( II )
+, St. Louis , Missouri Although Jeffrey Leonard would homer in the first four games of the series it was not enough as back - to - back shutouts by the
+Cardinals in games six and seven gave St. Louis the NL Pennant .
+</item 2>
+
+<item 3>
+2017 World Series
+Game 5 lasted five hours and seventeen minutes , making it the second longest World Series game in history by time , trailing only the 14 inning contest between
+the Astros and the Chicago White Sox in Game 3 of the 2005 World Series in the same ballpark , as well as the third World Series game ever to go beyond five
+hours of game time . This game is considered one of the greatest World Series games of all time . Game 6 ( edit ) Kenley Jansen recorded a two - inning save in
+Game 6 .
+</item 3>
+
+<item 4>
+2005 World Series
+Wikinews has related news : Chicago White Sox win 2005 World Series baseball championship 2005 World Series at WorldSeries.com ( MLB.com ) 2005 World Series at
+Baseball Almanac 2005 World Series at Baseball-Reference.com The 2005 Post-Season Games ( box scores and play - by - play ) at Retrosheet History of the World
+Series - 2005 at The SportingNews . Archived from the original on 2008 . 2005 Postseason Schedule at MLB.com 2005 Major League Baseball postseason World Series
+American League Championship Series National League Championship Series American League Division Series National League Division Series American League teams
+Boston Red Sox Chicago White Sox Los Angeles Angels of Anaheim New York Yankees National League teams Atlanta Braves Houston Astros St. Louis Cardinals San
+Diego Padres World Series No World Series was held in 1904 because the NL champions refused to participate ; no World Series was held in 1994 due to a players '
+strike . 1900s -- 1910s 1900 1901 1902 1903 1904 1905 1906 1907 1908 1909 1910 1911 1912
+</item 4>
+
+<item 5>
+Game seven
+Louis the NL Pennant . The Cardinals would lose the World Series as the Minnesota Twins give new meaning to the term home - field advantage in the World Series
+as only the decisive game seven is close . 1988 NLCS Los Angeles Dodgers New York Mets 6 -- 0 Dodger Stadium , Los Angeles Orel Hershiser pitches a five - hit
+shutout to send the Dodgers to the World Series . Until 2017 , this was the only game seven of any postseason series to be played in Dodger Stadium . 1991 NLCS
+Atlanta Braves Pittsburgh Pirates 4 -- 0 Three Rivers Stadium , Pittsburgh , Pennsylvania Back - to - back shutouts in games six and seven helps the Braves win
+the pennant . The Braves would lose the series to Minnesota in seven games in what is regarded as the best World Series of all time . 1992 NLCS Atlanta Braves
+Pittsburgh Pirates 3 -- 2 Atlanta -- Fulton County Stadium , Atlanta Atlanta scored all three runs in the bottom of the ninth . Pinch hitter Francisco Cabrera
+drove in the two winning runs with a two - out single with the bases loaded . The winning run was scored by Sid Bream .
+</item 5>
+
+<item 6>
+Game seven
+1966 1967 1968 1969 1970 1971 1972 1973 1976 1977 1978 1979 1980s -- 1990s 1980 1981 1982 1984 1985 1986 1988 1989 1990 1991 1992 1993 1994 1995 1997 1998 1999
+2000s -- 2010s 2000 2001 2002 2003 2005 2006 2007 2008 2009 2011 2012 2013 2014 2015 2016 2017 See also Pre-World Series champions World Series champions Most
+Valuable Players Starting pitchers Babe Ruth Award Commissioner 's Trophy World Series ring Appearances Streaks Droughts Series ( by franchise ) Broadcasters TV
+ratings ALCS NLCS ALDS NLDS ALWC NLWC Game 7 1989 Loma Prieta earthquake Dauvray Cup Temple Cup Chronicle - Telegraph Cup Book : World Series Category : World
+Series Stanley Cup Finals Stanley Cup awarded on challenge basis 1893 --
+</item 6>
+
+<item 7>
+Game seven
+Game played between the two teams ( Cleveland Indians and Chicago Cubs ) with the longest active championship droughts . The Cubs are the first Major League
+Baseball team to come back to win the World Series from a 3 -- 1 series deficit since the 1985 Royals . Most recent World Series game seven to be decided in
+extra innings . First extra innings game seven to be won by the road team . 2017 Houston Astros Los Angeles Dodgers 5 -- 1 Dodger Stadium , Los Angeles First
+instance of back - to - back game sevens since 2001 -- 2002 . First World Series championship for the Astros , who became the first AL team to win a World
+Series game 7 on the road since 1972 . The Astros became the second team to win two winner - take - all game sevens in the same postseason since the Kansas City
+Royals in 1985 . League Championship Series ( edit ) The League Championship Series were originally decided best of five from 1969 until 1984 . Since 1985 when
+both were expanded to best of seven contests , 16 series ( 7 American , 9 National ) were decided in game seven .
+</item 7>
+
+<item 8>
+Game seven
+Most codes of football do not employ a best - of - seven series ( or any best - of - x series in general ) , hence game sevens are not played in those leagues .
+Some playoff rounds ( such as MLB 's current Division Series ) are played in a best of five format , such that game five has similar qualities to those
+described above , though the suspense and drama have less time to build in a shorter series . Furthermore , the World Series of 1903 , 1919 , 1920 , and 1921
+were played in a best of nine format , though none of the four went to a decisive game nine . The game seven is comparable to a final or to a single game in a
+single - elimination tournament or to a one - game playoff . The game is equivalent to the Super Bowl game in the National Football League in that the game 's
+winner is the league 's champion for the season . Contents ( hide ) 1 Examples 1.1 Major League Baseball 1.1. 1 World Series 1.1.
+</item 8>
+
+<item 9>
+Game seven
+2012 NLCS San Francisco Giants St. Louis Cardinals 9 -- 0 AT&T Park , San Francisco , California First Giants victory in a winner - take - all game seven . The
+Giants would go on to sweep the Detroit Tigers in the World Series . 2017 ALCS Houston Astros New York Yankees 4 -- 0 Minute Maid Park , Houston , Texas The
+home team won all games of the series . Houston became the first franchise to win the pennant in both the National League and American League . The Astros would
+go on to win the World Series over the Los Angeles Dodgers in seven games , becoming the second MLB team to win two game sevens in a single postseason .
+National Hockey League ( edit ) Main article : List of NHL game sevens In the NHL playoffs , game seven can occur in all playoff series . In the Stanley Cup
+Final , the NHL gained complete control of the Cup in 1926 , and the league instituted the best - of - seven series starting in the 1938 -- 39 season . No
+Stanley Cup Final game seven has ever ended with a 1 -- 0 score .
+</item 9>
+
+<item 10>
+Game seven
+1 World Series 1.1. 2 League Championship Series 1.2 National Hockey League 1.3 National Basketball Association 1.4 Chinese Professional Baseball League 2
+Comebacks 3 References Examples ( edit ) Major League Baseball ( edit ) In the MLB Postseason , game seven can occur in the League Championship Series and the
+World Series ( the divisional series are best of five ) . In the World Series , there have been 39 decisive game sevens ( of the four World Series that were
+contested on a best - of - nine basis , none went to a game nine , though all four included a non-decisive game seven ) . World Series ( edit ) World Series
+that were decided on a game seven : All extra inning game sevens involve three franchises each with two appearances , the New York / San Francisco Giants (
+losing both ) , the Washington Senators / Minnesota Twins ( winning both ) and the Cleveland Indians ( losing both ) . Home teams are 19 -- 20 in game sevens .
+</item 10>
+=== END ITEM id=54e0efcad31cded9 ===
+
+=== ITEM id=94dd53d29931d995 ===
+Gold sentences and facts:
+Sentence 0: John James McCoy is a fictional character in the television drama Law & Order . He was created by Michael S. Chernuchin and portrayed by Sam Waterston from 1994 until the end of the series in 2010 . He is the second - longest tenured character on the show ( 16 seasons ) , after Lt. Anita Van Buren ( 17 seasons ; portrayed by S. Epatha Merkerson ) . He appeared in 368 episodes of Law & Order , four episodes of Law & Order : Special Victims Unit , two episodes of Law & Order : Trial by Jury , two episodes of Homicide : Life on the Street , and the made - for - TV movie Exiled .
+  Fact 0.0: John James McCoy is a fictional character in the television drama Law & Order.
+  Fact 0.1: John James McCoy was created by Michael S. Chernuchin.
+  Fact 0.2: John James McCoy was portrayed by Sam Waterston from 1994 until the end of the series in 2010.
+  Fact 0.3: John James McCoy is the second-longest tenured character on the show, with 16 seasons.
+  Fact 0.4: John James McCoy's tenure ranks just after Lt. Anita Van Buren, who had 17 seasons.
+  Fact 0.5: Lt. Anita Van Buren was portrayed by S. Epatha Merkerson.
+  Fact 0.6: John James McCoy appeared in 368 episodes of Law & Order.
+  Fact 0.7: John James McCoy appeared in four episodes of Law & Order: Special Victims Unit.
+  Fact 0.8: John James McCoy appeared in two episodes of Law & Order: Trial by Jury.
+  Fact 0.9: John James McCoy appeared in two episodes of Homicide: Life on the Street.
+  Fact 0.10: John James McCoy appeared in the made-for-TV movie Exiled.
+Sentence 1: Jack McCoy brings 24 years of experience with him as he is appointed executive assistant district attorney by Adam Schiff ( Steven Hill ) in the season - five premiere episode `` Second Opinion '' . He quickly establishes himself as a more unconventional , ruthless litigator than his predecessor , Ben Stone ( Michael Moriarty ) . He often bends -- and sometimes breaks -- trial rules to get convictions , finds tenuous rationales for charging defendants with crimes when the original charges fail to stick , and charges innocent people to frighten them into testifying against others . McCoy is found in contempt of court 80 times for such behavior , and his tactics occasionally incur negative publicity for the DA 's office . His underlying motivation , however , is not , he maintains , corruption , but a sincere desire to see justice done . To that end , McCoy has gone after defendants accused of perverting the justice system to arrange wrongful convictions with just as much determination as his more mundane cases . Such aggressive actions in the courts have earned him the nickname `` Hang ' em High McCoy '' . He has subsequently developed a reputation with both colleagues and rival attorneys , once being referred to as `` the top of the legal food chain '' by a rival attorney during a trial .
+  Fact 1.0: Jack McCoy brings 24 years of experience with him.
+  Fact 1.1: Jack McCoy is appointed executive assistant district attorney by Adam Schiff.
+  Fact 1.2: Adam Schiff is played by Steven Hill.
+  Fact 1.3: Jack McCoy is appointed in the season-five premiere episode 'Second Opinion'.
+  Fact 1.4: Jack McCoy quickly establishes himself as a more unconventional, ruthless litigator than his predecessor.
+  Fact 1.5: Jack McCoy's predecessor is Ben Stone.
+  Fact 1.6: Ben Stone is played by Michael Moriarty.
+  Fact 1.7: Jack McCoy often bends trial rules to get convictions.
+  Fact 1.8: Jack McCoy sometimes breaks trial rules to get convictions.
+  Fact 1.9: Jack McCoy finds tenuous rationales for charging defendants with crimes when the original charges fail to stick.
+  Fact 1.10: Jack McCoy charges innocent people to frighten them into testifying against others.
+  Fact 1.11: Jack McCoy is found in contempt of court 80 times for such behavior.
+  Fact 1.12: Jack McCoy's tactics occasionally incur negative publicity for the DA's office.
+  Fact 1.13: Jack McCoy's underlying motivation is not corruption, he maintains.
+  Fact 1.14: Jack McCoy's underlying motivation is a sincere desire to see justice done.
+  Fact 1.15: Jack McCoy has gone after defendants accused of perverting the justice system to arrange wrongful convictions.
+  Fact 1.16: Jack McCoy pursues those defendants with just as much determination as his more mundane cases.
+  Fact 1.17: Jack McCoy's aggressive actions in the courts have earned him the nickname 'Hang 'em High McCoy'.
+  Fact 1.18: Jack McCoy has developed a reputation with both colleagues and rival attorneys.
+  Fact 1.19: Jack McCoy was once referred to as 'the top of the legal food chain' by a rival attorney during a trial.
+Sentence 2: `` Entitled '' ( onscreen ) : McCoy makes his first appearance on the series . McCoy , working with his assistant , Abbie Carmichael ( Angie Harmon ) , assists the Special Victims Unit in solving a cold case , that Briscoe handled years ago with his former partner , Detective Mike Logan ( Chris Noth ) .
+  Fact 2.0: The episode 'Entitled' (onscreen) is where McCoy makes his first appearance on the series.
+  Fact 2.1: McCoy works with his assistant, Abbie Carmichael.
+  Fact 2.2: Abbie Carmichael is played by Angie Harmon.
+  Fact 2.3: McCoy assists the Special Victims Unit in solving a cold case.
+  Fact 2.4: Briscoe handled the cold case years ago.
+  Fact 2.5: Briscoe handled the cold case with his former partner, Detective Mike Logan.
+  Fact 2.6: Detective Mike Logan is played by Chris Noth.
+
+Retrieved items:
+<item 1>
+Jack McCoy
+Reception ( edit ) Entertainment Weekly television critic Ken Tucker has praised Law & Order 's creator Dick Wolf for putting McCoy at the center of `` some of
+the best episodes of the immortal series ' 19th season . '' Tucker elaborates how the character , riding `` herd over a couple of stubborn young bucks --
+assistant DAs Mike Cutter ( Linus Roache ) and Connie Rubirosa ( Alana de la Garza ) -- McCoy argues , bellows orders , and croaks with outrage when his charges
+disobey his legal advice . ''
+</item 1>
+
+<item 2>
+Jack McCoy
+Jack McCoy - wikipedia Jack McCoy Jump to : navigation , search For the politician and labor activist , see Jack E. McCoy . Jack McCoy Law & Order character
+First appearance `` Second Opinion '' `` Entitled '' ( SVU ) Last appearance `` Rubber Room '' ( Law & Order ) `` The Undiscovered Country '' ( SVU ) Portrayed
+by Sam Waterston Time on show 1994 -- 2010 , 2018 Seasons 5 , 6 , 7 , 8 , 9 , 10 , 11 , 12 , 13 , 14 , 15 , 16 , 17 , 18 , 19 , 20 Credited appearances 368
+episodes ( L&O ) 2 episodes ( HLOTS ) 4 episodes ( SVU ) 2 episodes ( TBJ ) 376 episodes ( total ) Preceded by Ben Stone ( EADA ) Arthur Branch ( DA ) ( L&O )
+Succeeded by Michael Cutter ( EADA ) Information Family Rebecca McCoy ( daughter ) John James McCoy is a fictional character in the television drama Law & Order
+.
+</item 2>
+
+<item 3>
+Jack McCoy is a fictional New York prosecutor on *Law & Order*, created by Michael S. Chernuchin and portrayed by Sam Waterston. He served as executive
+assistant district attorney and later district attorney, appearing from 1994 through the series’ 2010 finale and returning in 2018. A 16-season cast member, he
+appeared in 368 *Law & Order* episodes and crossed over into several related shows and a TV movie. His daughter is Rebecca McCoy.
+</item 3>
+
+<item 4>
+Jack McCoy
+His underlying motivation , however , is not , he maintains , corruption , but a sincere desire to see justice done . To that end , McCoy has gone after
+defendants accused of perverting the justice system to arrange wrongful convictions with just as much determination as his more mundane cases . Such aggressive
+actions in the courts have earned him the nickname `` Hang ' em High McCoy '' . He has subsequently developed a reputation with both colleagues and rival
+attorneys , once being referred to as `` the top of the legal food chain '' by a rival attorney during a trial . Following the 17th season ( 2006 -- 2007 ) ,
+Jack McCoy was appointed interim district attorney , taking over from Arthur Branch ( Fred Thompson ) . McCoy 's appearance on Law & Order : Special Victims
+Unit on the November 13 , 2007 , episode `` Blinded '' , marked his first appearance in the Law & Order universe as district attorney . The replacement for his
+former position is Michael Cutter ( Linus Roache ) , a prosecutor with a penchant for recklessness not unlike McCoy 's own in his younger days . This
+occasionally presents political difficulties for the new district attorney .
+</item 4>
+
+<item 5>
+Jack McCoy
+wikipedia.org/w/index.php?title=Jack_McCoy&oldid=838021970 '' Categories : Law & Order characters Fictional lawyers Fictional American people of Irish descent
+Fictional characters introduced in 1994 Fictional district attorneys Fictional victims of child abuse Crossover characters in television Hidden categories :
+Pages using deprecated image syntax Articles using Infobox character with multiple unlabeled fields Talk Contents About Wikipedia Deutsch Hrvatski 日本 語
+Português Srpskohrvatski / српскохрватски Edit links This page was last edited on 24 April 2018 , at 13 : 14 . About Wikipedia
+</item 5>
+
+<item 6>
+The excerpt lists Jack McCoy’s appearances in *Law & Order*, *SVU*, and *Trial by Jury*, alongside related character and cast lists, seasons, notable episodes,
+and references. It includes no biographical details about McCoy.
+</item 6>
+
+<item 7>
+The fragment catalogs Jack McCoy’s appearances in NBC’s *Law & Order*, listing episodes from 1995–2008: “Wannabe,” “Rebels,” “Angel,” “Deadbeat,” “Burned,”
+“Thrill,” “Loco Parentis,” “Access Nation,” “Patient Zero,” “Under God,” “Embedded,” “In Vino Veritas,” “Fame,” “Good Faith,” “Excalibur,” and “Aftershock.” It
+also
+</item 7>
+
+<item 8>
+Jack McCoy
+He was created by Michael S. Chernuchin and portrayed by Sam Waterston from 1994 until the end of the series in 2010 . He is the second - longest tenured
+character on the show ( 16 seasons ) , after Lt. Anita Van Buren ( 17 seasons ; portrayed by S. Epatha Merkerson ) . He appeared in 368 episodes of Law & Order
+, four episodes of Law & Order : Special Victims Unit , two episodes of Law & Order : Trial by Jury , two episodes of Homicide : Life on the Street , and the
+made - for - TV movie Exiled . Waterston 's performance as McCoy on the New York - based series was so popular that it resulted in him being declared a ``
+Living Landmark '' by the New York Landmarks Conservancy , along with fellow longtime series cast member Jerry Orbach ( who portrayed the popular police
+detective Lennie Briscoe for 12 years ) . Contents ( hide ) 1 Character overview 2 Personal life 3 Notable conflicts 4 In Law & Order : Special Victims Unit 4.1
+As executive assistant district attorney 4.1.
+</item 8>
+
+<item 9>
+Jack McCoy
+1 Season one 4.1. 2 Season two 4.2 As district attorney 4.2. 1 Season 9 4.2. 2 Season 10 4.2. 3 Season 11 4.2. 4 Season 12 4.2. 5 Season 13 4.2. 6 Season 19 5
+Reception 6 District attorney 's office timeline 7 Appearances on other TV shows 8 References Character overview ( edit ) Jack McCoy brings 24 years of
+experience with him as he is appointed executive assistant district attorney by Adam Schiff ( Steven Hill ) in the season - five premiere episode `` Second
+Opinion '' . He quickly establishes himself as a more unconventional , ruthless litigator than his predecessor , Ben Stone ( Michael Moriarty ) . He often bends
+-- and sometimes breaks -- trial rules to get convictions , finds tenuous rationales for charging defendants with crimes when the original charges fail to stick
+, and charges innocent people to frighten them into testifying against others . McCoy is found in contempt of court 80 times for such behavior , and his tactics
+occasionally incur negative publicity for the DA 's office .
+</item 9>
+
+<item 10>
+A list of *Law & Order* episode references: “Jack McCoy” (Episode 10, January 5, 2000, NBC); “Second Opinion” (Season 5, Episode 1, September 21, 1994); “House
+Counsel” (Season 5, Episode 10, January 4, 1995); “Nullification” (Season 8, Episode 5, November 5, 1997); “Missing” (Season 12
+</item 10>
+=== END ITEM id=94dd53d29931d995 ===
+
+=== ITEM id=017c8a1a8daee30d ===
+Gold sentences and facts:
+Sentence 0: The Eastern Coastal Plains refers to a wide stretch of landmass of India , lying between the Eastern Ghats and the Bay of Bengal . It is wider and leveled than the western coastal plains and stretches from Tamil Nadu in the south to West Bengal in the north through Andhra Pradesh and Odisha . Chilka Lake is a brackish water lake along the eastern coastal plain . It lies in the state of Odisha and stretches to the south of the Mahanadi Delta .
+  Fact 0.0: The Eastern Coastal Plains refers to a wide stretch of landmass of India.
+  Fact 0.1: The Eastern Coastal Plains lie between the Eastern Ghats and the Bay of Bengal.
+  Fact 0.2: The Eastern Coastal Plains are wider and more level than the western coastal plains.
+  Fact 0.3: The Eastern Coastal Plains stretch from Tamil Nadu in the south to West Bengal in the north.
+  Fact 0.4: The Eastern Coastal Plains run through Andhra Pradesh and Odisha.
+  Fact 0.5: Chilka Lake is a brackish water lake.
+  Fact 0.6: Chilka Lake lies along the eastern coastal plain.
+  Fact 0.7: Chilka Lake lies in the state of Odisha.
+  Fact 0.8: Chilka Lake stretches to the south of the Mahanadi Delta.
+
+Retrieved items:
+<item 1>
+Eastern coastal plains
+Eastern coastal plains - Wikipedia Eastern coastal plains Jump to : navigation , search This article relies largely or entirely on a single source . Relevant
+discussion may be found on the talk page . Please help improve this article by introducing citations to additional sources . ( May 2015 ) View of Fields at
+Biccavolu , Eastern coastal plains , Andhra Pradesh The Eastern Coastal Plains refers to a wide stretch of landmass of India , lying between the Eastern Ghats
+and the Bay of Bengal . It is wider and leveled than the western coastal plains and stretches from Tamil Nadu in the south to West Bengal in the north through
+Andhra Pradesh and Odisha . Chilka Lake is a brackish water lake along the eastern coastal plain . It lies in the state of Odisha and stretches to the south of
+the Mahanadi Delta . Deltas of many of India 's rivers form a major portion of these plains . The Mahanadi , Godavari , Kaveri and Krishna rivers drain these
+plains . The region receives both the Northeast & Southwest monsoon rains with its annual rainfall averaging between 1,000 and 3,000 mm ( 39 and 118 in ) .
+</item 1>
+
+<item 2>
+Dead Sea
+Kur - Araz Lowland Lankaran Lowland Alborz Absheron Peninsula Anatolia Cilicia Cappadocia Alpide belt South Greater India Indian subcontinent Himalayas Hindu
+Kush Western Ghats Eastern Ghats Ganges Basin Ganges Delta Pashtunistan Punjab Balochistan Kashmir Kashmir Valley Pir Panjal Range Thar Desert Indus Valley
+Indus River Delta Indus Valley Desert Indo - Gangetic Plain Eastern coastal plains Western Coastal Plains Meghalaya subtropical forests MENASA Lower Gangetic
+plains moist deciduous forests Northwestern Himalayan alpine shrub and meadows Doab Bagar tract Great Rann of Kutch Little Rann of Kutch Deccan Plateau
+Coromandel Coast Konkan False Divi Point Hindi Belt Ladakh Aksai Chin Gilgit - Baltistan Baltistan Shigar Valley Karakoram Saltoro Mountains Siachen Glacier Bay
+of Bengal Gulf of Khambhat Gulf of Kutch Gulf of Mannar Trans - Karakoram Tract Wakhan Corridor Wakhjir Pass Lakshadweep Andaman and Nicobar Islands Andaman
+Islands Nicobar Islands Maldive Islands Alpide belt Southeast Mainland Indochina Malay Peninsula Maritime Peninsular Malaysia Sunda Islands Greater
+</item 2>
+
+<item 3>
+Sub-Saharan Africa
+Indo - Gangetic Plain Eastern coastal plains Western Coastal Plains Meghalaya subtropical forests MENASA Lower Gangetic plains moist deciduous forests
+Northwestern Himalayan alpine shrub and meadows Doab Bagar tract Great Rann of Kutch Little Rann of Kutch Deccan Plateau Coromandel Coast Konkan False Divi
+Point Hindi Belt Ladakh Aksai Chin Gilgit - Baltistan Baltistan Shigar Valley Karakoram Saltoro Mountains Siachen Glacier Bay of Bengal Gulf of Khambhat Gulf of
+Kutch Gulf of Mannar Trans - Karakoram Tract Wakhan Corridor Wakhjir Pass Lakshadweep Andaman and Nicobar Islands Andaman Islands Nicobar Islands Maldive
+Islands Alpide belt Southeast Mainland Indochina Malay Peninsula Maritime Peninsular Malaysia Sunda Islands Greater Sunda Islands Lesser Sunda Islands
+Indonesian Archipelago Timor New Guinea Bonis Peninsula Papuan Peninsula Huon Peninsula Huon Gulf Bird 's Head Peninsula Gazelle Peninsula Philippine
+Archipelago Luzon Visayas Mindanao Leyte Gulf Gulf of Thailand East Indies Nanyang Alpide belt Asia - Pacific Tropical Asia Ring of Fire Regions of Europe North
+Nordic Northwestern Scandinavia Scandinavian Peninsula
+</item 3>
+
+<item 4>
+Eastern coastal plains
+The width of the plains varies between 100 and 130 km ( 62 to 80 miles ) . It is locally known as Utkal Plains in the Northern part between Cossye and
+Rushikulya Rivers , Northern Circars in the Central part between Rushikulya and Krishna Rivers and , as Coromandel Coast in the Southern part from the south of
+river Krishna till the Southern tip of Mainland India at Cape Comorin where it merges with the Western Coastal Plains . See also ( edit ) Western Coastal Plains
+References ( edit ) Jump up ^ Sr. Bimcy ; Sr. Sisily ; Charlotte . Bibliographic information . Scholar Publishing House . pp. 20 -- 21 . ISBN 8171725163 .
+</item 4>
+
+<item 5>
+Eastern coastal plains
+pp. 20 -- 21 . ISBN 8171725163 . Geography of India Climate Climate Climatic regions Geology Fossil Parks Geology of India Indian Plate Stones Landforms Beaches
+Canals Desert Extreme points Glaciers Islands Lakes Mountains Rivers Valleys Volcanoes Waterfalls Plains Indo - Gangetic Eastern Coastal Western Coastal Regions
+North India Northeast India East India South India West India Central India Subdivisions Autonomous administrative divisions States and territories Districts
+Cities Towns Municipalities Environment Biogeographic classification Ecoregions Fauna Flora Forests Issues Protected Areas Wildlife This Indian location article
+is a stub . You can help Wikipedia by expanding it . Retrieved from `` https://en.wikipedia.org/w/index.php?title=Eastern_coastal_plains&oldid=812520937 ''
+Categories : Plains of India Coasts of India India geography stubs Hidden categories : Articles needing additional references from May 2015 All articles needing
+additional references India articles missing geocoordinate data All articles needing coordinates All stub articles Talk About Wikipedia हिन्दी Português தமிழ்
+Edit links This page was last edited on 28 November 2017 , at 08 : 32 .
+</item 5>
+
+<item 6>
+Sub-Saharan Africa
+Arabian Peninsula Najd Hejaz Tihamah Eastern Arabia South Arabia Hadhramaut Arabian Peninsula coastal fog desert Tigris -- Euphrates Mesopotamia Upper
+Mesopotamia Lower Mesopotamia Sawad Nineveh plains Akkad ( region ) Babylonia Canaan Aram Eber - Nari Suhum Eastern Mediterranean Mashriq Kurdistan Levant
+Southern Levant Transjordan Jordan Rift Valley Israel Levantine Sea Golan Heights Hula Valley Galilee Gilead Judea Samaria Arabah Anti-Lebanon Mountains Sinai
+Peninsula Arabian Desert Syrian Desert Fertile Crescent Azerbaijan Syria Palestine Iranian Plateau Armenian Highlands Caucasus Caucasus Mountains Greater
+Caucasus Lesser Caucasus North Caucasus South Caucasus Kur - Araz Lowland Lankaran Lowland Alborz Absheron Peninsula Anatolia Cilicia Cappadocia Alpide belt
+South Greater India Indian subcontinent Himalayas Hindu Kush Western Ghats Eastern Ghats Ganges Basin Ganges Delta Pashtunistan Punjab Balochistan Kashmir
+Kashmir Valley Pir Panjal Range Thar Desert Indus Valley Indus River Delta Indus Valley Desert Indo - Gangetic Plain Eastern coastal plains Western Coastal
+Plains Meghalaya subtropical forests MENASA Lower
+</item 6>
+
+<item 7>
+Eastern coastal plains
+Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use
+and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 7>
+
+<item 8>
+Geography of Nigeria
+Plains rise to the north of the valleys . To the southwest of the Niger there is `` rugged '' highland , and to the southeast of the Benue hills and mountains
+are found all the way to the border with Cameroon . Coastal plains are found in both the southwest and the southeast . Niger Delta ( edit ) This section needs
+expansion . You can help by adding to it . ( January 2011 ) The Niger Delta is located in the southern part of Nigeria . It is one of the world 's largest
+arcuate fan - shaped river deltas . The riverine area of the Niger Delta is a coastal belt of swamps bordering the Atlantic ocean . The swamps are vegetated
+tidal flats formed by a reticulate pattern of interconnected meandering creeks and distributaries of the River Niger . Vegetation of the Niger Delta ( edit )
+The vegetation of the Niger Delta consist mainly of forest swamps . The forest are of two types , nearest the sea is a belt of saline / brackish Mangrove swamp
+separated from the sea by sand beach ridges within the mangrove swamp . Numerous sandy islands occur with fresh water vegetation .
+</item 8>
+
+<item 9>
+Ring of Fire
+Aram Eber - Nari Suhum Eastern Mediterranean Mashriq Kurdistan Levant Southern Levant Transjordan Jordan Rift Valley Levantine Sea Golan Heights Hula Valley
+Gaza Strip West Bank Galilee Gilead Judea Samaria Arabah Anti-Lebanon Mountains Sinai Peninsula Arabian Desert Syrian Desert Fertile Crescent Azerbaijan Syria
+Palestine Iranian Plateau Armenian Highlands Caucasus Caucasus Mountains Greater Caucasus Lesser Caucasus North Caucasus South Caucasus Kur - Araz Lowland
+Lankaran Lowland Alborz Absheron Peninsula Anatolia Cilicia Cappadocia Alpide belt South Greater India Indian subcontinent Himalayas Hindu Kush Western Ghats
+Eastern Ghats Ganges Basin Ganges Delta Pashtunistan Punjab Balochistan Kashmir Kashmir Valley Pir Panjal Range Thar Desert Indus Valley Indus River Delta Indus
+Valley Desert Indo - Gangetic Plain Eastern coastal plains Western Coastal Plains Meghalaya subtropical forests MENASA Lower Gangetic plains moist deciduous
+forests Northwestern Himalayan alpine shrub and meadows Doab Bagar tract Great Rann of Kutch Little Rann of Kutch Deccan Plateau Coromandel Coast Konkan False
+Divi Point Hindi Belt Ladakh Aksai Chin
+</item 9>
+
+<item 10>
+Economy of India
+India receives an average annual rainfall of 1,208 millimetres ( 47.6 in ) and a total annual precipitation of 4000 billion cubic metres , with the total
+utilisable water resources , including surface and groundwater , amounting to 1123 billion cubic metres . 546,820 square kilometres ( 211,130 sq mi ) of the
+land area , or about 39 % of the total cultivated area , is irrigated . India 's inland water resources and marine resources provide employment to nearly six
+million people in the fisheries sector . In 2010 , India had the world 's sixth - largest fishing industry . Amul Dairy Plant at Anand was a highly successful
+co-operative started during the green revolution in the 1960s India exports more than 100,000 tonnes of processed cashew kernels every year . There are more
+than 600 cashew processing units in Kollam alone . India is the largest producer of milk , jute and pulses , and has the world 's second - largest cattle
+population with 170 million animals in 2011 .
+</item 10>
+=== END ITEM id=017c8a1a8daee30d ===
+
+=== ITEM id=8edc3f5eee601041 ===
+Gold sentences and facts:
+Sentence 0: `` Go Tell It on the Mountain '' is an African - American spiritual song , compiled by John Wesley Work , Jr. , dating back to at least 1865 , that has been sung and recorded by many gospel and secular performers . It is considered a Christmas carol because its original lyrics celebrate the Nativity of Jesus :
+  Fact 0.0: 'Go Tell It on the Mountain' is an African-American spiritual song.
+  Fact 0.1: 'Go Tell It on the Mountain' was compiled by John Wesley Work, Jr.
+  Fact 0.2: 'Go Tell It on the Mountain' dates back to at least 1865.
+  Fact 0.3: 'Go Tell It on the Mountain' has been sung and recorded by many gospel performers.
+  Fact 0.4: 'Go Tell It on the Mountain' has been sung and recorded by many secular performers.
+  Fact 0.5: 'Go Tell It on the Mountain' is considered a Christmas carol.
+  Fact 0.6: The original lyrics of 'Go Tell It on the Mountain' celebrate the Nativity of Jesus.
+  Fact 0.7: 'Go Tell It on the Mountain' is considered a Christmas carol because its original lyrics celebrate the Nativity of Jesus.
+
+Retrieved items:
+<item 1>
+Go Tell It on the Mountain (song)
+Log In modern society Advent Conspiracy Black Friday ( partying ) Black Friday ( shopping ) Bronner 's Christmas Wonderland Christmas club Christmas creep
+Christmas Day ( Trading ) Act 2004 Christmas Lectures Christmas Mountains Christmas truce Controversies Cyber Monday Economics Giving Tuesday El Gordo Holiday
+season In July In August Leon Day NBA games NFL games Puritan New England American Civil War Post-War United States Running of the Santas SantaCon Santa 's
+Candy Castle Small Business Saturday Super Saturday Virginia O'Hanlon White Christmas Winter festivals WWE Tribute to the Troops Xmas Food and drink Dinner
+Joulupöytä Julebord Kūčios Réveillon Twelve - dish supper Smörgåsbord Wigilia Sweets bûche de Noël Cake Candy cane Cookies Fruitcake Gingerbread Kourabiedes
+Melomakarono Mince pie Pavlova Pecan pie Pumpkin pie Pudding Rosca de reyes Szaloncukor Turrón Soup Menudo Sauce Cranberry sauce Beverages Apple cider
+Champurrado Eggnog Mulled wine Smoking Bishop Ponche crema Dumpling Hallaca Tamale Meat Ham Roast goose Romeritos Turkey Stuffing Portal Retrieved
+</item 1>
+
+<item 2>
+Go Tell It on the Mountain (song)
+Unsourced material may be challenged and removed . ( December 2016 ) ( Learn how and when to remove this template message ) In 1963 , the musical team Peter ,
+Paul and Mary , along with their musical director Milt Okun , adapted and rewrote `` Go Tell It on the Mountain '' as `` Tell It on the Mountain '' , their
+lyrics referring specifically to : Exodus and using the phrase `` Let my people go , '' but referring implicitly to the Civil Rights struggle of the early 1960s
+. This version became a moderately successful single for them ( US # 33 pop , 1964 ) . According to Religious Studies professor and Civil Rights historian
+Charles Marsh , it was African American Civil Rights leader Fannie Lou Hamer who combined this song with the spiritual `` Go Down Moses , '' taking the last
+line of the chorus , `` Let my people go '' and substituting it in the chorus of `` Go Tell It on the Mountain . ''
+</item 2>
+
+<item 3>
+Go Tell It on the Mountain (song)
+Go Tell It on the Mountain ( song ) - wikipedia Go Tell It on the Mountain ( song ) Jump to : navigation , search Go Tell It on the Mountain by unknown Genre
+Christmas , spiritual Language English Published 1909 `` Go Tell It on the Mountain '' is an African - American spiritual song , compiled by John Wesley Work ,
+Jr. , dating back to at least 1865 , that has been sung and recorded by many gospel and secular performers . It is considered a Christmas carol because its
+original lyrics celebrate the Nativity of Jesus : `` Go tell it on the mountain , over the hills and everywhere ; go tell it on the mountain , that Jesus Christ
+is born . '' Recording artists ( edit ) This section needs additional citations for verification . Please help improve this article by adding citations to
+reliable sources . Unsourced material may be challenged and removed .
+</item 3>
+
+<item 4>
+Go Tell It on the Mountain (song)
+Marsh does not document this claim , but notes that Hamer was highly active in civil rights work beginning in the 1950s , and that the use of the Exodus story
+and the singing of spirituals played a central role in her activities . Little Big Town 's 2006 non-album single version reached No. 35 on the Hot Country Songs
+chart . Other artists who have recorded the song ( chiefly on either Christmas - themed music albums or collections of spirituals or folk songs ) include : 195
+? : Mahalia Jackson on the album Silent Night , Holy Night 1960 : Bobby Darin on the album The 25th Day of December 1964 : Gordon MacRae on the album Firestone
+Presents Your Christmas Favorites , Volume 3 1964 : Bing Crosby and Frank Sinatra on the album 12 Songs of Christmas 1964 : Simon & Garfunkel on the album
+Wednesday Morning ,
+</item 4>
+
+<item 5>
+Go Tell It on the Mountain (song)
+Yule Cat Yule Lads Zwarte Piet Gift - bringers Saint Nicholas Santa Claus List of Christmas gift - bringers by country Traditions Advent calendar Advent candle
+Advent wreath Boar 's Head Feast Candle arches Cards Carols by Candlelight Cavalcade of Magi Crackers Decorations Events and celebrations Feast of the Seven
+Fishes Flying Santa Google Santa Tracker Hampers Las Posadas Letters Lights Markets Meals and feasts Moravian star Nine Lessons and Carols NORAD Tracks Santa
+Nutcrackers dolls Ornaments Parades list Piñatas Pyramids Räuchermann Seals Secret Santa Spanbaum Stamps Stockings Tree Twelve Days Wassailing Windows Yule Goat
+Yule log By country Australia and New Zealand Denmark Germany Hawaii Hungary Iceland Indonesia Ireland Mexico Norway Philippines Poland Romania Russia Scotland
+Serbia Sweden Ukraine Music Carols list Hit singles UK Hit singles US Music books Carols for Choirs The Oxford Book of Carols The New Oxford Book of Carols Piae
+Cantiones Other media Films Poetry `` Old Santeclaus with Much Delight '' `` A Visit from St. Nicholas '' Television specials Yule Log In modern society Advent
+Conspiracy Black Friday ( partying ) Black Friday ( shopping ) Bronner
+</item 5>
+
+<item 6>
+Go Tell It on the Mountain (song)
+Dumpling Hallaca Tamale Meat Ham Roast goose Romeritos Turkey Stuffing Portal Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Go_Tell_It_on_the_Mountain_(song)&oldid=812507828 '' Categories : Christmas carols Songs about mountains Songs about
+Jesus Mahalia Jackson songs Peter , Paul and Mary songs Hidden categories : Articles needing additional references from December 2016 All articles needing
+additional references Talk About Wikipedia Deutsch Italiano Svenska Tagalog Edit links This page was last edited on 28 November 2017 , at 06 : 07 . Text is
+available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use and
+Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 6>
+
+<item 7>
+Go Tell It on the Mountain (song)
+Christmas Christmas Eve Children 's Day Boxing Day Nochebuena Saint Nicholas Day St. Stephen 's Day Sol Invictus Yule In Christianity Biblical Magi Adoration of
+the Magi Adoration of the Shepherds Advent Angel Gabriel Annunciation Annunciation to the shepherds Baptism of the Lord Bethlehem Christingle Christmastide
+Epiphany Herod the Great Jesus Joseph Mary Massacre of the Innocents flight into Egypt Nativity Fast Nativity of Jesus in art in later culture Nativity scene
+Saint Nicholas Star of Bethlehem Twelfth Night In folklore Badalisc La Befana Belsnickel Caganer Christkind Ded Moroz Elves Father Christmas Grýla Jack Frost
+Joulupukki Knecht Ruprecht Korvatunturi Krampus Mikulás Miner 's figure Mrs. Claus Nisse / Tomte North Pole Old Man Winter Olentzero Père Fouettard Père Noël
+Rudolph the Red - Nosed Reindeer Saint Lucy Santa 's reindeer Santa 's workshop Sinterklaas Tió de Nadal Vertep Yule Cat Yule Lads Zwarte Piet Gift - bringers
+Saint Nicholas Santa Claus List of
+</item 7>
+
+<item 8>
+Go Tell It on the Mountain (song)
+3 AM 1965 : Ray Conniff Singers on the album Here We Come A-Caroling 1971 : Bob Marley and the Wailers featuring Peter Tosh on the album The Best of The Wailers
+1981 : Anne Murray on the album Christmas Wishes 1990 : Dolly Parton on the album Home for Christmas 1993 : Bruce Cockburn on the album Christmas 1996 : Vanessa
+L. Williams on the album Star Bright 1998 : Cece Winans on the album His Gift 1999 : Garth Brooks on the album Garth Brooks and the Magic of Christmas 1999 :
+Jewel on the album Joy : A Holiday Collection 2001 : Candi Staton on the album Christmas in My Heart 2001 : Fred Hammond on the album Christmas ... Just
+Remember 2001 : Sara Evans on the album Country Christmas 2001 2002 : Jim Nabors on the album Jim Nabors Christmas 2003 : Oh Susanna on the album Maybe This
+Christmas Too ?
+</item 8>
+
+<item 9>
+Go Tell It on the Mountain (song)
+Charles ( 1997 ) . God 's Long Summer . Princeton . p. 47 . ISBN 9780691130675 . Jump up ^ Whitburn , Joel ( 2008 ) . Hot Country Songs 1944 to 2008 . Record
+Research , Inc. p. 241 . ISBN 0 - 89820 - 177 - 2 . Jump up ^ `` Firestone Your Favorite Christmas Music - Volume Three - 1964 '' . DLF Music Transfer. 2006 .
+Christmas Christmas Eve Children 's Day Boxing Day Nochebuena Saint Nicholas Day St.
+</item 9>
+
+<item 10>
+Go Tell It on the Mountain (song)
+on the album ( various artists ) 2003 : The Blind Boys of Alabama on the album Go Tell It on the Mountain 2004 : James Taylor on the album A Christmas Album
+2007 : Toby Keith on the album A Classic Christmas 2008 : Needtobreathe on the album An Alternative Christmas ( various artists ) 2008 : Sheryl Crow on the
+album Home for Christmas 2009 : Big Daddy Weave on the album Christ Is Come 2012 : Pentatonix on the album PTXmas 2013 : David Crowder Band on the album Wow
+Christmas : 30 Top Christian Artists and Holiday Songs 2015 : Hunter Hayes on the album Country Faith Christmas ( various artists ) 2016 : Jennifer Nettles on
+the album To Celebrate Christmas 2016 : Sarah McLachlan on the album Wonderland 2016 : Blues Traveler on Go Tell It On The Mountain ( single ) 2017 : Hanson (
+band ) - mashup of ' Joy To The World ' and ' Go Tell It On The Mountain ' ( ' Joy To The Mountain ' ) on the album Finally It 's Christmas References ( edit )
+Jump up ^ Marsh ,
+</item 10>
+=== END ITEM id=8edc3f5eee601041 ===
+
+=== ITEM id=e0fef8a307e89b48 ===
+Gold sentences and facts:
+Sentence 0: Yadava ( Golla )
+  Fact 0.0: The text lists Golla in parentheses after Yadava.
+
+Retrieved items:
+<item 1>
+The excerpt lists Andhra Pradesh Assembly election candidates for constituencies 162–177. It names candidates for Mummidivaram through Narasapuram, including
+Chirla Jaggi Reddy (YSRCP), Vegulla Jogeshwara Rao, Gorantla Buchhaiah Chowdary, Jyothula Venkata Apparao and Kothapalli Samuel Jawahar (TDP), and Aakula
+Sathyanarayana (BJP). Van
+</item 1>
+
+<item 2>
+The excerpt lists Andhra Pradesh Assembly election constituencies and candidates: 246 Kodur—Srinivasulu; 247 Rayachoti—G. Sreekanth; 248 Pulivendula—YS
+Jaganmohan Reddy; 249 Kamalapuram—Raveendranath Reddy; 250 Jammalamadugu—Adinarayana Reddy; 251 Proddatur—Rachamallu Siva Prasad Reddy;
+</item 2>
+
+<item 3>
+List of Telugu castes
+Buragana Kalinga , Buragam Kalinga , Pandiri Kalinga , Kalinga Kepmare or Reddika Mondepatta Mondipatta Nokkar Pariki Muggula Yata Chopemari Kaikadi
+Joshinandiwala Odde Oddilu Vaddi Vaddelu Mandula Mehtar ( Muslim ) Kunapuli Achukatlavandlu Aryakshatriya , Chittari , Giniyar , Chitrakara , Nakhas Devanga
+Ediga Gowda ( Gamalla , Kalalee ) Goundla Settibalija ( of Visakhapatnam , East Godavari , West Godavari and Krishna District ) Dudekula , Laddaf , Pinjari or
+Noorbash Gandla , Telikula , Devathilakula Jandra Kummara or Kulala or Salivahana Karikalabhakthulu Kaikolan or Kaikola ( Sengundam or Sengunther )
+Karnabhakthulu Kuruba or Kuruma Nagavaddilu Neelakanthi Patkar ( Khatri ) Perika ( Perike Balija ,
+</item 3>
+
+<item 4>
+The 2014 Andhra Pradesh Assembly excerpt lists Kodali Sri Venkateswara Rao (YSRCP; constituency number unstated), then constituencies 192–207: Kaikalur—Kamineni
+Srinivasa Rao (BJP); Pedana—Kagitha Venkat Rao (TDP); Machilipatnam—Kollu Ravindra; Avanigadda—Mandali Buddha Prasad; Pamarru (SC)—U
+</item 4>
+
+<item 5>
+List of Telugu castes
+List of telugu castes - wikipedia List of telugu castes Jump to : navigation , search Telugu society is nowadays officially classified into a number of groups ,
+some of which align with the concept of caste . Contents ( hide ) 1 Forward Classes 2 Backward Classes 3 See also 4 References Forward Classes Forward castes do
+not qualify for government reservations . Those present in Andhra Pradesh are : Brahmin Kamma Kapu Komati Kshatriya Reddy Velama Some communities within these
+groups are instead classified under other categories , as noted below . Backward Classes Some communities are classified as Other Backward Classes due to social
+, financial , educational , and / or political discrimination . Agnikulakshatriya Palli Vadabalija Bestha Jalari Gangavar Gangaputra Goondla Vanyakulakshtriya
+Vannekapu Vannereddi Pallikapu Pallireddi Nayyala Pattapu Balasanthu , Bahurupi Bandara Budabukkala Rajaka , Chakali ,
+</item 5>
+
+<item 6>
+The excerpts compile partial 2014 Andhra Pradesh Assembly constituency rosters, naming candidates or winners across constituencies in present-day Andhra Pradesh
+and Telangana. They include YSRCP, TDP, BJP, AIMIM and TRS representatives, with many winners attributed to TDP or YSRCP; examples include Y.S. Jaganmohan
+Reddy, K. Chandrasekhara Rao and Asaduddin Owaisi. A separate section lists Telugu forward and backward
+</item 6>
+
+<item 7>
+List of Telugu castes
+Gopalapuram , Koyyalagudem , Buttayagudem , Chagallu Mandals of West Godavari Distt. and Devipattanam , Korukonda and Gokavaram Mandals of East Godavari
+District ) Patra Sikligar Siddula Gudia / Gudiya ( confined to Srikakulam , Vizianagaram and Visakhapatnam Districts only ) Kurmi ( confined to Telangana Region
+and also Krishna District only ) Budubunjala / Bhunjwa / Bhadbhunja ( confined to Hyderabad and Ranga Reddy Districts only ) Lakkamari Kapu ( confined to
+Telangana Region only ) See also Scheduled Castes and Scheduled Tribes List of Scheduled Tribes in India # Andhra Pradesh References Jump up ^ Srinivasulu , K.
+`` Caste , Class and Social Articulation in Andhra Pradesh : Mapping Differential Regional Trajectories '' ( PDF ) . Overseas Development Institute . p. 12 .
+</item 7>
+
+<item 8>
+The 2014 Andhra Pradesh Assembly had 175 seats. The Telugu Desam Party won 103 and YSR Congress Party 66; the excerpt also lists BJP, independents and Navodayam
+Party among the parties. District figures show TDP and YSRCP as leading parties across several districts. Listed constituency winners include Sandra Venkata
+Veeraiah (TDP), Venkat Rao Jalagam (TRS), Thati Venkateswarlu (YSRCP) and Sun
+</item 8>
+
+<item 9>
+The excerpt lists Telugu caste communities as officially grouped into forward and backward classes. Forward classes, which do not qualify for government
+reservations, include Brahmin, Kamma, Kapu, Komati, Kshatriya, Reddy and Velama. The extensive backward-class list includes many occupational and regional
+communities, such as Rajaka, Devanga, Ediga, Padmasali, Viswakarma and Yadava. It notes that some communities’ classifications vary by subgroup or region, and
+</item 9>
+
+<item 10>
+The excerpt is a partial list of winners in the 2014 Andhra Pradesh Legislative Assembly election: constituencies 237–247 (Nellore and Kadapa districts) and
+257–272 (Kurnool and Anantapur districts). It names candidates including Kakani Govardhan Reddy, Pasham Sunil Kumar, Bollineni Ramarao, Buggana RajaReddy, and
+J.C. Prabhakar Reddy. TDP and Y
+</item 10>
+=== END ITEM id=e0fef8a307e89b48 ===

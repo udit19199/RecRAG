@@ -1,0 +1,109 @@
+[
+  {"id": "4cf30d3baaef01b3", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [
+      {"item": 7, "quote": "James has asked Engoron"},
+      {"item": 7, "quote": "The $250 million in penalties she is seeking"}
+    ]},
+    {"fact": "0.1", "status": "stated", "evidence": [
+      {"item": 7, "quote": "James has asked Engoron to ban Trump and his three eldest children from ever again running a company based New York"}
+    ]},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [
+      {"item": 1, "quote": "No apartment in New York City has ever sold for close to that amount, James said"}
+    ]},
+    {"fact": "2.0", "status": "stated", "evidence": [
+      {"item": 10, "quote": "The prosecution argues that was to mask a drop in the value of one of his other properties"}
+    ]}
+  ]},
+  {"id": "4d60ec276e54a2f3", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [
+      {"item": 8, "quote": "Harbaugh reportedly watched the game from the team hotel"}
+    ]},
+    {"fact": "0.1", "status": "stated", "evidence": [
+      {"item": 8, "quote": "the leading piece of drama returns"}
+    ]},
+    {"fact": "1.0", "status": "stated", "evidence": [
+      {"item": 2, "quote": "The Big Ten suspended coach Jim Harbaugh for three games"}
+    ]},
+    {"fact": "1.1", "status": "stated", "evidence": [
+      {"item": 2, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday"}
+    ]},
+    {"fact": "1.2", "status": "stated", "evidence": [
+      {"item": 2, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State"}
+    ]},
+    {"fact": "1.3", "status": "stated", "evidence": [
+      {"item": 2, "quote": "Michigan had hoped to block the suspension"}
+    ]},
+    {"fact": "1.4", "status": "stated", "evidence": [
+      {"item": 2, "quote": "the Wolverines will be without their coach on the sidelines in Happy Valley"}
+    ]}
+  ]},
+  {"id": "7e8583c38efe303d", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []}
+  ]},
+  {"id": "639a2a6cbb7564fe", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [
+      {"item": 6, "quote": "he tried and failed to give her a friendship bracelet"}
+    ]},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "stated", "evidence": [
+      {"item": 6, "quote": "a friendship bracelet with his phone number on it"}
+    ]},
+    {"fact": "0.3", "status": "stated", "evidence": [
+      {"item": 6, "quote": "he tried and failed to give her a friendship bracelet"}
+    ]},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [
+      {"item": 9, "quote": "Sept. 24: Swift attends Chiefs game"},
+      {"item": 9, "quote": "Swift took Kelce up on his offer"}
+    ]},
+    {"fact": "2.0", "status": "stated", "evidence": [
+      {"item": 8, "quote": "isn’t trying to hide her relationship from the public eye"}
+    ]},
+    {"fact": "2.1", "status": "stated", "evidence": [
+      {"item": 8, "quote": "isn’t trying to hide her relationship from the public eye"}
+    ]},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "9c63fd489e7d477c", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [
+      {"item": 9, "quote": "Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX?"}
+    ]},
+    {"fact": "0.2", "status": "stated", "evidence": [
+      {"item": 2, "quote": "After FTX declared bankruptcy"},
+      {"item": 9, "quote": "the former CEO of crypto exchange FTX"}
+    ]},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "stated", "evidence": [
+      {"item": 3, "quote": "for the trial of Sam Bankman-Fried, the disgraced cryptocurrency entrepreneur accused of"},
+      {"item": 3, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy"}
+    ]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [
+      {"item": 3, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy"}
+    ]},
+    {"fact": "2.1", "status": "stated", "evidence": [
+      {"item": 3, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy"}
+    ]},
+    {"fact": "3.0", "status": "stated", "evidence": [
+      {"item": 9, "quote": "A conscious criminal"},
+      {"item": 8, "quote": "allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to political candidates, and finance risky bets"}
+    ]},
+    {"fact": "3.1", "status": "stated", "evidence": [
+      {"item": 5, "quote": "Cohen repeatedly harped on Bankman-Fried’s allegedly good-faith actions throughout his address to the jury"}
+    ]},
+    {"fact": "3.2", "status": "stated", "evidence": [
+      {"item": 5, "quote": "Sam didn’t defraud anyone"},
+      {"item": 7, "quote": "He didn’t steal any money"}
+    ]},
+    {"fact": "3.3", "status": "missing", "evidence": []}
+  ]}
+]

@@ -1,0 +1,570 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "e902d6993de79c1d",
+   "kind": "answer",
+   "question": "what is earth's magnetic field responsible for",
+   "gold_answers": [
+    "deflect most of the solar wind, whose charged particles would otherwise strip away the ozone layer that protects the Earth from harmful ultraviolet radiation"
+   ],
+   "model_answer": "Protecting Earth’s atmosphere from solar wind particles and cosmic rays."
+  },
+  {
+   "id": "db85fd22bb7ef4cf",
+   "kind": "answer",
+   "question": "positive and negative impacts of internal migration in china",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Positive: higher incomes, remittances, skills, and opportunities. Negative: hukou-based exclusion, high migration costs, low wages, and limited access to healthcare, pensions, and education."
+  },
+  {
+   "id": "28bdc45acf497043",
+   "kind": "answer",
+   "question": "where did the idea of fortnite come from",
+   "gold_answers": [
+    "as a cross between Minecraft and Left 4 Dead"
+   ],
+   "model_answer": "A 2011 game jam at Epic Games."
+  },
+  {
+   "id": "f7e2d3e873363932",
+   "kind": "answer",
+   "question": "explain how an operating system talks to hardware",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Through device drivers and hardware controllers."
+  },
+  {
+   "id": "f068744264d958b1",
+   "kind": "answer",
+   "question": "who was toot toot in the green mile",
+   "gold_answers": [
+    "A trustee",
+    "trustee who stands in for the condemned during execution rehearsals and sells snacks to prisoners and guards",
+    "A trustee who stands in for the condemned during execution rehearsals and sells snacks to prisoners and guards"
+   ],
+   "model_answer": "A trustee who rehearsed executions and sold snacks to prisoners and guards."
+  },
+  {
+   "id": "c60ea494d8419ee8",
+   "kind": "answer",
+   "question": "how did rogue get super strength and flight",
+   "gold_answers": [
+    "Rogue permanently absorbed the superhuman powers and the psyche of Carol Danvers, the original Ms. Marvel"
+   ],
+   "model_answer": "By permanently absorbing Carol Danvers (Ms. Marvel)."
+  },
+  {
+   "id": "21e976f4add9dec3",
+   "kind": "answer",
+   "question": "discuss the impact of devaluation on foreign exchange reserve",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Devaluation reduces the reserves’ value, causing valuation losses."
+  },
+  {
+   "id": "c2a5a2b5427835df",
+   "kind": "answer",
+   "question": "where did they film high school musical two",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "St. George, Utah, USA"
+  },
+  {
+   "id": "bacf71330200c774",
+   "kind": "answer",
+   "question": "where does the word fore in golf originated",
+   "gold_answers": [
+    "`` Fore ! '' , originally an Australian interjection , is used to warn anyone standing or moving in the flight of a golf ball . The mention of the term in an 1881 Australian Golf Museum indicates that the term was in use at least as early as that period ."
+   ],
+   "model_answer": "It likely comes from the Scottish warning “before,” meaning “watch out.”\n"
+  },
+  {
+   "id": "d27bfdbe26120c22",
+   "kind": "answer",
+   "question": "dean koontz dark rivers of the heart summary",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Spencer Grant and Valerie Keene flee a secret government agency and join a resistance group."
+  },
+  {
+   "id": "c587491b281c4fda",
+   "kind": "answer",
+   "question": "how much is john incredible pizza to get in",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "About $10–$20 per person, depending on location and day."
+  },
+  {
+   "id": "b1bab9954e05eb6a",
+   "kind": "answer",
+   "question": "2. describing write about two instances where the colonists did not submit to the british",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Patriots besieged Boston; Continentals captured Montreal."
+  },
+  {
+   "id": "aeea1c34c584b902",
+   "kind": "answer",
+   "question": "what events occurred in the fighting at seas and near the great lakes",
+   "gold_answers": [
+    "The Battle of Lake Erie , sometimes called the Battle of Put - in - Bay , was fought on 10 September 1813 , in Lake Erie off the coast of Ohio during the War of 1812 . Nine vessels of the United States Navy defeated and captured six vessels of the British Royal Navy . This ensured American control of the lake for the rest of the war , which in turn allowed the Americans to recover Detroit and win the Battle of the Thames to break the Indian confederation of Tecumseh . It was one of the biggest naval battles of the War of 1812 ."
+   ],
+   "model_answer": "Naval battles and captures on Lake Erie, the Great Lakes and St. Lawrence, the Atlantic, Gulf Coast, Caribbean, and Pacific."
+  },
+  {
+   "id": "868a2051a82c9617",
+   "kind": "answer",
+   "question": "the south west wind blows across nigeria between",
+   "gold_answers": [
+    "arrives in central Nigeria in July",
+    "till September"
+   ],
+   "model_answer": "March and October"
+  },
+  {
+   "id": "b8d0e379f47b1f06",
+   "kind": "answer",
+   "question": "cast of hawaii five o season 8 episode 9",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Alex O’Loughlin, Scott Caan, Ian Anthony Dale, Meaghan Rath, Beulah Koale, Jorge Garcia, Chi McBride, Taylor Wily, and Dennis Chun."
+  },
+  {
+   "id": "b9c19a94250855eb",
+   "kind": "answer",
+   "question": "how common is the word in the english language",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The 7th most common word in written English."
+  },
+  {
+   "id": "b3079a4dafd476df",
+   "kind": "answer",
+   "question": "where can you find dna in the body",
+   "gold_answers": [
+    "inside the cell nucleus",
+    "in organelles, such as mitochondria or chloroplasts",
+    "chromosomes in a cell"
+   ],
+   "model_answer": "In the cell nucleus and mitochondria."
+  },
+  {
+   "id": "a955699d0cc58b9f",
+   "kind": "answer",
+   "question": "where is the hotel in the movie the shining",
+   "gold_answers": [
+    "In 1980 , The Shining became the basis for a film adaptation directed by Stanley Kubrick . Kubrick 's vision for the movie differed from King 's significantly in many ways , including the portrayal of the Overlook Hotel . The exteriors of Kubrick 's Overlook were supplied by the Timberline Lodge on the slopes of Mt . Hood in Oregon . Inspiration for the interior sets ( erected at Elstree Studios in England ) came from the 1927 Ahwahnee Hotel in Yosemite National Park . The management of the Timberline Lodge , fearful that guests would refuse to stay in their Room 217 if it were featured in a horror movie , insisted that Kubrick change the haunted room in the film to Room 237 ."
+   ],
+   "model_answer": "Timberline Lodge on Mt. Hood, Oregon."
+  },
+  {
+   "id": "8e75c9f49c2aaecf",
+   "kind": "answer",
+   "question": "you gotta fight for your right to party cover",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Cara Quici — “Fight” (2013)"
+  },
+  {
+   "id": "fa7fa7a39bc06421",
+   "kind": "answer",
+   "question": "where does the brain get its energy from",
+   "gold_answers": [
+    "most of its energy from oxygen-dependent metabolism of glucose (i.e., blood sugar),[73] but ketones provide a major alternative source, together with contributions from medium chain fatty acids (caprylic[78] and heptanoic[79] acids), lactate,[80] acetate,[81] and possibly amino acids",
+    "most of its energy from oxygen-dependent metabolism of glucose (i.e., blood sugar)"
+   ],
+   "model_answer": "Glucose, primarily; ketones and other fuels can also contribute."
+  },
+  {
+   "id": "3a08c3e3a38ec5a9",
+   "kind": "answer",
+   "question": "what is the payout for the texas bowl",
+   "gold_answers": [
+    "US$3 million per team",
+    "US$3 million per team (as of 2015)"
+   ],
+   "model_answer": "$3 million per team (as of 2015)"
+  },
+  {
+   "id": "7ba42c0bf63278f7",
+   "kind": "answer",
+   "question": "7 deadly sins signs of a holy war",
+   "gold_answers": [
+    "No . Title Original air date `` The Dark Dream Begins '' `` Kuroki Yume no Hajimari '' ( 黒き 夢 の はじまり ) August 28 , 2016 Elizabeth Liones goes to the Boar Hat , where all her friends are still asleep following the festival . After Elizabeth is greeted by Hawk outside , Meliodas introduces her to a meat pie made with vegetables that looks like Hawk , but it turns out to be unfit for human consumption . Meliodas has the idea of using pork as the main ingredient , which causes Hawk to make haste out of the bar . Meliodas comes up with a contest for his friends , in which he will obey any order for a day from whoever catches Hawk first . However , Hawk manages to outsmart them due to his small size . Hawk returns to the Boar Hat and eats food scraps made by Ban , who is declared the winner as a result . At night , Meliodas takes Elizabeth back to the palace while also assuring that his purpose in life is to protect her . Meliodas then goes to the catacombs to see the Horn of Cernunnos . When the goddess vessel taunts him for his reputation as a demon , Meliodas destroys the Horn of Cernunnos in retaliation . `` Our Fighting Festival '' `` Futari no Ken'ka Matsuri '' ( 二 人 の 喧嘩 祭り ) September 4 , 2016 Ban walks up to a mountaintop to finally settle matters with Meliodas , but the former is surprised to see Elizabeth and Hawk as well as the other members of the Seven Deadly Sins and the Holy Knights as part of an audience . Merlin casts a gigantic cubic barrier around Meliodas and Ban in order for the spectators to safely watch the fight . Meanwhile , King and Hauser have their own fight to win the attention of Diane . Ban initiates a brutal attack on Meliodas that somehow weakens most of the spectators . The fight ends in a stalemate after the two of them exchange rapid punches that cause the barrier to break . They remain friends and head back down to the Boar Hat for a drink . `` In Pursuit of First Love '' `` Hatsukoi o Oikakete '' ( 初恋 を 追いかけ て ) September 11 , 2016 King still hesitates to confess his feelings for Diane . Meanwhile , Diane leaves the Boar Hat and heads to a construction site in town , recalling the devastating collateral damage she caused due to her immense size . The construction workers there apologize to her and thank her for saving the kingdom . When King comes to see Diane , the two decide to play a game of tag across town . Outside a church , a wedding ceremony is interrupted by a demon , in which Diane and King combine their skills in defeating the demon . King asks Diane if she regained her memories , and she answers him with a kiss on his cheek . The moment is ruined when a brick suddenly falls on his head , and he later wakes up next to her , having forgotten what they did during the day . `` The Shape of Love '' `` Ai no Katachi '' ( 愛 の かたち ) September 18 , 2016 Merlin agrees to be a waitress at the Boar Hat , but first she wants Meliodas and Gowther to follow Gilthunder to find out if he is being stalked by someone . Meanwhile , Gilthunder , Hauser and Griamore are each hit with falling debris in the streets , unaware of the situation . Gowther is distracted by a boy named Pelliot , who asks him to retrieve a fat cat off a roof . Since Gowther reminds Pelliot of his mother , who recently passed away , Gowther transforms into Pelliot 's mother for a moment and disappears when Pelliot 's father finds Pelliot . Meliodas finds Gilthunder , Hauser and Griamore at a restaurant , where he purposely spills coffee to expose Vivian , revealed as the stalker . Merlin punishes Vivian by planting a cursed ring on her finger , which will bring pain to her each time the curse is activated , and Merlin explains that the Ten Commandments are the highest class in the demon race . At the Boar Hat , Merlin quits her job as a waitress , while Hawk and Gowther fill in for the position , much to the guys ' dismay ."
+   ],
+   "model_answer": "The Seven Deadly Sins: Signs of Holy War"
+  },
+  {
+   "id": "3c462c94d10ef292",
+   "kind": "answer",
+   "question": "the arp request is sent to which of the following layer 2 destination addresses",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "FF:FF:FF:FF:FF:FF (broadcast)"
+  },
+  {
+   "id": "f33a7170cb78b688",
+   "kind": "answer",
+   "question": "where are located the acetabulum and the glenoid cavities",
+   "gold_answers": [
+    "Compared to the acetabulum ( at the hip - joint ) the glenoid cavity is relatively shallow . This makes the shoulder joint prone to dislocation ( luxation ) . Strong glenohumeral ligaments and muscles prevents dislocation in most cases ."
+   ],
+   "model_answer": "Acetabulum: hip bone; glenoid cavity: scapula."
+  },
+  {
+   "id": "9c058c96c1bd2b48",
+   "kind": "answer",
+   "question": "when does bloom find out who she is",
+   "gold_answers": [
+    "Addio Magix!\"  / \"The Font of Dragon Fire"
+   ],
+   "model_answer": "February 25, 2004."
+  },
+  {
+   "id": "5f0204781417087e",
+   "kind": "answer",
+   "question": "who lives in the blue house in balamory",
+   "gold_answers": [
+    "Edie McCredie"
+   ],
+   "model_answer": "Spencer lives in the blue house."
+  },
+  {
+   "id": "d679232bac3e4d8a",
+   "kind": "answer",
+   "question": "when did the us stop drafting for the vietnam war",
+   "gold_answers": [
+    "1973"
+   ],
+   "model_answer": "June 30, 1973\n"
+  },
+  {
+   "id": "63db080b5adf115c",
+   "kind": "answer",
+   "question": "who has scored the most touchdowns this year",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Jonathan Taylor"
+  },
+  {
+   "id": "74c82538716d30a5",
+   "kind": "answer",
+   "question": "how do i loathe thee let me count the ways shakespeare",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "“‘How do I love thee? Let me count the ways’ is by Elizabeth Barrett Browning, not Shakespeare.”"
+  },
+  {
+   "id": "98ceb6163337e3f5",
+   "kind": "answer",
+   "question": "what is the significance of the sahara desert",
+   "gold_answers": [
+    "the largest hot desert and the third largest desert in the world after Antarctica and the Arctic",
+    "the largest hot desert",
+    "the third largest desert in the world after Antarctica and the Arctic"
+   ],
+   "model_answer": "The world’s largest hot desert and a defining feature of North Africa."
+  },
+  {
+   "id": "8e452ec1777bf4fd",
+   "kind": "answer",
+   "question": "when does season 2 of wolf hall start",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "November 10, 2024 (BBC)"
+  },
+  {
+   "id": "07fa3900612886ae",
+   "kind": "answer",
+   "question": "who are the faces of the postcode lottery",
+   "gold_answers": [
+    "People 's Postcode Lottery has a number of celebrity `` ambassadors '' . In March 2018 , these included David Attenborough , Clare Balding , Brian Blessed , Judi Dench , Shobna Gulati , Tim Healy , Stephen Jardine , Ellen MacArthur , Aggie MacKenzie , Carey Mulligan , John Stapleton and Emma Thompson . Fiona Phillips became an ambassador for People 's Postcode Lottery at the end of 2012 , leading the organisation 's DRTV campaigns ."
+   ],
+   "model_answer": "Judie McCourt, the presenter of People’s Postcode Lottery."
+  },
+  {
+   "id": "84166bac1eac0208",
+   "kind": "answer",
+   "question": "in which regions are most of africa petroleum and natural gas found",
+   "gold_answers": [
+    "Nigeria"
+   ],
+   "model_answer": "North Africa and the Gulf of Guinea in West Africa."
+  },
+  {
+   "id": "1643ce881626fa58",
+   "kind": "answer",
+   "question": "where have you been all my life arthur alexander",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "In Muscle Shoals, Alabama."
+  },
+  {
+   "id": "32d215d54c6b6caf",
+   "kind": "answer",
+   "question": "where did they film high school musical two",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "St. George, Utah (Entrada at Snow Canyon)"
+  },
+  {
+   "id": "b6dd724c1910b097",
+   "kind": "answer",
+   "question": "who was the pitcher who broke his arm",
+   "gold_answers": [
+    "The following season , a cancerous desmoid tumor was found in Dravecky 's pitching arm . On October 7 , 1988 , he underwent surgery , which removed half of the deltoid muscle in his pitching arm and froze the humerus bone in an effort to eliminate all of the cancerous cells . Doctors advised Dravecky to wait until 1990 to pitch again , but Dravecky was determined to pitch in 1989 . By July 1989 , he was pitching in the minors , and on August 10 , he made a highly publicized return to the major leagues , pitching eight innings and defeating Cincinnati 4 -- 3 . In his following start , five days later in Montreal , Dravecky pitched three no - hit innings , but in the fifth inning , he felt a tingling sensation in his arm . In the sixth inning , he started off shaky , allowing a home run to the leadoff batter and then hitting the second batter , Andrés Galarraga . Then , on his first pitch to Tim Raines , his humerus bone snapped ; the sound of it breaking could be heard throughout the stadium . Dravecky collapsed on the mound . He 'd suffered a clean break midway between his shoulder and elbow , ending his season ."
+   ],
+   "model_answer": "Dave Dravecky"
+  },
+  {
+   "id": "3c63f5a07e181b89",
+   "kind": "answer",
+   "question": "90 day fiance 1st season where are they now",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Pao and Russ were still together as of 2017."
+  },
+  {
+   "id": "a5aa1764e95431c5",
+   "kind": "answer",
+   "question": "what causes cracked skin at the corners of your mouth",
+   "gold_answers": [
+    "infection",
+    "irritation",
+    "allergies"
+   ],
+   "model_answer": "Saliva irritation and Candida or bacterial infection; nutritional deficiencies and poorly fitting dentures can also contribute."
+  },
+  {
+   "id": "2b58fe591a640ca0",
+   "kind": "answer",
+   "question": "when are two events said to be independent",
+   "gold_answers": [
+    "if the occurrence of one does not affect the probability of occurrence of the other",
+    "if the occurrence of one does not affect the probability of occurrence of the other."
+   ],
+   "model_answer": "When \\(P(A\\cap B)=P(A)P(B)\\)."
+  },
+  {
+   "id": "8de00d7b3b3dce7e",
+   "kind": "answer",
+   "question": "what is windows defender and what does it do",
+   "gold_answers": [
+    "Windows Defender , officially called Windows Defender Antivirus in Windows 10 Creators Update , is an anti-malware component of Microsoft Windows.It was first released as a free antispyware program download for Windows XP , shipped with Windows Vista and Windows 7 and made into a full antivirus program replacing Microsoft Security Essentials as part of Windows 8 and later versions ."
+   ],
+   "model_answer": "Microsoft’s built-in anti-malware software that protects Windows from spyware, viruses, and other threats."
+  },
+  {
+   "id": "d4533a5993e725de",
+   "kind": "answer",
+   "question": "what was the city of beijing previously known as",
+   "gold_answers": [
+    "Peking"
+   ],
+   "model_answer": "Peking (formerly Beiping)"
+  },
+  {
+   "id": "1add087d6bff1f4f",
+   "kind": "answer",
+   "question": "where was the original flight of the phoenix filmed",
+   "gold_answers": [
+    "20th Century-Fox Studios",
+    "20th Century-Fox Ranch, California",
+    "Buttercup Valley, Arizona",
+    "Pilot Knob Mesa, California",
+    "the 20th Century-Fox Studios",
+    "Pilot Knob Mesa near Winterhaven, located in California's Imperial Valley, on the western fringes of Yuma, Arizona",
+    "at the 20th Century-Fox Studios and 20th Century-Fox Ranch, California",
+    "Winterhaven, located in California's Imperial Valley, on the western fringes of Yuma, Arizona"
+   ],
+   "model_answer": "Pilot Knob Mesa, California, and Buttercup Valley, Arizona."
+  },
+  {
+   "id": "239a0b365d12f4d8",
+   "kind": "answer",
+   "question": "where does captain america civil war take place",
+   "gold_answers": [
+    "approximately one year after Ultron's defeat in the nation of Sokovia at the hands of the Avengers"
+   ],
+   "model_answer": "Lagos, Berlin, Bucharest, Vienna, and Siberia."
+  },
+  {
+   "id": "105f8f2b7fdbeac2",
+   "kind": "answer",
+   "question": "who warned europe to stay out of the americas",
+   "gold_answers": [
+    "Roosevelt Corollary",
+    "Monroe Doctrine"
+   ],
+   "model_answer": "The United States, through the Monroe Doctrine."
+  },
+  {
+   "id": "a461c01747d79b73",
+   "kind": "answer",
+   "question": "who was kat slater's sisters in eastenders",
+   "gold_answers": [
+    "Lynne",
+    "Little Mo",
+    "Zoe"
+   ],
+   "model_answer": "Lynne and Little Mo (and Zoe, who was actually her daughter)\n"
+  },
+  {
+   "id": "a7e9aa0cc61f9547",
+   "kind": "answer",
+   "question": "which regions on earth have seasons tied to the amount of rainfall",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Mediterranean, tropical monsoon, savanna, and much of Australia."
+  },
+  {
+   "id": "773544a8b96fd95d",
+   "kind": "answer",
+   "question": "horatio spafford story it is well with my soul",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "He wrote it after his four daughters died in the Ville du Havre shipwreck."
+  },
+  {
+   "id": "7743d0a713dc5bad",
+   "kind": "answer",
+   "question": "where have you been all my life arthur alexander",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "A 1962 soul single by Arthur Alexander."
+  },
+  {
+   "id": "ce81a10219b1f3ef",
+   "kind": "answer",
+   "question": "i hope that you don't fall in love with me",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Tom Waits"
+  },
+  {
+   "id": "9a07652d9ae88131",
+   "kind": "answer",
+   "question": "where did the term spirits for alcohol come from",
+   "gold_answers": [
+    "Middle Eastern alchemy"
+   ],
+   "model_answer": "Middle Eastern alchemy, where the vapor collected during distillation was called the spirit of the original material."
+  },
+  {
+   "id": "c12861744a3c57e7",
+   "kind": "answer",
+   "question": "what was the relationship between japan’s emperors and military leaders",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Military leaders pledged loyalty to the Emperor, and their General Staffs reported directly to him."
+  },
+  {
+   "id": "ce29eaad7cd690c3",
+   "kind": "answer",
+   "question": "where does captain america civil war take place",
+   "gold_answers": [
+    "approximately one year after Ultron's defeat in the nation of Sokovia at the hands of the Avengers"
+   ],
+   "model_answer": "Lagos, Vienna, Berlin, Bucharest, and Siberia."
+  },
+  {
+   "id": "23561932ca42b75b",
+   "kind": "answer",
+   "question": "what are the zords in the power rangers movie",
+   "gold_answers": [
+    "animal-themed Ninja Zords"
+   ],
+   "model_answer": "Ninja Zords and Ecto-Morphicon Titans"
+  },
+  {
+   "id": "6683b9e56164be34",
+   "kind": "answer",
+   "question": "did the bush family own a baseball team",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes—George W. Bush owned a 2% stake in the Texas Rangers."
+  },
+  {
+   "id": "e688ff992ddbc976",
+   "kind": "answer",
+   "question": "the south west wind blows across nigeria between",
+   "gold_answers": [
+    "arrives in central Nigeria in July",
+    "till September"
+   ],
+   "model_answer": "February and June\n"
+  },
+  {
+   "id": "e084a1d7672694bb",
+   "kind": "answer",
+   "question": "differentiate between dot matrix printer and daisy wheel printer",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Dot-matrix printers form images from dots; daisy-wheel printers strike preformed characters for crisp text but limited graphics."
+  },
+  {
+   "id": "09212a01b5be5904",
+   "kind": "answer",
+   "question": "what was taking place before the industrial revolution",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "An agrarian society\n"
+  },
+  {
+   "id": "a9043122e66e2468",
+   "kind": "answer",
+   "question": "the primary reason for the creation of federal whistleblower statutes was to",
+   "gold_answers": [
+    "The Whistleblower Protection Act of 1989 , Pub. L. 101 - 12 as amended , is a United States federal law that protects federal whistleblowers who work for the government and report agency misconduct . A federal agency violates the Whistleblower Protection Act if agency authorities take ( or threaten to take ) retaliatory personnel action against any employee or applicant because of disclosure of information by that employee or applicant . Whistleblowers may file complaints that they believe reasonably evidences a violation of a law , rule or regulation ; gross mismanagement ; gross waste of funds ; an abuse of authority ; or a substantial and specific danger to public health or safety ."
+   ],
+   "model_answer": "Protect federal employees who report agency misconduct from retaliation."
+  },
+  {
+   "id": "d042a6f6f31b4840",
+   "kind": "answer",
+   "question": "who was the league of nations made up of",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Representatives of its member states"
+  },
+  {
+   "id": "7de4dfaf6fdd8fc3",
+   "kind": "answer",
+   "question": "where was a time for choosing speech given",
+   "gold_answers": [
+    "Los Angeles County, California, U.S.",
+    "part of a pre-recorded television program, Rendezvous with Destiny"
+   ],
+   "model_answer": "Los Angeles, California"
+  }
+ ],
+ "evidence": []
+}

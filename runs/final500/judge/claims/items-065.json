@@ -1,0 +1,79 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5ade5a645542997c77adee0d",
+   "sentences": [
+    "Wenling (Wenling dialect: Uen-lin Zy ] ; ) is a coastal county-level city in the municipal region of Taizhou, in southeastern Zhejiang province, China.",
+    "Ruili (; Burmese: ရွှေလီ ; Thai: เมืองมาว ) is a county-level city of Dehong Prefecture, in the west of Yunnan province, People's Republic of China."
+   ]
+  },
+  {
+   "id": "908345273639329593",
+   "sentences": [
+    "In 1910 , in conjunction with advocacy work led by Florence Kelley of the National Consumer League , the Women 's Trade Union League ( WTLU ) of Massachusetts under the leadership of Elizabeth Evans took up the cause of minimum wage legislation in Massachusetts . Over the next two years , a coalition of social reform groups and labor advocates in Boston pushed for minimum wage legislation in the state . In 1912 , Massachusetts passed the first American minimum wage legislation , which established a state commission for recommending non-compulsory minimum wages for women and children . Within eight years , at least thirteen U.S. states and the District of Columbia would pass minimum wage laws , with pressure being placed on state legislatures by the National Consumers League in a coalition with other women 's voluntary associations and organized labor . The United States Supreme Court of the Lochner era consistently invalidated compulsory minimum wage laws . Advocates for these minimum wage laws hoped that they would be upheld under the precedent of Muller v. Oregon , which upheld maximum working hours laws for women on the grounds that women required special protection that men did not . However , the Court did not extend this principle to minimum wage laws , considering the latter as interfering with the ability of employers to freely negotiate wage contracts with employees .",
+    "In 1933 , the Roosevelt administration made the first attempt at establishing a national minimum wage , when a $0.25 per hour standard was set as part of the National Industrial Recovery Act . However , in the 1935 court case Schechter Poultry Corp. v. United States ( 295 U.S. 495 ) , the US Supreme Court declared the act unconstitutional , and the minimum wage was abolished . In 1938 , the minimum wage was re-established pursuant to the Fair Labor Standards Act , once again at $0.25 per hour ( $4.78 in 2017 dollars ) . In 1941 , the Supreme Court upheld the Fair Labor Standards Act in United States v. Darby Lumber Co. , holding that Congress had the power under the Commerce Clause to regulate employment conditions ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1561",
+   "sentences": [
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.",
+    "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-1743",
+   "sentences": [
+    "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.",
+    "Because FTX had grown so much, he could no longer run both companies, he said.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "-7930247987013374697",
+   "sentences": [
+    "The Burzahom site is a prehistoric settlement in the village of the same name in the Srinagar District . It is 16 kilometres ( 9.9 mi ) to the northeast of Srinagar on the Naseem - Shalimar road . The elevation of the site is 1,800 metres ( 5,900 ft ) above sea - level . It is the northernmost excavated Neolithic site of India . The site is on an ancient Pleistocene lake bed . The location is in a high terrace which is part of the floodplain of the Jhelum river and has Karewa soil ( clay ) formation . The site has a commanding view of the Dal lake which is about 2 kilometres ( 1.2 mi ) away . In the Kashmiri language ' Burzahom ' means `` birch '' , a tree species ( that generally grows in the elevation range of 3,000 to 4,200 metres ( 9,800 to 13,800 ft ) in the Himalayas ) , which is found in the excavated housing area in the form of roofing material , and thus confirming the existence of the tree even in the pre-historic Neolithic times ."
+   ]
+  },
+  {
+   "id": "5a8e5f1f5542995a26add4d6",
+   "sentences": [
+    "The Segugio Italiano ] is an Italian breed of dog of the scenthound family.",
+    "The Sapsali (삽살이) is a shaggy Korean breed of dog.",
+    " Traditionally, these dogs were believed to dispel ghosts and evil spirits."
+   ]
+  },
+  {
+   "id": "multihop-rag-1791",
+   "sentences": [
+    "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury.",
+    "30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss."
+   ]
+  },
+  {
+   "id": "5ab7fa4f5542993667794080",
+   "sentences": [
+    "The University of Arizona (also referred to as U of A, UA, or Arizona) is a public research university in Tucson, Arizona, United States.",
+    "The Presbyterian University College, Ghana is a partially private & public university located at Abetifi-Kwahu in the Eastern Region of Ghana.",
+    " It is one of the new universities in Ghana granted accreditation by the National Accreditation Board."
+   ]
+  },
+  {
+   "id": "-4316845615436935736",
+   "sentences": [
+    "Tracy McConnell , better known as `` The Mother '' , is the title character from the CBS television sitcom How I Met Your Mother . The show , narrated by Future Ted , tells the story of how Ted Mosby met The Mother . Tracy McConnell appears in 8 episodes from `` Lucky Penny '' to `` The Time Travelers '' as an unseen character ; she was first seen fully in `` Something New '' and was promoted to a main character in season 9 . The Mother is played by Cristin Milioti ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1502",
+   "sentences": [
+    "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.",
+    "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  }
+ ]
+}

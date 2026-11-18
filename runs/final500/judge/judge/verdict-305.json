@@ -1,0 +1,57 @@
+[
+  {"id": "d0e95237eae9288a", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter."}]}
+  ]},
+  {"id": "1ec62dd1c403814d", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Establishing himself as the millennial politician who’s cool enough to use TikTok but anti-woke enough to play in the divisive culture war isn’t working in Ramaswamy’s favor, though."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Establishing himself as the millennial politician who’s cool enough to use TikTok but anti-woke enough to play in the divisive culture war isn’t working in Ramaswamy’s favor, though."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok, which audiences have started to resist."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok, which audiences have started to resist."}]}
+  ]},
+  {"id": "a0907fc5108c534d", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "5 things we learned so far about the Google antitrust case"}, {"item": 4, "quote": "the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "5 things we learned so far about the Google antitrust case"}, {"item": 4, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 4, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 4, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports."}]},
+    {"fact": "3.0", "status": "stated", "evidence": [{"item": 3, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "3.1", "status": "stated", "evidence": [{"item": 3, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "3.2", "status": "stated", "evidence": [{"item": 3, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "3.3", "status": "stated", "evidence": [{"item": 3, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "755b3206d88cd0a1", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "152.67 -- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]}
+  ]},
+  {"id": "40dd8897e387349a", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "There, you can find stories like this in-depth breakdown of what to expect from both sides of the SBF case, where the prosecution and defense could gain ground or fall short in their arguments and what the takeaways were from the opening arguments."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "There, you can find stories like this in-depth breakdown of what to expect from both sides of the SBF case, where the prosecution and defense could gain ground or fall short in their arguments and what the takeaways were from the opening arguments."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "There, you can find stories like this in-depth breakdown of what to expect from both sides of the SBF case, where the prosecution and defense could gain ground or fall short in their arguments and what the takeaways were from the opening arguments."}]}
+  ]},
+  {"id": "09311132310b9f64", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "“It’s not the NHL that he was playing in the last few years,” Davidson said, “but the level of performance and how he could control a game and dominate a game in junior — it indicated he was going to be able to do that at some point in the NHL."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "“It’s not the NHL that he was playing in the last few years,” Davidson said, “but the level of performance and how he could control a game and dominate a game in junior — it indicated he was going to be able to do that at some point in the NHL."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "“It’s not the NHL that he was playing in the last few years,” Davidson said, “but the level of performance and how he could control a game and dominate a game in junior — it indicated he was going to be able to do that at some point in the NHL."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]}
+]

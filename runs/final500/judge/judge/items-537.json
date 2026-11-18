@@ -1,0 +1,429 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "641d0ea742ac3647",
+   "gold": [
+    {
+     "sentence": "The Battle of Saipan was a battle of the Pacific campaign of World War II, fought on the island of Saipan in the Mariana Islands from 15 June to 9 July 1944.",
+     "facts": {
+      "0.0": "The Battle of Saipan was a battle of the Pacific campaign of World War II.",
+      "0.1": "The Battle of Saipan was fought on the island of Saipan in the Mariana Islands.",
+      "0.2": "The Battle of Saipan was fought from 15 June to 9 July 1944."
+     }
+    },
+    {
+     "sentence": " The U.S. 2nd Marine Division, 4th Marine Division, and the Army's 27th Infantry Division, commanded by Lieutenant General Holland Smith, defeated the 43rd Infantry Division of the Imperial Japanese Army, commanded by Lieutenant General Yoshitsugu Saito.",
+     "facts": {
+      "1.0": "The U.S. 2nd Marine Division, 4th Marine Division, and the Army's 27th Infantry Division were commanded by Lieutenant General Holland Smith.",
+      "1.1": "The U.S. 2nd Marine Division, 4th Marine Division, and the Army's 27th Infantry Division defeated the 43rd Infantry Division of the Imperial Japanese Army.",
+      "1.2": "The 43rd Infantry Division of the Imperial Japanese Army was commanded by Lieutenant General Yoshitsugu Saito."
+     }
+    },
+    {
+     "sentence": " It was fought by American and Filipino forces against Japanese troops in Manila, the capital city of the Philippines.",
+     "facts": {
+      "2.0": "The battle referred to here was fought by American and Filipino forces against Japanese troops.",
+      "2.1": "The battle referred to here took place in Manila, the capital city of the Philippines."
+     }
+    }
+   ],
+   "items": [
+    "Battle of Guam (1941)\nThe First Battle of Guam was an engagement during the Pacific War in World War II, and took place from 8 December to 10 December 1941 on Guam in the Mariana Islands between Japan and the United States.\n\n The American garrison was defeated by Japanese forces on 10 December, which resulted in an occupation until the Second Battle of Guam in 1944.",
+    "Battle of Bataan\nThe surrender at Bataan, with 76,000 soldiers surrendering in the Philippines altogether, was the largest in American and Filipino military histories, and was the largest United States surrender since the American Civil War's Battle of Harper's Ferry.\n\n Soon afterwards, Filipino and American prisoners of war were forced into the Bataan Death March.",
+    "Battle of Manila (1945)\nThe Battle of Manila (February 3, 1945 – March 3, 1945) was a major battle of the Philippine campaign of 1944-45, during the Second World War.\n\n It was fought by American and Filipino forces against Japanese troops in Manila, the capital city of the Philippines.\n\n The month-long battle, which resulted in the death of over 100,000 civilians and the complete devastation of the city, was the scene of the worst urban fighting in the Pacific theater.\n\n Japanese forces committed mass murder against Filipino civilians during the battle.\n\n Along with massive loss of life, the battle also destroyed architectural and cultural heritage dating back to the city's foundation.\n\n The battle ended the almost three years of Japanese military occupation in the Philippines (1942–1945).\n\n The city's capture was marked as General Douglas MacArthur's key to victory in the campaign of reconquest.",
+    "Battle of Bataan\nThe Battle of Bataan (7 January – 9 April 1942) represented the most intense phase of Imperial Japan's invasion of the Philippines during World War II.\n\n In January 1942, forces of the Imperial Japanese Army and Navy invaded Luzon along with several islands in the Philippine Archipelago after the bombing of the American naval base at Pearl Harbor.\n\n The commander-in-chief of all Filipino and American forces in the islands, General Douglas MacArthur, consolidated all of his Luzon-based units on the Bataan Peninsula to fight against the Japanese invaders.\n\n By this time, the Japanese controlled nearly all of Southeast Asia.\n\n The Bataan peninsula and the island of Corregidor were the only remaining Allied strongholds in the region.\n\n Despite a lack of supplies, Filipino and American forces managed to fight the Japanese for three months, engaging them initially in a fighting retreat southward.\n\n As the combined Filipino and American forces made a last stand, the delay cost the Japanese valuable time and prevented immediate victory across the Pacific.",
+    "Battle of Manila (1574)\nThe Battle of Manilla (1574) was a battle in the Manila area mainly in the location of what is now Parañaque between Chinese pirates, led by Limahong and the Spanish colonial forces and their native allies.\n\n The battle occurred on November 29, 1574 when Limahong's fleet landed in the town of Parañaque and from there, began to assault the fortifications of Intramuros.\n\n Initially, the inhabitants where disorganized and Limahong's forces routed them.\n\n Furthermore, the Chinese killed the Master-of-Camp of the Spanish, Martin De Goiti.\n\n This caused them to delay their assault on Manila as Martin de Goiti's house was an obstacle in their march.\n\n However, upon the arrival of a certain Filipino hero called, Galo, resistance started to organize.\n\n Under Galo's command, they were able to resist China-born Limahong until Mexico-born Juan de Salcedo arrived from Ilocos with 300 Ilocano Warriors and Limahong was defeated and eventually forced to retreat.\n\n Thereafter Limahong abandoned his plans to invade Manila and instead, set up a temporary kingdom in Pangasinan.",
+    "Battle of Okinawa\nThe Battle of Okinawa (Japanese: 沖縄戦 , Hepburn: Okinawa-sen ) (Okinawan: 沖縄戦 , \"Uchinaa ikusa \" ), codenamed Operation Iceberg, was a major battle of the Pacific War fought on the island of Okinawa by United States Marine and Army forces against the Imperial Japanese Army and included the largest amphibious assault in the Pacific War during World War II, the April 1, 1945, invasion of Okinawa itself.\n\n The 82-day battle lasted from April 1 until June 22, 1945.\n\n After a long campaign of island hopping, the Allies were planning to use Okinawa, a large island only 340 mi away from mainland Japan, as a base for air operations for the planned invasion of the Japanese home islands.",
+    "Battle of Saipan\nThe Battle of Saipan was a battle of the Pacific campaign of World War II, fought on the island of Saipan in the Mariana Islands from 15 June to 9 July 1944.\n\n The Allied invasion fleet embarking the expeditionary forces left Pearl Harbor on 5 June 1944, the day before Operation Overlord in Europe was launched.\n\n The U.S. 2nd Marine Division, 4th Marine Division, and the Army's 27th Infantry Division, commanded by Lieutenant General Holland Smith, defeated the 43rd Infantry Division of the Imperial Japanese Army, commanded by Lieutenant General Yoshitsugu Saito.",
+    "Battle of Attu\nThe Battle of Attu, which took place from 11–30 May 1943, was a battle fought between forces of the United States, aided by Canadian reconnaissance and fighter-bomber support, and the Empire of Japan on Attu Island off the coast of the Territory of Alaska as part of the Aleutian Islands Campaign during the American Theater and the Pacific Theater and was the only land battle of World War II fought on incorporated territory of the United States.\n\n It is also the only land battle in which Japanese and American forces fought in Arctic conditions.",
+    "Battle of Guam (1944)\nThe Second Battle of Guam (21 July – 10 August 1944) was the American recapture of the Japanese-held island of Guam, a U.S. territory in the Mariana Islands captured by the Japanese from the U.S. in the 1941 First Battle of Guam during the Pacific campaign of World War II.",
+    "Battle of Manila (1898)\nThe Battle of Manila, sometimes called the Mock Battle of Manila, was a land engagement which took place in Manila on August 13, 1898, at the end of the Spanish–American War, four months after the decisive victory by Commodore Dewey's Asiatic Squadron at the Battle of Manila Bay.\n\n The belligerents were Spanish forces led by Governor-General of the Philippines Fermín Jáudenes, and American forces led by United States Army Brigadier General Wesley Merritt and United States Navy Commodore George Dewey.\n\n American forces were supported by units of the Philippine Revolutionary Army, led by Emilio Aguinaldo."
+   ]
+  },
+  {
+   "id": "bd7aad6f2c7ff013",
+   "gold": [
+    {
+     "sentence": " He earned 1 cap under Jack Charlton for the Irish national team.",
+     "facts": {
+      "0.0": "The player earned 1 cap for the Irish national team.",
+      "0.1": "The player earned that cap under Jack Charlton."
+     }
+    },
+    {
+     "sentence": " He was part of the England team that won the 1966 World Cup.",
+     "facts": {
+      "1.0": "The player was part of the England team that won the 1966 World Cup.",
+      "1.1": "The England team won the 1966 World Cup."
+     }
+    }
+   ],
+   "items": [
+    "Billy Morgan (footballer, born 1891)\nWilliam Albert L. Morgan (3 November 1891 – after 1927) was an English professional footballer born in Old Hill, Cradley Heath, Staffordshire, who played either at outside left or inside left.\n\n He played for Birmingham, Coventry City and Crystal Palace in the Football League, and was capped once for a Football League representative side.",
+    "William McCourty\nWilliam McCourty (1884 – 10 December 1917) was an English professional footballer born in Morpeth, Northumberland, who played in the Football League for Birmingham.\n\n McCourty, a former coal miner who played at left half, joined Birmingham in May 1909.\n\n He made his debut in the Second Division on 13 September 1909, deputising for the injured Tommy Daykin in a home game against Glossop which finished as a 2–2 draw, and was never picked again, returning to non-league football the following year.",
+    "1929–30 British Home Championship\nThe 1929-30 British Home Championship was an edition of the annual international football tournament played between the British Home Nations.\n\n 1930 was the year in which the tournament finally gained a serious rival as the premier international football competition, with the inception of the 1930 FIFA World Cup, held in Uruguay.\n\n The Home Nations were not however members of FIFA due to disputes over the growing professionalism in continental and South American football.\n\n As a result, they were not able to attend and indicated that even if they were invited they would have no interest in attending, deeming foreign opposition too weak for serious contest.\n\n It is interesting to speculate what would have happened had the Home Nations entered the tournament, especially as the tide of world football was changing against Britain.\n\n The England team, which dominated the 1930 championship, had lost to Spain the year before in the first defeat by a foreign football team, and in the same year they only managed draws with Germany and Austria.\n\n The Scottish side, which had won most of the previous ten championships, was likewise unprepared, only playing its first game outside the British Isles in 1929, and being heavily defeated on tour in 1931 by both the Austrians and the Italians.",
+    "Barry Murphy (footballer, born 1959)\nBarry Murphy (born 1 April 1959 in Dublin) was an Irish soccer player during the 1980s.\n\n He earned 1 cap under Jack Charlton for the Irish national team.",
+    "Barry Rose\nBarry Michael Rose OBE, FRAM, FRSCM, Hon.D.Mus, Hon.FGCM, Hon FRCO, M.Univ., (Surrey), born 24 May 1934) is a choir trainer and organist.\n\n He is best known for founding the choir and the pattern of daily sung Worship at the new Guildford Cathedral in 1961, and later, on 29 July 1981, directing the music at the wedding of Charles, Prince of Wales and Diana, Princess of Wales formerly Lady Diana Frances Spencer, at St Paul's Cathedral in London.",
+    "Baron Plunket\nBaron Plunket, of Newtown in the County of Cork, is a title in the Peerage of the United Kingdom.\n\n It was created in 1827 for the prominent Irish lawyer and Whig politician William Plunket.\n\n He served as Lord Chancellor of Ireland from 1830 and 1834 and again from 1835 to 1841.\n\n His eldest son, the second Baron, was Bishop of Tuam, Killala and Achonry between 1839 and 1866.\n\n He was succeeded by his younger brother, the third Baron.\n\n He was a barrister.\n\n His eldest son, the fourth Baron, served as Archbishop of Dublin between 1884 and 1897.\n\n He was succeeded by his eldest son, the fifth Baron.\n\n He was a diplomat and held office as Governor of New Zealand between 1904 and 1910.\n\n His grandson, Patrick, the seventh Baron, was Equerry to both King George VI and Queen Elizabeth II.\n\n He was succeeded by his younger brother, Robin who died in 2013 and was in turn succeeded by his nephew, Tyrone who was a Page of Honour to Queen Elizabeth II.",
+    "Dave Bailey (athlete)\nHe was a member of 9 Canadian National Track and Field Teams competing at World University Games, Budapest 1965 and Tokyo 1967, Commonwealth Games, Kingston, Jamaica, 1966, Pan American Games, Winnipeg, 1967, Commonwealth vs USA, Los Angeles, 1967, Pre-Olympic Games, Mexico City, 1967, Soviet Union Tour, 1968, European Tour, 1968, Olympic Games, Mexico City, 1968.",
+    "Clare Taylor\nClare Elizabeth Taylor MBE (born 22 May 1965) is an English sportswoman, the first woman to have played on a World Cup team in both cricket and football.\n\n She represented England at both cricket, as a member of the winning World Cup cricket team in 1993, and football (World Cup 1995).\n\n She was awarded the MBE in the Queen's Birthday Honours in 2000 for her services to women’s sport.\n\n Taylor attended Moor End High School and still has her name on the athletics records board.",
+    "Jack Charlton\nJohn Charlton, OBE, DL (born 8 May 1935) is an English former footballer and manager who played as a defender.\n\n He was part of the England team that won the 1966 World Cup.\n\n He is the elder brother of former Manchester United forward Bobby Charlton, who was also a teammate in England's World Cup final victory.\n\n He spent his entire club career with Leeds United from 1950 to 1973, helping the club to the Second Division title (1963–64), First Division title (1968–69), FA Cup (1972), League Cup (1968), Charity Shield (1969), Inter-Cities Fairs Cup (1968 and 1971), as well as one other promotion from the Second Division (1955–56) and five second-place finishes in the First Division, two FA Cup final defeats and one Inter-Cities Fairs Cup final defeat.\n\n His 629 league and 762 total competitive appearances are club records.\n\n In 2006, Leeds United supporters voted Charlton into the club's greatest ever XI.",
+    "Walter Ward (footballer)\nWalter Ward (1869 – after 1890) was an English professional footballer born in Birmingham who played in the Football Alliance for Small Heath.\n\n During the 1890–91 season, Ward deputised for regular goalkeeper Chris Charsley when Charsley's duties as a serving police officer demanded his absence from the side."
+   ]
+  },
+  {
+   "id": "0b4b63c087e8799c",
+   "gold": [
+    {
+     "sentence": "The Silent Historian (original title: \"Het zwijgen van Loe de Jong [The Silence of Loe de Jong]\") is a 2011 Dutch documentary film by Simonka de Jong, shown as part of the January 2012 New York Jewish Film Festival, presented in partnership with Jewish Museum and Film Society of Lincoln Center.",
+     "facts": {
+      "0.0": "The Silent Historian has the original title 'Het zwijgen van Loe de Jong [The Silence of Loe de Jong]'.",
+      "0.1": "The Silent Historian is a 2011 Dutch documentary film.",
+      "0.2": "The Silent Historian is a documentary film by Simonka de Jong.",
+      "0.3": "The Silent Historian was shown as part of the January 2012 New York Jewish Film Festival.",
+      "0.4": "The January 2012 New York Jewish Film Festival screening of The Silent Historian was presented in partnership with the Jewish Museum.",
+      "0.5": "The January 2012 New York Jewish Film Festival screening of The Silent Historian was presented in partnership with the Film Society of Lincoln Center."
+     }
+    },
+    {
+     "sentence": "The Betrayal — Nerakhoon is a 2008 documentary film directed by Ellen Kuras and Thavisouk Phrasavath.",
+     "facts": {
+      "1.0": "The Betrayal — Nerakhoon is a 2008 documentary film.",
+      "1.1": "The Betrayal — Nerakhoon was directed by Ellen Kuras.",
+      "1.2": "The Betrayal — Nerakhoon was directed by Thavisouk Phrasavath."
+     }
+    }
+   ],
+   "items": [
+    "The Decembrists (film)\nThe Decembrists (Russian: Декабристы , \"Dekabristy \" ) is a 1927 Soviet silent historical drama film directed by Aleksandr Ivanovsky.",
+    "The entries highlight acclaimed Israeli cinema: *The Band’s Visit* (2007), directed by Eran Kolirin, and *Hunting Elephants* (2013), Reshef Levi’s crime comedy starring Sasson Gabai, Moni Moshonov and Patrick Stewart. *Yana’s Friends* (1999) won 10 Ophir Awards and Karlovy Vary’s Crystal Globe. Joseph Cedar won Cannes’ 2011 screenplay prize for *Footnote",
+    "The Counterfeiters (2007 film)\nThe Counterfeiters (German: \"Die Fälscher\" ) is a 2007 Austrian-German drama film written and directed by Stefan Ruzowitzky.\n\n It fictionalizes Operation Bernhard, a secret plan by Nazi Germany during World War II to destabilize the United Kingdom by flooding its economy with forged Bank of England pound notes.\n\n The film centres on a Jewish counterfeiter, Salomon 'Sally' Sorowitsch, who is coerced into assisting the operation at the Sachsenhausen concentration camp.",
+    "The Price of Betrayal\nThe Price of Betrayal (Swedish: \"Judaspengar\" ) is a 1915 Swedish silent drama film directed by Victor Sjöström.",
+    "Austrian director-screenwriter Stefan Ruzowitzky made *The Inheritors* (1998), Austria’s unsuccessful Oscar submission, and *The Counterfeiters* (2007), a WWII drama about Nazi forgery at Sachsenhausen that won the foreign-language-film Oscar; Devid Striesow played Bernhard Krüger. German director Wolfgang Becker is known for *Good Bye, Lenin!* (2003), starring Daniel Brühl and Katrin Saß. Other entries",
+    "No Names on the Doors\nNo Names on the Doors (Hebrew: אין שמות על הדלתות‎ ) is a 1997 Israeli drama directed by Nadav Levitan.\n\n The film was screened at the Berlin International Film Festival, the Montpellier Film Festival, the Shanghai International Film Festival, and the Melbourne International Film Festival.\n\n It received two nominations for an Ophir Award in the categories of Best Actor and Best Screenplay.",
+    "The Silent Historian\nThe Silent Historian (original title: \"Het zwijgen van Loe de Jong [The Silence of Loe de Jong]\") is a 2011 Dutch documentary film by Simonka de Jong, shown as part of the January 2012 New York Jewish Film Festival, presented in partnership with Jewish Museum and Film Society of Lincoln Center.",
+    "Betrayal (1929 film)\nBetrayal was a 1929 drama film produced for Famous Players-Lasky and released by Paramount Pictures.\n\n The film is the last silent film directed by Lewis Milestone, the last silent performance by Gary Cooper, the last silent performance by Germany's Emil Jannings, and the only onscreen pairing of Cooper and Jannings.\n\n It is considered a lost film.",
+    "The Deal (2015 film)\nThe Deal (; lit.\n\n \"Murder Request\") is a 2015 South Korean crime thriller film directed by Son Yong-ho.",
+    "The Betrayal – Nerakhoon\nThe Betrayal — Nerakhoon is a 2008 documentary film directed by Ellen Kuras and Thavisouk Phrasavath."
+   ]
+  },
+  {
+   "id": "f08b8cd6908b6bea",
+   "gold": [
+    {
+     "sentence": "Pietro Alessandro Gaspare Scarlatti (2 May 1660 – 22 October 1725) was an Italian Baroque composer, especially famous for his operas and chamber cantatas.",
+     "facts": {
+      "0.0": "Pietro Alessandro Gaspare Scarlatti was born on 2 May 1660.",
+      "0.1": "Pietro Alessandro Gaspare Scarlatti died on 22 October 1725.",
+      "0.2": "Pietro Alessandro Gaspare Scarlatti was an Italian Baroque composer.",
+      "0.3": "Pietro Alessandro Gaspare Scarlatti was especially famous for his operas.",
+      "0.4": "Pietro Alessandro Gaspare Scarlatti was especially famous for his chamber cantatas."
+     }
+    },
+    {
+     "sentence": "Pyotr Ilyich Tchaikovsky ( ; Russian: Пётр Ильи́ч Чайко́вский ; 25 April/7 May 1840 – 25 October/6 November 1893), often anglicized as Peter Ilich Tchaikovsky, was a Russian composer of the romantic period, some of whose works are among the most popular music in the classical repertoire.",
+     "facts": {
+      "1.0": "The Russian name of Pyotr Ilyich Tchaikovsky is Пётр Ильи́ч Чайко́вский.",
+      "1.1": "Pyotr Ilyich Tchaikovsky was born on 25 April/7 May 1840.",
+      "1.2": "Pyotr Ilyich Tchaikovsky died on 25 October/6 November 1893.",
+      "1.3": "Pyotr Ilyich Tchaikovsky is often anglicized as Peter Ilich Tchaikovsky.",
+      "1.4": "Pyotr Ilyich Tchaikovsky was a Russian composer of the romantic period.",
+      "1.5": "Some works by Pyotr Ilyich Tchaikovsky are among the most popular music in the classical repertoire."
+     }
+    },
+    {
+     "sentence": " He was the first Russian composer whose music made a lasting impression internationally, bolstered by his appearances as a guest conductor in Europe and the United States.",
+     "facts": {
+      "2.0": "Tchaikovsky was the first Russian composer whose music made a lasting impression internationally.",
+      "2.1": "The international impression of Tchaikovsky's music was bolstered by his appearances as a guest conductor.",
+      "2.2": "Tchaikovsky appeared as a guest conductor in Europe.",
+      "2.3": "Tchaikovsky appeared as a guest conductor in the United States."
+     }
+    }
+   ],
+   "items": [
+    "Tchaikovsky (film)\nTchaikovsky (Russian: Чайковский ) is a 1970 Soviet biopic film directed by Igor Talankin.\n\n It featured Innokenty Smoktunovsky in the role of the famous Russian composer Pyotr Ilyich Tchaikovsky.\n\n It was nominated for the 1971 Academy Award for Best Foreign Language Film as well as the Academy Award for Original Song Score and Adaptation.",
+    "Vladimir Ashkenazy\nVladimir Davidovich Ashkenazy (Russian: Влади́мир Дави́дович Ашкена́зи , \"Vladimir Davidovich Ashkenazi\"; born 6 July 1937) is an internationally recognized solo pianist, chamber music performer, and conductor.\n\n He is originally from Russia and has held Icelandic citizenship since 1972.\n\n He has lived in Switzerland since 1978.\n\n Ashkenazy has collaborated with well-known orchestras and soloists.\n\n In addition, he has recorded a large storehouse of classical and romantic works.\n\n His recordings have earned him five Grammy awards plus Iceland's Order of the Falcon.",
+    "Piano Concerto No. 2 (Tchaikovsky)\nPyotr Ilyich Tchaikovsky's Piano Concerto No. 2 in G major, Op.\n\n 44, was written in 1879–1880.\n\n It was dedicated to Nikolai Rubinstein, who had insisted he be allowed to perform it at the premiere as a way of making up for his harsh criticism of Tchaikovsky's First Piano Concerto.\n\n Rubinstein was destined never to play it, however, as he died in March 1881.\n\n The premiere performance took place in New York City, on 12 November 1881.\n\n The soloist was Madeline Schiller, and Theodore Thomas conducted the New York Philharmonic orchestra.\n\n The first Russian performance was in Moscow in May 1882, conducted by Anton Rubinstein with Tchaikovsky's pupil, Sergei Taneyev, at the piano.",
+    "Chaikovskij (crater)\nChaikovskij (sometimes Tchaikovsky) is a crater on Mercury.\n\n It has a diameter of 165 kilometers.\n\n Its name was adopted by the International Astronomical Union in 1976.\n\n Chaikovskij is named for the Russian composer Pyotr Ilyich Tchaikovsky, who lived from 1840 to 1893.",
+    "Pyotr Ilyich Tchaikovsky\nPyotr Ilyich Tchaikovsky ( ; Russian: Пётр Ильи́ч Чайко́вский ; 25 April/7 May 1840 – 25 October/6 November 1893), often anglicized as Peter Ilich Tchaikovsky, was a Russian composer of the romantic period, some of whose works are among the most popular music in the classical repertoire.\n\n He was the first Russian composer whose music made a lasting impression internationally, bolstered by his appearances as a guest conductor in Europe and the United States.\n\n Tchaikovsky was honored in 1884, by Emperor Alexander III, and awarded a lifetime pension.",
+    "Kamarinskaya\nKamarinskaya (Russian: камаринская ) is a Russian traditional folk dance, which is mostly known today as the Russian composer Mikhail Glinka's composition of the same name.\n\n Glinka's \"Kamarinskaya\", written in 1848, was the first orchestral work based entirely on Russian folk song and to use the compositional principles of that genre to dictate the form of the music.\n\n It became a touchstone for the following generation of Russian composers ranging from the Western-oriented Pyotr Ilyich Tchaikovsky to the group of nationalists known collectively as The Five and was also lauded abroad, most notably by French composer Hector Berlioz.",
+    "International Tchaikovsky Competition\nThe International Tchaikovsky Competition is a classical-music competition held every four years in Moscow, Russia, for pianists, violinists, and cellists between 16 and 32 years of age, and singers between 19 and 32 years of age.\n\n The competition is named after Russian composer Pyotr Ilyich Tchaikovsky and is an active member of the World Federation of International Music Competitions.",
+    "Alessandro Scarlatti\nPietro Alessandro Gaspare Scarlatti (2 May 1660 – 22 October 1725) was an Italian Baroque composer, especially famous for his operas and chamber cantatas.\n\n He is considered the founder of the Neapolitan school of opera.\n\n He was the father of two other composers, Domenico Scarlatti and Pietro Filippo Scarlatti.",
+    "Aleksandr Ivanovsky\nAleksandr Ivanovsky (1881–1968) was a Russian screenwriter and film director who worked during the Soviet era.\n\n Ivanovsky was awarded the Stalin Prize in 1941, for his work on the 1940 film \"Musical Story\".\n\n His 1944 operetta film \"Silva\" was one of the most popular releases in the Soviet Union that year.",
+    "Piano Sonata in C-sharp minor (Tchaikovsky)\nThe Piano Sonata in C-sharp minor, Op.\n\n posth.\n\n 80, was written by Russian composer Pyotr Ilyich Tchaikovsky in 1865, his last year as a student at the St Petersburg Conservatory.\n\n The sonata in its original form was not published in Tchaikovsky's lifetime; it was published in 1900 by P. Jurgenson, and given the posthumous opus number 80."
+   ]
+  },
+  {
+   "id": "3e584da896a68c57",
+   "gold": [
+    {
+     "sentence": " All matches were played at HC Davos's home arena, Eisstadion Davos.",
+     "facts": {
+      "0.0": "All matches were played at the home arena of HC Davos.",
+      "0.1": "The home arena of HC Davos is Eisstadion Davos."
+     }
+    },
+    {
+     "sentence": "Hockey Club Davos is a professional Swiss ice hockey club based in Davos, Switzerland.",
+     "facts": {
+      "1.0": "Hockey Club Davos is a professional Swiss ice hockey club.",
+      "1.1": "Hockey Club Davos is based in Davos, Switzerland."
+     }
+    }
+   ],
+   "items": [
+    "HC Davos\nHockey Club Davos is a professional Swiss ice hockey club based in Davos, Switzerland.\n\n Davos plays in the National League (NL).\n\n The team is usually a strong force in the league and often bolster their roster with Swiss national team players and players who once played for National Hockey League teams.\n\n HC Davos also has hosted the annual Spengler Cup tournament, an invitational competition, since 1923.",
+    "2016 Spengler Cup\nThe 90th Spengler Cup was an ice hockey competition being held in Davos, Switzerland between 26 and 31 December 2016.\n\n All matches were played at HC Davos's home known as Vaillant Arena.\n\n Six competing teams were split into two groups of three (in the round-robin series).\n\n The two groups, named Torriani and Cattini, are named after legendary Swiss hockey players Richard 'Bibi' Torriani and the Cattini brothers, Hans and Ferdinand.",
+    "2015 Spengler Cup\nThe 89th Spengler Cup was an ice hockey competition held in Davos, Switzerland between 26 and 31 December 2015.\n\n All matches were played at HC Davos's home known as Vaillant Arena.\n\n Six competing teams were split into two groups of three (in the round-robin series).\n\n The two groups, named Torriani and Cattini, are named after legendary Swiss hockey players Richard 'Bibi' Torriani and the Cattini brothers, Hans and Ferdinand.",
+    "Spengler Cup\nThe Spengler Cup is an annual invitational ice hockey tournament held in Davos, Switzerland.\n\n First held in 1923, the Spengler Cup is often cited as the oldest invitational ice hockey tournament in the world.\n\n The event is hosted by the Swiss team HC Davos and played each year in Davos, Switzerland, between Christmas (December 25) and New Year's Day.\n\n Currently, all games are held at Vaillant Arena.",
+    "1992 Stanley Cup Finals\nThe 1992 Stanley Cup Finals NHL championship series was contested by the Prince of Wales Conference and defending Stanley Cup champion Pittsburgh Penguins and the Clarence Campbell Conference champion Chicago Blackhawks.\n\n The Blackhawks were appearing in their first Finals since .\n\n After the Blackhawks jumped to an early 4–1 lead in the first game of the series, Mario Lemieux and the Penguins came back to win the game, sweep the series in four games, and win their second consecutive and second overall Stanley Cup.\n\n It was the 99th year of the Stanley Cup, and the first to extend into the month of June.\n\n It was the last final for Chicago Stadium as it closed in 1994.",
+    "1992 Spengler Cup\nThe 1992 Spengler Cup was held in Davos, Switzerland, between December 26, 1992, and December 31, 1992.\n\n All matches were played at HC Davos's home arena, Eisstadion Davos.\n\n The final was won 6-5 by Team Canada over Färjestad BK.",
+    "Vaillant Arena\nVaillant Arena (Eisstadion Davos) is an arena in Davos, Switzerland.\n\n It is primarily used for ice hockey and is the home arena of HC Davos.\n\n It holds 7,080 people, of which 3,280 are seated.\n\n Every year the Spengler Cup is played in this arena.",
+    "Stadio del Ghiaccio Gianmario Scola\nStadio del Ghiaccio Gianmario Scola is an indoor sporting arena in Canazei, Italy.\n\n The capacity of the arena is 3,500 spectators.\n\n It is the home arena of the Sportiva Hockey Club Fassa ice hockey team of the Serie A ice hockey league.\n\n The arena also hosted games during the 1994 World Ice Hockey Championships along with the Forum di Assago in Milan and the PalaOnda in Bolzano.",
+    "Montreal Victorias\nThe Victoria Hockey Club of Montreal, Quebec, Canada was an early men's amateur ice hockey club.\n\n Its date of origin is ascribed to either 1874, 1877 or 1881, making it either the first or second organized ice hockey club after McGill University.\n\n The club played at its own rink, the Victoria Skating Rink in Montreal.\n\n The club was winners of the Stanley Cup in 1895 and held it except for a period in 1896 until 1899.\n\n The club remained amateur, splitting from the ranks of teams turned professional in 1908.\n\n The amateur hockey club was the first winner of the Allan Cup and continued in play until 1939 after its 65th season.\n\n The club often also fielded junior and intermediate teams.",
+    "1984 Stanley Cup Finals\nThis would be the second of eight consecutive Finals contested by a team from Alberta (the Oilers appeared in six, the Calgary Flames in two), and the first of five consecutive Finals to end with the Cup presentation on Alberta ice (the Oilers won four times, the Montreal Canadiens one)."
+   ]
+  },
+  {
+   "id": "13456666c33e0353",
+   "gold": [
+    {
+     "sentence": "Sir Ridley Scott (born 30 November 1937) is an English film director and producer.",
+     "facts": {
+      "0.0": "Sir Ridley Scott was born on 30 November 1937.",
+      "0.1": "Sir Ridley Scott is English.",
+      "0.2": "Sir Ridley Scott is a film director.",
+      "0.3": "Sir Ridley Scott is a film producer."
+     }
+    },
+    {
+     "sentence": " Following his commercial breakthrough with the science-fiction horror film \"Alien\" (1979), his best known works include the neo-noir dystopian science fiction film \"Blade Runner\" (1982), historical drama and Best Picture Oscar winner \"Gladiator\" (2000), and science fiction film \"The Martian\" (2015).",
+     "facts": {
+      "1.0": "Ridley Scott had a commercial breakthrough with the science-fiction horror film Alien, released in 1979.",
+      "1.1": "Ridley Scott's best known works include the neo-noir dystopian science fiction film Blade Runner, released in 1982.",
+      "1.2": "Ridley Scott's best known works include the historical drama Gladiator, released in 2000.",
+      "1.3": "Gladiator won the Best Picture Oscar.",
+      "1.4": "Ridley Scott's best known works include the science fiction film The Martian, released in 2015."
+     }
+    },
+    {
+     "sentence": " A collaborator of D.W. Griffith, he appeared in \"The Birth of a Nation\" (1915) and \"Intolerance\" (1916) before giving up acting in 1917 to concentrate on work behind the camera, with Griffith and Joseph Henabery as his mentors.",
+     "facts": {
+      "2.0": "Ridley Scott was a collaborator of D.W. Griffith.",
+      "2.1": "Ridley Scott appeared in The Birth of a Nation, released in 1915.",
+      "2.2": "Ridley Scott appeared in Intolerance, released in 1916.",
+      "2.3": "Ridley Scott gave up acting in 1917.",
+      "2.4": "Ridley Scott gave up acting to concentrate on work behind the camera.",
+      "2.5": "Griffith was a mentor of Ridley Scott.",
+      "2.6": "Joseph Henabery was a mentor of Ridley Scott."
+     }
+    }
+   ],
+   "items": [
+    "Elmer Clifton\nElmer Clifton (March 14, 1890 – October 15, 1949) was an American writer, director and actor from the early silent days.\n\n A collaborator of D.W. Griffith, he appeared in \"The Birth of a Nation\" (1915) and \"Intolerance\" (1916) before giving up acting in 1917 to concentrate on work behind the camera, with Griffith and Joseph Henabery as his mentors.\n\n His first feature-length solo effort as a director was \"The Flame of Youth\" with Jack Mulhall.",
+    "The entries profile filmmakers, producers, performers, and artists: Tim Bedore is a Chicago-born comedian; Rogue One (2016) depicts rebels stealing Death Star plans; Frederick K. Keller, Peter Guber, Baltasar Kormákur, Steve Rash, Jonathan Kaplan, Kurt Voss, Jim Sharman, Barry Sandler, and Howard Rosenman are directors or producers. Other highlights include Titan A.E.’s commercial failure; Vito Russo’s documentary; Scott Free’s founding by the",
+    "Ridley Scott\nSir Ridley Scott (born 30 November 1937) is an English film director and producer.\n\n Following his commercial breakthrough with the science-fiction horror film \"Alien\" (1979), his best known works include the neo-noir dystopian science fiction film \"Blade Runner\" (1982), historical drama and Best Picture Oscar winner \"Gladiator\" (2000), and science fiction film \"The Martian\" (2015).",
+    "Scott Free Productions\nScott Free Productions is a British film and television production company founded by filmmakers and brothers Ridley Scott and Tony Scott.\n\n They formed the feature film development company Percy Main Productions in 1980, naming the company after the English village Percy Main, where their father grew up.\n\n The company was renamed to Scott Free Productions in 1995.\n\n Scott Free has produced films ranging from the 2000 Hollywood blockbuster \"Gladiator\" (2000) to \"smaller pictures\" like \"Cracks\" (2009).\n\n Between productions of \"White Squall\" (1996) and \"G.I. Jane\" (1997), Ridley Scott reorganized the company.",
+    "Steve McQueen (director)\nSteven Rodney \"Steve\" McQueen (born 9 October 1969) is an English film director, producer, screenwriter, and video artist.\n\n For his 2013 film, \"12 Years a Slave\", a historical drama adaptation of an 1853 slave narrative memoir, he won an Academy Award, BAFTA Award for Best Film, and Golden Globe Award for Best Motion Picture – Drama, as a producer, and he also received the award for Best Director from the New York Film Critics Circle.\n\n McQueen is the first black filmmaker to win an Academy Award for Best Picture.\n\n McQueen is known for his collaborations with actor Michael Fassbender, who has starred in all three of McQueen's feature films as of 2014.\n\n McQueen's other feature films are \"Hunger\" (2008), a historical drama about the 1981 Irish hunger strike, and \"Shame\" (2011), a drama about an executive struggling with sex addiction.",
+    "Dan Ouellette\nGiger and Beksinski, and he has been featured in magazines internationally.\n\n David Bowie commented while looking at Dan's art that he has noticed a strong influence of science fiction on contemporary art.\n\n Giger saw a different aspect, saying simply \"Very bony.\"\n\n He grew to adore the cinema of Fellini and later to marvel at Lynch's \"Eraserhead\".\n\n Rather than pursue a formal education in the fine arts he chose to study the craft of film making and after college he became a production designer working on feature films in New York City starting with his work as a production designer for Hal Hartley in 1990 with Trust and then, in 1992, with Simple Men.",
+    "Rick Carter\nRick Carter (born 1950) is an American production designer and art director.\n\n He is known for his work in the film \"Forrest Gump\", which earned him an Oscar nomination, as well as numerous nominations of other awards for his work in \"Amistad\" and \"A.I. Artificial Intelligence\".\n\n Other films include \"Cast Away\", \"War of the Worlds\", \"What Lies Beneath\", \"Jurassic Park\", \"Avatar\", and \"Back to the Future Part II\" and \"Part III\".\n\n Many of the films that he has worked on are directed by Steven Spielberg or Robert Zemeckis.\n\n For his part in the Art Direction of \"Avatar\", he was awarded the Academy Award for Best Production Design alongside Robert Stromberg and Kim Sinclair.\n\n In 2013, Carter won his second Academy Award, for production design on Steven Spielberg's biopic, \"Lincoln\".",
+    "Peter Jackson\nSir Peter Robert Jackson {'1': \", '2': \", '3': \", '4': \"} (born 31 October 1961) is a New Zealand film director, screenwriter and film producer.\n\n He is best known as the director, writer, and producer of \"The Lord of the Rings\" trilogy (2001–03) and \"The Hobbit\" trilogy (2012–14), both of which are adapted from the novels of the same name by J. R. R. Tolkien.\n\n Other notable films include the critically lauded drama \"Heavenly Creatures\" (1994), the mockumentary \"Forgotten Silver\" (1995), the horror comedy \"The Frighteners\" (1996), the epic monster remake film \"King Kong\" (2005), and the supernatural drama film \"The Lovely Bones\" (2009).\n\n He also produced \"District 9\" (2009), \"The Adventures of Tintin: The Secret of the Unicorn\" (2011), and the documentary \"West of Memphis\" (2012).",
+    "Shirley Clarke\nShirley Clarke (October 2, 1919 – September 23, 1997) was an American experimental and independent filmmaker.\n\n She was also a director and editor to many famous works.",
+    "Spencer Averick\nSpencer Averick is an American film editor and producer.\n\n Best known for his work an editor on critically acclaimed films \"Middle of Nowhere\" (2012), \"Selma\" (2014) and for producing 2016 acclaimed documentary \"13th\" for which he received Academy Award for Best Documentary Feature nominations at 89th Academy Awards, that he shared with director Ava DuVernay and co-producer Howard Barish."
+   ]
+  },
+  {
+   "id": "345b33bdff6cfcf5",
+   "gold": [
+    {
+     "sentence": "Semyon Aronovich Gershgorin (August 24, 1901 – May 30, 1933) was a Soviet (born in Pruzhany, Belarus, Russian Empire) mathematician.",
+     "facts": {
+      "0.0": "Semyon Aronovich Gershgorin was born on August 24, 1901.",
+      "0.1": "Semyon Aronovich Gershgorin died on May 30, 1933.",
+      "0.2": "Semyon Aronovich Gershgorin was Soviet.",
+      "0.3": "Semyon Aronovich Gershgorin was born in Pruzhany, Belarus, Russian Empire.",
+      "0.4": "Semyon Aronovich Gershgorin was a mathematician."
+     }
+    },
+    {
+     "sentence": " He was a mathematician noted for his work on the decidability of various algebraic groups. Malcev algebras (generalisations of Lie algebras) are named after him.",
+     "facts": {
+      "1.0": "Semyon Aronovich Gershgorin was a mathematician.",
+      "1.1": "Semyon Aronovich Gershgorin was noted for his work on the decidability of various algebraic groups.",
+      "1.2": "Malcev algebras are generalisations of Lie algebras.",
+      "1.3": "Malcev algebras are named after Semyon Aronovich Gershgorin."
+     }
+    }
+   ],
+   "items": [
+    "AES+F\nAES+F is an artist collective of four Russian artists: Tatiana Arzamasova (1955), Lev Evzovich (1958), Evgeny Svyatsky (1957), and Vladimir Fridkes (1956).\n\n It was first formed as AES Group in 1987 by Arzamasova, Evzovich, and Svyatsky, becoming AES+F when Fridkes joined in 1995.\n\n The collective works in photography, video, installation, and animation, as well as more traditional media, such as painting, drawing, and sculpture.\n\n AES+F's early work included performance, installation, painting, and illustration.\n\n Well known for their monumental video-art installations that Gareth Harris describes as \"monumental painting set in motion\", AES+F create grand visual narratives that explore contemporary global values, vices and conflicts.",
+    "Semyon Aranovich Gershgorin\nSemyon Aronovich Gershgorin (August 24, 1901 – May 30, 1933) was a Soviet (born in Pruzhany, Belarus, Russian Empire) mathematician.\n\n He began as a student at the Petrograd Technological Institute in 1923, became a Professor in 1930, and was given an appointment at the Leningrad Mechanical Engineering Institute in the same year.\n\n His contributions include the Gershgorin circle theorem.",
+    "Anna Aglatova\nAnna Khachaturovna Aglatova (Russian: Анна Хачатуровна Аглатова ) is a Russian soprano singer who was born in Kislovodsk and by 2004 joined the singing department of the Gnessin State Musical College.\n\n Prior to it, she was a recipient of the \"Sergei Leiferkus grant\" from the Vladimir Spivakov Fund and in 2005 made her first public appearance at the Bolshoi Theatre.\n\n Her career there, have not started with ease since her father didn't want her to work for Bolshoi.\n\n In 2003, she was a recipient of the first prize at the Bella voce International Competition and the same year participated at both the Christmas Festival at Düsseldorf and the fourteenth annual Chaliapin Season at Mineralnye Vody.\n\n She also was a participant for \"Irina Arkhipova Fund\" and was a part of the Novosibirsk Opera and Ballet Theatre.",
+    "Nikolay Mitrofanovich Krylov\nNikolay Mitrofanovich Krylov (Russian: Никола́й Митрофа́нович Крыло́в , Ukrainian: Микола Митрофанович Крилов ) (29 November [O.S. 17 November] 1879 – May 11, 1955) was a Russian and Soviet mathematician known for works on interpolation, non-linear mechanics, and numerical methods for solving equations of mathematical physics.",
+    "Vladimir Arnold\nVladimir Igorevich Arnold (alternative spelling Arnol'd, Russian: Влади́мир И́горевич Арно́льд , 12 June 1937 – 3 June 2010) was a Soviet and Russian mathematician.\n\n While he is best known for the Kolmogorov–Arnold–Moser theorem regarding the stability of integrable systems, he made important contributions in several areas including dynamical systems theory, catastrophe theory, topology, algebraic geometry, symplectic geometry, differential equations, classical mechanics, hydrodynamics and singularity theory, including posing the ADE classification problem, since his first main result—the solution of Hilbert's thirteenth problem in 1957 at the age of 19.",
+    "Anatoly Maltsev\nAnatoly Ivanovich Maltsev (also: Malcev, Mal'cev; Russian: Анато́лий Ива́нович Ма́льцев; 27 November N.S./14 November O.S. 1909, Moscow Governorate – 7 June 1967, Novosibirsk) was born in Misheronsky, near Moscow, and died in Novosibirsk, USSR.\n\n He was a mathematician noted for his work on the decidability of various algebraic groups. Malcev algebras (generalisations of Lie algebras) are named after him.",
+    "Aleksandr Ivanovsky\nAleksandr Ivanovsky (1881–1968) was a Russian screenwriter and film director who worked during the Soviet era.\n\n Ivanovsky was awarded the Stalin Prize in 1941, for his work on the 1940 film \"Musical Story\".\n\n His 1944 operetta film \"Silva\" was one of the most popular releases in the Soviet Union that year.",
+    "Nicolai V. Krylov\nNicolai Vladimirovich Krylov (Russian: Никола́й Влади́мирович Крыло́в ; born 5 June 1941) is a Russian mathematician specializing in partial differential equations, particularly stochastic partial differential equations and diffusion processes.\n\n Krylov studied at Lomonosov University, where he in 1966 under E. B. Dynkin attained a doctoral candidate title (similar to a PhD) and in 1973 a Russian doctoral degree (somewhat more prestigious than a PhD).\n\n He taught from 1966 to 1990 at the Lomonosov University and is since 1990 a professor at the University of Minnesota.\n\n At the beginning of his career (starting from 1963) he, in collaboration with Dynkin, worked on nonlinear stochastic control theory, making advances in the study of convex, nonlinear partial equations of 2nd order (\"i.e.\" Bellman equations), which were examined with stochastic methods.",
+    "Anatoly Fomenko\nAnatoly Timofeevich Fomenko (Russian: Анато́лий Тимофе́евич Фоме́нко ) (born 13 March 1945 in Stalino, USSR) is a Soviet and Russian mathematician, professor at Moscow State University, well known as a topologist, and a member of the Russian Academy of Sciences.\n\n He is author of a pseudoscientific theory known as New Chronology.\n\n He is also a member of the Russian Academy of Natural Sciences (1991).",
+    "Alexander Artemev\nAlexander Vladimirovich \"Sasha\" Artemev (Russian: Александр Владимирович \"Саша\" Артемьев , Belarusian: Аляксандр Уладзіміравіч Арцем'еў ; born August 29, 1985) is a retired American artistic gymnast.\n\n Artemev was a member of the bronze medal-winning U.S. team at the 2008 Olympic Games.\n\n He is the 2006 all-around U.S. national champion.\n\n Known for his ability on pommel horse, he is the 2007 and 2008 U.S. national champion on the pommel horse and won the bronze medal on the event at the 2006 World Championships."
+   ]
+  },
+  {
+   "id": "c067deb1b3101f86",
+   "gold": [
+    {
+     "sentence": "Swingin' Down Yonder is the first full-length, 12-inch album recorded by Dean Martin for Capitol Records during three sessions in September and October 1954 and February 1955.",
+     "facts": {
+      "0.0": "Swingin' Down Yonder is the first full-length, 12-inch album recorded by Dean Martin for Capitol Records.",
+      "0.1": "Dean Martin recorded Swingin' Down Yonder during three sessions.",
+      "0.2": "The sessions for Swingin' Down Yonder took place in September 1954, October 1954 and February 1955."
+     }
+    },
+    {
+     "sentence": " One of the most popular and enduring American entertainers of the mid-20th century, Martin was nicknamed the \"King of Cool\" for his seemingly effortless charisma and self-assurance.",
+     "facts": {
+      "1.0": "Dean Martin was one of the most popular and enduring American entertainers of the mid-20th century.",
+      "1.1": "Dean Martin was nicknamed the 'King of Cool'.",
+      "1.2": "Dean Martin's nickname 'King of Cool' reflected his seemingly effortless charisma.",
+      "1.3": "Dean Martin's nickname 'King of Cool' reflected his seemingly effortless self-assurance."
+     }
+    }
+   ],
+   "items": [
+    "Swingin' Down Yonder\nSwingin' Down Yonder is the first full-length, 12-inch album recorded by Dean Martin for Capitol Records during three sessions in September and October 1954 and February 1955.\n\n According to the original sleeve notes, all the songs have a \"common geographical root: the American South.\"\n\n In 1963, Capitol Records re-released \"Swingin' Down Yonder\" under the titled \"Southern Style\".",
+    "Here Comes Louis Smith\nHere Comes Louis Smith is the debut album by American trumpeter Louis Smith recorded in 1958 and released on the Blue Note label.\n\n Originally recorded for the Transition label, the company went out of business shortly afterwards and before the recording could be released.\n\n The album masters were acquired by Blue Note's Alfred Lion.",
+    "Things Ain't What They Used to Be\nIn 1941 there was a strike against the American Society of Composers, Authors and Publishers, of which Duke Ellington was a member.\n\n Because of the strike he could not air his songs on the radio.\n\n Instead, he used songs written by his son Mercer and pianist Billy Strayhorn.\n\n Strayhorn's compositions of this time include \"Take the 'A' Train\", \"Chelsea Bridge\" and \"Day Dream\", and Mercer wrote \"Things Ain't What They Used to Be\", \"Blue Serge\" and \"Moon Mist\".",
+    "Willie and the Hand Jive\n\"Willie and the Hand Jive\" is a song written by Johnny Otis and originally released as a single in 1958 by Johnny Otis Show, reaching #9 on the \"Billboard\" Hot 100 chart and #5 on the Billboard R&B chart.\n\n The song has a Bo Diddley beat and was partly inspired by the music sung by a chain gang Otis heard while he was touring.\n\n The lyrics are about a man who became famous for doing a dance with his hands, but the song has been accused of glorifying masturbation.\n\n It has since been covered by numerous artists, including The Strangeloves, Eric Clapton, Cliff Richard, Kim Carnes, George Thorogood and The Grateful Dead.\n\n Clapton's 1974 version was also released as a single and also reached the Billboard Top 40, peaking at #26.\n\n Thorogood's 1985 version reached #25 on the Hot Mainstream Rock Tracks chart.",
+    "Basie Jazz\nBasie Jazz is an album by pianist/bandleader Count Basie recorded in 1952 and released on the Clef label in 1954.\n\n Selections from this album were also released on the 1956 Clef LPs \"The Swinging Count!\n\n\" and \"Basie Rides Again!\n\n\".",
+    "Cecil Gant\nCecil Gant (April 4, 1913 – February 4, 1951) was an American blues singer, songwriter and pianist, whose recordings of both ballads and \"fiery piano rockers\" were successful in the mid- and late 1940s, and influenced the early development of rock and roll.\n\n His biggest hit was the 1944 ballad, \"I Wonder\".",
+    "Graph query row:\nentity: Dean Martin\naliases: ['Dino Paul Crocetti', 'King of Cool']\nentity_types: ['__KGBuilder__', 'Person', '__Entity__']\nkind: None\npublished_on: None\noccupation: singer\nnationality: Italian-American\nrelationship: MEMBER_OF\nrelated: Rat Pack",
+    "Jack Johnson (album)\nJack Johnson, later reissued as A Tribute to Jack Johnson, is a 1971 studio album and soundtrack by American jazz trumpeter, composer, and bandleader Miles Davis.\n\n In 1970, Davis was asked by Bill Cayton to record music for his documentary of the same name on the life of boxer Jack Johnson.\n\n Johnson's saga resonated personally with Davis, who wrote in the album's liner notes of Johnson's mastery as a boxer, his affinity for fast cars, jazz, clothes, and beautiful women, his unreconstructed blackness, and his threatening image to white men.\n\n This was the second film score he had composed, after \"Ascenseur pour l'échafaud\" in 1957.",
+    "One O'Clock Jump\n\"One O'Clock Jump\" is a jazz standard, a 12-bar blues instrumental, written by Count Basie in 1937.\n\n The melody derived from band members' riffs--Basie rarely wrote down musical ideas, so Eddie Durham and Buster Smith helped him crystallize his ideas.\n\n The original 1937 recording of the tune by Basie and his band is noted for the saxophone work of Herschel Evans and Lester Young, trumpet by Buck Clayton, Walter Page on bass and Basie himself on piano.",
+    "Collins &amp; Harlan\nCollins & Harlan, the team of Arthur Collins and Byron G. Harlan formed a popular comic duet between 1903 and 1926.\n\n They sang ragtime standards as well as what were known as \"Coon songs\" – music sung by white performers in a black dialect.\n\n Their material also employed many other stereotypes of the time including Irishmen and farmers.\n\n Fellow recording artist Billy Murray nicknamed them \"The Half-Ton Duo\" as both men were rather overweight.\n\n Collins and Harlan produced many number one hits with recordings of minstrel songs such as \"My Gal Irene\", \"I Know Dat I'll be Happy Til I Die\", \"Who Do You Love?\"\n\n and \"Down Among the Sugarcane\".\n\n Their song \"That Funny Jas Band from Dixieland\", recorded November 8, 1916, is among the first recorded uses of the word \"jas\" which eventually evolved to \"jass\", and to the current spelling \"jazz\"."
+   ]
+  },
+  {
+   "id": "1d1f96536d5c058c",
+   "gold": [
+    {
+     "sentence": "Cherie Ann Currie (born November 30, 1959) is an American musician (instrumentalist, singer, songwriter), actress and artist.",
+     "facts": {
+      "0.0": "Cherie Ann Currie was born November 30, 1959.",
+      "0.1": "Cherie Ann Currie is an American musician.",
+      "0.2": "Cherie Ann Currie is an instrumentalist, singer, and songwriter.",
+      "0.3": "Cherie Ann Currie is an actress.",
+      "0.4": "Cherie Ann Currie is an artist."
+     }
+    },
+    {
+     "sentence": "Steve Augeri (born January 30, 1959) is an American rock singer best known for his work with Tall Stories, Tyketto, and Journey.",
+     "facts": {
+      "1.0": "Steve Augeri was born January 30, 1959.",
+      "1.1": "Steve Augeri is an American rock singer.",
+      "1.2": "Steve Augeri is best known for his work with Tall Stories.",
+      "1.3": "Steve Augeri is best known for his work with Tyketto.",
+      "1.4": "Steve Augeri is best known for his work with Journey."
+     }
+    }
+   ],
+   "items": [
+    "Reverie (Cherie Currie album)\nReverie is the third full-length studio album by Cherie Currie.\n\n Released on iTunes March 16, 2015.\n\n Cherie released the CD version of this album June 5, 2015 on her eBay page cheriecurriedirect.\n\n There is a 35-year gap between Cherie's last full-length studio album, 1980's Messin' with the Boys (with Marie Currie), and 2015's Reverie.\n\n This is last studio album Kim Fowley produced before his death.\n\n Kim helped Cherie release this album to make amends with her after all the money he swindled her out of when she was in the Runaways and for releasing her and Marie's music on Young and Wild without their approval.\n\n After Kim's death Cherie's son, Jake Hays, took over producing.",
+    "Doug Grean\nDoug Grean is an American record producer, audio engineer, guitarist, based in Los Angeles.\n\n He has worked with artists Sheryl Crow, Ricki Lee Jones, Glen Campbell, Scott Weiland, Slash, Velvet Revolver, Stone Temple Pilots, The Crystal Method, Tim McGraw, Cyndi Lauper, Annabella Lwin (Bow Wow Wow), Corey Glover (Living Color), Camp Freddy, DJ Hurricane and John Taylor (Duran Duran).\n\n Grean was formerly the lead guitarist and touring musical director for Scott Weiland and the Wildabouts.\n\n Some of Grean's television appearances with Weiland include: VH1 Legends, Last Call with Carson Daly, The Tonight Show with Jay Leno, and the Grammy awards with Velvet Revolver as keyboardist, performing \"All Across the Universe\" with Stevie Wonder, Norah Jones, Bono, Steven Tyler, Brian Wilson, and Alison Krauss.",
+    "Young and Wild (album)\nYoung and Wild is a compilation by Cherie & Marie Currie.\n\n This album has all 10 original tracks from Messin' with the Boys, six songs from Beauty's Only Skin Deep, three songs Cherie Currie sang with The Runaways, and one new track co-written by Marie Currie, \"Longer Than Forever\".\n\n \"Longer Than Forever\" was the B side of the single \"Since You Been Gone\".",
+    "Age of Chance\nAge of Chance were a British alternative rock-dance crossover band from Leeds, England active from 1985 to 1991.\n\n They were perhaps most known for their mutant metallic cover of Prince's \"Kiss\" which topped the UK Indie Chart in 1986, and peaked at No. 50 in the UK Singles Chart in January the following year.\n\n Despite signing for major label Virgin, and being favourites with the UK music press, they never enjoyed a major hit in the UK, although \"Don't Get Mad… Get Even\" reached No. 8 on the US \"Billboard\" Hot Dance/Club Play chart.",
+    "Marie Currie\nMarie Michelle Currie (born November 30, 1959) is an American singer, songwriter, actress, and artist.\n\n Currie is best known for playing in a band with her identical twin Cherie Currie called Cherie & Marie Currie.\n\n Their song \"Since You Been Gone\" charted at number 95 on the US charts.\n\n Marie played Singing Maid Marie in \"The Rosebud Beach Hotel\" and is now a popular multi-media sculptress and artist.",
+    "Richie Furay\nPaul Richard \"Richie\" Furay (born May 9, 1944) is an American singer, songwriter, and Rock & Roll Hall of Fame member who is best known for forming the bands Buffalo Springfield with Stephen Stills, Neil Young, Bruce Palmer, and Dewey Martin, and Poco with Jim Messina, Rusty Young, George Grantham and Randy Meisner.\n\n His best known song (originally written during his tenure in Buffalo Springfield, but eventually performed by Poco, as well) was \"Kind Woman\", which he wrote for his wife, Nancy.",
+    "Cherie Currie\nCherie Ann Currie (born November 30, 1959) is an American musician (instrumentalist, singer, songwriter), actress and artist.\n\n Currie was the lead vocalist of the Runaways, a rock band from Los Angeles, in the mid-to-late 1970s.\n\n After the Runaways, she became a solo artist.\n\n Then she teamed up with her identical twin sister, Marie Currie, and released an album with her.\n\n They released a duet \"Since You Been Gone\" which charted number 95 on US charts.\n\n Their band was called Cherie and Marie Currie.\n\n She is also well known for her role in the movie \"Foxes\".",
+    "Messin' with the Boys\nMessin' with the Boys is the second post-Runaways album by Cherie Currie, released in 1980 For this album Currie worked with her identical twin sister, Marie Currie.\n\n Their band was called \"Cherie and Marie Currie\".\n\n Marie was a guest vocalist on Cherie's first album, so Marie went on tour with Cherie to support her first album, \"Beauty's Only Skin Deep\".\n\n When Marie would join Cherie on stage to sing the encores the audience would go wild.\n\n So Cherie ran with the idea of two blonds are better than one.\n\n The idea paid off because \"Messin' with the Boys\" received more radio play than \"Beauty's Only Skin Deep\", and their song \"Since You Been Gone\" made it to 95 on US charts.\n\n The single \"This Time\" and the album Messin' with the Boys made the top 200 on U.S. charts.\n\n This makes Messin' with the Boys Cherie Currie's most successful album.\n\n \"I Just Love the Feeling\" originally surfaced on the 1974 album, \"S.S.",
+    "Steve Augeri\nSteve Augeri (born January 30, 1959) is an American rock singer best known for his work with Tall Stories, Tyketto, and Journey.",
+    "Cherushii\nCherushii (Chelsea Faith Dolan) (September 14, 1983 – December 2, 2016) was an American electronic music producer, DJ, live performer, and radio host based in San Francisco.\n\n Influenced by house music, Detroit techno, and disco, she released several recordings on the independent dance music label 100% Silk, including \"Queen of Cups\", \"Far Away So Close\", and \"Memory of Water\", reissued in 2017.\n\n KQED named Cherushii's album \"Meow Wolf’s Arcade Soundtracks: Wiggy’s Plasma Plex\" one of the 10 best bay area albums of 2016.\n\n While Cherushii has received little recognition from mainstream media, her music is of enormous influence in the underground music scene.\n\n Fellow electronic musician Maria Minerva has called Cherushii criminally underrated."
+   ]
+  },
+  {
+   "id": "f2b12d08c07495ef",
+   "gold": [
+    {
+     "sentence": "The Doris Bither case, also known as the Entity hauntings, was an alleged haunting which occurred in 1974 at Culver City, California where a woman named Doris Bither alleged the ghosts of three Asian men were raping her.",
+     "facts": {
+      "0.0": "The Doris Bither case is also known as the Entity hauntings.",
+      "0.1": "The Doris Bither case was an alleged haunting.",
+      "0.2": "The alleged haunting occurred in 1974.",
+      "0.3": "The alleged haunting occurred at Culver City, California.",
+      "0.4": "Doris Bither alleged that the ghosts of three Asian men were raping her."
+     }
+    },
+    {
+     "sentence": "The Entity is a 1982 American horror film directed by Sidney J. Furie and written by Frank De Felitta, who adapted his 1978 novel of the same name.",
+     "facts": {
+      "1.0": "The Entity is a 1982 American horror film.",
+      "1.1": "The Entity was directed by Sidney J. Furie.",
+      "1.2": "The Entity was written by Frank De Felitta.",
+      "1.3": "Frank De Felitta adapted his 1978 novel of the same name for The Entity."
+     }
+    },
+    {
+     "sentence": " Like the novel, the film is based on the 1974 Doris Bither case.",
+     "facts": {
+      "2.0": "The film is based on the 1974 Doris Bither case.",
+      "2.1": "The novel is also based on the 1974 Doris Bither case."
+     }
+    }
+   ],
+   "items": [
+    "The Ipcress File (film)\nThe Ipcress File is a 1965 British espionage film directed by Sidney J. Furie, starring Michael Caine and featuring Guy Doleman and Nigel Green.\n\n The screenplay by Bill Canaway and James Doran was based on Len Deighton's novel, \"The IPCRESS File\" (1962).\n\n It has won critical acclaim and a BAFTA award for best British film.\n\n In 1999 it was included at number 59 on the BFI list of the 100 best British films of the 20th century.",
+    "Sheila Levine Is Dead and Living in New York\nSheila Levine Is Dead and Living in New York is a 1975 film directed by Sidney J. Furie, about a shy young woman who moves to New York City and falls in love with the boyfriend of her extroverted roommate.\n\n The film was co-written by Kenny Solms and Gail Parent, and based on her novel.\n\n The film was shot on location in New York City.",
+    "The Rocky Horror Picture Show\nThe Rocky Horror Picture Show is a 1975 British-American musical screwball comedy horror film by 20th Century Fox produced by Lou Adler and Michael White and directed by Jim Sharman.\n\n The screenplay was written by Sharman and actor Richard O'Brien, who appears in the film, which is based on the 1973 musical stage production \"of the same title\", with music, book, and lyrics by O'Brien.\n\n The production is a parody tribute to the science fiction and horror B movies of the 1930s through to the early 1970s.\n\n Along with O'Brien, the film stars Tim Curry, Susan Sarandon, and Barry Bostwick and is narrated by Charles Gray with cast members from the original Royal Court Theatre, Roxy Theatre, and Belasco Theatre productions.",
+    "Shadows of the Night (film)\nShadows of the Night is a 1928 American drama silent film directed by D. Ross Lederman and written by Robert E. Hopkins and D. Ross Lederman.\n\n The film stars Flash the Dog, Lawrence Gray, Louise Lorraine, Warner Richmond and Tom Dugan.\n\n It was released on October 26, 1928, by Metro-Goldwyn-Mayer.",
+    "The Snake Woman\nThe Snake Woman is a low budget 1961 British horror film directed by Sidney J. Furie and starring Susan Travers, John McCarthy.",
+    "The Boys in Company C\nThe Boys in Company C, directed by Sidney J. Furie, starring Stan Shaw, Andrew Stevens, Craig Wasson, James Canning, and Michael Lembeck, is a 1978 film about United States Marine Corps recruits preparing for duty, and their subsequent combat in the Vietnam War.\n\n It was among the first Vietnam War films to appear after the Vietnam Era, and was also the first role for R. Lee Ermey of \"Full Metal Jacket\" fame.\n\n \"The Boys in Company C\" is the first in Furie's Vietnam War motion picture trilogy, followed by 2001's \"Under Heavy Fire\" and 2006's \"The Veteran\".",
+    "Doris Bither case\nThe Doris Bither case, also known as the Entity hauntings, was an alleged haunting which occurred in 1974 at Culver City, California where a woman named Doris Bither alleged the ghosts of three Asian men were raping her.\n\n The case inspired Frank De Felitta's 1978 book \"The Entity\" which was made into a 1982 film of the same name starring Barbara Hershey.",
+    "The Entity\nThe Entity is a 1982 American horror film directed by Sidney J. Furie and written by Frank De Felitta, who adapted his 1978 novel of the same name.\n\n It stars Barbara Hershey as a woman who is raped and tormented by an invisible assailant.\n\n Despite being filmed and planned for a release in 1981, the movie was not released in worldwide theaters until September 1982 and February 1983 in the United States.\n\n Like the novel, the film is based on the 1974 Doris Bither case.",
+    "Doctor Blood's Coffin\nDoctor Blood's Coffin is a 1961 British horror film directed by Sidney J. Furie.\n\n Kieron Moore stars as a mad scientist who reanimates the dead.",
+    "Little Fauss and Big Halsy\nLittle Fauss and Big Halsy is a 1970 film directed by Sidney J. Furie, starring Robert Redford and Michael J. Pollard, also featuring Lauren Hutton, Noah Beery, Jr. and Lucille Benson."
+   ]
+  },
+  {
+   "id": "71eaf3d95ac441a3",
+   "gold": [
+    {
+     "sentence": "In September, The Fader published an interview with CupcakKe, which she discussed her new album that would address \"rape, and everything else\".",
+     "facts": {
+      "0.0": "The Fader published an interview with CupcakKe in September.",
+      "0.1": "In the interview, CupcakKe discussed her new album.",
+      "0.2": "CupcakKe's new album would address \"rape, and everything else\"."
+     }
+    },
+    {
+     "sentence": "The Fader (stylized as The FADER) is a New York City-based music magazine launched in 1999 by Rob Stone and Jon Cohen, covering music, style and culture.",
+     "facts": {
+      "1.0": "The Fader, stylized as The FADER, is a New York City-based music magazine.",
+      "1.1": "The Fader was launched in 1999.",
+      "1.2": "The Fader was launched by Rob Stone and Jon Cohen.",
+      "1.3": "The Fader covers music, style and culture."
+     }
+    },
+    {
+     "sentence": " It was the first print publication to be released on iTunes.",
+     "facts": {
+      "2.0": "The Fader was the first print publication to be released on iTunes."
+     }
+    }
+   ],
+   "items": [
+    "Essence (magazine)\nEssence is a monthly magazine for African American women between the ages of 18 and 49.\n\n It is the only magazine that focuses on reaching an audience of black women, revolves around the black woman experience, and has remained for a long period of time.\n\n The magazine covers fashion, lifestyle and beauty, with an intimate girlfriend-to-girlfriend tone, and its slogan \"Fierce, Fun, and Fabulous\" suggests the magazine's goal of empowering African-American women.\n\n The topics the magazine discusses range from celebrities, to fashion, to point-of-view pieces addressing current issues in the African-American community.\n\n A number of its readers engage closely and personally with the publication, and it claims to be the magazine \"for and about Black women\".",
+    "The Fader\nThe Fader (stylized as The FADER) is a New York City-based music magazine launched in 1999 by Rob Stone and Jon Cohen, covering music, style and culture.\n\n It was the first print publication to be released on iTunes.",
+    "State (magazine)\nState.ie (formerly State Magazine) is an Irish website and formerly a monthly music magazine, which launched in April 2008 and ceased to print in January 2009 having published a total of ten issues.\n\n The magazine continues online and was voted Best Music Site in 2008 and Best Web Publication in 2010 in the Irish Web Awards.\n\n Originally the concept of the magazine involved a hard copy of which there was a charge to purchase, however after six issues it was decided to make the magazine's content free both online and in print.\n\n The first issue, April 2008, appeared on Irish shelves on 6 March 2008 and featured Michael Stipe of R.E.M. on the cover.\n\n This immediately garnered comparisons between the new magazine's similarities with \"Hot Press\" who featured Stipe on their cover at the same time, a move widely thought to be an attempt by Hot Press to stifle State's status as a serious 'alternative' to the more established local magazine.\n\n At a price of €5.50, \"State\" charged €2 more than \"Hot Press\".",
+    "Exclaim!\nExclaim!\n\n is a monthly Canadian music magazine that features in-depth coverage of new music across all genres with a special focus on Canadian and cutting-edge artists.\n\n Content is based on the monthly print publication, which publishes 9 issues per year, distributing over 103,000 copies to over 2,600 locations across Canada.\n\n The magazine has an average of 361,200 monthly readers.\n\n Their website, exclaim.ca, has an average of 675,000 unique visitors a month.",
+    "PC Magazine\nPC Magazine (shortened as PCMag) is an American computer magazine published by Ziff Davis.\n\n A print edition was published from 1982 to January 2009.\n\n Publication of online editions started in late 1994 and continues to this day.",
+    "Paper (magazine)\nPaper, stylized as PAPER, is a New York City-based independent magazine focusing on fashion, popular culture, nightlife, music, art and film.\n\n Past cover models include Kim Kardashian, Demi Lovato, Katy Perry, Miley Cyrus, Prince, CL, and Jennifer Lopez.",
+    "Rap-Up\nRap-Up is a magazine launched in 2001 by founder Devin Lazerine.\n\n The publication was originally a website devoted to hip hop, until Lazerine decided to pitch the possibility of a magazine to several publishers.\n\n The magazine is focused on the hip hop and R&B aspect of the music industry, and predominantly features interviews with artists, actors and other entertainers.\n\n Issued quarterly, the magazine's target audience was the 14 to 28 demographic, although the demographic has become older over time.",
+    "VIVmag\nVIVmag is one of the earliest exclusively digital, interactive women's lifestyle magazines.\n\n Launched in 2006 and backed by Canadian industrialist David Harrison Gilmour (the founder of FIJI Water LLC), the bimonthly magazine is distributed by Zinio Systems, Inc.\n\n The first issue appeared in January-February 2007.\n\n There is no print version.\n\n The paperless title can be viewed in most browsers or downloaded to your computer and read via the Zinio Reader.\n\n The magazine is based in Thousand Oaks, California.",
+    "Audacious (CupcakKe album)\nIn September, The Fader published an interview with CupcakKe, which she discussed her new album that would address \"rape, and everything else\".",
+    "SexIs\nSexIs Magazine is a quarterly print publication and daily webzine devoted to sex and sexual culture, founded in 2008 by Web Merchants, parent company of sex toy e-tailer EdenFantasys.com.\n\n The first print issue debuted in November 2009, distributed nationwide as an insert in \"BUST magazine\".\n\n The website publishes articles, columns, video presentations and news items daily."
+   ]
+  }
+ ]
+}

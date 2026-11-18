@@ -1,0 +1,40 @@
+[
+ {"id": "5a851b0d5542997175ce1f7f", "sentences": [
+   ["The Dogo Cubano is also known as the Cuban Mastiff.", "The Dogo Cubano is also known as the Cuban Dogo.", "The Dogo Cubano is also known as the Cuban Dogge.", "The Dogo Cubano is an extinct dog breed.", "The Dogo Cubano is a dog breed from Cuba."],
+   ["The Dutch Shepherd is a herding dog.", "The Dutch Shepherd is a herding dog of Dutch origin."]
+ ]},
+ {"id": "multihop-rag-2448", "sentences": [
+   ["New customers can get up to $1000 in bonus bets.", "New customers can get bonus bets if they lose their first bet."],
+   ["Caesars is expected to offer the same offer in VT as it has elsewhere.", "New sign-ups are eligible to receive up to a $1,000 Bonus Bet.", "New sign-ups are eligible for the Bonus Bet if their first bet loses."]
+ ]},
+ {"id": "5a77720255429967ab10517f", "sentences": [
+   ["Her only novel is 'The Bone People'.", "'The Bone People' won the Booker Prize.", "'The Bone People' won the Booker Prize in 1985."],
+   ["Card's novel 'Ender's Game' was published in 1985.", "'Speaker for the Dead' is the sequel to 'Ender's Game'.", "'Speaker for the Dead' was published in 1986.", "'Ender's Game' won the Hugo Award.", "'Ender's Game' won the Nebula Award.", "'Speaker for the Dead' won the Hugo Award.", "'Speaker for the Dead' won the Nebula Award.", "Card is the only author to win both science fiction's top U.S. prizes in consecutive years."]
+ ]},
+ {"id": "5ae0fe8855429945ae959495", "sentences": [
+   ["Jürgen Melzer was born on 22 May 1981.", "Jürgen Melzer was born in Vienna.", "Jürgen Melzer is an Austrian tennis player."],
+   ["Tom Gullikson was born on September 8, 1951.", "Tom Gullikson is a tennis coach.", "Tom Gullikson is a former professional tennis player.", "Tom Gullikson is from the United States."]
+ ]},
+ {"id": "5a89e95c5542992e4fca8474", "sentences": [
+   ["Javier Alberto Frana was born on 25 December 1966.", "Javier Alberto Frana is a former tennis player.", "Javier Alberto Frana is from Argentina.", "Javier Alberto Frana is a current tennis commentator.", "Javier Alberto Frana is a tennis commentator for ESPN Latin America."],
+   ["Thomaz Koch was born on May 11, 1945.", "Thomaz Koch was born in Porto Alegre.", "Thomaz Koch is a left-handed former tennis player.", "Thomaz Koch is from Brazil.", "Thomaz Koch was a quarter-finalist at the French Open.", "Thomaz Koch was a quarter-finalist at Wimbledon.", "Thomaz Koch was a quarter-finalist at the U.S. National Championships."]
+ ]},
+ {"id": "multihop-rag-2016", "sentences": [
+   ["With this sale, they offer some of the best value in their class.", "They are from one of the top names in the business."],
+   ["Each actor will have to be responsible to ensure that the market remains reasonable amid rates that are relatively low.", "Ramon Fernandez is the Chief Financial Officer of CMA CGM.", "Ramon Fernandez told reporters on Friday that each actor will have to be responsible to ensure the market remains reasonable amid relatively low rates."]
+ ]},
+ {"id": "-4141063008045921128", "sentences": [
+   ["Simon Peter offered advice at the Council, recorded in Acts 15:7-11 and Acts 15:14.", "Barnabas and Paul gave an account of their ministry among the gentiles at the Council, recorded in Acts 15:12.", "The account given by Barnabas and Paul followed advice offered by Simon Peter.", "The apostle James quoted from the words of the prophet Amos, recorded in Acts 15:16-17.", "The apostle James quoted Amos 9:11-12.", "James added his own words to the quotation: 'Known to God from eternity are all His works'.", "James submitted a proposal.", "The proposal was accepted by the Church.", "The proposal became known as the Apostolic Decree."]
+ ]},
+ {"id": "-2416536857956403808", "sentences": [
+   ["The Kruger National Park lies in the north-east of South Africa.", "The Kruger National Park lies in the eastern parts of Limpopo and Mpumalanga provinces.", "Phalaborwa, Limpopo is the only town in South Africa that borders the Kruger National Park.", "The Kruger National Park is one of the largest national parks in the world.", "The Kruger National Park has an area of 19,485 square kilometres (7,523 sq mi).", "The Kruger National Park is approximately 360 kilometres (220 mi) long.", "The Kruger National Park has an average width of 65 kilometres (40 mi).", "At its widest point, the Kruger National Park is 90 kilometres (56 mi) wide from east to west."],
+   ["Kruger National Park is one of the largest game reserves in Africa.", "Kruger National Park covers an area of 19,485 square kilometres (7,523 sq mi).", "Kruger National Park is in the provinces of Limpopo and Mpumalanga.", "Kruger National Park is in northeastern South Africa.", "Kruger National Park extends 360 kilometres (220 mi) from north to south.", "Kruger National Park extends 65 kilometres (40 mi) from east to west.", "The administrative headquarters of Kruger National Park are in Skukuza.", "Areas of Kruger National Park were first protected by the government of the South African Republic in 1898.", "Kruger National Park became South Africa's first national park in 1926."],
+   ["Kruger National Reserve is IUCN category II (national park).", "Kruger National Reserve is located in Limpopo and Mpumalanga provinces, South Africa.", "The nearest city to Kruger National Reserve is Nelspruit (southern).", "The nearest city to Kruger National Reserve is Phalaborwa (central).", "Kruger National Reserve has coordinates 24°0′41''S 31°29′7''E / 24.01139°S 31.48528°E.", "Kruger National Reserve has an area of 19,485 km (7,523 sq mi).", "The infobox lists Kruger National Reserve as established on 31 May 1926, with 1898 given in parentheses.", "Kruger National Reserve had 1,336,981 visitors in 2004.", "Kruger National Reserve is governed by South African National Parks.", "The website for Kruger National Reserve is www.sanparks.org/parks/kruger/."]
+ ]},
+ {"id": "970985133701043298", "sentences": [
+   ["At the federal level in the United States, legislation consists exclusively of Acts.", "At the federal level in the United States, legislation is also called statutes or statutory law.", "Federal legislation in the United States consists exclusively of Acts passed by the Congress of the United States.", "Federal legislation in the United States consists exclusively of Acts passed by the Continental Congress, the predecessor of the Congress of the United States.", "Acts passed by the Congress of the United States or the Continental Congress were signed into law by the President.", "Acts passed by the Congress of the United States or the Continental Congress were passed by Congress after a presidential veto."]
+ ]},
+ {"id": "3147312731957254507", "sentences": [
+   ["Trista Sutter is known for being a reality television star.", "Trista Sutter's professional partner is Louis Van Amstel.", "Trista Sutter was eliminated 1st on June 8, 2005.", "Evander Holyfield is a professional boxer.", "Evander Holyfield's professional partner is Edyta Sliwinska.", "Evander Holyfield was eliminated 2nd on June 15, 2005.", "Rachel Hunter is a supermodel and actress.", "Rachel Hunter's professional partner is Jonathan Roberts.", "Rachel Hunter was eliminated 3rd on June 22, 2005.", "Joey McIntyre is a New Kids on the Block singer.", "Joey McIntyre's professional partner is Ashly DelGrosso.", "Joey McIntyre finished in third place on June 29, 2005.", "John O'Hurley is an actor and game show host.", "John O'Hurley's professional partner is Charlotte Jorgensen.", "John O'Hurley finished as runner-up on July 6, 2005.", "Kelly Monaco is an actress.", "Kelly Monaco's professional partner is Alec Mazo.", "Kelly Monaco was the winner on July 6, 2005."]
+ ]}
+]

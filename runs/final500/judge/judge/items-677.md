@@ -1,0 +1,959 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=f49b413a50145063 ===
+Gold sentences and facts:
+Sentence 0: Texas Bowl Academy Sports + Outdoors Texas Bowl Stadium NRG Stadium Location Houston , Texas Operated 2006 -- present Conference tie - ins Big 12 , SEC Previous conference tie - ins Big East / C - USA / MWC ( alternating years ) ( 2006 -- 2009 ) Big Ten ( 2010 -- 2013 ) Payout US $ 3 million per team ( as of 2015 ) Preceded by Houston Bowl Sponsors Meineke Car Care ( 2011 -- 2012 ) AdvoCare ( 2014 -- 2016 ) Academy Sports + Outdoors ( 2017 - present ) Former names Texas Bowl ( 2006 -- 2010 ) Meineke Car Care Bowl of Texas ( 2011 -- 2012 ) Texas Bowl ( 2013 ) AdvoCare V100 Texas Bowl ( 2014 -- 2016 ) 2016 matchup Texas A&M vs. Kansas State ( Kansas State 33 -- 28 ) 2017 matchup Missouri vs Texas ( Texas 33 -- 16 )
+  Fact 0.0: The Texas Bowl is also called Texas Bowl Academy Sports + Outdoors Texas Bowl Stadium.
+  Fact 0.1: The Texas Bowl is held at NRG Stadium.
+  Fact 0.2: The Texas Bowl is located in Houston, Texas.
+  Fact 0.3: The Texas Bowl has operated from 2006 to the present.
+  Fact 0.4: The Texas Bowl's conference tie-ins are the Big 12 and the SEC.
+  Fact 0.5: The Texas Bowl's previous conference tie-ins were the Big East, C-USA and MWC (alternating years) from 2006 to 2009.
+  Fact 0.6: The Texas Bowl's previous conference tie-in was the Big Ten from 2010 to 2013.
+  Fact 0.7: The Texas Bowl's payout is US $3 million per team as of 2015.
+  Fact 0.8: The Texas Bowl was preceded by the Houston Bowl.
+  Fact 0.9: Meineke Car Care sponsored the Texas Bowl from 2011 to 2012.
+  Fact 0.10: AdvoCare sponsored the Texas Bowl from 2014 to 2016.
+  Fact 0.11: Academy Sports + Outdoors has sponsored the Texas Bowl since 2017.
+  Fact 0.12: A former name of the Texas Bowl was 'Texas Bowl' from 2006 to 2010.
+  Fact 0.13: A former name of the Texas Bowl was 'Meineke Car Care Bowl of Texas' from 2011 to 2012.
+  Fact 0.14: A former name of the Texas Bowl was 'Texas Bowl' in 2013.
+  Fact 0.15: A former name of the Texas Bowl was 'AdvoCare V100 Texas Bowl' from 2014 to 2016.
+  Fact 0.16: The 2016 Texas Bowl matchup was Texas A&M vs. Kansas State, which Kansas State won 33-28.
+  Fact 0.17: The 2017 Texas Bowl matchup was Missouri vs Texas, which Texas won 33-16.
+
+Retrieved items:
+<item 1>
+Texas Bowl
+In 2007 , TCU took the place of the Big 12 team when Kansas and Oklahoma were put into the BCS , and Houston , a `` home team , '' represented C - USA . The
+conferences would receive $612,500 each as per the rules of the agreements as usually , the Big East ( or Big 12 ) would have received $750,000 for playing and
+C - USA would have received a $500,000 stipend for their team playing . Issues ( edit ) According to Sports Illustrated , in 2008 the bowl required Western
+Michigan University to purchase 11,000 tickets at full price in order to accept the invitation to play in the bowl . The university was only able to sell 548
+tickets at that price , forcing it to accept a $462,535 loss , before travel expenses , to pay for the privilege of playing in the bowl . Game results ( edit )
+Season Date Time ( CST ) Teams Attendance TV 2006 December 28 7 : 00 PM Rutgers 37 Kansas State 10 52,210 NFL Network 2007 December 28 7 : 00 PM TCU 20 Houston
+13 62,
+</item 1>
+
+<item 2>
+Texas Bowl
+097 2008 December 30 7 : 00 PM Rice 38 Western Michigan 14 58,880 2009 December 31 2 : 30 PM Navy 35 Missouri 13 69,441 ESPN December 29 5 : 00 PM Illinois 38
+Baylor 14 68,211 2011 December 31 11 : 00 AM Texas A&M 33 Northwestern 22 68,395 2012 December 28 8 : 00 PM Texas Tech 34 Minnesota 31 50,386 2013 December 27 5
+: 00 PM Syracuse 21 Minnesota 17 32,327 2014 December 29 8 : 00 PM Arkansas 31 Texas 7 71,115 2015 December 29 8 : 00 PM LSU 56 Texas Tech 27 71,307 2016
+December 28 8 : 00 PM Kansas State 33 Texas A&M 28 68,412 2017 December 27 8 : 00 PM Texas 33 Missouri 16 67,
+</item 2>
+
+<item 3>
+Texas Bowl
+Kansas State ( Kansas State 33 -- 28 ) 2017 matchup Missouri vs Texas ( Texas 33 -- 16 ) The Texas Bowl , officially the Academy Sports + Outdoors Texas Bowl
+for sponsorship purposes , is a post-season NCAA - sanctioned Division I FBS college football bowl game first held in 2006 in Houston , Texas . The bowl
+replaced the defunct Houston Bowl , which played annually from 2000 to 2005 , and before that the Bluebonnet Bowl , the first bowl game in Houston , played from
+1959 through 1987 . From 2011 to 2012 , the game was sponsored by Meineke Car Care and officially known as the Meineke Car Care Bowl of Texas . The game was
+then officially the AdvoCare V100 Texas Bowl from 2014 to 2016 , with AdvoCare as the title sponsor . Since 2017 , the game has been sponsored by Academy Sports
++ Outdoors .
+</item 3>
+
+<item 4>
+Texas Bowl
+Texas Bowl - wikipedia Texas Bowl Jump to : navigation , search `` AdvoCare V100 Bowl '' and `` AdvoCare Bowl '' redirect here . For the bowl game that AdvoCare
+previously sponsored ( 2009 -- 13 ) , see Independence Bowl . Texas Bowl Academy Sports + Outdoors Texas Bowl Stadium NRG Stadium Location Houston , Texas
+Operated 2006 -- present Conference tie - ins Big 12 , SEC Previous conference tie - ins Big East / C - USA / MWC ( alternating years ) ( 2006 -- 2009 ) Big Ten
+( 2010 -- 2013 ) Payout US $ 3 million per team ( as of 2015 ) Preceded by Houston Bowl Sponsors Meineke Car Care ( 2011 -- 2012 ) AdvoCare ( 2014 -- 2016 )
+Academy Sports + Outdoors ( 2017 - present ) Former names Texas Bowl ( 2006 -- 2010 ) Meineke Car Care Bowl of Texas ( 2011 -- 2012 ) Texas Bowl ( 2013 )
+AdvoCare V100 Texas Bowl ( 2014 -- 2016 ) 2016 matchup Texas A&M vs.
+</item 4>
+
+<item 5>
+Texas Bowl
+November 15 , 2017 . Jump up ^ Murphy , Austin ; Wetzel , Dan ( 15 November 2010 ) . `` Does It Matter ? '' . Sports Illustrated . p. 47 . External links ( edit
+) Official Website Texas Bowl 2006 2007 2008 2009 2011 2012 2013 2014 2015 2016 2017 NRG Stadium ( 2006 -- present ) Broadcasters Previous Bowls Bluebonnet Bowl
+Houston Bowl NCAA Division I FBS bowl games College Football Playoff Championship Game Cotton Fiesta Orange Peach Rose Sugar Other bowl games Alamo Arizona
+Armed Forces Bahamas Belk Birmingham Boca Raton Cactus Camellia Camping World Citrus Cure Dollar General Famous Idaho Potato Foster Farms Frisco Gasparilla
+Hawaii Heart of Dallas Holiday Independence Las Vegas Liberty Military Music City New Mexico New Orleans Outback Pinstripe Quick Lane Sun TaxSlayer Texas All -
+Star games East -- West Shrine Game NFLPA Collegiate Bowl Senior Bowl Retrieved from `` https://en.wikipedia.org/w/index.
+</item 5>
+
+<item 6>
+Texas Bowl
+In July 2006 , the NFL Network acquired TV rights and naming rights to the bowl . Texas Bowl introduction ( edit ) The Texas Bowl name and logo were officially
+unveiled on August 10 , 2006 , at a press conference along with conference affiliations for the bowl spots . The Big 12 , Big East and Conference USA will be
+affiliated with the game , as well as Texas Christian University of the Mountain West . The 2006 matchup featured teams from the Big 12 and Big East Conferences
+. On December 3 , 2006 , Rutgers accepted an invitation to play Kansas State in the inaugural Texas Bowl . `` We 're ecstatic about having Rutgers , '' Texas
+Bowl director David Brady said . `` This is a top - 15 team that was three yards away from a BCS game . We could n't be happier to have them here . '' 2010
+marked the eleventh consecutive year a bowl game has played in Houston , and the 40th year overall with a bowl game there ( the Bluebonnet Bowl lasted 29 years
+) .
+</item 6>
+
+<item 7>
+Texas Bowl
+wikipedia.org/w/index.php?title=Texas_Bowl&oldid=817734724 '' Categories : College football bowls Texas Bowl American football in Texas Annual events in Texas
+Annual sporting events in the United States Sports competitions in Texas Sports in Houston Recurring sporting events established in 2006 Talk Contents About
+Wikipedia Français Edit links This page was last edited on 30 December 2017 , at 07 : 17 . Text is available under the Creative Commons Attribution - ShareAlike
+License ; additional terms may apply . By using this site , you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark of the
+Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 7>
+
+<item 8>
+Texas Bowl
+Rank Conference Appearances Wins Losses Pct . Big 12 9 5 . 444 T2 SEC . 500 T2 Big Ten . 250 C - USA . 500 T5 ACC 0 1.000 T5 Big East 0 1.000 T5 Independents 0
+1.000 T5 Mountain West 0 1.000 T5 MAC 0 . 000 Jump up ^ Rutgers ( 2006 ) appeared as a member of the Big East . Following the 2013 split of the original Big
+East along football lines , the FBS schools reorganized as the new American Athletic Conference , which retains the charter of the original Big East . Jump up ^
+Navy ( 2009 ) See also ( edit ) List of college bowl games List of Texas Bowl broadcasters References ( edit ) Jump up ^ `` College Bowl Game Payouts '' .
+statisticbrain.com. 2015 . Jump up ^ Duarte , Joseph ( 18 April 2006 ) . `` Houston Bowl in jeopardy '' . Houston Chronicle . Retrieved 29 December 2015 . Jump
+up ^ `` NFL Network gets bowl game in Houston '' .
+</item 8>
+
+<item 9>
+Texas Bowl
+Since 2017 , the game has been sponsored by Academy Sports + Outdoors . Contents ( hide ) 1 History 1.1 Replacing the Houston Bowl 1.2 Texas Bowl introduction
+1.3 Sponsors 1.4 Conference tie - ins 1.5 Issues 2 Game results 3 MVPs 4 Most appearances 5 Appearances by conference 6 See also 7 References 8 External links
+History ( edit ) Replacing the Houston Bowl ( edit ) Speculation surfaced questioning the long - term survival of the former Houston Bowl . The three - year
+contract with EV1.net expired on December 31 , 2005 , leaving the bowl game without a title sponsor . A college football official told the Houston Chronicle
+that the bowl was in danger of ceasing operations , as a result of the game losing its title sponsor and because the Houston Bowl still owed roughly $600,000 to
+the Big 12 and Mountain West conferences following the 2005 game . However , the NCAA approved Lone Star Sports & Entertainment , a division of the Houston
+Texans , who also play in Reliant Stadium , to take over game management .
+</item 9>
+
+<item 10>
+Texas Bowl
+It was also announced on December 30 , 2009 , that ESPN Plus would take over as part owner and operator of the game , while Lone Star Sports and Entertainment
+will maintain a stake in the bowl , and would be carried on ESPN . Sponsors ( edit ) On April 12 , 2011 , ESPN announced Meineke Car Care signed a three - year
+title sponsorship deal beginning in 2011 , changing name of the bowl to the Meineke Car Care Bowl of Texas . On February 12 , 2014 , it was announced that
+AdvoCare will be the title sponsor for the bowl game . That sponsorship concluded after the 2016 game . On November 15 , 2017 , Academy Sports + Outdoors became
+the new title sponsor of the bowl . Conference tie - ins ( edit ) On May 17 , 2007 , it was announced Conference USA would have a team in the 2007 Texas Bowl .
+The Texas Bowl has a rotating commitment with the Big East Conference and Conference USA for 2006 -- 09 while the Big 12 Conference will have a team in all four
+of those games .
+</item 10>
+=== END ITEM id=f49b413a50145063 ===
+
+=== ITEM id=5d82f368e7951840 ===
+Gold sentences and facts:
+Sentence 0: Islami Somaz Bank Limited Al - Arafah Islami Bank Limited EXIM Bank Limited First Security Islami Bank Limited ICB Islamic Bank Limited Islami Bank Bangladesh Limited Shahjalal Islami Bank Limited Social Islami Bank Limited Union Bank Limited
+  Fact 0.0: Islami Somaz Bank Limited is listed as a bank.
+  Fact 0.1: Al - Arafah Islami Bank Limited is listed as a bank.
+  Fact 0.2: EXIM Bank Limited is listed as a bank.
+  Fact 0.3: First Security Islami Bank Limited is listed as a bank.
+  Fact 0.4: ICB Islamic Bank Limited is listed as a bank.
+  Fact 0.5: Islami Bank Bangladesh Limited is listed as a bank.
+  Fact 0.6: Shahjalal Islami Bank Limited is listed as a bank.
+  Fact 0.7: Social Islami Bank Limited is listed as a bank.
+  Fact 0.8: Union Bank Limited is listed as a bank.
+
+Retrieved items:
+<item 1>
+Prime Minister of Australia
+Belarus Belgium Belize Bermuda Bhutan Bosnia and Herzegovina Brazil Bulgaria Burkina Faso Cambodia Cameroon Canada Cape Verde Central African Republic Chad
+Congo ( Kinshasa ) Cook Islands Croatia Cuba Curaçao Northern Cyprus Czech Republic Denmark Djibouti Dominica East Timor Egypt Equatorial Guinea Estonia Faroe
+Islands Fiji Finland France Ghana Georgia Greece Greenland Grenada Guinea Guyana Haiti Hungary Iceland India Indonesia Iran Iraq Ireland Israel Italy Jamaica
+Japan Jordan Kazakhstan Kenya North Korea South Korea Kosovo Kuwait Kyrgyzstan Laos Latvia Lebanon Lithuania Luxembourg Macedonia Malaysia Malta Mauritius
+Moldova Mongolia Montenegro Morocco Myanmar ( Burma ) Nagorno - Karabakh Namibia Nepal Netherlands New Zealand Niue Norway Pakistan Papua New Guinea Peru
+Philippines Poland Portugal Qatar Romania Russia Rwanda Saint Kitts and Nevis Saint Lucia Saint Vincent and the Grenadines Samoa São Tomé and Principe Saudi
+Arabia Senegal Serbia Seychelles Singapore Sint Maarten Slovakia Slovenia Solomon Islands Somalia South Africa South Ossetia Spain Sri Lanka Sudan Swaziland
+Sweden Syria Taiwan ( Republic of China ) Tajikistan Tanzania Thailand Tonga Trinidad and Tobago Tunisia Turkmenistan Turkey Turks and Caicos Islands Tuvalu
+Uganda Ukraine United Arab Emirates United Kingdom Uzbekistan Vanuatu Vietnam Yemen Western Sahara Zambia Zimbabwe Retrieved from
+</item 1>
+
+<item 2>
+List of banks in Bangladesh
+A Commercial Bank of Ceylon PLC Habib Bank Limited National Bank of Pakistan Standard Chartered Bank State Bank of India Punjab National Bank Woori Bank HSBC
+Non-scheduled banks ( edit ) Non-Scheduled Banks are licensed only for specific functions and objectives , and do not offer the same range of services as
+scheduled banks . Ansar VDP Unnayan Bank Karmashangosthan Bank Probashi Kollyan Bank Grameen Bank Jubilee Bank Palli Sanchay Bank Non Bank Financial
+Institutions ( edit ) Investment Corporation of Bangladesh Agrani SME Financing Company Limited Bangladesh Finance and Investment Company Limited Bangladesh
+Industrial Finance Company Limited Bangladesh Infrastructure Finance Fund Limited Bay Leasing and Investment Limited CAPM Venture Capital and Finance Limited
+Delta Brac Housing Finance Corporation Limited Far - east Finance & Investment Limited FAS Finance & Investment Limited First Finance Limited GSP Finance
+Company ( Bangladesh ) Limited Hajj Finance Company Limited IDLC Finance Limited Industrial and Infrastructure Development Finance Company Limited IPDC Finance
+Limited Infrastructure Development Company Limited International Leasing and Financial Services Limited Islamic Finance and Investment Limited LankaBangla
+Finance Limited Meridian Finance and Investment Limited MIDAS Financing Limited National Finance Limited National Housing Finance and Investments Limited People
+'s Leasing and Financial Services Limited Phoenix Finance
+</item 2>
+
+<item 3>
+List of banks in Bangladesh
+National Finance Limited National Housing Finance and Investments Limited People 's Leasing and Financial Services Limited Phoenix Finance and Investments
+Limited Premier Leasing & Finance Limited Prime Finance & Investment Limited Reliance Finance Limited Saudi - Bangladesh Industrial & Agricultural Investment
+Company Limited SEAF Bangladesh Venture Limited The UAE - Bangladesh Investment Company Limited Union Capital Limited United Finance Limited Uttara Finance and
+Investments Limited Specialized Financial Institutions ( Semi Formal Sector ) ( edit ) House Building Financial Corporation ( HBFC ) Palli Karma Sahayak
+Foundation ( PKSF ) References ( edit ) ^ Jump up to : `` Financial System '' . Central Bank of Bangladesh . Retrieved 9 August 2016 . Jump up ^ `` Relevant
+links '' . Central Bank of Bangladesh . Retrieved 7 February 2018 .
+</item 3>
+
+<item 4>
+Roosevelt Corollary
+Central Belize Costa Rica El Salvador Guatemala Honduras Nicaragua Panama Northern Bermuda Canada trade relations Mexico South Argentina Bolivia Brazil Chile
+Colombia Ecuador Guyana Paraguay Peru Suriname Uruguay Venezuela Asia Central Kazakhstan Kyrgyzstan Tajikistan Turkmenistan Uzbekistan East China Hong Kong
+Japan Macau Mongolia North Korea South Korea Taiwan South Afghanistan Bangladesh Bhutan India Maldives Nepal Pakistan ( military relations ) Sri Lanka Southeast
+Brunei Burma Cambodia East Timor Indonesia Laos Malaysia Philippines Singapore Thailand Vietnam West Armenia Azerbaijan Bahrain Cyprus Georgia Iran Iraq Israel
+military relations Jordan Kuwait Lebanon Oman Palestine Qatar Saudi Arabia Syria Turkey United Arab Emirates Yemen Europe East Belarus Bulgaria Czech Republic
+Hungary Moldova Poland Romania Russia Slovakia Ukraine North Denmark Estonia Finland Iceland Ireland Latvia Lithuania Norway Sweden United Kingdom South Andorra
+Albania Bosnia and Herzegovina Croatia Greece Italy Kosovo Macedonia Malta Montenegro Portugal San Marino Serbia Slovenia Spain Vatican City West Austria
+Belgium France Germany Liechtenstein Luxembourg Monaco Netherlands Switzerland Oceania Australia Fiji Kiribati Marshall Islands Micronesia Nauru New Zealand
+Palau Papua New Guinea Samoa Solomon Islands Tonga Tuvalu Vanuatu Former states Kingdom of Hawaii Republic of Texas Russian Empire Soviet Union Multilateral
+relations Arab League Commonwealth of Nations European Union Latin America United Nations Third Border Initiative International organizations ( hide ) Doctrines
+,
+</item 4>
+
+<item 5>
+List of banks in Bangladesh
+Rupali Bank Ltd . Bangladesh Krishi Bank Bangladesh Development Bank Limited . Basic Bank Limited Private Commercial Banks ( edit ) AB Bank Limited Bangladesh
+Commerce Bank Limited Bank Asia Limited Bengal Bank Limited BRAC Bank Limited City Bank Limited Dhaka Bank Limited Dutch - Bangla Bank Limited Eastern Bank
+Limited IFIC Bank Limited Jamuna Bank Limited Meghna Bank Limited Mercantile Bank Limited Midland Bank Modhumoti Bank Limited Mutual Trust Bank Limited National
+Bank Limited National Credit & Commerce Bank Limited NRB Bank Limited NRB Commercial Bank Limited One Bank Limited Premier Bank Limited Prime Bank Limited
+Pubali Bank Limited South Bangla Agriculture & Commerce Bank Limited Southeast Bank Limited Standard Bank Limited The Farmers Bank Limited Trust Bank Limited
+United Commercial Bank Limited Uttara Bank Limited Shimanto Bank Ltd Islamic Commercial Private Banks ( edit ) Islami Somaz Bank Limited Al - Arafah Islami Bank
+Limited EXIM Bank Limited First Security Islami Bank Limited ICB Islamic Bank Limited Islami Bank Bangladesh Limited Shahjalal Islami Bank Limited Social Islami
+Bank Limited Union Bank Limited Foreign Commercial Banks ( edit ) Bank Al - Falah Limited Citibank N.
+</item 5>
+
+<item 6>
+List of banks in Bangladesh
+Central Bank of Bangladesh . Retrieved 7 February 2018 . ( hide ) List of banks in Asia Sovereign states Afghanistan Armenia Azerbaijan Bahrain Bangladesh
+Bhutan Brunei Cambodia China Cyprus East Timor ( Timor - Leste ) Egypt Georgia India Indonesia Iran Iraq Israel Japan Jordan Kazakhstan North Korea South Korea
+Kuwait Kyrgyzstan Laos Lebanon Malaysia Maldives Mongolia Myanmar Nepal Oman Pakistan Philippines Qatar Russia Saudi Arabia Singapore Sri Lanka Syria Tajikistan
+Thailand Turkey Turkmenistan United Arab Emirates Uzbekistan Vietnam Yemen States with limited recognition Abkhazia Artsakh Northern Cyprus Palestine South
+Ossetia Taiwan Dependencies and other territories British Indian Ocean Territory Christmas Island Cocos ( Keeling ) Islands Hong Kong Macau Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=List_of_banks_in_Bangladesh&oldid=832850714 '' Categories : Lists of companies of Bangladesh Lists of banks by
+country Banks of Bangladesh Lists of banks Talk Contents About Wikipedia বাংলা Edit links This page was last edited on 28 March 2018 , at 10 : 02 . Text is
+available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply .
+</item 6>
+
+<item 7>
+Economy of India
+The Indian money market is classified into the organised sector , comprising private , public and foreign - owned commercial banks and cooperative banks ,
+together known as ' scheduled banks ' ; and the unorganised sector , which includes individual or family - owned indigenous bankers or money lenders and
+non-banking financial companies . The unorganised sector and microcredit are preferred over traditional banks in rural and sub-urban areas , especially for
+non-productive purposes such as short - term loans for ceremonies . Prime Minister Indira Gandhi nationalised 14 banks in 1969 , followed by six others in 1980
+, and made it mandatory for banks to provide 40 % of their net credit to priority sectors including agriculture , small - scale industry , retail trade and
+small business , to ensure that the banks fulfilled their social and developmental goals . Since then , the number of bank branches has increased from 8,260 in
+1969 to 72,170 in 2007 and the population covered by a branch decreased from 63,800 to 15,000 during the same period .
+</item 7>
+
+<item 8>
+Agriculture in India
+Reserve Bank of India Governors India Government Mint Financial services Banking Banks Insurance Bombay Stock Exchange National Stock Exchange Multi Commodity
+Exchange Bullion Black money Stock exchanges History Economic development Economic liberalisation Licence Raj Green revolution Government initiatives Numbering
+system People Billionaires Businesspeople Demography Income Poverty Labour law Pensions EPFO NPS PPF States Andhra Pradesh Assam Bihar Delhi Goa Gujarat Haryana
+Himachal Pradesh Jammu and Kashmir Karnataka Kerala Madhya Pradesh Maharashtra Mizoram Odisha Punjab Rajasthan Tamil Nadu Telangana Uttarakhand Uttar Pradesh
+West Bengal Sectors Agriculture Livestock Fishing Automotive Defence Construction Education Energy Nuclear Solar Wind Entertainment Forestry Gambling Healthcare
+Information technology Media Cinema Television Printing Mining Coal Iron and Steel Pharmaceuticals Retail Science and technology Biotechnology
+Telecommunications Textiles Tourism Transport Aviation Civil Ports Rail Utilities Electricity Water Commons Wikiquotes Agriculture in Asia Sovereign states
+Afghanistan Armenia Azerbaijan Bahrain Bangladesh Bhutan Brunei Cambodia China Cyprus East Timor ( Timor - Leste ) Egypt Georgia India Indonesia Iran Iraq
+Israel Japan Jordan Kazakhstan North Korea South Korea Kuwait Kyrgyzstan Laos Lebanon Malaysia Maldives Mongolia Myanmar Nepal Oman Pakistan Philippines Qatar
+Russia Saudi Arabia Singapore Sri Lanka Syria Tajikistan Thailand Turkey Turkmenistan United Arab Emirates Uzbekistan Vietnam Yemen States with limited
+recognition Abkhazia
+</item 8>
+
+<item 9>
+List of banks in Bangladesh
+List of banks in Bangladesh - wikipedia List of banks in Bangladesh Jump to : navigation , search The banking sector in Bangladesh consists of several types of
+institution : Contents ( hide ) 1 Central bank 2 Scheduled Banks 3 State Owned Banks 4 Private Commercial Banks 5 Islamic Commercial Private Banks 6 Foreign
+Commercial Banks 7 Non-Scheduled Banks 8 Non Bank Financial Institutions 9 Specialized Financial Institutions ( Semi Formal Sector ) 10 References Central Bank
+( edit ) Bangladesh Bank is the central bank of Bangladesh and the chief regulatory authority in the banking sector . Pursuant to Bangladesh Bank Order , 1972
+the Government of Bangladesh reorganized the Dhaka Branch of the State Bank of Pakistan as the central bank of the country , and named it Bangladesh Bank with
+retrospective effect from 16 December 1971 . Scheduled banks ( edit ) Secheduled Banks are licensed under the Bank Company Act , 1991 ( Amended up to 2013 ) .
+State Owned Banks ( edit ) Sonali Bank Ltd . Janata Bank Ltd . Agrani Bank Ltd . Rupali Bank Ltd . Bangladesh Krishi Bank Bangladesh Development Bank Limited .
+</item 9>
+
+<item 10>
+List of banks in Bangladesh
+Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use
+and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 10>
+=== END ITEM id=5d82f368e7951840 ===
+
+=== ITEM id=8f38f465f98e0674 ===
+Gold sentences and facts:
+Sentence 0: The Super Bowl LI Halftime show took place on February 5 , 2017 , at NRG Stadium in Houston , Texas as part of Super Bowl LI . The show was headlined by Lady Gaga , who performed a medley of her songs , including newer material from her most recent studio album Joanne .
+  Fact 0.0: The Super Bowl LI Halftime show took place on February 5, 2017.
+  Fact 0.1: The Super Bowl LI Halftime show took place at NRG Stadium in Houston, Texas.
+  Fact 0.2: The Super Bowl LI Halftime show took place as part of Super Bowl LI.
+  Fact 0.3: The Super Bowl LI Halftime show was headlined by Lady Gaga.
+  Fact 0.4: Lady Gaga performed a medley of her songs at the Super Bowl LI Halftime show.
+  Fact 0.5: The medley included newer material from Lady Gaga's most recent studio album, Joanne.
+
+Retrieved items:
+<item 1>
+Super Bowl LI halftime show
+Billboard . Archived from the original on February 6 , 2017 . Retrieved February 5 , 2017 . Jump up ^ `` Super Bowl LI Halftime Show Credits And Staff '' . Live
+Design . Archived from the original on February 21 , 2017 . Retrieved February 21 , 2017 . External links ( edit ) Wikimedia Commons has media related to Super
+Bowl LI halftime show . Do n't Worry About What ' Joanne ' Songs Lady Gaga Is Gonna Perform at the Super Bowl Billboard Super Bowl LI Halftime Show 2017 Staging
+Technical Drawings Live Design Super Bowl LI Halftime Show Set Drawings Live Design Will Lady Gaga 's Drones Win a Lion ?
+</item 1>
+
+<item 2>
+Super Bowl LI halftime show
+With 117.5 million television viewers , the Super Bowl LI halftime show was the second most - watched Super Bowl halftime show behind Katy Perry 's and had
+higher average viewership than the game itself . Contents ( hide ) 1 Synopsis 2 Background 3 Development 3.1 Conception 3.2 Rehearsals 3.3 Fashion 3.4
+Multimedia 3.5 Drones 4 Critical response 5 Commercial reception 6 Set list 7 Personnel 8 See also 9 References 10 External links Synopsis ( edit ) NRG Stadium
+, where the Super Bowl LI and the halftime show took place The halftime show started on the roof of NRG Stadium . Gaga started singing `` God Bless America ''
+as drones swarm behind her emitting red , blue and white color . She then sang Woody Guthrie 's `` This Land Is Your Land '' , followed by the ending of the
+Pledge of Allegiance : `` One nation under God , indivisible , with liberty and justice for all '' . Gaga then dove from the rooftop as the drones behind formed
+the design of the US flag .
+</item 2>
+
+<item 3>
+Super Bowl LI halftime show
+Martens and Vera Wang made it a point . Multimedia ( edit ) During `` Million Reasons '' a field cast used Glow Motion LED Batons , creating a three -
+dimensional moving pixels show . The production work on the show was done by designers Bruce Rodgers of Tribe Inc. and LeRoy Bennett , and lighting designer Bob
+Barnhart of 22 Degrees . The stage was created by All Access Staging & Productions , who had also created previous Super Bowl halftime stages . Key features of
+the stage consisted of a main platform , two towers , three star - shaped side stages , a piano dome and a stage lift . The towers were around 30 feet ( 9.1 m )
+tall and could be carried by carts to the field for set - up . All Access had only 4.5 weeks to create the whole piece with the main stage itself , and required
+17 trucks for storage and transport . The show utilized LED system from Verrents and sound by ATK Audio tek . Around 5,000 LED lights were embedded in the stage
+, which was a record number . Special effects group Strictly FX was behind all the pyrotechnics .
+</item 3>
+
+<item 4>
+Graph query row:
+performer: Lady Gaga
+relationship: PARTICIPATED_IN
+show: Super Bowl LI halftime show
+</item 4>
+
+<item 5>
+Super Bowl LI halftime show
+Gaga joined them wearing a football inspired costume and performed the track . As fireworks erupted heralding the end of the show , Gaga reached the edge of the
+stage , shouted `` Super Bowl 51 '' , dropped her microphone , and jumped off stage catching a football . Background ( edit ) Gaga after performing the US
+national anthem at the Super Bowl 50 on February 7 , 2016 Around August 2016 , media started reporting that singer Adele was in discussion with the National
+Football League ( NFL ) to perform at the Super Bowl LI halftime show , to be held on February 5 , 2017 , at Houston 's NRG Stadium ; the show was sponsored by
+Pepsi Zero Sugar . A representative from the NFL said that `` organisers are doing absolutely everything they can to try to persuade her to sign up '' . During
+her Adele Live 2016 concert tour at Los Angeles , Adele clarified that although she had been offered to perform by the NFL , she had declined since she did not
+believe herself to be suitable for the halftime show . The NFL also explained that they had not signed any musician till then and were still in discussion with
+several artists .
+</item 5>
+
+<item 6>
+Super Bowl LI halftime show
+Super Bowl LI halftime show - wikipedia Super Bowl LI halftime show Jump to : navigation , search Super Bowl LI halftime show Date February 5 , 2017 Location
+Houston , Texas Venue NRG Stadium Headliner Lady Gaga Sponsor Pepsi Director Hamish Hamilton Producer Ricky Kirshner Super Bowl halftime show chronology 50 (
+2016 ) LI ( 2017 ) LII ( 2018 ) The Super Bowl LI Halftime show took place on February 5 , 2017 , at NRG Stadium in Houston , Texas as part of Super Bowl LI .
+The show was headlined by Lady Gaga , who performed a medley of her songs , including newer material from her most recent studio album Joanne . Gaga 's
+performance was critically acclaimed , with media outlets praising the show for demonstrating her artistic and musical qualities , and some arguing that it
+ranked among the top Super Bowl halftime performances in history . The show was also noted for its acknowledgment of the LGBT community , the use of a swarm of
+lighting - equipped drones for a pre-recorded intro scene , and its perceived political undertones .
+</item 6>
+
+<item 7>
+Super Bowl LI halftime show
+Jesus Arroyo , Arturo Martinez , Jeff Haas , Anthony Pozos , Micky Dymond , Staging Technician / Fabricator : Julio Roch LED Technicians : Zack Eastland , Blake
+Chandler See also ( edit ) 2017 in American music 2017 in American television References ( edit ) Jump up ^ Nelson , Jeff ( October 4 , 2016 ) . `` Lady Gaga
+Hopes to Deliver ' Powerful ' Super Bowl Halftime Show Like Greats Michael Jackson , Bruce Springsteen '' . People . Archived from the original on November 9 ,
+2016 . Retrieved November 9 , 2016 . Jump up ^ Wooton , Dan ( August 8 , 2016 ) . `` Adele set to perform at the Super Bowl show as ' desperate ' chiefs bid to
+land Brit star '' . The Sun . Archived from the original on November 9 , 2016 . Retrieved November 8 , 2016 . Jump up ^ `` Adele Reveals She Turned Down Super
+Bowl 51 Halftime Gig '' . Rolling Stone . August 14 , 2016 .
+</item 7>
+
+<item 8>
+Super Bowl LI halftime show
+Toman also took into account the total time it usually takes for the show -- seven minutes for set up , 12 minutes for the main show , and another seven minutes
+to dismantle -- and believed the singer could deliver `` power , punch , performance , singing , lights '' within that time frame . Pepsi sponsored the halftime
+show for the fifth - consecutive year . Development ( edit ) Conception ( edit ) A long shot view of the stage during the performance of `` Just Dance '' in the
+halftime show In October 2016 , Gaga told Entertainment Weekly she wanted to give `` the best show for the football fans , the ones that are watching at home ''
+. Although indecisive about the set list , the singer wanted to play a mixture of her past and recent songs . She also confirmed that the NFL had heard Joanne
+before its release , and decided to offer the halftime performance slot . Inspiration came from previous halftime show performances by Michael Jackson , Diana
+Ross , and Bruce Springsteen , with Gaga remarking that she loved `` all the ( past shows ) '' .
+</item 8>
+
+<item 9>
+Super Bowl LI halftime show
+Live Design . Archived from the original on February 21 , 2017 . Retrieved February 20 , 2017 . Jump up ^ Orne , Neil ( February 6 , 2017 ) . `` Nashville
+company played huge role in Super Bowl halftime show '' . WKRN - TV . Archived from the original on February 21 , 2017 . Retrieved February 20 , 2017 . Jump up
+^ Sandberg , Marian ( February 5 , 2017 ) . `` Super Bowl LI Halftime Show 2017 Lighting Network System '' . Live Design . Archived from the original on
+February 21 , 2017 . Retrieved February 20 , 2017 . ^ Jump up to : Lampert - Greaux , Ellen ( February 5 , 2017 ) . `` Bob Barnhart On The Super Bowl LI
+Halftime Show '' . Live Design . Archived from the original on February 15 , 2017 . Retrieved February 20 , 2017 .
+</item 9>
+
+<item 10>
+Super Bowl LI halftime show
+Barnhart recalled that `` ( the ) show was a little more complicated this year , due to the amount of scenery that we normally do n't have on a halftime show ''
+, but it was better since there were no video backdrops . All around the roof of NRG Stadium , an array of 36 Clay Paky Sharpy fixtures were added , which lit
+the Houston night skyline with light beams . Barnhart also arranged a backlight array fixture , using Philips Vari - Lite VL4000 and PRG Best Boy . LED tape was
+used around the main production area . They were controlled by the lighting team and could light the stage from afar . Director Hamish Hamilton and his crew
+devised their own way of capturing and transmitting the show for the live audience . Drones ( edit ) See also : Quadcopter § Art For performing on top of NRG
+Stadium , Gaga was accompanied by a fleet of 300 synchronized , LED - equipped `` Shooting Star '' quadcopter drones provided by Intel , which formed an image
+of the American flag behind the singer . It marked the first time that the drones had been used as part of a television broadcast .
+</item 10>
+=== END ITEM id=8f38f465f98e0674 ===
+
+=== ITEM id=5a67fc16eac9371d ===
+Gold sentences and facts:
+Sentence 0: Celebrity Notability ( known for ) Professional partner Status Trista Sutter Reality television star Louis Van Amstel Eliminated 1st on June 8 , 2005 Evander Holyfield Professional boxer Edyta Sliwinska Eliminated 2nd on June 15 , 2005 Rachel Hunter Supermodel & actress Jonathan Roberts Eliminated 3rd on June 22 , 2005 Joey McIntyre New Kids on the Block singer Ashly DelGrosso Third place on June 29 , 2005 John O'Hurley Actor & game show host Charlotte Jorgensen Runner - up on July 6 , 2005 Kelly Monaco Actress Alec Mazo Winner on July 6 , 2005
+  Fact 0.0: Trista Sutter is known for being a reality television star.
+  Fact 0.1: Trista Sutter's professional partner is Louis Van Amstel.
+  Fact 0.2: Trista Sutter was eliminated 1st on June 8, 2005.
+  Fact 0.3: Evander Holyfield is a professional boxer.
+  Fact 0.4: Evander Holyfield's professional partner is Edyta Sliwinska.
+  Fact 0.5: Evander Holyfield was eliminated 2nd on June 15, 2005.
+  Fact 0.6: Rachel Hunter is a supermodel and actress.
+  Fact 0.7: Rachel Hunter's professional partner is Jonathan Roberts.
+  Fact 0.8: Rachel Hunter was eliminated 3rd on June 22, 2005.
+  Fact 0.9: Joey McIntyre is a New Kids on the Block singer.
+  Fact 0.10: Joey McIntyre's professional partner is Ashly DelGrosso.
+  Fact 0.11: Joey McIntyre finished in third place on June 29, 2005.
+  Fact 0.12: John O'Hurley is an actor and game show host.
+  Fact 0.13: John O'Hurley's professional partner is Charlotte Jorgensen.
+  Fact 0.14: John O'Hurley finished as runner-up on July 6, 2005.
+  Fact 0.15: Kelly Monaco is an actress.
+  Fact 0.16: Kelly Monaco's professional partner is Alec Mazo.
+  Fact 0.17: Kelly Monaco was the winner on July 6, 2005.
+
+Retrieved items:
+<item 1>
+Dancing with the Stars (U.S. season 1)
+The season finale aired July 6 , 2005 . Contents ( hide ) 1 Couples 2 Scoring chart 2.1 Average chart 2.2 Pro 's average chart 3 Highest and lowest scoring
+performances 4 Couples ' highest and lowest scoring performances 5 Weekly scores and songs 5.1 Week 1 5.2 Week 2 5.3 Week 3 5.4 Week 4 5.5 Week 5 5.6 Week 6 :
+Finale 5.7 Dance off 6 Dance chart 7 References 8 External links Couples ( edit ) This section does not cite any sources . Please help improve this section by
+adding citations to reliable sources . Unsourced material may be challenged and removed .
+</item 1>
+
+<item 2>
+Dancing with the Stars (U.S. season 1)
+6 , 7 ) Waltz `` Three Times A Lady '' -- Lionel Richie Evander & Edyta 18 ( 5 , 7 , 6 ) Cha - cha - cha `` Respect '' -- Aretha Franklin Kelly & Alec 13 ( 5 ,
+4 , 4 ) Waltz `` I Have Nothing '' -- Whitney Houston John & Charlotte 20 ( 7 , 7 , 6 ) Cha - cha - cha `` September '' -- Earth , Wind & Fire Trista & Louis 18
+( 6 , 6 , 6 ) Waltz `` Come Away with Me '' -- Norah Jones Week 2 ( edit ) Running order Couple Score Dance Music Result Rachel & Jonathan 24 ( 8 , 8 , 8 )
+Rumba `` I Do n't Wanna Miss a Thing '' -- Aerosmith from Armageddon Bottom two Joey & Ashly 21 ( 8 , 7 , 6 ) Quickstep `` You 're The One That I Want '' --
+John Travolta and Olivia Newton - John Safe Trista & Louis 19 ( 6 , 7 ,
+</item 2>
+
+<item 3>
+Dancing with the Stars (U.S. season 1)
+Couples Highest Scoring Dances Lowest Scoring Dances Kelly & Alec Freestyle ( 30 ) Waltz ( 13 ) John & Charlotte Foxtrot , Paso doble , Quickstep & Freestyle (
+27 ) Cha - cha - cha ( 20 ) Joey & Ashly Paso doble ( 25 ) Cha - cha - cha , Samba and Foxtrot ( 20 ) Rachel & Jonathan Tango ( 26 ) Waltz ( 20 ) Evander &
+Edyta Cha - cha - cha ( 18 ) Jive ( 13 ) Trista & Louis Rumba ( 19 ) Waltz ( 18 ) Weekly scores and songs ( edit ) Unless indicated otherwise , individual
+judges scores given in the charts below ( given in parentheses ) are listed in this order from left to right : Carrie Ann Inaba , Len Goodman , Bruno Tonioli .
+Week 1 ( edit ) Running order Couple Score Dance Music Joey & Ashly 20 ( 7 , 7 , 6 ) Cha - cha - cha `` Crazy in Love '' -- Beyoncé Rachel & Jonathan 20 ( 7 , 6
+,
+</item 3>
+
+<item 4>
+Dancing with the Stars (U.S. season 1)
+Unsourced material may be challenged and removed . ( August 2015 ) ( Learn how and when to remove this template message ) The six professionals and celebrities
+that competed were : Celebrity Notability ( known for ) Professional partner Status Trista Sutter Reality television star Louis Van Amstel Eliminated 1st on
+June 8 , 2005 Evander Holyfield Professional boxer Edyta Sliwinska Eliminated 2nd on June 15 , 2005 Rachel Hunter Supermodel & actress Jonathan Roberts
+Eliminated 3rd on June 22 , 2005 Joey McIntyre New Kids on the Block singer Ashly DelGrosso Third place on June 29 , 2005 John O'Hurley Actor & game show host
+Charlotte Jorgensen Runner - up on July 6 , 2005 Kelly Monaco Actress Alec Mazo Winner on July 6 , 2005 † Kelly Monaco returned for the All - Stars season ,
+where this time she was paired with Valentin Chmerkovskiy . They finished third .
+</item 4>
+
+<item 5>
+Dancing with the Stars (U.S. season 1)
+Jump up ^ `` Dancing with the Stars : Episode 105 '' . TV.com . Retrieved 2009 - 05 - 06 . Jump up ^ `` Dancing with the Stars : Episode 106 '' . TV.com .
+Retrieved 2009 - 05 - 06 . External links ( edit ) Official website ( hide ) Dancing with the Stars ( U.S. TV series ) Seasons 5 6 7 8 9 10 11 12 13 14 15 16 17
+18 19 20 21 22 23 24 25 Participants List of competitors Winners Celebrity Kelly Monaco Drew Lachey Emmitt Smith Apolo Anton Ohno Hélio Castroneves Kristi
+Yamaguchi Brooke Burke Shawn Johnson Donny Osmond Nicole Scherzinger Jennifer Grey Hines Ward J.R.
+</item 5>
+
+<item 6>
+Dancing with the Stars (U.S. season 1)
+Dancing with the Stars ( U.S. season 1 ) - wikipedia Dancing with the Stars ( U.S. season 1 ) Jump to : navigation , search Dancing with the Stars ( season 1 )
+Country of origin United States No. of episodes 8 Release Original network ABC Original release June 1 -- July 6 , 2005 Additional information Celebrity winner
+Kelly Monaco Professional winner Alec Mazo Season chronology Next → Season 2 The first season of Dancing with the Stars ( U.S. ) debuted on ABC on June 1 , 2005
+. Six celebrities were paired with six professional ballroom dancers . Tom Bergeron and Lisa Canning were the hosts for this season . The judges were Carrie Ann
+Inaba , Len Goodman , and Bruno Tonioli . The premiere drew over 13 million viewers , the second biggest summer debut ever for an American reality series after
+Survivor . The second week climbed to 15 million viewers , and the show climbed to No. 1 in the summer 2005 TV season ratings , where it remained for the
+remainder of the season . The season finale aired July 6 , 2005 .
+</item 6>
+
+<item 7>
+Dancing with the Stars (U.S. season 1)
+They finished third . Scoring chart ( edit ) Couple Place 1 + 2 5 6 Kelly & Alec 13 17 30 21 26 22 + 25 = 47 25 + 30 = 55 John & Charlotte 20 26 46 24 21 27 +
+27 = 54 27 + 27 = 54 Joey & Ashly 20 21 41 22 20 20 + 25 = 45 Rachel & Jonathan 20 24 44 26 25 Evander & Edyta 5 18 14 32 13 Trista & Louis 6 18 19 37 indicates
+the eliminated couple that week indicates the returning couple that was last to be called safe indicates the winning couple indicates the runner - up couple
+indicates the third place couple Red numbers indicate the couples with the lowest score for each week Green numbers indicate the couples with the highest score
+for each week Average chart ( edit ) This table only counts for dances scored on a traditional 30 - point scale . Rank by average Place Couple Total Number of
+dances Average John & Charlotte 199 8 24.
+</item 7>
+
+<item 8>
+Dancing on Ice
+The contestants for the first series were : Celebrity Known for Professional partner Status Tamara Beckwith Socialite Sergey Malyshev Eliminated 1st Andi Peters
+TV presenter Tamara Sharp Eliminated 2nd Andrea McLean TV presenter Doug Webster Eliminated 3rd John Barrowman Actor & singer Olga Sharutenko Eliminated 4th
+Sean Wilson Actor Marika Humphreys Eliminated 5th Kelly Holmes Olympic middle distance runner Todd Sand Eliminated 6th David Seaman Retired footballer Pam
+O'Connor Eliminated 7th Bonnie Langford Actress Matt Evers Third place Stefan Booth Actor & singer Kristina Lenko Runner - up Gaynor Faye Actress Daniel Whiston
+Winner Series 2 ( 2007 ) Main article : Dancing on Ice ( series 2 ) The second series began on Saturday 20 January 2007 . In it , 11 celebrities competed ,
+compared to ten in the first series . The final was held on Saturday 17 March 2007 . Phillip Schofield and Holly Willoughby returned to co-present , while Nicky
+Slater , Jason Gardiner , Karen Barber and Robin Cousins returned to The Ice Panel .
+</item 8>
+
+<item 9>
+Dancing with the Stars (U.S. season 1)
+8 , 9 ) Freestyle `` I Am What I Am '' -- Gloria Gaynor Dance chart ( edit ) Highest scoring dance Lowest scoring dance Couple 5 6 Kelly and Alec Waltz Rumba
+Jive Samba Viennese Waltz Foxtrot Paso doble Samba Freestyle John and Charlotte Cha - cha - cha Quickstep Tango Samba Viennese Waltz Foxtrot Paso doble
+Quickstep Freestyle Joey and Ashly Cha - cha - cha Quickstep Jive Samba Viennese Waltz Foxtrot Paso doble Rachel and Jonathan Waltz Rumba Tango Samba Viennese
+Waltz Evander and Edyta Cha - cha - cha Quickstep Jive Trista and Louis Waltz Rumba References ( edit ) Jump up ^ Associated Press ( 2005 - 06 - 08 ) . `` '
+Dancing With the Stars ' Debuts in 2nd Place '' . FoxNews . Retrieved 2009 - 05 - 06 . Jump up ^ Maynard , John ( 2005 - 07 - 13 ) .
+</item 9>
+
+<item 10>
+Dancing with the Stars (U.S. season 1)
+Martinez Donald Driver Melissa Rycroft Kellie Pickler Amber Riley Meryl Davis Alfonso Ribeiro Rumer Willis Bindi Irwin Nyle DiMarco Laurie Hernandez Rashad
+Jennings Jordan Fisher Professional Alec Mazo Cheryl Burke Julianne Hough Mark Ballas Derek Hough Kym Johnson Karina Smirnoff Peta Murgatroyd Tony Dovolani
+Maksim Chmerkovskiy Witney Carson Valentin Chmerkovskiy Emma Slater Lindsay Arnold Spin - off Dancing with the Stars Junior Games Dancing with the Stars We
+Dance ! Retrieved from `` https://en.wikipedia.org/w/index.php?title=Dancing_with_the_Stars_(U.S._season_1)&oldid=809378398 '' Categories : Dancing with the
+Stars ( U.S. TV series ) 2005 American television seasons Hidden categories : Television season articles that use custom fields Infobox television season
+articles that use the season name parameter Articles needing additional references from August 2015 All articles needing additional references Talk Contents
+About Wikipedia Español Français Edit links This page was last edited on 8 November 2017 , at 18 : 55 .
+</item 10>
+=== END ITEM id=5a67fc16eac9371d ===
+
+=== ITEM id=2aba47f2b7df5dbf ===
+Gold sentences and facts:
+Sentence 0: Within the oral mucosa ( a mucous membrane ) lining the mouth and also on the tongue and palates and mouth floor , are the minor salivary glands ; their secretions are mainly mucous and are innervated by the facial nerve ( the seventh cranial nerve ) . The glands also secrete amylase a first stage in the breakdown of food acting on the carbohydrate in the food to transform the starch content into maltose . There are other glands on the surface of the tongue that encircle taste buds on the back part of the tongue and these also produce lingual lipase . Lipase is a digestive enzyme that catalyses the hydrolysis of lipids ( fats ) . These glands are termed Von Ebner 's glands which have also been shown to have another function in the secretion of histatins which offer an early defense ( outside of the immune system ) against microbes in food , when it makes contact with these glands on the tongue tissue . Sensory information can stimulate the secretion of saliva providing the necessary fluid for the tongue to work with and also to ease swallowing of the food .
+  Fact 0.0: The minor salivary glands are within the oral mucosa, which is a mucous membrane lining the mouth.
+  Fact 0.1: The minor salivary glands are also located on the tongue, the palates, and the mouth floor.
+  Fact 0.2: The secretions of the minor salivary glands are mainly mucous.
+  Fact 0.3: The minor salivary glands are innervated by the facial nerve.
+  Fact 0.4: The facial nerve is the seventh cranial nerve.
+  Fact 0.5: The minor salivary glands also secrete amylase.
+  Fact 0.6: Amylase is a first stage in the breakdown of food.
+  Fact 0.7: Amylase acts on the carbohydrate in food to transform the starch content into maltose.
+  Fact 0.8: Other glands on the surface of the tongue encircle taste buds on the back part of the tongue.
+  Fact 0.9: These tongue glands also produce lingual lipase.
+  Fact 0.10: Lipase is a digestive enzyme.
+  Fact 0.11: Lipase catalyses the hydrolysis of lipids (fats).
+  Fact 0.12: The tongue glands that produce lingual lipase are termed Von Ebner's glands.
+  Fact 0.13: Von Ebner's glands have also been shown to have another function in the secretion of histatins.
+  Fact 0.14: Histatins offer an early defense against microbes in food, outside of the immune system.
+  Fact 0.15: Histatins act against microbes in food when the food makes contact with the glands on the tongue tissue.
+  Fact 0.16: Sensory information can stimulate the secretion of saliva.
+  Fact 0.17: Saliva provides the necessary fluid for the tongue to work with.
+  Fact 0.18: Saliva also eases swallowing of the food.
+
+Retrieved items:
+<item 1>
+By week 10, the small-intestinal loop returns to the abdomen after rotating anticlockwise between weeks 6 and 10, then rotates another 180 degrees, helping form
+the large intestine’s twisted shape. The pyloric sphincter controls food passage into the duodenum. Most chemical digestion occurs in the small intestine, where
+pancreatic enzymes and gallbladder bile enter in response to cholecystokinin. Secretin prompts the pancreas to release bicarbonate, neutralizing stomach acid
+</item 1>
+
+<item 2>
+Sensory cues stimulate saliva secretion, which moistens and softens food, helps chewing form a smooth bolus, and lubricates swallowing into the esophagus.
+Salivary amylase begins starch digestion into simpler sugars, accounting for about 30% of initial starch breakdown. Salivary lipase starts fat digestion and is
+especially important in infants before pancreatic lipase is fully developed.
+</item 2>
+
+<item 3>
+Most digestion occurs in the small intestine. Acidic chyme enters the duodenum through the pyloric sphincter, where bile and bicarbonate-rich pancreatic and
+Brunner’s gland secretions neutralize it and create conditions for digestive enzymes. The cecum receives material from the ileum; the ileocecal valve slows its
+passage into the colon. The large intestine reabsorbs water and minerals and hosts gut-flora fermentation. Waste becomes feces, moves by peristalsis
+</item 3>
+
+<item 4>
+The small intestine, between the stomach and large intestine, is the main site of nutrient and mineral absorption. Its three regions are the duodenum, jejunum,
+and ileum. The duodenum begins digestion and receives bile and pancreatic juice through the pancreatic duct, regulated by the sphincter of Oddi. Villi increase
+absorptive surface area. The ileum contains Peyer’s patches; the duodenum has Brunner’s glands. It develops from the embryonic midg
+</item 4>
+
+<item 5>
+Humans cannot digest cellulose because its β-glucose bonds differ from starch’s α-glucose bonds; digestion requires enzymes found in herbivores or some
+large-intestine bacteria. The small intestine absorbs most nutrients into blood vessels by diffusion or active transport. Its simple columnar mucosa has
+permanent folds (plicae circulares), covered with villi, whose epithelial cells bear microvilli. Rugae, unlike plicae, are temporary folds that allow distention
+and contraction.
+</item 5>
+
+<item 6>
+Human digestive system
+This breaks down fats to some degree though is not as efficient as the pancreatic lipase . The pylorus , the lowest section of the stomach which attaches to the
+duodenum via the pyloric canal , contains countless glands which secrete digestive enzymes including gastrin . After an hour or two , a thick semi-liquid called
+chyme is produced . When the pyloric sphincter , or valve opens , chyme enters the duodenum where it mixes further with digestive enzymes from the pancreas ,
+and then passes through the small intestine , where digestion continues . When the chyme is fully digested , it is absorbed into the blood . 95 % of absorption
+of nutrients occurs in the small intestine . Water and minerals are reabsorbed back into the blood in the colon of the large intestine , where the environment
+is slightly acidic . Some vitamins , such as biotin and vitamin K produced by bacteria in the gut flora of the colon are also absorbed . The parietal cells in
+the fundus of the stomach , produce a glycoprotein called intrinsic factor which is essential for the absorption of vitamin B12 .
+</item 6>
+
+<item 7>
+Human digestive system
+The mucus component lubricates the walls of the intestine . When the digested food particles are reduced enough in size and composition , they can be absorbed
+by the intestinal wall and carried to the bloodstream . The first receptacle for this chyme is the duodenal bulb . From here it passes into the first of the
+three sections of the small intestine , the duodenum . ( The next section is the jejunum and the third is the ileum ) . The duodenum is the first and shortest
+section of the small intestine . It is a hollow , jointed C - shaped tube connecting the stomach to the jejunum . It starts at the duodenal bulb and ends at the
+suspensory muscle of duodenum . The attachment of the suspensory muscle to the diaphragm is thought to help the passage of food by making a wider angle at its
+attachment . Most food digestion takes place in the small intestine . Segmentation contractions act to mix and move the chyme more slowly in the small intestine
+allowing more time for absorption ( and these continue in the large intestine ) .
+</item 7>
+
+<item 8>
+Small intestine
+This is because the cellulose is made out of beta - glucose , making the inter-monosaccharidal bindings different from the ones present in starch , which
+consists of alpha - glucose . Humans lack the enzyme for splitting the beta - glucose - bonds , something reserved for herbivores and bacteria from the large
+intestine . Absorption ( edit ) Digested food is now able to pass into the blood vessels in the wall of the intestine through either diffusion or active
+transport . The small intestine is the site where most of the nutrients from ingested food are absorbed . The inner wall , or mucosa , of the small intestine is
+lined with simple columnar epithelial tissue . Structurally , the mucosa is covered in wrinkles or folds called plicae circulares , which are considered
+permanent features in the wall of the organ . They are distinct from rugae which are considered non-permanent or temporary allowing for distention and
+contraction . From the plicae circulares project microscopic finger - like pieces of tissue called villi ( Latin for `` shaggy hair '' ) . The individual
+epithelial cells also have finger - like projections known as microvilli .
+</item 8>
+
+<item 9>
+The stomach produces chyme, which passes through the pylorus into the duodenum for further digestion. About 95% of nutrient absorption occurs in the small
+intestine; the colon reabsorbs water and minerals and absorbs some bacteria-produced vitamins. Vitamin B12 is protected in the stomach by haptocorrin, then
+binds intrinsic factor and is absorbed in the ileum. The stomach can hold about one litre in adults. The spleen breaks down old blood cells; resulting bilirub
+</item 9>
+
+<item 10>
+Digestion begins in the mouth: teeth grind food, while the tongue and saliva form a swallowable bolus. Salivary amylase and lingual lipase start digestion;
+saliva also cleans the mouth, provides antibodies, and carries vitamin B safely through stomach acid. The epiglottis protects the airway during swallowing.
+Peristalsis moves food through the esophagus and gut; stomach gastric juice and mucus produce chyme. Most digestion occurs in the small intestine,
+</item 10>
+=== END ITEM id=2aba47f2b7df5dbf ===
+
+=== ITEM id=0bdf4bce1938611a ===
+Gold sentences and facts:
+Sentence 0: Whig ( 17 ) Tory ( 11 ) Conservative ( 17 ) Peelite ( 1 ) Liberal ( 7 ) Labour ( 6 ) National Labour ( 1 ) Portrait Name ( Birth -- Death ) Term of office Mandate Ministerial portfolios held as Prime Minister Party Ministry Monarch ( Reign ) Duration The Right Honourable Robert Walpole 1st Earl of Orford KG KB PC MP for King 's Lynn ( 1676 -- 1745 ) 4 April 1721 11 February 1742 1722 First Lord of the Treasury Chancellor of the Exchequer Leader of the House of Commons Whig Walpole -- Townshend George I ( 1714 -- 1727 ) 1727 George II ( 1727 -- 1760 ) 1734 Walpole 1741 7003761900000000000 ♠ 20 years and 314 days The Right Honourable Spencer Compton 1st Earl of Wilmington KG KB PC ( 1673 -- 1743 ) 16 February 1742 2 July 1743 -- First Lord of the Treasury Whig Carteret 7002502000000000000 ♠ 1 year and 137 days ​ The Right Honourable Henry Pelham FRS MP for Sussex ( 1694 -- 1754 ) 27 August 1743 6 March 1754 1747 First Lord of the Treasury Chancellor of the Exchequer Leader of the House of Commons Whig Broad Bottom I Broad Bottom II 7003384500000000000 ♠ 10 years and 192 days His Grace Thomas Pelham - Holles 1st Duke of Newcastle KG PC FRS ( 1693 -- 1768 ) 16 March 1754 16 November 1756 1754 First Lord of the Treasury Leader of the House of Lords Whig Newcastle I 7002977000000000000 ♠ 2 years and 246 days His Grace William Cavendish 4th Duke of Devonshire KG PC ( 1720 -- 1764 ) 16 November 1756 25 June 1757 -- First Lord of the Treasury Leader of the House of Lords Whig Pitt -- Devonshire ​ 1757 Caretaker 7002222000000000000 ♠ 222 days His Grace Thomas Pelham - Holles 1st Duke of Newcastle KG PC FRS ( 1693 -- 1768 ) 2 July 1757 26 May 1762 1761 First Lord of the Treasury Leader of the House of Lords Whig Pitt -- Newcastle George III ( 1760 -- 1820 ) 7003179000000000000 ♠ 4 years and 329 days The Right Honourable John Stuart 3rd Earl of Bute KG PC ( 1713 -- 1792 ) 26 May 1762 8 April 1763 -- First Lord of the Treasury Leader of the House of Lords Tory Bute ( Tory -- Whig ) 7002318000000000000 ♠ 318 days The Right Honourable George Grenville MP for Buckingham ( 1712 -- 1770 ) 16 April 1763 13 July 1765 -- First Lord of the Treasury Chancellor of the Exchequer Leader of the House of Commons Whig ( Grenvillite ) Grenville ( Whig -- Tory ) 7002820000000000000 ♠ 2 years and 89 days The Most Honourable Charles Watson - Wentworth 2nd Marquess of Rockingham KG PC FRS ( 1730 -- 1782 ) 13 July 1765 30 July 1766 -- First Lord of the Treasury Leader of the House of Lords Whig ( Rockinghamite ) Rockingham I 7002383000000000000 ♠ 1 year and 18 days The Right Honourable William Pitt 1st Earl of Chatham PC FRS MP for Bath ( 1708 -- 1778 ) 30 July 1766 14 October 1768 1768 Lord Keeper of the Privy Seal Whig ( Chathamite ) Chatham ( Whig -- Tory ) 7002808000000000000 ♠ 2 years and 77 days His Grace Augustus FitzRoy 3rd Duke of Grafton KG PC ( 1735 -- 1811 ) 14 October 1768 28 January 1770 -- First Lord of the Treasury Leader of the House of Lords Whig ( Chathamite ) Grafton 7002472000000000000 ♠ 1 year and 107 days The Right Honourable Frederick North Lord North KG MP for Banbury ( 1732 -- 1792 ) 28 January 1770 22 March 1782 First Lord of the Treasury Chancellor of the Exchequer Leader of the House of Commons Tory ( Northite ) North 1774 1780 7003443700000000000 ♠ 12 years and 54 days The Most Honourable Charles Watson - Wentworth 2nd Marquess of Rockingham KG PC FRS ( 1730 -- 1782 ) 27 March 1782 1 July 1782 -- First Lord of the Treasury Leader of the House of Lords Whig ( Rockinghamite ) Rockingham II 7001970000000000000 ♠ 97 days The Right Honourable William Petty 2nd Earl of Shelburne KG PC ( 1737 -- 1805 ) 4 July 1782 2 April 1783 -- First Lord of the Treasury Leader of the House of Lords Whig ( Chathamite ) Shelburne ( Whig -- Tory ) 7002273000000000000 ♠ 273 days His Grace William Cavendish - Bentinck 3rd Duke of Portland PC FRS ( 1738 -- 1809 ) 2 April 1783 19 December 1783 -- First Lord of the Treasury Leader of the House of Lords Whig Fox -- North 7002262000000000000 ♠ 262 days The Right Honourable William Pitt the Younger MP for Appleby -- Cambridge University ( 1759 -- 1806 ) 19 December 1783 14 March 1801 First Lord of the Treasury Chancellor of the Exchequer Leader of the House of Commons Tory ( Pittite ) Pitt I 1784 1790 1796 7003629500000000000 ♠ 17 years and 86 days The Right Honourable Henry Addington MP for Devizes ( 1757 -- 1844 ) 17 March 1801 10 May 1804 1801 First Lord of the Treasury Chancellor of the Exchequer Leader of the House of Commons Tory ( Pittite ) Addington 1802 7003115100000000000 ♠ 3 years and 55 days The Right Honourable William Pitt the Younger MP for Cambridge University ( 1759 -- 1806 ) 10 May 1804 23 January 1806 -- First Lord of the Treasury Chancellor of the Exchequer Leader of the House of Commons Tory ( Pittite ) Pitt II 7002624000000000000 ♠ 1 year and 259 days The Right Honourable William Grenville 1st Baron Grenville PC PC ( Ire ) ( 1759 -- 1834 ) 11 February 1806 31 March 1807 First Lord of the Treasury Leader of the House of Lords Whig All the Talents ( Whig -- Tory ) 1806 7002414000000000000 ♠ 1 year and 49 days His Grace William Cavendish - Bentinck 3rd Duke of Portland KG PC FRS ( 1738 -- 1809 ) 31 March 1807 4 October 1809 First Lord of the Treasury Tory ( Pittite ) Portland II 1807 7002919000000000000 ♠ 2 years and 188 days The Right Honourable Spencer Perceval KC MP for Northampton ( 1762 -- 1812 ) 4 October 1809 11 May 1812 -- First Lord of the Treasury Chancellor of the Exchequer Chancellor of the Duchy of Lancaster Leader of the House of Commons Tory ( Pittite ) Perceval 7002951000000000000 ♠ 2 years and 221 days The Right Honourable Robert Jenkinson 2nd Earl of Liverpool KG PC FRS ( 1770 -- 1828 ) 8 June 1812 9 April 1827 1812 First Lord of the Treasury Leader of the House of Lords Tory ( Pittite ) Liverpool 1818 1820 George IV ( 1820 -- 1830 ) 1826 7003541900000000000 ♠ 14 years and 306 days The Right Honourable George Canning FRS MP for Seaford ( 1770 -- 1827 ) 10 April 1827 8 August 1827 -- First Lord of the Treasury Chancellor of the Exchequer Leader of the House of Commons Tory ( Canningite ) Canning ( Canningite -- Whig ) 7002121000000000000 ♠ 121 days The Right Honourable Frederick John Robinson 1st Viscount Goderich PC ( 1782 -- 1859 ) 31 August 1827 21 January 1828 -- First Lord of the Treasury Leader of the House of Lords Tory ( Canningite ) Goderich 7002144000000000000 ♠ 144 days Field Marshal His Grace Arthur Wellesley 1st Duke of Wellington KG GCB GCH PC ( 1769 -- 1852 ) 22 January 1828 16 November 1830 First Lord of the Treasury Leader of the House of Lords Tory Wellington -- Peel 1830 William IV ( 1830 -- 1837 ) 7003103000000000000 ♠ 2 years and 299 days The Right Honourable Charles Grey 2nd Earl Grey KG PC ( 1764 -- 1845 ) 22 November 1830 9 July 1834 First Lord of the Treasury Leader of the House of Lords Whig Grey 1831 1832 7003132600000000000 ♠ 3 years and 230 days The Right Honourable William Lamb 2nd Viscount Melbourne PC ( 1779 -- 1848 ) 16 July 1834 14 November 1834 -- First Lord of the Treasury Leader of the House of Lords Whig Melbourne I 7002122000000000000 ♠ 122 days Field Marshal His Grace Arthur Wellesley 1st Duke of Wellington KG GCB GCH PC ( 1769 -- 1852 ) 14 November 1834 10 December 1834 -- First Lord of the Treasury Sec. of State for the Home Department Sec. of State for Foreign Affairs Sec. of State for War and the Colonies Leader of the House of Lords Tory Wellington Caretaker 7001270000000000000 ♠ 27 days The Right Honourable Sir Robert Peel Bt FRS MP for Tamworth ( 1788 -- 1850 ) 10 December 1834 8 April 1835 -- First Lord of the Treasury Chancellor of the Exchequer Leader of the House of Commons Conservative Peel I 7002120000000000000 ♠ 120 days The Right Honourable William Lamb 2nd Viscount Melbourne PC FRS ( 1779 -- 1848 ) 18 April 1835 30 August 1841 1835 First Lord of the Treasury Leader of the House of Lords Whig Melbourne II 1837 Victoria ( 1837 -- 1901 ) 7003232700000000000 ♠ 6 years and 135 days The Right Honourable Sir Robert Peel Bt FRS MP for Tamworth ( 1788 -- 1850 ) 30 August 1841 29 June 1846 1841 First Lord of the Treasury Leader of the House of Commons Conservative Peel II 7003176500000000000 ♠ 4 years and 304 days The Right Honourable Lord John Russell FRS MP for the City of London ( 1792 -- 1878 ) 30 June 1846 21 February 1852 1847 First Lord of the Treasury Leader of the House of Commons Whig Russell I 7003206300000000000 ♠ 5 years and 237 days The Right Honourable Edward Smith - Stanley 14th Earl of Derby PC ( 1799 -- 1869 ) 23 February 1852 17 December 1852 First Lord of the Treasury Leader of the House of Lords Conservative Who ? Who ? 1852 7002299000000000000 ♠ 299 days The Right Honourable George Hamilton - Gordon 4th Earl of Aberdeen KT FRSE FRS PC FSA Scot ( 1784 -- 1860 ) 19 December 1852 30 January 1855 -- First Lord of the Treasury Leader of the House of Lords Peelite Aberdeen ( Peelite -- Whig ) 7002773000000000000 ♠ 2 years and 43 days The Right Honourable Henry John Temple 3rd Viscount Palmerston KG GCB PC FRS MP for Tiverton ( 1784 -- 1865 ) 6 February 1855 19 February 1858 First Lord of the Treasury Leader of the House of Commons Whig Palmerston I 1857 7003111000000000000 ♠ 3 years and 14 days The Right Honourable Edward Smith - Stanley 14th Earl of Derby PC ( 1799 -- 1869 ) 20 February 1858 11 June 1859 -- First Lord of the Treasury Leader of the House of Lords Conservative Derby -- Disraeli II 7002477000000000000 ♠ 1 year and 112 days The Right Honourable Henry John Temple 3rd Viscount Palmerston KG GCB PC FRS MP for Tiverton ( 1784 -- 1865 ) 12 June 1859 18 October 1865 1859 First Lord of the Treasury Leader of the House of Commons Liberal Palmerston II 1865 7003232100000000000 ♠ 6 years and 129 days The Right Honourable John Russell 1st Earl Russell KG PC FRS ( 1792 -- 1878 ) 29 October 1865 26 June 1866 -- First Lord of the Treasury Leader of the House of Lords Liberal Russell II 7002241000000000000 ♠ 241 days The Right Honourable Edward Smith - Stanley 14th Earl of Derby KG PC ( 1799 -- 1869 ) 28 June 1866 25 February 1868 -- First Lord of the Treasury Leader of the House of Lords Conservative Derby -- Disraeli III 7002608000000000000 ♠ 1 year and 243 days The Right Honourable Benjamin Disraeli MP for Buckinghamshire ( 1804 -- 1881 ) See also § Premierships : 1 First Lord of the Treasury Leader of the House of Commons Conservative 27 February 1868 1 December 1868 -- 7002279000000000000 ♠ 279 days The Right Honourable William Ewart Gladstone FSS MP for Greenwich ( 1809 -- 1898 ) See also § Premierships : 2 First Lord of the Treasury Leader of the House of Commons Chancellor of the Exchequer Liberal Gladstone I 3 December 1868 17 February 1874 1868 7003190300000000000 ♠ 5 years and 77 days The Right Honourable Benjamin Disraeli 1st Earl of Beaconsfield KG PC FRS MP for Buckinghamshire ( 1804 -- 1881 ) See also § Premierships : 1 First Lord of the Treasury Leader of the House of Commons Lord Keeper of the Privy Seal Leader of the House of Lords Conservative Disraeli II 20 February 1874 21 April 1880 1874 7003225300000000000 ♠ 6 years and 62 days The Right Honourable William Ewart Gladstone FRS FSS MP for Midlothian ( 1809 -- 1898 ) See also § Premierships : 2 First Lord of the Treasury Leader of the House of Commons Chancellor of the Exchequer Liberal Gladstone II 23 April 1880 9 June 1885 1880 7003187400000000000 ♠ 5 years and 48 days The Most Honourable Robert Gascoyne - Cecil 3rd Marquess of Salisbury KG PC FRS DL ( 1830 -- 1903 ) 23 June 1885 28 January 1886 -- Sec. of State for Foreign Affairs Leader of the House of Lords Conservative Salisbury I 7002220000000000000 ♠ 220 days The Right Honourable William Ewart Gladstone FRS FSS MP for Midlothian ( 1809 -- 1898 ) See also § Premierships : 2 First Lord of the Treasury Lord Keeper of the Privy Seal Leader of the House of Commons Liberal Gladstone III 1 February 1886 20 July 1886 1885 7002170000000000000 ♠ 170 days The Most Honourable Robert Gascoyne - Cecil 3rd Marquess of Salisbury KG PC FRS DL ( 1830 -- 1903 ) 25 July 1886 11 August 1892 1886 Leader of the House of Lords First Lord of the Treasury Sec. of State for Foreign Affairs Conservative Salisbury II 7003221000000000000 ♠ 6 years and 18 days The Right Honourable William Ewart Gladstone FRS FSS MP for Midlothian ( 1809 -- 1898 ) See also § Premierships : 2 First Lord of the Treasury Lord Keeper of the Privy Seal Leader of the House of Commons Liberal Gladstone IV 15 August 1892 2 March 1894 1892 7002565000000000000 ♠ 1 year and 200 days The Right Honourable Archibald Primrose 5th Earl of Rosebery KG PC FRS ( 1847 -- 1929 ) 5 March 1894 22 June 1895 -- First Lord of the Treasury Lord President of the Council Leader of the House of Lords Liberal Rosebery 7002475000000000000 ♠ 1 year and 110 days The Most Honourable Robert Gascoyne - Cecil 3rd Marquess of Salisbury KG PC FRS DL ( 1830 -- 1903 ) 25 June 1895 11 July 1902 Leader of the House of Lords Sec. of State for Foreign Affairs Lord Keeper of the Privy Seal Conservative Salisbury III ( Con. -- Lib. U . ) 1895 1900 7003257300000000000 ♠ 7 years and 17 days Edward VII ( 1901 -- 1910 ) The Right Honourable Arthur Balfour FRS DL MP for Manchester East ( 1848 -- 1930 ) 11 July 1902 5 December 1905 -- First Lord of the Treasury Leader of the House of Commons Conservative Balfour 7003124400000000000 ♠ 3 years and 148 days The Right Honourable Sir Henry Campbell - Bannerman GCB MP for Stirling Burghs ( 1836 -- 1908 ) 5 December 1905 7 April 1908 First Lord of the Treasury Leader of the House of Commons Liberal Campbell - Bannerman 1906 7002855000000000000 ♠ 2 years and 125 days The Right Honourable Herbert Henry Asquith KC FRS MP for East Fife ( 1852 -- 1928 ) 7 April 1908 5 December 1916 First Lord of the Treasury Leader of the House of Commons Sec. of State for War Liberal Asquith I 1910 ​ 1910 George V ( 1910 -- 1936 ) ​ Asquith II ( Lib. -- Con. -- et al . ) 7003316500000000000 ♠ 8 years and 243 days The Right Honourable David Lloyd George OM MP for Caernarvon Boroughs ( 1863 -- 1945 ) 6 December 1916 19 October 1922 First Lord of the Treasury Liberal Lloyd George War 1918 Lloyd George II ( Lib. -- Con . ) 7003214400000000000 ♠ 5 years and 318 days The Right Honourable Bonar Law MP for Glasgow Central ( 1858 -- 1923 ) 23 October 1922 20 May 1923 1922 First Lord of the Treasury Leader of the House of Commons Conservative ( Scot. U . ) Law 7002210000000000000 ♠ 210 days The Right Honourable Stanley Baldwin JP MP for Bewdley ( 1867 -- 1947 ) 23 May 1923 16 January 1924 -- First Lord of the Treasury Leader of the House of Commons Chancellor of the Exchequer Conservative Baldwin I 7002239000000000000 ♠ 239 days The Right Honourable Ramsay MacDonald MP for Aberavon ( 1866 -- 1937 ) 22 January 1924 4 November 1924 1923 First Lord of the Treasury Leader of the House of Commons Sec. of State for Foreign Affairs Labour MacDonald I 7002288000000000000 ♠ 288 days The Right Honourable Stanley Baldwin JP FRS MP for Bewdley ( 1867 -- 1947 ) 4 November 1924 5 June 1929 1924 First Lord of the Treasury Leader of the House of Commons Conservative Baldwin II 7003167500000000000 ♠ 4 years and 214 days The Right Honourable Ramsay MacDonald FRS MP for Seaham ( 1866 -- 1937 ) 5 June 1929 7 June 1935 1929 First Lord of the Treasury Leader of the House of Commons Labour MacDonald II National Labour National I ( N. Lab. -- Con. -- et al . ) 1931 National II 7003219400000000000 ♠ 6 years and 3 days ​ The Right Honourable Stanley Baldwin JP FRS MP for Bewdley ( 1867 -- 1947 ) 7 June 1935 28 May 1937 1935 First Lord of the Treasury Leader of the House of Commons Conservative National III ( Con. -- N. Lab. -- et al . ) Edward VIII ( 1936 ) George VI ( 1936 -- 1952 ) 7002722000000000000 ♠ 1 year and 356 days The Right Honourable Neville Chamberlain FRS MP for Birmingham Edgbaston ( 1869 -- 1940 ) 28 May 1937 10 May 1940 -- First Lord of the Treasury Leader of the House of Commons Conservative National IV ​ Chamberlain War 7003107900000000000 ♠ 2 years and 349 days The Right Honourable Winston Churchill CH TD PCc FRS MP for Epping ( 1874 -- 1965 ) 10 May 1940 26 July 1945 -- First Lord of the Treasury Minister of Defence Leader of the House of Commons Conservative Churchill War ( All parties ) ​ Churchill Caretaker ( Con. -- Lib. N . ) 7003190400000000000 ♠ 5 years and 78 days The Right Honourable Clement Attlee CH FRS MP for Limehouse -- Walthamstow West ( 1883 -- 1967 ) 26 July 1945 26 October 1951 1945 First Lord of the Treasury Minister of Defence Labour Attlee I 1950 Attlee II 7003228400000000000 ♠ 6 years and 93 days The Right Honourable Sir Winston Churchill KG OM CH TD PCc DL FRS RA MP for Woodford ( 1874 -- 1965 ) 26 October 1951 6 April 1955 1951 First Lord of the Treasury Minister of Defence Conservative Churchill III 7003125900000000000 ♠ 3 years and 163 days Elizabeth II ( 1952 -- present ) The Right Honourable Sir Anthony Eden KG MC MP for Warwick & Leamington ( 1897 -- 1977 ) 6 April 1955 10 January 1957 1955 First Lord of the Treasury Conservative Eden 7002646000000000000 ♠ 1 year and 280 days The Right Honourable Harold Macmillan FRS MP for Bromley ( 1894 -- 1986 ) 10 January 1957 19 October 1963 1959 First Lord of the Treasury Conservative Macmillan I ​ Macmillan II 7003247400000000000 ♠ 6 years and 283 days The Right Honourable Sir Alec Douglas - Home KT MP for Kinross & Western Perthshire ( 1903 -- 1995 ) 19 October 1963 16 October 1964 -- First Lord of the Treasury Conservative ( Scot. U . ) Douglas - Home 7002364000000000000 ♠ 364 days The Right Honourable Harold Wilson OBE FRS MP for Huyton ( 1916 -- 1995 ) 16 October 1964 19 June 1970 1964 First Lord of the Treasury Minister for the Civil Service Labour Wilson I 1966 Wilson II 7003207300000000000 ♠ 5 years and 247 days The Right Honourable Edward Heath MBE MP for Bexley -- Sidcup ( 1916 -- 2005 ) 19 June 1970 4 March 1970 First Lord of the Treasury Minister for the Civil Service Conservative Heath 7003135500000000000 ♠ 3 years and 259 days The Right Honourable Harold Wilson OBE FRS MP for Huyton ( 1916 -- 1995 ) 4 March 5 April 1976 First Lord of the Treasury Minister for the Civil Service Labour Wilson III Wilson IV 7002764000000000000 ♠ 2 years and 33 days The Right Honourable James Callaghan MP for Cardiff South East ( 1912 -- 2005 ) 5 April 1976 4 May 1979 -- First Lord of the Treasury Minister for the Civil Service Labour Callaghan 7003112500000000000 ♠ 3 years and 30 days The Right Honourable Margaret Thatcher FRS FRIC MP for Finchley ( 1925 -- 2013 ) See also § Premierships :3 First Lord of the Treasury Minister for the Civil Service Conservative Thatcher I 4 May 1979 28 November 1990 1979 Thatcher II Thatcher III 7003422700000000000 ♠ 11 years and 209 days The Right Honourable John Major MP for Huntingdon ( born 1943 ) 28 November 1990 2 May 1997 First Lord of the Treasury Minister for the Civil Service Conservative Major I ​ Major II 7003234800000000000 ♠ 6 years and 156 days The Right Honourable Tony Blair MP for Sedgefield ( born 1953 ) See also § Premierships : 4 First Lord of the Treasury Minister for the Civil Service Labour Blair I 2 May 1997 27 June 2007 1997 Blair II 2005 Blair III 7003370900000000000 ♠ 10 years and 57 days The Right Honourable Gordon Brown MP for Kirkcaldy & Cowdenbeath ( born 1951 ) See also § Premierships : 5 First Lord of the Treasury Minister for the Civil Service Labour Brown 27 June 2007 11 May -- 7003105000000000000 ♠ 2 years and 319 days The Right Honourable David Cameron MP for Witney ( born 1966 ) See also § Premierships : 6 First Lord of the Treasury Minister for the Civil Service Conservative Cameron -- Clegg ( Con. -- L.D. ) 11 May 13 July 2016 2015 Cameron II 7003225600000000000 ♠ 6 years and 64 days The Right Honourable Theresa May MP for Maidenhead ( born 1956 ) See also § Premierships : 7 First Lord of the Treasury Minister for the Civil Service Conservative May I 13 July 2016 Incumbent 2017 May II 7002558000000000000 ♠ 1 year and 193 days
+  Fact 0.0: Robert Walpole, 1st Earl of Orford, was MP for King's Lynn and lived from 1676 to 1745.
+  Fact 0.1: Robert Walpole was Prime Minister from 4 April 1721 to 11 February 1742, for 20 years and 314 days.
+  Fact 0.2: Robert Walpole was a Whig.
+  Fact 0.3: Spencer Compton, 1st Earl of Wilmington, lived from 1673 to 1743.
+  Fact 0.4: Spencer Compton was Prime Minister from 16 February 1742 to 2 July 1743, for 1 year and 137 days.
+  Fact 0.5: Spencer Compton was a Whig.
+  Fact 0.6: Henry Pelham was MP for Sussex and lived from 1694 to 1754.
+  Fact 0.7: Henry Pelham was Prime Minister from 27 August 1743 to 6 March 1754, for 10 years and 192 days.
+  Fact 0.8: Henry Pelham was a Whig.
+  Fact 0.9: Thomas Pelham-Holles, 1st Duke of Newcastle, lived from 1693 to 1768.
+  Fact 0.10: Thomas Pelham-Holles was Prime Minister from 16 March 1754 to 16 November 1756, for 2 years and 246 days.
+  Fact 0.11: Thomas Pelham-Holles was a Whig.
+  Fact 0.12: William Cavendish, 4th Duke of Devonshire, lived from 1720 to 1764.
+  Fact 0.13: William Cavendish was Prime Minister from 16 November 1756 to 25 June 1757, for 222 days.
+  Fact 0.14: William Cavendish's ministry was a caretaker ministry in 1757.
+  Fact 0.15: William Cavendish was a Whig.
+  Fact 0.16: Thomas Pelham-Holles was Prime Minister again from 2 July 1757 to 26 May 1762, for 4 years and 329 days.
+  Fact 0.17: Thomas Pelham-Holles was a Whig in his second term.
+  Fact 0.18: John Stuart, 3rd Earl of Bute, lived from 1713 to 1792.
+  Fact 0.19: John Stuart was Prime Minister from 26 May 1762 to 8 April 1763, for 318 days.
+  Fact 0.20: John Stuart was a Tory.
+  Fact 0.21: George Grenville was MP for Buckingham and lived from 1712 to 1770.
+  Fact 0.22: George Grenville was Prime Minister from 16 April 1763 to 13 July 1765, for 2 years and 89 days.
+  Fact 0.23: George Grenville was a Whig, in the Grenvillite faction.
+  Fact 0.24: Charles Watson-Wentworth, 2nd Marquess of Rockingham, lived from 1730 to 1782.
+  Fact 0.25: Charles Watson-Wentworth was Prime Minister from 13 July 1765 to 30 July 1766, for 1 year and 18 days.
+  Fact 0.26: Charles Watson-Wentworth was a Whig, in the Rockinghamite faction.
+  Fact 0.27: William Pitt, 1st Earl of Chatham, was MP for Bath and lived from 1708 to 1778.
+  Fact 0.28: William Pitt, 1st Earl of Chatham, was Prime Minister from 30 July 1766 to 14 October 1768, for 2 years and 77 days.
+  Fact 0.29: William Pitt, 1st Earl of Chatham, was a Whig, in the Chathamite faction.
+  Fact 0.30: Augustus FitzRoy, 3rd Duke of Grafton, lived from 1735 to 1811.
+  Fact 0.31: Augustus FitzRoy was Prime Minister from 14 October 1768 to 28 January 1770, for 1 year and 107 days.
+  Fact 0.32: Augustus FitzRoy was a Whig, in the Chathamite faction.
+  Fact 0.33: Frederick North, Lord North, was MP for Banbury and lived from 1732 to 1792.
+  Fact 0.34: Frederick North was Prime Minister from 28 January 1770 to 22 March 1782, for 12 years and 54 days.
+  Fact 0.35: Frederick North was a Tory, in the Northite faction.
+  Fact 0.36: Charles Watson-Wentworth was Prime Minister again from 27 March 1782 to 1 July 1782, for 97 days.
+  Fact 0.37: Charles Watson-Wentworth was a Whig in his second term, in the Rockinghamite faction.
+  Fact 0.38: William Petty, 2nd Earl of Shelburne, lived from 1737 to 1805.
+  Fact 0.39: William Petty was Prime Minister from 4 July 1782 to 2 April 1783, for 273 days.
+  Fact 0.40: William Petty was a Whig, in the Chathamite faction.
+  Fact 0.41: William Cavendish-Bentinck, 3rd Duke of Portland, lived from 1738 to 1809.
+  Fact 0.42: William Cavendish-Bentinck was Prime Minister from 2 April 1783 to 19 December 1783, for 262 days.
+  Fact 0.43: William Cavendish-Bentinck was a Whig.
+  Fact 0.44: William Pitt the Younger was MP for Appleby and Cambridge University, and lived from 1759 to 1806.
+  Fact 0.45: William Pitt the Younger was Prime Minister from 19 December 1783 to 14 March 1801, for 17 years and 86 days.
+  Fact 0.46: William Pitt the Younger was a Tory, in the Pittite faction.
+  Fact 0.47: Henry Addington was MP for Devizes and lived from 1757 to 1844.
+  Fact 0.48: Henry Addington was Prime Minister from 17 March 1801 to 10 May 1804, for 3 years and 55 days.
+  Fact 0.49: Henry Addington was a Tory, in the Pittite faction.
+  Fact 0.50: William Pitt the Younger was Prime Minister again from 10 May 1804 to 23 January 1806, for 1 year and 259 days.
+  Fact 0.51: William Pitt the Younger was a Tory, in the Pittite faction, in his second term.
+  Fact 0.52: William Grenville, 1st Baron Grenville, lived from 1759 to 1834.
+  Fact 0.53: William Grenville was Prime Minister from 11 February 1806 to 31 March 1807, for 1 year and 49 days.
+  Fact 0.54: William Grenville was a Whig, in the All the Talents ministry.
+  Fact 0.55: William Cavendish-Bentinck was Prime Minister again from 31 March 1807 to 4 October 1809, for 2 years and 188 days.
+  Fact 0.56: William Cavendish-Bentinck was a Tory, in the Pittite faction, in his second term.
+  Fact 0.57: Spencer Perceval was MP for Northampton and lived from 1762 to 1812.
+  Fact 0.58: Spencer Perceval was Prime Minister from 4 October 1809 to 11 May 1812, for 2 years and 221 days.
+  Fact 0.59: Spencer Perceval was a Tory, in the Pittite faction.
+  Fact 0.60: Robert Jenkinson, 2nd Earl of Liverpool, lived from 1770 to 1828.
+  Fact 0.61: Robert Jenkinson was Prime Minister from 8 June 1812 to 9 April 1827, for 14 years and 306 days.
+  Fact 0.62: Robert Jenkinson was a Tory, in the Pittite faction.
+  Fact 0.63: George Canning was MP for Seaford and lived from 1770 to 1827.
+  Fact 0.64: George Canning was Prime Minister from 10 April 1827 to 8 August 1827, for 121 days.
+  Fact 0.65: George Canning was a Tory, in the Canningite faction.
+  Fact 0.66: Frederick John Robinson, 1st Viscount Goderich, lived from 1782 to 1859.
+  Fact 0.67: Frederick John Robinson was Prime Minister from 31 August 1827 to 21 January 1828, for 144 days.
+  Fact 0.68: Frederick John Robinson was a Tory, in the Canningite faction.
+  Fact 0.69: Arthur Wellesley, 1st Duke of Wellington, lived from 1769 to 1852.
+  Fact 0.70: Arthur Wellesley was Prime Minister from 22 January 1828 to 16 November 1830, for 2 years and 299 days.
+  Fact 0.71: Arthur Wellesley was a Tory.
+  Fact 0.72: Charles Grey, 2nd Earl Grey, lived from 1764 to 1845.
+  Fact 0.73: Charles Grey was Prime Minister from 22 November 1830 to 9 July 1834, for 3 years and 230 days.
+  Fact 0.74: Charles Grey was a Whig.
+  Fact 0.75: William Lamb, 2nd Viscount Melbourne, lived from 1779 to 1848.
+  Fact 0.76: William Lamb was Prime Minister from 16 July 1834 to 14 November 1834, for 122 days.
+  Fact 0.77: William Lamb was a Whig.
+  Fact 0.78: Arthur Wellesley was Prime Minister again from 14 November 1834 to 10 December 1834, for 27 days.
+  Fact 0.79: Arthur Wellesley's second term was a caretaker ministry, and he was a Tory.
+  Fact 0.80: Robert Peel was MP for Tamworth and lived from 1788 to 1850.
+  Fact 0.81: Robert Peel was Prime Minister from 10 December 1834 to 8 April 1835, for 120 days.
+  Fact 0.82: Robert Peel was a Conservative.
+  Fact 0.83: William Lamb was Prime Minister again from 18 April 1835 to 30 August 1841, for 6 years and 135 days.
+  Fact 0.84: William Lamb was a Whig in his second term.
+  Fact 0.85: Robert Peel was Prime Minister again from 30 August 1841 to 29 June 1846, for 4 years and 304 days.
+  Fact 0.86: Robert Peel was a Conservative in his second term.
+  Fact 0.87: Lord John Russell was MP for the City of London and lived from 1792 to 1878.
+  Fact 0.88: Lord John Russell was Prime Minister from 30 June 1846 to 21 February 1852, for 5 years and 237 days.
+  Fact 0.89: Lord John Russell was a Whig.
+  Fact 0.90: Edward Smith-Stanley, 14th Earl of Derby, lived from 1799 to 1869.
+  Fact 0.91: Edward Smith-Stanley was Prime Minister from 23 February 1852 to 17 December 1852, for 299 days.
+  Fact 0.92: Edward Smith-Stanley was a Conservative.
+  Fact 0.93: George Hamilton-Gordon, 4th Earl of Aberdeen, lived from 1784 to 1860.
+  Fact 0.94: George Hamilton-Gordon was Prime Minister from 19 December 1852 to 30 January 1855, for 2 years and 43 days.
+  Fact 0.95: George Hamilton-Gordon was a Peelite.
+  Fact 0.96: Henry John Temple, 3rd Viscount Palmerston, was MP for Tiverton and lived from 1784 to 1865.
+  Fact 0.97: Henry John Temple was Prime Minister from 6 February 1855 to 19 February 1858, for 3 years and 14 days.
+  Fact 0.98: Henry John Temple was a Whig.
+  Fact 0.99: Edward Smith-Stanley was Prime Minister again from 20 February 1858 to 11 June 1859, for 1 year and 112 days.
+  Fact 0.100: Edward Smith-Stanley was a Conservative in his second term.
+  Fact 0.101: Henry John Temple was Prime Minister again from 12 June 1859 to 18 October 1865, for 6 years and 129 days.
+  Fact 0.102: Henry John Temple was a Liberal in his second term.
+  Fact 0.103: John Russell, 1st Earl Russell, lived from 1792 to 1878.
+  Fact 0.104: John Russell, 1st Earl Russell, was Prime Minister from 29 October 1865 to 26 June 1866, for 241 days.
+  Fact 0.105: John Russell, 1st Earl Russell, was a Liberal.
+  Fact 0.106: Edward Smith-Stanley was Prime Minister again from 28 June 1866 to 25 February 1868, for 1 year and 243 days.
+  Fact 0.107: Edward Smith-Stanley was a Conservative in his third term.
+  Fact 0.108: Benjamin Disraeli was MP for Buckinghamshire and lived from 1804 to 1881.
+  Fact 0.109: Benjamin Disraeli was Prime Minister from 27 February 1868 to 1 December 1868, for 279 days.
+  Fact 0.110: Benjamin Disraeli was a Conservative.
+  Fact 0.111: William Ewart Gladstone was MP for Greenwich and lived from 1809 to 1898.
+  Fact 0.112: William Ewart Gladstone was Prime Minister from 3 December 1868 to 17 February 1874, for 5 years and 77 days.
+  Fact 0.113: William Ewart Gladstone was a Liberal.
+  Fact 0.114: Benjamin Disraeli, 1st Earl of Beaconsfield, was Prime Minister again from 20 February 1874 to 21 April 1880, for 6 years and 62 days.
+  Fact 0.115: Benjamin Disraeli was a Conservative in his second term.
+  Fact 0.116: William Ewart Gladstone was MP for Midlothian and was Prime Minister again from 23 April 1880 to 9 June 1885, for 5 years and 48 days.
+  Fact 0.117: William Ewart Gladstone was a Liberal in his second term.
+  Fact 0.118: Robert Gascoyne-Cecil, 3rd Marquess of Salisbury, lived from 1830 to 1903.
+  Fact 0.119: Robert Gascoyne-Cecil was Prime Minister from 23 June 1885 to 28 January 1886, for 220 days.
+  Fact 0.120: Robert Gascoyne-Cecil was a Conservative.
+  Fact 0.121: William Ewart Gladstone was Prime Minister again from 1 February 1886 to 20 July 1886, for 170 days.
+  Fact 0.122: William Ewart Gladstone was a Liberal in his third term.
+  Fact 0.123: Robert Gascoyne-Cecil was Prime Minister again from 25 July 1886 to 11 August 1892, for 6 years and 18 days.
+  Fact 0.124: Robert Gascoyne-Cecil was a Conservative in his second term.
+  Fact 0.125: William Ewart Gladstone was Prime Minister again from 15 August 1892 to 2 March 1894, for 1 year and 200 days.
+  Fact 0.126: William Ewart Gladstone was a Liberal in his fourth term.
+  Fact 0.127: Archibald Primrose, 5th Earl of Rosebery, lived from 1847 to 1929.
+  Fact 0.128: Archibald Primrose was Prime Minister from 5 March 1894 to 22 June 1895, for 1 year and 110 days.
+  Fact 0.129: Archibald Primrose was a Liberal.
+  Fact 0.130: Robert Gascoyne-Cecil was Prime Minister again from 25 June 1895 to 11 July 1902, for 7 years and 17 days.
+  Fact 0.131: Robert Gascoyne-Cecil's third term was labelled Con. and Lib. U. in the table.
+  Fact 0.132: Arthur Balfour was MP for Manchester East and lived from 1848 to 1930.
+  Fact 0.133: Arthur Balfour was Prime Minister from 11 July 1902 to 5 December 1905, for 3 years and 148 days.
+  Fact 0.134: Arthur Balfour was a Conservative.
+  Fact 0.135: Henry Campbell-Bannerman was MP for Stirling Burghs and lived from 1836 to 1908.
+  Fact 0.136: Henry Campbell-Bannerman was Prime Minister from 5 December 1905 to 7 April 1908, for 2 years and 125 days.
+  Fact 0.137: Henry Campbell-Bannerman was a Liberal.
+  Fact 0.138: Herbert Henry Asquith was MP for East Fife and lived from 1852 to 1928.
+  Fact 0.139: Herbert Henry Asquith was Prime Minister from 7 April 1908 to 5 December 1916, for 8 years and 243 days.
+  Fact 0.140: Herbert Henry Asquith was a Liberal.
+  Fact 0.141: David Lloyd George was MP for Caernarvon Boroughs and lived from 1863 to 1945.
+  Fact 0.142: David Lloyd George was Prime Minister from 6 December 1916 to 19 October 1922, for 5 years and 318 days.
+  Fact 0.143: David Lloyd George was a Liberal.
+  Fact 0.144: Bonar Law was MP for Glasgow Central and lived from 1858 to 1923.
+  Fact 0.145: Bonar Law was Prime Minister from 23 October 1922 to 20 May 1923, for 210 days.
+  Fact 0.146: Bonar Law was a Conservative.
+  Fact 0.147: Stanley Baldwin was MP for Bewdley and lived from 1867 to 1947.
+  Fact 0.148: Stanley Baldwin was Prime Minister from 23 May 1923 to 16 January 1924, for 239 days.
+  Fact 0.149: Stanley Baldwin was a Conservative.
+  Fact 0.150: Ramsay MacDonald was MP for Aberavon and lived from 1866 to 1937.
+  Fact 0.151: Ramsay MacDonald was Prime Minister from 22 January 1924 to 4 November 1924, for 288 days.
+  Fact 0.152: Ramsay MacDonald was a Labour politician.
+  Fact 0.153: Stanley Baldwin was Prime Minister again from 4 November 1924 to 5 June 1929, for 4 years and 214 days.
+  Fact 0.154: Stanley Baldwin was a Conservative in his second term.
+  Fact 0.155: Ramsay MacDonald was MP for Seaham and was Prime Minister again from 5 June 1929 to 7 June 1935, for 6 years and 3 days.
+  Fact 0.156: Ramsay MacDonald was a Labour politician in his second term.
+  Fact 0.157: Stanley Baldwin was Prime Minister again from 7 June 1935 to 28 May 1937, for 1 year and 356 days.
+  Fact 0.158: Stanley Baldwin was a Conservative in his third term.
+  Fact 0.159: Neville Chamberlain was MP for Birmingham Edgbaston and lived from 1869 to 1940.
+  Fact 0.160: Neville Chamberlain was Prime Minister from 28 May 1937 to 10 May 1940, for 2 years and 349 days.
+  Fact 0.161: Neville Chamberlain was a Conservative.
+  Fact 0.162: Winston Churchill was MP for Epping and lived from 1874 to 1965.
+  Fact 0.163: Winston Churchill was Prime Minister from 10 May 1940 to 26 July 1945, for 5 years and 78 days.
+  Fact 0.164: Winston Churchill was a Conservative.
+  Fact 0.165: Clement Attlee was MP for Limehouse and Walthamstow West and lived from 1883 to 1967.
+  Fact 0.166: Clement Attlee was Prime Minister from 26 July 1945 to 26 October 1951, for 6 years and 93 days.
+  Fact 0.167: Clement Attlee was a Labour politician.
+  Fact 0.168: Winston Churchill was MP for Woodford and was Prime Minister again from 26 October 1951 to 6 April 1955, for 3 years and 163 days.
+  Fact 0.169: Winston Churchill was a Conservative in his second term.
+  Fact 0.170: Anthony Eden was MP for Warwick and Leamington and lived from 1897 to 1977.
+  Fact 0.171: Anthony Eden was Prime Minister from 6 April 1955 to 10 January 1957, for 1 year and 280 days.
+  Fact 0.172: Anthony Eden was a Conservative.
+  Fact 0.173: Harold Macmillan was MP for Bromley and lived from 1894 to 1986.
+  Fact 0.174: Harold Macmillan was Prime Minister from 10 January 1957 to 19 October 1963, for 6 years and 283 days.
+  Fact 0.175: Harold Macmillan was a Conservative.
+  Fact 0.176: Alec Douglas-Home was MP for Kinross and Western Perthshire and lived from 1903 to 1995.
+  Fact 0.177: Alec Douglas-Home was Prime Minister from 19 October 1963 to 16 October 1964, for 364 days.
+  Fact 0.178: Alec Douglas-Home was a Conservative, in the Scottish Unionist faction.
+  Fact 0.179: Harold Wilson was MP for Huyton and lived from 1916 to 1995.
+  Fact 0.180: Harold Wilson was Prime Minister from 16 October 1964 to 19 June 1970, for 5 years and 247 days.
+  Fact 0.181: Harold Wilson was a Labour politician.
+  Fact 0.182: Edward Heath was MP for Bexley and Sidcup and lived from 1916 to 2005.
+  Fact 0.183: Edward Heath was Prime Minister from 19 June 1970 to 4 March 1970, as the table lists it, for 3 years and 259 days.
+  Fact 0.184: Edward Heath was a Conservative.
+  Fact 0.185: Harold Wilson was Prime Minister again from 4 March to 5 April 1976, for 2 years and 33 days.
+  Fact 0.186: Harold Wilson was a Labour politician in his second term.
+  Fact 0.187: James Callaghan was MP for Cardiff South East and lived from 1912 to 2005.
+  Fact 0.188: James Callaghan was Prime Minister from 5 April 1976 to 4 May 1979, for 3 years and 30 days.
+  Fact 0.189: James Callaghan was a Labour politician.
+  Fact 0.190: Margaret Thatcher was MP for Finchley and lived from 1925 to 2013.
+  Fact 0.191: Margaret Thatcher was Prime Minister from 4 May 1979 to 28 November 1990, for 11 years and 209 days.
+  Fact 0.192: Margaret Thatcher was a Conservative.
+  Fact 0.193: John Major was MP for Huntingdon and was born in 1943.
+  Fact 0.194: John Major was Prime Minister from 28 November 1990 to 2 May 1997, for 6 years and 156 days.
+  Fact 0.195: John Major was a Conservative.
+  Fact 0.196: Tony Blair was MP for Sedgefield and was born in 1953.
+  Fact 0.197: Tony Blair was Prime Minister from 2 May 1997 to 27 June 2007, for 10 years and 57 days.
+  Fact 0.198: Tony Blair was a Labour politician.
+  Fact 0.199: Gordon Brown was MP for Kirkcaldy and Cowdenbeath and was born in 1951.
+  Fact 0.200: Gordon Brown was Prime Minister from 27 June 2007 to 11 May (the year is not shown in the table), for 2 years and 319 days.
+  Fact 0.201: Gordon Brown was a Labour politician.
+  Fact 0.202: David Cameron was MP for Witney and was born in 1966.
+  Fact 0.203: David Cameron was Prime Minister from 11 May (the year is not shown in the table) to 13 July 2016, for 6 years and 64 days.
+  Fact 0.204: David Cameron was a Conservative, in a coalition with the Liberal Democrats.
+  Fact 0.205: Theresa May was MP for Maidenhead and was born in 1956.
+  Fact 0.206: Theresa May has been Prime Minister since 13 July 2016.
+  Fact 0.207: Theresa May's term was 1 year and 193 days as of the table.
+  Fact 0.208: Theresa May was a Conservative.
+  Fact 0.209: The monarch Elizabeth II reigned from 1952 to the present.
+  Fact 0.210: The monarch George I reigned from 1714 to 1727.
+  Fact 0.211: The monarch George II reigned from 1727 to 1760.
+  Fact 0.212: The monarch George III reigned from 1760 to 1820.
+  Fact 0.213: The monarch George IV reigned from 1820 to 1830.
+  Fact 0.214: The monarch William IV reigned from 1830 to 1837.
+  Fact 0.215: The monarch Victoria reigned from 1837 to 1901.
+  Fact 0.216: The monarch Edward VII reigned from 1901 to 1910.
+  Fact 0.217: The monarch George V reigned from 1910 to 1936.
+  Fact 0.218: The monarch Edward VIII reigned in 1936.
+  Fact 0.219: The monarch George VI reigned from 1936 to 1952.
+
+Retrieved items:
+<item 1>
+List of Prime Ministers of the United Kingdom
+List of Prime Ministers of the United Kingdom - wikipedia List of Prime Ministers of the United Kingdom Jump to : navigation , search Top left : Walpole became
+the first Prime Minister of the Kingdom of Great Britain in 1721 . Top right : Pitt the Younger became the first Prime Minister of the United Kingdom of Great
+Britain and Ireland in 1801 . Bottom left : Lloyd George was the last Prime Minister of the United Kingdom of Great Britain and Ireland as a result of the Anglo
+- Irish Treaty in 1922 . Bottom right : Baldwin was Prime Minister when the country was renamed the United Kingdom of Great Britain and Northern Ireland in 1927
+. The Prime Minister of the United Kingdom is the head of the Government of the United Kingdom , and chairs Cabinet meetings . There is no specific date when
+the office of Prime Minister first appeared , as the role was not created but rather evolved over a period of time . The term was used in the House of Commons
+in 1805 and it was certainly in parliamentary use by the 1880s , and in 1905 the post of Prime Minister was officially given recognition in the order of
+precedence .
+</item 1>
+
+<item 2>
+List of Prime Ministers of the United Kingdom
+University of California Press ( published February 2000 ) . ISBN 978 - 0 - 520 - 22460 - 5 . Eccleshall , Robert ; Walker , Graham , eds. ( 1 June 2002 ) .
+Biographical Dictionary of British Prime Ministers . Routledge . ISBN 978 - 1 - 134 - 66230 - 2 . Hennessy , Peter ( 5 October 2001 ) . `` The Platonic Idea and
+the Constitutional Deal '' . The Prime Minister : The Office and Its Holders Since 1945 . Palgrave Macmillan . ISBN 978 - 0 - 312 - 29313 - 0 . Leonard , Dick (
+15 December 2010 ) . Eighteenth - Century British Premiers : Walpole to the Younger Pitt . Palgrave Macmillan UK . ISBN 978 - 0 - 230 - 30463 - 5 . Marriott ,
+John ( 1923 ) . English Political Institutions : An Introductory Study ( 2nd ed . ) .
+</item 2>
+
+<item 3>
+List of Prime Ministers of the United Kingdom
+Jump up ^ Eccleshall & Walker ( 2002 ) , p. 244 . Jump up ^ Eccleshall & Walker ( 2002 ) , p. 252 . Jump up ^ Eccleshall & Walker ( 2002 ) , p. 262 . ^ Jump up
+to : Eccleshall & Walker ( 2002 ) , p. 273 . ^ Jump up to : Eccleshall & Walker ( 2002 ) , p. 281 . Jump up ^ Eccleshall & Walker ( 2002 ) , p. 289 . ^ Jump up
+to : Eccleshall & Walker ( 2002 ) , p. 295 . Jump up ^ Eccleshall & Walker ( 2002 ) , p. 305 . Jump up ^ Eccleshall & Walker ( 2002 ) , p. 315 . Jump up ^
+Eccleshall & Walker ( 2002 ) , p. 320 . Jump up ^ Eccleshall & Walker ( 2002 ) , p. 329 . ^ Jump up to : Eccleshall & Walker ( 2002 ) , p.
+</item 3>
+
+<item 4>
+List of Prime Ministers of the United Kingdom
+British Prime Ministers . Amberley Publishing Limited . ISBN 978 - 1 - 4456 - 1242 - 3 . Quinault , Roland ( 17 March 2011 ) . British Prime Ministers and
+Democracy : From Disraeli to Blair . Bloomsbury Publishing . ISBN 978 - 1 - 4411 - 1105 - 0 . External links ( edit ) `` Past Prime Ministers '' . gov.uk .
+Government of the United Kingdom . Archived from the original on 25 August 2008 . `` Prime Ministers and Politics Timeline '' . BBC History . Archived from the
+original on 27 May 2011 . ( hide ) Lists relating to Prime Ministers of the United Kingdom List of Prime Ministers of the United Kingdom Lists by order Age
+Constituencies Cultural depictions Governments Historical rankings Number living Records Service ( timeline ) Term length Peerages By monarch Victoria Edward
+VII George V Edward VIII George VI Elizabeth II Personal life Burial places Coats of arms Education Nickname Spouse In fiction Fictional Prime Ministers
+Biography portal British politics portal Politics portal Lists portal Retrieved from `` https://en.wikipedia.
+</item 4>
+
+<item 5>
+List of Prime Ministers of the United Kingdom
+77 . ^ Jump up to : Eccleshall & Walker ( 2002 ) , p. 85 . Jump up ^ Eccleshall & Walker ( 2002 ) , p. 94 . Jump up ^ Eccleshall & Walker ( 2002 ) , p. 98 .
+Jump up ^ Eccleshall & Walker ( 2002 ) , p. 101 . Jump up ^ Eccleshall & Walker ( 2002 ) , p. 106 . Jump up ^ Eccleshall & Walker ( 2002 ) , p. 116 . Jump up ^
+Eccleshall & Walker ( 2002 ) , p. 120 . ^ Jump up to : Eccleshall & Walker ( 2002 ) , p. 123 . Jump up ^ Eccleshall & Walker ( 2002 ) , p. 128 . ^ Jump up to :
+Eccleshall & Walker ( 2002 ) , p. 136 . ^ Jump up to : Eccleshall & Walker ( 2002 ) , p. 142 .
+</item 5>
+
+<item 6>
+List of Prime Ministers of the United Kingdom
+^ 7 Majority Conservative government before dissolution . See also ( edit ) United Kingdom This article is part of a series on the politics and government of
+the United Kingdom Constitution ( show ) Constitution Cabinet Manual Erskine May Taxation The Crown ( show ) British Monarchy Monarch Queen Elizabeth II Heir
+apparent The Prince of Wales Royal family Succession to the British throne Royal prerogative Executive ( show ) HM Government Prime Minister Theresa May Cabinet
+Current ministry Her Majesty 's Civil Service Departments Executive agencies Public bodies Privy Council Crown - in - Council Queen Elizabeth II Legislature (
+show ) Parliament ( 56th Parliament ) Crown - in - Parliament Queen Elizabeth II House of Lords Lord Speaker The Lord Fowler House of Commons Speaker John
+Bercow Leader of the Opposition Jeremy Corbyn Her Majesty 's Loyal Opposition Shadow Cabinet State Opening of Parliament Prime Minister 's Questions Act of
+Parliament Statutory Instruments Judiciary ( show ) Supreme Court President The Baroness Hale of Richmond Deputy President The Lord Mance Judges of the Supreme
+Court Courts of the United Kingdom Courts of England and Wales Courts of Scotland Courts of Northern Ireland Devolution ( show ) Joint Ministerial Committee
+Scotland Government Parliament Wales Government National Assembly Reserved matters Northern Ireland Executive Assembly Administrative geography ( show )
+</item 6>
+
+<item 7>
+List of Prime Ministers of the United Kingdom
+14 . Jump up ^ Eccleshall & Walker ( 2002 ) , p. 17 . ^ Jump up to : Eccleshall & Walker ( 2002 ) , p. 28 . Jump up ^ Eccleshall & Walker ( 2002 ) , p. 34 .
+Jump up ^ Eccleshall & Walker ( 2002 ) , p. 36 . Jump up ^ Eccleshall & Walker ( 2002 ) , p. 42 . ^ Jump up to : Eccleshall & Walker ( 2002 ) , p. 46 . Jump up
+^ Eccleshall & Walker ( 2002 ) , p. 54 . Jump up ^ Eccleshall & Walker ( 2002 ) , p. 61 . Jump up ^ Eccleshall & Walker ( 2002 ) , p. 64 . Jump up ^ Eccleshall
+& Walker ( 2002 ) , p. 73 . ^ Jump up to : Eccleshall & Walker ( 2002 ) , p. 77 .
+</item 7>
+
+<item 8>
+List of Prime Ministers of the United Kingdom
+Committee Scotland Government Parliament Wales Government National Assembly Reserved matters Northern Ireland Executive Assembly Administrative geography ( show
+) England Subdivisions of England Local government in England Scotland Subdivisions of Scotland Local government in Scotland Wales Local government in Wales
+Northern Ireland Local government in Northern Ireland Elections ( show ) Parliament constituencies Political parties Last election Next election Referendums
+Foreign relations ( show ) History Foreign policy UK and the United Nations Politics of the European Union Commonwealth of Nations United Kingdom portal Other
+countries Atlas Downing Street Historical rankings of Prime Ministers of the United Kingdom List of Prime Ministers of the United Kingdom by tenure Living Prime
+Ministers of the United Kingdom Records of Prime Ministers of the United Kingdom List of current heads of government in the United Kingdom and dependencies
+Royal prerogative in the United Kingdom List of British governments List of votes of no confidence in British governments List of United Kingdom general
+elections British Prime Ministers -- Wikipedia book Premierships ^ Premierships of Benjamin Disraeli ^ Premierships of William Ewart Gladstone ^ Premiership of
+Margaret Thatcher ^ Premiership of Tony Blair ^ Premiership of Gordon Brown ^ Premiership of David Cameron ^ Premiership of Theresa May Notes ( edit ) Coalition
+government / hung parliament .
+</item 8>
+
+<item 9>
+List of Prime Ministers of the United Kingdom
+BBC News . 13 July 2016 . Retrieved 26 July 2016 . Lay summary ( 13 July 2016 ) . Bibliography ( edit ) Burt , Llewellyn C. ( 1874 ) . A synoptical history of
+England ( 2nd ed . ) . London : Lockwood . Carpenter , Clive , ed. ( 1992 ) . The Guinness UK Data Book . Guinness . ISBN 978 - 0 - 85112 - 522 - 0 . Chapman ,
+Richard A. ( 31 January 2002 ) . `` History : from earliest times to the present day '' . The Treasury in Public Policy - Making . Routledge . ISBN 978 - 1 -
+134 - 86426 - 3 . Clarke , John ( 1999 ) . `` House of Hanover '' . In Fraser , Antonia . The Lives of the Kings & Queens of England . University of California
+Press ( published February 2000 ) .
+</item 9>
+
+<item 10>
+List of Prime Ministers of the United Kingdom
+After the succession of King George I in 1714 , the arrangement of a commission of Lords of the Treasury as opposed to a single Lord High Treasurer became
+permanent . For the next three years , the government was headed by Lord Townshend , who was appointed Secretary of State for the Northern Department .
+Subsequently , Lord Stanhope and Lord Sunderland ran the government jointly , with Stanhope managing foreign affairs and Sunderland managing domestic affairs .
+Stanhope died in February 1721 and Sunderland resigned two months later ; Townshend and Robert Walpole were then invited to form the next government . From that
+point , the holder of the office of First Lord also unofficially held the status of Prime Minister . It was not until the Edwardian era that the title Prime
+Minister was constitutionally recognised . With only few exceptions , the Prime Minister still holds the office of First Lord by constitutional convention .
+Since 1721 ( edit ) By century and monarch 18th to 19th century George I George II George III George IV William IV Victoria 20th to 21st century Edward VII
+George V Edward VIII George VI Elizabeth II Whig ( 17 ) Tory ( 11 ) Conservative (
+</item 10>
+=== END ITEM id=0bdf4bce1938611a ===

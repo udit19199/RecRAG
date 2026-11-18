@@ -1,0 +1,1771 @@
+{
+ "cases": {
+  "comparison | Agentic Hybrid RAG": {
+   "previous": {
+    "questions": 100,
+    "right_per_repeat": [
+     54,
+     46,
+     51
+    ],
+    "spread_points": 8.0,
+    "flips": 28,
+    "a_judge": 0,
+    "b_answer": 0,
+    "c_retrieval": 28,
+    "c_detail": {
+     "rows differ, text same, picked IDs: no trace saved, answer differs": 7,
+     "rows differ, text differs, picked IDs: no trace saved, answer differs": 47,
+     "rows same, text differs, picked IDs: no trace saved, answer differs": 2
+    },
+    "examples": {
+     "c_retrieval": [
+      {
+       "id": "multihop-rag-1077",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": true,
+         "answer": "Yes",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "2",
+         "right": false,
+         "answer": "Insufficient Information",
+         "verdict_from": "no verdict (abstain/empty: wrong)"
+        },
+        {
+         "rep": "3",
+         "right": true,
+         "answer": "Yes",
+         "verdict_from": "exact match"
+        }
+       ]
+      },
+      {
+       "id": "multihop-rag-1092",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": false,
+         "answer": "Insufficient Information",
+         "verdict_from": "no verdict (abstain/empty: wrong)"
+        },
+        {
+         "rep": "2",
+         "right": true,
+         "answer": "No",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "3",
+         "right": true,
+         "answer": "No",
+         "verdict_from": "exact match"
+        }
+       ]
+      },
+      {
+       "id": "multihop-rag-1117",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": true,
+         "answer": "Yes",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "2",
+         "right": false,
+         "answer": "Insufficient Information",
+         "verdict_from": "no verdict (abstain/empty: wrong)"
+        },
+        {
+         "rep": "3",
+         "right": true,
+         "answer": "Yes",
+         "verdict_from": "exact match"
+        }
+       ]
+      }
+     ]
+    },
+    "flip_ids": [
+     "multihop-rag-1077",
+     "multihop-rag-1092",
+     "multihop-rag-1117",
+     "multihop-rag-1252",
+     "multihop-rag-1349",
+     "multihop-rag-1430",
+     "multihop-rag-1573",
+     "multihop-rag-1613",
+     "multihop-rag-1656",
+     "multihop-rag-1700",
+     "multihop-rag-1895",
+     "multihop-rag-1912",
+     "multihop-rag-1916",
+     "multihop-rag-2197",
+     "multihop-rag-2214",
+     "multihop-rag-2230",
+     "multihop-rag-2345",
+     "multihop-rag-2440",
+     "multihop-rag-447",
+     "multihop-rag-457",
+     "multihop-rag-526",
+     "multihop-rag-549",
+     "multihop-rag-570",
+     "multihop-rag-640",
+     "multihop-rag-717",
+     "multihop-rag-800",
+     "multihop-rag-865",
+     "multihop-rag-960"
+    ],
+    "all_same_prompt": 0,
+    "flips_with_abstain_in_a_wrong_repeat": 13,
+    "flips_right_per_repeat": [
+     19,
+     11,
+     16
+    ],
+    "spread_if_flips_land_at_random": {
+     "median_questions": 5,
+     "share_at_or_above_observed": 0.189,
+     "share_at_or_below_observed": 0.879
+    }
+   },
+   "latest": {
+    "questions": 125,
+    "right_per_repeat": [
+     89,
+     86,
+     89
+    ],
+    "spread_points": 2.4,
+    "flips": 35,
+    "a_judge": 0,
+    "b_answer": 0,
+    "c_retrieval": 35,
+    "c_detail": {
+     "rows same, text differs, picked IDs differ, answer differs": 43,
+     "rows differ, text differs, picked IDs differ, answer differs": 20,
+     "rows same, text same, picked IDs same, answer differs": 2,
+     "rows same, text differs, picked IDs same, answer differs": 5
+    },
+    "examples": {
+     "c_retrieval": [
+      {
+       "id": "multihop-rag-1129",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": true,
+         "answer": "Yes",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "2",
+         "right": true,
+         "answer": "Yes.",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "3",
+         "right": false,
+         "answer": "Insufficient Information",
+         "verdict_from": "no verdict (abstain/empty: wrong)"
+        }
+       ]
+      },
+      {
+       "id": "multihop-rag-1154",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": false,
+         "answer": "No",
+         "verdict_from": "verdicts-answers-007.json"
+        },
+        {
+         "rep": "2",
+         "right": true,
+         "answer": "Yes",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "3",
+         "right": false,
+         "answer": "No",
+         "verdict_from": "verdicts-answers-007.json"
+        }
+       ]
+      },
+      {
+       "id": "multihop-rag-1170",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": true,
+         "answer": "Yes",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "2",
+         "right": false,
+         "answer": "Insufficient Information",
+         "verdict_from": "no verdict (abstain/empty: wrong)"
+        },
+        {
+         "rep": "3",
+         "right": false,
+         "answer": "Insufficient Information",
+         "verdict_from": "no verdict (abstain/empty: wrong)"
+        }
+       ]
+      }
+     ]
+    },
+    "flip_ids": [
+     "multihop-rag-1129",
+     "multihop-rag-1154",
+     "multihop-rag-1170",
+     "multihop-rag-1317",
+     "multihop-rag-1349",
+     "multihop-rag-1409",
+     "multihop-rag-1539",
+     "multihop-rag-1651",
+     "multihop-rag-168",
+     "multihop-rag-1700",
+     "multihop-rag-1844",
+     "multihop-rag-1868",
+     "multihop-rag-1895",
+     "multihop-rag-1916",
+     "multihop-rag-1959",
+     "multihop-rag-1999",
+     "multihop-rag-2014",
+     "multihop-rag-2016",
+     "multihop-rag-2072",
+     "multihop-rag-2096",
+     "multihop-rag-2231",
+     "multihop-rag-2327",
+     "multihop-rag-2369",
+     "multihop-rag-244",
+     "multihop-rag-2554",
+     "multihop-rag-346",
+     "multihop-rag-376",
+     "multihop-rag-483",
+     "multihop-rag-490",
+     "multihop-rag-497",
+     "multihop-rag-547",
+     "multihop-rag-563",
+     "multihop-rag-583",
+     "multihop-rag-640",
+     "multihop-rag-976"
+    ],
+    "all_same_prompt": 0,
+    "flips_with_abstain_in_a_wrong_repeat": 16,
+    "flips_on_400_shared": 26,
+    "flips_on_100_new": 9,
+    "flips_right_per_repeat": [
+     17,
+     14,
+     17
+    ],
+    "spread_if_flips_land_at_random": {
+     "median_questions": 5,
+     "share_at_or_above_observed": 0.844,
+     "share_at_or_below_observed": 0.264
+    }
+   }
+  },
+  "comparison | RAPTOR": {
+   "previous": {
+    "questions": 100,
+    "right_per_repeat": [
+     45,
+     50,
+     49
+    ],
+    "spread_points": 5.0,
+    "flips": 12,
+    "a_judge": 0,
+    "b_answer": 12,
+    "c_retrieval": 0,
+    "c_detail": {},
+    "examples": {
+     "b_answer": [
+      {
+       "id": "multihop-rag-1430",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": true,
+         "answer": "No.",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "2",
+         "right": true,
+         "answer": "No",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "3",
+         "right": false,
+         "answer": "Insufficient Information",
+         "verdict_from": "no verdict (abstain/empty: wrong)"
+        }
+       ]
+      },
+      {
+       "id": "multihop-rag-1700",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": false,
+         "answer": "Insufficient Information",
+         "verdict_from": "no verdict (abstain/empty: wrong)"
+        },
+        {
+         "rep": "2",
+         "right": true,
+         "answer": "Yes",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "3",
+         "right": true,
+         "answer": "Yes",
+         "verdict_from": "exact match"
+        }
+       ]
+      },
+      {
+       "id": "multihop-rag-1729",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": false,
+         "answer": "Both portray challenges, but in different situations: past losses to Argentina and a difficult, close final against South Africa.",
+         "verdict_from": "verdicts-batch1-000.json"
+        },
+        {
+         "rep": "2",
+         "right": false,
+         "answer": "Both portray gameplay challenges, though in different situations.",
+         "verdict_from": "verdicts-batch3-000.json"
+        },
+        {
+         "rep": "3",
+         "right": true,
+         "answer": "Yes",
+         "verdict_from": "exact match"
+        }
+       ]
+      }
+     ]
+    },
+    "flip_ids": [
+     "multihop-rag-1430",
+     "multihop-rag-1700",
+     "multihop-rag-1729",
+     "multihop-rag-1895",
+     "multihop-rag-2079",
+     "multihop-rag-2205",
+     "multihop-rag-2262",
+     "multihop-rag-2345",
+     "multihop-rag-526",
+     "multihop-rag-549",
+     "multihop-rag-570",
+     "multihop-rag-583"
+    ],
+    "all_same_prompt": 98,
+    "flips_with_abstain_in_a_wrong_repeat": 8,
+    "flips_right_per_repeat": [
+     2,
+     7,
+     6
+    ],
+    "spread_if_flips_land_at_random": {
+     "median_questions": 3,
+     "share_at_or_above_observed": 0.258,
+     "share_at_or_below_observed": 0.888
+    }
+   },
+   "latest": {
+    "questions": 125,
+    "right_per_repeat": [
+     60,
+     62,
+     62
+    ],
+    "spread_points": 1.6,
+    "flips": 12,
+    "a_judge": 0,
+    "b_answer": 12,
+    "c_retrieval": 0,
+    "c_detail": {},
+    "examples": {
+     "b_answer": [
+      {
+       "id": "multihop-rag-1430",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": true,
+         "answer": "No.",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "2",
+         "right": true,
+         "answer": "No",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "3",
+         "right": false,
+         "answer": "Insufficient Information",
+         "verdict_from": "no verdict (abstain/empty: wrong)"
+        }
+       ]
+      },
+      {
+       "id": "multihop-rag-168",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": true,
+         "answer": "No",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "2",
+         "right": false,
+         "answer": "Insufficient Information",
+         "verdict_from": "no verdict (abstain/empty: wrong)"
+        },
+        {
+         "rep": "3",
+         "right": true,
+         "answer": "No",
+         "verdict_from": "exact match"
+        }
+       ]
+      },
+      {
+       "id": "multihop-rag-1700",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": false,
+         "answer": "Insufficient Information",
+         "verdict_from": "no verdict (abstain/empty: wrong)"
+        },
+        {
+         "rep": "2",
+         "right": true,
+         "answer": "Yes",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "3",
+         "right": true,
+         "answer": "Yes",
+         "verdict_from": "exact match"
+        }
+       ]
+      }
+     ]
+    },
+    "flip_ids": [
+     "multihop-rag-1430",
+     "multihop-rag-168",
+     "multihop-rag-1700",
+     "multihop-rag-1895",
+     "multihop-rag-2079",
+     "multihop-rag-2205",
+     "multihop-rag-2262",
+     "multihop-rag-2345",
+     "multihop-rag-2497",
+     "multihop-rag-497",
+     "multihop-rag-526",
+     "multihop-rag-583"
+    ],
+    "all_same_prompt": 123,
+    "flips_with_abstain_in_a_wrong_repeat": 11,
+    "flips_on_400_shared": 9,
+    "flips_on_100_new": 3,
+    "flips_right_per_repeat": [
+     4,
+     6,
+     6
+    ],
+    "spread_if_flips_land_at_random": {
+     "median_questions": 3,
+     "share_at_or_above_observed": 0.815,
+     "share_at_or_below_observed": 0.327
+    }
+   },
+   "shared400_flip_overlap": {
+    "previous_only": [
+     "multihop-rag-1729",
+     "multihop-rag-549",
+     "multihop-rag-570"
+    ],
+    "latest_only": [],
+    "both": 9
+   }
+  },
+  "comparison | HippoRAG": {
+   "previous": {
+    "questions": 100,
+    "right_per_repeat": [
+     46,
+     48,
+     50
+    ],
+    "spread_points": 4.0,
+    "flips": 9,
+    "a_judge": 0,
+    "b_answer": 9,
+    "c_retrieval": 0,
+    "c_detail": {},
+    "examples": {
+     "b_answer": [
+      {
+       "id": "multihop-rag-1430",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": false,
+         "answer": "Insufficient Information",
+         "verdict_from": "no verdict (abstain/empty: wrong)"
+        },
+        {
+         "rep": "2",
+         "right": true,
+         "answer": "No",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "3",
+         "right": true,
+         "answer": "No",
+         "verdict_from": "exact match"
+        }
+       ]
+      },
+      {
+       "id": "multihop-rag-1539",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": true,
+         "answer": "Yes",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "2",
+         "right": false,
+         "answer": "Insufficient Information",
+         "verdict_from": "no verdict (abstain/empty: wrong)"
+        },
+        {
+         "rep": "3",
+         "right": false,
+         "answer": "No",
+         "verdict_from": "verdicts-batch1-000.json"
+        }
+       ]
+      },
+      {
+       "id": "multihop-rag-1916",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": false,
+         "answer": "No; yes.",
+         "verdict_from": "verdicts-batch1-000.json"
+        },
+        {
+         "rep": "2",
+         "right": true,
+         "answer": "No",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "3",
+         "right": false,
+         "answer": "No. Yes.",
+         "verdict_from": "verdicts-batch1-000.json"
+        }
+       ]
+      }
+     ]
+    },
+    "flip_ids": [
+     "multihop-rag-1430",
+     "multihop-rag-1539",
+     "multihop-rag-1916",
+     "multihop-rag-1959",
+     "multihop-rag-1999",
+     "multihop-rag-2016",
+     "multihop-rag-2345",
+     "multihop-rag-570",
+     "multihop-rag-640"
+    ],
+    "all_same_prompt": 100,
+    "flips_with_abstain_in_a_wrong_repeat": 5,
+    "flips_right_per_repeat": [
+     2,
+     4,
+     6
+    ],
+    "spread_if_flips_land_at_random": {
+     "median_questions": 3,
+     "share_at_or_above_observed": 0.316,
+     "share_at_or_below_observed": 0.835
+    }
+   },
+   "latest": {
+    "questions": 125,
+    "right_per_repeat": [
+     59,
+     59,
+     63
+    ],
+    "spread_points": 3.2,
+    "flips": 12,
+    "a_judge": 0,
+    "b_answer": 12,
+    "c_retrieval": 0,
+    "c_detail": {},
+    "examples": {
+     "b_answer": [
+      {
+       "id": "multihop-rag-1097",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": true,
+         "answer": "No",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "2",
+         "right": false,
+         "answer": "Insufficient Information",
+         "verdict_from": "no verdict (abstain/empty: wrong)"
+        },
+        {
+         "rep": "3",
+         "right": true,
+         "answer": "No",
+         "verdict_from": "exact match"
+        }
+       ]
+      },
+      {
+       "id": "multihop-rag-1317",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": true,
+         "answer": "No",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "2",
+         "right": false,
+         "answer": "Yes",
+         "verdict_from": "verdicts-answers-000.json"
+        },
+        {
+         "rep": "3",
+         "right": true,
+         "answer": "No",
+         "verdict_from": "exact match"
+        }
+       ]
+      },
+      {
+       "id": "multihop-rag-1430",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": false,
+         "answer": "Insufficient Information",
+         "verdict_from": "no verdict (abstain/empty: wrong)"
+        },
+        {
+         "rep": "2",
+         "right": true,
+         "answer": "No",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "3",
+         "right": true,
+         "answer": "No",
+         "verdict_from": "exact match"
+        }
+       ]
+      }
+     ]
+    },
+    "flip_ids": [
+     "multihop-rag-1097",
+     "multihop-rag-1317",
+     "multihop-rag-1430",
+     "multihop-rag-1539",
+     "multihop-rag-1811",
+     "multihop-rag-1916",
+     "multihop-rag-1959",
+     "multihop-rag-1999",
+     "multihop-rag-2016",
+     "multihop-rag-2345",
+     "multihop-rag-497",
+     "multihop-rag-640"
+    ],
+    "all_same_prompt": 124,
+    "flips_with_abstain_in_a_wrong_repeat": 8,
+    "flips_on_400_shared": 8,
+    "flips_on_100_new": 4,
+    "flips_right_per_repeat": [
+     5,
+     5,
+     9
+    ],
+    "spread_if_flips_land_at_random": {
+     "median_questions": 3,
+     "share_at_or_above_observed": 0.444,
+     "share_at_or_below_observed": 0.757
+    }
+   },
+   "shared400_flip_overlap": {
+    "previous_only": [
+     "multihop-rag-570"
+    ],
+    "latest_only": [],
+    "both": 8
+   }
+  },
+  "comparison | Normal RAG": {
+   "previous": {
+    "questions": 100,
+    "right_per_repeat": [
+     51,
+     52,
+     51
+    ],
+    "spread_points": 1.0,
+    "flips": 9,
+    "a_judge": 0,
+    "b_answer": 9,
+    "c_retrieval": 0,
+    "c_detail": {},
+    "examples": {
+     "b_answer": [
+      {
+       "id": "multihop-rag-1065",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": false,
+         "answer": "No",
+         "verdict_from": "verdicts-batch1-000.json"
+        },
+        {
+         "rep": "2",
+         "right": true,
+         "answer": "Yes",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "3",
+         "right": true,
+         "answer": "Yes",
+         "verdict_from": "exact match"
+        }
+       ]
+      },
+      {
+       "id": "multihop-rag-1252",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": false,
+         "answer": "Insufficient Information",
+         "verdict_from": "no verdict (abstain/empty: wrong)"
+        },
+        {
+         "rep": "2",
+         "right": true,
+         "answer": "No",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "3",
+         "right": true,
+         "answer": "No",
+         "verdict_from": "exact match"
+        }
+       ]
+      },
+      {
+       "id": "multihop-rag-1349",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": true,
+         "answer": "Different stages: Gemini was expected to debut, while Gemini Pro was the \u201clite\u201d version released first.",
+         "verdict_from": "verdicts-batch1-000.json"
+        },
+        {
+         "rep": "2",
+         "right": true,
+         "answer": "They refer to different stages and versions of the same Gemini project.",
+         "verdict_from": "verdicts-batch3-000.json"
+        },
+        {
+         "rep": "3",
+         "right": false,
+         "answer": "No.",
+         "verdict_from": "verdicts-zz-audit-20261102.json"
+        }
+       ]
+      }
+     ]
+    },
+    "flip_ids": [
+     "multihop-rag-1065",
+     "multihop-rag-1252",
+     "multihop-rag-1349",
+     "multihop-rag-1430",
+     "multihop-rag-1700",
+     "multihop-rag-1895",
+     "multihop-rag-1959",
+     "multihop-rag-2345",
+     "multihop-rag-410"
+    ],
+    "all_same_prompt": 100,
+    "flips_with_abstain_in_a_wrong_repeat": 7,
+    "flips_right_per_repeat": [
+     5,
+     6,
+     5
+    ],
+    "spread_if_flips_land_at_random": {
+     "median_questions": 3,
+     "share_at_or_above_observed": 1.0,
+     "share_at_or_below_observed": 0.232
+    }
+   },
+   "latest": {
+    "questions": 125,
+    "right_per_repeat": [
+     64,
+     65,
+     65
+    ],
+    "spread_points": 0.8,
+    "flips": 8,
+    "a_judge": 0,
+    "b_answer": 8,
+    "c_retrieval": 0,
+    "c_detail": {},
+    "examples": {
+     "b_answer": [
+      {
+       "id": "multihop-rag-1065",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": false,
+         "answer": "No",
+         "verdict_from": "verdicts-answers-002.json"
+        },
+        {
+         "rep": "2",
+         "right": true,
+         "answer": "Yes",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "3",
+         "right": true,
+         "answer": "Yes",
+         "verdict_from": "exact match"
+        }
+       ]
+      },
+      {
+       "id": "multihop-rag-1252",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": false,
+         "answer": "Insufficient Information",
+         "verdict_from": "no verdict (abstain/empty: wrong)"
+        },
+        {
+         "rep": "2",
+         "right": true,
+         "answer": "No",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "3",
+         "right": true,
+         "answer": "No",
+         "verdict_from": "exact match"
+        }
+       ]
+      },
+      {
+       "id": "multihop-rag-1430",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": true,
+         "answer": "No.",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "2",
+         "right": true,
+         "answer": "No",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "3",
+         "right": false,
+         "answer": "Insufficient Information",
+         "verdict_from": "no verdict (abstain/empty: wrong)"
+        }
+       ]
+      }
+     ]
+    },
+    "flip_ids": [
+     "multihop-rag-1065",
+     "multihop-rag-1252",
+     "multihop-rag-1430",
+     "multihop-rag-1700",
+     "multihop-rag-1895",
+     "multihop-rag-1959",
+     "multihop-rag-2345",
+     "multihop-rag-410"
+    ],
+    "all_same_prompt": 124,
+    "flips_with_abstain_in_a_wrong_repeat": 7,
+    "flips_on_400_shared": 8,
+    "flips_on_100_new": 0,
+    "flips_right_per_repeat": [
+     4,
+     5,
+     5
+    ],
+    "spread_if_flips_land_at_random": {
+     "median_questions": 3,
+     "share_at_or_above_observed": 1.0,
+     "share_at_or_below_observed": 0.262
+    }
+   },
+   "shared400_flip_overlap": {
+    "previous_only": [
+     "multihop-rag-1349"
+    ],
+    "latest_only": [],
+    "both": 8
+   }
+  },
+  "temporal | Agentic Hybrid RAG": {
+   "previous": {
+    "questions": 100,
+    "right_per_repeat": [
+     56,
+     54,
+     58
+    ],
+    "spread_points": 4.0,
+    "flips": 26,
+    "a_judge": 0,
+    "b_answer": 0,
+    "c_retrieval": 26,
+    "c_detail": {
+     "rows differ, text differs, picked IDs: no trace saved, answer differs": 46,
+     "rows differ, text same, picked IDs: no trace saved, answer differs": 4,
+     "rows same, text differs, picked IDs: no trace saved, answer differs": 2
+    },
+    "examples": {
+     "c_retrieval": [
+      {
+       "id": "multihop-rag-1346",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": true,
+         "answer": "Yes\u2014from a lucrative search deal with Apple to alleged harm to publishers\u2019 content, traffic, and ad revenue.",
+         "verdict_from": "verdicts-batch2-000.json"
+        },
+        {
+         "rep": "2",
+         "right": false,
+         "answer": "Insufficient Information",
+         "verdict_from": "no verdict (abstain/empty: wrong)"
+        },
+        {
+         "rep": "3",
+         "right": false,
+         "answer": "Insufficient Information",
+         "verdict_from": "no verdict (abstain/empty: wrong)"
+        }
+       ]
+      },
+      {
+       "id": "multihop-rag-1502",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": false,
+         "answer": "Insufficient Information",
+         "verdict_from": "no verdict (abstain/empty: wrong)"
+        },
+        {
+         "rep": "2",
+         "right": true,
+         "answer": "Yes",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "3",
+         "right": false,
+         "answer": "Insufficient Information",
+         "verdict_from": "no verdict (abstain/empty: wrong)"
+        }
+       ]
+      },
+      {
+       "id": "multihop-rag-1520",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": false,
+         "answer": "Yes",
+         "verdict_from": "verdicts-batch1-001.json"
+        },
+        {
+         "rep": "2",
+         "right": true,
+         "answer": "No",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "3",
+         "right": true,
+         "answer": "No",
+         "verdict_from": "exact match"
+        }
+       ]
+      }
+     ]
+    },
+    "flip_ids": [
+     "multihop-rag-1346",
+     "multihop-rag-1502",
+     "multihop-rag-1520",
+     "multihop-rag-1581",
+     "multihop-rag-1606",
+     "multihop-rag-1686",
+     "multihop-rag-1701",
+     "multihop-rag-1825",
+     "multihop-rag-2002",
+     "multihop-rag-2115",
+     "multihop-rag-2183",
+     "multihop-rag-2291",
+     "multihop-rag-2324",
+     "multihop-rag-2351",
+     "multihop-rag-2392",
+     "multihop-rag-2432",
+     "multihop-rag-2502",
+     "multihop-rag-2529",
+     "multihop-rag-503",
+     "multihop-rag-623",
+     "multihop-rag-662",
+     "multihop-rag-677",
+     "multihop-rag-795",
+     "multihop-rag-814",
+     "multihop-rag-832",
+     "multihop-rag-864"
+    ],
+    "all_same_prompt": 0,
+    "flips_with_abstain_in_a_wrong_repeat": 24,
+    "flips_right_per_repeat": [
+     13,
+     11,
+     15
+    ],
+    "spread_if_flips_land_at_random": {
+     "median_questions": 5,
+     "share_at_or_above_observed": 0.677,
+     "share_at_or_below_observed": 0.447
+    }
+   },
+   "latest": {
+    "questions": 125,
+    "right_per_repeat": [
+     96,
+     99,
+     92
+    ],
+    "spread_points": 5.6,
+    "flips": 22,
+    "a_judge": 0,
+    "b_answer": 0,
+    "c_retrieval": 22,
+    "c_detail": {
+     "rows same, text differs, picked IDs differ, answer differs": 27,
+     "rows same, text differs, picked IDs same, answer differs": 2,
+     "rows differ, text differs, picked IDs differ, answer differs": 15
+    },
+    "examples": {
+     "c_retrieval": [
+      {
+       "id": "multihop-rag-1086",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": true,
+         "answer": "No.",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "2",
+         "right": false,
+         "answer": "Yes",
+         "verdict_from": "verdicts-answers-000.json"
+        },
+        {
+         "rep": "3",
+         "right": false,
+         "answer": "Yes.",
+         "verdict_from": "verdicts-answers-000.json"
+        }
+       ]
+      },
+      {
+       "id": "multihop-rag-1179",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": true,
+         "answer": "Yes",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "2",
+         "right": false,
+         "answer": "Insufficient Information",
+         "verdict_from": "no verdict (abstain/empty: wrong)"
+        },
+        {
+         "rep": "3",
+         "right": false,
+         "answer": "Insufficient Information",
+         "verdict_from": "no verdict (abstain/empty: wrong)"
+        }
+       ]
+      },
+      {
+       "id": "multihop-rag-1182",
+       "repeats": [
+        {
+         "rep": "1",
+         "right": false,
+         "answer": "Insufficient Information",
+         "verdict_from": "no verdict (abstain/empty: wrong)"
+        },
+        {
+         "rep": "2",
+         "right": true,
+         "answer": "Yes.",
+         "verdict_from": "exact match"
+        },
+        {
+         "rep": "3",
+         "right": false,
+         "answer": "Insufficient Information",
+         "verdict_from": "no verdict (abstain/empty: wrong)"
+        }
+       ]
+      }
+     ]
+    },
+    "flip_ids": [
+     "multihop-rag-1086",
+     "multihop-rag-1179",
+     "multihop-rag-1182",
+     "multihop-rag-1502",
+     "multihop-rag-1547",
+     "multihop-rag-1606",
+     "multihop-rag-1692",
+     "multihop-rag-1701",
+     "multihop-rag-1774",
+     "multihop-rag-1910",
+     "multihop-rag-2002",
+     "multihop-rag-2033",
+     "multihop-rag-2089",
+     "multihop-rag-2247",
+     "multihop-rag-2392",
+     "multihop-rag-2415",
+     "multihop-rag-2491",
+     "multihop-rag-508",
+     "multihop-rag-595",
+     "multihop-rag-795",
+     "multihop-rag-850",
+     "multihop-rag-961"
+    ],
+    "all_same_prompt": 0,
+    "flips_with_abstain_in_a_wrong_repeat": 9,
+    "flips_on_400_shared": 18,
+    "flips_on_100_new": 4,
+    "flips_right_per_repeat": [
+     12,
+     15,
+     8
+    ],
+    "spread_if_flips_land_at_random": {
+     "median_questions": 4,
+     "share_at_or_above_observed": 0.204,
+     "share_at_or_below_observed": 0.884
+    }
+   }
+  }
+ },
+ "judge_passes": {
+  "previous | Normal RAG | r1": {
+   "exact match": 95,
+   "no verdict (abstain/empty: wrong)": 80,
+   "batch1": 25
+  },
+  "previous | Normal RAG | r2": {
+   "exact match": 100,
+   "no verdict (abstain/empty: wrong)": 75,
+   "batch1": 19,
+   "batch3": 5,
+   "batch2": 1
+  },
+  "previous | Normal RAG | r3": {
+   "exact match": 95,
+   "no verdict (abstain/empty: wrong)": 78,
+   "batch1": 18,
+   "batch3": 2,
+   "batch2": 1,
+   "verdicts-zz-audit-20261102.json": 1,
+   "batch4": 5
+  },
+  "previous | RAPTOR | r1": {
+   "exact match": 92,
+   "no verdict (abstain/empty: wrong)": 85,
+   "batch1": 23
+  },
+  "previous | RAPTOR | r2": {
+   "exact match": 98,
+   "no verdict (abstain/empty: wrong)": 82,
+   "batch1": 14,
+   "batch3": 5,
+   "batch2": 1
+  },
+  "previous | RAPTOR | r3": {
+   "exact match": 94,
+   "no verdict (abstain/empty: wrong)": 85,
+   "batch1": 16,
+   "batch4": 3,
+   "batch2": 1,
+   "batch3": 1
+  },
+  "previous | HippoRAG | r1": {
+   "no verdict (abstain/empty: wrong)": 66,
+   "exact match": 103,
+   "batch1": 31
+  },
+  "previous | HippoRAG | r2": {
+   "no verdict (abstain/empty: wrong)": 66,
+   "exact match": 105,
+   "batch1": 25,
+   "batch3": 4
+  },
+  "previous | HippoRAG | r3": {
+   "no verdict (abstain/empty: wrong)": 63,
+   "exact match": 105,
+   "batch4": 4,
+   "batch1": 25,
+   "batch3": 2,
+   "batch2": 1
+  },
+  "previous | Agentic Hybrid RAG | r1": {
+   "exact match": 105,
+   "no verdict (abstain/empty: wrong)": 54,
+   "batch1": 22,
+   "batch2": 18,
+   "verdicts-zz-audit-20261102.json": 1
+  },
+  "previous | Agentic Hybrid RAG | r2": {
+   "exact match": 97,
+   "no verdict (abstain/empty: wrong)": 69,
+   "batch1": 21,
+   "batch2": 6,
+   "batch3": 7
+  },
+  "previous | Agentic Hybrid RAG | r3": {
+   "exact match": 106,
+   "no verdict (abstain/empty: wrong)": 60,
+   "batch4": 14,
+   "batch1": 13,
+   "batch2": 6,
+   "batch3": 1
+  },
+  "previous | keys judged more than once": 1,
+  "previous | keys judged more than once with different verdicts": 1,
+  "latest | Normal RAG | r1": {
+   "exact match": 117,
+   "no verdict": 100,
+   "judged, files": [
+    "answers-000",
+    "answers-001",
+    "answers-002",
+    "answers-003",
+    "answers-004",
+    "answers-005",
+    "answers-006",
+    "answers-007",
+    "answers-008"
+   ]
+  },
+  "latest | Normal RAG | r2": {
+   "exact match": 123,
+   "no verdict": 92,
+   "judged, files": [
+    "answers-000",
+    "answers-001",
+    "answers-002",
+    "answers-003",
+    "answers-004",
+    "answers-005",
+    "answers-006",
+    "answers-007",
+    "answers-008"
+   ]
+  },
+  "latest | Normal RAG | r3": {
+   "exact match": 120,
+   "no verdict": 93,
+   "judged, files": [
+    "answers-000",
+    "answers-001",
+    "answers-002",
+    "answers-003",
+    "answers-004",
+    "answers-005",
+    "answers-006",
+    "answers-007"
+   ]
+  },
+  "latest | RAPTOR | r1": {
+   "exact match": 115,
+   "no verdict": 102,
+   "judged, files": [
+    "answers-000",
+    "answers-001",
+    "answers-002",
+    "answers-003",
+    "answers-004",
+    "answers-005",
+    "answers-006",
+    "answers-007",
+    "answers-008"
+   ]
+  },
+  "latest | RAPTOR | r2": {
+   "exact match": 118,
+   "no verdict": 102,
+   "judged, files": [
+    "answers-000",
+    "answers-001",
+    "answers-002",
+    "answers-003",
+    "answers-004",
+    "answers-005",
+    "answers-006",
+    "answers-007",
+    "answers-008"
+   ]
+  },
+  "latest | RAPTOR | r3": {
+   "exact match": 118,
+   "no verdict": 101,
+   "judged, files": [
+    "answers-000",
+    "answers-001",
+    "answers-002",
+    "answers-003",
+    "answers-004",
+    "answers-005",
+    "answers-006",
+    "answers-007",
+    "answers-008"
+   ]
+  },
+  "latest | HippoRAG | r1": {
+   "exact match": 126,
+   "no verdict": 80,
+   "judged, files": [
+    "answers-000",
+    "answers-001",
+    "answers-002",
+    "answers-003",
+    "answers-004",
+    "answers-005",
+    "answers-006",
+    "answers-007",
+    "answers-008"
+   ]
+  },
+  "latest | HippoRAG | r2": {
+   "exact match": 127,
+   "no verdict": 81,
+   "judged, files": [
+    "answers-000",
+    "answers-001",
+    "answers-002",
+    "answers-003",
+    "answers-004",
+    "answers-005",
+    "answers-006",
+    "answers-007",
+    "answers-008"
+   ]
+  },
+  "latest | HippoRAG | r3": {
+   "exact match": 130,
+   "no verdict": 76,
+   "judged, files": [
+    "answers-000",
+    "answers-001",
+    "answers-002",
+    "answers-003",
+    "answers-004",
+    "answers-005",
+    "answers-006",
+    "answers-007",
+    "answers-008"
+   ]
+  },
+  "latest | Agentic Hybrid RAG | r1": {
+   "exact match": 181,
+   "no verdict": 23,
+   "judged, files": [
+    "answers-000",
+    "answers-001",
+    "answers-002",
+    "answers-003",
+    "answers-004",
+    "answers-005",
+    "answers-006",
+    "answers-007"
+   ]
+  },
+  "latest | Agentic Hybrid RAG | r2": {
+   "exact match": 181,
+   "no verdict": 24,
+   "judged, files": [
+    "answers-000",
+    "answers-001",
+    "answers-002",
+    "answers-003",
+    "answers-004",
+    "answers-005",
+    "answers-006",
+    "answers-007",
+    "answers-008"
+   ]
+  },
+  "latest | Agentic Hybrid RAG | r3": {
+   "exact match": 176,
+   "no verdict": 30,
+   "judged, files": [
+    "answers-000",
+    "answers-001",
+    "answers-002",
+    "answers-003",
+    "answers-004",
+    "answers-005",
+    "answers-006",
+    "answers-007",
+    "answers-008"
+   ]
+  },
+  "latest | keys judged more than once": 0,
+  "latest | keys judged more than once with different verdicts": 0,
+  "previous | comparison Agentic Hybrid RAG | judged keys shared by >1 repeat": "43 of 93",
+  "previous | comparison RAPTOR | judged keys shared by >1 repeat": "53 of 67",
+  "previous | comparison HippoRAG | judged keys shared by >1 repeat": "52 of 71",
+  "previous | comparison Normal RAG | judged keys shared by >1 repeat": "47 of 67",
+  "previous | temporal Agentic Hybrid RAG | judged keys shared by >1 repeat": "42 of 70",
+  "latest | comparison Agentic Hybrid RAG | judged keys shared by >1 repeat": "38 of 72",
+  "latest | comparison RAPTOR | judged keys shared by >1 repeat": "66 of 82",
+  "latest | comparison HippoRAG | judged keys shared by >1 repeat": "64 of 88",
+  "latest | comparison Normal RAG | judged keys shared by >1 repeat": "60 of 84",
+  "latest | temporal Agentic Hybrid RAG | judged keys shared by >1 repeat": "27 of 46"
+ },
+ "baseline_reuse": {
+  "comparison | Normal RAG": {
+   "rows": 300,
+   "identical_answer_text": 300,
+   "identical_prompt": 300,
+   "verdict_changed": 4,
+   "verdict_moves": {
+    "wrong->right": 4
+   },
+   "changed_rows": [
+    {
+     "id": "multihop-rag-549",
+     "rep": "1",
+     "answer": "Yes.",
+     "previous": false,
+     "previous_from": "verdicts-batch1-000.json",
+     "latest": true,
+     "latest_from": "verdicts-answers-004.json"
+    },
+    {
+     "id": "multihop-rag-549",
+     "rep": "2",
+     "answer": "Yes.",
+     "previous": false,
+     "previous_from": "verdicts-batch1-000.json",
+     "latest": true,
+     "latest_from": "verdicts-answers-004.json"
+    },
+    {
+     "id": "multihop-rag-549",
+     "rep": "3",
+     "answer": "Yes.",
+     "previous": false,
+     "previous_from": "verdicts-batch1-000.json",
+     "latest": true,
+     "latest_from": "verdicts-answers-004.json"
+    },
+    {
+     "id": "multihop-rag-1349",
+     "rep": "3",
+     "answer": "No.",
+     "previous": false,
+     "previous_from": "verdicts-zz-audit-20261102.json",
+     "latest": true,
+     "latest_from": "verdicts-answers-003.json"
+    }
+   ],
+   "shared100_right_per_repeat_previous_verdicts": [
+    51,
+    52,
+    51
+   ],
+   "shared100_right_per_repeat_latest_verdicts": [
+    52,
+    53,
+    53
+   ],
+   "new25_right_per_repeat": [
+    12,
+    12,
+    12
+   ]
+  },
+  "temporal | Normal RAG": {
+   "rows": 300,
+   "identical_answer_text": 300,
+   "identical_prompt": 300,
+   "verdict_changed": 0,
+   "verdict_moves": {},
+   "changed_rows": [],
+   "shared100_right_per_repeat_previous_verdicts": [
+    47,
+    51,
+    47
+   ],
+   "shared100_right_per_repeat_latest_verdicts": [
+    47,
+    51,
+    47
+   ],
+   "new25_right_per_repeat": [
+    10,
+    11,
+    13
+   ]
+  },
+  "comparison | RAPTOR": {
+   "rows": 300,
+   "identical_answer_text": 300,
+   "identical_prompt": 300,
+   "verdict_changed": 5,
+   "verdict_moves": {
+    "wrong->right": 5
+   },
+   "changed_rows": [
+    {
+     "id": "multihop-rag-549",
+     "rep": "1",
+     "answer": "Yes.",
+     "previous": false,
+     "previous_from": "verdicts-batch1-000.json",
+     "latest": true,
+     "latest_from": "verdicts-answers-004.json"
+    },
+    {
+     "id": "multihop-rag-570",
+     "rep": "1",
+     "answer": "Yes.",
+     "previous": false,
+     "previous_from": "verdicts-batch1-000.json",
+     "latest": true,
+     "latest_from": "verdicts-answers-004.json"
+    },
+    {
+     "id": "multihop-rag-1729",
+     "rep": "1",
+     "answer": "Both portray challenges, but in different situations: past losses to Argentina and a difficult, close final against Sout",
+     "previous": false,
+     "previous_from": "verdicts-batch1-000.json",
+     "latest": true,
+     "latest_from": "verdicts-answers-006.json"
+    },
+    {
+     "id": "multihop-rag-549",
+     "rep": "2",
+     "answer": "Yes.",
+     "previous": false,
+     "previous_from": "verdicts-batch1-000.json",
+     "latest": true,
+     "latest_from": "verdicts-answers-004.json"
+    },
+    {
+     "id": "multihop-rag-1729",
+     "rep": "2",
+     "answer": "Both portray gameplay challenges, though in different situations.",
+     "previous": false,
+     "previous_from": "verdicts-batch3-000.json",
+     "latest": true,
+     "latest_from": "verdicts-answers-001.json"
+    }
+   ],
+   "shared100_right_per_repeat_previous_verdicts": [
+    45,
+    50,
+    49
+   ],
+   "shared100_right_per_repeat_latest_verdicts": [
+    48,
+    52,
+    49
+   ],
+   "new25_right_per_repeat": [
+    12,
+    10,
+    13
+   ]
+  },
+  "temporal | RAPTOR": {
+   "rows": 300,
+   "identical_answer_text": 300,
+   "identical_prompt": 300,
+   "verdict_changed": 0,
+   "verdict_moves": {},
+   "changed_rows": [],
+   "shared100_right_per_repeat_previous_verdicts": [
+    48,
+    50,
+    49
+   ],
+   "shared100_right_per_repeat_latest_verdicts": [
+    48,
+    50,
+    49
+   ],
+   "new25_right_per_repeat": [
+    11,
+    10,
+    11
+   ]
+  },
+  "comparison | HippoRAG": {
+   "rows": 300,
+   "identical_answer_text": 300,
+   "identical_prompt": 300,
+   "verdict_changed": 2,
+   "verdict_moves": {
+    "wrong->right": 2
+   },
+   "changed_rows": [
+    {
+     "id": "multihop-rag-570",
+     "rep": "1",
+     "answer": "Yes.",
+     "previous": false,
+     "previous_from": "verdicts-batch1-000.json",
+     "latest": true,
+     "latest_from": "verdicts-answers-004.json"
+    },
+    {
+     "id": "multihop-rag-570",
+     "rep": "2",
+     "answer": "Yes.",
+     "previous": false,
+     "previous_from": "verdicts-batch1-000.json",
+     "latest": true,
+     "latest_from": "verdicts-answers-004.json"
+    }
+   ],
+   "shared100_right_per_repeat_previous_verdicts": [
+    46,
+    48,
+    50
+   ],
+   "shared100_right_per_repeat_latest_verdicts": [
+    47,
+    49,
+    50
+   ],
+   "new25_right_per_repeat": [
+    12,
+    10,
+    13
+   ]
+  },
+  "temporal | HippoRAG": {
+   "rows": 300,
+   "identical_answer_text": 300,
+   "identical_prompt": 300,
+   "verdict_changed": 0,
+   "verdict_moves": {},
+   "changed_rows": [],
+   "shared100_right_per_repeat_previous_verdicts": [
+    59,
+    60,
+    59
+   ],
+   "shared100_right_per_repeat_latest_verdicts": [
+    59,
+    60,
+    59
+   ],
+   "new25_right_per_repeat": [
+    11,
+    12,
+    12
+   ]
+  }
+ }
+}

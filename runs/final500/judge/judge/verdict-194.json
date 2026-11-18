@@ -1,0 +1,75 @@
+[
+{"id": "414c8735fff63423", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "c88aa7e74300477c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "According to a now-deleted profile from FTX investors Sequoia Capital, FTX was founded because of Bankman-Fried’s frustration with other exchanges when he was running Alameda Research, his crypto trading firm."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "According to a now-deleted profile from FTX investors Sequoia Capital, FTX was founded because of Bankman-Fried’s frustration with other exchanges when he was running Alameda Research, his crypto trading firm."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "According to a now-deleted profile from FTX investors Sequoia Capital, FTX was founded because of Bankman-Fried’s frustration with other exchanges when he was running Alameda Research, his crypto trading firm."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "According to a now-deleted profile from FTX investors Sequoia Capital, FTX was founded because of Bankman-Fried’s frustration with other exchanges when he was running Alameda Research, his crypto trading firm."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 10, "quote": "According to a now-deleted profile from FTX investors Sequoia Capital, FTX was founded because of Bankman-Fried’s frustration with other exchanges when he was running Alameda Research, his crypto trading firm."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Risk management is a crucial part of the business; risk officers exist to identify business’ potential risks, monitor, and mitigate them."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Risk management is a crucial part of the business; risk officers exist to identify business’ potential risks, monitor, and mitigate them."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Risk management is a crucial part of the business; risk officers exist to identify business’ potential risks, monitor, and mitigate them."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "Risk management is a crucial part of the business; risk officers exist to identify business’ potential risks, monitor, and mitigate them."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []}
+]},
+{"id": "cb1e430600390129", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "but Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "but Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "a3eea6eefae02738", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "1.6", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "948cf0eff68f6f23", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "0b28f35cf115cf06", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Erik ten Hag is a top coach from Ajax but they need a top blueprint not only for now but for the next five years, and work towards that, and sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right things."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Erik ten Hag is a top coach from Ajax but they need a top blueprint not only for now but for the next five years, and work towards that, and sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right things."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Erik ten Hag is a top coach from Ajax but they need a top blueprint not only for now but for the next five years, and work towards that, and sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right things."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "Erik ten Hag is a top coach from Ajax but they need a top blueprint not only for now but for the next five years, and work towards that, and sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right things."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 1, "quote": "Erik ten Hag is a top coach from Ajax but they need a top blueprint not only for now but for the next five years, and work towards that, and sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right things."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "The latest slip saw the Red Devils crash out of Europe"}, {"item": 7, "quote": "finishing bottom of their four-team group to leave them eliminated from Europe"}]},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]}
+]

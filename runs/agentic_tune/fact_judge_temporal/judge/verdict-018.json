@@ -1,0 +1,35 @@
+[
+{"id": "b61c0572532d701b", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "00639a621a207e20", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "79234602ab8739b0", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Erik ten Hag is a top coach from Ajax"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "they need a top blueprint not only for now but for the next five years, and work towards that"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "they need a top blueprint not only for now but for the next five years, and work towards that"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "sometimes on that journey there are hard moments when you don't get the right results"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "you don't get the right results, even though you're doing the right things"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "finishing bottom of their four-team group to leave them eliminated from Europe in their worst performance in the competition since 2005"}]},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]}
+]

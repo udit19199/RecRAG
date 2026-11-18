@@ -1,0 +1,583 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "ac733690c2982f89",
+   "kind": "answer",
+   "question": "fitting of rim on a locomotive wheel is done by",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Heating the tire to expand it, then fitting it over the wheel."
+  },
+  {
+   "id": "a51084bfa3efc035",
+   "kind": "answer",
+   "question": "the private ownership of real property is known as",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Private property ownership"
+  },
+  {
+   "id": "a38f5211b25c25cc",
+   "kind": "answer",
+   "question": "what is the sentencing reform act of 1984",
+   "gold_answers": [
+    "U.S. federal statute intended to increase consistency in United States federal sentencing",
+    "a U.S. federal statute intended to increase consistency in United States federal sentencing"
+   ],
+   "model_answer": "A federal law that established the U.S. Sentencing Commission and largely abolished federal parole."
+  },
+  {
+   "id": "4180620b1f7f1283",
+   "kind": "answer",
+   "question": "when would a post card not be needed",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "When you’re not sending a brief message by mail."
+  },
+  {
+   "id": "4d9e84c176f60af9",
+   "kind": "answer",
+   "question": "where are unipolar neurons found in spinal cord",
+   "gold_answers": [
+    "the distal dorsal root"
+   ],
+   "model_answer": "Dorsal root ganglia alongside the spinal cord\n"
+  },
+  {
+   "id": "7ec04a2d568e4f82",
+   "kind": "answer",
+   "question": "when calls the heart season 3 episode 12",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "There is no Season 3, Episode 12."
+  },
+  {
+   "id": "b4e549f8d0cc253d",
+   "kind": "answer",
+   "question": "did anyone die from ebola in the us",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, two patients died."
+  },
+  {
+   "id": "37d04d5760d8ae69",
+   "kind": "answer",
+   "question": "why top soil has most amount of humus",
+   "gold_answers": [
+    "Much of the humus in most soils has persisted for more than 100 years , rather than having been decomposed into CO , and can be regarded as stable ; this organic matter has been protected from decomposition by microbial or enzyme action because it is hidden ( occluded ) inside small aggregates of soil particles , or tightly sorbed or complexed ) to clays . Most humus that is not protected in this way is decomposed within 10 years and can be regarded as less stable or more labile . Stable humus contributes few plant - available nutrients in soil , but it helps maintain its physical structure . A very stable form of humus is formed from the slow oxidation of soil carbon after the incorporation of finely powdered charcoal into the topsoil . This process is speculated to have been important in the formation of the very fertile Amazonian terra preta do Indio ."
+   ],
+   "model_answer": "Because dead plant and animal matter accumulates and decays near the soil surface."
+  },
+  {
+   "id": "419039761ef110d1",
+   "kind": "answer",
+   "question": "what is the short story the gift of the magi about",
+   "gold_answers": [
+    "a young husband and wife and how they deal with the challenge of buying secret Christmas gifts for each other with very little money"
+   ],
+   "model_answer": "A couple secretly sacrifice their prized possessions to buy Christmas gifts for each other."
+  },
+  {
+   "id": "e76943e2ba9b1ca5",
+   "kind": "answer",
+   "question": "which of the following was a result of the connecticut compromise",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "A bicameral Congress with proportional House representation and equal state representation in the Senate."
+  },
+  {
+   "id": "b6f6fac867d2ad35",
+   "kind": "answer",
+   "question": "what is windows defender and what does it do",
+   "gold_answers": [
+    "Windows Defender , officially called Windows Defender Antivirus in Windows 10 Creators Update , is an anti-malware component of Microsoft Windows.It was first released as a free antispyware program download for Windows XP , shipped with Windows Vista and Windows 7 and made into a full antivirus program replacing Microsoft Security Essentials as part of Windows 8 and later versions ."
+   ],
+   "model_answer": "Windows Defender is Windows’ built-in antimalware software that protects against spyware, viruses, and other malicious software."
+  },
+  {
+   "id": "4ec2f69799c3aaeb",
+   "kind": "answer",
+   "question": "what are the importance of rigor mortis in meat processing",
+   "gold_answers": [
+    "rigor mortis and its resolution partially determine the tenderness of meat",
+    "tenderness of meat"
+   ],
+   "model_answer": "It affects meat tenderness and helps guide processing to prevent cold shortening."
+  },
+  {
+   "id": "9baafffca1e66273",
+   "kind": "answer",
+   "question": "how old is the actress who plays phyllis on y&r",
+   "gold_answers": [
+    "Gina Tognoni",
+    "age 44"
+   ],
+   "model_answer": "44 years old"
+  },
+  {
+   "id": "23e430168d94f673",
+   "kind": "answer",
+   "question": "when did jack mccoy join law and order",
+   "gold_answers": [
+    "1994",
+    "the season-five premiere episode \"Second Opinion\"",
+    "in the season-five premiere episode \"Second Opinion\""
+   ],
+   "model_answer": "Season 5, in 1994."
+  },
+  {
+   "id": "693cc5089089fb70",
+   "kind": "answer",
+   "question": "what are the kinds of dance and its definition",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Dance is purposeful, rhythmic movement recognized as art; kinds include theatrical/performance and participatory/social dance, such as ballet, folk, ballroom, and hip-hop."
+  },
+  {
+   "id": "9756a035079275f4",
+   "kind": "answer",
+   "question": "percy jackson and the olympians sea of monsters summary",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Percy, Annabeth, and Tyson journey to rescue Grover and retrieve the Golden Fleece, which can heal Thalia’s poisoned tree and protect Camp Half-Blood from danger."
+  },
+  {
+   "id": "b437dfa9fceb0a59",
+   "kind": "answer",
+   "question": "how much does.it cost to raise a child",
+   "gold_answers": [
+    "Dual - Parent Family - USDA Average Spending per Child ( not the basic cost of raising ) Age of Child Housing Food Transport . Clothing Health Child Care / Education Misc . Total Before - tax income : Less than $59,410 ( Average = $38,000 ) 0 to 2 2,990 1,160 1,170 640 630 2,040 420 9,050 3 to 5 2,990 1,260 1,230 500 590 1,910 620 9,100 6 to 8 2,990 1,710 1,350 570 660 1,290 630 8,760 9 to 11 2,990 1,970 1,350 580 710 1,910 630 9,520 12 to 14 2,990 2,130 1,480 690 1,090 1,110 700 9,960 15 to 17 2,990 2,120 1,630 730 1,010 1,290 580 9,970 Total 53,820 31,050 24,630 11,130 14,070 23,640 10,740 169,080 Before - tax income : $59,410 to $102,870 ( Average = $79,940 ) 0 to 2 3,920 1,405 1,690 760 850 2,860 890 12,370 3 to 5 3,920 1,490 1,740 610 800 2,740 1,090 12,390 6 to 8 3,920 2,100 1,860 680 940 1,680 1,110 12,290 9 to 11 3,920 2,400 1,870 710 1,000 2,110 1,100 13,110 12 to 14 3,920 2,580 1,990 840 1,410 1,910 1,170 13,820 15 to 17 3,920 2,570 2,150 900 1,330 2,400 1,050 14,320 Total 70,560 37,620 33,900 13,500 18,990 41,100 19,230 234,900 Before - tax income : More than $102,870 ( Average = $180,040 ) 0 to 2 7,100 1,900 2,550 1,050 980 5,090 1,790 20,460 3 to 5 7,100 2,000 2,610 880 930 4,970 1,990 20,480 6 to 8 7,100 2,630 2,730 970 1,080 3,910 2,000 20,420 9 to 11 7,100 2,980 2,730 1,010 1,150 4,350 2,000 21,320 12 to 14 7,100 3,190 2,860 1,170 1,610 4,700 2,070 22,700 15 to 17 7,100 3,180 3,020 1,280 1,520 6,460 1,950 24,510 Total 127,800 47,640 49,500 19,080 21,810 88,440 35,400 389,670"
+   ],
+   "model_answer": "In the U.S., about $169,080–$389,670 through age 17, depending on income."
+  },
+  {
+   "id": "7241f9d4aee908f7",
+   "kind": "answer",
+   "question": "what is the largest bill in american money",
+   "gold_answers": [
+    "$100"
+   ],
+   "model_answer": "$100,000 bill"
+  },
+  {
+   "id": "9f5ab114764b84bc",
+   "kind": "answer",
+   "question": "was nightmare before christmas originally a disney movie",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, it was originally developed by Disney."
+  },
+  {
+   "id": "49e3520d9984204b",
+   "kind": "answer",
+   "question": "what did the american flag look like in 1896",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "45 stars and 13 red-and-white stripes."
+  },
+  {
+   "id": "ea19dd420fcffc9b",
+   "kind": "answer",
+   "question": "what is the first step in the evolution of the eye",
+   "gold_answers": [
+    "photoreceptor proteins that sense light",
+    "eyespots",
+    "photoreceptor proteins that sense light, found even in unicellular organisms, called \"eyespots\""
+   ],
+   "model_answer": "Primitive light receptors (eyespots)"
+  },
+  {
+   "id": "6ec395b9d1bcc77e",
+   "kind": "answer",
+   "question": "who won the national championship in volleyball 2017",
+   "gold_answers": [
+    "Ohio State"
+   ],
+   "model_answer": "Nebraska (women’s)"
+  },
+  {
+   "id": "5ed6dbdbb4a07467",
+   "kind": "answer",
+   "question": "where is most vascular tissue found in plants",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "In stems and roots"
+  },
+  {
+   "id": "cf21e9b7d4198165",
+   "kind": "answer",
+   "question": "what are the requirements of passing national senior certificate",
+   "gold_answers": [
+    "Subjects are all taken on the same level - there is no higher or standard grade as in the past . There are three pass levels , each with different pass requirements. First is a pass with Higher certificate , one must obtain 40 % in home language , 40 % in two other subjects and must obtain 30 % in three other subjects . A learner who passed matric with higher certificate level , can not enroll for a University Degree nor a Diploma at an institute of higher learning . The mean mark in any subject is usually about 55 . Only a small proportion of candidates score an ' A ' in any subject ( from as little as 2 % to a maximum of about 10 % in subjects taken by highly select groups . ) A further 8 -- 15 % are likely to gain a ' B ' and about 20 -- 25 % achieve a ' C ' grade . The National Senior Certificate is a group certificate and records an aggregate mark ."
+   ],
+   "model_answer": "40% in the home language, 40% in two other subjects, and 30% in three other subjects (Higher Certificate pass)."
+  },
+  {
+   "id": "44af382d2509ca6e",
+   "kind": "answer",
+   "question": "who has hosted the most fifa world cups",
+   "gold_answers": [
+    "Mexico, Italy, France, Germany (West Germany until shortly after the 1990 World Cup) and Brazil have hosted the event on two occasions",
+    "Mexico",
+    "Italy",
+    "France",
+    "Germany",
+    "Brazil"
+   ],
+   "model_answer": "Mexico (three times)"
+  },
+  {
+   "id": "e8494e86d10382ec",
+   "kind": "answer",
+   "question": "steps party on the dance floor tour review",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Praised as an energetic, slick comeback; Belfast received 4/5 stars and Dublin 5/5."
+  },
+  {
+   "id": "5384ccea02c099bf",
+   "kind": "answer",
+   "question": "where is the north pole on the world map",
+   "gold_answers": [
+    "90°N 0°W﻿ / ﻿90°N -0°E",
+    "latitude 90° North"
+   ],
+   "model_answer": "In the Arctic Ocean at 90°N."
+  },
+  {
+   "id": "c56a9a21ba588e6a",
+   "kind": "answer",
+   "question": "how has australia been influenced by other cultures",
+   "gold_answers": [
+    "The culture of Australia is a Western culture , derived primarily from Britain but also influenced by the unique geography of Australia , the diverse input of Aboriginal , Torres Strait Islander and other Australian people . The British colonization of Australia began in 1788 , and waves of multi-ethnic migration followed . Evidence of a significant Anglo - Celtic heritage includes the predominance of the English language , the existence of a democratic system of government drawing upon the British traditions of Westminster Government , Parliamentarianism and constitutional monarchy , American constitutionalist and federalist traditions , Christianity as the dominant religion , and the popularity of sports originating in ( or influenced by ) the British Isles . Australian culture has diverged significantly since British settlement ."
+   ],
+   "model_answer": "Through migration and global influences, shaping its food, arts, music, sports, and way of life."
+  },
+  {
+   "id": "23f9861e0216293d",
+   "kind": "answer",
+   "question": "did the bush family own a baseball team",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, George W. Bush owned a 2% share of the Texas Rangers."
+  },
+  {
+   "id": "715d0259aff285ee",
+   "kind": "answer",
+   "question": "who got what in the compromise of 1877",
+   "gold_answers": [
+    "The Compromise of 1877 was an informal , unwritten deal that settled the intensely disputed 1876 U.S. presidential election . It resulted in the United States federal government pulling the last troops out of the South , and formally ended the Reconstruction Era . Through the Compromise , Republican Rutherford B. Hayes was awarded the White House over Democrat Samuel J. Tilden on the understanding that Hayes would remove the federal troops whose support was essential for the survival of Republican state governments in South Carolina , Florida and Louisiana . The compromise involved Democrats who controlled the House of Representatives allowing the decision of the Electoral Commission to take effect . The outgoing president , Republican Ulysses S. Grant , removed the soldiers from Florida . As president , Hayes removed the remaining troops from South Carolina and Louisiana . As soon as the troops left , many white Republicans also left , and the `` Redeemer '' Democrats took control . They already dominated other state governments in the South . What was exactly agreed is somewhat contested as the documentation is insufficient ."
+   ],
+   "model_answer": "Hayes became president; Democrats gained an end to Reconstruction and the withdrawal of federal troops from the South."
+  },
+  {
+   "id": "2429f68d00baeb65",
+   "kind": "answer",
+   "question": "when are centrally acting skeletal muscle relaxants used",
+   "gold_answers": [
+    "to alleviate musculoskeletal pain and spasms and to reduce spasticity in a variety of neurological conditions",
+    "to alleviate musculoskeletal pain and spasms",
+    "to reduce spasticity in a variety of neurological conditions"
+   ],
+   "model_answer": "To relieve musculoskeletal pain and spasms and reduce spasticity."
+  },
+  {
+   "id": "4d272ca91279beb9",
+   "kind": "answer",
+   "question": "who is the richest club in the championship",
+   "gold_answers": [
+    "Manchester City",
+    "Aston Villa"
+   ],
+   "model_answer": "Fulham (Shahid Khan)"
+  },
+  {
+   "id": "de7130135ccb5a6d",
+   "kind": "answer",
+   "question": "how has australia been influenced by other cultures",
+   "gold_answers": [
+    "The culture of Australia is a Western culture , derived primarily from Britain but also influenced by the unique geography of Australia , the diverse input of Aboriginal , Torres Strait Islander and other Australian people . The British colonization of Australia began in 1788 , and waves of multi-ethnic migration followed . Evidence of a significant Anglo - Celtic heritage includes the predominance of the English language , the existence of a democratic system of government drawing upon the British traditions of Westminster Government , Parliamentarianism and constitutional monarchy , American constitutionalist and federalist traditions , Christianity as the dominant religion , and the popularity of sports originating in ( or influenced by ) the British Isles . Australian culture has diverged significantly since British settlement ."
+   ],
+   "model_answer": "Through Indigenous, British, European, and Asian cultural influences."
+  },
+  {
+   "id": "ca454da14b83e942",
+   "kind": "answer",
+   "question": "who was the pitcher who broke his arm",
+   "gold_answers": [
+    "The following season , a cancerous desmoid tumor was found in Dravecky 's pitching arm . On October 7 , 1988 , he underwent surgery , which removed half of the deltoid muscle in his pitching arm and froze the humerus bone in an effort to eliminate all of the cancerous cells . Doctors advised Dravecky to wait until 1990 to pitch again , but Dravecky was determined to pitch in 1989 . By July 1989 , he was pitching in the minors , and on August 10 , he made a highly publicized return to the major leagues , pitching eight innings and defeating Cincinnati 4 -- 3 . In his following start , five days later in Montreal , Dravecky pitched three no - hit innings , but in the fifth inning , he felt a tingling sensation in his arm . In the sixth inning , he started off shaky , allowing a home run to the leadoff batter and then hitting the second batter , Andrés Galarraga . Then , on his first pitch to Tim Raines , his humerus bone snapped ; the sound of it breaking could be heard throughout the stadium . Dravecky collapsed on the mound . He 'd suffered a clean break midway between his shoulder and elbow , ending his season ."
+   ],
+   "model_answer": "Billy Wagner"
+  },
+  {
+   "id": "9613f1b7906138e8",
+   "kind": "answer",
+   "question": "subcommittee on antitrust competition policy and consumer rights",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Senate Judiciary Subcommittee on Competition Policy, Antitrust, and Consumer Rights"
+  },
+  {
+   "id": "5f0a254f28a998c5",
+   "kind": "answer",
+   "question": "make a project report on agricultural crops grown in india",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "India’s Agricultural Crops: Rice, wheat, maize, pulses, cotton, sugarcane, tea, and spices."
+  },
+  {
+   "id": "b2fa38882f014d96",
+   "kind": "answer",
+   "question": "what is the moral of cat in the hat",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Mischief can be fun, but it’s best to set things right afterward."
+  },
+  {
+   "id": "cc2a7c6b33740731",
+   "kind": "answer",
+   "question": "what is a real world application of an atwood machine",
+   "gold_answers": [
+    "An elevator with a counterbalance"
+   ],
+   "model_answer": "Counterweighted elevators\n"
+  },
+  {
+   "id": "bb1f9d3375dea25f",
+   "kind": "answer",
+   "question": "when do you hear the lub and dub sounds of the heart",
+   "gold_answers": [
+    "the closing of the atrioventricular valves and semilunar valves, respectively"
+   ],
+   "model_answer": "“Lub” at the start of systole; “dub” at the start of diastole."
+  },
+  {
+   "id": "364fb9a31a0387d1",
+   "kind": "answer",
+   "question": "what was one effect of the camp david accords 1977",
+   "gold_answers": [
+    "The time that has elapsed since the Camp David Accords has left no doubt as to their enormous ramifications on Middle Eastern politics . Most notably , the perception of Egypt within the Arab world changed . With the most powerful of the Arab militaries and a history of leadership in the Arab world under Nasser , Egypt had more leverage than any of the other Arab states to advance Arab interests . Egypt was subsequently suspended from the Arab League from 1979 until 1989 ."
+   ],
+   "model_answer": "Led to the 1979 Egypt–Israel Peace Treaty."
+  },
+  {
+   "id": "cb7578b584cb04ef",
+   "kind": "answer",
+   "question": "which apostle spoke at the council of jerusalem",
+   "gold_answers": [
+    "James",
+    "Simon Peter",
+    "Barnabas",
+    "Paul"
+   ],
+   "model_answer": "Simon Peter and James the Just"
+  },
+  {
+   "id": "a53476ce5a4284a4",
+   "kind": "answer",
+   "question": "how did rogue get super strength and flight",
+   "gold_answers": [
+    "Rogue permanently absorbed the superhuman powers and the psyche of Carol Danvers, the original Ms. Marvel"
+   ],
+   "model_answer": "By absorbing Ms. Marvel’s powers."
+  },
+  {
+   "id": "1364fbd8fc6f5498",
+   "kind": "answer",
+   "question": "can a ucc be filed on an individual",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, with a valid security agreement."
+  },
+  {
+   "id": "3aab7bf5ec147840",
+   "kind": "answer",
+   "question": "the object in the mirror are closer than it appears",
+   "gold_answers": [
+    "The phrase `` objects in ( the ) mirror are closer than they appear '' is a safety warning that is required to be engraved on passenger side mirrors of motor vehicles in the USA , Canada , Nepal , India and Saudi Arabia . It is present because while these mirrors ' convexity gives them a useful field of view , it also makes objects appear smaller . Since smaller - appearing objects seem farther away than they actually are , a driver might make a maneuver such as a lane change assuming an adjacent vehicle is a safe distance behind , when in fact it is quite a bit closer . The warning serves as a reminder to the driver of this potential problem ."
+   ],
+   "model_answer": "Because the convex mirror makes objects appear smaller and farther away."
+  },
+  {
+   "id": "5657cfec4576e216",
+   "kind": "answer",
+   "question": "why did alex and ellen break up on family ties",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "He had an affair with music major Martie Brodie."
+  },
+  {
+   "id": "9fe1a3ec9257d4e7",
+   "kind": "answer",
+   "question": "what are the five pillars of islam in arabic",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "الشهادتان، الصلاة، الزكاة، الصوم، الحج"
+  },
+  {
+   "id": "65b7a90c1ca3436b",
+   "kind": "answer",
+   "question": "cast of law & order special victim unit",
+   "gold_answers": [
+    "Christopher Meloni",
+    "Mariska Hargitay",
+    "Richard Belzer",
+    "Dann Florek",
+    "Michelle Hurd",
+    "Stephanie March",
+    "Ice-T",
+    "Tamara Tunie",
+    "B. D. Wong",
+    "Diane Neal",
+    "Adam Beach",
+    "Michaela McManus",
+    "Danny Pino",
+    "Kelli Giddish",
+    "Raúl Esparza",
+    "Peter Scanavino"
+   ],
+   "model_answer": "Christopher Meloni, Mariska Hargitay, Richard Belzer, Dann Florek, Michelle Hurd, Stephanie March, Ice-T, B.D. Wong, Diane Neal, Tamara Tunie, Adam Beach, Michaela McManus, Danny Pino, Kelli Giddish, Raúl Esparza, and Peter Scanavino"
+  },
+  {
+   "id": "c571720d5c5f291c",
+   "kind": "answer",
+   "question": "percy jackson and the olympians sea of monsters summary",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Percy and his friends journey to retrieve the Golden Fleece and save Camp Half-Blood from destruction."
+  },
+  {
+   "id": "2e7d392eadf5c8e5",
+   "kind": "answer",
+   "question": "what material was used to build the roofs of houses in burzahom",
+   "gold_answers": [
+    "birch"
+   ],
+   "model_answer": "Birch thatch\n"
+  },
+  {
+   "id": "2c1a832b5967dced",
+   "kind": "answer",
+   "question": "dean koontz dark rivers of the heart summary",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Spencer Grant and his dog Rocky search for Valerie Keene after she disappears, while a secret government agency pursues them."
+  },
+  {
+   "id": "cc9ae50760215872",
+   "kind": "answer",
+   "question": "how much is john incredible pizza to get in",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "About $15–$25 per person, depending on location and package."
+  },
+  {
+   "id": "fdc9dba61377ea4f",
+   "kind": "answer",
+   "question": "dean koontz dark rivers of the heart summary",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Spencer Grant and Valerie Keene flee a secret government agency while uncovering a dark past and fighting to start a new life together."
+  },
+  {
+   "id": "2ddba6848ee045d1",
+   "kind": "answer",
+   "question": "where is the protien made in the cell",
+   "gold_answers": [
+    "in the cell nucleus",
+    "cell nucleus"
+   ],
+   "model_answer": "Ribosomes"
+  },
+  {
+   "id": "9fee5563fdc6edb2",
+   "kind": "answer",
+   "question": "the first european town in the present-day united states was new orleans",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No, Saint Augustine."
+  },
+  {
+   "id": "5cd99d1f9e868f44",
+   "kind": "answer",
+   "question": "who has won india's next super star",
+   "gold_answers": [
+    "Aman Gandotra",
+    "Natasha Bharadwaj"
+   ],
+   "model_answer": "Aman Gandhi and Shruti Sharma"
+  },
+  {
+   "id": "088c1ed931a4cec3",
+   "kind": "answer",
+   "question": "describe the impact of the crisis at little rock on the american government",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "It prompted federal troops to enforce school desegregation over state resistance."
+  },
+  {
+   "id": "1a5b9d2e1878657c",
+   "kind": "answer",
+   "question": "what is the use of adobe flash cs3 professional",
+   "gold_answers": [
+    "supported modern programming practices and enabled business applications to be developed with Flash"
+   ],
+   "model_answer": "Developing business applications with Flash."
+  },
+  {
+   "id": "57659e4930f5af50",
+   "kind": "answer",
+   "question": "when does karev die in grey's anatomy",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "He doesn’t die; he leaves in Season 16."
+  },
+  {
+   "id": "3768e2a0fb735e2d",
+   "kind": "answer",
+   "question": "where did the easter eggs and bunny come from",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Easter eggs stem from spring traditions; the Easter Bunny originated in 17th-century Germany."
+  },
+  {
+   "id": "e92831927b18f87d",
+   "kind": "answer",
+   "question": "what is the form of mozart symphony no 40",
+   "gold_answers": [
+    "G minor",
+    "minor key symphonies"
+   ],
+   "model_answer": "Four-movement Classical symphony, with a sonata-form first movement."
+  }
+ ],
+ "evidence": []
+}

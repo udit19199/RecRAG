@@ -1,0 +1,56 @@
+[
+{"id": "7feafefab509ca77", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "Sam acted in good faith and took reasonable business measures"}]},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "f5fc35731c615c2b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Google unveils new hardware"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "This week was Google’s annual hardware event"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "where the search and consumer tech giant showed off what it’s been working on"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "Google’s annual hardware event, where the search and consumer tech giant showed off"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Wired removed the article for not meeting its standards"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "the degree to which it was shared on social media and boosted in write-ups at other outlets"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "it was shared on social media and boosted in write-ups at other outlets"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]}
+]},
+{"id": "8ff782f03229e3d8", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]}
+]},
+{"id": "934cb8a261c878fb", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "After already raising its main interest rate to the highest level since 2001"}, {"item": 9, "quote": "The Fed put such pressure on the economy intentionally, hoping to starve inflation of its fuel."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "bde896346a089286", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "In the wake of the Wallabies’ World Cup flop"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "the Queensland Rugby Union have reaffirmed their position"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "they are committed to moving to a centralised high-performance model"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "but won’t follow the NSW Waratahs by handing over the keys to Rugby Australia"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 10, "quote": "the New South Wales Rugby Union was in the latter stages of handing over their license to RA"}, {"item": 10, "quote": "the NSW Waratahs, who were on the brink of insolvency, handed over their commercial and high-performance property"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "He will also be tasked with “integrating” the programs"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "RA trying to centralise all of the Super Rugby’s high-performance programs"}]}
+]}
+]

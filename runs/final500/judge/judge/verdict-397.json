@@ -1,0 +1,126 @@
+[
+{"id": "cd2e6ae54e0783ea", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "It is known for producing the long-running series \"Tom Goes to the Mayor\", \"Nathan For You\", \"Tim and Eric Awesome Show, Great Job!"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "It is known for producing the long-running series \"Tom Goes to the Mayor\", \"Nathan For You\", \"Tim and Eric Awesome Show, Great Job!"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "It is known for producing the long-running series \"Tom Goes to the Mayor\", \"Nathan For You\", \"Tim and Eric Awesome Show, Great Job!"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "It is known for producing the long-running series"}, {"item": 1, "quote": "\" and \"Check It Out!"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "Check It Out! with Dr. Steve Brule"}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 1, "quote": "It is known for producing the long-running series"}, {"item": 1, "quote": "\" and \"Check It Out!"}]},
+{"fact": "4.0", "status": "stated", "evidence": [{"item": 4, "quote": "Check It Out! with Dr. Steve Brule"}, {"item": 4, "quote": "with Dr. Steve Brule is an American sketch comedy television series that is a spin-off of \"Tim and Eric Awesome Show, Great Job!"}]},
+{"fact": "4.1", "status": "stated", "evidence": [{"item": 4, "quote": "Check It Out! with Dr. Steve Brule"}, {"item": 4, "quote": "with Dr. Steve Brule is an American sketch comedy television series that is a spin-off of \"Tim and Eric Awesome Show, Great Job!"}]}
+]},
+{"id": "fec440afe107b307", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Frederick King Keller (born 1954 in Buffalo, New York) is an American director, producer and screenwriter for film and television."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Frederick King Keller (born 1954 in Buffalo, New York) is an American director, producer and screenwriter for film and television."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Frederick King Keller (born 1954 in Buffalo, New York) is an American director, producer and screenwriter for film and television."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "Frederick King Keller (born 1954 in Buffalo, New York) is an American director, producer and screenwriter for film and television."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "Frederick King Keller (born 1954 in Buffalo, New York) is an American director, producer and screenwriter for film and television."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 5, "quote": "Frederick King Keller (born 1954 in Buffalo, New York) is an American director, producer and screenwriter for film and television."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Ian Schneider (born October 3, 1992), is an independent American film director and screenwriter."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Ian Schneider (born October 3, 1992), is an independent American film director and screenwriter."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Ian Schneider (born October 3, 1992), is an independent American film director and screenwriter."}]}
+]},
+{"id": "def0f1a0204c6597", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "is a county-level city of southwest Liaoning province, China"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "former name Ningyuan (宁远)"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "with a population of approximately 140,000 urban inhabitants"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "is located on the Liaodong Bay, i.e. the northern coast of the Bohai Sea."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "75cc7b786e1c7984", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Operation Lighthouse was the name given to the failed experimental launch"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "the failed experimental launch of four Aggregate 3 liquid-fuel rockets"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Operation Lighthouse was the name given to the failed experimental launch of four Aggregate 3 liquid-fuel rockets by Wernher von Braun and Walter Dornberger on"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "Operation Lighthouse was the name given to the failed experimental launch of four Aggregate 3 liquid-fuel rockets by Wernher von Braun and Walter Dornberger on"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "the German island of Greifswalder Oie in December 1937."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 5, "quote": "the German island of Greifswalder Oie in December 1937."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Major-General Dr. Walter Robert Dornberger (6 September 1895 – 27 June 1980)"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Major-General Dr. Walter Robert Dornberger (6 September 1895 – 27 June 1980)"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "Major-General Dr. Walter Robert Dornberger (6 September 1895 – 27 June 1980) was a German Army artillery officer"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "whose career spanned World War I"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 8, "quote": "whose career spanned World War I and World War II."}]}
+]},
+{"id": "3468bb862879a8dd", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "The S70 was essentially a facelifted 850 saloon."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "The Volvo 850 is a compact executive car that was produced by the Swedish manufacturer Volvo Cars from 1991 to 1996."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "The Volvo 850 is a compact executive car that was produced by the Swedish manufacturer Volvo Cars from 1991 to 1996."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "The Volvo 850 is a compact executive car that was produced by the Swedish manufacturer Volvo Cars from 1991 to 1996."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The 850 was the first front-wheel drive vehicle from Volvo to be sold in North America and also the first all-wheel drive Volvo."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "The 850 was the first front-wheel drive vehicle from Volvo to be sold in North America and also the first all-wheel drive Volvo."}]}
+]},
+{"id": "15ba088807e9a431", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "It is the third installment of the \"Naked\" series \"Naked Killer\" (1992) and \"Naked Weapon\" (2002)."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "It is the third installment of the \"Naked\" series \"Naked Killer\" (1992) and \"Naked Weapon\" (2002)."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "It is the third installment of the \"Naked\" series \"Naked Killer\" (1992) and \"Naked Weapon\" (2002)."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Naked Weapon (赤裸特工) is a 2002 Hong Kong action-thriller film directed by action choreographer Tony Ching and starring Maggie Q, Anya Wu and Daniel Wu."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Naked Weapon (赤裸特工) is a 2002 Hong Kong action-thriller film directed by action choreographer Tony Ching and starring Maggie Q, Anya Wu and Daniel Wu."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "Naked Weapon (赤裸特工) is a 2002 Hong Kong action-thriller film directed by action choreographer Tony Ching and starring Maggie Q, Anya Wu and Daniel Wu."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "Naked Weapon (赤裸特工) is a 2002 Hong Kong action-thriller film directed by action choreographer Tony Ching and starring Maggie Q, Anya Wu and Daniel Wu."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 8, "quote": "Naked Weapon (赤裸特工) is a 2002 Hong Kong action-thriller film directed by action choreographer Tony Ching and starring Maggie Q, Anya Wu and Daniel Wu."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 8, "quote": "Naked Weapon (赤裸特工) is a 2002 Hong Kong action-thriller film directed by action choreographer Tony Ching and starring Maggie Q, Anya Wu and Daniel Wu."}]},
+{"fact": "1.6", "status": "stated", "evidence": [{"item": 8, "quote": "Naked Weapon (赤裸特工) is a 2002 Hong Kong action-thriller film directed by action choreographer Tony Ching and starring Maggie Q, Anya Wu and Daniel Wu."}]},
+{"fact": "1.7", "status": "stated", "evidence": [{"item": 8, "quote": "Naked Weapon (赤裸特工) is a 2002 Hong Kong action-thriller film directed by action choreographer Tony Ching and starring Maggie Q, Anya Wu and Daniel Wu."}]}
+]},
+{"id": "8715f91dfa89e942", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "She is a member of the \"Game of Thrones\" stunt teams that won two Screen Actors Guild Awards, and has done stunt performances for films including \"Rogue One\"."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "She is a member of the \"Game of Thrones\" stunt teams that won two Screen Actors Guild Awards, and has done stunt performances for films including \"Rogue One\"."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "She is a member of the \"Game of Thrones\" stunt teams that won two Screen Actors Guild Awards, and has done stunt performances for films including \"Rogue One\"."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "\"Rogue One\" follows a group of rebels on a mission to steal the plans for the Death Star, the Galactic Empire's superweapon."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "\"Rogue One\" follows a group of rebels on a mission to steal the plans for the Death Star, the Galactic Empire's superweapon."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "\"Rogue One\" follows a group of rebels on a mission to steal the plans for the Death Star, the Galactic Empire's superweapon."}]}
+]},
+{"id": "1999a2f26ed9f6ce", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "888 7th Avenue is a 628 ft (191m) tall modern-style office skyscraper in Midtown Manhattan which was completed in 1969 and has 46 floors."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "888 7th Avenue is a 628 ft (191m) tall modern-style office skyscraper in Midtown Manhattan which was completed in 1969 and has 46 floors."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "888 7th Avenue is a 628 ft (191m) tall modern-style office skyscraper in Midtown Manhattan which was completed in 1969 and has 46 floors."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "888 7th Avenue is a 628 ft (191m) tall modern-style office skyscraper in Midtown Manhattan which was completed in 1969 and has 46 floors."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "200 West Street is the global headquarters of the Goldman Sachs investment banking firm."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The building is a 749 ft , 44-story building located on West Street, between Vesey and Murray Streets in Lower Manhattan."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "The building is a 749 ft , 44-story building located on West Street, between Vesey and Murray Streets in Lower Manhattan."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "The building is a 749 ft , 44-story building located on West Street, between Vesey and Murray Streets in Lower Manhattan."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 10, "quote": "The building is a 749 ft , 44-story building located on West Street, between Vesey and Murray Streets in Lower Manhattan."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 10, "quote": "The building is a 749 ft , 44-story building located on West Street, between Vesey and Murray Streets in Lower Manhattan."}]}
+]},
+{"id": "bf95c3c5a0144f64", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Bombardier Inc."}, {"item": 9, "quote": "is a multinational aerospace and transportation company based in Montreal, Quebec, Canada."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "is a multinational aerospace and transportation company based in Montreal, Quebec, Canada."}]}
+]},
+{"id": "60cce9249c4ab6d7", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "is a genus of 70–75 species of flowering plants"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "common names hydrangea or hortensia"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "is a genus of 70–75 species"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "native to southern and eastern Asia"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 9, "quote": "native to southern and eastern Asia (China, Japan, Korea, the"}, {"item": 9, "quote": "Himalayas, and Indonesia) and the Americas."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 9, "quote": "native to southern and eastern Asia (China, Japan, Korea, the"}, {"item": 9, "quote": "Himalayas, and Indonesia) and the Americas."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "It contains, 13–18 species, but is best known for a single species, Jequirity (\"A. precatorius\")."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "It contains, 13–18 species, but is best known for a single species, Jequirity (\"A. precatorius\")."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "It contains, 13–18 species, but is best known for a single species, Jequirity (\"A. precatorius\")."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "It contains, 13–18 species, but is best known for a single species, Jequirity (\"A. precatorius\")."}]}
+]},
+{"id": "de8bcdb308c71e5e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Age of Chance were a British alternative rock-dance crossover band from Leeds, England active from 1985 to 1991."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Age of Chance were a British alternative rock-dance crossover band from Leeds, England active from 1985 to 1991."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Age of Chance were a British alternative rock-dance crossover band from Leeds, England active from 1985 to 1991."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Vector was a rock band formed in Sacramento, California in the early 1980s by Jimmy Abegg, Steve Griffith and Charlie Peacock."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Vector was a rock band formed in Sacramento, California in the early 1980s by Jimmy Abegg, Steve Griffith and Charlie Peacock."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Vector was a rock band formed in Sacramento, California in the early 1980s by Jimmy Abegg, Steve Griffith and Charlie Peacock."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "Vector was a rock band formed in Sacramento, California in the early 1980s by Jimmy Abegg, Steve Griffith and Charlie Peacock."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 4, "quote": "Vector was a rock band formed in Sacramento, California in the early 1980s by Jimmy Abegg, Steve Griffith and Charlie Peacock."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 4, "quote": "Vector was a rock band formed in Sacramento, California in the early 1980s by Jimmy Abegg, Steve Griffith and Charlie Peacock."}]}
+]},
+{"id": "4503ac2e841433d3", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Dr. Seuss' The Cat in the Hat is a 2003 American family comedy film directed by Bo Welch."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Dr. Seuss' The Cat in the Hat is a 2003 American family comedy film directed by Bo Welch."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Dr. Seuss' The Cat in the Hat is a 2003 American family comedy film directed by Bo Welch."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "Dr. Seuss' The Cat in the Hat is a 2003 American family comedy film directed by Bo Welch."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "Dr. Seuss' The Cat in the Hat is a 2003 American family comedy film directed by Bo Welch."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Robert W. \"Bo\" Welch III (born November 30, 1951) is an American production designer and director."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Robert W. \"Bo\" Welch III (born November 30, 1951) is an American production designer and director."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Robert W. \"Bo\" Welch III (born November 30, 1951) is an American production designer and director."}]}
+]}
+]

@@ -1,0 +1,84 @@
+[
+  {
+    "id": "24761214809952a1",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "dc6ebe94f4df1ff1",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "It was almost like this very strange, subtle clue to the media"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "that they don't know everything that happened in that relationship"}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "I can have something really major and traumatic happen to me and they don't know about it"}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "she told NPR."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]}
+    ]
+  },
+  {
+    "id": "f9e2f47fd154350c",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "contradicted", "evidence": [{"item": 6, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+      {"fact": "2.1", "status": "contradicted", "evidence": [{"item": 6, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+      {"fact": "3.0", "status": "stated", "evidence": [{"item": 8, "quote": "“This man stole billions of dollars from thousands of people,” prosecutor Thane Rehn told the court."}, {"item": 8, "quote": "He defrauded sophisticated investors and lenders"}]},
+      {"fact": "3.1", "status": "stated", "evidence": [{"item": 8, "quote": "He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence."}]},
+      {"fact": "3.2", "status": "stated", "evidence": [{"item": 8, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+      {"fact": "3.3", "status": "missing", "evidence": []},
+      {"fact": "3.4", "status": "stated", "evidence": [{"item": 8, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]}
+    ]
+  },
+  {
+    "id": "62d260aef336d018",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Beeper Mini will be free for the time being given the unstable nature of Beeper’s status and Apple’s attempts at shutting it down."}]},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Beeper Mini will be free for the time being given the unstable nature of Beeper’s status and Apple’s attempts at shutting it down."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Beeper Mini will be free for the time being given the unstable nature of Beeper’s status and Apple’s attempts at shutting it down."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "Beeper Mini will be free for the time being given the unstable nature of Beeper’s status and Apple’s attempts at shutting it down."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "Beeper Mini will be free for the time being given the unstable nature of Beeper’s status and Apple’s attempts at shutting it down."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "Beeper Mini was made possible because the team behind the app has managed to reverse-engineer the iMessage protocol, they say."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "Beeper Mini was made possible because the team behind the app has managed to reverse-engineer the iMessage protocol, they say."}]}
+    ]
+  },
+  {
+    "id": "95f123d60dde3c46",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors"}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+      {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 5, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "as he was the CEO of FTX."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+      {"fact": "3.0", "status": "missing", "evidence": []},
+      {"fact": "3.1", "status": "missing", "evidence": []},
+      {"fact": "3.2", "status": "missing", "evidence": []},
+      {"fact": "3.3", "status": "missing", "evidence": []},
+      {"fact": "3.4", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "c32c538f9882e5d4",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Automakers and technology companies are building ever-more sophisticated digital platforms into the future generations of cars and other vehicles."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Automakers and technology companies are building ever-more sophisticated digital platforms into the future generations of cars and other vehicles."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that."}]}
+    ]
+  }
+]

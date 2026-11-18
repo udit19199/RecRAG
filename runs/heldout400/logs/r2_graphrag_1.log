@@ -1,0 +1,81 @@
+graphrag: saved retrieval for multihop-rag-118
+graphrag: saved retrieval for multihop-rag-142
+graphrag: saved retrieval for multihop-rag-186
+graphrag: saved retrieval for multihop-rag-239
+graphrag: saved retrieval for multihop-rag-265
+graphrag: saved retrieval for multihop-rag-268
+graphrag: saved retrieval for multihop-rag-310
+graphrag: saved retrieval for multihop-rag-358
+graphrag: saved retrieval for multihop-rag-387
+graphrag: saved retrieval for multihop-rag-445
+graphrag: saved retrieval for multihop-rag-480
+graphrag: saved retrieval for multihop-rag-522
+graphrag: saved retrieval for multihop-rag-542
+graphrag: saved retrieval for multihop-rag-571
+graphrag: saved retrieval for multihop-rag-617
+graphrag: saved retrieval for multihop-rag-651
+graphrag: saved retrieval for multihop-rag-693
+graphrag: saved retrieval for multihop-rag-706
+graphrag: saved retrieval for multihop-rag-711
+graphrag: saved retrieval for multihop-rag-748
+graphrag: saved retrieval for multihop-rag-762
+graphrag: saved retrieval for multihop-rag-765
+graphrag: saved retrieval for multihop-rag-780
+graphrag: saved retrieval for multihop-rag-848
+graphrag: saved retrieval for multihop-rag-854
+graphrag: saved retrieval for multihop-rag-860
+graphrag: saved retrieval for multihop-rag-980
+graphrag: saved retrieval for multihop-rag-998
+graphrag: saved retrieval for multihop-rag-1016
+graphrag: saved retrieval for multihop-rag-1042
+graphrag: saved retrieval for multihop-rag-1054
+graphrag: saved retrieval for multihop-rag-1095
+graphrag: saved retrieval for multihop-rag-1110
+graphrag: saved retrieval for multihop-rag-1124
+graphrag: saved retrieval for multihop-rag-1128
+graphrag: saved retrieval for multihop-rag-1155
+Received notification from DBMS server: <GqlStatusObject gql_status='01N50', status_description='warn: label does not exist. The label `Publisher OR pub` does not exist in database `recrag-benchmark-e5315c2b5c9f57e2595cc51c`. Verify that the spelling is correct.', position=<SummaryInputPosition line=2, column=12, offset=119>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 119, 'line': 2, 'column': 12}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "EXPLAIN MATCH (a:Article)-[:PUBLISHED_BY]->(pub), (a)-[:MENTIONS]->(p:Person), (a)-[:FROM_CHUNK]->(c:Chunk)\nWHERE (pub:`Publisher OR pub`:Organization)\n  AND (toLower(p.name) CONTAINS 'sam bankman-fried' OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'sam bankman-fried'))\n  AND (\n    toLower(pub.name) CONTAINS 'the verge'\n    OR any(alias IN coalesce(pub.aliases, []) WHERE toLower(alias) CONTAINS 'the verge')\n    OR toLower(pub.name) CONTAINS 'techcrunch'\n    OR any(alias IN coalesce(pub.aliases, []) WHERE toLower(alias) CONTAINS 'techcrunch')\n  )\nRETURN a.name AS article, a.published_on AS published_on, pub.name AS publisher, c.text AS facts\nLIMIT 10"
+Received notification from DBMS server: <GqlStatusObject gql_status='01N50', status_description='warn: label does not exist. The label `Publisher OR pub` does not exist in database `recrag-benchmark-e5315c2b5c9f57e2595cc51c`. Verify that the spelling is correct.', position=<SummaryInputPosition line=2, column=12, offset=111>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 111, 'line': 2, 'column': 12}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "MATCH (a:Article)-[:PUBLISHED_BY]->(pub), (a)-[:MENTIONS]->(p:Person), (a)-[:FROM_CHUNK]->(c:Chunk)\nWHERE (pub:`Publisher OR pub`:Organization)\n  AND (toLower(p.name) CONTAINS 'sam bankman-fried' OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'sam bankman-fried'))\n  AND (\n    toLower(pub.name) CONTAINS 'the verge'\n    OR any(alias IN coalesce(pub.aliases, []) WHERE toLower(alias) CONTAINS 'the verge')\n    OR toLower(pub.name) CONTAINS 'techcrunch'\n    OR any(alias IN coalesce(pub.aliases, []) WHERE toLower(alias) CONTAINS 'techcrunch')\n  )\nRETURN a.name AS article, a.published_on AS published_on, pub.name AS publisher, c.text AS facts\nLIMIT 10"
+graphrag: saved retrieval for multihop-rag-1192
+graphrag: saved retrieval for multihop-rag-1194
+graphrag: saved retrieval for multihop-rag-1207
+graphrag: saved retrieval for multihop-rag-1212
+graphrag: saved retrieval for multihop-rag-1222
+graphrag: saved retrieval for multihop-rag-1269
+graphrag: saved retrieval for multihop-rag-1287
+graphrag: saved retrieval for multihop-rag-1333
+Received notification from DBMS server: <GqlStatusObject gql_status='01N01', status_description='warn: feature deprecated with replacement. id is deprecated. It is replaced by elementId or consider using an application-generated id.', position=<SummaryInputPosition line=4, column=7, offset=239>, raw_classification='DEPRECATION', classification=<NotificationClassification.DEPRECATION: 'DEPRECATION'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'DEPRECATION', '_severity': 'WARNING', '_position': {'offset': 239, 'line': 4, 'column': 7}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "EXPLAIN MATCH (a:Article)-[:MENTIONS]->(p:Person)\nMATCH (a)-[r:MENTIONS]->(m:__Entity__)\nWHERE (toLower(p.name) CONTAINS 'sam bankman-fried' OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'sam bankman-fried'))\n  AND id(m) <> id(p)\n  AND (\n    toLower(coalesce(a.name, '')) CONTAINS 'fortune'\n    OR toLower(coalesce(a.title, '')) CONTAINS 'fortune'\n    OR EXISTS {\n      MATCH (a)-[:PUBLISHED_BY]->(pub:Publisher)\n      WHERE toLower(pub.name) CONTAINS 'fortune'\n    }\n  )\nRETURN a.title AS article, m.name AS connected_entity, type(r) AS relationship\nLIMIT 10"
+Received notification from DBMS server: <GqlStatusObject gql_status='01N01', status_description='warn: feature deprecated with replacement. id is deprecated. It is replaced by elementId or consider using an application-generated id.', position=<SummaryInputPosition line=4, column=16, offset=248>, raw_classification='DEPRECATION', classification=<NotificationClassification.DEPRECATION: 'DEPRECATION'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'DEPRECATION', '_severity': 'WARNING', '_position': {'offset': 248, 'line': 4, 'column': 16}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "EXPLAIN MATCH (a:Article)-[:MENTIONS]->(p:Person)\nMATCH (a)-[r:MENTIONS]->(m:__Entity__)\nWHERE (toLower(p.name) CONTAINS 'sam bankman-fried' OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'sam bankman-fried'))\n  AND id(m) <> id(p)\n  AND (\n    toLower(coalesce(a.name, '')) CONTAINS 'fortune'\n    OR toLower(coalesce(a.title, '')) CONTAINS 'fortune'\n    OR EXISTS {\n      MATCH (a)-[:PUBLISHED_BY]->(pub:Publisher)\n      WHERE toLower(pub.name) CONTAINS 'fortune'\n    }\n  )\nRETURN a.title AS article, m.name AS connected_entity, type(r) AS relationship\nLIMIT 10"
+Received notification from DBMS server: <GqlStatusObject gql_status='01N01', status_description='warn: feature deprecated with replacement. id is deprecated. It is replaced by elementId or consider using an application-generated id.', position=<SummaryInputPosition line=4, column=7, offset=231>, raw_classification='DEPRECATION', classification=<NotificationClassification.DEPRECATION: 'DEPRECATION'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'DEPRECATION', '_severity': 'WARNING', '_position': {'offset': 231, 'line': 4, 'column': 7}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "MATCH (a:Article)-[:MENTIONS]->(p:Person)\nMATCH (a)-[r:MENTIONS]->(m:__Entity__)\nWHERE (toLower(p.name) CONTAINS 'sam bankman-fried' OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'sam bankman-fried'))\n  AND id(m) <> id(p)\n  AND (\n    toLower(coalesce(a.name, '')) CONTAINS 'fortune'\n    OR toLower(coalesce(a.title, '')) CONTAINS 'fortune'\n    OR EXISTS {\n      MATCH (a)-[:PUBLISHED_BY]->(pub:Publisher)\n      WHERE toLower(pub.name) CONTAINS 'fortune'\n    }\n  )\nRETURN a.title AS article, m.name AS connected_entity, type(r) AS relationship\nLIMIT 10"
+Received notification from DBMS server: <GqlStatusObject gql_status='01N01', status_description='warn: feature deprecated with replacement. id is deprecated. It is replaced by elementId or consider using an application-generated id.', position=<SummaryInputPosition line=4, column=16, offset=240>, raw_classification='DEPRECATION', classification=<NotificationClassification.DEPRECATION: 'DEPRECATION'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'DEPRECATION', '_severity': 'WARNING', '_position': {'offset': 240, 'line': 4, 'column': 16}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "MATCH (a:Article)-[:MENTIONS]->(p:Person)\nMATCH (a)-[r:MENTIONS]->(m:__Entity__)\nWHERE (toLower(p.name) CONTAINS 'sam bankman-fried' OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'sam bankman-fried'))\n  AND id(m) <> id(p)\n  AND (\n    toLower(coalesce(a.name, '')) CONTAINS 'fortune'\n    OR toLower(coalesce(a.title, '')) CONTAINS 'fortune'\n    OR EXISTS {\n      MATCH (a)-[:PUBLISHED_BY]->(pub:Publisher)\n      WHERE toLower(pub.name) CONTAINS 'fortune'\n    }\n  )\nRETURN a.title AS article, m.name AS connected_entity, type(r) AS relationship\nLIMIT 10"
+graphrag: saved retrieval for multihop-rag-1338
+graphrag: saved retrieval for multihop-rag-1357
+graphrag: saved retrieval for multihop-rag-1368
+graphrag: saved retrieval for multihop-rag-1370
+graphrag: saved retrieval for multihop-rag-1374
+graphrag: saved retrieval for multihop-rag-1424
+graphrag: saved retrieval for multihop-rag-1428
+graphrag: saved retrieval for multihop-rag-1449
+graphrag: saved retrieval for multihop-rag-1500
+graphrag: saved retrieval for multihop-rag-1505
+graphrag: saved retrieval for multihop-rag-1530
+[#C1A3]  _: <CONNECTION> error: Failed to read from defunct connection IPv4Address(('127.0.0.1', 7687)) (ResolvedIPv4Address(('127.0.0.1', 7687))): TimeoutError('timed out')
+Transaction failed and will be retried in 0.833551275877125s (Failed to read from defunct connection IPv4Address(('127.0.0.1', 7687)) (ResolvedIPv4Address(('127.0.0.1', 7687))))
+Transaction failed and will be retried in 0.8759315297771715s (Couldn't connect to 127.0.0.1:7687 (resolved to ('127.0.0.1:7687',)):
+Failed to read four byte Bolt handshake response from server ResolvedIPv4Address(('127.0.0.1', 7687)) (deadline Deadline(timeout=60.0)))
+graphrag: saved retrieval for multihop-rag-1538
+Transaction failed and will be retried in 0.8715487885178588s (Couldn't connect to 127.0.0.1:7687 (resolved to ('127.0.0.1:7687',)):
+Failed to read four byte Bolt handshake response from server ResolvedIPv4Address(('127.0.0.1', 7687)) (deadline Deadline(timeout=60.0)))
+Transaction failed and will be retried in 0.9116442513123928s (Couldn't connect to 127.0.0.1:7687 (resolved to ('127.0.0.1:7687',)):
+Failed to read four byte Bolt handshake response from server ResolvedIPv4Address(('127.0.0.1', 7687)) (deadline Deadline(timeout=60.0)))
+graphrag: saved retrieval for multihop-rag-1555
+Transaction failed and will be retried in 0.9586043174828944s (Couldn't connect to 127.0.0.1:7687 (resolved to ('127.0.0.1:7687',)):
+Failed to read four byte Bolt handshake response from server ResolvedIPv4Address(('127.0.0.1', 7687)) (deadline Deadline(timeout=60.0)))
+Transaction failed and will be retried in 0.8263039944029007s (Couldn't connect to 127.0.0.1:7687 (resolved to ('127.0.0.1:7687',)):
+Failed to read four byte Bolt handshake response from server ResolvedIPv4Address(('127.0.0.1', 7687)) (deadline Deadline(timeout=60.0)))
+graphrag: saved retrieval for multihop-rag-1599
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/uditagarwal19199/Workspace/HPE/RecRAG/benchmark.py", line 583, in run
+    raise RuntimeError(
+RuntimeError: 3 questions failed in a row; last error: ServiceUnavailable("Couldn't connect to 127.0.0.1:7687 (resolved to ('127.0.0.1:7687',)):\nFailed to read four byte Bolt handshake response from server ResolvedIPv4Address(('127.0.0.1', 7687)) (deadline Deadline(timeout=60.0))")

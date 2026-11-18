@@ -1,0 +1,25 @@
+[
+{"id": "a0b10759063bb02b", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]}
+]},
+{"id": "32de29eb1810f1ad", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "The pastor went on to explain that Jesus brought more positivity than anyone"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "which is why it's important to keep faith aligned with that practice of positive thinking."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "The pastor went on to explain that Jesus brought more positivity than anyone"}, {"item": 4, "quote": "which is why it's important to keep faith aligned with that practice of positive thinking."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 10, "quote": "Roumie said that building a habit of prayer"}, {"item": 10, "quote": "He added, \"As you consistently tap into that habit, you find your relationship with Jesus growing deeper and deeper, just automatically."}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 10, "quote": "Roumie said that building a habit of prayer"}, {"item": 10, "quote": "He added, \"As you consistently tap into that habit, you find your relationship with Jesus growing deeper and deeper, just automatically."}]}
+]},
+{"id": "c38bdc48963b62d6", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse."}]}
+]}
+]

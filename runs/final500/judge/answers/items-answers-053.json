@@ -1,0 +1,567 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "672988541e72ab63",
+   "kind": "answer",
+   "question": "what does cost of goods sold consist of",
+   "gold_answers": [
+    "Costs are associated with particular goods using one of the several formulas , including specific identification , first - in first - out ( FIFO ) , or average cost . Costs include all costs of purchase , costs of conversion and other costs that are incurred in bringing the inventories to their present location and condition . Costs of goods made by the businesses include material , labor , and allocated overhead . The costs of those goods which are not yet sold are deferred as costs of inventory until the inventory is sold or written down in value ."
+   ],
+   "model_answer": "Product or raw-material costs, shipping, storage, direct labor, and factory overhead."
+  },
+  {
+   "id": "fb3815734eac78fe",
+   "kind": "answer",
+   "question": "jane the virgin recap season 4 episode 16",
+   "gold_answers": [
+    "Jane and Rafael start saving up to buy a one - bedroom apartment , but their plan falls apart when Mateo breaks an antique $4,000 clock . Rafael moves into the Villanueva house , but after Alba hits Mateo , the two get into a heated argument and Rafael moves back out . Xiomara starts chemotherapy , and makes a friend named Donna . The timeline moves forward nine weeks , and Donna dies of unforeseen consequences . Xiomara is shown not to be doing well due to the chemotherapy , Alba and Rafael are still in a fight and River and Rogelio are still arguing over the Passions of Santos adaptation . Alba breaks down to Jane , and she and Rafael make up . Xiomara bonds with River over telenovelas , after she accidentally eats a pot brownie , and she agrees to do the Passions of Steve and Brenda the Latin American way . Jane Ramos gets herself disbarred , and as a result gets the case against Petra thrown out .",
+    "No . overall No. in season Title Directed by Written by Original air date U.S. viewers ( millions ) 65 `` Chapter Sixty - Five '' Brad Silberling Jennie Snyder Urman & Paul Sciarrotta October 13 , 2017 ( 2017 - 10 - 13 ) 0.68 Picking up immediately after where Season 3 left off , Jane is reunited with her first love , Adam , who found the love letter that Michael wrote . She is surprised , but happy , to see him . However , both Xo and Alba are less thrilled that he is back . Meanwhile , Rafael loses ownership of the hotel to his sister and as a result , he finds himself living at Jane 's house , broke and homeless . Jane and Rafael learn that the missing Petra has been found after she got away from Anezka and they rush to her side , but Anezka is nowhere to be found . When Petra returns to the hotel , Luisa thinks that Petra is Anezka . Petra goes along with the game , until the real Anezka returns . Elsewhere , Xo and Rogelio 's married life is interrupted when they confront the realization that Darci is having Rogelio 's baby and she wants full custody . 66 `` Chapter Sixty - Six '' Gina Lamar Valentina Garza & Jessica O'Toole & Amy Rardin October 20 , 2017 ( 2017 - 10 - 20 ) 0.61 Jane 's relationship with Adam helps bring out her `` fun side '' and reminds her that she is n't just a mom . However , when Adam gets a job opportunity out of state , he asks for Jane 's opinion on if he should stay or go . Meanwhile , Rogelio continues to face issues with his co-star at work and things are about to get even worse . Xo is helping to take care of Darci to prove that Rogelio is committed to being a father to the baby . Also , Petra and Rafael begin working together to try and buy back the hotel from Luisa , but they are running into trouble involving Anezka , causing tension between them . 67 `` Chapter Sixty - Seven '' Fernando Sariñana Carolina Rivera & Micah Schraft October 27 , 2017 ( 2017 - 10 - 27 ) 0.60 Jane and Adam 's relationship seems to be moving on , and Jane thinks that it might be time for him to meet her son Mateo , but Rafael is not happy with this idea . Meanwhile , as the arrival of Darci 's baby approaches , Rogelio 's jealously of her new boyfriend increases as well . Trying to be supportive , Xo encourages Rogelio to step up and be the father he was meant to be . Elsewhere , Rafael is determined to get his hotel and life back from Luisa and will do whatever he has to do to make it happen , with or without Petra 's help . 68 `` Chapter Sixty - Eight '' Gina Lamar Deirdre Shaw & Chantelle M. Wells November 3 , 2017 ( 2017 - 11 - 03 ) 0.69 Jane becomes angry when she learns that Rafael introduced Mateo to his new girlfriend , Katherine , without her consent because she thinks Katherine is a negative influence on both Rafael and Mateo . Jane turns to Petra for help with the situation . Meanwhile , Rogelio and Darci struggle to choose a name for the baby . Elsewhere , Xo , who is focused on opening her own dance studio , decides to go into business with an unlikely foe . 69 5 `` Chapter Sixty - Nine '' Stuart Gillard Paul Sciarrotta November 10 , 2017 ( 2017 - 11 - 10 ) 0.65 After Adam reveals his dating past to Jane , she becomes so unsure and insecure that it puts a strain on their relationship . Meanwhile , Lina seeks Jane 's advice about whether she should get married or not . Petra hears some important information that could help Rafael get the hotel back . Also , Xo asks Rogelio to consider having a medical procedure ( vasectomy ) done , but he is very hesitant . 70 6 `` Chapter Seventy '' Melanie Mayron Carolina Rivera & Micah Schraft November 17 , 2017 ( 2017 - 11 - 17 ) 0.61 Jane 's book is finally being released but her plans to have a party at the local bookshop where she was inspired to be a writer hit a snag . Always wanting to help Jane , Rogelio devises a plan to save the day , but one of his arch - rivals threatens to ruin the day . Meanwhile , Rafael gets a new job , but it is not exactly what he was hoping for . Also , Petra has come up with an interesting strategy to get the Marbella Hotel back from Luisa , but Rafael wants nothing to do with the scheme . 71 7 `` Chapter Seventy - One '' Micah Schraft Valentina Garza & Deidre Shaw December 8 , 2017 ( 2017 - 12 - 08 ) 0.65 Anezka is revealed to have faked her death to see where her loyalties lie ; initially , she trusts Petra after believing she saw her cry , but after finding out she was n't crying because of her fake death , she threatens Petra . Later , Anezka falls from Petra 's apartment to her death ... for real . Meanwhile , Xiomara and Jane set off on Jane 's book tour , when Alba decides to tag along . After they get back , Jane and Rafael share a kiss . 72 8 `` Chapter Seventy - Two '' Melanie Mayron Carolina Rivera & Paul Sciarrotta January 26 , 2018 ( 2018 - 01 - 26 ) 0.68 Mateo starts kindergarten and invites a friend over to Xiomara and Rogelio 's house . Jane and Rafael try to cover up that they are pretending to live in their house so they do n't get kicked out . Jane and Rafael show mixed emotions following the kiss and try again , which Mateo notices . He then proclaims : `` Does this mean you 're going to get married ? '' After Xo convinces Rogelio to attend couples therapy , they both are surprised by their emotions . Meanwhile , Petra hires a lawyer named Jane Ramos ( Rosario Dawson ) , to ensure she gets no charges pending Anezka 's death . Also , Rafael moves out of Jane 's house into his new apartment . 73 9 `` Chapter Seventy - Three '' Eric Lea Valentina Garza & Chantelle M. Wells February 2 , 2018 ( 2018 - 02 - 02 ) 0.67 When Jane and Rafael finally realize that the uncertain state of their relationship ( or lack of it ) is stressing out Mateo , they decide that they need to make a decision . Meanwhile , Petra is on the outs with Jane and Rafael after the Luisa fiasco , so she tries to figure out a way to get back into their good graces . Elsewhere , Rogelio and Xo are both contemplating their career choices . 74 10 `` Chapter Seventy - Four '' Gina Rodriguez Micah Schraft & Paul Sciarrotta February 9 , 2018 ( 2018 - 02 - 09 ) 0.80 Jane and Rafael try to be friends , which works great until Jane goes on a date . Meanwhile , Petra and Jane 's new partnership is off to a rocky start , but they both know they have to find a way to work together somehow . Rogelio is convinced he has male post-partum depression , which puts him at odds with with celebrity Post-Partum Advocate River Fields ( guest star Brooke Shields ) on The Talk . Also , Alba finally confides in Jane why she turned down the marriage proposal , leaving Jane to help Alba in the romance department when Jane takes Alba to a sex store and buys her a vibrator . Elsewhere , Jane and Rafael agree to have sex , and Petra questions her own sexual identity when she starts to have sex dreams about Jane `` J.R. '' Ramos after the lawyer begins flirting with her . 75 11 `` Chapter Seventy - Five '' Gina Lamar Merigan Mulhern March 2 , 2018 ( 2018 - 03 - 02 ) 0.59 Jane is ready to move on from the Marbella Hotel issues and pursue writing full time , but an unexpected development forces her to consider returning to her teaching roots . Xiomara decides to go back to school where she listens in on an art history class , while Jane teaches a seminar about writing . Here , Jane finds out Jonathan Chavez , her former advisor , is taking advantage of another student of his . While trying to warn the student , Jane accidentally grabs her breasts to avoid falling over and , as a result , does n't get the teaching job she was applying for . Meanwhile , Petra gets arrested for Anezka 's murder due to the blackmailer planting the screws in her apartment , leading Jane Ramos to tell Petra that she was framing her because she was being threatened by an unknown blackmailer . Also , Rafael and Jane continue their affair . Elsewhere , Rogelio tries to get Eva Longoria to join his Passions of Santos reboot , but instead finds out the two are distant cousins . 76 12 `` Chapter Seventy - Six '' Melanie Mayron Leah Longoria March 9 , 2018 ( 2018 - 03 - 09 ) 0.58 Jane 's fixation on a negative review has left her with writer 's block , so Rogelio suggests she take a writing class to help . With the encouragement of Jane , Rafael is ready to dig into his past to find out who his real biological parents are . Meanwhile , Rogelio is trying to make things less about him and more about Xo , but he grows suspicious when he learns she is keeping a secret from him . But the secret Xo has been keeping is not what Rogelio suspected . Elsewhere , Petra tests the loyalty of her lawyer , Jane Ramos , by pretending to be romantically interested in her while trying to find out the identity of the blackmailer . After Petra confides in Jane R. of her feelings which are not fake , the two of them sleep together for the first time . 77 13 `` Chapter Seventy - Seven '' Gina Lamar Deirdre Shaw & Chantelle M. Wells March 16 , 2018 ( 2018 - 03 - 16 ) 0.59 When Jane , Rogelio and Alba learn what is going on with Xo who might have breast cancer , they all try to comfort her , but Xo insists they let her live her life . Meanwhile , Rogelio finally gets River Fields to agree to meet with him , but he learns that River has another plan in mind . Also , Rafael is on a mission to find his sister , who may have the information he has been looking for of his origins . Rafael visits Rose in prison to ask for her help , but he quickly turns her down when she makes a demand to know Luisa 's location . Also , Jane is upset with Petra after her twin girls spill a secret to Mateo about the Tooth Fairy being make believe . At the same time , Jane ' J.R. ' Ramos tells Petra after their romantic night together that she is not interested in a relationship due to the blackmailer paying a visit to Jane R. 's dementia - stricken mother in a rest home . At the end , the identity of Jane R 's blackmailer is finally revealed . 78 14 `` Chapter Seventy - Eight '' Justin Baldoni Valentina Garza & Micah Schraft March 23 , 2018 ( 2018 - 03 - 23 ) 0.65 Xo struggles to make an important decision on whether or not to get a full mastectomy and looks to Jane for guidance , leaving Rogelio feeling like an outsider . Alba is frustrated with Rogelio when it seems he is once again making his career a priority over Xo 's well being . Meanwhile , Petra turns to Rafael for advice on her love life after he finally learns about her new romance with J.R. 79 15 `` Chapter Seventy - Nine '' Gina Lamar Paul Sciarrotta April 6 , 2018 ( 2018 - 04 - 06 ) 0.53 80 16 `` Chapter Eighty '' Micah Schraft Micah Schraft April 13 , 2018 ( 2018 - 04 - 13 ) 0.57 Jane and Rafael start saving up to buy a one - bedroom apartment , but their plan falls apart when Mateo breaks an antique $4,000 clock . Rafael moves into the Villanueva house , but after Alba hits Mateo , the two get into a heated argument and Rafael moves back out . Xiomara starts chemotherapy , and makes a friend named Donna . The timeline moves forward nine weeks , and Donna dies of unforeseen consequences . Xiomara is shown not to be doing well due to the chemotherapy , Alba and Rafael are still in a fight and River and Rogelio are still arguing over the Passions of Santos adaptation . Alba breaks down to Jane , and she and Rafael make up . Xiomara bonds with River over telenovelas , after she accidentally eats a pot brownie , and she agrees to do the Passions of Steve and Brenda the Latin American way . Jane Ramos gets herself disbarred , and as a result gets the case against Petra thrown out . 81 17 `` Chapter Eighty - One '' Gina Lamar Jennie Snyder Urman & Paul Sciarrotta April 20 , 2018 ( 2018 - 04 - 20 ) 0.58 Rafael intends to propose to Jane , however Rose 's news unsettles him . Alba becomes a citizen and the Villanueva 's throw her a surprise party . Jane Ramos and Petra plan to move in together , until Jane finds out that Petra killed Anezka . As she walks out , Krishna tells her that her life is in danger . J.R. saves Petra 's life by shooting , and killing , the blackmailer . As Jane meets Rafael , Michael is revealed to be alive ."
+   ],
+   "model_answer": "Jane’s writing career takes a major step forward as she and Rafael navigate relationship challenges, while Petra’s romance with JR faces complications."
+  },
+  {
+   "id": "8f5f775c6ef82004",
+   "kind": "answer",
+   "question": "what is the total eclipse of the heart video about",
+   "gold_answers": [
+    "The music video for `` Total Eclipse of the Heart '' was directed by Russell Mulcahy and was filmed on location at the Holloway Sanatorium , a large Victorian Gothic hospital near Virginia Water , Surrey , England . The video features Bonnie Tyler clad in white , dreaming or fantasizing about her students in a boys ' boarding school . Young men are seen dancing and participating in various school activities and singing in a choir ."
+   ],
+   "model_answer": "Bonnie Tyler dreams of students at a boys’ boarding school, where young men dance, take part in school activities, and sing in a choir."
+  },
+  {
+   "id": "e409df3f7b2c18a3",
+   "kind": "answer",
+   "question": "where have you been all my life arthur alexander",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "A Barry Mann and Cynthia Weil song, released by Arthur Alexander in 1962 as the B-side of “Soldier of Love.”"
+  },
+  {
+   "id": "5b2024d8ecb7ef39",
+   "kind": "answer",
+   "question": "when do the grand magic games start in fairy tail",
+   "gold_answers": [
+    "Crocus, the Flower-Blooming Capital"
+   ],
+   "model_answer": "Three months after they’re announced."
+  },
+  {
+   "id": "12aad2731248f716",
+   "kind": "answer",
+   "question": "what is the first step in the evolution of the eye",
+   "gold_answers": [
+    "photoreceptor proteins that sense light",
+    "eyespots",
+    "photoreceptor proteins that sense light, found even in unicellular organisms, called \"eyespots\""
+   ],
+   "model_answer": "Light-sensitive cells forming an eyespot\n"
+  },
+  {
+   "id": "68ef084d23397554",
+   "kind": "answer",
+   "question": "where did the idea of fortnite come from",
+   "gold_answers": [
+    "as a cross between Minecraft and Left 4 Dead"
+   ],
+   "model_answer": "An internal game jam project"
+  },
+  {
+   "id": "6e093be04e6d3387",
+   "kind": "answer",
+   "question": "how big is the celebrity big brother house",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "About 3,000 square feet."
+  },
+  {
+   "id": "03f4ff809088a692",
+   "kind": "answer",
+   "question": "where is the crown of thorns starfish located",
+   "gold_answers": [
+    "perhaps most common in Australia, but can occur at tropical and subtropical latitudes from the Red Sea and the east African coast across the Indian Ocean, and across the Pacific Ocean to the west coast of Central America"
+   ],
+   "model_answer": "Indo-Pacific coral reefs\n"
+  },
+  {
+   "id": "f9462cbd363d7de8",
+   "kind": "answer",
+   "question": "when were 2 dollar bills stopped being made",
+   "gold_answers": [
+    "current denomination of U.S. currency"
+   ],
+   "model_answer": "They were discontinued in August 1966 and resumed in 1976."
+  },
+  {
+   "id": "89a38dacf5ebc3b6",
+   "kind": "answer",
+   "question": "uruguay is located along what body of water",
+   "gold_answers": [
+    "Bay of Montevideo"
+   ],
+   "model_answer": "Atlantic Ocean"
+  },
+  {
+   "id": "b9a0dc5df24efa08",
+   "kind": "answer",
+   "question": "where is the dead sea located in jordan",
+   "gold_answers": [
+    "The Dead Sea ( Hebrew : יָם הַמֶּלַח ‬ Yam ha - Melah lit . Sea of Salt ; Arabic : البحر الميت ‎ Al - Bahr al - Mayyit ) is a salt lake bordered by Jordan to the east and Israel and Palestine to the west . Its surface and shores are 430.5 metres ( 1,412 ft ) below sea level , Earth 's lowest elevation on land . The Dead Sea is 304 m ( 997 ft ) deep , the deepest hypersaline lake in the world . With a salinity of 342 g / kg , or 34.2 % , ( in 2011 ) , it is 9.6 times as salty as the ocean and one of the world 's saltiest bodies of water . This salinity makes for a harsh environment in which plants and animals can not flourish , hence its name . The Dead Sea is 50 kilometres ( 31 mi ) long and 15 kilometres ( 9 mi ) wide at its widest point . It lies in the Jordan Rift Valley , and its main tributary is the Jordan River ."
+   ],
+   "model_answer": "Along Jordan’s western border in the Jordan Rift Valley."
+  },
+  {
+   "id": "13ecdd92dfac8d16",
+   "kind": "answer",
+   "question": "where does the saying like a boss come from",
+   "gold_answers": [
+    "`` Like a Boss '' is a song written and recorded by comedy hip hop troupe The Lonely Island for their debut studio album Incredibad . The song is a parody of the first official single from Slim Thug 's first album Already Platinum , also named `` Like a Boss '' . The song had multiple versions , including an audio - only that did not have the celebrity interviewer and a clean version that was produced in both audio and video . In 2011 it was also subject to a lawsuit from the producers of the song who claimed they never received proper compensation for their work ."
+   ],
+   "model_answer": "The Lonely Island’s 2009 *Saturday Night Live* Digital Short “Like a Boss.”"
+  },
+  {
+   "id": "2ecc2fd09000eb99",
+   "kind": "answer",
+   "question": "what is the moral of cat in the hat",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Enjoy mischief, but clean up the mess."
+  },
+  {
+   "id": "c4e521b4667b0549",
+   "kind": "answer",
+   "question": "when is the last time the philadelphia won the superbowl",
+   "gold_answers": [
+    "Super Bowl LII,",
+    "2017"
+   ],
+   "model_answer": "Super Bowl LII in 2018"
+  },
+  {
+   "id": "8e715c063a9119e8",
+   "kind": "answer",
+   "question": "how many languages do they speak in africa",
+   "gold_answers": [
+    "The total number of languages natively spoken in Africa is variously estimated ( depending on the delineation of language vs. dialect ) at between 1,250 to 2,100 , and by some counts at `` over 3,000 '' , Nigeria alone has over 500 languages ( according to the count of SIL Ethnologue ) , one of the greatest concentrations of linguistic diversity in the world ."
+   ],
+   "model_answer": "About 1,250–2,100, with some estimates exceeding 3,000."
+  },
+  {
+   "id": "d03a9dde0d027ade",
+   "kind": "answer",
+   "question": "in which regions are most of africa petroleum and natural gas found",
+   "gold_answers": [
+    "Nigeria"
+   ],
+   "model_answer": "The Niger Delta and offshore Sub-Saharan Africa\n"
+  },
+  {
+   "id": "022501c33c1854c9",
+   "kind": "answer",
+   "question": "where does the autobahn have no speed limit",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "On designated sections of Germany’s Autobahn."
+  },
+  {
+   "id": "cce872859e8b2b29",
+   "kind": "answer",
+   "question": "when does bloom find out who she is",
+   "gold_answers": [
+    "Addio Magix!\"  / \"The Font of Dragon Fire"
+   ],
+   "model_answer": "In “A Great Secret Revealed” (season 1, episode 13)."
+  },
+  {
+   "id": "f7c39b39c42e5451",
+   "kind": "answer",
+   "question": "how many languages do they speak in africa",
+   "gold_answers": [
+    "The total number of languages natively spoken in Africa is variously estimated ( depending on the delineation of language vs. dialect ) at between 1,250 to 2,100 , and by some counts at `` over 3,000 '' , Nigeria alone has over 500 languages ( according to the count of SIL Ethnologue ) , one of the greatest concentrations of linguistic diversity in the world ."
+   ],
+   "model_answer": "About 1,250–2,100 languages; some estimates exceed 3,000."
+  },
+  {
+   "id": "8764b7c7cd0f393f",
+   "kind": "answer",
+   "question": "suzanne's story orange is the new black",
+   "gold_answers": [
+    "In episode 3 , `` Hugs Can Be Deceiving '' , Suzanne 's backstory is revealed via a flashback . She was adopted by white parents and raised in the suburbs , but her mental instability alienated her classmates and their parents alike . Her adoptive mother pushed her to excel at everything she did to prove that she was as good as everyone else ; ironically , the constant pressure only made Suzanne 's psychological problems worse . In the same episode , it is revealed that Suzanne had run outside and knocked Chapman unconscious after Chapman had beaten Tiffany `` Pennsatucky '' Doggett ( Taryn Manning ) unconscious at the end of season 1 ."
+   ],
+   "model_answer": "Suzanne “Crazy Eyes” Warren is an emotionally unstable but intelligent inmate imprisoned after a child she accidentally kidnapped fell to his death."
+  },
+  {
+   "id": "8104bf7c6d9838ba",
+   "kind": "answer",
+   "question": "two examples where low voltage transformers are used",
+   "gold_answers": [
+    "toys",
+    "doorbell installations"
+   ],
+   "model_answer": "Doorbells and landscape lighting."
+  },
+  {
+   "id": "4ae05145c701b098",
+   "kind": "answer",
+   "question": "fear the walking dead season 1 episode 4 explained",
+   "gold_answers": [
+    "No . overall No. in season Title Directed by Written by Original air date U.S. viewers ( millions ) `` Pilot '' Adam Davidson Robert Kirkman & Dave Erickson August 23 , 2015 ( 2015 - 08 - 23 ) 10.13 Nick awakens in a heroin den in an abandoned church , to find his girlfriend Gloria eating a corpse . While fleeing , he is hit by a car and hospitalized . The doctor tells Madison and Travis that Nick 's claims about the incident are heroin hallucinations , but Travis believes Nick after visiting the church himself . Alicia becomes more worried about Nick 's chemical dependency . The next day , school closes early due to the high levels of absenteeism and rumors of an epidemic . Nick escapes from the hospital and meets with Calvin , hoping to learn if the drugs Calvin sold him caused him to hallucinate in the church . Calvin tries to kill Nick to prevent him from exposing Calvin as a drug dealer or impugning the quality of his drugs . In the ensuing struggle , Calvin is mortally shot . After Travis and Madison arrive , the zombified Calvin attacks them . Nick runs over Calvin repeatedly with Travis ' truck , and the three watch in disbelief as the mutilated Calvin is still able to turn his head towards them . `` So Close , Yet So Far '' Adam Davidson Marco Ramirez August 30 , 2015 ( 2015 - 08 - 30 ) 8.18 After the run - in with zombified Calvin , Nick , Madison , and Travis choose to flee to the desert , and they want Alicia , Liza , and Chris to follow . Alicia finds Matt ill in his disheveled house . Travis arrives and sees a bite on Matt , who convinces Alicia to leave . The group returns to Madison 's home to gather supplies . Nick suffers from heroin withdrawal , so Madison drives to her school to get him Oxycodone . There , she encounters Tobias scavenging food . A zombified Artie tries to bite Tobias , so Madison kills Artie and drives Tobias home . Chris ' bus is trapped in a traffic jam caused by a zombie shooting by the police . He films the event and joins in a protest against that and other recent fatal police shootings , when Travis and Liza meet up with him . A riot erupts after police shoot down another zombie , but the three Manawas find refuge with the Salazars in their gated barbershop - home . Travis tells Madison to take the kids to the desert without him ; he will catch up . Alicia witnesses her zombified neighbor , Mr. Dawson , attacking Mrs. Cruz across the street , but Madison prevents her from intervening . The group inside the barbershop remains trapped , while the riot outside intensifies . `` The Dog '' Adam Davidson Jack LoGiudice September 13 , 2015 ( 2015 - 09 - 13 ) 7.19 While a riot rages outside , a mob sets fire to the store adjoining the barbershop , forcing the Salazars and Manawas to flee . The group reaches Travis ' truck and escapes , but not before Griselda is injured by a collapsing scaffold . Unable to reach a hospital , the group drives to Madison 's house , where Nick , Madison , and Alicia temporarily flee when the zombified Mr. Dawson attempts to enter , attracted by the barking dog Nick had let in . Nick leads Madison and Alicia to the Trans ' house next door , where they take a shotgun . Travis arrives and is attacked by Mr. Dawson , who is shot and killed by Daniel . All three families decide to stay the night and evacuate in the morning . Nurse Liza tends to Griselda 's injured foot but notes that Griselda will die if not treated by a doctor . Ofelia tells Daniel they should flee with Travis , but Daniel insists his family can survive alone and will join his cousin later . The next morning , as the Clarks and Manawas start driving away , the National Guard arrives and quarantines the block . While Travis says , `` It 's going to get better , '' Daniel laments that it 's , `` too late , '' as he watches a guardsman mark the neighboring house . `` Not Fade Away '' Kari Skogland Meaghan Oppenheimer September 20 , 2015 ( 2015 - 09 - 20 ) 6.62 Days after the National Guard quarantines the neighborhood into a Safe Zone , residents try to live normally . Tensions build under the military rule . Madison is stressed by extra work caused by her home 's being overcrowded and Travis ' new role as civilian liaison . Chris shows a video to Travis and Madison of a light signaling from the Dead Zone . Travis talks Doug into getting mental help . Liza medically helps neighbors . Nick steals morphine from Hector via IV drip . Ofelia kisses Adams , who was unable to get Griselda 's medicine . Madison exchanges signals with the flashing light in the Dead Zone . She sneaks outside the fence to investigate and finds evidence that the guardsmen killed civilians , even the uninfected . Travis learns that Doug has been hospitalized for his mental issues . Dr. Exner determines that Liza is not technically a nurse . Daniel warns Madison of his El Salvador experience , when the sick were taken under the guise of receiving hospitalization but instead killed . Soldiers take Griselda and Nick to a hospital , but Nick 's family protests his departure . Liza agrees to go to assist the medical team , despite not wanting to leave her son . Travis retreats to the roof and sees the signal from the Dead Zone . Seconds later , he sees and hears gunfire , followed by darkness . 5 5 `` Cobalt '' Kari Skogland David Wiener September 27 , 2015 ( 2015 - 09 - 27 ) 6.66 In a military cell , Strand bribes a guardsman to save feverish Nick from being moved . Liza helps Dr. Exner with patients at the hospital . Chris is devastated that Liza left voluntarily to help at the hospital , but Travis promises to bring her back . Madison discovers Daniel detaining Adams in the Trans ' basement . Alicia and Chris get drunk in and vandalize the abandoned home of a wealthy family . Strand recruits Nick for an escape plot . Travis convinces Moyers ' squad to take him to the hospital to check on his friends . While en route , Moyers encourages Travis to shoot a zombie , but Travis is emotionally unable to pull the trigger . The soldiers stop to assist another squad in a building infested by zombies , and most of those soldiers , including Moyers , are overcome . The few survivors flee and drop off Travis near the Safe Zone . Travis learns that Daniel tortured Adams into revealing what `` Cobalt '' means : in the morning , all civilians will be killed , and the guardsmen will evacuate the city . Griselda dies of septic shock at the hospital ; Liza shoots her brain to prevent reanimation . Daniel visits a nearby sports arena to verify Adams ' story that it was sealed with 2,000 now - zombified civilians inside . 6 6 `` The Good Man '' Stefan Schwartz Robert Kirkman & Dave Erickson October 4 , 2015 ( 2015 - 10 - 04 ) 6.86 The group drives to the National Guard 's headquarters to rescue Liza , Griselda , and Nick . Adams agrees to be their guide when let go by Travis . The group infiltrates the base after Daniel distracts the guards by leading a horde of walkers from the arena . Travis , Madison , Daniel , and Ofelia go inside , while Alicia and Chris stay behind . Meanwhile , the walkers breach the perimeter defenses and swarm the base . Travis ' group reach the holding cells and set the detainees free before reuniting with Nick , Liza , and Strand . They try to escape through the medical ward , where they discover Dr. Exner has euthanized all of the patients . Dr. Exner tells them of an escape route before presumably committing suicide . Before they can escape , the group encounters Adams , who shoots Ofelia in the arm . Enraged , Travis brutally beats Adams and leaves him for dead . Strand leads the group to his oceanside mansion , where he reveals to Nick that he owns a yacht which he plans to escape on , called the Abigail . On the beach , Liza reveals to Madison that she had been bitten during the escape . Liza pleads with Madison and Travis to euthanize her before she turns . Travis promises to protect Chris before shooting Liza ."
+   ],
+   "model_answer": "The National Guard occupies the neighborhood, while Travis and Madison uncover signs that the military’s protection may not be what it seems."
+  },
+  {
+   "id": "f4c7370d4e2c9ecb",
+   "kind": "answer",
+   "question": "did the bush family own a baseball team",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "George W. Bush owned a 2% share of the Texas Rangers."
+  },
+  {
+   "id": "1658ad38a015ce46",
+   "kind": "answer",
+   "question": "where do the royalties for winnie the pooh go",
+   "gold_answers": [
+    "Slesinger, Inc.",
+    "the Slesinger family"
+   ],
+   "model_answer": "To the Slesinger family."
+  },
+  {
+   "id": "e1287967ed3ca8f2",
+   "kind": "answer",
+   "question": "are all firestone tires made in the usa",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No, Firestone tires are made in multiple countries."
+  },
+  {
+   "id": "f5aeebcbfeb75a1d",
+   "kind": "answer",
+   "question": "percy jackson and the olympians sea of monsters summary",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Percy and his friends rescue Grover from the Cyclops Polyphemus and retrieve the Golden Fleece to save Camp Half-Blood."
+  },
+  {
+   "id": "4334854438df0f47",
+   "kind": "answer",
+   "question": "what are three different types of hotel properties",
+   "gold_answers": [
+    "Hotel barge",
+    "Bed and breakfast",
+    "Botel"
+   ],
+   "model_answer": "Bed-and-breakfasts, boutique hotels, and motels."
+  },
+  {
+   "id": "bcfbd747fbc65e26",
+   "kind": "answer",
+   "question": "how many gears does an electric car have",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "One gear"
+  },
+  {
+   "id": "e763895dec612a43",
+   "kind": "answer",
+   "question": "what is the sentencing reform act of 1984",
+   "gold_answers": [
+    "U.S. federal statute intended to increase consistency in United States federal sentencing",
+    "a U.S. federal statute intended to increase consistency in United States federal sentencing"
+   ],
+   "model_answer": "A U.S. federal law to increase sentencing consistency, establish the Sentencing Commission, and abolish federal parole."
+  },
+  {
+   "id": "ffc44fa724981003",
+   "kind": "answer",
+   "question": "what does the transfer case control module do",
+   "gold_answers": [
+    "transfers power from the transmission to the front and rear axles by means of drive shafts",
+    "transfers power from the transmission to the front and rear axles",
+    "synchronizes the difference between the rotation of the front and rear wheels",
+    "may contain one or more sets of low range gears for off-road use"
+   ],
+   "model_answer": "Controls the transfer case’s shift functions, such as selecting two-wheel or four-wheel drive."
+  },
+  {
+   "id": "009c129d88ba05ce",
+   "kind": "answer",
+   "question": "how many gears does an electric car have",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Usually one fixed-ratio gear."
+  },
+  {
+   "id": "f1155284eab842f4",
+   "kind": "answer",
+   "question": "who won the national championship in volleyball 2017",
+   "gold_answers": [
+    "Ohio State"
+   ],
+   "model_answer": "Ohio State Buckeyes"
+  },
+  {
+   "id": "33388b44a8787d31",
+   "kind": "answer",
+   "question": "2. describing write about two instances where the colonists did not submit to the british",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The Patriots laid siege to Boston and seized colonial governments and military supplies."
+  },
+  {
+   "id": "4092d9aceb415337",
+   "kind": "answer",
+   "question": "what was taking place before the industrial revolution",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The rise of commercial agriculture and mercantilism"
+  },
+  {
+   "id": "efe8d6fdf44b8f5d",
+   "kind": "answer",
+   "question": "what is the job of justice of the peace",
+   "gold_answers": [
+    "a judicial officer, of a lower or puisne court, elected or appointed by means of a commission (letters patent) to keep the peace.",
+    "dispense summary justice",
+    "deal with local administrative applications in common law jurisdictions"
+   ],
+   "model_answer": "Maintain the peace and handle minor legal or administrative matters."
+  },
+  {
+   "id": "29d020742a9dd05b",
+   "kind": "answer",
+   "question": "what awards did the harry potter movies win",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "BAFTA awards, a Saturn costume award, Phoenix Film Critics and ITV National Movie Awards, an Empire Award, and a BMI Film Music Award. The series also received BAFTA, AFI, and Britannia honors."
+  },
+  {
+   "id": "1bb042a90c94531a",
+   "kind": "answer",
+   "question": "when do the grand magic games start in fairy tail",
+   "gold_answers": [
+    "Crocus, the Flower-Blooming Capital"
+   ],
+   "model_answer": "July 1, X791."
+  },
+  {
+   "id": "b29c7b28676f3154",
+   "kind": "answer",
+   "question": "when did beds become popular in france and germany",
+   "gold_answers": [
+    "the 12th century"
+   ],
+   "model_answer": "France in the 17th century; Germany in the 18th century."
+  },
+  {
+   "id": "4930ae96a41c0494",
+   "kind": "answer",
+   "question": "was the egyptian old kingdom was a city-state",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "No, it was a centralized kingdom."
+  },
+  {
+   "id": "2be7990ae0b65990",
+   "kind": "answer",
+   "question": "where does kylo ren's name come from",
+   "gold_answers": [
+    "the character, \"came to the name Kylo Ren when he joined a group called the Knights of Ren.\""
+   ],
+   "model_answer": "He chose it when he joined the Knights of Ren."
+  },
+  {
+   "id": "329e32f13a1c4c2b",
+   "kind": "answer",
+   "question": "who were the church fathers and what did they do in the catholic church",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Ancient Christian theologians and teachers who shaped Catholic doctrine, interpreted Scripture, and helped preserve Church tradition."
+  },
+  {
+   "id": "8408a1b6c1f4118e",
+   "kind": "answer",
+   "question": "who sings the song it ain't me",
+   "gold_answers": [
+    "Selena Gomez",
+    "American singer Selena Gomez"
+   ],
+   "model_answer": "Selena Gomez, with Kygo."
+  },
+  {
+   "id": "83b6aff98e02d6d8",
+   "kind": "answer",
+   "question": "when do law students take the bar exam",
+   "gold_answers": [
+    "Each state controls where it administers its bar exam . Because the MBE ( below ) is a standardized test , it must be administered on the same day across the country . That day occurs twice a year as the last Wednesday in July and the last Wednesday in February . Two states , Delaware and North Dakota , may administer their bar exams only once , in July , if they do not have enough applicants to merit a second sitting . North Dakota requires ten applicants in order to administer the February exam . Most bar exams are administered on consecutive days . Louisiana is the exception , with the Louisiana Bar Exam being a three - day examination on Monday , Wednesday and Friday . Also , Louisiana 's examination is the longest in the country in terms of examination time , with seven hours on Monday and Wednesday and seven and one half hours on Friday for a total of 21.5 hours of testing . Montana 's bar examination also occurs over a three - day period , with a total of 18 hours of testing . The bar exams in Delaware , Nevada , Ohio , South Carolina , and Texas are also three days long . The California bar exam moved to a two - day format beginning with the July , 2017 exam .",
+    "To refresh their memory on `` black - letter rules '' tested on the bar , most students engage in a regimen of study ( called `` bar review '' ) between graduating from law school and sitting for the bar . For bar review , most students in the United States attend a private bar review course which is provided by a third - party company and not their law school ."
+   ],
+   "model_answer": "After graduating from law school."
+  },
+  {
+   "id": "e31721e6309a971d",
+   "kind": "answer",
+   "question": "fear the walking dead season 1 episode 4 explained",
+   "gold_answers": [
+    "No . overall No. in season Title Directed by Written by Original air date U.S. viewers ( millions ) `` Pilot '' Adam Davidson Robert Kirkman & Dave Erickson August 23 , 2015 ( 2015 - 08 - 23 ) 10.13 Nick awakens in a heroin den in an abandoned church , to find his girlfriend Gloria eating a corpse . While fleeing , he is hit by a car and hospitalized . The doctor tells Madison and Travis that Nick 's claims about the incident are heroin hallucinations , but Travis believes Nick after visiting the church himself . Alicia becomes more worried about Nick 's chemical dependency . The next day , school closes early due to the high levels of absenteeism and rumors of an epidemic . Nick escapes from the hospital and meets with Calvin , hoping to learn if the drugs Calvin sold him caused him to hallucinate in the church . Calvin tries to kill Nick to prevent him from exposing Calvin as a drug dealer or impugning the quality of his drugs . In the ensuing struggle , Calvin is mortally shot . After Travis and Madison arrive , the zombified Calvin attacks them . Nick runs over Calvin repeatedly with Travis ' truck , and the three watch in disbelief as the mutilated Calvin is still able to turn his head towards them . `` So Close , Yet So Far '' Adam Davidson Marco Ramirez August 30 , 2015 ( 2015 - 08 - 30 ) 8.18 After the run - in with zombified Calvin , Nick , Madison , and Travis choose to flee to the desert , and they want Alicia , Liza , and Chris to follow . Alicia finds Matt ill in his disheveled house . Travis arrives and sees a bite on Matt , who convinces Alicia to leave . The group returns to Madison 's home to gather supplies . Nick suffers from heroin withdrawal , so Madison drives to her school to get him Oxycodone . There , she encounters Tobias scavenging food . A zombified Artie tries to bite Tobias , so Madison kills Artie and drives Tobias home . Chris ' bus is trapped in a traffic jam caused by a zombie shooting by the police . He films the event and joins in a protest against that and other recent fatal police shootings , when Travis and Liza meet up with him . A riot erupts after police shoot down another zombie , but the three Manawas find refuge with the Salazars in their gated barbershop - home . Travis tells Madison to take the kids to the desert without him ; he will catch up . Alicia witnesses her zombified neighbor , Mr. Dawson , attacking Mrs. Cruz across the street , but Madison prevents her from intervening . The group inside the barbershop remains trapped , while the riot outside intensifies . `` The Dog '' Adam Davidson Jack LoGiudice September 13 , 2015 ( 2015 - 09 - 13 ) 7.19 While a riot rages outside , a mob sets fire to the store adjoining the barbershop , forcing the Salazars and Manawas to flee . The group reaches Travis ' truck and escapes , but not before Griselda is injured by a collapsing scaffold . Unable to reach a hospital , the group drives to Madison 's house , where Nick , Madison , and Alicia temporarily flee when the zombified Mr. Dawson attempts to enter , attracted by the barking dog Nick had let in . Nick leads Madison and Alicia to the Trans ' house next door , where they take a shotgun . Travis arrives and is attacked by Mr. Dawson , who is shot and killed by Daniel . All three families decide to stay the night and evacuate in the morning . Nurse Liza tends to Griselda 's injured foot but notes that Griselda will die if not treated by a doctor . Ofelia tells Daniel they should flee with Travis , but Daniel insists his family can survive alone and will join his cousin later . The next morning , as the Clarks and Manawas start driving away , the National Guard arrives and quarantines the block . While Travis says , `` It 's going to get better , '' Daniel laments that it 's , `` too late , '' as he watches a guardsman mark the neighboring house . `` Not Fade Away '' Kari Skogland Meaghan Oppenheimer September 20 , 2015 ( 2015 - 09 - 20 ) 6.62 Days after the National Guard quarantines the neighborhood into a Safe Zone , residents try to live normally . Tensions build under the military rule . Madison is stressed by extra work caused by her home 's being overcrowded and Travis ' new role as civilian liaison . Chris shows a video to Travis and Madison of a light signaling from the Dead Zone . Travis talks Doug into getting mental help . Liza medically helps neighbors . Nick steals morphine from Hector via IV drip . Ofelia kisses Adams , who was unable to get Griselda 's medicine . Madison exchanges signals with the flashing light in the Dead Zone . She sneaks outside the fence to investigate and finds evidence that the guardsmen killed civilians , even the uninfected . Travis learns that Doug has been hospitalized for his mental issues . Dr. Exner determines that Liza is not technically a nurse . Daniel warns Madison of his El Salvador experience , when the sick were taken under the guise of receiving hospitalization but instead killed . Soldiers take Griselda and Nick to a hospital , but Nick 's family protests his departure . Liza agrees to go to assist the medical team , despite not wanting to leave her son . Travis retreats to the roof and sees the signal from the Dead Zone . Seconds later , he sees and hears gunfire , followed by darkness . 5 5 `` Cobalt '' Kari Skogland David Wiener September 27 , 2015 ( 2015 - 09 - 27 ) 6.66 In a military cell , Strand bribes a guardsman to save feverish Nick from being moved . Liza helps Dr. Exner with patients at the hospital . Chris is devastated that Liza left voluntarily to help at the hospital , but Travis promises to bring her back . Madison discovers Daniel detaining Adams in the Trans ' basement . Alicia and Chris get drunk in and vandalize the abandoned home of a wealthy family . Strand recruits Nick for an escape plot . Travis convinces Moyers ' squad to take him to the hospital to check on his friends . While en route , Moyers encourages Travis to shoot a zombie , but Travis is emotionally unable to pull the trigger . The soldiers stop to assist another squad in a building infested by zombies , and most of those soldiers , including Moyers , are overcome . The few survivors flee and drop off Travis near the Safe Zone . Travis learns that Daniel tortured Adams into revealing what `` Cobalt '' means : in the morning , all civilians will be killed , and the guardsmen will evacuate the city . Griselda dies of septic shock at the hospital ; Liza shoots her brain to prevent reanimation . Daniel visits a nearby sports arena to verify Adams ' story that it was sealed with 2,000 now - zombified civilians inside . 6 6 `` The Good Man '' Stefan Schwartz Robert Kirkman & Dave Erickson October 4 , 2015 ( 2015 - 10 - 04 ) 6.86 The group drives to the National Guard 's headquarters to rescue Liza , Griselda , and Nick . Adams agrees to be their guide when let go by Travis . The group infiltrates the base after Daniel distracts the guards by leading a horde of walkers from the arena . Travis , Madison , Daniel , and Ofelia go inside , while Alicia and Chris stay behind . Meanwhile , the walkers breach the perimeter defenses and swarm the base . Travis ' group reach the holding cells and set the detainees free before reuniting with Nick , Liza , and Strand . They try to escape through the medical ward , where they discover Dr. Exner has euthanized all of the patients . Dr. Exner tells them of an escape route before presumably committing suicide . Before they can escape , the group encounters Adams , who shoots Ofelia in the arm . Enraged , Travis brutally beats Adams and leaves him for dead . Strand leads the group to his oceanside mansion , where he reveals to Nick that he owns a yacht which he plans to escape on , called the Abigail . On the beach , Liza reveals to Madison that she had been bitten during the escape . Liza pleads with Madison and Travis to euthanize her before she turns . Travis promises to protect Chris before shooting Liza ."
+   ],
+   "model_answer": "Madison uncovers the National Guard’s deadly secret as quarantine separates the family."
+  },
+  {
+   "id": "37e0865ea455270d",
+   "kind": "answer",
+   "question": "when is the next scandal episode coming out",
+   "gold_answers": [
+    "February 1, 2018"
+   ],
+   "model_answer": "No new episodes; *Scandal* ended in 2018."
+  },
+  {
+   "id": "5c9701fd783ea346",
+   "kind": "answer",
+   "question": "steps party on the dance floor tour review",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "A high-energy, nostalgia-filled pop spectacular."
+  },
+  {
+   "id": "804d04eb2d5a330c",
+   "kind": "answer",
+   "question": "who do the characters represent in 8 mile",
+   "gold_answers": [
+    "loosely on Eminem"
+   ],
+   "model_answer": "Mostly fictionalized versions of Eminem and people from his life."
+  },
+  {
+   "id": "b1751a0829444e00",
+   "kind": "answer",
+   "question": "who were the church fathers and what did they do in the catholic church",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Ancient Christian theologians and teachers who shaped Catholic doctrine and are honored as saints or Doctors of the Church."
+  },
+  {
+   "id": "f8033c6b91a62d25",
+   "kind": "answer",
+   "question": "what is the first step in the evolution of the eye",
+   "gold_answers": [
+    "photoreceptor proteins that sense light",
+    "eyespots",
+    "photoreceptor proteins that sense light, found even in unicellular organisms, called \"eyespots\""
+   ],
+   "model_answer": "Light sensing by photoreceptor cells"
+  },
+  {
+   "id": "79766fed8c3bfa1d",
+   "kind": "answer",
+   "question": "what was the purpose of a revival meeting during the second great awakening",
+   "gold_answers": [
+    "evangelizing"
+   ],
+   "model_answer": "To evangelize settlers and inspire conversion to Christ."
+  },
+  {
+   "id": "cd77363719bad9f2",
+   "kind": "answer",
+   "question": "the south west wind blows across nigeria between",
+   "gold_answers": [
+    "arrives in central Nigeria in July",
+    "till September"
+   ],
+   "model_answer": "February in southern Nigeria to June in northern Nigeria"
+  },
+  {
+   "id": "886fd8647c021458",
+   "kind": "answer",
+   "question": "how much does.it cost to raise a child",
+   "gold_answers": [
+    "Dual - Parent Family - USDA Average Spending per Child ( not the basic cost of raising ) Age of Child Housing Food Transport . Clothing Health Child Care / Education Misc . Total Before - tax income : Less than $59,410 ( Average = $38,000 ) 0 to 2 2,990 1,160 1,170 640 630 2,040 420 9,050 3 to 5 2,990 1,260 1,230 500 590 1,910 620 9,100 6 to 8 2,990 1,710 1,350 570 660 1,290 630 8,760 9 to 11 2,990 1,970 1,350 580 710 1,910 630 9,520 12 to 14 2,990 2,130 1,480 690 1,090 1,110 700 9,960 15 to 17 2,990 2,120 1,630 730 1,010 1,290 580 9,970 Total 53,820 31,050 24,630 11,130 14,070 23,640 10,740 169,080 Before - tax income : $59,410 to $102,870 ( Average = $79,940 ) 0 to 2 3,920 1,405 1,690 760 850 2,860 890 12,370 3 to 5 3,920 1,490 1,740 610 800 2,740 1,090 12,390 6 to 8 3,920 2,100 1,860 680 940 1,680 1,110 12,290 9 to 11 3,920 2,400 1,870 710 1,000 2,110 1,100 13,110 12 to 14 3,920 2,580 1,990 840 1,410 1,910 1,170 13,820 15 to 17 3,920 2,570 2,150 900 1,330 2,400 1,050 14,320 Total 70,560 37,620 33,900 13,500 18,990 41,100 19,230 234,900 Before - tax income : More than $102,870 ( Average = $180,040 ) 0 to 2 7,100 1,900 2,550 1,050 980 5,090 1,790 20,460 3 to 5 7,100 2,000 2,610 880 930 4,970 1,990 20,480 6 to 8 7,100 2,630 2,730 970 1,080 3,910 2,000 20,420 9 to 11 7,100 2,980 2,730 1,010 1,150 4,350 2,000 21,320 12 to 14 7,100 3,190 2,860 1,170 1,610 4,700 2,070 22,700 15 to 17 7,100 3,180 3,020 1,280 1,520 6,460 1,950 24,510 Total 127,800 47,640 49,500 19,080 21,810 88,440 35,400 389,670"
+   ],
+   "model_answer": "About $300,000 in the U.S. through age 18, excluding college."
+  },
+  {
+   "id": "3a32b9041706430d",
+   "kind": "answer",
+   "question": "central london properties v high trees house 1947",
+   "gold_answers": [
+    "Central London Property Trust Ltd v High Trees House Ltd ( 1947 ) KB 130 ( or the High Trees case ) is an English contract law decision in the High Court . It reaffirmed and extended the doctrine of promissory estoppel in contract law in England and Wales . However , the most significant part of the judgment is obiter dicta as it relates to hypothetical facts ; that is , the landlord did not seek repayment of the full wartime rent ."
+   ],
+   "model_answer": "Central London Property Trust Ltd v High Trees House Ltd (1947)"
+  },
+  {
+   "id": "91f53c6b73166ec8",
+   "kind": "answer",
+   "question": "where did the easter eggs and bunny come from",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The bunny came from German Lutheran tradition; decorated eggs came from Orthodox and German Protestant customs."
+  },
+  {
+   "id": "7f409abd995da35e",
+   "kind": "answer",
+   "question": "the south west wind blows across nigeria between",
+   "gold_answers": [
+    "arrives in central Nigeria in July",
+    "till September"
+   ],
+   "model_answer": "February to June"
+  },
+  {
+   "id": "1bea961dc4024d6e",
+   "kind": "answer",
+   "question": "fitting of rim on a locomotive wheel is done by",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Heating it to expand, then fitting it over the wheel."
+  },
+  {
+   "id": "729fc2a4f2c748c7",
+   "kind": "answer",
+   "question": "how did rogue get super strength and flight",
+   "gold_answers": [
+    "Rogue permanently absorbed the superhuman powers and the psyche of Carol Danvers, the original Ms. Marvel"
+   ],
+   "model_answer": "By permanently absorbing Ms. Marvel (Carol Danvers)’s powers."
+  },
+  {
+   "id": "06aac4e0550bf6b0",
+   "kind": "answer",
+   "question": "why did government sponsored surveys and land acts encourage migration to the west",
+   "gold_answers": [
+    "The Homestead Acts were several United States federal laws that gave an applicant ownership of land , typically called a `` homestead , '' at no cost . In all , more than 270 million acres of public land , or nearly 10 % of the total area of the U.S. , was given away free to 1.6 million homesteaders ; most of the homesteads were west of the Mississippi River .",
+    "An extension of the Homestead Principle in law , the Homestead Acts were an expression of the `` Free Soil '' policy of Northerners who wanted individual farmers to own and operate their own farms , as opposed to Southern slave - owners who wanted to buy up large tracts of land and use slave labor , thereby shutting out free white men ."
+   ],
+   "model_answer": "They made western land easier to claim and own."
+  },
+  {
+   "id": "533be75df4bdadf0",
+   "kind": "answer",
+   "question": "where is deforestation occurring in the united states",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Across U.S. forests, including the Eastern forests."
+  }
+ ],
+ "evidence": []
+}

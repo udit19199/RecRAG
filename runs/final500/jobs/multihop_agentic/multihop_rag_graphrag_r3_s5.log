@@ -1,0 +1,183 @@
+Received notification from DBMS server: <GqlStatusObject gql_status='01N50', status_description='warn: label does not exist. The label `Organization OR o` does not exist in database `recrag-benchmark-e5315c2b5c9f57e2595cc51c`. Verify that the spelling is correct.', position=<SummaryInputPosition line=3, column=10, offset=150>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 150, 'line': 3, 'column': 10}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "EXPLAIN UNWIND ['Google', 'Apple', 'Microsoft', 'Amazon', 'Meta', 'TikTok', 'OpenAI'] AS company\nOPTIONAL MATCH (a:Article)-[:MENTIONS]->(o)\nWHERE (o:`Organization OR o`:Publisher)\n  AND (a.published_on STARTS WITH '2023-10'\n       OR toLower(a.published_on) CONTAINS 'october 2023'\n       OR toLower(a.published_on) CONTAINS 'oct 2023')\n  AND (toLower(o.name) = toLower(company)\n       OR any(alias IN coalesce(o.aliases, []) WHERE toLower(alias) = toLower(company)))\nRETURN company, count(DISTINCT a) AS article_count\nORDER BY article_count DESC\nLIMIT 10"
+Received notification from DBMS server: <GqlStatusObject gql_status='01N50', status_description='warn: label does not exist. The label `Organization OR o` does not exist in database `recrag-benchmark-e5315c2b5c9f57e2595cc51c`. Verify that the spelling is correct.', position=<SummaryInputPosition line=3, column=10, offset=142>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 142, 'line': 3, 'column': 10}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "UNWIND ['Google', 'Apple', 'Microsoft', 'Amazon', 'Meta', 'TikTok', 'OpenAI'] AS company\nOPTIONAL MATCH (a:Article)-[:MENTIONS]->(o)\nWHERE (o:`Organization OR o`:Publisher)\n  AND (a.published_on STARTS WITH '2023-10'\n       OR toLower(a.published_on) CONTAINS 'october 2023'\n       OR toLower(a.published_on) CONTAINS 'oct 2023')\n  AND (toLower(o.name) = toLower(company)\n       OR any(alias IN coalesce(o.aliases, []) WHERE toLower(alias) = toLower(company)))\nRETURN company, count(DISTINCT a) AS article_count\nORDER BY article_count DESC\nLIMIT 10"
+graphrag: saved retrieval for multihop-rag-142
+graphrag: saved retrieval for multihop-rag-513
+Received notification from DBMS server: <GqlStatusObject gql_status='01N50', status_description='warn: label does not exist. The label `Publisher OR publisher` does not exist in database `recrag-benchmark-e5315c2b5c9f57e2595cc51c`. Verify that the spelling is correct.', position=<SummaryInputPosition line=2, column=18, offset=106>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 106, 'line': 2, 'column': 18}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "EXPLAIN MATCH (a:Article)-[:PUBLISHED_BY]->(publisher), (a)-[:MENTIONS]->(person:Person)\nWHERE (publisher:`Publisher OR publisher`:Organization)\n  AND (toLower(publisher.name) CONTAINS 'the verge' OR any(alias IN coalesce(publisher.aliases, []) WHERE toLower(alias) CONTAINS 'the verge')\n       OR toLower(publisher.name) CONTAINS 'fortune' OR any(alias IN coalesce(publisher.aliases, []) WHERE toLower(alias) CONTAINS 'fortune')\n       OR (toLower(publisher.name) CONTAINS 'techcrunch' OR any(alias IN coalesce(publisher.aliases, []) WHERE toLower(alias) CONTAINS 'techcrunch')))\n  AND (toLower(person.name) CONTAINS 'sam bankman-fried' OR any(alias IN coalesce(person.aliases, []) WHERE toLower(alias) CONTAINS 'sam bankman-fried'))\n  AND (\n    toLower(publisher.name) CONTAINS 'the verge' OR any(alias IN coalesce(publisher.aliases, []) WHERE toLower(alias) CONTAINS 'the verge')\n    OR toLower(publisher.name) CONTAINS 'fortune' OR any(alias IN coalesce(publisher.aliases, []) WHERE toLower(alias) CONTAINS 'fortune')\n    OR (\n      (toLower(publisher.name) CONTAINS 'techcrunch' OR any(alias IN coalesce(publisher.aliases, []) WHERE toLower(alias) CONTAINS 'techcrunch'))\n      AND EXISTS {\n        MATCH (a)-[:MENTIONS]->(topic:Topic)\n        WHERE toLower(topic.name) CONTAINS 'fraud'\n           OR any(alias IN coalesce(topic.aliases, []) WHERE toLower(alias) CONTAINS 'fraud')\n      }\n    )\n  )\nRETURN DISTINCT publisher.name AS publisher, a.name AS article, a.published_on AS published_on\nLIMIT 10"
+Received notification from DBMS server: <GqlStatusObject gql_status='01N50', status_description='warn: label does not exist. The label `Publisher OR publisher` does not exist in database `recrag-benchmark-e5315c2b5c9f57e2595cc51c`. Verify that the spelling is correct.', position=<SummaryInputPosition line=2, column=18, offset=98>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 98, 'line': 2, 'column': 18}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "MATCH (a:Article)-[:PUBLISHED_BY]->(publisher), (a)-[:MENTIONS]->(person:Person)\nWHERE (publisher:`Publisher OR publisher`:Organization)\n  AND (toLower(publisher.name) CONTAINS 'the verge' OR any(alias IN coalesce(publisher.aliases, []) WHERE toLower(alias) CONTAINS 'the verge')\n       OR toLower(publisher.name) CONTAINS 'fortune' OR any(alias IN coalesce(publisher.aliases, []) WHERE toLower(alias) CONTAINS 'fortune')\n       OR (toLower(publisher.name) CONTAINS 'techcrunch' OR any(alias IN coalesce(publisher.aliases, []) WHERE toLower(alias) CONTAINS 'techcrunch')))\n  AND (toLower(person.name) CONTAINS 'sam bankman-fried' OR any(alias IN coalesce(person.aliases, []) WHERE toLower(alias) CONTAINS 'sam bankman-fried'))\n  AND (\n    toLower(publisher.name) CONTAINS 'the verge' OR any(alias IN coalesce(publisher.aliases, []) WHERE toLower(alias) CONTAINS 'the verge')\n    OR toLower(publisher.name) CONTAINS 'fortune' OR any(alias IN coalesce(publisher.aliases, []) WHERE toLower(alias) CONTAINS 'fortune')\n    OR (\n      (toLower(publisher.name) CONTAINS 'techcrunch' OR any(alias IN coalesce(publisher.aliases, []) WHERE toLower(alias) CONTAINS 'techcrunch'))\n      AND EXISTS {\n        MATCH (a)-[:MENTIONS]->(topic:Topic)\n        WHERE toLower(topic.name) CONTAINS 'fraud'\n           OR any(alias IN coalesce(topic.aliases, []) WHERE toLower(alias) CONTAINS 'fraud')\n      }\n    )\n  )\nRETURN DISTINCT publisher.name AS publisher, a.name AS article, a.published_on AS published_on\nLIMIT 10"
+graphrag: saved retrieval for multihop-rag-265
+graphrag: saved retrieval for multihop-rag-623
+Received notification from DBMS server: <GqlStatusObject gql_status='01N50', status_description='warn: label does not exist. The label `Event OR x` does not exist in database `recrag-benchmark-e5315c2b5c9f57e2595cc51c`. Verify that the spelling is correct.', position=<SummaryInputPosition line=4, column=10, offset=397>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 397, 'line': 4, 'column': 10}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "EXPLAIN MATCH (a:Article)-[:PUBLISHED_BY]->(pub:Publisher), (a)-[:MENTIONS]->(p:Person), (a)-[:MENTIONS]->(x)\nWHERE (toLower(pub.name) CONTAINS 'techcrunch' OR any(alias IN coalesce(pub.aliases, []) WHERE toLower(alias) CONTAINS 'techcrunch'))\n  AND (toLower(p.name) CONTAINS 'sam bankman-fried' OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'sam bankman-fried'))\n  AND (x:`Event OR x`:Topic OR x:Thing OR x:Organization)\n  AND any(term IN ['trial', 'fraud', 'conspiracy', 'wealth', 'power', 'influence'] WHERE toLower(x.name) CONTAINS term OR any(alias IN coalesce(x.aliases, []) WHERE toLower(alias) CONTAINS term))\nRETURN DISTINCT a.name AS article, a.published_on AS published_on, pub.name AS publisher, x.name AS related_entity\nLIMIT 10"
+Received notification from DBMS server: <GqlStatusObject gql_status='01N50', status_description='warn: label does not exist. The label `Event OR x` does not exist in database `recrag-benchmark-e5315c2b5c9f57e2595cc51c`. Verify that the spelling is correct.', position=<SummaryInputPosition line=4, column=10, offset=389>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 389, 'line': 4, 'column': 10}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "MATCH (a:Article)-[:PUBLISHED_BY]->(pub:Publisher), (a)-[:MENTIONS]->(p:Person), (a)-[:MENTIONS]->(x)\nWHERE (toLower(pub.name) CONTAINS 'techcrunch' OR any(alias IN coalesce(pub.aliases, []) WHERE toLower(alias) CONTAINS 'techcrunch'))\n  AND (toLower(p.name) CONTAINS 'sam bankman-fried' OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'sam bankman-fried'))\n  AND (x:`Event OR x`:Topic OR x:Thing OR x:Organization)\n  AND any(term IN ['trial', 'fraud', 'conspiracy', 'wealth', 'power', 'influence'] WHERE toLower(x.name) CONTAINS term OR any(alias IN coalesce(x.aliases, []) WHERE toLower(alias) CONTAINS term))\nRETURN DISTINCT a.name AS article, a.published_on AS published_on, pub.name AS publisher, x.name AS related_entity\nLIMIT 10"
+graphrag: saved retrieval for multihop-rag-358
+graphrag: saved retrieval for multihop-rag-677
+graphrag: saved retrieval for multihop-rag-480
+Received notification from DBMS server: <GqlStatusObject gql_status='01N50', status_description='warn: label does not exist. The label `Publisher OR pub` does not exist in database `recrag-benchmark-e5315c2b5c9f57e2595cc51c`. Verify that the spelling is correct.', position=<SummaryInputPosition line=10, column=10, offset=428>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 428, 'line': 10, 'column': 10}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "EXPLAIN MATCH (a:Article)-[published:PUBLISHED_BY]->(pub),\n      (a)-[mentions:MENTIONS]->(g:Organization)\nWHERE (\n  (toLower(a.name) CONTAINS 'is google search better than the rest? and is that fair?'\n   AND a.published_on = '2022-10-22')\n  OR\n  (toLower(a.name) CONTAINS 'news publisher files class action antitrust suit against google, citing ai’s harms to their bottom line'\n   AND a.published_on = '2023-12-15')\n)\nAND (pub:`Publisher OR pub`:Organization)\nAND (toLower(g.name) CONTAINS 'google'\n     OR any(alias IN coalesce(g.aliases, []) WHERE toLower(alias) CONTAINS 'google'))\nRETURN DISTINCT a.name AS article, a.published_on AS published_on,\n       pub.name AS publisher, g.name AS google,\n       type(published) AS publisher_connection,\n       type(mentions) AS google_connection\nLIMIT 10"
+Received notification from DBMS server: <GqlStatusObject gql_status='01N50', status_description='warn: label does not exist. The label `Publisher OR pub` does not exist in database `recrag-benchmark-e5315c2b5c9f57e2595cc51c`. Verify that the spelling is correct.', position=<SummaryInputPosition line=10, column=10, offset=420>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 420, 'line': 10, 'column': 10}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "MATCH (a:Article)-[published:PUBLISHED_BY]->(pub),\n      (a)-[mentions:MENTIONS]->(g:Organization)\nWHERE (\n  (toLower(a.name) CONTAINS 'is google search better than the rest? and is that fair?'\n   AND a.published_on = '2022-10-22')\n  OR\n  (toLower(a.name) CONTAINS 'news publisher files class action antitrust suit against google, citing ai’s harms to their bottom line'\n   AND a.published_on = '2023-12-15')\n)\nAND (pub:`Publisher OR pub`:Organization)\nAND (toLower(g.name) CONTAINS 'google'\n     OR any(alias IN coalesce(g.aliases, []) WHERE toLower(alias) CONTAINS 'google'))\nRETURN DISTINCT a.name AS article, a.published_on AS published_on,\n       pub.name AS publisher, g.name AS google,\n       type(published) AS publisher_connection,\n       type(mentions) AS google_connection\nLIMIT 10"
+graphrag: saved retrieval for multihop-rag-767
+graphrag: saved retrieval for multihop-rag-571
+graphrag: saved retrieval for multihop-rag-814
+graphrag: saved retrieval for multihop-rag-693
+graphrag: saved retrieval for multihop-rag-850
+graphrag: saved retrieval for multihop-rag-748
+graphrag: saved retrieval for multihop-rag-890
+graphrag: saved retrieval for multihop-rag-780
+graphrag: saved retrieval for multihop-rag-926
+graphrag: saved retrieval for multihop-rag-860
+graphrag: saved retrieval for multihop-rag-961
+Received notification from DBMS server: <GqlStatusObject gql_status='01N50', status_description='warn: label does not exist. The label `Publisher OR sn` does not exist in database `recrag-benchmark-e5315c2b5c9f57e2595cc51c`. Verify that the spelling is correct.', position=<SummaryInputPosition line=2, column=11, offset=81>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 81, 'line': 2, 'column': 11}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "EXPLAIN MATCH (a:Article)-[:PUBLISHED_BY]->(sn), (a)-[r:MENTIONS]->(e)\nWHERE (sn:`Publisher OR sn`:Organization)\n  AND (toLower(sn.name) CONTAINS 'sporting news' OR any(alias IN coalesce(sn.aliases, []) WHERE toLower(alias) CONTAINS 'sporting news'))\n  AND (e:`Publisher OR e`:Organization)\n  AND (\n    (toLower(a.name) CONTAINS 'rookie' AND (toLower(a.name) CONTAINS 'odds' OR toLower(a.name) CONTAINS 'line' OR toLower(a.name) CONTAINS 'betting'))\n    OR any(alias IN coalesce(a.aliases, []) WHERE toLower(alias) CONTAINS 'rookie' AND (toLower(alias) CONTAINS 'odds' OR toLower(alias) CONTAINS 'line' OR toLower(alias) CONTAINS 'betting'))\n  )\nRETURN DISTINCT a.name AS article, type(r) AS relationship, e.name AS betting_operator\nLIMIT 10"
+Received notification from DBMS server: <GqlStatusObject gql_status='01N50', status_description='warn: label does not exist. The label `Publisher OR e` does not exist in database `recrag-benchmark-e5315c2b5c9f57e2595cc51c`. Verify that the spelling is correct.', position=<SummaryInputPosition line=4, column=10, offset=260>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 260, 'line': 4, 'column': 10}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "EXPLAIN MATCH (a:Article)-[:PUBLISHED_BY]->(sn), (a)-[r:MENTIONS]->(e)\nWHERE (sn:`Publisher OR sn`:Organization)\n  AND (toLower(sn.name) CONTAINS 'sporting news' OR any(alias IN coalesce(sn.aliases, []) WHERE toLower(alias) CONTAINS 'sporting news'))\n  AND (e:`Publisher OR e`:Organization)\n  AND (\n    (toLower(a.name) CONTAINS 'rookie' AND (toLower(a.name) CONTAINS 'odds' OR toLower(a.name) CONTAINS 'line' OR toLower(a.name) CONTAINS 'betting'))\n    OR any(alias IN coalesce(a.aliases, []) WHERE toLower(alias) CONTAINS 'rookie' AND (toLower(alias) CONTAINS 'odds' OR toLower(alias) CONTAINS 'line' OR toLower(alias) CONTAINS 'betting'))\n  )\nRETURN DISTINCT a.name AS article, type(r) AS relationship, e.name AS betting_operator\nLIMIT 10"
+Received notification from DBMS server: <GqlStatusObject gql_status='01N50', status_description='warn: label does not exist. The label `Publisher OR sn` does not exist in database `recrag-benchmark-e5315c2b5c9f57e2595cc51c`. Verify that the spelling is correct.', position=<SummaryInputPosition line=2, column=11, offset=73>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 73, 'line': 2, 'column': 11}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "MATCH (a:Article)-[:PUBLISHED_BY]->(sn), (a)-[r:MENTIONS]->(e)\nWHERE (sn:`Publisher OR sn`:Organization)\n  AND (toLower(sn.name) CONTAINS 'sporting news' OR any(alias IN coalesce(sn.aliases, []) WHERE toLower(alias) CONTAINS 'sporting news'))\n  AND (e:`Publisher OR e`:Organization)\n  AND (\n    (toLower(a.name) CONTAINS 'rookie' AND (toLower(a.name) CONTAINS 'odds' OR toLower(a.name) CONTAINS 'line' OR toLower(a.name) CONTAINS 'betting'))\n    OR any(alias IN coalesce(a.aliases, []) WHERE toLower(alias) CONTAINS 'rookie' AND (toLower(alias) CONTAINS 'odds' OR toLower(alias) CONTAINS 'line' OR toLower(alias) CONTAINS 'betting'))\n  )\nRETURN DISTINCT a.name AS article, type(r) AS relationship, e.name AS betting_operator\nLIMIT 10"
+Received notification from DBMS server: <GqlStatusObject gql_status='01N50', status_description='warn: label does not exist. The label `Publisher OR e` does not exist in database `recrag-benchmark-e5315c2b5c9f57e2595cc51c`. Verify that the spelling is correct.', position=<SummaryInputPosition line=4, column=10, offset=252>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 252, 'line': 4, 'column': 10}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "MATCH (a:Article)-[:PUBLISHED_BY]->(sn), (a)-[r:MENTIONS]->(e)\nWHERE (sn:`Publisher OR sn`:Organization)\n  AND (toLower(sn.name) CONTAINS 'sporting news' OR any(alias IN coalesce(sn.aliases, []) WHERE toLower(alias) CONTAINS 'sporting news'))\n  AND (e:`Publisher OR e`:Organization)\n  AND (\n    (toLower(a.name) CONTAINS 'rookie' AND (toLower(a.name) CONTAINS 'odds' OR toLower(a.name) CONTAINS 'line' OR toLower(a.name) CONTAINS 'betting'))\n    OR any(alias IN coalesce(a.aliases, []) WHERE toLower(alias) CONTAINS 'rookie' AND (toLower(alias) CONTAINS 'odds' OR toLower(alias) CONTAINS 'line' OR toLower(alias) CONTAINS 'betting'))\n  )\nRETURN DISTINCT a.name AS article, type(r) AS relationship, e.name AS betting_operator\nLIMIT 10"
+graphrag: saved retrieval for multihop-rag-1016
+graphrag: saved retrieval for multihop-rag-1003
+graphrag: saved retrieval for multihop-rag-1095
+graphrag: saved retrieval for multihop-rag-1182
+graphrag: saved retrieval for multihop-rag-1128
+graphrag: saved retrieval for multihop-rag-1253
+graphrag: saved retrieval for multihop-rag-1194
+graphrag: saved retrieval for multihop-rag-1324
+graphrag: saved retrieval for multihop-rag-1222
+graphrag: saved retrieval for multihop-rag-1422
+graphrag: saved retrieval for multihop-rag-1333
+graphrag: saved retrieval for multihop-rag-1470
+Received notification from DBMS server: <GqlStatusObject gql_status='01N50', status_description='warn: label does not exist. The label `Publisher OR pub` does not exist in database `recrag-benchmark-e5315c2b5c9f57e2595cc51c`. Verify that the spelling is correct.', position=<SummaryInputPosition line=3, column=12, offset=94>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 94, 'line': 3, 'column': 12}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "EXPLAIN MATCH (a:Article)-[:PUBLISHED_BY]->(pub)\nMATCH (a)-[:MENTIONS]->(p:Person)\nWHERE (pub:`Publisher OR pub`:Organization)\n  AND (toLower(pub.name) CONTAINS 'the verge'\n       OR any(alias IN coalesce(pub.aliases, []) WHERE toLower(alias) CONTAINS 'the verge')\n       OR toLower(pub.name) CONTAINS 'techcrunch'\n       OR any(alias IN coalesce(pub.aliases, []) WHERE toLower(alias) CONTAINS 'techcrunch'))\n  AND (toLower(p.name) CONTAINS 'sam bankman-fried'\n       OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'sam bankman-fried'))\nRETURN DISTINCT a.name AS article, pub.name AS publisher, a.published_on AS published_on\nLIMIT 10"
+Received notification from DBMS server: <GqlStatusObject gql_status='01N50', status_description='warn: label does not exist. The label `Publisher OR pub` does not exist in database `recrag-benchmark-e5315c2b5c9f57e2595cc51c`. Verify that the spelling is correct.', position=<SummaryInputPosition line=3, column=12, offset=86>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 86, 'line': 3, 'column': 12}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "MATCH (a:Article)-[:PUBLISHED_BY]->(pub)\nMATCH (a)-[:MENTIONS]->(p:Person)\nWHERE (pub:`Publisher OR pub`:Organization)\n  AND (toLower(pub.name) CONTAINS 'the verge'\n       OR any(alias IN coalesce(pub.aliases, []) WHERE toLower(alias) CONTAINS 'the verge')\n       OR toLower(pub.name) CONTAINS 'techcrunch'\n       OR any(alias IN coalesce(pub.aliases, []) WHERE toLower(alias) CONTAINS 'techcrunch'))\n  AND (toLower(p.name) CONTAINS 'sam bankman-fried'\n       OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'sam bankman-fried'))\nRETURN DISTINCT a.name AS article, pub.name AS publisher, a.published_on AS published_on\nLIMIT 10"
+graphrag: saved retrieval for multihop-rag-1368
+graphrag: saved retrieval for multihop-rag-1504
+graphrag: saved retrieval for multihop-rag-1424
+graphrag: saved retrieval for multihop-rag-1541
+graphrag: saved retrieval for multihop-rag-1500
+graphrag: saved retrieval for multihop-rag-1605
+graphrag: saved retrieval for multihop-rag-1538
+graphrag: saved retrieval for multihop-rag-1686
+graphrag: saved retrieval for multihop-rag-1625
+graphrag: saved retrieval for multihop-rag-1739
+graphrag: saved retrieval for multihop-rag-1716
+graphrag: saved retrieval for multihop-rag-1774
+graphrag: saved retrieval for multihop-rag-1756
+graphrag: saved retrieval for multihop-rag-1831
+graphrag: saved retrieval for multihop-rag-1859
+graphrag: saved retrieval for multihop-rag-1891
+graphrag: saved retrieval for multihop-rag-1932
+graphrag: saved retrieval for multihop-rag-1987
+graphrag: saved retrieval for multihop-rag-2023
+graphrag: saved retrieval for multihop-rag-2011
+graphrag: saved retrieval for multihop-rag-2135
+graphrag: saved retrieval for multihop-rag-2043
+graphrag: saved retrieval for multihop-rag-2195
+graphrag: saved retrieval for multihop-rag-2129
+graphrag: saved retrieval for multihop-rag-2235
+graphrag: saved retrieval for multihop-rag-2247
+graphrag: saved retrieval for multihop-rag-2260
+graphrag: saved retrieval for multihop-rag-2279
+graphrag: saved retrieval for multihop-rag-2308
+graphrag: saved retrieval for multihop-rag-2342
+graphrag: saved retrieval for multihop-rag-2343
+graphrag: saved retrieval for multihop-rag-2415
+graphrag: saved retrieval for multihop-rag-2412
+graphrag: saved retrieval for multihop-rag-2490
+graphrag: saved retrieval for multihop-rag-2456
+graphrag: saved retrieval for multihop-rag-2529
+graphrag: saved retrieval for multihop-rag-283
+graphrag: saved retrieval for multihop-rag-257
+graphrag: saved retrieval for multihop-rag-598
+Received notification from DBMS server: <GqlStatusObject gql_status='01N50', status_description='warn: label does not exist. The label `Publisher OR p` does not exist in database `recrag-benchmark-e5315c2b5c9f57e2595cc51c`. Verify that the spelling is correct.', position=<SummaryInputPosition line=2, column=10, offset=56>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 56, 'line': 2, 'column': 10}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "EXPLAIN MATCH (a:Article)-[:PUBLISHED_BY]->(p)\nWHERE (p:`Publisher OR p`:Organization)\n  AND (\n    toLower(p.name) CONTAINS 'techcrunch'\n    OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'techcrunch')\n    OR toLower(p.name) CONTAINS 'fortune'\n    OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'fortune')\n  )\n  AND (\n    (\n      (toLower(p.name) CONTAINS 'techcrunch' OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'techcrunch'))\n      AND (\n        (\n          (toLower(coalesce(a.published_on, '')) CONTAINS '2023-11-17' OR toLower(coalesce(a.published_on, '')) CONTAINS 'november 17, 2023')\n          AND (toLower(a.name) CONTAINS 'candid' OR toLower(a.name) CONTAINS 'board')\n        )\n        OR\n        (\n          (toLower(coalesce(a.published_on, '')) CONTAINS '2023-11-18' OR toLower(coalesce(a.published_on, '')) CONTAINS 'november 18, 2023')\n          AND (toLower(a.name) CONTAINS 'plan' OR toLower(a.name) CONTAINS 'return')\n        )\n      )\n    )\n    OR\n    (\n      (toLower(p.name) CONTAINS 'fortune' OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'fortune'))\n      AND (toLower(coalesce(a.published_on, '')) CONTAINS '2023-11-18' OR toLower(coalesce(a.published_on, '')) CONTAINS 'november 18, 2023')\n      AND (toLower(a.name) CONTAINS 'shocked' OR toLower(a.name) CONTAINS 'saddened' OR toLower(a.name) CONTAINS 'brockman')\n    )\n  )\nOPTIONAL MATCH (a)-[r:MENTIONS|SAID|PARTICIPATED_IN]->(e:__Entity__)\nRETURN DISTINCT a.name AS article, a.published_on AS published_on, p.name AS publisher, type(r) AS relationship, e.name AS connected_entity\nLIMIT 10"
+Received notification from DBMS server: <GqlStatusObject gql_status='01N50', status_description='warn: label does not exist. The label `Publisher OR p` does not exist in database `recrag-benchmark-e5315c2b5c9f57e2595cc51c`. Verify that the spelling is correct.', position=<SummaryInputPosition line=2, column=10, offset=48>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 48, 'line': 2, 'column': 10}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "MATCH (a:Article)-[:PUBLISHED_BY]->(p)\nWHERE (p:`Publisher OR p`:Organization)\n  AND (\n    toLower(p.name) CONTAINS 'techcrunch'\n    OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'techcrunch')\n    OR toLower(p.name) CONTAINS 'fortune'\n    OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'fortune')\n  )\n  AND (\n    (\n      (toLower(p.name) CONTAINS 'techcrunch' OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'techcrunch'))\n      AND (\n        (\n          (toLower(coalesce(a.published_on, '')) CONTAINS '2023-11-17' OR toLower(coalesce(a.published_on, '')) CONTAINS 'november 17, 2023')\n          AND (toLower(a.name) CONTAINS 'candid' OR toLower(a.name) CONTAINS 'board')\n        )\n        OR\n        (\n          (toLower(coalesce(a.published_on, '')) CONTAINS '2023-11-18' OR toLower(coalesce(a.published_on, '')) CONTAINS 'november 18, 2023')\n          AND (toLower(a.name) CONTAINS 'plan' OR toLower(a.name) CONTAINS 'return')\n        )\n      )\n    )\n    OR\n    (\n      (toLower(p.name) CONTAINS 'fortune' OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'fortune'))\n      AND (toLower(coalesce(a.published_on, '')) CONTAINS '2023-11-18' OR toLower(coalesce(a.published_on, '')) CONTAINS 'november 18, 2023')\n      AND (toLower(a.name) CONTAINS 'shocked' OR toLower(a.name) CONTAINS 'saddened' OR toLower(a.name) CONTAINS 'brockman')\n    )\n  )\nOPTIONAL MATCH (a)-[r:MENTIONS|SAID|PARTICIPATED_IN]->(e:__Entity__)\nRETURN DISTINCT a.name AS article, a.published_on AS published_on, p.name AS publisher, type(r) AS relationship, e.name AS connected_entity\nLIMIT 10"
+graphrag: saved retrieval for multihop-rag-446
+graphrag: saved retrieval for multihop-rag-1108
+graphrag: saved retrieval for multihop-rag-983
+graphrag: saved retrieval for multihop-rag-1289
+graphrag: saved retrieval for multihop-rag-1547
+graphrag: saved retrieval for multihop-rag-1433
+graphrag: saved retrieval for multihop-rag-1791
+graphrag: saved retrieval for multihop-rag-1643
+graphrag: saved retrieval for multihop-rag-2089
+graphrag: saved retrieval for multihop-rag-1884
+graphrag: saved retrieval for multihop-rag-2301
+graphrag: saved retrieval for multihop-rag-2017
+graphrag: saved retrieval for multihop-rag-2438
+graphrag: saved retrieval for multihop-rag-2538
+graphrag record 0: EM=1.00, F1=1.00
+graphrag record 1: EM=0.00, F1=0.00
+graphrag record 2: EM=1.00, F1=1.00
+graphrag record 3: EM=1.00, F1=1.00
+graphrag record 4: EM=1.00, F1=1.00
+graphrag record 5: EM=1.00, F1=1.00
+graphrag record 6: EM=0.00, F1=1.00
+graphrag record 7: EM=1.00, F1=1.00
+graphrag record 8: EM=1.00, F1=1.00
+graphrag record 9: EM=1.00, F1=1.00
+graphrag record 10: EM=1.00, F1=1.00
+graphrag record 11: EM=1.00, F1=1.00
+graphrag record 12: EM=1.00, F1=1.00
+graphrag record 13: EM=0.00, F1=1.00
+graphrag record 14: EM=1.00, F1=0.00
+graphrag record 15: EM=1.00, F1=1.00
+graphrag record 16: EM=1.00, F1=1.00
+graphrag record 17: EM=0.00, F1=0.00
+graphrag record 18: EM=0.00, F1=1.00
+graphrag record 19: EM=1.00, F1=1.00
+graphrag record 20: EM=1.00, F1=1.00
+graphrag record 21: EM=0.00, F1=0.00
+graphrag record 22: EM=1.00, F1=1.00
+graphrag record 23: EM=1.00, F1=1.00
+graphrag record 24: EM=0.00, F1=1.00
+graphrag record 25: EM=0.00, F1=0.00
+graphrag record 26: EM=1.00, F1=1.00
+graphrag record 27: EM=1.00, F1=1.00
+graphrag record 28: EM=1.00, F1=1.00
+graphrag record 29: EM=1.00, F1=1.00
+graphrag record 30: EM=1.00, F1=1.00
+graphrag record 31: EM=1.00, F1=1.00
+graphrag record 32: EM=1.00, F1=1.00
+graphrag record 33: EM=0.00, F1=0.00
+graphrag record 34: EM=1.00, F1=1.00
+graphrag record 35: EM=1.00, F1=1.00
+graphrag record 36: EM=1.00, F1=1.00
+graphrag record 37: EM=1.00, F1=1.00
+graphrag record 38: EM=1.00, F1=1.00
+graphrag record 39: EM=1.00, F1=1.00
+graphrag record 40: EM=1.00, F1=1.00
+graphrag record 41: EM=0.00, F1=0.00
+graphrag record 42: EM=1.00, F1=1.00
+graphrag record 43: EM=1.00, F1=1.00
+graphrag record 44: EM=1.00, F1=1.00
+graphrag record 45: EM=1.00, F1=1.00
+graphrag record 46: EM=1.00, F1=1.00
+graphrag record 47: EM=1.00, F1=1.00
+graphrag record 48: EM=1.00, F1=1.00
+graphrag record 49: EM=1.00, F1=1.00
+graphrag record 50: EM=1.00, F1=1.00
+graphrag record 51: EM=1.00, F1=1.00
+graphrag record 52: EM=1.00, F1=1.00
+graphrag record 53: EM=1.00, F1=1.00
+graphrag record 54: EM=1.00, F1=1.00
+graphrag record 55: EM=0.00, F1=0.00
+graphrag record 56: EM=1.00, F1=1.00
+graphrag record 57: EM=0.00, F1=0.00
+graphrag record 58: EM=1.00, F1=1.00
+graphrag record 59: EM=1.00, F1=1.00
+graphrag record 60: EM=1.00, F1=1.00
+graphrag record 61: EM=1.00, F1=1.00
+graphrag record 62: EM=1.00, F1=1.00
+graphrag record 63: EM=1.00, F1=1.00
+graphrag record 64: EM=0.00, F1=1.00
+graphrag record 65: EM=1.00, F1=1.00
+graphrag record 66: EM=1.00, F1=1.00
+graphrag record 67: EM=1.00, F1=1.00
+graphrag record 68: EM=1.00, F1=1.00
+graphrag record 69: EM=1.00, F1=1.00
+graphrag record 70: EM=1.00, F1=1.00
+graphrag record 71: EM=1.00, F1=1.00
+graphrag record 72: EM=1.00, F1=1.00
+graphrag record 73: EM=1.00, F1=1.00
+graphrag record 74: EM=1.00, F1=1.00
+graphrag record 75: EM=0.00, F1=0.00
+graphrag record 76: EM=1.00, F1=1.00
+graphrag record 77: EM=1.00, F1=1.00
+graphrag record 78: EM=0.00, F1=1.00
+graphrag record 79: EM=1.00, F1=1.00
+graphrag record 80: EM=1.00, F1=1.00
+graphrag record 81: EM=1.00, F1=1.00
+graphrag record 82: EM=1.00, F1=1.00
+RESULTS /Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/graphrag/20261113T094943714875Z/results.jsonl

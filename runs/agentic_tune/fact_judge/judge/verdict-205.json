@@ -1,0 +1,62 @@
+[
+{"id": "6aded666f4a176df", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "When FTX took a loss in the hundreds of million dollars because a trader had exploited its system, Wang moved that loss onto Alameda’s balance sheet."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Bankman-Fried directed him to have Alameda take it on instead, because FTX’s balance sheets were visible to investors and Alameda’s weren’t."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "withdrawals on the platform to Alameda,\" Wang said."}, {"item": 1, "quote": "Alameda could have negative balances and unlimited withdrawals."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []}
+]},
+{"id": "eb12cc96c0ed2059", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 9, "quote": "From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "1a6753a46a8113a1", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Brown added that he was “surprised” to see that a second valuation expert had not been drafted in to value the HSF portfolio for the latest interim results"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Brown added that he was “surprised” to see that a second valuation expert had not been drafted in to value the HSF portfolio for the latest interim results"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Kroll was appointed to consider the “reasonableness” of Citrin Cooperman’s assumptions for HSF’s previous set of results (to end of March 2023)."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "Kroll was appointed to consider the “reasonableness” of Citrin Cooperman’s assumptions for HSF’s previous set of results (to end of March 2023)."}]}
+]},
+{"id": "9c5d8131d469326b", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The prosecution painted a picture of an empire “built on lies”"}, {"item": 2, "quote": "He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]}
+]},
+{"id": "e130aca4dc1e34fa", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]}
+]

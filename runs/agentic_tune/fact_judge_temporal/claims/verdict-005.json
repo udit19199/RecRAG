@@ -1,0 +1,46 @@
+[
+ {"id": "multihop-rag-1541", "sentences": [
+   ["Huang testified during cross-examination.", "Huang said Paradigm pressed Bankman-Fried on the board issue.", "Paradigm was told that Bankman-Fried didn't want investors as directors.", "Huang said Bankman-Fried did plan on having a board with experts."],
+   ["The criminal trial of Sam Bankman-Fried was highly anticipated.", "Sam Bankman-Fried is the former CEO of FTX.", "FTX is a bankrupt crypto exchange.", "The criminal trial of Sam Bankman-Fried started on Tuesday.", "The trial is to determine whether Sam Bankman-Fried is guilty of seven counts of fraud and conspiracy."],
+   ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.", "The defense argued that the FTX founder acted in good faith.", "The defense argued that the FTX founder never meant to commit fraud or steal.", "The defense argued that the FTX founder basically got in over his head."]
+ ]},
+ {"id": "multihop-rag-1564", "sentences": [
+   ["Someone said 'But nah, it was awesome.'", "On Saturday, the competition also said goodbye to a range of players.", "The competition said goodbye to Richelle Cranston on Saturday.", "Richelle Cranston is a Western Bulldogs forward.", "Richelle Cranston has battled stage five chronic kidney disease while playing this season.", "The competition said goodbye to Akec Makur Chuot on Saturday.", "Akec Makur Chuot is a Hawthorn player.", "Akec Makur Chuot played 40 games for three clubs."],
+   ["The Dogs are Richelle Cranston's third club.", "Richelle Cranston started at Melbourne.", "Richelle Cranston had a stint with Geelong.", "Richelle Cranston joined the Bulldogs last year."]
+ ]},
+ {"id": "multihop-rag-1581", "sentences": [
+   ["The case was filed by Helena World Chronicle.", "Helena World Chronicle is an Arkansas-based publisher.", "The case argues that Google 'siphons off' news publishers' content.", "The case argues that Google 'siphons off' news publishers' readers.", "The case argues that Google 'siphons off' news publishers' ad revenue.", "The case argues that this siphoning happens through anticompetitive means."],
+   ["Epic will also suggest that Google hid items from discovery.", "Epic will suggest that Google hid items from discovery by allowing execs and employees to have 'off the record' chats.", "Google will counter this as well.", "Google will say it has provided the court with thousands of chat logs.", "Google will say it has provided the court with millions of documents."]
+ ]},
+ {"id": "multihop-rag-1605", "sentences": [
+   ["A dozen teams lined up when the free agent entered free agency.", "The dozen teams were curious to see if they could meet the free agent's eye."],
+   ["The player explores a system of the Imperium.", "The player explores with a loyal crew of companions.", "The player makes impactful choices.", "The player determines the fate of those around the player."]
+ ]},
+ {"id": "multihop-rag-1606", "sentences": [
+   ["He revealed that he made a friendship bracelet.", "A friendship bracelet is a fan tradition at Swift's concerts.", "The friendship bracelet had his number on it.", "He made the friendship bracelet to give to Swift.", "The friendship bracelet seemingly expressed his interest in Swift."],
+   ["Swift has now shared that she has nothing to hide.", "Swift has shared that she has nothing to hide in her new relationship with Kelce.", "Swift has a new relationship with Kelce."]
+ ]},
+ {"id": "multihop-rag-1669", "sentences": [
+   ["This Diablo 4 guide gathers the best Diablo 4 Sorcerer builds for season 2.", "This Diablo 4 guide simplifies the best Diablo 4 Sorcerer builds for season 2."],
+   ["This Diablo 4 guide gathers the best Diablo 4 Barbarian builds for season 2.", "This Diablo 4 guide simplifies the best Diablo 4 Barbarian builds for season 2."]
+ ]},
+ {"id": "multihop-rag-1686", "sentences": [
+   ["Wired removed the article for not meeting its standards.", "The article was shared on social media to a degree.", "The article was boosted in write-ups at other outlets.", "The degree of sharing and boosting of the article shows how willing people are to accept foul play on Google's part."],
+   ["Google's search head Prabhakar Raghavan testified in court on October 28.", "Prabhakar Raghavan revealed that Google paid $26.3 billion in 2021 to multiple browsers, phones and platforms.", "The browsers, phones and platforms that Google paid were from companies including Apple, Samsung and Mozilla.", "The Verge reports this."],
+   ["The case was filed by Helena World Chronicle.", "Helena World Chronicle is an Arkansas-based publisher.", "The case argues that Google 'siphons off' news publishers' content.", "The case argues that Google 'siphons off' news publishers' readers.", "The case argues that Google 'siphons off' news publishers' ad revenue.", "The case argues that this siphoning happens through anticompetitive means."]
+ ]},
+ {"id": "multihop-rag-1698", "sentences": [
+   ["It would seem that the All Blacks are playing for themselves as much as anyone.", "The Springboks play for their country.", "A generation of All Blacks players and leaders will call time on their international careers at week's end."],
+   ["The Springboks took a 12-3 lead after 34 minutes.", "The Springboks took the 12-3 lead when the All Blacks once again failed to release on their goal line."],
+   ["This comes despite Argentina knocking over the All Blacks last year in Christchurch.", "The All Blacks suffered a maiden defeat in 2020 in Sydney."]
+ ]},
+ {"id": "multihop-rag-1701", "sentences": [
+   ["Huang testified during cross-examination.", "Huang said Paradigm pressed Bankman-Fried on the board issue.", "Paradigm was told that Bankman-Fried didn't want investors as directors.", "Huang said Bankman-Fried did plan on having a board with experts."],
+   ["Judge Lewis Kaplan intervened.", "Judge Lewis Kaplan asked if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance.", "It was not until Judge Lewis Kaplan's intervention that Bankman-Fried admitted he had been told.", "Bankman-Fried admitted he had been told by Yedidia about that money, in words or in substance."],
+   ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.", "The defense argued that the FTX founder acted in good faith.", "The defense argued that the FTX founder never meant to commit fraud or steal.", "The defense argued that the FTX founder basically got in over his head."]
+ ]},
+ {"id": "multihop-rag-1739", "sentences": [
+   ["Halloween is a holiday on the horizon.", "Halloween is not the only holiday on the horizon.", "October is drawing to a close.", "Another holiday is on the horizon now that October is drawing to a close."],
+   ["A reader may be in the midst of a new relationship this holiday season.", "A reader in a new relationship this holiday season may be faced with the opportunity to introduce their significant other to their family."]
+ ]}
+]

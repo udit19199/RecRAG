@@ -1,0 +1,75 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "6194915277794840386",
+   "sentences": [
+    "`` Baby , Now That I 've Found You '' ( Tony Macaulay , John MacLeod ) -- 3 : 49 ( Previously Unreleased ) `` Oh , Atlanta '' ( Mick Ralphs ) -- 4 : 41 ( Previously Unreleased ) `` Broadway '' ( Sidney & Suzanne Cox ) -- 3 : 57 ( Previously Unreleased ) `` Every Time You Say Goodbye '' ( John Pennell ) -- 3 : 13 ( From the Album `` Every Time You Say Goodbye '' by Alison Krauss & Union Station ) `` Tonight I 'll Be Lonely Too '' ( Sidney Cox ) -- 3 : 25 ( From the Album `` I 've Got That Old Feeling '' by Alison Krauss ) `` Teardrops Will Kiss the Morning Dew '' ( Paul Craft ) -- 3 : 38 ( From the Album `` Two Highways '' by Alison Krauss & Union Station ) `` Sleep On '' ( Nelson Mandrell ) -- 2 : 23 ( From the Album `` Too Late to Cry '' by Alison Krauss ) `` When God Dips His Pen of Love in My Heart '' ( Cleavant Derricks ) -- 2 : 26 ( From the Album `` Everybody 's Reaching Out for Someone '' by The Cox Family ) `` I Will '' ( John Lennon , Paul McCartney ) -- 4 : 04 ( From the Album `` Within Reach '' by Tony Furtado ) `` I Do n't Believe You 've Met My Baby '' ( Autry Inman ) -- 3 : 10 ( From the Album `` Slide Rule '' by Jerry Douglas ) `` In the Palm of Your Hand '' ( Ron Block ) -- 3 : 24 ( From the Album `` I Know Who Holds Tomorrow '' by Alison Krauss & The Cox Family ) `` When You Say Nothing at All '' ( Paul Overstreet , Don Schlitz ) -- 4 : 21 ( From the Album `` Keith Whitley : A Tribute Album '' performed by Alison Krauss & Union Station )"
+   ]
+  },
+  {
+   "id": "multihop-rag-1573",
+   "sentences": [
+    "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie.",
+    "But then, there’s MJ as well who has made a comeback from the first installment."
+   ]
+  },
+  {
+   "id": "5a83a7e15542992ef85e2347",
+   "sentences": [
+    "Homer Jay Simpson is a fictional character and the main protagonist of the American animated television series \"The Simpsons\" as the patriarch of the eponymous family.",
+    " He is voiced by Dan Castellaneta and first appeared on television, along with the rest of his family, in \"The Tracey Ullman Show\" short \"Good Night\" on April 19, 1987.",
+    "Daniel Louis Castellaneta ( ; born October 29, 1957) is an American actor, voice actor, comedian and screenwriter."
+   ]
+  },
+  {
+   "id": "multihop-rag-530",
+   "sentences": [
+    "Likely with the sole intent of keeping Messi fit in that time off, and the added bonus of raking in significant cash, Inter Miami scheduled a two-match tour of China in early November after their regular season concluded.",
+    "Eventually, Alvaro Barreal’s 78th-minute goal ended any hope that Inter Miami had to complete a stunning playoff charge, and the defeat coupled with CF Montreal’s big 4-1 victory over Portland means Inter Miami are officially out of the postseason running.",
+    "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."
+   ]
+  },
+  {
+   "id": "5a840e395542992ef85e239d",
+   "sentences": [
+    "The Straight Story is a 1999 internationally co-produced biographical road drama film directed by David Lynch.",
+    "Frozen is a 2013 American 3D computer-animated musical fantasy film produced by Walt Disney Animation Studios and released by Walt Disney Pictures."
+   ]
+  },
+  {
+   "id": "6166989945125161991",
+   "sentences": [
+    "The Roosevelt Corollary was an addition to the Monroe Doctrine articulated by President Theodore Roosevelt in his State of the Union address in 1904 after the Venezuela Crisis of 1902 -- 03 . The corollary states that the United States will intervene in conflicts between European countries and Latin American countries to enforce legitimate claims of the European powers , rather than having the Europeans press their claims directly ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1003",
+   "sentences": [
+    "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight.",
+    "152.67 -- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."
+   ]
+  },
+  {
+   "id": "-7123670178204378853",
+   "sentences": [
+    "All black military pilots who trained in the United States trained at Moton Field , the Tuskegee Army Air Field , and were educated at Tuskegee University , located near Tuskegee , Alabama . The group included five Haitians from the Haitian Air Force , and one pilot from Trinidad. . It also included a Hispanic or Latino airman born in the Dominican Republic ."
+   ]
+  },
+  {
+   "id": "multihop-rag-352",
+   "sentences": [
+    "But by the age of 16, she is public property – incapable of going outside without being mobbed, and her love of singing and dancing now a lucrative resource.",
+    "\"It was almost like this very strange, subtle clue to the media that they don't know everything that happened in that relationship, and I can have something really major and traumatic happen to me and they don't know about it,\" she told NPR."
+   ]
+  },
+  {
+   "id": "5a794f8155429970f5fffe95",
+   "sentences": [
+    "Martin Degville is (born 27 January 1961 in Walsall) is the lead singer and co-songwriter of the UK pop band, Sigue Sigue Sputnik – which had a worldwide hit single in 1986 with \"Love Missile F1-11\" – and six other EMI single releases.",
+    "Paul Richard \"Richie\" Furay (born May 9, 1944) is an American singer, songwriter, and Rock & Roll Hall of Fame member who is best known for forming the bands Buffalo Springfield with Stephen Stills, Neil Young, Bruce Palmer, and Dewey Martin, and Poco with Jim Messina, Rusty Young, George Grantham and Randy Meisner."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1988 @@
+{
+ "significance": [
+  {
+   "vs": "RAG",
+   "type": "all",
+   "questions": 400,
+   "graphrag_only_right": 25,
+   "other_only_right": 11,
+   "p": 0.028816719655878842,
+   "wins": 46,
+   "ties": 319,
+   "losses": 35,
+   "p_holm": 0.43225079483818263
+  },
+  {
+   "vs": "RAG",
+   "type": "comparison_query",
+   "questions": 100,
+   "graphrag_only_right": 7,
+   "other_only_right": 7,
+   "p": 1.0,
+   "wins": 13,
+   "ties": 71,
+   "losses": 16,
+   "p_holm": 1.0
+  },
+  {
+   "vs": "RAG",
+   "type": "inference_query",
+   "questions": 100,
+   "graphrag_only_right": 2,
+   "other_only_right": 1,
+   "p": 1.0,
+   "wins": 3,
+   "ties": 94,
+   "losses": 3,
+   "p_holm": 1.0
+  },
+  {
+   "vs": "RAG",
+   "type": "null_query",
+   "questions": 100,
+   "graphrag_only_right": 4,
+   "other_only_right": 0,
+   "p": 0.125,
+   "wins": 5,
+   "ties": 92,
+   "losses": 3,
+   "p_holm": 1.0
+  },
+  {
+   "vs": "RAG",
+   "type": "temporal_query",
+   "questions": 100,
+   "graphrag_only_right": 12,
+   "other_only_right": 3,
+   "p": 0.03515625,
+   "wins": 25,
+   "ties": 62,
+   "losses": 13,
+   "p_holm": 0.4921875
+  },
+  {
+   "vs": "HippoRAG",
+   "type": "all",
+   "questions": 400,
+   "graphrag_only_right": 26,
+   "other_only_right": 20,
+   "p": 0.4613911821367651,
+   "wins": 44,
+   "ties": 312,
+   "losses": 44,
+   "p_holm": 1.0
+  },
+  {
+   "vs": "HippoRAG",
+   "type": "comparison_query",
+   "questions": 100,
+   "graphrag_only_right": 12,
+   "other_only_right": 6,
+   "p": 0.237884521484375,
+   "wins": 17,
+   "ties": 63,
+   "losses": 20,
+   "p_holm": 1.0
+  },
+  {
+   "vs": "HippoRAG",
+   "type": "inference_query",
+   "questions": 100,
+   "graphrag_only_right": 2,
+   "other_only_right": 2,
+   "p": 1.0,
+   "wins": 2,
+   "ties": 94,
+   "losses": 4,
+   "p_holm": 1.0
+  },
+  {
+   "vs": "HippoRAG",
+   "type": "null_query",
+   "questions": 100,
+   "graphrag_only_right": 3,
+   "other_only_right": 0,
+   "p": 0.25,
+   "wins": 6,
+   "ties": 93,
+   "losses": 1,
+   "p_holm": 1.0
+  },
+  {
+   "vs": "HippoRAG",
+   "type": "temporal_query",
+   "questions": 100,
+   "graphrag_only_right": 9,
+   "other_only_right": 12,
+   "p": 0.6636238098144531,
+   "wins": 19,
+   "ties": 62,
+   "losses": 19,
+   "p_holm": 1.0
+  },
+  {
+   "vs": "RAPTOR",
+   "type": "all",
+   "questions": 400,
+   "graphrag_only_right": 30,
+   "other_only_right": 15,
+   "p": 0.035697803555194696,
+   "wins": 44,
+   "ties": 318,
+   "losses": 38,
+   "p_holm": 0.4921875
+  },
+  {
+   "vs": "RAPTOR",
+   "type": "comparison_query",
+   "questions": 100,
+   "graphrag_only_right": 15,
+   "other_only_right": 8,
+   "p": 0.21003961563110352,
+   "wins": 17,
+   "ties": 67,
+   "losses": 16,
+   "p_holm": 1.0
+  },
+  {
+   "vs": "RAPTOR",
+   "type": "inference_query",
+   "questions": 100,
+   "graphrag_only_right": 1,
+   "other_only_right": 2,
+   "p": 1.0,
+   "wins": 1,
+   "ties": 95,
+   "losses": 4,
+   "p_holm": 1.0
+  },
+  {
+   "vs": "RAPTOR",
+   "type": "null_query",
+   "questions": 100,
+   "graphrag_only_right": 2,
+   "other_only_right": 0,
+   "p": 0.5,
+   "wins": 3,
+   "ties": 92,
+   "losses": 5,
+   "p_holm": 1.0
+  },
+  {
+   "vs": "RAPTOR",
+   "type": "temporal_query",
+   "questions": 100,
+   "graphrag_only_right": 12,
+   "other_only_right": 5,
+   "p": 0.143463134765625,
+   "wins": 23,
+   "ties": 64,
+   "losses": 13,
+   "p_holm": 1.0
+  }
+ ],
+ "stability": [
+  {
+   "method": "RAG",
+   "same_answer_all_repeats": 85.0,
+   "right_3of3": 276,
+   "right_2of3": 14,
+   "right_1of3": 15,
+   "right_0of3": 95,
+   "right_at_least_once": 76.2,
+   "right_every_time": 69.0,
+   "accuracy_by_repeat": [
+    72.2,
+    73.2,
+    72.2
+   ]
+  },
+  {
+   "method": "RAPTOR",
+   "same_answer_all_repeats": 88.8,
+   "right_3of3": 280,
+   "right_2of3": 9,
+   "right_1of3": 14,
+   "right_0of3": 97,
+   "right_at_least_once": 75.8,
+   "right_every_time": 70.0,
+   "accuracy_by_repeat": [
+    71.8,
+    73.5,
+    72.8
+   ]
+  },
+  {
+   "method": "HippoRAG",
+   "same_answer_all_repeats": 86.2,
+   "right_3of3": 286,
+   "right_2of3": 12,
+   "right_1of3": 13,
+   "right_0of3": 89,
+   "right_at_least_once": 77.8,
+   "right_every_time": 71.5,
+   "accuracy_by_repeat": [
+    74.5,
+    74.5,
+    74.8
+   ]
+  },
+  {
+   "method": "Agentic GraphRAG",
+   "same_answer_all_repeats": 76.0,
+   "right_3of3": 266,
+   "right_2of3": 38,
+   "right_1of3": 23,
+   "right_0of3": 73,
+   "right_at_least_once": 81.8,
+   "right_every_time": 66.5,
+   "accuracy_by_repeat": [
+    75.5,
+    73.5,
+    75.2
+   ]
+  }
+ ],
+ "evidence_outcome": [
+  {
+   "method": "RAG",
+   "type": "all (non-null)",
+   "answers": 900,
+   "none_right": 84,
+   "none_refused": 93,
+   "none_false": 21,
+   "some_right": 383,
+   "some_refused": 144,
+   "some_false": 40,
+   "all_right": 120,
+   "all_refused": 5,
+   "all_false": 10
+  },
+  {
+   "method": "RAG",
+   "type": "comparison_query",
+   "answers": 300,
+   "none_right": 16,
+   "none_refused": 35,
+   "none_false": 21,
+   "some_right": 88,
+   "some_refused": 61,
+   "some_false": 22,
+   "all_right": 50,
+   "all_refused": 0,
+   "all_false": 7
+  },
+  {
+   "method": "RAG",
+   "type": "inference_query",
+   "answers": 300,
+   "none_right": 42,
+   "none_refused": 9,
+   "none_false": 0,
+   "some_right": 213,
+   "some_refused": 0,
+   "some_false": 3,
+   "all_right": 33,
+   "all_refused": 0,
+   "all_false": 0
+  },
+  {
+   "method": "RAG",
+   "type": "temporal_query",
+   "answers": 300,
+   "none_right": 26,
+   "none_refused": 49,
+   "none_false": 0,
+   "some_right": 82,
+   "some_refused": 83,
+   "some_false": 15,
+   "all_right": 37,
+   "all_refused": 5,
+   "all_false": 3
+  },
+  {
+   "method": "RAPTOR",
+   "type": "all (non-null)",
+   "answers": 900,
+   "none_right": 78,
+   "none_refused": 95,
+   "none_false": 16,
+   "some_right": 373,
+   "some_refused": 157,
+   "some_false": 34,
+   "all_right": 134,
+   "all_refused": 3,
+   "all_false": 10
+  },
+  {
+   "method": "RAPTOR",
+   "type": "comparison_query",
+   "answers": 300,
+   "none_right": 15,
+   "none_refused": 39,
+   "none_false": 12,
+   "some_right": 74,
+   "some_refused": 83,
+   "some_false": 14,
+   "all_right": 55,
+   "all_refused": 1,
+   "all_false": 7
+  },
+  {
+   "method": "RAPTOR",
+   "type": "inference_query",
+   "answers": 300,
+   "none_right": 39,
+   "none_refused": 3,
+   "none_false": 0,
+   "some_right": 219,
+   "some_refused": 0,
+   "some_false": 3,
+   "all_right": 36,
+   "all_refused": 0,
+   "all_false": 0
+  },
+  {
+   "method": "RAPTOR",
+   "type": "temporal_query",
+   "answers": 300,
+   "none_right": 24,
+   "none_refused": 53,
+   "none_false": 4,
+   "some_right": 80,
+   "some_refused": 74,
+   "some_false": 17,
+   "all_right": 43,
+   "all_refused": 2,
+   "all_false": 3
+  },
+  {
+   "method": "HippoRAG",
+   "type": "all (non-null)",
+   "answers": 900,
+   "none_right": 149,
+   "none_refused": 76,
+   "none_false": 30,
+   "some_right": 355,
+   "some_refused": 118,
+   "some_false": 37,
+   "all_right": 110,
+   "all_refused": 5,
+   "all_false": 20
+  },
+  {
+   "method": "HippoRAG",
+   "type": "comparison_query",
+   "answers": 300,
+   "none_right": 20,
+   "none_refused": 30,
+   "none_false": 22,
+   "some_right": 67,
+   "some_refused": 67,
+   "some_false": 25,
+   "all_right": 57,
+   "all_refused": 0,
+   "all_false": 12
+  },
+  {
+   "method": "HippoRAG",
+   "type": "inference_query",
+   "answers": 300,
+   "none_right": 79,
+   "none_refused": 4,
+   "none_false": 1,
+   "some_right": 189,
+   "some_refused": 0,
+   "some_false": 3,
+   "all_right": 24,
+   "all_refused": 0,
+   "all_false": 0
+  },
+  {
+   "method": "HippoRAG",
+   "type": "temporal_query",
+   "answers": 300,
+   "none_right": 50,
+   "none_refused": 42,
+   "none_false": 7,
+   "some_right": 99,
+   "some_refused": 51,
+   "some_false": 9,
+   "all_right": 29,
+   "all_refused": 5,
+   "all_false": 8
+  },
+  {
+   "method": "Agentic GraphRAG",
+   "type": "all (non-null)",
+   "answers": 900,
+   "none_right": 73,
+   "none_refused": 62,
+   "none_false": 17,
+   "some_right": 418,
+   "some_refused": 126,
+   "some_false": 71,
+   "all_right": 117,
+   "all_refused": 1,
+   "all_false": 15
+  },
+  {
+   "method": "Agentic GraphRAG",
+   "type": "comparison_query",
+   "answers": 300,
+   "none_right": 8,
+   "none_refused": 24,
+   "none_false": 12,
+   "some_right": 99,
+   "some_refused": 48,
+   "some_false": 53,
+   "all_right": 44,
+   "all_refused": 0,
+   "all_false": 12
+  },
+  {
+   "method": "Agentic GraphRAG",
+   "type": "inference_query",
+   "answers": 300,
+   "none_right": 47,
+   "none_refused": 4,
+   "none_false": 2,
+   "some_right": 215,
+   "some_refused": 2,
+   "some_false": 3,
+   "all_right": 27,
+   "all_refused": 0,
+   "all_false": 0
+  },
+  {
+   "method": "Agentic GraphRAG",
+   "type": "temporal_query",
+   "answers": 300,
+   "none_right": 18,
+   "none_refused": 34,
+   "none_false": 3,
+   "some_right": 104,
+   "some_refused": 76,
+   "some_false": 15,
+   "all_right": 46,
+   "all_refused": 1,
+   "all_false": 3
+  }
+ ],
+ "null_questions": [
+  {
+   "method": "RAG",
+   "answers": 300,
+   "refused_correctly": 284,
+   "answered_anyway": 16,
+   "examples": [
+    "C",
+    "F",
+    "G",
+    "India",
+    "M",
+    "S",
+    "X",
+    "X (Xbox)"
+   ]
+  },
+  {
+   "method": "RAPTOR",
+   "answers": 300,
+   "refused_correctly": 287,
+   "answered_anyway": 13,
+   "examples": [
+    "5",
+    "F",
+    "G",
+    "India",
+    "India (men\u2019s cricket team)",
+    "India national cricket team",
+    "S"
+   ]
+  },
+  {
+   "method": "HippoRAG",
+   "answers": 300,
+   "refused_correctly": 281,
+   "answered_anyway": 19,
+   "examples": [
+    "5",
+    "Barack Obama",
+    "Elon Musk",
+    "F",
+    "H",
+    "India",
+    "India men's cricket team",
+    "M"
+   ]
+  },
+  {
+   "method": "Agentic GraphRAG",
+   "answers": 300,
+   "refused_correctly": 289,
+   "answered_anyway": 11,
+   "examples": [
+    "C",
+    "Elon Musk",
+    "F",
+    "India",
+    "V",
+    "Walmart",
+    "X (Xbox)"
+   ]
+  }
+ ],
+ "yes_no": {
+  "gold_yes_share": 60.0,
+  "methods": [
+   {
+    "method": "RAG",
+    "answers": 555,
+    "said_yes": 30.1,
+    "said_no": 30.1,
+    "refused": 38.6,
+    "accuracy_gold_yes": 46.2,
+    "accuracy_gold_no": 58.6
+   },
+   {
+    "method": "RAPTOR",
+    "answers": 555,
+    "said_yes": 30.6,
+    "said_no": 25.9,
+    "refused": 42.9,
+    "accuracy_gold_yes": 45.3,
+    "accuracy_gold_no": 54.1
+   },
+   {
+    "method": "HippoRAG",
+    "answers": 555,
+    "said_yes": 31.0,
+    "said_no": 36.2,
+    "refused": 32.4,
+    "accuracy_gold_yes": 47.7,
+    "accuracy_gold_no": 64.9
+   },
+   {
+    "method": "Agentic GraphRAG",
+    "answers": 555,
+    "said_yes": 32.8,
+    "said_no": 36.4,
+    "refused": 29.9,
+    "accuracy_gold_yes": 48.9,
+    "accuracy_gold_no": 62.2
+   }
+  ]
+ },
+ "hard_questions": {
+  "all_methods_fail": 68,
+  "all_methods_fail_by_type": {
+   "comparison_query": 36,
+   "null_query": 2,
+   "temporal_query": 29,
+   "inference_query": 1
+  },
+  "all_methods_right": 254,
+  "only_this_method_right": {
+   "RAG": 1,
+   "RAPTOR": 2,
+   "HippoRAG": 12,
+   "Agentic GraphRAG": 8
+  },
+  "all_fail_examples": [
+   {
+    "id": "multihop-rag-1083",
+    "type": "comparison_query",
+    "question": "Does the Fortune article suggest that Sam Bankman-Fried's actions were the primary cause of FTX's success being built on lies, while the TechCrunch article implies that comments by Changpeng Zhao were a contributing factor to the collapse of FTX?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "No",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "No.",
+     "Agentic GraphRAG": "No"
+    }
+   },
+   {
+    "id": "multihop-rag-112",
+    "type": "null_query",
+    "question": "Considering an article from The New York Times discussing Ron DeSantis's stance on education policy and another from The Washington Post detailing his potential strategies for the 2024 presidential race, what is the first letter of the state that DeSantis governs?",
+    "gold": [
+     "Insufficient information."
+    ],
+    "answers": {
+     "RAG": "F",
+     "RAPTOR": "F",
+     "HippoRAG": "F",
+     "Agentic GraphRAG": "F"
+    }
+   },
+   {
+    "id": "multihop-rag-1120",
+    "type": "comparison_query",
+    "question": "Does The Verge's article suggest that Google has the capability to address issues with Android app distribution and in-app payment systems, while TechCrunch's first article implies that Google is being transparent with legal documents in its antitrust battle, and TechCrunch's second article accuses Google of anticompetitive behavior towards news publishers?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "No",
+     "RAPTOR": "No",
+     "HippoRAG": "No",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-1154",
+    "type": "comparison_query",
+    "question": "Does the article from Fortune suggest that Generation Z experiences distress primarily due to climate change, while the article from Eos: Earth And Space Science News calls for a deeper understanding of sea surface temperature patterns as a significant climate driver?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "No"
+    }
+   },
+   {
+    "id": "multihop-rag-1170",
+    "type": "comparison_query",
+    "question": "Does the Fortune article claim that Sam Bankman-Fried used Caroline Ellison as a front for secret access to customer funds at Alameda Research, while The Verge article alleges that Sam Bankman-Fried himself made the decision to use FTX customer funds to buy out Binance, indicating a difference in the reported involvement of Sam Bankman-Fried in the misuse of customer funds?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "No"
+    }
+   },
+   {
+    "id": "multihop-rag-1182",
+    "type": "temporal_query",
+    "question": "Between the TechCrunch report on the SBF trial published on October 6, 2023, and the TechCrunch report on Sam Bankman-Fried's prosecution allegations published on October 7, 2023, was there consistency in the portrayal of Sam Bankman-Fried's actions related to the FTX collapse?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Yes",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-1308",
+    "type": "temporal_query",
+    "question": "After TechCrunch reported on the shutdown of Pebble, the Twitter alternative previously known as T2, on October 24, 2023, did the role of social media as highlighted by FOX News - Health in the \"Save Lucas\" campaign by The Goeller family on December 9, 2023, remain consistent or inconsistent with the importance of social media's role as mentioned in the TechCrunch article?",
+    "gold": [
+     "Consistent"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-1324",
+    "type": "temporal_query",
+    "question": "Between the report from The Age on October 22, 2023, claiming that Google manipulates Search to minimize ad revenue, and the report from TechCrunch on December 15, 2023, alleging that Google \"siphons off\" news publishers' content and ad revenue through anticompetitive means, is there consistency in the portrayal of Google's influence on ad revenue and content distribution?",
+    "gold": [
+     "no"
+    ],
+    "answers": {
+     "RAG": "Yes",
+     "RAPTOR": "Yes.",
+     "HippoRAG": "Yes.",
+     "Agentic GraphRAG": "Yes."
+    }
+   },
+   {
+    "id": "multihop-rag-1325",
+    "type": "null_query",
+    "question": "Considering the information from an ESPN article detailing the performance of a cricket team at the DY Patil Sports Academy and a Cricbuzz report on the same team's historical achievements, which team, known for its blue jersey, won a significant match at the DY Patil Sports Academy and also secured a championship title in an ICC event held in 2011?",
+    "gold": [
+     "Insufficient information."
+    ],
+    "answers": {
+     "RAG": "India",
+     "RAPTOR": "India",
+     "HippoRAG": "India",
+     "Agentic GraphRAG": "India"
+    }
+   },
+   {
+    "id": "multihop-rag-1432",
+    "type": "temporal_query",
+    "question": "After Seeking Alpha recommended a Hold rating for GitLab Inc. on December 3, 2023, due to valuation concerns, did TechCrunch's report on December 18, 2023, regarding the significant pressure on tech companies' valuations reflect a consistent or inconsistent viewpoint on the valuation pressures faced by tech companies like GitLab Inc.?",
+    "gold": [
+     "Consistent"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-1470",
+    "type": "temporal_query",
+    "question": "Considering the injury updates reported by CBSSports.com on November 19, 2023, regarding Cooper Kupp and the subsequent report by Sporting News on December 7, 2023, about Derrick Henry, does the sequence of reports indicate that both players did not suffer in-game injuries that led to them leaving their respective games for further evaluation and returning to the game?",
+    "gold": [
+     "no"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "No",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-1502",
+    "type": "temporal_query",
+    "question": "Between the TechCrunch report on Sam Bankman-Fried published on October 2, 2023, and the TechCrunch report on Sam Bankman-Fried published on October 7, 2023, was there consistency in the portrayal of Sam Bankman-Fried's alleged actions?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-1504",
+    "type": "temporal_query",
+    "question": "Considering the injury updates reported by CBSSports.com on November 19, 2023, regarding Cooper Kupp and the subsequent report by Sporting News on December 7, 2023, about Derrick Henry, does the sequence of reports indicate that both players suffered in-game injuries that led to them leaving their respective games for further evaluation or not returning to the game?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-1527",
+    "type": "temporal_query",
+    "question": "After Sporting News reported on Alejandro Mata's successful 31-yard field goal for Colorado on October 28, 2023, did the same news source report a successful or unsuccessful field goal attempt by Jayden Fielding in a later article?",
+    "gold": [
+     "Unsuccessful"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-1539",
+    "type": "comparison_query",
+    "question": "Does the 'Essentially Sports' article suggest that Canelo Alvarez's wealth accumulation is on a similar trajectory as Floyd Mayweather's, while the 'TechCrunch' article discusses Sam Bankman-Fried's wealth in the context of his altruistic intentions, without comparing it to another individual's wealth trajectory?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "No",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Yes",
+     "Agentic GraphRAG": "No"
+    }
+   },
+   {
+    "id": "multihop-rag-1541",
+    "type": "temporal_query",
+    "question": "Was there inconsistency in the portrayal of Sam Bankman-Fried's legal challenges between the TechCrunch report published on October 1, 2023, and the TechCrunch report on October 7, 2023, and was there disagreement between the TechCrunch report on October 1, 2023, and the report by Cnbc | World Business News Leader on Sam Bankman-Fried's approach to the board composition for FTX?",
+    "gold": [
+     "no"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-1561",
+    "type": "comparison_query",
+    "question": "Does the article from The Verge suggest that Sam Bankman-Fried set withdrawal permissions based on FTX's trading revenue, while the Cnbc | World Business News Leader article discusses his intentions for FTX's board composition, and the TechCrunch article alleges that Sam Bankman-Fried committed fraud for personal gain, indicating different aspects of his professional conduct?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "No",
+     "Agentic GraphRAG": "No"
+    }
+   },
+   {
+    "id": "multihop-rag-1606",
+    "type": "temporal_query",
+    "question": "After the report from CBSSports.com on October 12, 2023, suggesting an expression of interest from Travis Kelce to Taylor Swift, and the article from The Independent - Life and Style on December 6, 2023, revealing Taylor Swift's openness about her relationship with Travis Kelce, has the narrative regarding the rumored romance between the pop star and the Chiefs TE remained consistent?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "No",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-1636",
+    "type": "comparison_query",
+    "question": "Does 'The New York Times' article suggest that Connor Bedard has the potential to dominate in the NHL due to his performance in junior hockey, while the 'Yardbarker' article credits Dean Evason with developing several players into NHL stalwarts, indicating a difference in the factors contributing to NHL success?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "No"
+    }
+   },
+   {
+    "id": "multihop-rag-1651",
+    "type": "comparison_query",
+    "question": "Does 'The Verge' article suggest that Sam Bankman-Fried's inability to manage FTX and Alameda Research was due to the companies' growth, while 'Fortune' focuses on his successful persuasion of Adam Yedidia to join his ventures, and 'TechCrunch' alleges that Sam Bankman-Fried committed fraud for personal gain, indicating different aspects of his leadership and actions?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "No",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "No"
+    }
+   },
+   {
+    "id": "multihop-rag-1701",
+    "type": "temporal_query",
+    "question": "Between the report from Cnbc | World Business News Leader on Sam Bankman-Fried's intentions for FTX's board composition and the report from The Verge on Sam Bankman-Fried's denial regarding financial discrepancies, was there a change in the narrative concerning Sam Bankman-Fried's awareness and management decisions?\n\nBetween the allegations reported by TechCrunch in favor of Sam Bankman-Fried and the subsequent report from The Verge, is there consistency in the portrayal of Sam Bankman-Fried's knowledge of the financial issues?",
+    "gold": [
+     "no"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "No"
+    }
+   },
+   {
+    "id": "multihop-rag-1758",
+    "type": "comparison_query",
+    "question": "Does the TechCrunch article suggest that Sam Bankman-Fried's actions were motivated by altruism, while The Verge article focuses on the specific use of FTX customer funds by Sam Bankman-Fried?",
+    "gold": [
+     "no"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-1774",
+    "type": "temporal_query",
+    "question": "Has the reporting style on players achieving first downs in Sporting News articles remained consistent between the article featuring Anthony Hankerson on October 7, 2023, and the one highlighting A.J. Dillon on December 3, 2023?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-1802",
+    "type": "comparison_query",
+    "question": "Does the TechCrunch article on GPT-4 suggest a different level of susceptibility to producing toxic text compared to other large language models, while the TechCrunch article on the European Commission's probe into Elon Musk\u2019s X focuses on concerns about illegal content and disinformation in a different context?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "No",
+     "RAPTOR": "No",
+     "HippoRAG": "No",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-1825",
+    "type": "temporal_query",
+    "question": "Did Yardbarker's coverage on December 24, 2023, contradict The Age's report on Travis Kelce's Super Bowl victories on September 26, 2023, regarding Travis Kelce's performance expectations?",
+    "gold": [
+     "no"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-1858",
+    "type": "temporal_query",
+    "question": "Did the 'Sporting News' report on the U.S. men's national team's friendly match against Ghana before 'The Roar | Sports Writers Blog' reported on Tasmania's second win over Sydney this season?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-1881",
+    "type": "temporal_query",
+    "question": "After Sporting News reported on Johnny Cardoso's inclusion in the USMNT squad post-injury on October 4, 2023, and CBSSports.com announced De'Von Achane's move to Injured Reserve on October 12, 2023, which player's status changed between the two reports, Johnny Cardoso or De'Von Achane?",
+    "gold": [
+     "Johnny Cardoso"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "De\u2019Von Achane",
+     "HippoRAG": "De\u2019Von Achane",
+     "Agentic GraphRAG": "De\u2019Von Achane"
+    }
+   },
+   {
+    "id": "multihop-rag-1926",
+    "type": "comparison_query",
+    "question": "Does 'The Guardian' describe Shai Hope's performance against legspin bowling in the first T20 international differently from his innings performance in the fifth T20 international, with one article suggesting a struggle and the other praising the performance?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "No",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "No",
+     "Agentic GraphRAG": "No"
+    }
+   },
+   {
+    "id": "multihop-rag-1999",
+    "type": "comparison_query",
+    "question": "Do the Polygon article discussing Jess and Bill Walker and the FOX News - Lifestyle article about the holidays both suggest that their respective subjects emphasize the importance of maintaining family connections?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "No",
+     "HippoRAG": "No",
+     "Agentic GraphRAG": "No"
+    }
+   },
+   {
+    "id": "multihop-rag-2008",
+    "type": "temporal_query",
+    "question": "Was TechCrunch's perspective on the role of technologists in product design, published on December 21, 2023, at odds with the notion of interconnections between technologies as suggested by the U2 project's collaborative effort, which was not reported by The Sydney Morning Herald on October 19, 2023?",
+    "gold": [
+     "no"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-2014",
+    "type": "comparison_query",
+    "question": "Does the Fortune article claim that Sam Bankman-Fried used Caroline Ellison as a front for secret access to customer funds at Alameda Research, while the TechCrunch article alleges that Caroline Ellison took $14 billion from customers to repay debts without Sam Bankman-Fried's knowledge, or do both articles assert different levels of involvement of Sam Bankman-Fried in the misuse of customer funds?",
+    "gold": [
+     "no"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-2020",
+    "type": "comparison_query",
+    "question": "Does the 'Iot Business News' article suggest that 'Digital twins' contribute to the efficiency of monitoring and predicting issues with complex systems, while the 'Essentially Sports' article implies that 'Racing tracks' suffer from neglect over time, indicating a difference in the impact of maintenance on these two types of assets?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-2042",
+    "type": "temporal_query",
+    "question": "According to Fortune, has the perspective on 'Housing affordability' in the housing market changed between the article published on October 6, 2023, which mentioned that affordability would improve as inflation fades and the Federal Reserve cuts interest rates, and the article published on October 20, 2023, which reported that housing affordability is worse now than during the Great Financial Crisis?",
+    "gold": [
+     "No"
+    ],
+    "answers": {
+     "RAG": "Yes.",
+     "RAPTOR": "Yes\n",
+     "HippoRAG": "Yes",
+     "Agentic GraphRAG": "Yes"
+    }
+   },
+   {
+    "id": "multihop-rag-2072",
+    "type": "comparison_query",
+    "question": "Does the TechCrunch article suggest a different perception of Sam Bankman-Fried's character compared to the portrayal by The Verge, with TechCrunch not referring to him as the white horse of crypto, while The Verge discusses his instructions on withdrawal permissions relative to trading revenue?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-2096",
+    "type": "comparison_query",
+    "question": "Does the article from Fortune suggest that the Federal Reserve's interest rate hikes are a response to past conditions, such as booming home prices, while The Sydney Morning Herald article indicates that the Federal Reserve's future interest rate decisions will be based on incoming economic data?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "No",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-2126",
+    "type": "temporal_query",
+    "question": "Did the approach to presenting prop bets to bettors by Sporting News change between the report on NBA prop bets published on October 2, 2023, and the report on NCAAF bowl season prop bets published later?",
+    "gold": [
+     "no"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Yes"
+    }
+   },
+   {
+    "id": "multihop-rag-2153",
+    "type": "comparison_query",
+    "question": "Does the Queensland Rugby Union's stance on maintaining control over their high-performance model, as reported by The Roar | Sports Writers Blog, align with Rugby Australia's efforts to centralize high-performance programs across Super Rugby teams, or are their approaches different?",
+    "gold": [
+     "Different"
+    ],
+    "answers": {
+     "RAG": "Yes.",
+     "RAPTOR": "Yes.",
+     "HippoRAG": "Yes",
+     "Agentic GraphRAG": "They align on centralizing high-performance, but differ over commercial control."
+    }
+   },
+   {
+    "id": "multihop-rag-2231",
+    "type": "comparison_query",
+    "question": "Does the TechCrunch article claim that Google's release of the Gemini Pro model was incomplete compared to the full Gemini Ultra model, while the same TechCrunch article accuses Google of anticompetitive behavior towards news publishers, and does The Verge article also discuss Google's dominance but in the context of there being no valid alternative search engine according to Eddy Cue?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "No",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-2240",
+    "type": "inference_query",
+    "question": "Which country, according to a Peace Studies scholar, faces a starvation risk in a region under its blockade, has previously reached understandings to cease hostilities and return life to normal, and is considered to have experienced a massive intelligence failure due to a surprise attack, as reported by sources including 'Fortune', 'Globes English | Israel Business Arena', and 'Business Today | Latest Stock Market And Economy News India'?",
+    "gold": [
+     "Gaza"
+    ],
+    "answers": {
+     "RAG": "Israel",
+     "RAPTOR": "Israel",
+     "HippoRAG": "Israel",
+     "Agentic GraphRAG": "Israel"
+    }
+   },
+   {
+    "id": "multihop-rag-2272",
+    "type": "temporal_query",
+    "question": "After the report by Cnbc | World Business News Leader on October 6, 2023, stating that businesses selling on Amazon might opt to set non-competitive prices, did The Verge report a change or consistency in eBay's approach to pricing competitiveness in their article on October 25, 2023?",
+    "gold": [
+     "Consistency"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-2279",
+    "type": "temporal_query",
+    "question": "Did TechCrunch's subsequent report on a class action antitrust suit against Google on December 1, 2023, indicate a consistent portrayal of Google's business practices by the news source?",
+    "gold": [
+     "no"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Yes",
+     "HippoRAG": "Yes",
+     "Agentic GraphRAG": "Yes"
+    }
+   },
+   {
+    "id": "multihop-rag-2327",
+    "type": "comparison_query",
+    "question": "Does the Sporting News article that discusses Michigan's performance against Penn State without Jim Harbaugh suggest a different involvement of Harbaugh during the game compared to the Sporting News article regarding the sign-stealing scandal and his suspension?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "No",
+     "RAPTOR": "No.",
+     "HippoRAG": "No",
+     "Agentic GraphRAG": "No"
+    }
+   },
+   {
+    "id": "multihop-rag-2366",
+    "type": "comparison_query",
+    "question": "Does the TechCrunch article suggest that Sam Bankman-Fried's use of wealth was primarily for altruistic purposes, while The Verge article focuses on his challenges in managing FTX and Alameda Research, and the second TechCrunch article alleges that his actions were driven by a desire for personal gain?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-2392",
+    "type": "temporal_query",
+    "question": "Was there inconsistency in the portrayal of Sam Bankman-Fried's actions related to the allegations of fraud between the report from Fortune published on October 4, 2023, and the report from TechCrunch?",
+    "gold": [
+     "no"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Yes"
+    }
+   },
+   {
+    "id": "multihop-rag-2408",
+    "type": "comparison_query",
+    "question": "Does 'The Guardian' article suggest a different level of performance for Tyreek Hill in a specific game compared to the season-wide performance metrics discussed in 'The New York Times' and the projected season achievement mentioned in 'Sporting News'?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "No"
+    }
+   },
+   {
+    "id": "multihop-rag-2432",
+    "type": "temporal_query",
+    "question": "Between the Polygon article published on September 28, 2023, discussing \"Hellraiser (film)\" and the FOX News - Lifestyle article published on October 30, 2023, mentioning \"The Exorcist (book and movie),\" is there consistency in reporting the adaptation sequence of the original works into films?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-2502",
+    "type": "temporal_query",
+    "question": "Between the TechCrunch report on Sam Bankman-Fried's trial published on October 1, 2023, and the TechCrunch report on the allegations against Sam Bankman-Fried published on October 7, 2023, was there consistency in the portrayal of Sam Bankman-Fried's actions related to the FTX collapse?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-2554",
+    "type": "comparison_query",
+    "question": "Does the Cnbc | World Business News Leader article suggest that Sam Bankman-Fried had a different approach to the composition of FTX's board compared to the TechCrunch articles' portrayal of his actions regarding the misuse of customer funds and committing fraud for personal gain?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-346",
+    "type": "comparison_query",
+    "question": "Does the TechCrunch article on Meta's GDPR compliance concerns suggest a different legal issue than the TechCrunch article on Meta's responsibility for teen social media monitoring, and does it also differ from the TechCrunch article on Meta's moderation bias affecting Palestinian voices?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-352",
+    "type": "comparison_query",
+    "question": "Does the article from The Guardian suggest that Britney Spears had less control over her privacy at the age of 16 compared to the control over privacy that the BBC News - Entertainment & Arts article implies Taylor Swift has over her personal experiences?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-470",
+    "type": "comparison_query",
+    "question": "Does the 'Fortune' article suggest that Israel's actions are aggressive by mentioning a warning to Gaza residents to relocate due to a potential ground invasion, while the 'Business Today | Latest Stock Market And Economy News India' article implies that Israel was caught off-guard by a Hamas attack, indicating a lack of intelligence support?",
+    "gold": [
+     "no"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-483",
+    "type": "comparison_query",
+    "question": "Does the 'Fortune' article suggest that Israel's actions are defensive by mentioning a warning to Gaza residents to relocate due to a potential ground invasion, while the 'Business Today | Latest Stock Market And Economy News India' article implies that Israel was caught off-guard by a Hamas attack, indicating a lack of intelligence support?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-513",
+    "type": "temporal_query",
+    "question": "Between the TechCrunch report on Sam Bankman-Fried's legal situation published after October 2, 2023, and The Verge's coverage of Sam Bankman-Fried's testimony, was there a change in the narrative regarding his ability to manage FTX and Alameda Research?",
+    "gold": [
+     "No"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-526",
+    "type": "comparison_query",
+    "question": "Does the TechCrunch article claim that Google's release of the Gemini Pro model is a limited version compared to the full Gemini Ultra model, while The Verge article discusses Google's search engine deals with companies, and another TechCrunch article alleges Google's anticompetitive behavior towards news publishers, indicating different types of alleged actions by Google in each case?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "No",
+     "RAPTOR": "No",
+     "HippoRAG": "No",
+     "Agentic GraphRAG": "No"
+    }
+   },
+   {
+    "id": "multihop-rag-547",
+    "type": "comparison_query",
+    "question": "Does the Fortune article suggest that Sam Bankman-Fried was responsible for the alleged deceit behind FTX's success, while the TechCrunch article focuses on Gary Wang and Caroline Ellison's admission of guilt to federal criminal charges in relation to the FTX collapse?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-563",
+    "type": "comparison_query",
+    "question": "Does the TechCrunch article suggest that Caroline Ellison acted under the instruction of Sam Bankman-Fried in misusing customer funds, while The Verge article focuses on Sam Bankman-Fried's persona in the cryptocurrency industry, and the second TechCrunch article alleges that Sam Bankman-Fried committed fraud for personal gain, indicating different aspects of his involvement in the FTX collapse?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "No"
+    }
+   },
+   {
+    "id": "multihop-rag-595",
+    "type": "temporal_query",
+    "question": "Between the report from The Verge on September 28, 2023, concerning Sam Bankman-Fried's role before the collapse of FTX, and the report from TechCrunch on October 7, 2023, alleging Sam Bankman-Fried's fraudulent activities, was there a change in the portrayal of Sam Bankman-Fried's actions related to the FTX trial?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "No",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-628",
+    "type": "comparison_query",
+    "question": "Does the Sporting News article attribute the Minnesota Vikings' improved performance after a 1-4 start to Danielle Hunter's high-level performance, while the CBSSports.com article credits the Vikings' defense, specifically their ability to limit downfield shots against tight ends, for the team's success?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "No",
+     "RAPTOR": "No",
+     "HippoRAG": "No",
+     "Agentic GraphRAG": "No"
+    }
+   },
+   {
+    "id": "multihop-rag-674",
+    "type": "temporal_query",
+    "question": "Did 'The Independent - Life and Style' contradict their report later that same day regarding the nature of the relationship between Taylor Swift and Travis Kelce after 'The Age' reported on September 26, 2023, about Taylor Swift and Travis Kelce leaving the stadium separately?",
+    "gold": [
+     "no"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-791",
+    "type": "comparison_query",
+    "question": "Does the TechCrunch article on Uber's third-quarter financial performance report a different amount of operating and net income compared to the claim about Uber's profitability in the same period?",
+    "gold": [
+     "No"
+    ],
+    "answers": {
+     "RAG": "Yes",
+     "RAPTOR": "Yes",
+     "HippoRAG": "Yes",
+     "Agentic GraphRAG": "Yes"
+    }
+   },
+   {
+    "id": "multihop-rag-800",
+    "type": "comparison_query",
+    "question": "Does 'The Guardian' describe 'the match' as a showcase of equal financial power between teams, while 'CBSSports.com' focuses on the current performance of the 'Dallas team' without mentioning their financial status?",
+    "gold": [
+     "no"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "No"
+    }
+   },
+   {
+    "id": "multihop-rag-864",
+    "type": "temporal_query",
+    "question": "Between the TechCrunch report on Sam Bankman-Fried's trial published on October 6, 2023, and the TechCrunch report on the allegations against Sam Bankman-Fried published on October 7, 2023, was there consistency in the portrayal of Sam Bankman-Fried's actions related to the FTX collapse?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Yes."
+    }
+   },
+   {
+    "id": "multihop-rag-887",
+    "type": "comparison_query",
+    "question": "Does the article from The Verge suggest that Sam Bankman-Fried set withdrawal permissions based on FTX's total trading revenue, while the TechCrunch articles allege that Sam Bankman-Fried committed fraud for personal gain and is facing a criminal trial for fraud and conspiracy, indicating different aspects of the legal issues he is involved in?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "No",
+     "RAPTOR": "No",
+     "HippoRAG": "No",
+     "Agentic GraphRAG": "No"
+    }
+   },
+   {
+    "id": "multihop-rag-890",
+    "type": "temporal_query",
+    "question": "Between the report by The Verge on November 7, 2023, portraying Google as the antagonist in the Epic v. Google trial, and the report by TechCrunch on December 9, 2023, regarding Google's release of only a \"lite\" version of their AI model, was there a change in the portrayal of Google's actions from the perspective of these news sources? \n\nBetween the report by TechCrunch on December 9, 2023, about Google releasing only a \"lite\" version of their AI model, and the report by TechCrunch on December 15, 2023, filing a class action antitrust suit against Google, was the consistency in reporting Google's competitive practices by TechCrunch maintained?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   },
+   {
+    "id": "multihop-rag-912",
+    "type": "comparison_query",
+    "question": "Does the Polygon article suggest that Valve has made multiple physical upgrades to the Steam Deck, while The Verge article indicates that Valve's focus is solely on games for their store, and does the Engadget article confirm that Valve will launch the Steam Deck OLED on a specific date with immediate availability, unlike the other two sources which do not mention a launch date?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "No"
+    }
+   },
+   {
+    "id": "multihop-rag-960",
+    "type": "comparison_query",
+    "question": "Does the 'Sporting News' article claim that the England national rugby union team has had a different path to the Rugby World Cup semifinal compared to the path of The Wallabies (Australian national rugby union team) as implied by the 'Wide World Of Sports' article, with England defeating specific teams and The Wallabies' fate depending on a match between other teams?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "No",
+     "Agentic GraphRAG": "No"
+    }
+   },
+   {
+    "id": "multihop-rag-966",
+    "type": "temporal_query",
+    "question": "Between the report by Cnbc | World Business News Leader on Sam Bankman-Fried's intentions for FTX's board composition before and the allegations reported by TechCrunch regarding Sam Bankman-Fried's fraudulent activities, was there a change in the narrative surrounding Sam Bankman-Fried's professional conduct?",
+    "gold": [
+     "No"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Yes"
+    }
+   },
+   {
+    "id": "multihop-rag-976",
+    "type": "comparison_query",
+    "question": "Does the Sporting News article suggest that T.J. Hockenson's participation in Week 10 is expected under similar circumstances as Dalton Kincaid's anticipated play in the Saturday game, with both being less than fully fit but still likely to play?",
+    "gold": [
+     "Yes"
+    ],
+    "answers": {
+     "RAG": "Insufficient Information",
+     "RAPTOR": "Insufficient Information",
+     "HippoRAG": "Insufficient Information",
+     "Agentic GraphRAG": "Insufficient Information"
+    }
+   }
+  ]
+ },
+ "accuracy_by_gold_count": [
+  {
+   "method": "RAG",
+   "2_gold": 57.7,
+   "3_gold": 62.3,
+   "4_gold": 95.6
+  },
+  {
+   "method": "RAPTOR",
+   "2_gold": 56.5,
+   "3_gold": 62.3,
+   "4_gold": 97.8
+  },
+  {
+   "method": "HippoRAG",
+   "2_gold": 56.7,
+   "3_gold": 70.0,
+   "4_gold": 97.8
+  },
+  {
+   "method": "Agentic GraphRAG",
+   "2_gold": 57.7,
+   "3_gold": 68.3,
+   "4_gold": 94.8
+  }
+ ],
+ "gold_count_questions": {
+  "2": 134,
+  "4": 45,
+  "3": 121
+ },
+ "agreement_kappa": [
+  {
+   "a": "RAG",
+   "b": "RAPTOR",
+   "kappa": 0.856,
+   "both_wrong": 99
+  },
+  {
+   "a": "RAG",
+   "b": "HippoRAG",
+   "kappa": 0.654,
+   "both_wrong": 79
+  },
+  {
+   "a": "RAG",
+   "b": "Agentic GraphRAG",
+   "kappa": 0.765,
+   "both_wrong": 85
+  },
+  {
+   "a": "RAPTOR",
+   "b": "HippoRAG",
+   "kappa": 0.661,
+   "both_wrong": 80
+  },
+  {
+   "a": "RAPTOR",
+   "b": "Agentic GraphRAG",
+   "kappa": 0.707,
+   "both_wrong": 81
+  },
+  {
+   "a": "HippoRAG",
+   "b": "Agentic GraphRAG",
+   "kappa": 0.691,
+   "both_wrong": 76
+  }
+ ],
+ "tradeoff": [
+  {
+   "method": "RAG",
+   "accuracy": 72.6,
+   "query_usd": 0.0002882158666666667,
+   "build_usd": 0.0448224,
+   "latency_median": 2.247742854509852,
+   "latency_p90": 3.0629383340128697,
+   "context_tokens": 2269,
+   "usd_per_1000_correct": 0.42124273281479924
+  },
+  {
+   "method": "RAPTOR",
+   "accuracy": 72.7,
+   "query_usd": 0.0002742085,
+   "build_usd": 0.3786616994250491,
+   "latency_median": 2.14898645800713,
+   "latency_p90": 2.805428708990803,
+   "context_tokens": 2139,
+   "usd_per_1000_correct": 0.5812220708021327
+  },
+  {
+   "method": "HippoRAG",
+   "accuracy": 74.6,
+   "query_usd": 0.0004044613333333333,
+   "build_usd": 3.9632335999999997,
+   "latency_median": 4.837517292005941,
+   "latency_p90": 6.146670375019312,
+   "context_tokens": 2286,
+   "usd_per_1000_correct": 2.6212588286516114
+  },
+  {
+   "method": "Agentic GraphRAG",
+   "accuracy": 74.8,
+   "query_usd": 0.003859645416666667,
+   "build_usd": 8.021254416,
+   "latency_median": 32.521884436981054,
+   "latency_p90": 47.35870975002763,
+   "context_tokens": 4862,
+   "usd_per_1000_correct": 9.361674073201751
+  }
+ ],
+ "total_cost_usd": {
+  "RAG": {
+   "400": 0.16,
+   "2556": 0.78,
+   "10000": 2.93,
+   "100000": 28.87
+  },
+  "RAPTOR": {
+   "400": 0.49,
+   "2556": 1.08,
+   "10000": 3.12,
+   "100000": 27.8
+  },
+  "HippoRAG": {
+   "400": 4.13,
+   "2556": 5.0,
+   "10000": 8.01,
+   "100000": 44.41
+  },
+  "Agentic GraphRAG": {
+   "400": 9.57,
+   "2556": 17.89,
+   "10000": 46.62,
+   "100000": 393.99
+  }
+ },
+ "cost_by_outcome": [
+  {
+   "method": "RAG",
+   "right_usd": 0.00028,
+   "right_sec": 2.6,
+   "right_tokens": 2272.8,
+   "refused_usd": 0.0003,
+   "refused_sec": 2.8,
+   "refused_tokens": 2265.7,
+   "false_usd": 0.00031,
+   "false_sec": 3.4,
+   "false_tokens": 2241.3
+  },
+  {
+   "method": "RAPTOR",
+   "right_usd": 0.00027,
+   "right_sec": 2.8,
+   "right_tokens": 2143.5,
+   "refused_usd": 0.00028,
+   "refused_sec": 3.0,
+   "refused_tokens": 2112.2,
+   "false_usd": 0.0003,
+   "false_sec": 3.4,
+   "false_tokens": 2174.5
+  },
+  {
+   "method": "HippoRAG",
+   "right_usd": 0.0004,
+   "right_sec": 3.3,
+   "right_tokens": 2290.0,
+   "refused_usd": 0.0004,
+   "refused_sec": 3.5,
+   "refused_tokens": 2276.6,
+   "false_usd": 0.00042,
+   "false_sec": 3.8,
+   "false_tokens": 2271.3
+  },
+  {
+   "method": "Agentic GraphRAG",
+   "right_usd": 0.00367,
+   "right_sec": 31.4,
+   "right_tokens": 4829.7,
+   "refused_usd": 0.00447,
+   "refused_sec": 35.8,
+   "refused_tokens": 4666.7,
+   "false_usd": 0.00432,
+   "false_sec": 32.6,
+   "false_tokens": 5440.3
+  }
+ ],
+ "accuracy_by_context_tercile": [
+  {
+   "method": "RAG",
+   "low_tokens": "1973-2241",
+   "mid_tokens": "2241-2312",
+   "high_tokens": "2312-2415",
+   "low_accuracy": 67.0,
+   "mid_accuracy": 69.2,
+   "high_accuracy": 81.5
+  },
+  {
+   "method": "RAPTOR",
+   "low_tokens": "1455-2101",
+   "mid_tokens": "2101-2214",
+   "high_tokens": "2214-2439",
+   "low_accuracy": 72.2,
+   "mid_accuracy": 65.2,
+   "high_accuracy": 80.5
+  },
+  {
+   "method": "HippoRAG",
+   "low_tokens": "2038-2260",
+   "mid_tokens": "2260-2327",
+   "high_tokens": "2327-2435",
+   "low_accuracy": 68.2,
+   "mid_accuracy": 73.8,
+   "high_accuracy": 81.8
+  },
+  {
+   "method": "Agentic GraphRAG",
+   "low_tokens": "3544-4242",
+   "mid_tokens": "4242-4520",
+   "high_tokens": "4520-71473",
+   "low_accuracy": 73.2,
+   "mid_accuracy": 76.2,
+   "high_accuracy": 74.8
+  }
+ ],
+ "failures": [
+  {
+   "method": "RAG",
+   "failed_questions": 0,
+   "failed_calls": 0
+  },
+  {
+   "method": "RAPTOR",
+   "failed_questions": 0,
+   "failed_calls": 0
+  },
+  {
+   "method": "HippoRAG",
+   "failed_questions": 0,
+   "failed_calls": 0
+  },
+  {
+   "method": "Agentic GraphRAG",
+   "failed_questions": 0,
+   "failed_calls": 2
+  }
+ ],
+ "graphrag": {
+  "graph_rows_returned": 65.8,
+  "accuracy_with_graph_rows": 70.1,
+  "accuracy_without_graph_rows": 83.7,
+  "by_type": [
+   {
+    "type": "comparison_query",
+    "graph_rows_share": 87.0,
+    "accuracy_with_rows": 49.8,
+    "accuracy_without_rows": 53.8,
+    "accuracy_5_calls": 69.4,
+    "accuracy_6plus_calls": 32.7,
+    "share_6plus_calls": 52.0
+   },
+   {
+    "type": "inference_query",
+    "graph_rows_share": 88.3,
+    "accuracy_with_rows": 95.8,
+    "accuracy_without_rows": 100.0,
+    "accuracy_5_calls": 98.8,
+    "accuracy_6plus_calls": 84.0,
+    "share_6plus_calls": 16.7
+   },
+   {
+    "type": "null_query",
+    "graph_rows_share": 15.7,
+    "accuracy_with_rows": 89.4,
+    "accuracy_without_rows": 97.6,
+    "accuracy_5_calls": 84.2,
+    "accuracy_6plus_calls": 98.1,
+    "share_6plus_calls": 87.3
+   },
+   {
+    "type": "temporal_query",
+    "graph_rows_share": 72.0,
+    "accuracy_with_rows": 58.8,
+    "accuracy_without_rows": 48.8,
+    "accuracy_5_calls": 79.3,
+    "accuracy_6plus_calls": 23.8,
+    "share_6plus_calls": 42.0
+   }
+  ],
+  "mean_graph_rows": 0.66,
+  "by_model_calls": [
+   {
+    "calls": 5,
+    "answers": 606,
+    "accuracy": 85.3,
+    "usd": 0.00323
+   },
+   {
+    "calls": "6+",
+    "answers": 594,
+    "accuracy": 64.0,
+    "usd": 0.00451
+   }
+  ],
+  "gold_sentences": 2433,
+  "found_by_vector_only": 971,
+  "found_with_graph_rows": 1047,
+  "added_by_graph_text": 76
+ },
+ "routing": [
+  {
+   "plan": "always RAG",
+   "accuracy": 72.6,
+   "usd": 0.00029
+  },
+  {
+   "plan": "always RAPTOR",
+   "accuracy": 72.7,
+   "usd": 0.00027
+  },
+  {
+   "plan": "always HippoRAG",
+   "accuracy": 74.6,
+   "usd": 0.0004
+  },
+  {
+   "plan": "always Agentic GraphRAG",
+   "accuracy": 74.8,
+   "usd": 0.00386
+  },
+  {
+   "plan": "best method per question type (comparison->RAG, inference->RAPTOR, null->Agentic GraphRAG, temporal->HippoRAG)",
+   "accuracy": 76.2,
+   "usd": 0.00127
+  },
+  {
+   "plan": "oracle (any method right; cost of all four)",
+   "accuracy": 84.1,
+   "usd": 0.00483
+  },
+  {
+   "plan": "RAG, then RAPTOR if it refuses",
+   "accuracy": 74.9,
+   "usd": 0.00041
+  },
+  {
+   "plan": "RAG, then HippoRAG if it refuses",
+   "accuracy": 77.1,
+   "usd": 0.00047
+  },
+  {
+   "plan": "RAG, then Agentic GraphRAG if it refuses",
+   "accuracy": 77.2,
+   "usd": 0.00215
+  },
+  {
+   "plan": "HippoRAG, then RAG if it refuses",
+   "accuracy": 77.2,
+   "usd": 0.00052
+  },
+  {
+   "plan": "HippoRAG, then RAPTOR if it refuses",
+   "accuracy": 77.3,
+   "usd": 0.00051
+  },
+  {
+   "plan": "HippoRAG, then Agentic GraphRAG if it refuses",
+   "accuracy": 78.8,
+   "usd": 0.00209
+  },
+  {
+   "plan": "majority vote of 4 (refusals ignored; ties -> Agentic GraphRAG)",
+   "accuracy": 79.8,
+   "usd": 0.00483
+  }
+ ],
+ "scoring_rules": [
+  {
+   "method": "RAG",
+   "exact_match": 68.6,
+   "exact_or_judge": 72.6,
+   "any_shared_word": 71.7,
+   "judge_upgrades": 48.0,
+   "non_exact_non_refusal": 135
+  },
+  {
+   "method": "RAPTOR",
+   "exact_match": 69.6,
+   "exact_or_judge": 72.7,
+   "any_shared_word": 71.9,
+   "judge_upgrades": 37.0,
+   "non_exact_non_refusal": 110
+  },
+  {
+   "method": "HippoRAG",
+   "exact_match": 70.5,
+   "exact_or_judge": 74.6,
+   "any_shared_word": 74.0,
+   "judge_upgrades": 49.0,
+   "non_exact_non_refusal": 155
+  },
+  {
+   "method": "Agentic GraphRAG",
+   "exact_match": 72.8,
+   "exact_or_judge": 74.8,
+   "any_shared_word": 73.8,
+   "judge_upgrades": 24.0,
+   "non_exact_non_refusal": 138
+  }
+ ],
+ "recall": [
+  {
+   "method": "RAG",
+   "located_only": 43.7,
+   "with_judge": 43.7,
+   "with_strict_rejudge": 43.7
+  },
+  {
+   "method": "RAPTOR",
+   "located_only": 43.1,
+   "with_judge": 44.2,
+   "with_strict_rejudge": 44.2
+  },
+  {
+   "method": "HippoRAG",
+   "located_only": 40.6,
+   "with_judge": 40.6,
+   "with_strict_rejudge": 40.6
+  },
+  {
+   "method": "Agentic GraphRAG",
+   "located_only": 46.0,
+   "with_judge": 46.6,
+   "with_strict_rejudge": 46.8
+  }
+ ],
+ "hand_label_sample": {
+  "answers": 100,
+  "evidence": 100,
+  "labeled": 0
+ }
+}

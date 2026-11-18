@@ -1,0 +1,689 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=364e4fc0b3fdda9f ===
+Gold sentences and facts:
+Sentence 0: The National Legal Aid & Defender Association ( NLADA ) is the oldest and largest national , nonprofit membership organization devoted to advocating equal justice for all Americans and was established in 1911 .
+  Fact 0.0: The National Legal Aid & Defender Association (NLADA) is the oldest national membership organization.
+  Fact 0.1: The National Legal Aid & Defender Association (NLADA) is the largest national membership organization.
+  Fact 0.2: The National Legal Aid & Defender Association (NLADA) is nonprofit.
+  Fact 0.3: The National Legal Aid & Defender Association (NLADA) is devoted to advocating equal justice for all Americans.
+  Fact 0.4: The National Legal Aid & Defender Association (NLADA) was established in 1911.
+
+Retrieved items:
+<item 1>
+American Bar Association Model Rules of Professional Conduct
+External links ( edit ) The ABA Model Rules of Professional Conduct Pre-2002 Changes to the Model Rules since its adoption in 1983 from Cornell Law School
+Retrieved from `` https://en.wikipedia.org/w/index.php?title=American_Bar_Association_Model_Rules_of_Professional_Conduct&oldid=789593953 '' Categories : 1983
+in law Legal ethics Codes of conduct American Bar Association United States law 1983 documents Hidden categories : Articles containing potentially dated
+statements from 2015 All articles containing potentially dated statements Talk Contents About Wikipedia 한국어 Suomi Edit links This page was last edited on 8 July
+2017 , at 08 : 30 . Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree
+to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 1>
+
+<item 2>
+American Bar Association Model Rules of Professional Conduct
+Another important factor is that the legal profession is regulated very differently in California than it is in the rest of the United States . Outside of
+California , the profession is regulated solely by the judicial branch of state government . Within California , the State Bar of California operates as a state
+government agency under the supervision of the California Supreme Court ; but the State Bar was created by the California Legislature , and the Legislature has
+full power to regulate the legal profession , if it so wishes . In particular , the State Bar can not collect annual member dues unless and until the California
+Legislature passes an annual State Bar Dues Bill , which the governor must sign into law . When Governor Pete Wilson vetoed the dues bill in 1997 , the State
+Bar effectively shut down operations except for self - funded activities like the California Bar Exam . In 2010 , Governor Arnold Schwarzenegger vetoed the dues
+bill but a crisis was averted on that occasion . But the most important reason the California Bar is reluctant to adopt the ABA Model Rules is that most members
+believe the ABA Model Rules would not sufficiently protect the California public from harm .
+</item 2>
+
+<item 3>
+American Bar Association Model Rules of Professional Conduct
+American Bar Association Model Rules of professional conduct - wikipedia American Bar Association Model Rules of professional conduct Jump to : navigation ,
+search Professional responsibility Duties to the client Confidentiality Avoiding conflict of interest Due diligence and Competence ( law ) Avoid commingling
+Avoid self - dealing Effective assistance Avoid fee splitting Withdrawal from representation Duties to the court Disclosure of perjury Disclosure of adverse
+authority Duties to the profession Limitations on legal advertising Report misconduct Sources of law ABA Model Rules Penalties for misconduct Disbarment
+Judicial misconduct The ABA Model Rules of Professional Conduct , created by the American Bar Association ( ABA ) , are a set of rules that prescribe baseline
+standards of legal ethics and professional responsibility for lawyers in the United States . They were promulgated by the ABA House of Delegates upon the
+recommendation of the Kutak Commission in 1983 . The rules are merely recommendations , or models , ( hence the name `` Model Rules '' ) and are not themselves
+binding . However , having a common set of Model Rules facilitates a common discourse on legal ethics , and simplifies professional responsibility training as
+well as the day - to - day application of such rules .
+</item 3>
+
+<item 4>
+American Bar Association Model Rules of Professional Conduct
+California ( edit ) California still has its own set of unique rules governing professional attorney conduct . Although many of the rules are similar and
+sometimes identical to the ABA Model Rules , the California rules differ markedly from the ABA models in both format , scope and content . For example , under
+the ABA Model Rules , an attorney may be disciplined for the appearance of impropriety , regardless whether any actual impropriety occurred ; whereas the
+California rules permit discipline for only actual impropriety . This reflects the nature of California law . It is unlikely that California will ever adopt the
+ABA Model Rules apart beyond harmonising the format and existing California rules that are identical or nearly identical to ABA Model Rules . Reasons for this
+reluctance include the fact there are more than 280,000 attorneys licensed in California , so a drastic change from the existing rules to completely different
+rules would shock the profession and , ultimately , would most likely fail . Additionally , many of California 's rules of professional conduct are established
+by statute and , thus , would require action by the California Legislature to change them ; or , alternatively , action by the people of California through the
+voter initiative process .
+</item 4>
+
+<item 5>
+American Bar Association Model Rules of Professional Conduct
+However , the Model Rules have been adopted , in whole or in part , and sometimes in variation , as the rules of professional conduct for attorneys in 49 states
+, the District of Columbia , and four of the five inhabited U.S. territories . The rules of professional conduct or professional responsibility adopted in a
+particular state are legally enforceable against the lawyers of that state as well as any lawyer practicing there on a pro hac vice basis . On December 17 ,
+2008 , New York announced that it would finally abandon the old ABA Model Code of Professional Responsibility ( the last state to do so ) and adopt a heavily
+modified version of the ABA Model Rules , effective April 1 , 2009 . New York 's version of the Model Rules was created by adjusting the standard Model Rules to
+reflect indigenous New York rules that had been incorporated over the years into its version of the Model Code .
+</item 5>
+
+<item 6>
+American Bar Association Model Rules of Professional Conduct
+As of 2015 , 49 states and four territories have adopted the rules in whole or in part , of which the most recent to do so was the Commonwealth of the Northern
+Mariana Islands in March 2015 . California is the only state that has not adopted the ABA Model Rules , while Puerto Rico is the only U.S. jurisdiction outside
+of confederation has not adopted them but instead has its own Código de Ética Profesional . Contents ( hide ) 1 State , commonwealth and territorial adoptions
+of the Rules 1.1 California 2 Professional regulation 3 See also 4 References 5 External links State , Commonwealth and territorial adoptions of the Rules (
+edit ) The American Bar Association is a private sector voluntary professional association . As such , it has no lawmaking power or regulatory authority , but
+it is just like any other nongovernmental bar association . Accordingly , the Model Rules are not legally binding on ABA members or within any particular
+jurisdiction .
+</item 6>
+
+<item 7>
+American Bar Association Model Rules of Professional Conduct
+While either of their secretaries could be a member of the State Bar , they most likely are not . Similarly , the Board of Trustees that oversee the business
+operations of the State Bar of California under supervision of the California Supreme Court is legally required to be a mix of attorneys licensed to practice in
+California and `` public members '' who may not be licensed attorneys . So , while American attorneys are regulated by public sector agencies instead of private
+sector law societies , most of the people who develop the regulatory policies are practising attorneys and sitting judges , so there is a degree of self -
+regulation but not nearly to the same degree that solicitors and barristers in England and Wales , and other Commonwealth jurisdictions are self - regulated by
+private sector associations . See also ( edit ) American Bar Association Model Code of Professional Responsibility American Bar Association References ( edit )
+Jump up ^ Press Release : New Attorney Rules of Professional Conduct Announced , Communications Office of the New York Courts , 17 December 2008 .
+</item 7>
+
+<item 8>
+Graph query row:
+organization: American Bar Association
+kind: association
+relationship: RELATED_TO
+related: American Bar Association Model Rules of Professional Conduct
+description: None
+</item 8>
+
+<item 9>
+American Bar Association Model Rules of Professional Conduct
+In contrast to most Commonwealth countries , where transactional lawyers and litigators are separately licensed as `` solicitors '' and `` barristers , ''
+respectively ; all American attorneys are licensed to practice as both solicitors and barristers ( therefore these terms are almost never used ) . Likewise ,
+whereas solicitors in England and Wales are professionally self - regulated by the private - sector Law Society of England and Wales while barristers are self -
+regulated by the private - sector General Council of the Bar , attorneys in all states except California , all territories and the District of Columbia are
+generally regulated by the public sector judicial branch of state , district or territorial government , as officers of the court . The legal profession in
+California is regulated jointly by the California Supreme Court , mostly through its agency the State Bar of California and by the California Legislature ,
+which exercises legislative control over all professions . Within the public sector regulatory agencies , boards and organisations , officers are invariably
+licensed members of the pertinent profession while key managerial and general staff typically are not . The Executive Director and Deputy Executive Director of
+the State Bar of California , for example , are active members of the State Bar .
+</item 9>
+
+<item 10>
+American Bar Association Model Rules of Professional Conduct
+In 2001 , the Commission for the Revision of the Rules of Professional Conduct of the State Bar of California began a comprehensive revision of the California
+rules that would , among other things , convert them into a localized version of the ABA Model Rules . However , the Commission 's progress had been extremely
+slow , simply because there are so many substantive and structural differences between the California rules and the ABA models . In October 2010 , the State Bar
+of California formally adopted the Commission 's report , recommending adoption of 67 proposed changes to harmonise the California Rules of Professional Conduct
+with the ABA Model Rules of Professional Responsibility . On September 19 , 2014 , however , for reasons that were not fully explained , the Supreme Court of
+California rejected all of the proposed revisions and returned them to the State Bar . The Court 's letter directed the State Bar to start the process all over
+again with a new Commission , and to submit a new set of revised rules by March 31 , 2017 . Professional regulation ( edit ) Except for the Patent Bar , there
+is no national legal profession in the United States but there are 56 separate legal professions .
+</item 10>
+=== END ITEM id=364e4fc0b3fdda9f ===
+
+=== ITEM id=cada112ae6b99a9b ===
+Gold sentences and facts:
+Sentence 0: The theory is generally associated with Hirschman . He presented a complete theoretical formulation of the strategy . Underdeveloped countries display common characteristics : low levels of GNI per capita and slow GNI per capita growth , large income inequalities and widespread poverty , low levels of productivity , great dependence on agriculture , a backward industrial structure , a high proportion of consumption and low savings , high rates of population growth and dependency burdens , high unemployment and underemployment , technological backwardness and dualism ( existence of both traditional and modern sectors ) . In a less - developed country , these characteristics lead to scarce resources or inadequate infrastructure to exploit these resources . With a lack of investors and entrepreneurs , cash flows can not be directed into various sectors that influence balanced economic growth .
+  Fact 0.0: The theory is generally associated with Hirschman.
+  Fact 0.1: Hirschman presented a complete theoretical formulation of the strategy.
+  Fact 0.2: Underdeveloped countries display common characteristics.
+  Fact 0.3: Underdeveloped countries have low levels of GNI per capita.
+  Fact 0.4: Underdeveloped countries have slow GNI per capita growth.
+  Fact 0.5: Underdeveloped countries have large income inequalities.
+  Fact 0.6: Underdeveloped countries have widespread poverty.
+  Fact 0.7: Underdeveloped countries have low levels of productivity.
+  Fact 0.8: Underdeveloped countries have great dependence on agriculture.
+  Fact 0.9: Underdeveloped countries have a backward industrial structure.
+  Fact 0.10: Underdeveloped countries have a high proportion of consumption and low savings.
+  Fact 0.11: Underdeveloped countries have high rates of population growth and dependency burdens.
+  Fact 0.12: Underdeveloped countries have high unemployment and underemployment.
+  Fact 0.13: Underdeveloped countries have technological backwardness.
+  Fact 0.14: Underdeveloped countries have dualism, meaning both traditional and modern sectors exist.
+  Fact 0.15: In a less-developed country, these characteristics lead to scarce resources or inadequate infrastructure to exploit these resources.
+  Fact 0.16: In a less-developed country, a lack of investors and entrepreneurs means cash flows cannot be directed into various sectors that influence balanced economic growth.
+
+Retrieved items:
+<item 1>
+Strategy of unbalanced growth
+Therefore , growth need not take place in a balanced way . Supporters of the unbalanced growth doctrine include Albert O. Hirschman , Hans Singer , Paul
+Streeten , Marcus Fleming , Prof. Rostov and J. Sheehan . Contents ( hide ) 1 Introduction 2 Complementarity 3 Induced investment 4 External economies 5 Social
+Overhead Capital 6 Development via capital imbalances 7 Backward and forward linkages 8 Linkages and last industries 8.1 Disadvantages 9 Further reading 10
+Notes 11 References Introduction ( edit ) The theory is generally associated with Hirschman . He presented a complete theoretical formulation of the strategy .
+Underdeveloped countries display common characteristics : low levels of GNI per capita and slow GNI per capita growth , large income inequalities and widespread
+poverty , low levels of productivity , great dependence on agriculture , a backward industrial structure , a high proportion of consumption and low savings ,
+high rates of population growth and dependency burdens , high unemployment and underemployment , technological backwardness and dualism ( existence of both
+traditional and modern sectors ) .
+</item 1>
+
+<item 2>
+Strategy of unbalanced growth
+Creating last industries first can create loyalty toward foreign products and distrust of domestic products and their quality . Banks may get used to extending
+credit for shorter , smaller capital requirements . Disadvantages ( edit ) Disadvantages of the last industry strategy include inhibition of domestic production
+as domestic demand grows . This is because industrialists who work with imported material will often be hostile to the establishment of domestic industries ,
+because domestic goods are of lower quality , the number of domestic suppliers is small , downstream competition may intensify once inputs are available
+domestically and competitors may be able to locate closer to the upstream suppliers . Last / first may accustom domestic consumers to imported goods , making it
+harder for local producers to find customers . Further , financing may be easier for import - based business . Further reading ( edit ) Hirschman , Albert O. (
+1958 ) . The Strategy of Economic Development . New Haven , Conn. : Yale University Press . ISBN 0 - 300 - 00559 - 8 Streeten , Paul ( 1959 ) Unbalanced Growth
+, Oxford Economic Papers New Series , Vol. 11 , No. 2 ( Jun.
+</item 2>
+
+<item 3>
+Strategy of unbalanced growth
+In a less - developed country , these characteristics lead to scarce resources or inadequate infrastructure to exploit these resources . With a lack of
+investors and entrepreneurs , cash flows can not be directed into various sectors that influence balanced economic growth . Hirschman contends that deliberate
+unbalancing of the economy according to the strategy is the best method of development and if the economy is to be kept moving ahead , the task of development
+policy is to maintain tension , disproportions and disequilibrium . Balanced growth should not be the goal but rather the maintenance of existing imbalances ,
+which can be seen from profit and losses . Therefore , the sequence that leads away from equilibrium is precisely an ideal pattern for development . Unequal
+development of various sectors often generates conditions for rapid development . More - developed industries provide undeveloped industries an incentive to
+grow . Hence , development of underdeveloped countries should be based on this strategy . The path of unbalanced growth is described by three phases :
+Complementary Induced investment External economies Singer believed that desirable investment programs always exist within a country that represent unbalanced
+investment to complement the existing imbalance . These investments create a new imbalance , requiring another balancing investment .
+</item 3>
+
+<item 4>
+Strategy of unbalanced growth
+These investments create a new imbalance , requiring another balancing investment . One sector will always grow faster than another , so the need for unbalanced
+growth will continue as investments must complement existing imbalance . Hirschman states `` If the economy is to be kept moving ahead , the task of development
+policy is to maintain tensions , disproportions and disequilibrium '' . This situation exists for all societies , developed or underdeveloped . Complementarity
+( edit ) Complementarity is a situation where increased production of one good or service builds up demand for the second good or service . When the second
+product is privately produced , this demand will lead to imports or higher domestic production of the second product , as it will be in the interests of the
+producers to do so . Otherwise , the increased demand takes the form of political pressure . This is the case for such public services such as law and order ,
+education , water and electricity that can not reasonably be imported . Induced investment ( edit ) Complementarity allows investment in one industry or sector
+to encourage investment in others . This concept of induced investment is like a multiplier , because each investment triggers a series of subsequent events .
+</item 4>
+
+<item 5>
+Strategy of unbalanced growth
+Strategy of unbalanced growth - Wikipedia Strategy of unbalanced growth Jump to : navigation , search This article may be incomprehensible or very hard to
+understand . In particular , it uses both very general statements which are not further clarified or contextualized , and technical jargon that is not explained
+. Please help by rewording it if the intended meaning can be determined . The talk page may have details . ( August 2016 ) ( Learn how and when to remove this
+template message ) This article includes a list of references , related reading or external links , but its sources remain unclear because it lacks inline
+citations . Please help to improve this article by introducing more precise citations . ( January 2012 ) ( Learn how and when to remove this template message )
+Unbalanced growth is a natural path of economic development . Situations that countries are in at any one point in time reflect their previous investment
+decisions and development . Accordingly , at any point in time desirable investment programs that are not balanced investment packages may still advance welfare
+. Unbalanced investment can complement or correct existing imbalances . Once such an investment is made , a new imbalance is likely to appear , requiring
+further compensating investments .
+</item 5>
+
+<item 6>
+Strategy of unbalanced growth
+Convergence occurs as the output of external economies diminishes at each step . Growth sequences tend to move towards convergence or divergence and the policy
+is usually concerned with preventing rapid convergence and promoting the possibility of divergence . External economies ( edit ) New projects often appropriate
+external economies created by preceding ventures and create external economies that may be utilized by subsequent ones . Sometimes the project undertaken
+creates external economies , causing private profit to fall short of what is socially desirable . The reverse is also possible . Some ventures have a larger
+input of external economies than the output . Therefore , Hirschman says , `` the projects that fall into this category must be net beneficiaries of external
+economies '' . Social Overhead capital ( edit ) Social Overhead Capital ( SOC ) is defined as basic services without which primary , secondary and tertiary
+productive activities can not function . In a narrow sense , Social Overhead Capital is defined to include transportation and electricity , while in a wider
+sense , it includes all public services , including law and order and education . Criteria for classifying an asset as Social Overhead Capital include : The
+services provided by the activity should facilitate a great variety of economic activities . The services provided should be subject to public control .
+</item 6>
+
+<item 7>
+Strategy of unbalanced growth
+( hide ) Development Economics : Partial Theories of Development Dual - sector model Big push model Critical minimum effort theory Ragnar Nurkse 's balanced
+growth theory Strategy of unbalanced growth Social dualism Technological dualism Fei -- Ranis model of economic growth Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Strategy_of_unbalanced_growth&oldid=838124154 '' Categories : Economic growth Hidden categories : Wikipedia articles
+that are incomprehensible from August 2016 All Wikipedia articles that are incomprehensible Articles lacking in - text citations from January 2012 All articles
+lacking in - text citations All articles with unsourced statements Articles with unsourced statements from February 2013 Wikipedia articles needing
+clarification from February 2013 Articles with unsourced statements from March 2012 All articles with specifically marked weasel - worded phrases Articles with
+specifically marked weasel - worded phrases from February 2013 Talk Contents About Wikipedia Deutsch Français 中文 Edit links This page was last edited on 25
+April 2018 , at 02 : 21 . Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply .
+</item 7>
+
+<item 8>
+Strategy of unbalanced growth
+11 , No. 2 ( Jun. , 1959 ) , pp. 167 -- 190 Notes ( edit ) References ( edit ) Hirschman , Albert O . `` The Strategy of Economic Development , '' in Agarwal ,
+A.N. and Singh , S.P. ( eds ) , Accelerating Investment in Developing Economies ( London Oxford Press , 1969 ) Thirwall , A.P. Growth and Development : With
+special reference to developing economies ( London : Macmillian Press ltd ... , sixth edition . 1999 ) , pp237 -- 242 . Scitovsky , Tibor . Papers on welfare
+and Growth ( London George Allen and Unwin ltd ... 1965 ) Refer to 5th paper entitled `` Growth -- Balanced and Unbalanced '' . Nath , S.K. , `` Balanced Growth
+. '' in Livingstone ( ed ) , Economic Policy for Development ( Harmodworth , Middlesex : Penguin Books ltd. 1971 ) Han Singer , `` The Concept of Balanced
+Growth and Economic Development ; Theory and Facts , '' University of Texas Conference on Economic Development , April 1958 .
+</item 8>
+
+<item 9>
+Strategy of unbalanced growth
+Paul Streeten , `` Unbalanced Growth . '' Economic Integration , Sythoff , Leiden ( Netherlands ) , 1961 . Reprinted in A.N. Agarwala and S.P. Singh , ( eds . )
+, Accelerating Investment in Developing Economies ( London : Oxford University Press , 1969 ) .
+</item 9>
+
+<item 10>
+Strategy of unbalanced growth
+The services provided should be subject to public control . The services can not be imported . The investment needed to provide services should be characterized
+by some unevenness as well as by high capital output ratio . Development via capital imbalances ( edit ) The strategy of unbalanced growth has been discussed
+within the frameworks of development through shortage of SOC and development through excess of SOC . In the first case , the country invests in direct
+productive activities ( DPA ) . Direct productive activity increases demand for SOC , inducing investment . In the second case , SOC expands , which reduces the
+cost of services , inducing investment in DPA . The cost of producing any unit of output of DPA is inversely proportional to SOC . The economy 's major
+objective is to attain increasing output of DPA . One of the paradoxes of development is that poor countries can not afford to be economical . According to
+Hirschman , resources are not scarce per se , but the ability to employ those resources may be lacking . To explain unbalanced growth , Hirschman assumes that
+the country invests in either DPA or SOC .
+</item 10>
+=== END ITEM id=cada112ae6b99a9b ===
+
+=== ITEM id=f22a405d42bc36c0 ===
+Gold sentences and facts:
+Sentence 0: Nigeria is the largest oil and gas producer in Africa . Crude oil from the delta basin comes in two types : light , and comparatively heavy -- the lighter around 36 gravity and the heavier , 20 -- 25 gravity . Both types are paraffinic and low in sulfur .
+  Fact 0.0: Nigeria is the largest oil and gas producer in Africa.
+  Fact 0.1: Crude oil from the delta basin comes in two types: light, and comparatively heavy.
+  Fact 0.2: The lighter type has a gravity of around 36.
+  Fact 0.3: The heavier type has a gravity of 20 to 25.
+  Fact 0.4: Both types of crude oil from the delta basin are paraffinic.
+  Fact 0.5: Both types of crude oil from the delta basin are low in sulfur.
+
+Retrieved items:
+<item 1>
+Sub-Saharan Africa
+Transportation cost is low and no pipelines have to be laid as in Central Asia . Almost all reserves are offshore , so political turmoil within the host country
+will not directly interfere with operations . Sub-Saharan oil is viscous , with a very low sulfur content . This quickens the refining process and effectively
+reduces costs . New sources of oil are being located in Sub-Saharan Africa more frequently than anywhere else . Of all new sources of oil , 1⁄3 are in
+Sub-Saharan Africa . Agriculture ( edit ) Agricultural fields in Rwanda 's Eastern Province Sub-Saharan Africa has more variety of grains than anywhere in the
+world . Between 13,000 and 11,000 BCE wild grains began to be collected as a source of food in the cataract region of the Nile , south of Egypt . The collecting
+of wild grains as source of food spread to Syria , parts of Turkey , and Iran by the eleventh millennium BCE . By the tenth and ninth millennia southwest Asians
+domesticated their wild grains , wheat , and barley after the notion of collecting wild grains spread from the Nile . Numerous crops have been domesticated in
+the region and spread to other parts of the world .
+</item 1>
+
+<item 2>
+Sub-Saharan Africa
+According to the World Bank , the economic growth rate in the region had risen to 4.7 % in 2013 , with a rate of 5.2 % forecasted for 2014 . This continued rise
+was attributed to increasing investment in infrastructure and resources as well as steady expenditure per household . Energy and power ( edit ) Main article :
+Mineral industry of Africa Oil production by country ( with other key actors of African or oil economy ) Rank Area bb / day Year Like ... _ W : World 85540000
+2007 est . 01 E : Russia 9980000 2007 est . 02 Ar : Saudi Arb 9200000 2008 est . 04 As : Libya 4725000 2008 est . Iran 10 Af : Nigeria / Africa 2352000 2011 est
+. Norway 15 Af : Algeria 2173000 2007 est . 16 Af : Angola 1910000 2008 est . 17 Af : Egypt 1845000 2007 est . 27 Af : Tunisia 664000 2007 est . Australia 31 Af
+: Sudan 466100 2007 est .
+</item 2>
+
+<item 3>
+Sub-Saharan Africa
+Barbary Coast Bashmur Ancient Libya Atlas Mountains Nile Valley Cataracts of the Nile Darfur Gulf of Aqaba Lower Egypt Lower Nubia Middle Egypt Nile Delta Nuba
+Mountains Nubia The Sudans Upper Egypt Western Sahara West Africa Pepper Coast Gold Coast Slave Coast Ivory Coast Cape Palmas Cape Mesurado Guinea region Gulf
+of Guinea Niger Basin Guinean Forests of West Africa Niger Delta Inner Niger Delta Southern Africa Madagascar Central Highlands ( Madagascar ) Northern
+Highlands Rhodesia North South Thembuland Succulent Karoo Nama Karoo Bushveld Highveld Fynbos Cape Floristic Region Kalahari Desert Okavango Delta False Bay
+Hydra Bay Macro-regions Aethiopia Arab world Commonwealth realm East African montane forests Eastern Desert Equatorial Africa Françafrique Gibraltar Arc Greater
+Middle East Islands of Africa List of countries where Arabic is an official language Mediterranean Basin MENA MENASA Middle East Mittelafrika Negroland
+Northeast Africa Portuguese - speaking African countries Sahara Sahel Sub-Saharan Africa Sudan ( region ) Sudanian Savanna Tibesti Mountains Tropical Africa
+Regions of Asia Central Greater Middle East Aral Sea Aralkum Desert Caspian Sea Dead Sea Sea of Galilee Transoxiana Turan Greater Khorasan
+</item 3>
+
+<item 4>
+Graph query row:
+entity: Gulf of Guinea
+relationship: RELATED_TO
+related: Nigeria
+</item 4>
+
+<item 5>
+Sub-Saharan Africa
+Major suppliers are South Africa , Ghana , Zimbabwe , Tanzania , Guinea , and Mali . South Africa had been first in the world in terms of gold production since
+1905 , but in 2007 it moved to second place , according to GFMS , the precious metals consultancy . Uranium is major commodity from the region . Significant
+suppliers are Niger , Namibia , and South Africa . Namibia was the number one supplier from Sub-Saharan Africa in 2008 . The region produces 49 % of the world
+'s diamonds . By 2015 , it is estimated that 25 % of North American oil will be from Sub-Saharan Africa , ahead of the Middle East . Sub-Saharan Africa has been
+the focus of an intense race for oil by the West , China , India , and other emerging economies , even though it holds only 10 % of proven oil reserves , less
+than the Middle East . This race has been referred to as the second Scramble for Africa . All reasons for this global scramble come from the reserves ' economic
+benefits . Transportation cost is low and no pipelines have to be laid as in Central Asia .
+</item 5>
+
+<item 6>
+Graph query row:
+entity: Gulf of Guinea
+relationship: PART_OF
+related: Regions of Africa
+</item 6>
+
+<item 7>
+Sahara
+Ancient Libya Atlas Mountains Nile Valley Cataracts of the Nile Darfur Gulf of Aqaba Lower Egypt Lower Nubia Middle Egypt Nile Delta Nuba Mountains Nubia The
+Sudans Upper Egypt Western Sahara West Africa Pepper Coast Gold Coast Slave Coast Ivory Coast Cape Palmas Cape Mesurado Guinea region Gulf of Guinea Niger Basin
+Guinean Forests of West Africa Niger Delta Inner Niger Delta Southern Africa Madagascar Central Highlands ( Madagascar ) Northern Highlands Rhodesia North South
+Thembuland Succulent Karoo Nama Karoo Bushveld Highveld Fynbos Cape Floristic Region Kalahari Desert Okavango Delta False Bay Hydra Bay Macro-regions Aethiopia
+Arab world Commonwealth realm East African montane forests Eastern Desert Equatorial Africa Françafrique Gibraltar Arc Greater Middle East Islands of Africa
+List of countries where Arabic is an official language Mediterranean Basin MENA MENASA Middle East Mittelafrika Negroland Northeast Africa Portuguese - speaking
+African countries Sahara Sahel Sub-Saharan Africa Sudan ( region ) Sudanian Savanna Tibesti Mountains Tropical Africa Coordinates : 23 ° N 13 ° E ﻿ / ﻿ 23 ° N
+13 ° E ﻿ / 23 ;
+</item 7>
+
+<item 8>
+Petroleum industry in Nigeria
+An open - air market for illegal crude oil operates off the Niger Delta , called the Togo Triangle . Natural gas ( edit ) Natural gas reserves are well over
+5,300 km ( 187 × 10 ^ cu ft ) , the gas reserves are three times as substantial as the crude oil reserves . The biggest natural gas initiative is the Nigerian
+Liquified Natural Gas Company , which is operated jointly by several companies and the state . It began exploration and production in 1999 . Chevron is also
+attempting to create the Escravos Gas Utilization project which will be capable of producing 4,500,000 m ( 160 × 10 ^ cu ft ) per day . gas reserves . In 2008 ,
+the government prepared a Gas Master Plan that was intended to promote natural gas production and encourage the supply of natural gas to domestic power stations
+so as to help alleviate the country 's electricity shortages . There is also an export gas pipeline , known as the West African Gas Pipeline , in the works but
+has encountered numerous setbacks . The pipeline would allow for transportation of natural gas to Benin , Ghana , Togo , and Cote d'Ivoire .
+</item 8>
+
+<item 9>
+Petroleum industry in Nigeria
+Petroleum industry in Nigeria - wikipedia Petroleum industry in Nigeria Jump to : navigation , search Nigeria is the largest oil and gas producer in Africa .
+Crude oil from the delta basin comes in two types : light , and comparatively heavy -- the lighter around 36 gravity and the heavier , 20 -- 25 gravity . Both
+types are paraffinic and low in sulfur . The gates of the oil refinery in Port Harcourt Contents ( hide ) 1 History of oil exploration 2 Production and
+exploration 2.1 Offshore 2.2 Natural gas 2.3 Downstream 3 Current manufacturing 4 History and politics 4.1 Colonial legacy ( 1800s -- 1960s ) 4.2 Implications
+and causes of civil war ( 1966 -- 1970 ) 4.3 Industry nationalisation ( 1970 -- 1979 ) 4.4 Attempted democracy and debt ( 1979 -- 1983 ) 4.5 Return to military
+rule and electoral annulment ( 1983 -- 1993 ) 4.6 An environment of crisis ( 1993 -- present ) 5 Operating agreements 5.
+</item 9>
+
+<item 10>
+Sahara
+The desert comprises much of North Africa , excluding the fertile region on the Mediterranean Sea coast , the Atlas Mountains of the Maghreb , and the Nile
+Valley in Egypt and Sudan . It stretches from the Red Sea in the east and the Mediterranean in the north to the Atlantic Ocean in the west , where the landscape
+gradually changes from desert to coastal plains . To the south , it is bounded by the Sahel , a belt of semi-arid tropical savanna around the Niger River valley
+and the Sudan Region of Sub-Saharan Africa . The Sahara can be divided into several regions including : the western Sahara , the central Ahaggar Mountains , the
+Tibesti Mountains , the Aïr Mountains , the Ténéré desert , and the Libyan Desert . For several hundred thousand years , the Sahara has alternated between
+desert and savanna grassland in a 41,000 year cycle caused by changes ( `` precession '' ) in the Earth 's axis as it rotates around the sun , which change the
+location of the North African Monsoon . It is next expected to become green in about 15,000 years ( 17,000 AD ) .
+</item 10>
+=== END ITEM id=f22a405d42bc36c0 ===
+
+=== ITEM id=3665c890c97fe20c ===
+Gold sentences and facts:
+Sentence 0: The original start date was January 2002 , but was pushed to February 7 in Los Angeles , California . Locations included Burbank , Downey , New York City , LA / Ontario International Airport ( which doubled for Miami International Airport ) , Quebec City and Montreal . The film was shot in 147 locations in only 52 days . DiCaprio reflected , `` Scenes that we thought would take three days took an afternoon '' . Filming ran from April 25 -- 30 in Park Avenue , just outside the Waldorf - Astoria Hotel . Production moved to Orange , New Jersey and returned to Brooklyn for bank and courthouse scenes . Shooting also took place at the TWA Flight Center at John F. Kennedy International Airport . Quebec City was chosen for its European character and French feel . Place Royale , within Old Quebec , stands for Montrichard -- the church in the background of the arrest scene is Notre - Dame - des - Victoires . Filming ended on May 12 in Montreal .
+  Fact 0.0: The original start date was January 2002.
+  Fact 0.1: The start date was pushed to February 7 in Los Angeles, California.
+  Fact 0.2: Locations included Burbank.
+  Fact 0.3: Locations included Downey.
+  Fact 0.4: Locations included New York City.
+  Fact 0.5: Locations included LA / Ontario International Airport.
+  Fact 0.6: LA / Ontario International Airport doubled for Miami International Airport.
+  Fact 0.7: Locations included Quebec City.
+  Fact 0.8: Locations included Montreal.
+  Fact 0.9: The film was shot in 147 locations.
+  Fact 0.10: The film was shot in only 52 days.
+  Fact 0.11: DiCaprio reflected that scenes thought to take three days took an afternoon.
+  Fact 0.12: Filming ran from April 25 to 30 in Park Avenue.
+  Fact 0.13: Park Avenue filming was just outside the Waldorf-Astoria Hotel.
+  Fact 0.14: Production moved to Orange, New Jersey.
+  Fact 0.15: Production returned to Brooklyn for bank and courthouse scenes.
+  Fact 0.16: Shooting also took place at the TWA Flight Center at John F. Kennedy International Airport.
+  Fact 0.17: Quebec City was chosen for its European character.
+  Fact 0.18: Quebec City was chosen for its French feel.
+  Fact 0.19: Place Royale, within Old Quebec, stands for Montrichard.
+  Fact 0.20: The church in the background of the arrest scene is Notre-Dame-des-Victoires.
+  Fact 0.21: Filming ended on May 12 in Montreal.
+Sentence 1: Catch Me If You Can is a 2002 American biographical crime film directed and co-produced by Steven Spielberg from a screenplay by Jeff Nathanson . The film is based on the life of Frank Abagnale , who , before his 19th birthday , successfully performed cons worth millions of dollars by posing as a Pan American World Airways pilot , a Georgia doctor and a Louisiana parish prosecutor . His primary crime was check fraud ; he became so experienced that the FBI eventually turned to him for help in catching other checking forgers . The film stars Leonardo DiCaprio and Tom Hanks , with Christopher Walken , Martin Sheen , and Nathalie Baye in supporting roles .
+  Fact 1.0: Catch Me If You Can is a 2002 American biographical crime film.
+  Fact 1.1: Catch Me If You Can was directed by Steven Spielberg.
+  Fact 1.2: Catch Me If You Can was co-produced by Steven Spielberg.
+  Fact 1.3: Catch Me If You Can has a screenplay by Jeff Nathanson.
+  Fact 1.4: The film is based on the life of Frank Abagnale.
+  Fact 1.5: Frank Abagnale successfully performed cons worth millions of dollars before his 19th birthday.
+  Fact 1.6: Frank Abagnale performed cons by posing as a Pan American World Airways pilot.
+  Fact 1.7: Frank Abagnale performed cons by posing as a Georgia doctor.
+  Fact 1.8: Frank Abagnale performed cons by posing as a Louisiana parish prosecutor.
+  Fact 1.9: Abagnale's primary crime was check fraud.
+  Fact 1.10: Abagnale became so experienced that the FBI eventually turned to him for help.
+  Fact 1.11: The FBI turned to Abagnale for help in catching other checking forgers.
+  Fact 1.12: The film stars Leonardo DiCaprio.
+  Fact 1.13: The film stars Tom Hanks.
+  Fact 1.14: Christopher Walken, Martin Sheen, and Nathalie Baye have supporting roles in the film.
+Sentence 2: Development for the film started in 1980 , but did not progress until 1997 , when the film rights to Abagnale 's book were sold to Spielberg 's DreamWorks . David Fincher , Gore Verbinski , Lasse Hallström , Miloš Forman , and Cameron Crowe had all been possible candidates for director before Spielberg decided to direct . Filming took place from February to May 2002 . The film was a financial and critical success , and was received positively by both critics and Abagnale .
+  Fact 2.0: Development for the film started in 1980.
+  Fact 2.1: Development did not progress until 1997.
+  Fact 2.2: In 1997, the film rights to Abagnale's book were sold to Spielberg's DreamWorks.
+  Fact 2.3: David Fincher was a possible candidate for director before Spielberg decided to direct.
+  Fact 2.4: Gore Verbinski was a possible candidate for director before Spielberg decided to direct.
+  Fact 2.5: Lasse Hallström was a possible candidate for director before Spielberg decided to direct.
+  Fact 2.6: Miloš Forman was a possible candidate for director before Spielberg decided to direct.
+  Fact 2.7: Cameron Crowe was a possible candidate for director before Spielberg decided to direct.
+  Fact 2.8: Filming took place from February to May 2002.
+  Fact 2.9: The film was a financial success.
+  Fact 2.10: The film was a critical success.
+  Fact 2.11: The film was received positively by both critics and Abagnale.
+
+Retrieved items:
+<item 1>
+Catch Me If You Can
+Jump up ^ Josef Adalian ( December 10 , 2002 ) . `` Inside Move : Net game for movie link '' . Variety . Retrieved June 30 , 2008 . Jump up ^ `` H'w 'd plays '
+Catch ' '' . Variety . December 18 , 2002 . Retrieved June 30 , 2008 . Jump up ^ `` Catch Me If You Can ( 2002 ) '' . Box Office Mojo . Internet Movie Database
+. Retrieved June 29 , 2008 . Jump up ^ `` 2002 Yearly Box Office Results '' . Box Office Mojo . Internet Movie Database . Retrieved June 29 , 2008 . Jump up ^
+`` Catch Me If You Can '' . Rotten Tomatoes . Flixter . Retrieved June 29 , 2008 . Jump up ^ Ebert , Roger . `` Catch Me If You Can '' . Chicago Sun - Times .
+Retrieved July 3 , 2008 . Jump up ^ Mick LaSalle ( December 25 , 2002 ) .
+</item 1>
+
+<item 2>
+Catch Me If You Can
+Williams also earned a Grammy Award nomination . Elements of the film were later parodied in The Simpsons episode `` Catch ' Em If You Can '' . Home media (
+edit ) Catch Me If You Can was released on DVD on May 6 , 2003 and on Blu - ray on December 4 , 2012 . Musical adaptation ( edit ) Main article : Catch Me If
+You Can ( musical ) A musical adaptation of the same name premiered at the 5th Avenue Theatre in Seattle , Washington in July 2009 , starring Aaron Tveit and
+Norbert Leo Butz . It began previews on Broadway at the Neil Simon Theatre on March 11 , 2011 and officially opened April 10 , 2011 . The musical was nominated
+for four Tony Awards , including Best Musical . See also ( edit ) The Great Impostor , a 1961 film based on the story of an impostor named Ferdinand Waldo
+Demara . The Pretender , a TV series References ( edit ) Jump up ^ `` CATCH ME IF YOU CAN ( 12A ) '' . British Board of Film Classification . December 13 , 2002
+.
+</item 2>
+
+<item 3>
+Catch Me If You Can
+Frank Abagnale , Jr. and Stan Redding . Catch Me If You Can : The Amazing True Story of the Youngest and Most Daring Con Man in the History of Fun and Profit .
+( ISBN 0 - 06 - 052971 - 7 ) . External links ( edit ) Wikiquote has quotations related to : Catch Me If You Can Catch Me If You Can on IMDb Catch Me If You Can
+at AllMovie Catch Me If You Can at the TCM Movie Database Catch Me If You Can at the American Film Institute Catalog Catch Me If You Can at Box Office Mojo
+Catch Me If You Can at Rotten Tomatoes Catch Me If You Can at Metacritic An Interview with Leonardo DiCaprio - Movies Feature at IGN Official website for Catch
+Me If You Can the musical ( hide ) Steven Spielberg Filmography Awards and nominations Films directed Firelight ( 1964 ) Slipstream ( 1967 ) Amblin ' ( 1968 )
+Night Gallery ( `` Eyes '' segment , 1969 ) L.A.
+</item 3>
+
+<item 4>
+Catch Me If You Can
+Jump up ^ Mick LaSalle ( December 25 , 2002 ) . `` Holiday Movies '' . San Francisco Chronicle . Retrieved July 3 , 2008 . Jump up ^ Stephen Hunter ( December
+25 , 2002 ) . `` A Merry Chase '' . The Washington Post . Retrieved July 3 , 2008 . Jump up ^ Berardinelli , James . `` Catch Me If You Can '' . ReelViews.net .
+Retrieved July 3 , 2008 . Jump up ^ Travers , Peter ( January 2 , 2003 ) . `` Catch Me If You Can '' . Rolling Stone . Archived from the original on April 19 ,
+2008 . Retrieved July 3 , 2008 . Jump up ^ `` 74th Academy Awards '' . Internet Movie Database . Retrieved July 3 , 2008 . Jump up ^ `` 56th BAFTA Awards '' .
+Internet Movie Database . Retrieved July 3 , 2008 . Jump up ^ `` Golden Globes : 2003 '' . Internet Movie Database .
+</item 4>
+
+<item 5>
+Catch Me If You Can
+The marketing department was careful to market the film as `` inspired by a true story '' in order to avoid controversy similar to that surrounding A Beautiful
+Mind ( 2001 ) and The Hurricane ( 1999 ) , both of which deviated from history . The premiere took place at Westwood , Los Angeles , California on December 18 ,
+2002 . Box Office ( edit ) Catch Me If You Can was released on December 25 , 2002 , earning slightly above $30 million in 3,225 theaters during its opening
+weekend . The film went on to gross $164.6 million in North America and $187.5 million in foreign countries , coming at a worldwide total of $352.1 million .
+The film was a financial success , recouping the $52 million budget six times over . Catch Me If You Can was the eleventh highest - grossing film of 2002 .
+Minority Report ( also directed by Spielberg ) was tenth highest . Critical response ( edit ) On Rotten Tomatoes , the film has a certified fresh rating of 96 %
+, based on 197 reviews , with an average rating of 7.9 / 10 .
+</item 5>
+
+<item 6>
+Catch Me If You Can
+British Board of Film Classification . December 13 , 2002 . Retrieved February 13 , 2016 . Jump up ^ Van Luling , Todd ( October 17 , 2014 ) . `` 11 Easter Eggs
+You Never Noticed In Your Favorite Movies '' . The Huffington Post . TheHuffingtonPost.com , Inc . Retrieved January 29 , 2015 . ^ Jump up to : Frank Abagnale (
+September 3 , 2002 ) . `` Comments '' . Abagnale & Associates . Archived from the original on February 16 , 2009 . Retrieved June 30 , 2008 . ^ Jump up to :
+Claude Brodesser ; Dana Harris ( August 21 , 2001 ) . `` D'Works to play ' Catch ' '' . Variety . Retrieved June 30 , 2008 . Jump up ^ Charles Lyons ; Dade
+Hayes ( January 8 , 2002 ) . `` D'Works sets play date for pricey ' Catch ' '' . Variety . Retrieved June 29 , 2008 .
+</item 6>
+
+<item 7>
+Catch Me If You Can
+wikipedia.org/w/index.php?title=Catch_Me_If_You_Can&oldid=821436887 '' Categories : 2002 films English - language films 2000s biographical films 2000s crime
+drama films Amblin Entertainment films American biographical films American chase films American crime drama films American films Biographical films about
+fraudsters Crime films based on actual events Drama films based on actual events DreamWorks Pictures films Films scored by John Williams Films about con artists
+Films about identity theft Films based on biographies Films directed by Steven Spielberg Films set in Atlanta Films set in California Films set in Florida Films
+set in France Films set in Louisiana Films set in Westchester County , New York Films set in New York City Films set in the 1960s Films shot in California Films
+shot in Montreal Films produced by Steven Spielberg True crime films Fraud in fiction Hidden categories : Webarchive template wayback links Use mdy dates from
+October 2015 Good articles Wikipedia articles with GND identifiers Talk Contents About Wikipedia Wikiquote বাংলা Български Català Čeština Dansk Deutsch Español
+Euskara فارسی Français Galego 한국어
+</item 7>
+
+<item 8>
+Catch Me If You Can
+Locations included Burbank , Downey , New York City , LA / Ontario International Airport ( which doubled for Miami International Airport ) , Quebec City and
+Montreal . The film was shot in 147 locations in only 52 days . DiCaprio reflected , `` Scenes that we thought would take three days took an afternoon '' .
+Filming ran from April 25 -- 30 in Park Avenue , just outside the Waldorf - Astoria Hotel . Production moved to Orange , New Jersey and returned to Brooklyn for
+bank and courthouse scenes . Shooting also took place at the TWA Flight Center at John F. Kennedy International Airport . Quebec City was chosen for its
+European character and French feel . Place Royale , within Old Quebec , stands for Montrichard -- the church in the background of the arrest scene is Notre -
+Dame - des - Victoires . Filming ended on May 12 in Montreal . Music ( edit ) Main article : Catch Me If You Can ( soundtrack ) The film 's soundtrack was
+released on December 10 , 2002 by DreamWorks Records . The original score was composed and conducted by John Williams .
+</item 8>
+
+<item 9>
+Catch Me If You Can
+The film is based on the life of Frank Abagnale , who , before his 19th birthday , successfully performed cons worth millions of dollars by posing as a Pan
+American World Airways pilot , a Georgia doctor and a Louisiana parish prosecutor . His primary crime was check fraud ; he became so experienced that the FBI
+eventually turned to him for help in catching other checking forgers . The film stars Leonardo DiCaprio and Tom Hanks , with Christopher Walken , Martin Sheen ,
+and Nathalie Baye in supporting roles . Development for the film started in 1980 , but did not progress until 1997 , when the film rights to Abagnale 's book
+were sold to Spielberg 's DreamWorks . David Fincher , Gore Verbinski , Lasse Hallström , Miloš Forman , and Cameron Crowe had all been possible candidates for
+director before Spielberg decided to direct . Filming took place from February to May 2002 . The film was a financial and critical success , and was received
+positively by both critics and Abagnale .
+</item 9>
+
+<item 10>
+Catch Me If You Can
+Catch Me If You Can - wikipedia Catch Me If You Can Jump to : navigation , search This article is about the 2002 film . For other uses , see Catch Me If You Can
+( disambiguation ) . Catch Me If You Can Theatrical release poster Directed by Steven Spielberg Produced by Steven Spielberg Walter F. Parkes Screenplay by Jeff
+Nathanson Based on Catch Me If You Can by Frank Abagnale and Stan Redding Starring Leonardo DiCaprio Tom Hanks Music by John Williams Cinematography Janusz
+Kamiński Edited by Michael Kahn Production company Amblin Entertainment Parkes / MacDonald Productions Distributed by DreamWorks Pictures Release date December
+25 , 2002 ( 2002 - 12 - 25 ) Running time 141 minutes Country United States Language English Budget $52 million Box office $352.1 million Catch Me If You Can is
+a 2002 American biographical crime film directed and co-produced by Steven Spielberg from a screenplay by Jeff Nathanson .
+</item 10>
+=== END ITEM id=3665c890c97fe20c ===
+
+=== ITEM id=5b1f78f825828537 ===
+Gold sentences and facts:
+Sentence 0: When following the western side of the African coastline from the equator , however , the Cape of Good Hope marks the point where a ship begins to travel more eastward than southward . Thus , the first modern rounding of the cape in 1488 by Portuguese explorer Bartolomeu Dias was a milestone in the attempts by the Portuguese to establish direct trade relations with the Far East ( although Herodotus mentioned a claim that the Phoenicians had done so far earlier ) . Dias called the cape Cabo das Tormentas ( `` Cape of Storms '' ; Dutch : Stormkaap ) , which was the original name of the `` Cape of Good Hope '' .
+  Fact 0.0: When following the western side of the African coastline from the equator, the Cape of Good Hope marks the point where a ship begins to travel more eastward than southward.
+  Fact 0.1: Portuguese explorer Bartolomeu Dias made the first modern rounding of the Cape of Good Hope in 1488.
+  Fact 0.2: The 1488 rounding of the cape by Bartolomeu Dias was a milestone in the attempts by the Portuguese to establish direct trade relations with the Far East.
+  Fact 0.3: Herodotus mentioned a claim that the Phoenicians had rounded the cape far earlier.
+  Fact 0.4: Bartolomeu Dias called the cape Cabo das Tormentas.
+  Fact 0.5: Cabo das Tormentas means 'Cape of Storms' in English.
+  Fact 0.6: The Dutch name for Cabo das Tormentas is Stormkaap.
+  Fact 0.7: Cabo das Tormentas was the original name of the Cape of Good Hope.
+
+Retrieved items:
+<item 1>
+Trade winds
+They also learned that to reach South Africa , they needed to go far out in the ocean , head for Brazil , and around 30 ° S go east again . Following the
+African coast southbound means upwind in the Southern hemisphere . In the Pacific ocean , the full wind circulation , which included both the trade wind
+easterlies and higher - latitude Westerlies , was unknown to Europeans until Andres de Urdaneta 's voyage in 1565 . The captain of a sailing ship seeks a course
+along which the winds can be expected to blow in the direction of travel . During the Age of Sail , the pattern of prevailing winds made various points of the
+globe easy or difficult to access , and therefore had a direct effect on European empire - building and thus on modern political geography . For example ,
+Manila galleons could not sail into the wind at all . By the 18th century the importance of the trade winds to England 's merchant fleet for crossing the
+Atlantic Ocean had led both the general public and etymologists to identify the name with a later meaning of ' trade ' , `` ( foreign ) commerce '' .
+</item 1>
+
+<item 2>
+Cape of Good Hope
+Fra Mauro puts the following inscription by the southern tip of Africa , which he names the `` Cape of Diab '' , describing the exploration by a ship from the
+East around 1420 : Detail of the Fra Mauro Map describing the construction of the junks that navigate in the Indian Ocean . `` Around 1420 a ship , or junk ,
+from India crossed the Sea of India towards the Island of Men and the Island of Women , off Cape Diab , between the Green Islands and the shadows . It sailed
+for 40 days in a south - westerly direction without ever finding anything other than wind and water . According to these people themselves , the ship went some
+2,000 miles ahead until - once favourable conditions came to an end - it turned round and sailed back to Cape Diab in 70 days '' . `` The ships called junks (
+lit . `` Zonchi '' ) that navigate these seas carry four masts or more , some of which can be raised or lowered , and have 40 to 60 cabins for the merchants and
+only one tiller .
+</item 2>
+
+<item 3>
+Cape of Good Hope
+Fra Mauro also comments that the account of the expedition , together with the relation by Strabo of the travels of Eudoxus of Cyzicus from Arabia to Gibraltar
+through the southern Ocean in Antiquity , led him to believe that the Indian Ocean was not a closed sea and that Africa could be circumnavigated by her southern
+end ( Text from Fra Mauro map , 11 , G2 ) . This knowledge , together with the map depiction of the African continent , probably encouraged the Portuguese to
+intensify their effort to round the tip of Africa . Map showing the Cape Peninsula , illustrating the position of the Cape of Good Hope . The main mountains and
+their peaks , including Table Mountain , and its relation to the City of Cape Town are shown . Map of the Cape of Good Hope and Cape Agulhas the southernmost
+point of Africa . Main article : Cape Colony Reproduction of the Cross of Vasco da Gama at the Cape of Good Hope .
+</item 3>
+
+<item 4>
+Cape of Good Hope
+Somewhere along the coast of East Africa , he found the remains of the ship . Due to its appearance and the story told by the natives , Eudoxus concluded that
+the ship was from Gades and had sailed anti-clockwise around Africa , passing the Cape and entering the Indian Ocean . This inspired him to repeat the voyage
+and attempt a circumnavigation of the continent . Organising the expedition on his own account he set sail from Gades and began to work down the African coast .
+The difficulties were too great , however , and he was obliged to return to Europe . After this failure he again set out to circumnavigate Africa . His eventual
+fate is unknown . Although some , such as Pliny , claimed that Eudoxus did achieve his goal , the most probable conclusion is that he perished on the journey .
+In the 1450 Fra Mauro map , the Indian Ocean is depicted as connected to the Atlantic .
+</item 4>
+
+<item 5>
+Cape of Good Hope
+Contemporary scientific knowledge instead states the southernmost point of Africa is Cape Agulhas about 150 kilometres ( 90 mi ) to the east - southeast . The
+currents of the two oceans meet at the point where the warm - water Agulhas current meets the cold water Benguela current and turns back on itself . That
+oceanic meeting point fluctuates between Cape Agulhas and Cape Point ( about 1.2 kilometres ( 0.75 mi ) east of the Cape of Good Hope ) . When following the
+western side of the African coastline from the equator , however , the Cape of Good Hope marks the point where a ship begins to travel more eastward than
+southward . Thus , the first modern rounding of the cape in 1488 by Portuguese explorer Bartolomeu Dias was a milestone in the attempts by the Portuguese to
+establish direct trade relations with the Far East ( although Herodotus mentioned a claim that the Phoenicians had done so far earlier ) . Dias called the cape
+Cabo das Tormentas ( `` Cape of Storms '' ; Dutch : Stormkaap ) , which was the original name of the `` Cape of Good Hope '' .
+</item 5>
+
+<item 6>
+Cape of Good Hope
+Jump up ^ The first circumnavigation of Africa . livius.org Jump up ^ Sarah Mytton Maury ( 1848 ) . Englishwoman In America . p. 33 . Jump up ^ Along the
+Clipper Way , Francis Chichester ; page 78 . Hodder & Stoughton , 1966 . ISBN 0 - 340 - 00191 - 7 Jump up ^ Map of the Park , showing the Cape of Good Hope
+section ( retrieved 27 March 2010 ) . Jump up ^ Tozer , Henry F. ( 1997 ) . History of Ancient Geography . Biblo & Tannen . pp. 189 -- 190 . ISBN 0 - 8196 -
+0138 - 1 . ; online at Google Books Jump up ^ Tozer , Henry F. ( 1997 ) . History of Ancient Geography . Biblo & Tannen . pp. xxiii . ISBN 0 - 8196 - 0138 - 1 .
+; online at Google Books Jump up ^ Marco Polo , p.
+</item 6>
+
+<item 7>
+Cape of Good Hope
+Contents ( hide ) 1 History 2 Geography 3 Fauna 3.1 Chacma baboons 4 Flora 5 Legends 6 See also 7 References 8 External links History ( edit ) Eudoxus of
+Cyzicus ( / ˈjuːdəksəs / ; Greek : Εὔδοξος , Eúdoxos ; fl . c. 130 BC ) was a Greek navigator for Ptolemy VIII , king of the Hellenistic Ptolemaic dynasty in
+Egypt , who found the wreck of a ship in the Indian Ocean that appeared to have come from Gades ( today 's Cádiz in Spain ) , rounding the Cape . When Eudoxus
+was returning from his second voyage to India the wind forced him south of the Gulf of Aden and down the coast of Africa for some distance . Somewhere along the
+coast of East Africa , he found the remains of the ship .
+</item 7>
+
+<item 8>
+Cape of Good Hope
+In the Early Modern Era , the first European to reach the cape was the Portuguese explorer Bartolomeu Dias on 12 March 1488 , who named it the `` Cape of Storms
+'' ( Cabo das Tormentas ) . It was later renamed by John II of Portugal as `` Cape of Good Hope '' ( Cabo da Boa Esperança ) because of the great optimism
+engendered by the opening of a sea route to India and the East . The land around the cape was home to the Khoikhoi people when the Dutch first settled there in
+1652 . The Khoikhoi had arrived in these parts about fifteen hundred years before . They were called Hottentots by the Dutch , a term that has now come to be
+regarded as pejorative . Dutch colonial administrator Jan van Riebeeck established a resupply camp for the Dutch East India Company some 50 km north of the cape
+in Table Bay on 6 April 1652 and this eventually developed into Cape Town . Supplies of fresh food were vital on the long journey around Africa and Cape Town
+became known as `` The Tavern of the Seas '' .
+</item 8>
+
+<item 9>
+Cape of Good Hope
+Legends ( edit ) The Cape of Good Hope is the legendary home of The Flying Dutchman . Crewed by tormented and damned ghostly sailors , it is doomed forever to
+beat its way through the adjacent waters without ever succeeding in rounding the headland . Adamastor is a Greek - type mythological character invented by the
+Portuguese poet Luís de Camões in his epic poem Os Lusíadas ( first printed in 1572 ) , as a symbol of the forces of nature Portuguese navigators had to
+overcome during their discoveries and more specifically of the dangers Portuguese sailors faced when trying to round the Cape of Storms . See also ( edit ) Cape
+Peninsula Cape Horn , its South American counterpart Cape Point Western Cape History of Cape Colony Simon 's Town Postage stamps and postal history of the Cape
+of Good Hope References ( edit ) Jump up ^ Every word in isolation ( ˌkaːp də ˌɣudə ˈɦoːp ) . Jump up ^ `` Cape of Good Hope , South Africa - 360 ° Aerial
+Panoramas '' . Jump up ^ The first circumnavigation of Africa .
+</item 9>
+
+<item 10>
+Cape of Good Hope
+They can navigate without a compass , because they have an astrologer , who stands on the side and , with an astrolabe in hand , gives orders to the navigator
+`` . ( Text from the Fra Mauro map , 09 - P25 . ) Fra Mauro explained that he obtained the information from `` a trustworthy source '' , who traveled with the
+expedition , possibly the Venetian explorer Niccolò da Conti who happened to be in Calicut , India at the time the expedition left : `` What is more , I have
+spoken with a person worthy of trust , who says that he sailed in an Indian ship caught in the fury of a tempest for 40 days out in the Sea of India , beyond
+the Cape of Soffala and the Green Islands towards west - southwest ; and according to the astrologers who act as their guides , they had advanced almost 2,000
+miles . Thus one can believe and confirm what is said by both these and those , and that they had therefore sailed 4,000 miles '' .
+</item 10>
+=== END ITEM id=5b1f78f825828537 ===

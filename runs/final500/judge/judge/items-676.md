@@ -1,0 +1,1257 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=902c8d8f3e8610ce ===
+Gold sentences and facts:
+Sentence 0: The Quebec Winter Carnival or the Carnaval de Québec is a pre-Lenten festival held in Quebec City . After being held intermittently since 1894 , the Carnaval de Québec has been celebrated annually since 1955 . That year Bonhomme Carnaval , the mascot of the festival , made his first appearance . Up to one million people attended the Carnaval de Québec in 2006 making it the largest winter festival in the world .
+  Fact 0.0: The Quebec Winter Carnival (Carnaval de Québec) is a pre-Lenten festival.
+  Fact 0.1: The Carnaval de Québec is held in Quebec City.
+  Fact 0.2: The Carnaval de Québec was held intermittently after 1894.
+  Fact 0.3: The Carnaval de Québec has been celebrated annually since 1955.
+  Fact 0.4: In 1955, Bonhomme Carnaval, the mascot of the festival, made his first appearance.
+  Fact 0.5: Up to one million people attended the Carnaval de Québec in 2006.
+  Fact 0.6: In 2006, the Carnaval de Québec was the largest winter festival in the world.
+
+Retrieved items:
+<item 1>
+Quebec Winter Carnival
+Free outdoor public banquets ( brunch , breakfast , etc . ) . . The Canadian , Québécois , International and Student artist snow sculpture contests on the
+Plains of Abraham , the main setting of the carnival . The Plains are a public city park and stay open for leisure activities , including snowshoeing and
+cross-country skiing trails , during carnival time . Part of the Plains around the Citadel is transformed into an outdoor winter amusement park with various
+family - themed activities , including the display of the three main snow - sculpting contests ( Canada 's provinces , Quebec 's regions , International ) and
+the traditional bikini snow bath event ( bain de neige ) Outdoor dance parties are held at the Ice Palaces . Kiosks and other outlets in the city sell the
+Bonhomme effigy tag that grants admission into most of the events , although some are free outside the main site . Most commercial main streets are decorated
+and some bars and restaurants set up a winter patio in front of their establishments . Bonhomme -- short for bonhomme de neige ( `` snowman '' ) is the official
+ambassador of the festivities , the castle lord of the Ice Palace .
+</item 1>
+
+<item 2>
+God Save the Queen
+Ottawa : Queen 's Printer for Canada . p. 2 . ISBN 978 - 1 - 100 - 12739 - 2 . Retrieved 16 January 2011 . Jump up ^ Alberta Police and Peace Officers '
+Memorial Day 2009 Order of Service , Queen 's Printer for Alberta , 27 September 2009 access - date = requires url = ( help ) Jump up ^ Department of Canadian
+Heritage . `` Ceremonial and Canadian Symbols Promotion > The National Flag of Canada '' . Queen 's Printer for Canada . Retrieved 5 July 2010 . Jump up ^ Royal
+Canadian Legion Dominion Command ( 4 November 2009 ) . `` National Remembrance Day Ceremony '' . Royal Canadian Legion . Archived from the original on 12 March
+2010 . Retrieved 5 July 2010 . Jump up ^ Department of Veterans Affairs . `` Canada Remembers > Partnering Opportunities > Community Engagement Partnership Fund
+> Nova Scotia > Community Engagement Partnership Fund : Nova Scotia '' . Queen 's Printer for Canada . Retrieved 5 July 2010 .
+</item 2>
+
+<item 3>
+God Save the Queen
+Jump up ^ MacLeod 2008 , pp. 54 , I ^ Jump up to : Kallmann , Helmut , `` The Canadian Encyclopedia '' , in Marsh , James Harley , Encyclopedia of Music in
+Canada > Musical Genres > National and royal anthems , Toronto : Historica Foundation of Canada , archived from the original on 10 October 2011 , retrieved 25
+June 2010 Jump up ^ Office of the Lieutenant Governor of Nova Scotia . `` History of the Lieutenant Governor > Royal Salute > Royal Salute ( Formerly known as
+the Vice-Regal Salute ) '' . Queen 's Printer for Nova Scotia . Archived from the original on 30 April 2010 . Retrieved 25 June 2010 . Jump up ^ Hoiberg , Dale
+( ed . ) , `` Encyclopædia Britannica '' , O Canada , Toronto : Encyclopædia Britannica , Inc. , retrieved 25 June 2010 Jump up ^ Citizenship and Immigration
+Canada ( 2009 ) . Discover Canada ( PDF ) . Ottawa : Queen 's Printer for Canada . p. 2 .
+</item 3>
+
+<item 4>
+Quebec Winter Carnival
+Quebec winter carnival - wikipedia Quebec winter carnival Jump to : navigation , search This article needs additional citations for verification . Please help
+improve this article by adding citations to reliable sources . Unsourced material may be challenged and removed . ( January 2018 ) ( Learn how and when to
+remove this template message ) Quebec Winter Carnival Carnaval de Québec Bonhomme Carnaval in 2011 Genre Festival Begins End of January Ends Mid February
+Frequency Annually Location ( s ) Quebec City Country Canada Website Carnaval de Québec The Quebec Winter Carnival or the Carnaval de Québec is a pre-Lenten
+festival held in Quebec City . After being held intermittently since 1894 , the Carnaval de Québec has been celebrated annually since 1955 . That year Bonhomme
+Carnaval , the mascot of the festival , made his first appearance . Up to one million people attended the Carnaval de Québec in 2006 making it the largest
+winter festival in the world .
+</item 4>
+
+<item 5>
+Quebec Winter Carnival
+Contents ( hide ) 1 Activities and attractions 2 Feasts and restaurants 3 Races and tournaments 4 Gallery 5 References Activities and attractions ( edit ) The
+most famous attractions of this winter festival are the night - time and daytime parades led by mascot Bonhomme Carnaval . The parades wind through the upper
+city , decorated for the occasion with lights and ice sculptures . Numerous public and private parties , shows and balls are held across the city , some of them
+outside in the bitter cold , testimony to the Québécois ' fabled joie de vivre . Other major events include : A masquerade ball with up to 400 participants at
+the grand ballroom of the Château Frontenac . The opening and closing ceremonies taking place at the Ice Palace before thousands of participants , Bonhomme and
+the mayor of Quebec . Outdoor sport events ( snowboarding , ice canoe , snowshoes , hockey , dog - sledding , etc. , some of them part of World Championship
+tournaments ) inside and outside the city . Free outdoor public banquets ( brunch , breakfast , etc . ) . .
+</item 5>
+
+<item 6>
+Quebec Winter Carnival
+Bonhomme is described as a seven - foot - tall , four - hundred pound snowman sporting a red cap , black buttons and a ceinture fléchée . It is traditional to
+drink Caribou , a hot alcoholic beverage , to keep warm . The public auction is a fundraising event in aid of the carnival . This auction features many goods
+and services donated for silent auction and live auction . Feasts and restaurants ( edit ) The Business Leaders ' Luncheon , organized by the Québec City
+Chamber of Commerce . The Calgary Stampede Flap Jack Breakfast . In 2008 , carnival - goers were served by Prime Minister Stephen Harper . The ' Restaurant
+Partners ' Campaign is a 179 - day promotion during which Québec City restaurants offer customers a special menu for a fixed price throughout the carnival (
+including appetizer , soup , or salad , a main course , and a dessert ) . Races and tournaments ( edit ) A sleigh race in which drivers and their horses take
+part in a single - and double - harness race on the Plains of Abraham . An Ice canoe race on the St. Lawrence river .
+</item 6>
+
+<item 7>
+Quebec Winter Carnival
+Frommer 's Canada : With the best hiking & outdoor adventures . John Wiley & Sons . p. 300 . ISBN 978 - 0 - 470 - 04457 - 5 . Jump up ^
+https://www.theglobeandmail.com/life/travel/activities-and-interests/the-snowman-behind-the-legend-get-to-know-quebecs-beloved-bonhomme/article37716316/ Quebec
+Winter Carnaval virtual tour in panoramic photography Tornoipee-wee.qc.ca Fissnowboard.com Icehotel-canada.com Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Quebec_Winter_Carnival&oldid=822352977 '' Categories : Tourist attractions in Quebec City Festivals in Quebec City
+Winter festivals in Canada Mardi Gras 1894 establishments in Quebec Hidden categories : Articles needing additional references from January 2018 All articles
+needing additional references Quebec articles missing geocoordinate data All articles needing coordinates Talk Contents About Wikipedia Deutsch Español Français
+한국어 日本 語 Português Svenska Edit links This page was last edited on 25 January 2018 , at 21 : 54 .
+</item 7>
+
+<item 8>
+Quebec Winter Carnival
+An Ice canoe race on the St. Lawrence river . The Québec International Pee - Wee Hockey Tournament ( not officially part of the carnival program since 1977 ) .
+The Snowboard World Cup in Quebec City ( not part of the carnival official program ) . Also not part of the official program but worth a visit or a stay , the
+Quebec City Ice Hotel is open every year from early January to late March with its bar , nightclub , exhibition galleries and ceremonial chapel . Gallery ( edit
+) Ice sculpture ( 2005 ) Family venue ( 2006 ) Ice Palace ( 2009 ) Parade in Montreal ( 2011 ) Canoe race ( 2011 ) Ice Palace ( 2011 ) Toboggan at Terrasse
+Dufferin References ( edit ) Jump up ^ Daniel Shafto ( 1 January 2009 ) . Carnival . Infobase Publishing . p. 80 . ISBN 978 - 1 - 4381 - 2660 - 9 . Jump up ^
+Hilary Davidson ; Paul Karr ; Herbert Bailey Livesey ; Bill McRae ; Donald Olson ( 14 August 2006 ) .
+</item 8>
+
+<item 9>
+God Save the Queen
+Queen 's Printer for Canada . Retrieved 5 July 2010 . Jump up ^ Remembrance Day ( PDF ) , Vancouver Board of Parks and Recreation , 11 November 2009 , archived
+from the original ( PDF ) on 7 July 2011 , retrieved 5 July 2010 Jump up ^ `` Honours and Salutes '' . Queen 's Printer for Canada . Retrieved 4 March 2017 . ^
+Jump up to : Bélanger , Claude . `` The Quebec History Encyclopedia '' . In Marianopolis College . National Anthem of Canada . Montreal : Marianopolis College .
+Retrieved 5 July 2010 . ^ Jump up to : Department of Canadian Heritage . `` National Anthem : O Canada > Parliamentary Action '' . Queen 's Printer for Canada .
+Retrieved 29 June 2010 . ^ Jump up to : Department of National Defence ( 1 April 1999 ) , The Honours , Flags and Heritage Structure of the Canadian Forces (
+PDF ) , Ottawa : Queen 's Printer for Canada , p.
+</item 9>
+
+<item 10>
+Quebec Winter Carnival
+About Wikipedia
+</item 10>
+=== END ITEM id=902c8d8f3e8610ce ===
+
+=== ITEM id=762a5893c7d06e47 ===
+Gold sentences and facts:
+Sentence 0: The Day the Music Died The memorial marking the crash site , 2003 Accident summary Date February 3 , 1959 ( 1959 - 02 - 03 ) Summary Spatial disorientation , loss of control in near - IMC conditions Site Near Clear Lake , Iowa , United States 43 ° 13 ′ 13.3 '' N 93 ° 22 ′ 53.1 '' W ﻿ / ﻿ 43.220361 ° N 93.381417 ° W ﻿ / 43.220361 ; - 93.381417 Coordinates : 43 ° 13 ′ 13.3 '' N 93 ° 22 ′ 53.1 '' W ﻿ / ﻿ 43.220361 ° N 93.381417 ° W ﻿ / 43.220361 ; - 93.381417 Passengers Crew Fatalities 4 ( all ) Survivors 0 Aircraft type Beechcraft Bonanza Operator Dwyer Flying Service , Mason City , Iowa Registration N3794N Flight origin Mason City Municipal Airport , Iowa Destination Hector Airport , North Dakota
+  Fact 0.0: The Day the Music Died has a memorial marking the crash site, photographed in 2003.
+  Fact 0.1: The accident date was February 3, 1959 (1959-02-03).
+  Fact 0.2: The accident summary is spatial disorientation and loss of control in near-IMC conditions.
+  Fact 0.3: The accident site is near Clear Lake, Iowa, United States.
+  Fact 0.4: The accident site coordinates are 43°13′13.3″N 93°22′53.1″W.
+  Fact 0.5: The accident site coordinates are 43.220361°N 93.381417°W.
+  Fact 0.6: The accident had 4 fatalities, all of the people involved.
+  Fact 0.7: The accident had 0 survivors.
+  Fact 0.8: The aircraft type was a Beechcraft Bonanza.
+  Fact 0.9: The operator was Dwyer Flying Service, of Mason City, Iowa.
+  Fact 0.10: The aircraft registration was N3794N.
+  Fact 0.11: The flight origin was Mason City Municipal Airport, Iowa.
+  Fact 0.12: The flight destination was Hector Airport, North Dakota.
+Sentence 1: At the time , Holly and his band , consisting of Waylon Jennings , Tommy Allsup , and Carl Bunch , were playing on the `` Winter Dance Party '' tour across the United States Midwest . Rising artists Valens and Richardson had joined the tour , as well . The long journeys between venues on board the cold , uncomfortable tour buses adversely affected the performers , with cases of flu and even frostbite . After stopping at Clear Lake to perform , and frustrated by such conditions , Holly chose to charter a plane to reach their next venue in Moorhead , Minnesota . Richardson , who had the flu , swapped places with Jennings , taking his seat on the plane , while Allsup lost his seat to Valens on a coin toss . Soon after takeoff , late at night and in poor , wintry weather conditions , the pilot lost control of the light aircraft , a Beechcraft Bonanza , which subsequently crashed into a cornfield . Everyone on board was killed . The event has since been mentioned in various songs and films . A number of monuments have been erected at the crash site and in Clear Lake , where an annual memorial concert is also held at the Surf Ballroom , the venue that hosted the artists ' last performance .
+  Fact 1.0: At the time, Holly and his band were playing on the 'Winter Dance Party' tour across the United States Midwest.
+  Fact 1.1: Holly's band consisted of Waylon Jennings, Tommy Allsup, and Carl Bunch.
+  Fact 1.2: Rising artists Valens and Richardson had joined the tour.
+  Fact 1.3: The long journeys between venues on board the cold, uncomfortable tour buses adversely affected the performers.
+  Fact 1.4: The performers had cases of flu.
+  Fact 1.5: The performers had cases of frostbite.
+  Fact 1.6: After stopping at Clear Lake to perform, and frustrated by such conditions, Holly chose to charter a plane.
+  Fact 1.7: Holly chartered the plane to reach the next venue in Moorhead, Minnesota.
+  Fact 1.8: Richardson, who had the flu, swapped places with Jennings, taking Jennings's seat on the plane.
+  Fact 1.9: Allsup lost his seat to Valens on a coin toss.
+  Fact 1.10: Soon after takeoff, late at night and in poor, wintry weather conditions, the pilot lost control of the light aircraft.
+  Fact 1.11: The light aircraft was a Beechcraft Bonanza.
+  Fact 1.12: The aircraft subsequently crashed into a cornfield.
+  Fact 1.13: Everyone on board was killed.
+  Fact 1.14: The event has since been mentioned in various songs and films.
+  Fact 1.15: A number of monuments have been erected at the crash site.
+  Fact 1.16: A number of monuments have been erected in Clear Lake.
+  Fact 1.17: An annual memorial concert is also held at the Surf Ballroom.
+  Fact 1.18: The Surf Ballroom was the venue that hosted the artists' last performance.
+
+Retrieved items:
+<item 1>
+The Day the Music Died
+The tail light was then observed gradually descending until it disappeared out of view . Around 1 : 00 am , when Peterson failed to make the expected radio
+contact , repeated attempts to establish communication were made , at Dwyer 's request , by the radio operator , but they were all unsuccessful . Later that
+morning , Dwyer , having heard no word from Peterson since his departure , took off in another airplane to retrace his planned route . Within minutes , at
+around 9 : 35 am , he spotted the wreckage less than 6 mi ( 9.7 km ) northwest of the airport . The sheriff 's office , alerted by Dwyer , dispatched Deputy
+Bill McGill , who drove to the crash site , a cornfield belonging to Albert Juhl . The Bonanza had impacted terrain at high speed , estimated to have been
+around 170 mph ( 270 km / h ) , banked steeply to the right and in a nose - down attitude .
+</item 1>
+
+<item 2>
+The Day the Music Died
+The rest of the party would have picked him up in Moorhead , saving him the journey in the bus and leaving him time to get some rest . Flight arrangements (
+edit ) A V - tailed Bonanza similar to N3794N , the accident aircraft Surf Ballroom manager Anderson called Hubert Jerry Dwyer ( 1930 - 2016 ) , owner of the
+Dwyer Flying Service , a company in Mason City , Iowa , to charter the plane to fly to Hector Airport in Fargo , the closest one to Moorhead . Flight
+arrangements were made with Roger Peterson , a 21 - year - old local pilot described as a `` young married man who built his life around flying '' . The flying
+service charged a fee of $36 per passenger for the flight on the 1947 single - engined , V - tailed Beechcraft 35 Bonanza ( registration N3794N ) , which could
+seat three passengers plus the pilot . A popular misconception , originating from Don McLean 's eponymous song about the crash , was that the plane was called
+American Pie . In fact , no record exists of any name ever having been given to N3794N .
+</item 2>
+
+<item 3>
+The Day the Music Died
+The musician 's son , Jay Perry , took the opportunity to have his father 's body re-examined to verify the original findings , and asked forensic
+anthropologist William Bass to carry out the procedure . Among the rumors surrounding the accident that this second examination sought to verify was that an
+accidental firearm discharge took place on board the aircraft and caused the crash , since two months after the event , a farmer had found at the crash site a .
+22 ( 5.6 mm ) pistol known to have belonged to Buddy Holly . Another rumor had Richardson surviving the initial impact and crawling out of the aircraft in
+search for help , prompted by the fact that his body was found farther from the wreckage than the other three . Bass and his team took several X-rays of
+Richardson 's body and eventually concluded that the musician had indeed died instantly from extensive , nonsurvivable fractures to almost all of his bones ; no
+traces of lead were found from any bullet . Coroner Smiley 's original report was , therefore , confirmed . In March 2015 , the National Transportation Safety
+Board ( NTSB ) received a request to reopen the investigation into the accident . The request was made by L.J.
+</item 3>
+
+<item 4>
+Passengers of the RMS Titanic
+Frank M. Warren , Sr . George Dennick Wick George Dunton Widener Harry Elkins Widener Duane Williams George Henry Wright Roderick Chisholm Survivors ( last
+living ) Rhoda Abbott Trevor Allison Lillian Asplund Madeleine Astor Ruth Becker Lawrence Beesley Karl Behr Dickinson Bishop Mauritz Håkan Björnström -
+Steffansson Elsie Bowerman Francis Browne Margaret `` Molly '' Brown Daniel Buckley Alden Caldwell Helen Churchill Candee Charlotte Drake Cardeza Lucile Carter
+Gladys Cherry Millvina Dean Margaret Devaney Sir Cosmo Duff - Gordon Lucy , Lady Duff - Gordon Ethel Flora Fortune Dorothy Gibson Archibald Gracie IV Frank John
+William Goldsmith Edith Haisman Henry S. Harper Eva Hart Margaret Bechstein Hays Masabumi Hosono J. Bruce Ismay Eleanor Ileen Johnson Louise Laroche Louise Kink
+Margaret Mannion Michel Marcel Navratil Alfred Nourney Arthur Godfrey Peuchen Winnifred Quick Marjorie Newell Robb Edith Rosenbaum Noël Leslie ,
+</item 4>
+
+<item 5>
+The Day the Music Died
+Richardson , who had the flu , swapped places with Jennings , taking his seat on the plane , while Allsup lost his seat to Valens on a coin toss . Soon after
+takeoff , late at night and in poor , wintry weather conditions , the pilot lost control of the light aircraft , a Beechcraft Bonanza , which subsequently
+crashed into a cornfield . Everyone on board was killed . The event has since been mentioned in various songs and films . A number of monuments have been
+erected at the crash site and in Clear Lake , where an annual memorial concert is also held at the Surf Ballroom , the venue that hosted the artists ' last
+performance . Contents ( hide ) 1 Background 2 Flight arrangements 3 Take - off and crash 4 Aftermath 5 Official investigation 6 Subsequent investigations 7
+Legacy 7.1 Notification of victims ' families 7.2 Memorials 7.2. 1 Films 7.2. 2 Memorial concerts 7.2. 3 Monuments 7.2. 4 Roads 7.2.
+</item 5>
+
+<item 6>
+The Day the Music Died
+The right wing tip had struck the ground first , sending the aircraft cartwheeling across the frozen field for 540 feet ( 160 m ) , before coming to rest
+against a wire fence at the edge of Juhl 's property . The bodies of Holly and Valens had been ejected from the torn fuselage and lay near the wreckage .
+Richardson 's body had been thrown over the fence and into the cornfield of Juhl 's neighbor Oscar Moffett , while pilot Peterson 's body was entangled in the
+plane 's wreckage . With the rest of the entourage en route to Minnesota , ballroom manager Carroll Anderson , who had driven the party to the airport and
+witnessed the plane 's takeoff , had to identify the bodies of the musicians . County coroner Ralph Smiley certified that all four victims died instantly ,
+citing the cause of death as `` gross trauma to brain '' for the three artists and `` brain damage '' for the pilot . Aftermath ( edit ) Holly 's pregnant wife
+, María Elena , learned of his death from the reports on television .
+</item 6>
+
+<item 7>
+The Day the Music Died
+Don McLean later addressed the accident in his song `` American Pie '' ( 1971 ) , dubbing it `` the Day the Music Died '' , which for McLean symbolized the ``
+loss of innocence '' of the early rock - and - roll generation . See also ( edit ) Aviation portal Iowa portal Rock and Roll portal Patsy Cline plane crash
+Stevie Ray Vaughan helicopter crash Bill Graham helicopter crash Randy Rhoads plane crash 1969 Newton Cessna 172 crash Lynyrd Skynyrd plane crash References (
+edit ) ^ Jump up to : Suddath , Claire ( February 3 , 2009 ) . `` The Day the Music Died '' . Time . Retrieved April 29 , 2015 . Jump up ^ Everitt 2004 , p. 10
+. ^ Jump up to : http://www.startribune.com/buddy-holly-the-tour-from-hell/38282249/ ^ Jump up to : Everitt 2004 , p. 13 . Jump up ^ `` Connection to Buddy
+Holly Death '' . WeGoNews.com . Retrieved February 3 , 2011 .
+</item 7>
+
+<item 8>
+The Day the Music Died
+Mason City , Iowa Registration N3794N Flight origin Mason City Municipal Airport , Iowa Destination Hector Airport , North Dakota On February 3 , 1959 , rock
+and roll musicians Buddy Holly , Ritchie Valens , and J.P. `` The Big Bopper '' Richardson were killed in a plane crash near Clear Lake , Iowa , together with
+pilot Roger Peterson . The event later became known as `` The Day the Music Died '' , after singer - songwriter Don McLean referred to it as such in his 1971
+song `` American Pie '' . At the time , Holly and his band , consisting of Waylon Jennings , Tommy Allsup , and Carl Bunch , were playing on the `` Winter Dance
+Party '' tour across the United States Midwest . Rising artists Valens and Richardson had joined the tour , as well . The long journeys between venues on board
+the cold , uncomfortable tour buses adversely affected the performers , with cases of flu and even frostbite . After stopping at Clear Lake to perform , and
+frustrated by such conditions , Holly chose to charter a plane to reach their next venue in Moorhead , Minnesota .
+</item 8>
+
+<item 9>
+The Day the Music Died
+The Day the Music Died - wikipedia The Day the Music Died Jump to : navigation , search This article is about the plane crash . For other uses , see The Day the
+Music Died ( disambiguation ) . The Day the Music Died The memorial marking the crash site , 2003 Accident summary Date February 3 , 1959 ( 1959 - 02 - 03 )
+Summary Spatial disorientation , loss of control in near - IMC conditions Site Near Clear Lake , Iowa , United States 43 ° 13 ′ 13.3 '' N 93 ° 22 ′ 53.1 '' W ﻿
+/ ﻿ 43.220361 ° N 93.381417 ° W ﻿ / 43.220361 ; - 93.381417 Coordinates : 43 ° 13 ′ 13.3 '' N 93 ° 22 ′ 53.1 '' W ﻿ / ﻿ 43.220361 ° N 93.381417 ° W ﻿ /
+43.220361 ; - 93.381417 Passengers Crew Fatalities 4 ( all ) Survivors 0 Aircraft type Beechcraft Bonanza Operator Dwyer Flying Service ,
+</item 9>
+
+<item 10>
+Passengers of the RMS Titanic
+Although several people managed to reach this lifeboat , three died during the night . When Fifth Officer Harold Lowe and six crewmen returned to the wreck site
+after the sinking with an empty lifeboat to pick up survivors , they rescued surviving passengers from Collapsible A , but left the three dead bodies in the
+boat : Thomson Beattie , a first - class passenger , and two crew members , a fireman and a seaman . After their retrieval from Collapsible A by Oceanic , the
+bodies were buried at sea . Passenger list ( edit ) Breakdown of casualties according to the British Board of Trade report ( click for detail ) The following is
+a full list of known passengers who sailed on the maiden voyage of the RMS Titanic . Included in this list are the nine - member Guarantee Group and the eight
+members of the ship 's band , listed as both passengers and crew . They are also included in the list of crew members on board RMS Titanic . Passengers are
+colour - coded , indicating whether they were saved or perished . The passenger did not survive The passenger survived Survivors are listed with the lifeboat
+from which they were known to be rescued .
+</item 10>
+=== END ITEM id=762a5893c7d06e47 ===
+
+=== ITEM id=7a4a864abdfa1f7e ===
+Gold sentences and facts:
+Sentence 0: No . overall No. in season Title Directed by Written by Original air date U.S. viewers ( millions ) 112 `` The Savior '' Eagle Egilsson Edward Kitsis & Adam Horowitz September 25 , 2016 ( 2016 - 09 - 25 ) 3.99 In the past , Aladdin , a `` Savior '' , is taunted by Jafar over the inevitable downfall of all Saviors . In Storybrooke , refugees arrive from the Land of Untold Stories . Emma experiences tremors and visions ; an arrested Hyde helps her receive an oracle 's vision of a hooded figure killing her . Guided by Morpheus , Gold enters Belle 's dreams to lift the sleeping curse ; he tries to renew their love , but she rejects him . `` Morpheus '' reveals he is really their unborn son , and desired this outcome . Belle wakes and leaves Gold . Henry convinces Regina that Hades may have lied about Robin Hood 's soul having been destroyed . Zelena moves in with Regina but , after learning her sister blames her for Robin Hood 's death , moves out and is approached by the Evil Queen . 113 `` A Bitter Draught '' Ron Underwood Andrew Chambliss & Dana Horgan October 2 , 2016 ( 2016 - 10 - 02 ) 3.72 In the past in the Enchanted Forest , the Evil Queen offers to aid the revenge plot of Edmond Dantes , The Count of Monte Cristo , if he kills Snow and David . When he falls in love with Snow 's handmaiden , he reneges and flees with her to the Land of Untold Stories to save her from poison . In Storybrooke , the Evil Queen recruits Zelena and uses Edmond 's heart to set him against Snow and David ; Regina kills Edmond to save the others , and realizes she retains the capacity for darkness . The Evil Queen declares that the undesirable `` untold stories '' will be played out . She gives David evidence that his father 's death was not accidental . Belle lives on Hook 's ship ; in a deal with Gold , the Evil Queen will not harm her or the baby . Emma tells Archie about her visions and notes that Regina is n't present in them and could be the hooded figure . 114 `` The Other Shoe '' Steve Pearlman Jane Espenson & Jerome Schwartz October 9 , 2016 ( 2016 - 10 - 09 ) 4.11 In the past in the Enchanted Forest , Cinderella meets Prince Thomas at the ball , but flees when she believes he loves her stepsister Clorinda ; Clorinda actually plans to elope with Thomas ' footman , Jacob , but her mother , Lady Tremaine , abducts her to the Land of Untold Stories after forcing Cinderella to betray Clorinda 's location . In Storybrooke , Ashley hopes to reconcile with Clorinda . Aided by the Evil Queen , Tremaine lures Ashley into a trap for her and Jacob . Ashley protects Jacob ; Clorinda reunites with him and forgives Cinderella , while Tremaine is arrested . Emma struggles to control her magic . Whale helps Jekyll recreate his serum , while the Evil Queen and Hyde form an alliance and she releases him . Snow White wants normality , but David secretly investigates his father 's death ; Gold provides information in exchange for David delivering a message to Belle . 115 `` Strange Case '' Alrick Riley David H. Goodman & Nelson Soler October 16 , 2016 ( 2016 - 10 - 16 ) 3.53 In the past in Victorian England , Jekyll petitions the Academy of Science for membership but Dr. Lydgate rejects him . Rumplestiltskin arrives and magically perfects Jekyll 's serum ; Jekyll transforms into Hyde , who blackmails Lydgate for Jekyll 's membership . Mary is Lydgate 's daughter and Jekyll 's unrequited love ; she and Hyde fall in love . Jekyll accidentally fatally defenestrates Mary ; he frames Hyde . In Storybrooke , Gold imprisons Belle on the ship to protect her from Hyde ; but it is Jekyll who tries to kill Belle in revenge for Rumplestiltskin 's role in Mary 's death . Hook saves Belle by killing Jekyll , and Hyde dies of identical wounds ; Regina asks Emma to kill her if necessary to stop the Evil Queen . Gold warns Belle that their child will need his protection . Mary Margaret resumes teaching , and her assistant Shirin inspires her to draw on her life as Snow . Shirin is secretly Princess Jasmine , working with the Oracle to search for Aladdin . 116 5 `` Street Rats '' Norman Buckley Edward Kitsis & Adam Horowitz October 23 , 2016 ( 2016 - 10 - 23 ) 3.40 In the past in Agrabah , Aladdin seeks a magical weapon for Jasmine , to save the kingdom from Jafar ; he is the weapon and a Savior . Jafar tempts Aladdin with magical shears that can sever him from his fate as the Savior and from his resulting death . Aladdin rejects Jafar and saves Jasmine . In Storybrooke , the Oracle is murdered . Emma helps Jasmine , hoping Aladdin 's survival ensures her own . Having faked his death , Aladdin reveals himself to Emma and confesses that he doomed Agrabah by using the shears , which he gives to her ; she asks Hook to dispose of them , but he secretly keeps them . The Evil Queen impersonates Archie to learn of Emma 's visions , and convinces Zelena to turn Archie back into a cricket . 117 6 `` Dark Waters '' Robert Duncan Andrew Chambliss & Brigitte Hales October 30 , 2016 ( 2016 - 10 - 30 ) 3.06 During the Dark Curse , Captain Nemo abducts Hook and invites him to join the crew `` family '' of his submarine , Nautilus , in their quest for the `` Mysterious Island '' , which is the Land of Untold Stories . Hook discovers the first mate is his half - brother , Liam , and decides to leave to avoid confrontation ; but Liam attacks him , instead mortally wounding Nemo , who steps in . In the present , Archie is freed . Henry confronts Hook over lying about the shears , and Liam imprisons them on Nautilus . Hook opens up and Henry accepts him as family ; they save each other and dispose of the shears . Modern medicine saves Nemo ; he , Liam , and Hook make amends . Emma and Aladdin discuss being a Savior . Jasmine reveals that Agrabah vanished . Snow supports Belle at her ultrasound . The Evil Queen seduces Gold and offers the retrieved shears in exchange for help taking Snow 's heart . 118 7 `` Heartless '' Ralph Hemecker Jane Espenson November 6 , 2016 ( 2016 - 11 - 06 ) 3.56 In the past , fugitive Snow and shepherd David separately travel to Longbourn ; she to flee the kingdom and he to sell his struggling farm . Without ever seeing each other 's faces , David saves Snow from a bounty hunter and she repays him with money to save the farm , deciding not to flee . Their hands touch and a magical sapling is created . In the present , the Evil Queen threatens to destroy Storybrooke with River of Lost Souls water unless Mary Margaret and David hand over their hearts . They learn the sapling could stop the Queen , who destroys it just after they find it . But it has shown them their previous meeting , and they conclude that their love can endure anything ; they surrender themselves . The Queen casts a sleeping curse on their hearts ; because they share Snow 's heart , the curse affects them both ; each can wake the other but immediately succumbs to the curse , so they can never be awake together . Regina uses Gold 's relationship with the Queen to separate the latter from Zelena , who earns Gold 's enmity by exposing his schemes to Belle . 119 8 `` I 'll Be Your Mirror '' Jennifer Lynch Jerome Schwartz & Leah Fong November 13 , 2016 ( 2016 - 11 - 13 ) 3.40 Regina and Emma try to magically trap the Evil Queen in the World Behind the Mirror , but she traps them there , where the Dragon is already imprisoned . Henry prepares for a date with Violet ; the Queen impersonates Regina and tries to manipulate him but he recognizes her . Emma and Regina discover Sidney was building a mirror portal out of the world and try and finish it , but the Evil Queen forces the Dragon to attack Emma and Regina , using his heart , and tries to make Henry kill the Dragon with the Hammer of Hephaestus ; he instead uses it to free his mothers . Mary Margaret and David adjust to living in shifts . Belle asks Zelena to help her escape Storybrooke via magical portal , and they form an alliance with Aladdin and Jasmine . Aladdin steals the Genie 's lamp and the Sorcerer 's wand from Gold 's shop , but Gold takes the wand back from Zelena and puts a magical tracking device on Belle . He asks the Queen to kill Zelena , as the connection between his and Zelena 's hearts protects her from him . 120 9 `` Changelings '' Mairzee Almas David H. Goodman & Brian Ridings November 27 , 2016 ( 2016 - 11 - 27 ) 3.28 In the Enchanted Forest , while served by Belle , Rumplestiltskin abducts a baby to use as bait for the Black Fairy , the mother who abandoned him ; she escapes without answering his questions . In the present , Belle receives advice from her unborn child while Gold becomes increasingly unhinged . Resenting Gold 's order to attack Zelena , the Evil Queen accelerates Belle 's pregnancy ; Mother Superior delivers Belle 's son , Gideon , and sends him into hiding ; Gold vows to find him . As the Genie has been freed , Aladdin takes his place . Zelena and Regina continue to feud . Emma obtains the sword from her vision . 121 10 `` Wish You Were Here '' Ron Underwood Edward Kitsis & Adam Horowitz December 4 , 2016 ( 2016 - 12 - 04 ) 3.27 The Black Fairy abducts Gideon . Emma discovers the sword can kill the Evil Queen without hurting Regina . The Queen steals the lamp and wishes Emma to an alternate reality where she was never the Savior ; Regina follows her . David and his allies take the lamp from the Queen , who is turned into a serpent by the hooded figure , revealed to be the adult Gideon . Jasmine wishes herself and Aladdin to Agrabah . In the `` wish realm '' , Emma lives as a princess until Regina traumatically restores her memory . Regina frees Rumplestiltskin in exchange for a magic bean , but the portal to Storybrooke closes while Regina is distracted by the appearance of Robin Hood . 122 11 `` Tougher Than the Rest '' Billy Gierhart Edward Kitsis & Adam Horowitz March 5 , 2017 ( 2017 - 03 - 05 ) 3.03 In 1990 Minnesota , a young Emma is told by a teenager that she has the power to change her fate . In present day , after they miss their way out of the Wish realm , Emma and Regina find another option for escape when they come across August , who agrees to help create a new portal . Regina goes to find Robin Hood to see if he would 've been better off without her . After Regina finds Robin , they 're caught by the Sheriff of Nottingham and later by the Wish realm Rumple . Robin believes Regina when she tells him about their being in an alternate reality . Emma discovers that August was the teenager she met back in Minnesota and inspires him to complete the portal . Emma , Regina , and Robin return to Storybrooke , where Gideon explains to Gold and Belle his intention to kill Emma so that he can acquire her savior powers and kill the Black Fairy , a move that has David furious and Belle concerned . Emma and Gideon finally meet for the battle , but Emma survives , choosing her own fate . Gideon retreats , proclaiming this far from over . Gold and Belle decide to work together for the good of their son . 123 12 `` Murder Most Foul '' Morgan Beggs Jerome Schwartz & Jane Espenson March 12 , 2017 ( 2017 - 03 - 12 ) 3.06 The events of how Robert , the father of David and James , was murdered are detailed in a flashback , in which Robert learns what happened to James after he ran away from King George . With help from Rumple , he tracks him to Pleasure Island , but their reunion is cut short by King George , who orders Robert 's execution . His death affects David in the present day after he sees visions of Robert and asks Hook to help him , despite his being reformed . When Hook becomes concerned that David is taking this investigation too far by going after Albert , he intervenes and brings David back to sanity . Hook is also worried about whether David will give him his blessing to marry Emma , but David does . Meanwhile , Regina tries to get the Wish Realm Robin assimilated into Storybrooke , but soon questions why he agreed to follow her , as it turns out that he had something else planned after he steals a chest from the vault . The truth as to who really murdered Robert is revealed when August gives Hook missing pages he took from Henry 's book . When Hook sees an illustration of David 's dad , he recognizes him and recalls murdering him during a robbery in the Enchanted Forest so that there was no witness to his crime . 124 13 `` Ill - Boding Patterns '' Ron Underwood Andrew Chambliss & Dana Horgan March 19 , 2017 ( 2017 - 03 - 19 ) 2.71 During the First Ogres War , Beowulf leads a fearsome charge on the battlefield in the Enchanted Forest of old . After every last soldier had been slain , Beowulf surrenders to death just as Rumplestiltskin intervenes , killing all the ogres . Hailed as a hero in the village , Beowulf is irked by Rumple 's new title . He creates a ruse to lead Rumple to his demise . Fearing he would not be able to follow through on protecting the villagers without Dark Magic , Rumple bestows his dagger upon Baelfire as an insurance policy . Following a turbulent exchange and threat to frame Rumplestiltskin as a murderer , Beowulf retreats . Feeling the pressure of his threat , Bae commands his father to kill him . Rumple later doses Bae with a memory potion to erase the ordeal from his mind and restore his innocence . In Storybrooke , Rumple recognizes a familiar pattern in Gideon , who makes strides in his quest to kill Emma Swan at the cost of The Blue Fairy 's vitality . Hook worries about the repercussions of telling Emma his newly unveiled secret . Meanwhile , Emma unknowingly forces a proposal after happening upon Hook 's engagement ring . Robin of Locksley attempts to flee the town , but to no avail . The Evil Queen escapes her reptilian confinement and indoctrinates Robin . 125 14 `` Page 23 '' Kate Woods David H. Goodman & Brigitte Hales March 26 , 2017 ( 2017 - 03 - 26 ) 2.85 In the Enchanted Forest , The Evil Queen is in search of a spell that will help her end Snow White for good , but her father has love in mind for his daughter and leads her on a quest to Cupid 's Arrow . However , The Evil Queen rebrands the arrow to follow hatred and discovers that the person she despises the most is herself . In Storybrooke , The Evil Queen and Regina face off in a final confrontation . Just when Regina wins the upper hand , she remembers the Evil Queen 's self - loating and evenly splits the light and the darkness in their hearts , to share their love and hate and allow the Evil Queen to reform . After Emma calls off the engagement , Hook decides to board the Nautilus with Captain Nemo . Hook later changes his mind following a conversation with Snow but , before he can return , Gideon hijacks the vessel and sends it out of Storybrooke . 126 15 `` A Wondrous Place '' Steve Pearlman Jane Espenson & Jerome Schwartz April 2 , 2017 ( 2017 - 04 - 02 ) 2.80 At a loss for hope , Regina suggests a `` girls ' night out '' for Emma with her and Snow . While at the bar , she confides in the mixologist and sheds a tear . Meanwhile , the Nautilus is transported to the Enchanted Forest , where Aladdin and Jasmine board . They have yet to locate Agrabah and are growing weary . After Hook and Jasmine confide in one another , the vessel is irrevocably damaged and Jasmine uses a genie wish to relocate the group to the island where Jafar is located . They discover a cabana belonging to Ariel and Prince Eric . Ariel has collected a genie lamp that houses Jafar . Jasmine is able to sway him into divulging the location of the hidden Agrabah before defeating him with magic dust . Through true love 's kiss , Aladdin and Jasmine , along with Hook and Ariel , are transported to the restored city and Aladdin 's genie curse is broken . Ariel supplies Hook with a means to reach Emma . Emma receives the message and Gideon , no longer masquerading as the mixologist , threatens that he will use her tears to keep Hook from returning to Storybrooke unless she helps him kill the Black Fairy . Flashbacks to Ariel and Jasmine 's first meeting show the princess falter under Jafar 's trickery . 127 16 `` Mother 's Little Helper '' Billy Gierhart Story by : Edward Kitsis & Adam Horowitz Teleplay by : Paul Karp April 9 , 2017 ( 2017 - 04 - 09 ) 2.60 In Storybrooke , Gold reveals to Emma and Snow that the Black Fairy is his mother and that the Dark Curse Regina cast was created by the Black Fairy . Emma agrees to help Gideon kill the Black Fairy , but is double - crossed by Gideon and left to die at the hands of a giant spider . Gideon opens a portal with the sword , allowing the Black Fairy to slip through into Storybrooke . Meanwhile in the Enchanted Forest , Hook wagers the Jolly Roger for a magic bean in a game of cards with Blackbeard . As Blackbeard and Hook go through the portal , it malfunctions thanks to Gideon and the duo ends up in Neverland , on the run from the remnants of Peter Pan 's Lost Boys . Back in Storybrooke , Henry experiences a disorienting shift in his Author powers , so he and Regina seek help from the only person who can aid them : the previous Author , Isaac . Isaac reveals to Regina and Henry that they are nearing the end of the story in which the savior must fight the Final Battle . Flashbacks reveal the abuses the Black Fairy inflicted on Gideon and that the Black Fairy ripped out Gideon 's heart and is controlling him to kill Emma . 128 17 `` Awake '' Sharat Raju Andrew Chambliss & Leah Fong April 16 , 2017 ( 2017 - 04 - 16 ) 2.51 Regina works feverishly to wake Snow and Charming from the Sleeping Curse . Gold comes face to face with the Black Fairy , the powerful enemy Emma must fight in the Final Battle . Hook , still in Neverland , meets up with Tiger Lily , who gives him a piece of an ancient fairy wand to aid Emma in defeating the Black Fairy . Gold confronts the Black Fairy over her manipulating Gideon with his heart and she maintains that Storybrooke would be destroyed if the two of them fought . A pixie flower allows Emma to open a doorway to Neverland and rescue Hook , who then re-proposes properly . The townsfolk gather around Emma 's sleeping parents and each take small amounts of the Sleeping Curse unto themselves , diluting it and allowing Snow and David to finally reunite . In 1993 , a pixie flower awakens Snow and Charming from their cursed selves , but an awakened Rumplestiltskin tells them they must make a difficult decision to ensure that Emma fulfills her destiny as the Savior . 129 18 `` Where Bluebirds Fly '' Michael Schultz David H. Goodman & Brigitte Hales April 23 , 2017 ( 2017 - 04 - 23 ) 2.69 In Zelena 's past , her childhood friend Stanum asks for her help in finding the Crimson Heart , a magical artifact that would be able to restore his human form after having been cursed by the Wicked Witch of the North to slowly turn into tin . Zelena 's refusal to give up her magic leads to her betraying Stanum , as she keeps the Heart and leaves him to become the Tin Man . In the Present , The Black Fairy tempts Zelena with an offer to join her , only to have Zelena oppose her instead . Regina is brought into the chaos by trying to stop her sister and they find the Black Fairy and Gideon in the crystal mines , with the Black Fairy tricking Zelena into utilizing her unstable Dark Magic to strengthen her for the Final Battle . Realizing that there is nothing left for her back in Oz , Zelena decides to help the residents fight back against the Black Fairy by using the Crimson Heart to give up her magic , thereby undoing the mess she made in the mines . Emma then uses her magic and one of the crystals to bring Mother Superior out of her coma with some help from Regina and Zelena . 130 19 `` The Black Fairy '' Alrick Riley Jerome Schwartz & Dana Horgan April 30 , 2017 ( 2017 - 04 - 30 ) 3.05 The origin of Rumplestiltskin 's true destiny is revealed , as his mother Fiona learns from the Blue Fairy and Tiger Lily that he was destined to become The Savior . When Fiona fears for her son and chooses power over protecting Rumple , it results in her becoming the Black Fairy , and the Blue Fairy banishing her to the Dark Realm . In the Present , as everyone looks for the missing wand , Gold brings Gideon and Emma into the Dream World to search for Gideon 's heart , where the events of the flashbacks unfold . Gold then confronts Fiona , but she reveals the real reason behind why he was abandoned . Gold later retrieves Gideon 's heart and tells everyone that the Black Fairy is dead , paving the way for Emma and Hook 's wedding . However , Gold and Fiona make a deal that will see the Final Battle go forward , with Emma being the Savior that will fight in it . Meanwhile , Regina helps Zelena adjust to life without her powers . 131 20 `` The Song in Your Heart '' Ron Underwood David H. Goodman & Andrew Chambliss May 7 , 2017 ( 2017 - 05 - 07 ) 2.87 In the past , Snow makes a wish that grants the entire Enchanted Forest the ability to use the gift of song as a strength , which also spreads to Oz as well . When Regina becomes affected by the wish , she finds a way to end it before the first curse takes place , but the Blue Fairy , who granted Snow the wish , tells Snow and David that the wish will be part of Emma 's destiny . In Emma 's past , her chance to make use of her talent is held back by being told she 'll be alone . This would come back to taunt Emma in the present day , as Fiona returns to use that weakness to take Emma 's heart before unleashing a new curse on her wedding day , with help from Gold by freezing her family . When Henry discovers the page in the book that reveals the song in Emma 's heart will make her stronger , not only does it embolden Emma , it stops Fiona from crushing her heart , but Fiona still tells Emma that the battle will continue . On her wedding day , Emma and Hook finally marry , just in time for the dark clouds of the Black Fairy 's curse to erupt from the clock tower and engulf them at 6 : 00 PM , setting up the final battle . 132 133 21 22 `` The Final Battle '' Steve Pearlman Ralph Hemecker Edward Kitsis & Adam Horowitz May 14 , 2017 ( 2017 - 05 - 14 ) 2.95 Fiona 's curse alters Storybrooke , institutionalizing Emma and leaving only Henry and Gold `` awake , '' while sending Emma 's other allies to their home realms . The Final Battle begins over Emma 's belief ; if she stops believing in the realms of story , they will be consumed by the Darkness and cease to exist . If all the realms are destroyed , Fiona would gain unchecked powers and be able to break the Laws of Magic at will . In the Enchanted Forest , the banished characters gather at Regina 's castle ; David and Hook obtain a magic bean and the Evil Queen sacrifices herself , holding off the Darkness to delay the group 's destruction . Fiona convinces Emma to destroy the book , but Henry hand - draws one that restores her belief in time to save everyone in the castle . Gold kills Fiona , who had hidden Belle and turned her into a coward ; this breaks the Curse , which restores everyone 's memories and reunites them in Storybrooke . However , Gideon is still under orders to kill Emma . Gold attempts to free Gideon 's heart ; however , a spell cast by the Black Fairy prevents him from doing so . Emma lays down her sword , allowing Gideon to impale her ; this releases Emma 's light magic and ends the battle . With both Gold and Emma having chosen good , Gideon is returned to infancy and the realms are restored , and those who died in the crisis are revived . The characters embark on their `` happy beginnings . '' Many years later in the New Enchanted Forest , an adult Henry vanishes while defending his daughter Lucy from an unidentified entity . Guided by Tiger Lily , Lucy travels to Seattle , where Henry no longer remembers her .
+  Fact 0.0: Episode 112, 'The Savior', was directed by Eagle Egilsson and written by Edward Kitsis and Adam Horowitz.
+  Fact 0.1: Episode 112 aired on September 25, 2016 and had 3.99 million U.S. viewers.
+  Fact 0.2: In the past, Aladdin, a 'Savior', is taunted by Jafar over the inevitable downfall of all Saviors.
+  Fact 0.3: In Storybrooke, refugees arrive from the Land of Untold Stories.
+  Fact 0.4: Emma experiences tremors and visions.
+  Fact 0.5: An arrested Hyde helps Emma receive an oracle's vision of a hooded figure killing her.
+  Fact 0.6: Guided by Morpheus, Gold enters Belle's dreams to lift the sleeping curse.
+  Fact 0.7: Gold tries to renew his love with Belle, but she rejects him.
+  Fact 0.8: 'Morpheus' reveals he is really Belle and Gold's unborn son, and that he desired this outcome.
+  Fact 0.9: Belle wakes and leaves Gold.
+  Fact 0.10: Henry convinces Regina that Hades may have lied about Robin Hood's soul having been destroyed.
+  Fact 0.11: Zelena moves in with Regina.
+  Fact 0.12: After learning her sister Regina blames her for Robin Hood's death, Zelena moves out.
+  Fact 0.13: Zelena is approached by the Evil Queen after moving out.
+  Fact 0.14: Episode 113, 'A Bitter Draught', was directed by Ron Underwood and written by Andrew Chambliss and Dana Horgan.
+  Fact 0.15: Episode 113 aired on October 2, 2016 and had 3.72 million U.S. viewers.
+  Fact 0.16: In the past in the Enchanted Forest, the Evil Queen offers to aid the revenge plot of Edmond Dantes, The Count of Monte Cristo.
+  Fact 0.17: The Evil Queen's offer to Edmond Dantes is conditional on him killing Snow and David.
+  Fact 0.18: Edmond Dantes falls in love with Snow's handmaiden.
+  Fact 0.19: Edmond Dantes reneges on the revenge plot and flees with the handmaiden to the Land of Untold Stories to save her from poison.
+  Fact 0.20: In Storybrooke, the Evil Queen recruits Zelena.
+  Fact 0.21: In Storybrooke, the Evil Queen uses Edmond's heart to set him against Snow and David.
+  Fact 0.22: Regina kills Edmond to save the others.
+  Fact 0.23: Regina realizes she retains the capacity for darkness.
+  Fact 0.24: The Evil Queen declares that the undesirable 'untold stories' will be played out.
+  Fact 0.25: The Evil Queen gives David evidence that his father's death was not accidental.
+  Fact 0.26: Belle lives on Hook's ship.
+  Fact 0.27: In a deal with Gold, the Evil Queen will not harm Belle or the baby.
+  Fact 0.28: Emma tells Archie about her visions.
+  Fact 0.29: Emma notes that Regina is not present in her visions and could be the hooded figure.
+  Fact 0.30: Episode 114, 'The Other Shoe', was directed by Steve Pearlman and written by Jane Espenson and Jerome Schwartz.
+  Fact 0.31: Episode 114 aired on October 9, 2016 and had 4.11 million U.S. viewers.
+  Fact 0.32: In the past in the Enchanted Forest, Cinderella meets Prince Thomas at the ball.
+  Fact 0.33: Cinderella flees when she believes Thomas loves her stepsister Clorinda.
+  Fact 0.34: Clorinda actually plans to elope with Thomas' footman, Jacob.
+  Fact 0.35: Clorinda's mother, Lady Tremaine, abducts Clorinda to the Land of Untold Stories.
+  Fact 0.36: Lady Tremaine abducts Clorinda after forcing Cinderella to betray Clorinda's location.
+  Fact 0.37: In Storybrooke, Ashley hopes to reconcile with Clorinda.
+  Fact 0.38: Aided by the Evil Queen, Lady Tremaine lures Ashley into a trap for her and Jacob.
+  Fact 0.39: Ashley protects Jacob.
+  Fact 0.40: Clorinda reunites with Jacob and forgives Cinderella.
+  Fact 0.41: Lady Tremaine is arrested.
+  Fact 0.42: Emma struggles to control her magic.
+  Fact 0.43: Whale helps Jekyll recreate his serum.
+  Fact 0.44: The Evil Queen and Hyde form an alliance, and she releases him.
+  Fact 0.45: Snow White wants normality.
+  Fact 0.46: David secretly investigates his father's death.
+  Fact 0.47: Gold provides information in exchange for David delivering a message to Belle.
+  Fact 0.48: Episode 115, 'Strange Case', was directed by Alrick Riley and written by David H. Goodman and Nelson Soler.
+  Fact 0.49: Episode 115 aired on October 16, 2016 and had 3.53 million U.S. viewers.
+  Fact 0.50: In the past in Victorian England, Jekyll petitions the Academy of Science for membership.
+  Fact 0.51: Dr. Lydgate rejects Jekyll's petition.
+  Fact 0.52: Rumplestiltskin arrives and magically perfects Jekyll's serum.
+  Fact 0.53: Jekyll transforms into Hyde.
+  Fact 0.54: Hyde blackmails Lydgate for Jekyll's membership.
+  Fact 0.55: Mary is Lydgate's daughter and Jekyll's unrequited love.
+  Fact 0.56: Mary and Hyde fall in love.
+  Fact 0.57: Jekyll accidentally fatally defenestrates Mary.
+  Fact 0.58: Jekyll frames Hyde for Mary's death.
+  Fact 0.59: In Storybrooke, Gold imprisons Belle on the ship to protect her from Hyde.
+  Fact 0.60: Jekyll tries to kill Belle in revenge for Rumplestiltskin's role in Mary's death.
+  Fact 0.61: Hook saves Belle by killing Jekyll.
+  Fact 0.62: Hyde dies of identical wounds.
+  Fact 0.63: Regina asks Emma to kill her if necessary to stop the Evil Queen.
+  Fact 0.64: Gold warns Belle that their child will need his protection.
+  Fact 0.65: Mary Margaret resumes teaching.
+  Fact 0.66: Mary Margaret's assistant Shirin inspires her to draw on her life as Snow.
+  Fact 0.67: Shirin is secretly Princess Jasmine.
+  Fact 0.68: Princess Jasmine is working with the Oracle to search for Aladdin.
+  Fact 0.69: Episode 116, 'Street Rats', is season episode 5 and was directed by Norman Buckley and written by Edward Kitsis and Adam Horowitz.
+  Fact 0.70: Episode 116 aired on October 23, 2016 and had 3.40 million U.S. viewers.
+  Fact 0.71: In the past in Agrabah, Aladdin seeks a magical weapon for Jasmine to save the kingdom from Jafar.
+  Fact 0.72: Aladdin is the weapon and a Savior.
+  Fact 0.73: Jafar tempts Aladdin with magical shears that can sever him from his fate as the Savior and from his resulting death.
+  Fact 0.74: Aladdin rejects Jafar and saves Jasmine.
+  Fact 0.75: In Storybrooke, the Oracle is murdered.
+  Fact 0.76: Emma helps Jasmine, hoping Aladdin's survival ensures her own.
+  Fact 0.77: Aladdin has faked his death.
+  Fact 0.78: Aladdin reveals himself to Emma.
+  Fact 0.79: Aladdin confesses that he doomed Agrabah by using the shears.
+  Fact 0.80: Aladdin gives the shears to Emma.
+  Fact 0.81: Emma asks Hook to dispose of the shears.
+  Fact 0.82: Hook secretly keeps the shears.
+  Fact 0.83: The Evil Queen impersonates Archie to learn of Emma's visions.
+  Fact 0.84: The Evil Queen convinces Zelena to turn Archie back into a cricket.
+  Fact 0.85: Episode 117, 'Dark Waters', is season episode 6 and was directed by Robert Duncan and written by Andrew Chambliss and Brigitte Hales.
+  Fact 0.86: Episode 117 aired on October 30, 2016 and had 3.06 million U.S. viewers.
+  Fact 0.87: During the Dark Curse, Captain Nemo abducts Hook.
+  Fact 0.88: Captain Nemo invites Hook to join the crew 'family' of his submarine, Nautilus.
+  Fact 0.89: The crew is on a quest for the 'Mysterious Island', which is the Land of Untold Stories.
+  Fact 0.90: Hook discovers the first mate is his half-brother, Liam.
+  Fact 0.91: Hook decides to leave to avoid confrontation.
+  Fact 0.92: Liam attacks Hook, instead mortally wounding Nemo, who steps in.
+  Fact 0.93: In the present, Archie is freed.
+  Fact 0.94: Henry confronts Hook over lying about the shears.
+  Fact 0.95: Liam imprisons Henry and Hook on Nautilus.
+  Fact 0.96: Hook opens up and Henry accepts him as family.
+  Fact 0.97: Henry and Hook save each other and dispose of the shears.
+  Fact 0.98: Modern medicine saves Nemo.
+  Fact 0.99: Nemo, Liam and Hook make amends.
+  Fact 0.100: Emma and Aladdin discuss being a Savior.
+  Fact 0.101: Jasmine reveals that Agrabah vanished.
+  Fact 0.102: Snow supports Belle at her ultrasound.
+  Fact 0.103: The Evil Queen seduces Gold.
+  Fact 0.104: The Evil Queen offers Gold the retrieved shears in exchange for help taking Snow's heart.
+  Fact 0.105: Episode 118, 'Heartless', is season episode 7 and was directed by Ralph Hemecker and written by Jane Espenson.
+  Fact 0.106: Episode 118 aired on November 6, 2016 and had 3.56 million U.S. viewers.
+  Fact 0.107: In the past, fugitive Snow and shepherd David separately travel to Longbourn.
+  Fact 0.108: Snow travels to Longbourn to flee the kingdom.
+  Fact 0.109: David travels to Longbourn to sell his struggling farm.
+  Fact 0.110: Without seeing each other's faces, David saves Snow from a bounty hunter.
+  Fact 0.111: Snow repays David with money to save the farm.
+  Fact 0.112: Snow decides not to flee.
+  Fact 0.113: Their hands touch and a magical sapling is created.
+  Fact 0.114: In the present, the Evil Queen threatens to destroy Storybrooke with River of Lost Souls water.
+  Fact 0.115: The Evil Queen's threat is unless Mary Margaret and David hand over their hearts.
+  Fact 0.116: Mary Margaret and David learn the sapling could stop the Queen.
+  Fact 0.117: The Queen destroys the sapling just after they find it.
+  Fact 0.118: The sapling showed Mary Margaret and David their previous meeting.
+  Fact 0.119: Mary Margaret and David conclude that their love can endure anything.
+  Fact 0.120: Mary Margaret and David surrender themselves.
+  Fact 0.121: The Queen casts a sleeping curse on their hearts.
+  Fact 0.122: Because they share Snow's heart, the curse affects both of them.
+  Fact 0.123: Each can wake the other but immediately succumbs to the curse.
+  Fact 0.124: They can never be awake together.
+  Fact 0.125: Regina uses Gold's relationship with the Queen to separate the Queen from Zelena.
+  Fact 0.126: Zelena earns Gold's enmity by exposing his schemes to Belle.
+  Fact 0.127: Episode 119, 'I'll Be Your Mirror', is season episode 8 and was directed by Jennifer Lynch and written by Jerome Schwartz and Leah Fong.
+  Fact 0.128: Episode 119 aired on November 13, 2016 and had 3.40 million U.S. viewers.
+  Fact 0.129: Regina and Emma try to magically trap the Evil Queen in the World Behind the Mirror.
+  Fact 0.130: The Evil Queen traps Regina and Emma in the World Behind the Mirror.
+  Fact 0.131: The Dragon is already imprisoned in the World Behind the Mirror.
+  Fact 0.132: Henry prepares for a date with Violet.
+  Fact 0.133: The Queen impersonates Regina and tries to manipulate Henry.
+  Fact 0.134: Henry recognizes the Queen.
+  Fact 0.135: Emma and Regina discover Sidney was building a mirror portal out of the world.
+  Fact 0.136: Emma and Regina try to finish the mirror portal.
+  Fact 0.137: The Evil Queen forces the Dragon to attack Emma and Regina, using his heart.
+  Fact 0.138: The Evil Queen tries to make Henry kill the Dragon with the Hammer of Hephaestus.
+  Fact 0.139: Henry instead uses the Hammer of Hephaestus to free his mothers.
+  Fact 0.140: Mary Margaret and David adjust to living in shifts.
+  Fact 0.141: Belle asks Zelena to help her escape Storybrooke via magical portal.
+  Fact 0.142: Belle and Zelena form an alliance with Aladdin and Jasmine.
+  Fact 0.143: Aladdin steals the Genie's lamp and the Sorcerer's wand from Gold's shop.
+  Fact 0.144: Gold takes the wand back from Zelena.
+  Fact 0.145: Gold puts a magical tracking device on Belle.
+  Fact 0.146: Gold asks the Queen to kill Zelena.
+  Fact 0.147: The connection between Gold's and Zelena's hearts protects Zelena from Gold.
+  Fact 0.148: Episode 120, 'Changelings', is season episode 9 and was directed by Mairzee Almas and written by David H. Goodman and Brian Ridings.
+  Fact 0.149: Episode 120 aired on November 27, 2016 and had 3.28 million U.S. viewers.
+  Fact 0.150: In the Enchanted Forest, Rumplestiltskin, while served by Belle, abducts a baby.
+  Fact 0.151: Rumplestiltskin uses the abducted baby as bait for the Black Fairy, the mother who abandoned him.
+  Fact 0.152: The Black Fairy escapes without answering Rumplestiltskin's questions.
+  Fact 0.153: In the present, Belle receives advice from her unborn child.
+  Fact 0.154: In the present, Gold becomes increasingly unhinged.
+  Fact 0.155: The Evil Queen resents Gold's order to attack Zelena.
+  Fact 0.156: The Evil Queen accelerates Belle's pregnancy.
+  Fact 0.157: Mother Superior delivers Belle's son, Gideon.
+  Fact 0.158: Mother Superior sends Gideon into hiding.
+  Fact 0.159: Gold vows to find Gideon.
+  Fact 0.160: The Genie has been freed.
+  Fact 0.161: Aladdin takes the Genie's place.
+  Fact 0.162: Zelena and Regina continue to feud.
+  Fact 0.163: Emma obtains the sword from her vision.
+  Fact 0.164: Episode 121, 'Wish You Were Here', is season episode 10 and was directed by Ron Underwood and written by Edward Kitsis and Adam Horowitz.
+  Fact 0.165: Episode 121 aired on December 4, 2016 and had 3.27 million U.S. viewers.
+  Fact 0.166: The Black Fairy abducts Gideon.
+  Fact 0.167: Emma discovers the sword can kill the Evil Queen without hurting Regina.
+  Fact 0.168: The Queen steals the lamp.
+  Fact 0.169: The Queen wishes Emma to an alternate reality where Emma was never the Savior.
+  Fact 0.170: Regina follows the Queen into the alternate reality.
+  Fact 0.171: David and his allies take the lamp from the Queen.
+  Fact 0.172: The Queen is turned into a serpent by the hooded figure.
+  Fact 0.173: The hooded figure is revealed to be the adult Gideon.
+  Fact 0.174: Jasmine wishes herself and Aladdin to Agrabah.
+  Fact 0.175: In the 'wish realm', Emma lives as a princess.
+  Fact 0.176: Regina traumatically restores Emma's memory in the wish realm.
+  Fact 0.177: Regina frees Rumplestiltskin in exchange for a magic bean.
+  Fact 0.178: The portal to Storybrooke closes while Regina is distracted by the appearance of Robin Hood.
+  Fact 0.179: Episode 122, 'Tougher Than the Rest', is season episode 11 and was directed by Billy Gierhart and written by Edward Kitsis and Adam Horowitz.
+  Fact 0.180: Episode 122 aired on March 5, 2017 and had 3.03 million U.S. viewers.
+  Fact 0.181: In 1990 Minnesota, a young Emma is told by a teenager that she has the power to change her fate.
+  Fact 0.182: In the present day, Emma and Regina miss their way out of the Wish realm.
+  Fact 0.183: Emma and Regina find another option for escape when they come across August.
+  Fact 0.184: August agrees to help create a new portal.
+  Fact 0.185: Regina goes to find Robin Hood to see if he would have been better off without her.
+  Fact 0.186: Regina and Robin are caught by the Sheriff of Nottingham.
+  Fact 0.187: Regina and Robin are later caught by the Wish realm Rumple.
+  Fact 0.188: Robin believes Regina when she tells him about their being in an alternate reality.
+  Fact 0.189: Emma discovers that August was the teenager she met in Minnesota.
+  Fact 0.190: Emma inspires August to complete the portal.
+  Fact 0.191: Emma, Regina and Robin return to Storybrooke.
+  Fact 0.192: Gideon explains to Gold and Belle his intention to kill Emma.
+  Fact 0.193: Gideon intends to kill Emma so that he can acquire her savior powers and kill the Black Fairy.
+  Fact 0.194: Gideon's intention has David furious and Belle concerned.
+  Fact 0.195: Emma and Gideon finally meet for the battle.
+  Fact 0.196: Emma survives, choosing her own fate.
+  Fact 0.197: Gideon retreats, proclaiming this far from over.
+  Fact 0.198: Gold and Belle decide to work together for the good of their son.
+  Fact 0.199: Episode 123, 'Murder Most Foul', is season episode 12 and was directed by Morgan Beggs and written by Jerome Schwartz and Jane Espenson.
+  Fact 0.200: Episode 123 aired on March 12, 2017 and had 3.06 million U.S. viewers.
+  Fact 0.201: A flashback details how Robert, the father of David and James, was murdered.
+  Fact 0.202: In the flashback, Robert learns what happened to James after James ran away from King George.
+  Fact 0.203: With help from Rumple, Robert tracks James to Pleasure Island.
+  Fact 0.204: King George cuts short Robert and James' reunion.
+  Fact 0.205: King George orders Robert's execution.
+  Fact 0.206: Robert's death affects David in the present day.
+  Fact 0.207: David sees visions of Robert and asks Hook to help him, despite Hook being reformed.
+  Fact 0.208: Hook becomes concerned that David is taking the investigation too far by going after Albert.
+  Fact 0.209: Hook intervenes and brings David back to sanity.
+  Fact 0.210: Hook is worried about whether David will give him his blessing to marry Emma.
+  Fact 0.211: David gives Hook his blessing to marry Emma.
+  Fact 0.212: Regina tries to get the Wish Realm Robin assimilated into Storybrooke.
+  Fact 0.213: Regina questions why Robin agreed to follow her.
+  Fact 0.214: Robin had something else planned, and he steals a chest from the vault.
+  Fact 0.215: The truth about who murdered Robert is revealed when August gives Hook missing pages he took from Henry's book.
+  Fact 0.216: Hook sees an illustration of David's dad and recognizes him.
+  Fact 0.217: Hook recalls murdering David's dad during a robbery in the Enchanted Forest so that there was no witness to his crime.
+  Fact 0.218: Episode 124, 'Ill-Boding Patterns', is season episode 13 and was directed by Ron Underwood and written by Andrew Chambliss and Dana Horgan.
+  Fact 0.219: Episode 124 aired on March 19, 2017 and had 2.71 million U.S. viewers.
+  Fact 0.220: During the First Ogres War, Beowulf leads a fearsome charge on the battlefield in the Enchanted Forest of old.
+  Fact 0.221: After every last soldier had been slain, Beowulf surrenders to death just as Rumplestiltskin intervenes.
+  Fact 0.222: Rumplestiltskin kills all the ogres.
+  Fact 0.223: Beowulf is irked by Rumple's new title as a hero in the village.
+  Fact 0.224: Beowulf creates a ruse to lead Rumple to his demise.
+  Fact 0.225: Fearing he would not be able to protect the villagers without Dark Magic, Rumple bestows his dagger upon Baelfire as an insurance policy.
+  Fact 0.226: Beowulf retreats after a turbulent exchange and a threat to frame Rumplestiltskin as a murderer.
+  Fact 0.227: Feeling the pressure of Beowulf's threat, Bae commands his father to kill him.
+  Fact 0.228: Rumple later doses Bae with a memory potion to erase the ordeal from his mind and restore his innocence.
+  Fact 0.229: In Storybrooke, Rumple recognizes a familiar pattern in Gideon.
+  Fact 0.230: Gideon makes strides in his quest to kill Emma Swan at the cost of the Blue Fairy's vitality.
+  Fact 0.231: Hook worries about the repercussions of telling Emma his newly unveiled secret.
+  Fact 0.232: Emma unknowingly forces a proposal after happening upon Hook's engagement ring.
+  Fact 0.233: Robin of Locksley attempts to flee the town, but to no avail.
+  Fact 0.234: The Evil Queen escapes her reptilian confinement.
+  Fact 0.235: The Evil Queen indoctrinates Robin.
+  Fact 0.236: Episode 125, 'Page 23', is season episode 14 and was directed by Kate Woods and written by David H. Goodman and Brigitte Hales.
+  Fact 0.237: Episode 125 aired on March 26, 2017 and had 2.85 million U.S. viewers.
+  Fact 0.238: In the Enchanted Forest, the Evil Queen is in search of a spell that will help her end Snow White for good.
+  Fact 0.239: The Evil Queen's father has love in mind for his daughter and leads her on a quest to Cupid's Arrow.
+  Fact 0.240: The Evil Queen rebrands the arrow to follow hatred.
+  Fact 0.241: The Evil Queen discovers that the person she despises the most is herself.
+  Fact 0.242: In Storybrooke, the Evil Queen and Regina face off in a final confrontation.
+  Fact 0.243: When Regina wins the upper hand, she remembers the Evil Queen's self-loathing.
+  Fact 0.244: Regina evenly splits the light and the darkness in their hearts, to share their love and hate.
+  Fact 0.245: Regina's split allows the Evil Queen to reform.
+  Fact 0.246: After Emma calls off the engagement, Hook decides to board the Nautilus with Captain Nemo.
+  Fact 0.247: Hook later changes his mind following a conversation with Snow.
+  Fact 0.248: Before Hook can return, Gideon hijacks the Nautilus.
+  Fact 0.249: Gideon sends the Nautilus out of Storybrooke.
+  Fact 0.250: Episode 126, 'A Wondrous Place', is season episode 15 and was directed by Steve Pearlman and written by Jane Espenson and Jerome Schwartz.
+  Fact 0.251: Episode 126 aired on April 2, 2017 and had 2.80 million U.S. viewers.
+  Fact 0.252: At a loss for hope, Regina suggests a 'girls' night out' for Emma with her and Snow.
+  Fact 0.253: At the bar, Regina confides in the mixologist and sheds a tear.
+  Fact 0.254: In the Enchanted Forest, the Nautilus is transported.
+  Fact 0.255: Aladdin and Jasmine board the Nautilus.
+  Fact 0.256: Aladdin and Jasmine have yet to locate Agrabah and are growing weary.
+  Fact 0.257: After Hook and Jasmine confide in one another, the vessel is irrevocably damaged.
+  Fact 0.258: Jasmine uses a genie wish to relocate the group to the island where Jafar is located.
+  Fact 0.259: The group discovers a cabana belonging to Ariel and Prince Eric.
+  Fact 0.260: Ariel has collected a genie lamp that houses Jafar.
+  Fact 0.261: Jasmine sways Jafar into divulging the location of the hidden Agrabah.
+  Fact 0.262: Jasmine defeats Jafar with magic dust.
+  Fact 0.263: Through true love's kiss, Aladdin and Jasmine, along with Hook and Ariel, are transported to the restored city.
+  Fact 0.264: Aladdin's genie curse is broken.
+  Fact 0.265: Ariel supplies Hook with a means to reach Emma.
+  Fact 0.266: Emma receives the message.
+  Fact 0.267: Gideon, no longer masquerading as the mixologist, threatens to use Emma's tears to keep Hook from returning to Storybrooke.
+  Fact 0.268: Gideon's threat is unless Emma helps him kill the Black Fairy.
+  Fact 0.269: Flashbacks to Ariel and Jasmine's first meeting show the princess faltering under Jafar's trickery.
+  Fact 0.270: Episode 127, 'Mother's Little Helper', is season episode 16 and was directed by Billy Gierhart, with a story by Edward Kitsis and Adam Horowitz and a teleplay by Paul Karp.
+  Fact 0.271: Episode 127 aired on April 9, 2017 and had 2.60 million U.S. viewers.
+  Fact 0.272: In Storybrooke, Gold reveals to Emma and Snow that the Black Fairy is his mother.
+  Fact 0.273: Gold reveals to Emma and Snow that the Dark Curse Regina cast was created by the Black Fairy.
+  Fact 0.274: Emma agrees to help Gideon kill the Black Fairy.
+  Fact 0.275: Gideon double-crosses Emma.
+  Fact 0.276: Gideon leaves Emma to die at the hands of a giant spider.
+  Fact 0.277: Gideon opens a portal with the sword.
+  Fact 0.278: The portal allows the Black Fairy to slip through into Storybrooke.
+  Fact 0.279: In the Enchanted Forest, Hook wagers the Jolly Roger for a magic bean in a game of cards with Blackbeard.
+  Fact 0.280: As Blackbeard and Hook go through the portal, it malfunctions thanks to Gideon.
+  Fact 0.281: Blackbeard and Hook end up in Neverland.
+  Fact 0.282: Blackbeard and Hook are on the run from the remnants of Peter Pan's Lost Boys.
+  Fact 0.283: In Storybrooke, Henry experiences a disorienting shift in his Author powers.
+  Fact 0.284: Henry and Regina seek help from the previous Author, Isaac.
+  Fact 0.285: Isaac reveals to Regina and Henry that they are nearing the end of the story.
+  Fact 0.286: In the story, the savior must fight the Final Battle.
+  Fact 0.287: Flashbacks reveal the abuses the Black Fairy inflicted on Gideon.
+  Fact 0.288: The Black Fairy ripped out Gideon's heart.
+  Fact 0.289: The Black Fairy is controlling Gideon to kill Emma.
+  Fact 0.290: Episode 128, 'Awake', is season episode 17 and was directed by Sharat Raju and written by Andrew Chambliss and Leah Fong.
+  Fact 0.291: Episode 128 aired on April 16, 2017 and had 2.51 million U.S. viewers.
+  Fact 0.292: Regina works feverishly to wake Snow and Charming from the Sleeping Curse.
+  Fact 0.293: Gold comes face to face with the Black Fairy.
+  Fact 0.294: The Black Fairy is the powerful enemy Emma must fight in the Final Battle.
+  Fact 0.295: In Neverland, Hook meets up with Tiger Lily.
+  Fact 0.296: Tiger Lily gives Hook a piece of an ancient fairy wand to aid Emma in defeating the Black Fairy.
+  Fact 0.297: Gold confronts the Black Fairy over her manipulating Gideon with his heart.
+  Fact 0.298: The Black Fairy maintains that Storybrooke would be destroyed if she and Gold fought.
+  Fact 0.299: A pixie flower allows Emma to open a doorway to Neverland.
+  Fact 0.300: Emma rescues Hook.
+  Fact 0.301: Hook re-proposes properly.
+  Fact 0.302: The townsfolk gather around Emma's sleeping parents.
+  Fact 0.303: The townsfolk each take small amounts of the Sleeping Curse unto themselves, diluting it.
+  Fact 0.304: Diluting the curse allows Snow and David to finally reunite.
+  Fact 0.305: In 1993, a pixie flower awakens Snow and Charming from their cursed selves.
+  Fact 0.306: An awakened Rumplestiltskin tells Snow and Charming they must make a difficult decision to ensure that Emma fulfills her destiny as the Savior.
+  Fact 0.307: Episode 129, 'Where Bluebirds Fly', is season episode 18 and was directed by Michael Schultz and written by David H. Goodman and Brigitte Hales.
+  Fact 0.308: Episode 129 aired on April 23, 2017 and had 2.69 million U.S. viewers.
+  Fact 0.309: In Zelena's past, her childhood friend Stanum asks for her help in finding the Crimson Heart.
+  Fact 0.310: The Crimson Heart is a magical artifact that would restore Stanum's human form.
+  Fact 0.311: Stanum was cursed by the Wicked Witch of the North to slowly turn into tin.
+  Fact 0.312: Zelena refuses to give up her magic.
+  Fact 0.313: Zelena betrays Stanum by keeping the Heart.
+  Fact 0.314: Zelena leaves Stanum to become the Tin Man.
+  Fact 0.315: In the present, the Black Fairy tempts Zelena with an offer to join her.
+  Fact 0.316: Zelena opposes the Black Fairy instead.
+  Fact 0.317: Regina is brought into the chaos by trying to stop her sister.
+  Fact 0.318: Regina and Zelena find the Black Fairy and Gideon in the crystal mines.
+  Fact 0.319: The Black Fairy tricks Zelena into utilizing her unstable Dark Magic to strengthen her for the Final Battle.
+  Fact 0.320: Zelena realizes there is nothing left for her back in Oz.
+  Fact 0.321: Zelena decides to help the residents fight back against the Black Fairy.
+  Fact 0.322: Zelena uses the Crimson Heart to give up her magic.
+  Fact 0.323: Giving up her magic undoes the mess Zelena made in the mines.
+  Fact 0.324: Emma uses her magic and one of the crystals to bring Mother Superior out of her coma.
+  Fact 0.325: Regina and Zelena help Emma bring Mother Superior out of her coma.
+  Fact 0.326: Episode 130, 'The Black Fairy', is season episode 19 and was directed by Alrick Riley and written by Jerome Schwartz and Dana Horgan.
+  Fact 0.327: Episode 130 aired on April 30, 2017 and had 3.05 million U.S. viewers.
+  Fact 0.328: The origin of Rumplestiltskin's true destiny is revealed.
+  Fact 0.329: Rumplestiltskin's mother, Fiona, learns from the Blue Fairy and Tiger Lily that he was destined to become The Savior.
+  Fact 0.330: Fiona fears for her son and chooses power over protecting Rumple.
+  Fact 0.331: Fiona becomes the Black Fairy.
+  Fact 0.332: The Blue Fairy banishes Fiona to the Dark Realm.
+  Fact 0.333: In the present, everyone looks for the missing wand.
+  Fact 0.334: Gold brings Gideon and Emma into the Dream World to search for Gideon's heart.
+  Fact 0.335: The events of the flashbacks unfold in the Dream World.
+  Fact 0.336: Gold confronts Fiona.
+  Fact 0.337: Fiona reveals the real reason behind why Gold was abandoned.
+  Fact 0.338: Gold retrieves Gideon's heart.
+  Fact 0.339: Gold tells everyone that the Black Fairy is dead.
+  Fact 0.340: The Black Fairy's death paves the way for Emma and Hook's wedding.
+  Fact 0.341: Gold and Fiona make a deal that will see the Final Battle go forward.
+  Fact 0.342: Emma will be the Savior that fights in the Final Battle.
+  Fact 0.343: Regina helps Zelena adjust to life without her powers.
+  Fact 0.344: Episode 131, 'The Song in Your Heart', is season episode 20 and was directed by Ron Underwood and written by David H. Goodman and Andrew Chambliss.
+  Fact 0.345: Episode 131 aired on May 7, 2017 and had 2.87 million U.S. viewers.
+  Fact 0.346: In the past, Snow makes a wish that grants the entire Enchanted Forest the ability to use the gift of song as a strength.
+  Fact 0.347: The wish also spreads to Oz.
+  Fact 0.348: Regina becomes affected by the wish.
+  Fact 0.349: Regina finds a way to end the wish before the first curse takes place.
+  Fact 0.350: The Blue Fairy, who granted Snow the wish, tells Snow and David that the wish will be part of Emma's destiny.
+  Fact 0.351: In Emma's past, her chance to make use of her talent is held back by being told she'll be alone.
+  Fact 0.352: The weakness of being told she'll be alone comes back to taunt Emma in the present day.
+  Fact 0.353: Fiona returns to use that weakness to take Emma's heart.
+  Fact 0.354: Fiona unleashes a new curse on Emma's wedding day, with help from Gold.
+  Fact 0.355: The curse freezes Emma's family.
+  Fact 0.356: Henry discovers the page in the book that reveals the song in Emma's heart will make her stronger.
+  Fact 0.357: The song embolden Emma.
+  Fact 0.358: The song stops Fiona from crushing Emma's heart.
+  Fact 0.359: Fiona tells Emma that the battle will continue.
+  Fact 0.360: On her wedding day, Emma and Hook finally marry.
+  Fact 0.361: Dark clouds of the Black Fairy's curse erupt from the clock tower at 6:00 PM.
+  Fact 0.362: The dark clouds engulf Emma and Hook.
+  Fact 0.363: The curse sets up the final battle.
+  Fact 0.364: Season episodes 21 and 22, 'The Final Battle', were directed by Steve Pearlman and Ralph Hemecker and written by Edward Kitsis and Adam Horowitz.
+  Fact 0.365: The Final Battle aired on May 14, 2017 and had 2.95 million U.S. viewers.
+  Fact 0.366: Fiona's curse alters Storybrooke.
+  Fact 0.367: Fiona's curse institutionalizes Emma.
+  Fact 0.368: Fiona's curse leaves only Henry and Gold 'awake'.
+  Fact 0.369: Fiona's curse sends Emma's other allies to their home realms.
+  Fact 0.370: The Final Battle begins over Emma's belief.
+  Fact 0.371: If Emma stops believing in the realms of story, they will be consumed by the Darkness and cease to exist.
+  Fact 0.372: If all the realms are destroyed, Fiona would gain unchecked powers.
+  Fact 0.373: If all the realms are destroyed, Fiona would be able to break the Laws of Magic at will.
+  Fact 0.374: In the Enchanted Forest, the banished characters gather at Regina's castle.
+  Fact 0.375: David and Hook obtain a magic bean.
+  Fact 0.376: The Evil Queen sacrifices herself.
+  Fact 0.377: The Evil Queen holds off the Darkness to delay the group's destruction.
+  Fact 0.378: Fiona convinces Emma to destroy the book.
+  Fact 0.379: Henry hand-draws a new book.
+  Fact 0.380: Henry's hand-drawn book restores Emma's belief in time to save everyone in the castle.
+  Fact 0.381: Gold kills Fiona.
+  Fact 0.382: Fiona had hidden Belle and turned her into a coward.
+  Fact 0.383: Gold's killing of Fiona breaks the Curse.
+  Fact 0.384: Breaking the Curse restores everyone's memories.
+  Fact 0.385: Breaking the Curse reunites everyone in Storybrooke.
+  Fact 0.386: Gideon is still under orders to kill Emma.
+  Fact 0.387: Gold attempts to free Gideon's heart.
+  Fact 0.388: A spell cast by the Black Fairy prevents Gold from freeing Gideon's heart.
+  Fact 0.389: Emma lays down her sword, allowing Gideon to impale her.
+  Fact 0.390: Gideon impaling Emma releases Emma's light magic and ends the battle.
+  Fact 0.391: Gold and Emma have both chosen good.
+  Fact 0.392: Gideon is returned to infancy.
+  Fact 0.393: The realms are restored.
+  Fact 0.394: Those who died in the crisis are revived.
+  Fact 0.395: The characters embark on their 'happy beginnings'.
+  Fact 0.396: Many years later in the New Enchanted Forest, an adult Henry vanishes while defending his daughter Lucy from an unidentified entity.
+  Fact 0.397: Guided by Tiger Lily, Lucy travels to Seattle.
+  Fact 0.398: In Seattle, Henry no longer remembers Lucy.
+
+Retrieved items:
+<item 1>
+Once Upon a Time (season 6)
+Guided by Tiger Lily , Lucy travels to Seattle , where Henry no longer remembers her . Production ( edit ) Development ( edit ) Executive producers Adam
+Horowitz and Edward Kitsis announced that they were ending the half - season arc structure that was seen in seasons three through five , with Horowitz saying ,
+`` We 're also planning a 22 - episode story as opposed to breaking it up into two halves this year . It has been really exciting and fun . '' Kitsis added : ``
+We are changing around what we 're doing this year and going back to that season 1 mentality of small town stories and smaller arcs . '' This season will focus
+on Storybrooke as the main setting , but will also show new realms and there will be the exploration of the Savior 's mythology . Kitsis and Horowitz hired two
+directors from their Freeform series Dead of Summer , Norman Buckley , Mairzee Almas , and Michael Schultz helm episodes of the season . Jennifer Lynch directed
+the eighth episode of the season , `` I 'll Be Your Mirror '' .
+</item 1>
+
+<item 2>
+Once Upon a Time (season 6)
+In April 2017 , Horowitz and Kitsis confirmed that a group of characters will indeed have their stories wrapped up by the end of the season in acknowledging the
+potential cast changes , saying : `` We planned this finale from the beginning of the year , so whoever stays and whoever goes ... all those questions have
+already been dealt with . The audience does not have to fear ( anything feeling ) incomplete . '' On May 8 , Morrison confirmed that she had declined an offer
+to remain on the show and that the sixth season would be her last , signaling the end of Emma 's time on the show as the main protagonist . On May 11 , Rebecca
+Mader announced that she would also be leaving the show at the end of the season , citing creative decisions beyond her control . On May 12 , season six was
+announced to be the last for four additional main actors : Ginnifer Goodwin , Josh Dallas , Jared Gilmore , and Emilie de Ravin . Thus , characters seeing their
+storylines wrapped up in the season six finale include Emma Swan , Snow White , Prince Charming , Belle , and Zelena .
+</item 2>
+
+<item 3>
+Once Upon a Time (season 6)
+Emma and Gideon finally meet for the battle , but Emma survives , choosing her own fate . Gideon retreats , proclaiming this far from over . Gold and Belle
+decide to work together for the good of their son . 123 12 `` Murder Most Foul '' Morgan Beggs Jerome Schwartz & Jane Espenson March 12 , 2017 ( 2017 - 03 - 12
+) 3.06 The events of how Robert , the father of David and James , was murdered are detailed in a flashback , in which Robert learns what happened to James after
+he ran away from King George . With help from Rumple , he tracks him to Pleasure Island , but their reunion is cut short by King George , who orders Robert 's
+execution . His death affects David in the present day after he sees visions of Robert and asks Hook to help him , despite his being reformed . When Hook
+becomes concerned that David is taking this investigation too far by going after Albert , he intervenes and brings David back to sanity . Hook is also worried
+about whether David will give him his blessing to marry Emma , but David does .
+</item 3>
+
+<item 4>
+Once Upon a Time (season 6)
+Cast and characters ( edit ) Main article : List of Once Upon a Time characters Regular ( edit ) Ginnifer Goodwin as Snow White / Mary Margaret Blanchard
+Jennifer Morrison as Emma Swan Lana Parrilla as Evil Queen / Regina Mills Josh Dallas as Prince Charming / David Nolan Emilie de Ravin as Belle / Lacey Colin
+O'Donoghue as Captain Hook / Killian Jones Jared S. Gilmore as Henry Mills Rebecca Mader as Wicked Witch of the West / Zelena Robert Carlyle as Rumplestiltskin
+/ Mr. Gold Recurring ( edit ) Beverley Elliott as Widow Lucas / Granny Raphael Sbarge as Jiminy Cricket / Dr. Archie Hopper Lee Arenberg as Dreamy / Grumpy /
+Leroy David Paul Grove as Doc Gabe Khouth as Sneezy / Mr. Clark Faustino Di Bauda as Sleepy / Walter Mig Macario as Bashful Geoff Gustafson as Stealthy Tony
+Amendola as Geppetto / Marco Keegan Connor Tracy as the Blue Fairy / Mother Superior Eion Bailey as Pinocchio / August Booth David Anders as Victor Frankenstein
+/ Dr.
+</item 4>
+
+<item 5>
+Once Upon a Time (season 6)
+Existing fictional characters introduced to the series during the season include Aladdin , Princess Jasmine , the Count of Monte Cristo , Captain Nemo , Lady
+Tremaine , Beowulf , Tiger Lily and the Tin Man . Original new characters include Gideon , the Black Fairy , Mary Lydgate , and Robert . The show also
+reintroduced Jafar and Dr. Arthur Lydgate , who previously appeared in Once Upon a Time in Wonderland . This season also marks the final appearance of Emma Swan
+( Jennifer Morrison ) as a series regular . Morrison announced she would be departing the series after the sixth - season finale , but if the series receives a
+seventh season renewal she has agreed to appear in at least one episode . After serving as a series regular for two seasons , Rebecca Mader also announced that
+season six would be her last on the show as a regular . Shortly after , Adam Horowitz and Edward Kitsis announced that original cast members Ginnifer Goodwin ,
+Josh Dallas , and Jared Gilmore , as well as Emilie de Ravin who joined the main cast in season two , would also exit the show at the end of the season .
+</item 5>
+
+<item 6>
+Once Upon a Time (season 6)
+132 133 21 22 `` The Final Battle '' Steve Pearlman Ralph Hemecker Edward Kitsis & Adam Horowitz May 14 , 2017 ( 2017 - 05 - 14 ) 2.95 Fiona 's curse alters
+Storybrooke , institutionalizing Emma and leaving only Henry and Gold `` awake , '' while sending Emma 's other allies to their home realms . The Final Battle
+begins over Emma 's belief ; if she stops believing in the realms of story , they will be consumed by the Darkness and cease to exist . If all the realms are
+destroyed , Fiona would gain unchecked powers and be able to break the Laws of Magic at will . In the Enchanted Forest , the banished characters gather at
+Regina 's castle ; David and Hook obtain a magic bean and the Evil Queen sacrifices herself , holding off the Darkness to delay the group 's destruction . Fiona
+convinces Emma to destroy the book , but Henry hand - draws one that restores her belief in time to save everyone in the castle .
+</item 6>
+
+<item 7>
+Once Upon a Time (season 6)
+Once Upon a Time ( season 6 ) - wikipedia Once Upon a Time ( season 6 ) Jump to : navigation , search Once Upon a Time ( season 6 ) DVD cover Starring Ginnifer
+Goodwin Jennifer Morrison Lana Parrilla Josh Dallas Emilie de Ravin Colin O'Donoghue Jared S. Gilmore Rebecca Mader Robert Carlyle Country of origin United
+States No. of episodes 22 Release Original network ABC Original release September 25 , 2016 ( 2016 - 09 - 25 ) -- May 14 , 2017 ( 2017 - 05 - 14 ) Season
+chronology ← Previous Season 5 Next → Season 7 List of Once Upon a Time episodes The sixth season of the American ABC fantasy - drama Once Upon a Time was
+ordered on March 3 , 2016 . It debuted on September 25 , 2016 , and concluded on May 14 , 2017 . In January 2017 , it was stated that the sixth season would end
+the main storyline , and for a seventh season , the series would be softly rebooted with a new storyline .
+</item 7>
+
+<item 8>
+Once Upon a Time (season 6)
+Gold kills Fiona , who had hidden Belle and turned her into a coward ; this breaks the Curse , which restores everyone 's memories and reunites them in
+Storybrooke . However , Gideon is still under orders to kill Emma . Gold attempts to free Gideon 's heart ; however , a spell cast by the Black Fairy prevents
+him from doing so . Emma lays down her sword , allowing Gideon to impale her ; this releases Emma 's light magic and ends the battle . With both Gold and Emma
+having chosen good , Gideon is returned to infancy and the realms are restored , and those who died in the crisis are revived . The characters embark on their
+`` happy beginnings . '' Many years later in the New Enchanted Forest , an adult Henry vanishes while defending his daughter Lucy from an unidentified entity .
+Guided by Tiger Lily , Lucy travels to Seattle , where Henry no longer remembers her .
+</item 8>
+
+<item 9>
+Once Upon a Time (season 6)
+Contents ( hide ) 1 Premise 2 Cast and characters 2.1 Regular 2.2 Recurring 2.3 Guest 3 Episodes 4 Production 4.1 Development 4.1. 1 Musical episode 4.2 Casting
+5 Ratings 6 References 7 External links Premise ( edit ) The residents of Storybrooke are faced with threats from the Evil Queen and Mr. Hyde , both with
+different agendas following the arrival of refugees from the Land of Untold Stories . This leads to events to test Emma 's savior abilities that results in the
+arrival of the Black Fairy to begin the Final Battle that was prophesied centuries ago . As dark and light collides , a new , and darker curse is unleashed ,
+leading to the fall of all the realms with magic . The Final Battle is fought and won , leading to the heroes earning their happy beginnings , but a new
+adventure begins in the far future for an adult Henry involving his daughter Lucy , and another curse looming across the New Enchanted Forest inhabitants .
+</item 9>
+
+<item 10>
+Once Upon a Time (season 6)
+overall No. in season Title Directed by Written by Original air date U.S. viewers ( millions ) 112 `` The Savior '' Eagle Egilsson Edward Kitsis & Adam Horowitz
+September 25 , 2016 ( 2016 - 09 - 25 ) 3.99 In the past , Aladdin , a `` Savior '' , is taunted by Jafar over the inevitable downfall of all Saviors . In
+Storybrooke , refugees arrive from the Land of Untold Stories . Emma experiences tremors and visions ; an arrested Hyde helps her receive an oracle 's vision of
+a hooded figure killing her . Guided by Morpheus , Gold enters Belle 's dreams to lift the sleeping curse ; he tries to renew their love , but she rejects him .
+`` Morpheus '' reveals he is really their unborn son , and desired this outcome . Belle wakes and leaves Gold . Henry convinces Regina that Hades may have lied
+about Robin Hood 's soul having been destroyed .
+</item 10>
+=== END ITEM id=7a4a864abdfa1f7e ===
+
+=== ITEM id=785bb12bb387bf1f ===
+Gold sentences and facts:
+Sentence 0: The new season of The Little Couple premiered on September 19 , 2017 .
+  Fact 0.0: A new season of The Little Couple premiered on September 19, 2017.
+
+Retrieved items:
+<item 1>
+The Little Couple
+9 135 `` New Challenges '' March 1 , 2016 ( 2016 - 03 - 01 ) N / A Jen and Bill have a night out just for adults at a local escape room . Meanwhile , Zoey has
+her first Indian dance lesson ; and the family attends a Chinese lantern festival in Houston . 10 136 `` A Little 4 - 1 - 1 '' March 8 , 2016 ( 2016 - 03 - 08 )
+N / A Bill and Jen answer questions and go over topics like parenting , issues from being little people , and having their own television show . References (
+edit ) Jump up ^ `` TLC Heats Up Summer Schedule with New Premieres '' . The Futon Critic. April 27 , 2009 . Retrieved April 19 , 2013 . Jump up ^ Srikameswaran
+, Anita ( August 7 , 2001 ) . `` Meet Dr. Arnold '' . Post-Gazette . Retrieved August 6 , 2013 . Jump up ^ George , Cindy ( May 24 , 2009 ) .
+</item 1>
+
+<item 2>
+The Little Couple
+The Little Couple - wikipedia The Little Couple Jump to : navigation , search The Little Couple Genre Reality Starring Bill Klein Jennifer Arnold - Klein
+William Rijin Klein Zoey Nidhi Klein Country of origin United States Original language ( s ) English No. of seasons 8 No. of episodes 134 Production Executive
+producer ( s ) Eric Schotz Ruth Rivin Melissa Tallerine Producer ( s ) Elizabeth Massie Oliver Oertel Sonya Gay Bourn Editor ( s ) Adrian Herrera Paul Yates
+Ryan Ely Scott Reynolds Camera setup Multiple Running time 22 to 24 minutes Production company ( s ) LMNO Productions Release Original network TLC Picture
+format 480i ( SDTV ) 1080i ( HDTV ) Original release May 26 , 2009 ( 2009 - 05 - 26 ) -- present External links Website www.thelittlecouple.net The Little
+Couple is an American reality television series on TLC that debuted May 26 , 2009 . The series features Bill Klein , a businessman , and Dr. Jennifer Arnold , a
+neonatologist , who both have skeletal dysplasia .
+</item 2>
+
+<item 3>
+The Little Couple
+22 97 `` Best Day Yet ! '' May 28 , 2013 ( 2013 - 05 - 28 ) 1.20 Jen and Bill nervously wait to meet their son William for the first time . 23 98 `` Finally a
+Family '' June 4 , 2013 ( 2013 - 06 - 04 ) 2.01 Before the couple can leave China with newly - adopted son , they must fly to Guangzhou , where William
+undergoes a medical examination and receives his U.S. citizenship documents . 24 99 `` Welcome Home , Will ! '' August 13 , 2013 ( 2013 - 08 - 13 ) 2.50 Jen and
+Bill return to the states as new parents , and experience family firsts . 25 100 `` Family Fun in Florida '' August 20 , 2013 ( 2013 - 08 - 20 ) 1.92 Jen and
+Bill bring Will to meet the Klein family in Florida . Bill 's brother shares surprise news .
+</item 3>
+
+<item 4>
+The Little Couple
+channelguidemag.com . Retrieved March 5 , 2012 . Jump up ^ http://hookedonhouses.net/2012/05/14/the-little-couple-on-tlc-build-a-big-new-house The Little Couple
+'s Custom House Jump up ^ `` ' The Little Couple ' adopts a child '' . The Houston Chronicle . March 12 , 2013 . Jump up ^ Kondolojy , Amanda ( June 7 , 2013 )
+. `` TLC 's ' The Little Couple ' Breaks Records , Has Best - Rated Episode Ever to Date '' . TV by the Numbers . Jump up ^ Bibel , Sara ( August 6 , 2013 ) .
+`` 100th Episode of ' Little Couple ' to Air Tuesday , August 13 on TLC '' . TV by the Numbers . Jump up ^ `` The Little Couple 's Jen Arnold Reveals Cancer
+Diagnosis '' . Jump up ^ http://wonderwall.msn.com/tv/little-couple-star-gives-positive-cancer-update-1795464.story ^ Jump up to : Bibel , Sara ( February 5 ,
+2014 ) .
+</item 4>
+
+<item 5>
+The Little Couple
+The new season of The Little Couple premiered on September 19 , 2017 . Television appearances ( edit ) The Oprah Winfrey Show ( March 9 , 2009 ) The Today Show
+( July 7 , 2009 ) The Dr. Oz Show ( October 1 , 2009 ) Good Day L.A. ( December 16 , 2009 ) The Wendy Williams Show ( May 25 , 2010 ) ABC News ( May 25 , 2010 )
+KHOU Great Day Houston ( August 19 , 2010 ) The Doctors ( 2008 TV series ) ( October 6 , 2010 ) ABC 13 ( November 18 , 2010 ) Good Day L.A. ( August 2 , 2011 )
+KHOU : Great Day Houston ( August 2 , 2011 ) Extreme Makeover : Home Edition ( October 16 , 2011 ) KHOU : Great Day Houston ( November 23 , 2011 ) KHOU : Great
+Day Houston ( February 2 , 2012 ) Fox News ( March 19 , 2012 ) Anderson ( March 20 ,
+</item 5>
+
+<item 6>
+The Little Couple
+`` The Little Couple Renewed For Third Season By TLC '' . TV by the Numbers . Jump up ^ ' The Little Couple official Facebook page ' May 6 , 2011 Jump up ^
+http://rockyandmaggies.blogspot.com/ Jump up ^ http://www.yelp.com/biz/rocky-and-maggies-pet-shop-houston Jump up ^
+http://blog.chron.com/apetschronicle/2012/02/little-couples-pet-shop-opens-in-houston-this-weekend/ Jump up ^
+http://www.fidofriendly.com/blog/stars-of-the-little-couple-tv-show-announce-rocky-and-maggies-pet-shop Jump up ^
+http://www.chron.com/life/article/Little-Couple-opens-pet-shop-in-Rice-Village-3413604.php Jump up ^ `` TLC 's `` The Little Couple '' returns for Season 5 on
+March 20 `` . channelguidemag.com . Retrieved March 5 , 2012 .
+</item 6>
+
+<item 7>
+The Little Couple
+Jump up ^ George , Cindy ( May 24 , 2009 ) . `` Houston doc 's tale to be featured in TV 's Little Couple '' . The Houston Chronicle . Retrieved August 6 , 2013
+. Jump up ^ O'Hare , Kate ( June 18 , 2009 ) . `` ' The Little Couple ' takes on the world '' . The Sudbury Star . Retrieved August 6 , 2013 . Jump up ^ Gorman
+, Bill ( February 22 , 2010 ) . `` The Little Couple Renewed For Third Season By TLC '' . TV by the Numbers .
+</item 7>
+
+<item 8>
+The Little Couple
+`` ' The Little Couple ' Season 6 to Premiere Tuesday , March 4 on TLC '' . TV by the Numbers ( Press release ) . Retrieved February 5 , 2014 . Jump up ^ ``
+Tuesday 's Cable Ratings : 10 - 19 - 10 '' . The Futon Critic . Jump up ^ `` Tuesday 's Cable Ratings : 10 - 26 - 10 '' . The Futon Critic . Jump up ^ ``
+Tuesday 's Cable Ratings : 11 - 2 - 10 '' . The Futon Critic . Jump up ^ `` Tuesday 's Cable Ratings : 11 - 9 - 10 '' . The Futon Critic . Jump up ^ `` Tuesday
+'s Cable Ratings : 11 - 23 - 10 '' . The Futon Critic . Jump up ^ `` Tuesday 's Cable Ratings : 11 - 30 - 10 '' . The Futon Critic . ^ Jump up to : `` Tuesday
+'s Cable Ratings : 5 - 31 - 11 '' . The Futon Critic .
+</item 8>
+
+<item 9>
+The Little Couple
+Arnold is a neonatologist who works at the Texas Children 's Hospital , and Klein is a medical supplies and telemarketing businessman . They were originally
+introduced in a one - hour TLC special , Little People : Just Married . Season 1 of the show premiered on May 26 , 2009 . Season 2 premiered on October 27 ,
+2009 . On February 22 , 2010 , TLC renewed The Little Couple for a third season consisting of 20 episodes . The mid-season finale aired after 9 episodes on July
+27 , 2010 , and season 3 returned on October 12 , 2010 . It was announced on Facebook that the show would be returning for its 4th season on May 31 , 2011 .
+Again , the season was split , with the second half of season 4 premiering on September 27 , 2011 . In February 2012 , Klein opened Rocky&Maggie in Rice Village
+Houston . named after their pets Chihuahua Rocky and rescue mutt terrier Maggie . Arnold 's mother Judy manages the store .
+</item 9>
+
+<item 10>
+The Little Couple
+22 73 `` The Start of Something Big '' October 25 , 2011 ( 2011 - 10 - 25 ) 1.12 Bill and Jen ' must decide if they are willing to have their two embryos go
+through genetic testing . 23 74 `` A Little More Q & A '' October 25 , 2011 ( 2011 - 10 - 25 ) 1.14 Bill and Jen take viewer questions and an inside view of the
+past four seasons . 24 75 `` Are We Pregnant ? '' November 1 , 2011 ( 2011 - 11 - 01 ) 1.50 Bill and Jen 's embryos have thawed and now it 's time to transfer
+them to their surrogate . Season 5 ( 2012 -- 13 ) ( edit ) No. in series No. in season Title Original air date U.S. viewers ( millions ) 76 `` Getting Back on
+Track '' March 20 , 2012 ( 2012 - 03 - 20 ) 1.11 Bill and Jen are ready to move forward following their surrogate 's miscarriage .
+</item 10>
+=== END ITEM id=785bb12bb387bf1f ===
+
+=== ITEM id=656041704e773c4e ===
+Gold sentences and facts:
+Sentence 0: It was confirmed on 25 January 2018 , that Dancing on Ice had been recommissioned for an eleventh series to air in 2019 .
+  Fact 0.0: On 25 January 2018, it was confirmed that Dancing on Ice had been recommissioned.
+  Fact 0.1: Dancing on Ice was recommissioned for an eleventh series.
+  Fact 0.2: The eleventh series is to air in 2019.
+
+Retrieved items:
+<item 1>
+Dancing on Ice
+23 27 March 2011 9.35 2011 8.15 7 23 8 January 2012 8.42 25 March 2012 7.01 2012 6.63 8 19 6 January 2013 7.49 10 March 2013 7.36 2013 6.32 9 19 5 January 2014
+6.76 9 March 2014 5.98 2014 5.04 10 10 7 January 2018 8.56 11 March 2018 2018 Awards Year Group Award Result Reference ( s ) 2006 National Television Awards
+Most Popular Entertainment Programme Nominated 2007 National Television Awards Most Popular Talent Show Nominated 2008 National Television Awards Most Popular
+Talent Show Nominated TV Quick Awards Best Talent Show Nominated 2009 National Television Awards Most Popular Talent Show Nominated TV Quick Awards Best Talent
+Show Nominated RTS Craft & Design Award Best Costume Design Won RTS Craft & Design Award Best Multicamera Work Nominated RTS Craft & Design Award Best Costume
+Design Nominated 2011 National Television Awards Most Popular Talent Show Nominated RTS
+</item 1>
+
+<item 2>
+Dancing on Ice
+The show consists of celebrities and their professional partners figure skate in front of a panel of judges . The series , broadcast on ITV , started on 14
+January 2006 and ended on 9 March 2014 after the show 's contract was not renewed by ITV . On 4 September 2017 , it was announced that a revived series would
+air on ITV from 7 January 2018 with Schofield and Willoughby returning as hosts alongside a new backstage host , Jordan Banjo . It was confirmed on 25 January
+2018 , that Dancing on Ice had been recommissioned for an eleventh series to air in 2019 . Contents ( hide ) 1 Background and history 1.1 Cancellation and
+revival 2 Format 3 Series overview 4 Presenters , judges and coaches 5 Professionals 6 Required elements 7 Main series results 7.1 Series 1 ( 2006 ) 7.2 Series
+2 ( 2007 ) 7.3 Series 3 ( 2008 ) 7.4 Series 4 ( 2009 ) 7.5 Series 5 ( 2010 ) 7.
+</item 2>
+
+<item 3>
+Dancing on Ice
+5 , 8.5 , 9.0 = 26.0 Eliminated Tessa Sanderson CBE Javelin Gold ( LA 1984 ) Yannick Bonheur 7.5 , 7.5 , 8.0 = 23.0 Eliminated The judges scores were added to
+the studio audiences votes to decide the winner . No public vote took place , as the programme was recorded earlier in the year . Dancing on Ice Friday ( 2010 )
+A brand new spin - off show for the 2010 series of Dancing on Ice , appropriately called Dancing on Ice Friday , gave viewers the insight to the training of the
+celebrities over the last week . It was presented by television presenter Ben Shephard and former contestant and Loose Women star Coleen Nolan . The show was
+broadcast from 8 pm to 8.30 pm on Friday evenings on ITV throughout the duration of the main shows season . STV who broadcast the main show did not broadcast
+this on the Friday evening but after repeating the previous week 's main show on the following Saturday afternoon . Due to poor ratings , Dancing on Ice Friday
+was axed prior to the 2011 series .
+</item 3>
+
+<item 4>
+Dancing on Ice
+of series 10 No. of episodes 138 Production Executive producer ( s ) Jane Beacon Katie Rawcliffe Location ( s ) Elstree Studios ( 2006 -- 10 , 2012 -- 14 )
+Shepperton Studios ( 2011 ) RAF Bovingdon ( 2018 -- ) Running time 60 -- 120 minutes Production company ( s ) ITV Studios Release Original network ITV Picture
+format 16 : 9 1080i ( HDTV ) 16 : 9 576i ( SDTV ) Original release Original Series : 14 January 2006 ( 2006 - 01 - 14 ) -- 9 March 2014 ( 2014 - 03 - 09 )
+Revived Series : 7 January 2018 ( 2018 - 01 - 07 ) -- present External links Website Dancing on Ice is a British television show presented by Phillip Schofield
+alongside Holly Willoughby from 2006 to 2011 , and Christine Bleakley from 2012 to 2014 . The show consists of celebrities and their professional partners
+figure skate in front of a panel of judges .
+</item 4>
+
+<item 5>
+Dancing on Ice
+As part of ITV 's new revamped schedule at the start of 2008 , from the third series , the show aired on a Sunday night and featured updated music and new
+titles as well as redesigned graphics . The series 3 finale was a massive draw , pulling an average 11.7 million viewers ( up from 9.6 million the previous year
+) peaking at 12.6 million viewers over the two - hour slot , up over a million from series 2 . The seventh series began on 8 January 2012 , with Torvill and
+Dean as coaches for which they will be paid £ 250,000 each series . Christine Bleakley was announced as the new co-presenter of the show replacing Holly
+Willoughby , whilst Katarina Witt and Louie Spence replaced Emma Bunton and Jason Gardiner on the judging panel . On 20 November 2012 , it was announced that
+Gardiner was to return to the panel for the 2013 series , replacing Spence .
+</item 5>
+
+<item 6>
+Dancing on Ice
+Dancing on Ice at itv.com Dancing on Ice at stv.tv Dancing on Ice on Facebook Dancing on Ice on Twitter Dancing on Ice on IMDb Dancing on Ice Series 5 6 7 8 9
+10 Winners Celebrities Gaynor Faye Kyran Bracken Suzanne Shaw Ray Quinn Hayley Tamaddon Sam Attwater Matthew Wolfenden Beth Tweddle Jake Quickenden
+Professionals Daniel Whiston Melanie Lambert Matt Evers Maria Filippov Brianne Delcourt Nina Ulanova Vanessa Bauer Other Professionals Viktoria Borzenkova
+Brooke Castile Hamish Gaman Isabelle Gauthier Mark Hanretty Jodeyne Higgins Florentine Houdinière Marika Humphreys Sylvain Longchambon Pamela O'Connor Colin
+Ratushniak Sean Rice Łukasz Różycki Todd Sand Olga Sharutenko Michael Zenezini Dancing on Ice around the world Versions United Kingdom United States Poland
+Greece Australia Retrieved from `` https://en.wikipedia.org/w/index.
+</item 6>
+
+<item 7>
+Dancing on Ice
+Dancing on Ice - wikipedia Dancing on Ice Jump to : navigation , search This article is about the British series . For elsewhere , see Dancing on Ice around the
+world . For the most recent series , see Dancing on Ice ( series 10 ) . Dancing on Ice Title -- card used for the 2018 revival Created by ITV Studios Creative
+director ( s ) Christopher Dean ( 2006 -- 2014 ) Jayne Torvill ( 2006 -- 2014 ) Presented by Phillip Schofield Holly Willoughby Christine Bleakley Jordan Banjo
+( backstage ) Judges Robin Cousins Karen Barber Jason Gardiner Karen Kresge Nicky Slater Natalia Bestemianova Ruthie Henshall Emma Bunton Louie Spence Katarina
+Witt Ashley Roberts Christopher Dean Jayne Torvill Ashley Banjo Voices of Tony Gubba ( 2006 -- 13 ) Simon Reed ( 2013 -- 14 ) Matt Chapman ( 2018 ) Sam
+Matterface ( 2018 -- ) Theme music composer Paul Farrer Country of origin United Kingdom Original language ( s ) English No. of series 10 No.
+</item 7>
+
+<item 8>
+Dancing on Ice
+The third series began on 13 January 2008 , moving to Sunday nights in the process and ended on 16 March 2008 , when Suzanne Shaw was crowned as the winner .
+Schofield and Holly Willoughby returned to co-present , while Nicky Slater , Jason Gardiner and Robin Cousins returned to The Ice Panel . The third series saw
+the replacement of judge Natalia Bestemianova by West End star Ruthie Henshall . And for the first time in the history of the series , a contestant withdrew due
+to injury , and it was TV presenter Michael Underwood who did so .
+</item 8>
+
+<item 9>
+Dancing on Ice
+the show was renamed following the failure of ITV 's celebrity oriented 2005 summer schedule . Dancing on Ice is frequently compared to the BBC 's Strictly Come
+Dancing . In 2004 , the BBC aired a Strictly special entitled Strictly Ice Dancing at Christmas , which was won by England goalkeeper David Seaman ( who was a
+contestant in series 1 of Dancing on Ice ) . ITV 's show was given a January premiere amidst network doubts about its viability but became a surprise hit in
+Britain , where it became the third highest rated television show of 2006 . It attained an impressive 13 million viewers for the final in March . Britain 's
+best - known ice - skating duo and former Olympic champions Jayne Torvill and Christopher Dean help to train the aspiring dancers , and also appear throughout
+the show with comments and advice . Head Coach Karen Barber also trains the skaters for the live show . From the beginning , Torvill and Dean opened every
+episode with a performance , with the exception of the second , third and fourth shows of the fourth series , when Torvill performed alone due to Dean 's
+recovery from a shoulder operation .
+</item 9>
+
+<item 10>
+Dancing on Ice
+N / A Todd Sand Kelly Holmes N / A Alexandra Schauman N / A Dr. Hilary Jones Dominic Cork Sam Nixon N / A Todd Carty N / A Tamara Sharp Andi Peters N / A Olga
+Sharutenko John Barrowman N / A Keith Chegwin N / A Matej Silecky N / A Brooke Vincent Jenna Smith N / A Luke Campbell N / A Katie Stainsby N / A Vanilla Ice N
+/ A Gary Lucy N / A Nina Ulanova N / A Steven Arnold Matthew Wolfenden N / A Kyran Bracken N / A Doug Webster Andrea McLean N / A Daniel Whiston Gaynor Faye
+Emily Symons Linda Lusardi Roxanne Pallett Hayley Tamaddon Kerry Katona Jennifer Ellison Beth Tweddle Hayley Tamaddon Cheryl Baker Stuart Widdall N / A Coleen
+Nolan Tana Ramsay N / A Michael Zenezini N / A Chloe Madeley N / A Lauren Goodger N / A Required elements From Series 1 to 8 , there was an element that the
+skaters were required to perform as part of their routines .
+</item 10>
+=== END ITEM id=656041704e773c4e ===
+
+=== ITEM id=bd68763fe768daef ===
+Gold sentences and facts:
+Sentence 0: Season Team League Conference Division Regular season Postseason Results Awards Head coaches Finish Wins Losses Ties 1960 1960 NFL Western 7th 0 11 Tom Landry 1961 1961 NFL Eastern 6th 9 Tom Landry 1962 1962 NFL Eastern 5th 5 8 Tom Landry 1963 1963 NFL Eastern 5th 10 0 Tom Landry 1964 1964 NFL Eastern 5th 5 8 Tom Landry 1965 1965 NFL Eastern 2nd 7 7 0 Tom Landry 1966 1966 NFL Eastern 1st 10 Lost NFL Championship Game ( Packers ) 34 -- 27 Tom Landry ( COY ) Tom Landry 1967 1967 NFL Eastern Capitol 1st 9 5 0 Won Conference Playoffs ( Browns ) 52 -- 14 Lost NFL Championship Game ( Packers ) 21 -- 17 Tom Landry 1968 1968 NFL Eastern Capitol 1st 12 0 Lost Conference Playoffs ( Browns ) 31 -- 20 Tom Landry 1969 1969 NFL Eastern Capitol 1st 11 Lost Conference Playoffs ( Browns ) 38 -- 14 Calvin Hill ( OROY ) Tom Landry 1970 1970 NFL NFC East 1st 10 0 Won Divisional Playoffs ( Lions ) 5 -- 0 Won Conference Championship ( 49ers ) 17 -- 10 Lost Super Bowl V ( Colts ) 16 -- 13 Chuck Howley ( SB MVP ) Tom Landry 1971 1971 NFL NFC East 1st 11 0 Won Divisional Playoffs ( Vikings ) 20 -- 12 Won Conference Championship ( 49ers ) 14 -- 3 Won Super Bowl VI ( 1 ) ( Dolphins ) 24 -- 3 Roger Staubach ( SB MVP ) Tom Landry 1972 1972 NFL NFC East 2nd 10 0 Won Divisional Playoffs ( 49ers ) 30 -- 28 Lost Conference Championship ( Redskins ) 26 -- 3 Tom Landry 1973 1973 NFL NFC East 1st 10 0 Won Divisional Playoffs ( Rams ) 27 -- 26 Lost Conference Championship ( Vikings ) 27 -- 10 Tom Landry NFL NFC East 3rd 8 6 0 Tom Landry NFL NFC East 2nd 10 0 Won Divisional Playoffs ( Vikings ) 17 -- 14 Won Conference Championship ( Rams ) 37 -- 7 Lost Super Bowl X ( Steelers ) 21 -- 17 Tom Landry 1976 1976 NFL NFC East 1st 11 0 Lost Divisional Playoffs ( Rams ) 14 -- 12 Tom Landry 1977 1977 NFL NFC East 1st 12 0 Won Divisional Playoffs ( Bears ) 37 -- 7 Won Conference Championship ( Vikings ) 23 -- 6 Won Super Bowl XII ( 2 ) ( Broncos ) 27 -- 10 Tony Dorsett ( OROY ) Harvey Martin ( DPOY , SB MVP ) Randy White ( SB MVP ) Tom Landry 1978 1978 NFL NFC East 1st 12 0 Won Divisional Playoffs ( Falcons ) 27 -- 20 Won Conference Championship ( Rams ) 28 -- 0 Lost Super Bowl XIII ( Steelers ) 35 -- 31 Tom Landry 1979 1979 NFL NFC East 1st 11 5 0 Lost Divisional Playoffs ( Rams ) 21 -- 19 Tom Landry 1980 1980 NFL NFC East 2nd 12 0 Won Wild Card Playoffs ( Rams ) 34 -- 17 Won Divisional Playoffs ( Falcons ) 30 -- 27 Lost Conference Championship ( Eagles ) 20 -- 7 Tom Landry 1981 1981 NFL NFC East 1st 12 0 Won Divisional Playoffs ( Buccaneers ) 38 -- 0 Lost Conference Championship ( 49ers ) 28 -- 27 Tom Landry 1982 1982 NFL NFC 2nd 6 0 Won Wild Card Playoffs ( Buccaneers ) 30 -- 17 Won Divisional Playoffs ( Packers ) 37 -- 26 Lost Conference Championship ( Redskins ) 31 -- 17 Tom Landry NFL NFC East 2nd 12 0 Lost Wild Card Playoffs ( Rams ) 24 -- 17 Tom Landry 1984 1984 NFL NFC East 4th 9 7 0 Tom Landry 1985 1985 NFL NFC East 1st 10 6 0 Lost Divisional Playoffs ( Rams ) 20 -- 0 Tom Landry 1986 1986 NFL NFC East 3rd 7 9 0 Tom Landry NFL NFC East 4th 7 8 0 Tom Landry 1988 1988 NFL NFC East 5th 13 0 Tom Landry 1989 1989 NFL NFC East 5th 15 0 Jimmy Johnson 1990 1990 NFL NFC East 4th 7 9 0 Emmitt Smith ( OROY ) Jimmy Johnson ( COY ) Jimmy Johnson 1991 1991 NFL NFC East 2nd 11 5 0 Won Wild Card Playoffs ( Bears ) 17 -- 13 Lost Divisional Playoffs ( Lions ) 38 -- 6 Jimmy Johnson 1992 1992 NFL NFC East 1st 13 0 Won Divisional Playoffs ( Eagles ) 34 -- 10 Won Conference Championship ( 49ers ) 30 -- 20 Won Super Bowl XXVII ( 3 ) ( Bills ) 52 -- 17 Troy Aikman ( SB MVP ) Jimmy Johnson 1993 1993 NFL NFC East 1st 12 0 Won Divisional Playoffs ( Packers ) 27 -- 17 Won Conference Championship ( 49ers ) 38 -- 21 Won Super Bowl XXVIII ( 4 ) ( Bills ) 30 -- 13 Emmitt Smith ( MVP , SB MVP ) Jimmy Johnson 1994 1994 NFL NFC East 1st 12 0 Won Divisional Playoffs ( Packers ) 35 -- 9 Lost Conference Championship ( 49ers ) 38 -- 28 Barry Switzer 1995 1995 NFL NFC East 1st 12 0 Won Divisional Playoffs ( Eagles ) 30 -- 11 Won Conference Championship ( Packers ) 38 -- 27 Won Super Bowl XXX ( 5 ) ( Steelers ) 27 -- 17 Larry Brown ( SB MVP ) Barry Switzer NFL NFC East 1st 10 6 0 Won Wild Card Playoffs ( Vikings ) 40 -- 15 Lost Divisional Playoffs ( Panthers ) 26 -- 17 Barry Switzer 1997 1997 NFL NFC East 4th 6 10 0 Barry Switzer 1998 1998 NFL NFC East 1st 10 6 0 Lost Wild Card Playoffs ( Cardinals ) 20 -- 7 Chan Gailey 1999 1999 NFL NFC East 2nd 8 8 0 Lost Wild Card Playoffs ( Vikings ) 27 -- 10 Chan Gailey 2000 2000 NFL NFC East 4th 5 11 0 Dave Campo 2001 2001 NFL NFC East 5th 5 11 0 Dave Campo 2002 2002 NFL NFC East 4th 5 11 0 Dave Campo 2003 2003 NFL NFC East 2nd 10 6 0 Lost Wild Card Playoffs ( Panthers ) 29 -- 10 Bill Parcells NFL NFC East 3rd 6 10 0 Bill Parcells 2005 2005 NFL NFC East 3rd 9 7 0 Bill Parcells 2006 2006 NFL NFC East 2nd 9 7 0 Lost Wild Card Playoffs ( Seahawks ) 21 -- 20 Bill Parcells 2007 2007 NFL NFC East 1st 13 0 Lost Divisional Playoffs ( Giants ) 21 -- 17 Greg Ellis ( CBPOY ) Wade Phillips 2008 2008 NFL NFC East 3rd 9 7 0 Wade Phillips 2009 2009 NFL NFC East 1st 11 5 0 Won Wild Card Playoffs ( Eagles ) 34 -- 14 Lost Divisional Playoffs ( Vikings ) 34 -- 3 Wade Phillips NFL NFC East 3rd 6 10 0 Wade Phillips ( 1 -- 7 ) Jason Garrett ( 5 -- 3 ) 2011 2011 NFL NFC East 3rd 8 8 0 Jason Garrett 2012 2012 NFL NFC East 3rd 8 8 0 Jason Witten ( WP MOY ) Jason Garrett 2013 2013 NFL NFC East 2nd 8 8 0 Jason Garrett 2014 2014 NFL NFC East 1st 12 0 Won Wild Card Playoffs ( Lions ) 24 -- 20 Lost Divisional Playoffs ( Packers ) 26 -- 21 DeMarco Murray ( OPOY ) Jason Garrett 2015 2015 NFL NFC East 4th 12 0 Jason Garrett 2016 2016 NFL NFC East 1st 13 0 Lost Divisional Playoffs ( Packers ) 34 -- 31 Dak Prescott ( OROY ) Jason Garrett ( COY ) Jason Garrett 2017 2017 NFL NFC East 2nd 9 7 0 Jason Garrett Total 502 374 6 All - time regular season record ( 1960 -- 2017 ) 34 27 0 All - time postseason record ( 1960 -- 2017 ) 536 401 6 All - time regular season and postseason record ( 1960 -- 2017 ) 5 NFL Championships , 10 Conference Championships , 22 Divisional Championships
+  Fact 0.0: The table row for 1960 lists the league as NFL, the conference as Western, a 7th-place finish, 0 wins and 11 losses, with head coach Tom Landry.
+  Fact 0.1: The table row for 1961 lists the league as NFL, the conference as Eastern, a 6th-place finish, and 9 wins, with head coach Tom Landry.
+  Fact 0.2: The table row for 1962 lists the league as NFL, the conference as Eastern, a 5th-place finish, 5 wins and 8 losses, with head coach Tom Landry.
+  Fact 0.3: The table row for 1963 lists the league as NFL, the conference as Eastern, a 5th-place finish, 10 wins and 0 losses, with head coach Tom Landry.
+  Fact 0.4: The table row for 1964 lists the league as NFL, the conference as Eastern, a 5th-place finish, 5 wins and 8 losses, with head coach Tom Landry.
+  Fact 0.5: The table row for 1965 lists the league as NFL, the conference as Eastern, a 2nd-place finish, 7 wins, 7 losses and 0 ties, with head coach Tom Landry.
+  Fact 0.6: The table row for 1966 lists the league as NFL, the conference as Eastern, a 1st-place finish, and 10 wins.
+  Fact 0.7: In 1966, the team lost the NFL Championship Game to the Packers, 34-27.
+  Fact 0.8: In 1966, Tom Landry was listed as Coach of the Year (COY).
+  Fact 0.9: In 1966, Tom Landry was the head coach.
+  Fact 0.10: The table row for 1967 lists the league as NFL, the conference as Eastern Capitol, a 1st-place finish, and 9 wins, 5 losses and 0 ties, with head coach Tom Landry.
+  Fact 0.11: In 1967, the team won the Conference Playoffs against the Browns, 52-14.
+  Fact 0.12: In 1967, the team lost the NFL Championship Game to the Packers, 21-17.
+  Fact 0.13: The table row for 1968 lists the league as NFL, the conference as Eastern Capitol, a 1st-place finish, 12 wins and 0 losses, with head coach Tom Landry.
+  Fact 0.14: In 1968, the team lost the Conference Playoffs to the Browns, 31-20.
+  Fact 0.15: The table row for 1969 lists the league as NFL, the conference as Eastern Capitol, a 1st-place finish, and 11 wins, with head coach Tom Landry.
+  Fact 0.16: In 1969, the team lost the Conference Playoffs to the Browns, 38-14.
+  Fact 0.17: In 1969, Calvin Hill won the Offensive Rookie of the Year (OROY) award.
+  Fact 0.18: The table row for 1970 lists the league as NFL, the conference as NFC East, a 1st-place finish, 10 wins and 0 losses, with head coach Tom Landry.
+  Fact 0.19: In 1970, the team won the Divisional Playoffs against the Lions, 5-0.
+  Fact 0.20: In 1970, the team won the Conference Championship against the 49ers, 17-10.
+  Fact 0.21: In 1970, the team lost Super Bowl V to the Colts, 16-13.
+  Fact 0.22: In 1970, Chuck Howley was named Super Bowl MVP (SB MVP).
+  Fact 0.23: The table row for 1971 lists the league as NFL, the conference as NFC East, a 1st-place finish, 11 wins and 0 losses, with head coach Tom Landry.
+  Fact 0.24: In 1971, the team won the Divisional Playoffs against the Vikings, 20-12.
+  Fact 0.25: In 1971, the team won the Conference Championship against the 49ers, 14-3.
+  Fact 0.26: In 1971, the team won Super Bowl VI against the Dolphins, 24-3.
+  Fact 0.27: In 1971, Roger Staubach was named Super Bowl MVP (SB MVP).
+  Fact 0.28: The table row for 1972 lists the league as NFL, the conference as NFC East, a 2nd-place finish, 10 wins and 0 losses, with head coach Tom Landry.
+  Fact 0.29: In 1972, the team won the Divisional Playoffs against the 49ers, 30-28.
+  Fact 0.30: In 1972, the team lost the Conference Championship to the Redskins, 26-3.
+  Fact 0.31: The table row for 1973 lists the league as NFL, the conference as NFC East, a 1st-place finish, 10 wins and 0 losses, with head coach Tom Landry.
+  Fact 0.32: In 1973, the team won the Divisional Playoffs against the Rams, 27-26.
+  Fact 0.33: In 1973, the team lost the Conference Championship to the Vikings, 27-10.
+  Fact 0.34: An unlabeled season row (following 1973) lists the league as NFL, the conference as NFC East, a 3rd-place finish, 8 wins, 6 losses and 0 ties, with head coach Tom Landry.
+  Fact 0.35: An unlabeled season row (following 1973) lists the league as NFL, the conference as NFC East, a 2nd-place finish, and 10 wins and 0 losses.
+  Fact 0.36: In the season row that follows 1973 with no year label, the team won the Divisional Playoffs against the Vikings, 17-14.
+  Fact 0.37: In the season row that follows 1973 with no year label, the team won the Conference Championship against the Rams, 37-7.
+  Fact 0.38: In the season row that follows 1973 with no year label, the team lost Super Bowl X to the Steelers, 21-17.
+  Fact 0.39: The table row for 1976 lists the league as NFL, the conference as NFC East, a 1st-place finish, 11 wins and 0 losses, with head coach Tom Landry.
+  Fact 0.40: In 1976, the team lost the Divisional Playoffs to the Rams, 14-12.
+  Fact 0.41: The table row for 1977 lists the league as NFL, the conference as NFC East, a 1st-place finish, 12 wins and 0 losses, with head coach Tom Landry.
+  Fact 0.42: In 1977, the team won the Divisional Playoffs against the Bears, 37-7.
+  Fact 0.43: In 1977, the team won the Conference Championship against the Vikings, 23-6.
+  Fact 0.44: In 1977, the team won Super Bowl XII against the Broncos, 27-10.
+  Fact 0.45: In 1977, Tony Dorsett won the Offensive Rookie of the Year (OROY) award.
+  Fact 0.46: In 1977, Harvey Martin won the Defensive Player of the Year (DPOY) award and was Super Bowl MVP (SB MVP).
+  Fact 0.47: In 1977, Randy White was named Super Bowl MVP (SB MVP).
+  Fact 0.48: The table row for 1978 lists the league as NFL, the conference as NFC East, a 1st-place finish, 12 wins and 0 losses, with head coach Tom Landry.
+  Fact 0.49: In 1978, the team won the Divisional Playoffs against the Falcons, 27-20.
+  Fact 0.50: In 1978, the team won the Conference Championship against the Rams, 28-0.
+  Fact 0.51: In 1978, the team lost Super Bowl XIII to the Steelers, 35-31.
+  Fact 0.52: The table row for 1979 lists the league as NFL, the conference as NFC East, a 1st-place finish, and 11 wins, 5 losses and 0 ties, with head coach Tom Landry.
+  Fact 0.53: In 1979, the team lost the Divisional Playoffs to the Rams, 21-19.
+  Fact 0.54: The table row for 1980 lists the league as NFL, the conference as NFC East, a 2nd-place finish, 12 wins and 0 losses, with head coach Tom Landry.
+  Fact 0.55: In 1980, the team won the Wild Card Playoffs against the Rams, 34-17.
+  Fact 0.56: In 1980, the team won the Divisional Playoffs against the Falcons, 30-27.
+  Fact 0.57: In 1980, the team lost the Conference Championship to the Eagles, 20-7.
+  Fact 0.58: The table row for 1981 lists the league as NFL, the conference as NFC East, a 1st-place finish, 12 wins and 0 losses, with head coach Tom Landry.
+  Fact 0.59: In 1981, the team won the Divisional Playoffs against the Buccaneers, 38-0.
+  Fact 0.60: In 1981, the team lost the Conference Championship to the 49ers, 28-27.
+  Fact 0.61: The table row for 1982 lists the league as NFL, the conference as NFC, a 2nd-place finish, and a record of 6 and 0, with head coach Tom Landry.
+  Fact 0.62: In 1982, the team won the Wild Card Playoffs against the Buccaneers, 30-17.
+  Fact 0.63: In 1982, the team won the Divisional Playoffs against the Packers, 37-26.
+  Fact 0.64: In 1982, the team lost the Conference Championship to the Redskins, 31-17.
+  Fact 0.65: An unlabeled season row (following 1982) lists the league as NFL, the conference as NFC East, a 2nd-place finish, and 12 wins and 0 losses.
+  Fact 0.66: In the season row that follows 1982 with no year label, the team lost the Wild Card Playoffs to the Rams, 24-17.
+  Fact 0.67: The table row for 1984 lists the league as NFL, the conference as NFC East, a 4th-place finish, 9 wins, 7 losses and 0 ties, with head coach Tom Landry.
+  Fact 0.68: The table row for 1985 lists the league as NFL, the conference as NFC East, a 1st-place finish, 10 wins, 6 losses and 0 ties, with head coach Tom Landry.
+  Fact 0.69: In 1985, the team lost the Divisional Playoffs to the Rams, 20-0.
+  Fact 0.70: The table row for 1986 lists the league as NFL, the conference as NFC East, a 3rd-place finish, 7 wins, 9 losses and 0 ties, with head coach Tom Landry.
+  Fact 0.71: An unlabeled season row (following 1986) lists the league as NFL, the conference as NFC East, a 4th-place finish, 7 wins, 8 losses and 0 ties, with head coach Tom Landry.
+  Fact 0.72: The table row for 1988 lists the league as NFL, the conference as NFC East, a 5th-place finish, with 13 and 0 listed as its win and loss numbers, with head coach Tom Landry.
+  Fact 0.73: The table row for 1989 lists the league as NFL, the conference as NFC East, a 5th-place finish, 15 and 0 as its win and loss numbers, with head coach Jimmy Johnson.
+  Fact 0.74: The table row for 1990 lists the league as NFL, the conference as NFC East, a 4th-place finish, 7 wins, 9 losses and 0 ties, with head coach Jimmy Johnson.
+  Fact 0.75: In 1990, Emmitt Smith won the Offensive Rookie of the Year (OROY) award.
+  Fact 0.76: In 1990, Jimmy Johnson won the Coach of the Year (COY) award.
+  Fact 0.77: The table row for 1991 lists the league as NFL, the conference as NFC East, a 2nd-place finish, 11 wins, 5 losses and 0 ties, with head coach Jimmy Johnson.
+  Fact 0.78: In 1991, the team won the Wild Card Playoffs against the Bears, 17-13.
+  Fact 0.79: In 1991, the team lost the Divisional Playoffs to the Lions, 38-6.
+  Fact 0.80: The table row for 1992 lists the league as NFL, the conference as NFC East, a 1st-place finish, 13 wins and 0 losses, with head coach Jimmy Johnson.
+  Fact 0.81: In 1992, the team won the Divisional Playoffs against the Eagles, 34-10.
+  Fact 0.82: In 1992, the team won the Conference Championship against the 49ers, 30-20.
+  Fact 0.83: In 1992, the team won Super Bowl XXVII against the Bills, 52-17.
+  Fact 0.84: In 1992, Troy Aikman was named Super Bowl MVP (SB MVP).
+  Fact 0.85: The table row for 1993 lists the league as NFL, the conference as NFC East, a 1st-place finish, 12 wins and 0 losses, with head coach Jimmy Johnson.
+  Fact 0.86: In 1993, the team won the Divisional Playoffs against the Packers, 27-17.
+  Fact 0.87: In 1993, the team won the Conference Championship against the 49ers, 38-21.
+  Fact 0.88: In 1993, the team won Super Bowl XXVIII against the Bills, 30-13.
+  Fact 0.89: In 1993, Emmitt Smith was named MVP and Super Bowl MVP (MVP, SB MVP).
+  Fact 0.90: The table row for 1994 lists the league as NFL, the conference as NFC East, a 1st-place finish, 12 wins and 0 losses, with head coach Barry Switzer.
+  Fact 0.91: In 1994, the team won the Divisional Playoffs against the Packers, 35-9.
+  Fact 0.92: In 1994, the team lost the Conference Championship to the 49ers, 38-28.
+  Fact 0.93: The table row for 1995 lists the league as NFL, the conference as NFC East, a 1st-place finish, 12 wins and 0 losses, with head coach Barry Switzer.
+  Fact 0.94: In 1995, the team won the Divisional Playoffs against the Eagles, 30-11.
+  Fact 0.95: In 1995, the team won the Conference Championship against the Packers, 38-27.
+  Fact 0.96: In 1995, the team won Super Bowl XXX against the Steelers, 27-17.
+  Fact 0.97: In 1995, Larry Brown was named Super Bowl MVP (SB MVP).
+  Fact 0.98: An unlabeled season row (following 1995) lists the league as NFL, the conference as NFC East, a 1st-place finish, 10 wins, 6 losses and 0 ties, with head coach Barry Switzer.
+  Fact 0.99: In the season row that follows 1995 with no year label, the team won the Wild Card Playoffs against the Vikings, 40-15.
+  Fact 0.100: In the season row that follows 1995 with no year label, the team lost the Divisional Playoffs to the Panthers, 26-17.
+  Fact 0.101: The table row for 1997 lists the league as NFL, the conference as NFC East, a 4th-place finish, 6 wins, 10 losses and 0 ties, with head coach Barry Switzer.
+  Fact 0.102: The table row for 1998 lists the league as NFL, the conference as NFC East, a 1st-place finish, 10 wins, 6 losses and 0 ties, with head coach Chan Gailey.
+  Fact 0.103: In 1998, the team lost the Wild Card Playoffs to the Cardinals, 20-7.
+  Fact 0.104: The table row for 1999 lists the league as NFL, the conference as NFC East, a 2nd-place finish, 8 wins, 8 losses and 0 ties, with head coach Chan Gailey.
+  Fact 0.105: In 1999, the team lost the Wild Card Playoffs to the Vikings, 27-10.
+  Fact 0.106: The table row for 2000 lists the league as NFL, the conference as NFC East, a 4th-place finish, 5 wins, 11 losses and 0 ties, with head coach Dave Campo.
+  Fact 0.107: The table row for 2001 lists the league as NFL, the conference as NFC East, a 5th-place finish, 5 wins, 11 losses and 0 ties, with head coach Dave Campo.
+  Fact 0.108: The table row for 2002 lists the league as NFL, the conference as NFC East, a 4th-place finish, 5 wins, 11 losses and 0 ties, with head coach Dave Campo.
+  Fact 0.109: The table row for 2003 lists the league as NFL, the conference as NFC East, a 2nd-place finish, 10 wins, 6 losses and 0 ties, with head coach Bill Parcells.
+  Fact 0.110: In 2003, the team lost the Wild Card Playoffs to the Panthers, 29-10.
+  Fact 0.111: An unlabeled season row (following 2003) lists the league as NFL, the conference as NFC East, a 3rd-place finish, 6 wins, 10 losses and 0 ties, with head coach Bill Parcells.
+  Fact 0.112: The table row for 2005 lists the league as NFL, the conference as NFC East, a 3rd-place finish, 9 wins, 7 losses and 0 ties, with head coach Bill Parcells.
+  Fact 0.113: The table row for 2006 lists the league as NFL, the conference as NFC East, a 2nd-place finish, 9 wins, 7 losses and 0 ties, with head coach Bill Parcells.
+  Fact 0.114: In 2006, the team lost the Wild Card Playoffs to the Seahawks, 21-20.
+  Fact 0.115: The table row for 2007 lists the league as NFL, the conference as NFC East, a 1st-place finish, 13 wins and 0 losses, with head coach Wade Phillips.
+  Fact 0.116: In 2007, the team lost the Divisional Playoffs to the Giants, 21-17.
+  Fact 0.117: In 2007, Greg Ellis won the Comeback Player of the Year (CBPOY) award.
+  Fact 0.118: The table row for 2008 lists the league as NFL, the conference as NFC East, a 3rd-place finish, 9 wins, 7 losses and 0 ties, with head coach Wade Phillips.
+  Fact 0.119: The table row for 2009 lists the league as NFL, the conference as NFC East, a 1st-place finish, 11 wins, 5 losses and 0 ties, with head coach Wade Phillips.
+  Fact 0.120: In 2009, the team won the Wild Card Playoffs against the Eagles, 34-14.
+  Fact 0.121: In 2009, the team lost the Divisional Playoffs to the Vikings, 34-3.
+  Fact 0.122: An unlabeled season row (following 2009) lists the league as NFL, the conference as NFC East, a 3rd-place finish, 6 wins, 10 losses and 0 ties, with Wade Phillips as coach for 1 win and 7 losses and Jason Garrett as coach for 5 wins and 3 losses.
+  Fact 0.123: The table row for 2011 lists the league as NFL, the conference as NFC East, a 3rd-place finish, 8 wins, 8 losses and 0 ties, with head coach Jason Garrett.
+  Fact 0.124: The table row for 2012 lists the league as NFL, the conference as NFC East, a 3rd-place finish, 8 wins, 8 losses and 0 ties, with head coach Jason Garrett.
+  Fact 0.125: In 2012, Jason Witten won the Walter Payton Man of the Year (WP MOY) award.
+  Fact 0.126: The table row for 2013 lists the league as NFL, the conference as NFC East, a 2nd-place finish, 8 wins, 8 losses and 0 ties, with head coach Jason Garrett.
+  Fact 0.127: The table row for 2014 lists the league as NFL, the conference as NFC East, a 1st-place finish, 12 wins and 0 losses, with head coach Jason Garrett.
+  Fact 0.128: In 2014, the team won the Wild Card Playoffs against the Lions, 24-20.
+  Fact 0.129: In 2014, the team lost the Divisional Playoffs to the Packers, 26-21.
+  Fact 0.130: In 2014, DeMarco Murray won the Offensive Player of the Year (OPOY) award.
+  Fact 0.131: The table row for 2015 lists the league as NFL, the conference as NFC East, a 4th-place finish, 12 wins and 0 losses, with head coach Jason Garrett.
+  Fact 0.132: The table row for 2016 lists the league as NFL, the conference as NFC East, a 1st-place finish, 13 wins and 0 losses, with head coach Jason Garrett.
+  Fact 0.133: In 2016, the team lost the Divisional Playoffs to the Packers, 34-31.
+  Fact 0.134: In 2016, Dak Prescott won the Offensive Rookie of the Year (OROY) award.
+  Fact 0.135: In 2016, Jason Garrett won the Coach of the Year (COY) award.
+  Fact 0.136: The table row for 2017 lists the league as NFL, the conference as NFC East, a 2nd-place finish, 9 wins, 7 losses and 0 ties, with head coach Jason Garrett.
+  Fact 0.137: The table's total row lists 502 wins, 374 losses and 6 ties.
+  Fact 0.138: The all-time regular season record (1960-2017) is listed as 34 wins, 27 losses and 0 ties.
+  Fact 0.139: The all-time postseason record (1960-2017) is listed as 536 wins, 401 losses and 6 ties.
+  Fact 0.140: The all-time regular season and postseason record (1960-2017) is listed alongside 5 NFL Championships, 10 Conference Championships and 22 Divisional Championships.
+
+Retrieved items:
+<item 1>
+List of Dallas Cowboys seasons
+Jump up ^ At the end of the 1991 season , the Cowboys and the Bears finished the season with identical 11 -- 5 records . Using the NFL 's tie - breaking
+procedures , Chicago was the first NFC Wild Card based on better conference record than Dallas . Jump up ^ At the end of the 1996 season , the Cowboys and the
+Eagles finished the season with identical 10 -- 6 records . Using the NFL 's tie - breaking procedures , Dallas finished ahead of Philadelphia in the NFC East
+based on better record against common opponents . Jump up ^ At the end of the 1999 season , the Cowboys , Lions , and the Panthers finished the season with
+identical 8 -- 8 records . Using the NFL 's tie - breaking procedures , Dallas was the second NFC Wild Card based on a better record than Detroit against common
+opponents and a better conference record than Carolina . Jump up ^ At the end of the 2009 season , the Cowboys and the Eagles finished with identical 11 -- 5
+records . Using the NFL 's tie - breaking procedures , Dallas finished ahead of Philadelphia in the NFC East based on better head - to - head record .
+</item 1>
+
+<item 2>
+List of Dallas Cowboys seasons
+Conference Playoffs ( Browns ) 38 -- 14 Calvin Hill ( OROY ) Tom Landry 1970 1970 NFL NFC East 1st 10 0 Won Divisional Playoffs ( Lions ) 5 -- 0 Won Conference
+Championship ( 49ers ) 17 -- 10 Lost Super Bowl V ( Colts ) 16 -- 13 Chuck Howley ( SB MVP ) Tom Landry 1971 1971 NFL NFC East 1st 11 0 Won Divisional Playoffs
+( Vikings ) 20 -- 12 Won Conference Championship ( 49ers ) 14 -- 3 Won Super Bowl VI ( 1 ) ( Dolphins ) 24 -- 3 Roger Staubach ( SB MVP ) Tom Landry 1972 1972
+NFL NFC East 2nd 10 0 Won Divisional Playoffs ( 49ers ) 30 -- 28 Lost Conference Championship ( Redskins ) 26 -- 3 Tom Landry 1973 1973 NFL NFC East 1st 10 0
+Won Divisional Playoffs ( Rams ) 27 -- 26 Lost Conference Championship ( Vikings ) 27 -- 10 Tom Landry NFL NFC East 3rd 8
+</item 2>
+
+<item 3>
+List of Dallas Cowboys seasons
+Pro football reference.com . Retrieved April 14 , 2012 . `` Dallas Cowboys Live -- Dallas Cowboys '' . cowboysgames.net . Retrieved July 1 , 2016 . Dallas
+Cowboys Founded in 1960 Based in Arlington , Texas Headquartered in Frisco , Texas Franchise Franchise History Coaches Players Seasons Expansion draft Draft
+history Starting quarterbacks First - round draft picks The Ford Center at The Star Stadiums Cotton Bowl Texas Stadium AT&T Stadium Culture NFL on Thanksgiving
+Day America 's Team Cheerleaders Doomsday Defense Crazy Ray Rowdy Jerry Jones Black Sunday ( film ) King of the Hill Lore Tom Landry Tex Schramm Captain
+Comeback Ice Bowl Hail Mary The Catch Herschel Walker trade Dirty Dozen Ring of Honor Bounty Bowl series Rivalries New York Giants Philadelphia Eagles
+Washington Redskins Green Bay Packers San Francisco 49ers Pittsburgh Steelers Houston Oilers / Texans Division championships ( 23 ) 1967 1968 1969 1970 1971
+1972 1973 1976 1977 1978 1979 1981 1985 1992 1993 1994 1995 1998 2007
+</item 3>
+
+<item 4>
+List of Dallas Cowboys seasons
+1992 1993 1994 1995 1998 2007 2009 2014 2016 Conference championships ( 10 ) 1966 1967 1970 1971 1977 1978 1992 1993 1995 League Championships ( 5 ) 1971 ( VI )
+1977 ( XII ) 1992 ( XXVII ) 1993 ( XXVIII ) 1995 ( XXX ) Media Broadcasters Radio network KRLD - FM Brad Sham Babe Laufenberg Current league affiliations League
+: National Football League Conference : National Football Conference Division : East Division Seasons ( 58 ) 1960 1961 1962 1963 1964 1965 1966 1967 1968 1969
+1970 1971 1972 1973 1976 1977 1978 1979 1980 1981 1982 1984 1985 1986 1988 1989 1990 1991 1992 1993 1994 1995 1997 1998 1999 2000
+</item 4>
+
+<item 5>
+List of Dallas Cowboys seasons
+Also , they did not have a single winning record in this period . Between 1986 and 1990 the Cowboys had losing records in each season as veteran coach Landry
+retired and the team was radically overhauled , with the low point being the NFL 's second 15 - loss season ( after the 1980 Saints ) in 1989 . After losing a
+Divisional playoff Game in 1996 , the Cowboys between 1997 and 2008 lost five consecutive playoff games , one after a franchise - record 13 -- 3 season in 2007
+, during which most predicted the Cowboys would break this streak . This streak finally came to an end when the Cowboys finally beat their bitter rival , the
+Philadelphia Eagles 34 -- 14 after an 11 -- 5 season in 2009 . Seasons ( edit ) NFL Champions ( 1920 -- 1969 ) Super Bowl Champions ( 1970 -- present )
+Conference Champions Division Champions Wild Card Berth Season Team League Conference Division Regular season Postseason Results Awards Head coaches Finish Wins
+Losses Ties 1960 1960 NFL Western 7th 0 11 Tom Landry 1961 1961 NFL Eastern
+</item 5>
+
+<item 6>
+List of Dallas Cowboys seasons
+0 Lost Super Bowl XIII ( Steelers ) 35 -- 31 Tom Landry 1979 1979 NFL NFC East 1st 11 5 0 Lost Divisional Playoffs ( Rams ) 21 -- 19 Tom Landry 1980 1980 NFL
+NFC East 2nd 12 0 Won Wild Card Playoffs ( Rams ) 34 -- 17 Won Divisional Playoffs ( Falcons ) 30 -- 27 Lost Conference Championship ( Eagles ) 20 -- 7 Tom
+Landry 1981 1981 NFL NFC East 1st 12 0 Won Divisional Playoffs ( Buccaneers ) 38 -- 0 Lost Conference Championship ( 49ers ) 28 -- 27 Tom Landry 1982 1982 NFL
+NFC 2nd 6 0 Won Wild Card Playoffs ( Buccaneers ) 30 -- 17 Won Divisional Playoffs ( Packers ) 37 -- 26 Lost Conference Championship ( Redskins ) 31 -- 17 Tom
+Landry NFL NFC East 2nd 12 0 Lost Wild Card Playoffs ( Rams ) 24 -- 17 Tom Landry 1984 1984 NFL NFC East 4th 9 7
+</item 6>
+
+<item 7>
+List of Dallas Cowboys seasons
+East 3rd 6 10 0 Bill Parcells 2005 2005 NFL NFC East 3rd 9 7 0 Bill Parcells 2006 2006 NFL NFC East 2nd 9 7 0 Lost Wild Card Playoffs ( Seahawks ) 21 -- 20 Bill
+Parcells 2007 2007 NFL NFC East 1st 13 0 Lost Divisional Playoffs ( Giants ) 21 -- 17 Greg Ellis ( CBPOY ) Wade Phillips 2008 2008 NFL NFC East 3rd 9 7 0 Wade
+Phillips 2009 2009 NFL NFC East 1st 11 5 0 Won Wild Card Playoffs ( Eagles ) 34 -- 14 Lost Divisional Playoffs ( Vikings ) 34 -- 3 Wade Phillips NFL NFC East
+3rd 6 10 0 Wade Phillips ( 1 -- 7 ) Jason Garrett ( 5 -- 3 ) 2011 2011 NFL NFC East 3rd 8 8 0 Jason Garrett 2012 2012 NFL NFC East 3rd 8 8 0 Jason Witten ( WP
+MOY ) Jason
+</item 7>
+
+<item 8>
+List of Dallas Cowboys seasons
+NFC East 3rd 8 8 0 Jason Witten ( WP MOY ) Jason Garrett 2013 2013 NFL NFC East 2nd 8 8 0 Jason Garrett 2014 2014 NFL NFC East 1st 12 0 Won Wild Card Playoffs (
+Lions ) 24 -- 20 Lost Divisional Playoffs ( Packers ) 26 -- 21 DeMarco Murray ( OPOY ) Jason Garrett 2015 2015 NFL NFC East 4th 12 0 Jason Garrett 2016 2016 NFL
+NFC East 1st 13 0 Lost Divisional Playoffs ( Packers ) 34 -- 31 Dak Prescott ( OROY ) Jason Garrett ( COY ) Jason Garrett 2017 2017 NFL NFC East 2nd 9 7 0 Jason
+Garrett Total 502 374 6 All - time regular season record ( 1960 -- 2017 ) 34 27 0 All - time postseason record ( 1960 -- 2017 ) 536 401 6 All - time regular
+season and postseason record ( 1960 -- 2017 ) 5 NFL Championships , 10 Conference Championships ,
+</item 8>
+
+<item 9>
+List of Dallas Cowboys seasons
+They also played in and lost Super Bowl V , X , and XIII . The franchise has experienced two major periods of continued success in their history . The first
+period of success came from 1966 -- 1985 when the Cowboys played in the postseason 18 times . During this period , they played in two NFL Championships and five
+Super Bowls , winning two of them , winning a total of 20 playoff games . The second period of success was between 1991 -- 1996 when the Cowboys captured five
+straight NFC East Division titles and won three Super Bowls going 11 -- 2 in the postseason . The Cowboys have also experienced failure in their history . The
+most notable period of failure was from their 1960 inaugural season to 1965 , during which the Cowboys did not have a single postseason appearance . They did
+not win a single game during their first season , compiling an 0 -- 11 -- 1 record that is still the worst in franchise history . Also , they did not have a
+single winning record in this period .
+</item 9>
+
+<item 10>
+List of Dallas Cowboys seasons
+Playoffs ( Eagles ) 34 -- 10 Won Conference Championship ( 49ers ) 30 -- 20 Won Super Bowl XXVII ( 3 ) ( Bills ) 52 -- 17 Troy Aikman ( SB MVP ) Jimmy Johnson
+1993 1993 NFL NFC East 1st 12 0 Won Divisional Playoffs ( Packers ) 27 -- 17 Won Conference Championship ( 49ers ) 38 -- 21 Won Super Bowl XXVIII ( 4 ) ( Bills
+) 30 -- 13 Emmitt Smith ( MVP , SB MVP ) Jimmy Johnson 1994 1994 NFL NFC East 1st 12 0 Won Divisional Playoffs ( Packers ) 35 -- 9 Lost Conference Championship
+( 49ers ) 38 -- 28 Barry Switzer 1995 1995 NFL NFC East 1st 12 0 Won Divisional Playoffs ( Eagles ) 30 -- 11 Won Conference Championship ( Packers ) 38 -- 27
+Won Super Bowl XXX ( 5 ) ( Steelers ) 27 -- 17 Larry Brown ( SB MVP ) Barry Switzer NFL NFC East 1st 10 6 0 Won Wild Card Playoffs
+</item 10>
+=== END ITEM id=bd68763fe768daef ===

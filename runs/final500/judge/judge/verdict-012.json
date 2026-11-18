@@ -1,0 +1,467 @@
+[
+ {
+  "id": "6a4edd67259c9a5e",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Then, on October 17, the U.S. will travel to GEODIS Park in Nashville, Tennessee for a friendly against Ghana."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Then, on October 17, the U.S. will travel to GEODIS Park in Nashville, Tennessee for a friendly against Ghana."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.5",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "e7db18b11ba23f18",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "bfe9db691d9d4646",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue."
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."
+     }
+    ]
+   },
+   {
+    "fact": "2.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "3.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "3.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "3.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "3.3",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "53d4262ba92dd45d",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "152.67 -- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "19fe584355884a66",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said."
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "But “all of that, all of it, was built on lies,” Rehn declared to the jury."
+     }
+    ]
+   },
+   {
+    "fact": "2.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"
+     }
+    ]
+   },
+   {
+    "fact": "2.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+     }
+    ]
+   },
+   {
+    "fact": "2.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+     }
+    ]
+   },
+   {
+    "fact": "2.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "76313c2f11d596b8",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Wang heard a trader ask Bankman-Fried if it was okay to keep withdrawing money from that account. Bankman-Fried said it was okay as long as it was lower than FTX’s total trading revenue."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."
+     }
+    ]
+   },
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."
+     }
+    ]
+   },
+   {
+    "fact": "2.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "3.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"
+     }
+    ]
+   },
+   {
+    "fact": "3.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"
+     }
+    ]
+   },
+   {
+    "fact": "3.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+     }
+    ]
+   },
+   {
+    "fact": "3.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+     }
+    ]
+   },
+   {
+    "fact": "3.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+     }
+    ]
+   },
+   {
+    "fact": "3.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+     }
+    ]
+   }
+  ]
+ }
+]

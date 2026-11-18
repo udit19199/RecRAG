@@ -1,0 +1,25 @@
+[
+{"id": "8f2fdd897f00341b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "As such, they’re never going to replace the need for reducing emissions of CO 2 and other greenhouse gases."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "As such, they’re never going to replace the need for reducing emissions of CO 2 and other greenhouse gases."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []}
+]},
+{"id": "e3c8bf366f9df3c9", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "f47dc175b6f301d7", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Since then he’s been linked to club jobs in Europe but opted to stick around with the national team."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Since then he’s been linked to club jobs in Europe but opted to stick around with the national team."}]}
+]}
+]

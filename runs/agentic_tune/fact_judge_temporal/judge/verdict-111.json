@@ -1,0 +1,200 @@
+[
+  {
+    "id": "e2f0fb4c71c807ec",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "Sportsbooks will move the line or change the odds if the public bets heavily on one side."
+          },
+          {
+            "item": 8,
+            "quote": "If a significant majority of bettors are placing their money on one team to cover the spread, the top sports betting apps will adjust the point spread"
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Sportsbooks adjust moneyline odds to ensure they remain profitable, balance their book"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ac01aeae5bf47e1b",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "intimidating Alameda’s former CEO, Caroline Ellison"
+          }
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.3",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 7,
+            "quote": "The prosecution painted a picture of an empire “built on lies”"
+          },
+          {
+            "item": 7,
+            "quote": "He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence."
+          }
+        ]
+      },
+      {
+        "fact": "2.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 7,
+            "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."
+          }
+        ]
+      },
+      {
+        "fact": "2.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 7,
+            "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "962b7fbdf2989776",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents."
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents."
+          }
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.3",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  }
+]

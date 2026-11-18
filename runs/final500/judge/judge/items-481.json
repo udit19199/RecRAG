@@ -1,0 +1,441 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "523d107286d108e1",
+   "gold": [
+    {
+     "sentence": "Inner Secrets is the ninth studio album by Santana.",
+     "facts": {
+      "0.0": "Inner Secrets is a studio album by Santana.",
+      "0.1": "Inner Secrets is Santana's ninth studio album."
+     }
+    },
+    {
+     "sentence": "Carlos Santana    (born July 20, 1947) is a Mexican and American musician who first became famous in the late 1960s and early 1970s with his band, Santana, which pioneered a fusion of rock and Latin American music.",
+     "facts": {
+      "1.0": "Carlos Santana was born on July 20, 1947.",
+      "1.1": "Carlos Santana is a Mexican musician.",
+      "1.2": "Carlos Santana is an American musician.",
+      "1.3": "Carlos Santana first became famous in the late 1960s and early 1970s.",
+      "1.4": "Carlos Santana first became famous with his band Santana.",
+      "1.5": "The band Santana pioneered a fusion of rock and Latin American music."
+     }
+    }
+   ],
+   "items": [
+    "Inner Secrets\nInner Secrets is the ninth studio album by Santana.\n\n It was released in 1978 and marks the start of the phase of Santana's career where he moved away from the fusion of Latin, jazz, rock and blues that marked his previous records and began to move towards an album-oriented rock direction.\n\n As such, the album's quality is widely disputed among fans. \"\n\nStormy\" and \"One Chain (Don't Make No Prison)\" were both hit singles.\n\n In The Netherlands \"Well All Right\" was released as a single and reached #22 in the top 40.",
+    "Suicide (1977 album)\nSuicide is the debut album from the American rock band Suicide.\n\n It was released in 1977 on Red Star Records and produced by Craig Leon and Marty Thau.\n\n The album was recorded in four days at Ultima Sound Studios in New York and featured Martin Rev's minimalist electronics and harsh, repetitive rhythms paired with Alan Vega's rock and roll-inspired vocals and depictions of urban life.",
+    "Moment of Truth (Terri Nunn album)\nMoment of Truth is the début and sole solo album from American singer and actress Terri Nunn, best known as lead singer of the American New Wave/Synthpop band Berlin.",
+    "Carlos Santana\nCarlos Santana    (born July 20, 1947) is a Mexican and American musician who first became famous in the late 1960s and early 1970s with his band, Santana, which pioneered a fusion of rock and Latin American music.\n\n The band's sound featured his melodic, blues-based guitar lines set against Latin and African rhythms featuring percussion instruments such as timbales and congas not generally heard in rock music.\n\n Santana continued to work in these forms over the following decades.\n\n He experienced a resurgence of popularity and critical acclaim in the late 1990s.\n\n In 2003 \"Rolling Stone\" magazine listed Santana at number 20 on their list of the 100 Greatest Guitarists of All Time.\n\n He has won 10 Grammy Awards and three Latin Grammy Awards.",
+    "The V.I.P.s (band)\nThe V.I.P.s were a British R&B musical ensemble formed in Carlisle, Cumberland, (North West England) in late 1963, out of an earlier outfit known as The Ramrods, who had formed in Carlisle in 1960.\n\n After a change of personnel in April 1967, the band changed their name to \"Art\", and released the album \"Supernatural Fairy Tales\".\n\n They also participated to a psychedelic bizarre album called \"Featuring The Human Host And The Heavy Metal Kids\" by a collective known as Hapshash and the Coloured Coat, formed by Guy Stevens and an influential British graphic design and avant-garde musical partnership between Michael English and Nigel Waymouth.\n\n The musicians involved in that project were Mike Harrison on keys and vocals, Luther Grosvenor on guitars, Greg Ridley on bass and Mike Kellie on drums, as well as performances by Stevens, English and Waymouth.\n\n It was the first time that the term \"heavy metal\" was ever used in music, even though that album had nothing to do with heavy metal music, being closer to psychedelic music.",
+    "Hot Streets\nHot Streets is the tenth studio album (twelfth overall) by the American band Chicago, released in 1978.\n\n In many ways, \"Hot Streets\" marked the beginning of a new era for the band, turning to disco music, a move which would be derided in retrospect.\n\n It was also the band's first album with all-new material released since their second that didn't have a numbered title.\n\n It was also the first album not to feature original guitarist/vocalist Terry Kath, who died from an accidental self-inflicted gunshot wound in January 1978.\n\n He was replaced by Donnie Dacus on this album.",
+    "Information (Berlin album)\nInformation is the first album by Berlin, released in 1980 by Vinyl Records.\n\n It was recorded during the period when Terri Nunn had temporarily left the band to pursue an acting career and Virginia Macolino performed the lead vocals.\n\n Several songs were written by previous lead singer Toni Childs who went solo prior to the album's release.",
+    "The Secret (Vib Gyor EP)\nThe Secret EP is the EP from the Leeds band Vib Gyor.\n\n It was released on 5 March 2007, and is the follow-up to their well-received debut single, \"Fallen\".\n\n It was recorded in Bath and produced by Paul Corkett.\n\n It also has a hidden fifth instrumental track - which the band recently revealed was called <:.\n\n~.\n\n:>",
+    "Mike Oldfield\nMichael Gordon Oldfield (born 15 May 1953) is an English musician and composer.\n\n His work blends progressive rock with world, folk, classical, electronic, ambient, and new-age music.\n\n His biggest commercial success is the 1973 album \"Tubular Bells\"which launched Virgin Records and became a hit in America after its opening was used as the theme for the film \"The Exorcist\".\n\n He recorded the 1983 hit single \"Moonlight Shadow\" and a rendition of the Christmas piece \"In Dulci Jubilo\".",
+    "The V.I.P.s (band)\nThat album was published in 1967 on Liberty Records and contained only five songs from two minutes to more than 15 minutes of psychedelic and almost meditative state kind of music."
+   ]
+  },
+  {
+   "id": "b7fa0c18700b735e",
+   "gold": [
+    {
+     "sentence": "The Church of the Guanche People (Spanish: \"Iglesia del Pueblo Guanche\" ) is a religious organisation, founded in 2001 in the city of San Cristóbal de La Laguna (Tenerife, Canary Islands, Spain).",
+     "facts": {
+      "0.0": "The Church of the Guanche People's Spanish name is 'Iglesia del Pueblo Guanche'.",
+      "0.1": "The Church of the Guanche People is a religious organisation.",
+      "0.2": "The Church of the Guanche People was founded in 2001.",
+      "0.3": "The Church of the Guanche People was founded in the city of San Cristobal de La Laguna.",
+      "0.4": "San Cristobal de La Laguna is in Tenerife, Canary Islands, Spain."
+     }
+    },
+    {
+     "sentence": " Tenerife is the largest and most populous island of Macaronesia.",
+     "facts": {
+      "1.0": "Tenerife is the largest island of Macaronesia.",
+      "1.1": "Tenerife is the most populous island of Macaronesia."
+     }
+    }
+   ],
+   "items": [
+    "Hermigua\nHermigua is a town and a municipality in the northeastern part of La Gomera in the province of Santa Cruz de Tenerife of the Canary Islands, Spain.\n\n It is located 12 km northwest of the island's capital, San Sebastián de la Gomera.\n\n The Garajonay National Park covers the southern part of the municipality.",
+    "Teide National Park\nTeide National Park (Spanish: \"Parque nacional del Teide\" , ] ) is a national park located in Tenerife (Canary Islands, Spain).",
+    "Roque Cinchado\nThe Roque Cinchado is a rock formation, regarded as emblematic of the island of Tenerife (Canary Islands, Spain).\n\n It lies within the Teide National Park (a World Heritage Site) in the municipality of La Orotava, near the volcano of the same name, in the heart of the island.\n\n The Roque Cinchado is one of the largest in the world by altitude, for the entire park totals more than 2000 metres.",
+    "Gran i General Consell\nThe Gran i General Consell (Catalan: \"Great and General Council\") was the supreme political, administrative, and representative organ of the Kingdom of Majorca.\n\n Since the Kingdom of Majorca did not have courts, the Gran i General Consell took over most of the functions they would otherwise have had, including the role of a representative body.\n\n The Gran i General Consell evolved from the Catalan municipal councils, especially that of the City of Majorca (present-day Palma de Mallorca.\n\n The body that was to become the Gran i General Consell was founded in 1249, and the Consell was abolished on 22 July 1718 by Philip V, empowered by the Nova Planta Decree of Majorca and Ibiza (28 November 1715).\n\n At the same time, all other separate Majorcan institutions were dissolved.",
+    "Chiguata District\nChiguata is a district located in the Arequipa province, 30 km away from the city of Arequipa, Peru, on the slopes of the volcano Pikchu Pikchu (where at its summit pre-Inca worshipped remains and artifacts have been found).\n\n The name \"chiguata\" comes from the Quechua words \"chiri\" meaning \"cold\" and \"wata\" meaning \"year\" (cold all year).\n\n Ancient Chiguata was inhabited by the local natives until the arrival of Spanish influence in charge of the emissary Diego Hernández de Córdova in 1540.\n\n Soon after, the construction of a small plaza was initiated, and according to the Dominican religious order and local sources, the plaza's \"Templo del Espíritu Santo\" (\"Sacred Spirit temple\") along with its domes and lateral cover was not begun until 1739.\n\n The design of the temple is quite interesting, with two angels in feathered nightwear and their arms lifted vertically, separated by twelve fringes of rectangular flowers which add to the whole decoration of the temple.",
+    "Guanche mummies\nGuanche mummies are the intentionally desiccated remains of members of the indigenous Guanche people of the Canary Islands.\n\n The majority of Guanche mummies were made during the eras prior to Spanish settlement of the area in the 15th century.\n\n The methods of embalming are similar to those that were used by the Ancient Egyptians, though fewer mummies remain from the Guanche due to looting and desecration.",
+    "Chiguata District\nCherubs also decorate the circular cornice, along with four saints in full-length reliefs that occupy the \"pechinas\" of the columns that sustain the temple's dome, which is considered one of the most original works of the colony and now visited by occasional tourists.",
+    "Garajonay National Park\nGarajonay National Park (Spanish: \"Parque nacional de Garajonay\" , ] ) is located in the center and north of the island of La Gomera, one of the Canary Islands (Spain).\n\n It was declared a national park in 1981 and a World Heritage Site by UNESCO in 1986.\n\n It occupies 40 km (15 sq mi) and it extends into each of the six municipalities on the island.",
+    "Tenerife\nTenerife ( ; ] ) is the largest and most populated island of the seven Canary Islands.\n\n It is also the most populated island of Spain, with a land area of 2034.38 km2 and 898,680 inhabitants, 43 percent of the total population of the Canary Islands.\n\n Tenerife is the largest and most populous island of Macaronesia.",
+    "Church of the Guanche People\nThe Church of the Guanche People (Spanish: \"Iglesia del Pueblo Guanche\" ) is a religious organisation, founded in 2001 in the city of San Cristóbal de La Laguna (Tenerife, Canary Islands, Spain).\n\n It aims to perpetuate and spread the pagan religion of the ancient Guanche people."
+   ]
+  },
+  {
+   "id": "a3117efd3e9dda87",
+   "gold": [
+    {
+     "sentence": "The Battle of Stones River or Second Battle of Murfreesboro, was fought from December 31, 1862, to January 2, 1863, in Middle Tennessee, as the culmination of the Stones River Campaign in the Western Theater of the American Civil War.",
+     "facts": {
+      "0.0": "The Battle of Stones River is also called the Second Battle of Murfreesboro.",
+      "0.1": "The Battle of Stones River was fought from December 31, 1862, to January 2, 1863.",
+      "0.2": "The Battle of Stones River was fought in Middle Tennessee.",
+      "0.3": "The Battle of Stones River was the culmination of the Stones River Campaign.",
+      "0.4": "The Stones River Campaign took place in the Western Theater of the American Civil War."
+     }
+    },
+    {
+     "sentence": "The Battle of the Ch'ongch'on River, also known as the Battle of the Ch'ongch'on () or the Second Phase Campaign Western Sector (), was a decisive battle in the Korean War, and it took place from November 25 to December 2, 1950, along the Ch'ongch'on River Valley in the northwestern part of North Korea.",
+     "facts": {
+      "1.0": "The Battle of the Ch'ongch'on River is also known as the Battle of the Ch'ongch'on.",
+      "1.1": "The Battle of the Ch'ongch'on River is also known as the Second Phase Campaign Western Sector.",
+      "1.2": "The Battle of the Ch'ongch'on River was a decisive battle in the Korean War.",
+      "1.3": "The Battle of the Ch'ongch'on River took place from November 25 to December 2, 1950.",
+      "1.4": "The Battle of the Ch'ongch'on River took place along the Ch'ongch'on River Valley.",
+      "1.5": "The Ch'ongch'on River Valley is in the northwestern part of North Korea."
+     }
+    }
+   ],
+   "items": [
+    "Battle of Piqua\nThe Battle of Piqua, also known as the Battle of Pekowee or Pekowi, was part of the western campaign during the American Revolutionary War.\n\n Led by General George Rogers Clark, over 1,000 soldiers (among them Daniel Boone and Simon Kenton) crossed the Ohio River near present-day Cincinnati and burned five Shawnee villages, including Old Chillicothe, along the Little Miami River.\n\n Peter Loramie's Store, a British trading post-located in what was later Fort Loramie, Ohio in Shelby County, Ohio-, was also burned by Clark's men.\n\n The Shawnee gradually withdrew during the first few days before finally engaging American forces 7 miles west of Springfield, Ohio on August 8, 1780.\n\n Joseph Rogers, a cousin of George Rogers Clark, had previously accompanied him to Kentucky and was later captured by the Shawnee near Maysville.\n\n Despite having been adopted by the tribe, he was killed during the battle while trying to join American forces.",
+    "Battle of Gaines's Mill\nThe Battle of Gaines's Mill, sometimes known as the First Battle of Cold Harbor or the Battle of Chickahominy River, took place on June 27, 1862, in Hanover County, Virginia, as the third of the Seven Days Battles (Peninsula Campaign) of the American Civil War.\n\n Following the inconclusive Battle of Beaver Dam Creek (Mechanicsville) the previous day, Confederate General Robert E. Lee renewed his attacks against the right flank of the Union Army, relatively isolated on the northern side of the Chickahominy River.\n\n There, Brig. Gen. Fitz John Porter's V Corps had established a strong defensive line behind Boatswain's Swamp.\n\n Lee's force was destined to launch the largest Confederate attack of the war, about 57,000 men in six divisions.\n\n Porter's reinforced V Corps held fast for the afternoon as the Confederates attacked in a disjointed manner, first with the division of Maj. Gen. A.P. Hill, then Maj. Gen. Richard S. Ewell, suffering heavy casualties.\n\n The arrival of Maj. Gen. Stonewall Jackson's command was delayed, preventing the full concentration of Confederate force before Porter received some reinforcements from the VI Corps.",
+    "Battle of the Ch'ongch'on River\nThe Battle of the Ch'ongch'on River, also known as the Battle of the Ch'ongch'on () or the Second Phase Campaign Western Sector (), was a decisive battle in the Korean War, and it took place from November 25 to December 2, 1950, along the Ch'ongch'on River Valley in the northwestern part of North Korea.\n\n In response to the successful Chinese First Phase Campaign against the United Nations forces, General Douglas MacArthur launched the Home-by-Christmas Offensive to evict the Chinese forces from Korea and to end the war.\n\n Anticipating this reaction, the Chinese People's Volunteer Army Commander Peng Dehuai planned a counteroffensive, dubbed the \"Second Phase Campaign\", against the advancing UN forces.",
+    "Battle of Stones River\nThe Battle of Stones River or Second Battle of Murfreesboro, was fought from December 31, 1862, to January 2, 1863, in Middle Tennessee, as the culmination of the Stones River Campaign in the Western Theater of the American Civil War.\n\n Of the major battles of the Civil War, Stones River had the highest percentage of casualties on both sides.\n\n Although the battle itself was inconclusive, the Union Army's repulse of two Confederate attacks and the subsequent Confederate withdrawal were a much-needed boost to Union morale after the defeat at the Battle of Fredericksburg, and it dashed Confederate aspirations for control of Middle Tennessee.",
+    "Korean War\nThe Korean War (in South Korean Hangul: 한국전쟁 ; Hanja: 韓國戰爭 ; RR: \"Hanguk Jeonjaeng \" , \"Korean War\"; in North Korean Chosŏn'gŭl: 조국해방전쟁 ; Hancha: 祖國解放戰爭 ; MR: \"Choguk haebang chǒnjaeng \" , \"Fatherland Liberation War\"; 25 June 1950 – 27 July 1953) was a war between North Korea (with the support of China and the Soviet Union) and South Korea (with the principal support of the United States).\n\n The war began on 25 June 1950 when North Korea invaded South Korea.\n\n The United Nations, with the United States as the principal force, came to the aid of South Korea.\n\n China came to the aid of North Korea, and the Soviet Union also gave some assistance to the North.",
+    "The entries span Revolutionary War figures, battles, and units; a Scottish clan battle; a 17th-century Ukrainian-Polish battle; and a Civil War regiment. Benjamin Logan led Kentucky militia and statehood efforts; his brother John served in Virginia politics and became Kentucky’s first treasurer. Frontier conflicts included the 1780 Westervelt massacre, 1782 Blue Licks defeat, and Clark’s 1780 Piqua campaign. Other topics include Yorktown, Germantown, the",
+    "Battle of Port Republic\nThe Battle of Port Republic was fought on June 9, 1862, in Rockingham County, Virginia, as part of Confederate Army Maj. Gen. Thomas J. \"Stonewall\" Jackson's campaign through the Shenandoah Valley during the American Civil War.\n\n Port Republic was a fierce contest between two equally determined foes and was the most costly battle fought by Jackson's Army of the Valley during its campaign.\n\n Together, the battles of Cross Keys (fought the previous day) and Port Republic were the decisive victories in Jackson's Valley Campaign, forcing the Union armies to retreat and leaving Jackson free to reinforce Gen. Robert E. Lee for the Seven Days Battles outside Richmond, Virginia.",
+    "Second Battle of Fort Wagner\nThe Second Battle of Fort Wagner, also known as the Second Assault on Morris Island or the Battle of Fort Wagner, Morris Island, was fought on July 18, 1863, during the American Civil War.\n\n Union Army troops commanded by Brig. Gen. Quincy Gillmore, launched an unsuccessful assault on the Confederate fortress of Fort Wagner, which protected Morris Island, south of Charleston Harbor.\n\n The battle came one week after the First Battle of Fort Wagner.",
+    "Battle of Cross Keys\nThe Battle of Cross Keys was fought on June 8, 1862, in Rockingham County, Virginia, as part of Confederate Army Maj. Gen. Thomas J. \"Stonewall\" Jackson's campaign through the Shenandoah Valley during the American Civil War.\n\n Together, the battles of Cross Keys and Port Republic the following day were the decisive victories in Jackson's Valley Campaign, forcing the Union armies to retreat and leaving Jackson free to reinforce Gen. Robert E. Lee for the Seven Days Battles outside Richmond, Virginia.",
+    "The text covers Civil War battles, campaigns, and orders of battle. In June 1862, Stonewall Jackson’s victories at Cross Keys and Port Republic enabled him to join Robert E. Lee near Richmond. Lee’s Seven Days Battles (June 25–July 1) drove McClellan’s Union army from Richmond; Gaines’s Mill and Malvern Hill are highlighted. Later events include Lee’s Northern Virginia and Maryland campaigns, Antietam (22,717 casualties), Stones River"
+   ]
+  },
+  {
+   "id": "baa2c1bd51e971da",
+   "gold": [
+    {
+     "sentence": "The Livesey Hall War Memorial commemorates the fallen of World War I and World War II who had been employed by the South Suburban Gas Company of London.",
+     "facts": {
+      "0.0": "The Livesey Hall War Memorial commemorates the fallen of World War I.",
+      "0.1": "The Livesey Hall War Memorial commemorates the fallen of World War II.",
+      "0.2": "The commemorated fallen had been employed by the South Suburban Gas Company of London."
+     }
+    },
+    {
+     "sentence": " Over 60 million people were killed, which was about 3% of the 1940 world population (est. 2.3 billion).",
+     "facts": {
+      "1.0": "Over 60 million people were killed.",
+      "1.1": "The deaths were about 3% of the 1940 world population.",
+      "1.2": "The estimated 1940 world population was 2.3 billion."
+     }
+    }
+   ],
+   "items": [
+    "Livesey Hall War Memorial\nThe Livesey Hall War Memorial commemorates the fallen of World War I and World War II who had been employed by the South Suburban Gas Company of London.\n\n It is also a tribute to those employees who served in the wars.\n\n The monument was designed and executed by British sculptor Sydney March, of the March family of artists.",
+    "Wood Green War Memorial\nThe Wood Green War Memorial is located on the High Road, Wood Green, in the London Borough of Haringey.\n\n It was erected in 1920 and paid for by public subscription of the people of Wood Green to remember the men of the area who died during the First World War.\n\n It was subsequently adapted to include the dead of the Second World War.\n\n It is grade II listed with Historic England.",
+    "Vietnam War Memorial, Hanoi\nThe War Memorial in Hanoi is located across the Ba Dinh Square, across the Ho Chi Minh Mausoleum and close to Hanoi Citadel.\n\n Constructed in 1993 in a fusion of traditional Vietnamese and modernist architecture, the memorial commemorates men and women who sacrificed themselves during the Second Indochina War.\n\n The war is known by many names, e.g. as the American War in Vietnam.\n\n The memorial is a focal point for state functions, commemorating the war dead.",
+    "Rainham War Memorial\nThe Rainham War Memorial commemorates soldiers killed in both World Wars as well as civilian casualties of World War II.",
+    "Alamein Memorial\nThe Alamein Memorial is a Commonwealth War Graves Commission war memorial in the El Alamein War Cemetery, El Alamein, Egypt.\n\n The memorial commemorates 11,866 Commonwealth forces members who died during World War II.\n\n The memorial was designed by Hubert Worthington and unveiled by Viscount Montgomery of Alamein on 24 October 1954.",
+    "World War II casualties\nWorld War II was the deadliest military conflict in history in absolute terms of total casualties.\n\n Over 60 million people were killed, which was about 3% of the 1940 world population (est. 2.3 billion).\n\n The tables below give a detailed country-by-country count of human losses.\n\n World War II fatality statistics vary, with estimates of total deaths ranging from 50 million to more than 80 million.\n\n The higher figure of over 80 million includes deaths from war-related disease and famine.\n\n Civilians killed totalled 50 to 55 million, including 19 to 28 million from war-related disease and famine.\n\n Military deaths from all causes totalled 21 to 25 million, including deaths in captivity of about 5 million prisoners of war.",
+    "Tower Hill Memorial\nThe Tower Hill Memorial is a Commonwealth War Graves Commission war memorial on the south side of Trinity Square Gardens, in London, England.\n\n The memorial commemorates those from the Merchant Navy and fishing fleets who died during both world wars and have \"no grave but the sea\".\n\n The memorial was designed by Edwin Lutyens with sculpture work by William Reid Dick, the Second World War extension was designed by Edward Maufe with sculpture work by Charles Wheeler.",
+    "Portsmouth Naval Memorial\nThe Portsmouth Naval Memorial, sometimes known as Southsea Naval Memorial, is a war memorial in Portsmouth, Hampshire, England, on Southsea Common beside Clarence Esplanade, between Clarence Pier and Southsea Castle.\n\n The memorial commemorates approximately 25,000 British and Commonwealth sailors who were lost in the World Wars, around 10,000 sailors in the First World War and 15,000 in the Second World War.\n\n The memorial features a central obelisk, with names of the dead on bronze plaques arranged around the memorial according to the year of death.",
+    "Freetown Memorial\nThe Freetown Memorial is a Commonwealth War Graves Commission war memorial located outside the Secretariate Building in Freetown, Sierra Leone.\n\n The memorial generally commemorates Soldiers from Sierra Leone who died whilst serving with the Royal West African Frontier Force in West Africa and whose graves are not known.\n\n The Freetown Memorial commemorates 1,109 First World War casualties and 247 from the Second World War.",
+    "Arras Flying Services Memorial\nThe Arras Flying Services Memorial Commonwealth War Graves Commission war memorial in the Faubourg d'Amiens Cemetery, Arras, France.\n\n The memorial commemorates nearly 1,000 airmen from forces of the Commonwealth who were killed on the Western Front during World War I and who have no known grave.\n\n The memorial was designed by Edwin Lutyens, sculpted by William Reid Dick and unveiled by Hugh Trenchard, 1st Viscount Trenchard, Marshal of the Royal Air Force on 31 July 1932."
+   ]
+  },
+  {
+   "id": "f6d599d6ee2e8af2",
+   "gold": [
+    {
+     "sentence": "Carly Gullickson (born November 26, 1986) is a former American professional tennis player.",
+     "facts": {
+      "0.0": "Carly Gullickson was born on November 26, 1986.",
+      "0.1": "Carly Gullickson is a former American professional tennis player."
+     }
+    },
+    {
+     "sentence": "Francesca Schiavone (] ; born 23 June 1980 in Milan) is an Italian tennis player who turned professional in 1998.",
+     "facts": {
+      "1.0": "Francesca Schiavone was born on 23 June 1980 in Milan.",
+      "1.1": "Francesca Schiavone is an Italian tennis player.",
+      "1.2": "Francesca Schiavone turned professional in 1998."
+     }
+    }
+   ],
+   "items": [
+    "Nicole Strausak\nNicole Strausak (born October 21, 1971) is a Swiss curler who retired from competitive curling in March 2005.\n\n Amongst other awards, she received a World Junior Silver medal in 1991, a European Silver medal in 1993 and a World Silver medal in 2000.\n\n In 1999, at the European Curling Championships in Chamonix, as well as receiving a Bronze medal, she was awarded the Fair Play & Friendly Award by her fellow athletes for her conduct and attitude, on and off the ice.",
+    "Carly Gullickson\nCarly Gullickson (born November 26, 1986) is a former American professional tennis player.",
+    "Francesca Schiavone\nFrancesca Schiavone (] ; born 23 June 1980 in Milan) is an Italian tennis player who turned professional in 1998.\n\n She won the 2010 French Open singles title, becoming the first Italian woman to win a Grand Slam event in singles.\n\n She was also runner-up at the 2011 French Open.\n\n Her career high ranking is world No. 4, achieved on 31 January 2011.\n\n To date, Schiavone is the last one handed-backhand player to win a Grand Slam title on the women's tour.",
+    "2007 Kremlin Cup – Women's Doubles\nKvěta Peschke and Francesca Schiavone were the defending champions, but Schiavone chose not to participate, and only Peschke competed that year.",
+    "2005 Challenge Bell – Doubles\nCarly Gullickson and María Emilia Salerni were the defending champions, but Gullickson decided not to participate this year.\n\n Salerni partnered with Marion Bartoli, but withdrew from their semifinal match against Līga Dekmeijere and Ashley Harkleroad.",
+    "2010 US Open – Mixed Doubles\nCarly Gullickson and Travis Parrott were the defending champions, but lost in the first round to Gisela Dulko and Pablo Cuevas 2–6, 4–6.",
+    "2010 Toray Pan Pacific Open – Doubles\nAlisa Kleybanova and Francesca Schiavone were the defending champions.\n\n Both were present, but competed with different partners.Kleybanova competed with Hsieh Su-wei, but lost in the first round to Benešová and Záhlavová-Strýcová, while Schiavone competed with Tathiana Garbin, however withdrew before their quarterfinal match against Lisa Raymond and Rennae Stubbs.",
+    "2006 Qatar Ladies Open – Doubles\nAlicia Molik and Francesca Schiavone were the defending champions, but Molik did not compete this year.\n\n Schiavone teamed up with Květa Peschke and lost in querterfinals to Elena Likhovtseva and Vera Zvonareva.",
+    "2015 Apia International Sydney – Women's Doubles\nTímea Babos and Lucie Šafářová were the defending champions, but chose not to participate together.\n\n Babos played alongside Kristina Mladenovic, but lost in the semifinals to Raquel Kops-Jones and Abigail Spears.\n\n Šafářová teamed up with Belinda Bencic, but lost in the first round to Kimiko Date-Krumm and Karolína Plíšková.\n\n<br>",
+    "2006 Generali Ladies Linz – Doubles\nGisela Dulko and Květa Peschke were the defending champions, but competed this year with different partners.\n\n Dulko teamed up with Michaëlla Krajicek and lost in first round to Eleni Daniilidou and Jasmin Wöhr, while Peschke teamed up with Francesca Schiavone and had to withdrew in their semifinal match (against Corina Morariu and Katarina Srebotnik) as Schiavone had her right knee injured."
+   ]
+  },
+  {
+   "id": "e638d94888b3b986",
+   "gold": [
+    {
+     "sentence": "Samantha Cristoforetti (] ; born 26 April 1977 in Milan) is an Italian European Space Agency astronaut, Italian Air Force pilot and engineer.",
+     "facts": {
+      "0.0": "Samantha Cristoforetti was born 26 April 1977 in Milan.",
+      "0.1": "Samantha Cristoforetti is an Italian European Space Agency astronaut.",
+      "0.2": "Samantha Cristoforetti is an Italian Air Force pilot.",
+      "0.3": "Samantha Cristoforetti is an Italian engineer."
+     }
+    },
+    {
+     "sentence": "Jean-Loup Jacques Marie Chrétien (born 20 August 1938) is a French retired \"Général de Brigade\" (brigadier general) in the \"Armée de l'Air\" (French air force), and a former CNES spationaut.",
+     "facts": {
+      "1.0": "Jean-Loup Jacques Marie Chrétien was born 20 August 1938.",
+      "1.1": "Jean-Loup Jacques Marie Chrétien is French.",
+      "1.2": "Jean-Loup Jacques Marie Chrétien is retired.",
+      "1.3": "Jean-Loup Jacques Marie Chrétien holds the rank of Général de Brigade (brigadier general).",
+      "1.4": "Jean-Loup Jacques Marie Chrétien served as a general in the Armée de l'Air (French air force).",
+      "1.5": "Jean-Loup Jacques Marie Chrétien is a former CNES spationaut."
+     }
+    }
+   ],
+   "items": [
+    "Christer Fuglesang\nArne Christer Fuglesang (] ) (born March 18, 1957 in Stockholm) is a Swedish physicist and an ESA astronaut.\n\n He was first launched aboard the STS-116 Space Shuttle mission on December 10, 2006, at 01:47 GMT, making him the first Swedish citizen in space.",
+    "The profiles cover NASA computer scientist Annie Easley and space espresso: ISSpresso’s first in-space coffee, brewed by Samantha Cristoforetti in 2015. They describe astrophysicist Jean-Loup Puget; missions Soyuz TM-7/T-6 and French astronaut Jean-Loup Chrétien; Patrick Baudry; Project Highwater; Apollo 7; SpaceShipOne’s first privately funded human spaceflight; the Soyuz rocket; Lockheed test pilot John Christiansen",
+    "Claude Nicollier\nClaude Nicollier (born 2 September 1944 in Vevey, Switzerland) is the first astronaut from Switzerland.\n\n He has flown on four Space Shuttle missions.\n\n His first spaceflight (STS-46) was in 1992, and his final spaceflight (STS-103) was in 1999.\n\n He took part in two servicing missions to the Hubble Space Telescope (called STS-61 and STS-103).\n\n During his final spaceflight he participated in a spacewalk, becoming the first European Space Agency astronaut to do so during a Space Shuttle mission (previous ESA astronauts conducted spacewalks aboard \"Mir\", see List of spacewalks and moonwalks 1965–1999).\n\n In 2000 he was assigned to the Astronaut Office Extravehicular Activity Branch, while maintaining a position as Lead ESA Astronaut in Houston.\n\n Nicollier retired from ESA in April 2007.",
+    "Philippe Perrin\nPhilippe Perrin (Colonel, French Air Force) (born January 6, 1963) is a French test pilot and former CNES and European Space Agency astronaut.",
+    "Patrick Baudry\nPatrick Pierre Roger Baudry (born March 6, 1946 in Cameroon), is a retired Lieutenant Colonel in the French Air Force and a former CNES astronaut.\n\n In 1985, he became the second French citizen in space, after Jean-Loup Chrétien, when he flew aboard NASA's Space Shuttle mission STS-51-G.",
+    "Jean-Loup Puget\nJean-Loup Puget (born 7 March 1947) is a French astrophysicist.\n\n His current research interests lie in the Cosmic Microwave Background.\n\n Jean-Loup Puget and his collaborators reported the first identification of the Cosmic infrared background using COBE data.\n\n He is also, along with Alain Léger, credited with the origin of the hypothesis that the series of infrared lines observed in numerous astrophysical objects are caused by emission from polycyclic aromatic hydrocarbons.\n\n He is currently principal investigator of the HFI module of the Planck space mission.",
+    "Jean-François Clervoy\nJean-François André Clervoy (born 19 November 1958) is a French engineer and a CNES and ESA astronaut.\n\n He is a veteran of three NASA Space Shuttle missions.",
+    "Samantha Cristoforetti\nSamantha Cristoforetti (] ; born 26 April 1977 in Milan) is an Italian European Space Agency astronaut, Italian Air Force pilot and engineer.\n\n She holds the record for the longest uninterrupted spaceflight of a European astronaut (199 days, 16 hours), and until June 2017 held the record for the longest single space flight by a woman until this was broken by Peggy Whitson.\n\n She is also the first Italian woman in space.\n\n Samantha Cristoforetti is also known as the first person who brewed an espresso coffee in space.",
+    "Jean-Loup Chrétien\nJean-Loup Jacques Marie Chrétien (born 20 August 1938) is a French retired \"Général de Brigade\" (brigadier general) in the \"Armée de l'Air\" (French air force), and a former CNES spationaut.\n\n He flew on two Franco-Soviet space missions and a NASA Space Shuttle mission.\n\n Chrétien was the first Frenchman and the first western European in space.",
+    "Soyuz T-6\nSoyuz T-6 was a manned spaceflight to Earth orbit to the Salyut 7 space station in 1982.\n\n Along with two Soviet cosmonauts, the crew included a Frenchman, Jean-Loup Chrétien."
+   ]
+  },
+  {
+   "id": "23e9ca3a3c5ff058",
+   "gold": [
+    {
+     "sentence": " is a board game created by Glenn Drover and published by Eagle Games in 2003.",
+     "facts": {
+      "0.0": "The board game in this sentence was created by Glenn Drover.",
+      "0.1": "The board game in this sentence was published by Eagle Games in 2003."
+     }
+    },
+    {
+     "sentence": "Can't Stop is a board game designed by Sid Sackson originally published by Parker Brothers in 1980, and was long out of print in the United States.",
+     "facts": {
+      "1.0": "Can't Stop is a board game designed by Sid Sackson.",
+      "1.1": "Can't Stop was originally published by Parker Brothers in 1980.",
+      "1.2": "Can't Stop was long out of print in the United States."
+     }
+    }
+   ],
+   "items": [
+    "Uncle Wiggily (board game)\nUncle Wiggily Game is a track board game based on a character in a series of children's books by American writer Howard Roger Garis.\n\n The game is of the \"racing\" variety in the style of the European \"Goose Game\".\n\n Players advance along the track from Uncle Wiggily's Bungalow to Dr. Possum's House.\n\n There is no optimal strategy involved as play entirely rests upon a random drawing of the cards.\n\n The game was first published by Milton Bradley in 1916 and has seen several editions with minor modifications over the years.\n\n \"Uncle Wiggily\" remains one of the first and favorite games of childhood, and, with \"Candy Land\", is considered a classic juvenile American board game.",
+    "Atari Corporation, formed in 1984 after Jack Tramiel bought Atari’s computer and console divisions, made systems including the ST, 7800, Lynx, and Jaguar before merging with JTS in 1996; Hasbro acquired its IP in 1998. Atari-related computing included Megamax C, a fast ST compiler; TOS/GEM and efforts toward multitasking successors; Happy disk-drive upgrades; ATASCII for 8-bit computers; and the ST, an early",
+    "TriBond (1990) is a knowledge-and-reasoning board game sold in 14 countries. Tapp-Tarock, an Austrian three-player tarot game recorded in 1821, was once popular in Viennese cafés. Three-card brag, a 16th-century British bluffing game descended from Primero, helped inspire poker. Triomphe, a late-15th-century trick-taking game, introduced randomly chosen trumps and inspired many later games. Ombre",
+    "Attack! (board game)\nAttack!\n\n is a board game created by Glenn Drover and published by Eagle Games in 2003.\n\n It is a light war game that is midway between \"Risk\" and \"Axis and Allies\" in complexity.\n\n The game is loosely set in the 1930s and includes plastic pieces featuring tanks, planes, infantry, and artillery.\n\n \"Attack!\"\n\n won the Origins Award for \"Best Historical Game 2003\".",
+    "Can't Stop (board game)\nCan't Stop is a board game designed by Sid Sackson originally published by Parker Brothers in 1980, and was long out of print in the United States.\n\n It was reprinted by Face 2 Face Games in 2007.\n\n An iOS version was developed by Playdek and released in 2012.\n\n The goal of the game is to \"claim\" (get to the top of) three of the columns before any of the other players can.\n\n But the more that the player risks rolling the dice during a turn, the greater the risk of losing the advances made during that turn.",
+    "Alhambra (board game)\nAlhambra (German: Der Palast von Alhambra , literally \"The Palace of the Alhambra\") is a 2003 tile-based German-style board game designed by Dirk Henn.\n\n It was originally published in Germany by Queen Games in a language-interdependent version; an English-specific version was released in North America by the now-defunct Überplay.\n\n The game is an Arabian-themed update, set during the construction of the Alhambra palace in 14th century Granada, of the 1998 stock trading board game \"Stimmt So!\"\n\n, which in turn was an update of the 1992 mafia influence board game \"Al Capone\"; the original version was subsequently released as \"\".",
+    "Castle Ravenloft Board Game\nCastle Ravenloft Board Game is a 2010 board game published by Wizards of the Coast.\n\n It was the first game released in the Dungeons & Dragons Adventure System board game series.",
+    "Kill Doctor Lucky\nKill Doctor Lucky is a humorous board game designed by James Ernest and released in 1996 by Cheapass Games.\n\n In 1998, \"Kill Doctor Lucky\" won the Origins Award for \"Best Abstract Board Game of 1997\".",
+    "Francis Tresham (game designer)\nFrancis Tresham is a United Kingdom-based board game designer who has been producing board games since the early 1970s.\n\n Tresham founded and ran games company Hartland Trefoil (founded 1971), a company well known for its \"Civilization\" board game, until its sale to MicroProse in 1997.\n\n His \"1829\" game was the first of the \"18xx\" board game series and some of his board games have inspired Sid Meier computer games such as \"Railroad Tycoon\".",
+    "The entries cover games across several eras and genres: Japan-only 1989 Famicom game *A Week of Garfield*, based on the comic; *Kill Doctor Lucky*, a humorous 1996 board game that won a 1997 Origins Award; Sid Sackson’s dice-risk racing game *Can’t Stop* (1980; reprinted 2007, iOS 2012); 2003 light war game *Attack!*, also an Origins Award winner; the luck-based"
+   ]
+  },
+  {
+   "id": "73a2abf39efc0c5c",
+   "gold": [
+    {
+     "sentence": "Scott Treleaven is a Canadian artist whose work employs a variety of media including collage, film, video, drawing, photography and installation.",
+     "facts": {
+      "0.0": "Scott Treleaven is a Canadian artist.",
+      "0.1": "Scott Treleaven's work employs a variety of media.",
+      "0.2": "The media employed in Scott Treleaven's work include collage, film, video, drawing, photography and installation."
+     }
+    },
+    {
+     "sentence": "Edmund Mortimer (21 August 1874 – 21 May 1944) was an American actor and film director.",
+     "facts": {
+      "1.0": "Edmund Mortimer's dates are 21 August 1874 to 21 May 1944.",
+      "1.1": "Edmund Mortimer was an American actor.",
+      "1.2": "Edmund Mortimer was an American film director."
+     }
+    }
+   ],
+   "items": [
+    "Alexander Butler\nAlexander Butler was a British film director who made over sixty features and short films during the 1910s and 1920s including many for G.B. Samuelson's production company.\n\n Butler directed several British films in Hollywood in 1920, where Samuelson had made an arrangement with Universal Pictures.\n\n Amongst his notable films are the Sherlock Holmes adaptation \"The Valley of Fear\" (1916) and the early British horror film \"The Beetle\" (1919).",
+    "Scott Free Productions\nScott Free Productions is a British film and television production company founded by filmmakers and brothers Ridley Scott and Tony Scott.\n\n They formed the feature film development company Percy Main Productions in 1980, naming the company after the English village Percy Main, where their father grew up.\n\n The company was renamed to Scott Free Productions in 1995.\n\n Scott Free has produced films ranging from the 2000 Hollywood blockbuster \"Gladiator\" (2000) to \"smaller pictures\" like \"Cracks\" (2009).\n\n Between productions of \"White Squall\" (1996) and \"G.I. Jane\" (1997), Ridley Scott reorganized the company.",
+    "Tommy Atkins (director)\nTommy Atkins was an American director of the silent and early sound film eras.\n\n Born on July 18, 1887 in Springfield, Massachusetts, he would make his entrance into the film industry as the assistant director to Ralph Ince on the 1920 silent film, \"Out of the Snows\".\n\n It would be another eight years before he would make another film, again as assistant director, this time for FBO Pictures, on another silent film, \"Crooks Can't Win\".\n\n He'd work as the assistant director on another sixteen films between 1928 and 1934, the most notable of which would be 1933's \"Morning Glory\", directed by Lowell Sherman and starring Katharine Hepburn and Douglas Fairbanks Jr..\n\n In 1934 he would be given the chance to helm his first picture, \"The Silver Streak\", which was one of the top money-makers for RKO Pictures that year.\n\n He would only direct two more films, the second of which, \"Hi, Gaucho!\n\n\", he would also write the story for.",
+    "F. Keogh Gleason\nFrancis Keogh Gleason (April 14, 1906 – December 18, 1982) was a resident set decorator at MGM studios for over 40 years.\n\n In that time he won 4 Academy Awards (for \"An American in Paris\" in 1951, \"The Bad and the Beautiful\" in 1952, \"Somebody Up There Likes Me\" in 1956 and \"Gigi\" in 1958) and was nominated an additional 3 times.\n\n Gleason graduated from the Minnesota School of Fine Arts (now known as the Minneapolis College of Art and Design) in 1927.",
+    "Dan Ouellette\nGiger and Beksinski, and he has been featured in magazines internationally.\n\n David Bowie commented while looking at Dan's art that he has noticed a strong influence of science fiction on contemporary art.\n\n Giger saw a different aspect, saying simply \"Very bony.\"\n\n He grew to adore the cinema of Fellini and later to marvel at Lynch's \"Eraserhead\".\n\n Rather than pursue a formal education in the fine arts he chose to study the craft of film making and after college he became a production designer working on feature films in New York City starting with his work as a production designer for Hal Hartley in 1990 with Trust and then, in 1992, with Simple Men.",
+    "Edmund Mortimer (actor)\nEdmund Mortimer (21 August 1874 – 21 May 1944) was an American actor and film director.\n\n He appeared in 251 films between 1913 and 1945.\n\n He also directed 23 films between 1918 and 1928.\n\n He was born in New York, New York and died in Los Angeles, California.",
+    "Scott Treleaven\nScott Treleaven is a Canadian artist whose work employs a variety of media including collage, film, video, drawing, photography and installation.",
+    "John Dunning (film producer)\nJohn Dunning (April 27, 1927–September 19, 2011) was a pioneering Canadian film producer from Montreal who co-founded the Canadian film production company Cinépix and produced early works by notable Canadian directors David Cronenberg and Ivan Reitman.\n\n Dunning launched Cinépix with partner André Link in Montreal in the early 1960s.\n\n Their biggest commercial success—and the first Canadian box office hit—came with Reitman’s \"Meatballs\" (1979).",
+    "John Biddle (yachting cinematographer)\nJohn Scott Biddle (1925–2008) was a foremost yachting cinematographer and lecturer, establishing a film-making career that spanned more than forty years.\n\n His films captured not only the technical aspects of sailing but also the human story in events as tranquil as a Nova Scotia cruise and as grand as the America's Cup Races.",
+    "Ridley Scott\nSir Ridley Scott (born 30 November 1937) is an English film director and producer.\n\n Following his commercial breakthrough with the science-fiction horror film \"Alien\" (1979), his best known works include the neo-noir dystopian science fiction film \"Blade Runner\" (1982), historical drama and Best Picture Oscar winner \"Gladiator\" (2000), and science fiction film \"The Martian\" (2015)."
+   ]
+  },
+  {
+   "id": "e438db1b9ff31dc2",
+   "gold": [
+    {
+     "sentence": "Haunted is the second album by American singer-songwriter Poe, released in 2000 (see 2000 in music) after a five-year hiatus from her debut album \"Hello\" in 1995.",
+     "facts": {
+      "0.0": "Haunted is the second album by American singer-songwriter Poe.",
+      "0.1": "Haunted was released in 2000.",
+      "0.2": "Haunted was released after a five-year hiatus from Poe's debut album 'Hello', which came out in 1995."
+     }
+    },
+    {
+     "sentence": " The self-produced album was created as a tribute to her father, and counterpart to her brother Mark Z. Danielewski's novel \"House of Leaves\".",
+     "facts": {
+      "1.0": "Haunted was self-produced.",
+      "1.1": "Haunted was created as a tribute to Poe's father.",
+      "1.2": "Haunted was created as a counterpart to the novel 'House of Leaves' by Poe's brother Mark Z. Danielewski."
+     }
+    },
+    {
+     "sentence": " A bestseller, it has been translated into a number of languages, and is followed by a companion piece, \"The Whalestoe Letters\".",
+     "facts": {
+      "2.0": "Haunted is a bestseller.",
+      "2.1": "Haunted has been translated into a number of languages.",
+      "2.2": "Haunted is followed by a companion piece, 'The Whalestoe Letters'."
+     }
+    }
+   ],
+   "items": [
+    "Epic Pooh\n\"Epic Pooh\" is a 1978 article by the British science fiction writer Michael Moorcock, which reviews the field of epic fantasy, with a particular focus on epic fantasy written for children.\n\n In it Moorcock critiques J. R. R. Tolkien's \"The Lord of the Rings\" for its politically conservative assumptions and for being escapist literature.",
+    "The Spectre Knight\nThe Spectre Knight is a one-act \"fanciful operetta\" with a libretto by James Albery and music by Alfred Cellier.\n\n It was first performed on 9 February 1878 at the Opera Comique by the Comedy Opera Company as a companion piece to \"The Sorcerer\".\n\n The piece continued to run until 23 March 1878 and was revived by the company from 28 May 1878 to 10 August 1878 as a companion piece to \"H.M.S. Pinafore\".\n\n The piece had a run in New York in 1880 and was toured in Britain and America.",
+    "The Pig, or Václav Havel's Hunt for a Pig\nThe Pig, or Václav Havel's Hunt for a Pig is the final work by Václav Havel, co-authored by Vladimír Morávek.\n\n The English translation is by Edward Einhorn .\n\n Originally a short dialogue from 1987 (entitled simply \"The Pig\") and printed in a samizdat, the piece is a comic (and true) story of Václav Havel’s efforts to hold a pig roast for his friends.",
+    "Haunted (Poe album)\nHaunted is the second album by American singer-songwriter Poe, released in 2000 (see 2000 in music) after a five-year hiatus from her debut album \"Hello\" in 1995.\n\n The self-produced album was created as a tribute to her father, and counterpart to her brother Mark Z. Danielewski's novel \"House of Leaves\".",
+    "H. L. Mencken\nHenry Louis Mencken (September 12, 1880 – January 29, 1956) was an American journalist, satirist, cultural critic and scholar of American English.\n\n Known as the \"Sage of Baltimore\", he is regarded as one of the most influential American writers and prose stylists of the first half of the twentieth century.\n\n He commented widely on the social scene, literature, music, prominent politicians and contemporary movements.\n\n His satirical reporting on the Scopes trial, which he dubbed the \"Monkey Trial\", also gained him attention.",
+    "Henry James\nHenry James, OM ((1843--)15 1843 – (1916--)28 1916 ) was an American author regarded as a key transitional figure between literary realism and literary modernism, and is considered by many to be among the greatest novelists in the English language.\n\n He was the son of Henry James, Sr. and the brother of renowned philosopher and psychologist William James and diarist Alice James.",
+    "A Predicament\n\"A Predicament\" is a humorous short story by Edgar Allan Poe, usually combined with its companion piece \"How to Write a Blackwood Article.\"\n\n It was originally titled \"The Scythe of Time\".\n\n The paired stories parody the Gothic sensation tale, popular in England and America since the early 19th century.",
+    "The Frost King\n\"The Frost King\" was a short story about King Jack Frost written by 11-year-old Helen Keller.\n\n Keller's teacher, Anne Sullivan, had mentioned that the autumn leaves were \"painted ruby, emerald, gold, crimson, and brown,\" and Keller, by her own account, imagined fairies doing the work.\n\n Keller wrote a story about how a cask of jewels, being transported by fairy servants, had melted in the sun and covered the leaves.\n\n As a birthday gift, Keller sent the story to Michael Anagnos, head of the Perkins School for the Blind, who published the story in \"The Mentor,\" the Perkins alumni magazine.\n\n It was picked up by \"The Goodson Gazette\", a journal on deaf-blind education, based in Virginia.",
+    "James Poe\nJames Poe (October 4, 1921 – January 24, 1980) was an American film and television screenwriter.\n\n He is best known for his work on the movies \"Around the World in 80 Days\" for which he jointly won an Academy Award in 1956, \"Cat on a Hot Tin Roof\", \"Summer and Smoke\", \"Lilies of the Field\", and \"They Shoot Horses, Don't They?\n\n\".",
+    "Donald Allen\nDonald Merriam Allen (Iowa, 1912 – San Francisco, August 29, 2004) was an influential editor, publisher, and translator of contemporary American literature.\n\n He is perhaps best known for his project \"The New American Poetry 1945-1960\" (1960), among the several important anthologies of contemporary American innovative writing he made available to the public.\n\n Allen began his working life as a Japanese translator within the US military, serving in WWII.\n\n After his military service, Allen became an editor at Grove Press, where he worked for sixteen years.\n\n He was one of the first translators of the Romanian-French Absurdist playwright Eugène Ionesco, and Allen's 1958 volume \"Four Plays of Eugène Ionesco\" helped to introduce the playwright to American audiences in the 1960s."
+   ]
+  },
+  {
+   "id": "8915ccbdb129a4ea",
+   "gold": [
+    {
+     "sentence": " The title and cover are an homage to the Beatles album, 926 East McLemore Avenue being the address of the Stax Studios in Memphis, as Abbey Road was for EMI Studios in London, which was soon renamed Abbey Road Studios.",
+     "facts": {
+      "0.0": "The title and cover are an homage to the Beatles album Abbey Road.",
+      "0.1": "926 East McLemore Avenue is the address of the Stax Studios in Memphis.",
+      "0.2": "Abbey Road was the address of EMI Studios in London.",
+      "0.3": "EMI Studios in London was soon renamed Abbey Road Studios."
+     }
+    },
+    {
+     "sentence": " This road is best known for the Abbey Road Studios and the 1969 album, \"Abbey Road\", by The Beatles.",
+     "facts": {
+      "1.0": "This road is best known for the Abbey Road Studios.",
+      "1.1": "This road is best known for the 1969 album Abbey Road by The Beatles."
+     }
+    }
+   ],
+   "items": [
+    "Westminster tube station\nWestminster is a London Underground station in the City of Westminster.\n\n It is served by the Circle, District and Jubilee lines.\n\n On the Circle and District lines, the station is between St. James's Park and Embankment, and on the Jubilee line it is between Green Park and Waterloo.\n\n It is in Travelcard Zone 1.\n\n The station is located at the corner of Bridge Street and Victoria Embankment and is close to the Houses of Parliament, Westminster Abbey, Parliament Square, Whitehall, Westminster Bridge, and the London Eye.\n\n Also close by are Downing Street, the Cenotaph, Westminster Millennium Pier, the Treasury, the Foreign and Commonwealth Office, and the Supreme Court.",
+    "Abbey Road, London\nAbbey Road is a thoroughfare in the borough of Camden and the City of Westminster in London, running roughly northwest to southeast through St. John's Wood, near Lord's Cricket Ground.\n\n It is part of the B507 road.\n\n This road is best known for the Abbey Road Studios and the 1969 album, \"Abbey Road\", by The Beatles.",
+    "Doughty Street\nDoughty Street is a broad tree lined street in the Holborn district of the London Borough of Camden.\n\n The southern part is a continuation of the short John Street, which comes off Theobald's Road.\n\n The northern part crosses Guilford Street and ends at Mecklenburgh Square.\n\n The street is named after a landlord of the area at the time it was built, Henry Doughty.",
+    "Come Together\n\"Come Together\" is a song by the Beatles written primarily by John Lennon and credited to Lennon–McCartney.\n\n The song is the opening track on the album \"Abbey Road\" and was also released as a single coupled with \"Something\".\n\n The song reached the top of the charts in the United States and peaked at No. 4 in the United Kingdom.",
+    "Westminster St Margaret and St John\nSt Margaret was an ancient parish in the City and Liberty of Westminster and the county of Middlesex.\n\n It included the core of modern Westminster, including the Palace of Westminster and the area around, but not including Westminster Abbey.\n\n In 1727 it was divided into St Margaret's and St John's, to coincide with the building of the Church of St John the Evangelist, constructed by the Commission for Building Fifty New Churches in Smith Square to meet the demands of the growing population, but there continued to be a single vestry for the parishes of St Margaret and St John.\n\n This was reformed in 1855 by the Metropolis Management Act, and the two parishes formed the Westminster District until 1887.\n\n In 1889 St Margaret and St John became part of the County of London.\n\n The vestry was abolished in 1900, to be replaced by Westminster City Council, but St Margaret and St John continued to have a nominal existence until 1922.",
+    "McLemore Avenue\nMcLemore Avenue is a 1970 album by Booker T. & the M.G.s, consisting entirely of mostly instrumental covers of songs from the Beatles' album \"Abbey Road\" (released only months earlier, in September 1969).\n\n The title and cover are an homage to the Beatles album, 926 East McLemore Avenue being the address of the Stax Studios in Memphis, as Abbey Road was for EMI Studios in London, which was soon renamed Abbey Road Studios.",
+    "City of Westminster Magistrates' Court\nThe City of Westminster Magistrates' Court was a magistrates' court located at 70 Horseferry Road, in the City of Westminster, London.\n\n It was originally called Horseferry Road Magistrates' Court, after the road in which it was sited.\n\n However, it was renamed in July 2006 following the closure of Bow Street Magistrates' Court.\n\n It served as the court where the Chief Magistrate of England and Wales sat, and all extradition and terrorism-related cases passed through the court.\n\n The court closed permanently on 22 September 2011, and was replaced on 27 September 2011 with Westminster Magistrates' Court, built on the site of Marylebone Magistrates' Court at 181 Marylebone Road.",
+    "Temple Bar, London\nTemple Bar was the principal ceremonial entrance to the City of London on its western side from the City of Westminster.\n\n It is situated on the historic royal ceremonial route from the Tower of London to the Palace of Westminster, the two chief residences of the mediaeval English monarchs, and from the Palace of Westminster to St Paul's Cathedral.\n\n The road east of Temple Bar and within the City is Fleet Street, the road to the west, in Westminster, is The Strand.\n\n At Temple Bar the Corporation of the City of London formerly erected a barrier to regulate trade into the City.\n\n The 19th century Royal Courts of Justice are located next to it on its north side, having been moved from Westminster Hall.\n\n To its south is the Temple Church and the Inner Temple and Middle Temple Inns of Court.\n\n As the most important entrance to the City of London from Westminster, it was formerly long the custom for the monarch to halt at Temple Bar before entering the City of London, in order for the Lord Mayor to offer the Corporation's pearl-encrusted Sword of State as a token of loyalty.",
+    "Westminster\nWestminster ( ) is an area of central London within the City of Westminster, part of the West End, on the north bank of the River Thames.\n\n Westminster's concentration of visitor attractions and historic landmarks, one of the highest in London, includes the Palace of Westminster, Buckingham Palace, Westminster Abbey and Westminster Cathedral.",
+    "Temple Bar, London\nThe term \"Temple Bar\" strictly refers to a notional bar or barrier across the route, but is commonly used to refer to the 17th-century ornamental Baroque arched gateway designed by Christopher Wren which spanned the road until its removal in 1878.\n\n Wren's arch was preserved and was re-erected in 2004 in the City, in Paternoster Square next to St Paul's Cathedral."
+   ]
+  },
+  {
+   "id": "2937f34f656c6584",
+   "gold": [
+    {
+     "sentence": "Gunnar Eric Nelson (born September 20, 1967) is an American musician, singer, and songwriter and international multi-platinum recording artist.",
+     "facts": {
+      "0.0": "Gunnar Eric Nelson was born on September 20, 1967.",
+      "0.1": "Gunnar Eric Nelson is an American musician.",
+      "0.2": "Gunnar Eric Nelson is an American singer.",
+      "0.3": "Gunnar Eric Nelson is an American songwriter.",
+      "0.4": "Gunnar Eric Nelson is an international multi-platinum recording artist."
+     }
+    },
+    {
+     "sentence": "Florence Leontine Mary Welch (born 28 August 1986) is an English musician, singer and songwriter, best known as the vocalist of indie rock band Florence and the Machine.",
+     "facts": {
+      "1.0": "Florence Leontine Mary Welch was born on 28 August 1986.",
+      "1.1": "Florence Leontine Mary Welch is an English musician.",
+      "1.2": "Florence Leontine Mary Welch is an English singer.",
+      "1.3": "Florence Leontine Mary Welch is an English songwriter.",
+      "1.4": "Florence Leontine Mary Welch is best known as the vocalist of the indie rock band Florence and the Machine."
+     }
+    }
+   ],
+   "items": [
+    "Gunnar Nelson (musician)\nGunnar Eric Nelson (born September 20, 1967) is an American musician, singer, and songwriter and international multi-platinum recording artist.",
+    "Florence Welch\nFlorence Leontine Mary Welch (born 28 August 1986) is an English musician, singer and songwriter, best known as the vocalist of indie rock band Florence and the Machine.",
+    "Lungs (album)\nLungs is the debut studio album by English indie rock band Florence and the Machine, released on 3 July 2009 on Island Records.\n\n Frontwoman Florence Welch experimented with and honed the album's sound with bandmate Isabella Summers, while also collaborating with five record producers including James Ford, Paul Epworth, Steve Mackey.\n\n The music on \"Lungs\" established Florence and the Machine as an internationally successful rock act, and also featured the group's successful mix of string arrangements centered around Welch's vocal prowess.",
+    "What the Water Gave Me (song)\n\"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011).\n\n The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth.\n\n It was released on 23 August 2011 as the first promotional single from \"Ceremonials\".\n\n After the band performed the song in Berkeley, California on 12 June 2011, the studio version premiered on Florence and the Machine's official website.\n\n Welch decided to name the song \"What the Water Gave Me\" after seeing a Frida Kahlo painting of the same name.\n\n During an interview, she confirmed that the song was inspired by English writer Virginia Woolf.",
+    "Ceremonials Tour\nThe Ceremonials Tour was the second concert tour by English indie rock band Florence and the Machine.\n\n The tour included performances at Music festivals because it is lead singer Florence Welch's favourite way to perform live.\n\n Welch had originally planned to spend over one year touring for \"Ceremonials\" (their previous tour lasted almost three and a half years) before announcing that the December 2012 dates would be the final performances of the tour.\n\n On 25 February 2013 it was announced that Florence and the Machine would be playing at the Coke Live Music Festival in Poland on 10 August 2013, and on 26 March 2013 it was announced that the band would be playing at Chime for Change's \"The Sound of Change Live\" concert at London's Twickenham Stadium alongside Beyoncé, Ellie Goulding and Haim, amongst others.",
+    "Sweet Nothing\n\"Sweet Nothing\" is a song by Scottish recording artist and record producer Calvin Harris from his third studio album, \"18 Months\" (2012).\n\n It features vocals from Florence and the Machine singer Florence Welch.\n\n Harris previously worked with the band in a remix of their single, \"Spectrum\" (2012).\n\n While recording \"18 Months\", Harris expressed interest in working with Welch.\n\n He mentioned that it was not easy and he had to chase her, due to schedule conflicts.\n\n Welch accepted his invitation and the two recorded \"Sweet Nothing\".\n\n The track premiered on \"The Chris Moyles Show\" on BBC Radio 1 on 28 August 2012 and was later released as the fifth single from the album on 12 October 2012.",
+    "Florence Welch (born 1986) leads English indie-rock band Florence + the Machine, formed in 2007 and acclaimed for dramatic production and powerful vocals. Their debut, *Lungs* (2009), established international success; *Ceremonials* (2011) produced singles including “Shake It Out,” “What the Water Gave Me,” “Spectrum,” “Never Let Me Go,” “No Light, No Light,” and “Lover to Lover.” Welch",
+    "Grant Nicholas\nGrantley Jonathan \"Grant\" Nicholas (born 12 November 1967) is a Welsh musician, best known as the lead singer and lead guitarist of the rock band Feeder.",
+    "Florence and the Machine\nFlorence and the Machine (stylised as Florence + the Machine) are an English indie rock band that formed in London in 2007, consisting of lead singer Florence Welch, keyboardist Isabella Summers, and a collaboration of other artists.\n\n The band's music received praise across the media, especially from the BBC, which played a large part in their rise to prominence by promoting Florence and the Machine as part of \"BBC Introducing\".\n\n At the 2009 Brit Awards they received the Brit Awards \"Critics' Choice\" award.\n\n The band's music is renowned for its dramatic and eccentric production and also Welch's powerful vocal performances.",
+    "Nelson (band)\nNelson is an American rock band founded by singer/songwriters Matthew and Gunnar Nelson (twin sons of Ricky Nelson and Kristin Nelson).\n\n The band achieved success during the early 1990s with their double platinum debut album \"After the Rain\", which featured the number-one hit \"(Can't Live Without Your) Love and Affection\"."
+   ]
+  },
+  {
+   "id": "acb614f302c733f1",
+   "gold": [
+    {
+     "sentence": " It was the first election for Governor of Maine, taking place after Maine separated from Massachusetts and was recognized as a state on March 15, 1820.",
+     "facts": {
+      "0.0": "The election was the first election for Governor of Maine.",
+      "0.1": "The election took place after Maine separated from Massachusetts.",
+      "0.2": "Maine was recognized as a state on March 15, 1820."
+     }
+    },
+    {
+     "sentence": " Maine's separation from Massachusetts came as a result of The Missouri Compromise.",
+     "facts": {
+      "1.0": "Maine's separation from Massachusetts came as a result of The Missouri Compromise."
+     }
+    },
+    {
+     "sentence": " This election saw the virtually unanimous election of William King, the man most chiefly responsible for the push for Maine statehood.",
+     "facts": {
+      "2.0": "The election saw the virtually unanimous election of William King.",
+      "2.1": "William King was the man most chiefly responsible for the push for Maine statehood."
+     }
+    },
+    {
+     "sentence": "William King (February 9, 1768June 17, 1852) was an American merchant, shipbuilder, army officer, and statesman from Bath, Maine.",
+     "facts": {
+      "3.0": "William King was born February 9, 1768.",
+      "3.1": "William King died June 17, 1852.",
+      "3.2": "William King was an American merchant.",
+      "3.3": "William King was an American shipbuilder.",
+      "3.4": "William King was an American army officer.",
+      "3.5": "William King was an American statesman.",
+      "3.6": "William King was from Bath, Maine."
+     }
+    }
+   ],
+   "items": [
+    "Benjamin Logan\nBenjamin Logan (c.1742 – December 11, 1802) was an American pioneer, soldier, and politician from Shelby County, Kentucky.\n\n As colonel of the Kentucky County, Virginia militia during the American Revolutionary War, he was second-in-command of all the militia in Kentucky.\n\n He was also a leader in Kentucky's efforts to become a state.\n\n His brother, John Logan, was the first state treasurer of Kentucky.",
+    "Province of New Jersey\nThe Province of New Jersey was one of the Middle Colonies of Colonial America and became the U.S. state of New Jersey in 1776.\n\n The province had originally been settled by Europeans as part of New Netherland, but came under English rule after the surrender of Fort Amsterdam in 1664, becoming a proprietary colony.\n\n The English then renamed the province after the Isle of Jersey in the English Channel.\n\n The Dutch Republic reasserted control for a brief period in 1673–1674.\n\n After that it consisted of two political divisions, East Jersey and West Jersey, until they were united as a royal colony in 1702.\n\n The original boundaries of the province were slightly larger than the current state, extending into a part of the present state of New York, until the border was finalized in 1773.",
+    "Henry Smith Lane\nHenry Smith Lane (February 24, 1811 – June 19, 1881) was a United States Representative, Senator, and the 13th Governor of Indiana; he was by design the shortest-serving Governor of Indiana, having made plans to resign the office should his party take control of the Indiana General Assembly and elect him to the United States Senate.\n\n He held that office for only two days, and was known for his opposition to slavery.\n\n A Whig until the party collapsed, he supported compromise with the south.\n\n He became an early leader in the Republican Party starting in 1856 serving as the president of the first party convention, delivering its keynote address, and was influential in the nomination of Abraham Lincoln.\n\n With the repeal of the Missouri Compromise, he became a full-fledged",
+    "John Bowman (pioneer)\nCol. John (Johannes) Bowman (17 December 1738 – May 4, 1784) was an 18th-century American pioneer, colonial militia officer and sheriff, the first appointed in Lincoln County, Kentucky.\n\n In 1781 he also presided as a justice of the peace over the first county court held in Kentucky.\n\n The first county-lieutenant and military governor of Kentucky County during the American Revolutionary War, Col. Bowman also, served in the American Revolution, many times, second in command to General George Rogers Clark, during the Illinois Campaign, which, at the time, doubled the size of the United States.",
+    "Missouri Compromise\nThe Missouri Compromise is the title generally attached to the legislation passed by the 16th United States Congress on May 8, 1820.\n\n The measures provided for the admission of Maine as a state along with Missouri as a slave state, thus maintaining the balance of power between North and South.\n\n As part of the compromise, slavery was prohibited North of the 36°30′ parallel, excluding Missouri.\n\n President James Monroe signed the legislation on April 6, 1820.",
+    "Anti-Nebraska movement\nThe Anti-Nebraska movement was a political alignment in the United States formed in opposition to the Kansas-Nebraska Act of 1854 and to its repeal of the Missouri Compromise provision forbidding slavery in U.S. territories north of latitude 36° 30' N.\n\n (At the time, the name \"Nebraska\" could loosely refer to areas west of the Missouri River.)",
+    "John Biddle (Michigan politician)\nJohn Biddle (March 2, 1792 – August 25, 1859) was a delegate to the United States Congress from the Michigan Territory.",
+    "Compromise of 1790\nThe Compromise of 1790 was a compromise between Alexander Hamilton on the one hand and Thomas Jefferson and James Madison whereby Hamilton won the decision for the national government to take over and pay the state debts, while Jefferson and Madison obtained the national capital (District of Columbia) for the South.\n\n The compromise resolved the deadlock in Congress.\n\n Southerners were blocking the assumption of state debts by the treasury, thereby destroying the Hamiltonian program for building a fiscally strong nation state.\n\n Northerners rejected the proposal, much desired by Virginians, to locate the permanent national capital on the Virginia-Maryland border.\n\n The compromise made possible the passage of the Residence and Funding (Assumption) Acts in July and August 1790.\n\n Historian Jacob Cooke says it is, \"generally regarded as one of the most important bargains in American history, ranking just below the better known Missouri Compromise and the Compromise of 1850.\"",
+    "Maine gubernatorial election, 1820\nThe 1820 Maine gubernatorial election took place on April 3, 1820.\n\n It was the first election for Governor of Maine, taking place after Maine separated from Massachusetts and was recognized as a state on March 15, 1820.\n\n Maine's separation from Massachusetts came as a result of The Missouri Compromise.\n\n This election saw the virtually unanimous election of William King, the man most chiefly responsible for the push for Maine statehood.\n\n He had no opponents.",
+    "William King (governor)\nWilliam King (February 9, 1768June 17, 1852) was an American merchant, shipbuilder, army officer, and statesman from Bath, Maine.\n\n A proponent of statehood for Maine, he became its first governor when it separated from Massachusetts in 1820."
+   ]
+  }
+ ]
+}

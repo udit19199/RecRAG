@@ -1,0 +1,2713 @@
+[
+ {
+  "id": "4dc46fb646fdaedc",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Jane and Rafael start saving up to buy a one - bedroom apartment , but their plan falls apart when Mateo breaks an antique $4,000 clock"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Jane and Rafael start saving up to buy a one - bedroom apartment , but their plan falls apart when Mateo breaks an antique $4,000 clock"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Rafael moves into the Villanueva house , but after Alba hits Mateo , the two get into a heated argument and Rafael moves back out"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Rafael moves into the Villanueva house , but after Alba hits Mateo , the two get into a heated argument and Rafael moves back out"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Rafael moves into the Villanueva house , but after Alba hits Mateo , the two get into a heated argument and Rafael moves back out"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Xiomara starts chemotherapy , and makes a friend named Donna"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Xiomara starts chemotherapy , and makes a friend named Donna"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "The timeline moves forward nine weeks , and Donna dies of unforeseen consequences"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "The timeline moves forward nine weeks , and Donna dies of unforeseen consequences"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.10",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.11",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.12",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.13",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.14",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.15",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.16",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.17",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.18",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.5",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.6",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Meanwhile , Rafael loses ownership of the hotel to his sister and as a result , he finds himself living at Jane 's house , broke and homeless"
+     }
+    ]
+   },
+   {
+    "fact": "1.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Meanwhile , Rafael loses ownership of the hotel to his sister and as a result , he finds himself living at Jane 's house , broke and homeless"
+     }
+    ]
+   },
+   {
+    "fact": "1.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Jane and Rafael learn that the missing Petra has been found after she got away from Anezka and they rush to her side , but Anezka is nowhere to be found"
+     }
+    ]
+   },
+   {
+    "fact": "1.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Jane and Rafael learn that the missing Petra has been found after she got away from Anezka and they rush to her side , but Anezka is nowhere to be found"
+     }
+    ]
+   },
+   {
+    "fact": "1.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "When Petra returns to the hotel , Luisa thinks that Petra is Anezka"
+     }
+    ]
+   },
+   {
+    "fact": "1.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Petra goes along with the game , until the real Anezka returns"
+     }
+    ]
+   },
+   {
+    "fact": "1.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Elsewhere , Xo and Rogelio 's married life is interrupted when they confront the realization that Darci is having Rogelio 's baby and she wants full custody"
+     }
+    ]
+   },
+   {
+    "fact": "1.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Elsewhere , Xo and Rogelio 's married life is interrupted when they confront the realization that Darci is having Rogelio 's baby and she wants full custody"
+     }
+    ]
+   },
+   {
+    "fact": "1.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "66 `` Chapter Sixty - Six '' Gina Lamar Valentina Garza & Jessica O'Toole & Amy Rardin October 20 , 2017 ( 2017 - 10 - 20 ) 0.61"
+     }
+    ]
+   },
+   {
+    "fact": "1.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "66 `` Chapter Sixty - Six '' Gina Lamar Valentina Garza & Jessica O'Toole & Amy Rardin October 20 , 2017 ( 2017 - 10 - 20 ) 0.61"
+     }
+    ]
+   },
+   {
+    "fact": "1.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Jane 's relationship with Adam helps bring out her `` fun side '' and reminds her that she is n't just a mom"
+     }
+    ]
+   },
+   {
+    "fact": "1.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Jane 's relationship with Adam helps bring out her `` fun side '' and reminds her that she is n't just a mom"
+     }
+    ]
+   },
+   {
+    "fact": "1.19",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.20",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.21",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.22",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.23",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.24",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.25",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.26",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.27",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.28",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.29",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.30",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.31",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.32",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.33",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Trying to be supportive , Xo encourages Rogelio to step up and be the father he was meant to be"
+     }
+    ]
+   },
+   {
+    "fact": "1.34",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Elsewhere , Rafael is determined to get his hotel and life back from Luisa and will do whatever he has to do to make it happen , with or without Petra 's help"
+     }
+    ]
+   },
+   {
+    "fact": "1.35",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Elsewhere , Rafael is determined to get his hotel and life back from Luisa and will do whatever he has to do to make it happen , with or without Petra 's help"
+     }
+    ]
+   },
+   {
+    "fact": "1.36",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "68 `` Chapter Sixty - Eight '' Gina Lamar Deirdre Shaw & Chantelle M. Wells November 3 , 2017 ( 2017 - 11 - 03 ) 0.69"
+     }
+    ]
+   },
+   {
+    "fact": "1.37",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "68 `` Chapter Sixty - Eight '' Gina Lamar Deirdre Shaw & Chantelle M. Wells November 3 , 2017 ( 2017 - 11 - 03 ) 0.69"
+     }
+    ]
+   },
+   {
+    "fact": "1.38",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Jane becomes angry when she learns that Rafael introduced Mateo to his new girlfriend , Katherine , without her consent"
+     }
+    ]
+   },
+   {
+    "fact": "1.39",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "because she thinks Katherine is a negative influence on both Rafael and Mateo"
+     }
+    ]
+   },
+   {
+    "fact": "1.40",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Jane turns to Petra for help with the situation"
+     }
+    ]
+   },
+   {
+    "fact": "1.41",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Meanwhile , Rogelio and Darci struggle to choose a name for the baby"
+     }
+    ]
+   },
+   {
+    "fact": "1.42",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Elsewhere , Xo , who is focused on opening her own dance studio , decides to go into business with an unlikely foe"
+     }
+    ]
+   },
+   {
+    "fact": "1.43",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Elsewhere , Xo , who is focused on opening her own dance studio , decides to go into business with an unlikely foe"
+     }
+    ]
+   },
+   {
+    "fact": "1.44",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "69 5 `` Chapter Sixty - Nine '' Stuart Gillard Paul Sciarrotta November 10 , 2017 ( 2017 - 11 - 10 ) 0.65"
+     }
+    ]
+   },
+   {
+    "fact": "1.45",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "69 5 `` Chapter Sixty - Nine '' Stuart Gillard Paul Sciarrotta November 10 , 2017 ( 2017 - 11 - 10 ) 0.65"
+     }
+    ]
+   },
+   {
+    "fact": "1.46",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "After Adam reveals his dating past to Jane , she becomes so unsure and insecure"
+     }
+    ]
+   },
+   {
+    "fact": "1.47",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "After Adam reveals his dating past to Jane , she becomes so unsure and insecure that it puts a strain on their relationship"
+     }
+    ]
+   },
+   {
+    "fact": "1.48",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Meanwhile , Lina seeks Jane 's advice about whether she should get married or not"
+     }
+    ]
+   },
+   {
+    "fact": "1.49",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Petra hears some important information that could help Rafael get the hotel back"
+     }
+    ]
+   },
+   {
+    "fact": "1.50",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Also , Xo asks Rogelio to consider having a medical procedure ( vasectomy ) done , but he is very hesitant"
+     }
+    ]
+   },
+   {
+    "fact": "1.51",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Also , Xo asks Rogelio to consider having a medical procedure ( vasectomy ) done , but he is very hesitant"
+     }
+    ]
+   },
+   {
+    "fact": "1.52",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "70 6 `` Chapter Seventy '' Melanie Mayron Carolina Rivera & Micah Schraft November 17 , 2017 ( 2017 - 11 - 17 ) 0.61"
+     }
+    ]
+   },
+   {
+    "fact": "1.53",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "70 6 `` Chapter Seventy '' Melanie Mayron Carolina Rivera & Micah Schraft November 17 , 2017 ( 2017 - 11 - 17 ) 0.61"
+     }
+    ]
+   },
+   {
+    "fact": "1.54",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Jane 's book is finally being released but her plans to have a party at the local bookshop where she was inspired to be a writer hit a snag"
+     }
+    ]
+   },
+   {
+    "fact": "1.55",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Jane 's book is finally being released but her plans to have a party at the local bookshop where she was inspired to be a writer hit a snag"
+     }
+    ]
+   },
+   {
+    "fact": "1.56",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Always wanting to help Jane , Rogelio devises a plan to save the day"
+     }
+    ]
+   },
+   {
+    "fact": "1.57",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "but one of his arch - rivals threatens to ruin the day"
+     }
+    ]
+   },
+   {
+    "fact": "1.58",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Meanwhile , Rafael gets a new job , but it is not exactly what he was hoping for"
+     }
+    ]
+   },
+   {
+    "fact": "1.59",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Also , Petra has come up with an interesting strategy to get the Marbella Hotel back from Luisa"
+     }
+    ]
+   },
+   {
+    "fact": "1.60",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Also , Petra has come up with an interesting strategy to get the Marbella Hotel back from Luisa , but Rafael wants nothing to do with the scheme"
+     }
+    ]
+   },
+   {
+    "fact": "1.61",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "71 7 `` Chapter Seventy - One '' Micah Schraft Valentina Garza & Deidre Shaw December 8 , 2017 ( 2017 - 12 - 08 ) 0.65"
+     }
+    ]
+   },
+   {
+    "fact": "1.62",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "71 7 `` Chapter Seventy - One '' Micah Schraft Valentina Garza & Deidre Shaw December 8 , 2017 ( 2017 - 12 - 08 ) 0.65"
+     }
+    ]
+   },
+   {
+    "fact": "1.63",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Anezka is revealed to have faked her death to see where her loyalties lie"
+     }
+    ]
+   },
+   {
+    "fact": "1.64",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "initially , she trusts Petra after believing she saw her cry"
+     }
+    ]
+   },
+   {
+    "fact": "1.65",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "but after finding out she was n't crying because of her fake death , she threatens Petra"
+     }
+    ]
+   },
+   {
+    "fact": "1.66",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Later , Anezka falls from Petra 's apartment to her death ... for real"
+     }
+    ]
+   },
+   {
+    "fact": "1.67",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Meanwhile , Xiomara and Jane set off on Jane 's book tour"
+     }
+    ]
+   },
+   {
+    "fact": "1.68",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Xiomara and Jane set off on Jane 's book tour , when Alba decides to tag along"
+     }
+    ]
+   },
+   {
+    "fact": "1.69",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "After they get back , Jane and Rafael share a kiss"
+     }
+    ]
+   },
+   {
+    "fact": "1.70",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.71",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "8 `` Chapter Seventy - Two '' January 26 , 2018 0.2 / 1 0.68"
+     }
+    ]
+   },
+   {
+    "fact": "1.72",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.73",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.74",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.75",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.76",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.77",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.78",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.79",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.80",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Also , Rafael moves out of Jane 's house into his new apartment"
+     }
+    ]
+   },
+   {
+    "fact": "1.81",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "73 9 `` Chapter Seventy - Three '' Eric Lea Valentina Garza & Chantelle M. Wells February 2 , 2018 ( 2018 - 02 - 02 ) 0.67"
+     }
+    ]
+   },
+   {
+    "fact": "1.82",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "73 9 `` Chapter Seventy - Three '' Eric Lea Valentina Garza & Chantelle M. Wells February 2 , 2018 ( 2018 - 02 - 02 ) 0.67"
+     }
+    ]
+   },
+   {
+    "fact": "1.83",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "When Jane and Rafael finally realize that the uncertain state of their relationship ( or lack of it ) is stressing out Mateo"
+     }
+    ]
+   },
+   {
+    "fact": "1.84",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "they decide that they need to make a decision"
+     }
+    ]
+   },
+   {
+    "fact": "1.85",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Petra is on the outs with Jane and Rafael after the Luisa fiasco"
+     }
+    ]
+   },
+   {
+    "fact": "1.86",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Petra is on the outs with Jane and Rafael after the Luisa fiasco , so she tries to figure out a way to get back into their good graces"
+     }
+    ]
+   },
+   {
+    "fact": "1.87",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Elsewhere , Rogelio and Xo are both contemplating their career choices"
+     }
+    ]
+   },
+   {
+    "fact": "1.88",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "74 10 `` Chapter Seventy - Four '' Gina Rodriguez Micah Schraft & Paul Sciarrotta February 9 , 2018 ( 2018 - 02 - 09 ) 0.80"
+     }
+    ]
+   },
+   {
+    "fact": "1.89",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "74 10 `` Chapter Seventy - Four '' Gina Rodriguez Micah Schraft & Paul Sciarrotta February 9 , 2018 ( 2018 - 02 - 09 ) 0.80"
+     }
+    ]
+   },
+   {
+    "fact": "1.90",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Jane and Rafael try to be friends , which works great until Jane goes on a date"
+     }
+    ]
+   },
+   {
+    "fact": "1.91",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Meanwhile , Petra and Jane 's new partnership is off to a rocky start"
+     }
+    ]
+   },
+   {
+    "fact": "1.92",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "they both know they have to find a way to work together somehow"
+     }
+    ]
+   },
+   {
+    "fact": "1.93",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.94",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.95",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.96",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.97",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.98",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.99",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.100",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.101",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.102",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.103",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "11 `` Chapter Seventy - Five '' March 2 , 2018 0.2 / 1 0.59"
+     }
+    ]
+   },
+   {
+    "fact": "1.104",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.105",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.106",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.107",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.108",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.109",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.110",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.111",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.112",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.113",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.114",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.115",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.116",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.117",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "12 `` Chapter Seventy - Six '' March 9 , 2018 0.2 / 1 0.58"
+     }
+    ]
+   },
+   {
+    "fact": "1.118",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.119",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.120",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.121",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Meanwhile , Rogelio is trying to make things less about him and more about Xo"
+     }
+    ]
+   },
+   {
+    "fact": "1.122",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Meanwhile , Rogelio is trying to make things less about him and more about Xo , but he grows suspicious when he learns she is keeping a secret from him"
+     }
+    ]
+   },
+   {
+    "fact": "1.123",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "But the secret Xo has been keeping is not what Rogelio suspected"
+     }
+    ]
+   },
+   {
+    "fact": "1.124",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Elsewhere , Petra tests the loyalty of her lawyer , Jane Ramos , by pretending to be romantically interested in her"
+     }
+    ]
+   },
+   {
+    "fact": "1.125",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "by pretending to be romantically interested in her while trying to find out the identity of the blackmailer"
+     }
+    ]
+   },
+   {
+    "fact": "1.126",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "After Petra confides in Jane R. of her feelings which are not fake"
+     }
+    ]
+   },
+   {
+    "fact": "1.127",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "After Petra confides in Jane R. of her feelings which are not fake , the two of them sleep together for the first time"
+     }
+    ]
+   },
+   {
+    "fact": "1.128",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "77 13 `` Chapter Seventy - Seven '' Gina Lamar Deirdre Shaw & Chantelle M. Wells March 16 , 2018 ( 2018 - 03 - 16 )"
+     }
+    ]
+   },
+   {
+    "fact": "1.129",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Chantelle M. Wells March 16 , 2018 ( 2018 - 03 - 16 ) 0.59"
+     }
+    ]
+   },
+   {
+    "fact": "1.130",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "When Jane , Rogelio and Alba learn what is going on with Xo who might have breast cancer"
+     }
+    ]
+   },
+   {
+    "fact": "1.131",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "When Jane , Rogelio and Alba learn what is going on with Xo who might have breast cancer , they all try to comfort her"
+     }
+    ]
+   },
+   {
+    "fact": "1.132",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "but Xo insists they let her live her life"
+     }
+    ]
+   },
+   {
+    "fact": "1.133",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Meanwhile , Rogelio finally gets River Fields to agree to meet with him"
+     }
+    ]
+   },
+   {
+    "fact": "1.134",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "but he learns that River has another plan in mind"
+     }
+    ]
+   },
+   {
+    "fact": "1.135",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Also , Rafael is on a mission to find his sister , who may have the information he has been looking for of his origins"
+     }
+    ]
+   },
+   {
+    "fact": "1.136",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Rafael visits Rose in prison to ask for her help"
+     }
+    ]
+   },
+   {
+    "fact": "1.137",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "but he quickly turns her down when she makes a demand to know Luisa 's location"
+     }
+    ]
+   },
+   {
+    "fact": "1.138",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Also , Jane is upset with Petra after her twin girls spill a secret to Mateo about the Tooth Fairy being make believe"
+     }
+    ]
+   },
+   {
+    "fact": "1.139",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "At the same time , Jane ' J.R. ' Ramos tells Petra after their romantic night together that she is not interested in a relationship"
+     }
+    ]
+   },
+   {
+    "fact": "1.140",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "due to the blackmailer paying a visit to Jane R. 's dementia - stricken mother in a rest home"
+     }
+    ]
+   },
+   {
+    "fact": "1.141",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "At the end , the identity of Jane R 's blackmailer is finally revealed"
+     }
+    ]
+   },
+   {
+    "fact": "1.142",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "78 14 `` Chapter Seventy - Eight '' Justin Baldoni Valentina Garza & Micah Schraft March 23 , 2018 ( 2018 - 03 - 23 ) 0.65"
+     }
+    ]
+   },
+   {
+    "fact": "1.143",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "78 14 `` Chapter Seventy - Eight '' Justin Baldoni Valentina Garza & Micah Schraft March 23 , 2018 ( 2018 - 03 - 23 ) 0.65"
+     }
+    ]
+   },
+   {
+    "fact": "1.144",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Xo struggles to make an important decision on whether or not to get a full mastectomy"
+     }
+    ]
+   },
+   {
+    "fact": "1.145",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Xo struggles to make an important decision on whether or not to get a full mastectomy and looks to Jane for guidance"
+     }
+    ]
+   },
+   {
+    "fact": "1.146",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Xo struggles to make an important decision on whether or not to get a full mastectomy and looks to Jane for guidance , leaving Rogelio feeling like an outsider"
+     }
+    ]
+   },
+   {
+    "fact": "1.147",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Alba is frustrated with Rogelio when it seems he is once again making his career a priority over Xo 's well being"
+     }
+    ]
+   },
+   {
+    "fact": "1.148",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Meanwhile , Petra turns to Rafael for advice on her love life"
+     }
+    ]
+   },
+   {
+    "fact": "1.149",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "after he finally learns about her new romance with J.R."
+     }
+    ]
+   },
+   {
+    "fact": "1.150",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "79 15 `` Chapter Seventy - Nine '' Gina Lamar Paul Sciarrotta April 6 , 2018 ( 2018 - 04 - 06 ) 0.53"
+     }
+    ]
+   },
+   {
+    "fact": "1.151",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "79 15 `` Chapter Seventy - Nine '' Gina Lamar Paul Sciarrotta April 6 , 2018 ( 2018 - 04 - 06 ) 0.53"
+     }
+    ]
+   },
+   {
+    "fact": "1.152",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "80 16 `` Chapter Eighty '' Micah Schraft Micah Schraft April 13 , 2018 ( 2018 - 04 - 13 ) 0.57"
+     }
+    ]
+   },
+   {
+    "fact": "1.153",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "80 16 `` Chapter Eighty '' Micah Schraft Micah Schraft April 13 , 2018 ( 2018 - 04 - 13 ) 0.57"
+     }
+    ]
+   },
+   {
+    "fact": "1.154",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Jane and Rafael start saving up to buy a one - bedroom apartment , but their plan falls apart when Mateo breaks an antique $4,000 clock"
+     }
+    ]
+   },
+   {
+    "fact": "1.155",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Jane and Rafael start saving up to buy a one - bedroom apartment , but their plan falls apart when Mateo breaks an antique $4,000 clock"
+     }
+    ]
+   },
+   {
+    "fact": "1.156",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Rafael moves into the Villanueva house , but after Alba hits Mateo , the two get into a heated argument and Rafael moves back out"
+     }
+    ]
+   },
+   {
+    "fact": "1.157",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Rafael moves into the Villanueva house , but after Alba hits Mateo , the two get into a heated argument and Rafael moves back out"
+     }
+    ]
+   },
+   {
+    "fact": "1.158",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Rafael moves into the Villanueva house , but after Alba hits Mateo , the two get into a heated argument and Rafael moves back out"
+     }
+    ]
+   },
+   {
+    "fact": "1.159",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Xiomara starts chemotherapy , and makes a friend named Donna"
+     }
+    ]
+   },
+   {
+    "fact": "1.160",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Xiomara starts chemotherapy , and makes a friend named Donna"
+     }
+    ]
+   },
+   {
+    "fact": "1.161",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "The timeline moves forward nine weeks , and Donna dies of unforeseen consequences"
+     }
+    ]
+   },
+   {
+    "fact": "1.162",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "The timeline moves forward nine weeks , and Donna dies of unforeseen consequences"
+     }
+    ]
+   },
+   {
+    "fact": "1.163",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.164",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.165",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.166",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.167",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.168",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.169",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.170",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.171",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.172",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.173",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.174",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.175",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.176",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.177",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.178",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.179",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.180",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.181",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.182",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.183",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "244937a027d78b8a",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Hebrew : יָם הַמֶּלַח ‬ Yam ha - Melah lit . Sea of Salt"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Arabic : البحر الميت ‎ Al - Bahr al - Mayyit"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "is a salt lake bordered by Jordan to the east and Israel and Palestine to the west"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "is a salt lake bordered by Jordan to the east and Israel and Palestine to the west"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "is a salt lake bordered by Jordan to the east and Israel and Palestine to the west"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Its surface and shores are 430.5 metres ( 1,412 ft ) below sea level"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Its surface and shores are 430.5 metres ( 1,412 ft ) below sea level , Earth 's lowest elevation on land"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "contradicted",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "depth 298 m ( 978 ft ) ( elevation of deepest point , 728 m BSL ( below sea level ) , minus current surface elevation )"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "the deepest hypersaline lake in the world"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.10",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.11",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.12",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.13",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Max. length 50 km ( 31 mi ) ( northern basin only )"
+     }
+    ]
+   },
+   {
+    "fact": "0.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Max . width 15 km ( 9.3 mi )"
+     }
+    ]
+   },
+   {
+    "fact": "0.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "The Dead Sea is an endorheic lake located in the Jordan Rift Valley"
+     }
+    ]
+   },
+   {
+    "fact": "0.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "The Jordan River is the only major water source flowing into the Dead Sea"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "139723cd88d5613a",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "The memorial marking the crash site , 2003"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Date February 3 , 1959 ( 1959 - 02 - 03 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Summary Spatial disorientation , loss of control in near - IMC conditions"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Site Near Clear Lake , Iowa , United States"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "43 ° 13 ′ 13.3 '' N 93 ° 22 ′ 53.1 '' W"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "43.220361 ° N 93.381417 ° W"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Fatalities 4 ( all )"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Survivors 0"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Aircraft type Beechcraft Bonanza"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Operator Dwyer Flying Service"
+     },
+     {
+      "item": 3,
+      "quote": "Dwyer Flying Service , a company in Mason City , Iowa"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Registration N3794N"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Flight origin Mason City Municipal Airport , Iowa"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Destination Hector Airport , North Dakota"
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "At the time , Holly and his band , consisting of Waylon Jennings , Tommy Allsup , and Carl Bunch , were playing on the `` Winter Dance Party '' tour across the United States Midwest"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "At the time , Holly and his band , consisting of Waylon Jennings , Tommy Allsup , and Carl Bunch , were playing on the `` Winter Dance Party '' tour across the United States Midwest"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Rising artists Valens and Richardson had joined the tour"
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "The long journeys between venues on board the cold , uncomfortable tour buses adversely affected the performers"
+     }
+    ]
+   },
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "The long journeys between venues on board the cold , uncomfortable tour buses adversely affected the performers , with cases of flu and even frostbite"
+     }
+    ]
+   },
+   {
+    "fact": "1.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "The long journeys between venues on board the cold , uncomfortable tour buses adversely affected the performers , with cases of flu and even frostbite"
+     }
+    ]
+   },
+   {
+    "fact": "1.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "After stopping at Clear Lake to perform , and frustrated by such conditions , Holly chose to charter a plane"
+     }
+    ]
+   },
+   {
+    "fact": "1.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Holly chose to charter a plane to reach their next venue in Moorhead , Minnesota"
+     }
+    ]
+   },
+   {
+    "fact": "1.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Richardson , who had the flu , swapped places with Jennings , taking his seat on the plane"
+     }
+    ]
+   },
+   {
+    "fact": "1.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "while Allsup lost his seat to Valens on a coin toss"
+     }
+    ]
+   },
+   {
+    "fact": "1.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Soon after takeoff , late at night and in poor , wintry weather conditions , the pilot lost control of the light aircraft"
+     }
+    ]
+   },
+   {
+    "fact": "1.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "the pilot lost control of the light aircraft , a Beechcraft Bonanza"
+     }
+    ]
+   },
+   {
+    "fact": "1.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "a Beechcraft Bonanza , which subsequently crashed into a cornfield"
+     }
+    ]
+   },
+   {
+    "fact": "1.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Everyone on board was killed"
+     }
+    ]
+   },
+   {
+    "fact": "1.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The event has since been mentioned in various songs and films"
+     }
+    ]
+   },
+   {
+    "fact": "1.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "A number of monuments have been erected at the crash site and in Clear Lake"
+     }
+    ]
+   },
+   {
+    "fact": "1.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "A number of monuments have been erected at the crash site and in Clear Lake"
+     }
+    ]
+   },
+   {
+    "fact": "1.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "where an annual memorial concert is also held at the Surf Ballroom"
+     }
+    ]
+   },
+   {
+    "fact": "1.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "the venue that hosted the artists ' last performance"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ed8359315b630f2a",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Climate data for The South Pole"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Record high ° C ( ° F ) − 14.4 ( 6.1 ) − 20.6 ( − 5.1 ) − 26.7 ( − 16.1 ) − 27.8 ( − 18 ) − 25.1 ( − 13.2 ) − 28.8 ( − 19.8 ) − 33.9 ( − 29 ) − 32.8 ( − 27 ) − 29.3 ( − 20.7 ) − 25.1 ( − 13.2 ) − 18.9 ( − 2 ) − 12.3 ( 9.9 ) − 12.3 ( 9.9 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Record high ° C ( ° F ) − 14.4 ( 6.1 ) − 20.6 ( − 5.1 ) − 26.7 ( − 16.1 ) − 27.8 ( − 18 ) − 25.1 ( − 13.2 ) − 28.8 ( − 19.8 ) − 33.9 ( − 29 ) − 32.8 ( − 27 ) − 29.3 ( − 20.7 ) − 25.1 ( − 13.2 ) − 18.9 ( − 2 ) − 12.3 ( 9.9 ) − 12.3 ( 9.9 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Average high ° C ( ° F ) − 26.0 ( − 14.8 ) − 37.9 ( − 36.2 )"
+     },
+     {
+      "item": 3,
+      "quote": "2 ) − 49.6 ( − 57.3 ) − 53.0 ( − 63.4 ) − 53.6 ( − 64.5 ) − 54.5 ( − 66.1 ) − 55.2 ( − 67.4 ) − 54.9 ( − 66.8 ) − 54.4 ( − 65.9 ) − 48.4 ( − 55.1 ) − 36.2 ( − 33.2 ) − 26.3 ( − 15.3 ) − 45.8 ( − 50.4 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "− 45.8 ( − 50.4 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Daily mean ° C ( ° F ) − 28.4 ( − 19.1 ) − 40.9 ( − 41.6 ) − 53.7 ( − 64.7 ) − 57.8 ( − 72 ) − 58.0 ( − 72.4 ) − 58.9 ( − 74 ) − 59.8 ( − 75.6 ) − 59.7 ( − 75.5 ) − 59.1 ( − 74.4 ) − 51."
+     },
+     {
+      "item": 8,
+      "quote": "− 51.6 ( − 60.9 ) − 38.2 ( − 36.8 ) − 28.0 ( − 18.4 ) − 49.5 ( − 57.1 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "− 49.5 ( − 57.1 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Average low ° C ( ° F ) − 29.6 ( − 21.3 ) − 43.1 ( − 45.6 ) − 56.8 ( − 70.2 ) − 60.9 ( − 77.6 ) − 61.5 ( − 78.7 ) − 62.8 ( − 81 ) − 63.4 ( − 82.1 ) − 63.2 ( − 81.8 ) − 61.7 ( − 79.1 ) − 54.3 ( − 65.7 ) − 40.1 ( − 40.2 ) − 29.1 ( − 20.4 ) − 52.2 ( − 62 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Average low ° C ( ° F ) − 29.6 ( − 21.3 ) − 43.1 ( − 45.6 ) − 56.8 ( − 70.2 ) − 60.9 ( − 77.6 ) − 61.5 ( − 78.7 ) − 62.8 ( − 81 ) − 63.4 ( − 82.1 ) − 63.2 ( − 81.8 ) − 61.7 ( − 79.1 ) − 54.3 ( − 65.7 ) − 40.1 ( − 40.2 ) − 29.1 ( − 20.4 ) − 52.2 ( − 62 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Record low ° C ( ° F ) − 41.1 ( − 42 )"
+     },
+     {
+      "item": 4,
+      "quote": "1 ( − 42 ) − 58.9 ( − 74 ) − 71.1 ( − 96 ) − 75.0 ( − 103 ) − 78.3 ( − 108.9 ) − 82.8 ( − 117 ) − 80.6 ( − 113.1 ) − 79.3 ( − 110.7 ) − 79.4 ( − 110.9 ) − 72.0 ( − 97.6 ) − 55.0 ( − 67 ) − 41.1 ( − 42 ) − 82.8 ( − 117 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "1 ( − 42 ) − 58.9 ( − 74 ) − 71.1 ( − 96 ) − 75.0 ( − 103 ) − 78.3 ( − 108.9 ) − 82.8 ( − 117 ) − 80.6 ( − 113.1 ) − 79.3 ( − 110.7 ) − 79.4 ( − 110.9 ) − 72.0 ( − 97.6 ) − 55.0 ( − 67 ) − 41.1 ( − 42 ) − 82.8 ( − 117 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Average precipitation mm ( inches ) 0.3 ( 0.012 ) 0.6 ( 0.024 ) 0.2 ( 0.008 ) 0.1 ( 0.004 ) 0.2 ( 0.008 ) 0.1 ( 0.004 ) Trace Trace 0.1 ( 0.004 ) 0.1 ( 0.004 ) 0.1 ( 0.004 ) 0.3 ( 0.012 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.13",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.14",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.15",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.16",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.17",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.18",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.19",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.20",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.21",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Source # 1 : Pogoda.ru.net ( temperatures , 1981 -- 2010 , extremes 1957 -- present )"
+     }
+    ]
+   },
+   {
+    "fact": "0.22",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Source # 2 : Deutscher Wetterdienst ( precipitation 1957 -- 1988 and sun 1978 -- 1993 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.23",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "NOAA ( snowy days data , 1961 -- 1988 )"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "9e56e44b8561b477",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Kylo Ren is a fictional character in the Star Wars franchise"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Introduced in the 2015 film Star Wars : The Force Awakens"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "he is portrayed by Adam Driver"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Kylo Ren is the chosen name of Ben Solo"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Kylo Ren is the chosen name of Ben Solo , the son of original Star Wars trilogy characters Han Solo and Leia Organa"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Though trained by his uncle Luke Skywalker as a Jedi"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Though trained by his uncle Luke Skywalker as a Jedi , he has been seduced to the dark side of the Force by Supreme Leader Snoke"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "and aspires to be as powerful as his grandfather , Darth Vader"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Kylo Ren is also the master of the Knights of Ren"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Kylo Ren is also the master of the Knights of Ren , as well as a commander and later the supreme leader of the First Order , an organization spawned from the fallen Galactic Empire"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Kylo Ren is also the master of the Knights of Ren , as well as a commander and later the supreme leader of the First Order , an organization spawned from the fallen Galactic Empire"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Kylo Ren is also the master of the Knights of Ren , as well as a commander and later the supreme leader of the First Order , an organization spawned from the fallen Galactic Empire"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "He is featured in The Force Awakens media and merchandising"
+     }
+    ]
+   },
+   {
+    "fact": "0.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "appears in the film 's sequel , Star Wars : The Last Jedi ( 2017 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Star Wars : The Last Jedi ( 2017 )"
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Abrams told Empire in August 2015 , `` Kylo Ren is not a Sith"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Abrams told Empire in August 2015 , `` Kylo Ren is not a Sith . He works under Supreme Leader Snoke , who is a powerful figure on the Dark Side of the Force"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Abrams told Empire in August 2015 , `` Kylo Ren is not a Sith . He works under Supreme Leader Snoke , who is a powerful figure on the Dark Side of the Force"
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Abrams had previously told Entertainment Weekly that the character , `` came to the name Kylo Ren when he joined a group called the Knights of Ren"
+     }
+    ]
+   },
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Robbie Collin of The Telegraph described Ren as `` a hot - headed , radicalised Dark Side jihadi , whose red lightsaber splutters and crackles as violently as his temper"
+     }
+    ]
+   },
+   {
+    "fact": "1.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Robbie Collin of The Telegraph described Ren as `` a hot - headed , radicalised Dark Side jihadi , whose red lightsaber splutters and crackles as violently as his temper"
+     }
+    ]
+   },
+   {
+    "fact": "1.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Abrams noted , `` The lightsaber is something that he built himself"
+     }
+    ]
+   },
+   {
+    "fact": "1.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Abrams noted , `` The lightsaber is something that he built himself , and is as dangerous and as fierce and as ragged as the character"
+     }
+    ]
+   },
+   {
+    "fact": "1.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "The Telegraph also explains that Ren 's wild and erratic temper and `` angsty '' instability make him dangerous"
+     }
+    ]
+   },
+   {
+    "fact": "1.9",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.10",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.11",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.12",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "2edab24496c1a9f7",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Take action immediately upon hearing thunder . Anyone close enough to the storm to hear thunder can be struck by lightning"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Take action immediately upon hearing thunder . Anyone close enough to the storm to hear thunder can be struck by lightning"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Avoid electrical appliances , including corded telephones"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Cordless and wireless telephones are safe to use during a thunderstorm"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Close and stay away from windows and doors"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Close and stay away from windows and doors , as glass can become a serious hazard in high wind"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Do not bathe or shower , as plumbing conducts electricity"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Do not bathe or shower , as plumbing conducts electricity"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "If driving , safely exit the roadway , turn on hazard lights , and park"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "If driving , safely exit the roadway , turn on hazard lights , and park"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "If driving , safely exit the roadway , turn on hazard lights , and park"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Remain in the vehicle and avoid touching metal"
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Take action immediately upon hearing thunder . Anyone close enough to the storm to hear thunder can be struck by lightning"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Take action immediately upon hearing thunder . Anyone close enough to the storm to hear thunder can be struck by lightning"
+     }
+    ]
+   }
+  ]
+ }
+]

@@ -1,0 +1,1709 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=5441c887f790e6d5 ===
+Gold sentences and facts:
+Sentence 0: Year City State , province , dept. , etc . Country Notes 7500 BC Tlapacoya Ixtapaluca Mexico 4000 BC Puerto Hormiga Culture Cartagena Colombia 3710 BC Aspero Norte Chico Peru 2627 BC Caral Norte Chico Peru 1500 BC Kaminaljuyu Guatemala city Guatemala 800 BC Cuicuilco Mexico City Mexico 700 BC Ticul Yucatán Mexico 500 BC Cholula Puebla Mexico 300 BC Teotihuacan México Mexico In the Valley of Mexico 200 Mitla Oaxaca Mexico 200 Acanceh Yucatan Mexico 500 Cuenca Azuay Ecuador 524 Ejutla Oaxaca Mexico ( 1 ) 550 Izamal Yucatan Mexico 600 Cahokia Illinois United States 713 Tula Hidalgo Mexico 1001 L'Anse aux Meadows Newfoundland and Labrador Canada Oldest known European ( Norse ) settlement in the Americas . Possibly founded by Leif Erikson , as part of Vinland , in 1001 AD . 1000 Acoma Pueblo and Taos Pueblo New Mexico United States 1050 Motul Yucatán Mexico 1050 Pachuca Hidalgo Mexico 1100 Cusco Cusco Province Peru 1100 Oraibi Arizona United States ( Hopi Reservation ) ( 2 ) 1168 Ecatepec Estado de Mexico Mexico 1259 Chimaulhuacan Mexico State Mexico 1313 Xalapa Veracruz Mexico 1325 Tenochtitlan Mexico City Mexico Largest pre-Columbian city in the Americas , later called Mexico City . 1450 Zuni Pueblo New Mexico United States ( 3 ) 1470 Iximche Chimaltenango Guatemala 1492 La Navidad Nord - Est Haiti First European settlement in the New World during the Age of Discovery . 1493 La Isabela Puerto Plata Dominican Republic 1498 Santo Domingo Distrito Nacional Dominican Republic Capital of the Dominican Republic . Oldest continuously inhabited European established settlement in the Americas . Founded in 1498 , by Bartholomew Columbus . 1502 Santa Cruz del Seibo El Seibo Dominican Republic 1504 Azua de Compostela Azua Dominican Republic 1504 Santiago de los Caballeros Santiago Dominican Republic 1505 Cotuí Sánchez Ramírez Dominican Republic 1506 Salvaleón de Higüey La Altagracia Dominican Republic 1508 Bonao Monseñor Nouel Dominican Republic 1508 Caparra Puerto Rico United States First city founded by Europeans , although not continuously inhabited , in the United States . Abandoned in 1521 with the removal of the capital to San Juan . 1510 Santa Maria la Antigua del Darien Urabá Colombia First city founded by Europeans on the continent of South America . 1510 Nombre de Dios Colon Panama Oldest continuously inhabited European established settlement in Panama . 1511 Baracoa Guantánamo Cuba Oldest continuously inhabited European established settlement in Cuba , former capital of Cuba . 1513 Bayamo Granma Cuba 1514 Sancti Spiritus Santi Spiritus Cuba 1514 Trinidad Santi Spiritus Cuba 1515 Santiago Santiago After Baracoa and before Havana , Santiago was the second capital of Cuba . Cuba 1519 Havana Havana Cuba 1519 La Villa Rica de la Vera Cruz , ( Veracruz ) Veracruz Mexico Oldest continuously inhabited European established settlement in Mexico . 1519 Panama City Panamá Panama First European established city on the Pacific Coast of the Americas . Founded in 1519 , at the present day ruins of Panama Viejo , it was sacked by the Welsh pirate Henry Morgan in 1671 , and resettled to nearby Casco Viejo , in 1673 . 1520 Hato Mayor del Rey Hato Mayor Dominican Republic 1515 Cumaná Sucre Venezuela Oldest continuously inhabited European established settlement in Venezuela . 1521 San Juan Puerto Rico United States Oldest continuously inhabited European established settlement in Puerto Rico , and in the United States . Oldest continuously inhabited state or territorial capital in the United States . 1524 Granada Granada Nicaragua Oldest continuously inhabited European established settlement in Nicaragua . 1524 Tecpán Guatemala Chimaltenango Guatemala First capital of Guatemala and oldest continuously inhabited European established settlement in Guatemala . 1524 Trujillo Colón Honduras Oldest continuously inhabited European established settlement in Honduras . 1525 Santa Marta Magdalena Colombia Oldest continuously inhabited European established settlement in Colombia . 1525 Acapulco Guerrero Mexico ( 4 ) 1525 San Salvador San Salvador El Salvador Founded in 1525 , rebuilt and changed locations twice afterwards ( 1528 and 1545 ) and oldest continuously inhabited European established settlement in El Salvador . 1526 Acámbaro Guanajuato Mexico 1526 Chimaltenango Chimaltenango Guatemala 1528 San Cristóbal de las Casas Chiapas Mexico Originally called Villa Real de Chiapa . 1528 Camagüey Camagüey Province Cuba Founded in 1515 the northern coast of Camagüey as `` Puerto del Príncipe '' , but moved in 1528 to present location . 1529 Maracaibo Zulia Venezuela 1530 San Blas Nayarit Mexico By Nuño Beltrán ( 5 ) 1531 Puebla Puebla Mexico by Fr . Toribio de Benavente ( `` Motolinía '' ) on 16 April ( 6 ) 1532 Oaxaca Oaxaca Mexico 1532 Piura Piura Peru 1532 São Vicente São Paulo Brazil Oldest continuously inhabited European established settlement in Brazil , oldest Portuguese established settlement in the New World . 1532 Tepic Nayarit Mexico As capital of Nueva Galicia ( 7 ) 1533 Cananéia São Paulo Brazil Second Oldest City in Brazil 1533 Cartagena de Indias Bolívar Colombia 1534 Otavalo Imbabura Ecuador 1534 Quito Pichincha Ecuador Oldest continuously inhabited European established settlement in Ecuador . 1534 Spanish Town Saint Catherine Jamaica Founded by the Spanish as Santiago de la Vega or St. Jago de la Vega . Oldest continuously inhabited European established settlement in Jamaica . 1534 Trujillo La Libertad Peru Oldest continuously inhabited European established settlement in Peru . 1535 Lima Lima Peru 1535 Igarassu Pernambuco Brazil Site of first European settlement in Brazil , the feitoria of Igarassu , in 1516 . 1535 Olinda Pernambuco Brazil One of the best - preserved colonial cities in Brazil . 1535 Vila Velha Espírito Santo Brazil 1535 Paria Oruro Bolivia First Spanish settlement in Bolivia 1536 Santiago de Cali Valle del Cauca Colombia 1536 Popayán Cauca Colombia 1536 San Pedro Sula Cortés Honduras 1536 Tupiza Potosí Bolivia 1537 Asunción Paraguay Oldest continuously inhabited European established settlement in Paraguay . 1537 Recife Pernambuco Brazil Capital of the state of Pernambuco . It is the oldest city among Brazil 's current state capitals . 1538 Bogotá Cundinamarca Colombia 1538 Guayaquil Guayas Ecuador 1538 Iguape São Paulo Brazil 1538 Sucre Chuquisaca Bolivia Originally called Ciudad de la Plata de la Nueva Toledo and the oldest continuously inhabited European established settlement in Bolivia . 1539 Tunja Boyacá Colombia 1539 Vélez Santander Colombia 1539 Pasto Nariño Colombia 1540 Arequipa Arequipa Peru 1540 Ayacucho Ayacucho Peru 1540 Campeche Campeche Mexico 1540 Yuriria Guanajuato Mexico 1540 Mompox Bolivar Colombia 1540 Supía Caldas Colombia 1540 Campeche Campeche Mexico Founded on the site of Mayan village Kimpech . 1541 Huánuco Huánuco Peru 1541 Moquegua Moquegua Peru 1541 Santiago Santiago Chile Oldest continuously inhabited European established settlement in Chile . 1541 Santafé de Antioquia Antioquia Colombia 1542 Guadalajara Jalisco Mexico 1542 Genaro Codina Zacatecas Mexico 1542 San Miguel de Allende Guanajuato Mexico 1542 Mérida Yucatan Mexico Built on the site of Mayan city T'ho . 1542 San Luis de la Paz Guanajuato Mexico 1543 Antigua Guatemala Sacatepéquez Guatemala 1543 Cobán Alta Verapaz Guatemala 1543 Santa Cruz Verapaz Alta Verapaz Guatemala 1545 Potosí Potosí Bolivia 1545 San Juan de los Remedios Villa Clara Province Cuba Remedios has the most uncertain foundation date in Cuba , 1545 has been accepted because it is when the village erected its town hall , but its origin has been studied and documented back to 1513 . 1545 Riohacha La Guajira Colombia 1546 Santos São Paulo Brazil 1546 Neyba Bahoruco Dominican Republic 1546 Tepezalá Aguascalientes Mexico 1548 Asientos Aguascalientes Mexico 1548 La Paz La Paz Bolivia 1548 Pánuco Zacatecas Mexico 1548 Zacatecas Zacatecas Mexico 1549 Salvador Bahia Brazil 1550 Concepción Concepción Chile 1550 Valledupar Cesar Colombia 1550 Ibagué Tolima Colombia 1551 Vitória Espírito Santo Brazil 1551 Mocoa Putumayo 1552 Sonsonate Sonsonate El Salvador 1553 Santiago del Estero Santiago del Estero Argentina Oldest continuously inhabited European established settlement in Argentina . 1553 São Bernardo do Campo São Paulo Brazil 1554 Embu São Paulo Brazil 1554 São Paulo São Paulo Brazil 1555 Saín Alto Zacatecas Mexico 1556 Chalchihuites Zacatecas Mexico 1557 Cuenca ( Santa Ana de los Cuatro Rios de Cuenca ) Azuay Ecuador 1557 Santo Amaro Bahia Brazil 1558 Mérida Mérida Venezuela 1558 Londres Catamarca Argentina Second oldest continuously inhabited European established settlement in Argentina , though refunded and relocated several times . 1560 Mogi das Cruzes São Paulo Brazil 1560 Ipojuca Pernambuco Brazil 1561 Santa Cruz de la Sierra Santa Cruz Bolivia 1561 Mendoza Mendoza Argentina 1561 San Cristobal Táchira Venezuela 1561 Itanhaém São Paulo Brasil 1562 San Juan San Juan Argentina 1562 Río Grande Zacatecas Mexico 1562 Susticacán Zacatecas Mexico 1563 Cartago Cartago Costa Rica Oldest continuously inhabited European established settlement in Costa Rica . 1564 São Mateus Espírito Santo Brazil 1565 Rio de Janeiro Rio de Janeiro Brazil 1565 Saint Augustine Florida United States Oldest continuously inhabited European established settlement in the continental United States . Preceded by Puerto Rican colonies , Pensacola , Florida , which was destroyed in 1559 , and Fort Caroline , destroyed in 1565 . 1565 Tucumán Tucumán Argentina 1567 Caracas Capital District Venezuela 1568 Mazapil Zacatecas Mexico 1568 Goiana Pernambuco Brazil Declared vila in 1685 ; cidade in 1840 . 1568 Valaparaíso Zacatecas Mexico 1569 Santa Ana Santa Ana El Salvador Built over Mayan city of Sihuatehuacán . 1570 Jerez Zacatecas Mexico 1570 Sombrerete Zacatecas Mexico 1571 Cochabamba Cochabamba Bolivia 1572 Huancavelica Huancavelica Peru 1573 San German Puerto Rico United States Second oldest European settlement in Puerto Rico 1573 Córdoba Córdoba Argentina 1573 Santa Fé Santa Fé Argentina 1573 Buga Valle del Cauca Colombia 1574 Huaraz Ancash Peru 1574 Tarija Tarija Department Bolivia 1575 Aguascalientes Aguascalientes Mexico 1576 León Guanajuato Mexico 1577 Juayúa Sonsonate El Salvador 1578 Fort - Liberté Nord - Est Haiti Originally called Bayaha by the Spanish . Oldest continuously inhabited European established settlement in Haiti . 1578 Tegucigalpa Francisco Morazán Honduras 1579 Coamo Puerto Rico United States Third oldest European settlement in Puerto Rico . In the same area where the Taínos had had their village of Guayama . Coamo became officially a town in 1616 , and given the title of villa by Spanish Royal Decree in 1778 . 1580 Buenos Aires Argentina 1580 Santana de Parnaíba São Paulo Brasil 1580 Santo Domingo Xenacoj Sacatepéquez Guatemala 1582 Salta Salta Argentina 1583 St John 's Newfoundland and Labrador Canada Oldest continuously inhabited British settlement in the Americas . 1584 Roanoke North Carolina United States 1585 João Pessoa Paraíba Brazil 1587 Concepción del Oro Zacatecas Mexico 1588 Corrientes Corrientes Argentina 1590 São Cristóvão Sergipe Brazil First capital of Sergipe . Formerly known as Sergipe d'El Rei 1591 Jiménez del Teul Zacatecas Mexico 1591 Juan Aldama Zacatecas Mexico 1591 Paudalho Pernambuco Brazil 1591 La Rioja La Rioja Argentina 1593 San Salvador de Jujuy Jujuy Argentina 1594 Pinos Zacatecas Mexico 1594 San Luis San Luis Argentina 1596 Monterrey Nuevo León Mexico 1596 Villahermosa Tabasco Mexico Originally called Villa Felipe II . 1597 Portobelo Colón Panama 1598 Parras Coahuila Mexico 1599 Natal Rio Grande do Norte Brazil 1599 Tadoussac Quebec Canada Oldest continuously inhabited French established settlement in the Americas , oldest European established settlement in Quebec . 1600 Facatativá Cundinamarca Colombia 1600 Zipaquirá Cundinamarca Colombia 1602 David Chiriquí Province Panama 1603 Salamanca Guanajuato Mexico 1604 Port Royal Nova Scotia Canada Oldest continuously inhabited European established settlement in Nova Scotia . 1606 Bayaguana Monte Plata Dominican Republic 1606 Ibarra Imbabura Ecuador 1606 Oruro Oruro Bolivia 1607 Jamestown Virginia United States First permanent English established settlement in the Americas . 1608 Quebec City Quebec Canada 1609 Fortaleza Ceará Brazil 1610 Kecoughtan Virginia United States 1524 León León Nicaragua Original location ( now known as the ruins of Leon Viejo ) on the south - western shore of Lago Managua founded in 1524 , but destroyed by earthquakes , and resettled 20 miles west , in 1610 , to its present - day location at Leon . 1610 Santa Fe New Mexico United States Oldest continuously inhabited state or territorial capital in the continental United States . ( 8 ) 1610 Harbour Grace Newfoundland and Labrador Canada 1611 Marechal Deodoro , Alagoas Alagoas Brazil 1612 São Luís Maranhão Brazil Capital of Maranhão . 1612 St. George 's Bermuda Oldest continuously inhabited English established settlement in the Americas . 1612 Neiva Huila Colombia 1613 Penedo Alagoas Brazil 1613 Hopewell Virginia United States Oldest continuously inhabited English settlement in North America . Founded in 1613 as Bermuda City by Thomas Dale . 1614 Albany , New York New York United States Oldest US settlement north of Virginia and second oldest state or territorial capital in the continental United States , incorporated 1686 1614 Sirinhaém Pernambuco Brazil Declared vila in 1627 ; cidade in 1892 . 1615 Cabo Frio Rio de Janeiro Brazil 1615 Taos New Mexico United States 1615 Ipiales Nariño Colombia 1616 Belém Pará Brazil Capital of Pará . 1616 Medellín Antioquia Colombia Founded by Francisco de Herrera y Campuzano 1616 Arecibo Puerto Rico United States 1617 Jersey City , New Jersey New Jersey United States Pavonia , New Netherland 1618 Cabo de Santo Agostinho Pernambuco Brazil Declared vila in 1811 ; cidade in 1877 . 1620 Ojocaliente Zacatecas Mexico 1620 Plymouth Massachusetts United States 1622 Bucaramanga Santander Colombia 1623 Dover New Hampshire United States 1623 Gloucester Massachusetts United States 1624 Old Road Saint Christopher Saint Kitts and Nevis Oldest continuously inhabited British established settlement in the Caribbean , First successful ' non-Spanish ' established settlement in the Caribbean . 1624 Villa Soriano Soriano Uruguay Oldest continuously inhabited European established settlement in Uruguay . 1625 New Amsterdam New York United States Now New York City . 1625 Quincy Massachusetts United States 1626 Salem Massachusetts United States 1626 Vitória de Santo Antão Pernambuco Brazil Declared vila in 1811 ; cidade in 1843 . 1627 Basseterre Saint Christopher Saint Kitts and Nevis Oldest continuously inhabited French established settlement in the Caribbean . 1628 Bridgetown Saint Michael Barbados Second oldest continuously inhabited English established settlement in the Caribbean . 1630 Boston Massachusetts United States 1630 Paramaribo Paramaribo Suriname Oldest continuously inhabited European established settlement in Suriname . 1630 Speightstown Saint Peter Barbados 1631 Biddeford Maine United States 1631 Hidalgo del Parral Chihuahua Mexico 1631 Saint John New Brunswick Canada 1632 Batopilas Chihuahua Mexico 1632 Williamsburg Virginia United States 1632 St. John 's Antigua Antigua and Barbuda 1634 Green Bay Wisconsin United States Oldest continuously inhabited French established settlement in the United States . 1634 St. Mary 's City Maryland United States 1634 Trois - Rivières Quebec Canada 1634 Willemstad Curaçao Netherlands Oldest continuously inhabited Dutch established settlement in the Caribbean . 1635 Concord Massachusetts United States 1635 Old Saybrook Connecticut United States Original Dutch settlement called Kievits Hoek . 1636 Springfield Massachusetts United States 1636 Providence Rhode Island United States 1637 Hartford Connecticut United States ( 9 ) 1638 Belize City Belize Belize Oldest continuously inhabited European established settlement in Belize . Original Mayan city called Holzuz . 1638 Fort - de-France Martinique Originally called Fort Saint Louis . 1638 New Haven Connecticut United States ( 10 ) 1638 Wilmington Delaware United States Grew from Fort Christina , part of the New Sweden colony . Oldest continuously inhabited Swedish established settlement in the Americas . 1638 Cambridge Massachusetts United States 1639 Rincón de Romos Aguascalientes Mexico 1639 ( prior to ) St. Marks Florida United States ( 11 ) 1639 Barnstable Massachusetts United States Second - oldest municipality and only city on Cape Cod 1639 Bridgeport Connecticut United States 1639 Guilford Connecticut United States Location of the Henry Whitfield House , the oldest house in Connecticut and the oldest stone house in New England 1639 Milford Connecticut United States 1639 Newport Rhode Island United States 1640 Tumaco Nariño Colombia 1642 Montreal Quebec Canada 1642 Lexington Massachusetts United States ( 12 ) 1642 Warwick Rhode Island United States 1643 Basse - Terre Guadeloupe France Territorial capital . 1643 Dolores Hidalgo Guanajuato Mexico 1644 Salvatierra Guanajuato Mexico 1646 New London Connecticut United States 1648 Alcântara Maranhão Brazil 1648 Paranaguá Paraná Brazil 1649 Annapolis Maryland United States 1650 Castries Castries Saint Lucia 1650 Saint George 's Saint George Grenada 1651 Norwalk Connecticut United States 1654 Vieux Fort Vieux Fort Saint Lucia 1659 Ciudad Juárez Chihuahua Mexico 1659 El Paso Texas United States 1660 Charlestown Nevis St Kitts & Nevis 1660 Placentia Newfoundland and Labrador Canada French Capital until 1713 , originally called Plaisance 1660 Rye New York United States 1664 Cayenne French Guiana France Oldest continuously inhabited European established settlement in French Guiana . 1664 Quibdó Chocó Colombia 1665 Port - de-Paix Nord - Ouest Haiti 1666 Codrington Barbuda Antigua and Barbuda 1666 Newark New Jersey United States 1667 Paraty Rio de Janeiro Brazil 1668 Sault Ste . Marie Michigan United States ( 13 ) , oldest city in Michigan . 1670 Boqueirão Paraíba Brazil 1670 Cap - Haïtien Nord Haiti Originally called `` Cap - Français '' 1670 Charleston South Carolina United States 1672 Charlotte Amalie , St. Thomas U.S. Virgin Islands United States Oldest permanent European settlement in Saint Thomas island . Oldest continuously inhabited Danish established settlement in the Americas . 1673 Kingston Ontario Canada Grew from Fort Frontenac . Continuously inhabited since 1784 . 1673 San José de Gracia Aguascalientes Mexico 1673 Worcester Massachusetts United States 1674 Cachoeira Bahia Brazil 1674 Waterbury Connecticut United States 1677 Crosswicks New Jersey United States Quaker settlement . Continuously inhabited since founding . 1680 South Orange New Jersey United States Grew from Newark ( later Orange ) . 1680 Colonia del Sacramento Colonia Uruguay 1681 Cockburn Town Turks and Caicos Islands 1681 Philadelphia Pennsylvania United States 1682 Norfolk Virginia United States 1682 São Borja Rio Grande do Sul Brazil 1683 Dover Delaware United States 1685 Escada Pernambuco Brazil 1686 Trinidad Beni Department Bolivia 1687 New Britain Connecticut United States 1687 São Luiz Gonzaga Rio Grande do Sul Brazil 1687 São Miguel das Missões Rio Grande do Sul Brazil 1687 São Nicolau Rio Grande do Sul Brazil 1689 Marigot Saint Martin 1689 San Gil Santander Colombia 1690 Port of Spain Trinidad Trinidad and Tobago 1690 São Lourenço das Missões Rio Grande do Sul Brazil 1690 Santa Rosa de Viterbo Boyacá Colombia 1692 Villanueva Zacatecas Mexico 1693 Bom Jesus da Lapa Bahia Brazil 1693 Burlington New Jersey United States 1693 Curitiba Paraná Brazil 1693 Kingston St Andrew Jamaica 1695 Nassau New Providence Bahamas 1695 Saint - Marc Artibonite Haiti 1696 Assú Rio Grande do Norte Brazil Declared vila in 1766 ; cidade in 1845 . 1696 Rimouski Quebec Canada 1698 Ambato Tungurahua Ecuador 1698 Pensacola Florida United States Known for being the first European settlement in North America . 1699 Biloxi Mississippi United States 1699 Baton Rouge Louisiana United States 1700 Barreiras Bahia Brazil 1701 Detroit Michigan United States 1701 São João del Rei Minas Gerais Brazil 1702 Jesús María Aguascalientes Mexico 1702 Mobile Alabama United States 1703 Kaskaskia Illinois United States 1705 Bath North Carolina United States 1706 Albuquerque New Mexico United States 1706 Santo Ângelo Rio Grande do Sul Brazil 1709 Chihuahua Chihuahua Mexico 1710 Chatham New Jersey United States On land purchased in 1680 . 1710 New Bern North Carolina United States Birthplace of Pepsi 1711 Beaufort South Carolina United States 1711 Ouro Preto Minas Gerais Brazil 1714 Natchitoches Louisiana United States Oldest settlement in the Louisiana Purchase 1714 Antonina Paraná Brazil 1714 Laguna Santa Catarina Brazil 1714 Serro Minas Gerais Brazil 1715 ( prior to ) Kekionga Indiana United States Capital of the Miami tribe . 1716 Natchez Mississippi United States Dates to the founding of Fort Rosalie by the French. ( 14 ) 1717 Brejo do Cruz Paraíba Brazil 1717 Zacatecas Zacatecas Mexico 1717 Westborough Massachusetts United States One Hundredth Town in Massachusetts 1718 New Orleans Louisiana United States 1718 Rio de Contas Bahia Brazil 1718 San Antonio Texas United States 1718 Tiradentes Minas Gerais Brazil 1719 Trenton New Jersey United States 1721 Cortazar Guanajuato Mexico 1722 Edenton North Carolina United States 1723 Guaynabo Puerto Rico United States Declared pueblo in 1723 ; municipio in 1768 . 1724 Brattleboro Vermont United States Grew out of Fort Dummer . 1725 Concord New Hampshire United States 1726 Florianópolis Santa Catarina Brazil 1726 Montevideo Montevideo Uruguay 1727 Cuiabá Mato Grosso Brazil 1727 Goiás Goiás Brazil 1727 Pirenópolis Goiás Brazil 1728 Fredericksburg Virginia United States 1728 Inhambupe Bahia Brazil 1728 Nuuk Greenland Norse colony was originally called Godthab . Oldest continuously inhabited European established settlement in Greenland . 1729 Baltimore Maryland United States 1730 Roseau Saint George Dominica 1732 Fredericton New Brunswick Canada Originally called Ste . Anne 's Point . 1732 Vincennes Indiana United States 1733 Morretes Paraná Brazil 1733 Pau dos Ferros Rio Grande do Norte Brazil 1733 Richmond Virginia United States ( 15 ) 1733 Savannah Georgia United States 1733 Cúcuta Norte de Santander Colombia 1736 Augusta Georgia United States 1737 Rio Grande Rio Grande do Sul Brazil 1738 Fort Rouge Manitoba Canada Now Winnipeg , Manitoba . 1738 San José San José Costa Rica 1740 Santa Rosalía de Camargo Chihuahua Mexico 1740 Portalegre Rio Grande do Norte Brazil 1740 San Felipe de Puerto Plata Puerto Plata Dominican Republic 1741 Viamão Rio Grande do Sul Brazil 1743 Canguaretama Rio Grande do Norte Brazil Declared vila in 1858 ; cidade in 1885 . 1748 Caicó Rio Grande do Norte Brazil Declared vila in 1788 ; cidade in 1868 . 1749 Alexandria Virginia United States 1749 San Ignacio de Velasco Santa Cruz Department Bolivia 1749 Port - au - Prince Ouest Haiti 1749 Halifax Nova Scotia Canada 1749 Windsor Ontario Canada Oldest continually - inhabited settlement in Canada west of Montreal 1751 Manchester New Hampshire United States Former American textile capital - Named after Manchester , England 1752 Buíque Pernambuco Brazil 1752 Patos Paraíba Brazil Declared vila in 1832 ; cidade in 1903 . 1752 Tubac Arizona United States 1754 Augusta Maine United States 1755 Charlotte North Carolina United States 1756 Salto Salto Uruguay 1756 Santa Bárbara de Samaná Samaná Dominican Republic 1756 Yauco Puerto Rico United States 1757 Estância Sergipe Brazil 1758 Pittsburgh Pennsylvania United States 1758 Macapá Amapá Brazil 1760 Arês Rio Grande do Norte Brazil 1760 Sabana de la Mar Hato Mayor Dominican Republic 1761 Sacaba Cochabamba Department Bolivia 1762 Kingstown St Vincent Saint Vincent and the Grenadines 1762 Parnaíba Piauí Brazil 1762 Shepherdstown West Virginia United States Originally known as Mecklenburg . 1762 Allentown Pennsylvania United States Incorporated as Northamptontown . 1762 Baía da Traição Paraíba Brazil 1763 Burlington Vermont United States 1763 Pánfilo Natera Zacatecas Mexico 1763 Ellsworth Maine United States 1763 Philipsburg Sint Maarten Netherlands 1763 St. Louis Missouri United States 1764 Charlottetown Prince Edward Island Canada 1764 Pointe - à - Pitre Grand Terre Guadeloupe 1765 Port Elizabeth Grenadines Saint Vincent and the Grenadines 1765 Portsmouth Saint John Dominica 1767 Ceará - Mirim Rio Grande do Norte Brazil 1767 Araioses Maranhão Brazil 1769 Elizabethton Tennessee United States 1769 Falmouth Trelawny Jamaica 1769 San Diego California United States Grew from Presidio of San Diego 1769 Lapa Paraná Brazil 1770 Monterey California United States Grew from Presidio of Monterey . Original capital of California ( 16 ) 1770 Araxá Minas Gerais Brazil 1771 Calvillo Aguascalientes Mexico 1772 Porto Alegre Rio Grande do Sul Brazil 1775 Tucson Arizona United States 1774 Castro Paraná Brazil 1775 Lexington Kentucky United States 1775 Boonesborough Kentucky United States Grew from Fort Boonesborough , built by pioneer Daniel Boone . - 1775 São Lourenço da Mata Pernambuco Brazil District status in 1775 ; village status in 1884 ; municipality status in 1890 1776 San Francisco California United States 1776 Sincelejo Sucre Colombia 1777 San Jose California United States Originally known as El Pueblo de San José de Guadalupe , the first town in the Spanish colony of Nueva California , which later became Alta California . 1777 Montería Cordoba Colombia 1778 Corumbá Mato Grosso do Sul Brazil 1778 Louisville Kentucky United States Grew from Fort Nelson , established by explorer George Rogers Clark . 1778 San Francisco de Macorís Duarte Dominican Republic 1779 Jonesborough Tennessee United States Later organized as the lost State of Franklin with Jonesborough as capital 1784 . 1779 Nashville Tennessee United States Grew from Fort Nashborough 1780 Codó Maranhão Brazil Declared vila in 1833 ; cidade in 1896 . 1780 Las Matas de Farfán San Juan Dominican Republic 1780 Arauca Arauca Colombia 1781 Montpelier Vermont United States 1781 Los Angeles California United States 1782 Catu Bahia Brazil 1782 Georgetown Demerara - Mahaica Guyana Originally called La Nouvelle Ville . 1783 Vitória da Conquista Bahia Brazil 1784 San Fernando Trinidad Trinidad and Tobago 1785 Harrisburg Pennsylvania United States 1785 North Battleford Saskatchewan Canada 1785 fur trading post . 1877 Battleford is capital of the North West Territories . North Battleford incorporated as a city ( population 5000 + ) 1913 . 1785 Asheville North Carolina United States 1785 Gustavia Saint Barthélemy 1785 Huntington West Virginia United States 1785 Sydney Nova Scotia Canada 1786 Columbia South Carolina United States 1786 Escada Pernambuco Brazil Declared vila in 1854 ; cidade in 1873 . 1786 Florissant Missouri United States Originally known as St. Ferdinand . 1786 Frankfort Kentucky United States 1786 Portland Maine United States 1787 Boa Ventura Paraíba Brazil 1788 Marietta Ohio United States 1788 Cincinnati Ohio United States 1788 Charleston West Virginia United States Grew from Fort Lee . ( 17 ) 1788 Mercedes Soriano Uruguay 1789 Buffalo New York United States 1789 Itambé Pernambuco Brazil Declared vila in 1867 ; cidade in 1879 . 1790 Hamilton Bermuda 1790 Washington District of Columbia United States 1791 Jacksonville Florida United States Known as `` Cowford '' . 1791 Knoxville Tennessee United States 1791 Bangor Maine United States 1792 Raleigh North Carolina United States 1793 Sherbrooke Quebec Canada 1793 Toronto Ontario Canada 1794 Fort Wayne Indiana United States 1795 Edmonton Alberta Canada Grew from Fort Edmonton . 1795 Erie Pennsylvania United States Grew from the French Fort Presque Isle . 1795 Maryville Tennessee United States Grew from the American Fort Craig . 1796 Cleveland Ohio United States 1796 Oranjestad Aruba Netherlands 1797 Chaguanas Trinidad Trinidad and Tobago 1797 Franklinton Ohio United States Eventually absorbed by Columbus , Ohio . 1799 Araruama Rio de Janeiro Brazil 1800 Hull Quebec Canada Formerly known as Wrightville . 1800 Sonsón Antioquia Colombia 1802 Chapadinha Maranhão Brazil 1802 Santa Cruz de Barahona Barahona Dominican Republic 1803 Chicago Illinois United States Grew from Fort Dearborn . 1805 Huntsville Alabama United States 1807 Hot Springs Arkansas United States 1809 Água Preta Pernambuco Brazil Declared vila in 1846 ; cidade in 1895 . 1810 Guarapuava Paraná Brazil 1810 Manchester New Hampshire United States 1810 Pilão Arcado Bahia Brazil 1810 San Bernardino California United States 1811 Garanhuns Pernambuco Brazil 1811 Astoria Oregon United States 1812 Columbus Ohio United States 1812 Pelotas Rio Grande do Sul Brazil Declared vila in 1832 ; cidade in 1835 . 1813 Capela Sergipe Brazil 1813 Chisec Alta Verapaz Guatemala 1813 Barranquilla Atlántico Colombia 1815 Areia Paraíba Brazil 1815 Hamilton Ontario Canada 1816 Alagoinhas Bahia Brazil 1816 Chattanooga Tennessee United States Originally named Ross 's Landing . 1816 Saginaw Michigan United States 1816 Savaneta Aruba Netherlands 1817 Fort Smith Arkansas United States 1818 Itaguaí Rio de Janeiro Brazil 1819 Montgomery Alabama United States Near the site of the earlier French Fort Toulouse . 1819 Springfield Illinois United States 1819 Managua Managua Nicaragua 1819 Memphis Tennessee United States Near the site of the earlier French Fort Prudhomme . 1819 Palmeira Paraná Brazil 1819 Tuscaloosa Alabama United States Former state capital , grew from former Native American settlements beginning in 1580 . ( 18 ) 1820 Cotegipe Bahia Brazil 1821 Little Rock Arkansas United States 1821 Indianapolis Indiana United States 1821 Jefferson City Missouri United States 1821 Decatur Alabama United States 1822 Ponta Grossa Paraná Brazil 1822 Jackson Mississippi United States 1823 Tampa Florida United States Grew from earlier military post Fort Brooke . 1824 Vancouver Washington United States 1824 Tallahassee Florida United States 1825 Vicksburg Mississippi United States 1825 Grand Rapids Michigan United States 1825 Syracuse New York United States incorporated as village ; received city charter in 1847 1826 Ipiranga Paraná Brazil 1826 London Ontario Canada 1826 Bytown Ontario Canada Now Ottawa , Ontario . 1827 Fort Leavenworth Kansas United States 1827 St. Andrews Florida United States Now part of Panama City 1831 Greenville South Carolina United States 1831 Piracanjuba Goiás Brazil 1832 Goianinha Rio Grande do Norte Brazil 1828 Key West Florida United States 1832 Touros Rio Grande do Norte Brazil 1833 Bananeiras Paraíba Brazil 1833 Juazeiro Bahia Brazil 1833 Kitchener Ontario Canada Originally called Berlin . 1833 Milwaukee Wisconsin United States 1833 Nazaré da Mata Pernambuco Brazil Declared vila in 1833 ; cidade in 1850 . 1833 Rio Formoso Pernambuco Brazil Declared vila in 1833 ; cidade in 1850 . 1833 Vassouras Rio de Janeiro Brazil 1835 Austin Texas United States 1835 Barra do Corda Maranhão Brazil 1835 Curupuru Maranhão Brazil Declared vila in 1841 ; cidade in 1920 . 1836 Davenport Iowa United States 1836 Oshawa Ontario Canada 1836 Shreveport Louisiana United States 1836 Madison Wisconsin United States 1836 Tulsa Oklahoma United States The Lochapoka named their new settlement `` Tulasi , '' meaning `` old town '' 1837 Glória do Goitá Pernambuco Brazil Declared vila in 1877 ; cidade in 1884 . 1837 Lansing Michigan United States 1837 Houston Texas United States 1838 Divina Pastora Sergipe Brazil 1838 Kansas City Missouri United States 1838 St Paul Minnesota United States 1839 Santa Rita Paraíba Brazil Declared vila in 1890 ; cidade in 1924 . 1840 Summerside Prince Edward Island Canada 1840 Villavicencio Meta Colombia 1841 Cedar Rapids Iowa United States 1841 Dallas Texas United States 1842 Piatã Bahia Brazil 1842 Salem Oregon United States 1843 Atlanta Georgia United States Originally known as Terminus , later renamed Marthasville . Acquired the name Atlanta in 1847 . 1843 Des Moines Iowa United States 1843 Stanley East Falkland Falkland Islands 1843 Uruguaiana Rio Grande do Sul Brazil Declared vila in 1846 ; cidade in 1874 . 1843 Victoria British Columbia Canada 1844 Lençóis Bahia Brazil 1845 Araruna Paraíba Brazil 1845 Portland Oregon United States 1847 Alagoa Grande Paraíba Brazil Declared vila in 1865 ; cidade in 1908 . 1847 Salt Lake City Utah United States Originally known as Great Salt Lake City . 1848 Caruaru Pernambuco Brazil First municipality in the ( Agreste ) region of Pernambuco state , Brazil . 1848 Rio Verde Goiás Brazil 1848 Sacramento California United States 1849 Provo Utah United States 1849 Manizales Caldas Colombia 1851 San Luis Colorado United States 1851 Seattle Washington United States 1851 Jericó Antioquia Colombia 1852 Mossoró Rio Grande do Norte Brazil 1852 São José dos Pinhais Paraná Brazil 1852 Colón Colón Panama 1853 Olympia Washington United States 1854 Omaha Nebraska United States 1854 Anajatuba Maranhão Brazil 1854 Topeka Kansas United States 1855 Aracaju Sergipe Brazil 1856 Lincoln Nebraska United States Originally called Lancaster . 1856 O'Fallon Missouri United States 1856 Sioux Falls South Dakota United States 1857 Boquim Sergipe Brazil 1858 Carson City Nevada United States 1858 Denver Colorado United States 1859 Yankton South Dakota United States 1860 Chico California United States 1863 Boise Idaho United States 1863 Wichita Kansas United States 1864 Casper Wyoming United States Originally called Platte Bridge Station . 1864 Helena Montana United States 1864 Salinas California United States ( 19 ) 1866 Prince Albert Saskatchewan Canada Settled by Rev. James Nisbet . Incorporated as city ( population 5000 + ) October 8 , 1904 1867 Cheyenne Wyoming United States 1867 Gameleira Pernambuco Brazil 1867 Minneapolis Minnesota United States 1868 Colinas Maranhão Brazil Declared vila in 1870 ; cidade in 1891 . 1868 Phoenix Arizona United States 1870 Afogados da Ingazeira Pernambuco Brazil 1870 Campo Largo Paraná Brazil 1870 Puerto Limon Limon Costa Rica 1871 Águas Belas Pernambuco Brazil 1871 Alto Parnaíba Maranhão Brazil 1871 Birmingham Alabama United States 1871 Colorado Springs Colorado United States 1871 Fargo North Dakota United States 1871 Imbituva Paraná Brazil 1871 São João do Triunfo Paraná Brazil 1872 Anniston Alabama United States 1872 Bismarck North Dakota United States 1872 Tibagi Paraná Brazil 1873 Jaboatão dos Guararapes Pernambuco Brazil First settlement in 1593 ; village status in 1873 ; city status in 1884 1873 Timbaúba Pernambuco Brazil Declared vila in 1879 ; cidade in 1884 . 1875 Orlando Florida United States 1875 Calgary Alberta Canada Grew from Fort Calgary 1875 Humboldt Saskatchewan Canada Incorporated as a city ( population 5000 + ) November 7 , 2000 1876 Boa Vista Paraíba Brazil 1876 Cajapió Maranhão Brazil 1876 Rapid City South Dakota United States 1877 Billings Montana United States 1877 Jaquimeyes Barahona Dominican Republic 1878 Coeur d'Alene Idaho United States 1878 Colombo Paraná Brazil 1879 Vicência Pernambuco Brazil Declared vila in 1891 ; cidade in 1928 . 1880 Pierre South Dakota United States 1881 Juneau Alaska United States 1881 Moose Jaw Saskatchewan Canada Incorporated as a city ( population 5000 + ) November 1903 . 1882 Brandon Manitoba Canada 1882 Mao Valverde Dominican Republic 1882 Restauración Dajabón Dominican Republic 1882 Yorkton Saskatchewan Canada The York Farmers ' Colonization Company Limited settlement May 12 , 1882 . City ( population 5000 + ) incorporated February 1 , 1928 . 1882 Swift Current Saskatchewan Canada Canadian Pacific Railway arrival December 10 , 1882 . City ( population 5000 + ) incorporated January 15 , 1914 . 1882 Regina Saskatchewan Canada Settlement first named Pile O ' Bones , and renamed Regina . Capital city of SK . Incorporated as a city ( population 5000 + ) June 19 , 1903 1882 Rio Branco Acre Brazil 1883 Saskatoon Saskatchewan Canada Temperance Colony founded at Nutana . Riversdale , Nutana , and Saskatoon incorporated as a city ( population 5000 + ) in 1906 . 1884 Melfort Saskatchewan Canada Stoney Creek Settlement began in 1884 . Incorporated as a city ( population 5000 + ) on July 1 , 1907 . 1886 Vancouver British Columbia Canada 1887 Gulfport Mississippi United States ( 20 ) 1888 Virginia Beach Virginia United States Grew from Seatack community . 1889 Oklahoma City Oklahoma United States 1889 Whiting Indiana United States 1890 Ijuí Rio Grande do Sul Brazil 1892 Aliança Pernambuco Brazil Declared vila in 1909 ; cidade in 1928 . 1892 Catende Pernambuco Brazil Created in 1892 as a district of Palmares . Autonomous municipality in 1909 . 1892 Estevan Saskatchewan Canada CPR arrives 1893 . Incorporated as city ( population 5000 + ) March 1 , 1957 1892 Guayaramerín Beni Bolivia 1892 Restauración Dajabón Dominican Republic 1892 Vernon British Columbia Canada 1893 Araripina Pernambuco Brazil Created in 1893 as a district of Ouricuri . Autonomous municipality in 1928 . 1893 Catuípe Rio Grande do Sul Brazil 1894 Riberalta Beni Bolivia 1895 Traverse City Michigan United States 1896 Condado Pernambuco Brazil Declared cidade in 1958 . 1896 Inhumas Goiás Brazil 1896 Miami Florida United States 1896 Santa Catalina la Tinta Alta Verapaz Guatemala 1897 Jequié Bahia Brazil 1897 Nelson British Columbia Canada 1898 Weyburn Saskatchewan Canada Signal Hill settlement . Weyburn incorporated as a city ( population 5000 + ) 1913 . 1898 Chetumal Quintana Roo Mexico Originally called Payo Obispo . 1899 Porto Acre Acre Brazil 1900 Afrânio Pernambuco Brazil Created in 1900 as a district of Petrolina . Autonomous municipality in 1963 . 1901 Fairbanks Alaska United States 1902 Florencia Caquetá Colombia 1903 Lloydminster Saskatchewan Canada Brittania colony settled by Rev. Exton Lloyd and Rev. Isaac Barr . Incorporated as a city ( population 5000 + ) in 1958 . 1904 Cruzeiro do Sul Acre Brazil 1904 Grytviken South Georgia 1904 Sena Madureira Acre Brazil 1904 Xapuri Acre Brazil 1906 Cobija Pando Bolivia 1906 Feijó Acre Brazil 1907 Melville Saskatchewan Canada Incorporated as a city ( population 5000 + ) August 1 , 1960 1907 Tarauacá Acre Brazil 1908 São Mateus do Sul Paraná Brazil 1909 Estreito Maranhão Brazil 1910 Brasiléia Acre Brazil 1910 Kindersley Saskatchewan Canada 1910 Porto Walter Acre Brazil 1910 Villazón Potosí Bolivia 1911 Las Vegas Nevada United States 1914 Anchorage Alaska United States 1915 Yopal Casanare Colombia 1928 Leticia Amazonas Colombia 1929 Pabellón de Arteaga Aguascalientes Mexico 1930 Puerto Carreño Vichada Colombia 1931 Loreto Zacatecas Mexico 1935 Yellowknife Northwest Territories Canada 1935 Mitú Vaupés Colombia 1938 San José del Guaviare Guaviare Colombia 1942 Iqaluit Nunavut Canada Originally called Frobisher Bay . 1955 Freeport Grand Bahama Bahamas 1957 Ciudad del Este Alto Paraná Paraguay Originally called Puerto Flor de Lis . 1957 Rankin Inlet Nunavut Canada 1960 Brasília Distrito Federal Brazil Created in 1960 as the national capital . 1970 Belmopan Cayo Belize 1970 Linden Upper Demerara - Berbice Guyana City formed by combining the towns of Christianburg , MacKenzie , and Wismar . 1970 Cancún Quintana Roo Mexico Inírida Guainía Colombia Palmas Tocantins Brazil Was founded 1 year after the creation of the State of Tocantins . It 's the newest and smallest Brazilian capital city .
+  Fact 0.0: Tlapacoya (Ixtapaluca, Mexico State, Mexico) was founded in 7500 BC.
+  Fact 0.1: Puerto Hormiga Culture (Cartagena, Colombia) was founded in 4000 BC.
+  Fact 0.2: Aspero (Norte Chico, Peru) was founded in 3710 BC.
+  Fact 0.3: Caral (Norte Chico, Peru) was founded in 2627 BC.
+  Fact 0.4: Kaminaljuyu (Guatemala city, Guatemala) was founded in 1500 BC.
+  Fact 0.5: Cuicuilco (Mexico City, Mexico) was founded in 800 BC.
+  Fact 0.6: Ticul (Yucatan, Mexico) was founded in 700 BC.
+  Fact 0.7: Cholula (Puebla, Mexico) was founded in 500 BC.
+  Fact 0.8: Teotihuacan (Mexico State, Mexico) was founded in 300 BC.
+  Fact 0.9: Teotihuacan is in the Valley of Mexico.
+  Fact 0.10: Mitla (Oaxaca, Mexico) was founded in 200.
+  Fact 0.11: Acanceh (Yucatan, Mexico) was founded in 200.
+  Fact 0.12: Cuenca (Azuay, Ecuador) was founded in 500.
+  Fact 0.13: Ejutla (Oaxaca, Mexico) was founded in 524.
+  Fact 0.14: Izamal (Yucatan, Mexico) was founded in 550.
+  Fact 0.15: Cahokia (Illinois, United States) was founded in 600.
+  Fact 0.16: Tula (Hidalgo, Mexico) was founded in 713.
+  Fact 0.17: L'Anse aux Meadows (Newfoundland and Labrador, Canada) was founded in 1001.
+  Fact 0.18: L'Anse aux Meadows is the oldest known European (Norse) settlement in the Americas.
+  Fact 0.19: L'Anse aux Meadows was possibly founded by Leif Erikson as part of Vinland in 1001 AD.
+  Fact 0.20: Acoma Pueblo and Taos Pueblo (New Mexico, United States) were founded in 1000.
+  Fact 0.21: Motul (Yucatan, Mexico) was founded in 1050.
+  Fact 0.22: Pachuca (Hidalgo, Mexico) was founded in 1050.
+  Fact 0.23: Cusco (Cusco Province, Peru) was founded in 1100.
+  Fact 0.24: Oraibi (Arizona, United States, Hopi Reservation) was founded in 1100.
+  Fact 0.25: Ecatepec (Estado de Mexico, Mexico) was founded in 1168.
+  Fact 0.26: Chimaulhuacan (Mexico State, Mexico) was founded in 1259.
+  Fact 0.27: Xalapa (Veracruz, Mexico) was founded in 1313.
+  Fact 0.28: Tenochtitlan (Mexico City, Mexico) was founded in 1325.
+  Fact 0.29: Tenochtitlan was the largest pre-Columbian city in the Americas.
+  Fact 0.30: Tenochtitlan was later called Mexico City.
+  Fact 0.31: Zuni Pueblo (New Mexico, United States) was founded in 1450.
+  Fact 0.32: Iximche (Chimaltenango, Guatemala) was founded in 1470.
+  Fact 0.33: La Navidad (Nord-Est, Haiti) was founded in 1492.
+  Fact 0.34: La Navidad was the first European settlement in the New World during the Age of Discovery.
+  Fact 0.35: La Isabela (Puerto Plata, Dominican Republic) was founded in 1493.
+  Fact 0.36: Santo Domingo (Distrito Nacional, Dominican Republic) was founded in 1498.
+  Fact 0.37: Santo Domingo is the capital of the Dominican Republic.
+  Fact 0.38: Santo Domingo is the oldest continuously inhabited European established settlement in the Americas.
+  Fact 0.39: Santo Domingo was founded in 1498 by Bartholomew Columbus.
+  Fact 0.40: Santa Cruz del Seibo (El Seibo, Dominican Republic) was founded in 1502.
+  Fact 0.41: Azua de Compostela (Azua, Dominican Republic) was founded in 1504.
+  Fact 0.42: Santiago de los Caballeros (Santiago, Dominican Republic) was founded in 1504.
+  Fact 0.43: Cotui (Sanchez Ramirez, Dominican Republic) was founded in 1505.
+  Fact 0.44: Salvaleon de Higuey (La Altagracia, Dominican Republic) was founded in 1506.
+  Fact 0.45: Bonao (Monseñor Nouel, Dominican Republic) was founded in 1508.
+  Fact 0.46: Caparra (Puerto Rico, United States) was founded in 1508.
+  Fact 0.47: Caparra was the first city founded by Europeans in the United States, although not continuously inhabited.
+  Fact 0.48: Caparra was abandoned in 1521 with the removal of the capital to San Juan.
+  Fact 0.49: Santa Maria la Antigua del Darien (Uraba, Colombia) was founded in 1510.
+  Fact 0.50: Santa Maria la Antigua del Darien was the first city founded by Europeans on the South American continent.
+  Fact 0.51: Nombre de Dios (Colon, Panama) was founded in 1510.
+  Fact 0.52: Nombre de Dios is the oldest continuously inhabited European established settlement in Panama.
+  Fact 0.53: Baracoa (Guantanamo, Cuba) was founded in 1511.
+  Fact 0.54: Baracoa is the oldest continuously inhabited European established settlement in Cuba.
+  Fact 0.55: Baracoa is a former capital of Cuba.
+  Fact 0.56: Bayamo (Granma, Cuba) was founded in 1513.
+  Fact 0.57: Sancti Spiritus (Santi Spiritus, Cuba) was founded in 1514.
+  Fact 0.58: Trinidad (Santi Spiritus, Cuba) was founded in 1514.
+  Fact 0.59: Santiago (Santiago, Cuba) was founded in 1515.
+  Fact 0.60: Santiago was the second capital of Cuba, after Baracoa and before Havana.
+  Fact 0.61: Havana (Havana, Cuba) was founded in 1519.
+  Fact 0.62: La Villa Rica de la Vera Cruz (Veracruz, Mexico) was founded in 1519.
+  Fact 0.63: La Villa Rica de la Vera Cruz is the oldest continuously inhabited European established settlement in Mexico.
+  Fact 0.64: Panama City (Panama, Panama) was founded in 1519.
+  Fact 0.65: Panama City was the first European established city on the Pacific Coast of the Americas.
+  Fact 0.66: Panama City was founded at the present day ruins of Panama Viejo.
+  Fact 0.67: Panama City was sacked by the Welsh pirate Henry Morgan in 1671.
+  Fact 0.68: Panama City was resettled to nearby Casco Viejo in 1673.
+  Fact 0.69: Hato Mayor del Rey (Hato Mayor, Dominican Republic) was founded in 1520.
+  Fact 0.70: Cumana (Sucre, Venezuela) was founded in 1515.
+  Fact 0.71: Cumana is the oldest continuously inhabited European established settlement in Venezuela.
+  Fact 0.72: San Juan (Puerto Rico, United States) was founded in 1521.
+  Fact 0.73: San Juan is the oldest continuously inhabited European established settlement in Puerto Rico.
+  Fact 0.74: San Juan is the oldest continuously inhabited European established settlement in the United States.
+  Fact 0.75: San Juan is the oldest continuously inhabited state or territorial capital in the United States.
+  Fact 0.76: Granada (Granada, Nicaragua) was founded in 1524.
+  Fact 0.77: Granada is the oldest continuously inhabited European established settlement in Nicaragua.
+  Fact 0.78: Tecpan Guatemala (Chimaltenango, Guatemala) was founded in 1524.
+  Fact 0.79: Tecpan Guatemala was the first capital of Guatemala.
+  Fact 0.80: Tecpan Guatemala is the oldest continuously inhabited European established settlement in Guatemala.
+  Fact 0.81: Trujillo (Colon, Honduras) was founded in 1524.
+  Fact 0.82: Trujillo is the oldest continuously inhabited European established settlement in Honduras.
+  Fact 0.83: Santa Marta (Magdalena, Colombia) was founded in 1525.
+  Fact 0.84: Santa Marta is the oldest continuously inhabited European established settlement in Colombia.
+  Fact 0.85: Acapulco (Guerrero, Mexico) was founded in 1525.
+  Fact 0.86: San Salvador (San Salvador, El Salvador) was founded in 1525.
+  Fact 0.87: San Salvador was rebuilt and changed locations twice afterwards, in 1528 and 1545.
+  Fact 0.88: San Salvador is the oldest continuously inhabited European established settlement in El Salvador.
+  Fact 0.89: Acambaro (Guanajuato, Mexico) was founded in 1526.
+  Fact 0.90: Chimaltenango (Chimaltenango, Guatemala) was founded in 1526.
+  Fact 0.91: San Cristobal de las Casas (Chiapas, Mexico) was founded in 1528.
+  Fact 0.92: San Cristobal de las Casas was originally called Villa Real de Chiapa.
+  Fact 0.93: Camaguey (Camaguey Province, Cuba) was founded in 1528.
+  Fact 0.94: Camaguey was founded in 1515 on the northern coast as Puerto del Principe.
+  Fact 0.95: Camaguey was moved in 1528 to its present location.
+  Fact 0.96: Maracaibo (Zulia, Venezuela) was founded in 1529.
+  Fact 0.97: San Blas (Nayarit, Mexico) was founded in 1530 by Nuño Beltrán.
+  Fact 0.98: Puebla (Puebla, Mexico) was founded in 1531 by Fr. Toribio de Benavente (Motolinia) on 16 April.
+  Fact 0.99: Oaxaca (Oaxaca, Mexico) was founded in 1532.
+  Fact 0.100: Piura (Piura, Peru) was founded in 1532.
+  Fact 0.101: Sao Vicente (Sao Paulo, Brazil) was founded in 1532.
+  Fact 0.102: Sao Vicente is the oldest continuously inhabited European established settlement in Brazil.
+  Fact 0.103: Sao Vicente is the oldest Portuguese established settlement in the New World.
+  Fact 0.104: Tepic (Nayarit, Mexico) was founded in 1532 as capital of Nueva Galicia.
+  Fact 0.105: Cananeia (Sao Paulo, Brazil) was founded in 1533.
+  Fact 0.106: Cananeia is the second oldest city in Brazil.
+  Fact 0.107: Cartagena de Indias (Bolivar, Colombia) was founded in 1533.
+  Fact 0.108: Otavalo (Imbabura, Ecuador) was founded in 1534.
+  Fact 0.109: Quito (Pichincha, Ecuador) was founded in 1534.
+  Fact 0.110: Quito is the oldest continuously inhabited European established settlement in Ecuador.
+  Fact 0.111: Spanish Town (Saint Catherine, Jamaica) was founded in 1534 by the Spanish as Santiago de la Vega or St. Jago de la Vega.
+  Fact 0.112: Spanish Town is the oldest continuously inhabited European established settlement in Jamaica.
+  Fact 0.113: Trujillo (La Libertad, Peru) was founded in 1534.
+  Fact 0.114: Trujillo is the oldest continuously inhabited European established settlement in Peru.
+  Fact 0.115: Lima (Lima, Peru) was founded in 1535.
+  Fact 0.116: Igarassu (Pernambuco, Brazil) was the site of the first European settlement in Brazil, the feitoria of Igarassu, in 1516.
+  Fact 0.117: Igarassu was founded in 1535.
+  Fact 0.118: Olinda (Pernambuco, Brazil) was founded in 1535.
+  Fact 0.119: Olinda is one of the best-preserved colonial cities in Brazil.
+  Fact 0.120: Vila Velha (Espirito Santo, Brazil) was founded in 1535.
+  Fact 0.121: Paria (Oruro, Bolivia) was founded in 1535.
+  Fact 0.122: Paria was the first Spanish settlement in Bolivia.
+  Fact 0.123: Santiago de Cali (Valle del Cauca, Colombia) was founded in 1536.
+  Fact 0.124: Popayan (Cauca, Colombia) was founded in 1536.
+  Fact 0.125: San Pedro Sula (Cortes, Honduras) was founded in 1536.
+  Fact 0.126: Tupiza (Potosi, Bolivia) was founded in 1536.
+  Fact 0.127: Asuncion (Paraguay) was founded in 1537.
+  Fact 0.128: Asuncion is the oldest continuously inhabited European established settlement in Paraguay.
+  Fact 0.129: Recife (Pernambuco, Brazil) was founded in 1537.
+  Fact 0.130: Recife is the capital of the state of Pernambuco.
+  Fact 0.131: Recife is the oldest city among Brazil's current state capitals.
+  Fact 0.132: Bogota (Cundinamarca, Colombia) was founded in 1538.
+  Fact 0.133: Guayaquil (Guayas, Ecuador) was founded in 1538.
+  Fact 0.134: Iguape (Sao Paulo, Brazil) was founded in 1538.
+  Fact 0.135: Sucre (Chuquisaca, Bolivia) was founded in 1538.
+  Fact 0.136: Sucre was originally called Ciudad de la Plata de la Nueva Toledo.
+  Fact 0.137: Sucre is the oldest continuously inhabited European established settlement in Bolivia.
+  Fact 0.138: Tunja (Boyaca, Colombia) was founded in 1539.
+  Fact 0.139: Velez (Santander, Colombia) was founded in 1539.
+  Fact 0.140: Pasto (Narino, Colombia) was founded in 1539.
+  Fact 0.141: Arequipa (Arequipa, Peru) was founded in 1540.
+  Fact 0.142: Ayacucho (Ayacucho, Peru) was founded in 1540.
+  Fact 0.143: Campeche (Campeche, Mexico) was founded in 1540.
+  Fact 0.144: Yuriria (Guanajuato, Mexico) was founded in 1540.
+  Fact 0.145: Mompox (Bolivar, Colombia) was founded in 1540.
+  Fact 0.146: Supia (Caldas, Colombia) was founded in 1540.
+  Fact 0.147: Campeche was founded on the site of the Mayan village Kimpech.
+  Fact 0.148: Huanuco (Huanuco, Peru) was founded in 1541.
+  Fact 0.149: Moquegua (Moquegua, Peru) was founded in 1541.
+  Fact 0.150: Santiago (Santiago, Chile) was founded in 1541.
+  Fact 0.151: Santiago is the oldest continuously inhabited European established settlement in Chile.
+  Fact 0.152: Santafe de Antioquia (Antioquia, Colombia) was founded in 1541.
+  Fact 0.153: Guadalajara (Jalisco, Mexico) was founded in 1542.
+  Fact 0.154: Genaro Codina (Zacatecas, Mexico) was founded in 1542.
+  Fact 0.155: San Miguel de Allende (Guanajuato, Mexico) was founded in 1542.
+  Fact 0.156: Merida (Yucatan, Mexico) was founded in 1542.
+  Fact 0.157: Merida was built on the site of the Mayan city T'ho.
+  Fact 0.158: San Luis de la Paz (Guanajuato, Mexico) was founded in 1542.
+  Fact 0.159: Antigua Guatemala (Sacatepequez, Guatemala) was founded in 1543.
+  Fact 0.160: Coban (Alta Verapaz, Guatemala) was founded in 1543.
+  Fact 0.161: Santa Cruz Verapaz (Alta Verapaz, Guatemala) was founded in 1543.
+  Fact 0.162: Potosi (Potosi, Bolivia) was founded in 1545.
+  Fact 0.163: San Juan de los Remedios (Villa Clara Province, Cuba) was founded in 1545.
+  Fact 0.164: San Juan de los Remedios has the most uncertain foundation date in Cuba.
+  Fact 0.165: The date 1545 for San Juan de los Remedios was accepted because it is when the village erected its town hall.
+  Fact 0.166: The origin of San Juan de los Remedios has been documented back to 1513.
+  Fact 0.167: Riohacha (La Guajira, Colombia) was founded in 1545.
+  Fact 0.168: Santos (Sao Paulo, Brazil) was founded in 1546.
+  Fact 0.169: Neyba (Bahoruco, Dominican Republic) was founded in 1546.
+  Fact 0.170: Tepezala (Aguascalientes, Mexico) was founded in 1546.
+  Fact 0.171: Asientos (Aguascalientes, Mexico) was founded in 1548.
+  Fact 0.172: La Paz (La Paz, Bolivia) was founded in 1548.
+  Fact 0.173: Panuco (Zacatecas, Mexico) was founded in 1548.
+  Fact 0.174: Zacatecas (Zacatecas, Mexico) was founded in 1548.
+  Fact 0.175: Salvador (Bahia, Brazil) was founded in 1549.
+  Fact 0.176: Concepcion (Concepcion, Chile) was founded in 1550.
+  Fact 0.177: Valledupar (Cesar, Colombia) was founded in 1550.
+  Fact 0.178: Ibague (Tolima, Colombia) was founded in 1550.
+  Fact 0.179: Vitoria (Espirito Santo, Brazil) was founded in 1551.
+  Fact 0.180: Mocoa (Putumayo) was founded in 1551.
+  Fact 0.181: Sonsonate (Sonsonate, El Salvador) was founded in 1552.
+  Fact 0.182: Santiago del Estero (Santiago del Estero, Argentina) was founded in 1553.
+  Fact 0.183: Santiago del Estero is the oldest continuously inhabited European established settlement in Argentina.
+  Fact 0.184: Sao Bernardo do Campo (Sao Paulo, Brazil) was founded in 1553.
+  Fact 0.185: Embu (Sao Paulo, Brazil) was founded in 1554.
+  Fact 0.186: Sao Paulo (Sao Paulo, Brazil) was founded in 1554.
+  Fact 0.187: Sain Alto (Zacatecas, Mexico) was founded in 1555.
+  Fact 0.188: Chalchihuites (Zacatecas, Mexico) was founded in 1556.
+  Fact 0.189: Cuenca (Azuay, Ecuador) was founded in 1557 as Santa Ana de los Cuatro Rios de Cuenca.
+  Fact 0.190: Santo Amaro (Bahia, Brazil) was founded in 1557.
+  Fact 0.191: Merida (Merida, Venezuela) was founded in 1558.
+  Fact 0.192: Londres (Catamarca, Argentina) was founded in 1558.
+  Fact 0.193: Londres is the second oldest continuously inhabited European established settlement in Argentina.
+  Fact 0.194: Londres was refounded and relocated several times.
+  Fact 0.195: Mogi das Cruzes (Sao Paulo, Brazil) was founded in 1560.
+  Fact 0.196: Ipojuca (Pernambuco, Brazil) was founded in 1560.
+  Fact 0.197: Santa Cruz de la Sierra (Santa Cruz, Bolivia) was founded in 1561.
+  Fact 0.198: Mendoza (Mendoza, Argentina) was founded in 1561.
+  Fact 0.199: San Cristobal (Tachira, Venezuela) was founded in 1561.
+  Fact 0.200: Itanhaem (Sao Paulo, Brasil) was founded in 1561.
+  Fact 0.201: San Juan (San Juan, Argentina) was founded in 1562.
+  Fact 0.202: Rio Grande (Zacatecas, Mexico) was founded in 1562.
+  Fact 0.203: Susticacan (Zacatecas, Mexico) was founded in 1562.
+  Fact 0.204: Cartago (Cartago, Costa Rica) was founded in 1563.
+  Fact 0.205: Cartago is the oldest continuously inhabited European established settlement in Costa Rica.
+  Fact 0.206: Sao Mateus (Espirito Santo, Brazil) was founded in 1564.
+  Fact 0.207: Rio de Janeiro (Rio de Janeiro, Brazil) was founded in 1565.
+  Fact 0.208: Saint Augustine (Florida, United States) was founded in 1565.
+  Fact 0.209: Saint Augustine is the oldest continuously inhabited European established settlement in the continental United States.
+  Fact 0.210: Saint Augustine was preceded by Puerto Rican colonies, Pensacola (Florida), which was destroyed in 1559, and Fort Caroline, which was destroyed in 1565.
+  Fact 0.211: Tucuman (Tucuman, Argentina) was founded in 1565.
+  Fact 0.212: Caracas (Capital District, Venezuela) was founded in 1567.
+  Fact 0.213: Mazapil (Zacatecas, Mexico) was founded in 1568.
+  Fact 0.214: Goiana (Pernambuco, Brazil) was founded in 1568.
+  Fact 0.215: Goiana was declared a vila in 1685 and a cidade in 1840.
+  Fact 0.216: Valaparaiso (Zacatecas, Mexico) was founded in 1568.
+  Fact 0.217: Santa Ana (Santa Ana, El Salvador) was founded in 1569.
+  Fact 0.218: Santa Ana was built over the Mayan city of Sihuatehuacan.
+  Fact 0.219: Jerez (Zacatecas, Mexico) was founded in 1570.
+  Fact 0.220: Sombrerete (Zacatecas, Mexico) was founded in 1570.
+  Fact 0.221: Cochabamba (Cochabamba, Bolivia) was founded in 1571.
+  Fact 0.222: Huancavelica (Huancavelica, Peru) was founded in 1572.
+  Fact 0.223: San German (Puerto Rico, United States) was founded in 1573.
+  Fact 0.224: San German is the second oldest European settlement in Puerto Rico.
+  Fact 0.225: Cordoba (Cordoba, Argentina) was founded in 1573.
+  Fact 0.226: Santa Fe (Santa Fe, Argentina) was founded in 1573.
+  Fact 0.227: Buga (Valle del Cauca, Colombia) was founded in 1573.
+  Fact 0.228: Huaraz (Ancash, Peru) was founded in 1574.
+  Fact 0.229: Tarija (Tarija Department, Bolivia) was founded in 1574.
+  Fact 0.230: Aguascalientes (Aguascalientes, Mexico) was founded in 1575.
+  Fact 0.231: Leon (Guanajuato, Mexico) was founded in 1576.
+  Fact 0.232: Juayua (Sonsonate, El Salvador) was founded in 1577.
+  Fact 0.233: Fort-Liberte (Nord-Est, Haiti) was founded in 1578.
+  Fact 0.234: Fort-Liberte was originally called Bayaha by the Spanish.
+  Fact 0.235: Fort-Liberte is the oldest continuously inhabited European established settlement in Haiti.
+  Fact 0.236: Tegucigalpa (Francisco Morazan, Honduras) was founded in 1578.
+  Fact 0.237: Coamo (Puerto Rico, United States) was founded in 1579.
+  Fact 0.238: Coamo is the third oldest European settlement in Puerto Rico.
+  Fact 0.239: Coamo is in the same area where the Tainos had their village of Guayama.
+  Fact 0.240: Coamo became officially a town in 1616.
+  Fact 0.241: Coamo was given the title of villa by Spanish Royal Decree in 1778.
+  Fact 0.242: Buenos Aires (Argentina) was founded in 1580.
+  Fact 0.243: Santana de Parnaiba (Sao Paulo, Brasil) was founded in 1580.
+  Fact 0.244: Santo Domingo (Xenacoj, Sacatepequez, Guatemala) was founded in 1580.
+  Fact 0.245: Salta (Salta, Argentina) was founded in 1582.
+  Fact 0.246: St John's (Newfoundland and Labrador, Canada) was founded in 1583.
+  Fact 0.247: St John's is the oldest continuously inhabited British settlement in the Americas.
+  Fact 0.248: Roanoke (North Carolina, United States) was founded in 1584.
+  Fact 0.249: Joao Pessoa (Paraiba, Brazil) was founded in 1585.
+  Fact 0.250: Concepcion del Oro (Zacatecas, Mexico) was founded in 1587.
+  Fact 0.251: Corrientes (Corrientes, Argentina) was founded in 1588.
+  Fact 0.252: Sao Cristovao (Sergipe, Brazil) was founded in 1590.
+  Fact 0.253: Sao Cristovao was the first capital of Sergipe.
+  Fact 0.254: Sao Cristovao was formerly known as Sergipe d'El Rei.
+  Fact 0.255: Jimenez del Teul (Zacatecas, Mexico) was founded in 1591.
+  Fact 0.256: Juan Aldama (Zacatecas, Mexico) was founded in 1591.
+  Fact 0.257: Paudalho (Pernambuco, Brazil) was founded in 1591.
+  Fact 0.258: La Rioja (La Rioja, Argentina) was founded in 1591.
+  Fact 0.259: San Salvador de Jujuy (Jujuy, Argentina) was founded in 1593.
+  Fact 0.260: Pinos (Zacatecas, Mexico) was founded in 1594.
+  Fact 0.261: San Luis (San Luis, Argentina) was founded in 1594.
+  Fact 0.262: Monterrey (Nuevo Leon, Mexico) was founded in 1596.
+  Fact 0.263: Villahermosa (Tabasco, Mexico) was founded in 1596.
+  Fact 0.264: Villahermosa was originally called Villa Felipe II.
+  Fact 0.265: Portobelo (Colon, Panama) was founded in 1597.
+  Fact 0.266: Parras (Coahuila, Mexico) was founded in 1598.
+  Fact 0.267: Natal (Rio Grande do Norte, Brazil) was founded in 1599.
+  Fact 0.268: Tadoussac (Quebec, Canada) was founded in 1599.
+  Fact 0.269: Tadoussac is the oldest continuously inhabited French established settlement in the Americas.
+  Fact 0.270: Tadoussac is the oldest European established settlement in Quebec.
+  Fact 0.271: Facatativa (Cundinamarca, Colombia) was founded in 1600.
+  Fact 0.272: Zipaquira (Cundinamarca, Colombia) was founded in 1600.
+  Fact 0.273: David (Chiriqui Province, Panama) was founded in 1602.
+  Fact 0.274: Salamanca (Guanajuato, Mexico) was founded in 1603.
+  Fact 0.275: Port Royal (Nova Scotia, Canada) was founded in 1604.
+  Fact 0.276: Port Royal is the oldest continuously inhabited European established settlement in Nova Scotia.
+  Fact 0.277: Bayaguana (Monte Plata, Dominican Republic) was founded in 1606.
+  Fact 0.278: Ibarra (Imbabura, Ecuador) was founded in 1606.
+  Fact 0.279: Oruro (Oruro, Bolivia) was founded in 1606.
+  Fact 0.280: Jamestown (Virginia, United States) was founded in 1607.
+  Fact 0.281: Jamestown was the first permanent English established settlement in the Americas.
+  Fact 0.282: Quebec City (Quebec, Canada) was founded in 1608.
+  Fact 0.283: Fortaleza (Ceara, Brazil) was founded in 1609.
+  Fact 0.284: Kecoughtan (Virginia, United States) was founded in 1610.
+  Fact 0.285: Leon (Leon, Nicaragua) was originally founded in 1524 on the south-western shore of Lago Managua.
+  Fact 0.286: Original Leon was destroyed by earthquakes.
+  Fact 0.287: Leon was resettled 20 miles west in 1610 to its present-day location.
+  Fact 0.288: Leon's original location is known as the ruins of Leon Viejo.
+  Fact 0.289: Santa Fe (New Mexico, United States) was founded in 1610.
+  Fact 0.290: Santa Fe is the oldest continuously inhabited state or territorial capital in the continental United States.
+  Fact 0.291: Harbour Grace (Newfoundland and Labrador, Canada) was founded in 1610.
+  Fact 0.292: Marechal Deodoro (Alagoas, Brazil) was founded in 1611.
+  Fact 0.293: Sao Luis (Maranhao, Brazil) was founded in 1612.
+  Fact 0.294: Sao Luis is the capital of Maranhao.
+  Fact 0.295: St. George's (Bermuda) was founded in 1612.
+  Fact 0.296: St. George's is the oldest continuously inhabited English established settlement in the Americas.
+  Fact 0.297: Neiva (Huila, Colombia) was founded in 1612.
+  Fact 0.298: Penedo (Alagoas, Brazil) was founded in 1613.
+  Fact 0.299: Hopewell (Virginia, United States) was founded in 1613.
+  Fact 0.300: Hopewell is the oldest continuously inhabited English settlement in North America.
+  Fact 0.301: Hopewell was founded in 1613 as Bermuda City by Thomas Dale.
+  Fact 0.302: Albany (New York, United States) was founded in 1614.
+  Fact 0.303: Albany is the oldest US settlement north of Virginia.
+  Fact 0.304: Albany is the second oldest state or territorial capital in the continental United States.
+  Fact 0.305: Albany was incorporated in 1686.
+  Fact 0.306: Sirinhaem (Pernambuco, Brazil) was founded in 1614.
+  Fact 0.307: Sirinhaem was declared a vila in 1627 and a cidade in 1892.
+  Fact 0.308: Cabo Frio (Rio de Janeiro, Brazil) was founded in 1615.
+  Fact 0.309: Taos (New Mexico, United States) was founded in 1615.
+  Fact 0.310: Ipiales (Narino, Colombia) was founded in 1615.
+  Fact 0.311: Belem (Para, Brazil) was founded in 1616.
+  Fact 0.312: Belem is the capital of Para.
+  Fact 0.313: Medellin (Antioquia, Colombia) was founded in 1616 by Francisco de Herrera y Campuzano.
+  Fact 0.314: Arecibo (Puerto Rico, United States) was founded in 1616.
+  Fact 0.315: Jersey City (New Jersey, United States) was founded in 1617 as Pavonia, New Netherland.
+  Fact 0.316: Cabo de Santo Agostinho (Pernambuco, Brazil) was founded in 1618.
+  Fact 0.317: Cabo de Santo Agostinho was declared a vila in 1811 and a cidade in 1877.
+  Fact 0.318: Ojocaliente (Zacatecas, Mexico) was founded in 1620.
+  Fact 0.319: Plymouth (Massachusetts, United States) was founded in 1620.
+  Fact 0.320: Bucaramanga (Santander, Colombia) was founded in 1622.
+  Fact 0.321: Dover (New Hampshire, United States) was founded in 1623.
+  Fact 0.322: Gloucester (Massachusetts, United States) was founded in 1623.
+  Fact 0.323: Old Road (Saint Christopher, Saint Kitts and Nevis) was founded in 1624.
+  Fact 0.324: Old Road is the oldest continuously inhabited British established settlement in the Caribbean.
+  Fact 0.325: Old Road was the first successful non-Spanish established settlement in the Caribbean.
+  Fact 0.326: Villa Soriano (Soriano, Uruguay) was founded in 1624.
+  Fact 0.327: Villa Soriano is the oldest continuously inhabited European established settlement in Uruguay.
+  Fact 0.328: New Amsterdam (New York, United States) was founded in 1625.
+  Fact 0.329: New Amsterdam is now New York City.
+  Fact 0.330: Quincy (Massachusetts, United States) was founded in 1625.
+  Fact 0.331: Salem (Massachusetts, United States) was founded in 1626.
+  Fact 0.332: Vitoria de Santo Antao (Pernambuco, Brazil) was founded in 1626.
+  Fact 0.333: Vitoria de Santo Antao was declared a vila in 1811 and a cidade in 1843.
+  Fact 0.334: Basseterre (Saint Christopher, Saint Kitts and Nevis) was founded in 1627.
+  Fact 0.335: Basseterre is the oldest continuously inhabited French established settlement in the Caribbean.
+  Fact 0.336: Bridgetown (Saint Michael, Barbados) was founded in 1628.
+  Fact 0.337: Bridgetown is the second oldest continuously inhabited English established settlement in the Caribbean.
+  Fact 0.338: Boston (Massachusetts, United States) was founded in 1630.
+  Fact 0.339: Paramaribo (Paramaribo, Suriname) was founded in 1630.
+  Fact 0.340: Paramaribo is the oldest continuously inhabited European established settlement in Suriname.
+  Fact 0.341: Speightstown (Saint Peter, Barbados) was founded in 1630.
+  Fact 0.342: Biddeford (Maine, United States) was founded in 1631.
+  Fact 0.343: Hidalgo del Parral (Chihuahua, Mexico) was founded in 1631.
+  Fact 0.344: Saint John (New Brunswick, Canada) was founded in 1631.
+  Fact 0.345: Batopilas (Chihuahua, Mexico) was founded in 1632.
+  Fact 0.346: Williamsburg (Virginia, United States) was founded in 1632.
+  Fact 0.347: St. John's (Antigua and Barbuda) was founded in 1632.
+  Fact 0.348: Green Bay (Wisconsin, United States) was founded in 1634.
+  Fact 0.349: Green Bay is the oldest continuously inhabited French established settlement in the United States.
+  Fact 0.350: St. Mary's City (Maryland, United States) was founded in 1634.
+  Fact 0.351: Trois-Rivieres (Quebec, Canada) was founded in 1634.
+  Fact 0.352: Willemstad (Curacao, Netherlands) was founded in 1634.
+  Fact 0.353: Willemstad is the oldest continuously inhabited Dutch established settlement in the Caribbean.
+  Fact 0.354: Concord (Massachusetts, United States) was founded in 1635.
+  Fact 0.355: Old Saybrook (Connecticut, United States) was founded in 1635.
+  Fact 0.356: Old Saybrook was originally a Dutch settlement called Kievits Hoek.
+  Fact 0.357: Springfield (Massachusetts, United States) was founded in 1636.
+  Fact 0.358: Providence (Rhode Island, United States) was founded in 1636.
+  Fact 0.359: Hartford (Connecticut, United States) was founded in 1637.
+  Fact 0.360: Belize City (Belize) was founded in 1638.
+  Fact 0.361: Belize City is the oldest continuously inhabited European established settlement in Belize.
+  Fact 0.362: Belize City was originally a Mayan city called Holzuz.
+  Fact 0.363: Fort-de-France (Martinique) was founded in 1638.
+  Fact 0.364: Fort-de-France was originally called Fort Saint Louis.
+  Fact 0.365: New Haven (Connecticut, United States) was founded in 1638.
+  Fact 0.366: Wilmington (Delaware, United States) was founded in 1638.
+  Fact 0.367: Wilmington grew from Fort Christina, part of the New Sweden colony.
+  Fact 0.368: Wilmington is the oldest continuously inhabited Swedish established settlement in the Americas.
+  Fact 0.369: Cambridge (Massachusetts, United States) was founded in 1638.
+  Fact 0.370: Rincon de Romos (Aguascalientes, Mexico) was founded in 1639.
+  Fact 0.371: St. Marks (Florida, United States) was founded in 1639 or before.
+  Fact 0.372: Barnstable (Massachusetts, United States) was founded in 1639.
+  Fact 0.373: Barnstable is the second-oldest municipality in the United States and the only city on Cape Cod.
+  Fact 0.374: Bridgeport (Connecticut, United States) was founded in 1639.
+  Fact 0.375: Guilford (Connecticut, United States) was founded in 1639.
+  Fact 0.376: Guilford is the location of the Henry Whitfield House.
+  Fact 0.377: The Henry Whitfield House is the oldest house in Connecticut.
+  Fact 0.378: The Henry Whitfield House is the oldest stone house in New England.
+  Fact 0.379: Milford (Connecticut, United States) was founded in 1639.
+  Fact 0.380: Newport (Rhode Island, United States) was founded in 1639.
+  Fact 0.381: Tumaco (Narino, Colombia) was founded in 1640.
+  Fact 0.382: Montreal (Quebec, Canada) was founded in 1642.
+  Fact 0.383: Lexington (Massachusetts, United States) was founded in 1642.
+  Fact 0.384: Warwick (Rhode Island, United States) was founded in 1642.
+  Fact 0.385: Basse-Terre (Guadeloupe, France) was founded in 1643.
+  Fact 0.386: Basse-Terre is the territorial capital.
+  Fact 0.387: Dolores Hidalgo (Guanajuato, Mexico) was founded in 1643.
+  Fact 0.388: Salvatierra (Guanajuato, Mexico) was founded in 1644.
+  Fact 0.389: New London (Connecticut, United States) was founded in 1646.
+  Fact 0.390: Alcantara (Maranhao, Brazil) was founded in 1648.
+  Fact 0.391: Paranagua (Parana, Brazil) was founded in 1648.
+  Fact 0.392: Annapolis (Maryland, United States) was founded in 1649.
+  Fact 0.393: Castries (Castries, Saint Lucia) was founded in 1650.
+  Fact 0.394: Saint George's (Saint George, Grenada) was founded in 1650.
+  Fact 0.395: Norwalk (Connecticut, United States) was founded in 1651.
+  Fact 0.396: Vieux Fort (Vieux Fort, Saint Lucia) was founded in 1654.
+  Fact 0.397: Ciudad Juarez (Chihuahua, Mexico) was founded in 1659.
+  Fact 0.398: El Paso (Texas, United States) was founded in 1659.
+  Fact 0.399: Charlestown (Nevis, St Kitts & Nevis) was founded in 1660.
+  Fact 0.400: Placentia (Newfoundland and Labrador, Canada) was founded in 1660.
+  Fact 0.401: Placentia was the French capital until 1713.
+  Fact 0.402: Placentia was originally called Plaisance.
+  Fact 0.403: Rye (New York, United States) was founded in 1660.
+  Fact 0.404: Cayenne (French Guiana, France) was founded in 1664.
+  Fact 0.405: Cayenne is the oldest continuously inhabited European established settlement in French Guiana.
+  Fact 0.406: Quibdo (Choco, Colombia) was founded in 1664.
+  Fact 0.407: Port-de-Paix (Nord-Ouest, Haiti) was founded in 1665.
+  Fact 0.408: Codrington (Barbuda, Antigua and Barbuda) was founded in 1666.
+  Fact 0.409: Newark (New Jersey, United States) was founded in 1666.
+  Fact 0.410: Paraty (Rio de Janeiro, Brazil) was founded in 1667.
+  Fact 0.411: Sault Ste. Marie (Michigan, United States) was founded in 1668.
+  Fact 0.412: Sault Ste. Marie is the oldest city in Michigan.
+  Fact 0.413: Boqueirao (Paraiba, Brazil) was founded in 1670.
+  Fact 0.414: Cap-Haitien (Nord, Haiti) was founded in 1670.
+  Fact 0.415: Cap-Haitien was originally called Cap-Francais.
+  Fact 0.416: Charleston (South Carolina, United States) was founded in 1670.
+  Fact 0.417: Charlotte Amalie (St. Thomas, U.S. Virgin Islands, United States) was founded in 1672.
+  Fact 0.418: Charlotte Amalie is the oldest permanent European settlement on Saint Thomas island.
+  Fact 0.419: Charlotte Amalie is the oldest continuously inhabited Danish established settlement in the Americas.
+  Fact 0.420: Kingston (Ontario, Canada) was founded in 1673.
+  Fact 0.421: Kingston grew from Fort Frontenac.
+  Fact 0.422: Kingston has been continuously inhabited since 1784.
+  Fact 0.423: San Jose de Gracia (Aguascalientes, Mexico) was founded in 1673.
+  Fact 0.424: Worcester (Massachusetts, United States) was founded in 1673.
+  Fact 0.425: Cachoeira (Bahia, Brazil) was founded in 1674.
+  Fact 0.426: Waterbury (Connecticut, United States) was founded in 1674.
+  Fact 0.427: Crosswicks (New Jersey, United States) was founded in 1677.
+  Fact 0.428: Crosswicks is a Quaker settlement.
+  Fact 0.429: Crosswicks has been continuously inhabited since its founding.
+  Fact 0.430: South Orange (New Jersey, United States) was founded in 1680.
+  Fact 0.431: South Orange grew from Newark, later called Orange.
+  Fact 0.432: Colonia del Sacramento (Colonia, Uruguay) was founded in 1680.
+  Fact 0.433: Cockburn Town (Turks and Caicos Islands) was founded in 1681.
+  Fact 0.434: Philadelphia (Pennsylvania, United States) was founded in 1681.
+  Fact 0.435: Norfolk (Virginia, United States) was founded in 1682.
+  Fact 0.436: Sao Borja (Rio Grande do Sul, Brazil) was founded in 1682.
+  Fact 0.437: Dover (Delaware, United States) was founded in 1683.
+  Fact 0.438: Escada (Pernambuco, Brazil) was founded in 1685.
+  Fact 0.439: Trinidad (Beni Department, Bolivia) was founded in 1686.
+  Fact 0.440: New Britain (Connecticut, United States) was founded in 1687.
+  Fact 0.441: Sao Luiz Gonzaga (Rio Grande do Sul, Brazil) was founded in 1687.
+  Fact 0.442: Sao Miguel das Missoes (Rio Grande do Sul, Brazil) was founded in 1687.
+  Fact 0.443: Sao Nicolau (Rio Grande do Sul, Brazil) was founded in 1687.
+  Fact 0.444: Marigot (Saint Martin) was founded in 1689.
+  Fact 0.445: San Gil (Santander, Colombia) was founded in 1689.
+  Fact 0.446: Port of Spain (Trinidad, Trinidad and Tobago) was founded in 1690.
+  Fact 0.447: Sao Lourenco das Missoes (Rio Grande do Sul, Brazil) was founded in 1690.
+  Fact 0.448: Santa Rosa de Viterbo (Boyaca, Colombia) was founded in 1690.
+  Fact 0.449: Villanueva (Zacatecas, Mexico) was founded in 1692.
+  Fact 0.450: Bom Jesus da Lapa (Bahia, Brazil) was founded in 1693.
+  Fact 0.451: Burlington (New Jersey, United States) was founded in 1693.
+  Fact 0.452: Curitiba (Parana, Brazil) was founded in 1693.
+  Fact 0.453: Kingston (St Andrew, Jamaica) was founded in 1693.
+  Fact 0.454: Nassau (New Providence, Bahamas) was founded in 1695.
+  Fact 0.455: Saint-Marc (Artibonite, Haiti) was founded in 1695.
+  Fact 0.456: Assu (Rio Grande do Norte, Brazil) was founded in 1696.
+  Fact 0.457: Assu was declared a vila in 1766 and a cidade in 1845.
+  Fact 0.458: Rimouski (Quebec, Canada) was founded in 1696.
+  Fact 0.459: Ambato (Tungurahua, Ecuador) was founded in 1698.
+  Fact 0.460: Pensacola (Florida, United States) was founded in 1698.
+  Fact 0.461: Pensacola is known for being the first European settlement in North America.
+  Fact 0.462: Biloxi (Mississippi, United States) was founded in 1699.
+  Fact 0.463: Baton Rouge (Louisiana, United States) was founded in 1699.
+  Fact 0.464: Barreiras (Bahia, Brazil) was founded in 1700.
+  Fact 0.465: Detroit (Michigan, United States) was founded in 1701.
+  Fact 0.466: Sao Joao del Rei (Minas Gerais, Brazil) was founded in 1701.
+  Fact 0.467: Jesus Maria (Aguascalientes, Mexico) was founded in 1702.
+  Fact 0.468: Mobile (Alabama, United States) was founded in 1702.
+  Fact 0.469: Kaskaskia (Illinois, United States) was founded in 1703.
+  Fact 0.470: Bath (North Carolina, United States) was founded in 1705.
+  Fact 0.471: Albuquerque (New Mexico, United States) was founded in 1706.
+  Fact 0.472: Santo Angelo (Rio Grande do Sul, Brazil) was founded in 1706.
+  Fact 0.473: Chihuahua (Chihuahua, Mexico) was founded in 1709.
+  Fact 0.474: Chatham (New Jersey, United States) was founded in 1710.
+  Fact 0.475: Chatham was founded on land purchased in 1680.
+  Fact 0.476: New Bern (North Carolina, United States) was founded in 1710.
+  Fact 0.477: New Bern is the birthplace of Pepsi.
+  Fact 0.478: Beaufort (South Carolina, United States) was founded in 1711.
+  Fact 0.479: Ouro Preto (Minas Gerais, Brazil) was founded in 1711.
+  Fact 0.480: Natchitoches (Louisiana, United States) was founded in 1714.
+  Fact 0.481: Natchitoches is the oldest settlement in the Louisiana Purchase.
+  Fact 0.482: Antonina (Parana, Brazil) was founded in 1714.
+  Fact 0.483: Laguna (Santa Catarina, Brazil) was founded in 1714.
+  Fact 0.484: Serro (Minas Gerais, Brazil) was founded in 1714.
+  Fact 0.485: Kekionga (Indiana, United States) was founded in 1715 or before.
+  Fact 0.486: Kekionga is the capital of the Miami tribe.
+  Fact 0.487: Natchez (Mississippi, United States) was founded in 1716.
+  Fact 0.488: Natchez dates to the founding of Fort Rosalie by the French.
+  Fact 0.489: Brejo do Cruz (Paraiba, Brazil) was founded in 1717.
+  Fact 0.490: Zacatecas (Zacatecas, Mexico) was founded in 1717.
+  Fact 0.491: Westborough (Massachusetts, United States) was founded in 1717.
+  Fact 0.492: Westborough was the one hundredth town in Massachusetts.
+  Fact 0.493: New Orleans (Louisiana, United States) was founded in 1718.
+  Fact 0.494: Rio de Contas (Bahia, Brazil) was founded in 1718.
+  Fact 0.495: San Antonio (Texas, United States) was founded in 1718.
+  Fact 0.496: Tiradentes (Minas Gerais, Brazil) was founded in 1718.
+  Fact 0.497: Trenton (New Jersey, United States) was founded in 1719.
+  Fact 0.498: Cortazar (Guanajuato, Mexico) was founded in 1721.
+  Fact 0.499: Edenton (North Carolina, United States) was founded in 1722.
+  Fact 0.500: Guaynabo (Puerto Rico, United States) was founded in 1723.
+  Fact 0.501: Guaynabo was declared a pueblo in 1723 and a municipio in 1768.
+  Fact 0.502: Brattleboro (Vermont, United States) was founded in 1724.
+  Fact 0.503: Brattleboro grew out of Fort Dummer.
+  Fact 0.504: Concord (New Hampshire, United States) was founded in 1725.
+  Fact 0.505: Florianopolis (Santa Catarina, Brazil) was founded in 1726.
+  Fact 0.506: Montevideo (Montevideo, Uruguay) was founded in 1726.
+  Fact 0.507: Cuiaba (Mato Grosso, Brazil) was founded in 1727.
+  Fact 0.508: Goias (Goias, Brazil) was founded in 1727.
+  Fact 0.509: Pirenopolis (Goias, Brazil) was founded in 1727.
+  Fact 0.510: Fredericksburg (Virginia, United States) was founded in 1728.
+  Fact 0.511: Inhambupe (Bahia, Brazil) was founded in 1728.
+  Fact 0.512: Nuuk (Greenland) was founded in 1728.
+  Fact 0.513: Nuuk was originally a Norse colony called Godthab.
+  Fact 0.514: Nuuk is the oldest continuously inhabited European established settlement in Greenland.
+  Fact 0.515: Baltimore (Maryland, United States) was founded in 1729.
+  Fact 0.516: Roseau (Saint George, Dominica) was founded in 1730.
+  Fact 0.517: Fredericton (New Brunswick, Canada) was founded in 1732.
+  Fact 0.518: Fredericton was originally called Ste. Anne's Point.
+  Fact 0.519: Vincennes (Indiana, United States) was founded in 1732.
+  Fact 0.520: Morretes (Parana, Brazil) was founded in 1733.
+  Fact 0.521: Pau dos Ferros (Rio Grande do Norte, Brazil) was founded in 1733.
+  Fact 0.522: Richmond (Virginia, United States) was founded in 1733.
+  Fact 0.523: Savannah (Georgia, United States) was founded in 1733.
+  Fact 0.524: Cucuta (Norte de Santander, Colombia) was founded in 1733.
+  Fact 0.525: Augusta (Georgia, United States) was founded in 1736.
+  Fact 0.526: Rio Grande (Rio Grande do Sul, Brazil) was founded in 1737.
+  Fact 0.527: Fort Rouge (Manitoba, Canada) was founded in 1738.
+  Fact 0.528: Fort Rouge is now Winnipeg, Manitoba.
+  Fact 0.529: San Jose (San Jose, Costa Rica) was founded in 1738.
+  Fact 0.530: Santa Rosalia de Camargo (Chihuahua, Mexico) was founded in 1740.
+  Fact 0.531: Portalegre (Rio Grande do Norte, Brazil) was founded in 1740.
+  Fact 0.532: San Felipe de Puerto Plata (Puerto Plata, Dominican Republic) was founded in 1740.
+  Fact 0.533: Viamao (Rio Grande do Sul, Brazil) was founded in 1741.
+  Fact 0.534: Canguaretama (Rio Grande do Norte, Brazil) was founded in 1743.
+  Fact 0.535: Canguaretama was declared a vila in 1858 and a cidade in 1885.
+  Fact 0.536: Caico (Rio Grande do Norte, Brazil) was founded in 1748.
+  Fact 0.537: Caico was declared a vila in 1788 and a cidade in 1868.
+  Fact 0.538: Alexandria (Virginia, United States) was founded in 1749.
+  Fact 0.539: San Ignacio de Velasco (Santa Cruz Department, Bolivia) was founded in 1749.
+  Fact 0.540: Port-au-Prince (Ouest, Haiti) was founded in 1749.
+  Fact 0.541: Halifax (Nova Scotia, Canada) was founded in 1749.
+  Fact 0.542: Windsor (Ontario, Canada) was founded in 1749.
+  Fact 0.543: Windsor is the oldest continually inhabited settlement in Canada west of Montreal.
+  Fact 0.544: Manchester (New Hampshire, United States) was founded in 1751.
+  Fact 0.545: Manchester is a former American textile capital.
+  Fact 0.546: Manchester is named after Manchester, England.
+  Fact 0.547: Buique (Pernambuco, Brazil) was founded in 1752.
+  Fact 0.548: Patos (Paraiba, Brazil) was founded in 1752.
+  Fact 0.549: Patos was declared a vila in 1832 and a cidade in 1903.
+  Fact 0.550: Tubac (Arizona, United States) was founded in 1752.
+  Fact 0.551: Augusta (Maine, United States) was founded in 1754.
+  Fact 0.552: Charlotte (North Carolina, United States) was founded in 1755.
+  Fact 0.553: Salto (Salto, Uruguay) was founded in 1756.
+  Fact 0.554: Santa Barbara de Samana (Samana, Dominican Republic) was founded in 1756.
+  Fact 0.555: Yauco (Puerto Rico, United States) was founded in 1756.
+  Fact 0.556: Estancia (Sergipe, Brazil) was founded in 1757.
+  Fact 0.557: Pittsburgh (Pennsylvania, United States) was founded in 1758.
+  Fact 0.558: Macapa (Amapa, Brazil) was founded in 1758.
+  Fact 0.559: Ares (Rio Grande do Norte, Brazil) was founded in 1760.
+  Fact 0.560: Sabana de la Mar (Hato Mayor, Dominican Republic) was founded in 1760.
+  Fact 0.561: Sacaba (Cochabamba Department, Bolivia) was founded in 1761.
+  Fact 0.562: Kingstown (St Vincent, Saint Vincent and the Grenadines) was founded in 1762.
+  Fact 0.563: Parnaiba (Piaui, Brazil) was founded in 1762.
+  Fact 0.564: Shepherdstown (West Virginia, United States) was founded in 1762.
+  Fact 0.565: Shepherdstown was originally known as Mecklenburg.
+  Fact 0.566: Allentown (Pennsylvania, United States) was founded in 1762.
+  Fact 0.567: Allentown was incorporated as Northamptontown.
+  Fact 0.568: Baia da Traicao (Paraiba, Brazil) was founded in 1762.
+  Fact 0.569: Burlington (Vermont, United States) was founded in 1763.
+  Fact 0.570: Panfilo Natera (Zacatecas, Mexico) was founded in 1763.
+  Fact 0.571: Ellsworth (Maine, United States) was founded in 1763.
+  Fact 0.572: Philipsburg (Sint Maarten, Netherlands) was founded in 1763.
+  Fact 0.573: St. Louis (Missouri, United States) was founded in 1763.
+  Fact 0.574: Charlottetown (Prince Edward Island, Canada) was founded in 1764.
+  Fact 0.575: Pointe-a-Pitre (Grand Terre, Guadeloupe) was founded in 1764.
+  Fact 0.576: Port Elizabeth (Grenadines, Saint Vincent and the Grenadines) was founded in 1765.
+  Fact 0.577: Portsmouth (Saint John, Dominica) was founded in 1765.
+  Fact 0.578: Ceara-Mirim (Rio Grande do Norte, Brazil) was founded in 1767.
+  Fact 0.579: Araioses (Maranhao, Brazil) was founded in 1767.
+  Fact 0.580: Elizabethton (Tennessee, United States) was founded in 1769.
+  Fact 0.581: Falmouth (Trelawny, Jamaica) was founded in 1769.
+  Fact 0.582: San Diego (California, United States) was founded in 1769.
+  Fact 0.583: San Diego grew from the Presidio of San Diego.
+  Fact 0.584: Lapa (Parana, Brazil) was founded in 1769.
+  Fact 0.585: Monterey (California, United States) was founded in 1770.
+  Fact 0.586: Monterey grew from the Presidio of Monterey.
+  Fact 0.587: Monterey was the original capital of California.
+  Fact 0.588: Araxa (Minas Gerais, Brazil) was founded in 1770.
+  Fact 0.589: Calvillo (Aguascalientes, Mexico) was founded in 1771.
+  Fact 0.590: Porto Alegre (Rio Grande do Sul, Brazil) was founded in 1772.
+  Fact 0.591: Tucson (Arizona, United States) was founded in 1775.
+  Fact 0.592: Castro (Parana, Brazil) was founded in 1774.
+  Fact 0.593: Lexington (Kentucky, United States) was founded in 1775.
+  Fact 0.594: Boonesborough (Kentucky, United States) was founded in 1775.
+  Fact 0.595: Boonesborough grew from Fort Boonesborough, built by pioneer Daniel Boone.
+  Fact 0.596: Sao Lourenco da Mata (Pernambuco, Brazil) was founded in 1775.
+  Fact 0.597: Sao Lourenco da Mata had district status in 1775, village status in 1884, and municipality status in 1890.
+  Fact 0.598: San Francisco (California, United States) was founded in 1776.
+  Fact 0.599: Sincelejo (Sucre, Colombia) was founded in 1776.
+  Fact 0.600: San Jose (California, United States) was founded in 1777.
+  Fact 0.601: San Jose was originally known as El Pueblo de San Jose de Guadalupe.
+  Fact 0.602: San Jose was the first town in the Spanish colony of Nueva California, which later became Alta California.
+  Fact 0.603: Monteria (Cordoba, Colombia) was founded in 1777.
+  Fact 0.604: Corumba (Mato Grosso do Sul, Brazil) was founded in 1778.
+  Fact 0.605: Louisville (Kentucky, United States) was founded in 1778.
+  Fact 0.606: Louisville grew from Fort Nelson, established by explorer George Rogers Clark.
+  Fact 0.607: San Francisco de Macoris (Duarte, Dominican Republic) was founded in 1778.
+  Fact 0.608: Jonesborough (Tennessee, United States) was founded in 1779.
+  Fact 0.609: Jonesborough was later organized as the lost State of Franklin, with Jonesborough as capital, in 1784.
+  Fact 0.610: Nashville (Tennessee, United States) was founded in 1779.
+  Fact 0.611: Nashville grew from Fort Nashborough.
+  Fact 0.612: Codo (Maranhao, Brazil) was founded in 1780.
+  Fact 0.613: Codo was declared a vila in 1833 and a cidade in 1896.
+  Fact 0.614: Las Matas de Farfan (San Juan, Dominican Republic) was founded in 1780.
+  Fact 0.615: Arauca (Arauca, Colombia) was founded in 1780.
+  Fact 0.616: Montpelier (Vermont, United States) was founded in 1781.
+  Fact 0.617: Los Angeles (California, United States) was founded in 1781.
+  Fact 0.618: Catu (Bahia, Brazil) was founded in 1782.
+  Fact 0.619: Georgetown (Demerara-Mahaica, Guyana) was founded in 1782.
+  Fact 0.620: Georgetown was originally called La Nouvelle Ville.
+  Fact 0.621: Vitoria da Conquista (Bahia, Brazil) was founded in 1783.
+  Fact 0.622: San Fernando (Trinidad, Trinidad and Tobago) was founded in 1784.
+  Fact 0.623: Harrisburg (Pennsylvania, United States) was founded in 1785.
+  Fact 0.624: North Battleford (Saskatchewan, Canada) was founded in 1785 as a fur trading post.
+  Fact 0.625: Battleford was the capital of the North West Territories in 1877.
+  Fact 0.626: North Battleford was incorporated as a city with a population of 5000 or more in 1913.
+  Fact 0.627: Asheville (North Carolina, United States) was founded in 1785.
+  Fact 0.628: Gustavia (Saint Barthelemy) was founded in 1785.
+  Fact 0.629: Huntington (West Virginia, United States) was founded in 1785.
+  Fact 0.630: Sydney (Nova Scotia, Canada) was founded in 1785.
+  Fact 0.631: Columbia (South Carolina, United States) was founded in 1786.
+  Fact 0.632: Escada (Pernambuco, Brazil) was declared a vila in 1854 and a cidade in 1873.
+  Fact 0.633: Florissant (Missouri, United States) was founded in 1786.
+  Fact 0.634: Florissant was originally known as St. Ferdinand.
+  Fact 0.635: Frankfort (Kentucky, United States) was founded in 1786.
+  Fact 0.636: Portland (Maine, United States) was founded in 1786.
+  Fact 0.637: Boa Ventura (Paraiba, Brazil) was founded in 1787.
+  Fact 0.638: Marietta (Ohio, United States) was founded in 1788.
+  Fact 0.639: Cincinnati (Ohio, United States) was founded in 1788.
+  Fact 0.640: Charleston (West Virginia, United States) was founded in 1788.
+  Fact 0.641: Charleston grew from Fort Lee.
+  Fact 0.642: Mercedes (Soriano, Uruguay) was founded in 1788.
+  Fact 0.643: Buffalo (New York, United States) was founded in 1789.
+  Fact 0.644: Itambe (Pernambuco, Brazil) was founded in 1789.
+  Fact 0.645: Itambe was declared a vila in 1867 and a cidade in 1879.
+  Fact 0.646: Hamilton (Bermuda) was founded in 1790.
+  Fact 0.647: Washington (District of Columbia, United States) was founded in 1790.
+  Fact 0.648: Jacksonville (Florida, United States) was founded in 1791.
+  Fact 0.649: Jacksonville was known as Cowford.
+  Fact 0.650: Knoxville (Tennessee, United States) was founded in 1791.
+  Fact 0.651: Bangor (Maine, United States) was founded in 1791.
+  Fact 0.652: Raleigh (North Carolina, United States) was founded in 1792.
+  Fact 0.653: Sherbrooke (Quebec, Canada) was founded in 1793.
+  Fact 0.654: Toronto (Ontario, Canada) was founded in 1793.
+  Fact 0.655: Fort Wayne (Indiana, United States) was founded in 1794.
+  Fact 0.656: Edmonton (Alberta, Canada) was founded in 1795.
+  Fact 0.657: Edmonton grew from Fort Edmonton.
+  Fact 0.658: Erie (Pennsylvania, United States) was founded in 1795.
+  Fact 0.659: Erie grew from the French Fort Presque Isle.
+  Fact 0.660: Maryville (Tennessee, United States) was founded in 1795.
+  Fact 0.661: Maryville grew from the American Fort Craig.
+  Fact 0.662: Cleveland (Ohio, United States) was founded in 1796.
+  Fact 0.663: Oranjestad (Aruba, Netherlands) was founded in 1796.
+  Fact 0.664: Chaguanas (Trinidad, Trinidad and Tobago) was founded in 1797.
+  Fact 0.665: Franklinton (Ohio, United States) was founded in 1797.
+  Fact 0.666: Franklinton was eventually absorbed by Columbus, Ohio.
+  Fact 0.667: Araruama (Rio de Janeiro, Brazil) was founded in 1799.
+  Fact 0.668: Hull (Quebec, Canada) was founded in 1800.
+  Fact 0.669: Hull was formerly known as Wrightville.
+  Fact 0.670: Sonson (Antioquia, Colombia) was founded in 1800.
+  Fact 0.671: Chapadinha (Maranhao, Brazil) was founded in 1802.
+  Fact 0.672: Santa Cruz de Barahona (Barahona, Dominican Republic) was founded in 1802.
+  Fact 0.673: Chicago (Illinois, United States) was founded in 1803.
+  Fact 0.674: Chicago grew from Fort Dearborn.
+  Fact 0.675: Huntsville (Alabama, United States) was founded in 1805.
+  Fact 0.676: Hot Springs (Arkansas, United States) was founded in 1807.
+  Fact 0.677: Agua Preta (Pernambuco, Brazil) was founded in 1809.
+  Fact 0.678: Agua Preta was declared a vila in 1846 and a cidade in 1895.
+  Fact 0.679: Guarapuava (Parana, Brazil) was founded in 1810.
+  Fact 0.680: Manchester (New Hampshire, United States) was founded in 1810.
+  Fact 0.681: Pilao Arcado (Bahia, Brazil) was founded in 1810.
+  Fact 0.682: San Bernardino (California, United States) was founded in 1810.
+  Fact 0.683: Garanhuns (Pernambuco, Brazil) was founded in 1811.
+  Fact 0.684: Astoria (Oregon, United States) was founded in 1811.
+  Fact 0.685: Columbus (Ohio, United States) was founded in 1812.
+  Fact 0.686: Pelotas (Rio Grande do Sul, Brazil) was founded in 1812.
+  Fact 0.687: Pelotas was declared a vila in 1832 and a cidade in 1835.
+  Fact 0.688: Capela (Sergipe, Brazil) was founded in 1813.
+  Fact 0.689: Chisec (Alta Verapaz, Guatemala) was founded in 1813.
+  Fact 0.690: Barranquilla (Atlantico, Colombia) was founded in 1813.
+  Fact 0.691: Areia (Paraiba, Brazil) was founded in 1815.
+  Fact 0.692: Hamilton (Ontario, Canada) was founded in 1815.
+  Fact 0.693: Alagoinhas (Bahia, Brazil) was founded in 1816.
+  Fact 0.694: Chattanooga (Tennessee, United States) was founded in 1816.
+  Fact 0.695: Chattanooga was originally named Ross's Landing.
+  Fact 0.696: Saginaw (Michigan, United States) was founded in 1816.
+  Fact 0.697: Savaneta (Aruba, Netherlands) was founded in 1816.
+  Fact 0.698: Fort Smith (Arkansas, United States) was founded in 1817.
+  Fact 0.699: Itaguai (Rio de Janeiro, Brazil) was founded in 1818.
+  Fact 0.700: Montgomery (Alabama, United States) was founded in 1819.
+  Fact 0.701: Montgomery is near the site of the earlier French Fort Toulouse.
+  Fact 0.702: Springfield (Illinois, United States) was founded in 1819.
+  Fact 0.703: Managua (Managua, Nicaragua) was founded in 1819.
+  Fact 0.704: Memphis (Tennessee, United States) was founded in 1819.
+  Fact 0.705: Memphis is near the site of the earlier French Fort Prudhomme.
+  Fact 0.706: Palmeira (Parana, Brazil) was founded in 1819.
+  Fact 0.707: Tuscaloosa (Alabama, United States) was founded in 1819.
+  Fact 0.708: Tuscaloosa is a former state capital.
+  Fact 0.709: Tuscaloosa grew from former Native American settlements beginning in 1580.
+  Fact 0.710: Cotegipe (Bahia, Brazil) was founded in 1820.
+  Fact 0.711: Little Rock (Arkansas, United States) was founded in 1821.
+  Fact 0.712: Indianapolis (Indiana, United States) was founded in 1821.
+  Fact 0.713: Jefferson City (Missouri, United States) was founded in 1821.
+  Fact 0.714: Decatur (Alabama, United States) was founded in 1821.
+  Fact 0.715: Ponta Grossa (Parana, Brazil) was founded in 1822.
+  Fact 0.716: Jackson (Mississippi, United States) was founded in 1822.
+  Fact 0.717: Tampa (Florida, United States) was founded in 1823.
+  Fact 0.718: Tampa grew from the earlier military post Fort Brooke.
+  Fact 0.719: Vancouver (Washington, United States) was founded in 1824.
+  Fact 0.720: Tallahassee (Florida, United States) was founded in 1824.
+  Fact 0.721: Vicksburg (Mississippi, United States) was founded in 1825.
+  Fact 0.722: Grand Rapids (Michigan, United States) was founded in 1825.
+  Fact 0.723: Syracuse (New York, United States) was founded in 1825 as a village.
+  Fact 0.724: Syracuse received a city charter in 1847.
+  Fact 0.725: Ipiranga (Parana, Brazil) was founded in 1826.
+  Fact 0.726: London (Ontario, Canada) was founded in 1826.
+  Fact 0.727: Bytown (Ontario, Canada) was founded in 1826.
+  Fact 0.728: Bytown is now Ottawa, Ontario.
+  Fact 0.729: Fort Leavenworth (Kansas, United States) was founded in 1827.
+  Fact 0.730: St. Andrews (Florida, United States) was founded in 1827.
+  Fact 0.731: St. Andrews is now part of Panama City.
+  Fact 0.732: Key West (Florida, United States) was founded in 1828.
+  Fact 0.733: Greenville (South Carolina, United States) was founded in 1831.
+  Fact 0.734: Piracanjuba (Goias, Brazil) was founded in 1831.
+  Fact 0.735: Goianinha (Rio Grande do Norte, Brazil) was founded in 1832.
+  Fact 0.736: Touros (Rio Grande do Norte, Brazil) was founded in 1832.
+  Fact 0.737: Bananeiras (Paraiba, Brazil) was founded in 1833.
+  Fact 0.738: Juazeiro (Bahia, Brazil) was founded in 1833.
+  Fact 0.739: Kitchener (Ontario, Canada) was founded in 1833.
+  Fact 0.740: Kitchener was originally called Berlin.
+  Fact 0.741: Milwaukee (Wisconsin, United States) was founded in 1833.
+  Fact 0.742: Nazare da Mata (Pernambuco, Brazil) was founded in 1833.
+  Fact 0.743: Nazare da Mata was declared a vila in 1833 and a cidade in 1850.
+  Fact 0.744: Rio Formoso (Pernambuco, Brazil) was founded in 1833.
+  Fact 0.745: Rio Formoso was declared a vila in 1833 and a cidade in 1850.
+  Fact 0.746: Vassouras (Rio de Janeiro, Brazil) was founded in 1833.
+  Fact 0.747: Austin (Texas, United States) was founded in 1835.
+  Fact 0.748: Barra do Corda (Maranhao, Brazil) was founded in 1835.
+  Fact 0.749: Curupuru (Maranhao, Brazil) was founded in 1835.
+  Fact 0.750: Curupuru was declared a vila in 1841 and a cidade in 1920.
+  Fact 0.751: Davenport (Iowa, United States) was founded in 1836.
+  Fact 0.752: Oshawa (Ontario, Canada) was founded in 1836.
+  Fact 0.753: Shreveport (Louisiana, United States) was founded in 1836.
+  Fact 0.754: Madison (Wisconsin, United States) was founded in 1836.
+  Fact 0.755: Tulsa (Oklahoma, United States) was founded in 1836.
+  Fact 0.756: The Lochapoka named their new settlement Tulasi, meaning old town.
+  Fact 0.757: Gloria do Goita (Pernambuco, Brazil) was founded in 1837.
+  Fact 0.758: Gloria do Goita was declared a vila in 1877 and a cidade in 1884.
+  Fact 0.759: Lansing (Michigan, United States) was founded in 1837.
+  Fact 0.760: Houston (Texas, United States) was founded in 1837.
+  Fact 0.761: Divina Pastora (Sergipe, Brazil) was founded in 1838.
+  Fact 0.762: Kansas City (Missouri, United States) was founded in 1838.
+  Fact 0.763: St Paul (Minnesota, United States) was founded in 1838.
+  Fact 0.764: Santa Rita (Paraiba, Brazil) was founded in 1839.
+  Fact 0.765: Santa Rita was declared a vila in 1890 and a cidade in 1924.
+  Fact 0.766: Summerside (Prince Edward Island, Canada) was founded in 1840.
+  Fact 0.767: Villavicencio (Meta, Colombia) was founded in 1840.
+  Fact 0.768: Cedar Rapids (Iowa, United States) was founded in 1841.
+  Fact 0.769: Dallas (Texas, United States) was founded in 1841.
+  Fact 0.770: Piata (Bahia, Brazil) was founded in 1842.
+  Fact 0.771: Salem (Oregon, United States) was founded in 1842.
+  Fact 0.772: Atlanta (Georgia, United States) was founded in 1843.
+  Fact 0.773: Atlanta was originally known as Terminus, later renamed Marthasville.
+  Fact 0.774: Atlanta acquired the name Atlanta in 1847.
+  Fact 0.775: Des Moines (Iowa, United States) was founded in 1843.
+  Fact 0.776: Stanley (East Falkland, Falkland Islands) was founded in 1843.
+  Fact 0.777: Uruguaiana (Rio Grande do Sul, Brazil) was founded in 1843.
+  Fact 0.778: Uruguaiana was declared a vila in 1846 and a cidade in 1874.
+  Fact 0.779: Victoria (British Columbia, Canada) was founded in 1843.
+  Fact 0.780: Lencois (Bahia, Brazil) was founded in 1844.
+  Fact 0.781: Araruna (Paraiba, Brazil) was founded in 1845.
+  Fact 0.782: Portland (Oregon, United States) was founded in 1845.
+  Fact 0.783: Alagoa Grande (Paraiba, Brazil) was founded in 1847.
+  Fact 0.784: Alagoa Grande was declared a vila in 1865 and a cidade in 1908.
+  Fact 0.785: Salt Lake City (Utah, United States) was founded in 1847.
+  Fact 0.786: Salt Lake City was originally known as Great Salt Lake City.
+  Fact 0.787: Caruaru (Pernambuco, Brazil) was founded in 1848.
+  Fact 0.788: Caruaru was the first municipality in the Agreste region of Pernambuco state.
+  Fact 0.789: Rio Verde (Goias, Brazil) was founded in 1848.
+  Fact 0.790: Sacramento (California, United States) was founded in 1848.
+  Fact 0.791: Provo (Utah, United States) was founded in 1849.
+  Fact 0.792: Manizales (Caldas, Colombia) was founded in 1849.
+  Fact 0.793: San Luis (Colorado, United States) was founded in 1851.
+  Fact 0.794: Seattle (Washington, United States) was founded in 1851.
+  Fact 0.795: Jerico (Antioquia, Colombia) was founded in 1851.
+  Fact 0.796: Mossoro (Rio Grande do Norte, Brazil) was founded in 1852.
+  Fact 0.797: Sao Jose dos Pinhais (Parana, Brazil) was founded in 1852.
+  Fact 0.798: Colon (Colon, Panama) was founded in 1852.
+  Fact 0.799: Olympia (Washington, United States) was founded in 1853.
+  Fact 0.800: Omaha (Nebraska, United States) was founded in 1854.
+  Fact 0.801: Anajatuba (Maranhao, Brazil) was founded in 1854.
+  Fact 0.802: Topeka (Kansas, United States) was founded in 1854.
+  Fact 0.803: Aracaju (Sergipe, Brazil) was founded in 1855.
+  Fact 0.804: Lincoln (Nebraska, United States) was founded in 1856.
+  Fact 0.805: Lincoln was originally called Lancaster.
+  Fact 0.806: O'Fallon (Missouri, United States) was founded in 1856.
+  Fact 0.807: Sioux Falls (South Dakota, United States) was founded in 1856.
+  Fact 0.808: Boquim (Sergipe, Brazil) was founded in 1857.
+  Fact 0.809: Carson City (Nevada, United States) was founded in 1858.
+  Fact 0.810: Denver (Colorado, United States) was founded in 1858.
+  Fact 0.811: Yankton (South Dakota, United States) was founded in 1859.
+  Fact 0.812: Chico (California, United States) was founded in 1860.
+  Fact 0.813: Boise (Idaho, United States) was founded in 1863.
+  Fact 0.814: Wichita (Kansas, United States) was founded in 1863.
+  Fact 0.815: Casper (Wyoming, United States) was founded in 1864.
+  Fact 0.816: Casper was originally called Platte Bridge Station.
+  Fact 0.817: Helena (Montana, United States) was founded in 1864.
+  Fact 0.818: Salinas (California, United States) was founded in 1864.
+  Fact 0.819: Prince Albert (Saskatchewan, Canada) was founded in 1866.
+  Fact 0.820: Prince Albert was settled by Rev. James Nisbet.
+  Fact 0.821: Prince Albert was incorporated as a city with a population of 5000 or more on October 8, 1904.
+  Fact 0.822: Cheyenne (Wyoming, United States) was founded in 1867.
+  Fact 0.823: Gameleira (Pernambuco, Brazil) was founded in 1867.
+  Fact 0.824: Minneapolis (Minnesota, United States) was founded in 1867.
+  Fact 0.825: Colinas (Maranhao, Brazil) was founded in 1868.
+  Fact 0.826: Colinas was declared a vila in 1870 and a cidade in 1891.
+  Fact 0.827: Phoenix (Arizona, United States) was founded in 1868.
+  Fact 0.828: Afogados da Ingazeira (Pernambuco, Brazil) was founded in 1870.
+  Fact 0.829: Campo Largo (Parana, Brazil) was founded in 1870.
+  Fact 0.830: Puerto Limon (Limon, Costa Rica) was founded in 1870.
+  Fact 0.831: Aguas Belas (Pernambuco, Brazil) was founded in 1871.
+  Fact 0.832: Alto Parnaiba (Maranhao, Brazil) was founded in 1871.
+  Fact 0.833: Birmingham (Alabama, United States) was founded in 1871.
+  Fact 0.834: Colorado Springs (Colorado, United States) was founded in 1871.
+  Fact 0.835: Fargo (North Dakota, United States) was founded in 1871.
+  Fact 0.836: Imbituva (Parana, Brazil) was founded in 1871.
+  Fact 0.837: Sao Joao do Triunfo (Parana, Brazil) was founded in 1871.
+  Fact 0.838: Anniston (Alabama, United States) was founded in 1872.
+  Fact 0.839: Bismarck (North Dakota, United States) was founded in 1872.
+  Fact 0.840: Tibagi (Parana, Brazil) was founded in 1872.
+  Fact 0.841: Jaboatao dos Guararapes (Pernambuco, Brazil) was founded in 1873.
+  Fact 0.842: Jaboatao dos Guararapes had its first settlement in 1593, village status in 1873, and city status in 1884.
+  Fact 0.843: Timbauba (Pernambuco, Brazil) was founded in 1873.
+  Fact 0.844: Timbauba was declared a vila in 1879 and a cidade in 1884.
+  Fact 0.845: Orlando (Florida, United States) was founded in 1875.
+  Fact 0.846: Calgary (Alberta, Canada) was founded in 1875.
+  Fact 0.847: Calgary grew from Fort Calgary.
+  Fact 0.848: Humboldt (Saskatchewan, Canada) was founded in 1875.
+  Fact 0.849: Humboldt was incorporated as a city with a population of 5000 or more on November 7, 2000.
+  Fact 0.850: Boa Vista (Paraiba, Brazil) was founded in 1876.
+  Fact 0.851: Cajapio (Maranhao, Brazil) was founded in 1876.
+  Fact 0.852: Rapid City (South Dakota, United States) was founded in 1876.
+  Fact 0.853: Billings (Montana, United States) was founded in 1877.
+  Fact 0.854: Jaquimeyes (Barahona, Dominican Republic) was founded in 1877.
+  Fact 0.855: Coeur d'Alene (Idaho, United States) was founded in 1878.
+  Fact 0.856: Colombo (Parana, Brazil) was founded in 1878.
+  Fact 0.857: Vicencia (Pernambuco, Brazil) was founded in 1879.
+  Fact 0.858: Vicencia was declared a vila in 1891 and a cidade in 1928.
+  Fact 0.859: Pierre (South Dakota, United States) was founded in 1880.
+  Fact 0.860: Juneau (Alaska, United States) was founded in 1881.
+  Fact 0.861: Moose Jaw (Saskatchewan, Canada) was founded in 1881.
+  Fact 0.862: Moose Jaw was incorporated as a city with a population of 5000 or more in November 1903.
+  Fact 0.863: Brandon (Manitoba, Canada) was founded in 1882.
+  Fact 0.864: Mao (Valverde, Dominican Republic) was founded in 1882.
+  Fact 0.865: Restauracion (Dajabon, Dominican Republic) was founded in 1882.
+  Fact 0.866: Yorkton (Saskatchewan, Canada) was founded in 1882.
+  Fact 0.867: Yorkton was settled by the York Farmers' Colonization Company Limited on May 12, 1882.
+  Fact 0.868: Yorkton was incorporated as a city with a population of 5000 or more on February 1, 1928.
+  Fact 0.869: Swift Current (Saskatchewan, Canada) was founded in 1882.
+  Fact 0.870: The Canadian Pacific Railway arrived at Swift Current on December 10, 1882.
+  Fact 0.871: Swift Current was incorporated as a city with a population of 5000 or more on January 15, 1914.
+  Fact 0.872: Regina (Saskatchewan, Canada) was founded in 1882.
+  Fact 0.873: Regina was first named Pile O' Bones and then renamed Regina.
+  Fact 0.874: Regina is the capital city of Saskatchewan.
+  Fact 0.875: Regina was incorporated as a city with a population of 5000 or more on June 19, 1903.
+  Fact 0.876: Rio Branco (Acre, Brazil) was founded in 1882.
+  Fact 0.877: Saskatoon (Saskatchewan, Canada) was founded in 1883.
+  Fact 0.878: Saskatoon began as the Temperance Colony founded at Nutana.
+  Fact 0.879: Riversdale, Nutana, and Saskatoon were incorporated as a city with a population of 5000 or more in 1906.
+  Fact 0.880: Melfort (Saskatchewan, Canada) was founded in 1884.
+  Fact 0.881: Melfort's Stoney Creek settlement began in 1884.
+  Fact 0.882: Melfort was incorporated as a city with a population of 5000 or more on July 1, 1907.
+  Fact 0.883: Vancouver (British Columbia, Canada) was founded in 1886.
+  Fact 0.884: Gulfport (Mississippi, United States) was founded in 1887.
+  Fact 0.885: Virginia Beach (Virginia, United States) was founded in 1888.
+  Fact 0.886: Virginia Beach grew from the Seatack community.
+  Fact 0.887: Oklahoma City (Oklahoma, United States) was founded in 1889.
+  Fact 0.888: Whiting (Indiana, United States) was founded in 1889.
+  Fact 0.889: Ijui (Rio Grande do Sul, Brazil) was founded in 1890.
+  Fact 0.890: Aliança (Pernambuco, Brazil) was founded in 1892.
+  Fact 0.891: Alianca was declared a vila in 1909 and a cidade in 1928.
+  Fact 0.892: Catende (Pernambuco, Brazil) was founded in 1892 as a district of Palmares.
+  Fact 0.893: Catende became an autonomous municipality in 1909.
+  Fact 0.894: Estevan (Saskatchewan, Canada) was founded in 1892.
+  Fact 0.895: The CPR arrived in Estevan in 1893.
+  Fact 0.896: Estevan was incorporated as a city with a population of 5000 or more on March 1, 1957.
+  Fact 0.897: Guayaramerin (Beni, Bolivia) was founded in 1892.
+  Fact 0.898: Restauracion (Dajabon, Dominican Republic) was founded in 1892.
+  Fact 0.899: Vernon (British Columbia, Canada) was founded in 1892.
+  Fact 0.900: Araripina (Pernambuco, Brazil) was founded in 1893 as a district of Ouricuri.
+  Fact 0.901: Araripina became an autonomous municipality in 1928.
+  Fact 0.902: Catuipe (Rio Grande do Sul, Brazil) was founded in 1893.
+  Fact 0.903: Riberalta (Beni, Bolivia) was founded in 1894.
+  Fact 0.904: Traverse City (Michigan, United States) was founded in 1895.
+  Fact 0.905: Condado (Pernambuco, Brazil) was founded in 1896.
+  Fact 0.906: Condado was declared a cidade in 1958.
+  Fact 0.907: Inhumas (Goias, Brazil) was founded in 1896.
+  Fact 0.908: Miami (Florida, United States) was founded in 1896.
+  Fact 0.909: Santa Catalina la Tinta (Alta Verapaz, Guatemala) was founded in 1896.
+  Fact 0.910: Jequie (Bahia, Brazil) was founded in 1897.
+  Fact 0.911: Nelson (British Columbia, Canada) was founded in 1897.
+  Fact 0.912: Weyburn (Saskatchewan, Canada) was founded in 1898.
+  Fact 0.913: Weyburn began as the Signal Hill settlement.
+  Fact 0.914: Weyburn was incorporated as a city in 1913.
+  Fact 0.915: Chetumal (Quintana Roo, Mexico) was founded in 1898.
+  Fact 0.916: Chetumal was originally called Payo Obispo.
+  Fact 0.917: Porto Acre (Acre, Brazil) was founded in 1899.
+  Fact 0.918: Afranio (Pernambuco, Brazil) was founded in 1900 as a district of Petrolina.
+  Fact 0.919: Afranio became an autonomous municipality in 1963.
+  Fact 0.920: Fairbanks (Alaska, United States) was founded in 1901.
+  Fact 0.921: Florencia (Caqueta, Colombia) was founded in 1902.
+  Fact 0.922: Lloydminster (Saskatchewan, Canada) was founded in 1903.
+  Fact 0.923: Lloydminster was a Brittania colony settled by Rev. Exton Lloyd and Rev. Isaac Barr.
+  Fact 0.924: Lloydminster was incorporated as a city with a population of 5000 or more in 1958.
+  Fact 0.925: Cruzeiro do Sul (Acre, Brazil) was founded in 1904.
+  Fact 0.926: Grytviken (South Georgia) was founded in 1904.
+  Fact 0.927: Sena Madureira (Acre, Brazil) was founded in 1904.
+  Fact 0.928: Xapuri (Acre, Brazil) was founded in 1904.
+  Fact 0.929: Cobija (Pando, Bolivia) was founded in 1906.
+  Fact 0.930: Feijo (Acre, Brazil) was founded in 1906.
+  Fact 0.931: Melville (Saskatchewan, Canada) was founded in 1907.
+  Fact 0.932: Melville was incorporated as a city with a population of 5000 or more on August 1, 1960.
+  Fact 0.933: Tarauaca (Acre, Brazil) was founded in 1907.
+  Fact 0.934: Sao Mateus do Sul (Parana, Brazil) was founded in 1908.
+  Fact 0.935: Estreito (Maranhao, Brazil) was founded in 1909.
+  Fact 0.936: Brasileia (Acre, Brazil) was founded in 1910.
+  Fact 0.937: Kindersley (Saskatchewan, Canada) was founded in 1910.
+  Fact 0.938: Porto Walter (Acre, Brazil) was founded in 1910.
+  Fact 0.939: Villazon (Potosi, Bolivia) was founded in 1910.
+  Fact 0.940: Las Vegas (Nevada, United States) was founded in 1911.
+  Fact 0.941: Anchorage (Alaska, United States) was founded in 1914.
+  Fact 0.942: Yopal (Casanare, Colombia) was founded in 1915.
+  Fact 0.943: Leticia (Amazonas, Colombia) was founded in 1928.
+  Fact 0.944: Pabellon de Arteaga (Aguascalientes, Mexico) was founded in 1929.
+  Fact 0.945: Puerto Carreno (Vichada, Colombia) was founded in 1930.
+  Fact 0.946: Loreto (Zacatecas, Mexico) was founded in 1931.
+  Fact 0.947: Yellowknife (Northwest Territories, Canada) was founded in 1935.
+  Fact 0.948: Mitu (Vaupes, Colombia) was founded in 1935.
+  Fact 0.949: San Jose del Guaviare (Guaviare, Colombia) was founded in 1938.
+  Fact 0.950: Iqaluit (Nunavut, Canada) was founded in 1942.
+  Fact 0.951: Iqaluit was originally called Frobisher Bay.
+  Fact 0.952: Freeport (Grand Bahama, Bahamas) was founded in 1955.
+  Fact 0.953: Ciudad del Este (Alto Parana, Paraguay) was founded in 1957.
+  Fact 0.954: Ciudad del Este was originally called Puerto Flor de Lis.
+  Fact 0.955: Rankin Inlet (Nunavut, Canada) was founded in 1957.
+  Fact 0.956: Brasilia (Distrito Federal, Brazil) was founded in 1960.
+  Fact 0.957: Brasilia was created in 1960 as the national capital.
+  Fact 0.958: Belmopan (Cayo, Belize) was founded in 1970.
+  Fact 0.959: Linden (Upper Demerara-Berbice, Guyana) was founded in 1970.
+  Fact 0.960: Linden was formed by combining the towns of Christianburg, MacKenzie, and Wismar.
+  Fact 0.961: Cancun (Quintana Roo, Mexico) was founded in 1970.
+  Fact 0.962: Inirida is in Guainia, Colombia.
+  Fact 0.963: Palmas (Tocantins, Brazil) was founded 1 year after the creation of the State of Tocantins.
+  Fact 0.964: Palmas is the newest and smallest Brazilian capital city.
+
+Retrieved items:
+<item 1>
+List of cities in the Americas by year of foundation
+1564 São Mateus Espírito Santo Brazil 1565 Rio de Janeiro Rio de Janeiro Brazil 1565 Saint Augustine Florida United States Oldest continuously inhabited
+European established settlement in the continental United States . Preceded by Puerto Rican colonies , Pensacola , Florida , which was destroyed in 1559 , and
+Fort Caroline , destroyed in 1565 . 1565 Tucumán Tucumán Argentina 1567 Caracas Capital District Venezuela 1568 Mazapil Zacatecas Mexico 1568 Goiana Pernambuco
+Brazil Declared vila in 1685 ; cidade in 1840 . 1568 Valaparaíso Zacatecas Mexico 1569 Santa Ana Santa Ana El Salvador Built over Mayan city of Sihuatehuacán .
+</item 1>
+
+<item 2>
+List of cities in the Americas by year of foundation
+( 14 ) 1717 Brejo do Cruz Paraíba Brazil 1717 Zacatecas Zacatecas Mexico 1717 Westborough Massachusetts United States One Hundredth Town in Massachusetts 1718
+New Orleans Louisiana United States 1718 Rio de Contas Bahia Brazil 1718 San Antonio Texas United States 1718 Tiradentes Minas Gerais Brazil 1719 Trenton New
+Jersey United States 1721 Cortazar Guanajuato Mexico 1722 Edenton North Carolina United States 1723 Guaynabo Puerto Rico United States Declared pueblo in 1723 ;
+municipio in 1768 . 1724 Brattleboro Vermont United States Grew out of Fort Dummer .
+</item 2>
+
+<item 3>
+List of cities in the Americas by year of foundation
+1810 Guarapuava Paraná Brazil 1810 Manchester New Hampshire United States 1810 Pilão Arcado Bahia Brazil 1810 San Bernardino California United States 1811
+Garanhuns Pernambuco Brazil 1811 Astoria Oregon United States 1812 Columbus Ohio United States 1812 Pelotas Rio Grande do Sul Brazil Declared vila in 1832 ;
+cidade in 1835 . 1813 Capela Sergipe Brazil 1813 Chisec Alta Verapaz Guatemala 1813 Barranquilla Atlántico Colombia 1815 Areia Paraíba Brazil 1815 Hamilton
+Ontario Canada 1816 Alagoinhas Bahia Brazil 1816 Chattanooga Tennessee United States Originally named Ross 's Landing . 1816 Saginaw Michigan United States 1816
+Savaneta Aruba Netherlands 1817 Fort Smith Arkansas United States 1818 Itaguaí Rio de Janeiro Brazil 1819 Montgomery Alabama United States Near the site of the
+earlier French Fort Toulouse . 1819 Springfield Illinois United States 1819 Managua Managua Nicaragua 1819 Memphis Tennessee United States Near the site of the
+earlier French Fort Prudhomme .
+</item 3>
+
+<item 4>
+List of cities in the Americas by year of foundation
+1643 Dolores Hidalgo Guanajuato Mexico 1644 Salvatierra Guanajuato Mexico 1646 New London Connecticut United States 1648 Alcântara Maranhão Brazil 1648
+Paranaguá Paraná Brazil 1649 Annapolis Maryland United States 1650 Castries Castries Saint Lucia 1650 Saint George 's Saint George Grenada 1651 Norwalk
+Connecticut United States 1654 Vieux Fort Vieux Fort Saint Lucia 1659 Ciudad Juárez Chihuahua Mexico 1659 El Paso Texas United States 1660 Charlestown Nevis St
+Kitts & Nevis 1660 Placentia Newfoundland and Labrador Canada French Capital until 1713 , originally called Plaisance 1660 Rye New York United States 1664
+Cayenne French Guiana France Oldest continuously inhabited European established settlement in French Guiana .
+</item 4>
+
+<item 5>
+List of cities in the Americas by year of foundation
+Year City State , province , dept. , etc . Country Notes 7500 BC Tlapacoya Ixtapaluca Mexico 4000 BC Puerto Hormiga Culture Cartagena Colombia 3710 BC Aspero
+Norte Chico Peru 2627 BC Caral Norte Chico Peru 1500 BC Kaminaljuyu Guatemala city Guatemala 800 BC Cuicuilco Mexico City Mexico 700 BC Ticul Yucatán Mexico 500
+BC Cholula Puebla Mexico 300 BC Teotihuacan México Mexico In the Valley of Mexico 200 Mitla Oaxaca Mexico 200 Acanceh Yucatan Mexico 500 Cuenca Azuay Ecuador
+524 Ejutla Oaxaca Mexico ( 1 ) 550 Izamal Yucatan Mexico 600 Cahokia Illinois United States 713 Tula Hidalgo Mexico 1001 L'Anse aux Meadows Newfoundland and
+Labrador Canada Oldest known European ( Norse ) settlement in the Americas . Possibly founded by Leif Erikson , as part of Vinland , in 1001 AD .
+</item 5>
+
+<item 6>
+List of cities in the Americas by year of foundation
+States 1693 Curitiba Paraná Brazil 1693 Kingston St Andrew Jamaica 1695 Nassau New Providence Bahamas 1695 Saint - Marc Artibonite Haiti 1696 Assú Rio Grande do
+Norte Brazil Declared vila in 1766 ; cidade in 1845 . 1696 Rimouski Quebec Canada 1698 Ambato Tungurahua Ecuador 1698 Pensacola Florida United States Known for
+being the first European settlement in North America . 1699 Biloxi Mississippi United States 1699 Baton Rouge Louisiana United States 1700 Barreiras Bahia
+Brazil 1701 Detroit Michigan United States 1701 São João del Rei Minas Gerais Brazil 1702 Jesús María Aguascalientes Mexico 1702 Mobile Alabama United States
+1703 Kaskaskia Illinois United States 1705 Bath North Carolina United States 1706 Albuquerque New Mexico United States 1706 Santo Ângelo Rio Grande do Sul
+Brazil 1709 Chihuahua Chihuahua Mexico 1710 Chatham New Jersey United States On land purchased in 1680 .
+</item 6>
+
+<item 7>
+List of cities in the Americas by year of foundation
+1664 Quibdó Chocó Colombia 1665 Port - de-Paix Nord - Ouest Haiti 1666 Codrington Barbuda Antigua and Barbuda 1666 Newark New Jersey United States 1667 Paraty
+Rio de Janeiro Brazil 1668 Sault Ste . Marie Michigan United States ( 13 ) , oldest city in Michigan . 1670 Boqueirão Paraíba Brazil 1670 Cap - Haïtien Nord
+Haiti Originally called `` Cap - Français '' 1670 Charleston South Carolina United States 1672 Charlotte Amalie , St. Thomas U.S. Virgin Islands United States
+Oldest permanent European settlement in Saint Thomas island . Oldest continuously inhabited Danish established settlement in the Americas . 1673 Kingston
+Ontario Canada Grew from Fort Frontenac . Continuously inhabited since 1784 . 1673 San José de Gracia Aguascalientes Mexico 1673 Worcester Massachusetts United
+States 1674 Cachoeira Bahia Brazil 1674 Waterbury Connecticut United States 1677 Crosswicks New Jersey United States Quaker settlement . Continuously inhabited
+since founding .
+</item 7>
+
+<item 8>
+List of cities in the Americas by year of foundation
+1616 Medellín Antioquia Colombia Founded by Francisco de Herrera y Campuzano 1616 Arecibo Puerto Rico United States 1617 Jersey City , New Jersey New Jersey
+United States Pavonia , New Netherland 1618 Cabo de Santo Agostinho Pernambuco Brazil Declared vila in 1811 ; cidade in 1877 . 1620 Ojocaliente Zacatecas Mexico
+1620 Plymouth Massachusetts United States 1622 Bucaramanga Santander Colombia 1623 Dover New Hampshire United States 1623 Gloucester Massachusetts United States
+1624 Old Road Saint Christopher Saint Kitts and Nevis Oldest continuously inhabited British established settlement in the Caribbean , First successful '
+non-Spanish ' established settlement in the Caribbean . 1624 Villa Soriano Soriano Uruguay Oldest continuously inhabited European established settlement in
+Uruguay . 1625 New Amsterdam New York United States Now New York City . 1625 Quincy Massachusetts United States 1626 Salem Massachusetts United States 1626
+Vitória de Santo Antão Pernambuco Brazil Declared vila in 1811 ; cidade in 1843 .
+</item 8>
+
+<item 9>
+List of cities in the Americas by year of foundation
+1636 Springfield Massachusetts United States 1636 Providence Rhode Island United States 1637 Hartford Connecticut United States ( 9 ) 1638 Belize City Belize
+Belize Oldest continuously inhabited European established settlement in Belize . Original Mayan city called Holzuz . 1638 Fort - de-France Martinique Originally
+called Fort Saint Louis . 1638 New Haven Connecticut United States ( 10 ) 1638 Wilmington Delaware United States Grew from Fort Christina , part of the New
+Sweden colony . Oldest continuously inhabited Swedish established settlement in the Americas . 1638 Cambridge Massachusetts United States 1639 Rincón de Romos
+Aguascalientes Mexico 1639 ( prior to ) St.
+</item 9>
+
+<item 10>
+List of cities in the Americas by year of foundation
+1000 Acoma Pueblo and Taos Pueblo New Mexico United States 1050 Motul Yucatán Mexico 1050 Pachuca Hidalgo Mexico 1100 Cusco Cusco Province Peru 1100 Oraibi
+Arizona United States ( Hopi Reservation ) ( 2 ) 1168 Ecatepec Estado de Mexico Mexico 1259 Chimaulhuacan Mexico State Mexico 1313 Xalapa Veracruz Mexico 1325
+Tenochtitlan Mexico City Mexico Largest pre-Columbian city in the Americas , later called Mexico City . 1450 Zuni Pueblo New Mexico United States ( 3 ) 1470
+Iximche Chimaltenango Guatemala 1492 La Navidad Nord - Est Haiti First European settlement in the New World during the Age of Discovery . 1493 La Isabela Puerto
+Plata Dominican Republic 1498 Santo Domingo Distrito Nacional Dominican Republic Capital of the Dominican Republic . Oldest continuously inhabited European
+established settlement in the Americas . Founded in 1498 , by Bartholomew Columbus .
+</item 10>
+=== END ITEM id=5441c887f790e6d5 ===
+
+=== ITEM id=b85e17ee8294fcea ===
+Gold sentences and facts:
+Sentence 0: The 1836 article and other sources make it clear that this verse was not used soon after 1745 , and certainly before the song became accepted as the British national anthem in the 1780s and 1790s . It was included as an integral part of the song in the Oxford Book of Eighteenth Century Verse of 1926 , although erroneously referencing the `` fourth verse '' to the Gentleman 's Magazine article of 1745 .
+  Fact 0.0: The 1836 article and other sources show that this verse was not used soon after 1745.
+  Fact 0.1: The 1836 article and other sources show that this verse was certainly not used before the song became accepted as the British national anthem in the 1780s and 1790s.
+Sentence 1: The French Marquise de Créquy wrote in her Souvenirs that the words `` Grand Dieu , sauvez le Roi ! '' were indeed composed by Jean - Baptiste Lully in gratitude for the survival by Louis XIV of an anal fistula operation . ( The surgical knife purpose - made for the occasion is on display in the Musée d'histoire de la médecine . ) Allegedly , Lully had set words by Marie de Brinon to music , and Créquy claimed that the tune was later plagiarised by Handel , and so adopted by the British as `` un de leurs air nationaux '' . ( The entire story might have been intended as a joke . ) Translated into Latin under the title Domine , Salvum Fac Regem , it became the French anthem until 1792 . After the Battle of Culloden , the Hanover dynasty supposedly adopted this melody as the British anthem .
+  Fact 1.0: The verse was included as an integral part of the song in the Oxford Book of Eighteenth Century Verse of 1926.
+  Fact 1.1: The Oxford Book of Eighteenth Century Verse of 1926 erroneously referenced the 'fourth verse' to the Gentleman's Magazine article of 1745.
+
+Retrieved items:
+<item 1>
+God Save the Queen
+Since 1953 , the anthem is sometimes preceded by a fanfare composed by Gordon Jacob for the coronation of Queen Elizabeth II . Alternative British versions (
+edit ) There have been several attempts to improve the song by rewriting the words . In the nineteenth century there was some lively debate about the national
+anthem and , even then , verse two was considered to be slightly offensive . Notably , the question arose over the phrase `` scatter her enemies . '' Some
+thought it placed better emphasis on the respective power of Parliament and the Crown to change `` her '' to `` our '' ; others pointed out that the theology
+was somewhat dubious and substituted `` thine '' instead . Sydney G.R. Coles wrote a completely new version , as did Canon F.K. Harford . In 1836 , William
+Edward Hickson wrote four alternative verses . The first , third , and fourth of these verses are appended to the National Anthem in the English Hymnal ( which
+only includes verses one and three of the original lyrics ) .
+</item 1>
+
+<item 2>
+God Save the Queen
+Send him victorious Happy and glorious Long to reign over us God save the king ! Use in the United Kingdom ( edit ) See also : National anthem of England The
+phrase `` God Save the King '' in use as a rallying cry to the support of the monarch and the UK 's forces `` God Save the Queen '' is the national anthem of
+the United Kingdom of Great Britain and Northern Ireland . Like many aspects of British constitutional life , its official status derives from custom and use ,
+not from Royal Proclamation or Act of Parliament . In general only one or two verses are sung , but on rare occasions three . The variation in the UK of the
+lyrics to `` God Save the Queen '' is the oldest amongst those currently used , and forms the basis on which all other versions used throughout the Commonwealth
+are formed ; though , again , the words have varied throughout these years . England has no official national anthem of its own ; `` God Save the Queen '' is
+treated as the English national anthem when England is represented at sporting events ( though there are some exceptions to this rule , such as cricket where
+Jerusalem is used ) .
+</item 2>
+
+<item 3>
+God Save the Queen
+National or royal anthem of Antigua and Barbuda ( royal ) Australia ( royal ) and its dependency of Norfolk Island ( national and royal ) The Bahamas ( royal )
+Barbados ( royal ) Belize ( royal ) Canada ( royal ) Grenada ( royal ) Jamaica ( royal ) New Zealand ( national and royal ) and some of its dependencies ( Cook
+Islands and Niue ( royal ) and Tokelau ( national and royal ) ) Saint Kitts and Nevis ( royal ) Mauritius ( royal ) 1968 - 1992 Solomon Islands ( royal ) Tuvalu
+( royal ) United Kingdom ( national and royal ) , its Crown Dependencies and its overseas territories Also known as `` God Save the King '' ( when the monarch
+is male ) Music Unknown composer Adopted September 1745 Audio sample `` God Save the Queen '' file help `` God Save the Queen '' ( alternatively `` God Save the
+King '' , depending on the gender of the reigning monarch ) is the national or royal anthem in a number of Commonwealth realms , their territories , and the
+British Crown dependencies . The author of the tune is unknown , and it may originate in plainchant ; but an attribution to the composer John Bull is sometimes
+made .
+</item 3>
+
+<item 4>
+God Save the Queen
+Republic . Retrieved 11 November 2017 . External links ( edit ) Wikisource has original text related to this article : God Save the Queen Wikimedia Commons has
+media related to God Save the Queen . National Anthem at the Royal Family website Streaming audio , lyrics and information about God Save the Queen Department
+of Canadian Heritage -- Royal anthem page God Save Great George our King : -- article discussing different versions of the lyrics Free sheet music of God Save
+the Queen from Cantorion.org A Point of View : Is it time for a new British national anthem ? BBC NEWS . Published 15 January 2016 . Retrieved 17 July 2017 .
+National anthems of Europe Sovereign states Albania Andorra Armenia Austria Azerbaijan Belarus Belgium Bosnia and Herzegovina Bulgaria Croatia Cyprus Czech
+Republic Denmark Estonia Finland France Georgia Germany Greece Hungary Iceland Ireland Italy Kazakhstan Latvia Liechtenstein Lithuania Luxembourg Macedonia
+Malta Moldova Monaco Montenegro Netherlands Norway Poland Portugal Romania Russia San Marino Serbia Slovakia Slovenia Spain Sweden Switzerland Turkey Ukraine
+United Kingdom Vatican City Territories , dependencies , other areas United Kingdom Constituent countries England Northern Ireland Scotland Wales British
+Overseas Territories Gibraltar Crown dependencies Guernsey Isle of Man Jersey Counties Cornwall Lincolnshire Yorkshire Russia Adygea
+</item 4>
+
+<item 5>
+God Save the Queen
+The first music proper , a performance of the National Anthem was programmed by Christopher Strachey on the Mark II Manchester Electronic Computer at same venue
+, in 1951 . Later that year , short extracts of three pieces , the first being the National Anthem , were recorded there by a BBC outside broadcasting unit :
+the other pieces being `` Ba Ba Black Sheep , and `` In the Mood '' . Researchers at the University of Canterbury , Christchurch restored the acetate master
+disc in 2016 and the results may be heard on Soundcloud . Reception ( edit ) The philosopher and reformer Jeremy Bentham praised `` God Save the King '' in 1796
+: `` the melody recommending itself by beauty to the most polished ears , and by its simplicity to the rudest ear . A song of this complexion , implanted by the
+habit of half a century in the mass of popular sentiment , can not be refused a place in the inventory of the national blessings . '' Ludwig van Beethoven wrote
+`` I have to show the English a little of what a blessing ' God Save the King ' is '' . Alex Marshall , the British author of Republic or Death !
+</item 5>
+
+<item 6>
+God Save the Queen
+In April 2007 there was an early day motion , number 1319 , to the British Parliament to propose that there should be a separate England anthem : `` That this
+House ... believes that all English sporting associations should adopt an appropriate song that English sportsmen and women , and the English public , would
+favour when competing as England '' . An amendment ( EDM 1319A3 ) was proposed by Evan Harris that the song `` should have a bit more oomph than God Save The
+Queen and should also not involve God . '' For more information see also : National anthem of England National anthem of Scotland Hen Wlad Fy Nhadau Londonderry
+Air Use in other Commonwealth countries ( edit ) `` God Save the King / Queen '' was exported around the world via the expansion of the British Empire , serving
+as each country 's national anthem . Throughout the Empire 's evolution into the Commonwealth of Nations , the song declined in use in most states which became
+independent .
+</item 6>
+
+<item 7>
+God Save the Queen
+Standard version of the music ( edit ) Play media `` God Save the Queen '' sung by the public at St Giles ' Fair , Oxford , 2007 The standard version of the
+melody and its key of G major are still those of the originally published version , although the start of the anthem is often signalled by an introductory
+timpani roll of two bars length . The bass line of the standard version differs little from the second voice part shown in the original , and there is a
+standard version in four - part harmony for choirs . The first three lines ( six bars of music ) are soft , ending with a short crescendo into `` Send her
+victorious '' , and then is another crescendo at `` over us : '' into the final words `` God save the Queen '' . In the early part of the 20th century there
+existed a Military Band version , usually played in march time , in the higher key of B ♭ , because it was easier for brass instruments to play in that key ,
+though it had the disadvantage of being more difficult to sing : however now most Bands play it in the correct key of G .
+</item 7>
+
+<item 8>
+God Save the Queen
+3.2 Official peace version 2.1. 4 Historic alternative verses 2.2 Performance in the UK 2.3 Other British anthems 3 Use in other Commonwealth countries 3.1
+Australia 3.2 Canada 3.2. 1 Lyrics in Canada 3.3 New Zealand 3.4 Rhodesia 4 Use elsewhere 5 Musical adaptations 5.1 Classical composers 5.2 Rock adaptations 5.3
+In popular culture 5.4 Computer music 6 Reception 6.1 Calls for a new national anthem / anthems 7 Notes 8 External links History ( edit ) In The Oxford
+Companion to Music , Percy Scholes points out the similarities to an early plainsong melody , although the rhythm is very distinctly that of a galliard , and he
+gives examples of several such dance tunes that bear a striking resemblance to `` God Save the King / Queen '' . Scholes quotes a keyboard piece by John Bull (
+1619 ) which has some similarities to the modern tune , depending on the placing of accidentals which at that time were unwritten in certain cases and left to
+the discretion of the player ( see musica ficta ) .
+</item 8>
+
+<item 9>
+God Save the Queen
+It is the national anthem of the United Kingdom and one of two national anthems used by New Zealand since 1977 , as well as for several of the UK 's territories
+that have their own additional local anthem . It is also the royal anthem -- played specifically in the presence of the monarch -- of all the aforementioned
+countries , as well as Australia ( since 1984 ) , Canada ( since 1980 ) , Barbados and Tuvalu . In countries not previously part of the British Empire , the
+tune of `` God Save the Queen '' has provided the basis for various patriotic songs , though still generally connected with royal ceremony . In the United
+States , the melody is used for the patriotic song `` My Country , ' Tis of Thee '' . The melody is also used for the national anthem of Liechtenstein , `` Oben
+am jungen Rhein '' . Beyond its first verse , which is consistent , `` God Save the Queen / King '' has many historic and extant versions . Since its first
+publication , different verses have been added and taken away and , even today , different publications include various selections of verses in various orders .
+In general , only one verse is sung .
+</item 9>
+
+<item 10>
+God Save the Queen
+Songs of Praise . Oxford University Press . Jump up ^ `` Forgotten National Anthem Sung at Halesowen Service '' . Black Country Bugle. 15 March 2007 . Retrieved
+20 January 2017 . Source describes it as an `` unusual and little known version of the national anthem ... taken from the order of service for the blessing of
+Halesowen 's borough charter ... on Sunday , 20 September 1936 . '' Jump up ^ Clark , Richard ( 1822 ) . An Account of the National Anthem Entitled God Save the
+King ! . London . pp. 8 -- 9 . Jump up ^ Richards , Jeffrey ( 2002 ) . Imperialism and Music : Britain 1876 to 1953 . Manchester University Press . p. 90 . ISBN
+0 - 7190 - 4506 - 1 .
+</item 10>
+=== END ITEM id=b85e17ee8294fcea ===
+
+=== ITEM id=300e849987073682 ===
+Gold sentences and facts:
+Sentence 0: `` Fore ! '' , originally an Australian interjection , is used to warn anyone standing or moving in the flight of a golf ball . The mention of the term in an 1881 Australian Golf Museum indicates that the term was in use at least as early as that period .
+  Fact 0.0: Fore is originally an Australian interjection.
+  Fact 0.1: Fore is used to warn anyone standing or moving in the flight of a golf ball.
+  Fact 0.2: An 1881 Australian Golf Museum mention of the term exists.
+  Fact 0.3: The 1881 mention indicates that the term Fore was in use at least as early as 1881.
+
+Retrieved items:
+<item 1>
+Gymnosperm
+Gymnosperm - wikipedia Gymnosperm Jump to : navigation , search Gymnosperms Temporal range : 370 -- 0 Ma PreЄ Є Pg Devonian - Present Various gymnosperms .
+Scientific classification Kingdom : Plantae Subkingdom : Embryophyta ( unranked ) : Gymnospermae ( paraphyletic ) Divisions Pinophyta ( or Coniferophyta ) -
+Conifers Ginkgophyta - Ginkgo Cycadophyta - Cycads Gnetophyta - Gnetum , Ephedra , Welwitschia Encephalartos sclavoi cone , about 30 cm long The gymnosperms are
+a group of seed - producing plants that includes conifers , cycads , Ginkgo , and gnetophytes . The term `` gymnosperm '' comes from the Greek composite word
+γυμνόσπερμος ( γυμνός gymnos , `` naked '' and σπέρμα sperma , `` seed '' ) , meaning `` naked seeds '' .
+</item 1>
+
+<item 2>
+Stone Age
+Consequently , the method is often called `` core - and - flake '' . More recently , the tradition has been called `` small flake '' since the flakes were small
+compared to subsequent Acheulean tools . `` The essence of the Oldowan is the making and often immediate use of small flakes . '' Another naming scheme is ``
+Pebble Core Technology ( PBC ) '' : `` Pebble cores are ... artifacts that have been shaped by varying amounts of hard - hammer percussion . '' Various
+refinements in the shape have been called choppers , discoids , polyhedrons , subspheroid , etc . To date no reasons for the variants have been ascertained : ``
+From a functional standpoint , pebble cores seem designed for no specific purpose . '' However , they would not have been manufactured for no purpose : ``
+Pebble cores can be useful in many cutting , scraping or chopping tasks , but ... they are not particularly more efficient in such tasks than a sharp - edged
+rock ... '' The whole point of their utility is that each is a `` sharp - edged rock '' in locations where nature has not provided any .
+</item 2>
+
+<item 3>
+Forensic firearm examination
+Forensic firearm examination - wikipedia Forensic firearm examination Jump to : navigation , search Part of a series on Forensic science Physiological ( show )
+Anthropology Biology Bloodstain pattern analysis Botany Dentistry DNA phenotyping DNA profiling Entomology Epidemiology Medicine Palynology Pathology Podiatry
+Toxicology Social ( show ) Psychiatry Psychology Psychotherapy Social work Criminalistics ( hide ) Accounting Body identification Chemistry Facial
+reconstruction Fingerprint analysis Firearm examination Footwear evidence Forensic arts Profiling Gloveprint analysis Palmprint analysis Questioned document
+examination Vein matching Digital forensics ( show ) Computer exams Data analysis Database study Mobile devices Network analysis Photography Video analysis
+Audio analysis Related disciplines ( show ) Electrical engineering Engineering Fire investigation Fire accelerant detection Fractography Linguistics Materials
+engineering Polymer engineering Statistics Traffic collision reconstruction Related articles ( show ) Crime scene CSI effect Perry Mason syndrome Pollen
+calendar Skid mark Trace evidence Use of DNA in forensic entomology Outline Forensic firearm examination is the forensic process of examining the
+characteristics of firearms as well as any cartridges or bullets left behind at a crime scene . Specialists in this field are tasked with linking bullets and
+cartridges to weapons and weapons to individuals .
+</item 3>
+
+<item 4>
+Forensic firearm examination
+Class characteristics ( edit ) Preliminary examination of the bullet can exclude a large number of weapons by examining the general characteristics of a
+recovered bullet . By determining general aspects of the fired ammunition , a number of weapons can be immediately excluded as being incapable of firing that
+type of bullet . The make and model of the weapon can also be inferred from the combination of different class characteristics that are common to specific
+manufactures . The three main class characteristics of all bullets are the lands and grooves , the caliber of the bullet , and the rifling twist . All three can
+be tied directly to the type of barrel that was used to fire the bullet . The lands and grooves of barrel are the bumps and valleys created when the rifling is
+created . The caliber is the diameter of the barrel . The twist is the direction of the striations left by the barrel 's rifling , clockwise ( right - handed )
+or counterclockwise ( left - handed ) . Most barrels will have a right - handed twist with the exception of weapons created by the Colt 's Manufacturing Company
+which uses left - handed twists .
+</item 4>
+
+<item 5>
+Fore (golf)
+Fore ( golf ) - Wikipedia Fore ( golf ) Jump to : navigation , search The tough rubber core of a golf ball makes it a hazard to others following a wayward shot
+, despite its weight not exceeding 45.93 g ( 1.62 oz ) `` Fore ! '' , originally an Australian interjection , is used to warn anyone standing or moving in the
+flight of a golf ball . The mention of the term in an 1881 Australian Golf Museum indicates that the term was in use at least as early as that period . It is
+believed to come from the military `` beware before '' , which an artilleryman about to fire would yell alerting nearby infantrymen to drop to the ground to
+avoid the shells overhead . ( Before may mean `` in front of ( the gun being fired ) '' ; fore may mean `` ( look ) ahead '' . ) Other possible origins include
+the term being derived from the term `` fore - caddie '' , a caddie waiting down range from the golfer to find where the ball lands .
+</item 5>
+
+<item 6>
+Orc (Middle-earth)
+Christopher Tolkien notes that while the author clearly differentiates between `` goblins and Orcs '' in the Tale of Tinúviel , the two terms appear to be
+synonymous in the Tale of Turambar . The word Gongs is also used on a few occasions ; it appears both distinct from Orcs and as a sub-type of Orc . Christopher
+Tolkien remarks that Gongs are `` evil beings obscurely related to Orcs '' . Both goblins and Orcs are occasionally mentioned as being `` of Melkor '' and also
+acting independently . Orcs , goblins , and gongs appear in Tolkien 's two lexicons of elvish languages . The Qenya Lexicon from approximately 1915 defines Orc
+as meaning `` monster , demon '' , and the Gnomish Lexicon dated 1917 defines Orc as `` goblin '' and Gong as `` one of a tribe of the Orcs , a goblin '' .
+Christopher Tolkien also notes that in the latter lexicon , the word Gnome ( later Noldor ) is an emendation from Goblin .
+</item 6>
+
+<item 7>
+Orc (Middle-earth)
+About the goblins of The Hobbit , Tolkien wrote : They are not based on direct experience of mine ; but owe , I suppose , a good deal to the goblin tradition
+... especially as it appears in George MacDonald , except for the soft feet which I never believed in . Middle - earth terms for Orcs ( edit ) In the High -
+elven tongue Quenya , the word for `` Orc '' was urco , plural urqui , meaning `` bogey '' , or `` bogeyman '' , that is , something that provokes fear . In the
+Grey - elven tongue Sindarin , it was orch , plural yrch . In the Dwarven tongue Khuzdul , it was rukhs , plural rakhâs . In the language of the Drúedain or
+Wild Men , it was gorgûn . In the Black Speech of Mordor , the equivalent was Uruk , as can be seen in Uruk - hai , `` Orc - folk '' . Orc itself is from
+Rohirric and the Hobbit - language , which shared linguistic roots , but the term is clearly related to the older Elvish words .
+</item 7>
+
+<item 8>
+Fore (golf)
+These caddies were often warned about oncoming golf balls by a shout of the term `` fore - caddie '' which was eventually shortened to just `` fore ! '' . The
+Colonel Bogey March is based on the descending minor third which the original Colonel Bogey whistled instead of yelling Fore around 1914 . Notes ( edit ) Jump
+up ^ SND : Fore ^ Jump up to : Why Do Golfers Yell `` Fore '' for Errant Shots ? retrieved June 15 , 2007 Jump up ^ Derivation 4 Fore ! and Caddie retrieved
+June 15 , 2007 Jump up ^ The Windsor Magazine : An Illustrated Monthly for Men and Women Vol. 33 , no . 192 ( December 1910 ) References ( edit ) Scott , James
+Sibbald David , The British Army : Its Origin , Progress , and Equipment , 1868 Windsor Magazine : An Illustrated Monthly for Men and Women Vol. 32 , no . 292 (
+December 1910 ) This golf - related article is a stub . You can help Wikipedia by expanding it .
+</item 8>
+
+<item 9>
+Orc (Middle-earth)
+The original edition of The Hobbit and early drafts of The Lord of the Rings first used goblin everywhere and used hobgoblin for larger , more evil goblins .
+While investigating possible sources for the word `` Hobbit '' , Tolkien realised he had made a mistake in using hob - , which is traditionally used to mean a
+smaller entity , not a larger one . In later writings , after The Lord of the Rings , ( including The Adventures of Tom Bombadil and many essays published in
+The Peoples of Middle - earth ) , Tolkien preferred the spelling Ork , evidently mainly to avoid the form Orcish , which would be naturally pronounced with the
+c as / s / instead of / k / in English . Tolkien indeed used the adjective Orkish . According to George MacDonald Fraser in The Light 's on at Signpost ,
+Tolkien answered a letter on this subject , confirming that Orcs and goblins were indeed identical . Physical appearance ( edit ) Orcs are described as ugly and
+filthy fanged humanoids .
+</item 9>
+
+<item 10>
+Fore (golf)
+You can help Wikipedia by expanding it . Retrieved from `` https://en.wikipedia.org/w/index.php?title=Fore_(golf)&oldid=802796028 '' Categories : Golf
+terminology Scottish English Golf stubs Hidden categories : All articles with specifically marked weasel - worded phrases Articles with specifically marked
+weasel - worded phrases from January 2016 All stub articles Talk About Wikipedia Hrvatski Italiano Norsk Srpskohrvatski / српскохрватски Svenska Edit links This
+page was last edited on 28 September 2017 , at 14 : 56 . About Wikipedia
+</item 10>
+=== END ITEM id=300e849987073682 ===
+
+=== ITEM id=04e3f8dc3e8f4baf ===
+Gold sentences and facts:
+Sentence 0: Network officials , concerned for the show 's future , turned to Tim Russert , the network 's Washington , D.C. , bureau chief . He took over as moderator of Meet the Press on December 8 , 1991 , and remained with the program until his death on June 13 , 2008 , becoming the longest serving moderator in the program 's history .
+  Fact 0.0: Network officials were concerned for the show's future.
+  Fact 0.1: Network officials turned to Tim Russert.
+  Fact 0.2: Tim Russert was the network's Washington, D.C., bureau chief.
+  Fact 0.3: Tim Russert took over as moderator of Meet the Press on December 8, 1991.
+  Fact 0.4: Tim Russert remained with Meet the Press until his death on June 13, 2008.
+  Fact 0.5: Tim Russert became the longest serving moderator in the history of Meet the Press.
+Sentence 1: Martha Rountree 1947 -- 1953 Ned Brooks 1953 -- 1965 Lawrence E. Spivak 1966 -- 1975 Bill Monroe 1975 -- 1984 Roger Mudd and Marvin Kalb ( co-moderators ) 1984 -- 1985 Marvin Kalb 1985 -- 1987 Chris Wallace 1987 -- 1988 Garrick Utley 1989 -- 1991 Tim Russert 1991 -- 2008 Tom Brokaw 2008 David Gregory 2008 -- 2014 Chuck Todd 2014 -- present
+  Fact 1.0: Martha Rountree was moderator from 1947 to 1953.
+  Fact 1.1: Ned Brooks was moderator from 1953 to 1965.
+  Fact 1.2: Lawrence E. Spivak was moderator from 1966 to 1975.
+  Fact 1.3: Bill Monroe was moderator from 1975 to 1984.
+  Fact 1.4: Roger Mudd and Marvin Kalb were co-moderators from 1984 to 1985.
+  Fact 1.5: Marvin Kalb was moderator from 1985 to 1987.
+  Fact 1.6: Chris Wallace was moderator from 1987 to 1988.
+  Fact 1.7: Garrick Utley was moderator from 1989 to 1991.
+  Fact 1.8: Tim Russert was moderator from 1991 to 2008.
+  Fact 1.9: Tom Brokaw was moderator in 2008.
+  Fact 1.10: David Gregory was moderator from 2008 to 2014.
+  Fact 1.11: Chuck Todd has been moderator since 2014.
+
+Retrieved items:
+<item 1>
+*Meet the Press*, created by Martha Rountree, began on radio in 1945 and on NBC television on November 6, 1947, becoming television’s longest-running program.
+The Washington-based Sunday public-affairs show features extended interviews and often panels; it expanded to an hour in 1992. Tim Russert moderated from 1991
+until his 2008 death, achieving strong ratings. Chuck Todd succeeded David Gregory in 2014 and launched *MTP Daily* in
+</item 1>
+
+<item 2>
+Meet the Press
+This section , in the next two paragraphs , needs additional citations for verification . Please help improve this article by adding citations to reliable
+sources . Unsourced material may be challenged and removed . ( September 2014 ) ( Learn how and when to remove this template message ) Meet the Press was
+originally presented as a 30 - minute press conference with a single guest and a panel of questioners . Its first guest was James Farley , who served as
+Postmaster General , Democratic National Committee chairman and campaign manager to Franklin Delano Roosevelt under the first two terms of the New Deal
+Administration . Creator Rountree served as its first host , the program 's only female moderator to date . She stepped down on November 1 , 1953 , and was
+succeeded by Ned Brooks , who remained as moderator until his retirement on December 26 , 1965 . Spivak became the moderator on January 1 , 1966 , moving up
+from his role as a permanent panelist . He retired on November 9 , 1975 , on a special one - hour edition that featured , for the first time , a sitting
+president , Gerald Ford , as guest .
+</item 2>
+
+<item 3>
+Meet the Press is NBC’s weekly public-affairs interview and panel program, broadcast since November 6, 1947, making it television’s longest-running program.
+Created by Martha Rountree, it began as a radio show in 1945; Lawrence E. Spivak later joined as co-producer. Based in Washington, D.C., it covers politics,
+economics, foreign policy, and other issues. Gerald Ford became the first sitting U.S. president to appear on a live network
+</item 3>
+
+<item 4>
+Meet the Press
+Russert interviews General Peter Pace in 2006 . Network officials , concerned for the show 's future , turned to Tim Russert , the network 's Washington , D.C.
+, bureau chief . He took over as moderator of Meet the Press on December 8 , 1991 , and remained with the program until his death on June 13 , 2008 , becoming
+the longest serving moderator in the program 's history . Under Russert , the program was expanded to one hour and became less of a televised press conference ,
+focusing more on Russert 's questions and comments ; Russert also engaged in longer in - depth interviews and hosted panels of experts to discuss the topics
+featured in that week 's broadcast . Russert signed off each edition by saying , `` That 's all for today . We 'll be back next week . If it 's Sunday , it 's
+Meet the Press . '' During the professional football season , Russert , a native of Buffalo , New York , and an avid fan of the Buffalo Bills , sometimes added
+, `` Go Bills ! , '' and occasionally would ask panelists , `` How ' bout those Sabres ? ''
+</item 4>
+
+<item 5>
+Meet the Press
+On May 2 , 2010 , Meet the Press became the last NBC News program to convert to high definition , and unveiled a new set consisting of large video screens
+mostly used to display Washington scenery , satellite interview subjects and moderator and subject talking points , along with graphics produced for the format
+. Moderators ( edit ) The following is the list of moderators for Meet the Press : Martha Rountree 1947 -- 1953 Ned Brooks 1953 -- 1965 Lawrence E. Spivak 1966
+-- 1975 Bill Monroe 1975 -- 1984 Roger Mudd and Marvin Kalb ( co-moderators ) 1984 -- 1985 Marvin Kalb 1985 -- 1987 Chris Wallace 1987 -- 1988 Garrick Utley
+1989 -- 1991 Tim Russert 1991 -- 2008 Tom Brokaw 2008 David Gregory 2008 -- 2014 Chuck Todd 2014 -- present On - remote broadcasts ( outside D.C. studios ) (
+edit ) Date Location Event / Reason July 17 , 1988 Atlanta , Georgia 1988 Democratic National Convention August 14 , 1988 New Orleans ,
+</item 5>
+
+<item 6>
+Meet the Press
+It originates from NBC 's bureau in Washington , D.C. The longevity of Meet the Press can be illustrated in consideration of the fact that the program debuted
+during what was only the second official `` network television season '' for American television . One historical landmark of the program is that it was the
+first on which a sitting U.S. President , Gerald Ford , appeared on a live television network news program , which occurred on the November 9 , 1975 broadcast .
+The program has been hosted by 12 different moderators to date , beginning with creator Martha Rountree . The show 's moderator since 2014 is Chuck Todd , who
+also serves as political director for NBC News . Currently , the hour - long program airs in most markets on Sundays at 9 : 00 a.m. live in the Eastern Time
+Zone and on tape delay elsewhere . Meet the Press is also occasionally pre-empted due to network coverage of sports events held outside of the U.S. The program
+is also rebroadcast on Sundays at 2 : 00 p.m. , and Mondays at 2 : 00 a.m. and sometimes 4 : 00 a.m.
+</item 6>
+
+<item 7>
+Meet the Press began as a 30-minute Sunday press conference with one guest and a panel. James Farley was its first guest; creator Martha Rountree was its first
+and only female moderator, followed by Ned Brooks, Lawrence Spivak, and Bill Monroe. Later co-hosts included Roger Mudd, Marvin Kalb, Chris Wallace, and Garrick
+Utley, during a ratings struggle against This Week. Notable moments included Whittaker Chambers’s 1948 accusation against Alger H
+</item 7>
+
+<item 8>
+Meet the Press
+The next week , Bill Monroe , previously a weekly panelist like Spivak had been years before , took over as moderator and stayed until June 2 , 1984 . For the
+next seven and a half years , the program then went through a series of hosts as it struggled in the ratings against ABC 's This Week with David Brinkley .
+Roger Mudd and Marvin Kalb , as co-moderators , followed Monroe for a year , followed by Chris Wallace ( who would later to go on to a much longer run as host
+of the rival program Fox News Sunday ) from 1987 to 1988 . Garrick Utley , then hosting Weekend Today , concurrently hosted Meet the Press from 1989 through
+December 1 , 1991 . All this occurred despite the increasing ratings of NBC News ' other programs ( and those of the network generally ) during that period .
+The program originally aired at noon Eastern Time every Sunday , before moving to a 9 : 00 a.m. slot by the early 1990s . Under Russert ( edit ) Meet the Press
+logo used from September 10 , 1995 to June 2008 .
+</item 8>
+
+<item 9>
+Meet the Press
+The following week on August 17 , he moderated the entire broadcast . It was also reported on December 1 , 2008 , that the December 7 broadcast would be Brokaw
+'s last , with Gregory becoming the new permanent host the following Sunday . Under Gregory ( edit ) David Gregory began his tenure as moderator on December 14
+, 2008 . Four days after Gregory 's first regular broadcast , on December 18 , NBC News political director Chuck Todd was named contributing editor of Meet the
+Press . Throughout Gregory 's tenure as moderator , Meet the Press experienced significant ratings declines . In the final three months of 2013 , the program
+placed third among the Sunday morning talk shows in total viewership , behind CBS 's Face the Nation and ABC 's This Week for the first time since 1992 ; it
+also experienced the lowest ratings in the show 's entire history among the key 25 - to - 54 age viewing demographic during this period . NBC management became
+uncertain as to the future direction of the program .
+</item 9>
+
+<item 10>
+Tim Russert moderated *Meet the Press* from December 8, 1991, until his death on June 13, 2008—the program’s longest-serving moderator. He expanded it to an
+hour, emphasizing probing interviews and expert panels; by 2006, it led Sunday talk shows in ratings. His familiar sign-off, “If it’s Sunday, it’s Meet the
+Press,” sometimes included cheers for his Buffalo Bills or Sabres. After Russert died of a sudden coronary throm
+</item 10>
+=== END ITEM id=04e3f8dc3e8f4baf ===
+
+=== ITEM id=9d73fe3e1c822c2c ===
+Gold sentences and facts:
+Sentence 0: Spektor wrote and recorded the main title theme song , `` You 've Got Time '' , for the Netflix Original series Orange Is the New Black , which premiered in July 2013 . It was nominated in the Best Song Written for Visual Media category at the 56th Annual Grammy Awards .
+  Fact 0.0: Spektor wrote the main title theme song 'You've Got Time' for the Netflix Original series Orange Is the New Black.
+  Fact 0.1: Spektor recorded the main title theme song 'You've Got Time' for the Netflix Original series Orange Is the New Black.
+  Fact 0.2: Orange Is the New Black premiered in July 2013.
+  Fact 0.3: 'You've Got Time' was nominated in the Best Song Written for Visual Media category at the 56th Annual Grammy Awards.
+Sentence 1: Regina wrote and recorded `` You 've Got Time '' to be the theme song for the Netflix Original Series Orange is the New Black which premiered in 2013 . Spektor was approached by the show 's creator , Jenji Kohan , to create the opening number .
+  Fact 1.0: Regina wrote 'You've Got Time' to be the theme song for the Netflix Original Series Orange is the New Black.
+  Fact 1.1: Regina recorded 'You've Got Time' to be the theme song for the Netflix Original Series Orange is the New Black.
+  Fact 1.2: Orange is the New Black premiered in 2013.
+  Fact 1.3: Spektor was approached by the show's creator, Jenji Kohan, to create the opening number.
+
+Retrieved items:
+<item 1>
+Anne (TV series)
+) Netflix original series Current Since 2013 House of Cards Orange Is the New Black Since 2014 BoJack Horseman Since 2015 Unbreakable Kimmy Schmidt Chef 's
+Table Daredevil Grace and Frankie Residue Sense8 Club de Cuervos Project Mc Dinotrux Narcos Master of None Jessica Jones F Is for Family Making a Murderer Real
+Rob Since 2016 Degrassi : Next Class Fuller House Lego Friends : The Power of Friendship Flaked Lost & Found Music Studios The Ranch Kong : King of the Apes
+Marseille Voltron : Legendary Defender Word Party World of Winx Stranger Things Home : Adventures with Tip & Oh Last Chance U Beat Bugs Ask the StoryBots
+Kulipari : An Army of Frogs Easy Luke Cage Skylanders Academy The Crown 3 % Luna Petunia The OA Travelers Trollhunters Since 2017 One Day at a Time A Series of
+Unfortunate Events Frontier Santa Clarita Diet Abstract : The Art of Design Ultimate Beastmaster Legend Quest Buddy Thunderstruck Iron Fist Julie 's Greenroom
+Ingobernable 13 Reasons Why Mystery Science Theater 3000 : The Return Bill Nye Saves the World Dear White People Cable Girls Spirit Riding Free Anne with an E
+</item 1>
+
+<item 2>
+Regina Spektor
+The title of the song `` Do n't Leave Me ( Ne Me Quitte Pas ) '' and the cover of What We Saw from the Cheap Seats was featured on the display of the 5th
+generation iPod Touch in promotional content from Apple in late 2012 . `` Do n't Leave Me ( Ne Me Quitte Pas ) '' was used at the end of the episode `` Five
+Miles From Yetzer Hara '' from the eighth season of Weeds . The Consequence of Sound website takes its name from the Spektor song , `` Consequence of Sounds ''
+. `` All the Rowboats '' was featured on The CW 's Ringer in March 2012 . The song `` Your Honor '' was used in the Season 2 premiere of HBO 's series Girls on
+January 13 , 2013 , and the song `` Laughing With '' was featured on BBC drama The Crash in March 2013 as well as in HBO 's The Leftovers in November 2015 .
+Regina wrote and recorded `` You 've Got Time '' to be the theme song for the Netflix Original Series Orange is the New Black which premiered in 2013 .
+</item 2>
+
+<item 3>
+Crazy Eyes (character)
+Jump up ^ Schaefer , Megan ( June 3 , 2014 ) . `` ' Orange Is The New Black ' Season 1 Recap : Everything To Know Before The Season 2 Premiere '' .
+International Business Times . Retrieved September 6 , 2014 . Jump up ^ Foster , Lewis ( June 19 , 2014 ) . `` Visual Summary : Orange Is The New Black Season 1
+'' . Paste . Retrieved September 6 , 2014 . Jump up ^ O'Sullivan , Erin ( August 14 , 2013 ) . `` Orange Is The New Black : Uzo Aduba ( Suzanne Warren )
+Promoted To Series Regular '' . Access Hollywood . Retrieved September 6 , 2014 . Jump up ^ Henderson , Danielle ( August 16 , 2013 ) . `` Orange Is the New
+Black Episode Nine Recap : We Finally Experience the SHU '' . Vulture . Retrieved September 6 , 2014 . Jump up ^ `` Orange is the New Black Season 1 Episode 9 :
+F * cksgiving : Episode Cast & Crew '' . TV.com .
+</item 3>
+
+<item 4>
+Crazy Eyes (character)
+TV.com . Retrieved September 6 , 2014 . Jump up ^ Reed , Alex ( July 22 , 2014 ) . `` ' Orange Is the New Black ' Star Uzo Aduba on ' Crazy Eyes ' : ' People
+Underestimate Her ' ( Video ) '' . The Wrap . Retrieved September 6 , 2014 . Jump up ^ Surette , Tim . `` Orange Is the New Black Season 2 Review , Part 2 (
+Episodes 7 - 13 ) : Fight the Power '' . TV.com . Retrieved September 6 , 2014 . Jump up ^ Surette , Tim . `` Orange Is the New Black Season 2 Review , Part 1 (
+Episodes 1 -- 6 ) : Conflict Over Community '' . TV.com . Retrieved September 6 , 2014 . Jump up ^
+http://www.bustle.com/articles/90452-who-is-crazy-eyes-love-interest-on-orange-is-the-new-black-emily-althaus-character-has Jump up ^ Harnick , Chris ( June 18
+, 2016 ) .
+</item 4>
+
+<item 5>
+Crazy Eyes (character)
+September 17 , 2017 . Retrieved September 20 , 2017 . ( hide ) Orange Is the New Black Characters Piper Chapman Alex Vause Crazy Eyes Nicky Nichols Tiffany
+Doggett Lorna Morello Miss Rosa Poussey Washington Seasons `` Lesbian Request Denied '' 5 Related Piper Kerman Orange Is the New Black : My Year in a Women 's
+Prison `` You 've Got Time '' Retrieved from `` https://en.wikipedia.org/w/index.php?title=Crazy_Eyes_(character)&oldid=814872296 '' Categories : Orange Is the
+New Black characters Fictional adoptees Fictional African - American people Fictional characters introduced in 2013 Fictional criminals Fictional lesbians
+Fictional prison escapees Fictional writers Fictional LGBT characters in television Fictional inmates in American federal prisons Hidden categories : Use mdy
+dates from September 2016 Articles needing additional references from June 2017 All articles needing additional references Talk Contents About Wikipedia Türkçe
+Edit links This page was last edited on 11 December 2017 , at 12 : 19 . About Wikipedia
+</item 5>
+
+<item 6>
+Regina Spektor
+Her world tour in support of What We Saw from the Cheap Seats included a performance in Moscow ; Spektor had not yet returned since fleeing with her family in
+1989 . In 2012 , Spektor was christened an official `` Steinway Artist '' ; she plays Steinway & Sons pianos almost exclusively . Spektor wrote and recorded the
+main title theme song , `` You 've Got Time '' , for the Netflix Original series Orange Is the New Black , which premiered in July 2013 . It was nominated in
+the Best Song Written for Visual Media category at the 56th Annual Grammy Awards . 2016 -- present : Remember Us to Life ( edit ) Spektor announced her seventh
+album , Remember Us to Life on July 21 , 2016 through her email newsletter . The album was released on September 30 , 2016 . The first single , `` Bleeding
+Heart '' , was released July 22 , 2016 . The follow - up single , `` Small Bill $ '' , was released August 11 , 2016 .
+</item 6>
+
+<item 7>
+Crazy Eyes (character)
+Deadline.com . Retrieved September 5 , 2014 . Jump up ^ Kohan , Jenji ( writer / creator ) ; Herrmann , Tara ( producer ) ; Burley , Mark ( producer ) ( May 13
+, 2014 ) . Orange Is the New Black : Season 1 -- `` I Was n't Ready '' audio commentary ( Blu - ray ) . Lionsgate . Event occurs at 37 : 00 -- 37 : 30 . Jump up
+^ `` Uzo Aduba '' . Internet Movie Database . Retrieved June 12 , 2015 . Jump up ^ `` Orange is the New Black Season 2 Episode 3 : Hugs Can Be Deceiving '' .
+TV.com . Retrieved September 5 , 2014 . Jump up ^ Potts , Kimberly ( June 18 , 2014 ) . `` The 10 Best ' Orange Is the New Black ' Character Backstories '' .
+Yahoo ! TV . Retrieved September 5 , 2014 . Jump up ^ White , Chelsea F.C. ( October 2 , 2013 ) . `` Spot the difference !
+</item 7>
+
+<item 8>
+Crazy Eyes (character)
+`` Orange Is the New Black Reveals Crazy Eyes ' Tragic Crime '' . ENews . Retrieved 18 September 2017 . Jump up ^ Meltzer , Tom ( December 17 , 2013 ) . `` The
+best TV of 2013 : No 6 -- Orange is the New Black ( Netflix ) : The US prison drama -- Netflix 's most - watched show of the year -- is a binge - watcher 's
+dream : moreish and full of surprises '' . The Guardian . Retrieved October 5 , 2014 . Jump up ^ Jancelewicz , Chris ( July 3 , 2014 ) . `` Orange Is The New
+Black Review : Time Behind Bars Should n't Be This Fun '' . The Huffington Post Canada . Retrieved October 6 , 2014 . Jump up ^ `` Primetime Emmy Awards 2014 :
+The winners list '' . CNN . August 26 , 2014 . Retrieved September 4 , 2014 . Jump up ^ `` The International Press Academy Announces Nominations For The 18th
+Annual Satellite Awards '' . PR Newswire .
+</item 8>
+
+<item 9>
+Crazy Eyes (character)
+( October 2 , 2013 ) . `` Spot the difference ! Orange Is The New Black star Taylor Schilling brings the real Piper Chapman as her red carpet date '' . Daily
+Mail . Retrieved October 4 , 2014 . Jump up ^ Fitzgerald , Sean ( June 23 , 2014 ) . `` ' Orange is the New Black ' : Meet Crazy Eyes '' . Toronto Sun .
+Retrieved October 23 , 2014 . Jump up ^ Leopold , Todd ( June 6 , 2014 ) . `` ' Orange is the New Black ' : Five things to expect from season 2 '' . CNN .
+Retrieved September 6 , 2014 . Jump up ^ Hooton , Christopher ( June 4 , 2014 ) . `` Orange Is The New Black : Season 1 recap ahead of the new episodes '' . The
+Independent . Retrieved September 6 , 2014 . Jump up ^ Schaefer , Megan ( June 3 , 2014 ) .
+</item 9>
+
+<item 10>
+NBC Sunday Night Football
+Singer Pink sang the theme song for the broadcast in 2006 , a reworking of the Joan Jett song `` I Hate Myself for Loving You '' retitled `` Waiting All Day for
+Sunday Night '' . Several alternative versions were used throughout the season , substituting different lyrics when appropriate ( such as `` Waiting All Year
+For Opening Night '' ) . In 2007 , country singer Faith Hill replaced Pink as the singer of the opening theme , and a new arrangement of the Joan Jett song
+coincided with her debut . The Faith Hill intro , in particular , was not without criticism and parody . The intro was lampooned in the October 9 , 2010 episode
+of Saturday Night Live , with host Jane Lynch as Hill ( with Jason Sudeikis as Al Michaels and Bill Hader as Cris Collinsworth ) . In the 30 Rock episode ``
+Season 4 '' , the character of Jenna Maroney ( Jane Krakowski ) sings what appears to be an allusion to the Faith Hill intro for NBC 's fictional Tennis Night
+in America program .
+</item 10>
+=== END ITEM id=9d73fe3e1c822c2c ===
+
+=== ITEM id=aad93260ed6e9e01 ===
+Gold sentences and facts:
+Sentence 0: In 2007 , Adobe 's first version release was Adobe Flash CS3 Professional , the ninth major version of Flash . It introduced the ActionScript 3.0 programming language , which supported modern programming practices and enabled business applications to be developed with Flash . Adobe Flex Builder ( built on Eclipse ) targeted the enterprise application development market , and was also released the same year . Flex Builder included the Flex SDK , a set of components that included charting , advanced UI , and data services ( Flex Data Services ) .
+  Fact 0.0: In 2007, Adobe's first version release was Adobe Flash CS3 Professional.
+  Fact 0.1: Adobe Flash CS3 Professional was the ninth major version of Flash.
+  Fact 0.2: Adobe Flash CS3 Professional introduced the ActionScript 3.0 programming language.
+  Fact 0.3: ActionScript 3.0 supported modern programming practices.
+  Fact 0.4: ActionScript 3.0 enabled business applications to be developed with Flash.
+  Fact 0.5: Adobe Flex Builder was built on Eclipse.
+  Fact 0.6: Adobe Flex Builder targeted the enterprise application development market.
+  Fact 0.7: Adobe Flex Builder was released in 2007.
+  Fact 0.8: Flex Builder included the Flex SDK.
+  Fact 0.9: The Flex SDK is a set of components that included charting, advanced UI, and data services.
+  Fact 0.10: The data services in the Flex SDK are called Flex Data Services.
+
+Retrieved items:
+<item 1>
+Adobe Flash
+Adobe Wallaby Server - side Adobe Flash Media Server Obsolete software Adobe Flash Builder Adobe Flash Catalyst Adobe Flash Lite SWFAddress SWFObject MTASC
+Scaleform GFx SWiSH Max Swift 3D Papervision3D Ajax Animator Shumway Swfdec OpenLaszlo Related topics Comparison of HTML5 and Flash Apple and Adobe Flash
+controversy Flash animation films television Protected Streaming Real - Time Messaging Protocol Real - Time Media Flow Protocol Developers FutureWave Software
+Macromedia Adobe Systems Adobe Creative Suite and Creative Cloud Current products Acrobat After Effects Animate Audition Bridge Dreamweaver Flash Builder
+Illustrator InCopy InDesign Lightroom Media Encoder Muse Photoshop Prelude Premiere Pro Spark XD Creative Cloud services Behance Business Catalyst Story Typekit
+Former products Contribute Device Central Edge Edge Animate Encore Flash Catalyst Fireworks GoLive ImageReady OnLocation Soundbooth Stock Photos Ultra Adobe
+eLearning Suite Current products Captivate Flash Dreamweaver Photoshop Acrobat Presenter Soundbooth Shared applications Bridge Device Central Adobe Systems
+Software Suites Creative Cloud ( Creative Suite ) eLearning Suite Technical Communication Suite Desktop Animate Acrobat After Effects Brackets Edge Code Edge
+Reflow Digital Editions Director Dreamweaver FrameMaker FreeHand Flash Player Flex Builder GoLive Illustrator InDesign Media Encoder Media Player Muse PageMaker
+Photoshop
+</item 1>
+
+<item 2>
+Adobe Flash
+, blend modes ( similar to Adobe Photoshop ) , and advanced features for FLV video . Adobe ( edit ) Macromedia was acquired by Adobe Systems in 2005 , and the
+entire Macromedia product line including Flash , Dreamweaver , Director / Shockwave , Fireworks ( which has since been discontinued ) and Authorware is now
+handled by Adobe . In 2007 , Adobe 's first version release was Adobe Flash CS3 Professional , the ninth major version of Flash . It introduced the ActionScript
+3.0 programming language , which supported modern programming practices and enabled business applications to be developed with Flash . Adobe Flex Builder (
+built on Eclipse ) targeted the enterprise application development market , and was also released the same year . Flex Builder included the Flex SDK , a set of
+components that included charting , advanced UI , and data services ( Flex Data Services ) . In 2008 , Adobe released the tenth version of Flash , Adobe Flash
+CS4 . Flash 10 improved animation capabilities within the Flash editor , adding a motion editor panel ( similar to Adobe After Effects ) , inverse kinematics (
+bones ) , basic 3D object animation , object - based animation , and other text and graphics features .
+</item 2>
+
+<item 3>
+Adobe Flash
+Macromedia subsequently released the new product as Breeze , which included many new enhancements . Third - party tools ( edit ) Main article : Comparison of
+vector graphics editors Various free and commercial software packages can output animations into the Flash SWF format , suitable for display on the web ,
+including : SWiSH Max is an animation editor with preset animation , developed by an ex-employee of Macromedia , that can output Flash animations Toon Boom is a
+traditional animation tool that can output Flash animations Apple Keynote allows users to export presentations to Flash SWF animations Xara Photo & Graphic
+Designer can output Flash animations Ajax Animator aim to create a Flash development environment KToon can edit vectors and generate SWF , but its interface is
+very different from Macromedia 's Screencast and Screencam , produces demos or tutorials by capturing the screen and generating a Flash animation of the same
+GoAnimate is a software as a service tool to create animated videos .
+</item 3>
+
+<item 4>
+Adobe Flash
+The Apache Flex ActionScript 3.0 compiler generates SWF files from ActionScript 3 files . Flex was the primary ActionScript 3 compiler and was actively
+developed by Adobe before it was donated to Apache Software Foundation in 2011 . Adobe Animate -- primarily used to design graphics and animation , but supports
+ActionScript scripting and debugging . Adobe Flash Builder -- enterprise application development & debugging , contains the Flex SDK with UI and charting
+components . Adobe Scout -- a visual profiler to optimize performance of Flash content . CrossBridge -- a free SDK to cross-compile C++ code to run in Flash
+Player . Third - party tools ( edit ) Third - party development tools have been created to assist developers in creating software applications and video games
+with Flash . FlashDevelop is a free and open - source Flash ActionScript IDE , which includes a project manager and debugger for building applications on Flash
+Player and Adobe AIR . Powerflasher FDT is a commercial ActionScript IDE similar to FlashDevelop . Haxe is an open source , high - level object - oriented
+programming language geared towards web - content creation that can compile SWF files from Haxe programs .
+</item 4>
+
+<item 5>
+Adobe Flash
+Previously , developers could not use the specification for making SWF - compatible players , but only for making SWF - exporting authoring software . The
+specification still omits information on codecs such as Sorenson Spark , however . Animation tools ( edit ) Official tools ( edit ) Main article : Adobe Animate
+The Adobe Animate authoring program is primarily used to design graphics and animation and publish the same for websites , web applications , and video games .
+The program also offers limited support for audio and video embedding , and ActionScript scripting . Adobe released Adobe LiveMotion , designed to create
+interactive animation content and export it to a variety of formats , including SWF . LiveMotion failed to gain any notable user base . In February 2003 ,
+Macromedia purchased Presedia , which had developed a Flash authoring tool that automatically converted PowerPoint files into Flash . Macromedia subsequently
+released the new product as Breeze , which included many new enhancements .
+</item 5>
+
+<item 6>
+Adobe Flash
+FreeHand Flash Player Flex Builder GoLive Illustrator InDesign Media Encoder Media Player Muse PageMaker Photoshop Photoshop Lightroom Premiere Pro Reader
+Shockwave Player Server LiveCycle Flash Media Server BlazeDS ColdFusion JRun PhoneGap Build Technologies ActionScript Adobe AIR Adobe Flash Adobe Flex Adobe
+Shockwave Adobe Font Folio Digital Negative ( DNG ) Authorware FlashPaper Portable Document Format ( PDF ) PostScript Web services Acrobat.com Adobe Solutions
+Network Adobe Photoshop Express Adobe Premiere Express Adobe Spark Adobe Stock Acquisitions Aldus Macromedia Scene7 Omniture Behance Fotolia People Bruce Chizen
+Charles Geschke Shantanu Narayen John Warnock Del Yocam Commons Retrieved from `` https://en.wikipedia.org/w/index.php?title=Adobe_Flash&oldid=821675124 ''
+Categories : Adobe Flash American inventions Cross-platform software Computing platforms C++ software Mac OS multimedia software MacOS multimedia software
+Windows multimedia software Macromedia software Adobe software 1993 software Video game development software Hidden categories : Webarchive template wayback
+links Pages using web citations with no URL Pages using citations with accessdate and no URL Use mdy dates from April 2012 Articles containing potentially dated
+statements from February 2009 All articles containing potentially dated statements Articles containing potentially
+</item 6>
+
+<item 7>
+Adobe Flash
+Adobe Flash - Wikipedia Adobe Flash Jump to : navigation , search For the application / animation - maker , see Adobe Animate . For other uses , see Adobe Flash
+( disambiguation ) . Adobe Flash Developer ( s ) Adobe Systems Macromedia FutureWave Target platform ( s ) Web browsers , iOS , Android , Windows , macOS Editor
+software Adobe Animate , Flash Builder , FlashDevelop , Powerflasher FDT , Flash Catalyst Scaleform Player software Flash Player Adobe AIR OpenFL Scaleform
+Gnash Lightspark Format ( s ) SWF FLV FLA Programming language ( s ) ActionScript Application ( s ) Animation Browser games Rich Internet applications Desktop
+applications Mobile apps Mobile games console games computer games Status Active ( Until 2020 ) License Proprietary Adobe Flash is a multimedia software
+platform used for production of animations , rich Internet applications , desktop applications , mobile applications , mobile games and embedded web browser
+video players . Flash displays text , vector graphics and raster graphics to provide animations , video games and applications . It allows streaming of audio
+and video , and can capture mouse , keyboard , microphone and camera input . Artists may produce Flash graphics and animations using Adobe Animate .
+</item 7>
+
+<item 8>
+Adobe Flash Player
+( SWC ) Software ( list ) Players Adobe AIR Adobe Flash Player OpenFL Gnash Lightspark Gameswf Tamarin Animation tools Adobe Animate Toon Boom Moho GoAnimate
+Stencyl Programming tools FlashDevelop Powerflasher FDT Apache Flex Haxe CrossBridge Adobe Scout FlashFirebug Libraries Starling Framework Away3D Flare3D
+Stage3D PureMVC Ming List of Flex frameworks Converters Adobe Flash Media Live Encoder SWFTools swfmill Google Swiffy Adobe Wallaby Server - side Adobe Flash
+Media Server Obsolete software Adobe Flash Builder Adobe Flash Catalyst Adobe Flash Lite SWFAddress SWFObject MTASC Scaleform GFx SWiSH Max Swift 3D
+Papervision3D Ajax Animator Shumway Swfdec OpenLaszlo Related topics Comparison of HTML5 and Flash Apple and Adobe Flash controversy Flash animation films
+television Protected Streaming Real - Time Messaging Protocol Real - Time Media Flow Protocol Developers FutureWave Software Macromedia Adobe Systems Adobe
+Systems Software Suites Creative Cloud ( Creative Suite ) eLearning Suite Technical Communication Suite Desktop Animate Acrobat After Effects Brackets Edge Code
+Edge Reflow Digital Editions Director Dreamweaver FrameMaker FreeHand Flash Player Flex Builder GoLive Illustrator InDesign Media Encoder Media Player Muse
+</item 8>
+
+<item 9>
+Adobe Flash
+Artists may produce Flash graphics and animations using Adobe Animate . Software developers may produce applications and video games using Adobe Flash Builder ,
+FlashDevelop , Flash Catalyst , or any text editor when used with the Apache Flex SDK . End - users can view Flash content via Flash Player ( for web browsers )
+, AIR ( for desktop or mobile apps ) or third - party players such as Scaleform ( for video games ) . Adobe Flash Player ( supported on Microsoft Windows ,
+macOS and Linux ) enables end - users to view Flash content using web browsers . Adobe Flash Lite enabled viewing Flash content on older smartphones , but has
+been discontinued and superseded by Adobe AIR . The ActionScript programming language allows the development of interactive animations , video games , web
+applications , desktop applications and mobile applications . Programmers can implement Flash software using an IDE such as Adobe Animate , Adobe Flash Builder
+, Adobe Director , FlashDevelop and Powerflasher FDT . Adobe AIR enables full - featured desktop and mobile applications to be developed with Flash and
+published for Windows , macOS , Android , iOS , Xbox One , PlayStation 4 , and Nintendo Wii U and Switch .
+</item 9>
+
+<item 10>
+Adobe Flash
+CreateJS is library that while available separately was also adopted by Adobe as a replacement for Wallaby in CS6 . Unlike Wallaby , which was a standalone
+program , the `` Toolkit for CreateJS '' only works as a plug - in inside Flash Professional ; it generates output for the HTML5 canvas , animated with
+JavaScript . Around December 2013 , the toolkit was integrated directly into Flash Professional CC . Criticisms ( edit ) Mobile support ( edit ) Websites built
+with Adobe Flash will not function on most modern mobile devices running Google Android or iOS ( iPhone , iPad ) . The only alternative is using HTML5 and
+responsive web design to build websites that support both desktop and mobile devices . However , Flash is still used to build mobile games using Adobe AIR .
+Such games will not work in mobile web browsers , but must be installed via the appropriate app store . Vendor dependence ( edit ) See also : Vendor lock - in
+The reliance on Adobe for decoding Flash makes its use on the World Wide Web a concern -- the completeness of its public specifications are debated , and no
+complete implementation of Flash is publicly available in source code form with a license that permits reuse .
+</item 10>
+=== END ITEM id=aad93260ed6e9e01 ===

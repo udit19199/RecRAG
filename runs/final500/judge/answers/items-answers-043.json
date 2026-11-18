@@ -1,0 +1,588 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "37499a7ce9d11ed1",
+   "kind": "answer",
+   "question": "where does the nitrogen for this fertilizer come from",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Atmospheric nitrogen, converted into ammonia."
+  },
+  {
+   "id": "becc8174fa2e22fd",
+   "kind": "answer",
+   "question": "who won the national championship in volleyball 2017",
+   "gold_answers": [
+    "Ohio State"
+   ],
+   "model_answer": "Stanford Cardinal (women’s NCAA volleyball)"
+  },
+  {
+   "id": "68d519c1f41b612b",
+   "kind": "answer",
+   "question": "what was taking place before the industrial revolution",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Commercial agriculture and merchant capitalism were laying the groundwork."
+  },
+  {
+   "id": "80c9ef6b9cf77c99",
+   "kind": "answer",
+   "question": "which of the following was a result of the connecticut compromise",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Equal representation for each state in the Senate and proportional representation in the House."
+  },
+  {
+   "id": "c58118e99dc116ae",
+   "kind": "answer",
+   "question": "who sang go tell it on the mountain",
+   "gold_answers": [
+    "`` Go Tell It on the Mountain '' is an African - American spiritual song , compiled by John Wesley Work , Jr. , dating back to at least 1865 , that has been sung and recorded by many gospel and secular performers . It is considered a Christmas carol because its original lyrics celebrate the Nativity of Jesus :"
+   ],
+   "model_answer": "Mahalia Jackson, Little Big Town, and many others."
+  },
+  {
+   "id": "57a7c3f4a3350353",
+   "kind": "answer",
+   "question": "what was taking place before the industrial revolution",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Mercantilism and agrarian capitalism were developing."
+  },
+  {
+   "id": "073d02756c6eaebc",
+   "kind": "answer",
+   "question": "the cast of a good day to die hard",
+   "gold_answers": [
+    "Bruce Willis",
+    "Jai Courtney",
+    "Sebastian Koch",
+    "Yuliya Snigir",
+    "Sergei Kolesnikov",
+    "Radivoje Bukvić",
+    "Mary Elizabeth Winstead"
+   ],
+   "model_answer": "Bruce Willis, Jai Courtney, Sebastian Koch, Yuliya Snigir, Cole Hauser, and Mary Elizabeth Winstead."
+  },
+  {
+   "id": "1bd4a107e7d1c6de",
+   "kind": "answer",
+   "question": "the private ownership of real property is known as",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Land ownership"
+  },
+  {
+   "id": "c674ec4c5b56de4f",
+   "kind": "answer",
+   "question": "what is earth's magnetic field responsible for",
+   "gold_answers": [
+    "deflect most of the solar wind, whose charged particles would otherwise strip away the ozone layer that protects the Earth from harmful ultraviolet radiation"
+   ],
+   "model_answer": "Protecting Earth from solar wind and cosmic rays."
+  },
+  {
+   "id": "c3ec9ff43ee4132d",
+   "kind": "answer",
+   "question": "who is rose in the fall season 2",
+   "gold_answers": [
+    "a woman who had a sexual relationship with Paul whilst at university",
+    "Valene Kane"
+   ],
+   "model_answer": "Rose Stagg, a woman Paul Spector kidnapped."
+  },
+  {
+   "id": "298ee4d02d3fdd72",
+   "kind": "answer",
+   "question": "who was on the first season of dwts",
+   "gold_answers": [
+    "Trista Sutter",
+    "Evander Holyfield",
+    "Rachel Hunter",
+    "Joey McIntyre",
+    "John O'Hurley",
+    "Kelly Monaco"
+   ],
+   "model_answer": "Kelly Monaco, John O’Hurley, Joey McIntyre, Rachel Hunter, Trista Rehn, and Evander Holyfield."
+  },
+  {
+   "id": "87061604f263110c",
+   "kind": "answer",
+   "question": "the seed of a gymnosperm seed is made in the",
+   "gold_answers": [
+    "either on the surface of scales or leaves",
+    "either on the surface of scales or leaves, which are often modified to form cones, or solitary",
+    "the surface of scales or leaves"
+   ],
+   "model_answer": "On the surface of scales or leaves, often in cones."
+  },
+  {
+   "id": "4e3075e5ee86ea24",
+   "kind": "answer",
+   "question": "steps party on the dance floor tour review",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Highly praised: four stars in Belfast and five stars in Dublin."
+  },
+  {
+   "id": "a6db09b86c763f6e",
+   "kind": "answer",
+   "question": "what is the job of justice of the peace",
+   "gold_answers": [
+    "a judicial officer, of a lower or puisne court, elected or appointed by means of a commission (letters patent) to keep the peace.",
+    "dispense summary justice",
+    "deal with local administrative applications in common law jurisdictions"
+   ],
+   "model_answer": "Handles minor legal cases and local judicial duties."
+  },
+  {
+   "id": "783dea49875887d8",
+   "kind": "answer",
+   "question": "the seed of a gymnosperm seed is made in the",
+   "gold_answers": [
+    "either on the surface of scales or leaves",
+    "either on the surface of scales or leaves, which are often modified to form cones, or solitary",
+    "the surface of scales or leaves"
+   ],
+   "model_answer": "Cone"
+  },
+  {
+   "id": "1368cebd4d8b73b5",
+   "kind": "answer",
+   "question": "how tall is the actor who plays hagrid in harry potter",
+   "gold_answers": [
+    "6ft 1in"
+   ],
+   "model_answer": "6 ft 1 in (1.85 m)"
+  },
+  {
+   "id": "f5be10d2b04991c4",
+   "kind": "answer",
+   "question": "where is the hotel in the movie the shining",
+   "gold_answers": [
+    "In 1980 , The Shining became the basis for a film adaptation directed by Stanley Kubrick . Kubrick 's vision for the movie differed from King 's significantly in many ways , including the portrayal of the Overlook Hotel . The exteriors of Kubrick 's Overlook were supplied by the Timberline Lodge on the slopes of Mt . Hood in Oregon . Inspiration for the interior sets ( erected at Elstree Studios in England ) came from the 1927 Ahwahnee Hotel in Yosemite National Park . The management of the Timberline Lodge , fearful that guests would refuse to stay in their Room 217 if it were featured in a horror movie , insisted that Kubrick change the haunted room in the film to Room 237 ."
+   ],
+   "model_answer": "Timberline Lodge, Oregon."
+  },
+  {
+   "id": "20d8d4afdb203775",
+   "kind": "answer",
+   "question": "what kind of fish live in the salton sea",
+   "gold_answers": [
+    "tilapia"
+   ],
+   "model_answer": "Tilapia, corvina, sargo, gulf croaker, and desert pupfish."
+  },
+  {
+   "id": "a29121b170060cbb",
+   "kind": "answer",
+   "question": "where do we draw the line between painting and drawing",
+   "gold_answers": [
+    "Drawing is one of the major forms of expression within the visual arts . It is generally concerned with the marking of lines and areas of tone onto paper / other material , where the accurate representation of the visual world is expressed upon a plane surface . Traditional drawings were monochrome , or at least had little colour , while modern colored - pencil drawings may approach or cross a boundary between drawing and painting . In Western terminology , drawing is distinct from painting , even though similar media often are employed in both tasks . Dry media , normally associated with drawing , such as chalk , may be used in pastel paintings . Drawing may be done with a liquid medium , applied with brushes or pens . Similar supports likewise can serve both : painting generally involves the application of liquid paint onto prepared canvas or panels , but sometimes an underdrawing is drawn first on that same support ."
+   ],
+   "model_answer": "There’s no sharp line; it’s a continuum."
+  },
+  {
+   "id": "5732dff6b1465862",
+   "kind": "answer",
+   "question": "what is the significance of the sahara desert",
+   "gold_answers": [
+    "the largest hot desert and the third largest desert in the world after Antarctica and the Arctic",
+    "the largest hot desert",
+    "the third largest desert in the world after Antarctica and the Arctic"
+   ],
+   "model_answer": "The world’s largest hot desert and a major geographic feature of North Africa."
+  },
+  {
+   "id": "270ba32e93b98383",
+   "kind": "answer",
+   "question": "total branch of union bank ltd in bangladesh",
+   "gold_answers": [
+    "Islami Somaz Bank Limited Al - Arafah Islami Bank Limited EXIM Bank Limited First Security Islami Bank Limited ICB Islamic Bank Limited Islami Bank Bangladesh Limited Shahjalal Islami Bank Limited Social Islami Bank Limited Union Bank Limited"
+   ],
+   "model_answer": "104 branches"
+  },
+  {
+   "id": "5d781a2a4bf4298a",
+   "kind": "answer",
+   "question": "what is the use of adobe flash cs3 professional",
+   "gold_answers": [
+    "supported modern programming practices and enabled business applications to be developed with Flash"
+   ],
+   "model_answer": "Creating Flash animations and business applications using ActionScript 3.0."
+  },
+  {
+   "id": "21576c9b4811fa9d",
+   "kind": "answer",
+   "question": "how much does.it cost to raise a child",
+   "gold_answers": [
+    "Dual - Parent Family - USDA Average Spending per Child ( not the basic cost of raising ) Age of Child Housing Food Transport . Clothing Health Child Care / Education Misc . Total Before - tax income : Less than $59,410 ( Average = $38,000 ) 0 to 2 2,990 1,160 1,170 640 630 2,040 420 9,050 3 to 5 2,990 1,260 1,230 500 590 1,910 620 9,100 6 to 8 2,990 1,710 1,350 570 660 1,290 630 8,760 9 to 11 2,990 1,970 1,350 580 710 1,910 630 9,520 12 to 14 2,990 2,130 1,480 690 1,090 1,110 700 9,960 15 to 17 2,990 2,120 1,630 730 1,010 1,290 580 9,970 Total 53,820 31,050 24,630 11,130 14,070 23,640 10,740 169,080 Before - tax income : $59,410 to $102,870 ( Average = $79,940 ) 0 to 2 3,920 1,405 1,690 760 850 2,860 890 12,370 3 to 5 3,920 1,490 1,740 610 800 2,740 1,090 12,390 6 to 8 3,920 2,100 1,860 680 940 1,680 1,110 12,290 9 to 11 3,920 2,400 1,870 710 1,000 2,110 1,100 13,110 12 to 14 3,920 2,580 1,990 840 1,410 1,910 1,170 13,820 15 to 17 3,920 2,570 2,150 900 1,330 2,400 1,050 14,320 Total 70,560 37,620 33,900 13,500 18,990 41,100 19,230 234,900 Before - tax income : More than $102,870 ( Average = $180,040 ) 0 to 2 7,100 1,900 2,550 1,050 980 5,090 1,790 20,460 3 to 5 7,100 2,000 2,610 880 930 4,970 1,990 20,480 6 to 8 7,100 2,630 2,730 970 1,080 3,910 2,000 20,420 9 to 11 7,100 2,980 2,730 1,010 1,150 4,350 2,000 21,320 12 to 14 7,100 3,190 2,860 1,170 1,610 4,700 2,070 22,700 15 to 17 7,100 3,180 3,020 1,280 1,520 6,460 1,950 24,510 Total 127,800 47,640 49,500 19,080 21,810 88,440 35,400 389,670"
+   ],
+   "model_answer": "About $300,000 in the U.S. to age 18."
+  },
+  {
+   "id": "ffe125474f720385",
+   "kind": "answer",
+   "question": "what is the share of agriculture in indian economy",
+   "gold_answers": [
+    "17.32%",
+    "23%"
+   ],
+   "model_answer": "About 17% of GDP (including allied sectors, in 2014)."
+  },
+  {
+   "id": "76472114d8d383f6",
+   "kind": "answer",
+   "question": "polar moment of inertia vs area moment of inertia",
+   "gold_answers": [
+    "Polar moment of inertia is a quantity used to predict an object 's ability to resist torsion , in objects ( or segments of objects ) with an invariant circular cross section and no significant warping or out - of - plane deformation . It is used to calculate the angular displacement of an object subjected to a torque . It is analogous to the area moment of inertia , which characterizes an object 's ability to resist bending and is required to calculate displacement ."
+   ],
+   "model_answer": "Polar moment: torsion; area moment: bending."
+  },
+  {
+   "id": "8e4e9d003dc2e0e6",
+   "kind": "answer",
+   "question": "where was the music video what ifs filmed",
+   "gold_answers": [
+    "along the Californian coast at The Inn at Newport Ranch, a resort and cattle ranch to the north of San Francisco"
+   ],
+   "model_answer": "Tennessee, USA"
+  },
+  {
+   "id": "c346e7e146917a42",
+   "kind": "answer",
+   "question": "where in the constitution is the concept of federalism established",
+   "gold_answers": [
+    "Because the states were preexisting political entities , the U.S. Constitution did not need to define or explain federalism in any one section but it often mentions the rights and responsibilities of state governments and state officials in relation to the federal government . The federal government has certain express powers ( also called enumerated powers ) which are powers spelled out in the Constitution , including the right to levy taxes , declare war , and regulate interstate and foreign commerce . In addition , the Necessary and Proper Clause gives the federal government the implied power to pass any law `` necessary and proper '' for the execution of its express powers . Other powers -- the reserved powers -- are reserved to the people or the states . The power delegated to the federal government was significantly expanded by the Supreme Court decision in McCulloch v. Maryland ( 1819 ) , amendments to the Constitution following the Civil War , and by some later amendments -- as well as the overall claim of the Civil War , that the states were legally subject to the final dictates of the federal government ."
+   ],
+   "model_answer": "Not in any one section; it is reflected throughout the Constitution."
+  },
+  {
+   "id": "ea0801134019f7cb",
+   "kind": "answer",
+   "question": "dean koontz dark rivers of the heart summary",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Spencer Grant searches for missing Valerie Keene while evading a secret government agency, with his dog Rocky by his side."
+  },
+  {
+   "id": "69d80e2c53e0d45a",
+   "kind": "answer",
+   "question": "where was uncle tom's cabin first published",
+   "gold_answers": [
+    "in The National Era, an abolitionist periodical, starting with the June 5, 1851, issue",
+    "The National Era",
+    "The National Era, an abolitionist periodical"
+   ],
+   "model_answer": "The National Eracuntegn"
+  },
+  {
+   "id": "76e94ca00a313461",
+   "kind": "answer",
+   "question": "what is the most current adobe flash player version",
+   "gold_answers": [
+    "28.0.0.137"
+   ],
+   "model_answer": "28.0.0.152 Beta"
+  },
+  {
+   "id": "beb48303be2bcee8",
+   "kind": "answer",
+   "question": "why did alex and ellen break up on family ties",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Ellen moved to New York to pursue her dance career."
+  },
+  {
+   "id": "e395721e2f506ab2",
+   "kind": "answer",
+   "question": "who is the speaker in shooting an elephant",
+   "gold_answers": [
+    "Orwell",
+    "Orwell, writing in the first person",
+    "possibly Orwell himself, called upon to shoot an aggressive elephant while working as a police officer in Burma",
+    "the English narrator, possibly Orwell himself"
+   ],
+   "model_answer": "The English narrator, possibly George Orwell."
+  },
+  {
+   "id": "e1e390e580d90b0b",
+   "kind": "answer",
+   "question": "where is australia’s closest french speaking country",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "New Caledonia, east of Australia."
+  },
+  {
+   "id": "ec7eb213549c8ce9",
+   "kind": "answer",
+   "question": "disease of the light sensitive innermost layer of the eyeball",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Retinitis"
+  },
+  {
+   "id": "63f000ec80880386",
+   "kind": "answer",
+   "question": "how much does.it cost to raise a child",
+   "gold_answers": [
+    "Dual - Parent Family - USDA Average Spending per Child ( not the basic cost of raising ) Age of Child Housing Food Transport . Clothing Health Child Care / Education Misc . Total Before - tax income : Less than $59,410 ( Average = $38,000 ) 0 to 2 2,990 1,160 1,170 640 630 2,040 420 9,050 3 to 5 2,990 1,260 1,230 500 590 1,910 620 9,100 6 to 8 2,990 1,710 1,350 570 660 1,290 630 8,760 9 to 11 2,990 1,970 1,350 580 710 1,910 630 9,520 12 to 14 2,990 2,130 1,480 690 1,090 1,110 700 9,960 15 to 17 2,990 2,120 1,630 730 1,010 1,290 580 9,970 Total 53,820 31,050 24,630 11,130 14,070 23,640 10,740 169,080 Before - tax income : $59,410 to $102,870 ( Average = $79,940 ) 0 to 2 3,920 1,405 1,690 760 850 2,860 890 12,370 3 to 5 3,920 1,490 1,740 610 800 2,740 1,090 12,390 6 to 8 3,920 2,100 1,860 680 940 1,680 1,110 12,290 9 to 11 3,920 2,400 1,870 710 1,000 2,110 1,100 13,110 12 to 14 3,920 2,580 1,990 840 1,410 1,910 1,170 13,820 15 to 17 3,920 2,570 2,150 900 1,330 2,400 1,050 14,320 Total 70,560 37,620 33,900 13,500 18,990 41,100 19,230 234,900 Before - tax income : More than $102,870 ( Average = $180,040 ) 0 to 2 7,100 1,900 2,550 1,050 980 5,090 1,790 20,460 3 to 5 7,100 2,000 2,610 880 930 4,970 1,990 20,480 6 to 8 7,100 2,630 2,730 970 1,080 3,910 2,000 20,420 9 to 11 7,100 2,980 2,730 1,010 1,150 4,350 2,000 21,320 12 to 14 7,100 3,190 2,860 1,170 1,610 4,700 2,070 22,700 15 to 17 7,100 3,180 3,020 1,280 1,520 6,460 1,950 24,510 Total 127,800 47,640 49,500 19,080 21,810 88,440 35,400 389,670"
+   ],
+   "model_answer": "About $169,080–$389,670 in the U.S., depending on income."
+  },
+  {
+   "id": "f6749bd721322d93",
+   "kind": "answer",
+   "question": "which of the following was a result of the connecticut compromise",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Equal state representation in the Senate and population-based representation in the House."
+  },
+  {
+   "id": "5967af346a8a78b5",
+   "kind": "answer",
+   "question": "what events occurred in the fighting at seas and near the great lakes",
+   "gold_answers": [
+    "The Battle of Lake Erie , sometimes called the Battle of Put - in - Bay , was fought on 10 September 1813 , in Lake Erie off the coast of Ohio during the War of 1812 . Nine vessels of the United States Navy defeated and captured six vessels of the British Royal Navy . This ensured American control of the lake for the rest of the war , which in turn allowed the Americans to recover Detroit and win the Battle of the Thames to break the Indian confederation of Tecumseh . It was one of the biggest naval battles of the War of 1812 ."
+   ],
+   "model_answer": "Naval battles and captures on Lake Erie and other Great Lakes, the Atlantic, Gulf Coast, and Pacific."
+  },
+  {
+   "id": "bd9ccf451a3a90a7",
+   "kind": "answer",
+   "question": "i-o psychologists study our behavior on the job by",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Applying psychological theories and principles to the workplace."
+  },
+  {
+   "id": "5a3762973935797d",
+   "kind": "answer",
+   "question": "when is dancing on ice on the tv",
+   "gold_answers": [
+    "2019"
+   ],
+   "model_answer": "Sunday nights."
+  },
+  {
+   "id": "1d06f41571a962a6",
+   "kind": "answer",
+   "question": "all i want for christmas is you mariah carey tour",
+   "gold_answers": [
+    "All I Want for Christmas Is You , a Night of Joy and Festivity is the first concert residency by American singer Mariah Carey . Performed annually at the Beacon Theatre in Manhattan , New York , the residency began on December 15 , 2014 , and will conclude on December 22 , 2017 , after completing six legs and thirty - four shows . Billboard revealed that the six dates had sold out with a total of 16,196 tickets while grossing $1.5 million during the first leg of the residency . The main set list for the show encompassed songs from Merry Christmas and Merry Christmas II You , with additional non-holiday tracks . The show also included `` a cast of forty , including a gospel choir , a clutch of carolers , several acrobats and a hyperactive round of kid singer / dancers . ''"
+   ],
+   "model_answer": "Mariah Carey’s “Christmas Time” tour."
+  },
+  {
+   "id": "8f868583d8d6396d",
+   "kind": "answer",
+   "question": "explain how an operating system talks to hardware",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Through device drivers that translate operating-system requests into hardware commands."
+  },
+  {
+   "id": "d33764cf634c3aed",
+   "kind": "answer",
+   "question": "who has hosted the most fifa world cups",
+   "gold_answers": [
+    "Mexico, Italy, France, Germany (West Germany until shortly after the 1990 World Cup) and Brazil have hosted the event on two occasions",
+    "Mexico",
+    "Italy",
+    "France",
+    "Germany",
+    "Brazil"
+   ],
+   "model_answer": "Mexico, Italy, France, Germany, and Brazil (twice each)"
+  },
+  {
+   "id": "7c230d4f33177f73",
+   "kind": "answer",
+   "question": "you gotta fight for your right to party cover",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Coldplayielsen"
+  },
+  {
+   "id": "3587135ff179ba14",
+   "kind": "answer",
+   "question": "when did hawaii become a state and why",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "August 21, 1959, to gain full representation in Congress and the Electoral College."
+  },
+  {
+   "id": "3bafff09a3f5b0f8",
+   "kind": "answer",
+   "question": "when did the dallas cowboys win their last playoff game",
+   "gold_answers": [
+    "2014",
+    "2016"
+   ],
+   "model_answer": "2014 season"
+  },
+  {
+   "id": "20af64b5a7513a94",
+   "kind": "answer",
+   "question": "the object in the mirror are closer than it appears",
+   "gold_answers": [
+    "The phrase `` objects in ( the ) mirror are closer than they appear '' is a safety warning that is required to be engraved on passenger side mirrors of motor vehicles in the USA , Canada , Nepal , India and Saudi Arabia . It is present because while these mirrors ' convexity gives them a useful field of view , it also makes objects appear smaller . Since smaller - appearing objects seem farther away than they actually are , a driver might make a maneuver such as a lane change assuming an adjacent vehicle is a safe distance behind , when in fact it is quite a bit closer . The warning serves as a reminder to the driver of this potential problem ."
+   ],
+   "model_answer": "Objects in mirror are closer than they appear."
+  },
+  {
+   "id": "bd41a2a07f6a6032",
+   "kind": "answer",
+   "question": "let my love open the door to your heart grace and frankie",
+   "gold_answers": [
+    "A cover of the song by Stacey Markus is used at the end of episode nine ( `` The Invitation '' ) of the 2015 Netflix original series Grace and Frankie , starring Jane Fonda and Lily Tomlin ."
+   ],
+   "model_answer": "Stacey Markus’s cover plays at the end of Grace and Frankie episode 9, “The Invitation.”"
+  },
+  {
+   "id": "849fc765f7259180",
+   "kind": "answer",
+   "question": "when did australia get rid of the death penalty",
+   "gold_answers": [
+    "Capital punishment in Australia has been abolished in all jurisdictions . Queensland abolished the death penalty in 1922 . Tasmania did the same in 1968 , the federal government abolished the death penalty in 1973 , with application also in the Australian Capital Territory and the Northern Territory . Victoria did so in 1975 , South Australia in 1976 , and Western Australia in 1984 . New South Wales abolished the death penalty for murder in 1955 , and for all crimes in 1985 . In 2010 , the federal government passed legislation prohibiting the re-establishment of capital punishment by any state or territory . Neither the Commonwealth nor any of the states will extradite or deport a prisoner to another jurisdiction if they will face the death penalty , and police co-operation with other countries which have the death penalty has been questioned ."
+   ],
+   "model_answer": "1985"
+  },
+  {
+   "id": "d6c4095f58dab2dd",
+   "kind": "answer",
+   "question": "a legislative act passed by congress is an example of",
+   "gold_answers": [
+    "statutory law"
+   ],
+   "model_answer": "Federal legislation\n"
+  },
+  {
+   "id": "9b8a77535426f764",
+   "kind": "answer",
+   "question": "what purpose did seasonal monsoon winds have on trade",
+   "gold_answers": [
+    "enabled European empire expansion into the Americas and trade routes to become established across the Atlantic and Pacific oceans"
+   ],
+   "model_answer": "They helped sailors navigate and establish trade routes."
+  },
+  {
+   "id": "5d8efb122e37911b",
+   "kind": "answer",
+   "question": "who were some of the survivors on the titanic",
+   "gold_answers": [
+    "Name Age Hometown Boarded Destination Lifeboat Body Allen , Miss Elizabeth Walton 29 St. Louis , Missouri , US Southampton St. Louis , Missouri , US Allison , Mr. Hudson Joshua Creighton 30 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada 135 and chauffeur , Mr. George Swane , 19 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada 294 and cook , Miss Amelia Mary `` Mildred '' Brown 18 London , England , UK Southampton Montreal , Quebec , Canada 11 Allison , Mrs. Bessie Waldo ( née Daniels ) 25 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada and maid , Miss Sarah Daniels 33 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada 8 Allison , Miss Helen Loraine Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada Allison , Master Hudson Trevor 0.11 ! 11 mo . Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada 11 and nurse , Miss Alice Catherine Cleaver 22 London , England , UK Southampton Montreal , Quebec , Canada 11 Anderson , Mr. Harry 47 New York City , New York , US Southampton New York City , New York , US Andrews , Miss Kornelia Theodosia 62 Hudson , New York , US Cherbourg Hudson , New York , US 10 Andrews , Mr. Thomas 39 Belfast , Ireland , UK Belfast New York City Appleton , Mrs. Charlotte Lane ( née Lamson ) 53 New York City Southampton New York City Artagaveytia , Mr. Ramon 71 Buenos Aires , Argentina Cherbourg New York City 22 Astor , Colonel John Jacob IV 47 New York City Cherbourg New York City 124 Astor , Mrs. Madeleine Talmage ( née Force ) 18 New York City Cherbourg New York City and maid , Miss Rosalie Bidois 46 New York City Cherbourg New York City and nurse , Miss Caroline Louise Endres 39 New York City Cherbourg New York City Aubart , Mrs. Léontine Pauline 24 Paris , France Cherbourg New York City 9 and maid , Miss Emma Sägesser 24 Paris , France Cherbourg New York City 9 Barkworth , Mr. Algernon Henry Wilson 47 Hessle , East Yorkshire , England , UK Southampton New York City Baumann , Mr. John D . 60 New York City Cherbourg New York City Baxter , Mrs. Hélène ( née de Lanaudière - Chaput ) 50 Montreal , Quebec , Canada Cherbourg Montreal , Quebec , Canada 6 Baxter , Mr. Quigg Edmond 24 Montreal , Quebec , Canada Cherbourg Montreal , Quebec , Canada Beattie , Mr. Thomson 36 Fergus , Ontario , Canada Southampton Fergus , Ontario , Canada 331 Beckwith , Mr. Richard Leonard 37 New York City Southampton New York City 5 Beckwith , Mrs. Sallie ( née Monypeny ) 46 New York City Southampton New York City 5 Behr , Mr. Karl Howell 26 New York City Cherbourg New York City 5 Birnbaum , Mr. Jakob 24 Antwerp , Belgium Cherbourg San Francisco , California , US 148 Bishop , Mr. Dickinson H. `` Dick '' 25 Dowagiac , Michigan , US Cherbourg Dowagiac , Michigan , US 7 Bishop , Mrs. Helen ( née Walton ) 19 Dowagiac , Michigan , US Cherbourg Dowagiac , Michigan , US 7 Björnström - Steffanson , Mr. Mauritz Håkan 28 Stockholm , Sweden Southampton Washington , D.C. , US Blackwell , Mr. Stephen Weart 45 Trenton , New Jersey , US Southampton Trenton , New Jersey , US Blank , Mr. Henry 39 Glen Ridge , New Jersey , US Cherbourg Glen Ridge , New Jersey , US 7 Bonnell , Miss Elizabeth 61 Youngstown , Ohio , US Southampton Youngstown , Ohio , US 8 Bonnell , Miss Caroline 30 Youngstown , Ohio , US Southampton Youngstown , Ohio , US 8 Borebank , Mr. John James 42 London , England , UK Southampton Toronto , Ontario , Canada Bowerman , Miss Elsie Edith 22 St. Leonards - on - Sea , East Sussex , England , UK Southampton New York City 6 Brady , Mr. John Bertram 41 Pomeroy , Washington , US Southampton Pomeroy , Washington , US Brandeis , Mr. Emil 48 Omaha , Nebraska , US Cherbourg Omaha , Nebraska , US 208 Brereton , Mr. George Andrew ( alias George A. Brayton ) 37 Los Angeles , US Southampton Los Angeles , California , US 9 Brewe , Dr. Arthur Jackson 45 Philadelphia , Pennsylvania , US Cherbourg Philadelphia , Pennsylvania , US Brown , Mrs. Caroline Lane ( née Lamson ) 59 Belmont , Massachusetts , US Southampton Belmont , Massachusetts , US Brown , Mrs. Margaret ( née Tobin ) 44 Denver , Colorado , US Cherbourg Denver , Colorado , US 6 Bucknell , Mrs. Emma Eliza ( née Ward ) 59 Philadelphia , Pennsylvania , US Cherbourg Philadelphia , Pennsylvania , US 8 and maid , Miss Albina Bazzani 36 Philadelphia , Pennsylvania , US Cherbourg Philadelphia , Pennsylvania , US 8 Butt , Major Archibald Willingham 46 Washington , D.C. , US Southampton Washington , D.C. , US Calderhead , Mr. Edward Pennington 42 New York City Southampton New York City 5 Candee , Mrs. Helen Churchill ( née Hungerford ) 53 Washington , D.C. , US Cherbourg Washington , D.C. , US 6 Cardeza , Mrs. Charlotte Wardle ( née Drake ) 58 Germantown , Pennsylvania , US Cherbourg Germantown , Pennsylvania , US and maid , Miss Annie Moore Ward 38 Germantown , Pennsylvania , US Cherbourg Germantown , Pennsylvania , US Cardeza , Mr. Thomas Drake Martinez 36 Germantown , Pennsylvania , US Cherbourg Germantown , Pennsylvania , US and valet , Mr. Gustave J. Lesueur 35 Germantown , Pennsylvania , US Cherbourg Germantown , Pennsylvania , US Carlsson , Mr. Frans Olof 33 New York City Southampton New York City Carrau , Mr. Francisco M . 31 Montevideo , Uruguay Southampton Montevideo , Uruguay Carrau , Mr. José Pedro 17 Montevideo , Uruguay Southampton Montevideo , Uruguay Carter , Mr. William Ernest 36 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US and valet , Mr. Alexander Cairns 28 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US and chauffeur , Mr. Charles Augustus Aldworth 30 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US Carter , Mrs. Lucile ( née Polk ) 36 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US and maid , Miss Auguste Serreplan 30 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US Carter , Miss Lucile Polk 13 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US Carter , Master William Thornton II 11 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US Case , Mr. Howard Brown 49 Ascot , Berkshire , England , UK Southampton Rochester , New York , US Cassebeer , Mrs. Eleanor Genevieve ( née Fosdick ) 36 New York City Cherbourg New York City 5 Cavendish , Mr. Tyrell William 36 London , England , UK Southampton New York City 172 Cavendish , Mrs. Julia Florence ( née Siegel ) 25 London , England , UK Southampton New York City 6 and maid , Miss Ellen `` Nellie '' Barber 26 London , England , UK Southampton New York City 6 Chaffee , Mr. Hubert Fuller 46 Amenia , North Dakota , US Southampton Amenia , North Dakota , US Chaffee , Mrs. Carrie Constance ( née Toogood ) 47 Amenia , North Dakota , US Southampton Amenia , North Dakota , US Chambers , Mr. Norman Campbell 27 New York City Southampton New York City 5 Chambers , Mrs. Bertha ( née Griggs ) 32 New York City Southampton New York City 5 Cherry , Miss Gladys 30 London , England , UK Southampton Vancouver , British Columbia , Canada 8 Chevré , Mr. Paul Romaine Marie Léonce 45 Paris , France Cherbourg Ottawa , Ontario , Canada 7 Chibnall , Mrs. Edith Martha Bowerman ( née Barber ) 48 St. Leonards - on - Sea , East Sussex , England , UK Southampton New York City 6 Chisholm , Mr. Roderick Robert Crispin 40 Belfast , Ireland , UK Belfast New York City Clark , Mr. Walter Miller 27 Los Angeles , California , US Cherbourg Los Angeles , California , US Clark , Mrs. Virginia Estelle ( née McDowell ) 26 Los Angeles , California , US Cherbourg Los Angeles , California , US Clifford , Mr. George Quincy 40 Stoughton , Massachusetts , US Southampton Stoughton , Massachusetts Colley , Mr. Edward Pomeroy 37 Dublin , Ireland , UK Southampton Vancouver , British Columbia , Canada Compton , Mrs. Mary Eliza ( née Ingersoll ) 64 Lakewood , New Jersey , US Cherbourg Lakewood , New Jersey , US 14 Compton , Miss Sara Rebecca 39 Lakewood , New Jersey , US Cherbourg Lakewood , New Jersey , US 14 Compton , Mr. Alexander Taylor Jr . 37 Lakewood , New Jersey , US Cherbourg Lakewood , New Jersey , US Cornell , Mrs. Malvina Helen ( née Lamson ) 55 New York City Southampton New York City Crafton , Mr. John Bertram 59 Roachdale , Indiana , US Southampton Roachdale , Indiana , US Crosby , Captain Edward 70 Milwaukee , Wisconsin , US Southampton Milwaukee , Wisconsin , US 269 Crosby , Mrs. Catherine Elizabeth ( née Halstead ) 64 Milwaukee , Wisconsin , US Southampton Milwaukee , Wisconsin , US 7 Crosby , Miss Harriette Rebecca 39 Milwaukee , Wisconsin , US Southampton Milwaukee , Wisconsin , US 7 Cumings , Mr. John Bradley 39 New York City Cherbourg New York City Cumings , Mrs. Florence Briggs ( née Thayer ) 35 New York City Cherbourg New York , US Daly , Mr. Peter Dennis 51 Lima , Peru Southampton Lima , Peru Daniel , Mr. Robert Williams 27 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US Davidson , Mr. Thornton 31 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada Davidson , Mrs. Orian ( née Hays ) 27 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada Dick , Mr. Albert Adrian 31 Calgary , Alberta , Canada Southampton Calgary , Alberta , Canada Dick , Mrs. Vera ( née Gillespie ) 17 Calgary , Alberta , Canada Southampton Calgary , Alberta , Canada Dineston , Mrs. Nancy May Bowles 28 London , England , UK Southampton New York City , USA Dineston , George Samuel 30 London , England , UK Southampton New York City , USA Dodge , Dr. Washington 52 San Francisco , California , US Southampton San Francisco , California , US 13 Dodge , Mrs. Ruth ( née Vidaver ) 34 San Francisco , California , US Southampton San Francisco , California , US 5 Dodge , Master Washington , Jr . San Francisco , California , US Southampton San Francisco , California , US 5 Douglas , Mr. Walter Donald 50 Minneapolis , Minnesota , US Cherbourg Minneapolis , Minnesota , US 62 Douglas , Mrs. Mahala ( née Dutton ) 48 Minneapolis , Minnesota , US Cherbourg Minneapolis , Minnesota , US and maid , Miss Berthe Leroy 27 Minneapolis , Minnesota , US Cherbourg Minneapolis , Minnesota , US Douglas , Mrs. Mary Hélène ( née Baxter ) 27 Montreal , Quebec , Canada Cherbourg Montreal , Quebec , Canada 6 Duff Gordon , Sir Cosmo Edmund 49 London , England , UK Cherbourg New York City Duff Gordon , Lucy Christiana , Lady ( née Sutherland ) 48 London , England , UK Cherbourg New York City and secretary , Miss Laura Mabel Francatelli 31 London , England , UK Cherbourg New York City Dulles , Mr. William Crothers 39 Philadelphia , Pennsylvania , US Cherbourg Philadelphia , Pennsylvania , US 133 Eustis , Miss Elizabeth Mussey 54 Brookline , Massachusetts , US Cherbourg Brookline , Massachusetts , US Evans , Miss Edith Corse 36 New York City Cherbourg New York City Flegenheim , Mrs. Antoinette ( née Wendt ) 48 New York City Cherbourg New York City 7 Flynn , Mr. John Irwin 36 Brooklyn , New York , US Southampton Brooklyn , New York , US 5 Foreman , Mr. Benjamin Laventall 30 New York City Southampton New York City Fortune , Mr. Mark 64 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada Fortune , Mrs. Mary ( née McDougald ) 60 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada 10 Fortune , Miss Ethel Flora 28 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada 10 Fortune , Miss Alice Elizabeth 24 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada 10 Fortune , Miss Mabel Helen 23 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada 10 Fortune , Mr. Charles Alexander 19 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada Franklin , Mr. Thomas Parnham 37 London , England , UK Southampton New York City Frauenthal , Dr. Henry William 49 London , England , UK Southampton New York City 5 Frauenthal , Mrs. Clara ( née Heinsheimer ) 42 London , England , UK Southampton New York City 5 Frauenthal , Mr. Isaac Gerald 43 London , England , UK Southampton New York City 5 Frölicher , Mr. Maximilian Josef 60 Zürich , Switzerland Cherbourg New York City 5 Frölicher , Mrs. Margaretha Emerentia ( née Stehli ) 48 Zürich , Switzerland Cherbourg New York City 5 Frölicher - Stehli , Miss Hedwig Margaritha 22 Zürich , Switzerland Cherbourg New York City 5 Futrelle , Mr. Jacques Heath 37 Scituate , Massachusetts , US Southampton Scituate , Massachusetts , US Futrelle , Mrs. Lily May ( née Peel ) 35 Scituate , Massachusetts , US Southampton Scituate , Massachusetts , US Gee , Mr. Arthur H . 47 St. Annes - on - Sea , Lancashire , England , UK Southampton Mexico City , Mexico 275 Gibson , Mrs. Pauline Caroline ( née Boeson ) 44 New York City Cherbourg New York City 7 Gibson , Miss Dorothy Winifred 22 New York City Cherbourg New York City 7 Goldenberg , Mr. Samuel L . 47 Paris , France Cherbourg New York City 5 Goldenberg , Mrs. Nella ( née Wiggins ) 40 Paris , France Cherbourg New York City 5 Goldschmidt , Mr. George B . 71 New York City Cherbourg New York City Gracie IV , Colonel Archibald 53 Washington , D.C. , US Southampton Washington , D.C. , US Graham , Mr. George Edward 38 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada 147 Graham , Mrs. Edith Ware ( née Junkins ) 59 Greenwich , Connecticut , US Southampton Greenwich , Connecticut , US Graham , Miss Margaret Edith 19 Greenwich , Connecticut , US Southampton Greenwich , Connecticut , US and governess , Miss Elizabeth Weed Shutes 40 Greenwich , Connecticut , US Southampton Greenwich , Connecticut , US Greenfield , Mrs. Blanche ( née Strouse ) 45 New York City Cherbourg New York City 7 Greenfield , Mr. William Bertram 23 New York City Cherbourg New York City 7 Guggenheim , Mr. Benjamin 46 Paris , France Cherbourg New York City and valet , Mr. Victor Giglio 24 Paris , France Cherbourg New York City and chauffeur , Mr. René Pernot 39 Paris , France Cherbourg New York City Harder , Mr. George Achilles 25 New York City Cherbourg New York City 5 Harder , Mrs. Dorothy ( née Annan ) 21 New York City Cherbourg New York City 5 Harper , Mr. Henry Sleeper 48 New York City Cherbourg New York City and dragoman , Mr. Hammad Hassab 27 Cairo , Egypt Cherbourg New York City Harper , Mrs. Myna ( née Haxtun ) 49 New York City Cherbourg New York City Harris , Mr. Henry Birkhardt 45 New York City Southampton New York City Harris , Mrs. Irene ( née Wallach ) 35 New York City Southampton New York City Hawksford , Mr. Walter James 45 Kingston , Surrey , England , UK Southampton New York City Hays , Mr. Charles Melville 55 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada 307 and clerk , Mr. Vivian Ponsonby Payne 22 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada Hays , Mrs. Clara Jennings ( née Grigg ) 52 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada and maid , Miss Mary Anne Perreault 33 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada Hays , Miss Margaret Bechstein 24 New York City Cherbourg New York City 7 Head , Mr. Christopher 42 Chelsea , London , England , UK Southampton New York City Hilliard , Mr. Herbert Henry 44 Brighton , Massachusetts , US Southampton Brighton , Massachusetts , US Hipkins , Mr. William Edward 55 Birmingham , West Midlands , England , UK Southampton New York City Hippach , Mrs. Ida Sophia ( née Fischer ) 44 Chicago , Illinois , US Cherbourg Chicago , Illinois , US Hippach , Miss Jean Gertrude 17 Chicago , Illinois , US Cherbourg Chicago , Illinois , US Hogeboom , Mrs. Anna Louisa ( née Andrews ) 51 Hudson , New York , US Cherbourg Hudson , New York , US 10 Holverson , Mr. Alexander Oskar 42 New York City Southampton New York City 38 Holverson , Mrs. Mary Aline ( née Towner ) 35 New York City Southampton New York City 8 Homer , Mr. Harry ( alias E. Haven ) 40 Indianapolis , Indiana , US Southampton Indianapolis , Indiana , US 15 Hoyt , Mr. Frederick Maxfield 35 New York City Southampton Stamford , Connecticut , US Hoyt , Mrs. Jane Anne ( née Forby ) 31 New York City Southampton Stamford , Connecticut , US Hoyt , Mr. William Fisher 42 New York City Cherbourg New York City 14 Isham , Miss Ann Elizabeth 50 Chicago , Illinois , US Cherbourg Chicago , Illinois , US Ismay , Mr. Joseph Bruce 49 Liverpool , Merseyside , England , UK Southampton New York City and valet , Mr. John Richard Fry 39 Liverpool , Merseyside , England , UK Southampton New York City and secretary , Mr. William Henry Harrison 45 Wallasey , Merseyside , England , UK Southampton New York City 110 Johnson , Mrs. Madeline Eliza ( née Austin ) 40 London , England , UK Southampton New York , New York , US 6 Johnson ( later changed to Langston ) , Mr. Samuel James 10 London , England , UK Southampton New York , New York , US Jones , Mr. Charles Cresson 46 Bennington , Vermont , US Southampton Bennington , Vermont , US 80 Julian , Mr. Henry Forbes 50 Torquay , Devon , England , UK Southampton San Francisco , US Kent , Mr. Edward Austin 58 Buffalo , New York , US Cherbourg Buffalo , New York , US 258 Kenyon , Mr. Frederick R . 41 Pittsburgh , Pennsylvania , US Southampton Pittsburgh , Pennsylvania , US Kenyon , Mrs. Marion ( née Stauffer ) 31 Pittsburgh , Pennsylvania , US Southampton Pittsburgh , Pennsylvania , US 8 Kimball , Mr. Edwin Nelson Jr . 42 Boston , Massachusetts , US Southampton Boston , Massachusetts , US 5 Kimball , Mrs. Gertrude ( née Parsons ) 45 Boston , Massachusetts , US Southampton Boston , Massachusetts , US 5 Klaber , Mr. Herman 45 Portland , Oregon , US Southampton Portland , Oregon , US Langston , Ms. Maxine Jane 25 Duncansville , Pennsylvania , US Southampton Duncansivlle , Pennsylvania , US Lambert - Williams , Mr. Fletcher Fellows 43 London , England , UK Southampton Newark , New Jersey , US Leader , Dr. Alice ( née Farnham ) 49 New York City Southampton New York City 8 Leslie , Lucy Noël Martha , Countess of Rothes ( née Dyer - Edwardes ) 27 Vancouver , British Columbia , Canada Southampton Vancouver , British Columbia , Canada 8 and maid , Miss Roberta Elizabeth Mary `` Cissy '' Maioni 20 Vancouver , British Columbia , Canada Southampton Vancouver , British Columbia , Canada 8 Lewy , Mr. Ervin G . 31 Chicago , Illinois , US Cherbourg Chicago , Illinois , US Lindeberg - Lind , Mr. Erik Gustav ( alias Edward Lingrey ) 42 Jordanstorp , Södermanland , Sweden Southampton New York City Lindström , Mrs. Sigrid ( née Posse ) 55 Stockholm , Sweden Cherbourg New York City 6 Lines , Mrs. Elizabeth Lindsey ( née James ) 50 Paris , France Cherbourg Hanover , New Hampshire , US 9 Lines , Miss Mary Conover 16 Paris , France Cherbourg Hanover , New Hampshire , US 9 Long , Mr. Milton Clyde 29 Springfield , Massachusetts , US Southampton Springfield , Massachusetts , US 126 Longley , Miss Gretchen Fiske 21 Hudson , New York , US Cherbourg Hudson , New York , US 10 Loring , Mr. Joseph Holland 30 London , England , UK Southampton New York City Madill , Miss Georgette Alexandra 16 St. Louis , Missouri , US Southampton St. Louis , Missouri , US Maguire , Mr. John Edward 30 Brockton , Massachusetts , US Southampton Brockton , Massachusetts , US Maréchal , Mr. Pierre , Sr . 28 Paris , France Cherbourg New York City 7 Marvin , Mr. Daniel Warner 18 New York City Southampton New York City Marvin , Mrs. Mary Graham Carmichael ( née Farquarson ) 18 New York City Southampton New York City 10 Mayné , Miss Bertha Antonine 24 Brussels , Belgium Cherbourg Montreal , Quebec , Canada 6 McCaffry , Mr. Thomas Francis 46 Vancouver , British Columbia , Canada Southampton Vancouver , British Columbia , Canada 292 McCarthy , Mr. Timothy J . 54 Dorchester , Massachusetts , US Southampton Dorchester , Massachusetts , US 175 McGough , Mr. James Robert 35 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US 7 Meyer , Mr. Edgar Joseph 28 New York City Cherbourg New York City Meyer , Mrs. Leila ( née Saks ) 25 New York City Cherbourg New York City 6 Millet , Mr. Francis Davis 65 East Bridgewater , Massachusetts , US Cherbourg East Bridgewater , Massachusetts , US 249 Minahan , Dr. William Edward 44 Fond du Lac , Wisconsin , US Southampton Fond du Lac , Wisconsin , US 230 Minahan , Mrs. Lillian E. ( née Thorpe ) 37 Fond du Lac , Wisconsin , US Southampton Fond du Lac , Wisconsin , US 14 Minahan , Miss Daisy E . 33 Fond du Lac , Wisconsin , US Southampton Fond du Lac , Wisconsin , US 14 Mock , Mr. Philipp Edmund 30 New York City Cherbourg New York City 11 Molson , Mr. Harry Markland 55 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada Moore , Mr. Clarence Bloomfield 47 Washington , D.C. , US Southampton Washington , D.C. , US and valet , Mr. Charles Henry Harrington 37 Washington , D.C. , US Southampton Washington , D.C. , US Natsch , Mr. Charles 36 Brooklyn , New York , US Cherbourg Brooklyn , New York , US Newell , Mr. Arthur Webster 58 Lexington , Massachusetts , US Cherbourg Lexington , Massachusetts , US 122 Newell , Miss Madeleine 31 Lexington , Massachusetts , US Cherbourg Lexington , Massachusetts , US 6 Newell , Miss Marjorie Anne 23 Lexington , Massachusetts , US Cherbourg Lexington , Massachusetts , US 6 Newsom , Miss Helen Monypeny 19 New York City Southampton New York City 5 Nicholson , Mr. Arthur Ernest 64 Shanklin , Isle of Wight , England , UK Southampton New York City 263 Nourney , Mr. Alfred 20 Cologne , German Empire Cherbourg New York City 7 Omont , Mr. Alfred Fernand 29 Le Havre , France Cherbourg New York City 7 Ostby , Mr. Engelhart Cornelius 64 Providence , Rhode Island , US Southampton Providence , Rhode Island , US 234 Ostby , Miss Helene Ragnhild 22 Providence , Rhode Island , US Southampton Providence , Rhode Island , US 5 Ovies y Rodriguez , Mr. Servando José Florentino 36 Havana , Cuba Cherbourg Havana , Cuba 189 Parr , Mr. William Henry Marsh 29 Belfast , Ireland , UK Belfast New York City Partner , Mr. Austin 40 Tolworth , London , England , UK Southampton Toronto , Ontario , Canada 166 Pears , Mr. Thomas Clinton 29 Isleworth , London , England , UK Southampton New York City Pears , Mrs. Edith ( née Wearne ) 22 Isleworth , London , England , UK Southampton New York City 8 Peñasco y Castellana , Mr. Victor 24 Madrid , Spain Cherbourg New York City Peñasco y Castellana , Mrs. Maria Josefa ( née Perez de Soto y Vallejo ) 22 Madrid , Spain Cherbourg New York City 8 and maid , Doña Fermina Oliva y Ocana 39 Madrid , Spain Cherbourg New York City 8 Peuchen , Major Arthur Godfrey 52 Toronto , Ontario , Canada Southampton Toronto , Ontario , Canada 6 Porter , Mr. Walter Chamberlain 46 Worcester , Massachusetts , US Southampton Worcester , Massachusetts , US 207 Potter , Mrs. Lily Alexenia ( née Wilson ) 56 Philadelphia , Pennsylvania , US Cherbourg Philadelphia , Pennsylvania , US 7 Reuchlin , The Honourable Mr. Johan George 38 Rotterdam , The Netherlands Southampton New York City Rheims , Mr. George Alexander Lucien 36 Paris , France Southampton New York City Robert , Mrs. Elisabeth Walton ( née McMillan ) 43 St. Louis , Missouri , US Southampton St. Louis , Missouri , US and maid , Miss Emilie Kreuchen 29 St. Louis , Missouri , US Southampton St. Louis , Missouri , US Roebling , Mr. Washington Augustus II 31 Trenton , New Jersey , US Southampton Trenton , New Jersey , US Romaine , Mr. Charles Hallance ( alias C. Rolmane ) 45 New York City Southampton New York City 9 Rood , Mr. Hugh Roscoe 38 Seattle , Washington , US Southampton Seattle , Washington , US Rosenbaum , Miss Edith Louise 34 Paris , France Cherbourg Cincinnati , Ohio , US 11 Rosenshine , Mr. George ( alias George Thorne ) 46 New York City Cherbourg New York City 16 Ross , Mr. John Hugo 36 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada Rothschild , Mr. Martin 46 New York City Cherbourg New York City Rothschild , Mrs. Elizabeth Jane Anne ( née Barrett ) 54 New York City Cherbourg New York City 6 Rowe , Mr. Alfred G . 59 Liverpool , Merseyside , England , UK Southampton New York City 109 Ryerson , Mr. Arthur Larned 61 Cooperstown , New York , US Cherbourg Cooperstown , New York , US Ryerson , Mrs. Emily Maria ( née Borie ) 48 Cooperstown , New York , US Cherbourg Cooperstown , New York , US and maid , Miss Victorine Chaudanson 36 Cooperstown , New York , US Cherbourg Cooperstown , New York , US Ryerson , Miss Susan Parker `` Suzette '' 21 Cooperstown , New York , US Cherbourg Cooperstown , New York , US Ryerson , Miss Emily Borie 18 Cooperstown , New York , US Cherbourg Cooperstown , New York , US Ryerson , Master John Borie `` Jack '' 13 Cooperstown , New York , US Cherbourg Cooperstown , New York , US and governess , Miss Grace Scott Bowen 45 Cooperstown , New York , US Cherbourg Cooperstown , New York , US Saalfeld , Mr. Adolphe 47 Manchester , England , UK Southampton New York City Salomon , Mr. Abraham Lincoln 43 New York City Cherbourg New York City Schabert , Mrs. Emma ( née Mock ) 35 Hamburg , German Empire Southampton New York City 11 Seward , Mr. Frederic Kimber 34 New York City Southampton New York City 7 Silverthorne , Mr. Spencer Victor 35 St. Louis , Missouri , US Southampton St. Louis , Missouri , US 5 Silvey , Mr. William Baird 50 Duluth , Minnesota , US Cherbourg Duluth , Minnesota , US Silvey , Mrs. Alice ( née Munger ) 39 Duluth , Minnesota , US Cherbourg Duluth , Minnesota , US 11 Simonius - Blumer , Colonel Alfons 56 Basel , Switzerland Southampton New York City Sloper , Mr. William Thompson 28 New Britain , Connecticut , US Southampton New Britain , Connecticut , US 7 Smart , Mr. John Montgomery 56 Kildale , North Yorkshire , England , UK Southampton New York City Smith , Mr. James Clinch 56 Paris , France Cherbourg Long Island , New York , US Smith , Mr. Lucien Philip 24 Huntington , West Virginia , US Cherbourg Huntington , West Virginia , US Smith , Mrs. Mary Eloise ( née Hughes ) 18 Huntington , West Virginia , US Cherbourg Huntington , West Virginia , US 6 Smith , Mr. Richard William 57 Streatham , London , England , UK Southampton New York City Snyder , Mr. John Pillsbury 24 Minneapolis , Minnesota , US Southampton Minneapolis , Minnesota , US 7 Snyder , Mrs. Nellie ( née Stevenson ) 23 Minneapolis , Minnesota , US Southampton Minneapolis , Minnesota , US 7 Spedden , Mr. Frederic Oakley 45 Tuxedo Park , New York , US Cherbourg Tuxedo Park , New York , US Spedden , Mrs. Margaretta Corning ( née Stone ) 39 Tuxedo Park , New York , US Cherbourg Tuxedo Park , New York , US and maid , Miss Helen Alice Wilson 31 Tuxedo Park , New York , US Cherbourg Tuxedo Park , New York , US Spedden , Master Robert Douglas 6 Tuxedo Park , New York , US Cherbourg Tuxedo Park , New York , US and nurse , Miss Elizabeth Margaret Burns 41 Tuxedo Park , New York , US Cherbourg Tuxedo Park , New York , US Spencer , Mr. William Augustus 57 New York City Cherbourg New York City Spencer , Mrs. Marie Eugénie ( née Demougeot ) 45 New York City Cherbourg New York City 6 and maid , Miss Eugenie Elise Lurette 59 New York City Cherbourg New York City 6 Stähelin - Maeglin , Dr. Max 32 Basel , Switzerland Southampton New York City Stead , Mr. William Thomas 62 London , England , UK Southampton New York City Stengel , Mr. Charles Emil Henry 54 Newark , New Jersey , US Cherbourg Newark , New Jersey , US Stengel , Mrs. Annie May ( née Morris ) 44 Newark , New Jersey , US Cherbourg Newark , New Jersey , US 5 Stephenson , Mrs. Martha ( née Eustis ) 52 Paris , France Cherbourg Haverford , Pennsylvania , US Stewart , Mr. Albert A . 54 Cincinnati , Ohio , US Cherbourg Gallipolis , Ohio , US Stone , Mrs. Martha Evelyn ( née Stevens ) 62 New York City Southampton New York City 6 and maid , Miss Amelie `` Amelia '' Icard 38 New York City Southampton New York City 6 Straus , Mr. Isidor 67 New York City Southampton New York City 96 and valet , Mr. John Farthing 57 New York City Southampton New York City Straus , Mrs. Rosalie Ida ( née Blun ) 63 New York City Southampton New York City and maid , Miss Ellen Bird 31 New York City Southampton New York City 8 Sutton , Mr. Frederick 61 Haddonfield , New Jersey , US Southampton Haddonfield , New Jersey , US 46 Swift , Mrs. Margaret Welles ( née Barron ) 46 New York City Southampton New York City 8 Taussig , Mr. Emil 52 New York City Southampton New York City Taussig , Mrs. Tillie ( née Mandelbaum ) 39 New York City Southampton New York City 8 Taussig , Miss Ruth 18 New York City Southampton New York City 8 Taylor , Mr. Elmer Zebley 48 London , England , UK Southampton East Orange , New Jersey , US 5 Taylor , Mrs. Juliet Cummins ( née Wright ) 48 London , England , UK Southampton East Orange , New Jersey , US 5 Thayer , Mr. John Borland II 49 Haverford , Pennsylvania , US Cherbourg Haverford , Pennsylvania , US Thayer , Mrs. Marian Longsteth ( née Morris ) 39 Haverford , Pennsylvania , US Cherbourg Haverford , Pennsylvania , US and maid , Miss Margaret Fleming 42 Haverford , Pennsylvania , US Cherbourg Haverford , Pennsylvania , US Thayer , Mr. John Borland `` Jack '' III 17 Haverford , Pennsylvania , US Cherbourg Haverford , Pennsylvania , US Thorne , Mrs. Gertrude Maybelle ( née McMinn ) 37 New York City , New York , US Cherbourg New York City , New York , US Tucker , Mr. Gilbert Milligan Jr . 31 Albany , New York , US Cherbourg Albany , New York , US 7 Uruchurtu , Don Manuel E . 40 Mexico City , Mexico Cherbourg Mexico City , Mexico Van der Hoef , Mr. Wyckoff 61 Brooklyn , New York , US Belfast Brooklyn , New York , US 245 Walker , Mr. William Anderson 48 East Orange , New Jersey , US Southampton East Orange , New Jersey , US Warren , Mr. Frank Manley 63 Portland , Oregon , US Cherbourg Portland , Oregon , US Warren , Mrs. Anna Sophia ( née Atkinson ) 60 Portland , Oregon , US Cherbourg Portland , Oregon , US 5 Weir , Colonel John 59 New York City Southampton New York City White , Mr. Percival Wayland 54 Brunswick , Maine , US Southampton Brunswick , Maine , US White , Mr. Richard Frasar 21 Brunswick , Maine , US Southampton Brunswick , Maine , US 169 White , Mrs. Ella ( née Holmes ) 55 New York City Cherbourg New York City 8 and maid , Miss Amelia Mayo `` Nellie '' Bessette 39 New York City Cherbourg New York City 8 and manservant , Mr. Sante Righini 22 New York City Cherbourg New York City 232 Wick , Colonel George Dennick 58 Youngstown , Ohio , US Southampton Youngstown , Ohio , US Wick , Mrs. Mary ( née Hitchcock ) 45 Youngstown , Ohio , US Southampton Youngstown , Ohio , US 8 Wick , Miss Mary Natalie 31 Youngstown , Ohio , US Southampton Youngstown , Ohio , US 8 Widener , Mr. George Dunton 50 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US and valet , Mr. Edwin Herbert Keeping 33 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US 45 Widener , Mrs. Eleanor ( née Elkins ) 50 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US and maid , Miss Amalie Henriette `` Emily '' Gieger 35 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US Widener , Mr. Harry Elkins 27 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US Willard , Miss Constance 21 Duluth , Minnesota , US Southampton Duluth , Minnesota , US 8 Williams , Mr. Charles Duane 51 Geneva , Switzerland Cherbourg Radnor , Pennsylvania , US Williams , Mr. Richard Norris II 21 Geneva , Switzerland Cherbourg Radnor , Pennsylvania , US Woolner , Mr. Hugh 45 London , England , UK Southampton New York City Wright , Mr. George 62 Halifax , Nova Scotia , Canada Southampton Halifax , Nova Scotia , Canada Young , Miss Marie Grice 36 New York City Cherbourg New York City 8"
+   ],
+   "model_answer": "Molly Brown, J. Bruce Ismay, and Eva Hart."
+  },
+  {
+   "id": "5088cc212430b952",
+   "kind": "answer",
+   "question": "when was the first documented case of tool mark identification",
+   "gold_answers": [
+    "1835"
+   ],
+   "model_answer": "1900, in Germany."
+  },
+  {
+   "id": "04681b47711186df",
+   "kind": "answer",
+   "question": "the south west wind blows across nigeria between",
+   "gold_answers": [
+    "arrives in central Nigeria in July",
+    "till September"
+   ],
+   "model_answer": "February and June (from south to north)"
+  },
+  {
+   "id": "69817dd7490c9bf1",
+   "kind": "answer",
+   "question": "what is windows defender and what does it do",
+   "gold_answers": [
+    "Windows Defender , officially called Windows Defender Antivirus in Windows 10 Creators Update , is an anti-malware component of Microsoft Windows.It was first released as a free antispyware program download for Windows XP , shipped with Windows Vista and Windows 7 and made into a full antivirus program replacing Microsoft Security Essentials as part of Windows 8 and later versions ."
+   ],
+   "model_answer": "Microsoft’s built-in antivirus and security protection."
+  },
+  {
+   "id": "0dedce09e4fa751a",
+   "kind": "answer",
+   "question": "what are the biggest citys in the usa",
+   "gold_answers": [
+    "City Image Country Population Year Mexico City Mexico 8,918,653 2015 New York City United States 8,550,405 2015 Los Angeles United States 3,971,883 2015 Toronto Canada 2,826,498 2015 Chicago United States 2,720,546 2015 6 Houston United States 2,296,224 2015 7 Havana Cuba 2,117,625 2015 8 Montreal Canada 1,753,034 2015 9 Ecatepec de Morelos Mexico 1,677,678 2015 10 Philadelphia United States 1,567,442 2015 11 Phoenix United States 1,563,025 2015 12 San Antonio United States 1,469,845 2015 13 Guadalajara Mexico 1,460,148 2015 14 Puebla Mexico 1,437,939 2015 15 San Diego United States 1,394,928 2015 16 Juárez Mexico 1,382,753 2015 17 León Mexico 1,349,224 2015 18 Dallas United States 1,300,092 2015 19 Tijuana Mexico 1,298,475 2015 20 Calgary Canada 1,230,915 2015 21 Tegucigalpa Honduras 1,190,230 2015 22 Zapopan Mexico 1,179,681 2015 23 Monterrey Mexico 1,109,171 2015 24 Managua Nicaragua 1,048,134 2015 25 Nezahualcóyotl Mexico 1,039,867 2015 26 San Jose United States 1,026,908 2015 27 Santo Domingo Dominican Republic 1,007,997 2015 28 Guatemala City Guatemala 994,078 2015 29 Port - au - Prince Haiti 987,310 2015 30 Naucalpan Mexico 970,012 2015 31 Ottawa Canada 956,710 2015 32 Austin United States 931,830 2015 33 Edmonton Canada 899,447 2016 34 Mérida Mexico 892,363 2015 35 Querétaro Mexico 878,931 2015 36 Toluca Mexico 873,536 2015 37 Jacksonville United States 868,031 2015 38 Chihuahua Mexico 867,736 2015 39 San Francisco United States 864,816 2015 40 Indianapolis United States 853,173 2015 41 Columbus United States 850,106 2015 42 Fort Worth United States 833,319 2015 43 Charlotte United States 827,097 2015 44 Hermosillo Mexico 819,999 2015 45 Saltillo Mexico 791,074 2015 46 Aguascalientes Mexico 785,942 2015 47 Mississauga Canada 761,300 2015 48 San Luis Potosí Mexico 759,854 2015 49 Veracruz Mexico 752,171 2015 50 San Pedro Sula Honduras 742,118 2015 51 Santiago de los Caballeros Dominican Republic 723,162 2015 52 Culiacán Mexico 720,798 2015 53 Winnipeg Canada 718,400 2015 54 Mexicali Mexico 717,628 2015 55 Cancún Mexico 711,682 2015 56 Acapulco Mexico 710,261 2015 57 Tlalnepantla Mexico 700,734 2015 58 Seattle United States 684,451 2015 59 Guadalupe Mexico 682,880 2015 60 Denver United States 682,545 2015 61 El Paso United States 681,124 2015 62 Chimalhuacán Mexico 679,811 2015 63 Detroit United States 677,116 2015 64 Washington , D.C. United States 672,228 2015 65 Kingston Jamaica 669,627 2015 66 Boston United States 667,137 2015 67 Tlaquepaque Mexico 664,193 2015 68 Memphis United States 655,770 2015 69 Nashville United States 654,610 2015 70 Torreón Mexico 653,150 2015 71 Vancouver Canada 648,608 2015 72 Portland United States 632,309 2015 73 Reynosa Mexico 631,611 2015 74 Oklahoma City United States 631,346 2015 75 Las Vegas United States 623,747 2015 76 Baltimore United States 621,849 2015 77 Brampton Canada 620,700 2016 78 Louisville United States 615,366 2015 79 Morelia Mexico 608,190 2015 80 Milwaukee United States 600,155 2015 81 Tuxtla Gutiérrez Mexico 598,710 2015 82 Apodaca Mexico 597,207 2015 83 Durango Mexico 590,893 2015 84 Villa Nueva Guatemala 564,686 2015 85 Albuquerque United States 559,121 2015 86 Hamilton Canada 556,359 2015 87 Quebec City Canada 540,994 2015 88 Tonalá Mexico 536,111 2015 89 Tucson United States 531,641 2015 90 Cuautitlán Izcalli Mexico 531,041 2015 91 Surrey Canada 526,004 2015 92 Ciudad López Mateos Mexico 523,296 2015 93 Tultitlán Mexico 520,557 2015 94 Fresno United States 520,052 2015 95 Carrefour Haiti 501,768 2015"
+   ],
+   "model_answer": "New York City, Los Angeles, Chicago, Houston, Philadelphia, Phoenix, San Antonio, San Diego, Dallas, and San Jose."
+  },
+  {
+   "id": "a5c0312a78b047da",
+   "kind": "answer",
+   "question": "who were the church fathers and what did they do in the catholic church",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Ancient Christian theologians and teachers who helped shape Catholic theology and Church teachings."
+  },
+  {
+   "id": "2342df0f25d2b8aa",
+   "kind": "answer",
+   "question": "how did the apostles creed get its name",
+   "gold_answers": [
+    "The first mention of the expression `` Apostles ' Creed '' occurs in a letter of AD 390 from a synod in Milan and may have been associated with the belief , widely accepted in the 4th century , that , under the inspiration of the Holy Spirit , each of the Twelve Apostles contributed an article of a creed .",
+    "The title Symbolum Apostolicum ( Symbol or Creed of the Apostles ) appears for the first time in a letter , probably written by Ambrose , from a Council in Milan to Pope Siricius in about AD 390 `` Let them give credit to the Creed of the Apostles , which the Roman Church has always kept and preserved undefiled '' . But what existed at that time was not what is now known as the Apostles ' Creed but a shorter statement of belief that , for instance , did not include the phrase `` maker of heaven and earth '' , a phrase that may have been inserted only in the 7th century ."
+   ],
+   "model_answer": "It was believed that each of the twelve apostles contributed an article of faith."
+  },
+  {
+   "id": "3f2e416e30467509",
+   "kind": "answer",
+   "question": "where is australia’s closest french speaking country",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Vanuatu, northeast of Australia."
+  },
+  {
+   "id": "e1eb1482e71d49d9",
+   "kind": "answer",
+   "question": "who do the characters represent in 8 mile",
+   "gold_answers": [
+    "loosely on Eminem"
+   ],
+   "model_answer": "Jimmy “B-Rabbit” Smith represents Eminem."
+  },
+  {
+   "id": "3ba6ac120d5f50c7",
+   "kind": "answer",
+   "question": "where do they grow hops in the us",
+   "gold_answers": [
+    "the Yakima (Washington) and Willamette (Oregon) valleys",
+    "western Canyon County, Idaho",
+    "the leading potato-growing states in the United States",
+    "western Canyon County, Idaho (including the communities of Parma, Wilder, Greenleaf, and Notus)",
+    "Washington",
+    "Oregon",
+    "Idaho",
+    "Yakima (Washington)",
+    "Willamette (Oregon)"
+   ],
+   "model_answer": "Washington, Oregon, Idaho, California, and New York."
+  }
+ ],
+ "evidence": []
+}

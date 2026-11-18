@@ -1,0 +1,753 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=2ed9223a6808d4cd ===
+Gold sentences and facts:
+Sentence 0: India and Pakistan acquired independence in 1947 , but Governors - General continued to be appointed over each nation until republican constitutions were written . Louis Mountbatten , 1st Earl Mountbatten of Burma remained Governor - General of India for some time after independence , but the two nations were otherwise headed by native Governors - General . India became a secular republic in 1950 ; Pakistan became an Islamic one in 1956 .
+  Fact 0.0: India and Pakistan gained independence in 1947.
+  Fact 0.1: Governors-General continued to be appointed over each nation after 1947 until republican constitutions were written.
+  Fact 0.2: Louis Mountbatten, 1st Earl Mountbatten of Burma, remained Governor-General of India for some time after independence.
+  Fact 0.3: The two nations were otherwise headed by native Governors-General.
+  Fact 0.4: India became a secular republic in 1950.
+  Fact 0.5: Pakistan became an Islamic republic in 1956.
+
+Retrieved items:
+<item 1>
+Graph query row:
+person: Louis Mountbatten
+relationship: RELATED_TO
+connected_entity: Governor-General of India
+</item 1>
+
+<item 2>
+Governor-General of India
+Lord Mountbatten addressing the Chamber of Princes as Crown Representative in the 1940s The Governor - General originally had power only over the Presidency of
+Fort William in Bengal . The Regulating Act , however , granted them additional powers relating to foreign affairs and defence . The other Presidencies of the
+East India Company ( Madras , Bombay and Bencoolen ) were not allowed to declare war on or make peace with an Indian prince without receiving the prior approval
+of the Governor - General and Council of Fort William . The powers of the Governor - General , in respect of foreign affairs , were increased by the India Act
+1784 . The Act provided that the other Governors under the East India Company could not declare war , make peace or conclude a treaty with an Indian prince
+unless expressly directed to do so by the Governor - General or by the Company 's Court of Directors . While the Governor - General thus became the controller
+of foreign policy in India , he was not the explicit head of British India . That status came only with the Charter Act 1833 , which granted him ``
+superintendence , direction and control of the whole civil and military Government '' of all of British India .
+</item 2>
+
+<item 3>
+Governor-General of India
+The Act also granted legislative powers to the Governor - General and Council . After 1858 , the Governor - General ( now usually known as the Viceroy )
+functioned as the chief administrator of India and as the Sovereign 's representative . India was divided into numerous provinces , each under the head of a
+Governor , Lieutenant Governor or Chief Commissioner or Administrator . Governors were appointed by the British Government , to whom they were directly
+responsible ; Lieutenant Governors , Chief Commissioners , and Administrators , however , were appointed by and were subordinate to the Viceroy . The Viceroy
+also oversaw the most powerful princely rulers : the Nizam of Hyderabad , the Maharaja of Mysore , the Maharaja ( Scindia ) of Gwalior , the Maharaja of Jammu
+and Kashmir and the Gaekwad ( Gaekwar ) Maharaja of Baroda . The remaining princely rulers were overseen either by the Rajputana Agency and Central India Agency
+, which were headed by representatives of the Viceroy , or by provincial authorities .
+</item 3>
+
+<item 4>
+Governor-General of India
+The title of viceroy was abandoned when British India split into the two independent dominions of India and Pakistan , but the office of governor - general
+continued to exist in each country separately -- until they adopted republican constitutions in 1950 and 1956 , respectively . Until 1858 , the governor -
+general was selected by the Court of Directors of the East India Company , to whom he was responsible . Thereafter , he was appointed by the sovereign on the
+advice of the British government ; the Secretary of State for India , a member of the UK Cabinet , was responsible for instructing him on the exercise of his
+powers . After 1947 , the sovereign continued to appoint the governor - general , but did so on the advice of the Indian government . Governors - General served
+at the pleasure of the sovereign , though the practice was to have them serve five - year terms . Governors - General could have their commission rescinded ;
+and if one was removed , or left , a provisional governor - general was sometimes appointed until a new holder of the office could be chosen .
+</item 4>
+
+<item 5>
+Governor-General of India
+The power to elect the Governor - General was retained by the Court of Directors , but the choice became subject to the Sovereign 's approval . After the Indian
+Rebellion of 1857 , the East India Company 's territories in India were put under the direct control of the Sovereign . The Government of India Act 1858 vested
+the power to appoint the Governor - General in the Sovereign . The Governor - General , in turn , had the power to appoint all lieutenant governors in India ,
+subject to the Sovereign 's approval . India and Pakistan acquired independence in 1947 , but Governors - General continued to be appointed over each nation
+until republican constitutions were written . Louis Mountbatten , 1st Earl Mountbatten of Burma remained Governor - General of India for some time after
+independence , but the two nations were otherwise headed by native Governors - General . India became a secular republic in 1950 ; Pakistan became an Islamic
+one in 1956 . Functions ( edit ) Lord Curzon in his robes as Viceroy of India , a post he held from 1899 to 1905 .
+</item 5>
+
+<item 6>
+Governor-General of India
+.. Governors - General of India ( 1833 -- 1858 ) Bentinck Metcalfe Auckland Ellenborough Bird Hardinge Dalhousie Canning Governors - General and Viceroys of
+India ( 1858 -- 1947 ) Canning Elgin Napier Denison Lawrence Mayo Strachey Napier Northbrook Lytton Ripon Dufferin Lansdowne Elgin Curzon Minto Penshurst
+Chelmsford Reading Irwin Willingdon Wavell Mountbatten Governors - General of the Union of India ( 1947 -- 1950 ) Mountbatten Rajagopalachari Representatives of
+the monarch in Commonwealth realms and Dominions National Counsellors of State United Kingdom Governors - general Antigua and Barbuda Australia Bahamas Barbados
+Belize Canada Grenada Jamaica New Zealand Papua New Guinea Saint Kitts and Nevis Saint Lucia Saint Vincent and the Grenadines Solomon Islands Tuvalu
+Sub-national Australia Governors New South Wales Queensland South Australia Tasmania Victoria Western Australia Administrator Northern Territory Canada
+Lieutenant governors Alberta British Columbia Manitoba New Brunswick Newfoundland Nova Scotia Ontario Prince Edward Island Quebec Saskatchewan Realm of New
+Zealand Governor - general Niue ,
+</item 6>
+
+<item 7>
+Governor-General of India
+The first Governor - General of British India was Warren Hastings , and the first Governor - General of independent India was Louis Mountbatten . Contents (
+hide ) 1 History 2 Functions 3 Council 4 Style and title 5 Flag 6 Residence 7 Insignia 8 See also 9 References 10 Further reading History ( edit ) Warren
+Hastings , the first Governor - General of Fort William from 1773 to 1785 . Many parts of the Indian subcontinent were governed by the East India Company ,
+which nominally acted as the agent of the Mughal Emperor . In 1773 , motivated by corruption in the Company , the British government assumed partial control
+over the governance of India with the passage of the Regulating Act of 1773 . A Governor - General and Supreme Council of Bengal were appointed to rule over the
+Presidency of Fort William in Bengal . The first Governor - General and Council were named in the Act . The Charter Act 1833 replaced the Governor - General and
+Council of Fort William with the Governor - General and Council of India .
+</item 7>
+
+<item 8>
+Governor-General of India
+Throughout the British administration , Governors - General retreated to the Viceregal Lodge ( Rashtrapati Niwas ) at Shimla each summer to escape the heat ,
+and the government of India moved with them . The Viceregal Lodge now houses the Indian Institute of Advanced Study . Insignia ( edit ) See also : Star of India
+( flag ) Badge of the Governor - General ( 1885 -- 1947 ) Standard of the Governor - General ( 1885 -- 1947 ) Standard of the Governor - General ( 1947 -- 50 )
+See also ( edit ) India portal Pakistan portal United Kingdom portal Politics portal List of governors - general of India Commander - in - Chief , India British
+Empire Emperor of India Indian independence movement Council of India British Raj Secretary of State for India India Office Indian Civil Service Partition of
+India History of Bangladesh History of India History of Pakistan References ( edit ) Jump up ^ The term British India is mistakenly used to mean the same as the
+British Indian Empire , which included both the provinces and the Native States . Jump up ^ `` Imperial Impressions '' . Hindustan Times . 20 July 2011 .
+</item 8>
+
+<item 9>
+Governor-General of India
+Governor - General of India - Wikipedia Governor - General of India Jump to : navigation , search This article is about the position of Governor - General of
+India . For individual Governor - Generals , see List of governors - general of India . Viceroy and Governor - General of India Standard of the Governor -
+General Louis Mountbatten , the last Viceroy of India & the first Governor - General during the dominion period Style His Excellency Residence Viceroy 's House
+Appointer East India Company ( to 1858 ) Monarch of India ( from 1858 ) Formation 20 October 1774 First holder Warren Hastings Final holder Chakravarthi
+Rajagopalachari Abolished 26 January 1950 The Governor - General of India ( or , from 1858 to 1947 , officially the Viceroy and Governor - General of India ,
+commonly shortened to Viceroy of India ) was originally the head of the British administration in India and , later , after Indian independence in 1947 , the
+representative of the Indian head of state . The office was created in 1773 , with the title of Governor - General of the Presidency of Fort William .
+</item 9>
+
+<item 10>
+Governor-General of India
+The officer had direct control only over Fort William , but supervised other British East India Company officials in India . Complete authority over all of
+British India was granted in 1833 , and the official came to be known as the `` Governor - General of India '' . In 1858 , the territories of the East India
+Company came under the direct control of the British government ; see British Raj . The governor - general ( now also the viceroy ) headed the central
+government of India , which administered the provinces of British India , including the Punjab , Bengal , Bombay , Madras , the United Provinces , and others .
+However , much of India was not ruled directly by the British government ; outside the provinces of British India , there were hundreds of nominally sovereign
+princely states or `` native states '' , whose relationship was not with the British government , but directly with the monarch . To reflect the governor -
+general 's role as the representative of the monarch to the feudal rulers of the princely states , from 1858 the term Viceroy and Governor - General of India (
+known in short as the Viceroy of India ) was applied to him .
+</item 10>
+=== END ITEM id=2ed9223a6808d4cd ===
+
+=== ITEM id=aeca845e958eb1b3 ===
+Gold sentences and facts:
+Sentence 0: The film was directed by Robert Mulligan , and starred Gary Grimes as Hermie , Jerry Houser as his best friend Oscy , Oliver Conant as their nerdy young friend Benjie , Jennifer O'Neill as Hermie 's mysterious love interest , and Katherine Allentuck and Christopher Norris as a pair of girls whom Hermie and Oscy attempt to seduce . Mulligan also has an uncredited role as the voice of the adult Hermie . Maureen Stapleton ( Allentuck 's real - life mother ) also appears in a small , uncredited voice role ( calling after Hermie as he leaves the house in an early scene , and after he enters his room in a later scene ) .
+  Fact 0.0: Robert Mulligan directed the film.
+  Fact 0.1: Gary Grimes starred as Hermie.
+  Fact 0.2: Jerry Houser starred as Hermie's best friend Oscy.
+  Fact 0.3: Oliver Conant played Benjie, a nerdy young friend of Hermie and Oscy.
+  Fact 0.4: Jennifer O'Neill played Hermie's mysterious love interest.
+  Fact 0.5: Katherine Allentuck and Christopher Norris played a pair of girls whom Hermie and Oscy attempt to seduce.
+  Fact 0.6: Robert Mulligan has an uncredited role as the voice of the adult Hermie.
+  Fact 0.7: Maureen Stapleton is Katherine Allentuck's real-life mother.
+  Fact 0.8: Maureen Stapleton has a small, uncredited voice role.
+  Fact 0.9: Maureen Stapleton's voice calls after Hermie as he leaves the house in an early scene.
+  Fact 0.10: Maureen Stapleton's voice calls after Hermie as he enters his room in a later scene.
+Sentence 1: Summer of ' 42 Theatrical release poster Directed by Robert Mulligan Produced by Richard A. Roth Written by Herman Raucher Starring Jennifer O'Neill Gary Grimes Jerry Houser Oliver Conant Narrated by Robert Mulligan Music by Michel Legrand Cinematography Robert Surtees Edited by Folmar Blangsted Distributed by Warner Bros. Pictures Release date April 18 , 1971 ( 1971 - 04 - 18 ) Running time 104 minutes Country United States Language English Budget $1 million Box office $32,063,634
+  Fact 1.0: Summer of '42 has a theatrical release poster.
+  Fact 1.1: Summer of '42 was directed by Robert Mulligan.
+  Fact 1.2: Summer of '42 was produced by Richard A. Roth.
+  Fact 1.3: Summer of '42 was written by Herman Raucher.
+  Fact 1.4: Summer of '42 starred Jennifer O'Neill, Gary Grimes, Jerry Houser and Oliver Conant.
+  Fact 1.5: Summer of '42 was narrated by Robert Mulligan.
+  Fact 1.6: Summer of '42 had music by Michel Legrand.
+  Fact 1.7: Summer of '42 had cinematography by Robert Surtees.
+  Fact 1.8: Summer of '42 was edited by Folmar Blangsted.
+  Fact 1.9: Summer of '42 was distributed by Warner Bros. Pictures.
+  Fact 1.10: Summer of '42 was released on April 18, 1971.
+  Fact 1.11: Summer of '42 has a running time of 104 minutes.
+  Fact 1.12: Summer of '42 is a United States production.
+  Fact 1.13: Summer of '42 is in English.
+  Fact 1.14: Summer of '42 had a budget of $1 million.
+  Fact 1.15: Summer of '42 had a box office of $32,063,634.
+
+Retrieved items:
+<item 1>
+Summer of '42
+On the Billboard 200 , it debuted on 9 / 11 / 1971 and peaked at # 52 on 11 / 20 / 1971 . Summer of ' 42 : Original Motion Picture Score No . Title Length 1 .
+`` Summer of ' 42 ( Main Theme ) '' 3 : 51 2 . `` Summer Song '' 4 : 21 3 . `` The Bacchanal '' 1 : 48 4 . `` Lonely Two '' 2 : 04 5 . `` The Danger '' 2 : 13 6
+. `` Montage : But Not Picasso / Full Awakening '' 3 : 32 7 . `` High I.Q '' 2 : 11 8 . `` The Summer Knows '' 1 : 47 9 . `` The Entrance to Reality '' 3 : 04
+10 . `` La Guerre '' 3 : 15 11 . `` Los Manos de Muerto '' 3 : 29 12 . `` Awakening Awareness '' 2 : 26 13 .
+</item 1>
+
+<item 2>
+Summer of '42
+The film is recognized by American Film Institute in these lists : 2002 : AFI 's 100 Years ... 100 Passions -- Nominated 2005 : AFI 's 100 Years of Film Scores
+-- Nominated Sequel ( edit ) In 1973 , the film was followed by Class of ' 44 , a slice - of - life film made up of vignettes about Herman Raucher and Oscar
+Seltzer 's experiences in college . Class of ' 44 involves the boys facing army service in the last year of World War II . The only crew member from Summer of '
+42 to return to the project was Raucher himself , who wrote the script ; a new director and composer were brought in to replace Mulligan and Legrand . Of the
+principal four cast members of Summer of ' 42 , only Jerry Houser and Gary Grimes returned for prominent roles , with Oliver Conant making two brief appearances
+totaling less than two minutes of screen time . Jennifer O'Neill did not appear in the film at all , nor was the character of Dorothy mentioned . The film is
+noted for featuring a young , slim John Candy briefly appearing in his first film role .
+</item 2>
+
+<item 3>
+Summer of '42
+Summer of ' 42 - wikipedia Summer of ' 42 Jump to : navigation , search Summer of ' 42 Theatrical release poster Directed by Robert Mulligan Produced by Richard
+A. Roth Written by Herman Raucher Starring Jennifer O'Neill Gary Grimes Jerry Houser Oliver Conant Narrated by Robert Mulligan Music by Michel Legrand
+Cinematography Robert Surtees Edited by Folmar Blangsted Distributed by Warner Bros. Pictures Release date April 18 , 1971 ( 1971 - 04 - 18 ) Running time 104
+minutes Country United States Language English Budget $1 million Box office $32,063,634 Summer of ' 42 is a 1971 American coming - of - age comedy - drama film
+based on the memoirs of screenwriter Herman Raucher . It tells the story of how Raucher , in his early teens on his 1942 summer vacation on Nantucket Island (
+off the coast of Cape Cod ) , embarks on a one - sided romance with a young woman , Dorothy , whose husband had gone off to fight in World War II .
+</item 3>
+
+<item 4>
+Summer of '42
+Alternate sequel ( edit ) In 2002 , O'Neill claimed to have obtained the rights to make a sequel to Summer of ' 42 , based on a short story she wrote , which
+took place in an alternate reality where Herman Raucher had a son and divorced his wife , went back to Nantucket in 1962 with a still - living Oscar Seltzer ,
+and encountered Dorothy again and married her . As of 2017 , this project -- which O'Neill had hoped to produce with Lifetime television -- has not been
+realized , and it is unknown whether O'Neill is still attempting to get it produced , or if Raucher consented to its production . See also ( edit ) List of
+American films of 1971 References ( edit ) Jump up ^ `` SUMMER OF ' 42 ( X ) '' . British Board of Film Classification . 1971 - 04 - 15 . Retrieved 2013 - 02 -
+06 . Jump up ^ `` Summer of ' 42 , Box Office Information '' . The Numbers . Retrieved January 12 , 2012 . ^ Jump up to : Park , Louis Hillary ( May 2002 ) .
+</item 4>
+
+<item 5>
+Summer of '42
+The 1973 song `` Summer ( The First Time ) '' by Bobby Goldsboro has almost exactly the same subject and apparent setting , although there is no direct credited
+link . Bryan Adams has , however , credited the film as being a partial inspiration for his 1985 hit `` Summer of ' 69 '' . Garth Brooks ' 1993 hit `` That
+Summer '' features a similar story of a coming - of - age male in a romance with an older female . Film and television ( edit ) In Stanley Kubrick 's 1980 film
+version of Stephen King 's The Shining , Wendy ( Shelley Duvall ) is shown watching Summer of ' 42 on television ( a brief clip of the scene featuring Hermie
+helping Dorothy bring her groceries in the house is playing on the television in the background during the scene ) . An episode of the 1970s sitcom Happy Days
+was loosely based upon Summer of ' 42 , with Richie Cunningham befriending a Korean War widow . The film 's title formed the basis of a Season 7 episode of The
+Simpsons , `` Summer of 4 Ft. 2 '' .
+</item 5>
+
+<item 6>
+Summer of '42
+Archived from the original on January 29 , 2009 . Jump up ^ Jennifer O'Neill in 2002 tv-now.com Retrieved August 11 , 2006 Archived August 29 , 2006 , at the
+Wayback Machine . Jump up ^ Theatermania.com , Starry , Starry Morning : Charles Nelson 's Casts and Forecasts . Retrieved September 3 , 2007 Jump up ^ Summer
+of ' 42 Plus Twenty usatoday.com . Retrieved July 6 , 2006 . External links ( edit ) www.hermanraucher.com Summer of ' 42 on IMDb Summer of ' 42 at the TCM
+Movie Database Summer of ' 42 by Andy Williamson -- The Wordslinger dated April 14 ,
+</item 6>
+
+<item 7>
+Summer of '42
+wikipedia.org/w/index.php?title=Summer_of_%2742&oldid=803913855 '' Categories : 1971 films English - language films 1970s comedy - drama films 1970s coming - of
+- age films 1970s teen films American biographical films American comedy - drama films American coming - of - age films American films Film scores by Michel
+Legrand Films about vacationing Films about virginity Films directed by Robert Mulligan Films set in 1942 Films set in Massachusetts Films set on beaches Films
+set on islands Films set on the home front during World War II Films that won the Best Original Score Academy Award Nantucket , Massachusetts Warner Bros.
+</item 7>
+
+<item 8>
+Summer of '42
+Retrieved September 3 , 2010 . Jump up ^ Internet Movie Database : Summer of ' 42 Business Data IMDb.com Retrieved July 3 , 2006 . Jump up ^ `` Summer of ' 42 (
+1971 ) -- Misc Notes '' . TCM.com . Retrieved February 8 , 2012 . Jump up ^ `` AFI 's 100 Years ... 100 Passions Nominees '' ( PDF ) . Retrieved August 20 ,
+2016 . Jump up ^ `` AFI 's 100 Years of Film Scores Nominees '' ( PDF ) . Retrieved August 20 , 2016 .
+</item 8>
+
+<item 9>
+Summer of '42
+2008 ( hide ) Films directed by Robert Mulligan Fear Strikes Out ( 1957 ) The Rat Race ( 1960 ) The Great Impostor ( 1961 ) Come September ( 1961 ) The Spiral
+Road ( 1962 ) To Kill a Mockingbird ( 1962 ) Love with the Proper Stranger ( 1963 ) Baby the Rain Must Fall ( 1965 ) Inside Daisy Clover ( 1965 ) Up the Down
+Staircase ( 1967 ) The Stalking Moon ( 1968 ) The Pursuit of Happiness ( 1971 ) Summer of ' 42 ( 1971 ) The Other ( 1972 ) The Nickel Ride ( 1974 )
+Bloodbrothers ( 1978 ) Same Time , Next Year ( 1978 ) Kiss Me Goodbye ( 1982 ) Clara 's Heart ( 1988 ) The Man in the Moon ( 1991 ) Retrieved from ``
+https://en.wikipedia.org/w/index.
+</item 9>
+
+<item 10>
+Summer of '42
+Though a pop culture phenomenon in the first half of the 1970s , the novelization went out of print and slipped into obscurity throughout the next two decades
+until a Broadway adaptation in 2001 brought it back into the public light and prompted Barnes & Noble to acquire the publishing rights to the book . Contents (
+hide ) 1 Plot 2 Cast 3 Production 4 Factual basis 5 Reception and awards 6 Sequel 7 Soundtrack 8 Cultural impact 8.1 Music 8.2 Film and television 8.3 Remakes
+8.4 Off - Broadway musical 8.5 Alternate sequel 9 See also 10 References 11 External links Plot ( edit ) The film opens with a series of still photographs
+appearing over melancholic music , representing the abstract memories of the unseen Herman Raucher , now a middle - aged man . We then hear Raucher recalling
+the summer he spent on the island in 1942 . The film flashes back to a day that then 15 - year - old `` Hermie '' and his friends -- jock Oscy and introverted
+nerd Benjie -- spent playing on the beach .
+</item 10>
+=== END ITEM id=aeca845e958eb1b3 ===
+
+=== ITEM id=7ff308d77efc85e4 ===
+Gold sentences and facts:
+Sentence 0: India and Pakistan acquired independence in 1947 , but Governors - General continued to be appointed over each nation until republican constitutions were written . Louis Mountbatten , 1st Earl Mountbatten of Burma remained Governor - General of India for some time after independence , but the two nations were otherwise headed by native Governors - General . India became a secular republic in 1950 ; Pakistan became an Islamic one in 1956 .
+  Fact 0.0: India and Pakistan gained independence in 1947.
+  Fact 0.1: Governors-General continued to be appointed over each nation after 1947 until republican constitutions were written.
+  Fact 0.2: Louis Mountbatten, 1st Earl Mountbatten of Burma, remained Governor-General of India for some time after independence.
+  Fact 0.3: The two nations were otherwise headed by native Governors-General.
+  Fact 0.4: India became a secular republic in 1950.
+  Fact 0.5: Pakistan became an Islamic republic in 1956.
+
+Retrieved items:
+<item 1>
+Governor-General of India
+The power to elect the Governor - General was retained by the Court of Directors , but the choice became subject to the Sovereign 's approval . After the Indian
+Rebellion of 1857 , the East India Company 's territories in India were put under the direct control of the Sovereign . The Government of India Act 1858 vested
+the power to appoint the Governor - General in the Sovereign . The Governor - General , in turn , had the power to appoint all lieutenant governors in India ,
+subject to the Sovereign 's approval . India and Pakistan acquired independence in 1947 , but Governors - General continued to be appointed over each nation
+until republican constitutions were written . Louis Mountbatten , 1st Earl Mountbatten of Burma remained Governor - General of India for some time after
+independence , but the two nations were otherwise headed by native Governors - General . India became a secular republic in 1950 ; Pakistan became an Islamic
+one in 1956 . Functions ( edit ) Lord Curzon in his robes as Viceroy of India , a post he held from 1899 to 1905 .
+</item 1>
+
+<item 2>
+Governor-General of India
+.. Governors - General of India ( 1833 -- 1858 ) Bentinck Metcalfe Auckland Ellenborough Bird Hardinge Dalhousie Canning Governors - General and Viceroys of
+India ( 1858 -- 1947 ) Canning Elgin Napier Denison Lawrence Mayo Strachey Napier Northbrook Lytton Ripon Dufferin Lansdowne Elgin Curzon Minto Penshurst
+Chelmsford Reading Irwin Willingdon Wavell Mountbatten Governors - General of the Union of India ( 1947 -- 1950 ) Mountbatten Rajagopalachari Representatives of
+the monarch in Commonwealth realms and Dominions National Counsellors of State United Kingdom Governors - general Antigua and Barbuda Australia Bahamas Barbados
+Belize Canada Grenada Jamaica New Zealand Papua New Guinea Saint Kitts and Nevis Saint Lucia Saint Vincent and the Grenadines Solomon Islands Tuvalu
+Sub-national Australia Governors New South Wales Queensland South Australia Tasmania Victoria Western Australia Administrator Northern Territory Canada
+Lieutenant governors Alberta British Columbia Manitoba New Brunswick Newfoundland Nova Scotia Ontario Prince Edward Island Quebec Saskatchewan Realm of New
+Zealand Governor - general Niue ,
+</item 2>
+
+<item 3>
+Governor-General of India
+Most Governors - General and Viceroys were peers . Frequently , a Viceroy who was already a peer would be granted a peerage of higher rank , as with the
+granting of a marquessate to Lord Reading and an earldom and later a marquessate to Freeman Freeman - Thomas . Of those Viceroys who were not peers , Sir John
+Shore was a baronet , and Lord William Bentinck was entitled to the courtesy title ' Lord ' because he was the son of a Duke . Only the first and last Governors
+- General -- Warren Hastings and Chakravarti Rajagopalachari -- as well as some provisional Governors - General , had no honorific titles at all . Flag ( edit )
+Flag of the Governor General of India ( 1947 -- 50 ) From around 1885 , the Viceroy of India was allowed to fly a Union Flag augmented in the centre with the '
+Star of India ' surmounted by a Crown . This flag was not the Viceroy 's personal flag ; it was also used by Governors , Lieutenant Governors , Chief
+Commissioners and other British officers in India .
+</item 3>
+
+<item 4>
+Governor-General of India
+Throughout the British administration , Governors - General retreated to the Viceregal Lodge ( Rashtrapati Niwas ) at Shimla each summer to escape the heat ,
+and the government of India moved with them . The Viceregal Lodge now houses the Indian Institute of Advanced Study . Insignia ( edit ) See also : Star of India
+( flag ) Badge of the Governor - General ( 1885 -- 1947 ) Standard of the Governor - General ( 1885 -- 1947 ) Standard of the Governor - General ( 1947 -- 50 )
+See also ( edit ) India portal Pakistan portal United Kingdom portal Politics portal List of governors - general of India Commander - in - Chief , India British
+Empire Emperor of India Indian independence movement Council of India British Raj Secretary of State for India India Office Indian Civil Service Partition of
+India History of Bangladesh History of India History of Pakistan References ( edit ) Jump up ^ The term British India is mistakenly used to mean the same as the
+British Indian Empire , which included both the provinces and the Native States . Jump up ^ `` Imperial Impressions '' . Hindustan Times . 20 July 2011 .
+</item 4>
+
+<item 5>
+Governor-General of India
+Governor - General of India - Wikipedia Governor - General of India Jump to : navigation , search This article is about the position of Governor - General of
+India . For individual Governor - Generals , see List of governors - general of India . Viceroy and Governor - General of India Standard of the Governor -
+General Louis Mountbatten , the last Viceroy of India & the first Governor - General during the dominion period Style His Excellency Residence Viceroy 's House
+Appointer East India Company ( to 1858 ) Monarch of India ( from 1858 ) Formation 20 October 1774 First holder Warren Hastings Final holder Chakravarthi
+Rajagopalachari Abolished 26 January 1950 The Governor - General of India ( or , from 1858 to 1947 , officially the Viceroy and Governor - General of India ,
+commonly shortened to Viceroy of India ) was originally the head of the British administration in India and , later , after Indian independence in 1947 , the
+representative of the Indian head of state . The office was created in 1773 , with the title of Governor - General of the Presidency of Fort William .
+</item 5>
+
+<item 6>
+Governor-General of India
+The Act also granted legislative powers to the Governor - General and Council . After 1858 , the Governor - General ( now usually known as the Viceroy )
+functioned as the chief administrator of India and as the Sovereign 's representative . India was divided into numerous provinces , each under the head of a
+Governor , Lieutenant Governor or Chief Commissioner or Administrator . Governors were appointed by the British Government , to whom they were directly
+responsible ; Lieutenant Governors , Chief Commissioners , and Administrators , however , were appointed by and were subordinate to the Viceroy . The Viceroy
+also oversaw the most powerful princely rulers : the Nizam of Hyderabad , the Maharaja of Mysore , the Maharaja ( Scindia ) of Gwalior , the Maharaja of Jammu
+and Kashmir and the Gaekwad ( Gaekwar ) Maharaja of Baroda . The remaining princely rulers were overseen either by the Rajputana Agency and Central India Agency
+, which were headed by representatives of the Viceroy , or by provincial authorities .
+</item 6>
+
+<item 7>
+Governor-General of India
+The first Governor - General of British India was Warren Hastings , and the first Governor - General of independent India was Louis Mountbatten . Contents (
+hide ) 1 History 2 Functions 3 Council 4 Style and title 5 Flag 6 Residence 7 Insignia 8 See also 9 References 10 Further reading History ( edit ) Warren
+Hastings , the first Governor - General of Fort William from 1773 to 1785 . Many parts of the Indian subcontinent were governed by the East India Company ,
+which nominally acted as the agent of the Mughal Emperor . In 1773 , motivated by corruption in the Company , the British government assumed partial control
+over the governance of India with the passage of the Regulating Act of 1773 . A Governor - General and Supreme Council of Bengal were appointed to rule over the
+Presidency of Fort William in Bengal . The first Governor - General and Council were named in the Act . The Charter Act 1833 replaced the Governor - General and
+Council of Fort William with the Governor - General and Council of India .
+</item 7>
+
+<item 8>
+Governor-General of India
+The officer had direct control only over Fort William , but supervised other British East India Company officials in India . Complete authority over all of
+British India was granted in 1833 , and the official came to be known as the `` Governor - General of India '' . In 1858 , the territories of the East India
+Company came under the direct control of the British government ; see British Raj . The governor - general ( now also the viceroy ) headed the central
+government of India , which administered the provinces of British India , including the Punjab , Bengal , Bombay , Madras , the United Provinces , and others .
+However , much of India was not ruled directly by the British government ; outside the provinces of British India , there were hundreds of nominally sovereign
+princely states or `` native states '' , whose relationship was not with the British government , but directly with the monarch . To reflect the governor -
+general 's role as the representative of the monarch to the feudal rulers of the princely states , from 1858 the term Viceroy and Governor - General of India (
+known in short as the Viceroy of India ) was applied to him .
+</item 8>
+
+<item 9>
+Governor-General of India
+The title of viceroy was abandoned when British India split into the two independent dominions of India and Pakistan , but the office of governor - general
+continued to exist in each country separately -- until they adopted republican constitutions in 1950 and 1956 , respectively . Until 1858 , the governor -
+general was selected by the Court of Directors of the East India Company , to whom he was responsible . Thereafter , he was appointed by the sovereign on the
+advice of the British government ; the Secretary of State for India , a member of the UK Cabinet , was responsible for instructing him on the exercise of his
+powers . After 1947 , the sovereign continued to appoint the governor - general , but did so on the advice of the Indian government . Governors - General served
+at the pleasure of the sovereign , though the practice was to have them serve five - year terms . Governors - General could have their commission rescinded ;
+and if one was removed , or left , a provisional governor - general was sometimes appointed until a new holder of the office could be chosen .
+</item 9>
+
+<item 10>
+Governor-General of India
+Lord Mountbatten addressing the Chamber of Princes as Crown Representative in the 1940s The Governor - General originally had power only over the Presidency of
+Fort William in Bengal . The Regulating Act , however , granted them additional powers relating to foreign affairs and defence . The other Presidencies of the
+East India Company ( Madras , Bombay and Bencoolen ) were not allowed to declare war on or make peace with an Indian prince without receiving the prior approval
+of the Governor - General and Council of Fort William . The powers of the Governor - General , in respect of foreign affairs , were increased by the India Act
+1784 . The Act provided that the other Governors under the East India Company could not declare war , make peace or conclude a treaty with an Indian prince
+unless expressly directed to do so by the Governor - General or by the Company 's Court of Directors . While the Governor - General thus became the controller
+of foreign policy in India , he was not the explicit head of British India . That status came only with the Charter Act 1833 , which granted him ``
+superintendence , direction and control of the whole civil and military Government '' of all of British India .
+</item 10>
+=== END ITEM id=7ff308d77efc85e4 ===
+
+=== ITEM id=c0d71e9560133d31 ===
+Gold sentences and facts:
+Sentence 0: Vaugier appeared in Need for Speed : Carbon as Nikki . She is the girlfriend of the antagonist in the game ( love interest of the protagonist ) .
+  Fact 0.0: Vaugier appeared in Need for Speed: Carbon as Nikki.
+  Fact 0.1: Nikki is the girlfriend of the antagonist in Need for Speed: Carbon.
+  Fact 0.2: Nikki is the love interest of the protagonist in Need for Speed: Carbon.
+Sentence 1: Year Title Role Notes 2006 Need for Speed : Carbon Nikki Voice , Mo - Cap , & Likeness 2015 Dying Light Jade Mo - Cap 2015 Hellraid Maine , The Female Kin Voice
+  Fact 1.0: The filmography table lists a 2006 role as Nikki in Need for Speed: Carbon, with notes Voice, Mo-Cap, & Likeness.
+  Fact 1.1: The filmography table lists a 2015 role as Jade in Dying Light, with notes Mo-Cap.
+  Fact 1.2: The filmography table lists a 2015 role as Maine, The Female Kin in Hellraid, with notes Voice.
+
+Retrieved items:
+<item 1>
+Deadpool 2
+`` ' Deadpool 2 ' Stunt Crash Victim ID 'd As First African - American Female Pro Road Racer ; Director & Fox `` Deeply Saddened '' -- Update `` . Deadline.com
+. Archived from the original on August 15 , 2017 . Retrieved August 15 , 2017 . ^ Jump up to : Patten , Dominic ; Busch , Anita ( August 15 , 2017 ) . `` '
+Deadpool 2 ' To Start Production 48 Hours After Stunt Driver Killed '' . Deadline.com . Archived from the original on August 16 , 2017 . Retrieved August 16 ,
+2017 . Jump up ^ Johnson , Scott ( August 16 , 2017 ) . `` ' Deadpool 2 ' Motorcycle Death Leaves Stunt Community Asking Tough Questions '' . Deadline.com .
+Archived from the original on August 17 , 2017 . Retrieved August 17 , 2017 . Jump up ^ Reynolds , Ryan ( @ VancityReynolds ) ( August 1 , 2017 ) .
+</item 1>
+
+<item 2>
+The Divergent Series
+Cast ( edit ) On March 11 , 2013 , it was announced that the roles of Tori , Christina , and Caleb had gone to Maggie Q , Zoë Kravitz , and Ansel Elgort ,
+respectively . Ray Stevenson , Jai Courtney and Aaron Eckhart were announced to be in talks to join the cast on March 15 , 2013 , Stevenson and Courtney joined
+the cast as Marcus Eaton and Eric , respectively . That same day , Miles Teller was cast as Peter . The studio 's announcement included a bit of casting news :
+Mekhi Phifer will play Dauntless leader Max . Kate Winslet was announced to be in talks on January 24 , 2013 . Later it was confirmed that she would portray
+Jeanine Matthews . Talking about playing the negative character for the first time , Winslet said , `` I 'm no idiot . The idea went through my head that I have
+never played a baddie before , I was almost kind of surprised . '' Since Winslet joined the filming late , she used that distance from her co-stars to appear
+aloof on the first day of her shoot .
+</item 2>
+
+<item 3>
+Krysten Ritter
+Ritter described her character Carol , Lily 's sister , as `` the outcast '' , and `` an ' 80s Sunset Strip rocker '' to Access Hollywood . The series was not
+picked up by the network for the 2009 -- 10 season . Ritter co-starred as Jane Margolis on the second season of AMC 's drama series Breaking Bad , and starred
+in the film How to Make Love to a Woman ( 2009 ) , based on a best - selling book by adult film star Jenna Jameson . She also co-starred with Jason Behr in the
+independent film The Last International Playboy ( 2009 ) , as Ozzy , a drug addict . Ritter sold a television pilot that she wrote based on her experiences as a
+model , named Model Camp . She appeared in the comedy web series Woke Up Dead in 2009 , playing Cassie alongside Jon Heder as Drex . In 2010 , Ritter starred in
+the television series Gravity alongside Ivan Sergei , Ving Rhames , and Rachel Hunter , playing the sharp and quirky Lily . The Starz comedy - drama centers on
+a group of out - patient suicide survivors .
+</item 3>
+
+<item 4>
+Deadpool 2
+Harris was not wearing a helmet because the character she was portraying , Domino , does not wear one in the scene , and there had not been time since she
+joined the film to create one for her to fit underneath the Domino wig . She had two full days of rehearsing the stunt as well as five more attempts on the day
+of the accident . Veteran stunt double Melissa Stubbs had been available and willing to do the stunt , but the inexperienced Harris was preferred due to her
+skin color being a match for Beetz . This decision was criticized by multiple stunt professionals , with many noting that Harris ' experiences racing
+motorcycles did not necessarily qualify her as an able stunt performer . Production on the film was shut down immediately after the incident , but resumed two
+days later . With this news also came reports that the film 's crew were `` enduring very long hours '' and were `` exhausted by the schedule '' , with a member
+of the studio confirming that some days had gone beyond the scheduled 12 -- 13 hours filming , up to 15 -- plus hours .
+</item 4>
+
+<item 5>
+Emmanuelle Vaugier
+She has an older brother , Jason Vaugier . Career ( edit ) Television ( edit ) Vaugier played the role of young , upstart model Maria Alcobar in a 1996 episode
+of Highlander : The Series . In 2004 , she played Lindsey Kellogg on the short - lived Fox Television series North Shore . She has also had guest - star spots
+on Veronica Mars , Supernatural , The Outer Limits , Higher Ground , Andromeda , and Charmed . She also appeared in the Emmy Award nominated miniseries The
+Beach Boys : An American Family where she portrayed Mike Love 's wife , Suzanne . Vaugier also completed a starring role in MOW Veiled Truth for the Lifetime
+Network . She is also known for her role during the first two seasons of One Tree Hill , as Nicki , Jake 's ( Bryan Greenberg ) ex-girlfriend and mother to
+their child , Jenny . From 2005 - 2015 , Vaugier guest starred in Twelve episodes of CBS 's hit sitcom Two and a Half Men as Mia , a ballet teacher with whom
+Charlie Harper fell in love and almost married .
+</item 5>
+
+<item 6>
+Deadpool 2
+Director David Leitch called the dynamic between Cable and Deadpool `` sort of classic buddy - cop fare '' , and compared them to the characters portrayed by
+Nick Nolte and Eddie Murphy , respectively , in 48 Hrs. ( 1982 ) . Brolin signed a four - film deal to play the character , and described his appearance here as
+just the introduction for the character , with `` three more movies to reveal more . '' Morena Baccarin as Vanessa : An escort and Wilson 's fiancée . Julian
+Dennison as Russell : A young mutant being hunted by Cable . Dennison was the only actor that the creative team considered for the role , with Russell `` sort
+of a tailor - made character '' for the actor . Zazie Beetz as Neena Thurman / Domino : A mercenary with the mutant ability to manipulate luck , who joins
+Deadpool 's X-Force team . Leitch described the film 's version of the character as Beetz ' own `` real fun interesting take '' .
+</item 6>
+
+<item 7>
+The Divergent Series
+`` I wanted to break it and say , ' It 's OK , I 'm really fun . I promise . ' But I thought , just for today , I 'd let them think that I am a complete bitch .
+'' On March 25 , 2013 , Ben Lamb was cast as Edward , Ben Lloyd - Hughes as Will , and Christian Madsen as Al . In April 2013 , Ashley Judd and Tony Goldwyn
+joined the cast as Natalie and Andrew Prior , Beatrice 's parents . In 2014 , the cast for the second film was announced . On May 12 , 2014 , it was announced
+that Octavia Spencer joined the cast as Amity representative Johanna Reyes . Late May 2014 , Suki Waterhouse and Jonny Weston were cast as Marlene and Edgar
+respectively . Early June 2014 , Stephanie Leigh Schlund announced that she was cast in the film as a member of the Amity , and Naomi Watts and Daniel Dae Kim
+joined the cast as Evelyn Johnson and Jack Kang . On June 9 , 2014 , Rosa Salazar joined the cast as Lynn .
+</item 7>
+
+<item 8>
+Krysten Ritter
+The The Last International Playboy Ozzy 2008 27 Dresses Gina the goth 2008 What Happens in Vegas Kelly 2009 Glock Beretta Short film 2009 Confessions of a
+Shopaholic Suze Cleath - Stuart She 's Out of My League Patty How to Make Love to a Woman Lauren 2011 Killing Bono Gloria 2011 Life Happens Kim Also writer and
+co-producer 2011 Margaret Shopgirl 2012 BuzzKill Nicole 2012 Vamps Stacy Daimen 2012 Refuge Amy 2014 Listen Up Philip Melanie 2014 Veronica Mars Gia Goodman
+2014 Asthma Ruby 2014 Search Party Christy 2014 Big Eyes DeAnn 2017 Hero , The The Hero Lucy Television ( edit ) Year Title Role Notes Whoopi Brynn Episode : ``
+The Squatters '' One Life to Live Kay 4 episodes Law & Order Tracy Warren Episode : `` Everybody Loves Raimondo 's '' Tanner on Tanner Saleswoman 2 episodes
+2005 Jonny Zero Quinn Episode : `` Pilot '' 2005 -- 2006 Veronica Mars Gia Goodman Recurring role ; 8 episodes 2006 Bedford Diaries ,
+</item 8>
+
+<item 9>
+Emmanuelle Vaugier
+She appeared in the film 40 Days and 40 Nights , which starred Josh Hartnett . She had starring roles in Suddenly Naked , in which she plays a Latin pop
+sensation ; the TV - movie Mindstorm , a science - fiction thriller ; and Ripper , a psychological thriller about students who mysteriously disappear after
+enrolling in a class about serial killers . She stars also in the sequel to Mirrors , which is directed by Victor Garcia . Maxim magazine featured her on the
+cover of the February 2006 issue in the United States . Three months later , she landed spot # 31 on their annual Hot 100 list . Games ( edit ) Vaugier appeared
+in Need for Speed : Carbon as Nikki . She is the girlfriend of the antagonist in the game ( love interest of the protagonist ) .
+</item 9>
+
+<item 10>
+Emmanuelle Vaugier
+Stine 's The Haunting Hour Abigail Episode 1.06 : `` The Red Dress '' 2011 Killer Mountain Kate TV movie 2012 It 's Christmas , Carol ! Carol Huffman TV movie
+2013 The Mentalist Melissa Enfield Episode 5.16 : `` There Will Be Blood '' 2013 Clara 's Deadly Secret Helen TV movie 2013 Hidden Away Alexandra Cole /
+Stephanie Bennett TV movie 2015 My Stepdaughter Jill TV movie 2015 Mistresses Niko Recurring role ; 6 episodes 2016 Love In Paradise Heather Twain TV movie 2016
+Stranger in the House Jade TV movie 2016 His Double Life Linda TV movie 2016 Love in the Vineyard ( Heart Felt ) Molly TV movie 2017 Rogue Regan Recurring role
+; 7 episodes 2017 Washed Away Gabrielle Video Games ( edit ) Year Title Role Notes 2006 Need for Speed : Carbon Nikki Voice , Mo - Cap , & Likeness 2015 Dying
+Light Jade Mo - Cap 2015 Hellraid Maine , The Female Kin Voice References ( edit ) Jump up ^ `` Archived copy '' .
+</item 10>
+=== END ITEM id=c0d71e9560133d31 ===
+
+=== ITEM id=fcb4ed651c7f0058 ===
+Gold sentences and facts:
+Sentence 0: The current phrasing appears to have originated in the 1910 book Physics by Charles Riborg Mann and George Ransom Twiss . The question `` When a tree falls in a lonely forest , and no animal is near by to hear it , does it make a sound ? Why ? '' is posed along with many other questions to quiz readers on the contents of the chapter , and as such , is posed from a purely physical point of view .
+  Fact 0.0: The current phrasing of the tree-falling question appears to have originated in the 1910 book Physics.
+  Fact 0.1: The 1910 book Physics was written by Charles Riborg Mann and George Ransom Twiss.
+  Fact 0.2: The question "When a tree falls in a lonely forest, and no animal is near by to hear it, does it make a sound? Why?" is posed along with many other questions to quiz readers on the contents of the chapter.
+  Fact 0.3: The tree-falling question is posed from a purely physical point of view.
+Sentence 1: Philosopher George Berkeley , in his work , A Treatise Concerning the Principles of Human Knowledge ( 1710 ) , proposes , `` But , say you , surely there is nothing easier than for me to imagine trees , for instance , in a park ( ... ) and nobody by to perceive them . ( ... ) The objects of sense exist only when they are perceived ; the trees therefore are in the garden ( ... ) no longer than while there is somebody by to perceive them . '' ( It is worth noting that the quote from section 45 is arguably a statement of an objection to Berkeley 's view , and not a proclamation of it . ) Nevertheless , Berkeley never actually wrote about the question .
+  Fact 1.0: Philosopher George Berkeley wrote A Treatise Concerning the Principles of Human Knowledge, published in 1710.
+  Fact 1.1: In A Treatise Concerning the Principles of Human Knowledge, Berkeley proposes a passage that begins "But, say you, surely there is nothing easier than for me to imagine trees, for instance, in a park ... and nobody by to perceive them."
+  Fact 1.2: The passage quoted from Berkeley's treatise continues "The objects of sense exist only when they are perceived; the trees therefore are in the garden ... no longer than while there is somebody by to perceive them."
+  Fact 1.3: The quote from section 45 of Berkeley's treatise is arguably a statement of an objection to Berkeley's view, not a proclamation of it.
+  Fact 1.4: Berkeley never actually wrote about the tree-falling question.
+
+Retrieved items:
+<item 1>
+If a tree falls in a forest
+It is unknown whether the source of this question is Berkeley or not . In June 1883 in the magazine The Chautauquan , the question was put , `` If a tree were
+to fall on an island where there were no human beings would there be any sound ? '' They then went on to answer the query with , `` No . Sound is the sensation
+excited in the ear when the air or other medium is set in motion . '' This seems to imply that the question is posed not from a philosophical viewpoint , but
+from a purely scientific one . The magazine Scientific American corroborated the technical aspect of this question , while leaving out the philosophic side , a
+year later when they asked the question slightly reworded , `` If a tree were to fall on an uninhabited island , would there be any sound ? '' And gave a more
+technical answer , `` Sound is vibration , transmitted to our senses through the mechanism of the ear , and recognized as sound only at our nerve centers . The
+falling of the tree or any other disturbance will produce vibration of the air . If there be no ears to hear , there will be no sound . ''
+</item 1>
+
+<item 2>
+If a tree falls in a forest
+If a tree falls in a forest - wikipedia If a tree falls in a forest Jump to : navigation , search For the 2011 documentary , see If a Tree Falls : A Story of
+the Earth Liberation Front . A fallen tree in a forest `` If a tree falls in a forest and no one is around to hear it , does it make a sound ? '' is a
+philosophical thought experiment that raises questions regarding observation and perception . Contents ( hide ) 1 History 2 Metaphysics 2.1 The possibility of
+unperceived existence 2.2 Knowledge of the unobserved world 2.3 The dissimilarity between sensation and reality 2.4 Buddhist perspectives 2.4. 1 Tibetan 2.4. 2
+Zen 2.4. 2.1 Hui - neng 's Flag 2.4.
+</item 2>
+
+<item 3>
+If a tree falls in a forest
+-- e.g. `` is sound only sound if a person hears it ? '' The most immediate philosophical topic that the riddle introduces involves the existence of the tree (
+and the sound it produces ) outside of human perception . If no one is around to see , hear , touch or smell the tree , how could it be said to exist ? What is
+it to say that it exists when such an existence is unknown ? Of course , from a scientific viewpoint , it exists . It is human beings that are able to perceive
+it . George Berkeley in the 18th century developed subjective idealism , a metaphysical theory to respond to these questions , coined famously as `` to be is to
+be perceived '' . Today meta - physicists are split . According to substance theory , a substance is distinct from its properties , while according to bundle
+theory , an object is merely its sense data . The definition of sound , simplified , is a hearable noise . The tree will make a sound , even if nobody heard it
+. The definition states that sound is a hearable noise . So the tree could have been heard , though nobody was around to do so .
+</item 3>
+
+<item 4>
+If a tree falls in a forest
+2.1 Hui - neng 's Flag 2.4. 2.2 Hui - neng Receives The Dharma 2.5 Hinduism 3 In popular culture 4 See also 5 References History ( edit ) Philosopher George
+Berkeley , in his work , A Treatise Concerning the Principles of Human Knowledge ( 1710 ) , proposes , `` But , say you , surely there is nothing easier than
+for me to imagine trees , for instance , in a park ( ... ) and nobody by to perceive them . ( ... ) The objects of sense exist only when they are perceived ;
+the trees therefore are in the garden ( ... ) no longer than while there is somebody by to perceive them . '' ( It is worth noting that the quote from section
+45 is arguably a statement of an objection to Berkeley 's view , and not a proclamation of it . ) Nevertheless , Berkeley never actually wrote about the
+question . Some years later , a similar question is posed . It is unknown whether the source of this question is Berkeley or not .
+</item 4>
+
+<item 5>
+If a tree falls in a forest
+It may then be recognized that the unobserved event was absolutely identical to an event which did not occur at all . '' ( this apparent quote has no
+attribution or reference and none can be found online with reasonable effort ) . Of course , the fact that the tree is known to have changed state from '
+upright ' to ' fallen ' implies that the event must be observed to ask the question at all -- even if only by the supposed deaf onlooker . The British
+philosopher of science Roy Bhaskar , credited with developing critical realism has argued , in apparent reference to this riddle , that : If men ceased to exist
+sound would continue to travel and heavy bodies to fall to the earth in exactly the same way , though ex hypothesi there would be no - one to know it This
+existence of an unobserved real is integral to Bhaskar 's ontology , which contends ( in opposition to the various strains of positivism which have dominated
+both natural and social science in the twentieth century ) that ' real structures exist independently of and are often out of phase with the actual patterns of
+events ' .
+</item 5>
+
+<item 6>
+If a tree falls in a forest
+155 -- 158 . Jump up ^ Watts 1962 , pp. 111 -- 113 Jump up ^ A Buddhist Bible , `` Sutra Spoken by The Sixth Patriarch '' Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=If_a_tree_falls_in_a_forest&oldid=812540716 '' Categories : Fictional trees Riddles Philosophical problems Thought
+experiments in philosophy of mind Talk Contents About Wikipedia Español فارسی עברית Македонски Nederlands Português Русский Svenska ไทย 中文 Edit links This page
+was last edited on 28 November 2017 , at 12 : 14 . Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply .
+By using this site , you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit
+organization . About Wikipedia
+</item 6>
+
+<item 7>
+The question “If a tree falls in a forest and no one hears it, does it make a sound?” explores perception, reality, and knowledge of the unobserved. Similar
+versions appeared in 19th-century magazines; its familiar wording dates to a 1910 physics textbook. Scientifically, a fall creates vibrations, but “sound” may
+mean either those waves or the sensation of hearing. Philosophically, it connects to Berkeley’s idealism, realism, and the gap between reality and experience
+</item 7>
+
+<item 8>
+If a tree falls in a forest
+So the tree could have been heard , though nobody was around to do so . Knowledge of the unobserved world ( edit ) Main article : Observer - expectancy effect
+Can we assume the unobserved world functions the same as the observed world ? -- e.g. , `` does observation affect outcome ? '' A similar question does not
+involve whether or not an unobserved event occurs predictably , like it occurs when it is observed . The anthropic principle suggests that the observer , just
+in its existence , may impose on the reality observed . However , most people , as well as scientists , assume that the observer does n't change whether the
+tree - fall causes a sound or not , but this is an impossible claim to prove . However , many scientists would argue as follows , `` A truly unobserved event is
+one which realises no effect ( imparts no information ) on any other ( where ' other ' might be e.g. , human , sound - recorder or rock ) , it therefore can
+have no legacy in the present ( or ongoing ) wider physical universe .
+</item 8>
+
+<item 9>
+If a tree falls in a forest
+If there be no ears to hear , there will be no sound . '' Albert Einstein is reported to have asked his fellow physicist and friend Niels Bohr , one of the
+founding fathers of quantum mechanics , whether he realistically believed that ' the moon does not exist if nobody is looking at it . ' To this Bohr replied
+that however hard he ( Einstein ) may try , he would not be able to prove that it does , thus giving the entire riddle the status of a kind of an infallible
+conjecture -- one that can not be either proved or disproved . The current phrasing appears to have originated in the 1910 book Physics by Charles Riborg Mann
+and George Ransom Twiss . The question `` When a tree falls in a lonely forest , and no animal is near by to hear it , does it make a sound ? Why ? '' is posed
+along with many other questions to quiz readers on the contents of the chapter , and as such , is posed from a purely physical point of view . Metaphysics (
+edit ) The possibility of unperceived existence ( edit ) Main article : George Berkeley Can something exist without being perceived ? -- e.g.
+</item 9>
+
+<item 10>
+If a tree falls in a forest
+Washington - state - based wilderness conservatory Northwest Trek used a shortened form of the quote in its mid-1970s television advertisement , as such : ``
+There is no sound unless someone is there to see it or hear it . Experience it at Northwest Trek . '' See also ( edit ) Counterfactual definiteness Descartes '
+dream argument Epistemology Object ( philosophy ) Observer effect ( physics ) Kōan Ontology Schrödinger 's cat Principle of locality References ( edit ) Jump up
+^ A Treatise Concerning the Principles of Human Knowledge , 1734 . section 23 . Jump up ^ A Treatise Concerning the Principles of Human Knowledge , 1734 .
+section 45 . Jump up ^ Whether Berkeley thought objects continued to exist when unperceived by finite minds , and if so , in what manner , is the subject of
+serious debate among Berkeley scholars . Jump up ^ The Chautauquan , June 1883 , Volume 3 , Issue 9 , p. 543 Jump up ^ Scientific American , April 5 , 1884 , pg
+218 .
+</item 10>
+=== END ITEM id=fcb4ed651c7f0058 ===
+
+=== ITEM id=84281c4743215717 ===
+Gold sentences and facts:
+Sentence 0: Rigor mortis is very important in meat technology . The onset of rigor mortis and its resolution partially determine the tenderness of meat . If the post-slaughter meat is immediately chilled to 15 ° C ( 59 ° F ) , a phenomenon known as cold shortening occurs , whereby the muscle sarcomeres shrink to a third of their original length .
+  Fact 0.0: Rigor mortis is very important in meat technology
+  Fact 0.1: The onset of rigor mortis partially determines the tenderness of meat
+  Fact 0.2: The resolution of rigor mortis partially determines the tenderness of meat
+  Fact 0.3: If post-slaughter meat is immediately chilled to 15 °C (59 °F), a phenomenon known as cold shortening occurs
+  Fact 0.4: Cold shortening is the phenomenon that occurs when post-slaughter meat is immediately chilled to 15 °C (59 °F)
+  Fact 0.5: In cold shortening, the muscle sarcomeres shrink to a third of their original length
+
+Retrieved items:
+<item 1>
+Rigor mortis
+The sequence may be due to different lactic acid levels among different muscles , which is directly related to the difference in glycogen levels and different
+types of muscle fibers . Rigor mortis then spreads to the other muscles , including the internal organs , within the next four to six hours . The onset of rigor
+mortis is affected by the individual 's age , sex , physical condition , and muscular build . Rigor mortis may not be perceivable in many infant and child
+corpses due to their smaller muscle mass . Applications in meat industry ( edit ) Rigor mortis is very important in meat technology . The onset of rigor mortis
+and its resolution partially determine the tenderness of meat . If the post-slaughter meat is immediately chilled to 15 ° C ( 59 ° F ) , a phenomenon known as
+cold shortening occurs , whereby the muscle sarcomeres shrink to a third of their original length . Cold shortening is caused by the release of stored calcium
+ions from the sarcoplasmic reticulum of muscle fibers , in response to the cold stimulus . The calcium ions trigger powerful muscle contraction aided by ATP
+molecules .
+</item 1>
+
+<item 2>
+Rigor mortis
+Rigor mortis - wikipedia Rigor mortis Jump to : navigation , search This article is about the sign of death . For other uses , see Rigor mortis ( disambiguation
+) . Stages of death Pallor mortis Algor mortis Rigor mortis Livor mortis Putrefaction Decomposition Skeletonization Fossilization Rigor mortis ( Latin : rigor
+`` stiffness '' , mortis `` of death '' ) or postmortem rigidity , the third stage of death , is one of the recognizable signs of death , caused by chemical
+changes in the muscles post mortem , which cause the limbs of the corpse to stiffen . In humans , rigor mortis can occur as soon as 4 hours post mortem .
+Contents ( hide ) 1 Physiology 2 Physical changes 3 Applications in meat industry 4 Application in forensic pathology 5 See also 6 References 7 Bibliography
+Physiology ( edit ) After death , respiration in an organism ceases , depleting the source of oxygen used in the making of adenosine triphosphate ( ATP ) .
+</item 2>
+
+<item 3>
+Rigor mortis
+ATP is required to cause separation of the actin - myosin cross-bridges during relaxation of muscle . When oxygen is no longer present , the body may continue
+to produce ATP via anaerobic glycolysis . When the body 's glycogen is depleted , the ATP concentration diminishes , and the body enters rigor mortis because it
+is unable to break those bridges . Additionally , calcium enters the cytosol after death . Calcium is released into the cytosol due to the deterioration of the
+sarcoplasmic reticulum . Also , the breakdown of the sarcolemma causes additional calcium to enter the cytosol . The calcium activates the formation of actin -
+myosin cross-bridging . Once calcium is introduced into the cytosol , it binds to the troponin of thin filaments , which causes the troponin - tropomyosin
+complex to change shape and allow the myosin heads to bind to the active sites of actin proteins .
+</item 3>
+
+<item 4>
+Rigor mortis
+Web . 4 December 2011 . < http://health.howstuffworks.com/diseases-conditions/death-dying/rigor-mortis-cause2.htm > Jump up ^ Estimating The Time of Death ,
+ExploreForensics < http://www.exploreforensics.co.uk/estimating-the-time-of-death.html Bibliography ( edit ) Bear , Mark F ; Connors , Barry W. ; Paradiso ,
+Michael A. , Neuroscience , Exploring the Brain , Philadelphia : Lippincott Williams & Wilkins ; Third Edition ( 1 February 2006 ) . ISBN 0 - 7817 - 6003 - 8
+Robert G. Mayer , `` Embalming : history , theory , and practice '' , McGraw - Hill Professional , 2005 , ISBN 0 - 07 - 143950 - 1 `` Rigor Mortis and Other
+Postmortem Changes - Burial , Body , Life , Cause , Time , Person , Human , Putrefaction . '' Encyclopedia of Death and Dying. 2011 . Web . 4 December 2011 .
+</item 4>
+
+<item 5>
+Rigor mortis
+By using this site , you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit
+organization . About Wikipedia
+</item 5>
+
+<item 6>
+Rigor mortis
+Journal of Food Sciences . 25 ( 1 ) : 73 -- 87 . doi : 10.1111 / j. 1365 - 2621.1960. tb17938. x . Retrieved 2 December 2015 . Jump up ^ About.com Jump up ^ ``
+Classroom Resources - Argonne National Laboratory '' . Jump up ^ `` Rigor Mortis and Other Postmortem Changes - Burial , Body , Life , Cause , Time , Person ,
+Human , Putrefaction . '' Encyclopedia of Death and Dying. 2011 . Web . 4 December 2011 . <
+http://www.deathreference.com/Py-Se/Rigor-Mortis-and-Other-Postmortem-Changes.html > . Jump up ^ `` New Zealand Journal of Agricultural Research '' . Jump up ^
+Peress , Robin . `` Discovery Health `` Rigor Mortis at the Crime Scene '' '' Discovery Health `` Health Guides '' Discovery Fit & Health , 2011 . Web . 4
+December 2011 .
+</item 6>
+
+<item 7>
+Rigor mortis
+In rigor mortis myosin heads continue binding with the active sites of actin proteins via adenosine diphosphate ( ADP ) , and the muscle is unable to relax
+until further enzyme activity degrades the complex . Normal relaxation would occur by replacing ADP with ATP , which would destabilize the myosin - actin bond
+and break the cross-bridge . However , as ATP is absent , there must be a breakdown of muscle tissue by enzymes ( endogenous or bacterial ) during decomposition
+. As part of the process of decomposition , the myosin heads are degraded by the enzymes , allowing the muscle contraction to release and the body to relax .
+Decomposition of the myofilaments occurs 48 to 60 hours after the peak of rigor mortis , which occurs approximately 13 hours after death . Physical Changes (
+edit ) At the time of death , a condition called `` primary flaccidity '' occurs . Following this , the muscles stiffen in rigor mortis . All muscles in the
+body are affected . Starting between two and six hours following death , rigor mortis begins with the eyelids , neck , and jaw .
+</item 7>
+
+<item 8>
+Rigor mortis
+The calcium ions trigger powerful muscle contraction aided by ATP molecules . To prevent cold shortening , a process known as electrical stimulation is carried
+out , especially in beef carcasses , immediately after slaughter and skinning . In this process , the carcass is stimulated with alternating current , causing
+it to contract and relax , which depletes the ATP reserve from the carcass and prevents cold shortening . Application in forensic pathology ( edit ) The degree
+of rigor mortis may be used in forensic pathology , to determine the approximate time of death . A dead body holds its position as rigor mortis sets in . If the
+body is moved after death , but before rigor mortis begins , forensic techniques such as livor mortis can be applied . If the position in which a body is found
+does not match the location where it is found ( for example , if it is flat on its back with one arm sticking straight up ) , that could mean someone moved it .
+Several factors also affect the progression of rigor mortis , and investigators take these into account when estimating the time of death . One such factor is
+the ambient temperature .
+</item 8>
+
+<item 9>
+Rigor mortis
+One such factor is the ambient temperature . When conditions are warm , the onset and pace of rigor mortis are sped up by providing a conducive environment for
+the metabolic processes that cause decay . Low temperatures , however , slow them down . Therefore , for a person who dies outside in frozen conditions rigor
+mortis may last several days more than normal , so investigators may have to abandon it as a tool for determining time of death . See also ( edit ) Cadaveric
+spasm References ( edit ) ^ Jump up to : Saladin , K.S. 2010 . Anatomy & Physiology : 6th edition . McGraw - Hill . ^ Jump up to : Hall , John E. , and Arthur
+C. Guyton . Guyton and Hall Textbook of Medical Physiology . Philadelphia , PA : Saunders / Elsevier , 2011 . MD Consult . Web . 26 Jan. 2015 . Jump up ^
+Fremery , Donald ( 3 February 1959 ) . `` Biochemistry of Chicken Muscle as Related to Rigor Mortis and Tenderization '' . Journal of Food Sciences . 25 ( 1 ) :
+73 -- 87 .
+</item 9>
+
+<item 10>
+Rigor mortis
+2011 . Web . 4 December 2011 . < http://www.deathreference.com/Py-Se/Rigor-Mortis-and-Other-Postmortem-Changes.html > . Saladin , Kenneth . Anatomy and
+Physiology : The Unity of Form and Function , 6th ed . McGraw - Hill . New York , 2012 . Peress , Robin . `` Discovery Health `` Rigor Mortis at the Crime Scene
+'' '' Discovery Health `` Health Guides '' Discovery Fit & Health , 2011 . Web . 4 December 2011 . <
+http://health.howstuffworks.com/diseases-conditions/death-dying/rigor-mortis-cause2.htm > . Death Outline In medicine Cell death Necrosis Avascular necrosis
+Coagulative necrosis Liquefactive necrosis Gangrenous necrosis Caseous necrosis Fat necrosis Fibrinoid necrosis Temporal lobe necrosis Programmed cell death
+AICD Anoikis Apoptosis Autophagy Intrinsic apoptosis Necroptosis Paraptosis Parthanatos Phenoptosis Pseudoapoptosis Pyroptosis Autolysis
+</item 10>
+=== END ITEM id=84281c4743215717 ===

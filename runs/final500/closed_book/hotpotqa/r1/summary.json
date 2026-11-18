@@ -1,0 +1,10 @@
+{
+ "dataset": "hotpotqa",
+ "rep": "1",
+ "model": "gpt-6-luna",
+ "reasoning_effort": "medium",
+ "count": 500,
+ "failed": 0,
+ "exact_match": 0.478,
+ "total_cost_usd": 0.0630167
+}

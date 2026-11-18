@@ -1,0 +1,5084 @@
+[
+ {
+  "id": "a73c817118f3ee1d",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 17,
+      "quote": "The story in the book takes place in Tulsa , Oklahoma , in 1965 , but this is never explicitly stated in the book ."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 17,
+      "quote": "The story in the book takes place in Tulsa , Oklahoma , in 1965 , but this is never explicitly stated in the book ."
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 17,
+      "quote": "The story in the book takes place in Tulsa , Oklahoma , in 1965 , but this is never explicitly stated in the book ."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "d4ffd022b20543fc",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "After their plane crashes in the woods , Dr. Meredith Grey ( Ellen Pompeo ) , Dr. Lexie Grey ( Chyler Leigh ) , Dr. Cristina Yang ( Sandra Oh ) , Dr. Arizona Robbins ( Jessica Capshaw ) , Dr. Derek Shepherd ( Patrick Dempsey ) , and Dr. Mark Sloan ( Eric Dane ) desperately fight to stay alive"
+     },
+     {
+      "item": 6,
+      "quote": "six doctors from Seattle Grace Mercy West Hospital who are victims of an aviation accident fight to stay alive"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "After their plane crashes in the woods , Dr. Meredith Grey ( Ellen Pompeo ) , Dr. Lexie Grey ( Chyler Leigh ) , Dr. Cristina Yang ( Sandra Oh ) , Dr. Arizona Robbins ( Jessica Capshaw ) , Dr. Derek Shepherd ( Patrick Dempsey ) , and Dr. Mark Sloan ( Eric Dane ) desperately fight to stay alive"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Dr. Meredith Grey ( Ellen Pompeo )"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Dr. Lexie Grey ( Chyler Leigh )"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Dr. Cristina Yang ( Sandra Oh )"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Dr. Arizona Robbins ( Jessica Capshaw )"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Dr. Derek Shepherd ( Patrick Dempsey )"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Dr. Mark Sloan ( Eric Dane )"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Meredith is relatively unscathed , while the rest have serious injuries"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Meredith is relatively unscathed , while the rest have serious injuries"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "the pilot , Jerry ( James LeGros ) , has a major spine injury"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "the pilot , Jerry ( James LeGros ) , has a major spine injury"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "the pilot , Jerry ( James LeGros ) , has a major spine injury"
+     }
+    ]
+   },
+   {
+    "fact": "0.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "and Yang dislocates her arm"
+     }
+    ]
+   },
+   {
+    "fact": "0.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Robbins ' femur is broken and sticking through the skin"
+     }
+    ]
+   },
+   {
+    "fact": "0.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Sloan has serious internal injuries ; though initially adrenaline keeps him on his feet"
+     }
+    ]
+   },
+   {
+    "fact": "0.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Sloan has serious internal injuries ; though initially adrenaline keeps him on his feet"
+     }
+    ]
+   },
+   {
+    "fact": "0.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Shepherd is sucked out the side of the plane and awakens alone in the wood"
+     }
+    ]
+   },
+   {
+    "fact": "0.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Shepherd is sucked out the side of the plane and awakens alone in the wood"
+     }
+    ]
+   },
+   {
+    "fact": "0.19",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "his mangled hand having been pushed through the door of the plane"
+     }
+    ]
+   },
+   {
+    "fact": "0.20",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "However , none are in as bad shape as Lexie , who is crushed under a piece of the plane"
+     }
+    ]
+   },
+   {
+    "fact": "0.21",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "However , none are in as bad shape as Lexie , who is crushed under a piece of the plane"
+     }
+    ]
+   },
+   {
+    "fact": "0.22",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "While Meredith searches for Shepherd , Yang and Sloan try to move the debris off Lexie"
+     }
+    ]
+   },
+   {
+    "fact": "0.23",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Yang and Sloan try to move the debris off Lexie . Eventually , the two realize that they can not save her"
+     }
+    ]
+   },
+   {
+    "fact": "0.24",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "so Sloan holds her hand while she dies"
+     }
+    ]
+   },
+   {
+    "fact": "0.25",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "telling her that he loves her"
+     }
+    ]
+   },
+   {
+    "fact": "0.26",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "As Sloan tells her of the life the two were meant to have together"
+     }
+    ]
+   },
+   {
+    "fact": "0.27",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Lexie dies with a smile on her face just as Meredith and Yang are approaching"
+     }
+    ]
+   },
+   {
+    "fact": "0.28",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Lexie dies with a smile on her face just as Meredith and Yang are approaching"
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "Season 8 , Episode : 24 `` Flight ''"
+     },
+     {
+      "item": 3,
+      "quote": "Major death in season finale ' Flight '"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "Writer : Rhimes , Shonda . Director : Corn , Rob ( May 17 , 2012 ) . `` Flight ''"
+     }
+    ]
+   },
+   {
+    "fact": "1.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "Grey 's Anatomy . Season 8 . American Broadcasting Company"
+     },
+     {
+      "item": 5,
+      "quote": "the episode was viewed in the United States"
+     }
+    ]
+   },
+   {
+    "fact": "1.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "Writer : Rhimes , Shonda . Director : Corn , Rob ( May 17 , 2012 ) . `` Flight ''"
+     }
+    ]
+   },
+   {
+    "fact": "1.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "six doctors from Seattle Grace Mercy West Hospital who are victims of an aviation accident fight to stay alive"
+     }
+    ]
+   },
+   {
+    "fact": "1.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "but Dr. Lexie Grey ( Chyler Leigh ) ultimately dies"
+     }
+    ]
+   },
+   {
+    "fact": "1.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Other storylines occur in Seattle where Dr. Richard Webber"
+     }
+    ]
+   },
+   {
+    "fact": "1.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Dr. Richard Webber ( James Pickens , Jr . ) plans his annual dinner for the departing residents"
+     }
+    ]
+   },
+   {
+    "fact": "1.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Dr. Owen Hunt ( Kevin McKidd ) fires Dr. Teddy Altman ( Kim Raver )"
+     }
+    ]
+   },
+   {
+    "fact": "1.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Dr. Owen Hunt ( Kevin McKidd ) fires Dr. Teddy Altman ( Kim Raver )"
+     }
+    ]
+   },
+   {
+    "fact": "1.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Dr. Miranda Bailey ( Chandra Wilson ) gets engaged"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "75399f8b7b37b77d",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Important production centres today are the Hallertau in Germany ( more hop - growing area than any other country as of 2006 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Important production centres today are the Hallertau in Germany ( more hop - growing area than any other country as of 2006 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Important production centres today are the Hallertau in Germany ( more hop - growing area than any other country as of 2006 ) , the Yakima ( Washington ) and Willamette ( Oregon ) valleys"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Important production centres today are the Hallertau in Germany ( more hop - growing area than any other country as of 2006 ) , the Yakima ( Washington ) and Willamette ( Oregon ) valleys"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Important production centres today are the Hallertau in Germany ( more hop - growing area than any other country as of 2006 ) , the Yakima ( Washington ) and Willamette ( Oregon ) valleys , and western Canyon County , Idaho ( including the communities of Parma , Wilder , Greenleaf , and Notus )"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Important production centres today are the Hallertau in Germany ( more hop - growing area than any other country as of 2006 ) , the Yakima ( Washington ) and Willamette ( Oregon ) valleys , and western Canyon County , Idaho ( including the communities of Parma , Wilder , Greenleaf , and Notus )"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "The principal production centres in the UK are in Kent ( which produces Kent Goldings hops ) , Herefordshire , and Worcestershire"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "The principal production centres in the UK are in Kent ( which produces Kent Goldings hops ) , Herefordshire , and Worcestershire"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "The principal production centres in the UK are in Kent ( which produces Kent Goldings hops ) , Herefordshire , and Worcestershire"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "The principal production centres in the UK are in Kent ( which produces Kent Goldings hops ) , Herefordshire , and Worcestershire"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Essentially all of the harvested hops are used in beer making ."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 14,
+      "quote": "Hops production is concentrated in moist temperate climates , with much of the world 's production occurring near the 48th parallel north"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 14,
+      "quote": "Hops production is concentrated in moist temperate climates , with much of the world 's production occurring near the 48th parallel north"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 14,
+      "quote": "Hop plants prefer the same soils as potatoes and the leading potato - growing states in the United States are also major hops - producing areas"
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 14,
+      "quote": "Hop plants prefer the same soils as potatoes and the leading potato - growing states in the United States are also major hops - producing areas"
+     }
+    ]
+   },
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 14,
+      "quote": "however , not all potato - growing areas can produce good hops naturally"
+     }
+    ]
+   },
+   {
+    "fact": "1.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 14,
+      "quote": "soils in the Maritime Provinces of Canada , for example , lack the boron that hops prefer"
+     }
+    ]
+   },
+   {
+    "fact": "1.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 14,
+      "quote": "Historically , hops were not grown in Ireland , but were imported from England"
+     }
+    ]
+   },
+   {
+    "fact": "1.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 14,
+      "quote": "Historically , hops were not grown in Ireland , but were imported from England"
+     }
+    ]
+   },
+   {
+    "fact": "1.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 14,
+      "quote": "In 1752 more than 500 tons of English hops were imported through Dublin alone"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "9dbdc4fd6cbed4b7",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Allen , Miss Elizabeth Walton 29 St. Louis , Missouri , US Southampton St. Louis , Missouri , US"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Allen , Miss Elizabeth Walton 29 St. Louis , Missouri , US Southampton St. Louis , Missouri , US"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Allison , Mr. Hudson Joshua Creighton 30 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada 135 and"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Allison , Mr. Hudson Joshua Creighton 30 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada 135 and"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Allison , Mr. Hudson Joshua Creighton 30 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada 135 and"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.6",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.7",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.8",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.9",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.10",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.11",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.12",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.13",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.14",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.15",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.16",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.17",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.18",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.19",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.20",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.21",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.22",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.23",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.24",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.25",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.26",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.27",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.28",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.29",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.30",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.31",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.32",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.33",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.34",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.35",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.36",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.37",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.38",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.39",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.40",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.41",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.42",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.43",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.44",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.45",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.46",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.47",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.48",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.49",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.50",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.51",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.52",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.53",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.54",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.55",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.56",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.57",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.58",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.59",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.60",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.61",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.62",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.63",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.64",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.65",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.66",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.67",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.68",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.69",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.70",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.71",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.72",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.73",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.74",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.75",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.76",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.77",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.78",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.79",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.80",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.81",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.82",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.83",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.84",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.85",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.86",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.87",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.88",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.89",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.90",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.91",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.92",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.93",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.94",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.95",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.96",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.97",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.98",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.99",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.100",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.101",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.102",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.103",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.104",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.105",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.106",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.107",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.108",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.109",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.110",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.111",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.112",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.113",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.114",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.115",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.116",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.117",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.118",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.119",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.120",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.121",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.122",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.123",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.124",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.125",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.126",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.127",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.128",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.129",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.130",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.131",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.132",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.133",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.134",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.135",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.136",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.137",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.138",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.139",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.140",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.141",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.142",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.143",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.144",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.145",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.146",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.147",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.148",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.149",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.150",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.151",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.152",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.153",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.154",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.155",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.156",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.157",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.158",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.159",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.160",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.161",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.162",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.163",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.164",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.165",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.166",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.167",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.168",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.169",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.170",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.171",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.172",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.173",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.174",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.175",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.176",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.177",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.178",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.179",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.180",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.181",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.182",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.183",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.184",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.185",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.186",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.187",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.188",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.189",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.190",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.191",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.192",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.193",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.194",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.195",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.196",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.197",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.198",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.199",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.200",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.201",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.202",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.203",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.204",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.205",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.206",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.207",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.208",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.209",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.210",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.211",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.212",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.213",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.214",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.215",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.216",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.217",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.218",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.219",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.220",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.221",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.222",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.223",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.224",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.225",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.226",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.227",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.228",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.229",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.230",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.231",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.232",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.233",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.234",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.235",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.236",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.237",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.238",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.239",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.240",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.241",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.242",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.243",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.244",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.245",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.246",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.247",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.248",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.249",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.250",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.251",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.252",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.253",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.254",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.255",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.256",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.257",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.258",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.259",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.260",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.261",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.262",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.263",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.264",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.265",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.266",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.267",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.268",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.269",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.270",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.271",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.272",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.273",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.274",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.275",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.276",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.277",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.278",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.279",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.280",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.281",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.282",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.283",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.284",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.285",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.286",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.287",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.288",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.289",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.290",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.291",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.292",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.293",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.294",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.295",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.296",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.297",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.298",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.299",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.300",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.301",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.302",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.303",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.304",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.305",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.306",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.307",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.308",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.309",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.310",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.311",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.312",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.313",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.314",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.315",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.316",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.317",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.318",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.319",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.320",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.321",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.322",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.323",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.324",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.325",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.326",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.327",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.328",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.329",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.330",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.331",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.332",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.333",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.334",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.335",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.336",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.337",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.338",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.339",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.340",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.341",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.342",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.343",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.344",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.345",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.346",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.347",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.348",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.349",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.350",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.351",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.352",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.353",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.354",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.355",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.356",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.357",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.358",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.359",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.360",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.361",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.362",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.363",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.364",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.365",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.366",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.367",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.368",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.369",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.370",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.371",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.372",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.373",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.374",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.375",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.376",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.377",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.378",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.379",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.380",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.381",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.382",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.383",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.384",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.385",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.386",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.387",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.388",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.389",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.390",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.391",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.392",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.393",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.394",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.395",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.396",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.397",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.398",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.399",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.400",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.401",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.402",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.403",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.404",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.405",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.406",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.407",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.408",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.409",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.410",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.411",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.412",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.413",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.414",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.415",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.416",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.417",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.418",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.419",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.420",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.421",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.422",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.423",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.424",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.425",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.426",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.427",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.428",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.429",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.430",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.431",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.432",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.433",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.434",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.435",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.436",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.437",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.438",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.439",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.440",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.441",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.442",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.443",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.444",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.445",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.446",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.447",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.448",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.449",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.450",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.451",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.452",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.453",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.454",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.455",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.456",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.457",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.458",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.459",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.460",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.461",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.462",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.463",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.464",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.465",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.466",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.467",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.468",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.469",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.470",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.471",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.472",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.473",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.474",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.475",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.476",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.477",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.478",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.479",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.480",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.481",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.482",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.483",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.484",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.485",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.486",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.487",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.488",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.489",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.490",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.491",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.492",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.493",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.494",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.495",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.496",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.497",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.498",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.499",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.500",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.501",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.502",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.503",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.504",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.505",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.506",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.507",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.508",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.509",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.510",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.511",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.512",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.513",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.514",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.515",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.516",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.517",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.518",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.519",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.520",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.521",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.522",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.523",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.524",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.525",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.526",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.527",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.528",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.529",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.530",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.531",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.532",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.533",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.534",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.535",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.536",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.537",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.538",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.539",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.540",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.541",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.542",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.543",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.544",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.545",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.546",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.547",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.548",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.549",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.550",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.551",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.552",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.553",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.554",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.555",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.556",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.557",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.558",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.559",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.560",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.561",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.562",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.563",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.564",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.565",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.566",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.567",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.568",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.569",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.570",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.571",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.572",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.573",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.574",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.575",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.576",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.577",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.578",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.579",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.580",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.581",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.582",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.583",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.584",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.585",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.586",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.587",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.588",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.589",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.590",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.591",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.592",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.593",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.594",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.595",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.596",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.597",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.598",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.599",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.600",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.601",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.602",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.603",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.604",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.605",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.606",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.607",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.608",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.609",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.610",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.611",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.612",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.613",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.614",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.615",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.616",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.617",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.618",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.619",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.620",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.621",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.622",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.623",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.624",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.625",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.626",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.627",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.628",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.629",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.630",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.631",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.632",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.633",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.634",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.635",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.636",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.637",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.638",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.639",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.640",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.641",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.642",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.643",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.644",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.645",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.646",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.647",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.648",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.649",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.650",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.651",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.652",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.653",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.654",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.655",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.656",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.657",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.658",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.659",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.660",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.661",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.662",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.663",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.664",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.665",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.666",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.667",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.668",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.669",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.670",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.671",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.672",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.673",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.674",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.675",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.676",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.677",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.678",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.679",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.680",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.681",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.682",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.683",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.684",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.685",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.686",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.687",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.688",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.689",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.690",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.691",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.692",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.693",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.694",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.695",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.696",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.697",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.698",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.699",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.700",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.701",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.702",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.703",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.704",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.705",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.706",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.707",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.708",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.709",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.710",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.711",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.712",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.713",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.714",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.715",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.716",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.717",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.718",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.719",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.720",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.721",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.722",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.723",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.724",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.725",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.726",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.727",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.728",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.729",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.730",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.731",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.732",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.733",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.734",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.735",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.736",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.737",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.738",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.739",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.740",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.741",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.742",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.743",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.744",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.745",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.746",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.747",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.748",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.749",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.750",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.751",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.752",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.753",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.754",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.755",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.756",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.757",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.758",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.759",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.760",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.761",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.762",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.763",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.764",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.765",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.766",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.767",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.768",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.769",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.770",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.771",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.772",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.773",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.774",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.775",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.776",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.777",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.778",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.779",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.780",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.781",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.782",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.783",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.784",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.785",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.786",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.787",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.788",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.789",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.790",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.791",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.792",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.793",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.794",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.795",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.796",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.797",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.798",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.799",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.800",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.801",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.802",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.803",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.804",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.805",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.806",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.807",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.808",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.809",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.810",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.811",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.812",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.813",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.814",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.815",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.816",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.817",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.818",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.819",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.820",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.821",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.822",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.823",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.824",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.825",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.826",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.827",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.828",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.829",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.830",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.831",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.832",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.833",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.834",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.835",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.836",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.837",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.838",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.839",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.840",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.841",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.842",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.843",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.844",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.845",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.846",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.847",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.848",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.849",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.850",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.851",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.852",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.853",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.854",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.855",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.856",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.857",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.858",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.859",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.860",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.861",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.862",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "f78127ccb1fe9dd5",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Vaugier appeared in Need for Speed : Carbon as Nikki . She is the girlfriend of the antagonist in the game ( love interest of the protagonist )"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Vaugier appeared in Need for Speed : Carbon as Nikki . She is the girlfriend of the antagonist in the game ( love interest of the protagonist )"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Vaugier appeared in Need for Speed : Carbon as Nikki . She is the girlfriend of the antagonist in the game ( love interest of the protagonist )"
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "2006 Need for Speed : Carbon Nikki Voice , Mo - Cap , & Likeness"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "2015 Dying Light Jade Mo - Cap"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "2015 Hellraid Maine , The Female Kin Voice"
+     }
+    ]
+   }
+  ]
+ }
+]

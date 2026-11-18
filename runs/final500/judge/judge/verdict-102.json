@@ -1,0 +1,64 @@
+[
+{"id": "df55ad9df8236dc4", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "“Certainly there wasn’t a valid alternative to Google at the time,” Cue said."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "93cede756810fa8f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "“I’m here until the end,” she said in her press conference on Friday."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "1f6351dfbcad54f4", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "826daf355529dd9a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "0.5", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []}
+]},
+{"id": "67a611e83d8d2c21", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "But “all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 1, "quote": "“The defendant lied to the world,” Rehn alleged."}, {"item": 1, "quote": "a “man” who “stole billions of dollars from thousands of victims,” Rehn said."}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 4, "quote": "how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to political candidates, and finance risky bets."}]},
+{"fact": "3.2", "status": "missing", "evidence": []},
+{"fact": "3.3", "status": "missing", "evidence": []},
+{"fact": "3.4", "status": "missing", "evidence": []}
+]},
+{"id": "971f38fc30f6bcc7", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "And if the Braves let this be the story of their series, that's on them."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]}
+]}
+]

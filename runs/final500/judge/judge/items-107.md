@@ -1,0 +1,817 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=87b8a115023bb5cc ===
+Gold sentences and facts:
+Sentence 0: “She’s got the Eras Tour booked all through next year, and she’d rather die than cancel a show.
+  Fact 0.0: A woman referred to in the quote has the Eras Tour booked all through next year.
+  Fact 0.1: A woman referred to in the quote would rather die than cancel a show.
+Sentence 1: In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City.
+  Fact 1.0: Kelce spoke in July on the podcast he shares with his brother, New Heights.
+  Fact 1.1: Kelce said he intended to give Swift a friendship bracelet with his number on it.
+  Fact 1.2: Kelce intended to give the friendship bracelet during Swift's Eras Tour concert in Kansas City.
+Sentence 2: The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before.
+  Fact 2.0: The game is taking place at Arrowhead Stadium.
+  Fact 2.1: Swift has performed at Arrowhead Stadium.
+  Fact 2.2: Swift has attended a game at Arrowhead Stadium before.
+Sentence 3: Now, Swift has shared that she has nothing to hide in her new relationship with Kelce.
+  Fact 3.0: Swift has shared that she has nothing to hide in her new relationship with Kelce.
+
+Retrieved items:
+<item 1>
+Travis Kelce admits the NFL is overdoing it with their Taylor Swift coverage (The Independent - Life and Style, 2023-10-04T19:58:00+00:00)
+“I appreciate you always trying to make it to both of our games.”
+
+“She also told me thank you because she was in an alternate universe, she was sitting there with Deadpooland Wolverine,” Kelce added, referencing Reynolds’ and
+Jackman’s respective superhero movie characters. “It was a hot ticket, man, you know what I’m saying? That suite was rockin’.
+
+“They were enjoying themselves. Somebody told me that everybody was enjoying themselves in that suite,” Kelce said.
+
+Not only has NFL viewership increased since Swift began attending her rumoured boyfriend’s games, but jersey sales for the Chiefs tight end have reportedly
+spiked by 400 per cent, according to a report from the NFL’s e-commerce partner, Fanatics.
+
+Following critcism the league is focusing too much on Swift, the NFL responded with an official statement handed to People on 4 October.
+
+“We frequently change our bios and profile imagery based on what’s happening in and around our games, as well as culturally,” the message read.
+</item 1>
+
+<item 2>
+Travis Kelce says he tried to delete his ‘nonsense’ tweets before they went viral (The Independent - Life and Style, 2023-11-25T14:50:53+00:00)
+The dating speculation first began in July, when Kelce confessed that he tried and failed to give Swift a friendship bracelet with his number on it during her
+Eras Tour show. On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium - an invitation she famously accepted on 24
+September. Since then, Swift has attended three more of Kelce’s games.
+
+Kelce showed his support for Swift when he attended her Eras Tour show in Buenos Aires, Argentina, on 11 November. During the concert, Swift gave a shout-out to
+the Chiefs player when she changed her “Karma” lyrics to reflect their relationship. “Karma is the guy on the Chiefs, coming straight home to me,” she sang,
+letting out a laugh as fans in the audience screamed in response. The “All Too Well” singer was later seen running into his arms and kissing the NFL player
+following the concert, as he whisked her away backstage.
+</item 2>
+
+<item 3>
+Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game (The Independent - Life and Style,
+2023-09-26T22:05:34+00:00)
+“OF ALL 230 SONGS IN THE DISCOGRAPHY I’M SICK,” one fan commented, while another person wrote: “It’s unbelievable how invested I am in this.”
+
+“I’m gonna need to go back and see all photos of him from the last three months and dissect if he’s wearing friendship bracelets,” a third wrote.
+
+In other photos from the charity event - which were shared to Instagram by Jordan’s KC photography - Kelce wasn’t seen wearing the friendship bracelet, leading
+many people to believe that he received the bracelet from a fan that day.
+
+Two days after his charity event, the “All Too Well” singer was spotted cheering for the Kansas City Chiefs tight end from the box seats at Arrowhead Stadium in
+Kansas City, Missouri. Not only was she seen sitting next to Kelce’s mother, Donna, but she also appeared to yell “let’s f***ing go” in response to Kelce’s
+third-quarter touchdown reception.
+</item 3>
+
+<item 4>
+Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)
+Not to mention her rumoured relationship with Kansas City Chiefs tight end Travis Kelce caused a 400 per cent spike in NFL jersey sales.
+
+Since her first NFL appearance in September, Swift’s occasional attendance at Kelce’s games has received pushback from NFL fans who believe her presence is
+distracting from the game itself. “I’m just there to support Travis,” Swift admitted. “I have no awareness of if I’m being shown too much and pissing off a few
+dads, Brads, and Chads.”
+
+She playfully added: “Football is awesome, it turns out. I’ve been missing out my whole life.”
+
+The “Bad Blood” singer revealed that their romance began when Kelce gave her shoutout on his podcast, admitting he attempted to give Swift his phone number
+after one of her Eras Tour shows. The pair immediately began “hanging out” and by the time she attended her first Chiefs game in September, they were already a
+couple. “I think some people think that they saw our first date at that game?
+</item 4>
+
+<item 5>
+Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game (The Independent - Life and Style,
+2023-09-26T22:05:34+00:00)
+After the game, which saw the Chiefs beat the Chicago Bears 41-10, Kelce was seen leaving the stadium in a blue and white splatter-paint denim suit. Eagle-eyed
+fans were quick to believe that Kelce’s outfit paid homage to Swift’s forthcoming album, 1989 (Taylor’s Version), which is due for re-release on 27 October.
+
+After the two escaped the crowd at Arrowhead Stadium in Kelce’s convertible, according to photos and videos posted online, the football star reportedly rented
+out Prime Social Rooftop in Kansas City for a post-game celebration with his family, his teammates, and Swift.
+
+“Travis bought out the restaurant for his family and team. Taylor arrived, wearing a denim dress, and was seen snacking, having some cocktails and dancing
+alongside Travis,” the witness told Entertainment Tonight. “The two were very affectionate with one another but kept things fun and lighthearted.
+</item 5>
+
+<item 6>
+Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game (The Independent - Life and Style,
+2023-09-26T22:05:34+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Fans have spotted Travis Kelce wearing a friendship bracelet with Taylor Swift lyrics on it, just days before she attended his Kansas City Chiefs game.
+
+In a video posted to TikTok on 25 September, a fan shared a photo of Kelce posing with the piece of jewellery on his wrist. The post came after Swift was seen
+enthusiastically cheering him on in the box seats at Arrowhead Stadium, fuelling speculation that she and the athlete are dating.
+</item 6>
+
+<item 7>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+How do you not get that? That's called images right there."
+
+Oct. 1: Swift attends Chiefs-Jets
+
+"Welcome to New York, it's been waiting for you," - Welcome to New York
+
+OK, so the Jets technically play in New Jersey, but we're just basing this off their name. Swift went to her second consecutive Chiefs game, showing up with
+some famous friends, Blake Lively, Ryan Reynolds and Hugh Jackman. In the week leading up to the game, there were reports that the singer would be at the game.
+The Chiefs defeated the Jets 23-20.
+
+Oct. 5: NFL defends itself
+
+Swift coverage is everywhere and the league even changed their social media bio to one of the singer's lyrics. The league's X (formerly Twitter) bio to read,
+"NFL (Taylor's Version)," while their Instagram account read, "Chiefs are 2-0 as Swifties."
+</item 7>
+
+<item 8>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+“This all started when Travis very adorably put me on blast on his podcast, which I thought was metal as hell,” she explained. “We started hanging out right
+after that. So we actually had a significant amount of time that no one knew, which I’m grateful for, because we got to get to know each other.”
+
+Swift also confirmed that when she famously first attended Kelce’s game at Arrowhead Stadium in September, she was already dating the NFL star.
+
+“By the time I went to that first game, we were a couple. I think some people think that they saw our first date at that game? We would never be psychotic
+enough to hard launch a first date,” she said.
+
+The “Blank Space” singer also acknowledged that although her love life continues to make headlines with every Kansas City Chiefs game she attends, she’s focused
+on being there for her partner. She specified that she isn’t trying to hide her relationship from the public eye.
+</item 8>
+
+<item 9>
+Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game (The Independent - Life and Style,
+2023-09-26T22:05:34+00:00)
+Travis’ teammates also showed up to the after-party, as well as his mom, Donna Kelce. The party lasted until 2 am.”
+
+The late-night outing came days after the NFL star officially addressed ongoing dating rumours about him and the “Anti-Hero” singer. During an episode of The
+Pat McAfee Show on 21 September, he mocked his brother Jason Kelce for joking that he “100 per cent” believed his younger sibling was dating Swift.
+
+“It’s hilarious how much traction this has actually gotten, right now it’s like a game of telephone,” Kelce said. “Where everybody’s whispering in each other’s
+ears and hearing random stuff. No one actually knows what’s going on, especially when you got Jason Kelce on live television telling people just both sides - he
+doesn’t know, it’s true, this and that.”
+
+He also noted that he was still open to pursuing a relationship with Swift, revealing that he subtly asked if she’d want to attend one of his football games.
+</item 9>
+
+<item 10>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+But at the same time, they're overdoing it a little bit."
+
+Jason also chimed in on the matter, saying, "I just think the NFL is not used to celebrities coming to the games. Like basketball has it all figured out.
+They're all courtside, they're sitting there. They show 'em once or twice, but then they get back to the game."
+
+Oct. 12: Swift attends Chiefs-Broncos
+
+"Now it's too late for you and your white horse *Bronco, to come around" - White Horse
+
+One day after her movie premiere, Swift is in the house for the Chiefs' "Thursday Night Football" divisional matchup against the Broncos. The game is taking
+place at Arrowhead Stadium, where Swift has performed herself and attended a game before. According to Al Michaels, the game will have minimal Swift coverage,
+though so far there has already been a mention of the superstar.
+
+Oct.
+</item 10>
+=== END ITEM id=87b8a115023bb5cc ===
+
+=== ITEM id=65d0211c910b4991 ===
+Gold sentences and facts:
+Sentence 0: Altman has been telling investors that he’s planning to launch a new venture, according to The Information.
+  Fact 0.0: Altman has been telling investors that he is planning to launch a new venture.
+  Fact 0.1: The Information is the source of this report.
+Sentence 1: Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now.
+  Fact 1.0: The theory described here is based on the board's language.
+  Fact 1.1: The theory described here is based on the way giant tech companies work.
+  Fact 1.2: The theory described here is the prevailing theory floating around right now.
+
+Retrieved items:
+<item 1>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+(I was going to write this up next week, so thanks OpenAI board for eating my lunch.)
+
+If you were the board and facing the mounting accusations that your product was built on a dataset that includes thousands or millions of copyrighted works —
+and your CEO had systematically downplayed the potential liability there — how would you feel? I’d feel very hurt.
+
+But again, if copyright liability was the reason, it seems unlikely that the board would promote the CTO. Presumably, OpenAI’s Chief Science Officer Ilya
+Sutskever would also have been in the know, and he’s still on the board.
+
+7. Did CTO Mira Murati launch a coup?
+
+Probably not — she seems cool, and anyway what CTO wants to be CEO? Mira, answer my email!
+
+8. Was it a “personal matter”?
+
+When someone is kicked out in a hurry, it’s not uncommon that there was some kind of unprofessional behavior in the workplace. Some CEOs get a pass on things
+like having kids with direct reports, but not all.
+</item 1>
+
+<item 2>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+He was recruited in 2014 to take lead of the startup incubator YCombinator.
+
+“Sam is one of the smartest people I know, and understands startups better than perhaps anyone I know, including myself,” read YCombinator co-founder Paul
+Graham’s 2014 announcement that Altman would become its president. Graham said at the time that Altman was “one of those rare people who manage to be both
+fearsomely effective and yet fundamentally benevolent.”
+
+OpenAI started out as a nonprofit when it launched with financial backing from Tesla CEO Elon Musk and others. Its stated aims were to “advance digital
+intelligence in the way that is most likely to benefit humanity as a whole, unconstrained by a need to generate financial return.”
+
+That changed in 2018 when it incorporated a for-profit business Open AI LP, and shifted nearly all its staff into the business, not long after releasing its
+first generation of the GPT large language model for mimicking human writing.
+</item 2>
+
+<item 3>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+She claimed X was seeing 500 million posts per day on the platform. So who’s right? Beats us.
+
+Former NSA director’s startup shutters: IronNet, a once-promising cybersecurity startup founded by a former NSA director, has shuttered and laid off its
+remaining staff following its collapse. The Virginia-based IronNet was founded in 2014 by retired four-star general Keith Alexander and had raised more than
+$400 million in funding. But IronNet failed to gain traction after going public in August 2021, and its stock price continued to steeply decline in the wake of
+an initial spike.
+
+Audio
+
+On the hunt for a new podcast to listen to while you work out, do the dishes or rake the leaves (now that fall’s arrived)? Look no further than TechCrunch’s
+roster, which covers the world of startups, the blockchain and more.
+</item 3>
+
+<item 4>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+Some CEOs get a pass on things like having kids with direct reports, but not all.
+
+Altman also has three siblings, and his younger sister Annie has publicly accused him of abuse. We have no way of evaluating these allegations, which involve
+private matters.
+
+Our read on the board’s language in dismissing Altman, however, is that it was not a legal or personal problem that provoked the action, but a professional or
+business one.
+
+We probably won’t know the full truth on this for a long time, as the characters in the drama are likely to be NDA’ed up. Per various whispers and leaks, an
+all-hands meeting about the situation this afternoon didn’t produce any revelations beyond banal reassurances that the company is fine and they’ll get a fresh
+CEO soon. Expect to hear a lot of rumors before we hear the real thing.
+</item 4>
+
+<item 5>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+Any significant snafu in that department would reflect on her, as well as Altman.
+
+5. Perhaps a difference of AI ethics or philosophy?
+
+Altman is a proud techno-optimist, and often speaks fondly of the possibilities of AGI, or artificial general intelligence, a theoretical software system that
+achieves human-like intellect and versatility.
+
+The board’s statement pointedly includes that “OpenAI was deliberately structured to advance our mission: to ensure that artificial general intelligence
+benefits all humanity” and that new leadership was necessary. It’s possible that Sam’s zeal for AGI, even absent a secret project or agreement, led to a major
+rift between him and the board.
+
+It’s been obvious to all that Altman took the company in a much more corporate direction from its origins, changing its legal status and aggressively pursuing
+enterprise and consumer applications. That doesn’t sound a lot like the “mission” the board wants to advance.
+</item 5>
+
+<item 6>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+“Not consistently candid” is a very diplomatic way of saying Altman lied.
+
+It’s possible that Altman — and potentially OpenAI President Greg Brockman, who stepped down as chairman simultaneously, then resigned — wanted to make a bold
+move that he knew the board would not like. It’s not uncommon for these deals to be hammered out quietly in smoke- (or vape-) filled rooms and then presented as
+a fait accompli, but if it was controversial enough and the board found out about these maneuvers, it could be fuel for an ouster.
+
+But what kind of deal would be big and dangerous enough for a summary dismissal of the CEO and famous face of the company? The man was onstage two weeks ago; I
+just talked with him! What could have happened since then?
+
+Few would be shocked if Microsoft, which is deeply, deeply embedded in OpenAI as an investor and customer, is a factor here. Could Altman have been working with
+— or against — OpenAI’s patron in secret?
+</item 6>
+
+<item 7>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+In perhaps the most unexpected tech news of the year, billionaire and AI evangelist Sam Altman has been ejected from his CEO role at OpenAI by the company’s
+board after an apparent vote of no confidence. Its exact wording in a release issued this afternoon: Altman’s “departure follows a deliberative review process
+by the board, which concluded that he was not consistently candid in his communications with the board, hindering its ability to exercise its responsibilities.”
+
+What the hell is happening at the most hyped company in the world?! Here are some totally speculative theories that occurred to us and others around the web.
+
+1. Did Altman circumvent the board in a major deal?
+
+Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now. “Not consistently candid” is
+a very diplomatic way of saying Altman lied.
+</item 7>
+
+<item 8>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+Altman also co-founded Worldcoin, a biometric and cryptocurrency project that’s been scanning people’s eyeballs with the goal of creating a vast digital
+identity and financial network.
+
+___
+
+Associated Press business writers Haleluya Hadero in New York, Kelvin Chan in London and Michael Liedtke and David Hamilton in San Francisco contributed to this
+report.
+</item 8>
+
+<item 9>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+The company said its board consists of OpenAI’s chief scientist, Ilya Sutskever, and three non-employees: Quora CEO Adam D’Angelo, tech entrepreneur Tasha
+McCauley, and Helen Toner of the Georgetown Center for Security and Emerging Technology.
+
+OpenAI’s key business partner, Microsoft, which has invested billions of dollars into the startup and helped provide the computing power to run its AI systems,
+said that the transition won’t affect its relationship.
+
+“We have a long-term partnership with OpenAI and Microsoft remains committed to Mira and their team as we bring this next era of AI to our customers,” said an
+emailed Microsoft statement.
+
+While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s. He was recruited in 2014 to take lead of
+the startup incubator YCombinator.
+</item 9>
+
+<item 10>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+Or what if, and again this is purely speculation, Altman has been secretly pursuing an internal project, perhaps at significant cost, against the advice of the
+board and without the necessary safety measures that probably should accompany such research? It sounds a little wild, but firing your CEO like this is also a
+little wild.
+
+Some kind of major mismatch in the financial department could be cause for dismissal, but it’s hard to imagine what Altman could have kept from the board and
+CTO that would be so damning.
+
+There’s also the possibility that Altman was making personal investments in a way that the board disagreed with. With OpenAI poised to be a kingmaker in the
+field, he would certainly be in a position of power. One would think that, as an ideologically driven person already rich beyond belief and at the head of the
+world’s leading AI company, Altman would have risen beyond having to do this kind of side deal, or at the very least that scrutiny on him and those close to him
+would prevent them. But one can never be sure.
+
+4.
+</item 10>
+=== END ITEM id=65d0211c910b4991 ===
+
+=== ITEM id=3ab60dd5ffd4f173 ===
+Gold sentences and facts:
+Sentence 0: The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy.
+  Fact 0.0: The criminal trial for Sam Bankman-Fried was highly anticipated.
+  Fact 0.1: Sam Bankman-Fried is the former CEO of bankrupt crypto exchange FTX.
+  Fact 0.2: The criminal trial of Sam Bankman-Fried started on Tuesday.
+  Fact 0.3: The trial is to determine whether Sam Bankman-Fried is guilty of seven counts of fraud and conspiracy.
+Sentence 1: Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry.
+  Fact 1.0: Before his fall, Sam Bankman-Fried made himself out to be the Good Boy of crypto.
+  Fact 1.1: Sam Bankman-Fried presented himself as the trustworthy face of a sometimes-shady industry.
+Sentence 2: It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told.
+  Fact 2.0: Judge Lewis Kaplan intervened to ask whether Sam Bankman-Fried had ever been told by Yedidia about that money.
+  Fact 2.1: Judge Lewis Kaplan's question covered whether Sam Bankman-Fried had been told about that money in words or in substance.
+  Fact 2.2: It was not until Judge Lewis Kaplan intervened that Sam Bankman-Fried admitted he had been told about that money.
+Sentence 3: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 3.0: The prosecution portrayed Sam Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 3.1: The defense argued that the FTX founder acted in good faith.
+  Fact 3.2: The defense argued that the FTX founder never meant to commit fraud or steal.
+  Fact 3.3: The defense argued that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried, the disgraced cryptocurrency entrepreneur accused of
+orchestrating “one of the biggest financial frauds in American history”: the multibillion-dollar collapse of FTX, the crypto exchange he founded and led.
+
+SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy. But, as we wait to hear both his version and the government’s version
+of what happened, there will be another tale recounting how things played out: “Going Infinite,” a book by Michael Lewis chronicling the rise and fall of SBF,
+is set to debut on the first day of the trial.
+
+The episode has fired up a lot of people, indignant at what they feel was too-easy treatment for someone who many believe brought down the whole crypto house.
+
+60 Minutes got rightly community noted here.
+</item 1>
+
+<item 2>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Here are the hits:
+
+Bankman-Fried gave interviews freely — and quickly rose to public prominence in the industry. Though FTX hadn’t been in the business as long as competing
+exchanges such as Coinbase, Kraken, or Gemini, Bankman-Fried positioned himself as an important, boyish face for crypto. (At one point, Bankman-Fried told a
+colleague at FTX that “I honestly think it’s negative EV [this may mean “expected value,” as in poker] for me to cut my hair. I think it’s important for people
+to think I look crazy.”)
+
+Because he was so successful at this kind of public relations, his fall from grace was another mark against an industry that was already roiled by bankruptcies
+and scandals. Some additional trouble for the crypto industry is likely to come from one crucial element of the fraud trial — the part where the government must
+prove intent.
+
+The first part of proving the government’s case is pretty simple and a little boring: prosecutors must show that certain transactions took place.
+</item 2>
+
+<item 3>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+That was before he realized FTX had stolen customer funds — at which point, he resigned.
+
+Gary Wang, the co-founder of FTX and Alameda Research and another college roommate. He took the stand after Yedidia and sang like a canary about the secret
+privileges he’d created for Alameda in the FTX code.
+
+Nishad Singh, a longtime family friend, who copped to what sounded an awful lot like classic embezzlement. He said he’d backdated transactions on FTX to help
+create doctored balance sheets to show to investors. He pleaded guilty to six charges, including wire fraud, money laundering, and conspiracy counts around his
+political donations.
+
+Caroline Ellison, Bankman-Fried’s ex-girlfriend. She told us about the seven phony balance sheets she’d created. She was clear: Alameda took customer funds;
+Bankman-Fried knew about it and even invested them against her advice.
+
+Joe Bankman, Bankman-Fried’s father.
+</item 3>
+
+<item 4>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+It is honestly kind of incredible to watch a man torpedo his own credibility on direct testimony. We’re not even at the cross yet, and the judge has already
+instructed him to answer the question he’s being asked by his own lawyer.
+
+The jury is watching all of this intently.
+
+The main thing that’s been clear so far from Bankman-Fried’s testimony is that the man really loves the sound of his own voice. So far, the count of “Objection,
+narrative!” to Bankman-Fried’s answers, followed by “Sustained” is at three.
+
+Also, sometimes when Bankman-Fried says “we,” he only means himself.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, has been found guilty on seven counts including charges of wire fraud. FTX was a fraud
+“from the start,” the Securities and Exchange Commission alleged — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer
+funds.” Follow along for all the latest news and regular updates from the trial.
+</item 4>
+
+<item 5>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Whatever records the Southern District of New York has for the transactions will be shown.
+
+“What conversations happened between him and his co-conspirators that are now cooperating against him?”
+
+The second part is where all the drama is likely to come, says Christopher LaVigne, a litigation partner and co-chair of the cryptocurrency practice at the law
+firm Withers. Prosecutors have to connect those transactions to Bankman-Fried, show that he knew what he was doing was wrong, and prove that he lied about it
+anyway.
+
+“What was he saying to his parents and his other advisors about this?” LaVigne says. “What conversations happened between him and his co-conspirators that are
+now cooperating against him?”
+
+To further establish intent, the government can use Bankman-Fried’s own words. The indictment calls Bankman-Fried’s tweets in November 2022 “false and
+misleading.”
+
+“We had him going out directly to the internet,” LaVigne says.
+</item 5>
+
+<item 6>
+Sam Bankman-Fried didn’t ask where the $8 billion went (The Verge, 2023-10-31T19:52:07+00:00)
+Oh, but he was testifying to Congress about keeping customer funds safe.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+
+Who was making decisions to spend $8 billion of customer funds? Bankman-Fried couldn’t recall knowing anything about it. Were there rules or requirements for
+how money borrowed from FTX would be returned? Were there rules for risk management? “I was concerned with overall risk management,” Bankman-Fried said.
+
+But it was the testimony about June 2022 that resonated the most to me. Didn’t Bankman-Fried ask what “fiat@ftx” was? He did.
+</item 6>
+
+<item 7>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+I’ve got some shitty ex-boyfriends, but none of them made me the CEO of their sin-eater hedge fund while refusing to give me equity and bragging about how there
+was a 5 percent chance they’d become the president of the United States, you know? Absolutely counting my blessings after Caroline Ellison’s first day on the
+stand. I wonder how many of the nine women on the jury are doing the same.
+
+Ellison was the head of Alameda Research, the aforementioned hedge fund, during the implosion of it and FTX. She’s already pleaded guilty to criminal charges
+stemming from one of the worst romantic relationships I’ve ever heard of, and her testimony was widely anticipated before the trial. Today, that took the form
+of discussing a damning spreadsheet — one she prepared for her ex and boss Sam Bankman-Fried, now the defendant in a criminal fraud trial.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy.
+</item 7>
+
+<item 8>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+Sure, Sam Bankman-Fried’s trial has revealed that FTX was basically a seething mass of scams. But it has also revealed how Bankman-Fried blew up the lives of
+the people who are closest to him.
+
+Of course everyone who had money trapped on the FTX exchange when it collapsed — as the result of Bankman-Fried’s trading firm Alameda Research purloining its
+customers’ funds — had their lives altered. Even if they are made whole by the bankruptcy proceedings, that’s still money that they should have had access to at
+any time they wanted it. That may mean houses that weren’t purchased, medical procedures that were left undone, and life savings lost.
+
+There is a simultaneous drama of ruined lives playing out in the courtroom
+
+Bankman-Fried is charged with seven counts: two counts of wire fraud and five conspiracy charges. As we near the end of the prosecution’s case, I have been
+struck by how bizarre it all is.
+</item 8>
+
+<item 9>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+I have been waiting for a juicy cross-examination, as I live for chaos and drama. I am beginning to think I am not going to get one.
+
+Ellison had given, in her direct testimony, fairly damning evidence tying FTX CEO Sam Bankman-Fried to the conspiracy to take FTX customer funds. There were
+fake balance sheets, one of which was sent to crypto lender Genesis. After a Genesis representative received the balance sheet, he texted Ellison to tell her
+he’d spoken to Bankman-Fried — strongly suggesting that Bankman-Fried was aware of the contents of the fake balance sheet. Not great!
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+</item 9>
+
+<item 10>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+According to the SEC, FTX was a fraud “from the start,” diverting customers’ funds to Alameda.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+
+“Really just old-fashioned embezzlement.”
+
+What’s left of FTX is now being led by John J. Ray III — you may remember him as the guy who cleaned up Enron and who also said FTX is worse than Enron. Just
+before the trial began, the FTX lawyers filed suit against Bankman-Fried’s parents, saying they should give back millions of dollars they got from their kid.
+Ray has also referred to Bankman-Fried’s conduct as “really just old-fashioned embezzlement.”
+</item 10>
+=== END ITEM id=3ab60dd5ffd4f173 ===
+
+=== ITEM id=188a142ebe8602dc ===
+Gold sentences and facts:
+Sentence 0: Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote.
+  Fact 0.0: Defense analysts agree on this.
+  Fact 0.1: Much of the outlook for Ukraine is dependent on the outcome of the U.S. vote.
+Sentence 1: Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with Russia’s most recent invasion of Ukraine.
+  Fact 1.0: Any illusion of the success of globalization was stripped away with Russia's most recent invasion of Ukraine.
+  Fact 1.1: Any illusion that the twenty-first century represents a break from the brutal twentieth century was stripped away with Russia's most recent invasion of Ukraine.
+
+Retrieved items:
+<item 1>
+With hopes of victory fading, Ukraine's fight against Russia could get even harder in 2024 (Cnbc | World Business News Leader, 2023-12-25T23:36:00+00:00)
+A Ukrainian soldier is seen inside an artillery vehicle in his fighting position as Russia-Ukraine war continues in the direction of Kharkiv, Ukraine on
+November 20, 2023. Diego Herrera Carcedo | Anadolu | Getty Images
+
+At the start of 2023, hopes were high that a much-vaunted Ukrainian counteroffensive — expected to be launched in the spring — would change the dial in the war
+against Russia. It didn't, and the prospect of a breakthrough in 2024 is also unlikely, military experts and defense analysts told CNBC. They predict intense
+fighting is likely to continue into the next year but say Kyiv's forces are unlikely to launch any more counteroffensives. Russia, meanwhile, is likely to focus
+on consolidating the territory it has already seized, particularly in eastern Ukraine.
+</item 1>
+
+<item 2>
+With hopes of victory fading, Ukraine's fight against Russia could get even harder in 2024 (Cnbc | World Business News Leader, 2023-12-25T23:36:00+00:00)
+Aid and politics
+
+Another year of war in Europe has undoubtedly drained Western military resources and the political appetite to maintain massive amounts of military aid for
+Ukraine. Ongoing funding for Ukraine is far from secure in 2024 given the fact that the U.S. presidential election could herald a seismic change in the attitude
+toward and support for Kyiv. Specifically, all eyes are on former U.S. President Donald Trump, the Republican front-runner, who cultivated close relations with
+his Russian counterpart Vladimir Putin during his presidency. There are concerns that, given Trump's previous good relations with Moscow and "America First"
+policy, aid for Ukraine could be shelved rapidly. Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote. "I
+think it's important to understand the extent to which Ukraine is reliant on the U.S. right now, because it's quite significantly more reliant on the U.S.
+</item 2>
+
+<item 3>
+With hopes of victory fading, Ukraine's fight against Russia could get even harder in 2024 (Cnbc | World Business News Leader, 2023-12-25T23:36:00+00:00)
+Anatolii Stepanov | Afp | Getty Images
+
+"We're in this situation now where if there's not a clear winner, there's going to be a stalemate, and there's going to be, perhaps, a future frozen conflict.
+What can tilt the balance, in my view, is if the Ukrainians are not resupplied and they're not re-funded and they don't get the equipment and people that they
+need. Then this war could tilt to the Russians," Twitty noted.
+
+Expectations not met
+
+A year ago, Ukraine's international military support was solid with NATO pledging to support Kyiv for "as long as it takes" as it defended itself against
+Russia's invasion launched in February 2022. Over the summer, however, the challenge facing Ukraine's forces was glaringly obvious as they struggled to break
+through heavily fortified Russian positions and lines of defenses along a swathe of the 600-mile-long front line across the southern and east of the country.
+</item 3>
+
+<item 4>
+With hopes of victory fading, Ukraine's fight against Russia could get even harder in 2024 (Cnbc | World Business News Leader, 2023-12-25T23:36:00+00:00)
+Intense fighting continues nonetheless, and particularly around Bakhmut and Avdiivka in eastern Ukraine where Russian forces are conducting offensive operations
+and have made some recent, confirmed advances. Analysts at the Institute for the Study of War noted last week that Russian forces have likely committed to
+offensive operations in multiple sectors of the front, during a period of the most challenging weather of the fall-winter season, "in an effort to seize and
+retain the initiative" before the Russian presidential elections in March 2024. In the meantime, the ISW noted in an analysis, "Ukrainian forces establish and
+consolidate defensive positions to conserve manpower and resources for future offensive efforts." Ukrainian forces have adopted a more defensive stance as
+circumstances dictate; a senior army general warned last week that front-line Ukrainian troops face artillery shortages and have scaled back some military
+operations because of a shortfall of foreign assistance.
+</item 4>
+
+<item 5>
+With hopes of victory fading, Ukraine's fight against Russia could get even harder in 2024 (Cnbc | World Business News Leader, 2023-12-25T23:36:00+00:00)
+But it's not clear exactly what he would do to try to end the war." For his part, Trump has said that he'd be able to resolve the Ukraine war "in one day" if he
+was reelected, saying he'd convince the leaders of Ukraine and Russia to make a deal.
+
+More stalemate or negotiations?
+
+Ukraine's Defense Ministry said last week that its main goal in 2024 is to boost its domestic defense industry in the face of uncertain future supplies from its
+Western allies. It has also changed conscription laws, foreseeing the need to bolster its forces, which are dwarfed in size by Russia's but are more highly
+trained and equipped. Ukrainian President Volodymyr Zelenskyy said last week that the military had asked for up to 500,000 additional conscripts but said he
+needed to hear "more arguments" to support the sensitive and costly proposal.
+</item 5>
+
+<item 6>
+With hopes of victory fading, Ukraine's fight against Russia could get even harder in 2024 (Cnbc | World Business News Leader, 2023-12-25T23:36:00+00:00)
+With both Ukraine and Russia investing heavily in the war, it's unlikely there will be any negotiations to end the conflict or agree to a cease-fire. Defense
+analysts argue that neither side would want to go into negotiations unless they're in a position of strength and able to dictate terms. "In the case of a
+Republican winning the presidential election next year, especially if that's Donald Trump, who seems to be the front-runner, and [if] funding is decreased
+substantially, then there will be increased pressure on Ukraine to negotiate," Mario Bikarski, a Europe and Russia analyst at the Economist Intelligence Unit,
+told CNBC.
+
+A Ukrainian tank drives along the field on December 7, 2023 in Avdiivka, Ukraine. Kostya Liberov | Getty Images
+</item 6>
+
+<item 7>
+With hopes of victory fading, Ukraine's fight against Russia could get even harder in 2024 (Cnbc | World Business News Leader, 2023-12-25T23:36:00+00:00)
+Away from the battlefield, military experts said that the trajectory the Russia-Ukraine war takes in 2024 will mostly be dictated thousands of miles away in the
+U.S., Ukraine's largest military supporter, and whether aid declines in the run-up — and following — the U.S. presidential election. "War is an uncertain
+endeavor," retired Army Lt. Gen. Stephen Twitty, former deputy commander of the U.S. European Command, told CNBC. "Russia can win the war, or the Ukrainians can
+win the war. And, as you're seeing things now, if you really think about it, what has been achieved this year? Very little has been achieved by Russia, and you
+can say the same thing for the Ukrainians," he said.
+
+Ukrainian servicemen take part in a military training exercise not far from front line in the Donetsk region on June 8, 2023.
+</item 7>
+
+<item 8>
+With hopes of victory fading, Ukraine's fight against Russia could get even harder in 2024 (Cnbc | World Business News Leader, 2023-12-25T23:36:00+00:00)
+right now, because it's quite significantly more reliant on the U.S. than it is on the EU," Sam Cranny-Evans, defense analyst at the Royal United Services
+Institute defense think tank, told CNBC. "If the U.S. election goes in a way that is not in Ukraine's favor, coupled with the fact that the EU is not really
+stepping up to the plate — it's ammunition production is so far off what it should have been by now to give Ukraine a hope of surviving and a hope of victory —
+it's not a very cheery prediction for 2024."
+
+Good chemistry: President Donald Trump and Russian President Vladimir Putin shake hands during a joint press conference after their summit on July 16, 2018 in
+Helsinki, Finland. Chris McGrath | Getty Images News | Getty Images
+
+Rumblings of discontent over continuing Ukraine aid have been heard in some Republican quarters for months now, as well as in Eastern Europe. Former U.S.
+</item 8>
+
+<item 9>
+With hopes of victory fading, Ukraine's fight against Russia could get even harder in 2024 (Cnbc | World Business News Leader, 2023-12-25T23:36:00+00:00)
+Former U.S. Ambassador to NATO Kurt Volker told CNBC he believes American and EU aid packages for Ukraine will be approved come January, saying he believed this
+funding would tide Ukraine over for another year, militarily. Volker said that aid packages must include more advanced weaponry for Ukraine, however, like F-16
+fighter jets which have been pledged by Norway, Denmark and the Netherlands. Ukrainian pilots are beginning their training on the jets now but it could be a
+number of months before they're deployed in Ukraine. The U.S. is not providing F-16s to Ukraine but has authorized allies to provide their own jets. "A couple
+of things ought to change," Volker told CNBC. "We ought to lift restrictions on the weapons we're providing. We still don't provide the longest-range missiles
+and we still have not delivered any Western aircraft in Ukraine yet. Those things have to happen.
+</item 9>
+
+<item 10>
+With hopes of victory fading, Ukraine's fight against Russia could get even harder in 2024 (Cnbc | World Business News Leader, 2023-12-25T23:36:00+00:00)
+Those things have to happen. And I think we have to try to give the Ukrainians more of a technological advantage," he noted.
+
+The United States has said that it will begin flight training for Ukrainian pilots on F-16 fighter jets. Anadolu Agency | Getty Images
+
+Volker believes that a Trump presidency might not be the catastrophe for Ukraine that is feared, but said it would make future funding uncertain. "I doubt that
+even if Trump were elected that he would abandon support for Ukraine overall, because it would be a disaster for U.S. interests, and it would appear to be a
+failure. You'd have these images of Russians overrunning places, and brutality and so forth, so I don't think he wants that. But it's not clear exactly what he
+would do to try to end the war."
+</item 10>
+=== END ITEM id=188a142ebe8602dc ===
+
+=== ITEM id=a3fc8f0e9f35d515 ===
+Gold sentences and facts:
+Sentence 0: For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report.
+  Fact 0.0: Investors around the world consider the Fed to matter more than other central banks.
+  Fact 0.1: Foreign-exchange strategists at Bank of America say weak US data is the only game-changer for markets.
+  Fact 0.2: The Bank of America foreign-exchange strategists wrote this in a BofA Global Research report.
+Sentence 1: Postponements of such reports could complicate things for the Fed, which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy.
+  Fact 1.0: Postponements of such reports could complicate things for the Fed.
+  Fact 1.1: The Fed has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy.
+
+Retrieved items:
+<item 1>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+Such cuts can act like steroids for financial markets. For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the
+only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report. A separate report on Friday said growth
+in US services industries, such as finance and construction, was weaker last month than economists expected. The report from the Institute for Supply Management
+also suggested a slight easing in prices.
+
+Excitement about a potentially easier Fed was more than enough to offset a fall for Apple, which is Wall Street’s most influential stock. The most valuable US
+stock fell 0.5 per cent despite reporting stronger profit for the latest quarter than analysts expected. Analysts said investors were likely disappointed with
+Apple’s forecast for revenue for the last three months of 2023.
+</item 1>
+
+<item 2>
+ASX set for bright start despite Wall Street slip; $A drops (The Sydney Morning Herald, 2023-12-05T21:51:55+00:00)
+It had been above 5 per cent, and at its highest level in more than a decade, during October. The yield on the two-year Treasury, which more closely tracks
+expectations for the Fed, went on a jagged run following the economic reports. It fell from 4.61 per cent just before the reports’ release to 4.57 per cent and
+then yo-yoed before easing back to 4.57 per cent.
+
+Loading Traders widely expect the Federal Reserve to hold its key interest rate steady at its meeting next week, before potentially cutting rates in March,
+according to data from CME Group. Fed officials have recently hinted that the federal funds rate may indeed already be at its peak. It’s above 5.25 per cent, up
+from nearly zero early last year. But Fed Chair Jerome Powell and others have also warned Wall Street about being overzealous in its predictions about how early
+a cut could happen. Lower yields have been one reason prices for cryptocurrencies have been rising recently.
+</item 2>
+
+<item 3>
+ASX rises after Wall Street gains on rate optimism; Oil drops (The Sydney Morning Herald, 2023-10-10T23:50:33+00:00)
+Energy was among the laggards after its more than 3 per cent rally on Monday. A measure of US-listed Chinese shares added 3 per cent amid reports that the Asian
+nation is considering new economic stimulus. “Policymakers have begun to acknowledge a lesser need for further policy action given financial conditions have
+tightened considerably after the recent surge in Treasury yields,” said Ben Jeffery at BMO Capital Markets. “This acknowledgment may have reduced angst around
+the need for additional rate increases.” Loading Investors will be watching for any hints in the September Fed meeting minutes due on Wednesday that would
+suggest the Fed may not follow through with the last rise indicated in its economic projections, according to Anna Wong at Bloomberg Economics. Two critical
+coming indicators for the US economy — Thursday’s consumer price index and Friday’s University of Michigan consumer-sentiment survey — may give a more
+definitive read, she noted.
+</item 3>
+
+<item 4>
+Economists, central bankers are rethinking the quantitative easing strategy that saved the world but created bubbles and distortions (Fortune,
+2023-10-22T15:26:11+00:00)
+That’s reviving questions about whether central banks can deliver price stability all on their own.
+
+“If we were designing optimal policy arrangements from scratch, monetary and fiscal policy would both have a role in managing the economic cycle and inflation,
+and that there would be close coordination,” Philip Lowe said in his last speech as Australian central bank governor in September.
+
+Economists surveyed by Bloomberg predict fiscal policy will somewhat counteract the Fed’s efforts to rein in inflation in the US.
+
+“It’s true that there are circumstances where working hand in hand and supporting each other has proved helpful,” ECB President Christine Lagarde told a panel
+discussion in June at the institution’s annual economic forum.
+
+Fed Chair Jerome Powell, who sat to her right, signaled he wasn’t ready to rely on that kind of cooperation. “Our assignment is to deliver price stability kind
+of regardless of the stance of fiscal policy.”
+
+Central bankers warn that any failure to scale back fiscal spending risks coming at the cost of yet higher interest rates.
+</item 4>
+
+<item 5>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+“Westpac’s results were better than expected, especially because it’s been a bit of a perennial underperformer in the past few years,” he said, adding that it
+set the tone for results from NAB and ANZ, which are due to report in the next week. Loading Clark also said there was a reversal of the interest-rate trade
+seen in recent weeks. “Long-term bond yields came off quite significantly in the last few days following weaker than expected employment data on Friday, which
+has seen some investors swivel back into growth stocks,” he said. The market has now switched from pricing in an 80 per cent chance of a rate rise on Tuesday to
+50-50, Clark said.
+
+On Wall Street, the S&P 500 climbed 40.56 points on Friday, or 0.9 per cent, to 4,358.3.
+</item 5>
+
+<item 6>
+ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields (The Age, 2023-10-12T20:00:32+00:00)
+Loading The big jump for the 10-year Treasury yield since the summer has pulled mortgage rates to their highest levels since the turn of the millennium, and
+such moves could slow the economy without requiring more Fed hikes. Nothing in Thursday’s inflation report should sway the Fed one way or the other when it
+comes to what it will do on November 1, when it announces its next move on interest rates, said Seema Shah, chief global strategist at Principal Asset
+Management. She called the data “reassuringly uneventful”.
+
+“The question around whether or not there will be one more interest rate hike is yet to be answered,” she said. Rising crude oil prices have put extra pressure
+on inflation since the summer, and they were volatile again on Thursday. After jumping early in the day, a barrel of benchmark US crude slipped US58¢ to settle
+at $US82.91. Brent crude, the international standard, rose US18¢ to $US86 a barrel.
+</item 6>
+
+<item 7>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+The Fed put such pressure on the economy intentionally, hoping to starve inflation of its fuel. It wants the job market to cool, particularly pay raises going
+to workers. The Fed fears too-strong pay gains could create a vicious cycle that keeps inflation high.
+
+Analysts said Friday’s jobs report offered encouraging signals for the Fed, with average hourly earnings rising less in October from September than expected,
+though it doesn’t mean the job is done. Treasury yields in the bond market tumbled immediately after the jobs report, releasing more of the pressure that had
+built up on Wall Street. The yield on the 10-year Treasury eased to 4.52 per cent from 4.67 per cent late Thursday and from more than five per cent last week,
+when it hit its highest level since 2007. In the US, traders are moving up expectations for when the first cut to interest rates by the Fed could happen,
+potentially by the summer, according to data from CME Group. Such cuts can act like steroids for financial markets.
+</item 7>
+
+<item 8>
+ASX set to open higher as Wall Street rebounds; $A rises (The Age, 2023-10-04T21:01:01+00:00)
+That in turn could convince the Federal Reserve to take it easier on interest rates. After already raising its main interest rate to the highest level since
+2001, the Fed has indicated it may keep its overnight rate higher next year than it had earlier expected. Treasury yields have correspondingly snapped higher as
+traders accept a new normal for markets of high rates for longer. The Fed is paying particular attention to the job market because too much strength there could
+drive wages for workers much higher, which it fears could keep inflation well above its target of 2 per cent.
+
+Oil prices slumped overnight. Credit: AP Wednesday’s report from ADP suggested private employers added 89,000 jobs last month, a much sharper slowdown in hiring
+than the 140,000 that economists expected. The report doesn’t have a perfect track record in predicting what the more comprehensive jobs report from the US
+government will say. That will arrive on Friday.
+</item 8>
+
+<item 9>
+ASX rises after Wall Street gains on rate optimism; Oil drops (The Sydney Morning Herald, 2023-10-10T23:50:33+00:00)
+“The bond market is retracing,” he said. “There’s also been strength in resource stocks amid rumours that the Chinese government might launch a substantial
+stimulus package.” Clark said interest-rate sensitive sectors climbed on increased probabilities of an easing in interest rates. “Consumer discretionary and
+information technology companies are winners in lower-interest rate environments,” he said. As more annual general meetings kick off in the next few weeks,
+Clark said he would be looking at trading updates, especially of companies that didn’t give solid guidance in their last update.
+
+Elsewhere, Wall Street advanced overnight, with the S&P 500 and Nasdaq touching three-week highs as dovish comments from the Fed officials pushed Treasury
+yields lower. Following remarks from other top Fed officials on Monday, Atlanta Fed President Raphael Bostic said the US central bank did not need to raise
+interest rates any further, and that he saw no recession ahead. Oil edged lower, with West Texas Intermediate settling below $US86 a barrel following its
+biggest rally since April.
+</item 9>
+
+<item 10>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+At Expedia Group, another stronger-than-forecast report sent its stock nearly 22 per cent higher for its best week since the market was surging out of the
+coronavirus crash in early 2020. But it was interest rates, yields and inflation that were at the centre of all the wild movements for financial markets around
+the world.
+
+Before last week, stocks had been struggling under the weight of rapidly rising Treasury yields. Those yields were in turn catching up to the Fed’s main
+interest rate, which is above 5.25 per cent and at its highest level since 2001. Loading Higher rates and yields slow the economy, hurt prices for investments
+and raise the risk of something breaking within the financial system, such as the three high-profile US bank failures that rattled financial markets during the
+spring. “It was really fear that the Fed was going to go too far,” said Katie Nixon, chief investment officer for Northern Trust Wealth Management. The Fed put
+such pressure on the economy intentionally, hoping to starve inflation of its fuel.
+</item 10>
+=== END ITEM id=a3fc8f0e9f35d515 ===

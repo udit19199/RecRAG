@@ -1,0 +1,20 @@
+[
+  {"id": "f088f96652316cec", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "but maintains that Google manipulates Search to maximise ad revenue."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "328593df3f9c6139", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "While its usual hours of operation are from 6am to 9pm,"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "stores’ opening and closing times on the holiday vary based on location."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month,"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "with the holiday falling on 23 November this year."}]}
+  ]}
+]

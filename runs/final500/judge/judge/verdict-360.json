@@ -1,0 +1,59 @@
+[
+  {"id": "04336c3cf9634423", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "“Certainly there wasn’t a valid alternative to Google at the time,” Cue said."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "how Google tried to have Chrome preinstalled on iPhones"}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "ac010e0dd2051bcb", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "6cdd3fc73543b16e", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Back in July, Kelce first confessed"}, {"item": 10, "quote": "he explained to his brother on their podcast"}, {"item": 6, "quote": "\"New Heights\" podcast he does with his brother"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her"}]},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "to one of his games at Arrowhead Stadium"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "I’ve seen you rock the stage in Arrowhead [Stadium]"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "was spotted cheering for the Kansas City Chiefs tight end from the box seats at Arrowhead Stadium"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "During the interview with Time"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "he later invited the “Anti-Hero” singer"}, {"item": 9, "quote": "an invitation she famously accepted on 24"}]},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "3.0", "status": "stated", "evidence": [{"item": 1, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]}
+  ]},
+  {"id": "24ef2fde24fe5f3d", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night, keeping the heat on the losing Eagles ahead of them"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Fueled by a stout defensive showing, a gritty run game and a bit of fairy dust from the likes of St. Brown, Sam LaPorta and Josh Reynolds"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Fueled by a stout defensive showing, a gritty run game and a bit of fairy dust from the likes of St. Brown, Sam LaPorta and Josh Reynolds"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Fueled by a stout defensive showing, a gritty run game and a bit of fairy dust from the likes of St. Brown, Sam LaPorta and Josh Reynolds"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "Fueled by a stout defensive showing, a gritty run game and a bit of fairy dust from the likes of St. Brown, Sam LaPorta and Josh Reynolds"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 5, "quote": "Fueled by a stout defensive showing, a gritty run game and a bit of fairy dust from the likes of St. Brown, Sam LaPorta and Josh Reynolds"}]},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 5, "quote": "the Lions cruised to a 34-20 win over their hated NFC North rivals"}]},
+    {"fact": "1.6", "status": "stated", "evidence": [{"item": 5, "quote": "the Lions cruised to a 34-20 win over their hated NFC North rivals, Green Bay"}]},
+    {"fact": "1.7", "status": "stated", "evidence": [{"item": 5, "quote": "the Lions cruised to a 34-20 win over their hated NFC North rivals, Green Bay"}]}
+  ]},
+  {"id": "6c30853111a86172", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "although Michigan had hoped to block the suspension"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 2, "quote": "the Wolverines will be without their coach on the sidelines in Happy Valley"}]}
+  ]}
+]

@@ -1,0 +1,76 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "multihop-rag-2034",
+   "sentences": [
+    "The pastor went on to explain that Jesus brought more positivity than anyone — which is why it's important to keep faith aligned with that practice of positive thinking.",
+    "He added, \"As you consistently tap into that habit, you find your relationship with Jesus growing deeper and deeper, just automatically."
+   ]
+  },
+  {
+   "id": "5a747a3755429974ef308c09",
+   "sentences": [
+    "Scott Richard Weiland ( ; born Scott Richard Kline; October 27, 1967 – December 3, 2015) was an American musician, singer and songwriter.",
+    "Richard Willis Hawley (born 17 January 1967) is an English guitarist, singer-songwriter and producer."
+   ]
+  },
+  {
+   "id": "6277705479500881118",
+   "sentences": [
+    "Polar moment of inertia is a quantity used to predict an object 's ability to resist torsion , in objects ( or segments of objects ) with an invariant circular cross section and no significant warping or out - of - plane deformation . It is used to calculate the angular displacement of an object subjected to a torque . It is analogous to the area moment of inertia , which characterizes an object 's ability to resist bending and is required to calculate displacement ."
+   ]
+  },
+  {
+   "id": "5a791ce955429974737f798e",
+   "sentences": [
+    "Brett Dallas McClure (born February 19, 1981 in Yakima, Washington) is a retired American gymnast.",
+    " He won a bronze medal in the pommel horse at the 2001 Goodwill Games in Brisbane, Australia, and later helped his U.S. gymnastics team earn a silver in the team competition at the 2004 Summer Olympics in Athens.",
+    " The competition was held in Brisbane, Queensland, Australia from 29 August to 9 September 2001."
+   ]
+  },
+  {
+   "id": "5abd455c55429924427fcf5a",
+   "sentences": [
+    "Age of Chance were a British alternative rock-dance crossover band from Leeds, England active from 1985 to 1991.",
+    "Vector was a rock band formed in Sacramento, California in the early 1980s by Jimmy Abegg, Steve Griffith and Charlie Peacock."
+   ]
+  },
+  {
+   "id": "-641745345943697344",
+   "sentences": [
+    "The Sino - Indian War ( Hindi : भारत - चीन युद्ध Bhārat - Chīn Yuddh ) , also known as the Sino - Indian Border Conflict ( simplified Chinese : 中 印 边境 战争 ; traditional Chinese : 中 印 邊境 戰爭 ; pinyin : Zhōng - Yìn Biānjìng Zhànzhēng ) , was a war between China and India that occurred in 1962 . A disputed Himalayan border was the main pretext for war , but other issues played a role . There had been a series of violent border incidents after the 1959 Tibetan uprising , when India had granted asylum to the Dalai Lama . India initiated a Forward Policy in which it placed outposts along the border , including several north of the McMahon Line , the eastern portion of a Line of Actual Control proclaimed by Chinese Premier Zhou Enlai in 1959 ."
+   ]
+  },
+  {
+   "id": "multihop-rag-2195",
+   "sentences": [
+    "Altman has been telling investors that he’s planning to launch a new venture, according to The Information.",
+    "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."
+   ]
+  },
+  {
+   "id": "5abdbf3755429933744ab818",
+   "sentences": [
+    " Born in Des Moines, Iowa, Watkins rose to fame in the early 1990s as a member of the girl-group TLC.",
+    " She is best known as the former main vocalist and member of South Korean girl group T-ara."
+   ]
+  },
+  {
+   "id": "multihop-rag-1541",
+   "sentences": [
+    "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts.",
+    "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-904",
+   "sentences": [
+    "Unfortunately, she did say that she had conversations with investors as part of their due diligence — and, of course, Alameda was taking on losses from FTX to keep FTX’s balance sheet pristine.",
+    "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."
+   ]
+  }
+ ]
+}

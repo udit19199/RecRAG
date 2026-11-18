@@ -1,0 +1,578 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "947860b1d1314d55",
+   "kind": "answer",
+   "question": "in us national flood insurance is available for which of the following",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Property owners in participating communities\n"
+  },
+  {
+   "id": "b064579736f9d7e4",
+   "kind": "answer",
+   "question": "lynyrd skynyrd last of a dying breed album",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "A 2012 studio album by Lynyrd Skynyrd."
+  },
+  {
+   "id": "e75807c87f777100",
+   "kind": "answer",
+   "question": "what causes cracked skin at the corners of your mouth",
+   "gold_answers": [
+    "infection",
+    "irritation",
+    "allergies"
+   ],
+   "model_answer": "Saliva irritation, often with Candida or bacterial infection."
+  },
+  {
+   "id": "57e1045a44252db0",
+   "kind": "answer",
+   "question": "where does the nitrogen for this fertilizer come from",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The atmosphere"
+  },
+  {
+   "id": "dfd0b580b1b89bc8",
+   "kind": "answer",
+   "question": "who was the first lady nominated member of the rajya sabha",
+   "gold_answers": [
+    "Mary Kom"
+   ],
+   "model_answer": "Rukmini Devi Arundale"
+  },
+  {
+   "id": "0a8688101ca8b7ac",
+   "kind": "answer",
+   "question": "where do honey bees live in the world",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Primarily South and Southeast Asia, with western honey bees spread across much of the world."
+  },
+  {
+   "id": "f966e72b70a8c051",
+   "kind": "answer",
+   "question": "where no man has gone before episode cast",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "William Shatner, Leonard Nimoy, Gary Lockwood, Sally Kellerman, James Doohan, George Takei, Nichelle Nichols, and Paul Fix."
+  },
+  {
+   "id": "7139d48381dfbd71",
+   "kind": "answer",
+   "question": "when do you hear the lub and dub sounds of the heart",
+   "gold_answers": [
+    "the closing of the atrioventricular valves and semilunar valves, respectively"
+   ],
+   "model_answer": "Lub: start of ventricular systole; dub: end of systole, beginning of diastole."
+  },
+  {
+   "id": "eb8ce9da5fa6f206",
+   "kind": "answer",
+   "question": "what are three different types of hotel properties",
+   "gold_answers": [
+    "Hotel barge",
+    "Bed and breakfast",
+    "Botel"
+   ],
+   "model_answer": "Resort, boutique, business hotel"
+  },
+  {
+   "id": "ffbc88e04d0d8b3b",
+   "kind": "answer",
+   "question": "cast of hawaii five o season 8 episode 9",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Alex O’Loughlin, Scott Caan, Chi McBride, Jorge Garcia, Meaghan Rath, Beulah Koale, and Ian Anthony Dale."
+  },
+  {
+   "id": "e2f74217827c0f12",
+   "kind": "answer",
+   "question": "who has the rights to alice in wonderland",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The original book is public domain; Disney owns rights to its adaptations."
+  },
+  {
+   "id": "395d1b17ac159d63",
+   "kind": "answer",
+   "question": "how has australia been influenced by other cultures",
+   "gold_answers": [
+    "The culture of Australia is a Western culture , derived primarily from Britain but also influenced by the unique geography of Australia , the diverse input of Aboriginal , Torres Strait Islander and other Australian people . The British colonization of Australia began in 1788 , and waves of multi-ethnic migration followed . Evidence of a significant Anglo - Celtic heritage includes the predominance of the English language , the existence of a democratic system of government drawing upon the British traditions of Westminster Government , Parliamentarianism and constitutional monarchy , American constitutionalist and federalist traditions , Christianity as the dominant religion , and the popularity of sports originating in ( or influenced by ) the British Isles . Australian culture has diverged significantly since British settlement ."
+   ],
+   "model_answer": "Through British and Indigenous roots, multi-ethnic migration, and American and global cultural influences."
+  },
+  {
+   "id": "3f9fed2a5c463ab1",
+   "kind": "answer",
+   "question": "what are the importance of rigor mortis in meat processing",
+   "gold_answers": [
+    "rigor mortis and its resolution partially determine the tenderness of meat",
+    "tenderness of meat"
+   ],
+   "model_answer": "It helps determine meat tenderness and guides processing to prevent cold shortening."
+  },
+  {
+   "id": "58082b5f35b83c58",
+   "kind": "answer",
+   "question": "when was the last time the world series went less than 7 games",
+   "gold_answers": [
+    "Year Winning team Losing team Score Site Notes 1909 Pittsburgh Pirates Detroit Tigers 8 -- 0 Bennett Park , Detroit Rookie Babe Adams tosses a six hit shutout for his third win of the series . 1912 Boston Red Sox New York Giants 3 -- 2 F / 10 Fenway Park , Boston This decisive contest was actually game eight , as game two had ended in a tie . 1924 Washington Senators New York Giants 4 -- 3 F / 12 Griffith Stadium , Washington , D.C. Longest game seven in innings . In the 12th , Muddy Ruel doubled after a dropped foul popfly by Giants catcher Hank Gowdy . Ruel scored on a game - winning RBI double by Earl McNeely . 1925 Pittsburgh Pirates Washington Senators 9 -- 7 Forbes Field , Pittsburgh Pittsburgh became the first team in a best of seven to win the series when trailing three games to one . 1926 St. Louis Cardinals New York Yankees 3 -- 2 Yankee Stadium , the Bronx , New York City Grover Cleveland Alexander strikes out Tony Lazzeri with the bases loaded to end the seventh and preserve the Cardinals lead . Two innings later Babe Ruth is caught stealing to end the World Series . 1931 St. Louis Cardinals Philadelphia Athletics 4 -- 2 St. Louis , Missouri Last postseason game for the Athletics while based in Philadelphia . 1934 St. Louis Cardinals Detroit Tigers 11 -- 0 Navin Field , Detroit Dizzy Dean 's second win , a six - hit shutout on one day of rest , gives the Cardinals the title . 1940 Cincinnati Reds Detroit Tigers 2 -- 1 Crosley Field , Cincinnati This game was over in a snappy 1 : 47 while a sacrifice bunt and sacrifice fly scored the winning runs . 1945 Detroit Tigers Chicago Cubs 9 -- 3 Wrigley Field , Chicago Cubs last World Series appearance until 2016 . See also : Curse of the Billy Goat 1946 St. Louis Cardinals Boston Red Sox 4 -- 3 Sportsman 's Park III , St. Louis , Missouri Enos Slaughter 's famous mad dash scored the deciding run to win the game and the series . 1947 New York Yankees Brooklyn Dodgers 5 -- 2 Yankee Stadium , the Bronx , New York City This was the Series that featured Cookie Lavagetto 's pinch - hit that spoiled Bill Bevens ' no - hit bid and Al Gionfriddo 's catch to rob Joe DiMaggio of a home run . 1952 New York Yankees Brooklyn Dodgers 4 -- 2 Ebbets Field , Brooklyn , New York City Billy Martin 's game saving infield catch preserves the Yankees lead and helps win the game and the series . 1955 Brooklyn Dodgers New York Yankees 2 -- 0 Yankee Stadium , the Bronx , New York City Dodgers ' only championship in Brooklyn . The home team won all games of the series , except for game seven . 1956 New York Yankees Brooklyn Dodgers 9 -- 0 Ebbets Field , Brooklyn , New York City Jackie Robinson 's final Major League game . Last postseason game at Ebbets Field and Dodgers ' last postseason game before moving to Los Angeles . The home team won all games of the series , except for game seven . 1957 Milwaukee Braves New York Yankees 5 -- 0 Yankee Stadium , the Bronx , New York City The Braves ' only championship in Milwaukee . 1958 New York Yankees Milwaukee Braves 6 -- 2 County Stadium , Milwaukee The Yankees win their 18th World Series title after being down three games to one . This was the Braves ' last postseason game in Milwaukee . 1960 Pittsburgh Pirates New York Yankees 10 -- 9 Forbes Field , Pittsburgh Bill Mazeroski hit the walk - off home run to win the Pirates the championship . Last postseason game in Forbes Field . Last postseason game for Yankees ' manager Casey Stengel . Highest scoring game seven . 1962 New York Yankees San Francisco Giants 1 -- 0 Candlestick Park , San Francisco With runners on second and third and two outs , Willie McCovey 's line drive to Bobby Richardson ended the game . First game seven that ended with a 1 - 0 score . 1964 St. Louis Cardinals New York Yankees 7 -- 5 Busch Stadium I , St. Louis , Missouri The Yankees ' last World Series appearance until 1976 . Last postseason game at Busch Stadium I . 1965 Los Angeles Dodgers Minnesota Twins 2 -- 0 Metropolitan Stadium , Bloomington , Minnesota Pitching through immense pain and on two days rest , Sandy Koufax throws a 3 hit shutout to win the Series and World Series MVP . The home team won all games of the series , except for game seven . 1967 St. Louis Cardinals Boston Red Sox 7 -- 2 Fenway Park , Boston Bob Gibson wins his third game of the Series and also homers . 1968 Detroit Tigers St. Louis Cardinals 4 -- 1 Busch Stadium II , St. Louis , Missouri Mickey Lolich out - duels Bob Gibson . The Tigers rallied from a 3 - 1 deficit to win the series . First game seven loss by the Cardinals in the World Series . 1971 Pittsburgh Pirates Baltimore Orioles 2 -- 1 Memorial Stadium , Baltimore The home team won all games of the series , except for game seven . 1972 Oakland Athletics Cincinnati Reds 3 -- 2 Riverfront Stadium , Cincinnati The A 's first championship in Oakland . The A 's were the last American League team to win a World Series game seven on the road until 2017 . 1973 Oakland Athletics New York Mets 5 -- 2 Oakland -- Alameda County Coliseum , Oakland , California Bert Campaneris and Reggie Jackson hit the only Oakland home runs in this game to set the tone for victory and the series . Cincinnati Reds Boston Red Sox 4 -- 3 Fenway Park , Boston One night after Carlton Fisk 's famous home run , the Reds rebound to take the Series . 1979 Pittsburgh Pirates Baltimore Orioles 4 -- 1 Memorial Stadium , Baltimore The Pittsburgh Pirates , powered by NLCS and World Series MVP Willie Stargell , rally from a 3 - 1 deficit to win the series . The Pirates were the last team to win a road game seven until 2014 . 1982 St. Louis Cardinals Milwaukee Brewers 6 -- 3 Busch Stadium II , St. Louis , Missouri Joaquín Andújar earns his second win of the Series and Bruce Sutter his second save . 1985 Kansas City Royals St. Louis Cardinals 11 -- 0 Royals Stadium , Kansas City , Missouri Second World Series held entirely in the state of Missouri . The Royals also won the 1985 American League Championship Series in seven games . Royals became first team to win the World Series after losing the first two games at home . The Royals were the last team to come back from 3 -- 1 down to win a title , in any of the five major men 's professional sports leagues , until the Cleveland Cavaliers won the 2016 NBA Finals after trailing 3 -- 1 . The 1985 Royals were the last team to win a World Series after trailing 3 -- 1 until the Cubs did so in 2016 . 1986 New York Mets Boston Red Sox 8 -- 5 Shea Stadium , Flushing , Queens , New York Mets become the first team to be one strike away from elimination and come back to win the series . They also become the second team to win the series after losing the first two at home . Minnesota Twins St. Louis Cardinals 4 -- 2 Hubert H. Humphrey Metrodome , Minneapolis The home team won all seven games of the series for the first time in MLB history . 1991 Minnesota Twins Atlanta Braves 1 -- 0 F / 10 Hubert H. Humphrey Metrodome , Minneapolis Like in 1987 , the home team won all games of the series . The Twins won in the bottom of the 10th on a walk - off single by Gene Larkin scoring Dan Gladden after ​ 9 ⁄ scoreless innings of play . Jack Morris goes all ten innings for the Twins and is named the Series MVP . Twins Centerfielder Kirby Puckett hit a famous walk - off home run in the bottom of the eleventh inning of the previous night 's game to force this decisive game . 1997 Florida Marlins Cleveland Indians 3 -- 2 F / 11 Pro Player Stadium , Miami Gardens , Florida Florida becomes the first wild card team to win the World Series . The Marlins rallied for one run in the bottom of the ninth to tie and won in the eleventh on an Édgar Rentería RBI single off Charles Nagy . 2001 Arizona Diamondbacks New York Yankees 3 -- 2 Bank One Ballpark , Phoenix , Arizona Arizona becomes the fastest expansion team to win the World Series , rallying for two runs in the bottom of the ninth for a come - from - behind win , capped off by Luis Gonzalez hitting the winning RBI single off closer Mariano Rivera . The home team won every game of the series . 2002 Anaheim Angels San Francisco Giants 4 -- 1 Edison International Field , Anaheim , California Both World Series teams were wild card entrants into the playoffs . John Lackey became the second rookie pitcher to win a World Series game seven . 2011 St. Louis Cardinals Texas Rangers 6 -- 2 Busch Stadium , St. Louis , Missouri Cardinals became the second team to be one strike away from elimination and come back to win the series , which they did twice . Just like the 1991 series , a walk - off home run in the bottom of the eleventh inning of game six , forced this decisive game with David Freese providing the fire power . Most recent game seven won by the home team . 2014 San Francisco Giants Kansas City Royals 3 -- 2 Kauffman Stadium , Kansas City , Missouri Like in 2002 , both World Series teams were wild card entrants into the playoffs . The Giants became the first NL team to win a game seven on the road since 1979 . NLCS MVP and eventual World Series MVP Madison Bumgarner , normally a starter , pitched five scoreless innings of relief on two days rest to save the Giants ' third title in five years . 2016 Chicago Cubs Cleveland Indians 8 -- 7 F / 10 Progressive Field , Cleveland , Ohio Chicago Cubs ' first World Series win since 1908 . Game played between the two teams ( Cleveland Indians and Chicago Cubs ) with the longest active championship droughts . The Cubs are the first Major League Baseball team to come back to win the World Series from a 3 -- 1 series deficit since the 1985 Royals . Most recent World Series game seven to be decided in extra innings . First extra innings game seven to be won by the road team . 2017 Houston Astros Los Angeles Dodgers 5 -- 1 Dodger Stadium , Los Angeles First instance of back - to - back game sevens since 2001 -- 2002 . First World Series championship for the Astros , who became the first AL team to win a World Series game 7 on the road since 1972 . The Astros became the second team to win two winner - take - all game sevens in the same postseason since the Kansas City Royals in 1985 ."
+   ],
+   "model_answer": "2024 (five games)"
+  },
+  {
+   "id": "2380d2d6c6982eb6",
+   "kind": "answer",
+   "question": "what is the significance of the sahara desert",
+   "gold_answers": [
+    "the largest hot desert and the third largest desert in the world after Antarctica and the Arctic",
+    "the largest hot desert",
+    "the third largest desert in the world after Antarctica and the Arctic"
+   ],
+   "model_answer": "A major natural barrier and historic center of human settlement and trans-Saharan trade."
+  },
+  {
+   "id": "2a3b53eb99d7db13",
+   "kind": "answer",
+   "question": "where was the original flight of the phoenix filmed",
+   "gold_answers": [
+    "20th Century-Fox Studios",
+    "20th Century-Fox Ranch, California",
+    "Buttercup Valley, Arizona",
+    "Pilot Knob Mesa, California",
+    "the 20th Century-Fox Studios",
+    "Pilot Knob Mesa near Winterhaven, located in California's Imperial Valley, on the western fringes of Yuma, Arizona",
+    "at the 20th Century-Fox Studios and 20th Century-Fox Ranch, California",
+    "Winterhaven, located in California's Imperial Valley, on the western fringes of Yuma, Arizona"
+   ],
+   "model_answer": "Pilot Knob Mesa near Winterhaven, California."
+  },
+  {
+   "id": "11286bffdc666236",
+   "kind": "answer",
+   "question": "what was the soviets response to the truman doctrine",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The Zhdanov Doctrine and creation of the Cominform."
+  },
+  {
+   "id": "b459e2278a5eb23a",
+   "kind": "answer",
+   "question": "the private ownership of real property is known as",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Private property"
+  },
+  {
+   "id": "d8db333837e14e2a",
+   "kind": "answer",
+   "question": "what is the payout for the texas bowl",
+   "gold_answers": [
+    "US$3 million per team",
+    "US$3 million per team (as of 2015)"
+   ],
+   "model_answer": "$6.4 million"
+  },
+  {
+   "id": "790306385e069c03",
+   "kind": "answer",
+   "question": "if there is a line that lies parallel to the horizon it is said to be",
+   "gold_answers": [
+    "A vanishing point"
+   ],
+   "model_answer": "Horizontal line"
+  },
+  {
+   "id": "cf6428975c634da9",
+   "kind": "answer",
+   "question": "what is the significance of the sahara desert",
+   "gold_answers": [
+    "the largest hot desert and the third largest desert in the world after Antarctica and the Arctic",
+    "the largest hot desert",
+    "the third largest desert in the world after Antarctica and the Arctic"
+   ],
+   "model_answer": "The world’s largest hot desert and a major climatic and cultural region."
+  },
+  {
+   "id": "3ec35ad8b437f5d9",
+   "kind": "answer",
+   "question": "who got what in the compromise of 1877",
+   "gold_answers": [
+    "The Compromise of 1877 was an informal , unwritten deal that settled the intensely disputed 1876 U.S. presidential election . It resulted in the United States federal government pulling the last troops out of the South , and formally ended the Reconstruction Era . Through the Compromise , Republican Rutherford B. Hayes was awarded the White House over Democrat Samuel J. Tilden on the understanding that Hayes would remove the federal troops whose support was essential for the survival of Republican state governments in South Carolina , Florida and Louisiana . The compromise involved Democrats who controlled the House of Representatives allowing the decision of the Electoral Commission to take effect . The outgoing president , Republican Ulysses S. Grant , removed the soldiers from Florida . As president , Hayes removed the remaining troops from South Carolina and Louisiana . As soon as the troops left , many white Republicans also left , and the `` Redeemer '' Democrats took control . They already dominated other state governments in the South . What was exactly agreed is somewhat contested as the documentation is insufficient ."
+   ],
+   "model_answer": "Hayes became president; Southern Democrats gained troop withdrawal and home rule."
+  },
+  {
+   "id": "97b0d8e218cdb055",
+   "kind": "answer",
+   "question": "you gotta fight for your right to party cover",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Coldplay (2009)"
+  },
+  {
+   "id": "77c52182fb7cb401",
+   "kind": "answer",
+   "question": "what is the most current adobe flash player version",
+   "gold_answers": [
+    "28.0.0.137"
+   ],
+   "model_answer": "Adobe Flash Player 32.0.0.465 (final version)"
+  },
+  {
+   "id": "ffd6305d72ff88e1",
+   "kind": "answer",
+   "question": "who occupied the holy land after the 8th crusade",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The Mamluk Sultanate"
+  },
+  {
+   "id": "51ad7b4b5ab5f114",
+   "kind": "answer",
+   "question": "who was kat slater's sisters in eastenders",
+   "gold_answers": [
+    "Lynne",
+    "Little Mo",
+    "Zoe"
+   ],
+   "model_answer": "Lynne and Little Mo."
+  },
+  {
+   "id": "1c34c2d2d1268c13",
+   "kind": "answer",
+   "question": "where no man has gone before episode cast",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "William Shatner, Leonard Nimoy, James Doohan, George Takei, Gary Lockwood, Sally Kellerman, Lloyd Haynes, Andrea Dromm, Paul Carr, and Paul Fix."
+  },
+  {
+   "id": "53c18ed61ed5d3c1",
+   "kind": "answer",
+   "question": "who has scored more goals in the premier league",
+   "gold_answers": [
+    "Alan Shearer"
+   ],
+   "model_answer": "Alan Shearer (260 goals)"
+  },
+  {
+   "id": "0d5c2749ecbd6419",
+   "kind": "answer",
+   "question": "where do car factories tend to be located and why",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Near major markets and transport hubs, for efficient access to customers and suppliers."
+  },
+  {
+   "id": "04d14f72dced135c",
+   "kind": "answer",
+   "question": "who sang go tell it on the mountain",
+   "gold_answers": [
+    "`` Go Tell It on the Mountain '' is an African - American spiritual song , compiled by John Wesley Work , Jr. , dating back to at least 1865 , that has been sung and recorded by many gospel and secular performers . It is considered a Christmas carol because its original lyrics celebrate the Nativity of Jesus :"
+   ],
+   "model_answer": "Mahalia Jackson, Bob Marley, Dolly Parton, and many others."
+  },
+  {
+   "id": "e54d9877be2cc618",
+   "kind": "answer",
+   "question": "spike jones and his city slickers two front teeth",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Recorded in 1947, released in 1948."
+  },
+  {
+   "id": "996c32998c1d5689",
+   "kind": "answer",
+   "question": "radio romance ep 4 eng sub my asian tv",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Radio Romance Episode 4 with English subtitles on MyAsianTV."
+  },
+  {
+   "id": "c658954d0cdab377",
+   "kind": "answer",
+   "question": "what does the transfer case control module do",
+   "gold_answers": [
+    "transfers power from the transmission to the front and rear axles by means of drive shafts",
+    "transfers power from the transmission to the front and rear axles",
+    "synchronizes the difference between the rotation of the front and rear wheels",
+    "may contain one or more sets of low range gears for off-road use"
+   ],
+   "model_answer": "Controls the transfer case’s 2WD/4WD and gear-range changes."
+  },
+  {
+   "id": "2ed7a33982fa4c86",
+   "kind": "answer",
+   "question": "who's playing in the world series and when is it",
+   "gold_answers": [
+    "Houston Astros",
+    "Los Angeles Dodgers",
+    "October 24 – November 1"
+   ],
+   "model_answer": "The Dodgers and Yankees; Game 1 is October 25."
+  },
+  {
+   "id": "801700ce95e94176",
+   "kind": "answer",
+   "question": "which regions on earth have seasons tied to the amount of rainfall",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Mediterranean and monsoon-affected tropical regions, including Australia."
+  },
+  {
+   "id": "e915f984adb63b95",
+   "kind": "answer",
+   "question": "whens the last time the patriots played the eagles",
+   "gold_answers": [
+    "Super Bowl LII"
+   ],
+   "model_answer": "Super Bowl LII in 2018"
+  },
+  {
+   "id": "c73e9b49f99a0ab9",
+   "kind": "answer",
+   "question": "what is the first basic process in the light reaction of photosynthesis",
+   "gold_answers": [
+    "one molecule of the pigment chlorophyll absorbs one photon and loses one electron",
+    "energy from light is absorbed by proteins called reaction centres that contain green chlorophyll pigments"
+   ],
+   "model_answer": "Chlorophyll absorbs light and releases an electron."
+  },
+  {
+   "id": "a0083c5c4878d773",
+   "kind": "answer",
+   "question": "when do the grand magic games start in fairy tail",
+   "gold_answers": [
+    "Crocus, the Flower-Blooming Capital"
+   ],
+   "model_answer": "In three months’ time."
+  },
+  {
+   "id": "0b241ec254b1cd37",
+   "kind": "answer",
+   "question": "was nightmare before christmas originally a disney movie",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, it was released by Disney’s Touchstone Pictures."
+  },
+  {
+   "id": "357db7b5710cbb09",
+   "kind": "answer",
+   "question": "whens the last time the patriots played the eagles",
+   "gold_answers": [
+    "Super Bowl LII"
+   ],
+   "model_answer": "Super Bowl LII (February 4, 2018)"
+  },
+  {
+   "id": "36e76b468db39a1a",
+   "kind": "answer",
+   "question": "what awards did the harry potter movies win",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "BAFTA, Saturn, Empire, National Movie, Phoenix Film Critics Society, BMI Film Music, AFI Special, and BAFTA Britannia awards."
+  },
+  {
+   "id": "0461a5e9278f26d1",
+   "kind": "answer",
+   "question": "i hope that you don't fall in love with me",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "I don’t have feelings, so no."
+  },
+  {
+   "id": "8796081c672fcc75",
+   "kind": "answer",
+   "question": "my girl don't lie to me american gods",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "“My Girl” by The Temptations."
+  },
+  {
+   "id": "87ad9c58bfa7c7f7",
+   "kind": "answer",
+   "question": "when is the last time the philadelphia won the superbowl",
+   "gold_answers": [
+    "Super Bowl LII,",
+    "2017"
+   ],
+   "model_answer": "2018 (Super Bowl LII)"
+  },
+  {
+   "id": "9d712cc42658ef7d",
+   "kind": "answer",
+   "question": "what were the technological developments of the old stone age",
+   "gold_answers": [
+    "Stone tools were made from a variety of stones . For example , flint and chert were shaped ( or chipped ) for use as cutting tools and weapons , while basalt and sandstone were used for ground stone tools , such as quern - stones . Wood , bone , shell , antler ( deer ) and other materials were widely used , as well . During the most recent part of the period , sediments ( such as clay ) were used to make pottery . Agriculture was developed and certain animals were domesticated as well ."
+   ],
+   "model_answer": "Stone tools developed from simple pebble tools to more sophisticated choppers; wood and bone tools were also used."
+  },
+  {
+   "id": "4b21ad0858820fa8",
+   "kind": "answer",
+   "question": "who has won india's next super star",
+   "gold_answers": [
+    "Aman Gandotra",
+    "Natasha Bharadwaj"
+   ],
+   "model_answer": "Aman Gandotra and Natasha Bharadwaj"
+  },
+  {
+   "id": "a101e8bb2c813332",
+   "kind": "answer",
+   "question": "what is the weight of a honda fit",
+   "gold_answers": [
+    "1,020–1,080 kg"
+   ],
+   "model_answer": "1,020–1,080 kg (2,249–2,381 lb)"
+  },
+  {
+   "id": "5e2c694591a26474",
+   "kind": "answer",
+   "question": "where does captain america civil war take place",
+   "gold_answers": [
+    "approximately one year after Ultron's defeat in the nation of Sokovia at the hands of the Avengers"
+   ],
+   "model_answer": "Lagos, Siberia, Berlin, and the United States."
+  },
+  {
+   "id": "343548ef2cb292ad",
+   "kind": "answer",
+   "question": "where was uncle tom's cabin first published",
+   "gold_answers": [
+    "in The National Era, an abolitionist periodical, starting with the June 5, 1851, issue",
+    "The National Era",
+    "The National Era, an abolitionist periodical"
+   ],
+   "model_answer": "The National Era in the United States"
+  },
+  {
+   "id": "24d0d053384c52fb",
+   "kind": "answer",
+   "question": "superhero names that start with the letter b",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Battleaxe, Battlestar, Beast, Baymax, and Butterball"
+  },
+  {
+   "id": "a362ce6466f44b2b",
+   "kind": "answer",
+   "question": "states that have adopted the model rules of professional conduct",
+   "gold_answers": [
+    "The ABA Model Rules of Professional Conduct , created by the American Bar Association ( ABA ) , are a set of rules that prescribe baseline standards of legal ethics and professional responsibility for lawyers in the United States . They were promulgated by the ABA House of Delegates upon the recommendation of the Kutak Commission in 1983 . The rules are merely recommendations , or models , ( hence the name `` Model Rules '' ) and are not themselves binding . However , having a common set of Model Rules facilitates a common discourse on legal ethics , and simplifies professional responsibility training as well as the day - to - day application of such rules . As of 2015 , 49 states and four territories have adopted the rules in whole or in part , of which the most recent to do so was the Commonwealth of the Northern Mariana Islands in March 2015 . California is the only state that has not adopted the ABA Model Rules , while Puerto Rico is the only U.S. jurisdiction outside of confederation has not adopted them but instead has its own Código de Ética Profesional ."
+   ],
+   "model_answer": "49 states—all except California."
+  },
+  {
+   "id": "2cddbceea3bc0c37",
+   "kind": "answer",
+   "question": "where are located the acetabulum and the glenoid cavities",
+   "gold_answers": [
+    "Compared to the acetabulum ( at the hip - joint ) the glenoid cavity is relatively shallow . This makes the shoulder joint prone to dislocation ( luxation ) . Strong glenohumeral ligaments and muscles prevents dislocation in most cases ."
+   ],
+   "model_answer": "Acetabulum: hip joint; glenoid cavity: lateral angle of the scapula."
+  },
+  {
+   "id": "afda4834d22b4bb3",
+   "kind": "answer",
+   "question": "was nightmare before christmas originally a disney movie",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes—originally released under Touchstone Pictures, a Disney label."
+  },
+  {
+   "id": "4cf0c74b84d4b415",
+   "kind": "answer",
+   "question": "dean koontz dark rivers of the heart summary",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "A former cop and a mysterious woman flee a ruthless secret government agency."
+  },
+  {
+   "id": "da91b61d7811c5b3",
+   "kind": "answer",
+   "question": "where do the royalties for winnie the pooh go",
+   "gold_answers": [
+    "Slesinger, Inc.",
+    "the Slesinger family"
+   ],
+   "model_answer": "Primarily to the Royal Literary Fund and other beneficiaries of A. A. Milne’s estate."
+  },
+  {
+   "id": "70df0ee24f8bf81f",
+   "kind": "answer",
+   "question": "superhero names that start with the letter b",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Batman, Batgirl, Black Panther, Blue Beetle, Black Widow"
+  },
+  {
+   "id": "481992523e79239e",
+   "kind": "answer",
+   "question": "fitting of rim on a locomotive wheel is done by",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Heating the rim and shrink-fitting it onto the wheel."
+  },
+  {
+   "id": "da659c1f08b0bea2",
+   "kind": "answer",
+   "question": "what is the corporate tax rate in great britain",
+   "gold_answers": [
+    "a flat rate of 20%",
+    "20%"
+   ],
+   "model_answer": "20% as of April 2015"
+  },
+  {
+   "id": "8636b58239a7ff0c",
+   "kind": "answer",
+   "question": "who took over for batman when his back was broken",
+   "gold_answers": [
+    "Jean-Paul Valley (a.k.a. Azrael)",
+    "an apprentice named Jean-Paul Valley (a.k.a. Azrael)"
+   ],
+   "model_answer": "Azrael (Jean-Paul Valley)"
+  },
+  {
+   "id": "91a7796965f08a34",
+   "kind": "answer",
+   "question": "who may be affected by monetary penalties imposed by the irs",
+   "gold_answers": [
+    "Taxpayers in the United States"
+   ],
+   "model_answer": "Taxpayers and tax advisers."
+  }
+ ],
+ "evidence": []
+}

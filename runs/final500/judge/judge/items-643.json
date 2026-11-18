@@ -1,0 +1,402 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "edf048a04fe0fa61",
+   "gold": [
+    {
+     "sentence": "US Airways Flight 1549 was an Airbus A320-214 which, three minutes after takeoff from New York City's LaGuardia Airport on January 15, 2009, struck a flock of Canada geese just northeast of the George Washington Bridge and consequently lost all engine power.",
+     "facts": {
+      "0.0": "US Airways Flight 1549 was an Airbus A320-214.",
+      "0.1": "US Airways Flight 1549 took off from New York City's LaGuardia Airport.",
+      "0.2": "US Airways Flight 1549 took off on January 15, 2009.",
+      "0.3": "US Airways Flight 1549 struck a flock of Canada geese three minutes after takeoff.",
+      "0.4": "The bird strike happened just northeast of the George Washington Bridge.",
+      "0.5": "US Airways Flight 1549 consequently lost all engine power."
+     }
+    },
+    {
+     "sentence": " Unable to reach any airport, pilots Chesley Sullenberger and Jeffrey Skiles glided the plane to a ditching in the Hudson River off Midtown Manhattan.",
+     "facts": {
+      "1.0": "Pilots could not reach any airport.",
+      "1.1": "Pilots Chesley Sullenberger and Jeffrey Skiles glided the plane to a ditching in the Hudson River.",
+      "1.2": "The Hudson River ditching was off Midtown Manhattan."
+     }
+    },
+    {
+     "sentence": "Chesley Burnett \"Sully\" Sullenberger III (born 1951) is an American retired airline captain celebrated for the January 15, 2009 water landing of US Airways Flight 1549 in the Hudson River off Manhattan after the plane was disabled by striking a flock of Canada geese immediately after takeoff; all 155 people aboard survived.",
+     "facts": {
+      "2.0": "Chesley Burnett \"Sully\" Sullenberger III was born in 1951.",
+      "2.1": "Chesley Sullenberger is an American retired airline captain.",
+      "2.2": "Chesley Sullenberger is celebrated for the January 15, 2009 water landing of US Airways Flight 1549 in the Hudson River off Manhattan.",
+      "2.3": "The plane was disabled by striking a flock of Canada geese immediately after takeoff.",
+      "2.4": "All 155 people aboard survived."
+     }
+    }
+   ],
+   "items": [
+    "Charles J. Biddle (aviator)\nMajor Charles John Biddle (13 May 1890 – 22 March 1972) was an American aviator, attorney, and author.\n\n He was a flying ace during World War I.\n\n Postwar, he launched a career in law and wrote his memoirs.",
+    "Chesley Sullenberger\nChesley Burnett \"Sully\" Sullenberger III (born 1951) is an American retired airline captain celebrated for the January 15, 2009 water landing of US Airways Flight 1549 in the Hudson River off Manhattan after the plane was disabled by striking a flock of Canada geese immediately after takeoff; all 155 people aboard survived.\n\n Sullenberger is an international speaker on airline safety and has helped develop new protocols for airline safety.\n\n He served as the co-chairman, along with First Officer Jeffrey Skiles, of the EAA's Young Eagles youth introduction-to-aviation program from 2009 to 2013.\n\n He retired from US Airways after 30 years as a commercial pilot on March 3, 2010.\n\n In May of the following year, Sullenberger was hired by CBS News as an Aviation and Safety Expert.",
+    "ALM Flight 980\nALM Antillean Airlines Flight 980 was a flight scheduled to fly from John F. Kennedy International Airport in New York City to Princess Juliana International Airport in St. Maarten, Netherlands Antilles, on 2 May 1970.\n\n After several unsuccessful landing attempts, the aircraft's fuel was exhausted and it made a forced water landing (ditching) in the Caribbean Sea 48 km (30 mi) off St. Croix, with 23 fatalities and 40 survivors.\n\n The accident is one of a small number of intentional water ditchings of jet airliners.",
+    "Wayne W. Lambert\nWayne W. Lambert (born 1936) was an Air force Brigadier General (United States).\n\n He attended the United States Military Academy at West Point, New York, after already having served a year in the US Army.\n\n Lambert graduated from the Academy in 1959 and was commissioned a 2nd Lieutenant in the USAF that same year.\n\n He trained as a bomber pilot, receiving his Aviator badge in 1960.\n\n He has logged over 5,800 flying hours with the US Air Force.\n\n A seasoned combat veteran, Lambert flew over 225 combat missions in South East Asia as a B-52 crew member.\n\n He was awarded the Distinguished Flying Cross (United States) and received 10 awards of the Air Medal for his service during the Vietnamese War.\n\n After serving in a succession of lesser command positions, Lambert was promoted to the rank of Brigadier General in 1983, assuming command of the former Strategic Air Command’s 7th Air Division, headquartered then at Ramstein Air Base in West Germany, and overseeing SAC operations throughout the European theater.\n\n The Brigadier General retired from the US Air Force in 1989.",
+    "Water landing\nA water landing is, in the broadest sense, a landing on a body of water.\n\n Some aircraft such as floatplanes land on water as a matter of course.",
+    "US Airways Flight 1549\nUS Airways Flight 1549 was an Airbus A320-214 which, three minutes after takeoff from New York City's LaGuardia Airport on January 15, 2009, struck a flock of Canada geese just northeast of the George Washington Bridge and consequently lost all engine power.\n\n Unable to reach any airport, pilots Chesley Sullenberger and Jeffrey Skiles glided the plane to a ditching in the Hudson River off Midtown Manhattan.\n\n All 155 people aboard were rescued by nearby boats and there were few serious injuries.",
+    "Cecil Frederick King\nCaptain Cecil Frederick King (19 February 1899 – 24 January 1919), Military Cross, Distinguished Flying Cross, French Croix de Guerre was a World War I fighter ace credited with 22 aerial victories.",
+    "John Christiansen\nJohn “Chris” Christiansen (May 1, 1923 － September 12, 1998) was the chief military test pilot for Lockheed California Company for over 30 years.\n\n He might be most known for having performed Lockheed S-3 Viking's maiden flight on January 21, 1972.\n\n His assignments also included the initial test flights of Lockheed P-3 Orion.\n\n Christiansen was born in Oslo, Norway in 1923 and became an American citizen in 1939.\n\n He later served in the U.S. Navy during World War II and the Korean Conflict.\n\n He began experimental flying for Lockheed Martin in 1953, and worked there until his retirement in 1984.\n\n He was a fellow at Society of Experimental Test Pilots.",
+    "Witmer Stone\nWitmer Stone (September 22, 1866 – May 24, 1939) was an American ornithologist, botanist, and mammalogist, and was considered one of the last of the “great naturalists.”\n\n Stone is remembered principally as an ornithologist.\n\n He was president of the American Ornithologists’ Union (AOU) 1920–23, and was editor of the AOU’s periodical \"The Auk\" 1912–1936.\n\n He spearheaded the production of the 4th edition of the AOU checklist, published in 1931.\n\n He worked for over 50 years in the Ornithology Department at the Academy of Natural Sciences of Philadelphia, eventually serving as Director of the institution.\n\n Stone was one of the founding members of the Delaware Valley Ornithological Club (DVOC) in 1890 and was actively involved in the organization for the remainder of his life.\n\n Stone was one of only two scientists (Joseph Grinnell was the other) to serve as president of both the AOU and the American Society of Mammalogists, and he co-authored two popular books about mammals.",
+    "Bird strike\nA bird strike—sometimes called birdstrike, bird ingestion (for an engine), bird hit, or bird aircraft strike hazard (BASH)—is a collision between an airborne animal (usually a bird or bat) and a manmade vehicle, especially an aircraft.\n\n The term is also used for bird deaths resulting from collisions with structures such as power lines, towers and wind turbines (see Bird-skyscraper collisions and Towerkill)."
+   ]
+  },
+  {
+   "id": "d668654190f345d2",
+   "gold": [
+    {
+     "sentence": "Yucca is a genus of perennial shrubs and trees in the family Asparagaceae, subfamily Agavoideae.",
+     "facts": {
+      "0.0": "Yucca is a genus of perennial shrubs and trees.",
+      "0.1": "Yucca is in the family Asparagaceae.",
+      "0.2": "Yucca is in the subfamily Agavoideae."
+     }
+    },
+    {
+     "sentence": "Rodgersia is a genus of flowering plants in the Saxifragaceae family.",
+     "facts": {
+      "1.0": "Rodgersia is a genus of flowering plants.",
+      "1.1": "Rodgersia is in the Saxifragaceae family."
+     }
+    },
+    {
+     "sentence": " \"Rodgersia\" are herbaceous perennials originating from east Asia.",
+     "facts": {
+      "2.0": "Rodgersia are herbaceous perennials.",
+      "2.1": "Rodgersia originate from east Asia."
+     }
+    }
+   ],
+   "items": [
+    "Yucca\nYucca is a genus of perennial shrubs and trees in the family Asparagaceae, subfamily Agavoideae.\n\n Its 40-50 species are notable for their rosettes of evergreen, tough, sword-shaped leaves and large terminal panicles of white or whitish flowers.\n\n They are native to the hot and dry (arid) parts of the Americas and the Caribbean.\n\n Early reports of the species were confused with the cassava (\"Manihot esculenta\").\n\n Consequently, Linnaeus mistakenly derived the generic name from the Taíno word for the latter, \"yuca\" (spelled with a single \"c\").\n\n It is commonly found growing in rural graveyards and when in bloom the cluster of (usually pale) flowers on a thin stalk appear as floating apparitions.",
+    "Yucca gloriosa var. tristis\nYucca gloriosa\" var.\n\n \"tristis (syn.\n\n Yucca recurvifolia, \"Yucca gloriosa\" var.\n\n \"recurvifolia\"), known as curve-leaf yucca, curved-leaved Spanish-dagger or pendulous yucca, is a variety of \"Yucca gloriosa\".\n\n It is often grown as an ornamental plant, but is native to the southeastern United States.\n\n In contrast to \"Y. gloriosa\" var.\n\n \"tristis\", the leaves of \"Y. gloriosa\" var.\n\n \"gloriosa\" are hard stiff, erect and narrower.",
+    "Hesperoyucca whipplei\nHesperoyucca whipplei (syn.\n\n \"Yucca whipplei\" ) (chaparral yucca, our Lord's candle, Spanish bayonet, Quixote yucca or foothill yucca is a species of flowering plant closely related to, and formerly usually included in, the genus \"Yucca\".\n\n It is native to southern California, United States and Baja California, Mexico, where it occurs mainly in chaparral, coastal sage scrub, and oak woodland plant communities at altitudes of 0–2500 m.",
+    "Yucca glauca\nYucca glauca (syn.\n\n \"Yucca angustifolia\") is a species of perennial evergreen plant, adapted to xeric (dry)growth conditions.\n\n It is also known as small soapweed, soapweed yucca, Spanish bayonet, Great Plains yucca and beargrass.",
+    "Yucca × schottii\nYucca\" × \"schottii is a plant species in the genus \"Yucca\", native to southern Arizona, southwestern New Mexico, and the northern parts of Sonora and Chihuahua.\n\n.\n\n The common names are Schott's yucca, hoary yucca, and mountain yucca.\n\n The \"×\" in the name indicates that this is a nothospecies, regarded as being a natural hybrid between two other species.\n\n In this case, \"Yucca\" × \"schottii\" is believed to have originated as a hybrid between \"Y. baccata\" and \"Y. madrensis\".\n\n \"Yucca\" × \"schottii\" is firmly established and does reproduce freely in the wild.",
+    "Yucca rupicola\nYucca rupicola is a plant in the family Asparagaceae, known as the twistleaf yucca, twisted-leaf yucca, Texas yucca or twisted-leaf Spanish-dagger.\n\n The species was described by George Heinrich Adolf Scheele in 1850.\n\n This is a small, acaulescent plant with distinctive twisted leaves.\n\n It is native to the Edwards Plateau region of Texas and also to northeastern Mexico (Coahuila, Nuevo León).",
+    "Yucca aloifolia\nYucca aloifolia is the type species for the genus Yucca.\n\n Common names include aloe yucca, dagger plant, and Spanish bayonet.\n\n It grows in sandy soils, especially on sand dunes along the coast.\n\n \"Yucca aloifolia\" is native to the Atlantic and Gulf Coasts of the United States from southern Virginia south to Florida and west to the Texas Gulf Coast, to Mexico along the Yucatán coast, and to Bermuda, and parts of the Caribbean.\n\n Normally Yucca aloifolia is grown in USDA zones 8 through 11.\n\n Yucca aloifolia is a popular landscape plant in beach areas along the lower East Coast from Virginia to Florida.",
+    "Yucca jaliscensis\nYucca jaliscensis is a \"Yucca\" species native to the highlands of southwestern Mexico.\n\n Common names for this species include Jalisco Yucca, Jalisco Soapwort, Izote Yucca.\n\n It is native to mountainous areas at about 5000 feet in the States of Jalisco, Colima and Guanajuato.",
+    "Yucca brevifolia\nYucca brevifolia is a plant species belonging to the genus \"Yucca\".\n\n It is tree-like in habit, which is reflected in its common names: Joshua tree, yucca palm, tree yucca, and palm tree yucca.",
+    "Rodgersia\nRodgersia is a genus of flowering plants in the Saxifragaceae family.\n\n \"Rodgersia\" are herbaceous perennials originating from east Asia."
+   ]
+  },
+  {
+   "id": "f41536f81ff5d7e2",
+   "gold": [
+    {
+     "sentence": "Stephen Lawrence \"Steve\" Winwood (born 12 May 1948) is an English musician whose genres include rock, blue-eyed soul, rhythm and blues, blues rock, pop rock, and jazz.",
+     "facts": {
+      "0.0": "Stephen Lawrence 'Steve' Winwood was born 12 May 1948.",
+      "0.1": "Steve Winwood is an English musician.",
+      "0.2": "Steve Winwood's genres include rock, blue-eyed soul, rhythm and blues, blues rock, pop rock, and jazz."
+     }
+    },
+    {
+     "sentence": "Per \"Pelle\" Almqvist (born 29 May 1978), also known as Howlin' Pelle Almqvist, is a Swedish singer and songwriter.",
+     "facts": {
+      "1.0": "Per 'Pelle' Almqvist was born 29 May 1978.",
+      "1.1": "Per 'Pelle' Almqvist is also known as Howlin' Pelle Almqvist.",
+      "1.2": "Per 'Pelle' Almqvist is a Swedish singer and songwriter."
+     }
+    }
+   ],
+   "items": [
+    "Pelle Almqvist\nPer \"Pelle\" Almqvist (born 29 May 1978), also known as Howlin' Pelle Almqvist, is a Swedish singer and songwriter.\n\n He is the lead singer of garage rock band The Hives.",
+    "Revolutions – The Very Best of Steve Winwood\nRevolutions – The Very Best of Steve Winwood is the sixth compilation album by Steve Winwood.\n\n The album includes music from Winwood's solo career, as well as groups with which he has performed, including The Spencer Davis Group, Traffic, and Blind Faith.\n\n The CD was released as a box set and a single disc.\n\n As of October 2014, the box set is out of print (but can be purchased digitally), while the single disc is still available.\n\n The songs \"The Finer Things\" and \"Roll With It\" are exclusive to the single disc version and cannot be found on the box set.",
+    "Winwood (album)\nWinwood is the first compilation album of music featuring Steve Winwood.\n\n This two-record set was issued in 1971 by United Artists Records and features music which Winwood performed with The Spencer Davis Group, Powerhouse, Traffic and Blind Faith.\n\n UA Records issued this album after Winwood's band Traffic left UA when their home label Island Records set up their own American operation.\n\n Issued without Winwood's authorization as catalogue number UAS-9950, it was taken off the market after legal action by Winwood and Island Records.\n\n It was then reissued with minor changes as catalogue number UAS-9964.\n\n Currently out of print, it was issued on CD by Universal Music of Japan for the Japanese market.",
+    "Steve Winwood (album)\nSteve Winwood is the debut solo studio album by blue-eyed soulster Steve Winwood.\n\n It was released three years after the break-up of Traffic.\n\n Though the album sold moderately well in the USA, it was a commercial disappointment compared to Traffic's recent albums, peaking at number 22 on the \"Billboard\" 200 album chart.\n\n In Winwood's home country the situation was reversed; while Traffic's recent albums had only been moderately successful in the UK, \"Steve Winwood\" reached number 12 on The Official Charts.\n\n Island Records launched two singles from the album, \"Hold On\" and \"Time Is Running Out\", both of which failed to make the charts.",
+    "Go Too\nGo Too (1977) is Go's third album.\n\n Go was founded by Stomu Yamashta, Steve Winwood and Michael Shrieve.\n\n For this album, Jess Roden replaced Steve Winwood (who had left the group).\n\n The style of the music became modified accordingly.\n\n In addition, Linda Lewis was hired as a singer.\n\n Together with Paul Jackson, Jr. and the orchestra of Martyn Ford the album unified various soundscapes.",
+    "Robert Holdstock\nRobert Paul Holdstock (2 August 1948 – 29 November 2009) was an English novelist and author best known for his works of Celtic, Nordic, Gothic and Pictish fantasy literature, predominantly in the fantasy subgenre of mythic fiction.",
+    "Back in the High Life Again\n\"Back in the High Life Again\" is a 1986 single written by Steve Winwood and Will Jennings and performed by Winwood.\n\n The single was included on his album \"Back in the High Life\" and included backing vocals by James Taylor as well as a prominent mandolin played by Winwood.\n\n \"Back in the High Life Again\" was Winwood's second number one on the Adult Contemporary chart.\n\n The single stayed at number one for three weeks and went to number 13 on the \"Billboard\" Hot 100.",
+    "Peter Wichers\nPeter Wichers is best known as one of the founding members of Swedish melodic death metal band, Soilwork.\n\n From 1995 until late 2005, when he announced his departure from the band, he was known as the lead guitarist and also a songwriter, especially on their \"Stabbing the Drama\" album., He rejoined Soilwork in 2008 and played on 2010s The Panic Broadcast and in June 2012 he quit Soilwork for the second time.\n\n After leaving Soilwork, he filled in for Adam Dutkiewicz when he was injured on Killswitch Engage's European tour.\n\n More recently, he has collaborated with singers from across the melodic death metal genre including Anders Fridén, former band mate Björn \"Speed\" Strid and John Bush (vocalist of Anthrax) to make a CD much in the same style as \"Roadrunner United\", entitled \"Nuclear Blast All-Stars\".\n\n He also co-wrote Warrel Dane's solo record \"Praises to the War Machine\".",
+    "Refugees of the Heart\nRefugees of the Heart is the sixth solo studio album by Steve Winwood, released in 1990.\n\n The album contained the hit single, \"One and Only Man\", which topped the Mainstream Rock Tracks chart and saw the return of former Traffic bandmate Jim Capaldi to Winwood's songwriting team.\n\n By coincidence, a Traffic reunion followed in 1994.\n\n Because of that collaboration, Winwood would not record another solo album until late 1997.\n\n Also \"I Will Be Here\" and \"Another Deal Goes Down\" were released as singles.\n\n Winwood stated about the closing track, “In The Light Of Day”: 'When Will and I wrote the song (.\n\n.)\n\n it was our idea of what Nelson Mandela's dream was, while he was in prison.\n\n It was really just a fantasy of ours, but that’s what we based the song on.'",
+    "Steve Winwood\nStephen Lawrence \"Steve\" Winwood (born 12 May 1948) is an English musician whose genres include rock, blue-eyed soul, rhythm and blues, blues rock, pop rock, and jazz.\n\n Though primarily a vocalist and keyboardist, Winwood also plays bass guitar, drums, acoustic and electric guitar, mandolin, violin, and other strings."
+   ]
+  },
+  {
+   "id": "a17ab7a383b04687",
+   "gold": [
+    {
+     "sentence": "Mr. Wilson's Cabinet of Wonder: Pronged Ants, Horned Humans, Mice on Toast, and Other Marvels of Jurassic Technology is a book by Lawrence Weschler primarily about the Museum of Jurassic Technology and, more broadly, the history and role of museums.",
+     "facts": {
+      "0.0": "Mr. Wilson's Cabinet of Wonder: Pronged Ants, Horned Humans, Mice on Toast, and Other Marvels of Jurassic Technology is a book.",
+      "0.1": "Lawrence Weschler wrote Mr. Wilson's Cabinet of Wonder.",
+      "0.2": "Mr. Wilson's Cabinet of Wonder is primarily about the Museum of Jurassic Technology.",
+      "0.3": "Mr. Wilson's Cabinet of Wonder is more broadly about the history and role of museums."
+     }
+    },
+    {
+     "sentence": "The Museum of Jurassic Technology is a museum located at 9341 Venice Boulevard in the Palms district of Los Angeles, California.",
+     "facts": {
+      "1.0": "The Museum of Jurassic Technology is a museum.",
+      "1.1": "The Museum of Jurassic Technology is located at 9341 Venice Boulevard.",
+      "1.2": "The Museum of Jurassic Technology is in the Palms district of Los Angeles, California."
+     }
+    }
+   ],
+   "items": [
+    "Dudley Zoo\nDudley Zoological Gardens is a 40 acre zoo located within the grounds of Dudley Castle in the town of Dudley, in the Black Country region of the West Midlands, England.\n\n The Zoo opened to the public on 18 May 1937.\n\n Dudley Zoo is owned and operated by Dudley and West Midlands Zoological Society, founded in 1935 and a registered charity.",
+    "Mr. Wilson's Cabinet of Wonder\nMr. Wilson's Cabinet of Wonder: Pronged Ants, Horned Humans, Mice on Toast, and Other Marvels of Jurassic Technology is a book by Lawrence Weschler primarily about the Museum of Jurassic Technology and, more broadly, the history and role of museums.",
+    "Rice Northwest Museum of Rocks and Minerals\nThe Rice Northwest Museum of Rocks and Minerals is a non-profit museum in Hillsboro, Oregon, United States.\n\n Located just north of the Sunset Highway on the northern edge of Hillsboro, the earth science museum is in the Portland metropolitan area.\n\n Opened in 1997, the museum’s collections date to the 1930s with the museum housed in a home built to display the rock and mineral collections of the museum founders.\n\n The ranch style home is listed on the National Register of Historic Places, the first of its kind listed in Oregon.\n\n In 2015 the museum became a Smithsonian Affiliate museum.",
+    "Graph query row:\ncity: Los Angeles\nconnection: ['FROM_CHUNK', 'FROM_CHUNK']",
+    "Tudor's Biscuit World\nTudor's Biscuit World is a restaurant chain based in Huntington, West Virginia, most commonly found in West Virginia.\n\n Many West Virginia locations share a building with Gino's Pizza and Spaghetti, although the chain is more extensive than Gino's (which is exclusive to West Virginia), having locations in southern Ohio, eastern Kentucky, and southwestern Virginia.\n\n In 2016 a franchise was opened in Panama City, Florida.\n\n Tudor's serves biscuits, biscuit sandwiches, homestyle breakfasts and dinners, muffins, and several side dishes.\n\n The chain was originally based in Charleston, West Virginia and many of the biscuit sandwiches are named for sports teams of interest in that area, including teams at Marshall University, West Virginia University, and The University of Charleston.",
+    "Museum of Jurassic Technology\nThe Museum of Jurassic Technology is a museum located at 9341 Venice Boulevard in the Palms district of Los Angeles, California.\n\n It was founded by David Hildebrand Wilson and Diana Drake Wilson (husband and wife) in 1988.",
+    "Imperial War Museum\nImperial War Museums (IWM) is a British national museum organisation with branches at five locations in England, three of which are in London.\n\n Founded as the Imperial War Museum in 1917, the museum was intended to record the civil and military war effort and sacrifice of Britain and its Empire during the First World War.\n\n The museum's remit has since expanded to include all conflicts in which British or Commonwealth forces have been involved since 1914.\n\n As of 2012, the museum aims \"to provide for, and to encourage, the study and understanding of the history of modern war and 'wartime experience'\".",
+    "David Hildebrand Wilson\nDavid Hildebrand Wilson is the co-founder, along with his wife, Diana Wilson, of the enigmatic Museum of Jurassic Technology in Los Angeles, California.\n\n After high school, Wilson enrolled at Kalamazoo College where he majored in urban entomology with a minor in art.\n\n He received an MFA in Experimental Animation from the California Institute of the Arts in 1976.\n\n He was awarded the MacArthur Fellowship and the Creative Capital Moving Image Award in 2001.\n\n He and his museum are the subject of the book, \"Mr. Wilson's Cabinet of Wonder\", published in 1995.",
+    "Primeval Whirl\nPrimeval Whirl is a steel wild mouse roller coaster at Disney's Animal Kingdom at the Walt Disney World Resort.\n\n The ride is a spinning roller coaster purchased from Reverchon Industries.\n\n The ride is part of Chester and Hester's Dino-Rama, which is itself part of DinoLand U.S.A. It is a roller coaster in the \"Mild But Wild Thrills\" category.\n\n It has cars that spin in circles while traveling on tracks, permitting the ride experience to vary greatly each time it is ridden.\n\n The ride features 13 cars, each seating up to 4 riders.",
+    "Imperial War Museum (disambiguation)\nThe Imperial War Museum is a British national museum organisation with branches at five locations in England."
+   ]
+  },
+  {
+   "id": "1c7d72a5a213df5a",
+   "gold": [
+    {
+     "sentence": "The Wire Fox Terrier is a breed of dog, one of many terrier breeds.",
+     "facts": {
+      "0.0": "The Wire Fox Terrier is a breed of dog.",
+      "0.1": "The Wire Fox Terrier is one of many terrier breeds."
+     }
+    },
+    {
+     "sentence": "The West Siberian Laika or \"WSL\", is a breed of hunting dog and a breed of spitz type.",
+     "facts": {
+      "1.0": "The West Siberian Laika, also called WSL, is a breed of hunting dog.",
+      "1.1": "The West Siberian Laika, also called WSL, is a breed of spitz type."
+     }
+    }
+   ],
+   "items": [
+    "The Bulldog is a muscular, wrinkled English breed, ranked fourth among US purebreds in 2007. West Siberian Laikas are versatile barking hunting dogs whose formal breeding resumed in 1946. Mediterranean warren hounds, including Cretan and Canary Island hounds, typically hunt using smell, sight, and hearing. Segugio Italiano has short- and wire-haired varieties. Guatemala’s national Dogo is locally recognized; Cuba’s Bull Mastiff-type Dog",
+    "A wide-ranging reference collection spans animals, food, forests, film, television, animation, games, music, theatre, and literature. It notes Wire Fox Terrier Signal Circuit of Halleston’s 1926 Westminster win, the show’s 50th, and the breed’s fourth Best in Show; covers terriers, hounds, dogs, cheese, and wine; and profiles many works and creators, from Batman, Superman, Disney, Pixar, and *Adventure Time* to classic films",
+    "West Siberian Laika\nThe West Siberian Laika or \"WSL\", is a breed of hunting dog and a breed of spitz type.\n\n Russian publications indicate that the term West Siberian Laika loosely applied to hunting dogs originating with the Mansi and Khanty people in Ural and West Siberia, but there were no standards or registrations of WSL as such until 1930.\n\n Then WWll disrupted it for a while, but \"systematic breeding with registrations\" resumed after the war ended, in 1946.\n\n This was the time the breed began taking modern shape.\n\n Before that hunters only knew of Mansi Laika and Khanty Laika.\n\n In early 1960 many hunters in Ural still preferred the term Mansi Laika, when speaking of West Siberian Laika.\n\n In Russian language, the term Laika originated from the word \"layat\" that means to bark.\n\n The word Laika simply means \"barker\".\n\n Any hunting Laika is a bark pointer (pointing at animal of interest by barking and staying with the animal ).\n\n It is a versatile dog depending on use and environment, but in certain parts of the country they have become more specialized.",
+    "Wire Fox Terrier\nThe Wire Fox Terrier is a breed of dog, one of many terrier breeds.\n\n It is a fox terrier, and although it bears a resemblance to the smooth fox terrier, they are believed to have been developed separately.",
+    "Fox Terrier\nFox Terriers are two different breeds of the terrier dog type: the Smooth Fox Terrier and the Wire Fox Terrier.\n\n Both of these breeds originated in the 19th century from a handful of dogs who are descended from earlier varieties of British terriers, and are related to other modern white terrier breeds.\n\n In addition, a number of breeds have diverged from these two main types of fox terrier and have been recognised separately, including the Jack Russell Terrier, Miniature Fox Terrier and Rat Terrier.\n\n The Wire and Smooth Fox Terriers share similar characteristics, the main differences being in the coat and markings.\n\n They have been successful in conformation shows, more prominently in America than their homeland.",
+    "Signal Circuit of Halleston\nSignal Circuit of Halleston was a Wire Fox Terrier and winner of the 1926 Westminster Kennel Club Dog Show.\n\n This was the 50th Westminster show, and the fourth Fox Terrier to win best in show.",
+    "Teddy Roosevelt Terrier\nThe Teddy Roosevelt Terrier is a small to medium-sized American hunting terrier.\n\n Lower-set with shorter legs, more muscular, and heavier bone density than its cousin the American Rat Terrier.\n\n There is much diversity in the history of the Teddy Roosevelt Terrier breed and it shares a common early history with the American Rat Terrier, Fox Paulistinha and Tenterfield Terrier.\n\n It is said the Rat Terrier background stems from the terriers or other dogs that were brought over by early English and other working class immigrants.\n\n Since the breed was a farm, hunting and utility dog there was little to no planned breeding other than breeding dogs with agreeable traits to each other in order to produce the desired work ethic in the dog.\n\n It is assumed that the Feist (dog), Bull Terrier, Smooth Fox Terrier, Manchester Terrier, Whippet, Italian Greyhound, the now extinct English White Terrier, Turnspit dog and or Wry Legged Terrier all share in the Teddy Roosevelt Terrier's ancestry.\n\n These early Ratting Terriers were then most likely bred to the Beagle or Beagle cross bred dogs (for increased scenting ability) and other dogs.",
+    "Signal Circuit of Halleston, a Wire Fox Terrier, won the 1926 Westminster show—the event’s 50th and the fourth Fox Terrier Best in Show winner. Fox Terriers comprise Smooth and Wire breeds, developed in 19th-century Britain; related breeds include the Jack Russell, Miniature Fox and Rat Terriers. Teddy Roosevelt Terriers, descended from working terriers and other breeds, are intelligent, alert hunting companions. Caesar, King Edward VII’s Wire Fox Terrier",
+    "Signal Circuit of Halleston, a Wire Fox Terrier, won the 1926 Westminster show, its 50th, marking the fourth Fox Terrier Best in Show victory. Notes cover Fox Terrier varieties and related terriers; Teddy Roosevelt Terriers; Swiss Appenzeller cheese, Sennenhunde and chicken varieties; and Australia’s native forests. They also describe French scenthounds and pointing dogs, Gascony wine, Bulldogs, West Siberian Laikas, Mediterranean h",
+    "Old Jock\nOld Jock (1859–1871), was a Fox Terrier famous during the late 19th and early 20th centuries.\n\n A mostly white dog, he ran briefly with a hunting kennel before becoming a show dog, most notably with a victory at the show which popularised the Fox Terrier.\n\n His main show rivalry was with a dog named Tartar, and along with a dog named Trap, the three were popular sires of the Fox Terrier breed.\n\n He was also involved in the early formation of the Jack Russell Terrier and the Dandie Dinmont Terrier breeds."
+   ]
+  },
+  {
+   "id": "34b920c73fa0f6c4",
+   "gold": [
+    {
+     "sentence": "Fastbacks were a Seattle, Washington, punk rock band.",
+     "facts": {
+      "0.0": "Fastbacks were a punk rock band.",
+      "0.1": "Fastbacks were from Seattle, Washington."
+     }
+    },
+    {
+     "sentence": "Local Natives (previously known as Cavil at Rest) is an American indie rock band based in Silver Lake, Los Angeles, California, United States.",
+     "facts": {
+      "1.0": "Local Natives is an American indie rock band.",
+      "1.1": "Local Natives was previously known as Cavil at Rest.",
+      "1.2": "Local Natives is based in Silver Lake, Los Angeles, California, United States."
+     }
+    }
+   ],
+   "items": [
+    "American Hi-Fi\nAmerican Hi-Fi is an American rock band formed in Boston in 1998.\n\n The band consists of lead vocalist/rhythm guitarist Stacy Jones, lead guitarist Jamie Arentzen, bassist/backing vocalist Drew Parsons, and drummer Brian Nolan.\n\n Prior to the group's formation, Stacy Jones was well known for being a drummer in the successful alternative rock bands Veruca Salt and Letters to Cleo.\n\n American Hi-Fi has a close relationship with Miley Cyrus, whose band shares two members with American Hi-Fi.\n\n The group has a mixed musical style that includes influences from pop punk, alternative rock, and power pop.",
+    "Local Natives\nLocal Natives (previously known as Cavil at Rest) is an American indie rock band based in Silver Lake, Los Angeles, California, United States.\n\n Their debut album, \"Gorilla Manor\", was first released in the UK in November 2009, and later released in the US on February 16, 2010.\n\n The album received mostly positive reviews and debuted in the Billboard 200 and at No. 3 in the New Artist Chart.\n\n Their second album, \"Hummingbird\", was released in January 2013.\n\n Their third album, \"Sunlit Youth\", was released in September 2016.",
+    "Back to the Beat (EP)\nBack to the Beat was the first significant EP release by the Minneapolis based pop punk band Motion City Soundtrack.\n\n The EP was recorded in Sound In Motion Recordings and released by Modern Radio Records and includes tracks that were later re-released.\n\n \"Throw Down\", \"Back to the Beat\" and \"Capital H\" were re-released on a split EP with Schatzi.\n\n \"Capital H\" was re-released on Motion City Soundtrack's first album \"I Am the Movie\".\n\n At the time of recording, the band members differed from the Motion City Soundtrack line-up formed in 2002.\n\n They were Joshua Cain on guitar and vocals, Austin Lindstrom on bass guitar, Joel Habedank on drums and Justin Pierre on lead vocals, guitar and keyboard.",
+    "The Shins\nThe Shins are an American indie rock band from Albuquerque, New Mexico, formed in 1996.\n\n The band's current lineup consists of James Mercer (vocals, guitar, songwriter), Jon Sortland (drums), Mark Watrous (guitar), Casey Foubert (guitar), Yuuki Matthews (bass), and Patti King (keyboards).\n\n The band is based in Portland, Oregon.",
+    "The Lumineers\nThe Lumineers are an American folk rock/Americana band based in Denver, Colorado.\n\n The founding members are Wesley Schultz (lead vocals, guitar) and Jeremiah Fraites (drums, percussion).\n\n Schultz and Fraites began writing and performing together in Ramsey, New Jersey in 2005.\n\n Cellist and vocalist Neyla Pekarek joined the band in 2010.\n\n The Lumineers emerged as one of the most popular folk rock/Americana artists during the revival of those genres and their growing popularity in the 2010s.\n\n The band's stripped back raw sound draws heavily from artists that influenced Schultz and Fraites such as Bruce Springsteen, Bob Dylan and Tom Petty.\n\n They are known for their energetic live shows and several international hit singles including \"Ho Hey”, “Stubborn Love”, “Ophelia” and “Cleopatra”.\n\n The band has become one of the top touring bands in the U.S. and also sells out shows around the world.",
+    "Native Tour\nThe Native Tour (also known as the Native Summer Tour in North America or Native Fall Tour in Europe) is the third headlining concert tour by American pop-rock band, OneRepublic in support of their third studio album, \"Native\" (2013).\n\n OneRepublic were joined on the Native Summer leg of the tour by, The Script and American Authors, and on the European \"Native Fall Tour\" leg by Kongos.\n\n The tour has traveled across five continents; Asia, Europe, Oceania, North America, and Africa.\n\n The tour began on April 2, 2013, in Milan, Italy and finished on September 20, 2015, in São Paulo, Brazil.",
+    "Hummingbird (Local Natives album)\nHummingbird is the second studio album by American indie rock band Local Natives, released on January 29, 2013 on Frenchkiss Records in the US, and on Infectious Records in Europe.\n\n Produced by The National guitarist Aaron Dessner, the album was preceded by the singles, \"Breakers\" and \"Heavy Feet.\"\n\n \"Breakers\" reached #12 on the Billboard Top 200.\n\n The song \"Mt. Washington\" was also featured in the 2015 video game \"Life Is Strange\".",
+    "The material covers country, country-rock, folk-rock and bluegrass artists and releases. Oak Ridge Boys’ 2009 *The Boys Are Back* marked a return to secular country, led by a White Stripes cover. Richie Furay helped form Buffalo Springfield and Poco, later joining the Souther–Hillman–Furay Band; Poco’s debut featured his “Pickin’ Up the Pieces.” Other subjects include Buffalo Springfield’s final album, the Lonesome Pine F",
+    "Fastbacks\nFastbacks were a Seattle, Washington, punk rock band.\n\n Formed in 1979 by songwriter/guitarist Kurt Bloch (born August 28, 1960), and friends Lulu Gargiulo (guitar and vocals, born October 12, 1960) and Kim Warnick (bass and vocals, born April 7, 1959), they disbanded in 2001.\n\n Their sound mixed a generally punk rock approach to vocals and sound textures with poppy tunes and strong musicianship.",
+    "OK Go\nOK Go is an American rock band originally from Chicago, Illinois, now based in Los Angeles, California.\n\n The band is composed of Damian Kulash (lead vocals, guitar), Tim Nordwind (bass guitar and vocals), Dan Konopka (drums and percussion) and Andy Ross (guitar, keyboards and vocals), who joined them in 2005, replacing Andy Duncan.\n\n The band is known for its often quirky and elaborate one-take music videos."
+   ]
+  },
+  {
+   "id": "54900031cad8e876",
+   "gold": [
+    {
+     "sentence": " The first of the books was optioned by Universal Pictures after a bidding war over the manuscript.",
+     "facts": {
+      "0.0": "The first of the books was optioned by Universal Pictures.",
+      "0.1": "The option followed a bidding war over the manuscript."
+     }
+    },
+    {
+     "sentence": " The company was founded in 1912 by Carl Laemmle, Mark Dintenfass, Charles O. Baumann, Adam Kessel, Pat Powers, William Swanson, David Horsley, Robert H. Cochrane, and Jules Brulatour, and is the oldest surviving film studio in the United States, the world's fourth oldest after Gaumont, Pathé and Nordisk Film, and the oldest in terms of the overall film market .",
+     "facts": {
+      "1.0": "The company was founded in 1912.",
+      "1.1": "The company was founded by Carl Laemmle, Mark Dintenfass, Charles O. Baumann, Adam Kessel, Pat Powers, William Swanson, David Horsley, Robert H. Cochrane, and Jules Brulatour.",
+      "1.2": "The company is the oldest surviving film studio in the United States.",
+      "1.3": "The company is the world's fourth oldest film studio, after Gaumont, Pathé and Nordisk Film.",
+      "1.4": "The company is the oldest film studio in terms of the overall film market."
+     }
+    }
+   ],
+   "items": [
+    "Universal Pictures\nUniversal Pictures (also referred to as Universal Studios or simply Universal) is an American film studio owned by Comcast through the Universal Filmed Entertainment Group division of its wholly owned subsidiary NBCUniversal.\n\n The company was founded in 1912 by Carl Laemmle, Mark Dintenfass, Charles O. Baumann, Adam Kessel, Pat Powers, William Swanson, David Horsley, Robert H. Cochrane, and Jules Brulatour, and is the oldest surviving film studio in the United States, the world's fourth oldest after Gaumont, Pathé and Nordisk Film, and the oldest in terms of the overall film market .\n\n Its studios are located in Universal City, California, and its corporate offices are located in New York City.",
+    "Joshua Bloom\nJoshua Simon Bloom (born June 8, 1974 in Washington, D.C.) is an American astrophysicist, full professor of astronomy at the University of California, Berkeley, and was the CTO and co-founder of the machine-learning company wise.io (acquired by General Electric, 2016).\n\n He received a Bachelor of Arts in astronomy and astrophysics and physics from the Harvard College in 1996, an M.Phil from Cambridge University in 1997, and a PhD in astronomy from the California Institute of Technology in 2002.\n\n He was a Junior Fellow of the Harvard Society of Fellows from 2002 to 2005.\n\n His astronomy research focuses on gamma-ray bursts and other astrophysical transients such as supernovae and tidal disruption events.\n\n He is author of the book \"What Are Gamma-Ray Bursts?\"\n\n published by Princeton University Press in 2011.",
+    "List of Walt Disney Pictures films\nThis is a list of films released theatrically under the Walt Disney Pictures banner (known as that since 1983, with \"Never Cry Wolf\" as its first release) and films released before that under the former name of the parent company, Walt Disney Productions (1929–1983).\n\n Most films listed here were distributed in the United States by the company's distribution division, Walt Disney Studios Motion Pictures (formerly known as Buena Vista Distribution Company [1953–1987] and Buena Vista Pictures Distribution [1987–2007]).\n\n The Disney features produced before \"Peter Pan\" (1953) were originally distributed by RKO Radio Pictures, and are now distributed by Walt Disney Studios Motion Pictures.",
+    "Bogle-L'Ouverture Publications\nBogle-L’Ouverture Publications (BLP) is a radical London-based publishing company founded in 1968 by Guyanese activists Jessica Huntley (23 February 1927 – 13 October 2013) and Eric Huntley (born 25 September 1929).\n\n Named in honour of two outstanding liberation fighters in Caribbean history, Toussaint L'Ouverture and Paul Bogle, the company began operating during a period in the UK when \"books by Black authors or written with a sympathetic view of Black people’s history and culture were rare in mainstream bookshops in the UK.\"\n\n Alongside New Beacon Books (founded in 1966) and Allison & Busby (founded in 1967), BLP was one of the first black-owned independent publishing companies in the UK.\n\n BLP has been described as \"a small, unorthodox, self-financing venture that brought a radical perspective to non-fiction, fiction, poetry and children's books.\"",
+    "Walt Disney Pictures\nWalt Disney Pictures, Inc. is an American film production company and a subsidiary of Walt Disney Studios, owned by The Walt Disney Company.\n\n The division is based at the Walt Disney Studios in Burbank, California, and is the main producer of live-action feature films within the Walt Disney Studios unit.\n\n It took on its current name in 1983.\n\n Today, in conjunction with the other units of Walt Disney Studios, Walt Disney Pictures is classified as one of Hollywood's \"Big Six\" film studios.\n\n Films produced by Walt Disney Animation Studios and Pixar Animation Studios are also released under this brand.",
+    "Walt Disney Studios Motion Pictures\nWalt Disney Studios Motion Pictures (formerly Buena Vista Pictures Distribution and Buena Vista Film Distribution Company) is an American film distributor owned by The Walt Disney Company.\n\n Established in 1953 as Buena Vista Film Distribution Company, the company handles theatrical distribution, marketing and promotion for films produced and released by the Walt Disney Studios, including Walt Disney Pictures, Walt Disney Animation Studios, Pixar Animation Studios, DisneyToon Studios, Marvel Studios, Lucasfilm, Disneynature, and Touchstone Pictures.\n\n The division took on its current name in late 2007, which before that had been Buena Vista Pictures Distribution since 1987.",
+    "Simon Bloom\nSimon Bloom is a series of young adult novels by Michael Reisman.\n\n Set in the fictional town of Lawnville, New Jersey, it is about a boy who finds a book that lets him control the laws of physics.\n\n The first of the books was optioned by Universal Pictures after a bidding war over the manuscript.",
+    "Simon &amp; Schuster\nSimon & Schuster, Inc. ( ), a subsidiary of CBS Corporation, is an American publishing company founded in New York City in 1924 by Richard Simon and Max Schuster.\n\n As of 2016, Simon & Schuster publishes 2,000 titles annually under 35 different imprints.",
+    "Arthur Lubin\nArthur Lubin (July 25, 1898 – May 12, 1995) was an American film director and producer who directed several \"Abbott & Costello\" films, \"Phantom of the Opera\" (1943), the \"Francis the Talking Mule\" series and created the talking-horse TV series \"Mister Ed\".\n\n A prominent director for Universal Pictures in the 1940s and 1950s, he is perhaps best known today as the man who gave Clint Eastwood his first contract in film.",
+    "Some Kind of Fairy Tale\nSome Kind of Fairy Tale is a 2012 novel by the British author Graham Joyce.\n\n A work of speculative fiction, it won the British Fantasy Society's Fantasy Novel of the Year award (the Robert Holdstock Award) in 2013.\n\n Film rights to the novel have been sold and a potential movie is in the development stage."
+   ]
+  },
+  {
+   "id": "1486b8ad5bb1426f",
+   "gold": [
+    {
+     "sentence": " It occupies 40 km (15 sq mi) and it extends into each of the six municipalities on the island.",
+     "facts": {
+      "0.0": "The area occupies 40 km (15 sq mi).",
+      "0.1": "The area extends into each of the six municipalities on the island."
+     }
+    },
+    {
+     "sentence": "Sierra de Guadarrama National Park (in Spanish: \"Parque Nacional de la Sierra de Guadarrama\") is a national park in Spain, covering nearly 34,000 hectares, the fifth largest in Spain's national parks system.",
+     "facts": {
+      "1.0": "Sierra de Guadarrama National Park is a national park in Spain.",
+      "1.1": "The Spanish name of Sierra de Guadarrama National Park is Parque Nacional de la Sierra de Guadarrama.",
+      "1.2": "Sierra de Guadarrama National Park covers nearly 34,000 hectares.",
+      "1.3": "Sierra de Guadarrama National Park is the fifth largest in Spain's national parks system."
+     }
+    }
+   ],
+   "items": [
+    "Teide National Park\nTeide National Park (Spanish: \"Parque nacional del Teide\" , ] ) is a national park located in Tenerife (Canary Islands, Spain).",
+    "Golf La Moraleja\nGolf La Moraleja is one of Spain’s most important clubs.\n\n It is the largest Spanish golf club for its number of its holes and the largest in Europe located in a metropolitan area.\n\n Founded in 1973, it currently has four 18-hole golf courses, all rated par 72, designed by Jack Nicklaus.\n\n It also contains a 9-hole short course, 8 tennis courts, 12 paddle tennis courts, 2 squash courts, one covered and three open-air swimming pools, a gym and a spa.\n\n Added to these are two clubhouses, a children’s chalet and a tennis clubhouse (on 1 and 2 courses), plus a prebuilt modular clubhouse for courses 3 and 4.\n\n Courses 1 and 2 are located at La Moraleja residential estate (Alcobendas, Madrid).\n\n Courses 3 and 4 are located in the municipality of Algete.\n\n It has 6,000 shareholder members.",
+    "Garajonay National Park\nGarajonay National Park (Spanish: \"Parque nacional de Garajonay\" , ] ) is located in the center and north of the island of La Gomera, one of the Canary Islands (Spain).\n\n It was declared a national park in 1981 and a World Heritage Site by UNESCO in 1986.\n\n It occupies 40 km (15 sq mi) and it extends into each of the six municipalities on the island.",
+    "Guadarrama National Park\nSierra de Guadarrama National Park (in Spanish: \"Parque Nacional de la Sierra de Guadarrama\") is a national park in Spain, covering nearly 34,000 hectares, the fifth largest in Spain's national parks system.\n\n The Guadarrama mountain range (\"Sistema Central\") contains some ecologically valuable areas, located in the Community of Madrid and Castile and León (provinces of Segovia and Ávila).\n\n The law that regulates the recently approved national park was published in the BOE in  26, 2013 (2013--) .",
+    "2011 Pan American Games\nThe 2011 Pan American Games, officially the XVI Pan American Games, was an international multi-sport event that was held from October 14–30, 2011, in Guadalajara, Jalisco, Mexico.\n\n Some events were held in the nearby cities of Ciudad Guzmán, Puerto Vallarta, Lagos de Moreno and Tapalpa.\n\n It was the largest multi-sport event of 2011, with approximately 6,000 athletes from 42 nations participating in 36 sports.\n\n Both the Pan American and Parapan American Games were organized by the Guadalajara 2011 Organizing Committee (COPAG).\n\n The 2011 Pan American Games were the third Pan American Games hosted by Mexico (the first country to do so) and the first held in the state of Jalisco.\n\n Previously, Mexico hosted the 1955 Pan American Games and the 1975 Pan American Games, both in Mexico City.\n\n The 2011 Parapan American Games were held 20 days after the Pan American Games have ended.",
+    "Golf La Moraleja\nIt has 6,000 shareholder members.\n\n In 2013 it was voted the best golf course in Spain by Deporte & Business and in 2014, La Moraleja 3 was voted the second best golf course in Spain by the American magazine Golf Digest.\n\n The Club has hosted competitions such as the World Cup of Golf, the Spanish Open or the Paddle Tennis World Championship.",
+    "Badiar National Park\nBadiar National Park (French: \"Parc National du Badiar\" ) is a national park in Guinea, on the border with Senegal and contiguous with Senegal's much larger Niokolo-Koba National Park.\n\n It was established on 30 May 1985 (by ordonnance N°124/PRG/85), partly in response to Senegal's concern about poaching in Niokolo-Koba National Park.\n\n Badiar is an International Union for Conservation of Nature Category II park.",
+    "Hermigua\nHermigua is a town and a municipality in the northeastern part of La Gomera in the province of Santa Cruz de Tenerife of the Canary Islands, Spain.\n\n It is located 12 km northwest of the island's capital, San Sebastián de la Gomera.\n\n The Garajonay National Park covers the southern part of the municipality.",
+    "Pirin National Park\nPirin National Park (Bulgarian: Национален парк \"Пирин\" ) is a national park that encompasses the larger part of the Pirin Mountains in south-west Bulgaria, spanning an area of 403.56 km2 .\n\n It is one of the three national parks in the country, the others being Rila National Park and Central Balkan National Park.\n\n The park was established in 1962 and its territory was expanded several times since then.\n\n Pirin National Park was declared a UNESCO World Heritage Site in 1983.\n\n The altitude varies from 950 m to 2,914 m at Vihren, Bulgaria's second highest summit and the Balkans' third.",
+    "Landes de Gascogne Regional Natural Park\nLandes de Gascogne Regional Natural Park (French: \"Parc naturel régional des Landes de Gascogne\") is a protected area of pine forest, wetland and oceanic coastline located in the Aquitaine region of southwestern France."
+   ]
+  },
+  {
+   "id": "14909a52ad178a4f",
+   "gold": [
+    {
+     "sentence": "Dr. Seuss' The Cat in the Hat is a 2003 American family comedy film directed by Bo Welch.",
+     "facts": {
+      "0.0": "The Cat in the Hat is a Dr. Seuss film.",
+      "0.1": "The Cat in the Hat is a 2003 film.",
+      "0.2": "The Cat in the Hat is an American film.",
+      "0.3": "The Cat in the Hat is a family comedy film.",
+      "0.4": "The Cat in the Hat was directed by Bo Welch."
+     }
+    },
+    {
+     "sentence": "Robert W. \"Bo\" Welch III (born November 30, 1951) is an American production designer and director.",
+     "facts": {
+      "1.0": "Robert W. 'Bo' Welch III was born November 30, 1951.",
+      "1.1": "Robert W. 'Bo' Welch III is an American production designer.",
+      "1.2": "Robert W. 'Bo' Welch III is an American director."
+     }
+    }
+   ],
+   "items": [
+    "Rick Carter\nRick Carter (born 1950) is an American production designer and art director.\n\n He is known for his work in the film \"Forrest Gump\", which earned him an Oscar nomination, as well as numerous nominations of other awards for his work in \"Amistad\" and \"A.I. Artificial Intelligence\".\n\n Other films include \"Cast Away\", \"War of the Worlds\", \"What Lies Beneath\", \"Jurassic Park\", \"Avatar\", and \"Back to the Future Part II\" and \"Part III\".\n\n Many of the films that he has worked on are directed by Steven Spielberg or Robert Zemeckis.\n\n For his part in the Art Direction of \"Avatar\", he was awarded the Academy Award for Best Production Design alongside Robert Stromberg and Kim Sinclair.\n\n In 2013, Carter won his second Academy Award, for production design on Steven Spielberg's biopic, \"Lincoln\".",
+    "Bo Welch\nRobert W. \"Bo\" Welch III (born November 30, 1951) is an American production designer and director.",
+    "The Cat in the Hat (film)\nDr. Seuss' The Cat in the Hat is a 2003 American family comedy film directed by Bo Welch.\n\n It is based on the 1957 Dr. Seuss book \"of the same name\".\n\n The film stars Mike Myers in the title role of the Cat in the Hat, and Dakota Fanning as Sally.\n\n Sally's brother (who is unnamed in the book and the 1971 TV special), Conrad, is portrayed by Spencer Breslin.\n\n The film is the second feature-length Dr. Seuss adaptation after the 2000 holiday film \"How the Grinch Stole Christmas\".",
+    "Winnie the Pooh (2011 film)\nThe film is directed by Stephen Anderson and Don Hall, adapted from Milne's books by a story team led by Burny Mattinson, produced by Peter Del Vecho, Clark Spencer, John Lasseter, and Craig Sost, and narrated by John Cleese.",
+    "Nitish Roy\nNitish Roy is an Indian film art director, production designer, and costume designer in Hindi cinema and a Bengali Film Director, who is also known for his work with art cinema directors, Shyam Benegal, Mrinal Sen and Govind Nihlani, Hindi mainstream cinema, directors like Rajkumar Santoshi, as well as international directors like Mira Nair and Gurinder Chadha.",
+    "That Darn Cat (1997 film)\nThat Darn Cat is a 1997 American mystery comedy film starring Christina Ricci and Doug E. Doug.\n\n It is a remake of the 1965 film \"That Darn Cat!\n\n\", which in turn was based on the book \"Undercover Cat\" by Gordon and Mildred Gordon.\n\n It is directed by British TV veteran Bob Spiers (most famous for \"Fawlty Towers\", as well as \"Spice World\") and written by Scott Alexander and Larry Karaszewski, best known for \"Ed Wood\" and the first two \"Problem Child\" films.",
+    "Chris Gorak\nChris Gorak is an American film director who started as an art director and production designer.\n\n He directed the 2006 film \"Right at Your Door\" and the 2011 film \"The Darkest Hour\".\n\n Gorak began working in the film industry in the 1990s as an art director.\n\n In the 2000s, he worked on several films as production designer before becoming a film director.",
+    "Fritz the Cat (film)\nFritz the Cat is a 1972 American adult animated comedy film written and directed by Ralph Bakshi.\n\n It was Bakshi's feature film debut and is loosely based on the Fritz the Cat comic strips by Robert Crumb.\n\n It was the first animated feature film to receive an X rating in the United States.",
+    "Peter Jackson\nSir Peter Robert Jackson {'1': \", '2': \", '3': \", '4': \"} (born 31 October 1961) is a New Zealand film director, screenwriter and film producer.\n\n He is best known as the director, writer, and producer of \"The Lord of the Rings\" trilogy (2001–03) and \"The Hobbit\" trilogy (2012–14), both of which are adapted from the novels of the same name by J. R. R. Tolkien.\n\n Other notable films include the critically lauded drama \"Heavenly Creatures\" (1994), the mockumentary \"Forgotten Silver\" (1995), the horror comedy \"The Frighteners\" (1996), the epic monster remake film \"King Kong\" (2005), and the supernatural drama film \"The Lovely Bones\" (2009).\n\n He also produced \"District 9\" (2009), \"The Adventures of Tintin: The Secret of the Unicorn\" (2011), and the documentary \"West of Memphis\" (2012).",
+    "That Darn Cat!\nThat Darn Cat!\n\n is a 1965 American Walt Disney Productions thriller comedy film starring Hayley Mills (in her last of the six films she made for the Walt Disney Studios) and Dean Jones (starring in his first film for Disney) in a story about bank robbers, a kidnapping and a mischievous cat.\n\n The film was based on the 1963 novel \"Undercover Cat\" by Gordon and Mildred Gordon and was directed by Robert Stevenson.\n\n The title song was written by the Sherman Brothers and sung by Bobby Darin.\n\n The 1997 remake includes a cameo appearance by Dean Jones."
+   ]
+  },
+  {
+   "id": "f008a6d5e5ae835c",
+   "gold": [
+    {
+     "sentence": "Robert Harry Philibosian (born 1940) is an American politician.",
+     "facts": {
+      "0.0": "Robert Harry Philibosian was born in 1940.",
+      "0.1": "Robert Harry Philibosian is an American politician."
+     }
+    },
+    {
+     "sentence": "David R. Ignatius (May 26, 1950), is an American journalist and novelist.",
+     "facts": {
+      "1.0": "David R. Ignatius was born on May 26, 1950.",
+      "1.1": "David R. Ignatius is an American journalist.",
+      "1.2": "David R. Ignatius is an American novelist."
+     }
+    }
+   ],
+   "items": [
+    "David I. Walsh\nDavid Ignatius Walsh (November 11, 1872June 11, 1947) was a United States politician from Massachusetts.\n\n A member of the Democratic Party, he served as the 46th Governor of Massachusetts before serving several terms in the United States Senate.",
+    "Jim Geraghty\nJim Geraghty is a conservative blogger and regular contributor to \"National Review Online\" and \"National Review\".\n\n In addition to writing columns for \"National Review\", Geraghty also blogs for National Review Online and is a former reporter for States News Service.",
+    "Lewis Nicola\nLewis Nicola (1717 – August 9, 1807) was an Irish-born American military officer, merchant, and writer who held various military and civilian positions throughout his career.\n\n Nicola is most notable for authoring the Newburgh letter, which urged George Washington to assume a royal title.\n\n Born in Dublin, Ireland, Nicola had been an officer in the British Army, serving in Europe before immigrating to the Thirteen Colonies.\n\n Establishing a residence in Philadelphia with his family, Nicola opened a library in 1767 and was active in colonial philosophical organizations.\n\n As a result of his work to establish the American Philosophical Society, he was elected as one of its curators.\n\n When the American Revolution broke out, Nicola offered his services to the colonial government, which eventually appointed him to various positions with local forces.",
+    "Robert Philibosian\nRobert Harry Philibosian (born 1940) is an American politician.\n\n He served as Los Angeles County District Attorney from 1982 to 1984.\n\n He received his B.A. in history from Stanford University and his law degree from Southwestern Law School, and was admitted to the California State Bar in 1968.\n\n He is now Of counsel at the law firm of Sheppard, Mullin, Richter & Hampton.",
+    "Body of Lies (novel)\nBody of Lies is an American spy thriller novel by David Ignatius, a columnist for \"The Washington Post\".\n\n It was published by W. W. Norton in 2007.\n\n It was originally titled \"Penetration\" but was renamed after Warner Bros. bought the rights in 2006.\n\n It was made into a film of the same name in 2008.",
+    "Phil Driscoll\nPhil Driscoll (born November 9, 1947) is a trumpeter, singer, composer, and producer.\n\n He performs in varying music genres and styles which include rock and roll, rhythm and blues, and patriotic music, and is best known for his work in Christian music and his longterm Christian ministry.\n\n In 1985, Driscoll won the Grammy Award for Best Gospel Performance – Duo/Group for a duet with Debby Boone on \"Keep the Flame Burning\", and he has been nominated for three additional Grammys, two for Best Gospel Performance – Male and one for Best Gospel/Pop Album.\n\n He has also won three Dove Awards for his music, and the 1999 Christian Country Music Association Award for Best Musician.\n\n In 2006, Driscoll was found guilty on 2 counts of tax evasion and one count of conspiracy, and was sentenced to serve one year in Federal prison, beginning on March 14, 2007.",
+    "Mark Krikorian\nMark Krikorian has been the executive director of the Center for Immigration Studies, a think-tank in Washington, D. C., since 1995.\n\n The Center describes itself as an \"independent, non-partisan research organization\" in Washington, D. C., that examines and critiques the impact of immigration on the United States.\n\n Animated by a \"pro-immigrant, low-immigration vision which seeks fewer immigrants, but a warmer welcome for those admitted\", the Center was established in 1985 to provide immigration research.\n\n Krikorian is a regular contributor to the conservative publication \"National Review\", and is a regular participant at \"National Review Online's\" \"The Corner.\"",
+    "Philip K. Dick\nPhilip Kindred Dick (December 16, 1928 – March 2, 1982) was an American writer notable for publishing works of science fiction.",
+    "David Smick\nDavid M. Smick is a macroeconomic adviser to a select group of prominent global investment funds and a non-fiction author.\n\n He is the chairman and CEO of Johnson Smick International, a financial advisory firm in Washington, D.C. where he is in partnership with former Federal Reserve Vice Chairman Manuel H. Johnson.\n\n Smick wrote an acclaimed book \"The World Is Curved\" on the financial perils of globalization, in response to \"The World Is Flat\" bestseller by Thomas Friedman.\n\n The book received positive reviews by the \"USA Today\" and \"Forbes\", was called \"astonishingly prescient\" by David Brooks and \"clairvoyant\" by David Ignatius.",
+    "David Ignatius\nDavid R. Ignatius (May 26, 1950), is an American journalist and novelist.\n\n He is an associate editor and columnist for \"The Washington Post\".\n\n He also co-hosts PostGlobal, an online discussion of international issues at Washingtonpost.com, with Fareed Zakaria.\n\n He has written nine novels, including \"Body of Lies\", which director Ridley Scott adapted into a film.\n\n He is a former Adjunct Lecturer at the Kennedy School of Government at Harvard University and currently Senior Fellow to the Future of Diplomacy Program.\n\n He has received numerous honors, including the Legion of Honor from the French Republic, the Urbino World Press Award from the Italian Republic, and a lifetime achievement award from the International Committee for Foreign Journalism."
+   ]
+  },
+  {
+   "id": "4d33d8e812472f6e",
+   "gold": [
+    {
+     "sentence": "Cars 2 is a 2011 American computer-animated action comedy spy film produced by Pixar Animation Studios for Walt Disney Pictures.",
+     "facts": {
+      "0.0": "Cars 2 is a film.",
+      "0.1": "Cars 2 was released in 2011.",
+      "0.2": "Cars 2 is American.",
+      "0.3": "Cars 2 is computer-animated.",
+      "0.4": "Cars 2 is an action comedy spy film.",
+      "0.5": "Cars 2 was produced by Pixar Animation Studios.",
+      "0.6": "Cars 2 was produced for Walt Disney Pictures."
+     }
+    },
+    {
+     "sentence": "Lin-Manuel Miranda ( ; born January 16, 1980) is an American composer, lyricist, playwright, and actor best known for creating and starring in the Broadway musicals \"Hamilton\" and \"In the Heights\".",
+     "facts": {
+      "1.0": "Lin-Manuel Miranda was born January 16, 1980.",
+      "1.1": "Lin-Manuel Miranda is American.",
+      "1.2": "Lin-Manuel Miranda is a composer, lyricist, playwright, and actor.",
+      "1.3": "Lin-Manuel Miranda is best known for creating and starring in the Broadway musical Hamilton.",
+      "1.4": "Lin-Manuel Miranda is best known for creating and starring in the Broadway musical In the Heights."
+     }
+    },
+    {
+     "sentence": " He co-wrote the songs for Disney's \"Moana\" soundtrack (2016) and is set to star in their upcoming film \"Mary Poppins Returns\".",
+     "facts": {
+      "2.0": "Lin-Manuel Miranda co-wrote the songs for Disney's Moana soundtrack.",
+      "2.1": "The Moana soundtrack is from 2016.",
+      "2.2": "Lin-Manuel Miranda is set to star in Disney's upcoming film Mary Poppins Returns."
+     }
+    }
+   ],
+   "items": [
+    "Lin-Manuel Miranda\nLin-Manuel Miranda ( ; born January 16, 1980) is an American composer, lyricist, playwright, and actor best known for creating and starring in the Broadway musicals \"Hamilton\" and \"In the Heights\".\n\n He co-wrote the songs for Disney's \"Moana\" soundtrack (2016) and is set to star in their upcoming film \"Mary Poppins Returns\".\n\n Miranda's awards include a Pulitzer Prize, two Grammy Awards, an Emmy Award, a MacArthur Fellowship, and three Tony Awards.",
+    "Cars 2 (video game)\nCars 2 (also known as Cars 2: The Video Game) is a racing game developed by Avalanche Software.\n\n It is based on the film \"Cars 2\", the sequel to the 2006 film \"Cars\".\n\n Originally announced at E3 2011, the game was released by Disney Interactive on major platforms in North America on June 21, 2011, and in Australia 2 days later.\n\n The game was released in Europe on July 22, 2011.\n\n The PlayStation 3 version of the game was reported to feature stereoscopic 3D gameplay.\n\n A Nintendo 3DS version was released on November 1, 2011 (the same day the film was released on DVD and Blu-ray).\n\n A PlayStation Portable version was released in North America on November 8, 2011.\n\n It was also released in Europe on November 4, 2011.\n\n It was the last Pixar game to be released for the PlayStation Portable.",
+    "Moana (soundtrack)\nMoana: Original Motion Picture Soundtrack is the soundtrack to the 2016 Disney animated film \"Moana\".\n\n The soundtrack was released by Walt Disney Records on November 19, 2016.\n\n It features songs written by Lin-Manuel Miranda, Mark Mancina and Opetaia Foa'i, with lyrics in English, Samoan, Tokelauan, and Tuvalu.\n\n The two-disc deluxe edition includes the score, which was composed by Mancina, as well as demos, outtakes and instrumental karaoke tracks.",
+    "Wreck-It Ralph\nWreck-It Ralph is a 2012 American 3D computer-animated fantasy-comedy film produced by Walt Disney Animation Studios and released by Walt Disney Pictures.\n\n It is the 52nd Disney animated feature film.\n\n The film was directed by Rich Moore, who has directed episodes of \"The Simpsons\" and \"Futurama\", and the screenplay was written by Phil Johnston and Jennifer Lee from a story by Moore, Johnston, and Jim Reardon.\n\n John Lasseter served as the executive producer.\n\n The film features the voices of John C. Reilly, Sarah Silverman, Jack McBrayer, and Jane Lynch.\n\n The film tells the story of the eponymous arcade game villain who rebels against his role and dreams of becoming a hero.\n\n He travels between games in the arcade and ultimately must eliminate a dire threat that could affect the entire arcade and one that Ralph himself unintentionally started.",
+    "Frozen (2013 film)\nFrozen is a 2013 American 3D computer-animated musical fantasy film produced by Walt Disney Animation Studios and released by Walt Disney Pictures.\n\n It is the 53rd Disney animated feature film.\n\n Inspired by Hans Christian Andersen's fairy tale \"The Snow Queen\", the film tells the story of a fearless princess who sets off on a journey alongside a rugged iceman, his loyal pet reindeer, and a naïve snowman to find her estranged sister, whose icy powers have inadvertently trapped the kingdom in eternal winter.",
+    "Cars 2\nCars 2 is a 2011 American computer-animated action comedy spy film produced by Pixar Animation Studios for Walt Disney Pictures.\n\n It is the sequel to 2006's \"Cars\", and features the voices of Owen Wilson, Larry the Cable Guy, Michael Caine, Emily Mortimer, John Turturro, and Eddie Izzard.\n\n In the film, race car Lightning McQueen and tow truck Mater head to Japan and Europe to compete in the World Grand Prix, but Mater becomes sidetracked with international espionage.\n\n The film was directed by John Lasseter, written by Ben Queen, and produced by Denise Ream.",
+    "Walt Disney Pictures\nWalt Disney Pictures, Inc. is an American film production company and a subsidiary of Walt Disney Studios, owned by The Walt Disney Company.\n\n The division is based at the Walt Disney Studios in Burbank, California, and is the main producer of live-action feature films within the Walt Disney Studios unit.\n\n It took on its current name in 1983.\n\n Today, in conjunction with the other units of Walt Disney Studios, Walt Disney Pictures is classified as one of Hollywood's \"Big Six\" film studios.\n\n Films produced by Walt Disney Animation Studios and Pixar Animation Studios are also released under this brand.",
+    "Toy Story\nToy Story is a 1995 American computer-animated buddy comedy adventure film produced by Pixar Animation Studios for Walt Disney Pictures.\n\n The directorial debut of John Lasseter, \"Toy Story\" was the first feature-length computer-animated film and the first feature film produced by Pixar.\n\n Taking place in a world where anthropomorphic toys pretend to be lifeless whenever humans are present, the film's plot focuses on the relationship between Woody, an old-fashioned pullstring cowboy doll (voiced by Tom Hanks), and Buzz Lightyear, an astronaut action figure (voiced by Tim Allen), as they evolve from rivals competing for the affections of Andy, their owner, to friends who work together to be reunited with Andy as his family prepares to move to a new home.\n\n The screenplay was written by Joss Whedon, Andrew Stanton, Joel Cohen and Alec Sokolow, based on a story by Lasseter, Pete Docter, Stanton and Joe Ranft.\n\n The film features music by Randy Newman, and was executive-produced by Steve Jobs and Edwin Catmull.",
+    "List of Walt Disney Pictures films\nThis is a list of films released theatrically under the Walt Disney Pictures banner (known as that since 1983, with \"Never Cry Wolf\" as its first release) and films released before that under the former name of the parent company, Walt Disney Productions (1929–1983).\n\n Most films listed here were distributed in the United States by the company's distribution division, Walt Disney Studios Motion Pictures (formerly known as Buena Vista Distribution Company [1953–1987] and Buena Vista Pictures Distribution [1987–2007]).\n\n The Disney features produced before \"Peter Pan\" (1953) were originally distributed by RKO Radio Pictures, and are now distributed by Walt Disney Studios Motion Pictures.",
+    "Toy Story 3\nToy Story 3 is a 2010 American 3D computer-animated comedy-drama film produced by Pixar Animation Studios for Walt Disney Pictures.\n\n It is the third installment in Pixar's \"Toy Story\" series, and the sequel to 1999's \"Toy Story 2\".\n\n It was directed by Lee Unkrich, the editor of the first two films and the co-director of \"Toy Story 2\", written by Michael Arndt, while Unkrich wrote the story along with John Lasseter and Andrew Stanton, respectively director and co-writer of the first two films.\n\n The plot focuses on the toys Woody, Buzz Lightyear, and their friends dealing with an uncertain future as their owner, Andy, prepares to leave for college."
+   ]
+  }
+ ]
+}

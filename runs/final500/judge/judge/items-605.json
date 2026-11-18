@@ -1,0 +1,404 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "226f586f217a1072",
+   "gold": [
+    {
+     "sentence": " He is best known for his roles in \"How To Be Indie\" (2009–2011), \"Wingin' It\" (2010–2013), \"\" (2012–2013), and \"Open Heart\" (2015).",
+     "facts": {
+      "0.0": "The person described is best known for a role in 'How To Be Indie' (2009–2011).",
+      "0.1": "The person described is best known for a role in 'Wingin' It' (2010–2013).",
+      "0.2": "The person described is best known for a role in an untitled work (2012–2013).",
+      "0.3": "The person described is best known for a role in 'Open Heart' (2015)."
+     }
+    },
+    {
+     "sentence": "Open Heart is a 2015 American-Canadian mystery-drama television series produced by the Epitome Pictures unit of DHX Media in association with marblemedia.",
+     "facts": {
+      "1.0": "Open Heart is a 2015 television series.",
+      "1.1": "Open Heart is an American-Canadian television series.",
+      "1.2": "Open Heart is a mystery-drama television series.",
+      "1.3": "Open Heart was produced by the Epitome Pictures unit of DHX Media.",
+      "1.4": "Open Heart was produced in association with marblemedia."
+     }
+    }
+   ],
+   "items": [
+    "Terry Ray (actor)\nTerry Ray (born February 12, 1961) is an American actor, screenwriter, and producer.\n\n Some of his work includes \"Gaydar\" and \"Cost of Living\" (2009).\n\n Ray is the creator and writer of \"here!\n\n TV\"'s sitcom \"From Here on OUT\", the first original gay sitcom created by a gay network.\n\n Terry stars in the sitcom, along with Juliet Mills, Suzanne Whang and T.J. Hoban.\n\n<br><br>Terry Ray's 1987 appearance on Scrabble (game show) is noted as number 3 in the \"10 Great Gay Moments in Game Show History\", after Charles Nelson Reilly and Paul Lynde.\n\n In the same appearance, Terry was also named as one of the \"5 Weirdest Game Show Contestants Ever\", by Movieline.\n\n<br><br>Terry’s first professional writing job was the stage performance “Hollywood Goes Classical\" at the venerable Dorothy Chandler Pavilion starring Mickey Rooney, Michael York, Dean Jones, Rhonda Fleming and several other classic film stars.",
+    "Wingin' It\nWingin' It (originally titled Angel on Campus prior to its debut) is a Canadian teen sitcom which aired on Family.\n\n The series was produced by Temple Street Productions in association with Family.\n\n It stars Demetrius Joyette and Dylan Everett.\n\n This show included guest-stars from other Family Channel shows such as \"The Latest Buzz\".\n\n It was announced that the series was renewed for a third season on June 13, 2011.\n\n Family announced that the series is not planned for a fourth season.",
+    "Open Heart (TV series)\nOpen Heart is a 2015 American-Canadian mystery-drama television series produced by the Epitome Pictures unit of DHX Media in association with marblemedia.\n\n It first aired on January 20, 2015, on TeenNick in the United States and previously on YTV; now currently on ABC Spark in Canada.",
+    "Terry Ray (actor)\nHe wrote and starred in two more shows at the Dorothy Chandler Pavilion, one co-starring Amanda Bynes and the other Hilary Duff.\n\n<br><br>Terry is also the voice of the \"Gaydar Gun\", a spinoff toy from the film Gaydar.",
+    "Zooey Deschanel filmography\nAmerican actress Zooey Deschanel made her film debut in the 1999 comedy feature \"Mumford\".\n\n She went on to gained public attention by co-starred in the comedy-drama \"Almost Famous\" (2000), the independent drama \"Manic\" (2001), opposite Joseph Gordon-Levitt, and the comedy-drama \"The Good Girl\" (2002).\n\n She landed her first major role as a 18-year-old virgin in the romantic drama \"All the Real Girls\" (2003), for which she was nominated for an Independent Spirit Award for Best Female Lead.\n\n Deschanel's biggest commercial success, as of 2017, came with the Christmas-fantasy film \"Elf\" (also in 2003), which grossed over $220 million worldwide.",
+    "Dan Flannery\nArthur Daniel Flannery (born March 10, 1944) is an American actor from Evanston, Illinois.\n\n He has played roles in several movies, short films, and T.V. shows from a variety of genres including drama, action, and thriller.\n\n His filmography includes The Straight Story (1999), and Contagion (2011) and T.V. series such as Empire (2015 TV series) and Boss (2011-2012).",
+    "Everest (2015 film)\nEverest is a 2015 British-American biographical adventure film directed and co-produced by Baltasar Kormákur, co-produced by Tim Bevan, Eric Fellner, Nicky Kentish Barnes, Tyler Thompson and Brian Oliver and written by William Nicholson and Simon Beaufoy, adapted from Beck Weathers' memoir \"Left for Dead: My Journey Home from Everest\" (2000).\n\n It stars an ensemble cast of Jason Clarke, Josh Brolin, John Hawkes, Robin Wright, Michael Kelly, Sam Worthington, Keira Knightley, Emily Watson, and Jake Gyllenhaal.\n\n It is based on the real events of the 1996 Mount Everest disaster, and focuses on the survival attempts of two expedition groups, one led by Rob Hall (Clarke) and the other by Scott Fischer (Gyllenhaal).",
+    "Dean Winchester\nDean Winchester is a fictional character and one of the two protagonists of the American drama television series \"Supernatural\".\n\n He is portrayed by Jensen Ackles.\n\n Other versions of the character having been portrayed by Hunter Brochu (toddler), Ridge Canipe (child), Nicolai Lawton-Giustra (pre-teen), Brock Kelly and Dylan Everett (teen), and Chad Everett (elderly).",
+    "Josh Charles\nJoshua Aaron \"Josh\" Charles (born September 15, 1971) is an American stage, film and television actor.\n\n He is best known for the roles of Dan Rydell on \"Sports Night;\" Will Gardner on \"The Good Wife\", which earned him two Primetime Emmy Award nominations; and his early work as Knox Overstreet in \"Dead Poets Society\".",
+    "Dylan Everett\nDylan Everett (born January 24, 1995) is a Canadian actor.\n\n He is best known for his roles in \"How To Be Indie\" (2009–2011), \"Wingin' It\" (2010–2013), \"\" (2012–2013), and \"Open Heart\" (2015)."
+   ]
+  },
+  {
+   "id": "69184d1e30e9adce",
+   "gold": [
+    {
+     "sentence": " The station is owned by Gray Television, as part of a duopoly with CBS affiliate KWCH-DT (channel 12); Gray also operates Univision affiliate KDCU-DT (channel 31) under a joint sales agreement with owner Entravision Communications Corporation.",
+     "facts": {
+      "0.0": "The station is owned by Gray Television.",
+      "0.1": "The station is part of a duopoly with CBS affiliate KWCH-DT (channel 12).",
+      "0.2": "Gray Television also operates Univision affiliate KDCU-DT (channel 31).",
+      "0.3": "Gray Television operates KDCU-DT under a joint sales agreement with its owner, Entravision Communications Corporation."
+     }
+    },
+    {
+     "sentence": "KWCH-DT, virtual channel 12 (UHF digital channel 19), is a CBS-affiliated television station serving Wichita, Kansas, United States that is licensed to Hutchinson.",
+     "facts": {
+      "1.0": "KWCH-DT is virtual channel 12.",
+      "1.1": "KWCH-DT broadcasts on UHF digital channel 19.",
+      "1.2": "KWCH-DT is a CBS-affiliated television station.",
+      "1.3": "KWCH-DT serves Wichita, Kansas, United States.",
+      "1.4": "KWCH-DT is licensed to Hutchinson."
+     }
+    }
+   ],
+   "items": [
+    "WTLV\nWTLV, virtual channel 12 (VHF digital channel 13), is an NBC-affiliated television station licensed to Jacksonville, Florida, United States.\n\n The station is owned by the Tegna Media division of Tegna, Inc., as part of a duopoly with Orange Park-licensed ABC affiliate WJXX (channel 25).\n\n The two stations share studio facilities on East Adams Street (near EverBank Field) in downtown Jacksonville; WTLV's transmitter is located on Eve Drive in the city's Killarney Shores section.",
+    "WFLD\nWFLD, virtual channel 32 (UHF digital channel 31), is a Fox owned-and-operated television station licensed to Chicago, Illinois, United States.\n\n The station is owned by the Fox Television Stations division of 21st Century Fox, and operates as part of a television duopoly with Gary, Indiana-licensed primary CW affiliate and secondary MyNetworkTV owned-and-operated station WPWR-TV (channel 50).\n\n The two stations share studio and office facilities located at Michigan Plaza on North Michigan Avenue in the Chicago Loop; WFLD's transmitter is based at the Willis Tower on South Wacker Drive in the Loop business district.\n\n On cable, the station can be seen on Comcast Xfinity channel 12 in most parts of the Chicago area.",
+    "WDJT-TV\nWDJT-TV, virtual channel 58 (UHF digital channel 46), is a CBS-affiliated television station licensed to Milwaukee, Wisconsin, United States.\n\n The station is owned by Chicago-based Weigel Broadcasting, as part of a duopoly with Racine-licensed independent station WMLW-TV (channel 49), and is also a sister station to MeTV owned-and-operated station WBME-CD (channel 41, which is also carried via WDJT's DT2 subchannel) and Telemundo affiliate WYTU-LD (channel 63).\n\n All four stations share studio facilities located on South 60th Street in Milwaukee (near West Allis); WDJT's transmitter is located in Milwaukee's Lincoln Park (next to the transmitter belonging to ABC affiliate WISN-TV, channel 12).",
+    "WJXX\nWJXX, virtual channel 25 (VHF digital channel 10), is an ABC-affiliated television station serving Jacksonville, Florida, United States that is licensed to Orange Park.\n\n The station is owned by the Tegna Media division of Tegna, Inc., as part of a duopoly with Jacksonville-licensed NBC affiliate WTLV (channel 12) (ironically a former ABC affiliate itself from 1980 to 1988).\n\n The two stations share studio facilities on East Adams Street (near EverBank Field) in downtown Jacksonville; WJXX's transmitter is located on Eve Drive in the city's Kilarney Shores section.",
+    "KDCU-DT\nKDCU-DT, virtual and UHF digital channel 31, is a Univision-affiliated television station serving Wichita, Kansas, United States that is licensed to Derby.\n\n The station is owned by the Entravision Communications Corporation; Gray Television, which owns CBS affiliate KWCH-DT (channel 12) and CW affiliate KSCW-DT (channel 33), operates KDCU under a joint sales agreement.\n\n KDCU's offices and master control operations are based at KWCH and KSCW's joint studio facilities on 37th Street in northeast Wichita; KDCU maintains transmitter facilities located in rural northwestern Sedgwick County (northeast of Colwich).\n\n On cable, the station is available in standard definition on Cox Communications channel 15 and AT&T U-verse channel 31, and in high definition on Cox digital channel 2015 and U-verse channel 1031.",
+    "KMBC-TV\nKMBC-TV, virtual channel 9 (UHF digital channel 29), is the ABC-affiliated television station licensed to Kansas City, Missouri, United States and also serving Kansas City, Kansas.\n\n The station is owned by the Hearst Television subsidiary of the Hearst Corporation, as part of a duopoly with CW affiliate KCWE (channel 29).\n\n The two stations share studio facilities located at the Winchester Business Center on Winchester Avenue and East 63rd Street (near Swope Park, off of I-435) in southeastern Kansas City, Missouri; KMBC-TV maintains transmitter facilities located near the Blue River in eastern Kansas City.\n\n On cable, KMBC-TV is available on Charter Spectrum, Comcast Xfinity and Consolidated Communications channel 12, and Google Fiber and AT&T U-verse channel 9.\n\n There is a high definition feed provided on Spectrum digital channel 1200, Xfinity channel 812, Consolidated channel 610 and U-verse channel 1009.",
+    "KXMB-TV\nKXMB-TV, channel 12, is the CBS-affiliated television station for Bismarck, North Dakota.\n\n It broadcasts a high definition digital signal on VHF channel 12 (or virtual channel 12.1 via PSIP) from a transmitter near St. Anthony.\n\n The station can also be seen on Midcontinent cable channel 11 in Bismarck-Mandan, and cable channel 12 in most other areas.\n\n There is a high definition feed provided on Midcontinent digital channel 611.",
+    "KHSL-TV\nKHSL-TV, virtual channel 12 (UHF digital channel 43) is a CBS-affiliated television station located in Chico, California, United States, that also serves Redding.\n\n The station is owned by Heartland Media as part of a duopoly with NBC affiliate KNVN (channel 24), which is owned by Maxair Media but operated by Heartland through a local marketing agreement.\n\n The two stations share studios at the corner of Eaton Road and Silverbell Road on the northwest side of Chico, while its transmitter is located along Cohasset Road in rural Butte County northwest of Paradise.",
+    "KSCW-DT\nKSCW-DT, virtual channel 33 (VHF digital channel 12), is a CW-affiliated television station licensed to Wichita, Kansas, United States.\n\n The station is owned by Gray Television, as part of a duopoly with CBS affiliate KWCH-DT (channel 12); Gray also operates Univision affiliate KDCU-DT (channel 31) under a joint sales agreement with owner Entravision Communications Corporation.\n\n KSCW and KWCH share studio facilities and KDCU's master control operations are located on East 37th Street North in northeastern Wichita; KSCW maintains transmitter facilities located in rural northeastern Reno County (due south of Buhler).",
+    "KWCH-DT\nKWCH-DT, virtual channel 12 (UHF digital channel 19), is a CBS-affiliated television station serving Wichita, Kansas, United States that is licensed to Hutchinson.\n\n The station is owned by Gray Television, as part of a duopoly with CW affiliate KSCW-DT (channel 33); Gray also operates Univision affiliate KDCU-DT (channel 31) under a joint sales agreement with owner Entravision Communications Corporation.\n\n KWCH and KSCW share studio facilities and KDCU's master control operations are located on 37th Street in northeast Wichita; KWCH maintains transmitter facilities located in rural northeastern Reno County (south-southeast of Buhler)."
+   ]
+  },
+  {
+   "id": "8413e72b83def0c3",
+   "gold": [
+    {
+     "sentence": " In return, William made Copsi earl of Northumbria and sent him back to York.",
+     "facts": {
+      "0.0": "William made Copsi earl of Northumbria in return.",
+      "0.1": "William sent Copsi back to York."
+     }
+    },
+    {
+     "sentence": "York ( ) is a historic walled city at the confluence of the rivers Ouse and Foss in North Yorkshire, England.",
+     "facts": {
+      "1.0": "York is a historic walled city.",
+      "1.1": "York is at the confluence of the rivers Ouse and Foss.",
+      "1.2": "York is in North Yorkshire, England."
+     }
+    }
+   ],
+   "items": [
+    "Copsi\nCopsi (or Copsig; Old English: \"Cōpsige\" ) [died 1067] was a Northumbrian magnate in late Anglo-Saxon England.\n\n He was a supporter of Tostig, and was exiled along with him in 1065.\n\n Copsi soon fled to Orkney (then a part of Norway).\n\n The next year (1066), he joined Tostig at Sandwich, in Kent, with 17 ships.\n\n Copsi survived Tostig's defeat at Stamford Bridge, and when William the Conqueror prevailed at Hastings he travelled, in March 1067, to pay William homage at Barking (where William was staying while his tower was being constructed in London).\n\n In return, William made Copsi earl of Northumbria and sent him back to York.\n\n Copsi's rule lasted a mere five weeks, at which time he was murdered by Osulf, son of Eadulf III of the ancient Bernician family which had historically governed the area from Bamburgh, at Newburn-upon-Tyne.",
+    "Earl of Norbury\nEarl of Norbury, in the County of Tipperary, is a title in the Peerage of Ireland.\n\n It was created in 1827, along with the title Viscount Glandine, of Glandine in the King's County, for the Irish politician and judge John Toler, 1st Baron Norbury, upon his retirement as Chief Justice of the Common Pleas in Ireland.\n\n The titles were created with special remainder to his second son, Hector, as his eldest son, Daniel, was then considered mentally unwell.\n\n Lord Norbury had already been created Baron Norbury, of Ballycrenode in the County of Tipperary, in the Peerage of Ireland in 1800, with remainder to the heirs male of his body.\n\n Moreover, his wife, Grace Toler (née Graham), had been created Baroness Norwood, of Knockalton in the County of Tipperary, in the Peerage of Ireland in 1797, with remainder to the heirs male of her body.\n\n By the time Lord Norbury was raised to the Earldom, his wife had died and their eldest son had succeeded her as 2nd Baron Norwood.",
+    "Two Rivers Press\nTwo Rivers Press is an independent publishing house, based in the English town of Reading.\n\n Two Rivers Press was founded in 1994 by Peter Hay (1951–2003), a local artist.\n\n Its name reflects his enthusiasm for the town and its two rivers, the Kennet and the Thames, and its intention to explore \"the place where art and history meet\".\n\n The name also gives a clue to the origins of the company in the, ultimately successful, opposition to Reading's proposed \"Cross-Town Route\", a road scheme that would have seriously impacted the point at which the two rivers meet.",
+    "Earl Cowper\nHe represented Hertford in Parliament.\n\n He was succeeded by his eldest son, the aforementioned William Cowper, the third Baronet, who was elevated to the peerage as Baron Cowper in 1706 and made Earl Cowper in 1718.\n\n In 1706 Lord Cowper married as his second wife Mary Clavering, daughter of John Clavering, of Chopwell, County Durham.",
+    "Two Rivers (Red River of the North)\nThe Two Rivers is a 7.0 mi river in Kittson County, northwestern Minnesota, in the United States.\n\n Formed by the North Branch of the Two Rivers and the South Branch of the Two Rivers, it is a tributary of the Red River of the North, with its outflow traveling north through Lake Winnipeg and the Nelson River to Hudson Bay.",
+    "York\nYork ( ) is a historic walled city at the confluence of the rivers Ouse and Foss in North Yorkshire, England.\n\n The municipality is the traditional county town of the historic county of Yorkshire to which it gives its name.\n\n The city has a rich heritage and has provided the backdrop to major political events in England throughout much of its two millennia of existence.\n\n The city offers a wealth of historic attractions, of which York Minster is the most prominent, and a variety of cultural and sporting activities making it a popular tourist destination for millions.",
+    "Earl Cowper\nEarl Cowper (pronounced \"Cooper\") was a title in the Peerage of Great Britain.\n\n It was created in 1718 by George I for William Cowper, 1st Baron Cowper, his first Lord Chancellor, with remainder in default of male issue of his own to his younger brother, Spencer Cowper.\n\n Cowper had already been created Baron Cowper of Wingham in the County of Kent, in the Peerage of England on 14 December 1706, with normal remainder to the heirs male of his body, and was made Viscount Fordwich, in the County of Kent, at the same time as he was given the earldom, also Peerage of Great Britain and with similar remainder.\n\n He was the great-grandson of William Cowper, who was created a Baronet, of Ratling Court in the County of Kent, in the Baronetage of England on 4 March 1642.\n\n The latter was succeeded by his grandson, the second Baronet.\n\n He represented Hertford in Parliament.",
+    "Tripartite Indenture\nThe Tripartite Indenture was an agreement made in February 1405 between Owain Glyndŵr, Edmund Mortimer, and Henry Percy, 1st Earl of Northumberland, agreeing to divide England and Wales up between them at the expense of Henry IV.\n\n Glyndŵr was to be given Wales, and a substantial part of the west of England, including the English portions of the Welsh Marches.\n\n Northumberland was to have received the north, as well as Northamptonshire, Norfolk, Warwickshire, and Leicestershire.\n\n The Mortimers were to have received the rest of southern England.",
+    "Copsi\nOsulf, however, only ruled as earl until that autumn, when he was killed by an outlaw he was tracking.",
+    "Earl of Norbury\nThis son also succeeded Lord Norbury himself on his death in 1831 as 2nd Baron Norbury, whilst his younger brother Daniel succeeded to the viscountcy and earldom according to the special remainder.\n\n In 1832, the second Earl also succeeded his elder brother in the two baronies.\n\n He had already in 1825 assumed the additional surname of Graham by Royal licence."
+   ]
+  },
+  {
+   "id": "d9c7e3d50ba1f67b",
+   "gold": [
+    {
+     "sentence": "Marcel Émile Verdet (13 March 1824 – 3 June 1866) was a French physicist.",
+     "facts": {
+      "0.0": "Marcel Émile Verdet was born on 13 March 1824.",
+      "0.1": "Marcel Émile Verdet died on 3 June 1866.",
+      "0.2": "Marcel Émile Verdet was a French physicist."
+     }
+    },
+    {
+     "sentence": " Verdet did much to champion the early theory of the conservation of energy in France through his editorial supervision of the \"Annales de chimie et de physique\".",
+     "facts": {
+      "1.0": "Marcel Émile Verdet did much to champion the early theory of the conservation of energy in France.",
+      "1.1": "Marcel Émile Verdet championed this theory in France through his editorial supervision of the 'Annales de chimie et de physique'."
+     }
+    },
+    {
+     "sentence": "Annales de chimie et de physique (French for \"Annals of Chemistry and of Physics\") is a scientific journal that was founded in Paris, France, in 1789 under the title \"Annales de chimie\".",
+     "facts": {
+      "2.0": "Annales de chimie et de physique is French for 'Annals of Chemistry and of Physics'.",
+      "2.1": "Annales de chimie et de physique is a scientific journal.",
+      "2.2": "Annales de chimie et de physique was founded in Paris, France, in 1789.",
+      "2.3": "Annales de chimie et de physique was founded under the title 'Annales de chimie'."
+     }
+    }
+   ],
+   "items": [
+    "Index of Middle English Verse\nThe Index of Middle English Verse (IMEV) is a bibliographic index of poetry in Middle English.\n\n Its first print publication, in 1943, was an extension of Carleton Brown's \"Register of Middle English Religious & Didactic Verse\", augmented by the inclusion of secular verse.\n\n This edition, edited by Brown and Rossell Hope Robbins, contained entries for over 4000 Middle English poems in more than 2000 manuscripts.\n\n In 1965 the index was supplemented by Robbins and John L. Cutler.\n\n The IMEV is available online through Virginia Polytechnic Institute and State University.",
+    "Villard (imprint)\nVillard, also known as Villard Books, is a publishing imprint of Random House, one of the largest publishing companies in the world.\n\n It was founded in 1983.\n\n Villard began as an independent imprint of Random House and is currently a sub-imprint of Ballantine Books, itself an imprint of Random House.\n\n It was named after a Stanford White brownstone mansion on Madison Avenue that was the home of Random House for twenty years.",
+    "The Rebel (book)\nThe Rebel (French: \"L'Homme révolté\" ) is a 1951 book-length essay by Albert Camus, which treats both the metaphysical and the historical development of rebellion and revolution in societies, especially Western Europe.\n\n Camus relates writers and artists as diverse as Epicurus and Lucretius, Marquis de Sade, Georg Wilhelm Friedrich Hegel, Fyodor Dostoyevsky, Friedrich Nietzsche, Max Stirner, André Breton, and others in an integrated, historical portrait of man in revolt.\n\n Examining both rebellion and revolt, which may be seen as the same phenomenon in personal and social frames, Camus examines several 'countercultural' figures and movements from the history of Western thought and art, noting the importance of each in the overall development of revolutionary thought and philosophy.",
+    "Elle (magazine)\nElle is a worldwide lifestyle magazine of French origin that focuses on fashion, beauty, health, and entertainment.\n\n \"Elle\" is also the world's best-selling fashion magazine.\n\n It was founded by Pierre Lazareff and his wife Hélène Gordon in 1945.\n\n The title, in French, means \"she\" or \"her\".",
+    "Jacques Feyder\nJacques Feyder (] ; 21 July 1885 – 24 May 1948) was a Belgian actor, screenwriter and film director who worked principally in France, but also in the USA, Britain and Germany.\n\n He was a leading director of silent films during the 1920s, and in the 1930s he became associated with the style of poetic realism in French cinema.\n\n He adopted French nationality in 1928.",
+    "Émile Verdet\nMarcel Émile Verdet (13 March 1824 – 3 June 1866) was a French physicist.\n\n He worked in magnetism and optics, editing the works of Augustin-Jean Fresnel.\n\n Verdet did much to champion the early theory of the conservation of energy in France through his editorial supervision of the \"Annales de chimie et de physique\".",
+    "Entente Cordiale (opera)\nEntente Cordiale is a comic opera in one act by Ethel Smyth with an English-language libretto by Smyth, who describes the work as \"a post-war comedy in one act (founded on fact)\".\n\n It was first performed by students at the Royal College of Music in London on 22 July 1925.",
+    "Annales de chimie et de physique\nAnnales de chimie et de physique (French for \"Annals of Chemistry and of Physics\") is a scientific journal that was founded in Paris, France, in 1789 under the title \"Annales de chimie\".\n\n One of the early editors was the French chemist Antoine Lavoisier.\n\n In 1815, it became the \"Annales de chimie et de physique\", and was published under that name for the next 100 years.",
+    "Hekmat\nHekmat (Persian: حكمت‎ ‎  –\"Wisdom\") was the first Persian-language newspaper to be published in Egypt, as well as the first Persian journal to be published in an Arab country.\n\n Founded and managed by the Iranian expat Mohammad-Mahdi Tabrizi (died 1914), a physician by profession, it was published from 20 September 1892 until 30 May 1911.\n\n \"Hekmat\" carried mostly news, but also feature a variety of articles on political and social issues.\n\n Despite being published in an \"Arab country\", it avoided the usage of Arabic terms and compoun words as well as Arabicized forms of non-Arab words throughouts its texts.",
+    "Auguste Brancart\nAugust or Auguste Brancart (21 July 1851 - 1894?)\n\n was a Belgian publisher of pornographic literature, credited with the first publication of \"My Secret Life\".\n\n He published translations of English pornography into French and vice versa for English publishers such as Edward Avery.\n\n He also published work of the Decadent movement such as \"Monsieur Vénus\" by Rachilde."
+   ]
+  },
+  {
+   "id": "7fe600a5154f830c",
+   "gold": [
+    {
+     "sentence": "Like many of Marivaux's , \"La Surprise de l'amour\" makes use of stock characters from the Commedia dell'arte.",
+     "facts": {
+      "0.0": "Like many of Marivaux's plays, La Surprise de l'amour makes use of stock characters from the Commedia dell'arte.",
+      "0.1": "Many of Marivaux's plays make use of stock characters from the Commedia dell'arte."
+     }
+    },
+    {
+     "sentence": " In this play, Arlequin and Columbine are featured.",
+     "facts": {
+      "1.0": "In La Surprise de l'amour, Arlequin is featured.",
+      "1.1": "In La Surprise de l'amour, Columbine is featured."
+     }
+    },
+    {
+     "sentence": "Harlequin ( ; Italian: \"Arlecchino\" ] , French: \"Arlequin\" ] , Old French \"Harlequin\") is the best-known of the \"zanni\" or comic servant characters from the Italian \"Commedia dell'arte\".",
+     "facts": {
+      "2.0": "Harlequin is the best-known of the zanni, the comic servant characters from the Italian Commedia dell'arte.",
+      "2.1": "Harlequin is called Arlecchino in Italian.",
+      "2.2": "Harlequin is called Arlequin in French.",
+      "2.3": "Harlequin is called Harlequin in Old French."
+     }
+    }
+   ],
+   "items": [
+    "Gilles (stock character)\nGilles (] )—sometimes Gille—is a stock character of French farce and Commedia dell'Arte.\n\n He enjoyed his greatest vogue in 18th-century France, in entertainments both at the fairgrounds of the capital and in private and public theaters, though his origins can be traced back to the 17th century and, possibly, the century previous.\n\n A \"zanni\", or comic servant, he is a type of bungling clown, stupid, credulous, and lewd—a character that shares little, problematically, with the sensitive figure in Watteau's famous portrait that, until the latter half of the 20th century, bore his name alone.\n\n Gilles fades from view in the 19th century, to persist in the 20th and 21st as the Belgian Gilles of Binche Carnival.",
+    "Harlequin\nHarlequin ( ; Italian: \"Arlecchino\" ] , French: \"Arlequin\" ] , Old French \"Harlequin\") is the best-known of the \"zanni\" or comic servant characters from the Italian \"Commedia dell'arte\".\n\n The role is traditionally believed to have been introduced by Zan Ganassa in the late 16th century, and was definitively popularized by the Italian actor Tristano Martinelli in Paris in 1584–1585 and became a stock character after Martinelli's death in 1630.",
+    "Pedrolino\nPedrolino is a \"primo zanni\", or comic servant, of the \"Commedia dell'Arte\"; the name is a hypocorism of \"Pedro\" (Peter), via the suffix \"-lino\".\n\n The character made its first appearance in the last quarter of the 16th century, apparently as the invention of the actor with whom the role was to be long identified, Giovanni Pellesini.\n\n Contemporary illustrations suggest that his white blouse and trousers constituted \"a variant of the typical \"zanni\" suit\", and his Bergamasque dialect marked him as a member of the \"low\" rustic class.\n\n But if his costume and social station were without distinction, his dramatic role was certainly not: as a multifaceted \"first\" \"zanni\", his character was—and still is—rich in comic incongruities.",
+    "Bernhard Bötel\nHis stage repertoire included Belmonte in Wolfgang Amadeus Mozart's \"Die Entführung aus dem Serail\", Chapelou in Adolphe Adam's \"Le postillon de Lonjumeau\", Count Almaviva in Gioachino Rossini's \"The Barber of Seville\", Daniel in Franz Lehár's \"The Merry Widow\", the Duke of Mantua in Giuseppe Verdi's \"Rigoletto\", Gabriel von Eisenstein in Johann Strauss II's \"Die Fledermaus\", Indigo in Strauss' \"Indigo und die vierzig Räuber\", Jeník in Bedřich Smetana's \"The Bartered Bride\", Paolino in Domenico Cimarosa's \"Il matrimonio segreto\", Pâris in Jacques Offenbach's \"La belle Hélène\", Pietro in Franz von Suppé's \"Boccaccio\", and Wilhelm Meister in Ambroise Thomas' \"Mignon\".",
+    "La Surprise de l'amour\nLike many of Marivaux's , \"La Surprise de l'amour\" makes use of stock characters from the Commedia dell'arte.\n\n In this play, Arlequin and Columbine are featured.",
+    "Columbina\nColumbina (in Italian Colombina, meaning \"little dove\"; in French and English Colombine) is a stock character in the \"Commedia dell'Arte\".\n\n She is Harlequin's mistress, a comic servant playing the tricky slave type, and wife of Pierrot.\n\n Rudlin and Crick use the Italian spelling Colombina in \"Commedia dell'arte: A Handbook for Troupes\".",
+    "Tartaglia (commedia dell'arte)\nTartaglia is a dainty character in the Commedia dell'arte.\n\n He is farsighted and with a minor stutter (hence his name; cf. Spanish tartamudear), he is usually classed as one of the group of old characters (vecchio) who appears in many scenarios as one of the lovers (innamorati).\n\n His social status varies; he is sometimes a bailiff, lawyer, notary or chemist.\n\n Dramatist Carlo Gozzi turned him into a statesman, and so he remained thereafter.\n\n Tartaglia wears a large felt hat, an enormous cloak, oversized boots, a long sword, a giant moustache and a cardboard nose.\n\n He usually represents the lower working class but at times the middle or upper class in the commedia dell'arte.\n\n In the opera \"Le maschere\" by Mascagni, one of the characters is Tartaglia, a stuttering servant.",
+    "Pierrot lunaire (book)\nPierrot lunaire: rondels bergamasques (\"Moonstruck Pierrot: bergamask rondels\") is a collection of fifty poems published in 1884 by the Belgian poet Albert Giraud (born Emile Albert Kayenburgh), who is usually associated with the Symbolist Movement.\n\n The protagonist of the cycle is Pierrot, the comic servant of the French Commedia dell'Arte and, later, of Parisian boulevard pantomime.\n\n The early 19th-century Romantics, Théophile Gautier most notably, had been drawn to the figure by his Chaplinesque pluckiness and pathos, and by the end of the century, especially in the hands of the Symbolists and Decadents, Pierrot had evolved into an alter-ego of the artist, particularly of the so-called poète maudit.\n\n He became the subject of numerous compositions, theatrical, literary, musical, and graphic.",
+    "Niccolò Barbieri\nNiccolò (or Nicolò) Barbieri (Vercelli, 1586 - 1641) was an Italian writer and actor of the commedia dell'arte theatrical genre.\n\n He was also known as Beltrame di Milano (\"Beltrame of Milan\") in reference to one of his most popular characters, Beltrame; this was the main character of one of Barbieri's best known plays, \"L'inavertito\", which is known to have inspired Moliere's \"L'Étourdi ou Les Contretemps\" (\"The Blunderer\").\n\n Besides popularizing Beltrame, Barbieri is also credited with creating another \"commedia dell'arte\" mask, Scapino.",
+    "Commedia dell'arte\nCommedia dell'arte (] , comedy of the profession) was an early form of professional theatre, originating from Italy, that was popular in Europe from the 16th through the 18th century.\n\n \"Commedia dell'arte\" also is known as \"commedia alla maschera\", \"commedia improvviso\", and \"commedia dell'arte all'improvviso\".\n\n \"Commedia\" is a form of theatre characterized by masked \"types\" which began in Italy in the 16th century and was responsible for the advent of actresses (Isabella Andreini) and improvised performances based on sketches or scenarios.\n\n A \"commedia\", such as \"The Tooth Puller\", is both scripted and improvised.\n\n Characters' entrances and exits are scripted.\n\n A special characteristic of \"commedia dell'arte\" are the \"lazzi\".\n\n A \"lazzo\" is a joke or \"something foolish\" or \"witty\".\n\n Another characteristic of \"commedia dell'arte\" is pantomime, which is mostly used by the character Arlecchino (Harlequin)."
+   ]
+  },
+  {
+   "id": "0157a10860dfd072",
+   "gold": [
+    {
+     "sentence": "Karl Hermann Frank (24 January 1898 – 22 May 1946) was a prominent Sudeten German Nazi official in Czechoslovakia prior to and during World War II and an SS-\"Obergruppenführer\".",
+     "facts": {
+      "0.0": "Karl Hermann Frank's life dates are 24 January 1898 to 22 May 1946.",
+      "0.1": "Karl Hermann Frank was a prominent Sudeten German Nazi official in Czechoslovakia.",
+      "0.2": "Karl Hermann Frank was a Nazi official in Czechoslovakia prior to World War II.",
+      "0.3": "Karl Hermann Frank was a Nazi official in Czechoslovakia during World War II.",
+      "0.4": "Karl Hermann Frank was an SS-Obergruppenführer."
+     }
+    },
+    {
+     "sentence": " Until April 1942, it was the highest commissioned SS rank, inferior only to \"Reichsführer-SS\" (Heinrich Himmler or RFSS, which was the internal SS-abbreviation for Himmler) Translated as \"senior group leader\", the rank of \"Obergruppenführer\" was senior to \"Gruppenführer\".",
+     "facts": {
+      "1.0": "Until April 1942, the Obergruppenführer rank was the highest commissioned SS rank.",
+      "1.1": "Until April 1942, the Obergruppenführer rank was inferior only to Reichsführer-SS.",
+      "1.2": "Reichsführer-SS was the SS rank held by Heinrich Himmler.",
+      "1.3": "RFSS was the internal SS abbreviation for Himmler.",
+      "1.4": "Obergruppenführer translates as senior group leader.",
+      "1.5": "The rank of Obergruppenführer was senior to Gruppenführer."
+     }
+    }
+   ],
+   "items": [
+    "Obergruppenführer\nObergruppenführer (] , \"senior group leader\") was a Nazi Party paramilitary rank that was first created in 1932 as a rank of the \"Sturmabteilung\" (SA), and adopted by the \"Schutzstaffel\" (SS) one year later.\n\n Until April 1942, it was the highest commissioned SS rank, inferior only to \"Reichsführer-SS\" (Heinrich Himmler or RFSS, which was the internal SS-abbreviation for Himmler) Translated as \"senior group leader\", the rank of \"Obergruppenführer\" was senior to \"Gruppenführer\".\n\n A similarly named rank of \"Untergruppenführer\" existed in the SA from 1929 to 1930 and as a title until 1933.\n\n In April 1942, the new rank of \"SS-Oberst-Gruppenführer\" was created which was above \"Obergruppenführer\" and below \"Reichsführer-SS\".",
+    "Ludwig Beck\nLudwig August Theodor Beck (29 June 1880 – 21 July 1944) was a German general and Chief of the German General Staff during the early years of the Nazi regime in Germany before World War II.\n\n Ludwig Beck was never a member of the Nazi Party, though in the early 1930s he supported Adolf Hitler's forceful denunciation of the Versailles Treaty and belief in the need for Germany to rearm.\n\n Beck had grave misgivings regarding the Nazi demand that all German officers swear an oath of fealty to the person of Hitler in 1934, though he believed that Germany needed strong government and that Hitler could successfully provide this so long as he was influenced by traditional elements within the military rather than the SA and SS.",
+    "Herbert Büchs\nHerbert Büchs (20 November 1913 – 19 May 1996) was a Lieutenant General of the German Air Force and a former Luftwaffe staff officer in Nazi Germany's Oberkommando der Wehrmacht (OKW) during World War II.\n\n As second adjutant to General Alfred Jodl with the rank of Major he is notable for being present in the conference room when the 20 July plot bomb exploded in 1944.",
+    "List of Generalobersts\nGeneraloberst, in English Colonel General, was, in Germany and Austria-Hungary—the German \"Reichswehr\" and \"Wehrmacht\", the Austro-Hungarian Common Army, and the East German National People's Army, as well as the respective police services—the second highest general officer rank, ranking above full general but below general field marshal.\n\n It was equivalent to \"Generaladmiral\" in the \"Kriegsmarine\" until 1945, or to Flottenadmiral in the \"Volksmarine\" until 1990.\n\n The rank was the highest ordinary military rank and the highest military rank awarded in peacetime; the higher rank of general field marshal was only awarded in wartime by the head of state.\n\n In general, a Generaloberst had the same privileges as a general field marshal.",
+    "Franz Halder\nFranz Halder (30 June 1884 – 2 April 1972) was a German general and the chief of the \"Oberkommando des Heeres\" staff (OKH, Army High Command) from 1938 until September 1942, when he was dismissed after frequent disagreements with Adolf Hitler.\n\n Until December 1941 Halder's military position corresponded to the old Chief of the General Staff position, which during World War I had been the highest military office in the German Imperial Army.\n\n Halder's diary during his time as chief of OKH General Staff has been a source for authors that have written about such subjects as Hitler, World War II and the Nazi Party.\n\n In William Shirer's \"The Rise and Fall of the Third Reich\", Halder's diary is cited hundreds of times.",
+    "Karl Hermann Frank\nKarl Hermann Frank (24 January 1898 – 22 May 1946) was a prominent Sudeten German Nazi official in Czechoslovakia prior to and during World War II and an SS-\"Obergruppenführer\".\n\n He was tried, convicted and executed after World War II for his role in organizing the massacres of the people of the Czech villages of Lidice and Ležáky.",
+    "Friedrich Jeckeln\nFriedrich Jeckeln (2 February 1895 – 3 February 1946) was a high-ranking official in the SS of Nazi Germany who served as an SS and Police Leader in the occupied Soviet Union during World War II.\n\n Jeckeln was the commander of one of the largest collection of \"Einsatzgruppen\" and was personally responsible for ordering and organizing the deaths of over 100,000 Jews, Slavs, Romani, and other \"undesirables\".\n\n After the end of World War II, Jeckeln was convicted for his crimes by a Soviet military tribunal in Riga, Latvia and executed in 1946.",
+    "Alfred Jodl\nAlfred Josef Ferdinand Jodl (   ; 10 May 1890 – 16 October 1946) was a German general and war criminal during World War II, who served as the Chief of the Operations Staff of the Armed Forces High Command (Oberkommando der Wehrmacht).",
+    "Ferdinand Jodl\nFerdinand Alfred Friedrich Jodl (28 November 1896 – 9 June 1956) was a German general during World War II who commanded the Mountain Corps Norway during the Petsamo–Kirkenes Offensive.\n\n He was the brother of Alfred Jodl, Chief of the Operations Staff of the OKW.\n\n Ferdinand Jodl was acquitted by a German court.",
+    "Field marshal\nField marshal (or field-marshal, abbreviated as FM) ( , ) is a very senior military rank, ordinarily senior to the general officer ranks.\n\n Usually it is the highest rank in an army, and when it is, few (if any) persons are appointed to it.\n\n It is considered as a five-star rank (OF-10) in modern-day armed forces in many countries.\n\n Promotion to the rank of field marshal in many countries historically required extraordinary military achievement by a general (a wartime victory).\n\n However, the rank has also been used as a divisional command rank and also as a brigade command rank.\n\n Examples of the different uses of the rank include Austria-Hungary, Prussia and Germany for an extraordinary achievement; Spain and Mexico for a divisional command (Spanish: \"mariscal de campo\" ); and France, Portugal and Brazil for a brigade command (French: \"maréchal de camp\" , Portuguese: \"marechal de campo\" )."
+   ]
+  },
+  {
+   "id": "be56fbf095fa183e",
+   "gold": [
+    {
+     "sentence": "Colocasia is a genus of flowering plants in the family Araceae, native to southeastern Asia and the Indian subcontinent.",
+     "facts": {
+      "0.0": "Colocasia is a genus of flowering plants.",
+      "0.1": "Colocasia is in the family Araceae.",
+      "0.2": "Colocasia is native to southeastern Asia.",
+      "0.3": "Colocasia is native to the Indian subcontinent."
+     }
+    },
+    {
+     "sentence": "The genus Coronilla contains about 20 species of flowering plants native to Europe and North Africa.",
+     "facts": {
+      "1.0": "The genus Coronilla contains about 20 species.",
+      "1.1": "The Coronilla species are flowering plants.",
+      "1.2": "The Coronilla species are native to Europe.",
+      "1.3": "The Coronilla species are native to North Africa."
+     }
+    }
+   ],
+   "items": [
+    "Strobilanthes\nStrobilanthes is a genus of about 350 species of flowering plants in the family Acanthaceae, mostly native to tropical Asia and Madagascar, but with a few species extending north into temperate regions of Asia.\n\n Many species are cultivated for their 2-lipped, hooded flowers in shades of blue, pink, white and purple.\n\n Most are frost-tender and require protection in frost-prone areas.",
+    "Coronilla\nThe genus Coronilla contains about 20 species of flowering plants native to Europe and North Africa.",
+    "Caryophyllales\nCaryophyllales ( ) is an order of flowering plants that includes the cacti, carnations, amaranths, ice plants, beets, and many carnivorous plants.\n\n Many members are succulent, having fleshy stems or leaves.",
+    "Coris monspeliensis\nCoris monspeliensis has erect or ascending stems which are woody at the base and densely covered with foliage.\n\n The leathery linear leaves, which grow up to 20 mm long are alternate and stalkless.\n\n They may be hairless or hairy and the highest leaves often have small teeth.\n\n The flowers with 5 unequal petals, each deeply lobed are borne in short dense clusters and vary in color from pink to blue.\n\n Each flower measures up to 12 mm across and has narrow, widely spread petals.\n\n The calyx is bell shaped and has up to 20 red or black spiny teeth.\n\n The spherical capsule is up to 2 mm in diameter.",
+    "Dieffenbachia\nDieffenbachia is a genus of tropical flowering plants in the family Araceae.\n\n It is native to the New World Tropics from Mexico and the West Indies south to Argentina.\n\n Some species are widely cultivated as ornamental plants, especially as houseplants, and have become naturalized on a few tropical islands.",
+    "Conicosia\nConicosia is a genus of succulent plants in the ice plant family native to southern Africa.\n\n They are known commonly as narrow-leafed ice plants.\n\n These are relatively short-lived perennials with underground stems and tentacle-shaped, dull-pointed triangular leaves.\n\n They bear large tubular flowers often exceeding 10 centimeters in width, with up to 250 fringelike petals arranged in a ring around a center with hundreds of stamens.\n\n The fruit is a capsule which opens when it gets wet, slowly releasing the hundreds of tiny seeds as they fall out of its drying flesh.",
+    "Conophytum\nConophytum is a genus of South African and Namibian succulent plants that belong to the Aizoaceae family.\n\n The name is derived from the Latin “conus” (cone) and Greek “phytum” (plant).\n\n The plants are also known as knopies (buttons), waterblasies (water blisters), sphaeroids, conos, cone plants, dumplings, or button plants.",
+    "Colocasia\nColocasia is a genus of flowering plants in the family Araceae, native to southeastern Asia and the Indian subcontinent.\n\n Some species are widely cultivated and naturalized in other tropical and subtropical regions.\n\n Common names include tarul, karkala ko ganu, elephant-ear, taro, cocoyam, dasheen, chembu, champadhumpa, shavige gadde, and eddoe.\n\n Elephant-ear and cocoyam are also used for some other large-leaved genera in the Araceae, notably \"Xanthosoma\" and \"Caladium\".\n\n The generic name is derived from the ancient Greek word \"kolokasion\", which in the Greek botanist Dioscorides (1st century AD) meant the edible roots of both \"Colocasia esculenta\" and \"Nelumbo nucifera\".\n\n It is thought that the edible roots of \"Colocasia esculenta\" have been cultivated in Asia for more than ten thousand years.\n\n The species \"Colocasia esculenta\" is an invasive species in wetlands along the American Gulf coast, where it threatens to displace native wetland plants.",
+    "Caladium\nCaladium is a genus of flowering plants in the family Araceae.\n\n They are often known by the common name elephant ear (which they share with the closely related genera \"Alocasia\", \"Colocasia\", and \"Xanthosoma\"), Heart of Jesus, and Angel Wings.\n\n There are over 1000 named cultivars of \"Caladium bicolor\" from the original South American plant.",
+    "Xanthosoma\nXanthosoma is a genus of flowering plants in the arum family, Araceae.\n\n The genus is native to tropical America but widely cultivated and naturalized in other tropical regions.\n\n Several are grown for their starchy corms, an important food staple of tropical regions, known variously as \"malanga\", \"otoy\", \"otoe\", cocoyam (or new cocoyam), \"tannia\", \"tannier\", \"yautía\", \"macabo\", \"ocumo\", \"macal\", \"taioba\", \"dasheen\", \"quequisque\", \"ʻ ape\" and (in Papua New Guinea) as Singapore taro (\"taro kongkong\").\n\n Many other species (including especially \"X. roseum\") are used as ornamental plants, and in popular horticultural literature are known as ‘ape or elephant ear (from the purported resemblance of the leaf to an elephant's ear), although the latter name is sometimes also applied to members with similar appearance and uses in the closely related genera \"Caladium\", \"Colocasia\" (i.e., taro), and \"Alocasia\"."
+   ]
+  },
+  {
+   "id": "a8e2f116fc71d5ff",
+   "gold": [
+    {
+     "sentence": "Sasson Gabai (Hebrew: ששון גבאי‎ ‎ ; born 24 November 1947) is an Israeli actor.",
+     "facts": {
+      "0.0": "Sasson Gabai's Hebrew name is ששון גבאי.",
+      "0.1": "Sasson Gabai was born on 24 November 1947.",
+      "0.2": "Sasson Gabai is an Israeli actor."
+     }
+    },
+    {
+     "sentence": " Winner of an Ophir Award, Asia Pacific Screen Award (nominated), European Film Awards and Jerusalem Film Festival in 2007 as Best Actor in a highly acclaimed Israeli film \"The Band's Visit\".",
+     "facts": {
+      "1.0": "Sasson Gabai won an Ophir Award.",
+      "1.1": "Sasson Gabai was nominated for an Asia Pacific Screen Award.",
+      "1.2": "Sasson Gabai won a European Film Awards award.",
+      "1.3": "Sasson Gabai won a Jerusalem Film Festival award.",
+      "1.4": "These awards were won in 2007.",
+      "1.5": "The awards were for Best Actor.",
+      "1.6": "The award-winning role was in the highly acclaimed Israeli film The Band's Visit."
+     }
+    },
+    {
+     "sentence": "The Band's Visit (Hebrew: ביקור התזמורת - \"Bikur Ha-Tizmoret\") is a 2007 Israeli film directed by Eran Kolirin.",
+     "facts": {
+      "2.0": "The Band's Visit is a 2007 Israeli film.",
+      "2.1": "The Band's Visit is written in Hebrew as ביקור התזמורת.",
+      "2.2": "The Hebrew title of The Band's Visit is Bikur Ha-Tizmoret.",
+      "2.3": "The Band's Visit was directed by Eran Kolirin."
+     }
+    }
+   ],
+   "items": [
+    "Sh'Chur\nSh'Chur is a 1994 Israeli drama film starring Gila Almagor, Ronit Elkabetz and Hanna Azoulay-Hasfari.\n\n It was written by Hanna Azoulay Hasfari and directed by her partner Shmuel Hasfari.\n\n Sh'Chur received critical acclaim and was the 1994 official Israeli submission for the Academy Award for Best Foreign Language Film.\n\n It was also awarded the Ophir Award for best film by the Israeli Film and Television Academy.\n\n After its release, the film garnered various discussions in the Israeli press over its representation of the Moroccan community in Israel.",
+    "The entries highlight acclaimed Israeli cinema: *The Band’s Visit* (2007), directed by Eran Kolirin, and *Hunting Elephants* (2013), Reshef Levi’s crime comedy starring Sasson Gabai, Moni Moshonov and Patrick Stewart. *Yana’s Friends* (1999) won 10 Ophir Awards and Karlovy Vary’s Crystal Globe. Joseph Cedar won Cannes’ 2011 screenplay prize for *Footnote",
+    "Joseph Cedar\nYossef (Joseph) Cedar (Hebrew: יוסף סידר; born August 31, 1968) is an Israeli film director and screenwriter.\n\n He has won a Silver Bear and an Ophir Award for Best Director, and an Ophir Award for writing a Best Screenplay.\n\n He also won the best screenplay award at the 2011 Cannes Film Festival for his film \"Footnote\" (2011).",
+    "Yana's Friends\nYana's Friends (Hebrew: החברים של יאנה, \"HaHaverim shel Yana\"‎ ‎ ) is a 1999 Israeli film directed by Arik Kaplun.\n\n script editor: Savi Gabizon.\n\n Critically acclaimed, it won 10 Israeli Academy Awards including the Ophir Award for Best Picture.\n\n It also won the Crystal Globe at the Karlovy Vary International Film Festival in 1999.\n\n The film has a very rare 100% rating on the film website Rotten Tomatoes based on 30 reviews.",
+    "Hunting Elephants\nHunting Elephants (Hebrew: לצוד פילים‎ ‎ , \"Latzud Pilim\", \"lit.\"\n\n To Hunt Elephants) is a 2013 Israeli crime comedy film directed by Reshef Levi.\n\n It stars, among others, Sasson Gabai, Moni Moshonov and Patrick Stewart.\n\n It was released to theaters in Israel on July 4, 2013.",
+    "No Names on the Doors\nNo Names on the Doors (Hebrew: אין שמות על הדלתות‎ ) is a 1997 Israeli drama directed by Nadav Levitan.\n\n The film was screened at the Berlin International Film Festival, the Montpellier Film Festival, the Shanghai International Film Festival, and the Melbourne International Film Festival.\n\n It received two nominations for an Ophir Award in the categories of Best Actor and Best Screenplay.",
+    "The Band's Visit\nThe Band's Visit (Hebrew: ביקור התזמורת - \"Bikur Ha-Tizmoret\") is a 2007 Israeli film directed by Eran Kolirin.",
+    "Beyond the Sea (1991 film)\nBeyond the Sea (translit.\n\n Me'ever Layam) is a 1991 Israeli drama film directed by Jacob Goldwasser.\n\n It stars Aryeh Moskona, Dafna Rechter, Moti Giladi.\n\n The film, a family drama set in the 1960s, was critically acclaimed, and won the Ophir Award for Best Film.\n\n The film was selected as the Israeli entry for the Best Foreign Language Film at the 64th Academy Awards, but was not accepted as a nominee.",
+    "Foxtrot (2017 film)\nFoxtrot (Hebrew: פוֹקְסטְרוֹט‎ ‎ ) is a 2017 Israeli drama film directed by Samuel Maoz.\n\n It was screened in the competition section of the 74th Venice International Film Festival where it won the Grand Jury Prize Silver Lion.\n\n It was also screened in the Special Presentations section at the 2017 Toronto International Film Festival.\n\n It won the Ophir Award for Best Film, therefore becoming the Israeli entry for the Best Foreign Language Film at the 90th Academy Awards.",
+    "Sasson Gabai\nSasson Gabai (Hebrew: ששון גבאי‎ ‎ ; born 24 November 1947) is an Israeli actor.\n\n Winner of an Ophir Award, Asia Pacific Screen Award (nominated), European Film Awards and Jerusalem Film Festival in 2007 as Best Actor in a highly acclaimed Israeli film \"The Band's Visit\"."
+   ]
+  },
+  {
+   "id": "36370dc3e83f86af",
+   "gold": [
+    {
+     "sentence": "Dean Mills Reservoir is a small water reservoir to the north of the town of Bolton, Greater Manchester located high on the slopes of Winter Hill.",
+     "facts": {
+      "0.0": "Dean Mills Reservoir is a small water reservoir.",
+      "0.1": "Dean Mills Reservoir is north of the town of Bolton, Greater Manchester.",
+      "0.2": "Dean Mills Reservoir is located high on the slopes of Winter Hill."
+     }
+    },
+    {
+     "sentence": " It is located on Rivington Moor, Chorley and is 1496 ft high.",
+     "facts": {
+      "1.0": "Dean Mills Reservoir is located on Rivington Moor, Chorley.",
+      "1.1": "Dean Mills Reservoir is 1496 ft high."
+     }
+    }
+   ],
+   "items": [
+    "Clayton Brook\nClayton Brook is a large residential estate in Lancashire, between the city of Preston and the town of Chorley.\n\n It forms part of the Clayton-le-Woods civil parish, and is in the Clayton-le-Woods North ward of the borough of Chorley.\n\n Lying next to the industrial estate of Walton Summit, one-time terminus of a branch of the Lancaster Canal, it also neighbours Clayton Green, Hoghton and Brindle, and is not far from the small town of Bamber Bridge.\n\n Clayton Brook Village as it is often termed, is bounded by the A6 road and the M61 and M65 motorways, and is conveniently near the M6 motorway.",
+    "Oakland Mills, New Jersey\nOakland Mills is an unincorporated community located within Manalapan Township in Monmouth County, New Jersey, United States.\n\n The area is named for Oakland Mill, a mill along the Manalapan Brook operated by the Boo family.\n\n Some areas within the Manalapan Brook valley and surround forestland are preserved while the remainder of the area surrounding Oakland Mills has since been developed into housing developments.",
+    "Crystal Lake (Gilmanton, New Hampshire)\nCrystal Lake is a 455 acre water body located in Belknap County in the Lakes Region of central New Hampshire, United States, in the town of Gilmanton.\n\n Crystal Lake is at the head of the Suncook River watershed.\n\n Water flows into Crystal Lake from the Belknap Range through Manning and Sunset lakes to the north.\n\n Water from Manning Lake enters Crystal Lake via Nelson Brook.\n\n Other waterways flowing into Crystal Lake include Wasson Brook and Mill Brook.\n\n Water flows out of a dam from the southern end of Crystal Lake via the Suncook Lakes and Suncook River to the Merrimack River.\n\n Shoreline development along Crystal Lake consists primarily of summer cottages, with a few year-round residents.\n\n Belknap Mountain and Mount Major can be seen from the shoreline.",
+    "Fisher Hill Reservoir\nThe Fisher Hill Reservoir and Gatehouse are a historic element of the public water supply for the Greater Boston area.\n\n The reservoir was located on Fisher Road between Hyslop and Channing Roads in Brookline, Massachusetts, and is now the site of Fisher Hill Reservoir Park.\n\n It was built in 1886-87 as an early component of the Boston Water Board's expansion of its high service system.\n\n The gatehouse may have been designed by Arthur Vinal, who also designed the high pumping station at Chestnut Hill Reservoir.\n\n It is a two-story Richardsonian Romanesque structure, with its first floor finished in stone and its second in brick.\n\n Brownstone trim is used on the windows and corner quoins, and the voussoirs which form the arches on the first floor.\n\n There are pipes to the reservoir and down to Chestnut Hill, and gates for controlling access to local the distribution network.\n\n The building was taken out of service in the 1950s.",
+    "Eagle Street College\nThe Eagle Street College was an informal literary society established in 1885 at the home of James William Wallace in Eagle Street, Bolton, to read and discuss literary works, particularly the poetry of Walt Whitman, (1819–91).\n\n The group subsequently became known as the Bolton Whitman Fellowship or Whitmanites.\n\n Its founder members were Wallace, Dr John Johnston and Fred Wild.\n\n The group held an annual 'Whitman Day' celebration around the 31 May which was the poet's birthday.",
+    "Minster Pool\nMinster Pool is a reservoir located between Bird Street and Dam Street in the heart of the city of Lichfield, Staffordshire in the United Kingdom.\n\n The pool lies directly south of Lichfield Cathedral and historically has been important to the defence of the Cathedral Close.\n\n The pool was originally formed in the 11th century when a boggy stream was dammed at its eastern end to drive a mill on Dam Street.\n\n The pool was used as a mill pond and fishery until 1856 when the mill was demolished; it has since been retained for public amenity.",
+    "Taylors Mills, New Jersey\nTaylors Mills is an unincorporated community located within Manalapan Township in Monmouth County, New Jersey, United States.\n\n The main road that runs through the area is named for the community, Taylors Mills Road.",
+    "Arnold Mills Historic District\nArnold Mills Historic District is a historic district encompassing a modest 19th-century mill village in eastern Cumberland, Rhode Island.\n\n The district lies along the Nate Whipple Highway (Rhode Island Route 120) and Sneech Pond Road, south of the Arnold Mills Reservoir.\n\n Sneech Pond Road was formerly the major east-west highway through the area prior to the construction of the Nate Whipple Highway in the 1960s.\n\n The Arnold Mills village is in part bisected by Abbott Run, the stream which serves as the outlet of the reservoir; Sneech Pond Road crosses the run on an early 20th-century steel Pratt pony truss, now closed to vehicular traffic.\n\n The houses along this road generally date from the late 18th to mid-19th century, and mainly reflect Federal and Greek Revival styling.\n\n The most prominent structure in the district is the Arnold Mills United Methodist Church, located at the western end of the district on Nate Whipple Highway; it was built 1825-27 and remodeled in 1846.",
+    "Winter Hill (North West England)\nWinter Hill is a hill on the border of the boroughs of Chorley, Blackburn with Darwen and Bolton, in North West England.\n\n It is located on Rivington Moor, Chorley and is 1496 ft high.\n\n Part of the West Pennine Moors, it is a popular walking area, and has been the site of mining activity, aeroplane disasters and murders.",
+    "Dean Mills Reservoir\nDean Mills Reservoir is a small water reservoir to the north of the town of Bolton, Greater Manchester located high on the slopes of Winter Hill."
+   ]
+  },
+  {
+   "id": "a28bcd0fef4860c4",
+   "gold": [
+    {
+     "sentence": "Wangaratta Wahine is an album by Australian band The Captain Matchbox Whoopee Band, released in 1974 and was their second album.",
+     "facts": {
+      "0.0": "Wangaratta Wahine is an album by the Australian band The Captain Matchbox Whoopee Band.",
+      "0.1": "Wangaratta Wahine was released in 1974.",
+      "0.2": "Wangaratta Wahine was the second album of The Captain Matchbox Whoopee Band."
+     }
+    },
+    {
+     "sentence": " He was declared an Australian Living Treasure by the National Trust of Australia in 1999.",
+     "facts": {
+      "1.0": "The subject of this sentence was declared an Australian Living Treasure by the National Trust of Australia.",
+      "1.1": "The subject of this sentence received this declaration in 1999."
+     }
+    }
+   ],
+   "items": [
+    "Leah Flanagan\nLeah Flanagan is a singer-songwriter from Sydney, NSW.\n\n Leah has appeared on Australian TV shows Spicks & Specks and RockQuiz, has released 2 albums and toured extensively through Australia with her music and part of festival ensembles.\n\n Leah’s status as an Indigenous musician is one of pride and respect; she has helped make history with such recent essential albums as Archie Roach’s 25th anniversary reissue of Charcoal Lane and Buried Country 1.5, The Story of Aboriginal Country Music.\n\n Her latest album Saudades was recorded at the studio of Midnight Oil's Jim Moginie and mixed by Paul McKercher (You Am I, Augie March)",
+    "Beasts of Bourbon\nBeasts of Bourbon are an Australian alternative rock, blues rock band formed in August 1983, with James Baker on drums (ex-Hoodoo Gurus), Spencer P. Jones on guitar (The Johnnys), Tex Perkins on vocals (Dum Dums), Kim Salmon on guitar and Boris Sujdovic on bass guitar (both ex-The Scientists).\n\n Except for mainstays, Jones and Perkins, the line-up has changed as the group splintered and reformed several times.\n\n Their debut album, \"The Axeman's Jazz\" (July 1984), was the best selling Australian alternative rock album for 1984.\n\n Their debut single, \"Psycho\", is a cover version of the Leon Payne original, and was the best selling Australian alternative rock single for that year.\n\n However the group disbanded by mid-1985 and each member pursued other musical projects.\n\n They reformed in 1987 and issued a second album, \"Sour Mash\", in December 1988 on Red Eye Records.\n\n According to rock music historian, Ian McFarlane, it \"virtually redefined the parameters of guitar-based rock'n'roll.",
+    "Clinton Walker\nClinton Walker (born 1957) is an Australian writer, best known for his works on popular music but with a broader interest in social and cultural history and theory.\n\n Sydney's \"Sun-Herald\" has called him \"our best chronicler of Australian grass-roots culture.\"\n\n He has always been ahead of the curve.\n\n As \"Rhythms\" magazine said in 2015, \"Like many of Walker’s projects, \"Buried Country\" was at least a decade ahead of its time,\" and as such he is remarkable as a critic who has exerted a pro-active impact on Australian music and its development; groundbreaking books like \"Inner City Sound\" (1981) and \"Buried Country\" (2000) especially have informed and inspired successive generations of musicians.\n\n Similarly, while he found best-selling success as Bon Scott's biographer, Walker's non-music books like \"Football Life\" (1998) and \"Golden Miles\" (2005) have innovatively offered an appreciation of subjects hitherto hardly deemed worthy of serious consideration.",
+    "Waltzing Matilda\n\"Waltzing Matilda\" is Australia's best-known bush ballad, and has been described as the country's \"unofficial national anthem\".",
+    "Winwood (album)\nWinwood is the first compilation album of music featuring Steve Winwood.\n\n This two-record set was issued in 1971 by United Artists Records and features music which Winwood performed with The Spencer Davis Group, Powerhouse, Traffic and Blind Faith.\n\n UA Records issued this album after Winwood's band Traffic left UA when their home label Island Records set up their own American operation.\n\n Issued without Winwood's authorization as catalogue number UAS-9950, it was taken off the market after legal action by Winwood and Island Records.\n\n It was then reissued with minor changes as catalogue number UAS-9964.\n\n Currently out of print, it was issued on CD by Universal Music of Japan for the Japanese market.",
+    "Graph query row:\nentity: Wangaratta Wahine\nrelationship: CREATED_BY\nrelated: The Captain Matchbox Whoopee Band",
+    "Wangaratta Wahine\nWangaratta Wahine is an album by Australian band The Captain Matchbox Whoopee Band, released in 1974 and was their second album.\n\n It was recorded at top recording studio Armstrong Studios in Melbourne and the cover art was by famed Australian artist Michael Leunig.",
+    "RPA &amp; The United Nations of Sound\nThe band played in Australia also during the Splendour in the Grass Festival in late July.\n\n The band's debut album as Richard's backing lineup, entitled \"United Nations of Sound\", was released on 19 July 2010.\n\n \"Born Again\", the first proper single, was officially released the same day of the album as a digital download.",
+    "He Will Have His Way\nHe Will Have His Way is a compilation album featuring male Australian and New Zealand musicians performing songs written by Neil Finn and Tim Finn (The Finn Brothers), who are best known as members of Split Enz and Crowded House.\n\n It was released on 12 November 2010 and is a sequel to \"She Will Have Her Way\", a 2005 album featuring female Australian and New Zealand musicians.\n\n The two albums were later released together with extra tracks as the double CD \"They Will Have Their Way\".",
+    "Bruce Rowland\nBruce Rowland (born May 9, 1942 in Melbourne) is a well-known Australian composer.\n\n He composed the soundtrack for the 1982 movie \"The Man from Snowy River\", as well as the soundtrack for its 1988 sequel \"The Man from Snowy River II\" (which has the United States title of \"Return to Snowy River\", and the United Kingdom title of \"The Untamed\").\n\n Both films were based on Banjo Paterson's poem The Man from Snowy River.\n\n His other film scores include \"Now and Forever\" (1983), \"Phar Lap\" (1983), \"Bushfire Moon\" (1987), \"Cheetah\" (1989), \"Weekend with Kate\" (1990), \"Gross Misconduct\" (1993), \"Andre\" (1994), \"Lightning Jack\" (1994), \"Zeus and Roxanne\" (1997) and the TV movie \"\" (1997)."
+   ]
+  },
+  {
+   "id": "e31547a61c36d51f",
+   "gold": [
+    {
+     "sentence": " She was born in Guangzhou, China.",
+     "facts": {
+      "0.0": "The woman referred to as \"she\" was born in Guangzhou, China."
+     }
+    },
+    {
+     "sentence": " These videos are an overview and recap of each year's viral videos, events, memes, and music.",
+     "facts": {
+      "1.0": "The videos being described are an overview of each year's viral videos, events, memes, and music.",
+      "1.1": "The videos being described are a recap of each year's viral videos, events, memes, and music."
+     }
+    }
+   ],
+   "items": [
+    "Graph query row:\nperson: Wendy Ayche\nbirthplace: Guangzhou\nrelationship: None\nconnected_entity: None",
+    "YouTube Rewind\nYouTube Rewind is a video series produced and created by YouTube and Portal A Interactive.\n\n These videos are an overview and recap of each year's viral videos, events, memes, and music.\n\n Each year, the number of YouTube celebrities featured in the video, as well as the presentation of the series, have increased.\n\n The latest episode of \"YouTube Rewind\" was released on December 8, 2016.",
+    "Wengie\nWendy Ayche (born January 9 1986) known professionally as Wengie, is an Australian YouTube personality and vlogger.\n\n She was born in Guangzhou, China.\n\n She got the nickname \"Wengie\" at a dance class when two people gave her a nickname inspired by her Chinese name, Wén Jié.\n\n Since starting her channel on February 11 2013, her videos have received over 281 million views, and her channel has accumulated over 11 followers In the January 2016 edition of \"ElleGirl Japan\", she was nominated as a channel to watch.\n\n In August 2016, she was ranked the 5th Fastest growing channel in the world.\n\n Ayche was featured in the annual YouTube Rewind in 2016 and was also singled out by Google as one of the top beauty creators in the Asia region.\n\n Ayche reached 5 million YouTube subscribers in January 2017, and her channel is currently in the 12th most subscribed How-To & Style Channel on YouTube.\n\n She is also currently a board member of the Internet Creators Guild, a non-profit focused on providing the protection, representation and guidance to online creators.",
+    "Lilly Singh\nLilly Singh (born 26 September 1988) is a Canadian YouTube personality, vlogger, comedian, writer, and actress.\n\n She is better known by her YouTube username IISuperwomanII.\n\n Since beginning her channel in October 2010, her videos have received over 2 billion views, and her channel has accumulated over 12 million subscribers.\n\n In 2016, she was ranked 3rd on the \"Forbes\" list of the world's highest paid YouTube stars (behind Roman Atwood and PewDiePie), earning a reported $7.5 million in 2016.\n\n Singh has featured in the annual YouTube Rewind every year since 2014.\n\n She ranked 1st on 2017 Forbes Top Influencers List in the entertainment category.",
+    "Wendy Austin\nDr Wendy Elizabeth Austin Hewitt, Wendy Austin is a BBC journalist and broadcaster in BBC Northern Ireland, and former presenter of BBC Radio Ulster’s current affairs programme \"Talkback\".",
+    "Wong Jing\nWong Jing ( born 3 May 1955) is a Hong Kong film director, producer, actor, presenter, and screenwriter.\n\n A prolific filmmaker with strong instincts for crowd-pleasing and publicity, Wong Jin has played a prominent role in the Hong Kong cinema of the last quarter-century.",
+    "Wayne Goss (make-up artist)\nWayne Alan Goss (born 4 March 1978) is an English makeup artist, YouTube personality and entrepreneur.\n\n Best known for his \"Wayne Goss\" channel on YouTube, he is the creator and owner of the self-eponymous makeup brush line launched in September 2013.\n\n As of November 2016, Goss' main YouTube channel had over 2.7 million subscribers and had had 344 million views.",
+    "Candy Chen\nCandy Chen (陳斯亞 born January 3, 1993) is a dancer, actress, host, singer, rapper and a model.\n\n She is featured on the Taiwanese variety shows: Blackie's Teenage Club and Blackie Lollipop.\n\n Candy was a member of the Taiwanese girl group Hey Girl from 2010 to 2011, and a member of from 2013 to 2016.\n\n She is 1/8th Dutch.\n\n She changed her name to Chen Yi-Ling in July 2012 to follow her mother's maiden name.\n\n Her English name becomes Nina Chen.\n\n In November 2013, she changed her name to Candy Chen (English Name) and Chen Si Ya (Chinese Name).",
+    "Wengie\nHer YouTube channel also recently got awarded with \"Best Channel\" as well as \"Overall Winner\" for the Australian Online Video Awards.",
+    "Issa Rae\nJo-Issa \"Issa\" Rae Diop (born January 12, 1985) is an American actress, writer, director, producer and web series creator.\n\n She is best known as the creator of the YouTube web series \"Awkward Black Girl\".\n\n Since the premiere of \"Awkward Black Girl\", Rae has developed her own YouTube platform where she features various content created by people of color.\n\n Rae's shows have garnered over 20 million views and over 260,000 subscribers on YouTube."
+   ]
+  }
+ ]
+}

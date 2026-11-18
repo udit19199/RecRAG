@@ -1,0 +1,910 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=cdb835a8b2a6e212 ===
+Gold sentences and facts:
+Sentence 0: Take action immediately upon hearing thunder . Anyone close enough to the storm to hear thunder can be struck by lightning . Avoid electrical appliances , including corded telephones . Cordless and wireless telephones are safe to use during a thunderstorm . Close and stay away from windows and doors , as glass can become a serious hazard in high wind . Do not bathe or shower , as plumbing conducts electricity . If driving , safely exit the roadway , turn on hazard lights , and park . Remain in the vehicle and avoid touching metal .
+  Fact 0.0: Take action immediately upon hearing thunder.
+  Fact 0.1: Anyone close enough to the storm to hear thunder can be struck by lightning.
+  Fact 0.2: Avoid electrical appliances, including corded telephones.
+  Fact 0.3: Cordless and wireless telephones are safe to use during a thunderstorm.
+  Fact 0.4: Close and stay away from windows and doors.
+  Fact 0.5: Glass can become a serious hazard in high wind.
+  Fact 0.6: Do not bathe or shower.
+  Fact 0.7: Plumbing conducts electricity.
+  Fact 0.8: If driving, safely exit the roadway.
+  Fact 0.9: If driving, turn on hazard lights.
+  Fact 0.10: If driving, park.
+  Fact 0.11: Remain in the vehicle and avoid touching metal.
+Sentence 1: Take action immediately upon hearing thunder . Anyone close enough to the storm to hear thunder can be struck by lightning .
+  Fact 1.0: Take action immediately upon hearing thunder.
+  Fact 1.1: Anyone close enough to the storm to hear thunder can be struck by lightning.
+
+Retrieved items:
+<item 1>
+Thunderstorm
+The National Weather Service ( NWS ) in the United States recommends several precautions that people should take if thunderstorms are likely to occur : Know the
+names of local counties , cities , and towns , as these are how warnings are described . Monitor forecasts and weather conditions and know whether thunderstorms
+are likely in the area . Be alert for natural signs of an approaching storm . Cancel or reschedule outdoor events ( to avoid being caught outdoors when a storm
+hits ) . Take action early so you have time to get to a safe place . Get inside a substantial building or hard - topped metal vehicle before threatening weather
+arrives . If you hear thunder , get to the safe place immediately . Avoid open areas like hilltops , fields , and beaches , and do n't be or be near the tallest
+objects in an area when thunderstorms are occurring . Do n't shelter under tall or isolated trees during thunderstorms . If in the woods , put as much distance
+between you and any trees during thunderstorms . If in a group , spread out so that you increase the chances for survivors who could come to the aid of any
+victims from a lightning strike .
+</item 1>
+
+<item 2>
+Thunderstorm
+Lightningsafety.noaa.gov. 2014 - 06 - 30 . Retrieved 2014 - 08 - 20 . Jump up ^ `` NWS JetStream -- Lightning Frequently Asked Questions '' . Srh.noaa.gov. 2014
+- 06 - 28 . Retrieved 2014 - 08 - 20 . Jump up ^ `` You 're not safer crouching : Six things you did n't know about lightning '' . LA Times . Retrieved 2014 -
+08 - 20 . Jump up ^ National Geographic Almanac of Geography , ISBN 0 - 7922 - 3877 - X , page 75 . Jump up ^ `` How many thunderstorms occur each year ? '' .
+Thunderstorms . Sky Fire Productions . Archived from the original on 2007 - 07 - 11 . Retrieved 2006 - 08 - 23 . Jump up ^ National Weather Service JetStream (
+2008 - 10 - 08 ) . `` Tropical Cyclone Hazards '' . National Weather Service Southern Region Headquarters .
+</item 2>
+
+<item 3>
+Thunderstorm
+A similar event occurred in Boscastle , England , on 16 August 2004 . Hazards ( edit ) Each year , many people are killed or seriously injured by severe
+thunderstorms despite the advance warning . While severe thunderstorms are most common in the spring and summer , they can occur at just about any time of the
+year . Cloud - to - ground lightning ( edit ) See also : Lightning strike and Wildfire A return stroke , cloud - to - ground lightning strike during a
+thunderstorm . Cloud - to - ground lightning frequently occurs within the phenomena of thunderstorms and have numerous hazards towards landscapes and
+populations . One of the more significant hazards lightning can pose is the wildfires they are capable of igniting . Under a regime of low precipitation ( LP )
+thunderstorms , where little precipitation is present , rainfall can not prevent fires from starting when vegetation is dry as lightning produces a concentrated
+amount of extreme heat . Direct damage caused by lightning strikes occurs on occasion . In areas with a high frequency for cloud - to - ground lightning , like
+Florida , lightning causes several fatalities per year , most commonly to people working outside . Acid rain is also a frequent risk produced by lightning .
+</item 3>
+
+<item 4>
+Thunderstorm
+As the rising air reaches its dew point temperature , water vapor condenses into water droplets or ice , reducing pressure locally within the thunderstorm cell
+. Any precipitation falls the long distance through the clouds towards the Earth 's surface . As the droplets fall , they collide with other droplets and become
+larger . The falling droplets create a downdraft as it pulls cold air with it , and this cold air spreads out at the Earth 's surface , occasionally causing
+strong winds that are commonly associated with thunderstorms . Thunderstorms can form and develop in any geographic location but most frequently within the
+mid-latitude , where warm , moist air from tropical latitudes collides with cooler air from polar latitudes . Thunderstorms are responsible for the development
+and formation of many severe weather phenomena . Thunderstorms , and the phenomena that occur along with them , pose great hazards . Damage that results from
+thunderstorms is mainly inflicted by downburst winds , large hailstones , and flash flooding caused by heavy precipitation . Stronger thunderstorm cells are
+capable of producing tornadoes and waterspouts . There are four types of thunderstorms : single - cell , multi-cell cluster , multi-cell lines , and supercells
+.
+</item 4>
+
+<item 5>
+Thunderstorm
+Motion ( edit ) Thunderstorm line viewed in reflectivity ( dBZ ) on a plan position indicator radar display The two major ways thunderstorms move are via
+advection of the wind and propagation along outflow boundaries towards sources of greater heat and moisture . Many thunderstorms move with the mean wind speed
+through the Earth 's troposphere , the lowest 8 kilometres ( 5.0 mi ) of the Earth 's atmosphere . Weaker thunderstorms are steered by winds closer to the Earth
+'s surface than stronger thunderstorms , as the weaker thunderstorms are not as tall . Organized , long - lived thunderstorm cells and complexes move at a right
+angle to the direction of the vertical wind shear vector . If the gust front , or leading edge of the outflow boundary , races ahead of the thunderstorm , its
+motion will accelerate in tandem . This is more of a factor with thunderstorms with heavy precipitation ( HP ) than with thunderstorms with low precipitation (
+LP ) . When thunderstorms merge , which is most likely when numerous thunderstorms exist in proximity to each other , the motion of the stronger thunderstorm
+normally dictates the future motion of the merged cell .
+</item 5>
+
+<item 6>
+Thunderstorm
+Archived from the original on 2009 - 06 - 21 . Retrieved 2009 - 08 - 28 . ^ Jump up to : John E. Oliver ( 2005 ) . Encyclopedia of World Climatology . Springer
+. p. 401 . ISBN 978 - 1 - 4020 - 3264 - 6 . Retrieved 2009 - 08 - 28 . Jump up ^ Dongxia Liu ; Guili Feng & Shujun Wu ( February 2009 ) . `` The characteristics
+of cloud - to - ground lightning activity in hailstorms over northern China '' . Atmospheric Research . 91 ( 2 -- 4 ) : 459 -- 465 . Bibcode : 2009AtmRe ... 91
+... 459L . doi : 10.1016 / j. atmosres. 2008.06. 016 . Jump up ^ Damir Počakal ; Željko Večenaj & Janez Štalec ( 2009 ) .
+</item 6>
+
+<item 7>
+Thunderstorm
+doi : 10.1111 / cea. 12709 . PMID 26765082 ^ Jump up to : American Red Cross . `` Thunderstorm Safety Checklist '' ( PDF ) . American Red Cross . Retrieved 24
+August 2011 . ^ Jump up to : National Weather Service Weather Forecast Office . `` Thunderstorm '' . Severe Weather Preparedness Information . Albuquerque , NM
+: NOAA . Retrieved 24 August 2011 . Jump up ^ Federal Emergency Management Agency . `` Thunderstorms and Lightning '' . Ready . US Department of Homeland
+Security . Archived from the original on 23 June 2011 . Retrieved 24 August 2011 . ^ Jump up to : Federal Emergency Management Agency . `` What to Do Before a
+Thunderstorm '' . US Department of Homeland Security . Archived from the original on 20 August 2011 . Retrieved 24 August 2011 . ^ Jump up to : `` NWS Lightning
+Safety Myths '' . Lightningsafety.noaa.gov. 2014 - 06 - 30 .
+</item 7>
+
+<item 8>
+Thunderstorm
+Safety ( edit ) While safety and preparedness often overlap , `` thunderstorm safety '' generally refers to what people should do during and after a storm . The
+American Red Cross recommends that people follow these precautions if a storm is imminent or in progress : Take action immediately upon hearing thunder . Anyone
+close enough to the storm to hear thunder can be struck by lightning . Avoid electrical appliances , including corded telephones . Cordless and wireless
+telephones are safe to use during a thunderstorm . Close and stay away from windows and doors , as glass can become a serious hazard in high wind . Do not bathe
+or shower , as plumbing conducts electricity . If driving , safely exit the roadway , turn on hazard lights , and park . Remain in the vehicle and avoid
+touching metal . The NWS stopped recommending the `` lightning crouch '' in 2008 as it does n't provide a significant level of protection and will not
+significantly lower the risk of being killed or injured from a nearby lightning strike . Frequent occurrences ( edit ) See also : United States rainfall
+climatology A mild thunderstorm over Niagara Falls , Ontario .
+</item 8>
+
+<item 9>
+Thunderstorm
+Retrieved 2009 - 09 - 09 . Jump up ^ Charles H. Paxton ; J. Colson & N. Carlisle ( 2008 ) . `` P2. 13 Florida lightning deaths and injuries 2004 -- 2007 '' .
+American Meteorological Society . Retrieved 2009 - 09 - 05 . Jump up ^ G.E. Likens ; W.C. Keene ; J.M. Miller & J.N. Galloway ( 1987 ) . `` Chemistry of
+precipitation from a remote , terrestrial site in Australia '' . Journal of Geophysical Research . 92 ( 13 ) : 299 -- 314 . Bibcode : 1987JGR ... 92 ... 299R .
+doi : 10.1029 / JA092iA01p00299 . Jump up ^ Joel S. Levine ; Tommy R. Augustsson ; Iris C. Andersont ; James M. Hoell Jr . & Dana A. Brewer ( 1984 ) . ``
+Tropospheric sources of NOx : Lightning and biology '' . Atmospheric Environment.
+</item 9>
+
+<item 10>
+Thunderstorm
+Radio pulses produced by cosmic rays are being used to study how electric charges develop within thunderstorms . More organized meteorological projects such as
+VORTEX2 use an array of sensors , such as the Doppler on Wheels , vehicles with mounted automated weather stations , weather balloons , and unmanned aircraft to
+investigate thunderstorms expected to produce severe weather . Lightning is detected remotely using sensors that detect cloud - to - ground lightning strokes
+with 95 percent accuracy in detection and within 250 metres ( 820 ft ) of their point of origin . Mythology and religion ( edit ) Thunderstorms strongly
+influenced many early civilizations . Greeks believed that they were battles waged by Zeus , who hurled lightning bolts forged by Hephaestus . Some American
+Indian tribes associated thunderstorms with the Thunderbird , who they believed was a servant of the Great Spirit . The Norse considered thunderstorms to occur
+when Thor went to fight Jötnar , with the thunder and lightning being the effect of his strikes with the hammer Mjölnir . Hinduism recognizes Indra as the god
+of rain and thunderstorms .
+</item 10>
+=== END ITEM id=cdb835a8b2a6e212 ===
+
+=== ITEM id=57f5f64538c32a12 ===
+Gold sentences and facts:
+Sentence 0: When following the western side of the African coastline from the equator , however , the Cape of Good Hope marks the point where a ship begins to travel more eastward than southward . Thus , the first modern rounding of the cape in 1488 by Portuguese explorer Bartolomeu Dias was a milestone in the attempts by the Portuguese to establish direct trade relations with the Far East ( although Herodotus mentioned a claim that the Phoenicians had done so far earlier ) . Dias called the cape Cabo das Tormentas ( `` Cape of Storms '' ; Dutch : Stormkaap ) , which was the original name of the `` Cape of Good Hope '' .
+  Fact 0.0: When following the western side of the African coastline from the equator, the Cape of Good Hope marks the point where a ship begins to travel more eastward than southward.
+  Fact 0.1: Portuguese explorer Bartolomeu Dias made the first modern rounding of the Cape of Good Hope in 1488.
+  Fact 0.2: The 1488 rounding of the cape by Bartolomeu Dias was a milestone in the attempts by the Portuguese to establish direct trade relations with the Far East.
+  Fact 0.3: Herodotus mentioned a claim that the Phoenicians had rounded the cape far earlier.
+  Fact 0.4: Bartolomeu Dias called the cape Cabo das Tormentas.
+  Fact 0.5: Cabo das Tormentas means 'Cape of Storms' in English.
+  Fact 0.6: The Dutch name for Cabo das Tormentas is Stormkaap.
+  Fact 0.7: Cabo das Tormentas was the original name of the Cape of Good Hope.
+
+Retrieved items:
+<item 1>
+Cape of Good Hope
+Fra Mauro also comments that the account of the expedition , together with the relation by Strabo of the travels of Eudoxus of Cyzicus from Arabia to Gibraltar
+through the southern Ocean in Antiquity , led him to believe that the Indian Ocean was not a closed sea and that Africa could be circumnavigated by her southern
+end ( Text from Fra Mauro map , 11 , G2 ) . This knowledge , together with the map depiction of the African continent , probably encouraged the Portuguese to
+intensify their effort to round the tip of Africa . Map showing the Cape Peninsula , illustrating the position of the Cape of Good Hope . The main mountains and
+their peaks , including Table Mountain , and its relation to the City of Cape Town are shown . Map of the Cape of Good Hope and Cape Agulhas the southernmost
+point of Africa . Main article : Cape Colony Reproduction of the Cross of Vasco da Gama at the Cape of Good Hope .
+</item 1>
+
+<item 2>
+Cape of Good Hope
+Contents ( hide ) 1 History 2 Geography 3 Fauna 3.1 Chacma baboons 4 Flora 5 Legends 6 See also 7 References 8 External links History ( edit ) Eudoxus of
+Cyzicus ( / ˈjuːdəksəs / ; Greek : Εὔδοξος , Eúdoxos ; fl . c. 130 BC ) was a Greek navigator for Ptolemy VIII , king of the Hellenistic Ptolemaic dynasty in
+Egypt , who found the wreck of a ship in the Indian Ocean that appeared to have come from Gades ( today 's Cádiz in Spain ) , rounding the Cape . When Eudoxus
+was returning from his second voyage to India the wind forced him south of the Gulf of Aden and down the coast of Africa for some distance . Somewhere along the
+coast of East Africa , he found the remains of the ship .
+</item 2>
+
+<item 3>
+Cape of Good Hope
+As one of the great capes of the South Atlantic Ocean , the Cape of Good Hope has long been of special significance to sailors , many of whom refer to it simply
+as `` the Cape '' . It is a waypoint on the Cape Route and the clipper route followed by clipper ships to the Far East and Australia , and still followed by
+several offshore yacht races . The term Cape of Good Hope is also used in three other ways : It is a section of the Table Mountain National Park , within which
+the cape of the same name , as well as Cape Point , falls . Prior to its incorporation into the national park , this section constituted the Cape Point Nature
+Reserve . It was the name of the early Cape Colony established by the Dutch in 1652 , on the Cape Peninsula . Just before the Union of South Africa was formed ,
+the term referred to the entire region that in 1910 was to become the Cape of Good Hope Province ( usually shortened to the Cape Province ) .
+</item 3>
+
+<item 4>
+Cape of Good Hope
+Jump up ^ The first circumnavigation of Africa . livius.org Jump up ^ Sarah Mytton Maury ( 1848 ) . Englishwoman In America . p. 33 . Jump up ^ Along the
+Clipper Way , Francis Chichester ; page 78 . Hodder & Stoughton , 1966 . ISBN 0 - 340 - 00191 - 7 Jump up ^ Map of the Park , showing the Cape of Good Hope
+section ( retrieved 27 March 2010 ) . Jump up ^ Tozer , Henry F. ( 1997 ) . History of Ancient Geography . Biblo & Tannen . pp. 189 -- 190 . ISBN 0 - 8196 -
+0138 - 1 . ; online at Google Books Jump up ^ Tozer , Henry F. ( 1997 ) . History of Ancient Geography . Biblo & Tannen . pp. xxiii . ISBN 0 - 8196 - 0138 - 1 .
+; online at Google Books Jump up ^ Marco Polo , p.
+</item 4>
+
+<item 5>
+Cape of Good Hope
+Contemporary scientific knowledge instead states the southernmost point of Africa is Cape Agulhas about 150 kilometres ( 90 mi ) to the east - southeast . The
+currents of the two oceans meet at the point where the warm - water Agulhas current meets the cold water Benguela current and turns back on itself . That
+oceanic meeting point fluctuates between Cape Agulhas and Cape Point ( about 1.2 kilometres ( 0.75 mi ) east of the Cape of Good Hope ) . When following the
+western side of the African coastline from the equator , however , the Cape of Good Hope marks the point where a ship begins to travel more eastward than
+southward . Thus , the first modern rounding of the cape in 1488 by Portuguese explorer Bartolomeu Dias was a milestone in the attempts by the Portuguese to
+establish direct trade relations with the Far East ( although Herodotus mentioned a claim that the Phoenicians had done so far earlier ) . Dias called the cape
+Cabo das Tormentas ( `` Cape of Storms '' ; Dutch : Stormkaap ) , which was the original name of the `` Cape of Good Hope '' .
+</item 5>
+
+<item 6>
+Cape of Good Hope
+Legends ( edit ) The Cape of Good Hope is the legendary home of The Flying Dutchman . Crewed by tormented and damned ghostly sailors , it is doomed forever to
+beat its way through the adjacent waters without ever succeeding in rounding the headland . Adamastor is a Greek - type mythological character invented by the
+Portuguese poet Luís de Camões in his epic poem Os Lusíadas ( first printed in 1572 ) , as a symbol of the forces of nature Portuguese navigators had to
+overcome during their discoveries and more specifically of the dangers Portuguese sailors faced when trying to round the Cape of Storms . See also ( edit ) Cape
+Peninsula Cape Horn , its South American counterpart Cape Point Western Cape History of Cape Colony Simon 's Town Postage stamps and postal history of the Cape
+of Good Hope References ( edit ) Jump up ^ Every word in isolation ( ˌkaːp də ˌɣudə ˈɦoːp ) . Jump up ^ `` Cape of Good Hope , South Africa - 360 ° Aerial
+Panoramas '' . Jump up ^ The first circumnavigation of Africa .
+</item 6>
+
+<item 7>
+Cape of Good Hope
+Unsourced material may be challenged and removed . ( January 2011 ) ( Learn how and when to remove this template message ) The Cape of Good Hope ; looking
+towards the west , from the coastal cliffs above Cape Point , overlooking Dias beach The Cape of Good Hope ( Afrikaans : Kaap die Goeie Hoop ( ˌkɑːp di ˌχujə
+ˈɦʊəp ) , Dutch : Kaap de Goede Hoop ( ˌkaːb də ˌɣudə ˈɦoːp ) ( listen ) , Portuguese : Cabo da Boa Esperança ( ˈkabu dɐ ˈboɐ ʃpɨˈɾɐ̃sɐ ) ) is a rocky headland
+on the Atlantic coast of the Cape Peninsula , South Africa . A common misconception is that the Cape of Good Hope is the southern tip of Africa . This
+misconception was based on the misbelief that the Cape was the dividing point between the Atlantic and Indian Oceans .
+</item 7>
+
+<item 8>
+Cape of Good Hope
+In the Early Modern Era , the first European to reach the cape was the Portuguese explorer Bartolomeu Dias on 12 March 1488 , who named it the `` Cape of Storms
+'' ( Cabo das Tormentas ) . It was later renamed by John II of Portugal as `` Cape of Good Hope '' ( Cabo da Boa Esperança ) because of the great optimism
+engendered by the opening of a sea route to India and the East . The land around the cape was home to the Khoikhoi people when the Dutch first settled there in
+1652 . The Khoikhoi had arrived in these parts about fifteen hundred years before . They were called Hottentots by the Dutch , a term that has now come to be
+regarded as pejorative . Dutch colonial administrator Jan van Riebeeck established a resupply camp for the Dutch East India Company some 50 km north of the cape
+in Table Bay on 6 April 1652 and this eventually developed into Cape Town . Supplies of fresh food were vital on the long journey around Africa and Cape Town
+became known as `` The Tavern of the Seas '' .
+</item 8>
+
+<item 9>
+Graph query row:
+person: Bartolomeu Dias
+</item 9>
+
+<item 10>
+Cape of Good Hope
+It remained a British colony until being incorporated into the independent Union of South Africa in 1910 ( now known as the Republic of South Africa ) . The
+Portuguese government erected two navigational beacons , Dias Cross and Gama Cross , to commemorate Vasco da Gama and Bartolomeu Dias as explorers who as
+mentioned were the first explorers to reach the cape . When lined up , the crosses point to Whittle Rock ( 34 ° 21 ′ 24.63 '' S 18 ° 28 ′ 26.36 '' E ﻿ / ﻿
+34.3568417 ° S 18.4739889 ° E ﻿ / - 34.3568417 ; 18.4739889 ) , a large , permanently submerged shipping hazard in False Bay . Two other beacons in Simon 's
+Town provide the intersection . Geography ( edit ) Sign at the Cape of Good Hope The Cape of Good Hope is at the southern tip of the Cape Peninsula , about 2.3
+kilometres ( 1.4 mi ) west and a little south of Cape Point on the south - east corner .
+</item 10>
+=== END ITEM id=57f5f64538c32a12 ===
+
+=== ITEM id=8bd8d78f1e4d351a ===
+Gold sentences and facts:
+Sentence 0: Gina Tognoni / toʊnˈjoʊni / ( born November 28 , 1973 ) is an American actress , best known for her work with American daytime soap operas . Her most notable performances include Kelly Cramer on One Life to Live and Dinah Marler on Guiding Light . She is currently starring as Phyllis Summers on The Young and the Restless .
+  Fact 0.0: Gina Tognoni was born on November 28, 1973.
+  Fact 0.1: Gina Tognoni is an American actress.
+  Fact 0.2: Gina Tognoni is best known for her work with American daytime soap operas.
+  Fact 0.3: Gina Tognoni's most notable performances include Kelly Cramer on One Life to Live.
+  Fact 0.4: Gina Tognoni's most notable performances include Dinah Marler on Guiding Light.
+  Fact 0.5: Gina Tognoni is currently starring as Phyllis Summers on The Young and the Restless.
+Sentence 1: Gina Tognoni ( 1973 - 11 - 28 ) November 28 , 1973 ( age 44 ) St. Louis , Missouri , U.S. Occupation Actress businesswoman Years active 1995 -- present Television Guiding Light ( 2004 -- 2009 ) One Life to Live ( 1995 -- 2001 , 2002 , 2010 -- 2011 ) The Young and the Restless ( 2014 -- present ) Spouse ( s ) Joseph Chiarello ( m . 2009 )
+  Fact 1.0: Gina Tognoni was born on November 28, 1973.
+  Fact 1.1: Gina Tognoni is age 44.
+  Fact 1.2: Gina Tognoni was born in St. Louis, Missouri, U.S.
+  Fact 1.3: Gina Tognoni's occupations are actress and businesswoman.
+  Fact 1.4: Gina Tognoni's years active are 1995 to present.
+  Fact 1.5: Gina Tognoni was on Guiding Light from 2004 to 2009.
+  Fact 1.6: Gina Tognoni was on One Life to Live from 1995 to 2001, in 2002, and from 2010 to 2011.
+  Fact 1.7: Gina Tognoni was on The Young and the Restless from 2014 to present.
+  Fact 1.8: Gina Tognoni's spouse is Joseph Chiarello.
+  Fact 1.9: Gina Tognoni married Joseph Chiarello in 2009.
+
+Retrieved items:
+<item 1>
+Sheila Carter
+Despite being a regular cast member on The Bold and the Beautiful , Brown returned to The Young and the Restless for several guest appearances beginning on
+October 27 , 1992 . Brown departed on November 5 , 1992 , and reappeared for one episode on December 23 , 1992 . She continued making appearance from January 7
+to 14 , 1993 , February 19 , 1993 , to March 2 , 1993 , October 11 , 1993 , October 19 to 27 , 1993 , January 12 , 1994 , and February 28 , 1995 , until March 2
+, 1995 . In July 2005 , after a 10 - year absence from The Young and the Restless , it was announced that Brown was to reprise the role . At the time , Brown
+had been appearing on ABC 's One Life to Live as Paige Miller , and Brown reportedly opted to leave the role when ABC was unable to match the financial terms of
+a contract offered to her by CBS . She returned on August 5 , 2005 , and her run ended on January 11 , 2006 .
+</item 1>
+
+<item 2>
+Sheila Carter
+( 1991 -- 92 ) Eric Forrester ( 1993 -- 95 ) James Warwick ( 1997 -- 98 ) Sons Ryder Callahan Daughters Mary Carter Warwick Diana Carter Daisy Carter
+Granddaughters Lucy Romalotti Sheila Carter is a fictional character from The Young and the Restless and The Bold and the Beautiful , American soap operas on
+the CBS network . Created by William J. Bell , the role was introduced in 1990 -- by Edward J. Scott -- under the portrayal of Kimberlin Brown , who portrayed
+the role for many intervals on both soaps until 2006 . That same year , Michelle Stafford took over the role , after Sheila had plastic surgery to look like
+Phyllis Summers . Brown returned to the role of Sheila on The Bold and the Beautiful , beginning on June 9 , 2017 . Sheila is known as a villain . A significant
+portion of Sheila 's history on both soaps revolves around her long - running conflict with Lauren Fenmore , whom she has attempted to kill on multiple
+occasions .
+</item 2>
+
+<item 3>
+Gina Tognoni
+She is currently starring as Phyllis Summers on The Young and the Restless . Contents ( hide ) 1 Career 2 Personal life 3 Filmography 4 Awards and nominations 5
+References 6 External links Career ( edit ) Tognoni is known for her roles on daytime television soap operas . In 1995 , she made her soap debut as Kelly Cramer
+in ABC 's One Life to Live . She appeared on the show until 2001 . In April 2001 , it was announced that Tognoni , after six years with the show , had decided
+not to renew her contract with the series . Tognoni returned to daytime television as Dinah Marler on CBS 's Guiding Light in July 2004 , and won her first
+Daytime Emmy Award for Outstanding Supporting Actress in a Drama Series in 2006 for her work on the show . In 2007 , she was nominated again in the same
+category but lost to Genie Francis . She won her second Emmy in 2008 , becoming only the second actress to be a repeat winner in the Supporting Actress category
+.
+</item 3>
+
+<item 4>
+Gina Tognoni
+Watros ( 1998 ) Susan Lucci ( 1999 ) Susan Flannery ( 2000 ) Martha Byrne ( 2001 ) Susan Flannery ( 2002 ) Susan Flannery ( 2003 ) Michelle Stafford ( 2004 )
+Erika Slezak ( 2005 ) Kim Zimmer ( 2006 ) Maura West ( 2007 ) Jeanne Cooper ( 2008 ) Susan Haskell ( 2009 ) Maura West ( 2010 ) Laura Wright ( 2011 ) Heather
+Tom ( 2012 ) Heather Tom ( 2013 ) Eileen Davidson ( 2014 ) Maura West ( 2015 ) Mary Beth Evans ( 2016 ) Gina Tognoni ( 2017 ) Daytime Emmy Award for Outstanding
+Supporting Actress in a Drama Series Suzanne Rogers ( 1979 ) Francesca James ( 1980 ) Jane Elliot ( 1981 ) Dorothy Lyman ( 1982 ) Louise Shaffer ( 1983 ) Judi
+Evans ( 1984 ) Beth Maitland ( 1985 ) Leann Hunley ( 1986 ) Kathleen Noone ( 1987 ) Ellen Wheeler ( 1988 ) Nancy
+</item 4>
+
+<item 5>
+Sheila Carter
+Sheila Carter - Wikipedia Sheila Carter Jump to : navigation , search Sheila Carter Kimberlin Brown as Sheila Carter The Young and the Restless character
+Portrayed by Kimberlin Brown ( 1990 -- ) Michelle Stafford ( 2006 -- 07 ) Duration 1990 -- 98 2002 -- 03 2005 -- 07 2017 -- First appearance May 1990 Created by
+William J. Bell Introduced by Edward J. Scott ( 1990 , 1992 -- 95 ) Lee Phillip Bell ( 1992 ) Bradley Bell ( 2002 -- 03 ) John F. Smith ( 2005 ) Lynn Marie
+Latham and Josh Griffith ( 2006 ) Bradley Bell and Michael Minnis ( 2017 ) Crossover appearances The Bold and the Beautiful Classification Present ; regular
+Profile Other names Sheila Grainger Sheila Forrester Sheila Warwick Sybil Weller Sheila Lovejoy Brenda Harris Jennifer Mitchell Phyllis Newman Betsy Occupation
+Waitress Executive assistant Nurse Residence Los Angeles , California Michelle Stafford as Sheila Carter ( show ) Family Family Carter Mother Molly Carter
+Sisters Sarah Smythe Husband Scott Grainger , Sr.
+</item 5>
+
+<item 6>
+Sheila Carter
+However , that December , the character returned , though not portrayed by Brown , but by Michelle Stafford , who in addition portrayed Phyllis Summers . For
+the reason of Brown not returning to the role , the actress said : `` I had a bad accident last year , and when they wanted me back in November , I really could
+n't go at that time , and that 's why I came back looking like somebody else . '' Stafford only portrayed the role for two months until February 9 , 2007 , when
+Sheila was shot by her longtime enemy Lauren Fenmore and presumed dead . In 2009 , reports speculated that Brown would reprise the role again on The Bold and
+the Beautiful , which was followed by more rumors speculating a return to The Young and the Restless . `` I actually got a call from ( B&B head writer and
+executive producer ) Brad Bell a while back asking if I 'd be interested in coming back , and I said , ' Sure ! ' The thing with daytime is that the storylines
+are ( written ) so far in advance , you just never know when ( you might be needed ) , '' Brown said at the time .
+</item 6>
+
+<item 7>
+Gina Tognoni
+Gina Tognoni - wikipedia Gina Tognoni Jump to : navigation , search Gina Tognoni ( 1973 - 11 - 28 ) November 28 , 1973 ( age 44 ) St. Louis , Missouri , U.S.
+Occupation Actress businesswoman Years active 1995 -- present Television Guiding Light ( 2004 -- 2009 ) One Life to Live ( 1995 -- 2001 , 2002 , 2010 -- 2011 )
+The Young and the Restless ( 2014 -- present ) Spouse ( s ) Joseph Chiarello ( m . 2009 ) Gina Tognoni / toʊnˈjoʊni / ( born November 28 , 1973 ) is an American
+actress , best known for her work with American daytime soap operas . Her most notable performances include Kelly Cramer on One Life to Live and Dinah Marler on
+Guiding Light . She is currently starring as Phyllis Summers on The Young and the Restless .
+</item 7>
+
+<item 8>
+Sheila Carter
+CBS.com . Retrieved 16 September 2012 . Jump up ^ `` The Young and the Restless : Wednesday , 11th January 2006 '' . CBS.com . Retrieved 16 September 2012 .
+Jump up ^ `` The Young and the Restless : Thursday , 28th December 2006 '' . CBS.com . Retrieved 16 September 2012 . Jump up ^ `` Michelle Stafford Playing
+Sheila Carter on The Young and the Restless '' . She Knows Soaps . Retrieved 16 September 2012 . Jump up ^ Kimberlin Brown ( 2007 ) . KB Interview Nov 2007 .
+KOUS News . Retrieved 16 September 2012 . Jump up ^ `` The Young and the Restless : Friday , 9th February 2007 '' . CBS.com . Retrieved 16 September 2012 . Jump
+up ^ Kerr , Luke ( 28 August 2009 ) . `` Could Kimberlin Brown Return to B&B ? '' . Daytime Confidential . Retrieved 16 September 2012 .
+</item 8>
+
+<item 9>
+Sheila Carter
+She has also had conflicts with Stephanie Forrester , Maggie Forrester , Amber Moore , Taylor Hayes , Brooke Logan , Phyllis Summers and Quinn Fuller . Contents
+( hide ) 1 Casting and creation 2 Development 3 Storylines 3.1 1990 -- 92 3.2 1992 -- 98 3.3 2002 -- 03 3.4 2005 -- 07 3.5 2010 , 2012 3.6 2017 -- 4 Critical
+reception 5 References 6 External links Casting and creation ( edit ) The role was portrayed by Kimberlin Brown for a total of 16 years . Her first run was on
+The Young and the Restless from May 1990 to May 20 , 1992 , when the character crossed over to The Bold and the Beautiful from May 21 , 1992 , to October 2 ,
+1998 , again from May 24 to November 5 , 2002 , and again finally from September 26 to October 10 , 2003 .
+</item 9>
+
+<item 10>
+Gina Tognoni
+In 2009 , after CBS canceled Guiding Light , Tognoni returned to her role as Kelly Cramer on One Life to Live . Also it was reported that Tognoni was in talks
+with several soaps for her post-Guiding Light gig . Following the April 2011 cancelation of One Life to Live and All My Children , it was announced that Tognoni
+and co-star Tom Degnan , who was portraying Joey Buchanan at the time , would exit the series before its January 2012 finale . In addition to her career on
+soaps , Tognoni had guest - starring roles in Law & Order : Special Victims Unit and The Sopranos , and co-starred in a number of television shows and
+independent films . On May 22 , 2014 , it was announced that Tognoni was cast as Phyllis Summers in CBS 's The Young and the Restless , replacing Michelle
+Stafford . Tognoni made her debut on August 11 , 2014 . Personal Life ( edit ) Tognoni was born in St. Louis , Missouri .
+</item 10>
+=== END ITEM id=8bd8d78f1e4d351a ===
+
+=== ITEM id=0d383ab602ca1ed7 ===
+Gold sentences and facts:
+Sentence 0: Angular cheilitis can be caused by infection , irritation , or allergies . Infections include by fungi such as Candida albicans and bacteria such as Staph . aureus . Irritants include poorly fitting dentures , licking the lips or drooling , mouth breathing resulting in a dry mouth , sun exposure , overclosure of the mouth , smoking , and minor trauma . Allergies may include substances like toothpaste , makeup , and food . Often a number of factors are involved . Other factors may include poor nutrition or poor immune function . Diagnosis may be helped by testing for infections and patch testing for allergies .
+  Fact 0.0: Angular cheilitis can be caused by infection.
+  Fact 0.1: Angular cheilitis can be caused by irritation.
+  Fact 0.2: Angular cheilitis can be caused by allergies.
+  Fact 0.3: Infections that cause angular cheilitis include infection by fungi such as Candida albicans.
+  Fact 0.4: Infections that cause angular cheilitis include infection by bacteria such as Staph. aureus.
+  Fact 0.5: Irritants that cause angular cheilitis include poorly fitting dentures.
+  Fact 0.6: Irritants that cause angular cheilitis include licking the lips or drooling.
+  Fact 0.7: Irritants that cause angular cheilitis include mouth breathing resulting in a dry mouth.
+  Fact 0.8: Irritants that cause angular cheilitis include sun exposure.
+  Fact 0.9: Irritants that cause angular cheilitis include overclosure of the mouth.
+  Fact 0.10: Irritants that cause angular cheilitis include smoking.
+  Fact 0.11: Irritants that cause angular cheilitis include minor trauma.
+  Fact 0.12: Allergies that cause angular cheilitis may include substances like toothpaste.
+  Fact 0.13: Allergies that cause angular cheilitis may include substances like makeup.
+  Fact 0.14: Allergies that cause angular cheilitis may include substances like food.
+  Fact 0.15: Often a number of factors are involved in angular cheilitis.
+  Fact 0.16: Other factors may include poor nutrition.
+  Fact 0.17: Other factors may include poor immune function.
+  Fact 0.18: Diagnosis of angular cheilitis may be helped by testing for infections.
+  Fact 0.19: Diagnosis of angular cheilitis may be helped by patch testing for allergies.
+
+Retrieved items:
+<item 1>
+Angular cheilitis
+Angular cheilitis - wikipedia Angular cheilitis Jump to : navigation , search Angular cheilitis Synonyms Rhagades , perlèche , cheilosis , angular cheilosis ,
+commissural cheilitis , angular stomatitis Bilateral angular cheilitis in an elderly individual with false teeth , iron deficiency anemia and dry mouth
+Pronunciation / kaɪˈlaɪtɪs / Specialty Dermatology Symptoms Redness , skin breakdown and crusting at the corner of the mouth Usual onset Children , 30s to 60s
+Duration Days to years Causes Infection , irritation , allergies Treatment Based on cause , barrier cream Frequency 0.7 % of the population Angular cheilitis (
+AC ) , is inflammation of one or both corners of the mouth . Often the corners are red with skin breakdown and crusting . It can also be itchy or painful . The
+condition can last for days to years . Angular cheilitis is a type of cheilitis ( inflammation of the lips ) . Angular cheilitis can be caused by infection ,
+irritation , or allergies . Infections include by fungi such as Candida albicans and bacteria such as Staph .
+</item 1>
+
+<item 2>
+Angular cheilitis
+In the developing world , iron and vitamin deficiencies are a common cause . Contents ( hide ) 1 Signs and symptoms 2 Causes 2.1 Infection 2.2 Irritation
+contact dermatitis 2.3 Nutritional deficiencies 2.4 Systemic disorders 2.5 Drugs 2.6 Allergic contact dermatitis 3 Diagnosis 3.1 Classification 4 Management 5
+Prognosis 6 Epidemiology 7 References 8 External links Signs and symptoms ( edit ) Angular cheilitis -- a fissure running in the corner of the mouth with
+reddened , irritated facial skin adjacent . A fairly mild case of angular cheilitis extending onto the facial skin in a young person ( affected area is within
+the black oval ) . Angular cheilitis is a fairly non specific term which describes the presence of an inflammatory lesion in a particular anatomic site ( i.e.
+the corner of the mouth ) . As there are different possible causes and contributing factors from one person to the next , the appearance of the lesion is
+somewhat variable . The lesions are more commonly symmetrically present on both sides of the mouth , but sometimes only one side may be affected .
+</item 2>
+
+<item 3>
+Angular cheilitis
+Infections include by fungi such as Candida albicans and bacteria such as Staph . aureus . Irritants include poorly fitting dentures , licking the lips or
+drooling , mouth breathing resulting in a dry mouth , sun exposure , overclosure of the mouth , smoking , and minor trauma . Allergies may include substances
+like toothpaste , makeup , and food . Often a number of factors are involved . Other factors may include poor nutrition or poor immune function . Diagnosis may
+be helped by testing for infections and patch testing for allergies . Treatment for angular cheilitis is typically based on the underlying causes along with the
+use of a barrier cream . Frequently an antifungal and antibacterial cream is also tried . Angular cheilitis is a fairly common problem , with estimates that it
+affects 0.7 % of the population . It occurs most often in the 30s to 60s , although is also relatively common in children . In the developing world , iron and
+vitamin deficiencies are a common cause .
+</item 3>
+
+<item 4>
+Angular cheilitis
+The corner of the mouth is normally exposed to saliva more than any other part of the lips . Reduced lower facial height ( vertical dimension or facial support
+) is usually caused by edentulism ( tooth loss ) , or wearing worn down , old dentures or ones which are not designed optimally . This results in overclosure of
+the mandible ( collapse of the jaws ) , which extenuates the angular skin folds at the corners of the mouth , in effect creating an intertriginous skin crease .
+The tendency of saliva to pool in these areas is increased , constantly wetting the area , which may cause tissue maceration and favors the development of a
+yeast infection . As such , angular cheilitis is more commonly seen in edentulous people ( people without any teeth ) . It is by contrast uncommon in persons
+who retain their natural teeth . Angular cheilitis is also commonly seen in denture wearers . Angular cheilitis is present in about 30 % of people with denture
+- related stomatitis .
+</item 4>
+
+<item 5>
+Angular cheilitis
+It is thought that reduced vertical dimension of the lower face may be a contributing factor in up to 11 % of elderly persons with angular cheilitis and in up
+to 18 % of denture wearers who have angular cheilitis . Reduced vertical dimension can also be caused by tooth migration , wearing orthodontic appliances , and
+elastic tissue damage caused by ultraviolet light exposure and smoking . Habits or conditions that keep the corners of the mouth moist might include chronic lip
+licking , thumb sucking ( or sucking on other objects such as pens , pipes , lollipops ) , dental cleaning ( e.g. flossing ) , chewing gum , hypersalivation ,
+drooling and mouth breathing . Some consider habitual lip licking or picking to be a form of nervous tic , and do not consider this to be true angular cheilitis
+, instead calling it perlèche ( derived from the French word pourlècher meaning `` to lick one 's lips '' ) , or `` factitious cheilitis '' is applied to this
+habit .
+</item 5>
+
+<item 6>
+Angular cheilitis
+The term `` cheilocandidiasis '' describes exfoliative ( flaking ) lesions of the lips and the skin around the lips , and is caused by a superficial candidal
+infection due to chronic lip licking . Less severe cases occur during cold , dry weather , and is a form of chapped lips . Individuals may lick their lips in an
+attempt to provide a temporary moment of relief , only serving to worsen the condition . The sunscreen in some types of lip balm degrades over time into an
+irritant . Using expired lipbalm can initiate mild angular cheilitis , and when the person applies more lipbalm to alleviate the cracking , it only aggravates
+it . Because of the delayed onset of contact dermatitis and the recovery period lasting days to weeks , people typically do not make the connection between the
+causative agent and the symptoms . Nutritional deficiencies ( edit ) Several different nutritional deficiency states of vitamins or minerals have been linked to
+AC . It is thought that in about 25 % of people with AC , iron deficiency or deficiency of B vitamins are involved . Nutritional deficiencies may be a more
+common cause of AC in Third World countries .
+</item 6>
+
+<item 7>
+Angular cheilitis
+Examples include cocaine , methamphetamines , heroin , and hallucinogens . Allergic contact dermatitis ( edit ) See also : Allergic contact cheilitis , Allergic
+contact dermatitis , and Allergic contact stomatitis Patch test Allergic reactions may account for about 25 -- 34 % of cases of generalized cheilitis ( i.e. ,
+inflammation not confined to the angles of the mouth ) . It is unknown how frequently allergic reactions are responsible for cases of angular cheilitis , but
+any substance capable of causing generalized allergic cheilitis may present involving the corners of the mouth alone . Examples of potential allergens include
+substances that may be present in some types of lipstick , toothpaste , acne products , cosmetics , chewing gum , mouthwash , foods , dental appliances , and
+materials from dentures or mercury containing amalgam fillings . It is usually impossible to tell the difference between irritant contact dermatitis and
+allergic contact dermatitis without a patch test . Diagnosis ( edit ) Photographic Comparison of : 1 ) a Canker Sore - inside the mouth , 2 ) Herpes , 3 )
+Angular Cheilitis and 4 ) Chapped Lips .
+</item 7>
+
+<item 8>
+Angular cheilitis
+A cold sore at the corner of the mouth behaves similarly to elsewhere on the lips , and follows a pattern of vesicle ( blister ) formation followed by rupture
+leaving a crusted sore which resolves in about 7 -- 10 days , and recurs in the same spot periodically , especially during periods of stress . Rather than
+utilizing antifungal creams , angular herpes simplex is treated in the same way as a cold sore , with topical antiviral drugs such as aciclovir . Irritation
+contact dermatitis ( edit ) A famous sketch by Leonardo da Vinci in preparation to depict the face of Judas Iscariot in The Last supper . The subject shows
+overclosure of the jaws and loss of facial support around the mouth . Pronounced skin folds extending from the corner of the mouth . Main article : Irritant
+contact dermatitis 22 % of cases of angular cheilitis are due to irritants . Saliva contains digestive enzymes , which may have a degree of digestive action on
+tissues if they are left in contact . The corner of the mouth is normally exposed to saliva more than any other part of the lips .
+</item 8>
+
+<item 9>
+Angular cheilitis
+Such examples include people with anorexia nervosa . Other disorders may cause lip enlargement ( e.g. orofacial granulomatosis ) , which alters the local
+anatomy and extenuates the skin folds at the corners of the mouth . More still may be involved because they affect the immune system , allowing normally
+harmless organisms like Candida to become pathogenic and cause an infection . Xerostomia ( dry mouth ) is thought to account for about 5 % of cases of AC .
+Xerostomia itself has many possible causes , but commonly the cause may be side effects of medications , or conditions such as Sjögren 's syndrome . Conversely
+, conditions which cause drooling or sialorrhoea ( excessive salivation ) can cause angular cheilitis by creating a constant wet environment in the corners of
+the mouth . About 25 % of people with Down syndrome appear to have AC . This is due to relative macroglossia , an apparently large tongue in a small mouth ,
+which may constantly stick out of the mouth causing maceration of the corners of the mouth with saliva .
+</item 9>
+
+<item 10>
+Angular cheilitis
+In some cases , the lesion may be confined to the mucosa of the lips , and in other cases the lesion may extend past the vermilion border ( the edge where the
+lining on the lips becomes the skin on the face ) onto the facial skin . Initially , the corners of the mouth develop a gray - white thickening and adjacent
+erythema ( redness ) . Later , the usual appearance is a roughly triangular area of erythema , edema ( swelling ) and breakdown of skin at either corner of the
+mouth . The mucosa of the lip may become fissured ( cracked ) , crusted , ulcerated or atrophied . There is not usually any bleeding . Where the skin is
+involved , there may be radiating rhagades ( linear fissures ) from the corner of the mouth . Infrequently , the dermatitis ( which may resemble eczema ) can
+extend from the corner of the mouth to the skin of the cheek or chin . If Staphylococcus aureus is involved , the lesion may show golden yellow crusts .
+</item 10>
+=== END ITEM id=0d383ab602ca1ed7 ===
+
+=== ITEM id=7dfe897ec1017896 ===
+Gold sentences and facts:
+Sentence 0: Barbara Eden as Stella Johnson , a widowed cosmetics salesperson with a young daughter , whose joie de vivre , her principles , and her individuality anger most of the powerful people in town and on the Parent Teachers Association board . She inevitably becomes PTA president after embarrassing Flora , the snobby former President and her equally snobby friends . Ronny Cox as Willis `` Will '' Newton , a wealthy member of the PTA who does n't agree with Flora and her snobby allies and is in love with Stella . He and Stella get married at the end of the movie . Nanette Fabray as Alice Finley , Stella 's best friend and co-conspirator against the snobs of Harper Valley . She owns and operates the La Moderne Beauty Shop . Louis Nye as Kirby Baker , a local real estate agent who is allied with Flora and her friends . Notorious for being a lecherous playboy and infamous for impregnating his secretaries , one of whom , Gladys Wilmot , left town to see an abortionist in Cincinnati . As part of a plan to discredit Stella , he tries to foreclose on Stella 's house , which infuriates her . He then gets arrested and jailed for attacking Myrna Wong , a friend of Stella 's , who rebuffs his advances , throwing him by use of martial arts and destroying the office . John Fiedler as Bobby Taylor , a man on the PTA who lusts after Stella . Overly dominated by his wife , Holly . Although open to allow Stella to speak , he is not above having a fellow PTA board member kidnapped to commit election fraud . He was arrested for indecent exposure after being set up by Stella . Ron Masak as Herbie Maddox , the head bartender at Kelly 's bar , and Stella 's ally against Flora and her friends . He has a crush on Stella , and is one of her friends . Clint Howard as Corley , a young delivery person , who works for the local florist shop , who brings Stella flowers from Will . Susan Swift as Dee Johnson , Stella 's 14 - year - old daughter , who is threatened with expulsion from school if her mother does n't conform to the way the PTA wants her to behave . She has a hand in assisting her mother and Alice with one of their revenge schemes . She loses her braces , gets a makeover , and ends up with a boyfriend , Carlyle . Pat Paulsen as Otis Harper , the descendant of the founding family of Harper Valley . A PTA member who is allied with Flora and her friends . Has a tendency to drink all the time , which annoys his wife , Bertha . He had a stampede of elephants , painted pink , stormed through his house , destroying it . Amzie Strickland as Shirley Thompson , a member of the PTA board who tends to drink a lot of gin . Though she is allied with Flora and her friends , she is one of four PTA members ( Will , Skeeter and Holly Taylor are the others ) who are spared any retribution from Stella . She was seen as the most sympathetic of the board , as she tended to be more manipulated as opposed to being manipulative . It was never revealed whether or not she retained her seat on the PTA , but it is presumed that she became more sympathetic towards Stella as she was seen waving goodbye at Olive as she was being arrested . Bob Hastings as Skeeter Duggan , a member of the PTA board , and the town 's Notary public who is sympathetic to Stella . He is kidnapped by Dutch and Tex at Flora Simpson Reilly 's orders . Audrey Christie as Flora Simpson - Reilly , The movie 's main antagonist . She is the pompous and extremely snobbish president of the PTA board who thoroughly despises Stella ( who defeats her for president at the end of the movie ) and all she stands for . So desperate is she to retain her power and prestige in the community that she has a fellow member of the PTA ( Skeeter Duggan ) kidnapped so she and her allies can commit election fraud . She is embarrassed when her permanent set is destroyed by a hair depilatory at the beauty salon . Molly Dodd as Olive Glover , the recording secretary of the PTA who is a gambling addict . Clearly the most corrupt and most vindictive member of the PTA board , she is eventually arrested for embezzlement after having a load of hay and horse manure dumped on top of her . She is the one who initially angers Stella by sending her the letter denouncing her , and tries to get Dee 's friend , Mavis , arrested for embezzlement . Fay DeWitt as Willamae Jones , a snide biology teacher at the junior high school who is also a member of the PTA . She makes no secret of the fact that she favors the Reilly twins , due to the connections between her and Flora . Notorious for being a nymphomaniac ( though she hides it under a prim - and - proper façade ) , she is caught in flagrante delicto with Barney Crunk , the town 's mailman , on film . DeVera Marcus as Holly Taylor , Bobby 's obviously overbearing wife , who tends to drink a lot when Bobby is out of town , and does n't approve of Bobby 's lusting , or of anything else he does ( this is different from the character in the song , who `` seems to use a lot of ice whenever ( her husband ) 's away '' , implying adultery with the iceman ) . However , despite her ties to Flora and her scheming friends , she , like Shirley Thompson , is spared any retribution from Stella , due to Stella refusing to date Bobby . Louise Foley as Mavis , Dee Johnson 's best friend , who is nearly framed for a crime she did not commit by the vindictive Olive Glover . Brian Cook as Carlyle , a popular track star who chooses Dee , after she gets a makeover , and angers Bettina Reilly in the process . Laura Teige as Bettina Reilly , One of Flora 's twin granddaughters , who wants to be with Carlyle , and is jealous when he chooses Dee over her . She tends to be as snotty as her grandmother . Jan Teige as Edwina Reilly , Bettina 's twin sister , who is just as snotty as her . Irene Yah - Ling Sun as Myrna Wong , a friend of Stella 's who is a judo expert ; she is assaulted by Kirby Baker ( after leading him on ; she destroys him and his office in retaliation ) and has him sent to jail for assault . Tobias Anderson as `` Cranky '' Barney Crunk , the town 's nosy mailman who had the bad habit of peeking in everyone 's mail . He is caught in flagrante delicto on film with Willamae Jones . Royce D. Applegate as Dutch , one of two kidnappers who abduct Skeeter Duggan at Flora Simpson - Reilly 's orders . J.J. Barry as Tex , the mastermind of the kidnap plot to get Skeeter Duggan out of the way so Flora Simpson - Reilly and her friends could commit election fraud . He and his accomplice Dutch are arrested and the two of them rat out Flora and her friends on their scheme . Pitt Herbert as Henry Reilly , Flora 's overly dominated husband and grandfather to Edwina and Bettina . Henry is wealthy , but is very weak - willed and is known for acquiescing to his wife 's schemes . Arlen Stuart as Bertha Harper , wife of Otis Harper , who gets annoyed by her husband 's continual drinking . She is terrified when her house is destroyed by pink - painted elephants .
+  Fact 0.0: Barbara Eden plays Stella Johnson.
+  Fact 0.1: Stella Johnson is a widowed cosmetics salesperson.
+  Fact 0.2: Stella Johnson has a young daughter.
+  Fact 0.3: Stella Johnson's joie de vivre angers most of the powerful people in town and on the Parent Teachers Association board.
+  Fact 0.4: Stella Johnson's principles anger most of the powerful people in town and on the Parent Teachers Association board.
+  Fact 0.5: Stella Johnson's individuality angers most of the powerful people in town and on the Parent Teachers Association board.
+  Fact 0.6: Stella Johnson inevitably becomes PTA president after embarrassing Flora, the snobby former President.
+  Fact 0.7: Stella Johnson inevitably becomes PTA president after embarrassing Flora's equally snobby friends.
+  Fact 0.8: Ronny Cox plays Willis 'Will' Newton.
+  Fact 0.9: Will Newton is a wealthy member of the PTA.
+  Fact 0.10: Will Newton does not agree with Flora.
+  Fact 0.11: Will Newton does not agree with Flora's snobby allies.
+  Fact 0.12: Will Newton is in love with Stella.
+  Fact 0.13: Will Newton and Stella get married at the end of the movie.
+  Fact 0.14: Nanette Fabray plays Alice Finley.
+  Fact 0.15: Alice Finley is Stella's best friend.
+  Fact 0.16: Alice Finley is Stella's co-conspirator against the snobs of Harper Valley.
+  Fact 0.17: Alice Finley owns the La Moderne Beauty Shop.
+  Fact 0.18: Alice Finley operates the La Moderne Beauty Shop.
+  Fact 0.19: Louis Nye plays Kirby Baker.
+  Fact 0.20: Kirby Baker is a local real estate agent.
+  Fact 0.21: Kirby Baker is allied with Flora and her friends.
+  Fact 0.22: Kirby Baker is notorious for being a lecherous playboy.
+  Fact 0.23: Kirby Baker is infamous for impregnating his secretaries.
+  Fact 0.24: Gladys Wilmot is one of Kirby Baker's secretaries.
+  Fact 0.25: Kirby Baker impregnated Gladys Wilmot.
+  Fact 0.26: Gladys Wilmot left town to see an abortionist in Cincinnati.
+  Fact 0.27: As part of a plan to discredit Stella, Kirby Baker tries to foreclose on Stella's house.
+  Fact 0.28: Stella is infuriated by Kirby Baker's attempt to foreclose on her house.
+  Fact 0.29: Kirby Baker gets arrested and jailed for attacking Myrna Wong.
+  Fact 0.30: Myrna Wong is a friend of Stella's.
+  Fact 0.31: Myrna Wong rebuffs Kirby Baker's advances.
+  Fact 0.32: Myrna Wong throws Kirby Baker by use of martial arts.
+  Fact 0.33: Myrna Wong destroys Kirby Baker's office.
+  Fact 0.34: John Fiedler plays Bobby Taylor.
+  Fact 0.35: Bobby Taylor is a man on the PTA.
+  Fact 0.36: Bobby Taylor lusts after Stella.
+  Fact 0.37: Bobby Taylor is overly dominated by his wife, Holly.
+  Fact 0.38: Bobby Taylor is open to allowing Stella to speak.
+  Fact 0.39: Bobby Taylor is not above having a fellow PTA board member kidnapped to commit election fraud.
+  Fact 0.40: Bobby Taylor was arrested for indecent exposure.
+  Fact 0.41: Bobby Taylor was set up by Stella.
+  Fact 0.42: Ron Masak plays Herbie Maddox.
+  Fact 0.43: Herbie Maddox is the head bartender at Kelly's bar.
+  Fact 0.44: Herbie Maddox is Stella's ally against Flora and her friends.
+  Fact 0.45: Herbie Maddox has a crush on Stella.
+  Fact 0.46: Herbie Maddox is one of Stella's friends.
+  Fact 0.47: Clint Howard plays Corley.
+  Fact 0.48: Corley is a young delivery person.
+  Fact 0.49: Corley works for the local florist shop.
+  Fact 0.50: Corley brings Stella flowers from Will.
+  Fact 0.51: Susan Swift plays Dee Johnson.
+  Fact 0.52: Dee Johnson is Stella's 14-year-old daughter.
+  Fact 0.53: Dee Johnson is threatened with expulsion from school if her mother does not conform to the way the PTA wants her to behave.
+  Fact 0.54: Dee Johnson has a hand in assisting her mother and Alice with one of their revenge schemes.
+  Fact 0.55: Dee Johnson loses her braces.
+  Fact 0.56: Dee Johnson gets a makeover.
+  Fact 0.57: Dee Johnson ends up with a boyfriend, Carlyle.
+  Fact 0.58: Pat Paulsen plays Otis Harper.
+  Fact 0.59: Otis Harper is the descendant of the founding family of Harper Valley.
+  Fact 0.60: Otis Harper is a PTA member allied with Flora and her friends.
+  Fact 0.61: Otis Harper has a tendency to drink all the time.
+  Fact 0.62: Otis Harper's drinking annoys his wife, Bertha.
+  Fact 0.63: Otis Harper had a stampede of pink-painted elephants storm through his house.
+  Fact 0.64: The stampede of pink-painted elephants destroyed Otis Harper's house.
+  Fact 0.65: Amzie Strickland plays Shirley Thompson.
+  Fact 0.66: Shirley Thompson is a member of the PTA board.
+  Fact 0.67: Shirley Thompson tends to drink a lot of gin.
+  Fact 0.68: Shirley Thompson is allied with Flora and her friends.
+  Fact 0.69: Shirley Thompson is one of four PTA members spared any retribution from Stella.
+  Fact 0.70: The other three PTA members spared any retribution from Stella are Will, Skeeter and Holly Taylor.
+  Fact 0.71: Shirley Thompson was seen as the most sympathetic member of the board.
+  Fact 0.72: Shirley Thompson tended to be more manipulated than manipulative.
+  Fact 0.73: It was never revealed whether Shirley Thompson retained her seat on the PTA.
+  Fact 0.74: It is presumed that Shirley Thompson became more sympathetic towards Stella.
+  Fact 0.75: Shirley Thompson was seen waving goodbye at Olive as Olive was being arrested.
+  Fact 0.76: Bob Hastings plays Skeeter Duggan.
+  Fact 0.77: Skeeter Duggan is a member of the PTA board.
+  Fact 0.78: Skeeter Duggan is the town's Notary public.
+  Fact 0.79: Skeeter Duggan is sympathetic to Stella.
+  Fact 0.80: Dutch and Tex kidnap Skeeter Duggan at Flora Simpson-Reilly's orders.
+  Fact 0.81: Audrey Christie plays Flora Simpson-Reilly.
+  Fact 0.82: Flora Simpson-Reilly is the movie's main antagonist.
+  Fact 0.83: Flora Simpson-Reilly is the pompous and extremely snobbish president of the PTA board.
+  Fact 0.84: Flora Simpson-Reilly thoroughly despises Stella.
+  Fact 0.85: Stella defeats Flora Simpson-Reilly for president at the end of the movie.
+  Fact 0.86: Flora Simpson-Reilly despises all that Stella stands for.
+  Fact 0.87: Flora Simpson-Reilly is desperate to retain her power and prestige in the community.
+  Fact 0.88: Flora Simpson-Reilly has a fellow PTA member, Skeeter Duggan, kidnapped so she and her allies can commit election fraud.
+  Fact 0.89: Flora Simpson-Reilly is embarrassed when her permanent set is destroyed by a hair depilatory at the beauty salon.
+  Fact 0.90: Molly Dodd plays Olive Glover.
+  Fact 0.91: Olive Glover is the recording secretary of the PTA.
+  Fact 0.92: Olive Glover is a gambling addict.
+  Fact 0.93: Olive Glover is clearly the most corrupt and most vindictive member of the PTA board.
+  Fact 0.94: Olive Glover is eventually arrested for embezzlement after having a load of hay and horse manure dumped on top of her.
+  Fact 0.95: Olive Glover initially angers Stella by sending her the letter denouncing her.
+  Fact 0.96: Olive Glover tries to get Dee's friend, Mavis, arrested for embezzlement.
+  Fact 0.97: Fay DeWitt plays Willamae Jones.
+  Fact 0.98: Willamae Jones is a snide biology teacher at the junior high school.
+  Fact 0.99: Willamae Jones is a member of the PTA.
+  Fact 0.100: Willamae Jones favors the Reilly twins.
+  Fact 0.101: Willamae Jones favors the Reilly twins due to the connections between her and Flora.
+  Fact 0.102: Willamae Jones is notorious for being a nymphomaniac.
+  Fact 0.103: Willamae Jones hides being a nymphomaniac under a prim-and-proper facade.
+  Fact 0.104: Willamae Jones is caught in flagrante delicto with Barney Crunk, the town's mailman, on film.
+  Fact 0.105: DeVera Marcus plays Holly Taylor.
+  Fact 0.106: Holly Taylor is Bobby's obviously overbearing wife.
+  Fact 0.107: Holly Taylor tends to drink a lot when Bobby is out of town.
+  Fact 0.108: Holly Taylor does not approve of Bobby's lusting.
+  Fact 0.109: Holly Taylor does not approve of anything else Bobby does.
+  Fact 0.110: The Holly Taylor character differs from the character in the song, who seems to use a lot of ice whenever her husband is away, implying adultery with the iceman.
+  Fact 0.111: Holly Taylor has ties to Flora and her scheming friends.
+  Fact 0.112: Holly Taylor, like Shirley Thompson, is spared any retribution from Stella.
+  Fact 0.113: Stella spares Holly Taylor due to Stella refusing to date Bobby.
+  Fact 0.114: Louise Foley plays Mavis.
+  Fact 0.115: Mavis is Dee Johnson's best friend.
+  Fact 0.116: Mavis is nearly framed for a crime she did not commit by the vindictive Olive Glover.
+  Fact 0.117: Brian Cook plays Carlyle.
+  Fact 0.118: Carlyle is a popular track star.
+  Fact 0.119: Carlyle chooses Dee after she gets a makeover.
+  Fact 0.120: Carlyle's choice of Dee angers Bettina Reilly in the process.
+  Fact 0.121: Laura Teige plays Bettina Reilly.
+  Fact 0.122: Bettina Reilly is one of Flora's twin granddaughters.
+  Fact 0.123: Bettina Reilly wants to be with Carlyle.
+  Fact 0.124: Bettina Reilly is jealous when Carlyle chooses Dee over her.
+  Fact 0.125: Bettina Reilly tends to be as snotty as her grandmother.
+  Fact 0.126: Jan Teige plays Edwina Reilly.
+  Fact 0.127: Edwina Reilly is Bettina's twin sister.
+  Fact 0.128: Edwina Reilly is just as snotty as Bettina.
+  Fact 0.129: Irene Yah-Ling Sun plays Myrna Wong.
+  Fact 0.130: Myrna Wong is a friend of Stella's.
+  Fact 0.131: Myrna Wong is a judo expert.
+  Fact 0.132: Myrna Wong is assaulted by Kirby Baker after she leads him on.
+  Fact 0.133: Myrna Wong destroys Kirby Baker and his office in retaliation.
+  Fact 0.134: Myrna Wong has Kirby Baker sent to jail for assault.
+  Fact 0.135: Tobias Anderson plays 'Cranky' Barney Crunk.
+  Fact 0.136: Barney Crunk is the town's nosy mailman.
+  Fact 0.137: Barney Crunk had the bad habit of peeking in everyone's mail.
+  Fact 0.138: Barney Crunk is caught in flagrante delicto on film with Willamae Jones.
+  Fact 0.139: Royce D. Applegate plays Dutch.
+  Fact 0.140: Dutch is one of two kidnappers who abduct Skeeter Duggan at Flora Simpson-Reilly's orders.
+  Fact 0.141: J.J. Barry plays Tex.
+  Fact 0.142: Tex is the mastermind of the kidnap plot to get Skeeter Duggan out of the way.
+  Fact 0.143: The kidnap plot lets Flora Simpson-Reilly and her friends commit election fraud.
+  Fact 0.144: Tex is arrested.
+  Fact 0.145: Dutch is arrested.
+  Fact 0.146: Tex and Dutch rat out Flora and her friends on their scheme.
+  Fact 0.147: Pitt Herbert plays Henry Reilly.
+  Fact 0.148: Henry Reilly is Flora's overly dominated husband.
+  Fact 0.149: Henry Reilly is the grandfather of Edwina and Bettina.
+  Fact 0.150: Henry Reilly is wealthy.
+  Fact 0.151: Henry Reilly is very weak-willed.
+  Fact 0.152: Henry Reilly is known for acquiescing to his wife's schemes.
+  Fact 0.153: Arlen Stuart plays Bertha Harper.
+  Fact 0.154: Bertha Harper is the wife of Otis Harper.
+  Fact 0.155: Bertha Harper gets annoyed by her husband's continual drinking.
+  Fact 0.156: Bertha Harper is terrified when her house is destroyed by pink-painted elephants.
+
+Retrieved items:
+<item 1>
+Harper Valley PTA (film)
+He had a stampede of elephants , painted pink , stormed through his house , destroying it . Amzie Strickland as Shirley Thompson , a member of the PTA board who
+tends to drink a lot of gin . Though she is allied with Flora and her friends , she is one of four PTA members ( Will , Skeeter and Holly Taylor are the others
+) who are spared any retribution from Stella . She was seen as the most sympathetic of the board , as she tended to be more manipulated as opposed to being
+manipulative . It was never revealed whether or not she retained her seat on the PTA , but it is presumed that she became more sympathetic towards Stella as she
+was seen waving goodbye at Olive as she was being arrested . Bob Hastings as Skeeter Duggan , a member of the PTA board , and the town 's Notary public who is
+sympathetic to Stella . He is kidnapped by Dutch and Tex at Flora Simpson Reilly 's orders . Audrey Christie as Flora Simpson - Reilly , The movie 's main
+antagonist .
+</item 1>
+
+<item 2>
+Harper Valley PTA (film)
+Harper Valley PTA ( film ) - wikipedia Harper Valley PTA ( film ) Jump to : navigation , search Harper Valley PTA Theatrical release poster Directed by Richard
+Bennett Produced by George Edwards Written by George Edwards Barry Schneider Starring Barbara Eden Nanette Fabray Ronny Cox Louis Nye Susan Swift Pat Paulsen
+Music by Nelson Riddle Cinematography Willy Kurant Edited by Michael Economou Distributed by April Fools Productions Release date May 23 , 1978 ( 1978 - 05 - 23
+) ( Midwest ) June 2 , 1978 ( 1978 - 06 - 02 ) ( Canada ) August 2 , 1978 ( 1978 - 08 - 02 ) ( Los Angeles ) January 12 , 1979 ( 1979 - 01 - 12 ) ( New York
+City ) Running time 93 minutes Country United States Language English Budget $1 million Box office $25 million ( USA ) Harper Valley PTA is a 1978 American
+comedy film inspired by the popular 1968 country song `` Harper Valley PTA '' written by Tom T. Hall and performed by country singer Jeannie C. Riley .
+</item 2>
+
+<item 3>
+Harper Valley PTA (film)
+Side 1 `` Harper Valley PTA '' -- performed by Jeannie C. Riley `` Dee 's Visit '' ( instrumental ) -- performed by Nelson Riddle `` Mr. Harper '' -- performed
+by Barbara Eden `` Alice 's Place '' ( instrumental ) -- performed by Nelson Riddle `` High School Confidential '' -- performed by Jerry Lee Lewis `` Willie Mae
+'' ( instrumental ) -- performed by Nelson Riddle Side 2 `` Harper Valley PTA '' ( instrumental ) -- performed by Nelson Riddle `` Widow Jones '' -- performed
+by Barbara Eden `` Twin Tune '' ( instrumental ) -- performed by Nelson Riddle `` Ballad of a Teenage Queen '' -- performed by Johnny Cash `` Ice Cream Disco ''
+( instrumental ) -- performed by Nelson Riddle `` Whatever Happened to Charlie Brown '' -- performed by Rita Remington & Carol Channing `` Ending ( Reprise :
+Harper Valley PTA ) '' ( instrumental ) -- performed by Nelson Riddle Television series ( edit ) Main article : Harper Valley PTA ( TV series ) In 1981 , Harper
+Valley PTA was made into a television sitcom ( created by Sherwood Schwartz ) which aired on NBC from January 1981 to May 1982 .
+</item 3>
+
+<item 4>
+Harper Valley PTA (film)
+Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use
+and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 4>
+
+<item 5>
+Harper Valley PTA (film)
+The film grossed over $2 million its opening weekend , $5.8 million in its first three weeks and over $16 million after twelve weeks . The film opened in Los
+Angeles on August 2 , 1978 and in New York City on January 12 , 1979 . Soundtrack ( edit ) Harper Valley PTA : Original Soundtrack Recording Soundtrack album by
+various artists Released June 1978 Recorded Singleton Sound Studios Nashville , Tennessee Genre Soundtrack Length 29 : 50 Label Plantation Records Producer
+Shelby S. Singleton , Jr . Singles from Harper Valley PTA `` Harper Valley PTA ( re-issue ) '' Released : July 1978 In June 1978 , a soundtrack album was
+released on vinyl , cassette and 8 - track tape by Plantation Records . To promote the film 's release and its soundtrack , the title song by Jeannie C. Riley
+was re-issued as a single . The album made its compact disc premiere through Varèse Sarabande on October 27 , 2017 .
+</item 5>
+
+<item 6>
+Harper Valley PTA (film)
+She is terrified when her house is destroyed by pink - painted elephants . Production and release ( edit ) Filming ( edit ) Harper Valley PTA was filmed in
+twenty - seven days from October 3 , 1977 to December 8 , 1977 . It was filmed on location for one week in the town of Lebanon , Ohio and then continued in Los
+Angeles , California . The track meet scene was filmed at Simi Valley High School On October 31 , 1977 , production ceased temporarily when Nanette Fabray was
+knocked to the ground by a spooked elephant while shooting a scene involving pink elephants in the Hancock Park neighborhood of Los Angeles , California ; she
+suffered a severe concussion , bruises and back sprains and was taken to Cedars - Sinai Medical Center where her condition was reported as serious but stable .
+Following her recovery , filming resumed on November 30 . Release ( edit ) Harper Valley PTA opened in six theaters in Lebanon , Cincinnati and Dayton , Ohio on
+May 23 , 1978 in accordance with executive producer Phil Borack 's plan to release the film first in smaller markets , where regional success could encourage
+exhibitors in bigger cities to book the film .
+</item 6>
+
+<item 7>
+Harper Valley PTA (film)
+He is caught in flagrante delicto on film with Willamae Jones . Royce D. Applegate as Dutch , one of two kidnappers who abduct Skeeter Duggan at Flora Simpson -
+Reilly 's orders . J.J. Barry as Tex , the mastermind of the kidnap plot to get Skeeter Duggan out of the way so Flora Simpson - Reilly and her friends could
+commit election fraud . He and his accomplice Dutch are arrested and the two of them rat out Flora and her friends on their scheme . Pitt Herbert as Henry
+Reilly , Flora 's overly dominated husband and grandfather to Edwina and Bettina . Henry is wealthy , but is very weak - willed and is known for acquiescing to
+his wife 's schemes . Arlen Stuart as Bertha Harper , wife of Otis Harper , who gets annoyed by her husband 's continual drinking . She is terrified when her
+house is destroyed by pink - painted elephants .
+</item 7>
+
+<item 8>
+Harper Valley PTA (film)
+He was arrested for indecent exposure after being set up by Stella . Ron Masak as Herbie Maddox , the head bartender at Kelly 's bar , and Stella 's ally
+against Flora and her friends . He has a crush on Stella , and is one of her friends . Clint Howard as Corley , a young delivery person , who works for the
+local florist shop , who brings Stella flowers from Will . Susan Swift as Dee Johnson , Stella 's 14 - year - old daughter , who is threatened with expulsion
+from school if her mother does n't conform to the way the PTA wants her to behave . She has a hand in assisting her mother and Alice with one of their revenge
+schemes . She loses her braces , gets a makeover , and ends up with a boyfriend , Carlyle . Pat Paulsen as Otis Harper , the descendant of the founding family
+of Harper Valley . A PTA member who is allied with Flora and her friends . Has a tendency to drink all the time , which annoys his wife , Bertha . He had a
+stampede of elephants , painted pink , stormed through his house , destroying it .
+</item 8>
+
+<item 9>
+Harper Valley PTA (film)
+The film starred Barbara Eden , Nanette Fabray , Ronny Cox , Louis Nye and Susan Swift , directed by Richard Bennett , and was mainly released to drive - in
+theaters throughout the summer of 1978 . The film has a cult following in fans of the original song . The film 's promotional tagline is : `` The song was
+scandalous . The movie is hilarious ! '' Contents ( hide ) 1 Plot 2 Cast and characters 3 Production and release 3.1 Filming 3.2 Release 4 Soundtrack 5
+Television series 6 References 7 External links Plot ( edit ) Stella Johnson is a beautiful widowed single mother who lives in the town of Harper Valley , Ohio
+. She sells cosmetics door - to - door for the fictitious AngelGlo Cosmetics and is not afraid to enjoy life . Her fourteen - year - old daughter , Dee , is a
+student at Harper Valley Junior High School . After leaving school , Dee brings her mother a letter from the school 's Parent Teacher Association board , which
+is led by the pompous and snobbish Flora Simpson - Reilly .
+</item 9>
+
+<item 10>
+Harper Valley PTA (film)
+Barbara Eden reprised her role as Stella Johnson for the series which lasted two seasons and a total of 30 episodes were produced . References ( edit ) Jump up
+^ St. Petersburg Times Jump up ^ Milwaukee Sentinel : Elephant injures Nanette Fabray Jump up ^ Observer Reporter External links ( edit ) Harper Valley PTA on
+IMDb Harper Valley PTA at the TCM Movie Database Harper Valley PTA at AllMovie Harper Valley PTA at the American Film Institute Catalog Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Harper_Valley_PTA_(film)&oldid=818590841 '' Categories : 1978 films English - language films 1970s comedy films
+American comedy films American films American independent films Feminist films Films about revenge Films adapted into television programs Films based on songs
+Films set in Ohio Films shot in Ohio Films shot in Los Angeles 1978 soundtracks Film soundtracks Hidden categories : Articles with hAudio microformats Album
+infoboxes lacking a cover Music infoboxes with deprecated parameters Talk Contents About Wikipedia Add links This page was last edited on 4 January 2018 , at 12
+: 58 .
+</item 10>
+=== END ITEM id=7dfe897ec1017896 ===
+
+=== ITEM id=92dd5464f06b95f4 ===
+Gold sentences and facts:
+Sentence 0: Spektor wrote and recorded the main title theme song , `` You 've Got Time '' , for the Netflix Original series Orange Is the New Black , which premiered in July 2013 . It was nominated in the Best Song Written for Visual Media category at the 56th Annual Grammy Awards .
+  Fact 0.0: Spektor wrote the main title theme song 'You've Got Time' for the Netflix Original series Orange Is the New Black.
+  Fact 0.1: Spektor recorded the main title theme song 'You've Got Time' for the Netflix Original series Orange Is the New Black.
+  Fact 0.2: Orange Is the New Black premiered in July 2013.
+  Fact 0.3: 'You've Got Time' was nominated in the Best Song Written for Visual Media category at the 56th Annual Grammy Awards.
+Sentence 1: Regina wrote and recorded `` You 've Got Time '' to be the theme song for the Netflix Original Series Orange is the New Black which premiered in 2013 . Spektor was approached by the show 's creator , Jenji Kohan , to create the opening number .
+  Fact 1.0: Regina wrote 'You've Got Time' to be the theme song for the Netflix Original Series Orange is the New Black.
+  Fact 1.1: Regina recorded 'You've Got Time' to be the theme song for the Netflix Original Series Orange is the New Black.
+  Fact 1.2: Orange is the New Black premiered in 2013.
+  Fact 1.3: Spektor was approached by the show's creator, Jenji Kohan, to create the opening number.
+
+Retrieved items:
+<item 1>
+NBC Sunday Night Football
+Singer Pink sang the theme song for the broadcast in 2006 , a reworking of the Joan Jett song `` I Hate Myself for Loving You '' retitled `` Waiting All Day for
+Sunday Night '' . Several alternative versions were used throughout the season , substituting different lyrics when appropriate ( such as `` Waiting All Year
+For Opening Night '' ) . In 2007 , country singer Faith Hill replaced Pink as the singer of the opening theme , and a new arrangement of the Joan Jett song
+coincided with her debut . The Faith Hill intro , in particular , was not without criticism and parody . The intro was lampooned in the October 9 , 2010 episode
+of Saturday Night Live , with host Jane Lynch as Hill ( with Jason Sudeikis as Al Michaels and Bill Hader as Cris Collinsworth ) . In the 30 Rock episode ``
+Season 4 '' , the character of Jenna Maroney ( Jane Krakowski ) sings what appears to be an allusion to the Faith Hill intro for NBC 's fictional Tennis Night
+in America program .
+</item 1>
+
+<item 2>
+Crazy Eyes (character)
+`` Orange Is the New Black Reveals Crazy Eyes ' Tragic Crime '' . ENews . Retrieved 18 September 2017 . Jump up ^ Meltzer , Tom ( December 17 , 2013 ) . `` The
+best TV of 2013 : No 6 -- Orange is the New Black ( Netflix ) : The US prison drama -- Netflix 's most - watched show of the year -- is a binge - watcher 's
+dream : moreish and full of surprises '' . The Guardian . Retrieved October 5 , 2014 . Jump up ^ Jancelewicz , Chris ( July 3 , 2014 ) . `` Orange Is The New
+Black Review : Time Behind Bars Should n't Be This Fun '' . The Huffington Post Canada . Retrieved October 6 , 2014 . Jump up ^ `` Primetime Emmy Awards 2014 :
+The winners list '' . CNN . August 26 , 2014 . Retrieved September 4 , 2014 . Jump up ^ `` The International Press Academy Announces Nominations For The 18th
+Annual Satellite Awards '' . PR Newswire .
+</item 2>
+
+<item 3>
+Graph query row:
+song: You've Got Time
+relationship: CREATED
+connected: Regina Spektor
+</item 3>
+
+<item 4>
+Crazy Eyes (character)
+Deadline.com . Retrieved September 5 , 2014 . Jump up ^ Kohan , Jenji ( writer / creator ) ; Herrmann , Tara ( producer ) ; Burley , Mark ( producer ) ( May 13
+, 2014 ) . Orange Is the New Black : Season 1 -- `` I Was n't Ready '' audio commentary ( Blu - ray ) . Lionsgate . Event occurs at 37 : 00 -- 37 : 30 . Jump up
+^ `` Uzo Aduba '' . Internet Movie Database . Retrieved June 12 , 2015 . Jump up ^ `` Orange is the New Black Season 2 Episode 3 : Hugs Can Be Deceiving '' .
+TV.com . Retrieved September 5 , 2014 . Jump up ^ Potts , Kimberly ( June 18 , 2014 ) . `` The 10 Best ' Orange Is the New Black ' Character Backstories '' .
+Yahoo ! TV . Retrieved September 5 , 2014 . Jump up ^ White , Chelsea F.C. ( October 2 , 2013 ) . `` Spot the difference !
+</item 4>
+
+<item 5>
+Crazy Eyes (character)
+TV.com . Retrieved September 6 , 2014 . Jump up ^ Reed , Alex ( July 22 , 2014 ) . `` ' Orange Is the New Black ' Star Uzo Aduba on ' Crazy Eyes ' : ' People
+Underestimate Her ' ( Video ) '' . The Wrap . Retrieved September 6 , 2014 . Jump up ^ Surette , Tim . `` Orange Is the New Black Season 2 Review , Part 2 (
+Episodes 7 - 13 ) : Fight the Power '' . TV.com . Retrieved September 6 , 2014 . Jump up ^ Surette , Tim . `` Orange Is the New Black Season 2 Review , Part 1 (
+Episodes 1 -- 6 ) : Conflict Over Community '' . TV.com . Retrieved September 6 , 2014 . Jump up ^
+http://www.bustle.com/articles/90452-who-is-crazy-eyes-love-interest-on-orange-is-the-new-black-emily-althaus-character-has Jump up ^ Harnick , Chris ( June 18
+, 2016 ) .
+</item 5>
+
+<item 6>
+Regina Spektor
+Her world tour in support of What We Saw from the Cheap Seats included a performance in Moscow ; Spektor had not yet returned since fleeing with her family in
+1989 . In 2012 , Spektor was christened an official `` Steinway Artist '' ; she plays Steinway & Sons pianos almost exclusively . Spektor wrote and recorded the
+main title theme song , `` You 've Got Time '' , for the Netflix Original series Orange Is the New Black , which premiered in July 2013 . It was nominated in
+the Best Song Written for Visual Media category at the 56th Annual Grammy Awards . 2016 -- present : Remember Us to Life ( edit ) Spektor announced her seventh
+album , Remember Us to Life on July 21 , 2016 through her email newsletter . The album was released on September 30 , 2016 . The first single , `` Bleeding
+Heart '' , was released July 22 , 2016 . The follow - up single , `` Small Bill $ '' , was released August 11 , 2016 .
+</item 6>
+
+<item 7>
+Regina Spektor
+Slash Film . 2007 - 10 - 03 . Jump up ^ `` Music from the hit series , Weeds '' . Showtime . Archived from the original on 2009 - 10 - 02 . Jump up ^ `` How
+Regina Spektor Wrote The `` Orange Is The New Black '' Theme Song `` . BuzzFeed . Jump up ^ `` Regina Spektor - Begin to Hope - New York Magazine Music Review
+'' . Nymag.com. 2006 - 06 - 12 . Retrieved 2015 - 08 - 24 . Jump up ^ Caspar Llewellyn Smith . `` Regina Spektor : ' Art comes from a different place ' '' . the
+Guardian . Retrieved 23 August 2015 . Jump up ^ `` Regina Spektor '' . Facebook . Jump up ^ Michaud , Sarah ( April 1 , 2014 ) . `` Regina Spektor welcomes a
+son '' . People . Retrieved April 2 , 2014 . Jump up ^ `` Regina Spektor : ' I See My Family ... In Everybody ' '' . NPR.
+</item 7>
+
+<item 8>
+Crazy Eyes (character)
+( October 2 , 2013 ) . `` Spot the difference ! Orange Is The New Black star Taylor Schilling brings the real Piper Chapman as her red carpet date '' . Daily
+Mail . Retrieved October 4 , 2014 . Jump up ^ Fitzgerald , Sean ( June 23 , 2014 ) . `` ' Orange is the New Black ' : Meet Crazy Eyes '' . Toronto Sun .
+Retrieved October 23 , 2014 . Jump up ^ Leopold , Todd ( June 6 , 2014 ) . `` ' Orange is the New Black ' : Five things to expect from season 2 '' . CNN .
+Retrieved September 6 , 2014 . Jump up ^ Hooton , Christopher ( June 4 , 2014 ) . `` Orange Is The New Black : Season 1 recap ahead of the new episodes '' . The
+Independent . Retrieved September 6 , 2014 . Jump up ^ Schaefer , Megan ( June 3 , 2014 ) .
+</item 8>
+
+<item 9>
+Crazy Eyes (character)
+Jump up ^ Schaefer , Megan ( June 3 , 2014 ) . `` ' Orange Is The New Black ' Season 1 Recap : Everything To Know Before The Season 2 Premiere '' .
+International Business Times . Retrieved September 6 , 2014 . Jump up ^ Foster , Lewis ( June 19 , 2014 ) . `` Visual Summary : Orange Is The New Black Season 1
+'' . Paste . Retrieved September 6 , 2014 . Jump up ^ O'Sullivan , Erin ( August 14 , 2013 ) . `` Orange Is The New Black : Uzo Aduba ( Suzanne Warren )
+Promoted To Series Regular '' . Access Hollywood . Retrieved September 6 , 2014 . Jump up ^ Henderson , Danielle ( August 16 , 2013 ) . `` Orange Is the New
+Black Episode Nine Recap : We Finally Experience the SHU '' . Vulture . Retrieved September 6 , 2014 . Jump up ^ `` Orange is the New Black Season 1 Episode 9 :
+F * cksgiving : Episode Cast & Crew '' . TV.com .
+</item 9>
+
+<item 10>
+Regina Spektor
+The title of the song `` Do n't Leave Me ( Ne Me Quitte Pas ) '' and the cover of What We Saw from the Cheap Seats was featured on the display of the 5th
+generation iPod Touch in promotional content from Apple in late 2012 . `` Do n't Leave Me ( Ne Me Quitte Pas ) '' was used at the end of the episode `` Five
+Miles From Yetzer Hara '' from the eighth season of Weeds . The Consequence of Sound website takes its name from the Spektor song , `` Consequence of Sounds ''
+. `` All the Rowboats '' was featured on The CW 's Ringer in March 2012 . The song `` Your Honor '' was used in the Season 2 premiere of HBO 's series Girls on
+January 13 , 2013 , and the song `` Laughing With '' was featured on BBC drama The Crash in March 2013 as well as in HBO 's The Leftovers in November 2015 .
+Regina wrote and recorded `` You 've Got Time '' to be the theme song for the Netflix Original Series Orange is the New Black which premiered in 2013 .
+</item 10>
+=== END ITEM id=92dd5464f06b95f4 ===

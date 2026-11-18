@@ -1,0 +1,2 @@
+{"dataset": "natural_questions", "method": "rag", "rep": "2", "shard": 0, "shards": 2, "exit": 0, "run_dir": "/data/workspace/RecRAG/runs/final500/natural_questions/rag/20261114T012731681659Z", "log": "/data/workspace/RecRAG/runs/final500/jobs/nq_rag_r2/natural_questions_rag_r2_s0.log"}
+{"dataset": "natural_questions", "method": "rag", "rep": "2", "shard": 1, "shards": 2, "exit": 0, "run_dir": "/data/workspace/RecRAG/runs/final500/natural_questions/rag/20261114T012732168874Z", "log": "/data/workspace/RecRAG/runs/final500/jobs/nq_rag_r2/natural_questions_rag_r2_s1.log"}

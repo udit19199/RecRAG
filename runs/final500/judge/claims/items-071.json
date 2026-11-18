@@ -1,0 +1,79 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5753281635295092532",
+   "sentences": [
+    "Mac OS X , OS X , and macOS version information Version Codename Darwin version Processor support Application support Kernel Date announced Release date Most recent version Rhapsody Developer Release Grail1Z4 / Titan1U 32 - bit PowerPC 32 - bit PowerPC 32 - bit Unknown August 31 , 1997 DR2 ( May 14 , 1998 ) Mac OS X Server 1.0 Hera Unknown March 16 , 1999 1.2 v3 ( October 27 , 2000 ) Mac OS X Developer Preview Unknown May 11 , 1998 March 16 , 1999 DP4 ( April 5 , 2000 ) Mac OS X Public Beta Kodiak 1.2. 1 Unknown September 13 , 2000 N / A Mac OS X 10.0 Cheetah 1.3. 1 Unknown March 24 , 2001 10.0. 4 ( June 22 , 2001 ) Mac OS X 10.1 Puma 1.4. 1 / 5 July 18 , 2001 September 25 , 2001 10.1. 5 ( June 6 , 2002 ) Mac OS X 10.2 Jaguar 6 32 / 64 - bit PowerPC May 6 , 2002 August 24 , 2002 10.2. 8 ( October 3 , 2003 ) Mac OS X 10.3 Panther 7 32 / 64 - bit PowerPC June 23 , 2003 October 24 , 2003 10.3. 9 ( April 15 , 2005 ) Mac OS X 10.4 Tiger 8 32 / 64 - bit PowerPC and Intel 32 / 64 - bit PowerPC and Intel May 4 , 2004 April 29 , 2005 10.4. 11 ( November 14 , 2007 ) Mac OS X 10.5 Leopard 9 32 / 64 - bit PowerPC and Intel June 26 , 2006 October 26 , 2007 10.5. 8 ( August 5 , 2009 ) Mac OS X 10.6 Snow Leopard 10 32 / 64 - bit Intel 32 / 64 - bit Intel 32 - bit PowerPC 32 / 64 - bit June 9 , 2008 August 28 , 2009 10.6. 8 v1. 1 ( July 25 , 2011 ) Mac OS X 10.7 Lion 11 64 - bit Intel 32 / 64 - bit Intel October 20 , 2010 July 20 , 2011 10.7. 5 ( September 19 , 2012 ) OS X 10.8 Mountain Lion 12 64 - bit February 16 , 2012 July 25 , 2012 10.8. 5 ( 12F45 ) ( October 3 , 2013 ) OS X 10.9 Mavericks 13 June 10 , 2013 October 22 , 2013 10.9. 5 ( 13F1112 ) ( September 18 , 2014 ) OS X 10.10 Yosemite 14 June 2 , 2014 October 16 , 2014 10.10. 5 ( 14F27 ) ( August 13 , 2015 ) OS X 10.11 El Capitan 15 June 8 , 2015 September 30 , 2015 10.11. 6 ( 15G31 ) ( July 18 , 2016 ) macOS 10.12 Sierra 16 June 13 , 2016 September 20 , 2016 10.12. 6 ( 16G29 ) ( July 19 , 2017 ) macOS 10.13 High Sierra 17 June 5 , 2017 September 25 , 2017 10.13. 4 ( 17E199 ) ( March 29 , 2018 )",
+    "macOS Screenshot of the macOS High Sierra desktop Developer Apple , Inc . Written in C++ Objective - C Swift OS family Macintosh , Unix Working state Current Source model Closed source ( with open source components ) Initial release March 24 , 2001 ; 17 years ago ( 2001 - 03 - 24 ) Latest release 10.13. 4 ( 17E202 ) ( April 24 , 2018 ; 2 days ago ( 2018 - 04 - 24 ) ) ( ± ) Latest preview 10.13. 5 beta 2 ( 17B45c ) ( April 17 , 2018 ; 9 days ago ( 2018 - 04 - 17 ) ) ( ± ) Marketing target Personal computing Available in 34 languages List of languages As of macOS Sierra : Arabic , Catalan , Croatian , Chinese ( Simplified ) , Chinese ( Traditional ) , Czech , Danish , Dutch , English , Finnish , French , German , Greek , Hebrew , Hungarian , Indonesian , Italian , Japanese , Korean , Malay , Norwegian , Polish , Portuguese ( Brazil ) , Portuguese ( Portugal ) , Romanian , Russian , Slovak , Spanish ( Mexico ) , Spanish ( Spain ) , Swedish , Thai , Turkish , Ukrainian , Vietnamese Update method Mac App Store ( 10.8 + ) Software Update ( 10.0 -- 10.7 ) Platforms x86 - 64 ( 10.4. 7 - present ) IA - 32 ( 10.4. 4 -- 10.6. 8 ; discontinued ) PowerPC ( 10.0 -- 10.5. 8 ; discontinued ) Kernel type Hybrid ( XNU ) Default user interface Graphical ( Aqua ) License Commercial software , proprietary software Preceded by Classic Mac OS Official website www.apple.com/macos Support status Supported",
+    "macOS is the second major series of Macintosh operating systems . The first is colloquially called the `` classic '' Mac OS , which was introduced in 1984 , and the final release of which was Mac OS 9 in 1999 . The first desktop version , Mac OS X 10.0 , was released in March 2001 , with its first update , 10.1 , arriving later that year . After this , Apple began naming its releases after big cats , which lasted until OS X 10.8 Mountain Lion . Since OS X 10.9 Mavericks , releases have been named after landmarks in California . Apple shortened the name to `` OS X '' in 2012 and then changed it to `` macOS '' in 2016 , adopting the nomenclature that it uses for their other operating systems , iOS , watchOS , and tvOS . The latest version is macOS High Sierra , which was publicly released in September 2017 ."
+   ]
+  },
+  {
+   "id": "191186237312063235",
+   "sentences": [
+    "Operating System Version ( s ) Location Unix , Unix - like , POSIX / etc / hosts Microsoft Windows 3.1 % WinDir % \\ HOSTS 95 , 98 , ME % WinDir % \\ hosts NT , 2000 , XP , 2003 , Vista , 2008 , 7 , 2012 , 8 , 10 % SystemRoot % \\ System32 \\ drivers \\ etc \\ hosts Windows Mobile , Windows Phone Registry key under HKEY_LOCAL_MACHINE \\ Comm \\ Tcpip \\ Hosts Apple Macintosh 9 and earlier Preferences or System folder Mac OS X 10.0 -- 10.1. 5 ( Added through NetInfo or niload ) Mac OS X 10.2 and newer / etc / hosts ( a symbolic link to / private / etc / hosts ) Novell NetWare SYS : etc \\ hosts OS / 2 & eComStation `` bootdrive '' : \\ mptn \\ etc \\ Symbian Symbian OS 6.1 -- 9.0 C : \\ system \\ data \\ hosts Symbian OS 9.1 + C : \\ private \\ 10000882 \\ hosts MorphOS NetStack ENVARC : sys / net / hosts AmigaOS < 4 AmiTCP : db / hosts DEVS : Internet / hosts AROS ENVARC : AROSTCP / db / hosts Android / etc / hosts ( a symbolic link to / system / etc / hosts ) iOS iOS 2.0 and newer / etc / hosts ( a symbolic link to / private / etc / hosts ) TOPS - 20 < SYSTEM > HOSTS. TXT Plan 9 / lib / ndb / hosts BeOS / boot / beos / etc / hosts Haiku / boot / common / settings / network / hosts OpenVMS UCX UCX $ HOST TCPware TCPIP $ HOST RISC OS 3.7 , 5 ! Boot. Resources. ! Internet. files. Hosts later boot sequence ! Boot. Choices. Hardware. Disabled. Internet. Files. Hosts"
+   ]
+  },
+  {
+   "id": "multihop-rag-1704",
+   "sentences": [
+    "“The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment,” Goodyear SVP of global operations and CTO Chris Helsel says.",
+    "In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."
+   ]
+  },
+  {
+   "id": "5ac514d05542994611c8b372",
+   "sentences": [
+    " One nunatak was first roughly mapped and named \"Moltke Nunatak\" by the Second German Antarctic Expedition of 1911–12 under Wilhelm Filchner.",
+    " He named it for General Helmuth von Moltke, Chief of the German General Staff and Secretary of State for Home Affairs.",
+    "Helmuth Johann Ludwig von Moltke (] ; 23 May 1848 – 18 June 1916), also known as Moltke the Younger, was a nephew of \"Generalfeldmarschall\" (Field Marshal) Helmuth Karl Bernhard von Moltke and served as the Chief of the German General Staff from 1906 to 1914."
+   ]
+  },
+  {
+   "id": "5a7dedef5542995f4f40231a",
+   "sentences": [
+    "Chalk and Cheese was a short lived sitcom television show, featuring Michael Crawford and Robin Hawdon.",
+    "Michael Patrick Smith, {'1': \", '2': \", '3': \", '4': \"} (born 19 January 1942), known as Michael Crawford, is an English actor, comedian and singer."
+   ]
+  },
+  {
+   "id": "5a7bb52355429927d897c01a",
+   "sentences": [
+    "\"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011).",
+    " The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth.",
+    "What the Water Gave Me (\"Lo que el agua me dio\" in Spanish) is an oil painting by Frida Kahlo that was completed in 1938."
+   ]
+  },
+  {
+   "id": "3349644992728619890",
+   "sentences": [
+    "The video takes place with the band and the album 's two protagonists Christian ( Josh Boswell ) and Gloria ( Lisa Stelly ) taking refuge in a white room after robbing a bank . The police arrive outside the room and open fire through the window , to the couple 's terror . As bullets rain through the room , the band continues playing . Gloria picks up the phone and throws it into a fish tank . As the bullets continue to fly and tear apart the room , Christian and Gloria become calm and walk toward each other , unharmed by the bullets . They embrace and kiss as the room goes dark , recreating the 21st Century Breakdown cover art . As the song ends , the room lights up again , and they are still uninjured . After the room lights up , there are various shots of destruction in the room , including a shot of some of the writing on the walls . The writing includes an excerpt of the lyrics to `` 21 Guns '' , as well as those of the song `` See The Light '' which also appears on `` 21st Century Breakdown '' . The video may represent the meaning of the song in the 21st Century Breakdown story ."
+   ]
+  },
+  {
+   "id": "5abb30755542996cc5e49fd8",
+   "sentences": [
+    "The presidency of Ronald Reagan began on January 20, 1981, when Ronald Reagan was inaugurated as President of the United States, and ended on January 20, 1989.",
+    "George Herbert Walker Bush (born June 12, 1924) is an American politician who was the 41st President of the United States from 1989 to 1993 and the 43rd Vice President of the United States from 1981 to 1989."
+   ]
+  },
+  {
+   "id": "5a83b1e75542990548d0b220",
+   "sentences": [
+    "Christopher Edward Nolan ( ; born 30 July 1970) is an English-American film director, producer, and screenwriter.",
+    "Paul Joseph Schrader (born July 22, 1946) is an American screenwriter, film director, and film critic."
+   ]
+  },
+  {
+   "id": "multihop-rag-1634",
+   "sentences": [
+    "But it was ChatGPT’s explosion into public consciousness that thrust Altman into the spotlight as a face of generative AI — technology that can produce novel imagery, passages of text and other media.",
+    "In the year since Altman catapulted ChatGPT to global fame, he has become Silicon Valley’s sought-after voice on the promise and potential dangers of artificial intelligence and his sudden and mostly unexplained exit brought uncertainty to the industry’s future.",
+    "More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know.",
+    "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."
+   ]
+  }
+ ]
+}

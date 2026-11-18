@@ -1,0 +1,10 @@
+{
+ "dataset": "multihop_rag",
+ "rep": "2",
+ "model": "gpt-6-luna",
+ "reasoning_effort": "medium",
+ "count": 500,
+ "failed": 0,
+ "exact_match": 0.598,
+ "total_cost_usd": 0.1000218
+}

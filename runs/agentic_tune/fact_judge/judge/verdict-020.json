@@ -1,0 +1,21 @@
+[
+  {"id": "426eee7bc052093a", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "At the time, the music video for the song – which featured a woman with blonde hair - sparked rumours that he and Spears broke up because she allegedly cheated on him."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "At the time, the music video for the song – which featured a woman with blonde hair - sparked rumours that he and Spears broke up because she allegedly cheated on him."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "At the time, the music video for the song – which featured a woman with blonde hair - sparked rumours that he and Spears broke up because she allegedly cheated on him."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Also, another thing that hints towards their breakup is Danis’s first press conference for the Logan Paul fight."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Also, another thing that hints towards their breakup is Danis’s first press conference for the Logan Paul fight."}]}
+  ]},
+  {"id": "62bbfdf024fbfa92", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]}
+]

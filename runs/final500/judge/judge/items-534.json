@@ -1,0 +1,448 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "bd6a3306e0b071f3",
+   "gold": [
+    {
+     "sentence": "Remember the Titans is a 2000 American sports film produced by Jerry Bruckheimer and directed by Boaz Yakin.",
+     "facts": {
+      "0.0": "Remember the Titans is a 2000 American sports film",
+      "0.1": "Remember the Titans was produced by Jerry Bruckheimer",
+      "0.2": "Remember the Titans was directed by Boaz Yakin"
+     }
+    },
+    {
+     "sentence": "My Favorite Martian is a 1999 American science fiction comedy film starring Christopher Lloyd, Jeff Daniels, Daryl Hannah, Elizabeth Hurley, Wallace Shawn and Ray Walston, based on the 1960s television series of the same name in which Walston starred.",
+     "facts": {
+      "1.0": "My Favorite Martian is a 1999 American science fiction comedy film",
+      "1.1": "My Favorite Martian stars Christopher Lloyd",
+      "1.2": "My Favorite Martian stars Jeff Daniels",
+      "1.3": "My Favorite Martian stars Daryl Hannah",
+      "1.4": "My Favorite Martian stars Elizabeth Hurley",
+      "1.5": "My Favorite Martian stars Wallace Shawn",
+      "1.6": "My Favorite Martian stars Ray Walston",
+      "1.7": "My Favorite Martian is based on the 1960s television series of the same name",
+      "1.8": "Ray Walston starred in the 1960s television series My Favorite Martian"
+     }
+    },
+    {
+     "sentence": " The film grossed $36.8 million domestically against a budget of $65 million.",
+     "facts": {
+      "2.0": "The film (My Favorite Martian) grossed $36.8 million domestically",
+      "2.1": "The film (My Favorite Martian) had a budget of $65 million"
+     }
+    }
+   ],
+   "items": [
+    "Naugle v. Philip Morris USA, Inc.\nNaugle v. Philip Morris was a landmark 2009 court case in which a jury awarded the plaintiff Lucinda Naugle $300 million.\n\n The award included $56.6 million in compensatory damages for medical expenses and $244 million in punitive damages.\n\n At the time, the verdict was the largest award given to an individual suing a tobacco company, and was featured on NBC, ABC, 60 Minutes, and \"The New York Times\".\n\n In 2012, the verdict amount for punitive damages was reduced to $36.8 million.",
+    "McFarland, USA\nMcFarland, USA (also known as McFarland) is a 2015 American sports drama film directed by Niki Caro, produced by Mark Ciardi and Gordon Gray, written by Christopher Cleveland, Bettina Gilois and Grant Thompson with music composed by Antônio Pinto.\n\n The film was co-produced by Walt Disney Pictures and Mayhem Pictures.\n\n Based on the true story of a 1987 cross country team from a mainly Latino high school in McFarland, California, the film stars Kevin Costner as Jim White, the school's coach, who leads the team to win a state championship.\n\n The film also stars Maria Bello and Morgan Saylor.",
+    "Managed Money\nManaged Money is a 1934 short comedy film directed by Charles Lamont.\n\n The film stars Frank Coghlan Jr. and Shirley Temple.\n\n It was also known as \"Frolics of Youth\" and \"Measured Money\".\n\n This was the second film in which Temple starred as Mary Lou.\n\n The film tells the story of Sonny and Sid prospecting for gold to pay for their military academy education.\n\n Sonny's sister, Mary Lou stows away in the back of their car.\n\n Eventually, they meet an inventor who helps them financially.",
+    "Honey, I Blew Up the Kid\nHoney, I Blew Up the Kid is a 1992 American comedy science fiction film and the sequel to the 1989 film \"Honey, I Shrunk the Kids\".\n\n Directed by Randal Kleiser and released by Walt Disney Pictures, the film stars Rick Moranis, Marcia Strassman, Robert Oliveri and Amy O'Neill, who reprise their roles as Wayne, Diane, Nick, and Amy Szalinski respectively, as well as newcomer Keri Russell as Mandy Park, Nick's love interest and babysitter of Adam, the Szalinskis' new two-year-old son, whose accidental exposure to Wayne's new industrial-sized growth machine causes him to gradually grow to enormous size.\n\n Made only three years after \"Honey, I Shrunk the Kids\", this film is set five years after the events depicted in the previous film.\n\n It was filmed in 1991.",
+    "Underdog (film)\nUnderdog is a 2007 American family superhero comedy film based on the 1960s cartoon series of the same name.\n\n Directed by Frederik Du Chau and written by Joe Piscatella, Adam Rifkin, and Craig A. Williams, the film stars Jim Belushi, Peter Dinklage, John Slattery, and Patrick Warburton with the voice talents of Jason Lee, Amy Adams, and Brad Garrett.\n\n Unlike the TV series, the Underdog character is portrayed as a regular dog rather than an anthropomorphic one.\n\n Underdog, voiced by Jason Lee, was played by a lemon beagle named Leo sporting a red sweater and a blue cape.\n\n The film grossed $65.3 million worldwide.",
+    "Tom Cruise filmography\nTom Cruise is an American actor and producer who made his film debut with a minor role in the 1981 romantic drama \"Endless Love\".\n\n Two years later he made his breakthrough by starring in the romantic comedy \"Risky Business\" (1983), which garnered Cruise his first nomination for the Golden Globe Award for Best Actor – Motion Picture Musical or Comedy.\n\n In 1986, Cruise played a fighter pilot in the Tony Scott-directed action drama \"Top Gun\" (the highest-grossing film that year), and also starred opposite Paul Newman in the Martin Scorsese-directed drama \"The Color of Money\".\n\n Two years later he played opposite Dustin Hoffman in the Academy Award for Best Picture-winning drama \"Rain Man\" (1988), and also appeared in the Golden Raspberry Award for Worst Picture-winning romantic drama \"Cocktail\" (1988).\n\n In doing so Cruise became the first and only person as of 2014 to star in a Best Picture Oscar winner and a Worst Picture Razzie winner in the same year.",
+    "My Favorite Martian (film)\nMy Favorite Martian is a 1999 American science fiction comedy film starring Christopher Lloyd, Jeff Daniels, Daryl Hannah, Elizabeth Hurley, Wallace Shawn and Ray Walston, based on the 1960s television series of the same name in which Walston starred.\n\n It was directed by Donald Petrie and written by Sherri Stoner and Deanna Oliver, based on the television series created by John L. Greene.\n\n Creatures were created by Amalgamated Dynamics from designs by Jordu Schell.\n\n The film grossed $36.8 million domestically against a budget of $65 million.",
+    "Remember the Titans\nRemember the Titans is a 2000 American sports film produced by Jerry Bruckheimer and directed by Boaz Yakin.\n\n The screenplay, written by Gregory Allen Howard, is based on the true story of African-American coach Herman Boone, portrayed by Denzel Washington, and his attempt to integrate the T. C. Williams High School football team in Alexandria, Virginia, in 1971.\n\n Will Patton portrays Bill Yoast, Boone's assistant coach.\n\n Real-life athletes Gerry Bertier and Julius Campbell are portrayed by Ryan Hurst and Wood Harris, respectively.",
+    "Titan A.E.\nTitan A.E. is a 2000 American animated science fiction film directed by Don Bluth and Gary Goldman.\n\n Its title refers to the spacecraft central to the plot, with \"A.E.\" meaning \"After Earth\".\n\n It stars Matt Damon, Bill Pullman, John Leguizamo, Nathan Lane, Janeane Garofalo and Drew Barrymore.\n\n The film's animation technique combines traditional hand-drawn animation and extensive use of computer generated imagery.\n\n Its working title was \"Planet Ice\".\n\n It was theatrically released on June 16, 2000, by 20th Century Fox and was the final film for Fox Animation Studios.\n\n The film grossed $36.8 million on a $75–$90 million budget, making a $100-million loss for the studio.",
+    "Million Dollar Arm\nMillion Dollar Arm is a 2014 American biographical sports drama film directed by Craig Gillespie and produced by Walt Disney Pictures from a screenplay written by Thomas McCarthy.\n\n The film is based on the true story of baseball pitchers Rinku Singh and Dinesh Patel who were discovered by sports agent J. B. Bernstein after winning a reality show competition."
+   ]
+  },
+  {
+   "id": "9d7292784b30b5d4",
+   "gold": [
+    {
+     "sentence": "Ex parte Young, 209 U.S. 123 (1908) , is a United States Supreme Court case that allows suits in federal courts against officials acting on behalf of states of the union to proceed despite the State's Sovereign immunity, when the State acted unconstitutionally.",
+     "facts": {
+      "0.0": "Ex parte Young is a United States Supreme Court case.",
+      "0.1": "Ex parte Young is cited as 209 U.S. 123.",
+      "0.2": "Ex parte Young is dated 1908.",
+      "0.3": "Ex parte Young allows suits in federal courts against officials acting on behalf of states of the union.",
+      "0.4": "Ex parte Young allows such suits to proceed despite the state's sovereign immunity.",
+      "0.5": "Ex parte Young allows such suits when the state acted unconstitutionally."
+     }
+    },
+    {
+     "sentence": " The case was a test of the separation of church and state with respect to education.",
+     "facts": {
+      "1.0": "The Ex parte Young case was a test of the separation of church and state.",
+      "1.1": "The test of church and state separation in the Ex parte Young case concerned education."
+     }
+    }
+   ],
+   "items": [
+    "The material surveys landmark rulings on immigration, constitutional rights, education, sovereignty, wartime powers, and product liability. Highlights include Hong Kong’s 1999 right-of-abode ruling; U.S. school cases on religion, speech, privacy, disability services, and searches; limits on state immunity and congressional power; Japanese American detention cases; and *Dred Scott*. It also covers historic criminal-law caseloads, church abuse investigations, tribal consultation, citizen juries, and consumer expectations in product-def",
+    "Chy Lung v. Freeman\nChy Lung v. Freeman, 92 U.S. 275 (1876) was a United States Supreme Court case where the Supreme Court ruled that the power to set rules surrounding immigration, and to manage foreign relations, rested with the United States Federal Government, rather than with the states.\n\n The case has been cited in other Supreme Court cases related to government authority on matters relating to immigration policy and immigration enforcement, most recently in \"Arizona v. United States\" (2012).",
+    "Abington School District v. Schempp\nAbington School District v. Schempp, 374 U.S. 203 (1963) , was a United States Supreme Court case in which the Court decided 8–1 in favor of the respondent, Edward Schempp, and declared school-sponsored Bible reading in public schools in the United States to be unconstitutional.\n\n The Chief Justice of the Supreme Court during this case was Earl Warren.",
+    "Criminal law in the Chase Court\nThe Chase Court (1864–1873) issued thirty-five opinions in criminal cases over nine years, at a significantly higher rate than the Marshall Court or Taney Court before it.\n\n Notable such cases include \"Ex parte Milligan\" (1866), \"Pervear v. Massachusetts\" (1866), \"Ex parte McCardle\" (1867, 1869), \"Ex parte Yerger\" (1868), and \"United States v. Kirby\" (1868).",
+    "Seminole Tribe of Florida v. Florida\nSeminole Tribe of Florida v. Florida, 517 U.S. 44 (1996) , was a United States Supreme Court case which held that Article One of the U.S. Constitution did not give the United States Congress the power to abrogate the sovereign immunity of the states that is further protected under the Eleventh Amendment.\n\n Such abrogation is permitted where it is necessary to enforce the rights of citizens guaranteed under the Fourteenth Amendment as per \"Fitzpatrick v. Bitzer\" 427 U.S. 445 (1976).\n\n The case also held that the doctrine of \"Ex parte Young\", 209 U.S. 123 (1908), which allows state officials to be sued in their official capacity for prospective injunctive relief, was inapplicable under these circumstances, because any remedy was limited to the one that Congress had provided.",
+    "Ex parte Young\nEx parte Young, 209 U.S. 123 (1908) , is a United States Supreme Court case that allows suits in federal courts against officials acting on behalf of states of the union to proceed despite the State's Sovereign immunity, when the State acted unconstitutionally.",
+    "Duncan v. Kahanamoku\nDuncan v. Kahanamoku, 327 U.S. 304 (1946), was a decision by the United States Supreme Court.\n\n It is often associated with the Japanese exclusion cases (\"Hirabayashi v. United States\", \"Korematsu v. United States\" and \"Ex parte Endo\") because it involved wartime curtailment of fundamental civil liberties under the aegis of military authority, though in this case neither the plaintiff nor the nominal defendant were Japanese.",
+    "Criminal law in the Waite Court\nNotable cases include \"United States v. Cruikshank\" (1875), \"United States v. Reese\" (1875), \"Reynolds v. United States\" (1878), \"Wilkerson v. Utah\" (1879), the \"Trade-Mark Cases\" (1879), \"Strauder v. West Virginia\" (1880), \"Pace v. Alabama\" (1883), \"United States v. Harris\" (1883), \"Ex parte Crow Dog\" (1883), \"Hurtado v. California\" (1884), \"Clawson v. United States\" (1885), \"Yick Wo v. Hopkins\" (1886), \"United States v. Kagama\" (1886), \"Ker v. Illinois\" (1886), and \"Mugler v. Kansas\" (1887).",
+    "McCollum v. Board of Education\nMcCollum v. Board of Education, 333 U.S. 203 (1948), was a landmark 1948 United States Supreme Court case related to the power of a state to use its tax-supported public school system to aid religious instruction.\n\n The case was a test of the separation of church and state with respect to education.",
+    "Owasso Independent School District v. Falvo\nOwasso Independent School District v. Falvo, 534 U.S. 426 (2002) , was a case in which the United States Supreme Court held in favor of the school district that students scoring each other's tests and calling out the grades do not violate the Family Educational Rights and Privacy Act of 1974 (FERPA).\n\n Justice Kennedy wrote the opinion for the unanimous court.\n\n Justice Scalia wrote a concurring opinion in which he agreed with the ruling, but took issue with parts of Kennedy's opinion."
+   ]
+  },
+  {
+   "id": "26e47504792c7da5",
+   "gold": [
+    {
+     "sentence": " The film stars Juno Temple, Julia Garner, Alessandro Nivola, Maggie Siff, Olivia Luccardi and Philip Ettinger.",
+     "facts": {
+      "0.0": "The film stars Juno Temple.",
+      "0.1": "The film stars Julia Garner.",
+      "0.2": "The film stars Alessandro Nivola.",
+      "0.3": "The film stars Maggie Siff.",
+      "0.4": "The film stars Olivia Luccardi.",
+      "0.5": "The film stars Philip Ettinger."
+     }
+    },
+    {
+     "sentence": " She has appeared in films such as \" Black Mass\", \"The Other Boleyn Girl\", \"Wild Child\", \"Atonement\", \"Maleficent\", \"The Three Musketeers\" and \"The Dark Knight Rises\".",
+     "facts": {
+      "1.0": "The actress has appeared in the film Black Mass.",
+      "1.1": "The actress has appeared in the film The Other Boleyn Girl.",
+      "1.2": "The actress has appeared in the film Wild Child.",
+      "1.3": "The actress has appeared in the film Atonement.",
+      "1.4": "The actress has appeared in the film Maleficent.",
+      "1.5": "The actress has appeared in the film The Three Musketeers.",
+      "1.6": "The actress has appeared in the film The Dark Knight Rises."
+     }
+    }
+   ],
+   "items": [
+    "Magic Magic (2013 film)\nMagic Magic is a 2013 American-Chilean psychological thriller film written and directed by Sebastián Silva and starring Juno Temple, Emily Browning, Michael Cera, and Catalina Sandino Moreno.",
+    "Wonder Wheel (film)\nWonder Wheel is an upcoming American drama film written and directed by Woody Allen.\n\n It stars Jim Belushi, Juno Temple, Justin Timberlake and Kate Winslet.\n\n The film is set in a late 1950s amusement park at Coney Island.",
+    "Small Apartments\nSmall Apartments is a 2012 American comedy film directed by Jonas Åkerlund.\n\n It tells the story of Franklin Franklin, played by Matt Lucas, who by mistake kills his landlord, Mr. Olivetti, played by Peter Stormare.\n\n The cast co-stars Dolph Lundgren, Johnny Knoxville, James Caan, Billy Crystal, Juno Temple, Rebel Wilson, Saffron Burrows and Amanda Plummer.\n\n The screenplay was written by Chris Millis and adapted from his own novella.\n\n The film premiered at the South by Southwest Film Festival on March 10, 2012.",
+    "Dirty Girl (2010 film)\nDirty Girl is a 2010 American coming of age comedy-drama film written and directed by Abe Sylvia.\n\n It stars Juno Temple, Milla Jovovich and William H. Macy.\n\n It premiered at the 2010 Toronto International Film Festival on September 12, 2010.\n\n It was distributed theatrically by The Weinstein Company on October 7, 2011.",
+    "Cracks (film)\nCracks is a 2009 independent drama psychological thriller film starring Eva Green, James McGovern, Juno Temple, María Valverde, and Imogen Poots, which was released theatrically in the UK and Ireland on 4 December 2009.\n\n In the United States it was released by IFC Films on 18 March 2011, and premiered on Showtime in late 2011.",
+    "Juno Temple\nJuno Temple (born 21 July 1989) is an English actress.\n\n She has appeared in films such as \" Black Mass\", \"The Other Boleyn Girl\", \"Wild Child\", \"Atonement\", \"Maleficent\", \"The Three Musketeers\" and \"The Dark Knight Rises\".\n\n She also had a starring role in the HBO period drama series \"Vinyl\".",
+    "Lovelace (film)\nLovelace is a 2013 American biographical drama film about porn actress Linda Boreman, better known as Linda Lovelace, star of \"Deep Throat\", a seminal 1972 film at the forefront of the Golden Age of Porn.\n\n \"Lovelace\" covers her life from age 20 to 32.\n\n Directed by Rob Epstein and Jeffrey Friedman, the film was written by Andy Bellin and stars Amanda Seyfried, Peter Sarsgaard, Sharon Stone, Adam Brody, James Franco, Chloë Sevigny, and Juno Temple.\n\n The film had its world premiere on January 22, 2013, at the 2013 Sundance Film Festival and opened in a U.S. limited release on August 9, 2013.",
+    "Kathryn Drysdale\nKathryn Drysdale (born December 1981) is an English actress known for her role as Grace Shelley in The West End show \"The Ruling Class\" opposite James Mcavoy, as Taylor in the movie \"St Trinian's\", Rhoda Swartz in Mira Nair's Vanity Fair, and Louise Brooks in the BBC comedy series \"Two Pints of Lager and a Packet of Crisps\" from 2001 until her departure from the show in 2009.\n\n She has also starred in the fourth series of the ITV sitcom \"Benidorm\" and as Brownwell in William Boyd's award-winning \"Any Human Heart\" opposite Jim Broadbent.\n\n She previously worked with Broadbent on Mira Nair's feature adaptation of William Thackery's \"Vanity Fair\" starring Reese Witherspoon.\n\n She played the role of mixed-race heiress Rhoda Swartz.\n\n She is also known for her role as Lizzie in the drama series \"Tripping Over\" by Mike Bullen.\n\n She appeared in \"Doctor Who\" as Bliss in the episode \"Love & Monsters\".\n\n She currently plays Meghan Markle in season 2 of \"The Windsors\".",
+    "Jack &amp; Diane (film)\nJack & Diane is a 2012 American romantic horror film written and directed by Bradley Rust Gray, and starring Riley Keough and Juno Temple.\n\n Olivia Thirlby and Ellen Page were originally cast for the lead roles in 2008 before the project was postponed.",
+    "One Percent More Humid\nOne Percent More Humid is a 2017 American drama film written and directed by Liz W. Garcia.\n\n The film stars Juno Temple, Julia Garner, Alessandro Nivola, Maggie Siff, Olivia Luccardi and Philip Ettinger."
+   ]
+  },
+  {
+   "id": "4b1b6ce7da12bd59",
+   "gold": [
+    {
+     "sentence": " It is an annual event hosted by the Department of Urology at the University of Virginia, and the Charlottesville Track Club.",
+     "facts": {
+      "0.0": "The event is an annual event.",
+      "0.1": "The event is hosted by the Department of Urology at the University of Virginia.",
+      "0.2": "The event is hosted by the Charlottesville Track Club."
+     }
+    },
+    {
+     "sentence": "Panera Bread Company is an American chain of bakery-café fast casual restaurants in the United States and Canada.",
+     "facts": {
+      "1.0": "Panera Bread Company is an American chain.",
+      "1.1": "Panera Bread Company operates bakery-café fast casual restaurants.",
+      "1.2": "Panera Bread Company's restaurants are in the United States.",
+      "1.3": "Panera Bread Company's restaurants are in Canada."
+     }
+    }
+   ],
+   "items": [
+    "Team Hole in the Wall\nTeam Hole in the Wall is an athletic fundraising initiative managed by the Hole in the Wall Gang Camp.\n\n Amateur athletes join up to raise a specified amount of funds and receive entrance to a marathon, bike ride or other athletic event in support of seriously ill children served by The Hole in the Wall Gang Camp or one of its associated camps around the world.\n\n Established in 2005, Team Hole in the Wall offers entrance into more than two dozen marathons and cycling events, including the New York City Marathon, Boston Marathon and AngelRide cycling event in Connecticut.\n\n New Canaan resident and Newman's Own Vice President of Marketing Michael “Mike” Havard ran in the ING New York City Marathon prior to 2004, but in that year he decided to use his participation to raise funds for The Hole in the Wall Gang Camp, raising nearly $40,000.\n\n The next year, he served as captain of the first Team Hole in the Wall team of 40 runners, raising $150,000.\n\n The number of Team Hole in the Wall members and events has risen each year since.\n\n In 2010, more than 1,800 Team Hole in the Wall members are expected to participate in 20 athletic events.",
+    "Terry Baker\nTerry Wayne Baker (born May 5, 1941) is a former American football and basketball player.\n\n He played college football and college basketball at the Oregon State University.\n\n He played as a quarterback for the Oregon State Beavers football team from 1960 to 1962, winning the Heisman Trophy as senior.\n\n In the spring of his senior year, he played in the Final Four of the 1963 NCAA Men's Division I Basketball Tournament with the Oregon State Beavers men's basketball team.\n\n To date, he is the only athlete to win a Heisman Trophy and play in the Final Four.\n\n Baker was the first overall pick in the 1963 NFL draft and played with the Los Angeles Rams of the National Football League (NFL) from 1963 to 1965.\n\n He then played for one season in the Canadian Football League (CFL) with the Edmonton Eskimos, in 1966.\n\n Baker was inducted into the College Football Hall of Fame in 1982.",
+    "List of fast food restaurant chains\nThe following is a list of notable current and former fast food restaurant chains, as distinct from fast casual restaurants (see List of casual dining restaurant chains), coffeehouses (see List of coffeehouse chains), ice cream parlors (see List of ice cream parlor chains), and pizzerias (see List of pizza chains).",
+    "Bill Steers Men's 4-Miler\nThe Bill Steers Men's 4-Miler (formerly Charlottesville Men's Four Miler) is the only all men's run in the Charlottesville area.\n\n The race was rededicated as a tribute to William D. Steers in 2015.\n\n It is an annual event hosted by the Department of Urology at the University of Virginia, and the Charlottesville Track Club.\n\n The event has also been sponsored by Panera Bread, BMW of Charlottesville, Starbucks, Pepsi and the City of Charlottesville.\n\n The City of Charlottesville also hosts the Women's Four Miler to benefit the UVA Cancer Center Breast Care Program.\n\n The event, held continuously since 2004, was conceived by William D. Steers with the purpose of raising awareness on men's health issues; to encourage men to take control of their health, and become more physically active.",
+    "Panera Bread\nPanera Bread Company is an American chain of bakery-café fast casual restaurants in the United States and Canada.\n\n Its headquarters are in Sunset Hills, Missouri, a suburb of St. Louis, and operates as Saint Louis Bread Company in the St. Louis metropolitan area.\n\n Offerings include soups, salads, pasta, sandwiches, specialty drinks, and bakery items.",
+    "McAlister's Deli\nMcAlister's Deli is an American chain of fast casual restaurants founded in 1989 in Oxford, Mississippi by retired dentist Dr. Don Newcomb.\n\n There are currently over 400 locations in 26 states, ranging from Virginia in the East to Florida in the South to Arizona in West to Michigan in the North.\n\n The menu includes deli sandwiches, \"Texas-size\" spuds (baked potatoes), soups, salads, and desserts, as well as catering items such as sandwich trays and boxed lunches.\n\n The chain is also known for its McAlister's Famous Sweet Tea, which is available by the glass or by the gallon.",
+    "William D. Steers\nDr. William D. Steers, August 19, 1955 – April 10, 2015, was a Paul Mellon professor and Chair of the Department of Urology at the School of Medicine of the University of Virginia.\n\n Dr. Steers is past President of the American Board of Urology (ABU) and Editor of the \"Journal of Urology\".\n\n In 2003, the University of Virginia awarded Dr. Steers the Hovey Dabney Professorship.\n\n In 2004 Dr. Steers initiated the Charlottesville Men’s Four Miler road race in Virginia to raise funds for men’s health.\n\n Dr. Steers was a viticulturist aficionado, he co-owned Well Hung Vineyard in Charlottesville.\n\n He also authored YOURometer an iPhone app.\n\n used to record urological related symptoms.",
+    "Gino's Hamburgers\nGino's Hamburgers was a fast-food restaurant chain founded in Baltimore, Maryland, by Baltimore Colts defensive end Gino Marchetti and running back Alan Ameche, along with their close friend Louis Fischer, in 1957.\n\n A new group of restaurants under the Gino's name involving some of the principals of the original chain was started in 2010.",
+    "Tudor's Biscuit World\nTudor's Biscuit World is a restaurant chain based in Huntington, West Virginia, most commonly found in West Virginia.\n\n Many West Virginia locations share a building with Gino's Pizza and Spaghetti, although the chain is more extensive than Gino's (which is exclusive to West Virginia), having locations in southern Ohio, eastern Kentucky, and southwestern Virginia.\n\n In 2016 a franchise was opened in Panama City, Florida.\n\n Tudor's serves biscuits, biscuit sandwiches, homestyle breakfasts and dinners, muffins, and several side dishes.\n\n The chain was originally based in Charleston, West Virginia and many of the biscuit sandwiches are named for sports teams of interest in that area, including teams at Marshall University, West Virginia University, and The University of Charleston.",
+    "Aladdin's Eatery\nAladdin's Eatery is a chain of franchised restaurants in the American Midwest and South-East, specializing in Lebanese cuisine.\n\n Adapted to American tastes, the sites are fast casual restaurants that also offer take out."
+   ]
+  },
+  {
+   "id": "f6c46c622a4083ca",
+   "gold": [
+    {
+     "sentence": "\"White People Renovating Houses\" is the first episode in the twenty-first season of the American animated television series \"South Park\".",
+     "facts": {
+      "0.0": "'White People Renovating Houses' is the first episode of the twenty-first season of the American animated television series South Park."
+     }
+    },
+    {
+     "sentence": " It is the 278th episode of the series overall, and first aired on Comedy Central in the United States on September 13, 2017.",
+     "facts": {
+      "1.0": "'White People Renovating Houses' is the 278th episode of South Park overall.",
+      "1.1": "'White People Renovating Houses' first aired on Comedy Central in the United States.",
+      "1.2": "'White People Renovating Houses' first aired on September 13, 2017."
+     }
+    },
+    {
+     "sentence": "The twenty-first season of the American animated sitcom \"South Park\" premiered on Comedy Central on September 13, 2017, and will contain ten episodes.",
+     "facts": {
+      "2.0": "The twenty-first season of South Park is an American animated sitcom.",
+      "2.1": "The twenty-first season of South Park premiered on Comedy Central on September 13, 2017.",
+      "2.2": "The twenty-first season of South Park will contain ten episodes."
+     }
+    }
+   ],
+   "items": [
+    "The Return of Chef\n\"The Return of Chef\" is the first episode in the tenth season of the American animated television series \"South Park\".\n\n The 140th episode of the series overall, it first aired on Comedy Central in the United States on March 22, 2006.\n\n The episode was the first after the departure of actor Isaac Hayes, who voiced the character Chef.\n\n Hayes, a Scientologist, left after a falling-out with the creators over their treatment of Scientology in the previous season's episode \"Trapped in the Closet\".\n\n Scientology has been accused of using brainwashing techniques, and the episode portrays Chef as having been brainwashed.",
+    "Moho House\n\"Moho House\" is the twenty first episode of the twenty-eighth season of the animated television series \"The Simpsons\", and the 617th episode of the series overall.\n\n It aired in the United States on Fox on May 7, 2017.",
+    "White People Renovating Houses\n\"White People Renovating Houses\" is the first episode in the twenty-first season of the American animated television series \"South Park\".\n\n It is the 278th episode of the series overall, and first aired on Comedy Central in the United States on September 13, 2017.",
+    "Something Wall-Mart This Way Comes\n\"Something Wall-Mart This Way Comes\" is the ninth episode of the eighth season of the American animated television series \"South Park\", and the 120th episode of the series overall.\n\n It originally aired on Comedy Central in the United States on November 3, 2004.\n\n In the episode, a Wall-Mart is built in South Park, and the people start to get addicted to shopping from it, due to its irresistibly attractive bargains, thus leading many businesses in South Park to close down.\n\n The four boys have to fight against Wall-Mart and to find a way to stop it from taking over the entire town.",
+    "Put It Down (South Park)\n\"Put It Down\" is the second episode in the twenty-first season of the American animated television series \"South Park\".\n\n The 279th episode of the series overall, it first aired on Comedy Central in the United States on September 20, 2017.",
+    "Chickenlover\n\"Chickenlover\" is the fourth episode in the second season of the American animated television series \"South Park\".\n\n The 16th episode of the series overall, it originally aired on Comedy Central in the United States on May 27, 1998.\n\n The episode was written by series co-creators Trey Parker and Matt Stone, along with David R. Goodman, and directed by Parker.\n\n In the episode, Officer Barbrady resigns as South Park's only police officer because of his illiteracy.\n\n Anarchy ensues, just as chickens are mysteriously being molested across South Park.\n\n Barbrady enlists the help of the boys to learn to read and discover who is molesting the chickens.\n\n Cartman, meanwhile, masquerades as a police officer.",
+    "South Park (season 21)\nThe twenty-first season of the American animated sitcom \"South Park\" premiered on Comedy Central on September 13, 2017, and will contain ten episodes.",
+    "Holiday Special (South Park)\n\"Holiday Special\" is the third episode in the twenty-first season of the American animated television series \"South Park\".\n\n The 280th episode of the series overall, it first aired on Comedy Central in the United States on September 27, 2017.",
+    "South Park (season 10)\nThe tenth season of \"South Park\", an American animated television series created by Trey Parker and Matt Stone, began airing on March 22, 2006.\n\n The tenth season concluded after 14 episodes on November 15, 2006.\n\n This is the first season in which Kenny does not die and the last season featuring Isaac Hayes (the voice of Chef) as Hayes quit the show following the backlash behind season nine's \"Trapped in the Closet\" episode.\n\n This season also had a minor controversy when the Halloween episode \"Hell on Earth 2006\" depicted \"The Crocodile Hunter's\" Steve Irwin with a stingray lodged in his chest getting thrown out of Satan's Halloween party for not being in costume.\n\n Episode 2 in this season is the last one with the Braniff Airlines logo.\n\n All the episodes in this season were written and directed by Trey Parker.",
+    "The Squirt and the Whale\n\"The Squirt and the Whale\" is the nineteenth episode of \"The Simpsons\" twenty-first season.\n\n The 460th episode of the series overall, it originally aired on the Fox network in the United States on April 25, 2010.\n\n In the episode, the Simpson family attempt to save a beached whale that washed up onshore, only for it to die."
+   ]
+  },
+  {
+   "id": "1ec9afc356fff3e3",
+   "gold": [
+    {
+     "sentence": "Orlando Brown (born December 4, 1987) is an American actor, voice actor, rapper and singer.",
+     "facts": {
+      "0.0": "Orlando Brown was born on December 4, 1987.",
+      "0.1": "Orlando Brown is an American actor.",
+      "0.2": "Orlando Brown is a voice actor.",
+      "0.3": "Orlando Brown is a rapper.",
+      "0.4": "Orlando Brown is a singer."
+     }
+    },
+    {
+     "sentence": " He is best known for his role as Eddie Thomas in \"That's So Raven\", 3J Winslow in \"Family Matters\", Tiger in \"Major Payne\", Max in \"Two of a Kind\", Damey Wayne in the short-lived Waynehead, Dobbs in \"Max Keeble's Big Move\", and Frankie in \"Eddie's Million Dollar Cook Off\".",
+     "facts": {
+      "1.0": "Orlando Brown is best known for his role as Eddie Thomas in \"That's So Raven\".",
+      "1.1": "Orlando Brown is best known for his role as 3J Winslow in \"Family Matters\".",
+      "1.2": "Orlando Brown is best known for his role as Tiger in \"Major Payne\".",
+      "1.3": "Orlando Brown is best known for his role as Max in \"Two of a Kind\".",
+      "1.4": "Orlando Brown is best known for his role as Damey Wayne in the short-lived Waynehead.",
+      "1.5": "Orlando Brown is best known for his role as Dobbs in \"Max Keeble's Big Move\".",
+      "1.6": "Orlando Brown is best known for his role as Frankie in \"Eddie's Million Dollar Cook Off\"."
+     }
+    },
+    {
+     "sentence": "Family Matters is an American sitcom which originated on ABC from September 22, 1989 to May 9, 1997, before moving to CBS from September 19, 1997 to July 17, 1998.",
+     "facts": {
+      "2.0": "Family Matters is an American sitcom.",
+      "2.1": "Family Matters originated on ABC.",
+      "2.2": "Family Matters originated on ABC from September 22, 1989 to May 9, 1997.",
+      "2.3": "Family Matters moved to CBS after its ABC run.",
+      "2.4": "Family Matters was on CBS from September 19, 1997 to July 17, 1998."
+     }
+    },
+    {
+     "sentence": " A spin-off of \"Perfect Strangers,\" the series revolves around the Winslow family, a middle-class African American family living in Chicago, Illinois.",
+     "facts": {
+      "3.0": "Family Matters is a spin-off of \"Perfect Strangers.\"",
+      "3.1": "Family Matters revolves around the Winslow family.",
+      "3.2": "The Winslow family is a middle-class African American family.",
+      "3.3": "The Winslow family lives in Chicago, Illinois."
+     }
+    }
+   ],
+   "items": [
+    "Darius McCrary\nDarius Creston McCrary (born May 1, 1976) is an American film and television actor and singer.\n\n He is best known for his role as Edward \"Eddie\" Winslow, the oldest child of Carl and Harriette Winslow on the ABC/CBS television sitcom \"Family Matters \"which ran from 1989–1998.\n\n Another one of McCrary's notable roles was as Scam in the 1987 comedy film \"Big Shots\", which was his film debut.\n\n He provided the voice of Jazz in the 2007 \"Transformers\" reboot.\n\n From December 2009 to October 2011, he portrayed photographer Malcolm Winters on the CBS daytime drama \"The Young and the Restless\".",
+    "HGTV Design Star S3 (2008): Katrina-home finale; Jennifer Bertrand won a viewer vote and her own show. Friends of the People (2014): TruTV’s first sketch series, with 10 episodes and former In Living Color revival cast members. In Living Color (1990–94): Wayans-created Fox series, notable for Black-centered humor and disputes with executives. Key & Peele (2012–15): 53 episodes across five seasons, plus a Super",
+    "*Family Matters* was a sitcom about Chicago’s middle-class African American Winslow family. A *Perfect Strangers* spin-off, it aired on ABC (1989–97) and CBS (1997–98), spanning nine seasons and 215 episodes. Neighbor Steve Urkel (Jaleel White) became its breakout and eventual main character. Kellie Shanygne Williams (born March 22, 1976) played middle child Laura Winslow; her middle name is pronounced",
+    "*Tyler Perry’s For Better or Worse* is a sitcom created, written, and executive produced by Tyler Perry, based on his films *Why Did I Get Married?* (2007) and *Why Did I Get Married Too?* (2010). The series follows three couples—Marcus and Angela, Joseph and Leslie, and Richard and Keisha—as they navigate marriage and dating. It premiered on TBS in 2011; its third season moved to OWN in 2013,",
+    "Family Matters\nFamily Matters is an American sitcom which originated on ABC from September 22, 1989 to May 9, 1997, before moving to CBS from September 19, 1997 to July 17, 1998.\n\n A spin-off of \"Perfect Strangers,\" the series revolves around the Winslow family, a middle-class African American family living in Chicago, Illinois.\n\n Midway through the first season, the show introduced the Winslows' nerdy neighbor Steve Urkel (Jaleel White), who quickly became its breakout character and eventually the show's main character.\n\n Having run for nine seasons, \"Family Matters\" became the second longest-running non-animated US sitcom with a predominantly African American cast, behind only \"The Jeffersons\" (11).\n\n Having aired 215 episodes, \"Family Matters\" is ranked third, behind only \"Tyler Perry's House of Payne\" (254), and \"The Jeffersons\" (253).",
+    "Tyler Perry's For Better or Worse\nTyler Perry's For Better or Worse is an American television sitcom created, written and executive produced by Tyler Perry.\n\n The series is based on and is a TV spin-off to Perry's 2007 film \"Why Did I Get Married?\n\n\" and its 2010 sequel \"Why Did I Get Married Too?\n\n\".\n\n The show premiered on TBS on November 25, 2011 and ended on July 22, 2017.\n\n Led by the comical, over-the-top antics of Marcus and Angela Williams, the ensemble follows three couples: Marcus and Angela, Joseph and Leslie, and Richard and Keisha who are at various stages of their relationships as they go through the ups-and-downs of married life and dating.\n\n The third season of the series premiered on September 18, 2013, on the Oprah Winfrey Network.",
+    "In Living Color\nIn Living Color is an American sketch comedy television series that originally ran on Fox from April 15, 1990, to May 19, 1994.\n\n Brothers Keenen and Damon Wayans created, wrote and starred in the program.\n\n The show was produced by Ivory Way Productions in association with 20th Century Fox Television and was taped at stage 7 at the Fox Television Center on Sunset Boulevard in Hollywood, California.\n\n The title of the series was inspired by the NBC announcement of broadcasts being presented \"in living color\" during the 1960s, prior to mainstream color television.\n\n It also refers to the fact that most of the show's cast were black, unlike other sketch comedy shows such as \"Saturday Night Live\" whose casts are mostly white.\n\n It was controversial due to the Wayans' decision to portray African-American humor from the ghetto in a time when mainstream American tastes regarding black comedy had been set by more upscale shows such as \"The Cosby Show\", causing an eventual feud for control between Fox executives and the Wayans.",
+    "Lamman Rucker\nLamman Rucker (born October 6, 1971) is an American actor.\n\n Rucker began his career on the daytime soap operas \"As the World Turns\" and \"All My Children\", before roles in Tyler Perry's films \"Why Did I Get Married?\n\n\", \"Why Did I Get Married Too?\n\n\", and \"Meet the Browns\", and its television adaptation.\n\n In 2016, he began starring as Jacob Greenleaf in the Oprah Winfrey Network drama series, \"Greenleaf\".",
+    "Jaimee Foxworth\nJaimee Monae Foxworth (born December 17, 1979) is an American actress and model.\n\n She is best known for her role of Judy Winslow, the youngest daughter of Carl and Harriette Winslow on the ABC/CBS sitcom \"Family Matters\".\n\n She later transitioned to pornographic films using the name Crave, starring in several titles.",
+    "Orlando Brown (actor)\nOrlando Brown (born December 4, 1987) is an American actor, voice actor, rapper and singer.\n\n He is best known for his role as Eddie Thomas in \"That's So Raven\", 3J Winslow in \"Family Matters\", Tiger in \"Major Payne\", Max in \"Two of a Kind\", Damey Wayne in the short-lived Waynehead, Dobbs in \"Max Keeble's Big Move\", and Frankie in \"Eddie's Million Dollar Cook Off\"."
+   ]
+  },
+  {
+   "id": "07bbea3c13d131bf",
+   "gold": [
+    {
+     "sentence": " They were first year members of the Mountain West Conference.",
+     "facts": {
+      "0.0": "They were first-year members of the Mountain West Conference."
+     }
+    },
+    {
+     "sentence": "The Mountain West Conference (MW) is one of the collegiate athletic conferences affiliated with the National Collegiate Athletic Association (NCAA) Division I Football Bowl Subdivision (FBS) (formerly I-A).",
+     "facts": {
+      "1.0": "The Mountain West Conference (MW) is a collegiate athletic conference.",
+      "1.1": "The Mountain West Conference is one of the collegiate athletic conferences affiliated with the National Collegiate Athletic Association (NCAA).",
+      "1.2": "The Mountain West Conference is affiliated with the NCAA Division I Football Bowl Subdivision (FBS).",
+      "1.3": "The Football Bowl Subdivision (FBS) was formerly called I-A."
+     }
+    }
+   ],
+   "items": [
+    "Hawaii Rainbow Warriors baseball\nThe Hawaii Rainbow Warriors baseball team is a varsity intercollegiate athletic team of the University of Hawaii at Manoa in Honolulu, Hawaii, United States.\n\n The team is a member of the Big West Conference, which is part of the National Collegiate Athletic Association's Division I.\n\n Hawaii's first baseball team was fielded in 1923.\n\n The team plays its home games at Les Murakami Stadium in Honolulu, Hawaii.\n\n The Rainbow Warriors are coached by Mike Trapasso.",
+    "Wayne State Warriors football\nThe Wayne State Warriors football team is the college football team at Wayne State University in Detroit, Michigan.\n\n The Wayne State football team played their first game in October 1918.\n\n The Wayne State Warriors have competed in the Great Lakes Intercollegiate Athletic Conference since 1999 (and previously from 1975-1989), and are currently a Division II member of the National Collegiate Athletic Association (NCAA).\n\n Wayne State plays their home games at Tom Adams Field at Wayne State Stadium.\n\n All Wayne State games are broadcast on WDTK radio.",
+    "2012–13 Wagner Seahawks men's basketball team\nThe 2012–13 Wagner Seahawks men's basketball team represented Wagner College during the 2012–13 NCAA Division I men's basketball season.\n\n The Seahawks were led by the youngest men's head coach in NCAA Division I, Bashir Mason, who was 28 when he was elevated from an assistant position in March 2012 following the departure of Dan Hurley for Rhode Island.\n\n The Seahawks played their home games at Spiro Sports Center and were members of the Northeast Conference.\n\n They finished the season 19–12, 12–6 in NEC play to finish in a three way tie for second place.\n\n They advanced to the semifinals of the Northeast Tournament where they lost to Long Island.\n\n For the second consecutive year, despite a winning record, Wagner choose not to participate in a post season tournament.",
+    "2011–12 Wagner Seahawks men's basketball team\nThe 2011–12 Wagner Seahawks men's basketball team represented Wagner College during the 2011–12 NCAA Division I men's basketball season.\n\n The Seahawks, led by second year head coach Dan Hurley, played their home games at Spiro Sports Center and are members of the Northeast Conference.\n\n They finished the season 25–6, 15–3 in NEC play to finish in second place.\n\n They lost in the semifinals of the NEC Basketball Tournament to Robert Morris.\n\n Despite having 25 wins, the Seahawks did not accept an invitation to a post season tournament.",
+    "2012 Hawaii Warriors football team\nThe 2012 Hawaii Warriors football team represented the University of Hawaii at Manoa in the 2012 NCAA Division I FBS football season.\n\n They were led by first-year head coach Norm Chow and played their home games at Aloha Stadium.\n\n They were first year members of the Mountain West Conference.\n\n They finished the season 3–9, 1–7 in Mountain West play to finish in a tie for ninth place.",
+    "Men's National Collegiate Athletic Association\nThe Men's National Collegiate Athletic Association is an athletic association in the Philippines, and is the direct counterpart of the older Women's National Collegiate Athletic Association (founded in 1970).\n\n The Men's National Collegiate Athletic Association (MNCAA) is exclusive for men.\n\n The MNCAA was founded in 2004.\n\n Competition is divided into three divisions: Seniors for college students, Juniors for high school students, and Midgets for grade school and first year high school students.\n\n The competing sports of the tournament are Basketball, Volleyball, Futsal, Table Tennis, Badminton and Streetdance.",
+    "Women's National Collegiate Athletic Association\nThe Women's National Collegiate Athletic Association (WNCAA) is an athletic association in the Philippines exclusively for women.\n\n It was founded in 1970.\n\n Competition is divided into three divisions: Seniors for college students, Juniors for high school students, and Midgets for grade school and first year high school students.\n\n Its men's counterpart is the Men's National Collegiate Athletic Association, founded in 2004.",
+    "2011–12 Iona Gaels men's basketball team\nThe 2011–12 Iona Gaels men's basketball team represented Iona College during the 2011–12 NCAA Division I men's basketball season.\n\n The Gaels, led by second year head coach Tim Cluess, played their home games at the Hynes Athletic Center and are members of the Metro Atlantic Athletic Conference.\n\n The Gaals were MAAC regular season champions but failed to win the MAAC Basketball Tournament after losing to Fairfield in the semifinals.\n\n They received an at–large bid to the 2012 NCAA Tournament where they lost to BYU in the \"First Four\" round.\n\n The Gaels led BYU by 25 points in the 2nd half.\n\n It was the largest comeback in NCAA Tournament history.",
+    "List of Pacific Tigers head football coaches\nThe Pacific Tigers college football team represented University of the Pacific (CA).\n\n The Tigers competed in the National Collegiate Athletic Association (NCAA) College Division in the years 1937–1968.\n\n In 1969, the team moved to National Collegiate Athletic Association (NCAA) Division I and stayed there until disbanding after the 1995 season.",
+    "Mountain West Conference\nThe Mountain West Conference (MW) is one of the collegiate athletic conferences affiliated with the National Collegiate Athletic Association (NCAA) Division I Football Bowl Subdivision (FBS) (formerly I-A).\n\n The MW officially began operations in July 1999.\n\n Geographically, the MW covers a broad expanse of the Western United States, with member schools located in California, Colorado, Hawaii, Idaho, Nevada, New Mexico, Utah, and Wyoming.\n\n Craig Thompson has served as Commissioner of the MW since its founding in 1999."
+   ]
+  },
+  {
+   "id": "56e5b1963c007c69",
+   "gold": [
+    {
+     "sentence": "Ciaran Gribbin (born 1976) is a Northern Irish singer-songwriter, guitarist and producer who hails from Castledawson, Northern Ireland.",
+     "facts": {
+      "0.0": "Ciaran Gribbin was born in 1976.",
+      "0.1": "Ciaran Gribbin is a Northern Irish singer-songwriter.",
+      "0.2": "Ciaran Gribbin is a guitarist.",
+      "0.3": "Ciaran Gribbin is a producer.",
+      "0.4": "Ciaran Gribbin hails from Castledawson, Northern Ireland."
+     }
+    },
+    {
+     "sentence": "Brett Allen Scallions (born December 21, 1971) is an American musician.",
+     "facts": {
+      "1.0": "Brett Allen Scallions was born on December 21, 1971.",
+      "1.1": "Brett Allen Scallions is an American musician."
+     }
+    },
+    {
+     "sentence": " He is the lead vocalist, rhythm guitarist, and lyricist of post-grunge band Fuel.",
+     "facts": {
+      "2.0": "Brett Allen Scallions is the lead vocalist of the post-grunge band Fuel.",
+      "2.1": "Brett Allen Scallions is the rhythm guitarist of the post-grunge band Fuel.",
+      "2.2": "Brett Allen Scallions is the lyricist of the post-grunge band Fuel."
+     }
+    }
+   ],
+   "items": [
+    "Brett Scallions\nBrett Allen Scallions (born December 21, 1971) is an American musician.\n\n He is the lead vocalist, rhythm guitarist, and lyricist of post-grunge band Fuel.",
+    "Puppet Strings\nPuppet Strings is the fifth studio album by American rock band Fuel.\n\n Released March 4, 2014, it is their first studio effort since 2003's \"Natural Selection\" to feature original lead singer Brett Scallions and the first Fuel album not to feature original songwriter/guitarist, Carl Bell and bassist Jeff Abercrombie.\n\n Additionally, no one who participated in the recording of Fuel's previous album \"Angels & Devils\" participated in the recording of \"Puppet Strings\".",
+    "Yeah! (Fuel song)\n\"Yeah!\"\n\n is the first song released from Fuel's album \"Puppet Strings\".\n\n It is also the first song released featuring original lead singer Brett Scallions since Fuel's 2003 studio album \"Natural Selection\".",
+    "Graph query row:\nperson: Brett Scallions\norganization: Fuel\nrole: None",
+    "Doug Grean\nDoug Grean is an American record producer, audio engineer, guitarist, based in Los Angeles.\n\n He has worked with artists Sheryl Crow, Ricki Lee Jones, Glen Campbell, Scott Weiland, Slash, Velvet Revolver, Stone Temple Pilots, The Crystal Method, Tim McGraw, Cyndi Lauper, Annabella Lwin (Bow Wow Wow), Corey Glover (Living Color), Camp Freddy, DJ Hurricane and John Taylor (Duran Duran).\n\n Grean was formerly the lead guitarist and touring musical director for Scott Weiland and the Wildabouts.\n\n Some of Grean's television appearances with Weiland include: VH1 Legends, Last Call with Carson Daly, The Tonight Show with Jay Leno, and the Grammy awards with Velvet Revolver as keyboardist, performing \"All Across the Universe\" with Stevie Wonder, Norah Jones, Bono, Steven Tyler, Brian Wilson, and Alison Krauss.",
+    "Soul to Preach To\n\"Soul to Preach To\" is the first single released from Fuel's album \"Puppet Strings\".\n\n It is also the first single released featuring original lead singer Brett Scallions since Fuel's 2003 studio album \"Natural Selection\".",
+    "Ciaran Gribbin\nCiaran Gribbin (born 1976) is a Northern Irish singer-songwriter, guitarist and producer who hails from Castledawson, Northern Ireland.",
+    "Circus Diablo\nCircus Diablo is an American rock band, formed in early 2006 by Billy Morrison (vocals), Billy Duffy (lead guitar) and Ricky Warwick (rhythm guitar).\n\n Fuel frontman Brett Scallions and Velvet Revolver drummer Matt Sorum subsequently joined the band on bass and drums, respectively.\n\n To date, Circus Diablo have released one studio album, entitled \"Circus Diablo\".",
+    "Angels &amp; Devils (Fuel album)\nAngels & Devils is the fourth studio album by American rock band Fuel.\n\n Released on August 7, 2007, it was their first studio effort since 2003's \"Natural Selection\" and was the last Fuel album to feature original songwriter/guitarist, Carl Bell and bassist Jeff Abercrombie.\n\n No musician on this album is still with the band.\n\n It was also Fuel's only studio album to feature new vocalist Toryn Green, and their final album for Epic Records.\n\n With a new singer, the album also introduced a new Fuel logo.",
+    "The Best of Fuel\nThe Best of Fuel is a compilation album by American hard rock band Fuel.\n\n It contains songs from their first three full-length albums, \"Sunburn\", \"Something Like Human\", and \"Natural Selection\".\n\n All of the said albums featured vocalist Brett Scallions who departed from the group only a few months after the compilation's release.\n\n \"The Best of Fuel\" consists solely of the band's released singles, with the exception of \"Million Miles\" from \"Natural Selection\" (it features \"Quarter\" from the same album instead)."
+   ]
+  },
+  {
+   "id": "d158004e496e53d1",
+   "gold": [
+    {
+     "sentence": "Pennsylvania Route 145 (PA 145) is a 20.89 mi long north–south state highway in the Lehigh Valley area of eastern Pennsylvania.",
+     "facts": {
+      "0.0": "Pennsylvania Route 145 (PA 145) is a state highway.",
+      "0.1": "Pennsylvania Route 145 is 20.89 miles long.",
+      "0.2": "Pennsylvania Route 145 runs north-south.",
+      "0.3": "Pennsylvania Route 145 is in the Lehigh Valley area of eastern Pennsylvania."
+     }
+    },
+    {
+     "sentence": " MacArthur Road is a divided highway; between U.S. Route 22 (US 22) and Eberhart Road, it is six lanes wide with a Jersey barrier and jughandles while the remainder of the road a four-lane divided highway.",
+     "facts": {
+      "1.0": "MacArthur Road is a divided highway.",
+      "1.1": "Between U.S. Route 22 (US 22) and Eberhart Road, MacArthur Road is six lanes wide.",
+      "1.2": "Between U.S. Route 22 and Eberhart Road, MacArthur Road has a Jersey barrier.",
+      "1.3": "Between U.S. Route 22 and Eberhart Road, MacArthur Road has jughandles.",
+      "1.4": "The remainder of MacArthur Road is a four-lane divided highway."
+     }
+    },
+    {
+     "sentence": " Plastic water-filled barriers of the same general shape are also now commonly called Jersey barriers.",
+     "facts": {
+      "2.0": "Plastic water-filled barriers of the same general shape are also now commonly called Jersey barriers."
+     }
+    }
+   ],
+   "items": [
+    "Pennsylvania Canal (Delaware Division)\nThe Delaware Division of the Pennsylvania Canal, more commonly called the Delaware Canal, runs for 60 mi parallel to the right bank of the Delaware River from the entry locks near the mouth of the Lehigh River and terminal end of the Lehigh Canal at Easton south to Bristol.\n\n At Easton, which today is the home of The National Canal Museum, the Delaware Canal also connected with the Morris Canal built to carry anthracite coal to energy starved New Jersey industries.\n\n Later, with a crossing-lock constructed at New Hope, the New Hope 'outlet lock' (1847) connected by Cable Ferry to a feeder navigation/canal at Bull's Island along the opposite shore from Lumberville, which ran over 22 mi south along the left bank through Trenton to Bordentown, the west end of the Delaware and Raritan Canal (1834) to New York City via New Brunswick.\n\n as part of the solution to the United States' first energy crisis.",
+    "Susquehanna and Tidewater Canal\nThe Susquehanna and Tidewater Canal between Wrightsville, Pennsylvania, and Havre de Grace, Maryland, at the head of Chesapeake Bay, provided an interstate shipping alternative to 19th-century arks, rafts, and boats plying the difficult waters of the lower Susquehanna River.\n\n Built between 1836 and 1840, it ran 43 mi along the west bank of the river and rendered obsolete an older, shorter canal along the east bank.\n\n Of its total length, 30 mi were in Pennsylvania and 13 mi in Maryland.\n\n Though rivalry between Philadelphia, Pennsylvania, and Baltimore, Maryland, delayed its construction, the finished canal brought increased shipments of coal and other raw materials to both cities from Pennsylvania's interior.\n\n Competition from railroads was a large factor in the canal's decline after 1855.\n\n Canal remnants, including a lock keeper's house, have been preserved in Maryland, and locks 12 and 15 have been preserved in Pennsylvania.",
+    "Jersey barrier\nA Jersey barrier or Jersey wall is a modular concrete or plastic barrier employed to separate lanes of traffic.\n\n It is designed to minimize vehicle damage in cases of incidental contact while still preventing the crossover case of a head-on collision.\n\n Jersey barriers are also used to reroute traffic and protect pedestrians and workers during highway construction, as well as temporary and semi-permanent protections against landborne attack such as suicide vehicle bombs.\n\n A Jersey barrier is also known in the western United States as K-rail, or K-wall, a term borrowed from the California Department of Transportation specification for temporary concrete traffic barriers, or colloquially as a Jersey bump.\n\n Plastic water-filled barriers of the same general shape are also now commonly called Jersey barriers.",
+    "Ocean To Ocean Bridge\nThe Ocean To Ocean Bridge is a through truss bridge spanning the Colorado River in Yuma, Arizona.\n\n Built in 1915, it was the first highway crossing of the lower Colorado and is the earliest example of a through truss bridge in Arizona.\n\n It is also the only example of a Pennsylvania truss within Arizona.\n\n Originally the bridge carried the transcontinental Ocean-to-Ocean Highway and later carried its successor, US 80 until a new bridge was built to the west in 1956.\n\n Between 1988 and 2001, the bridge was closed to vehicular traffic and only traversable by pedestrians and bicyclists.\n\n After a major restoration, the bridge was rehabilitated and reopened to vehicular traffic in 2002, with a re-dedication by the Quechan nation and Yuma Crossing National Heritage Area.",
+    "Pennsylvania Route 145\nPennsylvania Route 145 (PA 145) is a 20.89 mi long north–south state highway in the Lehigh Valley area of eastern Pennsylvania.\n\n It connects Interstate 78 (I-78) and PA 309 in Lanark, Lehigh County to PA 248 in Weiders Crossing, Northampton County.\n\n PA 145 is the main north-south arterial into Allentown, the third-largest city in the state.\n\n The route enters the city on South 4th Street and follows multiple streets to downtown, where it follows the one-way pair of 6th Street northbound and 7th Street southbound.\n\n North of Allentown in Whitehall Township, a seven-mile (11.2 km) portion of PA 145 is known as MacArthur Road, named in honor of General Douglas MacArthur.\n\n MacArthur Road is a divided highway; between U.S. Route 22 (US 22) and Eberhart Road, it is six lanes wide with a Jersey barrier and jughandles while the remainder of the road a four-lane divided highway.\n\n MacArthur Road is the location of the main commercial center of the Lehigh Valley.",
+    "Pennsylvania Canal (Delaware Division)\nas part of the solution to the United States' first energy crisis.\n\n The Commonwealth of Pennsylvania built the Delaware canal to feed anthracite stone coal to energy-hungry Philadelphia as part of its transportation infrastructure building plan known as the Main Line of Public Works—a legislative initiative creating a collection of self-reinforcing internal improvements to commercial transportation capabilities.",
+    "Pennsylvania Route 145\nMacArthur Road is the location of the main commercial center of the Lehigh Valley.\n\n North of Eagle Point, PA 145 becomes a two-lane undivided road that parallels the Lehigh River, crossing the river into Northampton County at Treichlers.\n\n The route continues along the east bank of the river and passes through Walnutport before reaching its northern terminus.\n\n PA 145 is dedicated as the Battle of the Bulge Veterans Memorial Highway in honor of the veterans who fought in the Battle of the Bulge.",
+    "Beaver and Erie Canal\nThe Beaver and Erie Canal, also known as the Erie Extension Canal, was part of the Pennsylvania Canal system and consisted of three sections: the Beaver Division, the Shenango Division, and the Conneaut Division.\n\n The canal ran 136 mi north–south near the western edge of the state from the Ohio River to Lake Erie through Beaver County, Lawrence County, Mercer County, Crawford County, and Erie County, Pennsylvania.",
+    "Breadon Field\nBreadon Field was a minor league ballpark in Whitehall Township, Pennsylvania, located on the east side of MacArthur Road, about 0.5 mile north of the U.S. Route 22 interchange.",
+    "Pennsylvania and Ohio Canal\nThe Pennsylvania and Ohio Canal, also known as the P & O Canal, the Cross Cut Canal and the Mahoning Canal was a shipping canal which operated from 1840 until 1877 (though the canal was completely abandoned by 1872).\n\n It was unique in that it served to connect canals in two states (the Ohio and Erie Canal in Ohio and the Beaver and Erie Canal in Pennsylvania) and was funded by private interests."
+   ]
+  },
+  {
+   "id": "eb414100e2c93d2c",
+   "gold": [
+    {
+     "sentence": "Giovanni \"Tinto\" Brass (born 26 March 1933) is an Italian filmmaker.",
+     "facts": {
+      "0.0": "Giovanni 'Tinto' Brass was born on 26 March 1933.",
+      "0.1": "Giovanni 'Tinto' Brass is an Italian filmmaker."
+     }
+    },
+    {
+     "sentence": "Baltasar Kormákur Samper (born 27 February 1966) is an Icelandic actor, theater and film director, and film producer.",
+     "facts": {
+      "1.0": "Baltasar Kormakur Samper was born on 27 February 1966.",
+      "1.1": "Baltasar Kormakur Samper is an Icelandic actor.",
+      "1.2": "Baltasar Kormakur Samper is an Icelandic theater director.",
+      "1.3": "Baltasar Kormakur Samper is an Icelandic film director.",
+      "1.4": "Baltasar Kormakur Samper is an Icelandic film producer."
+     }
+    }
+   ],
+   "items": [
+    "Fermo posta Tinto Brass\nFermo posta Tinto Brass is a 1995 Italian comedy film-erotic film directed by Tinto Brass and set in vignettes.",
+    "Contraband (2012 film)\nContraband is a 2012 American crime thriller film directed by Baltasar Kormákur, starring Mark Wahlberg, Kate Beckinsale, Ben Foster, Caleb Landry Jones, Giovanni Ribisi, Lukas Haas, Diego Luna and J. K. Simmons.\n\n The film is a remake of the 2008 Icelandic film \"Reykjavík-Rotterdam\" which Baltasar Kormákur starred in.\n\n It was released on January 13, 2012 in the United States by Universal Pictures.",
+    "Tinto Brass\nGiovanni \"Tinto\" Brass (born 26 March 1933) is an Italian filmmaker.\n\n In the 1960s and 1970s, he directed many critically acclaimed avant-garde films of various genres.\n\n Today, he is mainly known for his later work in the erotic genre, with films such as \"Caligula\", \"Così fan tutte\" (released under the English title \"All Ladies Do It\"), \"Paprika\", \"Monella\" (\"Frivolous Lola\") and \"Trasgredire\".",
+    "Graph query row:\nperson: Baltasar Kormákur\nnationality: Icelandic\nassociated_country: None\ncountry: None",
+    "Baltasar Kormákur\nBaltasar Kormákur Samper (born 27 February 1966) is an Icelandic actor, theater and film director, and film producer.\n\n He is best known for directing the films \"101 Reykjavík\", \"Hafið\", \"A Little Trip to Heaven\" (starring Julia Stiles and Forest Whitaker), a film based on the book \"Mýrin\" \"(Jar City)\" by Arnaldur Indriðason, \"Contraband\", \"2 Guns\" (starring Mark Wahlberg and Denzel Washington) and \"Everest\".\n\n His father is the Spanish painter Baltasar Samper and actor Baltasar Breki Samper is his son.",
+    "Trasgredire\nTrasgredire (Transgressing or Cheeky) is a 2000 sex comedy directed by Tinto Brass, with Yuliya Mayarchuk in the lead role.\n\n Certain parallelisms are drawn between \"Nerosubianco\" (1969), another Tinto Brass film set in London.",
+    "Graph query row:\nperson: Tinto Brass\nnationality: Italian\nassociated_country: None\ncountry: None",
+    "Stjórnin\nStjórnin comprised two singers, Grétar Örvarsson, born July 11, 1959 and Sigríður Beinteinsdóttir, born July 24, 1962.\n\n Together they represented Iceland at the Eurovision Song Contest 1990 held in Zagreb.\n\n Their entry, \"Eitt lag enn\" was placed fourth out of 22 songs.\n\n Both singers were later members of another Eurovision group Heart 2 Heart who represented Iceland in 1992 with the song \"Nei eða já\".\n\n This entry was placed seventh out of 23 in Malmö.",
+    "John Steiner\nHe found himself in demand in Italy and moved there, appearing in a great number of Italian exploitation and B-films including police actioners (\"Violent Rome\"), westerns (\"Mannaja\"), war films (\"The Last Hunter\"), nazisploitation (\"Deported Women of the SS Special Section\"), sci-fi adventure films (\"Yor, the Hunter from the Future\"), and horror films, such as Mario Bava's \"Shock\", Dario Argento's \"Tenebrae\", and Ruggero Deodato's \"Body Count\".\n\n He also became a favourite of famed Italian filmmaker Tinto Brass, featuring in \"Salon Kitty\", the infamous \"Caligula\", \"Action\", and \"Paprika\".",
+    "Baltasar Breki Samper\nBaltasar Breki Samper (born 22 July 1989), sometimes referred to as Baltasar Breki Baltasarsson, is an Icelandic actor.\n\n He is the son of Icelandic director Baltasar Kormákur.\n\n Before graduating from the Icelandic Academy of the Arts in 2015 Samper helped his father on several films as second assistant director.\n\n He is known for his role as Hjörtur in the Icelandic TV series \"Trapped\"."
+   ]
+  },
+  {
+   "id": "9c939c2917d3e6f1",
+   "gold": [
+    {
+     "sentence": " Players compete in races on tracks inspired by attractions such as the Haunted Mansion, Pirates of the Caribbean, Space Mountain and Big Thunder Mountain Railroad to acquire missing parts for the park's fireworks machine, which was accidentally destroyed by Chip 'n' Dale while they were gathering acorns.",
+     "facts": {
+      "0.0": "Players compete in races.",
+      "0.1": "The race tracks are inspired by attractions such as the Haunted Mansion.",
+      "0.2": "The race tracks are inspired by attractions such as Pirates of the Caribbean.",
+      "0.3": "The race tracks are inspired by attractions such as Space Mountain.",
+      "0.4": "The race tracks are inspired by attractions such as Big Thunder Mountain Railroad.",
+      "0.5": "Players race on tracks to acquire missing parts for the park's fireworks machine.",
+      "0.6": "The park's fireworks machine was accidentally destroyed by Chip 'n' Dale.",
+      "0.7": "Chip 'n' Dale destroyed the fireworks machine while they were gathering acorns."
+     }
+    },
+    {
+     "sentence": " Opened on January 15, 1975, Space Mountain is the oldest operating roller coaster in the state of Florida, and is the original version of the iconic attraction that has since been replicated at all of The Walt Disney Company's Magic Kingdom-style theme parks worldwide, except for the Shanghai Disneyland Resort.",
+     "facts": {
+      "1.0": "Space Mountain opened on January 15, 1975.",
+      "1.1": "Space Mountain is the oldest operating roller coaster in the state of Florida.",
+      "1.2": "Space Mountain is the original version of an iconic attraction.",
+      "1.3": "The original version of Space Mountain has since been replicated at all of The Walt Disney Company's Magic Kingdom-style theme parks worldwide.",
+      "1.4": "The replication of Space Mountain excludes the Shanghai Disneyland Resort."
+     }
+    }
+   ],
+   "items": [
+    "Wild West Express Coaster\nWild West Express Coaster is a steel roller coaster operating at Glenwood Caverns Adventure Park in Glenwood Springs, Colorado.\n\n Wild West Express Coaster opened to the public at Glenwood Caverns Adventure Park on May 25, 2012.",
+    "Space Mountain\nSpace Mountain is the name of a space-themed indoor roller coaster attraction located at five of the Magic Kingdom-style Disney Parks (all except for Shanghai Disneyland Park).\n\n Although all five versions of the attraction are different in nature, all have a similar domed exterior façade that is a landmark for the respective park.\n\n The first Space Mountain ride opened in 1975 at Walt Disney World Resort in Florida, and similar attractions were then eventually built at the other Disney parks.",
+    "Space Mountain (Disneyland)\nSpace Mountain (known as Hyperspace Mountain from 2015 to 2017) is an indoor, space-themed roller coaster in Tomorrowland at Disneyland in Anaheim, California.\n\n Opened on May 27, 1977, it was the second roller coaster built at Disneyland, and was the second of the five versions of Space Mountain built by The Walt Disney Company.\n\n Its exterior façade is one of Disneyland's four \"mountain\" structures that serve as park landmarks.",
+    "Primeval Whirl\nPrimeval Whirl is a steel wild mouse roller coaster at Disney's Animal Kingdom at the Walt Disney World Resort.\n\n The ride is a spinning roller coaster purchased from Reverchon Industries.\n\n The ride is part of Chester and Hester's Dino-Rama, which is itself part of DinoLand U.S.A. It is a roller coaster in the \"Mild But Wild Thrills\" category.\n\n It has cars that spin in circles while traveling on tracks, permitting the ride experience to vary greatly each time it is ridden.\n\n The ride features 13 cars, each seating up to 4 riders.",
+    "Millennium Force\nMillennium Force is a steel roller coaster built by Intamin at Cedar Point amusement park in Sandusky, Ohio, United States.\n\n It was the fourteenth roller coaster to be built at the park since Blue Streak opened in 1964.\n\n Upon completion in 2000, Millennium Force broke six world records and was the world's first Giga Coaster, a roller coaster that exceeds 300 ft in height and completes a full circuit.\n\n It was briefly the tallest and fastest in the world until Steel Dragon 2000 opened later the same year.\n\n The ride is also the third-longest roller coaster in North America after The Beast at Kings Island and Fury 325 at Carowinds.\n\n It was the first roller coaster to use a cable lift system rather than a traditional chain lift.\n\n The coaster has a 310 ft , 45-degree lift hill with a 300 ft drop and features two tunnels, three overbanked turns, and four hills.\n\n It has a top speed of 93 mph .",
+    "Space Mountain (Magic Kingdom)\nSpace Mountain is an indoor dark outer space-themed steel roller coaster at the Magic Kingdom theme park at the Walt Disney World Resort in Lake Buena Vista, Florida.\n\n Opened on January 15, 1975, Space Mountain is the oldest operating roller coaster in the state of Florida, and is the original version of the iconic attraction that has since been replicated at all of The Walt Disney Company's Magic Kingdom-style theme parks worldwide, except for the Shanghai Disneyland Resort.\n\n RCA helped fund Space Mountain's construction and sponsored the ride from 1975 to 1993; FedEx sponsored Space Mountain from 1994 to 2004.",
+    "Treasure Island Resort &amp; Casino\nAn expansion that was completed in fall 2008 included 230 new hotel rooms, 30,000-square-foot event center and a bowling center complete with an arcade area.\n\n In 2015, Tado Steakhouse was constructed, Tradewinds Buffet was remodeled and the water park & spa construction began.\n\n The Lagoon and Wave Spa opened February 9, 2016.",
+    "Castle Park (amusement park)\nCastle Park, formerly Castle Amusement Park, is a 25-acre amusement park and family amusement center located in Riverside, California.\n\n The park utilizes a medieval \"castle\" theme and includes attractions such as a miniature golf course, arcade, and 27 amusement rides including three roller coasters such as \"Merlin's Revenge\", a junior rollercoaster, \"Screamin' Demon\" a spinning Wild Mouse rollercoaster, and \"Little Dipper\", a children's rollercoaster.\n\n The main \"castle\" themed building, houses the arcade as well as its only dark ride; \"Ghost Blasters\", an interactive attraction, designed by Sally Corporation, which can also be found at other amusement parks throughout North America.\n\n The park was designed, built and operated by Bud Hurlbut, who designed several rides at Knott's Berry Farm.\n\n Castle Park is currently owned and operated by Palace Entertainment.",
+    "Rock 'n' Roller Coaster Starring Aerosmith\nRock 'n' Roller Coaster Starring Aerosmith is an enclosed launched steel roller coaster at Disney's Hollywood Studios at the Walt Disney World Resort and at the Walt Disney Studios Park in Disneyland Paris (where it is called \"Rock 'n' Roller Coaster avec Aerosmith\").\n\n As the attraction's name suggests, the coaster features Aerosmith members, Steven Tyler, Joe Perry, Tom Hamilton, Joey Kramer, and Brad Whitford.",
+    "Walt Disney World Quest: Magical Racing Tour\nWalt Disney World Quest: Magical Racing Tour is a 2000 go-kart racing video game based on attractions at the Walt Disney World Resort.\n\n Players compete in races on tracks inspired by attractions such as the Haunted Mansion, Pirates of the Caribbean, Space Mountain and Big Thunder Mountain Railroad to acquire missing parts for the park's fireworks machine, which was accidentally destroyed by Chip 'n' Dale while they were gathering acorns.\n\n The game was developed by Crystal Dynamics and published by Eidos Interactive.\n\n The Game Boy Color version was developed by Prolific Publishing."
+   ]
+  }
+ ]
+}

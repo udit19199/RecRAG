@@ -1,0 +1,656 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 1 items.
+
+=== ITEM id=156b9a999e67b5d4 ===
+Gold sentences and facts:
+Sentence 0: DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year.
+  Fact 0.0: DeepMind is Google's premier AI research lab.
+  Fact 0.1: DeepMind is expected to debut a next-gen chatbot, Gemini.
+  Fact 0.2: The Gemini debut is expected before the end of the year.
+Sentence 1: But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro.
+  Fact 1.0: Google did not release the full model, Gemini Ultra.
+  Fact 1.1: Google released only a 'lite' version called Gemini Pro.
+
+Retrieved items:
+<item 1>
+One year later, ChatGPT is still alive and kicking (TechCrunch, 2023-11-30T14:10:43+00:00)
+Countless other ChatGPT rivals and derivatives have arrived to market since, most recently Amazon Q, a more business-oriented take on ChatGPT. DeepMind,
+Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year.
+
+Stella Biderman, an AI researcher at Booz Allen Hamilton and the open research group EleutherAI, told me that she doesn’t see ChatGPT as an AI breakthrough per
+se. (OpenAI, which has released dozens of research papers on its models, tellingly never released one on ChatGPT.) But, she says, ChatGPT was a bonafide “user
+experience breakthrough” — taking generative AI mainstream.
+
+“The primary impact [ChatGPT] has had [is] encouraging people training AIs to try to mimic it, or encouraging people studying AIs to use it as their central
+object of study,” Biderman said.
+
+Graph facts:
+- One year later, ChatGPT is still alive and kicking -MENTIONS-> Data.ai
+- Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier -MENTIONS-> ChatGPT
+- One year later, ChatGPT is still alive and kicking -MENTIONS-> The New York Times
+- One year later, ChatGPT is still alive and kicking -MENTIONS-> disinformation
+- How ego and fear fuelled the rise of artificial intelligence -MENTIONS-> ChatGPT
+
+Entities: Amazon Q, Stella Biderman, Booz Allen Hamilton, EleutherAI, AI breakthrough, user experience breakthrough, One year later, ChatGPT is still alive and
+kicking, ChatGPT, DeepMind, TechCrunch, Google, OpenAI, Gemini, generative AI
+</item 1>
+
+<item 2>
+Early impressions of Google’s Gemini aren’t great (TechCrunch, 2023-12-07T16:12:30+00:00)
+Bard on 3 tries(Second Video). pic.twitter.com/cYd9hepcgT — Edison Ade (@buzzedison) December 6, 2023
+
+Just tested Google's Bard with Gemini Pro update. No bugless snake game on 1st try; reported, asked to fix—couldn't. Tried ChatGPT 3.5 free version, got correct
+bug-free code on the first attempt! 🚀🐍 #ChatGPT #Bard #Gemini pic.twitter.com/WQfilgG21D — N KIRAN KUMAR (@NKIRANKUMARS1) December 6, 2023
+
+And, as with all generative AI models, Gemini Pro isn’t immune to “jailbreaks” — i.e. prompts that get around the safety filters in place to attempt to prevent
+it from discussing controversial topics.
+
+Graph facts:
+- How ego and fear fuelled the rise of artificial intelligence -MENTIONS-> ChatGPT
+- There’s something going on with AI startups in France -MENTIONS-> ChatGPT
+- Founders, are events useful? -MENTIONS-> ChatGPT
+- One year later, ChatGPT is still alive and kicking -MENTIONS-> ChatGPT
+- Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier -MENTIONS-> ChatGPT
+
+Entities: ChatGPT, TechCrunch, Early impressions of Google’s Gemini aren’t great, Bard, Edison Ade, N KIRAN KUMAR, Gemini Pro, Google, Gemini
+</item 2>
+
+<item 3>
+Early impressions of Google’s Gemini aren’t great (TechCrunch, 2023-12-07T16:12:30+00:00)
+pic.twitter.com/RKjmkEw2Qr — Filip Piekniewski🌻 🐘:@filippie509@techhub.social (@filippie509) December 6, 2023
+
+And these:
+
+Trying out Gemini Pro: it is pretty disappointing for my example. I asked it to make an analog clock using HTML like this one that ChatGPT made. It can cite
+some code from Github but it's off by a few ms… pic.twitter.com/neb42Vzm3m — Mohsen Azimi (@mohsen____) December 7, 2023
+
+GPT 4 still greater than Gemini Pro. Created Tic Tac Toe game with ChatGPT and Bard(Running on Gemini Pro) See video for the result. ChatGPT wrote the code on
+first try(First Video). Bard on 3 tries(Second Video).
+
+Graph facts:
+- A comprehensive list of 2023 tech layoffs -MENTIONS-> GitHub
+- GitHub -SAID-> streamlining effort
+- Jason Warner -WORKS_FOR-> GitHub
+- GitHub -PARTICIPATED_IN-> GitHub staff reduction announcement
+- There’s something going on with AI startups in France -MENTIONS-> GitHub
+
+Entities: GitHub, ChatGPT, TechCrunch, GPT-4, Early impressions of Google’s Gemini aren’t great, Filip Piekniewski, Mohsen Azimi, HTML, analog clock, Tic Tac
+Toe game, Bard, Gemini Pro, Google, Gemini
+</item 3>
+
+<item 4>
+Early impressions of Google’s Gemini aren’t great (TechCrunch, 2023-12-07T16:12:30+00:00)
+(Among other mistruths, Gemini Pro said that Stross contributed to the Linux kernel; he never has.)
+
+Translation doesn’t appear to be Gemini Pro’s strong suit, either. It struggles to give a six-letter word in French:
+
+FYI, Google Gemini is complete trash. pic.twitter.com/EfNzTa5qas — Benjamin Netter (@benjaminnetter) December 6, 2023
+
+When I ran the same prompt through Bard (“Can you give me a 6-letters word in French?”), Gemini Pro responded with a seven-letter word instead of a five-letter
+one — which gives some credence to the reports about Gemini’s poor multilingual performance.
+
+What about summarizing news? Surely Gemini Pro, with Google Search and Google News at its disposal, can give a recap of something topical? Not necessarily.
+
+It seems Gemini Pro is loath to comment on potentially controversial news topics, instead telling users to… Google it themselves.
+
+I tried the same prompt and got a very similar response.
+
+Graph facts:
+- Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ -MENTIONS-> Google Search
+- The people who ruined the internet -MENTIONS-> Google Search
+- Is Google Search better than the rest? And is that fair? -MENTIONS-> Google Search
+- The restaurant nearest Google -MENTIONS-> Google Search
+- Deepfake election risks trigger EU call for more generative AI safeguards -MENTIONS-> Google Search
+
+Entities: Google Search, TechCrunch, Early impressions of Google’s Gemini aren’t great, Stross, Linux kernel, Benjamin Netter, Google News, Bard, Gemini Pro,
+Google, Gemini, French
+</item 4>
+
+<item 5>
+Early impressions of Google’s Gemini aren’t great (TechCrunch, 2023-12-07T16:12:30+00:00)
+I tried the same prompt and got a very similar response. ChatGPT, by contrast, gives a bullet-list summary with citations to news articles:
+
+Interestingly, Gemini Pro did provide a summary of updates on the war in Ukraine when I asked it for one. However, the information was over a month out of date:
+
+Google emphasized Gemini’s enhanced coding skills in a briefing earlier this week. Perhaps it’s genuinely improved in some areas — posts on X suggest as much.
+But it also appears that Gemini Pro struggles with basic coding functions like this one in Python:
+
+Tried gemini based Bard, and well, it still can't write intersection of two polygons. It's one of those rare relatively simple to express functions that wasn't
+ever implemented in python, there is no stack overflow post, and all these models fail on it.
+
+Graph facts:
+- How ego and fear fuelled the rise of artificial intelligence -MENTIONS-> ChatGPT
+- There’s something going on with AI startups in France -MENTIONS-> ChatGPT
+- Founders, are events useful? -MENTIONS-> ChatGPT
+- One year later, ChatGPT is still alive and kicking -MENTIONS-> ChatGPT
+- Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier -MENTIONS-> ChatGPT
+
+Entities: ChatGPT, Stack Overflow, TechCrunch, Early impressions of Google’s Gemini aren’t great, war in Ukraine, Ukraine, Python, Bard, Gemini Pro, X, Google,
+Gemini
+</item 5>
+
+<item 6>
+Early impressions of Google’s Gemini aren’t great (TechCrunch, 2023-12-07T16:12:30+00:00)
+prompts that get around the safety filters in place to attempt to prevent it from discussing controversial topics.
+
+Using an automated method to algorithmically change the context of prompts until Gemini Pro’s guardrails failed, AI security researchers at Robust Intelligence,
+a startup selling model-auditing tools, managed to get Gemini Pro to suggest ways to steal from a charity and assassinate a high-profile individual (albeit with
+“nanobots” — admittedly not the most realistic weapon of choice).
+
+Now, Gemini Pro isn’t the most capable version of Gemini — that model, Gemini Ultra, is set to launch sometime next year in Bard and other products. Google
+compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old.
+
+But Google nevertheless promised improvements in reasoning, planning and understanding with Gemini Pro over the previous model powering Bard, claiming Gemini
+Pro was better at summarizing content, brainstorming and writing. Clearly, it has some work to do in those departments.
+
+Graph facts:
+- One year later, ChatGPT is still alive and kicking -MENTIONS-> GPT-3.5
+- ChatGPT: Everything you need to know about the AI-powered chatbot -MENTIONS-> GPT-3.5
+- How OpenAI's ChatGPT has changed the world in just a year -MENTIONS-> GPT-3.5
+- GPT-4 gets a fine-tuning -MENTIONS-> GPT-3.5
+- OpenAI -MADE-> GPT-3.5
+
+Entities: GPT-3.5, TechCrunch, GPT-4, Early impressions of Google’s Gemini aren’t great, Bard, Gemini Pro, Robust Intelligence, AI security researchers, Google,
+Gemini, Gemini Ultra
+</item 6>
+
+<item 7>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+In a post on X, CEO Sam Altman looked back on the night before its launch: “what a year it’s been…”
+
+a year ago tonight we were probably just sitting around the office putting the finishing touches on chatgpt before the next morning’s launch. what a year it’s
+been… — Sam Altman (@sama) November 30, 2023
+
+Apple and Google avoid naming ChatGPT as their ‘app of the year’
+
+Neither Apple nor Google chose an AI app as its app of the year for 2023, despite the success of ChatGPT’s mobile app, which became the fastest-growing consumer
+application in history before the record was broken by Meta’s Threads.
+
+An attack from researchers prompts ChatGPT to reveal training data
+
+A test led by researchers at Google DeepMind found that there is a significant amount of privately identifiable information in OpenAI’s LLMs.
+
+Graph facts:
+- Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices -MENTIONS-> Threads
+- X plans to use payment, phone and ID verification to stop bots -MENTIONS-> Threads
+- Spill toasts one year with a 2.7M seed extension, Kerry Washington and champagne -MENTIONS-> Threads
+- 2023 in social media: the case for the fediverse -MENTIONS-> Threads
+- Pebble, the Twitter alternative previously known as T2, is shutting down -MENTIONS-> Threads
+
+Entities: Threads, Google DeepMind, test, training data, privately identifiable information, ChatGPT, ChatGPT: Everything you need to know about the AI-powered
+chatbot, Apple, Meta, TechCrunch, X, AI, Google, OpenAI, Sam Altman
+</item 7>
+
+<item 8>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+Can you save a ChatGPT chat?
+
+Yes. OpenAI allows users to save chats in the ChatGPT interface, stored in the sidebar of the screen. There are no built-in sharing features yet.
+
+Are there alternatives to ChatGPT?
+
+Yes. There are multiple AI-powered chatbot competitors such as Together, Google’s Bard and Anthropic’s Claude, and developers are creating open source
+alternatives. But the latter are harder — if not impossible — to run today.
+
+The Google-owned research lab DeepMind claimed that its next LLM, will rival, or even best, OpenAI’s ChatGPT. DeepMind is using techniques from AlphaGo,
+DeepMind’s AI system that was the first to defeat a professional human player at the board game Go, to make a ChatGPT-rivaling chatbot called Gemini.
+
+Apple is developing AI tools to challenge OpenAI, Google and others.
+
+Graph facts:
+- How ego and fear fuelled the rise of artificial intelligence -MENTIONS-> ChatGPT
+- There’s something going on with AI startups in France -MENTIONS-> ChatGPT
+- Founders, are events useful? -MENTIONS-> ChatGPT
+- One year later, ChatGPT is still alive and kicking -MENTIONS-> ChatGPT
+- Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier -MENTIONS-> ChatGPT
+
+Entities: ChatGPT, ChatGPT: Everything you need to know about the AI-powered chatbot, Together, Claude, DeepMind, AlphaGo, Go, AI tools, Apple, TechCrunch,
+Bard, AI, Google, Anthropic, OpenAI
+</item 8>
+
+<item 9>
+Graph query row:
+article: One year later, ChatGPT is still alive and kicking
+published_on: 2023-11-30T14:10:43+00:00
+passages: ['One year later, ChatGPT is still alive and kicking (TechCrunch, 2023-11-30T14:10:43+00:00)\nChatGPT, OpenAI’s viral AI chatbot, turns one
+today.\n\nA year ago, OpenAI released ChatGPT as a “low-key research preview” — reportedly spurred in part by an intense rivalry with AI startup Anthropic. The
+goal, OpenAI leadership told the OpenAI rank-and-file at the time, was to gather more data on how people use and interact with generative AI to inform the
+development of OpenAI’s future models.\n\nInitially a basic free-to-use, web-based and chat-focused interface on top of one of OpenAI’s existing models,
+GPT-3.5, ChatGPT would go on to become the company’s most popular product… ever — and the fastest-growing consumer app in history.\n\na year ago tonight we were
+probably just sitting around the office putting the finishing touches on chatgpt before the next morning’s launch.', 'One year later, ChatGPT is still alive and
+kicking (TechCrunch, 2023-11-30T14:10:43+00:00)\nwhat a year it’s been… — Sam Altman (@sama) November 30, 2023\n\nIn the months following its launch, ChatGPT
+gained paid tiers with additional features, including a plan geared toward enterprise customers. OpenAI also upgraded ChatGPT with web searching, document
+analyzing and image creating (via DALL-E 3) capabilities. And, leaning on speech recognition, voice synthesis and text-image understanding models developed in
+house, OpenAI gave ChatGPT the ability to “hear,” “speak,” “see” and take actions.\n\nIndeed, ChatGPT became priority number one at OpenAI — not simply a
+one-off product but a development platform to build upon. And, as often happens in a competition-driven marketplace, it shifted the focus at other AI firms and
+research labs, too.\n\nGoogle scrambled to launch a response to ChatGPT, eventually releasing Bard, a more or less comparable AI chatbot, in February.', 'One
+year later, ChatGPT is still alive and kicking (TechCrunch, 2023-11-30T14:10:43+00:00)\nCountless other ChatGPT rivals and derivatives have arrived to market
+since, most recently Amazon Q, a more business-oriented take on ChatGPT. DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot,
+Gemini, before the end of the year.\n\nStella Biderman, an AI researcher at Booz Allen Hamilton and the open research group EleutherAI, told me that she doesn’t
+see ChatGPT as an AI breakthrough per se. (OpenAI, which has released dozens of research papers on its models, tellingly never released one on ChatGPT.) But,
+she says, ChatGPT was a bonafide “user experience breakthrough” — taking generative AI mainstream.\n\n“The primary impact [ChatGPT] has had [is] encouraging
+people training AIs to try to mimic it, or encouraging people studying AIs to use it as their central object of study,” Biderman said.', 'One year later,
+ChatGPT is still alive and kicking (TechCrunch, 2023-11-30T14:10:43+00:00)\n“Previously you needed to have some skill, albeit not be an expert, to consistently
+get usable stuff out of [text-generating models]. Now that that’s changed … [ChatGPT has] brought a very large amount of attention to and discussion about the
+technology.”\n\nAnd ChatGPT still gets a lot of attention — at least if third-party statistics are anything to go by.\n\nAccording to Similarweb, the web
+metrics company, OpenAI’s ChatGPT web portal saw 140.7 million unique visitors in October while the ChatGPT iOS and Android apps have 4.9 million monthly active
+users in the U.S. alone. Data from analytics firm Data.ai suggests that the apps have generated nearly $30 million in subscription revenue — a hefty amount
+considering that they launched just a few months ago.\n\nOne of the reasons for ChatGPT’s enduring popularity is its ability to conduct conversations that are
+“convincingly real,” according to Ruoxi Shang, a third-year PhD student at the University of Washington studying human-AI interaction.', 'One year later,
+ChatGPT is still alive and kicking (TechCrunch, 2023-11-30T14:10:43+00:00)\nPrior to ChatGPT, people were already familiar with chatbots — they’ve existed for
+decades after all. But the models powering ChatGPT are much more sophisticated than what many users were accustomed to.\n\n“Human-computer interaction
+researchers have studied how conversational interfaces can improve understandability of information, and the socialization aspects of chatbots bring increased
+engagement,” Shang said. “Now, AI models have enabled conversational agents to conduct conversations nearly indistinguishable from human dialogues.”\n\nAdam
+Hyland, also a PhD student studying AI at the University of Washington, points out the emotional component: conversations with ChatGPT have a palpably different
+“feel” than with more rudimentary chatbots.\n\n“In the 1960s, ELIZA offered a chatbot, the response to which was very similar to how people reacted to ChatGPT,”
+Hyland said, referring to the chatbot created by MIT computer scientist Joseph Weizenbaum in 1966. “Humans interacting with the system inferred emotional
+content and a narrative through line in chat messages.”', 'One year later, ChatGPT is still alive and kicking (TechCrunch, 2023-11-30T14:10:43+00:00)\n“Humans
+interacting with the system inferred emotional content and a narrative through line in chat messages.”\n\nIndeed, ChatGPT has impressed cynics like The New York
+Times’ Kevin Roose, who called it the “the best AI chatbot ever released to the general public.” In The Atlantic magazine’s “Breakthroughs of the Year” for
+2022, Derek Thompson included ChatGPT as part of “the generative-AI eruption” that “may change our mind about how we work, how we think and what human
+creativity is.”\n\nChatGPT’s skills extend beyond conversation, of course — another likely reason for its staying power. ChatGPT can complete and debug code,
+compose music and essays, answer test questions, generate business ideas, write poetry and song lyrics, translate and summarize text and even emulate a computer
+running Linux.', 'One year later, ChatGPT is still alive and kicking (TechCrunch, 2023-11-30T14:10:43+00:00)\nAn MIT study showed that, for tasks like writing
+cover letters, “delicate” emails and cost-benefit analyses, ChatGPT decreased the amount of time it took workers to complete the tasks by 40% while increasing
+output quality by 18%, as measured by third-party evaluators.\n\n“Because [the AI models powering OpenAI] have been trained extensively on vast amounts of
+data,” Shang added, “they [have] shifted focus from training specialized chatbots for specific domains to creating more general-purpose systems that can handle
+a variety of topics easily through prompting with instructions … [Chatbots like ChatGPT] don’t require users to learn any new form of language, as long as they
+provide a task and some desired output just like how a manager would communicate to an intern.”\n\nNow, there’s mixed evidence as to whether ChatGPT is actually
+being used in these ways.', 'One year later, ChatGPT is still alive and kicking (TechCrunch, 2023-11-30T14:10:43+00:00)\nA Pew Research survey from August
+showed that only 18% of Americans have ever tried ChatGPT, and that most who’ve tried it use the chatbot for entertainment purposes or answering one-off
+questions. Teens might not be using ChatGPT all that often, either (despite what some alarmist headlines imply), with one poll finding that only two in five
+teenagers have used the tech in the last six months.\n\nChatGPT’s limitations might be to blame.\n\nWhile undeniably capable, ChatGPT is far from perfect, owing
+to the way it was developed and “taught.” Trained to predict the likeliest next word — or likeliest next parts of words — by observing billions of examples of
+text from around the web, ChatGPT sometimes “hallucinates,” or writes answers that sound plausible but aren’t factually correct. (ChatGPT’s hallucinating
+tendencies got its answers banned from the Q&A site Stack Overflow and from at least one academic conference — and accused of defamation.)', 'One year later,
+ChatGPT is still alive and kicking (TechCrunch, 2023-11-30T14:10:43+00:00)\nChatGPT can also show bias in its responses, answering in sexist and racist, overtly
+Anglocentric ways — or regurgitating portions of the data that it was trained on.\n\nLawyers have been sanctioned after using ChatGPT to assist in writing
+motions, discovering — too late — that ChatGPT invented fake lawsuit citations. And scores of authors have sued OpenAI over the chatbot regurgitating portions
+of their work — and not receiving compensation for it.\n\nSo what comes next? What might ChatGPT’s second year hold, if not more of the same?\n\nInterestingly —
+and fortunately — some of the more dire predictions about ChatGPT didn’t come to pass. Some researchers feared the chatbot would be used to generate
+disinformation on a massive scale, while others sounded the alarm over ChatGPT’s phishing email-, spam- and malware-generating potential.', 'One year later,
+ChatGPT is still alive and kicking (TechCrunch, 2023-11-30T14:10:43+00:00)\nThe concerns pushed policymakers in Europe to mandate security assessments for any
+products using generative AI systems like ChatGPT, and over 20,000 signatories — including Elon Musk and Apple co-founder Steve Wozniak — to sign an open letter
+calling for the immediate pause of large-scale AI experiments like ChatGPT.\n\nBut examples of ChatGPT abuse in the wild have been few and far between — so
+far.\n\nWith the launch of GPTs, OpenAI’s tool for building custom conversational, action-taking AI systems powered by OpenAI’s models, including the models
+underpinning ChatGPT, ChatGPT could become more a gateway to a broader ecosystem of AI-powered chatbots than the end-all-be-all.\n\nWith GPTs, a user can train
+a model on a cookbook collection, for example, so that it can answer questions about ingredients for a specific recipe. Or they can give a model their company’s
+proprietary codebases so that developers can check their style or generate code in line with best practices.', 'One year later, ChatGPT is still alive and
+kicking (TechCrunch, 2023-11-30T14:10:43+00:00)\nSome of the initial GPTs — all created by OpenAI — include a Gen Z meme translator, a coloring book and sticker
+creator, a data visualizer, a board game explainer and a creative writing coach. Now, ChatGPT can accomplish these tasks given carefully engineered prompts and
+foreknowledge. But purpose-built GPTs drastically simplify things — and might just kill the cottage industry that emerged around creating and editing prompts to
+feed to ChatGPT.\n\nGPTs introduce a level of personalization far beyond that ChatGPT offers today, and — once OpenAI sorts out its capacity issues — I expect
+we’ll see an explosion of creativity there. Will ChatGPT be as visible as it once was after GPTs flood the marketplace? Perhaps not. But it won’t go away —
+it’ll simply adapt and evolve, no doubt in ways not even its creators can anticipate.']
+connections: [{'amount': None, 'entity': 'DeepMind', 'related': 'How ego and fear fuelled the rise of artificial intelligence', 'related_date': None,
+'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'DeepMind', 'related': 'There’s something going on with AI startups in France',
+'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'DeepMind', 'related': 'One year later, ChatGPT is still alive and
+kicking', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'DeepMind', 'related': 'ChatGPT: Everything you need to
+know about the AI-powered chatbot', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'DeepMind', 'related': 'How the
+OpenAI fiasco could bolster Meta and the ‘open AI’ movement', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity':
+'DeepMind', 'related': 'regulation', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'DeepMind', 'related': 'Gemini',
+'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'DeepMind', 'related': 'Hassabis', 'related_date': None,
+'relationship': 'WORKS_FOR', 'stake': None}, {'amount': None, 'entity': 'DeepMind', 'related': 'Victoria Krakovna', 'related_date': None, 'relationship':
+'WORKS_FOR', 'stake': None}, {'amount': None, 'entity': 'DeepMind', 'related': 'auction', 'related_date': None, 'relationship': 'PARTICIPATED_IN', 'stake':
+None}, {'amount': None, 'entity': 'DeepMind', 'related': 'London', 'related_date': None, 'relationship': 'LOCATED_IN', 'stake': None}, {'amount': None,
+'entity': 'DeepMind', 'related': 'AlphaGo', 'related_date': None, 'relationship': 'MADE', 'stake': None}, {'amount': None, 'entity': 'DeepMind', 'related':
+'Gemini', 'related_date': None, 'relationship': 'MADE', 'stake': None}, {'amount': None, 'entity': 'DeepMind', 'related': 'Google', 'related_date': None,
+'relationship': 'OWNS', 'stake': None}, {'amount': None, 'entity': 'DeepMind', 'related': 'Google', 'related_date': None, 'relationship': 'PART_OF', 'stake':
+None}, {'amount': None, 'entity': 'DeepMind', 'related': 'DeepMind ethics board', 'related_date': None, 'relationship': 'PART_OF', 'stake': None}, {'amount':
+None, 'entity': 'DeepMind', 'related': 'Demis Hassabis', 'related_date': None, 'relationship': 'FOUNDED', 'stake': None}, {'amount': None, 'entity': 'DeepMind',
+'related': 'Mustafa Suleyman', 'related_date': None, 'relationship': 'FOUNDED', 'stake': None}, {'amount': None, 'entity': 'DeepMind', 'related': 'Hassabis',
+'related_date': None, 'relationship': 'FOUNDED', 'stake': None}, {'amount': None, 'entity': 'DeepMind', 'related': 'Suleyman', 'related_date': None,
+'relationship': 'FOUNDED', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Apple', 'related_date': None, 'relationship': 'MENTIONS', 'stake':
+None}, {'amount': None, 'entity': 'Google', 'related': 'AI Principles', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': 'Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier', 'related_date': None,
+'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Apple defends Google Search deal in court: ‘There wasn’t a valid
+alternative’', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'More from the US v Google
+trial: vertical search, pre-installs and the case of Firefox/Yahoo', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': 'Why Mozilla is betting on a decentralized social networking future', 'related_date': None, 'relationship': 'MENTIONS', 'stake':
+None}, {'amount': None, 'entity': 'Google', 'related': 'How ego and fear fuelled the rise of artificial intelligence', 'related_date': None, 'relationship':
+'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Wired opinion article', 'related_date': None, 'relationship': 'MENTIONS', 'stake':
+None}, {'amount': None, 'entity': 'Google', 'related': 'Is Google Search better than the rest? And is that fair?', 'related_date': None, 'relationship':
+'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'News publisher files class action antitrust suit against Google, citing AI’s harms
+to their bottom line', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'There’s something
+going on with AI startups in France', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'What to
+know about Fortnite maker Epic Games’ antitrust battle with Google, starting today', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None},
+{'amount': None, 'entity': 'Google', 'related': 'Founders, are events useful?', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount':
+None, 'entity': 'Google', 'related': 'Passwords? We don’t need no steenkin’ passwords', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None},
+{'amount': None, 'entity': 'Google', 'related': 'One year later, ChatGPT is still alive and kicking', 'related_date': None, 'relationship': 'MENTIONS', 'stake':
+None}, {'amount': None, 'entity': 'Google', 'related': 'ChatGPT: Everything you need to know about the AI-powered chatbot', 'related_date': None,
+'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'A comprehensive list of 2023 tech layoffs', 'related_date': None,
+'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'How the OpenAI fiasco could bolster Meta and the ‘open AI’
+movement', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Govee’s colorful LED light strips
+are on sale just in time for Halloween', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'From
+Ten Hag’s future to a leaking roof: Ratcliffe’s Manchester United in-tray', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': 'The best Black Friday deals you can get for under $25', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None},
+{'amount': None, 'entity': 'Google', 'related': 'Everton players and fans will be fired up by points penalty, asserts Sean Dyche', 'related_date': None,
+'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Discogs’ vibrant vinyl community is shattering', 'related_date':
+None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Biden’s AI EO hailed as broad, but not deep without
+legislation to match', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Chelsea secure
+last-eight spot after Raheem Sterling sinks Blackburn', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google',
+'related': 'Why We Desperately Need a New (and Better) Google', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': 'The people who ruined the internet', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': 'People are turning to Snap Map for firsthand perspectives from Gaza', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None},
+{'amount': None, 'entity': 'Google', 'related': 'Early impressions of Google’s Gemini aren’t great', 'related_date': None, 'relationship': 'MENTIONS', 'stake':
+None}, {'amount': None, 'entity': 'Google', 'related': 'The restaurant nearest Google', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None},
+{'amount': None, 'entity': 'Google', 'related': 'Meta seeks legislation that would require parents to approve teens’ app downloads', 'related_date': None,
+'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Tim Sweeney on Epic’s victory royale over Google', 'related_date':
+None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'England thrash Scotland but cannot avoid Team GB Olympic
+heartbreak', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': '‘Mass breach of privacy’: TikTok
+under fire for tracking users online', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'If
+your startup doesn’t seem impossible at first, it’s not hard enough', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': 'The best Prime Day smart home deals', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': 'England choose survival over oblivion and a chance of summer trip to France', 'related_date': None, 'relationship': 'MENTIONS',
+'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more',
+'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': "Sex, Signal messages, and sabotaging FTX's
+code: SBF execs and Bahamas roommates tell all in court", 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google',
+'related': 'The best VPN services for 2023', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related':
+'Keep Labs’ smart storage redefines medication management', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': 'The best October Prime Day gaming deals', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': '5 things we learned so far about the Google antitrust case', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount':
+None, 'entity': 'Google', 'related': 'Ten Hag’s gamble pays off against Chelsea as McTominay steals show | Jonathan Liew', 'related_date': None, 'relationship':
+'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Deepfake election risks trigger EU call for more generative AI safeguards',
+'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'The 30 best Amazon Prime Day deals for
+October 2023', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Meta and IBM form an AI
+Alliance, but to what end?', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'NMPA: Generative
+AI is ‘the greatest risk to the human creative class that has ever existed’', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': 'The Epic v. Google trial may come down to simple v. complicated', 'related_date': None, 'relationship': 'MENTIONS', 'stake':
+None}, {'amount': None, 'entity': 'Google', 'related': 'Deft is building e-commerce search to help you find the right product quickly', 'related_date': None,
+'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': "Sweeping White House AI executive order takes aim at the
+technology's toughest challenges", 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'These Are
+Our Favorite Walmart Cyber Monday Deals', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Ten
+Hag demands both positivity and pragmatism from erratic Onana', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': 'Google fakes an AI demo, Grand Theft Auto VI goes viral and Spotify cuts jobs', 'related_date': None, 'relationship': 'MENTIONS', 'stake':
+None}, {'amount': None, 'entity': 'Google', 'related': 'Earnings week ahead: Amazon, Microsoft, Alphabet, Meta, Ford, GM and more', 'related_date': None,
+'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'European roundup: Bellingham helps Real Madrid go top while Bayern
+draw', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Epic v. Google, explained',
+'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'The Ray-Ban Meta smart glasses actually make
+the future look cool', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': '8 predictions for AI
+in 2024', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Here are the best deals on
+headphones and wireless earbuds we could find', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google',
+'related': 'Ten Hag’s Manchester United stand up and die at club stuck in the past tense', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None},
+{'amount': None, 'entity': 'Google', 'related': 'Sony Music has issued nearly 10,000 deepfake takedowns… and other things we learned from Dennis Kooker’s speech
+about AI', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Sony Music’s artists aren’t
+involved in YouTube’s new voice-cloning AI experiment', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google',
+'related': 'Sony Music’s artists aren’t involved in YouTube’s new voice-cloning AI experiment.', 'related_date': None, 'relationship': 'MENTIONS', 'stake':
+None}, {'amount': None, 'entity': 'Google', 'related': 'Sony Music’s artists aren’t involved in YouTube’s new voice-cloning AI experiment. Not unrelated:
+Google’s recent filing with the US Copyright Office.', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google',
+'related': 'Temu was the most-downloaded iPhone app in the U.S. in 2023', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': 'Know the price-matching policies for Best Buy, Target, Walmart, and others', 'related_date': None, 'relationship': 'MENTIONS',
+'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more', 'related_date':
+None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Israel’s startup ecosystem: down but not out',
+'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Warner Music Group boss Robert Kyncl on AI,
+why labels still exist, and 2 other things we learned from his Q&A at the Code Conference', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None},
+{'amount': None, 'entity': 'Google', 'related': 'French soccer players back African mobile video network StarNews Mobile in $3M round', 'related_date': None,
+'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'EU commissioner sidesteps MEPs’ questions about CSAM
+microtargeting', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'The new, ‘efficient’ Spotify
+has a very different approach to podcasting', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related':
+'ASX set to rise ahead of inflation report after big tech lifts Wall Street', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': 'Spill toasts one year with a 2.7M seed extension, Kerry Washington and champagne', 'related_date': None, 'relationship':
+'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'The UK just laid out new rules for the internet — it only gets harder from here',
+'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Tesla ‘digs its own grave with the
+Cybertruck,’ Convoy collapses and Rivian scores a win at Rebelle', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': '78 Absolute Best October Prime Day Deals (2023)', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': 'EU says incoming rules for general purpose AIs can evolve over time', 'related_date': None, 'relationship': 'MENTIONS', 'stake':
+None}, {'amount': None, 'entity': 'Google', 'related': "India to be one of world's fastest growing economies over next decade", 'related_date': None,
+'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Cruise hits the brakes on driverless, UAW makes progress and more
+EV backpedaling', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Liverpool enjoy home
+comforts but Dyche’s Everton offer derby danger | Andy Hunter', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': 'The 26 best Amazon Prime Day deals you can still shop for today', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None},
+{'amount': None, 'entity': 'Google', 'related': 'Some of our favorite devices are on sale for Black Friday.', 'related_date': None, 'relationship': 'MENTIONS',
+'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'The best anti-Prime Big Deal Day deals', 'related_date': None, 'relationship': 'MENTIONS',
+'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Pebble, the Twitter alternative previously known as T2, is shutting down', 'related_date':
+None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'The best Prime Day deals on headphones for October 2023',
+'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Palestine’s growing tech industry has been
+literally blown apart by Israel’s war on Hamas', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Google',
+'related': 'The best apps and tools for managing your money online', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': 'Is Google Search better than the rest? And is that fair?', 'related_date': None, 'relationship': 'SAID', 'stake': None},
+{'amount': None, 'entity': 'Google', 'related': 'App store competition', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': 'Chat logs and documents provided to the court', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': 'workforce reductions', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google',
+'related': 'open source AI', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Apple',
+'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'misinformation', 'related_date': None,
+'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Bard', 'related_date': None, 'relationship': 'SAID', 'stake': None},
+{'amount': None, 'entity': 'Google', 'related': 'Gemini Pro', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google',
+'related': 'Thai food near me', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'local search',
+'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'bias', 'related_date': None, 'relationship':
+'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Activision competing store', 'related_date': None, 'relationship': 'SAID', 'stake':
+None}, {'amount': None, 'entity': 'Google', 'related': 'Epic', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': 'ethical reviews', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related':
+'security', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'safety', 'related_date': None,
+'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Meta’s open source AI approach', 'related_date': None, 'relationship':
+'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'AI training', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount':
+None, 'entity': 'Google', 'related': 'Android sideloading flow', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': 'AI-generated content', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related':
+'Gemini', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'sideloaded apps equal gaping security
+holes', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'fair use', 'related_date': None,
+'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'YouTube', 'related_date': None, 'relationship': 'SAID', 'stake': None},
+{'amount': None, 'entity': 'Google', 'related': 'Artificial Intelligence and Copyright', 'related_date': None, 'relationship': 'SAID', 'stake': None},
+{'amount': None, 'entity': 'Google', 'related': 'ingestion of copyrighted material for training generative AI platforms', 'related_date': None, 'relationship':
+'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'US copyright law', 'related_date': None, 'relationship': 'SAID', 'stake': None},
+{'amount': None, 'entity': 'Google', 'related': 'copyright harvesting', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': 'privacy', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'generative AI',
+'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Cue', 'related_date': None, 'relationship':
+'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Rosenberg', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount':
+None, 'entity': 'Google', 'related': 'Barry Diller', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google',
+'related': 'Mitchell Baker', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Suleyman',
+'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Megan Grey', 'related_date': None,
+'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Helena World Chronicle', 'related_date': None, 'relationship': 'SAID',
+'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Epic Games', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': 'federal government', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google',
+'related': 'Forrester', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Sullivan',
+'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'SEOs', 'related_date': None, 'relationship':
+'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Ray', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': 'Cutts', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Lee',
+'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Sacha Haworth', 'related_date': None,
+'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Tim Sweeney', 'related_date': None, 'relationship': 'SAID', 'stake':
+None}, {'amount': None, 'entity': 'Google', 'related': 'Don Harrison', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': 'Samantha Hoffman', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related':
+'Wilkins', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'U.S. government', 'related_date':
+None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Pichai', 'related_date': None, 'relationship': 'SAID', 'stake':
+None}, {'amount': None, 'entity': 'Google', 'related': 'DOJ', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google',
+'related': 'Gary Bornstein', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Bornstein',
+'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Pomerantz', 'related_date': None, 'relationship':
+'SAID', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Zach Hudson', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount':
+None, 'entity': 'Google', 'related': 'Justice Department', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Google',
+'related': 'Gary Wang', 'related_date': None, 'relationship': 'WORKS_FOR', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'John Schmidtlein',
+'related_date': None, 'relationship': 'WORKS_FOR', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Jamie Rosenberg', 'related_date': None,
+'relationship': 'WORKS_FOR', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Sundar Pichai', 'related_date': None, 'relationship': 'WORKS_FOR',
+'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Hinton', 'related_date': None, 'relationship': 'WORKS_FOR', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': 'Alan Eustace', 'related_date': None, 'relationship': 'WORKS_FOR', 'stake': None}, {'amount': None, 'entity': 'Google',
+'related': 'Kent Walker', 'related_date': None, 'relationship': 'WORKS_FOR', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Matt Cutts',
+'related_date': None, 'relationship': 'WORKS_FOR', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Danny Sullivan', 'related_date': None,
+'relationship': 'WORKS_FOR', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Sullivan', 'related_date': None, 'relationship': 'WORKS_FOR',
+'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Cutts', 'related_date': None, 'relationship': 'WORKS_FOR', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': 'Prabhakar Raghavan', 'related_date': None, 'relationship': 'WORKS_FOR', 'stake': None}, {'amount': None, 'entity': 'Google',
+'related': 'David Drummond', 'related_date': None, 'relationship': 'WORKS_FOR', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Glenn
+Pomerantz', 'related_date': None, 'relationship': 'WORKS_FOR', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Ilya Sutskever', 'related_date':
+None, 'relationship': 'WORKS_FOR', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Lewis', 'related_date': None, 'relationship': 'WORKS_FOR',
+'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Bradley Horowitz', 'related_date': None, 'relationship': 'WORKS_FOR', 'stake': None},
+{'amount': None, 'entity': 'Google', 'related': 'Dalia Awad', 'related_date': None, 'relationship': 'WORKS_FOR', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': 'Google-Apple revenue-share deal', 'related_date': None, 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': 'Google antitrust lawsuit with Match Group', 'related_date': 'last week', 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount':
+None, 'entity': 'Google', 'related': 'Google trial with Epic Games', 'related_date': 'November 6', 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount':
+None, 'entity': 'Google', 'related': 'US v Google trial', 'related_date': None, 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': 'auction', 'related_date': None, 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount': None, 'entity': 'Google', 'related':
+'quality tests', 'related_date': '2022', 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Epic Games lawsuit
+against Google over app store antitrust issues', 'related_date': None, 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount': None, 'entity': 'Google',
+'related': 'Epic Games’ antitrust battle with Google', 'related_date': 'today', 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': 'deal between Google and Samsung', 'related_date': None, 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': 'Google developer agreements', 'related_date': None, 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': 'three-year agreement', 'related_date': 'January 2020', 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': "Epic's antitrust lawsuit", 'related_date': None, 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount': None, 'entity': 'Google',
+'related': "Google's antitrust lawsuit with the Department of Justice", 'related_date': None, 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount':
+None, 'entity': 'Google', 'related': 'antitrust battle with Google', 'related_date': 'starting today', 'relationship': 'PARTICIPATED_IN', 'stake': None},
+{'amount': None, 'entity': 'Google', 'related': '2023 I/O event', 'related_date': None, 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': 'Activision-Google deal', 'related_date': None, 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': 'Epic’s victory royale over Google', 'related_date': None, 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': 'Epic v. Google', 'related_date': None, 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount': None, 'entity': 'Google', 'related':
+'U.S. government’s antitrust trial against Google', 'related_date': None, 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': 'lucrative search agreement', 'related_date': None, 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount': None, 'entity': 'Google',
+'related': 'Talks to secure licenses for artists’ vocals and musical melodies', 'related_date': 'earlier this year', 'relationship': 'PARTICIPATED_IN', 'stake':
+None}, {'amount': None, 'entity': 'Google', 'related': 'trial', 'related_date': 'starting November 6th', 'relationship': 'PARTICIPATED_IN', 'stake': None},
+{'amount': None, 'entity': 'Google', 'related': 'Epic sued Google', 'related_date': '2020', 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': 'Epic v. Google trial', 'related_date': 'November 6th', 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': 'tentative settlement over app store antitrust claims', 'related_date': None, 'relationship': 'PARTICIPATED_IN', 'stake': None},
+{'amount': None, 'entity': 'Google', 'related': 'settlement', 'related_date': None, 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': 'US v. Google antitrust trial', 'related_date': None, 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': "Epic's trial", 'related_date': None, 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount': None, 'entity': 'Google',
+'related': 'Epic v. Google lawsuit', 'related_date': None, 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount': None, 'entity': 'Google', 'related':
+'Google’s submission to the United States Copyright Office', 'related_date': None, 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': 'Google’s recent filing with the US Copyright Office', 'related_date': None, 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount':
+None, 'entity': 'Google', 'related': 'Google filing with the US Copyright Office', 'related_date': 'October 30', 'relationship': 'PARTICIPATED_IN', 'stake':
+None}, {'amount': None, 'entity': 'Google', 'related': 'Google USCO submission', 'related_date': None, 'relationship': 'PARTICIPATED_IN', 'stake': None},
+{'amount': None, 'entity': 'Google', 'related': 'Google’s USCO filing', 'related_date': None, 'relationship': 'PARTICIPATED_IN', 'stake': None}, {'amount':
+None, 'entity': 'Google', 'related': 'US v Google trial', 'related_date': None, 'relationship': 'ACCUSED_OF', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': 'anticompetitive behavior', 'related_date': None, 'relationship': 'ACCUSED_OF', 'stake': None}, {'amount': None, 'entity': 'Google',
+'related': 'U.S. antitrust law', 'related_date': None, 'relationship': 'ACCUSED_OF', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Sherman
+Act', 'related_date': None, 'relationship': 'ACCUSED_OF', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'class action antitrust suit',
+'related_date': None, 'relationship': 'ACCUSED_OF', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'misappropriation of Publishers’ content',
+'related_date': None, 'relationship': 'ACCUSED_OF', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Epic Games lawsuit against Google over app
+store antitrust issues', 'related_date': None, 'relationship': 'ACCUSED_OF', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'class action
+antitrust suit against Google', 'related_date': None, 'relationship': 'ACCUSED_OF', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'digital ad
+technologies', 'related_date': None, 'relationship': 'ACCUSED_OF', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'anti-competitive practices',
+'related_date': None, 'relationship': 'ACCUSED_OF', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'search monopoly', 'related_date': None,
+'relationship': 'ACCUSED_OF', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'antitrust', 'related_date': None, 'relationship': 'ACCUSED_OF',
+'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'monopoly', 'related_date': None, 'relationship': 'ACCUSED_OF', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': 'anti-competition law', 'related_date': None, 'relationship': 'ACCUSED_OF', 'stake': None}, {'amount': None, 'entity': 'Google',
+'related': 'systematically destroying chats', 'related_date': None, 'relationship': 'ACCUSED_OF', 'stake': None}, {'amount': None, 'entity': 'Google',
+'related': 'anticompetitive conduct', 'related_date': None, 'relationship': 'ACCUSED_OF', 'stake': None}, {'amount': None, 'entity': 'Google', 'related':
+'antitrust law', 'related_date': None, 'relationship': 'ACCUSED_OF', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'unlawful monopoly',
+'related_date': None, 'relationship': 'ACCUSED_OF', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'making potential evidence disappear',
+'related_date': None, 'relationship': 'ACCUSED_OF', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'illegal tying', 'related_date': None,
+'relationship': 'ACCUSED_OF', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Android app distribution', 'related_date': None, 'relationship':
+'ACCUSED_OF', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Android in-app payment processing', 'related_date': None, 'relationship':
+'ACCUSED_OF', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'deleting potentially incriminating messages', 'related_date': None,
+'relationship': 'ACCUSED_OF', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Epic', 'related_date': None, 'relationship': 'ACCUSED_OF',
+'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'US', 'related_date': None, 'relationship': 'LOCATED_IN', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': 'Israel', 'related_date': None, 'relationship': 'LOCATED_IN', 'stake': None}, {'amount': None, 'entity': 'Google', 'related':
+'Gmail', 'related_date': None, 'relationship': 'MADE', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Pixel 8', 'related_date': None,
+'relationship': 'MADE', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Chrome', 'related_date': None, 'relationship': 'MADE', 'stake': None},
+{'amount': None, 'entity': 'Google', 'related': 'Play', 'related_date': None, 'relationship': 'MADE', 'stake': None}, {'amount': None, 'entity': 'Google',
+'related': 'Google travel listings', 'related_date': None, 'relationship': 'MADE', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Google
+Search', 'related_date': None, 'relationship': 'MADE', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'User Choice Billing', 'related_date':
+None, 'relationship': 'MADE', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Google first-party billing system', 'related_date': None,
+'relationship': 'MADE', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Google Play', 'related_date': None, 'relationship': 'MADE', 'stake':
+None}, {'amount': None, 'entity': 'Google', 'related': 'Search', 'related_date': None, 'relationship': 'MADE', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': 'Google Pixel Buds Pro', 'related_date': None, 'relationship': 'MADE', 'stake': None}, {'amount': None, 'entity': 'Google', 'related':
+'Google Pixel Watch', 'related_date': None, 'relationship': 'MADE', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Bard', 'related_date':
+None, 'relationship': 'MADE', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Gemini Pro', 'related_date': None, 'relationship': 'MADE',
+'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Google Maps', 'related_date': None, 'relationship': 'MADE', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': 'Google One VPN', 'related_date': None, 'relationship': 'MADE', 'stake': None}, {'amount': None, 'entity': 'Google', 'related':
+'Google-developed AI tools', 'related_date': None, 'relationship': 'MADE', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'enterprise-focused
+AI services', 'related_date': None, 'relationship': 'MADE', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'multi-search', 'related_date':
+None, 'relationship': 'MADE', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'multi-search feature', 'related_date': None, 'relationship':
+'MADE', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Nest Cam', 'related_date': None, 'relationship': 'MADE', 'stake': None}, {'amount':
+None, 'entity': 'Google', 'related': 'Gemini', 'related_date': None, 'relationship': 'MADE', 'stake': None}, {'amount': None, 'entity': 'Google', 'related':
+'Gemini Ultra', 'related_date': None, 'relationship': 'MADE', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Google Pixel Buds A-Series',
+'related_date': None, 'relationship': 'MADE', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Google Cloud Platform', 'related_date': None,
+'relationship': 'MADE', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Google reCaptcha', 'related_date': None, 'relationship': 'MADE',
+'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Google Nest Thermostat', 'related_date': None, 'relationship': 'MADE', 'stake': None},
+{'amount': None, 'entity': 'Google', 'related': 'Google Nest Hub (second-gen)', 'related_date': None, 'relationship': 'MADE', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': 'Gmail', 'related_date': None, 'relationship': 'OWNS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Google
+Search', 'related_date': None, 'relationship': 'OWNS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Google Play', 'related_date': None,
+'relationship': 'OWNS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Google Play Store', 'related_date': None, 'relationship': 'OWNS',
+'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'DeepMind', 'related_date': None, 'relationship': 'OWNS', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': 'Bard', 'related_date': None, 'relationship': 'OWNS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Riot',
+'related_date': None, 'relationship': 'OWNS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Google Maps', 'related_date': None,
+'relationship': 'OWNS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Gemini', 'related_date': None, 'relationship': 'OWNS', 'stake': None},
+{'amount': None, 'entity': 'Google', 'related': 'YouTube', 'related_date': None, 'relationship': 'OWNS', 'stake': None}, {'amount': None, 'entity': 'Google',
+'related': 'Alphabet', 'related_date': None, 'relationship': 'OWNS', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Yahoo', 'related_date':
+None, 'relationship': 'COMPETES_WITH', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'DuckDuckGo', 'related_date': None, 'relationship':
+'COMPETES_WITH', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'ChatGPT', 'related_date': None, 'relationship': 'COMPETES_WITH', 'stake':
+None}, {'amount': None, 'entity': 'Google', 'related': 'Bing', 'related_date': None, 'relationship': 'COMPETES_WITH', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': 'Apple', 'related_date': None, 'relationship': 'COMPETES_WITH', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Reddit',
+'related_date': None, 'relationship': 'COMPETES_WITH', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'large language models', 'related_date':
+None, 'relationship': 'COMPETES_WITH', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Brave', 'related_date': None, 'relationship':
+'COMPETES_WITH', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'OpenAI', 'related_date': None, 'relationship': 'COMPETES_WITH', 'stake':
+None}, {'amount': None, 'entity': 'Google', 'related': 'TikTok', 'related_date': None, 'relationship': 'COMPETES_WITH', 'stake': None}, {'amount': None,
+'entity': 'Google', 'related': 'Epic', 'related_date': None, 'relationship': 'COMPETES_WITH', 'stake': None}, {'amount': None, 'entity': 'Google', 'related':
+'IBM', 'related_date': None, 'relationship': 'COMPETES_WITH', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Deft', 'related_date': None,
+'relationship': 'COMPETES_WITH', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'TicWatch Pro 5', 'related_date': None, 'relationship':
+'COMPETES_WITH', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Alphabet', 'related_date': None, 'relationship': 'PART_OF', 'stake': None},
+{'amount': None, 'entity': 'Google', 'related': 'Partnership on AI', 'related_date': None, 'relationship': 'PART_OF', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': 'Alphabet Inc.', 'related_date': None, 'relationship': 'PART_OF', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Gradient
+Ventures', 'related_date': None, 'relationship': 'PART_OF', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'DeepMind', 'related_date': None,
+'relationship': 'PART_OF', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Google Users & Products', 'related_date': None, 'relationship':
+'PART_OF', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Area 120', 'related_date': None, 'relationship': 'PART_OF', 'stake': None},
+{'amount': None, 'entity': 'Google', 'related': 'web spam team', 'related_date': None, 'relationship': 'PART_OF', 'stake': None}, {'amount': None, 'entity':
+'Google', 'related': 'Larry Page', 'related_date': None, 'relationship': 'FOUNDED', 'stake': None}, {'amount': None, 'entity': 'Google', 'related': 'Sergey
+Brin', 'related_date': None, 'relationship': 'FOUNDED', 'stake': None}, {'amount': None, 'entity': 'Gemini', 'related': 'One year later, ChatGPT is still alive
+and kicking', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Gemini', 'related': 'ChatGPT: Everything you need to
+know about the AI-powered chatbot', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Gemini', 'related': 'Early
+impressions of Google’s Gemini aren’t great', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None, 'entity': 'Gemini', 'related':
+'Google fakes an AI demo, Grand Theft Auto VI goes viral and Spotify cuts jobs', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount':
+None, 'entity': 'Gemini', 'related': '8 predictions for AI in 2024', 'related_date': None, 'relationship': 'MENTIONS', 'stake': None}, {'amount': None,
+'entity': 'Gemini', 'related': 'EU says incoming rules for general purpose AIs can evolve over time', 'related_date': None, 'relationship': 'MENTIONS', 'stake':
+None}, {'amount': None, 'entity': 'Gemini', 'related': 'DeepMind', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity':
+'Gemini', 'related': 'Benjamin Netter', 'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Gemini', 'related': 'Google',
+'related_date': None, 'relationship': 'SAID', 'stake': None}, {'amount': None, 'entity': 'Gemini', 'related': 'DeepMind', 'related_date': None, 'relationship':
+'MADE', 'stake': None}, {'amount': None, 'entity': 'Gemini', 'related': 'Google', 'related_date': None, 'relationship': 'MADE', 'stake': None}, {'amount': None,
+'entity': 'Gemini', 'related': 'Google', 'related_date': None, 'relationship': 'OWNS', 'stake': None}, {'amount': None, 'entity': 'Gemini', 'related':
+'ChatGPT', 'related_date': None, 'relationship': 'COMPETES_WITH', 'stake': None}, {'amount': None, 'entity': 'Gemini', 'related': 'Gemini Pro', 'related_date':
+None, 'relationship': 'PART_OF', 'stake': None}, {'amount': None, 'entity': 'Gemini', 'related': 'Gemini Ultra', 'related_date': None, 'relationship':
+'PART_OF', 'stake': None}]
+</item 9>
+
+<item 10>
+Early impressions of Google’s Gemini aren’t great (TechCrunch, 2023-12-07T16:12:30+00:00)
+This week, Google took the wraps off of Gemini, its new flagship generative AI model meant to power a range of products and services including Bard, Google’s
+ChatGPT competitor. In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds
+the performance of other leading gen AI models like OpenAI’s GPT-4.
+
+But the anecdotal evidence suggests otherwise.
+
+A “lite” version of Gemini, Gemini Pro, began rolling out to Bard yesterday, and it didn’t take long before users began voicing their frustrations with it on X
+(formerly Twitter).
+
+The model fails to get basic facts right, like 2023 Oscar winners:
+
+I'm extremely disappointed with Gemini Pro on Bard. It still give very, very bad results to questions that shouldn't be hard anymore with RAG. A simple question
+like this with a simple answer like this, and it still got it WRONG.
+
+Graph facts:
+- How ego and fear fuelled the rise of artificial intelligence -MENTIONS-> ChatGPT
+- There’s something going on with AI startups in France -MENTIONS-> ChatGPT
+- Founders, are events useful? -MENTIONS-> ChatGPT
+- One year later, ChatGPT is still alive and kicking -MENTIONS-> ChatGPT
+- Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier -MENTIONS-> ChatGPT
+
+Entities: ChatGPT, TechCrunch, GPT-4, RAG, 2023 Oscar winners, Early impressions of Google’s Gemini aren’t great, Bard, Gemini Pro, X, Google, OpenAI, Gemini,
+generative AI
+</item 10>
+=== END ITEM id=156b9a999e67b5d4 ===

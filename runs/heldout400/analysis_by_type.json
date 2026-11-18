@@ -1,0 +1,546 @@
+{
+ "types": [
+  {
+   "type": "comparison_query",
+   "methods": [
+    {
+     "method": "RAG",
+     "answers": 300,
+     "accuracy": 0.5133333333333333,
+     "accuracy_by_repeat": [
+      0.51,
+      0.52,
+      0.51
+     ],
+     "retrieval": 0.4766666666666667,
+     "context_tokens": 2267.33,
+     "query_usd": 0.0002897954,
+     "usd_per_1000_correct": 0.5986978251326139,
+     "latency_median_1worker": 2.273987020991626,
+     "latency_n": 10,
+     "latency_median_4workers": 2.4789013740082737,
+     "abstain": 0.32,
+     "model_calls": null
+    },
+    {
+     "method": "RAPTOR",
+     "answers": 300,
+     "accuracy": 0.48,
+     "accuracy_by_repeat": [
+      0.45,
+      0.5,
+      0.49
+     ],
+     "retrieval": 0.48666666666666664,
+     "context_tokens": 2127.48,
+     "query_usd": 0.0002763820666666667,
+     "usd_per_1000_correct": 0.8844338988532287,
+     "latency_median_1worker": 2.4812261449988,
+     "latency_n": 10,
+     "latency_median_4workers": 2.6762551665015053,
+     "abstain": 0.41,
+     "model_calls": null
+    },
+    {
+     "method": "HippoRAG",
+     "answers": 300,
+     "accuracy": 0.48,
+     "accuracy_by_repeat": [
+      0.46,
+      0.48,
+      0.5
+     ],
+     "retrieval": 0.4816666666666667,
+     "context_tokens": 2281.34,
+     "query_usd": 0.0004061564,
+     "usd_per_1000_correct": 4.076494325769431,
+     "latency_median_1worker": 4.89343854150502,
+     "latency_n": 10,
+     "latency_median_4workers": 2.8884784164838493,
+     "abstain": 0.3233333333333333,
+     "model_calls": null
+    },
+    {
+     "method": "Agentic GraphRAG",
+     "answers": 300,
+     "accuracy": 0.5033333333333333,
+     "accuracy_by_repeat": [
+      0.54,
+      0.46,
+      0.51
+     ],
+     "retrieval": 0.5094444444444445,
+     "context_tokens": 5256.866666666667,
+     "query_usd": 0.0041685908,
+     "usd_per_1000_correct": 14.516814741162205,
+     "latency_median_1worker": 31.83912064548349,
+     "latency_n": 10,
+     "latency_median_4workers": 30.784278166524018,
+     "abstain": 0.24,
+     "model_calls": null
+    }
+   ],
+   "paired": [
+    {
+     "metric": "correct",
+     "vs": "RAG",
+     "n": 100,
+     "diff": -0.010000000000000007,
+     "lo": -0.06666666666666668,
+     "hi": 0.04333333333333333,
+     "wins": 13,
+     "losses": 16
+    },
+    {
+     "metric": "correct",
+     "vs": "HippoRAG",
+     "n": 100,
+     "diff": 0.023333333333333324,
+     "lo": -0.053333333333333344,
+     "hi": 0.09666666666666666,
+     "wins": 17,
+     "losses": 20
+    },
+    {
+     "metric": "correct",
+     "vs": "RAPTOR",
+     "n": 100,
+     "diff": 0.023333333333333327,
+     "lo": -0.046666666666666676,
+     "hi": 0.09333333333333332,
+     "wins": 17,
+     "losses": 16
+    },
+    {
+     "metric": "recall",
+     "vs": "RAG",
+     "n": 100,
+     "diff": 0.03277777777777778,
+     "lo": -0.0066666666666666645,
+     "hi": 0.07388888888888889,
+     "wins": 30,
+     "losses": 18
+    },
+    {
+     "metric": "recall",
+     "vs": "HippoRAG",
+     "n": 100,
+     "diff": 0.027777777777777776,
+     "lo": -0.023333333333333338,
+     "hi": 0.0811111111111111,
+     "wins": 32,
+     "losses": 23
+    },
+    {
+     "metric": "recall",
+     "vs": "RAPTOR",
+     "n": 100,
+     "diff": 0.02277777777777778,
+     "lo": -0.015555555555555553,
+     "hi": 0.06222222222222222,
+     "wins": 30,
+     "losses": 18
+    }
+   ]
+  },
+  {
+   "type": "temporal_query",
+   "methods": [
+    {
+     "method": "RAG",
+     "answers": 300,
+     "accuracy": 0.48333333333333334,
+     "accuracy_by_repeat": [
+      0.47,
+      0.51,
+      0.47
+     ],
+     "retrieval": 0.42833333333333334,
+     "context_tokens": 2245.31,
+     "query_usd": 0.0002913851333333333,
+     "usd_per_1000_correct": 0.6391474832442933,
+     "latency_median_1worker": 2.4838272914930712,
+     "latency_n": 10,
+     "latency_median_4workers": 2.4390957709838403,
+     "abstain": 0.45666666666666667,
+     "model_calls": null
+    },
+    {
+     "method": "RAPTOR",
+     "answers": 300,
+     "accuracy": 0.49,
+     "accuracy_by_repeat": [
+      0.48,
+      0.5,
+      0.49
+     ],
+     "retrieval": 0.41833333333333333,
+     "context_tokens": 2154.46,
+     "query_usd": 0.000283224,
+     "usd_per_1000_correct": 0.8803473566997614,
+     "latency_median_1worker": 2.3588296874950174,
+     "latency_n": 10,
+     "latency_median_4workers": 2.7009891670168145,
+     "abstain": 0.43,
+     "model_calls": null
+    },
+    {
+     "method": "HippoRAG",
+     "answers": 300,
+     "accuracy": 0.5933333333333334,
+     "accuracy_by_repeat": [
+      0.59,
+      0.6,
+      0.59
+     ],
+     "retrieval": 0.3933333333333333,
+     "context_tokens": 2267.33,
+     "query_usd": 0.00040824300000000003,
+     "usd_per_1000_correct": 3.3013548478134727,
+     "latency_median_1worker": 5.321688500000164,
+     "latency_n": 10,
+     "latency_median_4workers": 2.9704839165206067,
+     "abstain": 0.32666666666666666,
+     "model_calls": null
+    },
+    {
+     "method": "Agentic GraphRAG",
+     "answers": 300,
+     "accuracy": 0.56,
+     "accuracy_by_repeat": [
+      0.56,
+      0.54,
+      0.58
+     ],
+     "retrieval": 0.48777777777777775,
+     "context_tokens": 5187.216666666666,
+     "query_usd": 0.003964252466666667,
+     "usd_per_1000_correct": 12.682961463782695,
+     "latency_median_1worker": 32.05551645797095,
+     "latency_n": 10,
+     "latency_median_4workers": 31.6461999585008,
+     "abstain": 0.37,
+     "model_calls": null
+    }
+   ],
+   "paired": [
+    {
+     "metric": "correct",
+     "vs": "RAG",
+     "n": 100,
+     "diff": 0.07666666666666666,
+     "lo": 0.0066666666666666645,
+     "hi": 0.14333333333333334,
+     "wins": 25,
+     "losses": 13
+    },
+    {
+     "metric": "correct",
+     "vs": "HippoRAG",
+     "n": 100,
+     "diff": -0.03333333333333334,
+     "lo": -0.11000000000000001,
+     "hi": 0.039999999999999994,
+     "wins": 19,
+     "losses": 19
+    },
+    {
+     "metric": "correct",
+     "vs": "RAPTOR",
+     "n": 100,
+     "diff": 0.06999999999999999,
+     "lo": -3.885780586188048e-18,
+     "hi": 0.13999999999999999,
+     "wins": 23,
+     "losses": 13
+    },
+    {
+     "metric": "recall",
+     "vs": "RAG",
+     "n": 100,
+     "diff": 0.059444444444444446,
+     "lo": 0.022222222222222227,
+     "hi": 0.09777777777777778,
+     "wins": 40,
+     "losses": 12
+    },
+    {
+     "metric": "recall",
+     "vs": "HippoRAG",
+     "n": 100,
+     "diff": 0.09444444444444444,
+     "lo": 0.03777777777777778,
+     "hi": 0.15055555555555555,
+     "wins": 46,
+     "losses": 17
+    },
+    {
+     "metric": "recall",
+     "vs": "RAPTOR",
+     "n": 100,
+     "diff": 0.06944444444444445,
+     "lo": 0.03166666666666666,
+     "hi": 0.10666666666666666,
+     "wins": 44,
+     "losses": 11
+    }
+   ]
+  },
+  {
+   "type": "inference_query",
+   "methods": [
+    {
+     "method": "RAG",
+     "answers": 300,
+     "accuracy": 0.96,
+     "accuracy_by_repeat": [
+      0.95,
+      0.96,
+      0.97
+     ],
+     "retrieval": 0.40499999999999997,
+     "context_tokens": 2297.17,
+     "query_usd": 0.0002875648666666667,
+     "usd_per_1000_correct": 0.3178135592723005,
+     "latency_median_1worker": 1.9359182709886227,
+     "latency_n": 10,
+     "latency_median_4workers": 2.227445791999344,
+     "abstain": 0.03,
+     "model_calls": null
+    },
+    {
+     "method": "RAPTOR",
+     "answers": 300,
+     "accuracy": 0.98,
+     "accuracy_by_repeat": [
+      0.98,
+      0.98,
+      0.98
+     ],
+     "retrieval": 0.42083333333333334,
+     "context_tokens": 2132.4566666666665,
+     "query_usd": 0.0002672788666666667,
+     "usd_per_1000_correct": 0.42390313413219366,
+     "latency_median_1worker": 1.908084354014136,
+     "latency_n": 10,
+     "latency_median_4workers": 2.371676730006584,
+     "abstain": 0.01,
+     "model_calls": null
+    },
+    {
+     "method": "HippoRAG",
+     "answers": 300,
+     "accuracy": 0.9733333333333334,
+     "accuracy_by_repeat": [
+      0.98,
+      0.97,
+      0.97
+     ],
+     "retrieval": 0.3441666666666667,
+     "context_tokens": 2310.48,
+     "query_usd": 0.0004051072,
+     "usd_per_1000_correct": 2.0092480236671166,
+     "latency_median_1worker": 4.796750229012105,
+     "latency_n": 10,
+     "latency_median_4workers": 2.557033187506022,
+     "abstain": 0.013333333333333334,
+     "model_calls": null
+    },
+    {
+     "method": "Agentic GraphRAG",
+     "answers": 300,
+     "accuracy": 0.9633333333333334,
+     "accuracy_by_repeat": [
+      0.96,
+      0.97,
+      0.96
+     ],
+     "retrieval": 0.4011111111111111,
+     "context_tokens": 4569.03,
+     "query_usd": 0.0031963594,
+     "usd_per_1000_correct": 6.575673376870217,
+     "latency_median_1worker": 30.125716833019396,
+     "latency_n": 10,
+     "latency_median_4workers": 26.584518270508852,
+     "abstain": 0.02,
+     "model_calls": null
+    }
+   ],
+   "paired": [
+    {
+     "metric": "correct",
+     "vs": "RAG",
+     "n": 100,
+     "diff": 0.003333333333333335,
+     "lo": -0.02,
+     "hi": 0.030000000000000002,
+     "wins": 3,
+     "losses": 3
+    },
+    {
+     "metric": "correct",
+     "vs": "HippoRAG",
+     "n": 100,
+     "diff": -0.01,
+     "lo": -0.05,
+     "hi": 0.02666666666666667,
+     "wins": 2,
+     "losses": 4
+    },
+    {
+     "metric": "correct",
+     "vs": "RAPTOR",
+     "n": 100,
+     "diff": -0.016666666666666666,
+     "lo": -0.05333333333333334,
+     "hi": 0.016666666666666666,
+     "wins": 1,
+     "losses": 4
+    },
+    {
+     "metric": "recall",
+     "vs": "RAG",
+     "n": 100,
+     "diff": -0.00388888888888889,
+     "lo": -0.03805555555555556,
+     "hi": 0.03055555555555555,
+     "wins": 23,
+     "losses": 32
+    },
+    {
+     "metric": "recall",
+     "vs": "HippoRAG",
+     "n": 100,
+     "diff": 0.05694444444444444,
+     "lo": 0.005277777777777776,
+     "hi": 0.11083333333333333,
+     "wins": 39,
+     "losses": 25
+    },
+    {
+     "metric": "recall",
+     "vs": "RAPTOR",
+     "n": 100,
+     "diff": -0.019722222222222224,
+     "lo": -0.056666666666666664,
+     "hi": 0.01583333333333333,
+     "wins": 23,
+     "losses": 34
+    }
+   ]
+  },
+  {
+   "type": "null_query",
+   "methods": [
+    {
+     "method": "RAG",
+     "answers": 300,
+     "accuracy": 0.9466666666666667,
+     "accuracy_by_repeat": [
+      0.96,
+      0.94,
+      0.94
+     ],
+     "retrieval": null,
+     "context_tokens": 2266.51,
+     "query_usd": 0.0002841180666666667,
+     "usd_per_1000_correct": 0.31864882067050193,
+     "latency_median_1worker": 2.1763449589925585,
+     "latency_n": 10,
+     "latency_median_4workers": 2.1846506249858066,
+     "abstain": 0.9466666666666667,
+     "model_calls": null
+    },
+    {
+     "method": "RAPTOR",
+     "answers": 300,
+     "accuracy": 0.9566666666666667,
+     "accuracy_by_repeat": [
+      0.96,
+      0.96,
+      0.95
+     ],
+     "retrieval": null,
+     "context_tokens": 2140.63,
+     "query_usd": 0.00026994906666666667,
+     "usd_per_1000_correct": 0.4370333847904701,
+     "latency_median_1worker": 2.046036957995966,
+     "latency_n": 10,
+     "latency_median_4workers": 2.490950501000043,
+     "abstain": 0.9566666666666667,
+     "model_calls": null
+    },
+    {
+     "method": "HippoRAG",
+     "answers": 300,
+     "accuracy": 0.9366666666666666,
+     "accuracy_by_repeat": [
+      0.95,
+      0.93,
+      0.93
+     ],
+     "retrieval": null,
+     "context_tokens": 2285.51,
+     "query_usd": 0.00039833873333333333,
+     "usd_per_1000_correct": 2.0806757398960785,
+     "latency_median_1worker": 4.675819292009692,
+     "latency_n": 10,
+     "latency_median_4workers": 2.7659198964975076,
+     "abstain": 0.9366666666666666,
+     "model_calls": null
+    },
+    {
+     "method": "Agentic GraphRAG",
+     "answers": 300,
+     "accuracy": 0.9633333333333334,
+     "accuracy_by_repeat": [
+      0.96,
+      0.97,
+      0.96
+     ],
+     "retrieval": null,
+     "context_tokens": 4435.1466666666665,
+     "query_usd": 0.004109379,
+     "usd_per_1000_correct": 7.5234445879428815,
+     "latency_median_1worker": 35.576141562502016,
+     "latency_n": 10,
+     "latency_median_4workers": 34.90294154146977,
+     "abstain": 0.9633333333333334,
+     "model_calls": null
+    }
+   ],
+   "paired": [
+    {
+     "metric": "correct",
+     "vs": "RAG",
+     "n": 100,
+     "diff": 0.016666666666666666,
+     "lo": -0.010000000000000002,
+     "hi": 0.04666666666666667,
+     "wins": 5,
+     "losses": 3
+    },
+    {
+     "metric": "correct",
+     "vs": "HippoRAG",
+     "n": 100,
+     "diff": 0.02666666666666667,
+     "lo": 0.0033333333333333335,
+     "hi": 0.05333333333333334,
+     "wins": 6,
+     "losses": 1
+    },
+    {
+     "metric": "correct",
+     "vs": "RAPTOR",
+     "n": 100,
+     "diff": 0.006666666666666665,
+     "lo": -0.023333333333333334,
+     "hi": 0.04,
+     "wins": 3,
+     "losses": 5
+    }
+   ]
+  }
+ ]
+}

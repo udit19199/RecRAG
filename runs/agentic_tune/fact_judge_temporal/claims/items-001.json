@@ -1,0 +1,81 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "multihop-rag-750",
+   "sentences": [
+    "For the past two weeks, coaches across college football have been riveted by the alleged Michigan sign-stealing scheme, but inside the Big Ten, the topic has been more than just a curiosity.",
+    "While it is almost impossible to quantify how much the alleged in-person scouting and sign-stealing would have helped the Wolverines over the past two seasons, it will be a tough stain to erase knowing those violations are now on the Big Ten record."
+   ]
+  },
+  {
+   "id": "multihop-rag-767",
+   "sentences": [
+    "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats, but Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents.",
+    "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "multihop-rag-789",
+   "sentences": [
+    "Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights.",
+    "And for Black Friday, it's on sale for over $400 off, knocking the price down to a super impressive $297."
+   ]
+  },
+  {
+   "id": "multihop-rag-795",
+   "sentences": [
+    "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it.",
+    "The latest installment takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."
+   ]
+  },
+  {
+   "id": "multihop-rag-814",
+   "sentences": [
+    "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift.",
+    "“She’s got the Eras Tour booked all through next year, and she’d rather die than cancel a show.",
+    "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."
+   ]
+  },
+  {
+   "id": "multihop-rag-815",
+   "sentences": [
+    "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years.",
+    "Outsiders are now aware that Jada and Will have been separated since 2016, but the timeline of her relationship with Alsina is still fuzzy."
+   ]
+  },
+  {
+   "id": "multihop-rag-832",
+   "sentences": [
+    "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook.",
+    "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move.",
+    "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."
+   ]
+  },
+  {
+   "id": "multihop-rag-850",
+   "sentences": [
+    "“Certainly there wasn’t a valid alternative to Google at the time,” Cue said.",
+    "For all the other benefits they get from Android, Google could solve this problem today if they wanted to.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "multihop-rag-864",
+   "sentences": [
+    "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX.",
+    "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-884",
+   "sentences": [
+    "\"We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen,\" he told Fox News Digital.",
+    "We used to play in person, but since the pandemic I run the game virtually online from my house."
+   ]
+  }
+ ]
+}

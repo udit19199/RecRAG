@@ -1,0 +1,22 @@
+[
+  {
+    "id": "2e4627ae99682389",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {
+        "fact": "2.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 7, "quote": "Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act"},
+          {"item": 4, "quote": "'connection': 'LOCATED_IN', 'connected_entity': 'Arkansas', 'entity': 'Helena World Chronicle'"}
+        ]
+      },
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "missing", "evidence": []}
+    ]
+  }
+]

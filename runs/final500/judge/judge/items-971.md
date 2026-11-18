@@ -1,0 +1,1286 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=6771b8ac3d208c6e ===
+Gold sentences and facts:
+Sentence 0: Brain tissue consumes a large amount of energy in proportion to its volume , so large brains place severe metabolic demands on animals . The need to limit body weight in order , for example , to fly , has apparently led to selection for a reduction of brain size in some species , such as bats . Most of the brain 's energy consumption goes into sustaining the electric charge ( membrane potential ) of neurons . Most vertebrate species devote between 2 % and 8 % of basal metabolism to the brain . In primates , however , the percentage is much higher -- in humans it rises to 20 -- 25 % . The energy consumption of the brain does not vary greatly over time , but active regions of the cerebral cortex consume somewhat more energy than inactive regions ; this forms the basis for the functional brain imaging methods PET , fMRI , and NIRS . The brain typically gets most of its energy from oxygen - dependent metabolism of glucose ( i.e. , blood sugar ) , but ketones provide a major alternative source , together with contributions from medium chain fatty acids ( caprylic and heptanoic acids ) , lactate , acetate , and possibly amino acids .
+  Fact 0.0: Brain tissue consumes a large amount of energy in proportion to its volume.
+  Fact 0.1: Large brains place severe metabolic demands on animals.
+  Fact 0.2: The need to limit body weight, for example in order to fly, has apparently led to selection for a reduction of brain size in some species.
+  Fact 0.3: Bats are one of the species that have apparently been selected for reduced brain size.
+  Fact 0.4: Most of the brain's energy consumption goes into sustaining the electric charge (membrane potential) of neurons.
+  Fact 0.5: Most vertebrate species devote between 2% and 8% of basal metabolism to the brain.
+  Fact 0.6: In primates, the percentage of basal metabolism devoted to the brain is much higher.
+  Fact 0.7: In humans, the brain's share of basal metabolism rises to 20-25%.
+  Fact 0.8: The energy consumption of the brain does not vary greatly over time.
+  Fact 0.9: Active regions of the cerebral cortex consume somewhat more energy than inactive regions.
+  Fact 0.10: This difference in energy use forms the basis for the functional brain imaging methods PET, fMRI, and NIRS.
+  Fact 0.11: The brain typically gets most of its energy from oxygen-dependent metabolism of glucose (blood sugar).
+  Fact 0.12: Ketones provide a major alternative energy source for the brain.
+  Fact 0.13: Medium chain fatty acids (caprylic and heptanoic acids), lactate, acetate, and possibly amino acids also contribute to the brain's energy supply.
+
+Retrieved items:
+<item 1>
+Brain
+Jump up ^ Armstrong , E ( 1983 ) . `` Relative brain size and metabolism in mammals '' . Science . 220 ( 4603 ) : 1302 -- 1304 . Bibcode : 1983Sci ... 220.1302
+A . doi : 10.1126 / science. 6407108 . PMID 6407108 . Jump up ^ Jerison , HJ ( 1973 ) . Evolution of the Brain and Intelligence . Academic Press . pp. 55 -- 74
+. ISBN 978 - 0 - 12 - 385250 - 2 . Jump up ^ Parent , A ; Carpenter , MB ( 1995 ) . `` Ch. 1 '' . Carpenter 's Human Neuroanatomy . Williams & Wilkins . ISBN
+978 - 0 - 683 - 06752 - 1 . Jump up ^ Pardridge , W ( 2005 ) . `` The Blood - Brain Barrier : Bottleneck in Brain Drug Development '' . NeuroRx. 2 ( 1 ) : 3 --
+14 .
+</item 1>
+
+<item 2>
+Brain
+In rituals Some archaeological evidence suggests that the mourning rituals of European Neanderthals also involved the consumption of the brain . The Fore people
+of Papua New Guinea are known to eat human brains . In funerary rituals , those close to the dead would eat the brain of the deceased to create a sense of
+immortality . A prion disease called kuru has been traced to this . For Tanning The brain can be useful to hunters : most animals have enough brain matter for
+use in the tanning of their own hides . See also Brain -- computer interface Central nervous system disease List of neuroscience databases Neurological disorder
+Neuroplasticity Optogenetics Outline of neuroscience References Jump up ^ Pelvig , DP ; Pakkenberg , H ; Stark , AK ; Pakkenberg , B ( 2008 ) . `` Neocortical
+glial cell numbers in human brains '' . Neurobiology of Aging. 29 ( 11 ) : 1754 -- 1762 . doi : 10.1016 / j. neurobiolaging. 2007.04. 013 . PMID 17544173 . Jump
+up ^ Yuste , Rafael ; Church , George M.
+</item 2>
+
+<item 3>
+Brain
+`` Acetate transport and utilization in the rat brain '' . J Neurochem. 109 Suppl 1 ( Suppl 1 ) : 46 -- 54 . doi : 10.1111 / j. 1471 - 4159.2009. 05895. x . PMC
+2722917 . PMID 19393008 . Jump up ^ Soengas , JL ; Aldegunde , M ( 2002 ) . `` Energy metabolism of fish brain '' . Comparative Biochemistry and Physiology B.
+131 ( 3 ) : 271 -- 296 . doi : 10.1016 / S1096 - 4959 ( 02 ) 00022 - 2 . PMID 11959012 . ^ Jump up to : Carew , TJ ( 2000 ) . `` Ch. 1 '' . Behavioral
+Neurobiology : the Cellular Organization of Natural Behavior . Sinauer Associates . ISBN 978 - 0 - 87893 - 092 - 0 . Jump up ^ Dafny , N. `` Anatomy of the
+spinal cord '' .
+</item 3>
+
+<item 4>
+Brain
+Most of the brain 's energy consumption goes into sustaining the electric charge ( membrane potential ) of neurons . Most vertebrate species devote between 2 %
+and 8 % of basal metabolism to the brain . In primates , however , the percentage is much higher -- in humans it rises to 20 -- 25 % . The energy consumption of
+the brain does not vary greatly over time , but active regions of the cerebral cortex consume somewhat more energy than inactive regions ; this forms the basis
+for the functional brain imaging methods PET , fMRI , and NIRS . The brain typically gets most of its energy from oxygen - dependent metabolism of glucose (
+i.e. , blood sugar ) , but ketones provide a major alternative source , together with contributions from medium chain fatty acids ( caprylic and heptanoic acids
+) , lactate , acetate , and possibly amino acids . Functions Model of a neural circuit in the cerebellum , as proposed by James S. Albus . Information from the
+sense organs is collected in the brain . There it is used to determine what actions the organism is to take . The brain processes the raw data to extract
+information about the structure of the environment .
+</item 4>
+
+<item 5>
+Brain
+Hum Brain Mapp. 16 ( 1 ) : 14 -- 23 . doi : 10.1002 / hbm. 10026 . PMID 11870923 . Jump up ^ Ebert , D. ; Haller , RG. ; Walton , ME . ( Jul 2003 ) . `` Energy
+contribution of octanoate to intact rat brain metabolism measured by 13C nuclear magnetic resonance spectroscopy '' . J Neurosci. 23 ( 13 ) : 5928 -- 35 . PMID
+12843297 . Jump up ^ Marin - Valencia , I. ; Good , LB. ; Ma , Q. ; Malloy , CR. ; Pascual , JM . ( Feb 2013 ) . `` Heptanoate as a neural fuel : energetic and
+neurotransmitter precursors in normal and glucose transporter I - deficient ( G1D ) brain '' . J Cereb Blood Flow Metab. 33 ( 2 ) : 175 -- 82 . doi : 10.1038 /
+jcbfm. 2012.151 . PMC 3564188 .
+</item 5>
+
+<item 6>
+Brain
+In mammals , the cerebral cortex tends to show large slow delta waves during sleep , faster alpha waves when the animal is awake but inattentive , and chaotic -
+looking irregular activity when the animal is actively engaged in a task . During an epileptic seizure , the brain 's inhibitory control mechanisms fail to
+function and electrical activity rises to pathological levels , producing EEG traces that show large wave and spike patterns not seen in a healthy brain .
+Relating these population - level patterns to the computational functions of individual neurons is a major focus of current research in neurophysiology .
+Metabolism All vertebrates have a blood -- brain barrier that allows metabolism inside the brain to operate differently from metabolism in other parts of the
+body . Glial cells play a major role in brain metabolism by controlling the chemical composition of the fluid that surrounds neurons , including levels of ions
+and nutrients . Brain tissue consumes a large amount of energy in proportion to its volume , so large brains place severe metabolic demands on animals . The
+need to limit body weight in order , for example , to fly , has apparently led to selection for a reduction of brain size in some species , such as bats .
+</item 6>
+
+<item 7>
+Brain
+2012.151 . PMC 3564188 . PMID 23072752 . Jump up ^ Boumezbeur , F. ; Petersen , KF. ; Cline , GW. ; Mason , GF. ; Behar , KL. ; Shulman , GI. ; Rothman , DL. (
+Oct 2010 ) . `` The contribution of blood lactate to brain energy metabolism in humans measured by dynamic 13C nuclear magnetic resonance spectroscopy '' . J
+Neurosci. 30 ( 42 ) : 13983 -- 91 . doi : 10.1523 / JNEUROSCI. 2040 - 10.2010 . PMC 2996729 . PMID 20962220 . Jump up ^ Deelchand , DK. ; Shestov , AA. ; Koski
+, DM. ; Uğurbil , K. ; Henry , PG . ( May 2009 ) . `` Acetate transport and utilization in the rat brain '' . J Neurochem.
+</item 7>
+
+<item 8>
+Brain
+PMID 7282965 . Jump up ^ Raichle , M ; Gusnard , DA ( 2002 ) . `` Appraising the brain 's energy budget '' . Proc. Natl. Acad. Sci. U.S.A. 99 ( 16 ) : 10237 --
+10239 . Bibcode : 2002PNAS ... 9910237R . doi : 10.1073 / pnas. 172399499 . PMC 124895 . PMID 12149485 . Jump up ^ Mehagnoul - Schipper , DJ ; Van Der Kallen ,
+BF ; Colier , WNJM ; Van Der Sluijs , MC ; Van Erning , LJ ; Thijssen , HO ; Oeseburg , B ; Hoefnagels , WH ; Jansen , RW ( 2002 ) . `` Simultaneous
+measurements of cerebral oxygenation changes during brain activation by near - infrared spectroscopy and functional magnetic resonance imaging in healthy young
+and elderly subjects '' . Hum Brain Mapp. 16 ( 1 ) : 14 -- 23 .
+</item 8>
+
+<item 9>
+Brain
+Physiologically , the function of the brain is to exert centralized control over the other organs of the body . The brain acts on the rest of the body both by
+generating patterns of muscle activity and by driving the secretion of chemicals called hormones . This centralized control allows rapid and coordinated
+responses to changes in the environment . Some basic types of responsiveness such as reflexes can be mediated by the spinal cord or peripheral ganglia , but
+sophisticated purposeful control of behavior based on complex sensory input requires the information integrating capabilities of a centralized brain . The
+operations of individual brain cells are now understood in considerable detail but the way they cooperate in ensembles of millions is yet to be solved . Recent
+models in modern neuroscience treat the brain as a biological computer , very different in mechanism from an electronic computer , but similar in the sense that
+it acquires information from the surrounding world , stores it , and processes it in a variety of ways . This article compares the properties of brains across
+the entire range of animal species , with the greatest attention to vertebrates . It deals with the human brain insofar as it shares the properties of other
+brains . The ways in which the human brain differs from other brains are covered in the human brain article .
+</item 9>
+
+<item 10>
+Brain
+Norepinephrine , which is involved in arousal , comes exclusively from a nearby small area called the locus coeruleus . Other neurotransmitters such as
+acetylcholine and dopamine have multiple sources in the brain , but are not as ubiquitously distributed as glutamate and GABA . Electrical activity Brain
+electrical activity recorded from a human patient during an epileptic seizure . As a side effect of the electrochemical processes used by neurons for signaling
+, brain tissue generates electric fields when it is active . When large numbers of neurons show synchronized activity , the electric fields that they generate
+can be large enough to detect outside the skull , using electroencephalography ( EEG ) or magnetoencephalography ( MEG ) . EEG recordings , along with
+recordings made from electrodes implanted inside the brains of animals such as rats , show that the brain of a living animal is constantly active , even during
+sleep . Each part of the brain shows a mixture of rhythmic and nonrhythmic activity , which may vary according to behavioral state .
+</item 10>
+=== END ITEM id=6771b8ac3d208c6e ===
+
+=== ITEM id=98d92286a487263f ===
+Gold sentences and facts:
+Sentence 0: Wizards of Waverly Place Season 4 episodes No . overall No. in season Title Directed by Written by Original air date Prod . code U.S. viewers ( millions ) 80 `` Alex Tells the World '' Victor Gonzalez Gigi McCreery & Perry Rein November 12 , 2010 ( 2010 - 11 - 12 ) 401 4.1 The Russos and Mason finally make it back home , but their wizard powers are still gone . While the family wants to stay quiet , Alex believes that they should take action , so she reveals that they are wizards to reporters and tells them that a group of wizards are being held captive by the government . As she urges them to spread the word , Professor Crumbs appears and tells her that everything that had happened was a test that she failed miserably and orders her to Wizard Court for exposing wizardry to the world . Justin is also ordered to attend because he exposed magic to Agent Lamwood , who was a creation from Professor Crumbs ' mind . The judges rule Alex and Justin guilty , and Professor Crumbs sentences them both to be demoted to level one in the Family Wizard Competition , making them behind Max by two levels . Meanwhile , Max sets up traps in the Sub Station for the `` government '' , but ends up falling for one of them . Special guest star : Gregg Sulkin as Mason Guest star : Ian Abercrombie as Professor Crumbs 81 `` Alex Gives Up '' Victor Gonzalez Todd J. Greenwald November 27 , 2010 ( 2010 - 11 - 27 ) 402 N / A Alex decides to give up the wizard competition to spend more time with Mason and thinks that it does not matter since Max is all the way in the lead , but Chancellor Tootietootie tells Alex that non-wizards and werewolves can not date , because the werewolf always eats the human . Max 's picture on the front of Future Wizards magazine attracts the daughter of a family of Cucuys ( mythical Latino monster ) and they invite him to a dinner party on their yacht . Alex comes up with a scheme to invite Chancellor Tootietootie to the Cucuy party in hopes of getting him to appeal the law against werewolves and mortals dating . Lisa Cucuy finds out that Mason is a werewolf and decides that she wants him instead of Max . Alex gets jealous when Lisa flirts with Mason , so Alex says embarrassing things about Mason to everyone on the yacht so that he will be mad enough to turn into a werewolf . Carlos and Julie Cucuy jump off the boat as Cucuys are scared of werewolves . Jerry jumps off after them . Alex tells Lisa that she can get off the boat the easy way or her way . Once Lisa jumps off the boat , Chancellor Tootietootie says that their case will not be appealed as by Mason turning into a werewolf proved his point that they are dangerous . In the end , Alex and Mason have to break up to be friends and Harper finishes writing her first novel based on the werewolf - wizard relationship . Jerry tries to get Harper to help him out of the water but accidentally grabs her just finished novel , which causes him to fall back into the water . Meanwhile , Justin tutors a class of delinquent wizards in an attempt to gain a level to re-enter the Wizard Competition . Special guest star : Gregg Sulkin as Mason Guest stars : Andy Kindler as Chancellor Tootietootie , Frank Pacheco as Felix , David Barrera as Carlos Cucuy , Roxana Brusso as Julie Cucuy , Samantha Boscarino as Lisa Cucuy , Kari Wahlgren as Helen 82 `` Lucky Charmed '' Victor Gonzalez Justin Varava December 10 , 2010 ( 2010 - 12 - 10 ) 403 3.0 Harper tries teaching Alex how to live without magic , but the strain of taking responsibility for her actions instead of using magic causes a disagreement between the two best friends when Alex gets in big trouble for crashing Mr. Laritate 's car . As punishment , Alex has to clean the school 's garbage cans . Mr. Laritate forgives Alex after seeing how the crash influenced her , and Alex realizes that she will be okay without magic . Wanting to thank Harper , Alex uses Mr. Laritate 's lucky life - saving hula girl figurine , Leilani , for luck , as Mr. Laritate does . During Harper 's driving test , Alex turns into the hula girl and guides Harper through the test , knowing that she might fail . In the end , Harper passes her test . Meanwhile , Jerry wants to pass on the wizard family robe to Max , but Justin has a hard time letting go of it . Guest stars : Bill Chott as Mr. Laritate , Julio Oscar Mechoso as DMV Instructor Absent : Maria Canals Barrera as Theresa Russo 83 `` Journey to the Center of Mason '' Robbie Countryman Peter Dirksen December 17 , 2010 ( 2010 - 12 - 17 ) 404 N / A After she finds out that she will lose her powers , Alex can no longer date Mason , so they decide to try being best friends instead . After watching a film at the theaters , Harper , Alex , and Mason go home , Dean , who was Alex 's Ex-Boyfriend comes and asks Alex to get back together with him . Mason gets jealous . When Dean brings a gift for Alex , Mason then asks what Alex 's relationship is with Dean , and Max tells him that Dean and Alex used to date , making Mason more jealous . Mason then turns into a werewolf and eats Dean . Alex , Justin , and Max come up with a solution to turn Justin 's toy Captain Jim Bob submarine big and go in it . They then shrink it and go into Mason 's mouth . While there , Alex , Max , and Justin see Mason 's thoughts , which are all of Alex . They get Dean out , and Alex , when Harper , Max , and Justin leave , Alex tells Dean that he was knocked out and the doctor 's solution was for them all to dress up as cows . Dean then gives her his offer once again : he wants to get back with her . Alex tells him ' no ' , and then gets back together with Mason , with deciding to get back to the Wizard Competition . Special guest star : Gregg Sulkin as Mason Guest stars : Daniel Samonas as Dean , Frank Pacheco as Felix , Shoshana Bush as Tyler 84 5 `` Three Maxes and a Little Lady '' Victor Gonzalez Richard Goodman January 7 , 2011 ( 2011 - 01 - 07 ) 405 4.0 Alex joins Justin 's wizard class to try to move up in the competition . Max joins a sophisticated wizard society . They suggest he move the wizard competition up and he moves it to a few days away . Max quits the society because he finds out that they are taking advantage of him . Alex and Justin transform into Max in an attempt to change the date of the family wizard competition back to its original date and succeed . In the end of the episode they accidentally turn Max indefinitely into a little girl . Guest stars : Bailee Madison as Maxine , Frank Pacheco as Felix , Kari Wahlgren as Helen , Shane Harper as Fidel Note : Bailee Madison begins her recurring role as Maxine , the female Max in this episode . Jake T. Austin was absent in four other episodes and returns at the end of the tenth episode `` Back to Max '' . 85 6 `` Daddy 's Little Girl '' Robbie Countryman Gigi McCreery & Perry Rein January 21 , 2011 ( 2011 - 01 - 21 ) 406 3.4 With Max still a little girl , their parents pay more attention to Max ( Maxine ) , and Alex becomes jealous . Justin takes Maxine to her ( Max 's ) karate class and Maxine kicks Justin 's butt . After the class , Alex decides to make Jerry 's favorite sandwich in order to win his love back , but Maxine comes along with Justin , announcing that she beat Justin in karate , and Jerry immediately falls for her cuteness again . More jealous than ever , Alex comes back with Justin to Maxine 's karate class with their parents , having a slight idea of knowing how to change Maxine back to Max . They cast spells on Maxine , Justin using the spell he used on Max that turned him into Maxine , and Alex using the reverse spell . Unfortunately , it only makes Maxine cuter , which makes her furious . Instead of going against the person she was supposed to , she demands that she kicks either Alex or Justin 's butt . Justin goes against her , but seeing that he would lose , Alex casts a spell on Justin to make him a karate master . Too fast for Maxine , Justin beats her , and Maxine is hurt ( physically ) . Jerry and Theresa rush to her side , caring for Maxine more than they care that Justin beat Maxine in karate . Justin leaves , and Alex leaves after him , heartbroken . Back at home , Jerry tells Alex that he fell for Maxine because she reminded him of Alex when she was little and they bond again . Meanwhile , Zeke thinks the Russos hate him , but really it was just Harper 's alibi in order to keep him away from the Sub Station so as not to make him suspicious about Max 's disappearance and Maxine 's appearance . Guest stars : Bailee Madison as Maxine , Dan Benson as Zeke , Lanny Joon as Sensei Absent : Jake T. Austin as Max Russo 86 7 `` Everything 's Rosie for Justin '' Victor Gonzalez Justin Varava February 4 , 2011 ( 2011 - 02 - 04 ) 407 3.9 Justin and his delinquent class have a wizard wand dance assessment to do which will get them back in Wiztech . A new student named Rosie joins , whom Justin falls madly in love with to later find out that she is an Angel . Meanwhile , Jerry , Teresa , and Harper try to think of ideas of how to get more people to come to their restaurant . Harper makes cards which customers get hole punched each time they buy a sandwich ; when you get 9 hole punches , they get a free sandwich . Contrary to the original purpose , one man punches his own card , demands a free sandwich , and then brings dozens of people into the restaurant , who also have pre-punched cards . Maxine uses her charming cuteness to convince the customers to not exploit her parents . Meanwhile , Justin kicks Rosie out of his class so that it does not fail the wizard dance assessment . Sympathizing , Alex gets Rosie to rejoin the class and puts a copycat spell on her so that Rosie can mimic Alex 's move and pass the class . The assessment ends in disaster when a squirrel - frog attaches itself to Alex 's foot , and Rosie reveals herself to be an angel . The class fails , but Justin starts dating Rosie . Guest stars : Bailee Madison as Maxine , Frank Pacheco as Felix , Leven Rambin as Rosie , Diane Delano as Penny , Chris Coppola as Customer , Cameron Sanders as Nelvis Absent : Jake T. Austin as Max Russo 87 8 `` Dancing with Angels '' Victor Gonzalez Richard Goodman February 11 , 2011 ( 2011 - 02 - 11 ) 408 4.5 Justin and Rosie start dating but when their date gets ruined , they want a second date . Alex suggests an Angel Club in Los Angeles , but Rosie says that only Angels are allowed . Maxine will not tell their parents as long as Alex brings her back an Ozzy Osbourne stone . After Justin , Harper and Alex sneak in along with Rosie , Zeedrik asks them if they are angels and they say they are . Back at the sub shop , Theresa and Jerry question Maxine to find out where Justin , Alex and Harper are , and Maxine does not say , so they force her to join a Pageant in order for her to tell them where they are . Things get bad at the angel club when Alex and Harper can not fly , until Justin secretly pulls out his wand and gives Harper flying powers . Zeedrik still questions them by giving them a test to sing while playing the harp . Though Alex , Justin , and Harper fail to do so , they are accepted as `` angels '' until the key - chain of Ozzy Osbourne 's star reverts to normal . Zeedrik believes they are really angels of darkness , causing everyone in the club to run off , even Rosie . Rosie comes back at the end of the episode to comfort Justin , but when they both look over the city , Rosie 's wings are shown to be black , the color of an angel of darkness ' wings , but Justin does not see because he is looking forward . Meanwhile , Maxine ends up winning the beauty pageant , making Jerry and Theresa celebrate . Guest stars : Bailee Madison as Maxine , Leven Rambin as Rosie , Ransford Doherty as Zeedrik Absent : Jake T. Austin as Max Russo 88 9 `` Wizards vs. Angels '' Victor Gonzalez Vince Cheung & Ben Montanio February 18 , 2011 ( 2011 - 02 - 18 ) 409 -- 410 5.1 Rosie is an Angel of Darkness , and has been tricking Justin all along to make him evil . Alex finds out , with the help of Tina ( a guardian angel in training trying to earn her wings ) that Rosie is an Angel of Darkness . Justin crosses over to the dark side with Rosie , steals the `` moral compass '' , and gives it to Gorog , so Gorog can turn the compass from good to bad , so that the world will be covered in darkness and every human being will be corrupted . Rosie tries to get Justin to run away and save him , because Gorog wants to destroy him , but Justin refuses to leave , stating that he is no longer a wizard but an Angel of Darkness and breaks his wand in halves . Alex tries to convince Justin that he is a wizard , a good wizard and not an Angel of Darkness . Meanwhile , Maxine is enrolled in Tribeca Prep , since she is participating in a `` cousin exchange program . '' After her first day of school , Maxine laments that she has no friends , which leads Harper to insist Maxine have a slumber party ( which is really what Harper wants because she has never had a slumber party ) , that eventually becomes a disaster . Tina reveals that Rosie was a good angel , and her teacher however , Gorog reached her before her transport arrived and corrupted her . Alex and Tina go to the Dark Realm to save Justin . Alex borrows a pair of wings from the guardian angels . Alex takes the Moral Compass and tries to turn it to good but Justin stops her and then Rosie used her good angel side and they fly up and when they land , Justin turns the compass to good . Tina and Alex take it and run . When Rosie and Justin kiss , Rosie turns into a good angel ( with white wings ) , and Justin loses the dark wings . Guest stars : Bill Chott as Mr. Laritate , Bailee Madison as Maxine , Leven Rambin as Rosie , John Rubinstein as Gorog , China McClain as Tina , Amy Tolsky as Florence Note : This is a one - hour special . Absent : Jake T. Austin as Max Russo 89 10 `` Back To Max '' Guy Distad Todd J. Greenwald March 11 , 2011 ( 2011 - 03 - 11 ) 411 3.7 Justin invites Professor Crumbs to check on his delinquent wizards class , to see how their wizard training is progressing . During the conversation , Maxine interrupts , causing Alex and Justin to panic since they do not know how to explain `` Maxine '' , and they try to find a way to turn Maxine back to Max . Meanwhile , Harper takes a role in the school 's `` Spirit of America '' play , only to be replaced by Maxine . Guest stars : Bill Chott as Mr. Laritate , Ian Abercrombie as Professor Crumbs , Bailee Madison as Maxine , Cameron Sanders as Nelvis , LJ Benet as Little Crumbs , Jackie Evancho as Choir Girl Note : Jake T. Austin returns as Max near the end of the episode . Bailee Madison marks her final appearance as Maxine in this episode . 90 11 `` Zeke Finds Out '' David DeLuise Peter Dirksen April 8 , 2011 ( 2011 - 04 - 08 ) 412 3.0 When Alex gets bored of Zeke 's failing magic tricks , she decides to use magic to make Zeke 's tricks come true . Everything goes downhill when Zeke tells Harper he believes he is a wizard and is now booking a magic act at the sub station for a kid 's birthday party . Since Justin and Harper are tired of Alex ruining things all the time , they decide to leave everything up to her . Harper , not wanting to let Zeke make a fool of himself , tells Alex to tell Zeke the truth about wizards , but she is reluctant to , as exposing wizardry to another mortal could get her kicked out of the wizard competition forever if anyone finds out . Zeke goes on with his belief that he is a `` wizard '' , but he finds out Harper is keeping a secret from him so he breaks up with her . Alex realizes what a mess she created and on the day of Zeke 's magic act , she makes Harper disappear before she can expose wizardry to Zeke , which freaks him out . The Russos really are in deep waters when Zeke is going to saw Max in half with a real saw for his next act , so Justin takes matters into his own hands and freezes everyone except for himself and Zeke . Justin tells Zeke that he is a wizard , not Zeke , and that he did everything . Still not believing him , he flashes Zeke into their lair and unveils the secret to him . They go back outside and tell Harper and Alex who are fighting , that Zeke now knows about the existence of wizards , but he promises he will never tell anyone . Zeke and Harper reconcile their relationship and Alex and Harper apologize and make up with each other . Guest stars : Dan Benson as Zeke , Maurice G. Smith as Big Mitch Absent : Maria Canals Barrera as Theresa Russo , David DeLuise as Jerry Russo 91 12 `` Magic Unmasked '' David DeLuise Justin Varava May 13 , 2011 ( 2011 - 05 - 13 ) 413 2.7 When a former legendary Luchador `` Muy Macho '' visits the Sub Station , Alex finds out that she was the reason why he quit lucha libre ( wrestling ) , so she tries to make it up to him by arranging a lucha libre match with him and Jerry to restore his honor . Meanwhile , Zeke asks too many questions about wizardry , so Justin offers to grant him one magical wish if he promised he would stop questioning him about magic . Unfortunately , Zeke 's wish is to defeat Muy Macho in the match . Max pretends to like Talia 's hobbies , but does not enjoy them . Guest stars : Dan Benson as Zeke , Valente Rodriguez as Muy Macho , McKaley Miller as Talia 92 13 `` Meet the Werewolves '' Victor Gonzalez David Henrie June 17 , 2011 ( 2011 - 06 - 17 ) 415 4.0 When Alex asks Mason if she can meet his parents , Mason shows his fake parents and she finds out soon after . She gets upset at Mason and demands him to take her to his real parents . Mason takes her to the Autumn Moon Feast ( werewolf holiday ) to meet his parents . Soon after that Alex finds out he told his parents that she is a werewolf and is frustrated . She uses a spell to change herself and Harper into werewolves . She tries to be the worst werewolf possible in front of Mason 's parents during the feast . In the end Mason 's parents like her as a werewolf and she says to him that they do not know the real her . She begins to leave and he says that he truly loves Alex to his parents and that she is a wizard . She changes back to a wizard and Mason turns back to human form . After the parents find out they try to eat her and Mason and Alex make a near escape . Meanwhile Max makes his parents ' food taste like kid food in order to make it taste good . Afterwards Jerry and Theresa eat it , and as a result they act like little kids . Justin thinks he will have to fix it but Max comments on how he does not need help , as he will be the future family wizard . Max uses another spell on cookies to make them older , but they turn into teenagers . Finally , Justin uses a spell on a pizza to turn them back into their regular selves . Special guest star : Gregg Sulkin as Mason Guest stars : Harry Van Gorkum as Grant Greybeck , Robin Riker as Linda Greybeck , Marianne Muellerleile as Molly , Eric Zuckerman as Bill 93 14 `` Beast Tamer '' Victor Gonzalez Gigi McCreery & Perry Rein June 24 , 2011 ( 2011 - 06 - 24 ) 416 4.0 When Alex , Justin and Max win four tickets to the `` Beast Bowl '' , the tickets are delivered by Beast Tamer Chase Riprock , who begins flirting with Alex and invites the group for a pre-bowl tour . Alex invites Mason to go with them but he says he can not . During the tour , despite Chase 's warnings , Justin attempts to tame the beast so that Max can have his photo taken with the beast , but both are caught and banned from the event . Chase tries to kiss Alex but she rejects him and returns to the mortal world where she finds Mason coming out a hardware store . Mason is evasive about his plans , which involve making an anniversary present for Alex , so Alex returns to the Beast Bowl. Harper tells Mason that Chase likes Alex and urges him to surprise her with the gift at the Beast Bowl . Meanwhile , Justin and Max return to the Beast Bowl disguised as beast taming clowns where they allow the beast to escape and snatch Alex who throws the whip to Chase . Chase tames the beast who drops Alex and Mason is able to reveal his gift , which is a sculpture of himself and Alex. Alex and Mason leave together , with the sculpture . Special guest star : Gregg Sulkin as Mason Guest star : Nick Roux as Chase Absent : Maria Canals Barrera as Theresa Russo , David DeLuise as Jerry Russo 94 15 `` Wizard of the Year '' Victor Gonzalez Richard Goodman July 8 , 2011 ( 2011 - 07 - 08 ) 417 3.6 Alex has been crowned Wizard of the Year after saving the world from dark angels , as well as being reinstated in the Wizard Competition , and a banquet honoring her achievement is hosted . With paparazzi in tow , Chase Riprock visits the lair to congratulate Alex . As he leaves , Keith Keith hounds them about being in a romantic relationship , to which Alex states she already has a boyfriend . Later , Mason and Alex watch his gossip segment , and to their horror , Keith Keith confirms that Chase and Alex are dating . For Alex winning Wizard of the Year , the Russo family must record a holographic video congratulating Alex . However , much to Justin 's displeasure , Justin 's video instead only contains him complaining about Alex . The night of the awards banquet , Mason stands Alex up , leaving her devastated . At the banquet , Chancellor TootieTootie tells Justin that his display of affection and pride for Alex may reinstate him into the competition , causing Justin to be frantic and do everything within his power to destroy the tape . Chase purposely invites himself to sit at the Russo 's table . However , Mason shows up late and sees Alex and Chase flirting together . A short battle ensues between Mason and Chase . Alex soon breaks up the fight , and is forced to choose either Mason or Chase . Appalled by both of their behaviors that evening , Alex chooses neither and breaks up with Mason . Special guest star : Gregg Sulkin as Mason Guest stars : Andy Kindler as Chancellor Tootietootie , Nick Roux as Chase , Justin Guarini as Keith Keith 95 16 `` Misfortune at the Beach '' Jody Margolin Hahn Vince Cheung & Ben Montanio July 24 , 2011 ( 2011 - 07 - 24 ) 420 3.5 The Russos head to the beach on an extremely hot day , and Harper hopes to enjoy reading her book while at the beach . The Russos come across Zelzar , a fortune - telling machine . Jerry warns the kids about Zelzar -- he is from the wizard world , and a wizard 's fortune really comes true . After Max and Justin receive good fortunes , Alex decides to get a fortune despite her father 's warning . However , her fortune says , `` Say good - bye to your life . '' Alex thinks nothing of it and proceeds to enjoy the day at the beach , but comes close to life - threatening situations multiple times . Alex , Justin , Max , and Harper make a compromise with Zelzar -- if they can extract him from the machine and let him enjoy a day at the beach , he will take back Alex 's fortune . Max replaces Zelzar , and Justin is forced to drive the beach - goers away from the machine ( as Max gives out silly fortunes about his new facial hair ) ; meanwhile , the girls help Zelzar fancy his day at the beach . In the end , Zelzar reveals that while he can not take away Alex 's fortune , he can give it to the next person . The next person happens to be a little girl , who gets Alex 's fortune . However , it is revealed that a man from Random Prize Giveaway shows up , saying : `` Say good - bye to your life because we 're randomly giving you one million dollars ! '' Guest stars : Michael Carbonaro as Zelzar , John J. York as Game Show Host 96 17 `` Wizards vs. Asteroid '' Victor Gonzalez Peter Dirksen August 19 , 2011 ( 2011 - 08 - 19 ) 418 3.6 When it is announced that a huge asteroid is hurtling towards the earth , the Russos decide to hide in the wizard world , but Alex , Justin , and Max change their minds and go into space to destroy the asteroid . Meanwhile , Alex finds out that she is not graduating high school , but when a small part of the asteroid hits the school , she gets a chance to graduate . Guest stars : Dan Benson as Zeke , Bill Chott as Mr. Laritate , Kristina Hayes as Reporter 97 18 `` Justin 's Back In '' Guy Distad Todd J. Greenwald August 26 , 2011 ( 2011 - 08 - 26 ) 419 3.2 Justin 's class of delinquent wizards has completed their studies , which means they are eligible to rejoin WizTech if they all pass their final evaluation . When they all fail , Alex suspects something is not right . The truth soon uncovered -- the class had actually passed , but the historian who checked the exams was revealed to be evil , and had lied about the exam scores . He tries to attack Justin 's class , so Justin must stop the historian , and save Alex. but one of the students in the class is able to stop him by pulling the most powerful wand in the wizard world out of a crystal ball and using it . This means that he is actually the descendant of a famous wizard who had previously been thought to have no living descendants . Justin 's class is revealed to have passed the final exam , so they are readmitted into WizTech and Justin is officially back in the family wizard competition . Meanwhile , Jerry and Theresa realize that they never saved any of Max 's childhood accomplishments , so they try to recreate them with the help of Harper . During the credits , it is revealed that Max had kept his favorite memories all along . Special guest star : Tim Conway as Cragmont Guest stars : Ian Abercrombie as Professor Crumbs , Frank Pacheco as Felix , Cameron Sanders as Nelvis 98 19 `` Alex the Puppetmaster '' Victor Gonzalez Gigi McCreery & Perry Rein September 16 , 2011 ( 2011 - 09 - 16 ) 421 3.0 Alex and Harper decide to do a puppet show to raise money for a new apartment and Zeke and Justin help them . But Alex forgets to write the lines for the show . Harper gets mad and decides to do a show of her own and makes her puppets act like the way Alex treats her . Alex makes Justin and Zeke puppets for her show and steals Harper 's crowd which makes Harper upset . Then Alex apologizes to Harper using the puppets . Meanwhile , Talia 's parents meet Theresa and Jerry for the first time , but it does not go well . Justin puts a spell on Talia 's parents to forget they ever meet Theresa and Jerry . They meet again , but this time they end up watching a 16 - hour play together . Special guest star : Joely Fisher as Meg Robinson Guest stars : Dan Benson as Zeke , James Urbaniak as Rob Robinson , McKaley Miller as Talia 99 20 `` My Two Harpers '' Victor Gonzalez Manny Basanese September 30 , 2011 ( 2011 - 09 - 30 ) 422 3.0 Harper and Zeke spend so much time together that Alex decides to make a Harper - clone . Justin comes with lots of different ideas to save money in the sub-shop and Max starts a fast - food restaurant in the wizard world . Guest star : Dan Benson as Zeke Absent : Maria Canals Barrera as Theresa Russo 100 21 `` Wizards of Apartment 13B '' Guy Distad Justin Varava October 7 , 2011 ( 2011 - 10 - 07 ) 423 3.5 Alex and Harper receive a flyer for a hotel . They meet the hotel 's owner , Dexter , who sells them Apartment 13B , which belongs to a floor for non-humans . They rent it , but Harper is forced to use a training wand that can only open things . Later at their apartment , they realize Mason lives on the floor . Mason will stop at nothing to win Alex back ; Alex tells him she does not want a boyfriend , but Mason is relentless . That night , Alex and Harper throw a party , where the whole floor comes , including Felix . Mason goes to the party and uses Harper 's wand to open Alex 's heart . However , she flirts with an ugly giant . Mason tries again , but makes Alex opens her heart to Felix . Meanwhile , Theresa and Jerry trick Justin into going to Alex 's apartment to drive him out of the house . When Justin arrives , he fixes Mason 's mistakes by resetting Harper 's wand and it is revealed that despite his actions , he misses Alex. Alex , freed from Mason 's spell , is angry at Mason , and Mason , deflated , leaves . Outside their door , Dexter turns into Gorog when no one is looking . He wants revenge . Max appears in the apartment , and when Harper and Alex kick him out , he encounters Gorog , who gives him a flyer for a free camp . Max accepts . Special guest star : Gregg Sulkin as Mason Guest stars : John Rubinstein as Gorog , Frank Pacheco as Felix , Fred Stoller as Dexter , Christopher Douglas Reed as Ogre Note : This is part 1 of a 4 - part arc and also the 100th episode . 101 22 `` Ghost Roommate '' David DeLuise Richard Goodman October 14 , 2011 ( 2011 - 10 - 14 ) 424 4.1 Alex and Harper have trouble paying the apartment bills , so Dexter recommends getting a roommate . Alex and Harper find a wealthy ghost named Lucy , who they let move in . Meanwhile , Justin orders a robot to help Zeke at the sub station , as Justin is busy studying for the wizard competition . The robot is lost in transit , but Dexter ( Gorog in disguise ) makes an evil robot to spy on Justin to pass information to Gorog . While Zeke and the robot are working , the robot asks him about Justin and the wizard competition , which confuses Zeke because no one had talked about it in front of the robot . Later that night , Lucy starts crying and explains that her boyfriend Donny had disappeared sixty years prior in a plane accident . Alex tries to set Lucy up with Justin , but he makes matters worse . Later , Lucy meets Mason and they go out on a long date , which makes Alex jealous . Meanwhile , the robot again asks Zeke about the wizard world and Zeke realizes that the robot might have a secret agenda . He tells Justin , who simply does not believe him and is ignorant of the situation because of his intensive studying . Because of her jealousy , Alex helps Lucy locate Donny , who had been stranded on an island in the Bermuda Triangle . They soon reconnect , but not after Alex realizes that she can not get back home , due to heavy magnetic currents interfering with her magic . Mason goes to save Alex after he finds out that she had left for the Bermuda Triangle . The robot attacks Justin and Zeke after they find him scanning the spell book . Mason and Alex manage to get off of the island using the Bermuda shorts given to them by Justin . The robot is shown giving Gorog the spell he needed that he got from the Russos . Special guest star : Gregg Sulkin as Mason Guest stars : Dan Benson as Zeke , Fred Stoller as Dexter , Josh Sussman as Hugh Normous , Linsey Godfrey as Lucy , Travis Caldwell as Donny , Michael Carbonaro as Robot Note : This is part 2 of a 4 - part arc . Absent : Jake T. Austin as Max Russo , Maria Canals Barrera as Theresa Russo , David DeLuise as Jerry Russo 102 23 `` Get Along , Little Zombie '' Victor Gonzalez Peter Dirksen October 21 , 2011 ( 2011 - 10 - 21 ) 425 3.4 Alex and Harper are going to their apartment when they run into Mr. Laritate , who also lives in the hotel . Felix tells Justin he broke his wand and Justin informs him that it 's fake , because he saw batteries in it . He concludes that someone stole Felix 's wand . Dexter is showing a zombie to the hall for magical creatures while he introduces them to Alex and Harper . Mason , who will stubbornly not stop asking Alex on a date , meets them in the elevator . When Alex ignores him , Mason messes with the buttons so he can spend more time with her and they land on the second floor . Justin tells Jerry that Felix lost his wand and Jerry tells them to use the abracadoobler wand app and Felix realizes that his wand is around the area . Meanwhile , because Mason messed with the buttons , all the humans have discovered the mysterious thirteenth floor . Alex lies and tells the humans that they accidentally got into a secret open house floor for the people in the hotel . Mr. Laritate , after all the other humans left , discovers the thirteenth floor too and sees Alex , Harper , and Mason . Mr. Laritate sees the zombie , Alex explains this is a haunted house , but Mr. Laritate does not believe them . The zombie bites Mr. Laritate and turns him into a zombie . They take him to their apartment while Alex looks for a spell to turn Mr. Laritate human again . Mr. Laritate runs away and Alex , Harper , and Mason suspect he went to the substation . Professor Crumbs questions Felix , who reveals the 13th floor to them , and Crumbs denies the existence of a `` 13th floor '' , so they go to investigate . At Waverly Place they 're throwing a festival while Alex tells Jerry what happened . Alex and Mason , trying to sneak the zombie into the substation , are forced into dance . They then , after Harper causes a distraction , take Laritate to the substation and give him a medicine from the wizard world that turns Laritate human . He remembers nothing and goes outside to dance . Alex kisses him on the cheek , and Mason suggests they just be friends . Alex gets back together with Mason . Crumbs tells Felix the floor should not exist . Harper , Mason , and Alex return to the thirteenth floor . Justin tells them that the floor does not exist . Crumbs thinks that there is evil going on . Dexter then comes with dark angel wings and it is revealed he stole Felix 's his wand . Dexter tricks Felix into turning to the dark side in return for the wand . Felix casts a spell that traps them all on the floor . Back at Waverly Place , Mr. Laritate is dancing while Jerry is selling chili , when Mr. Laritate gets one and gets water to get `` the burn '' out of his mouth . Special guest star : Gregg Sulkin as Mason Guest stars : Bill Chott as Mr. Laritate , Ian Abercrombie as Professor Crumbs , Frank Pacheco as Felix , Fred Stoller as Dexter , Regan Burns as Everett , Jane Carr as Martha St. Claire Note : This is part 3 of a 4 - part arc . Absent : Jake T. Austin as Max Russo , Maria Canals Barrera as Theresa Russo 103 24 `` Wizards vs. Everything '' Victor Gonzalez Gigi McCreery & Perry Rein October 28 , 2011 ( 2011 - 10 - 28 ) 426 3.4 The wizards of 13th floor come out and Alex explains Dexter 's evil . Dexter reveals himself as Gorog , and that he is trying to rebuild his army of darkness . Felix uses a spell that makes all the wizards from the 13th floor go with them , so they can make them all evil , all except Alex , Justin , and Harper , who are left behind . A trashcan tells them to go through it , however Alex ends up in the room again . Justin realizes only mortals can go through it . Alex convinces Harper into going through it , Harper then arrives in the wizard lair . Gorog takes the kidnapped wizards to his evil lair , where he plans to make them evil . He tricks Hugh Normous into becoming one of the evil wizards in his army . Professor Crumbs fakes becoming evil when Gorog plans on making him evil . Harper contacts Max and tells him about Gorog . Max arrives and suggests they look for spells in the wizard books . Gorog makes the wizard army to dig a hole to the atmosphere to the wizard world , so they can take over it . Gorog also tries to trick Mason into being one of the members in his army , but Mason refuses . Gorog tricks him into joining , however . Gorog then makes Felix send a black whole to suck Alex and Justin in it . Gorog gives the kidnapped wizards their wands so they can take over the wizard world , but Crumbs refuses to let them . Felix then gets rid of Crumbs on Gorog 's order . The black hole nearly sucks Alex and Justin when Crumbs arrives at the wizard lair . Max suggests they put a black hole in the wizard lair . Max goes in and rescues Alex and Justin . Crumbs tells them to use their magic to stop Gorog . They arrive at Gorog 's lair and attempt to destroy him , but Mason tries to convince Alex to join them . Gorog also reveals Juliet ( young again ) , Justin 's ex-girlfriend , and she convinces Justin to join . Alex also surrenders , and Max is forced to as well , the three then use their combined magic to get rid of Gorog , and all the supernatural beings are freed from his influence . Juliet and Justin get back together . Alex tricks Harper into moving in the Russos ' basement by making her think all the wizards and supernatural creatures , with no home , are going to stay . Special guest stars : Gregg Sulkin as Mason , Bridgit Mendler as Juliet van Heusen Guest stars : Ian Abercrombie as Professor Crumbs , John Rubinstein as Gorog , Frank Pacheco as Felix , Fred Stoller as Dexter , Josh Sussman as Hugh Normous , Christopher Douglas Reed as Ogre Note : This is part 4 of a 4 - part arc . Absent : Maria Canals Barrera as Theresa Russo , David DeLuise as Jerry Russo 104 25 `` Rock Around the Clock '' Guy Distad Robert Boesel November 4 , 2011 ( 2011 - 11 - 04 ) 414 3.8 The current landlord of the Russo 's building decides to sell the sub shop , evicting the Russos of the shop , as well as their apartment and lair , which contains their portal . Without the portal , the Russos will lose all contact with the Wizard world . So , the entire family ( along with Harper ) travel back to 1957 to stop Jerry 's father ( the previous owner of the shop ) from selling the shop to the landlord , so that they do not get evicted . Jerry 's father agrees not to sell the shop , and the Russos return to present day . However , they accidentally leave Harper behind when Harper is distracted by a woman with a poodle , and Harper suggests that the woman should put a picture of a poodle on her skirt , creating a poodle skirt , which were popular in the 1950s . Back in present day , the Russos ( who have not yet realized Harper 's absence ) find the sub shop obsolete , boarded up , and empty , with the subway car and the lair missing , too . The Russos realized that they have messed with the fabric of time , and something they did while time - traveling in 1957 must have created a ripple effect , and affected present day . While Alex suggests that they go back to 1957 to find out what they did wrong , Justin denies this , saying they should not solve the problem by doing exactly what caused the problem , however Theresa states that they will have to go back , when she realizes that they left Harper in 1957 . The Russos return to 1957 , where Jerry 's father reveals that he did not sell the restaurant to the landlord , however the restaurant failed to make enough business , and that he has been forced to close it . Justin realizes that when Jerry 's father lost the restaurant , he moved out of the building and since their family no longer lived in the building , the lair disappeared in present day . The Russos decide just to find Harper and go back to present day , and discover that Harper enrolled at Tribeca Prep as soon as they forgot her in 1957 , as Harper did not want to ruin her perfect attendance record . Justin , Alex , and Max go to Tribeca Prep to retrieve Harper , while Jerry and Theresa wait at the sub shop , however Harper decides to stay in the past , as she finds new popularity in 1957 that she does not experience in present day . While at Tribeca , Max introduces the high - five to several students . Alex realizes that if they make the sub shop the 1957 high school hangout , the sub shop will get better business and will not have to close . However , no one has any fun at the sub shop that night as the jukebox is broken . Just as everyone is about to leave , Max plugs his MP3 player into the jukebox and Harper uses her popularity to get the students dancing and having fun at the shop , and the business at the sub shop peaks . The Russos return to the present day , where the lair and the sub shop are back , and Jerry owns the entire building , while the landlord is now the owner of a Janitor service , instead of the building , and the high - five is now called a `` Max '' . Alex then remembers that they forgot Harper back in 1957 and they go back and get her . ( the Russos accidentally end up in 1977 twice in the episode , thanks to Justin ) Guest stars : Brendan Bradley as Hank , Carlo Michael Mancini as Lenny Hune 105 26 `` Harperella '' Victor Gonzalez Richard Goodman & Justin Varava November 18 , 2011 ( 2011 - 11 - 18 ) 427 3.5 The episode begins on Waverly Place where Harper is reading a storybook to a group of children when Alex pushes her away . Alex explains that it 's a Wizard Storybook , a magical storybook that has the power of turning what the person reads real . Then Harper is teleported into the loft where Theresa , her evil ( or `` wicked '' as she referred ) stepmother calls her Harperella ( a combination of Harper and Cinderella ) and forces her to do the chores . Then her evil stepbrothers , Justin and Max come down and give her laundry to her wash . Later Harper is washing the Waverly Substation when Alex appears , as she is Harper 's fairy godmother . Alex explains to Harper that the fairy tale has to run as it 's supposed to before things can go back to the way they were and then vanishes . Then Max comes in and says that the prince charming has decided to use the Substation to be the ballroom for the royal party . Harper says that she can go to the party but her stepfamily laughs at her . Back in the loft Harper summons Alex , she uses a spell to transform Harper 's bookdress into a princess gown and glass bowls into glass slippers . They go down ( through the door ) into the street and Alex turns the hot dog stand into a carriage to take Harper to the party . There she dances with prince charming , Zeke . At the stroke of midnight she goes outside leaving her glass slipper behind . Then , to both girls ' shock , Justin , Max and Zeke ( with pig noses ) rush inside the substation being chased by the big , bad wolf , Mason . Alex realizes that some pages are missing and Cinderella and three little pigs stories were blended together . The pig - turned boys and Harper rush into the loft being chased by Mason . While Alex finds the pages Harper has to keep Mason from eating Zeke ( who built the straw house ) , Alex eventually finds the book pages in a drawer along with other book pages . Alex tries a page from Max 's favourite magic trick book then David Copperfield comes into the room and does some magic tricks which impresses Harper . But another page that Alex tried was from Justin 's science book and a caveman appeared , but the caveman has a thing for Harper . So when Harper is impressed by the magic trick he is jealous and tries to attack David Copperfield . Alex finds the right pages and the story goes back to Cinderella . Zeke Charming comes in and Theresa tries to wear the slipper but fails . Then Harper tries it and fits . She and Zeke go back to the royal party where they dance and then the story ends and the world is returned to its normality . Last but not least , Harper was back in the real world and she lived happily ever after . Finally , Alex planned that Harper and Zeke dance because they were great when they danced in romance , so they practiced but they were really bad . The ball dance is turned into a clogging dance . Special guest stars : David Copperfield as himself , Gregg Sulkin as Mason Guest star : Dan Benson as Zeke Absent : David DeLuise as Jerry Russo 106 27 `` Who Will Be the Family Wizard '' Victor Gonzalez Vince Cheung & Ben Montanio ( Part 1 ) Todd J. Greenwald ( Part 2 ) January 6 , 2012 ( 2012 - 01 - 06 ) 428 -- 429 9.8 During a dinner that Alex made for the family , Professor Crumbs visits to reveal that with this selfless act , the Russo children can finally have their family wizard competition . Round one of the competition is a trivia round , in which questions related to magic are asked . During this round , Harper and Zeke appear . Zeke has accidentally smelled a purple substance in the lair that caused him to turn purple . This causes a griffin to kidnap him and Harper . Alex , Justin and Max use their three time - outs to go and rescue their friends . They make it back , only to discover that they have been gone too long and have been disqualified from the competition . They all return home , where the lair disappears and they all lose their magic , thus becoming mortals . Justin and Max begin to hate Alex because of her insistence on saving Zeke and Harper resulting in them losing . Convinced that the loss of their powers has ruined the family , Jerry decides to sell the sub shop . The kids go for a day without magic , during which , slowly gaining back trust in each other as they reopen and run the shop . Suddenly , they are returned to the area of the Wizard Competition , where the host reveals that the griffin attack ( which was actually meant for Professor Crumbs ) and the weeks they went without magic were tests to test their family bond . They enter the final round of the competition , a massive labyrinth . The first out of the maze will win . Justin makes it out first and is declared the Family Wizard . However , he decides he can not accept this because Alex was about to get out first : Justin had been trapped by magical vines and Alex , near the exit , came back to help . Alex is thus declared the true family wizard . Professor Crumbs , proud of Justin 's integrity in telling the truth , declares that he is going to retire as Headmaster of Wiz - Tech and declares Justin the new headmaster , granting him full wizard powers . Considering Max is the only Russo child that does not get powers or becomes a full wizard , Jerry thus decides to one day pass down the sub shop to Max , which he happily accepts . It ends with the Russo family hugging and gathering together with Alex stating that they are all finally happy at the same time . Special guest stars : Gregg Sulkin as Mason , Bridgit Mendler as Juliet van Heusen Guest stars : Dan Benson as Zeke , Ian Abercrombie as Professor Crumbs , Andy Kindler as Chancellor Tootietootie Note : This is an hour long special .
+  Fact 0.0: The Wizards of Waverly Place season 4 episode list gives each episode's number, title, directors, writers, original air date, production code and U.S. viewers in millions.
+  Fact 0.1: Episode 80, 'Alex Tells the World', was directed by Victor Gonzalez and written by Gigi McCreery and Perry Rein.
+  Fact 0.2: Episode 80 aired November 12, 2010, with production code 401 and 4.1 million U.S. viewers.
+  Fact 0.3: In 'Alex Tells the World', the Russos and Mason make it back home but their wizard powers are still gone.
+  Fact 0.4: In 'Alex Tells the World', Alex reveals to reporters that they are wizards and that a group of wizards is held captive by the government.
+  Fact 0.5: In 'Alex Tells the World', Professor Crumbs tells Alex that everything was a test she failed and orders her to Wizard Court for exposing wizardry.
+  Fact 0.6: In 'Alex Tells the World', Justin is ordered to Wizard Court because he exposed magic to Agent Lamwood.
+  Fact 0.7: Agent Lamwood was a creation from Professor Crumbs' mind.
+  Fact 0.8: In 'Alex Tells the World', the judges rule Alex and Justin guilty.
+  Fact 0.9: In 'Alex Tells the World', Professor Crumbs demotes Alex and Justin to level one in the Family Wizard Competition, behind Max by two levels.
+  Fact 0.10: In 'Alex Tells the World', Max sets traps in the Sub Station for the government but falls for one of them.
+  Fact 0.11: Gregg Sulkin plays Mason as a special guest star in 'Alex Tells the World'.
+  Fact 0.12: Ian Abercrombie guest stars as Professor Crumbs in 'Alex Tells the World'.
+  Fact 0.13: Episode 81, 'Alex Gives Up', was directed by Victor Gonzalez and written by Todd J. Greenwald, and aired November 27, 2010 with production code 402.
+  Fact 0.14: In 'Alex Gives Up', Alex decides to give up the wizard competition to spend more time with Mason.
+  Fact 0.15: In 'Alex Gives Up', Alex thinks giving up does not matter since Max is all the way in the lead.
+  Fact 0.16: In 'Alex Gives Up', Chancellor Tootietootie tells Alex that non-wizards and werewolves cannot date.
+  Fact 0.17: In 'Alex Gives Up', Max's picture on the front of Future Wizards magazine attracts the daughter of a family of Cucuys.
+  Fact 0.18: Cucuys are mythical Latino monsters.
+  Fact 0.19: In 'Alex Gives Up', the Cucuys invite Max to a dinner party on their yacht.
+  Fact 0.20: In 'Alex Gives Up', Alex plans to invite Chancellor Tootietootie to the Cucuy party to get him to appeal the law against werewolves and mortals dating.
+  Fact 0.21: In 'Alex Gives Up', Lisa Cucuy finds out Mason is a werewolf and decides she wants him instead of Max.
+  Fact 0.22: In 'Alex Gives Up', Alex gets jealous when Lisa flirts with Mason.
+  Fact 0.23: In 'Alex Gives Up', Alex says embarrassing things about Mason to everyone on the yacht so he will get mad enough to turn into a werewolf.
+  Fact 0.24: In 'Alex Gives Up', Carlos and Julie Cucuy jump off the boat because Cucuys are scared of werewolves.
+  Fact 0.25: In 'Alex Gives Up', Jerry jumps off the boat after Carlos and Julie.
+  Fact 0.26: In 'Alex Gives Up', Alex tells Lisa she can get off the boat the easy way or her way.
+  Fact 0.27: In 'Alex Gives Up', Lisa jumps off the boat.
+  Fact 0.28: In 'Alex Gives Up', Chancellor Tootietootie says the case will not be appealed because Mason turning into a werewolf proved the point that they are dangerous.
+  Fact 0.29: In 'Alex Gives Up', Alex and Mason have to break up to be friends.
+  Fact 0.30: In 'Alex Gives Up', Harper finishes writing her first novel based on the werewolf-wizard relationship.
+  Fact 0.31: In 'Alex Gives Up', Jerry accidentally grabs Harper's just-finished novel while trying to get out of the water, causing him to fall back in.
+  Fact 0.32: In 'Alex Gives Up', Justin tutors a class of delinquent wizards to gain a level to re-enter the Wizard Competition.
+  Fact 0.33: Gregg Sulkin plays Mason as a special guest star in 'Alex Gives Up'.
+  Fact 0.34: Andy Kindler guest stars as Chancellor Tootietootie in 'Alex Gives Up'.
+  Fact 0.35: Frank Pacheco guest stars as Felix in 'Alex Gives Up'.
+  Fact 0.36: David Barrera guest stars as Carlos Cucuy in 'Alex Gives Up'.
+  Fact 0.37: Roxana Brusso guest stars as Julie Cucuy in 'Alex Gives Up'.
+  Fact 0.38: Samantha Boscarino guest stars as Lisa Cucuy in 'Alex Gives Up'.
+  Fact 0.39: Kari Wahlgren guest stars as Helen in 'Alex Gives Up'.
+  Fact 0.40: Episode 82, 'Lucky Charmed', was directed by Victor Gonzalez and written by Justin Varava, and aired December 10, 2010 with production code 403 and 3.0 million U.S. viewers.
+  Fact 0.41: In 'Lucky Charmed', Harper tries teaching Alex how to live without magic.
+  Fact 0.42: In 'Lucky Charmed', Alex gets in big trouble for crashing Mr. Laritate's car, causing a disagreement with Harper.
+  Fact 0.43: As punishment in 'Lucky Charmed', Alex has to clean the school's garbage cans.
+  Fact 0.44: In 'Lucky Charmed', Mr. Laritate forgives Alex after seeing how the crash influenced her.
+  Fact 0.45: In 'Lucky Charmed', Alex realizes she will be okay without magic.
+  Fact 0.46: In 'Lucky Charmed', Alex uses Mr. Laritate's lucky life-saving hula girl figurine, Leilani, for luck.
+  Fact 0.47: In 'Lucky Charmed', Alex turns into the hula girl and guides Harper through her driving test.
+  Fact 0.48: In 'Lucky Charmed', Harper passes her driving test.
+  Fact 0.49: In 'Lucky Charmed', Jerry wants to pass the wizard family robe to Max, but Justin has a hard time letting go of it.
+  Fact 0.50: Bill Chott guest stars as Mr. Laritate in 'Lucky Charmed'.
+  Fact 0.51: Julio Oscar Mechoso guest stars as DMV Instructor in 'Lucky Charmed'.
+  Fact 0.52: Maria Canals Barrera, who plays Theresa Russo, was absent from 'Lucky Charmed'.
+  Fact 0.53: Episode 83, 'Journey to the Center of Mason', was directed by Robbie Countryman and written by Peter Dirksen, and aired December 17, 2010 with production code 404.
+  Fact 0.54: In 'Journey to the Center of Mason', Alex can no longer date Mason after finding out she will lose her powers.
+  Fact 0.55: In 'Journey to the Center of Mason', Alex and Mason decide to try being best friends instead.
+  Fact 0.56: In 'Journey to the Center of Mason', Dean, Alex's ex-boyfriend, asks Alex to get back together with him.
+  Fact 0.57: In 'Journey to the Center of Mason', Mason gets jealous of Dean.
+  Fact 0.58: In 'Journey to the Center of Mason', Max tells Mason that Dean and Alex used to date.
+  Fact 0.59: In 'Journey to the Center of Mason', Mason turns into a werewolf and eats Dean.
+  Fact 0.60: In 'Journey to the Center of Mason', Alex, Justin and Max turn Justin's toy Captain Jim Bob submarine big and go in it.
+  Fact 0.61: In 'Journey to the Center of Mason', Alex, Justin and Max shrink the submarine and go into Mason's mouth.
+  Fact 0.62: Inside Mason, Alex, Max and Justin see Mason's thoughts, which are all of Alex.
+  Fact 0.63: In 'Journey to the Center of Mason', Alex, Max and Justin get Dean out.
+  Fact 0.64: In 'Journey to the Center of Mason', Alex tells Dean he was knocked out and the doctor's solution was for them all to dress up as cows.
+  Fact 0.65: In 'Journey to the Center of Mason', Dean offers again to get back together with Alex, and she says no.
+  Fact 0.66: In 'Journey to the Center of Mason', Alex gets back together with Mason.
+  Fact 0.67: Gregg Sulkin plays Mason as a special guest star in 'Journey to the Center of Mason'.
+  Fact 0.68: Daniel Samonas guest stars as Dean in 'Journey to the Center of Mason'.
+  Fact 0.69: Frank Pacheco guest stars as Felix in 'Journey to the Center of Mason'.
+  Fact 0.70: Shoshana Bush guest stars as Tyler in 'Journey to the Center of Mason'.
+  Fact 0.71: Episode 84, 'Three Maxes and a Little Lady', was directed by Victor Gonzalez and written by Richard Goodman, and aired January 7, 2011 with production code 405 and 4.0 million U.S. viewers.
+  Fact 0.72: In 'Three Maxes and a Little Lady', Alex joins Justin's wizard class to try to move up in the competition.
+  Fact 0.73: In 'Three Maxes and a Little Lady', Max joins a sophisticated wizard society.
+  Fact 0.74: In 'Three Maxes and a Little Lady', the society suggests Max move the wizard competition up to a few days away.
+  Fact 0.75: In 'Three Maxes and a Little Lady', Max quits the society because he finds out they are taking advantage of him.
+  Fact 0.76: In 'Three Maxes and a Little Lady', Alex and Justin transform into Max to change the date of the family wizard competition back to its original date, and succeed.
+  Fact 0.77: At the end of 'Three Maxes and a Little Lady', Alex and Justin accidentally turn Max indefinitely into a little girl.
+  Fact 0.78: Bailee Madison guest stars as Maxine in 'Three Maxes and a Little Lady'.
+  Fact 0.79: Frank Pacheco guest stars as Felix in 'Three Maxes and a Little Lady'.
+  Fact 0.80: Kari Wahlgren guest stars as Helen in 'Three Maxes and a Little Lady'.
+  Fact 0.81: Shane Harper guest stars as Fidel in 'Three Maxes and a Little Lady'.
+  Fact 0.82: Bailee Madison begins her recurring role as Maxine, the female Max, in 'Three Maxes and a Little Lady'.
+  Fact 0.83: Jake T. Austin was absent in four other episodes and returns at the end of the tenth episode, 'Back to Max'.
+  Fact 0.84: Episode 85, 'Daddy's Little Girl', was directed by Robbie Countryman and written by Gigi McCreery and Perry Rein, and aired January 21, 2011 with production code 406 and 3.4 million U.S. viewers.
+  Fact 0.85: In 'Daddy's Little Girl', the parents pay more attention to Max, who is now Maxine, and Alex becomes jealous.
+  Fact 0.86: In 'Daddy's Little Girl', Justin takes Maxine to her karate class, where Maxine kicks Justin's butt.
+  Fact 0.87: In 'Daddy's Little Girl', Alex makes Jerry's favorite sandwich to win his love back.
+  Fact 0.88: In 'Daddy's Little Girl', Maxine announces she beat Justin in karate, and Jerry falls for her cuteness again.
+  Fact 0.89: In 'Daddy's Little Girl', Alex and Justin cast spells on Maxine to change her back, which only makes her cuter and furious.
+  Fact 0.90: In 'Daddy's Little Girl', Maxine demands she kicks either Alex's or Justin's butt.
+  Fact 0.91: In 'Daddy's Little Girl', Alex casts a spell on Justin to make him a karate master.
+  Fact 0.92: In 'Daddy's Little Girl', Justin beats Maxine, and Maxine is hurt physically.
+  Fact 0.93: In 'Daddy's Little Girl', Jerry and Theresa rush to Maxine's side.
+  Fact 0.94: In 'Daddy's Little Girl', Justin leaves, and Alex leaves after him, heartbroken.
+  Fact 0.95: In 'Daddy's Little Girl', Jerry tells Alex he fell for Maxine because she reminded him of Alex when she was little.
+  Fact 0.96: In 'Daddy's Little Girl', Zeke thinks the Russos hate him, but it was really Harper's alibi to keep him away from the Sub Station.
+  Fact 0.97: Bailee Madison guest stars as Maxine in 'Daddy's Little Girl'.
+  Fact 0.98: Dan Benson guest stars as Zeke in 'Daddy's Little Girl'.
+  Fact 0.99: Lanny Joon guest stars as Sensei in 'Daddy's Little Girl'.
+  Fact 0.100: Jake T. Austin, who plays Max, was absent from 'Daddy's Little Girl'.
+  Fact 0.101: Episode 86, 'Everything's Rosie for Justin', was directed by Victor Gonzalez and written by Justin Varava, and aired February 4, 2011 with production code 407 and 3.9 million U.S. viewers.
+  Fact 0.102: In 'Everything's Rosie for Justin', Justin and his delinquent class have a wizard wand dance assessment to get them back in Wiztech.
+  Fact 0.103: In 'Everything's Rosie for Justin', Rosie, a new student, is an angel.
+  Fact 0.104: In 'Everything's Rosie for Justin', Justin falls madly in love with Rosie.
+  Fact 0.105: In 'Everything's Rosie for Justin', Harper makes cards that customers get hole punched each time they buy a sandwich, and nine punches earn a free sandwich.
+  Fact 0.106: In 'Everything's Rosie for Justin', one man punches his own card, demands a free sandwich, and brings dozens of people with pre-punched cards.
+  Fact 0.107: In 'Everything's Rosie for Justin', Maxine uses her cuteness to convince customers not to exploit her parents.
+  Fact 0.108: In 'Everything's Rosie for Justin', Justin kicks Rosie out of his class so it does not fail the assessment.
+  Fact 0.109: In 'Everything's Rosie for Justin', Alex gets Rosie to rejoin the class and puts a copycat spell on her.
+  Fact 0.110: In 'Everything's Rosie for Justin', a squirrel-frog attaches itself to Alex's foot during the assessment.
+  Fact 0.111: In 'Everything's Rosie for Justin', Rosie reveals herself to be an angel during the assessment.
+  Fact 0.112: In 'Everything's Rosie for Justin', the class fails the assessment.
+  Fact 0.113: In 'Everything's Rosie for Justin', Justin starts dating Rosie.
+  Fact 0.114: Bailee Madison guest stars as Maxine in 'Everything's Rosie for Justin'.
+  Fact 0.115: Frank Pacheco guest stars as Felix in 'Everything's Rosie for Justin'.
+  Fact 0.116: Leven Rambin guest stars as Rosie in 'Everything's Rosie for Justin'.
+  Fact 0.117: Diane Delano guest stars as Penny in 'Everything's Rosie for Justin'.
+  Fact 0.118: Chris Coppola guest stars as Customer in 'Everything's Rosie for Justin'.
+  Fact 0.119: Cameron Sanders guest stars as Nelvis in 'Everything's Rosie for Justin'.
+  Fact 0.120: Jake T. Austin, who plays Max, was absent from 'Everything's Rosie for Justin'.
+  Fact 0.121: Episode 87, 'Dancing with Angels', was directed by Victor Gonzalez and written by Richard Goodman, and aired February 11, 2011 with production code 408 and 4.5 million U.S. viewers.
+  Fact 0.122: In 'Dancing with Angels', Justin and Rosie start dating, but their date gets ruined, so they want a second date.
+  Fact 0.123: In 'Dancing with Angels', Alex suggests an Angel Club in Los Angeles, but Rosie says only Angels are allowed.
+  Fact 0.124: In 'Dancing with Angels', Maxine will not tell their parents as long as Alex brings her back an Ozzy Osbourne stone.
+  Fact 0.125: In 'Dancing with Angels', Justin, Harper and Alex sneak into the Angel Club with Rosie.
+  Fact 0.126: In 'Dancing with Angels', Zeedrik asks if they are angels, and they say they are.
+  Fact 0.127: In 'Dancing with Angels', Theresa and Jerry force Maxine to join a pageant so she will tell them where the others are.
+  Fact 0.128: In 'Dancing with Angels', Alex and Harper cannot fly, so Justin secretly uses his wand to give Harper flying powers.
+  Fact 0.129: In 'Dancing with Angels', Zeedrik tests them by having them sing while playing the harp, and they fail.
+  Fact 0.130: In 'Dancing with Angels', Alex, Justin and Harper are accepted as angels until the key-chain of Ozzy Osbourne's star reverts to normal.
+  Fact 0.131: In 'Dancing with Angels', Zeedrik believes they are really angels of darkness, and everyone in the club runs off, even Rosie.
+  Fact 0.132: In 'Dancing with Angels', Rosie comes back to comfort Justin, and her wings are shown to be black.
+  Fact 0.133: In 'Dancing with Angels', Justin does not see Rosie's black wings because he is looking forward.
+  Fact 0.134: In 'Dancing with Angels', Maxine wins the beauty pageant, and Jerry and Theresa celebrate.
+  Fact 0.135: Bailee Madison guest stars as Maxine in 'Dancing with Angels'.
+  Fact 0.136: Leven Rambin guest stars as Rosie in 'Dancing with Angels'.
+  Fact 0.137: Ransford Doherty guest stars as Zeedrik in 'Dancing with Angels'.
+  Fact 0.138: Jake T. Austin, who plays Max, was absent from 'Dancing with Angels'.
+  Fact 0.139: Episode 88, 'Wizards vs. Angels', was a one-hour special directed by Victor Gonzalez and written by Vince Cheung and Ben Montanio, and aired February 18, 2011 with production codes 409 and 410 and 5.1 million U.S. viewers.
+  Fact 0.140: In 'Wizards vs. Angels', Rosie is an Angel of Darkness and has been tricking Justin to make him evil.
+  Fact 0.141: In 'Wizards vs. Angels', Alex finds out Rosie is an Angel of Darkness with the help of Tina, a guardian angel in training.
+  Fact 0.142: In 'Wizards vs. Angels', Justin crosses over to the dark side with Rosie.
+  Fact 0.143: In 'Wizards vs. Angels', Justin steals the moral compass and gives it to Gorog so Gorog can turn it from good to bad.
+  Fact 0.144: In 'Wizards vs. Angels', Rosie tries to get Justin to run away because Gorog wants to destroy him.
+  Fact 0.145: In 'Wizards vs. Angels', Justin refuses to leave and breaks his wand in halves.
+  Fact 0.146: In 'Wizards vs. Angels', Alex tries to convince Justin that he is a good wizard.
+  Fact 0.147: In 'Wizards vs. Angels', Maxine is enrolled in Tribeca Prep as part of a cousin exchange program.
+  Fact 0.148: In 'Wizards vs. Angels', Harper insists Maxine have a slumber party, which becomes a disaster.
+  Fact 0.149: In 'Wizards vs. Angels', Tina reveals that Rosie was a good angel, and Gorog corrupted her before her transport arrived.
+  Fact 0.150: In 'Wizards vs. Angels', Alex and Tina go to the Dark Realm to save Justin.
+  Fact 0.151: In 'Wizards vs. Angels', Alex borrows a pair of wings from the guardian angels.
+  Fact 0.152: In 'Wizards vs. Angels', Alex takes the Moral Compass and tries to turn it to good, but Justin stops her.
+  Fact 0.153: In 'Wizards vs. Angels', Rosie uses her good angel side, and they fly up.
+  Fact 0.154: In 'Wizards vs. Angels', Justin turns the compass to good when they land.
+  Fact 0.155: In 'Wizards vs. Angels', Tina and Alex take the compass and run.
+  Fact 0.156: In 'Wizards vs. Angels', when Rosie and Justin kiss, Rosie turns into a good angel with white wings.
+  Fact 0.157: In 'Wizards vs. Angels', Justin loses his dark wings.
+  Fact 0.158: Bill Chott guest stars as Mr. Laritate in 'Wizards vs. Angels'.
+  Fact 0.159: Bailee Madison guest stars as Maxine in 'Wizards vs. Angels'.
+  Fact 0.160: Leven Rambin guest stars as Rosie in 'Wizards vs. Angels'.
+  Fact 0.161: John Rubinstein guest stars as Gorog in 'Wizards vs. Angels'.
+  Fact 0.162: China McClain guest stars as Tina in 'Wizards vs. Angels'.
+  Fact 0.163: Amy Tolsky guest stars as Florence in 'Wizards vs. Angels'.
+  Fact 0.164: Jake T. Austin, who plays Max, was absent from 'Wizards vs. Angels'.
+  Fact 0.165: Episode 89, 'Back To Max', was directed by Guy Distad and written by Todd J. Greenwald, and aired March 11, 2011 with production code 411 and 3.7 million U.S. viewers.
+  Fact 0.166: In 'Back To Max', Justin invites Professor Crumbs to check on his delinquent wizards class.
+  Fact 0.167: In 'Back To Max', Maxine interrupts, and Alex and Justin try to find a way to turn Maxine back to Max.
+  Fact 0.168: In 'Back To Max', Harper takes a role in the school's Spirit of America play, but is replaced by Maxine.
+  Fact 0.169: Jake T. Austin returns as Max near the end of 'Back To Max'.
+  Fact 0.170: Bailee Madison marks her final appearance as Maxine in 'Back To Max'.
+  Fact 0.171: Bill Chott guest stars as Mr. Laritate in 'Back To Max'.
+  Fact 0.172: Ian Abercrombie guest stars as Professor Crumbs in 'Back To Max'.
+  Fact 0.173: Bailee Madison guest stars as Maxine in 'Back To Max'.
+  Fact 0.174: Cameron Sanders guest stars as Nelvis in 'Back To Max'.
+  Fact 0.175: LJ Benet guest stars as Little Crumbs in 'Back To Max'.
+  Fact 0.176: Jackie Evancho guest stars as Choir Girl in 'Back To Max'.
+  Fact 0.177: Episode 90, 'Zeke Finds Out', was directed by David DeLuise and written by Peter Dirksen, and aired April 8, 2011 with production code 412 and 3.0 million U.S. viewers.
+  Fact 0.178: In 'Zeke Finds Out', Alex uses magic to make Zeke's tricks come true after she gets bored of his failing magic tricks.
+  Fact 0.179: In 'Zeke Finds Out', Zeke tells Harper he believes he is a wizard and books a magic act at the sub station for a kid's birthday party.
+  Fact 0.180: In 'Zeke Finds Out', Justin and Harper decide to leave everything up to Alex.
+  Fact 0.181: In 'Zeke Finds Out', Harper tells Alex to tell Zeke the truth about wizards.
+  Fact 0.182: In 'Zeke Finds Out', Alex is reluctant to expose wizardry because it could get her kicked out of the wizard competition forever.
+  Fact 0.183: In 'Zeke Finds Out', Zeke breaks up with Harper after finding out she is keeping a secret from him.
+  Fact 0.184: In 'Zeke Finds Out', Alex makes Harper disappear before she can expose wizardry to Zeke.
+  Fact 0.185: In 'Zeke Finds Out', Justin freezes everyone except himself and Zeke.
+  Fact 0.186: In 'Zeke Finds Out', Justin tells Zeke that he is a wizard and flashes him into their lair to unveil the secret.
+  Fact 0.187: In 'Zeke Finds Out', Zeke promises he will never tell anyone about wizards.
+  Fact 0.188: In 'Zeke Finds Out', Zeke and Harper reconcile, and Alex and Harper apologize and make up.
+  Fact 0.189: Dan Benson guest stars as Zeke in 'Zeke Finds Out'.
+  Fact 0.190: Maurice G. Smith guest stars as Big Mitch in 'Zeke Finds Out'.
+  Fact 0.191: Maria Canals Barrera, who plays Theresa Russo, was absent from 'Zeke Finds Out'.
+  Fact 0.192: David DeLuise, who plays Jerry Russo, was absent from 'Zeke Finds Out'.
+  Fact 0.193: Episode 91, 'Magic Unmasked', was directed by David DeLuise and written by Justin Varava, and aired May 13, 2011 with production code 413 and 2.7 million U.S. viewers.
+  Fact 0.194: In 'Magic Unmasked', a former legendary Luchador named Muy Macho visits the Sub Station.
+  Fact 0.195: In 'Magic Unmasked', Alex finds out she was the reason Muy Macho quit lucha libre.
+  Fact 0.196: In 'Magic Unmasked', Alex arranges a lucha libre match with Muy Macho and Jerry to restore his honor.
+  Fact 0.197: In 'Magic Unmasked', Zeke asks too many questions about wizardry.
+  Fact 0.198: In 'Magic Unmasked', Justin offers Zeke one magical wish if he promises to stop questioning him about magic.
+  Fact 0.199: In 'Magic Unmasked', Zeke's wish is to defeat Muy Macho in the match.
+  Fact 0.200: In 'Magic Unmasked', Max pretends to like Talia's hobbies but does not enjoy them.
+  Fact 0.201: Dan Benson guest stars as Zeke in 'Magic Unmasked'.
+  Fact 0.202: Valente Rodriguez guest stars as Muy Macho in 'Magic Unmasked'.
+  Fact 0.203: McKaley Miller guest stars as Talia in 'Magic Unmasked'.
+  Fact 0.204: Episode 92, 'Meet the Werewolves', was directed by Victor Gonzalez and written by David Henrie, and aired June 17, 2011 with production code 415 and 4.0 million U.S. viewers.
+  Fact 0.205: In 'Meet the Werewolves', Alex asks to meet Mason's parents, and Mason shows her fake parents.
+  Fact 0.206: In 'Meet the Werewolves', Mason takes Alex to the Autumn Moon Feast, a werewolf holiday, to meet his real parents.
+  Fact 0.207: In 'Meet the Werewolves', Alex uses a spell to change herself and Harper into werewolves.
+  Fact 0.208: In 'Meet the Werewolves', Alex tries to be the worst werewolf possible in front of Mason's parents.
+  Fact 0.209: In 'Meet the Werewolves', Mason's parents like Alex as a werewolf.
+  Fact 0.210: In 'Meet the Werewolves', Mason tells his parents that he truly loves Alex and that she is a wizard.
+  Fact 0.211: In 'Meet the Werewolves', Alex changes back to a wizard and Mason turns back to human form.
+  Fact 0.212: In 'Meet the Werewolves', Mason's parents try to eat Alex and Mason, and they make a near escape.
+  Fact 0.213: In 'Meet the Werewolves', Max makes his parents' food taste like kid food.
+  Fact 0.214: In 'Meet the Werewolves', Jerry and Theresa act like little kids after eating the food.
+  Fact 0.215: In 'Meet the Werewolves', Justin uses a spell on a pizza to turn Jerry and Theresa back to their regular selves.
+  Fact 0.216: In 'Meet the Werewolves', Max uses a spell on cookies to make them older, and they turn into teenagers.
+  Fact 0.217: Gregg Sulkin plays Mason as a special guest star in 'Meet the Werewolves'.
+  Fact 0.218: Harry Van Gorkum guest stars as Grant Greybeck in 'Meet the Werewolves'.
+  Fact 0.219: Robin Riker guest stars as Linda Greybeck in 'Meet the Werewolves'.
+  Fact 0.220: Marianne Muellerleile guest stars as Molly in 'Meet the Werewolves'.
+  Fact 0.221: Eric Zuckerman guest stars as Bill in 'Meet the Werewolves'.
+  Fact 0.222: Episode 93, 'Beast Tamer', was directed by Victor Gonzalez and written by Gigi McCreery and Perry Rein, and aired June 24, 2011 with production code 416 and 4.0 million U.S. viewers.
+  Fact 0.223: In 'Beast Tamer', Alex, Justin and Max win four tickets to the Beast Bowl.
+  Fact 0.224: In 'Beast Tamer', Beast Tamer Chase Riprock delivers the tickets, flirts with Alex, and invites the group on a pre-bowl tour.
+  Fact 0.225: In 'Beast Tamer', Alex invites Mason to go with them, but he says he cannot.
+  Fact 0.226: In 'Beast Tamer', Justin tries to tame the beast so Max can have his photo taken with it, and both are caught and banned from the event.
+  Fact 0.227: In 'Beast Tamer', Chase tries to kiss Alex, but she rejects him and returns to the mortal world.
+  Fact 0.228: In 'Beast Tamer', Alex finds Mason coming out of a hardware store, where he is evasive about his plans.
+  Fact 0.229: In 'Beast Tamer', Mason is making an anniversary present for Alex, which is a sculpture of himself and Alex.
+  Fact 0.230: In 'Beast Tamer', Harper tells Mason that Chase likes Alex and urges him to surprise her with the gift at the Beast Bowl.
+  Fact 0.231: In 'Beast Tamer', Justin and Max return to the Beast Bowl disguised as beast taming clowns.
+  Fact 0.232: In 'Beast Tamer', the beast escapes and snatches Alex, and Alex throws the whip to Chase.
+  Fact 0.233: In 'Beast Tamer', Chase tames the beast, which drops Alex.
+  Fact 0.234: In 'Beast Tamer', Mason reveals his gift to Alex.
+  Fact 0.235: In 'Beast Tamer', Alex and Mason leave together with the sculpture.
+  Fact 0.236: Gregg Sulkin plays Mason as a special guest star in 'Beast Tamer'.
+  Fact 0.237: Nick Roux guest stars as Chase in 'Beast Tamer'.
+  Fact 0.238: Maria Canals Barrera, who plays Theresa Russo, was absent from 'Beast Tamer'.
+  Fact 0.239: David DeLuise, who plays Jerry Russo, was absent from 'Beast Tamer'.
+  Fact 0.240: Episode 94, 'Wizard of the Year', was directed by Victor Gonzalez and written by Richard Goodman, and aired July 8, 2011 with production code 417 and 3.6 million U.S. viewers.
+  Fact 0.241: In 'Wizard of the Year', Alex is crowned Wizard of the Year for saving the world from dark angels.
+  Fact 0.242: In 'Wizard of the Year', Alex is reinstated in the Wizard Competition.
+  Fact 0.243: In 'Wizard of the Year', a banquet honors Alex's achievement.
+  Fact 0.244: In 'Wizard of the Year', Chase Riprock visits the lair to congratulate Alex.
+  Fact 0.245: In 'Wizard of the Year', Keith Keith hounds them about being in a romantic relationship, and Alex says she already has a boyfriend.
+  Fact 0.246: In 'Wizard of the Year', Keith Keith confirms that Chase and Alex are dating.
+  Fact 0.247: In 'Wizard of the Year', Justin's video only contains him complaining about Alex.
+  Fact 0.248: In 'Wizard of the Year', Mason stands Alex up on the night of the awards banquet.
+  Fact 0.249: In 'Wizard of the Year', Chancellor TootieTootie tells Justin his display of affection and pride for Alex may reinstate him into the competition.
+  Fact 0.250: In 'Wizard of the Year', Justin tries to destroy the tape.
+  Fact 0.251: In 'Wizard of the Year', Chase sits at the Russos' table at the banquet.
+  Fact 0.252: In 'Wizard of the Year', Mason sees Alex and Chase flirting and a short battle between Mason and Chase ensues.
+  Fact 0.253: In 'Wizard of the Year', Alex breaks up the fight and chooses neither Mason nor Chase.
+  Fact 0.254: In 'Wizard of the Year', Alex breaks up with Mason.
+  Fact 0.255: Gregg Sulkin plays Mason as a special guest star in 'Wizard of the Year'.
+  Fact 0.256: Andy Kindler guest stars as Chancellor Tootietootie in 'Wizard of the Year'.
+  Fact 0.257: Nick Roux guest stars as Chase in 'Wizard of the Year'.
+  Fact 0.258: Justin Guarini guest stars as Keith Keith in 'Wizard of the Year'.
+  Fact 0.259: Episode 95, 'Misfortune at the Beach', was directed by Jody Margolin Hahn and written by Vince Cheung and Ben Montanio, and aired July 24, 2011 with production code 420 and 3.5 million U.S. viewers.
+  Fact 0.260: In 'Misfortune at the Beach', the Russos go to the beach on an extremely hot day.
+  Fact 0.261: In 'Misfortune at the Beach', the Russos come across Zelzar, a fortune-telling machine.
+  Fact 0.262: In 'Misfortune at the Beach', Jerry warns the kids that Zelzar is from the wizard world and a wizard's fortune really comes true.
+  Fact 0.263: In 'Misfortune at the Beach', Alex gets a fortune that says 'Say good-bye to your life.'
+  Fact 0.264: In 'Misfortune at the Beach', Alex comes close to life-threatening situations multiple times.
+  Fact 0.265: In 'Misfortune at the Beach', Alex, Justin, Max and Harper make a compromise with Zelzar: if they extract him from the machine and let him enjoy a day at the beach, he will take back Alex's fortune.
+  Fact 0.266: In 'Misfortune at the Beach', Zelzar reveals he cannot take away Alex's fortune but can give it to the next person.
+  Fact 0.267: In 'Misfortune at the Beach', a little girl gets Alex's fortune.
+  Fact 0.268: In 'Misfortune at the Beach', a man from Random Prize Giveaway says 'Say good-bye to your life because we're randomly giving you one million dollars!'
+  Fact 0.269: Michael Carbonaro guest stars as Zelzar in 'Misfortune at the Beach'.
+  Fact 0.270: John J. York guest stars as Game Show Host in 'Misfortune at the Beach'.
+  Fact 0.271: Episode 96, 'Wizards vs. Asteroid', was directed by Victor Gonzalez and written by Peter Dirksen, and aired August 19, 2011 with production code 418 and 3.6 million U.S. viewers.
+  Fact 0.272: In 'Wizards vs. Asteroid', a huge asteroid is hurtling towards the earth.
+  Fact 0.273: In 'Wizards vs. Asteroid', the Russos decide to hide in the wizard world, but Alex, Justin and Max go into space to destroy the asteroid.
+  Fact 0.274: In 'Wizards vs. Asteroid', Alex finds out she is not graduating high school.
+  Fact 0.275: In 'Wizards vs. Asteroid', a small part of the asteroid hits the school, giving Alex a chance to graduate.
+  Fact 0.276: Dan Benson guest stars as Zeke in 'Wizards vs. Asteroid'.
+  Fact 0.277: Bill Chott guest stars as Mr. Laritate in 'Wizards vs. Asteroid'.
+  Fact 0.278: Kristina Hayes guest stars as Reporter in 'Wizards vs. Asteroid'.
+  Fact 0.279: Episode 97, 'Justin's Back In', was directed by Guy Distad and written by Todd J. Greenwald, and aired August 26, 2011 with production code 419 and 3.2 million U.S. viewers.
+  Fact 0.280: In 'Justin's Back In', Justin's class of delinquent wizards has completed their studies and can rejoin WizTech if they all pass their final evaluation.
+  Fact 0.281: In 'Justin's Back In', all of the students fail the final evaluation, which Alex suspects is wrong.
+  Fact 0.282: In 'Justin's Back In', the class had actually passed, but the historian who checked the exams was evil and lied about the scores.
+  Fact 0.283: In 'Justin's Back In', the evil historian attacks Justin's class, and Justin stops him and saves Alex.
+  Fact 0.284: In 'Justin's Back In', a student stops the historian by pulling the most powerful wand in the wizard world out of a crystal ball.
+  Fact 0.285: In 'Justin's Back In', the student is a descendant of a famous wizard who was previously thought to have no living descendants.
+  Fact 0.286: In 'Justin's Back In', Justin's class is readmitted into WizTech, and Justin is officially back in the family wizard competition.
+  Fact 0.287: In 'Justin's Back In', Jerry and Theresa try to recreate Max's childhood accomplishments with the help of Harper.
+  Fact 0.288: In 'Justin's Back In', during the credits it is revealed that Max had kept his favorite memories all along.
+  Fact 0.289: Tim Conway guest stars as Cragmont, as special guest star, in 'Justin's Back In'.
+  Fact 0.290: Ian Abercrombie guest stars as Professor Crumbs in 'Justin's Back In'.
+  Fact 0.291: Frank Pacheco guest stars as Felix in 'Justin's Back In'.
+  Fact 0.292: Cameron Sanders guest stars as Nelvis in 'Justin's Back In'.
+  Fact 0.293: Episode 98, 'Alex the Puppetmaster', was directed by Victor Gonzalez and written by Gigi McCreery and Perry Rein, and aired September 16, 2011 with production code 421 and 3.0 million U.S. viewers.
+  Fact 0.294: In 'Alex the Puppetmaster', Alex and Harper decide to do a puppet show to raise money for a new apartment, and Zeke and Justin help them.
+  Fact 0.295: In 'Alex the Puppetmaster', Alex forgets to write the lines for the show.
+  Fact 0.296: In 'Alex the Puppetmaster', Harper gets mad and does a show of her own, with puppets that act like the way Alex treats her.
+  Fact 0.297: In 'Alex the Puppetmaster', Alex makes Justin and Zeke puppets for her show and steals Harper's crowd.
+  Fact 0.298: In 'Alex the Puppetmaster', Alex apologizes to Harper using the puppets.
+  Fact 0.299: In 'Alex the Puppetmaster', Talia's parents meet Theresa and Jerry for the first time, and it does not go well.
+  Fact 0.300: In 'Alex the Puppetmaster', Justin puts a spell on Talia's parents to forget they ever met Theresa and Jerry.
+  Fact 0.301: In 'Alex the Puppetmaster', Talia's parents meet Theresa and Jerry again and end up watching a 16-hour play together.
+  Fact 0.302: Joely Fisher guest stars as Meg Robinson, as special guest star, in 'Alex the Puppetmaster'.
+  Fact 0.303: Dan Benson guest stars as Zeke in 'Alex the Puppetmaster'.
+  Fact 0.304: James Urbaniak guest stars as Rob Robinson in 'Alex the Puppetmaster'.
+  Fact 0.305: McKaley Miller guest stars as Talia in 'Alex the Puppetmaster'.
+  Fact 0.306: Episode 99, 'My Two Harpers', was directed by Victor Gonzalez and written by Manny Basanese, and aired September 30, 2011 with production code 422 and 3.0 million U.S. viewers.
+  Fact 0.307: In 'My Two Harpers', Harper and Zeke spend so much time together that Alex decides to make a Harper clone.
+  Fact 0.308: In 'My Two Harpers', Justin comes up with ideas to save money in the sub-shop.
+  Fact 0.309: In 'My Two Harpers', Max starts a fast-food restaurant in the wizard world.
+  Fact 0.310: Dan Benson guest stars as Zeke in 'My Two Harpers'.
+  Fact 0.311: Maria Canals Barrera, who plays Theresa Russo, was absent from 'My Two Harpers'.
+  Fact 0.312: Episode 100, 'Wizards of Apartment 13B', was directed by Guy Distad and written by Justin Varava, and aired October 7, 2011 with production code 423 and 3.5 million U.S. viewers.
+  Fact 0.313: In 'Wizards of Apartment 13B', Alex and Harper receive a flyer for a hotel.
+  Fact 0.314: In 'Wizards of Apartment 13B', the hotel's owner, Dexter, sells them Apartment 13B, which belongs to a floor for non-humans.
+  Fact 0.315: In 'Wizards of Apartment 13B', Harper is forced to use a training wand that can only open things.
+  Fact 0.316: In 'Wizards of Apartment 13B', Mason lives on the floor and will not stop trying to win Alex back.
+  Fact 0.317: In 'Wizards of Apartment 13B', Alex and Harper throw a party that the whole floor attends, including Felix.
+  Fact 0.318: In 'Wizards of Apartment 13B', Mason uses Harper's wand to open Alex's heart, but she flirts with an ugly giant.
+  Fact 0.319: In 'Wizards of Apartment 13B', Mason makes Alex open her heart to Felix.
+  Fact 0.320: In 'Wizards of Apartment 13B', Theresa and Jerry trick Justin into going to Alex's apartment.
+  Fact 0.321: In 'Wizards of Apartment 13B', Justin fixes Mason's mistakes by resetting Harper's wand, and it is revealed that he misses Alex.
+  Fact 0.322: In 'Wizards of Apartment 13B', Alex, freed from Mason's spell, is angry at Mason, and Mason leaves.
+  Fact 0.323: In 'Wizards of Apartment 13B', Dexter turns into Gorog outside the door when no one is looking.
+  Fact 0.324: In 'Wizards of Apartment 13B', Max appears in the apartment, and Alex and Harper kick him out.
+  Fact 0.325: In 'Wizards of Apartment 13B', Gorog gives Max a flyer for a free camp, and Max accepts.
+  Fact 0.326: 'Wizards of Apartment 13B' is part 1 of a 4-part arc.
+  Fact 0.327: 'Wizards of Apartment 13B' is the 100th episode.
+  Fact 0.328: Gregg Sulkin plays Mason as a special guest star in 'Wizards of Apartment 13B'.
+  Fact 0.329: John Rubinstein guest stars as Gorog in 'Wizards of Apartment 13B'.
+  Fact 0.330: Frank Pacheco guest stars as Felix in 'Wizards of Apartment 13B'.
+  Fact 0.331: Fred Stoller guest stars as Dexter in 'Wizards of Apartment 13B'.
+  Fact 0.332: Christopher Douglas Reed guest stars as Ogre in 'Wizards of Apartment 13B'.
+  Fact 0.333: Episode 101, 'Ghost Roommate', was directed by David DeLuise and written by Richard Goodman, and aired October 14, 2011 with production code 424 and 4.1 million U.S. viewers.
+  Fact 0.334: In 'Ghost Roommate', Alex and Harper have trouble paying the apartment bills, and Dexter recommends getting a roommate.
+  Fact 0.335: In 'Ghost Roommate', Alex and Harper find a wealthy ghost named Lucy and let her move in.
+  Fact 0.336: In 'Ghost Roommate', Justin orders a robot to help Zeke at the sub station.
+  Fact 0.337: In 'Ghost Roommate', Dexter, who is Gorog in disguise, makes an evil robot to spy on Justin and pass information to Gorog.
+  Fact 0.338: In 'Ghost Roommate', Lucy explains that her boyfriend Donny disappeared sixty years prior in a plane accident.
+  Fact 0.339: In 'Ghost Roommate', Alex tries to set Lucy up with Justin, but he makes matters worse.
+  Fact 0.340: In 'Ghost Roommate', Lucy goes on a long date with Mason, which makes Alex jealous.
+  Fact 0.341: In 'Ghost Roommate', Alex helps Lucy locate Donny, who had been stranded on an island in the Bermuda Triangle.
+  Fact 0.342: In 'Ghost Roommate', Alex realizes she cannot get back home because heavy magnetic currents interfere with her magic.
+  Fact 0.343: In 'Ghost Roommate', Mason goes to save Alex after he finds out she left for the Bermuda Triangle.
+  Fact 0.344: In 'Ghost Roommate', the robot attacks Justin and Zeke after they find it scanning the spell book.
+  Fact 0.345: In 'Ghost Roommate', the robot gives Gorog the spell he needed that he got from the Russos.
+  Fact 0.346: In 'Ghost Roommate', Mason and Alex get off the island using the Bermuda shorts given to them by Justin.
+  Fact 0.347: Gregg Sulkin plays Mason as a special guest star in 'Ghost Roommate'.
+  Fact 0.348: Dan Benson guest stars as Zeke in 'Ghost Roommate'.
+  Fact 0.349: Fred Stoller guest stars as Dexter in 'Ghost Roommate'.
+  Fact 0.350: Josh Sussman guest stars as Hugh Normous in 'Ghost Roommate'.
+  Fact 0.351: Linsey Godfrey guest stars as Lucy in 'Ghost Roommate'.
+  Fact 0.352: Travis Caldwell guest stars as Donny in 'Ghost Roommate'.
+  Fact 0.353: Michael Carbonaro guest stars as Robot in 'Ghost Roommate'.
+  Fact 0.354: 'Ghost Roommate' is part 2 of a 4-part arc.
+  Fact 0.355: Jake T. Austin, Maria Canals Barrera and David DeLuise were absent from 'Ghost Roommate'.
+  Fact 0.356: Episode 102, 'Get Along, Little Zombie', was directed by Victor Gonzalez and written by Peter Dirksen, and aired October 21, 2011 with production code 425 and 3.4 million U.S. viewers.
+  Fact 0.357: In 'Get Along, Little Zombie', Alex and Harper run into Mr. Laritate, who also lives in the hotel.
+  Fact 0.358: In 'Get Along, Little Zombie', Felix tells Justin he broke his wand, and Justin says it is fake because he saw batteries in it.
+  Fact 0.359: In 'Get Along, Little Zombie', Justin concludes that someone stole Felix's wand.
+  Fact 0.360: In 'Get Along, Little Zombie', Dexter shows a zombie to the hall for magical creatures.
+  Fact 0.361: In 'Get Along, Little Zombie', Mason messes with the elevator buttons so he can spend more time with Alex, and they land on the second floor.
+  Fact 0.362: In 'Get Along, Little Zombie', all the humans discover the mysterious thirteenth floor.
+  Fact 0.363: In 'Get Along, Little Zombie', Alex lies that they accidentally got into a secret open house floor.
+  Fact 0.364: In 'Get Along, Little Zombie', Mr. Laritate discovers the thirteenth floor and sees Alex, Harper and Mason.
+  Fact 0.365: In 'Get Along, Little Zombie', the zombie bites Mr. Laritate and turns him into a zombie.
+  Fact 0.366: In 'Get Along, Little Zombie', Alex looks for a spell to turn Mr. Laritate human again.
+  Fact 0.367: In 'Get Along, Little Zombie', Mr. Laritate runs away to the substation.
+  Fact 0.368: In 'Get Along, Little Zombie', Professor Crumbs questions Felix, who reveals the 13th floor, but Crumbs denies that a 13th floor exists.
+  Fact 0.369: In 'Get Along, Little Zombie', Alex and Mason are forced into a dance while trying to sneak the zombie into the substation.
+  Fact 0.370: In 'Get Along, Little Zombie', Harper causes a distraction, and they give Mr. Laritate a medicine from the wizard world that turns him human.
+  Fact 0.371: In 'Get Along, Little Zombie', Mr. Laritate remembers nothing.
+  Fact 0.372: In 'Get Along, Little Zombie', Alex kisses Mr. Laritate on the cheek, and Mason suggests they just be friends.
+  Fact 0.373: In 'Get Along, Little Zombie', Alex gets back together with Mason.
+  Fact 0.374: In 'Get Along, Little Zombie', Crumbs tells Felix the floor should not exist.
+  Fact 0.375: In 'Get Along, Little Zombie', Justin tells them the floor does not exist.
+  Fact 0.376: In 'Get Along, Little Zombie', Crumbs thinks there is evil going on.
+  Fact 0.377: In 'Get Along, Little Zombie', Dexter comes with dark angel wings and is revealed to have stolen Felix's wand.
+  Fact 0.378: In 'Get Along, Little Zombie', Dexter tricks Felix into turning to the dark side in return for the wand.
+  Fact 0.379: In 'Get Along, Little Zombie', Felix casts a spell that traps them all on the floor.
+  Fact 0.380: In 'Get Along, Little Zombie', Mr. Laritate is dancing back at Waverly Place while Jerry sells chili.
+  Fact 0.381: In 'Get Along, Little Zombie', Mr. Laritate eats chili and gets water to get the burn out of his mouth.
+  Fact 0.382: Gregg Sulkin plays Mason as a special guest star in 'Get Along, Little Zombie'.
+  Fact 0.383: Bill Chott guest stars as Mr. Laritate in 'Get Along, Little Zombie'.
+  Fact 0.384: Ian Abercrombie guest stars as Professor Crumbs in 'Get Along, Little Zombie'.
+  Fact 0.385: Frank Pacheco guest stars as Felix in 'Get Along, Little Zombie'.
+  Fact 0.386: Fred Stoller guest stars as Dexter in 'Get Along, Little Zombie'.
+  Fact 0.387: Regan Burns guest stars as Everett in 'Get Along, Little Zombie'.
+  Fact 0.388: Jane Carr guest stars as Martha St. Claire in 'Get Along, Little Zombie'.
+  Fact 0.389: 'Get Along, Little Zombie' is part 3 of a 4-part arc.
+  Fact 0.390: Jake T. Austin and Maria Canals Barrera were absent from 'Get Along, Little Zombie'.
+  Fact 0.391: Episode 103, 'Wizards vs. Everything', was directed by Victor Gonzalez and written by Gigi McCreery and Perry Rein, and aired October 28, 2011 with production code 426 and 3.4 million U.S. viewers.
+  Fact 0.392: In 'Wizards vs. Everything', the wizards of the 13th floor come out, and Alex explains Dexter's evil.
+  Fact 0.393: In 'Wizards vs. Everything', Dexter reveals himself as Gorog and says he is trying to rebuild his army of darkness.
+  Fact 0.394: In 'Wizards vs. Everything', Felix uses a spell that makes all the wizards from the 13th floor go with them, leaving Alex, Justin and Harper behind.
+  Fact 0.395: In 'Wizards vs. Everything', Justin realizes only mortals can go through the trashcan.
+  Fact 0.396: In 'Wizards vs. Everything', Harper arrives in the wizard lair after Alex convinces her to go through the trashcan.
+  Fact 0.397: In 'Wizards vs. Everything', Gorog takes the kidnapped wizards to his evil lair to make them evil.
+  Fact 0.398: In 'Wizards vs. Everything', Gorog tricks Hugh Normous into becoming one of the evil wizards in his army.
+  Fact 0.399: In 'Wizards vs. Everything', Professor Crumbs fakes becoming evil when Gorog plans to make him evil.
+  Fact 0.400: In 'Wizards vs. Everything', Harper contacts Max and tells him about Gorog.
+  Fact 0.401: In 'Wizards vs. Everything', Max suggests they look for spells in the wizard books.
+  Fact 0.402: In 'Wizards vs. Everything', Gorog makes the wizard army dig a hole to the atmosphere of the wizard world, so they can take over it.
+  Fact 0.403: In 'Wizards vs. Everything', Gorog tricks Mason into joining his army after Mason refuses.
+  Fact 0.404: In 'Wizards vs. Everything', Gorog makes Felix send a black hole to suck Alex and Justin in.
+  Fact 0.405: In 'Wizards vs. Everything', Gorog gives the kidnapped wizards their wands, but Crumbs refuses to let them take over the wizard world.
+  Fact 0.406: In 'Wizards vs. Everything', Felix gets rid of Crumbs on Gorog's order.
+  Fact 0.407: In 'Wizards vs. Everything', Crumbs arrives at the wizard lair as the black hole nearly sucks Alex and Justin in.
+  Fact 0.408: In 'Wizards vs. Everything', Max suggests they put a black hole in the wizard lair.
+  Fact 0.409: In 'Wizards vs. Everything', Max goes in and rescues Alex and Justin.
+  Fact 0.410: In 'Wizards vs. Everything', Crumbs tells them to use their magic to stop Gorog.
+  Fact 0.411: In 'Wizards vs. Everything', Mason tries to convince Alex to join Gorog.
+  Fact 0.412: In 'Wizards vs. Everything', Gorog reveals Juliet, young again, Justin's ex-girlfriend, and she convinces Justin to join.
+  Fact 0.413: In 'Wizards vs. Everything', Alex surrenders, and Max is forced to as well.
+  Fact 0.414: In 'Wizards vs. Everything', Alex, Max and Justin use their combined magic to get rid of Gorog.
+  Fact 0.415: In 'Wizards vs. Everything', all the supernatural beings are freed from Gorog's influence.
+  Fact 0.416: In 'Wizards vs. Everything', Juliet and Justin get back together.
+  Fact 0.417: In 'Wizards vs. Everything', Alex tricks Harper into moving into the Russos' basement by making her think all the homeless wizards and supernatural creatures will stay.
+  Fact 0.418: Gregg Sulkin plays Mason as a special guest star in 'Wizards vs. Everything'.
+  Fact 0.419: Bridgit Mendler guest stars as Juliet van Heusen, as special guest star, in 'Wizards vs. Everything'.
+  Fact 0.420: Ian Abercrombie guest stars as Professor Crumbs in 'Wizards vs. Everything'.
+  Fact 0.421: John Rubinstein guest stars as Gorog in 'Wizards vs. Everything'.
+  Fact 0.422: Frank Pacheco guest stars as Felix in 'Wizards vs. Everything'.
+  Fact 0.423: Fred Stoller guest stars as Dexter in 'Wizards vs. Everything'.
+  Fact 0.424: Josh Sussman guest stars as Hugh Normous in 'Wizards vs. Everything'.
+  Fact 0.425: Christopher Douglas Reed guest stars as Ogre in 'Wizards vs. Everything'.
+  Fact 0.426: 'Wizards vs. Everything' is part 4 of a 4-part arc.
+  Fact 0.427: Maria Canals Barrera, who plays Theresa Russo, was absent from 'Wizards vs. Everything'.
+  Fact 0.428: David DeLuise, who plays Jerry Russo, was absent from 'Wizards vs. Everything'.
+  Fact 0.429: Episode 104, 'Rock Around the Clock', was directed by Guy Distad and written by Robert Boesel, and aired November 4, 2011 with production code 414 and 3.8 million U.S. viewers.
+  Fact 0.430: In 'Rock Around the Clock', the landlord of the Russos' building decides to sell the sub shop, evicting the Russos from the shop, their apartment and their lair, which holds their portal.
+  Fact 0.431: In 'Rock Around the Clock', without the portal the Russos lose all contact with the wizard world.
+  Fact 0.432: In 'Rock Around the Clock', the Russo family and Harper travel back to 1957 to stop Jerry's father from selling the shop to the landlord.
+  Fact 0.433: In 'Rock Around the Clock', Jerry's father agrees not to sell the shop, and the Russos return to present day.
+  Fact 0.434: In 'Rock Around the Clock', the Russos accidentally leave Harper behind in 1957 when she is distracted by a woman with a poodle.
+  Fact 0.435: In 'Rock Around the Clock', Harper suggests the woman put a picture of a poodle on her skirt, creating the poodle skirt.
+  Fact 0.436: In 'Rock Around the Clock', back in present day the sub shop is obsolete, boarded up and empty, with the subway car and the lair missing.
+  Fact 0.437: In 'Rock Around the Clock', the Russos realize they messed with the fabric of time.
+  Fact 0.438: In 'Rock Around the Clock', Theresa realizes they left Harper in 1957 and says they will have to go back.
+  Fact 0.439: In 1957, Jerry's father reveals he did not sell the restaurant, but the restaurant failed to make enough business and he was forced to close it.
+  Fact 0.440: In 'Rock Around the Clock', Justin realizes that when Jerry's father lost the restaurant, he moved out of the building, so the lair disappeared in present day.
+  Fact 0.441: In 'Rock Around the Clock', Harper enrolled at Tribeca Prep as soon as she was forgotten in 1957, because she did not want to ruin her perfect attendance record.
+  Fact 0.442: In 'Rock Around the Clock', Harper decides to stay in the past because she finds new popularity in 1957.
+  Fact 0.443: In 'Rock Around the Clock', Max introduces the high-five to several students at Tribeca.
+  Fact 0.444: In 'Rock Around the Clock', Alex realizes that making the sub shop the 1957 high school hangout will improve business.
+  Fact 0.445: In 'Rock Around the Clock', the jukebox is broken, and Max plugs his MP3 player into the jukebox.
+  Fact 0.446: In 'Rock Around the Clock', Harper uses her popularity to get the students dancing and having fun at the shop, and business peaks.
+  Fact 0.447: In 'Rock Around the Clock', the Russos return to present day, where the lair and the sub shop are back.
+  Fact 0.448: In 'Rock Around the Clock', Jerry owns the entire building, and the landlord now owns a Janitor service instead.
+  Fact 0.449: In 'Rock Around the Clock', the high-five is now called a Max.
+  Fact 0.450: In 'Rock Around the Clock', Alex remembers they forgot Harper in 1957, and they go back and get her.
+  Fact 0.451: In 'Rock Around the Clock', the Russos accidentally end up in 1977 twice, thanks to Justin.
+  Fact 0.452: Brendan Bradley guest stars as Hank in 'Rock Around the Clock'.
+  Fact 0.453: Carlo Michael Mancini guest stars as Lenny Hune in 'Rock Around the Clock'.
+  Fact 0.454: Episode 105, 'Harperella', was directed by Victor Gonzalez and written by Richard Goodman and Justin Varava, and aired November 18, 2011 with production code 427 and 3.5 million U.S. viewers.
+  Fact 0.455: In 'Harperella', Harper is reading a storybook to children on Waverly Place when Alex pushes her away.
+  Fact 0.456: In 'Harperella', the Wizard Storybook has the power of turning what the person reads real.
+  Fact 0.457: In 'Harperella', Harper is teleported into the loft, where Theresa, her wicked stepmother, calls her Harperella and makes her do chores.
+  Fact 0.458: In 'Harperella', Justin and Max are Harper's evil stepbrothers.
+  Fact 0.459: In 'Harperella', Alex appears as Harper's fairy godmother.
+  Fact 0.460: In 'Harperella', Max says Prince Charming has decided to use the Substation as the ballroom for the royal party.
+  Fact 0.461: In 'Harperella', Alex uses a spell to turn Harper's bookdress into a princess gown and glass bowls into glass slippers.
+  Fact 0.462: In 'Harperella', Alex turns the hot dog stand into a carriage to take Harper to the party.
+  Fact 0.463: In 'Harperella', Harper dances with Prince Charming, Zeke.
+  Fact 0.464: In 'Harperella', at the stroke of midnight Harper leaves her glass slipper behind.
+  Fact 0.465: In 'Harperella', Justin, Max and Zeke, with pig noses, rush into the substation being chased by the big bad wolf, Mason.
+  Fact 0.466: In 'Harperella', Cinderella and the three little pigs stories were blended together because some pages were missing.
+  Fact 0.467: In 'Harperella', Alex tries a page from Max's favorite magic trick book, and David Copperfield appears and does magic tricks.
+  Fact 0.468: In 'Harperella', Alex tries a page from Justin's science book, and a caveman appears who has a thing for Harper.
+  Fact 0.469: In 'Harperella', the caveman is jealous and tries to attack David Copperfield.
+  Fact 0.470: In 'Harperella', Alex finds the right pages and the story goes back to Cinderella.
+  Fact 0.471: In 'Harperella', Theresa tries to wear the slipper but fails, and Harper fits it.
+  Fact 0.472: In 'Harperella', Harper and Zeke dance at the royal party, and the world returns to normal.
+  Fact 0.473: In 'Harperella', Alex planned for Harper and Zeke to dance, but they were really bad, so the ball dance turned into a clogging dance.
+  Fact 0.474: David Copperfield guest stars as himself in 'Harperella'.
+  Fact 0.475: Gregg Sulkin plays Mason as a special guest star in 'Harperella'.
+  Fact 0.476: Dan Benson guest stars as Zeke in 'Harperella'.
+  Fact 0.477: David DeLuise, who plays Jerry Russo, was absent from 'Harperella'.
+  Fact 0.478: Episode 106, 'Who Will Be the Family Wizard', was directed by Victor Gonzalez and written by Vince Cheung and Ben Montanio for Part 1 and Todd J. Greenwald for Part 2, and aired January 6, 2012 with production codes 428 and 429 and 9.8 million U.S. viewers.
+  Fact 0.479: In 'Who Will Be the Family Wizard', Professor Crumbs visits during a dinner Alex made for the family and reveals the Russo children can finally have their family wizard competition.
+  Fact 0.480: In 'Who Will Be the Family Wizard', round one of the competition is a trivia round about magic.
+  Fact 0.481: In 'Who Will Be the Family Wizard', Zeke smelled a purple substance in the lair and turned purple.
+  Fact 0.482: In 'Who Will Be the Family Wizard', a griffin kidnaps Zeke and Harper.
+  Fact 0.483: In 'Who Will Be the Family Wizard', Alex, Justin and Max use their three time-outs to rescue their friends.
+  Fact 0.484: In 'Who Will Be the Family Wizard', the Russo children are disqualified for being gone too long.
+  Fact 0.485: In 'Who Will Be the Family Wizard', the Russos lose their magic and become mortals when the lair disappears.
+  Fact 0.486: In 'Who Will Be the Family Wizard', Justin and Max begin to hate Alex.
+  Fact 0.487: In 'Who Will Be the Family Wizard', Jerry decides to sell the sub shop.
+  Fact 0.488: In 'Who Will Be the Family Wizard', the kids go a day without magic and reopen and run the shop.
+  Fact 0.489: In 'Who Will Be the Family Wizard', the host reveals the griffin attack was meant for Professor Crumbs and the weeks without magic were tests of the family bond.
+  Fact 0.490: In 'Who Will Be the Family Wizard', the final round of the competition is a massive labyrinth where the first out wins.
+  Fact 0.491: In 'Who Will Be the Family Wizard', Justin makes it out first and is declared the Family Wizard.
+  Fact 0.492: In 'Who Will Be the Family Wizard', Justin declines the title because Alex was about to get out first and came back to help him.
+  Fact 0.493: In 'Who Will Be the Family Wizard', Alex is declared the true family wizard.
+  Fact 0.494: In 'Who Will Be the Family Wizard', Professor Crumbs retires as Headmaster of WizTech and declares Justin the new headmaster, granting him full wizard powers.
+  Fact 0.495: In 'Who Will Be the Family Wizard', Jerry decides to pass down the sub shop to Max one day, and Max happily accepts.
+  Fact 0.496: In 'Who Will Be the Family Wizard', the Russo family ends the episode hugging and gathering together, with Alex saying they are all finally happy at the same time.
+  Fact 0.497: Gregg Sulkin plays Mason as a special guest star in 'Who Will Be the Family Wizard'.
+  Fact 0.498: Bridgit Mendler guest stars as Juliet van Heusen, as special guest star, in 'Who Will Be the Family Wizard'.
+  Fact 0.499: Dan Benson guest stars as Zeke in 'Who Will Be the Family Wizard'.
+  Fact 0.500: Ian Abercrombie guest stars as Professor Crumbs in 'Who Will Be the Family Wizard'.
+  Fact 0.501: Andy Kindler guest stars as Chancellor Tootietootie in 'Who Will Be the Family Wizard'.
+  Fact 0.502: 'Who Will Be the Family Wizard' is an hour-long special.
+Sentence 1: In the episode , `` Three Maxes and a Little Lady '' , Alex and Justin accidentally turn Max into a little girl , Maxine , portrayed by Bailee Madison . She ends up making Alex jealous when their father prefers Maxine over Alex . Maxine remains until `` Back to Max '' . In the episode `` Everything 's Rosie for Justin '' , Justin falls in love with Rosie , a guardian angel , but at the end of `` Dancing with Angels '' she becomes an Angel of Darkness . In `` Zeke Finds Out '' , the Russos finally reveal to Zeke that they are wizards . In `` Wizard of the Year '' , Alex is crowned Wizard of the Year for saving the world from the angels of darkness , and is reinstated in the Wizards Competition . In `` Justin 's Back In '' , Justin is reinstated in the Wizard Competition , after his class of delinquent wizards passes .
+  Fact 1.0: In the episode 'Three Maxes and a Little Lady', Alex and Justin accidentally turn Max into a little girl named Maxine.
+  Fact 1.1: Maxine is portrayed by Bailee Madison.
+  Fact 1.2: Maxine makes Alex jealous when their father prefers Maxine over Alex.
+  Fact 1.3: Maxine remains a little girl until 'Back to Max'.
+  Fact 1.4: In 'Everything's Rosie for Justin', Justin falls in love with Rosie, a guardian angel.
+  Fact 1.5: At the end of 'Dancing with Angels', Rosie becomes an Angel of Darkness.
+  Fact 1.6: In 'Zeke Finds Out', the Russos finally reveal to Zeke that they are wizards.
+  Fact 1.7: In 'Wizard of the Year', Alex is crowned Wizard of the Year for saving the world from the angels of darkness.
+  Fact 1.8: In 'Wizard of the Year', Alex is reinstated in the Wizards Competition.
+  Fact 1.9: In 'Justin's Back In', Justin is reinstated in the Wizard Competition after his class of delinquent wizards passes.
+
+Retrieved items:
+<item 1>
+Wizards of Waverly Place (season 4)
+They suggest he move the wizard competition up and he moves it to a few days away . Max quits the society because he finds out that they are taking advantage of
+him . Alex and Justin transform into Max in an attempt to change the date of the family wizard competition back to its original date and succeed . In the end of
+the episode they accidentally turn Max indefinitely into a little girl . Guest stars : Bailee Madison as Maxine , Frank Pacheco as Felix , Kari Wahlgren as
+Helen , Shane Harper as Fidel Note : Bailee Madison begins her recurring role as Maxine , the female Max in this episode . Jake T. Austin was absent in four
+other episodes and returns at the end of the tenth episode `` Back to Max '' . 85 6 `` Daddy 's Little Girl '' Robbie Countryman Gigi McCreery & Perry Rein
+January 21 , 2011 ( 2011 - 01 - 21 ) 406 3.4 With Max still a little girl , their parents pay more attention to Max ( Maxine ) , and Alex becomes jealous .
+</item 1>
+
+<item 2>
+Wizards of Waverly Place (season 4)
+The judges rule Alex and Justin guilty , and Professor Crumbs sentences them both to be demoted to level one in the Family Wizard Competition , making them
+behind Max by two levels . Meanwhile , Max sets up traps in the Sub Station for the `` government '' , but ends up falling for one of them . Special guest star
+: Gregg Sulkin as Mason Guest star : Ian Abercrombie as Professor Crumbs 81 `` Alex Gives Up '' Victor Gonzalez Todd J. Greenwald November 27 , 2010 ( 2010 - 11
+- 27 ) 402 N / A Alex decides to give up the wizard competition to spend more time with Mason and thinks that it does not matter since Max is all the way in the
+lead , but Chancellor Tootietootie tells Alex that non-wizards and werewolves can not date , because the werewolf always eats the human . Max 's picture on the
+front of Future Wizards magazine attracts the daughter of a family of Cucuys ( mythical Latino monster ) and they invite him to a dinner party on their yacht .
+</item 2>
+
+<item 3>
+Wizards of Waverly Place (season 4)
+Too fast for Maxine , Justin beats her , and Maxine is hurt ( physically ) . Jerry and Theresa rush to her side , caring for Maxine more than they care that
+Justin beat Maxine in karate . Justin leaves , and Alex leaves after him , heartbroken . Back at home , Jerry tells Alex that he fell for Maxine because she
+reminded him of Alex when she was little and they bond again . Meanwhile , Zeke thinks the Russos hate him , but really it was just Harper 's alibi in order to
+keep him away from the Sub Station so as not to make him suspicious about Max 's disappearance and Maxine 's appearance . Guest stars : Bailee Madison as Maxine
+, Dan Benson as Zeke , Lanny Joon as Sensei Absent : Jake T. Austin as Max Russo 86 7 `` Everything 's Rosie for Justin '' Victor Gonzalez Justin Varava
+February 4 , 2011 ( 2011 - 02 - 04 ) 407 3.9 Justin and his delinquent class have a wizard wand dance assessment to do which will get them back in Wiztech .
+</item 3>
+
+<item 4>
+Wizards of Waverly Place (season 4)
+In the end Mason 's parents like her as a werewolf and she says to him that they do not know the real her . She begins to leave and he says that he truly loves
+Alex to his parents and that she is a wizard . She changes back to a wizard and Mason turns back to human form . After the parents find out they try to eat her
+and Mason and Alex make a near escape . Meanwhile Max makes his parents ' food taste like kid food in order to make it taste good . Afterwards Jerry and Theresa
+eat it , and as a result they act like little kids . Justin thinks he will have to fix it but Max comments on how he does not need help , as he will be the
+future family wizard . Max uses another spell on cookies to make them older , but they turn into teenagers . Finally , Justin uses a spell on a pizza to turn
+them back into their regular selves .
+</item 4>
+
+<item 5>
+In season 4 of *Wizards of Waverly Place*, Maxine beats Justin at karate, and Jerry is charmed by her again, frustrating Alex, who is trying to win back his
+affection. Alex and Justin bring their parents to Maxine’s class and try spells to turn her back into Max, but the spells only make her cuter and angrier. When
+Maxine challenges them, Alex magically makes Justin a karate master. Justin defeats Maxine, leaving her physically hurt
+</item 5>
+
+<item 6>
+Wizards of Waverly Place (season 4)
+She ends up making Alex jealous when their father prefers Maxine over Alex . Maxine remains until `` Back to Max '' . In the episode `` Everything 's Rosie for
+Justin '' , Justin falls in love with Rosie , a guardian angel , but at the end of `` Dancing with Angels '' she becomes an Angel of Darkness . In `` Zeke Finds
+Out '' , the Russos finally reveal to Zeke that they are wizards . In `` Wizard of the Year '' , Alex is crowned Wizard of the Year for saving the world from
+the angels of darkness , and is reinstated in the Wizards Competition . In `` Justin 's Back In '' , Justin is reinstated in the Wizard Competition , after his
+class of delinquent wizards passes . Meanwhile , Alex 's relationship with Mason is jeopardized again when a beast tamer , Chase Riprock , falls in love with
+Alex and Mason gets jealous . This results in Alex breaking up with Mason . Alex , Justin and Max then save the world from being destroyed by an asteroid .
+Later , Alex and Harper move into an apartment building with a secret 13th floor for wizards and other creatures in the wizard world .
+</item 6>
+
+<item 7>
+Wizards of Waverly Place (season 4)
+However , it turns out to be a trap made by Gorog to capture the wizards who live in the same floor to make them join the dark side and rule the wizard world .
+He is defeated and destroyed by Alex , Justin and Max who were using the Power of Three . During this , Alex and Mason get back together and , after a long time
+, Justin finally gets back together with Juliet . Finally , in the hour - long series finale , Alex , Justin , and Max compete in the family wizard competition
+. Alex wins and gains full wizardry ; Justin becomes a full wizard as well when Professor Crumbs reveals he is retiring as headmaster of WizTech and passes the
+position to Justin . Jerry also decides to pass down the Waverly Sub Station to Max one day since he is the only child who is not a wizard anymore . The series
+ends with hugging and Alex saying that they are all happy . Guest stars and recurring cast include : Gregg Sulkin as Mason Greybeck , Ian Abercrombie as
+Professor Crumbs , David Barrera as Carlos Cucuy , Samantha Boscarino as Lisa Cucuy , Bill Chott as Mr.
+</item 7>
+
+<item 8>
+Wizards of Waverly Place (season 4)
+They then shrink it and go into Mason 's mouth . While there , Alex , Max , and Justin see Mason 's thoughts , which are all of Alex . They get Dean out , and
+Alex , when Harper , Max , and Justin leave , Alex tells Dean that he was knocked out and the doctor 's solution was for them all to dress up as cows . Dean
+then gives her his offer once again : he wants to get back with her . Alex tells him ' no ' , and then gets back together with Mason , with deciding to get back
+to the Wizard Competition . Special guest star : Gregg Sulkin as Mason Guest stars : Daniel Samonas as Dean , Frank Pacheco as Felix , Shoshana Bush as Tyler 84
+5 `` Three Maxes and a Little Lady '' Victor Gonzalez Richard Goodman January 7 , 2011 ( 2011 - 01 - 07 ) 405 4.0 Alex joins Justin 's wizard class to try to
+move up in the competition . Max joins a sophisticated wizard society . They suggest he move the wizard competition up and he moves it to a few days away .
+</item 8>
+
+<item 9>
+Wizards of Waverly Place (season 4)
+Justin takes Maxine to her ( Max 's ) karate class and Maxine kicks Justin 's butt . After the class , Alex decides to make Jerry 's favorite sandwich in order
+to win his love back , but Maxine comes along with Justin , announcing that she beat Justin in karate , and Jerry immediately falls for her cuteness again .
+More jealous than ever , Alex comes back with Justin to Maxine 's karate class with their parents , having a slight idea of knowing how to change Maxine back to
+Max . They cast spells on Maxine , Justin using the spell he used on Max that turned him into Maxine , and Alex using the reverse spell . Unfortunately , it
+only makes Maxine cuter , which makes her furious . Instead of going against the person she was supposed to , she demands that she kicks either Alex or Justin
+'s butt . Justin goes against her , but seeing that he would lose , Alex casts a spell on Justin to make him a karate master . Too fast for Maxine , Justin
+beats her , and Maxine is hurt ( physically ) .
+</item 9>
+
+<item 10>
+Wizards of Waverly Place (season 4)
+Alex , Justin and Max use their three time - outs to go and rescue their friends . They make it back , only to discover that they have been gone too long and
+have been disqualified from the competition . They all return home , where the lair disappears and they all lose their magic , thus becoming mortals . Justin
+and Max begin to hate Alex because of her insistence on saving Zeke and Harper resulting in them losing . Convinced that the loss of their powers has ruined the
+family , Jerry decides to sell the sub shop . The kids go for a day without magic , during which , slowly gaining back trust in each other as they reopen and
+run the shop . Suddenly , they are returned to the area of the Wizard Competition , where the host reveals that the griffin attack ( which was actually meant
+for Professor Crumbs ) and the weeks they went without magic were tests to test their family bond . They enter the final round of the competition , a massive
+labyrinth . The first out of the maze will win . Justin makes it out first and is declared the Family Wizard .
+</item 10>
+=== END ITEM id=98d92286a487263f ===
+
+=== ITEM id=00efb201b3081af2 ===
+Gold sentences and facts:
+Sentence 0: The eighth and final season of the fantasy drama television series Game of Thrones was announced by HBO in July 2016 . Unlike the first six seasons that each had ten episodes and the seventh that had seven episodes , the eighth season will have only six episodes . Like the previous season , it will largely consist of original content not found currently in George R.R. Martin 's A Song of Ice and Fire series , and will instead adapt material Martin has revealed to showrunners about the upcoming novels in the series , The Winds of Winter and A Dream of Spring .
+  Fact 0.0: The eighth and final season of the fantasy drama television series Game of Thrones was announced by HBO in July 2016.
+  Fact 0.1: The first six seasons of Game of Thrones each had ten episodes.
+  Fact 0.2: The seventh season of Game of Thrones had seven episodes.
+  Fact 0.3: The eighth season of Game of Thrones will have only six episodes.
+  Fact 0.4: Like the previous season, the eighth season will largely consist of original content not found currently in George R.R. Martin's A Song of Ice and Fire series.
+  Fact 0.5: The eighth season will instead adapt material Martin has revealed to showrunners about the upcoming novels in the series.
+  Fact 0.6: The upcoming novels in the series are The Winds of Winter and A Dream of Spring.
+
+Retrieved items:
+<item 1>
+Game of Thrones (season 8)
+What they 're doing is monumental . '' Filming officially began on October 23 , 2017 . Episodes ( edit ) Co-creators David Benioff and D.B. Weiss have said that
+the seventh and eighth season would likely consist of fewer episodes , stating that after season six , they were `` down to our final 13 episodes after this
+season . We 're heading into the final lap . '' Benioff and Weiss stated that they were unable to produce 10 episodes in the show 's usual 12 to 14 month time
+frame , as Weiss said , `` It 's crossing out of a television schedule into more of a mid-range movie schedule . '' HBO confirmed in July 2016 , that the
+seventh season would consist of seven episodes , and would premiere later than usual in mid-2017 because of the later filming schedule . Benioff and Weiss later
+confirmed that the eighth season will consist of six episodes , and is expected to premiere later than usual for the same reason .
+</item 1>
+
+<item 2>
+Game of Thrones (season 8)
+Clegane Iain Glen as Jorah Mormont Conleth Hill as Varys Carice van Houten as Melisandre Jerome Flynn as Bronn Joe Dempsie as Gendry Supporting cast ( edit )
+Ben Crompton as Eddison Tollett Hafþór Júlíus Björnsson as Gregor Clegane Jacob Anderson as Grey Worm Rupert Vansittart as Yohn Royce Marc Rissmann as Harry
+Strickland Production ( edit ) Crew ( edit ) Series creators and executive producers David Benioff and D.B. Weiss will serve as showrunners for the eighth
+season . The directors for the eighth season were announced in September 2017 . Miguel Sapochnik , who previously directed `` The Gift '' and `` Hardhome '' on
+season 5 , as well as `` Battle of the Bastards '' and `` The Winds of Winter '' on season 6 will return as director . He will divide up direction of the first
+five episodes with David Nutter , who had directed two episodes on seasons two , three and five .
+</item 2>
+
+<item 3>
+Game of Thrones (season 8)
+The final episode of the show will be directed by Benioff and Weiss , who have previously directed one episode each . At the show 's South by Southwest panel on
+March 12 , 2017 , Benioff and Weiss announced the writers for the show to be Dave Hill ( episode 1 ) and Bryan Cogman ( episode 2 ) . The showrunners will then
+divide up the screenplay for the remaining four episodes amongst themselves . Writing ( edit ) Writing for the eighth season started with a 140 - page outline .
+Benioff said that the divvying up process and who should write what section became more difficult , being that `` this would be the last time that we would be
+doing this . '' Filming ( edit ) In an interview with Entertainment Weekly , HBO programming president Casey Bloys stated that instead of the series finale
+being a feature film , the final season would be `` six one - hour movies '' on television . He continued , `` The show has proven that TV is every bit as
+impressive and in many cases more so , than film . What they 're doing is monumental . ''
+</item 3>
+
+<item 4>
+Game of Thrones (season 8)
+Queen ( 2013 ) The Rogue Prince ( 2014 ) The Sons of the Dragon ( 2017 ) TV series Episodes Season 1 5 6 7 8 Awards Characters Music `` Game of Thrones Theme ''
+`` The Rains of Castamere '' `` The Bear and the Maiden Fair '' `` Light of the Seven '' Catch the Throne Live Concert Experience Soundtracks Season 1 5 6 7
+Title sequence After the Thrones Thronecast Video games A Game of Thrones : Genesis Game of Thrones ( 2012 ) Game of Thrones Ascent Game of Thrones ( 2014 )
+Other media The World of Ice & Fire ( 2014 ) Board game Card game ( Second edition ) Comic book series Characters Petyr Baelish Joffrey Baratheon Renly
+Baratheon Robert Baratheon Stannis Baratheon Tommen Baratheon Ramsay Bolton Roose Bolton Bronn Gregor Clegane Sandor Clegane Khal Drogo Gendry Tormund
+Giantsbane Gilly Theon Greyjoy Cersei Lannister Jaime Lannister Tyrion Lannister Tywin Lannister Oberyn Martell Melisandre Missandei Jorah
+</item 4>
+
+<item 5>
+Game of Thrones (season 8)
+Tywin Lannister Oberyn Martell Melisandre Missandei Jorah Mormont Daario Naharis Ellaria Sand Davos Seaworth Jon Snow High Sparrow Arya Stark Bran Stark Catelyn
+Stark Ned Stark Rickon Stark Robb Stark Sansa Stark Daenerys Targaryen Viserys Targaryen Samwell Tarly Brienne of Tarth Margaery Tyrell Olenna Tyrell Varys
+Ygritte World Languages Dothraki Valyrian Themes Iron Throne White Walker Miscellaneous Fandom Book Game of Thrones episodes Seasons : 1 5 6 7 8 Retrieved from
+`` https://en.wikipedia.org/w/index.php?title=Game_of_Thrones_(season_8)&oldid=837831661 '' Categories : Game of Thrones Upcoming television seasons Hidden
+categories : Official website not in Wikidata Talk Contents About Wikipedia Languages فارسی Français Português Русский Edit links This page was last edited on
+23 April 2018 , at 09 : 13 . Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply .
+</item 5>
+
+<item 6>
+Game of Thrones (season 8)
+Weiss 2019 ( 2019 ) TBD 73 6 TBA David Benioff & D.B. Weiss David Benioff & D.B. Weiss 2019 ( 2019 ) TBD Cast ( edit ) See also : List of Game of Thrones
+characters Peter Dinklage ( Tyrion Lannister ) Nikolaj Coster - Waldau ( Jaime Lannister ) Lena Headey ( Cersei Lannister ) Emilia Clarke ( Daenerys Targaryen )
+Main cast ( edit ) Peter Dinklage as Tyrion Lannister Nikolaj Coster - Waldau as Jaime Lannister Lena Headey as Cersei Lannister Emilia Clarke as Daenerys
+Targaryen Kit Harington as Jon Snow Liam Cunningham as Davos Seaworth Sophie Turner as Sansa Stark Maisie Williams as Arya Stark Nathalie Emmanuel as Missandei
+Gwendoline Christie as Brienne of Tarth John Bradley as Samwell Tarly Isaac Hempstead Wright as Bran Stark Rory McCann as Sandor `` The Hound '' Clegane Iain
+Glen as Jorah Mormont Conleth Hill as Varys
+</item 6>
+
+<item 7>
+Game of Thrones (season 8)
+Benioff and Weiss spoke about the end of the show , saying , `` From the beginning we 've wanted to tell a 70 - hour movie . It will turn out to be a 73 - hour
+movie , but it 's stayed relatively the same of having the beginning , middle and now we 're coming to the end . It would have been really tough if we lost any
+core cast members along the way , I 'm very happy we 've kept everyone and we get to finish it the way we want to . '' The season is set to air in 2019 . Music
+( edit ) Ramin Djawadi is set to return as the composer of the show for the eighth season . References ( edit ) Jump up ^ Hibberd , James ( July 30 , 2016 ) .
+`` Game of Thrones : HBO confirms season 8 will be last '' . Entertainment Weekly . Archived from the original on September 1 , 2016 . Retrieved March 13 , 2017
+. Jump up ^ Birnbaum , Debra ( July 30 , 2016 ) .
+</item 7>
+
+<item 8>
+Game of Thrones (season 8)
+Game of Thrones ( season 8 ) - wikipedia Game of Thrones ( season 8 ) Jump to : navigation , search Game of Thrones ( season 8 ) Promotional poster Starring See
+List of Game of Thrones cast Country of origin United States Release Original network HBO Season chronology ← Previous Season 7 List of Game of Thrones episodes
+The eighth and final season of the fantasy drama television series Game of Thrones was announced by HBO in July 2016 . Unlike the first six seasons that each
+had ten episodes and the seventh that had seven episodes , the eighth season will have only six episodes . Like the previous season , it will largely consist of
+original content not found currently in George R.R. Martin 's A Song of Ice and Fire series , and will instead adapt material Martin has revealed to showrunners
+about the upcoming novels in the series , The Winds of Winter and A Dream of Spring . The season will be adapted for television by David Benioff and D.B. Weiss
+. Filming officially began on October 23 , 2017 . The season is scheduled to premiere in 2019 .
+</item 8>
+
+<item 9>
+Game of Thrones (season 8)
+`` ' Game of Thrones ' Creators Mull Shorter Final Seasons ( EXCLUSIVE ) '' . Variety . Archived from the original on August 21 , 2016 . Retrieved June 27 ,
+2016 . Jump up ^ Goldberg , Lesley ( April 14 , 2016 ) . `` ' Game of Thrones ' Considering Shorter Final Seasons '' . The Hollywood Reporter . Archived from
+the original on June 18 , 2016 . Retrieved June 27 , 2016 . Jump up ^ Hibberd , James ( July 18 , 2016 ) . `` Game of Thrones : HBO announces summer return , 7
+episodes '' . Entertainment Weekly . Archived from the original on September 1 , 2016 . Retrieved July 18 , 2016 . ^ Jump up to : Hibberd , James ( March 12 ,
+2017 ) . `` Game of Thrones producers confirm final season only 6 episodes '' . Entertainment Weekly . Archived from the original on March 12 , 2017 . Retrieved
+March 13 , 2017 .
+</item 9>
+
+<item 10>
+Game of Thrones (season 8)
+Jump up ^ Birnbaum , Debra ( July 30 , 2016 ) . `` HBO Confirms ' Game of Thrones ' Will End With Eighth Season '' . Variety . Archived from the original on
+September 2 , 2016 . Retrieved March 13 , 2017 . Jump up ^ Hibberd , James ( May 24 , 2016 ) . `` George R.R. Martin revealed 3 huge shocks to Game of Thrones
+producers '' . Entertainment Weekly . Archived from the original on August 21 , 2016 . Retrieved March 13 , 2017 . ^ Jump up to : Hooton , Christopher (
+September 27 , 2017 ) . `` Game of Thrones season 8 : Directors revealed for all episodes '' . The Independent . Archived from the original on October 20 , 2017
+. Retrieved October 20 , 2017 . Jump up ^ Chitwood , Adam ( December 15 , 2017 ) .
+</item 10>
+=== END ITEM id=00efb201b3081af2 ===
+
+=== ITEM id=e9a835bae90cc0d9 ===
+Gold sentences and facts:
+Sentence 0: Men 's ( 12 ) Basketball ( 3 ) : 1985 , 2016 , 2018 Cross Country ( 4 ) : 1966 , 1967 , 1968 , 1970 Football ( 1 ) : 2009 Indoor Track & Field ( 3 ) : 1968 , 1971 , 1979 Outdoor Track & Field ( 1 ) : 1957 Women 's ( 9 ) Cross Country ( 9 ) : 1989 , 1990 , 1991 , 1992 , 1993 , 1994 , 1998 , 2009 , 2010 see also : Big East Conference NCAA team championships List of NCAA schools with the most NCAA Division I championships
+  Fact 0.0: Men's category: 12 NCAA championships in total.
+  Fact 0.1: Men's basketball has 3 championships, in 1985, 2016 and 2018.
+  Fact 0.2: Men's cross country has 4 championships, in 1966, 1967, 1968 and 1970.
+  Fact 0.3: Men's football has 1 championship, in 2009.
+  Fact 0.4: Men's indoor track and field has 3 championships, in 1968, 1971 and 1979.
+  Fact 0.5: Men's outdoor track and field has 1 championship, in 1957.
+  Fact 0.6: Women's category: 9 NCAA championships in total.
+  Fact 0.7: Women's cross country has 9 championships, in 1989, 1990, 1991, 1992, 1993, 1994, 1998, 2009 and 2010.
+  Fact 0.8: The text refers the reader to the Big East Conference NCAA team championships list.
+  Fact 0.9: The text refers the reader to the list of NCAA schools with the most NCAA Division I championships.
+Sentence 1: Basketball ( 3 ) : 1985 , 2016 , 2018
+  Fact 1.0: Basketball has 3 championships, in 1985, 2016 and 2018.
+Sentence 2: The Villanova Wildcats compete in the Big East Conference and are coached by Jay Wright . The team has traditionally divides its home schedule between its on - campus arena , the William B. Finneran Pavilion , and the Wells Fargo Center in South Philadelphia , for larger draws . During the 2017 - 18 season , the team played its entire home schedule that season at the Wells Fargo Center following the reconstruction of the Pavilion scheduled to be completed in time for the 2018 - 19 school year . Wright has taken the Wildcats to 12 postseason appearances including 7 consecutive trips ( 2005 -- 2011 ) and 5 consecutive trips ( 2013 - 2017 ) to the NCAA Tournament . The 2011 - 12 team struggled and missed postseason but Coach Wright brought a surprising young team back to the 2013 NCAA Tournament . Villanova has appeared in the NIT 17 times , winning in 1994 , and won the Big East Tournament in 1995 , 2015 and 2017 . The Wildcats have appeared in the NCAA Men 's Tournament 37 times , the 8th highest total in NCAA history have reached the Elite Eight 13 times . They have been to the Final Four of the NCAA Division I Men 's Basketball Tournament on five occasions . The 1939 team coached by Al Severance reached the inaugural NCAA Final Four played at the Palestra for the 1939 NCAA Basketball Tournament . All - American Howard Porter led a Wildcat team coached by Jack Kraft to Final Four of the 1971 NCAA University Division Basketball Tournament . Coach Rollie Massimino took Villanova to a surprising 1985 National Championship . Current Coach Jay Wright reached the Final Four at the 2009 NCAA Division I Men 's Basketball Tournament behind Dante Cunningham and Scottie Reynolds . The team most recently won the 2018 NCAA Division I Men 's Basketball Tournament for their third National Championship .
+  Fact 2.0: The Villanova Wildcats compete in the Big East Conference.
+  Fact 2.1: The Villanova Wildcats are coached by Jay Wright.
+  Fact 2.2: The team has traditionally divided its home schedule between its on-campus arena, the William B. Finneran Pavilion, and the Wells Fargo Center in South Philadelphia.
+  Fact 2.3: The Wells Fargo Center in South Philadelphia is used for larger draws.
+  Fact 2.4: During the 2017-18 season, the team played its entire home schedule at the Wells Fargo Center.
+  Fact 2.5: The Finneran Pavilion was being reconstructed during the 2017-18 season.
+  Fact 2.6: The Finneran Pavilion reconstruction was scheduled to be completed in time for the 2018-19 school year.
+  Fact 2.7: Jay Wright has taken the Wildcats to 12 postseason appearances.
+  Fact 2.8: Jay Wright's postseason appearances include 7 consecutive trips to the NCAA Tournament, from 2005 to 2011.
+  Fact 2.9: Jay Wright's postseason appearances include 5 consecutive trips to the NCAA Tournament, from 2013 to 2017.
+  Fact 2.10: The 2011-12 Villanova team struggled and missed the postseason.
+  Fact 2.11: Coach Wright brought a surprising young team back to the 2013 NCAA Tournament.
+  Fact 2.12: Villanova has appeared in the NIT 17 times.
+  Fact 2.13: Villanova won the NIT in 1994.
+  Fact 2.14: Villanova won the Big East Tournament in 1995, 2015 and 2017.
+  Fact 2.15: The Wildcats have appeared in the NCAA Men's Tournament 37 times.
+  Fact 2.16: The Wildcats' 37 NCAA Men's Tournament appearances are the 8th highest total in NCAA history.
+  Fact 2.17: The Wildcats have reached the Elite Eight 13 times.
+  Fact 2.18: The Wildcats have been to the Final Four of the NCAA Division I Men's Basketball Tournament on five occasions.
+  Fact 2.19: The 1939 Villanova team, coached by Al Severance, reached the inaugural NCAA Final Four.
+  Fact 2.20: The inaugural NCAA Final Four was played at the Palestra for the 1939 NCAA Basketball Tournament.
+  Fact 2.21: All-American Howard Porter led a Wildcat team, coached by Jack Kraft, to the Final Four of the 1971 NCAA University Division Basketball Tournament.
+  Fact 2.22: Coach Rollie Massimino took Villanova to a surprising 1985 National Championship.
+  Fact 2.23: Current coach Jay Wright reached the Final Four at the 2009 NCAA Division I Men's Basketball Tournament.
+  Fact 2.24: Jay Wright's 2009 Final Four team was led by Dante Cunningham and Scottie Reynolds.
+  Fact 2.25: The team most recently won the 2018 NCAA Division I Men's Basketball Tournament.
+  Fact 2.26: The 2018 title was the team's third National Championship.
+Sentence 3: Men 's ( 12 ) Basketball ( 3 ) : 1985 , 2016 , 2018 Cross Country ( 4 ) : 1966 , 1967 , 1968 , 1970 Football ( 1 ) : 2009 Indoor Track & Field ( 3 ) : 1968 , 1971 , 1979 Outdoor Track & Field ( 1 ) : 1957
+  Fact 3.0: Men's category: 12 NCAA championships in total.
+  Fact 3.1: Men's basketball has 3 championships, in 1985, 2016 and 2018.
+  Fact 3.2: Men's cross country has 4 championships, in 1966, 1967, 1968 and 1970.
+  Fact 3.3: Men's football has 1 championship, in 2009.
+  Fact 3.4: Men's indoor track and field has 3 championships, in 1968, 1971 and 1979.
+  Fact 3.5: Men's outdoor track and field has 1 championship, in 1957.
+
+Retrieved items:
+<item 1>
+Villanova Wildcats
+During the 2017 - 18 season , the team played its entire home schedule that season at the Wells Fargo Center following the reconstruction of the Pavilion
+scheduled to be completed in time for the 2018 - 19 school year . Wright has taken the Wildcats to 12 postseason appearances including 7 consecutive trips (
+2005 -- 2011 ) and 5 consecutive trips ( 2013 - 2017 ) to the NCAA Tournament . The 2011 - 12 team struggled and missed postseason but Coach Wright brought a
+surprising young team back to the 2013 NCAA Tournament . Villanova has appeared in the NIT 17 times , winning in 1994 , and won the Big East Tournament in 1995
+, 2015 and 2017 . The Wildcats have appeared in the NCAA Men 's Tournament 37 times , the 8th highest total in NCAA history have reached the Elite Eight 13
+times . They have been to the Final Four of the NCAA Division I Men 's Basketball Tournament on five occasions . The 1939 team coached by Al Severance reached
+the inaugural NCAA Final Four played at the Palestra for the 1939 NCAA Basketball Tournament .
+</item 1>
+
+<item 2>
+Villanova Wildcats
+For the 2017 -- 18 season , they will play their home games at Jake Nevin Field House on the Villanova campus while the future Finneran Pavilion is undergoing
+renovations . The Women 's basketball program started in 1969 and played under CIAW and AIAW through 1981 - 82 season before moving to NCAA Division I. In the
+81 - 82 season , the Wildcats posted an outstanding 29 - 4 record and reached the Final Four of the 1982 AIAW Women 's Basketball Tournament before losing to
+eventual National Champion , Rutgers . Through the 2009 - 10 season , the Villanova Women have a 669 - 413 alltime record since the program started in 1969 .
+Previous head coaches include Liz Cawley ( 1969 -- 70 ) , Jane Sefranek - Stoltz ( 1970 -- 75 ) and Joan King ( 1975 -- 78 ) . The 1982 - 83 season was the
+initial season for Villanova Women 's basketball to play NCAA Division I and they joined the Big East Conference that same season .
+</item 2>
+
+<item 3>
+Villanova Wildcats
+Villanova has won 4 NCAA Men 's Cross Country Team Championships covering 1966 , 1967 , 1968 and 1970 . NCAA Individual Cross Country Champions Victor Zwolak
+1963 Patrick Tiernan 2016 Swimming and Diving ( edit ) Main article : Villanova Swimming and Diving In its history , Villanova Swimming and Diving has produced
+several Olympians . Most recently Maddy Crippen competed in the 400m individual medley at the 2000 Olympics . At the 2008 Olympics , Villanova was represented
+by Kristina Lennox - Silva . Lennox competed for Puerto Rico and swam the 400m freestyle and 200m butterfly . NCAA team Championships ( edit ) Villanova has 21
+NCAA team national championships .
+</item 3>
+
+<item 4>
+Villanova Wildcats
+All - American Howard Porter led a Wildcat team coached by Jack Kraft to Final Four of the 1971 NCAA University Division Basketball Tournament . Coach Rollie
+Massimino took Villanova to a surprising 1985 National Championship . Current Coach Jay Wright reached the Final Four at the 2009 NCAA Division I Men 's
+Basketball Tournament behind Dante Cunningham and Scottie Reynolds . The team most recently won the 2018 NCAA Division I Men 's Basketball Tournament for their
+third National Championship . Villanova won the 1985 NCAA Division I Men 's Basketball Tournament with a historic 66 - 64 win over top - seeded Georgetown . The
+eighth - seeded Wildcats ( unranked in the final AP poll ) beat Dayton ( at Dayton ) , top - seeded Michigan , Maryland and second - seeded North Carolina to
+win the Southeast Regional en route to the Final Four in Lexington , Kentucky . After defeating 2 - seed Memphis State ( now known as Memphis ) in the national
+semifinals , Villanova met defending champion and ten - point - favorite Georgetown , led by Patrick Ewing , in the title game on April 1 , 1985 .
+</item 4>
+
+<item 5>
+Villanova Wildcats
+Coach Michael Corrado has taken the team to its only two NCAA appearances in history during his 6 - year tenure and the school is poised for greater success in
+upcoming seasons . Villanova rose as high as # 7 ranking and qualified for an at - large bid in the 2011 NCAA Tournament where they lost to the University of
+Denver in the first round . During the regular season , the Wildcats drew over 6500 fans to a Big East match - up with Syracuse setting a new on - campus record
+for Lacrosse . Brian Karalunas became the first USILA First Team All - American in Villanova history . Through 2009 , Villanova men 's lacrosse was a member of
+the Colonial Athletic Association and won the CAA tournament for their first title in 2009 . The fourth - seeded Wildcats were the lowest - seeded championship
+team in conference history . That season , Villanova also made their first NCAA tournament appearance , where they were routed in the first round by first -
+seeded Virginia , 18 -- 6 . The 2004 team finished 13 - 3 playing against the stiff competition of the CAA .
+</item 5>
+
+<item 6>
+Villanova Wildcats
+The Wildcat squad remains the lowest overall seed in tournament history to win the championship , and their overall team shooting percentage of 78.6 % remains
+an NCAA tournament record for a single game . This Championship Game is often cited among the greatest upsets in college basketball history . Ed Pinckney , who
+shot 5 - of - 7 and had 16 points in the game , was named the NCAA Tournament 's Most Outstanding Player . On April 4 , 2016 , the Wildcats won their second
+NCAA Championship in Men 's Basketball , the first time in 31 years . They beat the North Carolina Tar Heels 77 - 74 off a buzzer - beater shot by Kris Jenkins
+with 0.5 seconds remaining in regulation . Two years later , on April 2 , 2018 , Villanova earned its third national championship beating the Michigan
+Wolverines 79 - 62 . Women 's Basketball ( edit ) Main article : Villanova Wildcats women 's basketball 600th win The Villanova Wildcats women 's basketball
+team are coached by Harry Perretta , now serving his 34th year as head coach of the team .
+</item 6>
+
+<item 7>
+Villanova Wildcats
+NCAA team Championships ( edit ) Villanova has 21 NCAA team national championships . Men 's ( 12 ) Basketball ( 3 ) : 1985 , 2016 , 2018 Cross Country ( 4 ) :
+1966 , 1967 , 1968 , 1970 Football ( 1 ) : 2009 Indoor Track & Field ( 3 ) : 1968 , 1971 , 1979 Outdoor Track & Field ( 1 ) : 1957 Women 's ( 9 ) Cross Country
+( 9 ) : 1989 , 1990 , 1991 , 1992 , 1993 , 1994 , 1998 , 2009 , 2010 see also : Big East Conference NCAA team championships List of NCAA schools with the most
+NCAA Division I championships Conference realignment ( edit ) In December 2012 the presidents of seven Big East schools which do not sponsor FBS football ( also
+sometimes referred to as the `` Catholic 7 '' ) , including Villanova , voted unanimously to leave the Big East and form a new conference .
+</item 7>
+
+<item 8>
+The Villanova Wildcats represent Villanova University in 24 varsity sports. Most compete in the Big East; football and women’s rowing compete in the Colonial
+Athletic Association. The program has won 21 NCAA team titles, including three men’s basketball championships (1985, 2016, 2018), four men’s cross-country
+titles, nine women’s cross-country titles, and the 2009 FCS football championship. Villanova basketball also reached five Final Fours; its 198
+</item 8>
+
+<item 9>
+Villanova Wildcats
+Track and field ( edit ) Villanova University 's Track and field team has a history of athletic success that has spanned from championships in both incarnations
+of the Big East Conference to NCAA championships . The men 's team has produced 69 NCAA championships , 36 indoor and 33 outdoor . The team has had 8 NCAA team
+championships -- 4 cross country , 3 indoor ( ' 68 , ' 71 , ' 79 ) , 1 outdoor ( ' 57 ) . Prior to NCAA sponsoring Indoor T&F in 1965 , Villanova won 6 ICAAAA
+Indoor T&F Championships ( ' 57 , ' 58 , ' 60 , ' 62 , ' 63 , ' 64 ) . Villanova has produced 28 athletes who have made appearances in the Olympics , 10 of whom
+have medaled ( 7 Gold medals , 3 Silver medals ) . The men 's team has also won 112 Penn Relays Championships , which stands as the most wins by any school .
+The men 's current coaches include head coach , Marcus O'Sullivan , and assistant head coach , Anthony Williams .
+</item 9>
+
+<item 10>
+Villanova Wildcats
+Villanova was the Big East regular season and tournament champions in both 1985 - 86 and 1986 - 87 behind All - American Shelly Pennefather . During the 2008 -
+09 season , Coach Perretta led the Wildcats to the NCAA Tournament for the ninth time in his Villanova career . This marked the ninth postseason appearance in
+the previous 10 years for the Wildcats . After playing in the 2000 WNIT , Villanova went to four consecutive NCAA Tournaments from 2001 to 2004 before playing
+in the WNIT in 2005 , 2006 and 2008 . The 2002 - 03 season was a special one for the Wildcats . In addition to an impressive 28 - 6 overall record and a 12 - 4
+Big East Conference mark , the Wildcats won their third Big East Conference Tournament championship and first since 1987 with an improbable 52 - 48 upset over
+previously unbeaten Connecticut . The win snapped Connecticut 's then NCAA Division I women 's basketball record of 70 - straight victories and ended
+Connecticut 's streak of nine - straight conference tournament championships .
+</item 10>
+=== END ITEM id=e9a835bae90cc0d9 ===
+
+=== ITEM id=30de6259d30b63e7 ===
+Gold sentences and facts:
+Sentence 0: The poem survives in a single manuscript , the Cotton Nero A.x. , which also includes three religious narrative poems : Pearl , Purity and Patience . All are thought to have been written by the same unknown author , dubbed the `` Pearl Poet '' or `` Gawain Poet '' , since all four are written in a North West Midland dialect of Middle English .
+  Fact 0.0: The poem survives in a single manuscript, the Cotton Nero A.x.
+  Fact 0.1: The Cotton Nero A.x. manuscript also includes three religious narrative poems: Pearl, Purity and Patience.
+  Fact 0.2: Pearl, Purity and Patience are thought to have been written by the same unknown author.
+  Fact 0.3: The unknown author is dubbed the 'Pearl Poet' or 'Gawain Poet'.
+  Fact 0.4: The 'Pearl Poet' or 'Gawain Poet' name is given because all four poems are written in a North West Midland dialect of Middle English.
+  Fact 0.5: All four poems are written in a North West Midland dialect of Middle English.
+
+Retrieved items:
+<item 1>
+Sir Gawain and the Green Knight
+JSTOR 462158 . Jump up ^ Arthur , pp. 121 -- 123 . Jump up ^ Frye , Northrop . Anatomy of Criticism , p. 186 . ISBN 0 - 691 - 01298 - 9 ^ Jump up to : Markman ,
+Alan M. `` The Meaning of Sir Gawain and the Green Knight '' . PMLA . ( September 1957 ) 72.4 pp. 574 -- 586 Jump up ^ Sir Gawain and the Green Knight , second
+edition . Ed . J.R.R. Tolkien and E.V. Gordon , 1925 , note to lines 2514ff . ASIN B000IPU84U Jump up ^ The Norton Anthology of English Literature , eighth
+edition , Vol . BEd Stephen Greenblatt . New York , London : W.W. Norton and Co. , 2006 , p. 213 ( footnote ) . ISBN 0 - 393 - 92833 - 0 Jump up ^ Sir Gawain
+and the Green Knight , line 2529 .
+</item 1>
+
+<item 2>
+Sir Gawain and the Green Knight
+Online : The Carle of Carlisle . Jump up ^ Kittredge , George Lyman . A Study of Sir Gawain and the Green Knight . Harvard University Press , 1960 . p. 76 .
+ASIN B0006AWBXS Jump up ^ Kittredge , p. 83 Jump up ^ `` Sir Gawain and the Green Knight '' . Sir Gawain and the Green Knight , Pearl , Sir Orfeo . Translated
+by J.R.R. Tolkien , New York : Ballantine Books , 1975 . 92 . Jump up ^ Burrow , J.A. A Reading of Sir Gawain and the Green Knight . London : Kegan Paul Ltd. ,
+1965 . p. 162 . ISBN 0 - 7100 - 8695 - 4 ^ Jump up to : Burnley , J.D. ( 1973 ) . `` The Hunting Scenes in ' Sir Gawain and the Green Knight ' `` '' . The
+Yearbook of English Studies . 3 : 1 -- 9 .
+</item 2>
+
+<item 3>
+Sir Gawain and the Green Knight
+It is an important example of a chivalric romance , which typically involves a hero who goes on a quest which tests his prowess , and it remains popular to this
+day in modern English renderings from J.R.R. Tolkien , Simon Armitage , and others , as well as through film and stage adaptations . It describes how Sir Gawain
+, a knight of King Arthur 's Round Table , accepts a challenge from a mysterious `` Green Knight '' who challenges any knight to strike him with his axe if he
+will take a return blow in a year and a day . Gawain accepts and beheads him with his blow , at which the Green Knight stands up , picks up his head , and
+reminds Gawain of the appointed time . In his struggles to keep his bargain , Gawain demonstrates chivalry and loyalty until his honour is called into question
+by a test involving Lady Bertilak , the lady of the Green Knight 's castle . The poem survives in a single manuscript , the Cotton Nero A.x. , which also
+includes three religious narrative poems : Pearl , Purity and Patience .
+</item 3>
+
+<item 4>
+Sir Gawain and the Green Knight
+`` The Green and the Gold : The Major Theme of Gawain and the Green Knight '' . College English . ( November 1958 ) 20.2 pp. 61 -- 65 . doi : 10.2307 / 372161
+Jump up ^ Williams , Margaret . The Pearl Poet , His Complete Works . Random House , 1967 . ASIN B0006BQEJY Jump up ^ Lewis , John S. `` Gawain and the Green
+Knight '' . College English . ( October 1959 ) 21.1 pp. 50 -- 51 ^ Jump up to : Besserman , Lawrence . `` The Idea of the Green Knight '' . ELH . ( Summer 1986
+) 53.2 The Johns Hopkins University Press . pp. 219 -- 239 . Jump up ^ Hahn , Thomas . `` The Greene Knight '' . In Sir Gawain : Eleven Romances and Tales .
+Western Michigan University Medieval Institute Publications , 2000 p. 314 . ISBN 1 - 879288 - 59 - 1 Jump up ^ Hahn , Thomas .
+</item 4>
+
+<item 5>
+Sir Gawain and the Green Knight
+722 . ^ Jump up to : Hulbert , J.R. `` Syr Gawayn and the Grene Knyzt ( Concluded ) '' . Modern Philology. ( April 1916 ) 13.12 pp. 689 -- 730 . Jump up ^
+Jackson , I. `` Sir Gawain 's Coat of Arms . '' The Modern Language Review . ( January 1920 ) 15.1 pp. 77 -- 79 . Jump up ^ Arthur , pp. 33 -- 34 . ^ Jump up to
+: Arthur , p. 34 . Jump up ^ Arthur , p. 35 . Jump up ^ Cooke , Jessica ( 1998 ) . `` The Lady 's ' Blushing ' Ring in Sir Gawain and the Green Knight '' . The
+Review of English Studies . 49 ( 193 ) : 1 -- 8 . doi : 10.1093 / res / 49.193. 1 . Jump up ^ Andrew , Malcolm ; Ronald Waldron ( 1996 ) . The Poems of the
+Pearl Manuscript .
+</item 5>
+
+<item 6>
+Sir Gawain and the Green Knight
+6 Homoerotic interpretations 8 Modern adaptations 8.1 Books 8.2 Film and television 8.3 Theatre 8.4 Opera 9 References 10 External links Synopsis ( edit ) Sir
+Gawain and the Green Knight ( from original manuscript , artist unknown ) In Camelot on New Year 's Day , King Arthur 's court is exchanging gifts and waiting
+for the feasting to start when the king asks first to see or hear of an exciting adventure . A gigantic figure , entirely green in appearance and riding a green
+horse , rides unexpectedly into the hall . He wears no armour but bears an axe in one hand and a holly bough in the other . Refusing to fight anyone there on
+the grounds that they are all too weak to take him on , he insists he has come for a friendly `` Christmas game '' : someone is to strike him once with his axe
+on condition that the Green Knight may return the blow in a year and a day . The splendid axe will belong to whoever takes him on .
+</item 6>
+
+<item 7>
+Sir Gawain and the Green Knight
+doi : 10.5406 / jenglgermphil. 111.4. 0535 . Jump up ^ Hirsch , Edward ( 16 December 2007 ) . `` A Stranger in Camelot '' . The New York Times . p. 7.1 .
+Retrieved 16 March 2010 . Jump up ^ Armitage , Simon ( 2007 ) . Sir Gawain and the Green Knight : A New Verse Translation . New York : Norton . ISBN 978 - 0 -
+393 - 06048 - 5 . Jump up ^ Mills , Maldwyn ( 1991 ) . `` Review '' . The Yearbook of English Studies . 21 : 336 -- 337 . Jump up ^ `` Sir Gawain and the Green
+Knight '' . BBC Four . 17 August 2010 . Retrieved 5 August 2012 . Jump up ^ Stone , Brian ( 1974 ) . Sir Gawain and the Green Knight . Penguin . p. 138 .
+</item 7>
+
+<item 8>
+Sir Gawain and the Green Knight
+Sir Gawain and the Green Knight - wikipedia Sir Gawain and the Green Knight Jump to : navigation , search For the 1973 film adaptation , see Gawain and the
+Green Knight ( film ) . Sir Gawain and the Green Knight First page of survived manuscript , circa 14th century . Author Anonymous Country Kingdom of England
+Language Middle English Genre Poem , chivalric romance , Arthurian and alliterative verse . Publication date 14th century Sir Gawain and the Green Knight (
+Middle English : Sir Gawayn and þe Grene Knyȝt ) is a late 14th - century Middle English chivalric romance . It is one of the best known Arthurian stories ,
+with its plot combining two types of folklore motifs , the beheading game and the exchange of winnings . The Green Knight is interpreted by some as a
+representation of the Green Man of folklore and by others as an allusion to Christ . Written in stanzas of alliterative verse , each of which ends in a rhyming
+bob and wheel , it draws on Welsh , Irish , and English stories , as well as the French chivalric tradition .
+</item 8>
+
+<item 9>
+Sir Gawain and the Green Knight
+`` King Arthur and King Cornwall '' . In Sir Gawain : Eleven Romances and Tales . Western Michigan University Medieval Institute Publications , 2000 . p. 427 .
+ISBN 1 - 879288 - 59 - 1 ^ Jump up to : Lasater , Alice E. Spain to England : A Comparative Study of Arabic , European , and English Literature of the Middle
+Ages . University Press of Mississippi , 1974 . ISBN 0 - 87805 - 056 - 6 Jump up ^ Rix , Michael M. `` A Re-Examination of the Castleton Garlanding '' .
+Folklore . ( June 1953 ) 64.2 pp. 342 -- 344 Jump up ^ Buchanan , Alice ( June 1932 ) . `` The Irish Framework of Sir Gawain and the Green Knight '' . PLMA. 47
+( 2 ) : 315 -- 338 . doi : 10.2307 / 457878 . Jump up ^ . Friedman , Albert B. Morgan le Fay in Sir Gawain and the Green Knight . Medieval Academy of America .
+</item 9>
+
+<item 10>
+Sir Gawain and the Green Knight
+Retrieved 2016 - 03 - 01 . External links ( edit ) Find more aboutSir Gawain and the Green Knightat Wikipedia 's sister projects Definitions from Wiktionary
+Media from Wikimedia Commons News from Wikinews Quotations from Wikiquote Texts from Wikisource Learning resources from Wikiversity Online texts High -
+resolution , full - sized scan of entire manuscript Sir Gawain and the Green Knight at Archive.org JRR Tolkien and EV Gordon 's Edition The poem in Middle
+English Sir Gawain and the Green Knight public domain audiobook at LibriVox ( various translations ) Google Books results General information The Gawain / Pearl
+Poet from the University of Calgary The Camelot Project Info on Sir Gawain Luminarium SGGK Website Oxford Bibliographies : Bibliography on Sir Gawain and the
+Green Knight BBC documentary tour of locations thought to be found in the poem ... Holywell , the River Mersey , the ' Wild Wirral ' , the Peak District , the
+Roaches , and Lud Chapel Sir Gawain Introduction - Article introducing various translations and adaptations of Sir Gawain The Pearl Poet Works Sir Gawain and
+the Green Knight Pearl Patience Cleanness St.
+</item 10>
+=== END ITEM id=30de6259d30b63e7 ===
+
+=== ITEM id=7b3552e0e525abdd ===
+Gold sentences and facts:
+Sentence 0: A main vertical stroke is called a stem . The letter m has three , the left , middle , and right stems . The central stroke of an s is called the spine . When the stroke is part of a lowercase and rises above the height of an x ( called the x height ) , it is called an ascender . Letters with ascenders are bdfhkl . A stroke which drops below the baseline is a descender . Letters with descenders are gjpqy . An arching stroke is called a shoulder as in the top of an R or sometimes just an arch , as in hnm . A closed curved stroke is called a bowl in bdopq DOPQ ; B has two bowls . A trailing outstroke , as in jy JQR is called a tail . The inferior diagonal stroke in K is called leg . A short horizontal stroke , as in the center of ef and the middle stroke of EF , is called a bar . When the strokes connect as in A and H or cross strokes as in t is also known as crossbar . A longer horizontal stroke at the top or bottom , as in ET , is called an arm . The bottom of the two - story g is called a loop ; the very short stroke at the top is called the ear . ij each have a dot , jot , or tittle . Angles of strokes are called apices if at the top and vertices if at the bottom . w has one apex and two vertices ; v has one vertex .
+  Fact 0.0: A main vertical stroke is called a stem.
+  Fact 0.1: The letter m has three stems: the left stem, the middle stem, and the right stem.
+  Fact 0.2: The central stroke of an s is called the spine.
+  Fact 0.3: When a stroke is part of a lowercase letter and rises above the height of an x (called the x height), it is called an ascender.
+  Fact 0.4: The letters with ascenders are b, d, f, h, k, and l.
+  Fact 0.5: A stroke which drops below the baseline is called a descender.
+  Fact 0.6: The letters with descenders are g, j, p, q, and y.
+  Fact 0.7: An arching stroke is called a shoulder, as in the top of an R.
+  Fact 0.8: An arching stroke is sometimes just called an arch, as in h, n, and m.
+  Fact 0.9: A closed curved stroke is called a bowl, as in b, d, o, p, q, D, O, P, and Q.
+  Fact 0.10: The letter B has two bowls.
+  Fact 0.11: A trailing outstroke, as in j, y, J, Q, and R, is called a tail.
+  Fact 0.12: The inferior diagonal stroke in K is called a leg.
+  Fact 0.13: A short horizontal stroke, as in the center of e and f and the middle stroke of E and F, is called a bar.
+  Fact 0.14: When strokes connect, as in A and H, or cross, as in t, the stroke is also known as a crossbar.
+  Fact 0.15: A longer horizontal stroke at the top or bottom, as in E and T, is called an arm.
+  Fact 0.16: The bottom of the two-story g is called a loop.
+  Fact 0.17: The very short stroke at the top of the two-story g is called the ear.
+  Fact 0.18: The letters i and j each have a dot, jot, or tittle.
+  Fact 0.19: Angles of strokes are called apices if at the top.
+  Fact 0.20: Angles of strokes are called vertices if at the bottom.
+  Fact 0.21: The letter w has one apex and two vertices.
+  Fact 0.22: The letter v has one vertex.
+
+Retrieved items:
+<item 1>
+Typeface anatomy
+ij each have a dot , jot , or tittle . Angles of strokes are called apices if at the top and vertices if at the bottom . w has one apex and two vertices ; v has
+one vertex . The font shown in the example is stressed : strokes have varying widths . In this example , the stroke at the top of the g is thinner at the top
+and bottom than on the sides -- a vertical stress . Terminals ( edit ) The terminals ( ends ) of instrokes and outstrokes often end in serif or sans - serif . A
+seriffed terminal may be described as a wedge , bulbous , teardrop , slab , etc. , depending on the design of the type . Sorting typefaces can be practical
+based on its look . A clue feature is to define the serif style . Some designs also have spurs , which are smaller than serifs and appear on angles rather than
+at a terminal , as on e or G . Space ( edit ) Areas of negative space ( white space ) formed by straight or curved strokes are called counters . Closed counters
+are found in abdegopq ABDOPQR , and open counters in acefhmnrstu .
+</item 1>
+
+<item 2>
+Church Fathers
+549 ) Jump up ^ Herbermann , Charles , ed. ( 1913 ) . `` Tertullian '' . Catholic Encyclopedia . New York : Robert Appleton Company . Jump up ^ A History of
+Christian Thought , Paul Tillich , Touchstone Books , 1972 . ISBN 0 - 671 - 21426 - 8 ( p. 43 ) Jump up ^ To Autolycus , Book 2 , chapter XV Jump up ^ Known in
+Latin and Low Franconian as Ambrosius , in Italian as Ambrogio and in Lombard as Ambroeus . Jump up ^ Cross , F.L. , ed . The Oxford Dictionary of the Christian
+Church . New York : Oxford University Press . 2005 , article Platonism Jump up ^ Pope St. Gregory I at about.com Jump up ^ Karim , Cyril Aphrem ( December 2004
+) . Symbols of the cross in the writings of the early Syriac Fathers . Gorgias Press LLC . p. 3 . ISBN 978 - 1 - 59333 - 230 - 3 .
+</item 2>
+
+<item 3>
+Typeface anatomy
+This made it possible to mix typefaces from completely different genres such as sans - serifs and serifs and have the cap height , baseline and linespacing
+match perfectly , something not possible with most digital fonts . It even allowed mixing of different sizes of type with a consistent baseline . It however had
+the disadvantage of often forcing typefaces to be issued with cropped descenders compared to historical typefaces , to allow tight linespacing . A `` script
+line '' or `` art line '' was used for more delicate fonts with long descenders . Titling capitals , meanwhile , were issued taking up the whole space of the
+metal type area , with no room for descenders . See also ( edit ) Type design Type foundry Typography Typesetting References ( edit ) Jump up ^ Studer , Anton (
+29 February 2016 ) . `` Is What I See What I Get ? -- Math & Optics in Type Design '' . Typographica . Retrieved 17 April 2016 . ^ Jump up to : Carter , Bob ;
+Day , Ben ; Meggs , Philip ( 2007 ) . Typographic Design : Form and Communication .
+</item 3>
+
+<item 4>
+Typeface anatomy
+`` Typeface Mechanics : 001 '' . Frere - Jones Type . Retrieved 17 April 2016 . Frere - Jones , Tobias . `` Typeface Mechanics : 002 '' . Frere - Jones Type .
+Retrieved 17 April 2016 . Coles , Stephen . `` The Anatomy of Type '' . Blog for Coles ' 2012 book The Anatomy of Type : A Graphic Guide to 100 Typefaces . ``
+Glossary '' . FontShop . Monotype . ( hide ) Typography terminology Page Canons of page construction Column Even working Margin Page numbering Pagination Pull
+quote Recto and verso Paragraph Alignment Justification Leading River Sentence spacing Widows and orphans Character Typeface anatomy Counter Diacritics Dingbat
+Glyph Initial Kerning Letter - spacing Ligature Subscript and superscript Swash Text figures Tittle Capitalization ALL CAPS Camel Case Letter case Petite caps
+Small caps Visual distinction Italics Oblique Bold Color Underline Blackboard bold Blackletter Infɑnt Vertical aspects Ascender Baseline Cap height Descender
+Median Overshoot x-height Classifications Roman type Antiqua ( old style ) Didone ( modern ) Sans - serif Script Serif Slab serif Transitional Reverse
+</item 4>
+
+<item 5>
+Typeface anatomy
+The close counter in e is also named eye . Angles of white space , as in w , are corners ( w has three corners ) ; the term is not used for angles of strokes .
+The small corner formed by a serif , whether curved or angular , is called the serif bracket . Proportions ( edit ) A subtle change in proportion impacts weight
+, perception , measure , and legibility . The letterform height compared to its stroke width modifies the aspect ; this slight change in weight sometimes helps
+to create emphasis . The disparity between thick and thin strokes , known as stress , alters optical perception . As an example , the initial san serif
+typefaces used a constantly thin stroke . The technological advances allow drawing thinner strokes . Condense type occupies less space than expanded type , then
+the text written on a page can be reduced to half a page. The capline and x-height ratio improve or decrease word legibility . Metal type era ( edit ) During
+the late metal type period , many fonts ( particularly in American typefounding ) were issued to `` common line '' . This meant that they were made to
+standardised proportions , so that fonts of different typefaces could be mixed with no difficulty .
+</item 5>
+
+<item 6>
+Typeface anatomy
+Typeface Anatomy - wikipedia Typeface Anatomy Jump to : navigation , search Typographic parts of a glyph : 1 ) x-height ; 2 ) ascender line ; 3 ) apex ; 4 )
+baseline ; 5 ) ascender ; 6 ) crossbar ; 7 ) stem ; 8 ) serif ; 9 ) leg ; 10 ) bowl ; 11 ) counter ; 12 ) collar / link / neck ; 13 ) loop ; 14 ) ear ; 15 ) tie
+; 16 ) horizontal bar ; 17 ) arm ; 18 ) vertical bar ; 19 ) cap height ; 20 ) descender line . Typeface anatomy describes the graphic elements that make up
+printed letters in a typeface . Contents ( hide ) 1 Strokes 2 Terminals 3 Space 4 Proportions 5 Metal type era 6 See also 7 References 8 Further reading 9
+External links Strokes ( edit ) The strokes are the components of a letterform . Strokes may be straight , as in klvwxz , or curved , as in cos . If straight ,
+they may be horizontal , vertical , or diagonal ; if curved , open or closed .
+</item 6>
+
+<item 7>
+Typeface anatomy
+Typographers also speak of an instroke , where one starts writing the letter , as at the top of acf , and an outstroke , where the pen leaves off , as at the
+bottom of cejkty . Typefaces are born from the struggle between rules and results . Squeezing a square about 1 % helps it look more like a square ; to appear
+the same height as a square , a circle must be measurably taller . The two strokes in an X are n't the same thickness , nor are their parallel edges actually
+parallel ; the vertical stems of a lowercase alphabet are thinner than those of its capitals ; the ascender on ad is n't the same length as the descender on ap
+, and so on . For the rational mind , type design can be a maddening game of drawing things differently in order to make them appear the same . Hoefler & Frere
+- Jones A main vertical stroke is called a stem . The letter m has three , the left , middle , and right stems . The central stroke of an s is called the spine
+.
+</item 7>
+
+<item 8>
+Typeface anatomy
+Harper Design , 2013 . ^ Jump up to : Dean , Paul ( 27 March 2008 ) . `` eXtreme Type Terminology . Part 2 : Anatomy of a Letterform '' . I Love Typography .
+Further reading ( edit ) Gaskell , Philip ( January 1976 ) . `` A nomenclature for the letterforms of roman type '' . Visible Language . 10 ( 1 ) : 41 -- 51 .
+External links ( edit ) Wikimedia Commons has media related to Examples of typography terms . Armannsson , Sigurdur ( 6 July 2009 ) . `` Wallpaper : Font
+Anatomy '' . Font.is . Full - size image ( 1920 × 1200 ) Dean , Paul ( 2008 ) . eXtreme Type Terminology -- Part 1 , Part 2 , Part 3 , Part 4 and Part 5 Devroye
+, Luc . `` Hoefler & Frere - Jones '' . Retrieved 21 January 2015 . Frere - Jones , Tobias . `` Typeface Mechanics : 001 '' . Frere - Jones Type .
+</item 8>
+
+<item 9>
+The Curse of Oak Island
+They find a carving of a multi-armed cross and offer an unsupported theory that it is a representation of the `` Tree of Life '' and that it is the same as
+Nolan 's Cross on the island . A theory is presented that the cave carving may represent an `` earlier version '' of the `` Tree of Life '' . Based on the
+information discovered in France , the team concludes that the Oak Island swamp should be excavated again . 54 10 `` The Signs Of A Cross '' January 16 , 2018 (
+2018 - 01 - 16 ) 3.34 Eight pages of what is alleged to be a transcript of an incomplete log of an unnamed ship are presented . It is claimed , without any
+evidence , that the log is from a French ship which participated in the Duc d'Anville Nova Scotia expedition of 1746 . More wood , a bone and a metal spike are
+brought up from a borehole in the money pit area . The shaft excavation reaches an obstruction at 170 feet . A small lead cross is found at Smith 's Cove .
+</item 9>
+
+<item 10>
+Typeface anatomy
+The central stroke of an s is called the spine . When the stroke is part of a lowercase and rises above the height of an x ( called the x height ) , it is
+called an ascender . Letters with ascenders are bdfhkl . A stroke which drops below the baseline is a descender . Letters with descenders are gjpqy . An arching
+stroke is called a shoulder as in the top of an R or sometimes just an arch , as in hnm . A closed curved stroke is called a bowl in bdopq DOPQ ; B has two
+bowls . A trailing outstroke , as in jy JQR is called a tail . The inferior diagonal stroke in K is called leg . A short horizontal stroke , as in the center of
+ef and the middle stroke of EF , is called a bar . When the strokes connect as in A and H or cross strokes as in t is also known as crossbar . A longer
+horizontal stroke at the top or bottom , as in ET , is called an arm . The bottom of the two - story g is called a loop ; the very short stroke at the top is
+called the ear .
+</item 10>
+=== END ITEM id=7b3552e0e525abdd ===

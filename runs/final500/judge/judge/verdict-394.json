@@ -1,0 +1,32 @@
+[
+{"id": "a05f73cb884828ce", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "a spokesperson for Starbucks told Country Living that stores will be open on Thanksgiving Day. While its usual hours of operation are from 6am to 9pm, stores’ opening and closing times on the holiday vary based on location."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "a spokesperson for Starbucks told Country Living that stores will be open on Thanksgiving Day. While its usual hours of operation are from 6am to 9pm, stores’ opening and closing times on the holiday vary based on location."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."}]}
+]},
+{"id": "b691817845cd79d4", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter."}]}
+]},
+{"id": "1e687c88a5072143", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "b3387d0f6f81571b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Player props could focus on how many points a player scores or how many rebounds he pulls down."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Then, team props can range from which team will score the first bucket to the total points scored in a quarter to which team will lead at halftime."}]},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]}
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "81eaa719bdd11acb",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "cc8e8b45d82397d5",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Rookie Zach Charbonnet, who entered Week 11 with just over 200 rushing yards on the year, replaced Walker as Seattle's top ball carrier."}]},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]}
+    ]
+  }
+]

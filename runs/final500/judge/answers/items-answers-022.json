@@ -1,0 +1,411 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "75a97fa98d63f08c",
+   "kind": "answer",
+   "question": "Do both Changle District and Longkou face water?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both are coastal."
+  },
+  {
+   "id": "bd5f5608e3627179",
+   "kind": "answer",
+   "question": "Who was born first Am Rong or Ava DuVernay ?",
+   "gold_answers": [
+    "Am Rong"
+   ],
+   "model_answer": "Am Rong was born first."
+  },
+  {
+   "id": "726218af1749252e",
+   "kind": "answer",
+   "question": "What movies has Juno Temple starred in?",
+   "gold_answers": [
+    "She has appeared in films such as \" Black Mass\", \"The Other Boleyn Girl\", \"Wild Child\", \"Atonement\", \"Maleficent\", \"The Three Musketeers\" and \"The Dark Knight Rises\"."
+   ],
+   "model_answer": "Black Mass, The Other Boleyn Girl, Wild Child, Atonement, Maleficent, The Three Musketeers, The Dark Knight Rises, Dirty Girl, Jack & Diane, Cracks, Magic Magic, One Percent More Humid, Small Apartments, Lovelace, and Wonder Wheel."
+  },
+  {
+   "id": "6abe2b37d3e8103c",
+   "kind": "answer",
+   "question": "The \"unofficial national anthem\" of Australia is the basis for the nickname of what soccer team?",
+   "gold_answers": [
+    "Australian women's national soccer team"
+   ],
+   "model_answer": "Australia women's national soccer team (the Matildas)"
+  },
+  {
+   "id": "908f5f2babf13393",
+   "kind": "answer",
+   "question": "Who was born first David Draiman or Terry Kath?",
+   "gold_answers": [
+    "David Michael Draiman"
+   ],
+   "model_answer": "Terry Kath"
+  },
+  {
+   "id": "556440e9af95a889",
+   "kind": "answer",
+   "question": "Are the 1908 Ex parte Young and 1948 McCollum v. Board of Education United States Supreme Court cases related to each other in any way?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No stated relationship."
+  },
+  {
+   "id": "6e6f275895245043",
+   "kind": "answer",
+   "question": "Who is the grandfather to Frederick II and was the Holy Roman Emperor until death?",
+   "gold_answers": [
+    "Frederick I"
+   ],
+   "model_answer": "Frederick Barbarossa (Frederick I)"
+  },
+  {
+   "id": "2bdfb92f65a97663",
+   "kind": "answer",
+   "question": "What type of diet does the author of Eat to Live: The Amazing Nutrient-Rich Program for Fast and Sustained Weight Loss advocate?",
+   "gold_answers": [
+    "micronutrient-rich"
+   ],
+   "model_answer": "A nutrient-dense, plant-based diet."
+  },
+  {
+   "id": "9d9d42c8891be919",
+   "kind": "answer",
+   "question": "Live Acoustic America features a cover of a Beatles song that peaked at what number in the United Kingdom?",
+   "gold_answers": [
+    "4"
+   ],
+   "model_answer": "Number 1"
+  },
+  {
+   "id": "000ba4f1f3797817",
+   "kind": "answer",
+   "question": "Are Random House Tower and 888 7th Avenue both used for real estate?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes, both are used as real estate properties."
+  },
+  {
+   "id": "fcca38451f105409",
+   "kind": "answer",
+   "question": "Where is the county seat for people living in Henderson Point, Mississippi?",
+   "gold_answers": [
+    "Gulfport, Biloxi"
+   ],
+   "model_answer": "Biloxi, Mississippi (shared with Gulfport)"
+  },
+  {
+   "id": "c076028fb3c52cb5",
+   "kind": "answer",
+   "question": "Are the 1908 Ex parte Young and 1948 McCollum v. Board of Education United States Supreme Court cases related to each other in any way?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No, not directly."
+  },
+  {
+   "id": "a15bcfffa8f71262",
+   "kind": "answer",
+   "question": "Which English actor, comedian and singer is featured in Chalk and Cheese?",
+   "gold_answers": [
+    "Michael Patrick Smith"
+   ],
+   "model_answer": "Roy Castle"
+  },
+  {
+   "id": "e4dae044e2b7a06d",
+   "kind": "answer",
+   "question": "What is the scentific name of the butterfly that is widespread in the seventh-largest country in the world?",
+   "gold_answers": [
+    "I. helicon"
+   ],
+   "model_answer": "Ionolyce helicon"
+  },
+  {
+   "id": "bc564438890e49c8",
+   "kind": "answer",
+   "question": "What profession did Willi Forst and Elmer Clifton share?",
+   "gold_answers": [
+    "actor"
+   ],
+   "model_answer": "Actor, writer, and film director"
+  },
+  {
+   "id": "e05282d36963af14",
+   "kind": "answer",
+   "question": "What do the Church of St. Mary of the Spring and Hagia Irene have in common?",
+   "gold_answers": [
+    "Greek Eastern Orthodox church"
+   ],
+   "model_answer": "Both are in Istanbul, Turkey."
+  },
+  {
+   "id": "5e4e655b4c1030b3",
+   "kind": "answer",
+   "question": "Kresy, which roughly was a part of the land beyond the so-called Curson Line, was drawn for what reason?",
+   "gold_answers": [
+    "demarcation line between the newly emerging states, the Second Polish Republic, and the Soviet Union"
+   ],
+   "model_answer": "To set Poland’s eastern boundary after World War I, roughly along ethnic lines."
+  },
+  {
+   "id": "c6dd837aba2d0ac9",
+   "kind": "answer",
+   "question": "Operation light house was an experiment by Wernher von Braun and another man born in what year?",
+   "gold_answers": [
+    "1895"
+   ],
+   "model_answer": "1894"
+  },
+  {
+   "id": "cba151e46ef33f58",
+   "kind": "answer",
+   "question": "Who had a longer film career, Harry Sweet or John Biddle?",
+   "gold_answers": [
+    "John Scott Biddle"
+   ],
+   "model_answer": "John Biddle (yachting cinematographer)"
+  },
+  {
+   "id": "c89a7761b66f0c8c",
+   "kind": "answer",
+   "question": "Swingin' Down Yonder is the first full-length, 12-inch album recorded by a singer known by what nickname?",
+   "gold_answers": [
+    "\"King of Cool\""
+   ],
+   "model_answer": "The Singing Rage, Miss Patti Page"
+  },
+  {
+   "id": "1dc36a141b5cac00",
+   "kind": "answer",
+   "question": "In what movie did the male star of a movie about a widowed 37-year-old woman also star in in the year 1993?",
+   "gold_answers": [
+    "\"Red Rock West\""
+   ],
+   "model_answer": "This Boy’s Life"
+  },
+  {
+   "id": "87aca6c570cef317",
+   "kind": "answer",
+   "question": "Bank street is sandwiched between the headquarters of the Hongkong and Shanghai Banking Corporation and which other building?",
+   "gold_answers": [
+    "Bank of China Building"
+   ],
+   "model_answer": "The former Supreme Court Building (now the Court of Final Appeal)."
+  },
+  {
+   "id": "9e962ca31b01fb71",
+   "kind": "answer",
+   "question": "What are some other areas that share a common deer species with the forests of Mara and Mondrem?",
+   "gold_answers": [
+    "New Zealand, Canada, the United States, the Falkland Islands, and Peru."
+   ],
+   "model_answer": "Tatton Park, Lyme Park, and Dunham Massey."
+  },
+  {
+   "id": "f5c6207212d3f0fa",
+   "kind": "answer",
+   "question": " Pramod Bhasin was the former CEO of a company that provided what kind of services?",
+   "gold_answers": [
+    "IT"
+   ],
+   "model_answer": "Business process outsourcing services"
+  },
+  {
+   "id": "41eff2d4db6ffdcc",
+   "kind": "answer",
+   "question": "Which Western action-adventure video game by Rockstar did Tyler Bunch act for?",
+   "gold_answers": [
+    "Red Dead Redemption"
+   ],
+   "model_answer": "Red Dead Redemption 2"
+  },
+  {
+   "id": "22b51a753bb08565",
+   "kind": "answer",
+   "question": "What are the professions of Tom Johnston and Daryl Palumbo?",
+   "gold_answers": [
+    "American musician"
+   ],
+   "model_answer": "Musicians; Tom is a guitarist and vocalist, and Daryl is a frontman."
+  },
+  {
+   "id": "372112ed00f5e91d",
+   "kind": "answer",
+   "question": "Who voices Chef Mung Daal in the American animated television series created by C. H. Greenblatt?",
+   "gold_answers": [
+    "William Dwight Schultz"
+   ],
+   "model_answer": "Dwight Schultz"
+  },
+  {
+   "id": "f48c2efde37fb3e7",
+   "kind": "answer",
+   "question": "What are some other areas that share a common deer species with the forests of Mara and Mondrem?",
+   "gold_answers": [
+    "New Zealand, Canada, the United States, the Falkland Islands, and Peru."
+   ],
+   "model_answer": "Europe, Australia, and New Zealand"
+  },
+  {
+   "id": "e07170c174558fad",
+   "kind": "answer",
+   "question": "How many women in total competed at the Asian Games the year Lee Young-Sun achieved her personal best throw of 58.87 metres?",
+   "gold_answers": [
+    "179 women"
+   ],
+   "model_answer": "1,685 women"
+  },
+  {
+   "id": "3f462cd3d0c137c2",
+   "kind": "answer",
+   "question": "Which band formed in England, Of Montreal or Vib Gyor?",
+   "gold_answers": [
+    "Vib Gyor was a band that was formed in Leeds, England."
+   ],
+   "model_answer": "Vib Gyor"
+  },
+  {
+   "id": "11a3a8d2255e3b15",
+   "kind": "answer",
+   "question": "Sinimole Paulose's favorite events are the 800 metres and another event that has been a contest at the Summer Olympics begining in what year?",
+   "gold_answers": [
+    "1896"
+   ],
+   "model_answer": "1972"
+  },
+  {
+   "id": "ebea2086680bb72c",
+   "kind": "answer",
+   "question": "Dean Mills Reservoir is on the slopes of the hill located in what town?",
+   "gold_answers": [
+    "Rivington Moor"
+   ],
+   "model_answer": "Bolton"
+  },
+  {
+   "id": "9bd254fd9fe4da8f",
+   "kind": "answer",
+   "question": "Nicole Gordon won a silver medal with Sara Petersen int he women's doubles at a competition held in what city?",
+   "gold_answers": [
+    "Manchester"
+   ],
+   "model_answer": "Manchester, England"
+  },
+  {
+   "id": "350790ef40aa3363",
+   "kind": "answer",
+   "question": "What day of the week does the Korean cooking-variety program featuring the owner of \"Dear. bread\" air?",
+   "gold_answers": [
+    "Mondays"
+   ],
+   "model_answer": "Monday"
+  },
+  {
+   "id": "15f4a50594442d9f",
+   "kind": "answer",
+   "question": "While at the University of Michigan, Louis Smith played with what American jazz trumpeter, bandleader, and composer?",
+   "gold_answers": [
+    "Miles Dewey Davis III"
+   ],
+   "model_answer": "Miles Davis"
+  },
+  {
+   "id": "983716a466ac253f",
+   "kind": "answer",
+   "question": "What genre of composers were both Claudio Monteverdi and Georges Bizet? ",
+   "gold_answers": [
+    "opera"
+   ],
+   "model_answer": "Opera composers"
+  },
+  {
+   "id": "6d7196510c268530",
+   "kind": "answer",
+   "question": "In addition to the best known comic servant from Commedia dell'arte, who else is featured in La Surprise de l'amour?",
+   "gold_answers": [
+    "Columbine"
+   ],
+   "model_answer": "Lélio and the Countess"
+  },
+  {
+   "id": "5226c5c533f3b2bc",
+   "kind": "answer",
+   "question": "Who voices Homer Simpson's character on the animated television series? ",
+   "gold_answers": [
+    "Daniel Louis Castellaneta"
+   ],
+   "model_answer": "Dan Castellaneta"
+  },
+  {
+   "id": "4b3e261facb1f6dd",
+   "kind": "answer",
+   "question": "Do both Adventist World and Girls' Life have a headquarter or editor based in Maryland?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both are based in Maryland."
+  },
+  {
+   "id": "30c7c28d4af93e84",
+   "kind": "answer",
+   "question": "Which English actor, comedian and singer is featured in Chalk and Cheese?",
+   "gold_answers": [
+    "Michael Patrick Smith"
+   ],
+   "model_answer": "Michael Crawford"
+  },
+  {
+   "id": "10fdd5bd2303a1b0",
+   "kind": "answer",
+   "question": "Are Distortion Mirrors and OK Go both considered rock bands?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both are considered rock bands."
+  },
+  {
+   "id": "a6edcfe87dcbf5c6",
+   "kind": "answer",
+   "question": "What profession does Matt Thiessen and George Thorogood have in common?",
+   "gold_answers": [
+    "musician"
+   ],
+   "model_answer": "Musician and songwriter"
+  },
+  {
+   "id": "23a1e42f0a305e2d",
+   "kind": "answer",
+   "question": "What profession did Alan Crosland and Kurt Voss both hold?",
+   "gold_answers": [
+    "film director"
+   ],
+   "model_answer": "Film directors"
+  },
+  {
+   "id": "28040be71d1aa430",
+   "kind": "answer",
+   "question": "The House of Hanover held the British throne until after Victoria's death, when it was past to the dynasty that ruled which duchy?",
+   "gold_answers": [
+    "Ernestine"
+   ],
+   "model_answer": "Saxe-Coburg and Gotha\n"
+  },
+  {
+   "id": "f3f4c2d5e5d443cb",
+   "kind": "answer",
+   "question": "That Darn Cat and Honey, I Blew Up the Kid are both what?",
+   "gold_answers": [
+    "comedy"
+   ],
+   "model_answer": "Walt Disney films"
+  }
+ ],
+ "evidence": []
+}

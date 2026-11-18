@@ -1,0 +1,14 @@
+{
+ "note": "Agentic GraphRAG NQ graph builds. Parts 1 and 3 metered (build_cost.json). Part 2 (questions 5-71) was stopped before build_cost.json was written; the construction cache keeps no token counts, so its cost is ESTIMATED as its chunk count times the metered list rate of parts 1+3. Check against the OpenAI usage page for 10-11 Nov 2026 if exact numbers are needed.",
+ "metered_chunks": 1737,
+ "metered_list_usd": 2.3357,
+ "list_usd_per_chunk": 0.001345,
+ "estimated_chunks": 3139,
+ "estimated_list_usd": 4.2209,
+ "total_list_usd_with_estimate": 6.5566,
+ "normal_rag_build_list_usd": 0.0217,
+ "question_cost_usd": {
+  "rag": 0.0309,
+  "graphrag": 0.1949
+ }
+}

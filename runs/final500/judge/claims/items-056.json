@@ -1,0 +1,81 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "multihop-rag-1643",
+   "sentences": [
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.",
+    "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth).",
+    "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-2136",
+   "sentences": [
+    "The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night, keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14.",
+    "Philadelphia rolled to a 31-17 win over Miami on \"Sunday Night Football,\" keeping the Dolphins' offense off the scoreboard in the second half and playing smart football every step of the way down the stretch."
+   ]
+  },
+  {
+   "id": "7680180825510539122",
+   "sentences": [
+    "The resort is the first to be built in the complex in over seven years and the fifth to be placed in the value - priced category , along with Disney 's All - Star Sports Resort , the All - Star Music Resort , the All - Star Movies Resort , and Disney 's Pop Century Resort . Family suites opened on May 31 , 2012 , and standard rooms opened on September 15 , 2012 .",
+    "Disney 's Art of Animation Resort Location ESPN Wide World of Sports Resort Area Resort type Value resort Opened May 31 , 2012 Theme Walt Disney characters Areas Cars Finding Nemo The Lion King The Little Mermaid Rooms 984 Suites 1,120 Green lodge yes"
+   ]
+  },
+  {
+   "id": "multihop-rag-926",
+   "sentences": [
+    "Erik ten Hag is a top coach from Ajax but they need a top blueprint not only for now but for the next five years, and work towards that, and sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right things.",
+    "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."
+   ]
+  },
+  {
+   "id": "5addffff5542992200553bdd",
+   "sentences": [
+    " He is most well known for providing the singing voice of Tony (played onscreen by Richard Beymer) in the 1961 film musical \"West Side Story\".",
+    " The film was nominated for 11 Academy Awards and won 10, including Best Picture (as well as a special award for Robbins), becoming the record holder for the most wins for a movie musical."
+   ]
+  },
+  {
+   "id": "5ab41677554299753aec5a38",
+   "sentences": [
+    " The 381-ton vessel was armed with a 12-pounder 12cwt QF gun, a 20mm Oerlikon cannon, a .303-inch Vickers machine gun, and four Type D depth charges, and was commissioned into the RAN on 11 June 1941.",
+    " It was in service from before the First World War until the 1960s, with air-cooled versions of it on many Allied World War I fighter aircraft."
+   ]
+  },
+  {
+   "id": "224088321079691518",
+   "sentences": [
+    "Somatic motor neurons originate in the central nervous system , project their axons to skeletal muscles ( such as the muscles of the limbs , abdominal , and intercostal muscles ) , which are involved in locomotion . The three types of these neurons are the alpha efferent neurons , beta efferent neurons , and gamma efferent neurons . They are called efferent to indicate the flow of information from the central nervous system ( CNS ) to the periphery .",
+    "The term ' motor neuron ' is usually restricted to the lower motor neurons , the efferent nerves that directly innervate muscles ."
+   ]
+  },
+  {
+   "id": "5aba71b155429955dce3ee2a",
+   "sentences": [
+    " The Park is home to the first flume ride in Ireland (Pirates Plunge).",
+    "Grace O'Malley (c. 1530 – c. 1603; also Gráinne O'Malley, Irish: \"Gráinne Ní Mháille\" ) was lord of the Ó Máille dynasty in the west of Ireland, following in the footsteps of her father Eoghan Dubhdara Ó Máille."
+   ]
+  },
+  {
+   "id": "5a7571095542992d0ec05f97",
+   "sentences": [
+    "Mirrors is a 2008 supernatural horror film directed by Alexandre Aja, starring Kiefer Sutherland, Paula Patton, and Amy Smart.",
+    "Paula Maxine Patton (born December 5, 1975) is an American actress."
+   ]
+  },
+  {
+   "id": "5a840e8a5542992ef85e239e",
+   "sentences": [
+    "Mastodon is an American heavy metal band from Atlanta, Georgia.",
+    " Formed in 2000, the group is composed of bassist Troy Sanders, guitarists Brent Hinds and Bill Kelliher, and drummer Brann Dailor, all of whom perform vocals in studio (except Bill Kelliher).",
+    " Mastodon has released seven studio albums, as well as a number of other records.",
+    " Mastodon's second full-length release, \"Leviathan\", is a concept album based on the novel \"Moby-Dick\" by Herman Melville.",
+    "Hole was an American alternative rock band that formed in Los Angeles, California in 1989 by singer and guitarist Courtney Love and lead guitarist Eric Erlandson."
+   ]
+  }
+ ]
+}

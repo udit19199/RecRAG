@@ -1,0 +1,89 @@
+[
+  {
+    "id": "71a36799a1e68fa2",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 5, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her"},
+          {"item": 5, "quote": "I wanted to give Taylor Swift one with my number on it"}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 5, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts"},
+          {"item": 5, "quote": "Taylor Swift concerts, there are friendship bracelets and I had received a bunch of them"}
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 5, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift."}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.0",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  },
+  {
+    "id": "5fe18ea94ce3905e",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 1, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}
+        ]
+      },
+      {
+        "fact": "2.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 1, "quote": "they begin to tighten the NBA Rookie of the Year lines in response."}
+        ]
+      }
+    ]
+  }
+]

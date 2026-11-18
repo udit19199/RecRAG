@@ -1,0 +1,79 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "-1182093724333869887",
+   "sentences": [
+    "Gina Tognoni / toʊnˈjoʊni / ( born November 28 , 1973 ) is an American actress , best known for her work with American daytime soap operas . Her most notable performances include Kelly Cramer on One Life to Live and Dinah Marler on Guiding Light . She is currently starring as Phyllis Summers on The Young and the Restless .",
+    "Gina Tognoni ( 1973 - 11 - 28 ) November 28 , 1973 ( age 44 ) St. Louis , Missouri , U.S. Occupation Actress businesswoman Years active 1995 -- present Television Guiding Light ( 2004 -- 2009 ) One Life to Live ( 1995 -- 2001 , 2002 , 2010 -- 2011 ) The Young and the Restless ( 2014 -- present ) Spouse ( s ) Joseph Chiarello ( m . 2009 )"
+   ]
+  },
+  {
+   "id": "5a83041355429966c78a6ae8",
+   "sentences": [
+    " He has been involved in numerous television projects as director, writer, producer and animator.",
+    "Béla Gaál (2 January 1893 – 18 February 1945) was a Hungarian film director."
+   ]
+  },
+  {
+   "id": "multihop-rag-2042",
+   "sentences": [
+    "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve.",
+    "While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse."
+   ]
+  },
+  {
+   "id": "5a85d4ad5542997175ce2050",
+   "sentences": [
+    "James David Sharman (born 12 March 1945), the son of boxing tent entrepreneur Jimmy Sharman, is an Australian director and writer for film and stage with more than 70 productions to his credit.",
+    "Ava Marie DuVernay ( ; born August 24, 1972) is an American director, screenwriter, film marketer, and film distributor."
+   ]
+  },
+  {
+   "id": "-7897846385260632865",
+   "sentences": [
+    "The 2018 Winter Olympics , officially known as the XXIII Olympic Winter Games ( French : Les XXIIIèmes Jeux olympiques d'hiver ; Hangul : 제 23 회 동계 올림픽 ; RR : Je - isipsamhoe Donggye Ollimpik ) and commonly known as PyeongChang 2018 ( ( phjʌŋ. tɕhaŋ ) ) , is a major international multi-sport event scheduled to take place from 9 to 25 February 2018 in Pyeongchang County , South Korea .",
+    "XXIII Olympic Winter Games Host city Pyeongchang , South Korea Motto Passion . Connected . Korean : 하나 된 열정 . ( Hanadoen Yeoljeong ) Nations participating 90 ( estimated ) Events 102 in 7 sports ( 15 disciplines ) Opening ceremony 9 February ( 31 days from now ) Closing ceremony 25 February Stadium Pyeongchang Olympic Stadium Winter < Sochi 2014 Beijing 2022 > Summer < Rio de Janeiro 2016 Tokyo 2020 >"
+   ]
+  },
+  {
+   "id": "5adfecd755429942ec259b90",
+   "sentences": [
+    " He has written a column for \"Fortune\" magazine for more than twenty years, after having spent a decade at \"Esquire\".",
+    " Founded in 1933, it flourished during the Great Depression under the guidance of founders Arnold Gingrich, David A. Smart and Henry L. Jackson."
+   ]
+  },
+  {
+   "id": "multihop-rag-1884",
+   "sentences": [
+    "“The company’s approach also raises concerns regarding the GDPR,” Pachl further noted.",
+    "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents.",
+    "In one respect at least, however, the documentation obtained by the attorneys general of 42 states is quite specific, “and it is damning,” as AG Rob Bonta of California put it.",
+    "Al Saadi said that her frustration with Meta is common among Palestinians, both in occupied territories and across the diaspora."
+   ]
+  },
+  {
+   "id": "5a7a276d5542996c55b2dd27",
+   "sentences": [
+    "Colonel Charles Hastings Judd (September 8, 1835 – April 18, 1890) was an American businessman, rancher, courtier and politician of the Kingdom of Hawaii.",
+    " He served as Chamberlain and Colonel of the military staff of King Kalākaua and traveled with the monarch on his 1881 world tour.",
+    "Kalākaua (November 16, 1836 – January 20, 1891), born David Laʻ amea Kamananakapu Mahinulani Naloiaehuokalani Lumialani Kalākaua and sometimes called The Merrie Monarch, was the last king (and second to last monarch) of the Kingdom of Hawaiʻ i."
+   ]
+  },
+  {
+   "id": "multihop-rag-1739",
+   "sentences": [
+    "Halloween isn’t the only holiday on the horizon now that October is drawing to a close.",
+    "If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family."
+   ]
+  },
+  {
+   "id": "5a8460d5554299123d8c2229",
+   "sentences": [
+    " He is the main vocalist of the boy group Highlight.",
+    " She had been a trainee at S.M. Entertainment's Starlight Academy during her middle school years before debuting as a member of the agency's girl group, Girls' Generation, in 2007."
+   ]
+  }
+ ]
+}

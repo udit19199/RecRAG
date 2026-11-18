@@ -1,0 +1,567 @@
+[
+  {
+    "id": "aa087c0e53bb113b",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.3",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "the $26.3 billion Google spent making itself the default search engine across platforms in 2021"
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones"
+          }
+        ]
+      },
+      {
+        "fact": "2.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28"
+          }
+        ]
+      },
+      {
+        "fact": "2.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple"
+          }
+        ]
+      },
+      {
+        "fact": "2.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms"
+          }
+        ]
+      },
+      {
+        "fact": "2.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "from companies including Apple, Samsung and Mozilla"
+          }
+        ]
+      },
+      {
+        "fact": "2.4",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "The Verge reports."
+          }
+        ]
+      },
+      {
+        "fact": "3.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"
+          }
+        ]
+      },
+      {
+        "fact": "3.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"
+          }
+        ]
+      },
+      {
+        "fact": "3.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"
+          }
+        ]
+      },
+      {
+        "fact": "3.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cd3ddaf7fb758630",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue."
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue."
+          }
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue."
+          }
+        ]
+      },
+      {
+        "fact": "2.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.3",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.4",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  },
+  {
+    "id": "2c53ffcf4696c64c",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "is on trial for seven counts of wire fraud and conspiracy."
+          }
+        ]
+      },
+      {
+        "fact": "0.4",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "is on trial for seven counts of wire fraud and conspiracy."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "But “all of that, all of it, was built on lies,” Rehn declared to the jury."
+          }
+        ]
+      },
+      {
+        "fact": "2.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 1,
+            "quote": "It was not until Judge Lewis Kaplan intervened"
+          }
+        ]
+      },
+      {
+        "fact": "2.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 1,
+            "quote": "Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance"
+          }
+        ]
+      },
+      {
+        "fact": "2.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 1,
+            "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told."
+          }
+        ]
+      },
+      {
+        "fact": "3.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.3",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  },
+  {
+    "id": "6ffa0b9226f2d947",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "But I think we’ll look back and see this past year is a really important turning point for the role that social media plays in our lives"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "she adds"
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "The Goellers are now seeking support again, launching the \"Save Lucas\" campaign across social media."
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "The Goellers are now seeking support again, launching the \"Save Lucas\" campaign across social media."
+          }
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "The Goellers are now seeking support again, launching the \"Save Lucas\" campaign across social media."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "d24481b23aa299eb",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "One of the hardest things is resentment can build up if you feel like you need to buy gifts for your family and you can barely make your student loan payments, so bring things up,” Alev said."
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "so bring things up,” Alev said."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "7d6d961beebc30de",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 1,
+            "quote": "Last week, Wang testified that Alameda got access to a special credit line"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT"
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT"
+          }
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT"
+          }
+        ]
+      },
+      {
+        "fact": "1.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT"
+          }
+        ]
+      },
+      {
+        "fact": "1.4",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT"
+          }
+        ]
+      },
+      {
+        "fact": "1.5",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX."
+          }
+        ]
+      },
+      {
+        "fact": "1.6",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX."
+          }
+        ]
+      },
+      {
+        "fact": "2.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud"
+          }
+        ]
+      },
+      {
+        "fact": "3.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "committed fraud to achieve great wealth, power and influence"
+          }
+        ]
+      },
+      {
+        "fact": "3.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "while the defense countered that the FTX founder acted in good faith"
+          }
+        ]
+      },
+      {
+        "fact": "3.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "never meant to commit fraud or steal and basically got in over his head."
+          }
+        ]
+      },
+      {
+        "fact": "3.4",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "never meant to commit fraud or steal and basically got in over his head."
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,105 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "fa9464f93b1c8a77",
+   "kind": "answer",
+   "question": "Does the TechCrunch article that discusses the expected debut of DeepMind's next-generation chatbot Gemini by the end of the year align with the TechCrunch article mentioning Google's release of only the \"lite\" version known as Gemini Pro, or do they refer to different stages or versions of the Gemini project?",
+   "gold_answers": [
+    "Different stages or versions"
+   ],
+   "model_answer": "They align: Gemini Pro was the “lite” version, while Gemini Ultra was the more capable version expected later."
+  },
+  {
+   "id": "a60d69a6e1054bfe",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "They portray different situations."
+  },
+  {
+   "id": "182de41aa3f2a2f1",
+   "kind": "answer",
+   "question": "Does the article from The Verge discussing the Microsoft Elite Series 2 “Core” version mention an increase in features compared to the standard model, and does the article from The Verge on MacBook Pros indicate a reduction in prices for the new models?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No. No."
+  },
+  {
+   "id": "f62f7b0909fea349",
+   "kind": "answer",
+   "question": "Does the Queensland Rugby Union's stance on maintaining control over their high-performance model, as reported by The Roar | Sports Writers Blog, align with Rugby Australia's efforts to centralize high-performance programs across Super Rugby teams, or are their approaches different?",
+   "gold_answers": [
+    "Different"
+   ],
+   "model_answer": "They align on centralizing high-performance programs, but the QRU will retain control of its commercial and corporate functions."
+  },
+  {
+   "id": "c923b0a002ed091d",
+   "kind": "answer",
+   "question": "Does the Cnbc | World Business News Leader article suggest that Sam Bankman-Fried had a different approach to the composition of FTX's board compared to the TechCrunch articles' portrayal of his actions regarding the misuse of customer funds and committing fraud for personal gain?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "b55468f546c0028b",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Both present the All Blacks as facing gameplay challenges."
+  },
+  {
+   "id": "469b89eff50a179f",
+   "kind": "answer",
+   "question": "Does the Queensland Rugby Union's stance on maintaining control over their high-performance model, as reported by The Roar | Sports Writers Blog, align with Rugby Australia's efforts to centralize high-performance programs across Super Rugby teams, or are their approaches different?",
+   "gold_answers": [
+    "Different"
+   ],
+   "model_answer": "They align on high-performance centralization, but QRU will retain its commercial and corporate independence."
+  },
+  {
+   "id": "c03200a79537a44a",
+   "kind": "answer",
+   "question": "Does the TechCrunch article suggest that Deft is maintaining the status quo in user behavior regarding e-commerce search, while The Verge article indicates that Apple has not sought an alternative to Google as the default search engine on its devices?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "410d92a42b558edf",
+   "kind": "answer",
+   "question": "Does the TechCrunch article that discusses the expected debut of DeepMind's next-generation chatbot Gemini by the end of the year align with the TechCrunch article mentioning Google's release of only the \"lite\" version known as Gemini Pro, or do they refer to different stages or versions of the Gemini project?",
+   "gold_answers": [
+    "Different stages or versions"
+   ],
+   "model_answer": "They refer to different stages: Gemini Pro was the “lite” version, while Gemini Ultra was expected later."
+  },
+  {
+   "id": "549b172efef119b6",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Both present the All Blacks as facing gameplay challenges, in different situations."
+  },
+  {
+   "id": "c3aa13f2239b765f",
+   "kind": "answer",
+   "question": "Does the Queensland Rugby Union's stance on maintaining control over their high-performance model, as reported by The Roar | Sports Writers Blog, align with Rugby Australia's efforts to centralize high-performance programs across Super Rugby teams, or are their approaches different?",
+   "gold_answers": [
+    "Different"
+   ],
+   "model_answer": "They align on centralizing high-performance programs, but the QRU wants to retain control of its commercial and corporate functions."
+  }
+ ],
+ "evidence": []
+}

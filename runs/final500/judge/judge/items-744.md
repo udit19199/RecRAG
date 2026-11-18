@@ -1,0 +1,787 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=bab6df38f76409da ===
+Gold sentences and facts:
+Sentence 0: Deion Sanders Sanders in 2011 No. 21 , 37 Position : Cornerback Date of birth : ( 1967 - 08 - 09 ) August 9 , 1967 ( age 50 ) Place of birth : Fort Myers , Florida Height : 6 ft 1 in ( 1.85 m ) Weight : 198 lb ( 90 kg ) Career information High school : North Fort Myers ( FL ) College : Florida State NFL Draft : 1989 / Round : 1 / Pick : 5 Career history Atlanta Falcons ( 1989 -- 1993 ) San Francisco 49ers ( 1994 ) Dallas Cowboys ( 1995 -- 1999 ) Washington Redskins ( 2000 ) Baltimore Ravens ( 2004 -- 2005 ) Career highlights and awards 2 × Super Bowl champion ( XXIX , XXX ) 8 × Pro Bowl ( 1991 -- 1994 , 1996 -- 1999 ) 8 × First - team All - Pro ( 1991 -- 1994 , 1996 -- 1999 ) NFL Defensive Player of the Year ( 1994 ) NFL 1990s All - Decade Team Atlanta Falcons Ring of Honor Jim Thorpe Award ( 1988 ) 2 × Unanimous All - American ( 1987 , 1988 ) Florida State Seminoles No. 2 retired Career NFL statistics Interceptions : 53 Defensive touchdowns : 10 Return touchdowns : 9 Receptions : 60 Receiving yards : 784 Receiving touchdowns : 3 Player stats at NFL.com Player stats at PFR Pro Football Hall of Fame College Football Hall of Fame
+  Fact 0.0: Deion Sanders is pictured in 2011.
+  Fact 0.1: Deion Sanders' jersey numbers are No. 21 and No. 37.
+  Fact 0.2: Deion Sanders' position is cornerback.
+  Fact 0.3: Deion Sanders was born on August 9, 1967.
+  Fact 0.4: Deion Sanders is listed as age 50.
+  Fact 0.5: Deion Sanders was born in Fort Myers, Florida.
+  Fact 0.6: Deion Sanders is 6 ft 1 in (1.85 m) tall.
+  Fact 0.7: Deion Sanders weighs 198 lb (90 kg).
+  Fact 0.8: Deion Sanders' high school is North Fort Myers (FL).
+  Fact 0.9: Deion Sanders' college is Florida State.
+  Fact 0.10: Deion Sanders was picked in round 1, pick 5 of the 1989 NFL Draft.
+  Fact 0.11: Deion Sanders played for the Atlanta Falcons from 1989 to 1993.
+  Fact 0.12: Deion Sanders played for the San Francisco 49ers in 1994.
+  Fact 0.13: Deion Sanders played for the Dallas Cowboys from 1995 to 1999.
+  Fact 0.14: Deion Sanders played for the Washington Redskins in 2000.
+  Fact 0.15: Deion Sanders played for the Baltimore Ravens from 2004 to 2005.
+  Fact 0.16: Deion Sanders is a 2-time Super Bowl champion, for Super Bowls XXIX and XXX.
+  Fact 0.17: Deion Sanders is an 8-time Pro Bowl selection (1991-1994, 1996-1999).
+  Fact 0.18: Deion Sanders is an 8-time First-team All-Pro (1991-1994, 1996-1999).
+  Fact 0.19: Deion Sanders was NFL Defensive Player of the Year in 1994.
+  Fact 0.20: Deion Sanders is named to the NFL 1990s All-Decade Team.
+  Fact 0.21: Deion Sanders has an Atlanta Falcons Ring of Honor entry.
+  Fact 0.22: Deion Sanders won the Jim Thorpe Award in 1988.
+  Fact 0.23: Deion Sanders is a 2-time Unanimous All-American (1987, 1988).
+  Fact 0.24: No. 2 is retired by the Florida State Seminoles.
+  Fact 0.25: Deion Sanders' career NFL interceptions total 53.
+  Fact 0.26: Deion Sanders' career NFL defensive touchdowns total 10.
+  Fact 0.27: Deion Sanders' career NFL return touchdowns total 9.
+  Fact 0.28: Deion Sanders' career NFL receptions total 60.
+  Fact 0.29: Deion Sanders' career NFL receiving yards total 784.
+  Fact 0.30: Deion Sanders' career NFL receiving touchdowns total 3.
+  Fact 0.31: The page links to player stats at NFL.com.
+  Fact 0.32: The page links to player stats at PFR.
+  Fact 0.33: The page links to the Pro Football Hall of Fame.
+  Fact 0.34: The page links to the College Football Hall of Fame.
+
+Retrieved items:
+<item 1>
+Deion Sanders
+In 2014 , he debuted his new show , the Deion Family Playbook . Contents ( hide ) 1 Early life 1.1 High school 1.2 College career 2 Professional baseball career
+3 Professional football career 3.1 Draft and Atlanta Falcons 3.2 San Francisco 49ers 3.3 Dallas Cowboys 3.4 Washington Redskins 3.5 Baltimore Ravens 4 Legacy 5
+Media appearances and pop culture fame 6 Other business and entertainment ventures 7 Discography 8 Personal life 9 See also 10 References 11 External links
+Early life ( edit ) High school ( edit ) Sanders was born in Fort Myers , Florida . He attended North Fort Myers High School in North Fort Myers , and was a
+letterman and All - State honoree in football , basketball and baseball . In 1985 , Sanders was named to the Florida High School Association All - Century Team
+which selected the top 33 players in the 100 - year history of high school football in the state . The Kansas City Royals selected Sanders out of North Fort
+Myers High School in the sixth round of the 1985 Major League Baseball draft . He did not sign with the Royals .
+</item 1>
+
+<item 2>
+Deion Sanders
+Deion Sanders - wikipedia Deion Sanders Jump to : navigation , search Deion Sanders Sanders in 2011 No. 21 , 37 Position : Cornerback Date of birth : ( 1967 -
+08 - 09 ) August 9 , 1967 ( age 50 ) Place of birth : Fort Myers , Florida Height : 6 ft 1 in ( 1.85 m ) Weight : 198 lb ( 90 kg ) Career information High
+school : North Fort Myers ( FL ) College : Florida State NFL Draft : 1989 / Round : 1 / Pick : 5 Career history Atlanta Falcons ( 1989 -- 1993 ) San Francisco
+49ers ( 1994 ) Dallas Cowboys ( 1995 -- 1999 ) Washington Redskins ( 2000 ) Baltimore Ravens ( 2004 -- 2005 ) Career highlights and awards 2 × Super Bowl
+champion ( XXIX , XXX ) 8 × Pro Bowl ( 1991 -- 1994 , 1996 -- 1999 ) 8 × First - team All - Pro ( 1991 -- 1994 ,
+</item 2>
+
+<item 3>
+Deion Sanders
+He played in the National Football League ( NFL ) for the Atlanta Falcons , the San Francisco 49ers , the Dallas Cowboys , the Washington Redskins and the
+Baltimore Ravens , winning the Super Bowl with both the 49ers and the Cowboys . An outfielder in baseball , he played professionally for the New York Yankees ,
+the Atlanta Braves , the Cincinnati Reds and the San Francisco Giants , and participated in the 1992 World Series with the Braves . He attended Florida State
+University , where he was recognized as a two - time All - American in football , and also played baseball and ran track . Sanders founded the Prime Prep
+Academy charter school in 2012 and has coached at the school . The school was closed January 30 , 2015 , due to financial insolvency . In 2014 , he debuted his
+new show , the Deion Family Playbook .
+</item 3>
+
+<item 4>
+Deion Sanders
+Sanders amassed 7,838 all - purpose yards and scored 22 touchdowns : nine interception returns , six punt returns , three kickoff returns , three receiving ,
+and one fumble recovery . His 19 defensive and return touchdowns was an NFL record ( now held by Devin Hester ) . In the postseason , Sanders added 5 more
+interceptions , as well as 3 receptions for 95 yards , 4 carries for 39 yards , and two touchdowns ( one rushing and one receiving ) . He was selected to eight
+Pro Bowls and won the NFL Defensive Player of the Year Award in 1994 . College Football News named Sanders # 8 in its list of 100 Greatest College Football
+Players of All - Time . The Sporting News named Sanders # 37 in their Top 100 Football Players of the Century released in 1999 . ESPN named Sanders # 74 in its
+list of the 100 Great Athletes of the Century released in 1999 . NFL.com named Sanders # 34 on NFL 's Top 100 list released in late 2010 On November 11 , 2010 ,
+Sanders was inducted into the Atlanta Falcons ' Ring of Honor .
+</item 4>
+
+<item 5>
+Deion Sanders
+NFL . National Football League . Retrieved 28 January 2017 . Jump up ^ `` Deion Sanders HOF Speech '' . Video Entry . Retrieved October 19 , 2011 . Jump up ^
+Kallestad , Brent . `` Deion Changes the Rules Again : Pro football : This time , however , it 's for better education of athletes with new standards in Florida
+. '' . Los Angeles Times . Retrieved 29 January 2017 . Jump up ^ Trex , Ethan . `` Two Rules Named After Deion Sanders '' . mental_floss . Mental Floss , Inc .
+Retrieved 29 January 2017 . Jump up ^ `` NFL Videos : 2011 HOF : Deion Sanders '' . Nfl.com . August 6 , 2011 . Retrieved August 16 , 2012 . Jump up ^ Frohman ,
+Jimmy . `` 11 Most Awesome NFL Player Nicknames '' . Phactual . Phactual , LLC . Retrieved 24 January 2017 . Jump up ^ `` CES ProNews Flashes ! '' .
+</item 5>
+
+<item 6>
+Deion Sanders
+1996 -- 1999 ) NFL Defensive Player of the Year ( 1994 ) NFL 1990s All - Decade Team Atlanta Falcons Ring of Honor Jim Thorpe Award ( 1988 ) 2 × Unanimous All -
+American ( 1987 , 1988 ) Florida State Seminoles No. 2 retired Career NFL statistics Interceptions : 53 Defensive touchdowns : 10 Return touchdowns : 9
+Receptions : 60 Receiving yards : 784 Receiving touchdowns : 3 Player stats at NFL.com Player stats at PFR Pro Football Hall of Fame College Football Hall of
+Fame Deion Luywnn Sanders Sr. ( / ˈdiːɒn / ; born August 9 , 1967 ) , nicknamed Primetime , is a former American football and baseball player who works as an
+analyst for CBS Sports and the NFL Network . He was inducted into the Pro Football Hall of Fame in 2011 . Sanders played football primarily at cornerback , but
+also as a kick returner , punt returner and occasionally wide receiver .
+</item 6>
+
+<item 7>
+Deion Sanders
+Sanders also occasionally lined up with his team 's offense . During the 1996 season , Sanders skipped the baseball season , concentrating on football , and
+attended the first NFL training camp of his career to better familiarize himself with the nuances of the wide receiver position . He became only the second two
+- way starter ( after the Cardinals ' Roy Green ) in the NFL since Chuck Bednarik for the first half of the season due . Sanders is the only man to play in both
+a Super Bowl and a World Series , to hit an MLB home run and score an NFL touchdown in the same week , and to have both a reception and an interception in the
+Super Bowl . He is one of two players to score an NFL touchdown six different ways . During his career , Sanders intercepted 53 passes for 1,331 yards ( a 25.1
+yards per return average ) , recovered four fumbles for 15 yards , returned 155 kickoffs for 3,523 yards , gained 2,199 yards on 212 punt returns , and caught
+60 passes for 784 yards .
+</item 7>
+
+<item 8>
+Deion Sanders
+state ) Dallas Cowboys players National Conference Pro Bowl players National Football League announcers Pro Football Hall of Fame inductees San Francisco 49ers
+players Washington Redskins players Gulf Coast Yankees players Fort Lauderdale Yankees players Columbus Clippers players Albany - Colonie Yankees players
+Richmond Braves players Chattanooga Lookouts players Louisville RiverBats players Syracuse SkyChiefs players Major League Baseball center fielders Major League
+Baseball left fielders Atlanta Braves players Cincinnati Reds players New York Yankees players San Francisco Giants players Baseball players from Florida
+African - American baseball players Florida State Seminoles baseball players Florida State Seminoles football players College Football Hall of Fame inductees
+Sportspeople from Fort Myers , Florida Sportspeople from Atlanta Players of American football from Georgia ( U.S.
+</item 8>
+
+<item 9>
+Deion Sanders
+In 1995 , he signed with the Dallas Cowboys for a minimum yearly base salary and a nearly $13 million signing bonus in an attempt to circumvent the NFL 's
+salary cap . This caused the NFL to institute its own ' Deion Sanders rule ' whereby a prorated portion of a player 's signing bonus counted against the salary
+cap . Media appearances and pop culture Fame ( edit ) See also : Leon Sandcastle Sanders became known for sporting a `` do - rag '' or bandana and for his high
+- stepping into the end zone followed by his touchdown dance celebrations . At the end of his Hall of Fame speech , he put a bandana on his bust . His `` Prime
+Time '' nickname was given to him by a friend and high - school teammate , Florida Gators defensive back Richard Fain . The two played pickup basketball games
+together during the prime time television hour , and Sanders ' athletic display during those games earned him the nickname . His other nickname is `` Neon Deion
+'' . Following his first Super Bowl victory with the San Francisco 49ers , Sanders hosted Saturday Night Live , broadcast on February 18 , 1995 .
+</item 9>
+
+<item 10>
+Deion Sanders
+On February 5 , 2011 , Sanders was announced as a Pro Football Hall of Fame inductee in his first year of eligibility . On May 17 , 2011 , Sanders was announced
+as a College Football Hall of Fame inductee . On August 6 , 2011 , Sanders was inducted into the Pro Football Hall of Fame . Sanders also had a rushing TD in
+the playoffs ( against the Philadelphia Eagles in January 1996 ) . This makes him ( including post season ) one of only two players in NFL history ( Bill Dudley
+being the other ) to score a touchdown six different ways ( interception return , punt return , kickoff return , receiving , rushing , and a fumble recovery ) .
+On February 6 , 2011 , at Super Bowl XLV in Arlington , Texas , Sanders performed the pre-game coin toss . Sanders did not attend classes or take final exams
+during the fall semester of his senior year at Florida State , yet played in the Sugar Bowl against Auburn . This caused the Florida State Legislature to create
+the ' Deion Sanders rule ' , whereby a football athlete at any state university could not play in a bowl game if he failed to successfully complete the previous
+semester .
+</item 10>
+=== END ITEM id=bab6df38f76409da ===
+
+=== ITEM id=79764a124cda2c0e ===
+Gold sentences and facts:
+Sentence 0: A UCC - 1 financing statement ( an abbreviation for Uniform Commercial Code - 1 ) is a legal form that a creditor files to give notice that it has or may have an interest in the personal property of a debtor ( a person who owes a debt to the creditor as typically specified in the agreement creating the debt ) . This form is filed in order to `` perfect '' a creditor 's security interest by giving public notice that there is a right to take possession of and sell certain assets for repayment of a specific debt with a certain priority . Such notices of sale are often found in the local newspapers . Once the form has been filed , the creditor establishes a relative priority with other creditors of the debtor . This process is also called `` perfecting the security interest '' in the property , and this type of loan is a secured loan . A financing statement may also be filed in the real estate records by a lessor of fixtures to establish the priority of the lessor 's rights against a holder of a mortgage or other lien on the real property . The creditor 's rights against the debtor and the lessor 's rights against the lessee are based on the credit documents and the lease , respectively , and not the financing statement .
+  Fact 0.0: A UCC-1 financing statement is a legal form.
+  Fact 0.1: UCC-1 is an abbreviation for Uniform Commercial Code-1.
+  Fact 0.2: A creditor files a UCC-1 financing statement to give notice that it has or may have an interest in the personal property of a debtor.
+  Fact 0.3: A debtor is a person who owes a debt to the creditor, as typically specified in the agreement creating the debt.
+  Fact 0.4: A financing statement is filed to perfect a creditor's security interest.
+  Fact 0.5: The filing gives public notice that there is a right to take possession of and sell certain assets for repayment of a specific debt, with a certain priority.
+  Fact 0.6: Such notices of sale are often found in local newspapers.
+  Fact 0.7: Once the form has been filed, the creditor establishes a relative priority with other creditors of the debtor.
+  Fact 0.8: Perfecting the security interest is also called perfecting the security interest in the property.
+  Fact 0.9: This type of loan is a secured loan.
+  Fact 0.10: A financing statement may also be filed in the real estate records by a lessor of fixtures.
+  Fact 0.11: The real estate filing establishes the lessor's priority against a holder of a mortgage or other lien on the real property.
+  Fact 0.12: The creditor's rights against the debtor are based on the credit documents, not the financing statement.
+  Fact 0.13: The lessor's rights against the lessee are based on the lease, not the financing statement.
+Sentence 1: The financing statement is generally filed with the office of the state secretary of state , in the state where the debtor is located - for an individual , the state where the debtor resides , for most kinds of business organizations the state of incorporation or organization . Many states have a state agency that operates under the secretary of state , which is tasked with overseeing business organizations and activities , including receipt of financing statements . However , an exception exists if the collateral is something that is tied to a particular piece of real property , such as timber , mineral rights , or fixtures . In that case , the filing must be made in the county where the property is located , usually in the recording office or county court , because that is where third parties are most likely to search for such record .
+  Fact 1.0: The financing statement is generally filed with the office of the state secretary of state.
+  Fact 1.1: The financing statement is generally filed in the state where the debtor is located.
+  Fact 1.2: For an individual, the state where the debtor is located is the state where the debtor resides.
+  Fact 1.3: For most kinds of business organizations, the state where the debtor is located is the state of incorporation or organization.
+  Fact 1.4: Many states have a state agency that operates under the secretary of state.
+  Fact 1.5: That state agency is tasked with overseeing business organizations and activities, including receipt of financing statements.
+  Fact 1.6: An exception exists if the collateral is tied to a particular piece of real property, such as timber, mineral rights, or fixtures.
+  Fact 1.7: In that exception case, the filing must be made in the county where the property is located.
+  Fact 1.8: In that exception case, the filing is usually made in the recording office or county court.
+  Fact 1.9: Third parties are most likely to search for such a record in that county.
+
+Retrieved items:
+<item 1>
+UCC-1 financing statement
+However , an exception exists if the collateral is something that is tied to a particular piece of real property , such as timber , mineral rights , or fixtures
+. In that case , the filing must be made in the county where the property is located , usually in the recording office or county court , because that is where
+third parties are most likely to search for such record . In the case of a loan secured by personal property collateral , the filing of a financing statement
+gives notice of a lien against the property so that other lenders or buyers of the personal property will know of the security interest . In the case of a
+filing of a financing statement by a lessor of fixtures , the filing of the financing statement gives notice of the lessor 's interests to others who acquire an
+interest in the real property and related fixtures . The financing statement does not create a lien nor does it create any additional rights against a lessee in
+favor of a lessor , the filing of a financing statement just gives notice of whatever rights the creditor or lessor have under their loan documents or lease ,
+respectively .
+</item 1>
+
+<item 2>
+Board of directors
+Jump up ^ This division was rejected in British Columbia in Teck Corporation v Millar ( 1972 ) 33 DLR ( 3d ) 288 . Jump up ^ Although as Gower points out , as
+well understood as the rule is , there is a paucity of authority on the point . But see Clark v Workman ( 1920 ) 1 Ir R 107 and Dawson International plc v Coats
+Paton plc 1989 SLT 655 . Jump up ^ In the United Kingdom , see section 317 of the Companies Act 1985 . Jump up ^ In summary , the facts were as follows :
+Company A owned a cinema , and the directors decided to acquire two other cinemas with a view to selling the entire undertaking as a going concern . They formed
+a new company ( `` Company B '' ) to take the leases of the two new cinemas . But the lessor insisted on various stipulations , one of which was that Company B
+had to have a paid up share capital of not less than £ 5,000 ( a substantial sum at the time ) .
+</item 2>
+
+<item 3>
+UCC-1 financing statement
+UCC - 1 financing statement - wikipedia UCC - 1 financing statement Jump to : navigation , search This article needs additional citations for verification .
+Please help improve this article by adding citations to reliable sources . Unsourced material may be challenged and removed . ( October 2014 ) ( Learn how and
+when to remove this template message ) A UCC - 1 financing statement ( an abbreviation for Uniform Commercial Code - 1 ) is a legal form that a creditor files
+to give notice that it has or may have an interest in the personal property of a debtor ( a person who owes a debt to the creditor as typically specified in the
+agreement creating the debt ) . This form is filed in order to `` perfect '' a creditor 's security interest by giving public notice that there is a right to
+take possession of and sell certain assets for repayment of a specific debt with a certain priority . Such notices of sale are often found in the local
+newspapers . Once the form has been filed , the creditor establishes a relative priority with other creditors of the debtor . This process is also called ``
+perfecting the security interest '' in the property , and this type of loan is a secured loan .
+</item 3>
+
+<item 4>
+IRS penalties
+Jump up ^ 26 USC 6651 ( a ) ( 1 ) . Jump up ^ IRC § 6651 ( a ) ( 1 ) Jump up ^ IRC § 6651 ( a ) ( 2 ) Jump up ^ `` 1040 ( 2015 ) '' . Internal Revenue Service .
+Retrieved June 28 , 2016 . Jump up ^ 26 USC 6662 . Jump up ^ 26 USC 6721 . Jump up ^ 26 CFR 301 - 6721 - 1 ( a ) ( 2 ) ( ii ) . Jump up ^ 26 USC 6698 . Jump up
+^ 26 USC 6699 . Jump up ^ Technically , the Form 1120S is an income tax return , not an information return . Jump up ^ 26 USC 3101 - 3406 . Jump up ^ 26 USC
+6672 . Jump up ^ 26 USC 3504 . Jump up ^ See , e.g. , United States v. St. Clair , 45 Amer . Fed . Tax Rep.
+</item 4>
+
+<item 5>
+Board of directors
+Such agents have duties to discharge of a fiduciary nature towards their principal . And it is a rule of universal application that no one , having such duties
+to discharge , shall be allowed to enter into engagements in which he has , or can have , a personal interest conflicting or which possibly may conflict , with
+the interests of those whom he is bound to protect ... So strictly is this principle adhered to that no question is allowed to be raised as to the fairness or
+unfairness of the contract entered into ... '' ( emphasis added ) However , in many jurisdictions the members of the company are permitted to ratify
+transactions which would otherwise fall foul of this principle . It is also largely accepted in most jurisdictions that this principle can be overridden in the
+company 's constitution . In many countries , there is also a statutory duty to declare interests in relation to any transactions , and the director can be
+fined for failing to make disclosure . Use of corporate property , opportunity , or information ( edit ) Directors must not , without the informed consent of
+the company , use for their own profit the company 's assets , opportunities , or information .
+</item 5>
+
+<item 6>
+UCC-1 financing statement
+A financing statement may also be filed in the real estate records by a lessor of fixtures to establish the priority of the lessor 's rights against a holder of
+a mortgage or other lien on the real property . The creditor 's rights against the debtor and the lessor 's rights against the lessee are based on the credit
+documents and the lease , respectively , and not the financing statement . Pursuant to the standards set forth in the UCC , at 9 - 503 and 9 - 504 , the
+financing statement need only contain three pieces of information : the debtor 's name and address the creditor 's name and address an indication of the
+collateral , `` whether or not it is specific , if it reasonably identifies what is described . '' ( UCC 9 - 108 ) The financing statement is generally filed
+with the office of the state secretary of state , in the state where the debtor is located - for an individual , the state where the debtor resides , for most
+kinds of business organizations the state of incorporation or organization . Many states have a state agency that operates under the secretary of state , which
+is tasked with overseeing business organizations and activities , including receipt of financing statements .
+</item 6>
+
+<item 7>
+IRS penalties
+U.S. corporations more than 25 % owned , directly or indirectly , by foreign persons must file Form 5472 to report such ownership and all transactions with
+related parties . Failure to timely file carries a $10,000 penalty per required form . This penalty may be increased by $10,000 per month per form for continued
+failure to file . In addition , taxpayers who fail to report changes in foreign taxes used as credits against Federal income tax may be subject to penalties .
+U.S. citizen or resident taxpayers ( including entities ) who are beneficiaries of a foreign trust or make transfers of property to a foreign trust must report
+information about the transfer and the trust or corporation . Failure to timely report on Form 3520 or Form 3520 - A may result in penalties of up to 35 % .
+Similar transferors to foreign corporations failing to file Form 926 may face penalties of 10 % of the value of the transfer , up to $100,000 . Excise taxes as
+penalties ( edit ) Federal excise taxes are imposed on a variety of goods and services . Some of these taxes require purchase of tax stamps or other evidence of
+advance payment of tax .
+</item 7>
+
+<item 8>
+UCC-1 financing statement
+References ( edit ) Jump up ^ http://www.findlegalforms.com/articles/form-encyclopedia/what-is-a-ucc1-financing-statement Jump up ^
+http://biztaxlaw.about.com/od/glossaryu/g/ucc1statement.htm Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=UCC-1_financing_statement&oldid=803697764 '' Categories : Uniform Commercial Code Legal terminology Hidden categories
+: Articles needing additional references from October 2014 All articles needing additional references Talk About Wikipedia Add links This page was last edited
+on 4 October 2017 , at 02 : 00 . About Wikipedia
+</item 8>
+
+<item 9>
+Ownership
+A structured group duly constituted as an entity under law may still not protect members from being personally liable for each other 's actions . Court
+decisions against the entity itself may give rise to unlimited personal liability for each and every member . An example of this situation is a professional
+partnership ( e.g. law practice ) in some jurisdictions . Thus , being a partner or owner in a group may give little advantage in terms of share ownership while
+producing a lot of risk to the partner , owner or participant . Sharing gains ( edit ) At the end of each financial year , accounting rules determine a surplus
+or profit , which may be retained inside the entity or distributed among owners according to the initial setup intent when the entity was created . For public
+corporations , common shareholders have no right to receive any of the profit . Entities with a member focus will give financial surplus back to members
+according to the volume of financial activity that the participating member generated for the entity . Examples of this are producer cooperatives , buyer
+cooperatives and participating whole life policyholders in both mutual and share - capital insurance companies . Entities with share voting rights that depend
+on financial capital distribute surplus among shareholders without regard to any other contribution to the entity .
+</item 9>
+
+<item 10>
+Bond (finance)
+situation Squeeze out Staggered board of directors Stock swap Super-majority amendment Tag - along right Takeover Reverse Tender offer Leverage Debt
+restructuring Debtor - in - possession financing Financial sponsor Leveraged buyout Leveraged recapitalization High - yield debt Private equity Project finance
+Valuation Accretion / dilution analysis Adjusted present value Associate company Business valuation Conglomerate discount Cost of capital Weighted average
+Discounted cash flow Economic Value Added Enterprise value Fairness opinion Financial modeling Free cash flow Free cash flow to equity Market value added
+Minority interest Modigliani -- Miller theorem Net present value Pure play Real options Residual income Stock valuation Sum - of - the - parts analysis Tax
+shield Terminal value Valuation using multiples List of investment banks Outline of finance Debt Instruments Bonds Corporate Debenture Government Municipal
+Loans Business loan Consumer lending Loan shark Payday loan Predatory lending Usury Management Bankruptcy Consolidation Management plan Relief Restructuring
+Debt - snowball method Debtor - in - possession ( DIP ) financing Loan guarantee Collection Evasion Bad debt Charge - off Collection agency Compliance Debt
+bondage Debtors ' prison Distraint Garnishment Phantom debt Strategic default Tax refund interception Markets Consumer Corporate Government Municipal Venture
+Buyer Deposit account Fixed income Money market Securitization
+</item 10>
+=== END ITEM id=79764a124cda2c0e ===
+
+=== ITEM id=f177300054fb1fbb ===
+Gold sentences and facts:
+Sentence 0: Large denominations of United States currency greater than $100 were circulated by the United States Treasury until 1969 . Since then , U.S. dollar banknotes have only been issued in seven denominations : $1 , $2 , $5 , $10 , $20 , $50 , and $100 .
+  Fact 0.0: Large denominations of United States currency greater than $100 were circulated by the United States Treasury until 1969.
+  Fact 0.1: Since 1969, U.S. dollar banknotes have only been issued in seven denominations.
+  Fact 0.2: The seven denominations of U.S. dollar banknotes issued since 1969 are $1, $2, $5, $10, $20, $50, and $100.
+
+Retrieved items:
+<item 1>
+The U.S. Treasury circulated banknotes larger than $100 until 1969; current notes are issued only in denominations of $1, $2, $5, $10, $20, $50, and $100. Large
+bills—especially gold certificates issued from 1865 to 1934—once supported major cash transactions. Electronic payments, counterfeiting concerns, and the use of
+cash in crime make reissuing them unlikely. Treasury and the Federal Reserve have no plans
+</item 1>
+
+<item 2>
+Large denominations of United States currency
+See history of the United States dollar . Passive retirement ( edit ) Although they are still legal tender in the United States , high - denomination bills were
+last printed on December 27 , 1945 , and officially discontinued on July 14 , 1969 , by the Federal Reserve System , due to ' lack of use ' . The $5,000 and
+$10,000 effectively disappeared well before then . The Federal Reserve began taking high - denomination currency out of circulation ( destroying large bills
+received by banks ) in 1969 . As of May 30 , 2009 , only 336 $10,000 bills were known to exist ; 342 remaining $5,000 bills ; and 165,372 remaining $1,000 bills
+. Due to their rarity , collectors often pay considerably more than the face value of the bills to acquire them . Some are in museums in other parts of the
+world . For the most part , these bills were used by banks and the Federal government for large financial transactions . This was especially true for gold
+certificates from 1865 to 1934 .
+</item 2>
+
+<item 3>
+Large denominations of United States currency
+Large denominations of United States currency - wikipedia Large denominations of United States currency Jump to : navigation , search This article needs
+additional citations for verification . Please help improve this article by adding citations to reliable sources . Unsourced material may be challenged and
+removed . ( February 2016 ) ( Learn how and when to remove this template message ) Large denominations of United States currency greater than $100 were
+circulated by the United States Treasury until 1969 . Since then , U.S. dollar banknotes have only been issued in seven denominations : $1 , $2 , $5 , $10 , $20
+, $50 , and $100 . Contents ( hide ) 1 Overview and history 2 Public versus institutional use 3 Passive retirement 4 In popular culture 5 High - denomination (
+HD ) banknote issuing data 6 High - denomination United States banknotes 7 See also 8 References 8.1 Footnotes 8.2 Notes 8.3 Bibliography 9 External links
+Overview and history ( edit ) Large - denomination currency ( i.e.
+</item 3>
+
+<item 4>
+Large denominations of United States currency
+The display has since been dismantled and the bills sold to private collectors . Jump up ^ The following types of United States banknotes were not issued in
+high denominations and are not included in the list below : Demand notes , Federal Reserve bank notes ( large or small size ) , legal tender ( small size ) ,
+silver certificates ( small size ) , National Bank Notes ( small size ) The table sections are sorted by their appearance in the Friedberg reference book . Jump
+up ^ Large size notes represent the earlier types or series of U.S. banknotes . Their `` average '' dimension is ​ 7 ⁄ × ​ 3 ⁄ inches ( 187 × 79 mm ) . Small
+size notes ( described as such due to their size relative to the earlier large size notes ) are an `` average '' ​ 6 ⁄ × ​ 2 ⁄ ( 156 × 67 mm ) , the size of
+modern U.S. currency . `` Each measurement is ± 0.08 inches ( 2 mm ) to account for margins and cutting '' .
+</item 4>
+
+<item 5>
+Large denominations of United States currency
+This was especially true for gold certificates from 1865 to 1934 . However , for the most part , the introduction of an electronic money system has made large -
+scale cash transactions obsolete . When combined with concerns about counterfeiting and the use of cash in unlawful activities such as the illegal drug trade
+and money laundering , it is unlikely that the U.S. government will re-issue large denomination currency in the near future , despite the amount of inflation
+that has occurred since 1969 ( a $500 bill is now worth less , in real terms , than a $100 bill was worth in 1969 ) . According to the U.S. Department of
+Treasury website , `` The present denominations of our currency in production are $1 , $2 , $5 , $10 , $20 , $50 and $100 . The purpose of the United States
+currency system is to serve the needs of the public and these denominations meet that goal . Neither the Department of the Treasury nor the Federal Reserve
+System has any plans to change the denominations in use today . ''
+</item 5>
+
+<item 6>
+The display of large-denomination U.S. currency was dismantled, and its bills were sold to private collectors. The referenced list excludes several note types
+that were never issued in high denominations. Large-size notes averaged about 187 × 79 mm; small-size notes, like modern U.S. currency, about 156 × 67 mm, with
+measurements varying by 2 mm. Sources include major U.S. paper-money reference books and Treasury materials.
+</item 6>
+
+<item 7>
+Large denominations of United States currency
+In popular culture ( edit ) Before they were ' retired ' , host Monty Hall regularly tempted or teased contestants on Let 's Make a Deal with a $1,000 bill
+featuring Grover Cleveland . High - denomination ( HD ) banknote issuing data ( edit ) Key to high denomination banknote type abbreviations Abbr Type Size
+Series dates High denomination series date Comments $500 $1,000 $5,000 $10,000 $100,000 LT Legal tender Large 1862 -- 1923 1862 1863 1869 1874 1875 1878 1880
+1862 1863 1869 1878 1880 1878 1878 -- CITN Compound interest treasury note Exception 1863 -- 1864 1863 1864 1864 -- -- -- IBN Interest bearing note Exception
+1861 -- 1865 1861 1863 1864 1865 1861 1863 1864 1865 1861 1863 1864 1865 -- -- SC Silver certificate Large 1878 -- 1923 1878 1880 1878 1880
+</item 7>
+
+<item 8>
+The Smithsonian’s near-complete collection documents rare U.S. high-denomination notes ($500–$100,000), issued from 1861; printing ended in 1945 and the Federal
+Reserve withdrew them in 1969, though they remain legal tender. The $2 bill, first issued in 1862, remains in circulation; its familiar Jefferson design dates
+to 1928, with Trumbull’s Declaration of Independence on the reverse since 1976. Scarcity, hoarding
+</item 8>
+
+<item 9>
+High-denomination U.S. bills remain legal tender, but printing ended December 27, 1945, and the Federal Reserve officially discontinued them on July 14, 1969,
+citing lack of use. That year, it began withdrawing and destroying bills returned by banks. By May 30, 2009, only 336 $10,000 bills, 342 $5,000 bills, and
+165,372 $1,000 bills were known to remain. Collectors often
+</item 9>
+
+<item 10>
+Large denominations of United States currency
+( 1995 ) . United States Large Size National Bank Notes . Society of Paper Money Collectors , Inc . ISBN 0 - 9648774 - 1 - 4 . Newman , Eric P. ( 2008 ) . The
+Early Paper Money of America ( 5 ed . ) . Krause Publications . ISBN 0 - 89689 - 326 - X . Schwartz , John ; Lindquist , Scott ( 2011 ) . Standard Guide to
+Small - Size U.S. Paper Money -- 1928 to Date . Krause Publications . ISBN 978 - 1 - 4402 - 1703 - 6 . Retrieved 14 February 2014 . External links ( edit )
+Media related to Money of the United States by denomination at Wikimedia Commons Large Denominations from the Bureau of Engraving and Printing U.S. Department
+of the Treasury United States currency and coinage Topics Federal Reserve System Federal Reserve Note U.S. dollar U.S.
+</item 10>
+=== END ITEM id=f177300054fb1fbb ===
+
+=== ITEM id=cf259e4192d79d98 ===
+Gold sentences and facts:
+Sentence 0: Your Lie in April Cover of the first tankōbon volume featuring Kōsei Arima and Kaori Miyazono 四 月 は 君 の 嘘 ( Shigatsu wa Kimi no Uso ) Manga Written by Naoshi Arakawa Published by Kodansha English publisher Kodansha Comics Demographic Shōnen Magazine Monthly Shōnen Magazine Original run April 6 , 2011 -- February 6 , 2015 Volumes 11 ( List of volumes ) Anime television series Directed by Kyōhei Ishiguro Written by Takao Yoshioka Music by Masaru Yokoyama Studio A-1 Pictures Licensed by Madman Entertainment Aniplex of America Anime Limited Original network Fuji TV ( Noitamina ) Original run October 9 , 2014 -- March 19 , 2015 Episodes 22 ( List of episodes ) Light novel Your Lie in April - A Six Person Etude Written by Yui Tokiumi Published by Kodansha English publisher Vertical Published November 17 , 2014 Volumes Manga Shigatsu wa Kimi no Uso : Coda Written by Naoshi Arakawa Demographic Shōnen Original run February 25 , 2015 -- October 28 , 2015 Volumes Original video animation Moments Directed by Kazuya Iwata Written by Takao Yoshioka Music by Masaru Yokoyama Studio A-1 Pictures Released May 15 , 2015 Runtime 23 minutes Live - action film Your Lie in April ( film ) Anime and Manga portal
+  Fact 0.0: The cover shows the first tankōbon volume featuring Kōsei Arima and Kaori Miyazono.
+  Fact 0.1: The title is 四 月 は 君 の 嘘 (Shigatsu wa Kimi no Uso).
+  Fact 0.2: The manga Shigatsu wa Kimi no Uso is written by Naoshi Arakawa.
+  Fact 0.3: The manga is published by Kodansha, with English publisher Kodansha Comics.
+  Fact 0.4: The manga has the Shōnen demographic and was serialized in Monthly Shōnen Magazine.
+  Fact 0.5: The manga's original run was April 6, 2011 to February 6, 2015.
+  Fact 0.6: The manga has 11 volumes.
+  Fact 0.7: The anime television series is directed by Kyōhei Ishiguro.
+  Fact 0.8: The anime television series is written by Takao Yoshioka.
+  Fact 0.9: The anime television series has music by Masaru Yokoyama.
+  Fact 0.10: The anime television series is by studio A-1 Pictures.
+  Fact 0.11: The anime is licensed by Madman Entertainment and Aniplex of America Anime Limited.
+  Fact 0.12: The anime's original network is Fuji TV (Noitamina).
+  Fact 0.13: The anime's original run was October 9, 2014 to March 19, 2015.
+  Fact 0.14: The anime has 22 episodes.
+  Fact 0.15: The light novel Your Lie in April - A Six Person Etude is written by Yui Tokiumi.
+  Fact 0.16: The light novel is published by Kodansha, with English publisher Vertical.
+  Fact 0.17: The light novel was published November 17, 2014.
+  Fact 0.18: The manga Shigatsu wa Kimi no Uso: Coda is written by Naoshi Arakawa.
+  Fact 0.19: The manga Shigatsu wa Kimi no Uso: Coda has the Shōnen demographic.
+  Fact 0.20: The manga Shigatsu wa Kimi no Uso: Coda's original run was February 25, 2015 to October 28, 2015.
+  Fact 0.21: The original video animation Moments is directed by Kazuya Iwata.
+  Fact 0.22: The original video animation Moments is written by Takao Yoshioka.
+  Fact 0.23: The original video animation Moments has music by Masaru Yokoyama.
+  Fact 0.24: The original video animation Moments is by studio A-1 Pictures.
+  Fact 0.25: The original video animation Moments was released May 15, 2015.
+  Fact 0.26: The original video animation Moments has a runtime of 23 minutes.
+  Fact 0.27: There is a live-action film titled Your Lie in April.
+
+Retrieved items:
+<item 1>
+Your Lie in April
+Your Lie in April - Wikipedia Your Lie in April Jump to : navigation , search This article is about the manga and anime . For the live - action film adaptation
+, see Your Lie in April ( film ) . Your Lie in April Cover of the first tankōbon volume featuring Kōsei Arima and Kaori Miyazono 四 月 は 君 の 嘘 ( Shigatsu wa Kimi
+no Uso ) Manga Written by Naoshi Arakawa Published by Kodansha English publisher Kodansha Comics Demographic Shōnen Magazine Monthly Shōnen Magazine Original
+run April 6 , 2011 -- February 6 , 2015 Volumes 11 ( List of volumes ) Anime television series Directed by Kyōhei Ishiguro Written by Takao Yoshioka Music by
+Masaru Yokoyama Studio A-1 Pictures Licensed by Madman Entertainment Aniplex of America Anime Limited Original network Fuji TV ( Noitamina ) Original run
+October 9 , 2014 -- March 19 ,
+</item 1>
+
+<item 2>
+Your Lie in April
+Kodansha . Retrieved January 27 , 2016 . Jump up ^ `` Your Lie in April 9 '' . Penguin Random House . Retrieved April 11 , 2016 . Jump up ^ 四 月 は 君 の 嘘 ( 10 ) (
+Your Lie in April ( 10 ) ) ( in Japanese ) . Kodansha . Retrieved January 27 , 2016 . Jump up ^ `` Your Lie in April 10 '' . Penguin Random House . Retrieved
+November 6 , 2016 . Jump up ^ `` Your Lie in April 11 '' . Penguin Random House . Retrieved April 11 , 2016 . Jump up ^ `` Goose House to Perform Opening ,
+Cover Songs for Shigatsu wa Kimi no Uso Anime '' . Anime News Network . August 15 , 2014 . Retrieved August 3 , 2017 . Jump up ^ `` Coala Mode , 7 ! ! Perform
+Theme Songs For Your Lie in April Anime 's 2nd Half '' . Anime News Network .
+</item 2>
+
+<item 3>
+Your Lie in April
+wikipedia.org/w/index.php?title=Your_Lie_in_April&oldid=838327454 '' Categories : Manga series 2011 manga 2014 anime television series 2015 manga 2015 anime
+OVAs 2015 comics endings 2015 Japanese television series endings A-1 Pictures Comedy - drama anime and manga Kodansha manga Madman Entertainment anime Manga
+adapted into films Music - themed anime and manga NoitaminA Romance anime and manga School anime and manga Shōnen manga Slice of life anime and manga Tragedy
+anime and manga Works about pianos and pianists Winner of Kodansha Manga Award ( Shōnen ) Hidden categories : CS1 Japanese - language sources ( ja ) Articles
+containing Japanese - language text Official website different in Wikidata and Wikipedia Talk Contents About Wikipedia Azərbaycanca Català Español Français 한국어
+Bahasa Indonesia Italiano Nederlands 日本 語 Norsk Português Română Русский Simple English Suomi Tagalog ไทย Tiếng Việt 中文 11 more Edit links This page was last
+edited on 26 April 2018 , at 09 : 28 .
+</item 3>
+
+<item 4>
+Your Lie in April
+The series is licensed in the United Kingdom and Ireland by Anime Limited . The series was later made available on Netflix with the English dub , as well as
+English subtitles . Live - action film ( edit ) Main article : Your Lie in April ( film ) On August 24 , 2015 , the domain ' kimiuso-movie.jp ' was registered
+under Toho , a Japanese film production and distribution company , which made fans believe that a movie adaptation was in the works . Speculations were
+confirmed in September 2015 when the main cast was announced for the live - action adaptation of the series : Kento Yamazaki as Kōsei Arima , Suzu Hirose as
+Kaori Miyazono , E-girls ' Anna Ishii as Tsubaki Sawabe , and Taishi Nakagawa as Ryōta Watari . While the original story depicts the characters in their junior
+high year , it is announced that they will be in their second - year of high school in the film .
+</item 4>
+
+<item 5>
+Your Lie in April
+2016 ISBN 978 - 1 - 63 - 236180 - 6 `` A Promise '' ( 約束 , Yakusoku ) `` Goodbye , Hero '' ( さよなら ヒーロー , Sayonara Hīrō ) `` Caught in the Rain '' ( 雨 やどり ,
+Amayadori ) `` Hand in Hand '' ( 手 と 手 , Te to Te ) 11 May 15 , 2015 ISBN 978 - 4 - 06 - 371467 - 8 ISBN 978 - 4 - 06 - 358752 - 4 ( limited edition ) December
+27 , 2016 ISBN 978 - 1 - 63 - 236312 - 1 `` Snow '' ( 雪 , Yuki ) `` Again '' ( アゲイン , Agein ) `` Ballade '' ( バラード , Barādo ) `` Spring Breeze '' ( 春風 ,
+Harukaze ) Anime ( edit ) See also : List of Your Lie in April episodes A-1 Pictures has aired the anime production of Your Lie in April .
+</item 5>
+
+<item 6>
+Your Lie in April
+It premiered on October 10 , 2014 in Japan and ended on March 20 , 2015 . The first opening theme song is `` Hikaru Nara '' ( 光る なら , lit . If You Will Shine )
+by Goose house and the first ending theme song is `` Kirameki '' ( キラメキ , lit . Sparkle ) by wacci . The second opening song is `` Nanairo Symphony '' ( 七色
+シンフォニー , Nanairo Shinfonī , lit . `` Seven Colored Symphony '' ) by Coalamode and the second ending theme is `` Orange '' ( オレンジ , Orenji ) by 7 ! ! ( Seven
+Oops ) . The original soundtracks are composed by Masaru Yokoyama . In North America , Aniplex of America licensed the series within the region , who
+simulcasted the series on Crunchyroll , Aniplex Channel , Hulu and Viewster . In Australia and New Zealand , the series is licensed by Madman Entertainment ,
+who streamed the series on AnimeLab .
+</item 6>
+
+<item 7>
+Your Lie in April
+The main cast was announced , and stars : Shintarō Anzai as Kōsei Arima , Arisa Matsunaga as Kaori Miyazono , Misato Kawauchi as Tsubaki Sawabe , Masanari Wada
+as Ryōta Watari , Haruka Yamashita as Emi Igawa , and Shōjirō Yokoi as Takeshi Aiza . Additional cast was later announced , with : Takako Nakamura as Yuriko
+Ochiai , Shun Mikami as Akira Takayanagi , Haruka Igarashi as Nao Kashiwagi , Kuniko Kodama as Hiroko Seto , and Ryōko Tanaka as Saki Arima . Reception ( edit )
+The manga won the award for Best Shōnen Manga at the 37th Kodansha Manga Awards . It was nominated for the 5th Manga Taishō . The anime adaptation was the
+winner of the Yomiuri Shimbun newspaper 's 2016 Sugoi Japan Awards . References ( edit ) Jump up ^ `` Kodansha Comics has licensed Your Lie in April ! '' .
+</item 7>
+
+<item 8>
+Your Lie in April
+An anime television series adaptation by A-1 Pictures aired from October 2014 to March 2015 on Fuji TV 's Noitamina block . A live - action film adaptation of
+the same name was released in September 2016 . Contents ( hide ) 1 Plot 2 Characters 3 Media 3.1 Manga 3.1. 1 Volume list 3.2 Anime 3.3 Live - action film 3.4
+Stage play 4 Reception 5 References 6 External links Plot ( edit ) Piano prodigy Kōsei Arima dominated various music competitions and has become famous among
+child musicians , but also controversial . After the death of his abusive mother , who was also his coldhearted instructor who forced him to play the piano
+emotionlessly , he had a mental breakdown at the age of eleven while performing at a piano recital which resulted in him no longer being able to hear the sound
+of his piano even though his hearing was perfectly fine .
+</item 8>
+
+<item 9>
+Your Lie in April
+Kaori Miyazono ( 宮園 かをり , Miyazono Kawori ) Voiced by : Risa Taneda ( Japanese ) ; Erica Lindbeck ( English ) & Violin performance by : Yūna Shinohara Played by
+: Suzu Hirose ( live - action film ) ; Arisa Matsunaga ( stage play ) Kaori is Tsubaki 's classmate ; she is a free - spirited violinist who has drawn much
+criticism from judging panels due to her unwillingness to adhere strictly to the score , but is highly favored by audiences that hear her playing . Kaori first
+met Kōsei when she asked Tsubaki to set her up with Watari . As their friendship grew , she eventually convinced Kōsei to play the piano again , first as her
+accompanist and later in a piano competition . It is revealed at the end of the anime , in a letter addressed to Kōsei , that she had asked to be set up with
+Watari in order to meet Kōsei , knowing that Watari and Tsubaki were good friends of his .
+</item 9>
+
+<item 10>
+Your Lie in April
+2014 -- March 19 , 2015 Episodes 22 ( List of episodes ) Light novel Your Lie in April - A Six Person Etude Written by Yui Tokiumi Published by Kodansha English
+publisher Vertical Published November 17 , 2014 Volumes Manga Shigatsu wa Kimi no Uso : Coda Written by Naoshi Arakawa Demographic Shōnen Original run February
+25 , 2015 -- October 28 , 2015 Volumes Original video animation Moments Directed by Kazuya Iwata Written by Takao Yoshioka Music by Masaru Yokoyama Studio A-1
+Pictures Released May 15 , 2015 Runtime 23 minutes Live - action film Your Lie in April ( film ) Anime and Manga portal Your Lie in April , known in Japan as
+Shigatsu wa Kimi no Uso ( 四 月 は 君 の 嘘 ) or just simply Kimiuso , is a Japanese manga series written and illustrated by Naoshi Arakawa . The series was
+serialized in Kodansha 's Monthly Shōnen Magazine from April 2011 to May 2015 .
+</item 10>
+=== END ITEM id=cf259e4192d79d98 ===
+
+=== ITEM id=75ac2981f692aa29 ===
+Gold sentences and facts:
+Sentence 0: Bruce Willis as John McClane Jai Courtney as John `` Jack '' McClane , Jr . Sebastian Koch as Yuri Komarov Yuliya Snigir as Irina Komarova Sergei Kolesnikov as Viktor Chagarin Radivoje Bukvić as Alik Mary Elizabeth Winstead as Lucy McClane
+  Fact 0.0: Bruce Willis plays John McClane.
+  Fact 0.1: Jai Courtney plays John 'Jack' McClane, Jr.
+  Fact 0.2: Sebastian Koch plays Yuri Komarov.
+  Fact 0.3: Yuliya Snigir plays Irina Komarova.
+  Fact 0.4: Sergei Kolesnikov plays Viktor Chagarin.
+  Fact 0.5: Radivoje Bukvić plays Alik.
+  Fact 0.6: Mary Elizabeth Winstead plays Lucy McClane.
+
+Retrieved items:
+<item 1>
+A Good Day to Die Hard
+Retrieved 2012 - 02 - 22 . Jump up ^ `` Mary Elizabeth Winstead to Return as John McClane 's Daughter in A Good Day To Die Hard '' . Collider.com. 2012 - 08 -
+07 . Retrieved 2012 - 08 - 07 . Jump up ^ http://www.movie-censorship.com/report.php?ID=175700 ^ Jump up to : `` A Good Day to Die Hard ' Finds a Couple of Male
+and Female Villains '' . firstshowing.net. 2012 - 04 - 04 . Retrieved 2012 - 04 - 04 . Jump up ^ `` Cole Hauser Joins Bruce Willis In A Good Day To Die Hard ''
+. deadline.com. 2012 - 05 - 08 . Retrieved 2012 - 05 - 08 . ^ Jump up to : Sneider , Jeff ( 2012 - 05 - 14 ) . `` Latest in ' Die Hard ' series adds two '' .
+Variety . Retrieved 2012 - 05 - 31 .
+</item 1>
+
+<item 2>
+A Good Day to Die Hard
+March 21 , 2013 . External links ( edit ) Official website A Good Day to Die Hard on IMDb A Good Day to Die Hard at Box Office Mojo A Good Day to Die Hard at
+Rotten Tomatoes A Good Day to Die Hard at Metacritic Die Hard Films Die Hard Die Hard 2 Die Hard with a Vengeance Live Free or Die Hard A Good Day to Die Hard
+Characters John McClane Video games Die Hard Die Hard Arcade Die Hard Trilogy Die Hard Trilogy 2 : Viva Las Vegas Die Hard : Nakatomi Plaza Die Hard : Vendetta
+Other Die Hard : Year One The Detective novel film Nothing Lasts Forever 58 Minutes Dynamite Cop Val Verde Roderick Thorp Films directed by John Moore Behind
+Enemy Lines ( 2001 ) Flight of the Phoenix ( 2004 ) The Omen ( 2006 ) Max Payne ( 2008 ) A Good Day to Die Hard ( 2013 ) I.T.
+</item 2>
+
+<item 3>
+A Good Day to Die Hard
+Casting ( edit ) Bruce Willis returned as John McClane , and has expressed a desire to shoot A Good Day to Die Hard and a sixth installment in the series before
+retiring the character . When casting the role of Jack McClane , the studios considered several actors , including Liam Hemsworth and James Badge Dale , before
+ultimately settling on Australian actor Jai Courtney . Mary Elizabeth Winstead also appeared in the film , reprising her role as McClane 's daughter Lucy .
+However all her scenes were cut from the Extended release . Sebastian Koch played the film 's primary antagonist , Yuri Komarov , while Yuliya Snigir and Cole
+Hauser featured as secondary characters Irina and Collins . The cast was completed by actors Amaury Nolasco as a friend of McClane , Pasha D. Lychnikoff as a
+taxi driver , and Megalyn Echikunwoke , Anne Vyalitsyna , and Ivan Kamaras in smaller roles . Filming ( edit ) Production began in Hungary in April 2012 , with
+the capital Budapest standing in for Moscow .
+</item 3>
+
+<item 4>
+A Good Day to Die Hard
+A Good Day to Die Hard - wikipedia A Good Day to Die Hard Jump to : navigation , search A Good Day to Die Hard Theatrical release poster Directed by John Moore
+Produced by Alex Young Wyck Godfrey Written by Skip Woods Based on Characters by Roderick Thorp Starring Bruce Willis Jai Courtney Sebastian Koch Rasha Bukvić
+Cole Hauser Yuliya Snigir Music by Marco Beltrami Cinematography Jonathan Sela Edited by Dan Zimmerman Production company Giant Pictures TSG Entertainment
+Distributed by 20th Century Fox Release date January 31 , 2013 ( 2013 - 01 - 31 ) ( Leicester Square ) February 14 , 2013 ( 2013 - 02 - 14 ) ( United States )
+Running time 97 minutes Country United States Language English Russian Budget $92 million Box office $304.7 million A Good Day to Die Hard is a 2013 American
+action thriller film and the fifth installment in the Die Hard film series . The film was directed by John Moore and written by Skip Woods , and stars Bruce
+Willis as John McClane .
+</item 4>
+
+<item 5>
+A Good Day to Die Hard
+The main plot finds McClane travelling to Russia to get his estranged son , Jack , an undercover CIA agent , out of prison . He is soon caught in the crossfire
+of a global terrorist plot . Alongside Willis , the film also stars Jai Courtney , Cole Hauser , Yuliya Snigir and Sebastian Koch as the film 's villain . Talks
+of a fifth Die Hard film began before the release of the fourth installment , Live Free or Die Hard , with Willis affirming that the latter would not be the
+last in the series , but pre-production did not start until September 2011 , when John Moore was officially announced as the director . Filming began in April
+2012 , primarily in Budapest , Hungary . A Good Day to Die Hard premiered in Los Angeles on January 31 , 2013 , coinciding with the unveiling of a Die Hard
+mural at the Fox Lot , and was released in certain East and Southeast Asian countries on February 7 and in the United States and Canada on February 13 . It is
+the first Die Hard film to use Dolby Atmos Surround Mixing and the first to also be released in IMAX theaters .
+</item 5>
+
+<item 6>
+A Good Day to Die Hard
+Roman Luknár makes an apperance as Anton , a business associate of Chagarin . Ganxsta Zolee makes a brief cameo as a MRAP driver . Production ( edit )
+Pre-production ( edit ) Production was formally announced in 2010 , with X-Men Origins : Wolverine and The A-Team writer Skip Woods confirmed as the film 's
+screenwriter . Noam Murro was originally attached to direct the film but left production to direct the 300 prequel , 300 : Rise of an Empire . John Moore was
+subsequently drafted in to replace him . The film was originally titled `` Die Hard 24 / 7 '' . The media speculated that the film would be a crossover between
+the Die Hard and 24 series , with Kiefer Sutherland to reprise his role as Jack Bauer alongside John McClane . This was never confirmed by the studio , and the
+film 's title was later revealed to be A Good Day to Die Hard -- with no further mention of any involvement from the 24 series -- with a release date of
+February 14 , 2013 .
+</item 6>
+
+<item 7>
+A Good Day to Die Hard
+Komarov remarks that Jack will get to watch his father die , prompting Jack to hurl him off the rooftop into the path of the spinning helicopter rotors ,
+killing him . As Jack and John reunite inside the building , Irina tries to avenge her father by ramming the helicopter , now out of ammunition , into the
+building in a suicide attack . Father and son survive by leaping off the building into a large pool of water , as the helicopter crashes and explodes , killing
+Irina . In the end , the McClanes return home and reunite with Lucy on the tarmac . Cast ( edit ) Bruce Willis as John McClane Jai Courtney as John `` Jack ''
+McClane , Jr . Sebastian Koch as Yuri Komarov Yuliya Snigir as Irina Komarova Sergei Kolesnikov as Viktor Chagarin Radivoje Bukvić as Alik Mary Elizabeth
+Winstead as Lucy McClane Additional cast members include CIA operatives : Aldis Hodge as Lt. Foxy and Cole Hauser as Mike Collins . Amaury Nolasco appears as
+Murphy , an NYPD detective and McClane 's friend .
+</item 7>
+
+<item 8>
+A Good Day to Die Hard
+Rick Groen of The Globe and Mail criticized the action scenes as being `` messy '' , but concluded his review saying that the film `` continues the franchise
+without undue embarrassment . '' Peter Howell of The Toronto Star remarked that Willis and Courtney made a strong estranged family duo and that the film had a
+nice drinking game routine going for it with how many times McClane exclaims `` I 'm on vacation ! '' during the running time . Box Office ( edit ) A Good Day
+to Die Hard grossed $67,349,198 in North America and $237,304,984 in other territories for a worldwide total of $304,654,182 , collecting more than three times
+its $92 million budget . In North America , A Good Day to Die Hard grossed an estimated $840,000 from its night showings at 2,328 locations on Wednesday ,
+February 13 , 2013 . The next day , at an additional 1,225 locations , the film managed to accumulate $8,239,116 , opening at # 2 behind Safe Haven .
+</item 8>
+
+<item 9>
+A Good Day to Die Hard
+A Good Day to Die Hard was a box office success but received overwhelmingly negative reviews for its implausible action sequences , cinematography , weak plot ,
+cliched script , and lack of characterization , although the special effects were praised . It is the first film produced by TSG Entertainment , since
+distributor 20th Century Fox 's departure from Dune Entertainment upon the completion of their distribution contract at the end of 2012 . Contents ( hide ) 1
+Plot 2 Cast 3 Production 3.1 Pre-production 3.2 Casting 3.3 Filming 3.4 Post-production 4 Soundtrack 5 Release 6 Reception 6.1 Box office 6.2 Home media 7
+References 8 External links Plot ( edit ) In Moscow , Viktor Chagarin , a high - ranking , but corrupt , Russian official plans to incriminate former
+billionaire and government whistleblower Yuri Komarov in an imminent rigged trial unless Komarov hands over a secret file believed to contain evidence
+incriminating Chagarin . Separately , Jack McClane , who has been arrested after an assassination attempt , negotiates for a shorter sentence by offering to
+testify against Komarov .
+</item 9>
+
+<item 10>
+A Good Day to Die Hard
+`` Get to the Choppa ! '' 2 : 59 23 . `` Chopper Takedown '' 3 : 26 24 . `` It 's Hard to Kill a McClane '' 2 : 59 25 . `` Triple Vodka Rhapsody '' 1 : 55 26 .
+`` McClane 's Brain '' 2 : 00 Release ( edit ) # 46 TruSpeed Porsche GT3 during a race of the 2012 Supercup ( that ran as a support to the 2012 USGP ) promoting
+the release date on February 14 , 2013 . On January 31 , 2013 , 20th Century Fox held a special tribute to the 25th anniversary of the Die Hard series by
+unveiling a mural of a scene from Die Hard ( 1988 ) on Sound Stage 8 of the Fox Lot . Afterward , the premiere screening of A Good Day to Die Hard was shown .
+Two additional premieres were held in Europe leading up to the film 's commercial release : one in Berlin , Germany on February 4 and the second in London ,
+England on February 7 .
+</item 10>
+=== END ITEM id=75ac2981f692aa29 ===
+
+=== ITEM id=19a47da2b5c163cb ===
+Gold sentences and facts:
+Sentence 0: This article covers the professional life of George W. Bush , the 43rd President of the United States . Prior to his election as President in 2000 , Bush held numerous other positions , including being an oil executive , an owner of the Texas Rangers baseball team , and Governor of Texas . ( Also see Governorship of George W. Bush . )
+  Fact 0.0: This article covers the professional life of George W. Bush.
+  Fact 0.1: George W. Bush was the 43rd President of the United States.
+  Fact 0.2: Bush was elected President in 2000.
+  Fact 0.3: Before his election as President, Bush held numerous other positions.
+  Fact 0.4: Bush was an oil executive.
+  Fact 0.5: Bush was an owner of the Texas Rangers baseball team.
+  Fact 0.6: Bush was Governor of Texas.
+  Fact 0.7: The article Governorship of George W. Bush is a see-also reference.
+
+Retrieved items:
+<item 1>
+Professional life of George W. Bush
+Securities and Exchange Commission ( SEC ) ruled that it would not charge Bush with insider trading . On June 22 , Bush sold his 212,140 shares of stock anyway
+for a net profit of $848,560 . The very next quarter , Harken announced losses of $23 million , which continued to the end of the year when the stock ``
+plummeted from $4 to $1.25 '' . As President , Bush has refused to authorize the SEC to release its full report on the Harken investigation . When the Rangers
+franchise was sold for $250 million in 1998 , at a total profit of $170 million , Bush personally received $14.9 million for his $600,000 investment . As
+managing general partner of the Rangers , Bush assisted the team 's media relations and the construction of a new stadium . Many in Arlington protested that the
+stadium was paid for with public funds , and when the stadium title was given to the Texas Rangers Organization , it effectively allowed Bush to cash out public
+funds . His public role generated valuable goodwill and reinforced name recognition throughout Texas .
+</item 1>
+
+<item 2>
+2005 World Series
+Cup Chronicle - Telegraph Cup Book : World Series Category : World Series Chicago White Sox Based in Chicago , Illinois Franchise History Seasons Owners and
+executives Managers Players Opening Day starting pitchers first - round draft picks Broadcasters Team records Award winners No - hitters Ballparks South Side
+Park Comiskey Park Guaranteed Rate Field Spring training : * Recreation Park Palm Springs Stadium Plant Field Al Lopez Field Payne Park Ed Smith Stadium Tucson
+Electric Park Camelback Ranch Culture and lore 1994 bat burglary 2008 Blackout Game Andy the Clown Armour Square / Bridgeport Black Sox Scandal Curse of the
+Black Sox Eight Men Out Field of Dreams Shoeless Joe ( novel ) Captain Stubby and the Buccaneers Disco Demolition Night `` Do n't Stop Believin ' '' Gene Honda
+The Hitless Wonders `` Let 's Go ,
+</item 2>
+
+<item 3>
+American League
+Louis Browns ( 1902 -- 1953 ) Washington Senators I ( 1901 -- 1960 ) Washington Senators II ( 1961 -- 1971 ) Championship play List of champions Championship
+Series Division Series Wild Card winners Related articles Designated hitter Professional baseball Major League Baseball ( 2018 ) American League East Baltimore
+Orioles Boston Red Sox New York Yankees Tampa Bay Rays Toronto Blue Jays Central Chicago White Sox Cleveland Indians Detroit Tigers Kansas City Royals Minnesota
+Twins West Houston Astros Los Angeles Angels Oakland Athletics Seattle Mariners Texas Rangers National League East Atlanta Braves Miami Marlins New York Mets
+Philadelphia Phillies Washington Nationals Central Chicago Cubs Cincinnati Reds Milwaukee Brewers Pittsburgh Pirates St. Louis Cardinals West Arizona
+Diamondbacks Colorado Rockies Los Angeles Dodgers San Diego Padres San Francisco Giants Schedule Spring training Opening Day Jackie Robinson Day Civil Rights
+Game All - Star Game Interleague play International games World Baseball Classic Postseason World Series Champions NL NL Champions NLCS NLDS AL AL Champions
+ALCS ALDS Wild Card Game Appearances Streaks Droughts Series Business Draft Rule 5 Players Association Highest paid players Luxury tax Lockouts / strikes Winter
+Meetings Hot stove league Transactions Media Logo Radio Television MLB.
+</item 3>
+
+<item 4>
+Professional life of George W. Bush
+Bush and who had been a lawyer in James Baker 's firm , Baker Botts . The SEC 's general counsel at the time was James Doty , who had been appointed by
+President H.W. Bush and as a lawyer in James Baker 's firm , Baker Botts had represented George W. Bush when arrangements were made to acquire the Texas Rangers
+baseball franchise ( although Doty recused himself from the investigation . ) . With Baker Botts representing W. Bush , the Saudi BinLaden family and W. Bush 's
+funding conduit James R. Bath , Doty was involved in the frivilous litigation campaign launched in the attempt to intimidate BinLaden middleman James R Bath 's
+business partner ( ( Charles W. ( `` Bill '' ) White ) ) into cooperating with the attempted cover - up of secret BinLaden Family funding of W. Bush 's
+campaigns and businesses . Bush 's own lawyer was Robert Jordan , who had been `` partners with both Doty and Breeden at Baker Botts and who later became George
+W. Bush 's ambassador to Saudi Arabia '' .
+</item 4>
+
+<item 5>
+Professional life of George W. Bush
+In 1984 , Bush sold the company , hurt in the wake of the 1979 energy crisis , to Spectrum 7 , another Texas gas exploration firm . Under the terms of the sale
+, Bush became CEO . Spectrum 7 lost revenue and was merged into Harken Energy Corporation in 1986 , with Bush becoming a director of Harken . Texas Rangers and
+allegations of insider trading ( edit ) After working on his father 's successful 1988 presidential campaign , Bush learned from fellow Yale alumnus William
+DeWitt , Jr. , that family friend Eddie Chiles wanted to sell the Texas Rangers baseball franchise along with the new sports stadium ; built on land acquired
+under eminent domain law and built under funding financed through taxpayers ' funds backed by a bond issued for its debt . In April 1989 , Bush assembled a
+group of investors from his father 's close friends , including fellow fraternity brother Roland W. Betts ; the group bought an 86 % share of the Rangers for
+$75 million . Bush received a 2 % share by investing $606,302 , of which $500,000 was a bank loan .
+</item 5>
+
+<item 6>
+2005 World Series
+2016 2017 2018 Houston Astros Formerly the Houston Colt . 45s Based in Houston , Texas Franchise Expansion Draft History Seasons Records No - hitters Awards
+Players Managers Owners and executives First - round draft picks Opening Day starting pitchers All articles Ballparks Colt Stadium Houston Astrodome Minute Maid
+Park Spring training : Geronimo Park Cocoa Expo Stadium Osceola County Stadium The Ballpark of the Palm Beaches Lore 1980 NL West tie - breaker game Killer B 's
+2015 AL Wild Card Game Houston Strong Culture AstroTurf Orbit Crawford Boxes Tal 's Hill Continental League Houston Buffs Houston College Classic Ball Four (
+Jim Bouton book ) The Bad News Bears in Breaking Training Murder at the World Series Night Game `` The Hot Tub '' ( Seinfeld episode ) Boyhood `` Holy Toledo !
+'' Sunshine Kids Darryl Kile Award Key personnel Owner : Jim Crane President : Reid Ryan General Manager : Jeff Luhnow Manager : A.J.
+</item 6>
+
+<item 7>
+Professional life of George W. Bush
+Professional life of George W. Bush - wikipedia Professional life of George W. Bush Jump to : navigation , search George W. Bush This article covers the
+professional life of George W. Bush , the 43rd President of the United States . Prior to his election as President in 2000 , Bush held numerous other positions
+, including being an oil executive , an owner of the Texas Rangers baseball team , and Governor of Texas . ( Also see Governorship of George W. Bush . )
+Contents ( hide ) 1 Business 1.1 Texas Rangers and allegations of insider trading 1.2 Early political career 2 See also 3 References Business ( edit ) Bush
+began his industry career in 1979 , when he established Arbusto Energy , an oil and gas exploration company he financed with his education trust fund surplus
+and money from other investors , including Dorothy Bush , Lewis Lehrman , William Henry Draper III , Bill Gammell , and James R. Bath , the last of whom
+represented Salem bin Laden , a half - brother and cousin of Osama bin Laden .
+</item 7>
+
+<item 8>
+Houston Astros
+45s Based in Houston , Texas Franchise Expansion Draft History Seasons Records No - hitters Awards Players Managers Owners and executives First - round draft
+picks Opening Day starting pitchers All articles Ballparks Colt Stadium Houston Astrodome Minute Maid Park Spring training : Geronimo Park Cocoa Expo Stadium
+Osceola County Stadium The Ballpark of the Palm Beaches Lore 1980 NL West tie - breaker game Killer B 's 2015 AL Wild Card Game Houston Strong Culture AstroTurf
+Orbit Crawford Boxes Tal 's Hill Continental League Houston Buffs Houston College Classic Ball Four ( Jim Bouton book ) The Bad News Bears in Breaking Training
+Murder at the World Series Night Game `` The Hot Tub '' ( Seinfeld episode ) Boyhood `` Holy Toledo ! '' Sunshine Kids Darryl Kile Award Key personnel Owner :
+Jim Crane President : Reid Ryan General Manager : Jeff Luhnow Manager : A.J.
+</item 8>
+
+<item 9>
+Professional life of George W. Bush
+In House of Bush , House of Saud , Craig Unger notes that at the time of Bush 's sale , Harken Energy `` was expected to run out of money in just three days ''
+( p. 123 ) . In a last - ditch attempt to save the company , Harken was advised by the endowment fund of Harvard University to spin off two of its lower -
+performing divisions . `` According to a Harken memo , if the plan did not go through , the company had ' no other source of immediate financing . ' '' Bush had
+already taken out a $500,000 loan and sought Harken 's general counsel for advice . The reply was explicit : `` The act of trading , particularly if close in
+time to the receipt of the inside information , is strong evidence that the insider 's investment decision was based on the inside information ... the insider
+should be advised not to sell '' . This memo was turned over by Bush 's attorney the day after the U.S. Securities and Exchange Commission ( SEC ) ruled that it
+would not charge Bush with insider trading .
+</item 9>
+
+<item 10>
+Professional life of George W. Bush
+Jump up ^ `` CNN.com - White House defends Bush handling of stock sale - July 3 , 2002 '' . Jump up ^ `` Files : Bush Knew Firm 's Plight Before Stock Sale '' .
+Washington Post . 2002 - 07 - 21 . Retrieved 2007 - 01 - 02 . Jump up ^ http://www.austinchronicle.com/issues/vol17/issue19/pols.bush.html Jump up ^ `` Team
+Player - Texas - Joe Nick Patoski '' . Jump up ^ `` ESPN.com - Major League Baseball - Friday : Bush gets to know Texas '' . Jump up ^ `` Bush Was n't Always a
+Front - Runner '' . Washington Post . 1999 - 10 - 17 . Retrieved 2007 - 04 - 07 .
+</item 10>
+=== END ITEM id=19a47da2b5c163cb ===

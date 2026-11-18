@@ -1,0 +1,546 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "6395316db20c908e",
+   "kind": "answer",
+   "question": "What movies has Juno Temple starred in?",
+   "gold_answers": [
+    "She has appeared in films such as \" Black Mass\", \"The Other Boleyn Girl\", \"Wild Child\", \"Atonement\", \"Maleficent\", \"The Three Musketeers\" and \"The Dark Knight Rises\"."
+   ],
+   "model_answer": "Atonement, The Other Boleyn Girl, Cracks, Dirty Girl, Killer Joe, Maleficent, Black Mass, Unsane, and Palmer."
+  },
+  {
+   "id": "5878775e9649abfe",
+   "kind": "answer",
+   "question": "When was the Chinese American electronic musician and singer who collaborated on the album I Remember born?",
+   "gold_answers": [
+    "1989"
+   ],
+   "model_answer": "November 1, 1993"
+  },
+  {
+   "id": "b16503877bafd148",
+   "kind": "answer",
+   "question": "What band is a tribute to a band originally known as the Grizzly River Boys?",
+   "gold_answers": [
+    "Nashville Tribute Band"
+   ],
+   "model_answer": "Dark Star Orchestra"
+  },
+  {
+   "id": "bc0474808e334e1b",
+   "kind": "answer",
+   "question": "Which restaurant was founded first, Papa Murphy's or Gino's Pizza and Spaghetti?",
+   "gold_answers": [
+    "Gino's Pizza and Spaghetti"
+   ],
+   "model_answer": "Gino’s Pizza and Spaghetti"
+  },
+  {
+   "id": "2313b81f84d2a58d",
+   "kind": "answer",
+   "question": "Have singers Yang Yo-seob and Kim Tae-yeon both appeared in group bands?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both have been members of music groups."
+  },
+  {
+   "id": "106591ae6f4ca282",
+   "kind": "answer",
+   "question": "Erving Goffman was cited as higher than a literary critic on which guide?",
+   "gold_answers": [
+    "The Times Higher Education Guide"
+   ],
+   "model_answer": "The Times Higher Education guide to the most-cited authors."
+  },
+  {
+   "id": "a7ac6d56234235a2",
+   "kind": "answer",
+   "question": "Between two bands, Mastodon and Hole, which one has more members?",
+   "gold_answers": [
+    "Mastodon"
+   ],
+   "model_answer": "Hole"
+  },
+  {
+   "id": "d466bb95df5812a4",
+   "kind": "answer",
+   "question": "Which terrorist group was the cause of the battle in which Mark E. Michell won an award for his actions?",
+   "gold_answers": [
+    "al-Qaeda"
+   ],
+   "model_answer": "Taliban</|fim_suffix|>"
+  },
+  {
+   "id": "8aad494d1955da4d",
+   "kind": "answer",
+   "question": "What two singers who worked together on the song I Would Like to See You Again also performed as part of a country music group which was active between 1985 and 1995?",
+   "gold_answers": [
+    "Johnny Cash, Waylon Jennings"
+   ],
+   "model_answer": "Willie Nelson and Waylon Jennings"
+  },
+  {
+   "id": "5a4e1651092ade12",
+   "kind": "answer",
+   "question": "when was Quiet in Heaven/Song of Liberty recorded?",
+   "gold_answers": [
+    "Before settling on their current name in 1982"
+   ],
+   "model_answer": "1959"
+  },
+  {
+   "id": "554d7d0b13016b43",
+   "kind": "answer",
+   "question": "Who was the wife of the United States Army lieutenant general who received the Distinguished Service Cross, and was the first of his West Point class to be promoted to brigadier general, major general, and lieutenant general",
+   "gold_answers": [
+    "Julia Compton Moore"
+   ],
+   "model_answer": "Harriet F. McKinley"
+  },
+  {
+   "id": "dd4012c374670cee",
+   "kind": "answer",
+   "question": "Which \"Blackzilians\" fighter is currently competing in the Middleweight division of Ultimate Fighting Championship?",
+   "gold_answers": [
+    "Vitor Belfort"
+   ],
+   "model_answer": "Cezar Ferreira"
+  },
+  {
+   "id": "279fc83195a06dd9",
+   "kind": "answer",
+   "question": "The 1989 Batman film was produced by Jon Peters and a man that is the CEO of what company?",
+   "gold_answers": [
+    "Mandalay Entertainment"
+   ],
+   "model_answer": "Mandalay Entertainment Group"
+  },
+  {
+   "id": "161786a55d5c694f",
+   "kind": "answer",
+   "question": " Kenneth Anderson served under the General who was which President of the United States?",
+   "gold_answers": [
+    "34th"
+   ],
+   "model_answer": "The 34th President, Dwight D. Eisenhower."
+  },
+  {
+   "id": "c4bb01fe26070253",
+   "kind": "answer",
+   "question": "Are the 1908 Ex parte Young and 1948 McCollum v. Board of Education United States Supreme Court cases related to each other in any way?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No direct connection is stated."
+  },
+  {
+   "id": "8c1910b94f4a0e05",
+   "kind": "answer",
+   "question": " Kenneth Anderson served under the General who was which President of the United States?",
+   "gold_answers": [
+    "34th"
+   ],
+   "model_answer": "Dwight D. Eisenhower, the 34th President."
+  },
+  {
+   "id": "a8c12a88aecfb3e2",
+   "kind": "answer",
+   "question": "Are Eryngium and Arnebia in the same kingdom of life forms?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, Plantae."
+  },
+  {
+   "id": "5e6785d451fd5327",
+   "kind": "answer",
+   "question": "What was the Volvo S70 essentially modeled after and was the first all wheel drive Volvo?",
+   "gold_answers": [
+    "Volvo 850"
+   ],
+   "model_answer": "The Volvo 850; the 850 AWD was Volvo’s first all-wheel-drive model."
+  },
+  {
+   "id": "33c5abbddbb7636f",
+   "kind": "answer",
+   "question": "Which region of Ghana was the city where Akrofuom is located? ",
+   "gold_answers": [
+    "Ashanti Region of Ghana"
+   ],
+   "model_answer": "Ashanti Region"
+  },
+  {
+   "id": "370205417fc0ccf4",
+   "kind": "answer",
+   "question": "Who was the narrator of the 26-episode series which featured the British national museum organization with branches at five locations in England?",
+   "gold_answers": [
+    "Michael Redgrave"
+   ],
+   "model_answer": "Laurence Olivier"
+  },
+  {
+   "id": "089d8399b3735420",
+   "kind": "answer",
+   "question": "Midland F1 Racing was a racing team that, in 2007, competed under what name for sponsorship reasons?",
+   "gold_answers": [
+    "Spyker F1"
+   ],
+   "model_answer": "Etihad Aldar Spyker F1 Team"
+  },
+  {
+   "id": "0254b3cc47855e3d",
+   "kind": "answer",
+   "question": "The company that created the Data Universal Numbering System has a database that contains how many business records?",
+   "gold_answers": [
+    "265 million"
+   ],
+   "model_answer": "More than 265 million records"
+  },
+  {
+   "id": "7c40a7f56a032a3c",
+   "kind": "answer",
+   "question": "What type of art does The Consul and Arlecchino have in common?",
+   "gold_answers": [
+    "music"
+   ],
+   "model_answer": "Opera, a form of music and theatre"
+  },
+  {
+   "id": "25406d56175f1a1a",
+   "kind": "answer",
+   "question": "Which was published more frequently, Popular Science or Girlfriends?",
+   "gold_answers": [
+    "Girlfriends"
+   ],
+   "model_answer": "Girlfriends was published more frequently."
+  },
+  {
+   "id": "7fafbe78aaa95ed6",
+   "kind": "answer",
+   "question": "Kresy, which roughly was a part of the land beyond the so-called Curson Line, was drawn for what reason?",
+   "gold_answers": [
+    "demarcation line between the newly emerging states, the Second Polish Republic, and the Soviet Union"
+   ],
+   "model_answer": "As a demarcation line between Poland and the Soviet Union."
+  },
+  {
+   "id": "c787ebf5bacf7046",
+   "kind": "answer",
+   "question": "What star if the Burbs was Canadian?",
+   "gold_answers": [
+    "Richard \"Rick\" Ducommun"
+   ],
+   "model_answer": "John Candy"
+  },
+  {
+   "id": "bd8f90020c92124b",
+   "kind": "answer",
+   "question": "Which board game, Attack! or Can't Stop, was published first?",
+   "gold_answers": [
+    "Can't Stop"
+   ],
+   "model_answer": "Can’t Stop\n"
+  },
+  {
+   "id": "509542be36607691",
+   "kind": "answer",
+   "question": "What was the Volvo S70 essentially modeled after and was the first all wheel drive Volvo?",
+   "gold_answers": [
+    "Volvo 850"
+   ],
+   "model_answer": "A facelifted 850 saloon; no, the 850 was Volvo’s first AWD."
+  },
+  {
+   "id": "fa194b786dde9502",
+   "kind": "answer",
+   "question": "Do both Adventist World and Girls' Life have a headquarter or editor based in Maryland?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both have a Maryland base."
+  },
+  {
+   "id": "82c9a54196670de2",
+   "kind": "answer",
+   "question": "Who was hung for assisting the attempted surrender of a defector from the American Continental Army to the British Army?",
+   "gold_answers": [
+    "John André"
+   ],
+   "model_answer": "Major John André"
+  },
+  {
+   "id": "4c1ca6e40d0b8184",
+   "kind": "answer",
+   "question": "What does Age of Chance and Vector share in common? ",
+   "gold_answers": [
+    "was a rock band"
+   ],
+   "model_answer": "Both are rock bands."
+  },
+  {
+   "id": "ac78a1903ffc1c96",
+   "kind": "answer",
+   "question": "Have Jelena Janković and Marat Safin both played tennis professionally?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both are professional tennis players."
+  },
+  {
+   "id": "c0c4b034d08b4988",
+   "kind": "answer",
+   "question": "What are some other areas that share a common deer species with the forests of Mara and Mondrem?",
+   "gold_answers": [
+    "New Zealand, Canada, the United States, the Falkland Islands, and Peru."
+   ],
+   "model_answer": "Europe and western Eurasia (home to red and fallow deer)."
+  },
+  {
+   "id": "480ccb35e38cb64a",
+   "kind": "answer",
+   "question": "What is the name of the person that named Moltke Nunatak after the Chief of the German General staff that served from 1906 to 1914?",
+   "gold_answers": [
+    "Second German Antarctic Expedition of 1911–12 under Wilhelm Filchner."
+   ],
+   "model_answer": "Wilhelm Filchner"
+  },
+  {
+   "id": "68fab5ee12090944",
+   "kind": "answer",
+   "question": "Did the playwrights Eugène Ionesco and Paul Scott live during the same time period?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, they did."
+  },
+  {
+   "id": "281249965493d4ec",
+   "kind": "answer",
+   "question": "Are the Chien Français Blanc et Orange and Cretan Hound both used for hunting in packs?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "e3204e8a1fa568ac",
+   "kind": "answer",
+   "question": "Pravda and Stiffelio are both operas?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Stiffelio is an opera; Pravda isn’t."
+  },
+  {
+   "id": "ccf89988b6c818fe",
+   "kind": "answer",
+   "question": "What film genre links Baghdad ER and Olympia?",
+   "gold_answers": [
+    "documentary"
+   ],
+   "model_answer": "Documentary films"
+  },
+  {
+   "id": "44a45dcaed8f9cc8",
+   "kind": "answer",
+   "question": "Nicole Gordon won a silver medal with Sara Petersen int he women's doubles at a competition held in what city?",
+   "gold_answers": [
+    "Manchester"
+   ],
+   "model_answer": "Cartagena"
+  },
+  {
+   "id": "ee859b0c554ef0e1",
+   "kind": "answer",
+   "question": "Which field of studies did Semyon Aranovich Gershgorin and Anatoly Maltsev work in?",
+   "gold_answers": [
+    "He was a mathematician"
+   ],
+   "model_answer": "Mathematics"
+  },
+  {
+   "id": "fde7694e0462ae66",
+   "kind": "answer",
+   "question": "Who directed and wrote the 2016 film featuring the voice of Townsend Coleman?",
+   "gold_answers": [
+    "Garth Jennings"
+   ],
+   "model_answer": "Sean Patrick O’Reilly."
+  },
+  {
+   "id": "b95c52c61e555828",
+   "kind": "answer",
+   "question": "Robert Suettinger was the national intelligence officer under which former Governor of Arkansas?",
+   "gold_answers": [
+    "William Jefferson Clinton"
+   ],
+   "model_answer": "Bill Clinton"
+  },
+  {
+   "id": "bbe464a8eb7a7bc9",
+   "kind": "answer",
+   "question": "What are some other areas that share a common deer species with the forests of Mara and Mondrem?",
+   "gold_answers": [
+    "New Zealand, Canada, the United States, the Falkland Islands, and Peru."
+   ],
+   "model_answer": "Europe, North Africa, Australia, New Zealand, Canada, the United States, Peru, and Argentina."
+  },
+  {
+   "id": "8ab46d01d55ebaeb",
+   "kind": "answer",
+   "question": "What is the subsidiary of the record company who released \"Love Incredible?\"",
+   "gold_answers": [
+    "Vivendi S.A."
+   ],
+   "model_answer": "Universal Music Group"
+  },
+  {
+   "id": "9f53e4524438da6c",
+   "kind": "answer",
+   "question": "Which genus has the most number of species, Myrsine or Styrax?",
+   "gold_answers": [
+    "Myrsine"
+   ],
+   "model_answer": "Styrax"
+  },
+  {
+   "id": "43d68ca3ee3cc6ac",
+   "kind": "answer",
+   "question": "Japanese Weekend School of New York has offices in the entertainment complex in what section of New Rochelle?",
+   "gold_answers": [
+    "Downtown"
+   ],
+   "model_answer": "Downtown section\n"
+  },
+  {
+   "id": "bda083def23ac995",
+   "kind": "answer",
+   "question": "What movies has Juno Temple starred in?",
+   "gold_answers": [
+    "She has appeared in films such as \" Black Mass\", \"The Other Boleyn Girl\", \"Wild Child\", \"Atonement\", \"Maleficent\", \"The Three Musketeers\" and \"The Dark Knight Rises\"."
+   ],
+   "model_answer": "Dirty Girl, Jack & Diane, Cracks, Magic Magic, Lovelace, Black Mass, The Other Boleyn Girl, Wild Child, Atonement, Maleficent, The Three Musketeers, and The Dark Knight Rises."
+  },
+  {
+   "id": "c3586b7bf53212f0",
+   "kind": "answer",
+   "question": "Where was the air-cooled version of a weapon system used on the HMAS \"Narani\" found?",
+   "gold_answers": [
+    "World War I fighter aircraft."
+   ],
+   "model_answer": "At the Australian War Memorial in Canberra."
+  },
+  {
+   "id": "9f1ae51230f1c485",
+   "kind": "answer",
+   "question": "What current NHL team owner played for the team that won the Stanley cup in 1992?",
+   "gold_answers": [
+    "Mario Lemieux"
+   ],
+   "model_answer": "Pittsburgh Penguins"
+  },
+  {
+   "id": "63ed4dd8ae6ba43e",
+   "kind": "answer",
+   "question": "Which was Disney's 2nd animated production, Pinocchio or Home on the Range?",
+   "gold_answers": [
+    "Pinocchio"
+   ],
+   "model_answer": "Pinocchio (1940)"
+  },
+  {
+   "id": "5659081b036df124",
+   "kind": "answer",
+   "question": "Wheelock Whitney is just one member of the Whitney Family. Where did this American family originate from?",
+   "gold_answers": [
+    "London, England"
+   ],
+   "model_answer": "England, specifically Whitney-on-Wye in Herefordshire."
+  },
+  {
+   "id": "7ce566c894b7aaf0",
+   "kind": "answer",
+   "question": "The organization that Nicolae Titulescu served two terms as president was founded on what date?",
+   "gold_answers": [
+    "10 January 1920"
+   ],
+   "model_answer": "January 10, 1920"
+  },
+  {
+   "id": "7a29e59f10bf65c4",
+   "kind": "answer",
+   "question": "In what county did Michael Ola attend high school?",
+   "gold_answers": [
+    "Clayton County, Georgia, United States"
+   ],
+   "model_answer": "Clayton County, Georgia"
+  },
+  {
+   "id": "935d907d76b2b64c",
+   "kind": "answer",
+   "question": "The twenty-first season of South Park was entitled \"White People Renovating Houses\" is which episode of the series overall?",
+   "gold_answers": [
+    "278th episode"
+   ],
+   "model_answer": "Episode 278"
+  },
+  {
+   "id": "79333624ac5f2b5e",
+   "kind": "answer",
+   "question": "What city does Paul Clyne and David Soares have in common?",
+   "gold_answers": [
+    "New York"
+   ],
+   "model_answer": "Albany\n"
+  },
+  {
+   "id": "699dc8f21359f5c6",
+   "kind": "answer",
+   "question": "OU812 was the second album to feature a vocalist that also played what instrument in \"Finish What Ya Started\"?",
+   "gold_answers": [
+    "rhythm guitar"
+   ],
+   "model_answer": "Guitar"
+  },
+  {
+   "id": "9a7cada6093b41da",
+   "kind": "answer",
+   "question": "What profession does Matt Thiessen and George Thorogood have in common?",
+   "gold_answers": [
+    "musician"
+   ],
+   "model_answer": "Musician, singer, and songwriter"
+  },
+  {
+   "id": "59df6ac6b1be9a6c",
+   "kind": "answer",
+   "question": "Are both Aloinopsis and Eriogonum ice plants?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No—only Aloinopsis."
+  },
+  {
+   "id": "eb55eb4ab4fd4613",
+   "kind": "answer",
+   "question": "What was the Volvo S70 essentially modeled after and was the first all wheel drive Volvo?",
+   "gold_answers": [
+    "Volvo 850"
+   ],
+   "model_answer": "A facelifted 850 saloon; the 850 AWD was Volvo’s first all-wheel-drive model."
+  },
+  {
+   "id": "4afb28e6c16a2593",
+   "kind": "answer",
+   "question": "What does Age of Chance and Vector share in common? ",
+   "gold_answers": [
+    "was a rock band"
+   ],
+   "model_answer": "They’re both bands."
+  }
+ ],
+ "evidence": []
+}

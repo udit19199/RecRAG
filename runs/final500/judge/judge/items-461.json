@@ -1,0 +1,470 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "67340e51d148fc20",
+   "gold": [
+    {
+     "sentence": "The Washington City Canal operated from 1815 until the mid-1850s in Washington, D.C. The canal connected the Anacostia River, called the \"Eastern Branch\" at that time, to Tiber Creek, the Potomac River, and later the Chesapeake and Ohio Canal (C&O).",
+     "facts": {
+      "0.0": "The Washington City Canal operated from 1815 until the mid-1850s.",
+      "0.1": "The Washington City Canal operated in Washington, D.C.",
+      "0.2": "The Washington City Canal connected the Anacostia River to Tiber Creek.",
+      "0.3": "The Washington City Canal connected the Anacostia River to the Potomac River.",
+      "0.4": "The Washington City Canal later connected the Anacostia River to the Chesapeake and Ohio Canal (C&O).",
+      "0.5": "The Anacostia River was called the 'Eastern Branch' at that time."
+     }
+    },
+    {
+     "sentence": "The Whitewater Canal, which was built between 1836 and 1847, spanned a distance of seventy-six miles and stretched from Lawrenceburg, Indiana on the Ohio River to Hagerstown, Indiana.",
+     "facts": {
+      "1.0": "The Whitewater Canal was built between 1836 and 1847.",
+      "1.1": "The Whitewater Canal spanned a distance of seventy-six miles.",
+      "1.2": "The Whitewater Canal stretched from Lawrenceburg, Indiana.",
+      "1.3": "Lawrenceburg, Indiana is on the Ohio River.",
+      "1.4": "The Whitewater Canal stretched to Hagerstown, Indiana."
+     }
+    }
+   ],
+   "items": [
+    "Cincinnati and Whitewater Canal Tunnel\nThe Cincinnati and Whitewater Canal Tunnel is a historic yet abandoned canal tunnel in the southwestern corner of the U.S. state of Ohio.\n\n Located within the village of Cleves near Cincinnati, it was constructed in 1837 as part of the Whitewater Canal system.\n\n Since the canal's closure, it has largely been forgotten, but it has been designated a historic site.",
+    "Dundee Canal\nThe Dundee Canal was an industrial canal in Clifton and Passaic in Passaic County, New Jersey.\n\n It was built between 1858 and 1861 and ran parallel to the Passaic River.\n\n It supplied hydropower and water for manufacturing.\n\n There was interest by some members of the business community to modify the canal to support navigational uses, but the canal was never used for that purpose.",
+    "Susquehanna and Tidewater Canal\nThe Susquehanna and Tidewater Canal between Wrightsville, Pennsylvania, and Havre de Grace, Maryland, at the head of Chesapeake Bay, provided an interstate shipping alternative to 19th-century arks, rafts, and boats plying the difficult waters of the lower Susquehanna River.\n\n Built between 1836 and 1840, it ran 43 mi along the west bank of the river and rendered obsolete an older, shorter canal along the east bank.\n\n Of its total length, 30 mi were in Pennsylvania and 13 mi in Maryland.\n\n Though rivalry between Philadelphia, Pennsylvania, and Baltimore, Maryland, delayed its construction, the finished canal brought increased shipments of coal and other raw materials to both cities from Pennsylvania's interior.\n\n Competition from railroads was a large factor in the canal's decline after 1855.\n\n Canal remnants, including a lock keeper's house, have been preserved in Maryland, and locks 12 and 15 have been preserved in Pennsylvania.",
+    "Lowell Power Canal System and Pawtucket Gatehouse\nThe Lowell Power Canal System is the largest power canal system in the United States, at 5.6 miles in length.\n\n The system's estimated output is 10,000 horsepower, operating six major canals on two levels, controlled by numerous gates.\n\n The system was begun in the 1790s, beginning its life as a transportation canal called the Pawtucket Canal, which was constructed to get logs from New Hampshire down the Merrimack River to shipbuilding centers at Newburyport, Massachusetts, bypassing the 30-plus-foot drop of the Pawtucket Falls.",
+    "Washington City Canal\nThe Washington City Canal operated from 1815 until the mid-1850s in Washington, D.C. The canal connected the Anacostia River, called the \"Eastern Branch\" at that time, to Tiber Creek, the Potomac River, and later the Chesapeake and Ohio Canal (C&O).\n\n The canal fell into disuse in the late 19th century and the city government covered over or filled in various sections.",
+    "Whitewater Canal\nThe Whitewater Canal, which was built between 1836 and 1847, spanned a distance of seventy-six miles and stretched from Lawrenceburg, Indiana on the Ohio River to Hagerstown, Indiana.",
+    "Tiber Creek\nTiber Creek or Tyber Creek is a tributary of the Potomac River in Washington, D.C. In the 19th century it was modified to become part of the Washington City Canal, and subsequently was enclosed in a tunnel.",
+    "Pennsylvania and Ohio Canal\nThe Pennsylvania and Ohio Canal, also known as the P & O Canal, the Cross Cut Canal and the Mahoning Canal was a shipping canal which operated from 1840 until 1877 (though the canal was completely abandoned by 1872).\n\n It was unique in that it served to connect canals in two states (the Ohio and Erie Canal in Ohio and the Beaver and Erie Canal in Pennsylvania) and was funded by private interests.",
+    "Dismal Swamp Canal\nThe Dismal Swamp Canal is located along the eastern edge of the Great Dismal Swamp in Virginia and North Carolina in the United States.\n\n It is the oldest continually operating man-made canal in the United States, opened in 1805, and closed in October 2016.\n\n It is part of the Intracoastal Waterway, an inland route, which parallels the east coast and offers boaters shelter from the Atlantic Ocean from Manasquan Inlet, New Jersey, to Brownsville, Texas.\n\n The route runs through bays, lakes, rivers, streams, and canals, and includes the Intracoastal Waterway running from Norfolk, Virginia, to the Florida Keys.",
+    "Brunswick–Altamaha canal\nThe Brunswick–Altamaha Canal was a 12-mile-long canal built to connect the Altamaha River to the city of Brunswick, Georgia at the Turtle River to transport goods from Brunswick's port to areas farther north and inland.\n\n It included locks on both ends of the canal.\n\n The canal was originally proposed in 1798 and after two failed charters (1826 and 1830), construction was started in 1836 by Thomas Butler King.\n\n The project was estimated to cost $450,000.\n\n The canal was finished and opened in 1854; however, by that time the canal was obsolete because of new railroads.\n\n The canal was closed by 1860.\n\n The Columbian mammoth was discovered during the construction of the canal."
+   ]
+  },
+  {
+   "id": "33fadeaf622a10d7",
+   "gold": [
+    {
+     "sentence": "Kelechukwu \"Kele\" Okereke (born 13 October 1981), also known by the mononym Kele, is a British musician, best known as the lead singer and rhythm guitarist of the indie rock band Bloc Party.",
+     "facts": {
+      "0.0": "Kelechukwu 'Kele' Okereke was born on 13 October 1981.",
+      "0.1": "Kelechukwu 'Kele' Okereke is also known by the mononym Kele.",
+      "0.2": "Kelechukwu 'Kele' Okereke is a British musician.",
+      "0.3": "Kelechukwu 'Kele' Okereke is best known as the lead singer and rhythm guitarist of the indie rock band Bloc Party."
+     }
+    },
+    {
+     "sentence": "Jon Hume (born 6 November 1983) is the lead singer of Evermore.",
+     "facts": {
+      "1.0": "Jon Hume was born on 6 November 1983.",
+      "1.1": "Jon Hume is the lead singer of Evermore."
+     }
+    },
+    {
+     "sentence": " Jon is the eldest of the three brothers who make up the New Zealand band Evermore.",
+     "facts": {
+      "2.0": "Jon is the eldest of the three brothers.",
+      "2.1": "The three brothers make up the New Zealand band Evermore.",
+      "2.2": "Evermore is a New Zealand band."
+     }
+    }
+   ],
+   "items": [
+    "Between the Lines (Evermore song)\n\"Between the Lines\" is the first single by Evermore, taken from their third studio album \"\".\n\n Evermore's Jon Hume said that \"Between the Lines was the first song to come out of a search for a new musical experience as a band.\"\n\n It was released as a free download on Evermore's official website on 10 November 2008.",
+    "Dann Hume\nDann Hume (born Daniel Benjamin Cobbe, 1 September 1987, Whangaparaoa, New Zealand) is a singer-songwriter and record producer.\n\n Hume is the youngest of three brothers (with Peter Hume and Jon Hume) who make up the alternative rock band, Evermore since 1999.",
+    "Nevermore (album)\nNevermore is the eponymous debut studio album by American heavy metal band Nevermore, released on February 14, 1995 by Century Media Records.\n\n It was singer Warrel Dane and bassist Jim Sheppard's first release after departing from their previous band, Sanctuary, in 1994.\n\n Having recruited drummer Van Williams and former Sanctuary touring guitarist Jeff Loomis, they formed the band Nevermore and began anew.",
+    "Evermore (Evermore album)\nEvermore is the self-titled international debut album by New Zealand rock band Evermore, which was also released in Australia and New Zealand on 12 March 2010.\n\n The album is a collection of songs from the band's entire history, as well as three new songs including the single \"Underground\".",
+    "Nevermore\nNevermore is an American progressive metal band from Seattle, Washington, United States.\n\n Formed in 1991, they are known to incorporate elements from various styles such as power metal, modern hard rock, classic heavy metal and technical thrash metal.\n\n The band has been on hiatus since 2011, due to personal issues between the band members.\n\n In April 2015, lead singer Warrel Dane confirmed that Nevermore has not disbanded, and there is a possibility for them to continue in the next two years with another album.",
+    "He Will Have His Way\nHe Will Have His Way is a compilation album featuring male Australian and New Zealand musicians performing songs written by Neil Finn and Tim Finn (The Finn Brothers), who are best known as members of Split Enz and Crowded House.\n\n It was released on 12 November 2010 and is a sequel to \"She Will Have Her Way\", a 2005 album featuring female Australian and New Zealand musicians.\n\n The two albums were later released together with extra tracks as the double CD \"They Will Have Their Way\".",
+    "Running (Evermore song)\n\"Running\" is the lead single by alternative rock band Evermore, taken from their second studio album, \"Real Life\" (July 2006).\n\n It was written by backing vocalist and drummer, Dann Hume.\n\n It was issued on 3 June, ahead of the album.\n\n It was co-produced by Jon with John Alagía (Dave Matthews Band, John Mayer).\n\n It peaked at No. 4 on their native RIANZ Singles Chart in New Zealand and No. 5 on their adopted country of Australia's ARIA Singles Chart.",
+    "Kele Okereke\nKelechukwu \"Kele\" Okereke (born 13 October 1981), also known by the mononym Kele, is a British musician, best known as the lead singer and rhythm guitarist of the indie rock band Bloc Party.",
+    "Light Surrounding You\n\"Light Surrounding You\" is the second single by alternative rock band, Evermore, taken from their second studio album, \"Real Life\" (June 2006).\n\n It was written by Dann Hume, the group's drummer and lead singer and guitarists Jon Hume.\n\n The record is co-produced by Jon Hume.\n\n The song was released in October 2006 and peaked at No. 15 on the RIANZ Singles Chart in New Zealand and number one on the ARIA Singles Chart, making it Evermore's most successful single in Australia.\n\n It was the first single by a New Zealand artist to top the Australian charts since \"How Bizarre\" by OMC in 1996.",
+    "Jon Hume\nJon Hume (born 6 November 1983) is the lead singer of Evermore.\n\n He is a singer-songwriter, multi-instrumentalist, Record Producer and Studio owner.\n\n Jon is the eldest of the three brothers who make up the New Zealand band Evermore."
+   ]
+  },
+  {
+   "id": "bedd050edd8f1cf7",
+   "gold": [
+    {
+     "sentence": "Edward Sharpe and the Magnetic Zeros is an American folk rock band formed in Los Angeles, California in 2007.",
+     "facts": {
+      "0.0": "Edward Sharpe and the Magnetic Zeros is an American folk rock band.",
+      "0.1": "Edward Sharpe and the Magnetic Zeros was formed in Los Angeles, California.",
+      "0.2": "Edward Sharpe and the Magnetic Zeros was formed in 2007."
+     }
+    },
+    {
+     "sentence": "Louis XIV is an American rock band from San Diego, California.",
+     "facts": {
+      "1.0": "Louis XIV is an American rock band.",
+      "1.1": "Louis XIV is from San Diego, California."
+     }
+    },
+    {
+     "sentence": " The band has released four EPs between 2003 and 2007, and three albums between 2003 and 2008, the latter two of which were distributed by Atlantic Records.",
+     "facts": {
+      "2.0": "The band released four EPs between 2003 and 2007.",
+      "2.1": "The band released three albums between 2003 and 2008.",
+      "2.2": "Two of the band's three albums, the latter two, were distributed by Atlantic Records."
+     }
+    }
+   ],
+   "items": [
+    "Edward Sharpe and the Magnetic Zeros\nEdward Sharpe and the Magnetic Zeros is an American folk rock band formed in Los Angeles, California in 2007.\n\n The group is led by lead singer Alex Ebert.\n\n The band's name is based on a story Ebert wrote in his youth, about a messianic figure named Edward Sharpe.\n\n Drawing from roots rock, folk, gospel, and psychedelic music, the band's image and sound evoke the hippie movement of the 1960s and 1970s.\n\n The group's first show was played July 18, 2007 at The Troubadour in West Hollywood, California.\n\n Their first studio album, \"Up from Below\", was released on July 7, 2009 on Community Records and featured the popular single \"Home\".\n\n The group released their second full-length album, \"Here\", on May 29, 2012, and third album, \"Edward Sharpe and the Magnetic Zeros\", on July 23, 2013.\n\n Their fourth studio album, \"PersonA\", was released in April 2016.",
+    "Alexander (Alex Ebert album)\nAlexander is the first solo album by American musician Alex Ebert, lead singer of Edward Sharpe and the Magnetic Zeros and Ima Robot.\n\n It was released on March 1, 2011 under the Community Records label.\n\n The song \"Truth\" was featured in the season 4 premiere of AMC's \"Breaking Bad\" titled \"Box Cutter\".",
+    "Edward Sharpe and the Magnetic Zeros (album)\nEdward Sharpe and the Magnetic Zeros is the third album by Edward Sharpe and the Magnetic Zeros.\n\n It was released on July 23, 2013 in North America and was released on July 29, 2013 around the world through Vagrant Records, Rough Trade Records and Communion Records.\n\n Frontman Alex Ebert stated that \"These songs mean everything to me - It's the rawest, most liberated, most rambunctious stuff we've done.\"",
+    "PersonA\nPersonA (pronounced \"Persona\") is the fourth studio album by the band Edward Sharpe and the Magnetic Zeros.\n\n It was released on April 15, 2016.",
+    "Orpheo McCord\nOrpheo McCord (born 1979) is an American drummer and percussionist.\n\n He is an original member of Edward Sharpe and the Magnetic Zeros, and a former member of The Fall, Fool's Gold and Cass McCombs.",
+    "Lingdian\nZero Band () are a Chinese rock band from Inner Mongolia.\n\n The lead singer is Zhou Xiaoou (周晓鸥).\n\n The English name \"Zero Band\" was used in Beijing concert advertisements, though the band did not originally use an English name; the name has also been translated as \"Point Zero\" in some older English publications.\n\n The band appeared on the Jingwen label in China, but were licensed outside China by JVC.\n\n One of the top Beijing bands at the end of the 1990s, Lingdian originally suffered the same resistance from government-owned venues as other indigenous PRC rock bands.",
+    "Beasts of Bourbon\nBeasts of Bourbon are an Australian alternative rock, blues rock band formed in August 1983, with James Baker on drums (ex-Hoodoo Gurus), Spencer P. Jones on guitar (The Johnnys), Tex Perkins on vocals (Dum Dums), Kim Salmon on guitar and Boris Sujdovic on bass guitar (both ex-The Scientists).\n\n Except for mainstays, Jones and Perkins, the line-up has changed as the group splintered and reformed several times.\n\n Their debut album, \"The Axeman's Jazz\" (July 1984), was the best selling Australian alternative rock album for 1984.\n\n Their debut single, \"Psycho\", is a cover version of the Leon Payne original, and was the best selling Australian alternative rock single for that year.\n\n However the group disbanded by mid-1985 and each member pursued other musical projects.\n\n They reformed in 1987 and issued a second album, \"Sour Mash\", in December 1988 on Red Eye Records.\n\n According to rock music historian, Ian McFarlane, it \"virtually redefined the parameters of guitar-based rock'n'roll.",
+    "American Hi-Fi\nAmerican Hi-Fi is an American rock band formed in Boston in 1998.\n\n The band consists of lead vocalist/rhythm guitarist Stacy Jones, lead guitarist Jamie Arentzen, bassist/backing vocalist Drew Parsons, and drummer Brian Nolan.\n\n Prior to the group's formation, Stacy Jones was well known for being a drummer in the successful alternative rock bands Veruca Salt and Letters to Cleo.\n\n American Hi-Fi has a close relationship with Miley Cyrus, whose band shares two members with American Hi-Fi.\n\n The group has a mixed musical style that includes influences from pop punk, alternative rock, and power pop.",
+    "Louis XIV (band)\nLouis XIV is an American rock band from San Diego, California.\n\n The band has released four EPs between 2003 and 2007, and three albums between 2003 and 2008, the latter two of which were distributed by Atlantic Records.\n\n The band broke up in 2009, but in 2013, in an interview with The Reno Dispatch, Jason Hill confirmed that the band had decided to reunite.",
+    "Sanctuary (band)\nSanctuary is an American heavy metal band founded in Seattle in 1985.\n\n They split up in 1992, but reformed 18 years later.\n\n The band consists of Warrel Dane (vocals), Lenny Rutledge (guitar), Nick Cordle (guitar), George Hernandez (bass), and Dave Budbill (drums).\n\n To date, they have released four studio albums and one live EP."
+   ]
+  },
+  {
+   "id": "b71f9616ab2f99ac",
+   "gold": [
+    {
+     "sentence": "Rynella is an unincorporated community in Iberia Parish, Louisiana, that consists of a few residential dwellings and a volunteer fire department along Highway 329 (also known as the Avery Island Highway).",
+     "facts": {
+      "0.0": "Rynella is an unincorporated community.",
+      "0.1": "Rynella is in Iberia Parish, Louisiana.",
+      "0.2": "Rynella consists of a few residential dwellings.",
+      "0.3": "Rynella has a volunteer fire department.",
+      "0.4": "The residential dwellings and the volunteer fire department are along Highway 329.",
+      "0.5": "Highway 329 is also known as the Avery Island Highway."
+     }
+    },
+    {
+     "sentence": " The name \"Rynella\" allegedly is an acronym deriving from the last two letters of the first names of three local women, Rosema\"RY\", Pauli\"NE\", and Lei\"LA\" McIlhenny (someone eventually adding an extra L to the resulting word).",
+     "facts": {
+      "1.0": "The name Rynella allegedly is an acronym.",
+      "1.1": "The acronym derives from the last two letters of the first names of three local women.",
+      "1.2": "The three local women are Rosema, Pauli, and Lei McIlhenny.",
+      "1.3": "The acronym uses the letters RY from Rosema, NE from Pauli, and LA from Lei.",
+      "1.4": "Someone eventually added an extra L to the resulting word."
+     }
+    },
+    {
+     "sentence": " They were daughters of Edward Avery McIlhenny, a noted Louisiana conservationist who presided over McIlhenny Company, maker of Tabasco brand pepper sauce at nearby Avery Island.",
+     "facts": {
+      "2.0": "The three women were daughters of Edward Avery McIlhenny.",
+      "2.1": "Edward Avery McIlhenny was a noted Louisiana conservationist.",
+      "2.2": "Edward Avery McIlhenny presided over McIlhenny Company.",
+      "2.3": "McIlhenny Company is the maker of Tabasco brand pepper sauce.",
+      "2.4": "McIlhenny Company is at nearby Avery Island."
+     }
+    },
+    {
+     "sentence": "Tabasco sauce is a brand of hot sauce made exclusively from tabasco peppers (\"Capsicum frutescens\" var.",
+     "facts": {
+      "3.0": "Tabasco sauce is a brand of hot sauce.",
+      "3.1": "Tabasco sauce is made exclusively from tabasco peppers.",
+      "3.2": "The tabasco pepper is Capsicum frutescens var. tabasco."
+     }
+    },
+    {
+     "sentence": " \"tabasco\"), vinegar, and salt.",
+     "facts": {
+      "4.0": "Tabasco sauce is made with vinegar.",
+      "4.1": "Tabasco sauce is made with salt."
+     }
+    }
+   ],
+   "items": [
+    "Rynella, Louisiana\nRynella is an unincorporated community in Iberia Parish, Louisiana, that consists of a few residential dwellings and a volunteer fire department along Highway 329 (also known as the Avery Island Highway).\n\n The name \"Rynella\" allegedly is an acronym deriving from the last two letters of the first names of three local women, Rosema\"RY\", Pauli\"NE\", and Lei\"LA\" McIlhenny (someone eventually adding an extra L to the resulting word).\n\n They were daughters of Edward Avery McIlhenny, a noted Louisiana conservationist who presided over McIlhenny Company, maker of Tabasco brand pepper sauce at nearby Avery Island.\n\n (At one time McIlhenny operated a general store at Rynella and he owned much of the land that now comprises and surrounds the community.)",
+    "Tabasco sauce\nTabasco sauce is a brand of hot sauce made exclusively from tabasco peppers (\"Capsicum frutescens\" var.\n\n \"tabasco\"), vinegar, and salt.\n\n It is produced by McIlhenny Company of Avery Island, Louisiana.",
+    "Louisiana Hot Sauce\nLouisiana Hot Sauce is a brand of hot sauce manufactured in New Iberia, Louisiana by The Original Louisiana Hot Sauce Co., which is owned by Southeastern Mills Inc.\n\n The product's labeling includes the word \"original\", and it is sometimes referred to as \"Original Louisiana Hot Sauce\" and \"Original Louisiana Brand Hot Sauce.\"\n\n It is a common hot sauce in the U.S. state of Louisiana.\n\n Bruce Foods was the previous owner and manufacturer of the brand, and sold it to Southeastern Mills Inc. in April 2015.",
+    "Raritan Water Power Canal\nThe Raritan Water Power Canal in Raritan, New Jersey was a three-mile long water power canal built during the early 1840s to power industries.\n\n The canal has been determined to be eligible for the National Register.\n\n The canal is included in Duke Island Park, as part of the Somerset County Park System.",
+    "Rapanea\nRapanea is a genus of plant in family Primulaceae.\n\n It has often been placed in synonymy with \"Myrsine\", and many species have been moved to \"Myrsine\".",
+    "Riverton, New York\nRiverton, New York was a planned community built in 1973 in the town of Henrietta, New York, along the Genesee River.\n\n Riverton was seventh of the thirteen communities receiving Federal guarantee assistance from HUD as part of their New Communities Program created by the Urban Growth and New Community Development Act of 1970.\n\n $12 million was earmarked for the community.\n\n Riverton was supposed to encompass a 2335 acre land area bordered on the north by the New York State Thruway, on the west by the Genesee River, on the east by East River Rd., and on the south by the Rush-Henrietta town line, with some development continuing east along Erie Station Rd.\n\n Original plans called for construction to occur for a 16-year period and eventually house over 25,000 people, with the community including an 18-hole golf course, 12 swimming pools, 3 artificial lakes, a marina on the Genesee, and commercial and industrial centers.\n\n However, only a small portion of this was built along Scottsville-West Henrietta Rd.",
+    "Crystal Hot Sauce\nCrystal Hot Sauce is a brand of Louisiana-style hot sauce produced by family-owned Baumer Foods since 1923.\n\n 3 e6USgal of Crystal Hot Sauce are shipped per year to 75 countries.\n\n The sauce is reddish orange with a medium heat and a milder, brighter flavor than Tabasco sauce.",
+    "Riverton, New York\nHowever, only a small portion of this was built along Scottsville-West Henrietta Rd.\n\n Created as part of the community were Riverton Knolls, a moderately priced townhouse subdivision, the Riverton Golf Club, a small 9-hole golf course, and the Riverton Park, which included a playground, baseball diamond, river front benches, walking trail, and a volleyball court.\n\n Also nestled in a bend in the Genesee was a 28 acre forested nature park.",
+    "Valentina (hot sauce)\nValentina is a brand of pourable hot sauce manufactured by Salsa Tamazula, a company in Guadalajara, Mexico.\n\n It is typically sold in 12.5-ounce and very large (one-liter or 34-ounce) glass bottles, with a flip-top cap permanently attached to the bottle (the cap does not unscrew).\n\n The sauce, and the parent company's Tamazula hot sauce, are made with puya chilis from Jalisco state – similar to the Guajillo chili and known by the name \"guajillo puya\" – is described as thicker than Tabasco sauce and less vinegary, with more chile flavor.\n\n Valentina comes in two varieties, hot and extra hot, and the sauce is known for its use on tacos and its taste, as opposed to only for its heat.\n\n Valentina's ingredients are water, chili peppers, vinegar, salt, spices and sodium benzoate (as a preservative).",
+    "Sriracha sauce\nSriracha (Thai: ศรีราชา ,  ] ; ) is a type of hot sauce or chili sauce made from a paste of chili peppers, distilled vinegar, garlic, sugar, and salt.\n\n It is named after the coastal city of Si Racha, in Chonburi Province of eastern Thailand, where it may have been first produced for dishes served at local seafood restaurants."
+   ]
+  },
+  {
+   "id": "8a33f1866dbe130a",
+   "gold": [
+    {
+     "sentence": "The Woolworth Building, at 233 Broadway, Manhattan, New York City, designed by architect Cass Gilbert and constructed between 1910 and 1912, is an early US skyscraper.",
+     "facts": {
+      "0.0": "The Woolworth Building is at 233 Broadway, Manhattan, New York City.",
+      "0.1": "The Woolworth Building was designed by architect Cass Gilbert.",
+      "0.2": "The Woolworth Building was constructed between 1910 and 1912.",
+      "0.3": "The Woolworth Building is an early US skyscraper."
+     }
+    },
+    {
+     "sentence": "1 New York Plaza is an office building in New York City's Financial District, built in 1969 at the intersection of South and Whitehall Streets.",
+     "facts": {
+      "1.0": "1 New York Plaza is an office building in New York City's Financial District.",
+      "1.1": "1 New York Plaza was built in 1969.",
+      "1.2": "1 New York Plaza is at the intersection of South and Whitehall Streets."
+     }
+    }
+   ],
+   "items": [
+    "90 West Street\n90 West Street (alternatively West Street Building) is a building in Lower Manhattan, New York City.\n\n It was designed by architect Cass Gilbert and structural engineer Gunvald Aus for the West Street Improvement Corporation.\n\n When completed in 1907, the building's Gothic styling and ornamentation served to emphasize its 23-story height, and foreshadowed Gilbert's later work on the Woolworth Building.\n\n Originally built as an office building, the main tenant was the Delaware, Lackawanna and Western Railroad and the top floor was occupied by Garret's Restaurant, which advertised itself as the \"world's highest restaurant\".",
+    "200 West Street\n200 West Street is the global headquarters of the Goldman Sachs investment banking firm.\n\n The building is a 749 ft , 44-story building located on West Street, between Vesey and Murray Streets in Lower Manhattan.\n\n It is adjacent to the World Financial Center and the Conrad Hotel, the Verizon Building to the east across West Street, and diagonally opposite the World Trade Center.\n\n It is the only office building in Battery Park City north of the World Financial Center.",
+    "270 Park Avenue\n270 Park Avenue (also known as the JPMorgan Chase Tower and formerly the Union Carbide Building) is a high-rise office building located in Midtown Manhattan, New York City.\n\n It was designed by Natalie de Blois for Skidmore, Owings & Merrill.",
+    "888 7th Avenue\n888 7th Avenue is a 628 ft (191m) tall modern-style office skyscraper in Midtown Manhattan which was completed in 1969 and has 46 floors.\n\n Emery Roth & Sons designed the building, which is tied with Central Park Place for the 65th tallest building in New York City.\n\n It currently carries the Vornado Realty Trust corporate headquarters.\n\n Previously known as the Arlen Building, its namesake being the company responsible for its construction, Arlen Realty & Development Corporation.\n\n The Red Eye Grill is located in the building at street level.",
+    "Transportation Building\nThe Transportation Building is a 44-story office building located at 225 Broadway on the corner of Barclay Street in the Civic Center neighborhood of Lower Manhattan in New York City.\n\n It also carries the address 2-4 Barclay Street.\n\n It was built in 1927 and was designed by the architecture firm of York & Sawyer, in the Renaissance Revival style, using setbacks common to skyscrapers built after the adoption of the 1916 Zoning Resolution.\n\n It sits across Barclay Street from the Woolworth Building.",
+    "245 Park Avenue\n245 Park Avenue (formerly American Tobacco Company Building, American Brands Building and Bear Stearns Building) is a 648-ft (198 m) tall skyscraper in New York City, New York.\n\n It was completed in 1967 and has 48 floors (1.7 million square feet).\n\n Shreve, Lamb and Harmon designed the building.\n\n The Building Owners and Managers Association awarded the 2000/2001 Pinnacle Award to 245 Park Avenue.\n\n The site used to be occupied by the second Grand Central Palace exhibition hall, which was demolished in 1964 to make way for 245 Park Avenue.",
+    "Woolworth Building\nThe Woolworth Building, at 233 Broadway, Manhattan, New York City, designed by architect Cass Gilbert and constructed between 1910 and 1912, is an early US skyscraper.\n\n The original site for the building was purchased by F. W. Woolworth and his real estate agent Edward J. Hogan by April 15, 1910, from the Trenor Luther Park Estate and other owners for $1.65 million.\n\n By January 18, 1911, Woolworth and Hogan had acquired the final site for the project, totaling $4.5 million.\n\n More than a century after its construction, it remains, at 241.4 m , one of the 100 tallest buildings in the United States as well as one of the 30 tallest buildings in New York City.\n\n It has been a National Historic Landmark since 1966, and a New York City landmark since 1983.",
+    "1 New York Plaza\n1 New York Plaza is an office building in New York City's Financial District, built in 1969 at the intersection of South and Whitehall Streets.\n\n It is the southernmost of all Manhattan skyscrapers.",
+    "655 Park Avenue\n655 Park Avenue is a Georgian-style co-op residential building on Manhattan's Upper East Side, located on Park Avenue between 67th Street and 68th Street, adjacent to the Park Avenue Armory.\n\n It was developed in 1924 by Dwight P. Robinson & Company.\n\n The building at 655 Park Avenue was designed by architects James Edwin Ruthven Carpenter, Jr., often referred to by the initials \"J.E.R. Carpenter\", and Mott B. Schmidt.\n\n Carpenter is considered the leading architect for luxury residential high-rise buildings in New York City in the early 1900s, while Schmidt is known for his buildings in the American Georgian Classical style, including Sutton Place and houses for New York City's society figures and business elite.",
+    "F. W. Woolworth Building (Watertown, New York)\nThe Woolworth Building is an historic building in Watertown, New York.\n\n It is a contributing building in the Public Square Historic District.\n\n Plans for the Woolworth Building were begun in 1916 by Frank W. Woolworth, the founder of the Woolworth's chain of department stores."
+   ]
+  },
+  {
+   "id": "0a4051b8d9ffb964",
+   "gold": [
+    {
+     "sentence": "Pietro Alessandro Gaspare Scarlatti (2 May 1660 – 22 October 1725) was an Italian Baroque composer, especially famous for his operas and chamber cantatas.",
+     "facts": {
+      "0.0": "Pietro Alessandro Gaspare Scarlatti was born on 2 May 1660.",
+      "0.1": "Pietro Alessandro Gaspare Scarlatti died on 22 October 1725.",
+      "0.2": "Pietro Alessandro Gaspare Scarlatti was an Italian Baroque composer.",
+      "0.3": "Pietro Alessandro Gaspare Scarlatti was especially famous for his operas.",
+      "0.4": "Pietro Alessandro Gaspare Scarlatti was especially famous for his chamber cantatas."
+     }
+    },
+    {
+     "sentence": "Pyotr Ilyich Tchaikovsky ( ; Russian: Пётр Ильи́ч Чайко́вский ; 25 April/7 May 1840 – 25 October/6 November 1893), often anglicized as Peter Ilich Tchaikovsky, was a Russian composer of the romantic period, some of whose works are among the most popular music in the classical repertoire.",
+     "facts": {
+      "1.0": "The Russian name of Pyotr Ilyich Tchaikovsky is Пётр Ильи́ч Чайко́вский.",
+      "1.1": "Pyotr Ilyich Tchaikovsky was born on 25 April/7 May 1840.",
+      "1.2": "Pyotr Ilyich Tchaikovsky died on 25 October/6 November 1893.",
+      "1.3": "Pyotr Ilyich Tchaikovsky is often anglicized as Peter Ilich Tchaikovsky.",
+      "1.4": "Pyotr Ilyich Tchaikovsky was a Russian composer of the romantic period.",
+      "1.5": "Some works by Pyotr Ilyich Tchaikovsky are among the most popular music in the classical repertoire."
+     }
+    },
+    {
+     "sentence": " He was the first Russian composer whose music made a lasting impression internationally, bolstered by his appearances as a guest conductor in Europe and the United States.",
+     "facts": {
+      "2.0": "Tchaikovsky was the first Russian composer whose music made a lasting impression internationally.",
+      "2.1": "The international impression of Tchaikovsky's music was bolstered by his appearances as a guest conductor.",
+      "2.2": "Tchaikovsky appeared as a guest conductor in Europe.",
+      "2.3": "Tchaikovsky appeared as a guest conductor in the United States."
+     }
+    }
+   ],
+   "items": [
+    "Alessandro Scarlatti\nPietro Alessandro Gaspare Scarlatti (2 May 1660 – 22 October 1725) was an Italian Baroque composer, especially famous for his operas and chamber cantatas.\n\n He is considered the founder of the Neapolitan school of opera.\n\n He was the father of two other composers, Domenico Scarlatti and Pietro Filippo Scarlatti.",
+    "Piano Sonata in C-sharp minor (Tchaikovsky)\nThe Piano Sonata in C-sharp minor, Op.\n\n posth.\n\n 80, was written by Russian composer Pyotr Ilyich Tchaikovsky in 1865, his last year as a student at the St Petersburg Conservatory.\n\n The sonata in its original form was not published in Tchaikovsky's lifetime; it was published in 1900 by P. Jurgenson, and given the posthumous opus number 80.",
+    "International Tchaikovsky Competition\nThe International Tchaikovsky Competition is a classical-music competition held every four years in Moscow, Russia, for pianists, violinists, and cellists between 16 and 32 years of age, and singers between 19 and 32 years of age.\n\n The competition is named after Russian composer Pyotr Ilyich Tchaikovsky and is an active member of the World Federation of International Music Competitions.",
+    "Tchaikovsky (film)\nTchaikovsky (Russian: Чайковский ) is a 1970 Soviet biopic film directed by Igor Talankin.\n\n It featured Innokenty Smoktunovsky in the role of the famous Russian composer Pyotr Ilyich Tchaikovsky.\n\n It was nominated for the 1971 Academy Award for Best Foreign Language Film as well as the Academy Award for Original Song Score and Adaptation.",
+    "Chaikovskij (crater)\nChaikovskij (sometimes Tchaikovsky) is a crater on Mercury.\n\n It has a diameter of 165 kilometers.\n\n Its name was adopted by the International Astronomical Union in 1976.\n\n Chaikovskij is named for the Russian composer Pyotr Ilyich Tchaikovsky, who lived from 1840 to 1893.",
+    "Kamarinskaya\nKamarinskaya (Russian: камаринская ) is a Russian traditional folk dance, which is mostly known today as the Russian composer Mikhail Glinka's composition of the same name.\n\n Glinka's \"Kamarinskaya\", written in 1848, was the first orchestral work based entirely on Russian folk song and to use the compositional principles of that genre to dictate the form of the music.\n\n It became a touchstone for the following generation of Russian composers ranging from the Western-oriented Pyotr Ilyich Tchaikovsky to the group of nationalists known collectively as The Five and was also lauded abroad, most notably by French composer Hector Berlioz.",
+    "Piano Concerto No. 2 (Tchaikovsky)\nPyotr Ilyich Tchaikovsky's Piano Concerto No. 2 in G major, Op.\n\n 44, was written in 1879–1880.\n\n It was dedicated to Nikolai Rubinstein, who had insisted he be allowed to perform it at the premiere as a way of making up for his harsh criticism of Tchaikovsky's First Piano Concerto.\n\n Rubinstein was destined never to play it, however, as he died in March 1881.\n\n The premiere performance took place in New York City, on 12 November 1881.\n\n The soloist was Madeline Schiller, and Theodore Thomas conducted the New York Philharmonic orchestra.\n\n The first Russian performance was in Moscow in May 1882, conducted by Anton Rubinstein with Tchaikovsky's pupil, Sergei Taneyev, at the piano.",
+    "Symphony No. 2 (Rachmaninoff)\nSymphony No. 2 in E minor, Op. 27 is a symphony by the Russian composer Sergei Rachmaninoff, written in 1906–07.\n\n The premiere was conducted by the composer himself in Saint Petersburg on 8 February 1908.\n\n Its duration is approximately 60 minutes when performed uncut; cut performances can be as short as 35 minutes.\n\n The score is dedicated to Sergei Taneyev, a Russian composer, teacher, theorist, author, and pupil of Pyotr Ilyich Tchaikovsky.\n\n Alongside his Piano Concerto No. 2 and Piano Concerto No. 3, this symphony remains one of the composer's best known compositions.",
+    "Pyotr Ilyich Tchaikovsky\nPyotr Ilyich Tchaikovsky ( ; Russian: Пётр Ильи́ч Чайко́вский ; 25 April/7 May 1840 – 25 October/6 November 1893), often anglicized as Peter Ilich Tchaikovsky, was a Russian composer of the romantic period, some of whose works are among the most popular music in the classical repertoire.\n\n He was the first Russian composer whose music made a lasting impression internationally, bolstered by his appearances as a guest conductor in Europe and the United States.\n\n Tchaikovsky was honored in 1884, by Emperor Alexander III, and awarded a lifetime pension.",
+    "Aleksandr Ivanovsky\nAleksandr Ivanovsky (1881–1968) was a Russian screenwriter and film director who worked during the Soviet era.\n\n Ivanovsky was awarded the Stalin Prize in 1941, for his work on the 1940 film \"Musical Story\".\n\n His 1944 operetta film \"Silva\" was one of the most popular releases in the Soviet Union that year."
+   ]
+  },
+  {
+   "id": "2689a5bedc1f0710",
+   "gold": [
+    {
+     "sentence": "\", \"My Life As A Teenage Robot\" and \"The Replacements\" and he also did the voice of Knotty in \"\" (1992) and he also did additional voices in films \"Fantasia 2000\" (1999) and \"Sing\" (2016)",
+     "facts": {
+      "0.0": "This person did voice work for My Life As A Teenage Robot.",
+      "0.1": "This person did voice work for The Replacements.",
+      "0.2": "This person did the voice of Knotty in a 1992 work whose title is blank in the sentence.",
+      "0.3": "This person did additional voices in the film Fantasia 2000 (1999).",
+      "0.4": "This person did additional voices in the film Sing (2016)."
+     }
+    },
+    {
+     "sentence": " It was directed and written by Garth Jennings, co-directed by Christophe Lourdelet, and starring the voices of Matthew McConaughey, Reese Witherspoon, Seth MacFarlane, Scarlett Johansson, John C. Reilly, Taron Egerton, and Tori Kelly.",
+     "facts": {
+      "1.0": "The film was directed by Garth Jennings.",
+      "1.1": "The film was written by Garth Jennings.",
+      "1.2": "The film was co-directed by Christophe Lourdelet.",
+      "1.3": "The film starred the voices of Matthew McConaughey.",
+      "1.4": "The film starred the voices of Reese Witherspoon.",
+      "1.5": "The film starred the voices of Seth MacFarlane.",
+      "1.6": "The film starred the voices of Scarlett Johansson.",
+      "1.7": "The film starred the voices of John C. Reilly.",
+      "1.8": "The film starred the voices of Taron Egerton.",
+      "1.9": "The film starred the voices of Tori Kelly."
+     }
+    }
+   ],
+   "items": [
+    "Townsend Coleman\nTownsend Putnam Coleman III (born May 28, 1954) is an American voice actor who performed in many animated series and TV commercials beginning in the early 1980s.\n\n Among his most notable roles are Michaelangelo from \"Teenage Mutant Ninja Turtles\", Wayne Gretzky on \"ProStars\" and the title character in \"Where's Waldo?\n\n\" and the eponymous \"The Tick\" and he also did additional voices in \"Dexter's Laboratory\", \"The Powerpuff Girls\", \"Adventure Time\", \"Animaniacs\", \"The Buzz on Maggie\", \"Camp Lazlo\", \"CatDog\", \"Catscratch\", \"Danny Phantom\", \"Dave the Barbarian\", \"\", \"The Fairly OddParents\", \"Foster's Home for Imaginary Friends\", \"Gravity Falls\", \"Hi Hi Puffy AmiYumi\", \"\", \"The Loud House\", \"The Mighty B!\n\n\", \"My Life As A Teenage Robot\" and \"The Replacements\" and he also did the voice of Knotty in \"\" (1992) and he also did additional voices in films \"Fantasia 2000\" (1999) and \"Sing\" (2016)",
+    "Sing (2016 American film)\nSing is a 2016 American 3D computer-animated musical comedy film produced by Illumination Entertainment.\n\n It was directed and written by Garth Jennings, co-directed by Christophe Lourdelet, and starring the voices of Matthew McConaughey, Reese Witherspoon, Seth MacFarlane, Scarlett Johansson, John C. Reilly, Taron Egerton, and Tori Kelly.\n\n The film is about a group of anthropomorphic animals that enter a singing competition, hosted by a koala hoping to save his theater.",
+    "♯JusticeForFlint\nInitiated by \"Creed\" director Ryan Coogler and \"Selma\" director Ava DuVernay, the free public event was held at the Whiting Auditorium in Flint, Michigan.\n\n Hosted by comedian Hannibal Buress, it featured singers Janelle Monáe and Ledisi, as well as actor-activists Jesse Williams and Jussie Smollett, amongst others.\n\n Surprising star guest was \"King of Motown\" Stevie Wonder, who teamed up with Monáe for \"Hell You Talkin' Bout\", a protest song she had written for the people of Flint.",
+    "Are We Done Yet?\nAre We Done Yet?\n\n is a 2007 American family comedy film starring Ice Cube.\n\n The film is a remake of the Cary Grant comedy \"Mr. Blandings Builds His Dream House\" and a sequel to the 2005 comedy \"Are We There Yet?\n\n\" The film was directed by Steve Carr from a screenplay by Hank Nelken.\n\n It was produced by Revolution Studios and RKO Pictures and distributed by Columbia Pictures.\n\n The film was shot on location in Tsawwassen, British Columbia, Canada, but is set in Newberg, Oregon, United States.",
+    "Winnie the Pooh (2011 film)\nWinnie the Pooh is a 2011 American animated buddy musical comedy film produced by Walt Disney Animation Studios and released by Walt Disney Pictures.\n\n It is the 51st Disney animated feature film.\n\n Inspired by A. A. Milne's stories of the same name, the film is part of Disney's \"Winnie the Pooh\" franchise, the fifth theatrical \"Winnie the Pooh\" film released, and Walt Disney Animation Studios' second adaptation of \"Winnie-the-Pooh\" stories.\n\n Jim Cummings reprises his vocal roles as Winnie the Pooh and Tigger, while series newcomers Travis Oates, Tom Kenny, Craig Ferguson, Bud Luckey, and Kristen Anderson-Lopez provide the voices of Piglet, Rabbit, Owl, Eeyore, and Kanga, respectively.\n\n In the film, the aforementioned residents of the Hundred Acre Wood embark on a quest to save Christopher Robin from an imaginary culprit while Pooh deals with a hunger for honey.",
+    "Winnie the Pooh (2011 film)\nThe film is directed by Stephen Anderson and Don Hall, adapted from Milne's books by a story team led by Burny Mattinson, produced by Peter Del Vecho, Clark Spencer, John Lasseter, and Craig Sost, and narrated by John Cleese.",
+    "McFarland, USA\nMcFarland, USA (also known as McFarland) is a 2015 American sports drama film directed by Niki Caro, produced by Mark Ciardi and Gordon Gray, written by Christopher Cleveland, Bettina Gilois and Grant Thompson with music composed by Antônio Pinto.\n\n The film was co-produced by Walt Disney Pictures and Mayhem Pictures.\n\n Based on the true story of a 1987 cross country team from a mainly Latino high school in McFarland, California, the film stars Kevin Costner as Jim White, the school's coach, who leads the team to win a state championship.\n\n The film also stars Maria Bello and Morgan Saylor.",
+    "James Dooley (composer)\nJames Michael \"Jim\" Dooley (born August 22, 1976 in New York City, New York) is an American film score composer.\n\n Dooley studied music at New York University, majoring in music composition.\n\n After finishing the university he moved to Los Angeles, where he studied music with prolific film score composers Christopher Young, Elmer Bernstein and Leonard Rosenman.\n\n In 1999, he started working for Hans Zimmer as his chief technical assistant.\n\n He works in Santa Monica, in Hans Zimmer's film music studio Remote Control Productions (formerly \"Media Ventures\").\n\n He composed, arranged, and orchestrated music for films like \"\" and \"The Da Vinci Code\".\n\n He also composed music for \"inFAMOUS 2\", the Epic Mickey series and worked with Celldweller and Tarja Turunen.\n\n He released his debut album, \"Veiled Nation\", in 2013.",
+    "Deep Dark Canyon\nDeep Dark Canyon is a 2012 American independent dramatic thriller film by husband and wife writer/director team Abe Levy and Silver Tree.\n\n The film stars Ted Levine, Nick Eversman and Spencer Treat Clark.\n\n The film was originally called \"Lawless\" and was shot on location in the rural town of Guerneville, California.",
+    "Small Apartments\nSmall Apartments is a 2012 American comedy film directed by Jonas Åkerlund.\n\n It tells the story of Franklin Franklin, played by Matt Lucas, who by mistake kills his landlord, Mr. Olivetti, played by Peter Stormare.\n\n The cast co-stars Dolph Lundgren, Johnny Knoxville, James Caan, Billy Crystal, Juno Temple, Rebel Wilson, Saffron Burrows and Amanda Plummer.\n\n The screenplay was written by Chris Millis and adapted from his own novella.\n\n The film premiered at the South by Southwest Film Festival on March 10, 2012."
+   ]
+  },
+  {
+   "id": "a5d4b56c7742d216",
+   "gold": [
+    {
+     "sentence": " It is found in Yemen and India.",
+     "facts": {
+      "0.0": "The subject of this sentence is found in Yemen.",
+      "0.1": "The subject of this sentence is found in India."
+     }
+    },
+    {
+     "sentence": " Because of this, Yemen's capital has been temporarily relocated to the port city of Aden, on the southern coast.",
+     "facts": {
+      "1.0": "Yemen's capital has been temporarily relocated to the port city of Aden.",
+      "1.1": "Aden is on the southern coast.",
+      "1.2": "The relocation is stated to be because of the content of the previous sentence."
+     }
+    }
+   ],
+   "items": [
+    "Aulacodes templalis\nAulacodes templalis is a moth in the Crambidae family.\n\n It was described by Schaus in 1906.\n\n It is found in Brazil.",
+    "Ornithodoros savignyi\nBecause of its habit of feeding and dropping from its host, adult dispersal is limited, whereas larvae may remain attached to their hosts for several days.\n\n During its life cycle it will feed on multiple hosts between moults.",
+    "Al Khor (city)\nAl Khor is a coastal city in northern Qatar, located 50 kilometres north of the capital, Doha.\n\n It is the capital city of the municipality of Al Khor.\n\n The name of the city means creek in Arabic as the town is located on a creek.\n\n Al Khor is home to many employees of the oil industry due to its proximity to Qatar's northern oil and natural gas fields, and due to its proximity to the Ras Laffan Industrial City.",
+    "Kallima paralekta\nKallima paralekta, the Indian leafwing or Malayan leafwing, is a species of brush-footed butterfly of the genus \"Kallima\".\n\n Despite its common names, it is not found in India or Malaysia, but is endemic to Java and Sumatra of Indonesia.\n\n Like other members of its genus, it is remarkable for its strong resemblance to a dead leaf when its wings are folded.\n\n It was one of the species encountered by the British naturalist Alfred Russel Wallace in his travels in maritime Southeast Asia.\n\n It is mentioned in his famous 19th-century work \"The Malay Archipelago\" as one of the best examples of protective camouflage achieved through natural selection.",
+    "Amka\nAmka (Hebrew: עַמְקָה‎ ), also known in Arabic as Amqa (Arabic: عمقا‎ ‎ ), is a moshav in the Matte Asher Regional Council of Israel's Northern District, near Acre.\n\n The location of the moshav roughly corresponds the former Arab village, depopulated during the 1948 Arab–Israeli War.\n\n Yemenite Jews, who arrived from the southern Arab country of Yemen, founded the village's successor Amka in 1949.\n\n In 2016 its population was 706 .",
+    "Agrotis orthogonia\nThe Pale Western Cutworm (\"Agrotis orthogonia\") is a moth of the Noctuidae family.\n\n It is found in North America, more specifically dry, semi-desert areas of western North America from southern Canada to California, ranging eastward nearly to the eastern edge of the Great Plains.",
+    "Aulacodes peribocalis\nAulacodes peribocalis is a moth in the Crambidae family.\n\n It was described by Walker in 1859.\n\n It is found in Yemen and India.",
+    "Ta'if Regional Airport\nTa'if Regional Airport (IATA: TIF, ICAO: OETF) is an airport in Ta'if, Saudi Arabia.\n\n Despite its name, it also offers many international flights as well.\n\n The airport is located 30 km to the east of Taif and 70 km from Mecca.\n\n The airport is considered important in Saudi aviation history as it witnessed the first landing of Ibn Saud's plane, founder of the Kingdom.\n\n It was converted to a regional airport in 2009 when GACA allowed international airlines to operate at the airport as the city's population was increasing and to reduce pressure on the three main airports at the time.\n\n Despite being named as a \"Regional\" airport, the airport actually has international flights destinations in half a dozen countries outside of Saudi Arabia.",
+    "Aulacodes traversalis\nAulacodes traversalis is a moth in the Crambidae family.\n\n It was described by Harrison Gray Dyar Jr. in 1914.\n\n It is found in Panama.",
+    "Yemen\nYemen ( ; Arabic: اليَمَن‎ ‎ \"al-Yaman \"), officially known as the Republic of Yemen (الجمهورية اليمنية \"al-Jumhūrīyah al-Yamanīyah \"), is an Arab country in Western Asia at the southern end of the Arabian Peninsula.\n\n Yemen is the second-largest country in the peninsula, occupying 527,970 km (203,850 sq mi).\n\n The coastline stretches for about 2,000 km (1,200 mi).\n\n It is bordered by Saudi Arabia to the north, the Red Sea to the west, the Gulf of Aden and Arabian Sea to the south, and Oman to the east-northeast.\n\n Although Yemen's constitutionally stated capital is the city of Sana'a, the city has been under rebel control since February 2015.\n\n Because of this, Yemen's capital has been temporarily relocated to the port city of Aden, on the southern coast.\n\n Yemen's territory includes more than 200 islands; the largest of these is Socotra."
+   ]
+  },
+  {
+   "id": "6bc312bc73fd020e",
+   "gold": [
+    {
+     "sentence": "Orlando Brown (born December 4, 1987) is an American actor, voice actor, rapper and singer.",
+     "facts": {
+      "0.0": "Orlando Brown was born on December 4, 1987.",
+      "0.1": "Orlando Brown is an American actor.",
+      "0.2": "Orlando Brown is a voice actor.",
+      "0.3": "Orlando Brown is a rapper.",
+      "0.4": "Orlando Brown is a singer."
+     }
+    },
+    {
+     "sentence": " He is best known for his role as Eddie Thomas in \"That's So Raven\", 3J Winslow in \"Family Matters\", Tiger in \"Major Payne\", Max in \"Two of a Kind\", Damey Wayne in the short-lived Waynehead, Dobbs in \"Max Keeble's Big Move\", and Frankie in \"Eddie's Million Dollar Cook Off\".",
+     "facts": {
+      "1.0": "Orlando Brown is best known for his role as Eddie Thomas in \"That's So Raven\".",
+      "1.1": "Orlando Brown is best known for his role as 3J Winslow in \"Family Matters\".",
+      "1.2": "Orlando Brown is best known for his role as Tiger in \"Major Payne\".",
+      "1.3": "Orlando Brown is best known for his role as Max in \"Two of a Kind\".",
+      "1.4": "Orlando Brown is best known for his role as Damey Wayne in the short-lived Waynehead.",
+      "1.5": "Orlando Brown is best known for his role as Dobbs in \"Max Keeble's Big Move\".",
+      "1.6": "Orlando Brown is best known for his role as Frankie in \"Eddie's Million Dollar Cook Off\"."
+     }
+    },
+    {
+     "sentence": "Family Matters is an American sitcom which originated on ABC from September 22, 1989 to May 9, 1997, before moving to CBS from September 19, 1997 to July 17, 1998.",
+     "facts": {
+      "2.0": "Family Matters is an American sitcom.",
+      "2.1": "Family Matters originated on ABC.",
+      "2.2": "Family Matters originated on ABC from September 22, 1989 to May 9, 1997.",
+      "2.3": "Family Matters moved to CBS after its ABC run.",
+      "2.4": "Family Matters was on CBS from September 19, 1997 to July 17, 1998."
+     }
+    },
+    {
+     "sentence": " A spin-off of \"Perfect Strangers,\" the series revolves around the Winslow family, a middle-class African American family living in Chicago, Illinois.",
+     "facts": {
+      "3.0": "Family Matters is a spin-off of \"Perfect Strangers.\"",
+      "3.1": "Family Matters revolves around the Winslow family.",
+      "3.2": "The Winslow family is a middle-class African American family.",
+      "3.3": "The Winslow family lives in Chicago, Illinois."
+     }
+    }
+   ],
+   "items": [
+    "Darius McCrary\nDarius Creston McCrary (born May 1, 1976) is an American film and television actor and singer.\n\n He is best known for his role as Edward \"Eddie\" Winslow, the oldest child of Carl and Harriette Winslow on the ABC/CBS television sitcom \"Family Matters \"which ran from 1989–1998.\n\n Another one of McCrary's notable roles was as Scam in the 1987 comedy film \"Big Shots\", which was his film debut.\n\n He provided the voice of Jazz in the 2007 \"Transformers\" reboot.\n\n From December 2009 to October 2011, he portrayed photographer Malcolm Winters on the CBS daytime drama \"The Young and the Restless\".",
+    "Orlando Brown (actor)\nOrlando Brown (born December 4, 1987) is an American actor, voice actor, rapper and singer.\n\n He is best known for his role as Eddie Thomas in \"That's So Raven\", 3J Winslow in \"Family Matters\", Tiger in \"Major Payne\", Max in \"Two of a Kind\", Damey Wayne in the short-lived Waynehead, Dobbs in \"Max Keeble's Big Move\", and Frankie in \"Eddie's Million Dollar Cook Off\".",
+    "The Simpsons Spin-Off Showcase\n\"The Simpsons Spin-Off Showcase\" is the twenty-fourth episode of the eighth season of \"The Simpsons\".\n\n It originally aired on the Fox network in the United States on May 11, 1997.\n\n The episode centers on fictional pilot episodes of non-existent television series derived from \"The Simpsons\", and is a parody of the tendency of networks to spin off characters from a hit series.\n\n As such it includes references to many different TV series.\n\n The first fictional spin-off is \"Chief Wiggum P.I.\", a cop-drama featuring Chief Wiggum and Seymour Skinner.\n\n The second is \"The Love-matic Grampa\", a sitcom featuring Moe Szyslak who receives dating advice from Abraham Simpson, whose ghost is possessing a love testing machine.\n\n The final segment is \"The Simpson Family Smile-Time Variety Hour\", a variety show featuring the Simpson family except for Lisa, who has been replaced.",
+    "In Living Color\nIn Living Color is an American sketch comedy television series that originally ran on Fox from April 15, 1990, to May 19, 1994.\n\n Brothers Keenen and Damon Wayans created, wrote and starred in the program.\n\n The show was produced by Ivory Way Productions in association with 20th Century Fox Television and was taped at stage 7 at the Fox Television Center on Sunset Boulevard in Hollywood, California.\n\n The title of the series was inspired by the NBC announcement of broadcasts being presented \"in living color\" during the 1960s, prior to mainstream color television.\n\n It also refers to the fact that most of the show's cast were black, unlike other sketch comedy shows such as \"Saturday Night Live\" whose casts are mostly white.\n\n It was controversial due to the Wayans' decision to portray African-American humor from the ghetto in a time when mainstream American tastes regarding black comedy had been set by more upscale shows such as \"The Cosby Show\", causing an eventual feud for control between Fox executives and the Wayans.",
+    "Lamman Rucker\nLamman Rucker (born October 6, 1971) is an American actor.\n\n Rucker began his career on the daytime soap operas \"As the World Turns\" and \"All My Children\", before roles in Tyler Perry's films \"Why Did I Get Married?\n\n\", \"Why Did I Get Married Too?\n\n\", and \"Meet the Browns\", and its television adaptation.\n\n In 2016, he began starring as Jacob Greenleaf in the Oprah Winfrey Network drama series, \"Greenleaf\".",
+    "Randy J. Goodwin\nRandy J. Goodwin, born as Ivan Jerome Goodwin, is a Hollywood actor.\n\n He is perhaps best known for his role as \"Kennedy Winslow\" on \"Fast Track\" and \"Max Ellis\" on the show \"Abby\", as well as his recurring roles on \"Girlfriends\" as \"Davis Hamilton\" and \"The Vampire Diaries\" as \"Dr. Jonas Martin\".",
+    "Jaimee Foxworth\nJaimee Monae Foxworth (born December 17, 1979) is an American actress and model.\n\n She is best known for her role of Judy Winslow, the youngest daughter of Carl and Harriette Winslow on the ABC/CBS sitcom \"Family Matters\".\n\n She later transitioned to pornographic films using the name Crave, starring in several titles.",
+    "Family Matters\nFamily Matters is an American sitcom which originated on ABC from September 22, 1989 to May 9, 1997, before moving to CBS from September 19, 1997 to July 17, 1998.\n\n A spin-off of \"Perfect Strangers,\" the series revolves around the Winslow family, a middle-class African American family living in Chicago, Illinois.\n\n Midway through the first season, the show introduced the Winslows' nerdy neighbor Steve Urkel (Jaleel White), who quickly became its breakout character and eventually the show's main character.\n\n Having run for nine seasons, \"Family Matters\" became the second longest-running non-animated US sitcom with a predominantly African American cast, behind only \"The Jeffersons\" (11).\n\n Having aired 215 episodes, \"Family Matters\" is ranked third, behind only \"Tyler Perry's House of Payne\" (254), and \"The Jeffersons\" (253).",
+    "Michael Jai White\nMichael Jai White (born November 10, 1967) is an American actor and martial artist who has appeared in numerous films and television series.\n\n He is the first African American to portray a major comic book superhero in a major motion picture, having starred as Al Simmons, the protagonist in the 1997 film \"Spawn\".\n\n White appeared as Marcus Williams in the Tyler Perry films \"Why Did I Get Married?\n\n\" and \"Why Did I Get Married Too?\n\n\", and starred as the character on the TBS/OWN comedy-drama television series \"Tyler Perry's For Better or Worse\".\n\n White portrayed Jax Briggs in \"\".\n\n White also portrayed boxer Mike Tyson in the 1995 HBO television movie \"Tyson\", and starred as Black Dynamite.",
+    "Tyler Perry's For Better or Worse\nTyler Perry's For Better or Worse is an American television sitcom created, written and executive produced by Tyler Perry.\n\n The series is based on and is a TV spin-off to Perry's 2007 film \"Why Did I Get Married?\n\n\" and its 2010 sequel \"Why Did I Get Married Too?\n\n\".\n\n The show premiered on TBS on November 25, 2011 and ended on July 22, 2017.\n\n Led by the comical, over-the-top antics of Marcus and Angela Williams, the ensemble follows three couples: Marcus and Angela, Joseph and Leslie, and Richard and Keisha who are at various stages of their relationships as they go through the ups-and-downs of married life and dating.\n\n The third season of the series premiered on September 18, 2013, on the Oprah Winfrey Network."
+   ]
+  },
+  {
+   "id": "0b979e58a66e9bdf",
+   "gold": [
+    {
+     "sentence": "Talking Heads were an American rock band formed in 1975 in New York City and active until 1991.",
+     "facts": {
+      "0.0": "Talking Heads were an American rock band.",
+      "0.1": "Talking Heads were formed in 1975.",
+      "0.2": "Talking Heads were formed in New York City.",
+      "0.3": "Talking Heads were active until 1991."
+     }
+    },
+    {
+     "sentence": " is a surf rock group that formed in Auburn, Alabama, in the early 1990s and came to prominence over the following decade.",
+     "facts": {
+      "1.0": "The group is a surf rock group.",
+      "1.1": "The group formed in Auburn, Alabama.",
+      "1.2": "The group formed in the early 1990s.",
+      "1.3": "The group came to prominence over the following decade."
+     }
+    }
+   ],
+   "items": [
+    "New World Man\n\"New World Man\" is a track from the 1982 album \"Signals\" by Canadian rock band Rush.\n\n The song was the last and quickest composed song on the album, stemming from a suggestion by then-Rush producer Terry Brown to even out the lengths of the two sides of the cassette version.\n\n It went to #1 (on the \"RPM\" national singles chart) in Canada, where it remained for two weeks in October 1982.\n\n Less successful in the United States, it nonetheless remains Rush's only American Top 40 hit, peaking at #21 on the \"Billboard\" singles chart for three weeks in October and November 1982.\n\n It also topped the \"Billboard\" Top Tracks chart for two weeks (their first single to do so).\n\n \"New World Man\" also reached #42 in the UK; a remixed version released as a double A-side with \"Countdown\" later reached #36 in the UK in early 1983.",
+    "Talking Heads\nTalking Heads were an American rock band formed in 1975 in New York City and active until 1991.\n\n The band comprised David Byrne (lead vocals, guitar), Chris Frantz (drums), Tina Weymouth (bass), and Jerry Harrison (keyboards, guitar).\n\n Described by critic Stephen Thomas Erlewine as \"one of the most critically acclaimed bands of the '80s,\" the group helped to pioneer new wave music by integrating elements of punk, art rock, funk, and world music with avant-garde sensibilities and an anxious, clean-cut image.",
+    "No Talking, Just Head\nNo Talking, Just Head is an album released in 1996 by The Heads, a band composed of Jerry Harrison, Tina Weymouth, and Chris Frantz of Talking Heads, joined by a variety of guest singers.\n\n Its name may be seen as an allusion to the fact that Talking Heads' former vocalist, David Byrne, is the only member not involved.",
+    "More Songs About Buildings and Food\nMore Songs About Buildings and Food is the second studio album by the American rock band Talking Heads, released in July 1978.\n\n The album was the first of three Talking Heads LPs produced by collaborator Brian Eno.\n\n It saw the group move musically toward a danceable style, crossing singer David Byrne's unusual delivery with new emphasis on the rhythm section (made up of bassist Tina Weymouth and drummer Chris Frantz).",
+    "Talking Heads: 77\nTalking Heads: 77 is the debut album by the American rock band Talking Heads, released in September 1977.\n\n The single \"Psycho Killer\" reached No. 92 on the Billboard Hot 100 Chart.\n\n In 2003, the album was ranked No. 290 on \"Rolling Stone\" magazine's The 500 Greatest Albums of All Time list.",
+    "Motion City Soundtrack\nMotion City Soundtrack was an American rock band that formed in Minneapolis, Minnesota in 1997.\n\n The band's line-up consisted of vocalist and guitarist Justin Pierre, lead guitarist Joshua Cain, keyboardist Jesse Johnson, bassist Matthew Taylor, and drummer Tony Thaxton.\n\n Over the course of their nearly twenty-year career, the group toured heavily and released six studio albums, the majority on independent label Epitaph Records.\n\n The band's sound, at times described as pop punk or emo, made notable use of the Moog synthesizer.",
+    "Head Automatica\nHead Automatica is an American rock band from Long Island, New York fronted by Daryl Palumbo (also of Glassjaw).",
+    "Method Man\nClifford Smith (born April 1, 1971), better known by his stage name Method Man, is an American rapper, record producer, and actor.\n\n He is known as a member of the East Coast hip hop collective Wu-Tang Clan.\n\n He is also one half of the hip hop duo Method Man & Redman.\n\n He took his stage name from the 1979 film \"Method Man\".\n\n In 1996, he won a Grammy Award for Best Rap Performance by a Duo or Group, for \"I'll Be There for You/You're All I Need to Get By\", with American R&B singer-songwriter Mary J. Blige.",
+    "Talking Heads Africa\nTalking Heads (Africa) was introduced in Cape Town in 2008 as part of the Infecting the City public art festival.\n\n Talking Heads has four core components that form the project.\n\n These include: developing a platform for conversation and exchange with and between experts; creating a network of African thought leaders; shooting mini-documentaries that define these leaders and their contributions; developing the tools to make this model work in cities all over the African continent.",
+    "Man or Astro-man?\nMan or Astro-man?\n\n is a surf rock group that formed in Auburn, Alabama, in the early 1990s and came to prominence over the following decade."
+   ]
+  },
+  {
+   "id": "d02bbd8de85ec667",
+   "gold": [
+    {
+     "sentence": " For almost 20 years, it held the record for selling 2 million copies in the UK in the fastest time, doing so in 42 days; in 2015, Adele surpassed the record when her album \"25\" took just 29 days to reach the landmark.",
+     "facts": {
+      "0.0": "For almost 20 years, a record (held by a subject not named in this sentence) stood for selling 2 million copies in the UK in the fastest time.",
+      "0.1": "The record for selling 2 million copies in the UK in the fastest time was set in 42 days.",
+      "0.2": "In 2015, Adele surpassed the record.",
+      "0.3": "Adele's album '25' took just 29 days to reach the 2 million copies landmark."
+     }
+    },
+    {
+     "sentence": " At the 51st Grammy Awards in 2009, Adele received the awards for Best New Artist and Best Female Pop Vocal Performance.",
+     "facts": {
+      "1.0": "The 51st Grammy Awards were held in 2009.",
+      "1.1": "Adele received the Best New Artist award at the 51st Grammy Awards.",
+      "1.2": "Adele received the Best Female Pop Vocal Performance award at the 51st Grammy Awards."
+     }
+    }
+   ],
+   "items": [
+    "List of Billboard 200 number-one albums of 2002\nCountry music singer Shania Twain's album \"Up!\n\n\" opened up with a huge first week sales of 857,000 copies in its first week alone, giving her the recognition of the highest first week sales of her career and second highest of the year, only behind Eminem's \"The Eminem Show\" and at the time the fastest selling solo female album ever.\n\n Nelly's album \"Nellyville\" opened up with his highest first week sales of his career which logged on with huge sales of 714,000 copies in its first week alone, which beat his sales of his debut album \"Country Grammar\", which opened up with first week sales of 235,000 copies.\n\n Country singer Alan Jackson album \"Drive\" gave him his first number one album on the chart and opened up with first week sales of 211,000 copies alone.",
+    "List of Billboard 200 number-one albums of 2002\nThe band Creed continued its eight week long run on the chart but is credited as the longest running album 2001.\n\n Jennifer Lopez earned her second number one album on the charts with \"\", which became the highest first week sales of a remix album at the time.\n\n R&B artist Ashanti earned her first number one album with her self-titled debut album \"Ashanti\", which opened up with first week sales of 503,000 copies in its first week alone.\n\n Puff Daddy earned his first number one album since \"No Way Out\" back in 1997.\n\n Rapper Jay-Z earned his fifth chart topper with \"\", which opened up with first week sales of 545,000 copies alone.\n\n Heavy metal band Disturbed earned its first number one album on the chart with \"Believe\", which opened up with first week sales of 284,000 copies alone.\n\n Country music singer Shania Twain's album \"Up!\n\n\"",
+    "MTV Video Music Award for Best New Artist\nThe MTV Video Music Award for Best New Artist have been given out since the first annual MTV Video Music Awards in 1984.\n\n From then to 2006, the award was named Best New Artist in a Video.\n\n In 2007 its name was changed to Best New Artist, as the category underwent a format change to award the artist's body of work for the full year rather than a specific video.\n\n For the 2008 ceremony, though, while the award retained its 2007 name, it returned to the format of awarding a specific video rather than the artist's full body of work.\n\n The category was later renamed Artist to Watch through 2013 to 2015 while still keeping the format of an award going to a certain video.",
+    "Billboard Year-End\n\"Billboard\" Year-End charts are a cumulative measure of a single or album's performance in the United States, based upon the \"Billboard\" magazine charts during any given chart year.\n\n \"Billboard's\" \"chart year\" runs from the first Billboard \"week\" of December to the final week in November, but because the Billboard week is dated in advance of publication, the last calendar week for which sales are counted is usually the third week in November.\n\n This altered calendar allows for \"Billboard\" to calculate year-end charts and release them in time for its final print issue in the last week of December.\n\n Prior to incorporating chart data from Nielsen SoundScan (from 1991), year-end charts were calculated by an inverse-point system based solely on a title's performance (for example a single appearing on the \"Billboard\" Hot 100 would be given one point for a week spent at position 100, two points for a week spent at position ninety-nine, and so forth, up to 100 points for each week spent at number one).\n\n Other factors including the total weeks a song spent on the chart and at its peak position were calculated into its year-end total.",
+    "Don't Stop the Music (Robyn album)\nDon't Stop the Music is the third studio album by Swedish pop singer Robyn.\n\n It was released on 30 October 2002 in Sweden by BMG.\n\n The album peaked at #2 in her native Sweden, and the two singles \"Keep This Fire Burning\" and \"Don't Stop the Music\" were both top 10 hits.\n\n In 2003, \"Don't Stop The Music\" was certified platinum by IFPI, and has sold over 60,000 copies in Sweden.",
+    "List of accolades received by Grand Theft Auto V\nWithin twenty-four hours of its release, \"Grand Theft Auto V\" generated more than $815.7 million in worldwide revenue, equating to approximately 11.21 million copies sold for Take Two.\n\n Three days after release, the game had surpassed one billion dollars in sales, making it the fastest selling entertainment product in history.",
+    "List of Billboard 200 number-one albums of 2002\nThe highest-selling albums and EPs in the United States are ranked in the \"Billboard\" 200, published by \"Billboard\" magazine.\n\n The data are compiled by Nielsen Soundscan based on each album's weekly physical and digital sales.\n\n 25 acts achieved number one albums during this year with artist such as Nelly and Shania Twain who had their albums debut at number one on the chart.\n\n Rapper Eminem's \"The Eminem Show\" is the best selling album of 2002 selling over approximately 7.6 million copies by the end of the year.\n\n It is also the longest running album of 2002 spending six non-consecutive weeks the chart and was known for its first full week of sales debut of 1.322 million copies which Nielsen SoundScan scanned as the sixth largest sales of all time in its first week.\n\n Its debut of 1.322 million copies has still not been matched by any album today since except for Taylor Swift's album \"1989\", which opened with first week sales of 1.279 million copies.",
+    "Adele\nAdele Laurie Blue Adkins (born 5 May 1988) ( ) is an English singer-songwriter.\n\n After graduating from the BRIT School for Performing Arts and Technology in 2006, Adele was given a recording contract by XL Recordings after a friend posted her demo on Myspace the same year.\n\n In 2007, she received the Brit Awards \"Critics' Choice\" award and won the BBC Sound of 2008 poll.\n\n Her debut album, \"19\", was released in 2008 to commercial and critical success.\n\n It is certified seven times platinum in the UK, and three times platinum in the US.\n\n The album contains her first song, \"Hometown Glory\", written when she was 16, which is based on her home suburb of West Norwood in London.\n\n An appearance she made on \"Saturday Night Live\" in late 2008 boosted her career in the US.\n\n At the 51st Grammy Awards in 2009, Adele received the awards for Best New Artist and Best Female Pop Vocal Performance.",
+    "Robson &amp; Jerome (album)\nRobson & Jerome is the debut studio album by British singing duo Robson & Jerome.\n\n It was released in the UK in 1995 by RCA Records, and reached number one on the UK Albums Chart.\n\n It was the Christmas number one album of 1995, and was the biggest-selling album of the year, with sales of 2,040,000.\n\n For almost 20 years, it held the record for selling 2 million copies in the UK in the fastest time, doing so in 42 days; in 2015, Adele surpassed the record when her album \"25\" took just 29 days to reach the landmark.",
+    "Billboard Year-End\nThe same method was used for albums based on the \"Billboard\" 200, and songs appearing on the other charts (e.g. Hot Country Singles)."
+   ]
+  }
+ ]
+}

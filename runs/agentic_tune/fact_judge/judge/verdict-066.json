@@ -1,0 +1,38 @@
+[
+  {
+    "id": "b02c1530894205b7",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "we'll trust that Hockenson is ready to go, especially since he continued to play through the ailment in Week 9"}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "continued to play through the ailment in Week 9 as a big part of the offense"}]},
+      {"fact": "0.4", "status": "stated", "evidence": [{"item": 9, "quote": "continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center"}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "2dd6f0eb2dd00470",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform"}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team will score in the game."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team will score in the game."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team will score in the game."}]}
+    ]
+  },
+  {
+    "id": "ff2b6bc1c24d368e",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "As such, they’re never going to replace the need for reducing emissions of CO 2 and other greenhouse gases."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "As such, they’re never going to replace the need for reducing emissions of CO 2 and other greenhouse gases."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []},
+      {"fact": "1.4", "status": "missing", "evidence": []}
+    ]
+  }
+]

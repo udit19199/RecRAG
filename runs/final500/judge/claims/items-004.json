@@ -1,0 +1,77 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "multihop-rag-2392",
+   "sentences": [
+    "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts.",
+    "But “all of that, all of it, was built on lies,” Rehn declared to the jury.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "-1832461906521344120",
+   "sentences": [
+    "Sinéad ( / ʃɪˈneɪd / shi - NADE ; Irish pronunciation : ( ˈʃɪnjeːd̪ɣ ) or ( ʃɪˈnjeːd̪ɣ ) ) , is an Irish feminine name . It is derived from the French Jeanette , which is cognate to the English Janet , itself a feminine form of the Hebrew Yohannan , `` God forgave / God gratified '' . In English , Sinéad is also commonly spelled Sinead . The name is generally translated into English as either Jane or Jennifer , or as the female version of the Scottish name Jean ."
+   ]
+  },
+  {
+   "id": "5a8fae205542997ba9cb32ec",
+   "sentences": [
+    " He is best known for his roles in \"How To Be Indie\" (2009–2011), \"Wingin' It\" (2010–2013), \"\" (2012–2013), and \"Open Heart\" (2015).",
+    "Open Heart is a 2015 American-Canadian mystery-drama television series produced by the Epitome Pictures unit of DHX Media in association with marblemedia."
+   ]
+  },
+  {
+   "id": "-4482484688035625980",
+   "sentences": [
+    "There are several major additional characters introduced by the television series and numerous narrative details and the plotline differ radically from the source novel . For example , the planned Nazi pre-emptive nuclear strike on Japan , `` Operation Dandelion , '' is apparently being prevented only by Hitler 's personal refusal to authorise it , leading Heydrich and the faction demanding pre-emptive war to plot the Führer 's assassination . In addition , Hawthorne Abendsen does not appear in the first season of the television version and The Grasshopper Lies Heavy is a series of newsreel films depicting multiple alternative realities rather than a novel ( although this idea may actually be borrowed from Dick 's later novel Valis which features a mysterious film depicting yet another dystopian alternative history of the USA ) . As of the Season 1 finale , these films are being tracked down by SS agents like Blake for dispatch to Hitler for an as - yet - unknown purpose ."
+   ]
+  },
+  {
+   "id": "5a7a83b3554299042af8f652",
+   "sentences": [
+    "Park Sung-woong (born January 9, 1973) is a South Korean actor.",
+    " Following his acting debut in \"No. 3\" in 1997, Park has starred in several movies and television series, notably as a gangster in \"New World\" (2013) and a serial killer in \"The Deal\" (2015).",
+    "The Deal (; lit.",
+    " \"Murder Request\") is a 2015 South Korean crime thriller film directed by Son Yong-ho."
+   ]
+  },
+  {
+   "id": "5ae0d7bf5542990adbacf67b",
+   "sentences": [
+    "The Rescuers is a 1977 American animated comedy-drama adventure film produced by Walt Disney Productions and first released on June 22, 1977, by Buena Vista Distribution.",
+    "The Muppets is a 2011 American musical comedy film and the seventh theatrical film featuring the Muppets."
+   ]
+  },
+  {
+   "id": "-1064163661992845898",
+   "sentences": [
+    "A cover of the song by Stacey Markus is used at the end of episode nine ( `` The Invitation '' ) of the 2015 Netflix original series Grace and Frankie , starring Jane Fonda and Lily Tomlin ."
+   ]
+  },
+  {
+   "id": "3044095641568178082",
+   "sentences": [
+    "The College Football Playoff selection committee chose the semifinalists following the conclusion of the 2017 regular season . Alabama and Georgia advanced to the national championship after winning the semifinal games hosted by the Sugar Bowl and the Rose Bowl , respectively , on January 1 , 2018 . The championship game was played at Mercedes - Benz Stadium in Atlanta , Georgia on January 8 , 2018 .",
+    "The Mercedes - Benz Stadium in Atlanta , Georgia was announced as the host site for the fourth College Football National Championship on November 4 , 2015 ."
+   ]
+  },
+  {
+   "id": "5021176063184370614",
+   "sentences": [
+    "The formation of ATP from ADP and P is energetically unfavorable and would normally proceed in the reverse direction . In order to drive this reaction forward , ATPase couples ATP synthesis during cellular respiration to an electrochemical gradient created by the difference in proton ( H ) concentration across the mitochondrial membrane in eukaryotes or the plasma membrane in bacteria . During photosynthesis in plants , ATP is synthesized by ATPase using a proton gradient created in the thylakoid lumen through the thylakoid membrane and into the chloroplast stroma .",
+    "Located within the thylakoid membrane and the inner mitochondrial membrane , ATP synthase consists of two regions F and F. F causes rotation of F and is made of c - ring and subunits a , b , d , F6. F is made of α , β , γ , δ ( \\ displaystyle \\ alpha , \\ beta , \\ gamma , \\ delta ) subunits . F has a water soluble par that can hydrolyze ATP . F on the other hand has mainly hydrophobic regions . F F creates a pathway for protons movement across the membrane .",
+    "The crystal structure of the F showed alternating alpha and beta subunits ( 3 of each ) , arranged like segments of an orange around a rotating asymmetrical gamma subunit . According to the current model of ATP synthesis ( known as the alternating catalytic model ) , the transmembrane potential created by ( H+ ) proton cations supplied by the electron transport chain , drives the ( H+ ) proton cations from the intermembrane space through the membrane via the F region of ATP synthase . A portion of the F ( the ring of c - subunits ) rotates as the protons pass through the membrane . The c - ring is tightly attached to the asymmetric central stalk ( consisting primarily of the gamma subunit ) , causing it to rotate within the alpha beta of F causing the 3 catalytic nucleotide binding sites to go through a series of conformational changes that leads to ATP synthesis . The major F subunits are prevented from rotating in sympathy with the central stalk rotor by a peripheral stalk that joins the alpha beta to the non-rotating portion of F. The structure of the intact ATP synthase is currently known at low - resolution from electron cryo - microscopy ( cryo - EM ) studies of the complex . The cryo - EM model of ATP synthase suggests that the peripheral stalk is a flexible structure that wraps around the complex as it joins F to F. Under the right conditions , the enzyme reaction can also be carried out in reverse , with ATP hydrolysis driving proton pumping across the membrane ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1500",
+   "sentences": [
+    "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  }
+ ]
+}

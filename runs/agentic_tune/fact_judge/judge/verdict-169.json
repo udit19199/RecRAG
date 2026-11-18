@@ -1,0 +1,63 @@
+[
+{"id": "99690c789809142a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "cheering on No. 87 with gusto."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}, {"item": 7, "quote": "Swift also confirmed that when she famously first attended Kelce’s game at Arrowhead Stadium in September, she was already dating the NFL star."}]}
+]},
+{"id": "31ffef72756c3b4e", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Because FTX had grown so much, he could no longer run both companies, he said. Bankman-Fried handed the company off to Caroline Ellison and Sam Trabucco"}, {"item": 7, "quote": "After FTX declared bankruptcy, Bankman-Fried went on an extensive media tour"}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "is on trial for seven counts of wire fraud and conspiracy."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "In the indictment, the prosecutors allege that Bankman-Fried lied to FTX investors."}, {"item": 10, "quote": "is facing seven counts of criminal charges: two counts of wire fraud"}]},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "ca8e1af19d0241b7", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Bankman-Fried directed him to have Alameda take it on instead, because FTX’s balance sheets were visible to investors and Alameda’s weren’t."}, {"item": 7, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]}
+]},
+{"id": "c9e40ff841ff0b0a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+]},
+{"id": "0cc7db7f1f696782", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights — Los Pumas are also in the semi-finals — and England have beaten all of them."}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Dominant wins over Argentina, Japan and Chile sealed passage to the last eight"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "Dominant wins over Argentina, Japan and Chile sealed passage to the last eight"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "Dominant wins over Argentina, Japan and Chile sealed passage to the last eight"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 3, "quote": "the narrow wins over both Samoa and Fiji in their last two games showed that England are certainly gettable."}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 3, "quote": "the narrow wins over both Samoa and Fiji in their last two games showed that England are certainly gettable."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "S﻿AINT-ETIENNE: The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "as their Rugby World Cup fate is decided by Fiji and Portugal in Toulouse."}]}
+]},
+{"id": "199d5d741d1ce7d5", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go, especially since he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go, especially since he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go, especially since he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go, especially since he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go, especially since he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]}
+]

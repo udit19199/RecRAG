@@ -1,0 +1,79 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "481461689673789519",
+   "sentences": [
+    "No . Name Field Affiliation Date of Appointment Date of Retirement Roopa Ganguly Art Bharatiya Janata Party 04 - Oct - 2016 03 - Oct - 2022 Sambhaji Raje Social work Bharatiya Janata Party 07 - Jun - 2016 03 - May - 2022 Suresh Gopi Art Bharatiya Janata Party 25 - Apr - 2016 24 - Apr - 2022 Subramanian Swamy Economics Bharatiya Janata Party 25 - Apr - 2016 24 - Apr - 2022 5 Narendra Jadhav Economics Nominated 25 - Apr - 2016 24 - Apr - 2022 6 Mary Kom Sport Nominated 25 - Apr - 2016 24 - Apr - 2022 7 Swapan Dasgupta Journalism Nominated 25 - Apr - 2016 24 - Apr - 2022 8 K.T.S. Tulsi Law Nominated 25 - Feb - 2014 24 - Feb - 2020 9 K. Parasaran Law Nominated 09 - Jun - 2012 28 - Jun - 2018 10 Rekha Art Nominated 27 - Apr - 2012 26 - Apr - 2018 11 Sachin Tendulkar Social service Nominated 27 - Apr - 2012 26 - Apr - 2018 12 Anu Aga Business Nominated 27 - Apr - 2012 26 - Apr - 2018"
+   ]
+  },
+  {
+   "id": "5ac3bab155429939154138fb",
+   "sentences": [
+    " Upon Victoria's death, the British throne passed to her eldest son Edward VII, a member of the House of Saxe-Coburg and Gotha through his father.",
+    "The House of Saxe-Coburg and Gotha ( ; German: \"\") is a German dynasty that ruled the duchy of Saxe-Coburg and Gotha, which was one of the Ernestine duchies."
+   ]
+  },
+  {
+   "id": "5a8a2e465542996c9b8d5e32",
+   "sentences": [
+    " He played college football at Hampton University and attended Riverdale High School in Riverdale, Georgia.",
+    "Riverdale is a city in Clayton County, Georgia, United States."
+   ]
+  },
+  {
+   "id": "1800034026382096890",
+   "sentences": [
+    "`` Fore ! '' , originally an Australian interjection , is used to warn anyone standing or moving in the flight of a golf ball . The mention of the term in an 1881 Australian Golf Museum indicates that the term was in use at least as early as that period ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1016",
+   "sentences": [
+    "If a piece of news or a prevailing sentiment starts to gain traction about a particular team's increased chances of winning, this can influence how people bet, leading sportsbooks to adjust their lines accordingly.",
+    "If a significant amount of money is being placed on one team or participant, sportsbooks might adjust the odds to balance their liability.",
+    "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move.",
+    "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."
+   ]
+  },
+  {
+   "id": "5a7e49e05542991319bc9463",
+   "sentences": [
+    " His siblings were Abby, Nelson, Laurance, Winthrop, and David.",
+    "David Rockefeller (June 12, 1915 – March 20, 2017) was an American banker who was chairman and chief executive of Chase Manhattan Corporation."
+   ]
+  },
+  {
+   "id": "5abb17e75542996cc5e49fa2",
+   "sentences": [
+    "The 1993 Tehran mid-air collision occurred just outside the Iranian capital city of Tehran on Monday, February 8, 1993, killing all 133 people on board both aircraft involved—an Iran Air Tours Tupolev Tu-154M, registered EP-ITD, and an Islamic Republic of Iran Air Force (IRIAF) Sukhoi Su-24 attack aircraft.",
+    "Iran Air Tours is an airline based in Tehran, Iran."
+   ]
+  },
+  {
+   "id": "multihop-rag-480",
+   "sentences": [
+    "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.",
+    "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.",
+    "Because FTX had grown so much, he could no longer run both companies, he said.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-1961",
+   "sentences": [
+    "But “all of that, all of it, was built on lies,” Rehn declared to the jury.",
+    "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told.",
+    "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "7646318959956236571",
+   "sentences": [
+    "Top 20 rankings as of 16 October 2017 Rank Change Team Points Germany 1631 Brazil 1619 Portugal 1446 Argentina 1445 5 Belgium 1333 6 Poland 1323 7 France 1226 8 Spain 1218 9 Chile 1173 10 Peru 1160 11 Switzerland 1134 12 England 1116 13 Colombia 1095 14 Wales 1072 15 Italy 1066 16 Mexico 1060 17 Uruguay 1034 18 Croatia 1013 19 7 Denmark 1001 20 9 Netherlands 931 * Change from 14 September 2017 Complete rankings at FIFA.com"
+   ]
+  }
+ ]
+}

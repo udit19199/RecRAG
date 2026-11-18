@@ -1,0 +1,798 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=2d8ae70d649846cb ===
+Gold sentences and facts:
+Sentence 0: The previous department issued firearm for CHP officers is the Smith & Wesson Model 4006 TSW in . 40 S&W . As of August 2017 , the department has begun replacing the 4006 TSW with the Smith & Wesson M&P in . 40 S&W . Each CHP patrol vehicle is equipped with a Remington 870 Police Magnum 12 ‐ gauge shotgun and a Sig Sauer M400 rifle in 5.56 mm . Less Lethal options for officers include OC Pepper Spray and the PR - 24 Side Handle Baton . The ASP Expandable Straight Baton is authorized as an optional piece of equipment for officers completing their probationary year . Additionally , officers are authorized to carry the TASER X2 Defender . In early 2009 , officers have been allowed to mount tactical lights to their Smith & Wesson 4006 TSW pistols .
+  Fact 0.0: The previous department-issued firearm for CHP officers is the Smith & Wesson Model 4006 TSW in .40 S&W.
+  Fact 0.1: As of August 2017, the CHP department has begun replacing the Smith & Wesson 4006 TSW with the Smith & Wesson M&P in .40 S&W.
+  Fact 0.2: Each CHP patrol vehicle is equipped with a Remington 870 Police Magnum 12-gauge shotgun.
+  Fact 0.3: Each CHP patrol vehicle is equipped with a Sig Sauer M400 rifle in 5.56 mm.
+  Fact 0.4: Less lethal options for CHP officers include OC Pepper Spray.
+  Fact 0.5: Less lethal options for CHP officers include the PR-24 Side Handle Baton.
+  Fact 0.6: The ASP Expandable Straight Baton is authorized as an optional piece of equipment for CHP officers completing their probationary year.
+  Fact 0.7: CHP officers are authorized to carry the TASER X2 Defender.
+  Fact 0.8: In early 2009, CHP officers were allowed to mount tactical lights to their Smith & Wesson 4006 TSW pistols.
+
+Retrieved items:
+<item 1>
+California Highway Patrol
+Contents ( hide ) 1 Highway patrol duties 2 Special responsibilities 3 Pay and pensions 4 Organization 4.1 Hierarchy 4.2 Field Organization 5 Rank structure 6
+Traditions 7 Seven points of the CHP badge 8 Code of honor 9 Fallen officers 10 Mexico Liaison Unit 11 Scandals 11.1 Officer Peyer Scandal 11.2 Newhall incident
+12 Mergers 13 Weapons 14 Vehicles 14.1 Origins 14.2 Motorcycles 14.3 Vehicles 14.4 Aircraft 15 Rogue officers 15.1 George Gwaltney 15.2 Craig Peyer 16 Media
+references 17 Programs 17.1 Youth programs 17.2 Vehicle Theft Recognition and Awards Program 17.3 Other Programs 18 Origins of the California Highway Patrol 's
+name 19 See also 20 References 20.1 Further reading 21 External links Highway Patrol duties ( edit ) The agency has jurisdiction over all California state
+routes ( including all freeways and expressways ) , U.S. Highways , Interstate Highways and all public roads in unincorporated and incorporated parts of a
+county .
+</item 1>
+
+<item 2>
+California Highway Patrol
+ESPN March 6 2008 Jump up ^ Game - warden shortage is about to get worse San Francisco Chronicle September 23 2007 Archived February 15 , 2012 , at the Wayback
+Machine . Jump up ^ Lots of ocean , but few game wardens ! Sacramento Bee August 23 2007 Archived August 21 , 2007 , at the Wayback Machine . Jump up ^ Oregon
+State Police Fish and Wildlife Division Archived 2012 - 07 - 31 at the Wayback Machine . Jump up ^ Division of Alaska Wildlife Troopers Jump up ^
+http://smith-wessonforum.com/showthread.php?t=525162 ^ Jump up to : Mattos , Rick ( 2008 ) . California Highway Patrol . Charleston , SC : Arcadia Pub . ISBN
+9780738556208 . Retrieved 2013 - 09 - 01 . Jump up ^ Carpenter , Susan ( 25 June 2013 ) . `` BMW 's R1200RT - P : Big , bad and packing heat '' . Los Angeles
+Times . Retrieved 1 September 2013 .
+</item 2>
+
+<item 3>
+California Highway Patrol
+Cold weather and utility uniforms are dark blue . California Highway Patrol campaign hat . Leather gear is black with brass snaps and buckles . Standard traffic
+enforcement patrol vehicles are required by state law to have a white door with , in the case of the CHP , a star . The CHP operates traditional black and white
+as well as all - white patrol vehicles . The California Highway Patrol is one of the few organizations to continue to use the older toll - free `` Zenith 1 ‐
+2000 '' number . With the falling cost of telephone area code 800 and 888 numbers , most organizations have chosen to switch to one of the newer numbers and
+discontinue use of the Zenith service , which requires operator assistance . The CHP 's traditions include its own radio codes , widely adopted by local
+agencies . The most important is 11 ‐ 99 , which signifies that an officer needs emergency assistance or that an officer is down . In 1981 a charitable
+foundation called the 11 ‐ 99 Foundation was founded to provide benefits and scholarships to officers and their families .
+</item 3>
+
+<item 4>
+California Highway Patrol
+Early motorcycles used included Indian , Harley - Davidson and Henderson manufactured bikes during the 1920s and 30s ; though by 1941 the main manufacturers
+used at the training academy were Harley - Davidson and Indian . In the 1970s CHP decided to renew their Harleys fleet and tested many motorcycles such as Honda
+750 four , Suzuki 850 , Moto Guzzi and finally Kawasaki Z900 and then 1000C1 made famous in CHiPs . In 1998 CHP began using the BMW R1100RT - P , with features
+including a helmet interface for communications , two batteries , and a top speed of 130 miles per hour ( 210 km / h ) . Vehicles ( edit ) California Highway
+Patrol cruiser on display at Public Safety Day in Lakewood , California . The Department of General Services is responsible for selecting a vehicle based on
+price , performance and payload capacity for the CHP . The bid specifications require a pursuit - rated , rear - wheel drive or all - wheel drive that can carry
+at least 1,500 pounds , the approximate weight of four officers , their equipment , and the police vehicle equipment .
+</item 4>
+
+<item 5>
+California Highway Patrol
+As of July 2013 , CHP had not purchased patrol vehicles since January 2011 and their fleet was rapidly aging . On average , CHP patrol vehicles are driven
+33,000 miles per year . Half of their 2,153 - vehicle fleet had over 100,000 miles as of June 2013 . After 100,000 miles the warranty on CHP vehicles expires ,
+forcing CHP to pay for maintenance costs . In July 2013 , the CHP was authorized to purchase up to 751 new vehicles to begin replacing its aging fleet ,
+starting with cars that have the highest mileage . Through a public , competitive bidding process , the Ford Police Interceptor Utility Vehicle ( Explorer ) was
+selected as the new enforcement vehicle for the CHP in 2013 . The Ford Police Interceptor Utility Vehicle is All Wheel Drive and powered by a V6 , 3.7 Liter
+engine . It is a Flex Fuel vehicle that can use gasoline or E85 and gets 16 mpg city and 21 mpg highway . Several Dodge Charger Police Packages were also
+purchased for testing . The Ford Crown Victoria Police Interceptor averaged 16 mpg city and 24 mpg highway .
+</item 5>
+
+<item 6>
+California Highway Patrol
+Legal jurisdiction As per operations jurisdiction Governing body California State Legislature Constituting instrument Senate Bill 869 Headquarters Sacramento ,
+California Officers 7,608 ( as of 2016 ) Civilians 3,276 ( as of 2014 ) Commissioner responsible Warren Stanley Parent agency California State Transportation
+Agency ( CALSTA ) Facilities Commands 8 Field Divisions 16 Commercial Enforcement Facilities 103 Area Offices Patrol cars Ford Explorer - based Police
+Interceptor Utility Vehicle Dodge Charger - Police Ford Crown Victoria - Police Planes Cessna 206 Website http://www.chp.ca.gov http://www.chpcareers.com The
+California Highway Patrol ( CHP ) is a law enforcement agency of the state of California . The primary mission of the CHP is to ensure safety and enforce
+traffic laws on all California highways and county roads in unincorporated areas . The CHP promotes traffic safety by inspecting commercial vehicles , as well
+as inspecting and certifying school buses , ambulances , and other specialized vehicles . The California State Legislature established the California Highway
+Patrol as a branch of the Division of Motor Vehicles in the Department of Public Works , with legislation signed by Governor C. C. Young on August 14 , 1929 .
+</item 6>
+
+<item 7>
+California Highway Patrol
+Vehicles ( edit ) This section needs expansion . You can help by adding to it . ( September 2013 ) Origins ( edit ) When motor vehicles in California were first
+seen as needing legislation , law enforcement agencies began to patrol using motorcycles , cars and trucks . Motorcycle officers in 1920 Fresno , started a
+group to assist each other and promote road safety - the Joaquin Valley Traffic Officer 's Association - led by Harry Wilson who they elected as president .
+They renamed themselves the California Association of Highway Patrolmen in 1921 , and became the California Highway Patrol in 1927 under the auspices of the
+Department of Motor Vehicles . Motorcycles ( edit ) A motorcycle sergeant on the San Tomas Expressway near Benton Avenue in Santa Clara , California . Through
+the public competitive bidding process , the Harley - Davidson motorcycle was selected as the primary enforcement motorcycle for the California Highway Patrol
+in 2013 . These replacement enforcement motorcycles will replenish the Department 's aging motorcycle fleet . In a cost - saving move , the CHP previously
+deferred the purchase of replacement motorcycles and has not purchased enforcement motorcycles since January 14 , 2011 .
+</item 7>
+
+<item 8>
+California Highway Patrol
+This is because of their ability to carry a larger `` basic load '' of normal issue equipment , equipment that may be only in a few cars , and / or not carried
+by patrol cars at all , in a more urban setting . Aircraft ( edit ) CHP AS 350 B3 in flight . The CHP utilizes both helicopters and fixed - wing aircraft . In
+2017 the fleet consisted of : 15 Airbus Helicopters ( Eurocopter ) AS350B3 Squirrels 11 Cessna T206H Turbo Stationairs 4 Gippsaero GA8 TC - 320 Airvans 2 Hughes
+( MD500 ) 369Ds 1 Cessna 182S Skylane 1 Raytheon ( Beechcraft ) B300 Super King Air Rogue officers ( edit ) George Gwaltney ( edit ) A former officer from
+Barstow , was convicted on May 10 , 1984 , in federal court , for the on ‐ duty rape and slaying of 23 - year - old Robin Bishop on January 11 , 1982 .
+</item 8>
+
+<item 9>
+California Highway Patrol
+Weapons ( edit ) This section needs additional citations for verification . Please help improve this article by adding citations to reliable sources . Unsourced
+material may be challenged and removed . ( September 2014 ) ( Learn how and when to remove this template message ) The previous department issued firearm for
+CHP officers is the Smith & Wesson Model 4006 TSW in . 40 S&W . As of August 2017 , the department has begun replacing the 4006 TSW with the Smith & Wesson M&P
+in . 40 S&W . Each CHP patrol vehicle is equipped with a Remington 870 Police Magnum 12 ‐ gauge shotgun and a Sig Sauer M400 rifle in 5.56 mm . Less Lethal
+options for officers include OC Pepper Spray and the PR - 24 Side Handle Baton . The ASP Expandable Straight Baton is authorized as an optional piece of
+equipment for officers completing their probationary year . Additionally , officers are authorized to carry the TASER X2 Defender . In early 2009 , officers
+have been allowed to mount tactical lights to their Smith & Wesson 4006 TSW pistols .
+</item 9>
+
+<item 10>
+California Highway Patrol
+Local police or the local sheriff 's department having a contract with an incorporated city are primarily responsible for investigating and enforcing traffic
+laws in incorporated cities , but the CHP can still enforce traffic laws on any public road anywhere in the state . While the agency 's primary mission is
+related to transportation , it also possesses full law enforcement authority and can enforce any state law anywhere in the state . Furthermore , CHP officers
+act as bailiffs for the California Supreme Court and California Court of Appeal , as well as security at State of California buildings . The Ford Police
+Interceptor Utility Vehicle replaced the Ford Crown Victoria Police Interceptor in 2013 . CHP officers enforce the California Vehicle Code , pursue fugitives
+spotted on the highways , and attend to all significant obstructions and crashes within their jurisdiction . They patrol in various vehicles including Ford
+Crown Victoria Police Interceptors , Dodge Charger ( LX ) s , Chevrolet Camaros , BMW R1150RT ‐ P motorcycles , Cessna 206 airplanes , and helicopters which
+include Bell OH ‐ 58As , Bell 206L ‐ IVs and Eurocopter AS ‐ 350B ‐ 3s .
+</item 10>
+=== END ITEM id=2d8ae70d649846cb ===
+
+=== ITEM id=867cdd71804c7473 ===
+Gold sentences and facts:
+Sentence 0: The Rhine -- Herne Canal ( German : Rhein - Herne - Kanal ) is a 45.6 - kilometre - long ( 28.3 mi ) transportation canal in the Ruhr area of North Rhine - Westphalia , Germany , with five canal locks . The canal was built over a period of eight years ( 5 April 1906 - 14 July 1914 ) and connects the harbour in Duisburg on the Rhine ( 51 ° 26 ′ 59 '' N 6 ° 46 ′ 1 '' E ﻿ / ﻿ 51.44972 ° N 6.76694 ° E ﻿ / 51.44972 ; 6.76694 ) with the Dortmund - Ems Canal near Henrichenburg ( 51 ° 37 ′ 1 '' N 7 ° 19 ′ 19 '' E ﻿ / ﻿ 51.61694 ° N 7.32194 ° E ﻿ / 51.61694 ; 7.32194 ) , following the valley of the Emscher . It was widened in the 1980s . The Rhein - Herne canal ship was designed specifically for this canal ; normally of about 1300 -- 1350 ton capacity , it has a maximum draft of 2.50 metres ( 8.2 ft ) , a length of approximately 80 metres ( 260 ft ) , and maximum beam of 9.50 metres ( 31.2 ft ) .
+  Fact 0.0: The Rhine-Herne Canal (German: Rhein-Herne-Kanal) is a transportation canal.
+  Fact 0.1: The Rhine-Herne Canal is 45.6 kilometres long (28.3 miles).
+  Fact 0.2: The Rhine-Herne Canal is in the Ruhr area of North Rhine-Westphalia, Germany.
+  Fact 0.3: The Rhine-Herne Canal has five canal locks.
+  Fact 0.4: The canal was built over a period of eight years, from 5 April 1906 to 14 July 1914.
+  Fact 0.5: The canal connects the harbour in Duisburg on the Rhine with the Dortmund-Ems Canal near Henrichenburg.
+  Fact 0.6: The Duisburg harbour is at coordinates 51°26′59″N 6°46′1″E.
+  Fact 0.7: The Henrichenburg end is at coordinates 51°37′1″N 7°19′19″E.
+  Fact 0.8: The canal follows the valley of the Emscher.
+  Fact 0.9: The canal was widened in the 1980s.
+  Fact 0.10: The Rhein-Herne canal ship was designed specifically for this canal.
+  Fact 0.11: The Rhein-Herne canal ship normally has a capacity of about 1300 to 1350 tons.
+  Fact 0.12: The Rhein-Herne canal ship has a maximum draft of 2.50 metres (8.2 ft).
+  Fact 0.13: The Rhein-Herne canal ship has a length of approximately 80 metres (260 ft).
+  Fact 0.14: The Rhein-Herne canal ship has a maximum beam of 9.50 metres (31.2 ft).
+
+Retrieved items:
+<item 1>
+Rhine–Herne Canal
+The 6,900 - square - metre ( 1.7 - acre ) harbor basin was built from 1897 to 1898 when the section of the canal ( the then branch channel of the Dortmund - Ems
+Canal ) , was already flooded . In 1912 , at the colliery port handled 360,096 tonnes of goods . In 1913 the docks expanded . Because of mining subsidence by
+1954 the quaywall had to be increased by 2.50 metres ( 8.2 ft ) . In the 1980s , it was leased to Automobil - und Motorbootsport - Club Castrop - Rauxel e . V (
+The car and motorboat club of Castrop - Rauxel ) and is used from recreational boating , being no longer used by Ruhrkohle AG , and contains many small boats .
+The former mine railway , which starts at the harbour is now a walking and biking trail .
+</item 1>
+
+<item 2>
+Rhine–Herne Canal
+The industrial port is ~ 900 by 60 metres ( 2,950 by 200 ft ) and the trading port ~ 500 by 75 metres ( 1,640 by 246 ft ) . A private railway of length 18.4
+kilometres ( 11.4 mi ) is operated which is linked to the tracks of the Deutsche Bahn Formerly the port dealt mainly with coal and mining products , now the
+port is a major hub for petroleum products and second - largest inland port for cereals in North Rhine - Westphalia . It is operated by the Gelsenkirchener
+Logistik - , Hafen - und Servicegesellschaft ( Gelsenkirchener logistics , harbour and service company . ) a subsidiary of Stadtwerke Gelsenkirchen . Port
+Grimberg ( edit ) The port at Grimberg Hafen Grimberg ( Port Grimberg ) is on the south canal bank in Gelsenkirchen , near the city boundary to Herne . It was
+named after the nearby Castle Grimberg , of which today only the foundations remain .
+</item 2>
+
+<item 3>
+Rhine–Herne Canal
+It was named after the nearby Castle Grimberg , of which today only the foundations remain . Built in 1914 by the Gelsenkirchener Bergwerks AG ( GBAG ) to
+provide a link to the GBAG mines of Rheinelbe , Alma and Pluto as well as supplying the ironworks of ' Schalker group ' with imported ore . Around the same time
+, and up to 1929 the industrial railway of Erzbahn was built , serving the Schalker and Bochum group iron and steelworks . Between 1937 and 1968 Grimberg
+harbour was one of the major ports on the canal . In 1968 steel production at the southern end of the Erzbahn at Bochum ended , in 1982 the Schalker works
+closed - with this the use of the port for transport of iron ore ended . Such was the emphasis on iron ore that much of the port now stands empty , part of it
+nowadays is used for the processing of recycled materials for the building industry , as well as a storage facility .
+</item 3>
+
+<item 4>
+Rhine–Herne Canal
+Contents ( hide ) 1 Water system 2 Locks 2.1 Duisburg - Meiderich sluicegate 3 Ports 3.1 Duisburg 3.2 Oberhausen marina 3.3 City port of Essen 3.4 City port of
+Gelsenkirchen 3.5 Port Grimberg 3.6 Ports Wanne west and Wanne east 3.7 City port of Recklinghausen 3.8 Port of the Frederick the Great mine 3.9 Port of the
+King Ludwig mine 3.10 Port Victor 3.11 Port Rütgers 3.12 Port Luck 3.13 Port Marmorit 3.14 Waltrop lock park 4 Ecosystem 5 Cities 6 References and notes Water
+system ( edit ) The distribution of water in the canal is realised through five pump stations . Located at Duisburg - Meiderich , Oberhausen , Gelsenkirchen ,
+Wanne - Eickel and East Herne , they pump water from the Rhine into the canal at each stage .
+</item 4>
+
+<item 5>
+Rhine–Herne Canal
+The terminal is used as a mooring for pleasure craft . It forms part of the Waltrop lock park . Ecosystem ( edit ) Fish that inhabit the canal include European
+eel , European carp , zander , carp bream , common roach and common rudd , as well as the less common pike and rainbow trout . Cities ( edit ) Duisburg
+Oberhausen Essen Bottrop Gelsenkirchen Herne Recklinghausen Castrop - Rauxel Waltrop Datteln Wikimedia Commons has media related to Rhein - Herne - Kanal .
+References and notes ( edit ) Jump up ^ Route A42 of the Federal Motorways now partly follows the route of the disused canal , ie . the section from the port at
+the Friedrich der Große coal mine to Bahnhofstraße in Herne .
+</item 5>
+
+<item 6>
+Graph query row:
+city: Gelsenkirchen
+relationship: RELATED_TO
+canal: Rhine–Herne Canal
+</item 6>
+
+<item 7>
+Rhine–Herne Canal
+From here maintenance and repair work are organised and performed . Oberhausen marina ( edit ) The Oberhausen marina is a yacht port opened in 2004 in close
+proximity to the CentrO shopping centre . The port has a water depth of 2.5 metres ( 8.2 ft ) and over 13 bridges . Also at the Oberhausen marina are the
+attractions Sealife Oberhausen and Oberhausen Modellbahn World . City port of Essen ( edit ) The Stadthafen Essen ( City port of Essen ) is the youngest port on
+the Rhine -- Herne Canal opened in 1934 by the city of Essen , and operated since 1987 by Stadtwerke Essen .
+</item 7>
+
+<item 8>
+Rhine–Herne Canal
+The canal was built over a period of eight years ( 5 April 1906 - 14 July 1914 ) and connects the harbour in Duisburg on the Rhine ( 51 ° 26 ′ 59 '' N 6 ° 46 ′
+1 '' E ﻿ / ﻿ 51.44972 ° N 6.76694 ° E ﻿ / 51.44972 ; 6.76694 ) with the Dortmund - Ems Canal near Henrichenburg ( 51 ° 37 ′ 1 '' N 7 ° 19 ′ 19 '' E ﻿ / ﻿
+51.61694 ° N 7.32194 ° E ﻿ / 51.61694 ; 7.32194 ) , following the valley of the Emscher . It was widened in the 1980s .
+</item 8>
+
+<item 9>
+Rhine–Herne Canal
+Jump up ^ Stadthafen Essen route-industriekultur.de Jump up ^ Hafen Gelsenkirchen hafen-ge.de Jump up ^ Stadthafen Gelsenkirchen route-industriekultur.de Jump
+up ^ Hafen Grimberg und Erzbahn route-industrielkultur.de ^ Jump up to : Westhafen Wanne is more clearly on the north bank of the canal , with Osthafen Wanne
+almost directly opposite on the south bank . Both are just east of the Schleuse Wanne - Eickel ( Wanne - Eickel lock ) Jump up ^ In German the port is named
+Stadthafen Recklinghausen ^ Jump up to : Aerial image of Hafen der Zeche König Ludwig , ' Hafen der Zeche Friedrich der Große and Schleuse Herne - Ost
+multimap.com ^ Jump up to : Aerial image of Hafen der Zeche König Ludwig , ' Hafen der Zeche Friedrich der Große and Schleuse Herne - Ost maps.google.co.uk Jump
+up ^ Hafen Victor route-industriekultur.
+</item 9>
+
+<item 10>
+Rhine–Herne Canal
+The port consists of a doubled sided canal side quay together with a harbour port at right angles onto the canal , which together form a water area of 63,000
+square metres ( 680,000 sq ft ) with associated dock - land of 300,000 square metres ( 3,200,000 sq ft ) The dock handles bulk goods such as solid mineral fuels
+, petroleum and chemical products , stone , earth and iron and steel as well as recyclable materials , and is an important transhipment point . City port of
+Gelsenkirchen ( edit ) The port of Gelsenkirchen The port of the city of Gelsenkirchen ( Stadthafen Gelsenkirchen ) was opened in July 1914 and is the oldest
+port on the Rhine -- Herne Canal . The port has two docks branched from the canal situated just east of the lock at Gelsenkirchen and has a water surface of
+117,800 square metres ( 1,268,000 sq ft ) .
+</item 10>
+=== END ITEM id=867cdd71804c7473 ===
+
+=== ITEM id=229239a5d9cfbefd ===
+Gold sentences and facts:
+Sentence 0: Originally introduced as a classical tax system , in which companies were subject to tax on their profits and companies ' shareholders were also liable to income tax on the dividends that they received , the first major amendment to corporation tax saw it move to a dividend imputation system in 1973 , under which an individual receiving a dividend became entitled to an income tax credit representing the corporation tax already paid by the company paying the dividend . The classical system was reintroduced in 1999 , with the abolition of advance corporation tax and of repayable dividend tax credits . Another change saw the single main rate of tax split into three . Tax competition between jurisdictions reduced the main corporate tax rate from 28 % in 2008 - 2010 to a flat rate of 20 % as of April 2015 .
+  Fact 0.0: Corporation tax was originally introduced as a classical tax system.
+  Fact 0.1: Under the classical system, companies were subject to tax on their profits.
+  Fact 0.2: Under the classical system, companies' shareholders were also liable to income tax on the dividends they received.
+  Fact 0.3: The first major amendment to corporation tax moved it to a dividend imputation system in 1973.
+  Fact 0.4: Under the 1973 dividend imputation system, an individual receiving a dividend became entitled to an income tax credit representing the corporation tax already paid by the company paying the dividend.
+  Fact 0.5: The classical system was reintroduced in 1999.
+  Fact 0.6: The 1999 reintroduction of the classical system came with the abolition of advance corporation tax.
+  Fact 0.7: The 1999 reintroduction of the classical system came with the abolition of repayable dividend tax credits.
+  Fact 0.8: Another change saw the single main rate of tax split into three.
+  Fact 0.9: Tax competition between jurisdictions reduced the main corporate tax rate from 28% in 2008-2010.
+  Fact 0.10: Tax competition between jurisdictions reduced the main corporate tax rate to a flat rate of 20% as of April 2015.
+
+Retrieved items:
+<item 1>
+United Kingdom corporation tax
+^ Jump up to : `` Finance Act 1965 ( c. 25 ) , from UK Statute Law Database '' . UK Statutory Publications Office , Ministry of Justice . Retrieved 9 May 2007 .
+Jump up ^ Tax Law Rewrite Archived 18 April 2006 at the Wayback Machine. , Her Majesty 's Revenue and Customs ( HMRC ) . Retrieved 17 April 2007 Jump up ^ ( 1 )
+Income and Corporation Taxes Act 1988 ( c. 1 ) , Office of Public Sector Information , responsible for the operation of Her Majesty 's Stationery Office ( HMSO
+) , ISBN 0 - 10 - 540188 - 9 Jump up ^ Most income tax rules have been rewritten in the Income Tax ( Earnings and Pensions ) Act 2003 , Income Tax ( Trading and
+Other Income ) Act 2005 , and Income Tax Act 2007 . ^ Jump up to : Rates of Corporation Tax ( PDF ) Archived 9 June 2007 at the Wayback Machine. , HMRC .
+</item 1>
+
+<item 2>
+United Kingdom corporation tax
+This ensured that where a company paid below the small companies ' rate ( 19 % in 2004 ) , dividend payments made to non-corporates ( for example , individuals
+, trusts and personal representatives of deceased persons ) would be subject to additional corporation tax , bringing the corporation tax paid up to 19 % . For
+example , a company making £ 10,000 profit , and making a £ 6,000 dividend distribution to an individual and £ 4,000 to another company would pay 19 %
+corporation tax on the £ 6,000 . Although this measure substantially reduced the number of small businesses incorporating , the Chancellor in the 2006 Budget
+said tax avoidance by small businesses through incorporation was still a major issue , and scrapped the starting rate entirely . Historic tax revenues ( edit )
+UK Corporation Tax Revenue 1999 to 2016 10,000 20,000 30,000 40,000 50,000 Taxable profits and accounting profits ( edit ) The starting point for computing
+taxable profits is profits before tax ( except for a life assurance company ) .
+</item 2>
+
+<item 3>
+United Kingdom corporation tax
+The 1979 Conservative Budget of Geoffrey Howe cut the small companies ' rate to 40 % , followed by a further cut in the 1982 Budget to 38 % . The Budgets of
+1983 -- 1988 saw sharp cuts in both main and small companies ' rates , falling to 35 % and 25 % respectively . Budgets between 1988 and 2001 brought further
+falls to a 30 % main rate and 19 % small companies ' rates . From April 1983 to March 1997 the small companies ' rate was pegged to the basic rate of income tax
+. During the 1980s there was briefly a higher rate of tax imposed for capital profits . Chancellor Gordon Brown 's 1999 Budget introduced a 10 % starting rate
+for profits from £ 0 to £ 10,000 , effective from April 2000 . Marginal relief applied meaning companies with profits of between £ 10,000 and £ 50,000 paid a
+rate between the starting rate and the small companies ' rate ( 19 % in 2000 ) .
+</item 3>
+
+<item 4>
+United Kingdom corporation tax
+Nor do they apply to companies in liquidation after the first 12 months . Authorised unit trusts and open - ended investment companies are taxed at the basic
+rate of income tax which is 20 % as of 2010 Life assurance companies are taxed using the above rates on shareholder profits and 20 % on policy holder profits
+Companies active in the oil and gas extraction industry in the UK or on the UK Continental Shelf are subject to an additional 10 % charge on their profits from
+those activities Most companies are required to pay tax nine months and a day after the end of an accounting period . Larger companies are required to pay
+quarterly instalments , in the seventh , tenth , thirteenth and sixteenth months after a full accounting period starts . These times are modified where an
+accounting period lasts for less than twelve months . From 2005 onwards , for tax payable on oil and gas extraction profits , the third and fourth quarterly
+instalments are merged , including the supplementary 10 % charge . In the financial year 2004 -- 2005 , approximately 39,000 companies paid corporation tax at
+the main rate .
+</item 4>
+
+<item 5>
+United Kingdom corporation tax
+Corporate Tax rates for Financial Years 2008 -- 2014 2008 -- 2010 2011 2012 2013 2014 Small profits rate 21 % 20 % 20 % 20 % 20 % Small profits upper limit £
+300,000 £ 300,000 £ 300,000 £ 300,000 £ 300,000 Marginal relief limits £ 300,001 -- £ 1,500,000 £ 300,001 -- £ 1,500,000 £ 300,001 -- £ 1,500,000 £ 300,001 -- £
+1,500,000 £ 300,001 -- £ 1,500,000 Main rate 28 % 26 % 24 % 23 % 21 % Notes : The bands shown on the right hand side are divided by one plus the number of
+associates ( usually the only associates a company has are fellow group companies , but the term is more widely defined ) The reduced rates do not apply to
+close investment holding companies ( companies controlled by fewer than 5 people ( plus associates ) or by their directors / managers , whose main activity is
+the holding of investments ) .
+</item 5>
+
+<item 6>
+United Kingdom corporation tax
+, HMRC . Retrieved 13 April 2007 Jump up ^ `` Corporation Tax rates and reliefs - GOV.UK '' . www.gov.uk . Retrieved 2015 - 10 - 13 . ^ Jump up to :
+Metallgesellschaft Ltd and Others , Hoechst AG , Hoechst UK Ltd and Commissioners of Inland Revenue , H.M. Attorney General ECJ Cases C - 397 / 98 and 410 / 98
+( Joined cases ) , European Court of Justice , 2001 . Retrieved 9 May 2007 Jump up ^ `` Corporation Tax Statistics : Analyses of Corporation Tax receipts and
+liabilities '' ( PDF ) . HM Revenue & Customs . 28 August 2015 . p. 8 . Archived from the original ( PDF ) on 4 March 2016 . ^ Jump up to : Corporate Tax ( PDF
+) Jump up ^ Daunton , Martin ( 2002 ) . Just Taxes : The Politics of Taxation in Britain , 1914 -- 1979 ( pdf ) . Cambridge University Press .
+</item 6>
+
+<item 7>
+United Kingdom corporation tax
+Another change saw the single main rate of tax split into three . Tax competition between jurisdictions reduced the main corporate tax rate from 28 % in 2008 -
+2010 to a flat rate of 20 % as of April 2015 . The UK government faced problems with its corporate tax structure , including European Court of Justice
+judgements that aspects of it are incompatible with EU treaties . Tax avoidance schemes marketed by the financial sector have also proven an irritant , and been
+countered by complicated anti-avoidance legislation . The complexity of the corporation tax system is a recognised issue . The Labour government , supported by
+the Opposition parties , carried through wide - scale reform from the Tax Law Rewrite project , resulting in the Corporation Tax Act 2010 . The tax has slowly
+been integrating generally accepted accounting practice , with the corporation tax system in various specific areas based directly on the accounting treatment .
+Total net corporation tax receipts in 2014 - 15 were £ 43.0 billion , which was an increase of 7 % from £ 40.3 billion in 2013 - 14 .
+</item 7>
+
+<item 8>
+United Kingdom corporation tax
+United Kingdom corporation tax - wikipedia United Kingdom corporation tax Jump to : navigation , search Throughout this article , the unqualified term `` pound
+'' and the £ symbol refer to the Pound sterling . UK Corporation Tax Receipts from 1999 - 2016 , both in absolute terms and as % of GDP . Taxation in the United
+Kingdom UK Government Departments HM Treasury HM Revenue and Customs UK Government VAT Income tax National Insurance Corporation tax Capital gains tax Motoring
+taxes Inheritance tax Stamp duty Insurance Premium Tax Air Passenger Duty PAYE Scottish Government Revenue Scotland Scottish income tax Land and Buildings
+Transaction Tax Scottish Landfill Tax Air Departure Tax Welsh Government Welsh Revenue Authority Land Transaction Tax Landfill Disposals Tax Local Government
+Council Tax Domestic rates in Northern Ireland Business rates in England Business rates in Wales Business rates in Scotland Business rates in Northern Ireland
+In the United Kingdom , corporation tax is a corporate tax levied in the United Kingdom on the profits made by UK - resident companies and on the profits of
+entities registered overseas with permanent establishments in the UK . Until 1 April 1965 , companies were taxed at the same income tax rates as individual
+taxpayers , with an additional profits tax levied on companies .
+</item 8>
+
+<item 9>
+United Kingdom corporation tax
+These 4.7 % of active companies are responsible for 75 % of all corporation tax receipts . Around 224,000 companies paid the small companies rate , with 34,000
+benefiting from marginal relief . 264,000 were in the starting rate , with 269,000 benefiting from the lower band of marginal relief . The total revenue was £
+41.9 bn from 831,885 companies . Only 23480 companies had a liability in excess of £ 100,000 . HM Revenue and Customs powers of enquiry ( edit ) HMRC has one
+year from the normal filing date , which is itself one year after the end of the period of account , to open an enquiry into the return . This period is
+extended if the return is filed late . The enquiry continues until all issues that HMRC wish to enquire about a return are dealt with . However , a company can
+appeal to the Commissioners of Income Tax to close an enquiry if they feel there is undue delay . If either side disputes the amount of tax that is payable ,
+they may appeal to either the General or Special Commissioners of Income Tax .
+</item 9>
+
+<item 10>
+United Kingdom corporation tax
+In March 2001 , the government published a technical note A Review of Small Business Taxation , which considered simplification of corporation tax for small
+companies through the closer alignment of their profits for tax purposes with those reported in their accounts . In July of that year , the government also
+published a consultation document , Large Business Taxation : the Government 's strategy and corporate tax reforms . It set out the strategy for modernising
+corporate taxes and proposals for relief for capital gains on substantial shareholdings held by companies . In August 2002 , Reform of corporation tax -- A
+consultation document was published , outlining initial proposals for the abolition of the Schedular system . This was followed up in August 2003 by Corporation
+tax reform -- A consultation document , which further discussed the possible abolition of the Schedular system , and also whether the capital allowances ( tax
+depreciation ) system should be abolished . It also made proposals that were ultimately enacted in Finance Act 2004 . ( The first two of these listed below were
+in response to threats to the UK tax base arising from recent European Court of Justice judgments . ) The changes were to : Introduction of transfer pricing
+rules for UK - to - UK transactions .
+</item 10>
+=== END ITEM id=229239a5d9cfbefd ===
+
+=== ITEM id=820a82de0c68c475 ===
+Gold sentences and facts:
+Sentence 0: Their first video arcade game was 1975 's EVR Race ; a handful of others followed in the next several years , Radar Scope and Donkey Kong being among the most famous of these . The early 1980s saw Nintendo 's video game division ( led by Yokoi ) creating some of its most famous arcade titles . The massively popular Donkey Kong was created in 1981 , with Shigeru Miyamoto as its mastermind , and released in the arcades and on the Atari 2600 , Intellivision , and ColecoVision video game systems ( although Nintendo themselves generally had no involvement with these early console ports ) . This release method would be used on several later Nintendo arcade games of this same period , including the original Mario Bros. ( not to be confused with the later Super Mario Bros . ) In addition to this arcade and dedicated console game activity , Nintendo was testing the consumer handheld video game waters with the Game & Watch .
+  Fact 0.0: Nintendo's first video arcade game was EVR Race, released in 1975.
+  Fact 0.1: A handful of other arcade games followed Nintendo's first video arcade game in the next several years.
+  Fact 0.2: Radar Scope and Donkey Kong were among the most famous of those arcade games.
+  Fact 0.3: In the early 1980s, Nintendo's video game division, led by Yokoi, created some of Nintendo's most famous arcade titles.
+  Fact 0.4: Donkey Kong was massively popular.
+  Fact 0.5: Donkey Kong was created in 1981.
+  Fact 0.6: Shigeru Miyamoto was the mastermind behind Donkey Kong.
+  Fact 0.7: Donkey Kong was released in the arcades.
+  Fact 0.8: Donkey Kong was released on the Atari 2600, Intellivision, and ColecoVision video game systems.
+  Fact 0.9: Nintendo themselves generally had no involvement with the early console ports of Donkey Kong.
+  Fact 0.10: The release method used for Donkey Kong, arcade plus console, was used on several later Nintendo arcade games of the same period.
+  Fact 0.11: The original Mario Bros. was one of these later Nintendo arcade games, and it is not to be confused with the later Super Mario Bros.
+  Fact 0.12: Alongside its arcade and dedicated console game activity, Nintendo was testing the consumer handheld video game market with the Game & Watch.
+Sentence 1: In 1972 , the first commercially available video game console , the Magnavox Odyssey , had a light gun accessory , the Shooting Gallery . This was the first involvement of Nintendo in video games . According to Martin Picard in the International Journal of Computer Game Research : `` in 1971 , Nintendo had -- even before the marketing of the first home console in the United States -- an alliance with the American pioneer Magnavox to develop and produce optoelectronic guns for the Odyssey ( released in 1972 ) , since it was similar to what Nintendo was able to offer in the Japanese toy market in 1970s '' .
+  Fact 1.0: The Magnavox Odyssey was the first commercially available video game console, and it was released in 1972.
+  Fact 1.1: In 1972, the Magnavox Odyssey had a light gun accessory called the Shooting Gallery.
+  Fact 1.2: The Shooting Gallery was the first involvement of Nintendo in video games.
+  Fact 1.3: According to Martin Picard in the International Journal of Computer Game Research, in 1971 Nintendo had an alliance with the American pioneer Magnavox.
+  Fact 1.4: The alliance was formed even before the marketing of the first home console in the United States.
+  Fact 1.5: The alliance was to develop and produce optoelectronic guns for the Odyssey.
+  Fact 1.6: The Odyssey was released in 1972.
+  Fact 1.7: The alliance existed because Nintendo was able to offer something similar in the Japanese toy market in the 1970s.
+
+Retrieved items:
+<item 1>
+History of Nintendo
+The massively popular Donkey Kong was created in 1981 , with Shigeru Miyamoto as its mastermind , and released in the arcades and on the Atari 2600 ,
+Intellivision , and ColecoVision video game systems ( although Nintendo themselves generally had no involvement with these early console ports ) . This release
+method would be used on several later Nintendo arcade games of this same period , including the original Mario Bros. ( not to be confused with the later Super
+Mario Bros . ) In addition to this arcade and dedicated console game activity , Nintendo was testing the consumer handheld video game waters with the Game &
+Watch . Game & Watch and Nintendo Entertainment system ( edit ) Main articles : Game & Watch , Nintendo Entertainment System , and History of the Nintendo
+Entertainment System Game & Watch or G&W is a line of handheld electronic games produced by Nintendo from 1980 to 1991 . Created by game designer Gunpei Yokoi ,
+each Game & Watch features a single game to be played on an LCD screen in addition to a clock and / or an alarm . It was the earliest Nintendo product to garner
+major success , with 43.4 million units sold worldwide .
+</item 1>
+
+<item 2>
+History of Nintendo
+This was the first involvement of Nintendo in video games . According to Martin Picard in the International Journal of Computer Game Research : `` in 1971 ,
+Nintendo had -- even before the marketing of the first home console in the United States -- an alliance with the American pioneer Magnavox to develop and
+produce optoelectronic guns for the Odyssey ( released in 1972 ) , since it was similar to what Nintendo was able to offer in the Japanese toy market in 1970s
+'' . In 1973 , its focus shifted to family entertainment venues with the Laser Clay Shooting System , using the same light gun technology used in Nintendo 's
+Kousenjuu series of toys , and set up in abandoned bowling alleys . Following some success , Nintendo developed several more light gun machines for the emerging
+arcade scene . While the Laser Clay Shooting System ranges had to be shut down following excessive costs , Nintendo had found a new market . In 1974 , Nintendo
+secured the rights to distribute the Magnavox Odyssey video game console in Japan .
+</item 2>
+
+<item 3>
+History of Nintendo
+It was followed by a licensed television adaption named The Super Mario Bros. Super Show ! , which was released by DIC Entertainment and Viacom Enterprises in
+that year to capitalise on the game 's immense popularity . The Super Famicom was released in Japan on November 21 , 1990 . The system 's launch was widely
+successful , and the Super Famicom was sold out across Japan within three days , selling 1.6 million units by June 1991 . In August 1991 , the Super Famicom was
+launched in the US under the name `` Super Nintendo Entertainment System '' ( SNES ) , followed by Europe in 1992 . The Super Nintendo Entertainment System
+followed in the steps of its predecessor , with high technical specifications for its era . The controller of the SNES had also improved over that of the NES ,
+as it now had rounded edges and four new buttons , a standard which is evident on many modern controllers today . The original North American SNES , c. 1991
+Nintendo had also begun development on a CD - ROM attachment for the SNES / Super Famicom .
+</item 3>
+
+<item 4>
+History of Nintendo
+The Nintendo Entertainment System ( NES ) , released in 1985 , is one of the most popular consoles of all time . Nintendo was determined not to make the same
+mistakes in the US that Atari had . Because of massive influxes of games that were regarded as some of the worst ever created , gaming had almost completely
+died out in America . Nintendo decided that to avoid facing the same problems , they would only allow games that received their `` Seal of Quality '' to be sold
+for the Famicom . In 1985 , Nintendo announced that they were releasing the Famicom worldwide with a different design under the name the Nintendo Entertainment
+System ( NES ) . They used a creative tactic to counter the bad view that the media was giving on video games , and released the NES with R.O.B. units that
+connected to the console and were synchronised to the games . To ensure the localization of the highest - quality games by third - party developers , Nintendo
+of America limited the number of game titles third - party developers could release in a single year to five .
+</item 4>
+
+<item 5>
+History of Nintendo
+The first issue published was the July / August edition , which spotlighted the NES game Super Mario Bros. 2 . Nintendo Power has since ceased publication with
+its December 2012 edition . Game Boy and Super NES ( edit ) Main articles : Game Boy and Super Nintendo Entertainment System The original Game Boy In 1989 ,
+Nintendo ( which had seen a large amount of success from the Game & Watch ) released the Game Boy ( both created by Gunpei Yokoi ) , along with the accompanying
+game Tetris . Due to the price , the game and its durability ( unlike the prior Microvision from Milton Bradley Company , which was prone to static and screen
+rot ) , the Game Boy line sold extremely well , eventually amassing sales of 118 million units . Later , Super Mario Land was also released for the Game Boy ,
+which sold 14 million copies worldwide . 1989 was also the year that Nintendo announced a sequel to the Famicom , to be called the Super Famicom . The last
+major first - party game for the NES , Super Mario Bros. 3 , was released in early 1990 , and went on to sell over 18 million units .
+</item 5>
+
+<item 6>
+History of Nintendo
+These devices had a much higher novelty value than traditional toys , allowing Nintendo to charge a higher price margin for each product . Yokoi went on to
+develop many other toys , including the Ten Billion Barrel puzzle , a baseball throwing machine called the Ultra Machine , and a Love Tester . Another invention
+of his , in collaboration with Masayuki Uemura from Sharp , was the Nintendo Beam Gun Game , the precursor to the NES Zapper ( which was used in games like Duck
+Hunt . ) . Nintendo released the first solar - powered light gun , the Nintendo Beam Gun , in 1970 ; this was the first commercially available light - gun for
+home use , produced in partnership with Sharp . In 1972 , Nintendo released the Ele - Conga , one of the first programmable drum machines . It could play
+pre-programmed rhythms from disc - shaped punch cards , which could be altered or programmed by the user , to play different patterns . 1972 -- present :
+electronic games ( edit ) In 1972 , the first commercially available video game console , the Magnavox Odyssey , had a light gun accessory , the Shooting
+Gallery . This was the first involvement of Nintendo in video games .
+</item 6>
+
+<item 7>
+History of Nintendo
+Color TV - game 6 ( edit ) Main article : Color TV Game Nintendo 's first video game system , the Color TV Game 6 Nintendo at this time saw how successful video
+games were and began to dabble in them . Their first step in that field was to secure the rights to distribute the Magnavox Odyssey in Japan in 1975 . At the
+time , home video game consoles were extremely rare -- even the seminal Atari Pong console had yet to be produced . After experiencing reasonable success at
+this , Nintendo began developing its own video games , both for home and for arcades . In the 1970s , Mitsubishi Electric proposed joint development of `` Color
+TV Game Machine '' . In 1977 , they released `` Color TV Game 6 '' and `` Color TV Game 15 '' ( 6 and 15 indicates the number of games ) . Their first video
+arcade game was 1975 's EVR Race ; a handful of others followed in the next several years , Radar Scope and Donkey Kong being among the most famous of these .
+The early 1980s saw Nintendo 's video game division ( led by Yokoi ) creating some of its most famous arcade titles .
+</item 7>
+
+<item 8>
+History of Nintendo
+History of Nintendo - wikipedia History of Nintendo Jump to : navigation , search This article needs additional citations for verification . Please help improve
+this article by adding citations to reliable sources . Unsourced material may be challenged and removed . ( November 2006 ) ( Learn how and when to remove this
+template message ) The history of Nintendo traces back to 1889 , when it was founded to produce handmade hanafuda cards . Nintendo Co. , Ltd. ( 任天堂 株式 会社 ,
+Nintendō kabushikigaisha ) is a Japanese multinational consumer electronics company headquartered in Kyoto , Japan . It eventually became one of the most
+prominent figures in today 's video game industry , being the world 's largest video game company by revenue .
+</item 8>
+
+<item 9>
+History of Nintendo
+In 1982 , Nintendo developed a prototype system dubbed the `` Advanced Video System '' ( or AVS for short ) and had controllers much like the NES . There were
+accessories such as a tape drive , a joystick and a lightgun , and along with all of that , the system was made of a computer , much like the Atari 400 ,
+Commodore Vic - 20 and Commodore 64 . It was never released and is on display at the Nintendo World Store in New York . In July 1983 , Nintendo released the
+Famicom ( Family Computer ) system in Japan , which was its first attempt at a cartridge - based video game console . The system sold over 500,000 units within
+two months at a price around $100 USD . However , after a few months of favorable sales , Nintendo received complaints that some Famicom consoles would freeze
+when the player attempted to play certain games . The fault was found in a malfunctioning chip and Nintendo decided to recall all Famicom units that were
+currently on store shelves , which ultimately cost them approximately half a million USD .
+</item 9>
+
+<item 10>
+History of Nintendo
+Konami , the first third - party company that was allowed to make cartridges for the Famicom , would later circumvent this rule by creating a spinoff company ,
+Ultra Games , to release additional games in a single year . Other manufacturers soon employed the same tactic . Also in 1985 , Super Mario Bros. was released
+for the Famicom in Japan and became a large success . Nintendo test marketed the Nintendo Entertainment System in the New York area on October 18 , 1985 . They
+expanded the test to Los Angeles in February 1986 , followed by tests in Chicago and San Francisco . They would go national by the end of 1986 , along with 15
+games , sold separately . In the US and Canada , it outsold its competitors by a wide margin . This was also the year that Metroid and Super Mario Bros. 2 ( the
+Japanese version ) were released . In 1987 , The Legend of Zelda was released to much critical acclaim . In 1988 , Nintendo of America unveiled Nintendo Power ,
+a monthly news and strategy magazine from Nintendo that served to advertise new games .
+</item 10>
+=== END ITEM id=820a82de0c68c475 ===
+
+=== ITEM id=8d9bc1a94f2ef25e ===
+Gold sentences and facts:
+Sentence 0: A '' Time for Choosing Speech '' Play media In support of Goldwater , Reagan delivers the address , A Time for Choosing . The speech launches Reagan to national prominence . Date October 27 , 1964 ( 1964 - 10 - 27 ) Duration 29 : 33 Location Los Angeles County , California , U.S. Also known as `` The Speech '' Type Televised campaign speech Participants Ronald Reagan Website Video clip , audio , transcript
+  Fact 0.0: The speech 'A Time for Choosing' is also known as 'The Speech'.
+  Fact 0.1: The speech 'A Time for Choosing' is a televised campaign speech.
+  Fact 0.2: Ronald Reagan delivers the address 'A Time for Choosing' in support of Barry Goldwater.
+  Fact 0.3: The speech launches Reagan to national prominence.
+  Fact 0.4: The speech is dated October 27, 1964.
+  Fact 0.5: The speech runs 29 minutes and 33 seconds.
+  Fact 0.6: The speech was held in Los Angeles County, California, U.S.
+  Fact 0.7: The participant in the speech is Ronald Reagan.
+  Fact 0.8: A video clip, audio, and a transcript of the speech are available on a website.
+Sentence 1: Many versions of the speech exist , since it was altered over many weeks . Contrary to popular belief , however , the speech was not given at the 1964 Republican National Convention in San Francisco , California as a nomination speech for presidential candidate Senator Barry Goldwater ; Richard Nixon gave that nomination speech . Reagan , though he campaigned for Goldwater , did not use `` A Time for Choosing '' until October 27 , 1964 , when it was part of a pre-recorded television program , Rendezvous with Destiny . In his autobiography , An American Life , Reagan recalled going to bed that night `` hoping I had n't let Barry down . ''
+  Fact 1.0: Many versions of the speech exist.
+  Fact 1.1: The speech was altered over many weeks.
+  Fact 1.2: Contrary to popular belief, the speech was not given at the 1964 Republican National Convention in San Francisco, California, as a nomination speech for presidential candidate Barry Goldwater.
+  Fact 1.3: Richard Nixon gave the nomination speech for Goldwater at the 1964 Republican National Convention.
+  Fact 1.4: Reagan campaigned for Goldwater.
+  Fact 1.5: Reagan did not use 'A Time for Choosing' until October 27, 1964.
+  Fact 1.6: On October 27, 1964, the speech was part of a pre-recorded television program called Rendezvous with Destiny.
+  Fact 1.7: In his autobiography, An American Life, Reagan recalled going to bed that night hoping he had not let Barry down.
+
+Retrieved items:
+<item 1>
+Gerald Ford
+: Zable 1988 : Not presented 1989 : Ebert 1990 : Reagan 1991 : Gibson 1992 : Kemp 1993 : Alexander 1994 : Johnson 1995 : Mathias 1996 : Wooden 1997 : Payne 1998
+: Dole 1999 : Richardson 2000 : Staubach 2001 : Cohen 2002 : Shriver 2003 : de Varona 2004 : Page 2005 : Ride 2006 : Kraft 2007 : Tagliabue 2008 : Glenn 2009 :
+Albright 2010 : Mitchell 2011 : Dunwoody 2012 : Allen 2013 : Dungy 2014 : Mills 2015 : Jackson 2016 : Ueberroth 2017 : Brooke - Marciniak National Football
+Foundation Gold Medal winners 1958 : Dwight D. Eisenhower 1959 : Douglas MacArthur 1960 : Herbert Hoover & Amos Alonzo Stagg 1961 : John F. Kennedy 1962 : Byron
+`` Whizzer '' White 1963 : Roger Q. Blough 1964 : Donold B.
+</item 1>
+
+<item 2>
+A Time for Choosing
+Family Jack Reagan ( father ) Nelle Wilson Reagan ( mother ) Neil Reagan ( brother ) Jane Wyman ( first wife ) Nancy Reagan ( second wife ) Maureen Reagan (
+daughter ) Michael Reagan ( adopted son ) Patti Davis ( daughter ) Ron Reagan ( son ) Rex ( dog ) ← Jimmy Carter George H.W. Bush → Book Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=A_Time_for_Choosing&oldid=805876525 '' Categories : Speeches by Ronald Reagan 1964 speeches United States
+presidential election , 1964 Hidden categories : All articles with unsourced statements Articles with unsourced statements from March 2016 Articles containing
+video clips Talk Contents About Wikipedia Deutsch עברית Português Scots Simple English Edit links This page was last edited on 18 October 2017 , at 05 : 38 .
+Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use
+and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 2>
+
+<item 3>
+A Time for Choosing
+A shining city on a hill : Ronald Reagan 's economic rhetoric , 1951 -- 1989 ( Greenwood , 1991 ) Perlstein , Rick ( 2009 ) . Before the Storm : Barry Goldwater
+and the Unmaking of the American Consensus . Nation Books . pp. 509ff . Ritter , Kurt W. `` Ronald Reagan and ' the speech ' : The rhetoric of public relations
+politics . '' Western Journal of Communication ( 1968 ) 32 # 1 pp. 50 -- 58 External links ( edit ) Wikisource has original text related to this article : A
+Time for Choosing Ronald Reagan , `` A time for choosing '' ( 1964 ) Online Transcript , audio , and video of the broadcast Analysis of `` The Speech '' ,
+</item 3>
+
+<item 4>
+A Time for Choosing
+audio , and video of the broadcast Analysis of `` The Speech '' , The History Channel ( hide ) Ronald Reagan 40th President of the United States ( 1981 -- 1989
+) 33rd Governor of California ( 1967 -- 1975 ) Life and politics Birthplace Pitney Store Boyhood home Rancho del Cielo Filmography Presidential Library Death
+and state funeral Political positions Governship of California Namesakes and memorials Presidency First inauguration Second inauguration Domestic policy
+Economic policy Economic Recovery Tax Act of 1981 Tax Reform Act of 1986 Assassination attempt Strategic Defense Initiative Foreign policy Reagan Doctrine Cold
+War 1st term 2nd term 1985 Geneva Summit 1986 Reykjavík Summit INF Treaty 1987 Washington Summit 1988 Moscow Summit Invasion of Grenada Iran -- Contra affair
+International trips The Grace Commission Cabinet Federal judicial appointments Supreme Court controversies Administration scandals `` We begin bombing in five
+minutes '' Speeches Ronald Reagan Speaks Out Against Socialized Medicine `` A Time for Choosing '' Reagan 's Neshoba County Fair `` states ' rights '' speech
+First inaugural address Second inaugural address `` Ash heap of history '' `` Evil empire '' `` Tear down this wall ! ''
+</item 4>
+
+<item 5>
+A Time for Choosing
+A Time for Choosing - wikipedia A Time for Choosing Jump to : navigation , search A '' Time for Choosing Speech '' Play media In support of Goldwater , Reagan
+delivers the address , A Time for Choosing . The speech launches Reagan to national prominence . Date October 27 , 1964 ( 1964 - 10 - 27 ) Duration 29 : 33
+Location Los Angeles County , California , U.S. Also known as `` The Speech '' Type Televised campaign speech Participants Ronald Reagan Website Video clip ,
+audio , transcript This article is part of a series about Ronald Reagan Electoral history Political positions Early life Career Films Public image Governor of
+California Governorship 1976 General election Primaries Convention 40th President of the United States Presidency Timeline Policies Domestic Reaganomics Foreign
+Reagan Doctrine International trips Appointments Cabinet Judicial appointments First Term Campaign for the Presidency 1980 general election Primaries Convention
+1st inauguration Assassination attempt Invasion of Grenada Cold War Second Term Re-election campaign 1984 general election Primaries Convention 2nd inauguration
+Cold War Libya bombing Challenger disaster Iran -- Contra affair `` Tear down this wall ! ''
+</item 5>
+
+<item 6>
+A Time for Choosing
+In his autobiography , An American Life , Reagan recalled going to bed that night `` hoping I had n't let Barry down . '' Speaking for Goldwater , Reagan
+stressed his belief in the importance of smaller government . In the speech , he revealed his ideological motivation : `` The Founding Fathers knew a government
+ca n't control the economy without controlling people . And they knew when a government sets out to do that , it must use force and coercion to achieve its
+purpose . So we have come to a time for choosing . '' He also said , `` You and I are told we must choose between a left or right , but I suggest there is no
+such thing as a left or right . There is only an up or down . Up to man 's age - old dream -- the maximum of individual freedom consistent with law and order --
+or down to the ant heap of totalitarianism . '' The speech raised $1 million for Goldwater 's campaign , and is considered the event that launched Reagan 's
+political career . Aftermath ( edit ) To this day , `` The Speech '' is considered one of the most effective ever made on behalf of a candidate .
+</item 6>
+
+<item 7>
+A Time for Choosing
+Nevertheless , Barry Goldwater lost the election by one of the largest margins in history . Soon afterwards , Reagan was asked to run for Governor of California
+; he ran for office and won election in 1966 . Reagan was later dubbed the `` Great Communicator '' in recognition of his effective oratory skills . References
+( edit ) Jump up ^ Reagan , Ronald ( 1990 ) . An American Life : The Autobiography . New York City : Simon & Schuster . p. 143 . ISBN 0671691988 . Retrieved 31
+March 2014 . When it was over , the others in the room said I had done well . But I was still nervous about it and , when I went to bed , I was hoping I had n't
+let Barry down ^ Jump up to : `` A Time for Choosing '' . PBS . Retrieved April 17 , 2007 . Jump up ^ Richard A. Harris , Daniel J. Tichenor . A History of the
+U.S. Political System : Ideas , Interests , and Institutions , Volume 1 . Santa Barbara , California : ABC - CLIO , 2009 .
+</item 7>
+
+<item 8>
+A Time for Choosing
+Santa Barbara , California : ABC - CLIO , 2009 . p. 384 Jump up ^ Cannon , Lou ( June 6 , 2004 ) . `` Actor , Governor , President , Icon '' . The Washington
+Post . p . A01 . Retrieved January 26 , 2008 . Jump up ^ Cannon ( 2001 ) , p. 36 Jump up ^ Peter Schweizer ; Wynton C. Hall ( 2007 ) . Landmark Speeches of the
+American Conservative Movement . Texas A&M University Press . p. 42 . Retrieved April 26 , 2012 . Further reading ( edit ) Bimes , Terri . `` Ronald Reagan and
+the New Conservative Populism . '' ( Institute of Governmental Studies , 2002 ) . online Friedenberg , Robert V. ( 2002 ) . Notable Speeches in Contemporary
+Presidential Campaigns . Greenwood . pp. 143ff . Kiewe , Amos , Davis W. Houck , and Davis L. Houck .
+</item 8>
+
+<item 9>
+A Time for Choosing
+State of the Union : 1982 1984 1985 1986 Books Where 's the Rest of Me ? ( 1965 autobiography ) ( with Richard G. Hubler ) An American Life ( 1990 autobiography
+) ( with Robert Lindsey ) The Reagan Diaries ( 2007 ) ( edited by Douglas Brinkley ) Elections California gubernatorial election , 1966 1970 Republican Party
+presidential primaries , 1968 1976 1980 1984 Republican National Convention 1968 1976 1980 1984 Ronald Reagan presidential campaign , 1980 `` There you go again
+'' `` Make America Great Again '' United States presidential election , 1976 1980 1984 `` Morning in America '' `` Bear in the woods '' Popular culture In
+fiction In music U.S. Postage stamps The Day Reagan Was Shot ( 2001 film ) The Reagans ( 2003 film ) Reagan ( 2011 documentary ) The Butler ( 2013 film )
+Killing Reagan ( 2016 film ) `` What would Reagan do ? ''
+</item 9>
+
+<item 10>
+A Time for Choosing
+INF Treaty Post-Presidency Presidential Library Medal of Freedom Bibliography An American Life The Reagan Diaries Alzheimer 's diagnosis State funeral Legacy
+Speeches and debates `` A Time for Choosing '' Reagan Era Reagan Award `` A Time for Choosing '' , also known as `` The Speech '' , was a speech presented
+during the 1964 U.S. presidential election campaign by future president Ronald Reagan on behalf of Republican candidate Barry Goldwater . The speech launched
+Reagan into national prominence . Contents ( hide ) 1 Background 2 Aftermath 3 References 4 Further reading 5 External links Background ( edit ) Many versions
+of the speech exist , since it was altered over many weeks . Contrary to popular belief , however , the speech was not given at the 1964 Republican National
+Convention in San Francisco , California as a nomination speech for presidential candidate Senator Barry Goldwater ; Richard Nixon gave that nomination speech .
+Reagan , though he campaigned for Goldwater , did not use `` A Time for Choosing '' until October 27 , 1964 , when it was part of a pre-recorded television
+program , Rendezvous with Destiny .
+</item 10>
+=== END ITEM id=8d9bc1a94f2ef25e ===
+
+=== ITEM id=d36b5f4cacba483f ===
+Gold sentences and facts:
+Sentence 0: As a young woman , Rogue permanently absorbed the superhuman powers and the psyche of Carol Danvers , the original Ms. Marvel . This provided her with superhuman strength , stamina , durability , reflexes , speed and a 7th sense . She was able to repel bullets and fly at sub-sonic speeds , much like Ms. Marvel could . In addition , she possessed an amalgamated mutant human / Kree physiology that rendered her resistant to most toxins and poisons , with the added effect of making her virtually invulnerable .
+  Fact 0.0: Rogue, as a young woman, permanently absorbed the superhuman powers of Carol Danvers.
+  Fact 0.1: Rogue, as a young woman, permanently absorbed the psyche of Carol Danvers.
+  Fact 0.2: Carol Danvers is the original Ms. Marvel.
+  Fact 0.3: Rogue's absorption gave Rogue superhuman strength.
+  Fact 0.4: Rogue's absorption gave Rogue superhuman stamina.
+  Fact 0.5: Rogue's absorption gave Rogue superhuman durability.
+  Fact 0.6: Rogue's absorption gave Rogue superhuman reflexes.
+  Fact 0.7: Rogue's absorption gave Rogue superhuman speed.
+  Fact 0.8: Rogue's absorption gave Rogue a 7th sense.
+  Fact 0.9: Rogue was able to repel bullets.
+  Fact 0.10: Rogue was able to fly at sub-sonic speeds.
+  Fact 0.11: Rogue's ability to fly at sub-sonic speeds was much like Ms. Marvel's.
+  Fact 0.12: Rogue possessed an amalgamated mutant human/Kree physiology.
+  Fact 0.13: Rogue's amalgamated mutant human/Kree physiology made Rogue resistant to most toxins.
+  Fact 0.14: Rogue's amalgamated mutant human/Kree physiology made Rogue resistant to most poisons.
+  Fact 0.15: The added effect of Rogue's amalgamated physiology was that Rogue was virtually invulnerable.
+
+Retrieved items:
+<item 1>
+Rogue (comics)
+Z'Cann uses her telepathy to amplify Rogue 's capacity to assimilate memories , causing her powers to mutate . Henceforth , Rogue is able to `` recall ''
+previously absorbed powers , but also finds it increasingly difficult to control which powers manifest when , typically possessing Wolverine 's healing factor
+and claws , and Cyclops ' optic blasts along with her usual strength . X-Treme X-Men team ( edit ) Rogue was part of the X-Treme X-Men team led by Storm . The
+team 's first mission was in search of Destiny 's Diaries ( which prophesied future events ) . During an invasion of Khan ( an alien conqueror from another
+dimension ) of the island nation of Madripoor , Rogue requested that Sage use her power of jump - starting abilities to evolve Rogue to a point where she could
+control all of the various powers that she has ever imprinted . Sage agreed , and Rogue became a one - woman army , able to use the powers of anyone she had
+absorbed in the past all at once . During Khan 's invasion , Rogue was also confronted by Vargas who was said to be `` a new species altogether '' .
+</item 1>
+
+<item 2>
+Rogue (comics)
+She possesses superhuman strength sufficient enough to lift well over 100 tons , as well as some degree of superhuman speed , agility , and reflexes . In
+addition , Rogue is virtually invulnerable to damage and is capable of flying at high speeds . Rogue 's eyes glow in darkness and her vision extends somewhat
+into the infrared spectrum , allowing her to see in the dark . Her new ionic physiology also grants her a form of immortality , protecting her from age and
+disease . Natural skills ( edit ) Rogue has shown a fair knowledge of unarmed combat when in a position where she has to fight in situations where she can not
+simply use her powers to knock her foe out . She has also received a degree of training from Professor X to protect herself against even subtle telepathic
+attacks , this training allowing her to escape Kobik 's reprogramming of various Avengers and villains to reassemble her teammates against this new threat when
+even experienced telepaths like Cable were trapped in the illusion . Rogue 's real name ( edit ) In the Going Rogue arc of her 2004 ongoing series , Rogue 's
+real name is finally established as Anna Marie .
+</item 2>
+
+<item 3>
+Rogue (comics)
+Powers and abilities ( edit ) This section relies too much on references to primary sources . Please improve this section by adding secondary or tertiary
+sources . ( March 2015 ) ( Learn how and when to remove this template message ) This section describes a work or element of fiction in a primarily in - universe
+style . Please help rewrite it to explain the fiction more clearly and provide non-fictional perspective . ( March 2015 ) ( Learn how and when to remove this
+template message ) Due to the nature of her unique mutant powers , Rogue has had several different abilities over the decades . Mutant powers ( edit ) Cover art
+of Rogue vol. 3 , # 3 ( September 2004 ) ; art by Rodolfo Migliari . Rogue possesses the mutant ability to absorb the psyche and abilities of another human
+being ( or members of some sapient alien races ) through skin contact . Rogue can absorb the memories , knowledge , talents , personality and physical abilities
+( whether superhuman or not ) of the person she touches , as well as occasionally duplicating in herself physical characteristics of her victim .
+</item 3>
+
+<item 4>
+Rogue (comics)
+She also still possessed a `` fluid genome '' that enabled Sage to use her as a conduit through which to channel the mutant powers of the X-Treme X-Men team in
+a fight against Bogan . Sunfire powers ( edit ) In the short - lived volume three of her self - entitield series ( 2004 -- 2005 ) , Rogue absorbed a large
+portion of the mutant Sunfire 's solar - absorption based powers . In addition to her own natural mutant abilities Rogue could then project intense heat and
+flame , envelop her body in a fiery aura , fly by focusing her power downwards in a tight stream to propel her like a rocket , focus her power inward to
+increase her strength ( though not at her Ms. Marvel levels ) , exercise immunity to heat and radiation , and see the infra - red spectrum . Rogue was
+eventually purged of these abilities when she came into contact with Hope Summers . Wonder Man powers ( edit ) Rogue currently possesses Wonder Man 's essence ,
+including his powers and psyche . Her organic tissues have been permeated with ionic energy , granting her an array of superhuman abilities .
+</item 4>
+
+<item 5>
+Rogue (comics)
+Over time , Rogue 's own abilities returned , although exactly how and when was never revealed or discussed . However , she no longer possessed the abilities
+she had absorbed from Ms. Marvel . Rogue and Gambit were both put on Havok 's team and participated in various missions . As described in her own miniseries ,
+Rogue then traveled down south to save a young mutant girl from her powers . While there , she met Campbell St. Ange , a young man who was immune to Rogue 's
+lethal touch . Also while there , Rogue forcibly absorbed knowledge from her Aunt Carrie that explained that Rogue 's mother had traveled to the Far Banks , a
+dream - realm , to stop her father from getting there himself . Rogue encountered the incorporeal spirit of her mother therein , and absorbed her memories .
+After the reunion , her mother 's trapped spirit could finally move on . Rogue subsequently went back to her Aunt Carrie and made amends with her .
+</item 5>
+
+<item 6>
+Rogue (comics)
+This ability was not always reliable , however , and would randomly and sporadically activate . When she possessed Carol Danvers ' psyche , her `` double ''
+consciousness made her highly resistant to telepathic probes , even those of Charles Xavier , which was said to have been a byproduct of two minds existing in
+one body and / or Carol Danvers ' Kree physiology . The Ms. Marvel psyche was eventually torn out of Rogue in a subsequent issue , and it was destroyed by
+Magneto . X-Treme abilities ( edit ) During the Maximum Security miniseries , Rogue absorbed an injured Cadre K girl named Z'Cann . The girl held on longer than
+necessary , using her mind control to boost the process and because of this ( perhaps because she had absorbed a fluid Skrull physiology ) Rogue mutated further
+, gaining the ability to ' recall ' the powers of anyone she had ever absorbed before , though she could not control when or which of these powers surfaced .
+For a short time Rogue also had a Skrull appearance , scanned as though she had Skrull DNA , and had their shapeshifting powers , but these soon faded and she
+returned to her normal appearance .
+</item 6>
+
+<item 7>
+Rogue (comics)
+Ms. Marvel powers ( edit ) As a young woman , Rogue permanently absorbed the superhuman powers and the psyche of Carol Danvers , the original Ms. Marvel . This
+provided her with superhuman strength , stamina , durability , reflexes , speed and a 7th sense . She was able to repel bullets and fly at sub-sonic speeds ,
+much like Ms. Marvel could . In addition , she possessed an amalgamated mutant human / Kree physiology that rendered her resistant to most toxins and poisons ,
+with the added effect of making her virtually invulnerable . Rogue on the cover of Rogue vol 3 # 7 ( March 2005 ) ; art by Frank G. D'Armata , Scot Eaton , and
+Don Hillsman Rogue also gained a precognitive `` seventh sense '' that enables her to predict an enemy 's move subconsciously during battle . She used this
+ability to predict where Nightcrawler would teleport and from which direction Magus of the Technarchy would attack . This ability was not always reliable ,
+however , and would randomly and sporadically activate .
+</item 7>
+
+<item 8>
+Rogue (comics)
+Through meditation , Rogue learned how to suppress the random manifestations of most of these abilities , but found herself with a new ' default ' state for a
+time , where she possessed Wolverine 's claws and healing factor , Cyclops ' optic blasts - requiring her to wear ruby quartz glasses - while also still
+retaining her mutant and Ms. Marvel powers . Later , Sage used her own mutant abilities to ' jump - start ' Rogue 's power , giving her the control to manifest
+any ability she had ever absorbed , whenever she wished to . It is generally accepted that after regaining her abilities after X-Treme X-Men , she has lost this
+ability . Though Z'Cann was a telepath , Rogue never displayed this power ( though she did manifest telepathy , it was with the Phoenix energy form , so it was
+most likely an echo of Jean Grey 's powers ) . Powerless ( edit ) For a time Rogue lost all of her powers , including her original mutant ones , after she was
+fatally injured in a fight with the mysterious warrior Vargas . During this period , she displayed exceptional fighting skills and agility , though it was said
+these were not superhuman in nature .
+</item 8>
+
+<item 9>
+Graph query row:
+entity: Rogue
+relationship: RELATED_TO
+related: Carol Danvers
+fact: Rogue permanently absorbed Carol Danvers's powers and psyche.
+context: None
+relationship_detail: None
+relation_detail: bumps into
+role: None
+result: None
+outcome: None
+</item 9>
+
+<item 10>
+Rogue (comics)
+When Professor Xavier removes the blocks , her powers are allowed to develop normally . With this new control , Rogue demonstrates the ability to absorb and
+collectively utilize all the powers of the New X-Men , in order to defeat a rogue Predator X , with no apparent harm to either them or herself . Her power also
+affects aliens , such as when she was transferred to a planet in another dimension by Magik , and one of the aliens involuntarily touches her and she gains the
+ability to communicate in their language , along with their knowledge . She later uses a more lethal version of her powers against the Avengers during her fight
+with them , even making Falcon and She - Hulk immediately unconscious without any negative feedback on her physical self ( besides She - Hulk 's green skin )
+but she can not control the minds of the ones she absorbs . She absorbs their powers and renders them unconscious for a long time . The new twist in Rogue 's
+powers consists of prompting her victims of her skin - to - skin contact , for a consent on the process .
+</item 10>
+=== END ITEM id=d36b5f4cacba483f ===

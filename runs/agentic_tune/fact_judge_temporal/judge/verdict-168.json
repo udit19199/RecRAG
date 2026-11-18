@@ -1,0 +1,53 @@
+[
+{"id": "025f03683a3a838e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "It will attempt to argue that Google restrains competition within two separate markets"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "60d9e4a40d61d4a0", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 4, "quote": "While on the Pat McAfee show, Kelce discussed the rumors and sounded somehow surprised people are talking about it."}, {"item": 4, "quote": "He then admitted that he invited Swift to one of his games"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Sept. 24: Swift attends Chiefs game"}, {"item": 9, "quote": "Swift took Kelce up on his offer and attended the Chiefs' Week 3 game against the Chicago Bears."}]},
+{"fact": "2.0", "status": "missing", "evidence": []}
+]},
+{"id": "7945b1dc76f7896e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Like Sorcerers, you’ll pick your Warlock subclass during character creation."}, {"item": 6, "quote": "You’ll choose from The Fiend, The Great Old One, and The Archfey subclasses that are all themed around where your magic comes from"}, {"item": 10, "quote": "Warlocks are extreme knowledge-seekers who are willing to form a pact with otherwordly beings"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Warlocks are casters that made a deal with a higher power for their magic."}, {"item": 3, "quote": "the pact you choose here is actually less important than the Eldritch Invocation"}]}
+]},
+{"id": "a3b6a879dd144a54", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+]},
+{"id": "4de9e60a6f2f55dc", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Even with those tools, some of the businesses selling on Amazon might still choose to set prices that aren’t competitive,” Zapolsky said."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "That means eBay will give you an eBay coupon for the difference in price between what you bought the item for and what the competitor is selling it for, plus an additional 10 percent of that price difference."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "That means eBay will give you an eBay coupon for the difference in price between what you bought the item for and what the competitor is selling it for, plus an additional 10 percent of that price difference."}]}
+]},
+{"id": "4eb63f35d7a9a2d3", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]}
+]

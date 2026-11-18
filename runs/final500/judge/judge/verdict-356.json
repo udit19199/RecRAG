@@ -1,0 +1,59 @@
+[
+{"id": "145e2930c47f1408", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Love Story This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "She specified that she isn't trying to hide her relationship from the public eye."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "Taylor Swift reveals secret start to her relationship with Travis Kelce"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "Taylor Swift reveals secret start to her relationship with Travis Kelce"}, {"item": 3, "quote": "She specified that she isn't trying to hide her relationship from the public eye."}]}
+]},
+{"id": "c4f683bcf79c172e", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]}
+]},
+{"id": "387637423bbe559d", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "a34f21a94c8e2e25", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "In addition, Beeper Mini will be free for the time being given the unstable nature of Beeper’s status and Apple’s attempts at shutting it down."}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "In addition, Beeper Mini will be free for the time being given the unstable nature of Beeper’s status and Apple’s attempts at shutting it down."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "In addition, Beeper Mini will be free for the time being given the unstable nature of Beeper’s status and Apple’s attempts at shutting it down."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "In addition, Beeper Mini will be free for the time being given the unstable nature of Beeper’s status and Apple’s attempts at shutting it down."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "In addition, Beeper Mini will be free for the time being given the unstable nature of Beeper’s status and Apple’s attempts at shutting it down."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "Beeper Mini was made possible because the team behind the app has managed to reverse-engineer the iMessage protocol, they say."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "Beeper Mini was made possible because the team behind the app has managed to reverse-engineer the iMessage protocol, they say."}]}
+]},
+{"id": "c2bdd27b66efad60", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "Will the Josh Dobbs show continue tonight? He’s had good command of the Vikings’ offense in three games since a trade out of Arizona"}]},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "33559b84338cdb4a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family."}]}
+]}
+]

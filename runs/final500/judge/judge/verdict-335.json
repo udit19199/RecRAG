@@ -1,0 +1,79 @@
+[
+{"id": "2f64e1166e687231", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 10, "quote": "and is reportedly preparing for a ground invasion."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []}
+]},
+{"id": "42eb648f35618800", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Jada Pinkett Smith has revealed that she and husband Will Smith have been separated for the last seven years."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Of course, outsiders aren’t fully aware of the “heavy-duty work” that Jada and Will have done throughout their marriage."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Of course, outsiders aren’t fully aware of the “heavy-duty work” that Jada and Will have done throughout their marriage."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 7, "quote": "During a 2018 episode of her Facebook Watch series, Red Table Talk,"}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 7, "quote": "During a 2018 episode of her Facebook Watch series, Red Table Talk, Jada doubled down on her stance about divorce,"}]},
+{"fact": "3.2", "status": "stated", "evidence": [{"item": 7, "quote": "as she recalled the the hard conversation she had with Will about the topic before they got married."}]},
+{"fact": "3.3", "status": "stated", "evidence": [{"item": 7, "quote": "as she recalled the the hard conversation she had with Will about the topic before they got married."}]}
+]},
+{"id": "2141419609897009", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Google compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Google compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Google compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "0c8f0a7916039a10", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Wang testified that Alameda got access to a special credit line"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 8, "quote": "Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT"}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 8, "quote": "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX."}]},
+{"fact": "1.6", "status": "stated", "evidence": [{"item": 8, "quote": "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 10, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud"}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 10, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "3.2", "status": "stated", "evidence": [{"item": 10, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "3.3", "status": "stated", "evidence": [{"item": 10, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "3.4", "status": "stated", "evidence": [{"item": 10, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+]},
+{"id": "6f39fbfb697bad76", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 10, "quote": "Second-last of ten on the table after a fourth abject loss in barely three weeks"}, {"item": 10, "quote": "England’s hopes of defending their World Cup crown are in tatters"}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 10, "quote": "Second-last of ten on the table after a fourth abject loss in barely three weeks"}, {"item": 10, "quote": "England’s hopes of defending their World Cup crown are in tatters"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "this time by eight wickets and nearly 25 overs to spare against Sri Lanka"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "this time by eight wickets and nearly 25 overs to spare against Sri Lanka"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 10, "quote": "this time by eight wickets and nearly 25 overs to spare against Sri Lanka"}]},
+{"fact": "1.5", "status": "contradicted", "evidence": [{"item": 10, "quote": "against Sri Lanka having been bowled out for a miserable 156 in Bengaluru, the 2019 champions"}, {"item": 10, "quote": "England’s hopes of defending their World Cup crown are in tatters"}]},
+{"fact": "1.6", "status": "contradicted", "evidence": [{"item": 10, "quote": "the 2019 champions are now only mathematically a chance of scraping through to the semi-finals"}, {"item": 10, "quote": "an upcoming date with table-toppers and tournament favourites India"}, {"item": 10, "quote": "England’s hopes of defending their World Cup crown are in tatters"}]}
+]},
+{"id": "9c98fec0892aef64", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal"}, {"item": 3, "quote": "but this time around, the pair meet in the semi-finals of the 2023 tournament"}]},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]}
+]

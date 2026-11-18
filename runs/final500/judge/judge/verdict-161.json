@@ -1,0 +1,42 @@
+[
+{"id": "b84c989fb082683d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "and how Google tried to have Chrome preinstalled on iPhones"}]}
+]},
+{"id": "36c235d992dfdc9a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "FTX co-founder and former CTO Gary Wang"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Wang, 30, was technology chief for FTX"}, {"item": 10, "quote": "FTX co-founder and former CTO Gary Wang"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Alameda Research’s former CEO, Caroline Ellison"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 10, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse"}]}
+]},
+{"id": "19670d181a51fc4f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "We continue to work through the process with the European Commission"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "We continue to work through the process with the European Commission and are focused on addressing its questions"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "are focused on addressing its questions and any identified concerns at this stage."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []}
+]},
+{"id": "60a8c92ac6ab7fb2", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Postponements of such reports could complicate things for the Fed, which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Postponements of such reports could complicate things for the Fed, which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy"}]}
+]},
+{"id": "a957d531822a422f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]}
+]

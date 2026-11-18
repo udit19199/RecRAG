@@ -1,0 +1,29 @@
+[
+  {"id": "dca6a46751976698", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "We expect Caesars to offer the same offer in VT is has elsewhere"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "with new sign-ups eligible to receive up to a $1,000 Bonus Bet if their first bet loses."}]}
+  ]},
+  {"id": "c5449be9b1051c78", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "83c204a735cb98ed", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "intimidating Alameda’s former CEO, Caroline Ellison"}]},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]}
+]

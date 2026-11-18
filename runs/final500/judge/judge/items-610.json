@@ -1,0 +1,441 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "f4c14ff1e4f7de5b",
+   "gold": [
+    {
+     "sentence": " Պողոսյան , born July 15, 1990) is an American professional ice hockey defenseman currently playing for the Buffalo Sabres.",
+     "facts": {
+      "0.0": "Պողոսյան was born on July 15, 1990.",
+      "0.1": "Պողոսյան is an American professional ice hockey defenseman.",
+      "0.2": "Պողոսյան is currently playing for the Buffalo Sabres."
+     }
+    },
+    {
+     "sentence": "Daron Vartan Malakian (Armenian: Տարօն/Տարոն Վարդան Մալաքեան, born July 18, 1975) is an Armenian–American singer-songwriter, multi-instrumentalist, and record producer.",
+     "facts": {
+      "1.0": "The Armenian name of Daron Vartan Malakian is Տարօն/Տարոն Վարդան Մալաքեան.",
+      "1.1": "Daron Vartan Malakian was born on July 18, 1975.",
+      "1.2": "Daron Vartan Malakian is an Armenian-American singer-songwriter.",
+      "1.3": "Daron Vartan Malakian is a multi-instrumentalist.",
+      "1.4": "Daron Vartan Malakian is a record producer."
+     }
+    }
+   ],
+   "items": [
+    "Zach Bogosian\nZachary M. Bogosian (Armenian: Զաքարի Մ.\n\n Պողոսյան , born July 15, 1990) is an American professional ice hockey defenseman currently playing for the Buffalo Sabres.\n\n Bogosian attended Cushing Academy in Massachusetts before he joined the Peterborough Petes of the Ontario Hockey League (OHL) in 2006.\n\n He played two seasons in the OHL, and was nominated for the Red Tilson Trophy as the league's most outstanding player in his second season.\n\n Bogosian was regarded as a complete, physical defenseman who could contribute on both offense and defense; he was rated as one of the top players heading into the 2008 NHL Entry Draft, where the Atlanta Thrashers selected him third overall.\n\n He signed a contract with the team a few weeks after the draft and began the season with the Thrashers, though he missed several weeks of his rookie year due to injury.\n\n In his second season, he tied a team record for goals by a defenseman.",
+    "Daron Jones\nDaron Tavaris Jones (born December 27, 1976) is an American singer-songwriter, record producer.\n\n He is a member in Bad Boy Records group 112.\n\n His debut solo album titled \"Uncensored\" was released December 5, 2010.\n\n The first single from the album is the digitally-released \"Money.\"\n\n Daron digitally released \"Christmas in Atlanta\" in December 2014, which reached the top 30 on the iTunes R&B chart.\n\n Daron is currently in the studio working on new music.",
+    "Greg Davis (musician)\nGreg Davis is an American electronic musician who has recorded albums drawing from a wide variety of sources, including guitar, field recording, various world/ethnic/traditional instruments, percussion, and voice, all processed through digital manipulation.\n\n After years of experience in hip-hop groups, jazz combos, free improvisation, and experimental composition, Davis moved toward computer-based music in 1997.\n\n At Depaul University in Chicago, he studied classical and jazz guitar alongside composition and jazz studies.\n\n In 1997, he started his own label, Autumn Records, to release his own music and the music of others.\n\n Davis moved to Boston in 1999 to pursue a master's degree in composition (which he received in June 2001) while independently immersing himself in the study of electronic music.\n\n Since 2001, he has played shows all around the world and released records on a number of different labels.\n\n He has collaborated with Keith Fullerton Whitman, Ben Vida, Sebastien Roux, Chris Weisman, Steven Hess, Jeph Jerman, Akron/Family, Toby Aronson (as Harmonizer), and Zach Wallace (as Sun Circle).",
+    "Jimmy Chamberlin\nJames Joseph Chamberlin (born June 10, 1964) is an American drummer and record producer.\n\n He is best known as the drummer for the alternative rock band The Smashing Pumpkins.\n\n Following the 2000 breakup of the band, Chamberlin joined Pumpkins frontman Billy Corgan in the supergroup Zwan and also formed his own group, the Jimmy Chamberlin Complex.\n\n In 2005, Chamberlin joined Corgan in reforming The Smashing Pumpkins; he eventually left the group in March 2009, though he returned again in 2015 for a summer tour.\n\n He performed in the group Skysaw until 2012.\n\n He is currently active under the Jimmy Chamberlin Complex name.\n\n In addition to his current work as CEO, Chamberlin has joined Chicago jazz saxophonist Frank Catalano for a string of 2013–15 performances in the Chicago area.\n\n An EP by Catalano and Chamberlin \"Love Supreme Collective - EP\" was released on the 29th of July 2014.",
+    "Zach Bogosian\nIn his second season, he tied a team record for goals by a defenseman.\n\n Bogosian first played in an international tournament when he joined the American national team at the 2009 IIHF World Championship.",
+    "Daron Malakian\nDaron Vartan Malakian (Armenian: Տարօն/Տարոն Վարդան Մալաքեան, born July 18, 1975) is an Armenian–American singer-songwriter, multi-instrumentalist, and record producer.\n\n He is best known as the guitarist, songwriter and second vocalist of the rock band System of a Down and as the lead vocalist, lead guitarist and songwriter of the band Scars on Broadway.\n\n Like the rest of the Hollywood-based band System of a Down, he is of Armenian ancestry, but he is the only member to have been born in the United States.\n\n Daron Malakian is known for his distinctive playing and is ranked 40th in Loudwire's list of \"Top 50 Hard Rock + Metal Guitarists Of All Time\" and #11 in MusicRadar's poll, \"The 20 Greatest Metal Guitarists Ever\".\n\n He is placed 30th in Guitar World's List of The 100 Greatest Heavy Metal Guitarists of All Time.",
+    "Bad Acid Trip\nBad Acid Trip is an American metal band, currently signed to System of a Down lead singer Serj Tankian's record label, Serjical Strike Records.\n\n Their 2004 album, \"Lynch the Weirdo\", was produced by Daron Malakian, another System of a Down member.\n\n In 2006 they performed on the second stage at the Ozzfest summer tour.\n\n The band has three full-length releases (\"For the Weird by the Weird\", \"Lynch the Weirdo\", and \"Humanly Possible\") and multiple EPs.",
+    "Lazzo (musician)\nLazzo is a producer, engineer, and songwriter specializing in the rock, electronic, dance, and pop genres.\n\n In late 2013, he released his Wammy (Washington Area Music Association / WAMA) award-winning dance/dubstep remix album with Rites of Ash, Kept Me Up All Night.\n\n In Oct. 2014, Rites of Ash released their new full-length album titled \"Kill For Love\".\n\n He has had his music featured on numerous MTV shows, FUSE, MTV2, and MTVu, as well as shared the stage with many national artists.",
+    "Doug Grean\nDoug Grean is an American record producer, audio engineer, guitarist, based in Los Angeles.\n\n He has worked with artists Sheryl Crow, Ricki Lee Jones, Glen Campbell, Scott Weiland, Slash, Velvet Revolver, Stone Temple Pilots, The Crystal Method, Tim McGraw, Cyndi Lauper, Annabella Lwin (Bow Wow Wow), Corey Glover (Living Color), Camp Freddy, DJ Hurricane and John Taylor (Duran Duran).\n\n Grean was formerly the lead guitarist and touring musical director for Scott Weiland and the Wildabouts.\n\n Some of Grean's television appearances with Weiland include: VH1 Legends, Last Call with Carson Daly, The Tonight Show with Jay Leno, and the Grammy awards with Velvet Revolver as keyboardist, performing \"All Across the Universe\" with Stevie Wonder, Norah Jones, Bono, Steven Tyler, Brian Wilson, and Alison Krauss.",
+    "Profiles span musicians across jazz, rock, metal, electronic, gospel, and pop. Robert Glasper has three Grammys; Carlos Santana, ten Grammys and a landmark Latin-rock fusion career. Daron Malakian (System of a Down), Gaahl (Gorgoroth), Roy Khan (Kamelot), Toshi (X Japan), and Rivermaya’s former guitarist Perfecto de Castro are noted rock figures. Relient K’s Matt Thiessen, electronic artists Greg Davis and"
+   ]
+  },
+  {
+   "id": "13dbeb5038cd56ff",
+   "gold": [
+    {
+     "sentence": "Migene González-Wippler is a Puerto Rican new-age author and a leading expert on the Afro-Caribbean religion of Santería.",
+     "facts": {
+      "0.0": "Migene González-Wippler is a Puerto Rican.",
+      "0.1": "Migene González-Wippler is a new-age author.",
+      "0.2": "Migene González-Wippler is a leading expert on the Afro-Caribbean religion of Santería."
+     }
+    },
+    {
+     "sentence": "Santería, also known as Regla de Ochá, La Regla de Ifá, or Lucumi, is an Afro-American religion of Caribbean origin that developed in the Spanish Empire among West African descendants.",
+     "facts": {
+      "1.0": "Santería is also known as Regla de Ochá.",
+      "1.1": "Santería is also known as La Regla de Ifá.",
+      "1.2": "Santería is also known as Lucumi.",
+      "1.3": "Santería is an Afro-American religion.",
+      "1.4": "Santería is a religion of Caribbean origin.",
+      "1.5": "Santería developed in the Spanish Empire.",
+      "1.6": "Santería developed among West African descendants."
+     }
+    }
+   ],
+   "items": [
+    "Ewe people\nThe Ewe people (Ewe: \"Eʋeawó\" , lit.\n\n \"Ewe people\"; or \" Eʋedukɔ́ \", lit.\n\n \"Ewe nation\",\"Eʋenyigba\" Eweland;) are an African ethnic group.\n\n They are the largest ethnic group in Togo (32%), the third largest ethnic group in Ghana (14%), and are a minority ethnic group in southern Benin, Ivory Coast and Nigeria.\n\n They speak the Ewe language (Ewe: \"Eʋegbe\" ) which belongs to the Niger-Congo family of languages.\n\n They are related to other speakers of Gbe languages, such as, the Fon, Gen, Phla Phera, and the Aja people of Togo and Benin.",
+    "Guanche mummies\nGuanche mummies are the intentionally desiccated remains of members of the indigenous Guanche people of the Canary Islands.\n\n The majority of Guanche mummies were made during the eras prior to Spanish settlement of the area in the 15th century.\n\n The methods of embalming are similar to those that were used by the Ancient Egyptians, though fewer mummies remain from the Guanche due to looting and desecration.",
+    "Santería\nSantería, also known as Regla de Ochá, La Regla de Ifá, or Lucumi, is an Afro-American religion of Caribbean origin that developed in the Spanish Empire among West African descendants.\n\n \"Santeria\" is a Spanish word that means the \"worship of saints\".\n\n Santería is influenced by and syncretized with Roman Catholicism.\n\n Its sacred language, a variety of Yoruba, is the Lucumí language.",
+    "Cora language\nCora is an indigenous language of Mexico of the Uto-Aztecan language family.\n\n It is spoken by the ethnic group that is widely known as the Cora but who refer to themselves as \"Naáyarite\".\n\n The Cora inhabit the northern sierra of the Mexican state Nayarit which is named after its indigenous inhabitants.\n\n Cora is a Mesoamerican language and shows many of the traits defining the Mesoamerican Linguistic Area.\n\n Under the General Law of Linguistic Rights of the Indigenous Peoples it is recognized as a \"national language\" along with 62 other indigenous languages and Spanish which have the same \"validity\" in Mexico .",
+    "Mazahua language\nThe Mazahua language is an indigenous language of Mexico, spoken in the country's central states by the ethnic group that is widely known as the Mazahua but calls itself the Hñatho.\n\n It is a Mesoamerican language and has many of the traits of the Mesoamerican Linguistic Area.\n\n In 2003, along with some 62 other indigenous languages, it was recognised by a statutory law of Mexico (General Law of Linguistic Rights of the Indigenous Peoples) as an official language in the Federal District and the other administrative divisions in which it is spoken, and on an equal footing with Spanish.\n\n The largest concentration of Mazahua is found in the municipality of San Felipe del Progreso, State of México, near Toluca.",
+    "Maléku language\nThe Maléku Jaíka language, also called Guatuso, Watuso-Wétar, and Guetar, is an indigenous language of north central Costa Rica.\n\n It is a Chibchan language and Votic language spoken by around 300 to 750 indigenous Maléku people.\n\n This language is considered to be endangered according to The Endangered Languages Project.\n\n Corobicí is possibly a dialect.",
+    "Chiguata District\nChiguata is a district located in the Arequipa province, 30 km away from the city of Arequipa, Peru, on the slopes of the volcano Pikchu Pikchu (where at its summit pre-Inca worshipped remains and artifacts have been found).\n\n The name \"chiguata\" comes from the Quechua words \"chiri\" meaning \"cold\" and \"wata\" meaning \"year\" (cold all year).\n\n Ancient Chiguata was inhabited by the local natives until the arrival of Spanish influence in charge of the emissary Diego Hernández de Córdova in 1540.\n\n Soon after, the construction of a small plaza was initiated, and according to the Dominican religious order and local sources, the plaza's \"Templo del Espíritu Santo\" (\"Sacred Spirit temple\") along with its domes and lateral cover was not begun until 1739.\n\n The design of the temple is quite interesting, with two angels in feathered nightwear and their arms lifted vertically, separated by twelve fringes of rectangular flowers which add to the whole decoration of the temple.",
+    "Ethnic religion\nIn religious studies, ethnic religion (or indigenous religion) is the expression of religion associated with a particular ethnic group.\n\n Ethnic religions are often distinguished from religions which claim to not be limited in ethnic or national scope, such as Christianity or Islam.\n\n Ethnic religions do not have to be excluded to independent religions.\n\n Some localized denominations of global religions are practiced solely by certain ethnic groups, with ethnic groups like the Assyrians following a unique denominational structure of Christianity known as the Assyrian Church of the East.",
+    "Migene González-Wippler\nMigene González-Wippler is a Puerto Rican new-age author and a leading expert on the Afro-Caribbean religion of Santería.\n\n González-Wippler was born in Puerto Rico and has degrees in psychology and anthropology from the University of Puerto Rico and from Columbia University.\n\n In addition to her solid background in social sciences she has also worked as a science editor for the Interscience Division of John Wiley, the American Institute of Physics, and the American Museum of Natural History, and as an English editor for the United Nations in Vienna, where she resided for many years.\n\n She is a cultural anthropologist and lectures frequently at universities and other educational institutions.\n\n She also has contributed extensively to the Institute of Puerto Rican Culture's collection, especially when it comes to Santeria and its practices, beliefs and organization.",
+    "Church of the Guanche People\nThe Church of the Guanche People (Spanish: \"Iglesia del Pueblo Guanche\" ) is a religious organisation, founded in 2001 in the city of San Cristóbal de La Laguna (Tenerife, Canary Islands, Spain).\n\n It aims to perpetuate and spread the pagan religion of the ancient Guanche people."
+   ]
+  },
+  {
+   "id": "ed0d2d8d098aae28",
+   "gold": [
+    {
+     "sentence": "More Hot Rocks (Big Hits & Fazed Cookies) is the second compilation album of Rolling Stones music released by former manager Allen Klein's ABKCO Records (who usurped control of the band's Decca/London material in 1970) after the band's departure from Decca and Klein.",
+     "facts": {
+      "0.0": "More Hot Rocks (Big Hits & Fazed Cookies) is the second compilation album of Rolling Stones music.",
+      "0.1": "More Hot Rocks was released by ABKCO Records.",
+      "0.2": "ABKCO Records is run by former manager Allen Klein.",
+      "0.3": "Allen Klein usurped control of the Rolling Stones' Decca/London material in 1970.",
+      "0.4": "More Hot Rocks was released after the Rolling Stones departed from Decca.",
+      "0.5": "More Hot Rocks was released after the Rolling Stones departed from Allen Klein."
+     }
+    },
+    {
+     "sentence": "Allen Klein (December 18, 1931 July 4, 2009) was an American businessman, music publisher, writers' representative, filmmaker and record label executive, most noted for his tough persona and aggressive, innovative negotiation tactics, many of which established higher industry standards for compensating recording artists.",
+     "facts": {
+      "1.0": "Allen Klein was born December 18, 1931.",
+      "1.1": "Allen Klein died July 4, 2009.",
+      "1.2": "Allen Klein was an American businessman.",
+      "1.3": "Allen Klein was a music publisher.",
+      "1.4": "Allen Klein was a writers' representative.",
+      "1.5": "Allen Klein was a filmmaker.",
+      "1.6": "Allen Klein was a record label executive.",
+      "1.7": "Allen Klein was most noted for his tough persona.",
+      "1.8": "Allen Klein was most noted for aggressive, innovative negotiation tactics.",
+      "1.9": "Many of Allen Klein's negotiation tactics established higher industry standards for compensating recording artists."
+     }
+    },
+    {
+     "sentence": " He first scored massive monetary and contractual windfalls for Buddy Knox and Jimmy Bowen, one-hit rockabillies of the late 1950s, then parlayed his early successes into a position managing Sam Cooke, and eventually managed the Beatles and the Rolling Stones simultaneously, along with many other artists, becoming one of the most powerful individuals in the music industry during his era.",
+     "facts": {
+      "2.0": "Allen Klein first scored massive monetary windfalls for Buddy Knox.",
+      "2.1": "Allen Klein first scored massive contractual windfalls for Buddy Knox.",
+      "2.2": "Allen Klein first scored massive monetary windfalls for Jimmy Bowen.",
+      "2.3": "Allen Klein first scored massive contractual windfalls for Jimmy Bowen.",
+      "2.4": "Buddy Knox and Jimmy Bowen were one-hit rockabillies of the late 1950s.",
+      "2.5": "Allen Klein later parlayed his early successes into a position managing Sam Cooke.",
+      "2.6": "Allen Klein eventually managed the Beatles.",
+      "2.7": "Allen Klein eventually managed the Rolling Stones.",
+      "2.8": "Allen Klein managed the Beatles and the Rolling Stones simultaneously.",
+      "2.9": "Allen Klein managed many other artists.",
+      "2.10": "Allen Klein became one of the most powerful individuals in the music industry during his era."
+     }
+    }
+   ],
+   "items": [
+    "George Thorogood\nGeorge Thorogood (born February 24, 1950) is an American musician, singer and songwriter from Wilmington, Delaware.\n\n His \"high-energy boogie-blues\" sound became a staple of 1980s rock radio, with hits like his original songs \"Bad to the Bone\" and \"I Drink Alone\".\n\n He has also helped popularize older songs by American icons, such as \"Move It on Over\", \"Who Do You Love?\n\n\", and \"House Rent Boogie/One Bourbon, One Scotch, One Beer\", which became staples of classic rock radio.",
+    "Bigtop Records\nBigtop Records was an American record label started by music executive Johnny Bienstock and the major music publisher Hill & Range Music and was co-owned along with Big Top Record Distributors (sic).\n\n Hit artists included Del Shannon, Johnny and the Hurricanes, Lou Johnson, Sammy Turner, Don and Juan, and Toni Fisher.\n\n Big Top Record Distributors also distributed Paul Case's Dunes Records label in the early 60's, which had hits from Ray Peterson (\"Corrina, Corrina\") and Curtis Lee (\"Pretty Little Angel Eyes\"), both records produced by Phil Spector.\n\n Bell Records briefly distributed Bigtop prior to the label closing, around 1965.\n\n \"Bigtop\" also released two Mad Magazine music parody themed albums; \"Mad Twists Rock 'N' Roll\" and \"Fink Along With Mad\" in 1963.",
+    "Howie Klein\nHowie Klein (born 1950) is an American writer, concert promoter, disc jockey, music producer, record label founder, record label executive, progressive political activist, and adjunct professor of music.\n\n He is perhaps best known for his role as President of Reprise Records from 1989 to 2001.\n\n He appears occasionally as himself in music-related film documentaries and has received accolades for his stance against censorship and for his advocacy of free speech protection.",
+    "More Hot Rocks (Big Hits &amp; Fazed Cookies)\nMore Hot Rocks (Big Hits & Fazed Cookies) is the second compilation album of Rolling Stones music released by former manager Allen Klein's ABKCO Records (who usurped control of the band's Decca/London material in 1970) after the band's departure from Decca and Klein.\n\n Released in late 1972 as the follow-up to the hugely successful \"Hot Rocks 1964–1971\", it was another success for Klein and ABKCO.",
+    "Hot Rocks 1964–1971\nHot Rocks 1964–1971 is the first compilation album of Rolling Stones music released by former manager Allen Klein's ABKCO Records (who gained control of the band's Decca/London material in 1970) after the band's departure from Decca and Klein.\n\n Released in late 1971, it proved to be The Rolling Stones' biggest-selling release of their career and an enduring and popular retrospective.",
+    "Hot Streets\nHot Streets is the tenth studio album (twelfth overall) by the American band Chicago, released in 1978.\n\n In many ways, \"Hot Streets\" marked the beginning of a new era for the band, turning to disco music, a move which would be derided in retrospect.\n\n It was also the band's first album with all-new material released since their second that didn't have a numbered title.\n\n It was also the first album not to feature original guitarist/vocalist Terry Kath, who died from an accidental self-inflicted gunshot wound in January 1978.\n\n He was replaced by Donnie Dacus on this album.",
+    "Allen Klein\nAllen Klein (December 18, 1931 July 4, 2009) was an American businessman, music publisher, writers' representative, filmmaker and record label executive, most noted for his tough persona and aggressive, innovative negotiation tactics, many of which established higher industry standards for compensating recording artists.\n\n He founded ABKCO Music & Records Incorporated.\n\n Klein revolutionized the income potential of recording artists, who previously had been routinely victimized by onerous record company contracts.\n\n He first scored massive monetary and contractual windfalls for Buddy Knox and Jimmy Bowen, one-hit rockabillies of the late 1950s, then parlayed his early successes into a position managing Sam Cooke, and eventually managed the Beatles and the Rolling Stones simultaneously, along with many other artists, becoming one of the most powerful individuals in the music industry during his era.",
+    "Music West Records\nMusic West Records was an independent record company founded by Allan Kaplan on December 1985 in San Rafael, California.\n\n The company was initially formed to promote Ray Lynch.\n\n During its run, artists released under the record company included Jim Chappell, Kenneth Nash, Chris Spheeris, and Øystein Sevåg.\n\n According to Gary Chappell, the manufacturer for Music West, the artists originated independently, claiming that the company's idea \"has a statement that comes directly from the",
+    "Sargent House\nSargent House is an American management company and record label based in Los Angeles.\n\n It was founded in June 2006 by Cathy Pellow, who is a music video commissioner for Atlantic Records and also owns a music video production company called Refused TV.\n\n Pellow began managing the rock outfit RX Bandits in 2006.\n\n The band needed to release its new album \"...And the Battle Begun\", so Pellow decided to launch her own record label (also to be able to do things differently from the traditional model of record labels).\n\n From that point onward, Pellow continued to manage bands and release records, all under the Sargent House banner.",
+    "Doug Grean\nDoug Grean is an American record producer, audio engineer, guitarist, based in Los Angeles.\n\n He has worked with artists Sheryl Crow, Ricki Lee Jones, Glen Campbell, Scott Weiland, Slash, Velvet Revolver, Stone Temple Pilots, The Crystal Method, Tim McGraw, Cyndi Lauper, Annabella Lwin (Bow Wow Wow), Corey Glover (Living Color), Camp Freddy, DJ Hurricane and John Taylor (Duran Duran).\n\n Grean was formerly the lead guitarist and touring musical director for Scott Weiland and the Wildabouts.\n\n Some of Grean's television appearances with Weiland include: VH1 Legends, Last Call with Carson Daly, The Tonight Show with Jay Leno, and the Grammy awards with Velvet Revolver as keyboardist, performing \"All Across the Universe\" with Stevie Wonder, Norah Jones, Bono, Steven Tyler, Brian Wilson, and Alison Krauss."
+   ]
+  },
+  {
+   "id": "d02b44a1b37c37ff",
+   "gold": [
+    {
+     "sentence": "Erving Goffman (11 June 1922 – 19 November 1982) was a Canadian-American sociologist and writer, considered by some \"the most influential American sociologist of the twentieth century\".",
+     "facts": {
+      "0.0": "Erving Goffman was born on 11 June 1922.",
+      "0.1": "Erving Goffman died on 19 November 1982.",
+      "0.2": "Erving Goffman was a Canadian-American sociologist.",
+      "0.3": "Erving Goffman was a writer.",
+      "0.4": "Some consider Erving Goffman the most influential American sociologist of the twentieth century."
+     }
+    },
+    {
+     "sentence": " In 2007 he was listed by \"The Times Higher Education Guide\" as the sixth most-cited author in the humanities and social sciences, behind Anthony Giddens, Pierre Bourdieu and Michel Foucault, and ahead of Jürgen Habermas.",
+     "facts": {
+      "1.0": "In 2007 Erving Goffman was listed by The Times Higher Education Guide.",
+      "1.1": "The Times Higher Education Guide listed Goffman as the sixth most-cited author in the humanities and social sciences in 2007.",
+      "1.2": "In that 2007 listing, Anthony Giddens, Pierre Bourdieu and Michel Foucault were ranked ahead of Goffman.",
+      "1.3": "In that 2007 listing, Goffman was ranked ahead of Jürgen Habermas."
+     }
+    },
+    {
+     "sentence": "Paul-Michel Foucault (15 October 1926 – 25 June 1984), generally known as Michel Foucault (] ), was a French philosopher, historian of ideas, social theorist, and literary critic.",
+     "facts": {
+      "2.0": "Paul-Michel Foucault was born on 15 October 1926.",
+      "2.1": "Paul-Michel Foucault died on 25 June 1984.",
+      "2.2": "Paul-Michel Foucault is generally known as Michel Foucault.",
+      "2.3": "Michel Foucault was a French philosopher.",
+      "2.4": "Michel Foucault was a historian of ideas.",
+      "2.5": "Michel Foucault was a social theorist.",
+      "2.6": "Michel Foucault was a literary critic."
+     }
+    }
+   ],
+   "items": [
+    "The Presentation of Self in Everyday Life\nThe Presentation of Self in Everyday Life is a 1956 sociology book by Erving Goffman, in which Goffman uses the imagery of the theatre in order to portray the importance of human social interaction.\n\n Originally published in Scotland in 1956 and in the United States in 1959, it is Goffman’s first and most famous book, for which he received the American Sociological Association’s MacIver award in 1961.",
+    "Ray Birdwhistell\nCollaborations with others, including initially Margaret Mead and Gregory Bateson, and later, Erving Goffman and Dell Hymes had huge influence on his work.\n\n For example, the book he is best known for, \"Kinesics and Context\", \"would not have appeared if it had not been envisaged by Erving Goffman\" and he explicitly stated \"the paramount and sustaining influence upon my work has been that of anthropological linguistics\", a tradition most directly represented at the University of Pennsylvania by Hymes.",
+    "H. L. Mencken\nHenry Louis Mencken (September 12, 1880 – January 29, 1956) was an American journalist, satirist, cultural critic and scholar of American English.\n\n Known as the \"Sage of Baltimore\", he is regarded as one of the most influential American writers and prose stylists of the first half of the twentieth century.\n\n He commented widely on the social scene, literature, music, prominent politicians and contemporary movements.\n\n His satirical reporting on the Scopes trial, which he dubbed the \"Monkey Trial\", also gained him attention.",
+    "Dramaturgy (sociology)\nDramaturgy is a sociological perspective commonly used in microsociological accounts of social interaction in everyday life.\n\n The term was first adapted into sociology from the theatre by Erving Goffman, who developed most of the related terminology and ideas in his 1959 book, \"The Presentation of Self in Everyday Life\".\n\n Kenneth Burke, whom Goffman would later acknowledge as an influence, had earlier presented his notions of dramatism in 1945, which in turn derives from Shakespeare.\n\n However, the fundamental difference between Burke's and Goffman's view is that Burke believed that life was in fact theatre, whereas Goffman viewed theatre as a metaphor.\n\n If we imagine ourselves as directors observing what goes on in the theatre of everyday life, we are doing what Goffman called dramaturgical analysis, the study of social interaction in terms of theatrical performance.",
+    "George Orwell bibliography\nThe bibliography of George Orwell includes journalism, essays, novels and non-fiction books written by the British writer Eric Blair (1903–50), either under his own name or, more usually, under his pen name George Orwell.\n\n Orwell was a prolific writer on topics related to contemporary English society and literary criticism, whom the British newsweekly \"The Economist\" in 2008 declared \"perhaps the 20th century's best chronicler of English culture.\"\n\n His non-fiction cultural and political criticism constitutes the majority of his work, but Orwell also wrote in several genres of fictional literature.",
+    "Erving Goffman\nErving Goffman (11 June 1922 – 19 November 1982) was a Canadian-American sociologist and writer, considered by some \"the most influential American sociologist of the twentieth century\".\n\n In 2007 he was listed by \"The Times Higher Education Guide\" as the sixth most-cited author in the humanities and social sciences, behind Anthony Giddens, Pierre Bourdieu and Michel Foucault, and ahead of Jürgen Habermas.",
+    "Identity Performance\nIn everyday interactions, the body serves as a critical site of identity performance.\n\n In conveying who we are to other people, we use our bodies to project information about ourselves.\n\n This is done through movement, clothes, speech, and facial expressions.\n\n What we put forward is our best effort at what we want to say about who we are.\n\n Yet while we intend to convey one impression, our performance is not always interpreted as we might expect.\n\n Through learning to make sense of others’ responses to our behavior, we can assess how well we have conveyed what we intended.\n\n We can then alter our performance accordingly.\n\n This process of performance, interpretation, and adjustment is what Erving Goffman calls impression management.\n\n Impression management is a part of a larger process where people seek to define a situation through their behavior.\n\n People seek to define social situations by using contextual cues from the environment around them.\n\n Social norms emerge from situational definitions, as people learn to read cues from the environment and the people present to understand what is appropriate behavior.",
+    "Goffman (disambiguation)\nErving Goffman (1922–1982) was a Canadian sociologist",
+    "Michel Foucault\nPaul-Michel Foucault (15 October 1926 – 25 June 1984), generally known as Michel Foucault (] ), was a French philosopher, historian of ideas, social theorist, and literary critic.",
+    "William H. Gass\nWilliam Howard Gass (born July 30, 1924) is an American novelist, short-story writer, essayist, critic, and former philosophy professor.\n\n He has written three novels, three collections of short stories, a collection of novellas, and seven volumes of essays, three of which have won National Book Critics Circle Award prizes and one of which, \"A Temple of Texts\" (2006), won the Truman Capote Award for Literary Criticism.\n\n His 1995 novel \"The Tunnel\" received the American Book Award.\n\n His 2013 novel \"Middle C\" won the 2015 William Dean Howells Medal."
+   ]
+  },
+  {
+   "id": "1e6a89e24fd1b4e5",
+   "gold": [
+    {
+     "sentence": "Haringey Heartlands is a currently ongoing urban regeneration project in the London Borough of Haringey, in north London, England.",
+     "facts": {
+      "0.0": "Haringey Heartlands is an urban regeneration project.",
+      "0.1": "Haringey Heartlands is currently ongoing.",
+      "0.2": "Haringey Heartlands is in the London Borough of Haringey.",
+      "0.3": "The London Borough of Haringey is in north London, England."
+     }
+    },
+    {
+     "sentence": "The Mall Wood Green is a large shopping centre and residential complex in Wood Green, north London.",
+     "facts": {
+      "1.0": "The Mall Wood Green is a large shopping centre.",
+      "1.1": "The Mall Wood Green is a residential complex.",
+      "1.2": "The Mall Wood Green is in Wood Green, north London."
+     }
+    }
+   ],
+   "items": [
+    "The Mall Wood Green\nThe Mall Wood Green is a large shopping centre and residential complex in Wood Green, north London.\n\n It is generally still referred to by its former name of Wood Green Shopping City; the signage on the building still uses that name.",
+    "Heartlands High School\nHeartlands High School is a state secondary school located in Wood Green in the London Borough of Haringey.\n\n It welcomed its first students in September 2010.\n\n The headteacher is Mr. Simon Garrill.",
+    "London Skolars\nLondon Skolars R.L.F.C. are a professional rugby league club based at the New River Stadium, Wood Green, Haringey in north London.\n\n They were founded in 1995 and have been professional since 2003, operating in the Kingstone Press League 1 in the 2015 season.\n\n They also run an A-team (formerly known as \"Haringey Hornets\") that play in the South Premier Division of the Rugby League Conference.",
+    "Wood Green tube station\nWood Green is a London Underground station on the Piccadilly line.\n\n The station is between Turnpike Lane and Bounds Green stations and is in Travelcard Zone 3.\n\n It is located at junction of High Road, Wood Green and Lordship Lane.\n\n It serves Wood Green Shopping City and the nearby Haringey Council administrative complex as well as a densely populated residential area.\n\n It is also the closest tube station to the Alexandra Palace Venue.",
+    "Wood Green Town F.C.\nWood Green Town Football Club was a football club based in Tottenham in the London Borough of Haringey, England.\n\n Formed in 1911 as a breakaway from Tufnell Park, they merged with Edmonton (a descendent of Tufnell Park) in 1973 to form Edmonton & Haringey.\n\n During their history the club were known as Tufnell Spartans, Wood Green, Wood Green Town and Haringey Borough.",
+    "Haringey Heartlands\nHaringey Heartlands is a currently ongoing urban regeneration project in the London Borough of Haringey, in north London, England.\n\n The site is located west of Shopping City in Wood Green.\n\n The aim of the development is \"to create a vibrant and attractive new urban quarter which acts as the civic and cultural Heart of Haringey, integrating with and benefiting wider communities.\"",
+    "Alexandra Palace railway station\nAlexandra Palace railway station (originally named Wood Green and later Wood Green (Alexandra Park)) is in the London Borough of Haringey in north London, and is in Zone 3.\n\n The station, and all trains serving it, are operated by Great Northern.\n\n Trains mostly go to and from Moorgate on weekdays and weekends.",
+    "Haringey London Borough Council\nHaringey London Borough Council is the local authority for the London Borough of Haringey in Greater London, England.\n\n It is a London borough council, one of 32 in the United Kingdom capital of London.\n\n Haringey is divided into 19 wards, each electing three councillors.\n\n Haringey London Borough Council comprises 48 Labour Party councillors, and 9 Liberal Democrats.\n\n The council was created by the London Government Act 1963 and replaced three local authorities: Hornsey Borough Council, Tottenham Borough Council and Wood Green Borough Council.\n\n The next election to the authority will be in 2018.",
+    "White Hart Lane Community Sports Centre\nWhite Hart Lane Community Sports Centre, also known as the New River Stadium is a rugby league and athletics stadium in Wood Green, Haringey, north London, England that is home to London Skolars rugby league club, Enfield and Haringey Athletic Club, Wood Green Weightlifting Club, Hashtag United F.C. (YouTube based football club), Haringey Rhinos rugby union club, Haringey Cycling Club, and the Next Level Football League.",
+    "Wood Green War Memorial\nThe Wood Green War Memorial is located on the High Road, Wood Green, in the London Borough of Haringey.\n\n It was erected in 1920 and paid for by public subscription of the people of Wood Green to remember the men of the area who died during the First World War.\n\n It was subsequently adapted to include the dead of the Second World War.\n\n It is grade II listed with Historic England."
+   ]
+  },
+  {
+   "id": "684f475f15a77b4b",
+   "gold": [
+    {
+     "sentence": "Mulled wine is a beverage usually made with red wine along with various mulling spices and sometimes raisins.",
+     "facts": {
+      "0.0": "Mulled wine is a beverage.",
+      "0.1": "Mulled wine is usually made with red wine.",
+      "0.2": "Mulled wine is usually made with various mulling spices.",
+      "0.3": "Mulled wine is sometimes made with raisins."
+     }
+    },
+    {
+     "sentence": " It is served hot or warm and is alcoholic, although there are non-alcoholic versions of mulled wine.",
+     "facts": {
+      "1.0": "Mulled wine is served hot or warm.",
+      "1.1": "Mulled wine is alcoholic.",
+      "1.2": "There are non-alcoholic versions of mulled wine."
+     }
+    },
+    {
+     "sentence": "Blue Lagoon is a popular summer cocktail featuring blue Curaçao.",
+     "facts": {
+      "2.0": "Blue Lagoon is a popular summer cocktail.",
+      "2.1": "Blue Lagoon features blue Curaçao."
+     }
+    }
+   ],
+   "items": [
+    "Mulling spices\nMulling spices is a spice mixture used in drink recipes.\n\n The spices are usually used to spice hot apple cider, mulled wine, wassail, and other drinks (such as juices) during the autumn or winter.\n\n A \"mulled\" drink is a drink which has been prepared with these spices (usually through heating the drink in a pot with mulling spices and then straining).\n\n Mulling spices may also be added to the brewing process to make spiced beer.",
+    "Oz and Hugh Drink to Christmas\nOz and Hugh Drink to Christmas is a BBC television programme in which wine personality Oz Clarke and comedian Hugh Dennis travel through Britain to sample a wide array of seasonal Christmas beverages, including whisky, winter ales, mulled wine, wassail, sloe gin, Buck's Fizz, Port wine and Sherry.\n\n Upon its 20 December 2009 broadcast on BBC Two, it had a viewership of approximately 2.4 million with an audience share of 9%.",
+    "Volcano bowl\nVolcano bowls are ceramic drinkware originally associated with mid-20th century American tiki bars and tropical-themed restaurants.\n\n Drinks served in volcano bowls are typically rum-based, mixed with tropical fruit juices and other liquors such as brandy, vodka, and triple sec, and garnished with fruit.\n\n The Flaming Volcano cocktail is especially associated with this drinkware.",
+    "Feuerzangenbowle\nFeuerzangenbowle (] ) is a traditional German alcoholic drink for which a rum-soaked sugarloaf is set on fire and drips into mulled wine.\n\n It is often part of a Christmas or New Year's Eve tradition.\n\n The name translates literally to \"fire-tongs punch\".",
+    "Blue Lagoon: The Awakening\nBlue Lagoon: The Awakening is a 2012 American made-for-television film that premiered on Lifetime on June 16, 2012.\n\n Indiana Evans and Brenton Thwaites star in the film, which is based on the novel \"The Blue Lagoon\" and its previous film adaptations.\n\n Christopher Atkins, the male lead of the 1980 film \"The Blue Lagoon\", also appears in the film.",
+    "The Blue Lagoon (novel)\nThe Blue Lagoon is a romance novel written by Henry De Vere Stacpoole and was first published by T. Fisher Unwin in 1908.\n\n It is the first novel of the \"Blue Lagoon\" trilogy, which also includes \"The Garden of God\" (1923) and \"The Gates of Morning\" (1925).\n\n The novel has inspired several film adaptations, most notably \"The Blue Lagoon\" starring Brooke Shields as Emmeline and Christopher Atkins as Richard (\"Dicky\" in the book).",
+    "Blue Lagoon (cocktail)\nBlue Lagoon is a popular summer cocktail featuring blue Curaçao.",
+    "Flaming volcano\nThe flaming volcano is a large tropical group cocktail made of rum, brandy, pineapple juice, orange juice, almond syrup, and sometimes other ingredients.\n\n It is usually a multi-user drink, served to a group in a special, ritual vessel known as a volcano bowl, which is a decorative ceramic bowl (typically of about 32 USoz capacity) designed with a rising central hub feature usually resembling a crude volcano cone.\n\n The cone includes a second, much smaller central pit or \"crater\" which is partially filled with rum or other flammable high-alcohol liquor.\n\n The \"crater\" liquor is then ignited, creating a mild volcanic ambience with its central blue flame.",
+    "Mulled wine\nMulled wine is a beverage usually made with red wine along with various mulling spices and sometimes raisins.\n\n It is served hot or warm and is alcoholic, although there are non-alcoholic versions of mulled wine.\n\n It is a traditional drink during winter, especially around Christmas.",
+    "Flaming beverage\nFlaming beverages include cocktails and other mixed drinks that contain flammable, high-proof alcohol, which is ignited prior to consumption.\n\n The alcohol may be an integral part of the drink, or it may be floated as a thin layer across the top of the drink.\n\n The flames are mostly for dramatic flair.\n\n However, in combination with certain ingredients, the flavor of the drink is altered.\n\n Some flavors are enhanced, and it may impart a toasted flavor to some drinks."
+   ]
+  },
+  {
+   "id": "47acb6298f4fa284",
+   "gold": [
+    {
+     "sentence": "Toshimitsu Deyama (出山利三 , Deyama Toshimitsu , born October 10, 1965 in Tateyama, Chiba) , known exclusively by his stage name Toshi, is a Japanese singer and songwriter.",
+     "facts": {
+      "0.0": "Toshimitsu Deyama was born October 10, 1965 in Tateyama, Chiba.",
+      "0.1": "Toshimitsu Deyama's Japanese name is 出山利三.",
+      "0.2": "Toshimitsu Deyama's name is also written as Deyama Toshimitsu.",
+      "0.3": "Toshimitsu Deyama is known exclusively by his stage name Toshi.",
+      "0.4": "Toshimitsu Deyama is a Japanese singer and songwriter."
+     }
+    },
+    {
+     "sentence": " He is best known as the lead vocalist and a co-founder of the heavy metal band X Japan, which disbanded in 1997.",
+     "facts": {
+      "1.0": "Toshimitsu Deyama is best known as the lead vocalist of the heavy metal band X Japan.",
+      "1.1": "Toshimitsu Deyama is a co-founder of X Japan.",
+      "1.2": "X Japan disbanded in 1997."
+     }
+    },
+    {
+     "sentence": "Warrel Dane (born March 7, 1969) is the lead singer of the American power metal band Sanctuary.",
+     "facts": {
+      "2.0": "Warrel Dane was born March 7, 1969.",
+      "2.1": "Warrel Dane is the lead singer of the American power metal band Sanctuary."
+     }
+    }
+   ],
+   "items": [
+    "Sanctuary (band)\nSanctuary is an American heavy metal band founded in Seattle in 1985.\n\n They split up in 1992, but reformed 18 years later.\n\n The band consists of Warrel Dane (vocals), Lenny Rutledge (guitar), Nick Cordle (guitar), George Hernandez (bass), and Dave Budbill (drums).\n\n To date, they have released four studio albums and one live EP.",
+    "Nevermore\nNevermore is an American progressive metal band from Seattle, Washington, United States.\n\n Formed in 1991, they are known to incorporate elements from various styles such as power metal, modern hard rock, classic heavy metal and technical thrash metal.\n\n The band has been on hiatus since 2011, due to personal issues between the band members.\n\n In April 2015, lead singer Warrel Dane confirmed that Nevermore has not disbanded, and there is a possibility for them to continue in the next two years with another album.",
+    "Praises to the War Machine\nPraises to the War Machine is the debut and only solo release/album by heavy metal vocalist Warrel Dane from Nevermore, released on April 25, 2008.\n\n The album was produced by Peter Wichers, who was tapped by Dane to work on the album while Wichers was still a member of Soilwork.\n\n After leaving that band in 2007, Wichers co-wrote the album with Dane and played on eight of its tracks.\n\n Soilwork drummer Dirk Verbeuren and former Himsa guitarist Matt Wicklund also played on the album.\n\n Nevermore guitarist Jeff Loomis and the band's touring guitarist at the time Chris Broderick make guest appearances, along with James Murphy, who had performed on the Nevermore album \"This Godless Endeavor\".\n\n \"Praises to the War Machine\" includes two cover songs, The Sisters of Mercy's \"Lucretia My Reflection\" and \"Patterns\" by Paul Simon.\n\n Dane had previously covered a Simon song on Nevermore's album \"Dead Heart in a Dead World\".",
+    "The Halo Method\nThe Halo Method Is an American rock supergroup, formed in 2012 in Hollywood, California.\n\n It consisted of guitarist Ben Moody (We Are the Fallen, ex-Evanescence), drummer Miles McPherson, vocalist Lukas Rossi (ex-Rock Star Supernova, ex-Daylight Division) and bassist Josh Newell (ex-In This Moment).",
+    "Peter Wichers\nPeter Wichers is best known as one of the founding members of Swedish melodic death metal band, Soilwork.\n\n From 1995 until late 2005, when he announced his departure from the band, he was known as the lead guitarist and also a songwriter, especially on their \"Stabbing the Drama\" album., He rejoined Soilwork in 2008 and played on 2010s The Panic Broadcast and in June 2012 he quit Soilwork for the second time.\n\n After leaving Soilwork, he filled in for Adam Dutkiewicz when he was injured on Killswitch Engage's European tour.\n\n More recently, he has collaborated with singers from across the melodic death metal genre including Anders Fridén, former band mate Björn \"Speed\" Strid and John Bush (vocalist of Anthrax) to make a CD much in the same style as \"Roadrunner United\", entitled \"Nuclear Blast All-Stars\".\n\n He also co-wrote Warrel Dane's solo record \"Praises to the War Machine\".",
+    "Into the Mirror Live\nInto The Mirror Live / Black Reflections is live promotional EP of the band Sanctuary recorded on May 12, 1990 at The Country Club in Reseda, California, during their \"Into the Mirror Black\" tour.\n\n Approximately 1000 CD copies of this were made and less than 500 were ever distributed to radio stations and record stores.\n\n Because of contractual problems with Epic Records, the full version was never released for public consumption.\n\n Epic Records destroyed 500+ copies of this CD.\n\n Warrel Dane has stated on several occasions that he has the master tapes and copyrights of the full show and intended to have it finally released.\n\n To date that has not happened.\n\n This CD has been heavily pirated over the years as a 2-on-1 CD with the Satan's Host \"Metal From Hell\" album on the notorious Reborn Classics record label.",
+    "Nevermore (album)\nNevermore is the eponymous debut studio album by American heavy metal band Nevermore, released on February 14, 1995 by Century Media Records.\n\n It was singer Warrel Dane and bassist Jim Sheppard's first release after departing from their previous band, Sanctuary, in 1994.\n\n Having recruited drummer Van Williams and former Sanctuary touring guitarist Jeff Loomis, they formed the band Nevermore and began anew.",
+    "Warrel Dane\nWarrel Dane (born March 7, 1969) is the lead singer of the American power metal band Sanctuary.\n\n He is also known as the former lead singer of currently inactive progressive metal band Nevermore.\n\n He is a natural baritone, though he was known for his high-pitched vocals with Serpent's Knight and on the first two Sanctuary albums.\n\n Later in his career, Dane became more notable for his distinctively deep, dramatic voice.",
+    "Toshi (musician)\nToshimitsu Deyama (出山利三 , Deyama Toshimitsu , born October 10, 1965 in Tateyama, Chiba) , known exclusively by his stage name Toshi, is a Japanese singer and songwriter.\n\n He is best known as the lead vocalist and a co-founder of the heavy metal band X Japan, which disbanded in 1997.\n\n Toshi then went on to have an extensive solo career.\n\n In 2007, X Japan reunited and began an ongoing world tour in 2010.\n\n His distinctive, impassioned tenor vocals have been compared to those of Steve Perry.",
+    "Graph query row:\nperson: Toshimitsu Deyama\norganization: None\nrelationship: None\nrole: None\nperiod: None\nstatus: None"
+   ]
+  },
+  {
+   "id": "a33bece84ebd8afc",
+   "gold": [
+    {
+     "sentence": " He has written a column for \"Fortune\" magazine for more than twenty years, after having spent a decade at \"Esquire\".",
+     "facts": {
+      "0.0": "The person described has written a column for Fortune magazine for more than twenty years.",
+      "0.1": "The person described spent a decade at Esquire before writing for Fortune."
+     }
+    },
+    {
+     "sentence": " Founded in 1933, it flourished during the Great Depression under the guidance of founders Arnold Gingrich, David A. Smart and Henry L. Jackson.",
+     "facts": {
+      "1.0": "The described publication was founded in 1933.",
+      "1.1": "The described publication flourished during the Great Depression.",
+      "1.2": "The described publication flourished under the guidance of founders Arnold Gingrich, David A. Smart, and Henry L. Jackson."
+     }
+    }
+   ],
+   "items": [
+    "VIVmag\nVIVmag is one of the earliest exclusively digital, interactive women's lifestyle magazines.\n\n Launched in 2006 and backed by Canadian industrialist David Harrison Gilmour (the founder of FIJI Water LLC), the bimonthly magazine is distributed by Zinio Systems, Inc.\n\n The first issue appeared in January-February 2007.\n\n There is no print version.\n\n The paperless title can be viewed in most browsers or downloaded to your computer and read via the Zinio Reader.\n\n The magazine is based in Thousand Oaks, California.",
+    "Esquire (magazine)\nEsquire is an American men's magazine, published by the Hearst Corporation in the United States.\n\n Founded in 1933, it flourished during the Great Depression under the guidance of founders Arnold Gingrich, David A. Smart and Henry L. Jackson.",
+    "Simon &amp; Schuster\nSimon & Schuster, Inc. ( ), a subsidiary of CBS Corporation, is an American publishing company founded in New York City in 1924 by Richard Simon and Max Schuster.\n\n As of 2016, Simon & Schuster publishes 2,000 titles annually under 35 different imprints.",
+    "Stanley Bing\nStanley Bing is the pen name of Gil Schwartz (born May 20, 1951 in New York, NY), a business humorist and novelist.\n\n He has written a column for \"Fortune\" magazine for more than twenty years, after having spent a decade at \"Esquire\".\n\n He is the author of thirteen books including \"What Would Machiavelli Do?\"\n\n and \"The Curriculum\", a satirical textbook for a business school that also offers lessons on the Web.\n\n Schwartz is the senior executive vice president of corporate communications and Chief Communications Officer for CBS.",
+    "André Laguerre\nMarc André Laguerre (February 21, 1915 – January 18, 1979) was a journalist and magazine editor, best known as the managing editor of \"Sports Illustrated\" from 1960 to 1974, during which time he oversaw the growth in the magazine from a niche publication to become the industry leader in weekly sports magazines.\n\n It was under his leadership that the annual \"Sports Illustrated Swimsuit Issue\" was first published.\n\n When he retired in 1974, he had been managing editor of the magazine for 704 issues, then a record among magazines published by Time, Inc., SI's parent company.",
+    "PC Magazine\nPC Magazine (shortened as PCMag) is an American computer magazine published by Ziff Davis.\n\n A print edition was published from 1982 to January 2009.\n\n Publication of online editions started in late 1994 and continues to this day.",
+    "Steve Malzberg\nStephen D. Malzberg (born April 20, 1959) is an American television and radio host, syndicated columnist, and political commentator.\n\n He is the host of \"The Steve Malzberg Show\", a cable news and opinion show on Newsmax TV.\n\n He has also hosted \"The Steve Malzberg Show\" on various talk radio outlets.",
+    "Computer Magazine\nas well as \"Computer Magazine\" staff writers, and is currently managed and edited by the industry veteran Christopher Swearingin an MCSE and former CIO and regarded author as well as contributor/reporter for \"Computer Magazine\" and other publications.",
+    "This Is Bing Crosby\nThis Is Bing Crosby was a fifteen-minute five times a week daytime radio program featuring Bing Crosby acting as a disc jockey.\n\n Minute Maid quick frozen concentrated orange juice was promoted on the shows.",
+    "The American Mercury\nThe American Mercury was an American magazine published from 1924 to 1981.\n\n It was founded as the brainchild of H. L. Mencken and drama critic George Jean Nathan.\n\n The magazine featured writing by some of the most important writers in the United States through the 1920s and 1930s.\n\n After a change in ownership in the 1940s, the magazine attracted conservative writers.\n\n A second change in ownership a decade later turned the magazine into a virulently anti-Semitic publication.\n\n It was published monthly in New York City.\n\n The magazine went out of business in 1981, having spent the last 25 years of its existence in decline and controversy."
+   ]
+  },
+  {
+   "id": "67f73212adb77c78",
+   "gold": [
+    {
+     "sentence": "Ranger Rick, originally Ranger Rick's Nature Magazine, is a children’s nature magazine that is published by the United States National Wildlife Federation.",
+     "facts": {
+      "0.0": "Ranger Rick was originally called Ranger Rick's Nature Magazine",
+      "0.1": "Ranger Rick is a children's nature magazine",
+      "0.2": "Ranger Rick is published by the United States National Wildlife Federation"
+     }
+    },
+    {
+     "sentence": "TENNIS is an American sports magazine owned by the Sinclair Broadcast Group.",
+     "facts": {
+      "1.0": "TENNIS is an American sports magazine",
+      "1.1": "TENNIS is owned by the Sinclair Broadcast Group"
+     }
+    }
+   ],
+   "items": [
+    "The entries cover magazines, journalists, writers, and the meaning of “review.” Children’s titles include bimonthly Jack and Jill and National Wildlife Federation nature magazines Ranger Rick, Ranger Rick Jr., and Ranger Rick Cub. Women’s magazines include Macedonian Tea Moderna and Danish ALT for Damerne. Other publications range from Adventist Review and conservative National Review to the Human Life Review, Henry James Review, and defunct American Mercury and Insurgent49. Profiles include Rosie O’Donnell",
+    "El Gráfico\nEl Gráfico is a classic monthly Argentine sports magazine.\n\n The magazine was originally published as a weekly newspaper in May 1919, and then turned to a sports magazine exclusively.\n\n It has been scheduled monthly from 2002.\n\n \"El Gráfico\" is one of the most regarded sports magazines not only in Argentina but in Latin America.\n\n The magazine was nicknamed \"La Biblia del deporte\" (\"The Bible of sports\") due to its chronicles, notable journalists and collaborators and its photography.",
+    "Memphis Sport\nMemphis Sport is a sports and fitness magazine featuring articles on local and regional teams, players and events.\n\n In addition, \"Memphis Sport\" focuses on health and fitness for an active lifestyle.\n\n The magazine debuted in Memphis, Tennessee in July 2006.\n\n Local franchises covered include the University of Memphis Tigers, Memphis Redbirds, Mississippi Riverkings and Tennessee Titans.",
+    "Rap-Up\nRap-Up is a magazine launched in 2001 by founder Devin Lazerine.\n\n The publication was originally a website devoted to hip hop, until Lazerine decided to pitch the possibility of a magazine to several publishers.\n\n The magazine is focused on the hip hop and R&B aspect of the music industry, and predominantly features interviews with artists, actors and other entertainers.\n\n Issued quarterly, the magazine's target audience was the 14 to 28 demographic, although the demographic has become older over time.",
+    "Lorin Thompson\nLorin Thompson, Lorin Hartwell Jr Thompson, (1911–1997), was a muralist, artist, and creator and illustrator of the character \"Ranger Rick\" for the National Wildlife Federation's children's magazine, Ranger Rick.",
+    "Ranger Rick\nRanger Rick, originally Ranger Rick's Nature Magazine, is a children’s nature magazine that is published by the United States National Wildlife Federation.\n\n The magazine offers feature articles and activities for children, ages 7 and up, in order to spark their interest in the outdoors and become more actively involved in the environment.\n\n The magazine's primary intention is to instill a passion for nature and promote activity outdoors.\n\n NWF also publishes two companion magazines, \"Ranger Rick Jr.\", which is aimed at ages 4–7, and \"Ranger Rick Cub\", which is aimed at kids 0–4 years old.)",
+    "Golf Digest\nGolf Digest is a monthly golf magazine published by Condé Nast Publications in the United States.\n\n It is a generalist golf publication covering recreational golf and men's and women's competitive golf.\n\n Condé Nast Publications also publishes the more specialized \"Golf for Women\", \"Golf World\" and \"Golf World Business\".\n\n The magazine started in 1950, and was sold to The New York Times Company in 1969.\n\n The Times company sold their magazine division to Condé Nast in 2001.\n\n The headquarters of \"Golf Digest\" is in Des Moines, Iowa.",
+    "Guitar World\nGuitar World is a monthly music magazine devoted to guitarists, published since July 1980.\n\n It contains original interviews, album and gear reviews, and guitar and bass tablature of approximately five songs each month.\n\n The magazine is published 13 times per year (12 monthly issues and a holiday issue).\n\n Formerly owned by Harris Publications, Future US bought the magazine in 2003.\n\n In 2012, NewBay Media bought the Music division of Future US.\n\n The latter company also published a spin-off title, Guitar Legends, each issue of which typically combined past articles from \"Guitar World\" under a specific theme.",
+    "Tennis (magazine)\nTENNIS is an American sports magazine owned by the Sinclair Broadcast Group.\n\n There are eight issues per year covering the world of tennis.\n\n The \"tennis.com\" website is an offshoot of the magazine and part of the same media company.",
+    "Football Weekly is The Guardian’s football podcast: Mondays, with Thursday spin-off Football Weekly Extra; it aired daily during major tournaments from Euro 2008 to Euro 2016. Football World, founded in 1921, became Athletic World and then Outing in 1924. World Soccer, established in 1960, covers international football and belongs to the European Sports Magazines group. TENNIS publishes eight issues yearly. Argentina’s El Gráfico, founded in 1919, is"
+   ]
+  },
+  {
+   "id": "d35bd456644fbfcd",
+   "gold": [
+    {
+     "sentence": " Programming is simulcast on WANH (91.5 FM) in Meredith, serving the Lakes Region.",
+     "facts": {
+      "0.0": "Programming is simulcast on WANH (91.5 FM).",
+      "0.1": "WANH (91.5 FM) is located in Meredith.",
+      "0.2": "WANH serves the Lakes Region."
+     }
+    },
+    {
+     "sentence": " The area comprises all of Belknap County, the southern portion of Carroll County, the eastern portion of Grafton County, and the northern portions of Strafford County and Merrimack County.",
+     "facts": {
+      "1.0": "The area comprises all of Belknap County.",
+      "1.1": "The area comprises the southern portion of Carroll County.",
+      "1.2": "The area comprises the eastern portion of Grafton County.",
+      "1.3": "The area comprises the northern portion of Strafford County.",
+      "1.4": "The area comprises the northern portion of Merrimack County."
+     }
+    }
+   ],
+   "items": [
+    "KRBT\nKRBT (1340 AM) is a radio station broadcasting a sports format.\n\n Licensed to Eveleth, Minnesota, United States, the station serves the Iron Range area.\n\n The station is currently owned by Range Broadcasting, Inc., and features programming from the Red Zone Radio Network.\n\n Originally a stand alone music station with call letters WEVE, then a simulcast music station with WEVE-FM, the station changed it's call letters to KRBT for \"Range's Best Talk\" in June of 1998 and discontinued simulcast with WEVE-FM to become a talk station.\n\n The format change to sports/talk was made following the death of previous owner, Lew Latto, Iron Range Broadcasting, Inc.\n\n President on August, 24 2011 and subsequent sale to Red Rock Radio in March 2012, and has been retained by the new owner as of July 2017, Range Broadcasting, Inc.",
+    "WVNH\nWVNH (91.1 FM) is a radio station broadcasting a Christian radio format.\n\n Licensed to Concord, New Hampshire, United States, the station serves the Concord area.\n\n The station is currently owned by New Hampshire Gospel Radio, Inc.\n\n Programming is simulcast on WANH (91.5 FM) in Meredith, serving the Lakes Region.",
+    "WLMR\nWLMR (1450 AM) is a radio station broadcasting a religious format.\n\n Licensed to Chattanooga, Tennessee, USA, the station serves the Chattanooga area.\n\n The station is currently owned by Wilkins Communications Network, Inc. and features programming from USA Radio Network.\n\n In the early 1980s, the station was automated and played country music from studios in a strip mall on Brainerd Rd.\n\n It was also Chattanooga's first talk radio station when it held the WZRA call letters.\n\n WZRA was the first home of Jeff Styles, and also featured well known personalities such as Kelly McCoy and Robert T. Nash.",
+    "KVKI-FM\nKVKI-FM (96.5 FM) is a radio station broadcasting an adult contemporary music format.\n\n Licensed to Shreveport, Louisiana, United States, the station serves the Shreveport area.\n\n The station is currently owned by Townsquare Media.\n\n Its studios are shared with its other five sister stations in West Shreveport (one mile west of Shreveport Regional Airport), and the transmitter is in Blanchard, Louisiana.\n\n The call letters were originally KBCL, and later became religious station KEPT, before the call letters were changed to KVKI to be similar to the call letters of the popular KVIL radio station in Dallas, Texas.",
+    "Lakes Region (New Hampshire)\nThe Lakes Region of New Hampshire is the mid-state region surrounding Lake Winnipesaukee, Winnisquam Lake, Squam Lake, and Newfound Lake.\n\n The area comprises all of Belknap County, the southern portion of Carroll County, the eastern portion of Grafton County, and the northern portions of Strafford County and Merrimack County.\n\n The largest municipality is the city of Laconia.",
+    "KRBT (1340 AM, Eveleth, MN), owned by Range Broadcasting, airs Red Zone sports programming; formerly WEVE, it became talk radio in 1998 and sports/talk after ownership changes in 2011–12. KWXL-LP (98.7 FM, Tucson), Tucson Unified School District’s high-school variety/news station, serves Pueblo students. KQIP-LP (107.1 FM, Chico), owned by Calvary Chapel, broadcasts Bible",
+    "KMBC-TV\nKMBC-TV, virtual channel 9 (UHF digital channel 29), is the ABC-affiliated television station licensed to Kansas City, Missouri, United States and also serving Kansas City, Kansas.\n\n The station is owned by the Hearst Television subsidiary of the Hearst Corporation, as part of a duopoly with CW affiliate KCWE (channel 29).\n\n The two stations share studio facilities located at the Winchester Business Center on Winchester Avenue and East 63rd Street (near Swope Park, off of I-435) in southeastern Kansas City, Missouri; KMBC-TV maintains transmitter facilities located near the Blue River in eastern Kansas City.\n\n On cable, KMBC-TV is available on Charter Spectrum, Comcast Xfinity and Consolidated Communications channel 12, and Google Fiber and AT&T U-verse channel 9.\n\n There is a high definition feed provided on Spectrum digital channel 1200, Xfinity channel 812, Consolidated channel 610 and U-verse channel 1009.",
+    "KKBN\nKKBN (93.5 FM) The Cabin a radio station since 1986 broadcasting a Country music format since March 2000.\n\n Licensed to Twain Harte, California, United States, the station serves the greater Mother Lode area comprising Tuolumne and Calaveras Counties with a combined population of approximately 110,000.\n\n The station is currently owned by Clarke Broadcasting Corporation.",
+    "- **KHSL-TV:** CBS station serving Chico and Redding, California; Heartland Media-owned, paired with NBC affiliate KNVN, and based in Chico.\n- **WXMK:** Hot Adult Contemporary station, 105.9 FM, serving Brunswick, Georgia; owned by Golden Isles Broadcasting.\n- **WLMR:** Religious-format AM station serving Chattanooga, Tennessee; owned by Wilkins Communications, with USA Radio Network programming. Formerly country and an early talk-radio station.\n-",
+    "Spectrum News Rochester and Buffalo are Charter-owned 24-hour regional news channels covering Rochester/Finger Lakes and Buffalo/Western New York; Buffalo also supplies Jamestown’s mixed-content Cable 8 News feed. Milwaukee’s WDJT-TV is a Weigel-owned CBS station in a four-station group. Chicago’s Fox-owned WFLD is paired with WPWR-TV. Jacksonville’s Tegna-owned NBC affiliate WTLV and ABC affiliate WJXX share studios and form a duopoly"
+   ]
+  },
+  {
+   "id": "1731448b3d6ed70f",
+   "gold": [
+    {
+     "sentence": " Reed, along with Mike Pringle and Johnny Bright, is one of the players most often mentioned as being the greatest running back in CFL history.",
+     "facts": {
+      "0.0": "Reed is one of the players most often mentioned as being the greatest running back in CFL history.",
+      "0.1": "Mike Pringle is one of the players most often mentioned as being the greatest running back in CFL history.",
+      "0.2": "Johnny Bright is one of the players most often mentioned as being the greatest running back in CFL history."
+     }
+    },
+    {
+     "sentence": "Johnny D. Bright (June 11, 1930 – December 14, 1983) was a professional Canadian football player in the Canadian Football League.",
+     "facts": {
+      "1.0": "Johnny D. Bright was born June 11, 1930.",
+      "1.1": "Johnny D. Bright died December 14, 1983.",
+      "1.2": "Johnny D. Bright was a professional Canadian football player.",
+      "1.3": "Johnny D. Bright played in the Canadian Football League."
+     }
+    },
+    {
+     "sentence": " He played college football at Drake University.",
+     "facts": {
+      "2.0": "Johnny D. Bright played college football at Drake University."
+     }
+    }
+   ],
+   "items": [
+    "Dolph Pulliam\nAdolphus \"Dolph\" Pulliam (born March 14, 1946 in West Point, Mississippi) is a former American basketball player.\n\n He played collegiately at Drake University.\n\n He was named to Drake University's All-Century basketball team.\n\n He helped lead the Drake men's basketball team to the 1969 Final Four and a third-place finish.\n\n On 7 February 2009, Drake University retired Pulliam's #5 jersey that he wore for the Bulldogs.",
+    "George Reed (Canadian football)\nGeorge Robert Reed, CM, SOM (born October 2, 1939), is a former American college football and Canadian Football League player.\n\n Reed, along with Mike Pringle and Johnny Bright, is one of the players most often mentioned as being the greatest running back in CFL history.\n\n In November 2006, Reed was voted one of the CFL's Top 50 players (#2) of the league's modern era by Canadian sports network TSN.",
+    "Damon Allen\nDamon Allen (born July 29, 1963) is a former professional quarterback who played in the Canadian Football League.\n\n He is currently second in all-time professional football passing yards and second in all-time CFL passing yards after he was surpassed for first place by the Montréal Alouettes' Anthony Calvillo on October 10, 2011.\n\n He is pro-football's combined passing & rushing leader with a total of 84,301 yards.\n\n Allen retired as professional football's all-time leading passer with 72,381 passing yards after he surpassed Warren Moon's total of 70,553 yards (in both the CFL and NFL combined) on September 4, 2006 in the annual Labour Day Classic.\n\n He also retired in third place in all-time CFL rushing yards with 11,920 yards, behind Mike Pringle and George Reed.\n\n The 2007 season marked Allen's twenty-third season in the CFL and he officially announced his retirement on May 28, 2008 at age 44.\n\n Allen is the younger brother of Pro Football Hall of Famer Marcus Allen.",
+    "Terry Baker\nTerry Wayne Baker (born May 5, 1941) is a former American football and basketball player.\n\n He played college football and college basketball at the Oregon State University.\n\n He played as a quarterback for the Oregon State Beavers football team from 1960 to 1962, winning the Heisman Trophy as senior.\n\n In the spring of his senior year, he played in the Final Four of the 1963 NCAA Men's Division I Basketball Tournament with the Oregon State Beavers men's basketball team.\n\n To date, he is the only athlete to win a Heisman Trophy and play in the Final Four.\n\n Baker was the first overall pick in the 1963 NFL draft and played with the Los Angeles Rams of the National Football League (NFL) from 1963 to 1965.\n\n He then played for one season in the Canadian Football League (CFL) with the Edmonton Eskimos, in 1966.\n\n Baker was inducted into the College Football Hall of Fame in 1982.",
+    "Richard Harris (American football)\nRichard Drew Harris (January 21, 1948 – July 26, 2011) was an American football defensive end who played seven seasons in the National Football League.\n\n He was and All-American in 1970 for Grambling and was drafted in the first round (5th overall pick) of the 1971 NFL Draft by the Philadelphia Eagles.\n\n He was named All-Rookie in 1971, playing defensive end.\n\n Harris spent seven seasons as a defensive end in the NFL, the first three with the Philadelphia Eagles, the next two with the Chicago Bears and the final two with the Seattle Seahawks.",
+    "Mike Hogan (sportscaster)\nMike Hogan (born 1963 in Kingston, Ontario) is a Canadian sportscaster who is a sports talk radio host on TSN Radio 1050 in Toronto.\n\n He also serves as the play-by-play voice for the Toronto Argonauts of the Canadian Football League for that station's gameday broadcasts.\n\n Hogan was formerly a long time sports talk radio host on Toronto station CJCL (AM), branded \"The Fan 590\", until he was relieved of those duties on June 24, 2010.\n\n On 2017 Oscar Vanity fair party 1st live broadcast Mike Hogan was the podcast hosts.",
+    "Marc Mueller\nMarc Mueller (born April 15, 1989) is the current running backs coach of the Calgary Stampeders of the Canadian Football League (CFL).\n\n In college, he played quarterback for the Regina Rams of the CIS.\n\n He signed as an undrafted free agent with the Edmonton Eskimos of the CFL on May 9, 2011 following the 2011 CFL Draft.\n\n He was released on June 20, 2011 in order to play his final year for the Rams.\n\n Mueller is the grandson of former CFL quarterback and coach Ron Lancaster.",
+    "Johnny Bright\nJohnny D. Bright (June 11, 1930 – December 14, 1983) was a professional Canadian football player in the Canadian Football League.\n\n He played college football at Drake University.\n\n He is a member of the Canadian Football Hall of Fame, the National Football Foundation's College Football Hall of Fame, the Missouri Valley Conference Hall of Fame, the Edmonton Eskimos Wall of Honour, the Alberta Sports Hall of Fame, and the \"Des Moines Register's\" Iowa Sports Hall of Fame.",
+    "Paul Hornung\nPaul Vernon Hornung (born December 23, 1935), nicknamed \"The Golden Boy\", is a former professional American football player, a Hall of Fame running back for the Green Bay Packers of the National Football League (NFL) from 1957 to 1966, winning four NFL titles and the first Super Bowl.\n\n He is the first in pro football history to win the Heisman Trophy, be selected as the first overall selection in the NFL Draft, win the NFL most valuable player award, and be inducted into both the professional and college football halls of fame.",
+    "2,000-yard club\nThe 2,000-yard club is a group of seven National Football League (NFL) running backs that have rushed for 2,000 or more yards in a season.\n\n These seven rushing seasons rank as the highest single-season rushing totals in NFL history, and reaching the 2,000-yard mark is considered a significant achievement for running backs.\n\n No running back has yet achieved this feat twice.\n\n The first 2,000-yard season was recorded in 1973 by Buffalo Bills running back O.J. Simpson.\n\n He is the only player to have surpassed 2,000 yards in a 14-game season, as all others occurred in 16-game seasons; he finished the season with 2,003 rushing yards, averaging six yards per carry and an NFL-record 143.1 rushing yards per game.\n\n Los Angeles Rams running back Eric Dickerson, who had broken the single-season rookie rushing record in 1983, recorded the second 2,000-yard season in 1984.\n\n Dickerson rushed for 2,105 yards, the current NFL rushing record, and averaged 131.6 rushing yards per game."
+   ]
+  }
+ ]
+}

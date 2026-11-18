@@ -1,0 +1,2150 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 20 items.
+
+=== ITEM id=a141-14c49ed84c72faa6 ===
+Gold sentences and facts:
+Sentence 0: Africa South Africa : 9 Egypt : 5 Morocco : 4 Tunisia : 3 Algeria : 1 Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3 Guatemala : 3 Panama : 3 Costa Rica : 2 Ecuador : 2 El Salvador : 2 Honduras : 2 Uruguay : 2 Aruba : 1 Nicaragua : 1 Paraguay : 1 Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9 Philippines : 8 Lebanon : 7 Kazakhstan : 5 Kuwait : 5 Qatar : 5 Jordan : 3 Bahrain : 2 Macau : 2 Oman : 1 Vietnam : 1 Europe Spain : 430 France : 128 Italy : 104 Russia : 100 Portugal : 87 Germany : 77 United Kingdom : 64 Poland : 47 Greece : 46 Turkey : 41 Belgium : 31 Netherlands : 28 Romania : 24 Switzerland : 20 Austria : 14 Sweden : 12 Croatia : 10 Ireland : 9 Ukraine : 9 Hungary : 8 Bulgaria : 6 Cyprus : 6 Czech Republic : 6 Finland : 5 Lithuania : 5 Norway : 5 Serbia : 5 Slovenia : 5 Denmark : 4 Latvia : 4 Estonia : 3 Azerbaijan : 3 Bosnia and Herzegovina : 3 Georgia : 3 Luxembourg : 3 Slovakia : 3 Armenia : 2 Albania : 1 Andorra : 1 Belarus : 1 Iceland : 1 Macedonia : 1 Malta : 1 Monaco : 1 Montenegro : 1 Oceania Australia : 19 New Zealand : 1
+  Fact 2.89: Iceland is listed under Europe with the value 1.
+
+Retrieved items:
+<item 1>
+Zara (retailer)
+Ortega opened additional stores throughout Spain . During the 1980s , Ortega changed the design , manufacturing , and distribution process to reduce lead times
+and react to new trends in a quicker way , which he called `` instant fashions '' . The improvements included the use of information technologies and using
+groups of designers instead of individuals . Zara 's previous logo Expansion ( edit ) In 1988 , the company started its international expansion through Porto ,
+Portugal . In 1989 , it entered the United States , and then France in 1990 . During the 1990s , Zara expanded to Mexico ( 1992 ) , Greece , Belgium and Sweden
+( 1993 ) . In the early 2000s , Zara opened its first stores in Japan and Singapore ( 2002 ) , Russia and Malaysia ( 2003 ) , China , Morocco , Estonia ,
+Hungary and Romania ( 2004 ) , the Philippines , Costa Rica and Indonesia ( 2005 ) , South Korea ( 2008 ) , India ( 2010 ) , and South Africa and Australia (
+2011 ) .
+</item 1>
+
+<item 2>
+Zara (retailer)
+When the news was eventually picked up by media outlets , and Inditex , Zara 's owning company , was asked to comment on the issue , Inditex replied that the
+items in question have been suspended from sale , and that they are in contact with Bassen 's lawyer to clarify and address the issue . In November 2017 ,
+customers shopping at Zara stores in Istanbul , Turkey found handwritten notes purportedly from Turkish workers in the pockets of in - store garments asking
+shoppers to pressure Zara into paying them the wages they claim they are owed . Stores ( edit ) There are over 2,100 Zara stores located across 88 countries .
+Zara usually selects the best located and most expensive real estate locations in the world to open its flagship stores . Zara 's flagship stores : Fifth Avenue
+, New York Oxford Street , London Calle Serrano , Madrid Via del Corso , Rome Champs - Élysées , Paris Oscar Freire Street , Sao Paulo Corso Vittorio Emanuele ,
+Milan Nevsky Prospect , Saint Petersburg Shibuya and Ginza , Tokyo Myeongdong in Seoul Flora Fountain in Mumbai The number of Zara stores in each country ,
+</item 2>
+
+<item 3>
+Zara (retailer)
+: 128 Italy : 104 Russia : 100 Portugal : 87 Germany : 77 United Kingdom : 64 Poland : 47 Greece : 46 Turkey : 41 Belgium : 31 Netherlands : 28 Romania : 24
+Switzerland : 20 Austria : 14 Sweden : 12 Croatia : 10 Ireland : 9 Ukraine : 9 Hungary : 8 Bulgaria : 6 Cyprus : 6 Czech Republic : 6 Finland : 5 Lithuania : 5
+Norway : 5 Serbia : 5 Slovenia : 5 Denmark : 4 Latvia : 4 Estonia : 3 Azerbaijan : 3 Bosnia and Herzegovina : 3 Georgia : 3 Luxembourg : 3 Slovakia : 3 Armenia
+: 2 Albania : 1 Andorra : 1 Belarus : 1 Iceland : 1 Macedonia : 1 Malta : 1 Monaco : 1 Montenegro : 1 Oceania Australia : 19 New Zealand : 1 See also ( edit )
+Spain portal Companies portal Fashion portal Bonds ( clothing ) Gap Inc . H&M List of companies of Spain European Retail Round Table References ( edit ) Jump up
+^ `` Zara '' . inditex.com .
+</item 3>
+
+<item 4>
+Zara (retailer)
+Zara ( retailer ) - Wikipedia Zara ( retailer ) Jump to : navigation , search Zara España , S.A. Type Sociedad Anónima Industry Retail Founded Arteixo , Galicia
+( 24 May 1974 ; 43 years ago ( 1974 - 05 - 24 ) ) Founder Amancio Ortega Headquarters Arteixo , Galicia Number of locations 2266 stores Area served Worldwide
+Products Clothing Revenue US $ 15.9 billion ( 2016 ) Parent Inditex Website zara.com Zara ( Spanish : ( ˈθaɾa ) ) is a Galician fast fashion ( clothing and
+accessories ) retailer based in Arteixo , Galicia . The company was founded in 1975 by Amancio Ortega and Rosalía Mera . It is the main brand of the Inditex
+group , the world 's largest apparel retailer . The fashion group also owns brands such as Massimo Dutti , Pull&Bear , Bershka , Stradivarius , Oysho , Zara
+Home , and Uterqüe .
+</item 4>
+
+<item 5>
+Zara (retailer)
+24 April 2005 . Retrieved 8 April 2016 . Jump up ^ `` Spains Zara Opens First Store in Korea '' . The Korea Times . 29 April 2008 . Retrieved 8 April 2016 .
+Jump up ^ `` Fashion chain Zara opens its first Indian store '' . BBC . 31 May 2010 . Retrieved 8 April 2016 . Jump up ^ Emma Jordan ( 19 January 2011 ) . ``
+Zara to Open in South Africa '' . iFashion . Retrieved 8 April 2016 . Jump up ^ `` Global phenomenon Zara finally opens in Sydney '' . Vogue. 19 April 2011 .
+Retrieved 8 April 2016 . Jump up ^ `` Zara launches online boutique '' . fashionunited.com. 6 September 2010 . Retrieved 22 June 2014 . Jump up ^ `` Zara.com
+launches in 5 more countries '' . Retrieved 30 May 2015 . Jump up ^ `` Inditex post record profits '' .
+</item 5>
+
+<item 6>
+Zara (retailer)
+Products ( edit ) Zara stores have men 's and women 's clothing , as well as children 's clothing ( Zara Kids ) . Zara 's products are supplied based on
+consumer trends . Its highly responsive supply chain ships new products to stores twice a week . After products are designed , they take ten to fifteen days to
+reach the stores . All of the clothing is processed through the distribution center in Spain . New items are inspected , sorted , tagged , and loaded into
+trucks . In most cases , the clothing is delivered within 48 hours . Zara produces over 450 million items per year . Manufacturing and distribution ( edit )
+Zara Almere - Heren The men 's department of a typical Zara store . Almere , Netherlands Zara clothing made in Portugal Zara store in New York City . Zara store
+in Brisbane Zara store in Palma de Mallorca ( Spain ) . Zara store in Brussels ( Belgium ) . Reportedly , Zara needs just one week to develop a new product and
+get it to stores , compared to the six - month industry average , and launches around 12,000 new designs each year .
+</item 6>
+
+<item 7>
+Zara (retailer)
+20 October 2014 . Graham Ruddick . accessed 5 April 2016 Jump up ^ Zara new season styles : what to buy at the Spanish giant right now . Linda Sharkey. 29 May
+2015 . Independent . accessed 5 April 2016 Jump up ^ `` Presencia internacional '' . inditex.com. 30 April 2015 . Retrieved 9 September 2015 . Jump up ^ ``
+Localizador de tiendas '' ( in Spanish ) . Zara.com . Retrieved 11 June 2015 . External links ( edit ) Official website Media related to Zara ( clothing ) at
+Wikimedia Commons Retrieved from `` https://en.wikipedia.org/w/index.php?title=Zara_(retailer)&oldid=819154896 '' Categories : Clothing brands of Spain Clothing
+retailers of Spain Companies based in Galicia Clothing companies established in 1974 Retail companies established in 1974 1974 establishments in Spain Inditex
+brands Hidden categories : Pages using citations with accessdate and no URL CS1 Dutch - language sources ( nl ) CS1 Portuguese - language sources ( pt )
+</item 7>
+
+<item 8>
+Zara (retailer)
+Zara as of 2017 manages up to 20 clothing collections a year . Contents ( hide ) 1 History 1.1 Early history 1.2 Expansion 2 Products 3 Manufacturing and
+distribution 3.1 Non-toxic clothing 4 Controversy 5 Stores 6 See also 7 References 8 External links History ( edit ) Early history ( edit ) Amancio Ortega
+opened the first Zara store in 1975 in downtown A Coruña , Galicia , Spain . Ortega initially named the store Zorba after the classic film Zorba the Greek , but
+after learning there was a bar with the same name two blocks away , they rearranged the letters molded for the sign to ' Zara . ' It is believed the extra ' a '
+came from an additional set of letters that had been made for the company . The first store featured low - priced lookalike products of popular , higher - end
+clothing fashions . Ortega opened additional stores throughout Spain .
+</item 8>
+
+<item 9>
+Zara (retailer)
+On September 2010 , Zara launched its online boutique . The website began in Spain , the UK , Portugal , Italy , Germany and France . In November that same year
+, Zara Online extended the service to five more countries : Austria , Ireland , the Netherlands , Belgium and Luxembourg . Online stores began operating in the
+United States in 2011 , Russia and Canada in 2013 , and Mexico , Romania , and South Korea in 2014 . . India In 4 october 2017 . Zara introduced the use of RFID
+technology in its stores in 2014 . The RFID chips are located in the security tags which are removed from clothing when it is purchased and can be reused . The
+chip allows the company to quickly take inventory by detecting radio signals from the RFID tags . When an item is sold , the stockroom is immediately notified
+so that the item can be replaced . An item that is not on the shelf can easily be found with the RFID tag . In 2015 , Zara was ranked 30 on Interbrand 's list
+of best global brands .
+</item 9>
+
+<item 10>
+Zara (retailer)
+as of 31 November 2017 : Africa South Africa : 9 Egypt : 5 Morocco : 4 Tunisia : 3 Algeria : 1 Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32
+Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3 Guatemala : 3 Panama : 3 Costa Rica : 2 Ecuador : 2 El
+Salvador : 2 Honduras : 2 Uruguay : 2 Aruba : 1 Nicaragua : 1 Paraguay : 1 Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20
+Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9 Philippines : 8 Lebanon : 7 Kazakhstan : 5 Kuwait :
+5 Qatar : 5 Jordan : 3 Bahrain : 2 Macau : 2 Oman : 1 Vietnam : 1 Europe Spain : 430 France : 128 Italy : 104 Russia : 100 Portugal : 87 Germany : 77 United
+</item 10>
+=== END ITEM id=a141-14c49ed84c72faa6 ===
+
+=== ITEM id=a170-328d55daa0710995 ===
+Gold sentences and facts:
+Sentence 0: Country Adult prevalence of HIV / AIDS Number of people with HIV / AIDS Annual deaths from HIV / AIDS Year of estimate Swaziland 27.20 % 220,000 3,900 2016 Lesotho 25.00 % 330,000 9,900 2016 Botswana 21.90 % 360,000 3,900 2016 South Africa 18.90 % 7,100,000 110,000 2016 Namibia 13.80 % 230,000 4,300 2016 Zimbabwe 13.50 % 1,300,000 30,000 2016 Zambia 12.40 % 1,200,000 21,000 2016 Mozambique 12.30 % 1,800,000 62,000 2016 Malawi 9.20 % 1,000,000 24,000 2016 Uganda 6.50 % 1,400,000 28,000 2016 Equatorial Guinea 6.20 % 35,000 - 2016 Kenya 5.40 % 1,600,000 36,000 2016 Tanzania 4.70 % 1,400,000 33,000 2016 Central African Republic 4.00 % 130,000 7,300 2016 Cameroon 3.80 % 560,000 29,000 2016 Gabon 3.60 % 48,000 1,500 2016 Bahamas , The 3.30 % 8,200 - 2016 Rwanda 3.10 % 220,000 3,300 2016 Congo , Republic of the 3.10 % 91,000 3,800 2016 Guinea - Bissau 3.10 % 36,000 2,000 2016 Nigeria 2.90 % 3,200,000 160,000 2016 Cote d'Ivoire 2.70 % 460,000 25,000 2016 South Sudan 2.70 % 200,000 13,000 2016 Haiti 2.10 % 150,000 4,600 2016 Togo 2.10 % 100,000 5,100 2016 Angola 1.90 % 280,000 11,000 2016 Belize 1.80 % 4,300 - 2016 Sierra Leone 1.70 % 67,000 2,800 2016 Gambia , The 1.70 % 20,000 1,100 2016 Jamaica 1.70 % 30,000 1,300 2016 Liberia 1.60 % 43,000 2,800 2016 Guyana 1.60 % 8,500 - 2016 Ghana 1.60 % 290,000 15,000 2016 Guinea 1.50 % 120,000 5,800 2016 Suriname 1.40 % 4,900 - 2016 Barbados 1.30 % 2,600 - 2016 Djibouti 1.30 % 8,600 - 2016 Chad 1.30 % 110,000 2,800 2016 Trinidad and Tobago 1.20 % 11,000 - 2016 Thailand 1.10 % 450,000 16,000 2016 Ethiopia 1.10 % 710,000 20,000 2016 Burundi 1.10 % 84,000 2,900 2016 Benin 1.00 % 67,000 2,400 2016 Mali 1.00 % 110,000 6,100 2016 Dominican Republic 1.00 % 67,000 2,200 2016 Ukraine 0.90 % 240,000 8,500 2016 Papua New Guinea 0.90 % 46,000 1,100 2016 Cabo Verde 0.80 % 2,800 - 2016 Panama 0.80 % 21,000 - 2016 Burma 0.80 % 230,000 7,800 2016 Burkina Faso 0.80 % 95,000 3,100 2016 Latvia 0.70 % 6,600 - 2016 Congo , Democratic Republic of 0.70 % 370,000 19,000 2016 Cambodia 0.60 % 71,000 1,800 2016 Venezuela 0.60 % 120,000 2,500 2016 Moldova 0.60 % 15,000 - 2016 Eritrea 0.60 % 15,000 - 2016 El Salvador 0.60 % 24,000 - 2016 Uruguay 0.60 % 12,000 - 2016 Brazil 0.60 % 830,000 14,000 2016 Georgia 0.50 % 12,000 - 2016 Mauritania 0.50 % 11,000 - 2016 Chile 0.50 % 61,000 - 2016 Guatemala 0.50 % 46,000 1,600 2016 Paraguay 0.50 % 19,000 - 2016 Niger 0.40 % 48,000 3,400 2016 Malaysia 0.40 % 97,000 7,000 2016 Indonesia 0.40 % 620,000 38,000 2016 Honduras 0.40 % 21,000 - 2016 Canada 0.40 % 180,000 - 2016 Cuba 0.40 % 25,000 - 2016 Costa Rica 0.40 % 13,000 - 2016 Colombia 0.40 % 120,000 2,800 2016 Vietnam 0.40 % 250,000 8,000 2016 Argentina 0.40 % 120,000 2,400 2016 Belarus 0.40 % 19,000 - 2016 USA 0.30 % 1,100,000 - 2015 Somalia 2016 Senegal 0.40 % 41,000 1,900 2016 India 0.30 % 2,100,000 62,000 2016 Ecuador 0.30 % 33,000 - 2016 Bolivia 0.30 % 19,000 - 2016 Tajikistan 0.30 % 14,000 - 2016 Peru 0.30 % 70,000 2,200 2016 Italy 0.30 % 130,000 - 2016 Laos 0.30 % 11,000 - 2016 Mexico 0.30 % 220,000 4,200 2016 Armenia 0.20 % 3,300 - 2016 Ireland 0.20 % 6,200 - 2016 Kazakhstan 0.20 % 26,000 - 2016 Kyrgyzstan 0.20 % 8,500 - 2016 Lithuania 0.20 % 2,900 - 2016 Madagascar 0.20 % 31,000 1,600 2016 Nepal 0.20 % 32,000 1,700 2016 Netherlands 0.20 % 23,000 - 2016 Nicaragua 0.20 % 8,900 - 2016 Sudan 0.20 % 56,000 3,000 2016 Sweden 0.20 % 11,000 - 2016 Albania 0.10 % 1,700 - 2016 Australia 0.10 % 25,000 - 2016 Fiji 0.10 % - - 2016 Taiwan 0.10 % 31,620 - 2016 Azerbaijan 0.10 % 9,200 - 2016 Iran 0.10 % 66,000 4,000 2016 Romania 0.10 % 16,000 - 2016 Montenegro 0.10 % - - 2016 Morocco 0.10 % 22,000 - 2016 Pakistan 0.10 % 130,000 5,500 2016 Philippines 0.10 % 56,000 - 2016 Malta 0.10 % - - 2016 Algeria - 13,000 - 2016 Bangladesh - 12,000 1,000 2016 Egypt - 11,000 - 2016 Yemen - 9,900 - 2016 Saudi Arabia - 8,200 - 2016 Afghanistan - 7,500 - 2016 Sri Lanka - 4,000 - 2016 Bulgaria - 3,500 - 2016 Czech Republic - 3,400 - 2016 Tunisia - 2,900 - 2016 Serbia - 2,700 - 2016 Lebanon - 2,200 - 2016 Croatia - 1,500 - 2016 Bosnia 0.009 % 350 - 2017
+  Fact 0.36: In 2016, there were 36,000 annual deaths from HIV/AIDS in Kenya.
+
+Retrieved items:
+<item 1>
+List of countries by HIV/AIDS adult prevalence rate
+Number of deaths due to AIDS by country World Health Organisation ; Number of people ( all ages ) living with HIV by country ( show ) HIV / AIDS topics ( show )
+HIV / AIDS HIV HIV structure and genome subtypes CDC classification disease progression rates HIV / AIDS diagnosis management pathophysiology prevention
+research vaccination PrEP WHO disease staging system for HIV infection and disease Children Teens / Adults Countries by AIDS prevalence rate Conditions Signs
+and symptoms AIDS - defining clinical condition Diffuse infiltrative lymphocytosis syndrome Lipodystrophy Nephropathy Neurocognitive disorders Pruritus
+Superinfection Tuberculosis co-infection HIV Drug Resistance Database Innate resistance to HIV History History Epidemiology Multiple sex partners Timeline AIDS
+Museum Timothy Ray Brown Social AIDS orphan Catholic Church and HIV / AIDS Circumcision and HIV Criminal transmission Discrimination against people Economic
+impact HIV - affected community HIV / AIDS denialism Safe sex Sex education List of HIV - positive people People With AIDS Self - Empowerment Movement Culture
+International AIDS Conference International AIDS Society Joint United Nations Programme on HIV / AIDS ( UNAIDS ) President 's Emergency Plan for AIDS Relief (
+PEPFAR ) Treatment Action Campaign World AIDS Day Media portrayal of HIV / AIDS Misconceptions about HIV /
+</item 1>
+
+<item 2>
+Sub-Saharan Africa
+In response , a number of initiatives have been launched to educate the public on HIV / AIDS . Among these are combination prevention programmes , considered to
+be the most effective initiative , the abstinence , be faithful , use a condom campaign , and the Desmond Tutu HIV Foundation 's outreach programs . According
+to a 2013 special report issued by the Joint United Nations Programme on HIV / AIDS ( UNAIDS ) , the number of HIV positive people in Africa receiving
+anti-retroviral treatment in 2012 was over seven times the number receiving treatment in 2005 , with an almost 1 million added in the last year alone . The
+number of AIDS - related deaths in Sub-Saharan Africa in 2011 was 33 percent less than the number in 2005 . The number of new HIV infections in Sub-Saharan
+Africa in 2011 was 25 percent less than the number in 2001 . Estimated prevalence in % of HIV among young adults ( 15 -- 49 ) per country as of 2011 . Malaria
+is an endemic illness in Sub-Saharan Africa , where the majority of malaria cases and deaths worldwide occur . Routine immunization has been introduced in order
+to prevent measles .
+</item 2>
+
+<item 3>
+List of countries by HIV/AIDS adult prevalence rate
+000 4,300 2016 Zimbabwe 13.50 % 1,300,000 30,000 2016 Zambia 12.40 % 1,200,000 21,000 2016 Mozambique 12.30 % 1,800,000 62,000 2016 Malawi 9.20 % 1,000,000
+24,000 2016 Uganda 6.50 % 1,400,000 28,000 2016 Equatorial Guinea 6.20 % 35,000 - 2016 Kenya 5.40 % 1,600,000 36,000 2016 Tanzania 4.70 % 1,400,000 33,000 2016
+Central African Republic 4.00 % 130,000 7,300 2016 Cameroon 3.80 % 560,000 29,000 2016 Gabon 3.60 % 48,000 1,500 2016 Bahamas , The 3.30 % 8,200 - 2016 Rwanda
+3.10 % 220,000 3,
+</item 3>
+
+<item 4>
+List of countries by HIV/AIDS adult prevalence rate
+Megalopolises Past and future Past population ( United Nations ) Past and future population 1 1000 1500 1600 1700 1800 1900 1907 1939 1989 2000 2005 2010 Future
+population Population density Current density Current real density based on food growing capacity Growth indicators Population growth rate Natural increase
+Birth rate Mortality rate Fertility rate Other demographics Age at first marriage Divorce rate Ethnic and cultural diversity level Foreign - born population
+Immigrant population Linguistic diversity Median age Net migration rate Number of households Sex ratio Urban population Urbanization Health Antiviral
+medications for pandemic influenza HIV / AIDS adult prevalence rate Infant and under - five mortality rates Life expectancy Percentage suffering from
+undernourishment Health expenditure covered by government Suicide rate Total health expenditure per capita Body Mass Index ( BMI ) Education and innovation
+Bloomberg Innovation Index Education Index International Innovation Index Innovation Union Scoreboard Literacy rate Programme for the International Assessment
+of Adult Competencies Progress in International Reading Literacy Study Student skills Tertiary education attainment Trends in International Mathematics and
+Science Study Women 's average years in school World Intellectual Property Indicators Economic Development aid given Official Development Assistance received
+Employment rate Irrigated land area Human Development
+</item 4>
+
+<item 5>
+List of countries by HIV/AIDS adult prevalence rate
+30 % 11,000 - 2016 Mexico 0.30 % 220,000 4,200 2016 Armenia 0.20 % 3,300 - 2016 Ireland 0.20 % 6,200 - 2016 Kazakhstan 0.20 % 26,000 - 2016 Kyrgyzstan 0.20 %
+8,500 - 2016 Lithuania 0.20 % 2,900 - 2016 Madagascar 0.20 % 31,000 1,600 2016 Nepal 0.20 % 32,000 1,700 2016 Netherlands 0.20 % 23,000 - 2016 Nicaragua 0.20 %
+8,900 - 2016 Sudan 0.20 % 56,000 3,000 2016 Sweden 0.20 % 11,000 - 2016 Albania 0.10 % 1,700 - 2016 Australia 0.10 % 25,000 - 2016 Fiji 0.10 % - - 2016 Taiwan
+0.10 % 31,
+</item 5>
+
+<item 6>
+List of countries by HIV/AIDS adult prevalence rate
+200 - 2016 Rwanda 3.10 % 220,000 3,300 2016 Congo , Republic of the 3.10 % 91,000 3,800 2016 Guinea - Bissau 3.10 % 36,000 2,000 2016 Nigeria 2.90 % 3,200,000
+160,000 2016 Cote d'Ivoire 2.70 % 460,000 25,000 2016 South Sudan 2.70 % 200,000 13,000 2016 Haiti 2.10 % 150,000 4,600 2016 Togo 2.10 % 100,000 5,100 2016
+Angola 1.90 % 280,000 11,000 2016 Belize 1.80 % 4,300 - 2016 Sierra Leone 1.70 % 67,000 2,800 2016 Gambia , The 1.70 % 20,000 1,100 2016 Jamaica 1.70 % 30,000
+1,
+</item 6>
+
+<item 7>
+List of countries by HIV/AIDS adult prevalence rate
+40 % 25,000 - 2016 Costa Rica 0.40 % 13,000 - 2016 Colombia 0.40 % 120,000 2,800 2016 Vietnam 0.40 % 250,000 8,000 2016 Argentina 0.40 % 120,000 2,400 2016
+Belarus 0.40 % 19,000 - 2016 USA 0.30 % 1,100,000 - 2015 Somalia 2016 Senegal 0.40 % 41,000 1,900 2016 India 0.30 % 2,100,000 62,000 2016 Ecuador 0.30 % 33,000
+- 2016 Bolivia 0.30 % 19,000 - 2016 Tajikistan 0.30 % 14,000 - 2016 Peru 0.30 % 70,000 2,200 2016 Italy 0.30 % 130,000 - 2016 Laos 0.30 % 11,000 - 2016 Mexico
+0.30 % 220,
+</item 7>
+
+<item 8>
+List of countries by HIV/AIDS adult prevalence rate
+AVERT . Retrieved 3 August 2017 . Jump up ^ http://factbook.lincon.com/geos/print/country/countrypdf_bf.pdf Jump up ^ `` UNAIDS.org - HIV and AIDS estimates (
+2013 ) '' . Jump up ^ `` The Hindu - India has 3rd - highest number of HIV - infected people : UN '' . Jump up ^ `` The Ministry of Health has Detected ... '' .
+Bhutan Observer online . 2011 - 08 - 01 . Archived from the original on 2011 - 10 - 28 . Retrieved 2011 - 11 - 21 . Jump up ^ `` CIA world factbook - country
+comparison '' . Jump up ^ https://www.cdc.gov/hiv/statistics/overview/index.html Jump up ^ https://www.cdc.gov.tw/downloadfile.aspx?fid=40CE068DC7A0F111
+External links ( edit ) HIV / AIDS Survey Indicators Database World Health Organisation ; Prevalence of HIV among adults aged 15 to 49 ( % ) by country World
+Health Organisation ;
+</item 8>
+
+<item 9>
+List of countries by HIV/AIDS adult prevalence rate
+) Treatment Action Campaign World AIDS Day Media portrayal of HIV / AIDS Misconceptions about HIV / AIDS Discredited HIV / AIDS origins theories ( show ) AIDS
+pandemic by region / country Africa Angola Benin Botswana Democratic Republic of the Congo Egypt Ethiopia Ghana Guinea Côte d'Ivoire ( Ivory Coast ) Kenya
+Lesotho Madagascar Malawi Mali Mozambique Namibia Niger Nigeria Rwanda Senegal Swaziland Tanzania South Africa Uganda Zambia Zimbabwe North America Canada
+Mexico El Salvador Guatemala Honduras Nicaragua United States New York City Caribbean Haiti Jamaica Dominican Republic South America Bolivia Brazil Colombia
+Guyana Peru Asia Bangladesh Bhutan Myanmar ( Burma ) Cambodia China ( PRC ) ( Yunnan ) East Timor India Indonesia Iraq Japan Jordan Laos Nepal North Korea
+Pakistan Philippines Thailand Taiwan ( ROC ) United Arab Emirates Vietnam Europe United Kingdom Russia Ukraine Oceania Australia New Zealand Papua New Guinea
+List of countries by HIV / AIDS adult prevalence rate List of HIV / AIDS cases and deaths registered by region ( show ) HIV / AIDS in Africa Sovereign states
+Algeria Angola Benin Botswana Burkina Faso Burundi Cameroon Cape Verde ( Cabo Verde ) Central African Republic Chad Comoros Democratic Republic of the Congo
+Republic of the Congo Djibouti Egypt Equatorial
+</item 9>
+
+<item 10>
+List of countries by HIV/AIDS adult prevalence rate
+List of countries by HIV / AIDS adult prevalence rate - Wikipedia List of countries by HIV / AIDS adult prevalence rate Jump to : navigation , search This
+article needs to be updated . Please update this article to reflect recent events or newly available information . ( October 2017 ) AIDS and HIV prevalence 2009
+No data < 0.1 % 0.1 -- 0.5 % 0.5 -- 1 % 1 -- 5 % 5 -- 15 % 15 -- 50 % The human immunodeficiency virus ( HIV ) , which causes AIDS , varies in prevalence from
+nation to nation . Listed here are the prevalence rates among adults in various countries , based on data from various sources , largely the CIA World Factbook
+. As of 2015 , it is estimated that there are 36.7 million people worldwide infected with HIV . The HIV pandemic is most severe in South Africa . Over 10 % of
+all people living with HIV / AIDS reside within the region .
+</item 10>
+=== END ITEM id=a170-328d55daa0710995 ===
+
+=== ITEM id=a188-30aa016716dd019a ===
+Gold sentences and facts:
+Sentence 0: The soma ( cell body ) of each pseudounipolar neuron is located within a dorsal root ganglion . The axon leaves the cell body ( and out of the dorsal root ganglion ) into the dorsal root , where it splits into two branches . The central branch goes to the posterior ( dorsal ) horn of the spinal cord , where it forms synapses with other neurons . The peripheral branch travels through the distal dorsal root into the spinal nerve all the way until skin , joint , and muscle .
+  Fact 0.6: The central branch forms synapses with other neurons.
+
+Retrieved items:
+<item 1>
+Motor neuron
+the command of visceral muscles is disynaptic ( involving two neurons : the general visceral motor neuron located in the CNS , which synapses onto a ganglionic
+neuron , located in the PNS , which synapses onto the muscle ) . All vertebrate motor neurons are cholinergic , that is , they release the neurotransmitter
+acetylcholine . Parasympathetic ganglionic neurons are also cholinergic , whereas most sympathetic ganglionic neurons are noradrenergic , that is , they release
+the neurotransmitter noradrenaline . ( see Table ) Motor neurons in Regenerative medicine ( edit ) Human lower motor neurons can be generated in vitro from
+embryonic stem cells and induced pluripotent stem cells . See also ( edit ) Betz cell Central chromatolysis Motor dysfunction Nerve References ( edit ) Jump up
+^ Tortora , Gerard ; Derrickson , Bryan ( 2014 ) . Principles of Anatomy & Physiology ( 14th ed . ) . New Jersey : John Wiley & Sons , Inc . pp. 406 , 502 , 541
+. ISBN 978 - 1 - 118 - 34500 - 9 .
+</item 1>
+
+<item 2>
+Pseudounipolar neuron
+Pseudounipolar neuron - wikipedia Pseudounipolar neuron Jump to : navigation , search Pseudounipolar neuron 1 : Pseudounipolar neuron , 2 : Bipolar neuron
+Details System Nervous system Identifiers Latin neuron pseudounipolare TH H2. 00.06. 1.00047 Anatomical terms of neuroanatomy ( edit on Wikidata ) A
+pseudounipolar neuron ( pseudo -- false , uni -- one ) is a kind of sensory neuron in the peripheral nervous system . This neuron contains an axon that has
+split into two branches ; one branch runs to the periphery and the other to the spinal cord . Contents ( hide ) 1 Structure 1.1 In the dorsal root ganglia 1.2
+In the sensory ganglia of cranial nerves 2 Function 2.1 Signal pathway 3 See also 4 References Structure ( edit ) By definition , a pseudounipolar neuron has
+one axon with two branches : central and peripheral . These axonal branches should not be confused with dendrites .
+</item 2>
+
+<item 3>
+Pseudounipolar neuron
+Ganglion Ramus Ventral Root Ramus Ramus communicans Gray White Autonomic ganglion ( Preganglionic nerve fibers Postganglionic nerve fibers ) Connective tissues
+Epineurium Perineurium Endoneurium Nerve fascicle Neuroglia Myelination : Schwann cell Neurilemma Myelin incisure Node of Ranvier Internodal segment Satellite
+glial cell Neurons / nerve fibers Parts Soma Axon hillock Axon Telodendron Axon terminals Axoplasm Axolemma Neurofibril / neurofilament Dendrite Nissl body
+Dendritic spine Apical dendrite / Basal dendrite Types Bipolar Unipolar Pseudounipolar Multipolar Interneuron Renshaw Afferent nerve fiber / Sensory neuron GSA
+GVA SSA SVA fibers Ia or Aα Ib or Golgi or Aα II or Aβ and Aγ III or Aδ or fast pain IV or C or slow pain Efferent nerve fiber / Motor neuron GSE GVE SVE Upper
+motor neuron Lower motor neuron α motorneuron β motorneuron γ motorneuron Termination Synapse Electrical synapse / Gap junction Chemical
+</item 3>
+
+<item 4>
+Motor neuron
+segment Satellite glial cell Neurons / nerve fibers Parts Soma Axon hillock Axon Telodendron Axon terminals Axoplasm Axolemma Neurofibril / neurofilament
+Dendrite Nissl body Dendritic spine Apical dendrite / Basal dendrite Types Bipolar Unipolar Pseudounipolar Multipolar Interneuron Renshaw Afferent nerve fiber /
+Sensory neuron GSA GVA SSA SVA fibers Ia or Aα Ib or Golgi or Aα II or Aβ and Aγ III or Aδ or fast pain IV or C or slow pain Efferent nerve fiber / Motor neuron
+GSE GVE SVE Upper motor neuron Lower motor neuron α motorneuron β motorneuron γ motorneuron Termination Synapse Electrical synapse / Gap junction Chemical
+synapse Synaptic vesicle Active zone Postsynaptic density Autapse Ribbon synapse Neuromuscular junction Sensory receptors Meissner 's corpuscle Merkel nerve
+ending Pacinian corpuscle Ruffini ending Muscle spindle Free nerve ending Nociceptor Olfactory receptor neuron Photoreceptor cell Hair cell Taste bud Retrieved
+from `` https://en.wikipedia.
+</item 4>
+
+<item 5>
+Pseudounipolar neuron
+These axonal branches should not be confused with dendrites . These sensory neurons are an exception to the typical neuron , in that they do not have separate
+dendrites and an axonal process , but rather one branched process that serves both functions . The axon has a peripheral branch ( from the cell body to the
+periphery : skin , joint and muscle ) and a central branch ( from the cell body to spinal cord ) . In the dorsal root ganglia ( edit ) The soma ( cell body ) of
+each pseudounipolar neuron is located within a dorsal root ganglion . The axon leaves the cell body ( and out of the dorsal root ganglion ) into the dorsal root
+, where it splits into two branches . The central branch goes to the posterior ( dorsal ) horn of the spinal cord , where it forms synapses with other neurons .
+The peripheral branch travels through the distal dorsal root into the spinal nerve all the way until skin , joint , and muscle .
+</item 5>
+
+<item 6>
+Motor neuron
+These columns are further explained in the table below . Motor Columns of Spinal Cord Motor Column Location in Spinal Cord Target Median Motor Column Present
+entire length Axial muscles Hypaxial Motor Column Thoracic Region Body wall muscles Preganglionic Motor Column Thoracic Region Sympathetic ganglion Laterl Motor
+Column Brachial and Lumbar region ( both regions are further divided into medial and lateral domains ) Muscles of the limbs Phrenic Motor Coulmn Cervical Region
+Diaphragm Anatomy and Physiology ( edit ) Spinal cord tracts Location of lower motor neurons in spinal cord Upper motor neurons ( edit ) Upper motor neurons
+originate in the motor cortex located in the precentral gyrus . The cells that make up the primary motor cortex are Betz cells , which are a type of pyramidal
+cell . The axons of these cells descend from the cortex to form the corticospinal tract . White matter Tract ( edit ) White matter tracts are bundles of axons
+and serve as means to propagate nerve impulses on a large scale . These are found in the spinal cord and appear white from the myelin surrounding axons .
+</item 6>
+
+<item 7>
+Motor neuron
+Branch of NS Position Neurotransmitter Somatic n / a Acetylcholine Parasympathetic Preganglionic Acetylcholine Parasympathetic Ganglionic Acetylcholine
+Sympathetic Preganglionic Acetylcholine Sympathetic Ganglionic Norepinephrine * * Except fibers to sweat glands and certain blood vessels Motor neuron
+neurotransmitters General visceral motor neurons ( edit ) These motor neurons indirectly innervate cardiac muscle and smooth muscles of the viscera ( the
+muscles of the arteries ) : they synapse onto neurons located in ganglia of the autonomic nervous system ( sympathetic and parasympathetic ) , located in the
+peripheral nervous system ( PNS ) , which themselves directly innervate visceral muscles ( and also some gland cells ) . In consequence : the motor command of
+skeletal and branchial muscles is monosynaptic ( involving only one motor neuron , respectively , somatic and branchial , which synapses onto the muscle ) .
+</item 7>
+
+<item 8>
+Pseudounipolar neuron
+. Cambridge : McGrawHill . p. 24 . ISBN 978 - 0838577011 . ^ Jump up to : MacCallum , Don . `` Peripheral Nervous System '' . Histology and Virtual Microscopy
+Learning Resources . University of Michigan Medical School . Archived from the original on 7 July 2014 . Retrieved 24 June 2014 . Jump up ^ Miller 's Anatomy of
+the Dog , By Howard E. Evans , Alexander de Lahunta , 4th ed , pp 565 ( hide ) Nervous tissue CNS Tissue Types Grey matter White matter Projection fibers
+Association fiber Commissural fiber Lemniscus Funiculus Fasciculus Nerve tract Decussation Commissure Neuropil Meninges Cell Types Neuronal Pyramidal Purkinje
+Granule Glial insulating : Myelination : Oligodendrocyte other Astrocyte Radial glial cell Ependymal cells Tanycyte Microglia PNS General Dorsal Root Ganglion
+Ramus Ventral Root Ramus Ramus communicans Gray White Autonomic ganglion (
+</item 8>
+
+<item 9>
+Pseudounipolar neuron
+In the sensory ganglia of cranial nerves ( edit ) Pseudounipolar neurons are also found in the sensory ganglia of cranial nerves V , VII , IX and X , all mixed
+- cranial nerves . The vestibulocochlear nerve , has the bipolar neuron type in both the spiral ganglion as well as Scarpa 's ganglion . Function ( edit )
+Signal pathway ( edit ) These neurons have sensory receptors on skin , joints , muscles , and other parts of the body . The area of the axon that is closest to
+the receptor is the trigger zone for the neuron . The signal is conducted through the axon to the dorsal root ganglion 's cell body , then through the axon and
+ending at the sensory nuclei in the posterior horn of the spinal cord . See also ( edit ) Bipolar neuron Multipolar neuron Unipolar neuron References ( edit ) ^
+Jump up to : Kandel , Eric R. ; Schwartz , James H. ; Mack , Thomas M. Jessell ( 2000 ) . Principles of neural Science ( 4th ed . ) . Cambridge : McGrawHill .
+p. 24 .
+</item 9>
+
+<item 10>
+Motor neuron
+; Mallatt , J. ( 1997 ) . Human Anatomy ( 2nd ed . ) . Menlo Park , CA : Benjamin / Cummings . ISBN 0 - 8053 - 4068 - 8 . ( hide ) Nervous tissue CNS Tissue
+Types Grey matter White matter Projection fibers Association fiber Commissural fiber Lemniscus Funiculus Fasciculus Nerve tract Decussation Commissure Neuropil
+Meninges Cell Types Neuronal Pyramidal Purkinje Granule Glial insulating : Myelination : Oligodendrocyte other Astrocyte Radial glial cell Ependymal cells
+Tanycyte Microglia PNS General Dorsal Root Ganglion Ramus Ventral Root Ramus Ramus communicans Gray White Autonomic ganglion ( Preganglionic nerve fibers
+Postganglionic nerve fibers ) Connective tissues Epineurium Perineurium Endoneurium Nerve fascicle Neuroglia Myelination : Schwann cell Neurilemma Myelin
+incisure Node of Ranvier Internodal segment Satellite glial cell Neurons / nerve fibers Parts Soma Axon hillock Axon
+</item 10>
+=== END ITEM id=a188-30aa016716dd019a ===
+
+=== ITEM id=a183-db798ab094066a4d ===
+Gold sentences and facts:
+Sentence 0: No . Cloverway inc . title Original Japanese and Viz Media titles Episode director ( s ) Writer ( s ) Art director ( s ) Animation director ( s ) Original airdate English airdate ( United States ) 90 `` Star Struck , Bad Luck '' `` Premonition of the Apocalypse : The Mysterious New Guardians Appear '' `` Chikyū hōkai no yokan ? Nazo no shin Senshi shutsugen '' ( 地球 崩壊 の 予感 ? 謎 の 新 戦士 出現 ) Junichi Sato Sukehiro Tomita Kenichi Tajiri Masahiro Andō March 19 , 1994 June 12 , 2000 After experiencing apocalyptic visions , Rei is attacked by a powerful monster called a Daimon that Sailor Moon is unable to fight after it disables her brooch , reversing her transformation . The Daimon is defeated by a pair of mysterious new warriors , leaving the girls to despondently realize that a new conflict has begun . 91 `` Crystal Clear Again '' `` The Rod of Love Is Born : Usagi 's New Transformation '' `` Ai no roddo tanjō ! Usagi no shin henshin '' ( 愛 の ロッド 誕生 ! うさぎ の 新 変身 ) Yūji Endō Shigeru Yanagawa Yoshiyuki Shikano Katsumi Tamegai March 26 , 1994 June 13 , 2000 While Mamoru strives to cheer Usagi up after her failure in the previous battle , a young girl is the latest target of the Death Busters . Due to Usagi 's inability to transform , the under - powered Sailor Team struggles to fight off the Daimon and are once again forced to rely on the mysterious two warriors . Once they determine the girl 's pure heart is not a talisman , they leave the Sailor Team to fend for themselves . Meanwhile , Tuxedo Mask and Usagi hold hands after the latter 's refusal to escape , and through the power of their love , Usagi 's disabled Crystal Star brooch transforms into the Cosmic Heart Compact , and she gains the Spiral Heart Moon Rod and , along with it , the ability to transform and defeat the new enemy . 92 `` Driving Dangerously '' `` A Handsome Boy ? Haruka Tenoh 's Secret '' `` Suteki na bishōnen ? Ten'ō Haruka no himitsu '' ( 素敵 な 美少年 ? 天王 はるか の 秘密 ) Kunihiko Ikuhara Katsuyuki Sumisawa Kazuhisa Asai Hisashi Kagawa April 16 , 1994 June 14 , 2000 Avoiding their study group , Usagi and Minako meet Haruka Tenou , an attractive and supposedly male student of a prestigious local school , with whom they both become infatuated . After Minako is defeated in a racing game , Michiru arrives to pick up Haruka , and the two depart with Usagi and Minako soon following behind them . Once Michiru and Haruka separate at a mechanic 's shop , Usagi and Minako take this as their chance , and Haruka tells them about `` him '' - self until a Daimon arrives to attack Kameda , the shop mechanic . The Daimon starts to escape when Usagi and Minako transform into their Guardian forms to chase it down , when Uranus and Neptune arrive to investigate Kameda 's pure heart crystal . When it turns out not to be a talisman they retreat and Sailor Moon defeats the Daimon . Later , the rest of the girls are at Crown Game Center with Usagi and Minako in hopes of seeing the cute boy they 'd told them about ; Michiru arrives with a blonde girl , whom Usagi and Minako initially fail to realize is Haruka ; once they do , Minako falls to the ground in anguish , and Haruka notes that she 'd never said she was male . 93 `` Bad Harmony '' `` Usagi 's Idol : The Graceful Genius Michiru '' `` Usagi no akogare ! Yūbi no tensai Michiru '' ( うさぎ の 憧れ ! 優美 な 天才 みちる ) Hiroki Shibata Megumi Sugihara Kazuyuki Hashimoto Taichi Nakamura April 23 , 1994 June 15 , 2000 When Usagi is concerned that she is not smart enough to be with Mamoru after being scolded by the other girls , she seeks advice from Michiru Kaioh , who suggests that Usagi and Mamoru go to a violin recital . 94 `` Swept Off Her Feet '' `` Protect the Pure Heart : The Three - Way Battle '' `` Pyua na kokoro wo mamore ! Teki mikata mittsu tomoe ransen '' ( 純 な 心 を 守れ ! 敵 味方 三つ巴 乱戦 ) Noriyo Sasaki Sukehiro Tomita Kenichi Tajiri Ikuko Itō April 30 , 1994 June 16 , 2000 Usagi 's friend , Unazuki , is attacked by a Daimon and has her pure heart crystal stolen . But when Sailor Moon tries to take the crystal back to Unazuki , Uranus and Neptune attempt to steal it in order to claim the Talisman . 95 `` Blinded By Love 's Light '' `` Let Moon Help With Your Love Problems '' `` Koi no otasuke wa Mūn ni omakase '' ( 恋 の おたすけ は ムーン に おまかせ ) Harume Kosaka Shigeru Yanagawa Yoshiyuki Shikano Mari Tominaga May 7 , 1994 June 19 , 2000 Naru and Umino enter an affection contest in order to prove their strong mutual romantic love for each other , but find themselves targeted by a Daimon . 96 `` Lita Borrows Trouble '' `` Coldhearted Uranus : Makoto in Danger '' `` Reikoku na Uranusu ? Makoto no pinchi '' ( 冷酷 な ウラヌス ? まこと の ピンチ ) Kōnosuke Uda Yoji Enokido Kazuhisa Asai Masahiro Andō May 14 , 1994 June 20 , 2000 Makoto is targeted by a Daimon , but manages to temporarily evade it . Keen to analyze her pure heart crystal , Haruka befriends Makoto in order to get close to her . 97 `` Damp Spirits '' `` The Labyrinth of Water : Ami Targeted '' `` Mizu no rabarinsu ! Nerawareta Ami '' ( 水 の ラビリンス ! ねら われ た 亜美 ) Junichi Sato Megumi Sugihara Kazuyuki Hashimoto Katsumi Tamegai May 21 , 1994 June 21 , 2000 Ami 's desire to avoid competition leads her to offending Michiru inadvertently in a swimming race , as well as Usagi accidentally hurting Ami 's feelings . Meanwhile , a Daimon selects Ami as a target . 98 `` Friendly Foes '' `` To Save Our Friends : Moon and Uranus Join Forces '' `` Tomodachi wo sukue ! Mūn Uranusu rengō '' ( 友達 を 救え ! ムーン ウラヌス 連合 ) Yūji Endō Sukehiro Tomita Kenichi Tajiri Taichi Nakamura May 28 , 1994 June 22 , 2000 After Sailor Neptune is captured and possibly killed by Kaolinite , Sailor Moon and Sailor Uranus find themselves shackled together and forced to reassess their less - than - friendly attitudes toward each other in order to save Sailor Neptune from further harm . 99 `` Mixed Emotions '' `` A Man 's Kindness : Yuichiro Heartbroken by Rei '' `` Otoko no yasashisa ! Yūichirō Rei ni shitsuren ? '' ( 男 の 優し さ ! 雄一郎 レイ に 失恋 ? ) Harume Kosaka Megumi Sugihara Yoshiyuki Shikano Shinya Hasegawa June 18 , 1994 June 23 , 2000 Worried by Rei 's intensive meditation , Yuuichirou becomes concerned that she has fallen deeply head - over-heels in love for another man . When he sees her with Haruka and mistakes her for a man , Yuuichirou is convinced that `` he '' is Rei 's new romantic suitor . 100 `` Individual Happiness '' `` I Want to Quit Being a Sailor Guardian : Minako 's Dilemma '' `` Sērā Senshi wo yametai ! ? Minako no nayami '' ( S 戦士 を 辞め たい ! ? 美奈子 の 悩み ) Hiroki Shibata Yoji Enokido Kazuhisa Asai Mari Tominaga June 25 , 1994 June 26 , 2000 Minako is despondent about her double life of being a Sailor Guardian and a normal girl . Meanwhile , an old friend of hers , who she once fell in love with , is attacked by a Daimon , and Minako , as Sailor Venus , must use her skills of volleyball to save him . 101 `` Birthday Blues , Part 1 '' `` Usagi in Tears : a Glass Slipper for My Birthday '' `` Usagi namida ! Tanjōbi ni garasu no kutsu wo '' ( うさぎ 涙 ! 誕生 日 に ガラス の 靴 を ) Yūji Endō Katsuyuki Sumisawa Kazuyuki Hashimoto Masahiro Andō July 2 , 1994 June 27 , 2000 Usagi is furious when Mamoru forgets her 15th birthday . When Mamoru buys her an expensive pair of glass slippers to make up for it , he fails to realize that Kaolinite sabotaged the shoes with a Daimon egg to steal her pure heart crystal . To make matters worse , Kaolinite steals Usagi 's Cosmic Heart Compact leaving her unable to transform , and Tuxedo Mask gets captured . 102 `` Birthday Blues , Part Two '' `` The Stolen Pure Heart : Usagi 's Crisis '' `` Ubawareta pyua na kokoro ! Usagi zettai zetsumei '' ( 奪 われ た 純 な 心 ! うさぎ 絶 体 絶命 ) Noriyo Sasaki Katsuyuki Sumisawa Kenichi Tajiri Taichi Nakamura July 16 , 1994 June 28 , 2000 With the Cosmic Heart Compact stolen and Tuxedo Mask kidnapped , Usagi and the four other Sailor Guardians , along with Sailors Uranus and Neptune , go to retake the compact so Usagi can become Sailor Moon again , rescue Tuxedo Mask and face Kaolinite in a final showdown at Tokyo Tower . 103 `` Hello , Sailor Mini Moon '' `` The Arrival of a Tiny Pretty Guardian '' `` Yatte kita chiccha na Bishōjo Senshi '' ( やって来 た ちっちゃな 美 少女 戦士 ) Kunihiko Ikuhara Shigeru Yanagawa Yoshiyuki Shikano Kazuya Kuroda August 6 , 1994 June 29 , 2000 Eudial , and the Witches 5 are tasked to take over from Kaolinite 's position , in which they target a genius drummer recruited to play at a festival for Rei . The Sailor Guardians can not defeat the Daimon who attacks her , but Chibiusa arrives as the Guardians ' newest ally , Sailor Chibi - Moon . 104 `` Tainted Tea Party '' `` Making New Friends : Chibi Moon 's Adventure '' `` Tomodachi wo motomete ! Chibi Mūn no katsuyaku '' ( 友達 を 求め て ! ちび ムーン の 活躍 ) Junichi Sato Megumi Sugihara Kazuhisa Asai Ikuko Itō August 20 , 1994 June 30 , 2000 Chibiusa , who has returned from Crystal Tokyo for further training , attempts to adapt to her new home by making friends her age . She tries to befriend a master who does tea ceremonies , only to become the Death Busters ' latest target . 105 `` People Who Need People '' `` I Want Power : Mako Lost in Doubt '' `` Pawā ga hoshī ! Mako - chan no mayoi michi '' ( 力 が 欲しい ! まこ ちゃん の 迷い 道 ) Hiroki Shibata Shigeru Yanagawa Yoshiyuki Shikano Mari Tominaga August 27 , 1994 July 3 , 2000 Makoto is training in the mountains , trying to become much stronger after being easily defeated by a Daimon before . Her trainer is attacked , and tells her that nobody can live alone . She attacks the Daimon , fails , and realizes she needs her best friends in order to win . 106 `` Related By Destiny '' `` The Bond of Destiny : Uranus 's Distant Past '' `` Unmei no kizuna ! Uranusu no tōi hi '' ( 運命 の きずな ! ウラヌス の 遠い 日 ) Takuya Igarashi Yoji Enokido Kenichi Tajiri Katsumi Tamegai September 3 , 1994 July 4 , 2000 Haruka remembers the past when she first met Michiru , who told her that she was destined to become Sailor Uranus . Haruka initially refused that destiny , for she loved her life too much and was afraid of change . Haruka was attacked , and Sailor Neptune was injured while defending her . In her anguish , Haruka took the transformation pen and accepted her destiny as Sailor Uranus , the Sailor Guardian of the Sky . 107 `` Art Appreciation '' `` Art Is an Explosion of Love : Chibiusa 's First Love '' `` Geijutsu wa ai no bakuhatsu ! Chibiusa no hatsukoi '' ( 芸術 は 愛 の 爆発 ! ちびうさ の 初恋 ) Yūji Endō Katsuyuki Sumisawa Minoru Ōkōchi Taichi Nakamura September 10 , 1994 July 5 , 2000 Chibiusa meets a boy named Masanori at her art class and develops a crush on him . Unfortunately , he already has a crush on Michiru , who is taking a class at that school as well . When a Daimon attacks Masanori , Chibiusa must take a stand to protect him . 108 `` Everything 's Coming Up Rosey '' `` Usagi Dancing to the Waltz '' `` Usagi no dansu wa warutsu ni notte '' ( うさぎ の ダンス は ワルツ に 乗っ て ) Harume Kosaka Megumi Sugihara Kazuhisa Asai Masahiro Andō September 17 , 1994 July 6 , 2000 An English gentleman named Edwards invites Mamoru and the girls to a fancy party , where Usagi accidentally becomes drunk and the team is forced to confront a fashionable Eudial and her latest Daimon . 109 `` No Turning Back '' `` The Shocking Moment : Everyone 's Identities Revealed '' `` Shōgeki no toki ! Akasareta tagai no shōtai '' ( 衝撃 の 刻 ! 明か され た 互い の 正体 ) Junichi Sato Sukehiro Tomita Yoshiyuki Shikano Kazuya Kuroda September 24 , 1994 July 7 , 2000 Minako becomes jealous that a Daimon has not yet attacked her , and she fears that she does not have a pure heart . After doing as many `` pure '' things as she can , she is attacked , and her pure heart is taken from her . When Eudial nearly gets away , Usagi is forced to reveal her identity to Haruka & Michiru , who in turn , reveal their identities as Sailors Uranus and Neptune to Sailor Moon . 110 `` Destiny 's Arrival '' `` The Death of Uranus and Neptune : The Talisman Appear '' `` Uranusu - tachi no shi ? Tarisuman shutsugen '' ( ウラヌス 達 の 死 ? タリスマン 出現 ) Kunihiko Ikuhara Yoji Enokido Kenichi Tajiri Mari Tominaga October 15 , 1994 July 10 , 2000 Faced with losing her position at Witches 5 , Eudial creates a computer program to find the true owners of the three Talismans , and learns that Haruka and Michiru are the ones who hold two of the Talismans within their own hearts ! They take away Usagi 's brooch , and follow Eudial onto a lonely island . However , the invitation turns out to be a trick , and Michiru 's pure heart is taken , which turns into the mystical Deep Aqua Mirror . Haruka , in order to release her own talisman , shoots herself with Eudial 's gun . Her pure heart transforms into the mystical Space Sword . 111 `` The Purity Chalice '' `` The Holy Grail 's Mystical Power : Moon 's Double Transformation '' `` Seihai no shinpi na chikara ! Mūn nidan henshin '' ( 聖杯 の 神秘 な 力 ! ムーン 二 段 変身 ) Hiroki Shibata Sukehiro Tomita Kazuyuki Hashimoto Ikuko Itō October 22 , 1994 July 11 , 2000 Sailor Pluto appears and reawakens Sailors Uranus and Neptune , and the three talismans resonate with each other ( the third and last being Sailor Pluto 's Garnet Orb ) . The Holy Grail appears , and Sailor Moon grabs it and evolves into Super Sailor Moon , who drives Eudial out . Mimete then kills Eudial by sabotaging her car with snails . 112 `` Show Stoppers '' `` Who is the True Messiah ? Chaos of Light and Darkness '' `` Shin no kyūseishu wa dare ? Hikari to kage no kaosu '' ( 真 の 救世主 は 誰 ? 光 と 影 の カオス ) Noriyo Sasaki Shigeru Yanagawa Minoru Ōkōchi Shinya Hasegawa November 5 , 1994 July 12 , 2000 The girls end up watching the filming of a movie , where Chibiusa encounters Hotaru , whom she quickly befriends . But in the end , she is revealed to be the 12 - year - old daughter of Professor Souichi Tomoe , the possessed leader of the Death Busters . Super Sailor Moon uses her new `` Rainbow Moon Heartache '' attack to defeat the Daimon of the day . 113 `` Rini 's Risky Friendship '' `` A House Filled With Evil Presence : The Beautiful Hotaru 's Secret '' `` Yōki tadayou ie ! Bishōjo Hotaru no himitsu '' ( 妖気 漂う 家 ! 美 少女 ほたる の 秘密 ) Kōnosuke Uda Megumi Sugihara Kenichi Tajiri Taichi Nakamura November 12 , 1994 July 13 , 2000 The three Outer Guardians appear to Tuxedo Mask , and tell him why they can not fight alongside Sailor Moon and the other four Sailor Guardians . Usagi and Chibiusa visit Hotaru , and see a woman who looks like Kaolinite . The Messiah of Silence appears demanding pure hearts . 114 `` Mimet 's Mess '' `` I Love Idols : Mimete 's Dilemma '' `` Aidoru daisuki ! Nayameru Mimetto '' ( アイドル 大好き ! 悩め る ミメット ) Harume Kosaka Yoji Enokido Yoshiyuki Shikano Masahiro Andō November 19 , 1994 July 14 , 2000 Minako and Mimete enter a beauty contest at the same time , with Mimete willing to risk it all to obtain victory . Both fall short of the needed votes to win the idol position , and Mimete decides to just go back to her evil ways . 115 `` The Shadow of Silence '' `` Shadow of Silence : The Pale Glimmer of a Firefly '' `` Chinmoku no kage ! ? Awaki Hotaru hi no yurameki '' ( 沈黙 の 影 ! ? あ わき 蛍火 の ゆらめき ) Takuya Igarashi Yoji Enokido Kenichi Tajiri Katsumi Tamegai November 26 , 1994 July 17 , 2000 Hotaru overexerts herself , and is hospitalized , during which her past without friends is shown , and the reasons for it . Meanwhile , Mimete targets a soap opera actor , during which the attacking Daimon runs near Hotaru , who glows and completely freezes the Daimon . 116 `` Thorny Weather '' `` Sunny Skies After a Storm : A Friendship Dedicated to Hotaru '' `` Arashi nochi hare ! Hotaru ni sasageru yūjō '' ( 嵐 のち 晴れ ! ほたる に 捧げる 友情 ) Yūji Endō Megumi Sugihara Kazuhisa Asai Jouji Yanase December 3 , 1994 July 18 , 2000 Mamoru takes Usagi , Chibiusa and Hotaru to a botanical garden that is tended by Yoshiki Kurebayashi , an old classmate of his . While there , Mimete targets Yoshiki 's pure heart and causes a storm that puts the plants at risk . Sailor Moon defeats the accompanying Daimon , U-Bara . 117 `` Heightened Hazard '' `` Higher and Stronger : A Cheer from Usagi '' `` Yori takaku yori tsuyoku ! Usagi no ōen '' ( より 高く より 強く ! うさぎ の 応援 ) Kunihiko Ikuhara Shigeru Yanagawa Minoru Ōkōchi Taichi Nakamura December 10 , 1994 July 19 , 2000 Hotaru wishes to give a letter to Shun Hayase , a famous athlete . He becomes targeted when she goes to give it to him , and she possessively blasts the enemy with a hugely strong amount of energy . She talks to Shun about being frail and weak , and he thanks her for talking to him . 118 `` It 's In The Cards '' `` The Battle Inside the Demonic Space : The Sailor Guardians ' Gamble '' `` Makū no tatakai ! Sērā Senshi no kake '' ( 魔 空 の 戦い ! セーラー 戦士 の 賭け ) Noriyo Sasaki Katsuyuki Sumisawa Kenichi Tajiri Masahide Yanagisawa December 17 , 1994 July 20 , 2000 Mimete attempts to create a Daimon by herself , throwing the entire Tomoe house into another dimension . The Guardians enter the dimension and are defeated by a game - master Daimon named U-Ikasaman . Hotaru manages to assist in her defeat by the use of a bluff . 119 `` Goodness Eclipsed '' `` The Messiah of Silence Awakens ? Stars of Destiny '' `` Chinmoku no Meshia kakusei ? Unmei no hoshiboshi '' ( 沈黙 の メシア の 覚せい ? 運命 の 星々 ) Harume Kosaka Yoji Enokido Kazuhisa Asai Shinya Hasegawa December 24 , 1994 September 13 , 2000 The Sailor Guardians visit a planetarium , where a man is attacked by a Daimon . The symbol of Saturn appears on Hotaru 's forehead , and she attacks the Daimon . However , Sailor Uranus , Neptune , and Pluto attack Hotaru , since she is both Sailor Saturn , the Sailor Guardian of Silence , Ruin and Birth , and also possessed by the Messiah of Silence . Super Sailor Moon takes the blow to protect Hotaru . 120 `` Next In Line '' `` An Invasion from an Another Dimension : Mystery of Infinity Academy '' `` Ijigen kara no shinryaku ! Mugen Gakuen no nazo '' ( 異 次元 から の 侵略 ! 無限 学園 の 謎 ) Kōnosuke Uda Megumi Sugihara Minoru Ōkōchi Katsumi Tamegai January 7 , 1995 July 21 , 2000 Chibiusa goes to Hotaru 's house to find that Hotaru has disappeared , and is devastated about it . At the same time , the Sailor Guardians investigate Infinity Academy , where Mimete tries one final time to defeat them before Tellu literally pulls the plug on her operation . 121 `` Fiendish Ferns '' `` A Bewitching Flower That Steals Hearts : Tellu , the Third Witch '' `` Kokoro wo ubau yōka ! Daisan no majō Teruru '' ( 心 を 奪う 妖花 ! 第 三 の 魔女 テルル ) Takuya Igarashi Shigeru Yanagawa Kazuyuki Hashimoto Taichi Nakamura January 14 , 1995 July 24 , 2000 Tellu develops a new plan to steal pure hearts , using a plant bred for that purpose . Setsuna realizes it is an alien plant made to steal pure hearts , and warns the Sailor Guardians . Tuxedo Mask causes a mutated plant to destroy Tellu , leading to them tracing her back to the mysterious Infinity Academy . 122 `` The Science Of Love '' `` Believe in Love : Ami , the Kindhearted Guardian '' `` Ai wo shinjite ! Ami , kokoro yasashiki Senshi '' ( 愛 を 信じ て ! 亜美 心 優しき 戦士 ) Yūji Endō Sukehiro Tomita Kenichi Tajiri Hideyuki Motohashi January 21 , 1995 July 25 , 2000 Ami investigates the Infinity Academy , where she meets Viluy , the fourth of the Witches 5 . Viluy attempts to use her nanorobots to steal pure hearts from entrance exam takers . But after her battle , her own microscopic robots turn against her , destroying her in the process . 123 `` Wake Up Call '' `` Shadows of Destruction : the Messiah of Silence Awakens '' `` Hametsu no kage ! Chinmoku no Meshia no mezame '' ( 破滅 の 影 ! 沈黙 の メシア の 目覚め ) Harume Kosaka Megumi Sugihara Minoru Ōkōchi Mari Tominaga January 28 , 1995 July 26 , 2000 The last of the Witches 5 , Cyprine steals pure hearts from Infinity Academy students , and the Sailor Guardians engage Cyprine , and her alter - ego , Ptilol , in a showdown . Meanwhile , Chibiusa is abducted by the recently resurrected Kaolinite , and her pure heart is stolen by Mistress 9 , having taken over Hotaru 's body , which allows her to awaken as the Messiah of Silence . 124 `` Who 's Really Who ? '' `` The Coming Terror of Darkness : Struggle of the Eight Guardians '' `` Semari kuru yami no kyōfu ! Kusen no Hassenshi '' ( 迫り 来る 闇 の 恐怖 ! 苦戦 の 8 戦士 ) Takuya Igarashi Yoji Enokido Kazuyuki Hashimoto Ikuko Itō February 4 , 1995 July 28 , 2000 Mistress 9 uses all remaining Daimon eggs to create a powerful energized shield of evil minions around Infinity Academy . Sailor Moon is abducted , as she is the holder of the Holy Grail . After witnessing Sailor Pluto ultimately sacrificing herself to save them by using her forbidden ability to stop time , Sailor Uranus and Sailor Neptune destroy Germatoid , the Daimon possessing Professor Souichi Tomoe with their talismans , the Deep Aqua Mirror and the Space Sword . 125 `` Darkness , My Old Friend '' `` The Shining Shooting Star : Saturn and the Messiah '' `` Kagayaku ryūsei ! Satān soshite kyūseishu '' ( 輝く 流星 ! サターン そして 救世主 ) Kōnosuke Uda Yoji Enokido Kenichi Tajiri Ikuko Itō February 11 , 1995 July 29 , 2000 Sailor Moon is tricked into giving Mistress 9 the Holy Grail , which she uses to summon Pharaoh 90 to Earth . Hotaru regains consciousness with the assistance of Sailor Moon and her father , destroying Mistress 9 and fully awakening the spirit of Sailor Saturn within herself at last . Sailor Saturn herself returns Chibiusa 's pure heart crystal , and then appears before Sailor Moon to ultimately sacrifice herself and destroy Pharaoh 90 once and for all with her destructive powers , but Sailor Moon gains the help of the other six Sailor Guardians to become Super Sailor Moon once more , and save both Hotaru and Sailor Saturn , who is reborn as a baby immediately afterward . 126 `` Second Chance '' `` A New Life : Parting of the Stars of Destiny '' `` Atarashiki seimei ! Unmei no hoshiboshi betsuri no toki '' ( 新しき 生命 ! 運命 の 星々 別離 の 時 ) Yūji Endō Megumi Sugihara Kazuhisa Asai Taichi Nakamura February 18 , 1995 July 30 , 2000 Haruka and Michiru give the newly reborn infant Hotaru to a still - healing Professor Souichi Tomoe , who is finally free of the Death Busters . However , they viciously attack Sailor Moon , for she protected Hotaru 's body and Sailor Saturn , and risked the whole entire world for one mere life . The Silver Crystal throws them back , and they kneel to her as their leader and leave the city . 127 `` Tough Kindness '' `` A Guardian 's Realization : Strength Lies Within a Pure Heart '' `` Senshi no Jikaku ! Tsuyosa wa Pyua na Kokoro no Naka ni '' ( 戦士 の 自覚 ! 強 さ は 純 な 心 の 中 に ) Harume Kosaka Sukehiro Tomita February 25 , 1995 August 1 , 2000 Chibiusa returns to the future after receiving a letter from her mother , Neo-Queen Serenity . Meanwhile , a final Daimon emerges from the rubble of Infinity Academy , and Chibiusa returns just in time to help defeat it .
+  Fact 0.101: Masanori already has a crush on Michiru, who is taking a class at that school as well.
+
+Retrieved items:
+<item 1>
+List of Sailor Moon S episodes
+Takeuchi has openly admitted they are a romantic couple , and their voice actresses were instructed to play the characters `` as if they are a married romantic
+couple . '' However , because of differing cultural standards , most countries outside Japan , excluding Greece , Germany , Sweden , Spain and Mexico , have
+censored the relationship . Alternatively , in the Cloverway / Optimum English - dubbed version , this subtext was made more taboo by way of portraying Neptune
+and Uranus as biological cousins who were involved in a romantic relationship with each other . The Studiopolis / Viz Media English - language ReDub preserves
+the subtext of the original material . In the 1995 favorite episode polls for Animage , `` Death of Uranus and Neptune ! ? Talismans Appear '' came in first
+place , `` The Bond of Destiny ! The Distant Days of Uranus '' came in eighth place , and `` The Labyrinth of Water ! Ami the Targeted '' came in ninth place .
+The following year , `` A Bright Shooting Star ! Saturn , and the Messiah '' came in fifteenth place .
+</item 1>
+
+<item 2>
+List of Sailor Moon S episodes
+Satān soshite kyūseishu '' ( 輝く 流星 ! サターン そして 救世主 ) Kōnosuke Uda Yoji Enokido Kenichi Tajiri Ikuko Itō February 11 , 1995 July 29 , 2000 Sailor Moon is tricked
+into giving Mistress 9 the Holy Grail , which she uses to summon Pharaoh 90 to Earth . Hotaru regains consciousness with the assistance of Sailor Moon and her
+father , destroying Mistress 9 and fully awakening the spirit of Sailor Saturn within herself at last . Sailor Saturn herself returns Chibiusa 's pure heart
+crystal , and then appears before Sailor Moon to ultimately sacrifice herself and destroy Pharaoh 90 once and for all with her destructive powers , but Sailor
+Moon gains the help of the other six Sailor Guardians to become Super Sailor Moon once more , and save both Hotaru and Sailor Saturn , who is reborn as a baby
+immediately afterward . 126 `` Second Chance '' `` A New Life : Parting of the Stars of Destiny '' `` Atarashiki seimei !
+</item 2>
+
+<item 3>
+List of Sailor Moon S episodes
+敵 味方 三つ巴 乱戦 ) Noriyo Sasaki Sukehiro Tomita Kenichi Tajiri Ikuko Itō April 30 , 1994 June 16 , 2000 Usagi 's friend , Unazuki , is attacked by a Daimon and has
+her pure heart crystal stolen . But when Sailor Moon tries to take the crystal back to Unazuki , Uranus and Neptune attempt to steal it in order to claim the
+Talisman . 95 `` Blinded By Love 's Light '' `` Let Moon Help With Your Love Problems '' `` Koi no otasuke wa Mūn ni omakase '' ( 恋 の おたすけ は ムーン に おまかせ ) Harume
+Kosaka Shigeru Yanagawa Yoshiyuki Shikano Mari Tominaga May 7 , 1994 June 19 , 2000 Naru and Umino enter an affection contest in order to prove their strong
+mutual romantic love for each other , but find themselves targeted by a Daimon .
+</item 3>
+
+<item 4>
+List of Sailor Moon S episodes
+Mūn nidan henshin '' ( 聖杯 の 神秘 な 力 ! ムーン 二 段 変身 ) Hiroki Shibata Sukehiro Tomita Kazuyuki Hashimoto Ikuko Itō October 22 , 1994 July 11 , 2000 Sailor Pluto
+appears and reawakens Sailors Uranus and Neptune , and the three talismans resonate with each other ( the third and last being Sailor Pluto 's Garnet Orb ) .
+The Holy Grail appears , and Sailor Moon grabs it and evolves into Super Sailor Moon , who drives Eudial out . Mimete then kills Eudial by sabotaging her car
+with snails . 112 `` Show Stoppers '' `` Who is the True Messiah ? Chaos of Light and Darkness '' `` Shin no kyūseishu wa dare ? Hikari to kage no kaosu '' ( 真
+の 救世主 は 誰 ?
+</item 4>
+
+<item 5>
+List of Sailor Moon S episodes
+124 `` Who 's Really Who ? '' `` The Coming Terror of Darkness : Struggle of the Eight Guardians '' `` Semari kuru yami no kyōfu ! Kusen no Hassenshi '' ( 迫り 来る
+闇 の 恐怖 ! 苦戦 の 8 戦士 ) Takuya Igarashi Yoji Enokido Kazuyuki Hashimoto Ikuko Itō February 4 , 1995 July 28 , 2000 Mistress 9 uses all remaining Daimon eggs to
+create a powerful energized shield of evil minions around Infinity Academy . Sailor Moon is abducted , as she is the holder of the Holy Grail . After witnessing
+Sailor Pluto ultimately sacrificing herself to save them by using her forbidden ability to stop time , Sailor Uranus and Sailor Neptune destroy Germatoid , the
+Daimon possessing Professor Souichi Tomoe with their talismans , the Deep Aqua Mirror and the Space Sword . 125 `` Darkness , My Old Friend '' `` The Shining
+Shooting Star : Saturn and the Messiah '' `` Kagayaku ryūsei !
+</item 5>
+
+<item 6>
+List of Sailor Moon S episodes
+タリスマン 出現 ) Kunihiko Ikuhara Yoji Enokido Kenichi Tajiri Mari Tominaga October 15 , 1994 July 10 , 2000 Faced with losing her position at Witches 5 , Eudial
+creates a computer program to find the true owners of the three Talismans , and learns that Haruka and Michiru are the ones who hold two of the Talismans within
+their own hearts ! They take away Usagi 's brooch , and follow Eudial onto a lonely island . However , the invitation turns out to be a trick , and Michiru 's
+pure heart is taken , which turns into the mystical Deep Aqua Mirror . Haruka , in order to release her own talisman , shoots herself with Eudial 's gun . Her
+pure heart transforms into the mystical Space Sword . 111 `` The Purity Chalice '' `` The Holy Grail 's Mystical Power : Moon 's Double Transformation '' ``
+Seihai no shinpi na chikara !
+</item 6>
+
+<item 7>
+List of Sailor Moon S episodes
+明か され た 互い の 正体 ) Junichi Sato Sukehiro Tomita Yoshiyuki Shikano Kazuya Kuroda September 24 , 1994 July 7 , 2000 Minako becomes jealous that a Daimon has not
+yet attacked her , and she fears that she does not have a pure heart . After doing as many `` pure '' things as she can , she is attacked , and her pure heart
+is taken from her . When Eudial nearly gets away , Usagi is forced to reveal her identity to Haruka & Michiru , who in turn , reveal their identities as Sailors
+Uranus and Neptune to Sailor Moon . 110 `` Destiny 's Arrival '' `` The Death of Uranus and Neptune : The Talisman Appear '' `` Uranusu - tachi no shi ?
+Tarisuman shutsugen '' ( ウラヌス 達 の 死 ?
+</item 7>
+
+<item 8>
+List of Sailor Moon S episodes
+He becomes targeted when she goes to give it to him , and she possessively blasts the enemy with a hugely strong amount of energy . She talks to Shun about
+being frail and weak , and he thanks her for talking to him . 118 `` It 's In The Cards '' `` The Battle Inside the Demonic Space : The Sailor Guardians '
+Gamble '' `` Makū no tatakai ! Sērā Senshi no kake '' ( 魔 空 の 戦い ! セーラー 戦士 の 賭け ) Noriyo Sasaki Katsuyuki Sumisawa Kenichi Tajiri Masahide Yanagisawa December
+17 , 1994 July 20 , 2000 Mimete attempts to create a Daimon by herself , throwing the entire Tomoe house into another dimension . The Guardians enter the
+dimension and are defeated by a game - master Daimon named U-Ikasaman . Hotaru manages to assist in her defeat by the use of a bluff . 119 `` Goodness Eclipsed
+'' `` The Messiah of Silence Awakens ?
+</item 8>
+
+<item 9>
+List of Sailor Moon S episodes
+美 少女 ほたる の 秘密 ) Kōnosuke Uda Megumi Sugihara Kenichi Tajiri Taichi Nakamura November 12 , 1994 July 13 , 2000 The three Outer Guardians appear to Tuxedo Mask ,
+and tell him why they can not fight alongside Sailor Moon and the other four Sailor Guardians . Usagi and Chibiusa visit Hotaru , and see a woman who looks like
+Kaolinite . The Messiah of Silence appears demanding pure hearts . 114 `` Mimet 's Mess '' `` I Love Idols : Mimete 's Dilemma '' `` Aidoru daisuki ! Nayameru
+Mimetto '' ( アイドル 大好き ! 悩め る ミメット ) Harume Kosaka Yoji Enokido Yoshiyuki Shikano Masahiro Andō November 19 , 1994 July 14 , 2000 Minako and Mimete enter a
+beauty contest at the same time , with Mimete willing to risk it all to obtain victory .
+</item 9>
+
+<item 10>
+List of Sailor Moon S episodes
+Meanwhile , Tuxedo Mask and Usagi hold hands after the latter 's refusal to escape , and through the power of their love , Usagi 's disabled Crystal Star brooch
+transforms into the Cosmic Heart Compact , and she gains the Spiral Heart Moon Rod and , along with it , the ability to transform and defeat the new enemy . 92
+`` Driving Dangerously '' `` A Handsome Boy ? Haruka Tenoh 's Secret '' `` Suteki na bishōnen ? Ten'ō Haruka no himitsu '' ( 素敵 な 美少年 ? 天王 はるか の 秘密 ) Kunihiko
+Ikuhara Katsuyuki Sumisawa Kazuhisa Asai Hisashi Kagawa April 16 , 1994 June 14 , 2000 Avoiding their study group , Usagi and Minako meet Haruka Tenou , an
+attractive and supposedly male student of a prestigious local school , with whom they both become infatuated .
+</item 10>
+=== END ITEM id=a183-db798ab094066a4d ===
+
+=== ITEM id=a169-574b58b5f504c485 ===
+Gold sentences and facts:
+Sentence 0: `` The Glory of Love '' is a song written by Billy Hill , recorded by Benny Goodman in 1936 , whose version was a number one pop hit . In 1951 , R&B vocal group , The Five Keys , had their biggest R&B hit with their version of the song , hitting number one on the R&B chart for four non-consecutive weeks . Although The Five Keys recording sold a reported million copies pressed recordings are very rare .
+  Fact 0.7: Pressed recordings of The Five Keys' version are very rare.
+
+Retrieved items:
+<item 1>
+The Glory of Love (song)
+Although The Five Keys recording sold a reported million copies pressed recordings are very rare . Contents ( hide ) 1 Charts 1.1 Weekly charts 2 Otis Redding
+version 3 Charts 3.1 Weekly charts 4 References Charts ( edit ) Weekly charts ( edit ) Chart ( 1951 ) Peak position US Billboard Hot Rhythm & Blues Songs Otis
+Redding version ( edit ) `` The Glory of Love '' Single by Otis Redding from the album The Dock of the Bay B - side `` I 'm Coming Home '' Released 1967 Format
+7 '' vinyl Recorded December , 1967 Genre Soul , Pop Length 2 : 38 Label Volt S419 Songwriter ( s ) Billy Hill Producer ( s ) Steve Cropper Otis Redding singles
+chronology `` Shake '' ( 1967 ) `` The Glory of Love '' ( 1967 ) `` Tramp '' ( 1967 ) `` Shake '' ( 1967 ) `` The Glory of Love '' ( 1967 ) `` Tramp '' ( 1967 )
+In 1967 , Otis Redding recorded a cover version for his 1968 album , The Dock of the Bay .
+</item 1>
+
+<item 2>
+God Save the Queen
+78 ( 1842 ) . Gaetano Donizetti used this anthem in his opera `` Roberto Devereux '' . Joachim Raff used this anthem in his Jubelouverture , Opus 103 ( 1864 )
+dedicated to Adolf , Herzog von Nassau , on the 25th anniversary of his reign . Gioachino Rossini used this anthem in the last scene of his `` Il viaggio a
+Reims '' , when all the characters , coming from many different European countries , sing a song which recalls their own homeland . Lord Sidney , bass , sings
+`` Della real pianta '' on the notes of `` God Save the King '' . Samuel Ramey used to interpolate a spectacular virtuoso cadenza at the end of the song .
+Fernando Sor used the anthem in his 12 Studies , Op. 6 : No. 10 in C Major in the section marked ' Maestoso . ' Arthur Sullivan quotes the anthem at the end of
+his ballet Victoria and Merrie England .
+</item 2>
+
+<item 3>
+The Glory of Love (song)
+Redding 's cover became a top 20 hit and reached number nineteen on the Billboard R&B Songs chart and number sixty on the Billboard Hot 100 . Charts ( edit )
+Weekly charts ( edit ) Chart ( 1967 ) Peak position US Billboard Hot 100 60 US Billboard Hot Rhythm & Blues Songs 19 References ( edit ) Jump up ^ Whitburn ,
+Joel ( 2004 ) . Top R&B / Hip - Hop Singles : 1942 - 2004 . Record Research . p. 205 . Jump up ^ Propes , Steve ( 1973 ) . Those Oldies But Goodies : A Guide to
+50 's Record Collecting . The Macmillan Company , New York . p. 42 . Jump up ^ Whitburn , Joel ( 2004 ) . Top R&B / Hip - Hop Singles : 1942 - 2004 . Record
+Research . p. 486 . Jump up ^ `` allmusic ( ( ( Otis Redding > Awards ) ) ) '' . Billboard . Retrieved 2012 - 11 - 22 .
+</item 3>
+
+<item 4>
+Let My Love Open the Door
+Billboard Hot 100 59 U.S. Cashbox 92 Personnel ( edit ) Pete Townshend : vocals , guitars , synths John `` Rabbit '' Bundrick : `` straight '' keyboards Simon
+Phillips : drums Tony Butler : bass guitar Ted Jensen - mastering engineer Covers ( edit ) A version of this song by Luminate appears on The Covers EP . It was
+also covered by M. Ward ( for the 2005 Starbucks compilation album , Sweetheart 2005 : Love Songs ) Christian rock group Audio Adrenaline covered this song on
+their 1999 album Underdog . Natalie Imbruglia covered the song on her album Male released in 2015 . Great Big Sea covered the song on their 2012 album XX .
+Roger Daltrey covered the song in 2015 for a campaign involving Teen Cancer America and First Citizens Bank . A full version was released in February 2016 ,
+with all proceeds going to Teen Cancer America . The group Rogue Wave also covered it in `` Cover me '' released in 2017 .
+</item 4>
+
+<item 5>
+The Day the Music Died
+ISBN 978 - 0 - 89672 - 365 - 8 . Crouse , Richard ( 2012 ) . Who Wrote The Book of Love ? . Random House Digital . ISBN 978 - 0 - 385 - 67442 - 3 . Everitt ,
+Rich ( 2004 ) . Falling Stars : Air Crashes That Filled Rock and Roll Heaven . Harbor House . ISBN 978 - 1 - 891799 - 04 - 4 . McDonald , Les ( 2010 ) . The Day
+the Music Died . Xlibris Corporation . ISBN 978 - 1 - 4691 - 1356 - 2 . Jennings , Waylon ; Kaye , Lenny ( 1996 ) . Waylon : An Autobiography . Warner Books .
+ISBN 978 - 0 - 446 - 51865 - 9 . Schuck , Raymond ( 2012 ) . Do You Believe in Rock and Roll ? Essays on Don Mclean 's American Pie . McFarland .
+</item 5>
+
+<item 6>
+The Glory of Love (song)
+In 1951 , R&B vocal group , The Five Keys , had their biggest R&B hit with their version of the song , hitting number one on the R&B chart for four
+non-consecutive weeks . Although The Five Keys recording sold a reported million copies pressed recordings are very rare .
+</item 6>
+
+<item 7>
+The Glory of Love (song)
+The Glory of Love ( song ) - wikipedia The Glory of Love ( song ) Jump to : navigation , search This article needs additional citations for verification .
+Please help improve this article by adding citations to reliable sources . Unsourced material may be challenged and removed . ( December 2015 ) ( Learn how and
+when to remove this template message ) For the song by Peter Cetera , see Glory of Love . `` The Glory of Love '' Single by Benny Goodman Released 1936 Format
+78 rpm vinyl Recorded 1936 Genre Pop Songwriter ( s ) Billy Hill Benny Goodman singles chronology `` The Glory of Love ' '' ( 1936 ) The Glory of Love'1936 The
+Five Keys singles chronology `` The Glory of Love ' '' ( 1951 ) The Glory of Love'1951 `` Yes Sir , That 's My Baby '' ( 1952 ) Yes Sir , That 's My Baby1952 ``
+The Glory of Love '' is a song written by Billy Hill , recorded by Benny Goodman in 1936 , whose version was a number one pop hit .
+</item 7>
+
+<item 8>
+The Glory of Love (song)
+Billboard . Retrieved 2012 - 11 - 22 . Jump up ^ `` Billboard R&B Singles Chart '' . Billboard . Retrieved 2016 - 01 - 27 . Preceded by `` Sixty Minute Man ''
+by The Dominoes Billboard Best Selling Retail Rhythm & Blues Records number - one single ( The Five Keys version ) September 22 , 1951 Succeeded by `` Sixty
+Minute Man '' by The Dominoes Retrieved from `` https://en.wikipedia.org/w/index.php?title=The_Glory_of_Love_(song)&oldid=814898703 '' Categories : 1936 songs
+1951 singles Benny Goodman songs Otis Redding songs Songs written by Billy Hill ( songwriter ) Billboard Hot R&B / Hip - Hop Songs number - one singles Paul
+McCartney songs Hidden categories : Articles needing additional references from December 2015 All articles needing additional references Music infoboxes with
+deprecated parameters Articles with hAudio microformats Talk Contents About Wikipedia Norsk Edit links This page was last edited on 11 December 2017 , at 15 :
+51 . About Wikipedia
+</item 8>
+
+<item 9>
+God Save the Queen
+Some of these are : The French Marquise de Créquy wrote in her Souvenirs that the words `` Grand Dieu , sauvez le Roi ! '' were indeed composed by Jean -
+Baptiste Lully in gratitude for the survival by Louis XIV of an anal fistula operation . ( The surgical knife purpose - made for the occasion is on display in
+the Musée d'histoire de la médecine . ) Allegedly , Lully had set words by Marie de Brinon to music , and Créquy claimed that the tune was later plagiarised by
+Handel , and so adopted by the British as `` un de leurs air nationaux '' . ( The entire story might have been intended as a joke . ) Translated into Latin
+under the title Domine , Salvum Fac Regem , it became the French anthem until 1792 . After the Battle of Culloden , the Hanover dynasty supposedly adopted this
+melody as the British anthem . James Oswald was a possible author of the Thesaurus Musicus , so may have played a part in the history of the song , but is not a
+strong enough candidate to be cited as the composer of the tune .
+</item 9>
+
+<item 10>
+Let My Love Open the Door
+Imdb.com. 2017 - 05 - 12 . Retrieved 2018 - 03 - 30 . External links ( edit ) Lyrics of this song at MetroLyrics ( hide ) Pete Townshend Discography Studio
+albums Who Came First Rough Mix ( w / Ronnie Lane ) Empty Glass All the Best Cowboys Have Chinese Eyes White City : A Novel The Iron Man : A Musical
+Psychoderelict Classic Quadrophenia Meher Baba tribute albums ( w / Ronnie Lane et al . ) Happy Birthday I Am With Love O ' Parvardigar Live albums Deep End
+Live !
+</item 10>
+=== END ITEM id=a169-574b58b5f504c485 ===
+
+=== ITEM id=a197-c90252338c16c857 ===
+Gold sentences and facts:
+Sentence 0: Wizards of Waverly Place Season 4 episodes No . overall No. in season Title Directed by Written by Original air date Prod . code U.S. viewers ( millions ) 80 `` Alex Tells the World '' Victor Gonzalez Gigi McCreery & Perry Rein November 12 , 2010 ( 2010 - 11 - 12 ) 401 4.1 The Russos and Mason finally make it back home , but their wizard powers are still gone . While the family wants to stay quiet , Alex believes that they should take action , so she reveals that they are wizards to reporters and tells them that a group of wizards are being held captive by the government . As she urges them to spread the word , Professor Crumbs appears and tells her that everything that had happened was a test that she failed miserably and orders her to Wizard Court for exposing wizardry to the world . Justin is also ordered to attend because he exposed magic to Agent Lamwood , who was a creation from Professor Crumbs ' mind . The judges rule Alex and Justin guilty , and Professor Crumbs sentences them both to be demoted to level one in the Family Wizard Competition , making them behind Max by two levels . Meanwhile , Max sets up traps in the Sub Station for the `` government '' , but ends up falling for one of them . Special guest star : Gregg Sulkin as Mason Guest star : Ian Abercrombie as Professor Crumbs 81 `` Alex Gives Up '' Victor Gonzalez Todd J. Greenwald November 27 , 2010 ( 2010 - 11 - 27 ) 402 N / A Alex decides to give up the wizard competition to spend more time with Mason and thinks that it does not matter since Max is all the way in the lead , but Chancellor Tootietootie tells Alex that non-wizards and werewolves can not date , because the werewolf always eats the human . Max 's picture on the front of Future Wizards magazine attracts the daughter of a family of Cucuys ( mythical Latino monster ) and they invite him to a dinner party on their yacht . Alex comes up with a scheme to invite Chancellor Tootietootie to the Cucuy party in hopes of getting him to appeal the law against werewolves and mortals dating . Lisa Cucuy finds out that Mason is a werewolf and decides that she wants him instead of Max . Alex gets jealous when Lisa flirts with Mason , so Alex says embarrassing things about Mason to everyone on the yacht so that he will be mad enough to turn into a werewolf . Carlos and Julie Cucuy jump off the boat as Cucuys are scared of werewolves . Jerry jumps off after them . Alex tells Lisa that she can get off the boat the easy way or her way . Once Lisa jumps off the boat , Chancellor Tootietootie says that their case will not be appealed as by Mason turning into a werewolf proved his point that they are dangerous . In the end , Alex and Mason have to break up to be friends and Harper finishes writing her first novel based on the werewolf - wizard relationship . Jerry tries to get Harper to help him out of the water but accidentally grabs her just finished novel , which causes him to fall back into the water . Meanwhile , Justin tutors a class of delinquent wizards in an attempt to gain a level to re-enter the Wizard Competition . Special guest star : Gregg Sulkin as Mason Guest stars : Andy Kindler as Chancellor Tootietootie , Frank Pacheco as Felix , David Barrera as Carlos Cucuy , Roxana Brusso as Julie Cucuy , Samantha Boscarino as Lisa Cucuy , Kari Wahlgren as Helen 82 `` Lucky Charmed '' Victor Gonzalez Justin Varava December 10 , 2010 ( 2010 - 12 - 10 ) 403 3.0 Harper tries teaching Alex how to live without magic , but the strain of taking responsibility for her actions instead of using magic causes a disagreement between the two best friends when Alex gets in big trouble for crashing Mr. Laritate 's car . As punishment , Alex has to clean the school 's garbage cans . Mr. Laritate forgives Alex after seeing how the crash influenced her , and Alex realizes that she will be okay without magic . Wanting to thank Harper , Alex uses Mr. Laritate 's lucky life - saving hula girl figurine , Leilani , for luck , as Mr. Laritate does . During Harper 's driving test , Alex turns into the hula girl and guides Harper through the test , knowing that she might fail . In the end , Harper passes her test . Meanwhile , Jerry wants to pass on the wizard family robe to Max , but Justin has a hard time letting go of it . Guest stars : Bill Chott as Mr. Laritate , Julio Oscar Mechoso as DMV Instructor Absent : Maria Canals Barrera as Theresa Russo 83 `` Journey to the Center of Mason '' Robbie Countryman Peter Dirksen December 17 , 2010 ( 2010 - 12 - 17 ) 404 N / A After she finds out that she will lose her powers , Alex can no longer date Mason , so they decide to try being best friends instead . After watching a film at the theaters , Harper , Alex , and Mason go home , Dean , who was Alex 's Ex-Boyfriend comes and asks Alex to get back together with him . Mason gets jealous . When Dean brings a gift for Alex , Mason then asks what Alex 's relationship is with Dean , and Max tells him that Dean and Alex used to date , making Mason more jealous . Mason then turns into a werewolf and eats Dean . Alex , Justin , and Max come up with a solution to turn Justin 's toy Captain Jim Bob submarine big and go in it . They then shrink it and go into Mason 's mouth . While there , Alex , Max , and Justin see Mason 's thoughts , which are all of Alex . They get Dean out , and Alex , when Harper , Max , and Justin leave , Alex tells Dean that he was knocked out and the doctor 's solution was for them all to dress up as cows . Dean then gives her his offer once again : he wants to get back with her . Alex tells him ' no ' , and then gets back together with Mason , with deciding to get back to the Wizard Competition . Special guest star : Gregg Sulkin as Mason Guest stars : Daniel Samonas as Dean , Frank Pacheco as Felix , Shoshana Bush as Tyler 84 5 `` Three Maxes and a Little Lady '' Victor Gonzalez Richard Goodman January 7 , 2011 ( 2011 - 01 - 07 ) 405 4.0 Alex joins Justin 's wizard class to try to move up in the competition . Max joins a sophisticated wizard society . They suggest he move the wizard competition up and he moves it to a few days away . Max quits the society because he finds out that they are taking advantage of him . Alex and Justin transform into Max in an attempt to change the date of the family wizard competition back to its original date and succeed . In the end of the episode they accidentally turn Max indefinitely into a little girl . Guest stars : Bailee Madison as Maxine , Frank Pacheco as Felix , Kari Wahlgren as Helen , Shane Harper as Fidel Note : Bailee Madison begins her recurring role as Maxine , the female Max in this episode . Jake T. Austin was absent in four other episodes and returns at the end of the tenth episode `` Back to Max '' . 85 6 `` Daddy 's Little Girl '' Robbie Countryman Gigi McCreery & Perry Rein January 21 , 2011 ( 2011 - 01 - 21 ) 406 3.4 With Max still a little girl , their parents pay more attention to Max ( Maxine ) , and Alex becomes jealous . Justin takes Maxine to her ( Max 's ) karate class and Maxine kicks Justin 's butt . After the class , Alex decides to make Jerry 's favorite sandwich in order to win his love back , but Maxine comes along with Justin , announcing that she beat Justin in karate , and Jerry immediately falls for her cuteness again . More jealous than ever , Alex comes back with Justin to Maxine 's karate class with their parents , having a slight idea of knowing how to change Maxine back to Max . They cast spells on Maxine , Justin using the spell he used on Max that turned him into Maxine , and Alex using the reverse spell . Unfortunately , it only makes Maxine cuter , which makes her furious . Instead of going against the person she was supposed to , she demands that she kicks either Alex or Justin 's butt . Justin goes against her , but seeing that he would lose , Alex casts a spell on Justin to make him a karate master . Too fast for Maxine , Justin beats her , and Maxine is hurt ( physically ) . Jerry and Theresa rush to her side , caring for Maxine more than they care that Justin beat Maxine in karate . Justin leaves , and Alex leaves after him , heartbroken . Back at home , Jerry tells Alex that he fell for Maxine because she reminded him of Alex when she was little and they bond again . Meanwhile , Zeke thinks the Russos hate him , but really it was just Harper 's alibi in order to keep him away from the Sub Station so as not to make him suspicious about Max 's disappearance and Maxine 's appearance . Guest stars : Bailee Madison as Maxine , Dan Benson as Zeke , Lanny Joon as Sensei Absent : Jake T. Austin as Max Russo 86 7 `` Everything 's Rosie for Justin '' Victor Gonzalez Justin Varava February 4 , 2011 ( 2011 - 02 - 04 ) 407 3.9 Justin and his delinquent class have a wizard wand dance assessment to do which will get them back in Wiztech . A new student named Rosie joins , whom Justin falls madly in love with to later find out that she is an Angel . Meanwhile , Jerry , Teresa , and Harper try to think of ideas of how to get more people to come to their restaurant . Harper makes cards which customers get hole punched each time they buy a sandwich ; when you get 9 hole punches , they get a free sandwich . Contrary to the original purpose , one man punches his own card , demands a free sandwich , and then brings dozens of people into the restaurant , who also have pre-punched cards . Maxine uses her charming cuteness to convince the customers to not exploit her parents . Meanwhile , Justin kicks Rosie out of his class so that it does not fail the wizard dance assessment . Sympathizing , Alex gets Rosie to rejoin the class and puts a copycat spell on her so that Rosie can mimic Alex 's move and pass the class . The assessment ends in disaster when a squirrel - frog attaches itself to Alex 's foot , and Rosie reveals herself to be an angel . The class fails , but Justin starts dating Rosie . Guest stars : Bailee Madison as Maxine , Frank Pacheco as Felix , Leven Rambin as Rosie , Diane Delano as Penny , Chris Coppola as Customer , Cameron Sanders as Nelvis Absent : Jake T. Austin as Max Russo 87 8 `` Dancing with Angels '' Victor Gonzalez Richard Goodman February 11 , 2011 ( 2011 - 02 - 11 ) 408 4.5 Justin and Rosie start dating but when their date gets ruined , they want a second date . Alex suggests an Angel Club in Los Angeles , but Rosie says that only Angels are allowed . Maxine will not tell their parents as long as Alex brings her back an Ozzy Osbourne stone . After Justin , Harper and Alex sneak in along with Rosie , Zeedrik asks them if they are angels and they say they are . Back at the sub shop , Theresa and Jerry question Maxine to find out where Justin , Alex and Harper are , and Maxine does not say , so they force her to join a Pageant in order for her to tell them where they are . Things get bad at the angel club when Alex and Harper can not fly , until Justin secretly pulls out his wand and gives Harper flying powers . Zeedrik still questions them by giving them a test to sing while playing the harp . Though Alex , Justin , and Harper fail to do so , they are accepted as `` angels '' until the key - chain of Ozzy Osbourne 's star reverts to normal . Zeedrik believes they are really angels of darkness , causing everyone in the club to run off , even Rosie . Rosie comes back at the end of the episode to comfort Justin , but when they both look over the city , Rosie 's wings are shown to be black , the color of an angel of darkness ' wings , but Justin does not see because he is looking forward . Meanwhile , Maxine ends up winning the beauty pageant , making Jerry and Theresa celebrate . Guest stars : Bailee Madison as Maxine , Leven Rambin as Rosie , Ransford Doherty as Zeedrik Absent : Jake T. Austin as Max Russo 88 9 `` Wizards vs. Angels '' Victor Gonzalez Vince Cheung & Ben Montanio February 18 , 2011 ( 2011 - 02 - 18 ) 409 -- 410 5.1 Rosie is an Angel of Darkness , and has been tricking Justin all along to make him evil . Alex finds out , with the help of Tina ( a guardian angel in training trying to earn her wings ) that Rosie is an Angel of Darkness . Justin crosses over to the dark side with Rosie , steals the `` moral compass '' , and gives it to Gorog , so Gorog can turn the compass from good to bad , so that the world will be covered in darkness and every human being will be corrupted . Rosie tries to get Justin to run away and save him , because Gorog wants to destroy him , but Justin refuses to leave , stating that he is no longer a wizard but an Angel of Darkness and breaks his wand in halves . Alex tries to convince Justin that he is a wizard , a good wizard and not an Angel of Darkness . Meanwhile , Maxine is enrolled in Tribeca Prep , since she is participating in a `` cousin exchange program . '' After her first day of school , Maxine laments that she has no friends , which leads Harper to insist Maxine have a slumber party ( which is really what Harper wants because she has never had a slumber party ) , that eventually becomes a disaster . Tina reveals that Rosie was a good angel , and her teacher however , Gorog reached her before her transport arrived and corrupted her . Alex and Tina go to the Dark Realm to save Justin . Alex borrows a pair of wings from the guardian angels . Alex takes the Moral Compass and tries to turn it to good but Justin stops her and then Rosie used her good angel side and they fly up and when they land , Justin turns the compass to good . Tina and Alex take it and run . When Rosie and Justin kiss , Rosie turns into a good angel ( with white wings ) , and Justin loses the dark wings . Guest stars : Bill Chott as Mr. Laritate , Bailee Madison as Maxine , Leven Rambin as Rosie , John Rubinstein as Gorog , China McClain as Tina , Amy Tolsky as Florence Note : This is a one - hour special . Absent : Jake T. Austin as Max Russo 89 10 `` Back To Max '' Guy Distad Todd J. Greenwald March 11 , 2011 ( 2011 - 03 - 11 ) 411 3.7 Justin invites Professor Crumbs to check on his delinquent wizards class , to see how their wizard training is progressing . During the conversation , Maxine interrupts , causing Alex and Justin to panic since they do not know how to explain `` Maxine '' , and they try to find a way to turn Maxine back to Max . Meanwhile , Harper takes a role in the school 's `` Spirit of America '' play , only to be replaced by Maxine . Guest stars : Bill Chott as Mr. Laritate , Ian Abercrombie as Professor Crumbs , Bailee Madison as Maxine , Cameron Sanders as Nelvis , LJ Benet as Little Crumbs , Jackie Evancho as Choir Girl Note : Jake T. Austin returns as Max near the end of the episode . Bailee Madison marks her final appearance as Maxine in this episode . 90 11 `` Zeke Finds Out '' David DeLuise Peter Dirksen April 8 , 2011 ( 2011 - 04 - 08 ) 412 3.0 When Alex gets bored of Zeke 's failing magic tricks , she decides to use magic to make Zeke 's tricks come true . Everything goes downhill when Zeke tells Harper he believes he is a wizard and is now booking a magic act at the sub station for a kid 's birthday party . Since Justin and Harper are tired of Alex ruining things all the time , they decide to leave everything up to her . Harper , not wanting to let Zeke make a fool of himself , tells Alex to tell Zeke the truth about wizards , but she is reluctant to , as exposing wizardry to another mortal could get her kicked out of the wizard competition forever if anyone finds out . Zeke goes on with his belief that he is a `` wizard '' , but he finds out Harper is keeping a secret from him so he breaks up with her . Alex realizes what a mess she created and on the day of Zeke 's magic act , she makes Harper disappear before she can expose wizardry to Zeke , which freaks him out . The Russos really are in deep waters when Zeke is going to saw Max in half with a real saw for his next act , so Justin takes matters into his own hands and freezes everyone except for himself and Zeke . Justin tells Zeke that he is a wizard , not Zeke , and that he did everything . Still not believing him , he flashes Zeke into their lair and unveils the secret to him . They go back outside and tell Harper and Alex who are fighting , that Zeke now knows about the existence of wizards , but he promises he will never tell anyone . Zeke and Harper reconcile their relationship and Alex and Harper apologize and make up with each other . Guest stars : Dan Benson as Zeke , Maurice G. Smith as Big Mitch Absent : Maria Canals Barrera as Theresa Russo , David DeLuise as Jerry Russo 91 12 `` Magic Unmasked '' David DeLuise Justin Varava May 13 , 2011 ( 2011 - 05 - 13 ) 413 2.7 When a former legendary Luchador `` Muy Macho '' visits the Sub Station , Alex finds out that she was the reason why he quit lucha libre ( wrestling ) , so she tries to make it up to him by arranging a lucha libre match with him and Jerry to restore his honor . Meanwhile , Zeke asks too many questions about wizardry , so Justin offers to grant him one magical wish if he promised he would stop questioning him about magic . Unfortunately , Zeke 's wish is to defeat Muy Macho in the match . Max pretends to like Talia 's hobbies , but does not enjoy them . Guest stars : Dan Benson as Zeke , Valente Rodriguez as Muy Macho , McKaley Miller as Talia 92 13 `` Meet the Werewolves '' Victor Gonzalez David Henrie June 17 , 2011 ( 2011 - 06 - 17 ) 415 4.0 When Alex asks Mason if she can meet his parents , Mason shows his fake parents and she finds out soon after . She gets upset at Mason and demands him to take her to his real parents . Mason takes her to the Autumn Moon Feast ( werewolf holiday ) to meet his parents . Soon after that Alex finds out he told his parents that she is a werewolf and is frustrated . She uses a spell to change herself and Harper into werewolves . She tries to be the worst werewolf possible in front of Mason 's parents during the feast . In the end Mason 's parents like her as a werewolf and she says to him that they do not know the real her . She begins to leave and he says that he truly loves Alex to his parents and that she is a wizard . She changes back to a wizard and Mason turns back to human form . After the parents find out they try to eat her and Mason and Alex make a near escape . Meanwhile Max makes his parents ' food taste like kid food in order to make it taste good . Afterwards Jerry and Theresa eat it , and as a result they act like little kids . Justin thinks he will have to fix it but Max comments on how he does not need help , as he will be the future family wizard . Max uses another spell on cookies to make them older , but they turn into teenagers . Finally , Justin uses a spell on a pizza to turn them back into their regular selves . Special guest star : Gregg Sulkin as Mason Guest stars : Harry Van Gorkum as Grant Greybeck , Robin Riker as Linda Greybeck , Marianne Muellerleile as Molly , Eric Zuckerman as Bill 93 14 `` Beast Tamer '' Victor Gonzalez Gigi McCreery & Perry Rein June 24 , 2011 ( 2011 - 06 - 24 ) 416 4.0 When Alex , Justin and Max win four tickets to the `` Beast Bowl '' , the tickets are delivered by Beast Tamer Chase Riprock , who begins flirting with Alex and invites the group for a pre-bowl tour . Alex invites Mason to go with them but he says he can not . During the tour , despite Chase 's warnings , Justin attempts to tame the beast so that Max can have his photo taken with the beast , but both are caught and banned from the event . Chase tries to kiss Alex but she rejects him and returns to the mortal world where she finds Mason coming out a hardware store . Mason is evasive about his plans , which involve making an anniversary present for Alex , so Alex returns to the Beast Bowl. Harper tells Mason that Chase likes Alex and urges him to surprise her with the gift at the Beast Bowl . Meanwhile , Justin and Max return to the Beast Bowl disguised as beast taming clowns where they allow the beast to escape and snatch Alex who throws the whip to Chase . Chase tames the beast who drops Alex and Mason is able to reveal his gift , which is a sculpture of himself and Alex. Alex and Mason leave together , with the sculpture . Special guest star : Gregg Sulkin as Mason Guest star : Nick Roux as Chase Absent : Maria Canals Barrera as Theresa Russo , David DeLuise as Jerry Russo 94 15 `` Wizard of the Year '' Victor Gonzalez Richard Goodman July 8 , 2011 ( 2011 - 07 - 08 ) 417 3.6 Alex has been crowned Wizard of the Year after saving the world from dark angels , as well as being reinstated in the Wizard Competition , and a banquet honoring her achievement is hosted . With paparazzi in tow , Chase Riprock visits the lair to congratulate Alex . As he leaves , Keith Keith hounds them about being in a romantic relationship , to which Alex states she already has a boyfriend . Later , Mason and Alex watch his gossip segment , and to their horror , Keith Keith confirms that Chase and Alex are dating . For Alex winning Wizard of the Year , the Russo family must record a holographic video congratulating Alex . However , much to Justin 's displeasure , Justin 's video instead only contains him complaining about Alex . The night of the awards banquet , Mason stands Alex up , leaving her devastated . At the banquet , Chancellor TootieTootie tells Justin that his display of affection and pride for Alex may reinstate him into the competition , causing Justin to be frantic and do everything within his power to destroy the tape . Chase purposely invites himself to sit at the Russo 's table . However , Mason shows up late and sees Alex and Chase flirting together . A short battle ensues between Mason and Chase . Alex soon breaks up the fight , and is forced to choose either Mason or Chase . Appalled by both of their behaviors that evening , Alex chooses neither and breaks up with Mason . Special guest star : Gregg Sulkin as Mason Guest stars : Andy Kindler as Chancellor Tootietootie , Nick Roux as Chase , Justin Guarini as Keith Keith 95 16 `` Misfortune at the Beach '' Jody Margolin Hahn Vince Cheung & Ben Montanio July 24 , 2011 ( 2011 - 07 - 24 ) 420 3.5 The Russos head to the beach on an extremely hot day , and Harper hopes to enjoy reading her book while at the beach . The Russos come across Zelzar , a fortune - telling machine . Jerry warns the kids about Zelzar -- he is from the wizard world , and a wizard 's fortune really comes true . After Max and Justin receive good fortunes , Alex decides to get a fortune despite her father 's warning . However , her fortune says , `` Say good - bye to your life . '' Alex thinks nothing of it and proceeds to enjoy the day at the beach , but comes close to life - threatening situations multiple times . Alex , Justin , Max , and Harper make a compromise with Zelzar -- if they can extract him from the machine and let him enjoy a day at the beach , he will take back Alex 's fortune . Max replaces Zelzar , and Justin is forced to drive the beach - goers away from the machine ( as Max gives out silly fortunes about his new facial hair ) ; meanwhile , the girls help Zelzar fancy his day at the beach . In the end , Zelzar reveals that while he can not take away Alex 's fortune , he can give it to the next person . The next person happens to be a little girl , who gets Alex 's fortune . However , it is revealed that a man from Random Prize Giveaway shows up , saying : `` Say good - bye to your life because we 're randomly giving you one million dollars ! '' Guest stars : Michael Carbonaro as Zelzar , John J. York as Game Show Host 96 17 `` Wizards vs. Asteroid '' Victor Gonzalez Peter Dirksen August 19 , 2011 ( 2011 - 08 - 19 ) 418 3.6 When it is announced that a huge asteroid is hurtling towards the earth , the Russos decide to hide in the wizard world , but Alex , Justin , and Max change their minds and go into space to destroy the asteroid . Meanwhile , Alex finds out that she is not graduating high school , but when a small part of the asteroid hits the school , she gets a chance to graduate . Guest stars : Dan Benson as Zeke , Bill Chott as Mr. Laritate , Kristina Hayes as Reporter 97 18 `` Justin 's Back In '' Guy Distad Todd J. Greenwald August 26 , 2011 ( 2011 - 08 - 26 ) 419 3.2 Justin 's class of delinquent wizards has completed their studies , which means they are eligible to rejoin WizTech if they all pass their final evaluation . When they all fail , Alex suspects something is not right . The truth soon uncovered -- the class had actually passed , but the historian who checked the exams was revealed to be evil , and had lied about the exam scores . He tries to attack Justin 's class , so Justin must stop the historian , and save Alex. but one of the students in the class is able to stop him by pulling the most powerful wand in the wizard world out of a crystal ball and using it . This means that he is actually the descendant of a famous wizard who had previously been thought to have no living descendants . Justin 's class is revealed to have passed the final exam , so they are readmitted into WizTech and Justin is officially back in the family wizard competition . Meanwhile , Jerry and Theresa realize that they never saved any of Max 's childhood accomplishments , so they try to recreate them with the help of Harper . During the credits , it is revealed that Max had kept his favorite memories all along . Special guest star : Tim Conway as Cragmont Guest stars : Ian Abercrombie as Professor Crumbs , Frank Pacheco as Felix , Cameron Sanders as Nelvis 98 19 `` Alex the Puppetmaster '' Victor Gonzalez Gigi McCreery & Perry Rein September 16 , 2011 ( 2011 - 09 - 16 ) 421 3.0 Alex and Harper decide to do a puppet show to raise money for a new apartment and Zeke and Justin help them . But Alex forgets to write the lines for the show . Harper gets mad and decides to do a show of her own and makes her puppets act like the way Alex treats her . Alex makes Justin and Zeke puppets for her show and steals Harper 's crowd which makes Harper upset . Then Alex apologizes to Harper using the puppets . Meanwhile , Talia 's parents meet Theresa and Jerry for the first time , but it does not go well . Justin puts a spell on Talia 's parents to forget they ever meet Theresa and Jerry . They meet again , but this time they end up watching a 16 - hour play together . Special guest star : Joely Fisher as Meg Robinson Guest stars : Dan Benson as Zeke , James Urbaniak as Rob Robinson , McKaley Miller as Talia 99 20 `` My Two Harpers '' Victor Gonzalez Manny Basanese September 30 , 2011 ( 2011 - 09 - 30 ) 422 3.0 Harper and Zeke spend so much time together that Alex decides to make a Harper - clone . Justin comes with lots of different ideas to save money in the sub-shop and Max starts a fast - food restaurant in the wizard world . Guest star : Dan Benson as Zeke Absent : Maria Canals Barrera as Theresa Russo 100 21 `` Wizards of Apartment 13B '' Guy Distad Justin Varava October 7 , 2011 ( 2011 - 10 - 07 ) 423 3.5 Alex and Harper receive a flyer for a hotel . They meet the hotel 's owner , Dexter , who sells them Apartment 13B , which belongs to a floor for non-humans . They rent it , but Harper is forced to use a training wand that can only open things . Later at their apartment , they realize Mason lives on the floor . Mason will stop at nothing to win Alex back ; Alex tells him she does not want a boyfriend , but Mason is relentless . That night , Alex and Harper throw a party , where the whole floor comes , including Felix . Mason goes to the party and uses Harper 's wand to open Alex 's heart . However , she flirts with an ugly giant . Mason tries again , but makes Alex opens her heart to Felix . Meanwhile , Theresa and Jerry trick Justin into going to Alex 's apartment to drive him out of the house . When Justin arrives , he fixes Mason 's mistakes by resetting Harper 's wand and it is revealed that despite his actions , he misses Alex. Alex , freed from Mason 's spell , is angry at Mason , and Mason , deflated , leaves . Outside their door , Dexter turns into Gorog when no one is looking . He wants revenge . Max appears in the apartment , and when Harper and Alex kick him out , he encounters Gorog , who gives him a flyer for a free camp . Max accepts . Special guest star : Gregg Sulkin as Mason Guest stars : John Rubinstein as Gorog , Frank Pacheco as Felix , Fred Stoller as Dexter , Christopher Douglas Reed as Ogre Note : This is part 1 of a 4 - part arc and also the 100th episode . 101 22 `` Ghost Roommate '' David DeLuise Richard Goodman October 14 , 2011 ( 2011 - 10 - 14 ) 424 4.1 Alex and Harper have trouble paying the apartment bills , so Dexter recommends getting a roommate . Alex and Harper find a wealthy ghost named Lucy , who they let move in . Meanwhile , Justin orders a robot to help Zeke at the sub station , as Justin is busy studying for the wizard competition . The robot is lost in transit , but Dexter ( Gorog in disguise ) makes an evil robot to spy on Justin to pass information to Gorog . While Zeke and the robot are working , the robot asks him about Justin and the wizard competition , which confuses Zeke because no one had talked about it in front of the robot . Later that night , Lucy starts crying and explains that her boyfriend Donny had disappeared sixty years prior in a plane accident . Alex tries to set Lucy up with Justin , but he makes matters worse . Later , Lucy meets Mason and they go out on a long date , which makes Alex jealous . Meanwhile , the robot again asks Zeke about the wizard world and Zeke realizes that the robot might have a secret agenda . He tells Justin , who simply does not believe him and is ignorant of the situation because of his intensive studying . Because of her jealousy , Alex helps Lucy locate Donny , who had been stranded on an island in the Bermuda Triangle . They soon reconnect , but not after Alex realizes that she can not get back home , due to heavy magnetic currents interfering with her magic . Mason goes to save Alex after he finds out that she had left for the Bermuda Triangle . The robot attacks Justin and Zeke after they find him scanning the spell book . Mason and Alex manage to get off of the island using the Bermuda shorts given to them by Justin . The robot is shown giving Gorog the spell he needed that he got from the Russos . Special guest star : Gregg Sulkin as Mason Guest stars : Dan Benson as Zeke , Fred Stoller as Dexter , Josh Sussman as Hugh Normous , Linsey Godfrey as Lucy , Travis Caldwell as Donny , Michael Carbonaro as Robot Note : This is part 2 of a 4 - part arc . Absent : Jake T. Austin as Max Russo , Maria Canals Barrera as Theresa Russo , David DeLuise as Jerry Russo 102 23 `` Get Along , Little Zombie '' Victor Gonzalez Peter Dirksen October 21 , 2011 ( 2011 - 10 - 21 ) 425 3.4 Alex and Harper are going to their apartment when they run into Mr. Laritate , who also lives in the hotel . Felix tells Justin he broke his wand and Justin informs him that it 's fake , because he saw batteries in it . He concludes that someone stole Felix 's wand . Dexter is showing a zombie to the hall for magical creatures while he introduces them to Alex and Harper . Mason , who will stubbornly not stop asking Alex on a date , meets them in the elevator . When Alex ignores him , Mason messes with the buttons so he can spend more time with her and they land on the second floor . Justin tells Jerry that Felix lost his wand and Jerry tells them to use the abracadoobler wand app and Felix realizes that his wand is around the area . Meanwhile , because Mason messed with the buttons , all the humans have discovered the mysterious thirteenth floor . Alex lies and tells the humans that they accidentally got into a secret open house floor for the people in the hotel . Mr. Laritate , after all the other humans left , discovers the thirteenth floor too and sees Alex , Harper , and Mason . Mr. Laritate sees the zombie , Alex explains this is a haunted house , but Mr. Laritate does not believe them . The zombie bites Mr. Laritate and turns him into a zombie . They take him to their apartment while Alex looks for a spell to turn Mr. Laritate human again . Mr. Laritate runs away and Alex , Harper , and Mason suspect he went to the substation . Professor Crumbs questions Felix , who reveals the 13th floor to them , and Crumbs denies the existence of a `` 13th floor '' , so they go to investigate . At Waverly Place they 're throwing a festival while Alex tells Jerry what happened . Alex and Mason , trying to sneak the zombie into the substation , are forced into dance . They then , after Harper causes a distraction , take Laritate to the substation and give him a medicine from the wizard world that turns Laritate human . He remembers nothing and goes outside to dance . Alex kisses him on the cheek , and Mason suggests they just be friends . Alex gets back together with Mason . Crumbs tells Felix the floor should not exist . Harper , Mason , and Alex return to the thirteenth floor . Justin tells them that the floor does not exist . Crumbs thinks that there is evil going on . Dexter then comes with dark angel wings and it is revealed he stole Felix 's his wand . Dexter tricks Felix into turning to the dark side in return for the wand . Felix casts a spell that traps them all on the floor . Back at Waverly Place , Mr. Laritate is dancing while Jerry is selling chili , when Mr. Laritate gets one and gets water to get `` the burn '' out of his mouth . Special guest star : Gregg Sulkin as Mason Guest stars : Bill Chott as Mr. Laritate , Ian Abercrombie as Professor Crumbs , Frank Pacheco as Felix , Fred Stoller as Dexter , Regan Burns as Everett , Jane Carr as Martha St. Claire Note : This is part 3 of a 4 - part arc . Absent : Jake T. Austin as Max Russo , Maria Canals Barrera as Theresa Russo 103 24 `` Wizards vs. Everything '' Victor Gonzalez Gigi McCreery & Perry Rein October 28 , 2011 ( 2011 - 10 - 28 ) 426 3.4 The wizards of 13th floor come out and Alex explains Dexter 's evil . Dexter reveals himself as Gorog , and that he is trying to rebuild his army of darkness . Felix uses a spell that makes all the wizards from the 13th floor go with them , so they can make them all evil , all except Alex , Justin , and Harper , who are left behind . A trashcan tells them to go through it , however Alex ends up in the room again . Justin realizes only mortals can go through it . Alex convinces Harper into going through it , Harper then arrives in the wizard lair . Gorog takes the kidnapped wizards to his evil lair , where he plans to make them evil . He tricks Hugh Normous into becoming one of the evil wizards in his army . Professor Crumbs fakes becoming evil when Gorog plans on making him evil . Harper contacts Max and tells him about Gorog . Max arrives and suggests they look for spells in the wizard books . Gorog makes the wizard army to dig a hole to the atmosphere to the wizard world , so they can take over it . Gorog also tries to trick Mason into being one of the members in his army , but Mason refuses . Gorog tricks him into joining , however . Gorog then makes Felix send a black whole to suck Alex and Justin in it . Gorog gives the kidnapped wizards their wands so they can take over the wizard world , but Crumbs refuses to let them . Felix then gets rid of Crumbs on Gorog 's order . The black hole nearly sucks Alex and Justin when Crumbs arrives at the wizard lair . Max suggests they put a black hole in the wizard lair . Max goes in and rescues Alex and Justin . Crumbs tells them to use their magic to stop Gorog . They arrive at Gorog 's lair and attempt to destroy him , but Mason tries to convince Alex to join them . Gorog also reveals Juliet ( young again ) , Justin 's ex-girlfriend , and she convinces Justin to join . Alex also surrenders , and Max is forced to as well , the three then use their combined magic to get rid of Gorog , and all the supernatural beings are freed from his influence . Juliet and Justin get back together . Alex tricks Harper into moving in the Russos ' basement by making her think all the wizards and supernatural creatures , with no home , are going to stay . Special guest stars : Gregg Sulkin as Mason , Bridgit Mendler as Juliet van Heusen Guest stars : Ian Abercrombie as Professor Crumbs , John Rubinstein as Gorog , Frank Pacheco as Felix , Fred Stoller as Dexter , Josh Sussman as Hugh Normous , Christopher Douglas Reed as Ogre Note : This is part 4 of a 4 - part arc . Absent : Maria Canals Barrera as Theresa Russo , David DeLuise as Jerry Russo 104 25 `` Rock Around the Clock '' Guy Distad Robert Boesel November 4 , 2011 ( 2011 - 11 - 04 ) 414 3.8 The current landlord of the Russo 's building decides to sell the sub shop , evicting the Russos of the shop , as well as their apartment and lair , which contains their portal . Without the portal , the Russos will lose all contact with the Wizard world . So , the entire family ( along with Harper ) travel back to 1957 to stop Jerry 's father ( the previous owner of the shop ) from selling the shop to the landlord , so that they do not get evicted . Jerry 's father agrees not to sell the shop , and the Russos return to present day . However , they accidentally leave Harper behind when Harper is distracted by a woman with a poodle , and Harper suggests that the woman should put a picture of a poodle on her skirt , creating a poodle skirt , which were popular in the 1950s . Back in present day , the Russos ( who have not yet realized Harper 's absence ) find the sub shop obsolete , boarded up , and empty , with the subway car and the lair missing , too . The Russos realized that they have messed with the fabric of time , and something they did while time - traveling in 1957 must have created a ripple effect , and affected present day . While Alex suggests that they go back to 1957 to find out what they did wrong , Justin denies this , saying they should not solve the problem by doing exactly what caused the problem , however Theresa states that they will have to go back , when she realizes that they left Harper in 1957 . The Russos return to 1957 , where Jerry 's father reveals that he did not sell the restaurant to the landlord , however the restaurant failed to make enough business , and that he has been forced to close it . Justin realizes that when Jerry 's father lost the restaurant , he moved out of the building and since their family no longer lived in the building , the lair disappeared in present day . The Russos decide just to find Harper and go back to present day , and discover that Harper enrolled at Tribeca Prep as soon as they forgot her in 1957 , as Harper did not want to ruin her perfect attendance record . Justin , Alex , and Max go to Tribeca Prep to retrieve Harper , while Jerry and Theresa wait at the sub shop , however Harper decides to stay in the past , as she finds new popularity in 1957 that she does not experience in present day . While at Tribeca , Max introduces the high - five to several students . Alex realizes that if they make the sub shop the 1957 high school hangout , the sub shop will get better business and will not have to close . However , no one has any fun at the sub shop that night as the jukebox is broken . Just as everyone is about to leave , Max plugs his MP3 player into the jukebox and Harper uses her popularity to get the students dancing and having fun at the shop , and the business at the sub shop peaks . The Russos return to the present day , where the lair and the sub shop are back , and Jerry owns the entire building , while the landlord is now the owner of a Janitor service , instead of the building , and the high - five is now called a `` Max '' . Alex then remembers that they forgot Harper back in 1957 and they go back and get her . ( the Russos accidentally end up in 1977 twice in the episode , thanks to Justin ) Guest stars : Brendan Bradley as Hank , Carlo Michael Mancini as Lenny Hune 105 26 `` Harperella '' Victor Gonzalez Richard Goodman & Justin Varava November 18 , 2011 ( 2011 - 11 - 18 ) 427 3.5 The episode begins on Waverly Place where Harper is reading a storybook to a group of children when Alex pushes her away . Alex explains that it 's a Wizard Storybook , a magical storybook that has the power of turning what the person reads real . Then Harper is teleported into the loft where Theresa , her evil ( or `` wicked '' as she referred ) stepmother calls her Harperella ( a combination of Harper and Cinderella ) and forces her to do the chores . Then her evil stepbrothers , Justin and Max come down and give her laundry to her wash . Later Harper is washing the Waverly Substation when Alex appears , as she is Harper 's fairy godmother . Alex explains to Harper that the fairy tale has to run as it 's supposed to before things can go back to the way they were and then vanishes . Then Max comes in and says that the prince charming has decided to use the Substation to be the ballroom for the royal party . Harper says that she can go to the party but her stepfamily laughs at her . Back in the loft Harper summons Alex , she uses a spell to transform Harper 's bookdress into a princess gown and glass bowls into glass slippers . They go down ( through the door ) into the street and Alex turns the hot dog stand into a carriage to take Harper to the party . There she dances with prince charming , Zeke . At the stroke of midnight she goes outside leaving her glass slipper behind . Then , to both girls ' shock , Justin , Max and Zeke ( with pig noses ) rush inside the substation being chased by the big , bad wolf , Mason . Alex realizes that some pages are missing and Cinderella and three little pigs stories were blended together . The pig - turned boys and Harper rush into the loft being chased by Mason . While Alex finds the pages Harper has to keep Mason from eating Zeke ( who built the straw house ) , Alex eventually finds the book pages in a drawer along with other book pages . Alex tries a page from Max 's favourite magic trick book then David Copperfield comes into the room and does some magic tricks which impresses Harper . But another page that Alex tried was from Justin 's science book and a caveman appeared , but the caveman has a thing for Harper . So when Harper is impressed by the magic trick he is jealous and tries to attack David Copperfield . Alex finds the right pages and the story goes back to Cinderella . Zeke Charming comes in and Theresa tries to wear the slipper but fails . Then Harper tries it and fits . She and Zeke go back to the royal party where they dance and then the story ends and the world is returned to its normality . Last but not least , Harper was back in the real world and she lived happily ever after . Finally , Alex planned that Harper and Zeke dance because they were great when they danced in romance , so they practiced but they were really bad . The ball dance is turned into a clogging dance . Special guest stars : David Copperfield as himself , Gregg Sulkin as Mason Guest star : Dan Benson as Zeke Absent : David DeLuise as Jerry Russo 106 27 `` Who Will Be the Family Wizard '' Victor Gonzalez Vince Cheung & Ben Montanio ( Part 1 ) Todd J. Greenwald ( Part 2 ) January 6 , 2012 ( 2012 - 01 - 06 ) 428 -- 429 9.8 During a dinner that Alex made for the family , Professor Crumbs visits to reveal that with this selfless act , the Russo children can finally have their family wizard competition . Round one of the competition is a trivia round , in which questions related to magic are asked . During this round , Harper and Zeke appear . Zeke has accidentally smelled a purple substance in the lair that caused him to turn purple . This causes a griffin to kidnap him and Harper . Alex , Justin and Max use their three time - outs to go and rescue their friends . They make it back , only to discover that they have been gone too long and have been disqualified from the competition . They all return home , where the lair disappears and they all lose their magic , thus becoming mortals . Justin and Max begin to hate Alex because of her insistence on saving Zeke and Harper resulting in them losing . Convinced that the loss of their powers has ruined the family , Jerry decides to sell the sub shop . The kids go for a day without magic , during which , slowly gaining back trust in each other as they reopen and run the shop . Suddenly , they are returned to the area of the Wizard Competition , where the host reveals that the griffin attack ( which was actually meant for Professor Crumbs ) and the weeks they went without magic were tests to test their family bond . They enter the final round of the competition , a massive labyrinth . The first out of the maze will win . Justin makes it out first and is declared the Family Wizard . However , he decides he can not accept this because Alex was about to get out first : Justin had been trapped by magical vines and Alex , near the exit , came back to help . Alex is thus declared the true family wizard . Professor Crumbs , proud of Justin 's integrity in telling the truth , declares that he is going to retire as Headmaster of Wiz - Tech and declares Justin the new headmaster , granting him full wizard powers . Considering Max is the only Russo child that does not get powers or becomes a full wizard , Jerry thus decides to one day pass down the sub shop to Max , which he happily accepts . It ends with the Russo family hugging and gathering together with Alex stating that they are all finally happy at the same time . Special guest stars : Gregg Sulkin as Mason , Bridgit Mendler as Juliet van Heusen Guest stars : Dan Benson as Zeke , Ian Abercrombie as Professor Crumbs , Andy Kindler as Chancellor Tootietootie Note : This is an hour long special .
+  Fact 0.107: In 'Everything's Rosie for Justin', Maxine uses her cuteness to convince customers not to exploit her parents.
+
+Retrieved items:
+<item 1>
+Wizards of Waverly Place (season 4)
+In the end Mason 's parents like her as a werewolf and she says to him that they do not know the real her . She begins to leave and he says that he truly loves
+Alex to his parents and that she is a wizard . She changes back to a wizard and Mason turns back to human form . After the parents find out they try to eat her
+and Mason and Alex make a near escape . Meanwhile Max makes his parents ' food taste like kid food in order to make it taste good . Afterwards Jerry and Theresa
+eat it , and as a result they act like little kids . Justin thinks he will have to fix it but Max comments on how he does not need help , as he will be the
+future family wizard . Max uses another spell on cookies to make them older , but they turn into teenagers . Finally , Justin uses a spell on a pizza to turn
+them back into their regular selves .
+</item 1>
+
+<item 2>
+Wizards of Waverly Place (season 4)
+Too fast for Maxine , Justin beats her , and Maxine is hurt ( physically ) . Jerry and Theresa rush to her side , caring for Maxine more than they care that
+Justin beat Maxine in karate . Justin leaves , and Alex leaves after him , heartbroken . Back at home , Jerry tells Alex that he fell for Maxine because she
+reminded him of Alex when she was little and they bond again . Meanwhile , Zeke thinks the Russos hate him , but really it was just Harper 's alibi in order to
+keep him away from the Sub Station so as not to make him suspicious about Max 's disappearance and Maxine 's appearance . Guest stars : Bailee Madison as Maxine
+, Dan Benson as Zeke , Lanny Joon as Sensei Absent : Jake T. Austin as Max Russo 86 7 `` Everything 's Rosie for Justin '' Victor Gonzalez Justin Varava
+February 4 , 2011 ( 2011 - 02 - 04 ) 407 3.9 Justin and his delinquent class have a wizard wand dance assessment to do which will get them back in Wiztech .
+</item 2>
+
+<item 3>
+Wizards of Waverly Place (season 4)
+After her first day of school , Maxine laments that she has no friends , which leads Harper to insist Maxine have a slumber party ( which is really what Harper
+wants because she has never had a slumber party ) , that eventually becomes a disaster . Tina reveals that Rosie was a good angel , and her teacher however ,
+Gorog reached her before her transport arrived and corrupted her . Alex and Tina go to the Dark Realm to save Justin . Alex borrows a pair of wings from the
+guardian angels . Alex takes the Moral Compass and tries to turn it to good but Justin stops her and then Rosie used her good angel side and they fly up and
+when they land , Justin turns the compass to good . Tina and Alex take it and run . When Rosie and Justin kiss , Rosie turns into a good angel ( with white
+wings ) , and Justin loses the dark wings . Guest stars : Bill Chott as Mr.
+</item 3>
+
+<item 4>
+Wizards of Waverly Place (season 4)
+Guest stars : Bill Chott as Mr. Laritate , Ian Abercrombie as Professor Crumbs , Bailee Madison as Maxine , Cameron Sanders as Nelvis , LJ Benet as Little
+Crumbs , Jackie Evancho as Choir Girl Note : Jake T. Austin returns as Max near the end of the episode . Bailee Madison marks her final appearance as Maxine in
+this episode . 90 11 `` Zeke Finds Out '' David DeLuise Peter Dirksen April 8 , 2011 ( 2011 - 04 - 08 ) 412 3.0 When Alex gets bored of Zeke 's failing magic
+tricks , she decides to use magic to make Zeke 's tricks come true . Everything goes downhill when Zeke tells Harper he believes he is a wizard and is now
+booking a magic act at the sub station for a kid 's birthday party . Since Justin and Harper are tired of Alex ruining things all the time , they decide to
+leave everything up to her .
+</item 4>
+
+<item 5>
+Wizards of Waverly Place (season 4)
+Alex , Justin and Max use their three time - outs to go and rescue their friends . They make it back , only to discover that they have been gone too long and
+have been disqualified from the competition . They all return home , where the lair disappears and they all lose their magic , thus becoming mortals . Justin
+and Max begin to hate Alex because of her insistence on saving Zeke and Harper resulting in them losing . Convinced that the loss of their powers has ruined the
+family , Jerry decides to sell the sub shop . The kids go for a day without magic , during which , slowly gaining back trust in each other as they reopen and
+run the shop . Suddenly , they are returned to the area of the Wizard Competition , where the host reveals that the griffin attack ( which was actually meant
+for Professor Crumbs ) and the weeks they went without magic were tests to test their family bond . They enter the final round of the competition , a massive
+labyrinth . The first out of the maze will win . Justin makes it out first and is declared the Family Wizard .
+</item 5>
+
+<item 6>
+Wizards of Waverly Place (season 4)
+They then shrink it and go into Mason 's mouth . While there , Alex , Max , and Justin see Mason 's thoughts , which are all of Alex . They get Dean out , and
+Alex , when Harper , Max , and Justin leave , Alex tells Dean that he was knocked out and the doctor 's solution was for them all to dress up as cows . Dean
+then gives her his offer once again : he wants to get back with her . Alex tells him ' no ' , and then gets back together with Mason , with deciding to get back
+to the Wizard Competition . Special guest star : Gregg Sulkin as Mason Guest stars : Daniel Samonas as Dean , Frank Pacheco as Felix , Shoshana Bush as Tyler 84
+5 `` Three Maxes and a Little Lady '' Victor Gonzalez Richard Goodman January 7 , 2011 ( 2011 - 01 - 07 ) 405 4.0 Alex joins Justin 's wizard class to try to
+move up in the competition . Max joins a sophisticated wizard society . They suggest he move the wizard competition up and he moves it to a few days away .
+</item 6>
+
+<item 7>
+Wizards of Waverly Place (season 4)
+Justin takes Maxine to her ( Max 's ) karate class and Maxine kicks Justin 's butt . After the class , Alex decides to make Jerry 's favorite sandwich in order
+to win his love back , but Maxine comes along with Justin , announcing that she beat Justin in karate , and Jerry immediately falls for her cuteness again .
+More jealous than ever , Alex comes back with Justin to Maxine 's karate class with their parents , having a slight idea of knowing how to change Maxine back to
+Max . They cast spells on Maxine , Justin using the spell he used on Max that turned him into Maxine , and Alex using the reverse spell . Unfortunately , it
+only makes Maxine cuter , which makes her furious . Instead of going against the person she was supposed to , she demands that she kicks either Alex or Justin
+'s butt . Justin goes against her , but seeing that he would lose , Alex casts a spell on Justin to make him a karate master . Too fast for Maxine , Justin
+beats her , and Maxine is hurt ( physically ) .
+</item 7>
+
+<item 8>
+Wizards of Waverly Place (season 4)
+Guest stars : Bill Chott as Mr. Laritate , Bailee Madison as Maxine , Leven Rambin as Rosie , John Rubinstein as Gorog , China McClain as Tina , Amy Tolsky as
+Florence Note : This is a one - hour special . Absent : Jake T. Austin as Max Russo 89 10 `` Back To Max '' Guy Distad Todd J. Greenwald March 11 , 2011 ( 2011
+- 03 - 11 ) 411 3.7 Justin invites Professor Crumbs to check on his delinquent wizards class , to see how their wizard training is progressing . During the
+conversation , Maxine interrupts , causing Alex and Justin to panic since they do not know how to explain `` Maxine '' , and they try to find a way to turn
+Maxine back to Max . Meanwhile , Harper takes a role in the school 's `` Spirit of America '' play , only to be replaced by Maxine . Guest stars : Bill Chott as
+Mr.
+</item 8>
+
+<item 9>
+Wizards of Waverly Place (season 4)
+They suggest he move the wizard competition up and he moves it to a few days away . Max quits the society because he finds out that they are taking advantage of
+him . Alex and Justin transform into Max in an attempt to change the date of the family wizard competition back to its original date and succeed . In the end of
+the episode they accidentally turn Max indefinitely into a little girl . Guest stars : Bailee Madison as Maxine , Frank Pacheco as Felix , Kari Wahlgren as
+Helen , Shane Harper as Fidel Note : Bailee Madison begins her recurring role as Maxine , the female Max in this episode . Jake T. Austin was absent in four
+other episodes and returns at the end of the tenth episode `` Back to Max '' . 85 6 `` Daddy 's Little Girl '' Robbie Countryman Gigi McCreery & Perry Rein
+January 21 , 2011 ( 2011 - 01 - 21 ) 406 3.4 With Max still a little girl , their parents pay more attention to Max ( Maxine ) , and Alex becomes jealous .
+</item 9>
+
+<item 10>
+Wizards of Waverly Place (season 4)
+She ends up making Alex jealous when their father prefers Maxine over Alex . Maxine remains until `` Back to Max '' . In the episode `` Everything 's Rosie for
+Justin '' , Justin falls in love with Rosie , a guardian angel , but at the end of `` Dancing with Angels '' she becomes an Angel of Darkness . In `` Zeke Finds
+Out '' , the Russos finally reveal to Zeke that they are wizards . In `` Wizard of the Year '' , Alex is crowned Wizard of the Year for saving the world from
+the angels of darkness , and is reinstated in the Wizards Competition . In `` Justin 's Back In '' , Justin is reinstated in the Wizard Competition , after his
+class of delinquent wizards passes . Meanwhile , Alex 's relationship with Mason is jeopardized again when a beast tamer , Chase Riprock , falls in love with
+Alex and Mason gets jealous . This results in Alex breaking up with Mason . Alex , Justin and Max then save the world from being destroyed by an asteroid .
+Later , Alex and Harper move into an apartment building with a secret 13th floor for wizards and other creatures in the wizard world .
+</item 10>
+=== END ITEM id=a197-c90252338c16c857 ===
+
+=== ITEM id=a149-40f2316344d92b2e ===
+Gold sentences and facts:
+Sentence 0: This was the city of Chicago 's first professional sports championship since the Chicago Fire won MLS Cup ' 98 ( which came four months after the Chicago Bulls ' sixth NBA championship that year ) . The next major Chicago sports championship came in 2010 , when the NHL 's Chicago Blackhawks ended a 49 - year Stanley Cup title drought . With the Chicago Bears ' win in Super Bowl XX and the Chicago Cubs ' own World Series championship in 2016 , all Chicago sports teams have won at least one major championship since 1985 . Meanwhile , the Astros themselves made it back to the World Series in 2017 , but this time as an AL team , where they defeated the Los Angeles Dodgers in seven games , resulting in Houston 's first professional sports championship since the 2006 -- 07 Houston Dynamo won their back - to - back MLS Championships .
+  Fact 0.12: The Houston Dynamo won back-to-back MLS Championships in 2006-07.
+
+Retrieved items:
+<item 1>
+Houston Astros
+They finished 101 -- 61 , with a 21 - game lead in the division , and faced the Red Sox in the first round of the AL playoffs . The Astros defeated the Red Sox
+three games to one , and advanced to the American League Championship Series against the New York Yankees . The Astros won the ALCS four games to three , and
+advanced to the World Series to play against the Los Angeles Dodgers . The Astros defeated the Dodgers in the deciding seventh game of the World Series ,
+winning the first championship in franchise history . The city of Houston celebrated the team 's accomplishment with a parade on the afternoon of November 3 ,
+2017 . Houston 's Independent School District gave the students and teachers the day off to watch the parade . On November 16 , 2017 Jose Altuve was named the
+American League Most Valuable Player , capping off a historic season in which he accumulated 200 hits for the fourth consecutive season , led the majors with a
+. 346 BA , and was the unquestioned clubhouse leader of the World Series Champions .
+</item 1>
+
+<item 2>
+2005 World Series
+People really cheering me . I had tears in my eyes . To really know the fans cared that much about me -- it was a great feeling . One of my proudest moments in
+the game . '' Houston Astros ( edit ) Main article : 2005 Houston Astros season The Houston Astros won the Wild Card for the second straight year , once again
+clinching it on the final day of the season . The Astros embarked on a memorable Division Series rematch against the Atlanta Braves . With the Astros in the
+lead two games to one , the teams played an eighteen - inning marathon in Game 4 , which was the longest ( in both time and innings played ) postseason game in
+history . In this game , Roger Clemens made only the second relief appearance of his career , and the first in postseason play . Chris Burke 's walk - off home
+run ended the game in the bottom of the eighteenth . For the second straight year , the Astros played the St. Louis Cardinals in the League Championship Series
+. Like the White Sox , the Astros dropped Game 1 , but were able to regroup and win Games 2 -- 4 .
+</item 2>
+
+<item 3>
+2005 World Series
+The Astros were attempting to become the fourth consecutive wild card team to win the Series , following the Anaheim Angels ( 2002 ) , Florida Marlins ( 2003 )
+and Boston Red Sox ( 2004 ) . Both teams were attempting to overcome decades of disappointment , with a combined 132 years between the two teams without a title
+. The Astros were making their first Series appearance in 44 years of play , while the White Sox had waited exactly twice as long for a title , having last won
+the Series in 1917 , and had not been in the Series since 1959 , three years before the Astros ' inaugural season . Like the 1982 World Series between the St.
+Louis Cardinals and the Milwaukee Brewers , the 2005 World Series is one of only two World Series in the modern era ( 1903 -- present ) with no possibility for
+a rematch between the two opponents , because the Astros moved to the American League in 2013 . However , the Brewers did meet the Cardinals in the 2011
+National League Championship Series .
+</item 3>
+
+<item 4>
+2017 World Series
+Houston Astros ( edit ) Main article : 2017 Houston Astros season The Astros wore a patch during the 2017 World Series in support of Hurricane Harvey victims in
+Houston With a 101 -- 61 regular season record , the team won its first American League West title since moving from the National League Central starting in its
+2013 season , and their first division title since 2001 . In the American League Division Series , they defeated the Boston Red Sox in four games and then
+defeated the New York Yankees in the American League Championship Series ( ALCS ) in seven games . This was their second World Series appearance and first since
+2005 , when they were swept in four games by the Chicago White Sox . They became the first team in history to make it to the World Series as members of both the
+National League and the American League . The city of Houston in August 2017 suffered record flooding from Hurricane Harvey . The team began to wear patches
+which had the logo of the team with the word `` Strong '' on the bottom of the patch , as well as promoting the hashtag Houston Strong . Manager A.J.
+</item 4>
+
+<item 5>
+2005 World Series
+Pierzynski hit a two - out double to Tal 's Hill , driving in two runs , scoring Iguchi and Dye giving the Sox the lead . The Astros rallied in the last of the
+eighth with two outs when Lane 's double scored Ensberg with the tying run after back - to - back walks by Ensberg and Mike Lamb , giving Dustin Hermanson a
+blown save . Houston tried to rally to win in the ninth , but stranded Chris Burke at third , after he had walked , reached second on an error and stolen third
+. The Astros tried again in the 10th as well as in the 11th , but failed each time . In the top of the 14th , after the Sox hit into a spectacular double play
+started by Ensberg , Geoff Blum ( a former Astro and the Astros ' television color analyst as of 2015 ) , who had entered the game in the 13th , homered to
+right with two outs off Ezequiel Astacio . Infield singles by Rowand and Crede were followed by walks to Uribe and Chris Widger .
+</item 5>
+
+<item 6>
+2005 World Series
+With the Astros on the verge of clinching their first ever National League pennant in Game 5 , Albert Pujols hit a mammoth three - run home run off Brad Lidge
+in the top of the ninth inning to take the lead , and subsequently stave off elimination . However , behind NLCS MVP Roy Oswalt , the Astros were able to defeat
+the Cards 5 -- 1 in Game 6 and earned a trip to the World Series . This was the Astros ' first World Series appearance in franchise history . Matchups ( edit )
+Game 1 ( edit ) Saturday , October 22 , 2005 7 : 05 pm ( CDT ) at U.S.
+</item 6>
+
+<item 7>
+2017 World Series
+In the bottom of the inning , Yasiel Puig hit a home run off of Ken Giles and Enrique Hernández drove in Logan Forsythe to tie the game , with the latter being
+the Dodgers ' first run that was not driven in by a home run . In the next inning , George Springer hit a two - run home run for the Astros off of Brandon
+McCarthy to retake the lead . In the bottom of the 11th inning , Charlie Culberson homered off of Chris Devenski , who later struck out Puig to end the game .
+This was the first ever World Series game in which a team hit home runs in the ninth , tenth and eleventh inning . The teams set a new record for combined home
+runs in a single World Series game with eight and this was the first time in MLB history , regular season or postseason , that five home runs were hit in extra
+innings . The Astros won their first World Series game in franchise history as they had been swept in their previous appearance in 2005 . Game 3 ( edit ) Lance
+McCullers Jr. earned the win in Game 3 .
+</item 7>
+
+<item 8>
+2005 World Series
+The Astros wasted a chance in the sixth , Jason Lane striking out with the bases loaded . The White Sox in the top of the seventh put runners at second and
+third , but shortstop Juan Uribe struck out to end the inning . Chicago broke through in the next inning against embattled Houston closer Brad Lidge . Willie
+Harris hit a pinch - hit single . Podsednik advanced him with a sacrifice bunt . Carl Everett pinch - hit for Iguchi and grounded out to the right side to allow
+Harris to move to third . Jermaine Dye , the Most Valuable Player of the series , had the game - winning single , driving in Harris . Things got a little sticky
+for the Sox in the Astros half of the eighth when reliever Cliff Politte hit Willy Taveras , threw a wild pitch , sending Taveras to second , and walked Lance
+Berkman . After Morgan Ensberg flew out to center , the White Sox manager Ozzie Guillén brought in Neal Cotts to finish the inning . Cotts induced pinch -
+hitter José Vizcaíno into a ground out to Uribe .
+</item 8>
+
+<item 9>
+Houston Astros
+The contributions of the other starters -- Brandon Backe ( 10 -- 8 , 4.76 ) and rookie starters Ezequiel Astacio ( 3 -- 6 , 5.67 ) and Wandy Rodríguez ( 10 --
+10 , 5.53 ) -- were less remarkable , but enough to push the Astros into position for a playoff run . The Astros won a wild card berth on the final day of the
+regular season , becoming the first team since the world champion 1914 Boston Braves to qualify for the postseason after being 15 games under . 500 . The Astros
+won the National League Division Series against the Atlanta Braves , 3 - 1 , with a game four that set postseason records for most innings ( 18 ) , most players
+used by a single team ( 23 ) , and longest game time ( 5 hours and 50 minutes ) . Trailing by a score of 6 - 1 , Lance Berkman hit an eighth inning grand slam
+to narrow the score to 6 -- 5 . In the bottom of the ninth , catcher Brad Ausmus , hit a game tying home run that allowed the game to continue in extra innings
+.
+</item 9>
+
+<item 10>
+Houston Astros
+Cellular Field in Chicago and the final two in Houston . Game 3 marked the first World Series game held in the state of Texas , and was the longest game in
+World Series history , lasting 5 hours and 41 minutes . This World Series was marked by a controversy involving the Minute Maid Park roof . MLB & Commissioner
+Bud Selig insisted that the Astros must play with the roof open which mitigated the intensity and enthusiasm of the cheering Astros fans . 2006 -- 2010 : the
+decline ( edit ) In the 2006 offseason , the team signed Preston Wilson and moved Berkman to first base , ending the long tenure of Jeff Bagwell . The Astros
+renewed the contract with Clemens and traded two minor league prospects to the Tampa Bay Devil Rays for left - handed hitter Aubrey Huff . By August , Preston
+Wilson complained about his playing time after the return of Luke Scott from AAA Round Rock . The Astros released Wilson and he was signed by St. Louis . A
+dramatic season end included wins in 10 of their last 12 games , but the Astros missed a playoff appearance when they lost the final game of the season to the
+Atlanta Braves .
+</item 10>
+=== END ITEM id=a149-40f2316344d92b2e ===
+
+=== ITEM id=a194-2979b3bfa7853541 ===
+Gold sentences and facts:
+Sentence 0: Neither team advanced to the post-season in 2006 , but the 2006 World Series again featured teams from the American League Central and National League Central divisions , this time represented by the Detroit Tigers and the St. Louis Cardinals , respectively . The Cardinals won the World Series in five games , in which manager Tony La Russa became the second manager to win the World Series in both American and National leagues , previously managing the Oakland Athletics to the 1989 World Series championship . Both the White Sox and the Astros were in the Wild Card race until the final weeks of the season , with the White Sox finishing with 90 wins , the Astros with 82 wins . The White Sox made their first post-2005 playoff appearance in 2008 , while the Astros would not return to the postseason until 2015 , their third season as an American League team and would not return to the World Series until 2017 , their fifth season as an American League team .
+  Fact 1.6: Both the White Sox and the Astros were in the Wild Card race until the final weeks of the season.
+
+Retrieved items:
+<item 1>
+Graph query row:
+appearance: 2017 World Series Game 1
+date: None
+opponent: Los Angeles Dodgers
+</item 1>
+
+<item 2>
+2005 World Series
+With the Astros on the verge of clinching their first ever National League pennant in Game 5 , Albert Pujols hit a mammoth three - run home run off Brad Lidge
+in the top of the ninth inning to take the lead , and subsequently stave off elimination . However , behind NLCS MVP Roy Oswalt , the Astros were able to defeat
+the Cards 5 -- 1 in Game 6 and earned a trip to the World Series . This was the Astros ' first World Series appearance in franchise history . Matchups ( edit )
+Game 1 ( edit ) Saturday , October 22 , 2005 7 : 05 pm ( CDT ) at U.S.
+</item 2>
+
+<item 3>
+2017 World Series
+Houston Astros ( edit ) Main article : 2017 Houston Astros season The Astros wore a patch during the 2017 World Series in support of Hurricane Harvey victims in
+Houston With a 101 -- 61 regular season record , the team won its first American League West title since moving from the National League Central starting in its
+2013 season , and their first division title since 2001 . In the American League Division Series , they defeated the Boston Red Sox in four games and then
+defeated the New York Yankees in the American League Championship Series ( ALCS ) in seven games . This was their second World Series appearance and first since
+2005 , when they were swept in four games by the Chicago White Sox . They became the first team in history to make it to the World Series as members of both the
+National League and the American League . The city of Houston in August 2017 suffered record flooding from Hurricane Harvey . The team began to wear patches
+which had the logo of the team with the word `` Strong '' on the bottom of the patch , as well as promoting the hashtag Houston Strong . Manager A.J.
+</item 3>
+
+<item 4>
+Houston Astros
+They finished 101 -- 61 , with a 21 - game lead in the division , and faced the Red Sox in the first round of the AL playoffs . The Astros defeated the Red Sox
+three games to one , and advanced to the American League Championship Series against the New York Yankees . The Astros won the ALCS four games to three , and
+advanced to the World Series to play against the Los Angeles Dodgers . The Astros defeated the Dodgers in the deciding seventh game of the World Series ,
+winning the first championship in franchise history . The city of Houston celebrated the team 's accomplishment with a parade on the afternoon of November 3 ,
+2017 . Houston 's Independent School District gave the students and teachers the day off to watch the parade . On November 16 , 2017 Jose Altuve was named the
+American League Most Valuable Player , capping off a historic season in which he accumulated 200 hits for the fourth consecutive season , led the majors with a
+. 346 BA , and was the unquestioned clubhouse leader of the World Series Champions .
+</item 4>
+
+<item 5>
+2017 World Series
+Contents ( hide ) 1 Background 1.1 Los Angeles Dodgers 1.2 Houston Astros 2 Summary 3 Pre-game ceremonies 4 Game summaries 4.1 Game 1 4.2 Game 2 4.3 Game 3 4.4
+Game 4 4.5 Game 5 4.6 Game 6 4.7 Game 7 4.8 Composite line score 5 Broadcasting 5.1 Television 5.1. 1 Ratings 5.2 Radio 6 Sponsorship 7 See also 8 Notes 9
+References 10 External links Background ( edit ) This was the first World Series matchup , and second postseason meeting overall , between the Astros and
+Dodgers . Los Angeles defeated Houston in the 1981 National League Division Series in five games en route to its World Series championship that year . The teams
+also met in the 1980 National League West tie - breaker game . This was the first Fall Classic since 1970 , and the eighth overall , in which both participants
+had 100 or more wins during the regular season .
+</item 5>
+
+<item 6>
+Houston Astros
+Cellular Field in Chicago and the final two in Houston . Game 3 marked the first World Series game held in the state of Texas , and was the longest game in
+World Series history , lasting 5 hours and 41 minutes . This World Series was marked by a controversy involving the Minute Maid Park roof . MLB & Commissioner
+Bud Selig insisted that the Astros must play with the roof open which mitigated the intensity and enthusiasm of the cheering Astros fans . 2006 -- 2010 : the
+decline ( edit ) In the 2006 offseason , the team signed Preston Wilson and moved Berkman to first base , ending the long tenure of Jeff Bagwell . The Astros
+renewed the contract with Clemens and traded two minor league prospects to the Tampa Bay Devil Rays for left - handed hitter Aubrey Huff . By August , Preston
+Wilson complained about his playing time after the return of Luke Scott from AAA Round Rock . The Astros released Wilson and he was signed by St. Louis . A
+dramatic season end included wins in 10 of their last 12 games , but the Astros missed a playoff appearance when they lost the final game of the season to the
+Atlanta Braves .
+</item 6>
+
+<item 7>
+2017 World Series
+Morton pitched four innings of relief to earn the win , as Corey Seager grounded out to José Altuve , who threw to Yuli Gurriel to end the game , series ,
+baseball season , with the Astros winning their first championship in franchise history , and ending their 56 - year drought . The Astros became the third
+consecutive road team to win a World Series Game 7 as well as the fourth consecutive team to end a World Series on the road ( after the 2014 Giants , 2015
+Royals and 2016 Cubs ) . They also became just the second team to win a seven game League Championship Series and a seven game World Series in the same year ,
+following the 1985 Kansas City Royals . Springer won the World Series MVP Award . Composite line score ( edit ) 2017 World Series ( 4 -- 3 ) : Houston Astros
+beat Los Angeles Dodgers .
+</item 7>
+
+<item 8>
+2017 World Series
+Team 5 6 7 8 9 10 11 Houston Astros 7 5 34 56 Los Angeles Dodgers 0 9 8 34 47 Home runs : HOU : George Springer ( 5 ) , José Altuve ( 2 ) , Alex Bregman ( 2 ) ,
+Carlos Correa ( 2 ) , Yuli Gurriel ( 2 ) , Marwin González ( 1 ) , Brian McCann ( 1 ) LAD : Joc Pederson ( 3 ) , Yasiel Puig ( 2 ) , Cody Bellinger ( 1 ) ,
+Charlie Culberson ( 1 ) , Corey Seager ( 1 ) , Chris Taylor ( 1 ) , Justin Turner ( 1 ) Total attendance : 346,702 Average attendance : 49,529 Winning player 's
+share : $438,901.57 . Losing player 's share : $259,722.14 .
+</item 8>
+
+<item 9>
+Houston Astros
+Louis , but would win the next three games , with Roy Oswalt getting the win . Though the Astros were poised to close out the series in Game Five in Houston ,
+Brad Lidge gave up a monstrous two - out three - run home run to Albert Pujols , forcing the series to a sixth game in St. Louis , where the Astros clinched a
+World Series appearance . Roy Oswalt was named NLCS MVP , having gone 2 -- 0 with a 1.29 ERA in the series . Current honorary NL President William Y. Giles
+presented the league champion Astros with the Warren C. Giles Trophy . Warren Giles , William 's father and President of the National League from 1951 to 1969 ,
+had awarded an MLB franchise to the city of Houston in 1960 . The Astros faced the Chicago White Sox in the World Series . Chicago had been considered the
+slight favorite but would win all four games , the first two at U.S. Cellular Field in Chicago and the final two in Houston .
+</item 9>
+
+<item 10>
+2005 World Series
+The Astros were attempting to become the fourth consecutive wild card team to win the Series , following the Anaheim Angels ( 2002 ) , Florida Marlins ( 2003 )
+and Boston Red Sox ( 2004 ) . Both teams were attempting to overcome decades of disappointment , with a combined 132 years between the two teams without a title
+. The Astros were making their first Series appearance in 44 years of play , while the White Sox had waited exactly twice as long for a title , having last won
+the Series in 1917 , and had not been in the Series since 1959 , three years before the Astros ' inaugural season . Like the 1982 World Series between the St.
+Louis Cardinals and the Milwaukee Brewers , the 2005 World Series is one of only two World Series in the modern era ( 1903 -- present ) with no possibility for
+a rematch between the two opponents , because the Astros moved to the American League in 2013 . However , the Brewers did meet the Cardinals in the 2011
+National League Championship Series .
+</item 10>
+=== END ITEM id=a194-2979b3bfa7853541 ===
+
+=== ITEM id=a160-cbaf3b8d27603b0a ===
+Gold sentences and facts:
+Sentence 0: Year Winning team Losing team Score Site Notes 1909 Pittsburgh Pirates Detroit Tigers 8 -- 0 Bennett Park , Detroit Rookie Babe Adams tosses a six hit shutout for his third win of the series . 1912 Boston Red Sox New York Giants 3 -- 2 F / 10 Fenway Park , Boston This decisive contest was actually game eight , as game two had ended in a tie . 1924 Washington Senators New York Giants 4 -- 3 F / 12 Griffith Stadium , Washington , D.C. Longest game seven in innings . In the 12th , Muddy Ruel doubled after a dropped foul popfly by Giants catcher Hank Gowdy . Ruel scored on a game - winning RBI double by Earl McNeely . 1925 Pittsburgh Pirates Washington Senators 9 -- 7 Forbes Field , Pittsburgh Pittsburgh became the first team in a best of seven to win the series when trailing three games to one . 1926 St. Louis Cardinals New York Yankees 3 -- 2 Yankee Stadium , the Bronx , New York City Grover Cleveland Alexander strikes out Tony Lazzeri with the bases loaded to end the seventh and preserve the Cardinals lead . Two innings later Babe Ruth is caught stealing to end the World Series . 1931 St. Louis Cardinals Philadelphia Athletics 4 -- 2 St. Louis , Missouri Last postseason game for the Athletics while based in Philadelphia . 1934 St. Louis Cardinals Detroit Tigers 11 -- 0 Navin Field , Detroit Dizzy Dean 's second win , a six - hit shutout on one day of rest , gives the Cardinals the title . 1940 Cincinnati Reds Detroit Tigers 2 -- 1 Crosley Field , Cincinnati This game was over in a snappy 1 : 47 while a sacrifice bunt and sacrifice fly scored the winning runs . 1945 Detroit Tigers Chicago Cubs 9 -- 3 Wrigley Field , Chicago Cubs last World Series appearance until 2016 . See also : Curse of the Billy Goat 1946 St. Louis Cardinals Boston Red Sox 4 -- 3 Sportsman 's Park III , St. Louis , Missouri Enos Slaughter 's famous mad dash scored the deciding run to win the game and the series . 1947 New York Yankees Brooklyn Dodgers 5 -- 2 Yankee Stadium , the Bronx , New York City This was the Series that featured Cookie Lavagetto 's pinch - hit that spoiled Bill Bevens ' no - hit bid and Al Gionfriddo 's catch to rob Joe DiMaggio of a home run . 1952 New York Yankees Brooklyn Dodgers 4 -- 2 Ebbets Field , Brooklyn , New York City Billy Martin 's game saving infield catch preserves the Yankees lead and helps win the game and the series . 1955 Brooklyn Dodgers New York Yankees 2 -- 0 Yankee Stadium , the Bronx , New York City Dodgers ' only championship in Brooklyn . The home team won all games of the series , except for game seven . 1956 New York Yankees Brooklyn Dodgers 9 -- 0 Ebbets Field , Brooklyn , New York City Jackie Robinson 's final Major League game . Last postseason game at Ebbets Field and Dodgers ' last postseason game before moving to Los Angeles . The home team won all games of the series , except for game seven . 1957 Milwaukee Braves New York Yankees 5 -- 0 Yankee Stadium , the Bronx , New York City The Braves ' only championship in Milwaukee . 1958 New York Yankees Milwaukee Braves 6 -- 2 County Stadium , Milwaukee The Yankees win their 18th World Series title after being down three games to one . This was the Braves ' last postseason game in Milwaukee . 1960 Pittsburgh Pirates New York Yankees 10 -- 9 Forbes Field , Pittsburgh Bill Mazeroski hit the walk - off home run to win the Pirates the championship . Last postseason game in Forbes Field . Last postseason game for Yankees ' manager Casey Stengel . Highest scoring game seven . 1962 New York Yankees San Francisco Giants 1 -- 0 Candlestick Park , San Francisco With runners on second and third and two outs , Willie McCovey 's line drive to Bobby Richardson ended the game . First game seven that ended with a 1 - 0 score . 1964 St. Louis Cardinals New York Yankees 7 -- 5 Busch Stadium I , St. Louis , Missouri The Yankees ' last World Series appearance until 1976 . Last postseason game at Busch Stadium I . 1965 Los Angeles Dodgers Minnesota Twins 2 -- 0 Metropolitan Stadium , Bloomington , Minnesota Pitching through immense pain and on two days rest , Sandy Koufax throws a 3 hit shutout to win the Series and World Series MVP . The home team won all games of the series , except for game seven . 1967 St. Louis Cardinals Boston Red Sox 7 -- 2 Fenway Park , Boston Bob Gibson wins his third game of the Series and also homers . 1968 Detroit Tigers St. Louis Cardinals 4 -- 1 Busch Stadium II , St. Louis , Missouri Mickey Lolich out - duels Bob Gibson . The Tigers rallied from a 3 - 1 deficit to win the series . First game seven loss by the Cardinals in the World Series . 1971 Pittsburgh Pirates Baltimore Orioles 2 -- 1 Memorial Stadium , Baltimore The home team won all games of the series , except for game seven . 1972 Oakland Athletics Cincinnati Reds 3 -- 2 Riverfront Stadium , Cincinnati The A 's first championship in Oakland . The A 's were the last American League team to win a World Series game seven on the road until 2017 . 1973 Oakland Athletics New York Mets 5 -- 2 Oakland -- Alameda County Coliseum , Oakland , California Bert Campaneris and Reggie Jackson hit the only Oakland home runs in this game to set the tone for victory and the series . Cincinnati Reds Boston Red Sox 4 -- 3 Fenway Park , Boston One night after Carlton Fisk 's famous home run , the Reds rebound to take the Series . 1979 Pittsburgh Pirates Baltimore Orioles 4 -- 1 Memorial Stadium , Baltimore The Pittsburgh Pirates , powered by NLCS and World Series MVP Willie Stargell , rally from a 3 - 1 deficit to win the series . The Pirates were the last team to win a road game seven until 2014 . 1982 St. Louis Cardinals Milwaukee Brewers 6 -- 3 Busch Stadium II , St. Louis , Missouri Joaquín Andújar earns his second win of the Series and Bruce Sutter his second save . 1985 Kansas City Royals St. Louis Cardinals 11 -- 0 Royals Stadium , Kansas City , Missouri Second World Series held entirely in the state of Missouri . The Royals also won the 1985 American League Championship Series in seven games . Royals became first team to win the World Series after losing the first two games at home . The Royals were the last team to come back from 3 -- 1 down to win a title , in any of the five major men 's professional sports leagues , until the Cleveland Cavaliers won the 2016 NBA Finals after trailing 3 -- 1 . The 1985 Royals were the last team to win a World Series after trailing 3 -- 1 until the Cubs did so in 2016 . 1986 New York Mets Boston Red Sox 8 -- 5 Shea Stadium , Flushing , Queens , New York Mets become the first team to be one strike away from elimination and come back to win the series . They also become the second team to win the series after losing the first two at home . Minnesota Twins St. Louis Cardinals 4 -- 2 Hubert H. Humphrey Metrodome , Minneapolis The home team won all seven games of the series for the first time in MLB history . 1991 Minnesota Twins Atlanta Braves 1 -- 0 F / 10 Hubert H. Humphrey Metrodome , Minneapolis Like in 1987 , the home team won all games of the series . The Twins won in the bottom of the 10th on a walk - off single by Gene Larkin scoring Dan Gladden after ​ 9 ⁄ scoreless innings of play . Jack Morris goes all ten innings for the Twins and is named the Series MVP . Twins Centerfielder Kirby Puckett hit a famous walk - off home run in the bottom of the eleventh inning of the previous night 's game to force this decisive game . 1997 Florida Marlins Cleveland Indians 3 -- 2 F / 11 Pro Player Stadium , Miami Gardens , Florida Florida becomes the first wild card team to win the World Series . The Marlins rallied for one run in the bottom of the ninth to tie and won in the eleventh on an Édgar Rentería RBI single off Charles Nagy . 2001 Arizona Diamondbacks New York Yankees 3 -- 2 Bank One Ballpark , Phoenix , Arizona Arizona becomes the fastest expansion team to win the World Series , rallying for two runs in the bottom of the ninth for a come - from - behind win , capped off by Luis Gonzalez hitting the winning RBI single off closer Mariano Rivera . The home team won every game of the series . 2002 Anaheim Angels San Francisco Giants 4 -- 1 Edison International Field , Anaheim , California Both World Series teams were wild card entrants into the playoffs . John Lackey became the second rookie pitcher to win a World Series game seven . 2011 St. Louis Cardinals Texas Rangers 6 -- 2 Busch Stadium , St. Louis , Missouri Cardinals became the second team to be one strike away from elimination and come back to win the series , which they did twice . Just like the 1991 series , a walk - off home run in the bottom of the eleventh inning of game six , forced this decisive game with David Freese providing the fire power . Most recent game seven won by the home team . 2014 San Francisco Giants Kansas City Royals 3 -- 2 Kauffman Stadium , Kansas City , Missouri Like in 2002 , both World Series teams were wild card entrants into the playoffs . The Giants became the first NL team to win a game seven on the road since 1979 . NLCS MVP and eventual World Series MVP Madison Bumgarner , normally a starter , pitched five scoreless innings of relief on two days rest to save the Giants ' third title in five years . 2016 Chicago Cubs Cleveland Indians 8 -- 7 F / 10 Progressive Field , Cleveland , Ohio Chicago Cubs ' first World Series win since 1908 . Game played between the two teams ( Cleveland Indians and Chicago Cubs ) with the longest active championship droughts . The Cubs are the first Major League Baseball team to come back to win the World Series from a 3 -- 1 series deficit since the 1985 Royals . Most recent World Series game seven to be decided in extra innings . First extra innings game seven to be won by the road team . 2017 Houston Astros Los Angeles Dodgers 5 -- 1 Dodger Stadium , Los Angeles First instance of back - to - back game sevens since 2001 -- 2002 . First World Series championship for the Astros , who became the first AL team to win a World Series game 7 on the road since 1972 . The Astros became the second team to win two winner - take - all game sevens in the same postseason since the Kansas City Royals in 1985 .
+  Fact 0.58: 1965 World Series: The home team won all games of the series except game seven.
+
+Retrieved items:
+<item 1>
+A game seven is the decisive game in a best-of-seven playoff series, akin to a championship final; most football codes do not use series. MLB game sevens occur
+in League Championship Series and World Series, not the best-of-five Division Series. The World Series has had 39 decisive game sevens; home teams are 19–20.
+Four early World Series used best-of-nine formats, but none reached game nine. In extra-inning game sevens, the Giants and Indians lost both
+</item 1>
+
+<item 2>
+Game seven
+Game played between the two teams ( Cleveland Indians and Chicago Cubs ) with the longest active championship droughts . The Cubs are the first Major League
+Baseball team to come back to win the World Series from a 3 -- 1 series deficit since the 1985 Royals . Most recent World Series game seven to be decided in
+extra innings . First extra innings game seven to be won by the road team . 2017 Houston Astros Los Angeles Dodgers 5 -- 1 Dodger Stadium , Los Angeles First
+instance of back - to - back game sevens since 2001 -- 2002 . First World Series championship for the Astros , who became the first AL team to win a World
+Series game 7 on the road since 1972 . The Astros became the second team to win two winner - take - all game sevens in the same postseason since the Kansas City
+Royals in 1985 . League Championship Series ( edit ) The League Championship Series were originally decided best of five from 1969 until 1984 . Since 1985 when
+both were expanded to best of seven contests , 16 series ( 7 American , 9 National ) were decided in game seven .
+</item 2>
+
+<item 3>
+A Game 7 is the deciding contest of a tied best-of-seven series, common in MLB, NBA and NHL playoffs. World Series Game 7s have seen home teams go 19–20;
+highlights include the 2016 Cubs’ comeback from 3–1, the first road-team extra-inning win, and 1988’s unprecedented game featuring Canseco’s grand slam and
+Gibson’s walk-off homer. Other memorable moments include Slaughter’s 1946 “Mad Dash,”
+</item 3>
+
+<item 4>
+The 2016 World Series Game 7 matched Cleveland and Chicago, MLB’s teams with the longest active championship droughts. The Cubs overcame a 3–1 deficit, becoming
+the first team to do so since the 1985 Royals; they won the latest extra-inning World Series Game 7 and the first such game won by the road team. In 2017,
+Houston beat the Dodgers 5–1 for its first title, in the first back-to-back World Series Game
+</item 4>
+
+<item 5>
+In World Series Game Sevens, home teams have a 19–20 record. Notable results: Pittsburgh beat Detroit 8–0 in 1909 as rookie Babe Adams threw a six-hit shutout;
+Boston beat New York 3–2 in 10 innings in 1912, in the series’ eighth game after a tie; Washington won 4–3 in 12 innings in 1924, the longest Game Seven, on
+Earl McNeely’s RBI double; and
+</item 5>
+
+<item 6>
+2017 World Series
+Game 5 lasted five hours and seventeen minutes , making it the second longest World Series game in history by time , trailing only the 14 inning contest between
+the Astros and the Chicago White Sox in Game 3 of the 2005 World Series in the same ballpark , as well as the third World Series game ever to go beyond five
+hours of game time . This game is considered one of the greatest World Series games of all time . Game 6 ( edit ) Kenley Jansen recorded a two - inning save in
+Game 6 .
+</item 6>
+
+<item 7>
+The 2017 World Series Game 5 lasted 5 hours, 17 minutes—the second-longest by time, behind the 2005 Astros–White Sox Game 3 at the same ballpark—and is
+considered one of the greatest World Series games. In Game 6, Kenley Jansen earned a two-inning save. In 2005, Houston disputed a roof-closure ruling, citing
+its stronger record with the roof closed; officials said the decision followed established rules and weather forecasts.
+</item 7>
+
+<item 8>
+Game seven
+1 World Series 1.1. 2 League Championship Series 1.2 National Hockey League 1.3 National Basketball Association 1.4 Chinese Professional Baseball League 2
+Comebacks 3 References Examples ( edit ) Major League Baseball ( edit ) In the MLB Postseason , game seven can occur in the League Championship Series and the
+World Series ( the divisional series are best of five ) . In the World Series , there have been 39 decisive game sevens ( of the four World Series that were
+contested on a best - of - nine basis , none went to a game nine , though all four included a non-decisive game seven ) . World Series ( edit ) World Series
+that were decided on a game seven : All extra inning game sevens involve three franchises each with two appearances , the New York / San Francisco Giants (
+losing both ) , the Washington Senators / Minnesota Twins ( winning both ) and the Cleveland Indians ( losing both ) . Home teams are 19 -- 20 in game sevens .
+</item 8>
+
+<item 9>
+Game seven
+2012 NLCS San Francisco Giants St. Louis Cardinals 9 -- 0 AT&T Park , San Francisco , California First Giants victory in a winner - take - all game seven . The
+Giants would go on to sweep the Detroit Tigers in the World Series . 2017 ALCS Houston Astros New York Yankees 4 -- 0 Minute Maid Park , Houston , Texas The
+home team won all games of the series . Houston became the first franchise to win the pennant in both the National League and American League . The Astros would
+go on to win the World Series over the Los Angeles Dodgers in seven games , becoming the second MLB team to win two game sevens in a single postseason .
+National Hockey League ( edit ) Main article : List of NHL game sevens In the NHL playoffs , game seven can occur in all playoff series . In the Stanley Cup
+Final , the NHL gained complete control of the Cup in 1926 , and the league instituted the best - of - seven series starting in the 1938 -- 39 season . No
+Stanley Cup Final game seven has ever ended with a 1 -- 0 score .
+</item 9>
+
+<item 10>
+Game seven
+Louis the NL Pennant . The Cardinals would lose the World Series as the Minnesota Twins give new meaning to the term home - field advantage in the World Series
+as only the decisive game seven is close . 1988 NLCS Los Angeles Dodgers New York Mets 6 -- 0 Dodger Stadium , Los Angeles Orel Hershiser pitches a five - hit
+shutout to send the Dodgers to the World Series . Until 2017 , this was the only game seven of any postseason series to be played in Dodger Stadium . 1991 NLCS
+Atlanta Braves Pittsburgh Pirates 4 -- 0 Three Rivers Stadium , Pittsburgh , Pennsylvania Back - to - back shutouts in games six and seven helps the Braves win
+the pennant . The Braves would lose the series to Minnesota in seven games in what is regarded as the best World Series of all time . 1992 NLCS Atlanta Braves
+Pittsburgh Pirates 3 -- 2 Atlanta -- Fulton County Stadium , Atlanta Atlanta scored all three runs in the bottom of the ninth . Pinch hitter Francisco Cabrera
+drove in the two winning runs with a two - out single with the bases loaded . The winning run was scored by Sid Bream .
+</item 10>
+=== END ITEM id=a160-cbaf3b8d27603b0a ===
+
+=== ITEM id=a161-b3b9defe4b6b375d ===
+Gold sentences and facts:
+Sentence 0: The Rolling Stones are an English rock band formed in London , England in 1962 . The first stable line - up consisted of Brian Jones ( guitar , harmonica ) , Mick Jagger ( lead vocals ) , Keith Richards ( guitar , backing vocals ) , Bill Wyman ( bass ) , Charlie Watts ( drums ) , and Ian Stewart ( piano ) . Stewart was removed from the official line - up in 1963 but continued as a touring member until his death in 1985 . Jones left the band less than a month before his death in 1969 , having already been replaced by Mick Taylor , who remained until 1974 . After Taylor left the band , Ronnie Wood took his place in 1975 and has been on guitar in tandem with Richards ever since . Following Wyman 's departure in 1993 , Darryl Jones joined as their touring bassist . Touring keyboardists for the band have been Nicky Hopkins ( 1967 -- 1982 ) , Ian McLagan ( 1978 -- 1981 ) , Billy Preston ( through the mid-1970s ) and Chuck Leavell ( 1982 -- present ) . The band was first led by Brian Jones , but after developing into the band 's songwriters , Jagger and Richards assumed leadership when Jones was dealing with personal troubles and legal issues .
+  Fact 2.15: Ronnie Wood has been on guitar in tandem with Keith Richards ever since 1975.
+
+Retrieved items:
+<item 1>
+Formed in London in 1962, the Rolling Stones grew from blues and R&B covers into a defining, rebellious rock band led by Mick Jagger and Keith Richards. After a
+brief psychedelic phase, they made acclaimed blues-rooted albums including *Beggars Banquet*, *Let It Bleed*, *Sticky Fingers* and *Exile on Main St.* Lineup
+changes included Brian Jones’s replacement by Mick Taylor, Ronnie Wood’s arrival and Bill Wyman’s departure.
+</item 1>
+
+<item 2>
+The Rolling Stones
+bass guitar , vocals ( 1962 -- present ) Charlie Watts -- drums , percussion ( 1963 -- present ) Ronnie Wood -- lead and rhythm guitar , bass guitar , backing
+vocals ( 1975 -- present ) Former members Brian Jones -- rhythm guitar , harmonica , keyboards , piano , backing vocals ( 1962 -- 1969 ; died 1969 ) Ian Stewart
+-- keyboards , piano ( 1962 -- 1963 ; touring 1969 , 1975 -- 1976 , 1978 , 1981 -- 1982 ; died 1985 ) Mick Taylor -- lead guitar , bass guitar , backing vocals
+( 1969 -- 1974 ; guest 1981 , 2012 -- 2014 ) Bill Wyman -- bass guitar , keyboards , piano , backing vocals ( 1962 -- 1993 ;
+</item 2>
+
+<item 3>
+The Rolling Stones
+The Rolling Stones - wikipedia The Rolling Stones Jump to : navigation , search `` Rolling Stones '' redirects here . For other uses , see Rolling Stones (
+disambiguation ) . For the magazine , see Rolling Stone . The Rolling Stones The Rolling Stones performing at Summerfest in Milwaukee in 2015 . Left to right :
+Charlie Watts , Ronnie Wood , Mick Jagger and Keith Richards Background information Origin London , England Genres Rock blues Years active 1962 -- present
+Labels Decca London Rolling Stones Virgin ABKCO Interscope Polydor Associated acts The New Barbarians Billy Preston Faces The Pretty Things John Mayall & the
+Bluesbreakers Bill Wyman 's Rhythm Kings Website rollingstones.com Members Mick Jagger Keith Richards Charlie Watts Ronnie Wood Past members Brian Jones Ian
+Stewart Dick Taylor Bill Wyman Mick Taylor The Rolling Stones are an English rock band formed in London , England in 1962 . The first stable line - up consisted
+of Brian Jones ( guitar , harmonica ) , Mick Jagger ( lead vocals ) , Keith Richards ( guitar , backing vocals ) , Bill Wyman ( bass ) , Charlie Watts ( drums )
+, and Ian Stewart ( piano ) .
+</item 3>
+
+<item 4>
+The Rolling Stones’ listed members include an unnamed member on bass and vocals (1962–present), Charlie Watts on drums and percussion (1963–present), and Ronnie
+Wood on guitars, bass, and backing vocals (1975–present). Former members include Brian Jones, Ian Stewart, Mick Taylor, and Bill Wyman, whose listed tenure was
+1962–1993.
+</item 4>
+
+<item 5>
+A bibliography of Rolling Stones-related sources, including setlists, the addition of backing vocalist Sasha Allen, and profiles or obituaries of sidemen Bobby
+Keys, Jim Price, Billy Preston, Nicky Hopkins, Ernie Watts, and Ian McLagan. It also cites an article about the band’s reputation as the world’s greatest
+rock-and-roll group. Most sources were accessed in August 2017.
+</item 5>
+
+<item 6>
+The Rolling Stones
+By 1963 they were finding their musical stride as well as popularity , and in 1964 two unscientific opinion polls rated them as Britain 's most popular group ,
+even outranking the Beatles . The name of the band was changed shortly after their first gig to `` The Rolling Stones '' . The group 's then acting manager
+Giorgio Gomelsky secured a Sunday afternoon residency at the Crawdaddy Club in Richmond in February 1963 , which , Gomelsky claimed , triggered an ``
+international renaissance for the blues '' . In May 1963 , The Rolling Stones signed Andrew Loog Oldham as their manager ; he was a former publicist who had
+been directed to the band by his previous clients , the Beatles . Because Oldham was only nineteen and had not reached the age of majority -- he was also
+younger than anyone in the band -- he could not get an agent 's licence nor sign any contracts without his mother also signing . By necessity he joined with
+booking agent Eric Easton in order to secure record financing and assistance booking venues . Gomelsky , who had no written agreement with the band , was not
+consulted .
+</item 6>
+
+<item 7>
+The Rolling Stones are an English rock band formed in London in 1962 and active ever since. The original lineup included Brian Jones, Mick Jagger, Keith
+Richards, Bill Wyman, Charlie Watts and pianist Ian Stewart; Ronnie Wood later joined. Jones reportedly named the group after a Muddy Waters song. Their first
+billed performance was at London’s Marquee Club on 12 July 1962. Starting with blues and early rock ’n’ roll covers, they developed a sound drawing on
+</item 7>
+
+<item 8>
+The excerpt lists Rolling Stones personnel and early discography. Early members included bassists Dick Taylor, Ricky Fenson and Colin Golding, and drummers Tony
+Chapman and Carlo Little (1962–63). Long-serving touring members include Chuck Leavell (keyboards, 1982–present), Bernard Fowler (vocals/percussion,
+1989–present), Darryl Jones (bass, 1993–present), and saxophonists Tim Ries and Karl D
+</item 8>
+
+<item 9>
+The Rolling Stones
+According to Richards , Jones named the band during a phone call to Jazz News . When asked by a journalist for the band 's name , Jones saw a Muddy Waters LP
+lying on the floor ; one of the tracks was `` Rollin ' Stone '' . 1962 -- 1964 : building a following ( edit ) The back room of what was the Crawdaddy Club in
+Richmond , London where the Rolling Stones had their first residency in 1963 Jones , Jagger , Richards , Stewart and Taylor played a gig billed as `` the Rollin
+' Stones '' on 12 July 1962 , at the Marquee Club in London . Shortly afterwards the band went on their first tour of the UK , which they called a `` training
+ground '' tour , because it was a new experience for all of them . Their material included the Chicago blues as well as Chuck Berry and Bo Diddley songs . At
+that time , the line - up included neither bassist Bill Wyman , who joined in December 1962 , nor drummer Charlie Watts , who joined in January 1963 , thus
+completing the band 's original rhythm section .
+</item 9>
+
+<item 10>
+The Rolling Stones are an English blues-rock band formed in 1962 and associated with the British Invasion and 1960s counterculture. The excerpt also lists
+related titles, including *Hail! Rock ’n’ Roll*, *Wingless Angels*, Bill Wyman’s solo albums *Monkey Grip*, *Green Ice* and *Back to Basics*, and the songs “In
+Another Land” and “(Si Si) Je Suis un Rock Star.” It includes numerous library and music
+</item 10>
+=== END ITEM id=a161-b3b9defe4b6b375d ===
+
+=== ITEM id=a139-0647cbe8f3199123 ===
+Gold sentences and facts:
+Sentence 0: No . overall No. in season Title Directed by Written by Original air date U.S. viewers ( millions ) 65 `` Chapter Sixty - Five '' Brad Silberling Jennie Snyder Urman & Paul Sciarrotta October 13 , 2017 ( 2017 - 10 - 13 ) 0.68 Picking up immediately after where Season 3 left off , Jane is reunited with her first love , Adam , who found the love letter that Michael wrote . She is surprised , but happy , to see him . However , both Xo and Alba are less thrilled that he is back . Meanwhile , Rafael loses ownership of the hotel to his sister and as a result , he finds himself living at Jane 's house , broke and homeless . Jane and Rafael learn that the missing Petra has been found after she got away from Anezka and they rush to her side , but Anezka is nowhere to be found . When Petra returns to the hotel , Luisa thinks that Petra is Anezka . Petra goes along with the game , until the real Anezka returns . Elsewhere , Xo and Rogelio 's married life is interrupted when they confront the realization that Darci is having Rogelio 's baby and she wants full custody . 66 `` Chapter Sixty - Six '' Gina Lamar Valentina Garza & Jessica O'Toole & Amy Rardin October 20 , 2017 ( 2017 - 10 - 20 ) 0.61 Jane 's relationship with Adam helps bring out her `` fun side '' and reminds her that she is n't just a mom . However , when Adam gets a job opportunity out of state , he asks for Jane 's opinion on if he should stay or go . Meanwhile , Rogelio continues to face issues with his co-star at work and things are about to get even worse . Xo is helping to take care of Darci to prove that Rogelio is committed to being a father to the baby . Also , Petra and Rafael begin working together to try and buy back the hotel from Luisa , but they are running into trouble involving Anezka , causing tension between them . 67 `` Chapter Sixty - Seven '' Fernando Sariñana Carolina Rivera & Micah Schraft October 27 , 2017 ( 2017 - 10 - 27 ) 0.60 Jane and Adam 's relationship seems to be moving on , and Jane thinks that it might be time for him to meet her son Mateo , but Rafael is not happy with this idea . Meanwhile , as the arrival of Darci 's baby approaches , Rogelio 's jealously of her new boyfriend increases as well . Trying to be supportive , Xo encourages Rogelio to step up and be the father he was meant to be . Elsewhere , Rafael is determined to get his hotel and life back from Luisa and will do whatever he has to do to make it happen , with or without Petra 's help . 68 `` Chapter Sixty - Eight '' Gina Lamar Deirdre Shaw & Chantelle M. Wells November 3 , 2017 ( 2017 - 11 - 03 ) 0.69 Jane becomes angry when she learns that Rafael introduced Mateo to his new girlfriend , Katherine , without her consent because she thinks Katherine is a negative influence on both Rafael and Mateo . Jane turns to Petra for help with the situation . Meanwhile , Rogelio and Darci struggle to choose a name for the baby . Elsewhere , Xo , who is focused on opening her own dance studio , decides to go into business with an unlikely foe . 69 5 `` Chapter Sixty - Nine '' Stuart Gillard Paul Sciarrotta November 10 , 2017 ( 2017 - 11 - 10 ) 0.65 After Adam reveals his dating past to Jane , she becomes so unsure and insecure that it puts a strain on their relationship . Meanwhile , Lina seeks Jane 's advice about whether she should get married or not . Petra hears some important information that could help Rafael get the hotel back . Also , Xo asks Rogelio to consider having a medical procedure ( vasectomy ) done , but he is very hesitant . 70 6 `` Chapter Seventy '' Melanie Mayron Carolina Rivera & Micah Schraft November 17 , 2017 ( 2017 - 11 - 17 ) 0.61 Jane 's book is finally being released but her plans to have a party at the local bookshop where she was inspired to be a writer hit a snag . Always wanting to help Jane , Rogelio devises a plan to save the day , but one of his arch - rivals threatens to ruin the day . Meanwhile , Rafael gets a new job , but it is not exactly what he was hoping for . Also , Petra has come up with an interesting strategy to get the Marbella Hotel back from Luisa , but Rafael wants nothing to do with the scheme . 71 7 `` Chapter Seventy - One '' Micah Schraft Valentina Garza & Deidre Shaw December 8 , 2017 ( 2017 - 12 - 08 ) 0.65 Anezka is revealed to have faked her death to see where her loyalties lie ; initially , she trusts Petra after believing she saw her cry , but after finding out she was n't crying because of her fake death , she threatens Petra . Later , Anezka falls from Petra 's apartment to her death ... for real . Meanwhile , Xiomara and Jane set off on Jane 's book tour , when Alba decides to tag along . After they get back , Jane and Rafael share a kiss . 72 8 `` Chapter Seventy - Two '' Melanie Mayron Carolina Rivera & Paul Sciarrotta January 26 , 2018 ( 2018 - 01 - 26 ) 0.68 Mateo starts kindergarten and invites a friend over to Xiomara and Rogelio 's house . Jane and Rafael try to cover up that they are pretending to live in their house so they do n't get kicked out . Jane and Rafael show mixed emotions following the kiss and try again , which Mateo notices . He then proclaims : `` Does this mean you 're going to get married ? '' After Xo convinces Rogelio to attend couples therapy , they both are surprised by their emotions . Meanwhile , Petra hires a lawyer named Jane Ramos ( Rosario Dawson ) , to ensure she gets no charges pending Anezka 's death . Also , Rafael moves out of Jane 's house into his new apartment . 73 9 `` Chapter Seventy - Three '' Eric Lea Valentina Garza & Chantelle M. Wells February 2 , 2018 ( 2018 - 02 - 02 ) 0.67 When Jane and Rafael finally realize that the uncertain state of their relationship ( or lack of it ) is stressing out Mateo , they decide that they need to make a decision . Meanwhile , Petra is on the outs with Jane and Rafael after the Luisa fiasco , so she tries to figure out a way to get back into their good graces . Elsewhere , Rogelio and Xo are both contemplating their career choices . 74 10 `` Chapter Seventy - Four '' Gina Rodriguez Micah Schraft & Paul Sciarrotta February 9 , 2018 ( 2018 - 02 - 09 ) 0.80 Jane and Rafael try to be friends , which works great until Jane goes on a date . Meanwhile , Petra and Jane 's new partnership is off to a rocky start , but they both know they have to find a way to work together somehow . Rogelio is convinced he has male post-partum depression , which puts him at odds with with celebrity Post-Partum Advocate River Fields ( guest star Brooke Shields ) on The Talk . Also , Alba finally confides in Jane why she turned down the marriage proposal , leaving Jane to help Alba in the romance department when Jane takes Alba to a sex store and buys her a vibrator . Elsewhere , Jane and Rafael agree to have sex , and Petra questions her own sexual identity when she starts to have sex dreams about Jane `` J.R. '' Ramos after the lawyer begins flirting with her . 75 11 `` Chapter Seventy - Five '' Gina Lamar Merigan Mulhern March 2 , 2018 ( 2018 - 03 - 02 ) 0.59 Jane is ready to move on from the Marbella Hotel issues and pursue writing full time , but an unexpected development forces her to consider returning to her teaching roots . Xiomara decides to go back to school where she listens in on an art history class , while Jane teaches a seminar about writing . Here , Jane finds out Jonathan Chavez , her former advisor , is taking advantage of another student of his . While trying to warn the student , Jane accidentally grabs her breasts to avoid falling over and , as a result , does n't get the teaching job she was applying for . Meanwhile , Petra gets arrested for Anezka 's murder due to the blackmailer planting the screws in her apartment , leading Jane Ramos to tell Petra that she was framing her because she was being threatened by an unknown blackmailer . Also , Rafael and Jane continue their affair . Elsewhere , Rogelio tries to get Eva Longoria to join his Passions of Santos reboot , but instead finds out the two are distant cousins . 76 12 `` Chapter Seventy - Six '' Melanie Mayron Leah Longoria March 9 , 2018 ( 2018 - 03 - 09 ) 0.58 Jane 's fixation on a negative review has left her with writer 's block , so Rogelio suggests she take a writing class to help . With the encouragement of Jane , Rafael is ready to dig into his past to find out who his real biological parents are . Meanwhile , Rogelio is trying to make things less about him and more about Xo , but he grows suspicious when he learns she is keeping a secret from him . But the secret Xo has been keeping is not what Rogelio suspected . Elsewhere , Petra tests the loyalty of her lawyer , Jane Ramos , by pretending to be romantically interested in her while trying to find out the identity of the blackmailer . After Petra confides in Jane R. of her feelings which are not fake , the two of them sleep together for the first time . 77 13 `` Chapter Seventy - Seven '' Gina Lamar Deirdre Shaw & Chantelle M. Wells March 16 , 2018 ( 2018 - 03 - 16 ) 0.59 When Jane , Rogelio and Alba learn what is going on with Xo who might have breast cancer , they all try to comfort her , but Xo insists they let her live her life . Meanwhile , Rogelio finally gets River Fields to agree to meet with him , but he learns that River has another plan in mind . Also , Rafael is on a mission to find his sister , who may have the information he has been looking for of his origins . Rafael visits Rose in prison to ask for her help , but he quickly turns her down when she makes a demand to know Luisa 's location . Also , Jane is upset with Petra after her twin girls spill a secret to Mateo about the Tooth Fairy being make believe . At the same time , Jane ' J.R. ' Ramos tells Petra after their romantic night together that she is not interested in a relationship due to the blackmailer paying a visit to Jane R. 's dementia - stricken mother in a rest home . At the end , the identity of Jane R 's blackmailer is finally revealed . 78 14 `` Chapter Seventy - Eight '' Justin Baldoni Valentina Garza & Micah Schraft March 23 , 2018 ( 2018 - 03 - 23 ) 0.65 Xo struggles to make an important decision on whether or not to get a full mastectomy and looks to Jane for guidance , leaving Rogelio feeling like an outsider . Alba is frustrated with Rogelio when it seems he is once again making his career a priority over Xo 's well being . Meanwhile , Petra turns to Rafael for advice on her love life after he finally learns about her new romance with J.R. 79 15 `` Chapter Seventy - Nine '' Gina Lamar Paul Sciarrotta April 6 , 2018 ( 2018 - 04 - 06 ) 0.53 80 16 `` Chapter Eighty '' Micah Schraft Micah Schraft April 13 , 2018 ( 2018 - 04 - 13 ) 0.57 Jane and Rafael start saving up to buy a one - bedroom apartment , but their plan falls apart when Mateo breaks an antique $4,000 clock . Rafael moves into the Villanueva house , but after Alba hits Mateo , the two get into a heated argument and Rafael moves back out . Xiomara starts chemotherapy , and makes a friend named Donna . The timeline moves forward nine weeks , and Donna dies of unforeseen consequences . Xiomara is shown not to be doing well due to the chemotherapy , Alba and Rafael are still in a fight and River and Rogelio are still arguing over the Passions of Santos adaptation . Alba breaks down to Jane , and she and Rafael make up . Xiomara bonds with River over telenovelas , after she accidentally eats a pot brownie , and she agrees to do the Passions of Steve and Brenda the Latin American way . Jane Ramos gets herself disbarred , and as a result gets the case against Petra thrown out . 81 17 `` Chapter Eighty - One '' Gina Lamar Jennie Snyder Urman & Paul Sciarrotta April 20 , 2018 ( 2018 - 04 - 20 ) 0.58 Rafael intends to propose to Jane , however Rose 's news unsettles him . Alba becomes a citizen and the Villanueva 's throw her a surprise party . Jane Ramos and Petra plan to move in together , until Jane finds out that Petra killed Anezka . As she walks out , Krishna tells her that her life is in danger . J.R. saves Petra 's life by shooting , and killing , the blackmailer . As Jane meets Rafael , Michael is revealed to be alive .
+  Fact 1.117: Chapter Seventy-Six first aired March 9, 2018, with 0.58 million U.S. viewers.
+
+Retrieved items:
+<item 1>
+Jane the Virgin (season 4)
+Meanwhile , Rogelio is trying to make things less about him and more about Xo , but he grows suspicious when he learns she is keeping a secret from him . But
+the secret Xo has been keeping is not what Rogelio suspected . Elsewhere , Petra tests the loyalty of her lawyer , Jane Ramos , by pretending to be romantically
+interested in her while trying to find out the identity of the blackmailer . After Petra confides in Jane R. of her feelings which are not fake , the two of
+them sleep together for the first time . 77 13 `` Chapter Seventy - Seven '' Gina Lamar Deirdre Shaw & Chantelle M. Wells March 16 , 2018 ( 2018 - 03 - 16 )
+0.59 When Jane , Rogelio and Alba learn what is going on with Xo who might have breast cancer , they all try to comfort her , but Xo insists they let her live
+her life . Meanwhile , Rogelio finally gets River Fields to agree to meet with him , but he learns that River has another plan in mind .
+</item 1>
+
+<item 2>
+Jane the Virgin (season 4)
+Meanwhile , Rafael gets a new job , but it is not exactly what he was hoping for . Also , Petra has come up with an interesting strategy to get the Marbella
+Hotel back from Luisa , but Rafael wants nothing to do with the scheme . 71 7 `` Chapter Seventy - One '' Micah Schraft Valentina Garza & Deidre Shaw December 8
+, 2017 ( 2017 - 12 - 08 ) 0.65 Anezka is revealed to have faked her death to see where her loyalties lie ; initially , she trusts Petra after believing she saw
+her cry , but after finding out she was n't crying because of her fake death , she threatens Petra . Later , Anezka falls from Petra 's apartment to her death
+... for real . Meanwhile , Xiomara and Jane set off on Jane 's book tour , when Alba decides to tag along . After they get back , Jane and Rafael share a kiss .
+</item 2>
+
+<item 3>
+Jane the Virgin (season 4)
+Also , Rafael moves out of Jane 's house into his new apartment . 73 9 `` Chapter Seventy - Three '' Eric Lea Valentina Garza & Chantelle M. Wells February 2 ,
+2018 ( 2018 - 02 - 02 ) 0.67 When Jane and Rafael finally realize that the uncertain state of their relationship ( or lack of it ) is stressing out Mateo , they
+decide that they need to make a decision . Meanwhile , Petra is on the outs with Jane and Rafael after the Luisa fiasco , so she tries to figure out a way to
+get back into their good graces . Elsewhere , Rogelio and Xo are both contemplating their career choices . 74 10 `` Chapter Seventy - Four '' Gina Rodriguez
+Micah Schraft & Paul Sciarrotta February 9 , 2018 ( 2018 - 02 - 09 ) 0.80 Jane and Rafael try to be friends , which works great until Jane goes on a date .
+Meanwhile , Petra and Jane 's new partnership is off to a rocky start , but they both know they have to find a way to work together somehow .
+</item 3>
+
+<item 4>
+Jane the Virgin (season 4)
+Here , Jane finds out Jonathan Chavez , her former advisor , is taking advantage of another student of his . While trying to warn the student , Jane
+accidentally grabs her breasts to avoid falling over and , as a result , does n't get the teaching job she was applying for . Meanwhile , Petra gets arrested
+for Anezka 's murder due to the blackmailer planting the screws in her apartment , leading Jane Ramos to tell Petra that she was framing her because she was
+being threatened by an unknown blackmailer . Also , Rafael and Jane continue their affair . Elsewhere , Rogelio tries to get Eva Longoria to join his Passions
+of Santos reboot , but instead finds out the two are distant cousins . 76 12 `` Chapter Seventy - Six '' Melanie Mayron Leah Longoria March 9 , 2018 ( 2018 - 03
+- 09 ) 0.58 Jane 's fixation on a negative review has left her with writer 's block , so Rogelio suggests she take a writing class to help . With the
+encouragement of Jane , Rafael is ready to dig into his past to find out who his real biological parents are .
+</item 4>
+
+<item 5>
+Jane the Virgin (season 4)
+Rogelio is convinced he has male post-partum depression , which puts him at odds with with celebrity Post-Partum Advocate River Fields ( guest star Brooke
+Shields ) on The Talk . Also , Alba finally confides in Jane why she turned down the marriage proposal , leaving Jane to help Alba in the romance department
+when Jane takes Alba to a sex store and buys her a vibrator . Elsewhere , Jane and Rafael agree to have sex , and Petra questions her own sexual identity when
+she starts to have sex dreams about Jane `` J.R. '' Ramos after the lawyer begins flirting with her . 75 11 `` Chapter Seventy - Five '' Gina Lamar Merigan
+Mulhern March 2 , 2018 ( 2018 - 03 - 02 ) 0.59 Jane is ready to move on from the Marbella Hotel issues and pursue writing full time , but an unexpected
+development forces her to consider returning to her teaching roots . Xiomara decides to go back to school where she listens in on an art history class , while
+Jane teaches a seminar about writing .
+</item 5>
+
+<item 6>
+Jane the Virgin (season 4)
+Also , Rafael is on a mission to find his sister , who may have the information he has been looking for of his origins . Rafael visits Rose in prison to ask for
+her help , but he quickly turns her down when she makes a demand to know Luisa 's location . Also , Jane is upset with Petra after her twin girls spill a secret
+to Mateo about the Tooth Fairy being make believe . At the same time , Jane ' J.R. ' Ramos tells Petra after their romantic night together that she is not
+interested in a relationship due to the blackmailer paying a visit to Jane R. 's dementia - stricken mother in a rest home . At the end , the identity of Jane R
+'s blackmailer is finally revealed . 78 14 `` Chapter Seventy - Eight '' Justin Baldoni Valentina Garza & Micah Schraft March 23 , 2018 ( 2018 - 03 - 23 ) 0.65
+Xo struggles to make an important decision on whether or not to get a full mastectomy and looks to Jane for guidance , leaving Rogelio feeling like an outsider
+.
+</item 6>
+
+<item 7>
+Jane the Virgin (season 4)
+69 5 `` Chapter Sixty - Nine '' Stuart Gillard Paul Sciarrotta November 10 , 2017 ( 2017 - 11 - 10 ) 0.65 After Adam reveals his dating past to Jane , she
+becomes so unsure and insecure that it puts a strain on their relationship . Meanwhile , Lina seeks Jane 's advice about whether she should get married or not .
+Petra hears some important information that could help Rafael get the hotel back . Also , Xo asks Rogelio to consider having a medical procedure ( vasectomy )
+done , but he is very hesitant . 70 6 `` Chapter Seventy '' Melanie Mayron Carolina Rivera & Micah Schraft November 17 , 2017 ( 2017 - 11 - 17 ) 0.61 Jane 's
+book is finally being released but her plans to have a party at the local bookshop where she was inspired to be a writer hit a snag . Always wanting to help
+Jane , Rogelio devises a plan to save the day , but one of his arch - rivals threatens to ruin the day .
+</item 7>
+
+<item 8>
+Jane the Virgin (season 4)
+In this season , Jane deals with her romantic feelings for Rafael while reuniting with an ex-boyfriend while Rafael loses ownership of the Marbella and gets
+back together with his ex-wife , Petra Solano ( Yael Grobglas ) . Also , Rogelio de la Vega ( Jaime Camil ) , Jane 's father , is expecting a baby with an
+ex-girlfriend and marries Jane 's mother , Xiomara Villanueva ( Andrea Navedo ) .
+</item 8>
+
+<item 9>
+Jane the Virgin (season 4)
+5 N / A 15 `` Chapter Seventy - Nine '' April 6 , 2018 0.2 / 1 0.54 0.3 0.59 0.5 1.13 16 `` Chapter Eighty '' April 13 , 2018 0.2 / 1 0.57 TBD TBD TBD TBD 17 ``
+Chapter Eighty - One '' April 20 , 2018 0.2 / 1 0.58 TBD TBD TBD TBD References ( edit ) ^ Jump up to : Welch , Alex ( October 16 , 2017 ) . `` ' Hell 's
+Kitchen , ' ' MacGyver , ' ' Once Upon a Time , ' & more remain unchanged : Friday final ratings '' . TV by the Numbers . Retrieved October 16 , 2017 . ^ Jump
+up to : Porter , Rick ( October 23 , 2017 ) . `` ' Jane the Virgin , ' ' Hawaii Five - 0 , ' all others unchanged : Friday final ratings '' . TV by the Numbers
+. Retrieved October 23 , 2017 .
+</item 9>
+
+<item 10>
+Jane the Virgin (season 4)
+However , both Xo and Alba are less thrilled that he is back . Meanwhile , Rafael loses ownership of the hotel to his sister and as a result , he finds himself
+living at Jane 's house , broke and homeless . Jane and Rafael learn that the missing Petra has been found after she got away from Anezka and they rush to her
+side , but Anezka is nowhere to be found . When Petra returns to the hotel , Luisa thinks that Petra is Anezka . Petra goes along with the game , until the real
+Anezka returns . Elsewhere , Xo and Rogelio 's married life is interrupted when they confront the realization that Darci is having Rogelio 's baby and she wants
+full custody . 66 `` Chapter Sixty - Six '' Gina Lamar Valentina Garza & Jessica O'Toole & Amy Rardin October 20 , 2017 ( 2017 - 10 - 20 ) 0.61 Jane 's
+relationship with Adam helps bring out her `` fun side '' and reminds her that she is n't just a mom .
+</item 10>
+=== END ITEM id=a139-0647cbe8f3199123 ===
+
+=== ITEM id=a136-276a19b86d540f21 ===
+Gold sentences and facts:
+Sentence 0: A main vertical stroke is called a stem . The letter m has three , the left , middle , and right stems . The central stroke of an s is called the spine . When the stroke is part of a lowercase and rises above the height of an x ( called the x height ) , it is called an ascender . Letters with ascenders are bdfhkl . A stroke which drops below the baseline is a descender . Letters with descenders are gjpqy . An arching stroke is called a shoulder as in the top of an R or sometimes just an arch , as in hnm . A closed curved stroke is called a bowl in bdopq DOPQ ; B has two bowls . A trailing outstroke , as in jy JQR is called a tail . The inferior diagonal stroke in K is called leg . A short horizontal stroke , as in the center of ef and the middle stroke of EF , is called a bar . When the strokes connect as in A and H or cross strokes as in t is also known as crossbar . A longer horizontal stroke at the top or bottom , as in ET , is called an arm . The bottom of the two - story g is called a loop ; the very short stroke at the top is called the ear . ij each have a dot , jot , or tittle . Angles of strokes are called apices if at the top and vertices if at the bottom . w has one apex and two vertices ; v has one vertex .
+  Fact 0.7: An arching stroke is called a shoulder, as in the top of an R.
+
+Retrieved items:
+<item 1>
+Church Fathers
+549 ) Jump up ^ Herbermann , Charles , ed. ( 1913 ) . `` Tertullian '' . Catholic Encyclopedia . New York : Robert Appleton Company . Jump up ^ A History of
+Christian Thought , Paul Tillich , Touchstone Books , 1972 . ISBN 0 - 671 - 21426 - 8 ( p. 43 ) Jump up ^ To Autolycus , Book 2 , chapter XV Jump up ^ Known in
+Latin and Low Franconian as Ambrosius , in Italian as Ambrogio and in Lombard as Ambroeus . Jump up ^ Cross , F.L. , ed . The Oxford Dictionary of the Christian
+Church . New York : Oxford University Press . 2005 , article Platonism Jump up ^ Pope St. Gregory I at about.com Jump up ^ Karim , Cyril Aphrem ( December 2004
+) . Symbols of the cross in the writings of the early Syriac Fathers . Gorgias Press LLC . p. 3 . ISBN 978 - 1 - 59333 - 230 - 3 .
+</item 1>
+
+<item 2>
+The Curse of Oak Island
+They find a carving of a multi-armed cross and offer an unsupported theory that it is a representation of the `` Tree of Life '' and that it is the same as
+Nolan 's Cross on the island . A theory is presented that the cave carving may represent an `` earlier version '' of the `` Tree of Life '' . Based on the
+information discovered in France , the team concludes that the Oak Island swamp should be excavated again . 54 10 `` The Signs Of A Cross '' January 16 , 2018 (
+2018 - 01 - 16 ) 3.34 Eight pages of what is alleged to be a transcript of an incomplete log of an unnamed ship are presented . It is claimed , without any
+evidence , that the log is from a French ship which participated in the Duc d'Anville Nova Scotia expedition of 1746 . More wood , a bone and a metal spike are
+brought up from a borehole in the money pit area . The shaft excavation reaches an obstruction at 170 feet . A small lead cross is found at Smith 's Cove .
+</item 2>
+
+<item 3>
+Typeface anatomy
+The central stroke of an s is called the spine . When the stroke is part of a lowercase and rises above the height of an x ( called the x height ) , it is
+called an ascender . Letters with ascenders are bdfhkl . A stroke which drops below the baseline is a descender . Letters with descenders are gjpqy . An arching
+stroke is called a shoulder as in the top of an R or sometimes just an arch , as in hnm . A closed curved stroke is called a bowl in bdopq DOPQ ; B has two
+bowls . A trailing outstroke , as in jy JQR is called a tail . The inferior diagonal stroke in K is called leg . A short horizontal stroke , as in the center of
+ef and the middle stroke of EF , is called a bar . When the strokes connect as in A and H or cross strokes as in t is also known as crossbar . A longer
+horizontal stroke at the top or bottom , as in ET , is called an arm . The bottom of the two - story g is called a loop ; the very short stroke at the top is
+called the ear .
+</item 3>
+
+<item 4>
+Typeface anatomy
+`` Typeface Mechanics : 001 '' . Frere - Jones Type . Retrieved 17 April 2016 . Frere - Jones , Tobias . `` Typeface Mechanics : 002 '' . Frere - Jones Type .
+Retrieved 17 April 2016 . Coles , Stephen . `` The Anatomy of Type '' . Blog for Coles ' 2012 book The Anatomy of Type : A Graphic Guide to 100 Typefaces . ``
+Glossary '' . FontShop . Monotype . ( hide ) Typography terminology Page Canons of page construction Column Even working Margin Page numbering Pagination Pull
+quote Recto and verso Paragraph Alignment Justification Leading River Sentence spacing Widows and orphans Character Typeface anatomy Counter Diacritics Dingbat
+Glyph Initial Kerning Letter - spacing Ligature Subscript and superscript Swash Text figures Tittle Capitalization ALL CAPS Camel Case Letter case Petite caps
+Small caps Visual distinction Italics Oblique Bold Color Underline Blackboard bold Blackletter Infɑnt Vertical aspects Ascender Baseline Cap height Descender
+Median Overshoot x-height Classifications Roman type Antiqua ( old style ) Didone ( modern ) Sans - serif Script Serif Slab serif Transitional Reverse
+</item 4>
+
+<item 5>
+Typeface anatomy
+Typeface Anatomy - wikipedia Typeface Anatomy Jump to : navigation , search Typographic parts of a glyph : 1 ) x-height ; 2 ) ascender line ; 3 ) apex ; 4 )
+baseline ; 5 ) ascender ; 6 ) crossbar ; 7 ) stem ; 8 ) serif ; 9 ) leg ; 10 ) bowl ; 11 ) counter ; 12 ) collar / link / neck ; 13 ) loop ; 14 ) ear ; 15 ) tie
+; 16 ) horizontal bar ; 17 ) arm ; 18 ) vertical bar ; 19 ) cap height ; 20 ) descender line . Typeface anatomy describes the graphic elements that make up
+printed letters in a typeface . Contents ( hide ) 1 Strokes 2 Terminals 3 Space 4 Proportions 5 Metal type era 6 See also 7 References 8 Further reading 9
+External links Strokes ( edit ) The strokes are the components of a letterform . Strokes may be straight , as in klvwxz , or curved , as in cos . If straight ,
+they may be horizontal , vertical , or diagonal ; if curved , open or closed .
+</item 5>
+
+<item 6>
+Typeface anatomy
+ij each have a dot , jot , or tittle . Angles of strokes are called apices if at the top and vertices if at the bottom . w has one apex and two vertices ; v has
+one vertex . The font shown in the example is stressed : strokes have varying widths . In this example , the stroke at the top of the g is thinner at the top
+and bottom than on the sides -- a vertical stress . Terminals ( edit ) The terminals ( ends ) of instrokes and outstrokes often end in serif or sans - serif . A
+seriffed terminal may be described as a wedge , bulbous , teardrop , slab , etc. , depending on the design of the type . Sorting typefaces can be practical
+based on its look . A clue feature is to define the serif style . Some designs also have spurs , which are smaller than serifs and appear on angles rather than
+at a terminal , as on e or G . Space ( edit ) Areas of negative space ( white space ) formed by straight or curved strokes are called counters . Closed counters
+are found in abdegopq ABDOPQR , and open counters in acefhmnrstu .
+</item 6>
+
+<item 7>
+Typeface anatomy
+Harper Design , 2013 . ^ Jump up to : Dean , Paul ( 27 March 2008 ) . `` eXtreme Type Terminology . Part 2 : Anatomy of a Letterform '' . I Love Typography .
+Further reading ( edit ) Gaskell , Philip ( January 1976 ) . `` A nomenclature for the letterforms of roman type '' . Visible Language . 10 ( 1 ) : 41 -- 51 .
+External links ( edit ) Wikimedia Commons has media related to Examples of typography terms . Armannsson , Sigurdur ( 6 July 2009 ) . `` Wallpaper : Font
+Anatomy '' . Font.is . Full - size image ( 1920 × 1200 ) Dean , Paul ( 2008 ) . eXtreme Type Terminology -- Part 1 , Part 2 , Part 3 , Part 4 and Part 5 Devroye
+, Luc . `` Hoefler & Frere - Jones '' . Retrieved 21 January 2015 . Frere - Jones , Tobias . `` Typeface Mechanics : 001 '' . Frere - Jones Type .
+</item 7>
+
+<item 8>
+Typeface anatomy
+This made it possible to mix typefaces from completely different genres such as sans - serifs and serifs and have the cap height , baseline and linespacing
+match perfectly , something not possible with most digital fonts . It even allowed mixing of different sizes of type with a consistent baseline . It however had
+the disadvantage of often forcing typefaces to be issued with cropped descenders compared to historical typefaces , to allow tight linespacing . A `` script
+line '' or `` art line '' was used for more delicate fonts with long descenders . Titling capitals , meanwhile , were issued taking up the whole space of the
+metal type area , with no room for descenders . See also ( edit ) Type design Type foundry Typography Typesetting References ( edit ) Jump up ^ Studer , Anton (
+29 February 2016 ) . `` Is What I See What I Get ? -- Math & Optics in Type Design '' . Typographica . Retrieved 17 April 2016 . ^ Jump up to : Carter , Bob ;
+Day , Ben ; Meggs , Philip ( 2007 ) . Typographic Design : Form and Communication .
+</item 8>
+
+<item 9>
+Typeface anatomy
+The close counter in e is also named eye . Angles of white space , as in w , are corners ( w has three corners ) ; the term is not used for angles of strokes .
+The small corner formed by a serif , whether curved or angular , is called the serif bracket . Proportions ( edit ) A subtle change in proportion impacts weight
+, perception , measure , and legibility . The letterform height compared to its stroke width modifies the aspect ; this slight change in weight sometimes helps
+to create emphasis . The disparity between thick and thin strokes , known as stress , alters optical perception . As an example , the initial san serif
+typefaces used a constantly thin stroke . The technological advances allow drawing thinner strokes . Condense type occupies less space than expanded type , then
+the text written on a page can be reduced to half a page. The capline and x-height ratio improve or decrease word legibility . Metal type era ( edit ) During
+the late metal type period , many fonts ( particularly in American typefounding ) were issued to `` common line '' . This meant that they were made to
+standardised proportions , so that fonts of different typefaces could be mixed with no difficulty .
+</item 9>
+
+<item 10>
+Typeface anatomy
+Typographers also speak of an instroke , where one starts writing the letter , as at the top of acf , and an outstroke , where the pen leaves off , as at the
+bottom of cejkty . Typefaces are born from the struggle between rules and results . Squeezing a square about 1 % helps it look more like a square ; to appear
+the same height as a square , a circle must be measurably taller . The two strokes in an X are n't the same thickness , nor are their parallel edges actually
+parallel ; the vertical stems of a lowercase alphabet are thinner than those of its capitals ; the ascender on ad is n't the same length as the descender on ap
+, and so on . For the rational mind , type design can be a maddening game of drawing things differently in order to make them appear the same . Hoefler & Frere
+- Jones A main vertical stroke is called a stem . The letter m has three , the left , middle , and right stems . The central stroke of an s is called the spine
+.
+</item 10>
+=== END ITEM id=a136-276a19b86d540f21 ===
+
+=== ITEM id=a147-15dcd4fc3251c735 ===
+Gold sentences and facts:
+Sentence 0: Country Adult prevalence of HIV / AIDS Number of people with HIV / AIDS Annual deaths from HIV / AIDS Year of estimate Swaziland 27.20 % 220,000 3,900 2016 Lesotho 25.00 % 330,000 9,900 2016 Botswana 21.90 % 360,000 3,900 2016 South Africa 18.90 % 7,100,000 110,000 2016 Namibia 13.80 % 230,000 4,300 2016 Zimbabwe 13.50 % 1,300,000 30,000 2016 Zambia 12.40 % 1,200,000 21,000 2016 Mozambique 12.30 % 1,800,000 62,000 2016 Malawi 9.20 % 1,000,000 24,000 2016 Uganda 6.50 % 1,400,000 28,000 2016 Equatorial Guinea 6.20 % 35,000 - 2016 Kenya 5.40 % 1,600,000 36,000 2016 Tanzania 4.70 % 1,400,000 33,000 2016 Central African Republic 4.00 % 130,000 7,300 2016 Cameroon 3.80 % 560,000 29,000 2016 Gabon 3.60 % 48,000 1,500 2016 Bahamas , The 3.30 % 8,200 - 2016 Rwanda 3.10 % 220,000 3,300 2016 Congo , Republic of the 3.10 % 91,000 3,800 2016 Guinea - Bissau 3.10 % 36,000 2,000 2016 Nigeria 2.90 % 3,200,000 160,000 2016 Cote d'Ivoire 2.70 % 460,000 25,000 2016 South Sudan 2.70 % 200,000 13,000 2016 Haiti 2.10 % 150,000 4,600 2016 Togo 2.10 % 100,000 5,100 2016 Angola 1.90 % 280,000 11,000 2016 Belize 1.80 % 4,300 - 2016 Sierra Leone 1.70 % 67,000 2,800 2016 Gambia , The 1.70 % 20,000 1,100 2016 Jamaica 1.70 % 30,000 1,300 2016 Liberia 1.60 % 43,000 2,800 2016 Guyana 1.60 % 8,500 - 2016 Ghana 1.60 % 290,000 15,000 2016 Guinea 1.50 % 120,000 5,800 2016 Suriname 1.40 % 4,900 - 2016 Barbados 1.30 % 2,600 - 2016 Djibouti 1.30 % 8,600 - 2016 Chad 1.30 % 110,000 2,800 2016 Trinidad and Tobago 1.20 % 11,000 - 2016 Thailand 1.10 % 450,000 16,000 2016 Ethiopia 1.10 % 710,000 20,000 2016 Burundi 1.10 % 84,000 2,900 2016 Benin 1.00 % 67,000 2,400 2016 Mali 1.00 % 110,000 6,100 2016 Dominican Republic 1.00 % 67,000 2,200 2016 Ukraine 0.90 % 240,000 8,500 2016 Papua New Guinea 0.90 % 46,000 1,100 2016 Cabo Verde 0.80 % 2,800 - 2016 Panama 0.80 % 21,000 - 2016 Burma 0.80 % 230,000 7,800 2016 Burkina Faso 0.80 % 95,000 3,100 2016 Latvia 0.70 % 6,600 - 2016 Congo , Democratic Republic of 0.70 % 370,000 19,000 2016 Cambodia 0.60 % 71,000 1,800 2016 Venezuela 0.60 % 120,000 2,500 2016 Moldova 0.60 % 15,000 - 2016 Eritrea 0.60 % 15,000 - 2016 El Salvador 0.60 % 24,000 - 2016 Uruguay 0.60 % 12,000 - 2016 Brazil 0.60 % 830,000 14,000 2016 Georgia 0.50 % 12,000 - 2016 Mauritania 0.50 % 11,000 - 2016 Chile 0.50 % 61,000 - 2016 Guatemala 0.50 % 46,000 1,600 2016 Paraguay 0.50 % 19,000 - 2016 Niger 0.40 % 48,000 3,400 2016 Malaysia 0.40 % 97,000 7,000 2016 Indonesia 0.40 % 620,000 38,000 2016 Honduras 0.40 % 21,000 - 2016 Canada 0.40 % 180,000 - 2016 Cuba 0.40 % 25,000 - 2016 Costa Rica 0.40 % 13,000 - 2016 Colombia 0.40 % 120,000 2,800 2016 Vietnam 0.40 % 250,000 8,000 2016 Argentina 0.40 % 120,000 2,400 2016 Belarus 0.40 % 19,000 - 2016 USA 0.30 % 1,100,000 - 2015 Somalia 2016 Senegal 0.40 % 41,000 1,900 2016 India 0.30 % 2,100,000 62,000 2016 Ecuador 0.30 % 33,000 - 2016 Bolivia 0.30 % 19,000 - 2016 Tajikistan 0.30 % 14,000 - 2016 Peru 0.30 % 70,000 2,200 2016 Italy 0.30 % 130,000 - 2016 Laos 0.30 % 11,000 - 2016 Mexico 0.30 % 220,000 4,200 2016 Armenia 0.20 % 3,300 - 2016 Ireland 0.20 % 6,200 - 2016 Kazakhstan 0.20 % 26,000 - 2016 Kyrgyzstan 0.20 % 8,500 - 2016 Lithuania 0.20 % 2,900 - 2016 Madagascar 0.20 % 31,000 1,600 2016 Nepal 0.20 % 32,000 1,700 2016 Netherlands 0.20 % 23,000 - 2016 Nicaragua 0.20 % 8,900 - 2016 Sudan 0.20 % 56,000 3,000 2016 Sweden 0.20 % 11,000 - 2016 Albania 0.10 % 1,700 - 2016 Australia 0.10 % 25,000 - 2016 Fiji 0.10 % - - 2016 Taiwan 0.10 % 31,620 - 2016 Azerbaijan 0.10 % 9,200 - 2016 Iran 0.10 % 66,000 4,000 2016 Romania 0.10 % 16,000 - 2016 Montenegro 0.10 % - - 2016 Morocco 0.10 % 22,000 - 2016 Pakistan 0.10 % 130,000 5,500 2016 Philippines 0.10 % 56,000 - 2016 Malta 0.10 % - - 2016 Algeria - 13,000 - 2016 Bangladesh - 12,000 1,000 2016 Egypt - 11,000 - 2016 Yemen - 9,900 - 2016 Saudi Arabia - 8,200 - 2016 Afghanistan - 7,500 - 2016 Sri Lanka - 4,000 - 2016 Bulgaria - 3,500 - 2016 Czech Republic - 3,400 - 2016 Tunisia - 2,900 - 2016 Serbia - 2,700 - 2016 Lebanon - 2,200 - 2016 Croatia - 1,500 - 2016 Bosnia 0.009 % 350 - 2017
+  Fact 0.86: In 2016, the adult HIV/AIDS prevalence in Jamaica was 1.70%.
+
+Retrieved items:
+<item 1>
+List of countries by HIV/AIDS adult prevalence rate
+List of countries by HIV / AIDS adult prevalence rate - Wikipedia List of countries by HIV / AIDS adult prevalence rate Jump to : navigation , search This
+article needs to be updated . Please update this article to reflect recent events or newly available information . ( October 2017 ) AIDS and HIV prevalence 2009
+No data < 0.1 % 0.1 -- 0.5 % 0.5 -- 1 % 1 -- 5 % 5 -- 15 % 15 -- 50 % The human immunodeficiency virus ( HIV ) , which causes AIDS , varies in prevalence from
+nation to nation . Listed here are the prevalence rates among adults in various countries , based on data from various sources , largely the CIA World Factbook
+. As of 2015 , it is estimated that there are 36.7 million people worldwide infected with HIV . The HIV pandemic is most severe in South Africa . Over 10 % of
+all people living with HIV / AIDS reside within the region .
+</item 1>
+
+<item 2>
+List of countries by HIV/AIDS adult prevalence rate
+Over 10 % of all people living with HIV / AIDS reside within the region . Adult HIV prevalence exceeds 20 % in Swaziland , Botswana , and Lesotho , while an
+additional six countries report adult HIV prevalence of at least 10 % . Outside Africa , the highest prevalence rate is found in the Bahamas ( 3.3 % ) . In
+absolute numbers , South Africa ( 7.1 million ) , followed by Nigeria ( 3.2 million ) , and India ( 2.1 million ) had the highest HIV / AIDS number of cases by
+the end of 2016 . While South Africa 's large population of HIV - positive people is attributable to its high disease prevalence ( 18.9 % , one of the highest
+in the world ) , Nigeria 's is lower at 2.9 % , and India 's prevalence at 0.3 % is comparable to Canada and the UK , and is lower than the United States .
+</item 2>
+
+<item 3>
+List of countries by HIV/AIDS adult prevalence rate
+30 % 11,000 - 2016 Mexico 0.30 % 220,000 4,200 2016 Armenia 0.20 % 3,300 - 2016 Ireland 0.20 % 6,200 - 2016 Kazakhstan 0.20 % 26,000 - 2016 Kyrgyzstan 0.20 %
+8,500 - 2016 Lithuania 0.20 % 2,900 - 2016 Madagascar 0.20 % 31,000 1,600 2016 Nepal 0.20 % 32,000 1,700 2016 Netherlands 0.20 % 23,000 - 2016 Nicaragua 0.20 %
+8,900 - 2016 Sudan 0.20 % 56,000 3,000 2016 Sweden 0.20 % 11,000 - 2016 Albania 0.10 % 1,700 - 2016 Australia 0.10 % 25,000 - 2016 Fiji 0.10 % - - 2016 Taiwan
+0.10 % 31,
+</item 3>
+
+<item 4>
+List of countries by HIV/AIDS adult prevalence rate
+00 % 67,000 2,400 2016 Mali 1.00 % 110,000 6,100 2016 Dominican Republic 1.00 % 67,000 2,200 2016 Ukraine 0.90 % 240,000 8,500 2016 Papua New Guinea 0.90 %
+46,000 1,100 2016 Cabo Verde 0.80 % 2,800 - 2016 Panama 0.80 % 21,000 - 2016 Burma 0.80 % 230,000 7,800 2016 Burkina Faso 0.80 % 95,000 3,100 2016 Latvia 0.70 %
+6,600 - 2016 Congo , Democratic Republic of 0.70 % 370,000 19,000 2016 Cambodia 0.60 % 71,000 1,800 2016 Venezuela 0.60 % 120,000 2,500 2016 Moldova 0.60 %
+15,000 - 2016 Eritrea 0.
+</item 4>
+
+<item 5>
+List of countries by HIV/AIDS adult prevalence rate
+000 4,300 2016 Zimbabwe 13.50 % 1,300,000 30,000 2016 Zambia 12.40 % 1,200,000 21,000 2016 Mozambique 12.30 % 1,800,000 62,000 2016 Malawi 9.20 % 1,000,000
+24,000 2016 Uganda 6.50 % 1,400,000 28,000 2016 Equatorial Guinea 6.20 % 35,000 - 2016 Kenya 5.40 % 1,600,000 36,000 2016 Tanzania 4.70 % 1,400,000 33,000 2016
+Central African Republic 4.00 % 130,000 7,300 2016 Cameroon 3.80 % 560,000 29,000 2016 Gabon 3.60 % 48,000 1,500 2016 Bahamas , The 3.30 % 8,200 - 2016 Rwanda
+3.10 % 220,000 3,
+</item 5>
+
+<item 6>
+List of countries by HIV/AIDS adult prevalence rate
+40 % 25,000 - 2016 Costa Rica 0.40 % 13,000 - 2016 Colombia 0.40 % 120,000 2,800 2016 Vietnam 0.40 % 250,000 8,000 2016 Argentina 0.40 % 120,000 2,400 2016
+Belarus 0.40 % 19,000 - 2016 USA 0.30 % 1,100,000 - 2015 Somalia 2016 Senegal 0.40 % 41,000 1,900 2016 India 0.30 % 2,100,000 62,000 2016 Ecuador 0.30 % 33,000
+- 2016 Bolivia 0.30 % 19,000 - 2016 Tajikistan 0.30 % 14,000 - 2016 Peru 0.30 % 70,000 2,200 2016 Italy 0.30 % 130,000 - 2016 Laos 0.30 % 11,000 - 2016 Mexico
+0.30 % 220,
+</item 6>
+
+<item 7>
+Sub-Saharan Africa
+In response , a number of initiatives have been launched to educate the public on HIV / AIDS . Among these are combination prevention programmes , considered to
+be the most effective initiative , the abstinence , be faithful , use a condom campaign , and the Desmond Tutu HIV Foundation 's outreach programs . According
+to a 2013 special report issued by the Joint United Nations Programme on HIV / AIDS ( UNAIDS ) , the number of HIV positive people in Africa receiving
+anti-retroviral treatment in 2012 was over seven times the number receiving treatment in 2005 , with an almost 1 million added in the last year alone . The
+number of AIDS - related deaths in Sub-Saharan Africa in 2011 was 33 percent less than the number in 2005 . The number of new HIV infections in Sub-Saharan
+Africa in 2011 was 25 percent less than the number in 2001 . Estimated prevalence in % of HIV among young adults ( 15 -- 49 ) per country as of 2011 . Malaria
+is an endemic illness in Sub-Saharan Africa , where the majority of malaria cases and deaths worldwide occur . Routine immunization has been introduced in order
+to prevent measles .
+</item 7>
+
+<item 8>
+List of countries by HIV/AIDS adult prevalence rate
+Number of deaths due to AIDS by country World Health Organisation ; Number of people ( all ages ) living with HIV by country ( show ) HIV / AIDS topics ( show )
+HIV / AIDS HIV HIV structure and genome subtypes CDC classification disease progression rates HIV / AIDS diagnosis management pathophysiology prevention
+research vaccination PrEP WHO disease staging system for HIV infection and disease Children Teens / Adults Countries by AIDS prevalence rate Conditions Signs
+and symptoms AIDS - defining clinical condition Diffuse infiltrative lymphocytosis syndrome Lipodystrophy Nephropathy Neurocognitive disorders Pruritus
+Superinfection Tuberculosis co-infection HIV Drug Resistance Database Innate resistance to HIV History History Epidemiology Multiple sex partners Timeline AIDS
+Museum Timothy Ray Brown Social AIDS orphan Catholic Church and HIV / AIDS Circumcision and HIV Criminal transmission Discrimination against people Economic
+impact HIV - affected community HIV / AIDS denialism Safe sex Sex education List of HIV - positive people People With AIDS Self - Empowerment Movement Culture
+International AIDS Conference International AIDS Society Joint United Nations Programme on HIV / AIDS ( UNAIDS ) President 's Emergency Plan for AIDS Relief (
+PEPFAR ) Treatment Action Campaign World AIDS Day Media portrayal of HIV / AIDS Misconceptions about HIV /
+</item 8>
+
+<item 9>
+List of countries by HIV/AIDS adult prevalence rate
+AVERT . Retrieved 3 August 2017 . Jump up ^ http://factbook.lincon.com/geos/print/country/countrypdf_bf.pdf Jump up ^ `` UNAIDS.org - HIV and AIDS estimates (
+2013 ) '' . Jump up ^ `` The Hindu - India has 3rd - highest number of HIV - infected people : UN '' . Jump up ^ `` The Ministry of Health has Detected ... '' .
+Bhutan Observer online . 2011 - 08 - 01 . Archived from the original on 2011 - 10 - 28 . Retrieved 2011 - 11 - 21 . Jump up ^ `` CIA world factbook - country
+comparison '' . Jump up ^ https://www.cdc.gov/hiv/statistics/overview/index.html Jump up ^ https://www.cdc.gov.tw/downloadfile.aspx?fid=40CE068DC7A0F111
+External links ( edit ) HIV / AIDS Survey Indicators Database World Health Organisation ; Prevalence of HIV among adults aged 15 to 49 ( % ) by country World
+Health Organisation ;
+</item 9>
+
+<item 10>
+List of countries by HIV/AIDS adult prevalence rate
+200 - 2016 Rwanda 3.10 % 220,000 3,300 2016 Congo , Republic of the 3.10 % 91,000 3,800 2016 Guinea - Bissau 3.10 % 36,000 2,000 2016 Nigeria 2.90 % 3,200,000
+160,000 2016 Cote d'Ivoire 2.70 % 460,000 25,000 2016 South Sudan 2.70 % 200,000 13,000 2016 Haiti 2.10 % 150,000 4,600 2016 Togo 2.10 % 100,000 5,100 2016
+Angola 1.90 % 280,000 11,000 2016 Belize 1.80 % 4,300 - 2016 Sierra Leone 1.70 % 67,000 2,800 2016 Gambia , The 1.70 % 20,000 1,100 2016 Jamaica 1.70 % 30,000
+1,
+</item 10>
+=== END ITEM id=a147-15dcd4fc3251c735 ===
+
+=== ITEM id=a166-98d92286a487263f ===
+Gold sentences and facts:
+Sentence 0: Wizards of Waverly Place Season 4 episodes No . overall No. in season Title Directed by Written by Original air date Prod . code U.S. viewers ( millions ) 80 `` Alex Tells the World '' Victor Gonzalez Gigi McCreery & Perry Rein November 12 , 2010 ( 2010 - 11 - 12 ) 401 4.1 The Russos and Mason finally make it back home , but their wizard powers are still gone . While the family wants to stay quiet , Alex believes that they should take action , so she reveals that they are wizards to reporters and tells them that a group of wizards are being held captive by the government . As she urges them to spread the word , Professor Crumbs appears and tells her that everything that had happened was a test that she failed miserably and orders her to Wizard Court for exposing wizardry to the world . Justin is also ordered to attend because he exposed magic to Agent Lamwood , who was a creation from Professor Crumbs ' mind . The judges rule Alex and Justin guilty , and Professor Crumbs sentences them both to be demoted to level one in the Family Wizard Competition , making them behind Max by two levels . Meanwhile , Max sets up traps in the Sub Station for the `` government '' , but ends up falling for one of them . Special guest star : Gregg Sulkin as Mason Guest star : Ian Abercrombie as Professor Crumbs 81 `` Alex Gives Up '' Victor Gonzalez Todd J. Greenwald November 27 , 2010 ( 2010 - 11 - 27 ) 402 N / A Alex decides to give up the wizard competition to spend more time with Mason and thinks that it does not matter since Max is all the way in the lead , but Chancellor Tootietootie tells Alex that non-wizards and werewolves can not date , because the werewolf always eats the human . Max 's picture on the front of Future Wizards magazine attracts the daughter of a family of Cucuys ( mythical Latino monster ) and they invite him to a dinner party on their yacht . Alex comes up with a scheme to invite Chancellor Tootietootie to the Cucuy party in hopes of getting him to appeal the law against werewolves and mortals dating . Lisa Cucuy finds out that Mason is a werewolf and decides that she wants him instead of Max . Alex gets jealous when Lisa flirts with Mason , so Alex says embarrassing things about Mason to everyone on the yacht so that he will be mad enough to turn into a werewolf . Carlos and Julie Cucuy jump off the boat as Cucuys are scared of werewolves . Jerry jumps off after them . Alex tells Lisa that she can get off the boat the easy way or her way . Once Lisa jumps off the boat , Chancellor Tootietootie says that their case will not be appealed as by Mason turning into a werewolf proved his point that they are dangerous . In the end , Alex and Mason have to break up to be friends and Harper finishes writing her first novel based on the werewolf - wizard relationship . Jerry tries to get Harper to help him out of the water but accidentally grabs her just finished novel , which causes him to fall back into the water . Meanwhile , Justin tutors a class of delinquent wizards in an attempt to gain a level to re-enter the Wizard Competition . Special guest star : Gregg Sulkin as Mason Guest stars : Andy Kindler as Chancellor Tootietootie , Frank Pacheco as Felix , David Barrera as Carlos Cucuy , Roxana Brusso as Julie Cucuy , Samantha Boscarino as Lisa Cucuy , Kari Wahlgren as Helen 82 `` Lucky Charmed '' Victor Gonzalez Justin Varava December 10 , 2010 ( 2010 - 12 - 10 ) 403 3.0 Harper tries teaching Alex how to live without magic , but the strain of taking responsibility for her actions instead of using magic causes a disagreement between the two best friends when Alex gets in big trouble for crashing Mr. Laritate 's car . As punishment , Alex has to clean the school 's garbage cans . Mr. Laritate forgives Alex after seeing how the crash influenced her , and Alex realizes that she will be okay without magic . Wanting to thank Harper , Alex uses Mr. Laritate 's lucky life - saving hula girl figurine , Leilani , for luck , as Mr. Laritate does . During Harper 's driving test , Alex turns into the hula girl and guides Harper through the test , knowing that she might fail . In the end , Harper passes her test . Meanwhile , Jerry wants to pass on the wizard family robe to Max , but Justin has a hard time letting go of it . Guest stars : Bill Chott as Mr. Laritate , Julio Oscar Mechoso as DMV Instructor Absent : Maria Canals Barrera as Theresa Russo 83 `` Journey to the Center of Mason '' Robbie Countryman Peter Dirksen December 17 , 2010 ( 2010 - 12 - 17 ) 404 N / A After she finds out that she will lose her powers , Alex can no longer date Mason , so they decide to try being best friends instead . After watching a film at the theaters , Harper , Alex , and Mason go home , Dean , who was Alex 's Ex-Boyfriend comes and asks Alex to get back together with him . Mason gets jealous . When Dean brings a gift for Alex , Mason then asks what Alex 's relationship is with Dean , and Max tells him that Dean and Alex used to date , making Mason more jealous . Mason then turns into a werewolf and eats Dean . Alex , Justin , and Max come up with a solution to turn Justin 's toy Captain Jim Bob submarine big and go in it . They then shrink it and go into Mason 's mouth . While there , Alex , Max , and Justin see Mason 's thoughts , which are all of Alex . They get Dean out , and Alex , when Harper , Max , and Justin leave , Alex tells Dean that he was knocked out and the doctor 's solution was for them all to dress up as cows . Dean then gives her his offer once again : he wants to get back with her . Alex tells him ' no ' , and then gets back together with Mason , with deciding to get back to the Wizard Competition . Special guest star : Gregg Sulkin as Mason Guest stars : Daniel Samonas as Dean , Frank Pacheco as Felix , Shoshana Bush as Tyler 84 5 `` Three Maxes and a Little Lady '' Victor Gonzalez Richard Goodman January 7 , 2011 ( 2011 - 01 - 07 ) 405 4.0 Alex joins Justin 's wizard class to try to move up in the competition . Max joins a sophisticated wizard society . They suggest he move the wizard competition up and he moves it to a few days away . Max quits the society because he finds out that they are taking advantage of him . Alex and Justin transform into Max in an attempt to change the date of the family wizard competition back to its original date and succeed . In the end of the episode they accidentally turn Max indefinitely into a little girl . Guest stars : Bailee Madison as Maxine , Frank Pacheco as Felix , Kari Wahlgren as Helen , Shane Harper as Fidel Note : Bailee Madison begins her recurring role as Maxine , the female Max in this episode . Jake T. Austin was absent in four other episodes and returns at the end of the tenth episode `` Back to Max '' . 85 6 `` Daddy 's Little Girl '' Robbie Countryman Gigi McCreery & Perry Rein January 21 , 2011 ( 2011 - 01 - 21 ) 406 3.4 With Max still a little girl , their parents pay more attention to Max ( Maxine ) , and Alex becomes jealous . Justin takes Maxine to her ( Max 's ) karate class and Maxine kicks Justin 's butt . After the class , Alex decides to make Jerry 's favorite sandwich in order to win his love back , but Maxine comes along with Justin , announcing that she beat Justin in karate , and Jerry immediately falls for her cuteness again . More jealous than ever , Alex comes back with Justin to Maxine 's karate class with their parents , having a slight idea of knowing how to change Maxine back to Max . They cast spells on Maxine , Justin using the spell he used on Max that turned him into Maxine , and Alex using the reverse spell . Unfortunately , it only makes Maxine cuter , which makes her furious . Instead of going against the person she was supposed to , she demands that she kicks either Alex or Justin 's butt . Justin goes against her , but seeing that he would lose , Alex casts a spell on Justin to make him a karate master . Too fast for Maxine , Justin beats her , and Maxine is hurt ( physically ) . Jerry and Theresa rush to her side , caring for Maxine more than they care that Justin beat Maxine in karate . Justin leaves , and Alex leaves after him , heartbroken . Back at home , Jerry tells Alex that he fell for Maxine because she reminded him of Alex when she was little and they bond again . Meanwhile , Zeke thinks the Russos hate him , but really it was just Harper 's alibi in order to keep him away from the Sub Station so as not to make him suspicious about Max 's disappearance and Maxine 's appearance . Guest stars : Bailee Madison as Maxine , Dan Benson as Zeke , Lanny Joon as Sensei Absent : Jake T. Austin as Max Russo 86 7 `` Everything 's Rosie for Justin '' Victor Gonzalez Justin Varava February 4 , 2011 ( 2011 - 02 - 04 ) 407 3.9 Justin and his delinquent class have a wizard wand dance assessment to do which will get them back in Wiztech . A new student named Rosie joins , whom Justin falls madly in love with to later find out that she is an Angel . Meanwhile , Jerry , Teresa , and Harper try to think of ideas of how to get more people to come to their restaurant . Harper makes cards which customers get hole punched each time they buy a sandwich ; when you get 9 hole punches , they get a free sandwich . Contrary to the original purpose , one man punches his own card , demands a free sandwich , and then brings dozens of people into the restaurant , who also have pre-punched cards . Maxine uses her charming cuteness to convince the customers to not exploit her parents . Meanwhile , Justin kicks Rosie out of his class so that it does not fail the wizard dance assessment . Sympathizing , Alex gets Rosie to rejoin the class and puts a copycat spell on her so that Rosie can mimic Alex 's move and pass the class . The assessment ends in disaster when a squirrel - frog attaches itself to Alex 's foot , and Rosie reveals herself to be an angel . The class fails , but Justin starts dating Rosie . Guest stars : Bailee Madison as Maxine , Frank Pacheco as Felix , Leven Rambin as Rosie , Diane Delano as Penny , Chris Coppola as Customer , Cameron Sanders as Nelvis Absent : Jake T. Austin as Max Russo 87 8 `` Dancing with Angels '' Victor Gonzalez Richard Goodman February 11 , 2011 ( 2011 - 02 - 11 ) 408 4.5 Justin and Rosie start dating but when their date gets ruined , they want a second date . Alex suggests an Angel Club in Los Angeles , but Rosie says that only Angels are allowed . Maxine will not tell their parents as long as Alex brings her back an Ozzy Osbourne stone . After Justin , Harper and Alex sneak in along with Rosie , Zeedrik asks them if they are angels and they say they are . Back at the sub shop , Theresa and Jerry question Maxine to find out where Justin , Alex and Harper are , and Maxine does not say , so they force her to join a Pageant in order for her to tell them where they are . Things get bad at the angel club when Alex and Harper can not fly , until Justin secretly pulls out his wand and gives Harper flying powers . Zeedrik still questions them by giving them a test to sing while playing the harp . Though Alex , Justin , and Harper fail to do so , they are accepted as `` angels '' until the key - chain of Ozzy Osbourne 's star reverts to normal . Zeedrik believes they are really angels of darkness , causing everyone in the club to run off , even Rosie . Rosie comes back at the end of the episode to comfort Justin , but when they both look over the city , Rosie 's wings are shown to be black , the color of an angel of darkness ' wings , but Justin does not see because he is looking forward . Meanwhile , Maxine ends up winning the beauty pageant , making Jerry and Theresa celebrate . Guest stars : Bailee Madison as Maxine , Leven Rambin as Rosie , Ransford Doherty as Zeedrik Absent : Jake T. Austin as Max Russo 88 9 `` Wizards vs. Angels '' Victor Gonzalez Vince Cheung & Ben Montanio February 18 , 2011 ( 2011 - 02 - 18 ) 409 -- 410 5.1 Rosie is an Angel of Darkness , and has been tricking Justin all along to make him evil . Alex finds out , with the help of Tina ( a guardian angel in training trying to earn her wings ) that Rosie is an Angel of Darkness . Justin crosses over to the dark side with Rosie , steals the `` moral compass '' , and gives it to Gorog , so Gorog can turn the compass from good to bad , so that the world will be covered in darkness and every human being will be corrupted . Rosie tries to get Justin to run away and save him , because Gorog wants to destroy him , but Justin refuses to leave , stating that he is no longer a wizard but an Angel of Darkness and breaks his wand in halves . Alex tries to convince Justin that he is a wizard , a good wizard and not an Angel of Darkness . Meanwhile , Maxine is enrolled in Tribeca Prep , since she is participating in a `` cousin exchange program . '' After her first day of school , Maxine laments that she has no friends , which leads Harper to insist Maxine have a slumber party ( which is really what Harper wants because she has never had a slumber party ) , that eventually becomes a disaster . Tina reveals that Rosie was a good angel , and her teacher however , Gorog reached her before her transport arrived and corrupted her . Alex and Tina go to the Dark Realm to save Justin . Alex borrows a pair of wings from the guardian angels . Alex takes the Moral Compass and tries to turn it to good but Justin stops her and then Rosie used her good angel side and they fly up and when they land , Justin turns the compass to good . Tina and Alex take it and run . When Rosie and Justin kiss , Rosie turns into a good angel ( with white wings ) , and Justin loses the dark wings . Guest stars : Bill Chott as Mr. Laritate , Bailee Madison as Maxine , Leven Rambin as Rosie , John Rubinstein as Gorog , China McClain as Tina , Amy Tolsky as Florence Note : This is a one - hour special . Absent : Jake T. Austin as Max Russo 89 10 `` Back To Max '' Guy Distad Todd J. Greenwald March 11 , 2011 ( 2011 - 03 - 11 ) 411 3.7 Justin invites Professor Crumbs to check on his delinquent wizards class , to see how their wizard training is progressing . During the conversation , Maxine interrupts , causing Alex and Justin to panic since they do not know how to explain `` Maxine '' , and they try to find a way to turn Maxine back to Max . Meanwhile , Harper takes a role in the school 's `` Spirit of America '' play , only to be replaced by Maxine . Guest stars : Bill Chott as Mr. Laritate , Ian Abercrombie as Professor Crumbs , Bailee Madison as Maxine , Cameron Sanders as Nelvis , LJ Benet as Little Crumbs , Jackie Evancho as Choir Girl Note : Jake T. Austin returns as Max near the end of the episode . Bailee Madison marks her final appearance as Maxine in this episode . 90 11 `` Zeke Finds Out '' David DeLuise Peter Dirksen April 8 , 2011 ( 2011 - 04 - 08 ) 412 3.0 When Alex gets bored of Zeke 's failing magic tricks , she decides to use magic to make Zeke 's tricks come true . Everything goes downhill when Zeke tells Harper he believes he is a wizard and is now booking a magic act at the sub station for a kid 's birthday party . Since Justin and Harper are tired of Alex ruining things all the time , they decide to leave everything up to her . Harper , not wanting to let Zeke make a fool of himself , tells Alex to tell Zeke the truth about wizards , but she is reluctant to , as exposing wizardry to another mortal could get her kicked out of the wizard competition forever if anyone finds out . Zeke goes on with his belief that he is a `` wizard '' , but he finds out Harper is keeping a secret from him so he breaks up with her . Alex realizes what a mess she created and on the day of Zeke 's magic act , she makes Harper disappear before she can expose wizardry to Zeke , which freaks him out . The Russos really are in deep waters when Zeke is going to saw Max in half with a real saw for his next act , so Justin takes matters into his own hands and freezes everyone except for himself and Zeke . Justin tells Zeke that he is a wizard , not Zeke , and that he did everything . Still not believing him , he flashes Zeke into their lair and unveils the secret to him . They go back outside and tell Harper and Alex who are fighting , that Zeke now knows about the existence of wizards , but he promises he will never tell anyone . Zeke and Harper reconcile their relationship and Alex and Harper apologize and make up with each other . Guest stars : Dan Benson as Zeke , Maurice G. Smith as Big Mitch Absent : Maria Canals Barrera as Theresa Russo , David DeLuise as Jerry Russo 91 12 `` Magic Unmasked '' David DeLuise Justin Varava May 13 , 2011 ( 2011 - 05 - 13 ) 413 2.7 When a former legendary Luchador `` Muy Macho '' visits the Sub Station , Alex finds out that she was the reason why he quit lucha libre ( wrestling ) , so she tries to make it up to him by arranging a lucha libre match with him and Jerry to restore his honor . Meanwhile , Zeke asks too many questions about wizardry , so Justin offers to grant him one magical wish if he promised he would stop questioning him about magic . Unfortunately , Zeke 's wish is to defeat Muy Macho in the match . Max pretends to like Talia 's hobbies , but does not enjoy them . Guest stars : Dan Benson as Zeke , Valente Rodriguez as Muy Macho , McKaley Miller as Talia 92 13 `` Meet the Werewolves '' Victor Gonzalez David Henrie June 17 , 2011 ( 2011 - 06 - 17 ) 415 4.0 When Alex asks Mason if she can meet his parents , Mason shows his fake parents and she finds out soon after . She gets upset at Mason and demands him to take her to his real parents . Mason takes her to the Autumn Moon Feast ( werewolf holiday ) to meet his parents . Soon after that Alex finds out he told his parents that she is a werewolf and is frustrated . She uses a spell to change herself and Harper into werewolves . She tries to be the worst werewolf possible in front of Mason 's parents during the feast . In the end Mason 's parents like her as a werewolf and she says to him that they do not know the real her . She begins to leave and he says that he truly loves Alex to his parents and that she is a wizard . She changes back to a wizard and Mason turns back to human form . After the parents find out they try to eat her and Mason and Alex make a near escape . Meanwhile Max makes his parents ' food taste like kid food in order to make it taste good . Afterwards Jerry and Theresa eat it , and as a result they act like little kids . Justin thinks he will have to fix it but Max comments on how he does not need help , as he will be the future family wizard . Max uses another spell on cookies to make them older , but they turn into teenagers . Finally , Justin uses a spell on a pizza to turn them back into their regular selves . Special guest star : Gregg Sulkin as Mason Guest stars : Harry Van Gorkum as Grant Greybeck , Robin Riker as Linda Greybeck , Marianne Muellerleile as Molly , Eric Zuckerman as Bill 93 14 `` Beast Tamer '' Victor Gonzalez Gigi McCreery & Perry Rein June 24 , 2011 ( 2011 - 06 - 24 ) 416 4.0 When Alex , Justin and Max win four tickets to the `` Beast Bowl '' , the tickets are delivered by Beast Tamer Chase Riprock , who begins flirting with Alex and invites the group for a pre-bowl tour . Alex invites Mason to go with them but he says he can not . During the tour , despite Chase 's warnings , Justin attempts to tame the beast so that Max can have his photo taken with the beast , but both are caught and banned from the event . Chase tries to kiss Alex but she rejects him and returns to the mortal world where she finds Mason coming out a hardware store . Mason is evasive about his plans , which involve making an anniversary present for Alex , so Alex returns to the Beast Bowl. Harper tells Mason that Chase likes Alex and urges him to surprise her with the gift at the Beast Bowl . Meanwhile , Justin and Max return to the Beast Bowl disguised as beast taming clowns where they allow the beast to escape and snatch Alex who throws the whip to Chase . Chase tames the beast who drops Alex and Mason is able to reveal his gift , which is a sculpture of himself and Alex. Alex and Mason leave together , with the sculpture . Special guest star : Gregg Sulkin as Mason Guest star : Nick Roux as Chase Absent : Maria Canals Barrera as Theresa Russo , David DeLuise as Jerry Russo 94 15 `` Wizard of the Year '' Victor Gonzalez Richard Goodman July 8 , 2011 ( 2011 - 07 - 08 ) 417 3.6 Alex has been crowned Wizard of the Year after saving the world from dark angels , as well as being reinstated in the Wizard Competition , and a banquet honoring her achievement is hosted . With paparazzi in tow , Chase Riprock visits the lair to congratulate Alex . As he leaves , Keith Keith hounds them about being in a romantic relationship , to which Alex states she already has a boyfriend . Later , Mason and Alex watch his gossip segment , and to their horror , Keith Keith confirms that Chase and Alex are dating . For Alex winning Wizard of the Year , the Russo family must record a holographic video congratulating Alex . However , much to Justin 's displeasure , Justin 's video instead only contains him complaining about Alex . The night of the awards banquet , Mason stands Alex up , leaving her devastated . At the banquet , Chancellor TootieTootie tells Justin that his display of affection and pride for Alex may reinstate him into the competition , causing Justin to be frantic and do everything within his power to destroy the tape . Chase purposely invites himself to sit at the Russo 's table . However , Mason shows up late and sees Alex and Chase flirting together . A short battle ensues between Mason and Chase . Alex soon breaks up the fight , and is forced to choose either Mason or Chase . Appalled by both of their behaviors that evening , Alex chooses neither and breaks up with Mason . Special guest star : Gregg Sulkin as Mason Guest stars : Andy Kindler as Chancellor Tootietootie , Nick Roux as Chase , Justin Guarini as Keith Keith 95 16 `` Misfortune at the Beach '' Jody Margolin Hahn Vince Cheung & Ben Montanio July 24 , 2011 ( 2011 - 07 - 24 ) 420 3.5 The Russos head to the beach on an extremely hot day , and Harper hopes to enjoy reading her book while at the beach . The Russos come across Zelzar , a fortune - telling machine . Jerry warns the kids about Zelzar -- he is from the wizard world , and a wizard 's fortune really comes true . After Max and Justin receive good fortunes , Alex decides to get a fortune despite her father 's warning . However , her fortune says , `` Say good - bye to your life . '' Alex thinks nothing of it and proceeds to enjoy the day at the beach , but comes close to life - threatening situations multiple times . Alex , Justin , Max , and Harper make a compromise with Zelzar -- if they can extract him from the machine and let him enjoy a day at the beach , he will take back Alex 's fortune . Max replaces Zelzar , and Justin is forced to drive the beach - goers away from the machine ( as Max gives out silly fortunes about his new facial hair ) ; meanwhile , the girls help Zelzar fancy his day at the beach . In the end , Zelzar reveals that while he can not take away Alex 's fortune , he can give it to the next person . The next person happens to be a little girl , who gets Alex 's fortune . However , it is revealed that a man from Random Prize Giveaway shows up , saying : `` Say good - bye to your life because we 're randomly giving you one million dollars ! '' Guest stars : Michael Carbonaro as Zelzar , John J. York as Game Show Host 96 17 `` Wizards vs. Asteroid '' Victor Gonzalez Peter Dirksen August 19 , 2011 ( 2011 - 08 - 19 ) 418 3.6 When it is announced that a huge asteroid is hurtling towards the earth , the Russos decide to hide in the wizard world , but Alex , Justin , and Max change their minds and go into space to destroy the asteroid . Meanwhile , Alex finds out that she is not graduating high school , but when a small part of the asteroid hits the school , she gets a chance to graduate . Guest stars : Dan Benson as Zeke , Bill Chott as Mr. Laritate , Kristina Hayes as Reporter 97 18 `` Justin 's Back In '' Guy Distad Todd J. Greenwald August 26 , 2011 ( 2011 - 08 - 26 ) 419 3.2 Justin 's class of delinquent wizards has completed their studies , which means they are eligible to rejoin WizTech if they all pass their final evaluation . When they all fail , Alex suspects something is not right . The truth soon uncovered -- the class had actually passed , but the historian who checked the exams was revealed to be evil , and had lied about the exam scores . He tries to attack Justin 's class , so Justin must stop the historian , and save Alex. but one of the students in the class is able to stop him by pulling the most powerful wand in the wizard world out of a crystal ball and using it . This means that he is actually the descendant of a famous wizard who had previously been thought to have no living descendants . Justin 's class is revealed to have passed the final exam , so they are readmitted into WizTech and Justin is officially back in the family wizard competition . Meanwhile , Jerry and Theresa realize that they never saved any of Max 's childhood accomplishments , so they try to recreate them with the help of Harper . During the credits , it is revealed that Max had kept his favorite memories all along . Special guest star : Tim Conway as Cragmont Guest stars : Ian Abercrombie as Professor Crumbs , Frank Pacheco as Felix , Cameron Sanders as Nelvis 98 19 `` Alex the Puppetmaster '' Victor Gonzalez Gigi McCreery & Perry Rein September 16 , 2011 ( 2011 - 09 - 16 ) 421 3.0 Alex and Harper decide to do a puppet show to raise money for a new apartment and Zeke and Justin help them . But Alex forgets to write the lines for the show . Harper gets mad and decides to do a show of her own and makes her puppets act like the way Alex treats her . Alex makes Justin and Zeke puppets for her show and steals Harper 's crowd which makes Harper upset . Then Alex apologizes to Harper using the puppets . Meanwhile , Talia 's parents meet Theresa and Jerry for the first time , but it does not go well . Justin puts a spell on Talia 's parents to forget they ever meet Theresa and Jerry . They meet again , but this time they end up watching a 16 - hour play together . Special guest star : Joely Fisher as Meg Robinson Guest stars : Dan Benson as Zeke , James Urbaniak as Rob Robinson , McKaley Miller as Talia 99 20 `` My Two Harpers '' Victor Gonzalez Manny Basanese September 30 , 2011 ( 2011 - 09 - 30 ) 422 3.0 Harper and Zeke spend so much time together that Alex decides to make a Harper - clone . Justin comes with lots of different ideas to save money in the sub-shop and Max starts a fast - food restaurant in the wizard world . Guest star : Dan Benson as Zeke Absent : Maria Canals Barrera as Theresa Russo 100 21 `` Wizards of Apartment 13B '' Guy Distad Justin Varava October 7 , 2011 ( 2011 - 10 - 07 ) 423 3.5 Alex and Harper receive a flyer for a hotel . They meet the hotel 's owner , Dexter , who sells them Apartment 13B , which belongs to a floor for non-humans . They rent it , but Harper is forced to use a training wand that can only open things . Later at their apartment , they realize Mason lives on the floor . Mason will stop at nothing to win Alex back ; Alex tells him she does not want a boyfriend , but Mason is relentless . That night , Alex and Harper throw a party , where the whole floor comes , including Felix . Mason goes to the party and uses Harper 's wand to open Alex 's heart . However , she flirts with an ugly giant . Mason tries again , but makes Alex opens her heart to Felix . Meanwhile , Theresa and Jerry trick Justin into going to Alex 's apartment to drive him out of the house . When Justin arrives , he fixes Mason 's mistakes by resetting Harper 's wand and it is revealed that despite his actions , he misses Alex. Alex , freed from Mason 's spell , is angry at Mason , and Mason , deflated , leaves . Outside their door , Dexter turns into Gorog when no one is looking . He wants revenge . Max appears in the apartment , and when Harper and Alex kick him out , he encounters Gorog , who gives him a flyer for a free camp . Max accepts . Special guest star : Gregg Sulkin as Mason Guest stars : John Rubinstein as Gorog , Frank Pacheco as Felix , Fred Stoller as Dexter , Christopher Douglas Reed as Ogre Note : This is part 1 of a 4 - part arc and also the 100th episode . 101 22 `` Ghost Roommate '' David DeLuise Richard Goodman October 14 , 2011 ( 2011 - 10 - 14 ) 424 4.1 Alex and Harper have trouble paying the apartment bills , so Dexter recommends getting a roommate . Alex and Harper find a wealthy ghost named Lucy , who they let move in . Meanwhile , Justin orders a robot to help Zeke at the sub station , as Justin is busy studying for the wizard competition . The robot is lost in transit , but Dexter ( Gorog in disguise ) makes an evil robot to spy on Justin to pass information to Gorog . While Zeke and the robot are working , the robot asks him about Justin and the wizard competition , which confuses Zeke because no one had talked about it in front of the robot . Later that night , Lucy starts crying and explains that her boyfriend Donny had disappeared sixty years prior in a plane accident . Alex tries to set Lucy up with Justin , but he makes matters worse . Later , Lucy meets Mason and they go out on a long date , which makes Alex jealous . Meanwhile , the robot again asks Zeke about the wizard world and Zeke realizes that the robot might have a secret agenda . He tells Justin , who simply does not believe him and is ignorant of the situation because of his intensive studying . Because of her jealousy , Alex helps Lucy locate Donny , who had been stranded on an island in the Bermuda Triangle . They soon reconnect , but not after Alex realizes that she can not get back home , due to heavy magnetic currents interfering with her magic . Mason goes to save Alex after he finds out that she had left for the Bermuda Triangle . The robot attacks Justin and Zeke after they find him scanning the spell book . Mason and Alex manage to get off of the island using the Bermuda shorts given to them by Justin . The robot is shown giving Gorog the spell he needed that he got from the Russos . Special guest star : Gregg Sulkin as Mason Guest stars : Dan Benson as Zeke , Fred Stoller as Dexter , Josh Sussman as Hugh Normous , Linsey Godfrey as Lucy , Travis Caldwell as Donny , Michael Carbonaro as Robot Note : This is part 2 of a 4 - part arc . Absent : Jake T. Austin as Max Russo , Maria Canals Barrera as Theresa Russo , David DeLuise as Jerry Russo 102 23 `` Get Along , Little Zombie '' Victor Gonzalez Peter Dirksen October 21 , 2011 ( 2011 - 10 - 21 ) 425 3.4 Alex and Harper are going to their apartment when they run into Mr. Laritate , who also lives in the hotel . Felix tells Justin he broke his wand and Justin informs him that it 's fake , because he saw batteries in it . He concludes that someone stole Felix 's wand . Dexter is showing a zombie to the hall for magical creatures while he introduces them to Alex and Harper . Mason , who will stubbornly not stop asking Alex on a date , meets them in the elevator . When Alex ignores him , Mason messes with the buttons so he can spend more time with her and they land on the second floor . Justin tells Jerry that Felix lost his wand and Jerry tells them to use the abracadoobler wand app and Felix realizes that his wand is around the area . Meanwhile , because Mason messed with the buttons , all the humans have discovered the mysterious thirteenth floor . Alex lies and tells the humans that they accidentally got into a secret open house floor for the people in the hotel . Mr. Laritate , after all the other humans left , discovers the thirteenth floor too and sees Alex , Harper , and Mason . Mr. Laritate sees the zombie , Alex explains this is a haunted house , but Mr. Laritate does not believe them . The zombie bites Mr. Laritate and turns him into a zombie . They take him to their apartment while Alex looks for a spell to turn Mr. Laritate human again . Mr. Laritate runs away and Alex , Harper , and Mason suspect he went to the substation . Professor Crumbs questions Felix , who reveals the 13th floor to them , and Crumbs denies the existence of a `` 13th floor '' , so they go to investigate . At Waverly Place they 're throwing a festival while Alex tells Jerry what happened . Alex and Mason , trying to sneak the zombie into the substation , are forced into dance . They then , after Harper causes a distraction , take Laritate to the substation and give him a medicine from the wizard world that turns Laritate human . He remembers nothing and goes outside to dance . Alex kisses him on the cheek , and Mason suggests they just be friends . Alex gets back together with Mason . Crumbs tells Felix the floor should not exist . Harper , Mason , and Alex return to the thirteenth floor . Justin tells them that the floor does not exist . Crumbs thinks that there is evil going on . Dexter then comes with dark angel wings and it is revealed he stole Felix 's his wand . Dexter tricks Felix into turning to the dark side in return for the wand . Felix casts a spell that traps them all on the floor . Back at Waverly Place , Mr. Laritate is dancing while Jerry is selling chili , when Mr. Laritate gets one and gets water to get `` the burn '' out of his mouth . Special guest star : Gregg Sulkin as Mason Guest stars : Bill Chott as Mr. Laritate , Ian Abercrombie as Professor Crumbs , Frank Pacheco as Felix , Fred Stoller as Dexter , Regan Burns as Everett , Jane Carr as Martha St. Claire Note : This is part 3 of a 4 - part arc . Absent : Jake T. Austin as Max Russo , Maria Canals Barrera as Theresa Russo 103 24 `` Wizards vs. Everything '' Victor Gonzalez Gigi McCreery & Perry Rein October 28 , 2011 ( 2011 - 10 - 28 ) 426 3.4 The wizards of 13th floor come out and Alex explains Dexter 's evil . Dexter reveals himself as Gorog , and that he is trying to rebuild his army of darkness . Felix uses a spell that makes all the wizards from the 13th floor go with them , so they can make them all evil , all except Alex , Justin , and Harper , who are left behind . A trashcan tells them to go through it , however Alex ends up in the room again . Justin realizes only mortals can go through it . Alex convinces Harper into going through it , Harper then arrives in the wizard lair . Gorog takes the kidnapped wizards to his evil lair , where he plans to make them evil . He tricks Hugh Normous into becoming one of the evil wizards in his army . Professor Crumbs fakes becoming evil when Gorog plans on making him evil . Harper contacts Max and tells him about Gorog . Max arrives and suggests they look for spells in the wizard books . Gorog makes the wizard army to dig a hole to the atmosphere to the wizard world , so they can take over it . Gorog also tries to trick Mason into being one of the members in his army , but Mason refuses . Gorog tricks him into joining , however . Gorog then makes Felix send a black whole to suck Alex and Justin in it . Gorog gives the kidnapped wizards their wands so they can take over the wizard world , but Crumbs refuses to let them . Felix then gets rid of Crumbs on Gorog 's order . The black hole nearly sucks Alex and Justin when Crumbs arrives at the wizard lair . Max suggests they put a black hole in the wizard lair . Max goes in and rescues Alex and Justin . Crumbs tells them to use their magic to stop Gorog . They arrive at Gorog 's lair and attempt to destroy him , but Mason tries to convince Alex to join them . Gorog also reveals Juliet ( young again ) , Justin 's ex-girlfriend , and she convinces Justin to join . Alex also surrenders , and Max is forced to as well , the three then use their combined magic to get rid of Gorog , and all the supernatural beings are freed from his influence . Juliet and Justin get back together . Alex tricks Harper into moving in the Russos ' basement by making her think all the wizards and supernatural creatures , with no home , are going to stay . Special guest stars : Gregg Sulkin as Mason , Bridgit Mendler as Juliet van Heusen Guest stars : Ian Abercrombie as Professor Crumbs , John Rubinstein as Gorog , Frank Pacheco as Felix , Fred Stoller as Dexter , Josh Sussman as Hugh Normous , Christopher Douglas Reed as Ogre Note : This is part 4 of a 4 - part arc . Absent : Maria Canals Barrera as Theresa Russo , David DeLuise as Jerry Russo 104 25 `` Rock Around the Clock '' Guy Distad Robert Boesel November 4 , 2011 ( 2011 - 11 - 04 ) 414 3.8 The current landlord of the Russo 's building decides to sell the sub shop , evicting the Russos of the shop , as well as their apartment and lair , which contains their portal . Without the portal , the Russos will lose all contact with the Wizard world . So , the entire family ( along with Harper ) travel back to 1957 to stop Jerry 's father ( the previous owner of the shop ) from selling the shop to the landlord , so that they do not get evicted . Jerry 's father agrees not to sell the shop , and the Russos return to present day . However , they accidentally leave Harper behind when Harper is distracted by a woman with a poodle , and Harper suggests that the woman should put a picture of a poodle on her skirt , creating a poodle skirt , which were popular in the 1950s . Back in present day , the Russos ( who have not yet realized Harper 's absence ) find the sub shop obsolete , boarded up , and empty , with the subway car and the lair missing , too . The Russos realized that they have messed with the fabric of time , and something they did while time - traveling in 1957 must have created a ripple effect , and affected present day . While Alex suggests that they go back to 1957 to find out what they did wrong , Justin denies this , saying they should not solve the problem by doing exactly what caused the problem , however Theresa states that they will have to go back , when she realizes that they left Harper in 1957 . The Russos return to 1957 , where Jerry 's father reveals that he did not sell the restaurant to the landlord , however the restaurant failed to make enough business , and that he has been forced to close it . Justin realizes that when Jerry 's father lost the restaurant , he moved out of the building and since their family no longer lived in the building , the lair disappeared in present day . The Russos decide just to find Harper and go back to present day , and discover that Harper enrolled at Tribeca Prep as soon as they forgot her in 1957 , as Harper did not want to ruin her perfect attendance record . Justin , Alex , and Max go to Tribeca Prep to retrieve Harper , while Jerry and Theresa wait at the sub shop , however Harper decides to stay in the past , as she finds new popularity in 1957 that she does not experience in present day . While at Tribeca , Max introduces the high - five to several students . Alex realizes that if they make the sub shop the 1957 high school hangout , the sub shop will get better business and will not have to close . However , no one has any fun at the sub shop that night as the jukebox is broken . Just as everyone is about to leave , Max plugs his MP3 player into the jukebox and Harper uses her popularity to get the students dancing and having fun at the shop , and the business at the sub shop peaks . The Russos return to the present day , where the lair and the sub shop are back , and Jerry owns the entire building , while the landlord is now the owner of a Janitor service , instead of the building , and the high - five is now called a `` Max '' . Alex then remembers that they forgot Harper back in 1957 and they go back and get her . ( the Russos accidentally end up in 1977 twice in the episode , thanks to Justin ) Guest stars : Brendan Bradley as Hank , Carlo Michael Mancini as Lenny Hune 105 26 `` Harperella '' Victor Gonzalez Richard Goodman & Justin Varava November 18 , 2011 ( 2011 - 11 - 18 ) 427 3.5 The episode begins on Waverly Place where Harper is reading a storybook to a group of children when Alex pushes her away . Alex explains that it 's a Wizard Storybook , a magical storybook that has the power of turning what the person reads real . Then Harper is teleported into the loft where Theresa , her evil ( or `` wicked '' as she referred ) stepmother calls her Harperella ( a combination of Harper and Cinderella ) and forces her to do the chores . Then her evil stepbrothers , Justin and Max come down and give her laundry to her wash . Later Harper is washing the Waverly Substation when Alex appears , as she is Harper 's fairy godmother . Alex explains to Harper that the fairy tale has to run as it 's supposed to before things can go back to the way they were and then vanishes . Then Max comes in and says that the prince charming has decided to use the Substation to be the ballroom for the royal party . Harper says that she can go to the party but her stepfamily laughs at her . Back in the loft Harper summons Alex , she uses a spell to transform Harper 's bookdress into a princess gown and glass bowls into glass slippers . They go down ( through the door ) into the street and Alex turns the hot dog stand into a carriage to take Harper to the party . There she dances with prince charming , Zeke . At the stroke of midnight she goes outside leaving her glass slipper behind . Then , to both girls ' shock , Justin , Max and Zeke ( with pig noses ) rush inside the substation being chased by the big , bad wolf , Mason . Alex realizes that some pages are missing and Cinderella and three little pigs stories were blended together . The pig - turned boys and Harper rush into the loft being chased by Mason . While Alex finds the pages Harper has to keep Mason from eating Zeke ( who built the straw house ) , Alex eventually finds the book pages in a drawer along with other book pages . Alex tries a page from Max 's favourite magic trick book then David Copperfield comes into the room and does some magic tricks which impresses Harper . But another page that Alex tried was from Justin 's science book and a caveman appeared , but the caveman has a thing for Harper . So when Harper is impressed by the magic trick he is jealous and tries to attack David Copperfield . Alex finds the right pages and the story goes back to Cinderella . Zeke Charming comes in and Theresa tries to wear the slipper but fails . Then Harper tries it and fits . She and Zeke go back to the royal party where they dance and then the story ends and the world is returned to its normality . Last but not least , Harper was back in the real world and she lived happily ever after . Finally , Alex planned that Harper and Zeke dance because they were great when they danced in romance , so they practiced but they were really bad . The ball dance is turned into a clogging dance . Special guest stars : David Copperfield as himself , Gregg Sulkin as Mason Guest star : Dan Benson as Zeke Absent : David DeLuise as Jerry Russo 106 27 `` Who Will Be the Family Wizard '' Victor Gonzalez Vince Cheung & Ben Montanio ( Part 1 ) Todd J. Greenwald ( Part 2 ) January 6 , 2012 ( 2012 - 01 - 06 ) 428 -- 429 9.8 During a dinner that Alex made for the family , Professor Crumbs visits to reveal that with this selfless act , the Russo children can finally have their family wizard competition . Round one of the competition is a trivia round , in which questions related to magic are asked . During this round , Harper and Zeke appear . Zeke has accidentally smelled a purple substance in the lair that caused him to turn purple . This causes a griffin to kidnap him and Harper . Alex , Justin and Max use their three time - outs to go and rescue their friends . They make it back , only to discover that they have been gone too long and have been disqualified from the competition . They all return home , where the lair disappears and they all lose their magic , thus becoming mortals . Justin and Max begin to hate Alex because of her insistence on saving Zeke and Harper resulting in them losing . Convinced that the loss of their powers has ruined the family , Jerry decides to sell the sub shop . The kids go for a day without magic , during which , slowly gaining back trust in each other as they reopen and run the shop . Suddenly , they are returned to the area of the Wizard Competition , where the host reveals that the griffin attack ( which was actually meant for Professor Crumbs ) and the weeks they went without magic were tests to test their family bond . They enter the final round of the competition , a massive labyrinth . The first out of the maze will win . Justin makes it out first and is declared the Family Wizard . However , he decides he can not accept this because Alex was about to get out first : Justin had been trapped by magical vines and Alex , near the exit , came back to help . Alex is thus declared the true family wizard . Professor Crumbs , proud of Justin 's integrity in telling the truth , declares that he is going to retire as Headmaster of Wiz - Tech and declares Justin the new headmaster , granting him full wizard powers . Considering Max is the only Russo child that does not get powers or becomes a full wizard , Jerry thus decides to one day pass down the sub shop to Max , which he happily accepts . It ends with the Russo family hugging and gathering together with Alex stating that they are all finally happy at the same time . Special guest stars : Gregg Sulkin as Mason , Bridgit Mendler as Juliet van Heusen Guest stars : Dan Benson as Zeke , Ian Abercrombie as Professor Crumbs , Andy Kindler as Chancellor Tootietootie Note : This is an hour long special .
+  Fact 0.143: In 'Wizards vs. Angels', Justin steals the moral compass and gives it to Gorog so Gorog can turn it from good to bad.
+
+Retrieved items:
+<item 1>
+Wizards of Waverly Place (season 4)
+They suggest he move the wizard competition up and he moves it to a few days away . Max quits the society because he finds out that they are taking advantage of
+him . Alex and Justin transform into Max in an attempt to change the date of the family wizard competition back to its original date and succeed . In the end of
+the episode they accidentally turn Max indefinitely into a little girl . Guest stars : Bailee Madison as Maxine , Frank Pacheco as Felix , Kari Wahlgren as
+Helen , Shane Harper as Fidel Note : Bailee Madison begins her recurring role as Maxine , the female Max in this episode . Jake T. Austin was absent in four
+other episodes and returns at the end of the tenth episode `` Back to Max '' . 85 6 `` Daddy 's Little Girl '' Robbie Countryman Gigi McCreery & Perry Rein
+January 21 , 2011 ( 2011 - 01 - 21 ) 406 3.4 With Max still a little girl , their parents pay more attention to Max ( Maxine ) , and Alex becomes jealous .
+</item 1>
+
+<item 2>
+Wizards of Waverly Place (season 4)
+The judges rule Alex and Justin guilty , and Professor Crumbs sentences them both to be demoted to level one in the Family Wizard Competition , making them
+behind Max by two levels . Meanwhile , Max sets up traps in the Sub Station for the `` government '' , but ends up falling for one of them . Special guest star
+: Gregg Sulkin as Mason Guest star : Ian Abercrombie as Professor Crumbs 81 `` Alex Gives Up '' Victor Gonzalez Todd J. Greenwald November 27 , 2010 ( 2010 - 11
+- 27 ) 402 N / A Alex decides to give up the wizard competition to spend more time with Mason and thinks that it does not matter since Max is all the way in the
+lead , but Chancellor Tootietootie tells Alex that non-wizards and werewolves can not date , because the werewolf always eats the human . Max 's picture on the
+front of Future Wizards magazine attracts the daughter of a family of Cucuys ( mythical Latino monster ) and they invite him to a dinner party on their yacht .
+</item 2>
+
+<item 3>
+Wizards of Waverly Place (season 4)
+Too fast for Maxine , Justin beats her , and Maxine is hurt ( physically ) . Jerry and Theresa rush to her side , caring for Maxine more than they care that
+Justin beat Maxine in karate . Justin leaves , and Alex leaves after him , heartbroken . Back at home , Jerry tells Alex that he fell for Maxine because she
+reminded him of Alex when she was little and they bond again . Meanwhile , Zeke thinks the Russos hate him , but really it was just Harper 's alibi in order to
+keep him away from the Sub Station so as not to make him suspicious about Max 's disappearance and Maxine 's appearance . Guest stars : Bailee Madison as Maxine
+, Dan Benson as Zeke , Lanny Joon as Sensei Absent : Jake T. Austin as Max Russo 86 7 `` Everything 's Rosie for Justin '' Victor Gonzalez Justin Varava
+February 4 , 2011 ( 2011 - 02 - 04 ) 407 3.9 Justin and his delinquent class have a wizard wand dance assessment to do which will get them back in Wiztech .
+</item 3>
+
+<item 4>
+Wizards of Waverly Place (season 4)
+In the end Mason 's parents like her as a werewolf and she says to him that they do not know the real her . She begins to leave and he says that he truly loves
+Alex to his parents and that she is a wizard . She changes back to a wizard and Mason turns back to human form . After the parents find out they try to eat her
+and Mason and Alex make a near escape . Meanwhile Max makes his parents ' food taste like kid food in order to make it taste good . Afterwards Jerry and Theresa
+eat it , and as a result they act like little kids . Justin thinks he will have to fix it but Max comments on how he does not need help , as he will be the
+future family wizard . Max uses another spell on cookies to make them older , but they turn into teenagers . Finally , Justin uses a spell on a pizza to turn
+them back into their regular selves .
+</item 4>
+
+<item 5>
+In season 4 of *Wizards of Waverly Place*, Maxine beats Justin at karate, and Jerry is charmed by her again, frustrating Alex, who is trying to win back his
+affection. Alex and Justin bring their parents to Maxine’s class and try spells to turn her back into Max, but the spells only make her cuter and angrier. When
+Maxine challenges them, Alex magically makes Justin a karate master. Justin defeats Maxine, leaving her physically hurt
+</item 5>
+
+<item 6>
+Wizards of Waverly Place (season 4)
+She ends up making Alex jealous when their father prefers Maxine over Alex . Maxine remains until `` Back to Max '' . In the episode `` Everything 's Rosie for
+Justin '' , Justin falls in love with Rosie , a guardian angel , but at the end of `` Dancing with Angels '' she becomes an Angel of Darkness . In `` Zeke Finds
+Out '' , the Russos finally reveal to Zeke that they are wizards . In `` Wizard of the Year '' , Alex is crowned Wizard of the Year for saving the world from
+the angels of darkness , and is reinstated in the Wizards Competition . In `` Justin 's Back In '' , Justin is reinstated in the Wizard Competition , after his
+class of delinquent wizards passes . Meanwhile , Alex 's relationship with Mason is jeopardized again when a beast tamer , Chase Riprock , falls in love with
+Alex and Mason gets jealous . This results in Alex breaking up with Mason . Alex , Justin and Max then save the world from being destroyed by an asteroid .
+Later , Alex and Harper move into an apartment building with a secret 13th floor for wizards and other creatures in the wizard world .
+</item 6>
+
+<item 7>
+Wizards of Waverly Place (season 4)
+However , it turns out to be a trap made by Gorog to capture the wizards who live in the same floor to make them join the dark side and rule the wizard world .
+He is defeated and destroyed by Alex , Justin and Max who were using the Power of Three . During this , Alex and Mason get back together and , after a long time
+, Justin finally gets back together with Juliet . Finally , in the hour - long series finale , Alex , Justin , and Max compete in the family wizard competition
+. Alex wins and gains full wizardry ; Justin becomes a full wizard as well when Professor Crumbs reveals he is retiring as headmaster of WizTech and passes the
+position to Justin . Jerry also decides to pass down the Waverly Sub Station to Max one day since he is the only child who is not a wizard anymore . The series
+ends with hugging and Alex saying that they are all happy . Guest stars and recurring cast include : Gregg Sulkin as Mason Greybeck , Ian Abercrombie as
+Professor Crumbs , David Barrera as Carlos Cucuy , Samantha Boscarino as Lisa Cucuy , Bill Chott as Mr.
+</item 7>
+
+<item 8>
+Wizards of Waverly Place (season 4)
+They then shrink it and go into Mason 's mouth . While there , Alex , Max , and Justin see Mason 's thoughts , which are all of Alex . They get Dean out , and
+Alex , when Harper , Max , and Justin leave , Alex tells Dean that he was knocked out and the doctor 's solution was for them all to dress up as cows . Dean
+then gives her his offer once again : he wants to get back with her . Alex tells him ' no ' , and then gets back together with Mason , with deciding to get back
+to the Wizard Competition . Special guest star : Gregg Sulkin as Mason Guest stars : Daniel Samonas as Dean , Frank Pacheco as Felix , Shoshana Bush as Tyler 84
+5 `` Three Maxes and a Little Lady '' Victor Gonzalez Richard Goodman January 7 , 2011 ( 2011 - 01 - 07 ) 405 4.0 Alex joins Justin 's wizard class to try to
+move up in the competition . Max joins a sophisticated wizard society . They suggest he move the wizard competition up and he moves it to a few days away .
+</item 8>
+
+<item 9>
+Wizards of Waverly Place (season 4)
+Justin takes Maxine to her ( Max 's ) karate class and Maxine kicks Justin 's butt . After the class , Alex decides to make Jerry 's favorite sandwich in order
+to win his love back , but Maxine comes along with Justin , announcing that she beat Justin in karate , and Jerry immediately falls for her cuteness again .
+More jealous than ever , Alex comes back with Justin to Maxine 's karate class with their parents , having a slight idea of knowing how to change Maxine back to
+Max . They cast spells on Maxine , Justin using the spell he used on Max that turned him into Maxine , and Alex using the reverse spell . Unfortunately , it
+only makes Maxine cuter , which makes her furious . Instead of going against the person she was supposed to , she demands that she kicks either Alex or Justin
+'s butt . Justin goes against her , but seeing that he would lose , Alex casts a spell on Justin to make him a karate master . Too fast for Maxine , Justin
+beats her , and Maxine is hurt ( physically ) .
+</item 9>
+
+<item 10>
+Wizards of Waverly Place (season 4)
+Alex , Justin and Max use their three time - outs to go and rescue their friends . They make it back , only to discover that they have been gone too long and
+have been disqualified from the competition . They all return home , where the lair disappears and they all lose their magic , thus becoming mortals . Justin
+and Max begin to hate Alex because of her insistence on saving Zeke and Harper resulting in them losing . Convinced that the loss of their powers has ruined the
+family , Jerry decides to sell the sub shop . The kids go for a day without magic , during which , slowly gaining back trust in each other as they reopen and
+run the shop . Suddenly , they are returned to the area of the Wizard Competition , where the host reveals that the griffin attack ( which was actually meant
+for Professor Crumbs ) and the weeks they went without magic were tests to test their family bond . They enter the final round of the competition , a massive
+labyrinth . The first out of the maze will win . Justin makes it out first and is declared the Family Wizard .
+</item 10>
+=== END ITEM id=a166-98d92286a487263f ===
+
+=== ITEM id=a195-c996590513a433e8 ===
+Gold sentences and facts:
+Sentence 0: Cast Character Rank / Position Seasons Notes Regular Recurring Guest Christopher Meloni Elliot Stabler Detective 1 -- 12 Mariska Hargitay Olivia Benson Lieutenant 1 -- Richard Belzer John Munch DA Investigator 1 -- 15 15 , 17 Dann Florek Donald Cragen Captain 1 -- 15 16 Michelle Hurd Monique Jeffries Detective 1 -- 2 Stephanie March Alexandra Cabot Assistant District Attorney 2 -- 5 , 11 2 , 10 , 13 6 Ice - T Odafin `` Fin '' Tutuola Detective 2 -- Tamara Tunie Melinda Warner Medical Examiner 7 -- 12 2 -- 6 , 13 -- 17 19 B.D. Wong George Huang FBI Special Agent 4 -- 12 2 -- 3 13 -- 15 , 17 Diane Neal Casey Novak Senior Assistant District Attorney 5 -- 9 13 12 Adam Beach Chester Lake Detective 9 8 Michaela McManus Kim Greylek Assistant District Attorney 10 Danny Pino Nick Amaro Detective 13 -- 16 Kelli Giddish Amanda Rollins Detective 13 -- Raúl Esparza Rafael Barba Assistant District Attorney 15 -- 14 Peter Scanavino Dominick Carisi Jr . Detective 16 -- 16
+  Fact 0.27: Diane Neal plays Casey Novak.
+
+Retrieved items:
+<item 1>
+Law & Order: Special Victims Unit
+On May 12 , 2017 , the series was renewed for a nineteenth season , which premiered on September 27 , 2017 . As of January 17 , 2018 , Law & Order : Special
+Victims Unit has aired 421 original episodes . Contents ( hide ) 1 Production 1.1 History and development 1.1. 1 Executive producers 1.2 Filming 1.3 Broadcast
+history 1.4 Russian adaptation 2 Casting 2.1 Salaries 3 Cast and characters 4 Series overview 5 Episodes 6 Reception 6.1 U.S. television ratings 6.2 Awards and
+honors 7 Broadcast and streaming 7.1 Syndication 8 International broadcast 9 References 9.1 Notes 9.2 Bibliography 10 External links Production ( edit ) History
+and development ( edit ) The idea for Law & Order : Special . Victims Unit originated with the 1986 `` preppie murder '' case of Robert Chambers , who strangled
+Jennifer Levin , a woman he dated whom he later killed during what he claimed was consensual `` rough sex '' in Manhattan 's Central Park .
+</item 1>
+
+<item 2>
+Law & Order: Special Victims Unit
+Wong , Stephanie March Cast of season 9 ( 2007 -- 08 ) , from left : Diane Neal , Wong , Tamara Tunie , Meloni , Florek , Hargitay , Ice - T , Belzer , Adam
+Beach Cast of season 10 ( 2008 -- 09 ) from left : Michaela McManus , Wong , Tunie , Meloni , Hargitay , Florek , Belzer , Ice - T The cast of season 15 ( 2013
+-- 2014 ) from left : Raúl Esparza , Florek , Danny Pino , Hargitay , Kelli Giddish , Belzer , Ice - T The cast of seasons 17 -- 18 ( 2015 -- 2017 ) . from left
+: Esparza , Giddish , Hargitay , Ice - T , Peter Scanavino Casting for the lead characters of Law & Order : Special Victims Unit occurred in the spring of 1999
+. Dick Wolf , along with officials from NBC and Studios USA were at the final auditions for the two leads at Rockefeller Center .
+</item 2>
+
+<item 3>
+Law & Order: Special Victims Unit
+1999 ( 1999 - 09 - 20 ) -- present Chronology Related shows Law & Order franchise External links Website Law & Order : Special Victims Unit ( often abbreviated
+to Law & Order : SVU or just SVU ) is an American police procedural , legal , crime drama television series set in New York City , where it is also primarily
+produced . In the style of the original Law & Order , episodes are often `` ripped from the headlines '' or loosely based on real crimes that have received
+media attention . Created by Dick Wolf , the series premiered on NBC on September 20 , 1999 , as the second series in Wolf 's successful Law & Order franchise .
+Law & Order : Special Victims Unit has been nominated for and won numerous awards , including the 2006 Emmy for Outstanding Lead Actress in a Drama Series for
+Mariska Hargitay , the first , and to date only , Emmy to be received by a regular on any Law & Order series . It is the current longest running scripted
+non-animated U.S.
+</item 3>
+
+<item 4>
+Law & Order: Special Victims Unit
+Series overview ( edit ) In the criminal justice system , sexually based offenses are considered especially heinous . In New York City , the dedicated
+detectives who investigate these vicious felonies are members of an elite squad known as the Special Victims Unit . These are their stories . -- Opening
+narration spoken by Steven Zirnkilton Based out of the New York City Police Department 's 16th precinct in Manhattan , Law & Order : Special Victims Unit delves
+into the dark side of the New York underworld as the detectives of a new elite force , the Special Victims Unit ( SVU for short ) , investigate and prosecute
+various sexually - oriented crimes including rape , pedophilia , and domestic violence . They also investigate the abuses of children , the disabled and elderly
+victims of non-sexual crimes who require specialist handling . All the while trying to balance the effects of the investigation on their own lives . Its stories
+also touch on the political and societal issues associated with gender identity , sexual preferences , and equality rights . While the victim is often murdered
+, this is not always the case , and victims frequently play prominent roles in episodes .
+</item 4>
+
+<item 5>
+Law & Order: Special Victims Unit
+Law & Order : Special Victims Unit - Wikipedia Law & Order : Special Victims Unit Jump to : navigation , search For the current season , see Law & Order :
+Special Victims Unit ( season 19 ) . Law & Order : Special Victims Unit Also known as Law & Order : SVU SVU Genre Police procedural Legal drama Thriller Created
+by Dick Wolf Starring Christopher Meloni Mariska Hargitay Richard Belzer Dann Florek Michelle Hurd Stephanie March Ice - T B.D. Wong Diane Neal Tamara Tunie
+Adam Beach Michaela McManus Danny Pino Kelli Giddish Raúl Esparza Peter Scanavino Opening theme Theme of Law & Order : Special Victims Unit Composer ( s ) Mike
+Post Country of origin United States Original language ( s ) English No. of seasons 19 No. of episodes 421 ( list of episodes ) Production Executive producer (
+s ) Dick Wolf Robert Palm ( season 1 ) David J.
+</item 5>
+
+<item 6>
+Law & Order: Special Victims Unit
+It is the current longest running scripted non-animated U.S. primetime TV series since the cancellation of the original Law & Order on May 24 , 2010 and is the
+fourth - longest running scripted U.S. primetime TV series on a major broadcast network . Law & Order : Special Victims Unit originally centered almost
+exclusively on the detectives of the Special Victims Unit in a fictional version of the 16th Precinct of the New York City Police Department . As the series
+progressed , additional supporting characters were added as allies of the detectives in the New York County Manhattan District Attorney 's office ( known as
+advisers from the Sex Crimes Bureau ) and the Medical Examiner 's office . Certain episodes will go into detail about detectives ' personal lives and how they
+may or may not tie into the crimes dealt with during the show . Typical episodes follow the detectives and their colleagues as they investigate and prosecute
+sexually based offenses , child abuse , and crimes against the elderly . The show starred Christopher Meloni as Detective Elliot Stabler and Mariska Hargitay as
+Detective Olivia Benson for its first twelve seasons until the former left the cast , unable to come to an agreement on his contract .
+</item 6>
+
+<item 7>
+Law & Order: Special Victims Unit
+Cast and characters ( edit ) Main article : List of Law & Order : Special Victims Unit characters Cast Character Rank / Position Seasons Notes Regular Recurring
+Guest Christopher Meloni Elliot Stabler Detective 1 -- 12 Mariska Hargitay Olivia Benson Lieutenant 1 -- Richard Belzer John Munch DA Investigator 1 -- 15 15 ,
+17 Dann Florek Donald Cragen Captain 1 -- 15 16 Michelle Hurd Monique Jeffries Detective 1 -- 2 Stephanie March Alexandra Cabot Assistant District Attorney 2 --
+5 , 11 2 , 10 , 13 6 Ice - T Odafin `` Fin '' Tutuola Detective 2 -- Tamara Tunie Melinda Warner Medical Examiner 7 -- 12 2 -- 6 , 13 -- 17 19 B.D.
+</item 7>
+
+<item 8>
+Law & Order: Special Victims Unit
+The unit also works with the Manhattan District Attorney 's office as they prosecute cases and seek justice for SVU 's victims and survivors with precision and
+a passion to win and bring closure to the intense investigations . The series often uses stories that are `` ripped from the headlines '' or based on real
+crimes . Such episodes take a real crime and fictionalize it by changing some details . Originally the show focused around the detective pairings of Elliot
+Stabler & Olivia Benson and John Munch & Brian Cassidy . Stabler is a seasoned veteran of the unit who has seen it all and tries his best to protect his family
+from the horrors he sees every day . His partner Benson 's difficult past as the child of a rape victim is the reason she joined the unit . Backing them up is
+John Munch , and his first partner Brian Cassidy . Munch is a transfer from Baltimore 's homicide unit , who brings his acerbic wit , conspiracy theories , and
+street - honed investigative skills . Whilst Cassidy is young and eager to learn from his fellow detectives . These two detective teams received support from
+Detectives Monique Jeffries and Ken Briscoe .
+</item 8>
+
+<item 9>
+Law & Order: Special Victims Unit
+52 8.31 18 21 September 21 , 2016 ( 2016 - 09 - 21 ) 7.83 May 24 , 2017 ( 2017 - 05 - 24 ) 6.22 2016 -- 17 No. 48 7.39 19 24 September 27 , 2017 ( 2017 - 09 -
+27 ) 5.67 TBA TBA 2017 - 18 TBA TBA Awards and honors ( edit ) Main article : List of awards and nominations received by Law & Order : Special Victims Unit Law
+& Order : Special Victims Unit has received many awards and award nominations . Mariska Hargitay has twice been nominated for a Golden Globe Award and won once
+in 2005 . The show has been nominated numerous times for the Emmy Award . Mariska Hargitay has been nominated for the Outstanding Lead Actress in a Drama Series
+category 8 years in a row beginning in 2004 and won the Emmy in 2006 . Christopher Meloni was nominated for the Outstanding Lead Actor in a Drama Series
+category in 2006 .
+</item 9>
+
+<item 10>
+Law & Order: Special Victims Unit
+External links ( edit ) Wikimedia Commons has media related to Law & Order : Special Victims Unit . Wikiquote has quotations related to : Law & Order : Special
+Victims Unit Official website on NBC Law & Order : Special Victims Unit on IMDb Law & Order : Special Victims Unit at TV.com `` List of Law & Order : SVU
+Episodes '' . TV Guide . Law & Order : Special Victims Unit on MyNetworkTV Law & Order franchise Series Law & Order ( 1990 -- 2010 ) Law & Order : Special
+Victims Unit ( 1999 -- present ) Law & Order : Criminal Intent ( 2001 -- 2011 ) Law & Order : Trial by Jury ( 2005 -- 2006 ) Law & Order : LA ( 2010 -- 2011 )
+Law & Order True Crime ( 2017 -- present ) Adaptations Paris enquêtes criminelles ( 2007 -- 2008 ) Law & Order : UK ( 2009 -- 2014 ) Video games Law & Order :
+Dead on the Money Law & Order : Double or Nothing Law & Order : Justice Is Served Law & Order : Criminal Intent Law & Order : Legacies Related series Homicide :
+</item 10>
+=== END ITEM id=a195-c996590513a433e8 ===
+
+=== ITEM id=a171-fc34d9261e62485f ===
+Gold sentences and facts:
+Sentence 0: Year Film Role Notes Dumb and Dumber State Trooper Down Periscope E.T. `` Sonar '' Lovacelli RocketMan Fred Z . Randall Wag the Dog Pet Wrangler Space Ghost Coast to Coast Himself 1 episode 1998 Half Baked Kenny Davis There 's Something About Mary Hitchhiker ( uncredited ) Dog Park Callum Ned 's Newt Newton ( voice ) Mr. Headmistress Tucker 1999 Superstar Slater 2000 The Whole Nine Yards Special Agent Steve Hanson Big Money Hustlas Officer Harry Cox Becoming Dick Richard Breggs Freddy Got Fingered Darren Gary & Mike Mike Bonner ( voice ) 2002 Back by Midnight Sheriff Hubbard Sorority Boys Doofer / Roberta 2003 Family Tree Jake Kart Racer Zee 2005 Lucky 13 Bleckman Because of Winn - Dixie Policeman Robots Lugnut ( voice ) 2006 Employee of the Month Russell Porpis - Gunders Surf School Rip Ergo Proxy Head Dog Cop ( voice ) 1 episode 2007 Meet the Robinsons Carl ( voice ) The Dukes of Hazzard : The Beginning Sheriff Rosco P. Coltrane 2008 Bachelor Party 2 : The Last Temptation Derek Madagascar : Escape 2 Africa Giraffe ( voice ) 2009 Fudgy Wudgy Fudge Face Elmore P. Fudge My Life in Ruins Big Al Sawchuck 2009 The Haunted World of El Superbeasto Gerard the Exterminator ( voice ) 2011 Spooky Buddies Warwick the Warlock Lloyd the Conqueror Vulcan Dahmer Vs. Gacy God Dan Vs . Hiram Episode : Technology Robot Chicken Professor Cornelius Q. Quibblefingers ( voice ) 1 episode ; also writes 4 episodes 2012 The High Fructose Adventures of Annoying Orange Apple ( voice ) Robot and Monster Monster ( voice ) Main Role 2014 Back in the Day Skunk 2015 Jake and the Never Land Pirates Captain Frost ( voice ) Penn Zero : Part - Time Hero Helper Hue ( voice ) 2016 Sausage Party Ketchup Bottle / Drug Dealer / Baba Ganoush ( voice ) Skylanders Academy Hugo ( voice ) 2017 - present Puppy Dog Pals Bob ( voice ) Also show creator
+  Fact 0.0: The listed performer had the role State Trooper in Dumb and Dumber.
+
+Retrieved items:
+<item 1>
+The Dukes of Hazzard (film)
+Gainey as Sheriff Rosco P. Coltrane Michael Weston as Deputy Enos Strate Lynda Carter as Pauline James Roday as Billy Prickett Kevin Heffernan as Derek `` Sheev
+'' Sheevington Nikki Griffin as Katie - Lynn Johnson Jacqui Maxwell as Annette Alice Greczyn as Laurie Pullman Junior Brown as The Balladeer ( narrator ) Joe
+Don Baker as Governor Jim Applewhite Barry Corbin as Bill Pullman Andrew Prine as Angry Man Randy Orton as Bo Duke ( Stunt double ) Cameos ( edit ) All five
+members of the comedy film troupe Broken Lizard make appearances in the film , classified as cameos , except for Kevin Heffernan , who had a larger speaking
+role ( Sheev ) . Broken Lizard cameos Steve Lemme appears as Jimmy Pullman , the son of Bill Pullman , in an early car chase scene in which he accidentally
+shoots the inside of his father 's truck . Jay Chandrasekhar and Erik Stolhanske reprise their roles as Ramathorn and Rabbit from the Broken Lizard comedy ,
+Super Troopers .
+</item 1>
+
+<item 2>
+California Highway Patrol
+They spotted the car , fell in behind , called for backup , and began the stop procedure . When the suspects ' vehicle came to a halt in the parking lot , the
+driver was instructed to step out of the vehicle and spread his hands on the hood . Gore approached him and Frago moved to the passenger side . The passenger
+side door suddenly swung open and the passenger sprung out , firing at Frago , who fell with two shots in his chest . The gunman , later identified as Jack
+Twinning , then turned and fired once at Gore , who returned fire . In that moment the driver , Bobby Davis , turned and shot Gore twice at close range . Both
+officers died instantly . When Officers James Pence and George Alleyn drove in moments later , they could not see suspects or other officers , but both
+immediately came under fire . Pence put out an 11 ‐ 99 call ( `` officer down '' ) then took cover behind the passenger door . Alleyn grabbed his shotgun , and
+positioned himself behind the driver - side door . Both officers were mortally wounded in the ensuing exchange , and one suspect was hit .
+</item 2>
+
+<item 3>
+Harland Williams
+Williams created the Disney Junior series Puppy Dog Pals that debuted in 2017 . Filmography ( edit ) Year Film Role Notes Dumb and Dumber State Trooper Down
+Periscope E.T. `` Sonar '' Lovacelli RocketMan Fred Z . Randall Wag the Dog Pet Wrangler Space Ghost Coast to Coast Himself 1 episode 1998 Half Baked Kenny
+Davis There 's Something About Mary Hitchhiker ( uncredited ) Dog Park Callum Ned 's Newt Newton ( voice ) Mr.
+</item 3>
+
+<item 4>
+The Dukes of Hazzard (film)
+The characters are now campus security officers , who give a warning to the Duke boys for driving too slowly . Paul Soter appears as TV newsman Rick Shakely ,
+who is reporting from the Hazzard Road Rally . Charlie Finn , who played a dimwitted fast - food employee in Super Troopers , appears as a dimwitted geology
+student who assists the Duke boys with the coal samples . Other notable cameos During the bar - fight scene , Indy - car driver A.J. Foyt IV appears as himself
+. Bloopers roll under the ending credits , one of which features Rip Taylor interrupting the bedroom scene with Luke and the two college girls . Taylor had
+previously appeared with Knoxville in Jackass : The Movie . Production ( edit ) Stunts ( edit ) Knoxville said he was initially reluctant to take on the role ,
+but was persuaded by script changes and the presence of Dan Bradley as stunt coordinator and second unit for the car chase scenes . Knoxville praised him ,
+saying , `` everyone in Hollywood wants Dan Bradley to shoot their car stuff '' . Locations ( edit ) The majority of the film was shot in and around Clinton ,
+Louisiana .
+</item 4>
+
+<item 5>
+Harland Williams
+Finding a creative outlet in poetry and painting while working as a forest ranger for five years after dropping out of Sheridan College , Williams set his goals
+to leave the forest as a stand - up comic and actor , soon moving to Los Angeles to pursue his newfound calling . Williams is cousin to Barenaked Ladies
+keyboardist Kevin Hearn , and together they have a hobby band called The Cousins . Career ( edit ) Williams is known for his movie roles , which include Dumb
+and Dumber , Freddy Got Fingered , There 's Something About Mary , Half Baked , RocketMan , Sorority Boys , Down Periscope , and Employee of The Month .
+Williams starred as the security guard in the music video for the 2001 Barenaked Ladies song `` Falling for the First Time '' . He has performed his stand - up
+comedy routines on Late Night with David Letterman , The Tonight Show with Jay Leno , Late Night with Conan O'Brien , HBO , Comedy Central and at comedy clubs
+throughout the country . His improvisational skills led to him winning the award for ' Best Improviser ' on an episode of NBC 's prime time series Thank God You
+'re Here in 2007 .
+</item 5>
+
+<item 6>
+Harland Williams
+Headmistress Tucker 1999 Superstar Slater 2000 The Whole Nine Yards Special Agent Steve Hanson Big Money Hustlas Officer Harry Cox Becoming Dick Richard Breggs
+Freddy Got Fingered Darren Gary & Mike Mike Bonner ( voice ) 2002 Back by Midnight Sheriff Hubbard Sorority Boys Doofer / Roberta 2003 Family Tree Jake Kart
+Racer Zee 2005 Lucky 13 Bleckman Because of Winn - Dixie Policeman Robots Lugnut ( voice ) 2006 Employee of the Month Russell Porpis - Gunders Surf School Rip
+Ergo Proxy Head Dog Cop ( voice ) 1 episode 2007 Meet the Robinsons Carl ( voice ) The Dukes of Hazzard : The Beginning Sheriff Rosco P. Coltrane 2008 Bachelor
+Party 2 : The Last Temptation Derek Madagascar : Escape 2 Africa Giraffe ( voice ) 2009 Fudgy Wudgy Fudge Face Elmore P.
+</item 6>
+
+<item 7>
+The Dukes of Hazzard (film)
+They are later arrested by Atlanta Police after running from campus police . Back in Hazzard , Daisy learns , with the help of Sheriff 's Deputy Enos Strate (
+Michael Weston ) , that Billy Prickett has been hired by Boss Hogg to participate in the rally as a ringer . Boss Hogg then heads to Atlanta , where he informs
+the Duke boys , in lock - up , that they are too late to stop him and reveals that the vote on Hogg 's proposition is at the same time as the rally , explaining
+Billy Prickett 's involvement . During a transfer from detainment , Daisy helps the boys escape from the patrol car , and they speed home to try to inform the
+townsfolk , escaping Atlanta Police , and the Georgia State Patrol after Bo outmaneuvers the city cops . Upon returning home , the Dukes discover that Boss Hogg
+and Rosco had taken Uncle Jesse and Pauline hostage , an obvious trap for the boys , and that Billy is in on the scheme because he is ashamed of the town 's low
+status .
+</item 7>
+
+<item 8>
+California Highway Patrol
+Peyer declined to provide a sample , nor explain why he declined to do so . Media references ( edit ) CHiPs was a fictional television drama show ( 1977 - 1983
+) about the CHP , and the CHP helped out in the 1955 TV show Highway Patrol starring Broderick Crawford . Also the CHiPs TV series was made into a modern
+television film called CHiPs ' 99 . A comical motion picture version of the show has been released in 2017 ( CHiPS ) but it has not been endorsed by the CHP at
+all . Former CHP Commissioner Maury Hannigan was the host of the syndicated TV series Real Stories of the Highway Patrol , which aired in the mid-to - late
+1990s . The show featured not just the CHP , but also the Minnesota State Patrol , the Nevada Highway Patrol , the Alaska State Troopers , the South Dakota
+Highway Patrol , the Rhode Island State Police , the Massachusetts State Police , the West Virginia State Police and many other state police and highway patrol
+agencies in the United State of America , and in one episode , the Royal Newfoundland Constabulary .
+</item 8>
+
+<item 9>
+The Dukes of Hazzard (film)
+The cousins ' primary mode of transportation is an orange 1969 Dodge Charger that the boys affectionately refer to as the `` General Lee '' . Along the way ,
+the family is tormented by corrupt Hazzard County Commissioner Jefferson Davis Hogg , widely known as `` Boss Hogg '' ( Burt Reynolds ) , and his willing but
+dimwitted henchman , Sheriff Rosco P. Coltrane ( M.C. Gainey ) . After Rosco has the General Lee impounded after Bo and Luke 's attempt to run away from a
+daughter of one their many moonshine customers , Billy Prickett ( James Roday ) , a famous stock - car driver , enters Hazzard to participate in the rally .
+Meanwhile , Rosco plants a fake moonshine still ( `` ' cause he 's too dumb to find the real one '' ) in Uncle Jesse 's barn and seizes the Duke property in the
+interest of eminent domain for Boss Hogg , forcing the family to temporarily reside with neighbor and Uncle Jesse 's love - interest , Pauline ( Lynda Carter )
+.
+</item 9>
+
+<item 10>
+The Stanley Hotel
+The Hotel has also been used as a filming location for other movies and TV shows ; most notably , as the fictional `` Hotel Danbury '' of Aspen , CO , in the
+1994 film Dumb and Dumber . From 2013 to 2015 , the hotel property hosted the Stanley Film Festival , an independent horror film festival operated by the Denver
+Film Society , held in early May . The festival featured screenings , panels , student competitions , audience awards and receptions . The Stanley Film Festival
+was put on hiatus in 2016 , and canceled for 2017 . The historic Stanley Concert Hall serves as venue for various musical groups such as country - punk band
+Murder By Death which has performed a Shining - themed series of concerts in the space . Haunted reputation ( edit ) Despite a peaceful early history , in the
+years following the publication of The Shining , The Stanley Hotel has gained a reputation among paranormal investigators for frequent activity . The hotel
+offers guided `` Ghost Tours '' to guests and visitors which feature spaces reputed to be exceptionally active . The hotel has also served as a location for
+numerous paranormal investigation shows such as Ghost Hunters and Ghost Adventures .
+</item 10>
+=== END ITEM id=a171-fc34d9261e62485f ===
+
+=== ITEM id=a157-ff8458deedf5eb0f ===
+Gold sentences and facts:
+Sentence 0: Catch Me If You Can is a 2002 American biographical crime film directed and co-produced by Steven Spielberg from a screenplay by Jeff Nathanson . The film is based on the life of Frank Abagnale , who , before his 19th birthday , successfully performed cons worth millions of dollars by posing as a Pan American World Airways pilot , a Georgia doctor and a Louisiana parish prosecutor . His primary crime was check fraud ; he became so experienced that the FBI eventually turned to him for help in catching other checking forgers . The film stars Leonardo DiCaprio and Tom Hanks , with Christopher Walken , Martin Sheen , and Nathalie Baye in supporting roles .
+  Fact 1.7: Frank Abagnale performed cons by posing as a Georgia doctor.
+
+Retrieved items:
+<item 1>
+*Catch Me If You Can* is a 2002 American biographical crime film directed and co-produced by Steven Spielberg, with a screenplay by Jeff Nathanson based on
+Frank Abagnale Jr. and Stan Redding’s book. Starring Leonardo DiCaprio and Tom Hanks, it was marketed as “inspired by a true story.” Released December 25, it
+earned $352.1 million worldwide on a $52 million budget, becoming 2002’s 11th-highest
+</item 1>
+
+<item 2>
+*Catch Me If You Can* (2002), directed by Steven Spielberg and starring Leonardo DiCaprio and Tom Hanks, follows teenage Frank Abagnale Jr.’s frauds and FBI
+agent Carl Hanratty’s pursuit. Inspired by Abagnale’s memoir, it altered events, including inventing a continuing father-son bond. Filmed across 147 locations
+in 52 days, it grossed $352.1 million on a $52 million budget and earned generally positive reviews.
+</item 2>
+
+<item 3>
+Catch Me If You Can
+The film is based on the life of Frank Abagnale , who , before his 19th birthday , successfully performed cons worth millions of dollars by posing as a Pan
+American World Airways pilot , a Georgia doctor and a Louisiana parish prosecutor . His primary crime was check fraud ; he became so experienced that the FBI
+eventually turned to him for help in catching other checking forgers . The film stars Leonardo DiCaprio and Tom Hanks , with Christopher Walken , Martin Sheen ,
+and Nathalie Baye in supporting roles . Development for the film started in 1980 , but did not progress until 1997 , when the film rights to Abagnale 's book
+were sold to Spielberg 's DreamWorks . David Fincher , Gore Verbinski , Lasse Hallström , Miloš Forman , and Cameron Crowe had all been possible candidates for
+director before Spielberg decided to direct . Filming took place from February to May 2002 . The film was a financial and critical success , and was received
+positively by both critics and Abagnale .
+</item 3>
+
+<item 4>
+The references document the development and production of *Catch Me If You Can* from 1997 to 2002. Variety and IGN reports cover script work, Leonardo
+DiCaprio’s casting and scheduling, director changes—including Lasse Hallström taking over—and other production and publicity updates. The list also cites
+production notes and 2002 entertainment coverage.
+</item 4>
+
+<item 5>
+Catch Me If You Can
+British Board of Film Classification . December 13 , 2002 . Retrieved February 13 , 2016 . Jump up ^ Van Luling , Todd ( October 17 , 2014 ) . `` 11 Easter Eggs
+You Never Noticed In Your Favorite Movies '' . The Huffington Post . TheHuffingtonPost.com , Inc . Retrieved January 29 , 2015 . ^ Jump up to : Frank Abagnale (
+September 3 , 2002 ) . `` Comments '' . Abagnale & Associates . Archived from the original on February 16 , 2009 . Retrieved June 30 , 2008 . ^ Jump up to :
+Claude Brodesser ; Dana Harris ( August 21 , 2001 ) . `` D'Works to play ' Catch ' '' . Variety . Retrieved June 30 , 2008 . Jump up ^ Charles Lyons ; Dade
+Hayes ( January 8 , 2002 ) . `` D'Works sets play date for pricey ' Catch ' '' . Variety . Retrieved June 29 , 2008 .
+</item 5>
+
+<item 6>
+Catch Me If You Can
+Catch Me If You Can - wikipedia Catch Me If You Can Jump to : navigation , search This article is about the 2002 film . For other uses , see Catch Me If You Can
+( disambiguation ) . Catch Me If You Can Theatrical release poster Directed by Steven Spielberg Produced by Steven Spielberg Walter F. Parkes Screenplay by Jeff
+Nathanson Based on Catch Me If You Can by Frank Abagnale and Stan Redding Starring Leonardo DiCaprio Tom Hanks Music by John Williams Cinematography Janusz
+Kamiński Edited by Michael Kahn Production company Amblin Entertainment Parkes / MacDonald Productions Distributed by DreamWorks Pictures Release date December
+25 , 2002 ( 2002 - 12 - 25 ) Running time 141 minutes Country United States Language English Budget $52 million Box office $352.1 million Catch Me If You Can is
+a 2002 American biographical crime film directed and co-produced by Steven Spielberg from a screenplay by Jeff Nathanson .
+</item 6>
+
+<item 7>
+Catch Me If You Can
+Williams also earned a Grammy Award nomination . Elements of the film were later parodied in The Simpsons episode `` Catch ' Em If You Can '' . Home media (
+edit ) Catch Me If You Can was released on DVD on May 6 , 2003 and on Blu - ray on December 4 , 2012 . Musical adaptation ( edit ) Main article : Catch Me If
+You Can ( musical ) A musical adaptation of the same name premiered at the 5th Avenue Theatre in Seattle , Washington in July 2009 , starring Aaron Tveit and
+Norbert Leo Butz . It began previews on Broadway at the Neil Simon Theatre on March 11 , 2011 and officially opened April 10 , 2011 . The musical was nominated
+for four Tony Awards , including Best Musical . See also ( edit ) The Great Impostor , a 1961 film based on the story of an impostor named Ferdinand Waldo
+Demara . The Pretender , a TV series References ( edit ) Jump up ^ `` CATCH ME IF YOU CAN ( 12A ) '' . British Board of Film Classification . December 13 , 2002
+.
+</item 7>
+
+<item 8>
+Catch Me If You Can
+The marketing department was careful to market the film as `` inspired by a true story '' in order to avoid controversy similar to that surrounding A Beautiful
+Mind ( 2001 ) and The Hurricane ( 1999 ) , both of which deviated from history . The premiere took place at Westwood , Los Angeles , California on December 18 ,
+2002 . Box Office ( edit ) Catch Me If You Can was released on December 25 , 2002 , earning slightly above $30 million in 3,225 theaters during its opening
+weekend . The film went on to gross $164.6 million in North America and $187.5 million in foreign countries , coming at a worldwide total of $352.1 million .
+The film was a financial success , recouping the $52 million budget six times over . Catch Me If You Can was the eleventh highest - grossing film of 2002 .
+Minority Report ( also directed by Spielberg ) was tenth highest . Critical response ( edit ) On Rotten Tomatoes , the film has a certified fresh rating of 96 %
+, based on 197 reviews , with an average rating of 7.9 / 10 .
+</item 8>
+
+<item 9>
+*Catch Me If You Can* tells the story of Frank Abagnale, who, before age 19, stole millions through check fraud while impersonating an airline pilot, doctor,
+and prosecutor. The FBI later recruited him to help catch forgers. Directed by Steven Spielberg and starring Leonardo DiCaprio and Tom Hanks, the film was shot
+in 2002 and became a critical and financial success. Critics praised its performances, style, brisk pace, and entertaining tone; Metacritic rated
+</item 9>
+
+<item 10>
+Catch Me If You Can
+wikipedia.org/w/index.php?title=Catch_Me_If_You_Can&oldid=821436887 '' Categories : 2002 films English - language films 2000s biographical films 2000s crime
+drama films Amblin Entertainment films American biographical films American chase films American crime drama films American films Biographical films about
+fraudsters Crime films based on actual events Drama films based on actual events DreamWorks Pictures films Films scored by John Williams Films about con artists
+Films about identity theft Films based on biographies Films directed by Steven Spielberg Films set in Atlanta Films set in California Films set in Florida Films
+set in France Films set in Louisiana Films set in Westchester County , New York Films set in New York City Films set in the 1960s Films shot in California Films
+shot in Montreal Films produced by Steven Spielberg True crime films Fraud in fiction Hidden categories : Webarchive template wayback links Use mdy dates from
+October 2015 Good articles Wikipedia articles with GND identifiers Talk Contents About Wikipedia Wikiquote বাংলা Български Català Čeština Dansk Deutsch Español
+Euskara فارسی Français Galego 한국어
+</item 10>
+=== END ITEM id=a157-ff8458deedf5eb0f ===
+
+=== ITEM id=a140-9119f762f458cbb4 ===
+Gold sentences and facts:
+Sentence 0: Country Name of animal Scientific name Pictures Ref . Algeria Fennec fox Vulpes zerda Angola Red - crested turaco ( national bird ) Tauraco erythrolophus Anguilla Zenaida dove Zenaida aurita Antigua and Barbuda Fallow deer ( national animal ) Dama dama Frigate ( national bird ) Fregata magnificens Hawksbill turtle ( national sea creature ) Eretmochelys imbricata Argentina Rufous hornero Furnarius rufus Australia Red kangaroo ( national animal ) Macropus rufus Emu ( national bird ) Dromaius novaehollandiae Austria Black eagle Ictinaetus malaiensis Azerbaijan Karabakh horse Equus ferus caballus Bangladesh Royal Bengal tiger ( national animal ) Panthera tigris tigris Magpie robin ( national bird ) Copsychus saularis Ilish ( national fish ) Tenualosa ilisha Belarus European bison Bison bonasus Belgium Lion ( heraldic Leo Belgicus ) Panthera leo Belize Baird 's tapir ( national animal ) Tapirus bairdii Keel - billed toucan ( national bird ) Ramphastos sulfuratus Bhutan Druk Mythical Takin Budorcas taxicolor Brazil Rufous - bellied thrush Turdus rufiventris Cambodia Kouprey Bos sauveli Canada North American beaver ( sovereignty animal symbol ) Castor canadensis Canadian horse ( national horse ) Equus ferus caballus China Giant panda ( national animal ) Ailuropoda melanoleuca Chinese dragon ( national animal ) Mythical Red - crowned crane ( national bird ) Grus japonensis Democratic Republic of the Congo Okapi Okapia johnstoni Colombia Andean condor Vultur gryphus Costa Rica Yigüirro ( national bird ) Turdus grayi White - tailed deer ( national animal ) Odocoileus virginianus West Indian manatee ( national aquatic animal ) Trichechus manatus Croatia Pine marten Martes martes Cuba Cuban trogon Priotelus temnurus Cyprus Cypriot mouflon Ovis orientalis Czech Republic Double - tailed lion Mythical Denmark Mute swan ( national bird ) Cygnus olor Small tortoiseshell ( national butterfly ) Aglais urticae Egypt Steppe eagle Aquila nipalensis Estonia Barn swallow ( national bird ) Hirundo rustica Eritrea Arabian camel Camelus dromedarius Ethiopia Lion Panthera leo Faroe Islands Eurasian oystercatcher ( national bird ) Haematopus ostralgus Finland Brown bear ( national animal ) Ursus arctos Whooper swan ( national bird ) Cygnus cygnus Holly blue ( national butterfly ) Celastrina argiolus European perch ( national fish ) Perca fluviatilis Seven - spot ladybird ( national insect ) Coccinella septempunctata France Gallic rooster Gallus gallus domesticus Germany Unspecified Eagle Members of Accipitridae Greece Phoenix Mythical Dolphins Delphinus Guatemala Quetzal Pharomachrus mocinno Haiti Hispaniolan Trogan Priotelus roseigaster Honduras White - tailed deer Odocoileus virginianus Hungary Turul Mythical ( most probably Falco cherrug ) Iceland Gyrfalcon Falco rusticolus India Bengal tiger ( National predator ) Panthera tigris tigris Indian peafowl ( National bird ) Pavo cristatus King cobra ( National reptile ) Ophiophagus hannah Ganges river dolphin ( National aquatic animal ) Platanista gangetica gangetica Indian elephant ( National heritage animal ) Elephas maximus indicus Indonesia Komodo dragon ( national animal ) Varanus komodoensis Garuda ( historic national animal ) Mythical Iran Persian lion Panthera leo persica Iraq Chukar partridge Alectoris chukar Goat ( KRG ) Capra aegagrus Israel Hoopoe ( national bird ) Upupa epops Jamaica Red - billed streamertail Trochilus polytmus Japan Green pheasant ( national bird ) Phasianus versicolor Carp ( national fish ) Cyprinus carpio Latvia White wagtail ( national bird ) Motacilla alba Two - spotted ladybird ( national insect ) Adalia bipunctata Lithuania White stork Ciconia ciconia Macedonia Lion ( in Macedonian heraldry ) Panthera leo Madagascar Zebu ( in Malagasy heraldry ) Bos primigenius indicus Ring - tailed lemur ( national animal ) Lemur catta Malaysia Malayan tiger ( national animal ) Panthera tigris jacksoni Malta Pharaoh Hound ( national animal ) Canis lupus familiaris ( 1 ) Moldova Aurochs ( national animal ) Bos primigenius Mauritius Dodo Raphus cucullatus Mexico Golden eagle ( national animal ) Aquila chrysaetos Xoloitzcuintli ( national dog ) Canis lupus familiaris Jaguar ( national mammal ) Panthera onca Grasshopper ( national arthropod ) Sphenarium purpurascens Vaquita ( national marine mammal ) Phocoena sinus Nepal Cow ( national animal ) Bos taurus indicus Danphe ( national bird ) Lophophorus impejanus Netherlands Lion ( heraldic symbol ) Panthera leo Black - tailed godwit ( national bird ) Limosa limosa New Zealand Kiwi Apteryx sp . North Korea Chollima Mythical Norway Lion ( royal national animal ) Panthera leo White - throated dipper ( national bird ) Cinclus cinclus Fjord horse ( national horse ) Equus ferus caballus Oman Arabian oryx ( national animal ) Oryx leucoryx Pakistan Markhor ( National animal ) Capra falconeri Indus river dolphin ( National aquatic mammal ) Platanista indicus minor minor Chukar ( National bird ) Alectoris chukar Indus crocodile ( National reptile ) Crocodylus palustris Shaheen falcon ( Heritage bird ) Falco peregrinus peregrinator Snow leopard ( National predator ) Panthera uncia Panama Harpy eagle Harpia harpyja Papua New Guinea Dugong ( national marine mammal ) Dugong dugon Peru Vicuña ( national animal ) Vicugna vicugna Philippines Carabao ( national animal ) Bubalus bubalis Philippine eagle ( national bird ) Pithecophaga jefferyi Poland White - tailed eagle ( national bird ) Haliaeetus albicilla White stork ( national bird ) Ciconia ciconia European bison ( national animal ) Bison bonasus Qatar Arabian oryx Oryx leucoryx Romania Lynx Lynx lynx Russia Eurasian brown bear Ursus arctos arctos Rwanda Leopard Panthera pardus Saint Vincent and the Grenadines Saint Vincent amazon Amazona guildingii Serbia Wolf Canis lupus lupus White eagle Mythical Lynx Lynx lynx Somalia Leopard ( national animal ) Panthera pardus South Africa Springbok ( national animal ) Antidorcas marsupialis Blue crane ( national bird ) Anthropoides paradiseus Galjoen ( national fish ) Dichistius capensis South Korea Siberian tiger Panthera tigris altaica Korean magpie ( national bird ) Pica ( pica ) sericea Sri Lanka Sri Lankan junglefowl ( national bird ) Gallus lafayettii Tanzania Giraffe Giraffa camelopardalis Thailand Elephant Elephas maximus United Arab Emirates Arabian oryx ( national animal ) Oryx leucoryx Peregrine falcon ( national bird ) Falco peregrinus United Kingdom Lion ( United Kingdom , England , Scotland , Wales ) Panthera leo Bulldog ( Britain as `` British Bulldog '' ) Canis lupus familiaris Red kite ( Wales ) Milvus milvus Unicorn ( Scotland ) Mythical Y Ddraig Goch ( Welsh Dragon Wales ) Mythical United States Bald eagle ( national bird ) Haliaeetus leucocephalus American bison ( national mammal ) Bison bison
+  Fact 0.135: In the United States, the American bison (Bison bison) is listed as the national mammal.
+
+Retrieved items:
+<item 1>
+List of national animals
+Greece Phoenix Mythical Dolphins Delphinus Guatemala Quetzal Pharomachrus mocinno Haiti Hispaniolan Trogan Priotelus roseigaster Honduras White - tailed deer
+Odocoileus virginianus Hungary Turul Mythical ( most probably Falco cherrug ) Iceland Gyrfalcon Falco rusticolus India Bengal tiger ( National predator )
+Panthera tigris tigris Indian peafowl ( National bird ) Pavo cristatus King cobra ( National reptile ) Ophiophagus hannah Ganges river dolphin ( National
+aquatic animal ) Platanista gangetica gangetica Indian elephant ( National heritage animal ) Elephas maximus indicus Indonesia Komodo dragon ( national animal )
+Varanus komodoensis Garuda ( historic national animal ) Mythical Iran Persian lion Panthera leo persica Iraq Chukar partridge Alectoris chukar Goat ( KRG )
+Capra aegagrus Israel Hoopoe ( national bird ) Upupa epops Jamaica Red - billed streamertail Trochilus polytmus Japan Green pheasant ( national bird ) Phasianus
+versicolor Carp ( national fish ) Cyprinus carpio Latvia White wagtail (
+</item 1>
+
+<item 2>
+List of national animals
+Canadian Heritage . 2016 . Retrieved 1 December 2016 . Jump up ^ `` National Symbols of China '' . 123independenceday.com . Jump up ^ `` China National Symbols
+'' . worldatlast.com. 2015 . Retrieved 2017 - 03 - 28 . Jump up ^ `` China Considers Red - crowned Crane for National Bird '' . www.china.org.cn . Jump up ^ ``
+El cóndor , ave nacional - banrepcultural.org '' . Jump up ^ `` 16 de diciembre : Declaración del yigüirro como ave nacional de Costa Rica '' . Jump up ^ `` El
+Venado Cola Blanca , Símbolo Nacional de la Fauna Silvestre '' . Jump up ^ `` Manatee Now Costa Rica 's New National Symbol '' . QCOSTARICA . Archived from the
+original on 14 September 2014 . Jump up ^ Bousfield , Jonathan ( 2003 ) . Croatia . Rough Guides . p. 72 . ISBN 1843530848 .
+</item 2>
+
+<item 3>
+List of national animals
+Magpie robin ( national bird ) Copsychus saularis Ilish ( national fish ) Tenualosa ilisha Belarus European bison Bison bonasus Belgium Lion ( heraldic Leo
+Belgicus ) Panthera leo Belize Baird 's tapir ( national animal ) Tapirus bairdii Keel - billed toucan ( national bird ) Ramphastos sulfuratus Bhutan Druk
+Mythical Takin Budorcas taxicolor Brazil Rufous - bellied thrush Turdus rufiventris Cambodia Kouprey Bos sauveli Canada North American beaver ( sovereignty
+animal symbol ) Castor canadensis Canadian horse ( national horse ) Equus ferus caballus China Giant panda ( national animal ) Ailuropoda melanoleuca Chinese
+dragon ( national animal ) Mythical Red - crowned crane ( national bird ) Grus japonensis Democratic Republic of the Congo Okapi Okapia johnstoni Colombia
+Andean condor Vultur gryphus Costa Rica Yigüirro ( national bird ) Turdus grayi White - tailed deer ( national animal ) Odocoileus virginianus West Indian
+manatee ( national aquatic animal ) Trichechus manatus Croatia Pine
+</item 3>
+
+<item 4>
+List of national animals
+Vicugna vicugna Philippines Carabao ( national animal ) Bubalus bubalis Philippine eagle ( national bird ) Pithecophaga jefferyi Poland White - tailed eagle (
+national bird ) Haliaeetus albicilla White stork ( national bird ) Ciconia ciconia European bison ( national animal ) Bison bonasus Qatar Arabian oryx Oryx
+leucoryx Romania Lynx Lynx lynx Russia Eurasian brown bear Ursus arctos arctos Rwanda Leopard Panthera pardus Saint Vincent and the Grenadines Saint Vincent
+amazon Amazona guildingii Serbia Wolf Canis lupus lupus White eagle Mythical Lynx Lynx lynx Somalia Leopard ( national animal ) Panthera pardus South Africa
+Springbok ( national animal ) Antidorcas marsupialis Blue crane ( national bird ) Anthropoides paradiseus Galjoen ( national fish ) Dichistius capensis South
+Korea Siberian tiger Panthera tigris altaica Korean magpie ( national bird ) Pica ( pica ) sericea Sri Lanka Sri Lankan junglefowl ( national bird ) Gallus
+lafayettii Tanzania Giraffe Giraffa camelopardalis Thailand Elephant
+</item 4>
+
+<item 5>
+List of national animals
+Danphe ( national bird ) Lophophorus impejanus Netherlands Lion ( heraldic symbol ) Panthera leo Black - tailed godwit ( national bird ) Limosa limosa New
+Zealand Kiwi Apteryx sp . North Korea Chollima Mythical Norway Lion ( royal national animal ) Panthera leo White - throated dipper ( national bird ) Cinclus
+cinclus Fjord horse ( national horse ) Equus ferus caballus Oman Arabian oryx ( national animal ) Oryx leucoryx Pakistan Markhor ( National animal ) Capra
+falconeri Indus river dolphin ( National aquatic mammal ) Platanista indicus minor minor Chukar ( National bird ) Alectoris chukar Indus crocodile ( National
+reptile ) Crocodylus palustris Shaheen falcon ( Heritage bird ) Falco peregrinus peregrinator Snow leopard ( National predator ) Panthera uncia Panama Harpy
+eagle Harpia harpyja Papua New Guinea Dugong ( national marine mammal ) Dugong dugon Peru Vicuña ( national animal ) Vicugna vicugna Philippines Carabao (
+national animal ) Bubalus bubalis Philippine
+</item 5>
+
+<item 6>
+List of national animals
+versicolor Carp ( national fish ) Cyprinus carpio Latvia White wagtail ( national bird ) Motacilla alba Two - spotted ladybird ( national insect ) Adalia
+bipunctata Lithuania White stork Ciconia ciconia Macedonia Lion ( in Macedonian heraldry ) Panthera leo Madagascar Zebu ( in Malagasy heraldry ) Bos primigenius
+indicus Ring - tailed lemur ( national animal ) Lemur catta Malaysia Malayan tiger ( national animal ) Panthera tigris jacksoni Malta Pharaoh Hound ( national
+animal ) Canis lupus familiaris ( 1 ) Moldova Aurochs ( national animal ) Bos primigenius Mauritius Dodo Raphus cucullatus Mexico Golden eagle ( national animal
+) Aquila chrysaetos Xoloitzcuintli ( national dog ) Canis lupus familiaris Jaguar ( national mammal ) Panthera onca Grasshopper ( national arthropod )
+Sphenarium purpurascens Vaquita ( national marine mammal ) Phocoena sinus Nepal Cow ( national animal ) Bos taurus indicus Danphe ( national bird ) Lophophorus
+impejanus Netherlands Lion ( heraldic symbol
+</item 6>
+
+<item 7>
+List of national animals
+Jump up ^ Jon Eldridge . `` Primeval Poland : where the bison roam '' . theguardian.com . Retrieved 2016 - 10 - 10 . Jump up ^ `` Poland '' . allaboutbison.com
+. Retrieved 2016 - 10 - 10 . Jump up ^ Tamra Orr ( 30 June 2008 ) . Qatar . Marshall Cavendish . p. 13 . ISBN 978 - 0 - 7614 - 2566 - 3 . Retrieved 30 July 2011
+. Jump up ^ `` Animalul national - Rasul - Sapte simboluri nationale ale Romaniei mai putin cunoscute '' . 9AM . Jump up ^ `` Birobidjan , Russia Beaverton 's
+sister city since 1990 '' . The City of Beaverton . Retrieved 2017 - 01 - 23 . Jump up ^ `` Rwanda State Symbols , Song , Flag , and More '' . worldatlas.com .
+Retrieved 2013 - 03 - 21 .
+</item 7>
+
+<item 8>
+List of national animals
+List of National Animals - wikipedia List of National Animals Jump to : navigation , search This article is incomplete . Please help to improve it , or discuss
+the issue on the talk page . ( June 2017 ) This is a list of national animals . National animals Country Name of animal Scientific name Pictures Ref . Algeria
+Fennec fox Vulpes zerda Angola Red - crested turaco ( national bird ) Tauraco erythrolophus Anguilla Zenaida dove Zenaida aurita Antigua and Barbuda Fallow deer
+( national animal ) Dama dama Frigate ( national bird ) Fregata magnificens Hawksbill turtle ( national sea creature ) Eretmochelys imbricata Argentina Rufous
+hornero Furnarius rufus Australia Red kangaroo ( national animal ) Macropus rufus Emu ( national bird ) Dromaius novaehollandiae Austria Black eagle Ictinaetus
+malaiensis Azerbaijan Karabakh horse Equus ferus caballus Bangladesh Royal Bengal tiger ( national animal ) Panthera tigris tigris Magpie robin ( national bird
+) Copsychus saularis Ilish ( national fish )
+</item 8>
+
+<item 9>
+List of national animals
+bird ) Gallus lafayettii Tanzania Giraffe Giraffa camelopardalis Thailand Elephant Elephas maximus United Arab Emirates Arabian oryx ( national animal ) Oryx
+leucoryx Peregrine falcon ( national bird ) Falco peregrinus United Kingdom Lion ( United Kingdom , England , Scotland , Wales ) Panthera leo Bulldog ( Britain
+as `` British Bulldog '' ) Canis lupus familiaris Red kite ( Wales ) Milvus milvus Unicorn ( Scotland ) Mythical Y Ddraig Goch ( Welsh Dragon Wales ) Mythical
+United States Bald eagle ( national bird ) Haliaeetus leucocephalus American bison ( national mammal ) Bison bison See also Animals portal Lists portal State
+animal List of national birds Animals as heraldic charges Floral emblem National personification References Jump up ^ `` The Fennec Fox : Algeria 's National
+Animal '' . algeria.com . Retrieved 2013 - 03 - 21 . Jump up ^ `` THE NATIONAL BIRD OF ANGOLA '' . BIRDS ANGOLA . Retrieved 12 April 2016 .
+</item 9>
+
+<item 10>
+List of national animals
+Archived from the original on 2013 - 07 - 30 . Retrieved 2013 - 08 - 29 . Jump up ^ Minahan , James ( 2009 ) . The Complete Guide to National Symbols and
+Emblems : Volume 2 . Greenwood Press . p. 908 . ISBN 0313345007 . ^ Jump up to : `` South Africa 's national symbols '' . SouthAfrica.info . Brand South Africa
+. Archived from the original on 14 December 2011 . Retrieved 9 February 2012 . ^ Jump up to : `` South Korean Symbols '' . worldatlas . Retrieved 12 April 2016
+. Jump up ^ `` Sri Lanka National Bird '' . Government of Sri Lanka Official Web Portal . Archived from the original on 14 March 2012 . Jump up ^ `` National
+Symbols : National Animal '' . tanzania.go.tz . Tanzania Government Portal . Retrieved 14 January 2015 .
+</item 10>
+=== END ITEM id=a140-9119f762f458cbb4 ===
+
+=== ITEM id=a168-de8980891d3aefca ===
+Gold sentences and facts:
+Sentence 0: Country Name of animal Scientific name Pictures Ref . Algeria Fennec fox Vulpes zerda Angola Red - crested turaco ( national bird ) Tauraco erythrolophus Anguilla Zenaida dove Zenaida aurita Antigua and Barbuda Fallow deer ( national animal ) Dama dama Frigate ( national bird ) Fregata magnificens Hawksbill turtle ( national sea creature ) Eretmochelys imbricata Argentina Rufous hornero Furnarius rufus Australia Red kangaroo ( national animal ) Macropus rufus Emu ( national bird ) Dromaius novaehollandiae Austria Black eagle Ictinaetus malaiensis Azerbaijan Karabakh horse Equus ferus caballus Bangladesh Royal Bengal tiger ( national animal ) Panthera tigris tigris Magpie robin ( national bird ) Copsychus saularis Ilish ( national fish ) Tenualosa ilisha Belarus European bison Bison bonasus Belgium Lion ( heraldic Leo Belgicus ) Panthera leo Belize Baird 's tapir ( national animal ) Tapirus bairdii Keel - billed toucan ( national bird ) Ramphastos sulfuratus Bhutan Druk Mythical Takin Budorcas taxicolor Brazil Rufous - bellied thrush Turdus rufiventris Cambodia Kouprey Bos sauveli Canada North American beaver ( sovereignty animal symbol ) Castor canadensis Canadian horse ( national horse ) Equus ferus caballus China Giant panda ( national animal ) Ailuropoda melanoleuca Chinese dragon ( national animal ) Mythical Red - crowned crane ( national bird ) Grus japonensis Democratic Republic of the Congo Okapi Okapia johnstoni Colombia Andean condor Vultur gryphus Costa Rica Yigüirro ( national bird ) Turdus grayi White - tailed deer ( national animal ) Odocoileus virginianus West Indian manatee ( national aquatic animal ) Trichechus manatus Croatia Pine marten Martes martes Cuba Cuban trogon Priotelus temnurus Cyprus Cypriot mouflon Ovis orientalis Czech Republic Double - tailed lion Mythical Denmark Mute swan ( national bird ) Cygnus olor Small tortoiseshell ( national butterfly ) Aglais urticae Egypt Steppe eagle Aquila nipalensis Estonia Barn swallow ( national bird ) Hirundo rustica Eritrea Arabian camel Camelus dromedarius Ethiopia Lion Panthera leo Faroe Islands Eurasian oystercatcher ( national bird ) Haematopus ostralgus Finland Brown bear ( national animal ) Ursus arctos Whooper swan ( national bird ) Cygnus cygnus Holly blue ( national butterfly ) Celastrina argiolus European perch ( national fish ) Perca fluviatilis Seven - spot ladybird ( national insect ) Coccinella septempunctata France Gallic rooster Gallus gallus domesticus Germany Unspecified Eagle Members of Accipitridae Greece Phoenix Mythical Dolphins Delphinus Guatemala Quetzal Pharomachrus mocinno Haiti Hispaniolan Trogan Priotelus roseigaster Honduras White - tailed deer Odocoileus virginianus Hungary Turul Mythical ( most probably Falco cherrug ) Iceland Gyrfalcon Falco rusticolus India Bengal tiger ( National predator ) Panthera tigris tigris Indian peafowl ( National bird ) Pavo cristatus King cobra ( National reptile ) Ophiophagus hannah Ganges river dolphin ( National aquatic animal ) Platanista gangetica gangetica Indian elephant ( National heritage animal ) Elephas maximus indicus Indonesia Komodo dragon ( national animal ) Varanus komodoensis Garuda ( historic national animal ) Mythical Iran Persian lion Panthera leo persica Iraq Chukar partridge Alectoris chukar Goat ( KRG ) Capra aegagrus Israel Hoopoe ( national bird ) Upupa epops Jamaica Red - billed streamertail Trochilus polytmus Japan Green pheasant ( national bird ) Phasianus versicolor Carp ( national fish ) Cyprinus carpio Latvia White wagtail ( national bird ) Motacilla alba Two - spotted ladybird ( national insect ) Adalia bipunctata Lithuania White stork Ciconia ciconia Macedonia Lion ( in Macedonian heraldry ) Panthera leo Madagascar Zebu ( in Malagasy heraldry ) Bos primigenius indicus Ring - tailed lemur ( national animal ) Lemur catta Malaysia Malayan tiger ( national animal ) Panthera tigris jacksoni Malta Pharaoh Hound ( national animal ) Canis lupus familiaris ( 1 ) Moldova Aurochs ( national animal ) Bos primigenius Mauritius Dodo Raphus cucullatus Mexico Golden eagle ( national animal ) Aquila chrysaetos Xoloitzcuintli ( national dog ) Canis lupus familiaris Jaguar ( national mammal ) Panthera onca Grasshopper ( national arthropod ) Sphenarium purpurascens Vaquita ( national marine mammal ) Phocoena sinus Nepal Cow ( national animal ) Bos taurus indicus Danphe ( national bird ) Lophophorus impejanus Netherlands Lion ( heraldic symbol ) Panthera leo Black - tailed godwit ( national bird ) Limosa limosa New Zealand Kiwi Apteryx sp . North Korea Chollima Mythical Norway Lion ( royal national animal ) Panthera leo White - throated dipper ( national bird ) Cinclus cinclus Fjord horse ( national horse ) Equus ferus caballus Oman Arabian oryx ( national animal ) Oryx leucoryx Pakistan Markhor ( National animal ) Capra falconeri Indus river dolphin ( National aquatic mammal ) Platanista indicus minor minor Chukar ( National bird ) Alectoris chukar Indus crocodile ( National reptile ) Crocodylus palustris Shaheen falcon ( Heritage bird ) Falco peregrinus peregrinator Snow leopard ( National predator ) Panthera uncia Panama Harpy eagle Harpia harpyja Papua New Guinea Dugong ( national marine mammal ) Dugong dugon Peru Vicuña ( national animal ) Vicugna vicugna Philippines Carabao ( national animal ) Bubalus bubalis Philippine eagle ( national bird ) Pithecophaga jefferyi Poland White - tailed eagle ( national bird ) Haliaeetus albicilla White stork ( national bird ) Ciconia ciconia European bison ( national animal ) Bison bonasus Qatar Arabian oryx Oryx leucoryx Romania Lynx Lynx lynx Russia Eurasian brown bear Ursus arctos arctos Rwanda Leopard Panthera pardus Saint Vincent and the Grenadines Saint Vincent amazon Amazona guildingii Serbia Wolf Canis lupus lupus White eagle Mythical Lynx Lynx lynx Somalia Leopard ( national animal ) Panthera pardus South Africa Springbok ( national animal ) Antidorcas marsupialis Blue crane ( national bird ) Anthropoides paradiseus Galjoen ( national fish ) Dichistius capensis South Korea Siberian tiger Panthera tigris altaica Korean magpie ( national bird ) Pica ( pica ) sericea Sri Lanka Sri Lankan junglefowl ( national bird ) Gallus lafayettii Tanzania Giraffe Giraffa camelopardalis Thailand Elephant Elephas maximus United Arab Emirates Arabian oryx ( national animal ) Oryx leucoryx Peregrine falcon ( national bird ) Falco peregrinus United Kingdom Lion ( United Kingdom , England , Scotland , Wales ) Panthera leo Bulldog ( Britain as `` British Bulldog '' ) Canis lupus familiaris Red kite ( Wales ) Milvus milvus Unicorn ( Scotland ) Mythical Y Ddraig Goch ( Welsh Dragon Wales ) Mythical United States Bald eagle ( national bird ) Haliaeetus leucocephalus American bison ( national mammal ) Bison bison
+  Fact 0.84: In Mexico, the Grasshopper (Sphenarium purpurascens) is listed as the national arthropod.
+
+Retrieved items:
+<item 1>
+List of national animals
+Canadian Heritage . 2016 . Retrieved 1 December 2016 . Jump up ^ `` National Symbols of China '' . 123independenceday.com . Jump up ^ `` China National Symbols
+'' . worldatlast.com. 2015 . Retrieved 2017 - 03 - 28 . Jump up ^ `` China Considers Red - crowned Crane for National Bird '' . www.china.org.cn . Jump up ^ ``
+El cóndor , ave nacional - banrepcultural.org '' . Jump up ^ `` 16 de diciembre : Declaración del yigüirro como ave nacional de Costa Rica '' . Jump up ^ `` El
+Venado Cola Blanca , Símbolo Nacional de la Fauna Silvestre '' . Jump up ^ `` Manatee Now Costa Rica 's New National Symbol '' . QCOSTARICA . Archived from the
+original on 14 September 2014 . Jump up ^ Bousfield , Jonathan ( 2003 ) . Croatia . Rough Guides . p. 72 . ISBN 1843530848 .
+</item 1>
+
+<item 2>
+List of national animals
+virginianus West Indian manatee ( national aquatic animal ) Trichechus manatus Croatia Pine marten Martes martes Cuba Cuban trogon Priotelus temnurus Cyprus
+Cypriot mouflon Ovis orientalis Czech Republic Double - tailed lion Mythical Denmark Mute swan ( national bird ) Cygnus olor Small tortoiseshell ( national
+butterfly ) Aglais urticae Egypt Steppe eagle Aquila nipalensis Estonia Barn swallow ( national bird ) Hirundo rustica Eritrea Arabian camel Camelus dromedarius
+Ethiopia Lion Panthera leo Faroe Islands Eurasian oystercatcher ( national bird ) Haematopus ostralgus Finland Brown bear ( national animal ) Ursus arctos
+Whooper swan ( national bird ) Cygnus cygnus Holly blue ( national butterfly ) Celastrina argiolus European perch ( national fish ) Perca fluviatilis Seven -
+spot ladybird ( national insect ) Coccinella septempunctata France Gallic rooster Gallus gallus domesticus Germany Unspecified Eagle Members of Accipitridae
+Greece Phoenix Mythical Dolphins Delphinus Guatemala Quetzal Pharomachrus mocinno
+</item 2>
+
+<item 3>
+List of national animals
+List of National Animals - wikipedia List of National Animals Jump to : navigation , search This article is incomplete . Please help to improve it , or discuss
+the issue on the talk page . ( June 2017 ) This is a list of national animals . National animals Country Name of animal Scientific name Pictures Ref . Algeria
+Fennec fox Vulpes zerda Angola Red - crested turaco ( national bird ) Tauraco erythrolophus Anguilla Zenaida dove Zenaida aurita Antigua and Barbuda Fallow deer
+( national animal ) Dama dama Frigate ( national bird ) Fregata magnificens Hawksbill turtle ( national sea creature ) Eretmochelys imbricata Argentina Rufous
+hornero Furnarius rufus Australia Red kangaroo ( national animal ) Macropus rufus Emu ( national bird ) Dromaius novaehollandiae Austria Black eagle Ictinaetus
+malaiensis Azerbaijan Karabakh horse Equus ferus caballus Bangladesh Royal Bengal tiger ( national animal ) Panthera tigris tigris Magpie robin ( national bird
+) Copsychus saularis Ilish ( national fish )
+</item 3>
+
+<item 4>
+List of national animals
+Magpie robin ( national bird ) Copsychus saularis Ilish ( national fish ) Tenualosa ilisha Belarus European bison Bison bonasus Belgium Lion ( heraldic Leo
+Belgicus ) Panthera leo Belize Baird 's tapir ( national animal ) Tapirus bairdii Keel - billed toucan ( national bird ) Ramphastos sulfuratus Bhutan Druk
+Mythical Takin Budorcas taxicolor Brazil Rufous - bellied thrush Turdus rufiventris Cambodia Kouprey Bos sauveli Canada North American beaver ( sovereignty
+animal symbol ) Castor canadensis Canadian horse ( national horse ) Equus ferus caballus China Giant panda ( national animal ) Ailuropoda melanoleuca Chinese
+dragon ( national animal ) Mythical Red - crowned crane ( national bird ) Grus japonensis Democratic Republic of the Congo Okapi Okapia johnstoni Colombia
+Andean condor Vultur gryphus Costa Rica Yigüirro ( national bird ) Turdus grayi White - tailed deer ( national animal ) Odocoileus virginianus West Indian
+manatee ( national aquatic animal ) Trichechus manatus Croatia Pine
+</item 4>
+
+<item 5>
+List of national animals
+versicolor Carp ( national fish ) Cyprinus carpio Latvia White wagtail ( national bird ) Motacilla alba Two - spotted ladybird ( national insect ) Adalia
+bipunctata Lithuania White stork Ciconia ciconia Macedonia Lion ( in Macedonian heraldry ) Panthera leo Madagascar Zebu ( in Malagasy heraldry ) Bos primigenius
+indicus Ring - tailed lemur ( national animal ) Lemur catta Malaysia Malayan tiger ( national animal ) Panthera tigris jacksoni Malta Pharaoh Hound ( national
+animal ) Canis lupus familiaris ( 1 ) Moldova Aurochs ( national animal ) Bos primigenius Mauritius Dodo Raphus cucullatus Mexico Golden eagle ( national animal
+) Aquila chrysaetos Xoloitzcuintli ( national dog ) Canis lupus familiaris Jaguar ( national mammal ) Panthera onca Grasshopper ( national arthropod )
+Sphenarium purpurascens Vaquita ( national marine mammal ) Phocoena sinus Nepal Cow ( national animal ) Bos taurus indicus Danphe ( national bird ) Lophophorus
+impejanus Netherlands Lion ( heraldic symbol
+</item 5>
+
+<item 6>
+Beijing
+The Fragrant Hills ( Xiangshan ) is a popular scenic public park that consists of natural landscaped areas as well as traditional and cultural relics . The
+Beijing Botanical Garden exhibits over 6,000 species of plants , including a variety of trees , bushes and flowers , and an extensive peony garden . The
+Taoranting , Longtan , Chaoyang , Haidian , Milu Yuan and Zizhu Yuan parks are some of the notable recreational parks in the city . The Beijing Zoo is a center
+of zoological research that also contains rare animals from various continents , including the Chinese giant panda . There are 144 museums and galleries ( as of
+June 2008 ) in the city . In addition to the Palace Museum in the Forbidden City and the National Museum of China , other major museums include the National Art
+Museum of China , the Capital Museum , the Beijing Art Museum , the Military Museum of the Chinese People 's Revolution , the Geological Museum of China , the
+Beijing Museum of Natural History and the Paleozoological Museum of China .
+</item 6>
+
+<item 7>
+List of national animals
+Vicugna vicugna Philippines Carabao ( national animal ) Bubalus bubalis Philippine eagle ( national bird ) Pithecophaga jefferyi Poland White - tailed eagle (
+national bird ) Haliaeetus albicilla White stork ( national bird ) Ciconia ciconia European bison ( national animal ) Bison bonasus Qatar Arabian oryx Oryx
+leucoryx Romania Lynx Lynx lynx Russia Eurasian brown bear Ursus arctos arctos Rwanda Leopard Panthera pardus Saint Vincent and the Grenadines Saint Vincent
+amazon Amazona guildingii Serbia Wolf Canis lupus lupus White eagle Mythical Lynx Lynx lynx Somalia Leopard ( national animal ) Panthera pardus South Africa
+Springbok ( national animal ) Antidorcas marsupialis Blue crane ( national bird ) Anthropoides paradiseus Galjoen ( national fish ) Dichistius capensis South
+Korea Siberian tiger Panthera tigris altaica Korean magpie ( national bird ) Pica ( pica ) sericea Sri Lanka Sri Lankan junglefowl ( national bird ) Gallus
+lafayettii Tanzania Giraffe Giraffa camelopardalis Thailand Elephant
+</item 7>
+
+<item 8>
+List of national animals
+Danphe ( national bird ) Lophophorus impejanus Netherlands Lion ( heraldic symbol ) Panthera leo Black - tailed godwit ( national bird ) Limosa limosa New
+Zealand Kiwi Apteryx sp . North Korea Chollima Mythical Norway Lion ( royal national animal ) Panthera leo White - throated dipper ( national bird ) Cinclus
+cinclus Fjord horse ( national horse ) Equus ferus caballus Oman Arabian oryx ( national animal ) Oryx leucoryx Pakistan Markhor ( National animal ) Capra
+falconeri Indus river dolphin ( National aquatic mammal ) Platanista indicus minor minor Chukar ( National bird ) Alectoris chukar Indus crocodile ( National
+reptile ) Crocodylus palustris Shaheen falcon ( Heritage bird ) Falco peregrinus peregrinator Snow leopard ( National predator ) Panthera uncia Panama Harpy
+eagle Harpia harpyja Papua New Guinea Dugong ( national marine mammal ) Dugong dugon Peru Vicuña ( national animal ) Vicugna vicugna Philippines Carabao (
+national animal ) Bubalus bubalis Philippine
+</item 8>
+
+<item 9>
+List of national animals
+Greece Phoenix Mythical Dolphins Delphinus Guatemala Quetzal Pharomachrus mocinno Haiti Hispaniolan Trogan Priotelus roseigaster Honduras White - tailed deer
+Odocoileus virginianus Hungary Turul Mythical ( most probably Falco cherrug ) Iceland Gyrfalcon Falco rusticolus India Bengal tiger ( National predator )
+Panthera tigris tigris Indian peafowl ( National bird ) Pavo cristatus King cobra ( National reptile ) Ophiophagus hannah Ganges river dolphin ( National
+aquatic animal ) Platanista gangetica gangetica Indian elephant ( National heritage animal ) Elephas maximus indicus Indonesia Komodo dragon ( national animal )
+Varanus komodoensis Garuda ( historic national animal ) Mythical Iran Persian lion Panthera leo persica Iraq Chukar partridge Alectoris chukar Goat ( KRG )
+Capra aegagrus Israel Hoopoe ( national bird ) Upupa epops Jamaica Red - billed streamertail Trochilus polytmus Japan Green pheasant ( national bird ) Phasianus
+versicolor Carp ( national fish ) Cyprinus carpio Latvia White wagtail (
+</item 9>
+
+<item 10>
+List of national animals
+bird ) Gallus lafayettii Tanzania Giraffe Giraffa camelopardalis Thailand Elephant Elephas maximus United Arab Emirates Arabian oryx ( national animal ) Oryx
+leucoryx Peregrine falcon ( national bird ) Falco peregrinus United Kingdom Lion ( United Kingdom , England , Scotland , Wales ) Panthera leo Bulldog ( Britain
+as `` British Bulldog '' ) Canis lupus familiaris Red kite ( Wales ) Milvus milvus Unicorn ( Scotland ) Mythical Y Ddraig Goch ( Welsh Dragon Wales ) Mythical
+United States Bald eagle ( national bird ) Haliaeetus leucocephalus American bison ( national mammal ) Bison bison See also Animals portal Lists portal State
+animal List of national birds Animals as heraldic charges Floral emblem National personification References Jump up ^ `` The Fennec Fox : Algeria 's National
+Animal '' . algeria.com . Retrieved 2013 - 03 - 21 . Jump up ^ `` THE NATIONAL BIRD OF ANGOLA '' . BIRDS ANGOLA . Retrieved 12 April 2016 .
+</item 10>
+=== END ITEM id=a168-de8980891d3aefca ===
+
+=== ITEM id=a186-ee92c857bda4b44e ===
+Gold sentences and facts:
+Sentence 0: Sheila Carter Kimberlin Brown as Sheila Carter The Young and the Restless character Portrayed by Kimberlin Brown ( 1990 -- ) Michelle Stafford ( 2006 -- 07 ) Duration 1990 -- 98 2002 -- 03 2005 -- 07 2017 -- First appearance May 1990 Created by William J. Bell Introduced by Edward J. Scott ( 1990 , 1992 -- 95 ) Lee Phillip Bell ( 1992 ) Bradley Bell ( 2002 -- 03 ) John F. Smith ( 2005 ) Lynn Marie Latham and Josh Griffith ( 2006 ) Bradley Bell and Michael Minnis ( 2017 ) Crossover appearances The Bold and the Beautiful Classification Present ; regular Profile Other names Sheila Grainger Sheila Forrester Sheila Warwick Sybil Weller Sheila Lovejoy Brenda Harris Jennifer Mitchell Phyllis Newman Betsy Occupation Waitress Executive assistant Nurse Residence Los Angeles , California Michelle Stafford as Sheila Carter ( show ) Family Family Carter Mother Molly Carter Sisters Sarah Smythe Husband Scott Grainger , Sr. ( 1991 -- 92 ) Eric Forrester ( 1993 -- 95 ) James Warwick ( 1997 -- 98 ) Sons Ryder Callahan Daughters Mary Carter Warwick Diana Carter Daisy Carter Granddaughters Lucy Romalotti
+  Fact 2.12: The character Sheila Carter is classified as present and regular.
+
+Retrieved items:
+<item 1>
+Sheila Carter
+Sheila continues to insinuate herself into Eric 's life , faking a concussion after a catfight with Quinn to manipulate Eric into letting her stay in the
+Forrester mansion . Sheila blackmails her ex-husband , James Warwick , into lying about the severity of her condition . Critical reception ( edit ) Sheila is
+often considered to be one of the most popular villains in daytime . Kimberlin Brown was nominated for a Daytime Emmy in the role as Outstanding Supporting
+Actress in 1993 . With the global success of The Bold and the Beautiful , Sheila is arguably the most recognisable soap opera villain in the world . References
+( edit ) ^ Jump up to : `` About Y&R : Who 's Who in Los Angeles - Sheila Carter '' . SoapCental . Retrieved 16 September 2012 . ^ Jump up to : Kroll , Dan J. (
+9 July 2005 ) . `` Y&R confirms the return of Kimberlin Brown '' . SoapCentral . Retrieved 16 September 2012 . Jump up ^ `` The Young and the Restless : Friday
+, 5th August 2005 '' . CBS.com .
+</item 1>
+
+<item 2>
+Sheila Carter
+( 1991 -- 92 ) Eric Forrester ( 1993 -- 95 ) James Warwick ( 1997 -- 98 ) Sons Ryder Callahan Daughters Mary Carter Warwick Diana Carter Daisy Carter
+Granddaughters Lucy Romalotti Sheila Carter is a fictional character from The Young and the Restless and The Bold and the Beautiful , American soap operas on
+the CBS network . Created by William J. Bell , the role was introduced in 1990 -- by Edward J. Scott -- under the portrayal of Kimberlin Brown , who portrayed
+the role for many intervals on both soaps until 2006 . That same year , Michelle Stafford took over the role , after Sheila had plastic surgery to look like
+Phyllis Summers . Brown returned to the role of Sheila on The Bold and the Beautiful , beginning on June 9 , 2017 . Sheila is known as a villain . A significant
+portion of Sheila 's history on both soaps revolves around her long - running conflict with Lauren Fenmore , whom she has attempted to kill on multiple
+occasions .
+</item 2>
+
+<item 3>
+Sheila Carter
+CBS.com . Retrieved 16 September 2012 . Jump up ^ `` The Young and the Restless : Wednesday , 11th January 2006 '' . CBS.com . Retrieved 16 September 2012 .
+Jump up ^ `` The Young and the Restless : Thursday , 28th December 2006 '' . CBS.com . Retrieved 16 September 2012 . Jump up ^ `` Michelle Stafford Playing
+Sheila Carter on The Young and the Restless '' . She Knows Soaps . Retrieved 16 September 2012 . Jump up ^ Kimberlin Brown ( 2007 ) . KB Interview Nov 2007 .
+KOUS News . Retrieved 16 September 2012 . Jump up ^ `` The Young and the Restless : Friday , 9th February 2007 '' . CBS.com . Retrieved 16 September 2012 . Jump
+up ^ Kerr , Luke ( 28 August 2009 ) . `` Could Kimberlin Brown Return to B&B ? '' . Daytime Confidential . Retrieved 16 September 2012 .
+</item 3>
+
+<item 4>
+Sheila Carter
+Despite being a regular cast member on The Bold and the Beautiful , Brown returned to The Young and the Restless for several guest appearances beginning on
+October 27 , 1992 . Brown departed on November 5 , 1992 , and reappeared for one episode on December 23 , 1992 . She continued making appearance from January 7
+to 14 , 1993 , February 19 , 1993 , to March 2 , 1993 , October 11 , 1993 , October 19 to 27 , 1993 , January 12 , 1994 , and February 28 , 1995 , until March 2
+, 1995 . In July 2005 , after a 10 - year absence from The Young and the Restless , it was announced that Brown was to reprise the role . At the time , Brown
+had been appearing on ABC 's One Life to Live as Paige Miller , and Brown reportedly opted to leave the role when ABC was unable to match the financial terms of
+a contract offered to her by CBS . She returned on August 5 , 2005 , and her run ended on January 11 , 2006 .
+</item 4>
+
+<item 5>
+Sheila Carter
+When asked where her alter - ego may be `` hiding out '' , Brown said : `` I am still getting healthy from my car accident . Right now , Sheila is hiding out in
+North Carolina -- playing golf . But do n't worry : Sheila always comes back ! '' In June 2017 , Kimberlin Brown reprised her role as Sheila on The Bold and the
+Beautiful . Executive producer Brad Bell announced Brown had been signed to a one - year deal with the serial . Development ( edit ) `` She seduced another
+woman 's husband and stole their child ... but if you think that 's bold , hold on tight ... because the hand that rocked The Young and the Restless is now
+rocking The Bold and the Beautiful . Sheila lives ... -- CBS promoting Kimberlin Brown 's crossover as Sheila On the topic of Sheila and Lauren 's `` cat fights
+'' , Brown said : `` People like cat fights because we can get away with what you ca n't get away with in everyday life . You 're living vicariously through me
+.
+</item 5>
+
+<item 6>
+Sheila Carter
+Sheila Carter - Wikipedia Sheila Carter Jump to : navigation , search Sheila Carter Kimberlin Brown as Sheila Carter The Young and the Restless character
+Portrayed by Kimberlin Brown ( 1990 -- ) Michelle Stafford ( 2006 -- 07 ) Duration 1990 -- 98 2002 -- 03 2005 -- 07 2017 -- First appearance May 1990 Created by
+William J. Bell Introduced by Edward J. Scott ( 1990 , 1992 -- 95 ) Lee Phillip Bell ( 1992 ) Bradley Bell ( 2002 -- 03 ) John F. Smith ( 2005 ) Lynn Marie
+Latham and Josh Griffith ( 2006 ) Bradley Bell and Michael Minnis ( 2017 ) Crossover appearances The Bold and the Beautiful Classification Present ; regular
+Profile Other names Sheila Grainger Sheila Forrester Sheila Warwick Sybil Weller Sheila Lovejoy Brenda Harris Jennifer Mitchell Phyllis Newman Betsy Occupation
+Waitress Executive assistant Nurse Residence Los Angeles , California Michelle Stafford as Sheila Carter ( show ) Family Family Carter Mother Molly Carter
+Sisters Sarah Smythe Husband Scott Grainger , Sr.
+</item 6>
+
+<item 7>
+Sheila Carter
+. Daytime Confidential . Retrieved 16 September 2012 . ^ Jump up to : Kroll , Dan J. ( 30 November 2009 ) . `` Is Kimberlin Brown returning to The Young and the
+Restless ? '' . SoapCentral . Retrieved 16 September 2012 . Jump up ^ Logan , Michael ( June 9 , 2017 ) . `` Kimberlin Brown Returns to The Bold and the
+Beautiful as Supervillain Sheila Carter '' . TV Insider . United States : CBS Interactive . Retrieved June 10 , 2017 . Jump up ^ Logan , Michael ( June 19 ,
+2017 ) . `` The Bold and the Beautiful : EP Bradley Bell Answers Our Burning Sheila Carter Questions '' . TV Insider . United States : TVGM Holdings LLC .
+Retrieved June 19 , 2017 . Jump up ^ Kimberlin Brown ( 1992 ) . The Bold and the Beautiful May 1992 Promo Sheila . CBS Daytime . Retrieved 7 November 2012 .
+Jump up ^ Kimberlin Brown ( 2008 ) .
+</item 7>
+
+<item 8>
+Sheila Carter
+Jump up ^ Kimberlin Brown ( 2008 ) . Planet Soap - Sheila & Lauren on Catfights . TV Tropolis . Retrieved 16 September 2012 . ^ Jump up to : Kimberlin Brown (
+2008 ) . Planet Soap - Soap Villains Part 1 . TV Tropolis . Retrieved 16 September 2012 . Jump up ^ `` Top 10 Soap Opera Villains of All Time '' .
+soaps.about.com . Retrieved 25 August 2014 . Jump up ^ `` Soap opera slimeballs : The best villains '' . www.hlntv.com . Retrieved 25 August 2014 . External
+links ( edit ) Sheila Carter biography at SoapCentral The Young and the Restless Cast Present cast members Past cast members Crew William J. Bell Lee Phillip
+Bell Mal Young Families Newman Abbott Chancellor Barber / Winters Related articles Genoa City Storylines The Bold and the Beautiful Victor and Nikki Nick and
+Sharon J.T.
+</item 8>
+
+<item 9>
+Sheila Carter
+However , that December , the character returned , though not portrayed by Brown , but by Michelle Stafford , who in addition portrayed Phyllis Summers . For
+the reason of Brown not returning to the role , the actress said : `` I had a bad accident last year , and when they wanted me back in November , I really could
+n't go at that time , and that 's why I came back looking like somebody else . '' Stafford only portrayed the role for two months until February 9 , 2007 , when
+Sheila was shot by her longtime enemy Lauren Fenmore and presumed dead . In 2009 , reports speculated that Brown would reprise the role again on The Bold and
+the Beautiful , which was followed by more rumors speculating a return to The Young and the Restless . `` I actually got a call from ( B&B head writer and
+executive producer ) Brad Bell a while back asking if I 'd be interested in coming back , and I said , ' Sure ! ' The thing with daytime is that the storylines
+are ( written ) so far in advance , you just never know when ( you might be needed ) , '' Brown said at the time .
+</item 9>
+
+<item 10>
+Sheila Carter
+She has also had conflicts with Stephanie Forrester , Maggie Forrester , Amber Moore , Taylor Hayes , Brooke Logan , Phyllis Summers and Quinn Fuller . Contents
+( hide ) 1 Casting and creation 2 Development 3 Storylines 3.1 1990 -- 92 3.2 1992 -- 98 3.3 2002 -- 03 3.4 2005 -- 07 3.5 2010 , 2012 3.6 2017 -- 4 Critical
+reception 5 References 6 External links Casting and creation ( edit ) The role was portrayed by Kimberlin Brown for a total of 16 years . Her first run was on
+The Young and the Restless from May 1990 to May 20 , 1992 , when the character crossed over to The Bold and the Beautiful from May 21 , 1992 , to October 2 ,
+1998 , again from May 24 to November 5 , 2002 , and again finally from September 26 to October 10 , 2003 .
+</item 10>
+=== END ITEM id=a186-ee92c857bda4b44e ===

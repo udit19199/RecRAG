@@ -1,0 +1,45 @@
+[
+{"id": "9b961b58cbfb5163", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "A shutdown would drag on the US economy, raising the risk of a recession"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "A shutdown would drag on the US economy, raising the risk of a recession"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "though financial markets have held up relatively well through past shutdowns."}]}
+]},
+{"id": "d0480e312f3bb2d9", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Since then he’s been linked to club jobs in Europe but opted to stick around with the national team."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Since then he’s been linked to club jobs in Europe but opted to stick around with the national team."}]}
+]},
+{"id": "93b16d76b9986c65", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Grey herself is a former vice-president at DuckDuckGo, a privacy-focused company founded explicitly to counter giants such as Google. She admits that she may have misinterpreted the evidence"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "a26aad90a7c6e1e2", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "posts identified as false have been spotted circulating on X — including, in one example, a clip that purported to show Hamas missile attacks on Israel but was actually footage from a video game."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "posts identified as false have been spotted circulating on X — including, in one example, a clip that purported to show Hamas missile attacks on Israel but was actually footage from a video game."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "We’ve reached out to the Commission with questions about how it plans to respond to this latest analysis of X’s role in spreading disinformation."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "We’ve reached out to the Commission with questions about how it plans to respond to this latest analysis of X’s role in spreading disinformation."}]}
+]},
+{"id": "96470ce8765b24f2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "While Israel has granted permits to about 17,000 Gaza residents to enter and work in Israel, the food, fuel and medical supplies that people in Gaza use all first pass through Israel."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "While Israel has granted permits to about 17,000 Gaza residents to enter and work in Israel, the food, fuel and medical supplies that people in Gaza use all first pass through Israel."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []}
+]}
+]

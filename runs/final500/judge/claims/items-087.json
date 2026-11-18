@@ -1,0 +1,79 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5abbdb195542993f40c73bf1",
+   "sentences": [
+    " It occupies 40 km (15 sq mi) and it extends into each of the six municipalities on the island.",
+    "Sierra de Guadarrama National Park (in Spanish: \"Parque Nacional de la Sierra de Guadarrama\") is a national park in Spain, covering nearly 34,000 hectares, the fifth largest in Spain's national parks system."
+   ]
+  },
+  {
+   "id": "5a7ce100554299683c1c63b5",
+   "sentences": [
+    "Hayley Nichole Williams (born December 27, 1988) is an American singer, songwriter and musician.",
+    " The band consists of Hayley Williams, Zac Farro and Taylor York.",
+    "Terrence Lee Glaze (born November 29, 1964, Columbus), known as Terry Lee, is a Texas-raised singer and guitarist who is most known for his work in American heavy metal bands Lord Tracy and Pantera."
+   ]
+  },
+  {
+   "id": "multihop-rag-1539",
+   "sentences": [
+    "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years.",
+    "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said."
+   ]
+  },
+  {
+   "id": "3710929627115646080",
+   "sentences": [
+    "NCAA Men 's National Collegiate Volleyball Championship Sport College indoor volleyball Founded 1970 No. of teams 6 ( as of 2014 ) Country United States Most recent champion ( s ) Ohio State 2 ( 3 ) TV partner ( s ) ESPNU Official website NCAA.com",
+    "NCAA Men 's National Collegiate Volleyball Championship Year Site ( Host ) Host Arena Final Third Place Final / Other participants Winner Score Runner - up Third Place Score Fourth Place 1970 Details Los Angeles ( UCLA ) Pauley Pavilion UCLA ( 24 -- 1 ) 3 -- 0 Long Beach State UC Santa Barbara 2 -- 0 Ball State 1971 Details UCLA ( 29 -- 1 ) 3 -- 2 UC Santa Barbara Ball State 2 -- 0 Springfield 1972 Details Muncie , Indiana ( Ball State ) Irving Gymnasium UCLA ( 27 -- 7 ) 3 -- 2 San Diego State Ball State 2 -- 0 UC Santa Barbara 1973 Details San Diego ( San Diego State ) Peterson Gym San Diego State ( 21 -- 5 ) 3 -- 1 Long Beach State Ball State 2 -- 0 Army Details Santa Barbara , California ( UCSB ) Robertson Gymnasium UCLA ( 30 -- 5 ) 3 -- 2 UC Santa Barbara Ball State 2 -- 1 Springfield Details Los Angeles ( UCLA ) Pauley Pavilion UCLA ( 27 -- 8 ) 3 -- 1 UC Santa Barbara Ohio State 2 -- 0 Yale 1976 Details Muncie , Indiana ( Ball State ) Irving Gymnasium UCLA ( 15 -- 2 ) 3 -- 0 Pepperdine Ohio State 2 -- 0 Springfield 1977 Details Los Angeles ( UCLA ) Pauley Pavilion USC ( 18 -- 1 ) 3 -- 1 Ohio State Pepperdine 2 -- 0 Rutgers -- Newark 1978 Details Columbus , Ohio ( Ohio State ) St. John Arena Pepperdine ( 21 -- 4 ) 3 -- 2 UCLA Ohio State 2 -- 0 Rutgers -- Newark 1979 Details Los Angeles ( UCLA ) Pauley Pavilion UCLA ( 30 -- 0 ) 3 -- 1 USC Rutgers -- Newark 3 -- 2 Ball State 1980 Details Muncie , Indiana ( Ball State ) Irving Gymnasium USC ( 22 -- 6 ) 3 -- 1 UCLA Ohio State 3 -- 0 Rutgers -- Newark 1981 Details Santa Barbara , California ( UCSB ) UCSB Events Center UCLA ( 32 -- 3 ) 3 -- 2 USC Penn State 3 -- 1 Ohio State 1982 Details University Park , Pennsylvania ( Penn State ) Rec Hall UCLA ( 29 -- 0 ) 3 -- 0 Penn State USC 2 -- 1 Ohio State Details Columbus , Ohio ( Ohio State ) St. John Arena UCLA ( 27 -- 4 ) 3 -- 0 Pepperdine Ohio State 3 -- 1 Penn State 1984 Details Los Angeles ( UCLA ) Pauley Pavilion UCLA ( 38 -- 0 ) 3 -- 1 Pepperdine George Mason 3 -- 0 Ball State 1985 Details Pepperdine ( 25 -- 2 ) 3 -- 2 USC George Mason 3 -- 0 Ball State 1986 Details University Park , Pennsylvania ( Penn State ) Rec Hall Pepperdine ( 22 -- 7 ) 3 -- 2 USC Penn State 3 -- 0 Ohio State Details Los Angeles ( UCLA ) Pauley Pavilion UCLA ( 28 -- 3 ) 3 -- 0 USC Penn State 3 -- 0 Ohio State 1988 Details Fort Wayne , Indiana ( IPFW ) ACWMC USC ( 34 -- 4 ) 3 -- 2 UC Santa Barbara Ball State 3 -- 1 George Mason 1989 Details Los Angeles ( UCLA ) Pauley Pavilion UCLA ( 29 -- 5 ) 3 -- 1 Stanford Penn State 3 -- 0 Ball State 1990 Details Fairfax , Virginia ( George Mason ) Patriot Center USC ( 26 -- 7 ) 3 -- 1 Long Beach State Ball State 3 -- 1 Rutgers -- Newark 1991 Details Honolulu , HI ( Hawaii ) Neal S. Blaisdell Center Long Beach State ( 31 -- 4 ) 3 -- 1 USC IPFW 3 -- 1 Penn State 1992 Details Muncie , Indiana ( Ball State ) John E. Worthen Arena Pepperdine ( 24 -- 4 ) 3 -- 0 Stanford Penn State 3 -- 0 IPFW 1993 Details Los Angeles ( UCLA ) Pauley Pavilion UCLA ( 24 -- 3 ) 3 -- 0 Cal State Northridge Penn State 3 -- 2 Ohio State 1994 Details Fort Wayne , Indiana ( IPFW ) ACWMC Penn State ( 26 -- 3 ) 3 -- 2 UCLA Ball State 3 -- 0 IPFW 1995 Details Springfield , Massachusetts ( Springfield ) Springfield Civic Center UCLA ( 31 -- 1 ) 3 -- 0 Penn State Ball State 3 -- 1 Hawaii Details Los Angeles ( UCLA ) Pauley Pavilion UCLA ( 26 -- 5 ) 3 -- 2 Hawaii Lewis and Penn State 1997 Details Columbus , Ohio ( Ohio State ) St. John Arena Stanford ( 27 -- 4 ) 3 -- 2 UCLA Ball State and Penn State 1998 Details Honolulu , HI ( Hawaii ) Stan Sheriff Center UCLA ( 28 -- 4 ) 3 -- 0 Pepperdine Lewis and Princeton 1999 Details Los Angeles ( UCLA ) Pauley Pavilion BYU ( 30 -- 1 ) 3 -- 0 Long Beach State IPFW and Penn State 2000 Details Fort Wayne , Indiana ( IPFW ) ACWMC UCLA ( 29 -- 5 ) 3 -- 0 Ohio State Penn State and Pepperdine 2001 Details Long Beach , California ( Long Beach State ) The Pyramid BYU ( 23 -- 4 ) 3 -- 0 UCLA Ohio State and Penn State 2002 Details University Park , Pennsylvania ( Penn State ) Rec Hall Hawaii ( 24 -- 8 ) † 3 -- 1 Pepperdine Ball State and Penn State 2003 Details Long Beach , California ( Long Beach State ) The Pyramid Lewis ( 29 -- 6 ) † 3 -- 2 BYU Penn State and Pepperdine Details Honolulu , HI ( Hawaii ) Stan Sheriff Center BYU ( 29 -- 4 ) 3 -- 2 Long Beach State Lewis and Penn State 2005 Details Los Angeles ( UCLA ) Pauley Pavilion Pepperdine ( 25 -- 2 ) 3 -- 2 UCLA Ohio State and Penn State 2006 Details University Park , Pennsylvania ( Penn State ) Rec Hall UCLA ( 26 -- 12 ) 3 -- 0 Penn State UC Irvine and IPFW 2007 Details Columbus , Ohio ( Ohio State ) St. John Arena UC Irvine ( 29 -- 5 ) 3 -- 1 IPFW Penn State and Pepperdine 2008 Details Irvine , California ( UC Irvine ) Bren Events Center Penn State ( 30 -- 1 ) 3 -- 1 Pepperdine Long Beach State and Ohio State 2009 Details Provo , Utah ( BYU ) Smith Fieldhouse UC Irvine ( 27 -- 5 ) 3 -- 2 USC ( 21 -- 11 ) Ohio State and Penn State Details Stanford , California ( Stanford ) Maples Pavilion Stanford ( 24 -- 6 ) 3 -- 0 Penn State ( 24 -- 8 ) Cal State Northridge and Ohio State 2011 Details University Park , Pennsylvania ( Penn State ) Rec Hall Ohio State ( 26 -- 6 ) 3 -- 2 UC Santa Barbara ( 18 -- 15 ) Penn State and USC 2012 Details Los Angeles ( USC ) Galen Center UC Irvine ( 26 -- 5 ) 3 -- 0 USC ( 24 -- 6 ) Lewis and Penn State 2013 Details Los Angeles ( UCLA ) Pauley Pavilion UC Irvine ( 25 -- 7 ) 3 -- 0 BYU ( 26 -- 5 ) Loyola Chicago and Penn State 2014 Details Chicago ( Loyola Chicago ) Gentile Arena Loyola Chicago ( 29 - 1 ) 3 - 1 Stanford ( 24 - 9 ) 3rd -- BYU and Penn State 5th -- Lewis and Erskine 2015 Details Stanford , California ( Stanford ) Maples Pavilion Loyola Chicago ( 28 - 2 ) 3 - 2 Lewis ( 27 - 4 ) 3rd -- UC Irvine and Penn State 5th -- Hawaii and Pfeiffer 2016 Details University Park , Pennsylvania ( Penn State ) Rec Hall Ohio State ( 31 - 2 ) 3 - 0 BYU ( 27 - 4 ) 3rd -- UCLA and Long Beach State 5th -- Erskine and George Mason 2017 Details Columbus , Ohio ( Ohio State ) St. John Arena Ohio State ( 32 -- 2 ) 3 - 0 BYU ( 26 - 5 ) 3rd -- Hawaii and Long Beach State 5th -- Barton and Penn State 2018 Details Los Angeles ( UCLA ) Pauley Pavilion 2019 Details Long Beach , California ( Long Beach State ) The Pyramid 2020 Details Fairfax , Virginia ( George Mason ) EagleBank Arena 2021 Details Columbus , Ohio ( Ohio State ) Covelli Arena 2022 Details Los Angeles ( UCLA ) Pauley Pavilion"
+   ]
+  },
+  {
+   "id": "5abdf68c5542993f32c2a06b",
+   "sentences": [
+    "Alice Malsenior Walker (born February 9, 1944) is an American novelist, short story writer, poet, and activist.",
+    "Michael David Herr (April 13, 1940 – June 23, 2016) was an American writer and war correspondent, known as the author of \"Dispatches\" (1977), a memoir of his time as a correspondent for \"Esquire magazine\" (1967–1969) during the Vietnam War."
+   ]
+  },
+  {
+   "id": "5a7d119d5542995ed0d165d5",
+   "sentences": [
+    "Gunnar Eric Nelson (born September 20, 1967) is an American musician, singer, and songwriter and international multi-platinum recording artist.",
+    "Florence Leontine Mary Welch (born 28 August 1986) is an English musician, singer and songwriter, best known as the vocalist of indie rock band Florence and the Machine."
+   ]
+  },
+  {
+   "id": "5ae2cbc9554299495565db36",
+   "sentences": [
+    "\"Empty Orchestra\" is the fourth episode of the third series of the British dark comedy anthology television programme \"Inside No. 9\".",
+    " Written by Steve Pemberton and Reece Shearsmith and directed by Guillem Morales, the episode first aired on 7 March 2017, on BBC 2.",
+    " The episode is set in a karaoke booth, and follows a group of work colleagues—Greg (Shearsmith), Fran (Sarah Hadland), Connie (Tamzin Outhwaite), Janet (Emily Howlett) and Duane (Javone Prince)—celebrating the promotion of Roger (Pemberton).",
+    " Since coming to national notice playing Melanie Owen in the BBC One soap opera \"EastEnders\" from 1998 until 2002, she has since starred in both theatre and television productions, including army series \"Red Cap\" and crime drama \"New Tricks\"."
+   ]
+  },
+  {
+   "id": "multihop-rag-1811",
+   "sentences": [
+    "Unfortunately, she did say that she had conversations with investors as part of their due diligence — and, of course, Alameda was taking on losses from FTX to keep FTX’s balance sheet pristine.",
+    "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."
+   ]
+  },
+  {
+   "id": "5ade1eda55429975fa854e71",
+   "sentences": [
+    "Alice Ann Munro ( , \"née\" Laidlaw ; born 10 July 1931) is a Canadian short story writer and Nobel Prize winner.",
+    "Lillian Florence Hellman (June 20, 1905 – June 30, 1984) was an American dramatist and screenwriter known for her success as a playwright on Broadway, as well as her left-wing sympathies and political activism."
+   ]
+  },
+  {
+   "id": "5ae705725542995703ce8bbc",
+   "sentences": [
+    " It is most known through the 1989 single by Kathy Mattea, released in conjunction with her album \"Willow in the Wind\", though the song was first recorded and released on the 1987 Don Williams album \"Traces\" and also released in 1988 by Clark's husband on his album \"Old Friends\".",
+    "This is a detailed discography for American country music artist Don Williams."
+   ]
+  }
+ ]
+}

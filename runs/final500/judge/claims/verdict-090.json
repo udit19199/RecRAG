@@ -1,0 +1,44 @@
+[
+ {"id": "multihop-rag-2497", "sentences": [
+   ["Bayern have their own flaws.", "Bayern are basically a good version of whatever Manchester United are attempting to piece together."],
+   ["Manchester United are out of Europe altogether.", "Manchester United put in a limp display against Bayern at Old Trafford.", "Kingsley Coman sealed a 1-0 win at Old Trafford.", "Kingsley Coman's 1-0 win was for Thomas Tuchel's side."]
+ ]},
+ {"id": "7761896900514914630", "sentences": [
+   ["Like a Boss is a song.", "Like a Boss was written and recorded by the comedy hip hop troupe The Lonely Island.", "The Lonely Island recorded Like a Boss for their debut studio album Incredibad.", "Like a Boss is a parody of the first official single from Slim Thug's first album Already Platinum.", "The first official single from Slim Thug's first album Already Platinum is also named Like a Boss.", "Like a Boss had multiple versions.", "One version of Like a Boss was audio-only and did not have the celebrity interviewer.", "Like a Boss had a clean version that was produced in both audio and video.", "In 2011 Like a Boss was subject to a lawsuit.", "The 2011 lawsuit over Like a Boss was from the producers of the song.", "The producers of Like a Boss claimed they never received proper compensation for their work."]
+ ]},
+ {"id": "5ac09d265542992a796ded39", "sentences": [
+   ["Erving Goffman was born on 11 June 1922.", "Erving Goffman died on 19 November 1982.", "Erving Goffman was a Canadian-American sociologist.", "Erving Goffman was a writer.", "Some consider Erving Goffman the most influential American sociologist of the twentieth century."],
+   ["In 2007 Erving Goffman was listed by The Times Higher Education Guide.", "The Times Higher Education Guide listed Goffman as the sixth most-cited author in the humanities and social sciences in 2007.", "In that 2007 listing, Anthony Giddens, Pierre Bourdieu and Michel Foucault were ranked ahead of Goffman.", "In that 2007 listing, Goffman was ranked ahead of Jürgen Habermas."],
+   ["Paul-Michel Foucault was born on 15 October 1926.", "Paul-Michel Foucault died on 25 June 1984.", "Paul-Michel Foucault is generally known as Michel Foucault.", "Michel Foucault was a French philosopher.", "Michel Foucault was a historian of ideas.", "Michel Foucault was a social theorist.", "Michel Foucault was a literary critic."]
+ ]},
+ {"id": "-7299076255108845857", "sentences": [
+   ["The Sentencing Reform Act was part of the Comprehensive Crime Control Act of 1984.", "The Sentencing Reform Act was a U.S. federal statute.", "The Sentencing Reform Act was intended to increase consistency in United States federal sentencing.", "The Sentencing Reform Act established the United States Sentencing Commission.", "The Sentencing Reform Act abolished federal parole.", "The abolition of federal parole did not apply to persons convicted under federal law before November 1, 1987.", "The abolition of federal parole did not apply to persons convicted under District of Columbia law.", "The abolition of federal parole did not apply to transfer treaty inmates.", "The abolition of federal parole did not apply to persons who violated military law who are in federal civilian prisons.", "The abolition of federal parole did not apply to persons who are defendants in state cases and who are under the U.S. Marshals Service Witness Protection Program."]
+ ]},
+ {"id": "5ae612f3554299546bf83065", "sentences": [
+   ["Inner Secrets is a studio album by Santana.", "Inner Secrets is Santana's ninth studio album."],
+   ["Carlos Santana was born on July 20, 1947.", "Carlos Santana is a Mexican musician.", "Carlos Santana is an American musician.", "Carlos Santana first became famous in the late 1960s and early 1970s.", "Carlos Santana first became famous with his band Santana.", "The band Santana pioneered a fusion of rock and Latin American music."]
+ ]},
+ {"id": "multihop-rag-382", "sentences": [
+   ["Altman was the main speaker at its first developer conference.", "The first developer conference took place last week.", "At the first developer conference, Altman showcased a vision for a future of AI agents.", "The AI agents could help people with a variety of tasks."],
+   ["In the year since Altman catapulted ChatGPT to global fame, Altman has become Silicon Valley's sought-after voice on the promise of artificial intelligence.", "In the year since Altman catapulted ChatGPT to global fame, Altman has become Silicon Valley's sought-after voice on the potential dangers of artificial intelligence.", "Altman's sudden and mostly unexplained exit brought uncertainty to the industry's future."],
+   ["Gartner analyst Arun Chandrasekaran said Altman's exit is indeed shocking.", "Gartner analyst Arun Chandrasekaran said Altman has been the face of generative AI technology."],
+   ["The prevailing theory is based on the board's language.", "The prevailing theory is based on the way giant tech companies work.", "The prevailing theory is circulating right now."]
+ ]},
+ {"id": "5a738b855542992d56e7e363", "sentences": [
+   ["St. Elizabeths Hospital opened in 1855.", "St. Elizabeths Hospital opened as the first federally operated psychiatric hospital in the United States."],
+   ["St. Elizabeths Hospital was founded in 1861.", "St. Elizabeths Hospital is the longest continuously operating hospital in the District."]
+ ]},
+ {"id": "5abbcfaf5542993f40c73ba9", "sentences": [
+   ["She won a silver medal at the 2002 Commonwealth Games.", "She won the silver medal with Sara Petersen in the women's doubles at the 2002 Commonwealth Games.", "She won a bronze medal in the mixed team at the 2002 Commonwealth Games."],
+   ["The 2002 Commonwealth Games were officially known as the XVII Commonwealth Games.", "The 2002 Commonwealth Games were commonly known as Manchester 2002.", "The 2002 Commonwealth Games were held in Manchester, England.", "The 2002 Commonwealth Games were held from 25 July to 4 August 2002."]
+ ]},
+ {"id": "5ac2546a554299636651997b", "sentences": [
+   ["They have produced two studio albums.", "They have produced an EP."],
+   ["Motion City Soundtrack was an American rock band.", "Motion City Soundtrack formed in Minneapolis, Minnesota.", "Motion City Soundtrack formed in 1997."],
+   ["Motion City Soundtrack had a nearly twenty-year career.", "Motion City Soundtrack toured heavily over the course of its career.", "Motion City Soundtrack released six studio albums.", "The majority of Motion City Soundtrack's six studio albums were released on the independent label Epitaph Records."]
+ ]},
+ {"id": "5abdff775542993f32c2a082", "sentences": [
+   ["Big Fish is a musical.", "Big Fish has music by Andrew Lippa.", "Big Fish has lyrics by Andrew Lippa.", "Big Fish has a book by John August."],
+   ["He is a resident artist at the Ars Nova Theater.", "The Ars Nova Theater is in New York City."]
+ ]}
+]

@@ -21,8 +21,8 @@ remodel — do not resurrect that pattern (per-candidate indexing, benchmark
 suites, blueprint export) without confirming it's back in scope.
 
 This is **research-first**: the value is in what we learn and document, not a
-scalable product. People are curious about findings, so keep experiment runs
-and results local-only (`runs/` and `results/` are gitignored), and record
+scalable product. People are curious about findings, so run results in `runs/`
+are committed, but indexes and caches under it are gitignored, and record
 learnings where they can be found (docs, benchmark artifacts). Keep
 architecture work simple and reversible.
 
@@ -30,8 +30,8 @@ architecture work simple and reversible.
 
 The **Experiments** scene in Excalidraw+ (HPE collection,
 https://app.excalidraw.com/s/9pwrOc81bDT/5KJVp4wI32J) is the source of truth
-for every experiment's results. `runs/` and `results/` are local, gitignored
-and can be deleted, so a result that only lives there can be lost.
+for every experiment's results. Indexes and caches under `runs/` are local and
+can be deleted; run results in `runs/` are committed.
 
 - Every experiment you run gets its results added to that scene before the work
   counts as done: dataset, question count, repeats, the judges used, and the

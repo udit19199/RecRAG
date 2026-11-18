@@ -1,0 +1,848 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=492e7923877f5697 ===
+Gold sentences and facts:
+Sentence 0: Arthur `` The President '' Flanders -- An inmate on death row , convicted of killing his father in an insurance - fraud scheme . His sentence is commuted to life imprisonment , but he is later murdered by an unknown inmate in the prison laundry . Arlen `` The Chief '' Bitterbuck -- A Washita Cherokee death - row inmate , convicted of killing a man in a drunken brawl over a pair of boots . His execution is the first of three mentioned in Paul 's story . Janice Edgecombe -- Paul Edgecombe 's wife . Dies in a bus accident on the way to her grandchild 's graduation in 1956 . Hal Moores -- The warden at Cold Mountain Penitentiary . Melinda Moores -- Warden Moores 's wife , who is dying of a brain tumor and is cured by John Coffey . She eventually dies of a heart attack ten years later . Curtis Anderson -- The assistant warden . Dean Stanton -- A guard on E Block who is strangled and nearly killed by William Wharton . A father of young children , he takes no part in the taking of John Coffey to Melinda Moores due to the risk of losing his job . He applies for relocation to C Block after John Coffey 's death , where he is murdered by an inmate 4 months later . Harry Terwilliger -- One of the main guards on E Block along with his friends Paul Edgecombe , Brutus Howell and Dean Stanton . He eventually dies of cancer , long after John Coffey 's execution . Bill Dodge -- A `` floater '' guard on E Block ( not permanently assigned there ) . Jack Van Hay -- A guard who is part of the execution team . He operates the switch room . Toot - Toot -- A trustee who stands in for the condemned during execution rehearsals and sells snacks to prisoners and guards . Burt Hammersmith -- A reporter who wrote on the Detterick twins ' murders and John Coffey 's trial . Despite believing himself to be an `` Enlightenment '' man , he displays prejudice in his stance on `` Negroes '' and tries to convince Paul of John Coffey 's guilt . Elaine Connelly -- A friend of Paul in the present - day nursing home where he tells his story . She is later revealed to be the grandmother of the Speaker of the Georgia House of Representatives , using this position to scare Brad Dolan from harassing Paul . Homer Cribus -- The Sheriff of Trapingus County , where the murders of the Detterick twins took place . Despite playing no part in apprehending John Coffey , he later shows up at the execution . An outspoken Baptist with strong racial prejudice and immensely overweight , he later succumbs to a heart attack while having sex with a 17 - year - old African American in his office . Rob McGee -- The Deputy Sheriff of Trapingus County , who led the search party which found John Coffey . While displaying strong doubt about Coffey 's guilt after being shown signs of innocence by Paul Edgecombe , he is still powerless to call for an appeal as he is subordinate to Sheriff Cribus , whom he allegedly hopes to succeed . Brad Dolan -- A malicious nursing home employee who harasses Paul Edgecombe . Paul strongly compares him to Percy Wetmore , and several times mistakes him for Percy , despite the latter dying in 1965 . Kathe and Cora Detterick -- The two young girls whom John Coffey was convicted of raping and murdering . Killed by William Wharton . Klaus and Marjorie Detterick -- The parents of Kathe and Cora .
+  Fact 0.0: Arthur 'The President' Flanders is an inmate on death row.
+  Fact 0.1: Arthur Flanders was convicted of killing his father in an insurance-fraud scheme.
+  Fact 0.2: Arthur Flanders's sentence was commuted to life imprisonment.
+  Fact 0.3: Arthur Flanders was later murdered by an unknown inmate.
+  Fact 0.4: Arthur Flanders was murdered in the prison laundry.
+  Fact 0.5: Arlen 'The Chief' Bitterbuck is a Washita Cherokee death-row inmate.
+  Fact 0.6: Arlen Bitterbuck was convicted of killing a man in a drunken brawl over a pair of boots.
+  Fact 0.7: Arlen Bitterbuck's execution is the first of three mentioned in Paul's story.
+  Fact 0.8: Janice Edgecombe is Paul Edgecombe's wife.
+  Fact 0.9: Janice Edgecombe dies in a bus accident on the way to her grandchild's graduation.
+  Fact 0.10: Janice Edgecombe's death occurred in 1956.
+  Fact 0.11: Hal Moores is the warden at Cold Mountain Penitentiary.
+  Fact 0.12: Melinda Moores is Warden Moores's wife.
+  Fact 0.13: Melinda Moores is dying of a brain tumor.
+  Fact 0.14: John Coffey cures Melinda Moores of the brain tumor.
+  Fact 0.15: Melinda Moores dies of a heart attack ten years later.
+  Fact 0.16: Curtis Anderson is the assistant warden.
+  Fact 0.17: Dean Stanton is a guard on E Block.
+  Fact 0.18: William Wharton strangles Dean Stanton and nearly kills him.
+  Fact 0.19: Dean Stanton is a father of young children.
+  Fact 0.20: Dean Stanton takes no part in taking John Coffey to Melinda Moores due to the risk of losing his job.
+  Fact 0.21: Dean Stanton applies for relocation to C Block after John Coffey's death.
+  Fact 0.22: Dean Stanton is murdered by an inmate on C Block 4 months later.
+  Fact 0.23: Harry Terwilliger is one of the main guards on E Block.
+  Fact 0.24: Harry Terwilliger is friends with Paul Edgecombe, Brutus Howell, and Dean Stanton.
+  Fact 0.25: Harry Terwilliger dies of cancer.
+  Fact 0.26: Harry Terwilliger's death came long after John Coffey's execution.
+  Fact 0.27: Bill Dodge is a 'floater' guard on E Block.
+  Fact 0.28: Bill Dodge is not permanently assigned to E Block.
+  Fact 0.29: Jack Van Hay is a guard who is part of the execution team.
+  Fact 0.30: Jack Van Hay operates the switch room.
+  Fact 0.31: Toot-Toot is a trustee.
+  Fact 0.32: Toot-Toot stands in for the condemned during execution rehearsals.
+  Fact 0.33: Toot-Toot sells snacks to prisoners and guards.
+  Fact 0.34: Burt Hammersmith is a reporter.
+  Fact 0.35: Burt Hammersmith wrote on the Detterick twins' murders.
+  Fact 0.36: Burt Hammersmith wrote on John Coffey's trial.
+  Fact 0.37: Burt Hammersmith believes himself to be an 'Enlightenment' man.
+  Fact 0.38: Burt Hammersmith displays prejudice in his stance on 'Negroes'.
+  Fact 0.39: Burt Hammersmith tries to convince Paul Edgecombe of John Coffey's guilt.
+  Fact 0.40: Elaine Connelly is a friend of Paul Edgecombe in the present-day nursing home where he tells his story.
+  Fact 0.41: Elaine Connelly is later revealed to be the grandmother of the Speaker of the Georgia House of Representatives.
+  Fact 0.42: Elaine Connelly uses this position to scare Brad Dolan from harassing Paul.
+  Fact 0.43: Homer Cribus is the Sheriff of Trapingus County.
+  Fact 0.44: The Detterick twins' murders took place in Trapingus County.
+  Fact 0.45: Homer Cribus played no part in apprehending John Coffey.
+  Fact 0.46: Homer Cribus later shows up at the execution.
+  Fact 0.47: Homer Cribus is an outspoken Baptist.
+  Fact 0.48: Homer Cribus has strong racial prejudice.
+  Fact 0.49: Homer Cribus is immensely overweight.
+  Fact 0.50: Homer Cribus later succumbs to a heart attack while having sex with a 17-year-old African American in his office.
+  Fact 0.51: Rob McGee is the Deputy Sheriff of Trapingus County.
+  Fact 0.52: Rob McGee led the search party which found John Coffey.
+  Fact 0.53: Rob McGee displays strong doubt about Coffey's guilt after being shown signs of innocence by Paul Edgecombe.
+  Fact 0.54: Rob McGee is powerless to call for an appeal.
+  Fact 0.55: Rob McGee is subordinate to Sheriff Cribus.
+  Fact 0.56: Rob McGee allegedly hopes to succeed Sheriff Cribus.
+  Fact 0.57: Brad Dolan is a malicious nursing home employee.
+  Fact 0.58: Brad Dolan harasses Paul Edgecombe.
+  Fact 0.59: Paul Edgecombe strongly compares Brad Dolan to Percy Wetmore.
+  Fact 0.60: Paul Edgecombe several times mistakes Brad Dolan for Percy Wetmore.
+  Fact 0.61: Percy Wetmore died in 1965.
+  Fact 0.62: Kathe Detterick and Cora Detterick are two young girls.
+  Fact 0.63: John Coffey was convicted of raping and murdering Kathe and Cora Detterick.
+  Fact 0.64: William Wharton killed Kathe and Cora Detterick.
+  Fact 0.65: Klaus Detterick and Marjorie Detterick are the parents of Kathe and Cora Detterick.
+Sentence 1: Toot - Toot -- A trustee who stands in for the condemned during execution rehearsals and sells snacks to prisoners and guards .
+  Fact 1.0: Toot-Toot is a trustee.
+  Fact 1.1: Toot-Toot stands in for the condemned during execution rehearsals.
+  Fact 1.2: Toot-Toot sells snacks to prisoners and guards.
+
+Retrieved items:
+<item 1>
+The Green Mile (novel)
+He is punished by being placed in solitary confinement , but never seems to learn his lesson . As John Coffey is being smuggled to Hal Moores 's house , Wild
+Bill grabs his arm and Coffey sees that he actually committed the murders Coffey was accused of . Therefore , Coffey gives Percy the `` sickness '' he took from
+the warden 's wife , causing him to kill Wharton . Eduard `` Del '' Delacroix -- He is a Cajun prisoner with a fairly slow grasp of the English language . He is
+incarcerated for multiple deaths due to a fire he started while trying to cover up his rape and murder of a young girl . While on the Mile , Del befriends a
+mouse named Mr. Jingles , who becomes his best friend in his last days on death row . Percy , his enemy , sabotages his execution , causing Del to die in a slow
+, gruesome death in the electric chair . Mr. Jingles ( nicknamed `` Steamboat Willie '' ) -- An unusually intelligent mouse who enjoys eating peppermint sweets
+. He becomes a friend to Eduard Delacroix in the few days before the man is executed .
+</item 1>
+
+<item 2>
+The Green Mile (novel)
+Curtis Anderson -- The assistant warden . Dean Stanton -- A guard on E Block who is strangled and nearly killed by William Wharton . A father of young children
+, he takes no part in the taking of John Coffey to Melinda Moores due to the risk of losing his job . He applies for relocation to C Block after John Coffey 's
+death , where he is murdered by an inmate 4 months later . Harry Terwilliger -- One of the main guards on E Block along with his friends Paul Edgecombe , Brutus
+Howell and Dean Stanton . He eventually dies of cancer , long after John Coffey 's execution . Bill Dodge -- A `` floater '' guard on E Block ( not permanently
+assigned there ) . Jack Van Hay -- A guard who is part of the execution team . He operates the switch room . Toot - Toot -- A trustee who stands in for the
+condemned during execution rehearsals and sells snacks to prisoners and guards . Burt Hammersmith -- A reporter who wrote on the Detterick twins ' murders and
+John Coffey 's trial .
+</item 2>
+
+<item 3>
+The Green Mile (novel)
+Despite believing himself to be an `` Enlightenment '' man , he displays prejudice in his stance on `` Negroes '' and tries to convince Paul of John Coffey 's
+guilt . Elaine Connelly -- A friend of Paul in the present - day nursing home where he tells his story . She is later revealed to be the grandmother of the
+Speaker of the Georgia House of Representatives , using this position to scare Brad Dolan from harassing Paul . Homer Cribus -- The Sheriff of Trapingus County
+, where the murders of the Detterick twins took place . Despite playing no part in apprehending John Coffey , he later shows up at the execution . An outspoken
+Baptist with strong racial prejudice and immensely overweight , he later succumbs to a heart attack while having sex with a 17 - year - old African American in
+his office . Rob McGee -- The Deputy Sheriff of Trapingus County , who led the search party which found John Coffey . While displaying strong doubt about Coffey
+'s guilt after being shown signs of innocence by Paul Edgecombe , he is still powerless to call for an appeal as he is subordinate to Sheriff Cribus , whom he
+allegedly hopes to succeed .
+</item 3>
+
+<item 4>
+The Green Mile (novel)
+He is later attacked by `` Wild Bill '' Wharton , consequently wets himself , and is teased by Delacroix for it . In retaliation , Percy deliberately sabotages
+Delacroix 's execution . At the end of the story he is sent to the Briar Ridge mental institution , originally considered for a job but now as a patient , after
+Coffey transferred Melinda 's disease to him which caused him to kill William Wharton . He eventually lives through a hospital fire and dies in 1965 . William
+`` Wild Bill '' Wharton -- The antagonist of the story . He is on death row for various crimes . He does not like the nickname `` Wild Bill '' but prefers to be
+called `` Billy the Kid '' , a name which he has tattooed on his forearm . When he first arrives he manages to convince the guards that he is in a drugged
+stupor , only to attack and attempt to strangle to death Dean Stanton when they reach E Block . He continues to wreak havoc on the Mile and plays tricks such as
+urinating on the guards , amongst other things . He is punished by being placed in solitary confinement , but never seems to learn his lesson .
+</item 4>
+
+<item 5>
+The Green Mile (novel)
+He is resurrected by John Coffey after being stomped on by Percy Wetmore . This gives him increased longevity and he finally dies 64 years later . Other
+characters ( edit ) Arthur `` The President '' Flanders -- An inmate on death row , convicted of killing his father in an insurance - fraud scheme . His
+sentence is commuted to life imprisonment , but he is later murdered by an unknown inmate in the prison laundry . Arlen `` The Chief '' Bitterbuck -- A Washita
+Cherokee death - row inmate , convicted of killing a man in a drunken brawl over a pair of boots . His execution is the first of three mentioned in Paul 's
+story . Janice Edgecombe -- Paul Edgecombe 's wife . Dies in a bus accident on the way to her grandchild 's graduation in 1956 . Hal Moores -- The warden at
+Cold Mountain Penitentiary . Melinda Moores -- Warden Moores 's wife , who is dying of a brain tumor and is cured by John Coffey . She eventually dies of a
+heart attack ten years later . Curtis Anderson -- The assistant warden .
+</item 5>
+
+<item 6>
+The Green Mile (novel)
+Paul is unsure how to help John , but John tells him not to worry , as he is ready to die anyway , wanting to escape the cruelty of the world . John 's
+execution is the last one in which Paul participates . He introduces Mr. Jingles to Elaine just before the mouse dies , having lived 64 years past these events
+, and explains that those healed by John gained an unnaturally long lifespan . Elaine dies shortly after , never learning how Paul 's wife died in his arms
+immediately after they suffered a bus accident , and that he then saw John Coffey 's ghost watching him from an overpass . Paul seems to be all alone , now 104
+years old , and wondering how much longer he will live . Characters ( edit ) Paul Edgecombe -- The protagonist and narrator of the book and the death - row
+supervisor at Cold Mountain Penitentiary . He is 40 years old when the main bulk of the story takes place , in 1932 . He is a caring man and takes excellent
+care of the men on his block , avoiding conflict and keeping the peace whenever possible .
+</item 6>
+
+<item 7>
+The Green Mile (novel)
+He is the first character to discover John Coffey 's amazing abilities , when the prisoner cures his urinary tract infection . It is also his idea to take
+Coffey to try to cure Melinda , Warden Hal Moores ' wife , of her brain tumor . He transferred to Boy 's Correctional with Brutus Howell shortly after Coffey 's
+execution . Brutus `` Brutal '' Howell -- He is second in command on the Green Mile and Paul 's best friend . He is a tall , imposing man but not violent at all
+unless necessary . His nickname of `` Brutal '' is intended as irony . A former football tackle who had gone on to play at Louisiana State University ( LSU ) in
+his youth , he eventually suffers a fatal heart attack at home , in his fifties , about twenty - five years after Coffey 's execution . John Coffey -- He is a
+massive black man ( 6 ft 8 in tall ) , on death row for the alleged rape and murder of two young girls . He is very quiet and prefers to keep to himself , weeps
+almost constantly , and is afraid of the dark .
+</item 7>
+
+<item 8>
+The Green Mile (novel)
+Brad Dolan -- A malicious nursing home employee who harasses Paul Edgecombe . Paul strongly compares him to Percy Wetmore , and several times mistakes him for
+Percy , despite the latter dying in 1965 . Kathe and Cora Detterick -- The two young girls whom John Coffey was convicted of raping and murdering . Killed by
+William Wharton . Klaus and Marjorie Detterick -- The parents of Kathe and Cora . Reception ( edit ) The Green Mile won the Bram Stoker Award for Best Novel in
+1996 . In 1997 , The Green Mile was nominated as Best Novel for the British Fantasy Award and the Locus Award . In 2003 the book was listed on the BBC 's The
+Big Read poll of the UK 's `` best - loved novel . '' Film adaptation ( edit ) Main article : The Green Mile ( film ) Frank Darabont adapted the novel into a
+screenplay for a feature film of the same name . Released in 1999 , the film was directed by Darabont and starred Tom Hanks as Paul Edgecombe and Michael Clarke
+Duncan as John Coffey .
+</item 8>
+
+<item 9>
+The Green Mile (novel)
+Even at the end , during his execution , he asks Paul Edgecombe not to put on the traditional black silk mask used to block the view of the prisoner 's face
+because he fears the dark . Coffey is described as `` knowing his own name and not much else '' and lacks the capability to do so much as tie a simple knot .
+However , he is convicted of luring the girls away from their home , disposing of the watchdog , carefully planning and using abilities he would otherwise not
+be expected to have . He is the calmest and mildest prisoner the guards have ever seen , despite his hulking form . He turns out to be innocent of what he is
+accused of , but chooses to die anyway . Percy Wetmore -- He is a young and sadistic guard . He is disliked by Paul and the other guards because of his ways ,
+but they can not do anything about it because he is the nephew of the governor 's wife . He is very homophobic and attacks Eduard Delacroix for allegedly
+touching him , although it was an accident caused by Del stumbling out of the prison truck .
+</item 9>
+
+<item 10>
+The Green Mile (novel)
+This year marks the arrival of John Coffey , a 6 ft 8 in powerfully built black man who has been convicted of raping and murdering two small white girls .
+During his time on the Mile , John interacts with fellow prisoners Eduard `` Del '' Delacroix , a Cajun arsonist , rapist , and murderer , and William Wharton (
+`` Billy the Kid '' to himself , `` Wild Bill '' to the guards ) , a wild - acting and dangerous multiple murderer who is determined to make as much trouble as
+he can before he is executed . Other inhabitants include Arlen Bitterbuck , a Native American convicted of killing a man in a fight over a pair of boots ( also
+the first character to die in the electric chair ) ; Arthur Flanders , a real estate executive who killed his father to perpetrate insurance fraud , and whose
+sentence is eventually commuted to life imprisonment ( while serving his sentence , he is killed by another inmate in the laundry room ) ; and Mr. Jingles , a
+mouse , to whom Del teaches various tricks . Paul and the other guards are irritated throughout the book by Percy Wetmore , a sadistic guard who enjoys
+antagonizing the prisoners .
+</item 10>
+=== END ITEM id=492e7923877f5697 ===
+
+=== ITEM id=7bdae0df850d5b4d ===
+Gold sentences and facts:
+Sentence 0: Somatic motor neurons originate in the central nervous system , project their axons to skeletal muscles ( such as the muscles of the limbs , abdominal , and intercostal muscles ) , which are involved in locomotion . The three types of these neurons are the alpha efferent neurons , beta efferent neurons , and gamma efferent neurons . They are called efferent to indicate the flow of information from the central nervous system ( CNS ) to the periphery .
+  Fact 0.0: Somatic motor neurons originate in the central nervous system.
+  Fact 0.1: Somatic motor neurons project their axons to skeletal muscles.
+  Fact 0.2: Examples of those skeletal muscles are the muscles of the limbs, abdominal muscles, and intercostal muscles.
+  Fact 0.3: The skeletal muscles that somatic motor neurons project to are involved in locomotion.
+  Fact 0.4: There are three types of somatic motor neurons.
+  Fact 0.5: The three types are alpha efferent neurons, beta efferent neurons, and gamma efferent neurons.
+  Fact 0.6: Somatic motor neurons are called efferent.
+  Fact 0.7: The name efferent indicates the flow of information from the central nervous system (CNS) to the periphery.
+Sentence 1: The term ' motor neuron ' is usually restricted to the lower motor neurons , the efferent nerves that directly innervate muscles .
+  Fact 1.0: The term 'motor neuron' is usually restricted to the lower motor neurons.
+  Fact 1.1: Lower motor neurons are the efferent nerves that directly innervate muscles.
+
+Retrieved items:
+<item 1>
+Motor neuron
+Branch of NS Position Neurotransmitter Somatic n / a Acetylcholine Parasympathetic Preganglionic Acetylcholine Parasympathetic Ganglionic Acetylcholine
+Sympathetic Preganglionic Acetylcholine Sympathetic Ganglionic Norepinephrine * * Except fibers to sweat glands and certain blood vessels Motor neuron
+neurotransmitters General visceral motor neurons ( edit ) These motor neurons indirectly innervate cardiac muscle and smooth muscles of the viscera ( the
+muscles of the arteries ) : they synapse onto neurons located in ganglia of the autonomic nervous system ( sympathetic and parasympathetic ) , located in the
+peripheral nervous system ( PNS ) , which themselves directly innervate visceral muscles ( and also some gland cells ) . In consequence : the motor command of
+skeletal and branchial muscles is monosynaptic ( involving only one motor neuron , respectively , somatic and branchial , which synapses onto the muscle ) .
+</item 1>
+
+<item 2>
+Motor neuron
+There are three primary categories lower motor neurons , which can be further divided in sub-categories . According to their targets , motor neurons are
+classified into three broad categories : Somatic motor neurons Special visceral motor neurons General visceral motor neurons Somatic motor neurons ( edit )
+Somatic motor neurons originate in the central nervous system , project their axons to skeletal muscles ( such as the muscles of the limbs , abdominal , and
+intercostal muscles ) , which are involved in locomotion . The three types of these neurons are the alpha efferent neurons , beta efferent neurons , and gamma
+efferent neurons . They are called efferent to indicate the flow of information from the central nervous system ( CNS ) to the periphery . Alpha motor neurons
+innervate extrafusal muscle fibers , which are the main force - generating component of a muscle . Their cell bodies are in the ventral horn of the spinal cord
+and they are sometimes called ventral horn cells . A single motor neuron may synapse with 150 muscle fibers on average . The motor neuron and all of the muscle
+fibers to which it connects is a motor unit .
+</item 2>
+
+<item 3>
+Motor neuron
+A tetanic contraction is caused by constant , very high frequency stimulation - the action potentials come at such a rapid rate that individual twitches are
+indistinguishable , and tension rises smoothly eventually reaching a plateau . Contents ( hide ) 1 Development 2 Anatomy and physiology 2.1 Upper motor neurons
+2.2 White Matter Tract 2.3 Lower Motor Neurons 2.4 Somatic motor neurons 2.4. 1 Neuromuscular Junction 2.5 Special visceral motor neurons 2.6 General visceral
+motor neurons 3 Motor neurons in regenerative medicine 4 See also 5 References 6 Sources Development ( edit ) Motor neurons begin to develop early in embryonic
+development , and motor function continues to develop well into childhood . In the neural tube cells are specified to either the rostral - caudal axis or
+ventral - dorsal axis . The axons of motor neurons begin to appear in the fourth week of development from the ventral region of the ventral - dorsal axis ( the
+basal plate ) . This homeodomain is known as the motor neural progenitor domain ( pMN ) .
+</item 3>
+
+<item 4>
+Graph query row:
+entity: Somatic motor neurons
+relationship: RELATED_TO
+related: Skeletal muscles
+kind: None
+</item 4>
+
+<item 5>
+Motor neuron
+These are found in the spinal cord and appear white from the myelin surrounding axons . While these tracts exist for both efferent and afferent nerves ,
+efferent nerves will carry signals down the spinal cord toward their effector target . These tracts also serve as the place of origin for lower motor neurons .
+There are seven major white matter motor tracts to be found in the spinal cord and are listed below : Lateral Corticospinal Tract Rubrospinal Tract Lateral
+Reticulospinal Tract Vestibulospinal tract Medial Reticulospinal Tract Tectospinal Tract Anterior Corticospinal Tract Lower motor neurons ( edit ) Lower motor
+neurons are those that originate in the spinal cord and directly or indirectly innervate effector targets . The target of these neurons varies , but in the
+somatic nervous system the target will be some sort of muscle fiber . There are three primary categories lower motor neurons , which can be further divided in
+sub-categories .
+</item 5>
+
+<item 6>
+Motor neuron
+There are two types of gamma motor neurons : Dynamic - These focus on Bag1 fibers and enhance dynamic sensitivity . Static - These focus on Bag2 fibers and
+enhance stretch sensitivity . Regulatory factors of lower motor Neurons Size Principle -- this relates to the of the soma of the motor neuron . This restricts
+larger neurons to receive a larger excitatory signal in order to stimulate the muscle fibers it innervates . By reducing unnecessary muscle fiber recruitment ,
+the body is able to optimize energy consumption . Persistent Inward Current ( PIC ) -- recent animal study research has shown that constant flow of ions such as
+calcium and sodium through channels in the soma and dendrites influence the synaptic input . An alternate way to think of this is that the post-synaptic neuron
+is being primed before receiving an impulse . After Hyper - polarization ( AHP ) -- we are all familiar with the idea of hyperpolarization after an action
+potential . A trend has been identified that shows slow motor neurons to have more intense AHPs for a longer duration . One way to remember this is that slow
+muscle fibers can contract for loner , so it makes since that their corresponding motor neurons fire at a slower rate .
+</item 6>
+
+<item 7>
+Motor neuron
+Motor neuron - wikipedia Motor neuron Jump to : navigation , search Motor neuron Micrograph of the hypoglossal nucleus showing motor neurons with their
+characteristic coarse Nissl substance ( `` tigroid '' cytoplasm ) . H&E - LFB stain . Details Location Ventral horn of the spinal cord , some cranial nerve
+nuclei Shape Projection neuron Function Excitatory projection ( to NMJ ) Neurotransmitter UMN to LMN : glutamate ; LMN to NMJ : ACh Presynaptic connections
+Primary motor cortex via the Corticospinal tract Postsynaptic connections Muscle fibers and other neurons Identifiers MeSH D009046 NeuroLex ID nifext_103 TA
+A14. 2.00. 021 FMA 5867 Anatomical terms of neuroanatomy ( edit on Wikidata ) A motor neuron ( or motoneuron ) is a neuron whose cell body is located in the
+motor cortex , brainstem or the spinal cord , and whose axon ( fiber ) projects to the spinal cord or outside of the spinal cord to directly or indirectly
+control effector organs , mainly muscles and glands . There are two types of motor neuron -- upper motor neurons and lower motor neurons .
+</item 7>
+
+<item 8>
+Motor neuron
+These use both oxidative and glycolytic means to gain energy . In addition to voluntary skeletal muscle contraction , alpha motor neurons also contribute to
+muscle tone , the continuous force generated by noncontracting muscle to oppose stretching . When a muscle is stretched , sensory neurons within the muscle
+spindle detect the degree of stretch and send a signal to the CNS . The CNS activates alpha motor neurons in the spinal cord , which cause extrafusal muscle
+fibers to contract and thereby resist further stretching . This process is also called the stretch reflex . Beta motor neurons innervate intrafusal muscle
+fibers of muscle spindles , with collaterals to extrafusal fibres . There are two types of beta motor neurons : Slow Contracting - These innervate extrafusal
+fibers . Fast Contracting - These innervate intrafusal fibers . Gamma motor neurons innervate intrafusal muscle fibers found within the muscle spindle . They
+regulate the sensitivity of the spindle to muscle stretching . With activation of gamma neurons , intrafusal muscle fibers contract so that only a small stretch
+is required to activate spindle sensory neurons and the stretch reflex .
+</item 8>
+
+<item 9>
+Motor neuron
+the command of visceral muscles is disynaptic ( involving two neurons : the general visceral motor neuron located in the CNS , which synapses onto a ganglionic
+neuron , located in the PNS , which synapses onto the muscle ) . All vertebrate motor neurons are cholinergic , that is , they release the neurotransmitter
+acetylcholine . Parasympathetic ganglionic neurons are also cholinergic , whereas most sympathetic ganglionic neurons are noradrenergic , that is , they release
+the neurotransmitter noradrenaline . ( see Table ) Motor neurons in Regenerative medicine ( edit ) Human lower motor neurons can be generated in vitro from
+embryonic stem cells and induced pluripotent stem cells . See also ( edit ) Betz cell Central chromatolysis Motor dysfunction Nerve References ( edit ) Jump up
+^ Tortora , Gerard ; Derrickson , Bryan ( 2014 ) . Principles of Anatomy & Physiology ( 14th ed . ) . New Jersey : John Wiley & Sons , Inc . pp. 406 , 502 , 541
+. ISBN 978 - 1 - 118 - 34500 - 9 .
+</item 9>
+
+<item 10>
+Motor neuron
+There are two types of motor neuron -- upper motor neurons and lower motor neurons . Axons from upper motor neurons synapse onto interneurons in the spinal cord
+and occasionally directly onto lower motor neurons . The axons from the lower motor neurons are efferent nerve fibers that carry signals from the spinal cord to
+the effectors . Types of lower motor neurons are alpha motor neurons , beta motor neurons , and gamma motor neurons . The term ' motor neuron ' is usually
+restricted to the lower motor neurons , the efferent nerves that directly innervate muscles . A single motor neuron may innervate many muscle fibres and a
+muscle fibre can undergo many action potentials in the time taken for a single muscle twitch . As a result , if an action potential arrives before a twitch has
+completed , the twitches can superimpose on one another , either through summation or a tetanic contraction . In summation , the muscle is stimulated
+repetitively such that additional action potentials coming from the somatic nervous system arrive before the end of the twitch . The twitches thus superimpose
+on one another , leading to a force greater than that of a single twitch .
+</item 10>
+=== END ITEM id=7bdae0df850d5b4d ===
+
+=== ITEM id=68e2dd75e808fbb7 ===
+Gold sentences and facts:
+Sentence 0: Rigor mortis is very important in meat technology . The onset of rigor mortis and its resolution partially determine the tenderness of meat . If the post-slaughter meat is immediately chilled to 15 ° C ( 59 ° F ) , a phenomenon known as cold shortening occurs , whereby the muscle sarcomeres shrink to a third of their original length .
+  Fact 0.0: Rigor mortis is very important in meat technology
+  Fact 0.1: The onset of rigor mortis partially determines the tenderness of meat
+  Fact 0.2: The resolution of rigor mortis partially determines the tenderness of meat
+  Fact 0.3: If post-slaughter meat is immediately chilled to 15 °C (59 °F), a phenomenon known as cold shortening occurs
+  Fact 0.4: Cold shortening is the phenomenon that occurs when post-slaughter meat is immediately chilled to 15 °C (59 °F)
+  Fact 0.5: In cold shortening, the muscle sarcomeres shrink to a third of their original length
+
+Retrieved items:
+<item 1>
+Rigor mortis
+One such factor is the ambient temperature . When conditions are warm , the onset and pace of rigor mortis are sped up by providing a conducive environment for
+the metabolic processes that cause decay . Low temperatures , however , slow them down . Therefore , for a person who dies outside in frozen conditions rigor
+mortis may last several days more than normal , so investigators may have to abandon it as a tool for determining time of death . See also ( edit ) Cadaveric
+spasm References ( edit ) ^ Jump up to : Saladin , K.S. 2010 . Anatomy & Physiology : 6th edition . McGraw - Hill . ^ Jump up to : Hall , John E. , and Arthur
+C. Guyton . Guyton and Hall Textbook of Medical Physiology . Philadelphia , PA : Saunders / Elsevier , 2011 . MD Consult . Web . 26 Jan. 2015 . Jump up ^
+Fremery , Donald ( 3 February 1959 ) . `` Biochemistry of Chicken Muscle as Related to Rigor Mortis and Tenderization '' . Journal of Food Sciences . 25 ( 1 ) :
+73 -- 87 .
+</item 1>
+
+<item 2>
+Rigor mortis
+In rigor mortis myosin heads continue binding with the active sites of actin proteins via adenosine diphosphate ( ADP ) , and the muscle is unable to relax
+until further enzyme activity degrades the complex . Normal relaxation would occur by replacing ADP with ATP , which would destabilize the myosin - actin bond
+and break the cross-bridge . However , as ATP is absent , there must be a breakdown of muscle tissue by enzymes ( endogenous or bacterial ) during decomposition
+. As part of the process of decomposition , the myosin heads are degraded by the enzymes , allowing the muscle contraction to release and the body to relax .
+Decomposition of the myofilaments occurs 48 to 60 hours after the peak of rigor mortis , which occurs approximately 13 hours after death . Physical Changes (
+edit ) At the time of death , a condition called `` primary flaccidity '' occurs . Following this , the muscles stiffen in rigor mortis . All muscles in the
+body are affected . Starting between two and six hours following death , rigor mortis begins with the eyelids , neck , and jaw .
+</item 2>
+
+<item 3>
+Rigor mortis
+The calcium ions trigger powerful muscle contraction aided by ATP molecules . To prevent cold shortening , a process known as electrical stimulation is carried
+out , especially in beef carcasses , immediately after slaughter and skinning . In this process , the carcass is stimulated with alternating current , causing
+it to contract and relax , which depletes the ATP reserve from the carcass and prevents cold shortening . Application in forensic pathology ( edit ) The degree
+of rigor mortis may be used in forensic pathology , to determine the approximate time of death . A dead body holds its position as rigor mortis sets in . If the
+body is moved after death , but before rigor mortis begins , forensic techniques such as livor mortis can be applied . If the position in which a body is found
+does not match the location where it is found ( for example , if it is flat on its back with one arm sticking straight up ) , that could mean someone moved it .
+Several factors also affect the progression of rigor mortis , and investigators take these into account when estimating the time of death . One such factor is
+the ambient temperature .
+</item 3>
+
+<item 4>
+Rigor mortis
+The sequence may be due to different lactic acid levels among different muscles , which is directly related to the difference in glycogen levels and different
+types of muscle fibers . Rigor mortis then spreads to the other muscles , including the internal organs , within the next four to six hours . The onset of rigor
+mortis is affected by the individual 's age , sex , physical condition , and muscular build . Rigor mortis may not be perceivable in many infant and child
+corpses due to their smaller muscle mass . Applications in meat industry ( edit ) Rigor mortis is very important in meat technology . The onset of rigor mortis
+and its resolution partially determine the tenderness of meat . If the post-slaughter meat is immediately chilled to 15 ° C ( 59 ° F ) , a phenomenon known as
+cold shortening occurs , whereby the muscle sarcomeres shrink to a third of their original length . Cold shortening is caused by the release of stored calcium
+ions from the sarcoplasmic reticulum of muscle fibers , in response to the cold stimulus . The calcium ions trigger powerful muscle contraction aided by ATP
+molecules .
+</item 4>
+
+<item 5>
+Rigor mortis
+Journal of Food Sciences . 25 ( 1 ) : 73 -- 87 . doi : 10.1111 / j. 1365 - 2621.1960. tb17938. x . Retrieved 2 December 2015 . Jump up ^ About.com Jump up ^ ``
+Classroom Resources - Argonne National Laboratory '' . Jump up ^ `` Rigor Mortis and Other Postmortem Changes - Burial , Body , Life , Cause , Time , Person ,
+Human , Putrefaction . '' Encyclopedia of Death and Dying. 2011 . Web . 4 December 2011 . <
+http://www.deathreference.com/Py-Se/Rigor-Mortis-and-Other-Postmortem-Changes.html > . Jump up ^ `` New Zealand Journal of Agricultural Research '' . Jump up ^
+Peress , Robin . `` Discovery Health `` Rigor Mortis at the Crime Scene '' '' Discovery Health `` Health Guides '' Discovery Fit & Health , 2011 . Web . 4
+December 2011 .
+</item 5>
+
+<item 6>
+Rigor mortis
+Rigor mortis - wikipedia Rigor mortis Jump to : navigation , search This article is about the sign of death . For other uses , see Rigor mortis ( disambiguation
+) . Stages of death Pallor mortis Algor mortis Rigor mortis Livor mortis Putrefaction Decomposition Skeletonization Fossilization Rigor mortis ( Latin : rigor
+`` stiffness '' , mortis `` of death '' ) or postmortem rigidity , the third stage of death , is one of the recognizable signs of death , caused by chemical
+changes in the muscles post mortem , which cause the limbs of the corpse to stiffen . In humans , rigor mortis can occur as soon as 4 hours post mortem .
+Contents ( hide ) 1 Physiology 2 Physical changes 3 Applications in meat industry 4 Application in forensic pathology 5 See also 6 References 7 Bibliography
+Physiology ( edit ) After death , respiration in an organism ceases , depleting the source of oxygen used in the making of adenosine triphosphate ( ATP ) .
+</item 6>
+
+<item 7>
+Rigor mortis
+2011 . Web . 4 December 2011 . < http://www.deathreference.com/Py-Se/Rigor-Mortis-and-Other-Postmortem-Changes.html > . Saladin , Kenneth . Anatomy and
+Physiology : The Unity of Form and Function , 6th ed . McGraw - Hill . New York , 2012 . Peress , Robin . `` Discovery Health `` Rigor Mortis at the Crime Scene
+'' '' Discovery Health `` Health Guides '' Discovery Fit & Health , 2011 . Web . 4 December 2011 . <
+http://health.howstuffworks.com/diseases-conditions/death-dying/rigor-mortis-cause2.htm > . Death Outline In medicine Cell death Necrosis Avascular necrosis
+Coagulative necrosis Liquefactive necrosis Gangrenous necrosis Caseous necrosis Fat necrosis Fibrinoid necrosis Temporal lobe necrosis Programmed cell death
+AICD Anoikis Apoptosis Autophagy Intrinsic apoptosis Necroptosis Paraptosis Parthanatos Phenoptosis Pseudoapoptosis Pyroptosis Autolysis
+</item 7>
+
+<item 8>
+Rigor mortis
+Web . 4 December 2011 . < http://health.howstuffworks.com/diseases-conditions/death-dying/rigor-mortis-cause2.htm > Jump up ^ Estimating The Time of Death ,
+ExploreForensics < http://www.exploreforensics.co.uk/estimating-the-time-of-death.html Bibliography ( edit ) Bear , Mark F ; Connors , Barry W. ; Paradiso ,
+Michael A. , Neuroscience , Exploring the Brain , Philadelphia : Lippincott Williams & Wilkins ; Third Edition ( 1 February 2006 ) . ISBN 0 - 7817 - 6003 - 8
+Robert G. Mayer , `` Embalming : history , theory , and practice '' , McGraw - Hill Professional , 2005 , ISBN 0 - 07 - 143950 - 1 `` Rigor Mortis and Other
+Postmortem Changes - Burial , Body , Life , Cause , Time , Person , Human , Putrefaction . '' Encyclopedia of Death and Dying. 2011 . Web . 4 December 2011 .
+</item 8>
+
+<item 9>
+Rigor mortis
+ATP is required to cause separation of the actin - myosin cross-bridges during relaxation of muscle . When oxygen is no longer present , the body may continue
+to produce ATP via anaerobic glycolysis . When the body 's glycogen is depleted , the ATP concentration diminishes , and the body enters rigor mortis because it
+is unable to break those bridges . Additionally , calcium enters the cytosol after death . Calcium is released into the cytosol due to the deterioration of the
+sarcoplasmic reticulum . Also , the breakdown of the sarcolemma causes additional calcium to enter the cytosol . The calcium activates the formation of actin -
+myosin cross-bridging . Once calcium is introduced into the cytosol , it binds to the troponin of thin filaments , which causes the troponin - tropomyosin
+complex to change shape and allow the myosin heads to bind to the active sites of actin proteins .
+</item 9>
+
+<item 10>
+Rigor mortis
+By using this site , you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit
+organization . About Wikipedia
+</item 10>
+=== END ITEM id=68e2dd75e808fbb7 ===
+
+=== ITEM id=33392e3e1eba7530 ===
+Gold sentences and facts:
+Sentence 0: Captain : Christopher Jones . About age 50 , of Harwich , a seaport in Essex , England , which was also the port of his ship Mayflower . He and his ship were veterans of the European cargo business , often carrying wine to England , but neither had ever crossed the Atlantic . By June 1620 , he and the Mayflower had been hired for the Pilgrims voyage by their business agents in London , Thomas Weston of the Merchant Adventurers and Robert Cushman . Historical marker in London honoring the Mayflower and Captain Jones .
+  Fact 0.0: Christopher Jones was the captain of the Mayflower.
+  Fact 0.1: Christopher Jones was about age 50.
+  Fact 0.2: Christopher Jones was from Harwich, a seaport in Essex, England.
+  Fact 0.3: Harwich was also the port of Christopher Jones's ship, the Mayflower.
+  Fact 0.4: Christopher Jones and the Mayflower were veterans of the European cargo business.
+  Fact 0.5: Christopher Jones and the Mayflower often carried wine to England.
+  Fact 0.6: Neither Christopher Jones nor the Mayflower had ever crossed the Atlantic.
+  Fact 0.7: By June 1620, Christopher Jones and the Mayflower had been hired for the Pilgrims' voyage by their business agents in London.
+  Fact 0.8: Thomas Weston of the Merchant Adventurers was one of the business agents in London who hired the Mayflower for the Pilgrims' voyage.
+  Fact 0.9: Robert Cushman was one of the business agents in London who hired the Mayflower for the Pilgrims' voyage.
+  Fact 0.10: There is a historical marker in London honoring the Mayflower.
+  Fact 0.11: There is a historical marker in London honoring Captain Jones.
+Sentence 1: Captain Jones became master of the Mayflower 11 years prior to the Pilgrims ' voyage , sailing the ship cross-Channel taking English woolens to France and bringing French wine to London . In addition , he had also transported hats , hemp , Spanish salt , hops , and vinegar to Norway , and may have taken the Mayflower whaling in the North Atlantic in the Greenland area . She had traveled to Mediterranean ports , being then owned by Christopher Nichols , Robert Child , Thomas Short , and Christopher Jones , the ship 's master . In 1620 , Jones and Robert Child still owned their quarter shares in the ship , and it was from them that Thomas Weston chartered her in the summer of 1620 to undertake the Pilgrim voyage . Weston had a significant role in the Mayflower voyage , due to his membership in the Company of Merchant Adventurers , and he eventually traveled to the Plymouth Colony himself .
+  Fact 1.0: Captain Jones became master of the Mayflower 11 years before the Pilgrims' voyage.
+  Fact 1.1: Captain Jones sailed the Mayflower cross-Channel taking English woolens to France.
+  Fact 1.2: Captain Jones sailed the Mayflower bringing French wine to London.
+  Fact 1.3: Captain Jones also transported hats, hemp, Spanish salt, hops, and vinegar to Norway.
+  Fact 1.4: Captain Jones may have taken the Mayflower whaling in the North Atlantic in the Greenland area.
+  Fact 1.5: The Mayflower had traveled to Mediterranean ports.
+  Fact 1.6: The Mayflower was owned by Christopher Nichols, Robert Child, Thomas Short, and Christopher Jones.
+  Fact 1.7: Christopher Jones was the ship's master.
+  Fact 1.8: In 1620, Christopher Jones still owned a quarter share in the Mayflower.
+  Fact 1.9: In 1620, Robert Child still owned a quarter share in the Mayflower.
+  Fact 1.10: Thomas Weston chartered the Mayflower from Jones and Child in the summer of 1620 to undertake the Pilgrim voyage.
+  Fact 1.11: Weston had a significant role in the Mayflower voyage due to his membership in the Company of Merchant Adventurers.
+  Fact 1.12: Thomas Weston eventually traveled to the Plymouth Colony himself.
+Sentence 2: Aft on the main deck in the stern was the cabin for Master Christopher Jones , measuring about ten by seven feet ( 3 m × 2.1 m ) . Forward of that was the steerage room , which housed a whipstaff ( tiller extension ) for sailing control ; not a wheel , as in later ships . Also here was the ship 's compass and probably also berths for the ship 's officers . Forward of the steerage room was the capstan , a vertical axle used to pull in ropes or cables . Far forward on the main deck , just aft of the bow , was the forecastle space where the ship 's cook prepared meals for the crew ; it may also have been where the ship 's sailors slept .
+  Fact 2.0: The cabin for Master Christopher Jones was aft on the main deck in the stern.
+  Fact 2.1: The cabin for Master Christopher Jones measured about ten by seven feet (3 m × 2.1 m).
+  Fact 2.2: The steerage room was forward of the cabin.
+  Fact 2.3: The steerage room housed a whipstaff (tiller extension) for sailing control.
+  Fact 2.4: The whipstaff was not a wheel, unlike in later ships.
+  Fact 2.5: The ship's compass was also in the same area as the steerage room.
+  Fact 2.6: The ship probably also had berths for the ship's officers in the steerage room area.
+  Fact 2.7: The capstan was forward of the steerage room.
+  Fact 2.8: The capstan was a vertical axle used to pull in ropes or cables.
+  Fact 2.9: The forecastle space was far forward on the main deck, just aft of the bow.
+  Fact 2.10: The ship's cook prepared meals for the crew in the forecastle space.
+  Fact 2.11: The ship's sailors may also have slept in the forecastle space.
+
+Retrieved items:
+<item 1>
+Mayflower
+Mayflower - wikipedia Mayflower Jump to : navigation , search For other ships , see Mayflower ( ship ) . For other uses , see Mayflower ( disambiguation ) .
+Mayflower in Plymouth Harbor by William Halsall ( 1882 ) Name : Mayflower Owner : Christopher Jones ( 1⁄4 of the ship ) Maiden voyage : Before 1609 Out of
+service : 1622 -- 1624 Fate : most likely taken apart by Rotherhithe shipbreaker c. 1624 . General characteristics Class and type : Dutch cargo fluyt Tonnage :
+180 tons + Length : c. 80 -- 90 ft ( 24 -- 27.5 m ) on deck , 100 -- 110 ft ( 30 -- 33.5 m ) overall . Decks : Around 4 Capacity : Unknown , but carried c. 135
+people during the historical voyage to what they would call Plymouth Colony The Mayflower was an English ship that famously transported the first English
+Puritans , known today as the Pilgrims , from Plymouth , England to the New World in 1620 .
+</item 1>
+
+<item 2>
+Graph query row:
+person: Christopher Jones
+ship: Mayflower
+relationship: RELATED_TO
+role: part owner
+relationship_detail: None
+relation: None
+context: master of the Mayflower
+fact: None
+</item 2>
+
+<item 3>
+Mayflower
+There were 102 passengers , and the crew is estimated to have been about 30 , but the exact number is unknown . This voyage has become an iconic story in some
+of the earliest annals of American history , with its story of death and of survival in the harsh New England winter environment . The culmination of the voyage
+in the signing of the Mayflower Compact was an event which established a rudimentary form of democracy , with each member contributing to the welfare of the
+community . There was a second ship named Mayflower that made the London to Plymouth , Massachusetts voyage several times . Contents ( hide ) 1 Mayflower
+structure and layout 1.1 General layout 1.1. 1 Main deck 1.1. 2 Gun deck 1.1. 3 Gun deck armament 1.1.
+</item 3>
+
+<item 4>
+Mayflower
+In addition , he had also transported hats , hemp , Spanish salt , hops , and vinegar to Norway , and may have taken the Mayflower whaling in the North Atlantic
+in the Greenland area . She had traveled to Mediterranean ports , being then owned by Christopher Nichols , Robert Child , Thomas Short , and Christopher Jones
+, the ship 's master . In 1620 , Jones and Robert Child still owned their quarter shares in the ship , and it was from them that Thomas Weston chartered her in
+the summer of 1620 to undertake the Pilgrim voyage . Weston had a significant role in the Mayflower voyage , due to his membership in the Company of Merchant
+Adventurers , and he eventually traveled to the Plymouth Colony himself . There were 26 vessels bearing the same name as the Pilgrim ship in the Port Books of
+England in the reign of James I ( 1603 -- 1625 ) , and the reason for this popularity of the name has never been found . One particular Mayflower that has
+caused historical confusion is a Mayflower erroneously identified as one of the 1620 Pilgrims .
+</item 4>
+
+<item 5>
+Mayflower
+Or some of the records of the period may have been lost . Voyage Speedwell and Mayflower Mayflower arrived in the `` Cape Cod fishhook '' , 11 November 1620 (
+satellite photo , 1997 ) Approximately 65 passengers embarked the Mayflower in the middle of July 1620 at its home port in the Rotherhithe district of London on
+the Thames river . The ship then proceeded down the Thames into the English Channel and then on to the south coast of England to anchor at Southampton Water .
+The Mayflower waited there for a rendezvous on July 22 with the Speedwell . Speedwell was coming from Holland with English separatist Puritans , members of the
+Leiden congregation who had been living in Holland to escape religious persecution in England . The two ships set sail for America around August 5 , but the
+Speedwell sprang a leak shortly after , and the two ships were brought into Dartmouth for repairs . They made a new start after the repairs , and they were more
+than 200 miles ( 320 km ) beyond Land 's End at the southwestern tip of England when Speedwell sprang another leak .
+</item 5>
+
+<item 6>
+Mayflower
+Nathaniel Philbrick estimates between 20 and 30 sailors in her crew whose names are unknown . Nick Bunker states that Mayflower had a crew of at least 17 and
+possibly as many as 30 . Caleb Johnson states that the ship carried a crew of about 30 men , but the exact number is unknown . Officers and crew Captain :
+Christopher Jones . About age 50 , of Harwich , a seaport in Essex , England , which was also the port of his ship Mayflower . He and his ship were veterans of
+the European cargo business , often carrying wine to England , but neither had ever crossed the Atlantic . By June 1620 , he and the Mayflower had been hired
+for the Pilgrims voyage by their business agents in London , Thomas Weston of the Merchant Adventurers and Robert Cushman . Historical marker in London honoring
+the Mayflower and Captain Jones . Masters Mate : John Clark ( Clarke ) , Pilot . By age 45 in 1620 , Clark already had greater adventures than most other
+mariners of that dangerous era . His piloting career began in England about 1609 .
+</item 6>
+
+<item 7>
+Mayflower
+In 1624 , Thomas Russell supposedly added to part of a farmhouse already there with timbers from a ship , believed to be from the Pilgrim ship Mayflower ,
+bought from a shipbreaker 's yard in Rotherhithe . The well - preserved structure was a tourist attraction , receiving visitors each year from all over the
+world and particularly from America , but it is now privately owned and not open to the public . Second Mayflower Another ship called the Mayflower made a
+voyage from London to Plymouth Colony in 1629 carrying 35 passengers , many from the Pilgrim congregation in Leiden that organized the first voyage . This was
+not the same ship that made the original voyage with the first settlers . This voyage began in May and reached Plymouth in August . This ship also made the
+crossing from England to America in 1630 ( as part of the Winthrop Fleet ) , 1633 , 1634 , and 1639 . It attempted the trip again in 1641 , departing London in
+October of that year under master John Cole , with 140 passengers bound for Virginia . It never arrived . On October 18 , 1642 , a deposition was made in
+England regarding the loss .
+</item 7>
+
+<item 8>
+Mayflower
+Time was measured with the ancient method of an hourglass . Arrival in America On November 9 , 1620 , they sighted present - day Cape Cod . They spent several
+days trying to sail south to their planned destination of the Colony of Virginia , where they had obtained permission to settle from the Company of Merchant
+Adventurers . However , strong winter seas forced them to return to the harbor at Cape Cod hook , well north of the intended area , where they anchored on
+November 11 . The settlers wrote and signed the Mayflower Compact after the ship dropped anchor at Cape Cod , in what is now Provincetown Harbor , in order to
+establish legal order and to quell increasing strife within the ranks . On Monday , November 27 , an exploring expedition was launched under the direction of
+Capt . Christopher Jones to search for a suitable settlement site . As master of the Mayflower , Jones was not required to assist in the search , but he
+apparently thought it in his best interest to assist the search expedition . There were 34 persons in the open shallop : 24 passengers and 10 sailors .
+</item 8>
+
+<item 9>
+Mayflower
+At his death , his estate consisted of extensive footwear and other items of clothing , and made his daughter Priscilla and her husband John Alden quite
+prosperous . No cattle or beasts of draft or burden were brought on the journey , but there were pigs , goats , and poultry . Some passengers brought family
+pets such as cats and birds . Peter Browne took his large bitch mastiff , and John Goodman brought along his spaniel . Mayflower officers , crew , and others
+According to author Charles Banks , the officers and crew of the Mayflower consisted of a captain , four mates , four quartermasters , surgeon , carpenter ,
+cooper , cooks , boatswains , gunners , and about 36 men before the mast , making a total of about 50 . The entire crew stayed with the Mayflower in Plymouth
+through the winter of 1620 -- 1621 , and about half of them died during that time . The remaining crewmen returned to England on the Mayflower , which sailed
+for London on April 5 , 1621 . Crew members per various sources Banks states that the crew totaled 36 men before the mast and 14 officers , making a total of 50
+.
+</item 9>
+
+<item 10>
+Mayflower
+Other items included most of their clothing and bedding . The hold also stored the passengers ' personal weapons and military equipment -- armor , muskets ,
+gunpowder , and shot , as well as swords and bandoliers . It also stored all the tools that the Pilgrims would need , as well as all the equipment and utensils
+needed to prepare meals in the New World . It is also known that some Pilgrims loaded trade goods on board , including Isaac Allerton , William Mullins , and
+possibly others ; these also most likely were stored in the cargo hold . Early history It is not known when and where the Mayflower was built , but it is likely
+that she was launched at Harwich in the county of Essex , England . She was designated as `` of Harwich '' in the Port Books of 1609 -- 11 , although later
+known as `` of London '' . Harwich was also the birthplace of Mayflower master Christopher Jones about 1570 . Captain Jones became master of the Mayflower 11
+years prior to the Pilgrims ' voyage , sailing the ship cross-Channel taking English woolens to France and bringing French wine to London .
+</item 10>
+=== END ITEM id=33392e3e1eba7530 ===
+
+=== ITEM id=2d5a9129a15af509 ===
+Gold sentences and facts:
+Sentence 0: It houses the temporal lobes of the brain and the pituitary gland . A middle fossa craniotomy is one means to surgically remove acoustic neuromas ( vestibular schwannoma ) growing within the internal auditory canal of the temporal bone .
+  Fact 0.0: The structure houses the temporal lobes of the brain and the pituitary gland.
+  Fact 0.1: A middle fossa craniotomy is one means to surgically remove acoustic neuromas.
+  Fact 0.2: Acoustic neuromas are also called vestibular schwannomas.
+  Fact 0.3: Acoustic neuromas grow within the internal auditory canal of the temporal bone.
+
+Retrieved items:
+<item 1>
+Middle cranial fossa
+wikipedia.org/w/index.php?title=Middle_cranial_fossa&oldid=808415657 '' Categories : Wikipedia articles incorporating text from the 20th edition of Gray 's
+Anatomy ( 1918 ) Skull Hidden categories : Medicine infobox template using GraySubject or GrayPage Talk Contents About Wikipedia Deutsch فارسی Polski Edit links
+This page was last edited on 2 November 2017 , at 18 : 54 . Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may
+apply . By using this site , you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a
+non-profit organization . About Wikipedia
+</item 1>
+
+<item 2>
+Middle cranial fossa
+It transmits to the orbital cavity the oculomotor , the trochlear , the ophthalmic division of the trigeminal , and the abducent nerves , some filaments from
+the cavernous plexus of the sympathetic , and the orbital branch of the middle meningeal artery ; and from the orbital cavity a recurrent branch from the
+lacrimal artery to the dura mater , and the ophthalmic veins . Behind the medial end of the superior orbital fissure is the foramen rotundum , for the passage
+of the maxillary nerve . Behind and lateral to the foramen rotundum is the foramen ovale , which transmits the mandibular nerve , the accessory meningeal artery
+, and the lesser superficial petrosal nerve . Medial to the foramen ovale is the foramen Vesalii , which varies in size in different individuals , and is often
+absent ; when present , it opens below at the lateral side of the scaphoid fossa , and transmits a small vein .
+</item 2>
+
+<item 3>
+Middle cranial fossa
+It is traversed by the squamosal , sphenoparietal , sphenosquamosal , and sphenopetrosal sutures . It houses the temporal lobes of the brain and the pituitary
+gland . A middle fossa craniotomy is one means to surgically remove acoustic neuromas ( vestibular schwannoma ) growing within the internal auditory canal of
+the temporal bone . Middle cranial fossa surgical anatomy as demonstrated in a right cadaver temporal bone by Dr Jack M Kartush - view from above . Contents (
+hide ) 1 Middle part 2 Lateral parts 3 See also 4 References 5 Additional images 6 External links Middle part ( edit ) The middle part of the fossa presents ,
+in front , the chiasmatic groove and tuberculum sellae ; the chiasmatic groove ends on either side at the optic foramen , which transmits the optic nerve and
+ophthalmic artery to the orbital cavity . Behind the optic foramen the anterior clinoid process is directed backward and medialward and gives attachment to the
+tentorium cerebelli .
+</item 3>
+
+<item 4>
+Middle cranial fossa
+Lateral to the foramen ovale is the foramen spinosum , for the passage of the middle meningeal vessels , and a recurrent branch from the mandibular nerve .
+Medial to the foramen ovale is the foramen lacerum ; in the fresh state the lower part of this aperture is filled up by a layer of fibrocartilage , while its
+upper and inner parts transmit the internal carotid artery surrounded by a plexus of sympathetic nerves . The nerve of the pterygoid canal and a meningeal
+branch from the ascending pharyngeal artery pierce the layer of fibrocartilage .
+</item 4>
+
+<item 5>
+Middle cranial fossa
+Middle cranial fossa - wikipedia Middle cranial fossa Jump to : navigation , search Middle cranial fossa Base of the skull . Upper surface . ( Middle cranial
+fossa is the centermost of the three indentations , in pink and yellow . ) Details Identifiers Latin fossa cranii media TA A02. 1.00. 049 FMA 54369 Anatomical
+terminology ( edit on Wikidata ) The middle cranial fossa , deeper than the anterior cranial fossa , is narrow medially and widens laterally to the sides of the
+skull . It is separated from the posterior fossa by the clivus and the petrous crest . It is bounded in front by the posterior margins of the lesser wings of
+the sphenoid bone , the anterior clinoid processes , and the ridge forming the anterior margin of the chiasmatic groove ; behind , by the superior angles of the
+petrous portions of the temporal bones and the dorsum sellæ ; laterally by the temporal squamæ , sphenoidal angles of the parietals , and greater wings of the
+sphenoid .
+</item 5>
+
+<item 6>
+Middle cranial fossa
+Lateral parts ( edit ) The lateral parts of the middle fossa are of considerable depth , and support the temporal lobes of the brain . They are marked by
+depressions for the brain convolutions and traversed by furrows for the anterior and posterior branches of the middle meningeal vessels . These furrows begin
+near the foramen spinosum , and the anterior runs forward and upward to the sphenoidal angle of the parietal , where it is sometimes converted into a bony canal
+; the posterior runs lateralward and backward across the temporal squama and passes on to the parietal near the middle of its lower border . The following
+apertures are also to be seen . In front is the superior orbital fissure , bounded above by the small wing , below , by the great wing , and medially , by the
+body of the sphenoid ; it is usually completed laterally by the orbital plate of the frontal bone .
+</item 6>
+
+<item 7>
+Middle cranial fossa
+On the anterior surface of the petrous portion of the temporal bone are seen the eminence caused by the projection of the superior semicircular canal ; in front
+of and a little lateral to this a depression corresponding to the roof of the tympanic cavity ; the groove leading to the hiatus of the facial canal , for the
+transmission of the greater superficial petrosal nerve and the petrosal branch of the middle meningeal artery ; beneath it , the smaller groove , for the
+passage of the lesser superficial petrosal nerve ; and , near the apex of the bone , the depression for the semilunar ganglion and the orifice of the carotid
+canal . See also ( edit ) Anterior cranial fossa Posterior cranial fossa References ( edit ) This article incorporates text in the public domain from the 20th
+edition of Gray 's Anatomy ( 1918 ) Jump up ^ Mancall , Elliott L. ; Brock , David G. , eds. ( 2011 ) . `` Cranial Fossae '' . Gray 's Clinical Anatomy .
+Elsevier Health Sciences . p. 154 . ISBN 9781437735802 .
+</item 7>
+
+<item 8>
+Middle cranial fossa
+Behind the tuberculum sellæ is a deep depression , the sella turcica , containing the fossa hypophyseos , which lodges the hypophysis , and presents on its
+anterior wall the middle clinoid processes . The sella turcica is bounded posteriorly by a quadrilateral plate of bone , the dorsum sellae , the upper angles of
+which are surmounted by the posterior clinoid processes : these afford attachment to the tentorium cerebelli , and below each is a notch for the abducent nerve
+. On either side of the sella turcica is the carotid groove , which is broad , shallow , and curved somewhat like the italic letter f . It begins behind at the
+foramen lacerum , and ends on the medial side of the anterior clinoid process , where it is sometimes converted into a foramen ( carotico - clinoid ) by the
+union of the anterior with the middle clinoid process ; posteriorly , it is bounded laterally by the lingula . This groove lodges the cavernous sinus and the
+internal carotid artery , the latter being surrounded by a plexus of sympathetic nerves .
+</item 8>
+
+<item 9>
+Middle cranial fossa
+p. 154 . ISBN 9781437735802 . Additional images ( edit ) Middle cranial fossa at human foetus Base of skull Middle cranial fossa Middle cranial fossa Middle
+cranial fossa External links ( edit ) Wikimedia Commons has media related to Middle cranial fossa . Anatomy photo : 22 : os - 0802 at the SUNY Downstate Medical
+Center Compound structures of skull Neurocranium Calvaria Diploë Asterion Pterion Stephanion Inion Bregma Lambda Fossae anterior middle posterior cranial cavity
+Base of skull Fontanelle anterior posterior sphenoidal mastoid Facial skeleton Nasion Gonion Both dacryon zygomatic arch temporal fossa infratemporal fossa
+pterygomaxillary fissure pterygopalatine fossa Foramina of the skull ( and canals , fissures , meatus , and hiatus ) Anterior cranial fossa to Orbit : ethmoidal
+foramina anterior posterior to Nasal cavity : olfactory foramina ( CN - I ) foramen cecum Middle cranial fossa to Orbit : optic canal ( CN - II ) superior
+orbital fissure ( CN - III ,
+</item 9>
+
+<item 10>
+The middle cranial fossa is the skull base’s central, deep depression, bounded by sphenoid, temporal, and parietal structures. It supports the temporal lobes
+and contains the pituitary in the sella turcica; its foramina transmit major cranial nerves and vessels, including the optic, trigeminal, and middle meningeal
+pathways. The optic chiasm lies below the hypothalamus, where nasal retinal fibers cross and temporal fibers remain uncrossed
+</item 10>
+=== END ITEM id=2d5a9129a15af509 ===
+
+=== ITEM id=068be6617c30dc7b ===
+Gold sentences and facts:
+Sentence 0: Nigeria is the largest oil and gas producer in Africa . Crude oil from the delta basin comes in two types : light , and comparatively heavy -- the lighter around 36 gravity and the heavier , 20 -- 25 gravity . Both types are paraffinic and low in sulfur .
+  Fact 0.0: Nigeria is the largest oil and gas producer in Africa.
+  Fact 0.1: Crude oil from the delta basin comes in two types: light, and comparatively heavy.
+  Fact 0.2: The lighter type has a gravity of around 36.
+  Fact 0.3: The heavier type has a gravity of 20 to 25.
+  Fact 0.4: Both types of crude oil from the delta basin are paraffinic.
+  Fact 0.5: Both types of crude oil from the delta basin are low in sulfur.
+
+Retrieved items:
+<item 1>
+Sub-Saharan Africa
+Australia 31 Af : Sudan 466100 2007 est . Ecuador 33 Af : Eq. Guinea 368500 2007 est . Vietnam 38 Af : DR Congo 261000 2008 est . 39 Af : Gabon 243900 2007 est
+. 40 Af : Sth Africa 199100 2007 est . 45 Af : Chad 156000 2008 est . Germany 53 Af : Cameroon 87400 2008 est . France 56 E : France 71400 2007 60 Af : Ivory
+Coast 54400 2008 est . _ Af : Africa 10780400 2011 Russia Source : CIA.gov , World Facts Book > Oil exporters . As of 2009 , fifty percent of Africa is rural
+with no access to electricity . Africa generates 47 GW of electricity , less than 0.6 % of the global market share . Many countries are affected by power
+shortages . Because of rising prices in commodities such as coal and oil , thermal sources of energy are proving to be too expensive for power generation .
+</item 1>
+
+<item 2>
+Petroleum industry in Nigeria
+An open - air market for illegal crude oil operates off the Niger Delta , called the Togo Triangle . Natural gas ( edit ) Natural gas reserves are well over
+5,300 km ( 187 × 10 ^ cu ft ) , the gas reserves are three times as substantial as the crude oil reserves . The biggest natural gas initiative is the Nigerian
+Liquified Natural Gas Company , which is operated jointly by several companies and the state . It began exploration and production in 1999 . Chevron is also
+attempting to create the Escravos Gas Utilization project which will be capable of producing 4,500,000 m ( 160 × 10 ^ cu ft ) per day . gas reserves . In 2008 ,
+the government prepared a Gas Master Plan that was intended to promote natural gas production and encourage the supply of natural gas to domestic power stations
+so as to help alleviate the country 's electricity shortages . There is also an export gas pipeline , known as the West African Gas Pipeline , in the works but
+has encountered numerous setbacks . The pipeline would allow for transportation of natural gas to Benin , Ghana , Togo , and Cote d'Ivoire .
+</item 2>
+
+<item 3>
+Sub-Saharan Africa
+According to the World Bank , the economic growth rate in the region had risen to 4.7 % in 2013 , with a rate of 5.2 % forecasted for 2014 . This continued rise
+was attributed to increasing investment in infrastructure and resources as well as steady expenditure per household . Energy and power ( edit ) Main article :
+Mineral industry of Africa Oil production by country ( with other key actors of African or oil economy ) Rank Area bb / day Year Like ... _ W : World 85540000
+2007 est . 01 E : Russia 9980000 2007 est . 02 Ar : Saudi Arb 9200000 2008 est . 04 As : Libya 4725000 2008 est . Iran 10 Af : Nigeria / Africa 2352000 2011 est
+. Norway 15 Af : Algeria 2173000 2007 est . 16 Af : Angola 1910000 2008 est . 17 Af : Egypt 1845000 2007 est . 27 Af : Tunisia 664000 2007 est . Australia 31 Af
+: Sudan 466100 2007 est .
+</item 3>
+
+<item 4>
+Petroleum industry in Nigeria
+Mobil operates primarily out of the Qua Iboe Terminal in Akwa Ibom State , while Chevron owns the Escravos Terminal located in Delta State and has a storage
+capacity of 3.6 million barrels ( 570,000 m ) . Agip operates the Brass Terminal in Brass , a town 113 kilometres ( 70 miles ) southwest of Port Harcourt and
+has a storage capacity of 3,558,000 barrels ( 565,700 m ) . Texaco operates the Pennington Terminal . Offshore ( edit ) Oil companies in Africa investigate
+offshore production as an alternative area of production . Deepwater production mainly involves underwater drilling that exists 400 metres ( 1,300 ft ) or more
+below the surface of the water . By expanding to deep water drilling the possible sources for finding new oil reserves is expanded . Through the introduction of
+deep water drilling 50 % more oil is extracted than before the new forms of retrieving the oil . Angola and Nigeria are the largest oil producers in Africa . In
+Nigeria , the deepwater sector still has a large avenue to expand and develop .
+</item 4>
+
+<item 5>
+Sub-Saharan Africa
+Major suppliers are South Africa , Ghana , Zimbabwe , Tanzania , Guinea , and Mali . South Africa had been first in the world in terms of gold production since
+1905 , but in 2007 it moved to second place , according to GFMS , the precious metals consultancy . Uranium is major commodity from the region . Significant
+suppliers are Niger , Namibia , and South Africa . Namibia was the number one supplier from Sub-Saharan Africa in 2008 . The region produces 49 % of the world
+'s diamonds . By 2015 , it is estimated that 25 % of North American oil will be from Sub-Saharan Africa , ahead of the Middle East . Sub-Saharan Africa has been
+the focus of an intense race for oil by the West , China , India , and other emerging economies , even though it holds only 10 % of proven oil reserves , less
+than the Middle East . This race has been referred to as the second Scramble for Africa . All reasons for this global scramble come from the reserves ' economic
+benefits . Transportation cost is low and no pipelines have to be laid as in Central Asia .
+</item 5>
+
+<item 6>
+OPEC
+the petroleum industry Nationalization OPEC GECF Seven Sisters Standard Oil Oil market timelines Provinces and fields List of natural gas fields List of oil
+fields East Midlands Oil Province East Texas Gulf of Mexico Niger Delta North Sea Permian Basin Persian Gulf Prudhoe Bay Oil Field Russia Venezuela Western
+Canadian Sedimentary Basin Other topics Acronyms Oil shale gas Peak oil mitigation timing People Petrocurrency Petrodollar recycling Shale band Shale gas Swing
+producer Unconventional oil heavy crude oil sands oil shale Companies and organisations Major petroleum companies Supermajors BP Chevron Eni ExxonMobil Royal
+Dutch Shell Total National oil companies ADNOC ( UAE ) CNOOC ( China ) CNPC ( China ) Ecopetrol ( Colombia ) Gazprom ( Russia ) Iraq National Oil Company Indian
+Oil Corporation KazMunayGas ( Kazakhstan ) Kuwait Petroleum Corporation Lotos ( Poland ) Nigerian National Petroleum Corporation NIOC ( Iran ) NISOC ( Iran )
+OGDCL ( Pakistan ) ONGC ( India ) PDVSA ( Venezuela ) PKN Orlen ( Poland ) Pemex ( Mexico ) Pertamina ( Indonesia ) PetroBangla ( Bangladesh ) Petrobras (
+Brazil ) PetroChina Petronas ( Malaysia ) Petrovietnam PTT ( Thailand )
+</item 6>
+
+<item 7>
+Sub-Saharan Africa
+Transportation cost is low and no pipelines have to be laid as in Central Asia . Almost all reserves are offshore , so political turmoil within the host country
+will not directly interfere with operations . Sub-Saharan oil is viscous , with a very low sulfur content . This quickens the refining process and effectively
+reduces costs . New sources of oil are being located in Sub-Saharan Africa more frequently than anywhere else . Of all new sources of oil , 1⁄3 are in
+Sub-Saharan Africa . Agriculture ( edit ) Agricultural fields in Rwanda 's Eastern Province Sub-Saharan Africa has more variety of grains than anywhere in the
+world . Between 13,000 and 11,000 BCE wild grains began to be collected as a source of food in the cataract region of the Nile , south of Egypt . The collecting
+of wild grains as source of food spread to Syria , parts of Turkey , and Iran by the eleventh millennium BCE . By the tenth and ninth millennia southwest Asians
+domesticated their wild grains , wheat , and barley after the notion of collecting wild grains spread from the Nile . Numerous crops have been domesticated in
+the region and spread to other parts of the world .
+</item 7>
+
+<item 8>
+Dead Sea
+Congolese rainforests Ouaddaï highlands Ennedi Plateau East Africa African Great Lakes Albertine Rift East African Rift Great Rift Valley Gregory Rift Rift
+Valley lakes Swahili coast Virunga Mountains Zanj Horn of Africa Afar Triangle Al - Habash Barbara Danakil Alps Danakil Desert Ethiopian Highlands Gulf of Aden
+Gulf of Tadjoura Indian Ocean islands Comoros Islands North Africa Maghreb Barbary Coast Bashmur Ancient Libya Atlas Mountains Nile Valley Cataracts of the Nile
+Darfur Gulf of Aqaba Lower Egypt Lower Nubia Middle Egypt Nile Delta Nuba Mountains Nubia The Sudans Upper Egypt Western Sahara West Africa Pepper Coast Gold
+Coast Slave Coast Ivory Coast Cape Palmas Cape Mesurado Guinea region Gulf of Guinea Niger Basin Guinean Forests of West Africa Niger Delta Inner Niger Delta
+Southern Africa Madagascar Central Highlands ( Madagascar ) Northern Highlands Rhodesia North South Thembuland Succulent Karoo Nama Karoo Bushveld Highveld
+Fynbos Cape Floristic Region Kalahari Desert Okavango Delta False Bay Hydra Bay Macro-regions Aethiopia Arab world Commonwealth realm East African montane
+forests Eastern Desert Equatorial Africa Françafrique Gibraltar Arc Greater Middle East
+</item 8>
+
+<item 9>
+Petroleum industry in Nigeria
+Additionally , Nigerian government officials have remained majority shareholders in the profits created by the production of Nigerian oil , leading to
+government capturing of nearly all oil production , and citizens are not seeing socioeconomic benefits , and insist that oil companies should compensate people
+. Production and exploration ( edit ) Satellite image of Niger Delta As of 2000 , oil and gas exports accounted for more than 98 % of export earnings and about
+83 % of federal government revenue , as well as generating more than 14 % of its GDP . It also provides 95 % of foreign exchange earnings , and about 65 % of
+government budgetary revenues . Nigeria 's proven oil reserves are estimated by the United States Energy Information Administration ( EIA ) at between 16 and 22
+billion barrels ( 2.5 × 10 and 3.5 × 10 m ) , but other sources claim there could be as much as 35.3 billion barrels ( 5.61 × 10 m ) . Its reserves make Nigeria
+the tenth most petroleum - rich nation , and by the far the most affluent in Africa .
+</item 9>
+
+<item 10>
+Sub-Saharan Africa
+Barbary Coast Bashmur Ancient Libya Atlas Mountains Nile Valley Cataracts of the Nile Darfur Gulf of Aqaba Lower Egypt Lower Nubia Middle Egypt Nile Delta Nuba
+Mountains Nubia The Sudans Upper Egypt Western Sahara West Africa Pepper Coast Gold Coast Slave Coast Ivory Coast Cape Palmas Cape Mesurado Guinea region Gulf
+of Guinea Niger Basin Guinean Forests of West Africa Niger Delta Inner Niger Delta Southern Africa Madagascar Central Highlands ( Madagascar ) Northern
+Highlands Rhodesia North South Thembuland Succulent Karoo Nama Karoo Bushveld Highveld Fynbos Cape Floristic Region Kalahari Desert Okavango Delta False Bay
+Hydra Bay Macro-regions Aethiopia Arab world Commonwealth realm East African montane forests Eastern Desert Equatorial Africa Françafrique Gibraltar Arc Greater
+Middle East Islands of Africa List of countries where Arabic is an official language Mediterranean Basin MENA MENASA Middle East Mittelafrika Negroland
+Northeast Africa Portuguese - speaking African countries Sahara Sahel Sub-Saharan Africa Sudan ( region ) Sudanian Savanna Tibesti Mountains Tropical Africa
+Regions of Asia Central Greater Middle East Aral Sea Aralkum Desert Caspian Sea Dead Sea Sea of Galilee Transoxiana Turan Greater Khorasan
+</item 10>
+=== END ITEM id=068be6617c30dc7b ===

@@ -1,0 +1,788 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=98531178e9128d6c ===
+Gold sentences and facts:
+Sentence 0: Rose Stagg ( Valene Kane ) , a woman who had a sexual relationship with Paul whilst at university . During a night of passion , Paul tried to strangle her to death . As the Belfast Strangler comes to the attention of the public , Stagg notices the similarities and contacts her close friend Reed Smith . Her husband was unaware the attack had taken place . She is later kidnapped and held captive by Spector . She is later found unconscious in a car trunk . During series three , Stagg reveals that her sexual relationship with Paul was entirely consensual , and that , during sex , he strangled her so aggressively she had to be revived .
+  Fact 0.0: Rose Stagg (played by Valene Kane) had a sexual relationship with Paul while at university.
+  Fact 0.1: During a night of passion, Paul tried to strangle Rose Stagg to death.
+  Fact 0.2: As the Belfast Strangler comes to the attention of the public, Rose Stagg notices the similarities.
+  Fact 0.3: Rose Stagg contacts her close friend Reed Smith.
+  Fact 0.4: Rose Stagg's husband was unaware the attack had taken place.
+  Fact 0.5: Rose Stagg is later kidnapped and held captive by Spector.
+  Fact 0.6: Rose Stagg is later found unconscious in a car trunk.
+  Fact 0.7: During series three, Rose Stagg reveals that her sexual relationship with Paul was entirely consensual.
+  Fact 0.8: During sex, Paul strangled Rose Stagg so aggressively that she had to be revived.
+Sentence 1: Actor Character Series 1 Series 2 Series 3 Total Appearances 5 6 7 8 9 10 11 12 13 14 15 16 17 Gillian Anderson DSI Stella Gibson 17 Jamie Dornan Paul Spector 17 John Lynch ACC Jim Burns 17 Aisling Franciosi Katie Benedetto N / A 16 Bronagh Waugh Sally Ann Spector N / A 15 Niamh McGrady PC Danielle Ferrington N / A N / A 15 Stuart Graham DCI Matthew Eastwood N / A N / A N / A 13 Bronágh Taggart DC Gail McNally N / A 12 Valene Kane Rose Stagg N / A N / A N / A N / A 11 Emmett J. Scanlan DC Glen Martin N / A N / A N / A 10 Archie Panjabi Prof. Reed Smith N / A N / A 9 Richard Clements DC Rick Turner N / A N / A N / A N / A 9 Colin Morgan DS Tom Anderson N / A 9 Karen Hassan Annie Brawley N / A N / A N / A N / A 8 Jonjo O'Neill Tom Stagg N / A N / A N / A 7 Nick Lee Ned Callan N / A N / A N / A 6 Brian Milligan James Tyler N / A N / A N / A 6 Seainin Brennan Liz Tyler N / A N / A N / A N / A 5 Ben Peel DS James Olson N / A N / A 5 Ian McElhinney Morgan Monroe N / A N / A 5 Aidan McArdle Sean Healy N / A 5 Ruth Bradley Wallace N / A 5 Michael McElhatton DI Rob Breedlove N / A Frank McCusker DCI Garrett Brink N / A N / A Aisling Bea Kiera Sheridan N / A N / A Barry Ward Dr. Patrick Spencer N / A N / A Krister Henriksson Dr. August Larson N / A Laura Donnelly Sarah Kay N / A N / A Richard Coyle Dr. Joe O'Donnell N / A N / A N / A Denise Gough Dr. Alison Walden N / A N / A Seán McGinley Fr . Peter Jensen N / A N / A Genevieve O'Reilly DCI Joan Kinkead N / A N / A Martin McCann David Alvarez N / A N / A
+  Fact 1.0: The cast table lists each actor's character and appearances across series one to three, with episode numbers 5 to 17 as column headers.
+  Fact 1.1: Gillian Anderson plays DSI Stella Gibson, with 17 total appearances.
+  Fact 1.2: Jamie Dornan plays Paul Spector, with 17 total appearances.
+  Fact 1.3: John Lynch plays ACC Jim Burns, with 17 total appearances.
+  Fact 1.4: Aisling Franciosi plays Katie Benedetto, with 16 total appearances.
+  Fact 1.5: Bronagh Waugh plays Sally Ann Spector, with 15 total appearances.
+  Fact 1.6: Niamh McGrady plays PC Danielle Ferrington, with 15 total appearances.
+  Fact 1.7: Stuart Graham plays DCI Matthew Eastwood, with 13 total appearances.
+  Fact 1.8: Bronágh Taggart plays DC Gail McNally, with 12 total appearances.
+  Fact 1.9: Valene Kane plays Rose Stagg, with 11 total appearances.
+  Fact 1.10: Emmett J. Scanlan plays DC Glen Martin, with 10 total appearances.
+  Fact 1.11: Archie Panjabi plays Prof. Reed Smith, with 9 total appearances.
+  Fact 1.12: Richard Clements plays DC Rick Turner, with 9 total appearances.
+  Fact 1.13: Colin Morgan plays DS Tom Anderson, with 9 total appearances.
+  Fact 1.14: Karen Hassan plays Annie Brawley, with 8 total appearances.
+  Fact 1.15: Jonjo O'Neill plays Tom Stagg, with 7 total appearances.
+  Fact 1.16: Nick Lee plays Ned Callan, with 6 total appearances.
+  Fact 1.17: Brian Milligan plays James Tyler, with 6 total appearances.
+  Fact 1.18: Seainin Brennan plays Liz Tyler, with 5 total appearances.
+  Fact 1.19: Ben Peel plays DS James Olson, with 5 total appearances.
+  Fact 1.20: Ian McElhinney plays Morgan Monroe, with 5 total appearances.
+  Fact 1.21: Aidan McArdle plays Sean Healy, with 5 total appearances.
+  Fact 1.22: Ruth Bradley plays Wallace, with 5 total appearances.
+  Fact 1.23: Michael McElhatton plays DI Rob Breedlove.
+  Fact 1.24: Frank McCusker plays DCI Garrett Brink.
+  Fact 1.25: Aisling Bea plays Kiera Sheridan.
+  Fact 1.26: Barry Ward plays Dr. Patrick Spencer.
+  Fact 1.27: Krister Henriksson plays Dr. August Larson.
+  Fact 1.28: Laura Donnelly plays Sarah Kay.
+  Fact 1.29: Richard Coyle plays Dr. Joe O'Donnell.
+  Fact 1.30: Denise Gough plays Dr. Alison Walden.
+  Fact 1.31: Seán McGinley plays Fr. Peter Jensen.
+  Fact 1.32: Genevieve O'Reilly plays DCI Joan Kinkead.
+  Fact 1.33: Martin McCann plays David Alvarez.
+
+Retrieved items:
+<item 1>
+List of The Fall characters
+Gibson is a very capable detective and a woman who 's highly comfortable with her own sexuality ; this plays a pivotal role in her story arc with other
+characters , primarily James Olson and Jim Burns . Whilst working in Belfast , she becomes embroiled in the politics of policing and uncovers corruption within
+the force . In the second series , with her investigation stalled , Gibson is forced to get results under the threat of a new 28 - day review into Operation
+Musicman . As Stella 's personal past comes back to haunt her , her professional present becomes further tangled in it . Stella has what Paul describes as ``
+daddy - issues '' , due to her father 's untimely death . During series three , Gibson is placed under investigation by the Police Ombudsman following the
+shooting of Spector . Burns allows her to retain her job , which leads her to fall victim to a vicious assault during her final showdown with the killer . Peter
+Paul Spector ( edit ) Peter Paul Spector ( Jamie Dornan ) , the father of two young children .
+</item 1>
+
+<item 2>
+List of The Fall characters
+Gibson relies on her heavily during the investigative process . Rose Stagg ( edit ) Rose Stagg ( Valene Kane ) , a woman who had a sexual relationship with Paul
+whilst at university . During a night of passion , Paul tried to strangle her to death . As the Belfast Strangler comes to the attention of the public , Stagg
+notices the similarities and contacts her close friend Reed Smith . Her husband was unaware the attack had taken place . She is later kidnapped and held captive
+by Spector . She is later found unconscious in a car trunk . During series three , Stagg reveals that her sexual relationship with Paul was entirely consensual
+, and that , during sex , he strangled her so aggressively she had to be revived . DC Glen Martin ( edit ) DC Glen Martin ( Emmett Scanlan ) , a capable
+detective with a somewhat boyish attitude towards his work . Martin is an invaluable member of Gibson 's team and , during series two , takes on a more
+prominent role in the decision making process . He is partnered with DC Gail McNally , and is fiercely protective of her , though not to a fault .
+</item 2>
+
+<item 3>
+List of The Fall characters
+Sarah Kay ( edit ) Sarah Kay ( Laura Donnelly ) , a young solicitor who is brought to the attention of Ferrington after a home invasion . Kay decides to stay at
+her house , unbeknownst to her that the culprit , Spector , would return . She is later found murdered . Ferrington blames herself for this , however it is her
+death that allows Stella to link the previous crimes together and establish Musicman . Joe O'Donnell ( edit ) Dr. Joe O'Donnell ( Richard Coyle ) , an emergency
+medical physician who is responsible for the immediate treatment and oversight of Spector . Following Spector 's discharge , O'Donnell shares a tender moment
+with Gibson , in which he asks her numerous questions in order to assess her for concussion . He reveals he has five children , aged between seven months and
+twelve years old . Alison walden ( edit ) Walden ( Denise Gough ) , a consultant neuropsychologist who works with Spector . Peter Jensen ( edit ) Father Peter
+Jensen ( Seán McGinley ) , was a priest until he was convicted of molesting numerous young choir boys .
+</item 3>
+
+<item 4>
+List of The Fall characters
+Asst . Ch . Constable Jim Burns ( edit ) ACC Jim Burns ( John Lynch ) , the Assistant Chief Constable of the PSNI in charge of operations , and the Gold
+Commander of Musicman . Burns had an affair with Stella several years previously , and , despite being married , still appears to be infatuated with her . He 's
+a skilled officer and knows how to balance politics and police - work . He is initially hesitant about linking the murders , but later provides the
+investigation with all the resources it requires . He is , at first , believed to be linked to the PSNI corruption scandal , though this is later disproved .
+During series 2 , his lust for Stella becomes more apparent when he attempts to force himself on her whilst drunk . This drinking continues into series three ,
+and he resigns his commission during the series finale . Katie Benedetto ( edit ) Katerina `` Katie '' Benedetto ( Aisling Franciosi ) , a 15 - year - old
+schoolgirl . She babysits the Spectors ' children and - over the course of doing so - develops an affinity for Paul Spector .
+</item 4>
+
+<item 5>
+List of The Fall characters
+Reed Smith N / A N / A 9 Richard Clements DC Rick Turner N / A N / A N / A N / A 9 Colin Morgan DS Tom Anderson N / A 9 Karen Hassan Annie Brawley N / A N / A N
+/ A N / A 8 Jonjo O'Neill Tom Stagg N / A N / A N / A 7 Nick Lee Ned Callan N / A N / A N / A 6 Brian Milligan James Tyler N / A N / A N / A 6 Seainin Brennan
+Liz Tyler N / A N / A N / A N / A 5 Ben Peel DS James Olson N / A N / A 5 Ian McElhinney Morgan Monroe N / A N / A 5 Aidan McArdle Sean Healy N / A 5 Ruth
+Bradley Wallace N / A 5 Michael McElhatton DI Rob Breedlove N / A Frank McCusker DCI Garrett Brink N / A N / A Aisling Bea Kiera Sheridan N / A N / A Barry Ward
+Dr. Patrick Spencer N / A N / A Krister Henriksson Dr.
+</item 5>
+
+<item 6>
+List of The Fall characters
+After leaving Paul for a short time , believing he slept with Katie , the two reconcile and she flees Ireland with him . In series 2 , they return . Sally Ann
+is pregnant with her third child , though she suffers a miscarriage . Following her arrest for assisting an offender , Sally attempts to kill her children . Pc
+Danielle Ferrington ( edit ) PC Danielle Ferrington ( Niamh McGrady ) , a Police Constable first seen attending a breaking and entering call at Sarah Kay 's
+home . She blames herself for Kay 's murder and tells Gibson this , resulting in her being recruited by Stella to work with Operation Musicman . Dani is a
+skilled investigator , and proves herself invaluable to the team . She speaks openly of her homosexuality to bisexual Gibson , and as a result the two develop
+both a professional and a personal bond . She later returns to patrol , believing she can do the most good on the street . It is in this capacity that she is
+involved in a gunfight with Spector and , following her suspension from front - line duty , is re-recruited by Stella . Det . Ch . Insp .
+</item 6>
+
+<item 7>
+List of The Fall characters
+`` BBC Two Sets Premiere Date For ' The Fall ' '' . TVWise . Retrieved 1 May 2013 . External links ( edit ) The Fall at BBC Programmes The Fall on RTÉ The Fall
+on Netflix The Fall on IMDb The Fall at Rotten Tomatoes The Fall Trailer at ZDF Enterprises The Fall on Facebook Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=List_of_The_Fall_characters&oldid=811099612 '' Categories : Lists of drama television characters Lists of British
+television series characters Lists of Irish television series characters Hidden categories : Use dmy dates from January 2017 Use British English from January
+2017 BBC programme ID not in Wikidata Talk Contents About Wikipedia Add links This page was last edited on 19 November 2017 , at 14 : 36 . About Wikipedia
+</item 7>
+
+<item 8>
+List of The Fall characters
+List of the Fall characters - wikipedia List of the Fall characters Jump to : navigation , search The Fall , starring Gillian Anderson , is a British - Irish
+drama series produced by Artists Studio and created by Allan Cubitt . It premiered in the Republic of Ireland at 21 : 30 on 12 May 2013 , and in the UK on BBC
+Two at 21 : 00 on 13 May 2013 . The series features Jamie Dornan , with John Lynch , Bronagh Waugh , Stuart Graham , and Niamh McGrady . Contents ( hide ) 1
+Cast overview 2 Main characters 2.1 Det . Supt . Stella Gibson 2.2 Peter Paul Spector 2.3 Asst . Ch . Constable Jim Burns 2.4 Katie Benedetto 2.5 Sally Ann
+Spector 2.6 PC Danielle Ferrington 2.7 Det . Ch . Insp . Matthew Eastwood 2.8 DC Gail McNally 2.9 Rose Stagg 2.10 DC Glen Martin 2.11 Professor Reed Smith 2.12
+DC Rick Turner 2.13 Det .
+</item 8>
+
+<item 9>
+List of The Fall characters
+Ch . Insp . Joan Kinkead 2.33 David Alvarez 3 References 4 External links Cast overview ( edit ) Actor Character Series 1 Series 2 Series 3 Total Appearances 5
+6 7 8 9 10 11 12 13 14 15 16 17 Gillian Anderson DSI Stella Gibson 17 Jamie Dornan Paul Spector 17 John Lynch ACC Jim Burns 17 Aisling Franciosi Katie Benedetto
+N / A 16 Bronagh Waugh Sally Ann Spector N / A 15 Niamh McGrady PC Danielle Ferrington N / A N / A 15 Stuart Graham DCI Matthew Eastwood N / A N / A N / A 13
+Bronágh Taggart DC Gail McNally N / A 12 Valene Kane Rose Stagg N / A N / A N / A N / A 11 Emmett J. Scanlan DC Glen Martin N / A N / A N / A 10 Archie Panjabi
+Prof.
+</item 9>
+
+<item 10>
+List of The Fall characters
+Katie is a gifted musician and uses online videos to express her feelings . During series 2 she becomes deeply embroiled in Paul 's life . Paul ties her up in a
+hotel room , for example , whilst Katie breaks into a house wearing a shirt with Spector 's face on . Benedetto is placed under police surveillance and later
+arrested whilst trying to dispose of evidence that implicates Paul in the murders . In series three , she attacks a girl with acid , and is detained for her
+crimes . During this time , she reveals to Stella that her father 's death had a severe emotional impact on her , and she has been self - harming . Sally Ann
+Spector ( edit ) Sally Ann Spector ( Bronagh Waugh ) , the wife of Paul Spector and a neonatal nurse . She has a deep devotion to Paul , but is wary of his
+character as she has never met his family . Sally Ann is the mother of his two children and is unaware of his dark side . Over the course of the series , she
+becomes embroiled in his crimes without her knowledge , and even provides a false alibi to the police .
+</item 10>
+=== END ITEM id=98531178e9128d6c ===
+
+=== ITEM id=22dcb6d9fae34e4d ===
+Gold sentences and facts:
+Sentence 0: The first mention of the expression `` Apostles ' Creed '' occurs in a letter of AD 390 from a synod in Milan and may have been associated with the belief , widely accepted in the 4th century , that , under the inspiration of the Holy Spirit , each of the Twelve Apostles contributed an article of a creed .
+  Fact 0.0: The first mention of the expression Apostles' Creed occurs in a letter of AD 390.
+  Fact 0.1: The letter was from a synod in Milan.
+  Fact 0.2: The expression Apostles' Creed may have been associated with a belief.
+  Fact 0.3: The belief was widely accepted in the 4th century.
+  Fact 0.4: The belief was that, under the inspiration of the Holy Spirit, each of the Twelve Apostles contributed an article of a creed.
+Sentence 1: The title Symbolum Apostolicum ( Symbol or Creed of the Apostles ) appears for the first time in a letter , probably written by Ambrose , from a Council in Milan to Pope Siricius in about AD 390 `` Let them give credit to the Creed of the Apostles , which the Roman Church has always kept and preserved undefiled '' . But what existed at that time was not what is now known as the Apostles ' Creed but a shorter statement of belief that , for instance , did not include the phrase `` maker of heaven and earth '' , a phrase that may have been inserted only in the 7th century .
+  Fact 1.0: The title Symbolum Apostolicum (Symbol or Creed of the Apostles) appears for the first time in a letter.
+  Fact 1.1: The letter was probably written by Ambrose.
+  Fact 1.2: The letter was from a Council in Milan to Pope Siricius.
+  Fact 1.3: The letter dates to about AD 390.
+  Fact 1.4: The letter says: Let them give credit to the Creed of the Apostles, which the Roman Church has always kept and preserved undefiled.
+  Fact 1.5: What existed at that time was not what is now known as the Apostles' Creed.
+  Fact 1.6: What existed at that time was a shorter statement of belief.
+  Fact 1.7: That shorter statement did not include the phrase maker of heaven and earth, for instance.
+  Fact 1.8: The phrase maker of heaven and earth may have been inserted only in the 7th century.
+
+Retrieved items:
+<item 1>
+Apostles' Creed
+And all respond : Amen . Profession of faith at Mass ( edit ) Since the 2002 edition , the Apostles ' Creed is included in the Roman Missal with the indication
+, `` Instead of the Niceno - Constantinopolitan Creed , especially during Lent and Easter time , the baptismal Symbol of the Roman Church , known as the
+Apostles ' Creed , may be used . '' Previously the Nicene Creed was the only profession of faith that the Missal gave for use at Mass , except in Masses for
+children ; but in some countries use of the Apostles ' Creed was already permitted . Use in the divine office ( edit ) In the 1962 Breviary , authorized by
+Summorum Pontificum , the Apostles ' Creed is recited at Prime and Compline on certain days during Advent and Lent as part of the Preces , a series of versicles
+and responses preceded by Kyrie , eleison ( `` Lord , have mercy '' ) and the Our Father . In prior editions , it was also said after the Our Father and Hail
+Mary before Matins and Prime , and after Compline .
+</item 1>
+
+<item 2>
+Apostles' Creed
+But what existed at that time was not what is now known as the Apostles ' Creed but a shorter statement of belief that , for instance , did not include the
+phrase `` maker of heaven and earth '' , a phrase that may have been inserted only in the 7th century . This illumination from a 13th - century manuscript shows
+the apostles writing the Creed , receiving inspiration from the Holy Spirit . The account of the origin of this creed , the forerunner and principal source of
+the Apostles ' Creed , as having been jointly created by the Apostles under the inspiration of the Holy Spirit , with each of the twelve contributing one of the
+articles , was already current at that time . The earlier text evolved from simpler texts based on Matthew 28 : 19 , part of the Great Commission , and it has
+been argued that it was already in written form by the late 2nd century ( c. 180 ) .
+</item 2>
+
+<item 3>
+Apostles' Creed
+See also ( edit ) Christianity portal Nicene Creed Chalcedonian Creed Lutheran Book of Worship Virgin birth of Jesus Passion of Jesus One , Holy , Catholic ,
+and Apostolic Church Notes ( edit ) Jump up ^ Not in the sense that the word `` symbol '' has in modern English , but in the original meaning of the word ,
+derived from `` Latin symbolum , sign , token , from Greek σύμβολον , token for identification ( by comparing with its counterpart ) , from συμβάλλειν , to
+throw together , compare '' . Jump up ^ In a suggested revision of 1923 , this line has `` of the Holy Ghost '' . The Scottish Book of Common Prayer ( 1637 )
+has `` which was conceived of the holy Ghost '' . This goes back to the 1559 Book of Common Prayer , which has `` whiche was conceived of the holy Ghost '' .
+Jump up ^ This ecumenical version of the English Language Liturgical Consultation ( ELLC ) and its predecessor .
+</item 3>
+
+<item 4>
+Apostles' Creed
+It has been argued nonetheless that it dates from the second half of the 5th century , though no earlier . Some have suggested that the Apostles ' Creed was
+spliced together with phrases from the New Testament . For instance , the phrase `` descendit ad inferos '' ( `` he descended into hell '' ) echoes Ephesians 4
+: 9 , `` κατέβη εἰς τὰ κατώτερα μέρη τῆς γῆς '' ( `` he descended into the lower , earthly regions '' ) . It is of interest that this phrase first appeared in
+one of the two versions of Rufinus in AD 390 and then did not appear again in any version of the creed until AD 650 . This phrase and that on the communion of
+saints are articles found in the Apostles ' Creed , but not in the Old Roman Symbol nor in the Nicene Creed . Musical settings ( edit ) Musical settings of the
+Symbolum Apostolorum as a motet are rare .
+</item 4>
+
+<item 5>
+Apostles' Creed
+7 . Jump up ^ Creeds of Christendom , with a History and Critical notes , II . The History of Creeds , Christian Classics Ethereal Library , July 13 , 2005 ,
+retrieved May 19 , 2011 Jump up ^ Kelly , JND ( 1972 ) , Early Christian Creeds ( third ed . ) , London : Longman , Green & Co , pp. 398 -- 434 . Jump up ^
+Bettenson , Henry ; Maunder , Chris ( 1999 ) , Documents of the Christian Church ( 3 ed . ) , New York : Oxford University Press , p. 26 . Jump up ^ `` Origin
+of the Creed '' , Catholic Encyclopedia , New advent . Jump up ^ Trillhaas , Wolfgang , `` Creeds , Lutheran Attitude Toward '' , in Bodensieck , Julius , The
+Encyclopedia of the Lutheran Church , A -- E , Minneapolis : Augsburg , p. 629 .
+</item 5>
+
+<item 6>
+Apostles' Creed
+Ἀμήν . English translations ( edit ) Ecumenical version ( edit ) 15th - century Flemish tapestry illustrating the first four articles of the Creed The English
+Language Liturgical Consultation ( ELLC ) is an international ecumenical group whose primary purpose is to provide ecumenically accepted texts for those who use
+English in their liturgy . In 1988 it produced a translation of the Apostles ' Creed , distinguished among other things by its avoidance of the word `` his ''
+in relation to God . The text is as follows : I believe in God , the Father almighty , creator of heaven and earth . I believe in Jesus Christ , God 's only Son
+, our Lord , who was conceived by the Holy Spirit , born of the Virgin Mary , suffered under Pontius Pilate , was crucified , died , and was buried ; he
+descended to the dead . On the third day he rose again ; he ascended into heaven , he is seated at the right hand of the Father , and he will come to judge the
+living and the dead .
+</item 6>
+
+<item 7>
+Apostles' Creed
+Its basis appears to be the old Roman Creed known also as the Old Roman Symbol . Because of the early origin of its original form , it does not address some
+Christological issues defined in the Nicene and other Christian Creeds . It thus says nothing explicitly about the divinity of either Jesus or the Holy Spirit .
+This makes it acceptable to many Arians and Unitarians . Nor does it address many other theological questions which became objects of dispute centuries later .
+The first mention of the expression `` Apostles ' Creed '' occurs in a letter of AD 390 from a synod in Milan and may have been associated with the belief ,
+widely accepted in the 4th century , that , under the inspiration of the Holy Spirit , each of the Twelve Apostles contributed an article of a creed . Contents
+( hide ) 1 Origin 2 Musical settings 3 Text in Latin 4 Text in Greek 5 English translations 5.1 Ecumenical version 5.2 Roman Catholic Church 5.2. 1 Articles 1
+-- 12 5.2. 2 Articles 9 -- 10 5.3 Church of England 5.4 Lutheran Church 5.4.
+</item 7>
+
+<item 8>
+Apostles' Creed
+1 Evangelical Lutheran Worship 5.4. 2 Lutheran Service Book 5.4. 3 Church of Denmark 5.5 United Methodist Church 6 Liturgical use in Western Christianity 6.1
+Catholic Church 6.1. 1 Rite of Baptism 6.1. 2 Profession of faith at Mass 6.1. 3 Use in the Divine Office 6.2 Anglican Communion 6.2. 1 Episcopal Church (
+United States ) 6.3 Lutheran Church 6.4 Methodism 7 See also 8 Notes 9 References 10 Further reading 11 External links 11.1 English translations Origin ( edit )
+The title Symbolum Apostolicum ( Symbol or Creed of the Apostles ) appears for the first time in a letter , probably written by Ambrose , from a Council in
+Milan to Pope Siricius in about AD 390 `` Let them give credit to the Creed of the Apostles , which the Roman Church has always kept and preserved undefiled ''
+.
+</item 8>
+
+<item 9>
+Apostles' Creed
+180 ) . While the individual statements of belief that are included in the Apostles ' Creed -- even those not found in the Old Roman Symbol -- are found in
+various writings by Irenaeus , Tertullian , Novatian , Marcellus , Rufinus , Ambrose , Augustine , Nicetas , and Eusebius Gallus , the earliest appearance of
+what we know as the Apostles ' Creed was in the De singulis libris canonicis scarapsus ( `` Excerpt from Individual Canonical Books '' ) of St. Pirminius (
+Migne , Patrologia Latina 89 , 1029 ff . ) , written between 710 and 714 . Bettenson and Maunder state that it is first from Dicta Abbatis Pirminii de singulis
+libris canonicis scarapsus ( idem quod excarpsus , excerpt ) , c. 750 . This longer Creed seems to have arisen in what is now France and Spain . Charlemagne
+imposed it throughout his dominions , and it was finally accepted in Rome , where the Old Roman Symbol or similar formulas had survived for centuries .
+</item 9>
+
+<item 10>
+Apostles' Creed
+Apostles ' Creed - wikipedia Apostles ' Creed Jump to : navigation , search The rubric above this 13th - century illuminated manuscript translates `` twelve
+articles of faith set out by twelve apostles '' . The Apostles ' Creed ( Latin : Symbolum Apostolorum or Symbolum Apostolicum ) , sometimes entitled Symbol of
+the Apostles , is an early statement of Christian belief -- a creed or `` symbol '' . It is widely used by a number of Christian denominations for both
+liturgical and catechetical purposes , most visibly by liturgical Churches of Western tradition , including the Catholic Church , Lutheranism and Anglicanism .
+It is also used by Presbyterians , Methodists and Congregationalists . The Apostles ' Creed is Trinitarian in structure with sections affirming belief in God
+the Father , Jesus Christ His Son and the Holy Spirit . The Apostles ' Creed was based on Christian theological understanding of the Canonical gospels , the
+letters of the New Testament and to a lesser extent the Old Testament . Its basis appears to be the old Roman Creed known also as the Old Roman Symbol .
+</item 10>
+=== END ITEM id=22dcb6d9fae34e4d ===
+
+=== ITEM id=4ce4d82dc6c7004e ===
+Gold sentences and facts:
+Sentence 0: Central London Property Trust Ltd v High Trees House Ltd ( 1947 ) KB 130 ( or the High Trees case ) is an English contract law decision in the High Court . It reaffirmed and extended the doctrine of promissory estoppel in contract law in England and Wales . However , the most significant part of the judgment is obiter dicta as it relates to hypothetical facts ; that is , the landlord did not seek repayment of the full wartime rent .
+  Fact 0.0: Central London Property Trust Ltd v High Trees House Ltd is cited as (1947) KB 130.
+  Fact 0.1: Central London Property Trust Ltd v High Trees House Ltd is also called the High Trees case.
+  Fact 0.2: Central London Property Trust Ltd v High Trees House Ltd is an English contract law decision in the High Court.
+  Fact 0.3: The decision reaffirmed the doctrine of promissory estoppel in contract law in England and Wales.
+  Fact 0.4: The decision extended the doctrine of promissory estoppel in contract law in England and Wales.
+  Fact 0.5: The most significant part of the judgment is obiter dicta.
+  Fact 0.6: The obiter dicta relates to hypothetical facts.
+  Fact 0.7: In the hypothetical facts, the landlord did not seek repayment of the full wartime rent.
+
+Retrieved items:
+<item 1>
+Central London Property Trust Ltd v High Trees House Ltd
+In Amalgamated Investment Co v Texas Bank it was decided that proprietory estoppel can act as a sword and not merely as a shield ( that is , it can be used as a
+cause of action rather than merely providing a defence to an action ) . See also ( edit ) English contract law Estoppel Promise References ( edit ) Jump up ^
+Collier v P & MJ Wright ( Holdings ) Ltd ( 2007 ) EWCA Civ 1329 Jump up ^ Amalgamated Investment Co v Texas Bank , ( 1982 ) EWHC 84 ( QB ) .
+</item 1>
+
+<item 2>
+Central London Property Trust Ltd v High Trees House Ltd
+Retrieved from `` https://en.wikipedia.org/w/index.php?title=Central_London_Property_Trust_Ltd_v_High_Trees_House_Ltd&oldid=837737647 '' Categories : English
+contract case law Lord Denning cases English enforceability case law English estoppel case law 1946 in British law High Court of Justice cases 1946 in case law
+Hidden categories : Use British English from August 2015 Use dmy dates from February 2012 Talk Contents About Wikipedia Add links This page was last edited on
+22 April 2018 , at 18 : 40 . Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site ,
+you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About
+Wikipedia
+</item 2>
+
+<item 3>
+Central London Property Trust Ltd v High Trees House Ltd
+for last two quarters of 1945 ) . Judgment ( edit ) Based on previous judgments as Hughes v Metropolitan Railway Co , Denning J held that the full rent was
+payable from the time that the flats became fully occupied in mid-1945 . However , he continued in an obiter statement that if Central London had tried to claim
+for the full rent from 1940 onwards , they would not have been able to . This was reasoned on the basis that if a party leads another party to believe that he
+will not enforce his strict legal rights , then the Courts will prevent him from doing so at a later stage . Being obiter dicta and in a court of first instance
+this was doubly not a binding precedent , yet it essentially created the doctrine of promissory estoppel .
+</item 3>
+
+<item 4>
+Central London Property Trust Ltd v High Trees House Ltd
+In each case the court held the promise to be binding on the party making it , even though under the old common law it might be difficult to find any
+consideration for it . The courts have not gone so far as to give a cause of action in damages for the breach of such a promise , but they have refused to allow
+the party making it to act inconsistently with it . It is in that sense , and that sense only , that such a promise gives rise to an estoppel . The decisions
+are a natural result of the fusion of law and equity : for the cases of Hughes v. Metropolitan Ry. Co. ( 1877 ) 2 App . Cas. 439 , 448 , Birmingham and District
+Land Co. v. London & North Western Ry. Co. ( 1888 ) 40 Ch . D. 268 , 286 and Salisbury ( Marquess ) v. Gilmore ( 1942 ) 2 K.B. 38 , 51 , afford a sufficient
+basis for saying that a party would not be allowed in equity to go back on such a promise .
+</item 4>
+
+<item 5>
+Central London Property Trust Ltd v High Trees House Ltd
+Here it was binding as covering the period down to the early part of 1945 , and as from that time full rent is payable . I therefore give judgment for the
+plaintiff company for the amount claimed . Significance ( edit ) Advances have been made in promissory estoppel since its inception in High Trees to create a
+new inroad into the rule in Pinnel 's case that an agreement to accept part payment of a debt in full satisfaction of it is unenforceable for want of
+consideration . Denning commented that such an agreement should now be enforceable under the doctrine of promissory estoppel , and indeed the plaintiff did not
+seek the full debt on the basis of what was fair and , perhaps , thought was the law . However , the courts were at first reluctant to overrule or distinguish
+cases like Pinnel 's case and Foakes v Beer having formed part of the common law for so long . Lady Justice Arden in Collier v P & MJ Wright ( Holdings ) Ltd (
+2007 ) accepted in principle that High Trees could be used to extinguish a creditor 's right to full payment of a debt in such circumstances .
+</item 5>
+
+<item 6>
+Central London Property Trust Ltd v High Trees House Ltd
+I am satisfied that the promise was understood by all parties only to apply under the conditions prevailing at the time when it was made , namely , when the
+flats were only partially let , and that it did not extend any further than that . When the flats became fully let , early in 1945 , the reduction ceased to
+apply . In those circumstances , under the law as I hold it , it seems to me that rent is payable at the full rate for the quarters ending September 29 and
+December 25 , 1945 . If the case had been one of estoppel , it might be said that in any event the estoppel would cease when the conditions to which the
+representation applied came to an end , or it also might be said that it would only come to an end on notice . In either case it is only a way of ascertaining
+what is the scope of the representation . I prefer to apply the principle that a promise intended to be binding , intended to be acted on and in fact acted on ,
+is binding so far as its terms properly apply .
+</item 6>
+
+<item 7>
+Central London Property Trust Ltd v High Trees House Ltd
+In such cases the courts have said that the promise must be honoured . The cases to which I particularly desire to refer are : Fenner v. Blake ( 1900 ) 1 Q.B.
+426 , In re Wickham ( 1917 ) 34 T.L.R. 158 , Re William Porter & Co. , Ld. ( 1937 ) 2 All E.R. 361 and Buttery v. Pickard ( 1946 ) W.N. 25 . As I have said they
+are not cases of estoppel in the strict sense . They are really promises - promises intended to be binding , intended to be acted on , and in fact acted on .
+Jorden v. Money ( 1854 ) 5 H.L.C. 185 can be distinguished , because there the promisor made it clear that she did not intend to be legally bound , whereas in
+the cases to which I refer the proper inference was that the promisor did intend to be bound .
+</item 7>
+
+<item 8>
+Central London Property Trust Ltd v High Trees House Ltd
+Central London Property Trust Ltd v. High Trees House Ltd - wikipedia Central London Property Trust Ltd v. High Trees House Ltd Jump to : navigation , search
+High Trees case Court King 's Bench Division Decided 18 July 1946 Citation ( s ) ( 1947 ) KB 130 ; ( 1956 ) 1 All ER 256 ; 62 TLR 557 ; ( 1947 ) LJR 77 ; 175 LT
+333 Court membership Judge ( s ) sitting Denning J Keywords Promissory estoppel Central London Property Trust Ltd v High Trees House Ltd ( 1947 ) KB 130 ( or
+the High Trees case ) is an English contract law decision in the High Court . It reaffirmed and extended the doctrine of promissory estoppel in contract law in
+England and Wales . However , the most significant part of the judgment is obiter dicta as it relates to hypothetical facts ; that is , the landlord did not
+seek repayment of the full wartime rent .
+</item 8>
+
+<item 9>
+Central London Property Trust Ltd v High Trees House Ltd
+Denning J held estoppel to be applicable if ... ... a promise was made which was intended to create legal relations and which , to the knowledge of the person
+making the promise , was going to be acted on by the person to whom it was made and which was in fact so acted on . Contents ( hide ) 1 Facts 2 Judgment 3
+Significance 4 See also 5 References Facts ( edit ) In 1937 , High Trees House Ltd leased a block of flats in Clapham , London , for a rate £ 2500 / year from
+Central London Property Trust Ltd . Due to the conditions during the beginning of World War II occupancy rates were drastically lower than normal . In January
+1940 , to ameliorate the situation , the parties made an agreement in writing to reduce rent by half . However , neither party stipulated the period for which
+this reduced rental was to apply . Over the next five years , High Trees paid the reduced rate while the flats began to fill , and by 1945 , the flats were back
+at full occupancy . Central London sued for payment of the full rental costs from June 1945 onwards ( i.e.
+</item 9>
+
+<item 10>
+Central London Property Trust Ltd v High Trees House Ltd
+It was a representation , in effect , as to the future , namely , that payment of the rent would not be enforced at the full rate but only at the reduced rate .
+Such a representation would not give rise to an estoppel , because , as was said in Jorden v. Money ( 1854 ) 5 H.L.C. 185 , a representation as to the future
+must be embodied as a contract or be nothing . But what is the position in view of developments in the law in recent years ? The law has not been standing still
+since Jorden v. Money ( 1854 ) 5 H.L.C. 185 . There has been a series of decisions over the last fifty years which , although they are said to be cases of
+estoppel are not really such . They are cases in which a promise was made which was intended to create legal relations and which , to the knowledge of the
+person making the promise , was going to be acted on by the person to whom it was made and which was in fact so acted on . In such cases the courts have said
+that the promise must be honoured .
+</item 10>
+=== END ITEM id=4ce4d82dc6c7004e ===
+
+=== ITEM id=ac01e2864714104d ===
+Gold sentences and facts:
+Sentence 0: Somatic motor neurons originate in the central nervous system , project their axons to skeletal muscles ( such as the muscles of the limbs , abdominal , and intercostal muscles ) , which are involved in locomotion . The three types of these neurons are the alpha efferent neurons , beta efferent neurons , and gamma efferent neurons . They are called efferent to indicate the flow of information from the central nervous system ( CNS ) to the periphery .
+  Fact 0.0: Somatic motor neurons originate in the central nervous system.
+  Fact 0.1: Somatic motor neurons project their axons to skeletal muscles.
+  Fact 0.2: Examples of those skeletal muscles are the muscles of the limbs, abdominal muscles, and intercostal muscles.
+  Fact 0.3: The skeletal muscles that somatic motor neurons project to are involved in locomotion.
+  Fact 0.4: There are three types of somatic motor neurons.
+  Fact 0.5: The three types are alpha efferent neurons, beta efferent neurons, and gamma efferent neurons.
+  Fact 0.6: Somatic motor neurons are called efferent.
+  Fact 0.7: The name efferent indicates the flow of information from the central nervous system (CNS) to the periphery.
+Sentence 1: The term ' motor neuron ' is usually restricted to the lower motor neurons , the efferent nerves that directly innervate muscles .
+  Fact 1.0: The term 'motor neuron' is usually restricted to the lower motor neurons.
+  Fact 1.1: Lower motor neurons are the efferent nerves that directly innervate muscles.
+
+Retrieved items:
+<item 1>
+Motor neuron
+Motor neuron - wikipedia Motor neuron Jump to : navigation , search Motor neuron Micrograph of the hypoglossal nucleus showing motor neurons with their
+characteristic coarse Nissl substance ( `` tigroid '' cytoplasm ) . H&E - LFB stain . Details Location Ventral horn of the spinal cord , some cranial nerve
+nuclei Shape Projection neuron Function Excitatory projection ( to NMJ ) Neurotransmitter UMN to LMN : glutamate ; LMN to NMJ : ACh Presynaptic connections
+Primary motor cortex via the Corticospinal tract Postsynaptic connections Muscle fibers and other neurons Identifiers MeSH D009046 NeuroLex ID nifext_103 TA
+A14. 2.00. 021 FMA 5867 Anatomical terms of neuroanatomy ( edit on Wikidata ) A motor neuron ( or motoneuron ) is a neuron whose cell body is located in the
+motor cortex , brainstem or the spinal cord , and whose axon ( fiber ) projects to the spinal cord or outside of the spinal cord to directly or indirectly
+control effector organs , mainly muscles and glands . There are two types of motor neuron -- upper motor neurons and lower motor neurons .
+</item 1>
+
+<item 2>
+Motor neuron
+There are three primary categories lower motor neurons , which can be further divided in sub-categories . According to their targets , motor neurons are
+classified into three broad categories : Somatic motor neurons Special visceral motor neurons General visceral motor neurons Somatic motor neurons ( edit )
+Somatic motor neurons originate in the central nervous system , project their axons to skeletal muscles ( such as the muscles of the limbs , abdominal , and
+intercostal muscles ) , which are involved in locomotion . The three types of these neurons are the alpha efferent neurons , beta efferent neurons , and gamma
+efferent neurons . They are called efferent to indicate the flow of information from the central nervous system ( CNS ) to the periphery . Alpha motor neurons
+innervate extrafusal muscle fibers , which are the main force - generating component of a muscle . Their cell bodies are in the ventral horn of the spinal cord
+and they are sometimes called ventral horn cells . A single motor neuron may synapse with 150 muscle fibers on average . The motor neuron and all of the muscle
+fibers to which it connects is a motor unit .
+</item 2>
+
+<item 3>
+Motor neuron
+A tetanic contraction is caused by constant , very high frequency stimulation - the action potentials come at such a rapid rate that individual twitches are
+indistinguishable , and tension rises smoothly eventually reaching a plateau . Contents ( hide ) 1 Development 2 Anatomy and physiology 2.1 Upper motor neurons
+2.2 White Matter Tract 2.3 Lower Motor Neurons 2.4 Somatic motor neurons 2.4. 1 Neuromuscular Junction 2.5 Special visceral motor neurons 2.6 General visceral
+motor neurons 3 Motor neurons in regenerative medicine 4 See also 5 References 6 Sources Development ( edit ) Motor neurons begin to develop early in embryonic
+development , and motor function continues to develop well into childhood . In the neural tube cells are specified to either the rostral - caudal axis or
+ventral - dorsal axis . The axons of motor neurons begin to appear in the fourth week of development from the ventral region of the ventral - dorsal axis ( the
+basal plate ) . This homeodomain is known as the motor neural progenitor domain ( pMN ) .
+</item 3>
+
+<item 4>
+Graph query row:
+neuron: Somatic motor neurons
+relationship: RELATED_TO
+related_entity: Skeletal muscles
+type: None
+</item 4>
+
+<item 5>
+Motor neuron
+These columns are further explained in the table below . Motor Columns of Spinal Cord Motor Column Location in Spinal Cord Target Median Motor Column Present
+entire length Axial muscles Hypaxial Motor Column Thoracic Region Body wall muscles Preganglionic Motor Column Thoracic Region Sympathetic ganglion Laterl Motor
+Column Brachial and Lumbar region ( both regions are further divided into medial and lateral domains ) Muscles of the limbs Phrenic Motor Coulmn Cervical Region
+Diaphragm Anatomy and Physiology ( edit ) Spinal cord tracts Location of lower motor neurons in spinal cord Upper motor neurons ( edit ) Upper motor neurons
+originate in the motor cortex located in the precentral gyrus . The cells that make up the primary motor cortex are Betz cells , which are a type of pyramidal
+cell . The axons of these cells descend from the cortex to form the corticospinal tract . White matter Tract ( edit ) White matter tracts are bundles of axons
+and serve as means to propagate nerve impulses on a large scale . These are found in the spinal cord and appear white from the myelin surrounding axons .
+</item 5>
+
+<item 6>
+Motor neuron
+Muscle relaxation and inhibition of muscle contraction in vertebrates is obtained only by inhibition of the motor neuron itself . Muscle innervation may
+eventually play a role in the maturation of motor activity . This is how muscle relaxants work by acting on the motor neurons that innervate muscles ( by
+decreasing their electrophysiological activity ) or on cholinergic neuromuscular junctions , rather than on the muscles themselves . Special visceral motor
+neurons ( edit ) These are also known as branchial motor neurons , which are involved in facial expression , mastication , phonation , and swallowing .
+Associated cranial nerves are the oculomotor , abducens , trochlear , and hypoglossal nerves .
+</item 6>
+
+<item 7>
+Motor neuron
+Branch of NS Position Neurotransmitter Somatic n / a Acetylcholine Parasympathetic Preganglionic Acetylcholine Parasympathetic Ganglionic Acetylcholine
+Sympathetic Preganglionic Acetylcholine Sympathetic Ganglionic Norepinephrine * * Except fibers to sweat glands and certain blood vessels Motor neuron
+neurotransmitters General visceral motor neurons ( edit ) These motor neurons indirectly innervate cardiac muscle and smooth muscles of the viscera ( the
+muscles of the arteries ) : they synapse onto neurons located in ganglia of the autonomic nervous system ( sympathetic and parasympathetic ) , located in the
+peripheral nervous system ( PNS ) , which themselves directly innervate visceral muscles ( and also some gland cells ) . In consequence : the motor command of
+skeletal and branchial muscles is monosynaptic ( involving only one motor neuron , respectively , somatic and branchial , which synapses onto the muscle ) .
+</item 7>
+
+<item 8>
+Motor neuron
+the command of visceral muscles is disynaptic ( involving two neurons : the general visceral motor neuron located in the CNS , which synapses onto a ganglionic
+neuron , located in the PNS , which synapses onto the muscle ) . All vertebrate motor neurons are cholinergic , that is , they release the neurotransmitter
+acetylcholine . Parasympathetic ganglionic neurons are also cholinergic , whereas most sympathetic ganglionic neurons are noradrenergic , that is , they release
+the neurotransmitter noradrenaline . ( see Table ) Motor neurons in Regenerative medicine ( edit ) Human lower motor neurons can be generated in vitro from
+embryonic stem cells and induced pluripotent stem cells . See also ( edit ) Betz cell Central chromatolysis Motor dysfunction Nerve References ( edit ) Jump up
+^ Tortora , Gerard ; Derrickson , Bryan ( 2014 ) . Principles of Anatomy & Physiology ( 14th ed . ) . New Jersey : John Wiley & Sons , Inc . pp. 406 , 502 , 541
+. ISBN 978 - 1 - 118 - 34500 - 9 .
+</item 8>
+
+<item 9>
+Motor neuron
+These use both oxidative and glycolytic means to gain energy . In addition to voluntary skeletal muscle contraction , alpha motor neurons also contribute to
+muscle tone , the continuous force generated by noncontracting muscle to oppose stretching . When a muscle is stretched , sensory neurons within the muscle
+spindle detect the degree of stretch and send a signal to the CNS . The CNS activates alpha motor neurons in the spinal cord , which cause extrafusal muscle
+fibers to contract and thereby resist further stretching . This process is also called the stretch reflex . Beta motor neurons innervate intrafusal muscle
+fibers of muscle spindles , with collaterals to extrafusal fibres . There are two types of beta motor neurons : Slow Contracting - These innervate extrafusal
+fibers . Fast Contracting - These innervate intrafusal fibers . Gamma motor neurons innervate intrafusal muscle fibers found within the muscle spindle . They
+regulate the sensitivity of the spindle to muscle stretching . With activation of gamma neurons , intrafusal muscle fibers contract so that only a small stretch
+is required to activate spindle sensory neurons and the stretch reflex .
+</item 9>
+
+<item 10>
+Motor neuron
+There are two types of motor neuron -- upper motor neurons and lower motor neurons . Axons from upper motor neurons synapse onto interneurons in the spinal cord
+and occasionally directly onto lower motor neurons . The axons from the lower motor neurons are efferent nerve fibers that carry signals from the spinal cord to
+the effectors . Types of lower motor neurons are alpha motor neurons , beta motor neurons , and gamma motor neurons . The term ' motor neuron ' is usually
+restricted to the lower motor neurons , the efferent nerves that directly innervate muscles . A single motor neuron may innervate many muscle fibres and a
+muscle fibre can undergo many action potentials in the time taken for a single muscle twitch . As a result , if an action potential arrives before a twitch has
+completed , the twitches can superimpose on one another , either through summation or a tetanic contraction . In summation , the muscle is stimulated
+repetitively such that additional action potentials coming from the somatic nervous system arrive before the end of the twitch . The twitches thus superimpose
+on one another , leading to a force greater than that of a single twitch .
+</item 10>
+=== END ITEM id=ac01e2864714104d ===
+
+=== ITEM id=5180a0ce2e920038 ===
+Gold sentences and facts:
+Sentence 0: Ballets by Pyotr Ilyich Tchaikovsky Swan Lake ( 1876 ) Sleeping Beauty ( 1889 ) The Nutcracker ( 1892 ) List of all compositions
+  Fact 0.0: The list is titled Ballets by Pyotr Ilyich Tchaikovsky.
+  Fact 0.1: Swan Lake, a ballet by Pyotr Ilyich Tchaikovsky, is dated 1876.
+  Fact 0.2: Sleeping Beauty, a ballet by Pyotr Ilyich Tchaikovsky, is dated 1889.
+  Fact 0.3: The Nutcracker, a ballet by Pyotr Ilyich Tchaikovsky, is dated 1892.
+  Fact 0.4: The text contains the label "List of all compositions".
+
+Retrieved items:
+<item 1>
+The Sleeping Beauty (ballet)
+With subtitles in Esperanto . Solo of Prince Désiré from Pas de deux ( Act 3 ) danced by Rudolf Nureyev ( from YouTube ) Scores ( edit ) Sleeping Beauty :
+Scores at the International Music Score Library Project ( IMSLP ) History ( edit ) Tchaikovsky Research Ballets by Pyotr Ilyich Tchaikovsky Swan Lake , Op. 20
+Sleeping Beauty , Op. 66 The Nutcracker , Op. 71 List of compositions by Pyotr Ilyich Tchaikovsky The ballets and * revivals of Marius Petipa in Russia 1847 --
+59 Paquita ( * 1847 , * 1881 ) Le Diable amoureux ( as `` Satanella '' ) ( * 1848 ) Leda , the Swiss Milkmaid ( 1849 ) Giselle ( * 1850 , * 1884 , * 1899 , *
+1903 ) The Star of Granada ( 1855 ) The Rose , the Violet , and the Butterfly ( 1857 ) Le Corsaire ( * 1858 , * 1863 , * 1868 ,
+</item 1>
+
+<item 2>
+The Sleeping Beauty (ballet)
+References ( edit ) Jump up ^ Roger Fiske ( 1973 ) : Eulenberg Edition , Foreword to the complete score of the ballet : `` On 2 Feb 1939 Sadler 's Wells
+presented the ballet in London with Margot Fonteyn in the title role ... This was the first successful production outside Russia , and it led to The Sleeping
+Beauty becoming extremely popular in all countries where classical ballet is cultivated ... The way in which he developed his themes and the lavish originality
+with which he scored the music raised his ballets far above those his predecessors had composed . '' Jump up ^ `` The Sleeping Beauty '' . Collections Online .
+Royal Opera House . Retrieved 9 April 2016 . Jump up ^ `` Review / Ballet ; San Francisco ' Sleeping Beauty ' Underlines Russian Influences '' . Retrieved
+November 27 , 2013 . New York Times / Anna Kisselgoff , March 20 , 1990 ^ Jump up to : Brillarelli , Livia ( 1995 ) . Cecchetti A Ballet Dynasty . Toronto :
+Dance Collection Danse Educational Publications . p. 31 .
+</item 2>
+
+<item 3>
+The Sleeping Beauty (ballet)
+2 in C ♯ minor Grand Piano Sonata in G major Portrayals Tchaikovsky ( 1969 film ) Music competitions International Tchaikovsky Competition International
+Tchaikovsky Competition for Young Musicians Related articles Antonina Miliukova Belyayev circle Death Modest Ilyich Tchaikovsky Musical style Nadezhda von Meck
+Pyotr Ilyich Tchaikovsky in popular media Symphonies by Pyotr Ilyich Tchaikovsky Tchaikovsky State House - Museum The Five Vladimir Davydov Book : Pyotr Ilyich
+Tchaikovsky List of compositions by Pyotr Ilyich Tchaikovsky Category : Pyotr Ilyich Tchaikovsky `` Sleeping Beauty '' / `` Little Briar Rose '' by Charles
+Perrault and the Brothers Grimm Theatre La Belle au Bois Dormant ( opera ) The Sleeping Beauty ( ballet ) Variants Sun , Moon ,
+</item 3>
+
+<item 4>
+The Sleeping Beauty (ballet)
+19 , as no. 18 was cut in the original production No. 18 Entr'acte symphonique ( solo for violin with light orchestral accompaniment , composed for Leopold Auer
+, cut from the original production ) Scene II -- Le château de la belle au bois dormant No. 19 Scène du château de sommeil No. 20 Scène et final -- Le réveil
+d'Aurore The Bluebird and Princess Florina ( Valeri Panov and Natalia Makarova ) from the 1964 Russian motion picture featuring artists of the Kirov Ballet .
+Act III -- Les Noces de Désiré et d'Aurore No. 21 Marche No. 22 Grand polonaise dansée ( a.k.a. The Procession of the Fairy Tales ) Grand divertissement -- No.
+23 Pas de quatre a . Entrée b . Variation de la fée - Or ( transferred by Petipa to Act II as a variation for Carlotta Brianza in the original production ) c .
+</item 4>
+
+<item 5>
+The Sleeping Beauty (ballet)
+The work has become one of the classical repertoire 's most famous ballets . Contents ( hide ) 1 History 1.1 Composition history 1.2 Performance history 2 Roles
+and original cast 3 Instrumentation 4 Roles 5 Synopsis 6 Structure 7 Versions by other hands 7.1 Piano arrangements 7.2 Aurora 's Wedding by Sergei Diaghilev 8
+Trademark controversy 9 References 10 External links 10.1 Video samples 10.2 Scores 10.3 History History ( edit ) Composition history ( edit ) Tchaikovsky was
+approached by the Director of the Imperial Theatres in St. Petersburg , Ivan Vsevolozhsky on 25 May 1888 about a possible ballet adaptation on the subject of
+the story of Undine . It was later decided that Charles Perrault 's La Belle au bois dormant would be the story for which Tchaikovsky would compose the music
+for the ballet . Tchaikovsky did not hesitate to accept the commission , although he was aware that his only previous ballet , Swan Lake , met with little
+enthusiasm at that stage of his career .
+</item 5>
+
+<item 6>
+The Sleeping Beauty (ballet)
+The ballet scenario that Tchaikovsky worked on was based on the Brothers Grimm 's version of Perrault 's work entitled ' Dornröschen ' . In that version , the
+Princess 's parents ( the King and the Queen ) survived the 100 - year sleep to celebrate the Princess 's wedding to the Prince . However , Vsevolozhsky
+incorporated Perrault 's other characters from his stories into the ballet , such as Puss in Boots , Little Red Riding Hood , Cinderella , Bluebird , Bluebeard
+, Ricky of the Tuft and Tom Thumb . Other French fairy tale characters to be featured are Beauty and the Beast , Pretty Goldilocks and The White Cat .
+Regardless , Tchaikovsky was happy to inform the Director of the Imperial Theatre that he had great pleasure studying the work and had come away with adequate
+inspiration to do it justice . The choreographer was Marius Petipa , ballet master of the Imperial Ballet , who wrote a very detailed list of instructions as to
+the musical requirements .
+</item 6>
+
+<item 7>
+The Sleeping Beauty (ballet)
+* 1895 ) The Sleeping Beauty ( 1890 ) Nénuphar ( 1890 ) Kalkabrino ( 1891 ) A Fairy Tale ( 1891 ) La Sylphide ( * 1892 ) The Nutcracker ( 1892 ) Cinderella (
+1893 ) The Awakening of Flora ( 1894 ) Swan Lake ( * 1895 ) The Little Humpbacked Horse ( as `` The Tsar Maiden '' ) ( * 1895 ) The Calvary Halt ( 1896 ) The
+Pearl ( 1896 ) Bluebeard ( 1896 ) Raymonda ( 1898 ) 1900 -- 03 Les Ruses d'Amour or The Trial of Damis ( 1900 ) The Seasons ( 1900 ) Harlequinade ( 1900 ) The
+Heart of the Marquis ( 1902 ) The Magic Mirror ( 1903 ) The Romance of the Rosebud and the Butterfly ( never presented ) Pyotr Ilyich Tchaikovsky Operas The
+Voyevoda Undina The Oprichnik Vakula the Smith Eugene Onegin The Maid of Orleans Mazepa
+</item 7>
+
+<item 8>
+The Sleeping Beauty (ballet)
+The Oprichnik Vakula the Smith Eugene Onegin The Maid of Orleans Mazepa ( or Mazeppa ) Cherevichki The Enchantress The Queen of Spades Iolanta Ballets Swan Lake
+The Sleeping Beauty The Nutcracker Symphonies No. 1 in G minor ( `` Winter Daydreams '' ) No. 2 in C minor ( `` Little Russian '' ) No. 3 in D major ( `` Polish
+'' ) No. 4 in F minor Symphony in B minor ( `` Manfred '' ) No. 5 in E minor No. 6 in B minor ( `` Pathétique '' ) No. 7 in E ♭ major ( unfinished ) Concertante
+Piano Concerto No. 1 in B ♭ minor Piano Concerto No. 2 in G major Piano Concerto No.
+</item 8>
+
+<item 9>
+The Sleeping Beauty (ballet)
+The Sleeping Beauty ( ballet ) - wikipedia The Sleeping Beauty ( ballet ) Jump to : navigation , search Ballets by Pyotr Ilyich Tchaikovsky Swan Lake ( 1876 )
+Sleeping Beauty ( 1889 ) The Nutcracker ( 1892 ) List of all compositions The Sleeping Beauty ( Russian : Спящая красавица / Spyashchaya krasavitsa ) is a
+ballet in a prologue and three acts , first performed in 1890 . The music was composed by Pyotr Ilyich Tchaikovsky ( his opus 66 ) . The score was completed in
+1889 , and is the second of his three ballets . The original scenario was conceived by Ivan Vsevolozhsky , and is based on Charles Perrault 's La Belle au bois
+dormant . The choreographer of the original production was Marius Petipa . The premiere performance took place at the Mariinsky Theatre in St. Petersburg on
+January 15 , 1890 . The work has become one of the classical repertoire 's most famous ballets .
+</item 9>
+
+<item 10>
+The Sleeping Beauty (ballet)
+This version has been performed by a number of central European ballet companies over the past two decades . Roles and original cast ( edit ) Role Mariinsky
+1890 Bolshoi 1899 King Florestan Feliks Krzesiński ( Mathilde Kschessinska 's father ) Queen Giuseppina Cecchetti Princess Aurora , the Sleeping Beauty Carlotta
+Brianza Lyubov Roslavleva Lilac Fairy Marie Petipa M. Grachevskaya Carabosse Enrico Cecchetti Vasiliy Geltser Prince Désiré Pavel Gerdt Ivan Khlyustin Bluebird
+Enrico Cecchetti Princess Florine Varvara Nikitina The ballet 's premiere received more favorable accolades than Swan Lake from the press but Tchaikovsky never
+had the luxury of being able to witness his work become an instant success in theatres outside of Russia . He died in 1893 .
+</item 10>
+=== END ITEM id=5180a0ce2e920038 ===
+
+=== ITEM id=fc1c62d785afe2d6 ===
+Gold sentences and facts:
+Sentence 0: Important production centres today are the Hallertau in Germany ( more hop - growing area than any other country as of 2006 ) , the Yakima ( Washington ) and Willamette ( Oregon ) valleys , and western Canyon County , Idaho ( including the communities of Parma , Wilder , Greenleaf , and Notus ) . The principal production centres in the UK are in Kent ( which produces Kent Goldings hops ) , Herefordshire , and Worcestershire . Essentially all of the harvested hops are used in beer making .
+  Fact 0.0: The Hallertau in Germany has more hop-growing area than any other country as of 2006.
+  Fact 0.1: The Hallertau in Germany is an important hop production centre today.
+  Fact 0.2: The Yakima valley in Washington is an important hop production centre today.
+  Fact 0.3: The Willamette valley in Oregon is an important hop production centre today.
+  Fact 0.4: Western Canyon County, Idaho is an important hop production centre today.
+  Fact 0.5: Western Canyon County, Idaho includes the communities of Parma, Wilder, Greenleaf, and Notus.
+  Fact 0.6: The principal hop production centres in the UK are in Kent.
+  Fact 0.7: Kent produces Kent Goldings hops.
+  Fact 0.8: The principal hop production centres in the UK are in Herefordshire.
+  Fact 0.9: The principal hop production centres in the UK are in Worcestershire.
+  Fact 0.10: Essentially all of the harvested hops are used in beer making.
+Sentence 1: Hops production is concentrated in moist temperate climates , with much of the world 's production occurring near the 48th parallel north . Hop plants prefer the same soils as potatoes and the leading potato - growing states in the United States are also major hops - producing areas ; however , not all potato - growing areas can produce good hops naturally : soils in the Maritime Provinces of Canada , for example , lack the boron that hops prefer . Historically , hops were not grown in Ireland , but were imported from England . In 1752 more than 500 tons of English hops were imported through Dublin alone .
+  Fact 1.0: Hops production is concentrated in moist temperate climates.
+  Fact 1.1: Much of the world's hops production occurs near the 48th parallel north.
+  Fact 1.2: Hop plants prefer the same soils as potatoes.
+  Fact 1.3: The leading potato-growing states in the United States are also major hops-producing areas.
+  Fact 1.4: Not all potato-growing areas can produce good hops naturally.
+  Fact 1.5: Soils in the Maritime Provinces of Canada lack the boron that hops prefer.
+  Fact 1.6: Historically, hops were not grown in Ireland.
+  Fact 1.7: Historically, hops were imported into Ireland from England.
+  Fact 1.8: In 1752 more than 500 tons of English hops were imported through Dublin alone.
+
+Retrieved items:
+<item 1>
+Hops
+Because pollinated seeds are undesirable for brewing beer , only female plants are grown in hop fields , thus preventing pollination . Female plants are
+propagated vegetatively , and male plants are culled if plants are grown from seeds . Hop plants are planted in rows about 2 to 2.5 metres ( 7 to 8 ft ) apart .
+Each spring , the roots send forth new bines that are started up strings from the ground to an overhead trellis . The cones grow high on the bine , and in the
+past , these cones were picked by hand . Harvesting of hops became much more efficient with the invention of the mechanical hops separator , patented by Emil
+Clemens Horst in 1909 . Harvest comes near the end of summer when the bines are pulled down and the flowers are taken to a hop house or oast house for drying .
+Hop houses are two - story buildings , of which the upper story has a slatted floor covered with burlap . Here the flowers are poured out and raked even . A
+heating unit on the lower floor is used to dry the hops .
+</item 1>
+
+<item 2>
+Hops
+Hops were then grown as far north as Aberdeen , near breweries for infrastructure convenience . According to Thomas Tusser 's 1557 Five Hundred Points of Good
+Husbandry : `` The hop for his profit I thus do exalt , It strengtheneth drink and it flavoureth malt ; And being well - brewed long kept it will last , And
+drawing abide , if ye draw not too fast . '' In England there were many complaints over the quality of imported hops , the sacks of which were often
+contaminated by stalks , sand or straw to increase their weight . As a result , in 1603 , King James I approved an Act of Parliament banning the practice by
+which `` the Subjects of this Realm have been of late years abused &c. to the Value of £ 20,000 yearly , besides the Danger of their Healths '' . Hop
+cultivation was begun in the present - day United States in 1629 by English and Dutch farmers . Before prohibition , cultivation was mainly centred around New
+York , California , Oregon , and Washington state .
+</item 2>
+
+<item 3>
+Hops
+Hops - wikipedia Hops Jump to : navigation , search For other uses , see hop ( disambiguation ) . Hop flower in a hop yard in the Hallertau , Germany
+Cross-section drawing of a hop Hops are the flowers ( also called seed cones or strobiles ) of the hop plant Humulus lupulus . They are used primarily as a
+flavouring and stability agent in beer , to which they impart bitter , zesty , or citric flavours ; though they are also used for various purposes in other
+beverages and herbal medicine . The hop plant is a vigorous , climbing , herbaceous perennial , usually trained to grow up strings in a field called a hopfield
+, hop garden ( nomenclature in the South of England ) , or hop yard ( in the West Country and U.S. ) when grown commercially . Many different varieties of hops
+are grown by farmers around the world , with different types used for particular styles of beer . The first documented use of hops in beer is from the 9th
+century , though Hildegard of Bingen , 300 years later , is often cited as the earliest documented source .
+</item 3>
+
+<item 4>
+Hops
+Problems with powdery mildew and downy mildew devastated New York 's production by the 1920s , and California only produces hops on a small scale . Hop bars
+were used before modern machinery was invented to make the holes for the hop poles . World production ( edit ) Hops production is concentrated in moist
+temperate climates , with much of the world 's production occurring near the 48th parallel north . Hop plants prefer the same soils as potatoes and the leading
+potato - growing states in the United States are also major hops - producing areas ; however , not all potato - growing areas can produce good hops naturally :
+soils in the Maritime Provinces of Canada , for example , lack the boron that hops prefer . Historically , hops were not grown in Ireland , but were imported
+from England . In 1752 more than 500 tons of English hops were imported through Dublin alone .
+</item 4>
+
+<item 5>
+Hops
+private and public breeding programs are using their stock material . Particular hop varieties are associated with beer regions and styles , for example pale
+lagers are usually brewed with European ( often German , Polish or Czech ) noble hop varieties such as Saaz , Hallertau and Strissel Spalt . British ales use
+hop varieties such as Fuggles , Goldings and W.G.V. North American beers often use Cascade hops , Columbus hops , Centennial hops , Willamette , Amarillo hops
+and about forty more varieties as the U.S.A. have lately been the more significant breeders of new hop varieties , including dwarf hop varieties . Hops from New
+Zealand , such as Pacific Gem , Motueka and Nelson Sauvin , are used in a `` Pacific Pale Ale '' style of beer with increasing production in 2014 . Noble hops (
+edit ) Mature hops growing in a hop yard in Germany The term `` noble hops '' traditionally refers to varieties of hops which are low in bitterness and high in
+aroma . They are the European cultivars or races Hallertau , Tettnanger , Spalt , and Saaz .
+</item 5>
+
+<item 6>
+Hops
+In 1752 more than 500 tons of English hops were imported through Dublin alone . Important production centres today are the Hallertau in Germany ( more hop -
+growing area than any other country as of 2006 ) , the Yakima ( Washington ) and Willamette ( Oregon ) valleys , and western Canyon County , Idaho ( including
+the communities of Parma , Wilder , Greenleaf , and Notus ) . The principal production centres in the UK are in Kent ( which produces Kent Goldings hops ) ,
+Herefordshire , and Worcestershire . Essentially all of the harvested hops are used in beer making .
+</item 6>
+
+<item 7>
+Hops
+Data may be shared with other brewers via BeerXML allowing the reproduction of a recipe allowing for differences in hop availability . Varieties ( edit ) Main
+article : List of hop varieties This section needs additional citations for verification . Please help improve this article by adding citations to reliable
+sources . Unsourced material may be challenged and removed . ( July 2014 ) ( Learn how and when to remove this template message ) Breeding programs ( edit )
+There are many different varieties of hops used in brewing today . Historically , hops varieties were identified by geography ( such as Hallertau , Spalt , and
+Tettnang from Germany ) , by the farmer who is recognized as first cultivating them ( such as Goldings or Fuggles from England ) , or by their growing habit (
+e.g. , Oregon Cluster ) . Around 1900 , a number of institutions began to experiment with breeding specific hop varieties . The breeding program at Wye College
+in Wye , Kent was started in 1904 and rose to prominence through the work of Prof. E.S. Salmon .
+</item 7>
+
+<item 8>
+Hops
+Contents ( hide ) 1 History 2 World production 2.1 Cultivation and harvest 2.2 Migrant labor and social impact 3 Chemical composition 3.1 Alpha acids 3.2 Beta
+acids 3.3 Essential oils 3.4 Flavonoids 4 Brewing 5 Varieties 5.1 Breeding programs 5.2 Noble hops 6 Other uses 7 Toxicity 8 See also 9 References 10 External
+links History ( edit ) The first documented hop cultivation was in 736 , in the Hallertau region of present - day Germany , although the first mention of the
+use of hops in brewing in that country was 1079 . However , in a will of Pepin the Short , the father of Charlemagne , hop gardens were left to the Cloister of
+Saint - Denis in 768 . Not until the 13th century did hops begin to start threatening the use of gruit for flavouring . Gruit was used when taxes were levied by
+the nobility on hops . Whichever was taxed made the brewer then quickly switch to the other .
+</item 8>
+
+<item 9>
+Hops
+Essentially all of the harvested hops are used in beer making . Early season hop growth in a hop yard in the Yakima River Valley of Washington with Mount Adams
+in the distance Hop producing country 2012 hop output in tonnes ( t ) Germany 34,434 United States 27,782 China 11,000 Czech Republic 4,338 Poland 2,206 North
+Korea 2,000 Albania 1,650 United Kingdom 1,650 Slovenia 1,338 Cultivation and harvest ( edit ) A superstructure of overhead wires supports strings that in turn
+support bines Although hops are grown in most of the continental United States and Canada , cultivation of hops for commercial production requires a particular
+environment . As hops are a climbing plant , they are trained to grow up trellises made from strings or wires that support the plants and allow them
+significantly greater growth with the same sunlight profile . In this way , energy that would have been required to build structural cells is also freed for
+crop growth . The hop plant 's reproduction method is that male and female flowers develop on separate plants , although occasionally a fertile individual will
+develop which contains both male and female flowers .
+</item 9>
+
+<item 10>
+Hops
+A heating unit on the lower floor is used to dry the hops . When dry , the hops are moved to a press , a sturdy box with a plunger . Two long pieces of burlap
+are laid into the hop press at right angles , the hops are poured in and compressed into bales . Hop cones contain different oils , such as lupulin , a
+yellowish , waxy substance , an oleoresin , that imparts flavour and aroma to beer . Lupulin contains lupulone and humulone , which possess antibiotic
+properties , suppressing bacterial growth favoring brewer 's yeast to grow . After lupulin has been extracted in the brewing process the papery cones are
+discarded . Migrant labor and social impact ( edit ) Hops harvest in the Kingdom of Bohemia ( 1898 ) Hops harvest in Skåne , Sweden in 1937 The need for massed
+labor at harvest time meant hop - growing had a big social impact . Around the world , the labor - intensive harvesting work involved large numbers of migrant
+workers who would travel for the annual hop harvest .
+</item 10>
+=== END ITEM id=fc1c62d785afe2d6 ===

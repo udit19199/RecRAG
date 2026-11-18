@@ -1,0 +1,1020 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=9be2818d07bcc4c4 ===
+Gold sentences and facts:
+Sentence 0: Erik ten Hag is a top coach from Ajax but they need a top blueprint not only for now but for the next five years, and work towards that, and sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right things.
+  Fact 0.0: Erik ten Hag is a top coach from Ajax.
+  Fact 0.1: The club needs a top blueprint not only for now but for the next five years.
+  Fact 0.2: The club should work towards that blueprint.
+  Fact 0.3: Sometimes on that journey there are hard moments when the club does not get the right results.
+  Fact 0.4: The club can be doing the right things even when it does not get the right results.
+Sentence 1: Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side.
+  Fact 1.0: Manchester United are out of Europe altogether.
+  Fact 1.1: Manchester United put in a limp display against Bayern at Old Trafford.
+  Fact 1.2: Kingsley Coman sealed a 1-0 win at Old Trafford.
+  Fact 1.3: Kingsley Coman's 1-0 win was for Thomas Tuchel's side.
+
+Retrieved items:
+<item 1>
+Paul Mitchell signed Tottenham and Chelsea superstars, fell out with Daniel Levy and has tailor-made plan for Manchester United (TalkSport,
+2023-10-16T21:00:00+00:00)
+"We are a long time from the Sir Alex Ferguson era. Erik ten Hag is a top coach from Ajax but they need a top blueprint not only for now but for the next five
+years, and work towards that, and sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right
+things.
+
+"You have to know that, over that period, the consistency of the decision-making will yield a good end result. I think we've seen that both Manchester City and
+Liverpool, that when you adopt that long-term strategy you can get real consistency and sustainable success.
+
+"I think that's the biggest thing for Manchester United; putting down their identity of what they want to be today, but most crucially what they want to be in
+five years' time, and where they want to be, and what they want to look like; from everything from young players, to the style of play, to the whole culture
+peace in Manchester United."
+</item 1>
+
+<item 2>
+Manchester United face Galatasaray with high hopes but bad memories (The Guardian, 2023-11-27T22:30:42+00:00)
+In 2020‑21, they lost their final two group games and were eliminated, while back in 2015-16, Wolfsburg won the deciding group match to knock out United.
+
+Mauro Icardi celebrates scoring the winner for Galatasaray in their 3-2 win at Old Trafford in early October. Photograph: Darren Staples/AFP/Getty Images
+
+When it comes to pressure in the Champions League of late, United do not cope well and there are few events trickier than a night in Istanbul. Pallister smiled
+at a bell boy at the team hotel and got a finger across the throat in response, Brian McClair had a cleaner bang on his bedroom ceiling in the night and other
+players received numerous phone calls to disrupt their sleep. The current squad could face the same level of malevolence and need to be prepared.
+
+United have done little learning in recent times, repeating the same failures in Europe’s elite competition.
+</item 2>
+
+<item 3>
+Erik ten Hag could pay the price for Manchester United’s incompetent Champions League campaign (The Independent - Sports, 2023-12-12T22:36:20+00:00)
+There was not even the sense of heroic failure that accompanied their quarter-final exit to Bayern in 2010. There was just crushing failure. Because it wasn’t
+Bayern who eliminated them. It was Galatasaray, who won at Old Trafford and scored six goals over 180 minutes against United. It was FC Copenhagen, who
+qualified instead of them. Rasmus Hojlund’s former club will be in the last 16. His current one won’t. Copenhagen will be the anomalies in the draw, the
+outsiders with the spot that had seemed reserved for United.
+
+Manchester United’s defeat means they miss out on a spot in the Europa League (PA)
+
+Instead, they are cast out of continental competition altogether. Europe’s sinking superpower have become just the fourth English team to prop up a Champions
+League group when it concluded. There was something predictable about the manner of their demise; their defence was unlocked by Harry Kane, with a lovely flick.
+</item 3>
+
+<item 4>
+Champions League permutations, scenarios: What teams need to qualify from groups for 2023/24 Round of 16 stage (Sporting News, 2023-12-12T21:28:00+00:00)
+The UEFA Champions League has reached the end of its group stage, with 16 precious places in the first knockout round now claimed.
+
+Manchester City are looking to go back-to-back after their triumph in last season's Champions League, potentially becoming the first English club since
+Nottingham Forest in 1980 to successfully defend the trophy.
+
+The likes of Bayern Munich, Real Madrid and Barcelona have also enjoyed strong group-stage campaigns and will surely be in the mix towards the sharp end of the
+competition. Atletico Madrid and Real Sociedad will complete the Spanish contingent in the next round.
+
+Manchester United and Newcastle United will play no further part in Europe, though, having been eliminated by finishing bottom of their groups. Paris
+Saint-Germain will be in the Round of 16, though.
+
+The Sporting News reviews the group stage ahead of its final match night and examines what teams from each group need to qualify for the Round of 16.
+</item 4>
+
+<item 5>
+Manchester United out of Europe after defeat to Bayern Munich (The Independent - Sports, 2023-12-12T22:38:05+00:00)
+Sign up to Miguel Delaney’s Reading the Game newsletter sent straight to your inbox for free Sign up to Miguel’s Delaney’s free weekly newsletter Please enter a
+valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and updates from The Independent. Read our
+privacy notice Thanks for signing up to the
+
+Football email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Another infamous European night at Old Trafford. It should be a landmark low, but almost the most deflating element of this 1-0 defeat to Bayern Munich was how
+grimly routine it all felt.
+
+Manchester United, one of the grandest and richest names in this competition, have again gone out of the Champions League at the group stage. It is the third
+time it has happened since Sir Alex Ferguson, meaning it’s their most common round of exit in that period.
+</item 5>
+
+<item 6>
+Manchester United out of Europe after defeat to Bayern Munich (The Independent - Sports, 2023-12-12T22:38:05+00:00)
+The performance this season was so bad that they find themselves out of Europe altogether as the bottom team in the group, although some at the club might find
+solace from that. There wasn’t much else. The second place they aimed for has instead gone to Copenhagen, a club with a fraction of United’s budget. That is
+where the damage was done.
+
+While that meant there was only ever a slim hope of going through – and the Danish side’s victory over Galatasaray ensured any win would be irrelevant – the
+club’s rich legacy in this competition was built on such defiance. There was absolutely none of it here.
+
+There was nothing much at all. Where was the energy? Where was the intensity? The Stretford End eventually implored United to “attack attack attack” but the
+complete absence of any such impulses eventually left some of the stadium booing the side off at the end.
+</item 6>
+
+<item 7>
+Leaky defence ‘isn’t good enough’ and ‘scars’ grow from throwing away leads – It’s all going wrong for Manchester United in Europe (TalkSport,
+2023-11-29T23:40:49+00:00)
+4 Fernandes criticised their lack of ability to kill games off Credit: Getty
+
+He added: "It's too bad to be honest, I don't want to be too negative but for what we've been doing in the Champions League is not enough, we have to control
+our games every time.
+
+"It's not the first game we've had like this, even with FC Copenhagen, I understand we had one player less but we scored to make it 3-2 and we had to secure the
+result.
+
+"We have to understand in these kind of games, in these kind of stages, you have to be smart enough and manage the game better."
+
+United have also conceded 14 goals in the Champions League group stages, a new and unwanted record for the club that could get worse when they face Bayern in
+the final match.
+</item 7>
+
+<item 8>
+Ten Hag’s Manchester United stand up and die at club stuck in the past tense | Barney Ronay (The Guardian, 2023-12-12T23:53:03+00:00)
+The 1990s were a hell of a decade. They still are around here.
+
+'We've lost decisive players': Ten Hag says injuries were key to Champions League exit – video
+
+So much for the good news then. The bad news is that Ten Hag’s United have now compiled arguably the worst performance by any English team in a Champions League
+group stage. OK, it’s no Blackburn Rovers. But there are extra marks here for United’s pedigree, for the fact the group really wasn’t much of a group, and for
+United managing to finish bottom, shipping 15 goals in the process, more than any other English team ever.
+
+Plus of course there were just so many moments of farce along the way, a six-part saga of chaos, collapse and laughter in the dark. We remember Onana diving out
+of the way of the ball in Munich. We remember Onana also diving out of the way of the ball in Istanbul.
+</item 8>
+
+<item 9>
+Manchester United face Galatasaray with high hopes but bad memories (The Guardian, 2023-11-27T22:30:42+00:00)
+United have done little learning in recent times, repeating the same failures in Europe’s elite competition. It would not be a disgrace to lose against a good
+Galatasaray team, especially given Erik ten Hag is missing key players, but if the worst does happen, everyone will need to come out of the experience stronger.
+Regardless of the result, it should be a night of education when it comes to the demands of the Champions League.
+
+Six of United’s squad that failed in 1993 went on to win the competition six years later. “It did galvanise us,” says Mike Phelan, who started in central
+midfield 30 years ago. “Winning the Cup Winners’ Cup took us to another level and we felt pretty comfortable with each other and felt we could develop into a
+serious team, and I think going into the Champions League was one of those moments where we expected to do well – the experiences along the way were great and
+took us to the next level further down the line.
+</item 9>
+
+<item 10>
+Champions League permutations, scenarios: What teams need to qualify from groups for 2023/24 Round of 16 stage (Sporting News, 2023-12-12T21:28:00+00:00)
+Galatasaray knew that if they beat Copenhagen at Parken they would go through but Lukas Lerager scored the only goal in a 1-0 win for the hosts
+
+Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's
+side.
+
+Results
+
+Date Fixture/Result Sept. 20 Galatasaray 2-2 FC Copenhagen Sept. 20 Bayern Munich 4-3 Manchester United Oct. 3 Manchester United 2-3 Galatasaray Oct. 3 FC
+Copenhagen 1-2 Bayern Munich Oct. 24 Galatasaray 1-3 Bayern Munich Oct. 24 Manchester United 1-0 FC Copenhagen Nov. 8 Bayern Munich 2-1 Galatasaray Nov. 8 FC
+Copenhagen 4-3 Manchester United Nov. 29 Galatasaray 3-3 Manchester United Nov.
+</item 10>
+=== END ITEM id=9be2818d07bcc4c4 ===
+
+=== ITEM id=dc0651ea84282314 ===
+Gold sentences and facts:
+Sentence 0: “She’s got the Eras Tour booked all through next year, and she’d rather die than cancel a show.
+  Fact 0.0: The person quoted has the Eras Tour booked all through next year.
+  Fact 0.1: The person quoted would rather die than cancel a show.
+Sentence 1: "It was almost like this very strange, subtle clue to the media that they don't know everything that happened in that relationship, and I can have something really major and traumatic happen to me and they don't know about it," she told NPR.
+  Fact 1.0: The speaker said it was almost like a very strange, subtle clue to the media that they don't know everything that happened in that relationship.
+  Fact 1.1: The speaker said she can have something really major and traumatic happen to her and they don't know about it.
+  Fact 1.2: The speaker told NPR this.
+Sentence 2: Now, Swift has shared that she has nothing to hide in her new relationship with Kelce.
+  Fact 2.0: Taylor Swift has shared that she has nothing to hide in her new relationship with Kelce.
+
+Retrieved items:
+<item 1>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+Taylor Swift's biggest album 1989 returns with new tracks from the vault Published 27 October
+
+Image source, Getty Images Image caption, Taylor Swift's 1989 tour sold 2.2m tickets and earned more than $250m at the box office
+
+On Friday, Taylor Swift released a new version of 1989 - the biggest-selling album of her career, and the one that definitively turned her into a pop star.
+
+Featuring hits like Shake It Off, Blank Space and Style, it was originally written during the 2013-14 Red Tour, with demos stored on her phone in a folder named
+"Sailor Twips".
+
+Awarded a Grammy for album of the year, it has spent 325 weeks in the UK charts.
+
+But now she has re-recorded it as the latest part of an ongoing campaign to regain control of her work, after an investment company bought her master tapes in
+2019.
+
+This is the biggest and riskiest part of the project.
+</item 1>
+
+<item 2>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+In interviews, Taylor delighted in revealing this was based on a true story.
+
+"It was almost like this very strange, subtle clue to the media that they don't know everything that happened in that relationship, and I can have something
+really major and traumatic happen to me and they don't know about it," she told NPR.
+
+In her Rolling Stone cover story, Taylor said the crash actually occurred on a snowmobile "with an ex who lost control and wrecked it so badly that she saw her
+life flash before her eyes".
+
+That prompted speculation the track was also about Styles: The couple had gone skiing with Justin Bieber and Selena Gomez in late 2012.
+
+The lyrics also reference their identical aeroplane necklaces and a December break-up, which ties in with the "Sad Taylor on a boat" meme.
+
+But the singer steadfastly refuses to name names: "The fact that I've never confirmed who those songs are about makes me feel like there is still one card I'm
+holding," she told GQ.
+</item 2>
+
+<item 3>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+She specified that she isn’t trying to hide her relationship from the public eye.
+
+“When you say a relationship is public, that means I’m going to see him do what he loves, we’re showing up for each other, other people are there and we don’t
+care,” she said. “The opposite of that is you have to go to an extreme amount of effort to make sure no one knows that you’re seeing someone. And we’re just
+proud of each other.”
+
+During the interview with Time, the Grammy winner addressed how her appearances at Kelce’s games are heavily publicised. So far, she’s attended five of Kelce’s
+games, including one on 3 December, and she’s often seated in the Kelce family suite during the events.
+
+“There’s a camera, like, a half-mile away, and you don’t know where it is, and you have no idea when the camera is putting you in the broadcast, so I don’t know
+if I’m being shown 17 times or once,” she said.
+</item 3>
+
+<item 4>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+No-one, it turns out.
+
+The song is thematically similar to Blank Space, commenting on the media's portrayal of Taylor's relationships: "But if I'm all dressed up / They might as well
+be lookin' at us / And if they call me a slut / You know it might be worth it for once."
+
+The best of the new tracks is Is It Over Now. An angrier take on 1989's philosophical break-up songs, it calls back to the Harry Styles snowmobile incident (see
+also, Out Of The Woods) then, deliciously, references the "Sad Taylor Boat" meme - a photo of Taylor fleeing a vacation alone after the couple split up.
+
+She goes on to call an ex a "lying traitor", accuses them of parading their new relationships in public, and noting that every new girlfriend looks like her.
+
+"If she's got blue eyes, I will surmise that you'll probably date her."
+</item 4>
+
+<item 5>
+Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)
+“Over the years, I’ve learned I don’t have the time or bandwidth to get pressed about things that don’t matter,” Swift told Time. “Yes, if I go out to dinner,
+there’s going to be a whole chaotic situation outside the restaurant. But I still want to go to dinner with my friends.
+
+“Life is short. Have adventures. Me locking myself away in my house for a lot of years - I’ll never get that time back,” she added. “I’m more trusting now than
+I was six years ago.”
+</item 5>
+
+<item 6>
+Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)
+“I think some people think that they saw our first date at that game? We would never be psychotic enough to hard launch a first date,” Swift joked.
+
+Back in April, it was revealed that Swift and British actor Joe Alwyn had broken up after six years of dating. The former couple were notoriously private, as
+the Conversations with Friends star previously expressed he didn’t want to discuss their relationship because it “feeds into a weird part of the culture”.
+
+Now, Swift has shared that she has nothing to hide in her new relationship with Kelce. “When you say a relationship is public, that means I’m going to see him
+do what he loves, we’re showing up for each other, other people are there and we don’t care,” she said. “The opposite of that is you have to go to an extreme
+amount of effort to make sure no one knows that you’re seeing someone. And we’re just proud of each other.”
+</item 6>
+
+<item 7>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+Like, through thick and thin, sickness and health love," she told MTV.
+
+Drawing directly on conversations she'd had with Lena, the song blends scenes of everyday life (burnt toast, borrowed shirts) with moments of incandescent
+tenderness (kisses on sidewalks and late night heart-to-hearts).
+
+In an interview with Elle, Taylor talked wistfully about the couple's ease around each other.
+
+"I've never had that," she said. "[But] now I have more of a grasp on the fact that when you're in a state of infatuation and you think everything that person
+does is perfect, it then - if you're lucky - morphs into a real relationship when you see that that person is not in fact perfect, but you still want to see
+them every day."
+</item 7>
+
+<item 8>
+Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)
+Since then, Swift has released four “Taylor’s Version” albums: Fearless (Taylor’s Version) in April 2021, Red (Taylor’s Version) in November 2021, Speak Now
+(Taylor’s Version) in July 2023, and 1989 (Taylor’s Version) in October 2023.
+
+“It’s not lost on me that the two great catalysts for this happening were two horrendous things that happened to me,” Swift said, when asked about the success
+of her tour. “The first was getting cancelled within an inch of my life and sanity. The second was having my life’s work taken away from me by someone who hates
+me.”
+
+While Swift is arguably more famous now than ever before, the Grammy winner revealed that the constant attention and swarms of paparazzi won’t stop her from
+living her life. There’s also constant rumours surrounding her personal life, specifically rumours about her relationship with Alwyn that her publicist, Tree
+Paine, was forced to publicly deny.
+</item 8>
+
+<item 9>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+All proceeds from the track are donated to New York City's Public Schools.
+
+Image source, Getty Images Image caption, The original version of 1989 won three Grammy Awards, including Album of the Year
+
+2) Blank Space
+
+Pretty much the perfect Taylor Swift song, Blank Space takes every horrible rumour that was being spread about her love life, and amplifies it with satirical
+relish.
+
+"In the last couple of years the media have had a wonderful fixation on painting me as the psycho serial dater girl," she told the Grammy Museum. "Every article
+was like, 'Here's Taylor Swift standing near some guy. WATCH OUT GUY!'
+
+"My first reaction was to be like, 'That's a bummer. This isn't fun for me'.
+</item 9>
+
+<item 10>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+This isn't fun for me'. But my second reaction was, 'Hey, that's actually a really interesting character they're writing about: She jet-sets around the world
+collecting men - and she can get any of them, but she's so clingy that they leave and she cries in her marble bathtub surrounded by pearls'.
+
+"I was like, 'I can use this'."
+
+Lyrically, it contains some of her best lines ("darling, I'm a nightmare dressed like a daydream") and there's a delicious attention to detail - with a pen
+click signifying every new entry in her little black book.
+
+Shout-out to all the lonely Starbucks lovers; and to Chicago indie band Hard Femme who took that misheard lyric and made it a real song. Those search engine
+clicks gotta be lucrative, right?
+</item 10>
+=== END ITEM id=dc0651ea84282314 ===
+
+=== ITEM id=e369e331ca84cb4a ===
+Gold sentences and facts:
+Sentence 0: The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy.
+  Fact 0.0: The highly anticipated criminal trial for Sam Bankman-Fried started on Tuesday.
+  Fact 0.1: Sam Bankman-Fried is the former CEO of bankrupt crypto exchange FTX.
+  Fact 0.2: The trial is to determine whether Bankman-Fried is guilty of seven counts of fraud and conspiracy.
+Sentence 1: But “all of that, all of it, was built on lies,” Rehn declared to the jury.
+  Fact 1.0: Rehn declared to the jury that all of that, all of it, was built on lies.
+Sentence 2: And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.
+  Fact 2.0: Bankman-Fried left Jane Street.
+  Fact 2.1: Jane Street is a high-frequency trading firm.
+  Fact 2.2: The former billionaire got his start in finance at Jane Street, after MIT.
+  Fact 2.3: Bankman-Fried persuaded Yedidia to join him as a trader at Alameda.
+  Fact 2.4: After the Alameda role, Bankman-Fried persuaded Yedidia to join him as a developer at FTX.
+Sentence 3: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 3.0: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 3.1: The defense countered that the FTX founder acted in good faith.
+  Fact 3.2: The defense countered that the FTX founder never meant to commit fraud or steal.
+  Fact 3.3: The defense countered that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“One year ago, it looked like the defendant was on the top of the world,” began Thane Rehn, a prosecutor for the government, in his opening statement. The
+former CEO of FTX oversaw a supposedly thriving crypto exchange, jetted between international locales, and hobnobbed with celebrities like Tom Brady and Larry
+David. He repeatedly emphasized to customers that their money was safe and secure.
+
+But “all of that, all of it, was built on lies,” Rehn declared to the jury. “Behind the curtains, he was not what he appeared to be.” What followed was a
+roughly 30-minute story that repeatedly emphasized how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to
+political candidates, and finance risky bets.
+
+The key to his alleged scheme? Alameda Research, a crypto hedge fund he also owned, argued Rehn.
+</item 1>
+
+<item 2>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+That was before he realized FTX had stolen customer funds — at which point, he resigned.
+
+Gary Wang, the co-founder of FTX and Alameda Research and another college roommate. He took the stand after Yedidia and sang like a canary about the secret
+privileges he’d created for Alameda in the FTX code.
+
+Nishad Singh, a longtime family friend, who copped to what sounded an awful lot like classic embezzlement. He said he’d backdated transactions on FTX to help
+create doctored balance sheets to show to investors. He pleaded guilty to six charges, including wire fraud, money laundering, and conspiracy counts around his
+political donations.
+
+Caroline Ellison, Bankman-Fried’s ex-girlfriend. She told us about the seven phony balance sheets she’d created. She was clear: Alameda took customer funds;
+Bankman-Fried knew about it and even invested them against her advice.
+
+Joe Bankman, Bankman-Fried’s father.
+</item 2>
+
+<item 3>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+According to the SEC, FTX was a fraud “from the start,” diverting customers’ funds to Alameda.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+
+“Really just old-fashioned embezzlement.”
+
+What’s left of FTX is now being led by John J. Ray III — you may remember him as the guy who cleaned up Enron and who also said FTX is worse than Enron. Just
+before the trial began, the FTX lawyers filed suit against Bankman-Fried’s parents, saying they should give back millions of dollars they got from their kid.
+Ray has also referred to Bankman-Fried’s conduct as “really just old-fashioned embezzlement.”
+</item 3>
+
+<item 4>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX? Is he a liar and a fraud? Or did he act in good faith, and like many a startup founder, fly too
+close to the sun?
+
+That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very
+different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.
+
+Here’s what happened on the second day of the trial, which featured pointed allegations, a friend from MIT, and an audience replete with big names, including
+Bankman-Fried’s professorial parents and Damian Williams, U.S. attorney for the Southern District of New York.
+
+A conscious criminal…
+
+The prosecution’s account of the alleged crimes by Bankman-Fried, who spent most of his day in court staring into a laptop while seated between his two
+attorneys, featured a study in contrasts.
+</item 4>
+
+<item 5>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+FTX was a fraud “from the start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of
+customer funds.” Follow along for all the latest news and regular updates from the trial.
+
+The day started off promisingly for the defense as it cross-examined Gary Wang, the chief technology officer of FTX and co-owner of both FTX and Alameda.
+Christian Everdell, one of Bankman-Fried’s defense attorneys, couldn’t undo the damage of last week’s code review. But he managed to shake the rust off long
+enough to make Wang sound less reliable, drowning the jury in confusing technicalities.
+
+Last week, Wang testified that Alameda got access to a special credit line and an option to take its balance into the negative without triggering liquidation —
+something he alleged other accounts at FTX didn’t get. Everdell tried to undermine this claim by talking about the spot margin program, which let users lend
+each other assets for margin trading.
+</item 5>
+
+<item 6>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Witness Adam Yedidia answers questions during Sam Bankman-Fried fraud trial over the collapse of FTX, the bankrupt cryptocurrency exchange, at Federal Court in
+New York City, October 5, 2023, in this courtroom sketch. Jane Rosenberg | Reuters
+
+Two of Sam Bankman-Fried's former friends from MIT, who also worked at crypto exchange FTX while living with the company's founder in the Bahamas, took the
+stand in a Manhattan courtroom this week to testify against their former classmate, confidant, and boss — a man who allegedly ran a crypto empire that defrauded
+thousands of customers out of billions of dollars. Gary Wang, the lesser-known co-founder of FTX, was asked by Assistant U.S. Attorney Nicolas Roos on Thursday,
+"Did you commit financial crimes while working at FTX?" "Yes," responded Wang.
+</item 6>
+
+<item 7>
+Graph query row:
+entity: Sam Bankman-Fried
+relationship: WORKS_FOR
+related: Jane Street
+</item 7>
+
+<item 8>
+Graph query row:
+entity: Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand
+relationship: MENTIONS
+related: Jane Street
+</item 8>
+
+<item 9>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+SBF’s trial has started, this is how he and FTX got here
+
+The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of
+seven counts of fraud and conspiracy. And as one former federal prosecutor put it: “The odds seem to be stacked against him at this point.”
+
+The 31-year-old co-founded FTX in 2019; within a few years the once third-largest crypto exchange’s valuation hit $32 billion at its peak. It’s now trying to
+claw back any funds to distribute to creditors.
+
+But how did the once third-largest crypto exchange get here?
+
+Before FTX, Bankman-Fried co-founded crypto-trading firm Alameda Research in 2017. He co-founded FTX in 2019 as a complement to Alameda, to help bring in
+revenue and liquidity for the trading arm.
+</item 9>
+
+<item 10>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that
+Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy
+and sell cryptocurrencies.
+
+In an analogy he employed throughout his opening statement, he said that “working at a startup is like building a plane as you’re flying it” and that businesses
+sometimes fail. In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from
+the inherent risk of the crypto markets.
+
+When the walls came closing in and the aforementioned plane approached the “eye of the storm,” Bankman-Fried did not act like someone who was guilty. Rather, he
+was willing to give up his personal wealth to make customers whole, Cohen argued.
+</item 10>
+=== END ITEM id=e369e331ca84cb4a ===
+
+=== ITEM id=f3d97633c1ab3457 ===
+Gold sentences and facts:
+Sentence 0: More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know.
+  Fact 0.0: Sam is one of the most brilliant and impactful people the industry has ever had.
+  Fact 0.1: Sam is more important as one of the most generous and caring people the speaker knows than as one of the most brilliant and impactful people the industry has ever had.
+  Fact 0.2: Sam is one of the most generous and caring people the speaker knows.
+Sentence 1: While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s.
+  Fact 1.0: Altman is not trained as an AI engineer.
+  Fact 1.1: Altman is now 38.
+  Fact 1.2: Altman has been seen as a Silicon Valley wunderkind since his early 20s.
+Sentence 2: Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now.
+  Fact 2.0: The prevailing theory floating around right now is based on the board’s language.
+  Fact 2.1: The prevailing theory floating around right now is based on the way these giant tech companies work.
+  Fact 2.2: The described theory is the prevailing theory floating around right now.
+
+Retrieved items:
+<item 1>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Battery-boosting software tech: Tim covers Breathe Battery Technologies, a startup that’s developed a bit of software that can be slipped into just about any
+lithium-ion battery in use today — endowing it with either faster charging speeds or greater longevity.
+
+What lies beyond ChatGPT: Anna surveyed 10 investors about the future of AI and what they believe might be the next big thing. Among other topics, they touched
+on where startups still stand a chance, where oligopoly dynamics and first-mover advantages are shaping up and the value of proprietary data.
+</item 1>
+
+<item 2>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+“Not consistently candid” is a very diplomatic way of saying Altman lied.
+
+It’s possible that Altman — and potentially OpenAI President Greg Brockman, who stepped down as chairman simultaneously, then resigned — wanted to make a bold
+move that he knew the board would not like. It’s not uncommon for these deals to be hammered out quietly in smoke- (or vape-) filled rooms and then presented as
+a fait accompli, but if it was controversial enough and the board found out about these maneuvers, it could be fuel for an ouster.
+
+But what kind of deal would be big and dangerous enough for a summary dismissal of the CEO and famous face of the company? The man was onstage two weeks ago; I
+just talked with him! What could have happened since then?
+
+Few would be shocked if Microsoft, which is deeply, deeply embedded in OpenAI as an investor and customer, is a factor here. Could Altman have been working with
+— or against — OpenAI’s patron in secret?
+</item 2>
+
+<item 3>
+Google fakes an AI demo, Grand Theft Auto VI goes viral and Spotify cuts jobs (TechCrunch, 2023-12-09T21:16:17+00:00)
+Before Rogier launched MasterClass, he worked as a VC, and — through his connections — he received a $500,000 seed round before he even had an idea for a
+company.
+
+And on Chain Reaction, Jacquelyn interviewed David Pakman, managing partner and head of venture investments at CoinFund. Before CoinFund, David spent 14 years
+at the venture capital firm Venrock. He also led the Series A and B rounds at Dollar Shave Club, which was acquired by Unilever for $1 billion. And, in 1991,
+David co-created Apple Music when he was part of Apple’s system software product marketing group.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+</item 3>
+
+<item 4>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+She claimed X was seeing 500 million posts per day on the platform. So who’s right? Beats us.
+
+Former NSA director’s startup shutters: IronNet, a once-promising cybersecurity startup founded by a former NSA director, has shuttered and laid off its
+remaining staff following its collapse. The Virginia-based IronNet was founded in 2014 by retired four-star general Keith Alexander and had raised more than
+$400 million in funding. But IronNet failed to gain traction after going public in August 2021, and its stock price continued to steeply decline in the wake of
+an initial spike.
+
+Audio
+
+On the hunt for a new podcast to listen to while you work out, do the dishes or rake the leaves (now that fall’s arrived)? Look no further than TechCrunch’s
+roster, which covers the world of startups, the blockchain and more.
+</item 4>
+
+<item 5>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Jacquelyn has been on the ground at the Southern District of New York courthouse, listening in to the trial in the same room as Bankman-Fried, so there was lots
+to talk about.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+Here are a few highlights from this week:
+
+Inside the SBF trial: Rebecca and Jacquelyn report on the second day of the SBF and FTX trial. The prosecution painted Bankman-Fried as someone who knowingly
+committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud
+or steal and basically got in over his head.
+</item 5>
+
+<item 6>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+The company said its board consists of OpenAI’s chief scientist, Ilya Sutskever, and three non-employees: Quora CEO Adam D’Angelo, tech entrepreneur Tasha
+McCauley, and Helen Toner of the Georgetown Center for Security and Emerging Technology.
+
+OpenAI’s key business partner, Microsoft, which has invested billions of dollars into the startup and helped provide the computing power to run its AI systems,
+said that the transition won’t affect its relationship.
+
+“We have a long-term partnership with OpenAI and Microsoft remains committed to Mira and their team as we bring this next era of AI to our customers,” said an
+emailed Microsoft statement.
+
+While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s. He was recruited in 2014 to take lead of
+the startup incubator YCombinator.
+</item 6>
+
+<item 7>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+In perhaps the most unexpected tech news of the year, billionaire and AI evangelist Sam Altman has been ejected from his CEO role at OpenAI by the company’s
+board after an apparent vote of no confidence. Its exact wording in a release issued this afternoon: Altman’s “departure follows a deliberative review process
+by the board, which concluded that he was not consistently candid in his communications with the board, hindering its ability to exercise its responsibilities.”
+
+What the hell is happening at the most hyped company in the world?! Here are some totally speculative theories that occurred to us and others around the web.
+
+1. Did Altman circumvent the board in a major deal?
+
+Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now. “Not consistently candid” is
+a very diplomatic way of saying Altman lied.
+</item 7>
+
+<item 8>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+On Equity this week, the crew talked about the SBF trial; deals from VR firms Rainforest, At One Ventures, Section 32 and Greylock, where venture funding has
+declined; and how Fearless Fund, a firm founded to invest in women of color, is being barred from awarding grants to Black women founders.
+
+Meanwhile, Found featured Esther Rodriguez-Villegas from Acurable, a medical device company that makes patient-friendly wearable devices to diagnose and manage
+respiratory conditions at home. As a career-long academic, Rodriguez-Villegas talks about how she never intended to be a founder until she learned about how the
+currently available medical devices make it extremely difficult to detect and treat diseases like sleep apnea and epilepsy.
+
+And over on Chain Reaction, Jacquelyn did a crossover episode with Alex about the SBF trial.
+</item 8>
+
+<item 9>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+Though he’s glad that access to the technology has broadened, that has come with many complications.
+
+“I don’t like the idea that the internet I’m so nostalgic for was actually an ivory tower,” he said, but on the flip side, he said, we’re all exposed to more
+people, in real-time, than we could have ever fathomed. And that can put people at odds with one another and with everyone’s different versions of the truth —
+even if their truth is believing in something as far-fetched as the earth being flat, he said, pointing to one example that has a following on Reddit.
+
+Meanwhile, asking platforms like Facebook, Twitter, or Reddit to be in charge of verifying truth and accuracy is a difficult task, he said. Ohanian also called
+out TikTok as “an arm for the Chinese government” that’s really good at “feeding us what we want, when we want it” — in other words, not always a fountain of
+truth, either.
+</item 9>
+
+<item 10>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+You can tell he had no experience in management or handling such big undertakings. I think he was in way over his head,” Ayelet Noff, the CEO and founder of
+public relations firm Sliced Brand, which represents a number of cryptocurrency businesses, told TechCrunch. “I think he does a disservice to the whole
+community. He pushed back crypto adoption by at least a year or two. Each time one of these things happens it brings back the whole market. It’s two steps
+forward and one step back.”
+
+The Michael Lewis interview is infuriating. SBF was a scumbag, and now we need to hear about his “tragic fall” in the MSM because Sam told them he was an
+“effective altruist” and people like Michael Lewis were so far up his ass they couldn’t tell truth from fiction.
+</item 10>
+=== END ITEM id=f3d97633c1ab3457 ===
+
+=== ITEM id=4433d3f839a57a12 ===
+Gold sentences and facts:
+Sentence 0: Here's your chance to claim $5,000+ in bonuses as a new user from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, and BetRivers.
+  Fact 0.0: The reader has a chance to claim $5,000+ in bonuses as a new user.
+  Fact 0.1: A new user can claim bonuses from Caesars Sportsbook.
+  Fact 0.2: A new user can claim bonuses from BetMGM.
+  Fact 0.3: A new user can claim bonuses from Bet365.
+  Fact 0.4: A new user can claim bonuses from FanDuel.
+  Fact 0.5: A new user can claim bonuses from DraftKings.
+  Fact 0.6: A new user can claim bonuses from BetRivers.
+Sentence 1: Collect your welcome bonus: As a new customer, you’ll receive a welcome bonus.
+  Fact 1.0: The reader can collect a welcome bonus.
+  Fact 1.1: A new customer receives a welcome bonus.
+
+Retrieved items:
+<item 1>
+Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers
+(Sporting News, 2023-11-29T21:00:04+00:00)
+Use Bet365 bonus code VATSN in Virginia or NJTSN in New Jersey.
+
+Claim here: Bet365 bonus code TSNCO for promo of your choice
+
+FanDuel promo code for Bet any $5 moneyline, Get $150 in bonus bets if your team wins in CBK game
+
+FanDuel has a new offer when using our exclusive FanDuel promo code link. Bet $5 on any moneyline, and Get $150 in bonus bets if your team wins!
+
+It's important to note that there are no odds restrictions, so it'd be prudent to bet a big favorite over an outmatched underdog on the CBK schedule. You need
+to win the wager to receive $150 in bonus bets.
+</item 1>
+
+<item 2>
+Vermont Sportsbook Promos and Sports Betting Launch News (Sporting News, 2023-09-26T22:53:28+00:00)
+into your FanDuel account and place a qualifying . Whether your bet wins or loses, you receive $200 in Bonus Bets .
+
+. You can use your Bonus Bets in whatever increments you like, but you have to use your Bonus Bets within seven days or they will expire.
+
+or they will expire. Winning wagers with Bonus Bets award the winnings only and not the bet amounts.
+</item 2>
+
+<item 3>
+Vermont Sportsbook Promos and Sports Betting Launch News (Sporting News, 2023-09-26T22:53:28+00:00)
+Winning wagers with Bonus Bets award the winnings only and not the bet amounts.
+
+FanDuel Sportsbook welcome offer pros and cons
+
+Pros
+
+Unlike other offers, you don’t have to risk much of your own money to receive the bonus — just $5 to get $200 in Bonus Bets
+
+Also unlike other offers, it doesn’t matter if your initial wager wins or loses, you get the bonus either way
+
+You don’t have to use your Bonus Bets all at once (unless you want to), as you can divide up how you use the Bonus Bets any way you like
+
+Cons
+
+You can’t just withdraw the Bonus Bets, but you have to wager them
+
+You only have a week to use all $200 of your Bonus Bets
+
+If you win with Bonus Bets, you only get the winnings and not the wager amounts back
+
+What is the welcome offer at FanDuel Sportsbook VT?
+
+Those signing up at FanDuel Sportsbook Vermont by Jan.
+</item 3>
+
+<item 4>
+Vermont Sportsbook Promos and Sports Betting Launch News (Sporting News, 2023-09-26T22:53:28+00:00)
+That means wagering requirements are attached, and payouts don't include the stake.
+
+Odds boosts
+
+You’ll receive better than the usual odds on specific bets. Daily odds boosts are available, but provide no value if the boosted bet isn't a winner.
+
+Bet insurance
+
+Get a refund if you lose a specific bet or your parlay comes up one leg short. Sportsbooks will limit the size of the refund you can claim, and most refunds are
+bonus bets or site credit, not cash. That means wagering requirements are attached, and payouts don't include the stake.
+
+Bet & get bonuses
+
+Here, you’ll get a bonus when you place a specific bet. Most bet & get bonuses are bonus bets or site credit. That means wagering requirements are attached, and
+payouts don't include the stake.
+
+App-only offers
+
+Place a specific bet with one of the best sports betting apps to receive a bonus. This won’t be available on the sportsbook website.
+</item 4>
+
+<item 5>
+College Bowl Odds, Spreads, Money Lines and Totals - NCAAF 2023 Bowl Season (Sporting News, 2023-12-15T20:37:00+00:00)
+It’s a quick process. Below, we outline the steps for opening your own account.
+
+Choose your sportsbook: If you’re not sure which sportsbook is the right fit for you, browse our reviews to see the pros and cons of each, as well as the
+current offerings for new customers. When you find the sportsbook that best suits your needs, simply click on a link from our site to visit the homepage of your
+chosen sportsbook. Register for an account: On the homepage, you’ll find a button that says “sign up” or “register.” Once you click that, you’ll be taken to a
+form for providing personal information such as your name, birth date, email address, and the last four digits of your Social Security number. You’ll also be
+required to accept the sportsbook terms and conditions, which we recommend you read. Collect your welcome bonus: As a new customer, you’ll receive a welcome
+bonus.
+</item 5>
+
+<item 6>
+Vermont Sportsbook Promos and Sports Betting Launch News (Sporting News, 2023-09-26T22:53:28+00:00)
+Here are more details on the offer explaining how each part of the DraftKings Sportsbook welcome offer works:
+
+Sign up for a DraftKings Sportsbook account via the links on this page .
+
+. Make a first deposit of at least $5 and get a $50 Bonus Bet .
+
+and get a . When you make your first deposit, DraftKings will give you a 20% deposit match bonus worth up to $1,000 in Bonus Bets . Be aware this bonus comes
+with a 25x wagering requirement .
+
+worth up to . Be aware this bonus comes with a . Finally, when you place an initial bet of at least $5 , you get $150 more in Bonus Bets delivered as eight $25
+Bonus Bets that you’ll have seven days to use.
+
+, you get delivered as eight $25 Bonus Bets that you’ll have seven days to use. If you go for the full deposit match bonus, you can receive as much as $1,200 in
+Bonus Bets all told.
+</item 6>
+
+<item 7>
+Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers
+(Sporting News, 2023-11-29T21:00:04+00:00)
+DraftKings | BetMGM vs. FanDuel | Caesars vs. BetMGM
+</item 7>
+
+<item 8>
+Vermont Sportsbook Promos and Sports Betting Launch News (Sporting News, 2023-09-26T22:53:28+00:00)
+The promo codes on this page get you the best bonuses available. When you plug in the code during registration, the sportsbook knows we sent you and gives you
+the bonus we negotiated for you.
+
+Are these promo codes for regular customers, too?
+
+The promo codes on this page are for new customers only. Once you’ve got an account with a sportsbook, you can take advantage of other bonus offers and ongoing
+promos.
+
+Related Pages:
+</item 8>
+
+<item 9>
+Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers
+(Sporting News, 2023-11-29T21:00:04+00:00)
+This offer requires a minimum $10 deposit, but you can deposit up to the amount of your first bet to $1,500 to maximize your potential winnings. If your first
+bet on the app loses, BetMGM will refund your account with bonus bets in the amount of the original wager up to $1,500.
+
+The extra $50 bonus bet offer is not available in Washington D.C., Kentucky, Mississippi, Nevada, New York, Puerto Rico and Ontario. Customers in those areas
+can use BetMGM bonus code SPORTSPICK for the $1,500 First Bet offer.
+</item 9>
+
+<item 10>
+Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers
+(Sporting News, 2023-11-29T21:00:04+00:00)
+Start by clicking on our exclusive DraftKings promo code link
+
+Register as a new user by supplying personal info including your name, email, last four of your SSN#, and mailing address
+
+Deposit $5 to activate $50 bonus bet
+
+Bet $5 and Get $150 in bonus bets
+
+To max out DraftKings' deposit match at $1,000, make a minimum deposit of $5,000 and meet the 25X playthrough requirement.
+
+Claim here: DraftKings promo code for $1,200 in bonus bets
+
+BetRivers promo code SPORTSRIV unlocks 2nd chance bet for CBK games including Duke vs. Arkansas
+
+The BetRivers promo code SPORTSRIV gives new users a 2nd chance bet up to $500 depending on your state.
+
+If your first bet settles as a loss, BetRivers will refund your account in bonus bets.
+</item 10>
+=== END ITEM id=4433d3f839a57a12 ===
+
+=== ITEM id=99a2803ce550c148 ===
+Gold sentences and facts:
+Sentence 0: This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes.
+  Fact 0.0: It allows the collection of data from complex equipment.
+  Fact 0.1: It enables operators to track equipment performance.
+  Fact 0.2: It enables operators to predict maintenance.
+  Fact 0.3: It enables operators to predict downtimes.
+Sentence 1: If a track isn’t used or taken care of for an extended period of time, it will start to wear out and eventually become completely unsuitable for any kind of racing unless it is taken apart and rebuilt.
+  Fact 1.0: A track that is not used or taken care of for an extended period of time will start to wear out.
+  Fact 1.1: A worn-out track will eventually become completely unsuitable for any kind of racing.
+  Fact 1.2: A track becomes unsuitable for racing unless it is taken apart and rebuilt.
+
+Retrieved items:
+<item 1>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+In terms of the digital twin market, our market model only considers software spending for digital twins, which we break into two scopes:
+
+Broad digital twin market – includes the revenue for all software solutions that provide capabilities that are used for digital twins, such as solutions that
+integrate data sources into a digital twin and are capable of simulation, visualization, and predictions
+
+– includes the revenue for all software solutions that provide capabilities that are used for digital twins, such as solutions that integrate data sources into
+a digital twin and are capable of simulation, visualization, and predictions Narrow digital twin market – only considers spending for digital twin-specific
+software, such as software intended to model the digital twin data
+
+Though hardware and services related to digital twins can bolster the capabilities of digital twin software, we only view them as supporting services for the
+software, and we do not consider them in our digital twin market model. That said, this ability to bolster capabilities means they can aid digital twin market
+growth, as shown in some of the trends below.
+</item 1>
+
+<item 2>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Digital twin market trends
+
+We will now look at four trends helping digital twin market growth.
+
+Trend 1: Digital twins deployed to meet sustainability goals
+
+Sustainability was discussed in approximately 21% of recent CEO earnings calls and has remained a consistent topic throughout 2023. This pairs with our report’s
+analysis that the pursuit of sustainability goals is a tailwind macro factor for the digital twin market.
+
+To achieve their sustainability goals, many companies are exploring digital twins. Due to their ability to simulate real-world conditions and deliver real-time
+information, organizations can optimize resource usage, reducing carbon emissions and improving supply and transportation networks.
+
+According to Capgemini Research Institute’s 2022 digital twins report, 57% of organizations agreed that one of the key drivers for their digital twin
+investments was improving their sustainability, and 51% agreed that digital twins would help achieve their organization’s environmental sustainability goals.
+
+In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the
+challenges inherent in sustainability goals.
+</item 2>
+
+<item 3>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Based on these observations and additional insights from our report, our current projection estimates that the global digital twin market could grow at a CAGR
+of approximately 30% between 2023 and 2027.
+
+Against the backdrop of this growing market, the report notes eight trends that help promote the advancement and adoption of digital twins. Here, we will focus
+on four:
+
+1. Digital twins deployed to meet sustainability goals
+
+2. Digital twins employed as virtual sensors in complex conditions
+
+3. Partnerships between cloud hyperscalers and OT and simulation specialists
+
+4. Initiatives promoting interoperability of digital twins across multifaceted systems
+
+Before we dive into these trends, and to provide context, it is helpful to understand how IoT Analytics defines digital twins and the digital twin market.
+
+Defining digital twins and the digital twin market
+
+In our March 2023 Decoding Digital Twins article, we define digital twins as a virtual model replicating the behavior of an existing or a potential real-world
+asset, system, or multiple systems.
+</item 3>
+
+<item 4>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Considerations for digital twin vendors
+
+3 questions digital twin vendors should ask themselves based on research findings discussed in this article:
+
+1. Sustainability goals: Given the emphasis on sustainability and the role of digital twins in achieving it, is my company’s digital twin solution well-equipped
+to support sustainability objectives? Are there new features we need to develop?
+
+2. Interoperability: Is our digital twin solution currently designed to be interoperable with other systems and technologies, especially those from different
+vendors?
+
+3. Product development: How aligned is our product development roadmap with the emerging trends highlighted in the report, especially around end-user and
+technological advancements?
+
+Considerations for adopters
+
+3 questions adopters should ask themselves based on research findings discussed in this article:
+
+1. Infrastructure readiness: Do we have the necessary infrastructure and resources in place to support the deployment and effective use of digital twins? If
+not, what investments are required?
+
+2.
+</item 4>
+
+<item 5>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Trend 3: Partnerships forged in the clouds: Hyperscalers team up with OT and simulation specialists
+
+In the last few years, cloud hyperscalers like AWS and Microsoft Azure have introduced digital twin platforms, e.g., AWS IoT TwinMaker and Azure Digital Twins,
+that allow for interconnecting various data sources and building digital twin topology. However, these companies realize they cannot deliver end-to-end digital
+twin solutions by themselves and are thus partnering with OT and simulation companies to add capabilities to their networks.
+
+Hyperscalers and OT companies
+
+OT companies provide industrial data management capabilities and connections to millions of local physical assets. By partnering with hyperscalers, OT companies
+can reach broader audiences looking for digital transformation solutions by offering typical cloud benefits like storage and computation power.
+
+Example: In 2021, Siemens and AWS announced an expansion of their partnership, with digital twin technology being an area of focus.
+</item 5>
+
+<item 6>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+This definition captures a macro concept of digital twins, but our report and previous article present a three-dimensional, cuboid model to help classify
+digital twins so apple-to-apple comparisons can be made. Each axis of the cuboid represents one dimension of a digital twin:
+
+1. Life cycle phase: The X-axis represents the six life cycle phases a digital twin is used for, from design to decommissioning.
+
+2. Hierarchical levels: The Y-axis represents a digital twin’s five hierarchical levels, from information to multi-system.
+
+3. Use/purpose of implementation: The Z-axis represents the seven most common uses for digital twins, such as simulation and prediction.
+
+Based on this model, there are 210 potential combinations (5 x 6 x 7 = 210); however, our research indicates that many digital twin initiatives are tailored to
+multiple combinations.
+</item 6>
+
+<item 7>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+A digital twin strategy as part of an overall digitalization plan can be a crucial capability for asset-intensive industries and needs to encompass the entire
+asset lifecycle, process, and value chain from design and operations through maintenance and strategic business planning.”
+
+Example: Aden, a Chinese integrated facility service provider, created a digital twin for one of its commercial centers in Chengdu, China. The digital twin was
+designed to help facility managers inspect, maintain, and repair building assets. 3D simulations assist facility managers in visualizing, predicting, and
+optimizing energy consumption, and the expected benefits include lower annual energy consumption, water usage, and waste.
+
+Trend 2: Digital twins employed as virtual sensors in complex conditions
+
+Virtual sensors approximate data that otherwise cannot be obtained via physical sensors, often due to physical sensors being impractical, costly, or hazardous
+to employ. Companies are now building digital twins to model hardware and calculate data based on other conditions. This not only allows the collection of data
+from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes.
+</item 7>
+
+<item 8>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+The partnership addressed similar challenges related to Industry 4.0 and Smart Manufacturing.
+
+DTC digital twin interoperability framework
+
+The Digital Twin Consortium (DTC), a collaborative partnership of industry, academia, and government experts, released the Digital Twin System Interoperability
+Framework to “unify a nascent ecosystem of high-value, multi-vendor services that can seamlessly ‘plug into’ a multi-dimensional, interoperable system of
+systems.”
+
+DTC and IDTA collaboration
+
+DTC and the Industrial Digital Twin Association (IDTA) announced a liaison agreement to collaborate on standardization requirements, enabling interoperability
+through discussions, aligning work in horizontal domains, and collaborating on open-source projects, contributions, and reference implementations.
+
+DTC and OPC Foundation collaboration
+
+DTC and the OPC Foundation announced a liaison agreement to “accelerate the development and adoption of digital twin-enabling technologies,” promoting
+interoperability standards and processes to advance the use of digital twins in manufacturing across multiple industries.
+</item 8>
+
+<item 9>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+If not, what investments are required?
+
+2. Data integration: How compatible are our current data sources and systems with digital twin technologies, especially in terms of sensor data (both physical
+and virtual/soft)?
+
+3. Interoperability concerns: As we use multiple software solutions across our operations, how important is interoperability between digital twin technologies
+and our existing systems?
+</item 9>
+
+<item 10>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Example: In large motor applications, such as room-sized motors that pump high volumes of gas, oil, or other chemicals, operators need to monitor the motors’
+temperatures—especially if the motors are high-powered and repeatedly started. If a motor is too hot during a restart, the components could cause serious
+damage. Unfortunately, using a direct, physical sensor within a motor is often impractical, and operators must work from an assumptive time it takes for the
+motor to cool (with an additional safety buffer time). This means motors can be down longer than necessary, impacting efficiency and revenue.
+
+To address this issue, Siemens developed a prototype virtual sensor based on a digital twin. It offers a simulation of how a physical sensor would operate if it
+were possible to install it within a motor. Using AR headsets, operators can see a simulation of the motor and its interior with a demonstrator superimposed
+over it, and they can see the motor’s temperature.
+</item 10>
+=== END ITEM id=99a2803ce550c148 ===

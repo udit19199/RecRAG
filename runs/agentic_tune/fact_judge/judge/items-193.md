@@ -1,0 +1,908 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 1 items.
+
+=== ITEM id=3f83babe54203775 ===
+Gold sentences and facts:
+Sentence 0: These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook.
+  Fact 0.0: These delays may lead to bets being refunded.
+  Fact 0.1: Whether bets are refunded depends on the circumstances.
+  Fact 0.2: Whether bets are refunded depends on the specific rules of your sportsbook.
+Sentence 1: Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move.
+  Fact 1.0: Every sportsbook jumps on board when a line moves for a legitimate reason.
+  Fact 1.1: Every sportsbook jumps on board when odds change for a legitimate reason.
+  Fact 1.2: An injury or roster move is an example of a legitimate reason.
+Sentence 2: But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response.
+  Fact 2.0: Sportsbooks are also gathering this information.
+  Fact 2.1: Sportsbooks begin to tighten the NBA Rookie of the Year lines in response.
+
+Retrieved items:
+<item 1>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+What makes NBA betting special or unique?
+
+Basketball odds are known to fluctuate more than those of other sports. The factors that play into those lines shifting can range from having only a few impact
+players per team to the sheer frequency of games.
+
+By following a single team, you can track its momentum swings, which players tend to get on hot or cold streaks, or how well they play at home vs. on the road.
+You can use that information to your advantage for both pre-game and live wagers.
+
+Similar categories of moneylines, spreads, totals, and NBA prop bets should appear across both formats.
+
+The NBA is also special because of the number of bets available for every game, ranging from pre-game to live betting and parlays.
+
+When you add up the standard bets, game props, player props, in-game betting, and more, there’s a staggering volume of bets for every NBA game at online
+sportsbooks.
+</item 1>
+
+<item 2>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Sportsbooks will move the line or change the odds if the public bets heavily on one side.
+
+Every sportsbook’s goal is to even out the betting on both sides of every bet. That allows sportsbooks to earn the profit built into the odds and lines without
+worrying about which side wins.
+
+The betting is rarely the same at every sportsbook. While one sportsbook may be forced to move a line or change the odds because of betting, another won’t.
+That’s when you’ll spot a difference between sportsbooks. This difference may allow you to book a bet at improved odds or a more favorable line.
+
+The lines and odds may even be different right from the jump. Either way, the differences are why line shopping always makes sense. Shop around, and you can
+find opportunities to lay less, win more, and improve your chances.
+</item 2>
+
+<item 3>
+Point Spread Betting - What is a Point Spread Bet? (Sporting News, 2023-11-01T22:50:52+00:00)
+Do point spread odds change?
+
+Yes, point spread odds can change, and these shifts are commonly referred to as "line movement."
+
+Lines move when the point spread or the odds associated with a particular bet change after sportsbooks have initially set them. There are several reasons for
+these adjustments.
+
+One of the most common causes is an imbalance in the amount of money being wagered on one side of the bet. If a significant majority of bettors are placing
+their money on one team to cover the spread, the top sports betting apps will adjust the point spread to make the other side more appealing, thereby balancing
+the betting action.
+
+Another factor that can affect the spread odds is the occurrence of unexpected events, such as injuries to key players, changes in team strategies, or even
+significant weather events that might impact a game's outcome.
+
+For instance, if a star quarterback is announced as injured just days before a big game, the point spread might shift in favor of the opposing team.
+
+Moreover, information and public perception play a role.
+</item 3>
+
+<item 4>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+By doing this research, you’ll find the best odds for the bets you were already planning on making, which means you can maximize your potential return on your
+wager.
+
+This can be a time-consuming process, but it also helps you boost your bankroll and give yourself the largest possible profit.
+
+MLB betting rules at online sportsbooks
+
+Every sportsbook has terms and conditions for all bets, MLB included. While those rules may be specific to each sportsbook, there are some general rules that
+should apply everywhere.
+
+For example, MLB First 5 Innings bets are usually considered actionable after five innings of play, or 4.5 innings in the case of the home team having the lead.
+
+Another rule many sportsbooks follow for baseball bets is weather-related, such as if a game is suspended due to rain or other weather conditions. These delays
+may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook.
+
+Here are some other rules found at online sportsbooks for MLB betting.
+
+Wagers include extra innings unless specified otherwise.
+</item 4>
+
+<item 5>
+Totals Betting - What is an Over/Under Bet? (Sporting News, 2023-11-01T22:08:31+00:00)
+Bookmakers adjust the line to balance the action and protect themselves from potential losses.
+
+One of the most common reasons for line movement is a significant amount of money being wagered on one side (either over or under). Bookmakers adjust the line
+to balance the action and protect themselves from potential losses. Injury Updates: If a key player is injured or unable to play, this can influence the
+expected total score, leading bookmakers to adjust the line accordingly.
+
+If a key player is injured or unable to play, this can influence the expected total score, leading bookmakers to adjust the line accordingly. Weather
+Conditions: In outdoor sports, weather can play a significant role. For example, heavy rain or snow in a football game might lead to expectations of a
+lower-scoring game, causing the line to move down.
+
+In outdoor sports, weather can play a significant role. For example, heavy rain or snow in a football game might lead to expectations of a lower-scoring game,
+causing the line to move down.
+</item 5>
+
+<item 6>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+Wagers include extra innings unless specified otherwise.
+
+The game must start on the scheduled day (local stadium time) for bets to have action.
+
+The game must go 9 innings or 8½ if the home team is winning for the run line to have action.
+
+On ‘team to score first’ wagers, once a run is scored, the prop will be graded, regardless of how long the game lasts.
+
+Wagers on postseason baseball series are based on the team to win the series, regardless of the number of games involved.
+
+For player props, the player must be in the starting lineup for wagers to have action.
+
+It’s important to read through the rules for baseball betting before placing your MLB bets, and you can find them in the terms and conditions section of your
+sportsbook’s website.
+
+Related Pages:
+</item 6>
+
+<item 7>
+Graph query row:
+article: MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023
+passages: ['MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)\nToday, placing Major League Baseball bets
+online is easier than ever. This guide will look at the best MLB betting sites and how to sign up for a new betting account.\n\nAll major MLB betting sites and
+apps post daily MLB odds, ranging from game lines to player props to futures bets. Fans can engross themselves in the season by betting on individual games,
+player performance, or season-long results.\n\nYou can choose from multiple sportsbooks and apps to bet on MLB games. You’ll have to create a new account at
+each, but you’ll also qualify for new-customer bonuses and promotions, so exploring your options and finding the best deal is worth the effort.\n\nBest MLB
+betting sites and apps\n\nBelow, we break down our four favorite MLB betting sites and apps.\n\nDraftKings Sportsbook\n\nDraftKings, a premier sportsbook
+platform, boasts an extensive array of Major League Baseball betting options for novice and seasoned bettors. Their MLB odds include intriguing player and game
+prop bets, such as predicting the First Inning Winner or First Team to Score.', 'MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News,
+2023-10-24T22:32:27+00:00)\nThese allow bettors to engage with games beyond simple outcomes. For those looking at the bigger picture, DraftKings provides
+futures bets. Fans can bet on potential division victors or take a shot at predicting the next World Series champion.\n\nSee more:\n\nFanDuel
+Sportsbook\n\nFanDuel stands out as a top destination for MLB enthusiasts looking to bet daily. It offers the staple bets such as run lines, where you can bet
+on the margin of victory, and totals, predicting the combined score of both teams.\n\nFanDuel also has dozens of player props, allowing bettors to focus on
+individual performances, predicting stats like hits, home runs, or strikeouts. Additionally, FanDuel presents an array of game props and futures bets, letting
+fans speculate on longer-term outcomes such as division champions or MVP candidates.\n\nSee more:\n\nBetMGM Sportsbook\n\nBetMGM provides MLB aficionados with
+an expansive betting portfolio.', "MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)\nBeyond these, game
+props allow bets on specific game events, while player futures bets provide the chance to predict longer-term outcomes like season MVPs or rookie of the year
+honors.\n\nCaesars also has a cash-out option that allows you to settle bets early to guarantee a payout (though at a reduced amount).\n\nSee more:\n\nBet365
+Sportsbook\n\nOne of the world's premier sportsbooks, Bet365, has marked its presence in the US, notably emphasizing its Major League Baseball odds. Now
+accessible in many states and expected to grow further, Bet365 posts daily MLB odds boosts. The Bet365 app is perfect for rookie bettors yet also offers
+customized displays for seasoned MLB wagering veterans.\n\nA significant highlight is the platform's live-betting feature, allowing real-time bets on MLB
+games.\n\nSee more:\n\nBetRivers Sportsbook\n\nBetRivers stands out for its comprehensive Major League Baseball betting offerings. Bettors are presented with a
+wealth of stats and insightful tips related to upcoming games, enhancing the decision-making process.", 'MLB Betting Sites & Apps - The Best Baseball
+Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)\nAlongside the standard betting options, MLB enthusiasts can delve into a vast selection of
+alternate lines and prop bets tailored to the baseball experience. Moreover, loyal MLB bettors can benefit from the iRush Rewards program.\n\nAs they place bets
+on baseball events, they accumulate points, which can be redeemed for exclusive VIP gifts, MLB event tickets, BetRivers branded merchandise, and a range of
+enticing special offers.\n\nHow to use an MLB betting app\n\nMLB betting apps make it easy to wager on your favorite teams and players while keeping track of
+your bankroll, profits, and more. Below, we have a short guide on how to use a betting app from your favorite sportsbook.\n\nDownload the app: Visit the
+sportsbook’s website via our links. If you haven’t signed up previously, you can claim the best new customer sports betting bonus & promos. While you’re at the
+site, download the sportsbook’s betting app for your phone or tablet.\n\nVisit the sportsbook’s website via our links.', 'MLB Betting Sites & Apps - The Best
+Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)\nVisit the sportsbook’s website via our links. If you haven’t signed up previously, you can
+claim the best new customer sports betting bonus & promos. While you’re at the site, download the sportsbook’s betting app for your phone or tablet. Place your
+bets: You’ll have the option to bet on MLB games either pre-game or live. You’ll find all of the traditional pre-game bets, like game lines and run totals, and
+live betting options. Live bets can become more granular, like the result of the next at-bat.\n\nYou’ll have the option to bet on MLB games either pre-game or
+live. You’ll find all of the traditional pre-game bets, like game lines and run totals, and live betting options. Live bets can become more granular, like the
+result of the next at-bat. Keep tabs on odds: Your MLB betting app can help you track shifting odds and facilitate live betting.', 'MLB Betting Sites & Apps -
+The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)\nBetting apps offer real-time updates on all odds, which allows you to react to
+game flow as it’s happening.\n\nYour MLB betting app can help you track shifting odds and facilitate live betting. Betting apps offer real-time updates on all
+odds, which allows you to react to game flow as it’s happening. Bet from within legal states: As long as you are in a state that has legal online sports
+betting, you can use your app to make bets, track your account, add or withdraw funds, and more. Remember that you can only place bets when you are in the state
+lines, but you can access your account and monitor wagers from anywhere you have internet access.\n\nMLB live betting\n\nThe best sports betting apps offer
+live, in-game betting for Major League Baseball.\n\nLive betting means you can bet on a game in progress, right down to what the next batter will do with the
+next pitch or what team will win the inning.', 'MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)\nYou’ll
+find live betting with top betting sites such as DraftKings, FanDuel, BetMGM, and Caesars.\n\nThe key to live betting is using a betting app to make your
+wagers. Apps allow you to track all of the changes — both on the diamond and in the odds — as they happen. You won’t find that response time at a
+brick-and-mortar sportsbook.\n\nSome common MLB in-game betting lines includes:\n\nNext team to score\n\nRun line and moneyline odds\n\nTotal runs
+scored\n\nWinner of the next inning\n\nPlayer props, such as total hits or strikeouts\n\nBet on MLB run lines, moneylines, and totals\n\nThree of the most
+popular bet types for Major League Baseball games are run lines, moneylines, and totals. In case you’re not familiar, let’s explain all three.\n\nA moneyline
+wager is as straightforward as they come. You’re betting on which team you believe is going to win the game.', 'MLB Betting Sites & Apps - The Best Baseball
+Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)\nYou’re betting on which team you believe is going to win the game. Each team is given odds by the
+sportsbook to indicate their perceived chances of winning. The underdog is represented by a positive (+) number, and the favorite is represented by a negative
+number (-).\n\nSimilar to a point spread in other sports, the run line bet gives the underdog a handicap of 1.5 runs in the game. The underdog needs to lose by
+one run or win outright for bets on them to be successful, while the favorite in the game needs to win by two runs or more to cover the spread.\n\nTotals bets,
+also known as over/unders, focus on the combined number of runs both teams score. Oddsmakers assign a total number of runs, and bettors must decide if the two
+teams will score over or under that predicted total. The actual winner of the game doesn’t matter.\n\nYou’ll find these staple bet types at every online
+sportsbook that supports MLB betting.', 'MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)\nYou’ll find
+these staple bet types at every online sportsbook that supports MLB betting.\n\nHow to bet First 5 Innings in MLB\n\nFor bettors who prefer to focus on the
+early portion of a Major League Baseball game, First 5 Innings or F5 bets are ideal. These bets concern the outcome of just the first five innings of a game,
+which often takes out the uncertainty of relief pitchers replacing the starters.\n\nYou’ll find the F5 bets in the MLB tab of your online sportsbook or MLB
+betting app, where you can browse the available odds and lines for those particular wagers. You can still place bets on moneylines, run lines, or totals—focused
+on only the first five innings of play.\n\nKeep in mind that the odds and lines will likely be different than those for the full game since they are
+concentrated on the first half of the game only.\n\nBest MLB props and futures\n\nMLB props and futures allow you to bet on team and player performance
+irrespective of individual game outcomes.', 'MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)\nSome
+examples of popular MLB futures odds and proposition bets include:\n\nWorld Series: You can bet on which team you believe will become the next World Series
+champion. You’ll find World Series futures odds for these nearly as soon as the previous World Series comes to an end, and they’ll change based on offseason
+moves, team news, team performance, and more.\n\nYou can bet on which team you believe will become the next World Series champion. You’ll find World Series
+futures odds for these nearly as soon as the previous World Series comes to an end, and they’ll change based on offseason moves, team news, team performance,
+and more. MVP: Wager on the player you believe will take home the Most Valuable Player award for the season. This bet can be a fun way to keep tabs on certain
+players throughout the entire season.\n\nWager on the player you believe will take home the Most Valuable Player award for the season. This bet can be a fun way
+to keep tabs on certain players throughout the entire season.', 'MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News,
+2023-10-24T22:32:27+00:00)\nThis bet can be a fun way to keep tabs on certain players throughout the entire season. Home run leader: Which player do you think
+will crank out the most homers during the regular season?\n\nWhich player do you think will crank out the most homers during the regular season? Regular-season
+win totals: Make an over/under wager on a team based on the number of wins a sportsbook sets for them. Do you think your team will finish over that predicted
+win total, or will they come in under it?\n\nEvery sportsbook offers its own selection of futures and props bets, so shop around to find the sportsbooks that
+best fit your needs.\n\nHow to find the best MLB lines\n\nIt stands to reason that bettors always seek the most favorable MLB odds. “Line shopping” involves
+researching several different sportsbooks to compare odds.\n\nThis might involve using an odds feed, like the ones you’ll find here, or by comparing the odds on
+multiple online sportsbooks or MLB betting apps.', 'MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)\nBy
+doing this research, you’ll find the best odds for the bets you were already planning on making, which means you can maximize your potential return on your
+wager.\n\nThis can be a time-consuming process, but it also helps you boost your bankroll and give yourself the largest possible profit.\n\nMLB betting rules at
+online sportsbooks\n\nEvery sportsbook has terms and conditions for all bets, MLB included. While those rules may be specific to each sportsbook, there are some
+general rules that should apply everywhere.\n\nFor example, MLB First 5 Innings bets are usually considered actionable after five innings of play, or 4.5
+innings in the case of the home team having the lead.\n\nAnother rule many sportsbooks follow for baseball bets is weather-related, such as if a game is
+suspended due to rain or other weather conditions. These delays may lead to bets being refunded depending on the circumstances and the specific rules of your
+sportsbook.\n\nHere are some other rules found at online sportsbooks for MLB betting.\n\nWagers include extra innings unless specified otherwise.']
+directly_mentioned_articles: []
+shared_publisher_connections: [{'publisher': 'Sporting News', 'article': "Raiders vs. Lions live score, updates, highlights from NFL 'Monday Night Football'
+game"}, {'publisher': 'Sporting News', 'article': 'UTSA vs. Marshall odds, props, predictions: Roadrunners lay big spread in Frisco Bowl'}, {'publisher':
+'Sporting News', 'article': 'North Texas vs. SMU odds, props, predictions: Red hot Mustangs could overpower not-so-Mean Green'}, {'publisher': 'Sporting News',
+'article': "Chiefs vs. Packers live score, updates, highlights from NFL 'Sunday Night Football' game"}, {'publisher': 'Sporting News', 'article': "Jaguars vs.
+Saints live score, updates, highlights from NFL 'Thursday Night Football' game"}, {'publisher': 'Sporting News', 'article': "Vikings vs. Broncos live score,
+updates, highlights from NFL 'Sunday Night Football' game"}, {'publisher': 'Sporting News', 'article': 'NFL standings: Updated AFC, NFC playoff picture for Week
+13 of 2023 season'}, {'publisher': 'Sporting News', 'article': 'Chicago Fire vs Inter Miami live score, result, updates, highlights from Lionel Messi in MLS
+match'}, {'publisher': 'Sporting News', 'article': 'FanDuel Picks Week 15: Best NFL DFS lineup advice for daily fantasy football tournaments'}, {'publisher':
+'Sporting News', 'article': 'Line Shopping in Sports Betting - How to Find the Best Odds'}, {'publisher': 'Sporting News', 'article': 'Moneyline Betting - What
+is the Moneyline and How Does it Work?'}, {'publisher': 'Sporting News', 'article': 'NBA Rookie of the Year Odds - Wembanyama the early favorite'},
+{'publisher': 'Sporting News', 'article': 'Vermont Sportsbook Promos and Sports Betting Launch News'}, {'publisher': 'Sporting News', 'article': 'Michigan
+sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti'}, {'publisher': 'Sporting News', 'article': "Browns survive Bears Hail Mary on
+wild, near-catch by Darnell Mooney: 'Damn near s— myself'"}, {'publisher': 'Sporting News', 'article': "Inter Miami vs FC Cincinnati live score, result,
+updates, highlights with Lionel Messi's MLS playoffs on line"}, {'publisher': 'Sporting News', 'article': 'Carabao Cup fixtures, draws, results, TV channel, and
+live streams for every round of EFL League Cup 2023/24'}, {'publisher': 'Sporting News', 'article': 'USC basketball futures odds to win Pac-12, NCAA tourney
+ahead of Bronny James collegiate debut'}, {'publisher': 'Sporting News', 'article': 'Watch Argentina vs Paraguay live stream, TV channel, lineups, betting odds
+for World Cup qualifying match'}, {'publisher': 'Sporting News', 'article': 'Fantasy Football WR PPR Rankings Week 13: Who to start, best sleepers at wide
+receiver'}, {'publisher': 'Sporting News', 'article': 'NFL power rankings: Lions, 49ers level up; Texans jump Bengals, Bills; Jets, Patriots sink to bottom for
+Week 11'}, {'publisher': 'Sporting News', 'article': 'MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency'},
+{'publisher': 'Sporting News', 'article': 'Man United vs Chelsea final score, result and highlights as Scott McTominay brace gives Ten Hag vital win'},
+{'publisher': 'Sporting News', 'article': "Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game"}, {'publisher': 'Sporting
+News', 'article': "Bears vs. Vikings live score, updates, highlights from NFL 'Monday Night Football' game"}, {'publisher': 'Sporting News', 'article': 'NFL
+awards odds: Six longshots bettors should consider for MVP, OPOY, DPOY and more'}, {'publisher': 'Sporting News', 'article': 'Jamaica vs Canada live score,
+result, updates, highlights from CONCACAF Nations League quarterfinal first leg'}, {'publisher': 'Sporting News', 'article': 'Where to watch England vs South
+Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal'}, {'publisher': 'Sporting News', 'article': 'Michigan sign-stealing scandal
+news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation'}, {'publisher': 'Sporting News', 'article': 'Thursday Night Football
+FanDuel Picks: NFL DFS lineup advice for Week 4 Lions-Packers single-game tournaments'}, {'publisher': 'Sporting News', 'article': 'Champions League
+permutations, scenarios: What teams need to qualify from groups for 2023/24 Round of 16 stage'}, {'publisher': 'Sporting News', 'article': 'Fantasy Football WR
+PPR Rankings Week 14: Who to start, best sleepers at wide receiver'}, {'publisher': 'Sporting News', 'article': 'Fantasy Football RB Rankings Week 14: Who to
+start, best sleepers at running back'}, {'publisher': 'Sporting News', 'article': "Chiefs vs. Jets live score, updates, highlights from NFL 'Sunday Night
+Football' game"}, {'publisher': 'Sporting News', 'article': 'Prop Betting - What is a Prop Bet?'}, {'publisher': 'Sporting News', 'article': 'Best sportsbook
+bonus offers for NFL Monday Night Football Eagles vs. Seahawks: Claim over $5,000 in bonuses from Bet365, BetMGM, BetRivers, Caesars Sportsbook, DraftKings and
+FanDuel'}, {'publisher': 'Sporting News', 'article': 'Inter Miami season tickets: Lionel Messi demand causes 2024 prices soar to most expensive in world'},
+{'publisher': 'Sporting News', 'article': 'Man United vs Chelsea head to head record, all-time results between Premier League giants'}, {'publisher': 'Sporting
+News', 'article': 'Best Golf Betting Sites and Apps - Top Sportsbooks for Golf 2023'}, {'publisher': 'Sporting News', 'article': 'Michigan conquers Ohio State
+again, but the story is far from over for 2023 Wolverines'}, {'publisher': 'Sporting News', 'article': 'Colorado vs. UCLA live score, updates, highlights from
+Week 9 college football game'}, {'publisher': 'Sporting News', 'article': 'USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany,
+Ghana'}, {'publisher': 'Sporting News', 'article': 'Canada vs Jamaica live score, updates, highlights, result from CONCACAF Nations League quarterfinal second
+leg'}, {'publisher': 'Sporting News', 'article': 'Canelo Alvarez vs Jermell Charlo live fight updates, results, highlights from 2023 boxing fight'},
+{'publisher': 'Sporting News', 'article': 'Gio Reyna looks good in start for USMNT vs. Germany, but those involved in the finish are punished in 3-1 defeat'},
+{'publisher': 'Sporting News', 'article': "Can Alabama make College Football Playoff? How Texas, Oregon losses could impact Tide's 2023 chances"}, {'publisher':
+'Sporting News', 'article': 'Showtime Boxing to take final 10-count: Top 5 greatest fights revisited'}, {'publisher': 'Sporting News', 'article': "Cowboys vs.
+49ers live score, updates, highlights from NFL 'Sunday Night Football' game"}, {'publisher': 'Sporting News', 'article': 'FanDuel Picks Week 14: Best NFL DFS
+lineup advice for daily fantasy football tournaments'}, {'publisher': 'Sporting News', 'article': "Lions vs. Packers live score, updates, highlights from NFL
+'Thursday Night Football' game"}, {'publisher': 'Sporting News', 'article': "Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J.
+Hockenson & Curtis Samuel"}, {'publisher': 'Sporting News', 'article': "Seahawks vs. Giants live score, updates, highlights from NFL 'Monday Night Football'
+game"}, {'publisher': 'Sporting News', 'article': "Bills vs. Bengals live score, updates, highlights from NFL 'Sunday Night Football' game"}, {'publisher':
+'Sporting News', 'article': 'Best NHL prop bets tonight: Artemi Panarin, Cale Makar highlight top parlay picks for Rangers-Red Wings, Devils-Avalanche'},
+{'publisher': 'Sporting News', 'article': "FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4"},
+{'publisher': 'Sporting News', 'article': 'NFL Best Bets Week 9: Colts clobber Panthers, Dolphins drop Chiefs in Germany'}, {'publisher': 'Sporting News',
+'article': 'Man United next manager: Assessing candidates to replace Erik ten Hag if Red Devils sack Dutch boss'}, {'publisher': 'Sporting News', 'article':
+'Fantasy Football RB PPR Rankings Week 14: Who to start, best sleepers at running back'}, {'publisher': 'Sporting News', 'article': "Bryce Harper 'Atta Boy'
+controversy, explained: Why Orlando Arcia's comments led to backlash, Alanna Rizzo rant"}, {'publisher': 'Sporting News', 'article': 'DraftKings Picks Week 14:
+Best NFL DFS lineup advice for daily fantasy football tournaments'}, {'publisher': 'Sporting News', 'article': 'Liam Paro responds to Shakur Stevenson sparring
+clip ahead of return vs. Montana Love'}, {'publisher': 'Sporting News', 'article': "Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a
+different game"}, {'publisher': 'Sporting News', 'article': 'Patrick Kane destinations: Sabres, Red Wings among potential landing spots for free agent winger'},
+{'publisher': 'Sporting News', 'article': 'Point Spread Betting - What is a Point Spread Bet?'}, {'publisher': 'Sporting News', 'article': 'The Best NBA Betting
+Sites and Apps for the 2023-24 Season'}, {'publisher': 'Sporting News', 'article': 'Bills vs. Chargers odds, props, predictions: Buffalo faces struggling L.A.
+with eyes on AFC playoff picture'}, {'publisher': 'Sporting News', 'article': 'USC vs. Notre Dame live score, updates, highlights from Week 7 college football
+game'}, {'publisher': 'Sporting News', 'article': 'Breaking down each VAR intervention from wild first half of Tottenham vs Chelsea officiated by Michael
+Oliver'}, {'publisher': 'Sporting News', 'article': 'Monday Night Football DraftKings Picks: NFL DFS lineup advice for Week 15 Eagles-Seahawks Showdown
+tournaments'}, {'publisher': 'Sporting News', 'article': "Seahawks-Cowboys Fantasy Start 'Em Sit 'Em Week 13: Should you start Zach Charbonnet, Jake Ferguson on
+TNF?"}, {'publisher': 'Sporting News', 'article': 'VAR apology list in Premier League: Updated list of PGMOL apologies for referee mistakes in English
+football'}, {'publisher': 'Sporting News', 'article': 'World Series 2023 live score: Rangers vs. Diamondbacks updates, highlights, results from Game 4'},
+{'publisher': 'Sporting News', 'article': "When was the first Cricket World Cup? History, winners' list and tournament details ahead of 2023 men's ODI
+showpiece"}, {'publisher': 'Sporting News', 'article': 'MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings'},
+{'publisher': 'Sporting News', 'article': 'Shohei Ohtani rumors tracker: Latest news, updates on Dodgers, Cubs & more as free agency short list emerges'},
+{'publisher': 'Sporting News', 'article': 'Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM,
+Bet365, FanDuel, DraftKings, BetRivers'}, {'publisher': 'Sporting News', 'article': 'College Bowl Odds, Spreads, Money Lines and Totals - NCAAF 2023 Bowl
+Season'}, {'publisher': 'Sporting News', 'article': "Jets vs. Raiders live score, updates, highlights from NFL 'Sunday Night Football' game"}, {'publisher':
+'Sporting News', 'article': 'What USMNT can expect from Julian Nagelsmann, Germany in first match for new manager'}, {'publisher': 'Sporting News', 'article':
+'Baker Mayfield stats today: Buccaneers QB keeps Tampa Bay atop NFC South with sparkling showing vs. Packers'}, {'publisher': 'Sporting News', 'article':
+'Patriots vs. Broncos live score, updates, highlights from NFL Sunday night football game'}, {'publisher': 'Sporting News', 'article': "Will the Panthers fire
+Frank Reich? Impatient David Tepper could turn up Carolina's hot seat with 'Thursday Night Football' loss"}, {'publisher': 'Sporting News', 'article': "Shohei
+Ohtani rumors tracker: Latest news, updates on free agent's MLB future"}, {'publisher': 'Sporting News', 'article': "Blackhawks vs. Penguins live score,
+updates, highlights from Connor Bedard's NHL debut"}, {'publisher': 'Sporting News', 'article': 'Ole Miss vs. Georgia live score, updates, highlights from Week
+11 college football game'}, {'publisher': 'Sporting News', 'article': "Bears vs. Panthers live score, updates, highlights from NFL 'Thursday Night Football'
+game"}, {'publisher': 'Sporting News', 'article': 'Fantasy Football RB Rankings Week 12: Who to start, best sleepers at running back'}, {'publisher': 'Sporting
+News', 'article': 'World Series 2023 live score: Rangers vs. Diamondbacks updates, highlights, results from Game 3'}, {'publisher': 'Sporting News', 'article':
+'NBA Prop Bets - Best Team and Player Props 2023/24 Season'}, {'publisher': 'Sporting News', 'article': '49ers cap space 2024: Why Chase Young trade may not be
+a pure rental for San Francisco'}, {'publisher': 'Sporting News', 'article': 'Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World
+Cup qualifying'}, {'publisher': 'Sporting News', 'article': "Inter Miami friendly matches for 2024 preseason: Lionel Messi to play Newell's Old Boys, China tour
+cancelled"}, {'publisher': 'Sporting News', 'article': 'NFL DFS picks Week 15: Best sleepers, value players for FanDuel, DraftKings, SuperDraft lineups'},
+{'publisher': 'Sporting News', 'article': 'Fantasy Football TE PPR Rankings Week 14: Who to start, best sleepers at tight end'}, {'publisher': 'Sporting News',
+'article': 'Fantasy Football QB Rankings Week 14: Who to start, best sleepers at quarterback'}, {'publisher': 'Sporting News', 'article': 'Totals Betting - What
+is an Over/Under Bet?'}, {'publisher': 'Sporting News', 'article': 'Colorado vs. Arizona State live score, updates, highlights from Week 6 college football
+game'}, {'publisher': 'Sporting News', 'article': 'Patriots vs. Steelers FanDuel Picks: NFL DFS lineup advice for Week 14 TNF single-game tournaments'},
+{'publisher': 'Sporting News', 'article': 'USA vs Germany player ratings: USMNT defensive errors blight positive performance by Pulisic, Weah'}, {'publisher':
+'Sporting News', 'article': 'NBA MVP Odds 2024 Season - Jokic and Giannis early favorites'}]
+shared_entity_connections: [{'shared_entity': 'MLB', 'article': 'How Did the Houston Astros Cheat in 2017? Everything to Know About a Dark Moment in MLB
+History'}, {'shared_entity': 'MLB', 'article': 'Which M.L.B. Playoff Team Has the Most Daunting Home Field? We Ranked Them.'}, {'shared_entity': 'MLB',
+'article': '2023 Kentucky online sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet'}, {'shared_entity': 'MLB', 'article':
+'Vermont Sportsbook Promos and Sports Betting Launch News'}, {'shared_entity': 'MLB', 'article': 'Top 25 MLB offseason trade candidates (Yardbarker,
+2023-11-13T23:16:32+00:00)'}, {'shared_entity': 'MLB', 'article': 'Top 25 MLB offseason trade candidates'}, {'shared_entity': 'MLB', 'article': 'MLB Winter
+Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency'}, {'shared_entity': 'MLB', 'article': 'Prop Betting - What is a Prop
+Bet?'}, {'shared_entity': 'MLB', 'article': 'Point Spread Betting - What is a Point Spread Bet?'}, {'shared_entity': 'MLB', 'article': 'World Series 2023 live
+score: Rangers vs. Diamondbacks updates, highlights, results from Game 4'}, {'shared_entity': 'MLB', 'article': 'Amidst Managerial Shake-Ups, These 5 MLB Teams
+Are Looking for a New Leader: Who Are the Top Candidates?'}, {'shared_entity': 'MLB', 'article': 'MLB free agency tracker: Live updates on news, rumors,
+signings and trades after 2023 Winter Meetings'}, {'shared_entity': 'MLB', 'article': 'Unraveling Potential Reasons Why the Dodgers May Not Pursue Shohei Ohtani
+and Mike Trout in Free Agency Despite Their Availability'}, {'shared_entity': 'MLB', 'article': 'Shohei Ohtani rumors tracker: Latest news, updates on Dodgers,
+Cubs & more as free agency short list emerges'}, {'shared_entity': 'MLB', 'article': "Shohei Ohtani rumors tracker: Latest news, updates on free agent's MLB
+future"}, {'shared_entity': 'MLB', 'article': 'World Series 2023 live score: Rangers vs. Diamondbacks updates, highlights, results from Game 3'},
+{'shared_entity': 'MLB', 'article': 'Totals Betting - What is an Over/Under Bet?'}, {'shared_entity': 'odds and lines', 'article': 'Line Shopping in Sports
+Betting - How to Find the Best Odds'}, {'shared_entity': 'totals bets', 'article': 'Line Shopping in Sports Betting - How to Find the Best Odds'},
+{'shared_entity': 'Caesars', 'article': 'NBA Rookie of the Year Odds - Wembanyama the early favorite'}, {'shared_entity': 'Caesars', 'article': '2023 Kentucky
+online sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet'}, {'shared_entity': 'bet365 app', 'article': '2023 Kentucky
+online sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet'}, {'shared_entity': 'US', 'article': 'ASX set to drop as Wall
+Street’s September slump deepens'}, {'shared_entity': 'US', 'article': 'ASX set for bright start despite Wall Street slip; $A drops'}, {'shared_entity': 'US',
+'article': 'ASX set to open higher as Wall Street rebounds; $A rises'}, {'shared_entity': 'US', 'article': 'Is Google Search better than the rest? And is that
+fair?'}, {'shared_entity': 'US', 'article': 'ChatGPT: Everything you need to know about the AI-powered chatbot'}, {'shared_entity': 'US', 'article': 'From
+Justin Timberlake to Sam Asghari: A timeline of Britney Spears’ relationships'}, {'shared_entity': 'US', 'article': 'Line Shopping in Sports Betting - How to
+Find the Best Odds'}, {'shared_entity': 'US', 'article': 'Moneyline Betting - What is the Moneyline and How Does it Work?'}, {'shared_entity': 'US', 'article':
+'NBA Rookie of the Year Odds - Wembanyama the early favorite'}, {'shared_entity': 'US', 'article': '2023 Kentucky online sports betting sites: Best legal
+sportsbooks, promos, bonuses, mobile apps, how to bet'}, {'shared_entity': 'US', 'article': 'Vermont Sportsbook Promos and Sports Betting Launch News'},
+{'shared_entity': 'US', 'article': 'ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields'}, {'shared_entity': 'US', 'article':
+"Israel's defense undone by reliance on technology"}, {'shared_entity': 'US', 'article': 'ASX set to open lower as Wall Street closes September with more
+losses'}, {'shared_entity': 'US', 'article': 'The best movies of 2023 so far'}, {'shared_entity': 'US', 'article': 'Dissecting impact of Israel-Hamas conflict
+on markets'}, {'shared_entity': 'US', 'article': 'There are no sacred numbers'}, {'shared_entity': 'US', 'article': 'The restaurant nearest Google'},
+{'shared_entity': 'US', 'article': "'Massive intel failure by Mossad': Hamas' surprise attack on Israel shocks internet"}, {'shared_entity': 'US', 'article':
+'The obsessive tormenter who made professors’ lives miserable'}, {'shared_entity': 'US', 'article': 'Jamaica vs Canada live score, result, updates, highlights
+from CONCACAF Nations League quarterfinal first leg'}, {'shared_entity': 'US', 'article': 'California’s privacy watchdog eyes AI rules with opt-out and access
+rights'}, {'shared_entity': 'US', 'article': 'The fate of US venture capital in China teeters on uncertainty'}, {'shared_entity': 'US', 'article': '‘Mass breach
+of privacy’: TikTok under fire for tracking users online'}, {'shared_entity': 'US', 'article': 'Prop Betting - What is a Prop Bet?'}, {'shared_entity': 'US',
+'article': 'Best Golf Betting Sites and Apps - Top Sportsbooks for Golf 2023'}, {'shared_entity': 'US', 'article': 'Michelle Jubelirer on Ice Spice, The
+Beatles, and reinventing Capitol Music Group: ‘I don’t think any label group has been able to turn things around as quickly as my team and I have done in less
+than two years.’'}, {'shared_entity': 'US', 'article': 'Microsoft Activision: What does deal mean for gamers?'}, {'shared_entity': 'US', 'article': 'This horror
+flick boasts the best opening 13 minutes of a film you’ll see this year'}, {'shared_entity': 'US', 'article': "Sex, Signal messages, and sabotaging FTX's code:
+SBF execs and Bahamas roommates tell all in court"}, {'shared_entity': 'US', 'article': 'The best VPN services for 2023'}, {'shared_entity': 'US', 'article':
+'Merck, Novo Nordisk, Gilead, Biogen and more: Here are the investment opportunities in global Big Pharma'}, {'shared_entity': 'US', 'article': 'Why the Apple
+Watch is being banned — and how Apple can avoid it'}, {'shared_entity': 'US', 'article': 'Reliance Industries: With the stock having underperformed Nifty 50 in
+last three years, is it time to buy?'}, {'shared_entity': 'US', 'article': 'Fans react to most ‘heartbreaking’ scene in The Crown'}, {'shared_entity': 'US',
+'article': 'NMPA: Generative AI is ‘the greatest risk to the human creative class that has ever existed’'}, {'shared_entity': 'US', 'article': '‘I see myself as
+a royal’: artist Vincent Namatjira on colonialism, satire and his great-grandfather’s legacy'}, {'shared_entity': 'US', 'article': 'ASX rises after Wall Street
+gains on rate optimism; Oil drops'}, {'shared_entity': 'US', 'article': 'Today the FTX jury suffered through a code review'}, {'shared_entity': 'US', 'article':
+"Sweeping White House AI executive order takes aim at the technology's toughest challenges"}, {'shared_entity': 'US', 'article': 'Trump and the GOP are trying
+to drive a wedge between autoworkers and EVs'}, {'shared_entity': 'US', 'article': 'Thanksgiving 2023: What stores will be open on the holiday?'},
+{'shared_entity': 'US', 'article': 'From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner'}, {'shared_entity': 'US',
+'article': 'Northern Lights: Here are the best tips to help you spot the stunning display in the US and abroad'}, {'shared_entity': 'US', 'article': 'How
+Chinese firm linked to repression of Uyghurs aids Israeli surveillance in West Bank'}, {'shared_entity': 'US', 'article': 'Their kids died after buying drugs on
+Snapchat. Now the parents are suing'}, {'shared_entity': 'US', 'article': 'ASX to rise after interest rate hopes boost US shares'}, {'shared_entity': 'US',
+'article': 'Britney Spears and Kevin Federline: A complete timeline of their relationship'}, {'shared_entity': 'US', 'article': 'Europe’s artists and labels
+could lose $137m annually to US recorded music rightsholders if EU law isn’t changed, trade groups warn'}, {'shared_entity': 'US', 'article': "Israel's prince
+of public diplomacy"}, {'shared_entity': 'US', 'article': 'Fundamental Investing: The Art of Relative Valuation'}, {'shared_entity': 'US', 'article': 'New
+Alzheimer’s drugs bring hope of slowing disease for UK patients'}, {'shared_entity': 'US', 'article': 'What USMNT can expect from Julian Nagelsmann, Germany in
+first match for new manager'}, {'shared_entity': 'US', 'article': 'Adobe: Thanksgiving US online sales nudge up to $5.6B; Salesforce: $31.7B spent globally'},
+{'shared_entity': 'US', 'article': 'Here are the shipping deadlines to get your holiday gifts on time'}, {'shared_entity': 'US', 'article': 'Israel thwarts
+Hamas on the financial battlefield'}, {'shared_entity': 'US', 'article': 'NBA Prop Bets - Best Team and Player Props 2023/24 Season'}, {'shared_entity': 'US',
+'article': 'Economists, central bankers are rethinking the quantitative easing strategy that saved the world but created bubbles and distortions'},
+{'shared_entity': 'US', 'article': 'Discord’s latest teen safety blitz starts with content filters and automated warnings'}, {'shared_entity': 'US', 'article':
+'The airline parts scandal sparking panic and introspection in aerospace'}, {'shared_entity': 'US', 'article': '78 Absolute Best October Prime Day Deals
+(2023)'}, {'shared_entity': 'US', 'article': "India to be one of world's fastest growing economies over next decade"}, {'shared_entity': 'US', 'article': 'CEO
+David Baszucki’s mission to make Roblox a billion-player platform'}, {'shared_entity': 'US', 'article': 'If the Cybertruck is deadly for pedestrians, it’s
+because all large trucks'}, {'shared_entity': 'US', 'article': 'If the Cybertruck is deadly for pedestrians, it’s because all large trucks are'},
+{'shared_entity': 'US', 'article': 'Subtle as a sledgehammer, a pop icon returns'}, {'shared_entity': 'US', 'article': 'Looking for a book to read? Here are 14
+tips for October'}, {'shared_entity': 'US', 'article': 'NBA MVP Odds 2024 Season - Jokic and Giannis early favorites'}, {'shared_entity': 'US', 'article': 'The
+world came tantalizingly close to a deal to phase out fossil fuels'}, {'shared_entity': 'US', 'article': 'Daye now offers tampon-based STI screening — starting
+in the UK'}, {'shared_entity': 'Bet365', 'article': '2023 Kentucky online sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to
+bet'}, {'shared_entity': 'Bet365', 'article': 'Best sportsbook bonus offers for NFL Monday Night Football Eagles vs. Seahawks: Claim over $5,000 in bonuses from
+Bet365, BetMGM, BetRivers, Caesars Sportsbook, DraftKings and FanDuel'}, {'shared_entity': 'Bet365', 'article': 'Best sports betting promo codes for college
+basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers'}, {'shared_entity': 'Major League Baseball',
+'article': 'SBF’s trial starts soon, but how did he — and FTX — get here?'}, {'shared_entity': 'Major League Baseball', 'article': 'M.L.B. Superstar Shohei
+Ohtani to Sign $700 Million Deal With Dodgers'}, {'shared_entity': 'iRush Rewards', 'article': 'Vermont Sportsbook Promos and Sports Betting Launch News'},
+{'shared_entity': 'point spread', 'article': 'Line Shopping in Sports Betting - How to Find the Best Odds'}, {'shared_entity': 'MLB', 'article': "Blackhawks vs.
+Penguins live score, updates, highlights from Connor Bedard's NHL debut"}, {'shared_entity': 'Caesars', 'article': 'Best Golf Betting Sites and Apps - Top
+Sportsbooks for Golf 2023'}, {'shared_entity': 'Caesars', 'article': 'NFL Best Bets Week 9: Colts clobber Panthers, Dolphins drop Chiefs in Germany'},
+{'shared_entity': 'DraftKings', 'article': 'NBA Rookie of the Year Odds - Wembanyama the early favorite'}, {'shared_entity': 'DraftKings', 'article': '2023
+Kentucky online sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet'}, {'shared_entity': 'DraftKings', 'article': 'Vermont
+Sportsbook Promos and Sports Betting Launch News'}, {'shared_entity': 'DraftKings', 'article': 'NFL awards odds: Six longshots bettors should consider for MVP,
+OPOY, DPOY and more'}, {'shared_entity': 'DraftKings', 'article': 'Best sportsbook bonus offers for NFL Monday Night Football Eagles vs. Seahawks: Claim over
+$5,000 in bonuses from Bet365, BetMGM, BetRivers, Caesars Sportsbook, DraftKings and FanDuel'}, {'shared_entity': 'DraftKings', 'article': 'DraftKings Picks
+Week 14: Best NFL DFS lineup advice for daily fantasy football tournaments'}, {'shared_entity': 'DraftKings', 'article': 'The Best NBA Betting Sites and Apps
+for the 2023-24 Season'}, {'shared_entity': 'DraftKings', 'article': 'Monday Night Football DraftKings Picks: NFL DFS lineup advice for Week 15 Eagles-Seahawks
+Showdown tournaments'}, {'shared_entity': 'DraftKings', 'article': 'Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from
+Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers'}, {'shared_entity': 'DraftKings Sportsbook', 'article': 'Line Shopping in Sports Betting -
+How to Find the Best Odds'}, {'shared_entity': 'DraftKings Sportsbook', 'article': '2023 Kentucky online sports betting sites: Best legal sportsbooks, promos,
+bonuses, mobile apps, how to bet'}, {'shared_entity': 'DraftKings Sportsbook', 'article': 'Vermont Sportsbook Promos and Sports Betting Launch News'},
+{'shared_entity': 'DraftKings Sportsbook', 'article': 'Best Golf Betting Sites and Apps - Top Sportsbooks for Golf 2023'}, {'shared_entity': 'DraftKings
+Sportsbook', 'article': 'The Best NBA Betting Sites and Apps for the 2023-24 Season'}, {'shared_entity': 'DraftKings Sportsbook', 'article': 'NBA MVP Odds 2024
+Season - Jokic and Giannis early favorites'}, {'shared_entity': 'FanDuel Sportsbook', 'article': 'Line Shopping in Sports Betting - How to Find the Best Odds'},
+{'shared_entity': 'FanDuel Sportsbook', 'article': '2023 Kentucky online sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to
+bet'}, {'shared_entity': 'FanDuel Sportsbook', 'article': 'Vermont Sportsbook Promos and Sports Betting Launch News'}, {'shared_entity': 'FanDuel Sportsbook',
+'article': 'Best Golf Betting Sites and Apps - Top Sportsbooks for Golf 2023'}, {'shared_entity': 'FanDuel Sportsbook', 'article': 'The Best NBA Betting Sites
+and Apps for the 2023-24 Season'}, {'shared_entity': 'FanDuel Sportsbook', 'article': '‘As clinical as it gets’: Unbeaten Aussie moves to 24-0 with stunning
+first-round KO of hapless Englishman'}, {'shared_entity': 'FanDuel Sportsbook', 'article': 'NBA MVP Odds 2024 Season - Jokic and Giannis early favorites'},
+{'shared_entity': 'BetMGM Sportsbook', 'article': 'UTSA vs. Marshall odds, props, predictions: Roadrunners lay big spread in Frisco Bowl'}, {'shared_entity':
+'BetMGM Sportsbook', 'article': 'Line Shopping in Sports Betting - How to Find the Best Odds'}, {'shared_entity': 'BetMGM Sportsbook', 'article': 'NBA Rookie of
+the Year Odds - Wembanyama the early favorite'}, {'shared_entity': 'BetMGM Sportsbook', 'article': '2023 Kentucky online sports betting sites: Best legal
+sportsbooks, promos, bonuses, mobile apps, how to bet'}, {'shared_entity': 'BetMGM Sportsbook', 'article': 'Vermont Sportsbook Promos and Sports Betting Launch
+News'}, {'shared_entity': 'BetMGM Sportsbook', 'article': 'Best Golf Betting Sites and Apps - Top Sportsbooks for Golf 2023'}, {'shared_entity': 'BetMGM
+Sportsbook', 'article': 'The Best NBA Betting Sites and Apps for the 2023-24 Season'}, {'shared_entity': 'BetMGM Sportsbook', 'article': 'NBA MVP Odds 2024
+Season - Jokic and Giannis early favorites'}, {'shared_entity': 'BetRivers', 'article': 'Best sportsbook bonus offers for NFL Monday Night Football Eagles vs.
+Seahawks: Claim over $5,000 in bonuses from Bet365, BetMGM, BetRivers, Caesars Sportsbook, DraftKings and FanDuel'}, {'shared_entity': 'BetRivers', 'article':
+'The Best NBA Betting Sites and Apps for the 2023-24 Season'}, {'shared_entity': 'BetRivers', 'article': 'Best sports betting promo codes for college
+basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers'}, {'shared_entity': 'live betting', 'article':
+'Moneyline Betting - What is the Moneyline and How Does it Work?'}, {'shared_entity': 'live betting', 'article': 'Best Golf Betting Sites and Apps - Top
+Sportsbooks for Golf 2023'}, {'shared_entity': 'live betting', 'article': 'The Best NBA Betting Sites and Apps for the 2023-24 Season'}, {'shared_entity':
+'DraftKings', 'article': 'Best Golf Betting Sites and Apps - Top Sportsbooks for Golf 2023'}, {'shared_entity': 'DraftKings', 'article': "Seahawks-Cowboys
+Fantasy Start 'Em Sit 'Em Week 13: Should you start Zach Charbonnet, Jake Ferguson on TNF?"}, {'shared_entity': 'DraftKings', 'article': 'NFL DFS picks Week 15:
+Best sleepers, value players for FanDuel, DraftKings, SuperDraft lineups'}, {'shared_entity': 'totals', 'article': 'Prop Betting - What is a Prop Bet?'},
+{'shared_entity': 'totals', 'article': 'The Best NBA Betting Sites and Apps for the 2023-24 Season'}, {'shared_entity': 'BetMGM', 'article': '2023 Kentucky
+online sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet'}, {'shared_entity': 'BetMGM', 'article': 'Best sportsbook bonus
+offers for NFL Monday Night Football Eagles vs. Seahawks: Claim over $5,000 in bonuses from Bet365, BetMGM, BetRivers, Caesars Sportsbook, DraftKings and
+FanDuel'}, {'shared_entity': 'BetMGM', 'article': 'Best Golf Betting Sites and Apps - Top Sportsbooks for Golf 2023'}, {'shared_entity': 'BetMGM', 'article':
+'The Best NBA Betting Sites and Apps for the 2023-24 Season'}, {'shared_entity': 'BetMGM', 'article': 'Best sports betting promo codes for college basketball:
+Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers'}, {'shared_entity': 'BetMGM', 'article': 'NBA MVP Odds 2024
+Season - Jokic and Giannis early favorites'}, {'shared_entity': 'FanDuel', 'article': 'FanDuel Picks Week 15: Best NFL DFS lineup advice for daily fantasy
+football tournaments'}, {'shared_entity': 'FanDuel', 'article': '2023 Kentucky online sports betting sites: Best legal sportsbooks, promos, bonuses, mobile
+apps, how to bet'}, {'shared_entity': 'FanDuel', 'article': 'Vermont Sportsbook Promos and Sports Betting Launch News'}, {'shared_entity': 'FanDuel', 'article':
+'Thursday Night Football FanDuel Picks: NFL DFS lineup advice for Week 4 Lions-Packers single-game tournaments'}, {'shared_entity': 'FanDuel', 'article': 'Best
+sportsbook bonus offers for NFL Monday Night Football Eagles vs. Seahawks: Claim over $5,000 in bonuses from Bet365, BetMGM, BetRivers, Caesars Sportsbook,
+DraftKings and FanDuel'}, {'shared_entity': 'FanDuel', 'article': 'Best Golf Betting Sites and Apps - Top Sportsbooks for Golf 2023'}, {'shared_entity':
+'FanDuel', 'article': 'FanDuel Picks Week 14: Best NFL DFS lineup advice for daily fantasy football tournaments'}, {'shared_entity': 'FanDuel', 'article':
+"FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4"}, {'shared_entity': 'FanDuel', 'article':
+'DraftKings Picks Week 14: Best NFL DFS lineup advice for daily fantasy football tournaments'}, {'shared_entity': 'FanDuel', 'article': 'The Best NBA Betting
+Sites and Apps for the 2023-24 Season'}, {'shared_entity': 'FanDuel', 'article': "Seahawks-Cowboys Fantasy Start 'Em Sit 'Em Week 13: Should you start Zach
+Charbonnet, Jake Ferguson on TNF?"}, {'shared_entity': 'FanDuel', 'article': 'Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses
+from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers'}, {'shared_entity': 'FanDuel', 'article': 'NFL DFS picks Week 15: Best sleepers, value
+players for FanDuel, DraftKings, SuperDraft lineups'}, {'shared_entity': 'FanDuel', 'article': 'Patriots vs. Steelers FanDuel Picks: NFL DFS lineup advice for
+Week 14 TNF single-game tournaments'}, {'shared_entity': 'baseball', 'article': 'How Did the Houston Astros Cheat in 2017? Everything to Know About a Dark
+Moment in MLB History'}, {'shared_entity': 'baseball', 'article': 'Which M.L.B. Playoff Team Has the Most Daunting Home Field? We Ranked Them.'},
+{'shared_entity': 'baseball', 'article': '2023 Kentucky online sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet'},
+{'shared_entity': 'baseball', 'article': 'Point Spread Betting - What is a Point Spread Bet?'}, {'shared_entity': 'baseball', 'article': 'Amidst Managerial
+Shake-Ups, These 5 MLB Teams Are Looking for a New Leader: Who Are the Top Candidates?'}, {'shared_entity': 'baseball', 'article': 'Unraveling Potential Reasons
+Why the Dodgers May Not Pursue Shohei Ohtani and Mike Trout in Free Agency Despite Their Availability'}, {'shared_entity': 'baseball', 'article': 'Yankees Gear
+Up for 2024 Season After Horrendous Year, But Could Letting This Star Go Spell Another Big Mistake?'}, {'shared_entity': 'baseball', 'article': "Shohei Ohtani
+rumors tracker: Latest news, updates on free agent's MLB future"}, {'shared_entity': 'baseball', 'article': 'World Series 2023 live score: Rangers vs.
+Diamondbacks updates, highlights, results from Game 3'}, {'shared_entity': 'baseball', 'article': 'M.L.B. Superstar Shohei Ohtani to Sign $700 Million Deal With
+Dodgers'}, {'shared_entity': 'baseball', 'article': 'Totals Betting - What is an Over/Under Bet?'}, {'shared_entity': 'World Series', 'article': 'How Did the
+Houston Astros Cheat in 2017? Everything to Know About a Dark Moment in MLB History'}, {'shared_entity': 'World Series', 'article': 'Which M.L.B. Playoff Team
+Has the Most Daunting Home Field? We Ranked Them.'}, {'shared_entity': 'World Series', 'article': 'Vermont Sportsbook Promos and Sports Betting Launch News'},
+{'shared_entity': 'World Series', 'article': 'World Series 2023 live score: Rangers vs. Diamondbacks updates, highlights, results from Game 4'},
+{'shared_entity': 'World Series', 'article': 'Amidst Managerial Shake-Ups, These 5 MLB Teams Are Looking for a New Leader: Who Are the Top Candidates?'},
+{'shared_entity': 'World Series', 'article': 'MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings'},
+{'shared_entity': 'World Series', 'article': 'Yankees Gear Up for 2024 Season After Horrendous Year, But Could Letting This Star Go Spell Another Big
+Mistake?'}, {'shared_entity': 'World Series', 'article': "Shohei Ohtani rumors tracker: Latest news, updates on free agent's MLB future"}, {'shared_entity':
+'World Series', 'article': 'World Series 2023 live score: Rangers vs. Diamondbacks updates, highlights, results from Game 3'}, {'shared_entity': 'World Series',
+'article': 'M.L.B. Superstar Shohei Ohtani to Sign $700 Million Deal With Dodgers'}, {'shared_entity': 'player props', 'article': '2023 Kentucky online sports
+betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet'}, {'shared_entity': 'player props', 'article': 'Prop Betting - What is a Prop
+Bet?'}, {'shared_entity': 'player props', 'article': 'The Best NBA Betting Sites and Apps for the 2023-24 Season'}, {'shared_entity': 'player props', 'article':
+'NBA Prop Bets - Best Team and Player Props 2023/24 Season'}, {'shared_entity': 'sports betting', 'article': 'Line Shopping in Sports Betting - How to Find the
+Best Odds'}, {'shared_entity': 'sports betting', 'article': 'Moneyline Betting - What is the Moneyline and How Does it Work?'}, {'shared_entity': 'sports
+betting', 'article': 'NBA Rookie of the Year Odds - Wembanyama the early favorite'}, {'shared_entity': 'sports betting', 'article': '2023 Kentucky online sports
+betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet'}, {'shared_entity': 'sports betting', 'article': 'Vermont Sportsbook Promos and
+Sports Betting Launch News'}, {'shared_entity': 'sports betting', 'article': 'Prop Betting - What is a Prop Bet?'}, {'shared_entity': 'sports betting',
+'article': 'Best sportsbook bonus offers for NFL Monday Night Football Eagles vs. Seahawks: Claim over $5,000 in bonuses from Bet365, BetMGM, BetRivers, Caesars
+Sportsbook, DraftKings and FanDuel'}, {'shared_entity': 'sports betting', 'article': 'Best Golf Betting Sites and Apps - Top Sportsbooks for Golf 2023'},
+{'shared_entity': 'sports betting', 'article': 'NFL Best Bets Week 9: Colts clobber Panthers, Dolphins drop Chiefs in Germany'}, {'shared_entity': 'sports
+betting', 'article': 'The Best NBA Betting Sites and Apps for the 2023-24 Season'}, {'shared_entity': 'sports betting', 'article': 'Best sports betting promo
+codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers'}, {'shared_entity': 'sports
+betting', 'article': 'College Bowl Odds, Spreads, Money Lines and Totals - NCAAF 2023 Bowl Season'}, {'shared_entity': 'sports betting', 'article': 'NBA Prop
+Bets - Best Team and Player Props 2023/24 Season'}, {'shared_entity': 'sports betting', 'article': 'Totals Betting - What is an Over/Under Bet?'},
+{'shared_entity': 'sports betting', 'article': 'NBA MVP Odds 2024 Season - Jokic and Giannis early favorites'}, {'shared_entity': 'sportsbook', 'article':
+'College Bowl Odds, Spreads, Money Lines and Totals - NCAAF 2023 Bowl Season'}, {'shared_entity': 'sportsbook', 'article': 'NBA Prop Bets - Best Team and Player
+Props 2023/24 Season'}, {'shared_entity': 'online sports betting', 'article': '2023 Kentucky online sports betting sites: Best legal sportsbooks, promos,
+bonuses, mobile apps, how to bet'}, {'shared_entity': 'online sports betting', 'article': 'Vermont Sportsbook Promos and Sports Betting Launch News'},
+{'shared_entity': 'online sports betting', 'article': 'The Best NBA Betting Sites and Apps for the 2023-24 Season'}, {'shared_entity': 'online sports betting',
+'article': 'NBA Prop Bets - Best Team and Player Props 2023/24 Season'}, {'shared_entity': 'moneylines', 'article': 'Line Shopping in Sports Betting - How to
+Find the Best Odds'}, {'shared_entity': 'moneylines', 'article': 'Prop Betting - What is a Prop Bet?'}, {'shared_entity': 'moneylines', 'article': 'NFL Best
+Bets Week 9: Colts clobber Panthers, Dolphins drop Chiefs in Germany'}, {'shared_entity': 'moneylines', 'article': 'The Best NBA Betting Sites and Apps for the
+2023-24 Season'}, {'shared_entity': 'moneylines', 'article': 'Totals Betting - What is an Over/Under Bet?'}, {'shared_entity': 'sportsbook', 'article':
+'Moneyline Betting - What is the Moneyline and How Does it Work?'}, {'shared_entity': 'sportsbook', 'article': 'Totals Betting - What is an Over/Under Bet?'}]
+</item 7>
+
+<item 8>
+Moneyline Betting - What is the Moneyline and How Does it Work? (Sporting News, 2023-11-01T21:25:48+00:00)
+New Information: Changes in factors like player injuries, player substitutions, or even changes in weather conditions can affect the perceived outcome of an
+event. When such information becomes public, sportsbooks may adjust the odds accordingly.
+
+Changes in factors like player injuries, player substitutions, or even changes in weather conditions can affect the perceived outcome of an event. When such
+information becomes public, sportsbooks may adjust the odds accordingly. Professional Bettors: Large wagers from sharp bettors or professional gamblers can
+cause the lines to shift. These individuals often have insights or information that can influence the odds.
+
+Large wagers from sharp bettors or professional gamblers can cause the lines to shift. These individuals often have insights or information that can influence
+the odds. Initial Miscalculation: Sometimes, the initial odds set by oddsmakers may be perceived as offering value to bettors. In such cases, heavy betting on
+one side might indicate that the initial odds were potentially "off," prompting an adjustment.
+</item 8>
+
+<item 9>
+Graph query row:
+article: The Best NBA Betting Sites and Apps for the 2023-24 Season
+passages: ["The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)\nWith legal sports betting now at your
+fingertips in over 30 states, it’s easier than ever to bet on basketball at one of the best NBA betting sites.\n\nThe NBA gives you plenty of games, teams and
+players to bet on across hundreds of odds markets. As a bettor, you'll want to find the best NBA betting lines night after night plus NBA futures markets from
+NBA Finals odds to Rookie of the Year odds.\n\nSee below for where to look and more on betting on the NBA at the best sports betting sites.\n\nBest NBA betting
+sites for 2023\n\nWhen it comes to betting on the NBA, you can choose any online betting site and have plenty of odds to choose from.\n\nYou can bet everything
+from moneylines, totals, and point spreads to player props for scoring, rebounding, and assists, or futures bets like odd to win the Eastern Conference or
+individual award winners like NBA MVP odds.\n\nHere are our favorite sportsbooks for NBA betting.", "The Best NBA Betting Sites and Apps for the 2023-24 Season
+(Sporting News, 2023-10-02T21:58:37+00:00)\nHere are our favorite sportsbooks for NBA betting.\n\nDraftKings Sportsbook for NBA betting\n\nDraftKings is one of
+the most recognizable names in online sports betting, notably for its frequent promos to enhance NBA odds. The platform boasts a diverse range of prop bets
+tailored to the most prominent NBA players and provides a seamless live NBA betting experience through its app.\n\nFor newcomers, DraftKings has a lucrative
+offer. Upon joining, there's no need for a special code to take advantage of a promo with a total promotional value of up to $1,200.\n\nIn the past, DraftKings
+has run special promotions tailored to NBA enthusiasts. One such offer allowed customers to earn $200 in bonus bets simply by placing a $5 bet on any NBA Finals
+game. This highlights the company's commitment to delivering value for its dedicated betting community.\n\nFanDuel Sportsbook for NBA betting\n\nFanDuel is
+another name that resonates strongly within the NBA betting community, garnering popularity and success akin to its counterpart, DraftKings.", "The Best NBA
+Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)\nAlongside the standard NBA odds you'd expect, FanDuel stands out with
+its expansive selection of NBA players and game props. It also has a unique feature allowing users to create same-game parlays. This lets bettors combine NBA
+moneylines, totals, and props, crafting a personalized betting experience tailored to their predictions and preferences.\n\nNewcomers to FanDuel’s online
+sportsbook can typically claim $150 in bonus bets. They may offer three months of NBA League Pass to sweeten the deal further. Claiming this promotion is
+straightforward: there's no need for a special FanDuel promo code. Prospective bettors must sign up, deposit, and place a $5 bet to be eligible.\n\nBetMGM
+Sportsbook for NBA betting\n\nBetMGM is known for its comprehensive odds markets, and the online sportsbook, coupled with its intuitive betting app, caters to a
+vast range of betting markets for all the premier sports. However, their NBA betting shines through as a significant highlight.", 'The Best NBA Betting Sites
+and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)\nHowever, their NBA betting shines through as a significant highlight.\n\nSetting it
+apart from the competition, BetMGM\'s sports betting app is the only one that offers live streaming of NBA games, so you can watch the action as you bet.\n\nNBA
+promotions are abundant at BetMGM. Past promotions have included "bet $10, get $200." Under this promotion, bettors receive 20-1 odds, and their bet is deemed
+victorious as long as a single three-point field goal is scored in the game.\n\nFor a new account, the BetMGM Sportsbook usually has a bonus of up to $1,500. If
+your first bet loses you can still get the value back in bonus bets.\n\nBetRivers Sportsbook for NBA betting\n\nFor those who like both sports betting and
+online casino games, BetRivers has an integrated app to switch between the two using a singular account.\n\nBetRivers doesn\'t just stop at offering an
+integrated platform; they\'ve also introduced the iRush Rewards program to elevate the betting experience.', 'The Best NBA Betting Sites and Apps for the
+2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)\nUnique in its approach, this program allows users to earn points as they place bets on
+sports.\n\nWhat makes it particularly appealing is the flexibility: accumulated points can be utilized on BetRivers\' online casino\n\nDedicated promotions are
+a hallmark of BetRivers, and their engagement with NBA fans is evident. A past promotion, dubbed "NBA Wednesdays," allowed users to wager up to $25 on any NBA
+game scheduled on a Wednesday.\n\nThe sweetener? A 20% profit boost if the bet was successful. New accounts typically can claim a second-chance bet that could
+reach up to $500, although this amount might differ based on the state.\n\nHow to sign up with a sportsbook and bet on the NBA online\n\nYou must open an
+account to bet on basketball at the top NBA betting sites. The good news is it is easy, quick, and free.\n\nYou can sign up and start betting using a laptop,
+phone or tablet.', "The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)\nYou can sign up and start betting
+using a laptop, phone or tablet. Use our links to access the sportsbook of your choice to get the best sports betting bonus available.\n\nOnce you’ve chosen
+your sportsbook, signing up for a new account takes a few simple steps.\n\nIt doesn’t matter which state you live in when you sign up for an account, but
+remember that you have to be within the state lines where sports betting is legal to make wagers.\n\nWhen you click “sign up” or “register” at a sportsbook,
+you’ll be asked for some identifying information, and that will include:\n\nFirst and last name\n\nDate of birth\n\nHome address\n\nPhone number\n\nPreferred
+email address\n\nUsername and password\n\nSocial Security number\n\nOnce you’ve finished supplying your personal information, you’ll be asked to accept the
+sportsbook's terms and conditions. From there, you can claim your welcome bonus, which can come in many forms (be sure to read the requirements of any welcome
+bonus before using it).", 'The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)\nIf you need to use a bonus or
+promo code, enter it at this stage. Once you’ve signed up, make your initial deposit, and you’re ready to start NBA betting.\n\nSee more: Best NBA betting
+promos\n\nWhat to look for in an NBA betting site\n\nHere are some key factors to consider:\n\nDeposits and Payouts:\n\nCheck if funds are available instantly
+after depositing.\n\nUnderstand the variety of deposit methods the sportsbook offers.\n\nFor payouts, know the withdrawal methods and wait times.\n\nBe aware of
+any limits or restrictions on withdrawals.\n\nNBA Odds:\n\nAlways select betting sites offering the best NBA odds for long-term benefits.\n\nOdds can differ
+among sportsbooks; getting the best deal can increase your winnings.\n\nFor instance, consider using both if one book offers the Boston Celtics at +800 and
+another at +1500.\n\nUser Experience:\n\nAssess how easy it is to navigate the site.\n\nGauge the efficiency of customer support.\n\nEnsure the site has a
+responsible gaming section.\n\nThe overall user experience should be smooth and hassle-free.', "The Best NBA Betting Sites and Apps for the 2023-24 Season
+(Sporting News, 2023-10-02T21:58:37+00:00)\nEnsure the site has a responsible gaming section.\n\nThe overall user experience should be smooth and
+hassle-free.\n\nSafety and Security:\n\nTop NBA betting sites prioritize users' safety.\n\nEnsure your personal information is secure.\n\nSome sportsbooks excel
+in ensuring cybersecurity; always go for those with solid reputations.\n\nHow to find the best NBA lines\n\nNot all sportsbook betting odds are created equal.
+If you're willing to put in some legwork, you can shop for the best NBA lines to maximize your potential return.\n\nMovement in the odds depends on multiple
+factors, including team news, injuries, public betting, recent play, and even the number of games a team plays in a row.\n\nOddsmakers use all the available
+information to craft their lines, and you can find value in shopping around for the most favorable lines and odds.\n\nYou can use our NBA odds page (see link
+above) to find the best lines for your prospective bet, or you can open accounts at multiple sportsbooks and do the shopping yourself.", 'The Best NBA Betting
+Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)\nEither way, the line shopping strategy is designed to help you maximize your
+potential return.\n\nNBA live betting\n\nThanks to the increased popularity of online sports betting apps, in-game betting has exploded nationwide. Also known
+as live betting, in-game betting allows you to bet on a game while it’s unfolding.\n\nThe action is fast, and the odds are constantly shifting, making for a new
+way to enjoy the flow of a game while still staying engaged as a bettor.\n\nDepending on the sportsbook, there is usually a strong variety of live betting
+opportunities. You’ll find game and player prop bets like whether the next bucket will be worth one, two, or three points.\n\nYou can bet on the team leading at
+the end of the current quarter or on whether there will be a comeback victory. You can even boil live betting down to the results of the next possession.\n\nThe
+most popular sportsbook apps, such as DraftKings, FanDuel, and BetMGM, offer NBA in-game betting, though each has its lines and betting opportunities.', 'The
+Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)\nWhat makes NBA betting special or unique?\n\nBasketball odds
+are known to fluctuate more than those of other sports. The factors that play into those lines shifting can range from having only a few impact players per team
+to the sheer frequency of games.\n\nBy following a single team, you can track its momentum swings, which players tend to get on hot or cold streaks, or how well
+they play at home vs. on the road. You can use that information to your advantage for both pre-game and live wagers.\n\nSimilar categories of moneylines,
+spreads, totals, and NBA prop bets should appear across both formats.\n\nThe NBA is also special because of the number of bets available for every game, ranging
+from pre-game to live betting and parlays.\n\nWhen you add up the standard bets, game props, player props, in-game betting, and more, there’s a staggering
+volume of bets for every NBA game at online sportsbooks.', 'The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News,
+2023-10-02T21:58:37+00:00)\nSee more: Best NCAA basketball betting sites\n\n2023-24 NBA Season\n\nOctober 24 Regular season begins November 3 - December 9
+In-season tournament February 16-18 All-Star Weekend 2024 April 14 Regular season ends April 16-19 Play-in tournament April 20 Playoffs begin June 6 NBA Finals
+Game 1\n\nNBA spreads, money lines, and over/unders\n\nFor anyone new to NBA betting, the staple wager types are:\n\nNBA point spreads: Bet on games via margins
+of victory or loss. Say the New York Knicks are -7.5 favorites over the Miami Heat. That means the Knicks need to win the game by 8 points to win a spread bet.
+On the other hand, the Heat can lose by up to 7 points (or win outright).\n\nNBA moneylines: The simplest form of betting. You pick the winner of the game, and
+if you’re right, you’ll get paid out based on the odds when you finalize your bet slip.', 'The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting
+News, 2023-10-02T21:58:37+00:00)\nFavorites to win the game are shown negative odds, such as -135, while the underdogs will have positive odds, like
++165.\n\nNBA over/under bets: Also known as totals. These bets are focused on the combined point total of the two teams playing in a game. (Winners and losers
+don’t matter.) For example, the over/under could be set at 211.5 points in the Knicks vs. Heat matchup. If you were to pick the over on the bet, you’d need the
+two teams to combine for 212 points or more to win. They need to score 211 points or fewer if you went with the under.\n\nNBA props and futures\n\nNBA player
+and team props are growing in popularity. Sportsbooks are taking note and providing more NBA props than ever.\n\nAfter all, it’s much easier to focus on a
+single player and how he will perform than the entire team. Player props could focus on how many points a player scores or how many rebounds he pulls down.',
+'The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)\nPlayer props could focus on how many points a player
+scores or how many rebounds he pulls down. These are typically provided in an over/under format.\n\nThen, team props can range from which team will score the
+first bucket to the total points scored in a quarter to which team will lead at halftime. The selection is often robust, especially when high-profile teams
+play.\n\nFutures bets are exactly what their name implies: bets on events that will happen in the future. Common futures markets include:\n\nand much more. You
+can usually bet on NBA futures odds throughout the year, including well before the season starts and throughout the regular season. The further away from the
+event, the more likely you will find heavier odds in your favor.\n\nIs NBA betting legal in the U.S.?\n\nIn the US, the landscape of sports betting,
+specifically NBA betting, has evolved considerably. While NBA betting is permitted, its legality varies across the nation. The significant turning point came in
+2018 when the US Supreme Court made a pivotal decision.', 'The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News,
+2023-10-02T21:58:37+00:00)\nThe significant turning point came in 2018 when the US Supreme Court made a pivotal decision. It overturned a longstanding federal
+law and allowed individual states the autonomy to determine their own sports betting regulations.\n\nThis groundbreaking decision sparked a wave of change.
+Since that landmark ruling, over 30 states have embraced sports betting, including wagers on the NBA. For those residing or visiting betting-friendly states,
+the experience promises fairness and security.\n\nState-regulated online betting platforms are in place, ensuring that bettors receive fair odds. Furthermore,
+these platforms adhere to strict standards, ensuring a safe and transparent betting environment for everyone involved.\n\nRelated Pages:']
+directly_mentioned_articles: []
+shared_publisher_connections: [{'publisher': 'Sporting News', 'article': "Raiders vs. Lions live score, updates, highlights from NFL 'Monday Night Football'
+game"}, {'publisher': 'Sporting News', 'article': 'UTSA vs. Marshall odds, props, predictions: Roadrunners lay big spread in Frisco Bowl'}, {'publisher':
+'Sporting News', 'article': 'North Texas vs. SMU odds, props, predictions: Red hot Mustangs could overpower not-so-Mean Green'}, {'publisher': 'Sporting News',
+'article': "Chiefs vs. Packers live score, updates, highlights from NFL 'Sunday Night Football' game"}, {'publisher': 'Sporting News', 'article': "Jaguars vs.
+Saints live score, updates, highlights from NFL 'Thursday Night Football' game"}, {'publisher': 'Sporting News', 'article': "Vikings vs. Broncos live score,
+updates, highlights from NFL 'Sunday Night Football' game"}, {'publisher': 'Sporting News', 'article': 'NFL standings: Updated AFC, NFC playoff picture for Week
+13 of 2023 season'}, {'publisher': 'Sporting News', 'article': 'Chicago Fire vs Inter Miami live score, result, updates, highlights from Lionel Messi in MLS
+match'}, {'publisher': 'Sporting News', 'article': 'FanDuel Picks Week 15: Best NFL DFS lineup advice for daily fantasy football tournaments'}, {'publisher':
+'Sporting News', 'article': 'Line Shopping in Sports Betting - How to Find the Best Odds'}, {'publisher': 'Sporting News', 'article': 'Moneyline Betting - What
+is the Moneyline and How Does it Work?'}, {'publisher': 'Sporting News', 'article': 'NBA Rookie of the Year Odds - Wembanyama the early favorite'},
+{'publisher': 'Sporting News', 'article': 'Vermont Sportsbook Promos and Sports Betting Launch News'}, {'publisher': 'Sporting News', 'article': 'Michigan
+sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti'}, {'publisher': 'Sporting News', 'article': "Browns survive Bears Hail Mary on
+wild, near-catch by Darnell Mooney: 'Damn near s— myself'"}, {'publisher': 'Sporting News', 'article': "Inter Miami vs FC Cincinnati live score, result,
+updates, highlights with Lionel Messi's MLS playoffs on line"}, {'publisher': 'Sporting News', 'article': 'Carabao Cup fixtures, draws, results, TV channel, and
+live streams for every round of EFL League Cup 2023/24'}, {'publisher': 'Sporting News', 'article': 'USC basketball futures odds to win Pac-12, NCAA tourney
+ahead of Bronny James collegiate debut'}, {'publisher': 'Sporting News', 'article': 'Watch Argentina vs Paraguay live stream, TV channel, lineups, betting odds
+for World Cup qualifying match'}, {'publisher': 'Sporting News', 'article': 'Fantasy Football WR PPR Rankings Week 13: Who to start, best sleepers at wide
+receiver'}, {'publisher': 'Sporting News', 'article': 'NFL power rankings: Lions, 49ers level up; Texans jump Bengals, Bills; Jets, Patriots sink to bottom for
+Week 11'}, {'publisher': 'Sporting News', 'article': 'MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency'},
+{'publisher': 'Sporting News', 'article': 'Man United vs Chelsea final score, result and highlights as Scott McTominay brace gives Ten Hag vital win'},
+{'publisher': 'Sporting News', 'article': "Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game"}, {'publisher': 'Sporting
+News', 'article': "Bears vs. Vikings live score, updates, highlights from NFL 'Monday Night Football' game"}, {'publisher': 'Sporting News', 'article': 'NFL
+awards odds: Six longshots bettors should consider for MVP, OPOY, DPOY and more'}, {'publisher': 'Sporting News', 'article': 'Jamaica vs Canada live score,
+result, updates, highlights from CONCACAF Nations League quarterfinal first leg'}, {'publisher': 'Sporting News', 'article': 'Where to watch England vs South
+Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal'}, {'publisher': 'Sporting News', 'article': 'Michigan sign-stealing scandal
+news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation'}, {'publisher': 'Sporting News', 'article': 'Thursday Night Football
+FanDuel Picks: NFL DFS lineup advice for Week 4 Lions-Packers single-game tournaments'}, {'publisher': 'Sporting News', 'article': 'Champions League
+permutations, scenarios: What teams need to qualify from groups for 2023/24 Round of 16 stage'}, {'publisher': 'Sporting News', 'article': 'Fantasy Football WR
+PPR Rankings Week 14: Who to start, best sleepers at wide receiver'}, {'publisher': 'Sporting News', 'article': 'Fantasy Football RB Rankings Week 14: Who to
+start, best sleepers at running back'}, {'publisher': 'Sporting News', 'article': "Chiefs vs. Jets live score, updates, highlights from NFL 'Sunday Night
+Football' game"}, {'publisher': 'Sporting News', 'article': 'Prop Betting - What is a Prop Bet?'}, {'publisher': 'Sporting News', 'article': 'Best sportsbook
+bonus offers for NFL Monday Night Football Eagles vs. Seahawks: Claim over $5,000 in bonuses from Bet365, BetMGM, BetRivers, Caesars Sportsbook, DraftKings and
+FanDuel'}, {'publisher': 'Sporting News', 'article': 'Inter Miami season tickets: Lionel Messi demand causes 2024 prices soar to most expensive in world'},
+{'publisher': 'Sporting News', 'article': 'Man United vs Chelsea head to head record, all-time results between Premier League giants'}, {'publisher': 'Sporting
+News', 'article': 'Best Golf Betting Sites and Apps - Top Sportsbooks for Golf 2023'}, {'publisher': 'Sporting News', 'article': 'Michigan conquers Ohio State
+again, but the story is far from over for 2023 Wolverines'}, {'publisher': 'Sporting News', 'article': 'Colorado vs. UCLA live score, updates, highlights from
+Week 9 college football game'}, {'publisher': 'Sporting News', 'article': 'USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany,
+Ghana'}, {'publisher': 'Sporting News', 'article': 'Canada vs Jamaica live score, updates, highlights, result from CONCACAF Nations League quarterfinal second
+leg'}, {'publisher': 'Sporting News', 'article': 'Canelo Alvarez vs Jermell Charlo live fight updates, results, highlights from 2023 boxing fight'},
+{'publisher': 'Sporting News', 'article': 'Gio Reyna looks good in start for USMNT vs. Germany, but those involved in the finish are punished in 3-1 defeat'},
+{'publisher': 'Sporting News', 'article': "Can Alabama make College Football Playoff? How Texas, Oregon losses could impact Tide's 2023 chances"}, {'publisher':
+'Sporting News', 'article': 'MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023'}, {'publisher': 'Sporting News', 'article': 'Showtime Boxing to take
+final 10-count: Top 5 greatest fights revisited'}, {'publisher': 'Sporting News', 'article': "Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday
+Night Football' game"}, {'publisher': 'Sporting News', 'article': 'FanDuel Picks Week 14: Best NFL DFS lineup advice for daily fantasy football tournaments'},
+{'publisher': 'Sporting News', 'article': "Lions vs. Packers live score, updates, highlights from NFL 'Thursday Night Football' game"}, {'publisher': 'Sporting
+News', 'article': "Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel"}, {'publisher': 'Sporting News',
+'article': "Seahawks vs. Giants live score, updates, highlights from NFL 'Monday Night Football' game"}, {'publisher': 'Sporting News', 'article': "Bills vs.
+Bengals live score, updates, highlights from NFL 'Sunday Night Football' game"}, {'publisher': 'Sporting News', 'article': 'Best NHL prop bets tonight: Artemi
+Panarin, Cale Makar highlight top parlay picks for Rangers-Red Wings, Devils-Avalanche'}, {'publisher': 'Sporting News', 'article': "FanDuel 'Prop Stars' Picks:
+Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4"}, {'publisher': 'Sporting News', 'article': 'NFL Best Bets Week 9: Colts
+clobber Panthers, Dolphins drop Chiefs in Germany'}, {'publisher': 'Sporting News', 'article': 'Man United next manager: Assessing candidates to replace Erik
+ten Hag if Red Devils sack Dutch boss'}, {'publisher': 'Sporting News', 'article': 'Fantasy Football RB PPR Rankings Week 14: Who to start, best sleepers at
+running back'}, {'publisher': 'Sporting News', 'article': "Bryce Harper 'Atta Boy' controversy, explained: Why Orlando Arcia's comments led to backlash, Alanna
+Rizzo rant"}, {'publisher': 'Sporting News', 'article': 'DraftKings Picks Week 14: Best NFL DFS lineup advice for daily fantasy football tournaments'},
+{'publisher': 'Sporting News', 'article': 'Liam Paro responds to Shakur Stevenson sparring clip ahead of return vs. Montana Love'}, {'publisher': 'Sporting
+News', 'article': "Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a different game"}, {'publisher': 'Sporting News', 'article':
+'Patrick Kane destinations: Sabres, Red Wings among potential landing spots for free agent winger'}, {'publisher': 'Sporting News', 'article': 'Point Spread
+Betting - What is a Point Spread Bet?'}, {'publisher': 'Sporting News', 'article': 'Bills vs. Chargers odds, props, predictions: Buffalo faces struggling L.A.
+with eyes on AFC playoff picture'}, {'publisher': 'Sporting News', 'article': 'USC vs. Notre Dame live score, updates, highlights from Week 7 college football
+game'}, {'publisher': 'Sporting News', 'article': 'Breaking down each VAR intervention from wild first half of Tottenham vs Chelsea officiated by Michael
+Oliver'}, {'publisher': 'Sporting News', 'article': 'Monday Night Football DraftKings Picks: NFL DFS lineup advice for Week 15 Eagles-Seahawks Showdown
+tournaments'}, {'publisher': 'Sporting News', 'article': "Seahawks-Cowboys Fantasy Start 'Em Sit 'Em Week 13: Should you start Zach Charbonnet, Jake Ferguson on
+TNF?"}, {'publisher': 'Sporting News', 'article': 'VAR apology list in Premier League: Updated list of PGMOL apologies for referee mistakes in English
+football'}, {'publisher': 'Sporting News', 'article': 'World Series 2023 live score: Rangers vs. Diamondbacks updates, highlights, results from Game 4'},
+{'publisher': 'Sporting News', 'article': "When was the first Cricket World Cup? History, winners' list and tournament details ahead of 2023 men's ODI
+showpiece"}, {'publisher': 'Sporting News', 'article': 'MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings'},
+{'publisher': 'Sporting News', 'article': 'Shohei Ohtani rumors tracker: Latest news, updates on Dodgers, Cubs & more as free agency short list emerges'},
+{'publisher': 'Sporting News', 'article': 'Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM,
+Bet365, FanDuel, DraftKings, BetRivers'}, {'publisher': 'Sporting News', 'article': 'College Bowl Odds, Spreads, Money Lines and Totals - NCAAF 2023 Bowl
+Season'}, {'publisher': 'Sporting News', 'article': "Jets vs. Raiders live score, updates, highlights from NFL 'Sunday Night Football' game"}, {'publisher':
+'Sporting News', 'article': 'What USMNT can expect from Julian Nagelsmann, Germany in first match for new manager'}, {'publisher': 'Sporting News', 'article':
+'Baker Mayfield stats today: Buccaneers QB keeps Tampa Bay atop NFC South with sparkling showing vs. Packers'}, {'publisher': 'Sporting News', 'article':
+'Patriots vs. Broncos live score, updates, highlights from NFL Sunday night football game'}, {'publisher': 'Sporting News', 'article': "Will the Panthers fire
+Frank Reich? Impatient David Tepper could turn up Carolina's hot seat with 'Thursday Night Football' loss"}, {'publisher': 'Sporting News', 'article': "Shohei
+Ohtani rumors tracker: Latest news, updates on free agent's MLB future"}, {'publisher': 'Sporting News', 'article': "Blackhawks vs. Penguins live score,
+updates, highlights from Connor Bedard's NHL debut"}, {'publisher': 'Sporting News', 'article': 'Ole Miss vs. Georgia live score, updates, highlights from Week
+11 college football game'}, {'publisher': 'Sporting News', 'article': "Bears vs. Panthers live score, updates, highlights from NFL 'Thursday Night Football'
+game"}, {'publisher': 'Sporting News', 'article': 'Fantasy Football RB Rankings Week 12: Who to start, best sleepers at running back'}, {'publisher': 'Sporting
+News', 'article': 'World Series 2023 live score: Rangers vs. Diamondbacks updates, highlights, results from Game 3'}, {'publisher': 'Sporting News', 'article':
+'NBA Prop Bets - Best Team and Player Props 2023/24 Season'}, {'publisher': 'Sporting News', 'article': '49ers cap space 2024: Why Chase Young trade may not be
+a pure rental for San Francisco'}, {'publisher': 'Sporting News', 'article': 'Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World
+Cup qualifying'}, {'publisher': 'Sporting News', 'article': "Inter Miami friendly matches for 2024 preseason: Lionel Messi to play Newell's Old Boys, China tour
+cancelled"}, {'publisher': 'Sporting News', 'article': 'NFL DFS picks Week 15: Best sleepers, value players for FanDuel, DraftKings, SuperDraft lineups'},
+{'publisher': 'Sporting News', 'article': 'Fantasy Football TE PPR Rankings Week 14: Who to start, best sleepers at tight end'}, {'publisher': 'Sporting News',
+'article': 'Fantasy Football QB Rankings Week 14: Who to start, best sleepers at quarterback'}, {'publisher': 'Sporting News', 'article': 'Totals Betting - What
+is an Over/Under Bet?'}, {'publisher': 'Sporting News', 'article': 'Colorado vs. Arizona State live score, updates, highlights from Week 6 college football
+game'}, {'publisher': 'Sporting News', 'article': 'Patriots vs. Steelers FanDuel Picks: NFL DFS lineup advice for Week 14 TNF single-game tournaments'},
+{'publisher': 'Sporting News', 'article': 'USA vs Germany player ratings: USMNT defensive errors blight positive performance by Pulisic, Weah'}, {'publisher':
+'Sporting News', 'article': 'NBA MVP Odds 2024 Season - Jokic and Giannis early favorites'}]
+shared_entity_connections: [{'shared_entity': 'Miami Heat', 'article': 'SBF’s trial starts soon, but how did he — and FTX — get here?'}, {'shared_entity':
+'Miami Heat', 'article': 'Moneyline Betting - What is the Moneyline and How Does it Work?'}, {'shared_entity': 'Miami Heat', 'article': 'NBA MVP Odds 2024
+Season - Jokic and Giannis early favorites'}, {'shared_entity': 'BetMGM', 'article': 'NBA Rookie of the Year Odds - Wembanyama the early favorite'},
+{'shared_entity': 'BetMGM', 'article': '2023 Kentucky online sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet'},
+{'shared_entity': 'BetMGM', 'article': 'Vermont Sportsbook Promos and Sports Betting Launch News'}, {'shared_entity': 'BetMGM', 'article': 'Best sportsbook
+bonus offers for NFL Monday Night Football Eagles vs. Seahawks: Claim over $5,000 in bonuses from Bet365, BetMGM, BetRivers, Caesars Sportsbook, DraftKings and
+FanDuel'}, {'shared_entity': 'BetMGM', 'article': 'N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders'}, {'shared_entity': 'BetMGM',
+'article': 'Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings,
+BetRivers'}, {'shared_entity': 'United States', 'article': "Israel's defense undone by reliance on technology"}, {'shared_entity': 'United States', 'article':
+'Sam Bankman-Fried was a terrible boyfriend'}, {'shared_entity': 'United States', 'article': 'The best movies of 2023 so far'}, {'shared_entity': 'United
+States', 'article': 'Mattel slammed for ‘inaccurate’ Cherokee Barbie'}, {'shared_entity': 'United States', 'article': 'Watch Argentina vs Paraguay live stream,
+TV channel, lineups, betting odds for World Cup qualifying match'}, {'shared_entity': 'United States', 'article': 'Meet the American who made cranberries a
+Turkey Day tradition, Marcus Urann, farmer with can-do spirit'}, {'shared_entity': 'United States', 'article': 'Cranberries: A Thanksgiving Staple With a Rich
+History and Unique Biology'}, {'shared_entity': 'United States', 'article': "Israel's blockade of Gaza means that a region the size of Philadelphia faces a real
+risk of starvation, says Peace Studies scholar"}, {'shared_entity': 'United States', 'article': 'Tim Sweeney on Epic’s victory royale over Google'},
+{'shared_entity': 'United States', 'article': 'The fate of US venture capital in China teeters on uncertainty'}, {'shared_entity': 'United States', 'article':
+'Digital twin market: Analyzing growth and 4 emerging trends'}, {'shared_entity': 'United States', 'article': 'Potential Conor McGregor Fight Could Help Canelo
+Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status'}, {'shared_entity': 'United States', 'article': 'Inter Miami
+season tickets: Lionel Messi demand causes 2024 prices soar to most expensive in world'}, {'shared_entity': 'United States', 'article': "'Too big to fail' Egypt
+faces economic crisis but has an anti-Gaza refugee policy. Israel and the U.S. hope that will change"}, {'shared_entity': 'United States', 'article': 'The best
+VPN services for 2023'}, {'shared_entity': 'United States', 'article': 'Canada vs Jamaica live score, updates, highlights, result from CONCACAF Nations League
+quarterfinal second leg'}, {'shared_entity': 'United States', 'article': "Hitting the Books: We are the frogs in the boiling pot, it's time we started governing
+like it."}, {'shared_entity': 'United States', 'article': '8 authors and their 8 gift book picks for this holiday season'}, {'shared_entity': 'United States',
+'article': 'Why do Americans celebrate Thanksgiving?'}, {'shared_entity': 'United States', 'article': 'Northern Lights: Here are the best tips to help you spot
+the stunning display in the US and abroad'}, {'shared_entity': 'United States', 'article': '62% of TikTok users in the United States pay for a music streaming
+service (report)'}, {'shared_entity': 'United States', 'article': 'Sony Music has issued nearly 10,000 deepfake takedowns… and other things we learned from
+Dennis Kooker’s speech about AI'}, {'shared_entity': 'United States', 'article': 'U.S.-China relations are now more about crisis prevention'}, {'shared_entity':
+'United States', 'article': 'Every movie and show coming to Netflix in November'}, {'shared_entity': 'United States', 'article': 'NBL Round 4: Creek pours in
+points as Phoenix swamp Sixers, CJ claims Kings didn’t look after DJ'}, {'shared_entity': 'United States', 'article': 'Simply Homes nabs $22M, leverages AI to
+tackle affordable housing crisis'}, {'shared_entity': 'United States', 'article': 'Twitch is the best way to watch sports, when you can actually watch sports on
+Twitch'}, {'shared_entity': 'United States', 'article': "With hopes of victory fading, Ukraine's fight against Russia could get even harder in 2024"},
+{'shared_entity': 'United States', 'article': "'In God We Trust' essential to America's future as national faith appears to wane, says Washington pastor"},
+{'shared_entity': 'United States', 'article': "India to be one of world's fastest growing economies over next decade"}, {'shared_entity': 'United States',
+'article': 'Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying'}, {'shared_entity': 'United States', 'article':
+'Fortnite is the latest game to entice players with a portal to the past'}, {'shared_entity': 'United States', 'article': 'The best horror movies you can watch
+right now'}, {'shared_entity': 'United States', 'article': "Israeli girl spends 9th birthday in 'tunnels of Gaza,' with 'no friends, 'no light,' says distraught
+father"}, {'shared_entity': 'Heat', 'article': 'Are NBA Christmas Day Games a Better Tradition Than NFL Thanksgiving Day Games?'}, {'shared_entity': 'Heat',
+'article': 'NBA MVP Odds 2024 Season - Jokic and Giannis early favorites'}, {'shared_entity': 'New York Knicks', 'article': 'Are NBA Christmas Day Games a
+Better Tradition Than NFL Thanksgiving Day Games?'}, {'shared_entity': 'New York Knicks', 'article': 'Is the Coverage on Taylor Swift and Travis Kelce’s Romance
+Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?'}, {'shared_entity': 'New York Knicks', 'article': 'Point Spread
+Betting - What is a Point Spread Bet?'}, {'shared_entity': 'New York Knicks', 'article': 'Totals Betting - What is an Over/Under Bet?'}, {'shared_entity': 'NBA
+Finals', 'article': 'Is Kevin Durant the Most Disrespected Superstar in the History of NBA?'}, {'shared_entity': 'Eastern Conference', 'article': 'Chicago Fire
+vs Inter Miami live score, result, updates, highlights from Lionel Messi in MLS match'}, {'shared_entity': 'Eastern Conference', 'article': "Inter Miami vs FC
+Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line"}, {'shared_entity': 'Eastern Conference', 'article': 'Patrick Kane
+destinations: Sabres, Red Wings among potential landing spots for free agent winger'}, {'shared_entity': 'Rookie of the Year', 'article': 'NBA Rookie of the
+Year Odds - Wembanyama the early favorite'}, {'shared_entity': 'Rookie of the Year', 'article': 'NBA MVP Odds 2024 Season - Jokic and Giannis early favorites'},
+{'shared_entity': 'NBA MVP', 'article': 'NBA Rookie of the Year Odds - Wembanyama the early favorite'}, {'shared_entity': 'NBA MVP', 'article': 'NBA MVP Odds
+2024 Season - Jokic and Giannis early favorites'}, {'shared_entity': 'DraftKings', 'article': 'NBA Rookie of the Year Odds - Wembanyama the early favorite'},
+{'shared_entity': 'DraftKings', 'article': '2023 Kentucky online sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet'},
+{'shared_entity': 'DraftKings', 'article': 'Vermont Sportsbook Promos and Sports Betting Launch News'}, {'shared_entity': 'DraftKings', 'article': 'NFL awards
+odds: Six longshots bettors should consider for MVP, OPOY, DPOY and more'}, {'shared_entity': 'DraftKings', 'article': 'Best sportsbook bonus offers for NFL
+Monday Night Football Eagles vs. Seahawks: Claim over $5,000 in bonuses from Bet365, BetMGM, BetRivers, Caesars Sportsbook, DraftKings and FanDuel'},
+{'shared_entity': 'DraftKings', 'article': 'MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023'}, {'shared_entity': 'DraftKings', 'article':
+'DraftKings Picks Week 14: Best NFL DFS lineup advice for daily fantasy football tournaments'}, {'shared_entity': 'DraftKings', 'article': 'Monday Night
+Football DraftKings Picks: NFL DFS lineup advice for Week 15 Eagles-Seahawks Showdown tournaments'}, {'shared_entity': 'DraftKings', 'article': 'Best sports
+betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers'},
+{'shared_entity': 'DraftKings Sportsbook', 'article': 'Line Shopping in Sports Betting - How to Find the Best Odds'}, {'shared_entity': 'DraftKings Sportsbook',
+'article': '2023 Kentucky online sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet'}, {'shared_entity': 'DraftKings
+Sportsbook', 'article': 'Vermont Sportsbook Promos and Sports Betting Launch News'}, {'shared_entity': 'DraftKings Sportsbook', 'article': 'Best Golf Betting
+Sites and Apps - Top Sportsbooks for Golf 2023'}, {'shared_entity': 'DraftKings Sportsbook', 'article': 'MLB Betting Sites & Apps - The Best Baseball
+Sportsbooks 2023'}, {'shared_entity': 'DraftKings Sportsbook', 'article': 'NBA MVP Odds 2024 Season - Jokic and Giannis early favorites'}, {'shared_entity':
+'FanDuel', 'article': 'NBA Rookie of the Year Odds - Wembanyama the early favorite'}, {'shared_entity': 'FanDuel', 'article': '2023 Kentucky online sports
+betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet'}, {'shared_entity': 'FanDuel', 'article': 'Vermont Sportsbook Promos and Sports
+Betting Launch News'}, {'shared_entity': 'FanDuel', 'article': 'Best sportsbook bonus offers for NFL Monday Night Football Eagles vs. Seahawks: Claim over
+$5,000 in bonuses from Bet365, BetMGM, BetRivers, Caesars Sportsbook, DraftKings and FanDuel'}, {'shared_entity': 'FanDuel', 'article': "FanDuel 'Prop Stars'
+Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4"}, {'shared_entity': 'FanDuel', 'article': 'Best sports betting promo
+codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers'}, {'shared_entity': 'FanDuel
+Sportsbook', 'article': 'Line Shopping in Sports Betting - How to Find the Best Odds'}, {'shared_entity': 'FanDuel Sportsbook', 'article': '2023 Kentucky online
+sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet'}, {'shared_entity': 'FanDuel Sportsbook', 'article': 'Vermont Sportsbook
+Promos and Sports Betting Launch News'}, {'shared_entity': 'FanDuel Sportsbook', 'article': 'Best Golf Betting Sites and Apps - Top Sportsbooks for Golf 2023'},
+{'shared_entity': 'FanDuel Sportsbook', 'article': 'MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023'}, {'shared_entity': 'FanDuel Sportsbook',
+'article': '‘As clinical as it gets’: Unbeaten Aussie moves to 24-0 with stunning first-round KO of hapless Englishman'}, {'shared_entity': 'FanDuel
+Sportsbook', 'article': 'NBA MVP Odds 2024 Season - Jokic and Giannis early favorites'}, {'shared_entity': 'NBA League Pass', 'article': 'Vermont Sportsbook
+Promos and Sports Betting Launch News'}, {'shared_entity': 'BetMGM Sportsbook', 'article': 'UTSA vs. Marshall odds, props, predictions: Roadrunners lay big
+spread in Frisco Bowl'}, {'shared_entity': 'BetMGM Sportsbook', 'article': 'Line Shopping in Sports Betting - How to Find the Best Odds'}, {'shared_entity':
+'BetMGM Sportsbook', 'article': 'NBA Rookie of the Year Odds - Wembanyama the early favorite'}, {'shared_entity': 'BetMGM Sportsbook', 'article': '2023 Kentucky
+online sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet'}, {'shared_entity': 'BetMGM Sportsbook', 'article': 'Vermont
+Sportsbook Promos and Sports Betting Launch News'}, {'shared_entity': 'BetMGM Sportsbook', 'article': 'Best Golf Betting Sites and Apps - Top Sportsbooks for
+Golf 2023'}, {'shared_entity': 'BetMGM Sportsbook', 'article': 'MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023'}, {'shared_entity': 'BetMGM
+Sportsbook', 'article': 'NBA MVP Odds 2024 Season - Jokic and Giannis early favorites'}, {'shared_entity': 'BetRivers', 'article': 'Best sportsbook bonus offers
+for NFL Monday Night Football Eagles vs. Seahawks: Claim over $5,000 in bonuses from Bet365, BetMGM, BetRivers, Caesars Sportsbook, DraftKings and FanDuel'},
+{'shared_entity': 'BetRivers', 'article': 'MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023'}, {'shared_entity': 'BetRivers', 'article': 'Best
+sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers'},
+{'shared_entity': 'NBA', 'article': 'NBL Round 4: Creek pours in points as Phoenix swamp Sixers, CJ claims Kings didn’t look after DJ'}, {'shared_entity':
+'NBA', 'article': "Blackhawks vs. Penguins live score, updates, highlights from Connor Bedard's NHL debut"}, {'shared_entity': 'BetRivers', 'article': 'North
+Texas vs. SMU odds, props, predictions: Red hot Mustangs could overpower not-so-Mean Green'}, {'shared_entity': 'BetRivers', 'article': 'Vermont Sportsbook
+Promos and Sports Betting Launch News'}, {'shared_entity': 'sportsbooks', 'article': 'Moneyline Betting - What is the Moneyline and How Does it Work?'},
+{'shared_entity': 'sportsbooks', 'article': '2023 Kentucky online sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet'},
+{'shared_entity': 'sportsbooks', 'article': 'Vermont Sportsbook Promos and Sports Betting Launch News'}, {'shared_entity': 'sportsbooks', 'article': 'Prop
+Betting - What is a Prop Bet?'}, {'shared_entity': 'live betting', 'article': 'Moneyline Betting - What is the Moneyline and How Does it Work?'},
+{'shared_entity': 'live betting', 'article': 'Best Golf Betting Sites and Apps - Top Sportsbooks for Golf 2023'}, {'shared_entity': 'live betting', 'article':
+'MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023'}, {'shared_entity': 'DraftKings', 'article': 'Best Golf Betting Sites and Apps - Top Sportsbooks
+for Golf 2023'}, {'shared_entity': 'DraftKings', 'article': "Seahawks-Cowboys Fantasy Start 'Em Sit 'Em Week 13: Should you start Zach Charbonnet, Jake Ferguson
+on TNF?"}, {'shared_entity': 'DraftKings', 'article': 'NFL DFS picks Week 15: Best sleepers, value players for FanDuel, DraftKings, SuperDraft lineups'},
+{'shared_entity': 'spreads', 'article': 'Prop Betting - What is a Prop Bet?'}, {'shared_entity': 'totals', 'article': 'Prop Betting - What is a Prop Bet?'},
+{'shared_entity': 'totals', 'article': 'MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023'}, {'shared_entity': 'parlays', 'article': '2023 Kentucky
+online sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet'}, {'shared_entity': 'Futures', 'article': '2023 Kentucky online
+sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet'}, {'shared_entity': 'US Supreme Court', 'article': 'What’s at stake in
+the Supreme Court’s landmark social media case'}, {'shared_entity': 'sports betting regulations', 'article': 'Best Golf Betting Sites and Apps - Top Sportsbooks
+for Golf 2023'}, {'shared_entity': 'cybersecurity', 'article': 'Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier'},
+{'shared_entity': 'cybersecurity', 'article': 'OpenAI buffs safety team and gives board veto power on risky AI'}, {'shared_entity': 'cybersecurity', 'article':
+'The best VPN services for 2023'}, {'shared_entity': 'cybersecurity', 'article': "Sweeping White House AI executive order takes aim at the technology's toughest
+challenges"}, {'shared_entity': 'cybersecurity', 'article': 'Palo Alto in advanced talks to buy Talon and Dig in a $1B security sweep'}, {'shared_entity':
+'cybersecurity', 'article': "Check Point sees 'fantastic' year ahead even as rival report disappointing billings"}, {'shared_entity': 'cybersecurity',
+'article': 'Israel’s startup ecosystem: down but not out'}, {'shared_entity': 'cybersecurity', 'article': 'Earnings week ahead: DocuSign, NIO, Broadcom,
+GameStop and more'}, {'shared_entity': 'BetMGM', 'article': 'Best Golf Betting Sites and Apps - Top Sportsbooks for Golf 2023'}, {'shared_entity': 'BetMGM',
+'article': 'MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023'}, {'shared_entity': 'BetMGM', 'article': 'NBA MVP Odds 2024 Season - Jokic and
+Giannis early favorites'}, {'shared_entity': 'FanDuel', 'article': 'FanDuel Picks Week 15: Best NFL DFS lineup advice for daily fantasy football tournaments'},
+{'shared_entity': 'FanDuel', 'article': 'Thursday Night Football FanDuel Picks: NFL DFS lineup advice for Week 4 Lions-Packers single-game tournaments'},
+{'shared_entity': 'FanDuel', 'article': 'Best Golf Betting Sites and Apps - Top Sportsbooks for Golf 2023'}, {'shared_entity': 'FanDuel', 'article': 'MLB
+Betting Sites & Apps - The Best Baseball Sportsbooks 2023'}, {'shared_entity': 'FanDuel', 'article': 'FanDuel Picks Week 14: Best NFL DFS lineup advice for
+daily fantasy football tournaments'}, {'shared_entity': 'FanDuel', 'article': 'DraftKings Picks Week 14: Best NFL DFS lineup advice for daily fantasy football
+tournaments'}, {'shared_entity': 'FanDuel', 'article': "Seahawks-Cowboys Fantasy Start 'Em Sit 'Em Week 13: Should you start Zach Charbonnet, Jake Ferguson on
+TNF?"}, {'shared_entity': 'FanDuel', 'article': 'NFL DFS picks Week 15: Best sleepers, value players for FanDuel, DraftKings, SuperDraft lineups'},
+{'shared_entity': 'FanDuel', 'article': 'Patriots vs. Steelers FanDuel Picks: NFL DFS lineup advice for Week 14 TNF single-game tournaments'}, {'shared_entity':
+'NBA', 'article': 'Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek'}, {'shared_entity': 'NBA', 'article': 'Line Shopping in
+Sports Betting - How to Find the Best Odds'}, {'shared_entity': 'NBA', 'article': 'Moneyline Betting - What is the Moneyline and How Does it Work?'},
+{'shared_entity': 'NBA', 'article': 'NBA Rookie of the Year Odds - Wembanyama the early favorite'}, {'shared_entity': 'NBA', 'article': 'Vermont Sportsbook
+Promos and Sports Betting Launch News'}, {'shared_entity': 'NBA', 'article': 'Prop Betting - What is a Prop Bet?'}, {'shared_entity': 'NBA', 'article': 'Inter
+Miami season tickets: Lionel Messi demand causes 2024 prices soar to most expensive in world'}, {'shared_entity': 'NBA', 'article': 'NBL Round 5: Harvey hits
+Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers'}, {'shared_entity': 'NBA', 'article': 'Are NBA Christmas Day
+Games a Better Tradition Than NFL Thanksgiving Day Games?'}, {'shared_entity': 'NBA', 'article': 'Is the Coverage on Taylor Swift and Travis Kelce’s Romance
+Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?'}, {'shared_entity': 'NBA', 'article': 'Point Spread Betting -
+What is a Point Spread Bet?'}, {'shared_entity': 'NBA', 'article': 'Twitch is the best way to watch sports, when you can actually watch sports on Twitch'},
+{'shared_entity': 'NBA', 'article': 'Is Kevin Durant the Most Disrespected Superstar in the History of NBA?'}, {'shared_entity': 'NBA', 'article': 'Rollback
+Policy, a Boon or a Curse? The Controversial System That Might Redefine the Golfing World by the End of 2030'}, {'shared_entity': 'NBA', 'article': 'NBA Prop
+Bets - Best Team and Player Props 2023/24 Season'}, {'shared_entity': 'NBA', 'article': '2023 in social media: the case for the fediverse'}, {'shared_entity':
+'NBA', 'article': "Golden State's draft misses are starting to add up"}, {'shared_entity': 'NBA', 'article': 'Totals Betting - What is an Over/Under Bet?'},
+{'shared_entity': 'NBA', 'article': 'NBA MVP Odds 2024 Season - Jokic and Giannis early favorites'}, {'shared_entity': 'user experience', 'article': 'Deft is
+building e-commerce search to help you find the right product quickly'}, {'shared_entity': 'user experience', 'article': 'A provocative role for technologists
+in product innovation'}, {'shared_entity': 'basketball betting', 'article': 'NBA Prop Bets - Best Team and Player Props 2023/24 Season'}, {'shared_entity':
+'player props', 'article': '2023 Kentucky online sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet'}, {'shared_entity':
+'player props', 'article': 'Prop Betting - What is a Prop Bet?'}, {'shared_entity': 'player props', 'article': 'MLB Betting Sites & Apps - The Best Baseball
+Sportsbooks 2023'}, {'shared_entity': 'player props', 'article': 'NBA Prop Bets - Best Team and Player Props 2023/24 Season'}, {'shared_entity': 'team props',
+'article': 'NBA Prop Bets - Best Team and Player Props 2023/24 Season'}, {'shared_entity': 'sports betting', 'article': 'Line Shopping in Sports Betting - How
+to Find the Best Odds'}, {'shared_entity': 'sports betting', 'article': 'Moneyline Betting - What is the Moneyline and How Does it Work?'}, {'shared_entity':
+'sports betting', 'article': 'NBA Rookie of the Year Odds - Wembanyama the early favorite'}, {'shared_entity': 'sports betting', 'article': '2023 Kentucky
+online sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet'}, {'shared_entity': 'sports betting', 'article': 'Vermont
+Sportsbook Promos and Sports Betting Launch News'}, {'shared_entity': 'sports betting', 'article': 'Prop Betting - What is a Prop Bet?'}, {'shared_entity':
+'sports betting', 'article': 'Best sportsbook bonus offers for NFL Monday Night Football Eagles vs. Seahawks: Claim over $5,000 in bonuses from Bet365, BetMGM,
+BetRivers, Caesars Sportsbook, DraftKings and FanDuel'}, {'shared_entity': 'sports betting', 'article': 'Best Golf Betting Sites and Apps - Top Sportsbooks for
+Golf 2023'}, {'shared_entity': 'sports betting', 'article': 'MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023'}, {'shared_entity': 'sports
+betting', 'article': 'NFL Best Bets Week 9: Colts clobber Panthers, Dolphins drop Chiefs in Germany'}, {'shared_entity': 'sports betting', 'article': 'Best
+sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers'},
+{'shared_entity': 'sports betting', 'article': 'College Bowl Odds, Spreads, Money Lines and Totals - NCAAF 2023 Bowl Season'}, {'shared_entity': 'sports
+betting', 'article': 'NBA Prop Bets - Best Team and Player Props 2023/24 Season'}, {'shared_entity': 'sports betting', 'article': 'Totals Betting - What is an
+Over/Under Bet?'}, {'shared_entity': 'sports betting', 'article': 'NBA MVP Odds 2024 Season - Jokic and Giannis early favorites'}, {'shared_entity': 'NBA prop
+bets', 'article': 'NBA Prop Bets - Best Team and Player Props 2023/24 Season'}, {'shared_entity': 'online sports betting', 'article': '2023 Kentucky online
+sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet'}, {'shared_entity': 'online sports betting', 'article': 'Vermont
+Sportsbook Promos and Sports Betting Launch News'}, {'shared_entity': 'online sports betting', 'article': 'MLB Betting Sites & Apps - The Best Baseball
+Sportsbooks 2023'}, {'shared_entity': 'online sports betting', 'article': 'NBA Prop Bets - Best Team and Player Props 2023/24 Season'}, {'shared_entity':
+'basketball', 'article': 'Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE'}, {'shared_entity':
+'basketball', 'article': 'Moneyline Betting - What is the Moneyline and How Does it Work?'}, {'shared_entity': 'basketball', 'article': '2023 Kentucky online
+sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet'}, {'shared_entity': 'basketball', 'article': 'USC basketball futures
+odds to win Pac-12, NCAA tourney ahead of Bronny James collegiate debut'}, {'shared_entity': 'basketball', 'article': 'NBL Round 5: Harvey hits Hail Mary for
+Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers'}, {'shared_entity': 'basketball', 'article': 'Who’s the next Gawn, Grundy or
+Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars'}, {'shared_entity': 'basketball', 'article': 'Are NBA Christmas Day
+Games a Better Tradition Than NFL Thanksgiving Day Games?'}, {'shared_entity': 'basketball', 'article': 'Is the Coverage on Taylor Swift and Travis Kelce’s
+Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?'}, {'shared_entity': 'basketball', 'article': 'Point
+Spread Betting - What is a Point Spread Bet?'}, {'shared_entity': 'basketball', 'article': 'NBL Round 4: Creek pours in points as Phoenix swamp Sixers, CJ
+claims Kings didn’t look after DJ'}, {'shared_entity': 'basketball', 'article': 'Is Kevin Durant the Most Disrespected Superstar in the History of NBA?'},
+{'shared_entity': 'basketball', 'article': 'NBA Prop Bets - Best Team and Player Props 2023/24 Season'}, {'shared_entity': 'basketball', 'article': 'Totals
+Betting - What is an Over/Under Bet?'}, {'shared_entity': 'basketball', 'article': 'NBA MVP Odds 2024 Season - Jokic and Giannis early favorites'},
+{'shared_entity': 'NBA props', 'article': 'NBA Prop Bets - Best Team and Player Props 2023/24 Season'}, {'shared_entity': 'betting', 'article': 'North Texas vs.
+SMU odds, props, predictions: Red hot Mustangs could overpower not-so-Mean Green'}, {'shared_entity': 'betting', 'article': 'Moneyline Betting - What is the
+Moneyline and How Does it Work?'}, {'shared_entity': 'betting', 'article': 'NFL awards odds: Six longshots bettors should consider for MVP, OPOY, DPOY and
+more'}, {'shared_entity': 'betting', 'article': 'Best Golf Betting Sites and Apps - Top Sportsbooks for Golf 2023'}, {'shared_entity': 'betting', 'article':
+'Point Spread Betting - What is a Point Spread Bet?'}, {'shared_entity': 'betting', 'article': 'NBA Prop Bets - Best Team and Player Props 2023/24 Season'},
+{'shared_entity': 'NCAA', 'article': 'Michigan sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti'}, {'shared_entity': 'NCAA',
+'article': 'USC basketball futures odds to win Pac-12, NCAA tourney ahead of Bronny James collegiate debut'}, {'shared_entity': 'NCAA', 'article': 'Michigan
+sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation'}, {'shared_entity': 'NCAA', 'article':
+'Michigan conquers Ohio State again, but the story is far from over for 2023 Wolverines'}, {'shared_entity': 'NCAA', 'article': "Michigan didn't need Jim
+Harbaugh against Penn State, but Ohio State is a different game"}, {'shared_entity': 'NCAA', 'article': 'Michigan’s Rivals Fume About Sign-Stealing: ‘This Was
+Damn Near Espionage’'}, {'shared_entity': 'In-Season Tournament', 'article': "Golden State's draft misses are starting to add up"}, {'shared_entity':
+'moneylines', 'article': 'Line Shopping in Sports Betting - How to Find the Best Odds'}, {'shared_entity': 'moneylines', 'article': 'Prop Betting - What is a
+Prop Bet?'}, {'shared_entity': 'moneylines', 'article': 'MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023'}, {'shared_entity': 'moneylines',
+'article': 'NFL Best Bets Week 9: Colts clobber Panthers, Dolphins drop Chiefs in Germany'}, {'shared_entity': 'moneylines', 'article': 'Totals Betting - What
+is an Over/Under Bet?'}, {'shared_entity': 'Boston Celtics', 'article': 'Totals Betting - What is an Over/Under Bet?'}, {'shared_entity': 'Boston Celtics',
+'article': 'NBA MVP Odds 2024 Season - Jokic and Giannis early favorites'}]
+</item 9>
+
+<item 10>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+The significant turning point came in 2018 when the US Supreme Court made a pivotal decision. It overturned a longstanding federal law and allowed individual
+states the autonomy to determine their own sports betting regulations.
+
+This groundbreaking decision sparked a wave of change. Since that landmark ruling, over 30 states have embraced sports betting, including wagers on the NBA. For
+those residing or visiting betting-friendly states, the experience promises fairness and security.
+
+State-regulated online betting platforms are in place, ensuring that bettors receive fair odds. Furthermore, these platforms adhere to strict standards,
+ensuring a safe and transparent betting environment for everyone involved.
+
+Related Pages:
+</item 10>
+=== END ITEM id=3f83babe54203775 ===

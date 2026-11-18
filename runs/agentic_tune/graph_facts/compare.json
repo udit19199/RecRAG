@@ -1,0 +1,180 @@
+{
+ "context_tokens": {
+  "10nov": {
+   "median": 2275.5,
+   "max": 2373
+  },
+  "picks": {
+   "median": 2291.5,
+   "max": 29041
+  },
+  "facts": {
+   "median": 2270.0,
+   "max": 3439
+  }
+ },
+ "Answered right": {
+  "10nov": {
+   "per_repeat": [
+    23,
+    17,
+    22
+   ],
+   "in_all_3": 9,
+   "in_none": 7
+  },
+  "picks": {
+   "per_repeat": [
+    26,
+    28,
+    27
+   ],
+   "in_all_3": 22,
+   "in_none": 5
+  },
+  "facts": {
+   "per_repeat": [
+    27,
+    26,
+    25
+   ],
+   "in_all_3": 22,
+   "in_none": 7
+  },
+  "matrix_2of3_facts_vs_10nov": [
+   20,
+   5,
+   2,
+   11
+  ],
+  "matrix_2of3_facts_vs_picks": [
+   24,
+   1,
+   2,
+   11
+  ]
+ },
+ "Gold facts ≥50%": {
+  "10nov": {
+   "per_repeat": [
+    24,
+    23,
+    20
+   ],
+   "in_all_3": 13,
+   "in_none": 5
+  },
+  "picks": {
+   "per_repeat": [
+    28,
+    29,
+    31
+   ],
+   "in_all_3": 25,
+   "in_none": 2
+  },
+  "facts": {
+   "per_repeat": [
+    28,
+    28,
+    27
+   ],
+   "in_all_3": 24,
+   "in_none": 7
+  },
+  "matrix_2of3_facts_vs_10nov": [
+   20,
+   8,
+   1,
+   9
+  ],
+  "matrix_2of3_facts_vs_picks": [
+   25,
+   3,
+   2,
+   8
+  ]
+ },
+ "Gold facts ≥75%": {
+  "10nov": {
+   "per_repeat": [
+    19,
+    15,
+    11
+   ],
+   "in_all_3": 3,
+   "in_none": 10
+  },
+  "picks": {
+   "per_repeat": [
+    21,
+    22,
+    24
+   ],
+   "in_all_3": 15,
+   "in_none": 7
+  },
+  "facts": {
+   "per_repeat": [
+    25,
+    23,
+    19
+   ],
+   "in_all_3": 15,
+   "in_none": 8
+  },
+  "matrix_2of3_facts_vs_10nov": [
+   12,
+   10,
+   2,
+   14
+  ],
+  "matrix_2of3_facts_vs_picks": [
+   17,
+   5,
+   4,
+   12
+  ]
+ },
+ "Gold facts 100%": {
+  "10nov": {
+   "per_repeat": [
+    15,
+    11,
+    7
+   ],
+   "in_all_3": 0,
+   "in_none": 16
+  },
+  "picks": {
+   "per_repeat": [
+    17,
+    22,
+    21
+   ],
+   "in_all_3": 12,
+   "in_none": 11
+  },
+  "facts": {
+   "per_repeat": [
+    19,
+    20,
+    15
+   ],
+   "in_all_3": 10,
+   "in_none": 11
+  },
+  "matrix_2of3_facts_vs_10nov": [
+   9,
+   8,
+   2,
+   19
+  ],
+  "matrix_2of3_facts_vs_picks": [
+   14,
+   3,
+   7,
+   14
+  ]
+ }
+}

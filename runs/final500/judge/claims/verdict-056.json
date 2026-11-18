@@ -1,0 +1,47 @@
+[
+  {"id": "multihop-rag-1643", "sentences": [
+    ["Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account.", "Bankman-Fried said withdrawals were okay as long as the amount was less than FTX's total trading revenue."],
+    ["Bankman-Fried was compared to Warren Buffet.", "Many people called Bankman-Fried the white horse of crypto.", "TechCrunch never called Bankman-Fried the white horse of crypto, which is a minor remark."],
+    ["Bankman-Fried left Jane Street.", "Jane Street is a high-frequency trading firm.", "Bankman-Fried got his start in finance at Jane Street after MIT.", "Bankman-Fried is a former billionaire.", "After leaving Jane Street, Bankman-Fried persuaded Yedidia to join him as a trader at Alameda.", "Bankman-Fried later persuaded Yedidia to join him as a developer at FTX."],
+    ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud.", "The prosecution said Bankman-Fried committed fraud to achieve great wealth, power and influence.", "The defense argued that the FTX founder acted in good faith.", "The defense argued that the FTX founder never meant to commit fraud or steal.", "The defense argued that the FTX founder basically got in over his head."]
+  ]},
+  {"id": "multihop-rag-2136", "sentences": [
+    ["The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night.", "The Cowboys kept the heat on the Eagles.", "The Eagles lost their game.", "The Eagles were ahead of the Cowboys.", "The Cowboys hosted the Eagles in Dallas in Week 14."],
+    ["Philadelphia beat Miami 31-17.", "Philadelphia's win over Miami was on \"Sunday Night Football\".", "Philadelphia rolled to the win.", "Philadelphia kept the Dolphins' offense off the scoreboard in the second half.", "Philadelphia played smart football every step of the way down the stretch."]
+  ]},
+  {"id": "7680180825510539122", "sentences": [
+    ["The resort is the first to be built in the complex in over seven years.", "The resort is the fifth to be placed in the value-priced category.", "The other resorts in the value-priced category are Disney's All-Star Sports Resort, the All-Star Music Resort, the All-Star Movies Resort, and Disney's Pop Century Resort.", "Family suites opened on May 31, 2012.", "Standard rooms opened on September 15, 2012."],
+    ["Disney's Art of Animation Resort is located at the ESPN Wide World of Sports Resort area.", "Disney's Art of Animation Resort is a value resort.", "Disney's Art of Animation Resort opened on May 31, 2012.", "Disney's Art of Animation Resort has a Walt Disney characters theme.", "Disney's Art of Animation Resort has areas named Cars, Finding Nemo, The Lion King, and The Little Mermaid.", "Disney's Art of Animation Resort has 984 rooms.", "Disney's Art of Animation Resort has 1,120 suites.", "Disney's Art of Animation Resort is marked as a green lodge."]
+  ]},
+  {"id": "multihop-rag-926", "sentences": [
+    ["Erik ten Hag is a top coach from Ajax.", "The club needs a top blueprint not only for now but for the next five years.", "The club should work towards that blueprint.", "Sometimes on that journey there are hard moments when the club does not get the right results.", "The club can be doing the right things even when it does not get the right results."],
+    ["Manchester United are out of Europe altogether.", "Manchester United put in a limp display against Bayern at Old Trafford.", "Kingsley Coman sealed a 1-0 win at Old Trafford.", "Kingsley Coman's 1-0 win was for Thomas Tuchel's side."]
+  ]},
+  {"id": "5addffff5542992200553bdd", "sentences": [
+    ["This person is most well known for providing the singing voice of Tony in the 1961 film musical \"West Side Story\".", "Richard Beymer played Tony onscreen in the 1961 film musical \"West Side Story\"."],
+    ["West Side Story was nominated for 11 Academy Awards.", "West Side Story won 10 Academy Awards.", "West Side Story won Best Picture.", "West Side Story won a special award for Robbins.", "West Side Story became the record holder for the most wins for a movie musical."]
+  ]},
+  {"id": "5ab41677554299753aec5a38", "sentences": [
+    ["The vessel weighed 381 tons.", "The vessel was armed with a 12-pounder 12cwt QF gun.", "The vessel was armed with a 20mm Oerlikon cannon.", "The vessel was armed with a .303-inch Vickers machine gun.", "The vessel was armed with four Type D depth charges.", "The vessel was commissioned into the RAN on 11 June 1941."],
+    ["This item was in service from before the First World War until the 1960s.", "Air-cooled versions of this item were on many Allied World War I fighter aircraft."]
+  ]},
+  {"id": "224088321079691518", "sentences": [
+    ["Somatic motor neurons originate in the central nervous system.", "Somatic motor neurons project their axons to skeletal muscles.", "Examples of those skeletal muscles are the muscles of the limbs, abdominal muscles, and intercostal muscles.", "The skeletal muscles that somatic motor neurons project to are involved in locomotion.", "There are three types of somatic motor neurons.", "The three types are alpha efferent neurons, beta efferent neurons, and gamma efferent neurons.", "Somatic motor neurons are called efferent.", "The name efferent indicates the flow of information from the central nervous system (CNS) to the periphery."],
+    ["The term 'motor neuron' is usually restricted to the lower motor neurons.", "Lower motor neurons are the efferent nerves that directly innervate muscles."]
+  ]},
+  {"id": "5aba71b155429955dce3ee2a", "sentences": [
+    ["The Park is home to the first flume ride in Ireland.", "The first flume ride in Ireland is named Pirates Plunge."],
+    ["Grace O'Malley lived from about 1530 to about 1603.", "Grace O'Malley is also called Gráinne O'Malley.", "Grace O'Malley's Irish name is Gráinne Ní Mháille.", "Grace O'Malley was lord of the Ó Máille dynasty in the west of Ireland.", "Grace O'Malley followed in the footsteps of her father, Eoghan Dubhdara Ó Máille."]
+  ]},
+  {"id": "5a7571095542992d0ec05f97", "sentences": [
+    ["Mirrors is a 2008 supernatural horror film.", "Mirrors was directed by Alexandre Aja.", "Kiefer Sutherland starred in Mirrors.", "Paula Patton starred in Mirrors.", "Amy Smart starred in Mirrors."],
+    ["Paula Maxine Patton was born on December 5, 1975.", "Paula Maxine Patton is an American actress."]
+  ]},
+  {"id": "5a840e8a5542992ef85e239e", "sentences": [
+    ["Mastodon is an American heavy metal band.", "Mastodon is from Atlanta, Georgia."],
+    ["Mastodon was formed in 2000.", "Mastodon is composed of bassist Troy Sanders.", "Mastodon is composed of guitarist Brent Hinds.", "Mastodon is composed of guitarist Bill Kelliher.", "Mastodon is composed of drummer Brann Dailor.", "Troy Sanders, Brent Hinds, and Brann Dailor perform vocals in the studio.", "Bill Kelliher does not perform vocals in the studio."],
+    ["Mastodon has released seven studio albums.", "Mastodon has released a number of other records."],
+    ["Mastodon's second full-length release is \"Leviathan\".", "\"Leviathan\" is a concept album.", "\"Leviathan\" is based on the novel \"Moby-Dick\".", "\"Moby-Dick\" was written by Herman Melville."],
+    ["Hole was an American alternative rock band.", "Hole formed in Los Angeles, California in 1989.", "Hole was formed by singer and guitarist Courtney Love.", "Hole was formed by lead guitarist Eric Erlandson."]
+  ]}
+]

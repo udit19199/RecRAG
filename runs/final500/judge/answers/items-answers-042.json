@@ -1,0 +1,571 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "7834881a53688145",
+   "kind": "answer",
+   "question": "when was the minimum wage established in the united states",
+   "gold_answers": [
+    "1912",
+    "1938",
+    "1933"
+   ],
+   "model_answer": "1912 (state-level; federal in 1938)"
+  },
+  {
+   "id": "cd57aca91ce6ab87",
+   "kind": "answer",
+   "question": "what is the short story the gift of the magi about",
+   "gold_answers": [
+    "a young husband and wife and how they deal with the challenge of buying secret Christmas gifts for each other with very little money"
+   ],
+   "model_answer": "A poor couple’s selfless gift-giving and sacrifice for each other."
+  },
+  {
+   "id": "0fa66ddbd95d2371",
+   "kind": "answer",
+   "question": "how many credits for a bachelor's degree in science",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "360 credits (honours degree)"
+  },
+  {
+   "id": "6f15eb2133fb55aa",
+   "kind": "answer",
+   "question": "where did the easter eggs and bunny come from",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "German traditions: the Easter Bunny came from German Lutherans, while Easter eggs grew from older springtime customs."
+  },
+  {
+   "id": "dd2ce26e926cb6a7",
+   "kind": "answer",
+   "question": "when does bloom find out who she is",
+   "gold_answers": [
+    "Addio Magix!\"  / \"The Font of Dragon Fire"
+   ],
+   "model_answer": "Season 1, Episode 13, “A Great Secret Revealed.”"
+  },
+  {
+   "id": "1be2d6bc4dab3b69",
+   "kind": "answer",
+   "question": "the object in the mirror are closer than it appears",
+   "gold_answers": [
+    "The phrase `` objects in ( the ) mirror are closer than they appear '' is a safety warning that is required to be engraved on passenger side mirrors of motor vehicles in the USA , Canada , Nepal , India and Saudi Arabia . It is present because while these mirrors ' convexity gives them a useful field of view , it also makes objects appear smaller . Since smaller - appearing objects seem farther away than they actually are , a driver might make a maneuver such as a lane change assuming an adjacent vehicle is a safe distance behind , when in fact it is quite a bit closer . The warning serves as a reminder to the driver of this potential problem ."
+   ],
+   "model_answer": "Convex mirrors make objects appear smaller and farther away."
+  },
+  {
+   "id": "c054bedb828e51e2",
+   "kind": "answer",
+   "question": "how many countries are a part of opec",
+   "gold_answers": [
+    "14"
+   ],
+   "model_answer": "14 countries"
+  },
+  {
+   "id": "e61a9f3f7aa2f088",
+   "kind": "answer",
+   "question": "what caused the breakup of the democratic republican party",
+   "gold_answers": [
+    "the disputed 1824 presidential election"
+   ],
+   "model_answer": "Disagreements after the disputed 1824 election split the party into Jacksonian Democrats and National Republicans."
+  },
+  {
+   "id": "fef58477feed0f5a",
+   "kind": "answer",
+   "question": "where was a time for choosing speech given",
+   "gold_answers": [
+    "Los Angeles County, California, U.S.",
+    "part of a pre-recorded television program, Rendezvous with Destiny"
+   ],
+   "model_answer": "Los Angeles County, California"
+  },
+  {
+   "id": "236833a320707c79",
+   "kind": "answer",
+   "question": "are all firestone tires made in the usa",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No—Firestone tires are made in multiple countries."
+  },
+  {
+   "id": "f094b60027e35c25",
+   "kind": "answer",
+   "question": "where did the easter eggs and bunny come from",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The Easter Bunny came from German Lutheran folklore; Easter eggs came from ancient spring fertility symbols and traditions of breaking the Lenten fast."
+  },
+  {
+   "id": "ee93152ea3244cd2",
+   "kind": "answer",
+   "question": "why did government sponsored surveys and land acts encourage migration to the west",
+   "gold_answers": [
+    "The Homestead Acts were several United States federal laws that gave an applicant ownership of land , typically called a `` homestead , '' at no cost . In all , more than 270 million acres of public land , or nearly 10 % of the total area of the U.S. , was given away free to 1.6 million homesteaders ; most of the homesteads were west of the Mississippi River .",
+    "An extension of the Homestead Principle in law , the Homestead Acts were an expression of the `` Free Soil '' policy of Northerners who wanted individual farmers to own and operate their own farms , as opposed to Southern slave - owners who wanted to buy up large tracts of land and use slave labor , thereby shutting out free white men ."
+   ],
+   "model_answer": "They made western land easier to claim, often for free or at low cost."
+  },
+  {
+   "id": "07b17b5f95a9d8c8",
+   "kind": "answer",
+   "question": "which regions on earth have seasons tied to the amount of rainfall",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Monsoon and tropical savanna regions\n"
+  },
+  {
+   "id": "42f4017e2637a8f8",
+   "kind": "answer",
+   "question": "where is deforestation occurring in the united states",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Throughout U.S. forests, including the eastern forests."
+  },
+  {
+   "id": "c58f1624312ee6bf",
+   "kind": "answer",
+   "question": "what was going on in 1954 in the us",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Civil rights advances, McCarthy hearings, and Cold War tensions."
+  },
+  {
+   "id": "d0b9dae2147c95a7",
+   "kind": "answer",
+   "question": "why does prince edward island have red sand",
+   "gold_answers": [
+    "sedimentary rock and other material with a high iron concentration which oxidizes upon exposure to the air"
+   ],
+   "model_answer": "Iron oxide in the soil and sandstone."
+  },
+  {
+   "id": "dd70bc43fb2c14c0",
+   "kind": "answer",
+   "question": "what does hp mean in war and order",
+   "gold_answers": [
+    "hit points or health points"
+   ],
+   "model_answer": "Health points"
+  },
+  {
+   "id": "756508482dc76c55",
+   "kind": "answer",
+   "question": "who was not killed on the 1959 plane crash",
+   "gold_answers": [
+    "The Day the Music Died The memorial marking the crash site , 2003 Accident summary Date February 3 , 1959 ( 1959 - 02 - 03 ) Summary Spatial disorientation , loss of control in near - IMC conditions Site Near Clear Lake , Iowa , United States 43 ° 13 ′ 13.3 '' N 93 ° 22 ′ 53.1 '' W ﻿ / ﻿ 43.220361 ° N 93.381417 ° W ﻿ / 43.220361 ; - 93.381417 Coordinates : 43 ° 13 ′ 13.3 '' N 93 ° 22 ′ 53.1 '' W ﻿ / ﻿ 43.220361 ° N 93.381417 ° W ﻿ / 43.220361 ; - 93.381417 Passengers Crew Fatalities 4 ( all ) Survivors 0 Aircraft type Beechcraft Bonanza Operator Dwyer Flying Service , Mason City , Iowa Registration N3794N Flight origin Mason City Municipal Airport , Iowa Destination Hector Airport , North Dakota",
+    "At the time , Holly and his band , consisting of Waylon Jennings , Tommy Allsup , and Carl Bunch , were playing on the `` Winter Dance Party '' tour across the United States Midwest . Rising artists Valens and Richardson had joined the tour , as well . The long journeys between venues on board the cold , uncomfortable tour buses adversely affected the performers , with cases of flu and even frostbite . After stopping at Clear Lake to perform , and frustrated by such conditions , Holly chose to charter a plane to reach their next venue in Moorhead , Minnesota . Richardson , who had the flu , swapped places with Jennings , taking his seat on the plane , while Allsup lost his seat to Valens on a coin toss . Soon after takeoff , late at night and in poor , wintry weather conditions , the pilot lost control of the light aircraft , a Beechcraft Bonanza , which subsequently crashed into a cornfield . Everyone on board was killed . The event has since been mentioned in various songs and films . A number of monuments have been erected at the crash site and in Clear Lake , where an annual memorial concert is also held at the Surf Ballroom , the venue that hosted the artists ' last performance ."
+   ],
+   "model_answer": "No one was spared."
+  },
+  {
+   "id": "78f814f5858df3e0",
+   "kind": "answer",
+   "question": "what is the payout for the texas bowl",
+   "gold_answers": [
+    "US$3 million per team",
+    "US$3 million per team (as of 2015)"
+   ],
+   "model_answer": "$6.4 million per team."
+  },
+  {
+   "id": "4b612e311f5c2949",
+   "kind": "answer",
+   "question": "which biome is characteristic of central sub saharan africa nearest the equator",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Tropical rainforest"
+  },
+  {
+   "id": "64b2f6caaffdcfc1",
+   "kind": "answer",
+   "question": "where are located the acetabulum and the glenoid cavities",
+   "gold_answers": [
+    "Compared to the acetabulum ( at the hip - joint ) the glenoid cavity is relatively shallow . This makes the shoulder joint prone to dislocation ( luxation ) . Strong glenohumeral ligaments and muscles prevents dislocation in most cases ."
+   ],
+   "model_answer": "Acetabulum: pelvis; glenoid cavity: scapula."
+  },
+  {
+   "id": "b9e2007f0b34b98b",
+   "kind": "answer",
+   "question": "when are centrally acting skeletal muscle relaxants used",
+   "gold_answers": [
+    "to alleviate musculoskeletal pain and spasms and to reduce spasticity in a variety of neurological conditions",
+    "to alleviate musculoskeletal pain and spasms",
+    "to reduce spasticity in a variety of neurological conditions"
+   ],
+   "model_answer": "Short-term treatment of acute muscle spasms."
+  },
+  {
+   "id": "7009e6553d4ae6bc",
+   "kind": "answer",
+   "question": "where can you find dna in the body",
+   "gold_answers": [
+    "inside the cell nucleus",
+    "in organelles, such as mitochondria or chloroplasts",
+    "chromosomes in a cell"
+   ],
+   "model_answer": "In nearly all cells of the body."
+  },
+  {
+   "id": "9360b32df5f32b01",
+   "kind": "answer",
+   "question": "who is the richest club in the championship",
+   "gold_answers": [
+    "Manchester City",
+    "Aston Villa"
+   ],
+   "model_answer": "Leicester City"
+  },
+  {
+   "id": "e945f2c01a794083",
+   "kind": "answer",
+   "question": "what is the total eclipse of the heart video about",
+   "gold_answers": [
+    "The music video for `` Total Eclipse of the Heart '' was directed by Russell Mulcahy and was filmed on location at the Holloway Sanatorium , a large Victorian Gothic hospital near Virginia Water , Surrey , England . The video features Bonnie Tyler clad in white , dreaming or fantasizing about her students in a boys ' boarding school . Young men are seen dancing and participating in various school activities and singing in a choir ."
+   ],
+   "model_answer": "A teacher’s eerie, romantic fantasies at an all-boys school."
+  },
+  {
+   "id": "3ffb1c6f79fc76ad",
+   "kind": "answer",
+   "question": "which of the following was a result of the connecticut compromise",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "A bicameral Congress with a population-based House and an equally represented Senate."
+  },
+  {
+   "id": "7a971344f9a96d6a",
+   "kind": "answer",
+   "question": "you gotta fight for your right to party cover",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The Donnas"
+  },
+  {
+   "id": "b8a6223ae38e1cad",
+   "kind": "answer",
+   "question": "i hope that you don't fall in love with me",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "A Tom Waits song on *Closing Time*."
+  },
+  {
+   "id": "7f80ee34596f9c87",
+   "kind": "answer",
+   "question": "where is most vascular tissue found in plants",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "In stems, roots, and leaves."
+  },
+  {
+   "id": "609b2436a7e743c3",
+   "kind": "answer",
+   "question": "who was the cop in dumb and dumber",
+   "gold_answers": [
+    "Year Film Role Notes Dumb and Dumber State Trooper Down Periscope E.T. `` Sonar '' Lovacelli RocketMan Fred Z . Randall Wag the Dog Pet Wrangler Space Ghost Coast to Coast Himself 1 episode 1998 Half Baked Kenny Davis There 's Something About Mary Hitchhiker ( uncredited ) Dog Park Callum Ned 's Newt Newton ( voice ) Mr. Headmistress Tucker 1999 Superstar Slater 2000 The Whole Nine Yards Special Agent Steve Hanson Big Money Hustlas Officer Harry Cox Becoming Dick Richard Breggs Freddy Got Fingered Darren Gary & Mike Mike Bonner ( voice ) 2002 Back by Midnight Sheriff Hubbard Sorority Boys Doofer / Roberta 2003 Family Tree Jake Kart Racer Zee 2005 Lucky 13 Bleckman Because of Winn - Dixie Policeman Robots Lugnut ( voice ) 2006 Employee of the Month Russell Porpis - Gunders Surf School Rip Ergo Proxy Head Dog Cop ( voice ) 1 episode 2007 Meet the Robinsons Carl ( voice ) The Dukes of Hazzard : The Beginning Sheriff Rosco P. Coltrane 2008 Bachelor Party 2 : The Last Temptation Derek Madagascar : Escape 2 Africa Giraffe ( voice ) 2009 Fudgy Wudgy Fudge Face Elmore P. Fudge My Life in Ruins Big Al Sawchuck 2009 The Haunted World of El Superbeasto Gerard the Exterminator ( voice ) 2011 Spooky Buddies Warwick the Warlock Lloyd the Conqueror Vulcan Dahmer Vs. Gacy God Dan Vs . Hiram Episode : Technology Robot Chicken Professor Cornelius Q. Quibblefingers ( voice ) 1 episode ; also writes 4 episodes 2012 The High Fructose Adventures of Annoying Orange Apple ( voice ) Robot and Monster Monster ( voice ) Main Role 2014 Back in the Day Skunk 2015 Jake and the Never Land Pirates Captain Frost ( voice ) Penn Zero : Part - Time Hero Helper Hue ( voice ) 2016 Sausage Party Ketchup Bottle / Drug Dealer / Baba Ganoush ( voice ) Skylanders Academy Hugo ( voice ) 2017 - present Puppy Dog Pals Bob ( voice ) Also show creator"
+   ],
+   "model_answer": "Harland Williams"
+  },
+  {
+   "id": "59f34691405c677e",
+   "kind": "answer",
+   "question": "what is the total eclipse of the heart video about",
+   "gold_answers": [
+    "The music video for `` Total Eclipse of the Heart '' was directed by Russell Mulcahy and was filmed on location at the Holloway Sanatorium , a large Victorian Gothic hospital near Virginia Water , Surrey , England . The video features Bonnie Tyler clad in white , dreaming or fantasizing about her students in a boys ' boarding school . Young men are seen dancing and participating in various school activities and singing in a choir ."
+   ],
+   "model_answer": "A dreamlike story of longing, love, and emotional darkness."
+  },
+  {
+   "id": "8af94c12d8aded80",
+   "kind": "answer",
+   "question": "if there is a line that lies parallel to the horizon it is said to be",
+   "gold_answers": [
+    "A vanishing point"
+   ],
+   "model_answer": "Horizontal"
+  },
+  {
+   "id": "5439abeade8eeedc",
+   "kind": "answer",
+   "question": "how often does a speed limit sign need to be posted",
+   "gold_answers": [
+    "In most of the world speed limit signs display the limitation within a red circle . This design follows the style set out by the Vienna Convention on Road Signs and Signals , with the exception of United States and Canada . All countries globally worldwide ( except the United Kingdom and United States ) use metric speed limits in kilometres per hour . Metric signs are optional in the United States though less commonly seen , while Samoa uses both units . In Ontario , Canada , the type , location , and frequency of speed limit signs is covered by regulation 615 of the Ontario Highway Traffic Act ."
+   ],
+   "model_answer": "There’s no fixed interval; it depends on local regulations and road conditions."
+  },
+  {
+   "id": "e8c1022162f82be1",
+   "kind": "answer",
+   "question": "what is final season of game of thrones",
+   "gold_answers": [
+    "the eighth season",
+    "eighth",
+    "The eighth"
+   ],
+   "model_answer": "Season 8"
+  },
+  {
+   "id": "c35f9fb2bbd13f75",
+   "kind": "answer",
+   "question": "who is the owner of reading football club",
+   "gold_answers": [
+    "Dai Yongge",
+    "Dai Xiuli",
+    "Dai Yongge and Dai Xiuli (majority)",
+    "Xiu Li Dai",
+    "Yongge Dai"
+   ],
+   "model_answer": "Rob Couhig"
+  },
+  {
+   "id": "b8e4f0cdc5cdb4a4",
+   "kind": "answer",
+   "question": "who is rose in the fall season 2",
+   "gold_answers": [
+    "a woman who had a sexual relationship with Paul whilst at university",
+    "Valene Kane"
+   ],
+   "model_answer": "Rose Stagg, Paul Spector’s former lover."
+  },
+  {
+   "id": "57c68deee7e394c4",
+   "kind": "answer",
+   "question": "where is the hotel in the movie the shining",
+   "gold_answers": [
+    "In 1980 , The Shining became the basis for a film adaptation directed by Stanley Kubrick . Kubrick 's vision for the movie differed from King 's significantly in many ways , including the portrayal of the Overlook Hotel . The exteriors of Kubrick 's Overlook were supplied by the Timberline Lodge on the slopes of Mt . Hood in Oregon . Inspiration for the interior sets ( erected at Elstree Studios in England ) came from the 1927 Ahwahnee Hotel in Yosemite National Park . The management of the Timberline Lodge , fearful that guests would refuse to stay in their Room 217 if it were featured in a horror movie , insisted that Kubrick change the haunted room in the film to Room 237 ."
+   ],
+   "model_answer": "Colorado (exterior filmed at Timberline Lodge, Oregon)"
+  },
+  {
+   "id": "e3e914ab4ab5ddc9",
+   "kind": "answer",
+   "question": "meaning of lyrics to wade in the water",
+   "gold_answers": [
+    "The song relates to both the Old and New Testaments . The verses reflect the Israelites ' escape out of Egypt as found in Exodus 14 . The chorus refers to healing : see John 5 : 4 , `` For an angel went down at a certain season into the pool , and troubled the water : whosoever then first after the troubling of the water stepped in was made whole of whatsoever disease he had . ''"
+   ],
+   "model_answer": "The verses evoke the Israelites’ escape from Egypt, while the chorus refers to healing through troubled water."
+  },
+  {
+   "id": "4dd5dd9d847e41ee",
+   "kind": "answer",
+   "question": "what is the job of justice of the peace",
+   "gold_answers": [
+    "a judicial officer, of a lower or puisne court, elected or appointed by means of a commission (letters patent) to keep the peace.",
+    "dispense summary justice",
+    "deal with local administrative applications in common law jurisdictions"
+   ],
+   "model_answer": "Handles minor legal matters, administers oaths, and may officiate weddings."
+  },
+  {
+   "id": "05d2fb581ef7edf4",
+   "kind": "answer",
+   "question": "who plays mad max on johnboy and billy",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Sadie Sink"
+  },
+  {
+   "id": "586b0d175fd793a3",
+   "kind": "answer",
+   "question": "who wrote the first declaration of human rights",
+   "gold_answers": [
+    "Cyrus"
+   ],
+   "model_answer": "George Mason"
+  },
+  {
+   "id": "4072e19b831c0094",
+   "kind": "answer",
+   "question": "how big is the celebrity big brother house",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "About 10,000 square feet."
+  },
+  {
+   "id": "06409bcbfdace130",
+   "kind": "answer",
+   "question": "when was the worlds first laptop computer introduced in the market and by whom",
+   "gold_answers": [
+    "The portable micro computer the “Portal\" of the French company R2E Micral CCMC officially appeared in September 1980",
+    "September 1980",
+    "R2E Micral CCMC"
+   ],
+   "model_answer": "1985, by Toshiba (the T1100)."
+  },
+  {
+   "id": "144a812965f3a8b9",
+   "kind": "answer",
+   "question": "steps party on the dance floor tour review",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "A high-energy, nostalgic pop show packed with crowd-pleasing hits."
+  },
+  {
+   "id": "db31f94819efb581",
+   "kind": "answer",
+   "question": "lil dicky ft chris brown freaky friday song",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "“Freaky Friday” is a song by Lil Dicky featuring Chris Brown, released March 15, 2018."
+  },
+  {
+   "id": "7600d2c854a709a1",
+   "kind": "answer",
+   "question": "who holds the record for longest motorcycle jump",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Robbie Maddison"
+  },
+  {
+   "id": "72a59070d6b48172",
+   "kind": "answer",
+   "question": "what is windows defender and what does it do",
+   "gold_answers": [
+    "Windows Defender , officially called Windows Defender Antivirus in Windows 10 Creators Update , is an anti-malware component of Microsoft Windows.It was first released as a free antispyware program download for Windows XP , shipped with Windows Vista and Windows 7 and made into a full antivirus program replacing Microsoft Security Essentials as part of Windows 8 and later versions ."
+   ],
+   "model_answer": "Windows’ built-in anti-malware software that detects and removes spyware, viruses, and other malware."
+  },
+  {
+   "id": "88a5f504305ca250",
+   "kind": "answer",
+   "question": "is president's day a bank holiday in the us",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Yes, it’s generally a bank holiday."
+  },
+  {
+   "id": "1e4a71e263ffe8f5",
+   "kind": "answer",
+   "question": "fear the walking dead season 1 episode 4 explained",
+   "gold_answers": [
+    "No . overall No. in season Title Directed by Written by Original air date U.S. viewers ( millions ) `` Pilot '' Adam Davidson Robert Kirkman & Dave Erickson August 23 , 2015 ( 2015 - 08 - 23 ) 10.13 Nick awakens in a heroin den in an abandoned church , to find his girlfriend Gloria eating a corpse . While fleeing , he is hit by a car and hospitalized . The doctor tells Madison and Travis that Nick 's claims about the incident are heroin hallucinations , but Travis believes Nick after visiting the church himself . Alicia becomes more worried about Nick 's chemical dependency . The next day , school closes early due to the high levels of absenteeism and rumors of an epidemic . Nick escapes from the hospital and meets with Calvin , hoping to learn if the drugs Calvin sold him caused him to hallucinate in the church . Calvin tries to kill Nick to prevent him from exposing Calvin as a drug dealer or impugning the quality of his drugs . In the ensuing struggle , Calvin is mortally shot . After Travis and Madison arrive , the zombified Calvin attacks them . Nick runs over Calvin repeatedly with Travis ' truck , and the three watch in disbelief as the mutilated Calvin is still able to turn his head towards them . `` So Close , Yet So Far '' Adam Davidson Marco Ramirez August 30 , 2015 ( 2015 - 08 - 30 ) 8.18 After the run - in with zombified Calvin , Nick , Madison , and Travis choose to flee to the desert , and they want Alicia , Liza , and Chris to follow . Alicia finds Matt ill in his disheveled house . Travis arrives and sees a bite on Matt , who convinces Alicia to leave . The group returns to Madison 's home to gather supplies . Nick suffers from heroin withdrawal , so Madison drives to her school to get him Oxycodone . There , she encounters Tobias scavenging food . A zombified Artie tries to bite Tobias , so Madison kills Artie and drives Tobias home . Chris ' bus is trapped in a traffic jam caused by a zombie shooting by the police . He films the event and joins in a protest against that and other recent fatal police shootings , when Travis and Liza meet up with him . A riot erupts after police shoot down another zombie , but the three Manawas find refuge with the Salazars in their gated barbershop - home . Travis tells Madison to take the kids to the desert without him ; he will catch up . Alicia witnesses her zombified neighbor , Mr. Dawson , attacking Mrs. Cruz across the street , but Madison prevents her from intervening . The group inside the barbershop remains trapped , while the riot outside intensifies . `` The Dog '' Adam Davidson Jack LoGiudice September 13 , 2015 ( 2015 - 09 - 13 ) 7.19 While a riot rages outside , a mob sets fire to the store adjoining the barbershop , forcing the Salazars and Manawas to flee . The group reaches Travis ' truck and escapes , but not before Griselda is injured by a collapsing scaffold . Unable to reach a hospital , the group drives to Madison 's house , where Nick , Madison , and Alicia temporarily flee when the zombified Mr. Dawson attempts to enter , attracted by the barking dog Nick had let in . Nick leads Madison and Alicia to the Trans ' house next door , where they take a shotgun . Travis arrives and is attacked by Mr. Dawson , who is shot and killed by Daniel . All three families decide to stay the night and evacuate in the morning . Nurse Liza tends to Griselda 's injured foot but notes that Griselda will die if not treated by a doctor . Ofelia tells Daniel they should flee with Travis , but Daniel insists his family can survive alone and will join his cousin later . The next morning , as the Clarks and Manawas start driving away , the National Guard arrives and quarantines the block . While Travis says , `` It 's going to get better , '' Daniel laments that it 's , `` too late , '' as he watches a guardsman mark the neighboring house . `` Not Fade Away '' Kari Skogland Meaghan Oppenheimer September 20 , 2015 ( 2015 - 09 - 20 ) 6.62 Days after the National Guard quarantines the neighborhood into a Safe Zone , residents try to live normally . Tensions build under the military rule . Madison is stressed by extra work caused by her home 's being overcrowded and Travis ' new role as civilian liaison . Chris shows a video to Travis and Madison of a light signaling from the Dead Zone . Travis talks Doug into getting mental help . Liza medically helps neighbors . Nick steals morphine from Hector via IV drip . Ofelia kisses Adams , who was unable to get Griselda 's medicine . Madison exchanges signals with the flashing light in the Dead Zone . She sneaks outside the fence to investigate and finds evidence that the guardsmen killed civilians , even the uninfected . Travis learns that Doug has been hospitalized for his mental issues . Dr. Exner determines that Liza is not technically a nurse . Daniel warns Madison of his El Salvador experience , when the sick were taken under the guise of receiving hospitalization but instead killed . Soldiers take Griselda and Nick to a hospital , but Nick 's family protests his departure . Liza agrees to go to assist the medical team , despite not wanting to leave her son . Travis retreats to the roof and sees the signal from the Dead Zone . Seconds later , he sees and hears gunfire , followed by darkness . 5 5 `` Cobalt '' Kari Skogland David Wiener September 27 , 2015 ( 2015 - 09 - 27 ) 6.66 In a military cell , Strand bribes a guardsman to save feverish Nick from being moved . Liza helps Dr. Exner with patients at the hospital . Chris is devastated that Liza left voluntarily to help at the hospital , but Travis promises to bring her back . Madison discovers Daniel detaining Adams in the Trans ' basement . Alicia and Chris get drunk in and vandalize the abandoned home of a wealthy family . Strand recruits Nick for an escape plot . Travis convinces Moyers ' squad to take him to the hospital to check on his friends . While en route , Moyers encourages Travis to shoot a zombie , but Travis is emotionally unable to pull the trigger . The soldiers stop to assist another squad in a building infested by zombies , and most of those soldiers , including Moyers , are overcome . The few survivors flee and drop off Travis near the Safe Zone . Travis learns that Daniel tortured Adams into revealing what `` Cobalt '' means : in the morning , all civilians will be killed , and the guardsmen will evacuate the city . Griselda dies of septic shock at the hospital ; Liza shoots her brain to prevent reanimation . Daniel visits a nearby sports arena to verify Adams ' story that it was sealed with 2,000 now - zombified civilians inside . 6 6 `` The Good Man '' Stefan Schwartz Robert Kirkman & Dave Erickson October 4 , 2015 ( 2015 - 10 - 04 ) 6.86 The group drives to the National Guard 's headquarters to rescue Liza , Griselda , and Nick . Adams agrees to be their guide when let go by Travis . The group infiltrates the base after Daniel distracts the guards by leading a horde of walkers from the arena . Travis , Madison , Daniel , and Ofelia go inside , while Alicia and Chris stay behind . Meanwhile , the walkers breach the perimeter defenses and swarm the base . Travis ' group reach the holding cells and set the detainees free before reuniting with Nick , Liza , and Strand . They try to escape through the medical ward , where they discover Dr. Exner has euthanized all of the patients . Dr. Exner tells them of an escape route before presumably committing suicide . Before they can escape , the group encounters Adams , who shoots Ofelia in the arm . Enraged , Travis brutally beats Adams and leaves him for dead . Strand leads the group to his oceanside mansion , where he reveals to Nick that he owns a yacht which he plans to escape on , called the Abigail . On the beach , Liza reveals to Madison that she had been bitten during the escape . Liza pleads with Madison and Travis to euthanize her before she turns . Travis promises to protect Chris before shooting Liza ."
+   ],
+   "model_answer": "Under military quarantine, Madison discovers guards have killed civilians in the Dead Zone."
+  },
+  {
+   "id": "4bad75c3ee80a0e4",
+   "kind": "answer",
+   "question": "in us national flood insurance is available for which of the following",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Property owners in participating communities that adopt floodplain-management rules"
+  },
+  {
+   "id": "ce5c1c922b78137e",
+   "kind": "answer",
+   "question": "what is the symbol for the element that is in group 3b and period 4",
+   "gold_answers": [
+    "Group 3 in the periodic table Hydrogen Helium Lithium Beryllium Boron Carbon Nitrogen Oxygen Fluorine Neon Sodium Magnesium Aluminium Silicon Phosphorus Sulfur Chlorine Argon Potassium Calcium Scandium Titanium Vanadium Chromium Manganese Iron Cobalt Nickel Copper Zinc Gallium Germanium Arsenic Selenium Bromine Krypton Rubidium Strontium Yttrium Zirconium Niobium Molybdenum Technetium Ruthenium Rhodium Palladium Silver Cadmium Indium Tin Antimony Tellurium Iodine Xenon Caesium Barium Lanthanum Cerium Praseodymium Neodymium Promethium Samarium Europium Gadolinium Terbium Dysprosium Holmium Erbium Thulium Ytterbium Lutetium Hafnium Tantalum Tungsten Rhenium Osmium Iridium Platinum Gold Mercury ( element ) Thallium Lead Bismuth Polonium Astatine Radon Francium Radium Actinium Thorium Protactinium Uranium Neptunium Plutonium Americium Curium Berkelium Californium Einsteinium Fermium Mendelevium Nobelium Lawrencium Rutherfordium Dubnium Seaborgium Bohrium Hassium Meitnerium Darmstadtium Roentgenium Copernicium Nihonium Flerovium Moscovium Livermorium Tennessine Oganesson alkaline earth metals ← → group 4 IUPAC group number Name by element scandium group CAS group number ( US , pattern A-B-A ) IIIB old IUPAC number ( Europe , pattern A-B ) IIIA ↓ Period Scandium ( Sc ) 21 Transition metal 5 Yttrium ( Y ) 39 Transition metal 6 Lanthanum ( La * ) 57 Lanthanide 7 Actinium ( Ac * ) 89 Actinide * Whether the elements lutetium ( Lu ) and lawrencium ( Lr ) , in period 6 and 7 , are in group 3 is disputed . The grouping used in this article places La and Ac in group 3 , which is the most common form . For other groupings , see group 3 borders . Legend primordial element synthetic element Atomic number color : black = solid"
+   ],
+   "model_answer": "Sc\n"
+  },
+  {
+   "id": "031f6eb1371c2546",
+   "kind": "answer",
+   "question": "what is the share of agriculture in indian economy",
+   "gold_answers": [
+    "17.32%",
+    "23%"
+   ],
+   "model_answer": "About 17% of GDP (2014)."
+  },
+  {
+   "id": "c6ae1b4b7b19f206",
+   "kind": "answer",
+   "question": "global trade during the ming dynasty of china",
+   "gold_answers": [
+    "The Ming dynasty also engaged in a thriving trade with both Europe and Japan . The amount of silver flowing into the Ming dynasty was estimated by Joseph Needham at 300 million taels , which is equivalent to more than 190 billion dollars in today 's money . In addition to silver , the Ming also imported many European firearms , in order to ensure the modernness of their weapons ."
+   ],
+   "model_answer": "Ming China traded extensively with Europe and Japan, importing silver and firearms."
+  },
+  {
+   "id": "89802f699f878239",
+   "kind": "answer",
+   "question": "what was taking place before the industrial revolution",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Commercial agriculture was expanding and encouraging agricultural mechanization."
+  },
+  {
+   "id": "ade2fa77a3434d03",
+   "kind": "answer",
+   "question": "what do the films mean in high castle",
+   "gold_answers": [
+    "The Grasshopper Lies Heavy is a series of newsreel films depicting multiple alternative realities",
+    "as-yet-unknown purpose"
+   ],
+   "model_answer": "They depict multiple alternative realities."
+  },
+  {
+   "id": "52aac95e8e106d38",
+   "kind": "answer",
+   "question": "when were 2 dollar bills stopped being made",
+   "gold_answers": [
+    "current denomination of U.S. currency"
+   ],
+   "model_answer": "August 1966"
+  },
+  {
+   "id": "4f37b39b562c1539",
+   "kind": "answer",
+   "question": "how much does.it cost to raise a child",
+   "gold_answers": [
+    "Dual - Parent Family - USDA Average Spending per Child ( not the basic cost of raising ) Age of Child Housing Food Transport . Clothing Health Child Care / Education Misc . Total Before - tax income : Less than $59,410 ( Average = $38,000 ) 0 to 2 2,990 1,160 1,170 640 630 2,040 420 9,050 3 to 5 2,990 1,260 1,230 500 590 1,910 620 9,100 6 to 8 2,990 1,710 1,350 570 660 1,290 630 8,760 9 to 11 2,990 1,970 1,350 580 710 1,910 630 9,520 12 to 14 2,990 2,130 1,480 690 1,090 1,110 700 9,960 15 to 17 2,990 2,120 1,630 730 1,010 1,290 580 9,970 Total 53,820 31,050 24,630 11,130 14,070 23,640 10,740 169,080 Before - tax income : $59,410 to $102,870 ( Average = $79,940 ) 0 to 2 3,920 1,405 1,690 760 850 2,860 890 12,370 3 to 5 3,920 1,490 1,740 610 800 2,740 1,090 12,390 6 to 8 3,920 2,100 1,860 680 940 1,680 1,110 12,290 9 to 11 3,920 2,400 1,870 710 1,000 2,110 1,100 13,110 12 to 14 3,920 2,580 1,990 840 1,410 1,910 1,170 13,820 15 to 17 3,920 2,570 2,150 900 1,330 2,400 1,050 14,320 Total 70,560 37,620 33,900 13,500 18,990 41,100 19,230 234,900 Before - tax income : More than $102,870 ( Average = $180,040 ) 0 to 2 7,100 1,900 2,550 1,050 980 5,090 1,790 20,460 3 to 5 7,100 2,000 2,610 880 930 4,970 1,990 20,480 6 to 8 7,100 2,630 2,730 970 1,080 3,910 2,000 20,420 9 to 11 7,100 2,980 2,730 1,010 1,150 4,350 2,000 21,320 12 to 14 7,100 3,190 2,860 1,170 1,610 4,700 2,070 22,700 15 to 17 7,100 3,180 3,020 1,280 1,520 6,460 1,950 24,510 Total 127,800 47,640 49,500 19,080 21,810 88,440 35,400 389,670"
+   ],
+   "model_answer": "About $234,900 in the U.S. (2011 estimate)"
+  },
+  {
+   "id": "4db19c011f011c35",
+   "kind": "answer",
+   "question": "where are unipolar neurons found in spinal cord",
+   "gold_answers": [
+    "the distal dorsal root"
+   ],
+   "model_answer": "Dorsal root ganglia, just outside the spinal cord."
+  },
+  {
+   "id": "31cdc5d375aa2eed",
+   "kind": "answer",
+   "question": "where are the coastal plains of india situated",
+   "gold_answers": [
+    "between the Eastern Ghats and the Bay of Bengal",
+    "from Tamil Nadu in the south to West Bengal in the north through Andhra Pradesh and Odisha"
+   ],
+   "model_answer": "Along the eastern and western coasts of India."
+  },
+  {
+   "id": "ab3b89d80dd8547a",
+   "kind": "answer",
+   "question": "7 deadly sins signs of a holy war",
+   "gold_answers": [
+    "No . Title Original air date `` The Dark Dream Begins '' `` Kuroki Yume no Hajimari '' ( 黒き 夢 の はじまり ) August 28 , 2016 Elizabeth Liones goes to the Boar Hat , where all her friends are still asleep following the festival . After Elizabeth is greeted by Hawk outside , Meliodas introduces her to a meat pie made with vegetables that looks like Hawk , but it turns out to be unfit for human consumption . Meliodas has the idea of using pork as the main ingredient , which causes Hawk to make haste out of the bar . Meliodas comes up with a contest for his friends , in which he will obey any order for a day from whoever catches Hawk first . However , Hawk manages to outsmart them due to his small size . Hawk returns to the Boar Hat and eats food scraps made by Ban , who is declared the winner as a result . At night , Meliodas takes Elizabeth back to the palace while also assuring that his purpose in life is to protect her . Meliodas then goes to the catacombs to see the Horn of Cernunnos . When the goddess vessel taunts him for his reputation as a demon , Meliodas destroys the Horn of Cernunnos in retaliation . `` Our Fighting Festival '' `` Futari no Ken'ka Matsuri '' ( 二 人 の 喧嘩 祭り ) September 4 , 2016 Ban walks up to a mountaintop to finally settle matters with Meliodas , but the former is surprised to see Elizabeth and Hawk as well as the other members of the Seven Deadly Sins and the Holy Knights as part of an audience . Merlin casts a gigantic cubic barrier around Meliodas and Ban in order for the spectators to safely watch the fight . Meanwhile , King and Hauser have their own fight to win the attention of Diane . Ban initiates a brutal attack on Meliodas that somehow weakens most of the spectators . The fight ends in a stalemate after the two of them exchange rapid punches that cause the barrier to break . They remain friends and head back down to the Boar Hat for a drink . `` In Pursuit of First Love '' `` Hatsukoi o Oikakete '' ( 初恋 を 追いかけ て ) September 11 , 2016 King still hesitates to confess his feelings for Diane . Meanwhile , Diane leaves the Boar Hat and heads to a construction site in town , recalling the devastating collateral damage she caused due to her immense size . The construction workers there apologize to her and thank her for saving the kingdom . When King comes to see Diane , the two decide to play a game of tag across town . Outside a church , a wedding ceremony is interrupted by a demon , in which Diane and King combine their skills in defeating the demon . King asks Diane if she regained her memories , and she answers him with a kiss on his cheek . The moment is ruined when a brick suddenly falls on his head , and he later wakes up next to her , having forgotten what they did during the day . `` The Shape of Love '' `` Ai no Katachi '' ( 愛 の かたち ) September 18 , 2016 Merlin agrees to be a waitress at the Boar Hat , but first she wants Meliodas and Gowther to follow Gilthunder to find out if he is being stalked by someone . Meanwhile , Gilthunder , Hauser and Griamore are each hit with falling debris in the streets , unaware of the situation . Gowther is distracted by a boy named Pelliot , who asks him to retrieve a fat cat off a roof . Since Gowther reminds Pelliot of his mother , who recently passed away , Gowther transforms into Pelliot 's mother for a moment and disappears when Pelliot 's father finds Pelliot . Meliodas finds Gilthunder , Hauser and Griamore at a restaurant , where he purposely spills coffee to expose Vivian , revealed as the stalker . Merlin punishes Vivian by planting a cursed ring on her finger , which will bring pain to her each time the curse is activated , and Merlin explains that the Ten Commandments are the highest class in the demon race . At the Boar Hat , Merlin quits her job as a waitress , while Hawk and Gowther fill in for the position , much to the guys ' dismay ."
+   ],
+   "model_answer": "The Dark Dream Begins"
+  }
+ ],
+ "evidence": []
+}

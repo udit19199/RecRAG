@@ -1,0 +1,70 @@
+[
+{"id": "c72deba1e9cae724", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Valve has announced a new Steam Deck and — double surprise — we’ve already reviewed it."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Surprise! Valve has announced a new Steam Deck and — double surprise — we’ve already reviewed it."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Valve has announced a new Steam Deck and — double surprise — we’ve already reviewed it."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets."}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 5, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 5, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+]},
+{"id": "96b87084914f7bd9", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones and more."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []},
+{"fact": "3.2", "status": "missing", "evidence": []},
+{"fact": "3.3", "status": "missing", "evidence": []}
+]},
+{"id": "ddc9862cf9ae7a60", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "4ade7e3956b9e7d2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Goodyear SVP of global operations and CTO Chris Helsel says."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research"}, {"item": 4, "quote": "Goodyear SVP of global operations and CTO Chris Helsel says."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "In our report, a former VP at an industrial automation vendor shared"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "In our report, a former VP at an industrial automation vendor shared"}, {"item": 9, "quote": "Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]}
+]},
+{"id": "123c811e2304f44e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "creating a strong need for technologists and designers to be in the process together."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Stufish partner Ric Lipson (along with artist Es Devlin and producer Brian Eno) collaborated on the U2 project for Sphere."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Stufish partner Ric Lipson (along with artist Es Devlin and producer Brian Eno) collaborated on the U2 project for Sphere."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "Stufish partner Ric Lipson (along with artist Es Devlin and producer Brian Eno) collaborated on the U2 project for Sphere."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "Stufish partner Ric Lipson (along with artist Es Devlin and producer Brian Eno) collaborated on the U2 project for Sphere."}]}
+]},
+{"id": "de7154eba51af74f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "1.6", "status": "missing", "evidence": []}
+]}
+]

@@ -1,0 +1,568 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "a41f36f1ac0c26a5",
+   "kind": "answer",
+   "question": "where are the coastal plains located in india",
+   "gold_answers": [
+    "between the Eastern Ghats and the Bay of Bengal"
+   ],
+   "model_answer": "Along India’s eastern and western coasts."
+  },
+  {
+   "id": "a8db688ac6c03817",
+   "kind": "answer",
+   "question": "where is the stanley cup being held this year",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Pittsburgh, Pennsylvania"
+  },
+  {
+   "id": "8e460bb90e1c0c56",
+   "kind": "answer",
+   "question": "where do honey bees live in the world",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Everywhere except Antarctica."
+  },
+  {
+   "id": "0baca1df8ca0d38f",
+   "kind": "answer",
+   "question": "when was the drinking age set to 21",
+   "gold_answers": [
+    "By mid-1988"
+   ],
+   "model_answer": "Shortly after Prohibition was repealed in 1933."
+  },
+  {
+   "id": "c9441dfbaa61b4de",
+   "kind": "answer",
+   "question": "curious incident of the dog in the nighttime singapore wikipedia",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The Curious Incident of the Dog in the Night-Time"
+  },
+  {
+   "id": "e06b0e76b3e69e88",
+   "kind": "answer",
+   "question": "why top soil has most amount of humus",
+   "gold_answers": [
+    "Much of the humus in most soils has persisted for more than 100 years , rather than having been decomposed into CO , and can be regarded as stable ; this organic matter has been protected from decomposition by microbial or enzyme action because it is hidden ( occluded ) inside small aggregates of soil particles , or tightly sorbed or complexed ) to clays . Most humus that is not protected in this way is decomposed within 10 years and can be regarded as less stable or more labile . Stable humus contributes few plant - available nutrients in soil , but it helps maintain its physical structure . A very stable form of humus is formed from the slow oxidation of soil carbon after the incorporation of finely powdered charcoal into the topsoil . This process is speculated to have been important in the formation of the very fertile Amazonian terra preta do Indio ."
+   ],
+   "model_answer": "Because most organic matter decomposes in the topsoil."
+  },
+  {
+   "id": "426994b0afa4bf51",
+   "kind": "answer",
+   "question": "what is the short story the gift of the magi about",
+   "gold_answers": [
+    "a young husband and wife and how they deal with the challenge of buying secret Christmas gifts for each other with very little money"
+   ],
+   "model_answer": "A couple secretly sacrifice their prized possessions to buy each other Christmas gifts."
+  },
+  {
+   "id": "1ef3d466a09702c3",
+   "kind": "answer",
+   "question": "what causes cracked skin at the corners of your mouth",
+   "gold_answers": [
+    "infection",
+    "irritation",
+    "allergies"
+   ],
+   "model_answer": "Infection, irritation, or allergies."
+  },
+  {
+   "id": "e6ef9af734eea677",
+   "kind": "answer",
+   "question": "which regions on earth have seasons tied to the amount of rainfall",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Tropical regions, especially monsoon climates."
+  },
+  {
+   "id": "11a3ca2b1b63f611",
+   "kind": "answer",
+   "question": "what was going on in 1954 in the us",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Brown v. Board of Education, the Army–McCarthy hearings, and the launch of the first nuclear-powered submarine."
+  },
+  {
+   "id": "6305d8c8dbeceffa",
+   "kind": "answer",
+   "question": "where are the orcs made in lord of the rings",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Isengard (Saruman’s Orc–human crossbreeds)"
+  },
+  {
+   "id": "46e6f11998942199",
+   "kind": "answer",
+   "question": "the grand tour season 2 episode 2 celebrity guests",
+   "gold_answers": [
+    "Abbie Eaton",
+    "Kevin Pietersen",
+    "Brian Wilson",
+    "Kevin Pietersen, Brian Wilson"
+   ],
+   "model_answer": "David Hasselhoff and Ricky Wilson"
+  },
+  {
+   "id": "7161e4a4af8e238a",
+   "kind": "answer",
+   "question": "when do primary ossification centers appear in an embryo",
+   "gold_answers": [
+    "prenatal development"
+   ],
+   "model_answer": "Around the seventh week of embryonic development."
+  },
+  {
+   "id": "a8326988c67216cf",
+   "kind": "answer",
+   "question": "fear the walking dead season 1 episode 4 explained",
+   "gold_answers": [
+    "No . overall No. in season Title Directed by Written by Original air date U.S. viewers ( millions ) `` Pilot '' Adam Davidson Robert Kirkman & Dave Erickson August 23 , 2015 ( 2015 - 08 - 23 ) 10.13 Nick awakens in a heroin den in an abandoned church , to find his girlfriend Gloria eating a corpse . While fleeing , he is hit by a car and hospitalized . The doctor tells Madison and Travis that Nick 's claims about the incident are heroin hallucinations , but Travis believes Nick after visiting the church himself . Alicia becomes more worried about Nick 's chemical dependency . The next day , school closes early due to the high levels of absenteeism and rumors of an epidemic . Nick escapes from the hospital and meets with Calvin , hoping to learn if the drugs Calvin sold him caused him to hallucinate in the church . Calvin tries to kill Nick to prevent him from exposing Calvin as a drug dealer or impugning the quality of his drugs . In the ensuing struggle , Calvin is mortally shot . After Travis and Madison arrive , the zombified Calvin attacks them . Nick runs over Calvin repeatedly with Travis ' truck , and the three watch in disbelief as the mutilated Calvin is still able to turn his head towards them . `` So Close , Yet So Far '' Adam Davidson Marco Ramirez August 30 , 2015 ( 2015 - 08 - 30 ) 8.18 After the run - in with zombified Calvin , Nick , Madison , and Travis choose to flee to the desert , and they want Alicia , Liza , and Chris to follow . Alicia finds Matt ill in his disheveled house . Travis arrives and sees a bite on Matt , who convinces Alicia to leave . The group returns to Madison 's home to gather supplies . Nick suffers from heroin withdrawal , so Madison drives to her school to get him Oxycodone . There , she encounters Tobias scavenging food . A zombified Artie tries to bite Tobias , so Madison kills Artie and drives Tobias home . Chris ' bus is trapped in a traffic jam caused by a zombie shooting by the police . He films the event and joins in a protest against that and other recent fatal police shootings , when Travis and Liza meet up with him . A riot erupts after police shoot down another zombie , but the three Manawas find refuge with the Salazars in their gated barbershop - home . Travis tells Madison to take the kids to the desert without him ; he will catch up . Alicia witnesses her zombified neighbor , Mr. Dawson , attacking Mrs. Cruz across the street , but Madison prevents her from intervening . The group inside the barbershop remains trapped , while the riot outside intensifies . `` The Dog '' Adam Davidson Jack LoGiudice September 13 , 2015 ( 2015 - 09 - 13 ) 7.19 While a riot rages outside , a mob sets fire to the store adjoining the barbershop , forcing the Salazars and Manawas to flee . The group reaches Travis ' truck and escapes , but not before Griselda is injured by a collapsing scaffold . Unable to reach a hospital , the group drives to Madison 's house , where Nick , Madison , and Alicia temporarily flee when the zombified Mr. Dawson attempts to enter , attracted by the barking dog Nick had let in . Nick leads Madison and Alicia to the Trans ' house next door , where they take a shotgun . Travis arrives and is attacked by Mr. Dawson , who is shot and killed by Daniel . All three families decide to stay the night and evacuate in the morning . Nurse Liza tends to Griselda 's injured foot but notes that Griselda will die if not treated by a doctor . Ofelia tells Daniel they should flee with Travis , but Daniel insists his family can survive alone and will join his cousin later . The next morning , as the Clarks and Manawas start driving away , the National Guard arrives and quarantines the block . While Travis says , `` It 's going to get better , '' Daniel laments that it 's , `` too late , '' as he watches a guardsman mark the neighboring house . `` Not Fade Away '' Kari Skogland Meaghan Oppenheimer September 20 , 2015 ( 2015 - 09 - 20 ) 6.62 Days after the National Guard quarantines the neighborhood into a Safe Zone , residents try to live normally . Tensions build under the military rule . Madison is stressed by extra work caused by her home 's being overcrowded and Travis ' new role as civilian liaison . Chris shows a video to Travis and Madison of a light signaling from the Dead Zone . Travis talks Doug into getting mental help . Liza medically helps neighbors . Nick steals morphine from Hector via IV drip . Ofelia kisses Adams , who was unable to get Griselda 's medicine . Madison exchanges signals with the flashing light in the Dead Zone . She sneaks outside the fence to investigate and finds evidence that the guardsmen killed civilians , even the uninfected . Travis learns that Doug has been hospitalized for his mental issues . Dr. Exner determines that Liza is not technically a nurse . Daniel warns Madison of his El Salvador experience , when the sick were taken under the guise of receiving hospitalization but instead killed . Soldiers take Griselda and Nick to a hospital , but Nick 's family protests his departure . Liza agrees to go to assist the medical team , despite not wanting to leave her son . Travis retreats to the roof and sees the signal from the Dead Zone . Seconds later , he sees and hears gunfire , followed by darkness . 5 5 `` Cobalt '' Kari Skogland David Wiener September 27 , 2015 ( 2015 - 09 - 27 ) 6.66 In a military cell , Strand bribes a guardsman to save feverish Nick from being moved . Liza helps Dr. Exner with patients at the hospital . Chris is devastated that Liza left voluntarily to help at the hospital , but Travis promises to bring her back . Madison discovers Daniel detaining Adams in the Trans ' basement . Alicia and Chris get drunk in and vandalize the abandoned home of a wealthy family . Strand recruits Nick for an escape plot . Travis convinces Moyers ' squad to take him to the hospital to check on his friends . While en route , Moyers encourages Travis to shoot a zombie , but Travis is emotionally unable to pull the trigger . The soldiers stop to assist another squad in a building infested by zombies , and most of those soldiers , including Moyers , are overcome . The few survivors flee and drop off Travis near the Safe Zone . Travis learns that Daniel tortured Adams into revealing what `` Cobalt '' means : in the morning , all civilians will be killed , and the guardsmen will evacuate the city . Griselda dies of septic shock at the hospital ; Liza shoots her brain to prevent reanimation . Daniel visits a nearby sports arena to verify Adams ' story that it was sealed with 2,000 now - zombified civilians inside . 6 6 `` The Good Man '' Stefan Schwartz Robert Kirkman & Dave Erickson October 4 , 2015 ( 2015 - 10 - 04 ) 6.86 The group drives to the National Guard 's headquarters to rescue Liza , Griselda , and Nick . Adams agrees to be their guide when let go by Travis . The group infiltrates the base after Daniel distracts the guards by leading a horde of walkers from the arena . Travis , Madison , Daniel , and Ofelia go inside , while Alicia and Chris stay behind . Meanwhile , the walkers breach the perimeter defenses and swarm the base . Travis ' group reach the holding cells and set the detainees free before reuniting with Nick , Liza , and Strand . They try to escape through the medical ward , where they discover Dr. Exner has euthanized all of the patients . Dr. Exner tells them of an escape route before presumably committing suicide . Before they can escape , the group encounters Adams , who shoots Ofelia in the arm . Enraged , Travis brutally beats Adams and leaves him for dead . Strand leads the group to his oceanside mansion , where he reveals to Nick that he owns a yacht which he plans to escape on , called the Abigail . On the beach , Liza reveals to Madison that she had been bitten during the escape . Liza pleads with Madison and Travis to euthanize her before she turns . Travis promises to protect Chris before shooting Liza ."
+   ],
+   "model_answer": "The group adjusts to military rule in the Safe Zone, while Madison discovers soldiers have killed civilians outside the fence."
+  },
+  {
+   "id": "0e04b5309dcb8c7e",
+   "kind": "answer",
+   "question": "positive and negative impacts of internal migration in china",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Economic growth and urbanization; rural labor shortages, overcrowding, and inequality."
+  },
+  {
+   "id": "435237b74a56da4d",
+   "kind": "answer",
+   "question": "who's playing the late game on sunday night football",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The Ravens and Bills."
+  },
+  {
+   "id": "e874a45bec59cf88",
+   "kind": "answer",
+   "question": "where did the easter eggs and bunny come from",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Ancient spring customs and German folklore."
+  },
+  {
+   "id": "effee701a35cc2be",
+   "kind": "answer",
+   "question": "who may be affected by monetary penalties imposed by the irs",
+   "gold_answers": [
+    "Taxpayers in the United States"
+   ],
+   "model_answer": "Taxpayers, tax advisers, and people or businesses responsible for tax-related failures."
+  },
+  {
+   "id": "1b3c3e4c01fe793e",
+   "kind": "answer",
+   "question": "when would a post card not be needed",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "When the motherboard has built-in diagnostics or reports POST errors with beeps."
+  },
+  {
+   "id": "a9f612408044429e",
+   "kind": "answer",
+   "question": "where is episode 13 of attack on titan",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Funimation and Crunchyroll"
+  },
+  {
+   "id": "68b9461f22ebf308",
+   "kind": "answer",
+   "question": "when are centrally acting skeletal muscle relaxants used",
+   "gold_answers": [
+    "to alleviate musculoskeletal pain and spasms and to reduce spasticity in a variety of neurological conditions",
+    "to alleviate musculoskeletal pain and spasms",
+    "to reduce spasticity in a variety of neurological conditions"
+   ],
+   "model_answer": "Short-term treatment of acute painful muscle spasms."
+  },
+  {
+   "id": "667a8f57a9d5d992",
+   "kind": "answer",
+   "question": "british forces retreated when they saw how strong american defenses were",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "d19cc8f331c67ca6",
+   "kind": "answer",
+   "question": "how has australia been influenced by other cultures",
+   "gold_answers": [
+    "The culture of Australia is a Western culture , derived primarily from Britain but also influenced by the unique geography of Australia , the diverse input of Aboriginal , Torres Strait Islander and other Australian people . The British colonization of Australia began in 1788 , and waves of multi-ethnic migration followed . Evidence of a significant Anglo - Celtic heritage includes the predominance of the English language , the existence of a democratic system of government drawing upon the British traditions of Westminster Government , Parliamentarianism and constitutional monarchy , American constitutionalist and federalist traditions , Christianity as the dominant religion , and the popularity of sports originating in ( or influenced by ) the British Isles . Australian culture has diverged significantly since British settlement ."
+   ],
+   "model_answer": "Immigration from around the world has shaped Australia’s food, arts, religion, lifestyle, and sporting tastes."
+  },
+  {
+   "id": "1a65a3a299ab7ee7",
+   "kind": "answer",
+   "question": "fitting of rim on a locomotive wheel is done by",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Heating the rim to expand it and fitting it over the wheel centre."
+  },
+  {
+   "id": "f298258e34c816ca",
+   "kind": "answer",
+   "question": "when did hawaii become a state and why",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "August 21, 1959, after residents voted overwhelmingly for statehood."
+  },
+  {
+   "id": "eefb06f0f233cf8a",
+   "kind": "answer",
+   "question": "where is the crown of thorns starfish located",
+   "gold_answers": [
+    "perhaps most common in Australia, but can occur at tropical and subtropical latitudes from the Red Sea and the east African coast across the Indian Ocean, and across the Pacific Ocean to the west coast of Central America"
+   ],
+   "model_answer": "Across the Indo-Pacific, from the Red Sea and East Africa to the west coast of Central America."
+  },
+  {
+   "id": "37c508782b1967d1",
+   "kind": "answer",
+   "question": "what are three different types of hotel properties",
+   "gold_answers": [
+    "Hotel barge",
+    "Bed and breakfast",
+    "Botel"
+   ],
+   "model_answer": "Boutique hotel, capsule hotel, motel"
+  },
+  {
+   "id": "803bd9f9f2830d04",
+   "kind": "answer",
+   "question": "when did disney art of animation resort open",
+   "gold_answers": [
+    "May 31, 2012"
+   ],
+   "model_answer": "May 1, 2012"
+  },
+  {
+   "id": "08cb8b7b7e3e8c3a",
+   "kind": "answer",
+   "question": "what were the technological developments of the old stone age",
+   "gold_answers": [
+    "Stone tools were made from a variety of stones . For example , flint and chert were shaped ( or chipped ) for use as cutting tools and weapons , while basalt and sandstone were used for ground stone tools , such as quern - stones . Wood , bone , shell , antler ( deer ) and other materials were widely used , as well . During the most recent part of the period , sediments ( such as clay ) were used to make pottery . Agriculture was developed and certain animals were domesticated as well ."
+   ],
+   "model_answer": "From simple pebble and core-and-flake tools to refined hand axes, specialized flake tools, and later microliths."
+  },
+  {
+   "id": "8be9fcaeed6040f8",
+   "kind": "answer",
+   "question": "what purpose did seasonal monsoon winds have on trade",
+   "gold_answers": [
+    "enabled European empire expansion into the Americas and trade routes to become established across the Atlantic and Pacific oceans"
+   ],
+   "model_answer": "They helped sailing ships cross oceans and establish trade routes."
+  },
+  {
+   "id": "66aa7890dba595bd",
+   "kind": "answer",
+   "question": "what are the importance of rigor mortis in meat processing",
+   "gold_answers": [
+    "rigor mortis and its resolution partially determine the tenderness of meat",
+    "tenderness of meat"
+   ],
+   "model_answer": "It helps determine meat tenderness and guides measures to prevent cold shortening."
+  },
+  {
+   "id": "d947c9ff26213d0f",
+   "kind": "answer",
+   "question": "where was the music video what ifs filmed",
+   "gold_answers": [
+    "along the Californian coast at The Inn at Newport Ranch, a resort and cattle ranch to the north of San Francisco"
+   ],
+   "model_answer": "The Inn at Newport Ranch on the California coast."
+  },
+  {
+   "id": "a036092740f3695f",
+   "kind": "answer",
+   "question": "where have the good guys gone to hideaway",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Camp Motega"
+  },
+  {
+   "id": "6f22e66c363d0e3b",
+   "kind": "answer",
+   "question": "how many credits for a bachelor's degree in science",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "360 credits (honours); 300 credits (ordinary)"
+  },
+  {
+   "id": "b7c60e29bba4bfcc",
+   "kind": "answer",
+   "question": "which action shortens the fibers of the serratus anterior",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Scapular protraction (pulling the scapula forward)"
+  },
+  {
+   "id": "418ee96f54892807",
+   "kind": "answer",
+   "question": "where was uncle tom's cabin first published",
+   "gold_answers": [
+    "in The National Era, an abolitionist periodical, starting with the June 5, 1851, issue",
+    "The National Era",
+    "The National Era, an abolitionist periodical"
+   ],
+   "model_answer": "The National Era newspaper"
+  },
+  {
+   "id": "136d1fcbf1e83d73",
+   "kind": "answer",
+   "question": "what kind of fish live in the salton sea",
+   "gold_answers": [
+    "tilapia"
+   ],
+   "model_answer": "Introduced tilapia and desert pupfish."
+  },
+  {
+   "id": "56e575b730f67c6d",
+   "kind": "answer",
+   "question": "what does cost of goods sold consist of",
+   "gold_answers": [
+    "Costs are associated with particular goods using one of the several formulas , including specific identification , first - in first - out ( FIFO ) , or average cost . Costs include all costs of purchase , costs of conversion and other costs that are incurred in bringing the inventories to their present location and condition . Costs of goods made by the businesses include material , labor , and allocated overhead . The costs of those goods which are not yet sold are deferred as costs of inventory until the inventory is sold or written down in value ."
+   ],
+   "model_answer": "Product or raw material costs, freight, storage, direct labor, and production overhead."
+  },
+  {
+   "id": "400d806adc786417",
+   "kind": "answer",
+   "question": "why is the new disney movie called coco",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "It’s named after Miguel’s great-grandmother, Coco."
+  },
+  {
+   "id": "9dd4fe20f15ab1fe",
+   "kind": "answer",
+   "question": "what is the share of agriculture in indian economy",
+   "gold_answers": [
+    "17.32%",
+    "23%"
+   ],
+   "model_answer": "About 18% of India’s GDP."
+  },
+  {
+   "id": "bf26f125666336aa",
+   "kind": "answer",
+   "question": "when would a post card not be needed",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "When the motherboard has a built-in diagnostic display or reports POST errors with audible beeps."
+  },
+  {
+   "id": "2319ed7e777b7c22",
+   "kind": "answer",
+   "question": "what causes cracked skin at the corners of your mouth",
+   "gold_answers": [
+    "infection",
+    "irritation",
+    "allergies"
+   ],
+   "model_answer": "Infection, irritation, allergies, or iron and B-vitamin deficiencies."
+  },
+  {
+   "id": "2696227cc6324051",
+   "kind": "answer",
+   "question": "what were the technological developments of the old stone age",
+   "gold_answers": [
+    "Stone tools were made from a variety of stones . For example , flint and chert were shaped ( or chipped ) for use as cutting tools and weapons , while basalt and sandstone were used for ground stone tools , such as quern - stones . Wood , bone , shell , antler ( deer ) and other materials were widely used , as well . During the most recent part of the period , sediments ( such as clay ) were used to make pottery . Agriculture was developed and certain animals were domesticated as well ."
+   ],
+   "model_answer": "Oldowan and Acheulean stone-tool technologies (Modes 1 and 2)."
+  },
+  {
+   "id": "b5b18c9d3dbc691e",
+   "kind": "answer",
+   "question": "superhero names that start with the letter b",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Bantam, Beast, Bishop, Battlestar, Baymax, Black Knight"
+  },
+  {
+   "id": "117fcdec346fe622",
+   "kind": "answer",
+   "question": "what does the transfer case control module do",
+   "gold_answers": [
+    "transfers power from the transmission to the front and rear axles by means of drive shafts",
+    "transfers power from the transmission to the front and rear axles",
+    "synchronizes the difference between the rotation of the front and rear wheels",
+    "may contain one or more sets of low range gears for off-road use"
+   ],
+   "model_answer": "Controls electronic shifting of the transfer case."
+  },
+  {
+   "id": "e64f6499eda7d170",
+   "kind": "answer",
+   "question": "what are the kinds of dance and its definition",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Dance is purposeful, rhythmic human movement with aesthetic or symbolic value; its main kinds are performance and participatory/social dance."
+  },
+  {
+   "id": "6101680a321d572e",
+   "kind": "answer",
+   "question": "an example of a post and lintel system is",
+   "gold_answers": [
+    "A noteworthy example of a trabeated system is in Volubilis , from the Roman era , where one side of the Decumanus Maximus is lined with trabeated elements , while the opposite side of the roadway is designed in arched style ."
+   ],
+   "model_answer": "Stonehenge"
+  },
+  {
+   "id": "b274c7c1aea8425c",
+   "kind": "answer",
+   "question": "what happens to the rbc in acute hemolytic reaction",
+   "gold_answers": [
+    "rapid destruction of the donor red blood cells by host antibodies"
+   ],
+   "model_answer": "They are rapidly destroyed by the recipient’s antibodies."
+  },
+  {
+   "id": "15dbde5496155611",
+   "kind": "answer",
+   "question": "who was the cop in dumb and dumber",
+   "gold_answers": [
+    "Year Film Role Notes Dumb and Dumber State Trooper Down Periscope E.T. `` Sonar '' Lovacelli RocketMan Fred Z . Randall Wag the Dog Pet Wrangler Space Ghost Coast to Coast Himself 1 episode 1998 Half Baked Kenny Davis There 's Something About Mary Hitchhiker ( uncredited ) Dog Park Callum Ned 's Newt Newton ( voice ) Mr. Headmistress Tucker 1999 Superstar Slater 2000 The Whole Nine Yards Special Agent Steve Hanson Big Money Hustlas Officer Harry Cox Becoming Dick Richard Breggs Freddy Got Fingered Darren Gary & Mike Mike Bonner ( voice ) 2002 Back by Midnight Sheriff Hubbard Sorority Boys Doofer / Roberta 2003 Family Tree Jake Kart Racer Zee 2005 Lucky 13 Bleckman Because of Winn - Dixie Policeman Robots Lugnut ( voice ) 2006 Employee of the Month Russell Porpis - Gunders Surf School Rip Ergo Proxy Head Dog Cop ( voice ) 1 episode 2007 Meet the Robinsons Carl ( voice ) The Dukes of Hazzard : The Beginning Sheriff Rosco P. Coltrane 2008 Bachelor Party 2 : The Last Temptation Derek Madagascar : Escape 2 Africa Giraffe ( voice ) 2009 Fudgy Wudgy Fudge Face Elmore P. Fudge My Life in Ruins Big Al Sawchuck 2009 The Haunted World of El Superbeasto Gerard the Exterminator ( voice ) 2011 Spooky Buddies Warwick the Warlock Lloyd the Conqueror Vulcan Dahmer Vs. Gacy God Dan Vs . Hiram Episode : Technology Robot Chicken Professor Cornelius Q. Quibblefingers ( voice ) 1 episode ; also writes 4 episodes 2012 The High Fructose Adventures of Annoying Orange Apple ( voice ) Robot and Monster Monster ( voice ) Main Role 2014 Back in the Day Skunk 2015 Jake and the Never Land Pirates Captain Frost ( voice ) Penn Zero : Part - Time Hero Helper Hue ( voice ) 2016 Sausage Party Ketchup Bottle / Drug Dealer / Baba Ganoush ( voice ) Skylanders Academy Hugo ( voice ) 2017 - present Puppy Dog Pals Bob ( voice ) Also show creator"
+   ],
+   "model_answer": "Harland Williams (State Trooper)"
+  },
+  {
+   "id": "e6974794faf86962",
+   "kind": "answer",
+   "question": "when was the worlds first laptop computer introduced in the market and by whom",
+   "gold_answers": [
+    "The portable micro computer the “Portal\" of the French company R2E Micral CCMC officially appeared in September 1980",
+    "September 1980",
+    "R2E Micral CCMC"
+   ],
+   "model_answer": "1983, by GRiD Systems (the GRiD Compass 1101)."
+  },
+  {
+   "id": "26eddaea5ff8f6b0",
+   "kind": "answer",
+   "question": "what was going on in 1954 in the us",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "McCarthy hearings, Brown v. Board, polio vaccinations, and U.S. involvement in Cold War conflicts."
+  },
+  {
+   "id": "105ce467f96c2829",
+   "kind": "answer",
+   "question": "discuss the impact of devaluation on foreign exchange reserve",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Devaluation can reduce the value of foreign-exchange reserves and cause losses."
+  },
+  {
+   "id": "47bae8f9d2e05fbd",
+   "kind": "answer",
+   "question": "the south west wind blows across nigeria between",
+   "gold_answers": [
+    "arrives in central Nigeria in July",
+    "till September"
+   ],
+   "model_answer": "April and October"
+  },
+  {
+   "id": "3b342eaa93d04d63",
+   "kind": "answer",
+   "question": "best song in dark side of the moon",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "“Time”"
+  },
+  {
+   "id": "7c10ba0c8eaff5dd",
+   "kind": "answer",
+   "question": "what were the technological developments of the old stone age",
+   "gold_answers": [
+    "Stone tools were made from a variety of stones . For example , flint and chert were shaped ( or chipped ) for use as cutting tools and weapons , while basalt and sandstone were used for ground stone tools , such as quern - stones . Wood , bone , shell , antler ( deer ) and other materials were widely used , as well . During the most recent part of the period , sediments ( such as clay ) were used to make pottery . Agriculture was developed and certain animals were domesticated as well ."
+   ],
+   "model_answer": "Stone tools, fire, clothing, and shelters."
+  },
+  {
+   "id": "d1be838803ddcb69",
+   "kind": "answer",
+   "question": "global trade during the ming dynasty of china",
+   "gold_answers": [
+    "The Ming dynasty also engaged in a thriving trade with both Europe and Japan . The amount of silver flowing into the Ming dynasty was estimated by Joseph Needham at 300 million taels , which is equivalent to more than 190 billion dollars in today 's money . In addition to silver , the Ming also imported many European firearms , in order to ensure the modernness of their weapons ."
+   ],
+   "model_answer": "A major maritime trading network, especially during Zheng He’s voyages."
+  },
+  {
+   "id": "081842c4c469d23b",
+   "kind": "answer",
+   "question": "when is marvel's most wanted coming out",
+   "gold_answers": [
+    "In August 2015 , the series was reinvented as Most Wanted and received a pilot order from ABC . The cast was filled out in early 2016 , and production was completed by late March . The episode was co-produced by ABC Studios and Marvel Television . In May 2016 , ABC announced that it would not pick up the pilot to series , and would look to develop other series with Marvel instead ."
+   ],
+   "model_answer": "It was never released; ABC did not pick it up."
+  },
+  {
+   "id": "91b3c1216c0f471e",
+   "kind": "answer",
+   "question": "what platform is sandringham line at flinders st",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Platform 8."
+  },
+  {
+   "id": "e09f26fe6e3c3540",
+   "kind": "answer",
+   "question": "describe the impact of the crisis at little rock on the american government",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "It compelled the federal government to enforce school desegregation."
+  },
+  {
+   "id": "0cf94fe99eac6a9b",
+   "kind": "answer",
+   "question": "meaning of joy to the world by three dog night",
+   "gold_answers": [
+    "When Hoyt Axton performed the song to the group , two of the three main vocalists -- Danny Hutton and Cory Wells -- rejected the song , but Chuck Negron felt that the band needed a `` silly song '' to help bring the band back together as a working unit . Negron also felt that the song `` was n't even close to our best record , but it might have been one of our most honest . ''",
+    "The song , which has been described by members of Three Dog Night as a `` kid 's song '' and a `` silly song '' , topped the main singles charts in North America , was certified gold by the RIAA , and has since been covered by multiple artists ."
+   ],
+   "model_answer": "A playful, largely nonsensical song."
+  }
+ ],
+ "evidence": []
+}

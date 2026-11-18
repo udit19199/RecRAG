@@ -1,0 +1,366 @@
+[
+  {
+    "id": "69579fbb797e7ba6",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.3",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  },
+  {
+    "id": "a89703c9cde2031c",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 1,
+            "quote": "Ketamine is primarily used as an anesthetic during surgical procedures"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 1,
+            "quote": "in recent years it's been used as a remedy for treatment-resistant depression"
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "If it worked with the fish, they might then be able to figure out how the diet effects behavior"
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "If it worked with the fish, they might then be able to figure out how the diet effects behavior and improve the effectiveness of the treatment for humans"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "503e80c6f5eca3ec",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "the multibillion-dollar collapse of FTX, the crypto exchange he founded and led"
+          },
+          {
+            "item": 9,
+            "quote": "tying FTX CEO Sam Bankman-Fried"
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "is on trial for seven counts of wire fraud and conspiracy"
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 1,
+            "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto"
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 1,
+            "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry"
+          }
+        ]
+      },
+      {
+        "fact": "2.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.3",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  },
+  {
+    "id": "ee126e372d0c3809",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "But I think we’ll look back and see this past year is a really important turning point for the role that social media plays in our lives"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "she adds"
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.2",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  },
+  {
+    "id": "b5d1b3e75cd280ae",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "Canelo has inched closer to Floyd’s billionaire status over the years"
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years"
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.2",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  },
+  {
+    "id": "fcc2526004feb27a",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.3",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.4",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.5",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.3",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  }
+]

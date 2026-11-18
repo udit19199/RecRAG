@@ -1,0 +1,454 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "4895f45c9a5e1540",
+   "gold": [
+    {
+     "sentence": "The Night of the Arts (Finnish: \"Taiteiden yö\" , Swedish: \"Konstens natt\" ) is an annual event held in several major cities in Finland, in late August.",
+     "facts": {
+      "0.0": "The Night of the Arts is an annual event.",
+      "0.1": "The Night of the Arts is known in Finnish as 'Taiteiden yö'.",
+      "0.2": "The Night of the Arts is known in Swedish as 'Konstens natt'.",
+      "0.3": "The Night of the Arts is held in several major cities in Finland.",
+      "0.4": "The Night of the Arts is held in late August."
+     }
+    },
+    {
+     "sentence": " It is one of many White Night festivals held worldwide.",
+     "facts": {
+      "1.0": "The Night of the Arts is one of many White Night festivals.",
+      "1.1": "White Night festivals are held worldwide."
+     }
+    },
+    {
+     "sentence": "The White Nights are a kind of all-night arts festival held in many cities in the summer.",
+     "facts": {
+      "2.0": "The White Nights are a kind of all-night arts festival.",
+      "2.1": "The White Nights festival is held in many cities.",
+      "2.2": "The White Nights festival is held in the summer."
+     }
+    },
+    {
+     "sentence": " The \"white nights\" is the name given in areas of high latitude to the weeks around the summer solstice in June during which sunsets are late, sunrises are early and darkness is never complete.",
+     "facts": {
+      "3.0": "'White nights' is the name given in areas of high latitude to the weeks around the summer solstice in June.",
+      "3.1": "During white nights, sunsets are late.",
+      "3.2": "During white nights, sunrises are early.",
+      "3.3": "During white nights, darkness is never complete."
+     }
+    }
+   ],
+   "items": [
+    "Night of the Arts\nThe Night of the Arts (Finnish: \"Taiteiden yö\" , Swedish: \"Konstens natt\" ) is an annual event held in several major cities in Finland, in late August.\n\n It is one of many White Night festivals held worldwide.",
+    "Joulupöytä\nJoulupöytä (translated \"Yule table\") is the traditional assortment of foods served at Christmas in Finland, similar to the Swedish julbord.\n\n It contains many different dishes, most of them typical for the season.\n\n The main dish is usually a large Christmas ham, which is eaten with mustard or bread along with the other dishes.\n\n Fish is also served (often lutefisk and gravlax), and the ham is served with \"laatikko\"s, casseroles made with swede, potato and carrot, occasionally liver.\n\n The traditional Christmas beverage is either alcoholic or non-alcoholic mulled wine (\"glögi\" in Finnish).",
+    "Green Man Festival\nGreen Man is an independent music and arts festival held annually in mid-August in the Brecon Beacons, Wales since 2003.\n\n It has evolved into a 20,000 capacity 4-day event, showcasing predominantly live music (in particular alternative, indie, rock, folk, dance and americana), with additional events showcasing literature, film, comedy, theatre and poetry.\n\n 2015 saw 1,500 multi-arts acts perform across 17 stages.\n\n The festival site is divided into 10 areas, each offering a unique festival experience.\n\n Ceilidhs, all-night bonfires and secret gigs all add to the festival's unique identity.",
+    "Satumaa\n\"Satumaa\" (roughly, in English \"The Fabled Land\" or \"The Fairytale Land\") is the quintessential Finnish tango.\n\n It was written by Unto Mononen, and published in 1955.\n\n The most famous recording is probably the one made by Reijo Taipale in 1962.\n\n The lyrics tell a story of a distant land beyond the sea — a happy paradise — however, the narrator can only reach it in his thoughts.\n\n The song has been recorded countless times, mainly by male Finnish tango singers.",
+    "Artscape (festival)\nArtscape is an annual art festival held in the Mount Royal neighborhood of Baltimore, Maryland in July.\n\n Since its first annual event in 1982, it has become the largest free arts festival in America.\n\n It has boasted acts such as Ray Charles, Aretha Franklin, and Matisyahu in the past, attracting over 350,000 people from the city, and surrounding areas.\n\n Film programming during Artscape is provided by Maryland Film Festival.\n\n There are artists in a variety of visual and performing media.\n\n Events are free and open to the public.",
+    "White Night festivals\nThe White Nights are a kind of all-night arts festival held in many cities in the summer.\n\n The original festival is the White Nights Festival held in Saint Petersburg, Russia.\n\n The \"white nights\" is the name given in areas of high latitude to the weeks around the summer solstice in June during which sunsets are late, sunrises are early and darkness is never complete.\n\n In Saint Petersburg, the Sun does not set until after 10 p.m., and the twilight lasts almost all night.",
+    "Great Northern Arts Festival\nThe Great Northern Arts Festival is held each year in Inuvik, Northwest Territories.\n\n Lasting approximately ten days, it is an annual event held each summer.\n\n It was established in 1989 by Sharlene Alexander and Sue Rose.\n\n While the festival's mandate is to serve Northern artists and craftspeople, artists from around the world also attend.\n\n The festival is designed as a venue for artists to see each other's work and to experiment with new applications.\n\n It includes arts of all types, such as fiber art and Music of the Northwest Territories.\n\n Artists partake in demonstrations, masterclasses, seminars, and workshops.\n\n The festival's gallery offers pieces for sale.\n\n There are cultural presentations each evening which include concerts, dance, fashion, music, and storytelling.\n\n Media coverage brings festival highlights to viewing audiences.",
+    "Graph query row:\nconnected_entities: ['Night of the Arts', 'White Night festivals']\nrelationships: ['PART_OF']",
+    "Flip Animation Festival\nFLIP is an animation festival primarily hosted by the Light House Media Centre in Wolverhampton, UK.\n\n It is one of two festivals hosted by Light House, the other of which is Deaffest.\n\n Official literature for the festival says that FLIP occurs annually at the beginning of November and attracts submissions from more than 30 countries world wide.\n\n As well as screening the selected open submissions, FLIP also consists of special screenings, talks from professionals within the animation world, workshops, industry panels, portfolio reviews and competitions.\n\n The festival was set up, managed and programmed by Peter McLuskie between 2004 and 2011.\n\n It grew out of the 'Animation Forum', also based at Light House and which was later rebranded as Animation Forum West Midlands and found a home at Birmingham City University.\n\n In 2009 the festival was awarded a Black Country Tourism Award for Event of the Year.",
+    "Tanglewood Music and Arts Festival\nTanglewood Music and Arts Festival is an annual two-day music, comedy and arts event held within the grounds of Narrow Water Castle, County Down, Northern Ireland.\n\n The festival, founded in 2011, has attracted significant attention both within the local area and around Northern Ireland with buses coming from as far as Belfast to the event.\n\n For the 2011 and 2012 festivals Tanglewood was held on one day; however for 2013 it has expanded into a two-day camping festival."
+   ]
+  },
+  {
+   "id": "6cc1ddc93d9aa33a",
+   "gold": [
+    {
+     "sentence": "\"Grow Some Funk of Your Own\" is a song by Elton John.",
+     "facts": {
+      "0.0": "'Grow Some Funk of Your Own' is a song by Elton John."
+     }
+    },
+    {
+     "sentence": "Sir Elton Hercules John, (born Reginald Kenneth Dwight; 25 March 1947), is an English singer, pianist, and composer.",
+     "facts": {
+      "1.0": "Sir Elton Hercules John was born Reginald Kenneth Dwight.",
+      "1.1": "Sir Elton Hercules John was born on 25 March 1947.",
+      "1.2": "Sir Elton Hercules John is an English singer.",
+      "1.3": "Sir Elton Hercules John is an English pianist.",
+      "1.4": "Sir Elton Hercules John is an English composer."
+     }
+    },
+    {
+     "sentence": " John owned Watford Football Club from 1976 to 1987, and 1997 to 2002.",
+     "facts": {
+      "2.0": "Elton John owned Watford Football Club from 1976 to 1987.",
+      "2.1": "Elton John owned Watford Football Club from 1997 to 2002."
+     }
+    }
+   ],
+   "items": [
+    "Afrodiziak\nAfrodiziak was a British singing group composed of Caron Wheeler, Claudia Fontaine, and later Naomi Thompson, that was active in the 1980s.\n\n As a duo, Wheeler and Fontaine were best known for performing backing vocals on The Jam's final single \"Beat Surrender\" in 1982 (with whom they also performed on their final tour) and Elvis Costello's 1983 album \"Punch the Clock\", especially its single, the international hit \"Everyday I Write the Book\".\n\n After the addition of a third member, Naomi Thompson, they went on to sing for acts such as Heaven 17 and Howard Jones.\n\n Afrodiziak performed backing vocals on the hit single Free Nelson Mandela, including the a cappella intro, staging it at The Tube (Channel4) in March 1984.\n\n Heaven 17's 1984 album, \"How Men Are\", featured them prominently, especially on the singles \"Sunset Now\" and \"And That's No Lie\".",
+    "Blitz Kids\nThe Blitz Kids were a group of young people who frequented the weekly Blitz club-night in Covent Garden, London in 1979-80, and are credited with launching the New Romantic subcultural movement.\n\n It was Andrew Czezowski (Ex manager of The Damned) and Susan Carrington who went on to start The Roxy club with Barry Jones that introduced Steve Strange and Rusty Egan to the Blitz in Covent Garden, which started the New Romantic Movement.\n\n Among the many attendees were Rusty Egan, Steve Strange, Boy George, Marilyn, Alice Temple, Perri Lister, Princess Julia, Philip Sallon, Carl Teper and Martin Degville (later to be the frontman of Tony James' Sigue Sigue Sputnik).\n\n Crucially, the club lay between two art colleges (St Martin's School and Central School) and became a testbed for student fashion designers who set London ablaze during the 1980s.",
+    "Grow Some Funk of Your Own\n\"Grow Some Funk of Your Own\" is a song by Elton John.\n\n It was released as a single in 1976 and comes from his album \"Rock of the Westies\".\n\n It shared its A-side status with \"I Feel Like a Bullet (In the Gun of Robert Ford)\".\n\n The song is considered to be one of John's heavier rock songs.\n\n The song went to #14 on the \"Billboard\" Hot 100, but in Britain broke a five-year run of successful singles by failing to reach the Top 50 despite extensive radio play.\n\n Although the singles chart listed only \"Funk\" and not \"Bullet\", the latter song was given equal billing in later \"Billboard\" singles chart books.",
+    "The Happenings\nThe Happenings are a pop music group that originated in the 1960s.\n\n Members of the original group, created in the spring of 1961 and initially called \"The Four Grads\" because all had just graduated from high school in Paterson, New Jersey, were Bob Miranda, David Libert, Tom Giuliano, and Ralph DiVito.\n\n In 1968 DiVito was replaced by Bernie LaPorta and Lenny Conforti also joined to play drums in the touring band.\n\n Both LaPorta and Conforti took a hiatus from the northern New Jersey band, The Emerald Experience, to play and tour with The Happenings.\n\n That lineup performed mostly at colleges and universities until 1970, when Libert left the band to manage other groups, including George Clinton and Parliament-Funkadelic, Living Colour, Brian Auger, Vanilla Fudge, The Runaways (Cherie Currie, Joan Jett, Lita Ford), Mother's Finest, Alice Cooper and Evelyn \"Champagne\" King.",
+    "Firm Biz\n\"Firm Biz\" is the first single by the Hip hop supergroup The Firm from their singular collaborative LP \"The Album\".\n\n The song was produced by L.E.S, who based the song's track on a sample of Teena Marie's 1981 hit \"Square Biz\".\n\n \"Firm Biz\" also features a chorus performed by former En Vogue singer Dawn Robinson, reworked from the \"Square Biz\" chorus.\n\n AZ raps the first verse of the song, Nas the second, and Foxy Brown the third and final verse.\n\n The song never reached any US chart positions, but was a UK Top 20 hit in 1997.\n\n A remix of the song was released, featuring a verse from Half-A-Mill and a chorus by Mary J. Blige.\n\n The word \"feds\" is censored in the explicit version, in verse 2, performed by Nas, when he says \"Never that though Black .4-4's for feds\".",
+    "A Boy in a Man's World\nA Boy in a Man's World is the second studio album by Mucky Pup.\n\n The album was recorded at Nevessa Productions and released in 1989 through Torrid Records and Roadrunner Records.\n\n The album features a re-recorded version of \"U-Stink-But-I-♥-U,\" which the band had previously won a Bloom County songwriting contest with.\n\n The band would also shoot their first music video for this song.\n\n The album also features \"Batman\", a song based on an urban legend that also contains a snippet of the title theme to the 1966 \"Batman\" TV.",
+    "Elton John\nHe has also composed music, produced records, and has occasionally acted in films.\n\n John owned Watford Football Club from 1976 to 1987, and 1997 to 2002.\n\n He is an honorary Life President of the club, and in 2014 had a stand named after him at the club's home stadium.",
+    "Knitting Factory Records\nKnitting Factory Records is an independent American music label that is notable for promoting a variety of artists, including the music of deceased Nigerian political activist Fela Kuti.\n\n The label promotes a variety of music artists including Ages and Ages, Ash Black Bufflo, Cuong Vu, Graham Haynes, Femi Kuti, Gary Lucas, Lumerians, Thomas Chapin, Patrolled By Radar, Joe Morris, Rachid Taha, Seun Kuti, and Shilpa Ray and her Happy Hookers.",
+    "South Liverpool F.C.\nSouth Liverpool Football Club is a football club based in Liverpool, England, founded as a phoenix club of a club of the same name.\n\n They are currently members of the West Cheshire League Division One and play at Jericho Lane in Otterspool.\n\n The club's colours are white shirts, black shorts and red socks.",
+    "Go Too\nGo Too (1977) is Go's third album.\n\n Go was founded by Stomu Yamashta, Steve Winwood and Michael Shrieve.\n\n For this album, Jess Roden replaced Steve Winwood (who had left the group).\n\n The style of the music became modified accordingly.\n\n In addition, Linda Lewis was hired as a singer.\n\n Together with Paul Jackson, Jr. and the orchestra of Martyn Ford the album unified various soundscapes."
+   ]
+  },
+  {
+   "id": "0cf75ab96cff42dc",
+   "gold": [
+    {
+     "sentence": "\"White People Renovating Houses\" is the first episode in the twenty-first season of the American animated television series \"South Park\".",
+     "facts": {
+      "0.0": "'White People Renovating Houses' is the first episode of the twenty-first season of the American animated television series South Park."
+     }
+    },
+    {
+     "sentence": " It is the 278th episode of the series overall, and first aired on Comedy Central in the United States on September 13, 2017.",
+     "facts": {
+      "1.0": "'White People Renovating Houses' is the 278th episode of South Park overall.",
+      "1.1": "'White People Renovating Houses' first aired on Comedy Central in the United States.",
+      "1.2": "'White People Renovating Houses' first aired on September 13, 2017."
+     }
+    },
+    {
+     "sentence": "The twenty-first season of the American animated sitcom \"South Park\" premiered on Comedy Central on September 13, 2017, and will contain ten episodes.",
+     "facts": {
+      "2.0": "The twenty-first season of South Park is an American animated sitcom.",
+      "2.1": "The twenty-first season of South Park premiered on Comedy Central on September 13, 2017.",
+      "2.2": "The twenty-first season of South Park will contain ten episodes."
+     }
+    }
+   ],
+   "items": [
+    "Something Wall-Mart This Way Comes\n\"Something Wall-Mart This Way Comes\" is the ninth episode of the eighth season of the American animated television series \"South Park\", and the 120th episode of the series overall.\n\n It originally aired on Comedy Central in the United States on November 3, 2004.\n\n In the episode, a Wall-Mart is built in South Park, and the people start to get addicted to shopping from it, due to its irresistibly attractive bargains, thus leading many businesses in South Park to close down.\n\n The four boys have to fight against Wall-Mart and to find a way to stop it from taking over the entire town.",
+    "The Return of Chef\n\"The Return of Chef\" is the first episode in the tenth season of the American animated television series \"South Park\".\n\n The 140th episode of the series overall, it first aired on Comedy Central in the United States on March 22, 2006.\n\n The episode was the first after the departure of actor Isaac Hayes, who voiced the character Chef.\n\n Hayes, a Scientologist, left after a falling-out with the creators over their treatment of Scientology in the previous season's episode \"Trapped in the Closet\".\n\n Scientology has been accused of using brainwashing techniques, and the episode portrays Chef as having been brainwashed.",
+    "White People Renovating Houses\n\"White People Renovating Houses\" is the first episode in the twenty-first season of the American animated television series \"South Park\".\n\n It is the 278th episode of the series overall, and first aired on Comedy Central in the United States on September 13, 2017.",
+    "Put It Down (South Park)\n\"Put It Down\" is the second episode in the twenty-first season of the American animated television series \"South Park\".\n\n The 279th episode of the series overall, it first aired on Comedy Central in the United States on September 20, 2017.",
+    "The Squirt and the Whale\n\"The Squirt and the Whale\" is the nineteenth episode of \"The Simpsons\" twenty-first season.\n\n The 460th episode of the series overall, it originally aired on the Fox network in the United States on April 25, 2010.\n\n In the episode, the Simpson family attempt to save a beached whale that washed up onshore, only for it to die.",
+    "Chickenlover\n\"Chickenlover\" is the fourth episode in the second season of the American animated television series \"South Park\".\n\n The 16th episode of the series overall, it originally aired on Comedy Central in the United States on May 27, 1998.\n\n The episode was written by series co-creators Trey Parker and Matt Stone, along with David R. Goodman, and directed by Parker.\n\n In the episode, Officer Barbrady resigns as South Park's only police officer because of his illiteracy.\n\n Anarchy ensues, just as chickens are mysteriously being molested across South Park.\n\n Barbrady enlists the help of the boys to learn to read and discover who is molesting the chickens.\n\n Cartman, meanwhile, masquerades as a police officer.",
+    "South Park (season 21)\nThe twenty-first season of the American animated sitcom \"South Park\" premiered on Comedy Central on September 13, 2017, and will contain ten episodes.",
+    "South Park (season 10)\nThe tenth season of \"South Park\", an American animated television series created by Trey Parker and Matt Stone, began airing on March 22, 2006.\n\n The tenth season concluded after 14 episodes on November 15, 2006.\n\n This is the first season in which Kenny does not die and the last season featuring Isaac Hayes (the voice of Chef) as Hayes quit the show following the backlash behind season nine's \"Trapped in the Closet\" episode.\n\n This season also had a minor controversy when the Halloween episode \"Hell on Earth 2006\" depicted \"The Crocodile Hunter's\" Steve Irwin with a stingray lodged in his chest getting thrown out of Satan's Halloween party for not being in costume.\n\n Episode 2 in this season is the last one with the Braniff Airlines logo.\n\n All the episodes in this season were written and directed by Trey Parker.",
+    "Holiday Special (South Park)\n\"Holiday Special\" is the third episode in the twenty-first season of the American animated television series \"South Park\".\n\n The 280th episode of the series overall, it first aired on Comedy Central in the United States on September 27, 2017.",
+    "Moho House\n\"Moho House\" is the twenty first episode of the twenty-eighth season of the animated television series \"The Simpsons\", and the 617th episode of the series overall.\n\n It aired in the United States on Fox on May 7, 2017."
+   ]
+  },
+  {
+   "id": "361eb2e5df97a43f",
+   "gold": [
+    {
+     "sentence": "Sir Ridley Scott (born 30 November 1937) is an English film director and producer.",
+     "facts": {
+      "0.0": "Sir Ridley Scott was born on 30 November 1937.",
+      "0.1": "Sir Ridley Scott is English.",
+      "0.2": "Sir Ridley Scott is a film director.",
+      "0.3": "Sir Ridley Scott is a film producer."
+     }
+    },
+    {
+     "sentence": " Following his commercial breakthrough with the science-fiction horror film \"Alien\" (1979), his best known works include the neo-noir dystopian science fiction film \"Blade Runner\" (1982), historical drama and Best Picture Oscar winner \"Gladiator\" (2000), and science fiction film \"The Martian\" (2015).",
+     "facts": {
+      "1.0": "Ridley Scott had a commercial breakthrough with the science-fiction horror film Alien, released in 1979.",
+      "1.1": "Ridley Scott's best known works include the neo-noir dystopian science fiction film Blade Runner, released in 1982.",
+      "1.2": "Ridley Scott's best known works include the historical drama Gladiator, released in 2000.",
+      "1.3": "Gladiator won the Best Picture Oscar.",
+      "1.4": "Ridley Scott's best known works include the science fiction film The Martian, released in 2015."
+     }
+    },
+    {
+     "sentence": " A collaborator of D.W. Griffith, he appeared in \"The Birth of a Nation\" (1915) and \"Intolerance\" (1916) before giving up acting in 1917 to concentrate on work behind the camera, with Griffith and Joseph Henabery as his mentors.",
+     "facts": {
+      "2.0": "Ridley Scott was a collaborator of D.W. Griffith.",
+      "2.1": "Ridley Scott appeared in The Birth of a Nation, released in 1915.",
+      "2.2": "Ridley Scott appeared in Intolerance, released in 1916.",
+      "2.3": "Ridley Scott gave up acting in 1917.",
+      "2.4": "Ridley Scott gave up acting to concentrate on work behind the camera.",
+      "2.5": "Griffith was a mentor of Ridley Scott.",
+      "2.6": "Joseph Henabery was a mentor of Ridley Scott."
+     }
+    }
+   ],
+   "items": [
+    "Shirley Clarke\nShirley Clarke (October 2, 1919 – September 23, 1997) was an American experimental and independent filmmaker.\n\n She was also a director and editor to many famous works.",
+    "Steve McQueen (director)\nSteven Rodney \"Steve\" McQueen (born 9 October 1969) is an English film director, producer, screenwriter, and video artist.\n\n For his 2013 film, \"12 Years a Slave\", a historical drama adaptation of an 1853 slave narrative memoir, he won an Academy Award, BAFTA Award for Best Film, and Golden Globe Award for Best Motion Picture – Drama, as a producer, and he also received the award for Best Director from the New York Film Critics Circle.\n\n McQueen is the first black filmmaker to win an Academy Award for Best Picture.\n\n McQueen is known for his collaborations with actor Michael Fassbender, who has starred in all three of McQueen's feature films as of 2014.\n\n McQueen's other feature films are \"Hunger\" (2008), a historical drama about the 1981 Irish hunger strike, and \"Shame\" (2011), a drama about an executive struggling with sex addiction.",
+    "Christopher Nolan\nChristopher Edward Nolan ( ; born 30 July 1970) is an English-American film director, producer, and screenwriter.\n\n He is one of the highest-grossing directors in history, and among the most successful and acclaimed filmmakers of the 21st century.",
+    "Ridley Scott\nSir Ridley Scott (born 30 November 1937) is an English film director and producer.\n\n Following his commercial breakthrough with the science-fiction horror film \"Alien\" (1979), his best known works include the neo-noir dystopian science fiction film \"Blade Runner\" (1982), historical drama and Best Picture Oscar winner \"Gladiator\" (2000), and science fiction film \"The Martian\" (2015).",
+    "Rob Bottin\nRobin R. Bottin (born April 1, 1959) is an American special make-up effects creator.\n\n Known for his collaborations with directors John Carpenter, Paul Verhoeven and David Fincher, Bottin worked with Carpenter on both \"The Fog\" and \"The Thing\", with Verhoeven on \"RoboCop\", \"Total Recall\" and \"Basic Instinct\", and with Fincher on \"Se7en\" and \"Fight Club\".\n\n His other film credits include \"Legend\", \"Innerspace\" and \"Fear and Loathing in Las Vegas\".",
+    "Rick Carter\nRick Carter (born 1950) is an American production designer and art director.\n\n He is known for his work in the film \"Forrest Gump\", which earned him an Oscar nomination, as well as numerous nominations of other awards for his work in \"Amistad\" and \"A.I. Artificial Intelligence\".\n\n Other films include \"Cast Away\", \"War of the Worlds\", \"What Lies Beneath\", \"Jurassic Park\", \"Avatar\", and \"Back to the Future Part II\" and \"Part III\".\n\n Many of the films that he has worked on are directed by Steven Spielberg or Robert Zemeckis.\n\n For his part in the Art Direction of \"Avatar\", he was awarded the Academy Award for Best Production Design alongside Robert Stromberg and Kim Sinclair.\n\n In 2013, Carter won his second Academy Award, for production design on Steven Spielberg's biopic, \"Lincoln\".",
+    "Elmer Clifton\nElmer Clifton (March 14, 1890 – October 15, 1949) was an American writer, director and actor from the early silent days.\n\n A collaborator of D.W. Griffith, he appeared in \"The Birth of a Nation\" (1915) and \"Intolerance\" (1916) before giving up acting in 1917 to concentrate on work behind the camera, with Griffith and Joseph Henabery as his mentors.\n\n His first feature-length solo effort as a director was \"The Flame of Youth\" with Jack Mulhall.",
+    "Peter Jackson\nSir Peter Robert Jackson {'1': \", '2': \", '3': \", '4': \"} (born 31 October 1961) is a New Zealand film director, screenwriter and film producer.\n\n He is best known as the director, writer, and producer of \"The Lord of the Rings\" trilogy (2001–03) and \"The Hobbit\" trilogy (2012–14), both of which are adapted from the novels of the same name by J. R. R. Tolkien.\n\n Other notable films include the critically lauded drama \"Heavenly Creatures\" (1994), the mockumentary \"Forgotten Silver\" (1995), the horror comedy \"The Frighteners\" (1996), the epic monster remake film \"King Kong\" (2005), and the supernatural drama film \"The Lovely Bones\" (2009).\n\n He also produced \"District 9\" (2009), \"The Adventures of Tintin: The Secret of the Unicorn\" (2011), and the documentary \"West of Memphis\" (2012).",
+    "Scott Free Productions\nScott Free Productions is a British film and television production company founded by filmmakers and brothers Ridley Scott and Tony Scott.\n\n They formed the feature film development company Percy Main Productions in 1980, naming the company after the English village Percy Main, where their father grew up.\n\n The company was renamed to Scott Free Productions in 1995.\n\n Scott Free has produced films ranging from the 2000 Hollywood blockbuster \"Gladiator\" (2000) to \"smaller pictures\" like \"Cracks\" (2009).\n\n Between productions of \"White Squall\" (1996) and \"G.I. Jane\" (1997), Ridley Scott reorganized the company.",
+    "Dan Ouellette\nGiger and Beksinski, and he has been featured in magazines internationally.\n\n David Bowie commented while looking at Dan's art that he has noticed a strong influence of science fiction on contemporary art.\n\n Giger saw a different aspect, saying simply \"Very bony.\"\n\n He grew to adore the cinema of Fellini and later to marvel at Lynch's \"Eraserhead\".\n\n Rather than pursue a formal education in the fine arts he chose to study the craft of film making and after college he became a production designer working on feature films in New York City starting with his work as a production designer for Hal Hartley in 1990 with Trust and then, in 1992, with Simple Men."
+   ]
+  },
+  {
+   "id": "dd250f5af93ae7be",
+   "gold": [
+    {
+     "sentence": "The presidency of Ronald Reagan began on January 20, 1981, when Ronald Reagan was inaugurated as President of the United States, and ended on January 20, 1989.",
+     "facts": {
+      "0.0": "The presidency of Ronald Reagan began on January 20, 1981",
+      "0.1": "Ronald Reagan was inaugurated as President of the United States on January 20, 1981",
+      "0.2": "The presidency of Ronald Reagan ended on January 20, 1989"
+     }
+    },
+    {
+     "sentence": "George Herbert Walker Bush (born June 12, 1924) is an American politician who was the 41st President of the United States from 1989 to 1993 and the 43rd Vice President of the United States from 1981 to 1989.",
+     "facts": {
+      "1.0": "George Herbert Walker Bush was born June 12, 1924",
+      "1.1": "George Herbert Walker Bush is an American politician",
+      "1.2": "George Herbert Walker Bush was the 41st President of the United States from 1989 to 1993",
+      "1.3": "George Herbert Walker Bush was the 43rd Vice President of the United States from 1981 to 1989"
+     }
+    }
+   ],
+   "items": [
+    "Otto Reich\nOtto Juan Reich (born October 16, 1945), is an American former senior official in the administrations of Presidents Ronald Reagan, George H. W. Bush, and George W. Bush.\n\n Among other positions held, he has been the President's Special Envoy for the Western Hemisphere; Assistant Secretary of State for Western Hemisphere Affairs; United States Ambassador to Venezuela; and Assistant Administrator of the US Agency for International Development, a recess appointment.\n\n In 2003, Bush appointed him US Special Envoy to the Western Hemisphere.\n\n Since leaving the White House in 2004, he has headed his own international consulting firm, Otto Reich Associates, LLC, based in Washington, D.C..",
+    "Gerald Ford\nGerald Rudolph Ford Jr. (born Leslie Lynch King Jr.; July 14, 1913 – December 26, 2006) was an American politician who served as the 38th President of the United States from August 1974 to January 1977, following the resignation of Richard Nixon.\n\n Prior to this he served eight months as the 40th Vice President of the United States, following the resignation of Spiro Agnew.\n\n He was the first person appointed to the vice presidency under the terms of the 25th Amendment, and consequently the only person to have served as both Vice President and President of the United States without being elected to executive office.\n\n Before his appointment to the vice presidency, Ford served 25 years as U.S. Representative from Michigan's 5th congressional district, the final nine of them as the House Minority Leader.",
+    "Elliott Abrams\nElliott Abrams (born January 24, 1948) is a former American diplomat, lawyer and political scientist who served in foreign policy positions for Presidents Ronald Reagan and George W. Bush.\n\n Abrams was convicted of withholding information from Congress about the Iran–Contra affair while serving under Reagan, but was pardoned by President George H. W. Bush.",
+    "Reagan Democrat\nA Reagan Democrat is a traditionally Democratic voter in the United States, referring especially to white working-class Rust Belt residents, who defected from their party to support Republican President Ronald Reagan in either or both of the 1980 and 1984 elections as well as Republican Presidents George H. W. Bush in the 1988 election and George W. Bush in either or both of the 2000 and 2004 elections.\n\n Part of this group also defected to Donald Trump, the Republican candidate in 2016, who won in Pennsylvania, Ohio, Michigan, Wisconsin, and Iowa, all states that voted for Reagan but went Democratic in 2008 and 2012.",
+    "Ronald Reagan judicial appointment controversies\nDuring President Ronald Reagan's presidency, he nominated at least twelve people for various federal appellate judgeship who were not confirmed.\n\n In some cases, the nominations were not processed by the Democratic-controlled Senate Judiciary Committee before Reagan's presidency ended, while in other cases, nominees were rejected by the Senate Judiciary Committee or even blocked by unfriendly members of the Republican Party.\n\n Three of the nominees were renominated by Reagan's successor, President George H. W. Bush.\n\n Two of the nominees, Ferdinand Francis Fernandez and Guy G. Hurlbutt, were nominated after July 1, 1988, the traditional start date of the unofficial Thurmond Rule during a presidential election year.\n\n Eight of the twelve seats eventually were filled by appointees of President George H. W. Bush.",
+    "William Flynn Martin\nWilliam Flynn Martin (born October 4, 1950) is an American energy economist, educator and international diplomat.\n\n Martin served as Special Assistant to President Reagan for National Security Affairs, Executive Secretary of the National Security Council in the West Wing of the White House and Deputy Secretary of the Department of Energy during the Ronald Reagan administration.\n\n He was President of the Council of the University for Peace, appointed to the Council by Secretary General of the United Nations Kofi Annan and served as the Executive Director of the Republican Platform Committee during the re-election bid of George H.W. Bush.\n\n He has held senior appointments and advisory positions under several Presidents including: Ronald Reagan, George H.W. Bush and George W. Bush.",
+    "Presidency of Ronald Reagan\nThe presidency of Ronald Reagan began on January 20, 1981, when Ronald Reagan was inaugurated as President of the United States, and ended on January 20, 1989.\n\n Reagan, a Republican, took office as the 40th United States president following a landslide win over Democratic incumbent President Jimmy Carter in the 1980 presidential election.\n\n Reagan was succeeded by his vice president, George H. W. Bush, who won the 1988 presidential election with Reagan's support.",
+    "First inauguration of Ronald Reagan\nThe first inauguration of Ronald Reagan as the 40th President of the United States was held on Tuesday, January 20, 1981, on the West Front of the United States Capitol in Washington, D.C..\n\n This was the first inauguration to be held on the building's west side.\n\n The inauguration marked the commencement of the first four-year term of Ronald Reagan as President and of George H. W. Bush as Vice President.\n\n Chief Justice Warren E. Burger administered the presidential oath of office to Reagan, who placed his hand upon a family Bible given to him by his mother, open to .\n\n Associate Justice Potter Stewart administered the vice presidential oath to Bush.",
+    "George H. W. Bush\nGeorge Herbert Walker Bush (born June 12, 1924) is an American politician who was the 41st President of the United States from 1989 to 1993 and the 43rd Vice President of the United States from 1981 to 1989.\n\n A member of the Republican Party, he was previously a congressman, ambassador, and Director of Central Intelligence.\n\n He is the oldest living former President and Vice President.\n\n Previously known as simply \"George Bush\", since 2001, Bush has often been referred to as \"George H. W. Bush\", \"Bush 41\", \"Bush the Elder\", or \"George Bush Senior\" to distinguish him from his eldest son, George W. Bush, the 43rd President of the United States.",
+    "Second inauguration of Ronald Reagan\nThe second inauguration of Ronald Reagan as President of the United States was held privately on Sunday, January 20, 1985 in the Grand Foyer of the White House, and publicly the following day, January 21, 1985 at the United States Capitol in Washington, D.C. The inauguration marked the commencement of the second four-year term of Ronald Reagan as President and of George H. W. Bush as Vice President."
+   ]
+  },
+  {
+   "id": "cd0b9865917ee2ca",
+   "gold": [
+    {
+     "sentence": "Stephanocereus is genus of cactus from Brazil, related to \"Arrojadoa\".",
+     "facts": {
+      "0.0": "Stephanocereus is a genus of cactus.",
+      "0.1": "Stephanocereus is from Brazil.",
+      "0.2": "Stephanocereus is related to \"Arrojadoa\"."
+     }
+    },
+    {
+     "sentence": " They are mostly liana-forming plants of the Old World tropics, ranging from South China, Indonesia, Malaysia and the Philippines; westward to Madagascar (two species) and the Seychelles (one); southward to Australia (three) and New Caledonia (one); and northward to India (one) and Sri Lanka (one).",
+     "facts": {
+      "1.0": "The plants in this sentence are mostly liana-forming.",
+      "1.1": "The plants in this sentence are found in the Old World tropics.",
+      "1.2": "The plants in this sentence range from South China, Indonesia, Malaysia and the Philippines.",
+      "1.3": "The plants in this sentence range westward to Madagascar, with two species there.",
+      "1.4": "The plants in this sentence range westward to the Seychelles, with one species there.",
+      "1.5": "The plants in this sentence range southward to Australia, with three species there.",
+      "1.6": "The plants in this sentence range southward to New Caledonia, with one species there.",
+      "1.7": "The plants in this sentence range northward to India, with one species there.",
+      "1.8": "The plants in this sentence range northward to Sri Lanka, with one species there."
+     }
+    }
+   ],
+   "items": [
+    "Stephanocereus\nStephanocereus is genus of cactus from Brazil, related to \"Arrojadoa\".\n\n This genus was monotypic until \"Pilosocereus luetzelburgii\" was included here, resulting in the combination \"Stephanocereus luetzelburgii\".",
+    "Nepenthes\nNepenthes ( ), also known as tropical pitcher plants, is a genus of carnivorous plants in the monotypic family Nepenthaceae.\n\n The genus comprises roughly 150 species, and numerous natural and many cultivated hybrids.\n\n They are mostly liana-forming plants of the Old World tropics, ranging from South China, Indonesia, Malaysia and the Philippines; westward to Madagascar (two species) and the Seychelles (one); southward to Australia (three) and New Caledonia (one); and northward to India (one) and Sri Lanka (one).\n\n The greatest diversity occurs on Borneo, Sumatra, and the Philippines, with many endemic species.\n\n Many are plants of hot, humid, lowland areas, but the majority are tropical montane plants, receiving warm days but cool to cold, humid nights year round.\n\n A few are considered tropical alpine, with cool days and nights near freezing.\n\n The name \"monkey cups\" refers to the fact that monkeys have been observed drinking rainwater from these plants.",
+    "Nepenthes veitchii\nNepenthes veitchii ( or ; after James Veitch, nurseryman of the Veitch Nurseries), or Veitch's Pitcher-Plant, is a \"Nepenthes\" species from the island of Borneo.\n\n The plant is widespread in north-western Borneo and can also be found in parts of Kalimantan.\n\n \"Nepenthes veitchii\" usually grows as an epiphyte, though the form from Bario seems to be strictly terrestrial and has not been observed to climb trees.",
+    "Robert Cantley\nRobert Cantley is a conservationist and Managing Director of Borneo Exotics, a Sri Lankan-based plant nursery specialising in tissue-cultured and seed-grown \"Nepenthes\" species and hybrids.\n\n Cantley has contributed to a number of papers on \"Nepenthes\".\n\n The species \"Nepenthes robcantleyi\", the natural hybrid \"Nepenthes × cantleyi\" and the cultivar \"Nepenthes\" 'Cantley's Red' are named after him.",
+    "Nepenthes tenax\nNepenthes tenax ( ; from Latin: \"tenax\" \"tenacious\") is a lowland species of tropical pitcher plant native to northern Queensland, Australia.\n\n It is the third \"Nepenthes\" species recorded from the continent and its second endemic species.\n\n \"Nepenthes tenax\" is closely related to the two other Australian \"Nepenthes\" species: \"N. mirabilis\" and \"N. rowaniae\".",
+    "Man-eating tree\nMan-eating tree can refer to any of the various legendary carnivorous plants large enough to kill and consume a person or other large animal.\n\n The carnivorous plant with the largest known traps is probably Nepenthes rajah, which produces pitchers up to 41 cm tall with a volume up to 3.5 l .\n\n The pitcher of this species are designed to trap arthropods.\n\n However, the same bait may also attract rodents like the summit rat (\"Rattus baluensis\") and the Mountain treeshrew (\"Tupaia montana\").\n\n Only very rarely will the rodents fall into the large pitchers of this species.\n\n Other large carnivorous plants that have similar properties include Nepenthes robcantleyi and Nepenthes attenboroughi.",
+    "Nepenthes chaniana\nNepenthes chaniana ( ; after Datuk Chan Chew Lun, Managing Director of Natural History Publications (Borneo)) is a tropical pitcher plant species belonging to the genus \"Nepenthes\".\n\n It is characterised by a dense indumentum of long, white hairs.\n\n Pitchers are cylindrical and mostly white to yellow in colouration.\n\n \"Nepenthes chaniana\" belongs to the loosely defined \"\"N. maxima\" complex\", which also includes, among other species, \"N. boschiana\", \"N. epiphytica\", \"N. eymae\", \"N. faizaliana\", \"N. fusca\", \"N. klossii\", \"N. maxima\", \"N. platychila\", \"N. stenophylla\", and \"N. vogelii\".",
+    "Nepenthes × kinabaluensis\nNepenthes × kinabaluensis , or the Kinabalu Pitcher-Plant, is the natural hybrid between \"N. rajah\" and \"N. villosa\".\n\n It was first collected near Kambarangoh on Mount Kinabalu, Borneo by Lilian Gibbs in 1910 and later mentioned by John Muirhead Macfarlane as \"\"Nepenthes\" sp.\"\n\n in 1914.\n\n Although Macfarlane did not formally name the plant, he noted that \"[a]ll available morphological details suggest that this is a hybrid between \"N. villosa\" and \"N. rajah\"\".\n\n It was finally described in 1976 by Shigeo Kurata as \"N. × kinabaluensis\".\n\n The name was first published in \"Nepenthes of Mount Kinabalu\", but was a \"nomen nudum\" at the time as it lacked an adequate description and information on the type specimen.\n\n The name was subsequently published validly by Kurata in 1984.",
+    "Nepenthes boschiana\nNepenthes boschiana ( ; after Johannes van den Bosch), or Bosch's Pitcher-Plant, is a tropical pitcher plant endemic to Borneo.\n\n It is most closely allied to \"N. faizaliana\".\n\n \"Nepenthes borneensis\" is considered a synonym of this species.\n\n \"Nepenthes boschiana\" has no known natural hybrids.\n\n No valid forms or varieties have been described.\n\n \"Nepenthes boschiana\" belongs to the loosely defined \"\"N. maxima\" complex\", which also includes, among other species, \"N. chaniana\", \"N. epiphytica\", \"N. eymae\", \"N. faizaliana\", \"N. fusca\", \"N. klossii\", \"N. maxima\", \"N. platychila\", \"N. stenophylla\", and \"N. vogelii\".",
+    "Caryophyllales\nCaryophyllales ( ) is an order of flowering plants that includes the cacti, carnations, amaranths, ice plants, beets, and many carnivorous plants.\n\n Many members are succulent, having fleshy stems or leaves."
+   ]
+  },
+  {
+   "id": "a57ff8745f31c25c",
+   "gold": [
+    {
+     "sentence": "Václav Havel (] ; 5 October 193618 December 2011) was a Czech writer and former dissident, who served as the 1st President of the Czech Republic from 1993 to 2003.",
+     "facts": {
+      "0.0": "Václav Havel was born on 5 October 1936.",
+      "0.1": "Václav Havel died on 18 December 2011.",
+      "0.2": "Václav Havel was a Czech writer.",
+      "0.3": "Václav Havel was a former dissident.",
+      "0.4": "Václav Havel served as the 1st President of the Czech Republic.",
+      "0.5": "Václav Havel served as President of the Czech Republic from 1993 to 2003."
+     }
+    },
+    {
+     "sentence": "Penelope Fitzgerald (17 December 1916 – 28 April 2000) was an English Booker Prize-winning novelist, poet, essayist and biographer.",
+     "facts": {
+      "1.0": "Penelope Fitzgerald was born on 17 December 1916.",
+      "1.1": "Penelope Fitzgerald died on 28 April 2000.",
+      "1.2": "Penelope Fitzgerald was English.",
+      "1.3": "Penelope Fitzgerald was a Booker Prize-winning novelist.",
+      "1.4": "Penelope Fitzgerald was a poet.",
+      "1.5": "Penelope Fitzgerald was an essayist.",
+      "1.6": "Penelope Fitzgerald was a biographer."
+     }
+    }
+   ],
+   "items": [
+    "Aphra Behn\nAphra Behn ( ; 14 December 1640?\n\n (baptismal date)–16 April 1689) was a British playwright, poet, translator and fiction writer from the Restoration era.\n\n As one of the first English women to earn her living by her writing, she broke cultural barriers and served as a literary role model for later generations of women authors.\n\n Rising from obscurity, she came to the notice of Charles II, who employed her as a spy in Antwerp.\n\n Upon her return to London and a probable",
+    "Letters to Olga\nLetters to Olga (\"Czech:Dopisy Olze\") is a book of compiled letters written by Czech playwright, dissident, and future president, Václav Havel to his wife Olga Havlová during his nearly four-year imprisonment from May 1979 to March 1983.\n\n (Havel was released when he came down with a high fever and received a medical discharge).\n\n Havel was imprisoned by the communist regime of then Czechoslovakia for being one of the leaders of The Committee for the Defense of the Unjustly Prosecuted (VONS) - most of whom had been signatories of the human rights document Charter 77.",
+    "Václav Havel Tribute Concert\nTribute to Václav Havel (Czech: Pocta Václavu Havlovi) was an event held in memory of Václav Havel, the last Czechoslovak and the first Czech President, writer, playwright and human rights activist.\n\n The concert took place in Lucerna Music Bar in Prague on 23 December 2011.\n\n Václav Havel died on Sunday 18 December 2011 at 10:15 a.m.",
+    "Graph query row:\nperson: Václav Havel\nbirth_date: 5 October 1936",
+    "Edward Fitzgerald (barrister)\nEdward Hamilton Fitzgerald CBE QC is an English barrister who specialises in criminal law, public law, and international human rights law.\n\n His work against the death penalty has led him to represent despised criminals such as: Myra Hindley, a perpetrator in the Moors murders; Mary Bell, a child killer; Maxine Carr; Jon Venables, one of James Bulger's killers; various IRA prisoners; and Abu Hamza, the controversial Muslim cleric.\n\n Fitzgerald is currently the joint head of Doughty Street Chambers along with Geoffrey Robertson QC.\n\n Fitzgerald has been called to the Bar in a number of jurisdictions including Belize, Grenada and St Vincent, and has been granted rights of audience to appear in cases in Hong Kong, Trinidad and Tobago, St Lucia, Bahamas, and the British Virgin Islands.\n\n He is also a trustee and patron of a number of charities including The Death Penalty Project and The Longford Trust.",
+    "Václav Havel\nVáclav Havel (] ; 5 October 193618 December 2011) was a Czech writer and former dissident, who served as the 1st President of the Czech Republic from 1993 to 2003.\n\n Prior to that he also served as the last president of Czechoslovakia from 1989 until its dissolution in 1992.\n\n As a writer of Czech literature, he is known for his plays, essays, and memoirs.",
+    "Václav Havel Human Rights Prize\nThe Václav Havel Human Rights Prize is an annual €60,000 award established in 2013 by the Parliamentary Assembly of the Council of Europe, the Václav Havel Library and the Charta 77 Foundation, to honour \"outstanding\" civil society action in defence of human rights, in Europe and beyond.",
+    "Penelope Fitzgerald\nPenelope Fitzgerald (17 December 1916 – 28 April 2000) was an English Booker Prize-winning novelist, poet, essayist and biographer.\n\n In 2008, \"The Times\" included her in a list of \"the 50 greatest British writers since 1945\".\n\n In 2012, \"The Observer\" named her final novel, \"The Blue Flower\" one of \"the ten best historical novels\".",
+    "Czech presidential election, 1993\nThe 1993 Czech presidential election was held on 26 January 1993 to elect the first President of independent Czech Republic.\n\n The first election was done indirectly by the members of the Czech Republic Parliament.\n\n Václav Havel was elected President.\n\n The election was complicated only by attacks of Republicans against Havel and by bomb threat to the Parliament.",
+    "The Pig, or Václav Havel's Hunt for a Pig\nThe Pig, or Václav Havel's Hunt for a Pig is the final work by Václav Havel, co-authored by Vladimír Morávek.\n\n The English translation is by Edward Einhorn .\n\n Originally a short dialogue from 1987 (entitled simply \"The Pig\") and printed in a samizdat, the piece is a comic (and true) story of Václav Havel’s efforts to hold a pig roast for his friends."
+   ]
+  },
+  {
+   "id": "271e777a5f4d9d7b",
+   "gold": [
+    {
+     "sentence": "Electronic Attack Squadron 138 (VAQ-138), also known as the \"Yellow Jackets\", is an expeditionary EA-18G Growler squadron of the United States Navy based at Naval Air Station Whidbey Island, Washington.",
+     "facts": {
+      "0.0": "Electronic Attack Squadron 138 (VAQ-138) is also known as the \"Yellow Jackets\".",
+      "0.1": "Electronic Attack Squadron 138 is an expeditionary EA-18G Growler squadron of the United States Navy.",
+      "0.2": "Electronic Attack Squadron 138 is based at Naval Air Station Whidbey Island, Washington."
+     }
+    },
+    {
+     "sentence": "The Boeing EA-18G Growler is an American carrier-based electronic warfare aircraft, a specialized version of the two-seat F/A-18F Super Hornet.",
+     "facts": {
+      "1.0": "The Boeing EA-18G Growler is an American carrier-based electronic warfare aircraft.",
+      "1.1": "The Boeing EA-18G Growler is a specialized version of the two-seat F/A-18F Super Hornet."
+     }
+    }
+   ],
+   "items": [
+    "No. 82 Wing RAAF\nNo. 82 Wing is the strike and reconnaissance wing of the Royal Australian Air Force (RAAF).\n\n It is headquartered at RAAF Base Amberley, Queensland.\n\n Coming under the control of Air Combat Group, the wing operates F/A-18F Super Hornet multirole fighters and Pilatus PC-9 forward air control aircraft.\n\n Its units include Nos. 1 and 6 Squadrons, operating the Super Hornet, and No. 4 Squadron, operating the PC-9.",
+    "Boeing EA-18G Growler\nThe Boeing EA-18G Growler is an American carrier-based electronic warfare aircraft, a specialized version of the two-seat F/A-18F Super Hornet.\n\n The EA-18G replaced the Northrop Grumman EA-6B Prowlers in service with the United States Navy.\n\n The Growler's electronic warfare capability is primarily provided by Northrop Grumman.\n\n The EA-18G began production in 2007 and entered operational service with the US Navy in late 2009.\n\n Australia has also purchased twelve EA-18Gs, which entered service with the Royal Australian Air Force in 2017.",
+    "Boeing F/A-18E/F Super Hornet\nThe Boeing F/A-18E and F/A-18F Super Hornet are twin-engine carrier-capable multirole fighter aircraft variants based on the McDonnell Douglas F/A-18 Hornet.\n\n The F/A-18E single-seat and F/A-18F tandem-seat variants are larger and more advanced derivatives of the F/A-18C and D Hornet.\n\n The Super Hornet has an internal 20 mm M61 rotary cannon and can carry air-to-air missiles and air-to-surface weapons.\n\n Additional fuel can be carried in up to five external fuel tanks and the aircraft can be configured as an airborne tanker by adding an external air refueling system.",
+    "Type 002 aircraft carrier\nThe Type 002 aircraft carrier is a second generation Chinese aircraft carrier design.\n\n The ship will be the first Chinese aircraft carrier to be equipped with a catapult.\n\n According to the latest report, the construction of this carrier has been rescheduled for a decision on the catapults, where the latest competition results suggested that steam catapults will be used in the Type 002 aircraft carrier.\n\n The addition of aircraft catapult will give China the ability to launch various fixed wing support aircraft like airborne early warning (AEW) and carrier onboard delivery aircraft.\n\n Fighters can also be launched at full combat load and reach its full potential unlike current Type 001 aircraft carriers operated by Chinese navy.",
+    "VFA-2\nStrike Fighter Squadron 2 (VFA-2) also known as the \"Bounty Hunters\" is a United States Navy F/A-18F Super Hornet strike fighter squadron based at Naval Air Station Lemoore, California.\n\n Their tail code is NE and their callsign is \"Bullet\".\n\n They are attached to Carrier Air Wing 2 (CVW-2), a composite unit made up of a wide array of aircraft performing a variety of combat and support missions that deploy aboard the \"Carl Vinson\" .",
+    "VAQ-209\nElectronic Attack Squadron 209 (VAQ-209) is a United States Navy Reserve electronic attack squadron.\n\n Known as the \"Star Warriors\", the squadron flies the EA-18G Growler carrier-based electronic warfare jet aircraft.\n\n Based at Naval Air Station Whidbey Island, WA, it is assigned to the Tactical Support Wing.",
+    "No. 1 Squadron RAAF\nNo. 1 Squadron is a Royal Australian Air Force (RAAF) squadron headquartered at RAAF Base Amberley, Queensland.\n\n Controlled by No. 82 Wing, it is equipped with Boeing F/A-18F Super Hornet multi-role fighters.\n\n The squadron was formed under the Australian Flying Corps in 1916 and saw action in the Sinai and Palestine Campaigns during World War I.\n\n It flew obsolete Royal Aircraft Factory B.E.2s, B.E.12s, Martinsyde G.100s and G.102s, as well as Airco DH.6s, Bristol Scouts and Nieuport 17s, before re-equipping with the R.E.8 in October 1917 and finally the Bristol Fighter in December.\n\n Its commanding officer in 1917–18 was Major Richard Williams, later known as the \"Father of the RAAF\".\n\n Disbanded in 1919, No. 1 Squadron was re-formed on paper as part of the RAAF in 1922, and re-established as an operational unit three years later.",
+    "VAQ-138\nElectronic Attack Squadron 138 (VAQ-138), also known as the \"Yellow Jackets\", is an expeditionary EA-18G Growler squadron of the United States Navy based at Naval Air Station Whidbey Island, Washington.\n\n Their radio callsign is \"RAMPAGE\".",
+    "VAQ-135\nElectronic Attack Squadron 135 (VAQ-135), known as the \"Black Ravens\", is a United States Navy electronic attack squadron that currently operates the EA-18G Growler carrier-based electronic warfare jet aircraft.\n\n The squadron is permanently stationed at Naval Air Station Whidbey Island with a radio callsign of \"\"Thunder\"\".",
+    "VFA-154\nStrike Fighter Squadron 154 (VFA-154), also known as the \"Black Knights\", is a United States Navy strike fighter squadron stationed at Naval Air Station Lemoore.\n\n The Black Knights are an operational fleet squadron flying the F/A-18F Super Hornet.\n\n They are currently attached to Carrier Air Wing Eleven and deployed aboard the aircraft carrier USS \"Nimitz\" .\n\n Their tailcode is NH and their callsign is \"Knight\"."
+   ]
+  },
+  {
+   "id": "c471b5468440331e",
+   "gold": [
+    {
+     "sentence": "John André (2 May 1750 – 2 October 1780) was a British Army officer hanged as a spy by the Continental Army during the American Revolutionary War for assisting Benedict Arnold's attempted surrender of the fort at West Point, New York to the British.",
+     "facts": {
+      "0.0": "John André lived from 2 May 1750 to 2 October 1780.",
+      "0.1": "John André was a British Army officer.",
+      "0.2": "John André was hanged as a spy by the Continental Army during the American Revolutionary War.",
+      "0.3": "John André was hanged for assisting Benedict Arnold's attempted surrender of the fort at West Point, New York, to the British."
+     }
+    },
+    {
+     "sentence": "Benedict Arnold (January 14, 1741 [O.S. January 3, 1740] June 14, 1801) was a general during the American Revolutionary War, who fought for the American Continental Army, and later defected to the British Army.",
+     "facts": {
+      "1.0": "Benedict Arnold lived from January 14, 1741 (Old Style: January 3, 1740) to June 14, 1801.",
+      "1.1": "Benedict Arnold was a general during the American Revolutionary War.",
+      "1.2": "Benedict Arnold fought for the American Continental Army.",
+      "1.3": "Benedict Arnold later defected to the British Army."
+     }
+    }
+   ],
+   "items": [
+    "Siege of Yorktown\nThe Siege of Yorktown, also known as the Battle of Yorktown, the Surrender at Yorktown, German Battle or the Siege of Little York, ending on October 19, 1781, at Yorktown, Virginia, was a decisive victory by a combined force of American Continental Army troops led by General George Washington and French Army troops led by the Comte de Rochambeau over a British Army commanded by British peer and Lieutenant General Charles Cornwallis.\n\n The culmination of the Yorktown campaign, the siege proved to be the last major land battle of the American Revolutionary War in the North American theater, as the surrender by Cornwallis, and the capture of both him and his army, prompted the British government to negotiate an end to the conflict.\n\n The battle boosted faltering American morale and revived French enthusiasm for the war, as well as undermining popular support for the conflict in Great Britain.",
+    "Lewis Nicola\nLewis Nicola (1717 – August 9, 1807) was an Irish-born American military officer, merchant, and writer who held various military and civilian positions throughout his career.\n\n Nicola is most notable for authoring the Newburgh letter, which urged George Washington to assume a royal title.\n\n Born in Dublin, Ireland, Nicola had been an officer in the British Army, serving in Europe before immigrating to the Thirteen Colonies.\n\n Establishing a residence in Philadelphia with his family, Nicola opened a library in 1767 and was active in colonial philosophical organizations.\n\n As a result of his work to establish the American Philosophical Society, he was elected as one of its curators.\n\n When the American Revolution broke out, Nicola offered his services to the colonial government, which eventually appointed him to various positions with local forces.",
+    "List of Continental Army units\nThe Continental Army was the national army of first the Thirteen Colonies, and then the independent United States, during the American Revolutionary War, established by a resolution of the Congress on June 14, 1775, three days before the Battle of Bunker Hill, where it saw its first action under that title.\n\n.\n\n The Continental Congress took a number of steps in the spring of 1775 to create the army in response to the Battles of Lexington and Concord in April and the seizure of Fort Ticonderoga in May.\n\n The units composing the Continental Army changed frequently, especially in the first two years of the war.\n\n From 1777 to the close of the war, the organization of the Continental Army became progressively more systematic and sophisticated.\n\n The Continental Army that served at Yorktown in 1781 bore very little resemblance to the Continental Army that blockaded Boston in 1775.",
+    "Battle of Germantown\nThe Battle of Germantown was a major engagement in the Philadelphia campaign of the American Revolutionary War.\n\n It was fought on October 4, 1777, at Germantown, Pennsylvania, between the British Army led by Sir William Howe, and the American Continental Army, with the 2nd Canadian Regiment, under George Washington.",
+    "John André\nJohn André (2 May 1750 – 2 October 1780) was a British Army officer hanged as a spy by the Continental Army during the American Revolutionary War for assisting Benedict Arnold's attempted surrender of the fort at West Point, New York to the British.",
+    "Benjamin Lincoln\nBenjamin Lincoln (January 24, 1733 (O.S. January 13, 1732) – May 9, 1810) was an American army officer.\n\n He served as a major general in the Continental Army during the American Revolutionary War.\n\n Lincoln is notable for being involved in three major surrenders during the war: his participation in the Battles of Saratoga (sustaining a wound shortly afterward) contributed to John Burgoyne's surrender of a British army, he oversaw the largest American surrender of the war at the 1780 Siege of Charleston, and, as George Washington's second in command, he formally accepted the British surrender at Yorktown.",
+    "Benjamin Logan\nBenjamin Logan (c.1742 – December 11, 1802) was an American pioneer, soldier, and politician from Shelby County, Kentucky.\n\n As colonel of the Kentucky County, Virginia militia during the American Revolutionary War, he was second-in-command of all the militia in Kentucky.\n\n He was also a leader in Kentucky's efforts to become a state.\n\n His brother, John Logan, was the first state treasurer of Kentucky.",
+    "Pulaski's Legion\nPulaski's Legion was raised on March 28, 1778 at Baltimore, Maryland under the command of Kazimierz Pułaski for service with the Continental Army during the American Revolutionary War.\n\n The Legion consisted of one troop of lancers, two troops of dragoons and 200 light infantry soldiers.\n\n It was one of the few cavalry regiments in the American Continental Army.",
+    "1st Virginia State Regiment\nThe 1st Virginia State Regiment was a regiment of Virginia Militia that fought during the American Revolutionary War.\n\n The regiment was authorized by the General Assembly of the Commonwealth of Virginia in December 1776 as a force of regular troops for the Commonwealth's defense.\n\n In 1777, Virginia had difficulty meeting its quota for the regular line of the Continental Army.\n\n As a result, in July 1777 under the command of Colonel George Gibson, the regiment began a march North to temporarily join the Continental Army in the Philadelphia Campaign.\n\n In January 1778, the Virginia General Assembly passed an act directing that the 1st Virginia State Regiment \"now in Continental service, be continued in said service instead of the Ninth Virginia Regiment, made prisoners by the enemy in the Battle of Germantown.\"\n\n The regiment camped at Valley Forge in the winter of 1777-78 and at Middlebrook in the winter of 1778-79 and participated in the Battle of Monmouth.\n\n The regiment remained in the service of the Continental Army until late 1779 when redeployed Virginia.",
+    "Benedict Arnold\nBenedict Arnold (January 14, 1741 [O.S. January 3, 1740] June 14, 1801) was a general during the American Revolutionary War, who fought for the American Continental Army, and later defected to the British Army.\n\n While a general on the American side, he obtained command of the fortifications at West Point, New York (which after 1802 would become the site of the U.S. Military Academy), overlooking the cliffs at the Hudson River (upriver from British-occupied New York City), and planned to surrender them to British forces.\n\n This plan was exposed in September 1780.\n\n He was commissioned into the British Army as a brigadier general."
+   ]
+  },
+  {
+   "id": "6b87b15eec60565b",
+   "gold": [
+    {
+     "sentence": "Park Sung-woong (born January 9, 1973) is a South Korean actor.",
+     "facts": {
+      "0.0": "Park Sung-woong was born on January 9, 1973.",
+      "0.1": "Park Sung-woong is a South Korean actor."
+     }
+    },
+    {
+     "sentence": " Following his acting debut in \"No. 3\" in 1997, Park has starred in several movies and television series, notably as a gangster in \"New World\" (2013) and a serial killer in \"The Deal\" (2015).",
+     "facts": {
+      "1.0": "Park Sung-woong made his acting debut in 'No. 3' in 1997.",
+      "1.1": "Park Sung-woong has starred in several movies and television series.",
+      "1.2": "Park Sung-woong notably starred as a gangster in 'New World' (2013).",
+      "1.3": "Park Sung-woong notably starred as a serial killer in 'The Deal' (2015)."
+     }
+    },
+    {
+     "sentence": "The Deal (; lit.",
+     "facts": {
+      "2.0": "The Deal's literal translation is given in the next sentence, after the 'lit.' marker."
+     }
+    },
+    {
+     "sentence": " \"Murder Request\") is a 2015 South Korean crime thriller film directed by Son Yong-ho.",
+     "facts": {
+      "3.0": "The literal translation of The Deal is 'Murder Request'.",
+      "3.1": "The Deal is a 2015 South Korean crime thriller film.",
+      "3.2": "The Deal was directed by Son Yong-ho."
+     }
+    }
+   ],
+   "items": [
+    "Hidden Identity (TV series)\nHidden Identity () is a 2015 South Korean television series starring Kim Bum, Park Sung-woong, Yoon So-yi and Lee Won-jong.\n\n It aired on tvN from June 16 to August 4, 2015 on Mondays and Tuesdays at 23:00 for 16 episodes.",
+    "A Violent Prosecutor\nA Violent Prosecutor is a 2016 South Korean crime film directed by Lee Il-hyung, produced by Guk Su Ran and starring Hwang Jung-min, Kang Dong-won, Lee Sung-min and Park Sung-woong.\n\n It was released in South Korea on February 3, 2016 by Showbox.",
+    "The Swindlers (2017 film)\nThe Swindlers is an upcoming South Korean crime drama film directed by Jang Chang-won.\n\n The film stars Hyun Bin, Yoo Ji-tae, Bae Seong-woo, Park Sung-woong, Nana and Ahn Se-ha.",
+    "The Boys Who Cried Wolf\nThe Boys Who Cried Wolf (), also known as The Shepherd, is a 2015 South Korean crime thriller drama film.\n\n Written and directed by Kim Jin-hwang in his first feature-length for his Korean Academy of Film Arts (KAFA)'s final year undergraduate film project, it depicts how a former stage actor becomes involved in a murder case.",
+    "Deep Trap\nDeep Trap () (previously known as Exchange) is a 2015 South Korean crime thriller film starring Ma Dong-seok, Jo Han-sun and Kim Min-kyung, and directed by Kwon Hyung-jin.\n\n Based on an actual SNS crime, it depicts the terror experienced by a married couple while on a trip to an isolated island.\n\n It won Best Film Award in the Orient Express section at the Fantasporto in 2016.",
+    "A Company Man\nA Company Man () is a 2012 South Korean action thriller film starring So Ji-sub, Lee Mi-yeon, Kwak Do-won and Kim Dong-jun.\n\n It is about a hitman who find himself targeted by his ex-employers after he falls in love with a single mother and quits his job.",
+    "The Deal (2015 film)\nThe Deal (; lit.\n\n \"Murder Request\") is a 2015 South Korean crime thriller film directed by Son Yong-ho.",
+    "Park Sung-woong\nPark Sung-woong (born January 9, 1973) is a South Korean actor.\n\n Following his acting debut in \"No. 3\" in 1997, Park has starred in several movies and television series, notably as a gangster in \"New World\" (2013) and a serial killer in \"The Deal\" (2015).",
+    "Office (2015 South Korean film)\nOffice (오피스 ) is 2015 South Korean slasher-thriller film directed by Hong Won-chan and starring Go Ah-sung and Park Sung-woong.\n\n It is about a detective trying to figure out why a mild-mannered man has killed his family and is targeting his co-workers.\n\n The film premiered at the Midnight Screenings section of the 2015 Cannes Film Festival.",
+    "Fatal Intuition\nFatal Intuition (; lit.\n\n \"It's Him\") is a 2015 South Korean crime thriller film written and directed by Yun Jun-hyeong."
+   ]
+  },
+  {
+   "id": "288720ab4bbf3912",
+   "gold": [
+    {
+     "sentence": "August or Auguste Brancart (21 July 1851 - 1894?)",
+     "facts": {
+      "0.0": "August Brancart is also known as Auguste Brancart.",
+      "0.1": "August Brancart was born on 21 July 1851.",
+      "0.2": "The end date given for August Brancart is 1894, with a question mark."
+     }
+    },
+    {
+     "sentence": " He also published work of the Decadent movement such as \"Monsieur Vénus\" by Rachilde.",
+     "facts": {
+      "1.0": "Brancart published work of the Decadent movement.",
+      "1.1": "Brancart published \"Monsieur Vénus\" by Rachilde.",
+      "1.2": "\"Monsieur Vénus\" by Rachilde is an example of Decadent movement work."
+     }
+    },
+    {
+     "sentence": "The Decadent Movement was a late 19th-century artistic and literary movement, centered in Western Europe, that followed an aesthetic ideology of excess and artificiality.",
+     "facts": {
+      "2.0": "The Decadent Movement was an artistic and literary movement.",
+      "2.1": "The Decadent Movement was a late 19th-century movement.",
+      "2.2": "The Decadent Movement was centered in Western Europe.",
+      "2.3": "The Decadent Movement followed an aesthetic ideology of excess.",
+      "2.4": "The Decadent Movement followed an aesthetic ideology of artificiality."
+     }
+    }
+   ],
+   "items": [
+    "Karl Wilhelm Friedrich Schlegel\nKarl Wilhelm Friedrich (after 1814: von) Schlegel (10 March 1772 – 12 January 1829), usually cited as Friedrich Schlegel, was a German poet, literary critic, philosopher, philologist and Indologist.\n\n With his older brother, August Wilhelm Schlegel, he was one of the main figures of the Jena romantics.\n\n He was a zealous promoter of the Romantic movement and inspired Samuel Taylor Coleridge, Adam Mickiewicz and Kazimierz Brodziński.\n\n Schlegel was a pioneer in Indo-European studies, comparative linguistics, morphological typology, and was the first to notice what became known as Grimm's law.",
+    "Hermann Brunn\nKarl Hermann Brunn (1 August 1862 – 20 September 1939) was a German mathematician, known for his work in convex geometry (see Brunn–Minkowski inequality) and in knot theory.\n\n Brunnian links are named after him, as his 1892 article \"Über Verkettung\" included examples of such links.",
+    "Albert Camus\nAlbert Camus (] ; 7 November 1913 – 4 January 1960) was a French philosopher, author, and journalist.\n\n His views contributed to the rise of the philosophy known as absurdism.\n\n He wrote in his essay \"The Rebel\" that his whole life was devoted to opposing the philosophy of nihilism while still delving deeply into individual freedom.\n\n He won the Nobel Prize in Literature in 1957.",
+    "Decadent movement\nThe Decadent Movement was a late 19th-century artistic and literary movement, centered in Western Europe, that followed an aesthetic ideology of excess and artificiality.\n\n The visual artist Félicien Rops's body of work and Joris-Karl Huysmans's novel \"Against Nature\" (1884) are considered the prime examples of the decadent movement.\n\n It first flourished in France and then spread throughout Europe and to the United States.\n\n The movement was characterized by self-disgust, sickness at the world, general skepticism, delight in perversion and employment of crude humor and a belief in the superiority of human creativity over logic and the natural world.",
+    "The Rebel (book)\nThe Rebel (French: \"L'Homme révolté\" ) is a 1951 book-length essay by Albert Camus, which treats both the metaphysical and the historical development of rebellion and revolution in societies, especially Western Europe.\n\n Camus relates writers and artists as diverse as Epicurus and Lucretius, Marquis de Sade, Georg Wilhelm Friedrich Hegel, Fyodor Dostoyevsky, Friedrich Nietzsche, Max Stirner, André Breton, and others in an integrated, historical portrait of man in revolt.\n\n Examining both rebellion and revolt, which may be seen as the same phenomenon in personal and social frames, Camus examines several 'countercultural' figures and movements from the history of Western thought and art, noting the importance of each in the overall development of revolutionary thought and philosophy.",
+    "Herbert Lottman\nHerbert Lottman (August 16, 1927, Brooklyn - August 27, 2014, Paris) was an American author who specialized in writing biographies on French subjects.\n\n An influential biographer, he published 17 biographies, 15 of which were related to French culture, commerce, or politics; including works on Albert Camus, Colette, Gustave Flaubert, Henri Philippe Pétain, Jules Verne, and the Rothschild banking family of France.\n\n He wrote that, just before dying, Albert Camus was pledged to marry.\n\n Camus's estate tried to block his book, partly because of this controversial statement.",
+    "Ebba Witt-Brattström\nEbba Witt-Brattström (born 1953) is a Swedish scholar in comparative literature.\n\n She is Professor of Literature and head of department at Södertörn University outside Stockholm, and a well-known feminist.\n\n In the 1970s she was a member of the feminist organisation Grupp 8, and in 2005 she was one of the founders of the feminist political organisation and party Feministiskt Initiativ, although she later distanced herself from the organisation and criticized its alleged strong left-wing tendencies.",
+    "Auguste Brancart\nAugust or Auguste Brancart (21 July 1851 - 1894?)\n\n was a Belgian publisher of pornographic literature, credited with the first publication of \"My Secret Life\".\n\n He published translations of English pornography into French and vice versa for English publishers such as Edward Avery.\n\n He also published work of the Decadent movement such as \"Monsieur Vénus\" by Rachilde.",
+    "Marcel J. Melançon\nMarcel J. Mélançon is a Canadian philosopher and scientist.\n\n He was born in Saint-Barnabé, Quebec, in 1938, and is mostly known for his book on the French philosopher Albert Camus \"Albert Camus, An Analysis of his thought\" (Albert Camus.\n\n Analyse de sa pensée).\n\n He has mostly worked together with the biologist Richard D. Lambert.",
+    "The Exception and the Rule\nThe Exception and the Rule (in German Die Ausnahme und die Regel) is a short play by German playwright Bertolt Brecht and is one of several \"Lehrstücke\" (Teaching plays) he wrote around 1929/30.\n\n The objective of Brecht's Lehrstücke was that they be taken on tour and performed in schools or in factories to educate the masses about socialist politics."
+   ]
+  }
+ ]
+}

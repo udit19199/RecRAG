@@ -1,0 +1,497 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "3cd07debc016e42f",
+   "gold": [
+    {
+     "sentence": "The Dundee Canal was an industrial canal in Clifton and Passaic in Passaic County, New Jersey.",
+     "facts": {
+      "0.0": "The Dundee Canal was an industrial canal.",
+      "0.1": "The Dundee Canal was in Clifton and Passaic.",
+      "0.2": "Clifton and Passaic are in Passaic County, New Jersey."
+     }
+    },
+    {
+     "sentence": " It was built between 1858 and 1861 and ran parallel to the Passaic River.",
+     "facts": {
+      "1.0": "The Dundee Canal was built between 1858 and 1861.",
+      "1.1": "The Dundee Canal ran parallel to the Passaic River."
+     }
+    },
+    {
+     "sentence": " It runs parallel to the coast, and is separated from the Atlantic Ocean by barrier beaches, including Palm Beach Island.",
+     "facts": {
+      "2.0": "It runs parallel to the coast.",
+      "2.1": "It is separated from the Atlantic Ocean by barrier beaches.",
+      "2.2": "The barrier beaches include Palm Beach Island."
+     }
+    },
+    {
+     "sentence": " The lagoon is connected to the Atlantic Ocean by two permanent, man-made inlets.",
+     "facts": {
+      "3.0": "The lagoon is connected to the Atlantic Ocean.",
+      "3.1": "The lagoon is connected to the Atlantic Ocean by two inlets.",
+      "3.2": "The two inlets are permanent.",
+      "3.3": "The two inlets are man-made."
+     }
+    }
+   ],
+   "items": [
+    "Brunswick–Altamaha canal\nThe Brunswick–Altamaha Canal was a 12-mile-long canal built to connect the Altamaha River to the city of Brunswick, Georgia at the Turtle River to transport goods from Brunswick's port to areas farther north and inland.\n\n It included locks on both ends of the canal.\n\n The canal was originally proposed in 1798 and after two failed charters (1826 and 1830), construction was started in 1836 by Thomas Butler King.\n\n The project was estimated to cost $450,000.\n\n The canal was finished and opened in 1854; however, by that time the canal was obsolete because of new railroads.\n\n The canal was closed by 1860.\n\n The Columbian mammoth was discovered during the construction of the canal.",
+    "Raritan Water Power Canal\nThe Raritan Water Power Canal in Raritan, New Jersey was a three-mile long water power canal built during the early 1840s to power industries.\n\n The canal has been determined to be eligible for the National Register.\n\n The canal is included in Duke Island Park, as part of the Somerset County Park System.",
+    "Lake Worth Inlet\nThe Palm Beach Inlet, also known as the Lake Worth Inlet is an artificial cut through a barrier island connecting the northern part of the Lake Worth Lagoon in Palm Beach County, Florida with the Atlantic Ocean.\n\n It is bordered by the town of Palm Beach on the south, and by the town of Palm Beach Shores to the north.\n\n The inlet is also the entrance channel for the Port of Palm Beach.\n\n Its coordinates are .",
+    "Lake Osborne\nLake Osborne, Florida, USA is a 378-acre (152.9 hectares) lake that is part of a system of once natural freshwater lakes lying along the western slope of the coastal ridge in Palm Beach County just west of the Florida Intracoastal Waterway and Atlantic Ocean.\n\n It is located within the C-16 drainage basin which occupies approximately 40,031 acres of land (16,200 hectares).\n\n Five drainage canals discharge directly to Lake Osborne, and Lake Osborne discharges via the E-4 canal to the C16 and C51 canals to the Lake Worth Lagoon.\n\n The lake is bordered on the west by John Prince Memorial Park, and on the east be the City of Lake Worth.",
+    "Lake Worth, Florida\nLake Worth is a city in Palm Beach County, Florida, United States, which takes its name from the body of water along its eastern border, originally called \"Lake Worth\", and now generally known as the Lake Worth Lagoon.\n\n The lake itself was named for General William J. Worth, who led U.S. forces during the last part of the Second Seminole War.\n\n s of 2010 , the population estimated by the U.S. Census Bureau was 34,910.\n\n The city is included in the Miami-Fort Lauderdale-Pompano Beach Metropolitan Area, which is home to approximately 5,563,857 people.",
+    "South Lake Worth Inlet\nThe South Lake Worth Inlet, also known as the Boynton Inlet, is an artificial cut through a barrier beach connecting the south end of the Lake Worth Lagoon in Palm Beach County, Florida with the Atlantic Ocean.\n\n The inlet is 130 ft wide and 6 ft and 12 ft deep.",
+    "Dundee Canal\nThe Dundee Canal was an industrial canal in Clifton and Passaic in Passaic County, New Jersey.\n\n It was built between 1858 and 1861 and ran parallel to the Passaic River.\n\n It supplied hydropower and water for manufacturing.\n\n There was interest by some members of the business community to modify the canal to support navigational uses, but the canal was never used for that purpose.",
+    "Dismal Swamp Canal\nThe Dismal Swamp Canal is located along the eastern edge of the Great Dismal Swamp in Virginia and North Carolina in the United States.\n\n It is the oldest continually operating man-made canal in the United States, opened in 1805, and closed in October 2016.\n\n It is part of the Intracoastal Waterway, an inland route, which parallels the east coast and offers boaters shelter from the Atlantic Ocean from Manasquan Inlet, New Jersey, to Brownsville, Texas.\n\n The route runs through bays, lakes, rivers, streams, and canals, and includes the Intracoastal Waterway running from Norfolk, Virginia, to the Florida Keys.",
+    "Lake Worth Lagoon\nThe Lake Worth Lagoon is a lagoon located in Palm Beach County, Florida.\n\n It runs parallel to the coast, and is separated from the Atlantic Ocean by barrier beaches, including Palm Beach Island.\n\n The lagoon is connected to the Atlantic Ocean by two permanent, man-made inlets.",
+    "Tamiami Canal\nThe Tamiami Canal or C-4 Canal, is a canal located in southern Florida in the United States.\n\n It flows in a west to east direction from the western part of the state in the Everglades past the Miami International Airport to a salinity control center near the Miami River.\n\n It averages 8 ft in depth and is over 100 ft wide in some areas."
+   ]
+  },
+  {
+   "id": "54e1fa174c9a75c4",
+   "gold": [
+    {
+     "sentence": "Eat to Live: The Amazing Nutrient-Rich Program for Fast and Sustained Weight Loss is a book written in 2003 by Dr. Joel Fuhrman, which he revised in 2011.",
+     "facts": {
+      "0.0": "Eat to Live is a book.",
+      "0.1": "The full title of Eat to Live is 'Eat to Live: The Amazing Nutrient-Rich Program for Fast and Sustained Weight Loss'.",
+      "0.2": "Eat to Live was written in 2003.",
+      "0.3": "Eat to Live was written by Dr. Joel Fuhrman.",
+      "0.4": "Dr. Joel Fuhrman revised Eat to Live in 2011."
+     }
+    },
+    {
+     "sentence": "Joel Fuhrman (born December 2, 1953) is an American celebrity doctor who advocates what he calls a micronutrient-rich diet.",
+     "facts": {
+      "1.0": "Joel Fuhrman was born on December 2, 1953.",
+      "1.1": "Joel Fuhrman is American.",
+      "1.2": "Joel Fuhrman is a celebrity doctor.",
+      "1.3": "Joel Fuhrman advocates a diet that he calls a micronutrient-rich diet."
+     }
+    }
+   ],
+   "items": [
+    "Judy Mazel\nJudy Mazel (December 20, 1943 – October 12, 2007) was the American weight loss advocate and author of the \"\"The Beverly Hills Diet\"\", which became a 1981 best seller and a nationwide diet craze.\n\n Judy Mazel was a devout practicing Jew and was raised in a conservative Ashkenazi Jewish home.",
+    "Joel Fuhrman\nJoel Fuhrman (born December 2, 1953) is an American celebrity doctor who advocates what he calls a micronutrient-rich diet.",
+    "**Eat Smart, Move More, Weigh Less** is a 15-week, evidence-based program teaching 12 eating and activity behaviors, mindfulness, and planning/tracking—not a restrictive diet. Developed in 2007 by NC State and state public-health staff, its curriculum was professionally reviewed. The **Scarsdale diet** is a risky 1970s fad diet that does not promote sustainable habits. Obesity management includes lifestyle changes, medication, or surgery; NIH recommends losing 5–",
+    "Scarsdale diet\nThe Scarsdale diet is a fad diet designed for weight loss created in the 1970s by Herman Tarnower, named for the town in New York where he practiced cardiology, described in the book \"The Complete Scarsdale Medical Diet plus Dr. Tarnower's Lifetime Keep-Slim Program\", which Tarnower wrote with an author of self-help books, Sam Sinclair Baker.\n\n The diet carries potential health risks and does not instill the kind of healthy eating habits required for sustainable weight loss.",
+    "Very-low-calorie diet\nVery low calorie diet (VLCD) is a diet with very or extremely low daily food energy consumption.\n\n It is defined as a diet of 800 kcal per day or less.\n\n VLCDs are formulated, nutritionally complete, liquid meals containing 800 kilocalories or less per day.\n\n VLCDs also contain the recommended daily requirements for vitamins, minerals, trace elements, fatty acids and protein.\n\n Carbohydrate may be entirely absent, or substituted for a portion of the protein; this choice has important metabolic effects.\n\n The VLCD products are usually a powder which is mixed with water or another low-food-energy liquid.\n\n The VLCD is prescribed on a case to case basis for rapid weight loss (about 1.5 to 2.5 kilograms or 3 to 5 pounds per week) in people with Body Mass Index of 30 and above.\n\n The health care provider can recommend the diet to a patient with a BMI between 27 and 30 if the medical complications the patient has due to being overweight present serious health risks.\n\n It results in 4% more weight loss over the short term as compared to control.",
+    "Diet food\nDiet food (or dietetic food) refers to any food or beverage whose recipe is altered to reduce fat, carbohydrates, and/or sugar in order to make it part of a weight loss program or diet.\n\n Such foods are usually intended to assist in weight loss or a change in body type, although bodybuilding supplements are designed to aid in gaining weight or muscle.",
+    "Management of obesity\nManagement of obesity can include lifestyle changes, medications, or surgery.\n\n The main treatment for obesity consists of dieting and physical exercise.\n\n Diet programs may produce weight loss over the short term, but maintaining this weight loss is frequently difficult and often requires making exercise and a lower calorie diet a permanent part of an individual's lifestyle.\n\n Success rates of long-term weight loss maintenance with lifestyle changes are low, ranging from 2 to 20%.\n\n Dietary and lifestyle changes are effective in limiting excessive weight gain in pregnancy and improve outcomes for both the mother and the child.\n\n The National Institutes of Health recommend a weight loss goal of 5% to 10% of the person's current weight over six months.",
+    "Eat Smart, Move More, Weigh Less\nEat Smart, Move More, Weigh Less is a 15-week adult weight management program that uses strategies based on evidence for weight loss and/or weight maintenance.\n\n The Eat Smart Move More Weigh Less classes focus on the 12 evidence-based eating and physical activity behaviors for weight management.\n\n The program does not provide a prescriptive diet plan, it teaches small lifetime changes.\n\n The program teaches mindfulness as a strategy to become more aware of eating and physical activity.\n\n Eat Smart, Move More, Weigh Less includes methods for planning and tracking healthy eating and physical activity behaviors.\n\n In 2007, Eat Smart, Move More, Weigh Less curriculum was developed by a writing team from NC State University and NC Division of Public Health.\n\n A complete listing of authors and their respective affiliations can be found on the program website.\n\n The 15-lesson curriculum was peer reviewed by state and local nutrition and physical activity professionals, representatives from the medical community, and a CDC project officer.",
+    "Diet in Hinduism\nDiet in Hinduism varies with its diverse traditions.\n\n The ancient and medieval Hindu texts do not explicitly prohibit eating meat, but they do strongly recommend ahimsa—non-violence against all life forms including animals.\n\n Many Hindus prefer a vegetarian or lacto-vegetarian lifestyle, and methods of food production that are in sync with nature, compassionate, and respectful of other life forms as well as nature.",
+    "Eat to Live\nEat to Live: The Amazing Nutrient-Rich Program for Fast and Sustained Weight Loss is a book written in 2003 by Dr. Joel Fuhrman, which he revised in 2011.\n\n The book offers a formula: health = nutrients / calories."
+   ]
+  },
+  {
+   "id": "e38cf4adae642b27",
+   "gold": [
+    {
+     "sentence": "Sir Nicholas Robert Hytner (born 7 May 1956) is an English theatre director, film director, and film producer.",
+     "facts": {
+      "0.0": "Sir Nicholas Robert Hytner was born on 7 May 1956.",
+      "0.1": "Sir Nicholas Robert Hytner is an English theatre director.",
+      "0.2": "Sir Nicholas Robert Hytner is an English film director.",
+      "0.3": "Sir Nicholas Robert Hytner is an English film producer."
+     }
+    },
+    {
+     "sentence": "Maya Deren (April 29, 1917 – October 13, 1961), born Eleanora Derenkowskaia (Russian: Элеоно́ра Деренко́вская ), was a Russian-American filmmaker and one of the most important American experimental filmmakers and entrepreneurial promoters of the avant-garde in the 1940s and 1950s.",
+     "facts": {
+      "1.0": "Maya Deren was born on April 29, 1917.",
+      "1.1": "Maya Deren died on October 13, 1961.",
+      "1.2": "Maya Deren was born Eleanora Derenkowskaia.",
+      "1.3": "The birth name Eleanora Derenkowskaia is given in Russian as Элеоно́ра Деренко́вская.",
+      "1.4": "Maya Deren was a Russian-American filmmaker.",
+      "1.5": "Maya Deren was one of the most important American experimental filmmakers in the 1940s and 1950s.",
+      "1.6": "Maya Deren was one of the most important American entrepreneurial promoters of the avant-garde in the 1940s and 1950s."
+     }
+    },
+    {
+     "sentence": " Deren was also a choreographer, dancer, film theorist, poet, lecturer, writer and photographer.",
+     "facts": {
+      "2.0": "Maya Deren was also a choreographer.",
+      "2.1": "Maya Deren was also a dancer.",
+      "2.2": "Maya Deren was also a film theorist.",
+      "2.3": "Maya Deren was also a poet.",
+      "2.4": "Maya Deren was also a lecturer.",
+      "2.5": "Maya Deren was also a writer.",
+      "2.6": "Maya Deren was also a photographer."
+     }
+    }
+   ],
+   "items": [
+    "Nicholas Mele\nNicholas Mele is an actor who has starred in many movies and on television.\n\n His first movie role was in the 1976 movie \"The Ritz\".\n\n Other movie roles include \"Some Kind of Hero\" (1982) and \"Young Doctors in Love\" (1982).\n\n His most well-known film role was in the 1988 hit horror movie \"\" as Dennis Johnson.\n\n A year later, he reprised his role in the hit sequel \"\".\n\n His most recent movie is the 2003 film \"The Great Gabble\".",
+    "Illusions &amp; Mirrors\nIllusions & Mirrors is a 2013 short film directed by Iranian-born American artist and filmmaker Shirin Neshat.\n\n The film, shot in black-and-white, stars Tarek Aylouch, Michael Markiewicz, and the Israeli-born American actress Natalie Portman.\n\n The film was commissioned by Dior, for which Portman is a spokesmodel, for the Miss Dior Expo at the Grand Palais, Paris.\n\n Shirin Neshat said that the film is a tribute to the black-and-white silent films made by such surrealist filmmakers as Man Ray, Jean Cocteau, Luis Buñuel, and Maya Deren.",
+    "Takeshi Fukunaga\nTakeshi Fukunaga is a Japanese filmmaker based in New York.\n\n His first feature film, \"Out of My Hand\" (2015) premiered in the Panorama section at the 65th Berlin International Film Festival and won the Top Prize at the 2015 Los Angeles Film Festival.\n\n The film was later released worldwide through Ava DuVernay’s distribution company, ARRAY.\n\n Takeshi was nominated for the John Cassavetes Award at the 2016 Independent Spirit Awards.\n\n In 2017, he was selected for The Residence by Cannes Film Festival's Cinéfondation to develop his second feature film.",
+    "Nina, the Flower Girl\nNina, the Flower Girl is a lost 1917 silent drama film produced by D. W. Griffith through his Fine Arts Films and distributed by Triangle Film Corporation.\n\n The film starred Bessie Love, an up-and-coming ingenue actress.\n\n It also marked the final acting role for Elmer Clifton, who was by then moving on to directing full-time.",
+    "At Land\nAt Land (1944) is a 15-minute silent experimental film written, directed by, and starring Maya Deren.\n\n It has a dream-like narrative in which a woman, played by Deren, is washed up on a beach and goes on a strange journey encountering other people and other versions of herself.\n\n Deren once said that the film is about the struggle to maintain one's personal identity.",
+    "Maya Deren Award\nThe American Film Institute Award for Independent Film and Video Artists, subtitled and generally known as the Maya Deren Award, was an award presented to filmmakers and video artists by the American Film Institute to honor independent filmmaking.\n\n Named for the avant-garde experimental film artist Maya Deren, it was given from 1986 through 1996.",
+    "Nicholas Hytner\nSir Nicholas Robert Hytner (born 7 May 1956) is an English theatre director, film director, and film producer.\n\n He was previously the Artistic Director of London's National Theatre.\n\n His major successes while director include \"Miss Saigon\", \"The History Boys\" and \"One Man, Two Guvnors\".",
+    "Filmworks X: In the Mirror of Maya Deren\nFilmworks X: In the Mirror of Maya Deren features a score for film by John Zorn.\n\n The album was released on Zorn's own label, Tzadik Records, in 2001 and contains music that Zorn wrote and recorded for the documentary film \"In the Mirror of Maya Deren\" on the life and work of Maya Deren directed by Martina Kudlácek.",
+    "Maya Deren\nMaya Deren (April 29, 1917 – October 13, 1961), born Eleanora Derenkowskaia (Russian: Элеоно́ра Деренко́вская ), was a Russian-American filmmaker and one of the most important American experimental filmmakers and entrepreneurial promoters of the avant-garde in the 1940s and 1950s.\n\n Deren was also a choreographer, dancer, film theorist, poet, lecturer, writer and photographer.",
+    "In the Mirror of Maya Deren\nThe documentary In the Mirror of Maya Deren (\"Im Spiegel der Maya Deren\", 2002) is a film about avant garde filmmaker Maya Deren (1917-1961) by Austrian film maker Martina Kudlacek.\n\n It is based on the biography \"The Legend of Maya Deren\"."
+   ]
+  },
+  {
+   "id": "ce655cfb215664a0",
+   "gold": [
+    {
+     "sentence": "US Airways Flight 1549 was an Airbus A320-214 which, three minutes after takeoff from New York City's LaGuardia Airport on January 15, 2009, struck a flock of Canada geese just northeast of the George Washington Bridge and consequently lost all engine power.",
+     "facts": {
+      "0.0": "US Airways Flight 1549 was an Airbus A320-214.",
+      "0.1": "US Airways Flight 1549 took off from New York City's LaGuardia Airport.",
+      "0.2": "US Airways Flight 1549 took off on January 15, 2009.",
+      "0.3": "US Airways Flight 1549 struck a flock of Canada geese three minutes after takeoff.",
+      "0.4": "The bird strike happened just northeast of the George Washington Bridge.",
+      "0.5": "US Airways Flight 1549 consequently lost all engine power."
+     }
+    },
+    {
+     "sentence": " Unable to reach any airport, pilots Chesley Sullenberger and Jeffrey Skiles glided the plane to a ditching in the Hudson River off Midtown Manhattan.",
+     "facts": {
+      "1.0": "Pilots could not reach any airport.",
+      "1.1": "Pilots Chesley Sullenberger and Jeffrey Skiles glided the plane to a ditching in the Hudson River.",
+      "1.2": "The Hudson River ditching was off Midtown Manhattan."
+     }
+    },
+    {
+     "sentence": "Chesley Burnett \"Sully\" Sullenberger III (born 1951) is an American retired airline captain celebrated for the January 15, 2009 water landing of US Airways Flight 1549 in the Hudson River off Manhattan after the plane was disabled by striking a flock of Canada geese immediately after takeoff; all 155 people aboard survived.",
+     "facts": {
+      "2.0": "Chesley Burnett \"Sully\" Sullenberger III was born in 1951.",
+      "2.1": "Chesley Sullenberger is an American retired airline captain.",
+      "2.2": "Chesley Sullenberger is celebrated for the January 15, 2009 water landing of US Airways Flight 1549 in the Hudson River off Manhattan.",
+      "2.3": "The plane was disabled by striking a flock of Canada geese immediately after takeoff.",
+      "2.4": "All 155 people aboard survived."
+     }
+    }
+   ],
+   "items": [
+    "United Airlines Flight 736\nUnited Airlines Flight 736 was a daily U.S. transcontinental passenger flight operated by United Airlines that crashed on April21, 1958, following a mid-air collision.\n\n The aircraft assigned to Flight 736, a Douglas DC-7 airliner carrying 47 persons, was flying at cruise altitude above Clark County, Nevada, en route to a stopover at Denver, Colorado, when it was struck by a United States Air Force fighter jet crewed by two pilots.\n\n The collision occurred at 8:30 a.m. in clear weather within a major commercial airway; both aircraft fell out of control from 21000 ft and crashed into unpopulated desert terrain southwest of Las Vegas, Nevada.",
+    "ALM Flight 980\nALM Antillean Airlines Flight 980 was a flight scheduled to fly from John F. Kennedy International Airport in New York City to Princess Juliana International Airport in St. Maarten, Netherlands Antilles, on 2 May 1970.\n\n After several unsuccessful landing attempts, the aircraft's fuel was exhausted and it made a forced water landing (ditching) in the Caribbean Sea 48 km (30 mi) off St. Croix, with 23 fatalities and 40 survivors.\n\n The accident is one of a small number of intentional water ditchings of jet airliners.",
+    "Chesley Sullenberger\nChesley Burnett \"Sully\" Sullenberger III (born 1951) is an American retired airline captain celebrated for the January 15, 2009 water landing of US Airways Flight 1549 in the Hudson River off Manhattan after the plane was disabled by striking a flock of Canada geese immediately after takeoff; all 155 people aboard survived.\n\n Sullenberger is an international speaker on airline safety and has helped develop new protocols for airline safety.\n\n He served as the co-chairman, along with First Officer Jeffrey Skiles, of the EAA's Young Eagles youth introduction-to-aviation program from 2009 to 2013.\n\n He retired from US Airways after 30 years as a commercial pilot on March 3, 2010.\n\n In May of the following year, Sullenberger was hired by CBS News as an Aviation and Safety Expert.",
+    "1965 Carmel mid-air collision\nThe 1965 Carmel mid-air collision occurred on December 4, 1965, when Eastern Air Lines Flight 853 (N6218C), a Lockheed Super Constellation en route from Boston Logan International Airport to Newark International Airport, collided in mid-air with Trans World Airlines Flight 42 (N748TW), a Boeing 707-131B en route from San Francisco International Airport to John F. Kennedy International Airport, over Carmel, New York, United States.",
+    "US Airways Flight 1549\nUS Airways Flight 1549 was an Airbus A320-214 which, three minutes after takeoff from New York City's LaGuardia Airport on January 15, 2009, struck a flock of Canada geese just northeast of the George Washington Bridge and consequently lost all engine power.\n\n Unable to reach any airport, pilots Chesley Sullenberger and Jeffrey Skiles glided the plane to a ditching in the Hudson River off Midtown Manhattan.\n\n All 155 people aboard were rescued by nearby boats and there were few serious injuries.",
+    "Charles J. Biddle (aviator)\nMajor Charles John Biddle (13 May 1890 – 22 March 1972) was an American aviator, attorney, and author.\n\n He was a flying ace during World War I.\n\n Postwar, he launched a career in law and wrote his memoirs.",
+    "John Christiansen\nJohn “Chris” Christiansen (May 1, 1923 － September 12, 1998) was the chief military test pilot for Lockheed California Company for over 30 years.\n\n He might be most known for having performed Lockheed S-3 Viking's maiden flight on January 21, 1972.\n\n His assignments also included the initial test flights of Lockheed P-3 Orion.\n\n Christiansen was born in Oslo, Norway in 1923 and became an American citizen in 1939.\n\n He later served in the U.S. Navy during World War II and the Korean Conflict.\n\n He began experimental flying for Lockheed Martin in 1953, and worked there until his retirement in 1984.\n\n He was a fellow at Society of Experimental Test Pilots.",
+    "Water landing\nA water landing is, in the broadest sense, a landing on a body of water.\n\n Some aircraft such as floatplanes land on water as a matter of course.",
+    "Bird strike\nA bird strike—sometimes called birdstrike, bird ingestion (for an engine), bird hit, or bird aircraft strike hazard (BASH)—is a collision between an airborne animal (usually a bird or bat) and a manmade vehicle, especially an aircraft.\n\n The term is also used for bird deaths resulting from collisions with structures such as power lines, towers and wind turbines (see Bird-skyscraper collisions and Towerkill).",
+    "Atlantic Southeast Airlines Flight 2311\nAtlantic Southeast Airlines Flight 2311 was a regularly scheduled commuter flight from Hartsfield–Jackson Atlanta International Airport to Glynco Jetport (since renamed Brunswick Golden Isles Airport) in Brunswick, Georgia on April 5, 1991.\n\n The flight, operated using a twin-turboprop Embraer EMB 120 Brasilia, crashed just north of Brunswick while approaching the airport for landing.\n\n All 23 people aboard the plane were killed, including passengers Sonny Carter and John Tower.\n\n Four years later, another Embraer Brasilia of ASA crashed in the Georgia countryside in similar circumstances, with nine fatalities."
+   ]
+  },
+  {
+   "id": "cb0ef5cf15e1f808",
+   "gold": [
+    {
+     "sentence": " Պողոսյան , born July 15, 1990) is an American professional ice hockey defenseman currently playing for the Buffalo Sabres.",
+     "facts": {
+      "0.0": "Պողոսյան was born on July 15, 1990.",
+      "0.1": "Պողոսյան is an American professional ice hockey defenseman.",
+      "0.2": "Պողոսյան is currently playing for the Buffalo Sabres."
+     }
+    },
+    {
+     "sentence": "Daron Vartan Malakian (Armenian: Տարօն/Տարոն Վարդան Մալաքեան, born July 18, 1975) is an Armenian–American singer-songwriter, multi-instrumentalist, and record producer.",
+     "facts": {
+      "1.0": "The Armenian name of Daron Vartan Malakian is Տարօն/Տարոն Վարդան Մալաքեան.",
+      "1.1": "Daron Vartan Malakian was born on July 18, 1975.",
+      "1.2": "Daron Vartan Malakian is an Armenian-American singer-songwriter.",
+      "1.3": "Daron Vartan Malakian is a multi-instrumentalist.",
+      "1.4": "Daron Vartan Malakian is a record producer."
+     }
+    }
+   ],
+   "items": [
+    "Daron Malakian\nDaron Vartan Malakian (Armenian: Տարօն/Տարոն Վարդան Մալաքեան, born July 18, 1975) is an Armenian–American singer-songwriter, multi-instrumentalist, and record producer.\n\n He is best known as the guitarist, songwriter and second vocalist of the rock band System of a Down and as the lead vocalist, lead guitarist and songwriter of the band Scars on Broadway.\n\n Like the rest of the Hollywood-based band System of a Down, he is of Armenian ancestry, but he is the only member to have been born in the United States.\n\n Daron Malakian is known for his distinctive playing and is ranked 40th in Loudwire's list of \"Top 50 Hard Rock + Metal Guitarists Of All Time\" and #11 in MusicRadar's poll, \"The 20 Greatest Metal Guitarists Ever\".\n\n He is placed 30th in Guitar World's List of The 100 Greatest Heavy Metal Guitarists of All Time.",
+    "Graph query row:\nperson: Daron Malakian\noccupation: ['singer-songwriter', 'multi-instrumentalist', 'record producer', 'guitarist', 'songwriter', 'vocalist']",
+    "Illmind\nRamon Ibanga, Jr., professionally known as Illmind (often stylized as !\n\nllmind) is a Filipino American hip hop producer and educator from Bloomfield, New Jersey.\n\n He has co-written and produced hip-hop, pop, soul, and electronic music for labels such as Cash Money, Def Jam, and Aftermath, and has worked with artists such as Andy Mineo, Kanye West, Drake, J. Cole, Dr. Dre, Ludacris, 50 Cent, Ariana Grande, and others.\n\n His accomplishments in 2016 include production on the new Hamilton Mixtape and Disney's Moana (2016 film), both created by Lin-Manuel Miranda.\n\n !\n\nllmind has released several studio albums and had a number of songs and albums reach the music charts.\n\n His most recent album, \"Human\", is a collaboration with Joell Ortiz, and was released on July 17, 2015.\n\n Starting in 2008 !\n\nllmind has released the free mixtape series \"Blaps, Rhymes & Life,\" and he operates a producer showcase in New York city called Beats, Love, Alcohol & Party (B.L.A.P.).",
+    "Bad Acid Trip\nBad Acid Trip is an American metal band, currently signed to System of a Down lead singer Serj Tankian's record label, Serjical Strike Records.\n\n Their 2004 album, \"Lynch the Weirdo\", was produced by Daron Malakian, another System of a Down member.\n\n In 2006 they performed on the second stage at the Ozzfest summer tour.\n\n The band has three full-length releases (\"For the Weird by the Weird\", \"Lynch the Weirdo\", and \"Humanly Possible\") and multiple EPs.",
+    "Dave Kneebone\nDave Kneebone is an American producer.\n\n Along with Eric Wareheim and Tim Heidecker he runs Abso Lutely Productions which produces a variety of television and films.\n\n His role has been described as the business chief and \"straight man\" at Abso Lutely.\n\n Kneebone has worked as a producer on a variety of television shows including \"Comedy Bang!\n\n Bang!\n\n\", \"Nathan for You\", and \"Tim and Eric Awesome Show, Great Job!\n\n\".\n\n He is also listed a producer on the feature film \"Tim and Eric's Billion Dollar Movie\".",
+    "Zach Bogosian\nIn his second season, he tied a team record for goals by a defenseman.\n\n Bogosian first played in an international tournament when he joined the American national team at the 2009 IIHF World Championship.",
+    "Jimmy Chamberlin\nJames Joseph Chamberlin (born June 10, 1964) is an American drummer and record producer.\n\n He is best known as the drummer for the alternative rock band The Smashing Pumpkins.\n\n Following the 2000 breakup of the band, Chamberlin joined Pumpkins frontman Billy Corgan in the supergroup Zwan and also formed his own group, the Jimmy Chamberlin Complex.\n\n In 2005, Chamberlin joined Corgan in reforming The Smashing Pumpkins; he eventually left the group in March 2009, though he returned again in 2015 for a summer tour.\n\n He performed in the group Skysaw until 2012.\n\n He is currently active under the Jimmy Chamberlin Complex name.\n\n In addition to his current work as CEO, Chamberlin has joined Chicago jazz saxophonist Frank Catalano for a string of 2013–15 performances in the Chicago area.\n\n An EP by Catalano and Chamberlin \"Love Supreme Collective - EP\" was released on the 29th of July 2014.",
+    "Greg Davis (musician)\nGreg Davis is an American electronic musician who has recorded albums drawing from a wide variety of sources, including guitar, field recording, various world/ethnic/traditional instruments, percussion, and voice, all processed through digital manipulation.\n\n After years of experience in hip-hop groups, jazz combos, free improvisation, and experimental composition, Davis moved toward computer-based music in 1997.\n\n At Depaul University in Chicago, he studied classical and jazz guitar alongside composition and jazz studies.\n\n In 1997, he started his own label, Autumn Records, to release his own music and the music of others.\n\n Davis moved to Boston in 1999 to pursue a master's degree in composition (which he received in June 2001) while independently immersing himself in the study of electronic music.\n\n Since 2001, he has played shows all around the world and released records on a number of different labels.\n\n He has collaborated with Keith Fullerton Whitman, Ben Vida, Sebastien Roux, Chris Weisman, Steven Hess, Jeph Jerman, Akron/Family, Toby Aronson (as Harmonizer), and Zach Wallace (as Sun Circle).",
+    "Zach Bogosian\nZachary M. Bogosian (Armenian: Զաքարի Մ.\n\n Պողոսյան , born July 15, 1990) is an American professional ice hockey defenseman currently playing for the Buffalo Sabres.\n\n Bogosian attended Cushing Academy in Massachusetts before he joined the Peterborough Petes of the Ontario Hockey League (OHL) in 2006.\n\n He played two seasons in the OHL, and was nominated for the Red Tilson Trophy as the league's most outstanding player in his second season.\n\n Bogosian was regarded as a complete, physical defenseman who could contribute on both offense and defense; he was rated as one of the top players heading into the 2008 NHL Entry Draft, where the Atlanta Thrashers selected him third overall.\n\n He signed a contract with the team a few weeks after the draft and began the season with the Thrashers, though he missed several weeks of his rookie year due to injury.\n\n In his second season, he tied a team record for goals by a defenseman.",
+    "Doug Grean\nDoug Grean is an American record producer, audio engineer, guitarist, based in Los Angeles.\n\n He has worked with artists Sheryl Crow, Ricki Lee Jones, Glen Campbell, Scott Weiland, Slash, Velvet Revolver, Stone Temple Pilots, The Crystal Method, Tim McGraw, Cyndi Lauper, Annabella Lwin (Bow Wow Wow), Corey Glover (Living Color), Camp Freddy, DJ Hurricane and John Taylor (Duran Duran).\n\n Grean was formerly the lead guitarist and touring musical director for Scott Weiland and the Wildabouts.\n\n Some of Grean's television appearances with Weiland include: VH1 Legends, Last Call with Carson Daly, The Tonight Show with Jay Leno, and the Grammy awards with Velvet Revolver as keyboardist, performing \"All Across the Universe\" with Stevie Wonder, Norah Jones, Bono, Steven Tyler, Brian Wilson, and Alison Krauss."
+   ]
+  },
+  {
+   "id": "7177268b9bba8265",
+   "gold": [
+    {
+     "sentence": "Aspidistra is a genus of flowering plants in the family Asparagaceae, subfamily Nolinoideae, native to eastern and southeastern Asia, particularly China and Vietnam.",
+     "facts": {
+      "0.0": "Aspidistra is a genus of flowering plants.",
+      "0.1": "Aspidistra is in the family Asparagaceae.",
+      "0.2": "Aspidistra is in the subfamily Nolinoideae.",
+      "0.3": "Aspidistra is native to eastern Asia.",
+      "0.4": "Aspidistra is native to southeastern Asia.",
+      "0.5": "Aspidistra is particularly native to China.",
+      "0.6": "Aspidistra is particularly native to Vietnam."
+     }
+    },
+    {
+     "sentence": "Cyrtanthus is a genus of perennial, herbaceous and bulbous plants in the family Amaryllidaceae, subfamily Amaryllidoideae.",
+     "facts": {
+      "1.0": "Cyrtanthus is a genus of perennial plants.",
+      "1.1": "Cyrtanthus is a genus of herbaceous plants.",
+      "1.2": "Cyrtanthus is a genus of bulbous plants.",
+      "1.3": "Cyrtanthus is in the family Amaryllidaceae.",
+      "1.4": "Cyrtanthus is in the subfamily Amaryllidoideae."
+     }
+    }
+   ],
+   "items": [
+    "Caladium\nCaladium is a genus of flowering plants in the family Araceae.\n\n They are often known by the common name elephant ear (which they share with the closely related genera \"Alocasia\", \"Colocasia\", and \"Xanthosoma\"), Heart of Jesus, and Angel Wings.\n\n There are over 1000 named cultivars of \"Caladium bicolor\" from the original South American plant.",
+    "Clinantheae\nClinantheae is a tribe (in the family Amaryllidaceae, subfamily Amaryllidoideae), where it forms part of the Andean clade, one of two American clades.\n\n The tribe was described in 2000 by Alan Meerow \"et al.\" as a result of a molecular phylogenetic study of the American Amaryllidoideae.\n\n This demonstrated that the Stenomesseae tribe, including the type genus \"Stenomesson\" was polyphyletic.\n\n Part of the tribe segregated with the Eucharideae and were submerged into it, while the other part formed a unique subclade.\n\n Since the type species of \"Stenomesson\" was not part of the second sublclade it was necessary to form a new name for the remaining species together with the other genera that remained.\n\n This was \"Clinanthus\", the oldest name for these species, and consequently the tribe Clinantheae.",
+    "Aspidistra\nAspidistra is a genus of flowering plants in the family Asparagaceae, subfamily Nolinoideae, native to eastern and southeastern Asia, particularly China and Vietnam.\n\n They grow in shade under trees and shrubs.\n\n Their leaves arise more or less directly from ground level, where their flowers also appear.\n\n The number of species known has increased considerably from the 1980s onwards, with around 100 accepted as of July 2013 . \"\n\nAspidistra elatior\" is common worldwide as a foliage house plant that is very tolerant of neglect.\n\n It and other species can also be grown in shade outside, where they are generally hardy to -5 C .",
+    "Caryophyllales\nCaryophyllales ( ) is an order of flowering plants that includes the cacti, carnations, amaranths, ice plants, beets, and many carnivorous plants.\n\n Many members are succulent, having fleshy stems or leaves.",
+    "Cyrtanthus\nCyrtanthus is a genus of perennial, herbaceous and bulbous plants in the family Amaryllidaceae, subfamily Amaryllidoideae.",
+    "Amarylloidinae\nAmarylloidinae is a now obsolete informal name for an \"infrafamily\" within the Amaryllidaceae (Amaryllis) family, erected by Hamilton Traub.\n\n This grouping was designed to fill a perceived gap between the formal rank of subfamily and tribes.\n\n In his treatment of this family, he divided it first into four subfamiles.\n\n Within subfamily Amarylloideae he then divided his sixteen tribes into two infrafamilies, Amarylloidinae (12 tribes) and Pancratioidinae (4 tribes), both of which were subsequently demonstrated to be polyphyletic, and hence were abandoned by Dahlgren, who used no rank between family and tribe.\n\n On the other hand, he also used a much more restricted Amaryllidaceae corresponding to Traub's subfamily Amarylloideae.\n\n Thus Traub's Amarylloideae most closely resembles subfamily Amaryllidoideae \"sensu\" APGIII.",
+    "Graph query row:\ngenus: Cyrtanthus\nrelationship: PART_OF\nrelated_entity: Amaryllidoideae",
+    "Hippeastrinae\nHippeastrinae is a subtribe of plants classified under the tribe Hippeastreae.\n\n It belongs to the subfamily Amaryllidoideae of the Amaryllis family (Amaryllidaceae).",
+    "Ammocharis\nAmmocharis is a small genus from sub-Saharan Africa, in the Amaryllidaceae family (subfamily Amaryllidoideae) which includes 7 species distributed in Africa.\n\n The plant grows as a succulent, above-ground bulb, preferring seasonally wet, hot, sandy soils and full sun.",
+    "Graph query row:\ngenus: Aspidistra\nrelationship: PART_OF\nrelated_entity: Nolinoideae"
+   ]
+  },
+  {
+   "id": "8e044f9e9e59e5c0",
+   "gold": [
+    {
+     "sentence": " The journalist in question is Joe McGinniss; the murderer is the former Special Forces captain Dr. Jeffrey R. MacDonald, who became the subject of McGinniss' 1983 book \"Fatal Vision\".",
+     "facts": {
+      "0.0": "The journalist in question is Joe McGinniss.",
+      "0.1": "The murderer is the former Special Forces captain Dr. Jeffrey R. MacDonald.",
+      "0.2": "Dr. Jeffrey R. MacDonald became the subject of Joe McGinniss' 1983 book 'Fatal Vision'."
+     }
+    },
+    {
+     "sentence": "Jeffrey Robert MacDonald (born October 12, 1943) is an American medical doctor who was convicted in 1979 of murdering his pregnant wife and two daughters in February 1970.",
+     "facts": {
+      "1.0": "Jeffrey Robert MacDonald was born on October 12, 1943.",
+      "1.1": "Jeffrey Robert MacDonald is an American medical doctor.",
+      "1.2": "Jeffrey Robert MacDonald was convicted in 1979 of murdering his pregnant wife.",
+      "1.3": "Jeffrey Robert MacDonald was convicted in 1979 of murdering his two daughters.",
+      "1.4": "The murders took place in February 1970."
+     }
+    }
+   ],
+   "items": [
+    "Joe McGinniss\nJoseph R. McGinniss, Sr. (December 9, 1942 – March 10, 2014), known as Joe McGinniss, was an American non-fiction writer and novelist.\n\n The author of twelve books, he first came to prominence with the best-selling \"The Selling of the President 1968\" which described the marketing of then-presidential candidate Richard Nixon.\n\n He is popularly known for his trilogy of bestselling true crime books — \"Fatal Vision\", \"Blind Faith\" and \"Cruel Doubt\" — which were adapted into TV miniseries in the 1980s and 90s.\n\n His last book was \"The Rogue: Searching for the Real Sarah Palin\", an account of Sarah Palin, the former governor of Alaska who was the 2008 Republican vice-presidential nominee.",
+    "The Journalist and the Murderer\nThe Journalist and the Murderer is a study by Janet Malcolm about the ethics of journalism, published by Alfred A. Knopf/Random House in 1990.\n\n It is an examination of the professional choices that shape a work of non-fiction, as well as a rumination on the morality that underpins the journalistic enterprise.\n\n The journalist in question is Joe McGinniss; the murderer is the former Special Forces captain Dr. Jeffrey R. MacDonald, who became the subject of McGinniss' 1983 book \"Fatal Vision\".",
+    "Jeffrey R. MacDonald\nJeffrey Robert MacDonald (born October 12, 1943) is an American medical doctor who was convicted in 1979 of murdering his pregnant wife and two daughters in February 1970.",
+    "Fatal Vision (disambiguation)\nFatal Vision is the 1983 true crime book by Joe McGinniss which lies at the center of the \"Fatal Vision\" controversy.",
+    "Fatal Vision (goggles)\nFatal Vision goggles are a line of training tools for simulating the effects of alcohol and drug intoxication without actually using these substances.",
+    "Fatal Vision (miniseries)\nFatal Vision is a 1984 American television miniseries based on the account, in the book of the same name, of the murders in 1970 at Fort Bragg of the wife and daughters of U.S. Army officer Jeffrey R. MacDonald.",
+    "Edward Fitzgerald (barrister)\nEdward Hamilton Fitzgerald CBE QC is an English barrister who specialises in criminal law, public law, and international human rights law.\n\n His work against the death penalty has led him to represent despised criminals such as: Myra Hindley, a perpetrator in the Moors murders; Mary Bell, a child killer; Maxine Carr; Jon Venables, one of James Bulger's killers; various IRA prisoners; and Abu Hamza, the controversial Muslim cleric.\n\n Fitzgerald is currently the joint head of Doughty Street Chambers along with Geoffrey Robertson QC.\n\n Fitzgerald has been called to the Bar in a number of jurisdictions including Belize, Grenada and St Vincent, and has been granted rights of audience to appear in cases in Hong Kong, Trinidad and Tobago, St Lucia, Bahamas, and the British Virgin Islands.\n\n He is also a trustee and patron of a number of charities including The Death Penalty Project and The Longford Trust.",
+    "Going to Extremes (book)\nGoing to Extremes is a non-fiction book by Joe McGinniss.\n\n It was first published in 1980.\n\n The book is about McGinniss' travels through Alaska for a year.\n\n The book became a best-seller.",
+    "Convicted (1950 film)\nConvicted is a 1950 American crime film noir directed by Henry Levin starring Glenn Ford and Broderick Crawford.\n\n It was the third Columbia Pictures film adaptation of the 1929 stage play \"The Criminal Code\" by Martin Flavin, following Howard Hawk's \"The Criminal Code\" (1931) and John Brahm's \"Penitentiary\" (1938).",
+    "Fatal Vision controversy\nThe controversy over Fatal Vision, journalist and author Joe McGinniss's best-selling 1983 true crime book, is a decades-long dispute spanning several court cases and discussed in several other published works."
+   ]
+  },
+  {
+   "id": "83c9cf3e70419caf",
+   "gold": [
+    {
+     "sentence": "David Michael Draiman (born March 13, 1973) is an American songwriter and the vocalist for the band Disturbed as well as for the band Device.",
+     "facts": {
+      "0.0": "David Michael Draiman was born on March 13, 1973.",
+      "0.1": "David Michael Draiman is an American songwriter.",
+      "0.2": "David Michael Draiman is the vocalist for the band Disturbed.",
+      "0.3": "David Michael Draiman is the vocalist for the band Device."
+     }
+    },
+    {
+     "sentence": "Terry Alan Kath (January 31, 1946 – January 23, 1978) was an American musician and songwriter, best known as the original guitarist, one of the lead singers and founding members of the rock band Chicago.",
+     "facts": {
+      "1.0": "Terry Alan Kath lived January 31, 1946 to January 23, 1978.",
+      "1.1": "Terry Alan Kath was an American musician.",
+      "1.2": "Terry Alan Kath was an American songwriter.",
+      "1.3": "Terry Alan Kath was best known as the original guitarist of the rock band Chicago.",
+      "1.4": "Terry Alan Kath was one of the lead singers of the rock band Chicago.",
+      "1.5": "Terry Alan Kath was a founding member of the rock band Chicago."
+     }
+    }
+   ],
+   "items": [
+    "Matt Thiessen\nMatthew Arnold \"Matt\" Thiessen (born August 12, 1980) is a Canadian-American musician, singer and songwriter known for being co-founder, lead singer, guitarist, pianist, and primary songwriter for the Christian rock band Relient K.\n\n With Relient K, he has released eight full-length albums, including three that were certified Gold, and three that peaked in the top twenty on the \"Billboard\" 200.\n\n Outside of his work with Relient K, Thiessen maintains a low-profile side project called Matthew Thiessen and the Earthquakes.\n\n In 2009, he co-produced and collaborated on Owl City's album \"Ocean Eyes\".",
+    "Peter Wichers\nPeter Wichers is best known as one of the founding members of Swedish melodic death metal band, Soilwork.\n\n From 1995 until late 2005, when he announced his departure from the band, he was known as the lead guitarist and also a songwriter, especially on their \"Stabbing the Drama\" album., He rejoined Soilwork in 2008 and played on 2010s The Panic Broadcast and in June 2012 he quit Soilwork for the second time.\n\n After leaving Soilwork, he filled in for Adam Dutkiewicz when he was injured on Killswitch Engage's European tour.\n\n More recently, he has collaborated with singers from across the melodic death metal genre including Anders Fridén, former band mate Björn \"Speed\" Strid and John Bush (vocalist of Anthrax) to make a CD much in the same style as \"Roadrunner United\", entitled \"Nuclear Blast All-Stars\".\n\n He also co-wrote Warrel Dane's solo record \"Praises to the War Machine\".",
+    "Katherine Dienes\nKatherine Dienes (born 1970) is a New Zealand-born organist, conductor and composer.\n\n She is currently Organist and Master of the Choristers at Guildford Cathedral and is the first woman to hold the most senior musical post in a Church of England cathedral.\n\n Her husband is Patrick Williams - librarian of the Royal Phillharmonic Orchestra, and they have a daughter, Hannah, who is currently a chorister at Guildford Cathedral",
+    "Terry Glaze\nTerrence Lee Glaze (born November 29, 1964, Columbus), known as Terry Lee, is a Texas-raised singer and guitarist who is most known for his work in American heavy metal bands Lord Tracy and Pantera.",
+    "Ted Kooshian\nTed Kooshian (born October 8, 1961) is an American jazz pianist, keyboardist, and composer, who has performed with Aretha Franklin, Chuck Berry, Marvin Hamlisch, Sarah Brightman, Il Divo, and Blood, Sweat, and Tears.\n\n Kooshian has played in many Broadway pit orchestras, and has been a member of the Ed Palermo Big Band since 1994.\n\n Originally from San Jose, California, Kooshian has been performing since the 1980s.",
+    "Wishing You Were Here\n\"Wishing You Were Here\" is a song written by Peter Cetera for the group Chicago and recorded for their album \"Chicago VII\" (1974), with lead vocals by Terry Kath (uncredited on the original album package), while Cetera sang the song's bridge.\n\n The third single released from that album, it reached #11 on the U.S. \"Billboard\" Hot 100, #9 on the \"Cash Box\" Top 100, and hit #1 on the Easy Listening chart.",
+    "Terry Kath\nTerry Alan Kath (January 31, 1946 – January 23, 1978) was an American musician and songwriter, best known as the original guitarist, one of the lead singers and founding members of the rock band Chicago.\n\n He has been praised by the band for his guitar skills and Ray Charles-influenced vocal style.",
+    "David Draiman\nDavid Michael Draiman (born March 13, 1973) is an American songwriter and the vocalist for the band Disturbed as well as for the band Device.\n\n Draiman is known for his distorted voice and percussive singing style.\n\n In November 2006, Draiman was voted number 42 on the \"Hit Parader\"’s \"\"Top 100 Metal Vocalists of All Time\"\".\n\n Draiman has written some of Disturbed's most successful singles, such as \"Stupify\", \"Down with the Sickness\", \"Indestructible\", and \"Inside the Fire\".",
+    "Device (metal band)\nDevice was an industrial metal band started by David Draiman, frontman of the heavy metal group Disturbed.\n\n Draiman was approached by Geno Lenardo, former guitarist of Filter, and together they started to work on new material.\n\n The two started work on a debut album in June 2012.\n\n The result of those sessions, \"Device\", was released on April 9, 2013.\n\n The first single and third track, \"Vilify\" was released to radio ahead of the album on February 19, 2013, alongside its first music video, directed by P. R. Brown.\n\n The second single and the introductory track, \"You Think You Know\", was released on June 11, 2013, alongside its music video, directed once again by Brown.",
+    "Terry Ray (actor)\nHe wrote and starred in two more shows at the Dorothy Chandler Pavilion, one co-starring Amanda Bynes and the other Hilary Duff.\n\n<br><br>Terry is also the voice of the \"Gaydar Gun\", a spinoff toy from the film Gaydar."
+   ]
+  },
+  {
+   "id": "9bad05b9fe1a6e85",
+   "gold": [
+    {
+     "sentence": "Giovanni \"Tinto\" Brass (born 26 March 1933) is an Italian filmmaker.",
+     "facts": {
+      "0.0": "Giovanni 'Tinto' Brass was born on 26 March 1933.",
+      "0.1": "Giovanni 'Tinto' Brass is an Italian filmmaker."
+     }
+    },
+    {
+     "sentence": "Baltasar Kormákur Samper (born 27 February 1966) is an Icelandic actor, theater and film director, and film producer.",
+     "facts": {
+      "1.0": "Baltasar Kormakur Samper was born on 27 February 1966.",
+      "1.1": "Baltasar Kormakur Samper is an Icelandic actor.",
+      "1.2": "Baltasar Kormakur Samper is an Icelandic theater director.",
+      "1.3": "Baltasar Kormakur Samper is an Icelandic film director.",
+      "1.4": "Baltasar Kormakur Samper is an Icelandic film producer."
+     }
+    }
+   ],
+   "items": [
+    "Mauritz Stiller\nMauritz Stiller (17 July 1883 – 18 November 1928) was a Finnish-Swedish film director, best known for discovering Greta Garbo and bringing her to America.",
+    "Traceroute (film)\nTraceroute is a 2016 Austrian/American documentary film directed by Johannes Grenzfurthner.\n\n The autobiographical documentary and road movie deals with the history, politics and impact of nerd culture.\n\n Grenzfurthner calls his film a \"personal journey into the uncharted depths of nerd culture, a realm full of dangers, creatures and more or less precarious working conditions\", an attempt to \"chase the ghosts of nerddom's past, present and future.\"\n\n The film was co-produced by art group monochrom and Reisenbauer Film.\n\n It features music by Kasson Crooker, Hans Nieswandt, and many others.",
+    "Tinto Brass\nGiovanni \"Tinto\" Brass (born 26 March 1933) is an Italian filmmaker.\n\n In the 1960s and 1970s, he directed many critically acclaimed avant-garde films of various genres.\n\n Today, he is mainly known for his later work in the erotic genre, with films such as \"Caligula\", \"Così fan tutte\" (released under the English title \"All Ladies Do It\"), \"Paprika\", \"Monella\" (\"Frivolous Lola\") and \"Trasgredire\".",
+    "Baltasar Breki Samper\nBaltasar Breki Samper (born 22 July 1989), sometimes referred to as Baltasar Breki Baltasarsson, is an Icelandic actor.\n\n He is the son of Icelandic director Baltasar Kormákur.\n\n Before graduating from the Icelandic Academy of the Arts in 2015 Samper helped his father on several films as second assistant director.\n\n He is known for his role as Hjörtur in the Icelandic TV series \"Trapped\".",
+    "Baltasar Kormákur\nBaltasar Kormákur Samper (born 27 February 1966) is an Icelandic actor, theater and film director, and film producer.\n\n He is best known for directing the films \"101 Reykjavík\", \"Hafið\", \"A Little Trip to Heaven\" (starring Julia Stiles and Forest Whitaker), a film based on the book \"Mýrin\" \"(Jar City)\" by Arnaldur Indriðason, \"Contraband\", \"2 Guns\" (starring Mark Wahlberg and Denzel Washington) and \"Everest\".\n\n His father is the Spanish painter Baltasar Samper and actor Baltasar Breki Samper is his son.",
+    "Contraband (2012 film)\nContraband is a 2012 American crime thriller film directed by Baltasar Kormákur, starring Mark Wahlberg, Kate Beckinsale, Ben Foster, Caleb Landry Jones, Giovanni Ribisi, Lukas Haas, Diego Luna and J. K. Simmons.\n\n The film is a remake of the 2008 Icelandic film \"Reykjavík-Rotterdam\" which Baltasar Kormákur starred in.\n\n It was released on January 13, 2012 in the United States by Universal Pictures.",
+    "John Steiner\nHe found himself in demand in Italy and moved there, appearing in a great number of Italian exploitation and B-films including police actioners (\"Violent Rome\"), westerns (\"Mannaja\"), war films (\"The Last Hunter\"), nazisploitation (\"Deported Women of the SS Special Section\"), sci-fi adventure films (\"Yor, the Hunter from the Future\"), and horror films, such as Mario Bava's \"Shock\", Dario Argento's \"Tenebrae\", and Ruggero Deodato's \"Body Count\".\n\n He also became a favourite of famed Italian filmmaker Tinto Brass, featuring in \"Salon Kitty\", the infamous \"Caligula\", \"Action\", and \"Paprika\".",
+    "Takeshi Fukunaga\nTakeshi Fukunaga is a Japanese filmmaker based in New York.\n\n His first feature film, \"Out of My Hand\" (2015) premiered in the Panorama section at the 65th Berlin International Film Festival and won the Top Prize at the 2015 Los Angeles Film Festival.\n\n The film was later released worldwide through Ava DuVernay’s distribution company, ARRAY.\n\n Takeshi was nominated for the John Cassavetes Award at the 2016 Independent Spirit Awards.\n\n In 2017, he was selected for The Residence by Cannes Film Festival's Cinéfondation to develop his second feature film.",
+    "Cinema of Uruguay\nThe cinema of Uruguay has a role in the culture of Uruguay and is a part of Latin American cinema.\n\n Since the late 1990s, the Uruguayan cinema undergoes a process of evolution, during which its films have received positive reviews and been internationally recognized.\n\n Over 120 films, fictions and non-fictions, have been produced since then.",
+    "Fermo posta Tinto Brass\nFermo posta Tinto Brass is a 1995 Italian comedy film-erotic film directed by Tinto Brass and set in vignettes."
+   ]
+  },
+  {
+   "id": "f0e9bfe31248cda7",
+   "gold": [
+    {
+     "sentence": "Julia Compton Moore (February 10, 1929April 18, 2004) was the wife of Lieutenant General (Ret.)",
+     "facts": {
+      "0.0": "Julia Compton Moore's dates are February 10, 1929 to April 18, 2004.",
+      "0.1": "Julia Compton Moore was the wife of Lieutenant General (Ret.)."
+     }
+    },
+    {
+     "sentence": " Hal Moore, a United States Army officer.",
+     "facts": {
+      "1.0": "Hal Moore is a United States Army officer."
+     }
+    },
+    {
+     "sentence": "Harold Gregory \"Hal\" Moore, Jr. (February 13, 1922 – February 10, 2017) was a United States Army lieutenant general and author.",
+     "facts": {
+      "2.0": "Harold Gregory \"Hal\" Moore, Jr. lived from February 13, 1922 to February 10, 2017.",
+      "2.1": "Harold Gregory \"Hal\" Moore, Jr. was a United States Army lieutenant general.",
+      "2.2": "Harold Gregory \"Hal\" Moore, Jr. was an author."
+     }
+    },
+    {
+     "sentence": " He was a recipient of the Distinguished Service Cross, which is the U.S. military's second highest decoration for valor, and was the first of his West Point class (1945) to be promoted to brigadier general, major general, and lieutenant general.",
+     "facts": {
+      "3.0": "Hal Moore was a recipient of the Distinguished Service Cross.",
+      "3.1": "The Distinguished Service Cross is the U.S. military's second highest decoration for valor.",
+      "3.2": "Hal Moore was the first of his West Point class (1945) to be promoted to brigadier general.",
+      "3.3": "Hal Moore was the first of his West Point class (1945) to be promoted to major general.",
+      "3.4": "Hal Moore was the first of his West Point class (1945) to be promoted to lieutenant general."
+     }
+    }
+   ],
+   "items": [
+    "Wayne W. Lambert\nWayne W. Lambert (born 1936) was an Air force Brigadier General (United States).\n\n He attended the United States Military Academy at West Point, New York, after already having served a year in the US Army.\n\n Lambert graduated from the Academy in 1959 and was commissioned a 2nd Lieutenant in the USAF that same year.\n\n He trained as a bomber pilot, receiving his Aviator badge in 1960.\n\n He has logged over 5,800 flying hours with the US Air Force.\n\n A seasoned combat veteran, Lambert flew over 225 combat missions in South East Asia as a B-52 crew member.\n\n He was awarded the Distinguished Flying Cross (United States) and received 10 awards of the Air Medal for his service during the Vietnamese War.\n\n After serving in a succession of lesser command positions, Lambert was promoted to the rank of Brigadier General in 1983, assuming command of the former Strategic Air Command’s 7th Air Division, headquartered then at Ramstein Air Base in West Germany, and overseeing SAC operations throughout the European theater.\n\n The Brigadier General retired from the US Air Force in 1989.",
+    "Hal Moore\nHarold Gregory \"Hal\" Moore, Jr. (February 13, 1922 – February 10, 2017) was a United States Army lieutenant general and author.\n\n He was a recipient of the Distinguished Service Cross, which is the U.S. military's second highest decoration for valor, and was the first of his West Point class (1945) to be promoted to brigadier general, major general, and lieutenant general.",
+    "Mark E. Mitchell\nMark E. Mitchell is the current Acting Assistant Secretary of Defense for Special Operations and Low-Intensity Conflict of the United States Department of Defense.\n\n A retired Colonel, Mitchell was the first member of the United States Army to be awarded the Distinguished Service Cross during the War in Afghanistan and was the first to receive the award since the Vietnam War.\n\n In 2003, he received the award for his actions during the Battle of Qala-i-Jangi, which took place in late November – early December 2001.",
+    "Nadja West\nNadja Y. West (born 1961) is a United States Army lieutenant general and the 44th U.S. Army Surgeon General and Commanding General of the U.S. Army Medical Command.\n\n West is the first black Army Surgeon General, and was the first black female, active-duty, major general and the first black female major general in Army Medicine.\n\n West is also the first Army black female lieutenant general.\n\n She is the highest ranking female to have graduated from the United States Military Academy.\n\n She received the Army Distinguished Service Medal, the Defense Superior Service Medal, the Legion of Merit, and others.",
+    "Richard E. Cavazos\nRichard Edward Cavazos (born January 31, 1929), a Korean War recipient of the Distinguished Service Cross as a first lieutenant, who advanced in rank to become the United States Army's first Hispanic four-star general.\n\n During the Vietnam War, as a lieutenant colonel, Cavazos was awarded a second Distinguished Service Cross.\n\n In 1976, Cavazos became the first Mexican American to reach the rank of brigadier general in the U.S. Army.\n\n Cavazos served with great distinction for thirty-three years, with his final command as head of the U.S. Army Forces Command.",
+    "John F. Anderson\nJohn Francis Anderson was an officer in the Union Army during the American Civil War.\n\n When the war broke out, Anderson who was the son of Maine's former Governor Hugh J. Anderson was initially commissioned First Lieutenant in the militia; and on September 2, 1861, Anderson became the adjutant of the 24th Regiment Massachusetts Volunteer Infantry.\n\n He was appointed to Maj. Gen. John G. Foster's staff as a major and an aide-de-camp on June 9, 1863 and served with that officer for most of the remainder of the war, resigning on March 27, 1865.\n\n On December 11, 1866, President Andrew Johnson nominated Major Anderson to the honorary grade of brevet brigadier general, to rank from March 13, 1865 and the United States Senate confirmed the award on February 6, 1867.",
+    "Distinguished Service Cross (United States)\nThe Distinguished Service Cross is the second highest military award that can be given to a member of the United States Army (and previously, the United States Army Air Forces and the United States Air Force), for extreme gallantry and risk of life in actual combat with an armed enemy force.\n\n Actions that merit the Distinguished Service Cross must be of such a high degree that they are above those required for all other U.S. combat decorations but do not meet the criteria for the Medal of Honor.\n\n The Distinguished Service Cross is equivalent to the Navy Cross (Navy and Marine Corps), the Air Force Cross (Air Force), and the Coast Guard Cross (Coast Guard).",
+    "Julia Compton Moore\nJulia Compton Moore (February 10, 1929April 18, 2004) was the wife of Lieutenant General (Ret.)\n\n Hal Moore, a United States Army officer.\n\n Her efforts and complaints in the aftermath of the Battle of Ia Drang prompted the U.S. Army to set up survivor support networks and casualty notification teams consisting of uniformed officers, which are still in use.",
+    "Andrew Davis Bruce\nLieutenant General Andrew Davis Bruce (September 14, 1894 – July 28, 1969) was an American academic and soldier who served as the third president of the University of Houston.\n\n He retired from the United States Army in 1954 as a lieutenant general after seeing action in both World War I and World War II and founding Fort Hood, Texas.\n\n Three countries, France, the Philippines, and the United States, awarded him service medals, including the Distinguished Service Cross, the U.S. Army's second highest military decoration.\n\n Bruce is interred in Arlington National Cemetery.",
+    "Matthew Ridgway\nGeneral Matthew Bunker Ridgway (March 3, 1895 – July 26, 1993) was the 19 Chief of Staff of the United States Army.\n\n He served with great distinction during World War II, where he was the Commanding General (CG) of the 82nd Airborne Division, leading it in action in Sicily, Italy and Normandy, before taking command of the newly formed XVIII Airborne Corps in August 1944, holding this post until the end of the war, commanding it in the Battle of the Bulge, Operation Varsity and the Western Allied invasion of Germany."
+   ]
+  },
+  {
+   "id": "ccca558e6820d93b",
+   "gold": [
+    {
+     "sentence": " The early years of the company were dedicated to issuing recordings by jazz pianist Dave Brubeck, who was also one of its investors, but the label is known more for its recordings of comedian Lenny Bruce, jazz musician Vince Guaraldi, and the rock band Creedence Clearwater Revival.",
+     "facts": {
+      "0.0": "The early years of the company were dedicated to issuing recordings by jazz pianist Dave Brubeck.",
+      "0.1": "Dave Brubeck was also one of the company's investors.",
+      "0.2": "The label is known more for its recordings of comedian Lenny Bruce.",
+      "0.3": "The label is known more for its recordings of jazz musician Vince Guaraldi.",
+      "0.4": "The label is known more for its recordings of the rock band Creedence Clearwater Revival."
+     }
+    },
+    {
+     "sentence": "Vincent Anthony Guaraldi (July 17, 1928 – February 6, 1976), born Vincent Anthony Dellaglio, was an American jazz pianist noted for his innovative compositions and arrangements and for composing music for animated television adaptations of the \"Peanuts\" comic strip, as well as his performances on piano as a member of Cal Tjader's late 50s ensemble and his own solo career which included the radio hit \"Cast Your Fate to the Wind\".",
+     "facts": {
+      "1.0": "Vincent Anthony Guaraldi was born on July 17, 1928.",
+      "1.1": "Vincent Anthony Guaraldi died on February 6, 1976.",
+      "1.2": "Vincent Anthony Guaraldi was born Vincent Anthony Dellaglio.",
+      "1.3": "Vincent Anthony Guaraldi was an American jazz pianist.",
+      "1.4": "Vincent Anthony Guaraldi was noted for his innovative compositions and arrangements.",
+      "1.5": "Vincent Anthony Guaraldi was noted for composing music for animated television adaptations of the 'Peanuts' comic strip.",
+      "1.6": "Vincent Anthony Guaraldi performed on piano as a member of Cal Tjader's late 50s ensemble.",
+      "1.7": "Vincent Anthony Guaraldi had a solo career.",
+      "1.8": "Vincent Anthony Guaraldi's solo career included the radio hit 'Cast Your Fate to the Wind'."
+     }
+    }
+   ],
+   "items": [
+    "Jerry Beck\nJerry Beck (born February 9, 1955 in New York City) is an American animation historian, author, blogger, and video producer.\n\n The author and/or editor of several books on classic American animation and classic characters, including \"The 50 Greatest Cartoons\" (1994), \"The Animated Movie Guide\" (2005), \"Not Just Cartoons: Nicktoons!\"\n\n (2007), \"The Flintstones: The Official Guide to the Cartoon Classic\" (2011), \"The Hanna-Barbera Treasury: Rare Art Mementos from Your Favorite Cartoon Classics\" (2007), \"The SpongeBob SquarePants Experience: A Deep Dive into the World of Bikini Bottom\" (2013), \"Pink Panther: The Ultimate Guide\" (2005), and \"Looney Tunes and Merrie Melodies: A Complete Illustrated Guide to the Warner Bros.\n\n Cartoons\" (with Will Friedwald, 1989) alongside \"The 100 Greatest Looney Tunes Cartoons\" (2010).\n\n He is also an authority on the making of modern films, with his books detailing the art of \"Mr.",
+    "Jerry Beck\nPeabody and Sherman\", DreamWorks' \"Madagascar\", and \"Bee Movie\".\n\n Beck is also an entertainment industry consultant for TV and home entertainment productions and releases related to classic cartoons and operates the blog \"Cartoon Research.\"\n\n He appears frequently as a documentary subject and audio commentator on releases of A&E's \"Cartoons Go to War\" as well as DVD collections of \"Looney Tunes\", \"Popeye the Sailor\", and \"Woody Woodpecker\" cartoons, on which he serves as consultant and curator.",
+    "The Long Road Home\nThe Long Road Home: The Ultimate John Fogerty/Creedence Collection is a compilation album by American roots rock singer-songwriter John Fogerty, released on November 1, 2005, by Fantasy Records.\n\n It compiles songs from Fogerty's solo career and his band Creedence Clearwater Revival.\n\n The title refers to Fogerty's return to Fantasy Records, after a lengthy stint with Warner Bros.\n\n Records and a brief stint with DreamWorks Records.",
+    "The Best of Creedence Clearwater Revival\nThe Best of Creedence Clearwater Revival is a compilation album by American rock band Creedence Clearwater Revival, released in 1977.\n\n The album features all the tracks of Chronicle which was released a year earlier in 1976, as well as \"Good Golly Miss Molly\", \"Born on the Bayou\", \"Cotton Fields\", \"Hello Mary Lou\", \"The Midnight Special\", \"Walk on the Water\", and \"Night Time Is the Right Time\" which would appear on the 1986 release \"Chronicle, Vol.\n\n 2\", and \"Bootleg\" which does not appear on either volume.",
+    "Fantasy Records\nFantasy Records is an American record company and label founded by brothers Max and Sol Weiss in 1949.\n\n The early years of the company were dedicated to issuing recordings by jazz pianist Dave Brubeck, who was also one of its investors, but the label is known more for its recordings of comedian Lenny Bruce, jazz musician Vince Guaraldi, and the rock band Creedence Clearwater Revival.",
+    "Doug Clifford\nDouglas \"Cosmo\" Clifford (born April 24, 1945 in Palo Alto, California) is an American drummer, best known as a founding member of Creedence Clearwater Revival.\n\n After the group dissolved in the early 1970s, Clifford released a solo album and later joined CCR bassist Stu Cook in the Don Harrison Band.\n\n In 1995, Clifford and Cook formed the band Creedence Clearwater Revisited, performing live versions of Creedence Clearwater Revival songs.",
+    "Graph query row:\nperson: Vince Guaraldi\noccupation: jazz musician\nnationality: None\nbirth_date: None\ndeath_date: None\nconnected_entity: Fantasy Records\nrelationships: ['FROM_CHUNK', 'FROM_CHUNK']",
+    "John Fogerty (album)\nJohn Fogerty is the second solo studio album by former Creedence Clearwater Revival vocalist/guitarist John Fogerty, released in 1975.\n\n It was released by Asylum Records in the United States and Fantasy Records internationally.\n\n As with the Creedence Clearwater Revival records, the album consists of a mix of originals and cover songs.\n\n Although the album is eponymously titled, Fogerty himself refers to it as \"Old Shep\"; Shep was the name of his dog, who appears on the cover with him.",
+    "Graph query row:\nperson: Vincent Anthony Guaraldi\noccupation: jazz pianist\nnationality: American\nbirth_date: July 17, 1928\ndeath_date: February 6, 1976\nconnected_entity: Peanuts\nrelationships: ['MEMBER_OF', 'FROM_CHUNK', 'FROM_CHUNK']",
+    "Vince Guaraldi\nVincent Anthony Guaraldi (July 17, 1928 – February 6, 1976), born Vincent Anthony Dellaglio, was an American jazz pianist noted for his innovative compositions and arrangements and for composing music for animated television adaptations of the \"Peanuts\" comic strip, as well as his performances on piano as a member of Cal Tjader's late 50s ensemble and his own solo career which included the radio hit \"Cast Your Fate to the Wind\"."
+   ]
+  },
+  {
+   "id": "0ee1f33c65c018bb",
+   "gold": [
+    {
+     "sentence": "Haunted is the second album by American singer-songwriter Poe, released in 2000 (see 2000 in music) after a five-year hiatus from her debut album \"Hello\" in 1995.",
+     "facts": {
+      "0.0": "Haunted is the second album by American singer-songwriter Poe.",
+      "0.1": "Haunted was released in 2000.",
+      "0.2": "Haunted was released after a five-year hiatus from Poe's debut album 'Hello', which came out in 1995."
+     }
+    },
+    {
+     "sentence": " The self-produced album was created as a tribute to her father, and counterpart to her brother Mark Z. Danielewski's novel \"House of Leaves\".",
+     "facts": {
+      "1.0": "Haunted was self-produced.",
+      "1.1": "Haunted was created as a tribute to Poe's father.",
+      "1.2": "Haunted was created as a counterpart to the novel 'House of Leaves' by Poe's brother Mark Z. Danielewski."
+     }
+    },
+    {
+     "sentence": " A bestseller, it has been translated into a number of languages, and is followed by a companion piece, \"The Whalestoe Letters\".",
+     "facts": {
+      "2.0": "Haunted is a bestseller.",
+      "2.1": "Haunted has been translated into a number of languages.",
+      "2.2": "Haunted is followed by a companion piece, 'The Whalestoe Letters'."
+     }
+    }
+   ],
+   "items": [
+    "The entries survey literature, theatre, film, music, and curiosities: French Decadence favored artifice and excess; Camus staged Dostoyevsky’s *The Possessed* in 1959; Algren won the 1950 National Book Award; Poe satirized Gothic fiction; Moorcock wrote Elric and science-fiction novels; Nin’s diaries and erotica appeared partly posthumously. Wilde’s *Dorian Gray* faced censorship and condemnation. Verne’s",
+    "The Father-Thing (collection)\nThe Father-Thing is a collection of science fiction stories by American writer Philip K. Dick.\n\n It was first published by Gollancz in 1989 and reprints Volume III of \"The Collected Stories of Philip K. Dick\".\n\n It had not previously been published as a stand-alone volume.\n\n Many of the stories had originally appeared in the magazines \"If\", \"Science Fiction Adventures\", \"Science Fiction Stories\", \"Orbit\", \"Fantasy and Science Fiction\", \"Imagination\", \"Future\", \"Galaxy Science Fiction\", \"Beyond Fantasy Fiction\", \"Satellite\", \"Science Fiction Quarterly\" and \"Imaginative Tales\".",
+    "The Spectre Knight\nThe Spectre Knight is a one-act \"fanciful operetta\" with a libretto by James Albery and music by Alfred Cellier.\n\n It was first performed on 9 February 1878 at the Opera Comique by the Comedy Opera Company as a companion piece to \"The Sorcerer\".\n\n The piece continued to run until 23 March 1878 and was revived by the company from 28 May 1878 to 10 August 1878 as a companion piece to \"H.M.S. Pinafore\".\n\n The piece had a run in New York in 1880 and was toured in Britain and America.",
+    "Edgar Allan Poe’s humorous “A Predicament,” originally “The Scythe of Time,” parodies Gothic sensation tales and is often paired with “How to Write a Blackwood Article.” British writer Michael Moorcock (born 1939), famed for Elric, wrote the science-fiction novels *Behold the Man* (expanded from a 1966 novella; title from John’s Gospel), *The Final Programme*, *The Warlord of the Air* (1971; an",
+    "Epic Pooh\n\"Epic Pooh\" is a 1978 article by the British science fiction writer Michael Moorcock, which reviews the field of epic fantasy, with a particular focus on epic fantasy written for children.\n\n In it Moorcock critiques J. R. R. Tolkien's \"The Lord of the Rings\" for its politically conservative assumptions and for being escapist literature.",
+    "James Poe\nJames Poe (October 4, 1921 – January 24, 1980) was an American film and television screenwriter.\n\n He is best known for his work on the movies \"Around the World in 80 Days\" for which he jointly won an Academy Award in 1956, \"Cat on a Hot Tin Roof\", \"Summer and Smoke\", \"Lilies of the Field\", and \"They Shoot Horses, Don't They?\n\n\".",
+    "The Pig, or Václav Havel's Hunt for a Pig\nThe Pig, or Václav Havel's Hunt for a Pig is the final work by Václav Havel, co-authored by Vladimír Morávek.\n\n The English translation is by Edward Einhorn .\n\n Originally a short dialogue from 1987 (entitled simply \"The Pig\") and printed in a samizdat, the piece is a comic (and true) story of Václav Havel’s efforts to hold a pig roast for his friends.",
+    "Haunted (Poe album)\nHaunted is the second album by American singer-songwriter Poe, released in 2000 (see 2000 in music) after a five-year hiatus from her debut album \"Hello\" in 1995.\n\n The self-produced album was created as a tribute to her father, and counterpart to her brother Mark Z. Danielewski's novel \"House of Leaves\".",
+    "A Predicament\n\"A Predicament\" is a humorous short story by Edgar Allan Poe, usually combined with its companion piece \"How to Write a Blackwood Article.\"\n\n It was originally titled \"The Scythe of Time\".\n\n The paired stories parody the Gothic sensation tale, popular in England and America since the early 19th century.",
+    "Brothers in Arms (Bujold novel)\nBrothers in Arms is a science fiction novel by American writer Lois McMaster Bujold, part of the Vorkosigan Saga.\n\n It was the fifth book published in the series, and is the twelfth story, including novellas, in the internal chronology of the series.\n\n \"Brothers in Arms\" was first published by Baen Books in January 1989, and is included in the 2002 omnibus \"Miles Errant\"."
+   ]
+  }
+ ]
+}

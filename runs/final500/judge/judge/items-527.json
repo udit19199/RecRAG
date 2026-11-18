@@ -1,0 +1,464 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "c324dddb5e633bb9",
+   "gold": [
+    {
+     "sentence": "Milium (vernacular name milletgrass) is a genus of Eurasian, North American, and North African plants in the grass family.",
+     "facts": {
+      "0.0": "Milium's vernacular name is milletgrass.",
+      "0.1": "Milium is a genus of plants in the grass family.",
+      "0.2": "Milium plants are Eurasian, North American, and North African."
+     }
+    },
+    {
+     "sentence": "Eucommia is a genus of small trees now native to China, with a fossil record that shows a much wider distribution.",
+     "facts": {
+      "1.0": "Eucommia is a genus of small trees.",
+      "1.1": "Eucommia trees are now native to China.",
+      "1.2": "The fossil record of Eucommia shows a much wider distribution."
+     }
+    },
+    {
+     "sentence": " The single living species, \"Eucommia ulmoides\", is near threatened in the wild, but is widely cultivated in China for its bark, and is highly valued in herbology such as traditional Chinese medicine.",
+     "facts": {
+      "2.0": "Eucommia has a single living species, Eucommia ulmoides.",
+      "2.1": "Eucommia ulmoides is near threatened in the wild.",
+      "2.2": "Eucommia ulmoides is widely cultivated in China for its bark.",
+      "2.3": "Eucommia ulmoides is highly valued in herbology, such as traditional Chinese medicine."
+     }
+    }
+   ],
+   "items": [
+    "Eucommia\nEucommia is a genus of small trees now native to China, with a fossil record that shows a much wider distribution.\n\n The single living species, \"Eucommia ulmoides\", is near threatened in the wild, but is widely cultivated in China for its bark, and is highly valued in herbology such as traditional Chinese medicine.",
+    "Myrsine\nMyrsine is a genus of flowering plants in the family Primulaceae.\n\n It was formerly placed in the family Myrsinaceae before this was merged into the Primulaceae.\n\n It is found nearly worldwide, primarily in tropical and subtropical areas.\n\n It contains about 200 species, including several notable radiations, such as the matipo of New Zealand and the kōlea of Hawaiʻ i (the New Zealand \"black matipo\", \"Pittosporum tenuifolium\", is not related to \"Myrsine\").\n\n In the United States, members of this genus are known as colicwood.\n\n Some species, especially \"M. africana\", are grown as ornamental shrubs.",
+    "Genoplesium\nGenoplesium commonly known as midge orchids, is a genus of about 50 species of flowering plants in the orchid family, Orchidaceae and is found in Australia, New Zealand and New Caledonia.\n\n Midge orchids are terrestrial herbs with a single leaf at the base of the plant.\n\n They are similar to orchids in the genus \"Prasophyllum\" in that plants without flowers have a hollow, onion-like leaf.\n\n The flowers are small but often scented and attractive to their insect pollinators.\n\n There is disagreement about which species belong to this genus and some taxonomists suggest that most belong in the genus \"Corunastylis\".",
+    "Milium (plant)\nMilium (vernacular name milletgrass) is a genus of Eurasian, North American, and North African plants in the grass family.",
+    "Graph query row:\nentity: Eucommia\nrelationship: LOCATED_IN\nrelated: China",
+    "Eryngium\nEryngium is a genus of flowering plants in the family Apiaceae.\n\n There are about 250 species.\n\n The genus has a cosmopolitan distribution, with the center of diversity in South America.\n\n Common names include eryngo and amethyst sea holly (though the genus is not related to the true hollies, \"Ilex\").",
+    "Ocimum\nOcimum is a genus of aromatic annual and perennial herbs and shrubs in the family Lamiaceae, native to the tropical and warm temperate regions of all 6 inhabited continents, with the greatest number of species in Africa.\n\n Its best known species are the cooking herb Cooking basil, \"O. basilicum\" and the medicinal herb Tulsi (holy basil), \"O. tenuiflorum\".",
+    "Eucryphia\nEucryphia is a small genus of trees and large shrubs native to the south temperate regions of South America and coastal eastern Australia.\n\n Sometimes placed in a family of their own, the Eucryphiaceae, more recent classifications place them in the Cunoniaceae.\n\n There are seven species, two in South America and five in Australia, and several named hybrids.\n\n They are mostly evergreen though one species (\"E. glutinosa\") is usually deciduous.",
+    "Ardisia\nArdisia (coralberry or marlberry) is a genus of flowering plants in the family Primulaceae.\n\n It was in the former Myrsinaceae family now recognised as the myrsine sub-family Myrsinoideae.\n\n They are distributed in the Americas, Asia, Australia, and the Pacific Islands, mainly in the tropics.\n\n There are 400 to 500 species.",
+    "Coronilla\nThe genus Coronilla contains about 20 species of flowering plants native to Europe and North Africa."
+   ]
+  },
+  {
+   "id": "69aa8700b3d1a165",
+   "gold": [
+    {
+     "sentence": "More Hot Rocks (Big Hits & Fazed Cookies) is the second compilation album of Rolling Stones music released by former manager Allen Klein's ABKCO Records (who usurped control of the band's Decca/London material in 1970) after the band's departure from Decca and Klein.",
+     "facts": {
+      "0.0": "More Hot Rocks (Big Hits & Fazed Cookies) is the second compilation album of Rolling Stones music.",
+      "0.1": "More Hot Rocks was released by ABKCO Records.",
+      "0.2": "ABKCO Records is run by former manager Allen Klein.",
+      "0.3": "Allen Klein usurped control of the Rolling Stones' Decca/London material in 1970.",
+      "0.4": "More Hot Rocks was released after the Rolling Stones departed from Decca.",
+      "0.5": "More Hot Rocks was released after the Rolling Stones departed from Allen Klein."
+     }
+    },
+    {
+     "sentence": "Allen Klein (December 18, 1931 July 4, 2009) was an American businessman, music publisher, writers' representative, filmmaker and record label executive, most noted for his tough persona and aggressive, innovative negotiation tactics, many of which established higher industry standards for compensating recording artists.",
+     "facts": {
+      "1.0": "Allen Klein was born December 18, 1931.",
+      "1.1": "Allen Klein died July 4, 2009.",
+      "1.2": "Allen Klein was an American businessman.",
+      "1.3": "Allen Klein was a music publisher.",
+      "1.4": "Allen Klein was a writers' representative.",
+      "1.5": "Allen Klein was a filmmaker.",
+      "1.6": "Allen Klein was a record label executive.",
+      "1.7": "Allen Klein was most noted for his tough persona.",
+      "1.8": "Allen Klein was most noted for aggressive, innovative negotiation tactics.",
+      "1.9": "Many of Allen Klein's negotiation tactics established higher industry standards for compensating recording artists."
+     }
+    },
+    {
+     "sentence": " He first scored massive monetary and contractual windfalls for Buddy Knox and Jimmy Bowen, one-hit rockabillies of the late 1950s, then parlayed his early successes into a position managing Sam Cooke, and eventually managed the Beatles and the Rolling Stones simultaneously, along with many other artists, becoming one of the most powerful individuals in the music industry during his era.",
+     "facts": {
+      "2.0": "Allen Klein first scored massive monetary windfalls for Buddy Knox.",
+      "2.1": "Allen Klein first scored massive contractual windfalls for Buddy Knox.",
+      "2.2": "Allen Klein first scored massive monetary windfalls for Jimmy Bowen.",
+      "2.3": "Allen Klein first scored massive contractual windfalls for Jimmy Bowen.",
+      "2.4": "Buddy Knox and Jimmy Bowen were one-hit rockabillies of the late 1950s.",
+      "2.5": "Allen Klein later parlayed his early successes into a position managing Sam Cooke.",
+      "2.6": "Allen Klein eventually managed the Beatles.",
+      "2.7": "Allen Klein eventually managed the Rolling Stones.",
+      "2.8": "Allen Klein managed the Beatles and the Rolling Stones simultaneously.",
+      "2.9": "Allen Klein managed many other artists.",
+      "2.10": "Allen Klein became one of the most powerful individuals in the music industry during his era."
+     }
+    }
+   ],
+   "items": [
+    "2120 South Michigan Ave.\n2120 South Michigan Ave. is the fifteenth studio album by George Thorogood and the Destroyers.\n\n It was released on June 14, 2011 on the Capitol Records label.\n\n The album peaked at #2 on the \"Billboard\" Top Blues Albums chart.\n\n The title refers to the address of the offices and recording studios of Chess Records in Chicago.\n\n The album contains ten covers of songs recorded on Chess Records by artists such as Chuck Berry, Bo Diddley, Willie Dixon, and Muddy Waters; plus a cover of The Rolling Stones' instrumental \"2120 South Michigan Avenue\" and two original songs about Chess Records artists.\n\n Capitol Records approached Thorogood with the idea for the album and selected most of the songs.\n\n Buddy Guy and Charlie Musselwhite perform on the album, although their work was added after primary recording was complete.",
+    "Bigtop Records\nBigtop Records was an American record label started by music executive Johnny Bienstock and the major music publisher Hill & Range Music and was co-owned along with Big Top Record Distributors (sic).\n\n Hit artists included Del Shannon, Johnny and the Hurricanes, Lou Johnson, Sammy Turner, Don and Juan, and Toni Fisher.\n\n Big Top Record Distributors also distributed Paul Case's Dunes Records label in the early 60's, which had hits from Ray Peterson (\"Corrina, Corrina\") and Curtis Lee (\"Pretty Little Angel Eyes\"), both records produced by Phil Spector.\n\n Bell Records briefly distributed Bigtop prior to the label closing, around 1965.\n\n \"Bigtop\" also released two Mad Magazine music parody themed albums; \"Mad Twists Rock 'N' Roll\" and \"Fink Along With Mad\" in 1963.",
+    "Rock Star (TV series)\nRock Star is a television series produced by Mark Burnett, David Goffin, and Lisa Hennessy in which aspiring singers from all around the world competed to become the lead singer of a featured group.\n\n It debuted on CBS on July 11, 2005, to mediocre ratings.\n\n The show was hosted by television personality and commercial spokeswoman Brooke Burke and Jane's Addiction & Red Hot Chili Peppers lead guitarist Dave Navarro.\n\n In Australian band INXS chose J.D. Fortune as their new lead singer.\n\n For , the band Rock Star Supernova chose Lukas Rossi as the lead singer of their new supergroup.",
+    "More Hot Rocks (Big Hits &amp; Fazed Cookies)\nMore Hot Rocks (Big Hits & Fazed Cookies) is the second compilation album of Rolling Stones music released by former manager Allen Klein's ABKCO Records (who usurped control of the band's Decca/London material in 1970) after the band's departure from Decca and Klein.\n\n Released in late 1972 as the follow-up to the hugely successful \"Hot Rocks 1964–1971\", it was another success for Klein and ABKCO.",
+    "Doug Grean\nDoug Grean is an American record producer, audio engineer, guitarist, based in Los Angeles.\n\n He has worked with artists Sheryl Crow, Ricki Lee Jones, Glen Campbell, Scott Weiland, Slash, Velvet Revolver, Stone Temple Pilots, The Crystal Method, Tim McGraw, Cyndi Lauper, Annabella Lwin (Bow Wow Wow), Corey Glover (Living Color), Camp Freddy, DJ Hurricane and John Taylor (Duran Duran).\n\n Grean was formerly the lead guitarist and touring musical director for Scott Weiland and the Wildabouts.\n\n Some of Grean's television appearances with Weiland include: VH1 Legends, Last Call with Carson Daly, The Tonight Show with Jay Leno, and the Grammy awards with Velvet Revolver as keyboardist, performing \"All Across the Universe\" with Stevie Wonder, Norah Jones, Bono, Steven Tyler, Brian Wilson, and Alison Krauss.",
+    "Hot Rocks 1964–1971\nHot Rocks 1964–1971 is the first compilation album of Rolling Stones music released by former manager Allen Klein's ABKCO Records (who gained control of the band's Decca/London material in 1970) after the band's departure from Decca and Klein.\n\n Released in late 1971, it proved to be The Rolling Stones' biggest-selling release of their career and an enduring and popular retrospective.",
+    "Allen Klein\nAllen Klein (December 18, 1931 July 4, 2009) was an American businessman, music publisher, writers' representative, filmmaker and record label executive, most noted for his tough persona and aggressive, innovative negotiation tactics, many of which established higher industry standards for compensating recording artists.\n\n He founded ABKCO Music & Records Incorporated.\n\n Klein revolutionized the income potential of recording artists, who previously had been routinely victimized by onerous record company contracts.\n\n He first scored massive monetary and contractual windfalls for Buddy Knox and Jimmy Bowen, one-hit rockabillies of the late 1950s, then parlayed his early successes into a position managing Sam Cooke, and eventually managed the Beatles and the Rolling Stones simultaneously, along with many other artists, becoming one of the most powerful individuals in the music industry during his era.",
+    "A Compilation of Scott Weiland Cover Songs\nA Compilation of Scott Weiland Cover Songs is a compilation album and third solo studio album by Stone Temple Pilots frontman Scott Weiland, released on August 30, 2011.\n\n The album consists entirely of cover songs, featuring an array of covers of artists that inspired Weiland, such as David Bowie, The Beatles, The Rolling Stones, and The Smiths.\n\n The album was originally set to be released together with Weiland's memoir \"Not Dead & Not for Sale\" but Weiland decided later to release the album by itself exclusively in digital format.",
+    "Hot Streets\nHot Streets is the tenth studio album (twelfth overall) by the American band Chicago, released in 1978.\n\n In many ways, \"Hot Streets\" marked the beginning of a new era for the band, turning to disco music, a move which would be derided in retrospect.\n\n It was also the band's first album with all-new material released since their second that didn't have a numbered title.\n\n It was also the first album not to feature original guitarist/vocalist Terry Kath, who died from an accidental self-inflicted gunshot wound in January 1978.\n\n He was replaced by Donnie Dacus on this album.",
+    "Lonesome Pine Fiddlers\nNone of them ever had a music lesson yet excelled on every instrument they touched.\n\n Natives of the Gilbert Creek region of southern West Virginia, Cousin Ezra, along with brothers Ireland (Lazy Ned) and Curly Ray Cline, were part of the original Lonesome Pine Fiddlers from about 1938, a group that worked on radio at WHIS Bluefield, West Virginia.\n\n During World War II, Ned was killed in action.\n\n When the Pine Fiddlers resumed regular daily broadcasts, Charlie, who played multiple instruments, joined them on a regular basis.\n\n Charlie returned to the Fiddlers briefly before becoming a member of Bill Monroe's Blue Grass Boys.\n\n During 1952-1955, Charlie worked off and on with Monroe, recording some 38 songs, all on Decca.\n\n It has been said that he played every instrument at one time or another in the Monroe group except mandolin.\n\n Charlie spent most of 1953 back with the Lonesome Pine Fiddlers working at WJR radio in Detroit.\n\n When Ezra brought the band to Pikeville, Kentucky, in November, Charlie rejoined Bill Monroe."
+   ]
+  },
+  {
+   "id": "a5d37d9eab0aed97",
+   "gold": [
+    {
+     "sentence": "Distortion Mirrors is an English alternative rock band, based in Leeds, West Yorkshire, England, and who was formed in 2011.",
+     "facts": {
+      "0.0": "Distortion Mirrors is an English alternative rock band.",
+      "0.1": "Distortion Mirrors is based in Leeds, West Yorkshire, England.",
+      "0.2": "Distortion Mirrors was formed in 2011."
+     }
+    },
+    {
+     "sentence": "OK Go is an American rock band originally from Chicago, Illinois, now based in Los Angeles, California.",
+     "facts": {
+      "1.0": "OK Go is an American rock band.",
+      "1.1": "OK Go was originally from Chicago, Illinois.",
+      "1.2": "OK Go is now based in Los Angeles, California."
+     }
+    }
+   ],
+   "items": [
+    "Twelve Days of OK Go\nTwelve Days of OK Go is a compilation album by American rock band OK Go.\n\n It was released on December 31, 2012.\n\n OK Go started releasing the songs on December 10, with one song released each weekday.\n\n The last song, a cover of \"Any Time at All\", was released on Christmas.\n\n A bonus track, a cover of \"This Will Be Our Year,\" was released on New Year's Eve.",
+    "Distortion Mirrors\nDistortion Mirrors is an English alternative rock band, based in Leeds, West Yorkshire, England, and who was formed in 2011.",
+    "OK Go videography\nThe musical rock band OK Go has earned considerable fame for their creative but often low-budget music videos, most of which have been promoted through Internet video sharing sites like YouTube.\n\n Many of these have become viral videos; the 2006 video for \"Here It Goes Again\", in which the band performed a complex routine with the aid of motorized treadmills, has received over 50 million views four years later.\n\n Their video for Needing/Getting, released February 5, 2012 in partnership with Chevrolet, debuted during Super Bowl XLVI and has over 32 million views on YouTube.\n\n Samuel Bayer, who produced many music videos in the 1990s, asserted that OK Go's promotion of music videos on the Internet was akin to Nirvana's ushering in the grunge movement.\n\n Many of the videos also use long or single-shot takes, which \"Salon\"' s Matt Zoller Seitz says \"restore[s] a sense of wonder to the musical number by letting the performers' humanity shine through and allowing them to do their thing with a minimum of filmmaking interference\".",
+    "Go Too\nGo Too (1977) is Go's third album.\n\n Go was founded by Stomu Yamashta, Steve Winwood and Michael Shrieve.\n\n For this album, Jess Roden replaced Steve Winwood (who had left the group).\n\n The style of the music became modified accordingly.\n\n In addition, Linda Lewis was hired as a singer.\n\n Together with Paul Jackson, Jr. and the orchestra of Martyn Ford the album unified various soundscapes.",
+    "OK Go (2001 EP)\nOK Go or The Pink EP (officially known as OKGoCD.002) is the second EP by American rock band OK Go.",
+    "OK Go\nOK Go is an American rock band originally from Chicago, Illinois, now based in Los Angeles, California.\n\n The band is composed of Damian Kulash (lead vocals, guitar), Tim Nordwind (bass guitar and vocals), Dan Konopka (drums and percussion) and Andy Ross (guitar, keyboards and vocals), who joined them in 2005, replacing Andy Duncan.\n\n The band is known for its often quirky and elaborate one-take music videos.",
+    "The Writing's on the Wall (OK Go song)\n\"The Writing's on the Wall\" is a song by American rock band OK Go.\n\n It was released on June 17, 2014, as part of the band's EP \"Upside Out\", and is also the first single from the band's fourth studio album \"Hungry Ghosts\".\n\n On the same day, the band released a music video in which the members use props to create optical illusions, reflecting the song's description of a relationship that fails because the couple has different points of view.\n\n Like previous OK Go videos, it is structured as a one-shot music video.\n\n The many YouTube views of the video caused the song to debut in the top ten of the US \"Billboard\" Hot Rock Songs chart, as well as number one on the Bubbling Under Hot 100 Singles chart.",
+    "OK Go videography\nThe success of OK Go's music first won the band the 14th Annual Webby Special Achievement Award for Film and Video Artist of the Year.\n\n The video for \"This Too Shall Pass\" was named both \"Video of the Year\" and \"Best Rock Video\" at the 3rd annual UK Music Video Awards.\n\n\"This Too Shall Pass\" won the LA Film Fest's Audience Award for Best Music Video, UK MVA Awards – Music Video of the Year Winner 2010, among others.",
+    "OK Go (album)\nOK Go is the debut studio album by American rock band OK Go.\n\n It was released in September 2002.\n\n The cover was created by designer Stefan Sagmeister.",
+    "OK Go (2000 EP)\nOK Go or The Brown EP (officially known as OKGoCD.001) is the first EP by American rock band OK Go."
+   ]
+  },
+  {
+   "id": "b12162f1e7068522",
+   "gold": [
+    {
+     "sentence": " His exploits in that battle were described by Hal Moore in, \"We Were Soldiers Once and Young\".",
+     "facts": {
+      "0.0": "The exploits of the man referred to here in that battle were described by Hal Moore.",
+      "0.1": "Hal Moore described the exploits in the book 'We Were Soldiers Once and Young'."
+     }
+    },
+    {
+     "sentence": "Harold Gregory \"Hal\" Moore, Jr. (February 13, 1922 – February 10, 2017) was a United States Army lieutenant general and author.",
+     "facts": {
+      "1.0": "Harold Gregory 'Hal' Moore, Jr. was born on February 13, 1922.",
+      "1.1": "Harold Gregory 'Hal' Moore, Jr. died on February 10, 2017.",
+      "1.2": "Harold Gregory 'Hal' Moore, Jr. was a United States Army lieutenant general.",
+      "1.3": "Harold Gregory 'Hal' Moore, Jr. was an author."
+     }
+    }
+   ],
+   "items": [
+    "Andrew Davis Bruce\nLieutenant General Andrew Davis Bruce (September 14, 1894 – July 28, 1969) was an American academic and soldier who served as the third president of the University of Houston.\n\n He retired from the United States Army in 1954 as a lieutenant general after seeing action in both World War I and World War II and founding Fort Hood, Texas.\n\n Three countries, France, the Philippines, and the United States, awarded him service medals, including the Distinguished Service Cross, the U.S. Army's second highest military decoration.\n\n Bruce is interred in Arlington National Cemetery.",
+    "George McMillin\nGeorge Johnson McMillin (November 25, 1889 – August 29, 1983 ) was a United States Navy Rear Admiral who served as the 38th and final Naval Governor of Guam.\n\n He graduated from the United States Naval Academy in 1911 and served as an officer during four separate conflicts: World War I, the occupation of the Dominican Republic, the United States occupation of Veracruz, and World War II.\n\n He served on the staff of both the Naval Academy and the Naval War College as well.\n\n He is most remembered as the commander who surrendered Guamanian forces to a much larger Japanese force during the First Battle of Guam, only the second battle of World War II involving the United States.\n\n He had previously evacuated all but one civilian American citizen from the island and attempted to rebuild defenses after a strong typhoon devastated the island the year before.\n\n On December 8, 1941, Japanese forces invaded Guam and McMillin surrendered two days later.\n\n He spent the rest of the war at various Japanese prisoner of war camps.",
+    "Julia Compton Moore\nJulia Compton Moore (February 10, 1929April 18, 2004) was the wife of Lieutenant General (Ret.)\n\n Hal Moore, a United States Army officer.\n\n Her efforts and complaints in the aftermath of the Battle of Ia Drang prompted the U.S. Army to set up survivor support networks and casualty notification teams consisting of uniformed officers, which are still in use.",
+    "Hal Moore\nHarold Gregory \"Hal\" Moore, Jr. (February 13, 1922 – February 10, 2017) was a United States Army lieutenant general and author.\n\n He was a recipient of the Distinguished Service Cross, which is the U.S. military's second highest decoration for valor, and was the first of his West Point class (1945) to be promoted to brigadier general, major general, and lieutenant general.",
+    "Michael Herr\nMichael David Herr (April 13, 1940 – June 23, 2016) was an American writer and war correspondent, known as the author of \"Dispatches\" (1977), a memoir of his time as a correspondent for \"Esquire magazine\" (1967–1969) during the Vietnam War.\n\n The book was called the best \"to have been written about the Vietnam War\" by \"The New York Times Book Review\"; novelist John le Carré called it \"the best book I have ever read on men and war in our time.\"\n\n Herr later was credited with pioneering the literary genre of the nonfiction novel, along with authors such as Truman Capote, Norman Mailer, and Tom Wolfe.",
+    "Richard E. Cavazos\nRichard Edward Cavazos (born January 31, 1929), a Korean War recipient of the Distinguished Service Cross as a first lieutenant, who advanced in rank to become the United States Army's first Hispanic four-star general.\n\n During the Vietnam War, as a lieutenant colonel, Cavazos was awarded a second Distinguished Service Cross.\n\n In 1976, Cavazos became the first Mexican American to reach the rank of brigadier general in the U.S. Army.\n\n Cavazos served with great distinction for thirty-three years, with his final command as head of the U.S. Army Forces Command.",
+    "Mark E. Mitchell\nMark E. Mitchell is the current Acting Assistant Secretary of Defense for Special Operations and Low-Intensity Conflict of the United States Department of Defense.\n\n A retired Colonel, Mitchell was the first member of the United States Army to be awarded the Distinguished Service Cross during the War in Afghanistan and was the first to receive the award since the Vietnam War.\n\n In 2003, he received the award for his actions during the Battle of Qala-i-Jangi, which took place in late November – early December 2001.",
+    "William K. MacNulty\nWilliam Kirk MacNulty (May 22, 1892 - August 3, 1964) was a U. S. Marine with a long and distinguished record.\n\n He was a young U.S. Marine Corps Second Lieutenant during World War One and saw action at the Battle of the Argonne Forest.\n\n He served as a captain during the Second U.S. Nicaraguan Campaign (1926–33).\n\n During the Second World War as Lieutenant Colonel he commanded the U.S. Marine Corps defense of Guam against overwhelming Imperial Japanese forces during the First Battle of Guam.\n\n He was incarcerated by the Japanese as a prisoners of war.\n\n He was promoted to Brigadier General during captivity and retired from military service in 1946.\n\n He is buried at the Golden Gate National Cemetery in San Bruno, San Mateo County, California.",
+    "Myron F. Diduryk\nMyron F. Diduryk (July 15, 1938 to April 24, 1970) was a Ukrainian-American United States Army Major, who played a key role as an infantry company commander in the Battle of Ia Drang, the first major battle of the Vietnam War.\n\n His exploits in that battle were described by Hal Moore in, \"We Were Soldiers Once and Young\".\n\n Moore said that Diduryk was, “… the finest battlefield company commander I had ever seen, bar none.”\n\n Diduryk was killed in action on his second tour in Vietnam.",
+    "Matthew Ridgway\nGeneral Matthew Bunker Ridgway (March 3, 1895 – July 26, 1993) was the 19 Chief of Staff of the United States Army.\n\n He served with great distinction during World War II, where he was the Commanding General (CG) of the 82nd Airborne Division, leading it in action in Sicily, Italy and Normandy, before taking command of the newly formed XVIII Airborne Corps in August 1944, holding this post until the end of the war, commanding it in the Battle of the Bulge, Operation Varsity and the Western Allied invasion of Germany."
+   ]
+  },
+  {
+   "id": "e954009368575624",
+   "gold": [
+    {
+     "sentence": "Samantha Marie Sprackling (born 3 June 1968, Lagos, Nigeria) more commonly known as Saffron, is a singer, songwriter, actress and the lead singer of the electronica band Republica.",
+     "facts": {
+      "0.0": "Samantha Marie Sprackling was born on 3 June 1968.",
+      "0.1": "Samantha Marie Sprackling was born in Lagos, Nigeria.",
+      "0.2": "Samantha Marie Sprackling is more commonly known as Saffron.",
+      "0.3": "Samantha Marie Sprackling is a singer.",
+      "0.4": "Samantha Marie Sprackling is a songwriter.",
+      "0.5": "Samantha Marie Sprackling is an actress.",
+      "0.6": "Samantha Marie Sprackling is the lead singer of the electronica band Republica."
+     }
+    },
+    {
+     "sentence": "Myles Richard Kennedy (born Myles Richard Bass; November 27, 1969) is an American musician, singer, and songwriter, best known as the lead vocalist and rhythm guitarist of the rock band Alter Bridge, and as the lead vocalist in guitarist Slash's backing band, known as Myles Kennedy and the Conspirators.",
+     "facts": {
+      "1.0": "Myles Richard Kennedy was born Myles Richard Bass.",
+      "1.1": "Myles Richard Kennedy was born on November 27, 1969.",
+      "1.2": "Myles Richard Kennedy is an American musician.",
+      "1.3": "Myles Richard Kennedy is an American singer.",
+      "1.4": "Myles Richard Kennedy is an American songwriter.",
+      "1.5": "Myles Richard Kennedy is best known as the lead vocalist and rhythm guitarist of the rock band Alter Bridge.",
+      "1.6": "Myles Richard Kennedy is the lead vocalist in guitarist Slash's backing band.",
+      "1.7": "Slash's backing band is known as Myles Kennedy and the Conspirators."
+     }
+    },
+    {
+     "sentence": " A former guitar instructor from Spokane, Washington, he has worked as a session musician and songwriter, making both studio and live appearances with several artists, and has been involved with several projects throughout his career.",
+     "facts": {
+      "2.0": "Myles Richard Kennedy is a former guitar instructor.",
+      "2.1": "Myles Richard Kennedy is from Spokane, Washington.",
+      "2.2": "Myles Richard Kennedy has worked as a session musician.",
+      "2.3": "Myles Richard Kennedy has worked as a songwriter.",
+      "2.4": "Myles Richard Kennedy has made studio appearances with several artists.",
+      "2.5": "Myles Richard Kennedy has made live appearances with several artists.",
+      "2.6": "Myles Richard Kennedy has been involved with several projects throughout his career."
+     }
+    }
+   ],
+   "items": [
+    "Myles Kennedy\nMyles Richard Kennedy (born Myles Richard Bass; November 27, 1969) is an American musician, singer, and songwriter, best known as the lead vocalist and rhythm guitarist of the rock band Alter Bridge, and as the lead vocalist in guitarist Slash's backing band, known as Myles Kennedy and the Conspirators.\n\n A former guitar instructor from Spokane, Washington, he has worked as a session musician and songwriter, making both studio and live appearances with several artists, and has been involved with several projects throughout his career.",
+    "Saffron (singer)\nSamantha Marie Sprackling (born 3 June 1968, Lagos, Nigeria) more commonly known as Saffron, is a singer, songwriter, actress and the lead singer of the electronica band Republica.\n\n She also performed in London's \"Starlight Express\" for two years, appeared in the music video for the Chesney Hawkes hit, \"The One and Only\", and as a dancer in the music video for N-Joi's single, \"Mindflux\".",
+    "World on Fire World Tour\nThe World on Fire World Tour is the third concert tour by lead guitarist Slash as a solo artist, which started in July 2014 and was scheduled to resume in late 2015, in support of Slash's third solo album \"World on Fire\".\n\n The tour features the same backing band that performed with Slash during his two last tours, billed as \"Slash featuring Myles Kennedy and The Conspirators\", featuring Myles Kennedy handling lead vocal, bassist Todd Kerns, drummer Brent Fitz and rhythm guitarist Frank Sidoris.",
+    "Myles Kennedy discography\nThe full discography of rock musician Myles Kennedy consists of eleven studio albums, two concert films, four live albums, two extended plays, and thirteen singles in total, in addition to eleven studio tracks that he has appeared on as a featured artist, one of which was a single.\n\n Born in Boston on November 27, 1969, Kennedy is currently a member of the rock band Alter Bridge, with whom he has released four studio albums, two concert films, and several singles.\n\n He is also the frontman of Slash's touring group, and with Slash he has released a live album, \"Live in Manchester\", the first of a series of live albums released throughout the summer of 2010, and \"\", another live album released in 2011.\n\n In 2012, he released a collaboration studio album with Slash titled \"Apocalyptic Love\", which is billed to Slash featuring Myles Kennedy and the Conspirators, as well as the 2014 followup titled \"World on Fire\".\n\n With The Mayfield Four, he released two studio albums, two extended plays, and four singles; with Citizen Swing, two studio albums; and with Cosmic Dust, one studio album.",
+    "Cosmic Dust (band)\nCosmic Dust, also known as the Cosmic Dust Fusion Band, is an instrumental jazz band formed in 1990 by Jim Templeton.\n\n The band was the first well-known group that guitarist Myles Kennedy played in.\n\n The original lineup consisted of Jim Templeton on keyboard, Gary Edighoffer on saxophone, Clipper Anderson on double bass, Myles Kennedy on guitar, and Scott Reusser on drums.\n\n Kennedy eventually left the band and went on to become the lead vocalist/lead guitarist for a jazz fusion group called Citizen Swing and later an alternative rock band called The Mayfield Four.\n\n Kennedy is now fronting and playing guitar for the hard rock/alternative metal band Alter Bridge, which he helped form with Creed members Mark Tremonti, Scott Phillips, and Brian Marshall in 2004, and is also the lead vocalist for Slash's solo band on tour.",
+    "List of songs recorded by Myles Kennedy\nMyles Kennedy is an American rock musician.\n\n Born in Boston, Massachusetts, he originally began his musical career in Spokane, Washington as the guitarist in jazz band Cosmic Dust.\n\n After recording 1991's \"Journey\", he left to form alternative rock band Citizen Swing in 1992.\n\n The group released two albums, 1992's \"Cure Me with the Groove\" and 1996's \"Deep Down\", on both of which Kennedy was co-credited for songwriting.\n\n Kennedy's next band was The Mayfield Four, which he co-founded with guitarist Craig Johnson, bassist Marty Meisner and drummer Zia Uddin in 1996.\n\n The frontman wrote most of the material on the band's 1998 debut \"Fallout\" and all of the songs on 2001's \"Second Skin\".",
+    "Bent to Fly\n\"Bent to Fly\" is a song by American hard rock guitarist Slash, featuring vocalist Myles Kennedy and backing band The Conspirators.\n\n Written by Slash and Kennedy, it was released as the second single from the guitarist's third solo album (the second with Kennedy and The Conspirators), \"World on Fire\".\n\n The song was used as the theme song for the 2014 National Rugby League Finals series, and Slash performed the song live at ANZ Stadium as pre-show entertainment for the league's grand final that year.",
+    "World on Fire (Slash song)\n\"World on Fire\" is a song by American hard rock guitarist Slash, featuring vocalist Myles Kennedy and backing band The Conspirators.\n\n Written by Slash and Kennedy, it is the title track of the guitarist's third solo album (the second with Kennedy and The Conspirators) \"World on Fire\".\n\n Released as the album's lead single, \"World on Fire\" topped the US \"Billboard\" Mainstream Rock Songs chart.",
+    "Graph query row:\nperson: Myles Kennedy\noccupation: ['rock musician', 'guitarist', 'frontman']\nrelationship: BORN_IN\nconnected_role: None\nrelated_entity: Boston",
+    "The Halo Method\nThe Halo Method Is an American rock supergroup, formed in 2012 in Hollywood, California.\n\n It consisted of guitarist Ben Moody (We Are the Fallen, ex-Evanescence), drummer Miles McPherson, vocalist Lukas Rossi (ex-Rock Star Supernova, ex-Daylight Division) and bassist Josh Newell (ex-In This Moment)."
+   ]
+  },
+  {
+   "id": "50cf2c2f10317d88",
+   "gold": [
+    {
+     "sentence": " Built in 1988 by the TOGO company, it was the fastest roller coaster in the world when it was built (taking the record from American Eagle at Six Flags Great America).",
+     "facts": {
+      "0.0": "The roller coaster was built in 1988 by the TOGO company.",
+      "0.1": "The roller coaster built by the TOGO company was the fastest roller coaster in the world when it was built.",
+      "0.2": "The roller coaster built by the TOGO company took the record for fastest roller coaster in the world from American Eagle at Six Flags Great America."
+     }
+    },
+    {
+     "sentence": "TOGO (株式会社トーゴ , Kabushiki-gaisha Tōgo ) was a Japanese amusement ride company that built roller coasters, giant wheels, carousels, flumes, dark rides, sky cycles and other amusement rides.",
+     "facts": {
+      "1.0": "TOGO (株式会社トーゴ, Kabushiki-gaisha Tōgo) was a Japanese amusement ride company.",
+      "1.1": "TOGO built roller coasters.",
+      "1.2": "TOGO built giant wheels.",
+      "1.3": "TOGO built carousels.",
+      "1.4": "TOGO built flumes.",
+      "1.5": "TOGO built dark rides.",
+      "1.6": "TOGO built sky cycles.",
+      "1.7": "TOGO built other amusement rides."
+     }
+    }
+   ],
+   "items": [
+    "White Cyclone\nWhite Cyclone (ホワイトサイクロン , Howaito Saikuron ) is a wooden roller coaster at Nagashima Spa Land in Mie Prefecture, Japan.\n\n At 1700 m in length, White Cyclone is the third longest wooden roller coaster in the world, and is the longest wooden roller coaster outside of the United States.\n\n Despite its length, White Cyclone is still considerably shorter than the 2479 m Steel Dragon 2000, the world's longest steel roller coaster, which is also at Nagashima Spa Land.\n\n In addition to being the third longest wooden roller coaster, White Cyclone is the seventh tallest wooden roller coaster in the world and the fourth tallest wooden roller coaster outside the United States.\n\n A single ride on the White Cyclone costs ¥1,000 (approximately $9 USD), and the ride is restricted to those individuals above 1.3 m in height; and those individuals under 54 years of age.",
+    "Giovanola\nGiovanola Freres SA was one of the prominent thrill ride manufacturers in the world.\n\n It was well known for thrill rides and also built electrical power stations, water storage tanks, pipelines, highway bridges, and many other steel products.\n\n The company started out as a small metal forging shop, founded by Joseph Giovanola in 1888.\n\n It served as a subcontractor to Intamin supplying rides and roller coasters.\n\n In 1998 Giovanola started marketing directly under the name Giovanola Amusement Rides Worldwide.\n\n The company was based in Monthey, Switzerland.\n\n During its last years in business, Giovanola fashioned steel behind the scenes for companies such as Intamin and Bolliger & Mabillard.\n\n The company also built its own thrill rides and roller coasters from 1998 to 2001.\n\n Examples of Giovanola roller coasters are Goliath at Six Flags Magic Mountain, Titan at Six Flags Over Texas and Anaconda at South Africa's Gold Reef City.",
+    "Pretzel Amusement Ride Company\nThe Pretzel Amusement Ride Company was a famous manufacturer of pretzel dark rides. Pretzel built over 1400 pretzel rides and sold them to carnivals and parks.\n\n The pretzel ride was invented by Marvin Rempfer.\n\n Leon Cassidy was Marvin's partner in the Pretzel Amusement Ride Company.\n\n Both names are on the patent.\n\n Leon Cassidy patented the single-rail dark ride in 1928 along with Marvin Rempfer.\n\n The company originated in Tumbling Dam Park on the banks of Sunset Lake in Bridgeton, New Jersey.\n\n A rider said that \"\"It felt like I was turned and twisted like a Pretzel\"\", so the name Pretzel was chosen.\n\n A large heavy pretzel design was originally affixed to the front of each car to prevent the car from flipping backwards.\n\n In 1929, a standard Pretzel ride had five cars, 350 feet of track, and was one and a half minutes per ride.\n\n A pretzel ride sold for $1,200.",
+    "Mack Rides\nMack Rides GmbH & Co KG, also known simply as Mack Rides, is a German company that designs and constructs amusement rides.\n\n Mack Rides in headquartered in Waldkirch, Baden-Württemberg, Germany.\n\n Mack Rides is one of the world's oldest amusement industry suppliers and builds all kinds of amusement devices including several types of flat rides, dark rides, log flumes, tow boat rides and roller coasters.\n\n The family that owns Mack Rides also owns Europa-Park.",
+    "Anton Schwarzkopf\nAnton Schwarzkopf (8 July 1924 – 30 July 2001) was a German engineer of amusement rides, and founder of the Schwarzkopf Industries Company, which built numerous amusement rides and large roller coasters for both amusement parks and traveling funfairs.",
+    "List of roller coaster rankings\nRoller coasters are amusement rides developed for amusement parks and modern theme parks.\n\n During the 16th and 17th centuries, rides consisting of wooden sleds that took riders down large slides made from ice were popular in Russia.\n\n The first roller coasters, where the train was attached to a wooden track, first appeared in France in the early 1800s.\n\n Although wooden roller coasters are still being produced, steel roller coasters are more common and can be found on every continent except Antarctica.",
+    "Millennium Force\nMillennium Force is a steel roller coaster built by Intamin at Cedar Point amusement park in Sandusky, Ohio, United States.\n\n It was the fourteenth roller coaster to be built at the park since Blue Streak opened in 1964.\n\n Upon completion in 2000, Millennium Force broke six world records and was the world's first Giga Coaster, a roller coaster that exceeds 300 ft in height and completes a full circuit.\n\n It was briefly the tallest and fastest in the world until Steel Dragon 2000 opened later the same year.\n\n The ride is also the third-longest roller coaster in North America after The Beast at Kings Island and Fury 325 at Carowinds.\n\n It was the first roller coaster to use a cable lift system rather than a traditional chain lift.\n\n The coaster has a 310 ft , 45-degree lift hill with a 300 ft drop and features two tunnels, three overbanked turns, and four hills.\n\n It has a top speed of 93 mph .",
+    "Bandit (Yomiuriland)\nBandit (バンデット , Bandetto ) is a steel roller coaster located at Yomiuriland in the city of Inagi, near Tokyo, Japan.\n\n Built in 1988 by the TOGO company, it was the fastest roller coaster in the world when it was built (taking the record from American Eagle at Six Flags Great America).\n\n It lost the record to Magnum XL-200 at Cedar Point one year later.",
+    "Castle Park (amusement park)\nCastle Park, formerly Castle Amusement Park, is a 25-acre amusement park and family amusement center located in Riverside, California.\n\n The park utilizes a medieval \"castle\" theme and includes attractions such as a miniature golf course, arcade, and 27 amusement rides including three roller coasters such as \"Merlin's Revenge\", a junior rollercoaster, \"Screamin' Demon\" a spinning Wild Mouse rollercoaster, and \"Little Dipper\", a children's rollercoaster.\n\n The main \"castle\" themed building, houses the arcade as well as its only dark ride; \"Ghost Blasters\", an interactive attraction, designed by Sally Corporation, which can also be found at other amusement parks throughout North America.\n\n The park was designed, built and operated by Bud Hurlbut, who designed several rides at Knott's Berry Farm.\n\n Castle Park is currently owned and operated by Palace Entertainment.",
+    "TOGO\nTOGO (株式会社トーゴ , Kabushiki-gaisha Tōgo ) was a Japanese amusement ride company that built roller coasters, giant wheels, carousels, flumes, dark rides, sky cycles and other amusement rides."
+   ]
+  },
+  {
+   "id": "833cb3597da127b2",
+   "gold": [
+    {
+     "sentence": "Bank Street () is a short street in Central, Hong Kong.",
+     "facts": {
+      "0.0": "Bank Street is a short street.",
+      "0.1": "Bank Street is located in Central, Hong Kong."
+     }
+    },
+    {
+     "sentence": " It links Des Voeux Road Central to Queen's Road Central.",
+     "facts": {
+      "1.0": "Bank Street links Des Voeux Road Central to Queen's Road Central."
+     }
+    },
+    {
+     "sentence": " It is named after its location between HSBC Building and the Bank of China Building, the former headquarters of HSBC and Bank of China (Hong Kong) respectively.",
+     "facts": {
+      "2.0": "Bank Street is named after its location between the HSBC Building and the Bank of China Building.",
+      "2.1": "The HSBC Building was the former headquarters of HSBC.",
+      "2.2": "The Bank of China Building was the former headquarters of Bank of China (Hong Kong)."
+     }
+    },
+    {
+     "sentence": "HSBC Main Building () is a headquarters building of The Hongkong and Shanghai Banking Corporation, which is today a wholly owned subsidiary of London-based HSBC Holdings.",
+     "facts": {
+      "3.0": "HSBC Main Building is a headquarters building of The Hongkong and Shanghai Banking Corporation.",
+      "3.1": "The Hongkong and Shanghai Banking Corporation is today a wholly owned subsidiary of London-based HSBC Holdings."
+     }
+    }
+   ],
+   "items": [
+    "Bank of Canton\nBank of Canton () was established in 1912 in Canton but registered as a British company in Hong Kong.\n\n This made it the first Chinese-owned bank in Hong Kong.\n\n At the time, all the other banks in Hong Kong were foreign, primarily British, including the locally incorporated but British-run Hongkong and Shanghai Banking Corporation.\n\n Security Pacific National Bank (SPNB) bought a majority share in Bank of Canton in 1971.\n\n In 1988, Security Pacific succeeded in wholly acquiriing Bank of Canton, which became Security Pacific Asia Bank.\n\n When Bank of America acquired Security Pacific Corporation in 1993 it changed Security Pacific Asia Bank’s name to Bank of America (Asia).\n\n China Construction Bank acquired Bank of America (Asia) in 2006.",
+    "Transportation Building\nThe Transportation Building is a 44-story office building located at 225 Broadway on the corner of Barclay Street in the Civic Center neighborhood of Lower Manhattan in New York City.\n\n It also carries the address 2-4 Barclay Street.\n\n It was built in 1927 and was designed by the architecture firm of York & Sawyer, in the Renaissance Revival style, using setbacks common to skyscrapers built after the adoption of the 1916 Zoning Resolution.\n\n It sits across Barclay Street from the Woolworth Building.",
+    "HSBC lions\nVarious headquarters and branch buildings of The Hongkong and Shanghai Banking Corporation and the HSBC Group, into which the Hongkong and Shanghai Banking Corporation has evolved, feature a pair of lion sculptures.\n\n The HSBC lions have become distinctive landmarks in their own right in Hong Kong and Shanghai respectively, with a further pair to be found in London.",
+    "270 Park Avenue\n270 Park Avenue (also known as the JPMorgan Chase Tower and formerly the Union Carbide Building) is a high-rise office building located in Midtown Manhattan, New York City.\n\n It was designed by Natalie de Blois for Skidmore, Owings & Merrill.",
+    "Bank Street (Hong Kong)\nBank Street () is a short street in Central, Hong Kong.\n\n It links Des Voeux Road Central to Queen's Road Central.\n\n It is named after its location between HSBC Building and the Bank of China Building, the former headquarters of HSBC and Bank of China (Hong Kong) respectively.",
+    "HSBC Building (Hong Kong)\nHSBC Main Building () is a headquarters building of The Hongkong and Shanghai Banking Corporation, which is today a wholly owned subsidiary of London-based HSBC Holdings.\n\n It is located along the southern side of Statue Square near the location of the old City Hall, Hong Kong (built in 1869, demolished in 1933).\n\n The previous HSBC building was built in 1935 and pulled down to make way for the current building.\n\n The address remains as 1 Queen's Road Central (the north facing side of the building was served by Des Voeux Road, which was seashore, making Queen's Road was the main entrance, in contrast to modern day that usually accessed the bank from Des Voeux Road).\n\n The building can be reached from Exit K of Central MTR Station and facing Statue Square.",
+    "383 Madison Avenue\n383 Madison Avenue is an office building owned and occupied by JP Morgan Chase in New York City on a full block bound by Madison Avenue and Vanderbilt Avenue between East 46th and 47th Streets.\n\n Formerly known as the Bear Stearns Building, it housed the world headquarters of the now-defunct Bear Stearns from the building's completion until Bear's collapse and sale to JPMorgan Chase in 2008.\n\n The building now houses the New York offices for J.P. Morgan's investment banking division, which formerly occupied 277 Park Avenue.\n\n Both 383 Madison and 277 Park are adjacent to JPMorgan Chase's world headquarters at 270 Park Avenue.",
+    "HSBC\nHSBC Holdings PLC is a British multinational banking and financial services holding company, tracing its origin to a hong in Hong Kong.\n\n It is the world's seventh largest bank by total assets and the largest in Europe with total assets of US$2.374 trillion (as of December 2016).\n\n It was established in its present form in London in 1991 by The Hongkong and Shanghai Banking Corporation Limited to act as a new group holding company.\n\n The origins of the bank lie mainly in Hong Kong and to a lesser extent in Shanghai, where branches were first opened in 1865.\n\n The HSBC name is derived from the initials of the Hongkong and Shanghai Banking Corporation.\n\n The company was first formally incorporated in 1866.\n\n The company continues to see both the United Kingdom and Hong Kong as its \"home markets\".",
+    "200 West Street\n200 West Street is the global headquarters of the Goldman Sachs investment banking firm.\n\n The building is a 749 ft , 44-story building located on West Street, between Vesey and Murray Streets in Lower Manhattan.\n\n It is adjacent to the World Financial Center and the Conrad Hotel, the Verizon Building to the east across West Street, and diagonally opposite the World Trade Center.\n\n It is the only office building in Battery Park City north of the World Financial Center.",
+    "HSBC Building, the Bund\nThe HSBC Building (also known as the Municipal Government Building) is a six-floor neo-classical building in the Bund area of Shanghai, China.\n\n It served as the headquarters of the Shanghai branch of The Hongkong and Shanghai Banking Corporation from 1923 to 1955, and currently houses the Shanghai Pudong Development Bank.\n\n The building is situated at number 12, the Bund.\n\n Designed by the British architecture firm Palmer & Turner Architects and Surveyors, construction of the building lasted from 5 May 1921 to 23 June 1923."
+   ]
+  },
+  {
+   "id": "a473702327afc9a9",
+   "gold": [
+    {
+     "sentence": "Rick Husband Amarillo International Airport (IATA: AMA, ICAO: KAMA, FAA LID: AMA) is a public airport six miles (10 km) east of downtown Amarillo, in Potter and Randall Counties, Texas, United States.",
+     "facts": {
+      "0.0": "Rick Husband Amarillo International Airport has the IATA code AMA.",
+      "0.1": "Rick Husband Amarillo International Airport has the ICAO code KAMA.",
+      "0.2": "Rick Husband Amarillo International Airport has the FAA LID AMA.",
+      "0.3": "Rick Husband Amarillo International Airport is a public airport.",
+      "0.4": "Rick Husband Amarillo International Airport is six miles (10 km) east of downtown Amarillo.",
+      "0.5": "Rick Husband Amarillo International Airport is in Potter and Randall Counties, Texas, United States."
+     }
+    },
+    {
+     "sentence": "Grand Forks International Airport (IATA: GFK, ICAO: KGFK, FAA LID: GFK) is a public airport five miles (8 km) northwest of Grand Forks, in Grand Forks County, North Dakota.",
+     "facts": {
+      "1.0": "Grand Forks International Airport has the IATA code GFK.",
+      "1.1": "Grand Forks International Airport has the ICAO code KGFK.",
+      "1.2": "Grand Forks International Airport has the FAA LID GFK.",
+      "1.3": "Grand Forks International Airport is a public airport.",
+      "1.4": "Grand Forks International Airport is five miles (8 km) northwest of Grand Forks.",
+      "1.5": "Grand Forks International Airport is in Grand Forks County, North Dakota."
+     }
+    }
+   ],
+   "items": [
+    "Rick Husband Amarillo International Airport\nRick Husband Amarillo International Airport (IATA: AMA, ICAO: KAMA, FAA LID: AMA) is a public airport six miles (10 km) east of downtown Amarillo, in Potter and Randall Counties, Texas, United States.\n\n The airport was renamed in 2003 after NASA astronaut and Amarillo native Rick Husband, who died in the Space Shuttle \"Columbia\" disaster in February of that year.",
+    "Emerado, North Dakota\nEmerado is a city in Grand Forks County, North Dakota, United States located near Grand Forks Air Force Base.\n\n It is part of the \"Grand Forks, ND-MN Metropolitan Statistical Area\" or \"Greater Grand Forks\".\n\n The population was 414 at the 2010 census.\n\n Grand Forks Air Force Base is located near Emerado.",
+    "Texas Air &amp; Space Museum\nThe Texas Air & Space Museum is an aviation museum located near Rick Husband Amarillo International Airport in Amarillo, Texas.\n\n The museum displays civilian and military aircraft as well as a wide range of air and space artifacts.",
+    "Grand Forks Municipal Airport\nGrand Forks Municipal Airport is a former airport, located within current city limits approximately 3 mi west-northwest of central Grand Forks, North Dakota.\n\n It was closed shortly after World War II and is now redeveloped as part of the urban area of Grand Forks.",
+    "Grand Sky\nGrand Sky is an UAS (unmanned aerial systems)-specific business and aviation park located at Grand Forks Air Force Base near Grand Forks, North Dakota.\n\n A groundbreaking for the development was held in September 2015, making it the first UAS business and aviation park in the U.S.\n\n The park consists of 217 acres and includes access to the Grand Forks Air Force Base runway for large UAS flights.",
+    "Grand Forks International Airport\nGrand Forks International Airport (IATA: GFK, ICAO: KGFK, FAA LID: GFK) is a public airport five miles (8 km) northwest of Grand Forks, in Grand Forks County, North Dakota.\n\n GFK has no scheduled passenger flights out of the country but has an \"international\" title (like many other airports) because it has customs service for arrivals from Canada and other countries.",
+    "Lea County Regional Airport\nLea County Regional Airport (IATA: HOB, ICAO: KHOB) (Lea County-Hobbs Airport) is four miles (6.4 km) west of Hobbs, in Lea County, New Mexico.\n\n The airport covers 898 acre and has three runways.\n\n It is an FAA certified commercial airport served by United Airlines' affiliate with daily regional flights.\n\n Lea County Regional Airport is the largest of the three airports owned and operated by Lea County Government.\n\n Lea County also owns and operated two general aviation airports in Lovington and Jal, New Mexico.",
+    "Brainerd Lakes Regional Airport\nBrainerd Lakes Regional Airport (IATA: BRD, ICAO: KBRD, FAA LID: BRD) is a public use airport located three nautical miles (6 km) northeast of the central business district of Brainerd, a city in Crow Wing County, Minnesota, United States.\n\n The airport is owned by the city and county.\n\n It is mostly used for general aviation but is also served by one commercial airline.",
+    "Downtown Grand Forks\nDowntown Grand Forks is the original commercial center of Grand Forks, North Dakota.\n\n Located on the western bank of the Red River of the North, the downtown neighborhood is situated near the fork of the Red River and the Red Lake River.\n\n While downtown is no longer the dominant commercial area of the Greater Grand Forks community, it remains the historic center of Grand Forks.\n\n An 80.4 acre portion was listed on the National Register of Historic Places in 2005, as Downtown Grand Forks Historic District.\n\n Today, downtown Grand Forks is home to many offices, stores, restaurants, and bars.",
+    "Grand Forks International\nThe Grand Forks International (GFI) is an annual international invitational baseball tournament hosted at James Donaldson Park in Grand Forks, British Columbia.\n\n The GFI is the largest invitational baseball tournament in Canada and is a large part of the culture in Grand Forks.\n\n The tournament is also notable for being run entirely by volunteers."
+   ]
+  },
+  {
+   "id": "2047987a80aa815d",
+   "gold": [
+    {
+     "sentence": "Homer Jay Simpson is a fictional character and the main protagonist of the American animated television series \"The Simpsons\" as the patriarch of the eponymous family.",
+     "facts": {
+      "0.0": "Homer Jay Simpson is a fictional character.",
+      "0.1": "Homer Jay Simpson is the main protagonist of the American animated television series 'The Simpsons'.",
+      "0.2": "Homer Jay Simpson is the patriarch of the Simpson family, the family the show is named after."
+     }
+    },
+    {
+     "sentence": " He is voiced by Dan Castellaneta and first appeared on television, along with the rest of his family, in \"The Tracey Ullman Show\" short \"Good Night\" on April 19, 1987.",
+     "facts": {
+      "1.0": "Homer Simpson is voiced by Dan Castellaneta.",
+      "1.1": "Homer Simpson first appeared on television along with the rest of his family.",
+      "1.2": "Homer Simpson's first television appearance was in the short 'Good Night' from 'The Tracey Ullman Show'.",
+      "1.3": "Homer Simpson's first television appearance was on April 19, 1987."
+     }
+    },
+    {
+     "sentence": "Daniel Louis Castellaneta ( ; born October 29, 1957) is an American actor, voice actor, comedian and screenwriter.",
+     "facts": {
+      "2.0": "Daniel Louis Castellaneta was born October 29, 1957.",
+      "2.1": "Daniel Louis Castellaneta is an American actor.",
+      "2.2": "Daniel Louis Castellaneta is a voice actor.",
+      "2.3": "Daniel Louis Castellaneta is a comedian.",
+      "2.4": "Daniel Louis Castellaneta is a screenwriter."
+     }
+    }
+   ],
+   "items": [
+    "The Itchy &amp; Scratchy Show\n(voiced by Alex Rocco, and, later, Hank Azaria), who runs the studio and produces the show.",
+    "Dan Castellaneta\nDaniel Louis Castellaneta ( ; born October 29, 1957) is an American actor, voice actor, comedian and screenwriter.\n\n Noted for his long-running role as Homer Simpson on the animated television series \"The Simpsons\", he also voices many other characters for the show, including Abraham \"Grampa\" Simpson, Barney Gumble, Krusty the Clown, Sideshow Mel, Groundskeeper Willie, Mayor Quimby and Hans Moleman.",
+    "Ned Flanders\nNedward \"Ned\" Flanders, Jr. is a recurring fictional character in the animated television series \"The Simpsons\".\n\n He is voiced by Harry Shearer, and first appeared in the series premiere episode \"Simpsons Roasting on an Open Fire\".\n\n He is the good-natured, cheery next-door neighbor to the Simpson family and is generally loathed by Homer Simpson.\n\n A devout Evangelical Christian with an annoyingly perfect family, he is among the friendliest and most compassionate of Springfield's residents and is generally considered a pillar of the Springfield community.",
+    "Citizen Joe\n\"Citizen Joe\" is the fifteenth episode for season eight of the Canadian-American military science fiction television series \"Stargate SG-1\".\n\n The episode features known voice actor Dan Castellaneta, who voices Homer Simpson in \"The Simpsons\".\n\n The episode was written by executive producer Robert C. Cooper, the episode was directed by Andy Mikita.\n\n The episode received a below average Nielsen household rating and received no syndication rating to compare.\n\n The episode got strong reviews from major media publishers worldwide.",
+    "Mona Simpson (The Simpsons)\nMona Penelope Simpson (née Olsen) is a recurring fictional character in the animated television series \"The Simpsons\".\n\n She has been voiced by several actresses, including Maggie Roswell, Tress MacNeille, Pamela Hayden, and most prominently, Glenn Close.\n\n Glenn Close's performances as Mona have been well received by critics and she was named one of the top 25 guest stars on the show by IGN.",
+    "Grampa Simpson\nAbraham Jedediah Simpson II, often known as Grampa, is a fictional character in the animated television series \"The Simpsons\".\n\n He made his first appearance in the episode entitled \"Grampa and the Kids\", a Simpsons short on \"The Tracey Ullman Show\".\n\n Voiced by Dan Castellaneta, he is the father of Homer Simpson and the grandfather of Bart, Lisa and Maggie Simpson.\n\n In the 1000th issue of \"Entertainment Weekly\", Grampa was selected as the Grandpa for \"The Perfect TV Family\".",
+    "Homer to the Max\n\"Homer to the Max\" is the thirteenth episode of \"The Simpsons\"<nowiki>'</nowiki> tenth season.\n\n It originally aired on the Fox network in the United States on February 7, 1999.\n\n In the episode, Homer discovers that a new television show, \"Police Cops\", has a hero also named Homer Simpson.\n\n He is delighted with the positive attention he receives because of his name, but when the television character is rewritten from a hero to a bumbling idiot, he is mocked and taunted, so he changes his name to \"Max Power\" to rid himself of the negative attention.\n\n Max gains new friends, and is forced into a protest to prevent a forest from being knocked down.\n\n In the end, he changes his name back to Homer Simpson.",
+    "Moe Szyslak\nMorris \"Moe\" Szyslak is a fictional character from the American animated television series \"The Simpsons\".\n\n He is voiced by Hank Azaria and first appeared in the series premiere episode \"Simpsons Roasting on an Open Fire\".\n\n Moe is the proprietor and bartender of Moe's Tavern, a Springfield bar frequented by Homer Simpson, Barney Gumble, Carl Carlson, Lenny Leonard, Sam, Larry, and others.",
+    "Homer Simpson\nHomer Jay Simpson is a fictional character and the main protagonist of the American animated television series \"The Simpsons\" as the patriarch of the eponymous family.\n\n He is voiced by Dan Castellaneta and first appeared on television, along with the rest of his family, in \"The Tracey Ullman Show\" short \"Good Night\" on April 19, 1987.\n\n Homer was created and designed by cartoonist Matt Groening while he was waiting in the lobby of James L. Brooks' office.\n\n Groening had been called to pitch a series of shorts based on his comic strip \"Life in Hell\" but instead decided to create a new set of characters.\n\n He named the character after his father, Homer Groening.\n\n After appearing for three seasons on \"The Tracey Ullman Show\", the Simpson family got their own series on Fox that debuted December 17, 1989.",
+    "Homer Simpson, This Is Your Wife\n\"Homer Simpson, This Is Your Wife\" is the fifteenth episode of the seventeenth season of the American animated television sitcom \"The Simpsons\".\n\n It originally aired on the Fox network in the United States on March 26, 2006, and was watched by around ten million people during that broadcast.\n\n In the episode, Homer signs the Simpson family up for a reality show in which the mothers of two families switch places.\n\n Marge gets to live with a friendly man named Charles and his perfect son, while Homer, Bart, and Lisa must spend time with Charles' strict wife Verity."
+   ]
+  },
+  {
+   "id": "31b5cf86541ae350",
+   "gold": [
+    {
+     "sentence": "Ronkonkoma is a major railroad station and transportation hub along the Main Line of the Long Island Rail Road in Ronkonkoma, New York.",
+     "facts": {
+      "0.0": "Ronkonkoma is a major railroad station.",
+      "0.1": "Ronkonkoma is a major transportation hub.",
+      "0.2": "Ronkonkoma is along the Main Line of the Long Island Rail Road.",
+      "0.3": "The Ronkonkoma railroad station is in Ronkonkoma, New York."
+     }
+    },
+    {
+     "sentence": "Ronkonkoma ( ) is a hamlet and census-designated place (CDP) on Long Island in the Town of Islip, New York, United States.",
+     "facts": {
+      "1.0": "Ronkonkoma is a hamlet.",
+      "1.1": "Ronkonkoma is a census-designated place (CDP).",
+      "1.2": "Ronkonkoma is on Long Island.",
+      "1.3": "Ronkonkoma is in the Town of Islip.",
+      "1.4": "The Town of Islip is in New York, United States."
+     }
+    }
+   ],
+   "items": [
+    "North Creek Railroad Station\nThe North Creek Railroad Station is a historic railroad station complex located at North Creek, Warren County, New York.\n\n The complex consists of the railroad station, the freight house, round house, turntable, and horse barn.\n\n The station was built in 1874 and is a simple, rectangular, gable roofed building with a broad, overhanging strut-supported roof in the Stick-Eastlake style.\n\n Its exterior is covered with vertical boards.",
+    "Jamestown Gateway Train Station\nThe Jamestown Gateway Train Station, also known as the Jamestown Erie Railroad station, and the Erie-Lackawanna Railroad Station, is a historic train station located at Jamestown in Chautauqua County, New York.\n\n Although no longer an active railroad station due to a lack of passenger service in the area after a restoration done in 2011 the building currently serves as a bus transportation center and community space for Jamestown.\n\n The first train arrived at Jamestown on August 25, 1860 as part of the Atlantic and Great Western Railroad.",
+    "Lacona Railroad Station and Depot\nLacona Railroad Station and Depot, also known as New York Central and Hudson River Railroad Station and Depot, is a historic railway depot located at Lacona in Oswego County, New York.\n\n It was built in 1891 by the New York Central and Hudson River Railroad.\n\n It is a small rectangular, one story, gable ended structure.",
+    "Ronkonkoma, New York\nRonkonkoma ( ) is a hamlet and census-designated place (CDP) on Long Island in the Town of Islip, New York, United States.\n\n The population of the CDP was 19,082 at the 2010 census.",
+    "Ridgefield Park station\nRidgefield Park Station, also known as West Shore Station, was railroad station in Ridgefield Park, New Jersey at the foot of Mount Vernon Street served by the New York, Susquehanna and Western Railroad (NYSW) and the West Shore Railroad, a division of New York Central (NYCRR) The New York, Ontario and Western Railway (NYO&W) had running rights along the West Shore and sometimes stopped at Ridgefield Park.\n\n First opened in 1883 it was one of three passenger stations in the village, the others being the Little Ferry Station to the south and Westview Station to the north.\n\n The station house, built at a cost $100,000 opened in 1927.\n\n Southbound service crossed Overpeck Creek and continued to terminals on the Hudson River waterfront where there was connecting ferry service across the Hudson River to Manhattan.\n\n Northbound near Bogota the parallel NYSW and West Shore lines diverge and continue into northern New Jersey, Pennsylviania, and upstate New York.\n\n Passenger service ended in 1966.",
+    "Old Country Road\nOld Country Road is a major east–west thoroughfare through central Nassau County and extending into western Suffolk County on Long Island, New York.\n\n It serves many of the major shopping centers in central Nassau County including Roosevelt Field Mall.\n\n The road also forms part of the border between the towns of Hempstead and North Hempstead.\n\n In Nassau County, Old Country Road is county-maintained as the unsigned County Route 25 (CR 25) west of Round Swamp Road.",
+    "New York State Route 108\nNew York State Route 108 (NY 108) is a 1.72 mi north–south state highway located on the Suffolk County side of the Suffolk–Nassau county line on Long Island, New York, in the United States.\n\n It is a spur route connecting NY 25A in Cold Spring Harbor to the Cold Spring Harbor station on the Long Island Rail Road's Port Jefferson Branch via Harbor Road.\n\n Harbor Road terminates at an intersection with Woodbury Road, on the Nassau County line, which carries County Route 11 to the east and unsigned County Route 12 to the west.\n\n NY 108, assigned in the early 1930s, is the shortest state highway on Long Island.",
+    "Ronkonkoma (LIRR station)\nRonkonkoma is a major railroad station and transportation hub along the Main Line of the Long Island Rail Road in Ronkonkoma, New York.\n\n The station is the eastern terminus of the Ronkonkoma Branch and the western terminus of the out Branch.",
+    "Long Island Electric Railway\nThe Long Island Electric Railway was a streetcar company operating in Brooklyn, Queens, and Nassau County, New York, United States between 1894 and 1926.\n\n The company was partially owned by the Long Island Consolidated Electric Companies, a holding company for the Long Island Rail Road and partially by August Belmont and the Interborough Rapid Transit Company.\n\n It connected the east end of the Fulton Street El at Crescent Street station in City Line, Brooklyn with Jamaica, Queens, and ran from there to the Nassau County line at Queens Village and to Far Rockaway, Queens via Nassau County.\n\n It also had a connection to Belmont Park.\n\n The New York and Long Island Traction Company used trackage rights over its line from Crescent Street to Queens Village.",
+    "Lake Worth station\nLake Worth is a Tri-Rail commuter rail station in Lake Worth, Florida, at the confluence of Lake Worth Road (SR 802) and Interstate 95.\n\n Opening to service January 9, 1989, parking is available at this station, all of which is beneath I-95 on the south side of Lake Worth Road."
+   ]
+  },
+  {
+   "id": "459b57ccf417d247",
+   "gold": [
+    {
+     "sentence": "Hänt Extra is a Swedish language weekly celebrity and youth magazine published by Aller Media in Stockholm, Sweden.",
+     "facts": {
+      "0.0": "Hänt Extra is a Swedish language magazine.",
+      "0.1": "Hänt Extra is a weekly magazine.",
+      "0.2": "Hänt Extra is a celebrity and youth magazine.",
+      "0.3": "Hänt Extra is published by Aller Media.",
+      "0.4": "Hänt Extra is published in Stockholm, Sweden."
+     }
+    },
+    {
+     "sentence": "Tea Moderna (Macedonian: Теа Модерна ) is a Macedonian woman's weekly magazine women.",
+     "facts": {
+      "1.0": "Tea Moderna is a Macedonian woman's weekly magazine.",
+      "1.1": "Tea Moderna's name in Macedonian is Теа Модерна.",
+      "1.2": "Tea Moderna is a magazine for women."
+     }
+    }
+   ],
+   "items": [
+    "Cult MTL\nCult MTL is an English language arts, culture and news website and monthly print publication, based in Montreal, Quebec, Canada.\n\n Its first print edition appeared on 7 September 2012.\n\n It was created only a few months after Montreal's last English-language alternative weekly, \"Montreal Mirror\", was unceremoniously closed by its parent company, Quebecor.\n\n The founding editor's of \"Cult MTL\" were also involved with the \"Mirror\".\n\n In August 2013 the print version of the magazine was started.",
+    "Micom Film and TV Productions\nMICOM Film and TV Productions was established in 1989 by Sreco Mihelcic in a Former Yugoslavian republic Slovenia.\n\n In the early 90' company joined two sons, Matjaz Mihelcic - Program director, Producer and Vasja Mihelcic - technical director and Executive Producer.\n\n MICOM was in 1990s the leading Slovenian creative house, producing TV shows for youth, popular entertainment TV shows and discovered many new TV concepts.\n\n Micom discovered many talents, different creative people and gave them possibility to express themselves.\n\n The most popular TV shows were: Lahkih nog naokrog (educational youth TV series), Cari zacimb (entertaining cooking TV series), Razpoke v casu (fantasy TV series).\n\n They also produced documentary movies.\n\n One of them got in 1996 internationally release - Fight for the river and it's distributed by International Historic Films.\n\n.\n\n In the beginning of 2000 company joined Marjana Mihelcic.\n\n It was a family based company with long tradition in show and entertainment business.",
+    "Hekmat\nHekmat (Persian: حكمت‎ ‎  –\"Wisdom\") was the first Persian-language newspaper to be published in Egypt, as well as the first Persian journal to be published in an Arab country.\n\n Founded and managed by the Iranian expat Mohammad-Mahdi Tabrizi (died 1914), a physician by profession, it was published from 20 September 1892 until 30 May 1911.\n\n \"Hekmat\" carried mostly news, but also feature a variety of articles on political and social issues.\n\n Despite being published in an \"Arab country\", it avoided the usage of Arabic terms and compoun words as well as Arabicized forms of non-Arab words throughouts its texts.",
+    "Hänt Extra\nHänt Extra is a Swedish language weekly celebrity and youth magazine published by Aller Media in Stockholm, Sweden.",
+    "Hänt Bild\nHänt Bild is a celebrity magazine published in Sweden.\n\n The magazine was started in 2003.\n\n It is part of Aller Media AB.\n\n It is published on a weekly basis.",
+    "Makedonsko Sonce\nMakedonsko Sonce (Macedonian: ; English: Macedonian Sun ) is a weekly magazine published in the Republic of Macedonia.\n\n The title means \"Macedonian Sun\", referring to the Vergina Sun, which is used in the logo of the magazine.\n\n It was established by Gjorgija (George) Atanasoski and the first edition was published on June 24, 1994.\n\n It describes its own political stance as affirming \"Macedonian national values, not only on territory of Macedonia but also in the other parts of ethnic Macedonia\".",
+    "Nikola Mladenov\nNikola Mladenov (Macedonian: Никола Младенов ; 10 March 1964 – 26 March 2013) was a Macedonian journalist, actor, founder and managing editor of the weekly newspaper \"Fokus\", widely regarded as one of the most reputable journalists in Macedonia, who along with his colleagues from the newspaper \"Mlad borec\" is considered to have laid the basis for the pluralistic principles in the Macedonian journalism.\n\n The \"Award for best research story of the year – Nikola Mladenov\", which is awarded by the Macedonian Institute for Media, is named after him.",
+    "Tea Moderna (magazine)\nTea Moderna (Macedonian: Теа Модерна ) is a Macedonian woman's weekly magazine women.",
+    "Pravda Pyat\nPravda Pyat (Russian: правда пять or \"Truth Five\") is a weekly Russian tabloid news publication that was a spin-off from \"Pravda\".\n\n It was founded by Greek entrepreneurs Christos Giannikos and Fyodoros Giannikos of Pravda International in 1996.\n\n The magazine replaced \"Pravda\" when that publication ceased operations.\n\n Its intended audience was younger readers, and coverage was more sensationalistic than \"Pravda\", focusing on crime and scandals.",
+    "Albanian Coalition &quot;Perspective&quot;\nThe Albanian Coalition \"Perspective\" is an Albanian political party in Montenegro."
+   ]
+  }
+ ]
+}

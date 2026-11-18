@@ -1,0 +1,45 @@
+[
+{"id": "c3f4231276ed3a20", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."}, {"item": 8, "quote": "Jada shared that during the 2022 Academy Awards - when Will slapped Chris Rock after he cracked a joke about Jada’s appearance - the pair had actually been separated for six years."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "during the 2022 Academy Awards - when Will slapped Chris Rock after he cracked a joke about Jada’s"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Jada Pinkett Smith and Will Smith have been separated since 2016"}]},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "632815238c18a9c7", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]}
+]},
+{"id": "4e5ae38a821bf37f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Certainly there wasn’t a valid alternative to Google at the time,” Cue said."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "91cede13e1f0af2c", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX?"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Alameda Research’s former CEO Caroline Ellison"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 1, "quote": "claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF"}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "edc9f3c239a71ac9", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen,\" he told Fox News Digital."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen,\" he told Fox News Digital."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen,\" he told Fox News Digital."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house."}]}
+]}
+]

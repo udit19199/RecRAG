@@ -1,0 +1,862 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=52f49054702b753b ===
+Gold sentences and facts:
+Sentence 0: `` The Joker '' Cover of the 1973 single Single by Steve Miller Band from the album The Joker B - side `` ' see track listings ' '' Released October 1973 Format 7 '' Single , 12 '' single , Cassette single ( Original Releases ) , CD single and Digital download ( Post Releases ) . Genre Rock , blues rock , southern rock Length 4 : 26 ( Album version ) ; 3 : 35 ( 7 '' version / Radio edit ) and 6 : 20 ( Extended version ) Label Capitol Records ; EMI - Odeon ; London Records , Parlophone Records , EMI Bovema , Odeon Records . Songwriter ( s ) Eddie Curtis , Ahmet Ertegün , Steve Miller Producer ( s ) Steve Miller Steve Miller Band singles chronology `` Fandango '' ( 1972 ) `` The Joker '' ( 1973 ) `` Your Cash Ai n't Nothin ' But Trash '' ( 1974 ) `` Fandango '' ( 1972 ) `` The Joker '' ( 1973 ) `` Your Cash Ai n't Nothin ' But Trash '' ( 1974 ) `` Take the Money and Run '' / `` The Joker '' ( 1983 , double A-side , live ) Cover of the 1983 live single Steve Miller Band singles chronology `` Living in the U.S.A. '' ( live ) ( 1983 ) String Module Error : Match not found1983 `` Take the Money and Run '' ( live ) / `` The Joker '' ( live ) ( 1983 ) String Module Error : Match not found1983 `` Shangri - La '' ( 1984 ) Shangri - La1984 `` The Joker '' ( 1990 , reissue ) Cover of the 1990 reissue Steve Miller Band singles chronology `` Ya Ya '' ( 1988 ) Ya Ya1988 `` The Joker '' ( 1990 ) The Joker1990 `` Wide River '' ( 1993 ) Wide River1993
+  Fact 0.0: The Joker's 1973 single was released in October 1973 by Steve Miller Band.
+  Fact 0.1: The 1973 single 'The Joker' is from the album The Joker.
+  Fact 0.2: The Joker single was released in 7-inch single, 12-inch single, and cassette single formats (original releases).
+  Fact 0.3: The Joker single was released as a CD single and digital download (later releases).
+  Fact 0.4: The Joker single's genres are rock, blues rock, and southern rock.
+  Fact 0.5: The Joker single's album version is 4:26 long.
+  Fact 0.6: The Joker single's 7-inch version / radio edit is 3:35 long.
+  Fact 0.7: The Joker single's extended version is 6:20 long.
+  Fact 0.8: The Joker single's label is Capitol Records.
+  Fact 0.9: The Joker single was also issued on EMI-Odeon, London Records, Parlophone Records, EMI Bovema, and Odeon Records labels.
+  Fact 0.10: The Joker single's songwriters are Eddie Curtis, Ahmet Ertegün, and Steve Miller.
+  Fact 0.11: The Joker single's producer is Steve Miller.
+  Fact 0.12: The Joker single is a cover of a 1973 single.
+  Fact 0.13: Steve Miller Band singles chronology includes 'Fandango' (1972), 'The Joker' (1973), and 'Your Cash Ain't Nothin' But Trash' (1974).
+  Fact 0.14: 'Take the Money and Run' / 'The Joker' (1983) was a double A-side live single by Steve Miller Band.
+  Fact 0.15: 'The Joker' (1983) live single is a cover of the 1983 live single.
+  Fact 0.16: Steve Miller Band singles chronology includes 'Living in the U.S.A.' (live) (1983).
+  Fact 0.17: Steve Miller Band singles chronology includes 'Take the Money and Run' (live) / 'The Joker' (live) (1983).
+  Fact 0.18: Steve Miller Band singles chronology includes 'Shangri-La' (1984).
+  Fact 0.19: Steve Miller Band singles chronology includes 'The Joker' (1990, reissue), a cover of the 1990 reissue.
+  Fact 0.20: Steve Miller Band singles chronology includes 'Ya Ya' (1988).
+  Fact 0.21: Steve Miller Band singles chronology includes 'The Joker' (1990).
+  Fact 0.22: Steve Miller Band singles chronology includes 'Wide River' (1993).
+Sentence 1: `` The Joker '' is a song by the Steve Miller Band from their 1973 album The Joker . It is one of two Steve Miller Band songs that feature the nonce word `` pompatus '' . The song topped the US Billboard Hot 100 in early 1974 .
+  Fact 1.0: 'The Joker' is a song by the Steve Miller Band.
+  Fact 1.1: 'The Joker' is from the Steve Miller Band's 1973 album The Joker.
+  Fact 1.2: 'The Joker' is one of two Steve Miller Band songs that feature the nonce word 'pompatus'.
+  Fact 1.3: 'The Joker' topped the US Billboard Hot 100 in early 1974.
+
+Retrieved items:
+<item 1>
+The Joker (Steve Miller Band song)
+The Joker ( Steve Miller Band song ) - wikipedia The Joker ( Steve Miller Band song ) Jump to : navigation , search `` The Joker ( song ) '' redirects here .
+For other songs with the same title , see Joker ( disambiguation ) . `` The Joker '' Cover of the 1973 single Single by Steve Miller Band from the album The
+Joker B - side `` ' see track listings ' '' Released October 1973 Format 7 '' Single , 12 '' single , Cassette single ( Original Releases ) , CD single and
+Digital download ( Post Releases ) . Genre Rock , blues rock , southern rock Length 4 : 26 ( Album version ) ; 3 : 35 ( 7 '' version / Radio edit ) and 6 : 20 (
+Extended version ) Label Capitol Records ; EMI - Odeon ; London Records , Parlophone Records , EMI Bovema , Odeon Records .
+</item 1>
+
+<item 2>
+The Joker (Steve Miller Band song)
+-- 3 : 59 Personnel ( edit ) Steve Miller -- guitar , lead vocals Gerald Johnson -- bass , backing vocals Dick Thompson -- organ John King -- drums
+Certifications ( edit ) Country Certification Date Sales certified Sweden Gold February 6 , 1991 25,000 United Kingdom Silver October 1 , 1990 200,000 United
+States Gold January 11 , 1974 1,000,000 Charts ( edit ) Weekly charts ( edit ) Chart ( 1973 / 1974 ) Peak position US Billboard Hot 100 Canadian RPM Top Singles
+Dutch Daverende 30 18 Dutch Top 40 18 Australia Kent Music Report 8 Chart ( 1990 / 1991 ) Peak position Austrian Singles Chart 5 Dutch Nationale Top 100 Dutch
+Top 40 French SNEP Singles Chart 33 Irish Singles Chart New Zealand RIANZ Singles Chart Norwegian Singles Chart Swedish Singles Chart Swiss Singles Chart 5 UK
+Singles Chart Year - end charts ( edit ) Chart ( 1991 ) Position New Zealand ( Recorded Music NZ ) 20 Preceded by `` Time in a Bottle '' by Jim Croce Billboard
+Hot 100 number one single January 12 ,
+</item 2>
+
+<item 3>
+The Joker (Steve Miller Band song)
+lang covered it on her album Drag ( 1997 ) on which all the songs have the theme of smoking or cigarettes . The song was released as a single . Black Train Jack
+covered it on their album You 're not alone ( 1994 ) . Fettes Brot did a German rendition of the song in 2001 , retitled as `` The Großer '' ( English
+translation `` The big guy '' ) . Fatboy Slim reworked the song on his 2004 album Palookaville , featuring Bootsy Collins on lead vocals . This cover version
+reached No. 32 on the UK Singles Chart in 2005 . Mike Myers did a cover to the song , playing a sitar , in The Love Guru . Post-grunge band Puddle of Mudd
+covered it on their covers album Re : ( disc ) overed . Album tracks ( edit ) In 1998 , Todd Snider covered the song on his Viva Satellite album . Spearhead
+recorded a cover for the compilation CD Hempilation 2 ( 1998 ) .
+</item 3>
+
+<item 4>
+The Joker (Steve Miller Band song)
+lang , Craig Street k.d. lang singles chronology `` Sexuality '' ( 1996 ) `` The Joker '' ( 1997 ) `` Theme from the Valley of the Dolls '' ( 1997 ) ``
+Sexuality '' ( 1996 ) `` The Joker '' ( 1997 ) `` Theme from the Valley of the Dolls '' ( 1997 ) `` The Joker '' Single by Fatboy Slim from the album
+Palookaville Released February 28 , 2005 ( 2005 - 02 - 28 ) Recorded Genre Big beat Label Astralwerks , Skint Songwriter ( s ) Eddie Curtis , Ahmet Ertegün ,
+Steve Miller Producer ( s ) Fatboy Slim , Simon Thornton Fatboy Slim singles chronology `` Wonderful Night '' ( 2004 ) `` The Joker '' ( 2005 ) `` Do n't Let
+the Man Get You Down '' ( 2005 ) `` Wonderful Night '' ( 2004 ) `` The Joker '' ( 2005 ) `` Do n't Let the Man Get You Down '' ( 2005 ) Alternative cover Remix
+single Covers ( edit ) k.d.
+</item 4>
+
+<item 5>
+The Joker (Steve Miller Band song)
+1990 ( two weeks ) Succeeded by `` Show Me Heaven '' by Maria McKee Preceded by `` Trippin ' '' by Push Push New Zealand RIANZ number - one single May 10 , 1991
+( one week ) Succeeded by `` Trippin ' '' by Push Push Cover versions ( edit ) `` The Joker '' Single by k.d. lang from the album Drag Released Length 4 : 44
+Label Warner Bros . Songwriter ( s ) Eddie Curtis , Ahmet Ertegün , Steve Miller Producer ( s ) k.d. lang , Craig Street k.d.
+</item 5>
+
+<item 6>
+The Joker (Steve Miller Band song)
+The song topped the US Billboard Hot 100 in early 1974 . More than 16 years later , in September 1990 , it reached number one in the UK Singles Chart for two
+weeks after being used in `` Great Deal '' , a Hugh Johnson - directed television advertisement for Levi 's , thus holding the record for the longest gap
+between transatlantic chart - toppers . This reissue of `` The Joker '' also topped the Irish Singles Chart , the New Zealand RIANZ Singles Chart , the Dutch
+Nationale Top 100 and the Dutch Top 40 . The first line of the lyrics is a reference to the song `` Space Cowboy '' from Miller 's Brave New World album .
+Following lines refer to two other songs : `` Gangster of Love '' from Sailor and `` Enter Maurice '' from Recall the Beginning ... A Journey from Eden .
+</item 6>
+
+<item 7>
+The Joker (Steve Miller Band song)
+Luke Bryan often performs the song near the end of his concerts . Sampling ( edit ) `` The Joker '' was sampled in the song `` Summer and Lightning '' by
+Electric Light Orchestra from their 1977 album , Out of the Blue . `` The Joker '' serves as the outline of the song `` So Cal Loco ( Party Like a Rockstar ) ''
+by Sprung Monkey which appeared in the film Dude , Where 's My Car ? . It was also sampled on the original Def American Records release of the Geto Boys ' song
+`` Gangster of Love '' from their 1989 album , Grip It ! On That Other Level . The sample , presumably unauthorized , was replaced with Lynyrd Skynyrd 's ``
+Sweet Home Alabama '' on later pressings of the album . The song `` Hudson Dragonfly '' by Jackie - O Motherfucker , from the album , America Mystica ( 2006 ) ,
+contains a sample of `` The Joker '' . The song `` Angel '' by Shaggy , from the album Hot Shot ( 2000 ) , samples the bass line of `` The Joker '' .
+</item 7>
+
+<item 8>
+The Joker (Steve Miller Band song)
+Lyrics of this song at MetroLyrics Steve Miller Band Steve Miller Kenny Lee Lewis Gordy Knudtson Joseph Wooten Jacob Peterson Norton Buffalo Tim Davis Boz
+Scaggs Lonnie Turner James Cooke Lance Haas Jim Peterman Glyn Johns Ben Sidran Nicky Hopkins Bobby Winkelman Charlie McCoy Jack King Ross Valory Gerald Johnson
+Dick Thompson Jim Keltner Roger Allen Clark Gary Mallaber Nick DeCaro John King David Denny Greg Douglass Byron Allred John Massaro Billy Peterson Ricky
+Peterson Bob Malach Leo Sidran Jay Bird Koder Joey Heinemann Sonny Charles Studio albums Children of the Future Sailor Brave New World Your Saving Grace Number
+5 Rock Love Recall the Beginning ... A Journey from Eden The Joker Fly Like an Eagle Book of Dreams Circle of Love Abracadabra Italian X Rays Living in the 20th
+Century Born 2 B Blue ( Steve Miller solo album ) Wide River Bingo ! Let Your Hair Down Live albums Live at the Fillmore Auditorium Steve Miller Band Live !
+Compilations Anthology Living in the U.S.A.
+</item 8>
+
+<item 9>
+The Joker (Steve Miller Band song)
+`` Eat , Sleep , Rave , Repeat '' Video releases Big Beach Boutique II -- The Movie The Greatest Hits -- Why Make Videos Related articles The Housemartins Beats
+International Pizzaman Freak Power The Brighton Port Authority Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=The_Joker_(Steve_Miller_Band_song)&oldid=822314267 '' Categories : 1973 songs 1973 singles 1974 singles 1990 singles
+2007 singles Steve Miller Band songs Fatboy Slim songs Tim McGraw songs Billboard Hot 100 number - one singles Irish Singles Chart number - one singles Dutch
+Top 40 number - one singles Number - one singles in New Zealand UK Singles Chart number - one singles Songs written by Steve Miller ( musician ) Songs written
+by Ahmet Ertegun Songs written by Eddie Curtis Capitol Records singles Warner Bros.
+</item 9>
+
+<item 10>
+The Joker (Steve Miller Band song)
+Steve Miller recorded an unreleased demo of this song 's music with the lyrics of his other song , Take the Money and Run . The 2012 song Diese Tage with German
+and English lyrics by KRIS feat Dante Thomas uses the chorus of `` The Joker '' . Country rapper Colt Ford sampled this song for his song `` Gangsta of Love ''
+. `` Wow Wow '' by Neil Cicierega from the album `` Mouth Moods '' mixes `` The Joker '' with Will Smith 's `` Wild Wild West '' , `` All Star '' by Smash Mouth
+and `` Cowboy '' by Kid Rock . In popular culture ( edit ) In 1996 , `` The Joker '' inspired a comedy film , The Pompatus of Love . References and footnotes (
+edit ) ^ Jump up to : `` Steve Miller Band > Charts & Awards > Billboard Singles '' . allmusic . Retrieved October 5 , 2009 . ^ Jump up to : `` Chart Stats -
+The Steve Miller Band - The Joker '' . Retrieved October 5 , 2009 . Jump up ^ `` irishcharts.ie search results '' .
+</item 10>
+=== END ITEM id=52f49054702b753b ===
+
+=== ITEM id=a7efaa24fdb44226 ===
+Gold sentences and facts:
+Sentence 0: The Cylinder 's text has traditionally been seen by biblical scholars as corroborative evidence of Cyrus ' policy of the repatriation of the Jewish people following their Babylonian captivity ( an act that the Book of Ezra attributes to Cyrus ) , as the text refers to the restoration of cult sanctuaries and repatriation of deported peoples . This interpretation has been disputed , as the text identifies only Mesopotamian sanctuaries , and makes no mention of Jews , Jerusalem , or Judea . The Cylinder has also been referred to by Mohammad Reza Pahlavi , the last Shah of Iran as the first declaration of universal human rights , a view rejected by some historians as anachronistic and a misunderstanding of the Cylinder 's generic nature as a typical statement made by a new monarch at the beginning of his reign . Neil MacGregor , Director of the British Museum , has stated that the cylinder was `` the first attempt we know about running a society , a state with different nationalities and faiths -- a new kind of statecraft . '' It was adopted as a national symbol of Iran by the Imperial State which put it on display in Tehran in 1971 to commemorate 2,500 year celebration of the Persian Empire . On October 14 , the Mohammad Reza Shah 's sister , Princess Ashraf Pahlavi , presented the United Nations Secretary General U Thant with a replica of the Cylinder . The princess asserted that `` the heritage of Cyrus was the heritage of human understanding , tolerance , courage , compassion and , above all , human liberty '' .
+  Fact 0.0: The Cylinder's text has traditionally been seen by biblical scholars as corroborative evidence of Cyrus' policy of repatriating the Jewish people after their Babylonian captivity.
+  Fact 0.1: The Book of Ezra attributes the repatriation of the Jewish people after their Babylonian captivity to Cyrus.
+  Fact 0.2: The Cylinder's text refers to the restoration of cult sanctuaries.
+  Fact 0.3: The Cylinder's text refers to the repatriation of deported peoples.
+  Fact 0.4: The interpretation of the Cylinder's text as evidence of Cyrus' repatriation policy has been disputed.
+  Fact 0.5: The Cylinder's text identifies only Mesopotamian sanctuaries.
+  Fact 0.6: The Cylinder's text makes no mention of Jews, Jerusalem, or Judea.
+  Fact 0.7: Mohammad Reza Pahlavi, the last Shah of Iran, referred to the Cylinder as the first declaration of universal human rights.
+  Fact 0.8: Some historians reject the view that the Cylinder is the first declaration of universal human rights.
+  Fact 0.9: Some historians consider the view that the Cylinder is the first declaration of universal human rights anachronistic.
+  Fact 0.10: Some historians consider the view that the Cylinder is the first declaration of universal human rights a misunderstanding of the Cylinder's generic nature.
+  Fact 0.11: The Cylinder is a typical statement made by a new monarch at the beginning of his reign.
+  Fact 0.12: Neil MacGregor, Director of the British Museum, has stated that the Cylinder was "the first attempt we know about running a society, a state with different nationalities and faiths -- a new kind of statecraft."
+  Fact 0.13: The Imperial State of Iran adopted the Cylinder as a national symbol of Iran.
+  Fact 0.14: The Imperial State put the Cylinder on display in Tehran in 1971.
+  Fact 0.15: The 1971 display in Tehran commemorated the 2,500 year celebration of the Persian Empire.
+  Fact 0.16: On October 14, Princess Ashraf Pahlavi, the sister of Mohammad Reza Shah, presented United Nations Secretary General U Thant with a replica of the Cylinder.
+  Fact 0.17: Princess Ashraf Pahlavi asserted that "the heritage of Cyrus was the heritage of human understanding, tolerance, courage, compassion and, above all, human liberty."
+
+Retrieved items:
+<item 1>
+Fundamental rights in India
+These include individual rights common to most liberal democracies , such as equality before law freedom of speech and expression , religious and cultural
+freedom and peaceful assembly , freedom to practice religion , and the right to constitutional remedies for the protection of civil rights by means of writs
+such as habeas corpus , Mandamus , Prohibition , Certiorari and Quo Warranto . Violation of these rights result in punishments as prescribed in the Indian Penal
+Code or other special laws , subject to discretion of the judiciary . The Fundamental Rights are defined as basic human freedoms that every Indian citizen has
+the right to enjoy for a proper and harmonious development of personality . These rights universally apply to all citizens , irrespective of race , place of
+birth , religion , caste or gender . Though the rights conferred by the constitution other than fundamental rights are equally valid and their enforcement in
+case of violation shall be secured from the judiciary in a time consuming legal process . However , in case of fundamental rights violation , Supreme court of
+India can be approached directly for ultimate justice per Article 32 . The Rights have their origins in many sources , including England 's Bill of Rights , the
+United States Bill of Rights and France 's Declaration of the Rights of Man .
+</item 1>
+
+<item 2>
+Cyrus Cylinder
+121 ( author unknown ) ; Jump up ^ Damien Kingsbury , Human Rights in Asia : A Reassessment of the Asian Values Debate ( Macmillan , 2008 ) page 21 ; Sabine C.
+Carey , The Politics of Human Rights : The Quest for Dignity ( 2010 ) p 19 ; Paul Gordon Lauren , The Evolution of International Human Rights ( 2003 ) Page 11 ;
+Willem Adriaan Veenhoven , Case Studies on Human Rights and Fundamental Freedoms : A World Survey : Volume 1 ( 1975 ) Page 244 Jump up ^ Decolonisation ,
+Globalisation : Language - in - Education Policy and Practice , Peter W. Martin , p. 99 Jump up ^ Talbott , W.J. Which Rights Should be Universal ? , p. 40 .
+Oxford University Press US , 2005 . ISBN 978 - 0 - 19 - 517347 - 5 Jump up ^ Abtahi , pp. 1 -- 38 . Jump up ^ Cited in Shabani , p.
+</item 2>
+
+<item 3>
+United States two-dollar bill
+Declaration of the Rights of Man and of the Citizen ( 1789 ) Presidency Inaugural Address ( 1801 1805 ) Act Prohibiting Importation of Slaves Louisiana Purchase
+Lewis and Clark Expedition Corps of Discovery timeline Empire of Liberty Red River Expedition Pike Expedition Cumberland Road Embargo Act of 1807 Chesapeake --
+Leopard affair Non-Intercourse Act of 1809 First Barbary War Native American policy Marbury v. Madison West Point Military Academy State of the Union Addresses
+( texts 1801 1802 1805 ) Cabinet Federal judicial appointments Other noted accomplishments Early life and career Founder , University of Virginia history Land
+Ordinance of 1784 Northwest Ordinance 1787 Anti-Administration party Democratic - Republican Party Jeffersonian democracy First Party System republicanism Plan
+for Establishing Uniformity in the Coinage , Weights ,
+</item 3>
+
+<item 4>
+Democratic-Republican Party
+Olive Branch Petition ( 1775 ) Declaration of the Causes and Necessity of Taking Up Arms ( 1775 ) 1776 Declaration of Independence Committee of Five authored
+physical history `` All men are created equal '' `` Life , Liberty , and the pursuit of Happiness '' `` Consent of the governed '' 1786 Virginia Statute for
+Religious Freedom freedom of religion French Revolution Co-author , Declaration of the Rights of Man and of the Citizen ( 1789 ) Presidency Inaugural Address (
+1801 1805 ) Act Prohibiting Importation of Slaves Louisiana Purchase Lewis and Clark Expedition Corps of Discovery timeline Empire of Liberty Red River
+Expedition Pike Expedition Cumberland Road Embargo Act of 1807 Chesapeake -- Leopard affair Non-Intercourse Act of 1809 First Barbary War Native American policy
+Marbury v. Madison West Point Military Academy State of the Union Addresses ( texts 1801 1802 1805 ) Cabinet Federal judicial appointments Other noted
+accomplishments Early life and career Founder , University of Virginia history Land Ordinance of 1784 Northwest Ordinance 1787 Anti-Administration party
+Democratic - Republican Party Jeffersonian democracy First Party System republicanism Plan for Establishing Uniformity in the Coinage ,
+</item 4>
+
+<item 5>
+United States Bill of Rights
+1776 Virginia Declaration of Rights `` All men are created equal '' Life , Liberty and the pursuit of Happiness Freedom of the press Freedom of religion Consent
+of the governed Baseless search and seizure Cruel and unusual punishment Speedy trial 1776 Virginia Constitution 1785 Mount Vernon Conference 1787
+Constitutional Convention Virginia Ratifying Convention Co-father , United States Bill of Rights history Founding Father Writings inspired 1789 Declaration of
+the Rights of Man and of the Citizen ( France ) 1789 United States Bill of Rights Life Chopawamsic plantation Gunston Hall On slavery Ohio Company Legacy George
+Mason Memorial George Mason University George Mason Stadium George Mason Memorial Bridge George Mason High School 18 - cent postage stamp Related Age of
+Enlightenment American Enlightenment American Revolution patriots Wilson v. Mason Hollin Hall Woodbridge plantation Mason 's Island Family George Mason V ( son
+) William Mason ( son ) Thomson Mason ( son ) John Mason ( son ) Thomas Mason ( son ) George Mason III ( father ) Thomson Mason ( brother ) George Mason II (
+grandfather ) VIAF : 186307101 LCCN : n83073936 GND : 4187279 - 4 Retrieved from `` https://en.wikipedia.
+</item 5>
+
+<item 6>
+Fundamental rights in India
+They are covered in Part III ( Articles 12 to 35 ) of Indian constitution . Contents ( hide ) 1 Genesis 2 Significance and characteristics 3 Right to equality 4
+Right to freedom 5 Right against exploitation 6 Right to freedom of religion 7 Right to life 8 Cultural and Educational rights 9 Right to constitutional
+remedies 10 Right to Privacy 11 Critical analysis 12 Amendments 13 Fundamental rights not sacrosanct 13.1 Validity of Article 31B 13.2 Amendment to Article 31C
+13.3 Right to property 13.4 Right to education 14 See also 15 References 16 Footnotes Genesis ( edit ) The development of constitutionally guaranteed
+fundamental human rights in India was inspired by historical examples such as England 's Bill of Rights ( 1689 ) , the United States Bill of Rights ( approved
+on 17 September 1787 , final ratification on 15 December 1791 ) and France 's Declaration of the Rights of Man ( created during the revolution of 1789 , and
+ratified on 26 August 1789 ) .
+</item 6>
+
+<item 7>
+Fundamental rights in India
+A notable development during that period having significant effect on the Indian constitution took place on 10 December 1948 when the United Nations General
+Assembly adopted the Universal Declaration of Human Rights and called upon all member states to adopt these rights in their respective constitutions . The
+fundamental rights were included in the First Draft Constitution ( February 1948 ) , the Second Draft Constitution ( 17 October 1948 ) and final Third Draft
+Constitution ( 26 November 1949 ) , prepared by the Drafting Committee . Significance and characteristics ( edit ) The fundamental rights were included in the
+constitution because they were considered essential for the development of the personality of every individual and to preserve human dignity . The writers of
+the constitution regarded democracy of no avail if civil liberties , like freedom of speech and religion were not recognised and protected by the State .
+According to them , `` democracy '' is , in essence , a government by opinion and therefore , the means of formulating public opinion should be secured to the
+people of a democratic nation . For this purpose , the constitution guaranteed to all the citizens of India the freedom of speech and expression and various
+other freedoms in the form of the fundamental rights .
+</item 7>
+
+<item 8>
+United States Bill of Rights
+`` American Indians and the Constitution '' . Encyclopedia of the American Constitution . -- via HighBeam Research ( subscription required ) . Retrieved July 16
+, 2013 . Jump up ^ `` Primary Documents in American History '' , Library of Congress ^ Jump up to : Jeffrey Jowell and Jonathan Cooper ( 2002 ) . Understanding
+Human Rights Principles . Oxford and Portland , Oregon : Hart Publishing . p. 180 . ISBN 9781847313157 . Retrieved 16 March 2017 . ^ Jump up to : Loveland , Ian
+( 2002 ) . `` Chapter 18 -- Human Rights I : Traditional Perspectives '' . Constitutional Law , Administrative Law , and Human Rights : A Critical Introduction
+( Seventh ed . ) . London : Oxford University Press . p. 559 . ISBN 9780198709039 . Retrieved 16 March 2017 . ^ Jump up to : Jayawickrama , Nihal ( 2002 ) . The
+Judicial Application of Human Rights Law : National , Regional and International Jurisprudence . Cambridge : Cambridge University Press . p.
+</item 8>
+
+<item 9>
+United States Bill of Rights
+The Senate edited these amendments still further , making 26 changes of its own . Madison 's proposal to apply parts of the Bill of Rights to the states as well
+as the federal government was eliminated , and the seventeen amendments were condensed to twelve , which were approved on September 9 , 1789 . The Senate also
+eliminated the last of Madison 's proposed changes to the preamble . On September 21 , 1789 , a House -- Senate Conference Committee convened to resolve the
+numerous differences between the two Bill of Rights proposals . On September 24 , 1789 , the committee issued this report , which finalized 12 Constitutional
+Amendments for House and Senate to consider . This final version was approved by joint resolution of Congress on September 25 , 1789 , to be forwarded to the
+states on September 28 . By the time the debates and legislative maneuvering that went into crafting the Bill of Rights amendments was done , many personal
+opinions had shifted . A number of Federalists came out in support , thus silencing the Anti-Federalists ' most effective critique .
+</item 9>
+
+<item 10>
+United States Bill of Rights
+Bordewich , Fergus M. The First Congress : How James Madison , George Washington , and a Group of Extraordinary Men Invented the Government ( 2016 ) on 1789 --
+1791 . Cogan , Neil H. ( 2015 ) . The Complete Bill of Rights : The Drafts , Debates , Sources , and Origins . Second edition . New York : Oxford University
+Press . Schwartz , Bernard ( 1992 ) . The great rights of mankind : a history of the American Bill of Rights . Rowman & Littlefield . ISBN 978 - 0 - 945612 - 28
+- 5 -- via Google Books . Smith , Rich ( 2007 ) . The Bill of Rights : Defining Our Freedoms . ABDO . ISBN 978 - 1 - 59928 - 913 - 7 -- via Google Books . Stair
+, Nancy L. ( 2003 ) . The Bill of Rights : a primary source investigation into the first ten amendments of the Constitution . The Rosen Publishing Group . p. 53
+.
+</item 10>
+=== END ITEM id=a7efaa24fdb44226 ===
+
+=== ITEM id=378246a7815dae0d ===
+Gold sentences and facts:
+Sentence 0: The soma ( cell body ) of each pseudounipolar neuron is located within a dorsal root ganglion . The axon leaves the cell body ( and out of the dorsal root ganglion ) into the dorsal root , where it splits into two branches . The central branch goes to the posterior ( dorsal ) horn of the spinal cord , where it forms synapses with other neurons . The peripheral branch travels through the distal dorsal root into the spinal nerve all the way until skin , joint , and muscle .
+  Fact 0.0: The soma (cell body) of each pseudounipolar neuron is located within a dorsal root ganglion.
+  Fact 0.1: The axon leaves the cell body.
+  Fact 0.2: The axon leaves the dorsal root ganglion.
+  Fact 0.3: The axon goes into the dorsal root.
+  Fact 0.4: In the dorsal root, the axon splits into two branches.
+  Fact 0.5: The central branch of the axon goes to the posterior (dorsal) horn of the spinal cord.
+  Fact 0.6: The central branch forms synapses with other neurons.
+  Fact 0.7: The peripheral branch travels through the distal dorsal root.
+  Fact 0.8: The peripheral branch travels into the spinal nerve.
+  Fact 0.9: The peripheral branch travels all the way until skin, joint, and muscle.
+
+Retrieved items:
+<item 1>
+Motor neuron
+Branch of NS Position Neurotransmitter Somatic n / a Acetylcholine Parasympathetic Preganglionic Acetylcholine Parasympathetic Ganglionic Acetylcholine
+Sympathetic Preganglionic Acetylcholine Sympathetic Ganglionic Norepinephrine * * Except fibers to sweat glands and certain blood vessels Motor neuron
+neurotransmitters General visceral motor neurons ( edit ) These motor neurons indirectly innervate cardiac muscle and smooth muscles of the viscera ( the
+muscles of the arteries ) : they synapse onto neurons located in ganglia of the autonomic nervous system ( sympathetic and parasympathetic ) , located in the
+peripheral nervous system ( PNS ) , which themselves directly innervate visceral muscles ( and also some gland cells ) . In consequence : the motor command of
+skeletal and branchial muscles is monosynaptic ( involving only one motor neuron , respectively , somatic and branchial , which synapses onto the muscle ) .
+</item 1>
+
+<item 2>
+Pseudounipolar neuron
+Ganglion Ramus Ventral Root Ramus Ramus communicans Gray White Autonomic ganglion ( Preganglionic nerve fibers Postganglionic nerve fibers ) Connective tissues
+Epineurium Perineurium Endoneurium Nerve fascicle Neuroglia Myelination : Schwann cell Neurilemma Myelin incisure Node of Ranvier Internodal segment Satellite
+glial cell Neurons / nerve fibers Parts Soma Axon hillock Axon Telodendron Axon terminals Axoplasm Axolemma Neurofibril / neurofilament Dendrite Nissl body
+Dendritic spine Apical dendrite / Basal dendrite Types Bipolar Unipolar Pseudounipolar Multipolar Interneuron Renshaw Afferent nerve fiber / Sensory neuron GSA
+GVA SSA SVA fibers Ia or Aα Ib or Golgi or Aα II or Aβ and Aγ III or Aδ or fast pain IV or C or slow pain Efferent nerve fiber / Motor neuron GSE GVE SVE Upper
+motor neuron Lower motor neuron α motorneuron β motorneuron γ motorneuron Termination Synapse Electrical synapse / Gap junction Chemical
+</item 2>
+
+<item 3>
+Pseudounipolar neuron
+Pseudounipolar neuron - wikipedia Pseudounipolar neuron Jump to : navigation , search Pseudounipolar neuron 1 : Pseudounipolar neuron , 2 : Bipolar neuron
+Details System Nervous system Identifiers Latin neuron pseudounipolare TH H2. 00.06. 1.00047 Anatomical terms of neuroanatomy ( edit on Wikidata ) A
+pseudounipolar neuron ( pseudo -- false , uni -- one ) is a kind of sensory neuron in the peripheral nervous system . This neuron contains an axon that has
+split into two branches ; one branch runs to the periphery and the other to the spinal cord . Contents ( hide ) 1 Structure 1.1 In the dorsal root ganglia 1.2
+In the sensory ganglia of cranial nerves 2 Function 2.1 Signal pathway 3 See also 4 References Structure ( edit ) By definition , a pseudounipolar neuron has
+one axon with two branches : central and peripheral . These axonal branches should not be confused with dendrites .
+</item 3>
+
+<item 4>
+Motor neuron
+segment Satellite glial cell Neurons / nerve fibers Parts Soma Axon hillock Axon Telodendron Axon terminals Axoplasm Axolemma Neurofibril / neurofilament
+Dendrite Nissl body Dendritic spine Apical dendrite / Basal dendrite Types Bipolar Unipolar Pseudounipolar Multipolar Interneuron Renshaw Afferent nerve fiber /
+Sensory neuron GSA GVA SSA SVA fibers Ia or Aα Ib or Golgi or Aα II or Aβ and Aγ III or Aδ or fast pain IV or C or slow pain Efferent nerve fiber / Motor neuron
+GSE GVE SVE Upper motor neuron Lower motor neuron α motorneuron β motorneuron γ motorneuron Termination Synapse Electrical synapse / Gap junction Chemical
+synapse Synaptic vesicle Active zone Postsynaptic density Autapse Ribbon synapse Neuromuscular junction Sensory receptors Meissner 's corpuscle Merkel nerve
+ending Pacinian corpuscle Ruffini ending Muscle spindle Free nerve ending Nociceptor Olfactory receptor neuron Photoreceptor cell Hair cell Taste bud Retrieved
+from `` https://en.wikipedia.
+</item 4>
+
+<item 5>
+Pseudounipolar neuron
+These axonal branches should not be confused with dendrites . These sensory neurons are an exception to the typical neuron , in that they do not have separate
+dendrites and an axonal process , but rather one branched process that serves both functions . The axon has a peripheral branch ( from the cell body to the
+periphery : skin , joint and muscle ) and a central branch ( from the cell body to spinal cord ) . In the dorsal root ganglia ( edit ) The soma ( cell body ) of
+each pseudounipolar neuron is located within a dorsal root ganglion . The axon leaves the cell body ( and out of the dorsal root ganglion ) into the dorsal root
+, where it splits into two branches . The central branch goes to the posterior ( dorsal ) horn of the spinal cord , where it forms synapses with other neurons .
+The peripheral branch travels through the distal dorsal root into the spinal nerve all the way until skin , joint , and muscle .
+</item 5>
+
+<item 6>
+Motor neuron
+These columns are further explained in the table below . Motor Columns of Spinal Cord Motor Column Location in Spinal Cord Target Median Motor Column Present
+entire length Axial muscles Hypaxial Motor Column Thoracic Region Body wall muscles Preganglionic Motor Column Thoracic Region Sympathetic ganglion Laterl Motor
+Column Brachial and Lumbar region ( both regions are further divided into medial and lateral domains ) Muscles of the limbs Phrenic Motor Coulmn Cervical Region
+Diaphragm Anatomy and Physiology ( edit ) Spinal cord tracts Location of lower motor neurons in spinal cord Upper motor neurons ( edit ) Upper motor neurons
+originate in the motor cortex located in the precentral gyrus . The cells that make up the primary motor cortex are Betz cells , which are a type of pyramidal
+cell . The axons of these cells descend from the cortex to form the corticospinal tract . White matter Tract ( edit ) White matter tracts are bundles of axons
+and serve as means to propagate nerve impulses on a large scale . These are found in the spinal cord and appear white from the myelin surrounding axons .
+</item 6>
+
+<item 7>
+Motor neuron
+the command of visceral muscles is disynaptic ( involving two neurons : the general visceral motor neuron located in the CNS , which synapses onto a ganglionic
+neuron , located in the PNS , which synapses onto the muscle ) . All vertebrate motor neurons are cholinergic , that is , they release the neurotransmitter
+acetylcholine . Parasympathetic ganglionic neurons are also cholinergic , whereas most sympathetic ganglionic neurons are noradrenergic , that is , they release
+the neurotransmitter noradrenaline . ( see Table ) Motor neurons in Regenerative medicine ( edit ) Human lower motor neurons can be generated in vitro from
+embryonic stem cells and induced pluripotent stem cells . See also ( edit ) Betz cell Central chromatolysis Motor dysfunction Nerve References ( edit ) Jump up
+^ Tortora , Gerard ; Derrickson , Bryan ( 2014 ) . Principles of Anatomy & Physiology ( 14th ed . ) . New Jersey : John Wiley & Sons , Inc . pp. 406 , 502 , 541
+. ISBN 978 - 1 - 118 - 34500 - 9 .
+</item 7>
+
+<item 8>
+Pseudounipolar neuron
+. Cambridge : McGrawHill . p. 24 . ISBN 978 - 0838577011 . ^ Jump up to : MacCallum , Don . `` Peripheral Nervous System '' . Histology and Virtual Microscopy
+Learning Resources . University of Michigan Medical School . Archived from the original on 7 July 2014 . Retrieved 24 June 2014 . Jump up ^ Miller 's Anatomy of
+the Dog , By Howard E. Evans , Alexander de Lahunta , 4th ed , pp 565 ( hide ) Nervous tissue CNS Tissue Types Grey matter White matter Projection fibers
+Association fiber Commissural fiber Lemniscus Funiculus Fasciculus Nerve tract Decussation Commissure Neuropil Meninges Cell Types Neuronal Pyramidal Purkinje
+Granule Glial insulating : Myelination : Oligodendrocyte other Astrocyte Radial glial cell Ependymal cells Tanycyte Microglia PNS General Dorsal Root Ganglion
+Ramus Ventral Root Ramus Ramus communicans Gray White Autonomic ganglion (
+</item 8>
+
+<item 9>
+Pseudounipolar neuron
+In the sensory ganglia of cranial nerves ( edit ) Pseudounipolar neurons are also found in the sensory ganglia of cranial nerves V , VII , IX and X , all mixed
+- cranial nerves . The vestibulocochlear nerve , has the bipolar neuron type in both the spiral ganglion as well as Scarpa 's ganglion . Function ( edit )
+Signal pathway ( edit ) These neurons have sensory receptors on skin , joints , muscles , and other parts of the body . The area of the axon that is closest to
+the receptor is the trigger zone for the neuron . The signal is conducted through the axon to the dorsal root ganglion 's cell body , then through the axon and
+ending at the sensory nuclei in the posterior horn of the spinal cord . See also ( edit ) Bipolar neuron Multipolar neuron Unipolar neuron References ( edit ) ^
+Jump up to : Kandel , Eric R. ; Schwartz , James H. ; Mack , Thomas M. Jessell ( 2000 ) . Principles of neural Science ( 4th ed . ) . Cambridge : McGrawHill .
+p. 24 .
+</item 9>
+
+<item 10>
+Motor neuron
+; Mallatt , J. ( 1997 ) . Human Anatomy ( 2nd ed . ) . Menlo Park , CA : Benjamin / Cummings . ISBN 0 - 8053 - 4068 - 8 . ( hide ) Nervous tissue CNS Tissue
+Types Grey matter White matter Projection fibers Association fiber Commissural fiber Lemniscus Funiculus Fasciculus Nerve tract Decussation Commissure Neuropil
+Meninges Cell Types Neuronal Pyramidal Purkinje Granule Glial insulating : Myelination : Oligodendrocyte other Astrocyte Radial glial cell Ependymal cells
+Tanycyte Microglia PNS General Dorsal Root Ganglion Ramus Ventral Root Ramus Ramus communicans Gray White Autonomic ganglion ( Preganglionic nerve fibers
+Postganglionic nerve fibers ) Connective tissues Epineurium Perineurium Endoneurium Nerve fascicle Neuroglia Myelination : Schwann cell Neurilemma Myelin
+incisure Node of Ranvier Internodal segment Satellite glial cell Neurons / nerve fibers Parts Soma Axon hillock Axon
+</item 10>
+=== END ITEM id=378246a7815dae0d ===
+
+=== ITEM id=413a82470d395bbe ===
+Gold sentences and facts:
+Sentence 0: On the Origin of Species ( or more completely , On the Origin of Species by Means of Natural Selection , or the Preservation of Favoured Races in the Struggle for Life ) , published on 24 November 1859 , is a work of scientific literature by Charles Darwin which is considered to be the foundation of evolutionary biology . Darwin 's book introduced the scientific theory that populations evolve over the course of generations through a process of natural selection . It presented a body of evidence that the diversity of life arose by common descent through a branching pattern of evolution . Darwin included evidence that he had gathered on the Beagle expedition in the 1830s and his subsequent findings from research , correspondence , and experimentation .
+  Fact 0.0: The full title of On the Origin of Species is On the Origin of Species by Means of Natural Selection, or the Preservation of Favoured Races in the Struggle for Life.
+  Fact 0.1: On the Origin of Species was published on 24 November 1859.
+  Fact 0.2: On the Origin of Species is a work of scientific literature by Charles Darwin.
+  Fact 0.3: On the Origin of Species is considered to be the foundation of evolutionary biology.
+  Fact 0.4: Charles Darwin's book On the Origin of Species introduced the scientific theory that populations evolve over the course of generations.
+  Fact 0.5: The scientific theory in On the Origin of Species holds that populations evolve through a process of natural selection.
+  Fact 0.6: On the Origin of Species presented a body of evidence.
+  Fact 0.7: The evidence in On the Origin of Species holds that the diversity of life arose by common descent.
+  Fact 0.8: The evidence in On the Origin of Species holds that this common descent follows a branching pattern of evolution.
+  Fact 0.9: Charles Darwin included evidence he had gathered on the Beagle expedition in the 1830s in On the Origin of Species.
+  Fact 0.10: Charles Darwin included his subsequent findings from research in On the Origin of Species.
+  Fact 0.11: Charles Darwin included his subsequent findings from correspondence in On the Origin of Species.
+  Fact 0.12: Charles Darwin included his subsequent findings from experimentation in On the Origin of Species.
+Sentence 1: On the Origin of Species The title page of the 1859 edition of On the Origin of Species Author Charles Darwin Country United Kingdom of Great Britain and Ireland Language English Subject Natural selection Evolutionary biology Published 24 November 1859 ( John Murray ) Media type Print ( Hardback ) Pages 502 OCLC 352242 Preceded by On the Tendency of Species to form Varieties ; and on the Perpetuation of Varieties and Species by Natural Means of Selection Followed by Fertilisation of Orchids
+  Fact 1.0: On the Origin of Species has the author Charles Darwin.
+  Fact 1.1: On the Origin of Species has the country United Kingdom of Great Britain and Ireland.
+  Fact 1.2: On the Origin of Species is written in English.
+  Fact 1.3: On the Origin of Species has the subject natural selection.
+  Fact 1.4: On the Origin of Species has the subject evolutionary biology.
+  Fact 1.5: On the Origin of Species was published on 24 November 1859 by John Murray.
+  Fact 1.6: The title page of the 1859 edition of On the Origin of Species is shown.
+  Fact 1.7: The media type of On the Origin of Species is print (hardback).
+  Fact 1.8: On the Origin of Species has 502 pages.
+  Fact 1.9: On the Origin of Species has OCLC number 352242.
+  Fact 1.10: On the Origin of Species was preceded by On the Tendency of Species to form Varieties; and on the Perpetuation of Varieties and Species by Natural Means of Selection.
+  Fact 1.11: On the Origin of Species was followed by Fertilisation of Orchids.
+
+Retrieved items:
+<item 1>
+On the Origin of Species
+Published anonymously . Huxley , Thomas ( 1863 ) , Six Lectures to Working Men `` On Our Knowledge of the Causes of the Phenomena of Organic Nature '' (
+Republished in Volume II of his Collected Essays , Darwiniana ) , retrieved 15 December 2006 Keynes , Richard , ed. ( 2000 ) , Charles Darwin 's Zoology Notes &
+Specimen Lists from HMS Beagle , Cambridge University Press , ISBN 0 - 521 - 67350 - X Kreeft , Peter ( 2001 ) , Catholic Christianity , San Francisco :
+Ignatius Press , ISBN 0 - 89870 - 798 - 6 Larson , Edward J. ( 2004 ) , Evolution : The Remarkable History of a Scientific Theory , New York : Modern Library ,
+ISBN 0 - 8129 - 6849 - 2 Leifchild ( 1859 ) , `` Review of ' Origin ' '' , Athenaeum ( No. 1673 , 19 November 1859 ) , retrieved 22 November 2008 Lucas , John
+R.
+</item 1>
+
+<item 2>
+Graph query row:
+book: On the Origin of Species
+person: Charles Darwin
+relationship: CREATED
+</item 2>
+
+<item 3>
+On the Origin of Species
+In a survey conducted by a group of academic booksellers , publishers and librarians in advance of Academic Book Week in the United Kingdom , On the Origin of
+Species was voted the most influential academic book ever written . It was hailed as `` the supreme demonstration of why academic books matter '' and `` a book
+which has changed the way we think about everything '' . See also ( edit ) Book : Evolution On the Origin of Species -- full text at Wikisource of the first
+edition , 1859 The Origin of Species -- full text at Wikisource of the 6th edition , 1872 Charles Darwin bibliography History of biology History of evolutionary
+thought History of speciation Modern evolutionary synthesis The Complete Works of Charles Darwin Online The Descent of Man , and Selection in Relation to Sex ,
+published in 1871 ; his second major book on evolutionary theory . Transmutation of species Notes ( edit ) Jump up ^ Darwin 1859 , p. iii ^ Jump up to : Freeman
+1977 ^ Jump up to : The book 's full original title was On the Origin of Species by Means of Natural Selection , or the Preservation of Favoured Races in the
+Struggle for Life .
+</item 3>
+
+<item 4>
+On the Origin of Species
+In the 1872 sixth edition `` On '' was omitted , so the full title is The origin of species by means of natural selection , or the preservation of favoured
+races in the struggle for life . This edition is usually known as The Origin of Species . The 6th is Darwin 's final edition ; there were minor modifications in
+the text of certain subsequent issues . See Freeman , R.B. `` The works of Charles Darwin : an annotated bibliographical handlist . '' In Van Wyhe , John , ed .
+Darwin Online : On the Origin of Species , 2002 . Jump up ^ Desmond & Moore 1991 , p. 477 . Jump up ^ `` Darwin Manuscripts ( Digitised notes on Origin ) '' .
+Cambridge Digital Library . Retrieved 24 November 2014 . Jump up ^ Mayr 1982 , pp. 479 -- 480 Jump up ^ Darwin 1872 , p. xiii Jump up ^ Aristotle , Physics ,
+translated by Hardie , R.P. and Gayle , R.K.
+</item 4>
+
+<item 5>
+On the Origin of Species
+On the Origin of species - wikipedia On the Origin of species Jump to : navigation , search `` Origin of Species '' redirects here . For other uses , see Origin
+of Species ( disambiguation ) . On the Origin of Species The title page of the 1859 edition of On the Origin of Species Author Charles Darwin Country United
+Kingdom of Great Britain and Ireland Language English Subject Natural selection Evolutionary biology Published 24 November 1859 ( John Murray ) Media type Print
+( Hardback ) Pages 502 OCLC 352242 Preceded by On the Tendency of Species to form Varieties ; and on the Perpetuation of Varieties and Species by Natural Means
+of Selection Followed by Fertilisation of Orchids Part of a series on Evolutionary biology Key topics ( show ) Introduction to evolution Common descent Evidence
+of common descent Processes and outcomes ( show ) Population genetics Variation Diversity Mutation Natural selection Adaptation Polymorphism Genetic drift Gene
+flow Speciation Adaptive radiation Co-operation Coevolution Divergence Convergence Parallel evolution Extinction Natural history ( show ) Origin of life History
+of life Timeline of evolution Human evolution Phylogeny Biodiversity Biogeography Classification Evolutionary taxonomy Cladistics Transitional fossil Extinction
+event History
+</item 5>
+
+<item 6>
+On the Origin of Species
+190 , 200 -- 201 Jump up ^ Larson 2004 , pp. 88 -- 89 Jump up ^ Darwin & Costa 2009 , p. xvii Jump up ^ Crawford 1859 Jump up ^ Quammen 2006 , pp. 176 -- 181
+Jump up ^ Darwin & Costa 2009 , p. ix ^ Jump up to : Carroll , Joseph ( 2003 ) . On the Origin of Species / Charles Darwin . Broadview Press . pp. 51 -- 52 .
+ISBN 1 - 55111 - 337 - 6 . Following Darwin 's lead , most commentators cite this one passage as the only reference to man in the Origin , but they thus
+overlook , as did Darwin himself , two sentences that are , in their own quiet way , even more effective . Jump up ^ Browne 2007 , p. 42 , quoting Darwin , C.R.
+Notebook C ( February to July 1838 ) pp. 196 -- 197 `` Man in his arrogance thinks himself a great work worthy the interposition of a deity , more humble & I
+believe truer to consider him created from animals . ''
+</item 6>
+
+<item 7>
+On the Origin of Species
+By 1977 , it had appeared in an additional 18 languages . Content ( edit ) Title pages and introduction ( edit ) John Gould 's illustration of Darwin 's rhea
+was published in 1841 . The existence of two rhea species with overlapping ranges influenced Darwin . Page ii contains quotations by William Whewell and Francis
+Bacon on the theology of natural laws , harmonising science and religion in accordance with Isaac Newton 's belief in a rational God who established a law -
+abiding cosmos . In the second edition , Darwin added an epigraph from Joseph Butler affirming that God could work through scientific laws as much as through
+miracles , in a nod to the religious concerns of his oldest friends . The Introduction establishes Darwin 's credentials as a naturalist and author , then
+refers to John Herschel 's letter suggesting that the origin of species `` would be found to be a natural in contradistinction to a miraculous process '' : WHEN
+on board HMS Beagle , as naturalist , I was much struck with certain facts in the distribution of the inhabitants of South America , and in the geological
+relations of the present to the past inhabitants of that continent .
+</item 7>
+
+<item 8>
+On the Origin of Species
+Biodiversity Biogeography Classification Evolutionary taxonomy Cladistics Transitional fossil Extinction event History of evolutionary theory ( show ) Overview
+Renaissance Before Darwin Darwin Origin of Species Before synthesis Modern synthesis Molecular evolution Evo - devo Current research History of speciation
+History of paleontology ( timeline ) Fields and applications ( show ) Applications of evolution Biosocial criminology Ecological genetics Evolutionary
+aesthetics Evolutionary anthropology Evolutionary computation Evolutionary ecology Evolutionary economics Evolutionary epistemology Evolutionary ethics
+Evolutionary game theory Evolutionary linguistics Evolutionary medicine Evolutionary neuroscience Evolutionary physiology Evolutionary psychology Experimental
+evolution Phylogenetics Paleontology Selective breeding Speciation experiments Sociobiology Systematics Universal Darwinism Social implications ( show )
+Evolution as fact and theory Social effects Creation -- evolution controversy Objections to evolution Level of support Evolutionary biology portal Category Book
+Related topics On the Origin of Species ( or more completely , On the Origin of Species by Means of Natural Selection , or the Preservation of Favoured Races in
+the Struggle for Life ) , published on 24 November 1859 , is a work of scientific literature by Charles Darwin which is considered to be the foundation of
+evolutionary biology .
+</item 8>
+
+<item 9>
+On the Origin of Species
+a Molecular Disease '' Fred Sanger Max Perutz John Kendrew Sydney Brenner Joshua Lederberg Walter Gilbert Kary Mullis Emmanuelle Charpentier Jennifer Doudna
+Ecology Rachel Carson Frederic Clements Charles Elton Henry Gleason Arthur Tansley Eugenius Warming Ethology Niko Tinbergen Karl von Frisch Konrad Lorenz Frans
+de Waal Jane Goodall Ivan Pavlov Related History of science Philosophy of biology Teleology Ethnobotany Eugenics History of the creation - evolution controversy
+Human Genome Project Humboldtian science Natural history Natural philosophy Natural theology Relationship between religion and science Timeline of biology and
+organic chemistry Category Commons Portal Evolutionary biology portal VIAF : 313683363 LCCN : n81105854 GND : 4303201 - 1 SELIBR : 261642 SUDOC : 031705685 BNF
+: cb122870840 ( data ) NDL : 00627375 BNE : XX2039885 Retrieved from `` https://en.wikipedia.org/w/index.php?title=On_the_Origin_of_Species&oldid=836566097 ''
+Categories : 1859 books 1859 in science Books about evolution
+</item 9>
+
+<item 10>
+On the Origin of Species
+Wikisource has original text related to this article : On the Origin of Species Library resources about On the origin of species Online books Resources in your
+library Resources in other libraries The Complete Works of Charles Darwin Online : Table of contents , bibliography of On the Origin of Species -- links to text
+and images of all six British editions of The Origin of Species , the 6th edition with additions and corrections ( final text ) , the first American edition ,
+and translations into Danish , Dutch , French , German , Polish , Russian and Spanish . Online Variorum , showing every change between the six British editions
+. On the Origin of Species on In Our Time at the BBC . On the Origin of Species , full text with embedded audio . Victorian Science Texts Darwin Correspondence
+Project Home Page , University Library , Cambridge . On the Origin of Species eBook provided by Project Gutenberg View online at the Biodiversity Heritage
+Library On the Origin of Species 1860 American edition , D Appleton and Company , New York , with front insert by H.E. Barker , Lincolniana .
+</item 10>
+=== END ITEM id=413a82470d395bbe ===
+
+=== ITEM id=ffc0eb25d3701ed9 ===
+Gold sentences and facts:
+Sentence 0: City Image Country Population Year Mexico City Mexico 8,918,653 2015 New York City United States 8,550,405 2015 Los Angeles United States 3,971,883 2015 Toronto Canada 2,826,498 2015 Chicago United States 2,720,546 2015 6 Houston United States 2,296,224 2015 7 Havana Cuba 2,117,625 2015 8 Montreal Canada 1,753,034 2015 9 Ecatepec de Morelos Mexico 1,677,678 2015 10 Philadelphia United States 1,567,442 2015 11 Phoenix United States 1,563,025 2015 12 San Antonio United States 1,469,845 2015 13 Guadalajara Mexico 1,460,148 2015 14 Puebla Mexico 1,437,939 2015 15 San Diego United States 1,394,928 2015 16 Juárez Mexico 1,382,753 2015 17 León Mexico 1,349,224 2015 18 Dallas United States 1,300,092 2015 19 Tijuana Mexico 1,298,475 2015 20 Calgary Canada 1,230,915 2015 21 Tegucigalpa Honduras 1,190,230 2015 22 Zapopan Mexico 1,179,681 2015 23 Monterrey Mexico 1,109,171 2015 24 Managua Nicaragua 1,048,134 2015 25 Nezahualcóyotl Mexico 1,039,867 2015 26 San Jose United States 1,026,908 2015 27 Santo Domingo Dominican Republic 1,007,997 2015 28 Guatemala City Guatemala 994,078 2015 29 Port - au - Prince Haiti 987,310 2015 30 Naucalpan Mexico 970,012 2015 31 Ottawa Canada 956,710 2015 32 Austin United States 931,830 2015 33 Edmonton Canada 899,447 2016 34 Mérida Mexico 892,363 2015 35 Querétaro Mexico 878,931 2015 36 Toluca Mexico 873,536 2015 37 Jacksonville United States 868,031 2015 38 Chihuahua Mexico 867,736 2015 39 San Francisco United States 864,816 2015 40 Indianapolis United States 853,173 2015 41 Columbus United States 850,106 2015 42 Fort Worth United States 833,319 2015 43 Charlotte United States 827,097 2015 44 Hermosillo Mexico 819,999 2015 45 Saltillo Mexico 791,074 2015 46 Aguascalientes Mexico 785,942 2015 47 Mississauga Canada 761,300 2015 48 San Luis Potosí Mexico 759,854 2015 49 Veracruz Mexico 752,171 2015 50 San Pedro Sula Honduras 742,118 2015 51 Santiago de los Caballeros Dominican Republic 723,162 2015 52 Culiacán Mexico 720,798 2015 53 Winnipeg Canada 718,400 2015 54 Mexicali Mexico 717,628 2015 55 Cancún Mexico 711,682 2015 56 Acapulco Mexico 710,261 2015 57 Tlalnepantla Mexico 700,734 2015 58 Seattle United States 684,451 2015 59 Guadalupe Mexico 682,880 2015 60 Denver United States 682,545 2015 61 El Paso United States 681,124 2015 62 Chimalhuacán Mexico 679,811 2015 63 Detroit United States 677,116 2015 64 Washington , D.C. United States 672,228 2015 65 Kingston Jamaica 669,627 2015 66 Boston United States 667,137 2015 67 Tlaquepaque Mexico 664,193 2015 68 Memphis United States 655,770 2015 69 Nashville United States 654,610 2015 70 Torreón Mexico 653,150 2015 71 Vancouver Canada 648,608 2015 72 Portland United States 632,309 2015 73 Reynosa Mexico 631,611 2015 74 Oklahoma City United States 631,346 2015 75 Las Vegas United States 623,747 2015 76 Baltimore United States 621,849 2015 77 Brampton Canada 620,700 2016 78 Louisville United States 615,366 2015 79 Morelia Mexico 608,190 2015 80 Milwaukee United States 600,155 2015 81 Tuxtla Gutiérrez Mexico 598,710 2015 82 Apodaca Mexico 597,207 2015 83 Durango Mexico 590,893 2015 84 Villa Nueva Guatemala 564,686 2015 85 Albuquerque United States 559,121 2015 86 Hamilton Canada 556,359 2015 87 Quebec City Canada 540,994 2015 88 Tonalá Mexico 536,111 2015 89 Tucson United States 531,641 2015 90 Cuautitlán Izcalli Mexico 531,041 2015 91 Surrey Canada 526,004 2015 92 Ciudad López Mateos Mexico 523,296 2015 93 Tultitlán Mexico 520,557 2015 94 Fresno United States 520,052 2015 95 Carrefour Haiti 501,768 2015
+  Fact 0.0: Mexico City is a city in Mexico with a population of 8,918,653 in 2015.
+  Fact 0.1: New York City is a city in the United States with a population of 8,550,405 in 2015.
+  Fact 0.2: Los Angeles is a city in the United States with a population of 3,971,883 in 2015.
+  Fact 0.3: Toronto is a city in Canada with a population of 2,826,498 in 2015.
+  Fact 0.4: Chicago is a city in the United States with a population of 2,720,546 in 2015.
+  Fact 0.5: Houston is a city in the United States, ranked 6th, with a population of 2,296,224 in 2015.
+  Fact 0.6: Havana is a city in Cuba, ranked 7th, with a population of 2,117,625 in 2015.
+  Fact 0.7: Montreal is a city in Canada, ranked 8th, with a population of 1,753,034 in 2015.
+  Fact 0.8: Ecatepec de Morelos is a city in Mexico, ranked 9th, with a population of 1,677,678 in 2015.
+  Fact 0.9: Philadelphia is a city in the United States, ranked 10th, with a population of 1,567,442 in 2015.
+  Fact 0.10: Phoenix is a city in the United States, ranked 11th, with a population of 1,563,025 in 2015.
+  Fact 0.11: San Antonio is a city in the United States, ranked 12th, with a population of 1,469,845 in 2015.
+  Fact 0.12: Guadalajara is a city in Mexico, ranked 13th, with a population of 1,460,148 in 2015.
+  Fact 0.13: Puebla is a city in Mexico, ranked 14th, with a population of 1,437,939 in 2015.
+  Fact 0.14: San Diego is a city in the United States, ranked 15th, with a population of 1,394,928 in 2015.
+  Fact 0.15: Juárez is a city in Mexico, ranked 16th, with a population of 1,382,753 in 2015.
+  Fact 0.16: León is a city in Mexico, ranked 17th, with a population of 1,349,224 in 2015.
+  Fact 0.17: Dallas is a city in the United States, ranked 18th, with a population of 1,300,092 in 2015.
+  Fact 0.18: Tijuana is a city in Mexico, ranked 19th, with a population of 1,298,475 in 2015.
+  Fact 0.19: Calgary is a city in Canada, ranked 20th, with a population of 1,230,915 in 2015.
+  Fact 0.20: Tegucigalpa is a city in Honduras, ranked 21st, with a population of 1,190,230 in 2015.
+  Fact 0.21: Zapopan is a city in Mexico, ranked 22nd, with a population of 1,179,681 in 2015.
+  Fact 0.22: Monterrey is a city in Mexico, ranked 23rd, with a population of 1,109,171 in 2015.
+  Fact 0.23: Managua is a city in Nicaragua, ranked 24th, with a population of 1,048,134 in 2015.
+  Fact 0.24: Nezahualcóyotl is a city in Mexico, ranked 25th, with a population of 1,039,867 in 2015.
+  Fact 0.25: San Jose is a city in the United States, ranked 26th, with a population of 1,026,908 in 2015.
+  Fact 0.26: Santo Domingo is a city in the Dominican Republic, ranked 27th, with a population of 1,007,997 in 2015.
+  Fact 0.27: Guatemala City is a city in Guatemala, ranked 28th, with a population of 994,078 in 2015.
+  Fact 0.28: Port-au-Prince is a city in Haiti, ranked 29th, with a population of 987,310 in 2015.
+  Fact 0.29: Naucalpan is a city in Mexico, ranked 30th, with a population of 970,012 in 2015.
+  Fact 0.30: Ottawa is a city in Canada, ranked 31st, with a population of 956,710 in 2015.
+  Fact 0.31: Austin is a city in the United States, ranked 32nd, with a population of 931,830 in 2015.
+  Fact 0.32: Edmonton is a city in Canada, ranked 33rd, with a population of 899,447 in 2016.
+  Fact 0.33: Mérida is a city in Mexico, ranked 34th, with a population of 892,363 in 2015.
+  Fact 0.34: Querétaro is a city in Mexico, ranked 35th, with a population of 878,931 in 2015.
+  Fact 0.35: Toluca is a city in Mexico, ranked 36th, with a population of 873,536 in 2015.
+  Fact 0.36: Jacksonville is a city in the United States, ranked 37th, with a population of 868,031 in 2015.
+  Fact 0.37: Chihuahua is a city in Mexico, ranked 38th, with a population of 867,736 in 2015.
+  Fact 0.38: San Francisco is a city in the United States, ranked 39th, with a population of 864,816 in 2015.
+  Fact 0.39: Indianapolis is a city in the United States, ranked 40th, with a population of 853,173 in 2015.
+  Fact 0.40: Columbus is a city in the United States, ranked 41st, with a population of 850,106 in 2015.
+  Fact 0.41: Fort Worth is a city in the United States, ranked 42nd, with a population of 833,319 in 2015.
+  Fact 0.42: Charlotte is a city in the United States, ranked 43rd, with a population of 827,097 in 2015.
+  Fact 0.43: Hermosillo is a city in Mexico, ranked 44th, with a population of 819,999 in 2015.
+  Fact 0.44: Saltillo is a city in Mexico, ranked 45th, with a population of 791,074 in 2015.
+  Fact 0.45: Aguascalientes is a city in Mexico, ranked 46th, with a population of 785,942 in 2015.
+  Fact 0.46: Mississauga is a city in Canada, ranked 47th, with a population of 761,300 in 2015.
+  Fact 0.47: San Luis Potosí is a city in Mexico, ranked 48th, with a population of 759,854 in 2015.
+  Fact 0.48: Veracruz is a city in Mexico, ranked 49th, with a population of 752,171 in 2015.
+  Fact 0.49: San Pedro Sula is a city in Honduras, ranked 50th, with a population of 742,118 in 2015.
+  Fact 0.50: Santiago de los Caballeros is a city in the Dominican Republic, ranked 51st, with a population of 723,162 in 2015.
+  Fact 0.51: Culiacán is a city in Mexico, ranked 52nd, with a population of 720,798 in 2015.
+  Fact 0.52: Winnipeg is a city in Canada, ranked 53rd, with a population of 718,400 in 2015.
+  Fact 0.53: Mexicali is a city in Mexico, ranked 54th, with a population of 717,628 in 2015.
+  Fact 0.54: Cancún is a city in Mexico, ranked 55th, with a population of 711,682 in 2015.
+  Fact 0.55: Acapulco is a city in Mexico, ranked 56th, with a population of 710,261 in 2015.
+  Fact 0.56: Tlalnepantla is a city in Mexico, ranked 57th, with a population of 700,734 in 2015.
+  Fact 0.57: Seattle is a city in the United States, ranked 58th, with a population of 684,451 in 2015.
+  Fact 0.58: Guadalupe is a city in Mexico, ranked 59th, with a population of 682,880 in 2015.
+  Fact 0.59: Denver is a city in the United States, ranked 60th, with a population of 682,545 in 2015.
+  Fact 0.60: El Paso is a city in the United States, ranked 61st, with a population of 681,124 in 2015.
+  Fact 0.61: Chimalhuacán is a city in Mexico, ranked 62nd, with a population of 679,811 in 2015.
+  Fact 0.62: Detroit is a city in the United States, ranked 63rd, with a population of 677,116 in 2015.
+  Fact 0.63: Washington, D.C. is a city in the United States, ranked 64th, with a population of 672,228 in 2015.
+  Fact 0.64: Kingston is a city in Jamaica, ranked 65th, with a population of 669,627 in 2015.
+  Fact 0.65: Boston is a city in the United States, ranked 66th, with a population of 667,137 in 2015.
+  Fact 0.66: Tlaquepaque is a city in Mexico, ranked 67th, with a population of 664,193 in 2015.
+  Fact 0.67: Memphis is a city in the United States, ranked 68th, with a population of 655,770 in 2015.
+  Fact 0.68: Nashville is a city in the United States, ranked 69th, with a population of 654,610 in 2015.
+  Fact 0.69: Torreón is a city in Mexico, ranked 70th, with a population of 653,150 in 2015.
+  Fact 0.70: Vancouver is a city in Canada, ranked 71st, with a population of 648,608 in 2015.
+  Fact 0.71: Portland is a city in the United States, ranked 72nd, with a population of 632,309 in 2015.
+  Fact 0.72: Reynosa is a city in Mexico, ranked 73rd, with a population of 631,611 in 2015.
+  Fact 0.73: Oklahoma City is a city in the United States, ranked 74th, with a population of 631,346 in 2015.
+  Fact 0.74: Las Vegas is a city in the United States, ranked 75th, with a population of 623,747 in 2015.
+  Fact 0.75: Baltimore is a city in the United States, ranked 76th, with a population of 621,849 in 2015.
+  Fact 0.76: Brampton is a city in Canada, ranked 77th, with a population of 620,700 in 2016.
+  Fact 0.77: Louisville is a city in the United States, ranked 78th, with a population of 615,366 in 2015.
+  Fact 0.78: Morelia is a city in Mexico, ranked 79th, with a population of 608,190 in 2015.
+  Fact 0.79: Milwaukee is a city in the United States, ranked 80th, with a population of 600,155 in 2015.
+  Fact 0.80: Tuxtla Gutiérrez is a city in Mexico, ranked 81st, with a population of 598,710 in 2015.
+  Fact 0.81: Apodaca is a city in Mexico, ranked 82nd, with a population of 597,207 in 2015.
+  Fact 0.82: Durango is a city in Mexico, ranked 83rd, with a population of 590,893 in 2015.
+  Fact 0.83: Villa Nueva is a city in Guatemala, ranked 84th, with a population of 564,686 in 2015.
+  Fact 0.84: Albuquerque is a city in the United States, ranked 85th, with a population of 559,121 in 2015.
+  Fact 0.85: Hamilton is a city in Canada, ranked 86th, with a population of 556,359 in 2015.
+  Fact 0.86: Quebec City is a city in Canada, ranked 87th, with a population of 540,994 in 2015.
+  Fact 0.87: Tonalá is a city in Mexico, ranked 88th, with a population of 536,111 in 2015.
+  Fact 0.88: Tucson is a city in the United States, ranked 89th, with a population of 531,641 in 2015.
+  Fact 0.89: Cuautitlán Izcalli is a city in Mexico, ranked 90th, with a population of 531,041 in 2015.
+  Fact 0.90: Surrey is a city in Canada, ranked 91st, with a population of 526,004 in 2015.
+  Fact 0.91: Ciudad López Mateos is a city in Mexico, ranked 92nd, with a population of 523,296 in 2015.
+  Fact 0.92: Tultitlán is a city in Mexico, ranked 93rd, with a population of 520,557 in 2015.
+  Fact 0.93: Fresno is a city in the United States, ranked 94th, with a population of 520,052 in 2015.
+  Fact 0.94: Carrefour is a city in Haiti, ranked 95th, with a population of 501,768 in 2015.
+
+Retrieved items:
+<item 1>
+List of North American cities by population
+INEGI . p. 5 . Retrieved 2016 - 11 - 08 . ^ Jump up to : `` 2015 Municipal Affairs Population List '' ( PDF ) . Alberta Municipal Affairs . ISBN 978 - 1 - 4601
+- 2630 - 1 . Retrieved July 17 , 2016 . ^ Jump up to : `` Encuesta Intercensal 2015 : Tabulados - descarga '' . INEGI . Archived from the original on 2016 - 11
+- 13 . Retrieved 2016 - 11 - 08 . ^ Jump up to : Brinkhoff , Thomas . `` Mexico : Administrative Division '' . City Population . Retrieved 2016 - 11 - 08 . ^
+Jump up to : `` Annual Estimates of the Resident Population for Incorporated Places of 50,000 or More , Ranked by July 1 , 2015 Population : April 1 , 2010 to
+July 1 , 2015 '' . United States Census Bureau , Population Division . May 2016 .
+</item 1>
+
+<item 2>
+List of North American cities by population
+The April 2016 census result is given instead . Contents ( hide ) 1 List 2 See also 3 Notes 4 References List ( edit ) City Image Country Population Year Mexico
+City Mexico 8,918,653 2015 New York City United States 8,550,405 2015 Los Angeles United States 3,971,883 2015 Toronto Canada 2,826,498 2015 Chicago United
+States 2,720,546 2015 6 Houston United States 2,296,224 2015 7 Havana Cuba 2,117,625 2015 8 Montreal Canada 1,753,034 2015 9 Ecatepec de Morelos Mexico
+1,677,678 2015 10 Philadelphia United States 1,567,442 2015 11 Phoenix United States 1,563,025 2015 12 San Antonio United States 1,469,845 2015 13 Guadalajara
+Mexico 1,460,148 2015 14 Puebla Mexico 1,437,939 2015 15 San Diego United States 1,394,
+</item 2>
+
+<item 3>
+List of North American cities by population
+310 2015 30 Naucalpan Mexico 970,012 2015 31 Ottawa Canada 956,710 2015 32 Austin United States 931,830 2015 33 Edmonton Canada 899,447 2016 34 Mérida Mexico
+892,363 2015 35 Querétaro Mexico 878,931 2015 36 Toluca Mexico 873,536 2015 37 Jacksonville United States 868,031 2015 38 Chihuahua Mexico 867,736 2015 39 San
+Francisco United States 864,816 2015 40 Indianapolis United States 853,173 2015 41 Columbus United States 850,106 2015 42 Fort Worth United States 833,319 2015
+43 Charlotte United States 827,097 2015 44 Hermosillo Mexico 819,999 2015 45 Saltillo Mexico 791,074 2015 46 Aguascalientes Mexico 785,942 2015 47 Mississauga
+Canada 761,300 2015 48 San Luis Potosí Mexico 759,
+</item 3>
+
+<item 4>
+List of North American cities by population
+207 2015 83 Durango Mexico 590,893 2015 84 Villa Nueva Guatemala 564,686 2015 85 Albuquerque United States 559,121 2015 86 Hamilton Canada 556,359 2015 87
+Quebec City Canada 540,994 2015 88 Tonalá Mexico 536,111 2015 89 Tucson United States 531,641 2015 90 Cuautitlán Izcalli Mexico 531,041 2015 91 Surrey Canada
+526,004 2015 92 Ciudad López Mateos Mexico 523,296 2015 93 Tultitlán Mexico 520,557 2015 94 Fresno United States 520,052 2015 95 Carrefour Haiti 501,768 2015
+See also ( edit ) List of cities in Canada List of cities in Mexico List of the 100 largest municipalities in Canada by population List of United States cities
+by population Notes ( edit ) Jump up ^ Population estimate is that of the federal entity known since 2016 as Ciudad de México and previously as the Distrito
+Federal .
+</item 4>
+
+<item 5>
+Beijing
+Beijing also ranks among the most populous cities in the world , a distinction the city has held for much of the past 800 years , especially during the 15th to
+early 19th centuries when it was the largest city in the world . About 13 million of the city 's residents in 2013 had local hukou permits , which entitles them
+to permanent residence in Beijing . The remaining 8 million residents had hukou permits elsewhere and were not eligible to receive some social benefits provided
+by the Beijing municipal government . The population increased in 2013 by 455,000 or about 7 % from the previous year and continued a decade - long trend of
+rapid growth . The total population in 2004 was 14.213 million . The population gains are driven largely by migration . The population 's rate of natural
+increase in 2013 was a mere 0.441 % , based on a birth rate of 8.93 and a mortality rate of 4.52 . The gender balance was 51.6 % males and 48.4 % females .
+Working age people account for nearly 80 % of the population .
+</item 5>
+
+<item 6>
+List of North American cities by population
+C. United States 672,228 2015 65 Kingston Jamaica 669,627 2015 66 Boston United States 667,137 2015 67 Tlaquepaque Mexico 664,193 2015 68 Memphis United States
+655,770 2015 69 Nashville United States 654,610 2015 70 Torreón Mexico 653,150 2015 71 Vancouver Canada 648,608 2015 72 Portland United States 632,309 2015 73
+Reynosa Mexico 631,611 2015 74 Oklahoma City United States 631,346 2015 75 Las Vegas United States 623,747 2015 76 Baltimore United States 621,849 2015 77
+Brampton Canada 620,700 2016 78 Louisville United States 615,366 2015 79 Morelia Mexico 608,190 2015 80 Milwaukee United States 600,155 2015 81 Tuxtla Gutiérrez
+Mexico 598,710 2015 82 Apodaca Mexico 597,207 2015 83 Durango Mexico 590,
+</item 6>
+
+<item 7>
+List of North American cities by population
+437,939 2015 15 San Diego United States 1,394,928 2015 16 Juárez Mexico 1,382,753 2015 17 León Mexico 1,349,224 2015 18 Dallas United States 1,300,092 2015 19
+Tijuana Mexico 1,298,475 2015 20 Calgary Canada 1,230,915 2015 21 Tegucigalpa Honduras 1,190,230 2015 22 Zapopan Mexico 1,179,681 2015 23 Monterrey Mexico
+1,109,171 2015 24 Managua Nicaragua 1,048,134 2015 25 Nezahualcóyotl Mexico 1,039,867 2015 26 San Jose United States 1,026,908 2015 27 Santo Domingo Dominican
+Republic 1,007,997 2015 28 Guatemala City Guatemala 994,078 2015 29 Port - au - Prince Haiti 987,310 2015 30 Naucalpan Mexico 970,
+</item 7>
+
+<item 8>
+List of North American cities by population
+List of North American cities by Population - wikipedia List of North American cities by Population Jump to : navigation , search For the majority of cities in
+North America , the most recent official population census results , estimates or short - term projections date to 2015 . This list compiles figures for all
+North American cities with a population within city limits exceeding 500,000 that year . These figures do not reflect the population of the urban agglomeration
+or metropolitan area which typically do not coincide with the administrative boundaries of the city . They refer to mid-2015 populations with the following
+exceptions : Mexican cities , whose figures derive from the 2015 Intercensal Survey conducted by INEGI with a reference date of 15 March 2015 ; Calgary , whose
+2015 municipal census had a reference date of April 1 ; Edmonton , which conducted municipal censuses in April 2014 and April 2016 but has not reported an
+intercensal estimate of its 2015 population . The April 2016 census result is given instead .
+</item 8>
+
+<item 9>
+List of North American cities by population
+300 2015 48 San Luis Potosí Mexico 759,854 2015 49 Veracruz Mexico 752,171 2015 50 San Pedro Sula Honduras 742,118 2015 51 Santiago de los Caballeros Dominican
+Republic 723,162 2015 52 Culiacán Mexico 720,798 2015 53 Winnipeg Canada 718,400 2015 54 Mexicali Mexico 717,628 2015 55 Cancún Mexico 711,682 2015 56 Acapulco
+Mexico 710,261 2015 57 Tlalnepantla Mexico 700,734 2015 58 Seattle United States 684,451 2015 59 Guadalupe Mexico 682,880 2015 60 Denver United States 682,545
+2015 61 El Paso United States 681,124 2015 62 Chimalhuacán Mexico 679,811 2015 63 Detroit United States 677,116 2015 64 Washington , D.C. United States 672,228
+2015 65 Kingston Jamaica 669,
+</item 9>
+
+<item 10>
+List of North American cities by population
+Retrieved 2016 - 05 - 01 . ( hide ) World 's largest cities City proper World ( Capitals ) Americas ( North Latin Central South ) Asia ( Arab world ASEAN Arabia
+Far East ) Europe ( European Union Nordic ) Metropolitan area World Americas ( North South West Indies ) Europe ( European Union Nordic ) Asia Africa
+Transborder Aggregate urban area † World Europe ( European Union Nordic ) Asia Urban agglomeration † North America Europe ( European Union ) Asia Historical
+World Europe Related articles Global city Megacity Megalopolis Conurbation Suburbs † Aggregate urban areas are entire continuous built - up areas , grouping
+together contiguous cities ( known as conurbations ) , whereas urban agglomerations are the built - up areas of individual cities . Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=List_of_North_American_cities_by_population&oldid=822737139 '' Categories : Lists of cities by population Lists of
+cities in the Americas North America - related lists Cities in North America Talk Contents About Wikipedia Español اردو 中文 Edit links This page was last edited
+on 28 January 2018 , at 05 : 43 .
+</item 10>
+=== END ITEM id=ffc0eb25d3701ed9 ===
+
+=== ITEM id=bddaca69f63040d2 ===
+Gold sentences and facts:
+Sentence 0: The Nightmare Before Christmas originated in a poem written by Tim Burton in 1982 , while he was working as an animator at Walt Disney Feature Animation . With the success of Vincent in the same year , Walt Disney Studios began to consider developing The Nightmare Before Christmas as either a short film or 30 - minute television special . Over the years , Burton 's thoughts regularly returned to the project , and in 1990 , he made a development deal with Disney . Production started in July 1991 in San Francisco ; Disney released the film through its Touchstone Pictures banner because the studio believed the film would be `` too dark and scary for kids '' .
+  Fact 0.0: The Nightmare Before Christmas originated in a poem written by Tim Burton in 1982.
+  Fact 0.1: Tim Burton wrote the poem in 1982 while he was working as an animator at Walt Disney Feature Animation.
+  Fact 0.2: Walt Disney Studios began to consider developing The Nightmare Before Christmas in the same year as the success of Vincent.
+  Fact 0.3: Walt Disney Studios considered developing The Nightmare Before Christmas as either a short film or a 30-minute television special.
+  Fact 0.4: Tim Burton's thoughts regularly returned to The Nightmare Before Christmas over the years.
+  Fact 0.5: Tim Burton made a development deal with Disney in 1990.
+  Fact 0.6: Production of The Nightmare Before Christmas started in July 1991 in San Francisco.
+  Fact 0.7: Disney released The Nightmare Before Christmas through its Touchstone Pictures banner.
+  Fact 0.8: Disney released the film through Touchstone because the studio believed the film would be 'too dark and scary for kids'.
+
+Retrieved items:
+<item 1>
+*The Nightmare Before Christmas* follows Jack Skellington of Halloween Town, who discovers Christmas Town and attempts to celebrate Christmas with comic,
+sinister results. Tim Burton conceived it as a poem in 1982; production began in 1991, with Henry Selick directing while Burton was busy with *Batman Returns*.
+Danny Elfman composed the songs and score and sang Jack; the voice cast includes Chris Sarandon, Catherine O’Hara, and Ken Page. Released by Disney’s Touchstone
+label
+</item 1>
+
+<item 2>
+The Nightmare Before Christmas
+He created concept art and storyboards for the project in collaboration with Rick Heinrichs , who also sculpted character models ; Burton later showed his and
+Heinrichs ' works - in - progress to Henry Selick , also a Disney animator at the time . After the success of Vincent in 1982 , Disney started to consider
+developing The Nightmare Before Christmas as either a short film or 30 - minute holiday television special . However , the project 's development eventually
+stalled , as its tone seemed `` too weird '' to the company . As Disney was unable to `` offer his nocturnal loners enough scope '' , Burton was fired from the
+studio in 1984 , and went on to direct the commercially successful films Beetlejuice and Batman . Director Henry Selick ( left ) and producer Tim Burton ( right
+) on the Nightmare Before Christmas set . Over the years , Burton regularly thought about the project . In 1990 , Burton found out that Disney still owned the
+film rights . He and Selick committed to produce a full - length film with the latter as director . Disney was looking forward to Nightmare `` to show
+capabilities of technical and storytelling achievements that were present in Who Framed Roger Rabbit . ''
+</item 2>
+
+<item 3>
+*The Nightmare Before Christmas* was a critical and financial success, earning over $76 million in its initial run and becoming the first animated film
+nominated for the Academy Award for Best Visual Effects. Disney reissued it annually in Disney Digital 3-D from 2006 to 2009, making it the first stop-motion
+feature fully converted to 3-D. Its fantasy setting, Halloween Town, is populated by monsters, ghosts, ghouls, goblins, zombies, vampires, werewolves
+</item 3>
+
+<item 4>
+*The Nightmare Before Christmas* (1993) is a stop-motion musical dark fantasy conceived and produced by Tim Burton and directed by Henry Selick. It follows
+Halloween Town’s Jack Skellington (voiced by Chris Sarandon, sung by Danny Elfman), who discovers Christmas and disastrously tries to take it over before making
+amends. Catherine O’Hara voices Sally and Shock; Ken Page voices Oogie Boogie. Made with 227 puppets, the film earned about $76
+</item 4>
+
+<item 5>
+The Nightmare Before Christmas
+The film was met with both critical and financial success , grossing over $76 million during its initial run . It was nominated for the Academy Award for Best
+Visual Effects , a first for an animated film . The film has since been reissued by Walt Disney Pictures , and was re-released annually in Disney Digital 3 - D
+from 2006 until 2009 , making it the first stop - motion animated feature to be entirely converted to 3D . Contents ( hide ) 1 Plot 2 Voice cast 3 Production
+3.1 Development 3.2 Filming 4 Soundtracks 5 Release 5.1 Home media 5.2 Marketing 6 Reception 6.1 Box office 6.2 Critical response 6.3 Accolades 7 Possible
+sequel 8 Related media 9 See also 10 Notes 11 References 12 Further reading 13 External links Plot ( edit ) Halloween Town is a fantasy world filled with
+citizens such as deformed monsters , ghosts , ghouls , goblins , zombies , mummies , vampires , werewolves , and witches .
+</item 5>
+
+<item 6>
+*The Nightmare Before Christmas* is a 1993 American stop-motion animated musical dark fantasy film, directed by Henry Selick and conceived and produced by Tim
+Burton. It follows Halloween Town’s Jack Skellington as he discovers Christmas and attempts to bring it to his world. Featuring music by Danny Elfman and voices
+including Chris Sarandon and Catherine O’Hara, the 76-minute film was released October 29, 1993. Its $18 million budget yielded $76.2 million
+</item 6>
+
+<item 7>
+Tim Burton and Rick Heinrichs developed concept art and storyboards for *The Nightmare Before Christmas*. Disney initially considered a short or TV special, but
+shelved it as too strange and fired Burton in 1984. In 1990, Burton and director Henry Selick revived it as a feature film. It earned $50 million in its initial
+U.S. run and $8.7 million in a 2006 reissue. Burton resisted sequels to preserve the film’s integrity, though
+</item 7>
+
+<item 8>
+The Nightmare Before Christmas
+It tells the story of Jack Skellington , a resident from `` Halloween Town '' who stumbles through a portal to `` Christmas Town '' and decides to celebrate the
+holiday , with some dastardly and comical consequences . Danny Elfman wrote the songs and score , and provided the singing voice of Jack . The principal voice
+cast also includes Chris Sarandon , Catherine O'Hara , William Hickey , Ken Page , Paul Reubens , and Glenn Shadix . The Nightmare Before Christmas originated
+in a poem written by Tim Burton in 1982 , while he was working as an animator at Walt Disney Feature Animation . With the success of Vincent in the same year ,
+Walt Disney Studios began to consider developing The Nightmare Before Christmas as either a short film or 30 - minute television special . Over the years ,
+Burton 's thoughts regularly returned to the project , and in 1990 , he made a development deal with Disney . Production started in July 1991 in San Francisco ;
+Disney released the film through its Touchstone Pictures banner because the studio believed the film would be `` too dark and scary for kids '' .
+</item 8>
+
+<item 9>
+The Nightmare Before Christmas
+Other songs included are original holiday songs changed to incorporate the theme of the movie . The last song on the list , however , is the soundtrack for the
+Disneyland Haunted Mansion Holiday ride . Release ( edit ) Disney decided to release the film under their Touchstone Pictures banner because they thought the
+film would be `` too dark and scary for kids '' , Selick remembered . `` Their biggest fear , and why it was kind of a stepchild project , ( was ) they were
+afraid of their core audience hating the film and not coming . '' To convey Burton 's involvement and attract a wider audience , Disney marketed the film as Tim
+Burton 's The Nightmare Before Christmas . Burton explained that , `` ... it turned more into more of a brand - name thing , it turned into something else ,
+which I 'm not quite sure about . '' The film premiered at the New York Film Festival on October 9 , and was given a limited release on October 15 , 1993 ,
+before its wide theatrical release on October 29 .
+</item 9>
+
+<item 10>
+The Nightmare Before Christmas
+The Nightmare Before Christmas - wikipedia The Nightmare Before Christmas Jump to : navigation , search This article is about the film . For other uses , see
+The Nightmare Before Christmas ( disambiguation ) . The Nightmare Before Christmas Theatrical release poster Directed by Henry Selick Produced by Tim Burton
+Denise Di Novi Screenplay by Caroline Thompson Story by Michael McDowell ( adaptation ) Based on Story and characters by Tim Burton Starring Chris Sarandon
+Danny Elfman Catherine O'Hara William Hickey Glenn Shadix Paul Reubens Ken Page Ed Ivory Music by Danny Elfman Cinematography Pete Kozachik Edited by Stan Webb
+Production companies Touchstone Pictures Skellington Productions Distributed by Buena Vista Pictures Release date October 29 , 1993 ( 1993 - 10 - 29 ) Running
+time 76 minutes Country United States Language English Budget $18 million Box office $76.2 million The Nightmare Before Christmas ( also known as Tim Burton 's
+The Nightmare Before Christmas ) is a 1993 American stop - motion animated musical dark fantasy film directed by Henry Selick , and produced and conceived by
+Tim Burton .
+</item 10>
+=== END ITEM id=bddaca69f63040d2 ===

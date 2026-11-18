@@ -1,0 +1,448 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "0cc7a1720416cbab",
+   "gold": [
+    {
+     "sentence": " Built in 1988 by the TOGO company, it was the fastest roller coaster in the world when it was built (taking the record from American Eagle at Six Flags Great America).",
+     "facts": {
+      "0.0": "The roller coaster was built in 1988 by the TOGO company.",
+      "0.1": "The roller coaster built by the TOGO company was the fastest roller coaster in the world when it was built.",
+      "0.2": "The roller coaster built by the TOGO company took the record for fastest roller coaster in the world from American Eagle at Six Flags Great America."
+     }
+    },
+    {
+     "sentence": "TOGO (株式会社トーゴ , Kabushiki-gaisha Tōgo ) was a Japanese amusement ride company that built roller coasters, giant wheels, carousels, flumes, dark rides, sky cycles and other amusement rides.",
+     "facts": {
+      "1.0": "TOGO (株式会社トーゴ, Kabushiki-gaisha Tōgo) was a Japanese amusement ride company.",
+      "1.1": "TOGO built roller coasters.",
+      "1.2": "TOGO built giant wheels.",
+      "1.3": "TOGO built carousels.",
+      "1.4": "TOGO built flumes.",
+      "1.5": "TOGO built dark rides.",
+      "1.6": "TOGO built sky cycles.",
+      "1.7": "TOGO built other amusement rides."
+     }
+    }
+   ],
+   "items": [
+    "List of roller coaster rankings\nRoller coasters are amusement rides developed for amusement parks and modern theme parks.\n\n During the 16th and 17th centuries, rides consisting of wooden sleds that took riders down large slides made from ice were popular in Russia.\n\n The first roller coasters, where the train was attached to a wooden track, first appeared in France in the early 1800s.\n\n Although wooden roller coasters are still being produced, steel roller coasters are more common and can be found on every continent except Antarctica.",
+    "Bandit (Yomiuriland)\nBandit (バンデット , Bandetto ) is a steel roller coaster located at Yomiuriland in the city of Inagi, near Tokyo, Japan.\n\n Built in 1988 by the TOGO company, it was the fastest roller coaster in the world when it was built (taking the record from American Eagle at Six Flags Great America).\n\n It lost the record to Magnum XL-200 at Cedar Point one year later.",
+    "Giovanola\nGiovanola Freres SA was one of the prominent thrill ride manufacturers in the world.\n\n It was well known for thrill rides and also built electrical power stations, water storage tanks, pipelines, highway bridges, and many other steel products.\n\n The company started out as a small metal forging shop, founded by Joseph Giovanola in 1888.\n\n It served as a subcontractor to Intamin supplying rides and roller coasters.\n\n In 1998 Giovanola started marketing directly under the name Giovanola Amusement Rides Worldwide.\n\n The company was based in Monthey, Switzerland.\n\n During its last years in business, Giovanola fashioned steel behind the scenes for companies such as Intamin and Bolliger & Mabillard.\n\n The company also built its own thrill rides and roller coasters from 1998 to 2001.\n\n Examples of Giovanola roller coasters are Goliath at Six Flags Magic Mountain, Titan at Six Flags Over Texas and Anaconda at South Africa's Gold Reef City.",
+    "Pretzel Amusement Ride Company\nThe Pretzel Amusement Ride Company was a famous manufacturer of pretzel dark rides. Pretzel built over 1400 pretzel rides and sold them to carnivals and parks.\n\n The pretzel ride was invented by Marvin Rempfer.\n\n Leon Cassidy was Marvin's partner in the Pretzel Amusement Ride Company.\n\n Both names are on the patent.\n\n Leon Cassidy patented the single-rail dark ride in 1928 along with Marvin Rempfer.\n\n The company originated in Tumbling Dam Park on the banks of Sunset Lake in Bridgeton, New Jersey.\n\n A rider said that \"\"It felt like I was turned and twisted like a Pretzel\"\", so the name Pretzel was chosen.\n\n A large heavy pretzel design was originally affixed to the front of each car to prevent the car from flipping backwards.\n\n In 1929, a standard Pretzel ride had five cars, 350 feet of track, and was one and a half minutes per ride.\n\n A pretzel ride sold for $1,200.",
+    "Castle Park (amusement park)\nCastle Park, formerly Castle Amusement Park, is a 25-acre amusement park and family amusement center located in Riverside, California.\n\n The park utilizes a medieval \"castle\" theme and includes attractions such as a miniature golf course, arcade, and 27 amusement rides including three roller coasters such as \"Merlin's Revenge\", a junior rollercoaster, \"Screamin' Demon\" a spinning Wild Mouse rollercoaster, and \"Little Dipper\", a children's rollercoaster.\n\n The main \"castle\" themed building, houses the arcade as well as its only dark ride; \"Ghost Blasters\", an interactive attraction, designed by Sally Corporation, which can also be found at other amusement parks throughout North America.\n\n The park was designed, built and operated by Bud Hurlbut, who designed several rides at Knott's Berry Farm.\n\n Castle Park is currently owned and operated by Palace Entertainment.",
+    "TOGO\nTOGO (株式会社トーゴ , Kabushiki-gaisha Tōgo ) was a Japanese amusement ride company that built roller coasters, giant wheels, carousels, flumes, dark rides, sky cycles and other amusement rides.",
+    "Millennium Force\nMillennium Force is a steel roller coaster built by Intamin at Cedar Point amusement park in Sandusky, Ohio, United States.\n\n It was the fourteenth roller coaster to be built at the park since Blue Streak opened in 1964.\n\n Upon completion in 2000, Millennium Force broke six world records and was the world's first Giga Coaster, a roller coaster that exceeds 300 ft in height and completes a full circuit.\n\n It was briefly the tallest and fastest in the world until Steel Dragon 2000 opened later the same year.\n\n The ride is also the third-longest roller coaster in North America after The Beast at Kings Island and Fury 325 at Carowinds.\n\n It was the first roller coaster to use a cable lift system rather than a traditional chain lift.\n\n The coaster has a 310 ft , 45-degree lift hill with a 300 ft drop and features two tunnels, three overbanked turns, and four hills.\n\n It has a top speed of 93 mph .",
+    "Anton Schwarzkopf\nAnton Schwarzkopf (8 July 1924 – 30 July 2001) was a German engineer of amusement rides, and founder of the Schwarzkopf Industries Company, which built numerous amusement rides and large roller coasters for both amusement parks and traveling funfairs.",
+    "Mack Rides\nMack Rides GmbH & Co KG, also known simply as Mack Rides, is a German company that designs and constructs amusement rides.\n\n Mack Rides in headquartered in Waldkirch, Baden-Württemberg, Germany.\n\n Mack Rides is one of the world's oldest amusement industry suppliers and builds all kinds of amusement devices including several types of flat rides, dark rides, log flumes, tow boat rides and roller coasters.\n\n The family that owns Mack Rides also owns Europa-Park.",
+    "The entries cover roller-coaster history, manufacturers, parks, and attractions. Ice slides preceded French wooden-track coasters; steel coasters are now widespread. Mack Rides and Japan’s TOGO build amusement rides; Swiss Giovanola supplied Intamin before producing coasters such as Goliath and Titan. Pretzel’s company built over 1,400 single-rail dark rides. Notable coasters include Bandit, Millennium Force, Disney’s Space Mountains, and White Cyclone. Other"
+   ]
+  },
+  {
+   "id": "15d096eccc6a0d8b",
+   "gold": [
+    {
+     "sentence": " He has produced songs for prominent artists such as Justin Bieber, Monica, Britney Spears, Usher, Keri Hilson, T.I., Nelly Furtado, Kevin Cossom, Ciara, Mariah Carey, Timbaland, Madonna, J. Cole, Kanye West, Whitney Houston, Missy Elliott, M.I.A., Justin Timberlake, JoJo, Joe Jonas, Simple Plan, The Clutch, Pink, T-Pain, Diddy, Meek Mill, Björk and Duran Duran.",
+     "facts": {
+      "0.0": "This producer has produced songs for Justin Bieber.",
+      "0.1": "This producer has produced songs for Monica.",
+      "0.2": "This producer has produced songs for Britney Spears.",
+      "0.3": "This producer has produced songs for Usher.",
+      "0.4": "This producer has produced songs for Keri Hilson.",
+      "0.5": "This producer has produced songs for T.I.",
+      "0.6": "This producer has produced songs for Nelly Furtado.",
+      "0.7": "This producer has produced songs for Kevin Cossom.",
+      "0.8": "This producer has produced songs for Ciara.",
+      "0.9": "This producer has produced songs for Mariah Carey.",
+      "0.10": "This producer has produced songs for Timbaland.",
+      "0.11": "This producer has produced songs for Madonna.",
+      "0.12": "This producer has produced songs for J. Cole.",
+      "0.13": "This producer has produced songs for Kanye West.",
+      "0.14": "This producer has produced songs for Whitney Houston.",
+      "0.15": "This producer has produced songs for Missy Elliott.",
+      "0.16": "This producer has produced songs for M.I.A.",
+      "0.17": "This producer has produced songs for Justin Timberlake.",
+      "0.18": "This producer has produced songs for JoJo.",
+      "0.19": "This producer has produced songs for Joe Jonas.",
+      "0.20": "This producer has produced songs for Simple Plan.",
+      "0.21": "This producer has produced songs for The Clutch.",
+      "0.22": "This producer has produced songs for Pink.",
+      "0.23": "This producer has produced songs for T-Pain.",
+      "0.24": "This producer has produced songs for Diddy.",
+      "0.25": "This producer has produced songs for Meek Mill.",
+      "0.26": "This producer has produced songs for Bjork.",
+      "0.27": "This producer has produced songs for Duran Duran."
+     }
+    },
+    {
+     "sentence": " Raised in Fayetteville, North Carolina, Cole initially gained recognition as a rapper following the release of his debut mixtape, \"The Come Up\", in early 2007.",
+     "facts": {
+      "1.0": "Cole was raised in Fayetteville, North Carolina.",
+      "1.1": "Cole initially gained recognition as a rapper.",
+      "1.2": "Cole initially gained recognition as a rapper after the release of his debut mixtape.",
+      "1.3": "Cole's debut mixtape is titled The Come Up.",
+      "1.4": "Cole's debut mixtape The Come Up was released in early 2007."
+     }
+    }
+   ],
+   "items": [
+    "Daniel Boone Native Gardens\nDaniel Boone Native Gardens, located in Boone, North Carolina, United States, has a collection of North Carolina native plants in an informal landscaped design.\n\n The gardens are open daily from May to October.",
+    "Kaydean\nKaydean is a British-American record and TV producer, composer, DJ, record label executive and artist manager.\n\n Kaydean produces, composes and arranges music in the Dance, Electronica, Latin Pop, Contemporary R&B, and Electronica genres.\n\n Born in London, he has worked with many artists including Janet Jackson, Maxi Priest, Robyn, Man Parrish, Angel \"Cucco\" Peña, Baron Lopez, Raekwon, Ky-Mani Marley, Frankie Cutlass and Nocera amongst others.\n\n He is also known for discovering Latin Pop Star Janid and managing her career.\n\n He produced her Spanish album \"La Magia\" under the Sony Music Latin imprint label, Handshake and her Hit Single \"Penicilina\".\n\n In 2015 he debuted as a TV executive producer with Janid's reality show on Mega TV, The first episode aired on September 6, 2015.",
+    "Raleigh Moncrief\nRaleigh Moncrief is an American electronic musician, record producer and recording engineer who has worked with Zach Hill, Dirty Projectors and !!!\n\n.",
+    "Lil Ru\nSylvester Samuels better known by his stage name Lil Ru, is an American rapper from Ridgeway, South Carolina currently signed to Def Jam Recordings.\n\n His debut album, 21 & Up was released on August 25, 2009.\n\n The Ridgeway native was 16 when he made his professional foray into the music business.\n\n Inspired by New Orleans’ innovative Cash Money Crew, Ru began making a name for himself on his local music scene, doing live shows and pressing up his own CDs.\n\n His hard-hitting lyrics and entrepreneurial spirit caught the attention of fellow South Carolinian Angie Stone.\n\n Shortly after the neo-soul songstress helped him secure a deal with Elektra Records, Ru found himself unsigned again, among the artists lost in the shuffle after the label merged with Atlantic Records.\n\n Music fans first heard him on his 2001 debut single Will Destroy.\n\n He then released his 2002 follow up, Shawty What You Doin’.\n\n Both songs reached the Billboard R&B/Hip-Hop charts and helped land him at his next label home, Capitol Records.",
+    "Danny Shirley\nDanny Shirley (born August 12, 1956) is an American country music singer.\n\n He is best known as the lead singer of the country rock band Confederate Railroad, a role he has held since its formation in 1987.",
+    "Daron Jones\nDaron Tavaris Jones (born December 27, 1976) is an American singer-songwriter, record producer.\n\n He is a member in Bad Boy Records group 112.\n\n His debut solo album titled \"Uncensored\" was released December 5, 2010.\n\n The first single from the album is the digitally-released \"Money.\"\n\n Daron digitally released \"Christmas in Atlanta\" in December 2014, which reached the top 30 on the iTunes R&B chart.\n\n Daron is currently in the studio working on new music.",
+    "Anna Graceman\nAnna Graceman is a young American singer-songwriter and pianist whose self-penned songs and music have gained attention at home and abroad.\n\n Her style of music incorporates elements of folk, soul and rock.\n\n As of 2016 she had written and performed over 70 of her own published songs; writing as well as producing her releases.\n\n Anna continues to divide her time between her solo projects and her new project - the ‘Graceman’ Band - a trio that includes Allie Graceman (Rhythm/Lead Guitar) and Landon Graceman (Drums).",
+    "Danja (record producer)\nFloyd Nathaniel \"Nate\" Hills (born February 22, 1982), professionally known as Danja , is an American record producer and songwriter from Virginia Beach, Virginia.\n\n He has produced songs for prominent artists such as Justin Bieber, Monica, Britney Spears, Usher, Keri Hilson, T.I., Nelly Furtado, Kevin Cossom, Ciara, Mariah Carey, Timbaland, Madonna, J. Cole, Kanye West, Whitney Houston, Missy Elliott, M.I.A., Justin Timberlake, JoJo, Joe Jonas, Simple Plan, The Clutch, Pink, T-Pain, Diddy, Meek Mill, Björk and Duran Duran.",
+    "Zach Crowell\nZach Crowell is a Grammy Award-winning songwriter and record producer, who was born and raised in Nashville, Tennessee.\n\n Crowell is involved in a joint publishing deal with Warner/Chappell Music, Combustion Music and Taperoom Music.",
+    "J. Cole\nJermaine Lamarr Cole (born January 28, 1985), better known by his stage name J. Cole, is an American hip hop recording artist and record producer.\n\n Raised in Fayetteville, North Carolina, Cole initially gained recognition as a rapper following the release of his debut mixtape, \"The Come Up\", in early 2007.\n\n Intent on further pursuing a solo career as a rapper, he went on to release two additional mixtapes after signing to Jay Z's Roc Nation imprint in 2009."
+   ]
+  },
+  {
+   "id": "2d048ec515ecb496",
+   "gold": [
+    {
+     "sentence": "Distortion Mirrors is an English alternative rock band, based in Leeds, West Yorkshire, England, and who was formed in 2011.",
+     "facts": {
+      "0.0": "Distortion Mirrors is an English alternative rock band.",
+      "0.1": "Distortion Mirrors is based in Leeds, West Yorkshire, England.",
+      "0.2": "Distortion Mirrors was formed in 2011."
+     }
+    },
+    {
+     "sentence": "OK Go is an American rock band originally from Chicago, Illinois, now based in Los Angeles, California.",
+     "facts": {
+      "1.0": "OK Go is an American rock band.",
+      "1.1": "OK Go was originally from Chicago, Illinois.",
+      "1.2": "OK Go is now based in Los Angeles, California."
+     }
+    }
+   ],
+   "items": [
+    "OK Go videography\nThe success of OK Go's music first won the band the 14th Annual Webby Special Achievement Award for Film and Video Artist of the Year.\n\n The video for \"This Too Shall Pass\" was named both \"Video of the Year\" and \"Best Rock Video\" at the 3rd annual UK Music Video Awards.\n\n\"This Too Shall Pass\" won the LA Film Fest's Audience Award for Best Music Video, UK MVA Awards – Music Video of the Year Winner 2010, among others.",
+    "Go Too\nGo Too (1977) is Go's third album.\n\n Go was founded by Stomu Yamashta, Steve Winwood and Michael Shrieve.\n\n For this album, Jess Roden replaced Steve Winwood (who had left the group).\n\n The style of the music became modified accordingly.\n\n In addition, Linda Lewis was hired as a singer.\n\n Together with Paul Jackson, Jr. and the orchestra of Martyn Ford the album unified various soundscapes.",
+    "OK Go videography\nThe musical rock band OK Go has earned considerable fame for their creative but often low-budget music videos, most of which have been promoted through Internet video sharing sites like YouTube.\n\n Many of these have become viral videos; the 2006 video for \"Here It Goes Again\", in which the band performed a complex routine with the aid of motorized treadmills, has received over 50 million views four years later.\n\n Their video for Needing/Getting, released February 5, 2012 in partnership with Chevrolet, debuted during Super Bowl XLVI and has over 32 million views on YouTube.\n\n Samuel Bayer, who produced many music videos in the 1990s, asserted that OK Go's promotion of music videos on the Internet was akin to Nirvana's ushering in the grunge movement.\n\n Many of the videos also use long or single-shot takes, which \"Salon\"' s Matt Zoller Seitz says \"restore[s] a sense of wonder to the musical number by letting the performers' humanity shine through and allowing them to do their thing with a minimum of filmmaking interference\".",
+    "OK Go\nOK Go is an American rock band originally from Chicago, Illinois, now based in Los Angeles, California.\n\n The band is composed of Damian Kulash (lead vocals, guitar), Tim Nordwind (bass guitar and vocals), Dan Konopka (drums and percussion) and Andy Ross (guitar, keyboards and vocals), who joined them in 2005, replacing Andy Duncan.\n\n The band is known for its often quirky and elaborate one-take music videos.",
+    "OK Go (album)\nOK Go is the debut studio album by American rock band OK Go.\n\n It was released in September 2002.\n\n The cover was created by designer Stefan Sagmeister.",
+    "Distortion Mirrors\nDistortion Mirrors is an English alternative rock band, based in Leeds, West Yorkshire, England, and who was formed in 2011.",
+    "Graph query row:\nentity: OK Go\nlabels: ['__KGBuilder__', '__Entity__', 'Organization']\nkind: band\ngenre: rock\nrelationship: LOCATED_IN\nrelated_entity: Chicago\nrelated_kind: city\nrelated_genre: None",
+    "The Writing's on the Wall (OK Go song)\n\"The Writing's on the Wall\" is a song by American rock band OK Go.\n\n It was released on June 17, 2014, as part of the band's EP \"Upside Out\", and is also the first single from the band's fourth studio album \"Hungry Ghosts\".\n\n On the same day, the band released a music video in which the members use props to create optical illusions, reflecting the song's description of a relationship that fails because the couple has different points of view.\n\n Like previous OK Go videos, it is structured as a one-shot music video.\n\n The many YouTube views of the video caused the song to debut in the top ten of the US \"Billboard\" Hot Rock Songs chart, as well as number one on the Bubbling Under Hot 100 Singles chart.",
+    "OK Go (2001 EP)\nOK Go or The Pink EP (officially known as OKGoCD.002) is the second EP by American rock band OK Go.",
+    "OK Go (2000 EP)\nOK Go or The Brown EP (officially known as OKGoCD.001) is the first EP by American rock band OK Go."
+   ]
+  },
+  {
+   "id": "a5d3d1823a83cb21",
+   "gold": [
+    {
+     "sentence": "The Edison Sault Power Canal supplies the Saint Marys Falls Hydropower Plant, a Cloverland Electric Cooperative hydroelectric plant, in Sault Ste. Marie, Michigan.",
+     "facts": {
+      "0.0": "The Edison Sault Power Canal supplies the Saint Marys Falls Hydropower Plant.",
+      "0.1": "The Saint Marys Falls Hydropower Plant is a Cloverland Electric Cooperative hydroelectric plant.",
+      "0.2": "The Saint Marys Falls Hydropower Plant is in Sault Ste. Marie, Michigan."
+     }
+    },
+    {
+     "sentence": " Excavation of the power canal began in September 1898 and was completed in June 1902.",
+     "facts": {
+      "1.0": "Excavation of the Edison Sault Power Canal began in September 1898.",
+      "1.1": "Excavation of the Edison Sault Power Canal was completed in June 1902."
+     }
+    },
+    {
+     "sentence": " The canal and hydroelectric complex were named a Historic Civil Engineering Landmark in 1983.",
+     "facts": {
+      "2.0": "The canal was named a Historic Civil Engineering Landmark in 1983.",
+      "2.1": "The hydroelectric complex was named a Historic Civil Engineering Landmark in 1983."
+     }
+    },
+    {
+     "sentence": "The Cayuga–Seneca Canal is a canal in New York, United States.",
+     "facts": {
+      "3.0": "The Cayuga–Seneca Canal is a canal in New York, United States."
+     }
+    },
+    {
+     "sentence": " It is now part of the New York State Canal System.",
+     "facts": {
+      "4.0": "The Cayuga–Seneca Canal is now part of the New York State Canal System."
+     }
+    }
+   ],
+   "items": [
+    "Cayuga–Seneca Canal\nThe Cayuga–Seneca Canal is a canal in New York, United States.\n\n It is now part of the New York State Canal System.",
+    "New York State Canal System\nThe New York State Canal System (formerly known as the New York State Barge Canal) is a successor to the Erie Canal and other canals within New York.\n\n Currently, the 525 mi system is composed of the Erie Canal, the Oswego Canal, the Cayuga–Seneca Canal, and the Champlain Canal.\n\n In 2014 the system was listed as a national historic district on the National Register of Historic Places in its entirety, and in 2016 it was designated a National Historic Landmark.",
+    "Dundee Canal\nThe Dundee Canal was an industrial canal in Clifton and Passaic in Passaic County, New Jersey.\n\n It was built between 1858 and 1861 and ran parallel to the Passaic River.\n\n It supplied hydropower and water for manufacturing.\n\n There was interest by some members of the business community to modify the canal to support navigational uses, but the canal was never used for that purpose.",
+    "Seneca River Crossing Canals Historic District\nSeneca River Crossing Canals Historic District is a national historic district located at Montezuma and Tyre in Cayuga and Seneca Counties, New York.\n\n The district includes more than a mile of the Enlarged Erie Canal prism (built here between 1849 and 1857); towpath and heelpath; a drydock; the remains of the Richmond (Montezuma) Aqueduct crossing the Seneca River; remnants of the original Erie Canal, built between 1817 and 1825 and including Lock #62 and piers of the original mule bridge from that era; and a culvert that carries a stream beneath the Enlarged Erie Canal.",
+    "Power canal\nA Power Canal refers to a canal used for hydraulic power generation, rather than for transport of watercraft.\n\n The power canal was a major factor in the Industrial revolution in New England in the 19th century.\n\n Most early power canals were mill races used mechanically to transfer power directly from falling water to machinery in mill buildings.\n\n Later, the hydraulic power generated electricity locally for the same mill factories.\n\n These power canals were often filled in as electricity (transported by power lines) replaced the need for local water power, and road transport needs or city expansion needs reclaimed the land.\n\n Some hydraulic power canals were transformed into local electric generators, but most were closed.\n\n Remains of power canals can be seen in old mill towns and are often protected as historical structures today.",
+    "Beaver and Erie Canal\nThe Beaver and Erie Canal, also known as the Erie Extension Canal, was part of the Pennsylvania Canal system and consisted of three sections: the Beaver Division, the Shenango Division, and the Conneaut Division.\n\n The canal ran 136 mi north–south near the western edge of the state from the Ohio River to Lake Erie through Beaver County, Lawrence County, Mercer County, Crawford County, and Erie County, Pennsylvania.",
+    "Raritan Water Power Canal\nThe Raritan Water Power Canal in Raritan, New Jersey was a three-mile long water power canal built during the early 1840s to power industries.\n\n The canal has been determined to be eligible for the National Register.\n\n The canal is included in Duke Island Park, as part of the Somerset County Park System.",
+    "Lowell Power Canal System and Pawtucket Gatehouse\nThe Lowell Power Canal System is the largest power canal system in the United States, at 5.6 miles in length.\n\n The system's estimated output is 10,000 horsepower, operating six major canals on two levels, controlled by numerous gates.\n\n The system was begun in the 1790s, beginning its life as a transportation canal called the Pawtucket Canal, which was constructed to get logs from New Hampshire down the Merrimack River to shipbuilding centers at Newburyport, Massachusetts, bypassing the 30-plus-foot drop of the Pawtucket Falls.",
+    "New York State Canal Corporation\nThe New York State Canal Corporation is responsible for the oversight, administration and maintenance of the New York State Canal System, which consists of the Erie Canal, Cayuga–Seneca Canal, Oswego Canal and Champlain Canal.\n\n It is also involved with the development and maintenance of the New York State Canalway Trail and with the general development and promotion of the Erie Canal Corridor as both a tourist attraction and a working waterway.",
+    "Edison Sault Power Canal\nThe Edison Sault Power Canal supplies the Saint Marys Falls Hydropower Plant, a Cloverland Electric Cooperative hydroelectric plant, in Sault Ste. Marie, Michigan.\n\n Excavation of the power canal began in September 1898 and was completed in June 1902.\n\n The canal and hydroelectric complex were named a Historic Civil Engineering Landmark in 1983."
+   ]
+  },
+  {
+   "id": "55a4123136dd10a0",
+   "gold": [
+    {
+     "sentence": "Triumph of the Will (German: Triumph des Willens ) is a 1935 German propaganda film directed, produced, edited, and co-written by Leni Riefenstahl.",
+     "facts": {
+      "0.0": "Triumph of the Will's German title is Triumph des Willens.",
+      "0.1": "Triumph of the Will is a 1935 German propaganda film.",
+      "0.2": "Leni Riefenstahl directed Triumph of the Will.",
+      "0.3": "Leni Riefenstahl produced Triumph of the Will.",
+      "0.4": "Leni Riefenstahl edited Triumph of the Will.",
+      "0.5": "Leni Riefenstahl co-wrote Triumph of the Will."
+     }
+    },
+    {
+     "sentence": "The End of America is a 2008 documentary film directed by Annie Sundberg and Ricki Stern, adapted from Naomi Wolf's 2007 book, \"\".",
+     "facts": {
+      "1.0": "The End of America is a 2008 documentary film.",
+      "1.1": "Annie Sundberg directed The End of America.",
+      "1.2": "Ricki Stern directed The End of America.",
+      "1.3": "The End of America is adapted from Naomi Wolf's 2007 book."
+     }
+    }
+   ],
+   "items": [
+    "A Successful Failure\nA Successful Failure (1934) is an American film directed by Arthur Lubin.\n\n It was Lubin's first movie as director.",
+    "Town Without Pity\nTown Without Pity (German: Stadt ohne Mitleid) is a 1961 American, Swiss, and West German international co-production drama film directed by Gottfried Reinhardt.\n\n Produced by The Mirisch Corporation, the film stars Kirk Douglas, Christine Kaufmann, and E. G. Marshall.\n\n Coincidentally, this movie came out the same year that John A. Bennett, to this day the last man executed by the U.S. Army, was hanged for raping an 11-year-old girl.",
+    "Apocalypse Now\nApocalypse Now is a 1979 American epic war film directed, produced, and co-written by Francis Ford Coppola.\n\n It was co-written by John Milius with narration written by Michael Herr.\n\n It stars Marlon Brando, Robert Duvall, Martin Sheen, Frederic Forrest, Albert Hall, Sam Bottoms, Larry Fishburne, and Dennis Hopper.\n\n The screenplay, written by Milius, adapts the story of Joseph Conrad's novella \"Heart of Darkness\", changing its setting from late nineteenth-century Congo to the Vietnam War.\n\n It draws from Herr's \"Dispatches\" and Werner Herzog's \"Aguirre, the Wrath of God\" (1972).\n\n The film revolves around Captain Benjamin L. Willard (Sheen) on a secret mission to assassinate Colonel Kurtz, a renegade who is presumed insane.",
+    "Triumph of the Will\nTriumph of the Will (German: Triumph des Willens ) is a 1935 German propaganda film directed, produced, edited, and co-written by Leni Riefenstahl.\n\n It chronicles the 1934 Nazi Party Congress in Nuremberg, which was attended by more than 700,000 Nazi supporters.\n\n The film contains excerpts from speeches given by Nazi leaders at the Congress, including Adolf Hitler, Rudolf Hess and Julius Streicher, interspersed with footage of massed Sturmabteilung (SA) and Schutzstaffel (SS) troops and public reaction.\n\n Hitler commissioned the film and served as an unofficial executive producer; his name appears in the opening titles.\n\n The film's overriding theme is the return of Germany as a great power, with Hitler as the leader who will bring glory to the nation.\n\n Because the film was made after the 1934 Night of the Long Knives (on 30 June) many prominent Sturmabteilung (SA) members are absent—they were murdered in that Party purge, organised and orchestrated by Hitler to replace the SA with the Schutzstaffel (SS) as his main paramilitary force.",
+    "Olympia (1938 film)\nOlympia is a 1938 German documentary film written, directed and produced by Leni Riefenstahl, documenting the 1936 Summer Olympics, held in the Olympic Stadium in Berlin, Germany.\n\n The film was released in two parts: \"Olympia 1.\n\n Teil — Fest der Völker\" (Festival of Nations) and \"Olympia 2.\n\n Teil — Fest der Schönheit\" (Festival of Beauty).\n\n It was the first documentary feature film of the Olympic Games ever made.\n\n Many advanced motion picture techniques, which later became industry standards but which were groundbreaking at the time, were employed —including unusual camera angles, smash cuts, extreme close-ups, placing tracking shot rails within the bleachers, and the like.\n\n The techniques employed are almost universally admired, but the film is controversial due to its political context.\n\n Nevertheless, the film appears on many lists of the greatest films of all time, including \"Time\" magazine's \"All-Time 100 Movies.\"",
+    "Reunion (1989 film)\nThe story is centred on the \"enchanted friendship\" of two teenagers in 1933 Germany.\n\n Hans Strauss (Christien Anholt) is the son of a Jewish doctor and Konradin Von Lohenburg (Samuel West) is from an aristocratic family.\n\n The background is the rise of Nazism.\n\n Jason Robards plays the older Hans in the 1970s as he prepares to travel to Germany for the first time since the 1930s.\n\n The film was shot on location in Berlin, New York and Stuttgart.\n\n \"Reunion\" was nominated for a Golden Palm at the 1989 Cannes Film Festival.",
+    "The End of America (film)\nThe End of America is a 2008 documentary film directed by Annie Sundberg and Ricki Stern, adapted from Naomi Wolf's 2007 book, \"\".\n\n The film analyzes policy changes made during the Bush Administration, and makes the case that these changes threaten American democracy.",
+    "Love Begins at 20\nLove Begins at 20 is a 1936 American comedy film directed by Frank McDonald and written by Dalton Trumbo and Tom Reed, based on the 1929 play \"Broken Dishes\" by Martin Flavin.\n\n The film stars Hugh Herbert, Patricia Ellis, Warren Hull, Hobart Cavanaugh, Dorothy Vaughan and Clarence Wilson.\n\n The film was released by Warner Bros. on August 22, 1936.",
+    "The Sorrow and the Pity\nThe Sorrow and the Pity (French: Le Chagrin et la Pitié ) is a two-part 1969 documentary film by Marcel Ophüls about the collaboration between the Vichy government and Nazi Germany during World War II.\n\n The film uses interviews with a German officer, collaborators, and resistance fighters from Clermont-Ferrand.\n\n They comment on the nature of and reasons for collaboration.\n\n The reasons include antisemitism, anglophobia, fear of Bolsheviks and Soviet invasion, the desire for power, and simple caution.",
+    "Empire (1964 film)\nEmpire is a 1964 American black and white silent film written, produced, and directed by Andy Warhol.\n\n It consists of eight hours and five minutes of continuous slow motion footage of the Empire State Building in New York City.\n\n Abridged showings of the film were never allowed, and supposedly the unwatchability of the film was an important part of the reason the film was created.\n\n However, a legitimate Italian VHS produced in association with the Andy Warhol Museum in 2000 contains only an extract of 60 minutes.\n\n Its use of the long take \"in extremis\" is an extension of Warhol's earlier work the previous year with \"Sleep\".\n\n Warhol employed Rob Trains to be the projectionist for a screening of the film.\n\n Trains miscalculated and mixed the order and speed of the reels for the eight-hour movie.\n\n After a positive review in \"The New York Times\", Warhol actually liked the \"mistake\" and employed Trains for the entire summer."
+   ]
+  },
+  {
+   "id": "d4c5cf5f1939267e",
+   "gold": [
+    {
+     "sentence": " The area along Northern Boulevard is well known for its high-end premium open-air shopping center, the Americana Manhasset.",
+     "facts": {
+      "0.0": "The area along Northern Boulevard is well known for its high-end premium open-air shopping center.",
+      "0.1": "The high-end premium open-air shopping center is named the Americana Manhasset."
+     }
+    },
+    {
+     "sentence": "International fashion designer labels and luxury goods companies—Hermes, Dior, Cartier, Bottega Veneta, Chanel, Fendi, Gucci, Louis Vuitton, MaxMara, Celine, Tiffany & Co., and Prada—maintain a total of more than 60 retail stores and restaurants on a 220000 sqft site surrounded by gardens designed by Oheme van Sweden.",
+     "facts": {
+      "1.0": "Hermes, Dior, Cartier, Bottega Veneta, Chanel, Fendi, Gucci, Louis Vuitton, MaxMara, Celine, Tiffany & Co., and Prada are international fashion designer labels and luxury goods companies.",
+      "1.1": "These companies maintain a total of more than 60 retail stores and restaurants.",
+      "1.2": "These stores and restaurants are on a 220000 sqft site.",
+      "1.3": "The 220000 sqft site is surrounded by gardens.",
+      "1.4": "The gardens surrounding the site were designed by Oheme van Sweden."
+     }
+    }
+   ],
+   "items": [
+    "Bumble and bumble\nBumble and bumble Products, LLC is one of 27 brands owned by Estée Lauder Companies, Inc.\n\n It was founded as a New York City hair salon in 1977 by hairdresser and entrepreneur Michael Gordon.\n\n The company operates two flagship salons in Manhattan: a midtown location on East 56th Street and on the top two floors of The House of Bumble in the Meatpacking District.",
+    "Americana Manhasset\nInternational fashion designer labels and luxury goods companies—Hermes, Dior, Cartier, Bottega Veneta, Chanel, Fendi, Gucci, Louis Vuitton, MaxMara, Celine, Tiffany & Co., and Prada—maintain a total of more than 60 retail stores and restaurants on a 220000 sqft site surrounded by gardens designed by Oheme van Sweden.\n\n Peter Marino is Americana Manhasset's master architect.",
+    "Estée Lauder Companies\nThe Estée Lauder Companies Inc. ( ) is an American manufacturer and marketer of prestige skincare, makeup, fragrance and hair care products.\n\n The company owns a diverse portfolio of brands, distributed internationally through retail channels and digital commerce, and has its headquarters in Midtown Manhattan, New York City.",
+    "New Roc City\nNew Roc City, also known as New Rochelle Center, is an entertainment, retail and residential complex in the Downtown section of the city of New Rochelle in Westchester County, New York.\n\n It is located at 33 LeCount Place, between Main Street North and Main Street South.\n\n The center was built on the site of the former New Rochelle Mall which closed in 1992.",
+    "Luxify\nLuxify is a Hong Kong-based company, providing an online marketplace for new, vintage and pre-owned luxury goods.\n\n The company manages an online marketplace website in which members buy and sell a variety of luxury goods.\n\n It was Hong Kong's first online marketplace to buy and sell luxury goods The site has over 15 categories, including real estate, watches, jewelry, luxury cars, yachts, aircraft, luxury handbags, art, collectibles, furniture, antiques and fine wines & spirits.\n\n As of March 2016, the website had over 22,000 listings from luxury dealers from all over the world, making a US$18.6 billion marketplace.\n\n Luxify also has offices in Singapore and London and local partners in Shanghai and Jakarta.",
+    "Christian Dior SE\nChristian Dior SE (] ), commonly known as Dior, is a French luxury goods company controlled and chaired by French businessman Bernard Arnault, who also heads LVMH – the world's largest luxury group.\n\n Dior itself holds 42.36% shares of and 59.01% voting rights within LVMH.",
+    "Sunset Strip\nSunset Strip is the mile-and-a-half (2.4 km) stretch of Sunset Boulevard that passes through West Hollywood, California.\n\n It extends from West Hollywood's eastern border with Hollywood at Crescent Heights Boulevard to its western border with Beverly Hills at Sierra Drive.\n\n Sunset Strip is probably the best-known portion of Sunset Boulevard, with boutiques, restaurants, rock clubs, and nightclubs.\n\n It is also known for its array of huge, colorful billboards.",
+    "Miracle Mile (Manhasset)\nThe Miracle Mile is a prominent shopping district in Manhasset on the North Shore of Long Island in Nassau County, New York.\n\n The area along Northern Boulevard is well known for its high-end premium open-air shopping center, the Americana Manhasset.",
+    "Mike Long (American businessman)\nMike Long is an American business man, former CEO of several public companies, and currently a founding partner of Sulgrave Partners LLC.\n\n He served as the President and Chief Executive Officer of Continuum, an Austin, Texas IT consulting company, from 1991 to 1997, having started with Continuum as a Director in 1983.\n\n In 1997, Long was named CEO of Healtheon Corporation (now WebMD), succeeding former CEO David Schnell.\n\n Long oversaw Healtheon's initial public offering, traveling between Europe and the United States to woo investors.\n\n Long was able to secure the required investment funds, and saw Healtheon's stock price rise from $8 to a high of $120.\n\n In 2002, Long was recruited to fix the financial struggles of Move, Inc., a company plagued by more than $4 billion in lawsuits and hemorrhaging tens of millions of dollars a quarter.\n\n As Chief Executive Officer, Long was able to revive Homestore, Inc., by changing the business model, rebranding the company as Move, Inc. and returning it to profitability.",
+    "Mouawad\nMouawad is a privately held Swiss and Emirati luxury goods company that makes fashion accessories, jewelry and retail company that sources diamonds and gemstones, designs, manufacturers, and sells jewelry collections, objects of art, and luxury watches.\n\n The firm has headquarters in Geneva, Switzerland, with a Middle East headquarters at Jumeirah Lakes Towers in Dubai.\n\n Founded in 1891 in Beirut, Lebanon by David Mouawad, the firm is now led by 4th generation co-guardians Fred Mouawad, Alain Mouawad and Pascal Mouawad.\n\n The firm's jewelry and watch design and manufacturing divisions are located in Switzerland and Asia Pacific."
+   ]
+  },
+  {
+   "id": "225e1e1f44357749",
+   "gold": [
+    {
+     "sentence": "Ash Lieb (born 22 August 1982) is an Australian artist, writer and comedian, known for his surreal humour and art.",
+     "facts": {
+      "0.0": "Ash Lieb was born on 22 August 1982.",
+      "0.1": "Ash Lieb is an Australian artist.",
+      "0.2": "Ash Lieb is an Australian writer.",
+      "0.3": "Ash Lieb is an Australian comedian.",
+      "0.4": "Ash Lieb is known for his surreal humour.",
+      "0.5": "Ash Lieb is known for his surreal art."
+     }
+    },
+    {
+     "sentence": "Helen Elswyth Thane Ricker Beebe (May 16, 1900 – July 31, 1984) was an American romance novelist.",
+     "facts": {
+      "1.0": "Helen Elswyth Thane Ricker Beebe was born on May 16, 1900.",
+      "1.1": "Helen Elswyth Thane Ricker Beebe died on July 31, 1984.",
+      "1.2": "Helen Elswyth Thane Ricker Beebe was an American romance novelist."
+     }
+    }
+   ],
+   "items": [
+    "Vladimir Ashkenazy\nVladimir Davidovich Ashkenazy (Russian: Влади́мир Дави́дович Ашкена́зи , \"Vladimir Davidovich Ashkenazi\"; born 6 July 1937) is an internationally recognized solo pianist, chamber music performer, and conductor.\n\n He is originally from Russia and has held Icelandic citizenship since 1972.\n\n He has lived in Switzerland since 1978.\n\n Ashkenazy has collaborated with well-known orchestras and soloists.\n\n In addition, he has recorded a large storehouse of classical and romantic works.\n\n His recordings have earned him five Grammy awards plus Iceland's Order of the Falcon.",
+    "Scott Treleaven\nScott Treleaven is a Canadian artist whose work employs a variety of media including collage, film, video, drawing, photography and installation.",
+    "Hans Aschenborn\nHans Anton Aschenborn (1 February 1888 – 10 April 1931) was a renowned animal painter of African wildlife.\n\n He worked both in Germany and in southern Africa.\n\n His work is featured in the older German Thieme-Becker or Saur art encyclopedia.\n\n A Master of Arts thesis by Karin Skawran concerning the graphic works of Hans Anton Aschenborn was published in the South African art and culture periodical, \"Lantern\" in 1965.)\n\n In 1963 the University of Pretoria published a book about Aschenborn as an artist entitled, \"Hans Anton Aschenborn : Mens en Kunstenaar\".\n\n In 1970 another one followed by the Pretoria Art Museum (South Africa).\n\n Other publications on Aschenborn feature his etchings and linocuts.",
+    "Litbits\nLitbits is a literary discussion radio programme and podcast, hosted by academic Adam Smyth and literary journalist James Kidd.\n\n Guests on the programme have included Polly Russell, Paul Myerscough, Alex von Tunzelmann, Samantha Ellis, Jonathan Beckman, Hallie Rubenhold, Steve Rose, Joe Brooker, Dennis Duncan, Dinah Roe, Giles Milton and Liane Strauss.\n\n Subjects covered include Rooms and Procrastination.",
+    "Ash Lieb\nAsh Lieb (born 22 August 1982) is an Australian artist, writer and comedian, known for his surreal humour and art.\n\n Born in Ballarat, Ash Lieb began exhibiting art at eight years of age, and at the age of fifteen, wrote his first novel, \"The Secret Well\".\n\n Throughout his career, Lieb has created a diverse range of artworks, books, short films, and comedic performances, which have often possessed philosophical or psychiatric undertones.",
+    "Elswyth Thane\nHelen Elswyth Thane Ricker Beebe (May 16, 1900 – July 31, 1984) was an American romance novelist.\n\n Born in Burlington, Iowa, she was the daughter of a local teacher and high school principal.\n\n The family moved to New York City in 1918, and \"Helen Ricker\" changed her name to \"Elswyth Thane\".\n\n She began working as a freelance writer in the 20s, and became a newspaper writer and a Hollywood screenwriter.\n\n Her first novel, \"Riders of the Wind\", was published in 1926.\n\n Her novel, \"The Tudor Wench\", about Elizabeth I of England, was made into a play.\n\n She was a collector of scarves.",
+    "Dan Ouellette\nDan Ouellette is an American artist, illustrator, director, author and production designer.\n\n He began drawing as a child inspired by Escher, Dalí and Moebius.\n\n His drawings usually begin with very rough sketches and are intended to capture a moment of tension or eroticism.\n\n His art pushes his audience into areas where people feel less than comfortable, stating that the \"US which is so puritanical, our bodies are usually a great source of anxiety and fear\".\n\n As a production designer, he has designed over fifteen independent feature films in the past decade as well as numerous commercials and music videos.\n\n He is best known as the director for the music videos \"Blue\" and \"Looking Glass\" by The Birthday Massacre, receiving over 4 million combined views on YouTube, and has directed music videos for the industrial band Android Lust.\n\n He has done production design for many films over the years including \"Chasing Sleep\" starring Jeff Daniels.\n\n Dan's artwork is strongly themed around surrealism and mostly done in pencil.\n\n As an artist he has exhibited widely.\n\n He has been published in numerous anthology art books including \"Bio-Mannerism\" which also features work by H.R.",
+    "Tryst (novel)\nTryst, written in 1939 by Elswyth Thane, is a story of two people and a seemingly ordinary home.\n\n While a quick summary may make it sound like a Horror novel, it actually borders on Mystery and Romance.",
+    "Oliver Lieb\nOliver Lieb (born 1969 in Frankfurt, Germany) is a German electronic music producer and DJ.\n\n Lieb is known to have more than a dozen aliases with over 200 productions and remixes in various electronic genres such as trance, house, and techno.\n\n He has also produced tracks for other artists.",
+    "Dash and Lilly\nDash and Lilly is a 1999 Emmy and Golden Globe Award-nominated biographical television film about writers Dashiell Hammett and Lillian Hellman.\n\n The film was directed by actress Kathy Bates and written by Jerrold L. Ludwig.\n\n It stars Sam Shepard and Judy Davis."
+   ]
+  },
+  {
+   "id": "0c11f6d390de9395",
+   "gold": [
+    {
+     "sentence": "\"Grow Some Funk of Your Own\" is a song by Elton John.",
+     "facts": {
+      "0.0": "'Grow Some Funk of Your Own' is a song by Elton John."
+     }
+    },
+    {
+     "sentence": "Sir Elton Hercules John, (born Reginald Kenneth Dwight; 25 March 1947), is an English singer, pianist, and composer.",
+     "facts": {
+      "1.0": "Sir Elton Hercules John was born Reginald Kenneth Dwight.",
+      "1.1": "Sir Elton Hercules John was born on 25 March 1947.",
+      "1.2": "Sir Elton Hercules John is an English singer.",
+      "1.3": "Sir Elton Hercules John is an English pianist.",
+      "1.4": "Sir Elton Hercules John is an English composer."
+     }
+    },
+    {
+     "sentence": " John owned Watford Football Club from 1976 to 1987, and 1997 to 2002.",
+     "facts": {
+      "2.0": "Elton John owned Watford Football Club from 1976 to 1987.",
+      "2.1": "Elton John owned Watford Football Club from 1997 to 2002."
+     }
+    }
+   ],
+   "items": [
+    "Firm Biz\n\"Firm Biz\" is the first single by the Hip hop supergroup The Firm from their singular collaborative LP \"The Album\".\n\n The song was produced by L.E.S, who based the song's track on a sample of Teena Marie's 1981 hit \"Square Biz\".\n\n \"Firm Biz\" also features a chorus performed by former En Vogue singer Dawn Robinson, reworked from the \"Square Biz\" chorus.\n\n AZ raps the first verse of the song, Nas the second, and Foxy Brown the third and final verse.\n\n The song never reached any US chart positions, but was a UK Top 20 hit in 1997.\n\n A remix of the song was released, featuring a verse from Half-A-Mill and a chorus by Mary J. Blige.\n\n The word \"feds\" is censored in the explicit version, in verse 2, performed by Nas, when he says \"Never that though Black .4-4's for feds\".",
+    "Afrodiziak\nAfrodiziak was a British singing group composed of Caron Wheeler, Claudia Fontaine, and later Naomi Thompson, that was active in the 1980s.\n\n As a duo, Wheeler and Fontaine were best known for performing backing vocals on The Jam's final single \"Beat Surrender\" in 1982 (with whom they also performed on their final tour) and Elvis Costello's 1983 album \"Punch the Clock\", especially its single, the international hit \"Everyday I Write the Book\".\n\n After the addition of a third member, Naomi Thompson, they went on to sing for acts such as Heaven 17 and Howard Jones.\n\n Afrodiziak performed backing vocals on the hit single Free Nelson Mandela, including the a cappella intro, staging it at The Tube (Channel4) in March 1984.\n\n Heaven 17's 1984 album, \"How Men Are\", featured them prominently, especially on the singles \"Sunset Now\" and \"And That's No Lie\".",
+    "Elton John\nHe has also composed music, produced records, and has occasionally acted in films.\n\n John owned Watford Football Club from 1976 to 1987, and 1997 to 2002.\n\n He is an honorary Life President of the club, and in 2014 had a stand named after him at the club's home stadium.",
+    "Grow Some Funk of Your Own\n\"Grow Some Funk of Your Own\" is a song by Elton John.\n\n It was released as a single in 1976 and comes from his album \"Rock of the Westies\".\n\n It shared its A-side status with \"I Feel Like a Bullet (In the Gun of Robert Ford)\".\n\n The song is considered to be one of John's heavier rock songs.\n\n The song went to #14 on the \"Billboard\" Hot 100, but in Britain broke a five-year run of successful singles by failing to reach the Top 50 despite extensive radio play.\n\n Although the singles chart listed only \"Funk\" and not \"Bullet\", the latter song was given equal billing in later \"Billboard\" singles chart books.",
+    "Knitting Factory Records\nKnitting Factory Records is an independent American music label that is notable for promoting a variety of artists, including the music of deceased Nigerian political activist Fela Kuti.\n\n The label promotes a variety of music artists including Ages and Ages, Ash Black Bufflo, Cuong Vu, Graham Haynes, Femi Kuti, Gary Lucas, Lumerians, Thomas Chapin, Patrolled By Radar, Joe Morris, Rachid Taha, Seun Kuti, and Shilpa Ray and her Happy Hookers.",
+    "Blitz Kids\nThe Blitz Kids were a group of young people who frequented the weekly Blitz club-night in Covent Garden, London in 1979-80, and are credited with launching the New Romantic subcultural movement.\n\n It was Andrew Czezowski (Ex manager of The Damned) and Susan Carrington who went on to start The Roxy club with Barry Jones that introduced Steve Strange and Rusty Egan to the Blitz in Covent Garden, which started the New Romantic Movement.\n\n Among the many attendees were Rusty Egan, Steve Strange, Boy George, Marilyn, Alice Temple, Perri Lister, Princess Julia, Philip Sallon, Carl Teper and Martin Degville (later to be the frontman of Tony James' Sigue Sigue Sputnik).\n\n Crucially, the club lay between two art colleges (St Martin's School and Central School) and became a testbed for student fashion designers who set London ablaze during the 1980s.",
+    "A Boy in a Man's World\nA Boy in a Man's World is the second studio album by Mucky Pup.\n\n The album was recorded at Nevessa Productions and released in 1989 through Torrid Records and Roadrunner Records.\n\n The album features a re-recorded version of \"U-Stink-But-I-♥-U,\" which the band had previously won a Bloom County songwriting contest with.\n\n The band would also shoot their first music video for this song.\n\n The album also features \"Batman\", a song based on an urban legend that also contains a snippet of the title theme to the 1966 \"Batman\" TV.",
+    "South Liverpool F.C.\nSouth Liverpool Football Club is a football club based in Liverpool, England, founded as a phoenix club of a club of the same name.\n\n They are currently members of the West Cheshire League Division One and play at Jericho Lane in Otterspool.\n\n The club's colours are white shirts, black shorts and red socks.",
+    "Go Too\nGo Too (1977) is Go's third album.\n\n Go was founded by Stomu Yamashta, Steve Winwood and Michael Shrieve.\n\n For this album, Jess Roden replaced Steve Winwood (who had left the group).\n\n The style of the music became modified accordingly.\n\n In addition, Linda Lewis was hired as a singer.\n\n Together with Paul Jackson, Jr. and the orchestra of Martyn Ford the album unified various soundscapes.",
+    "The Happenings\nThe Happenings are a pop music group that originated in the 1960s.\n\n Members of the original group, created in the spring of 1961 and initially called \"The Four Grads\" because all had just graduated from high school in Paterson, New Jersey, were Bob Miranda, David Libert, Tom Giuliano, and Ralph DiVito.\n\n In 1968 DiVito was replaced by Bernie LaPorta and Lenny Conforti also joined to play drums in the touring band.\n\n Both LaPorta and Conforti took a hiatus from the northern New Jersey band, The Emerald Experience, to play and tour with The Happenings.\n\n That lineup performed mostly at colleges and universities until 1970, when Libert left the band to manage other groups, including George Clinton and Parliament-Funkadelic, Living Colour, Brian Auger, Vanilla Fudge, The Runaways (Cherie Currie, Joan Jett, Lita Ford), Mother's Finest, Alice Cooper and Evelyn \"Champagne\" King."
+   ]
+  },
+  {
+   "id": "b93ab64120c15112",
+   "gold": [
+    {
+     "sentence": " The album was Prince's third to be released that year (along with \"Chaos and Disorder\" and the soundtrack album of the Spike Lee movie \"Girl 6\"), which made 1996 one of the most prolific years for material released by Prince.",
+     "facts": {
+      "0.0": "The album was Prince's third album released in 1996.",
+      "0.1": "One of Prince's other 1996 releases was \"Chaos and Disorder\".",
+      "0.2": "One of Prince's other 1996 releases was the soundtrack album of the Spike Lee movie \"Girl 6\".",
+      "0.3": "1996 was one of the most prolific years for material released by Prince."
+     }
+    },
+    {
+     "sentence": " His production company, 40 Acres and a Mule Filmworks, has produced over 35 films since 1983.",
+     "facts": {
+      "1.0": "Prince's production company is 40 Acres and a Mule Filmworks.",
+      "1.1": "40 Acres and a Mule Filmworks has produced over 35 films since 1983."
+     }
+    }
+   ],
+   "items": [
+    "The entries span film, television, documentaries, and film distribution: Philippine series Sine Novela adapts Viva classics; The Doom Generation (1995) is Gregg Araki’s violent “Teenage Apocalypse” film; Naked Gun 33⅓ concludes its comedy trilogy, while Naked City (1958–63) is a semi-documentary police drama. Night Life is a zombie comedy; The Runaways portrays the band’s formation and Currie-Jett relationship. Consolidated Film Industries was",
+    "Ian Schneider is an independent American director and screenwriter. Mary Sweeney, a longtime David Lynch collaborator, edited and produced *Twin Peaks*, *Lost Highway*, *The Straight Story* and *Mulholland Drive*; she teaches at USC and chairs Film Independent. Angelo Badalamenti scored Lynch works and won a Grammy. Brian Ralston, Nancy Schreiber and John Bailey are established composers/cinematographers; Bailey led the Motion Picture Academy. Jon Paul Puno is",
+    "Six Cylinder Love\nSix Cylinder Love is a lost 1923 silent film comedy produced and distributed by Fox Film and directed by Elmer Clifton.\n\n It is based on a popular 1921 Broadway play and stars Ernest Truex from the play.\n\n Also appearing in the film from the Broadway play were Donald Meek and Ralph Sipperly.",
+    "Cannibal boom\nOnly four other cannibal films were made after 1981 until the fad's conclusion in 1988 with Antonio Climati's \"Natura Contro\".",
+    "Girl 6\nGirl 6 is a 1996 American comedy-drama film by director Spike Lee about a phone sex operator.\n\n Theresa Randle played the title character, and playwright Suzan-Lori Parks wrote the screenplay.\n\n The soundtrack is composed entirely of songs written by Prince.\n\n The film was screened in the Un Certain Regard section at the 1996 Cannes Film Festival.\n\n Directors Quentin Tarantino and Ron Silver make cameo appearances as film directors at a pair of interesting auditions.\n\n It is the first film directed by Lee in which he did not write the screenplay.",
+    "The Human Centipede 2 (Full Sequence)\nThe Human Centipede 2 (Full Sequence) is a 2011 Dutch black and white exploitation-horror film written, directed, and co-produced by Dutch filmmaker Tom Six.\n\n The sequel to Six's 2009 film \"The Human Centipede (First Sequence)\", the film stars Laurence R. Harvey as a mentally impaired English man who watches and becomes obsessed with the first \"Human Centipede\" film, and decides to make his own \"centipede\" consisting of twelve people, including Ashlynn Yennie, an actress from the first film.",
+    "*Girl 6* (1996), Spike Lee’s comedy-drama about a phone-sex operator, stars Theresa Randle and was written by Suzan-Lori Parks. It was Lee’s first film without his own screenplay, features an all-Prince soundtrack, and screened at Cannes; Quentin Tarantino and Ron Silver cameo. Other profiles cover Issa Rae, creator of *Awkward Black Girl* and a platform for creators of color; *Family Matters* actress Jaimee Foxworth;",
+    "Paul Schrader\nPaul Joseph Schrader (born July 22, 1946) is an American screenwriter, film director, and film critic.\n\n Schrader wrote or co-wrote screenplays for four Martin Scorsese films: \"Taxi Driver\" (1976), \"Raging Bull\" (1980), \"The Last Temptation of Christ\" (1988), and \"Bringing Out the Dead\" (1999).\n\n Schrader has also directed 18 feature films, including his directing debut crime drama, \"Blue Collar\" (co-written with his brother, Leonard Schrader), the crime drama \"Hardcore\" (a loosely autobiographical film also written by Schrader), his 1982 remake of the horror classic \"Cat People\", the crime drama \"American Gigolo\" (1980), the biographical drama \"\" (1985), the cult film \"Light Sleeper\" (1992), the drama \"Affliction\" (1997), the biographical film \"Auto Focus\" (2002), and the erotic dramatic thriller \"The Canyons\" (2013).",
+    "Still Kicking (film)\nStill Kicking: Six Artistic Women of Project Arts & Longevity is a 2006 32-minute documentary film by Pacific Grove filmmaker Greg Young, featuring six Bay Area women role models over 85 years old who remained artistically active.\n\n The catalyst for Young's film was Amy Gorman and Frances Kandl's Project Arts & Longevity through which they were exploring the link between longevity and artistic vitality.\n\n Along with the film the joint project resulted in a book entitled Aging Artfully.",
+    "*Girl 6* is Spike Lee’s 1996 comedy-drama about a phone sex operator, starring Theresa Randle and written by playwright Suzan-Lori Parks. It was Lee’s first film without a screenplay by him; its soundtrack consists entirely of Prince songs. Screened at Cannes in Un Certain Regard, it features director cameos by Quentin Tarantino and Ron Silver. Randle’s other films include *Malcolm X*, *Bad Boys*, *Space Jam*, and *Spawn"
+   ]
+  },
+  {
+   "id": "f5297fc85d60af9c",
+   "gold": [
+    {
+     "sentence": "Sir Ridley Scott (born 30 November 1937) is an English film director and producer.",
+     "facts": {
+      "0.0": "Sir Ridley Scott was born on 30 November 1937.",
+      "0.1": "Sir Ridley Scott is English.",
+      "0.2": "Sir Ridley Scott is a film director.",
+      "0.3": "Sir Ridley Scott is a film producer."
+     }
+    },
+    {
+     "sentence": " Following his commercial breakthrough with the science-fiction horror film \"Alien\" (1979), his best known works include the neo-noir dystopian science fiction film \"Blade Runner\" (1982), historical drama and Best Picture Oscar winner \"Gladiator\" (2000), and science fiction film \"The Martian\" (2015).",
+     "facts": {
+      "1.0": "Ridley Scott had a commercial breakthrough with the science-fiction horror film Alien, released in 1979.",
+      "1.1": "Ridley Scott's best known works include the neo-noir dystopian science fiction film Blade Runner, released in 1982.",
+      "1.2": "Ridley Scott's best known works include the historical drama Gladiator, released in 2000.",
+      "1.3": "Gladiator won the Best Picture Oscar.",
+      "1.4": "Ridley Scott's best known works include the science fiction film The Martian, released in 2015."
+     }
+    },
+    {
+     "sentence": " A collaborator of D.W. Griffith, he appeared in \"The Birth of a Nation\" (1915) and \"Intolerance\" (1916) before giving up acting in 1917 to concentrate on work behind the camera, with Griffith and Joseph Henabery as his mentors.",
+     "facts": {
+      "2.0": "Ridley Scott was a collaborator of D.W. Griffith.",
+      "2.1": "Ridley Scott appeared in The Birth of a Nation, released in 1915.",
+      "2.2": "Ridley Scott appeared in Intolerance, released in 1916.",
+      "2.3": "Ridley Scott gave up acting in 1917.",
+      "2.4": "Ridley Scott gave up acting to concentrate on work behind the camera.",
+      "2.5": "Griffith was a mentor of Ridley Scott.",
+      "2.6": "Joseph Henabery was a mentor of Ridley Scott."
+     }
+    }
+   ],
+   "items": [
+    "D. Ross Lederman\nDavid Ross Lederman (December 12, 1894 – August 24, 1972) was an American film director noted for his Western/action/adventure films of the 1930s and 1940s.",
+    "Alexander Butler\nAlexander Butler was a British film director who made over sixty features and short films during the 1910s and 1920s including many for G.B. Samuelson's production company.\n\n Butler directed several British films in Hollywood in 1920, where Samuelson had made an arrangement with Universal Pictures.\n\n Amongst his notable films are the Sherlock Holmes adaptation \"The Valley of Fear\" (1916) and the early British horror film \"The Beetle\" (1919).",
+    "John Biddle (yachting cinematographer)\nJohn Scott Biddle (1925–2008) was a foremost yachting cinematographer and lecturer, establishing a film-making career that spanned more than forty years.\n\n His films captured not only the technical aspects of sailing but also the human story in events as tranquil as a Nova Scotia cruise and as grand as the America's Cup Races.",
+    "Spencer Averick\nSpencer Averick is an American film editor and producer.\n\n Best known for his work an editor on critically acclaimed films \"Middle of Nowhere\" (2012), \"Selma\" (2014) and for producing 2016 acclaimed documentary \"13th\" for which he received Academy Award for Best Documentary Feature nominations at 89th Academy Awards, that he shared with director Ava DuVernay and co-producer Howard Barish.",
+    "Elmer Clifton\nElmer Clifton (March 14, 1890 – October 15, 1949) was an American writer, director and actor from the early silent days.\n\n A collaborator of D.W. Griffith, he appeared in \"The Birth of a Nation\" (1915) and \"Intolerance\" (1916) before giving up acting in 1917 to concentrate on work behind the camera, with Griffith and Joseph Henabery as his mentors.\n\n His first feature-length solo effort as a director was \"The Flame of Youth\" with Jack Mulhall.",
+    "John Dunning (film producer)\nJohn Dunning (April 27, 1927–September 19, 2011) was a pioneering Canadian film producer from Montreal who co-founded the Canadian film production company Cinépix and produced early works by notable Canadian directors David Cronenberg and Ivan Reitman.\n\n Dunning launched Cinépix with partner André Link in Montreal in the early 1960s.\n\n Their biggest commercial success—and the first Canadian box office hit—came with Reitman’s \"Meatballs\" (1979).",
+    "Ridley Scott\nSir Ridley Scott (born 30 November 1937) is an English film director and producer.\n\n Following his commercial breakthrough with the science-fiction horror film \"Alien\" (1979), his best known works include the neo-noir dystopian science fiction film \"Blade Runner\" (1982), historical drama and Best Picture Oscar winner \"Gladiator\" (2000), and science fiction film \"The Martian\" (2015).",
+    "Steve McQueen (director)\nSteven Rodney \"Steve\" McQueen (born 9 October 1969) is an English film director, producer, screenwriter, and video artist.\n\n For his 2013 film, \"12 Years a Slave\", a historical drama adaptation of an 1853 slave narrative memoir, he won an Academy Award, BAFTA Award for Best Film, and Golden Globe Award for Best Motion Picture – Drama, as a producer, and he also received the award for Best Director from the New York Film Critics Circle.\n\n McQueen is the first black filmmaker to win an Academy Award for Best Picture.\n\n McQueen is known for his collaborations with actor Michael Fassbender, who has starred in all three of McQueen's feature films as of 2014.\n\n McQueen's other feature films are \"Hunger\" (2008), a historical drama about the 1981 Irish hunger strike, and \"Shame\" (2011), a drama about an executive struggling with sex addiction.",
+    "Edmund Mortimer (actor)\nEdmund Mortimer (21 August 1874 – 21 May 1944) was an American actor and film director.\n\n He appeared in 251 films between 1913 and 1945.\n\n He also directed 23 films between 1918 and 1928.\n\n He was born in New York, New York and died in Los Angeles, California.",
+    "Scott Free Productions\nScott Free Productions is a British film and television production company founded by filmmakers and brothers Ridley Scott and Tony Scott.\n\n They formed the feature film development company Percy Main Productions in 1980, naming the company after the English village Percy Main, where their father grew up.\n\n The company was renamed to Scott Free Productions in 1995.\n\n Scott Free has produced films ranging from the 2000 Hollywood blockbuster \"Gladiator\" (2000) to \"smaller pictures\" like \"Cracks\" (2009).\n\n Between productions of \"White Squall\" (1996) and \"G.I. Jane\" (1997), Ridley Scott reorganized the company."
+   ]
+  },
+  {
+   "id": "69c1c289a162b8c0",
+   "gold": [
+    {
+     "sentence": "Minersville School District v. Gobitis, 310 U.S. 586 (1940) , was a decision by the Supreme Court of the United States involving the religious rights of public school students under the First Amendment to the United States Constitution.",
+     "facts": {
+      "0.0": "Minersville School District v. Gobitis, 310 U.S. 586 (1940), was a decision by the Supreme Court of the United States.",
+      "0.1": "Minersville School District v. Gobitis involved the religious rights of public school students.",
+      "0.2": "Minersville School District v. Gobitis involved religious rights under the First Amendment to the United States Constitution."
+     }
+    },
+    {
+     "sentence": "Gravel v. United States, 408 U.S. 606 (1972), was a case regarding the protections offered by the Speech or Debate Clause of the United States Constitution.",
+     "facts": {
+      "1.0": "Gravel v. United States, 408 U.S. 606 (1972), was a case.",
+      "1.1": "Gravel v. United States concerned the protections offered by the Speech or Debate Clause of the United States Constitution."
+     }
+    }
+   ],
+   "items": [
+    "Forest Grove School District v. T. A.\nForest Grove School District v. T. A., 557 U.S. 230 (2009), is a case in which the United States Supreme Court held that the Individuals with Disabilities Education Act (IDEA) authorizes reimbursement for private special education services when a public school fails to provide a \"free appropriate public education\" (FAPE) and the private school placement is appropriate, regardless of whether the child previously received special education services through the public school.",
+    "Minersville School District v. Gobitis\nMinersville School District v. Gobitis, 310 U.S. 586 (1940) , was a decision by the Supreme Court of the United States involving the religious rights of public school students under the First Amendment to the United States Constitution.\n\n The Court ruled that public schools could compel students—in this case, Jehovah's Witnesses—to salute the American Flag and recite the Pledge of Allegiance despite the students' religious objections to these practices.\n\n This decision led to increased persecution of Witnesses in the United States.\n\n The Supreme Court overruled this decision a mere three years later, in \"West Virginia State Board of Education v. Barnette\", 319 U.S. 624 (1943).",
+    "Abington School District v. Schempp\nAbington School District v. Schempp, 374 U.S. 203 (1963) , was a United States Supreme Court case in which the Court decided 8–1 in favor of the respondent, Edward Schempp, and declared school-sponsored Bible reading in public schools in the United States to be unconstitutional.\n\n The Chief Justice of the Supreme Court during this case was Earl Warren.",
+    "Cedar Rapids Community School Dist. v. Garret F.\nCedar Rapids Community School District v. Garret F., 526 U.S. 66 (1999) , was a United States Supreme Court case in which the Court ruled that the related services provision in the Individuals with Disabilities Education Act (IDEA) required public school districts to fund \"continuous, one-on-one nursing care for disabled children\" despite arguments from the school district concerning the costs of the services.\"\n\n The judges relied heavily on Irving Independent School Dist.\n\n v. Tatro, 468 U. S. 883 (1984).\n\n Under the Court's reading of the IDEA's relevant provisions, medical treatments such as suctioning, ventilator checks, catheterization, and others which can be administered by non-physician personnel come within the parameters of the special education law's related services.\n\n Disability advocates considered the Court decision to be a \"substantial victory for families of children with disabilities.\"\n\n Amendments were made in the Education Flexibility Partnership Act of 1999 to increase IDEA funding as a result of the case.",
+    "McCollum v. Board of Education\nMcCollum v. Board of Education, 333 U.S. 203 (1948), was a landmark 1948 United States Supreme Court case related to the power of a state to use its tax-supported public school system to aid religious instruction.\n\n The case was a test of the separation of church and state with respect to education.",
+    "Bethel School District v. Fraser\nBethel School District v. Fraser, 478 U.S. 675 (1986), was a landmark decision by the United States Supreme Court involving free speech in public schools.\n\n High school student Matthew Fraser was suspended from school in the Bethel School District for making a speech including sexual double entendres at a school assembly.\n\n The Supreme Court held that his suspension did not violate the First Amendment.",
+    "Owasso Independent School District v. Falvo\nOwasso Independent School District v. Falvo, 534 U.S. 426 (2002) , was a case in which the United States Supreme Court held in favor of the school district that students scoring each other's tests and calling out the grades do not violate the Family Educational Rights and Privacy Act of 1974 (FERPA).\n\n Justice Kennedy wrote the opinion for the unanimous court.\n\n Justice Scalia wrote a concurring opinion in which he agreed with the ruling, but took issue with parts of Kennedy's opinion.",
+    "Gravel v. United States\nGravel v. United States, 408 U.S. 606 (1972), was a case regarding the protections offered by the Speech or Debate Clause of the United States Constitution.\n\n In the case, the Supreme Court of the United States held that the privileges and immunities of the Constitution's Speech or Debate Clause enjoyed by members of Congress also extend to Congressional aides, but not to activity outside the legislative process.",
+    "Safford Unified School District v. Redding\nSafford Unified School District v. Redding, 557 U.S. 364 (2009) , was a United States Supreme Court case in which the Court held that a strip search of a middle schooler violated the Fourth Amendment to the United States Constitution where the school lacked reasons to suspect either that the drugs (Ibuprofen) presented a danger or that they were concealed in her underwear.\n\n The court also held, however, that because this was not clearly established law prior to the court's decision, the officials involved were shielded from liability by qualified immunity.",
+    "Elk Grove Unified School District v. Newdow\nElk Grove Unified School District v. Newdow, 542 U.S. 1 (2004), was a case decided by the U.S. Supreme Court.\n\n The lawsuit, originally filed as Newdow v. United States Congress, Elk Grove Unified School District, et al. in 2000, led to a 2002 ruling by the United States Court of Appeals for the Ninth Circuit that the words \"under God\" in the Pledge of Allegiance are an endorsement of religion and therefore violate the Establishment Clause of the First Amendment to the United States Constitution.\n\n After an initial decision striking the congressionally added \"one nation under God\" language, [Newdow v. U.S. Congress, 292 F.3d 597 (9th Cir.\n\n 2002), the superseding opinion on denial of rehearing en banc was more limited, holding that compelled recitation of the language by school teachers to students was invalid.\n\n [328 F.3d 466 (9th Cir.\n\n 2003)."
+   ]
+  }
+ ]
+}

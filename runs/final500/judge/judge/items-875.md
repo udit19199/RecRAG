@@ -1,0 +1,778 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=ace4651b7f6f413f ===
+Gold sentences and facts:
+Sentence 0: Rose Stagg ( Valene Kane ) , a woman who had a sexual relationship with Paul whilst at university . During a night of passion , Paul tried to strangle her to death . As the Belfast Strangler comes to the attention of the public , Stagg notices the similarities and contacts her close friend Reed Smith . Her husband was unaware the attack had taken place . She is later kidnapped and held captive by Spector . She is later found unconscious in a car trunk . During series three , Stagg reveals that her sexual relationship with Paul was entirely consensual , and that , during sex , he strangled her so aggressively she had to be revived .
+  Fact 0.0: Rose Stagg (played by Valene Kane) had a sexual relationship with Paul while at university.
+  Fact 0.1: During a night of passion, Paul tried to strangle Rose Stagg to death.
+  Fact 0.2: As the Belfast Strangler comes to the attention of the public, Rose Stagg notices the similarities.
+  Fact 0.3: Rose Stagg contacts her close friend Reed Smith.
+  Fact 0.4: Rose Stagg's husband was unaware the attack had taken place.
+  Fact 0.5: Rose Stagg is later kidnapped and held captive by Spector.
+  Fact 0.6: Rose Stagg is later found unconscious in a car trunk.
+  Fact 0.7: During series three, Rose Stagg reveals that her sexual relationship with Paul was entirely consensual.
+  Fact 0.8: During sex, Paul strangled Rose Stagg so aggressively that she had to be revived.
+Sentence 1: Actor Character Series 1 Series 2 Series 3 Total Appearances 5 6 7 8 9 10 11 12 13 14 15 16 17 Gillian Anderson DSI Stella Gibson 17 Jamie Dornan Paul Spector 17 John Lynch ACC Jim Burns 17 Aisling Franciosi Katie Benedetto N / A 16 Bronagh Waugh Sally Ann Spector N / A 15 Niamh McGrady PC Danielle Ferrington N / A N / A 15 Stuart Graham DCI Matthew Eastwood N / A N / A N / A 13 Bronágh Taggart DC Gail McNally N / A 12 Valene Kane Rose Stagg N / A N / A N / A N / A 11 Emmett J. Scanlan DC Glen Martin N / A N / A N / A 10 Archie Panjabi Prof. Reed Smith N / A N / A 9 Richard Clements DC Rick Turner N / A N / A N / A N / A 9 Colin Morgan DS Tom Anderson N / A 9 Karen Hassan Annie Brawley N / A N / A N / A N / A 8 Jonjo O'Neill Tom Stagg N / A N / A N / A 7 Nick Lee Ned Callan N / A N / A N / A 6 Brian Milligan James Tyler N / A N / A N / A 6 Seainin Brennan Liz Tyler N / A N / A N / A N / A 5 Ben Peel DS James Olson N / A N / A 5 Ian McElhinney Morgan Monroe N / A N / A 5 Aidan McArdle Sean Healy N / A 5 Ruth Bradley Wallace N / A 5 Michael McElhatton DI Rob Breedlove N / A Frank McCusker DCI Garrett Brink N / A N / A Aisling Bea Kiera Sheridan N / A N / A Barry Ward Dr. Patrick Spencer N / A N / A Krister Henriksson Dr. August Larson N / A Laura Donnelly Sarah Kay N / A N / A Richard Coyle Dr. Joe O'Donnell N / A N / A N / A Denise Gough Dr. Alison Walden N / A N / A Seán McGinley Fr . Peter Jensen N / A N / A Genevieve O'Reilly DCI Joan Kinkead N / A N / A Martin McCann David Alvarez N / A N / A
+  Fact 1.0: The cast table lists each actor's character and appearances across series one to three, with episode numbers 5 to 17 as column headers.
+  Fact 1.1: Gillian Anderson plays DSI Stella Gibson, with 17 total appearances.
+  Fact 1.2: Jamie Dornan plays Paul Spector, with 17 total appearances.
+  Fact 1.3: John Lynch plays ACC Jim Burns, with 17 total appearances.
+  Fact 1.4: Aisling Franciosi plays Katie Benedetto, with 16 total appearances.
+  Fact 1.5: Bronagh Waugh plays Sally Ann Spector, with 15 total appearances.
+  Fact 1.6: Niamh McGrady plays PC Danielle Ferrington, with 15 total appearances.
+  Fact 1.7: Stuart Graham plays DCI Matthew Eastwood, with 13 total appearances.
+  Fact 1.8: Bronágh Taggart plays DC Gail McNally, with 12 total appearances.
+  Fact 1.9: Valene Kane plays Rose Stagg, with 11 total appearances.
+  Fact 1.10: Emmett J. Scanlan plays DC Glen Martin, with 10 total appearances.
+  Fact 1.11: Archie Panjabi plays Prof. Reed Smith, with 9 total appearances.
+  Fact 1.12: Richard Clements plays DC Rick Turner, with 9 total appearances.
+  Fact 1.13: Colin Morgan plays DS Tom Anderson, with 9 total appearances.
+  Fact 1.14: Karen Hassan plays Annie Brawley, with 8 total appearances.
+  Fact 1.15: Jonjo O'Neill plays Tom Stagg, with 7 total appearances.
+  Fact 1.16: Nick Lee plays Ned Callan, with 6 total appearances.
+  Fact 1.17: Brian Milligan plays James Tyler, with 6 total appearances.
+  Fact 1.18: Seainin Brennan plays Liz Tyler, with 5 total appearances.
+  Fact 1.19: Ben Peel plays DS James Olson, with 5 total appearances.
+  Fact 1.20: Ian McElhinney plays Morgan Monroe, with 5 total appearances.
+  Fact 1.21: Aidan McArdle plays Sean Healy, with 5 total appearances.
+  Fact 1.22: Ruth Bradley plays Wallace, with 5 total appearances.
+  Fact 1.23: Michael McElhatton plays DI Rob Breedlove.
+  Fact 1.24: Frank McCusker plays DCI Garrett Brink.
+  Fact 1.25: Aisling Bea plays Kiera Sheridan.
+  Fact 1.26: Barry Ward plays Dr. Patrick Spencer.
+  Fact 1.27: Krister Henriksson plays Dr. August Larson.
+  Fact 1.28: Laura Donnelly plays Sarah Kay.
+  Fact 1.29: Richard Coyle plays Dr. Joe O'Donnell.
+  Fact 1.30: Denise Gough plays Dr. Alison Walden.
+  Fact 1.31: Seán McGinley plays Fr. Peter Jensen.
+  Fact 1.32: Genevieve O'Reilly plays DCI Joan Kinkead.
+  Fact 1.33: Martin McCann plays David Alvarez.
+
+Retrieved items:
+<item 1>
+List of The Fall characters
+`` BBC Two Sets Premiere Date For ' The Fall ' '' . TVWise . Retrieved 1 May 2013 . External links ( edit ) The Fall at BBC Programmes The Fall on RTÉ The Fall
+on Netflix The Fall on IMDb The Fall at Rotten Tomatoes The Fall Trailer at ZDF Enterprises The Fall on Facebook Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=List_of_The_Fall_characters&oldid=811099612 '' Categories : Lists of drama television characters Lists of British
+television series characters Lists of Irish television series characters Hidden categories : Use dmy dates from January 2017 Use British English from January
+2017 BBC programme ID not in Wikidata Talk Contents About Wikipedia Add links This page was last edited on 19 November 2017 , at 14 : 36 . About Wikipedia
+</item 1>
+
+<item 2>
+List of The Fall characters
+Ch . Insp . Joan Kinkead 2.33 David Alvarez 3 References 4 External links Cast overview ( edit ) Actor Character Series 1 Series 2 Series 3 Total Appearances 5
+6 7 8 9 10 11 12 13 14 15 16 17 Gillian Anderson DSI Stella Gibson 17 Jamie Dornan Paul Spector 17 John Lynch ACC Jim Burns 17 Aisling Franciosi Katie Benedetto
+N / A 16 Bronagh Waugh Sally Ann Spector N / A 15 Niamh McGrady PC Danielle Ferrington N / A N / A 15 Stuart Graham DCI Matthew Eastwood N / A N / A N / A 13
+Bronágh Taggart DC Gail McNally N / A 12 Valene Kane Rose Stagg N / A N / A N / A N / A 11 Emmett J. Scanlan DC Glen Martin N / A N / A N / A 10 Archie Panjabi
+Prof.
+</item 2>
+
+<item 3>
+In “A Gentle Heart,” Rosemary confesses her love and fear of losing Lee while he is injured, unaware he can hear her. In “Heartbreak,” Lee worries she’ll leave
+for a Hollywood movie job, but Rosemary chooses their life in Hope Valley, and he proposes. They marry in the season 3 finale, with Jack as Lee’s best man.
+Elizabeth’s romantic younger sister, Julie, often falls for unsuitable men; her season 2 involvement with Jack’s brother Tom
+</item 3>
+
+<item 4>
+List of The Fall characters
+List of the Fall characters - wikipedia List of the Fall characters Jump to : navigation , search The Fall , starring Gillian Anderson , is a British - Irish
+drama series produced by Artists Studio and created by Allan Cubitt . It premiered in the Republic of Ireland at 21 : 30 on 12 May 2013 , and in the UK on BBC
+Two at 21 : 00 on 13 May 2013 . The series features Jamie Dornan , with John Lynch , Bronagh Waugh , Stuart Graham , and Niamh McGrady . Contents ( hide ) 1
+Cast overview 2 Main characters 2.1 Det . Supt . Stella Gibson 2.2 Peter Paul Spector 2.3 Asst . Ch . Constable Jim Burns 2.4 Katie Benedetto 2.5 Sally Ann
+Spector 2.6 PC Danielle Ferrington 2.7 Det . Ch . Insp . Matthew Eastwood 2.8 DC Gail McNally 2.9 Rose Stagg 2.10 DC Glen Martin 2.11 Professor Reed Smith 2.12
+DC Rick Turner 2.13 Det .
+</item 4>
+
+<item 5>
+When Calls the Heart
+He later tells her that his son died , as well as his wife . However , his wife , Nora , comes to confront him in season 2 's `` Heart 's Desire . '' Henry
+Gowen is a cold , cynical man who formerly owned the coal mine . After the mine was shut down , Henry became the mayor of Hope Valley and still creates a cold ,
+cynical presence whenever people are around him . Henry is highly disliked and feared in the town . He frequently uses bribery to get what he wants , which is
+never for the good of the town . Rosemary `` Rosie '' LeVeaux Coulter is a flamboyant , enthusiastic actress from New York . She was briefly engaged to Jack
+Thornton , but they both realized that it would n't work out . Rosie immediately disliked Elizabeth and viewed her as `` the competition , '' but eventually
+came to really care about Elizabeth , even if she has a hard time showing it . At the beginning of season 2 , Rosemary began working at the cafe with Abigail
+and the two quickly became friends . Spending time with Abigail helped tone down some of Rosemary 's enthusiasm and made her a more likable person .
+</item 5>
+
+<item 6>
+When Calls the Heart
+Rosemary even came to like Elizabeth , even if only on an acquaintance level . Truthfully , she cares about everyone in Hope Valley , especially Lee , with whom
+she shares an mutual attraction . When Rosie is not spending time with Lee , talking to Abigail , or dreaming about the glamorous life of an actress , she can
+often be found somewhere writing her weekly advice column for Hope Valley 's newspaper ! In season 3 , Rosemary 's friendship with Elizabeth deepened . Instead
+of viewing her as an adversary , she finds a friend in Elizabeth . Throughout season 3 , Rosemary 's relationship with Lee becomes more romantic . In `` Heart
+Of A Hero , '' seeing that Lee needs to spend more time at the sawmill to help the new settlers find jobs , Rosemary tells Lee that the theatre does n't have to
+be built . He insists , but she says how important his job is . He smiles and tells her he will one day build her theatre , telling her that she is `` the best
+part of his life . '' The couple shares in their first kiss . In `` A Gentle Heart , '' Lee is injured .
+</item 6>
+
+<item 7>
+Rosemary’s friendship with Elizabeth deepens in season 3, while her romance with sawmill owner Lee Coulter blossoms. She supports Lee’s work helping new
+settlers, and they share their first kiss. After Lee is injured, Rosemary confesses her love. Offered her dream acting job in Hollywood, she chooses to stay in
+Hope Valley with Lee. He proposes, and they marry in the season finale, with Elizabeth and Abigail as her attendants. Rosemary also writes a weekly
+</item 7>
+
+<item 8>
+Republic of Doyle
+Jake realizes he has other problems too ; his mischievous older brother , Christian makes an unexpected visit to his house , greeting him in the kitchen . After
+Christian offends Jake , their relationship swiftly intensifies . The last episode of the season shows the characters ' struggle to keep their republic strong
+as their relationships fall apart . Season two ( edit ) Season Two begins with Rose , Mal 's partner , dealing with the consequences of his recent heart attack
+. Meanwhile , Jake and Leslie take initiatives to move past the hiccups in their relationship and move on from one another . Tinny , Jake 's niece , embarks on
+an investment in order to raise personal funds , meanwhile , Mal discovers a secret that Rose has kept from him ; her mother stole her engagement ring . Jake
+learns what Leslie sees their relationship as . As the season progresses , so does Tinny 's income business along with the amount of friends she makes . Jake as
+well as the viewers are introduced to Allison , the crown attorney . Meanwhile , Mal and Rose experience issues in their marriage but are quickly able to
+recover and move forward .
+</item 8>
+
+<item 9>
+When Calls the Heart
+She has a daughter Rosaleen . In season 1 's `` A Telling Silence , '' Rosaleen has trouble in school because she misses her father so much . When she runs away
+, Elizabeth finds her in the mine , feeling guilty that she did n't bring her father his lunch the day of the disaster because she wanted to play with a friend
+instead . She fears her mother will blame her , but Elizabeth convinces her that Molly will `` say that she loves her more than life itself . '' Molly is
+reunited with her daughter , to the joy of the town 's people . In season 2 's `` With All My Heart , '' Lee feels it 's time to `` play hard to get '' with
+Rosemary , so he enlists help from Molly . She pretends to be interested in him romantically . This ploy works and Rosemary admits that she does in fact like
+him . Molly is a kind woman and was among the first to welcome Elizabeth to town . Clara Stanton is the wife of Abigail 's late son Peter , and is a sweet ,
+quiet , and sensitive young woman .
+</item 9>
+
+<item 10>
+List of The Fall characters
+Gibson relies on her heavily during the investigative process . Rose Stagg ( edit ) Rose Stagg ( Valene Kane ) , a woman who had a sexual relationship with Paul
+whilst at university . During a night of passion , Paul tried to strangle her to death . As the Belfast Strangler comes to the attention of the public , Stagg
+notices the similarities and contacts her close friend Reed Smith . Her husband was unaware the attack had taken place . She is later kidnapped and held captive
+by Spector . She is later found unconscious in a car trunk . During series three , Stagg reveals that her sexual relationship with Paul was entirely consensual
+, and that , during sex , he strangled her so aggressively she had to be revived . DC Glen Martin ( edit ) DC Glen Martin ( Emmett Scanlan ) , a capable
+detective with a somewhat boyish attitude towards his work . Martin is an invaluable member of Gibson 's team and , during series two , takes on a more
+prominent role in the decision making process . He is partnered with DC Gail McNally , and is fiercely protective of her , though not to a fault .
+</item 10>
+=== END ITEM id=ace4651b7f6f413f ===
+
+=== ITEM id=add5d94e6e2dd3bd ===
+Gold sentences and facts:
+Sentence 0: For thousands of years , seawater pearls were retrieved by divers in the Indian Ocean in areas such as the Persian Gulf , the Red Sea and the Gulf of Mannar . Evidence also suggest a prehistoric origin to pearl diving in these regions . Starting in the Han Dynasty ( 206 BC -- 220 AD ) , the Chinese hunted extensively for seawater pearls in the South China Sea . In the 14th - century Arabian Sea , the traveller Ibn Battuta provided the earliest known description of pearl diving by means of attaching a cord to the diver 's waist .
+  Fact 0.0: For thousands of years, seawater pearls were retrieved by divers in the Indian Ocean.
+  Fact 0.1: Seawater pearls were retrieved by divers in the Persian Gulf.
+  Fact 0.2: Seawater pearls were retrieved by divers in the Red Sea.
+  Fact 0.3: Seawater pearls were retrieved by divers in the Gulf of Mannar.
+  Fact 0.4: Evidence suggests a prehistoric origin to pearl diving in the Persian Gulf, the Red Sea and the Gulf of Mannar.
+  Fact 0.5: Starting in the Han Dynasty (206 BC to 220 AD), the Chinese hunted extensively for seawater pearls in the South China Sea.
+  Fact 0.6: In the 14th-century Arabian Sea, the traveller Ibn Battuta provided the earliest known description of pearl diving.
+  Fact 0.7: Ibn Battuta's description of pearl diving involved attaching a cord to the diver's waist.
+
+Retrieved items:
+<item 1>
+Pearl
+Journal of the Marine Biological Association of India . 15 : 1 -- 19 . Archived ( PDF ) from the original on July 18 , 2011 . Jump up ^ Arnold Wright ( 1999 ) .
+Twentieth century impressions of Ceylon : its history , people , commerce , industries , and resources . p. 227 . ISBN 81 - 206 - 1335 - X . Archived from the
+original on January 18 , 2017 . Jump up ^ James Hornell ( 2009 ) . The Indian Pearl Fisheries of the Gulf of Manar and Palk Bay . BiblioBazaar . p. 6 . ISBN 1 -
+110 - 87096 - 5 . Archived from the original on January 18 , 2017 . Jump up ^ De Silva , K.M. ( 1995 ) . Volume 2 of History of Ceylon , History of Ceylon :
+History of Sri Lanka . Peradeniya : Ceylon University Press . p. 56 . ISBN 955 - 589 - 004 - 8 .
+</item 1>
+
+<item 2>
+Pearl
+Australia also has one of the world 's last remaining fleets of pearl diving ships . Australian pearl divers dive for south sea pearl oysters to be used in the
+cultured south sea pearl industry . The catch of pearl oysters is similar to the numbers of oysters taken during the natural pearl days . Hence significant
+numbers of natural pearls are still found in the Australian Indian Ocean waters from wild oysters . X-ray examination is required to positively verify natural
+pearls found today . Types of cultured pearls ( edit ) A blister pearl , a half - sphere , formed flush against the shell of the pearl oyster . Keshi pearls ,
+although they often occur by chance , are not considered natural . They are a byproduct of the culturing process , and hence do not happen without human
+intervention . They are quite small , typically only a few millimeters . Keshi pearls are produced by many different types of marine mollusks and freshwater
+mussels in China . Keshi pearls are actually a mistake in the cultured pearl seeding process . In seeding the cultured pearl , a piece of mantle muscle from a
+sacrificed oyster is placed with a bead of mother of pearl within the oyster .
+</item 2>
+
+<item 3>
+Pearl
+Jump up ^ Senaveratna , John M ( 1930 ) . The story of the Sinhalese : From the most ancient times up to the end of `` The Mahavasna '' , or great dynasty ;
+Vijaya to Maha Sena ( B.C. 543 to A.D. 302 ) . W.M.A. Wahid . pp. 16 -- 9 , 46,130,144 -- 8,161 -- 3,213 . ASIN B000874SS0 . ISBN 9788120612716 . Archived from
+the original on December 20 , 2017 . Jump up ^ Kunz , George F. ; Stevenson , Charles ( 1908 ) . The book of the pearl . New York : The Century Co. p. 2 .
+Archived from the original on May 14 , 2016 . Jump up ^ R. Raghu Prasad and P.V. Ramachandran Nair ( 1973 ) . `` India and the Indian Ocean Fisheries '' ( PDF )
+. Journal of the Marine Biological Association of India .
+</item 3>
+
+<item 4>
+Pearl
+It also records that eight varieties of pearls accompanied Prince Vijaya 's embassy to the Pandyan king as well as king Devanampiya Tissa 's embassy to Emperor
+Ashoka . Pliny the Elder ( 23 -- 79AD ) praised the pearl fishery of the Gulf as most productive in the world . For thousands of years , seawater pearls were
+retrieved by divers in the Indian Ocean in areas such as the Persian Gulf , the Red Sea and the Gulf of Mannar . Evidence also suggest a prehistoric origin to
+pearl diving in these regions . Starting in the Han Dynasty ( 206 BC -- 220 AD ) , the Chinese hunted extensively for seawater pearls in the South China Sea .
+In the 14th - century Arabian Sea , the traveller Ibn Battuta provided the earliest known description of pearl diving by means of attaching a cord to the diver
+'s waist . Catching of pearls , Bern Physiologus ( 9th century ) When Spanish conquistadors arrived in the Western Hemisphere , they discovered that around the
+islands of Cubagua and Margarita , some 200 km north of the Venezuelan coast , was an extensive pearl bed ( a bed of pearl oysters ) .
+</item 4>
+
+<item 5>
+Pearl
+Pearls of abalone , or pāua , are mabe pearls , or blister pearls , unique to New Zealand waters and are commonly referred to as ' blue pearls ' . They are
+admired for their incredible luster and naturally bright vibrant colors that are often compared to opal . Another example is the conch pearl ( sometimes
+referred to simply as the ' pink pearl ' ) , which is found very rarely growing between the mantle and the shell of the queen conch or pink conch , Strombus
+gigas , a large sea snail or marine gastropod from the Caribbean Sea . These pearls , which are often pink in color , are a by - product of the conch fishing
+industry , and the best of them display a shimmering optical effect related to chatoyance known as ' flame structure ' . Somewhat similar gastropod pearls ,
+this time more orange in hue , are ( again very rarely ) found in the horse conch Pleuroploca gigantea . The second largest pearl known was found in the
+Philippines in 1934 and is known as the Pearl of Lao Tzu .
+</item 5>
+
+<item 6>
+Pearl
+Prized for their exquisitely beautiful ' orient ' or lustre , South Sea pearls are now farmed in various parts of the world where the Pinctada maxima oysters
+can be found , with the finest South Sea pearls being produced by Paspaley along the remote coastline of North - Western Australia . White and silver colored
+South Sea pearls tend to come from the Broome area of Australia , while golden colored ones are more prevalent in the Philippines and Indonesia . A farm in the
+Gulf of California , Mexico , is culturing pearls from the black lipped Pinctada mazatlanica oysters and the rainbow lipped Pteria sterna oysters . Also called
+Concha Nácar , the pearls from these rainbow lipped oysters fluoresce red under ultraviolet light . From other species ( edit ) A shell of the Indian volute ,
+Melo melo , surrounded by a number of pearls from this species Conch pearl pendant Biologically speaking , under the right set of circumstances , almost any
+shelled mollusk can produce some kind of pearl . However , most of these molluskan pearls have no luster or iridescence .
+</item 6>
+
+<item 7>
+Pearl
+1 British Isles 7.2 Pearl farming 8 Timeline of pearl production 9 Freshwater pearl farming 10 Momme weight 11 In jewelry 11.1 Gallery 11.2 Shapes 11.3 Lengths
+of pearl necklaces 11.4 Colors 12 Religious references 12.1 Hindu scriptures 12.2 Hebrew scriptures 12.3 New Testament scriptures 12.4 Islamic scriptures 12.5
+Additional references 13 See also 14 References 15 External links Etymology ( edit ) The English word pearl comes from the French perle , originally from the
+Latin perna meaning leg , after the ham - or mutton leg - shaped bivalve . Definition ( edit ) A black pearl and a shell of the black - lipped pearl oyster .
+The iridescent colors originate from nacre layers . All shelled mollusks can , by natural processes , produce some kind of `` pearl '' when an irritating
+microscopic object becomes trapped within its mantle folds , but the great majority of these `` pearls '' are not valued as gemstones .
+</item 7>
+
+<item 8>
+Pearl
+In 2010 , China overtook Japan in akoya pearl production . Japan has all but ceased its production of akoya pearls smaller than 8 mm . Japan maintains its
+status as a pearl processing center , however , and imports the majority of Chinese akoya pearl production . These pearls are then processed ( often simply
+matched and sorted ) , relabeled as product of Japan , and exported . In the past two decades , cultured pearls have been produced using larger oysters in the
+south Pacific and Indian Ocean . The largest pearl oyster is the Pinctada maxima , which is roughly the size of a dinner plate . South Sea pearls are
+characterized by their large size and warm luster . Sizes up to 14 mm in diameter are not uncommon . In 2013 , Indonesia Pearl supplied 43 percent of South Sea
+Pearls international market . The other significant producers are Australia , Philippines , Myanmar and Malaysia . Freshwater pearl farming ( edit ) In 1914 ,
+pearl farmers began growing cultured freshwater pearls using the pearl mussels native to Lake Biwa . This lake , the largest and most ancient in Japan , lies
+near the city of Kyoto .
+</item 8>
+
+<item 9>
+Pearl
+Freshwater and saltwater pearls ( edit ) Freshwater and saltwater pearls may sometimes look quite similar , but they come from different sources . Freshwater
+pearls form in various species of freshwater mussels , family Unionidae , which live in lakes , rivers , ponds and other bodies of fresh water . These
+freshwater pearl mussels occur not only in hotter climates , but also in colder more temperate areas such as Scotland ( where they are protected under law ) .
+Most freshwater cultured pearls sold today come from China . Saltwater pearls grow within pearl oysters , family Pteriidae , which live in oceans . Saltwater
+pearl oysters are usually cultivated in protected lagoons or volcanic atolls . Creation ( edit ) Diagram comparing a cross-section of a cultured pearl , upper ,
+with a natural pearl , lower Pearls are formed inside the shell of certain mollusks as a defense mechanism against a potentially threatening irritant such as a
+parasite inside the shell , or an attack from outside that injures the mantle tissue . The mollusk creates a pearl sac to seal off the irritation .
+</item 9>
+
+<item 10>
+Pearl
+While white , and more recently black , saltwater pearls are by far the most popular , other color tints can be found on pearls from the oceans . Pink , blue ,
+champagne , green , black and even purple saltwater pearls can be encountered , but to collect enough of these rare colors to form a complete string of the same
+size and same shade can take years . Religious references ( edit ) This section needs additional citations for verification . Please help improve this article
+by adding citations to reliable sources . Unsourced material may be challenged and removed . ( March 2018 ) ( Learn how and when to remove this template message
+) Hindu scriptures ( edit ) The Hindu tradition describes the sacred Nine Pearls which were first documented in the Garuda Purana , one of the books of the
+Hindu mythology . Ayurveda contains references to pearl powder as a stimulant of digestion and to treat mental ailments . According to Marco Polo , the kings of
+Malabar wore a necklace of 104 rubies and pearls which was given from one generation of kings to the next . The reason was that every king had to say 104
+prayers every morning and every evening .
+</item 10>
+=== END ITEM id=add5d94e6e2dd3bd ===
+
+=== ITEM id=cfcb282d2412961f ===
+Gold sentences and facts:
+Sentence 0: In 2012 , Maryse was featured on the cover of Le Journal de Montréal , and on MDA Show of Strength with The Miz and other celebrities . In 2015 , Ouellet had roles in Sharknado 3 : Oh Hell No ! and in Santa 's Little Helper , the latter starring Ouellet 's husband , The Miz . In the same year , she appeared on the E ! reality television series WAGS . In 2016 , it was announced that Maryse would appear as a main cast member on the sixth season of Total Divas , which prompted her return to WWE . In June 2017 , Maryse along with Miz were cover of the DUB Magazine with a Jeep car . In 2018 , Maryse along with The Miz will star in a reality television series titled Miz & Mrs .
+  Fact 0.0: In 2012, Maryse was featured on the cover of Le Journal de Montréal.
+  Fact 0.1: In 2012, Maryse was featured on MDA Show of Strength with The Miz.
+  Fact 0.2: In 2012, Maryse was featured on MDA Show of Strength with other celebrities.
+  Fact 0.3: In 2015, Ouellet had a role in Sharknado 3: Oh Hell No!
+  Fact 0.4: In 2015, Ouellet had a role in Santa's Little Helper.
+  Fact 0.5: Santa's Little Helper starred Ouellet's husband, The Miz.
+  Fact 0.6: In 2015, Ouellet appeared on the E! reality television series WAGS.
+  Fact 0.7: In 2016, it was announced that Maryse would appear as a main cast member on the sixth season of Total Divas.
+  Fact 0.8: The 2016 announcement prompted Maryse's return to WWE.
+  Fact 0.9: In June 2017, Maryse and Miz were on the cover of DUB Magazine with a Jeep car.
+  Fact 0.10: In 2018, Maryse and The Miz will star in a reality television series titled Miz & Mrs.
+Sentence 1: In late - 2011 , she announced plans for a clothing and jewelry line called House of Maryse , and later began working as a realtor . In November 2016 , she began starring in the reality television series Total Divas on E ! as part of the main cast . She and her husband The Miz will also star in their own reality show titled Miz & Mrs. that will premiere in 2018 .
+  Fact 1.0: In late 2011, Maryse announced plans for a clothing and jewelry line called House of Maryse.
+  Fact 1.1: Maryse later began working as a realtor.
+  Fact 1.2: In November 2016, Maryse began starring in the reality television series Total Divas on E! as part of the main cast.
+  Fact 1.3: Maryse and her husband The Miz will also star in their own reality show titled Miz & Mrs.
+  Fact 1.4: The reality show Miz & Mrs. will premiere in 2018.
+
+Retrieved items:
+<item 1>
+Maryse Ouellet
+In 2018 , Maryse along with The Miz will star in a reality television series titled Miz & Mrs . Maryse has appeared in four WWE video games . She made her in -
+game debut at WWE Smackdown vs. Raw 2010 , later appearing in WWE Smackdown vs. Raw 2011 , WWE ' 12 , and returned in WWE 2K18 . Filmography ( edit ) Film (
+edit ) Year Title Role Notes Octobre Pouilleuse Film debut 2015 Sharknado 3 : Oh Hell No !
+</item 1>
+
+<item 2>
+Maryse Ouellet
+On February 21 episode of SmackDown , Maryse was again hit by Nikki and Natalya backstage during their Falls Count Anywhere match , leading to Maryse attacking
+Bella with a lead pipe and causing her to lose the match . On February 28 episode of SmackDown , during the Miz TV segment , Maryse slapped Nikki 's then real -
+life boyfriend John Cena , causing Nikki to confront her . On March 7 episode of SmackDown , Maryse and Miz attacked Nikki and Cena after they won a match
+against James Ellsworth and Carmella . On March 14 episode of SmackDown , after another showdown between the couples , SmackDown General Manager Daniel Bryan
+announced a mixed tag team match at WrestleMania 33 . Maryse and Miz would ultimately lose in what was Maryse 's first match in over six years . On April 10 ,
+Maryse was drafted to the Raw brand along with Miz as part of the `` Superstar Shake Up '' , where they made their debut on the same night dressed as Bella and
+Cena , before being confronted by the Intercontinental Champion Dean Ambrose .
+</item 2>
+
+<item 3>
+Maryse Ouellet
+Following a hiatus due to the shoot of a WWE film , Maryse returned to WWE television on the June 27 episode of Raw , where she helped Miz to retain his
+championship against Kane after she faked an ankle injury . After being drafted to Smackdown as part of the 2016 WWE draft which took place on July 19 , Ouellet
+made her first appearance for the brand on July 26 , where she co-hosted a Miz TV segment along her husband before being interrupted by Randy Orton , who
+challenged Miz to a non-title match , in which he was subsequently defeated . At Backlash , Maryse successfully helped Miz to retain the Intercontinental
+Championship by spraying something at Dolph Ziggler whilst Miz distracted the referee . The following week , SmackDown General Manager Daniel Bryan announced a
+rematch for the championship due Maryse 's interference at Backlash . On September 20 , Miz retained the championship over Ziggler .
+</item 3>
+
+<item 4>
+Maryse Ouellet
+In late - 2011 , she announced plans for a clothing and jewelry line called House of Maryse , and later began working as a realtor . In November 2016 , she
+began starring in the reality television series Total Divas on E ! as part of the main cast . She and her husband The Miz will also star in their own reality
+show titled Miz & Mrs. that will premiere in 2018 . Contents ( hide ) 1 Early life and career 2 Professional wrestling career 2.1 World Wrestling Entertainment
+/ WWE 2.1. 1 Diva Search and developmental territories ( 2006 -- 2007 ) 2.1. 2 Early feuds ( 2006 -- 2008 ) 2.1. 3 Divas Champion ( 2008 -- 2010 ) 2.1. 4
+Managing Ted DiBiase and departure ( 2010 -- 2011 ) 2.2 Independent circuit ( 2012 ) 2.3 Return to WWE 2.3.
+</item 4>
+
+<item 5>
+Maryse Ouellet
+She began appearing regularly for FWE , where she commentated during women 's matches . Return to WWE ( edit ) Managing the Miz ( 2016 -- present ) ( edit )
+Maryse celebrating along The Miz after winning the Intercontinental Championship at a Raw event in April 2016 On April 4 , 2016 episode of Raw , the episode
+after WrestleMania 32 , Maryse returned during a WWE Intercontinental Championship match between the champion Zack Ryder and her husband , The Miz . During the
+match , Maryse slapped Ryder 's father , who was in the front row , in order to distract Ryder and allowed Miz to capture the championship for the fifth time ,
+thus becoming his manager in the process , where the two then became an on - screen power couple . She formally re-introduced herself three days later on the
+April 7 episode of SmackDown before once more helping Miz to retain his championship over Ryder . She then began to cut various promos with Miz as his host
+during the `` Miz TV '' segments , while calling themselves the `` It '' Couple .
+</item 5>
+
+<item 6>
+Maryse Ouellet
+She and John Morrison were interviewed on Eurosport in the same year . She also made a special appearance on Redemption Song , which was hosted by WWE wrestler
+Chris Jericho , along with Candice Michelle , Mickie James , and Eve Torres . She has also appeared in several newspaper interviews , including Tokyo Headline ,
+and was on the cover of Sessions Magazine in October 2010 . In 2012 , Maryse was featured on the cover of Le Journal de Montréal , and on MDA Show of Strength
+with The Miz and other celebrities . In 2015 , Ouellet had roles in Sharknado 3 : Oh Hell No ! and in Santa 's Little Helper , the latter starring Ouellet 's
+husband , The Miz . In the same year , she appeared on the E ! reality television series WAGS . In 2016 , it was announced that Maryse would appear as a main
+cast member on the sixth season of Total Divas , which prompted her return to WWE . In June 2017 , Maryse along with Miz were cover of the DUB Magazine with a
+Jeep car .
+</item 6>
+
+<item 7>
+Maryse Ouellet
+On September 20 , Miz retained the championship over Ziggler . On October 9 , at No Mercy Miz lost the Intercontinental Championship to Ziggler in a title vs
+career match when Maryse was banned from the ringside along with The Spirit Squad ( Kenny and Mikey ) , who was contracted by her to help Miz , ending Miz 's
+reign at 188 days . On November 8 episode of SmackDown , Maryse went on to speak in Miz 's name due Miz refuse to speak with Daniel Bryan . At that night ,
+Maryse accepted Bryan 's offer to Miz face Ziggler the following week for the Intercontinental Championship in the 900th episode of SmackDown . Later that night
+, Bryan would state on Talking Smack that if Ziggler successfully retains his championship , The Miz and Maryse would be traded to Raw for someone else . On
+November 15 at the 900th episode of SmackDown , Maryse helped Miz to win the championship for the sixth time and also retain it at Survivor Series against Sami
+Zayn .
+</item 7>
+
+<item 8>
+Maryse Ouellet
+. TMZ . February 22 , 2014 . Retrieved March 21 , 2014 . Jump up ^ `` The Miz and Maryse are expecting their first child '' . Retrieved March 19 , 2018 . Jump
+up ^ Waldman , Jon ( April 25 , 2009 ) . `` Smackdown : UK gets a strong episode of SD ! '' . Slam ! Sports . Canadian Online Explorer . Retrieved February 14 ,
+2010 . Jump up ^ David , Stephens ( January 4 , 2010 ) . `` WWE Raw Results -- 1 / 4 / 10 '' . WrestleView . Retrieved April 9 , 2016 . Jump up ^ David ,
+Stephens ( May 17 , 2010 ) . `` WWE Raw Results -- 5 / 17 / 10 '' . WrestleView . Retrieved April 9 , 2016 . Jump up ^ Tedesco , Mike ( December 26 , 2008 ) .
+</item 8>
+
+<item 9>
+Maryse Ouellet
+On June 4 , at Extreme Rules , Maryse was in Miz 's corner when he won the WWE Intercontinental Championship for the seventh time by defeating Ambrose . In
+September , following her pregnancy announcement , Maryse stopped appearing on television . On January 22 , 2018 , in the Raw 25 Years special episode , Maryse
+was honored as part of a segment involving women considered legends that contributed to the company 's success , including the Bella Twins , Kelly Kelly ,
+Lilian Garcia , Torrie Wilson , Michelle McCool , Terri Runnels , Maria Kanellis and the Hall of Famers Jacqueline and Trish Stratus . Other media ( edit )
+Maryse and Miz in July 2016 In April 2007 , she appeared alongside fellow WWE Divas Ashley , Torrie Wilson , Brooke Adams , Layla , and Kelly Kelly in Timbaland
+'s music video `` Throw It On Me '' featuring The Hives . Ouellet also appeared in the January 2009 issue of Muscle & Fitness , along with Eve Torres and
+Michelle McCool . She and John Morrison were interviewed on Eurosport in the same year .
+</item 9>
+
+<item 10>
+Maryse Ouellet
+Instagram . Retrieved July 26 , 2017 . Jump up ^ Ramos , Dino - Ray ( January 8 , 2018 ) . `` WWE ' Miz & Mrs . ' Docuseries Set At USA Network '' . Deadline .
+Retrieved January 9 , 2018 . Jump up ^ Corey , Clayton ( September 2 , 2011 ) . `` Superstar roster revealed for THQ 's `` WWE ' 12 '' `` . WWE.com . Retrieved
+April 5 , 2016 . Jump up ^ Linder , Zack ( January 17 , 2014 ) . `` Exclusive interview : Catching up with the lovely and talented Maryse '' . WWE.com . Jump up
+^ Zack , Zeigler ( July 5 , 2006 ) . `` Getting to know your Diva Search Contestants : Maryse Ouellet '' . WWE.com . Retrieved May 5 , 2016 . Jump up ^ ``
+Maryse Convinces Her Husband to Become Vegetarian For One Week '' . E ! Online .
+</item 10>
+=== END ITEM id=cfcb282d2412961f ===
+
+=== ITEM id=ecf6a04e46e98caa ===
+Gold sentences and facts:
+Sentence 0: It was confirmed on 25 January 2018 , that Dancing on Ice had been recommissioned for an eleventh series to air in 2019 .
+  Fact 0.0: On 25 January 2018, it was confirmed that Dancing on Ice had been recommissioned.
+  Fact 0.1: Dancing on Ice was recommissioned for an eleventh series.
+  Fact 0.2: The eleventh series is to air in 2019.
+
+Retrieved items:
+<item 1>
+Dancing on Ice
+23 27 March 2011 9.35 2011 8.15 7 23 8 January 2012 8.42 25 March 2012 7.01 2012 6.63 8 19 6 January 2013 7.49 10 March 2013 7.36 2013 6.32 9 19 5 January 2014
+6.76 9 March 2014 5.98 2014 5.04 10 10 7 January 2018 8.56 11 March 2018 2018 Awards Year Group Award Result Reference ( s ) 2006 National Television Awards
+Most Popular Entertainment Programme Nominated 2007 National Television Awards Most Popular Talent Show Nominated 2008 National Television Awards Most Popular
+Talent Show Nominated TV Quick Awards Best Talent Show Nominated 2009 National Television Awards Most Popular Talent Show Nominated TV Quick Awards Best Talent
+Show Nominated RTS Craft & Design Award Best Costume Design Won RTS Craft & Design Award Best Multicamera Work Nominated RTS Craft & Design Award Best Costume
+Design Nominated 2011 National Television Awards Most Popular Talent Show Nominated RTS
+</item 1>
+
+<item 2>
+Dancing on Ice
+As part of ITV 's new revamped schedule at the start of 2008 , from the third series , the show aired on a Sunday night and featured updated music and new
+titles as well as redesigned graphics . The series 3 finale was a massive draw , pulling an average 11.7 million viewers ( up from 9.6 million the previous year
+) peaking at 12.6 million viewers over the two - hour slot , up over a million from series 2 . The seventh series began on 8 January 2012 , with Torvill and
+Dean as coaches for which they will be paid £ 250,000 each series . Christine Bleakley was announced as the new co-presenter of the show replacing Holly
+Willoughby , whilst Katarina Witt and Louie Spence replaced Emma Bunton and Jason Gardiner on the judging panel . On 20 November 2012 , it was announced that
+Gardiner was to return to the panel for the 2013 series , replacing Spence .
+</item 2>
+
+<item 3>
+Dancing on Ice
+Dancing on Ice - wikipedia Dancing on Ice Jump to : navigation , search This article is about the British series . For elsewhere , see Dancing on Ice around the
+world . For the most recent series , see Dancing on Ice ( series 10 ) . Dancing on Ice Title -- card used for the 2018 revival Created by ITV Studios Creative
+director ( s ) Christopher Dean ( 2006 -- 2014 ) Jayne Torvill ( 2006 -- 2014 ) Presented by Phillip Schofield Holly Willoughby Christine Bleakley Jordan Banjo
+( backstage ) Judges Robin Cousins Karen Barber Jason Gardiner Karen Kresge Nicky Slater Natalia Bestemianova Ruthie Henshall Emma Bunton Louie Spence Katarina
+Witt Ashley Roberts Christopher Dean Jayne Torvill Ashley Banjo Voices of Tony Gubba ( 2006 -- 13 ) Simon Reed ( 2013 -- 14 ) Matt Chapman ( 2018 ) Sam
+Matterface ( 2018 -- ) Theme music composer Paul Farrer Country of origin United Kingdom Original language ( s ) English No. of series 10 No.
+</item 3>
+
+<item 4>
+Dancing on Ice
+The third series began on 13 January 2008 , moving to Sunday nights in the process and ended on 16 March 2008 , when Suzanne Shaw was crowned as the winner .
+Schofield and Holly Willoughby returned to co-present , while Nicky Slater , Jason Gardiner and Robin Cousins returned to The Ice Panel . The third series saw
+the replacement of judge Natalia Bestemianova by West End star Ruthie Henshall . And for the first time in the history of the series , a contestant withdrew due
+to injury , and it was TV presenter Michael Underwood who did so .
+</item 4>
+
+<item 5>
+Dancing on Ice
+The show consists of celebrities and their professional partners figure skate in front of a panel of judges . The series , broadcast on ITV , started on 14
+January 2006 and ended on 9 March 2014 after the show 's contract was not renewed by ITV . On 4 September 2017 , it was announced that a revived series would
+air on ITV from 7 January 2018 with Schofield and Willoughby returning as hosts alongside a new backstage host , Jordan Banjo . It was confirmed on 25 January
+2018 , that Dancing on Ice had been recommissioned for an eleventh series to air in 2019 . Contents ( hide ) 1 Background and history 1.1 Cancellation and
+revival 2 Format 3 Series overview 4 Presenters , judges and coaches 5 Professionals 6 Required elements 7 Main series results 7.1 Series 1 ( 2006 ) 7.2 Series
+2 ( 2007 ) 7.3 Series 3 ( 2008 ) 7.4 Series 4 ( 2009 ) 7.5 Series 5 ( 2010 ) 7.
+</item 5>
+
+<item 6>
+Dancing on Ice
+Later that month Gardiner confirmed that he would return to the judging panel . Ashley 's brother Jordan Banjo acts as the show 's backstage digital host . ITV
+Racing 's betting presenter Matt Chapman was announced as the new commentator on 16 December 2017 . However , following the first live show on 7 January ,
+Chapman claimed that he had `` quit '' the show but it was later confirmed to be a decision by the ITV producers , responding to pressure from the TV audience .
+Sport commentator Sam Matterface was later confirmed as Chapman 's replacement . It was announced on 25 January 2018 that Dancing on Ice would return for an
+eleventh series in 2019 . The presenters , judges and participating celebrities are yet to be confirmed by ITV . Format Each week the celebrities and their
+partners perform a live ice dance routine . The four / five ( as of Series 8 ) judges ( commonly known as the Ice Panel ) judge each performance and give a mark
+between 0.0 and 10.0 ( 0.0 to 6.0 between series 1 and 5 ) , depending on the performance .
+</item 6>
+
+<item 7>
+Dancing on Ice
+5 , 8.5 , 9.0 = 26.0 Eliminated Tessa Sanderson CBE Javelin Gold ( LA 1984 ) Yannick Bonheur 7.5 , 7.5 , 8.0 = 23.0 Eliminated The judges scores were added to
+the studio audiences votes to decide the winner . No public vote took place , as the programme was recorded earlier in the year . Dancing on Ice Friday ( 2010 )
+A brand new spin - off show for the 2010 series of Dancing on Ice , appropriately called Dancing on Ice Friday , gave viewers the insight to the training of the
+celebrities over the last week . It was presented by television presenter Ben Shephard and former contestant and Loose Women star Coleen Nolan . The show was
+broadcast from 8 pm to 8.30 pm on Friday evenings on ITV throughout the duration of the main shows season . STV who broadcast the main show did not broadcast
+this on the Friday evening but after repeating the previous week 's main show on the following Saturday afternoon . Due to poor ratings , Dancing on Ice Friday
+was axed prior to the 2011 series .
+</item 7>
+
+<item 8>
+Dancing on Ice
+of series 10 No. of episodes 138 Production Executive producer ( s ) Jane Beacon Katie Rawcliffe Location ( s ) Elstree Studios ( 2006 -- 10 , 2012 -- 14 )
+Shepperton Studios ( 2011 ) RAF Bovingdon ( 2018 -- ) Running time 60 -- 120 minutes Production company ( s ) ITV Studios Release Original network ITV Picture
+format 16 : 9 1080i ( HDTV ) 16 : 9 576i ( SDTV ) Original release Original Series : 14 January 2006 ( 2006 - 01 - 14 ) -- 9 March 2014 ( 2014 - 03 - 09 )
+Revived Series : 7 January 2018 ( 2018 - 01 - 07 ) -- present External links Website Dancing on Ice is a British television show presented by Phillip Schofield
+alongside Holly Willoughby from 2006 to 2011 , and Christine Bleakley from 2012 to 2014 . The show consists of celebrities and their professional partners
+figure skate in front of a panel of judges .
+</item 8>
+
+<item 9>
+Dancing on Ice
+the show was renamed following the failure of ITV 's celebrity oriented 2005 summer schedule . Dancing on Ice is frequently compared to the BBC 's Strictly Come
+Dancing . In 2004 , the BBC aired a Strictly special entitled Strictly Ice Dancing at Christmas , which was won by England goalkeeper David Seaman ( who was a
+contestant in series 1 of Dancing on Ice ) . ITV 's show was given a January premiere amidst network doubts about its viability but became a surprise hit in
+Britain , where it became the third highest rated television show of 2006 . It attained an impressive 13 million viewers for the final in March . Britain 's
+best - known ice - skating duo and former Olympic champions Jayne Torvill and Christopher Dean help to train the aspiring dancers , and also appear throughout
+the show with comments and advice . Head Coach Karen Barber also trains the skaters for the live show . From the beginning , Torvill and Dean opened every
+episode with a performance , with the exception of the second , third and fourth shows of the fourth series , when Torvill performed alone due to Dean 's
+recovery from a shoulder operation .
+</item 9>
+
+<item 10>
+Dancing on Ice
+The presenters , judges and participating celebrities are yet to be confirmed by ITV . Series averages All information in this table comes from BARB . including
+figures from ITV + 1 and ITV HD channels Series Day # Ep . Premiere Final Aired Average viewers ( in millions ) Date Viewers ( in millions ) Date Viewers ( in
+millions ) Saturdays 16 14 January 2006 9.83 4 March 2006 11.68 2006 9.12 18 20 January 2007 9.08 17 March 2007 9.14 2007 8.00 Sundays 20 13 January 2008 9.34
+16 March 2008 12.08 2008 8.93 22 11 January 2009 8.83 22 March 2009 11.31 2009 8.86 5 23 10 January 2010 9.64 28 March 2010 9.42 8.28 6 23 9 January 2011 10.23
+27 March 2011 9.35 2011 8.
+</item 10>
+=== END ITEM id=ecf6a04e46e98caa ===
+
+=== ITEM id=3b22befa25ff652f ===
+Gold sentences and facts:
+Sentence 0: The American entry into World War I came in April 1917 , after more than two and a half years of efforts by President Woodrow Wilson to keep the United States out of the war . Apart from an Anglophile element urging early support for the British , American public opinion reflected that of the president : the sentiment for neutrality was particularly strong among Irish Americans , German Americans and Scandinavian Americans , as well as among church leaders and among women in general . On the other hand , even before World War I had broken out , American opinion had been more negative toward Germany than towards any other country in Europe . Over time , especially after reports of atrocities in Belgium in 1914 and following the sinking of the passenger liner RMS Lusitania in 1915 , the American people increasingly came to see Germany as the aggressor in Europe .
+  Fact 0.0: The American entry into World War I came in April 1917.
+  Fact 0.1: The American entry into World War I came after more than two and a half years of efforts by President Woodrow Wilson to keep the United States out of the war.
+  Fact 0.2: Apart from an Anglophile element urging early support for the British, American public opinion reflected that of the president.
+  Fact 0.3: The sentiment for neutrality was particularly strong among Irish Americans.
+  Fact 0.4: The sentiment for neutrality was particularly strong among German Americans.
+  Fact 0.5: The sentiment for neutrality was particularly strong among Scandinavian Americans.
+  Fact 0.6: The sentiment for neutrality was particularly strong among church leaders.
+  Fact 0.7: The sentiment for neutrality was particularly strong among women in general.
+  Fact 0.8: Before World War I had broken out, American opinion had been more negative toward Germany than toward any other country in Europe.
+  Fact 0.9: Over time, the American people increasingly came to see Germany as the aggressor in Europe.
+  Fact 0.10: The shift toward seeing Germany as the aggressor was especially driven by reports of atrocities in Belgium in 1914.
+  Fact 0.11: The shift toward seeing Germany as the aggressor was especially driven by the sinking of the passenger liner RMS Lusitania in 1915.
+
+Retrieved items:
+<item 1>
+American entry into World War I
+American entry into World war I - wikipedia American entry into World war I Jump to : navigation , search The American entry into World War I came in April 1917
+, after more than two and a half years of efforts by President Woodrow Wilson to keep the United States out of the war . Apart from an Anglophile element urging
+early support for the British , American public opinion reflected that of the president : the sentiment for neutrality was particularly strong among Irish
+Americans , German Americans and Scandinavian Americans , as well as among church leaders and among women in general . On the other hand , even before World War
+I had broken out , American opinion had been more negative toward Germany than towards any other country in Europe . Over time , especially after reports of
+atrocities in Belgium in 1914 and following the sinking of the passenger liner RMS Lusitania in 1915 , the American people increasingly came to see Germany as
+the aggressor in Europe . As U.S.
+</item 1>
+
+<item 2>
+American entry into World War I
+The solution was a third route , a `` peace without victory '' , according to Wilson . On April 6 , 1917 , Congress declared war . In the Senate , the
+resolution passed 82 to 6 , with Senators Harry Lane , William J. Stone , James Vardaman , Asle Gronna , Robert M. La Follette , Sr. , and George W. Norris
+voting against it . In the House , the declaration passed 373 to 50 , with Claude Kitchin , a senior Democrat , notably opposing it . Another opponent was
+Jeannette Rankin , who alone voted against entry into both World War I and World War II . Nearly all of the opposition came from the West and the Midwest .
+Austria - Hungary ( edit ) The United States Senate , in a 74 to 0 vote , declared war on Austria - Hungary on December 7 , 1917 , citing Austria - Hungary 's
+severing of diplomatic relations with the United States , its use of unrestricted submarine warfare and its alliance with Germany . The declaration passed in
+the United States House of Representatives by a vote of 365 to 1 .
+</item 2>
+
+<item 3>
+American entry into World War I
+Bourne believes elites knew full well what going to war would entail and the price in American lives it would cost . If American elites could portray the United
+States ' role in the war as noble , they could convince the generally isolationist American public war would be acceptable . Above all , American attitudes
+towards Germany focused on the U-boats ( submarines ) , which sank the Lusitania in 1915 and other passenger ships `` without warning '' . That appeared to
+Americans as an unacceptable challenge to America 's rights as a neutral country , and as an unforgivable affront to humanity . After repeated diplomatic
+protests , Germany agreed to stop . But in 1917 the Germany military leadership decided that `` military necessity '' dictated the unrestricted use of their
+submarines . The Kaiser 's advisors felt America was enormously powerful economically but too weak militarily to make a difference . Declaration of war ( edit )
+Germany ( edit ) On April 2 , 1917 , Wilson asked a special joint session of Congress to declare war on the German Empire , stating , `` We have no selfish ends
+to serve '' .
+</item 3>
+
+<item 4>
+American entry into World War I
+Germany also made a secret offer to help Mexico regain territories lost in the Mexican -- American War in an encoded telegram known as the Zimmermann Telegram ,
+which was intercepted by British Intelligence . Publication of that communique outraged Americans just as German U-boats started sinking American merchant ships
+in the North Atlantic . Wilson then asked Congress for `` a war to end all wars '' that would `` make the world safe for democracy '' , and Congress voted to
+declare war on Germany on April 6 , 1917 . On December 7 , 1917 , the U.S. declared war on Austria - Hungary . U.S. troops began arriving on the Western Front
+in large numbers in 1918 . Contents ( hide ) 1 Main issues 1.1 Naval blockade 1.1. 1 The strategy behind the blockade 1.2 Business considerations 1.3 Views of
+the elites 2 Public opinion 2.1 Parties 2.2 Workers , farmers , and African Americans 2.3 South 2.4 German Americans 2.5 Christian churches and pacifists 2.6
+Jewish Americans 2.7 Irish - Americans 2.
+</item 4>
+
+<item 5>
+American entry into World War I
+After February 1 , the communique noted , German U-boats would sink without warning belligerent and neutral ships found in a designated zone comprising waters
+around Great Britain , France , and Italy , and in the eastern Mediterranean . The Admiralty made one minor exception : it would permit one American steamer a
+week to sail between New York and Falmouth ( ... ) . Initially Germany would grant a period of grace , during which its submarines would not harm neutral ships
+that either were en route to the war zone or had already arrived . Jump up ^ Compare : Doenecke , Justus D. ( 2011 ) . Nothing Less Than War : A New History of
+America 's Entry Into World War I. Studies in Conflict , Diplomacy and Peace Series . University Press of Kentucky . p. 286 . ISBN 978 - 0 - 8131 - 3002 - 6 .
+Retrieved 2015 - 12 - 07 . Several factors led to Wilson 's choice . Germany 's U-boat warfare was paramount .
+</item 5>
+
+<item 6>
+American entry into World War I
+Germany 's U-boat warfare was paramount . Had it not been for Berlin 's announcement of January 31 , the president probably would not have issued a call to arms
+. Jump up ^ Justus D. Doenecke , Nothing Less Than War : A New History of America 's Entry into World War I ( 2011 ) ch 10 ^ Jump up to : May , Ernest R. ( 1966
+) . The World War and American isolation , 1914 -- 1917 . Jump up ^ Knock , Thomas J. ( 1995 ) . To End All Wars : Woodrow Wilson and the Quest for a New World
+Order . Jump up ^ Syrett , Harold C. ( 1945 ) . `` The Business Press and American Neutrality , 1914 -- 1917 '' . Mississippi Valley Historical Review . 32 ( 2
+) : 215 -- 230 . doi : 10.2307 / 1898209 . JSTOR 1898209 .
+</item 6>
+
+<item 7>
+American entry into World War I
+International Encyclopedia of the First World War . NY Times main headline , April 2 , 1917 , President Calls for War Declaration , Stronger Navy , New Army of
+500,000 Men , Full Cooperation With Germany 's Foes President Wilson 's War Address Map of Europe at the time of the US declaration of war on Germany at
+omniatlas.com World War I : Declarations of War from Around the Globe - How America Entered the Great War Today in History : U.S.
+</item 7>
+
+<item 8>
+American entry into World War I
+Sinking of American merchant ships ( edit ) In early 1917 Berlin forced the issue . Its declared decision on 31 January 1917 to target neutral shipping in a
+designated war - zone became the immediate cause of the entry of the United States into the war . Five American merchant ships went down in March . Outraged
+public opinion now overwhelmingly supported Wilson when he asked Congress for a declaration of war on April 2 , 1917 . Public opinion , moralism , and national
+interest ( edit ) Historians such as Ernest R. May have approached the process of American entry into the war as a study in how public opinion changed radically
+in three years ' time . In 1914 most Americans called for neutrality , seeing the war a dreadful mistake and were determined to stay out . By 1917 the same
+public felt just as strongly that going to war was both necessary and wise . Military leaders had little to say during this debate , and military considerations
+were seldom raised . The decisive questions dealt with morality and visions of the future . The prevailing attitude was that America possessed a superior moral
+position as the only great nation devoted to the principles of freedom and democracy .
+</item 8>
+
+<item 9>
+American entry into World War I
+As U.S. president , it was Wilson who made the key policy decisions over foreign affairs : while the country was at peace , the domestic economy ran on a
+laissez - faire basis , with American banks making huge loans to Britain and France -- funds that were in large part used to buy munitions , raw materials , and
+food from across the Atlantic . Until 1917 , Wilson made minimal preparations for a land war and kept the United States Army on a small peacetime footing ,
+despite increasing demands for enhanced preparedness . He did however expand the United States Navy . In 1917 , with Russia experiencing political upheaval
+following widespread disillusionment there over the war , and with Britain and France low on credit , Germany appeared to have the upper hand in Europe , while
+Germany 's ally , the Ottoman Empire , clung stubbornly to its possessions in the Middle East . In the same year , Germany decided to resume unrestricted
+submarine warfare against any vessel approaching British waters ; this attempt to starve Britain into surrender was balanced against the knowledge that it would
+almost certainly bring the United States into the war .
+</item 9>
+
+<item 10>
+American entry into World War I
+See also ( edit ) World War I portal Causes of World War I Diplomatic history of World War I United States in World War I United States home front during World
+War I Footnotes ( edit ) Jump up ^ Jeanette Keith ( 2004 ) . Rich Man 's War , Poor Man 's Fight : Race , Class , and Power in the Rural South during the First
+World War . U. of North Carolina Press . pp. 1 -- 5 . ISBN 978 - 0 - 8078 - 7589 - 6 . Jump up ^ Barnes , Harry Elmer . The Genesis of the World War ( 1925 )
+pp. 590 -- 591 Jump up ^ `` World War One '' . BBC History . Jump up ^ Link , Arthur S. ( 1972 ) . Woodrow Wilson and the Progressive Era , 1910 -- 1917 . New
+York : Harper & Row . pp. 252 -- 282 . ^ Jump up to : H.J. Res.
+</item 10>
+=== END ITEM id=3b22befa25ff652f ===
+
+=== ITEM id=fb0d97428f4009cf ===
+Gold sentences and facts:
+Sentence 0: Shortwave radio is radio transmission using shortwave radio frequencies . There is no official definition of the band , but the range always includes all of the high frequency band ( HF ) , and generally extends from 1.7 -- 30 MHz ( 176.3 -- 10.0 m ) ; from the high end of the medium frequency band ( MF ) just above the mediumwave AM broadcast band , to the end of the HF band .
+  Fact 0.0: Shortwave radio is radio transmission using shortwave radio frequencies.
+  Fact 0.1: There is no official definition of the shortwave band.
+  Fact 0.2: The shortwave band range always includes the high frequency band (HF).
+  Fact 0.3: The shortwave band generally extends from 1.7 to 30 MHz (176.3 to 10.0 m).
+  Fact 0.4: The shortwave band extends from the high end of the medium frequency band (MF), just above the mediumwave AM broadcast band.
+  Fact 0.5: The shortwave band extends to the end of the HF band.
+Sentence 1: Very little infrastructure is required for long - distance two - way communications using shortwave radio . All one needs is a pair of transceivers , each with an antenna , and a source of energy ( such as a battery , a portable generator , or the electrical grid ) . This makes shortwave radio one of the most robust means of communications , which can be disrupted only by interference or bad ionospheric conditions . Modern digital transmission modes such as MFSK and Olivia are even more robust , allowing successful reception of signals well below the noise floor of a conventional receiver .
+  Fact 1.0: Very little infrastructure is required for long-distance two-way communication using shortwave radio.
+  Fact 1.1: All one needs for shortwave radio communication is a pair of transceivers, each with an antenna.
+  Fact 1.2: All one needs for shortwave radio communication is a source of energy, such as a battery, a portable generator, or the electrical grid.
+  Fact 1.3: Shortwave radio is one of the most robust means of communications.
+  Fact 1.4: Shortwave radio communications can be disrupted only by interference or bad ionospheric conditions.
+  Fact 1.5: Modern digital transmission modes such as MFSK and Olivia are even more robust.
+  Fact 1.6: Modern digital transmission modes such as MFSK and Olivia allow successful reception of signals well below the noise floor of a conventional receiver.
+
+Retrieved items:
+<item 1>
+Shortwave radio
+9 MHz 15 m 18.9 -- 19.02 MHz almost unused , could become a DRM band 13 m 21.45 -- 21.85 MHz 11 m 25.6 -- 26.1 MHz may be used for local DRM broadcasting
+Although countries generally follow the table above , there may be small differences between countries or regions . For example , in the official bandplan of
+the Netherlands , the 49 m band starts at 5.95 MHz , the 41 m band ends at 7.45 MHz , the 11 m band starts at 25.67 MHz , and the 120 , 90 and 60 m bands are
+absent altogether . Additionally , international broadcasters sometimes operate outside the normal WRC - allocated bands or use off - channel frequencies . This
+is done for practical reasons , or to attract attention in crowded bands ( 60m , 49m , 40m , 41m , 31m , 25m ) . The new digital audio broadcasting format for
+shortwave DRM operates 10 kHz or 20 kHz channels .
+</item 1>
+
+<item 2>
+Shortwave radio
+Shortwave radio received its name because the wavelengths in this band are relatively shorter than 200 m ( 1,500 kHz ) which marked the original upper limit of
+the medium frequency band first used for radio communications . The broadcast medium wave band now extends above the 200 m / 1,500 kHz limit , and the amateur
+radio 1.8 MHz -- 2.0 MHz band ( known as the `` top band '' ) is the lowest - frequency band considered to be ' shortwave ' . Early long distance radio
+telegraphy used long waves , below 300 kilohertz ( kHz ) . The drawbacks to this system included a very limited spectrum available for long distance
+communication , and the very expensive transmitters , receivers and gigantic antennas that were required . It was also difficult to beam the radio wave
+directionally with long wave , resulting in a major loss of power over long distances . Prior to the 1920s , the shortwave frequencies above 1.5 MHz were
+regarded as useless for long distance communication and were designated in many countries for amateur use .
+</item 2>
+
+<item 3>
+Shortwave radio
+See also ( edit ) ALLISS -- a very large rotatable antenna system used in international broadcasting Amateur radio -- also uses the shortwave bands , but with
+power levels under 2 kW International broadcasting List of American shortwave broadcasters List of shortwave radio broadcasters Long wave Medium wave Shortwave
+bands -- shortwave spectrum allocation shortwave relay station -- the fundamental way in which programmes are broadcast on shortwave SSB -- a method of radio
+signal modulation References ( edit ) Jump up ^ Grundig Satellit 400 international / professional ShortWaveRadio.ch Jump up ^ Inconsistent article :
+itwissen.info : KW ( Kurzwelle ) SW ( short wave ) Quote : `` ... Der KW - Frequenzbereich ( SW ) liegt zwischen 3 MHz und 30 MHz ( < - 1 . definition ) ...
+Kurzwelle ist auch eine sendetechnische Bezeichnung für Rundfunk im Frequenzbereich zwischen 2 , 3 MHz und 26 , 1 MHz ( < - 2 .
+</item 3>
+
+<item 4>
+Shortwave radio
+The drawback is the receiver is more complicated , since it must re-create the carrier to recover the signal . Small errors in the detection process greatly
+affect the pitch of the received signal . As a result , single sideband is not used for music or general broadcast . Single sideband is used for long - range
+voice communications by ships and aircraft , Citizen 's Band , and amateur radio operators . Lower sideband ( LSB ) is generally used below 9 MHz and USB (
+upper sideband ) above 9 MHz . Vestigal sideband transmits the carrier and one complete sideband , but filters out the other sideband . It is a compromise
+between AM and SSB , enabing simple receivers to be used , but requires almost as much transmitter power as AM . One advantage is only half the bandwidth of an
+AM signal is used . It can be heard in the transmission of certain radio time signal stations . Vestigial sideband is used for over the air Television
+Broadcasts both analog and digital .
+</item 4>
+
+<item 5>
+Shortwave radio
+L band S band Digital systems ADR DAB - S DVB - SH S - DMB SDR Commercial radio providers 1worldspace Sirius XM Holdings SiriusXM Canada Codecs AAC AMR - WB+
+HDC HE - AAC MPEG - 1 Audio Layer II Subcarrier signals AMSS DirectBand PAD RDS / RBDS SCA / SCMO DARC Related topics Technical ( audio ) Audio data compression
+Audio signal processing Technical ( AM stereo formats ) Belar C - QUAM Harris Kahn - Hazeltine Magnavox Technical ( emission ) AM broadcasting AM expanded band
+Cable radio Digital radio Error detection and correction FM broadcast band FM broadcasting Multipath propagation Shortwave relay station Cultural History of
+radio International broadcasting Comparison of radio systems Radio spectrum ( ITU ) ELF 3 Hz / 100 Mm 30 Hz / 10 Mm SLF 30 Hz / 10 Mm 300 Hz / 1 Mm ULF 300 Hz /
+1 Mm 3 kHz / 100 km VLF 3 kHz / 100 km 30 kHz / 10 km LF 30 kHz / 10 km 300 kHz / 1 km MF 300 kHz / 1 km 3 MHz / 100 m HF
+</item 5>
+
+<item 6>
+Shortwave radio
+`` Short - Wave Radio Telephone is Success in Tests '' Popular Mechanics , July 1931 , mid page experiments carried out for the French and British governments
+Que Escuchar en la Onda Corta en Español website Time signal stations Longwave BPC BPL BSF DCF77 JJY RBU RJH66 ( Beta ) RTZ MSF TDF WWVB Shortwave BPM BSF CHU
+HD2IOA HLA JN53DV RWM ROA WWV WWVH ( Hawaii , USA ) YVTO VHF / FM / UHF RDS CT Satellite GPS BeiDou Galileo GLONASS IRNSS QZSS Defunct HBG NAA WWVL OMA OLB5 VNG
+Y3S Analog and digital audio broadcasting Terrestrial Radio modulation AM FM COFDM Frequency allocations LW ( LF ) MW ( MF ) SW ( HF ) VHF ( low / mid / high )
+L band ( UHF ) Digital systems CAM - D DAB / DAB+ DRM / DRM+ FMeXtra HD Radio CDR DVB - T2 Lite Satellite Frequency allocations C band K band L band S band
+Digital systems ADR DAB - S DVB - SH S - DMB
+</item 6>
+
+<item 7>
+Shortwave radio
+Continuous wave ( CW ) is on - and - off keying of a carrier , used for Morse code communications and Hellschreiber facsimile - based teleprinter transmissions
+. Narrow - band frequency modulation ( NBFM ) is used typically above 20 MHz . Because of the larger bandwidth required , NBFM is commonly used for VHF
+communication . Regulations limit the bandwidth of a signal transmitted in the HF bands , and the advantages of frequency modulation are greatest if the FM
+signal has a wide bandwidth . NBFM is limited to short - range transmissions due to the multiphasic distortions created by the ionosphere . Digital Radio
+Mondiale ( DRM ) is a digital modulation for use on bands below 30 MHz . Radioteletype , fax , digital , slow - scan television and other systems use forms of
+frequency - shift keying or audio subcarriers on a shortwave carrier . These generally require special equipment to decode , such as software on a computer
+equipped with a sound card .
+</item 7>
+
+<item 8>
+Shortwave radio
+Users ( edit ) Portable shortwave receiver 's digital display tuned to the 75 meter band Some established users of the shortwave radio bands may include :
+International broadcasting primarily by government - sponsored propaganda , international news ( for example , the BBC World Service ) or cultural stations to
+foreign audiences : the most common use of all . Domestic broadcasting : to widely dispersed populations with few longwave , mediumwave and FM stations serving
+them ; or for specialty political , religious and alternative media networks ; or of individual commercial and non-commercial paid broadcasts . Oceanic air
+traffic control uses the HF / shortwave band for long distance communication to aircraft over the oceans and poles , which are far beyond the range of
+traditional VHF frequencies . Modern systems also include satellite communications , such as ADS - C / CPDLC `` Utility '' stations transmitting messages not
+intended for the general public , such as merchant shipping , marine weather , and ship - to - shore stations ; for aviation weather and air - to - ground
+communications ; for military communications ; for long - distance governmental purposes , and for other non-broadcast communications .
+</item 8>
+
+<item 9>
+Shortwave radio
+Contents ( hide ) 1 Frequency classifications 2 History 2.1 Development 2.2 Amateur use of shortwave propagation 3 Propagation characteristics 4 Types of
+modulation 5 Users 6 Shortwave broadcasting 6.1 Frequency allocations 6.2 Advantages 6.3 Disadvantages 7 Shortwave listening 8 Shortwave broadcasts and music 9
+Shortwave 's future 10 See also 11 References 12 External links Frequency classifications ( edit ) The widest popular definition of the shortwave frequency
+interval is the ITU Region 1 ( EU + Africa + Russia ... ) definition , and is the span 1.6 -- 30 MHz , just above the medium wave band , which ends
+approximately at 1.6 MHz .
+</item 9>
+
+<item 10>
+Shortwave radio
+The last WRC took place in 2007 . At WRC - 97 in 1997 , the following bands were allocated for international broadcasting . AM shortwave broadcasting channels
+are allocated with a 5 kHz separation for traditional analog audio broadcasting . Metre Band Frequency Range Remarks 120 m 2.3 -- 2.495 MHz tropical band 90 m
+3.2 -- 3.4 MHz tropical band 75 m 3.9 -- 4 MHz shared with the North American amateur radio 80m band 60 m 4.75 -- 5.06 MHz tropical band 49 m 5.9 -- 6.2 MHz 41
+m 7.2 -- 7.6 MHz shared with the amateur radio 40m band 31 m 9.4 -- 9.9 MHz currently the most heavily used band 25 m 11.6 -- 12.2 MHz 22 m 13.57 -- 13.87 MHz
+19 m 15.1 -- 15.8 MHz 16 m 17.48 -- 17.9 MHz 15 m 18.9 -- 19.02 MHz almost unused ,
+</item 10>
+=== END ITEM id=fb0d97428f4009cf ===

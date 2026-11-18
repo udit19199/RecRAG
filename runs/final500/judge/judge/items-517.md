@@ -1,0 +1,1563 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 11 items.
+
+=== ITEM id=bb098275ed865795 ===
+Gold sentences and facts:
+Sentence 0: Guitar World is a monthly music magazine devoted to guitarists, published since July 1980.
+  Fact 0.0: Guitar World is a monthly music magazine.
+  Fact 0.1: Guitar World is devoted to guitarists.
+  Fact 0.2: Guitar World has been published since July 1980.
+Sentence 1: Golf Digest is a monthly golf magazine published by Condé Nast Publications in the United States.
+  Fact 1.0: Golf Digest is a monthly golf magazine.
+  Fact 1.1: Golf Digest is published by Condé Nast Publications.
+  Fact 1.2: Golf Digest is published in the United States.
+Sentence 2:  The magazine started in 1950, and was sold to The New York Times Company in 1969.
+  Fact 2.0: The magazine started in 1950.
+  Fact 2.1: The magazine was sold to The New York Times Company in 1969.
+Sentence 3:  The headquarters of "Golf Digest" is in Des Moines, Iowa.
+  Fact 3.0: The headquarters of Golf Digest is in Des Moines, Iowa.
+
+Retrieved items:
+<item 1>
+Guitar World
+Guitar World is a monthly music magazine devoted to guitarists, published since July 1980.
+
+ It contains original interviews, album and gear reviews, and guitar and bass tablature of approximately five songs each month.
+
+ The magazine is published 13 times per year (12 monthly issues and a holiday issue).
+
+ Formerly owned by Harris Publications, Future US bought the magazine in 2003.
+
+ In 2012, NewBay Media bought the Music division of Future US.
+
+ The latter company also published a spin-off title, Guitar Legends, each issue of which typically combined past articles from "Guitar World" under a specific
+theme.
+</item 1>
+
+<item 2>
+PC Magazine
+PC Magazine (shortened as PCMag) is an American computer magazine published by Ziff Davis.
+
+ A print edition was published from 1982 to January 2009.
+
+ Publication of online editions started in late 1994 and continues to this day.
+</item 2>
+
+<item 3>
+El Gráfico
+El Gráfico is a classic monthly Argentine sports magazine.
+
+ The magazine was originally published as a weekly newspaper in May 1919, and then turned to a sports magazine exclusively.
+
+ It has been scheduled monthly from 2002.
+
+ "El Gráfico" is one of the most regarded sports magazines not only in Argentina but in Latin America.
+
+ The magazine was nicknamed "La Biblia del deporte" ("The Bible of sports") due to its chronicles, notable journalists and collaborators and its photography.
+</item 3>
+
+<item 4>
+VIVmag
+VIVmag is one of the earliest exclusively digital, interactive women's lifestyle magazines.
+
+ Launched in 2006 and backed by Canadian industrialist David Harrison Gilmour (the founder of FIJI Water LLC), the bimonthly magazine is distributed by Zinio
+Systems, Inc.
+
+ The first issue appeared in January-February 2007.
+
+ There is no print version.
+
+ The paperless title can be viewed in most browsers or downloaded to your computer and read via the Zinio Reader.
+
+ The magazine is based in Thousand Oaks, California.
+</item 4>
+
+<item 5>
+André Laguerre
+Marc André Laguerre (February 21, 1915 – January 18, 1979) was a journalist and magazine editor, best known as the managing editor of "Sports Illustrated" from
+1960 to 1974, during which time he oversaw the growth in the magazine from a niche publication to become the industry leader in weekly sports magazines.
+
+ It was under his leadership that the annual "Sports Illustrated Swimsuit Issue" was first published.
+
+ When he retired in 1974, he had been managing editor of the magazine for 704 issues, then a record among magazines published by Time, Inc., SI's parent
+company.
+</item 5>
+
+<item 6>
+Football World
+Football World, later renamed "Athletic World", was an American magazine devoted to the coverage of inter-collegiate sports.
+
+ Its masthead described it as "A Magazine With a Mission to Serve the College Man," a publication "devoted to Inter-collegiate Athletics and sports of Amateur
+standing only."
+
+ It was founded in 1921 by J. D. Fetzer.
+
+ The name of the magazine was later changed to "Athletic World" as the coverage extended to a broader range of sports, including women's swimming.
+
+ Unlike other sports magazines of the era, which focused on promoting a healthy lifestyle, "Football World/Athletic World" celebrated the entertainment value of
+sports with a special emphasis on the personalities of famous athletes.
+
+ The magazine was renamed "Outing" in December 1924, reflecting a change in its focus.
+</item 6>
+
+<item 7>
+World Soccer (magazine)
+World Soccer is an English language football magazine published by IPC Media.
+
+ The magazine was established in 1960.
+
+ It specialises in the international football scene.
+
+ Its regular contributing writers include Brian Glanville, Sid Lowe and Tim Vickery.
+
+ "World Soccer" is a member of the European Sports Magazines (ESM), an umbrella group of similar magazines printed in other languages.
+
+ Other members include "A Bola", "Don Balón", "Kicker", "La Gazzetta dello Sport" and "Sport Express".
+
+ The members of this group elect a European "Team of the Month" and a European "Team of the Year".
+</item 7>
+
+<item 8>
+Golf Digest
+Golf Digest is a monthly golf magazine published by Condé Nast Publications in the United States.
+
+ It is a generalist golf publication covering recreational golf and men's and women's competitive golf.
+
+ Condé Nast Publications also publishes the more specialized "Golf for Women", "Golf World" and "Golf World Business".
+
+ The magazine started in 1950, and was sold to The New York Times Company in 1969.
+
+ The Times company sold their magazine division to Condé Nast in 2001.
+
+ The headquarters of "Golf Digest" is in Des Moines, Iowa.
+</item 8>
+
+<item 9>
+Esquire (magazine)
+Esquire is an American men's magazine, published by the Hearst Corporation in the United States.
+
+ Founded in 1933, it flourished during the Great Depression under the guidance of founders Arnold Gingrich, David A. Smart and Henry L. Jackson.
+</item 9>
+
+<item 10>
+Girlfriends (magazine)
+Girlfriends was a women's magazine that provided critical coverage of culture, entertainment and world events from a lesbian perspective.
+
+ It was founded by Jacob Anderson-Minshall, Diane Anderson-Minshall and Heather Findlay.
+
+ It also offered relationship, health and travel advice.
+
+ Published monthly from San Francisco since 1993, it was distributed nationwide by Disticor.
+
+ It had the same publisher as lesbian erotica magazine "On Our Backs", but distanced itself from its pornographic counterpart by refusing to carry sexual ads.
+
+ "Girlfriends" magazine ceased publication in 2006.
+</item 10>
+=== END ITEM id=bb098275ed865795 ===
+
+=== ITEM id=6c34eb544d15bcc7 ===
+Gold sentences and facts:
+Sentence 0:  He played college football at Hampton University and attended Riverdale High School in Riverdale, Georgia.
+  Fact 0.0: He played college football at Hampton University.
+  Fact 0.1: He attended Riverdale High School.
+  Fact 0.2: Riverdale High School is in Riverdale, Georgia.
+Sentence 1: Riverdale is a city in Clayton County, Georgia, United States.
+  Fact 1.0: Riverdale is a city.
+  Fact 1.1: Riverdale is in Clayton County, Georgia.
+  Fact 1.2: Clayton County, Georgia is in the United States.
+
+Retrieved items:
+<item 1>
+North Boone Community Unit School District 200
+The current principal is Matt Klett.
+
+ All students who graduate from one of the district elementary schools will consolidate at the fifth grade in one school, called North Boone Upper Elementary
+School, whose principal is Mike Greenlee;all students move on to North Boone Middle School, headed by Jeremiah Auble, which educates those in grades seven and
+eight.
+
+ The last leg of education this district can provide is to those from grade nine to grade twelve; the facility is called North Boone High School, whose
+principal is named Jacob Hubert.
+
+ The current superintendent is Steven Baule.
+
+ The mascot of the district high school is the Viking.
+</item 1>
+
+<item 2>
+Saint Michael the Archangel Church (Monroe, MI)
+Saint Michael the Archangel Church (St. Michael Church) is located on the west side of the city of Monroe, Michigan along the River Raisin.
+
+ It is home to 1,200 families and it is one of most important religious institutes in Monroe County.
+
+ It was founded in the year 1852.
+
+ The present building was built from 1866-1867.
+
+ It is in the Archdiocese of Detroit.
+
+ Its current priest is Rev. Phillip Ching.
+
+ When the parish was first established, the mayor of Monroe palatial residence was remodeled as a temporary church.
+
+ It was used as a church on the first floor and on the second it was used for the school.
+
+ Later it would only be used as St. Michael School.
+
+ Then in 1866 the cornerstone for the present church was laid.
+
+ The large 187 foot steeple wasn't added until 1883.
+
+ In 1874 the 3-story rectory was built east of the church.
+
+ In 1918 the parish built the present building of St.
+</item 2>
+
+<item 3>
+Saint Michael the Archangel Church (Monroe, MI)
+In 1918 the parish built the present building of St. Michael School which is now a part of Monroe Catholic Elementary Schools.
+
+ The movement to establish the parish started in 1845 by 14 German immigrants who wanted to worship in their native language.
+
+ The only nearby church was St. Mary of the Immaculate Conception right across the river where St. Michael stands today.
+
+ St. Mary's only worshiped in French and wouldn't hold services in other languages like German and Irish.
+
+ The German and Irish families were forced to move to the second floor of the rectory to have mass in their native languages.
+
+ When the German families were able to acquire land they were eager to leave St. Mary's to start a parish of their own.
+
+ They first purchased an empty lot Humphrey Street but the plan was soon abandoned.
+
+ They then purchased the first mayor of Monroe's estate to build the church and it remains the current site of the church.
+</item 3>
+
+<item 4>
+Owasso Independent School District v. Falvo
+Owasso Independent School District v. Falvo, 534 U.S. 426 (2002) , was a case in which the United States Supreme Court held in favor of the school district that
+students scoring each other's tests and calling out the grades do not violate the Family Educational Rights and Privacy Act of 1974 (FERPA).
+
+ Justice Kennedy wrote the opinion for the unanimous court.
+
+ Justice Scalia wrote a concurring opinion in which he agreed with the ruling, but took issue with parts of Kennedy's opinion.
+</item 4>
+
+<item 5>
+Rich Central High School
+Rich Central High School or RCHS is a public four-year high school located in Olympia Fields, Illinois, a southern suburb of Chicago, Illinois, in the United
+States.
+
+ The Rich Central Campus serves the cities of Matteson, Richton Park, Country Club Hills, Chicago Heights, Tinley Park, and parts of Olympia Fields.
+
+ It is a part of Rich Township District 227, which also includes Rich East High School and Rich South High School.
+
+ Although the school is located in Olympia Fields, it does not serve the entire village.
+
+ Some Olympia Fields students attend high school at Homewood-Flossmoor High School and Bloom High School, depending on the subdivision where the student
+resides.
+</item 5>
+
+<item 6>
+Lake Worth Community High School
+Lake Worth Community High School is a B State of Florida rated public high school located in Lake Worth, Florida.
+
+ Established in 1922 as Lake Worth High School, it is currently one of Palm Beach County's largest schools.
+
+ It has six magnet programs: the award-winning Air Force JROTC led by former Multi-National Award-winning Drill Teams, Tyranny and Fidelis; Medicine and Allied
+Health; Child Care and Development; Criminal Justice; Culinary and Drafting and Design.
+
+ The Palm Beach County School Board added the word Community to the names of all public high schools, including Lake Worth High School, in the 1980s.
+</item 6>
+
+<item 7>
+Two Rivers High School (Arkansas)
+Two Rivers High School is a public high school for students in grades 7 through 12 located in Ola, Arkansas, United States.
+
+ Two Rivers High School is administered by the Two Rivers School District.
+
+ The Two Rivers High School and school district serves 650 sqmi of rural communities including Ola, Plainview, Rover, and Casa.
+
+ Two Rivers High School is one of four high schools within Yell County and the sole high school administered by the Two Rivers School District.
+</item 7>
+
+<item 8>
+International Polytechnic High School
+International Polytechnic High School, commonly abbreviated merely as iPoly, is a public college preparatory demonstration high school (9-12) located on the
+California State Polytechnic University, Pomona (Cal Poly Pomona) campus and operated by the Los Angeles County Office of Education (LACOE) in conjunction with
+the College of Education and Integrative Studies at the university.
+
+ iPoly's curriculum is fully accredited by the Western Association of Schools and Colleges and is approved by the University of California and California State
+University.
+
+ It maintains a unique affiliation with the Los Angeles County High School for the Arts (LACHSA), which is also run by LACOE.
+
+ Since iPoly does not lie in a fixed school district, it draws students from throughout Los Angeles, San Bernardino, Orange and Riverside counties.
+
+ The majority of students come from the Pomona and San Gabriel valleys.
+
+ In 2009 and 2013, iPoly was honored as a California Distinguished School by the California Department of Education.
+</item 8>
+
+<item 9>
+Milford High School (Massachusetts)
+Milford High School (also known as MHS) is the secondary school for the district of Milford, Massachusetts, Milford Public Schools.
+
+ It is one choice for Milford students to attend high school.
+
+ Another is Blackstone Valley Regional Vocational Technical High School.
+
+ The principal is Mr. Joshua Otlin.
+
+ The assistant principals are Ms. Sissela Tucker (House A) and Mr. Richard Piergustavo (House B).
+</item 9>
+
+<item 10>
+Michael Ola
+Michael Ola (born April 19, 1988) is an American football offensive tackle for the Buffalo Bills of the National Football League (NFL).
+
+ He played college football at Hampton University and attended Riverdale High School in Riverdale, Georgia.
+
+ He has also been a member of the Jacksonville Sharks, Montreal Alouettes, Miami Dolphins, Chicago Bears, San Diego Chargers, Detroit Lions, Seattle Seahawks
+and New York Giants.
+</item 10>
+=== END ITEM id=6c34eb544d15bcc7 ===
+
+=== ITEM id=d9fe5a5c33a01e34 ===
+Gold sentences and facts:
+Sentence 0:  The Gaels, led by sixth year head coach Tim Cluess, played their home games at the Hynes Athletic Center and were members of the Metro Atlantic Athletic Conference (MAAC).
+  Fact 0.0: The Gaels were led by sixth year head coach Tim Cluess.
+  Fact 0.1: The Gaels played their home games at the Hynes Athletic Center.
+  Fact 0.2: The Gaels were members of the Metro Atlantic Athletic Conference (MAAC).
+Sentence 1:  The Cyclones were coached by Steve Prohm, who was in his 1st season.
+  Fact 1.0: The Cyclones were coached by Steve Prohm.
+  Fact 1.1: Steve Prohm was in his 1st season.
+
+Retrieved items:
+<item 1>
+Iona’s Tim Cluess-era Gaels (2010–17) repeatedly contended in the MAAC: they reached the 2011 CIT final; lost in the 2012 NCAA First Four after blowing a
+25-point lead; won the 2013 MAAC Tournament; and captured MAAC regular-season titles in 2014 and 2015, earning NIT bids. They won the MAAC Tournament again in
+2016 and 2017, but lost in the NCAA
+</item 1>
+
+<item 2>
+Nate Oats
+Nathanael "Nate" Oats (born October 13, 1974) is an American basketball coach.
+
+ He is currently the head basketball coach at the State University of New York at Buffalo, following two seasons as an assistant coach under Bobby Hurley.
+
+ Oats was named head coach on April 11, 2015 after Hurley was hired by Arizona State as head coach.
+
+ In only his first season as head coach, he took the Buffalo Bulls to their second straight NCAA Tournament bid after winning the Mid-American Conference
+Championship.
+</item 2>
+
+<item 3>
+Basketball coach David Hobbs served as Alabama head coach (1992–98) and now assists Iowa State. St. John’s Jack Kaiser led baseball to 11 postseason
+appearances, helped establish the Big East, and is honored by its tournament award and stadium. Drake’s Dolph Pulliam reached the 1969 Final Four; his No. 5 was
+retired. NBA All-Star John Wall was the 2010 top draft pick; high-school standout Zion Williamson drew attention for dunks.
+</item 3>
+
+<item 4>
+Tim Esmay
+Tim Esmay is an American baseball coach.
+
+ He is the former head coach of the Arizona State Sun Devils baseball team.
+
+ He was the head coach of the Arizona State Sun Devils baseball team from prior to the 2010 season until the end of the 2014 season, when he announced his
+resignation.
+
+ Esmay is an Arizona State alumnus, and he played baseball there from 1986–1987.
+
+ After graduating from Arizona State in 1987, Esmay served as an assistant at Arizona State, Grand Canyon, and Utah.
+
+ He was Utah's head coach from 1997–2004, before he was hired as an assistant at Arizona State prior to the 2005 season.
+</item 4>
+
+<item 5>
+Rudy Lavik
+Rudolph H. "Rudy" Lavik (April 30, 1892 – September 29, 1979) was an American football and basketball coach and college athletics administrator.
+
+ He served as the head football coach at Concordia College in Moorhead, Minnesota from 1920 to 1921, at Arizona State Teacher's College of Flagstaff—now
+Northern Arizona University—from 1928 to 1932, and at Arizona State Teachers College at Tempe—now Arizona State University—from 1933 to 1937, compiling a career
+college football record of 37–42–7.
+
+ Lavik was also the head basketball coach at Arizona State Flagstaff (1927–1931) and Arizona State Tempe (1933–1935, 1939–1948), tallying a career college
+basketball mark of 146–137.
+
+ In addition he served as the athletic director at Arizona State from 1933 to 1949.
+
+ He was a graduate of Springfield College in Springfield, Massachusetts.
+</item 5>
+
+<item 6>
+David Hobbs (basketball)
+David A. Hobbs (born April 25, 1949) is an American basketball coach.
+
+ Hobbs currently serves as a special assistant to Iowa State's head coach Steve Prohm.
+
+ He was the men's head coach at the University of Alabama from 1992 to 1998 and also was an assistant coach at Alabama, the University of Kentucky and Virginia
+Commonwealth University.
+</item 6>
+
+<item 7>
+Dan Hurley
+Daniel S. Hurley (born January 16, 1973) is currently the head basketball coach at the University of Rhode Island.
+
+ He was named head coach on March 20, 2012 after a two-year stint at Wagner College.
+
+ Prior to Wagner, Hurley had a standout career as head coach of Saint Benedict's Preparatory School, where he built the New Jersey school into one of the top
+high school basketball programs in America.
+
+ Dan Hurley is the son of Hall of Fame high school coach Bob Hurley and younger brother of former Duke and Sacramento Kings guard Bobby Hurley.
+</item 7>
+
+<item 8>
+2015–16 Iowa State Cyclones men's basketball team
+The 2015–16 Iowa State Cyclones men's basketball team represents Iowa State University during the 2015–16 NCAA Division I men's basketball season.
+
+ The Cyclones were coached by Steve Prohm, who was in his 1st season.
+
+ They played their home games at Hilton Coliseum in Ames, Iowa and competed in the Big 12 Conference.
+</item 8>
+
+<item 9>
+Bobby Hurley
+Robert Matthew Hurley (born June 28, 1971) is an American basketball coach, and former college and professional player.
+
+ Hurley is currently the head coach of the Arizona State men's team.
+
+ He was previously the head coach at Buffalo.
+
+ Before becoming a head coach he was an assistant coach for Wagner and an associate head coach for Rhode Island on the staffs of his younger brother Dan.
+</item 9>
+
+<item 10>
+Bob Hurley
+Robert Emmet Hurley, Sr. (born July 31, 1947) is a basketball coach at St. Anthony High School in Jersey City, New Jersey.
+
+ Hurley has amassed 28 state championships and more than 1000 wins in 39 years as a coach.
+
+ On February 2, 2011, Hurley became the tenth coach in high school history to win 1000 games.
+
+ He is featured in the documentary "The Street Stops Here".
+
+ Five of his teams have gone undefeated.
+
+ On April 5, 2010, he was announced as the only coach to be inducted into the Naismith Memorial Basketball Hall of Fame that year and only the third high school
+coach in history to be so honored; he was formally inducted on August 13 of that year.
+
+ Hurley is the father of Bobby Hurley, a former All-American point guard at Duke and the head basketball coach at Arizona State, and Dan Hurley, who was hired
+in February 2012 to coach the University of Rhode Island after two years of coaching at Wagner College and nine years coaching at Newark's Saint Benedict's
+Preparatory School, also one of the top high school programs in the nation.
+</item 10>
+=== END ITEM id=d9fe5a5c33a01e34 ===
+
+=== ITEM id=340e7ebcda487072 ===
+Gold sentences and facts:
+Sentence 0:  It has its offices in New Roc City in New Rochelle, New York.
+  Fact 0.0: An entity has its offices in New Roc City in New Rochelle, New York.
+Sentence 1: New Roc City, also known as New Rochelle Center, is an entertainment, retail and residential complex in the Downtown section of the city of New Rochelle in Westchester County, New York.
+  Fact 1.0: New Roc City is also known as New Rochelle Center.
+  Fact 1.1: New Roc City is an entertainment complex.
+  Fact 1.2: New Roc City is a retail complex.
+  Fact 1.3: New Roc City is a residential complex.
+  Fact 1.4: New Roc City is in the Downtown section of the city of New Rochelle.
+  Fact 1.5: New Rochelle is in Westchester County, New York.
+
+Retrieved items:
+<item 1>
+Standard Star Building
+The Standard Star Building is a historic commercial structure located in the Downtown section of New Rochelle, Westchester County, New York.
+
+ The building, designed by architect Lawrence J. Barnard, was completed in 1924 and is an architecturally significant example of the Italian Renaissance style
+in New Rochelle.
+
+ Although it has been altered, these changes occurred only on the Le Count Place façade and the interior of the building.
+
+ The original Standard Star building exterior remains largely unchanged.
+
+ It is further historically significant for its association with a long-published New Rochelle newspaper covering life in New Rochelle.
+</item 1>
+
+<item 2>
+Westchester Avenue (NYW&amp;B station)
+Westchester Avenue is a former railroad station located in the borough of the Bronx in New York City, partially suspended over Amtrak's busy Northeast Corridor
+line.
+
+ It was built in 1908 with rich terra cotta detailing to a design by Cass Gilbert, who would later employ similar terra cotta detailing in his 1910 design for
+the Woolworth Building.
+
+ Train service to the station ceased in 1937, and as of 2014 the station was a ruin in poor condition.
+</item 2>
+
+<item 3>
+New Jersey Japanese School
+The New Jersey Japanese School (ニュージャージー日本人学校 , "Nyūjājī Nihonjin Gakkō" , NJJS) is a Japanese school located in Oakland, New Jersey, United States in the New
+York City metropolitan area.
+
+ It is one of the two Japanese day schools operated by the Japanese Educational Institute of New York (JEI; ニューヨーク日本人教育審議会 "Nyūyōku Nihonjin Kyōiku Shingi
+Kai"), a nonprofit organization which also operates two Japanese weekend school systems in the New York City area.
+</item 3>
+
+<item 4>
+Montefiore New Rochelle Hospital
+Montefiore New Rochelle Hospital (formerly Sound Shore Medical Center) is a community-based, teaching hospital located at 16 Guion Place in the city of New
+Rochelle, in Westchester County, New York, and affiliated with the Albert Einstein College of Medicine.
+
+ The hospital opened in 1892 as New Rochelle Hospital.
+
+ On November 6, 2013, Sound Shore was acquired by the Bronx-based Montefiore Medical Center, the University Hospital for the Albert Einstein College of
+Medicine, was renamed Montefiore New Rochelle Hospital, and became part of the Montefiore Health System.
+</item 4>
+
+<item 5>
+New Rochelle Harbor (Long Island Sound)
+New Rochelle Harbor is the name of a harbor located along Long Island Sound in the city of New Rochelle in Westchester County, New York.
+
+ The Davenport Neck peninsula off the mainland divides New Rochelle's waterfront into two bays; the westerly referred to as New Rochelle Harbor and the easterly
+as Echo Bay.
+</item 5>
+
+<item 6>
+888 7th Avenue
+888 7th Avenue is a 628 ft (191m) tall modern-style office skyscraper in Midtown Manhattan which was completed in 1969 and has 46 floors.
+
+ Emery Roth & Sons designed the building, which is tied with Central Park Place for the 65th tallest building in New York City.
+
+ It currently carries the Vornado Realty Trust corporate headquarters.
+
+ Previously known as the Arlen Building, its namesake being the company responsible for its construction, Arlen Realty & Development Corporation.
+
+ The Red Eye Grill is located in the building at street level.
+</item 6>
+
+<item 7>
+Saddle Rock Elementary School
+Saddle Rock Elementary School or simply "Saddle Rock" is an elementary school, comprising grades Kindergarten through 5.
+
+ It is a public school located in Great Neck, New York, USA as part of the Great Neck School District.
+
+ The school has been recognized by the Blue Ribbon Schools Program.
+</item 7>
+
+<item 8>
+New Roc City
+New Roc City, also known as New Rochelle Center, is an entertainment, retail and residential complex in the Downtown section of the city of New Rochelle in
+Westchester County, New York.
+
+ It is located at 33 LeCount Place, between Main Street North and Main Street South.
+
+ The center was built on the site of the former New Rochelle Mall which closed in 1992.
+</item 8>
+
+<item 9>
+Japanese Weekend School of New York
+The Japanese Weekend School of New York (JWSNY; ニューヨーク "Nyūyōku Hoshū Jugyō Kō") is a Japanese supplementary school in the New York City metropolitan area.
+
+ It has its offices in New Roc City in New Rochelle, New York.
+
+ The Japanese Educational Institute of New York (JEI; ニューヨーク日本人教育審議会 "Nyūyōku Nihonjin Kyōiku Shingi Kai") manages the school system, and the JWSNY is one of
+its two weekend school systems.
+
+ The JEI also operates two Japanese day schools in the New York area.
+</item 9>
+
+<item 10>
+New Rochelle Walk of Fame
+The New Rochelle Walk of Fame was installed in 2011 in Ruby Dee Park at Library Green, located in the downtown section of the city of New Rochelle in
+Westchester County, New York.
+
+ The "walk" is a tribute to some of New Rochelle's most notable residents from throughout its 325-year history.
+
+ It was created and funded by former resident Roderick Kennedy, Jr., working in partnership with the City of New Rochelle and the New Rochelle Business
+Improvement District.
+</item 10>
+=== END ITEM id=340e7ebcda487072 ===
+
+=== ITEM id=c9f4ba755be38a3c ===
+Gold sentences and facts:
+Sentence 0:  During his early career, Cage starred in a variety of films such as "Valley Girl" (1983), "Racing with the Moon" (1984), "Birdy" (1984), "Peggy Sue Got Married" (1986), "Raising Arizona" (1987), "Moonstruck" (1987), "Vampire's Kiss" (1989), "Wild at Heart" (1990), "Fire Birds" (1990), "Honeymoon in Vegas" (1992), and "Red Rock West" (1993).
+  Fact 0.0: During his early career, Cage starred in a variety of films.
+  Fact 0.1: Cage starred in Valley Girl, released in 1983.
+  Fact 0.2: Cage starred in Racing with the Moon, released in 1984.
+  Fact 0.3: Cage starred in Birdy, released in 1984.
+  Fact 0.4: Cage starred in Peggy Sue Got Married, released in 1986.
+  Fact 0.5: Cage starred in Raising Arizona, released in 1987.
+  Fact 0.6: Cage starred in Moonstruck, released in 1987.
+  Fact 0.7: Cage starred in Vampire's Kiss, released in 1989.
+  Fact 0.8: Cage starred in Wild at Heart, released in 1990.
+  Fact 0.9: Cage starred in Fire Birds, released in 1990.
+  Fact 0.10: Cage starred in Honeymoon in Vegas, released in 1992.
+  Fact 0.11: Cage starred in Red Rock West, released in 1993.
+Sentence 1: Moonstruck is a 1987 American romantic comedy film directed by Norman Jewison and written by John Patrick Shanley.
+  Fact 1.0: Moonstruck is a 1987 American film.
+  Fact 1.1: Moonstruck is a romantic comedy film.
+  Fact 1.2: Moonstruck was directed by Norman Jewison.
+  Fact 1.3: Moonstruck was written by John Patrick Shanley.
+Sentence 2:  It is about a widowed 37-year-old Italian-American woman (Cher) who falls in love with her fiancé's (Danny Aiello) estranged, hot-tempered younger brother (Nicolas Cage).
+  Fact 2.0: Moonstruck is about a widowed 37-year-old Italian-American woman played by Cher.
+  Fact 2.1: The woman falls in love with her fiancé's estranged, hot-tempered younger brother.
+  Fact 2.2: The fiancé is played by Danny Aiello.
+  Fact 2.3: The younger brother is played by Nicolas Cage.
+
+Retrieved items:
+<item 1>
+Tom Cruise filmography
+Tom Cruise is an American actor and producer who made his film debut with a minor role in the 1981 romantic drama "Endless Love".
+
+ Two years later he made his breakthrough by starring in the romantic comedy "Risky Business" (1983), which garnered Cruise his first nomination for the Golden
+Globe Award for Best Actor – Motion Picture Musical or Comedy.
+
+ In 1986, Cruise played a fighter pilot in the Tony Scott-directed action drama "Top Gun" (the highest-grossing film that year), and also starred opposite Paul
+Newman in the Martin Scorsese-directed drama "The Color of Money".
+
+ Two years later he played opposite Dustin Hoffman in the Academy Award for Best Picture-winning drama "Rain Man" (1988), and also appeared in the Golden
+Raspberry Award for Worst Picture-winning romantic drama "Cocktail" (1988).
+
+ In doing so Cruise became the first and only person as of 2014 to star in a Best Picture Oscar winner and a Worst Picture Razzie winner in the same year.
+</item 1>
+
+<item 2>
+Moonstruck
+Moonstruck is a 1987 American romantic comedy film directed by Norman Jewison and written by John Patrick Shanley.
+
+ It is about a widowed 37-year-old Italian-American woman (Cher) who falls in love with her fiancé's (Danny Aiello) estranged, hot-tempered younger brother
+(Nicolas Cage).
+
+ Vincent Gardenia and Olympia Dukakis play supporting roles.
+</item 2>
+
+<item 3>
+That Darn Cat (1997 film)
+That Darn Cat is a 1997 American mystery comedy film starring Christina Ricci and Doug E. Doug.
+
+ It is a remake of the 1965 film "That Darn Cat!
+
+", which in turn was based on the book "Undercover Cat" by Gordon and Mildred Gordon.
+
+ It is directed by British TV veteran Bob Spiers (most famous for "Fawlty Towers", as well as "Spice World") and written by Scott Alexander and Larry
+Karaszewski, best known for "Ed Wood" and the first two "Problem Child" films.
+</item 3>
+
+<item 4>
+Where Do You Go (Cher song)
+"Where Do You Go" is a song written by Sonny Bono.
+
+ It was released as the first single by Cher in the later quarter of 1965 for her second album "The Sonny Side of Cher".
+
+ It fell short of the "Billboard" Hot 100's top 20, but still earned Cher a moderate success, by reaching the Top 40.
+
+ It was followed by the U.S. #2 smash hit "Bang Bang (My Baby Shot Me Down)" which saw a release early the following year.
+
+ It was a bigger hit in Canada, where it reached #5 on the singles chart.
+</item 4>
+
+<item 5>
+Deadfall (1993 film)
+Deadfall is a 1993 crime drama film directed by Christopher Coppola.
+
+ Coppola co-wrote the script with Nick Vallelonga.
+
+ The film stars Michael Biehn, Nicolas Cage, Charlie Sheen, James Coburn, and Peter Fonda.
+
+ It is also the prime influence on the song 'Deadfall', written by the American hardcore punk band Snot.
+
+ A prequel/sequel, "Arsenal", starring Nicolas Cage as his character Eddie King, was released in 2017.
+</item 5>
+
+<item 6>
+Dying of the Light (film)
+Dying of the Light is a 2014 American psychological thriller film written and directed by Paul Schrader and starring Nicolas Cage, Anton Yelchin and Irène Jacob
+about a government agent who must track down and kill a terrorist before he loses his full memory from a disease.
+
+ It was released theatrically and through VOD formats by Lionsgate on December 5, 2014.
+
+ The film received extremely negative reviews, with controversy surrounding the heavy tampering and reediting of the footage by the studio, who denied Schrader
+final-cut privilege and led him and principal members of the cast to disown the released version and campaign against it.
+</item 6>
+
+<item 7>
+In Country
+In Country is a 1989 American drama film produced and directed by Norman Jewison, starring Bruce Willis and Emily Lloyd.
+
+ The screenplay by Frank Pierson and Cynthia Cidre was based on the novel by Bobbie Ann Mason.
+
+ The original music score was composed by James Horner.
+
+ Willis earned a best supporting actor Golden Globe nomination for his role.
+</item 7>
+
+<item 8>
+Cher filmography
+Throughout her acting career, Cher has mainly in comedy, drama, and romance films.
+
+ She has appeared in thirteen films, including two as a cameo.
+
+ She has also appeared in one starring theater role, numerous television commercials and directed a piece of the motion picture "If These Walls Could Talk" in
+1996 and some of her music videos of the Geffen-era in late 1980s and in early 1990s.
+
+ Cher has starred in various international television commercials, as well as high-profile print advertising for Lori Davis (1992).
+
+ Before she started her film career, she had a couple of hits in the 1960s, as a solo artist, and with her ex-husband Sonny Bono as the couple Sonny & Cher.
+</item 8>
+
+<item 9>
+Cool and the Crazy
+Cool and the Crazy is a 1994 American drama film written and directed by Ralph Bakshi and starring Jared Leto and Alicia Silverstone.
+
+ The story revolves around an unhappily married couple in the late 1950s who both lead separate affairs.
+
+ The film was Bakshi's first feature-length live-action film, being primarily known as a director of animated films which heavily utilize live-action sequences,
+such as "Fritz the Cat", "Heavy Traffic", "Wizards", "American Pop" and "The Lord of the Rings".
+</item 9>
+
+<item 10>
+Nicolas Cage
+Nicolas Kim Coppola (born January 7, 1964), known professionally as Nicolas Cage, is an American actor, director and producer.
+
+ During his early career, Cage starred in a variety of films such as "Valley Girl" (1983), "Racing with the Moon" (1984), "Birdy" (1984), "Peggy Sue Got
+Married" (1986), "Raising Arizona" (1987), "Moonstruck" (1987), "Vampire's Kiss" (1989), "Wild at Heart" (1990), "Fire Birds" (1990), "Honeymoon in Vegas"
+(1992), and "Red Rock West" (1993).
+</item 10>
+=== END ITEM id=c9f4ba755be38a3c ===
+
+=== ITEM id=f8d4dc4e82723ca3 ===
+Gold sentences and facts:
+Sentence 0: Alan Crosland (August 10, 1894 – July 16, 1936) was an American stage actor and film director.
+  Fact 0.0: Alan Crosland was born on August 10, 1894.
+  Fact 0.1: Alan Crosland died on July 16, 1936.
+  Fact 0.2: Alan Crosland was an American stage actor.
+  Fact 0.3: Alan Crosland was an American film director.
+Sentence 1: Kurt Voss (born Kurt Christopher Peter Wössner) is an American film director, screenwriter and musician-songwriter.
+  Fact 1.0: Kurt Voss was born Kurt Christopher Peter Wössner.
+  Fact 1.1: Kurt Voss is an American film director.
+  Fact 1.2: Kurt Voss is an American screenwriter.
+  Fact 1.3: Kurt Voss is an American musician-songwriter.
+
+Retrieved items:
+<item 1>
+Kurt Voss
+Kurt Voss (born Kurt Christopher Peter Wössner) is an American film director, screenwriter and musician-songwriter.
+
+ Voss's credits include Will Smith's debut "Where The Day Takes You"; the Justin Theroux, Alyssa Milano and Ice T action film "Below Utopia"; actress Jaime
+Pressly's debut feature "", and rock and roll related films including "Down and Out with the Dolls" and "Ghost on The Highway: A Portrait of Jeffrey Lee Pierce
+and The Gun Club".
+</item 1>
+
+<item 2>
+Oswalt Kolle
+Oswalt Kolle (2 October 1928, Kiel – 24 September 2010, Amsterdam) was a German sex educator, who became famous during the late 1960s and early 1970s for his
+numerous pioneering books and films on human sexuality.
+
+ His work was translated into all major languages, while his films found an audience of 140 million worldwide.
+
+ In his 1997 book "Open to Both Sides" he came out as bisexual.
+
+ He was awarded the Magnus Hirschfeld Medal in 2000.
+</item 2>
+
+<item 3>
+Allen Klein
+Allen Klein (December 18, 1931 July 4, 2009) was an American businessman, music publisher, writers' representative, filmmaker and record label executive, most
+noted for his tough persona and aggressive, innovative negotiation tactics, many of which established higher industry standards for compensating recording
+artists.
+
+ He founded ABKCO Music & Records Incorporated.
+
+ Klein revolutionized the income potential of recording artists, who previously had been routinely victimized by onerous record company contracts.
+
+ He first scored massive monetary and contractual windfalls for Buddy Knox and Jimmy Bowen, one-hit rockabillies of the late 1950s, then parlayed his early
+successes into a position managing Sam Cooke, and eventually managed the Beatles and the Rolling Stones simultaneously, along with many other artists, becoming
+one of the most powerful individuals in the music industry during his era.
+</item 3>
+
+<item 4>
+Doug Clifford
+Douglas "Cosmo" Clifford (born April 24, 1945 in Palo Alto, California) is an American drummer, best known as a founding member of Creedence Clearwater Revival.
+
+ After the group dissolved in the early 1970s, Clifford released a solo album and later joined CCR bassist Stu Cook in the Don Harrison Band.
+
+ In 1995, Clifford and Cook formed the band Creedence Clearwater Revisited, performing live versions of Creedence Clearwater Revival songs.
+</item 4>
+
+<item 5>
+Steve Alvord
+Steven Lee Alvord (born October 2, 1964 in Bellingham, Washington) is a former professional American football defensive tackle and defensive end in the National
+Football League and World League of American Football.
+
+ In his four-year pro career he played for the St. Louis/Phoenix Cardinals of the NFL, and the Barcelona Dragons of the WLAF.
+
+ Alvord played college football at Washington.
+
+He has a cool daughter, happy birthday Katie.
+</item 5>
+
+<item 6>
+Doug Grean
+Doug Grean is an American record producer, audio engineer, guitarist, based in Los Angeles.
+
+ He has worked with artists Sheryl Crow, Ricki Lee Jones, Glen Campbell, Scott Weiland, Slash, Velvet Revolver, Stone Temple Pilots, The Crystal Method, Tim
+McGraw, Cyndi Lauper, Annabella Lwin (Bow Wow Wow), Corey Glover (Living Color), Camp Freddy, DJ Hurricane and John Taylor (Duran Duran).
+
+ Grean was formerly the lead guitarist and touring musical director for Scott Weiland and the Wildabouts.
+
+ Some of Grean's television appearances with Weiland include: VH1 Legends, Last Call with Carson Daly, The Tonight Show with Jay Leno, and the Grammy awards
+with Velvet Revolver as keyboardist, performing "All Across the Universe" with Stevie Wonder, Norah Jones, Bono, Steven Tyler, Brian Wilson, and Alison Krauss.
+</item 6>
+
+<item 7>
+John Christiansen
+John “Chris” Christiansen (May 1, 1923 － September 12, 1998) was the chief military test pilot for Lockheed California Company for over 30 years.
+
+ He might be most known for having performed Lockheed S-3 Viking's maiden flight on January 21, 1972.
+
+ His assignments also included the initial test flights of Lockheed P-3 Orion.
+
+ Christiansen was born in Oslo, Norway in 1923 and became an American citizen in 1939.
+
+ He later served in the U.S. Navy during World War II and the Korean Conflict.
+
+ He began experimental flying for Lockheed Martin in 1953, and worked there until his retirement in 1984.
+
+ He was a fellow at Society of Experimental Test Pilots.
+</item 7>
+
+<item 8>
+Alan Crosland
+Alan Crosland (August 10, 1894 – July 16, 1936) was an American stage actor and film director.
+</item 8>
+
+<item 9>
+Luther Campbell
+Luther Roderick Campbell (born December 22, 1960), also known as Luke Skyywalker and simply Luke, is an American record label owner, rap performer, promoter,
+and actor.
+
+ He is best known as a one-time member and leader of rap group 2 Live Crew, and star of his own short-lived show on VH1, "Luke's Parental Advisory".
+
+ As a result of one of the group's songs, which used a parody of Roy Orbison's "Oh, Pretty Woman", Campbell was party to "Campbell v. Acuff-Rose Music, Inc.",
+which was argued in front of the U.S. Supreme Court.
+</item 9>
+
+<item 10>
+Vito Russo
+Vito Russo (July 11, 1946 – November 7, 1990) was an American LGBT activist, film historian and author who is best remembered as the author of the book "The
+Celluloid Closet" (1981, revised edition 1987).
+</item 10>
+=== END ITEM id=f8d4dc4e82723ca3 ===
+
+=== ITEM id=95a018de2e1e4bba ===
+Gold sentences and facts:
+Sentence 0:  During his early career, Cage starred in a variety of films such as "Valley Girl" (1983), "Racing with the Moon" (1984), "Birdy" (1984), "Peggy Sue Got Married" (1986), "Raising Arizona" (1987), "Moonstruck" (1987), "Vampire's Kiss" (1989), "Wild at Heart" (1990), "Fire Birds" (1990), "Honeymoon in Vegas" (1992), and "Red Rock West" (1993).
+  Fact 0.0: During his early career, Nicolas Cage starred in a variety of films.
+  Fact 0.1: Nicolas Cage starred in Valley Girl (1983).
+  Fact 0.2: Nicolas Cage starred in Racing with the Moon (1984).
+  Fact 0.3: Nicolas Cage starred in Birdy (1984).
+  Fact 0.4: Nicolas Cage starred in Peggy Sue Got Married (1986).
+  Fact 0.5: Nicolas Cage starred in Raising Arizona (1987).
+  Fact 0.6: Nicolas Cage starred in Moonstruck (1987).
+  Fact 0.7: Nicolas Cage starred in Vampire's Kiss (1989).
+  Fact 0.8: Nicolas Cage starred in Wild at Heart (1990).
+  Fact 0.9: Nicolas Cage starred in Fire Birds (1990).
+  Fact 0.10: Nicolas Cage starred in Honeymoon in Vegas (1992).
+  Fact 0.11: Nicolas Cage starred in Red Rock West (1993).
+Sentence 1:  It is about a widowed 37-year-old Italian-American woman (Cher) who falls in love with her fiancé's (Danny Aiello) estranged, hot-tempered younger brother (Nicolas Cage).
+  Fact 1.0: The film is about a widowed 37-year-old Italian-American woman.
+  Fact 1.1: Cher plays the widowed 37-year-old Italian-American woman.
+  Fact 1.2: The widowed woman falls in love with her fiancé's estranged, hot-tempered younger brother.
+  Fact 1.3: The widowed woman's fiancé is played by Danny Aiello.
+  Fact 1.4: The fiancé's younger brother is estranged.
+  Fact 1.5: The fiancé's younger brother is hot-tempered.
+  Fact 1.6: The fiancé's younger brother is played by Nicolas Cage.
+
+Retrieved items:
+<item 1>
+Richard Farnsworth
+Richard W. Farnsworth (September 1, 1920 – October 6, 2000) was an American actor and stuntman.
+
+ He is best known for his performances in "The Grey Fox" (1982), for which he received a Golden Globe Award nomination, "Anne of Green Gables" (1985), "Misery"
+(1990), and "The Straight Story" (1999), for which he received a nomination for the Academy Award for Best Actor.
+
+ His sudden death followed a long struggle with prostate cancer.
+</item 1>
+
+<item 2>
+Deadfall (2012 film)
+Deadfall is a 2012 American crime drama film directed by Stefan Ruzowitzky, written by Zach Dean and starring Eric Bana, Olivia Wilde, and Charlie Hunnam.
+</item 2>
+
+<item 3>
+License to Wed
+License to Wed is a 2007 American romantic comedy film starring Robin Williams, Mandy Moore and John Krasinski, and directed by Ken Kwapis.
+
+ The film was released in theaters on July 3, 2007.
+</item 3>
+
+<item 4>
+Old Boyfriends
+Old Boyfriends is a 1979 American drama film directed by Joan Tewkesbury and written by Paul Schrader and Leonard Schrader.
+
+ The film stars Talia Shire, Richard Jordan, Keith Carradine, John Belushi, John Houseman and Buck Henry.
+
+ The film was released on April 13, 1979, by Embassy Pictures.
+</item 4>
+
+<item 5>
+Dying of the Light (film)
+Dying of the Light is a 2014 American psychological thriller film written and directed by Paul Schrader and starring Nicolas Cage, Anton Yelchin and Irène Jacob
+about a government agent who must track down and kill a terrorist before he loses his full memory from a disease.
+
+ It was released theatrically and through VOD formats by Lionsgate on December 5, 2014.
+
+ The film received extremely negative reviews, with controversy surrounding the heavy tampering and reediting of the footage by the studio, who denied Schrader
+final-cut privilege and led him and principal members of the cast to disown the released version and campaign against it.
+</item 5>
+
+<item 6>
+Sleepless in Seattle
+Sleepless in Seattle is a 1993 American romantic comedy-drama film directed and co-written by Nora Ephron, based on a story by Jeff Arch.
+
+ It stars Tom Hanks and Meg Ryan, alongside a supporting cast featuring Bill Pullman, Ross Malinger, Rob Reiner, Rosie O'Donnell, Gaby Hoffmann, Victor Garber,
+and Rita Wilson.
+
+ The film was a critical and commercial success, grossing over $220 million worldwide.
+</item 6>
+
+<item 7>
+Nicolas Cage
+Nicolas Kim Coppola (born January 7, 1964), known professionally as Nicolas Cage, is an American actor, director and producer.
+
+ During his early career, Cage starred in a variety of films such as "Valley Girl" (1983), "Racing with the Moon" (1984), "Birdy" (1984), "Peggy Sue Got
+Married" (1986), "Raising Arizona" (1987), "Moonstruck" (1987), "Vampire's Kiss" (1989), "Wild at Heart" (1990), "Fire Birds" (1990), "Honeymoon in Vegas"
+(1992), and "Red Rock West" (1993).
+</item 7>
+
+<item 8>
+Deadfall (1993 film)
+Deadfall is a 1993 crime drama film directed by Christopher Coppola.
+
+ Coppola co-wrote the script with Nick Vallelonga.
+
+ The film stars Michael Biehn, Nicolas Cage, Charlie Sheen, James Coburn, and Peter Fonda.
+
+ It is also the prime influence on the song 'Deadfall', written by the American hardcore punk band Snot.
+
+ A prequel/sequel, "Arsenal", starring Nicolas Cage as his character Eddie King, was released in 2017.
+</item 8>
+
+<item 9>
+Neon City
+Neon City (also known as Anno 2053 in Italy, Neonski Grad in Serbia) is a 1991 Canadian post-apocalyptic science fiction film directed by Monte Markham and
+written by Jeff Begun and Ann Lewis Hamilton, under the pseudonym Buck Finch.
+
+ The cast includes Michael Ironside, Vanity, Lyle Alzado, Valerie Wildman, Nick Klar, Juliet Landau, Richard Sanders and Markham.
+</item 9>
+
+<item 10>
+Moonstruck
+Moonstruck is a 1987 American romantic comedy film directed by Norman Jewison and written by John Patrick Shanley.
+
+ It is about a widowed 37-year-old Italian-American woman (Cher) who falls in love with her fiancé's (Danny Aiello) estranged, hot-tempered younger brother
+(Nicolas Cage).
+
+ Vincent Gardenia and Olympia Dukakis play supporting roles.
+</item 10>
+=== END ITEM id=95a018de2e1e4bba ===
+
+=== ITEM id=f07613b934a09edf ===
+Gold sentences and facts:
+Sentence 0: Erving Goffman (11 June 1922 – 19 November 1982) was a Canadian-American sociologist and writer, considered by some "the most influential American sociologist of the twentieth century".
+  Fact 0.0: Erving Goffman was born on 11 June 1922.
+  Fact 0.1: Erving Goffman died on 19 November 1982.
+  Fact 0.2: Erving Goffman was a Canadian-American sociologist.
+  Fact 0.3: Erving Goffman was a writer.
+  Fact 0.4: Some consider Erving Goffman the most influential American sociologist of the twentieth century.
+Sentence 1:  In 2007 he was listed by "The Times Higher Education Guide" as the sixth most-cited author in the humanities and social sciences, behind Anthony Giddens, Pierre Bourdieu and Michel Foucault, and ahead of Jürgen Habermas.
+  Fact 1.0: In 2007 Erving Goffman was listed by The Times Higher Education Guide.
+  Fact 1.1: The Times Higher Education Guide listed Goffman as the sixth most-cited author in the humanities and social sciences in 2007.
+  Fact 1.2: In that 2007 listing, Anthony Giddens, Pierre Bourdieu and Michel Foucault were ranked ahead of Goffman.
+  Fact 1.3: In that 2007 listing, Goffman was ranked ahead of Jürgen Habermas.
+Sentence 2: Paul-Michel Foucault (15 October 1926 – 25 June 1984), generally known as Michel Foucault (] ), was a French philosopher, historian of ideas, social theorist, and literary critic.
+  Fact 2.0: Paul-Michel Foucault was born on 15 October 1926.
+  Fact 2.1: Paul-Michel Foucault died on 25 June 1984.
+  Fact 2.2: Paul-Michel Foucault is generally known as Michel Foucault.
+  Fact 2.3: Michel Foucault was a French philosopher.
+  Fact 2.4: Michel Foucault was a historian of ideas.
+  Fact 2.5: Michel Foucault was a social theorist.
+  Fact 2.6: Michel Foucault was a literary critic.
+
+Retrieved items:
+<item 1>
+Robert Calder (writer)
+Robert Lorin Calder, a Canadian writer and professor, won the Governor General's Award for English-language non-fiction in 1989 for his "Willie: The Life of W.
+Somerset Maugham", a biography based on extensive archival work and interviews with surviving associates of Maugham, in particular Alan Searle.
+
+ Unlike Ted Morgan, who had obtained permission from Maugham's executors to publish from Maugham's letters in his biography (1980), Calder was refused
+permission to do so by the Royal Literary Fund and had to rely on paraphrase in referencing Maugham's unpublished correspondence.
+</item 1>
+
+<item 2>
+Ray Birdwhistell
+Collaborations with others, including initially Margaret Mead and Gregory Bateson, and later, Erving Goffman and Dell Hymes had huge influence on his work.
+
+ For example, the book he is best known for, "Kinesics and Context", "would not have appeared if it had not been envisaged by Erving Goffman" and he explicitly
+stated "the paramount and sustaining influence upon my work has been that of anthropological linguistics", a tradition most directly represented at the
+University of Pennsylvania by Hymes.
+</item 2>
+
+<item 3>
+Erving Goffman
+Erving Goffman (11 June 1922 – 19 November 1982) was a Canadian-American sociologist and writer, considered by some "the most influential American sociologist
+of the twentieth century".
+
+ In 2007 he was listed by "The Times Higher Education Guide" as the sixth most-cited author in the humanities and social sciences, behind Anthony Giddens,
+Pierre Bourdieu and Michel Foucault, and ahead of Jürgen Habermas.
+</item 3>
+
+<item 4>
+William H. Gass
+William Howard Gass (born July 30, 1924) is an American novelist, short-story writer, essayist, critic, and former philosophy professor.
+
+ He has written three novels, three collections of short stories, a collection of novellas, and seven volumes of essays, three of which have won National Book
+Critics Circle Award prizes and one of which, "A Temple of Texts" (2006), won the Truman Capote Award for Literary Criticism.
+
+ His 1995 novel "The Tunnel" received the American Book Award.
+
+ His 2013 novel "Middle C" won the 2015 William Dean Howells Medal.
+</item 4>
+
+<item 5>
+Dramaturgy (sociology)
+Dramaturgy is a sociological perspective commonly used in microsociological accounts of social interaction in everyday life.
+
+ The term was first adapted into sociology from the theatre by Erving Goffman, who developed most of the related terminology and ideas in his 1959 book, "The
+Presentation of Self in Everyday Life".
+
+ Kenneth Burke, whom Goffman would later acknowledge as an influence, had earlier presented his notions of dramatism in 1945, which in turn derives from
+Shakespeare.
+
+ However, the fundamental difference between Burke's and Goffman's view is that Burke believed that life was in fact theatre, whereas Goffman viewed theatre as
+a metaphor.
+
+ If we imagine ourselves as directors observing what goes on in the theatre of everyday life, we are doing what Goffman called dramaturgical analysis, the study
+of social interaction in terms of theatrical performance.
+</item 5>
+
+<item 6>
+George Orwell bibliography
+The bibliography of George Orwell includes journalism, essays, novels and non-fiction books written by the British writer Eric Blair (1903–50), either under his
+own name or, more usually, under his pen name George Orwell.
+
+ Orwell was a prolific writer on topics related to contemporary English society and literary criticism, whom the British newsweekly "The Economist" in 2008
+declared "perhaps the 20th century's best chronicler of English culture."
+
+ His non-fiction cultural and political criticism constitutes the majority of his work, but Orwell also wrote in several genres of fictional literature.
+</item 6>
+
+<item 7>
+The Presentation of Self in Everyday Life
+The Presentation of Self in Everyday Life is a 1956 sociology book by Erving Goffman, in which Goffman uses the imagery of the theatre in order to portray the
+importance of human social interaction.
+
+ Originally published in Scotland in 1956 and in the United States in 1959, it is Goffman’s first and most famous book, for which he received the American
+Sociological Association’s MacIver award in 1961.
+</item 7>
+
+<item 8>
+H. L. Mencken
+Henry Louis Mencken (September 12, 1880 – January 29, 1956) was an American journalist, satirist, cultural critic and scholar of American English.
+
+ Known as the "Sage of Baltimore", he is regarded as one of the most influential American writers and prose stylists of the first half of the twentieth century.
+
+ He commented widely on the social scene, literature, music, prominent politicians and contemporary movements.
+
+ His satirical reporting on the Scopes trial, which he dubbed the "Monkey Trial", also gained him attention.
+</item 8>
+
+<item 9>
+Goffman (disambiguation)
+Erving Goffman (1922–1982) was a Canadian sociologist
+</item 9>
+
+<item 10>
+Donald Allen
+Donald Merriam Allen (Iowa, 1912 – San Francisco, August 29, 2004) was an influential editor, publisher, and translator of contemporary American literature.
+
+ He is perhaps best known for his project "The New American Poetry 1945-1960" (1960), among the several important anthologies of contemporary American
+innovative writing he made available to the public.
+
+ Allen began his working life as a Japanese translator within the US military, serving in WWII.
+
+ After his military service, Allen became an editor at Grove Press, where he worked for sixteen years.
+
+ He was one of the first translators of the Romanian-French Absurdist playwright Eugène Ionesco, and Allen's 1958 volume "Four Plays of Eugène Ionesco" helped
+to introduce the playwright to American audiences in the 1960s.
+</item 10>
+=== END ITEM id=f07613b934a09edf ===
+
+=== ITEM id=1bdd3436857a738d ===
+Gold sentences and facts:
+Sentence 0: Colonel Charles Hastings Judd (September 8, 1835 – April 18, 1890) was an American businessman, rancher, courtier and politician of the Kingdom of Hawaii.
+  Fact 0.0: Charles Hastings Judd was a Colonel.
+  Fact 0.1: Charles Hastings Judd was born on September 8, 1835.
+  Fact 0.2: Charles Hastings Judd died on April 18, 1890.
+  Fact 0.3: Charles Hastings Judd was an American businessman.
+  Fact 0.4: Charles Hastings Judd was an American rancher.
+  Fact 0.5: Charles Hastings Judd was an American courtier.
+  Fact 0.6: Charles Hastings Judd was an American politician of the Kingdom of Hawaii.
+  Fact 0.7: Charles Hastings Judd was a businessman, rancher, courtier and politician of the Kingdom of Hawaii.
+Sentence 1:  He served as Chamberlain and Colonel of the military staff of King Kalākaua and traveled with the monarch on his 1881 world tour.
+  Fact 1.0: Charles Hastings Judd served as Chamberlain to King Kalakaua.
+  Fact 1.1: Charles Hastings Judd served as Colonel of the military staff of King Kalakaua.
+  Fact 1.2: Charles Hastings Judd traveled with King Kalakaua on his 1881 world tour.
+Sentence 2: Kalākaua (November 16, 1836 – January 20, 1891), born David Laʻ amea Kamananakapu Mahinulani Naloiaehuokalani Lumialani Kalākaua and sometimes called The Merrie Monarch, was the last king (and second to last monarch) of the Kingdom of Hawaiʻ i.
+  Fact 2.0: Kalakaua was born on November 16, 1836.
+  Fact 2.1: Kalakaua died on January 20, 1891.
+  Fact 2.2: Kalakaua was born David La'amea Kamananakapu Mahinulani Naloiaehuokalani Lumialani Kalakaua.
+  Fact 2.3: Kalakaua is sometimes called The Merrie Monarch.
+  Fact 2.4: Kalakaua was the last king of the Kingdom of Hawaii.
+  Fact 2.5: Kalakaua was the second-to-last monarch of the Kingdom of Hawaii.
+
+Retrieved items:
+<item 1>
+Arthur Tedder, 1st Baron Tedder
+Marshal of the Royal Air Force Arthur William Tedder, 1st Baron Tedder, {'1': ", '2': ", '3': ", '4': "} (11 July 1890 – 3 June 1967) was a senior Royal Air
+Force commander.
+
+ He was a pilot and squadron commander in the Royal Flying Corps in the First World War and he went on to serve as a senior officer in the Royal Air Force
+during the inter-war years when he served in Turkey, Great Britain and the Far East.
+
+ During the Second World War, as Air Officer Commanding RAF Middle East Command, Tedder directed air operations in the Mediterranean and North Africa, including
+the evacuation of Crete and "Operation Crusader" in North Africa.
+
+ His bombing tactics became known as the "Tedder Carpet".
+
+ Later in the war Tedder took command of Mediterranean Air Command and in that role was closely involved in the planning of the Allied invasion of Sicily and
+then the Allied invasion of Italy.
+
+ When Operation Overlord—the invasion of France—came to be planned, Tedder was appointed Deputy Supreme Commander at Supreme Headquarters Allied Expeditionary
+Force under General Eisenhower.
+</item 1>
+
+<item 2>
+Franz Halder
+Franz Halder (30 June 1884 – 2 April 1972) was a German general and the chief of the "Oberkommando des Heeres" staff (OKH, Army High Command) from 1938 until
+September 1942, when he was dismissed after frequent disagreements with Adolf Hitler.
+
+ Until December 1941 Halder's military position corresponded to the old Chief of the General Staff position, which during World War I had been the highest
+military office in the German Imperial Army.
+
+ Halder's diary during his time as chief of OKH General Staff has been a source for authors that have written about such subjects as Hitler, World War II and
+the Nazi Party.
+
+ In William Shirer's "The Rise and Fall of the Third Reich", Halder's diary is cited hundreds of times.
+</item 2>
+
+<item 3>
+Charles Hastings Judd
+Colonel Charles Hastings Judd (September 8, 1835 – April 18, 1890) was an American businessman, rancher, courtier and politician of the Kingdom of Hawaii.
+
+ He served as Chamberlain and Colonel of the military staff of King Kalākaua and traveled with the monarch on his 1881 world tour.
+</item 3>
+
+<item 4>
+Edmund Mortimer, 5th Earl of March
+Edmund de Mortimer, 5th Earl of March and 7th Earl of Ulster (6 November 1391 – 18 January 1425) was an English nobleman.
+
+ A great-great-grandson of King Edward III of England, he was heir presumptive to King Richard II of England, his first cousin twice removed, when Richard II
+was deposed in favour of Henry IV.
+
+ Edmund Mortimer's claim to the throne was the basis of rebellions and plots against Henry IV and his son Henry V, and was later taken up by the House of York
+in the Wars of the Roses, though Mortimer himself was an important and loyal vassal of Henry V and Henry VI.
+
+ Edmund Mortimer was the last Earl of March of the Mortimer family.
+</item 4>
+
+<item 5>
+Baron Plunket
+Baron Plunket, of Newtown in the County of Cork, is a title in the Peerage of the United Kingdom.
+
+ It was created in 1827 for the prominent Irish lawyer and Whig politician William Plunket.
+
+ He served as Lord Chancellor of Ireland from 1830 and 1834 and again from 1835 to 1841.
+
+ His eldest son, the second Baron, was Bishop of Tuam, Killala and Achonry between 1839 and 1866.
+
+ He was succeeded by his younger brother, the third Baron.
+
+ He was a barrister.
+
+ His eldest son, the fourth Baron, served as Archbishop of Dublin between 1884 and 1897.
+
+ He was succeeded by his eldest son, the fifth Baron.
+
+ He was a diplomat and held office as Governor of New Zealand between 1904 and 1910.
+
+ His grandson, Patrick, the seventh Baron, was Equerry to both King George VI and Queen Elizabeth II.
+
+ He was succeeded by his younger brother, Robin who died in 2013 and was in turn succeeded by his nephew, Tyrone who was a Page of Honour to Queen Elizabeth II.
+</item 5>
+
+<item 6>
+HMS Monmouth
+Seven ships of the Royal Navy have been named HMS "Monmouth".
+
+ Monmouth was the name of a castle and is now the name of a town in Wales; the name also recognises James Scott, 1st Duke of Monmouth, the "Black Duke".
+
+ The first HMS "Monmouth" was named after the town but whilst the second one was being used the Monmouth Rebellion took place and this caused some concern to
+the crew.
+
+ Since that time, all of "Monmouth"s have had their names painted in black and the name and the crest are covered because of the shame of the Duke of Monmouth's
+execution.
+
+ Today the officers of the latest HMS "Monmouth" carry black handkerchiefs and the ship is known as the Black Duke.
+
+ However the town of Monmouth still gives the freedom of the town to the ship's crew and talks of the "enduring link" between the town and the ship.
+</item 6>
+
+<item 7>
+German General Staff
+The German General Staff, originally the Prussian General Staff and officially Great General Staff ("Großer Generalstab"), was a full-time body at the head of
+the Prussian Army and later, the German Army, responsible for the continuous study of all aspects of war, and for drawing up and reviewing plans for
+mobilization or campaign.
+
+ It existed unofficially from 1806, and was formally established by law in 1814, the first general staff in existence.
+
+ It was distinguished by the formal selection of its officers by intelligence and proven merit rather than patronage or wealth, and by the exhaustive and
+rigorously structured training which its staff officers undertook.
+
+ Its rise and development gave the German armed forces a decisive strategic advantage over their adversaries for nearly a century and a half.
+</item 7>
+
+<item 8>
+Kenneth Anderson (British Army officer)
+General Sir Kenneth Arthur Noel Anderson, (25 December 1891 – 29 April 1959) was a senior British Army officer who saw service in both World wars.
+
+ He is mainly remembered as the commander of the British First Army during Operation Torch, the Allied invasion of North Africa.
+
+ He had an outwardly reserved character and did not court popularity either with his superiors or with the public.
+
+ His American superior, General Dwight D. Eisenhower, wrote that he was "blunt, at times to the point of rudeness".
+
+ In consequence he is less well known than many of his contemporaries.
+
+ Richard Mead wrote that "He handled a difficult campaign more competently than his critics suggest, but competence without flair was not good enough for a top
+commander in 1944".
+</item 8>
+
+<item 9>
+Marisha Chamberlin
+Marisha Anne Chamberlain (born January 6, 1952) is an American writer.
+
+ Her most recent work, the libretto for "Mortals & Angels", a collaboration with American composer Carol Barnett, premiered at Carnegie Hall in 2016, a
+companion piece to their widely produced collaborative piece, "The World Beloved: A Bluegrass Mass".
+
+ Her stage plays, both original works and adaptations are widely produced.
+
+ Her debut novel, "The Rose Variations", was published by Soho Press in 2009.
+
+ Her play, "Scheherazade", won the Dramatists Guild/CBS National Award, and in her screenplay version, played on public television across the country, and was
+screened at the British Film Institute Festival in the category of Best of American Public Television.
+</item 9>
+
+<item 10>
+Corps of Military Staff Clerks
+The Corps of Military Staff Clerks was an administrative corps of the Canadian Army.
+
+ The Headquarters Corps of Military Staff Clerks was established in 1905.
+</item 10>
+=== END ITEM id=1bdd3436857a738d ===
+
+=== ITEM id=16ca66a830ecac0c ===
+Gold sentences and facts:
+Sentence 0: Pramod Bhasin stepped down as President and CEO of Genpact, India's largest business process outsourcing (BPO) company, becoming non-executive Vice Chairman in 2011.
+  Fact 0.0: Pramod Bhasin stepped down as President of Genpact.
+  Fact 0.1: Pramod Bhasin stepped down as CEO of Genpact.
+  Fact 0.2: Genpact is India's largest business process outsourcing (BPO) company.
+  Fact 0.3: Pramod Bhasin became non-executive Vice Chairman in 2011.
+Sentence 1: Genpact is a global business process management and services and IT corporation with key offices in New York City, United States.
+  Fact 1.0: Genpact is a global business process management and services corporation.
+  Fact 1.1: Genpact is an IT corporation.
+  Fact 1.2: Genpact has key offices in New York City, United States.
+
+Retrieved items:
+<item 1>
+Optimus S.A.
+Optimus S.A. was a Polish company specializing in assembly of PCs, fiscal systems, and providing complex IT solutions for companies.In the 1990s Optimus was one
+of the leaders of the Polish computer market.
+</item 1>
+
+<item 2>
+Prem Ganapathy
+Prem Ganapathy is an Indian entrepreneur and businessman.
+
+ He is the founder of the restaurant chain Dosa plaza.
+
+ Starting with meager investment, he expanded Dosa plaza into a restaurant chain with 45 outlets in India, New Zealand, Oman, and UAE.
+</item 2>
+
+<item 3>
+Bombardier Inc.
+Bombardier Inc. (] ) is a multinational aerospace and transportation company based in Montreal, Quebec, Canada.
+
+ Starting as a maker of snow machines or snowmobiles, over the years it has grown into a large manufacturer of regional airliners, business jets, mass
+transportation equipment, and recreational equipment, and a provider of financial services.
+</item 3>
+
+<item 4>
+Genpact
+Genpact is a global business process management and services and IT corporation with key offices in New York City, United States.
+
+ It’s listed on the New York Stock Exchange under the symbol G.In 2016, the company reported net revenues of US$2.57 billion with more than 77,000 employees in
+20 countries.
+
+ Genpact provides consulting services to hundreds of clients, including approximately one-fifth of the Fortune Global 500.
+</item 4>
+
+<item 5>
+Mike Long (American businessman)
+Mike Long is an American business man, former CEO of several public companies, and currently a founding partner of Sulgrave Partners LLC.
+
+ He served as the President and Chief Executive Officer of Continuum, an Austin, Texas IT consulting company, from 1991 to 1997, having started with Continuum
+as a Director in 1983.
+
+ In 1997, Long was named CEO of Healtheon Corporation (now WebMD), succeeding former CEO David Schnell.
+
+ Long oversaw Healtheon's initial public offering, traveling between Europe and the United States to woo investors.
+
+ Long was able to secure the required investment funds, and saw Healtheon's stock price rise from $8 to a high of $120.
+
+ In 2002, Long was recruited to fix the financial struggles of Move, Inc., a company plagued by more than $4 billion in lawsuits and hemorrhaging tens of
+millions of dollars a quarter.
+
+ As Chief Executive Officer, Long was able to revive Homestore, Inc., by changing the business model, rebranding the company as Move, Inc. and returning it to
+profitability.
+</item 5>
+
+<item 6>
+Summit Behavioral Healthcare
+Summit Behavioral Healthcare (Summit BHC) is a Brentwood, Tennessee-based behavioral health services company that owns and operates a large network of addiction
+treatment centers throughout the United States.
+
+ Originating in 2012, the company was founded by Trey Carter, former CEO of Acadia Healthcare.
+
+ In March 2015, Chicago, IL based investment firm Flexpoint Ford provided Round 1 funding to launch Summit BHC's growth plan.
+</item 6>
+
+<item 7>
+Dun &amp; Bradstreet
+Dun & Bradstreet, Inc. () is a company that provides commercial data, analytics and insights for business, headquartered in Short Hills, a community in
+Millburn, New Jersey, US.
+
+ It offers a wide range of products, and services for risk and finance, operations and supply, and sales and marketing professionals, as well as research and
+insights on global business issues, serving customers in government and industries such as communications, technology, strategic financial services, and
+retail/telecommunications/manufacturing markets.
+
+ Often referred to as D&B, the company’s database contains more than 265 million business records worldwide.
+</item 7>
+
+<item 8>
+Pramod Bhasin
+Pramod Bhasin stepped down as President and CEO of Genpact, India's largest business process outsourcing (BPO) company, becoming non-executive Vice Chairman in
+2011.
+</item 8>
+
+<item 9>
+Mike Long (American businessman)
+and returning it to profitability.
+
+ Touching on his experience of bringing about the initial public offerings of web-based businesses, Long would say that investors needed to be presented "with
+an entirely new face every few months," and that "the only way to run one of these Silicon Valley companies was to forget everything you'd learned outside of
+Silicon Valley."
+</item 9>
+
+<item 10>
+Richard Yoo
+Richard Yoo is an American entrepreneur, the co-founder and former CEO of the web hosting company Rackspace, and the founder and former CEO of web hosting
+company ServerBeach.
+</item 10>
+=== END ITEM id=16ca66a830ecac0c ===
+
+=== ITEM id=a68068087b69a98c ===
+Gold sentences and facts:
+Sentence 0: Mastodon is an American heavy metal band from Atlanta, Georgia.
+  Fact 0.0: Mastodon is an American heavy metal band.
+  Fact 0.1: Mastodon is from Atlanta, Georgia.
+Sentence 1:  Formed in 2000, the group is composed of bassist Troy Sanders, guitarists Brent Hinds and Bill Kelliher, and drummer Brann Dailor, all of whom perform vocals in studio (except Bill Kelliher).
+  Fact 1.0: Mastodon was formed in 2000.
+  Fact 1.1: Mastodon is composed of bassist Troy Sanders.
+  Fact 1.2: Mastodon is composed of guitarist Brent Hinds.
+  Fact 1.3: Mastodon is composed of guitarist Bill Kelliher.
+  Fact 1.4: Mastodon is composed of drummer Brann Dailor.
+  Fact 1.5: Troy Sanders, Brent Hinds, and Brann Dailor perform vocals in the studio.
+  Fact 1.6: Bill Kelliher does not perform vocals in the studio.
+Sentence 2:  Mastodon has released seven studio albums, as well as a number of other records.
+  Fact 2.0: Mastodon has released seven studio albums.
+  Fact 2.1: Mastodon has released a number of other records.
+Sentence 3:  Mastodon's second full-length release, "Leviathan", is a concept album based on the novel "Moby-Dick" by Herman Melville.
+  Fact 3.0: Mastodon's second full-length release is "Leviathan".
+  Fact 3.1: "Leviathan" is a concept album.
+  Fact 3.2: "Leviathan" is based on the novel "Moby-Dick".
+  Fact 3.3: "Moby-Dick" was written by Herman Melville.
+Sentence 4: Hole was an American alternative rock band that formed in Los Angeles, California in 1989 by singer and guitarist Courtney Love and lead guitarist Eric Erlandson.
+  Fact 4.0: Hole was an American alternative rock band.
+  Fact 4.1: Hole formed in Los Angeles, California in 1989.
+  Fact 4.2: Hole was formed by singer and guitarist Courtney Love.
+  Fact 4.3: Hole was formed by lead guitarist Eric Erlandson.
+
+Retrieved items:
+<item 1>
+Meg White
+Megan Martha "Meg" White (born December 10, 1974) is an American drummer and occasional singer known for her work with Jack White in the Detroit rock duo The
+White Stripes.
+
+ On an impulse, she played on Jack's drums in 1997.
+
+ The two decided to form a band and began performing two months later, calling themselves The White Stripes because of their last name and Meg's affinity for
+peppermint candy.
+
+ The band quickly became a Detroit underground favorite, before reaching national, then international fame.
+
+ White has been nominated for various awards as a part of the White Stripes, and has received four Grammy Awards.
+</item 1>
+
+<item 2>
+The entries cover diverse rock and metal releases, bands, and songs. Highlights include Bad Brains’ acclaimed, genre-blending *I Against I* (1986); Patty
+Griffin’s *Impossible Dream* (2004); and Elysia Crampton’s collaborative *Demon City* (2016). Mastodon’s *Leviathan* draws on *Moby-Dick*. Several entries focus
+on Nevermore, Sanctuary, and Warrel Dane, including *Dreaming Neon Black*, *
+</item 2>
+
+<item 3>
+Bullmoose
+Bullmoose (aka Zach Dobbins) is a Canadian rock band formed in Elgin, Ontario in 1996.
+
+ Three of the original members continue in the band, which today is based in Montreal.
+
+ They include twin brothers Jeff Cowan (drums/vocals) and Seamus Cowan (bass/vocals) from Westport, Ontario and Eric Lawrance (guitar/vocals) from Delta,
+Ontario, who launched the band when they attended school at Montreal.
+
+ The band performs in the rock music genre, citing experimental influences of the late 1960s and early 1970s.
+</item 3>
+
+<item 4>
+Mastodon (band)
+Mastodon is an American heavy metal band from Atlanta, Georgia.
+
+ Formed in 2000, the group is composed of bassist Troy Sanders, guitarists Brent Hinds and Bill Kelliher, and drummer Brann Dailor, all of whom perform vocals
+in studio (except Bill Kelliher).
+
+ They all perform vocals at live shows.
+
+ Their musical style features progressive concepts and unique instrumentation.
+
+ Mastodon has released seven studio albums, as well as a number of other records.
+
+ The band's debut album, "Remission", released in 2002, garnered significant critical acclaim for its unique sound.
+
+ Mastodon's second full-length release, "Leviathan", is a concept album based on the novel "Moby-Dick" by Herman Melville.
+
+ Three magazines awarded the record "Album of the Year" in 2004: "Revolver", "Kerrang!
+
+" and "Terrorizer".
+</item 4>
+
+<item 5>
+Pantera
+Pantera was an American heavy metal band from Arlington, Texas.
+
+ The group was formed in 1981 by the Abbott brothers – drummer Vinnie Paul and guitarist Dimebag Darrell – along with lead vocalist Terry Glaze.
+
+ Bassist Rex Brown joined the band the following year, replacing Tommy D. Bradford, who was the unofficial original.
+
+ Having started as a glam metal band, Pantera released four albums during the 1980s.
+
+ Looking for a new and heavier sound, Pantera replaced Glaze with Phil Anselmo in late 1986 and released "Power Metal" in 1988.
+
+ With its fifth album, 1990's "Cowboys from Hell", Pantera introduced a groove metal sound.
+
+ Pantera's sixth album, 1992's "Vulgar Display of Power", exhibited an even heavier sound. "
+
+Far Beyond Driven" (1994) debuted at number one on the "Billboard" 200.
+</item 5>
+
+<item 6>
+Profiles cover rock and metal acts, musicians, albums, and songs. Candlelight Red’s “Demons” and *Reclamation* were produced by Sevendust’s Morgan Rose; Louis
+XIV reunited after a 2009 breakup. Mazzy Star’s sparse “Into Dust” features acoustic guitar and violin. Other highlights include Assembly of Dust’s Reid
+Genauer, American Hi-Fi’s pop-punk mix, Mastodon’s *Leviathan*, Pantera’s shift to groove metal, and
+</item 6>
+
+<item 7>
+The White Stripes
+The White Stripes were an American rock duo formed in 1997 in Detroit, Michigan.
+
+ The group consisted of Jack White (songwriter, vocals, guitar, piano, and mandolin) and Meg White (drums and vocals).
+
+ After releasing several singles and three albums within the Detroit music scene, The White Stripes rose to prominence in 2002, as part of the garage rock
+revival scene.
+
+ Their successful and critically acclaimed albums "White Blood Cells" and "Elephant" drew attention from a large variety of media outlets in the United States
+and the United Kingdom, with the single "Seven Nation Army" and its guitar line becoming their signature song.
+
+ The band recorded two more albums, "Get Behind Me Satan" in 2005 and "Icky Thump" in 2007, and dissolved in 2011 after a lengthy hiatus from performing and
+recording.
+</item 7>
+
+<item 8>
+The Halo Method
+The Halo Method Is an American rock supergroup, formed in 2012 in Hollywood, California.
+
+ It consisted of guitarist Ben Moody (We Are the Fallen, ex-Evanescence), drummer Miles McPherson, vocalist Lukas Rossi (ex-Rock Star Supernova, ex-Daylight
+Division) and bassist Josh Newell (ex-In This Moment).
+</item 8>
+
+<item 9>
+Hole (band)
+Hole was an American alternative rock band that formed in Los Angeles, California in 1989 by singer and guitarist Courtney Love and lead guitarist Eric
+Erlandson.
+
+ The band had a revolving line-up of bassists and drummers, their most prolific being drummer Patty Schemel, and bassists Kristen Pfaff (d. 1994) and Melissa
+Auf der Maur.
+</item 9>
+
+<item 10>
+Blackdiamondskye
+Blackdiamondskye was a 2010 North American concert tour by American bands Alice in Chains, Mastodon, and Deftones.
+
+ Blackdiamondskye is a portmanteau of the three band's most recent albums: Alice in Chains' "Black Gives Way to Blue", Deftones' "Diamond Eyes", and Mastodon's
+"Crack the Skye".
+
+ The tour kicked off on September 16 in Chicago and culminated on October 16 in Paradise, Nevada.
+
+ The tour lasted for 19 shows over the course of one month and featured shows at both outdoor amphitheatres and indoor venues.
+</item 10>
+=== END ITEM id=a68068087b69a98c ===

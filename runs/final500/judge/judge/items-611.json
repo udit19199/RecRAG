@@ -1,0 +1,478 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "4f93de6646610d61",
+   "gold": [
+    {
+     "sentence": "Ralph Foster Smart {'1': \", '2': \", '3': \", '4': \"} (27 August 1908 – 12 February 2001) was a film and television producer, director, and writer, born in England to Australian parents.",
+     "facts": {
+      "0.0": "Ralph Foster Smart was born on 27 August 1908.",
+      "0.1": "Ralph Foster Smart died on 12 February 2001.",
+      "0.2": "Ralph Foster Smart was a film producer.",
+      "0.3": "Ralph Foster Smart was a television producer.",
+      "0.4": "Ralph Foster Smart was a director.",
+      "0.5": "Ralph Foster Smart was a writer.",
+      "0.6": "Ralph Foster Smart was born in England.",
+      "0.7": "Ralph Foster Smart's parents were Australian."
+     }
+    },
+    {
+     "sentence": "Randolph Severn \"Trey\" Parker III (born October 19, 1969) is an American actor, animator, writer, director, producer, singer, and songwriter.",
+     "facts": {
+      "1.0": "Randolph Severn 'Trey' Parker III was born on October 19, 1969.",
+      "1.1": "Randolph Severn 'Trey' Parker III is an American actor.",
+      "1.2": "Randolph Severn 'Trey' Parker III is an animator.",
+      "1.3": "Randolph Severn 'Trey' Parker III is a writer.",
+      "1.4": "Randolph Severn 'Trey' Parker III is a director.",
+      "1.5": "Randolph Severn 'Trey' Parker III is a producer.",
+      "1.6": "Randolph Severn 'Trey' Parker III is a singer.",
+      "1.7": "Randolph Severn 'Trey' Parker III is a songwriter."
+     }
+    }
+   ],
+   "items": [
+    "Terry Ray (actor)\nTerry Ray (born February 12, 1961) is an American actor, screenwriter, and producer.\n\n Some of his work includes \"Gaydar\" and \"Cost of Living\" (2009).\n\n Ray is the creator and writer of \"here!\n\n TV\"'s sitcom \"From Here on OUT\", the first original gay sitcom created by a gay network.\n\n Terry stars in the sitcom, along with Juliet Mills, Suzanne Whang and T.J. Hoban.\n\n<br><br>Terry Ray's 1987 appearance on Scrabble (game show) is noted as number 3 in the \"10 Great Gay Moments in Game Show History\", after Charles Nelson Reilly and Paul Lynde.\n\n In the same appearance, Terry was also named as one of the \"5 Weirdest Game Show Contestants Ever\", by Movieline.\n\n<br><br>Terry’s first professional writing job was the stage performance “Hollywood Goes Classical\" at the venerable Dorothy Chandler Pavilion starring Mickey Rooney, Michael York, Dean Jones, Rhonda Fleming and several other classic film stars.",
+    "Ralph Smart\nRalph Foster Smart {'1': \", '2': \", '3': \", '4': \"} (27 August 1908 – 12 February 2001) was a film and television producer, director, and writer, born in England to Australian parents.",
+    "Friends of the People\nFriends of the People is an American sketch comedy television series.\n\n It was slated to premiere on TruTV in summer 2014, but was pushed to October 28, 2014, as part of the network's shift in their programming direction.\n\n Many of the cast members (Jennifer Bartels, Jermaine Fowler, and Lil Rel Howery) were originally reported to be cast members of a planned revival of In Living Color which never materialized.\n\n The show's first season consists of 10 episodes.\n\n This makes it the network's first sketch comedy show.\n\n The series holds a TV-14 rating, though select episodes are rated TV-MA--also a first for the truTV network.",
+    "Everett Greenbaum\nEverett Greenbaum (December 20, 1919 – July 11, 1999) was an American television and film writer and actor who contributed to such shows as \"The Andy Griffith Show\" (24 Episodes), \"M*A*S*H\" (35 Episodes), \"Love American Style\", \"The Real McCoys\" (32 Episodes), \"Sanford and Son\", and \"The George Gobel Show\".\n\n Greenbaum was a co-creator with Jim Fritzell of \"Mister Peepers\" an important early television show which starred Wally Cox.\n\n He wrote the Hollywood feature film \"Good Neighbor Sam\", as well as a series of films starring Don Knotts that included \"The Shakiest Gun in the West\", \"The Reluctant Astronaut\", and \"The Ghost and Mr. Chicken\".",
+    "Terry Ray (actor)\nHe wrote and starred in two more shows at the Dorothy Chandler Pavilion, one co-starring Amanda Bynes and the other Hilary Duff.\n\n<br><br>Terry is also the voice of the \"Gaydar Gun\", a spinoff toy from the film Gaydar.",
+    "Bill Barretta\nWilliam Paul \"Bill\" Barretta (born June 19, 1964) is an American puppeteer and producer who has been performing with The Muppets since 1991, when he puppeteered the body of Sinclair family patriarch, Earl Sinclair on \"Dinosaurs\".\n\n He later developed several new characters on \"Muppets Tonight\", including Pepe the King Prawn, Johnny Fiama, Big Mean Carl and Bobo the Bear.\n\n Along with having his own Muppet characters, Barretta has taken over several of Jim Henson's roles, such as Dr. Teeth, Rowlf the Dog, Mahna Mahna and Swedish Chef, and briefly took over Jerry Nelson's role of Lew Zealand.\n\n His film debut as a principal puppeteer was in 1996's \"Muppet Treasure Island\" as Clueless Morgan.\n\n In addition, Barretta has produced two of the Muppets' television films, \"It's a Very Merry Muppet Christmas Movie\" (2002) and \"The Muppets' Wizard of Oz\" (2005).\n\n Barretta also provides additional voices on \"Kim Possible\".",
+    "Trey Parker\nRandolph Severn \"Trey\" Parker III (born October 19, 1969) is an American actor, animator, writer, director, producer, singer, and songwriter.\n\n He is known for co-creating \"South Park\" (1997–present) along with his creative partner Matt Stone, as well as co-writing and co-directing the Tony Award-winning musical \"The Book of Mormon\" (2011).\n\n Parker was interested in film and music as a child, and attended the University of Colorado, Boulder following high school, where he met Stone.\n\n The two collaborated on various short films, and starred in a feature-length musical, titled \"Cannibal!\n\n The Musical\" (1993).",
+    "The Itchy &amp; Scratchy Show\n(voiced by Alex Rocco, and, later, Hank Azaria), who runs the studio and produces the show.",
+    "Jimmy Tatro\nJames Richard Tatro (born February 16, 1992) is an American actor, comedian, writer and YouTube personality.\n\n He is the creator and star of the YouTube channel \"LifeAccordingToJimmy\", which has about 2.7 million subscribers and over 440 million video views.\n\n Tatro writes, produces and directs each of his video sketches with his friend, Christian A. Pierce.\n\n Tatro has appeared in \"Divergent\", \"Grown Ups 2\", \"22 Jump Street\" and \"\", and will appear in the film \"Camp Manna\" alongside Gary Busey, set to be released in 2017.\n\n He is also starring in the true-crime satire, \"American Vandal\", in which he plays Dylan Maxwell, the accused vandal.\n\n He will also appear in the movie, Action No. 1, a film about a group of people who attempt to steal the first comic book with Superman off the actor Nicholas Cage.",
+    "Ralph Bakshi\nRalph Bakshi (born October 29, 1938) is an American director of animated and live-action films.\n\n In the 1970s, he established an alternative to mainstream animation through independent and adult-oriented productions.\n\n Between 1972 and 2015, he directed ten theatrically released feature films, six of which he wrote.\n\n He has been involved in numerous television projects as director, writer, producer and animator."
+   ]
+  },
+  {
+   "id": "f3bdd082bbb642f6",
+   "gold": [
+    {
+     "sentence": "Pterostyrax, the epaulette tree, is a small genus of four species of deciduous large shrubs or small trees in the family Styracaceae, native to eastern Asia in China and Japan.",
+     "facts": {
+      "0.0": "Pterostyrax is also called the epaulette tree.",
+      "0.1": "Pterostyrax is a small genus.",
+      "0.2": "Pterostyrax has four species.",
+      "0.3": "Pterostyrax species are deciduous.",
+      "0.4": "Pterostyrax species are large shrubs or small trees.",
+      "0.5": "Pterostyrax is in the family Styracaceae.",
+      "0.6": "Pterostyrax is native to eastern Asia.",
+      "0.7": "Pterostyrax is native to China.",
+      "0.8": "Pterostyrax is native to Japan."
+     }
+    },
+    {
+     "sentence": "Dregea is a genus of vines in the Apocynaceae, first described as a genus with this name in 1838.",
+     "facts": {
+      "1.0": "Dregea is a genus of vines.",
+      "1.1": "Dregea is in the family Apocynaceae.",
+      "1.2": "Dregea was first described as a genus with this name in 1838."
+     }
+    },
+    {
+     "sentence": " It is native to Africa and southern Asia.",
+     "facts": {
+      "2.0": "Dregea is native to Africa.",
+      "2.1": "Dregea is native to southern Asia."
+     }
+    }
+   ],
+   "items": [
+    "Styrax litseoides\nStyrax litseoides is a species of flowering plant in the genus \"Styrax\" and family Styracaceae.\n\n It is endemic to Vietnam.",
+    "Deutzia\nDeutzia ( or ) is a genus of about 60 species of flowering plants in the family Hydrangeaceae, native to eastern and central Asia (from the Himalayas east to Japan and the Philippines), and Central America and also Europe.\n\n By far the highest species diversity is in China, where 50 species occur.",
+    "Pterostyrax\nPterostyrax, the epaulette tree, is a small genus of four species of deciduous large shrubs or small trees in the family Styracaceae, native to eastern Asia in China and Japan.\n\n They grow 4 - tall, with alternate, simple ovate leaves 6 - long and 4 - broad.\n\n The flowers are white, produced in dense panicles 8 - long.\n\n The fruit is an oblong dry drupe, with longitudinal ribs or narrow wings (the wings are absent in the related genus \"Styrax\", whence the name \"Pterostyrax\", \"winged styrax\").",
+    "Pterostyrax hispidus\nPterostyrax hispidus, the epaulette tree or fragrant epaulette tree, is a species of flowering plant in the family Styracaceae, native to China and Japan.\n\n Growing to 15 m tall by 12 m broad, it is a substantial, spreading, deciduous shrub with oval leaves up to 20 cm long, and clusters of pure white, fragrant, pendent flowers in summer.",
+    "Rhabdodontidae\nRhabdodontids were herbivorous ornithopod dinosaurs from the Cretaceous Period.\n\n Rhabdodontids were similar to large, robust \"hypsilophodonts\", with deep skulls and jaws.\n\n The family was first proposed by David B. Weishampel and colleagues in 2002.\n\n The rhabdodontids were defined as \"the most recent common ancestor of \"Zalmoxes robustus\" and \"Rhabdodon priscus\" and all the descendants of this common ancestor\".\n\n In 2005, Paul Sereno defined the family as \"the most inclusive clade containing \"Rhabdodon priscus\" but not \"Parasaurolophus walkeri\"\".\n\n The Rhabdodontidae includes the type genus \"Rhabdodon\", \"Zalmoxes\", \"Mochlodon\" and possibly \"Muttaburrasaurus\".\n\n Rhabdodontid fossils have been found in Europe and Australia in formations dating from the Early to Late Cretaceous, 100 to 66 million years ago.\n\n Ősi \"et al.\"",
+    "Dregea\nDregea is a genus of vines in the Apocynaceae, first described as a genus with this name in 1838.\n\n It is native to Africa and southern Asia.",
+    "Dregea sinensis\nDregea sinensis is a species of plant in the Apocynaceae family that is native to China.",
+    "Styrax crotonoides\nStyrax crotonoides is a species of plant in the genus \"Styrax\" and family Styracaceae.\n\n It is found in Peninsular Malaysia and Singapore.",
+    "Dregea volubilis\nDregea volubilis is a species of plant in the Apocynaceae family that is native to India.",
+    "Styrax fraserensis\nStyrax fraserensis is a species of flowering plant in the genus \"Styrax\" and family Styracaceae.\n\n It is a tree endemic to Peninsular Malaysia.\n\n It is threatened by habitat loss."
+   ]
+  },
+  {
+   "id": "823aab9a6301d9f1",
+   "gold": [
+    {
+     "sentence": "Claudio Giovanni Antonio Monteverdi (] ; 15 May 1567 (baptized) – 29 November 1643) was an Italian composer, string player and choirmaster.",
+     "facts": {
+      "0.0": "Claudio Giovanni Antonio Monteverdi was baptized on 15 May 1567.",
+      "0.1": "Claudio Giovanni Antonio Monteverdi died on 29 November 1643.",
+      "0.2": "Claudio Giovanni Antonio Monteverdi was an Italian composer.",
+      "0.3": "Claudio Giovanni Antonio Monteverdi was an Italian string player.",
+      "0.4": "Claudio Giovanni Antonio Monteverdi was an Italian choirmaster."
+     }
+    },
+    {
+     "sentence": " A composer of both secular and sacred music, and a pioneer in the development of opera, he is considered a crucial transitional figure between the Renaissance and the Baroque periods of music history.",
+     "facts": {
+      "1.0": "Monteverdi composed both secular and sacred music.",
+      "1.1": "Monteverdi was a pioneer in the development of opera.",
+      "1.2": "Monteverdi is considered a crucial transitional figure between the Renaissance and the Baroque periods of music history."
+     }
+    },
+    {
+     "sentence": "Georges Bizet (] ; 25 October 18383 June 1875), registered at birth as Alexandre César Léopold Bizet, was a French composer of the romantic era.",
+     "facts": {
+      "2.0": "Georges Bizet was born on 25 October 1838.",
+      "2.1": "Georges Bizet died on 3 June 1875.",
+      "2.2": "Georges Bizet was registered at birth as Alexandre César Léopold Bizet.",
+      "2.3": "Georges Bizet was a French composer.",
+      "2.4": "Georges Bizet was a composer of the romantic era."
+     }
+    },
+    {
+     "sentence": " Best known for his operas in a career cut short by his early death, Bizet achieved few successes before his final work, \"Carmen\", which has become one of the most popular and frequently performed works in the entire opera repertoire.",
+     "facts": {
+      "3.0": "Georges Bizet is best known for his operas.",
+      "3.1": "Bizet's career was cut short by his early death.",
+      "3.2": "Bizet achieved few successes before his final work.",
+      "3.3": "Bizet's final work is 'Carmen'.",
+      "3.4": "Carmen has become one of the most popular works in the entire opera repertoire.",
+      "3.5": "Carmen is one of the most frequently performed works in the entire opera repertoire."
+     }
+    }
+   ],
+   "items": [
+    "John Whenham\nJohn Whenham is an English musicologist and academic who specializes in early Italian baroque music.\n\n He earned both a Bachelor of Music and a Master of Music from the University of Nottingham, and a Doctor of Philosophy from the University of Oxford.\n\n He is a leading expert on the life and works of Claudio Monteverdi, and is the author of the books \"Duet and Dialogue in the Age of Monteverdi\" (Ann Arbor, Michigan: University Microfilms International, 1982) \"Monteverdi, 'Orfeo' \" (London: Cambridge University Press, 1986), \"Monteverdi, Vespers (1610)\" (Cambridge University Press, 1997), and \"The Cambridge Companion to Monteverdi\" (with Richard Wistreich, Cambridge University Press, 2007).\n\n For five years he was co-editor of the journal \"Music & Letters\".\n\n He currently serves on the board of the Birmingham Early Music Festival and is head of the music history department at the University of Birmingham.",
+    "Georges Bizet\nGeorges Bizet (] ; 25 October 18383 June 1875), registered at birth as Alexandre César Léopold Bizet, was a French composer of the romantic era.\n\n Best known for his operas in a career cut short by his early death, Bizet achieved few successes before his final work, \"Carmen\", which has become one of the most popular and frequently performed works in the entire opera repertoire.",
+    "L'Arlésienne (Bizet)\nGeorges Bizet composed L'Arlésienne as incidental music to Alphonse Daudet's play of the same name, usually translated as \"The Girl from Arles\".\n\n It was first performed on 1 October 1872 at the Vaudeville Theatre (now a cinema known as the Gaumont Opéra).\n\n Bizet's music consists of 27 numbers (some only a few bars) for voice, chorus, and small orchestra, ranging from short solos to longer entr'actes. Bizet himself played the harmonium backstage at the premiere performance.",
+    "Claudio Monteverdi\nClaudio Giovanni Antonio Monteverdi (] ; 15 May 1567 (baptized) – 29 November 1643) was an Italian composer, string player and choirmaster.\n\n A composer of both secular and sacred music, and a pioneer in the development of opera, he is considered a crucial transitional figure between the Renaissance and the Baroque periods of music history.",
+    "Béla Bartók\nBéla Viktor János Bartók ( ; ] ; 25 March 1881 – 26 September 1945) was a Hungarian composer, pianist and an ethnomusicologist.\n\n He is considered one of the most important composers of the 20th century; he and Liszt are regarded as Hungary's greatest composers .\n\n Through his collection and analytical study of folk music, he was one of the founders of comparative musicology, which later became ethnomusicology.",
+    "L'Orfeo discography\nThese lists show the audio and visual recordings of the opera \"L'Orfeo\" by Claudio Monteverdi.\n\n The opera was first performed in Mantua in 1607, at the court of Duke Vincenzo Gonzaga, and is one of the earliest of all operas.\n\n The first recording of \"L'Orfeo\" was issued in 1939, a freely adapted version of Monteverdi's music edited by Giacomo Benvenuti, given by the orchestra of La Scala Milan conducted by Ferrucio Calusio.\n\n In 1949 the Berlin Radio Orchestra under Helmut Koch recorded the complete opera, on long-playing records (LPs).\n\n The advent of LP recordings was, as Harold Schonberg later wrote, an important factor in the postwar revival of interest in Renaissance and Baroque music, and from the mid-1950s recordings of \"L'Orfeo\" have been issued on many labels.\n\n Koch's landmark version was reissued in 1962, when it was compared unfavourably with others that had by then been issued.",
+    "Roma Symphony (Bizet)\nThe Symphony in C \"Roma\" is the second of Georges Bizet's symphonies.\n\n Unlike his first symphony, also in C major, which was written quickly at the age of 17, \"Roma\" was written over an eleven-year span, between the ages of 22 and 33 (he died at age 36).\n\n Bizet was never fully satisfied with it, subjecting it to a number of revisions, but died before finishing his definitive version.\n\n All four movements were performed in his lifetime, but never all on the same occasion.\n\n The full symphony in its latest revision was premiered in 1875, after his death.\n\n It is perhaps because of Bizet's dissatisfaction that the work is often said to be \"unfinished\".\n\n However, in the form in which it exists today, it is a complete work and is fully scored.\n\n It has been recorded a number of times but is not often heard on the concert platform.",
+    "Symphony in C (Bizet)\nThe Symphony in C is an early work by the French composer Georges Bizet.\n\n According to \"Grove's Dictionary\", the symphony \"reveals an extraordinarily accomplished talent for a 17-year-old student, in melodic invention, thematic handling and orchestration.\"\n\n Bizet started work on the symphony in C major on 29 October 1855, four days after turning 17, and finished it roughly a month later.\n\n It was written while he was studying at the Paris Conservatoire under the composer Charles Gounod, and was evidently a student assignment.\n\n Bizet showed no apparent interest in having it performed or published, and the piece was never played in his lifetime.\n\n He used certain material from the symphony in later works, however.\n\n There is no mention of the work in Bizet's letters, and it was unknown to his earlier biographers.\n\n His widow, Geneviève Halévy (1849–1926), gave the manuscript to Reynaldo Hahn, who left it along with other papers to the archives of the conservatory library, where it was found in 1933 by Jean Chantavoine.",
+    "Symphony in C (Bizet)\nSoon thereafter, Bizet's first British biographer Douglas Charles Parker (1885–1970) showed the manuscript to the conductor Felix Weingartner, who led the first performance in Basel, Switzerland, on 26 February 1935.",
+    "Orfeo ed Euridice\nOrfeo ed Euridice (French version: Orphée et Eurydice ; English: \"Orpheus and Eurydice\") is an opera composed by Christoph Willibald Gluck based on the myth of Orpheus, set to a libretto by Ranieri de' Calzabigi.\n\n It belongs to the genre of the \"azione teatrale\", meaning an opera on a mythological subject with choruses and dancing.\n\n The piece was first performed at the Burgtheater in Vienna on 5 October 1762 in the presence of Empress Maria Theresa.\n\n \"Orfeo ed Euridice\" is the first of Gluck's \"reform\" operas, in which he attempted to replace the abstruse plots and overly complex music of \"opera seria\" with a \"noble simplicity\" in both the music and the drama."
+   ]
+  },
+  {
+   "id": "cb28617b5c9a691f",
+   "gold": [
+    {
+     "sentence": "John H. Garabedian is an American radio personality and disc jockey born on December 20, 1941 (age 75).",
+     "facts": {
+      "0.0": "John H. Garabedian is an American radio personality.",
+      "0.1": "John H. Garabedian is an American disc jockey.",
+      "0.2": "John H. Garabedian was born on December 20, 1941.",
+      "0.3": "John H. Garabedian is age 75."
+     }
+    },
+    {
+     "sentence": "Charles A. Agemian (July 22, 1909 – March 30, 1996) was an American banker who took early retirement from Chase Manhattan Bank, where he was executive vice president of operations, to become chairman and chief executive officer of the Hackensack Trust Co., which later was renamed Garden State National Bank.",
+     "facts": {
+      "1.0": "Charles A. Agemian was born July 22, 1909.",
+      "1.1": "Charles A. Agemian's life ended March 30, 1996.",
+      "1.2": "Charles A. Agemian was an American banker.",
+      "1.3": "Charles A. Agemian took early retirement from Chase Manhattan Bank.",
+      "1.4": "Charles A. Agemian was executive vice president of operations at Chase Manhattan Bank.",
+      "1.5": "Charles A. Agemian became chairman of the Hackensack Trust Co.",
+      "1.6": "Charles A. Agemian became chief executive officer of the Hackensack Trust Co.",
+      "1.7": "The Hackensack Trust Co. was later renamed Garden State National Bank."
+     }
+    }
+   ],
+   "items": [
+    "Dean Martin\nDean Martin (born Dino Paul Crocetti; June 7, 1917 – December 25, 1995) was an American singer, actor, comedian, and film producer.\n\n One of the most popular and enduring American entertainers of the mid-20th century, Martin was nicknamed the \"King of Cool\" for his seemingly effortless charisma and self-assurance.",
+    "John Garabedian\nJohn H. Garabedian is an American radio personality and disc jockey born on December 20, 1941 (age 75).\n\n He is best known as the creator and former long-time host of \"Open House Party\".\n\n He has been involved in Massachusetts radio and television stations for over fifty years.\n\n Garabedian currently owns three homes, all in New England: one in Southborough, Massachusetts, another on Cape Cod, and a cabin-like home in Cabot, Vermont.",
+    "Roger Garis\nRoger (Carroll) Garis, ((1901--) 10, 1901 – (1967--) 30, 1967 ) was an American author known as a writer for magazines and the author of \"The Outboard Boys\" series of books.\n\n Roger also wrote several books under pseudonyms for the Stratemeyer Syndicate, as his parents did (see My Father Was Uncle Wiggily for further details).",
+    "Jerry Garcia\nJerome John Garcia (August 1, 1942 – August 9, 1995) was an American singer-songwriter and guitarist, best known for his work as the lead guitarist and as a vocalist with the band the Grateful Dead, which came to prominence during the counterculture era in the 1960s.\n\n Although he disavowed the role, Garcia was viewed by many as the leader or \"spokesman\" of the group.",
+    "Jimmy O'Neill (DJ)\nJames Franklin O'Neill (January 8, 1940 – January 11, 2013) was an American DJ and broadcaster who hosted the ABC television show \"Shindig!\n\n\" from 1964-1966.\n\n O'Neill was owner of Pandora's Box, an influential Sunset Strip music venue in West Hollywood, California that was the center of the 1966 Sunset Strip curfew riots.",
+    "Charles A. Agemian\nCharles A. Agemian (July 22, 1909 – March 30, 1996) was an American banker who took early retirement from Chase Manhattan Bank, where he was executive vice president of operations, to become chairman and chief executive officer of the Hackensack Trust Co., which later was renamed Garden State National Bank.",
+    "Radio personality\nA radio personality (American English) or radio presenter (British English), commonly referred to as a \"disc jockey\" or \"DJ\" for short, is a person who has an on-air position in radio broadcasting.\n\n A radio personality that hosts a radio show is also known as a radio host, and in India and Pakistan as a radio jockey.\n\n Radio personalities who introduce and play individual selections of recorded music are known as disc jockeys.\n\n The term has evolved to also describe a person who mixes a continuous flow of recorded music in real time.\n\n Broadcast radio personalities may include talk radio hosts, AM/FM radio show hosts, and satellite radio program hosts.\n\n Notable radio personalities include pop music radio hosts Martin Block, Alan Freed, Dick Clark, Delilah Luke, Ameen Sayani, Wolfman Jack, and Casey Kasem, shock jocks such as Don Imus and Howard Stern, as well as sports talk hosts such as Mike Francesa and political talk hosts such as Rush Limbaugh.",
+    "Don Sherwood (DJ)\nDon Sherwood (September 7, 1925 – November 6, 1983) was an American radio personality.\n\n He was a San Francisco, California, disc jockey during the 1950s and 1960s.\n\n Billed as \"The World's Greatest Disc Jockey,\" Sherwood spent most of his career hosting a 6-9 a.m. weekday program on KSFO in San Francisco (560 kHz, 5000 watts), which was then owned by the singing cowboy actor Gene Autry.",
+    "Howard R. Garis\nHoward Roger Garis ((1873--) 25, 1873 – (1962--) 6, 1962 ) was an American author, best known for a series of books, published under his own name, that featured the character of Uncle Wiggily Longears, an engaging elderly rabbit.\n\n Garis and his wife were possibly the most prolific children's authors of the early 20th century.\n\n Many of his books were illustrated by Lansing Campbell.",
+    "Big Wilson\nBig Wilson (born Malcolm John Wilson, Jr.; October 3, 1924 – October 5, 1989) was an American radio personality.\n\n He worked as a disc jockey at WNBC AM in New York City from the early 1960s until 1974 and moved to Miami in 1975 where he worked for WIOD and WCIX-TV.\n\n He was one of the last two hosts of the NBC network program Monitor.\n\n Prior to moving to NYC, Wilson and his wife Jody lived in a riverfront home in Rocky River, Ohio.\n\n He commuted to Cleveland where he was the leading radio personality for some years.\n\n Tim Conway and other well-known persons visited their home."
+   ]
+  },
+  {
+   "id": "924aebd88121665e",
+   "gold": [
+    {
+     "sentence": "Dogo Cubano also known as the Cuban Mastiff, Cuban Dogo and Cuban Dogge is an extinct dog breed from Cuba.",
+     "facts": {
+      "0.0": "The Dogo Cubano is also known as the Cuban Mastiff.",
+      "0.1": "The Dogo Cubano is also known as the Cuban Dogo.",
+      "0.2": "The Dogo Cubano is also known as the Cuban Dogge.",
+      "0.3": "The Dogo Cubano is an extinct dog breed.",
+      "0.4": "The Dogo Cubano is a dog breed from Cuba."
+     }
+    },
+    {
+     "sentence": "The Dutch Shepherd is a herding dog of Dutch origin.",
+     "facts": {
+      "1.0": "The Dutch Shepherd is a herding dog.",
+      "1.1": "The Dutch Shepherd is a herding dog of Dutch origin."
+     }
+    }
+   ],
+   "items": [
+    "Guatemalan Dogo\nGuatemalan Dogo (\"Dogo Guatemalteco\"), formerly known as the Guatemalan Bull Terrier (\"Bullterrier Guatemalteco\"), and Guatemalan Mastiff, is a Molosser-type dog breed originating in Guatemala.\n\n It is neither recognized by the Fédération Cynologique Internationale (FCI) nor the American Kennel Club (AKC).\n\n However, it has the official national recognition of the Asociación Canofila Guatemalteca (ACANGUA) where it belongs to the Group 2.2.1 - Mastiffs.\n\n As the unique breed originating in Guatemala, it is also the national dog of the country.\n\n Nowadays it has spread to various other countries, such as the USA.",
+    "Belgian Shepherd\nThe Belgian Shepherd (also known as the Belgian Sheepdog or Chien de Berger Belge) is a breed of medium-to-large-sized herding dog.\n\n It originated in Belgium and is similar to other sheep herding dogs from that region, including the Dutch Shepherd, the German Shepherd, the Briard, and others.\n\n Four types have been identified by various registries as separate breeds or varieties: Groenendael, Laekenois, Tervuren, and Malinois.",
+    "Dutch Shepherd\nThe Dutch Shepherd is a herding dog of Dutch origin.\n\n They were used by shepherds and farmers who needed a versatile dog, with few demands, and a dog that was able to adapt to a harsh and meager existence.",
+    "Cuban Criollo\nThe Criollo Cubano originates from Spanish horses brought to Cuba by Diego Velázquez in 1751.\n\n There are four different breeds known as criollo: the Cubano de Paso, the Pinto Cubano, the Criollo de Trote and the Patibarcino.\n\n It is a small stout breed used by the Guajiro people.",
+    "Dogo Cubano\nDogo Cubano also known as the Cuban Mastiff, Cuban Dogo and Cuban Dogge is an extinct dog breed from Cuba.\n\n It was of the Bull Mastiff type and was used for dog fighting.",
+    "Drentse Patrijshond\nThe Drentsche Patrijshond is a versatile spaniel-type hunting dog from the Dutch province of Drenthe.\n\n Called the Dutch Partridge Dog (or \"Drent\" for Drenthe) in English, approximately 5,000 dogs are registered with the breed club in the Netherlands, and breed clubs operate in Belgium, Denmark, Scandinavia and North America.\n\n The Drentsche Patrijshond bears some resemblance to both spaniel and setter types of dog.\n\n An excellent pointer and retriever, this dog is often used to hunt fowl and adapts equally well to the field or marshes.",
+    "Swiss mountain dog\nSennenhund, called Swiss mountain dogs or Swiss cattle dogs in English, are a type of dog originating in the Swiss Alps.\n\n The Sennenhund are farm dogs of the general molosser type.\n\n There are four breeds of Sennenhund, all sporting a unique tricolor coat.\n\n While the two larger ones share a heavy build and a calm temperament, the two smaller ones are more agile.\n\n The breeds range from medium in size to very large.\n\n The name Sennenhund refers to people called \"Senn\" or Senner, Swiss alpine herdsmen and dairymen, and does not translate as \"mountain\" or \"cattle\".",
+    "Dogo Argentino\nThe Dogo Argentino, also known as the Argentine Mastiff, is a large, white, muscular dog that was developed in Argentina primarily for the purpose of big-game hunting, including wild boar; the breeder, Antonio Nores Martínez, also wanted a dog that would exhibit steadfast bravery and willingly protect its human companion.\n\n It was first bred in 1928, from the Cordoba Fighting Dog along with a wide array of other breeds including the Great Dane.",
+    "Graph query row:\nentity: Dutch Shepherd\nkind: breed\nrelationship: LOCATED_IN\nrelated: Belgium\nrelated_kind: country",
+    "Romanian Raven Shepherd Dog\nThe Romanian Raven Shepherd Dog is a very large Romanian livestock guardian dog, taxonomized within the second group of dog breeds - Pinscher and Schanuzer - Molossoid Breeds - Swiss Mountain and Cattle Dogs, section 2.2: Molossoid Breeds - Mountain type."
+   ]
+  },
+  {
+   "id": "0ee798155604a4a0",
+   "gold": [
+    {
+     "sentence": " The show originally ran from 7 September 1977 to 20 November 1995, and was hosted by Gordon Burns and usually broadcast on the ITV network on Mondays at 7pm.",
+     "facts": {
+      "0.0": "The show originally ran from 7 September 1977 to 20 November 1995.",
+      "0.1": "The show was hosted by Gordon Burns.",
+      "0.2": "The show was usually broadcast on the ITV network.",
+      "0.3": "The show was usually broadcast on Mondays at 7pm."
+     }
+    },
+    {
+     "sentence": " He was the host of \"The Krypton Factor\" for its original 18-year run (1977–1995) and was the chief anchorman for the BBC regional news programme \"North West Tonight\" from January 1997 to October 2011.",
+     "facts": {
+      "1.0": "The person referred to as 'He' was the host of 'The Krypton Factor' for its original 18-year run.",
+      "1.1": "The Krypton Factor's original run was 1977–1995.",
+      "1.2": "The person referred to as 'He' was the chief anchorman for the BBC regional news programme 'North West Tonight'.",
+      "1.3": "The person referred to as 'He' was the chief anchorman for 'North West Tonight' from January 1997 to October 2011."
+     }
+    }
+   ],
+   "items": [
+    "David Letterman\nDavid Michael Letterman (born April 12, 1947) is an American television host, comedian, writer, and producer.\n\n He hosted a late night television talk show for 33 years, beginning with the February 1, 1982 debut of \"Late Night with David Letterman\" on NBC, and ending with the May 20, 2015 broadcast of \"Late Show with David Letterman\" on CBS.\n\n In total, Letterman hosted 6,028 episodes of \"Late Night\" and \"Late Show\", surpassing friend and mentor Johnny Carson as the longest-serving late night talk show host in American television history.\n\n In 1996 Letterman was ranked 45th on \"TV Guide\"' s 50 Greatest TV Stars of All Time.",
+    "The Week Show\nThe Week Show is a television late night talk show sketch comedy program on Bite TV in Canada.\n\n It originally ran from December 2008 to mid-2010.\n\n The show is hosted by Matt Chin and Ricky Thompson, who started on an internet late night talk show \"My Show with Matt Chin\" online in 2001.",
+    "Coast to Coast AM\nCoast to Coast AM is an American late-night radio talk show that deals with a variety of topics.\n\n Most frequently the topics relate to either the paranormal or conspiracy theories.\n\n The program is distributed by Premiere Networks, both as part of its talk network and separately as a syndicated program.\n\n The program now airs seven nights a week 1:00 a.m. – 5:00 a.m. Eastern Time Zone.",
+    "Morning Joe\nMorning Joe is a weekday NBC News morning news and talk show, airing from 6:00 a.m. to 9:00 a.m. Eastern Time on the network's cable news channel MSNBC.\n\n It features former GOP representative Joe Scarborough providing both enterprise reporting and discussion on the news of the day in a panel format with co-hosts Mika Brzezinski and Willie Geist.\n\n It was created as the replacement for \"Imus in the Morning,\" which was cancelled in April 2007 after simulcasting on MSNBC since 1996.",
+    "A Word in Your Ear\nA Word in Your Ear is a game show that originally aired BBC1 from 19 April 1993 to 14 October 1994 then on The Family Channel from 1995.\n\n It was hosted by Gordon Burns.\n\n The host presided over male and female pairs of celebrities as they participate in a few rounds of communication games.\n\n Celebrities appearing included Lynsey De Paul, Nick Owen, Philippa Kennedy and Bob Holness.",
+    "Gordon Burns (footballer)\nGordon Burns (born 2 December 1978) is a Scottish former professional footballer who is currently manager of Troon in the Scottish Junior Football Association, West Region.\n\n He has previously played in the Scottish Championship for Ayr United.",
+    "Gordon Burns\nGordon Henry Burns (born 10 June 1942) is a Northern Irish journalist and broadcaster.\n\n He was the host of \"The Krypton Factor\" for its original 18-year run (1977–1995) and was the chief anchorman for the BBC regional news programme \"North West Tonight\" from January 1997 to October 2011.\n\n In November 2011 Gordon moved back to Belfast were he was born.",
+    "18 Doughty Street\n18 Doughty Street was a British political Internet-based broadcaster that hosted a webcast as its chief product.\n\n It began broadcasting at 18:55 on 10 October 2006, from its studio at 18 Doughty Street in the Bloomsbury area of London, and ceased broadcasting at 23:00 on Thursday 8 November 2007.\n\n It claimed to be Britain's first Internet-based TV station.",
+    "Password (UK game show)\nPassword was a British panel game show based on the US version of the same name.\n\n It was originally aired on ITV produced by ATV from 12 March to 10 September 1963 hosted by Shaw Taylor, then it aired on BBC2 from 24 March to 28 April 1973 hosted by Brian Redhead before moving to its flagship channel BBC1 from 7 January 1974 to 1976 first hosted by Eleanor Summerfield then by Esther Rantzen, it was then aired on Channel 4 produced by Thames in association with Talbot Television and Goodson-Todman Productions from 6 November 1982 to 14 May 1983 hosted by Tom O'Connor and then finally aired back on ITV produced by Ulster from 22 July 1987 to 5 August 1988 hosted by Gordon Burns.",
+    "The Krypton Factor\nThe Krypton Factor is a British game show produced by Granada for broadcast on ITV.\n\n The show originally ran from 7 September 1977 to 20 November 1995, and was hosted by Gordon Burns and usually broadcast on the ITV network on Mondays at 7pm."
+   ]
+  },
+  {
+   "id": "3e81842440eb2208",
+   "gold": [
+    {
+     "sentence": "Willi Forst, born Wilhelm Anton Frohs (7 April 1903 – 11 August 1980) was an Austrian actor, screenwriter, film director, film producer and singer.",
+     "facts": {
+      "0.0": "Willi Forst was born Wilhelm Anton Frohs.",
+      "0.1": "Willi Forst's dates are 7 April 1903 to 11 August 1980.",
+      "0.2": "Willi Forst was an Austrian actor.",
+      "0.3": "Willi Forst was a screenwriter.",
+      "0.4": "Willi Forst was a film director.",
+      "0.5": "Willi Forst was a film producer.",
+      "0.6": "Willi Forst was a singer."
+     }
+    },
+    {
+     "sentence": "Elmer Clifton (March 14, 1890 – October 15, 1949) was an American writer, director and actor from the early silent days.",
+     "facts": {
+      "1.0": "Elmer Clifton's dates are March 14, 1890 to October 15, 1949.",
+      "1.1": "Elmer Clifton was an American writer.",
+      "1.2": "Elmer Clifton was an American director.",
+      "1.3": "Elmer Clifton was an American actor.",
+      "1.4": "Elmer Clifton was active from the early silent days."
+     }
+    }
+   ],
+   "items": [
+    "Arthur Lubin\nArthur Lubin (July 25, 1898 – May 12, 1995) was an American film director and producer who directed several \"Abbott & Costello\" films, \"Phantom of the Opera\" (1943), the \"Francis the Talking Mule\" series and created the talking-horse TV series \"Mister Ed\".\n\n A prominent director for Universal Pictures in the 1940s and 1950s, he is perhaps best known today as the man who gave Clint Eastwood his first contract in film.",
+    "Ernst Messerschmid\nProf. Dr. Ernst Willi Messerschmid (born May 21, 1945) is a German physicist and former astronaut.",
+    "Ulrich Walter\nProf. Dr. Ulrich Hans Walter (born February 9, 1954) is a German physicist/engineer and a former DFVLR astronaut.",
+    "Kaiserjäger (film)\nKaiserjäger is a 1956 Austrian film directed by Willi Forst.",
+    "Willi Forst\nWilli Forst, born Wilhelm Anton Frohs (7 April 1903 – 11 August 1980) was an Austrian actor, screenwriter, film director, film producer and singer.\n\n As a debonair actor he was a darling of the German-speaking film audiences, as a director, one of the most significant makers of the Viennese period musical melodramas and comedies of the 1930s known as \"Wiener Filme\".\n\n From the mid-1930s he also recorded many records, largely of sentimental Viennese songs, for the Odeon Records label owned by Carl Lindström AG.",
+    "Winfred Overholser\nWinfred Overholser (1892 – October 6, 1964) was an American psychiatrist, president of the American Psychiatric Association, and for 25 years the superintendent of St. Elizabeths Hospital, a federal institution for the mentally ill in Washington, D.C.",
+    "Elmer Clifton\nElmer Clifton (March 14, 1890 – October 15, 1949) was an American writer, director and actor from the early silent days.\n\n A collaborator of D.W. Griffith, he appeared in \"The Birth of a Nation\" (1915) and \"Intolerance\" (1916) before giving up acting in 1917 to concentrate on work behind the camera, with Griffith and Joseph Henabery as his mentors.\n\n His first feature-length solo effort as a director was \"The Flame of Youth\" with Jack Mulhall.",
+    "Witmer Stone\nWitmer Stone (September 22, 1866 – May 24, 1939) was an American ornithologist, botanist, and mammalogist, and was considered one of the last of the “great naturalists.”\n\n Stone is remembered principally as an ornithologist.\n\n He was president of the American Ornithologists’ Union (AOU) 1920–23, and was editor of the AOU’s periodical \"The Auk\" 1912–1936.\n\n He spearheaded the production of the 4th edition of the AOU checklist, published in 1931.\n\n He worked for over 50 years in the Ornithology Department at the Academy of Natural Sciences of Philadelphia, eventually serving as Director of the institution.\n\n Stone was one of the founding members of the Delaware Valley Ornithological Club (DVOC) in 1890 and was actively involved in the organization for the remainder of his life.\n\n Stone was one of only two scientists (Joseph Grinnell was the other) to serve as president of both the AOU and the American Society of Mammalogists, and he co-authored two popular books about mammals.",
+    "Alf Clausen\nAlf Heiberg Clausen (born March 28, 1941) is an American film and television composer.\n\n He is best known for his work scoring many episodes of \"The Simpsons\", of which he had been the sole composer between 1990 and 2017.\n\n Clausen has scored or orchestrated music for more than 30 films and television shows, including \"Moonlighting\", \"The Naked Gun\", \"ALF\" and \"Ferris Bueller's Day Off\".",
+    "Al Ulmer\nAlfred C. Ulmer, Jr. was born in Jacksonville, Florida in August 1916.\n\n He was of Swiss extraction on his father's side, his father having been born in Zurich.\n\n Ulmer graduated from Princeton University in 1939 and joined the United States Navy prior to the start of World War II, ultimately becoming a major head of intelligence operations during World War II.\n\n He married Doris Gibson Bridges and had three sons (Alfred III, James and Nicolas) and a daughter (Marguerite).\n\n He received the Intelligence Medal of Merit when he retired from his position in 1962.\n\n Ulmer then went on to business and in the 1980s joined the Swiss banking firm Lombard Odier et Cie. in Geneva, later setting up Lombard Odier's operations in Bermuda.\n\n He died on June 22, 2000 in Virginia Beach, Virginia."
+   ]
+  },
+  {
+   "id": "7134ad9f2fdebccf",
+   "gold": [
+    {
+     "sentence": "Swingin' Down Yonder is the first full-length, 12-inch album recorded by Dean Martin for Capitol Records during three sessions in September and October 1954 and February 1955.",
+     "facts": {
+      "0.0": "Swingin' Down Yonder is the first full-length, 12-inch album recorded by Dean Martin for Capitol Records.",
+      "0.1": "Dean Martin recorded Swingin' Down Yonder during three sessions.",
+      "0.2": "The sessions for Swingin' Down Yonder took place in September 1954, October 1954 and February 1955."
+     }
+    },
+    {
+     "sentence": " One of the most popular and enduring American entertainers of the mid-20th century, Martin was nicknamed the \"King of Cool\" for his seemingly effortless charisma and self-assurance.",
+     "facts": {
+      "1.0": "Dean Martin was one of the most popular and enduring American entertainers of the mid-20th century.",
+      "1.1": "Dean Martin was nicknamed the 'King of Cool'.",
+      "1.2": "Dean Martin's nickname 'King of Cool' reflected his seemingly effortless charisma.",
+      "1.3": "Dean Martin's nickname 'King of Cool' reflected his seemingly effortless self-assurance."
+     }
+    }
+   ],
+   "items": [
+    "Swingin' Down Yonder\nSwingin' Down Yonder is the first full-length, 12-inch album recorded by Dean Martin for Capitol Records during three sessions in September and October 1954 and February 1955.\n\n According to the original sleeve notes, all the songs have a \"common geographical root: the American South.\"\n\n In 1963, Capitol Records re-released \"Swingin' Down Yonder\" under the titled \"Southern Style\".",
+    "Here Comes Louis Smith\nHere Comes Louis Smith is the debut album by American trumpeter Louis Smith recorded in 1958 and released on the Blue Note label.\n\n Originally recorded for the Transition label, the company went out of business shortly afterwards and before the recording could be released.\n\n The album masters were acquired by Blue Note's Alfred Lion.",
+    "Things Ain't What They Used to Be\nIn 1941 there was a strike against the American Society of Composers, Authors and Publishers, of which Duke Ellington was a member.\n\n Because of the strike he could not air his songs on the radio.\n\n Instead, he used songs written by his son Mercer and pianist Billy Strayhorn.\n\n Strayhorn's compositions of this time include \"Take the 'A' Train\", \"Chelsea Bridge\" and \"Day Dream\", and Mercer wrote \"Things Ain't What They Used to Be\", \"Blue Serge\" and \"Moon Mist\".",
+    "Willie and the Hand Jive\n\"Willie and the Hand Jive\" is a song written by Johnny Otis and originally released as a single in 1958 by Johnny Otis Show, reaching #9 on the \"Billboard\" Hot 100 chart and #5 on the Billboard R&B chart.\n\n The song has a Bo Diddley beat and was partly inspired by the music sung by a chain gang Otis heard while he was touring.\n\n The lyrics are about a man who became famous for doing a dance with his hands, but the song has been accused of glorifying masturbation.\n\n It has since been covered by numerous artists, including The Strangeloves, Eric Clapton, Cliff Richard, Kim Carnes, George Thorogood and The Grateful Dead.\n\n Clapton's 1974 version was also released as a single and also reached the Billboard Top 40, peaking at #26.\n\n Thorogood's 1985 version reached #25 on the Hot Mainstream Rock Tracks chart.",
+    "Basie Jazz\nBasie Jazz is an album by pianist/bandleader Count Basie recorded in 1952 and released on the Clef label in 1954.\n\n Selections from this album were also released on the 1956 Clef LPs \"The Swinging Count!\n\n\" and \"Basie Rides Again!\n\n\".",
+    "Cecil Gant\nCecil Gant (April 4, 1913 – February 4, 1951) was an American blues singer, songwriter and pianist, whose recordings of both ballads and \"fiery piano rockers\" were successful in the mid- and late 1940s, and influenced the early development of rock and roll.\n\n His biggest hit was the 1944 ballad, \"I Wonder\".",
+    "Graph query row:\nperson: Dean Martin\nnicknames: ['Dino Paul Crocetti', 'King of Cool']",
+    "Jack Johnson (album)\nJack Johnson, later reissued as A Tribute to Jack Johnson, is a 1971 studio album and soundtrack by American jazz trumpeter, composer, and bandleader Miles Davis.\n\n In 1970, Davis was asked by Bill Cayton to record music for his documentary of the same name on the life of boxer Jack Johnson.\n\n Johnson's saga resonated personally with Davis, who wrote in the album's liner notes of Johnson's mastery as a boxer, his affinity for fast cars, jazz, clothes, and beautiful women, his unreconstructed blackness, and his threatening image to white men.\n\n This was the second film score he had composed, after \"Ascenseur pour l'échafaud\" in 1957.",
+    "One O'Clock Jump\n\"One O'Clock Jump\" is a jazz standard, a 12-bar blues instrumental, written by Count Basie in 1937.\n\n The melody derived from band members' riffs--Basie rarely wrote down musical ideas, so Eddie Durham and Buster Smith helped him crystallize his ideas.\n\n The original 1937 recording of the tune by Basie and his band is noted for the saxophone work of Herschel Evans and Lester Young, trumpet by Buck Clayton, Walter Page on bass and Basie himself on piano.",
+    "Collins &amp; Harlan\nCollins & Harlan, the team of Arthur Collins and Byron G. Harlan formed a popular comic duet between 1903 and 1926.\n\n They sang ragtime standards as well as what were known as \"Coon songs\" – music sung by white performers in a black dialect.\n\n Their material also employed many other stereotypes of the time including Irishmen and farmers.\n\n Fellow recording artist Billy Murray nicknamed them \"The Half-Ton Duo\" as both men were rather overweight.\n\n Collins and Harlan produced many number one hits with recordings of minstrel songs such as \"My Gal Irene\", \"I Know Dat I'll be Happy Til I Die\", \"Who Do You Love?\"\n\n and \"Down Among the Sugarcane\".\n\n Their song \"That Funny Jas Band from Dixieland\", recorded November 8, 1916, is among the first recorded uses of the word \"jas\" which eventually evolved to \"jass\", and to the current spelling \"jazz\"."
+   ]
+  },
+  {
+   "id": "f8db90fe163a6f92",
+   "gold": [
+    {
+     "sentence": " is a board game created by Glenn Drover and published by Eagle Games in 2003.",
+     "facts": {
+      "0.0": "The board game in this sentence was created by Glenn Drover.",
+      "0.1": "The board game in this sentence was published by Eagle Games in 2003."
+     }
+    },
+    {
+     "sentence": "Can't Stop is a board game designed by Sid Sackson originally published by Parker Brothers in 1980, and was long out of print in the United States.",
+     "facts": {
+      "1.0": "Can't Stop is a board game designed by Sid Sackson.",
+      "1.1": "Can't Stop was originally published by Parker Brothers in 1980.",
+      "1.2": "Can't Stop was long out of print in the United States."
+     }
+    }
+   ],
+   "items": [
+    "Uncle Wiggily (board game)\nUncle Wiggily Game is a track board game based on a character in a series of children's books by American writer Howard Roger Garis.\n\n The game is of the \"racing\" variety in the style of the European \"Goose Game\".\n\n Players advance along the track from Uncle Wiggily's Bungalow to Dr. Possum's House.\n\n There is no optimal strategy involved as play entirely rests upon a random drawing of the cards.\n\n The game was first published by Milton Bradley in 1916 and has seen several editions with minor modifications over the years.\n\n \"Uncle Wiggily\" remains one of the first and favorite games of childhood, and, with \"Candy Land\", is considered a classic juvenile American board game.",
+    "Can't Stop (board game)\nCan't Stop is a board game designed by Sid Sackson originally published by Parker Brothers in 1980, and was long out of print in the United States.\n\n It was reprinted by Face 2 Face Games in 2007.\n\n An iOS version was developed by Playdek and released in 2012.\n\n The goal of the game is to \"claim\" (get to the top of) three of the columns before any of the other players can.\n\n But the more that the player risks rolling the dice during a turn, the greater the risk of losing the advances made during that turn.",
+    "Atari Corporation\nAtari Corporation was an American manufacturer of computers and video game consoles from 1984 to 1996.\n\n Atari Corp. was founded in July 1984 when Warner Communications sold the home computing and game console divisions of Atari, Inc. to Jack Tramiel.\n\n Its chief products were the Atari ST, , Atari 7800, Atari Lynx, and Atari Jaguar.\n\n The company reverse merged with JTS Inc. in 1996, becoming a small division, which itself closed when JTS liquidated the IP to Hasbro Interactive in 1998.",
+    "Plaid Hat Games\nPlaid Hat Games is a United States-based board game studio.\n\n Plaid Hat Games was founded in 2009.\n\n Board game designer Colby Dauch formed a board game publishing company in order to release the companies first game, Summoner Wars.",
+    "Kill Doctor Lucky\nKill Doctor Lucky is a humorous board game designed by James Ernest and released in 1996 by Cheapass Games.\n\n In 1998, \"Kill Doctor Lucky\" won the Origins Award for \"Best Abstract Board Game of 1997\".",
+    "Atari ST\nThe Atari ST is a line of home computers from Atari Corporation and the successor to the Atari 8-bit family.\n\n The initial ST model, the 520ST, saw limited release in April-June 1985 and was widely available in July.\n\n The Atari ST is the first personal computer to come with a bitmapped color GUI, using a version of Digital Research's GEM released in February 1985.\n\n The 1040ST, released in 1986, is the first personal computer to ship with a megabyte of RAM in the base configuration and also the first with a cost-per-kilobyte of less than US$1.",
+    "ST/Amiga Format\nST Amiga Format was a computer magazine that covered the Atari ST and Amiga computers.\n\n It was published by Future plc to cover the ever growing market for the, then-new, 16-bit home computers.\n\n Issues were equally balanced with coverage for both Commodore Amiga and Atari ST systems.\n\n Issue 1 included a main feature 'ST or Amiga?\n\n The Choice is Yours', where the pros and cons for each machine was examined.",
+    "Alhambra (board game)\nAlhambra (German: Der Palast von Alhambra , literally \"The Palace of the Alhambra\") is a 2003 tile-based German-style board game designed by Dirk Henn.\n\n It was originally published in Germany by Queen Games in a language-interdependent version; an English-specific version was released in North America by the now-defunct Überplay.\n\n The game is an Arabian-themed update, set during the construction of the Alhambra palace in 14th century Granada, of the 1998 stock trading board game \"Stimmt So!\"\n\n, which in turn was an update of the 1992 mafia influence board game \"Al Capone\"; the original version was subsequently released as \"\".",
+    "Castle Ravenloft Board Game\nCastle Ravenloft Board Game is a 2010 board game published by Wizards of the Coast.\n\n It was the first game released in the Dungeons & Dragons Adventure System board game series.",
+    "Attack! (board game)\nAttack!\n\n is a board game created by Glenn Drover and published by Eagle Games in 2003.\n\n It is a light war game that is midway between \"Risk\" and \"Axis and Allies\" in complexity.\n\n The game is loosely set in the 1930s and includes plastic pieces featuring tanks, planes, infantry, and artillery.\n\n \"Attack!\"\n\n won the Origins Award for \"Best Historical Game 2003\"."
+   ]
+  },
+  {
+   "id": "48ccf19fa1ecef41",
+   "gold": [
+    {
+     "sentence": "Ralph Foster Smart {'1': \", '2': \", '3': \", '4': \"} (27 August 1908 – 12 February 2001) was a film and television producer, director, and writer, born in England to Australian parents.",
+     "facts": {
+      "0.0": "Ralph Foster Smart was born on 27 August 1908.",
+      "0.1": "Ralph Foster Smart died on 12 February 2001.",
+      "0.2": "Ralph Foster Smart was a film producer.",
+      "0.3": "Ralph Foster Smart was a television producer.",
+      "0.4": "Ralph Foster Smart was a director.",
+      "0.5": "Ralph Foster Smart was a writer.",
+      "0.6": "Ralph Foster Smart was born in England.",
+      "0.7": "Ralph Foster Smart's parents were Australian."
+     }
+    },
+    {
+     "sentence": "Randolph Severn \"Trey\" Parker III (born October 19, 1969) is an American actor, animator, writer, director, producer, singer, and songwriter.",
+     "facts": {
+      "1.0": "Randolph Severn 'Trey' Parker III was born on October 19, 1969.",
+      "1.1": "Randolph Severn 'Trey' Parker III is an American actor.",
+      "1.2": "Randolph Severn 'Trey' Parker III is an animator.",
+      "1.3": "Randolph Severn 'Trey' Parker III is a writer.",
+      "1.4": "Randolph Severn 'Trey' Parker III is a director.",
+      "1.5": "Randolph Severn 'Trey' Parker III is a producer.",
+      "1.6": "Randolph Severn 'Trey' Parker III is a singer.",
+      "1.7": "Randolph Severn 'Trey' Parker III is a songwriter."
+     }
+    }
+   ],
+   "items": [
+    "Townsend Coleman\nTownsend Putnam Coleman III (born May 28, 1954) is an American voice actor who performed in many animated series and TV commercials beginning in the early 1980s.\n\n Among his most notable roles are Michaelangelo from \"Teenage Mutant Ninja Turtles\", Wayne Gretzky on \"ProStars\" and the title character in \"Where's Waldo?\n\n\" and the eponymous \"The Tick\" and he also did additional voices in \"Dexter's Laboratory\", \"The Powerpuff Girls\", \"Adventure Time\", \"Animaniacs\", \"The Buzz on Maggie\", \"Camp Lazlo\", \"CatDog\", \"Catscratch\", \"Danny Phantom\", \"Dave the Barbarian\", \"\", \"The Fairly OddParents\", \"Foster's Home for Imaginary Friends\", \"Gravity Falls\", \"Hi Hi Puffy AmiYumi\", \"\", \"The Loud House\", \"The Mighty B!\n\n\", \"My Life As A Teenage Robot\" and \"The Replacements\" and he also did the voice of Knotty in \"\" (1992) and he also did additional voices in films \"Fantasia 2000\" (1999) and \"Sing\" (2016)",
+    "Jimmy Tatro\nJames Richard Tatro (born February 16, 1992) is an American actor, comedian, writer and YouTube personality.\n\n He is the creator and star of the YouTube channel \"LifeAccordingToJimmy\", which has about 2.7 million subscribers and over 440 million video views.\n\n Tatro writes, produces and directs each of his video sketches with his friend, Christian A. Pierce.\n\n Tatro has appeared in \"Divergent\", \"Grown Ups 2\", \"22 Jump Street\" and \"\", and will appear in the film \"Camp Manna\" alongside Gary Busey, set to be released in 2017.\n\n He is also starring in the true-crime satire, \"American Vandal\", in which he plays Dylan Maxwell, the accused vandal.\n\n He will also appear in the movie, Action No. 1, a film about a group of people who attempt to steal the first comic book with Superman off the actor Nicholas Cage.",
+    "Trey Parker\nRandolph Severn \"Trey\" Parker III (born October 19, 1969) is an American actor, animator, writer, director, producer, singer, and songwriter.\n\n He is known for co-creating \"South Park\" (1997–present) along with his creative partner Matt Stone, as well as co-writing and co-directing the Tony Award-winning musical \"The Book of Mormon\" (2011).\n\n Parker was interested in film and music as a child, and attended the University of Colorado, Boulder following high school, where he met Stone.\n\n The two collaborated on various short films, and starred in a feature-length musical, titled \"Cannibal!\n\n The Musical\" (1993).",
+    "Rosie O'Donnell\nRoseann O'Donnell (born March 21, 1962) is an American comedian, actress, author, and television personality.\n\n She has been a magazine editor and continues to be a celebrity blogger, a lesbian rights activist, a television producer, and a collaborative partner in the LGBT family vacation company, R Family Vacations.",
+    "Bill Barretta\nWilliam Paul \"Bill\" Barretta (born June 19, 1964) is an American puppeteer and producer who has been performing with The Muppets since 1991, when he puppeteered the body of Sinclair family patriarch, Earl Sinclair on \"Dinosaurs\".\n\n He later developed several new characters on \"Muppets Tonight\", including Pepe the King Prawn, Johnny Fiama, Big Mean Carl and Bobo the Bear.\n\n Along with having his own Muppet characters, Barretta has taken over several of Jim Henson's roles, such as Dr. Teeth, Rowlf the Dog, Mahna Mahna and Swedish Chef, and briefly took over Jerry Nelson's role of Lew Zealand.\n\n His film debut as a principal puppeteer was in 1996's \"Muppet Treasure Island\" as Clueless Morgan.\n\n In addition, Barretta has produced two of the Muppets' television films, \"It's a Very Merry Muppet Christmas Movie\" (2002) and \"The Muppets' Wizard of Oz\" (2005).\n\n Barretta also provides additional voices on \"Kim Possible\".",
+    "Jerry Beck\nJerry Beck (born February 9, 1955 in New York City) is an American animation historian, author, blogger, and video producer.\n\n The author and/or editor of several books on classic American animation and classic characters, including \"The 50 Greatest Cartoons\" (1994), \"The Animated Movie Guide\" (2005), \"Not Just Cartoons: Nicktoons!\"\n\n (2007), \"The Flintstones: The Official Guide to the Cartoon Classic\" (2011), \"The Hanna-Barbera Treasury: Rare Art Mementos from Your Favorite Cartoon Classics\" (2007), \"The SpongeBob SquarePants Experience: A Deep Dive into the World of Bikini Bottom\" (2013), \"Pink Panther: The Ultimate Guide\" (2005), and \"Looney Tunes and Merrie Melodies: A Complete Illustrated Guide to the Warner Bros.\n\n Cartoons\" (with Will Friedwald, 1989) alongside \"The 100 Greatest Looney Tunes Cartoons\" (2010).\n\n He is also an authority on the making of modern films, with his books detailing the art of \"Mr.",
+    "Everett Greenbaum\nEverett Greenbaum (December 20, 1919 – July 11, 1999) was an American television and film writer and actor who contributed to such shows as \"The Andy Griffith Show\" (24 Episodes), \"M*A*S*H\" (35 Episodes), \"Love American Style\", \"The Real McCoys\" (32 Episodes), \"Sanford and Son\", and \"The George Gobel Show\".\n\n Greenbaum was a co-creator with Jim Fritzell of \"Mister Peepers\" an important early television show which starred Wally Cox.\n\n He wrote the Hollywood feature film \"Good Neighbor Sam\", as well as a series of films starring Don Knotts that included \"The Shakiest Gun in the West\", \"The Reluctant Astronaut\", and \"The Ghost and Mr. Chicken\".",
+    "Ralph Smart\nRalph Foster Smart {'1': \", '2': \", '3': \", '4': \"} (27 August 1908 – 12 February 2001) was a film and television producer, director, and writer, born in England to Australian parents.",
+    "Terry Ray (actor)\nTerry Ray (born February 12, 1961) is an American actor, screenwriter, and producer.\n\n Some of his work includes \"Gaydar\" and \"Cost of Living\" (2009).\n\n Ray is the creator and writer of \"here!\n\n TV\"'s sitcom \"From Here on OUT\", the first original gay sitcom created by a gay network.\n\n Terry stars in the sitcom, along with Juliet Mills, Suzanne Whang and T.J. Hoban.\n\n<br><br>Terry Ray's 1987 appearance on Scrabble (game show) is noted as number 3 in the \"10 Great Gay Moments in Game Show History\", after Charles Nelson Reilly and Paul Lynde.\n\n In the same appearance, Terry was also named as one of the \"5 Weirdest Game Show Contestants Ever\", by Movieline.\n\n<br><br>Terry’s first professional writing job was the stage performance “Hollywood Goes Classical\" at the venerable Dorothy Chandler Pavilion starring Mickey Rooney, Michael York, Dean Jones, Rhonda Fleming and several other classic film stars.",
+    "Jerry Beck\nPeabody and Sherman\", DreamWorks' \"Madagascar\", and \"Bee Movie\".\n\n Beck is also an entertainment industry consultant for TV and home entertainment productions and releases related to classic cartoons and operates the blog \"Cartoon Research.\"\n\n He appears frequently as a documentary subject and audio commentator on releases of A&E's \"Cartoons Go to War\" as well as DVD collections of \"Looney Tunes\", \"Popeye the Sailor\", and \"Woody Woodpecker\" cartoons, on which he serves as consultant and curator."
+   ]
+  },
+  {
+   "id": "a9824f8124cc9b4a",
+   "gold": [
+    {
+     "sentence": "Operation Lighthouse was the name given to the failed experimental launch of four Aggregate 3 liquid-fuel rockets by Wernher von Braun and Walter Dornberger on the German island of Greifswalder Oie in December 1937.",
+     "facts": {
+      "0.0": "Operation Lighthouse was the name given to a failed experimental launch.",
+      "0.1": "The Operation Lighthouse launch involved four Aggregate 3 liquid-fuel rockets.",
+      "0.2": "Wernher von Braun conducted the Operation Lighthouse launch.",
+      "0.3": "Walter Dornberger conducted the Operation Lighthouse launch.",
+      "0.4": "The Operation Lighthouse launch took place on the German island of Greifswalder Oie.",
+      "0.5": "The Operation Lighthouse launch took place in December 1937."
+     }
+    },
+    {
+     "sentence": "Major-General Dr. Walter Robert Dornberger (6 September 1895 – 27 June 1980) was a German Army artillery officer whose career spanned World War I and World War II.",
+     "facts": {
+      "1.0": "Major-General Dr. Walter Robert Dornberger was born on 6 September 1895.",
+      "1.1": "Walter Robert Dornberger died on 27 June 1980.",
+      "1.2": "Walter Robert Dornberger was a German Army artillery officer.",
+      "1.3": "Walter Robert Dornberger's career spanned World War I.",
+      "1.4": "Walter Robert Dornberger's career spanned World War II."
+     }
+    }
+   ],
+   "items": [
+    "Walter Dornberger\nMajor-General Dr. Walter Robert Dornberger (6 September 1895 – 27 June 1980) was a German Army artillery officer whose career spanned World War I and World War II.\n\n He was a leader of Nazi Germany's V-2 rocket program and other projects at the Peenemünde Army Research Center.",
+    "Man Will Conquer Space Soon!\nMan Will Conquer Space Soon!\n\n was the title of a famous series of 1950s magazine articles in \"Collier's\" detailing Wernher von Braun's plans for manned spaceflight.\n\n Edited by Cornelius Ryan, the individual articles were authored by such space notables of the time as Willy Ley, Fred Lawrence Whipple, Dr. Joseph Kaplan, Dr. Heinz Haber, and von Braun.\n\n The articles were illustrated with paintings and drawings by Chesley Bonestell, Fred Freeman, and Rolf Klep, some of the finest magazine illustrators of the time.",
+    "Von Braun Ferry Rocket\nVon Braun Ferry Rocket was a concept design for a shuttle spacecraft that was developed by Wernher von Braun in a seminal series of early-1950s Collier's magazine articles, Man Will Conquer Space Soon!\n\n by Wernher von Braun \"et al.\" The Ferry Rocket concept has evolved over time.",
+    "The entries cover German rocket scientist Magnus “Mac” von Braun, Wernher’s brother; Wernher von Braun’s Ferry Rocket shuttle concept and the 1937 failed Aggregate 3 launches (Operation Lighthouse); and Collier’s influential 1950s spaceflight series *Man Will Conquer Space Soon!*. They also profile German astronauts Hans Schlegel, Ernst Messerschmid, Ulrich Walter, Sigmund Jähn, Ulf Merbold, and Soyuz",
+    "Von Braun Center for Science &amp; Innovation\nThe Von Braun Center for Science & Innovation (VCSI ) is a non-profit research and development organization based in Huntsville, Alabama and is named for pioneering aerospace engineer Wernher von Braun.\n\n VCSI is affiliated with NASA, Department of Defense and other federal government agencies.",
+    "Magnus von Braun\nMagnus \"Mac\" Freiherr von Braun (10 May 1919 – 21 June 2003) was a German chemical engineer, Luftwaffe aviator, and rocket scientist at Peenemünde, the Mittelwerk, and after emigrating to the United States via Operation Paperclip, at Fort Bliss.\n\n He was the brother of Sigismund and Wernher von Braun.",
+    "The entries cover: lunar crater von Braun near Oceanus Procellarum, foreshortened from Earth; Antarctic Mount von Braun, named for Wernher von Braun; Huntsville’s NASA- and defense-affiliated Von Braun Center; Saturn I’s Project Highwater, which studied high-altitude water release; Blue Origin’s stepwise VTVL spaceflight program; black-hole superradiant instability (“bombs”), V404 Cygni and M33 X-7 binaries, erg",
+    "Operation Lighthouse (1937)\nOperation Lighthouse was the name given to the failed experimental launch of four Aggregate 3 liquid-fuel rockets by Wernher von Braun and Walter Dornberger on the German island of Greifswalder Oie in December 1937.",
+    "Von Braun (crater)\nvon Braun, named after the rocket pioneer Wernher von Braun, is a lunar crater located near the northwestern limb of the Moon.\n\n It lies along the western edge of the Oceanus Procellarum, to the northeast of the crater Lavoisier.\n\n The northeastern rim of this crater is on the edge of the Sinus Roris, a bay feature in the northwestern part of the Oceanus Procellarum.\n\n Due to its proximity to the limb, this crater appears significantly foreshortened when viewed from the Earth.",
+    "Mount Von Braun\nMount Von Braun ( ) is a mountain (3,275 m) located 4 nautical miles (7 km) south of Mount Sabine in the Admiralty Mountains.\n\n Mapped by United States Geological Survey (USGS) from surveys and U.S. Navy air photos, 1960–63.\n\n Named by Advisory Committee on Antarctic Names (US-ACAN) for Wernher von Braun of the National Aeronautics and Space Administration, a visitor at McMurdo Station, 1966–67."
+   ]
+  },
+  {
+   "id": "16802afc81b8d087",
+   "gold": [
+    {
+     "sentence": " In the category of pornographic websites, it was surpassed in the rankings by competitor sites xHamster, XVideos, and Pornhub, as well as the adult webcam site LiveJasmin.",
+     "facts": {
+      "0.0": "In the category of pornographic websites, this site was surpassed in the rankings by xHamster.",
+      "0.1": "In the category of pornographic websites, this site was surpassed in the rankings by XVideos.",
+      "0.2": "In the category of pornographic websites, this site was surpassed in the rankings by Pornhub.",
+      "0.3": "In the category of pornographic websites, this site was surpassed in the rankings by the adult webcam site LiveJasmin.",
+      "0.4": "xHamster, XVideos, and Pornhub are competitor sites."
+     }
+    },
+    {
+     "sentence": "XVideos is the world's largest pornographic video sharing and viewing website.",
+     "facts": {
+      "1.0": "XVideos is the world's largest pornographic video sharing and viewing website."
+     }
+    }
+   ],
+   "items": [
+    "Optimus S.A.\nOptimus S.A. was a Polish company specializing in assembly of PCs, fiscal systems, and providing complex IT solutions for companies.In the 1990s Optimus was one of the leaders of the Polish computer market.",
+    "XVideos\nXVideos is the world's largest pornographic video sharing and viewing website.\n\n It's registered to the Polish company, WGCZ Holding.\n\n Alexa ranks it as the 50th most visited website in the world.",
+    "XHamster\nxHamster is a pornographic media and social networking site headquartered in Limassol, Cyprus.\n\n xHamster serves user-submitted pornographic videos, webcam models, pornographic photographs, and erotic literature, and incorporates social networking features.\n\n xHamster was founded in 2007.\n\n With more than 10 million members, it is the third most popular pornography website on the Internet after XVideos and Pornhub.",
+    "The entries survey magazines, broadcasters, websites, and media demographics. Publications range from children’s nature titles and women’s magazines to political, religious, literary, and LGBTQ+ outlets; profiles include Rosie O’Donnell. Radio and TV examples span US local stations, regional Spectrum News channels, and international youth/children’s networks. Adult-video sites include xHamster, YouPorn, and XVideos. Advertisers’ “key demographic” often means adults 18–49, though targets vary",
+    "Pravda.ru\nPravda.ru (formerly Pravda Online) is a Russian internet news website established in 1999 and owned by Pravda.ru Holding (headed by Vadim Gorshenin).",
+    "Pioneer Pekao Investments\nPioneer Pekao is a Polish company managing several investment funds in Poland.\n\n It is the biggest and first investment funds manager on the Polish market.",
+    "Kross SA\nKross is a Polish company within the sports industry that makes bicycles and bicycle frames.\n\n The company is currently the largest in Poland manufacturing bicycles sold in the Polish market.\n\n In 2005 the company sold almost 800,000 products, half of which were exported to 35 countries, 30 of which are in Europe.",
+    "YouPorn\nYouPorn is a free pornographic video sharing website and one of the 100 most accessed websites in the world.\n\n Since launching in August 2006, it grew to become the most popular pornographic website on the internet, and, in November 2007, it was reported to be the largest free pornographic website as well.\n\n As of February 2013, it was the 83rd most popular website overall and the fifth most popular pornographic website.\n\n In the category of pornographic websites, it was surpassed in the rankings by competitor sites xHamster, XVideos, and Pornhub, as well as the adult webcam site LiveJasmin.",
+    "Viceland Canada, owned by Rogers, offers youth-oriented lifestyle documentaries and reality shows. Cartoon Network MENA and Africa serve children across their regions; Africa was formerly HQ, separated from the UK feed in 1999 and independent by 2001. Adult sites: xHamster (founded 2007, Cyprus-based), YouPorn (launched 2006), and XVideos (Polish-owned) share pornographic videos; xHamster and XVideos outranked YouPorn.",
+    "XY TV\nIt launched in December 2003 and distribution was limited to select cable companies.\n\n As of May 31, 2006, XY.tv has ceased operations, and is no longer broadcasting.\n\n It was wholly owned by American radio personality John Garabedian."
+   ]
+  }
+ ]
+}

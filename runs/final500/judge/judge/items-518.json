@@ -1,0 +1,400 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "36788dac772e647a",
+   "gold": [
+    {
+     "sentence": "The Livesey Hall War Memorial commemorates the fallen of World War I and World War II who had been employed by the South Suburban Gas Company of London.",
+     "facts": {
+      "0.0": "The Livesey Hall War Memorial commemorates the fallen of World War I.",
+      "0.1": "The Livesey Hall War Memorial commemorates the fallen of World War II.",
+      "0.2": "The commemorated fallen had been employed by the South Suburban Gas Company of London."
+     }
+    },
+    {
+     "sentence": " Over 60 million people were killed, which was about 3% of the 1940 world population (est. 2.3 billion).",
+     "facts": {
+      "1.0": "Over 60 million people were killed.",
+      "1.1": "The deaths were about 3% of the 1940 world population.",
+      "1.2": "The estimated 1940 world population was 2.3 billion."
+     }
+    }
+   ],
+   "items": [
+    "Livesey Hall War Memorial\nThe Livesey Hall War Memorial commemorates the fallen of World War I and World War II who had been employed by the South Suburban Gas Company of London.\n\n It is also a tribute to those employees who served in the wars.\n\n The monument was designed and executed by British sculptor Sydney March, of the March family of artists.",
+    "Vietnam War Memorial, Hanoi\nThe War Memorial in Hanoi is located across the Ba Dinh Square, across the Ho Chi Minh Mausoleum and close to Hanoi Citadel.\n\n Constructed in 1993 in a fusion of traditional Vietnamese and modernist architecture, the memorial commemorates men and women who sacrificed themselves during the Second Indochina War.\n\n The war is known by many names, e.g. as the American War in Vietnam.\n\n The memorial is a focal point for state functions, commemorating the war dead.",
+    "Wood Green War Memorial\nThe Wood Green War Memorial is located on the High Road, Wood Green, in the London Borough of Haringey.\n\n It was erected in 1920 and paid for by public subscription of the people of Wood Green to remember the men of the area who died during the First World War.\n\n It was subsequently adapted to include the dead of the Second World War.\n\n It is grade II listed with Historic England.",
+    "Rainham War Memorial\nThe Rainham War Memorial commemorates soldiers killed in both World Wars as well as civilian casualties of World War II.",
+    "Alamein Memorial\nThe Alamein Memorial is a Commonwealth War Graves Commission war memorial in the El Alamein War Cemetery, El Alamein, Egypt.\n\n The memorial commemorates 11,866 Commonwealth forces members who died during World War II.\n\n The memorial was designed by Hubert Worthington and unveiled by Viscount Montgomery of Alamein on 24 October 1954.",
+    "World War II casualties\nWorld War II was the deadliest military conflict in history in absolute terms of total casualties.\n\n Over 60 million people were killed, which was about 3% of the 1940 world population (est. 2.3 billion).\n\n The tables below give a detailed country-by-country count of human losses.\n\n World War II fatality statistics vary, with estimates of total deaths ranging from 50 million to more than 80 million.\n\n The higher figure of over 80 million includes deaths from war-related disease and famine.\n\n Civilians killed totalled 50 to 55 million, including 19 to 28 million from war-related disease and famine.\n\n Military deaths from all causes totalled 21 to 25 million, including deaths in captivity of about 5 million prisoners of war.",
+    "Tower Hill Memorial\nThe Tower Hill Memorial is a Commonwealth War Graves Commission war memorial on the south side of Trinity Square Gardens, in London, England.\n\n The memorial commemorates those from the Merchant Navy and fishing fleets who died during both world wars and have \"no grave but the sea\".\n\n The memorial was designed by Edwin Lutyens with sculpture work by William Reid Dick, the Second World War extension was designed by Edward Maufe with sculpture work by Charles Wheeler.",
+    "Portsmouth Naval Memorial\nThe Portsmouth Naval Memorial, sometimes known as Southsea Naval Memorial, is a war memorial in Portsmouth, Hampshire, England, on Southsea Common beside Clarence Esplanade, between Clarence Pier and Southsea Castle.\n\n The memorial commemorates approximately 25,000 British and Commonwealth sailors who were lost in the World Wars, around 10,000 sailors in the First World War and 15,000 in the Second World War.\n\n The memorial features a central obelisk, with names of the dead on bronze plaques arranged around the memorial according to the year of death.",
+    "Freetown Memorial\nThe Freetown Memorial is a Commonwealth War Graves Commission war memorial located outside the Secretariate Building in Freetown, Sierra Leone.\n\n The memorial generally commemorates Soldiers from Sierra Leone who died whilst serving with the Royal West African Frontier Force in West Africa and whose graves are not known.\n\n The Freetown Memorial commemorates 1,109 First World War casualties and 247 from the Second World War.",
+    "Arras Flying Services Memorial\nThe Arras Flying Services Memorial Commonwealth War Graves Commission war memorial in the Faubourg d'Amiens Cemetery, Arras, France.\n\n The memorial commemorates nearly 1,000 airmen from forces of the Commonwealth who were killed on the Western Front during World War I and who have no known grave.\n\n The memorial was designed by Edwin Lutyens, sculpted by William Reid Dick and unveiled by Hugh Trenchard, 1st Viscount Trenchard, Marshal of the Royal Air Force on 31 July 1932."
+   ]
+  },
+  {
+   "id": "5a70aba117b0e893",
+   "gold": [
+    {
+     "sentence": "Kresy Wschodnie or Kresy (] , Eastern Borderlands, or Borderlands) was a region of the Second Polish Republic during the interwar period constituting nearly half of the territory of the state; where the ethnic Poles, being the largest group, were roughly equal in their number to the size of the national minorities (with notable exceptions).",
+     "facts": {
+      "0.0": "Kresy Wschodnie, also called Kresy, Eastern Borderlands, or Borderlands, was a region of the Second Polish Republic during the interwar period.",
+      "0.1": "Kresy constituted nearly half of the territory of the Second Polish Republic.",
+      "0.2": "In Kresy, ethnic Poles were the largest group.",
+      "0.3": "In Kresy, ethnic Poles were roughly equal in number to the size of the national minorities.",
+      "0.4": "The rough equality of ethnic Poles with the national minorities in Kresy had notable exceptions."
+     }
+    },
+    {
+     "sentence": " It was drawn for the first time by the Supreme War Council as the demarcation line between the newly emerging states, the Second Polish Republic, and the Soviet Union.",
+     "facts": {
+      "1.0": "Kresy was drawn for the first time by the Supreme War Council.",
+      "1.1": "Kresy was drawn as the demarcation line between the newly emerging states, the Second Polish Republic and the Soviet Union."
+     }
+    }
+   ],
+   "items": [
+    "New York – New Jersey Line War\nThe New York – New Jersey Line War (also known as the N.J. Line War) refers to a series of skirmishes and raids that took place for over half a century between 1701 and 1765 at the disputed border between two American colonies, the Province of New York and the Province of New Jersey.",
+    "List of Soviet and Eastern Bloc defectors\nSoon after the formation of the Soviet Union, emigration restrictions were put in place to keep citizens from leaving the various countries of the Soviet Socialist Republics, though some defections still occurred.\n\n During and after World War II, similar restrictions were put in place in non-Soviet countries of the Eastern Bloc, which consisted of the Communist states of Eastern Europe.",
+    "Warsaw Pact\nThe Warsaw Pact, formally the Treaty of Friendship, Cooperation, and Mutual Assistance, was a collective defence treaty signed in Warsaw among the Soviet Union and seven Soviet satellite states of Central and Eastern Europe during the Cold War.\n\n The Warsaw Pact was the military complement to the Council for Mutual Economic Assistance (CoMEcon), the regional economic organization for the socialist states of Central and Eastern Europe.\n\n The Warsaw Pact was created in reaction to the integration of West Germany into NATO in 1955 per the London and Paris Conferences of 1954, but it is also considered to have been motivated by Soviet desires to maintain control over military forces in Central and Eastern Europe.",
+    "Curzon Line\nThe history of the Curzon Line, with minor variations, goes back to the period following World War I.\n\n It was drawn for the first time by the Supreme War Council as the demarcation line between the newly emerging states, the Second Polish Republic, and the Soviet Union.\n\n The proposal was put forward by British Foreign Secretary George Curzon, to serve as a diplomatic basis for the future border agreement, and in that form, it never materialized because the war went on.",
+    "Kresy\nIn September 1939, after the Soviet Union joined Nazi Germany in their attack on Poland in accordance with the Molotov–Ribbentrop Pact, the territories were incorporated into Soviet Ukraine, Belarus and Lithuania in the atmosphere of terror.",
+    "Kresy\nKresy Wschodnie or Kresy (] , Eastern Borderlands, or Borderlands) was a region of the Second Polish Republic during the interwar period constituting nearly half of the territory of the state; where the ethnic Poles, being the largest group, were roughly equal in their number to the size of the national minorities (with notable exceptions).\n\n Administratively, the territory of Kresy was composed of voivodeships of Lwów, Nowogródek, Polesie, Stanisławów, Tarnopol, Wilno, Wołyń, and the Białystok.\n\n Today, these territories are divided between Western Ukraine, Western Belarus, and south-eastern Lithuania, with such major cities as Lviv, Vilnius, and Grodno no longer in Poland.\n\n In the Second Polish Republic the term \"Kresy\" roughly equated with the lands beyond the so-called Curzon Line, which was suggested after World War I in December 1919 by the British Foreign Office as the eastern border of the re-emerging sovereign Republic following the century of partitions.",
+    "Soviet Unterzoegersdorf\nSoviet Unterzoegersdorf (German: \"Sowjet-Unterzögersdorf\" ) is a fictitious country created by the art/technology/theory group monochrom.\n\n It is the \"last existing appanage republic of the USSR\", located inside the Republic of Austria.\n\n Unterzögersdorf is partially based on an existing village well-known to Johannes Grenzfurthner, the creator of the concept.\n\n As a kid and teenager, Grenzfurthner spent a lot of time at his grandparents' farm in the small village of Unterzögersdorf (a cadastral municipality of Stockerau).\n\n His grandparents' stories about the Naziism, WWII and the Soviet occupation in allied-occupied Austria (1945-1955) form the inspirational basis of the long-term project \"Soviet Unterzoegersdorf\".",
+    "Battle of Berestechko\nThe Battle of Berestechko (Polish: \"Bitwa pod Beresteczkiem\" ; Ukrainian: Берестецька битва, Битва під Берестечком ) was fought between the Ukrainian Cossacks, led by Hetman Bohdan Khmelnytsky, aided by their Crimean Tatar allies, and a Polish army under King John II Casimir.\n\n It was a battle of a Cossack rebellion in Ukraine that took place in the years 1648–1657 after the expiration of a two-year truce.\n\n Fought from 28 to 30 June 1651, the battle took place in the province of Volhynia, on the hilly plain south of the Styr River.\n\n The Polish camp was on the river opposite Berestechko and faced south, towards the Cossack army about two kilometers away, whose right flank was against the River Pliashivka (Pliashova) and the Tatar army on their left flank.\n\n It was probably the largest European land battle of the 17th century.",
+    "Eastern Bloc\nThe Eastern Bloc was the group of socialist states of Central and Eastern Europe, generally the Soviet Union and the countries of the Warsaw Pact.\n\n The terms Communist Bloc and Soviet Bloc were also used to denote groupings of states aligned with the Soviet Union, although these terms might include states outside Central and Eastern Europe.",
+    "Flight and expulsion of Germans (1944–50)\nDuring the later stages of World War II and the post-war period, German citizens and people of German ancestry were expelled from various Eastern European countries and sent to the remaining territory of Germany and Austria.\n\n After 1950, some emigrated to the United States, Australia, and other countries from there.\n\n The areas affected included the former eastern territories of Germany, which were annexed by Poland and the Soviet Union after the war, as well as Germans who were living within the prewar borders of Poland, Czechoslovakia, Hungary, Romania, Yugoslavia, and the Baltic States.\n\n The Nazis had made plans—only partially completed before the Nazi defeat—to remove many Slavic and Jewish people from Eastern Europe and settle the area with Germans.\n\n The post war expulsion of the Germans formed a major part of the geopolitical and ethnic reconfiguration of Eastern Europe in the aftermath of World War II, that attempted to create ethnically homogeneous nations within redefined borders.\n\n Between 1944 and 1948 about 31 million people, including ethnic Germans ('Volksdeutsche') as well as German citizens ('Reichsdeutsche'), were permanently or temporarily moved from Central and Eastern Europe."
+   ]
+  },
+  {
+   "id": "993bb9e9b74cfe5e",
+   "gold": [
+    {
+     "sentence": " Levitt & Sons developed the Monmouth Heights section from 1965-1969.",
+     "facts": {
+      "0.0": "Levitt & Sons developed the Monmouth Heights section from 1965 to 1969."
+     }
+    },
+    {
+     "sentence": " The company is most famous for having built the town of Levittown, New York.",
+     "facts": {
+      "1.0": "Levitt & Sons is most famous for having built the town of Levittown, New York."
+     }
+    }
+   ],
+   "items": [
+    "Monmouth Heights at Manalapan, New Jersey\nMonmouth Heights at Manalapan is an unincorporated community located within Manalapan Township in Monmouth County, New Jersey, United States.\n\n Levitt & Sons developed the Monmouth Heights section from 1965-1969.\n\n Residents of the 685 homes in the development are required to join the Monmouth Heights Community Association, which provides pools and other amenities.",
+    "Great Neck, New York\nGreat Neck is a region on Long Island, New York, that covers a peninsula on the North Shore of Long Island, which includes the villages of Great Neck, Great Neck Estates, Great Neck Plaza, and others, as well as an area south of the peninsula near Lake Success and the border territory of Queens.\n\n The incorporated village of Great Neck had a population of 9,989 at the 2010 census, while the larger Great Neck area comprises a residential community of some 40,000 people in nine villages and hamlets in the town of North Hempstead, of which Great Neck is the northwestern quadrant.\n\n Great Neck has five ZIP Codes (11020–11024), and one school district.",
+    "Toland, Pennsylvania\nToland is an unincorporated community in Cumberland County, Pennsylvania, United States.\n\n The very small village is located on Pine Grove Road, east of Mountain Creek Campground.\n\n Michaux State Forest, the site of Laurel Lake, Fuller Lake and Pine Grove Furnace State Park lie a few miles to the west near the intersection of Pine Grove Road and PA route 233.\n\n Toland has a mailing address of Gardners Pennsylvania, because the size of the community doesn't warrant a post-office, nor an official incorporated name.\n\n What is now a sand pit operation was originally a clay bank mining operation that was the reason for the location of the village of Toland.\n\n Less than 50 people reside in the close-knit community, which was built for the clay bank company workers in the first quarter of the 20th century.\n\n The original community of Toland, Pennsylvania consisted of 11 duplex houses, built side by side along Pine Grove Road, with less than 0.17 of an acre of land to each.\n\n Additional homes have been built since.\n\n When the community was originally built there was only a common well with a hand pump for all of the families to draw from.",
+    "Levitt &amp; Sons\nLevitt & Sons was a real estate development company founded by Abraham Levitt and later managed by his son William Levitt.\n\n The company is most famous for having built the town of Levittown, New York.\n\n The company's designs and building practices totally revolutionized the entire Home Building Industry and altered America's landscape with massive suburban communities.",
+    "HMS Monmouth\nSeven ships of the Royal Navy have been named HMS \"Monmouth\".\n\n Monmouth was the name of a castle and is now the name of a town in Wales; the name also recognises James Scott, 1st Duke of Monmouth, the \"Black Duke\".\n\n The first HMS \"Monmouth\" was named after the town but whilst the second one was being used the Monmouth Rebellion took place and this caused some concern to the crew.\n\n Since that time, all of \"Monmouth\"s have had their names painted in black and the name and the crest are covered because of the shame of the Duke of Monmouth's execution.\n\n Today the officers of the latest HMS \"Monmouth\" carry black handkerchiefs and the ship is known as the Black Duke.\n\n However the town of Monmouth still gives the freedom of the town to the ship's crew and talks of the \"enduring link\" between the town and the ship.",
+    "Oakland Mills, New Jersey\nOakland Mills is an unincorporated community located within Manalapan Township in Monmouth County, New Jersey, United States.\n\n The area is named for Oakland Mill, a mill along the Manalapan Brook operated by the Boo family.\n\n Some areas within the Manalapan Brook valley and surround forestland are preserved while the remainder of the area surrounding Oakland Mills has since been developed into housing developments.",
+    "Monmouth Heights at Marlboro, New Jersey\nMonmouth Heights at Marlboro is an unincorporated community located within Marlboro Township in Monmouth County, New Jersey, United States.\n\n The housing development was created in the 1960s by Levitt & Sons though some protests occurred by long-time residents of Marlboro Township at the time of its creation.\n\n The community is located along New Jersey Route 79 across the highway from Marlboro High School.",
+    "Riverton, New York\nRiverton, New York was a planned community built in 1973 in the town of Henrietta, New York, along the Genesee River.\n\n Riverton was seventh of the thirteen communities receiving Federal guarantee assistance from HUD as part of their New Communities Program created by the Urban Growth and New Community Development Act of 1970.\n\n $12 million was earmarked for the community.\n\n Riverton was supposed to encompass a 2335 acre land area bordered on the north by the New York State Thruway, on the west by the Genesee River, on the east by East River Rd., and on the south by the Rush-Henrietta town line, with some development continuing east along Erie Station Rd.\n\n Original plans called for construction to occur for a 16-year period and eventually house over 25,000 people, with the community including an 18-hole golf course, 12 swimming pools, 3 artificial lakes, a marina on the Genesee, and commercial and industrial centers.\n\n However, only a small portion of this was built along Scottsville-West Henrietta Rd.",
+    "Taylors Mills, New Jersey\nTaylors Mills is an unincorporated community located within Manalapan Township in Monmouth County, New Jersey, United States.\n\n The main road that runs through the area is named for the community, Taylors Mills Road.",
+    "Riverton, New York\nHowever, only a small portion of this was built along Scottsville-West Henrietta Rd.\n\n Created as part of the community were Riverton Knolls, a moderately priced townhouse subdivision, the Riverton Golf Club, a small 9-hole golf course, and the Riverton Park, which included a playground, baseball diamond, river front benches, walking trail, and a volleyball court.\n\n Also nestled in a bend in the Genesee was a 28 acre forested nature park."
+   ]
+  },
+  {
+   "id": "ddcb979e0adf5885",
+   "gold": [
+    {
+     "sentence": "Longkou (), formerly Huang County (), is a port city in northeastern Shandong province, China, facing the Bohai Sea to the north and the Laizhou Bay to the west.",
+     "facts": {
+      "0.0": "Longkou was formerly known as Huang County.",
+      "0.1": "Longkou is a port city.",
+      "0.2": "Longkou is in northeastern Shandong province, China.",
+      "0.3": "Longkou faces the Bohai Sea to the north.",
+      "0.4": "Longkou faces the Laizhou Bay to the west."
+     }
+    },
+    {
+     "sentence": " The district faces East China Sea and is connected to Mawei district by the Min River.",
+     "facts": {
+      "1.0": "The district faces the East China Sea.",
+      "1.1": "The district is connected to Mawei district by the Min River."
+     }
+    }
+   ],
+   "items": [
+    "Dafeng District\nDafeng () is a coastal district under the administration of Yancheng, Jiangsu province, China.\n\n Located on the Jiangsu North Plain with a coastline of 112 km , Dafeng was historically one of the largest salt-making areas in China and now is famed for its well preserved eco-system and numerous national conservation parks.\n\n The district has the largest national nature reserve for a rare deer species, Père David's Deer or Milu (麋鹿 ) in Chinese.\n\n It borders the prefecture-level city of Taizhou to the southwest.",
+    "Fuzhoucheng\nFuzhou, also Fuzhoucheng () is a town under the administration of Wafangdian City, in southern Liaoning province, China.\n\n It lies at the intersection of China National Highway 202 and Liaoning Provincial Highway 313, 57 km north by road from Pulandian.\n\n Dahe Reservoir is located several kilometres to the east.\n\n There is a 74,132 acres (30,000 hectares) bird reserve nearby with species such as Swan goose and Hooded crane about 15 km southwest of the town.\n\n , it has 2 residential communities (社区) and 14 villages under its administration.",
+    "Changle District\n(, Foochow Romanized: Diòng-lŏ̤h) is a district located in eastern Fujian province, China.\n\n Administered by Fuzhou, it occupies a land area of 648 km2 and a sea area of 1327 km2 .\n\n Changle was established in the sixth year of Emperor Wu-De (623 AD) during the Tang Dynasty, and it became a county-level city on February 18, 1994.\n\n The district faces East China Sea and is connected to Mawei district by the Min River.\n\n Due to an increase in businesses, the province is now one of the richest province in China.\n\n The city was upgraded into a district on August 2017 by a government proposal.",
+    "Taiyang Subdistrict\nTaiyang Subdistrict () is a subdistrict of Wafangdian, Dalian District, Liaoning, China.\n\n It is based around the small town of Taiyang, Taiyangsheng or Taiyangshengxiang, which lies 19 kilometres east by road of Fuzhou, 64 kilometres north by road from Pulandian.\n\n To the east is the DFM reservoir.",
+    "Wenling\nWenling (Wenling dialect: Uen-lin Zy ] ; ) is a coastal county-level city in the municipal region of Taizhou, in southeastern Zhejiang province, China.\n\n It borders Luqiao and Huangyan to the north, Yuhuan to the south, Yueqing to the west, looks out to the East China Sea to the east.\n\n Wenling locates on 28°22'N, 121°21'E, approximately 300 km south of Shanghai.",
+    "Pulandian District\nPulandian District () is one of the seven districts under the administration of Dalian, located in the south of Liaoning province, People's Republic of China.\n\n Its area is 2769.90 km² and its permanent population as of 2010 is 741,230.\n\n The district borders the prefecture-level city of Yingkou to the north.",
+    "Xingcheng\nXingcheng (), former name Ningyuan (宁远), is a county-level city of southwest Liaoning province, China, with a population of approximately 140,000 urban inhabitants, and is located on the Liaodong Bay, i.e. the northern coast of the Bohai Sea.\n\n Currently under the administration of Huludao City, the area is steeped in history, and contains one of the best preserved Ming Dynasty towns in China, as well as functioning as a laidback summer resort.",
+    "Longkou\nLongkou (), formerly Huang County (), is a port city in northeastern Shandong province, China, facing the Bohai Sea to the north and the Laizhou Bay to the west.\n\n Longkou, a county-level city, is administered by the prefecture-level city of Yantai.\n\n The total population of Longkou is 620,000.",
+    "Xujiacao Changle Station\nXujiacao Changle Station () is a station on Line 1 of the Ningbo Rail Transit that started operations on 30May 2014.\n\n It is situated over Wangchun Road () and Xinyuan Road () in the Haishu District of Ningbo City, Zhejiang Province, eastern China.",
+    "Line 6, Fuzhou Metro\nLine 6 of the Fuzhou Metro () or Airport Line () runs from Cangshan District to Changle City.\n\n It starts at Exhibition Center Station and ends at Fuzhou Changle International Airport Station.\n\n The total length is 40.9 km.\n\n Line 6's color is pink.\n\n The construction is planned to begin by the end of 2016 and ends in 2021, from Exhibition Center to Fuzhou Changle International Airport."
+   ]
+  },
+  {
+   "id": "8ae4cbd68e914bf6",
+   "gold": [
+    {
+     "sentence": "Nelson Algren (March 28, 1909 – May 9, 1981) was an American writer.",
+     "facts": {
+      "0.0": "Nelson Algren was born March 28, 1909.",
+      "0.1": "Nelson Algren died May 9, 1981.",
+      "0.2": "Nelson Algren was an American writer."
+     }
+    },
+    {
+     "sentence": "Nathanael West (born Nathan Weinstein; October 17, 1903 – December 22, 1940) was an American author, screenwriter and satirist.",
+     "facts": {
+      "1.0": "Nathanael West was born Nathan Weinstein.",
+      "1.1": "Nathanael West was born October 17, 1903.",
+      "1.2": "Nathanael West died December 22, 1940.",
+      "1.3": "Nathanael West was an American author.",
+      "1.4": "Nathanael West was an American screenwriter.",
+      "1.5": "Nathanael West was an American satirist."
+     }
+    }
+   ],
+   "items": [
+    "A Walk on the Wild Side\nA Walk on the Wild Side is a 1956 novel by Nelson Algren, most often quoted as the source for Algren's \"three rules of life\": \"Never play cards with a man called Doc.\n\n Never eat at a place called Mom's.\n\n Never sleep with a woman whose troubles are worse than your own.\"",
+    "James F. Light\nJames F. Light was an American literary scholar, university vice president, and provost.\n\n During his academic career, he helped revive the works of satirist Nathanael West, with the first book length critical study of his work, \"Nathanael West: An Interpretive Study\", (Northwestern Univ.\n\n Press, 1961).\n\n He was also the leading authority on John William De Forest, the early American realist whose work he critiqued in \"John William De Forest\" (Twayne Pub., 1965), and he wrote extensively on J. D. Salinger, Robert Penn Warren and others.",
+    "Bernard Malamud\nBernard Malamud (April 26, 1914 – March 18, 1986) was an American novelist and short story writer.\n\n Along with Saul Bellow and Philip Roth, he was one of the best known American Jewish authors of the 20th century.\n\n His baseball novel, \"The Natural\", was adapted into a 1984 film starring Robert Redford.\n\n His 1966 novel \"The Fixer\" (also filmed), about antisemitism in Tsarist Russia, won both the National Book Award and the Pulitzer Prize.",
+    "Chicago: City on the Make\nChicago: City on the Make is an essay by Nelson Algren published in 1951.\n\n Initially greeted with scorn by critics and newspaper editors in the city of its gaze (The \"Chicago Daily News\" famously called it a \"Case for Ra(n)t Control\"), it is now widely regarded by scholars as the definitive prose portrait of the city of Chicago, although it has never rivaled the literary status of Carl Sandburg's 1916 poem \"Chicago.\"\n\n Algren leans heavily on the imagery and themes developed by Sandburg, to whom Algren dedicated the book.\n\n Curiously, he also quietly leans upon a poem about New York called \"The City\" by Ben Maddow, from whom Algren lifted powerful images of urban life.\n\n Subsequent portraits of Chicago, such as Studs Terkel's 1985 \"Chicago\", have likewise leaned heavily upon Algren's work.",
+    "Fearless Frank\nFearless Frank is a 1967 film directed by Philip Kaufman.\n\n It is notable as the film debut of Jon Voight.\n\n Voight plays a murdered drifter who gets reanimated and turned into a superhero by a scientist (Severn Darden).\n\n Other notable cast members include \"The Man With the Golden Arm\" author Nelson Algren as a mobster named Needles, and \"Word Jazz\" vocal artist Ken Nordine as the narrator, credited as \"The Stranger.\"",
+    "The Man with the Golden Arm (novel)\nThe Man with the Golden Arm is a novel by Nelson Algren, published by Doubleday in November 1949.\n\n One of the seminal novels of post-World War II American letters, \"The Man with the Golden Arm\" is widely considered Algren's greatest and most enduring work.\n\n It won the National Book Award in 1950.",
+    "Hotel Kenmore Hall\nHotel Kenmore Hall is a 22-story single room occupancy hotel located at 145 East 23rd Street in the Gramercy section of Manhattan, designed by architect Maurice Deutsch and constructed in 1927.\n\n Author Nathanael West lived and worked at the hotel as a night manager in the early years after the hotel opened; one of West's real-life experiences at the hotel inspired the incident between Romola Martin and Homer Simpson that would later appear in \"The Day of the Locust\" (1939).\n\n West allowed friends like Edmund Wilson, Erskine Caldwell, S. J. Perelman and Maxwell Bodenheim free room and meals.\n\n Dashiell Hammett finished \"The Maltese Falcon\" here",
+    "Nelson Algren\nNelson Algren (March 28, 1909 – May 9, 1981) was an American writer.\n\n He may be best known for \"The Man with the Golden Arm\", a 1949 novel that won the National Book Award and was adapted as a 1955 film of the same name.",
+    "The Man with the Golden Arm\nThe Man with the Golden Arm is a 1955 American drama film with elements of film noir, based on the novel of the same name by Nelson Algren, which tells the story of a drug addict who gets clean while in prison, but struggles to stay that way in the outside world.\n\n Although the addictive drug is never identified in the film, according to the American Film Institute \"most contemporary and modern sources assume that it is heroin\", in contrast to Algren's book which named the drug as morphine.\n\n The film stars Frank Sinatra, Eleanor Parker, Kim Novak, Arnold Stang and Darren McGavin.\n\n It was adapted for the screen by Walter Newman, Lewis Meltzer and Ben Hecht (uncredited), and directed by Otto Preminger.\n\n The film's initial release sparked controversy due to its serious, in-depth treatment of the then-taboo subject of drug addiction.",
+    "Nathanael West\nNathanael West (born Nathan Weinstein; October 17, 1903 – December 22, 1940) was an American author, screenwriter and satirist."
+   ]
+  },
+  {
+   "id": "4cb85f5f1b422cd9",
+   "gold": [
+    {
+     "sentence": "The presidency of Ronald Reagan began on January 20, 1981, when Ronald Reagan was inaugurated as President of the United States, and ended on January 20, 1989.",
+     "facts": {
+      "0.0": "The presidency of Ronald Reagan began on January 20, 1981",
+      "0.1": "Ronald Reagan was inaugurated as President of the United States on January 20, 1981",
+      "0.2": "The presidency of Ronald Reagan ended on January 20, 1989"
+     }
+    },
+    {
+     "sentence": "George Herbert Walker Bush (born June 12, 1924) is an American politician who was the 41st President of the United States from 1989 to 1993 and the 43rd Vice President of the United States from 1981 to 1989.",
+     "facts": {
+      "1.0": "George Herbert Walker Bush was born June 12, 1924",
+      "1.1": "George Herbert Walker Bush is an American politician",
+      "1.2": "George Herbert Walker Bush was the 41st President of the United States from 1989 to 1993",
+      "1.3": "George Herbert Walker Bush was the 43rd Vice President of the United States from 1981 to 1989"
+     }
+    }
+   ],
+   "items": [
+    "Elliott Abrams\nElliott Abrams (born January 24, 1948) is a former American diplomat, lawyer and political scientist who served in foreign policy positions for Presidents Ronald Reagan and George W. Bush.\n\n Abrams was convicted of withholding information from Congress about the Iran–Contra affair while serving under Reagan, but was pardoned by President George H. W. Bush.",
+    "Gerald Ford\nGerald Rudolph Ford Jr. (born Leslie Lynch King Jr.; July 14, 1913 – December 26, 2006) was an American politician who served as the 38th President of the United States from August 1974 to January 1977, following the resignation of Richard Nixon.\n\n Prior to this he served eight months as the 40th Vice President of the United States, following the resignation of Spiro Agnew.\n\n He was the first person appointed to the vice presidency under the terms of the 25th Amendment, and consequently the only person to have served as both Vice President and President of the United States without being elected to executive office.\n\n Before his appointment to the vice presidency, Ford served 25 years as U.S. Representative from Michigan's 5th congressional district, the final nine of them as the House Minority Leader.",
+    "Otto Reich\nOtto Juan Reich (born October 16, 1945), is an American former senior official in the administrations of Presidents Ronald Reagan, George H. W. Bush, and George W. Bush.\n\n Among other positions held, he has been the President's Special Envoy for the Western Hemisphere; Assistant Secretary of State for Western Hemisphere Affairs; United States Ambassador to Venezuela; and Assistant Administrator of the US Agency for International Development, a recess appointment.\n\n In 2003, Bush appointed him US Special Envoy to the Western Hemisphere.\n\n Since leaving the White House in 2004, he has headed his own international consulting firm, Otto Reich Associates, LLC, based in Washington, D.C..",
+    "Reagan Democrat\nA Reagan Democrat is a traditionally Democratic voter in the United States, referring especially to white working-class Rust Belt residents, who defected from their party to support Republican President Ronald Reagan in either or both of the 1980 and 1984 elections as well as Republican Presidents George H. W. Bush in the 1988 election and George W. Bush in either or both of the 2000 and 2004 elections.\n\n Part of this group also defected to Donald Trump, the Republican candidate in 2016, who won in Pennsylvania, Ohio, Michigan, Wisconsin, and Iowa, all states that voted for Reagan but went Democratic in 2008 and 2012.",
+    "Ronald Reagan judicial appointment controversies\nDuring President Ronald Reagan's presidency, he nominated at least twelve people for various federal appellate judgeship who were not confirmed.\n\n In some cases, the nominations were not processed by the Democratic-controlled Senate Judiciary Committee before Reagan's presidency ended, while in other cases, nominees were rejected by the Senate Judiciary Committee or even blocked by unfriendly members of the Republican Party.\n\n Three of the nominees were renominated by Reagan's successor, President George H. W. Bush.\n\n Two of the nominees, Ferdinand Francis Fernandez and Guy G. Hurlbutt, were nominated after July 1, 1988, the traditional start date of the unofficial Thurmond Rule during a presidential election year.\n\n Eight of the twelve seats eventually were filled by appointees of President George H. W. Bush.",
+    "William Flynn Martin\nWilliam Flynn Martin (born October 4, 1950) is an American energy economist, educator and international diplomat.\n\n Martin served as Special Assistant to President Reagan for National Security Affairs, Executive Secretary of the National Security Council in the West Wing of the White House and Deputy Secretary of the Department of Energy during the Ronald Reagan administration.\n\n He was President of the Council of the University for Peace, appointed to the Council by Secretary General of the United Nations Kofi Annan and served as the Executive Director of the Republican Platform Committee during the re-election bid of George H.W. Bush.\n\n He has held senior appointments and advisory positions under several Presidents including: Ronald Reagan, George H.W. Bush and George W. Bush.",
+    "George H. W. Bush\nGeorge Herbert Walker Bush (born June 12, 1924) is an American politician who was the 41st President of the United States from 1989 to 1993 and the 43rd Vice President of the United States from 1981 to 1989.\n\n A member of the Republican Party, he was previously a congressman, ambassador, and Director of Central Intelligence.\n\n He is the oldest living former President and Vice President.\n\n Previously known as simply \"George Bush\", since 2001, Bush has often been referred to as \"George H. W. Bush\", \"Bush 41\", \"Bush the Elder\", or \"George Bush Senior\" to distinguish him from his eldest son, George W. Bush, the 43rd President of the United States.",
+    "First inauguration of Ronald Reagan\nThe first inauguration of Ronald Reagan as the 40th President of the United States was held on Tuesday, January 20, 1981, on the West Front of the United States Capitol in Washington, D.C..\n\n This was the first inauguration to be held on the building's west side.\n\n The inauguration marked the commencement of the first four-year term of Ronald Reagan as President and of George H. W. Bush as Vice President.\n\n Chief Justice Warren E. Burger administered the presidential oath of office to Reagan, who placed his hand upon a family Bible given to him by his mother, open to .\n\n Associate Justice Potter Stewart administered the vice presidential oath to Bush.",
+    "Presidency of Ronald Reagan\nThe presidency of Ronald Reagan began on January 20, 1981, when Ronald Reagan was inaugurated as President of the United States, and ended on January 20, 1989.\n\n Reagan, a Republican, took office as the 40th United States president following a landslide win over Democratic incumbent President Jimmy Carter in the 1980 presidential election.\n\n Reagan was succeeded by his vice president, George H. W. Bush, who won the 1988 presidential election with Reagan's support.",
+    "Second inauguration of Ronald Reagan\nThe second inauguration of Ronald Reagan as President of the United States was held privately on Sunday, January 20, 1985 in the Grand Foyer of the White House, and publicly the following day, January 21, 1985 at the United States Capitol in Washington, D.C. The inauguration marked the commencement of the second four-year term of Ronald Reagan as President and of George H. W. Bush as Vice President."
+   ]
+  },
+  {
+   "id": "d660d47fe4bf17ff",
+   "gold": [
+    {
+     "sentence": " It covers an area of 1,383 sqkm south east of Melbourne, stretching from outer suburban Pakenham through rural areas to the coast at Inverloch and Phillip Island.",
+     "facts": {
+      "0.0": "The area covers 1,383 sqkm.",
+      "0.1": "The area is south east of Melbourne.",
+      "0.2": "The area stretches from outer suburban Pakenham through rural areas.",
+      "0.3": "The area stretches to the coast at Inverloch and Phillip Island."
+     }
+    },
+    {
+     "sentence": " It includes the towns of Bass, Cape Patterson, Corinella, Cowes, Grantville, Inverloch, Kilcunda, Koo Wee Rup, Lang Lang, Rhyll, San Remo, Ventnor, Wonthaggi, and part of suburban Pakenham.",
+     "facts": {
+      "1.0": "The area includes the town of Bass.",
+      "1.1": "The area includes the town of Cape Patterson.",
+      "1.2": "The area includes the town of Corinella.",
+      "1.3": "The area includes the town of Cowes.",
+      "1.4": "The area includes the town of Grantville.",
+      "1.5": "The area includes the town of Inverloch.",
+      "1.6": "The area includes the town of Kilcunda.",
+      "1.7": "The area includes the town of Koo Wee Rup.",
+      "1.8": "The area includes the town of Lang Lang.",
+      "1.9": "The area includes the town of Rhyll.",
+      "1.10": "The area includes the town of San Remo.",
+      "1.11": "The area includes the town of Ventnor.",
+      "1.12": "The area includes the town of Wonthaggi.",
+      "1.13": "The area includes part of suburban Pakenham."
+     }
+    },
+    {
+     "sentence": "Pakenham is a satellite suburb of Melbourne on the edge of the West Gippsland region of Victoria, Australia, 56 km south-east of Melbourne's Central Business District, located within the Shire of Cardinia local government area.",
+     "facts": {
+      "2.0": "Pakenham is a satellite suburb of Melbourne.",
+      "2.1": "Pakenham is on the edge of the West Gippsland region of Victoria, Australia.",
+      "2.2": "Pakenham is 56 km south-east of Melbourne's Central Business District.",
+      "2.3": "Pakenham is located within the Shire of Cardinia local government area."
+     }
+    }
+   ],
+   "items": [
+    "Electoral district of Bass\nThe Electoral district of Bass is an electoral district of the Victorian Legislative Assembly.\n\n It covers an area of 1,383 sqkm south east of Melbourne, stretching from outer suburban Pakenham through rural areas to the coast at Inverloch and Phillip Island.\n\n It includes the towns of Bass, Cape Patterson, Corinella, Cowes, Grantville, Inverloch, Kilcunda, Koo Wee Rup, Lang Lang, Rhyll, San Remo, Ventnor, Wonthaggi, and part of suburban Pakenham.\n\n It lies within the Eastern Victoria Region of the upper house, the Legislative Council.",
+    "Electoral district of North Eastern Boroughs\nNorth Eastern Boroughs was an electoral district of the Legislative Assembly in the Australian state of New South Wales from 1856 to 1859 that included the towns of Newcastle, Stockton and Raymond Terrace.\n\n It was partly replaced by the electoral district of Newcastle and the electoral district of Hunter.",
+    "Electoral district of Emerald Hill\nEmerald Hill was an electoral district of the Victorian Legislative Assembly, Australia.\n\n It covered part of the inner-city suburb South Melbourne and consisted part of the previous Electoral district of South Melbourne which was abolished in 1859.\n\n (The other part of the South Melbourne electorate became the Electoral district of Sandridge).",
+    "Electoral district of Braidwood\nBraidwood was an electoral district of the Legislative Assembly in the Australian state of New South Wales between 1859 and 1904, which included the town of Braidwood.\n\n It replaced parts of the electoral district of United Counties of Murray and St Vincent and the electoral district of Southern Boroughs.\n\n In 1904 it was largely absorbed into the electoral district of Queanbeyan.",
+    "Electoral district of Tullamarine\nElectoral district of Tullamarine was an electoral district of the Legislative Assembly in the Australian state of Victoria.\n\n The district centred on the suburb of Tullamarine, about 17km north-west of Melbourne.",
+    "Pakenham, Victoria\nPakenham is a satellite suburb of Melbourne on the edge of the West Gippsland region of Victoria, Australia, 56 km south-east of Melbourne's Central Business District, located within the Shire of Cardinia local government area.\n\n Pakenham recorded a population of 46,421 at the 2016 Census.",
+    "Officer, Victoria\nOfficer is a satellite suburb of Melbourne, Victoria, Australia, 54 km south-east of Melbourne's Central Business District, located within the Shire of Cardinia local government area.\n\n Officer recorded a population of 7,133 at the 2016 Census.",
+    "Electoral district of Nunawading\nThe electoral district of Nunawading was an electoral district of the Legislative Assembly in the Australian state of Victoria, located in the eastern Melbourne suburb of Nunawading.\n\n A notable former member was future Prime Minister, Robert Menzies.",
+    "Alpine National Park\nThe Alpine National Park is a national park located in the Central Highlands and Alpine regions of Victoria, Australia.\n\n The 646000 ha national park is located northeast of Melbourne.\n\n It is the largest National Park in Victoria, and covers much of the higher areas of the Great Dividing Range in Victoria, including Victoria's highest point, Mount Bogong at 1986 m and the associated subalpine woodland and grassland of the Bogong High Plains.\n\n The park's north-eastern boundary is along the border with New South Wales, where it abuts the Kosciuszko National Park.\n\n On 7 November 2008 the Alpine National Park was added to the Australian National Heritage List as one of eleven areas constituting the Australian Alps National Parks and Reserves.",
+    "Beaconsfield, Victoria\nBeaconsfield is a satellite suburb of Melbourne, Victoria, Australia, 46 km south-east of Melbourne's Central Business District, located within the Shire of Cardinia local government area.\n\n Beaconsfield recorded a population of 6,714 at the 2016 Census."
+   ]
+  },
+  {
+   "id": "c1d028ca43748e3a",
+   "gold": [
+    {
+     "sentence": "Tritonia (flame freesia) is a genus of flowering plants in the iris family first described as a genus in 1802.",
+     "facts": {
+      "0.0": "Tritonia, also called flame freesia, is a genus of flowering plants.",
+      "0.1": "Tritonia belongs to the iris family.",
+      "0.2": "Tritonia was first described as a genus in 1802."
+     }
+    },
+    {
+     "sentence": "Phyteuma is a genus of flowering plants in the family Campanulaceae, native to Europe and Morocco.",
+     "facts": {
+      "1.0": "Phyteuma is a genus of flowering plants.",
+      "1.1": "Phyteuma is in the family Campanulaceae.",
+      "1.2": "Phyteuma is native to Europe.",
+      "1.3": "Phyteuma is native to Morocco."
+     }
+    }
+   ],
+   "items": [
+    "Zygotritonia\nZygotritonia is a genus of herbaceous, perennial and bulbous plants in the Iris family (Iridaceae).\n\n It contains four species distributed in Tropical Africa.\n\n The genus name is derived from the word zygomorphic (meaning bilabiate), and the apparent resemblance to some species in the genus \"Tritonia\".",
+    "Thonningia\nThonningia is a monotypic genus of flowering plants in the family Balanophoraceae containing the single species Thonningia sanguinea.\n\n It is distributed throughout much of southern and western Africa, particularly the tropical regions.\n\n Common names for the plant include ground pineapple.\n\n A familiar plant to humans, it has an extremely long list of common names in many African languages.\n\n Many names are inspired by the resemblance of the plant's inflorescence to a pineapple or palm tree.\n\n Some of the names can be translated as pineapple of the bush (from Anyi), duiker's kolanut (from Igala), and crown of the ground (from Yoruba).",
+    "Tritonia (plant)\nTritonia (flame freesia) is a genus of flowering plants in the iris family first described as a genus in 1802.\n\n They are naturally distributed across southern Africa, with a high concentration of species in Cape Province of western South Africa.\n\n The genus is closely related to the genus \"Ixia\".",
+    "Tritoniopsis\nTritoniopsis is a genus of flowering plants in the family Iridaceae, first described as a genus in 1926.\n\n The entire genus is endemic to Cape Province in South Africa.\n\n The genus name refers to the African genus \"Tritonia\" and is combined with the Greek word \"opsis\", meaning \"look-alike\".",
+    "Vascular plant\nVascular plants (from Latin \"vasculum\": duct), also known as tracheophytes (from the equivalent Greek term \"trachea\") and also higher plants, form a large group of plants (c. 308,312 accepted known species ) that are defined as those land plants that have lignified tissues (the xylem) for conducting water and minerals throughout the plant.\n\n They also have a specialized non-lignified tissue (the phloem) to conduct products of photosynthesis.\n\n Vascular plants include the clubmosses, horsetails, ferns, gymnosperms (including conifers) and angiosperms (flowering plants).\n\n Scientific names for the group include Tracheophyta and Tracheobionta.",
+    "Cyrtanthus\nCyrtanthus is a genus of perennial, herbaceous and bulbous plants in the family Amaryllidaceae, subfamily Amaryllidoideae.",
+    "Tricyrtis\nTricyrtis is a genus of Asian flowering plants in the lily family, with approximately 20 known species.\n\n The species are commonly known in English as toad lilies.\n\n The genus has a native range from the Himalayas to eastern Asia, including China, Japan, Philippines and Taiwan, and a few species are cultivated for their ornamental qualities in other parts of the world.",
+    "Conophytum\nConophytum is a genus of South African and Namibian succulent plants that belong to the Aizoaceae family.\n\n The name is derived from the Latin “conus” (cone) and Greek “phytum” (plant).\n\n The plants are also known as knopies (buttons), waterblasies (water blisters), sphaeroids, conos, cone plants, dumplings, or button plants.",
+    "Alismataceae\nThe water-plantains (Alismataceae) are a family of flowering plants, comprising 11 genera and between 85 and 95 species.\n\n The family has a cosmopolitan distribution, with the greatest number of species in temperate regions of the Northern Hemisphere.\n\n Most of the species are herbaceous aquatic plants growing in marshes and ponds.",
+    "Phyteuma\nPhyteuma is a genus of flowering plants in the family Campanulaceae, native to Europe and Morocco."
+   ]
+  },
+  {
+   "id": "4d1473af27e69892",
+   "gold": [
+    {
+     "sentence": " It flows in a west to east direction from the western part of the state in the Everglades past the Miami International Airport to a salinity control center near the Miami River.",
+     "facts": {
+      "0.0": "It flows in a west to east direction.",
+      "0.1": "It flows from the western part of the state in the Everglades.",
+      "0.2": "It flows past the Miami International Airport.",
+      "0.3": "It flows to a salinity control center near the Miami River."
+     }
+    },
+    {
+     "sentence": "The Genesee River is a tributary of Lake Ontario flowing northward through the Twin Tiers of Pennsylvania and New York in the United States.",
+     "facts": {
+      "1.0": "The Genesee River is a tributary of Lake Ontario.",
+      "1.1": "The Genesee River flows northward.",
+      "1.2": "The Genesee River flows through the Twin Tiers of Pennsylvania.",
+      "1.3": "The Genesee River flows through the Twin Tiers of New York in the United States."
+     }
+    }
+   ],
+   "items": [
+    "Genesee River\nThe Genesee River is a tributary of Lake Ontario flowing northward through the Twin Tiers of Pennsylvania and New York in the United States.",
+    "Oatka Creek\nOatka Creek ( ) is the third longest tributary of the Genesee River, located entirely in the Western New York region of the U.S. state of New York.\n\n From southern Wyoming County, it flows 58 mi to the Genesee near Scottsville, draining an area of 215 sqmi that includes all or part of 23 towns and villages in Wyoming, Genesee, Livingston and Monroe counties as well.\n\n Its name means \"leaving the highlands\" or \"approaching an opening\" in Seneca.",
+    "New York State Canal System\nThe New York State Canal System (formerly known as the New York State Barge Canal) is a successor to the Erie Canal and other canals within New York.\n\n Currently, the 525 mi system is composed of the Erie Canal, the Oswego Canal, the Cayuga–Seneca Canal, and the Champlain Canal.\n\n In 2014 the system was listed as a national historic district on the National Register of Historic Places in its entirety, and in 2016 it was designated a National Historic Landmark.",
+    "Tamiami Canal\nThe Tamiami Canal or C-4 Canal, is a canal located in southern Florida in the United States.\n\n It flows in a west to east direction from the western part of the state in the Everglades past the Miami International Airport to a salinity control center near the Miami River.\n\n It averages 8 ft in depth and is over 100 ft wide in some areas.",
+    "Cayuga–Seneca Canal\nThe Cayuga–Seneca Canal is a canal in New York, United States.\n\n It is now part of the New York State Canal System.",
+    "Black Creek (Genesee River)\nBlack Creek is a tributary of the Genesee River that runs for 46 mi in western New York, United States.\n\n The creek begins in Middlebury in Wyoming County and runs north for roughly the first half of its course and east for the other half, eventually joining the Genesee River in Chili, Monroe County.\n\n Its drainage area spans around 202 mi2 , which is largely rural and agricultural.\n\n As of 2000, 40,000 residents lived in the creek's drainage area.",
+    "Genesee Valley Park\nGenesee Valley Park is located in the south side of Rochester, New York along the shores of the Genesee River.\n\n The New York State Barge Canal (the currently in-use portion of the Erie Canal) crosses the Genesee River within the park.\n\n The University of Rochester is located near the park's north entrance.",
+    "Beaver and Erie Canal\nThe Beaver and Erie Canal, also known as the Erie Extension Canal, was part of the Pennsylvania Canal system and consisted of three sections: the Beaver Division, the Shenango Division, and the Conneaut Division.\n\n The canal ran 136 mi north–south near the western edge of the state from the Ohio River to Lake Erie through Beaver County, Lawrence County, Mercer County, Crawford County, and Erie County, Pennsylvania.",
+    "Seneca River Crossing Canals Historic District\nSeneca River Crossing Canals Historic District is a national historic district located at Montezuma and Tyre in Cayuga and Seneca Counties, New York.\n\n The district includes more than a mile of the Enlarged Erie Canal prism (built here between 1849 and 1857); towpath and heelpath; a drydock; the remains of the Richmond (Montezuma) Aqueduct crossing the Seneca River; remnants of the original Erie Canal, built between 1817 and 1825 and including Lock #62 and piers of the original mule bridge from that era; and a culvert that carries a stream beneath the Enlarged Erie Canal.",
+    "New York State Canal Corporation\nThe New York State Canal Corporation is responsible for the oversight, administration and maintenance of the New York State Canal System, which consists of the Erie Canal, Cayuga–Seneca Canal, Oswego Canal and Champlain Canal.\n\n It is also involved with the development and maintenance of the New York State Canalway Trail and with the general development and promotion of the Erie Canal Corridor as both a tourist attraction and a working waterway."
+   ]
+  },
+  {
+   "id": "4d1ee477c0c80a49",
+   "gold": [
+    {
+     "sentence": " He has had a cameo acting role as a tailor in The Wolf of Wall Street, and The Good Shepherd.",
+     "facts": {
+      "0.0": "The person referred to as 'He' has had a cameo acting role as a tailor in The Wolf of Wall Street.",
+      "0.1": "The person referred to as 'He' has had a cameo acting role as a tailor in The Good Shepherd."
+     }
+    },
+    {
+     "sentence": "The Wolf of Wall Street is a 2013 American biographical black comedy crime film directed by Martin Scorsese and written by Terence Winter, based on the memoir of the same name by Jordan Belfort.",
+     "facts": {
+      "1.0": "The Wolf of Wall Street is a 2013 film.",
+      "1.1": "The Wolf of Wall Street is American.",
+      "1.2": "The Wolf of Wall Street is a biographical black comedy crime film.",
+      "1.3": "The Wolf of Wall Street was directed by Martin Scorsese.",
+      "1.4": "The Wolf of Wall Street was written by Terence Winter.",
+      "1.5": "The Wolf of Wall Street is based on the memoir of the same name by Jordan Belfort."
+     }
+    }
+   ],
+   "items": [
+    "Leonard Logsdail\nLeonard Logsdail (born September 11, 1950 in London, England) is a bespoke tailor, based in Manhattan, New York, specializing in men's suits.\n\n He is described as one of the finest bespoke tailors in the men’s suit business.\n\n All of Logsdail's suits are crafted and perfected on-site in his New York City location.\n\n He is credited for making Savile Row tailoring a local option in New York.\n\n Logsdail is known for creating high-end suits, including lining jackets with Hermes silk scarves.\n\n CNBC talk show host, economist and fashion icon Larry Kudlow has his suits made by Leonard Logsdail.\n\n Logsdail has created suits for award-winning films, and is recognized as one of cinema's most sought-after tailors.\n\n Logsdail has collaborated with esteemed film directors Steven Spielberg, Robert de Niro, Oliver Stone, Ridley Scott, and Martin Scorcese.\n\n He has had a cameo acting role as a tailor in The Wolf of Wall Street, and The Good Shepherd.",
+    "The Boys Who Cried Wolf\nThe Boys Who Cried Wolf (), also known as The Shepherd, is a 2015 South Korean crime thriller drama film.\n\n Written and directed by Kim Jin-hwang in his first feature-length for his Korean Academy of Film Arts (KAFA)'s final year undergraduate film project, it depicts how a former stage actor becomes involved in a murder case.",
+    "The Godfather Part II (soundtrack)\nThe Godfather Part II is the soundtrack from the movie of the same name, released in 1974 by ABC, and 1991 on compact disc by MCA.\n\n The original score was composed by Nino Rota and conducted by Carmine Coppola, who also provided source music for the film.\n\n Rota expands upon two of the three main themes from the first film: \"The Godfather Waltz\" and \"Michael's Theme\", while \"The Love Theme\" from the first film makes a brief appearance during a flashback sequence (\"Remember Vito Andolini\").\n\n There are several new themes, including one for Kay (Diane Keaton), and two for young Vito (Robert De Niro): \"The Immigrant Theme\" and \"The Tarantella\", introduced in \"A New Carpet\".",
+    "Rick Carter\nRick Carter (born 1950) is an American production designer and art director.\n\n He is known for his work in the film \"Forrest Gump\", which earned him an Oscar nomination, as well as numerous nominations of other awards for his work in \"Amistad\" and \"A.I. Artificial Intelligence\".\n\n Other films include \"Cast Away\", \"War of the Worlds\", \"What Lies Beneath\", \"Jurassic Park\", \"Avatar\", and \"Back to the Future Part II\" and \"Part III\".\n\n Many of the films that he has worked on are directed by Steven Spielberg or Robert Zemeckis.\n\n For his part in the Art Direction of \"Avatar\", he was awarded the Academy Award for Best Production Design alongside Robert Stromberg and Kim Sinclair.\n\n In 2013, Carter won his second Academy Award, for production design on Steven Spielberg's biopic, \"Lincoln\".",
+    "The Wolf of Wall Street (2013 film)\nThe film marks the director's fifth collaboration with DiCaprio, after \"Gangs of New York\" (2002), \"The Aviator\" (2004), \"The Departed\" (2006) and \"Shutter Island\" (2010), as well as his second collaboration with Winter after the television series \"Boardwalk Empire\" (2010–14).",
+    "A Walk in the Woods (film)\nA Walk in the Woods is a 2015 American biographical comedy-drama film directed by Ken Kwapis, based on the 1998 book/memoir of the same name by Bill Bryson.\n\n The film stars Robert Redford, Nick Nolte and Emma Thompson.\n\n The film was released on September 2, 2015, by Broad Green Pictures.",
+    "Brian Ralston\nBrian Ralston (born April 12, 1974) is a composer and musician living in Los Angeles.\n\n Ralston is a graduate of the University of Arizona and the USC Thornton School of Music Scoring for Motion Pictures and Television program.\n\n Brian's latest film is the 2017 drama Rose starring Cybill Shepherd, James Brolin and Pam Grier.\n\n In 2012 he scored the 20th Century Fox inspirational sports film Crooked Arrows, starring Brandon Routh, directed by Steve Rash.\n\n He has also composed music for the television series \"Angel\" (Season 4) and scores to the theatrical motion pictures \"9/Tenths\", directed by Bob Degus (\"Pleasantville\") starring Gabrielle Anwar, Henry Ian Cusick and Dave Ortiz, the Magnolia Pictures teen heist movie Graduation directed by Mike Mayer and starring Adam Arkin, Shannon Lucio, Chris Marquette, Riley Smith and Chris Lowell, and the dramatic feature Don't Fade Away directed by Luke Kasdan, starring Beau Bridges, Mischa Barton and Ryan Kwanten.",
+    "The Life of Emile Zola\nThe Life of Emile Zola is a 1937 American biographical film about French author Émile Zola, played by Paul Muni and directed by William Dieterle.\n\n It has the distinction of being the second biographical film to win the Oscar for Best Picture.\n\n It premiered at the Los Angeles Carthay Circle Theatre to great success both critically and financially.\n\n Contemporary reviews cited it the best biographical film made up to that time.\n\n In 2000, it was selected for preservation in the United States National Film Registry by the Library of Congress as being \"culturally, historically, or aesthetically significant\".",
+    "The Man from Snowy River (1982 film)\nThe Man from Snowy River is a 1982 Australian drama film based on the Banjo Paterson poem \"The Man from Snowy River\".\n\n The film had a cast including Kirk Douglas in a dual role as the brothers Harrison (a character who appeared frequently in Paterson's poems) and Spur, Jack Thompson as Clancy, Tom Burlinson as Jim Craig, Sigrid Thornton as Harrison's daughter Jessica, Terence Donovan as Jim's father Henry Craig, and Chris Haywood as Curly.",
+    "The Wolf of Wall Street (2013 film)\nThe Wolf of Wall Street is a 2013 American biographical black comedy crime film directed by Martin Scorsese and written by Terence Winter, based on the memoir of the same name by Jordan Belfort.\n\n It recounts Belfort's perspective on his career as a stockbroker in New York City and how his firm Stratton Oakmont engaged in rampant corruption and fraud on Wall Street that ultimately led to his downfall.\n\n Leonardo DiCaprio (who was also a producer) stars as Belfort, with Jonah Hill as his business partner and friend Donnie Azoff, Margot Robbie as his wife Naomi Lapaglia and Kyle Chandler as Patrick Denham, the FBI agent who tries to bring him down.\n\n Matthew McConaughey, Rob Reiner, Jon Favreau, Joanna Lumley and Jean Dujardin also star."
+   ]
+  },
+  {
+   "id": "a0674ca8145020c1",
+   "gold": [
+    {
+     "sentence": "Henry Louis Mencken (September 12, 1880 – January 29, 1956) was an American journalist, satirist, cultural critic and scholar of American English.",
+     "facts": {
+      "0.0": "Henry Louis Mencken lived from September 12, 1880 to January 29, 1956.",
+      "0.1": "Henry Louis Mencken was an American journalist.",
+      "0.2": "Henry Louis Mencken was an American satirist.",
+      "0.3": "Henry Louis Mencken was an American cultural critic.",
+      "0.4": "Henry Louis Mencken was a scholar of American English."
+     }
+    },
+    {
+     "sentence": "Albert Camus (] ; 7 November 1913 – 4 January 1960) was a French philosopher, author, and journalist.",
+     "facts": {
+      "1.0": "Albert Camus lived from 7 November 1913 to 4 January 1960.",
+      "1.1": "Albert Camus was a French philosopher.",
+      "1.2": "Albert Camus was an author.",
+      "1.3": "Albert Camus was a journalist."
+     }
+    }
+   ],
+   "items": [
+    "The American Mercury\nThe American Mercury was an American magazine published from 1924 to 1981.\n\n It was founded as the brainchild of H. L. Mencken and drama critic George Jean Nathan.\n\n The magazine featured writing by some of the most important writers in the United States through the 1920s and 1930s.\n\n After a change in ownership in the 1940s, the magazine attracted conservative writers.\n\n A second change in ownership a decade later turned the magazine into a virulently anti-Semitic publication.\n\n It was published monthly in New York City.\n\n The magazine went out of business in 1981, having spent the last 25 years of its existence in decline and controversy.",
+    "Reflections on the Guillotine\n\"Reflections on the Guillotine\" is an extended essay written in 1957 by Albert Camus.\n\n In the essay Camus takes an uncompromising position for the abolition of the death penalty.\n\n Camus's view is similar to that of Cesare Beccaria and the Marquis de Sade, the latter having also argued that murder premeditated and carried out by the state was the worst kind.\n\n Camus states that he does not base his argument on sympathy for the convicted but on logical grounds and on proven statistics.\n\n Camus also argues that capital punishment is an easy option for the government where remedy and reform may be possible.",
+    "Herbert Lottman\nHerbert Lottman (August 16, 1927, Brooklyn - August 27, 2014, Paris) was an American author who specialized in writing biographies on French subjects.\n\n An influential biographer, he published 17 biographies, 15 of which were related to French culture, commerce, or politics; including works on Albert Camus, Colette, Gustave Flaubert, Henri Philippe Pétain, Jules Verne, and the Rothschild banking family of France.\n\n He wrote that, just before dying, Albert Camus was pledged to marry.\n\n Camus's estate tried to block his book, partly because of this controversial statement.",
+    "The Rebel (book)\nThe Rebel (French: \"L'Homme révolté\" ) is a 1951 book-length essay by Albert Camus, which treats both the metaphysical and the historical development of rebellion and revolution in societies, especially Western Europe.\n\n Camus relates writers and artists as diverse as Epicurus and Lucretius, Marquis de Sade, Georg Wilhelm Friedrich Hegel, Fyodor Dostoyevsky, Friedrich Nietzsche, Max Stirner, André Breton, and others in an integrated, historical portrait of man in revolt.\n\n Examining both rebellion and revolt, which may be seen as the same phenomenon in personal and social frames, Camus examines several 'countercultural' figures and movements from the history of Western thought and art, noting the importance of each in the overall development of revolutionary thought and philosophy.",
+    "H. L. Mencken\nHenry Louis Mencken (September 12, 1880 – January 29, 1956) was an American journalist, satirist, cultural critic and scholar of American English.\n\n Known as the \"Sage of Baltimore\", he is regarded as one of the most influential American writers and prose stylists of the first half of the twentieth century.\n\n He commented widely on the social scene, literature, music, prominent politicians and contemporary movements.\n\n His satirical reporting on the Scopes trial, which he dubbed the \"Monkey Trial\", also gained him attention.",
+    "The Stranger (novel)\nL’Étranger (The Outsider [UK], or The Stranger [US]) is a 1942 novel by French author Albert Camus.\n\n Its theme and outlook are often cited as examples of Camus' philosophy of the absurd and existentialism, though Camus personally rejected the latter label.",
+    "The Guest\n\"The Guest\" (French: \"L'Hôte\" ) is a short story by the French writer Albert Camus.\n\n It was first published in 1957 as part of a collection entitled \"Exile and the Kingdom\" (\"L'exil et le royaume\").\n\n The French title \"L'Hôte\" translates into both \"the guest\" and \"the host\" which ties back to the relationship between the main characters of the story.\n\n Camus employs this short tale to reflect upon issues raised by the political situation in French North Africa.\n\n In particular, he explores the problem of refusing to take sides in the colonial conflict in Algeria, something that mirrors Camus' own non-aligned stance which he had set out in his Nobel Prize acceptance speech.",
+    "Marcel J. Melançon\nMarcel J. Mélançon is a Canadian philosopher and scientist.\n\n He was born in Saint-Barnabé, Quebec, in 1938, and is mostly known for his book on the French philosopher Albert Camus \"Albert Camus, An Analysis of his thought\" (Albert Camus.\n\n Analyse de sa pensée).\n\n He has mostly worked together with the biologist Richard D. Lambert.",
+    "Bernard Malamud\nBernard Malamud (April 26, 1914 – March 18, 1986) was an American novelist and short story writer.\n\n Along with Saul Bellow and Philip Roth, he was one of the best known American Jewish authors of the 20th century.\n\n His baseball novel, \"The Natural\", was adapted into a 1984 film starring Robert Redford.\n\n His 1966 novel \"The Fixer\" (also filmed), about antisemitism in Tsarist Russia, won both the National Book Award and the Pulitzer Prize.",
+    "Albert Camus\nAlbert Camus (] ; 7 November 1913 – 4 January 1960) was a French philosopher, author, and journalist.\n\n His views contributed to the rise of the philosophy known as absurdism.\n\n He wrote in his essay \"The Rebel\" that his whole life was devoted to opposing the philosophy of nihilism while still delving deeply into individual freedom.\n\n He won the Nobel Prize in Literature in 1957."
+   ]
+  }
+ ]
+}

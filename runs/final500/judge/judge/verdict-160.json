@@ -1,0 +1,61 @@
+[
+  {"id": "417bcf7016721129", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "The product 6PPD-quinone, which was identified in late 2020,"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "requires more research to understand what impact, if any, it may have on aquatic life or the environment,"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Goodyear SVP of global operations and CTO Chris Helsel says."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "“The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment,” Goodyear SVP of global operations and CTO Chris Helsel says."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]}
+  ]},
+  {"id": "28dc32e87cb2df27", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Google compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "to GPT-4’s predecessor, GPT-3.5,"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "GPT-3.5, a model that’s around a year old."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "6b1fa3aa76052696", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Around 2019 or 2020, Wang checked the database"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Around 2019 or 2020, Wang checked the database and discovered that Alameda was negative by about $200 million, which was more than the $150 million FTX made in revenue."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "about $200 million, which was more than the $150 million FTX made in revenue."}]},
+    {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 5, "quote": "As part of that feedback loop, Alameda teetered on the brink of liquidation, which “would have disastrous consequences” for FTX."}, {"item": 5, "quote": "Because of that experience, Bankman-Fried suggested an “alert” or “delay” that would keep Alameda from being liquidated by a bug."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Because of that experience, Bankman-Fried suggested an “alert” or “delay” that would keep Alameda from being liquidated by a bug."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "FTX was no Ponzi scheme. It was a “very innovative, successful company.”"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "And the business practices between the two were reasonable, he argued,"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 7, "quote": "Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 7, "quote": "Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."}]},
+    {"fact": "2.5", "status": "stated", "evidence": [{"item": 7, "quote": "Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."}]}
+  ]},
+  {"id": "e0567b4df9009d33", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "OpenAI announced that GPT-4 with vision will become available alongside the upcoming launch of GPT-4 Turbo API."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "OpenAI announced that GPT-4 with vision will become available alongside the upcoming launch of GPT-4 Turbo API."}]}
+  ]},
+  {"id": "463c907cc884f960", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "b1be92e51174ab3a", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]}
+]

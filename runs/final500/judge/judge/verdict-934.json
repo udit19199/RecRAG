@@ -1,0 +1,2619 @@
+[
+ {
+  "id": "6dc114e394cc6deb",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "The park lies in the north - east of South Africa , in the eastern parts of Limpopo and Mpumalanga provinces ."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "The park lies in the north - east of South Africa , in the eastern parts of Limpopo and Mpumalanga provinces ."
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Phalaborwa , Limpopo is the only town in South Africa that borders the Kruger National Park ."
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "It is one of the largest national parks in the world , with an area of 19,485 square kilometres ( 7,523 sq mi ) ."
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "It is one of the largest national parks in the world , with an area of 19,485 square kilometres ( 7,523 sq mi ) ."
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "The park is approximately 360 kilometres ( 220 mi ) long"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "and has an average width of 65 kilometres ( 40 mi )"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "At its widest point , the park is 90 kilometres ( 56 mi ) wide from east to west ."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Kruger National Park is one of the largest game reserves in Africa ."
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "It covers an area of 19,485 square kilometres ( 7,523 sq mi ) in the provinces of Limpopo and Mpumalanga in northeastern South Africa"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "It covers an area of 19,485 square kilometres ( 7,523 sq mi ) in the provinces of Limpopo and Mpumalanga in northeastern South Africa"
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "It covers an area of 19,485 square kilometres ( 7,523 sq mi ) in the provinces of Limpopo and Mpumalanga in northeastern South Africa"
+     }
+    ]
+   },
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "extends 360 kilometres ( 220 mi ) from north to south and 65 kilometres ( 40 mi ) from east to west ."
+     }
+    ]
+   },
+   {
+    "fact": "1.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "extends 360 kilometres ( 220 mi ) from north to south and 65 kilometres ( 40 mi ) from east to west ."
+     }
+    ]
+   },
+   {
+    "fact": "1.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The administrative headquarters are in Skukuza ."
+     }
+    ]
+   },
+   {
+    "fact": "1.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Areas of the park were first protected by the government of the South African Republic in 1898 , and it became South Africa 's first national park in 1926 ."
+     }
+    ]
+   },
+   {
+    "fact": "1.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Areas of the park were first protected by the government of the South African Republic in 1898 , and it became South Africa 's first national park in 1926 ."
+     }
+    ]
+   },
+   {
+    "fact": "2.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Kruger National reserve IUCN category II ( national park )"
+     }
+    ]
+   },
+   {
+    "fact": "2.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Location Limpopo and Mpumalanga provinces , South Africa"
+     }
+    ]
+   },
+   {
+    "fact": "2.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Nearest city Nelspruit ( southern ) Phalaborwa ( central )"
+     }
+    ]
+   },
+   {
+    "fact": "2.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Nearest city Nelspruit ( southern ) Phalaborwa ( central )"
+     }
+    ]
+   },
+   {
+    "fact": "2.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Coordinates 24 ° 0 ′ 41 '' S 31 ° 29 ′ 7 '' E"
+     },
+     {
+      "item": 5,
+      "quote": "24.01139 ° S 31.48528 ° E"
+     }
+    ]
+   },
+   {
+    "fact": "2.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Area 19,485 km ( 7,523 sq mi )"
+     }
+    ]
+   },
+   {
+    "fact": "2.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Established 31 May 1926 ( 1898 )"
+     }
+    ]
+   },
+   {
+    "fact": "2.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Visitors 1,336,981 ( in 2004 )"
+     }
+    ]
+   },
+   {
+    "fact": "2.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Governing body South African National Parks"
+     }
+    ]
+   },
+   {
+    "fact": "2.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "www.sanparks.org/parks/kruger/"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "796396a234f2bcdf",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "The Sentencing Reform Act , part of the Comprehensive Crime Control Act of 1984 , was a U.S. federal statute"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "The Sentencing Reform Act , part of the Comprehensive Crime Control Act of 1984 , was a U.S. federal statute"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "intended to increase consistency in United States federal sentencing ."
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "It established the United States Sentencing Commission"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "It also abolished federal parole"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "except for persons convicted under federal law before November 1 , 1987"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "persons convicted under District of Columbia law"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "`` transfer treaty '' inmates"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "persons who violated military law who are in federal civilian prisons"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "persons who are defendants in state cases and who are under the U.S. Marshals Service Witness Protection Program"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "e8b76a26fa2c5255",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The Astros were making their first Series appearance in 44 years of play"
+     },
+     {
+      "item": 1,
+      "quote": "This was their second World Series appearance and first since 2005 , when they were swept in four games by the Chicago White Sox"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "This was their second World Series appearance and first since 2005 , when they were swept in four games by the Chicago White Sox"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "This was their second World Series appearance and first since 2005 , when they were swept in four games by the Chicago White Sox"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "In 2017 , they became the first franchise in MLB history to have won a pennant in both the NL and the AL , when they defeated the New York Yankees in the ALCS"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "In 2017 , they became the first franchise in MLB history to have won a pennant in both the NL and the AL , when they defeated the New York Yankees in the ALCS"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "They subsequently won the 2017 World Series against the Los Angeles Dodgers"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "They subsequently won the 2017 World Series against the Los Angeles Dodgers , winning four games to three"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "winning the first championship in franchise history"
+     },
+     {
+      "item": 10,
+      "quote": "earning the team , and Texas , its first World Series title"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "earning the team , and Texas , its first World Series title"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "15d24f4369dbb91c",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "The uvea is the vascular middle layer of the eye ."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "It is traditionally divided into three areas , from front to back , the :"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "It is traditionally divided into three areas , from front to back , the : Iris Ciliary body Choroid"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "4f4b419eaa2a6992",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Lynne is the eldest of the Slater sisters and she arrives in Albert Square in 2000 with her family"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Lynne is the eldest of the Slater sisters and she arrives in Albert Square in 2000 with her family"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Lynne is the eldest of the Slater sisters and she arrives in Albert Square in 2000 with her family"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "with her family : father Charlie ( Derek Martin )"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "sisters Kat ( Jessie Wallace )"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Little Mo ( Kacey Ainsworth )"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "and Zoe ( Michelle Ryan )"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "grandmother Mo ( Laila Morse )"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Unlike Little Mo and Zoe , Lynne is aware that Zoe is in fact Kat 's daughter"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "is aware that Zoe is in fact Kat 's daughter and helps keep the family secret until Kat reveals the truth to Zoe"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "51ed3f5bfa1fcc5f",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.5",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.6",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.7",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.8",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.9",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.10",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.11",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.12",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.13",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.14",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Arkansas Pre 1925 : None 1925 : 21 21 21 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Arkansas Pre 1925 : None 1925 : 21 21 21 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Arkansas Pre 1925 : None 1925 : 21 21 21 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "California Pre 1891 : Regulated by municipality / county ( common age was 16 ) 1891 : 18 ( statewide ) 1933 : 21 21 21 21 ( except small amounts for religious ceremonies )"
+     }
+    ]
+   },
+   {
+    "fact": "0.19",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "California Pre 1891 : Regulated by municipality / county ( common age was 16 ) 1891 : 18 ( statewide ) 1933 : 21 21 21 21 ( except small amounts for religious ceremonies )"
+     }
+    ]
+   },
+   {
+    "fact": "0.20",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "California Pre 1891 : Regulated by municipality / county ( common age was 16 ) 1891 : 18 ( statewide ) 1933 : 21 21 21 21 ( except small amounts for religious ceremonies )"
+     }
+    ]
+   },
+   {
+    "fact": "0.21",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "California Pre 1891 : Regulated by municipality / county ( common age was 16 ) 1891 : 18 ( statewide ) 1933 : 21 21 21 21 ( except small amounts for religious ceremonies )"
+     }
+    ]
+   },
+   {
+    "fact": "0.22",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Colorado None 1945 : 18 : for beer 21 : for wine and liquor 18 Raised to 21 in 1987 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.23",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Colorado None 1945 : 18 : for beer 21 : for wine and liquor 18 Raised to 21 in 1987 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.24",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Colorado None 1945 : 18 : for beer 21 : for wine and liquor 18 Raised to 21 in 1987 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.25",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Colorado None 1945 : 18 : for beer 21 : for wine and liquor 18 Raised to 21 in 1987 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.26",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Colorado None 1945 : 18 : for beer 21 : for wine and liquor 18 Raised to 21 in 1987 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.27",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.28",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.29",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.30",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.31",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.32",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.33",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.34",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.35",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.36",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.37",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.38",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.39",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.40",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.41",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.42",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.43",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.44",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.45",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Florida ? 18 1980 : 19 1985 : Raised to 21 with grandfather clause 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.46",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Florida ? 18 1980 : 19 1985 : Raised to 21 with grandfather clause 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.47",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Florida ? 18 1980 : 19 1985 : Raised to 21 with grandfather clause 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.48",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Florida ? 18 1980 : 19 1985 : Raised to 21 with grandfather clause 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.49",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Georgia ? 21 1972 : Lowered to 18 1984 : Raised to 19 1985 : Raised to 20 1986 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.50",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Georgia ? 21 1972 : Lowered to 18 1984 : Raised to 19 1985 : Raised to 20 1986 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.51",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Georgia ? 21 1972 : Lowered to 18 1984 : Raised to 19 1985 : Raised to 20 1986 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.52",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Georgia ? 21 1972 : Lowered to 18 1984 : Raised to 19 1985 : Raised to 20 1986 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.53",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Georgia ? 21 1972 : Lowered to 18 1984 : Raised to 19 1985 : Raised to 20 1986 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.54",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Georgia ? 21 1972 : Lowered to 18 1984 : Raised to 19 1985 : Raised to 20 1986 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.55",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Hawaii ? 21 1972 : Lowered to 18 1986 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.56",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Hawaii ? 21 1972 : Lowered to 18 1986 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.57",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Hawaii ? 21 1972 : Lowered to 18 1986 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.58",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Hawaii ? 21 1972 : Lowered to 18 1986 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.59",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Idaho ? 20 : for beer 21 : for wine and liquor 1972 : Lowered to 19 ( all ) 1987 : Raised to 21 in 1987 ( Apr 11 ) with grandfather clause 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.60",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Idaho ? 20 : for beer 21 : for wine and liquor 1972 : Lowered to 19 ( all ) 1987 : Raised to 21 in 1987 ( Apr 11 ) with grandfather clause 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.61",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Idaho ? 20 : for beer 21 : for wine and liquor 1972 : Lowered to 19 ( all ) 1987 : Raised to 21 in 1987 ( Apr 11 ) with grandfather clause 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.62",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Idaho ? 20 : for beer 21 : for wine and liquor 1972 : Lowered to 19 ( all ) 1987 : Raised to 21 in 1987 ( Apr 11 ) with grandfather clause 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.63",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Illinois 1872 : Age of majority ( none with written consent of parent ) pre 1961 : Age of majority 1961 : Raised to 21 1973 : Lowered to 19 : for beer and wine 21 : for liquor 1980 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.64",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Illinois 1872 : Age of majority ( none with written consent of parent ) pre 1961 : Age of majority 1961 : Raised to 21 1973 : Lowered to 19 : for beer and wine 21 : for liquor 1980 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.65",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Illinois 1872 : Age of majority ( none with written consent of parent ) pre 1961 : Age of majority 1961 : Raised to 21 1973 : Lowered to 19 : for beer and wine 21 : for liquor 1980 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.66",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Illinois 1872 : Age of majority ( none with written consent of parent ) pre 1961 : Age of majority 1961 : Raised to 21 1973 : Lowered to 19 : for beer and wine 21 : for liquor 1980 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.67",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Illinois 1872 : Age of majority ( none with written consent of parent ) pre 1961 : Age of majority 1961 : Raised to 21 1973 : Lowered to 19 : for beer and wine 21 : for liquor 1980 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.68",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Illinois 1872 : Age of majority ( none with written consent of parent ) pre 1961 : Age of majority 1961 : Raised to 21 1973 : Lowered to 19 : for beer and wine 21 : for liquor 1980 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.69",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.70",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.71",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.72",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.73",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.74",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.75",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.76",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.77",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.78",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.79",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.80",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.81",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.82",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Louisiana ? As of 1948 : 18 18"
+     }
+    ]
+   },
+   {
+    "fact": "0.83",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Louisiana ? As of 1948 : 18 18"
+     }
+    ]
+   },
+   {
+    "fact": "0.84",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "1987 : Raised to 21 de jure in 1987 , but de facto age was still 18 until 1995 due to a sale loophole"
+     }
+    ]
+   },
+   {
+    "fact": "0.85",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "1995 : De facto age raised to 21 in 1995 when loophole was closed"
+     }
+    ]
+   },
+   {
+    "fact": "0.86",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "1996 : In 1996 , briefly lowered by Louisiana Supreme Court to 18 until it reversed its decision , raising to 21 three months later"
+     }
+    ]
+   },
+   {
+    "fact": "0.87",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.88",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.89",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.90",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.91",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.92",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.93",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.94",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.95",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.96",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.97",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.98",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.99",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.100",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.101",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.102",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.103",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Massachusetts ? 21 1973 : Lowered to 18 1979 : Raised to 20 in 1979 ( Apr 16 ) Raised to 21 in 1985 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.104",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Massachusetts ? 21 1973 : Lowered to 18 1979 : Raised to 20 in 1979 ( Apr 16 ) Raised to 21 in 1985 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.105",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Massachusetts ? 21 1973 : Lowered to 18 1979 : Raised to 20 in 1979 ( Apr 16 ) Raised to 21 in 1985 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.106",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Massachusetts ? 21 1973 : Lowered to 18 1979 : Raised to 20 in 1979 ( Apr 16 ) Raised to 21 in 1985 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.107",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Massachusetts ? 21 1973 : Lowered to 18 1979 : Raised to 20 in 1979 ( Apr 16 ) Raised to 21 in 1985 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.108",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Michigan ? 21 1972 : Lowered to 18 in 1972 ( Jan 1 ) 1978 : Raised to 19 in 1978 ( Dec 3 ) 1978 : Raised to 21 in 1978 ( Dec 21 ) , 18 days later . First state to raise age to 21 since it was lowered 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.109",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Michigan ? 21 1972 : Lowered to 18 in 1972 ( Jan 1 ) 1978 : Raised to 19 in 1978 ( Dec 3 ) 1978 : Raised to 21 in 1978 ( Dec 21 ) , 18 days later . First state to raise age to 21 since it was lowered 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.110",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Michigan ? 21 1972 : Lowered to 18 in 1972 ( Jan 1 ) 1978 : Raised to 19 in 1978 ( Dec 3 ) 1978 : Raised to 21 in 1978 ( Dec 21 ) , 18 days later . First state to raise age to 21 since it was lowered 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.111",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Michigan ? 21 1972 : Lowered to 18 in 1972 ( Jan 1 ) 1978 : Raised to 19 in 1978 ( Dec 3 ) 1978 : Raised to 21 in 1978 ( Dec 21 ) , 18 days later . First state to raise age to 21 since it was lowered 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.112",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Michigan ? 21 1972 : Lowered to 18 in 1972 ( Jan 1 ) 1978 : Raised to 19 in 1978 ( Dec 3 ) 1978 : Raised to 21 in 1978 ( Dec 21 ) , 18 days later . First state to raise age to 21 since it was lowered 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.113",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Michigan ? 21 1972 : Lowered to 18 in 1972 ( Jan 1 ) 1978 : Raised to 19 in 1978 ( Dec 3 ) 1978 : Raised to 21 in 1978 ( Dec 21 ) , 18 days later . First state to raise age to 21 since it was lowered 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.114",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Minnesota ? 21 1973 : Lowered to 18 ( June 1 ) 1976 : Raised to 19 ( Sept 1 ) First state to raise age after lowering . 1986 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.115",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Minnesota ? 21 1973 : Lowered to 18 ( June 1 ) 1976 : Raised to 19 ( Sept 1 ) First state to raise age after lowering . 1986 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.116",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Minnesota ? 21 1973 : Lowered to 18 ( June 1 ) 1976 : Raised to 19 ( Sept 1 ) First state to raise age after lowering . 1986 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.117",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Minnesota ? 21 1973 : Lowered to 18 ( June 1 ) 1976 : Raised to 19 ( Sept 1 ) First state to raise age after lowering . 1986 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.118",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Minnesota ? 21 1973 : Lowered to 18 ( June 1 ) 1976 : Raised to 19 ( Sept 1 ) First state to raise age after lowering . 1986 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.119",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Minnesota ? 21 1973 : Lowered to 18 ( June 1 ) 1976 : Raised to 19 ( Sept 1 ) First state to raise age after lowering . 1986 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.120",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.121",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.122",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.123",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.124",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.125",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.126",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.127",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.128",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.129",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.130",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.131",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.132",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.133",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.134",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.135",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.136",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.137",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.138",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.139",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.140",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.141",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.142",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.143",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.144",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.145",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.146",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.147",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.148",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.149",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.150",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.151",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "New York 21 18 18 1982 : Raised to 19 in 1982 ( Dec ) 1985 : Raised to 21 in 1985 ( Dec ) 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.152",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "New York 21 18 18 1982 : Raised to 19 in 1982 ( Dec ) 1985 : Raised to 21 in 1985 ( Dec ) 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.153",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "New York 21 18 18 1982 : Raised to 19 in 1982 ( Dec ) 1985 : Raised to 21 in 1985 ( Dec ) 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.154",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "New York 21 18 18 1982 : Raised to 19 in 1982 ( Dec ) 1985 : Raised to 21 in 1985 ( Dec ) 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.155",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "New York 21 18 18 1982 : Raised to 19 in 1982 ( Dec ) 1985 : Raised to 21 in 1985 ( Dec ) 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.156",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "New York 21 18 18 1982 : Raised to 19 in 1982 ( Dec ) 1985 : Raised to 21 in 1985 ( Dec ) 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.157",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "North Carolina ? 18 18 : for beer and wine 21 : for liquor 1983 : 19 : for beer and wine 21 : for liquor 1986 : Raised to 21 in 1986 ( Sep 1 ) 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.158",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "North Carolina ? 18 18 : for beer and wine 21 : for liquor 1983 : 19 : for beer and wine 21 : for liquor 1986 : Raised to 21 in 1986 ( Sep 1 ) 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.159",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "North Carolina ? 18 18 : for beer and wine 21 : for liquor 1983 : 19 : for beer and wine 21 : for liquor 1986 : Raised to 21 in 1986 ( Sep 1 ) 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.160",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "North Carolina ? 18 18 : for beer and wine 21 : for liquor 1983 : 19 : for beer and wine 21 : for liquor 1986 : Raised to 21 in 1986 ( Sep 1 ) 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.161",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "North Carolina ? 18 18 : for beer and wine 21 : for liquor 1983 : 19 : for beer and wine 21 : for liquor 1986 : Raised to 21 in 1986 ( Sep 1 ) 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.162",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "North Dakota ? 1936 : 21 21 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.163",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.164",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.165",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.166",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.167",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.168",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.169",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.170",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.171",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.172",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.173",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.174",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.175",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.176",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.177",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.178",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.179",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.180",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.181",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.182",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.183",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.184",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.185",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.186",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.187",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.188",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.189",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.190",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.191",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.192",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.193",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.194",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.195",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Tennessee Pre 1881 : None 1881 : 21 21 1964 : Lowered to 18 1979 : Raised to 19 1984 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.196",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Tennessee Pre 1881 : None 1881 : 21 21 1964 : Lowered to 18 1979 : Raised to 19 1984 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.197",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Tennessee Pre 1881 : None 1881 : 21 21 1964 : Lowered to 18 1979 : Raised to 19 1984 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.198",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Tennessee Pre 1881 : None 1881 : 21 21 1964 : Lowered to 18 1979 : Raised to 19 1984 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.199",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Tennessee Pre 1881 : None 1881 : 21 21 1964 : Lowered to 18 1979 : Raised to 19 1984 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.200",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Tennessee Pre 1881 : None 1881 : 21 21 1964 : Lowered to 18 1979 : Raised to 19 1984 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.201",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Tennessee Pre 1881 : None 1881 : 21 21 1964 : Lowered to 18 1979 : Raised to 19 1984 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.202",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Texas Pre 1909 : 21 None ( with written permission of parent or guardian ) Post 1909 : 21 21 1973 : Lowered to 18 1981 : Raised to 19 1986 : Raised to 21 in 1986 ( Sep 1 ) 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.203",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Texas Pre 1909 : 21 None ( with written permission of parent or guardian ) Post 1909 : 21 21 1973 : Lowered to 18 1981 : Raised to 19 1986 : Raised to 21 in 1986 ( Sep 1 ) 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.204",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Texas Pre 1909 : 21 None ( with written permission of parent or guardian ) Post 1909 : 21 21 1973 : Lowered to 18 1981 : Raised to 19 1986 : Raised to 21 in 1986 ( Sep 1 ) 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.205",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Texas Pre 1909 : 21 None ( with written permission of parent or guardian ) Post 1909 : 21 21 1973 : Lowered to 18 1981 : Raised to 19 1986 : Raised to 21 in 1986 ( Sep 1 ) 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.206",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Texas Pre 1909 : 21 None ( with written permission of parent or guardian ) Post 1909 : 21 21 1973 : Lowered to 18 1981 : Raised to 19 1986 : Raised to 21 in 1986 ( Sep 1 ) 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.207",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Texas Pre 1909 : 21 None ( with written permission of parent or guardian ) Post 1909 : 21 21 1973 : Lowered to 18 1981 : Raised to 19 1986 : Raised to 21 in 1986 ( Sep 1 ) 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.208",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Utah ? 1935 : 21 21 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.209",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Vermont ? 21 1971 : Lowered to 18 1986 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.210",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Vermont ? 21 1971 : Lowered to 18 1986 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.211",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Vermont ? 21 1971 : Lowered to 18 1986 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.212",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Vermont ? 21 1971 : Lowered to 18 1986 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.213",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.214",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.215",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.216",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.217",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.218",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.219",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Washington `` Age of majority '' since 1877 21 21 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.220",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Washington `` Age of majority '' since 1877 21 21 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.221",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "West Virginia ? 18 : for beer and wine 21 : for liquor 1972 : Lowered to 18 ( all ) 1983 : Raised to 19 ( & 21 for non-residents ) 1986 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.222",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "West Virginia ? 18 : for beer and wine 21 : for liquor 1972 : Lowered to 18 ( all ) 1983 : Raised to 19 ( & 21 for non-residents ) 1986 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.223",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "West Virginia ? 18 : for beer and wine 21 : for liquor 1972 : Lowered to 18 ( all ) 1983 : Raised to 19 ( & 21 for non-residents ) 1986 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.224",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "West Virginia ? 18 : for beer and wine 21 : for liquor 1972 : Lowered to 18 ( all ) 1983 : Raised to 19 ( & 21 for non-residents ) 1986 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.225",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "West Virginia ? 18 : for beer and wine 21 : for liquor 1972 : Lowered to 18 ( all ) 1983 : Raised to 19 ( & 21 for non-residents ) 1986 : Raised to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.226",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Wisconsin 1839 -- 1866 : 18 : for wine and liquor None : for beer"
+     }
+    ]
+   },
+   {
+    "fact": "0.227",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Post-1866 : 21 ( all ) 18 : for beer 21 : for wine and spirits"
+     }
+    ]
+   },
+   {
+    "fact": "0.228",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Post-1866 : 21 ( all ) 18 : for beer 21 : for wine and spirits"
+     }
+    ]
+   },
+   {
+    "fact": "0.229",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "1957 : 21 : for residents of bordering states with age limit 21 ."
+     }
+    ]
+   },
+   {
+    "fact": "0.230",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "1963 : Raised to 21 ( off - premises beer sales , remained 18 for on - premises )"
+     }
+    ]
+   },
+   {
+    "fact": "0.231",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.232",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.233",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.234",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.235",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.236",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Wyoming ? 21 1973 : Lowered to 19 1988 : Raised to 21 in 1988 ( Jul 1 ) Last state to raise de jure drinking age to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.237",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Wyoming ? 21 1973 : Lowered to 19 1988 : Raised to 21 in 1988 ( Jul 1 ) Last state to raise de jure drinking age to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.238",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Wyoming ? 21 1973 : Lowered to 19 1988 : Raised to 21 in 1988 ( Jul 1 ) Last state to raise de jure drinking age to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.239",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Wyoming ? 21 1973 : Lowered to 19 1988 : Raised to 21 in 1988 ( Jul 1 ) Last state to raise de jure drinking age to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.240",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Wyoming ? 21 1973 : Lowered to 19 1988 : Raised to 21 in 1988 ( Jul 1 ) Last state to raise de jure drinking age to 21 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.241",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "American Samoa ? ? ? 21 ? 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.242",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Northern Mariana Islands -- -- ? 21 ? 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.243",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Puerto Rico ? 18 18 Kept at 18 despite 10 % highway funding penalty under Drinking Age Act . 18"
+     }
+    ]
+   },
+   {
+    "fact": "0.244",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Puerto Rico ? 18 18 Kept at 18 despite 10 % highway funding penalty under Drinking Age Act . 18"
+     }
+    ]
+   },
+   {
+    "fact": "0.245",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Puerto Rico ? 18 18 Kept at 18 despite 10 % highway funding penalty under Drinking Age Act . 18"
+     }
+    ]
+   },
+   {
+    "fact": "0.246",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Puerto Rico ? 18 18 Kept at 18 despite 10 % highway funding penalty under Drinking Age Act . 18"
+     }
+    ]
+   },
+   {
+    "fact": "0.247",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Virgin Islands ? ? ? 18 18"
+     }
+    ]
+   },
+   {
+    "fact": "0.248",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Guam ? 21 ? 18 18 Raised to 21 in 2010"
+     }
+    ]
+   },
+   {
+    "fact": "0.249",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Guam ? 21 ? 18 18 Raised to 21 in 2010"
+     }
+    ]
+   },
+   {
+    "fact": "0.250",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Guam ? 21 ? 18 18 Raised to 21 in 2010"
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "From 1976 to 1983 , several states voluntarily raised their purchase ages to 19 ( or , less commonly , 20 or 21 )"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "several states voluntarily raised their purchase ages to 19 ( or , less commonly , 20 or 21 ) , in part to combat drunk driving fatalities"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "In 1984 , Congress passed the National Minimum Drinking Age Act"
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "which required states to raise their ages for purchase and public possession to 21 by October 1986 or lose 10 % of their federal highway funds"
+     }
+    ]
+   },
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "By mid-1988 , all 50 states and the District of Columbia had raised their purchase ages to 21 ( but not Puerto Rico , Guam , or the Virgin Islands , see"
+     }
+    ]
+   },
+   {
+    "fact": "1.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "By mid-1988 , all 50 states and the District of Columbia had raised their purchase ages to 21 ( but not Puerto Rico , Guam , or the Virgin Islands , see"
+     }
+    ]
+   },
+   {
+    "fact": "1.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "South Dakota and Wyoming were the final two states to comply with the age 21 mandate"
+     }
+    ]
+   },
+   {
+    "fact": "1.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "The current drinking age of 21 remains a point of contention among many Americans"
+     }
+    ]
+   },
+   {
+    "fact": "1.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "because of it being higher than the age of majority ( 18 in most states )"
+     }
+    ]
+   },
+   {
+    "fact": "1.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "and higher than the drinking ages of most other countries"
+     }
+    ]
+   },
+   {
+    "fact": "1.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "The National Minimum Drinking Age Act is also seen as a congressional sidestep of the tenth amendment"
+     }
+    ]
+   },
+   {
+    "fact": "1.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Although debates have not been highly publicized"
+     }
+    ]
+   },
+   {
+    "fact": "1.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "a few states have proposed legislation to lower their drinking age"
+     }
+    ]
+   },
+   {
+    "fact": "1.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Guam has raised its drinking age to 21 in July 2010"
+     }
+    ]
+   }
+  ]
+ }
+]

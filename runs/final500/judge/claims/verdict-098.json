@@ -1,0 +1,171 @@
+[
+ {
+  "id": "5a8e0cb85542995085b373b2",
+  "sentences": [
+   [
+    "The Celluloid Closet is a 1995 American documentary film.",
+    "The Celluloid Closet was directed by Rob Epstein and Jeffrey Friedman.",
+    "The Celluloid Closet was written by Rob Epstein and Jeffrey Friedman."
+   ],
+   [
+    "Station to Station is the 2014 film of Doug Aitken's 2013 \"Nomadic Happening\".",
+    "The film Station to Station is made up of 62 one-minute films."
+   ]
+  ]
+ },
+ {
+  "id": "5ab5d4eb5542992aa134a3aa",
+  "sentences": [
+   [
+    "The album was Prince's third album released in 1996.",
+    "One of Prince's other 1996 releases was \"Chaos and Disorder\".",
+    "One of Prince's other 1996 releases was the soundtrack album of the Spike Lee movie \"Girl 6\".",
+    "1996 was one of the most prolific years for material released by Prince."
+   ],
+   [
+    "Prince's production company is 40 Acres and a Mule Filmworks.",
+    "40 Acres and a Mule Filmworks has produced over 35 films since 1983."
+   ]
+  ]
+ },
+ {
+  "id": "5adcfb5f5542990d50227d81",
+  "sentences": [
+   [
+    "Grantley Jonathan \"Grant\" Nicholas was born on 12 November 1967.",
+    "Grant Nicholas is a Welsh musician.",
+    "Grant Nicholas is best known as the lead singer of the rock band Feeder.",
+    "Grant Nicholas is best known as the lead guitarist of the rock band Feeder."
+   ],
+   [
+    "Danny Shirley was born on August 12, 1956.",
+    "Danny Shirley is an American country music singer."
+   ]
+  ]
+ },
+ {
+  "id": "5ae2eda355429928c4239570",
+  "sentences": [
+   [
+    "The soundtrack for the 1968 film \"Romeo and Juliet\" was composed by Nino Rota.",
+    "The soundtrack for the 1968 film \"Romeo and Juliet\" was conducted by Nino Rota."
+   ],
+   [
+    "Romeo and Juliet is a 1968 British-Italian romance film.",
+    "Romeo and Juliet is based on the tragic play of the same name.",
+    "The play Romeo and Juliet was written between 1591 and 1595.",
+    "The play Romeo and Juliet was written by William Shakespeare."
+   ]
+  ]
+ },
+ {
+  "id": "5ab3c270554299233954ff9e",
+  "sentences": [
+   [
+    "Midland F1 Racing was a Formula One constructor.",
+    "Midland F1 Racing was a racing team.",
+    "Midland F1 Racing is also known as MF1 Racing."
+   ],
+   [
+    "In 2007, the team competed as Spyker F1.",
+    "In 2008, the team was sold to Indian businessman Vijay Mallya.",
+    "In 2008, the team was renamed Force India F1."
+   ],
+   [
+    "The Spyker F1 Team was known as the Etihad Aldar Spyker F1 Team for sponsorship reasons.",
+    "The Spyker F1 Team was a Formula One team.",
+    "The Spyker F1 Team competed in the 2007 Formula One World Championship.",
+    "The Spyker F1 Team was created by Spyker Cars after their buyout of the short-lived Midland F1 team.",
+    "Midland F1 was formerly known as Jordan Grand Prix."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-1527",
+  "sentences": [
+   [
+    "The Buckeyes settled for a 52-yard field goal late in the first half.",
+    "Jayden Fielding missed the Buckeyes' 52-yard field goal wide left."
+   ],
+   [
+    "A 31-yard field goal is good.",
+    "The Buffs take the first lead of the game on their first drive."
+   ]
+  ]
+ },
+ {
+  "id": "5a74ab6055429916b01641b9",
+  "sentences": [
+   [
+    "The board game in this sentence was created by Glenn Drover.",
+    "The board game in this sentence was published by Eagle Games in 2003."
+   ],
+   [
+    "Can't Stop is a board game designed by Sid Sackson.",
+    "Can't Stop was originally published by Parker Brothers in 1980.",
+    "Can't Stop was long out of print in the United States."
+   ]
+  ]
+ },
+ {
+  "id": "7621889567969940898",
+  "sentences": [
+   [
+    "The Whistleblower Protection Act of 1989 is Pub. L. 101-12, as amended.",
+    "The Whistleblower Protection Act of 1989 is a United States federal law.",
+    "The Whistleblower Protection Act protects federal whistleblowers who work for the government and report agency misconduct.",
+    "A federal agency violates the Whistleblower Protection Act if agency authorities take, or threaten to take, retaliatory personnel action against any employee or applicant.",
+    "The retaliatory personnel action must be because of disclosure of information by that employee or applicant.",
+    "Whistleblowers may file complaints that they believe reasonably evidence a violation of a law, rule or regulation.",
+    "Whistleblowers may file complaints that they believe reasonably evidence gross mismanagement.",
+    "Whistleblowers may file complaints that they believe reasonably evidence gross waste of funds.",
+    "Whistleblowers may file complaints that they believe reasonably evidence an abuse of authority.",
+    "Whistleblowers may file complaints that they believe reasonably evidence a substantial and specific danger to public health or safety."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-497",
+  "sentences": [
+   [
+    "In the above scenario, supply disruption will lead to higher inflation.",
+    "In the above scenario, central bankers will have to adjust their policies.",
+    "In the above scenario, central bankers will have to hold rates higher for longer than anticipated."
+   ],
+   [
+    "Back then, home prices had boomed for years before Fed officials were ultimately forced to hike interest rates aggressively.",
+    "Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation.",
+    "The home price boom back then was like the home price boom today."
+   ]
+  ]
+ },
+ {
+  "id": "5ade6eb65542992fa25da782",
+  "sentences": [
+   [
+    "The album features a pair of duets with Waylon Jennings.",
+    "One of the duets with Waylon Jennings was the \"There Ain't No Good Chain Gang\" single.",
+    "The duet \"There Ain't No Good Chain Gang\" was one of Johnny Cash's first collaborations with Waylon Jennings.",
+    "Johnny Cash and Waylon Jennings recorded songs together throughout the 1980s.",
+    "Johnny Cash and Waylon Jennings recorded a separate album entitled \"Heroes\"."
+   ],
+   [
+    "Johnny Cash and Waylon Jennings would also work together as The Highwaymen.",
+    "The Highwaymen included Willie Nelson.",
+    "The Highwaymen included Kris Kristofferson."
+   ],
+   [
+    "The Highwaymen was a country music supergroup.",
+    "The Highwaymen was composed of four of the country music genre's biggest artists.",
+    "The four artists were well known for their pioneering influence on the outlaw country subgenre.",
+    "The Highwaymen members were Johnny Cash, Waylon Jennings, Willie Nelson, and Kris Kristofferson."
+   ],
+   [
+    "The Highwaymen was active as a group between 1985 and 1995.",
+    "The Highwaymen recorded three major label albums.",
+    "Two of The Highwaymen's major label albums were on Columbia Records.",
+    "One of The Highwaymen's major label albums was for Liberty Records."
+   ]
+  ]
+ }
+]

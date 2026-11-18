@@ -1,0 +1,993 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=74e7bcd5e165b05e ===
+Gold sentences and facts:
+Sentence 0: `` A Whiter Shade of Pale '' is the debut single by the British rock band Procol Harum , released 12 May 1967 . The single reached number one in the UK Singles Chart on 8 June 1967 and stayed there for six weeks . Without much promotion , it reached number 5 on the Bilboard pop chart in the United States . One of the anthems of the 1967 Summer of Love , it is one of fewer than 30 singles to have sold over 10 million copies worldwide .
+  Fact 0.0: "A Whiter Shade of Pale" is the debut single by the British rock band Procol Harum.
+  Fact 0.1: "A Whiter Shade of Pale" was released on 12 May 1967.
+  Fact 0.2: "A Whiter Shade of Pale" reached number one in the UK Singles Chart on 8 June 1967.
+  Fact 0.3: "A Whiter Shade of Pale" stayed at number one in the UK Singles Chart for six weeks.
+  Fact 0.4: Without much promotion, "A Whiter Shade of Pale" reached number 5 on the Billboard pop chart in the United States.
+  Fact 0.5: "A Whiter Shade of Pale" is one of the anthems of the 1967 Summer of Love.
+  Fact 0.6: "A Whiter Shade of Pale" is one of fewer than 30 singles to have sold over 10 million copies worldwide.
+
+Retrieved items:
+<item 1>
+A Whiter Shade of Pale
+5 August 2011 . Retrieved 21 February 2012 . Jump up ^ `` Whiter Shade ' most played ' song '' . BBC News . 13 April 2009 . Retrieved 21 February 2012 . Jump up
+^ `` Procol Harum Shades Rivals in UK Survey '' . Retrieved 21 February 2012 . Jump up ^ The BRITs 1977 `` . Brits.co.uk . Retrieved 20 October 2012 . Jump up ^
+Grammy Hall of Fame Award Grammy.org Retrieved 30 October 2012 . Jump up ^ `` A Whiter Shade of Pale Versions -- Martin 's Collection '' . Retrieved 21 February
+2012 . Jump up ^ `` A Whiter Shade of Pale Versions -- Martin 's Collection ( archive ) '' . Archived from the original on 15 October 2004 . Retrieved 9
+November 2017 . CS1 maint : BOT : original - url status unknown ( link ) Jump up ^ `` Cover versions of Procol Harum songs '' . Retrieved 9 November 2017 .
+</item 1>
+
+<item 2>
+A Whiter Shade of Pale
+live video from Eagle Rock Entertainment 's official channel on YouTube `` A Whiter Shade of Pale '' Scopitone film on YouTube Preceded by `` Silence is Golden
+'' by The Tremeloes UK Singles Chart number one single 8 June 1967 -- 18 July 1967 ( six weeks ) Succeeded by `` All You Need Is Love '' by The Beatles Preceded
+by `` Black Velvet Band '' by Johnny McEvoy Ireland 1967 number one single 22 June 1967 -- 19 July 1967 ( five weeks ) Succeeded by `` Black Velvet Band '' by
+Johnny McEvoy Preceded by `` This is My Song '' by Petula Clark Australia 1967 number one single 8 July 1967 -- 28 July 1967 ( three weeks ) Succeeded by `` All
+You Need is Love / Baby ,
+</item 2>
+
+<item 3>
+A Whiter Shade of Pale
+ISBN 978 - 1 - 4549 - 2052 - 6 . External links ( edit ) Lyrics of this song at MetroLyrics A Whiter Shade of Pale : authorised lyrics of all four verses ``
+Procol Harum : The ultimate tale of A Whiter Shade Of Pale '' , article on the song 's 40th anniversary , from Classic Rock magazine Bill Eyden Obituary Procol
+Harum -- A Whiter Shade Of Pale ,
+</item 3>
+
+<item 4>
+A Whiter Shade of Pale
+One of the anthems of the 1967 Summer of Love , it is one of fewer than 30 singles to have sold over 10 million copies worldwide . With its Bach - derived
+instrumental melody , soulful vocals , and unusual lyrics -- by the song 's co-authors Gary Brooker , Keith Reid and Matthew Fisher -- `` A Whiter Shade of Pale
+'' reached No. 1 in several countries when released in 1967 . In the years since , it has become an enduring classic . It was the most played song in the last
+75 years in public places in the UK ( as of 2009 ) , and the United Kingdom performing rights group Phonographic Performance Limited in 2004 recognised it as
+the most - played record by British broadcasting of the past 70 years . Also in 2004 , Rolling Stone placed `` A Whiter Shade of Pale '' 57th on its list of the
+500 Greatest Songs of All Time . In 1977 , the song was named joint winner ( along with Queen 's `` Bohemian Rhapsody '' ) of `` The Best British Pop Single
+1952 -- 1977 '' at the Brit Awards .
+</item 4>
+
+<item 5>
+A Whiter Shade of Pale
+Contents ( hide ) 1 Recording and personnel 2 Lyrics 3 Composition 4 Release and reception 5 Promotional films 6 Authorship lawsuit 7 Chart performance 7.1
+Weekly singles charts 7.2 Year - end charts 8 Annie Lennox version 8.1 Charts 9 References 10 Sources 11 External links Recording and personnel ( edit ) The
+song was performed and recorded at Olympic Sound Studios in London , England , with Gary Brooker providing the vocals and piano , Matthew Fisher on a Hammond M
+- 102 organ , David Knights on bass and Ray Royer on guitar . Drums were by session drummer Bill Eyden . A few days later , the song was re-recorded with the
+band 's then newly recruited drummer Bobby Harrison , but that version was discarded , and one of the original mono recordings was chosen for release . Producer
+for the record was Denny Cordell , and Keith Grant was the sound engineer . The song was included on the US release of the Procol Harum album , in September
+1967 , but not on the later UK version . Lyrics ( edit ) Reid got the title and starting point for the song at a party .
+</item 5>
+
+<item 6>
+A Whiter Shade of Pale
+Black - and - white footage of the performance has been shown online . The song represents 1967 on the 2004 DVD release Top of the Pops 40th Anniversary 1964 --
+2004 . There was also a film shot as part of Joel Gallen 's Deja - View music video series . Originally airing on various networks in late 1985 through 1986 ,
+this video starred Harry Dean Stanton and Bernie Taupin , but featured no member of the band . It has also aired on VH1 Classic , and has recently surfaced
+online . Authorship lawsuit ( edit ) In 2005 , former Procol Harum organist Matthew Fisher filed suit in the High Court against Gary Brooker and his publisher ,
+claiming that he co-wrote the music for the song . Fisher won the case on 20 December 2006 but was awarded 40 % of the composers ' share of the music copyright
+, rather than the 50 % he was seeking and was not granted royalties for the period before 2005 .
+</item 6>
+
+<item 7>
+A Whiter Shade of Pale
+Lyrics ( edit ) Reid got the title and starting point for the song at a party . He overheard someone at the party saying to a woman , `` You 've turned a whiter
+shade of pale '' , and the phrase stuck in his mind . The original lyrics had four verses , of which only two are heard on the original recording . The third
+verse has been heard in live performances by Procol Harum , and more seldom also the fourth . The author of Procol Harum : Beyond the Pale , Claes Johansen ,
+suggests that the song `` deals in metaphorical form with a male / female relationship which after some negotiation ends in a sexual act '' . This is supported
+by Tim de Lisle in Lives of the Great Songs , who remarks that the lyrics concern a drunken seduction , which is described through references to sex as a form
+of travel , usually nautical , using mythical and literary journeys . Other observers have also commented that the lyrics concern a sexual relationship .
+</item 7>
+
+<item 8>
+A Whiter Shade of Pale
+A Whiter Shade of Pale - wikipedia A Whiter Shade of Pale Jump to : navigation , search `` A Whiter Shade of Pale '' A-side label of the UK vinyl single Single
+by Procol Harum from the album Procol Harum B - side `` Lime Street Blues '' Released 12 May 1967 Format 7 - inch record Recorded Olympic Sound Studios , London
+Genre Baroque pop Length 4 : 03 Label Deram Songwriter ( s ) Gary Brooker , Keith Reid , Matthew Fisher Producer ( s ) Denny Cordell Procol Harum singles
+chronology `` A Whiter Shade of Pale '' ( 1967 ) `` Homburg '' ( 1967 ) `` A Whiter Shade of Pale '' ( 1967 ) `` Homburg '' ( 1967 ) `` A Whiter Shade of Pale
+'' is the debut single by the British rock band Procol Harum , released 12 May 1967 . The single reached number one in the UK Singles Chart on 8 June 1967 and
+stayed there for six weeks . Without much promotion , it reached number 5 on the Bilboard pop chart in the United States .
+</item 8>
+
+<item 9>
+A Whiter Shade of Pale
+In his 1981 article on the musical and societal developments of 1967 , for The History of Rock , sociomusicologist Simon Frith described `` A Whiter Shade of
+Pale '' as the year 's `` most distinctive single '' , through its combination of `` white soul vocal and a Bach organ exercise '' and enigmatic lyrics that ``
+hinted at a vital secret open only to people in the right , drug - determined , state of mind '' . In the United States , the single reached number 5 on the
+Billboard Hot 100 and sold over 1 million copies . It also peaked at number 22 on the soul charts there . In the Netherlands , the song entered the chart at
+number 1 in June 1967 and again reached number 1 in July 1972 . A May 1972 re-release on Fly Records stayed in the UK charts for a total of 12 weeks and peaked
+at number 13 . `` A Whiter Shade of Pale '' has continued to receive critical acclaim .
+</item 9>
+
+<item 10>
+A Whiter Shade of Pale
+`` A Whiter Shade of Pale '' has continued to receive critical acclaim . Along with Queen 's `` Bohemian Rhapsody '' , `` A Whiter Shade of Pale '' was jointly
+recognised as `` The Best British Pop Single 1952 -- 1977 '' at the BRIT Awards , part of Elizabeth II 's Silver Jubilee . In 1998 the song was inducted into
+the Grammy Hall of Fame . In 2004 , it appeared at number 57 on Rolling Stone magazine 's list of the `` 500 Greatest Songs of All Time '' . British TV station
+Channel 4 placed the song at number 19 in its chart of `` The 100 Greatest No. 1 Singles '' . In 2018 , the song was inducted into the Rock and Roll Hall of
+Fame in a new category for singles . Promotional films ( edit ) One of the clips for the song was filmed at Witley Court , part of which was gutted by fire in
+1937 . The first promotional clip for `` A Whiter Shade of Pale '' was shot in the ruins of Witley Court in Worcestershire , England .
+</item 10>
+=== END ITEM id=74e7bcd5e165b05e ===
+
+=== ITEM id=31868dd7d92e75f7 ===
+Gold sentences and facts:
+Sentence 0: ESPN Monday Night Football ( abbreviated as MNF and also known as ESPN Monday Night Football on ABC for rare live special broadcast ) is a live television broadcast of weekly National Football League ( NFL ) games on ESPN in the United States . From 1970 to 2005 , it aired on sister broadcast network ABC . Monday Night Football was , along with Hallmark Hall of Fame and the Walt Disney anthology television series , one of the longest - running prime time programs ever on commercial network television , and one of the highest - rated , particularly among male viewers . MNF is preceded on air by Monday Night Countdown served by Applebee 's .
+  Fact 0.0: ESPN Monday Night Football is abbreviated as MNF.
+  Fact 0.1: ESPN Monday Night Football is also known as ESPN Monday Night Football on ABC for rare live special broadcast.
+  Fact 0.2: ESPN Monday Night Football is a live television broadcast of weekly National Football League (NFL) games.
+  Fact 0.3: ESPN Monday Night Football airs on ESPN in the United States.
+  Fact 0.4: From 1970 to 2005, Monday Night Football aired on sister broadcast network ABC.
+  Fact 0.5: Monday Night Football is one of the longest-running prime time programs ever on commercial network television.
+  Fact 0.6: Monday Night Football is, along with Hallmark Hall of Fame and the Walt Disney anthology television series, one of the longest-running prime time programs ever on commercial network television.
+  Fact 0.7: Monday Night Football is one of the highest-rated programs, particularly among male viewers.
+  Fact 0.8: Monday Night Football is preceded on air by Monday Night Countdown.
+  Fact 0.9: Monday Night Countdown is served by Applebee's.
+Sentence 1: ESPN Monday Night Football Genre NFL game telecasts Created by Roone Arledge Directed by Chet Forte ( 1970 -- 1986 ) Larry Kamm ( 1987 ) Craig Janoff ( 1988 -- 1999 ) Drew Esocoff ( 2000 -- 2005 ) Chip Dean ( 2006 -- present ) Presented by Commentators : Sean McDonough Lisa Salters Studio hosts : Suzy Kolber Steve Young Randy Moss Matt Hasselbeck Charles Woodson Opening theme `` Score '' by Bob 's Band ( 1970 -- 1975 ) `` All My Rowdy Friends Are Here on Monday Night '' by Hank Williams , Jr. ( 1989 -- 2011 ; 2017 -- present ) `` Heavy Action '' by Johnny Pearson ( 1976 -- 1988 ; 2011 -- 2016 ) ( used as secondary theme from 1989 to 2011 and again from 2017 -- present ) Country of origin United States Original language ( s ) English No. of seasons 47 ( NFL seasons ) No. of episodes 718 ( games ) Production Executive producer ( s ) Norby Williamson ( 2006 -- present ) Producer ( s ) Roger Lewin Jay Rothman Suzy Kolber ( uncredited ; 2006 -- present ) Location ( s ) Various NFL stadiums ( game telecasts ) ESPN Center , Bristol , Connecticut ( studio segments ) Camera setup Multi-camera Running time 3 - 4 hours Production company ( s ) National Football League ABC Sports ( 1970 -- 2005 ) ESPN ( 2006 -- present ) Release Original network ABC ( 1970 -- 2005 ) ESPN ( 2006 -- present ) Picture format 480i ( SDTV ) ( 1970 -- 2010 ) , 480i ( 16 : 9 SDTV ) ( 2011 -- present ) , 720p ( HDTV ) ( 2011 -- present ) Original release September 21 , 1970 ( 1970 - 09 - 21 ) -- present Chronology Related shows Monday Night Countdown External links Website espn.go.com/nfl/mnf
+  Fact 1.0: ESPN Monday Night Football has the genre NFL game telecasts.
+  Fact 1.1: ESPN Monday Night Football was created by Roone Arledge.
+  Fact 1.2: Chet Forte directed ESPN Monday Night Football from 1970 to 1986.
+  Fact 1.3: Larry Kamm directed ESPN Monday Night Football in 1987.
+  Fact 1.4: Craig Janoff directed ESPN Monday Night Football from 1988 to 1999.
+  Fact 1.5: Drew Esocoff directed ESPN Monday Night Football from 2000 to 2005.
+  Fact 1.6: Chip Dean has directed ESPN Monday Night Football from 2006 to the present.
+  Fact 1.7: The commentators of ESPN Monday Night Football are Sean McDonough and Lisa Salters.
+  Fact 1.8: The studio hosts of ESPN Monday Night Football are Suzy Kolber, Steve Young, Randy Moss, Matt Hasselbeck and Charles Woodson.
+  Fact 1.9: The opening theme 'Score' by Bob's Band was used from 1970 to 1975.
+  Fact 1.10: The opening theme 'All My Rowdy Friends Are Here on Monday Night' by Hank Williams, Jr. was used from 1989 to 2011 and again from 2017 to the present.
+  Fact 1.11: The opening theme 'Heavy Action' by Johnny Pearson was used from 1976 to 1988 and from 2011 to 2016.
+  Fact 1.12: 'Heavy Action' was used as the secondary theme from 1989 to 2011 and again from 2017 to the present.
+  Fact 1.13: The country of origin of ESPN Monday Night Football is the United States.
+  Fact 1.14: The original language of ESPN Monday Night Football is English.
+  Fact 1.15: ESPN Monday Night Football has had 47 NFL seasons.
+  Fact 1.16: ESPN Monday Night Football has had 718 games as episodes.
+  Fact 1.17: Norby Williamson has been executive producer of ESPN Monday Night Football from 2006 to the present.
+  Fact 1.18: Roger Lewin and Jay Rothman were producers of ESPN Monday Night Football.
+  Fact 1.19: Suzy Kolber is an uncredited producer of ESPN Monday Night Football from 2006 to the present.
+  Fact 1.20: ESPN Monday Night Football game telecasts are located at various NFL stadiums.
+  Fact 1.21: ESPN Monday Night Football studio segments are produced at ESPN Center in Bristol, Connecticut.
+  Fact 1.22: ESPN Monday Night Football uses a multi-camera setup.
+  Fact 1.23: ESPN Monday Night Football has a running time of 3 to 4 hours.
+  Fact 1.24: The National Football League is a production company of ESPN Monday Night Football.
+  Fact 1.25: ABC Sports was a production company of ESPN Monday Night Football from 1970 to 2005.
+  Fact 1.26: ESPN was a production company of ESPN Monday Night Football from 2006 to the present.
+  Fact 1.27: The original network of ESPN Monday Night Football was ABC from 1970 to 2005.
+  Fact 1.28: The original network of ESPN Monday Night Football is ESPN from 2006 to the present.
+  Fact 1.29: ESPN Monday Night Football was broadcast in 480i (SDTV) picture format from 1970 to 2010.
+  Fact 1.30: ESPN Monday Night Football was broadcast in 480i (16:9 SDTV) picture format from 2011 to the present.
+  Fact 1.31: ESPN Monday Night Football was broadcast in 720p (HDTV) picture format from 2011 to the present.
+  Fact 1.32: ESPN Monday Night Football originally released on September 21, 1970.
+  Fact 1.33: ESPN Monday Night Football has been released from September 21, 1970 to the present.
+  Fact 1.34: The related show of ESPN Monday Night Football is Monday Night Countdown.
+  Fact 1.35: The website of ESPN Monday Night Football is espn.go.com/nfl/mnf.
+
+Retrieved items:
+<item 1>
+Monday Night Football
+wordpress \. com \ b on the global blacklist ESPN Monday Night Football Genre NFL game telecasts Created by Roone Arledge Directed by Chet Forte ( 1970 -- 1986
+) Larry Kamm ( 1987 ) Craig Janoff ( 1988 -- 1999 ) Drew Esocoff ( 2000 -- 2005 ) Chip Dean ( 2006 -- present ) Presented by Commentators : Sean McDonough Lisa
+Salters Studio hosts : Suzy Kolber Steve Young Randy Moss Matt Hasselbeck Charles Woodson Opening theme `` Score '' by Bob 's Band ( 1970 -- 1975 ) `` All My
+Rowdy Friends Are Here on Monday Night '' by Hank Williams , Jr. ( 1989 -- 2011 ; 2017 -- present ) `` Heavy Action '' by Johnny Pearson ( 1976 -- 1988 ; 2011
+-- 2016 ) ( used as secondary theme from 1989 to 2011 and again from 2017 -- present ) Country of origin United States Original language ( s ) English No. of
+seasons 47 ( NFL seasons ) No.
+</item 1>
+
+<item 2>
+Monday Night Football
+Monday Night Football - Wikipedia Monday Night Football Jump to : navigation , search For other uses , see Monday Night Football ( disambiguation ) . `` NFL on
+ESPN '' redirects here . For the program aired between 1987 and 2005 , see ESPN Sunday Night Football . An automated process has detected links on this page on
+the local or global blacklist . If the links are appropriate you may request whitelisting by following these instructions ; otherwise consider removing or
+replacing them with more appropriate links . ( To hide this tag , set the `` invisible '' field to `` true '' ) List of blacklisted links : ( show )
+http://nfllabor.files.wordpress.com/2013/12/week-161.pdf Triggered by \ bfiles \. wordpress \. com \ b on the global blacklist
+https://web.archive.org/web/20131224083130/http://nfllabor.files.wordpress.com/2013/12/week-161.pdf Triggered by \ bfiles \. wordpress \.
+</item 2>
+
+<item 3>
+Monday Night Football
+However , the forecasting abilities of the NFL 's scheduling officials have exhibited uncanny proficiency . Many MNF games occurring later in the season feature
+at least one team that is either headed to the playoffs or must win the MNF game to clinch a playoff spot . The problem of having a national spotlight game
+which during the season 's most critical weeks late in the year probably would not show the most important game of the week was long known by the league and
+network . As a result of this , the NFL wished to move the `` Game of the Week '' idea to Sunday nights as to make flex scheduling possible . This was a move
+which would ultimately mean the end of Monday Night Football on ABC ( cable games are protected from the NFL 's flexible scheduling rule adopted for the 2006 --
+07 season ; the new rule applies only to CBS , Fox , and NBC 's Sunday night games ) . The league currently has no interest in expanding flexible scheduling to
+include Monday Night Football , citing the logistical issues of moving games back and forth between Sundays and Mondays . Franchises with the most appearances (
+edit ) The franchise with the most Monday night appearances is the Miami Dolphins .
+</item 3>
+
+<item 4>
+Monday Night Football
+1987 -- 2005 ) NFL Draft NFL on ABC Sports Football Sunday on ESPN Radio Studio programs The Blitz Monday Night Countdown NFL Matchup NFL Primetime Sunday NFL
+Countdown NFL Live NFL Insiders Other football programs Arena Football League on ESPN CFL on TSN ESPN College Football USFL on ESPN Related articles History of
+Monday Night Football NFL on television ( history ) Commentators Sean McDonough Play - by - play TBA Color commentary Lisa Salters Sideline reporter Former
+commentators Bonnie Bernstein Mike Ditka Jon Gruden Ron Jaworski Suzy Kolber Tony Kornheiser Michele Tafoya Joe Theismann Mike Tirico Dick Vermeil Steve Young
+Lore televised by ESPN ESPN takes over MNF 2005 Saints -- Giants / Cowboys -- Redskins Doubleheader 2006 Bears -- Cardinals Comeback Fail Mary Sunday Night
+Football era American Bowl ( 1990 - 2005 ) Fútbol Americano Pro Bowls broadcast on ESPN 1988 1990 1991 1992 1994 2005 2006 2015 2016 2017 2018 Music Edd
+Kalehoff Johnny Pearson Hank Williams , Jr . Songs `` All My Rowdy Friends Are Here on Monday Night '' `` Heavy
+</item 4>
+
+<item 5>
+Monday Night Football
+From 2003 to 2005 , one game was played on Thursday and another Monday under the Monday Night Football banner . Starting in 2006 , when the series moved to
+cable , two games are played on the opening Monday night to capitalize on fan interest during `` NFL Kickoff Weekend '' . Monday night games early in the season
+are often highly anticipated since records are new , teams usually are showcasing fresh talent and potential , and storylines coming into the season are often
+played out as fans try to see if these hyped teams are up to form . Since no one knows during the first month of the season if a team is indeed good , or will
+rebound from a difficult start , interest is usually high for the first few weeks of the MNF season . Since the MNF schedule is set in April and can not be
+changed , the league and network can not guarantee a late season matchup will have any significance or be highly anticipated .
+</item 5>
+
+<item 6>
+Monday Night Football
+Jr . Songs `` All My Rowdy Friends Are Here on Monday Night '' `` Heavy Action '' `` Start Me Up '' `` The Party 's Over '' Yearly results Monday night NFL
+games prior to 1970 1970 -- 1989 1990 -- 2009 2010 -- present National Football League on television and radio Broadcast partners ABC ( AFL ) CBS Fox NBC
+Defunct networks DuMont Sports Network Monday Night Football History Monday Night Countdown Results Games prior to 1970 1970 -- 1989 1990 -- 2009 2010 --
+present Sunday Night Football ESPN NBC TNT Results ESPN NBC TNT Pregame TV programs The NFL Today CBS Fox NFL Sunday ESPN Sunday NFL Countdown Monday Night
+Countdown NBC The NFL on NBC pregame show Football Night in America NFL Network List of programs NFL AM NFL Classics NFL GameDay NFL Replay NFL Total Access The
+Timeline Thursday Night Football Results ( 2006 -- present ) 2007 New England Patriots -- New York Giants game Miracle in Motown NFL Films TV programs Football
+Follies A Football Life Full Color Football Hard Knocks Inside the NFL NFL Dream Season NFL Films Game of the Week NFL 's Greatest Games NFL Matchup NFL Top 10
+NFL Top 100 Other
+</item 6>
+
+<item 7>
+Monday Night Football
+As of 2008 , Westwood One was no longer controlled by CBS , but the network retained its NFL broadcast rights . In 2011 , Westwood One was purchased by Dial
+Global . Then in 2014 , Dial Global , including Westwood One , was acquired by Cumulus Media . The Spanish - language broadcast is carried on ESPN Deportes
+Radio . Nielsen ratings ( edit ) This article needs to be updated . Please update this article to reflect recent events or newly available information . (
+December 2016 ) The highest - rated Monday Night Football telecast on ABC was the Miami Dolphins ' victory over the previously undefeated Chicago Bears on
+December 2 , 1985 , which drew a national Nielsen rating of 29.6 and a share of 46 . ABC 's lowest - rated MNF game was the St. Louis Rams ' defeat of the Tampa
+Bay Buccaneers on October 18 , 2004 , which drew a 7.7 rating . During the 1995 -- 1996 television season , Monday Night Football averaged a 17.1 household
+rating . Its main competitor , Murphy Brown on CBS , averaged a 12.3 rating .
+</item 7>
+
+<item 8>
+Monday Night Football
+6 2016 summary 2.2. 7 2017 summary 3 Theme music 4 Digital on - screen graphics 4.1 1997 -- 2005 4.2 2006 -- present 5 Scoring records 6 Scheduling on local
+stations 7 Commentators 8 Foreign - language versions 8.1 Spanish version 8.2 Portuguese version 9 Radio broadcasts 10 Nielsen ratings 11 Additional NFL game
+rights 11.1 Playoff games 11.2 Pro Bowl 12 See also 13 Footnotes 14 References 15 Further reading 16 External links Overview ( edit ) This section needs
+expansion . You can help by adding to it . ( November 2010 ) See also : History of Monday Night Football After 45 seasons , there now have been a total of 730
+games televised by the Monday Night Football franchise . Scheduling problems ( edit ) To avoid any scheduling unfairness where , just before the first playoff
+game , a team may have five days off and others six , there is no Monday night game during the final week of the regular season .
+</item 8>
+
+<item 9>
+Monday Night Football
+go.com/nfl/mnf ESPN Monday Night Football ( abbreviated as MNF and also known as ESPN Monday Night Football on ABC for rare live special broadcast ) is a live
+television broadcast of weekly National Football League ( NFL ) games on ESPN in the United States . From 1970 to 2005 , it aired on sister broadcast network
+ABC . Monday Night Football was , along with Hallmark Hall of Fame and the Walt Disney anthology television series , one of the longest - running prime time
+programs ever on commercial network television , and one of the highest - rated , particularly among male viewers . MNF is preceded on air by Monday Night
+Countdown served by Applebee 's . Monday Night Football is also broadcast in Canada on TSN and RDS , and in most of Europe . On September 7 , 2013 , the NFL
+announced that British Eurosport would show Monday Night Football games live in the United Kingdom for the 2013 and 2014 seasons . The telecasts are also seen
+in most of Australia on ESPN Australia , in Portugal on SportTV 3 and SportTV HD and on TV 2 Sport in Denmark , and in some other regions of the world outside
+the U.S.
+</item 9>
+
+<item 10>
+Monday Night Football
+The layout is standard , with teams on the background of their color , with timeout indicators also displaying in team colors . Experimentally , the score bar
+`` auto - hides '' itself during plays , though it is shown permanently during the final two minutes of each half and , if necessary , overtime . This is also
+the first time that ESPN has used the full 16 : 9 frame for its NFL graphics . Scoring records ( edit ) See also : List of Monday Night Football results ( 1970
+-- 89 ) , List of Monday Night Football results ( 1990 -- 2009 ) , and List of Monday Night Football results ( 2010 -- present ) Most points 59 -- Philadelphia
+Eagles , November 15 , 2010 vs. Washington Redskins 55 -- Indianapolis Colts , October 31 , 1988 vs. Denver Broncos 52 -- San Francisco 49ers , December 23 ,
+1991 vs. Chicago Bears 52 -- San Diego Chargers , December 20 , 1982 vs. Cincinnati Bengals 51 -- New Orleans Saints , November 24 , 2008 vs.
+</item 10>
+=== END ITEM id=31868dd7d92e75f7 ===
+
+=== ITEM id=9bc92b14688c87a5 ===
+Gold sentences and facts:
+Sentence 0: The following season , a cancerous desmoid tumor was found in Dravecky 's pitching arm . On October 7 , 1988 , he underwent surgery , which removed half of the deltoid muscle in his pitching arm and froze the humerus bone in an effort to eliminate all of the cancerous cells . Doctors advised Dravecky to wait until 1990 to pitch again , but Dravecky was determined to pitch in 1989 . By July 1989 , he was pitching in the minors , and on August 10 , he made a highly publicized return to the major leagues , pitching eight innings and defeating Cincinnati 4 -- 3 . In his following start , five days later in Montreal , Dravecky pitched three no - hit innings , but in the fifth inning , he felt a tingling sensation in his arm . In the sixth inning , he started off shaky , allowing a home run to the leadoff batter and then hitting the second batter , Andrés Galarraga . Then , on his first pitch to Tim Raines , his humerus bone snapped ; the sound of it breaking could be heard throughout the stadium . Dravecky collapsed on the mound . He 'd suffered a clean break midway between his shoulder and elbow , ending his season .
+  Fact 0.0: The following season, a cancerous desmoid tumor was found in Dravecky's pitching arm.
+  Fact 0.1: On October 7, 1988, Dravecky underwent surgery.
+  Fact 0.2: The surgery removed half of the deltoid muscle in Dravecky's pitching arm.
+  Fact 0.3: The surgery froze the humerus bone in Dravecky's pitching arm in an effort to eliminate all of the cancerous cells.
+  Fact 0.4: Doctors advised Dravecky to wait until 1990 to pitch again.
+  Fact 0.5: Dravecky was determined to pitch in 1989.
+  Fact 0.6: By July 1989, Dravecky was pitching in the minors.
+  Fact 0.7: On August 10, Dravecky made a highly publicized return to the major leagues.
+  Fact 0.8: In that return, Dravecky pitched eight innings and defeated Cincinnati 4-3.
+  Fact 0.9: In his following start, five days later in Montreal, Dravecky pitched three no-hit innings.
+  Fact 0.10: In the fifth inning of that start, Dravecky felt a tingling sensation in his arm.
+  Fact 0.11: In the sixth inning, Dravecky started off shaky.
+  Fact 0.12: In the sixth inning, Dravecky allowed a home run to the leadoff batter.
+  Fact 0.13: In the sixth inning, Dravecky hit the second batter, Andrés Galarraga.
+  Fact 0.14: On his first pitch to Tim Raines, Dravecky's humerus bone snapped.
+  Fact 0.15: The sound of the bone breaking could be heard throughout the stadium.
+  Fact 0.16: Dravecky collapsed on the mound.
+  Fact 0.17: Dravecky suffered a clean break midway between his shoulder and elbow.
+  Fact 0.18: The broken bone ended Dravecky's season.
+
+Retrieved items:
+<item 1>
+Houston Astros
+Name Position Date retired 5 Bagwell , Jeff Jeff Bagwell 1B , Coach August 26 , 2007 7 Biggio , Craig Craig Biggio C , OF , 2B August 17 , 2008 24 Wynn , Jimmy
+Jimmy Wynn OF June 25 , 2005 25 Cruz , José José Cruz OF , Coach October 3 , 1992 32 Umbricht , Jim Jim Umbricht April 12 , 1965 33 Scott , Mike Mike Scott
+October 3 , 1992 34 Ryan , Nolan Nolan Ryan September 29 , 1996 40 Wilson , Don Don Wilson April 13 , 1975 49 Dierker , Larry Larry Dierker P , Manager May 19 ,
+2002 42 Robinson , Jackie Jackie Robinson All MLB April 15 , 1997 The number 42 is retired by Major League Baseball in honor of Jackie Robinson . Source : Out
+of circulation , but not retired ( edit ) 57 : Has not been reissued since former Astros pitcher Darryl Kile died as an active player with the St. Louis
+Cardinals in 2002 .
+</item 1>
+
+<item 2>
+Houston Astros
+Surgery was done to save his life , but the Astros had lost their ace pitcher after a 10 -- 4 start with a stingy 1.89 ERA . Richard attempted a comeback , but
+would never again pitch a big league game . After the loss of Richard and some offensive struggles , the Astros slipped to third place in the division behind
+the Dodgers and the Reds . They bounced back to first with a ten - game winning streak , but the Dodgers had regained a two - game lead when they arrived in
+Houston on September 9 . The Astros won the first two games of that series and the two teams were tied for the division lead . The Astros held a three - game
+lead over the Dodgers with three games left in the season against the Dodgers . The Dodgers swept the series games , forcing a one - game playoff the next day .
+The Astros would however win the one - game playoff 7 - 1 , and advance to their first post-season . The team would face the Philadelphia Phillies in the 1980
+National League Championship Series . The Phillies sent out Steve Carlton in game one of the NLCS after a six - hour flight the night before .
+</item 2>
+
+<item 3>
+Dave Dravecky
+Both retrieved from Google News May 23 , 2013 . Jump up ^ Dravecky , Dave ( 2004 ) . Called Up : Stories of Life and Faith from the Great Game of Baseball .
+Zondervan . p. 162 . ISBN 031087159X . Jump up ^ Thomas , Robert ( August 9 , 1989 ) . `` Dravecky is Back on Center Stage '' . New York Times . Retrieved June
+24 , 2010 . ^ Jump up to : Thomas , Robert ( August 17 , 1989 ) . `` Dravecky Was Told He Risked Fracture '' . New York Times . Retrieved June 24 , 2010 . Jump
+up ^ Associated Press ( June 19 , 1991 ) . `` SPORTS PEOPLE : BASEBALL ; Dravecky 's Left Arm Amputated , Giants Say '' . New York Times . Retrieved June 24 ,
+2010 . Jump up ^ Associated Press ( October 10 , 1989 ) . `` Dravecky Hurt Again '' .
+</item 3>
+
+<item 4>
+Dave Dravecky
+Crisis and comeback ( edit ) The following season , a cancerous desmoid tumor was found in Dravecky 's pitching arm . On October 7 , 1988 , he underwent surgery
+, which removed half of the deltoid muscle in his pitching arm and froze the humerus bone in an effort to eliminate all of the cancerous cells . Doctors advised
+Dravecky to wait until 1990 to pitch again , but Dravecky was determined to pitch in 1989 . By July 1989 , he was pitching in the minors , and on August 10 , he
+made a highly publicized return to the major leagues , pitching eight innings and defeating Cincinnati 4 -- 3 . In his following start , five days later in
+Montreal , Dravecky pitched three no - hit innings , but in the fifth inning , he felt a tingling sensation in his arm . In the sixth inning , he started off
+shaky , allowing a home run to the leadoff batter and then hitting the second batter , Andrés Galarraga .
+</item 4>
+
+<item 5>
+2017 World Series
+Game 1 : The ceremonial first pitch was thrown out by members of former Dodger Jackie Robinson 's family , including his widow Rachel . The game marked the 45th
+anniversary of Robinson 's death , and the 2017 season was the 70th anniversary of his breaking of the baseball color line . Keith Williams Jr. , a gospel
+singer , performed `` The Star - Spangled Banner '' , the national anthem . Game 2 : Fernando Valenzuela threw out the ceremonial first pitch to Steve Yeager ;
+both were introduced by retired Dodgers broadcaster Vin Scully . Country music 's Brad Paisley performed the national anthem . Game 3 : Houston Texans defensive
+end J.J. Watt , who had raised $37 million for Hurricane Harvey victims , threw out the first pitch . The ball was given to him by Astros ' Hall of Famer Craig
+Biggio . The national anthem was performed by Texas Air National Guard Master Sergeant Promise Harris . Game 4 : Hailey Dawson , a seven - year - old girl from
+Nevada , threw out the ceremonial first pitch using a 3D printed hand . The national anthem was performed by the Houston Police Department Quartet .
+</item 5>
+
+<item 6>
+2017 World Series
+Morrow relieved Darvish and in the process became only the second pitcher to pitch in all seven games of a single World Series , joining Darold Knowles in the
+1973 World Series . McCullers lasted only 2 ​ ⁄ innings himself ; he allowed three hits and hit a World Series record four batters . This was the first Game 7
+in World Series history where neither starting pitcher got past the third inning . The Dodgers failed to score a run and left eight men on base through five
+innings . Ethier , pinch hitting , scored Pederson on a single in the sixth inning for the Dodgers ' only run . They only had one hit in 13 chances with runners
+in scoring position in the game . Kershaw pitched four scoreless innings of relief in the game , and in the process , he broke Orel Hershiser 's Dodgers
+postseason record with his 33rd strikeout .
+</item 6>
+
+<item 7>
+Houston Astros
+McMullen showed the city of Houston that he too wanted a winning team , signing nearby Alvin , Texas native Nolan Ryan to the first million - dollar - a-year
+deal . Ryan had four career no - hitters already and had struck out 383 in one season . 1980 : on the brink ( edit ) Joe Morgan returned in 1980 . Now back in
+Houston with two MVP awards and two World Series rings , Morgan wanted to help make the Astros a pennant winner . The 1980 pitching staff was one of the best
+Houston ever had , with the fastball of Ryan , the knuckleball of Joe Niekro and the terrifying 6 ft 8 in frame of J.R. Richard . Teams felt lucky to face Ken
+Forsch , who was a double - digit winner in the previous two seasons . Richard became the first Astros pitcher to start an All - Star game . After a medical
+examination three days later , Richard was told to rest his arm and he collapsed during a July 30 workout . He had suffered a stroke after a blood clot in the
+arm apparently moved to his neck and cut off blood flow to the brain .
+</item 7>
+
+<item 8>
+Dave Dravecky
+1980 : Brett 1981 : Bench 1982 : Thornton 1983 : Knight 1984 : Robinson 1985 : Reuschel 1986 : Leonard 1987 : Molitor 1988 : Oester 1989 : Dravecky 1990 : Bream
+1991 : Wegman 1992 : Lansford 1993 : Olerud 1994 : Dawson 1995 : Abbott 1996 : Vizquel 1997 : Davis 1998 : Cone 1999 : Casey 2000 : Giambi 2001 : Schilling 2002
+: Salmon 2003 : Moyer 2004 : Hoffman 2005 : Biggio 2006 : Loretta 2007 : Sweeney 2008 : Lester 2009 : Teahen 2010 : Hudson 2011 : Butler 2012 : Zito 2013 :
+Ibañez 2014 : Gordon 2015 : Wainwright 2016 : McGowan New York / San Francisco Giants Opening Day starting pitchers Red Ames Fred Anderson Johnny Antonelli
+Jesse Barnes Virgil Barnes Jim Barr Larry Benton Vida Blue Tom Bradley Madison
+</item 8>
+
+<item 9>
+Dave Dravecky
+Then , on his first pitch to Tim Raines , his humerus bone snapped ; the sound of it breaking could be heard throughout the stadium . Dravecky collapsed on the
+mound . He 'd suffered a clean break midway between his shoulder and elbow , ending his season . The Giants won the National League pennant in 1989 ( defeating
+the Chicago Cubs in the NLCS in five games ) , and in the post-game celebration , Dravecky 's arm was broken a second time when he was running out to the mound
+to celebrate . A doctor examining Dravecky 's x-rays noticed a mass in his arm , which turned out to be malignant . Dravecky 's cancer had returned , ending his
+career . Eighteen days later , Dravecky retired from baseball with a 64 -- 57 record with 558 strikeouts and a 3.13 ERA in 1,062 2⁄3 innings . He won the 1989
+Willie Mac Award honoring his spirit and leadership .
+</item 9>
+
+<item 10>
+Houston Astros
+Happ and two minor league players . On July 31 , outfielder Lance Berkman was traded to the New York Yankees for minor leaguers Jimmy Paredes and Mark Melancon
+. The Astros finished with a record of 76 - 86 . On July 30 , 2011 , the Astros traded OF Hunter Pence , the team 's 2010 leader in home runs , to the
+Philadelphia Phillies . On July 31 , they traded OF Michael Bourn to the Atlanta Braves . On September 17 , the Astros clinched their first 100 - loss season in
+franchise history , On September 28 , the Astros ended the season with an 8 -- 0 home loss to the St. Louis Cardinals . Cardinals pitcher Chris Carpenter
+pitched a complete game , two - hit shutout in the game , enabling the Cardinals to win the National League Wild Card , where they went on to beat the Texas
+Rangers in the World Series , with Lance Berkman being a key player in their championship victory . The Astros finished with a record of 56 -- 106 , the worst
+single - season record in franchise history ( a record which would be broken the following season ) .
+</item 10>
+=== END ITEM id=9bc92b14688c87a5 ===
+
+=== ITEM id=d9e7e925695c1176 ===
+Gold sentences and facts:
+Sentence 0: As a technique for drawing , the closest predecesor to the pencil was Silverpoint until in 1565 ( some sources say as early as 1500 ) , a large deposit of graphite was discovered on the approach to Grey Knotts from the hamlet of Seathwaite in Borrowdale parish , Cumbria , England . This particular deposit of graphite was extremely pure and solid , and it could easily be sawn into sticks . It remains the only large - scale deposit of graphite ever found in this solid form . Chemistry was in its infancy and the substance was thought to be a form of lead . Consequently , it was called plumbago ( Latin for `` lead ore '' ) . Because the pencil core is still referred to as `` lead '' , or a `` lead '' , many people have the misconception that the graphite in the pencil is lead , and the black core of pencils is still referred to as lead , even though it never contained the element lead . The words for pencil in German ( bleistift ) , Irish ( peann luaidhe ) , Arabic ( قلم رصاص qalam raṣāṣ ) , and some other languages literally mean lead pen .
+  Fact 0.0: Before the pencil, the closest predecessor as a drawing technique was Silverpoint, until 1565 (some sources say as early as 1500).
+  Fact 0.1: A large deposit of graphite was discovered on the approach to Grey Knotts from the hamlet of Seathwaite.
+  Fact 0.2: The Grey Knotts graphite deposit is in Borrowdale parish, Cumbria, England.
+  Fact 0.3: The graphite deposit at Grey Knotts was extremely pure and solid.
+  Fact 0.4: The graphite deposit at Grey Knotts could easily be sawn into sticks.
+  Fact 0.5: The Grey Knotts graphite deposit remains the only large-scale deposit of graphite ever found in this solid form.
+  Fact 0.6: Chemistry was in its infancy when the graphite was found.
+  Fact 0.7: The substance was thought to be a form of lead.
+  Fact 0.8: The substance was called plumbago, Latin for 'lead ore'.
+  Fact 0.9: The pencil core is still referred to as 'lead' or 'a lead'.
+  Fact 0.10: Many people have the misconception that the graphite in the pencil is lead.
+  Fact 0.11: The black core of pencils is still referred to as lead.
+  Fact 0.12: The black core of pencils never contained the element lead.
+  Fact 0.13: The German word for pencil, bleistift, literally means lead pen.
+  Fact 0.14: The Irish word for pencil, peann luaidhe, literally means lead pen.
+  Fact 0.15: The Arabic word for pencil, قلم رصاص (qalam raṣāṣ), literally means lead pen.
+  Fact 0.16: Some other languages also use words for pencil that literally mean lead pen.
+
+Retrieved items:
+<item 1>
+Pencil
+Their concept involved the hollowing out of a stick of juniper wood . Shortly thereafter , a superior technique was discovered : two wooden halves were carved ,
+a graphite stick inserted , and the halves then glued together -- essentially the same method in use to this day . New pencils from graphite powder , and
+graphite and clay The first attempt to manufacture graphite sticks from powdered graphite was in Nuremberg , Germany , in 1662 . It used a mixture of graphite ,
+sulphur , and antimony . English and German pencils were not available to the French during the Napoleonic Wars ; France , under naval blockade imposed by Great
+Britain , was unable to import the pure graphite sticks from the British Grey Knotts mines -- the only known source in the world . France was also unable to
+import the inferior German graphite pencil substitute . It took the efforts of an officer in Napoleon 's army to change this . In 1795 , Nicolas - Jacques Conté
+discovered a method of mixing powdered graphite with clay and forming the mixture into rods that were then fired in a kiln . By varying the ratio of graphite to
+clay , the hardness of the graphite rod could also be varied .
+</item 1>
+
+<item 2>
+Pencil
+Though the archetypal pencil was an artist 's brush , the stylus , a thin metal stick used for scratching in papyrus or wax tablets , was used extensively by
+the Romans and for palm - leaf manuscripts . Discovery of graphite deposit As a technique for drawing , the closest predecesor to the pencil was Silverpoint
+until in 1565 ( some sources say as early as 1500 ) , a large deposit of graphite was discovered on the approach to Grey Knotts from the hamlet of Seathwaite in
+Borrowdale parish , Cumbria , England . This particular deposit of graphite was extremely pure and solid , and it could easily be sawn into sticks . It remains
+the only large - scale deposit of graphite ever found in this solid form . Chemistry was in its infancy and the substance was thought to be a form of lead .
+Consequently , it was called plumbago ( Latin for `` lead ore '' ) .
+</item 2>
+
+<item 3>
+Pencil
+Retrieved 23 July 2009 . Jump up ^ `` Pencils , paint and pottery can give you lead poisoning '' . Life . 73 ( 1 ) : 46 . 7 July 1972 . Jump up ^ `` The HB
+Graphite Grading Scale '' . Pencils.com . Archived from the original on 21 March 2012 . Retrieved 14 March 2012 . Jump up ^ Petroski , 1990 , `` Appendix A Jump
+up ^ `` Staedtler Pencil , video '' . Archived from the original on 21 January 2013 . Retrieved 23 July 2009 . Staedtler.com Jump up ^ Petroski , 1990 Jump up ^
+`` Derwent Manufacturing Process '' . Pencils.co.uk . Archived from the original on 17 May 2013 . Retrieved 23 July 2009 . Jump up ^ `` Archived copy '' .
+Archived from the original on 6 February 2017 . Retrieved 5 February 2017 .
+</item 3>
+
+<item 4>
+“Pencil” originally meant a fine camel-hair brush; earlier writing tools included Roman metal styluses. Modern graphite pencils developed after a rich,
+unusually pure deposit was discovered in Borrowdale, England, in the 16th century. Called “plumbago,” graphite was mistakenly associated with lead, though
+pencil cores contain none. Early graphite sticks were wrapped in string or sheepskin; wood casings followed, and later methods mixed graphite powder with clay.
+Pencil residue is harmless, though historic
+</item 4>
+
+<item 5>
+Pencil
+Manufacture The lead of the pencil is a mix of finely ground graphite and clay powders . Before the two substances are mixed , they are separately cleaned of
+foreign matter and dried in a manner that creates large square cakes . Once the cakes have fully dried , the graphite and the clay squares are mixed together
+using water . The amount of clay content added to the graphite depends on the intended pencil hardness ( lower proportions of clay makes the core softer ) , and
+the amount of time spent on grinding the mixture determines the quality of the lead . The mixture is then shaped into long spaghetti - like strings ,
+straightened , dried , cut , and then tempered in a kiln . The resulting strings are dipped in oil or molten wax , which seeps into the tiny holes of the
+material and allows for the smooth writing ability of the pencil . A juniper or incense - cedar plank with several long parallel grooves is cut to fashion a ``
+slat , '' and the graphite / clay strings are inserted into the grooves . Another grooved plank is glued on top , and the whole assembly is then cut into
+individual pencils , which are then varnished or painted .
+</item 5>
+
+<item 6>
+Pencil
+Because graphite is soft , it requires some form of encasement . Graphite sticks were initially wrapped in string or sheepskin for stability . England would
+enjoy a monopoly on the production of pencils until a method of reconstituting the graphite powder was found in 1662 in Italy . However , the distinctively
+square English pencils continued to be made with sticks cut from natural graphite into the 1860s . The town of Keswick , near the original findings of block
+graphite , still manufactures pencils , the factory also being the location of the Cumberland Pencil Museum . The meaning of `` graphite writing implement ''
+apparently evolved late in the 16th century . Wood holders added Palomino Blackwing 602 pencils Around 1560 , an Italian couple named Simonio and Lyndiana
+Bernacotti made what are likely the first blueprints for the modern , wood - encased carpentry pencil . Their version was a flat , oval , more compact type of
+pencil . Their concept involved the hollowing out of a stick of juniper wood .
+</item 6>
+
+<item 7>
+Pencils evolved from graphite inserted into hollowed juniper to glued wooden halves enclosing a graphite core. In 1795, Nicolas-Jacques Conté developed
+kiln-fired graphite-and-clay rods, whose hardness varies with the clay ratio; this method remains standard. American production grew from William Munroe’s 1812
+pencils, with Ebenezer Wood mechanizing manufacture and Joseph Dixon pioneering mass production. Modern cores mix, shape, fire, and wax graphite and clay;
+grooved cedar
+</item 7>
+
+<item 8>
+Pencil
+This method of manufacture , which had been earlier discovered by the Austrian Joseph Hardtmuth , the founder of the Koh - I - Noor in 1790 , remains in use .
+In 1802 , the production of graphite leads from graphite and clay was patented by the Koh - I - Noor company in Vienna . In England , pencils continued to be
+made from whole sawn graphite . Henry Bessemer 's first successful invention ( 1838 ) was a method of compressing graphite powder into solid graphite thus
+allowing the waste from sawing to be reused . The pencil in america Pencil , perhaps made by Henry David Thoreau , in the Concord Museum Pencil manufacturing .
+The top sequence shows the old method that required pieces of graphite to be cut to size ; the lower sequence is the new , current method using rods of graphite
+and clay . American colonists imported pencils from Europe until after the American Revolution . Benjamin Franklin advertised pencils for sale in his
+Pennsylvania Gazette in 1729 , and George Washington used a three - inch pencil when he surveyed the Ohio Territory in 1762 .
+</item 8>
+
+<item 9>
+Pencil
+Consequently , it was called plumbago ( Latin for `` lead ore '' ) . Because the pencil core is still referred to as `` lead '' , or a `` lead '' , many people
+have the misconception that the graphite in the pencil is lead , and the black core of pencils is still referred to as lead , even though it never contained the
+element lead . The words for pencil in German ( bleistift ) , Irish ( peann luaidhe ) , Arabic ( قلم رصاص qalam raṣāṣ ) , and some other languages literally
+mean lead pen . The value of graphite would soon be realised to be enormous , mainly because it could be used to line the moulds for cannonballs ; the mines
+were taken over by the Crown and were guarded . When sufficient stores of graphite had been accumulated , the mines were flooded to prevent theft until more was
+required . The usefulness of graphite for pencils was discovered as well , but graphite for pencils had to be smuggled . The news of the usefulness of these
+early pencils spread far and wide , attracting the attention of artists all over the known world . Because graphite is soft , it requires some form of
+encasement .
+</item 9>
+
+<item 10>
+Pencil
+Archived from the original on 5 March 2016 . Retrieved 5 October 2015 . Jump up ^ Bennett , Howard J. ( 26 November 2014 ) . `` Ever wondered about the lead in
+pencils ? '' . The Washington Post . ISSN 0190 - 8286 . Archived from the original on 6 November 2015 . Retrieved 5 October 2015 . Jump up ^ `` Pencil
+swallowing : MedlinePlus Medical Encyclopedia '' . www.nlm.nih.gov . Archived from the original on 6 October 2015 . Retrieved 5 October 2015 . Jump up ^ ``
+graphite pencils The Weekend Historian '' . umeshmadan.wordpress.com . Archived from the original on 7 October 2015 . Retrieved 5 October 2015 . Jump up ^ ``
+Origins of the Pencil ( Circa 1500 -- 1565 ) : HistoryofInformation.com '' . www.historyofinformation.com . Retrieved 2016 - 10 - 29 .
+</item 10>
+=== END ITEM id=d9e7e925695c1176 ===
+
+=== ITEM id=87c603f7c9f13dca ===
+Gold sentences and facts:
+Sentence 0: A justice of the peace ( JP ) is a judicial officer , of a lower or puisne court , elected or appointed by means of a commission ( letters patent ) to keep the peace . In past centuries the term commissioner of the peace was often used with the same meaning . Depending on the jurisdiction , such justices dispense summary justice or merely deal with local administrative applications in common law jurisdictions . Justices of the peace are appointed or elected from the citizens of the jurisdiction in which they serve , and are ( or were ) usually not required to have any formal legal education in order to qualify for the office . Some jurisdictions have varying forms of training for JPs .
+  Fact 0.0: A justice of the peace (JP) is a judicial officer.
+  Fact 0.1: A justice of the peace is a judicial officer of a lower or puisne court.
+  Fact 0.2: A justice of the peace is elected or appointed by means of a commission (letters patent).
+  Fact 0.3: A justice of the peace is elected or appointed to keep the peace.
+  Fact 0.4: In past centuries the term commissioner of the peace was often used with the same meaning as justice of the peace.
+  Fact 0.5: Depending on the jurisdiction, justices of the peace dispense summary justice.
+  Fact 0.6: Depending on the jurisdiction, justices of the peace merely deal with local administrative applications in common law jurisdictions.
+  Fact 0.7: Justices of the peace are appointed or elected from the citizens of the jurisdiction in which they serve.
+  Fact 0.8: Justices of the peace are (or were) usually not required to have any formal legal education in order to qualify for the office.
+  Fact 0.9: Some jurisdictions have varying forms of training for justices of the peace.
+
+Retrieved items:
+<item 1>
+Justice of the peace
+JPs are chosen under the Governor - General 's discretion . Malaysia ( edit ) In Malaysia , justices of the peace have largely been replaced in magistrates '
+courts by legally qualified ( first - class ) stipendiary magistrates . However , state governments continue to appoint justices of the peace as honours . In
+2004 , some associations of justices of the peace pressed the federal government to allow justices of the peace to sit as second - class magistrates in order to
+reduce the backlog of cases in the courts . New Zealand ( edit ) A Justice of the Peace in New Zealand is someone of good stature in the community who is
+authorized to witness and sign statutory declarations and affidavits as well as certify documents . They may also perform citizenship ceremonies and act as a
+Visiting Justice in prisons the function of which is to record a prisoner 's grievance and decide on its validity . They have certain powers to issue search
+warrants , and ( in conjunction with another justice of the peace ) may try minor criminal trials in the district court and exercise powers to remand defendants
+in custody , grant bail , and adjourn court hearings .
+</item 1>
+
+<item 2>
+Justice of the peace
+Their judicial powers were replaced by full - time , legally qualified district justices ( now called district judges ) and their quasi-judicial powers by lay
+Peace Commissioners . Peace commissioners may sign statutory declarations , and may issue summons and search warrants to the Garda Síochána ( Irish police ) . A
+Peace Commissioner can not sign an Affidavit , in Ireland that function is performed by a Commissioner for Oaths . Jamaica ( edit ) A justice of the peace ( JP
+) , according to the Ministry of Justice , is a person of unquestionable integrity who seeks to promote and protect the rights of the individual and helps to
+provide justice to persons in a particular community . Additionally , the JP serves as a justice in petty court sessions , attends juvenile court sessions ,
+issues summonses , considers applications for bail , explains and signs legal documents , sits on licensing panels , and gives counsel / advice . Any Jamaican
+citizen that can speak and write English is eligible to become a JP . Any club / organisation / citizen can recommend someone to become JP for a community . JPs
+are chosen under the Governor - General 's discretion .
+</item 2>
+
+<item 3>
+Justice of the peace
+Belgium ( edit ) In Belgium , the justice of the peace ( French : juge de paix , Dutch : vrederechter ) is a law - trained judge who sits the lowest Court of
+record with original jurisdiction over small claims ( less than € 2500 ) matters of civil , commercial , and family law , including : tenancy and lease disputes
+, neighborhood disputes ( party structures , trespassing , noise pollution ) , apartment buildings , small deceased estates , alimony , guardianships & adoption
+, and the commitment of mental patients and oversight of their care . Litigants may opt either for conciliation or trial . Lawyers may act as locum tenens JPs .
+Canada ( edit ) In Canada , justices of the peace play a role in the administration of justice at the provincial level . Justices are generally appointed by the
+lieutenant governors of Canada 's provinces , and by the commissioners of Canada 's territories , on the advice of their relevant premier or Attorney General .
+</item 3>
+
+<item 4>
+Justice of the peace
+A JP has contempt power of $100 and up to 3 days in jail per occurrence . A JP is also authorized to perform marriage ceremonies . Replacement with other courts
+( edit ) In many states , the office of justice of the peace has been abolished or transferred to another court , such as the magistrate court . In larger
+cities , cases may be heard in a municipal court which has jurisdiction only within that city . Most efforts to abolish the office of justice of the peace have
+been led by the American Bar Association , which views non-lawyer judges as no longer necessary , as there are now far more persons with formal legal education
+than in the past when justices of the peace were first used . California formerly had justice of the peace courts staffed by lay judges , but began phasing them
+out after a landmark 1974 decision in which the Supreme Court of California unanimously held that it was a violation of federal due process ( under the
+Fourteenth Amendment to the U.S. Constitution ) to allow a non-lawyer to preside over a criminal trial which could result in incarceration of the defendant .
+</item 4>
+
+<item 5>
+Justice of the peace
+Justices of the peace are elected every two years to these partisan offices . Massachusetts , Connecticut , Vermont ( edit ) Justices of the peace in the
+Commonwealth of Massachusetts are often called on to perform marriages and , especially same - sex marriages , which certain religious officials are not willing
+to oversee . Justices of the peace in Connecticut can preside over same - sex marriages . Unlike Massachusetts , Connecticut JPs are not penalized for refusing
+to perform such ceremonies . Justices of the peace in Connecticut , Massachusetts , and Vermont have the same general oath - giving powers as a notary public .
+Louisiana Are elected to serve six year terms as the judicial authority of a ward or district . Have jurisdiction in civil matters when the amount in dispute
+does not exceed $5,000 . Do not have jurisdiction when a title to real estate is involved , when the state or any political subdivision is a defendant , or in
+successions or probate matters . Can perform marriage ceremonies Minnesota ( edit ) In Minnesota , the history of justices of the peace dates back hundreds of
+years to a time when they were considered to be some of the most powerful officials in terms of the authority that they had to influence change in a community .
+</item 5>
+
+<item 6>
+Justice of the peace
+United states ( edit ) In some US states , the justice of the peace is a judge of a court of limited jurisdiction , a magistrate , or a quasi-judicial official
+with certain statutory or common law magisterial powers . Some states have special qualifications or unique features for the office . The justice of the peace
+typically presides over a court that hears misdemeanor cases , traffic violations , and other petty criminal infractions . The justice of the peace may also
+have authority over cases involving small debts , landlord and tenant disputes , or other small claims court proceedings . Proceedings before justices of the
+peace are often faster and less formal than the proceedings in other courts . In some jurisdictions a party convicted or found liable before a justice of the
+peace may have the right to a trial de novo before the judge of a higher court rather than an appeal strictly considered . A justice of the peace also performs
+civil marriages . Arizona ( edit ) A justice of the peace has the same jurisdiction as a municipal magistrate with respect to traffic and misdemeanor cases and
+restraining orders , though over cases whose affairs are not contained within the confines of a single municipality .
+</item 6>
+
+<item 7>
+Justice of the peace
+Additionally , the Justice Court hears cases involving county ordinances ( ordinances enacted by the board of supervisors that apply only to unincorporated
+areas ) , civil lawsuits up to a limit of $10,000 , small claims cases up to $2,500 , and issues evictions , called writs of restitution ( after a forcible
+detainer or special detainer action ( eviction ) being successfully completed by a landlord ) . Justices of the peace , also called JPs , or Judges of the
+Justice Court , are elected in partisan elections for four - year terms from specific districts called precincts . They have the same authority and
+responsibility as all other judges in the state with respect to performing marriages , administrating oaths , adhering to the code of judicial conduct , and all
+aspects of justice administration . However , Arizona law does not require justices of the peace to be lawyers . Many justices of the peace are not legally
+trained , although all are required by the Arizona Supreme Court to complete a course at the Arizona Judicial College . As with JPs , municipal judges in
+Arizona are not required to be lawyers . Arkansas ( edit ) This section does not cite any sources .
+</item 7>
+
+<item 8>
+Justice of the peace
+( PLD 2016 Supreme Court 581 ) It is pertinent to note however , as many academics have pointed out , that there is great utility in the appointment of such
+justices especially in rural areas where enmity between rival groups can lead to the inability of registration of cognizable offences and biased judicial
+proceedings . Singapore ( edit ) A justice of the peace in Singapore derives his powers from statute law . He is appointed by the President of the Republic of
+Singapore , under the provisions of section 11 ( l ) of the Subordinate Courts Act ( Cap. 321 ) . The President may revoke the appointment of any justice of the
+peace . A newly appointed justice of the peace is required by section 17 of the Subordinate Courts Act , to take the oath of office and allegiance as set out in
+the schedule to the Subordinate Courts Act , before exercising the functions of his office . In their role , JPs serve as visiting justices of Singapore prisons
+, mediators or referees in the subordinate courts . They may also solemnise marriages in the Registry of Marriages or perform the duties of the magistrate
+conferred on them by any written law .
+</item 8>
+
+<item 9>
+Justice of the peace
+Justice of the peace - wikipedia Justice of the peace Jump to : navigation , search This article needs additional citations for verification . Please help
+improve this article by adding citations to reliable sources . Unsourced material may be challenged and removed . ( January 2017 ) ( Learn how and when to
+remove this template message ) Taos County , New Mexico . Justice of the Peace Montoyo hears a minor case . ( 1941 ) A justice of the peace ( JP ) is a judicial
+officer , of a lower or puisne court , elected or appointed by means of a commission ( letters patent ) to keep the peace . In past centuries the term
+commissioner of the peace was often used with the same meaning . Depending on the jurisdiction , such justices dispense summary justice or merely deal with
+local administrative applications in common law jurisdictions . Justices of the peace are appointed or elected from the citizens of the jurisdiction in which
+they serve , and are ( or were ) usually not required to have any formal legal education in order to qualify for the office . Some jurisdictions have varying
+forms of training for JPs . Contents ( hide ) 1 History 2 Modern use 2.1 Australia 2.1.
+</item 9>
+
+<item 10>
+Justice of the peace
+Administrative justice of the peace are court officers appointed by the Minister of Justice , and perform duties such as receiving criminal informations and
+issuing warrants . Presiding justice of the peace are appointed by commission under the Great Seal , and can try some criminal matters and issue warrants . They
+are appointed from advocates of at least ten years ' standing and serve full - time until the age of 70 . Yukon ( edit ) In Yukon , justices of the peace are
+lay officers of the court . They sit in the Justice of the Peace Court , which is part of the Territorial Court of Yukon . Hong Kong ( edit ) In Hong Kong , the
+historical functions of justices of the peace have been replaced by full - time , legally qualified magistrates . Nowadays , justices of the peace are
+essentially titles of honour given by the Government to community leaders , and to certain officials while they are in their terms of offices . They have no
+judicial functions , and their main duties include visiting prisons , institutions for young offenders and drug addicts , psychiatric hospitals , remand homes ,
+places of refuge , reception and detention centres , administering statutory declarations , and serving as members of advisory panels .
+</item 10>
+=== END ITEM id=87c603f7c9f13dca ===
+
+=== ITEM id=c430736ec029cb80 ===
+Gold sentences and facts:
+Sentence 0: Jane and Rafael start saving up to buy a one - bedroom apartment , but their plan falls apart when Mateo breaks an antique $4,000 clock . Rafael moves into the Villanueva house , but after Alba hits Mateo , the two get into a heated argument and Rafael moves back out . Xiomara starts chemotherapy , and makes a friend named Donna . The timeline moves forward nine weeks , and Donna dies of unforeseen consequences . Xiomara is shown not to be doing well due to the chemotherapy , Alba and Rafael are still in a fight and River and Rogelio are still arguing over the Passions of Santos adaptation . Alba breaks down to Jane , and she and Rafael make up . Xiomara bonds with River over telenovelas , after she accidentally eats a pot brownie , and she agrees to do the Passions of Steve and Brenda the Latin American way . Jane Ramos gets herself disbarred , and as a result gets the case against Petra thrown out .
+  Fact 0.0: Jane and Rafael start saving up to buy a one-bedroom apartment.
+  Fact 0.1: Jane and Rafael's plan to buy the apartment falls apart when Mateo breaks an antique $4,000 clock.
+  Fact 0.2: Rafael moves into the Villanueva house.
+  Fact 0.3: After Alba hits Mateo, Alba and Rafael get into a heated argument.
+  Fact 0.4: Rafael moves back out of the Villanueva house after the argument.
+  Fact 0.5: Xiomara starts chemotherapy.
+  Fact 0.6: Xiomara makes a friend named Donna.
+  Fact 0.7: The timeline moves forward nine weeks.
+  Fact 0.8: Donna dies of unforeseen consequences.
+  Fact 0.9: Xiomara is shown not to be doing well due to the chemotherapy.
+  Fact 0.10: Alba and Rafael are still in a fight.
+  Fact 0.11: River and Rogelio are still arguing over the Passions of Santos adaptation.
+  Fact 0.12: Alba breaks down to Jane.
+  Fact 0.13: Alba and Rafael make up.
+  Fact 0.14: Xiomara bonds with River over telenovelas.
+  Fact 0.15: Xiomara accidentally eats a pot brownie.
+  Fact 0.16: Xiomara agrees to do the Passions of Steve and Brenda the Latin American way.
+  Fact 0.17: Jane Ramos gets herself disbarred.
+  Fact 0.18: As a result of Jane Ramos being disbarred, the case against Petra is thrown out.
+Sentence 1: No . overall No. in season Title Directed by Written by Original air date U.S. viewers ( millions ) 65 `` Chapter Sixty - Five '' Brad Silberling Jennie Snyder Urman & Paul Sciarrotta October 13 , 2017 ( 2017 - 10 - 13 ) 0.68 Picking up immediately after where Season 3 left off , Jane is reunited with her first love , Adam , who found the love letter that Michael wrote . She is surprised , but happy , to see him . However , both Xo and Alba are less thrilled that he is back . Meanwhile , Rafael loses ownership of the hotel to his sister and as a result , he finds himself living at Jane 's house , broke and homeless . Jane and Rafael learn that the missing Petra has been found after she got away from Anezka and they rush to her side , but Anezka is nowhere to be found . When Petra returns to the hotel , Luisa thinks that Petra is Anezka . Petra goes along with the game , until the real Anezka returns . Elsewhere , Xo and Rogelio 's married life is interrupted when they confront the realization that Darci is having Rogelio 's baby and she wants full custody . 66 `` Chapter Sixty - Six '' Gina Lamar Valentina Garza & Jessica O'Toole & Amy Rardin October 20 , 2017 ( 2017 - 10 - 20 ) 0.61 Jane 's relationship with Adam helps bring out her `` fun side '' and reminds her that she is n't just a mom . However , when Adam gets a job opportunity out of state , he asks for Jane 's opinion on if he should stay or go . Meanwhile , Rogelio continues to face issues with his co-star at work and things are about to get even worse . Xo is helping to take care of Darci to prove that Rogelio is committed to being a father to the baby . Also , Petra and Rafael begin working together to try and buy back the hotel from Luisa , but they are running into trouble involving Anezka , causing tension between them . 67 `` Chapter Sixty - Seven '' Fernando Sariñana Carolina Rivera & Micah Schraft October 27 , 2017 ( 2017 - 10 - 27 ) 0.60 Jane and Adam 's relationship seems to be moving on , and Jane thinks that it might be time for him to meet her son Mateo , but Rafael is not happy with this idea . Meanwhile , as the arrival of Darci 's baby approaches , Rogelio 's jealously of her new boyfriend increases as well . Trying to be supportive , Xo encourages Rogelio to step up and be the father he was meant to be . Elsewhere , Rafael is determined to get his hotel and life back from Luisa and will do whatever he has to do to make it happen , with or without Petra 's help . 68 `` Chapter Sixty - Eight '' Gina Lamar Deirdre Shaw & Chantelle M. Wells November 3 , 2017 ( 2017 - 11 - 03 ) 0.69 Jane becomes angry when she learns that Rafael introduced Mateo to his new girlfriend , Katherine , without her consent because she thinks Katherine is a negative influence on both Rafael and Mateo . Jane turns to Petra for help with the situation . Meanwhile , Rogelio and Darci struggle to choose a name for the baby . Elsewhere , Xo , who is focused on opening her own dance studio , decides to go into business with an unlikely foe . 69 5 `` Chapter Sixty - Nine '' Stuart Gillard Paul Sciarrotta November 10 , 2017 ( 2017 - 11 - 10 ) 0.65 After Adam reveals his dating past to Jane , she becomes so unsure and insecure that it puts a strain on their relationship . Meanwhile , Lina seeks Jane 's advice about whether she should get married or not . Petra hears some important information that could help Rafael get the hotel back . Also , Xo asks Rogelio to consider having a medical procedure ( vasectomy ) done , but he is very hesitant . 70 6 `` Chapter Seventy '' Melanie Mayron Carolina Rivera & Micah Schraft November 17 , 2017 ( 2017 - 11 - 17 ) 0.61 Jane 's book is finally being released but her plans to have a party at the local bookshop where she was inspired to be a writer hit a snag . Always wanting to help Jane , Rogelio devises a plan to save the day , but one of his arch - rivals threatens to ruin the day . Meanwhile , Rafael gets a new job , but it is not exactly what he was hoping for . Also , Petra has come up with an interesting strategy to get the Marbella Hotel back from Luisa , but Rafael wants nothing to do with the scheme . 71 7 `` Chapter Seventy - One '' Micah Schraft Valentina Garza & Deidre Shaw December 8 , 2017 ( 2017 - 12 - 08 ) 0.65 Anezka is revealed to have faked her death to see where her loyalties lie ; initially , she trusts Petra after believing she saw her cry , but after finding out she was n't crying because of her fake death , she threatens Petra . Later , Anezka falls from Petra 's apartment to her death ... for real . Meanwhile , Xiomara and Jane set off on Jane 's book tour , when Alba decides to tag along . After they get back , Jane and Rafael share a kiss . 72 8 `` Chapter Seventy - Two '' Melanie Mayron Carolina Rivera & Paul Sciarrotta January 26 , 2018 ( 2018 - 01 - 26 ) 0.68 Mateo starts kindergarten and invites a friend over to Xiomara and Rogelio 's house . Jane and Rafael try to cover up that they are pretending to live in their house so they do n't get kicked out . Jane and Rafael show mixed emotions following the kiss and try again , which Mateo notices . He then proclaims : `` Does this mean you 're going to get married ? '' After Xo convinces Rogelio to attend couples therapy , they both are surprised by their emotions . Meanwhile , Petra hires a lawyer named Jane Ramos ( Rosario Dawson ) , to ensure she gets no charges pending Anezka 's death . Also , Rafael moves out of Jane 's house into his new apartment . 73 9 `` Chapter Seventy - Three '' Eric Lea Valentina Garza & Chantelle M. Wells February 2 , 2018 ( 2018 - 02 - 02 ) 0.67 When Jane and Rafael finally realize that the uncertain state of their relationship ( or lack of it ) is stressing out Mateo , they decide that they need to make a decision . Meanwhile , Petra is on the outs with Jane and Rafael after the Luisa fiasco , so she tries to figure out a way to get back into their good graces . Elsewhere , Rogelio and Xo are both contemplating their career choices . 74 10 `` Chapter Seventy - Four '' Gina Rodriguez Micah Schraft & Paul Sciarrotta February 9 , 2018 ( 2018 - 02 - 09 ) 0.80 Jane and Rafael try to be friends , which works great until Jane goes on a date . Meanwhile , Petra and Jane 's new partnership is off to a rocky start , but they both know they have to find a way to work together somehow . Rogelio is convinced he has male post-partum depression , which puts him at odds with with celebrity Post-Partum Advocate River Fields ( guest star Brooke Shields ) on The Talk . Also , Alba finally confides in Jane why she turned down the marriage proposal , leaving Jane to help Alba in the romance department when Jane takes Alba to a sex store and buys her a vibrator . Elsewhere , Jane and Rafael agree to have sex , and Petra questions her own sexual identity when she starts to have sex dreams about Jane `` J.R. '' Ramos after the lawyer begins flirting with her . 75 11 `` Chapter Seventy - Five '' Gina Lamar Merigan Mulhern March 2 , 2018 ( 2018 - 03 - 02 ) 0.59 Jane is ready to move on from the Marbella Hotel issues and pursue writing full time , but an unexpected development forces her to consider returning to her teaching roots . Xiomara decides to go back to school where she listens in on an art history class , while Jane teaches a seminar about writing . Here , Jane finds out Jonathan Chavez , her former advisor , is taking advantage of another student of his . While trying to warn the student , Jane accidentally grabs her breasts to avoid falling over and , as a result , does n't get the teaching job she was applying for . Meanwhile , Petra gets arrested for Anezka 's murder due to the blackmailer planting the screws in her apartment , leading Jane Ramos to tell Petra that she was framing her because she was being threatened by an unknown blackmailer . Also , Rafael and Jane continue their affair . Elsewhere , Rogelio tries to get Eva Longoria to join his Passions of Santos reboot , but instead finds out the two are distant cousins . 76 12 `` Chapter Seventy - Six '' Melanie Mayron Leah Longoria March 9 , 2018 ( 2018 - 03 - 09 ) 0.58 Jane 's fixation on a negative review has left her with writer 's block , so Rogelio suggests she take a writing class to help . With the encouragement of Jane , Rafael is ready to dig into his past to find out who his real biological parents are . Meanwhile , Rogelio is trying to make things less about him and more about Xo , but he grows suspicious when he learns she is keeping a secret from him . But the secret Xo has been keeping is not what Rogelio suspected . Elsewhere , Petra tests the loyalty of her lawyer , Jane Ramos , by pretending to be romantically interested in her while trying to find out the identity of the blackmailer . After Petra confides in Jane R. of her feelings which are not fake , the two of them sleep together for the first time . 77 13 `` Chapter Seventy - Seven '' Gina Lamar Deirdre Shaw & Chantelle M. Wells March 16 , 2018 ( 2018 - 03 - 16 ) 0.59 When Jane , Rogelio and Alba learn what is going on with Xo who might have breast cancer , they all try to comfort her , but Xo insists they let her live her life . Meanwhile , Rogelio finally gets River Fields to agree to meet with him , but he learns that River has another plan in mind . Also , Rafael is on a mission to find his sister , who may have the information he has been looking for of his origins . Rafael visits Rose in prison to ask for her help , but he quickly turns her down when she makes a demand to know Luisa 's location . Also , Jane is upset with Petra after her twin girls spill a secret to Mateo about the Tooth Fairy being make believe . At the same time , Jane ' J.R. ' Ramos tells Petra after their romantic night together that she is not interested in a relationship due to the blackmailer paying a visit to Jane R. 's dementia - stricken mother in a rest home . At the end , the identity of Jane R 's blackmailer is finally revealed . 78 14 `` Chapter Seventy - Eight '' Justin Baldoni Valentina Garza & Micah Schraft March 23 , 2018 ( 2018 - 03 - 23 ) 0.65 Xo struggles to make an important decision on whether or not to get a full mastectomy and looks to Jane for guidance , leaving Rogelio feeling like an outsider . Alba is frustrated with Rogelio when it seems he is once again making his career a priority over Xo 's well being . Meanwhile , Petra turns to Rafael for advice on her love life after he finally learns about her new romance with J.R. 79 15 `` Chapter Seventy - Nine '' Gina Lamar Paul Sciarrotta April 6 , 2018 ( 2018 - 04 - 06 ) 0.53 80 16 `` Chapter Eighty '' Micah Schraft Micah Schraft April 13 , 2018 ( 2018 - 04 - 13 ) 0.57 Jane and Rafael start saving up to buy a one - bedroom apartment , but their plan falls apart when Mateo breaks an antique $4,000 clock . Rafael moves into the Villanueva house , but after Alba hits Mateo , the two get into a heated argument and Rafael moves back out . Xiomara starts chemotherapy , and makes a friend named Donna . The timeline moves forward nine weeks , and Donna dies of unforeseen consequences . Xiomara is shown not to be doing well due to the chemotherapy , Alba and Rafael are still in a fight and River and Rogelio are still arguing over the Passions of Santos adaptation . Alba breaks down to Jane , and she and Rafael make up . Xiomara bonds with River over telenovelas , after she accidentally eats a pot brownie , and she agrees to do the Passions of Steve and Brenda the Latin American way . Jane Ramos gets herself disbarred , and as a result gets the case against Petra thrown out . 81 17 `` Chapter Eighty - One '' Gina Lamar Jennie Snyder Urman & Paul Sciarrotta April 20 , 2018 ( 2018 - 04 - 20 ) 0.58 Rafael intends to propose to Jane , however Rose 's news unsettles him . Alba becomes a citizen and the Villanueva 's throw her a surprise party . Jane Ramos and Petra plan to move in together , until Jane finds out that Petra killed Anezka . As she walks out , Krishna tells her that her life is in danger . J.R. saves Petra 's life by shooting , and killing , the blackmailer . As Jane meets Rafael , Michael is revealed to be alive .
+  Fact 1.0: The listing has columns for overall episode number, season episode number, title, director, writers, original air date, and U.S. viewers in millions.
+  Fact 1.1: Chapter Sixty-Five is episode 65 overall, directed by Brad Silberling and written by Jennie Snyder Urman and Paul Sciarrotta.
+  Fact 1.2: Chapter Sixty-Five first aired October 13, 2017, with 0.68 million U.S. viewers.
+  Fact 1.3: Chapter Sixty-Five picks up immediately after where Season 3 left off.
+  Fact 1.4: Jane is reunited with her first love, Adam, who found the love letter that Michael wrote.
+  Fact 1.5: Jane is surprised but happy to see Adam.
+  Fact 1.6: Xo and Alba are less thrilled that Adam is back.
+  Fact 1.7: Rafael loses ownership of the hotel to his sister.
+  Fact 1.8: As a result, Rafael finds himself living at Jane's house, broke and homeless.
+  Fact 1.9: Jane and Rafael learn that the missing Petra has been found after she got away from Anezka.
+  Fact 1.10: Jane and Rafael rush to Petra's side, but Anezka is nowhere to be found.
+  Fact 1.11: When Petra returns to the hotel, Luisa thinks Petra is Anezka.
+  Fact 1.12: Petra goes along with the game until the real Anezka returns.
+  Fact 1.13: Xo and Rogelio's married life is interrupted when they confront the realization that Darci is having Rogelio's baby.
+  Fact 1.14: Darci wants full custody of the baby.
+  Fact 1.15: Chapter Sixty-Six is directed by Gina Lamar and written by Valentina Garza, Jessica O'Toole and Amy Rardin.
+  Fact 1.16: Chapter Sixty-Six first aired October 20, 2017, with 0.61 million U.S. viewers.
+  Fact 1.17: Jane's relationship with Adam helps bring out her 'fun side'.
+  Fact 1.18: Adam's relationship with Jane reminds her that she is not just a mom.
+  Fact 1.19: Adam gets a job opportunity out of state.
+  Fact 1.20: Adam asks Jane's opinion on whether he should stay or go.
+  Fact 1.21: Rogelio continues to face issues with his co-star at work.
+  Fact 1.22: Rogelio's issues with his co-star are about to get even worse.
+  Fact 1.23: Xo is helping to take care of Darci to prove that Rogelio is committed to being a father to the baby.
+  Fact 1.24: Petra and Rafael begin working together to try to buy back the hotel from Luisa.
+  Fact 1.25: Petra and Rafael run into trouble involving Anezka.
+  Fact 1.26: Petra and Rafael's trouble involving Anezka causes tension between them.
+  Fact 1.27: Chapter Sixty-Seven is directed by Fernando Sariñana and written by Carolina Rivera and Micah Schraft.
+  Fact 1.28: Chapter Sixty-Seven first aired October 27, 2017, with 0.60 million U.S. viewers.
+  Fact 1.29: Jane and Adam's relationship seems to be moving on.
+  Fact 1.30: Jane thinks it might be time for Adam to meet her son Mateo.
+  Fact 1.31: Rafael is not happy with the idea of Adam meeting Mateo.
+  Fact 1.32: As the arrival of Darci's baby approaches, Rogelio's jealousy of Darci's new boyfriend increases.
+  Fact 1.33: Xo encourages Rogelio to step up and be the father he was meant to be.
+  Fact 1.34: Rafael is determined to get his hotel and life back from Luisa.
+  Fact 1.35: Rafael will do whatever he has to do to get his hotel and life back, with or without Petra's help.
+  Fact 1.36: Chapter Sixty-Eight is directed by Gina Lamar and written by Deirdre Shaw and Chantelle M. Wells.
+  Fact 1.37: Chapter Sixty-Eight first aired November 3, 2017, with 0.69 million U.S. viewers.
+  Fact 1.38: Jane becomes angry when she learns Rafael introduced Mateo to his new girlfriend, Katherine, without her consent.
+  Fact 1.39: Jane thinks Katherine is a negative influence on both Rafael and Mateo.
+  Fact 1.40: Jane turns to Petra for help with the situation.
+  Fact 1.41: Rogelio and Darci struggle to choose a name for the baby.
+  Fact 1.42: Xo is focused on opening her own dance studio.
+  Fact 1.43: Xo decides to go into business with an unlikely foe.
+  Fact 1.44: Chapter Sixty-Nine is episode 69 overall and season 5, directed by Stuart Gillard and written by Paul Sciarrotta.
+  Fact 1.45: Chapter Sixty-Nine first aired November 10, 2017, with 0.65 million U.S. viewers.
+  Fact 1.46: After Adam reveals his dating past to Jane, Jane becomes unsure and insecure.
+  Fact 1.47: Jane's insecurity puts a strain on her relationship with Adam.
+  Fact 1.48: Lina seeks Jane's advice about whether she should get married.
+  Fact 1.49: Petra hears important information that could help Rafael get the hotel back.
+  Fact 1.50: Xo asks Rogelio to consider having a vasectomy.
+  Fact 1.51: Rogelio is very hesitant about the vasectomy.
+  Fact 1.52: Chapter Seventy is episode 70 overall and season 6, directed by Melanie Mayron and written by Carolina Rivera and Micah Schraft.
+  Fact 1.53: Chapter Seventy first aired November 17, 2017, with 0.61 million U.S. viewers.
+  Fact 1.54: Jane's book is finally being released.
+  Fact 1.55: Jane's plans to have a party at the local bookshop where she was inspired to be a writer hit a snag.
+  Fact 1.56: Rogelio devises a plan to save the day for Jane.
+  Fact 1.57: One of Rogelio's arch-rivals threatens to ruin the day.
+  Fact 1.58: Rafael gets a new job, but it is not exactly what he was hoping for.
+  Fact 1.59: Petra has come up with an interesting strategy to get the Marbella Hotel back from Luisa.
+  Fact 1.60: Rafael wants nothing to do with Petra's scheme.
+  Fact 1.61: Chapter Seventy-One is episode 71 overall and season 7, directed by Micah Schraft and written by Valentina Garza and Deidre Shaw.
+  Fact 1.62: Chapter Seventy-One first aired December 8, 2017, with 0.65 million U.S. viewers.
+  Fact 1.63: Anezka is revealed to have faked her death to see where her loyalties lie.
+  Fact 1.64: Anezka initially trusts Petra after believing she saw Petra cry.
+  Fact 1.65: Anezka threatens Petra after finding out Petra was not crying because of Anezka's fake death.
+  Fact 1.66: Later, Anezka falls from Petra's apartment to her death, for real.
+  Fact 1.67: Xiomara and Jane set off on Jane's book tour.
+  Fact 1.68: Alba decides to tag along on Jane's book tour.
+  Fact 1.69: After they get back, Jane and Rafael share a kiss.
+  Fact 1.70: Chapter Seventy-Two is episode 72 overall and season 8, directed by Melanie Mayron and written by Carolina Rivera and Paul Sciarrotta.
+  Fact 1.71: Chapter Seventy-Two first aired January 26, 2018, with 0.68 million U.S. viewers.
+  Fact 1.72: Mateo starts kindergarten.
+  Fact 1.73: Mateo invites a friend over to Xiomara and Rogelio's house.
+  Fact 1.74: Jane and Rafael try to cover up that they are pretending to live in their house so they don't get kicked out.
+  Fact 1.75: Jane and Rafael show mixed emotions following the kiss and try again, which Mateo notices.
+  Fact 1.76: Mateo proclaims: 'Does this mean you're going to get married?'
+  Fact 1.77: After Xo convinces Rogelio to attend couples therapy, Xo and Rogelio are both surprised by their emotions.
+  Fact 1.78: Petra hires a lawyer named Jane Ramos, played by Rosario Dawson.
+  Fact 1.79: Petra hires Jane Ramos to ensure Petra gets no charges pending Anezka's death.
+  Fact 1.80: Rafael moves out of Jane's house into his new apartment.
+  Fact 1.81: Chapter Seventy-Three is episode 73 overall and season 9, directed by Eric Lea and written by Valentina Garza and Chantelle M. Wells.
+  Fact 1.82: Chapter Seventy-Three first aired February 2, 2018, with 0.67 million U.S. viewers.
+  Fact 1.83: Jane and Rafael realize that the uncertain state of their relationship is stressing out Mateo.
+  Fact 1.84: Jane and Rafael decide that they need to make a decision.
+  Fact 1.85: Petra is on the outs with Jane and Rafael after the Luisa fiasco.
+  Fact 1.86: Petra tries to figure out a way to get back into Jane and Rafael's good graces.
+  Fact 1.87: Rogelio and Xo are both contemplating their career choices.
+  Fact 1.88: Chapter Seventy-Four is episode 74 overall and season 10, directed by Gina Rodriguez and written by Micah Schraft and Paul Sciarrotta.
+  Fact 1.89: Chapter Seventy-Four first aired February 9, 2018, with 0.80 million U.S. viewers.
+  Fact 1.90: Jane and Rafael try to be friends, which works great until Jane goes on a date.
+  Fact 1.91: Petra and Jane's new partnership is off to a rocky start.
+  Fact 1.92: Petra and Jane both know they have to find a way to work together.
+  Fact 1.93: Rogelio is convinced he has male post-partum depression.
+  Fact 1.94: Rogelio's belief puts him at odds with celebrity Post-Partum Advocate River Fields on The Talk.
+  Fact 1.95: River Fields is guest starred by Brooke Shields.
+  Fact 1.96: Alba finally confides in Jane why she turned down the marriage proposal.
+  Fact 1.97: Jane helps Alba in the romance department.
+  Fact 1.98: Jane takes Alba to a sex store and buys her a vibrator.
+  Fact 1.99: Jane and Rafael agree to have sex.
+  Fact 1.100: Petra questions her own sexual identity.
+  Fact 1.101: Petra starts to have sex dreams about Jane 'J.R.' Ramos after the lawyer begins flirting with her.
+  Fact 1.102: Chapter Seventy-Five is episode 75 overall and season 11, directed by Gina Lamar and written by Merigan Mulhern.
+  Fact 1.103: Chapter Seventy-Five first aired March 2, 2018, with 0.59 million U.S. viewers.
+  Fact 1.104: Jane is ready to move on from the Marbella Hotel issues and pursue writing full time.
+  Fact 1.105: An unexpected development forces Jane to consider returning to her teaching roots.
+  Fact 1.106: Xiomara decides to go back to school, where she listens in on an art history class.
+  Fact 1.107: Jane teaches a seminar about writing.
+  Fact 1.108: Jane finds out Jonathan Chavez, her former advisor, is taking advantage of another student.
+  Fact 1.109: While trying to warn the student, Jane accidentally grabs her breasts to avoid falling over.
+  Fact 1.110: Because of this, Jane does not get the teaching job she was applying for.
+  Fact 1.111: Petra gets arrested for Anezka's murder due to the blackmailer planting the screws in Petra's apartment.
+  Fact 1.112: Jane Ramos tells Petra that she was framing Petra because Jane was being threatened by an unknown blackmailer.
+  Fact 1.113: Rafael and Jane continue their affair.
+  Fact 1.114: Rogelio tries to get Eva Longoria to join his Passions of Santos reboot.
+  Fact 1.115: Rogelio finds out that he and Eva Longoria are distant cousins.
+  Fact 1.116: Chapter Seventy-Six is episode 76 overall and season 12, directed by Melanie Mayron and written by Leah Longoria.
+  Fact 1.117: Chapter Seventy-Six first aired March 9, 2018, with 0.58 million U.S. viewers.
+  Fact 1.118: Jane's fixation on a negative review has left her with writer's block.
+  Fact 1.119: Rogelio suggests Jane take a writing class to help.
+  Fact 1.120: With Jane's encouragement, Rafael is ready to dig into his past to find out who his real biological parents are.
+  Fact 1.121: Rogelio is trying to make things less about him and more about Xo.
+  Fact 1.122: Rogelio grows suspicious when he learns Xo is keeping a secret from him.
+  Fact 1.123: The secret Xo has been keeping is not what Rogelio suspected.
+  Fact 1.124: Petra tests the loyalty of her lawyer, Jane Ramos, by pretending to be romantically interested in her.
+  Fact 1.125: Petra is trying to find the identity of the blackmailer.
+  Fact 1.126: Petra confides in Jane R. about her feelings, which are not fake.
+  Fact 1.127: Petra and Jane R. sleep together for the first time.
+  Fact 1.128: Chapter Seventy-Seven is episode 77 overall and season 13, directed by Gina Lamar and written by Deirdre Shaw and Chantelle M. Wells.
+  Fact 1.129: Chapter Seventy-Seven first aired March 16, 2018, with 0.59 million U.S. viewers.
+  Fact 1.130: Jane, Rogelio and Alba learn that Xo might have breast cancer.
+  Fact 1.131: Jane, Rogelio and Alba try to comfort Xo.
+  Fact 1.132: Xo insists they let her live her life.
+  Fact 1.133: Rogelio finally gets River Fields to agree to meet with him.
+  Fact 1.134: Rogelio learns that River has another plan in mind.
+  Fact 1.135: Rafael is on a mission to find his sister, who may have information he has been looking for about his origins.
+  Fact 1.136: Rafael visits Rose in prison to ask for her help.
+  Fact 1.137: Rafael quickly turns Rose down when she demands to know Luisa's location.
+  Fact 1.138: Jane is upset with Petra after Jane's twin girls spill a secret to Mateo about the Tooth Fairy being make-believe.
+  Fact 1.139: Jane R. Ramos tells Petra she is not interested in a relationship after their romantic night together.
+  Fact 1.140: The blackmailer paid a visit to Jane R.'s dementia-stricken mother in a rest home.
+  Fact 1.141: The identity of Jane R.'s blackmailer is finally revealed at the end of the episode.
+  Fact 1.142: Chapter Seventy-Eight is episode 78 overall and season 14, directed by Justin Baldoni and written by Valentina Garza and Micah Schraft.
+  Fact 1.143: Chapter Seventy-Eight first aired March 23, 2018, with 0.65 million U.S. viewers.
+  Fact 1.144: Xo struggles to make an important decision on whether or not to get a full mastectomy.
+  Fact 1.145: Xo looks to Jane for guidance on the mastectomy decision.
+  Fact 1.146: Xo's decision leaves Rogelio feeling like an outsider.
+  Fact 1.147: Alba is frustrated with Rogelio when he once again seems to make his career a priority over Xo's well-being.
+  Fact 1.148: Petra turns to Rafael for advice on her love life.
+  Fact 1.149: Rafael finally learns about Petra's new romance with J.R.
+  Fact 1.150: Chapter Seventy-Nine is episode 79 overall and season 15, directed by Gina Lamar and written by Paul Sciarrotta.
+  Fact 1.151: Chapter Seventy-Nine first aired April 6, 2018, with 0.53 million U.S. viewers.
+  Fact 1.152: Chapter Eighty is episode 80 overall and season 16, directed by Micah Schraft and written by Micah Schraft.
+  Fact 1.153: Chapter Eighty first aired April 13, 2018, with 0.57 million U.S. viewers.
+  Fact 1.154: Jane and Rafael start saving up to buy a one-bedroom apartment.
+  Fact 1.155: Jane and Rafael's plan falls apart when Mateo breaks an antique $4,000 clock.
+  Fact 1.156: Rafael moves into the Villanueva house.
+  Fact 1.157: After Alba hits Mateo, Alba and Rafael get into a heated argument.
+  Fact 1.158: Rafael moves back out after the argument.
+  Fact 1.159: Xiomara starts chemotherapy.
+  Fact 1.160: Xiomara makes a friend named Donna.
+  Fact 1.161: The timeline moves forward nine weeks.
+  Fact 1.162: Donna dies of unforeseen consequences.
+  Fact 1.163: Xiomara is shown not to be doing well due to the chemotherapy.
+  Fact 1.164: Alba and Rafael are still in a fight.
+  Fact 1.165: River and Rogelio are still arguing over the Passions of Santos adaptation.
+  Fact 1.166: Alba breaks down to Jane.
+  Fact 1.167: Alba and Rafael make up.
+  Fact 1.168: Xiomara bonds with River over telenovelas.
+  Fact 1.169: Xiomara accidentally eats a pot brownie.
+  Fact 1.170: Xiomara agrees to do the Passions of Steve and Brenda the Latin American way.
+  Fact 1.171: Jane Ramos gets herself disbarred.
+  Fact 1.172: As a result, Jane Ramos gets the case against Petra thrown out.
+  Fact 1.173: Chapter Eighty-One is episode 81 overall and season 17, directed by Gina Lamar and written by Jennie Snyder Urman and Paul Sciarrotta.
+  Fact 1.174: Chapter Eighty-One first aired April 20, 2018, with 0.58 million U.S. viewers.
+  Fact 1.175: Rafael intends to propose to Jane.
+  Fact 1.176: Rose's news unsettles Rafael.
+  Fact 1.177: Alba becomes a citizen.
+  Fact 1.178: The Villanueva family throws Alba a surprise party.
+  Fact 1.179: Jane Ramos and Petra plan to move in together.
+  Fact 1.180: Jane finds out Petra killed Anezka.
+  Fact 1.181: As Jane walks out, Krishna tells her that her life is in danger.
+  Fact 1.182: J.R. saves Petra's life by shooting and killing the blackmailer.
+  Fact 1.183: As Jane meets Rafael, Michael is revealed to be alive.
+
+Retrieved items:
+<item 1>
+Jane the Virgin (season 4)
+Meanwhile , Rafael gets a new job , but it is not exactly what he was hoping for . Also , Petra has come up with an interesting strategy to get the Marbella
+Hotel back from Luisa , but Rafael wants nothing to do with the scheme . 71 7 `` Chapter Seventy - One '' Micah Schraft Valentina Garza & Deidre Shaw December 8
+, 2017 ( 2017 - 12 - 08 ) 0.65 Anezka is revealed to have faked her death to see where her loyalties lie ; initially , she trusts Petra after believing she saw
+her cry , but after finding out she was n't crying because of her fake death , she threatens Petra . Later , Anezka falls from Petra 's apartment to her death
+... for real . Meanwhile , Xiomara and Jane set off on Jane 's book tour , when Alba decides to tag along . After they get back , Jane and Rafael share a kiss .
+</item 1>
+
+<item 2>
+Jane the Virgin (season 4)
+Meanwhile , Rogelio is trying to make things less about him and more about Xo , but he grows suspicious when he learns she is keeping a secret from him . But
+the secret Xo has been keeping is not what Rogelio suspected . Elsewhere , Petra tests the loyalty of her lawyer , Jane Ramos , by pretending to be romantically
+interested in her while trying to find out the identity of the blackmailer . After Petra confides in Jane R. of her feelings which are not fake , the two of
+them sleep together for the first time . 77 13 `` Chapter Seventy - Seven '' Gina Lamar Deirdre Shaw & Chantelle M. Wells March 16 , 2018 ( 2018 - 03 - 16 )
+0.59 When Jane , Rogelio and Alba learn what is going on with Xo who might have breast cancer , they all try to comfort her , but Xo insists they let her live
+her life . Meanwhile , Rogelio finally gets River Fields to agree to meet with him , but he learns that River has another plan in mind .
+</item 2>
+
+<item 3>
+Jane the Virgin (season 4)
+However , both Xo and Alba are less thrilled that he is back . Meanwhile , Rafael loses ownership of the hotel to his sister and as a result , he finds himself
+living at Jane 's house , broke and homeless . Jane and Rafael learn that the missing Petra has been found after she got away from Anezka and they rush to her
+side , but Anezka is nowhere to be found . When Petra returns to the hotel , Luisa thinks that Petra is Anezka . Petra goes along with the game , until the real
+Anezka returns . Elsewhere , Xo and Rogelio 's married life is interrupted when they confront the realization that Darci is having Rogelio 's baby and she wants
+full custody . 66 `` Chapter Sixty - Six '' Gina Lamar Valentina Garza & Jessica O'Toole & Amy Rardin October 20 , 2017 ( 2017 - 10 - 20 ) 0.61 Jane 's
+relationship with Adam helps bring out her `` fun side '' and reminds her that she is n't just a mom .
+</item 3>
+
+<item 4>
+Jane the Virgin (season 4)
+Here , Jane finds out Jonathan Chavez , her former advisor , is taking advantage of another student of his . While trying to warn the student , Jane
+accidentally grabs her breasts to avoid falling over and , as a result , does n't get the teaching job she was applying for . Meanwhile , Petra gets arrested
+for Anezka 's murder due to the blackmailer planting the screws in her apartment , leading Jane Ramos to tell Petra that she was framing her because she was
+being threatened by an unknown blackmailer . Also , Rafael and Jane continue their affair . Elsewhere , Rogelio tries to get Eva Longoria to join his Passions
+of Santos reboot , but instead finds out the two are distant cousins . 76 12 `` Chapter Seventy - Six '' Melanie Mayron Leah Longoria March 9 , 2018 ( 2018 - 03
+- 09 ) 0.58 Jane 's fixation on a negative review has left her with writer 's block , so Rogelio suggests she take a writing class to help . With the
+encouragement of Jane , Rafael is ready to dig into his past to find out who his real biological parents are .
+</item 4>
+
+<item 5>
+Jane the Virgin (season 4)
+Ramos Alfonso DiLuca as Jorge Garcia Special Guest Star ( edit ) Brooke Shields as River Fields Guest ( edit ) Francisco San Martin as Fabian Regalo del Cielo
+Diane Guerrero as Lina Santillan Sharon Osbourne as herself Julie Chen as herself Sara Gilbert as herself Sheryl Underwood as herself Eve as herself Melanie
+Mayron as Marlene Donaldson Eva Longoria as herself Adam Rodriguez as Jonathan Chavez Amy Brenneman as Donna Episodes ( edit ) See also : List of Jane the
+Virgin episodes No . overall No. in season Title Directed by Written by Original air date U.S. viewers ( millions ) 65 `` Chapter Sixty - Five '' Brad
+Silberling Jennie Snyder Urman & Paul Sciarrotta October 13 , 2017 ( 2017 - 10 - 13 ) 0.68 Picking up immediately after where Season 3 left off , Jane is
+reunited with her first love , Adam , who found the love letter that Michael wrote . She is surprised , but happy , to see him . However , both Xo and Alba are
+less thrilled that he is back .
+</item 5>
+
+<item 6>
+Jane the Virgin (season 4)
+Also , Rafael is on a mission to find his sister , who may have the information he has been looking for of his origins . Rafael visits Rose in prison to ask for
+her help , but he quickly turns her down when she makes a demand to know Luisa 's location . Also , Jane is upset with Petra after her twin girls spill a secret
+to Mateo about the Tooth Fairy being make believe . At the same time , Jane ' J.R. ' Ramos tells Petra after their romantic night together that she is not
+interested in a relationship due to the blackmailer paying a visit to Jane R. 's dementia - stricken mother in a rest home . At the end , the identity of Jane R
+'s blackmailer is finally revealed . 78 14 `` Chapter Seventy - Eight '' Justin Baldoni Valentina Garza & Micah Schraft March 23 , 2018 ( 2018 - 03 - 23 ) 0.65
+Xo struggles to make an important decision on whether or not to get a full mastectomy and looks to Jane for guidance , leaving Rogelio feeling like an outsider
+.
+</item 6>
+
+<item 7>
+Jane the Virgin (season 4)
+Rogelio is convinced he has male post-partum depression , which puts him at odds with with celebrity Post-Partum Advocate River Fields ( guest star Brooke
+Shields ) on The Talk . Also , Alba finally confides in Jane why she turned down the marriage proposal , leaving Jane to help Alba in the romance department
+when Jane takes Alba to a sex store and buys her a vibrator . Elsewhere , Jane and Rafael agree to have sex , and Petra questions her own sexual identity when
+she starts to have sex dreams about Jane `` J.R. '' Ramos after the lawyer begins flirting with her . 75 11 `` Chapter Seventy - Five '' Gina Lamar Merigan
+Mulhern March 2 , 2018 ( 2018 - 03 - 02 ) 0.59 Jane is ready to move on from the Marbella Hotel issues and pursue writing full time , but an unexpected
+development forces her to consider returning to her teaching roots . Xiomara decides to go back to school where she listens in on an art history class , while
+Jane teaches a seminar about writing .
+</item 7>
+
+<item 8>
+The excerpt lists *Jane the Virgin* season 4 episodes 15–17: “Chapter Seventy-Nine” (April 6, 2018), “Chapter Eighty” (April 13), and “Chapter Eighty-One”
+(April 20). Each had a 0.2 rating/1 share; listed audience figures were 0.54, 0.57, and 0.58 million, respectively. Later ratings for episodes 16–17 were marked
+</item 8>
+
+<item 9>
+Jane the Virgin (season 4)
+In this season , Jane deals with her romantic feelings for Rafael while reuniting with an ex-boyfriend while Rafael loses ownership of the Marbella and gets
+back together with his ex-wife , Petra Solano ( Yael Grobglas ) . Also , Rogelio de la Vega ( Jaime Camil ) , Jane 's father , is expecting a baby with an
+ex-girlfriend and marries Jane 's mother , Xiomara Villanueva ( Andrea Navedo ) .
+</item 9>
+
+<item 10>
+Jane the Virgin (season 4)
+69 5 `` Chapter Sixty - Nine '' Stuart Gillard Paul Sciarrotta November 10 , 2017 ( 2017 - 11 - 10 ) 0.65 After Adam reveals his dating past to Jane , she
+becomes so unsure and insecure that it puts a strain on their relationship . Meanwhile , Lina seeks Jane 's advice about whether she should get married or not .
+Petra hears some important information that could help Rafael get the hotel back . Also , Xo asks Rogelio to consider having a medical procedure ( vasectomy )
+done , but he is very hesitant . 70 6 `` Chapter Seventy '' Melanie Mayron Carolina Rivera & Micah Schraft November 17 , 2017 ( 2017 - 11 - 17 ) 0.61 Jane 's
+book is finally being released but her plans to have a party at the local bookshop where she was inspired to be a writer hit a snag . Always wanting to help
+Jane , Rogelio devises a plan to save the day , but one of his arch - rivals threatens to ruin the day .
+</item 10>
+=== END ITEM id=c430736ec029cb80 ===

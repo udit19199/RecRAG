@@ -1,0 +1,45 @@
+[
+  {"id": "7182dff75d078f40", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Announced on September 28 that the Fortnite maker is laying off 16% of its workforce, amounting to 870 people."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Announced on September 28 that the Fortnite maker is laying off 16% of its workforce, amounting to 870 people."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "8d62d110dd4009aa", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The product 6PPD-quinone, which was identified in late 2020,"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "requires more research to understand what impact, if any, it may have on aquatic life or the environment"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Goodyear SVP of global operations and CTO Chris Helsel says."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment,” Goodyear SVP of global operations and CTO Chris Helsel says."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "In our report, a former VP at an industrial automation vendor shared,"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]}
+  ]},
+  {"id": "0f70e6d3d13c6c9b", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "But then, there’s MJ as well who has made a comeback from the first installment."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "But then, there’s MJ as well who has made a comeback from the first installment."}]}
+  ]},
+  {"id": "a4d5404472b07a3d", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Kelce confessed that he tried and failed to give Swift a friendship bracelet with his number on it during her"}]},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "3.0", "status": "stated", "evidence": [{"item": 3, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]}
+  ]},
+  {"id": "f9350dc428180c25", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "UPDATE: NFL Network's Ian Rapoport reported Sunday morning that Hockenson is expected to play against New Orleans."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "UPDATE: NFL Network's Ian Rapoport reported Sunday morning that Hockenson is expected to play against New Orleans."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]}
+  ]}
+]

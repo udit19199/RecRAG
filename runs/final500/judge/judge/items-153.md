@@ -1,0 +1,975 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=73c08eb91f602d35 ===
+Gold sentences and facts:
+Sentence 0: Now, Swift has shared that she has nothing to hide in her new relationship with Kelce.
+  Fact 0.0: Swift has shared that she has nothing to hide.
+  Fact 0.1: Swift is in a new relationship with Kelce.
+  Fact 0.2: Swift has shared that she has nothing to hide in her new relationship with Kelce.
+Sentence 1: On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium - an invitation she famously accepted on 24 September.
+  Fact 1.0: The podcast host, referred to as 'he', later invited the 'Anti-Hero' singer to one of his games at Arrowhead Stadium.
+  Fact 1.1: The invitation was to a game at Arrowhead Stadium.
+  Fact 1.2: The 'Anti-Hero' singer accepted the invitation.
+  Fact 1.3: The 'Anti-Hero' singer famously accepted the invitation on 24 September.
+
+Retrieved items:
+<item 1>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Head coach Andy Reid was also asked about his star tight end's supposed relationship, to which he quipped, "I set them up."
+
+Sept. 24: Kelce and Swift leave stadium together
+
+"You know when it's time to go." - It's Time To Go
+
+This was the first time the two were photographed together. They walked side by side, Kelce fittingly wearing an outfit with "1989" in the title and Swift
+wearing a Chiefs zip-up.
+
+Sept. 24: The two leave in a convertible
+
+"Nothing good starts in the getaway car." - Getaway Car
+
+Swift and Swift were spotted in a convertible, with the tight end driving, after the Chiefs' win. Kelce reportedly rented out a restaurant for a private party
+with Swift and his teammates.
+
+"Taylor Swift likes that Travis Kelce 'pursued her' and the two are having a 'great time getting to know each other,'" a source told Entertainment Tonight.
+</item 1>
+
+<item 2>
+Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)
+Not to mention her rumoured relationship with Kansas City Chiefs tight end Travis Kelce caused a 400 per cent spike in NFL jersey sales.
+
+Since her first NFL appearance in September, Swift’s occasional attendance at Kelce’s games has received pushback from NFL fans who believe her presence is
+distracting from the game itself. “I’m just there to support Travis,” Swift admitted. “I have no awareness of if I’m being shown too much and pissing off a few
+dads, Brads, and Chads.”
+
+She playfully added: “Football is awesome, it turns out. I’ve been missing out my whole life.”
+
+The “Bad Blood” singer revealed that their romance began when Kelce gave her shoutout on his podcast, admitting he attempted to give Swift his phone number
+after one of her Eras Tour shows. The pair immediately began “hanging out” and by the time she attended her first Chiefs game in September, they were already a
+couple. “I think some people think that they saw our first date at that game?
+</item 2>
+
+<item 3>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+- Enchanted
+
+Mahomes said he had not met Swift when asked in the postgame press conference, but he did meet her at the afterparty.
+
+"Yea I met her. She's really cool. Good people," Mahomes said, via KSHB 41 in Kansas City. "But like Trav said, imma let them have their privacy and just keep
+it moving."
+
+Sept. 27: Kelce breaks his silence
+
+"And they said speak now." -Speak Now
+
+Kelce addressed Swift's attendance on his podcast, saying, "To see the slow-motion chest bumps, to see the high-fives with Mom, to see how Chiefs Kingdom was
+all excited that she was there -- that s--- was absolutely hysterical. It's definitely a game I'll remember, that's for damn sure."
+
+He is not going to speak too much more about the relationship, noting that he wants "to respect both of our lives."
+
+"Yeah, my personal life -- that's not so personal.
+</item 3>
+
+<item 4>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+21: Kelce sends Swift an invite
+
+"So inviting, I almost jump in." - Gold Rush
+
+While on the Pat McAfee show, Kelce discussed the rumors and sounded somehow surprised people are talking about it.
+
+"It is hilarious how much traction this has actually got," he said of all the talk. "It's like that old game in school called telephone where everybody is just
+whispering in each others ear, just hearing some random stuff. Especially when you got Jason Kelce on live television telling people just both sides."
+
+He then admitted that he invited Swift to one of his games, joking that they would compete to see who put on the bigger show at Arrowhead Stadium, home of the
+Chiefs.
+
+"I threw it out there, I threw the ball in her court and I told her you know, I've seen you rock the stage in Arrowhead you might have to come see me rock the
+stage in Arrowhead and see which one is a little more lit. We will see what happens in the near future."
+</item 4>
+
+<item 5>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+The “All Too Well” singer’s interview with Time marks her first time publicly speaking out about Kelce, who she’s been romantically linked to since this summer,
+when the football tight end first confessed to attempting to give her his number.
+
+While Swift has attended a few of Kelce’s games since their relationship started, he’s also gone on to support her career. In November, he made his way to
+Buenos Aires, Argentina, to attend one of her Eras Tour shows. During the concert, Swift gave a shout-out to the Chiefs player when she changed her “Karma”
+lyrics to reflect their relationship. “Karma is the guy on the Chiefs, coming straight home to me,” she sang, letting out a laugh as fans in the audience
+screamed in response.
+
+After the show, the “Style” singer was seen running into Kelce’s arms and kissing him, before he whisked her away backstage.
+</item 5>
+
+<item 6>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+“This all started when Travis very adorably put me on blast on his podcast, which I thought was metal as hell,” she explained. “We started hanging out right
+after that. So we actually had a significant amount of time that no one knew, which I’m grateful for, because we got to get to know each other.”
+
+Swift also confirmed that when she famously first attended Kelce’s game at Arrowhead Stadium in September, she was already dating the NFL star.
+
+“By the time I went to that first game, we were a couple. I think some people think that they saw our first date at that game? We would never be psychotic
+enough to hard launch a first date,” she said.
+
+The “Blank Space” singer also acknowledged that although her love life continues to make headlines with every Kansas City Chiefs game she attends, she’s focused
+on being there for her partner. She specified that she isn’t trying to hide her relationship from the public eye.
+</item 6>
+
+<item 7>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+24: Swift mingles with Donna Kelce
+
+
+
+"Talkin' over a football team." - Mean
+
+Swift already seems to be making friends with the family. Swift was sitting next to Donna in the box and the two were seen talking and laughing as the game went
+along.
+
+Sept. 24: Postgame interviews turn into Swiftie talk
+
+The postgame press conference seemed more about Swift and Kelce than it did about the actual game. The media wanted any insight it could get into the
+relationship and how Swift ended up at Arrowhead.
+
+"He told me at the last minute," Mahomes said when asked if he knew Swift was coming. "There's some things with Trav where he kind of just says it and you don't
+know if it's true or not. He says it so calmly. ... Friday he was like, 'Yeah, I think she's coming to the game this weekend,' and then moved about his
+business."
+</item 7>
+
+<item 8>
+Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game (The Independent - Life and Style,
+2023-09-26T22:05:34+00:00)
+Travis’ teammates also showed up to the after-party, as well as his mom, Donna Kelce. The party lasted until 2 am.”
+
+The late-night outing came days after the NFL star officially addressed ongoing dating rumours about him and the “Anti-Hero” singer. During an episode of The
+Pat McAfee Show on 21 September, he mocked his brother Jason Kelce for joking that he “100 per cent” believed his younger sibling was dating Swift.
+
+“It’s hilarious how much traction this has actually gotten, right now it’s like a game of telephone,” Kelce said. “Where everybody’s whispering in each other’s
+ears and hearing random stuff. No one actually knows what’s going on, especially when you got Jason Kelce on live television telling people just both sides - he
+doesn’t know, it’s true, this and that.”
+
+He also noted that he was still open to pursuing a relationship with Swift, revealing that he subtly asked if she’d want to attend one of his football games.
+</item 8>
+
+<item 9>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Taylor Swift has revealed when her relationship with Travis Kelce really started.
+
+The 33-year-old singer spoke candidly about the romance during a recent interview with Time after she was named the magazine’s 2023 Person of the Year. Speaking
+to the publication, she said she connected with Kelce in July, after he confessed on his podcast that he tried and failed to give her a friendship bracelet with
+his phone number on it during one of her Eras Tour shows.
+</item 9>
+
+<item 10>
+Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)
+“I think some people think that they saw our first date at that game? We would never be psychotic enough to hard launch a first date,” Swift joked.
+
+Back in April, it was revealed that Swift and British actor Joe Alwyn had broken up after six years of dating. The former couple were notoriously private, as
+the Conversations with Friends star previously expressed he didn’t want to discuss their relationship because it “feeds into a weird part of the culture”.
+
+Now, Swift has shared that she has nothing to hide in her new relationship with Kelce. “When you say a relationship is public, that means I’m going to see him
+do what he loves, we’re showing up for each other, other people are there and we don’t care,” she said. “The opposite of that is you have to go to an extreme
+amount of effort to make sure no one knows that you’re seeing someone. And we’re just proud of each other.”
+</item 10>
+=== END ITEM id=73c08eb91f602d35 ===
+
+=== ITEM id=786e40712eafcfde ===
+Gold sentences and facts:
+Sentence 0: Weekly Breakdown MATCHUP @ ATL ATL -2.5 O/U 42.5 OPP VS WR 6th PROJ PTS 12.1 WR RNK 37th YTD Stats REC 25 TAR 31 REYDS 261 TD 1 FPTS/G 11.4 The only two games McLaurin posted good numbers in were Washington's 35-33 win over Denver in Week 2 and Washington's 34-31 OT loss to Philadelphia in Week 4.
+  Fact 0.0: The matchup is at ATL, and the betting line is ATL -2.5.
+  Fact 0.1: The over/under is 42.5.
+  Fact 0.2: The opponent's ranking against wide receivers is 6th.
+  Fact 0.3: The projected points are 12.1.
+  Fact 0.4: The WR rank is 37th.
+  Fact 0.5: Year-to-date receptions are 25.
+  Fact 0.6: Year-to-date targets are 31.
+  Fact 0.7: Year-to-date receiving yards are 261.
+  Fact 0.8: Year-to-date touchdowns are 1.
+  Fact 0.9: Fantasy points per game are 11.4.
+  Fact 0.10: The only two games McLaurin posted good numbers in were Washington's 35-33 win over Denver in Week 2.
+  Fact 0.11: The only two games McLaurin posted good numbers in were Washington's 34-31 overtime loss to Philadelphia in Week 4.
+Sentence 1: Again, don't expect a massive game because the running game, defense, and special teams will have plenty of success in another big victory.
+  Fact 1.0: The writer says readers should not expect a massive game.
+  Fact 1.1: The running game will have plenty of success in another big victory.
+  Fact 1.2: The defense will have plenty of success in another big victory.
+  Fact 1.3: The special teams will have plenty of success in another big victory.
+
+Retrieved items:
+<item 1>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+On the flip side, three of the four quarterbacks Chicago faced found three touchdowns on their limited throws.
+
+Start Him (Lineup Decisions) Projections powered by Sportsline Terry McLaurin WR WAS Washington • #17
+
+Age: 28 • Experience: 5 yrs. Weekly Breakdown MATCHUP vs CHI WAS -6 O/U 44.5 OPP VS WR 19th PROJ PTS 15.2 WR RNK 21st YTD Stats REC 21 TAR 26 REYDS 212 TD 1
+FPTS/G 12.1 The Commanders may wish to win this one with a big dose of the run game (Brian Robinson is a must-start), but if the Bears put up any offense at
+all, McLaurin will be in position to put up nice numbers. He's a low-end WR2 worth the nod over George Pickens, Zay Flowers, Drake London and Jahan Dotson.
+</item 1>
+
+<item 2>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+PURDY: Has hit at least 20 Fantasy points in 8 of his 9 regular-season starts, and it really should be 9 for 9 because of that first touchdown that was ruled a
+lateral back in Week 2. If you include the two playoff games he completed, Purdy has delivered at least 20 in 9 of 11 games. And in 5 of those 9 he hit at least
+23 Fantasy points including each of his past two games.
+
+COWBOYS: Dallas' defense lost top cornerback Trevon Diggs and they're still red hot. They lead the league in pass rush pressure rate this season (55.6%) and
+they're in the top-10 in blitz rate (31.9%). It's that pressure that's helped the Cowboys rank in the top-five in completion rate allowed (57.4%), passing
+touchdowns allowed (two) and missed tackles on pass plays (just five, that's best in football).
+</item 2>
+
+<item 3>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+PAST THREE WEEKS: McLaurin has led all Commanders wide receivers in targets and all Commanders players in receptions. He's the No. 1 guy, and his big Week 4
+game (8-86-0 with an offensive fumble recovery for a touchdown) would have been even bigger if Sam Howell had better ball placement on a deep pass McLaurin was
+open for.
+
+BEARS: Are expected to play again without top outside cornerback Jaylon Johnson and safety Eddie Jackson. Not that those two absences led to a bonanza from
+Broncos receivers; Russell Wilson spread the ball around. But if McLaurin remains the target leader then he'll have the best shot at a big game. Rookies Tyrique
+Stevenson and Terell Smith figure to line up across from McLaurin the most.
+</item 3>
+
+<item 4>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+Not allowing even a field goal is a huge win for Dallas.
+
+8:56 p.m. — The 49ers are excelling on third down early in this game, and Purdy flips it to Kyle Juszczyk to keep the Niners' drive alive on 3rd & 1.
+
+8:54 p.m. — Now Kearse lines up offsides... That extends the drive for the 49ers, who aren't moving as freely as they were on that opening drive.
+
+8:50 p.m. — Jayron Kearse comes through with the Cowboys' first sack of the night, but Deebo Samuel makes up 11 of the 12 yards San Francisco needs on the next
+play.
+
+8:46 p.m. — There's the first catch of the night for Lamb, but he doesn't get the first down and Dak Prescott is sacked by Nick Bosa to quickly end the drive.
+This 49ers defense has picked up right where it left off against the Cowboys in January.
+</item 4>
+
+<item 5>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+Between Okudah and A.J. Terrell there isn't a matchup that's great for McLaurin.
+
+McLAURIN: Has an impressive 91.3% catch rate versus zone coverage this year, but is averaging just 9.3 yards per catch with it on a sub-9.0 ADOT. His target
+share is below 20% regardless of the kind of coverage he sees.
+
+Start Him (Lineup Decisions) Projections powered by Sportsline Logan Thomas TE WAS Washington • #82
+
+Age: 32 • Experience: 9 yrs. Weekly Breakdown MATCHUP @ ATL ATL -2.5 O/U 42.5 OPP VS TE 31st PROJ PTS 8.4 TE RNK 11th YTD Stats REC 18 TAR 25 REYDS 183 TD 2
+FPTS/G 11.6 Streaming Thomas is worth the risk considering how the Falcons have let up numbers to tight ends.
+</item 5>
+
+<item 6>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+Tack on the ascending secondary the Falcons seem to have and the Commanders' diffusion of targets and McLaurin is at best a low-end flex. I'd rather roll the
+dice on Drake London, Tyler Lockett or Garrett Wilson.
+
+LAST WEEK: Hopeful that his target edge over his teammates would keep growing, and even in a favorable game script where the Commanders were trailing by three
+scores before halftime, McLaurin only saw five targets against the Bears' heavy zone coverage.
+
+FILM: On the 10 third-down routes McLaurin ran last week, he drew extra coverage on four of them, got open on two of them (Howell threw elsewhere) and was a
+decoy on Curtis Samuel's touchdown. What happened? Sam Howell was getting rid of the ball quickly and to shorter distances as the Bears were getting some
+pressure on him. By the end of the game McLaurin's body language seemed dispirited.
+</item 6>
+
+<item 7>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+Jerry Jones said earlier in the week that Sunday night's game would show him how the Cowboys stack up against the NFL's best.
+
+The answer? Not very well.
+
+Everything that could go wrong for Dallas on Sunday did go wrong, in a game that confirmed a 49ers team that ended the Cowboys' season in each of the last two
+years remains a level above its NFC counterpart.
+
+The 49ers carved up Dallas' defense on the opening drive, and that was a sign of what was to come. Brock Purdy threw four touchdowns in the 42-10 rout,
+including three to George Kittle. Christian McCaffrey scored a touchdown for a 14th consecutive game as all of San Francisco's offensive weapons got involved.
+
+MORE: Comparing stats for NFC stars Nick Bosa, Micah Parsons
+
+Defensively, the 49ers were relentless. Nobody had a larger impact than Fred Warner, who finished the night with an interception, sack and forced fumble in a
+swarming performance.
+</item 7>
+
+<item 8>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+Start 'em 10.0-7.00 6.99 - 5.01 5.00 - 0 Sit 'em
+
+Sit Him (Lineup Decisions) Projections powered by Sportsline Terry McLaurin WR WAS Washington • #17
+
+Age: 28 • Experience: 5 yrs. Weekly Breakdown MATCHUP @ ATL ATL -2.5 O/U 42.5 OPP VS WR 6th PROJ PTS 12.1 WR RNK 37th YTD Stats REC 25 TAR 31 REYDS 261 TD 1
+FPTS/G 11.4 The only two games McLaurin posted good numbers in were Washington's 35-33 win over Denver in Week 2 and Washington's 34-31 OT loss to Philadelphia
+in Week 4. This matchup has an over/under of 42.5 points, tied for fourth-lowest of the week.
+</item 8>
+
+<item 9>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+The Cowboys' offense looked very much like it did in last season's playoff exit -- uncomfortable and out of sorts. Dallas was sluggish through the first half of
+the game, and the night unraveled quickly when Dak Prescott threw three interceptions in the second half. It got out of hand so quickly that Sam Darnold entered
+the game for the 49ers with more than 12 minutes remaining.
+
+For Prescott and the Cowboys, questions about whether they can get over the hump against the class of the NFC will persist. While their wins have been dominant,
+Dallas already sits two games behind the Eagles in the NFC East.
+
+The 49ers are rolling right along, with all of their major offensive weapons now healthy and the defense living up to its billing as well. San Francisco, now
+5-0, doesn't face a team with a winning record until Week 10, though the Browns, Vikings and Bengals are far from automatic wins for Kyle Shanahan's team.
+</item 9>
+
+<item 10>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+The 49ers knocked the Cowboys out of the playoffs in both of the last two seasons, so a win for Dallas on Sunday could be helpful just from a psychological
+standpoint.
+</item 10>
+=== END ITEM id=786e40712eafcfde ===
+
+=== ITEM id=98dfce18fedc44cf ===
+Gold sentences and facts:
+Sentence 0: As for the All Blacks, they looked lost at times during this World Cup cycle and it’s still faintly remarkable that head coach Ian Foster survived last summer as the home defeats to Ireland, South Africa and Argentina piled up.
+  Fact 0.0: The All Blacks looked lost at times during this World Cup cycle.
+  Fact 0.1: It is still faintly remarkable that All Blacks head coach Ian Foster survived last summer.
+  Fact 0.2: Ian Foster survived last summer while the All Blacks' home defeats piled up.
+  Fact 0.3: The All Blacks suffered home defeats to Ireland.
+  Fact 0.4: The All Blacks suffered home defeats to South Africa.
+  Fact 0.5: The All Blacks suffered home defeats to Argentina.
+Sentence 1: Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide.
+  Fact 1.0: The All Blacks sensed an opportunity to strike against 14 men.
+  Fact 1.1: The All Blacks were playing against 14 men.
+  Fact 1.2: The All Blacks kicked for the corner on a couple of occasions.
+  Fact 1.3: The All Blacks kicked for the corner out wide.
+Sentence 2: The Springboks took a 12-3 lead after 34 minutes when the All Blacks once again failed to release on their goal line.
+  Fact 2.0: The Springboks took a 12-3 lead after 34 minutes.
+  Fact 2.1: The All Blacks once again failed to release on their goal line.
+  Fact 2.2: The Springboks took the 12-3 lead when the All Blacks failed to release on their goal line.
+Sentence 3: It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney.
+  Fact 3.0: The situation described comes despite Argentina beating the All Blacks last year in Christchurch.
+  Fact 3.1: The situation described comes despite a maiden defeat in 2020 in Sydney.
+
+Retrieved items:
+<item 1>
+Thirty-seven phases of agony define Ireland’s greatest heartbreak as curse continues (The Independent - Sports, 2023-10-14T21:36:10+00:00)
+And then there were those 37 phases… the most painful finish in Irish rugby history.
+
+Ireland were left bereft after an agonising defeat (PA Wire)
+
+Instead of being feted as the heroes to finally overcome that insurmountable obstacle, the Ireland players will still have to answer endless questions about the
+heavy burden of previous knockout failures and fans will endure at least four more years of choking jokes at their expense.
+
+As for the All Blacks, they looked lost at times during this World Cup cycle and it’s still faintly remarkable that head coach Ian Foster survived last summer
+as the home defeats to Ireland, South Africa and Argentina piled up.
+
+Yet somehow, he hung on and turned things round. He has the unwanted title of being the first New Zealand coach to lose a World Cup pool match but now a
+semi-final awaits next Friday evening against an Argentina side that, frankly, are a tier below them. Forget the hand-wringing ahead of the tournament, the All
+Blacks are one very small step away from another World Cup final.
+</item 1>
+
+<item 2>
+Thirty-seven phases of agony define Ireland’s greatest heartbreak as curse continues (The Independent - Sports, 2023-10-14T21:36:10+00:00)
+This is the greatest Ireland team of all time, they may still even be the best team in the world but on this day, the quarter-final curse, not to mention an
+inspired All Blacks side, ruled once more.
+
+This defeat will hurt more than any other. Truthfully, since 1991 when Michael Lynagh’s late try handed Australia victory, Ireland hadn’t come close to ending
+their last-eight hoodoo. Never mind winning one, they haven’t led a World Cup quarter-final since the first half of the 1995 defeat to France, a mammoth 10,353
+days ago.
+
+But here they had a legitimate chance to reverse the curse. Multiple times they got within a point of the All Blacks, only for their opponents to agonisingly
+pull away once more. And then there were those 37 phases… the most painful finish in Irish rugby history.
+</item 2>
+
+<item 3>
+Thirty-seven phases of agony define Ireland’s greatest heartbreak as curse continues (The Independent - Sports, 2023-10-14T21:36:10+00:00)
+Foster will leave his role after the World Cup, to be replaced by all-conquering Crusaders boss Scott Robertson, but he can still exit with the greatest prize
+of all. And frankly, who would bet against the All Blacks now?
+
+The opening-night nerves against France seem a long time ago and they ultimately had too much for Ireland in this simply incredible, back-and-forth Test match
+that may genuinely go down as one of the best of all time.
+
+After early penalties from Richie Mo’unga and Jordie Barrett, they scored a scintillating try through Leicester Fainga’anuku, who was only in the starting XV
+due to Mark Telea’s breach of team protocol earlier in the week. Beauden Barrett expertly dinked over the top, collected his own chip and when the ball was
+spread wide, Fainga’anuku and Rieko Ioane neatly combined to send the former over in the corner.
+</item 3>
+
+<item 4>
+Thirty-seven phases of agony define Ireland’s greatest heartbreak as curse continues (The Independent - Sports, 2023-10-14T21:36:10+00:00)
+While Ireland will rue the 37 phases that ended in heartbreak, they may just go down in New Zealand rugby history. Tired bodies made tackle after tackle and not
+a single penalty was given away.
+
+The delight at the final whistle showed this wasn’t just any quarter-final victory and while Ireland ponder just what they have to do to finally win a World Cup
+knockout match, the All Blacks can dream of lifting the Webb Ellis Cup for a fourth time. The pain and ecstasy of sport writ large.
+</item 4>
+
+<item 5>
+Thirty-seven phases of agony define Ireland’s greatest heartbreak as curse continues (The Independent - Sports, 2023-10-14T21:36:10+00:00)
+Sign up to our free sport newsletter for all the latest news on everything from cycling to boxing Sign up to our free sport email for all the latest news Please
+enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and updates from The Independent. Read
+our privacy notice Thanks for signing up to the
+
+Sport email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+This time was supposed to be different. This Ireland team were different… are different. But, come the end, the result was the same. On quarter-final weekend,
+for the eighth time in 10 Rugby World Cups, Ireland head home defeated and the wait for a first-ever knockout win goes on.
+</item 5>
+
+<item 6>
+Thirty-seven phases of agony define Ireland’s greatest heartbreak as curse continues (The Independent - Sports, 2023-10-14T21:36:10+00:00)
+The All Blacks eventually prevailed in Paris (Reuters)
+
+The second half followed a similar, rollercoaster pattern as every time Ireland got close, their opponents found a way to stretch the lead. Mo’unga’s sumptuous
+dummy and sleight of hand from first-phase lineout ball froze two Irish defenders and led to a scything break before he fed speedster Will Jordan to race over
+the whitewash.
+
+That extended the gap to eight points but a penalty try as an Irish driving maul was illegally hauled down closed it to 25-24 with 17 minutes to go and sent
+Codie Taylor for 10 minutes in the sin-bin.
+
+Yet this All Blacks team suddenly have a resilience about them and brushed off the underdog status they had been given in the build-up to this game as their
+tireless back row continually disrupted breakdowns and a disciplined defence refused to yield.
+
+Jordie Barrett added a penalty to take the score to 28-24 and that’s how it eventually stayed.
+</item 6>
+
+<item 7>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+“Firstly, you’ve never heard us say we’re favourites,” he said.
+
+‘We know these games are do or die. We’re going to have to improve our performance. The stage gets bigger at this time in the tournament and you’ve got to grow
+your game. That’s our strong focus. The best team on the night wins – Argentina has done that to us.”
+
+Cheika however was happy to remind the All Blacks who were favourites.
+
+“”New Zealand has always been an example in rugby, a benchmark. They make you think of high-level skills in a really open game but there are always threats in
+the lineout, mauls and rucks,” said Cheika, whose Wallabies lost in the 2015 final.
+
+“You have to take the moments you are in the game and see them coming at you at different times.
+
+Advertisement
+
+“In the game in 2020 there were things you could pinpoint.
+</item 7>
+
+<item 8>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+PARIS – The All Blacks have downplayed Rieko Ioane’s gestures towards Ireland fans and retiring great Johnny Sexton, as the three-time world champions said they
+have learned to “respect Argentina” ahead of their semi-final on Saturday (6am AEDT).
+
+It comes as Michael Cheika embraced the underdog status and said he was hoping Los Pumas “inspired” Argentina “not by our results but by our ambition”, as the
+former Wallabies coach readies for another clash against the All Blacks and a second semi-final.
+
+Facebook Twitter Whatsapp Reddit Email Share
+
+Ioane copped a spray from Sexton following their 28-24 nail-biting win over Ireland.
+
+It came after the lethal back cupped his ear at Irish supporters at the Stade de France after the final whistle, as well as putting his finger to his lips in a
+‘shush gesture’.
+</item 8>
+
+<item 9>
+Thirty-seven phases of agony define Ireland’s greatest heartbreak as curse continues (The Independent - Sports, 2023-10-14T21:36:10+00:00)
+New Zealand played some scintillating rugby in victory (AFP via Getty Images)
+
+They led 13-0 and though they may not have realised, no team had ever squandered a lead that large in a World Cup quarter-final. Not that they would have
+expected an easy ride from there.
+
+They conceded a penalty straight from the restart as their kick chase was illegally impeded and Sexton duly slotted the three.
+
+Ireland had made something of a statement during the Haka as their fans drowned it out with a rousing rendition of Fields of Athenry and the players formed a
+figure of eight in memory of ex-international and Munster coach Anthony Foley, who tragically died in 2016, as they stared down their opponents.
+</item 9>
+
+<item 10>
+Thirty-seven phases of agony define Ireland’s greatest heartbreak as curse continues (The Independent - Sports, 2023-10-14T21:36:10+00:00)
+But the first real in-match statement came on 27 minutes as New Zealand-born Aki – perhaps the player of the World Cup so far who had made a tournament-high 61
+carries, 33 dominant carries and 23 defenders beaten heading into the weekend – brilliantly jinked inside two defenders, fended off another and powered through
+a gap to dive over the line.
+
+Yet more All-Black class saw Ardie Savea go over in the corner after quick ball was shipped wide but with scrum-half Aaron Smith in the sin-bin for a deliberate
+knock-on, Ireland narrowed the gap to 18-17 just before the break as another New Zealand-born Irish star, Jamison Gibson-Park, sniped from a lineout maul and
+somehow stretched out for the try.
+
+The All Blacks extended an incredible record of leading at half-time of their quarter-final in every single World Cup but that lead had never felt more fragile.
+</item 10>
+=== END ITEM id=98dfce18fedc44cf ===
+
+=== ITEM id=e7723cbed51187f2 ===
+Gold sentences and facts:
+Sentence 0: Israeli Prime Minister Benjamin Netanyahu said that since this morning, Israel had been at war and its first objective was to clear out the hostile forces that infiltrated its territory.
+  Fact 0.0: Benjamin Netanyahu is the Israeli Prime Minister.
+  Fact 0.1: Benjamin Netanyahu said that Israel had been at war since this morning.
+  Fact 0.2: Benjamin Netanyahu said that Israel's first objective was to clear out the hostile forces that infiltrated its territory.
+Sentence 1: There, you can find stories like this in-depth breakdown of what to expect from both sides of the SBF case, where the prosecution and defense could gain ground or fall short in their arguments and what the takeaways were from the opening arguments.
+  Fact 1.0: A source offers an in-depth breakdown of what to expect from both sides of the SBF case.
+  Fact 1.1: The breakdown covers where the prosecution and defense could gain ground or fall short in their arguments in the SBF case.
+  Fact 1.2: The breakdown covers the takeaways from the opening arguments in the SBF case.
+
+Retrieved items:
+<item 1>
+Israel’s startup ecosystem: down but not out (TechCrunch, 2023-10-13T19:10:07+00:00)
+“This has inevitably strained many businesses,” he said.
+
+Lazer Cohen, whose company Concrete Media works with many startups, says people are contributing however they can, but the businesses need to keep running, too.
+
+“Looking at our clients and my agency, 10-25% of Israeli team members have been called up to reserve duty,” he said. Others on the team are helping by donating
+blood, hosting survivors of the attacks, packing supplies for soldiers or covering for a team member who was called up.
+
+The economy matters, too
+
+While everyone is concerned about the war and its fallout, startup founders and their investors also recognize the importance of keeping these businesses going.
+For most Israeli startups, the customer base is global and for many, their go-to-market teams are in the U.S. and hence not directly affected by the war. The
+current situation may slow down product development but won’t directly affect sales in the short run.
+
+While customers have been understanding for the most part, Cohen says that companies are working to continue operating under difficult conditions.
+</item 1>
+
+<item 2>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Jacquelyn has been on the ground at the Southern District of New York courthouse, listening in to the trial in the same room as Bankman-Fried, so there was lots
+to talk about.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+Here are a few highlights from this week:
+
+Inside the SBF trial: Rebecca and Jacquelyn report on the second day of the SBF and FTX trial. The prosecution painted Bankman-Fried as someone who knowingly
+committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud
+or steal and basically got in over his head.
+</item 2>
+
+<item 3>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+“He can’t just walk out if he doesn’t like how it’s going.”
+
+
+
+Naftalis spoke at length about what comes next in the trial, and addressed common misconceptions about the prosecution and defense in the latest episode of
+TechCrunch’s Chain Reaction podcast, which you can listen to below, or on Apple Podcasts or Spotify.
+
+The SBF trial is one of the biggest cases of its kind within the crypto space. Our resident crypto expert Jacquelyn Melinek has been on the ground at the trial
+since it started, and continues to cover the ins and outs of the proceedings. But the trial has been on pause from October 20 to today, so there’s plenty to
+catch up on if you need a refresher ahead of it entering its final few phases.
+
+For those in need of a total refresher on the case, her breakdown of how FTX went from the third-largest crypto exchange valued at a peak of $32 billion to
+bankruptcy will get you up to speed.
+</item 3>
+
+<item 4>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+The full breakdown of his testimony on his relationship with FTX, stretching back to 2019, can be found right here.
+
+We also got a look at the composition of the SBF trial’s jury, which ranges from a train conductor to a retired investment banker who attended Stanford
+University. You can listen to a special joint episode of our podcasts Equity and Chain Reaction to get a better sense of the vibe between the jurors and the
+rest of the court.
+
+For a full rundown of our coverage of the SBF trial, check below:
+</item 4>
+
+<item 5>
+Dissecting impact of Israel-Hamas conflict on markets  (Business Line, 2023-10-14T15:20:36+00:00)
+may again get impacted on account of higher input costs and higher freight and fuel costs.
+
+Rural India is a key engine that is not firing at the moment. Valuations also are rich and do not offer margin of safety in the near to medium term. Near-term
+attractiveness of equities will reduce, as investors will demand a higher risk premium. The Indian stock market will likely correct materially, as FIIs look to
+withdraw funds from risk assets and seek safe havens in US Dollar, US treasuries offering high yields and Gold.
+
+Sectors which will be negatively impacted include Petrochemicals, Oil Marketing, Paints, Packaging, Textiles and Chemicals.
+
+The writer is Group President & Head - Institutional Equities, YES Securities India
+
+SHARE Copy link
+
+Email
+
+Facebook
+
+Twitter
+
+Telegram
+
+LinkedIn
+
+WhatsApp
+
+Reddit
+</item 5>
+
+<item 6>
+OpenAI hosts a dev day, TechCrunch reviews the M3 iMac and MacBook Pro, and Bumble gets a new CEO (TechCrunch, 2023-11-11T21:15:53+00:00)
+It has evolved into working in humanitarian aid, delivering emergency food supplies to people in need in Afghanistan and Turkey.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+Here are a few highlights from this week:
+
+Another superconductor disappointment: Tim writes that a new, supposedly room-temperature superconducting material isn’t what the scientific community hoped it
+would be. With the Nature-published paper detailing the material facing retraction, the odds of researchers discovering a room-temperature superconductor are
+looking even longer.
+
+Klarna inches toward an IPO: Mary Ann and Alex write that Swedish fintech Klarna is taking steps toward an eventual IPO. The company has initiated a process for
+a legal entity restructuring to set up a holding company in the U.K.
+</item 6>
+
+<item 7>
+TechCrunch argues startups should pursue seemingly impossible, high-risk problems. Cybersecurity coverage noted Gaza’s wartime connectivity outages, Apple
+alerts to Indian politicians and journalists about suspected state-sponsored iPhone attacks, an urgent Atlassian security patch, and an iOS privacy
+vulnerability fix. Israel’s tech sector—18% of GDP, 14% of workers, 9,000 startups—faces war disruption after investment had already fallen 73% year over year.
+Mobilization affects an estimated 10–30%
+</item 7>
+
+<item 8>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+You can also follow along with her and the TechCrunch team’s coverage in the Chain Reaction newsletter, which drops Thursdays at 12 p.m. PT, and the Chain
+Reaction podcast, which will hit your feed every Thursday.
+
+How to follow the SBF trial
+
+The trial kicked off with jury selection October 3. From there, access to the proceedings is limited, as no devices are allowed; reports are being physically
+put together within the courtroom (or sent to overflow rooms).
+
+Beyond our daily coverage, additional expertise and commentary will live on TechCrunch+. There, you can find stories like this in-depth breakdown of what to
+expect from both sides of the SBF case, where the prosecution and defense could gain ground or fall short in their arguments and what the takeaways were from
+the opening arguments.
+
+SBF trial: What we learned in week three
+
+The third week of the trial featured a couple of noteworthy moments for the prosecution, including FTX’s former general counsel Can Sun.
+</item 8>
+
+<item 9>
+OpenAI hosts a dev day, TechCrunch reviews the M3 iMac and MacBook Pro, and Bumble gets a new CEO (TechCrunch, 2023-11-11T21:15:53+00:00)
+So far, its plan to forgo the gigafactory for local microfactories has proved anything but, writes Harri — thanks to missed production targets, low cash
+reserves, layoffs and a pivot.
+
+Audio
+
+It’s winter, it ain’t getting warmer (at least here in NYC), and I’d argue that there’s no better place to be than snuggled up indoors with a podcast for
+company. If you’re in need of material, TechCrunch has a few that should definitely be on your radar.
+
+This week on Equity, the crew dove deep into the encouraging signs from the fintech startup market, starting with Klarna’s Q3 results. From there, they looked
+at buy now, pay later consumer behavior and fintech fundraising results with a 2021 flavor.
+
+Meanwhile, Found featured Nasrat Khalid of Aseel, which started as an e-commerce company making it possible for local artisans in Afghanistan to sell to
+customers across the world.
+</item 9>
+
+<item 10>
+TechCrunch’s Oct. 13 newsletter says a survey of 50+ founders found no consensus on whether events pay off; value depends on circumstances. It also covers AI’s
+risks and creative-economy debate, Meta Quest 3, Pixel 8, Sonos’s overturned $32.5M award, Reddit apps, creator platforms, and Google making passkeys the
+default. Nov. 3 argues startups should tackle difficult, defensible problems. Early-stage high-growth firms may still raise
+</item 10>
+=== END ITEM id=e7723cbed51187f2 ===
+
+=== ITEM id=85b02b97eea31347 ===
+Gold sentences and facts:
+Sentence 0: With this sale, they offer some of the best value in their class from one of the top names in the business.
+  Fact 0.0: With this sale, they offer some of the best value in their class.
+  Fact 0.1: They are from one of the top names in the business.
+Sentence 1: “Each actor will have to be responsible to ensure that the market remains reasonable amid rates that are relatively low,” CMA CGM Chief Financial Officer Ramon Fernandez told reporters Friday.
+  Fact 1.0: Each actor will have to be responsible to ensure that the market remains reasonable amid rates that are relatively low.
+  Fact 1.1: Ramon Fernandez is the Chief Financial Officer of CMA CGM.
+  Fact 1.2: Ramon Fernandez told reporters on Friday that each actor will have to be responsible to ensure the market remains reasonable amid relatively low rates.
+
+Retrieved items:
+<item 1>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+If you prefer this kind of bulkier but easier-to-remove shape, this is an excellent value.
+
+Anker Soundcore Space Q45
+
+If you’re after a wallet-friendly pair of noise-canceling over-ear headphones, Anker’s Soundcore Space Q45 is worth a look at its Black Friday price of $100.
+For that amount, this pair’s better-than-average ANC, softly padded design and multi-device pairing make for a strong value. Its V-shaped sound profile isn’t
+especially detailed, but it can work well enough for pop music and it’s customizable through Anker’s app. Call quality is mediocre, however. This $50 discount
+matches the lowest price we’ve tracked, and it's available at both Amazon and Anker's online store; just use the on-page coupon for the latter.
+
+Audio-Technica ATH-M20xBT
+
+The Audio-Technica ATH-M20xBT is a modest $10 off for Black Friday, bringing the wireless headphones down to $69.
+</item 1>
+
+<item 2>
+These Are Our Favorite Walmart Cyber Monday Deals (Wired, 2023-11-27T14:22:26+00:00)
+Sony's WF-1000XM5 (7/10, WIRED Review) source multiple generations of great sound, top features, and excellent noise canceling, all wrapped into their most
+compact presentation yet. They're not cheap, so this discount is key if you're looking to be an earlier adopter of Sony's latest flagship buds.
+
+The only issues we had with Sennheiser's HD 660S2 (7/10, WIRED Review) bass-enriched audiophile beauties were their high price and stiff clamping force. At this
+price, we can live with a tighter fit, especially since the payoff is gloriously clear and richly detailed sound.
+
+Sony's working-class noise cancelers offer solid performance. clear sound, and impressive battery life at a much more reasonable price than the brand's top
+offerings. With this sale, they offer some of the best value in their class from one of the top names in the business.
+</item 2>
+
+<item 3>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+Engadget Editor Jon Turi found this pair to deliver more low-end depth than most of its peers, however. It can also last up to 10 hours per charge.
+
+Your Black Friday Shopping Guide: See all of Yahoo’s Black Friday coverage, here. Follow Engadget for Black Friday tech deals. Learn about Black Friday trends
+on In The Know. Hear from Autoblog’s experts on the best Black Friday deals for your car, garage, and home, and find Black Friday sales to shop on AOL,
+handpicked just for you.
+</item 3>
+
+<item 4>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+We still recommend the Sony XM5 to most, as that pair offers a wider feature set and the ability to be used passively (i.e., without being turned on), but the
+QuietComfort Ultra may still be worth a look if you must have especially powerful noise cancellation.
+
+We’ll also note that the new, non-Ultra QuietComfort Headphones are $100 off, bringing them down to a new low of $249. We haven’t reviewed this model yet, but
+it’s the follow-up to 2021’s QuietComfort 45, which we generally liked. Other reviews suggest it has a more bass-heavy sound, though, and we’d expect it to be a
+slight step down from the Ultra across the board.
+
+Bose QuietComfort Ultra Earbuds
+
+The new Bose QuietComfort Ultra Earbuds, meanwhile, are down to $249 at several stores. That's another $50 discount and an all-time low.
+</item 4>
+
+<item 5>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+Engadget has been testing and reviewing consumer tech since 2004. Our stories may include affiliate links; if you buy something through a link, we may earn a
+commission. Read more about how we evaluate products.
+
+Black Friday is often a boon for deals on headphones and earbuds, and this year is no different. The shopping holiday has brought a plethora of deals on all
+kinds of headphones, include several top picks from our guides to the best wireless headphones, wireless earbuds, budget wireless earbuds and gaming headsets.
+Other popular models from the likes of Sony, Beats, Bose and Apple are discounted as well. All of this means it's an ideal time to pick up a new set, whether
+it's to give as a gift to someone on your holiday shopping list or just to replace your own aging cans. To help you get a good bargain, we've rounded up the
+best Black Friday deals on headphones and earbuds we could find for 2023.
+</item 5>
+
+<item 6>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+Like many Sony headphones, it also comes with a number of useful bonus features; “Speak-to-Chat,” for instance, automatically pauses your music when you start
+speaking.
+
+Sony WF-1000XM5
+
+For an in-ear pair, the Sony WF-1000XM5 is also on sale for $248 at Amazon, B&H and others. (Yes, Sony’s headphone naming scheme is bad.) That matches the
+lowest price we’ve seen and comes in $52 below Sony’s usual list price. This set tops our list of the best wireless earbuds and earned a score of 87 in our
+review this past July. Like the over-ear XM5 above, it offers a host of useful features, a warm yet customizable sound, powerful ANC and a comfortably snug fit
+that naturally isolates a good chunk of outside noise on its own. Battery life should sit around seven to eight hours with average use.
+</item 6>
+
+<item 7>
+These Are Our Favorite Walmart Cyber Monday Deals (Wired, 2023-11-27T14:22:26+00:00)
+As Sony’s priciest wireless headphones, the WH-1000XM5 had a lot to live up to following the remarkably popular WH-1000XM4. Luckily they deliver the goods with
+upgraded noise canceling, a posh new design, and a more refined sound signature that adds up to a great package – especially on sale.
+
+Bose’s aptly named QuietComfort Ultra (9/10, WIRED Recommends) arrived in October with only one notable problem: they’re very pricey. Luckily they’ve already
+gotten a discount, which makes it easier to land their class-leading noise canceling, great sound, and luxuriously comfy design that’s loaded with modern
+features.
+
+Photograph: Sony
+
+Sony's WH-1000XM4 headphones (9/10, WIRED Recommends) have been a stalwart pair of wireless headphones for years now, and there's no secret to their success.
+Offering excellent noise canceling, warm and detailed sound, and a ton of modern features in a comfy design, they're among the best travel headphones you can
+buy.
+</item 7>
+
+<item 8>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+That's another $50 discount and an all-time low. We gave these in-ears a review score of 88 in September and recently named them the “best for noise
+cancellation” pick in our wireless earbuds buying guide. As that title suggests, the main reason to consider this pair over the Sony WF-1000XM5 is its ANC
+performance, which is the strongest we’ve tested from a true wireless model. We also enjoy Bose’s spatial audio tech. But the earpieces are on the larger side,
+the call quality and battery life (at six-ish hours) are just OK and there’s no support for multi-device pairing.
+
+Beats Fit Pro
+
+The Beats Fit Pro is back down to $159, which isn’t an all-time low but is still roughly $20 below its average street price. This is the “best for workouts”
+pick in our wireless earbuds buying guide, as it packs many of the iOS-friendly conveniences of Apple’s AirPods in a sportier and more stable design.
+</item 8>
+
+<item 9>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+We saw this pair fall to $55 during Amazon’s Prime Day sale in July, but this is about as low as it’s been outside of that. The M20 is the budget pick in our
+wireless headphones guide thanks to its comfortable fit, 60-hour battery life, multi-device connectivity and relatively detailed audio quality. It lacks ANC and
+doesn’t have the sturdiest design, but it should do the job if you just need a no-frills wireless headphone for cheap.
+
+EarFun Free 2S
+
+The EarFun Free 2S is down to $24.59 at Amazon with a Prime-only discount and the checkout code FREE2SPD1. That’s an all-time low. The Free 2S is the “best
+under $50” pick in our budget wireless earbuds guide. It has a hugely bass-forward sound out of the box, but some may enjoy that with hip-hop or EDM and the
+profile is customizable through the EarFun app.
+</item 9>
+
+<item 10>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+However, there’s no wireless charging, the battery life (five or so hours per charge) is mediocre and the IPX2 sweat-resistance rating is too weak for the gym.
+Amazon’s companion app is rather bloated too. But those shouldn’t be deal-breakers for $35. We gave the Echo Buds a review score of 77 in July.
+
+Anker Soundcore Space A40
+
+The Anker Soundcore Space A40 is one of the best values in wireless earphones at its normal price of $79, but now it’s down to $54 for Black Friday. That ties
+the lowest price we’ve tracked. The Space A40 tops our guide to the best budget wireless earbuds because it delivers most of the features we expect from
+headphones that cost twice as much. It’s comfortable, its ANC is genuinely capable, its battery lasts up to 10 hours per charge, its tiny case supports wireless
+charging and it can pair with two devices at once.
+</item 10>
+=== END ITEM id=85b02b97eea31347 ===
+
+=== ITEM id=7e6710c304184fb4 ===
+Gold sentences and facts:
+Sentence 0: While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s.
+  Fact 0.0: Altman is not trained as an AI engineer.
+  Fact 0.1: Altman is now 38 years old.
+  Fact 0.2: Altman has been seen as a Silicon Valley wunderkind since his early 20s.
+Sentence 1: Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now.
+  Fact 1.0: The board's language is a basis for a theory.
+  Fact 1.1: The way giant tech companies work is a basis for a theory.
+  Fact 1.2: The theory is the prevailing theory floating around right now.
+
+Retrieved items:
+<item 1>
+TechCrunch’s Oct. 13 newsletter says a survey of 50+ founders found no consensus on whether events pay off; value depends on circumstances. It also covers AI’s
+risks and creative-economy debate, Meta Quest 3, Pixel 8, Sonos’s overturned $32.5M award, Reddit apps, creator platforms, and Google making passkeys the
+default. Nov. 3 argues startups should tackle difficult, defensible problems. Early-stage high-growth firms may still raise
+</item 1>
+
+<item 2>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+In perhaps the most unexpected tech news of the year, billionaire and AI evangelist Sam Altman has been ejected from his CEO role at OpenAI by the company’s
+board after an apparent vote of no confidence. Its exact wording in a release issued this afternoon: Altman’s “departure follows a deliberative review process
+by the board, which concluded that he was not consistently candid in his communications with the board, hindering its ability to exercise its responsibilities.”
+
+What the hell is happening at the most hyped company in the world?! Here are some totally speculative theories that occurred to us and others around the web.
+
+1. Did Altman circumvent the board in a major deal?
+
+Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now. “Not consistently candid” is
+a very diplomatic way of saying Altman lied.
+</item 2>
+
+<item 3>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+On Equity this week, the crew talked about the SBF trial; deals from VR firms Rainforest, At One Ventures, Section 32 and Greylock, where venture funding has
+declined; and how Fearless Fund, a firm founded to invest in women of color, is being barred from awarding grants to Black women founders.
+
+Meanwhile, Found featured Esther Rodriguez-Villegas from Acurable, a medical device company that makes patient-friendly wearable devices to diagnose and manage
+respiratory conditions at home. As a career-long academic, Rodriguez-Villegas talks about how she never intended to be a founder until she learned about how the
+currently available medical devices make it extremely difficult to detect and treat diseases like sleep apnea and epilepsy.
+
+And over on Chain Reaction, Jacquelyn did a crossover episode with Alex about the SBF trial.
+</item 3>
+
+<item 4>
+Google fakes an AI demo, Grand Theft Auto VI goes viral and Spotify cuts jobs (TechCrunch, 2023-12-09T21:16:17+00:00)
+Before Rogier launched MasterClass, he worked as a VC, and — through his connections — he received a $500,000 seed round before he even had an idea for a
+company.
+
+And on Chain Reaction, Jacquelyn interviewed David Pakman, managing partner and head of venture investments at CoinFund. Before CoinFund, David spent 14 years
+at the venture capital firm Venrock. He also led the Series A and B rounds at Dollar Shave Club, which was acquired by Unilever for $1 billion. And, in 1991,
+David co-created Apple Music when he was part of Apple’s system software product marketing group.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+</item 4>
+
+<item 5>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+Some CEOs get a pass on things like having kids with direct reports, but not all.
+
+Altman also has three siblings, and his younger sister Annie has publicly accused him of abuse. We have no way of evaluating these allegations, which involve
+private matters.
+
+Our read on the board’s language in dismissing Altman, however, is that it was not a legal or personal problem that provoked the action, but a professional or
+business one.
+
+We probably won’t know the full truth on this for a long time, as the characters in the drama are likely to be NDA’ed up. Per various whispers and leaks, an
+all-hands meeting about the situation this afternoon didn’t produce any revelations beyond banal reassurances that the company is fine and they’ll get a fresh
+CEO soon. Expect to hear a lot of rumors before we hear the real thing.
+</item 5>
+
+<item 6>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+“Not consistently candid” is a very diplomatic way of saying Altman lied.
+
+It’s possible that Altman — and potentially OpenAI President Greg Brockman, who stepped down as chairman simultaneously, then resigned — wanted to make a bold
+move that he knew the board would not like. It’s not uncommon for these deals to be hammered out quietly in smoke- (or vape-) filled rooms and then presented as
+a fait accompli, but if it was controversial enough and the board found out about these maneuvers, it could be fuel for an ouster.
+
+But what kind of deal would be big and dangerous enough for a summary dismissal of the CEO and famous face of the company? The man was onstage two weeks ago; I
+just talked with him! What could have happened since then?
+
+Few would be shocked if Microsoft, which is deeply, deeply embedded in OpenAI as an investor and customer, is a factor here. Could Altman have been working with
+— or against — OpenAI’s patron in secret?
+</item 6>
+
+<item 7>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Jacquelyn has been on the ground at the Southern District of New York courthouse, listening in to the trial in the same room as Bankman-Fried, so there was lots
+to talk about.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+Here are a few highlights from this week:
+
+Inside the SBF trial: Rebecca and Jacquelyn report on the second day of the SBF and FTX trial. The prosecution painted Bankman-Fried as someone who knowingly
+committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud
+or steal and basically got in over his head.
+</item 7>
+
+<item 8>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+When he found it, he was “very surprised!”
+
+Besides the two obvious lies Bankman-Fried told on the stand — about Alameda Research’s name and about “allow_negative” — I have been struck by how little he
+seems to know about his own companies. Apparently, Singh, Wang, and Ellison were out there just doing whatever their little hearts desired. Because
+Bankman-Fried was a CEO, but definitely not the kind that pays any attention to money at his crypto trading firm and futures exchange.
+</item 8>
+
+<item 9>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+You can tell he had no experience in management or handling such big undertakings. I think he was in way over his head,” Ayelet Noff, the CEO and founder of
+public relations firm Sliced Brand, which represents a number of cryptocurrency businesses, told TechCrunch. “I think he does a disservice to the whole
+community. He pushed back crypto adoption by at least a year or two. Each time one of these things happens it brings back the whole market. It’s two steps
+forward and one step back.”
+
+The Michael Lewis interview is infuriating. SBF was a scumbag, and now we need to hear about his “tragic fall” in the MSM because Sam told them he was an
+“effective altruist” and people like Michael Lewis were so far up his ass they couldn’t tell truth from fiction.
+</item 9>
+
+<item 10>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+60 Minutes got rightly community noted here. How is it that SBF is _still_ getting super positive media coverage when the media has nothing good to say about
+the founders that have actually created things and brought value into the world? https://t.co/VPV1ORVHqf — tobi lutke (@tobi) October 2, 2023
+
+The germination of “Going Infinite” sounds as unlikely as the story of SBF himself.
+
+In an interview broadcast yesterday on 60 Minutes, Lewis, the famed chronicler of financial adventure and misadventure — his books include “Liar’s Poker,”
+“Moneyball” and “The Big Short” — said that he didn’t set out to write a book about SBF. Rather, Lewis claims he was introduced to him in early 2021 by a friend
+who wanted to back FTX. Before any financial commitment, that friend asked Lewis to meet the young billionaire — both lived in Berkeley — to “evaluate his
+character.”
+</item 10>
+=== END ITEM id=7e6710c304184fb4 ===

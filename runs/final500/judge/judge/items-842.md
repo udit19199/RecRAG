@@ -1,0 +1,821 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=ffa4338bdcd1399d ===
+Gold sentences and facts:
+Sentence 0: The Dead Sea ( Hebrew : יָם הַמֶּלַח ‬ Yam ha - Melah lit . Sea of Salt ; Arabic : البحر الميت ‎ Al - Bahr al - Mayyit ) is a salt lake bordered by Jordan to the east and Israel and Palestine to the west . Its surface and shores are 430.5 metres ( 1,412 ft ) below sea level , Earth 's lowest elevation on land . The Dead Sea is 304 m ( 997 ft ) deep , the deepest hypersaline lake in the world . With a salinity of 342 g / kg , or 34.2 % , ( in 2011 ) , it is 9.6 times as salty as the ocean and one of the world 's saltiest bodies of water . This salinity makes for a harsh environment in which plants and animals can not flourish , hence its name . The Dead Sea is 50 kilometres ( 31 mi ) long and 15 kilometres ( 9 mi ) wide at its widest point . It lies in the Jordan Rift Valley , and its main tributary is the Jordan River .
+  Fact 0.0: The Dead Sea is also called יָם הַמֶּלַח (Yam ha-Melah) in Hebrew, which means Sea of Salt.
+  Fact 0.1: The Dead Sea is also called البحر الميت (Al-Bahr al-Mayyit) in Arabic.
+  Fact 0.2: The Dead Sea is a salt lake.
+  Fact 0.3: The Dead Sea is bordered by Jordan to the east.
+  Fact 0.4: The Dead Sea is bordered by Israel and Palestine to the west.
+  Fact 0.5: The surface and shores of the Dead Sea are 430.5 metres (1,412 ft) below sea level.
+  Fact 0.6: The surface and shores of the Dead Sea are Earth's lowest elevation on land.
+  Fact 0.7: The Dead Sea is 304 m (997 ft) deep.
+  Fact 0.8: The Dead Sea is the deepest hypersaline lake in the world.
+  Fact 0.9: In 2011, the Dead Sea had a salinity of 342 g/kg, or 34.2%.
+  Fact 0.10: The Dead Sea is 9.6 times as salty as the ocean.
+  Fact 0.11: The Dead Sea is one of the world's saltiest bodies of water.
+  Fact 0.12: The Dead Sea's salinity makes for a harsh environment in which plants and animals cannot flourish.
+  Fact 0.13: The Dead Sea's name comes from its harsh environment in which plants and animals cannot flourish.
+  Fact 0.14: The Dead Sea is 50 kilometres (31 mi) long.
+  Fact 0.15: The Dead Sea is 15 kilometres (9 mi) wide at its widest point.
+  Fact 0.16: The Dead Sea lies in the Jordan Rift Valley.
+  Fact 0.17: The main tributary of the Dead Sea is the Jordan River.
+
+Retrieved items:
+<item 1>
+Dead Sea
+Dead Sea - wikipedia Dead Sea Jump to : navigation , search For the novel , see Dead Sea ( novel ) . Dead Sea ים המלח ‬ ( in Hebrew ) البحر الميت ( in Arabic )
+A view of the sea from the Israeli shore Location Israel Jordan Palestine Coordinates 31 ° 30 ′ N 35 ° 30 ′ E ﻿ / ﻿ 31.500 ° N 35.500 ° E ﻿ / 31.500 ; 35.500
+Coordinates : 31 ° 30 ′ N 35 ° 30 ′ E ﻿ / ﻿ 31.500 ° N 35.500 ° E ﻿ / 31.500 ; 35.500 Lake type Endorheic Hypersaline Primary inflows Jordan River Primary
+outflows None Catchment area 41,650 km ( 16,080 sq mi ) Basin countries Israel Jordan Palestine Max. length 50 km ( 31 mi ) ( northern basin only ) Max . width
+15 km ( 9.3 mi ) Surface area 605 km ( 234 sq mi ) ( 2016 ) Average depth 199 m ( 653 ft ) Max .
+</item 1>
+
+<item 2>
+Dead Sea
+In Roman and Byzantine times , sugarcane , henna , and sycamore fig all made the lower Jordan valley wealthy . One of the most valuable products produced by
+Jericho was the sap of the balsam tree , which could be made into perfume . By the 19th century , Jericho 's fertility had disappeared . Human settlement There
+are several small communities near the Dead Sea . These include Ein Gedi , Neve Zohar and the Israeli settlements in the Megilot Regional Council : Kalya ,
+Mitzpe Shalem and Avnat . There is a nature preserve at Ein Gedi , and several Dead Sea hotels are located on the southwest end at Ein Bokek near Neve Zohar .
+Highway 90 runs north - south on the Israeli side for a total distance of 565 km ( 351 mi ) from Metula on the Lebanese border in the north to its southern
+terminus at the Egyptian border near the Red Sea port of Eilat . Potash City is a small community on the Jordanian side of the Dead Sea , and others including
+Suweima .
+</item 2>
+
+<item 3>
+Dead Sea
+There are no outlet streams . The Mujib River , biblical Arnon , is one the larger water sources of the Dead Sea other than the Jordan . The Wadi Mujib valley ,
+420 m below the sea level in the southern of Jordan valley , is a biosphere reserve , with an area of 212 km ( 82 sq mi ) . Other more substantial sources are
+Wadi Darajeh ( Arabic ) / Nahal Dragot ( Hebrew ) , and Nahal Arugot . Wadi Hasa ( biblical Zered ) is another wadi flowing into the Dead Sea . Rainfall is
+scarcely 100 mm ( 4 in ) per year in the northern part of the Dead Sea and barely 50 mm ( 2 in ) in the southern part . The Dead Sea zone 's aridity is due to
+the rainshadow effect of the Judaean Mountains . The highlands east of the Dead Sea receive more rainfall than the Dead Sea itself . To the west of the Dead Sea
+, the Judaean mountains rise less steeply and are much lower than the mountains to the east .
+</item 3>
+
+<item 4>
+Dead Sea
+Year Water level ( m ) Surface ( km ) 1930 − 390 1050 1980 − 400 680 − 407 675 − 411 670 − 417 662 − 423 655 2016 − 430.5 605 Sources : Israel Oceanographic and
+Limnological Research , Haaretz , Jewish Virtual Library , Jordan Valley Authority . In October 2009 , the Jordanians announced accelerated plans to extract
+around 300 million cubic metres ( 11 billion cubic feet ) of water per year from the Red Sea , desalinate it for use as fresh water and send the waste water to
+the Dead Sea by tunnel , despite concerns about inadequate time to assess the potential environmental impact . According to Jordan 's minister for water ,
+General Maysoun Zu'bi , this project could be considered as the first phase of the Red Sea -- Dead Sea Water Conveyance . In December 2013 , Israel , Jordan and
+the Palestinian Authority signed an agreement for laying a water pipeline to link the Red Sea with the Dead Sea . The pipeline will be 180 km ( 110 mi ) long
+and is estimated to take up to five years to complete .
+</item 4>
+
+<item 5>
+Dead Sea
+With a salinity of 342 g / kg , or 34.2 % , ( in 2011 ) , it is 9.6 times as salty as the ocean and one of the world 's saltiest bodies of water . This salinity
+makes for a harsh environment in which plants and animals can not flourish , hence its name . The Dead Sea is 50 kilometres ( 31 mi ) long and 15 kilometres ( 9
+mi ) wide at its widest point . It lies in the Jordan Rift Valley , and its main tributary is the Jordan River . The Dead Sea has attracted visitors from around
+the Mediterranean basin for thousands of years . It was one of the world 's first health resorts ( for Herod the Great ) , and it has been the supplier of a
+wide variety of products , from asphalt for Egyptian mummification to potash for fertilisers . People also use the salt and the minerals from the Dead Sea to
+create cosmetics and herbal sachets . The Dead Seawater has a density of 1.24 kg / litre , which makes swimming similar to floating . The Dead Sea is receding
+at an alarming rate .
+</item 5>
+
+<item 6>
+Dead Sea
+The Greeks called it Lake Asphaltites ( Attic Greek ἡ Θάλαττα ἀσφαλτῖτης , hē Thálatta asphaltĩtēs , `` the Asphaltite sea '' ) . Geography Satellite photograph
+showing the location of the Dead Sea east of the Mediterranean Sea The Dead Sea is an endorheic lake located in the Jordan Rift Valley , a geographic feature
+formed by the Dead Sea Transform ( DST ) . This left lateral - moving transform fault lies along the tectonic plate boundary between the African Plate and the
+Arabian Plate . It runs between the East Anatolian Fault zone in Turkey and the northern end of the Red Sea Rift offshore of the southern tip of Sinai . It is
+here that the Upper Jordan River / Sea of Galilee / Lower Jordan River water system comes to an end . The Jordan River is the only major water source flowing
+into the Dead Sea , although there are small perennial springs under and around the Dead Sea , forming pools and quicksand pits along the edges . There are no
+outlet streams .
+</item 6>
+
+<item 7>
+Dead Sea
+depth 298 m ( 978 ft ) ( elevation of deepest point , 728 m BSL ( below sea level ) , minus current surface elevation ) Water volume 114 km ( 27 cu mi ) Shore
+length 135 km ( 84 mi ) Surface elevation − 430.5 m ( − 1,412 ft ) ( 2016 ) References Shore length is not a well - defined measure . Play media Short video
+about the Dead Sea from the Israeli News Company The Dead Sea ( Hebrew : יָם הַמֶּלַח ‬ Yam ha - Melah lit . Sea of Salt ; Arabic : البحر الميت ‎ Al - Bahr al -
+Mayyit ) is a salt lake bordered by Jordan to the east and Israel and Palestine to the west . Its surface and shores are 430.5 metres ( 1,412 ft ) below sea
+level , Earth 's lowest elevation on land . The Dead Sea is 304 m ( 997 ft ) deep , the deepest hypersaline lake in the world .
+</item 7>
+
+<item 8>
+Dead Sea
+Along the southwestern side of the lake is a 210 m ( 700 ft ) tall halite formation called `` Mount Sodom '' . Natural History There are two contending
+hypotheses about the origin of the low elevation of the Dead Sea . The older hypothesis is that the Dead Sea lies in a true rift zone , an extension of the Red
+Sea Rift , or even of the Great Rift Valley of eastern Africa . A more recent hypothesis is that the Dead Sea basin is a consequence of a `` step - over ''
+discontinuity along the Dead Sea Transform , creating an extension of the crust with consequent subsidence . Around 3.7 million years ago , what is now the
+valley of the Jordan River , Dead Sea , and the northern Wadi Arabah was repeatedly inundated by waters from the Mediterranean Sea . The waters formed in a
+narrow , crooked bay that is called by geologists the Sedom Lagoon , which was connected to the sea through what is now the Jezreel Valley . The floods of the
+valley came and went depending on long - scale climate change . The Sedom Lagoon deposited beds of salt that eventually became 2.5 km ( 1.55 mi ) thick .
+</item 8>
+
+<item 9>
+Dead Sea
+In January 2015 it was reported that the level of water is now dropping by 1 m ( 3 ft ) a year . On 27 November 2016 , it was announced that the Jordanian
+government is shortlisting five consortiums to implement the project . Jordan 's ministry of Water and Irrigation said that the $100 million first phase of the
+project will begin construction in the first quarter of 2018 , and will be completed by 2021 . Views in 1972 , 1989 , and 2011 compared See also Red Sea -- Dead
+Sea Water Conveyance Aral Sea Dead Sea Works Great Salt Lake List of drying lakes List of places on land with elevations below sea level Mediterranean -- Dead
+Sea Canal Benjamin Elazari Volcani World Discoveries III : Dead Sea References ^ Jump up to : `` Virtual Israel Experience : The Dead Sea '' . Jewish Virtual
+Library . Retrieved 21 January 2013 . ^ Jump up to : `` The Dead Sea Is Dying Fast : Is It Too Late to Save It , or Was It Always a Lost Cause ? '' . Haaretz. 7
+October 2016 .
+</item 9>
+
+<item 10>
+Dead Sea
+The Jordan Times . 10 July 2016 . Retrieved 12 July 2016 . Jump up ^ `` Google Street View '' . Jump up ^ `` Wealth From The Dead Sea '' . Popular Mechanics .
+Chicago : Hearst Magazines . 54 ( 5 ) : 794 -- 798 . November 1930 . Jump up ^ Hurlbert , Stuart H. ( 6 December 2012 ) . `` Saline Lakes V : Proceedings of the
+Vth International Symposium on Inland Saline Lakes , held in Bolivia , 22 -- 29 March 1991 '' . Springer Science & Business Media -- via Google Books . Jump up
+^ Schechter , Asher ( 14 April 2013 ) . `` Who Really Owns the Dead Sea ? '' -- via Haaretz . Jump up ^ `` Overview of Middle East Water Resources_Dead Sea '' .
+Jewish Virtual Library . December 1998 . Retrieved 31 May 2014 . Jump up ^ C. Klein ; A. Flohn . Contribution to the Knowledge in the Fluctuations of the Dead
+Sea Level . 38 .
+</item 10>
+=== END ITEM id=ffa4338bdcd1399d ===
+
+=== ITEM id=8ff20680cd15f594 ===
+Gold sentences and facts:
+Sentence 0: Callability -- Some bonds give the issuer the right to repay the bond before the maturity date on the call dates ; see call option . These bonds are referred to as callable bonds . Most callable bonds allow the issuer to repay the bond at par . With some bonds , the issuer has to pay a premium , the so - called call premium . This is mainly the case for high - yield bonds . These have very strict covenants , restricting the issuer in its operations . To be free from these covenants , the issuer can repay the bonds early , but only at a high cost .
+  Fact 0.0: Some bonds give the issuer the right to repay the bond before the maturity date on the call dates.
+  Fact 0.1: Bonds that give the issuer this right are referred to as callable bonds.
+  Fact 0.2: Most callable bonds allow the issuer to repay the bond at par.
+  Fact 0.3: With some bonds, the issuer has to pay a premium, called the call premium.
+  Fact 0.4: Call premiums are mainly the case for high-yield bonds.
+  Fact 0.5: High-yield bonds have very strict covenants that restrict the issuer in its operations.
+  Fact 0.6: To be free from these covenants, the issuer can repay high-yield bonds early.
+  Fact 0.7: Repaying high-yield bonds early to be free from covenants is possible only at a high cost.
+
+Retrieved items:
+<item 1>
+Bond (finance)
+A European callable has only one call date . This is a special case of a Bermudan callable . An American callable can be called at any time until the maturity
+date . A death put is an optional redemption feature on a debt instrument allowing the beneficiary of the estate of a deceased bondholder to put ( sell ) the
+bond back to the issuer at face value in the event of the bondholder 's death or legal incapacitation . This is also known as a `` survivor 's option '' .
+Sinking fund provision of the corporate bond indenture requires a certain portion of the issue to be retired periodically . The entire bond issue can be
+liquidated by the maturity date ; if not , the remainder is called balloon maturity . Issuers may either pay to trustees , which in turn call randomly selected
+bonds in the issue , or , alternatively , purchase bonds in open market , then return them to trustees . Bonds are often identified by its international
+securities identification number , or ISIN , which is a 12 digit alphanumeric code that uniquely identifies debt securities .
+</item 1>
+
+<item 2>
+Bond (finance)
+Book - entry bond is a bond that does not have a paper certificate . As physically processing paper bonds and interest coupons became more expensive , issuers (
+and banks that used to collect coupon interest for depositors ) have tried to discourage their use . Some book - entry bond issues do not offer the option of a
+paper certificate , even to investors who prefer them . Lottery bonds are issued by European and other states . Interest is paid as on a traditional fixed rate
+bond , but the issuer will redeem randomly selected individual bonds within the issue according to a schedule . Some of these redemptions will be for a higher
+value than the face value of the bond . War bond is a bond issued by a government to fund military operations during wartime . This type of bond has low return
+rate . Serial bond is a bond that matures in installments over a period of time . In effect , a $100,000 , 5 - year serial bond would mature in a $20,000
+annuity over a 5 - year interval . Revenue bond is a special type of municipal bond distinguished by its guarantee of repayment solely from revenues generated
+by a specified revenue - generating entity associated with the purpose of the bonds .
+</item 2>
+
+<item 3>
+Bond (finance)
+Optionality : Occasionally a bond may contain an embedded option ; that is , it grants option - like features to the holder or the issuer : Callability -- Some
+bonds give the issuer the right to repay the bond before the maturity date on the call dates ; see call option . These bonds are referred to as callable bonds .
+Most callable bonds allow the issuer to repay the bond at par . With some bonds , the issuer has to pay a premium , the so - called call premium . This is
+mainly the case for high - yield bonds . These have very strict covenants , restricting the issuer in its operations . To be free from these covenants , the
+issuer can repay the bonds early , but only at a high cost . Putability -- Some bonds give the holder the right to force the issuer to repay the bond before the
+maturity date on the put dates ; see put option . These are referred to as retractable or putable bonds . Call dates and put dates -- the dates on which
+callable and putable bonds can be redeemed early . There are four main categories : A Bermudan callable has several call dates , usually coinciding with coupon
+dates .
+</item 3>
+
+<item 4>
+Bond (finance)
+The net proceeds that the issuer receives are thus the issue price , less issuance fees . The market price of the bond will vary over its life : it may trade at
+a premium ( above par , usually because market interest rates have fallen since issue ) , or at a discount ( price below par , if market rates have risen or
+there is a high probability of default on the bond ) . Others ( edit ) Indentures and Covenants -- An indenture is a formal debt agreement that establishes the
+terms of a bond issue , while covenants are the clauses of such an agreement . Covenants specify the rights of bondholders and the duties of issuers , such as
+actions that the issuer is obligated to perform or is prohibited from performing . In the U.S. , federal and state securities and commercial laws apply to the
+enforcement of these agreements , which are construed by courts as contracts between issuers and bondholders . The terms may be changed only with great
+difficulty while the bonds are outstanding , with amendments to the governing document generally requiring approval by a majority ( or super-majority ) vote of
+the bondholders .
+</item 4>
+
+<item 5>
+Bond (finance)
+For other uses , see Bond ( disambiguation ) . Securities Securities ( show ) Banknote Bond Debenture Derivative Stock Markets ( show ) Stock market Commodity
+market Foreign exchange market Futures exchange Over-the - counter market ( OTC ) Spot market Bonds by coupon ( show ) Fixed rate bond Floating rate note
+Inflation - indexed bond Perpetual bond Zero - coupon bond Commercial paper Bonds by issuer ( show ) Corporate bond Government bond Municipal bond Pfandbrief
+Equities ( stocks ) ( show ) Stock Share Initial public offering ( IPO ) Short selling Investment funds ( show ) Mutual fund Closed - end fund Exchange - traded
+fund ( ETF ) Hedge fund Index fund Segregated fund Structured finance ( show ) Securitization Agency security Asset - backed security Mortgage - backed security
+Commercial mortgage - backed security Residential mortgage - backed security Tranche Collateralized debt obligation Collateralized fund obligation
+Collateralized mortgage obligation Credit - linked note Unsecured debt Derivatives ( show ) Forward Futures Option Swap Warrant Credit derivative Hybrid
+security In finance , a bond is an instrument of indebtedness of the bond issuer to the holders . The most common types of bonds include municipal bonds and
+corporate bonds .
+</item 5>
+
+<item 6>
+Bond (finance)
+The name `` coupon '' arose because in the past , paper bond certificates were issued which had coupons attached to them , one for each interest payment . On
+the due dates the bondholder would hand in the coupon to a bank in exchange for the interest payment . Interest can be paid at different frequencies : generally
+semi-annual , i.e. every 6 months , or annual . Bond issued by the Dutch East India Company in 1623 Yield ( edit ) The yield is the rate of return received from
+investing in the bond . It usually refers either to The current yield , or running yield , which is simply the annual interest payment divided by the current
+market price of the bond ( often the clean price ) . The yield to maturity , or redemption yield , which is a more useful measure of the return of the bond .
+This takes into account the current market price , and the amount and timing of all remaining coupon payments and of the repayment due on maturity . It is
+equivalent to the internal rate of return of a bond . Credit quality ( edit ) The quality of the issue refers to the probability that the bondholders will
+receive the amounts promised at the due dates .
+</item 6>
+
+<item 7>
+Bond (finance)
+That relationship is the definition of the redemption yield on the bond , which is likely to be close to the current market interest rate for other bonds with
+similar characteristics . ( Otherwise there would be arbitrage opportunities . ) The yield and price of a bond are inversely related so that when market
+interest rates rise , bond prices fall and vice versa . The market price of a bond may be quoted including the accrued interest since the last coupon date . (
+Some bond markets include accrued interest in the trading price and others add it on separately when settlement is made . ) The price including accrued interest
+is known as the `` full '' or `` dirty price '' . ( See also Accrual bond . ) The price excluding accrued interest is known as the `` flat '' or `` clean price
+'' . The interest payment ( `` coupon payment '' ) divided by the current price of the bond is called the current yield ( this is the nominal yield multiplied
+by the par value and divided by the price ) . There are other yield measures that exist such as the yield to first call , yield to worst , yield to first par
+call , yield to put , cash flow yield and yield to maturity .
+</item 7>
+
+<item 8>
+Bond (finance)
+The most common types of bonds include municipal bonds and corporate bonds . The bond is a debt security , under which the issuer owes the holders a debt and (
+depending on the terms of the bond ) is obliged to pay them interest ( the coupon ) or to repay the principal at a later date , termed the maturity date .
+Interest is usually payable at fixed intervals ( semiannual , annual , sometimes monthly ) . Very often the bond is negotiable , that is , the ownership of the
+instrument can be transferred in the secondary market . This means that once the transfer agents at the bank medallion stamp the bond , it is highly liquid on
+the secondary market . Thus a bond is a form of loan or IOU : the holder of the bond is the lender ( creditor ) , the issuer of the bond is the borrower (
+debtor ) , and the coupon is the interest . Bonds provide the borrower with external funds to finance long - term investments , or , in the case of government
+bonds , to finance current expenditure . Certificates of deposit ( CDs ) or short - term commercial paper are considered to be money market instruments and not
+bonds : the main difference is the length of the term of the instrument .
+</item 8>
+
+<item 9>
+Bond (finance)
+The latter are often issued in tranches . The senior tranches get paid back first , the subordinated tranches later . Covered bonds are backed by cash flows
+from mortgages or public sector assets . Contrary to asset - backed securities the assets for such bonds remain on the issuers balance sheet . Perpetual bonds
+are also often called perpetuities or ' Perps ' . They have no maturity date . The most famous of these are the UK Consols , which are also known as Treasury
+Annuities or Undated Treasuries . Some of these were issued back in 1888 and still trade today , although the amounts are now insignificant . Some ultra-long -
+term bonds ( sometimes a bond can last centuries : West Shore Railroad issued a bond which matures in 2361 ( i.e. 24th century ) are virtually perpetuities from
+a financial point of view , with the current value of principal near zero . Bearer bond is an official certificate issued without a named holder . In other
+words , the person who has the paper certificate can claim the value of the bond .
+</item 9>
+
+<item 10>
+Bond (finance)
+The length of time until the maturity date is often referred to as the term or tenure or maturity of a bond . The maturity can be any length of time , although
+debt securities with a term of less than one year are generally designated money market instruments rather than bonds . Most bonds have a term of up to 30 years
+. Some bonds have been issued with terms of 50 years or more , and historically there have been some issues with no maturity date ( irredeemable ) . In the
+market for United States Treasury securities , there are three categories of bond maturities : short term ( bills ) : maturities between one and five years ;
+medium term ( notes ) : maturities between six and twelve years ; long term ( bonds ) : maturities longer than twelve years . Coupon ( edit ) The coupon is the
+interest rate that the issuer pays to the holder . Usually this rate is fixed throughout the life of the bond . It can also vary with a money market index ,
+such as LIBOR , or it can be even more exotic .
+</item 10>
+=== END ITEM id=8ff20680cd15f594 ===
+
+=== ITEM id=ee20b5bcd66f87d8 ===
+Gold sentences and facts:
+Sentence 0: On Earth , Ivan 's Ecto - Morphicons are completely unearthed , and he unleashes them on Angel Grove , ordering the parents to commit suicide at the construction site . Fred , Bulk , Skull and the other kids head to the construction site to save their parents . The Rangers return with their new animal - themed Ninja Zords and destroy one of Ivan 's Ecto - Morphicons . Ivan takes control of the other and battles the Rangers himself . The Rangers lead Ivan into space right into the path of Ryan 's Comet , which destroys him . His destruction breaks the hypnosis and the parents are reunited with their children . The Rangers then use the Great Power to restore the Command Center and resurrect Zordon .
+  Fact 0.0: On Earth, Ivan's Ecto-Morphicons are completely unearthed.
+  Fact 0.1: Ivan unleashes the Ecto-Morphicons on Angel Grove.
+  Fact 0.2: Ivan orders the parents to commit suicide at the construction site.
+  Fact 0.3: Fred, Bulk, Skull and the other kids head to the construction site to save their parents.
+  Fact 0.4: The Rangers return with their new animal-themed Ninja Zords.
+  Fact 0.5: The Rangers destroy one of Ivan's Ecto-Morphicons.
+  Fact 0.6: Ivan takes control of the other Ecto-Morphicon.
+  Fact 0.7: Ivan battles the Rangers himself.
+  Fact 0.8: The Rangers lead Ivan into space, right into the path of Ryan's Comet.
+  Fact 0.9: Ryan's Comet destroys Ivan.
+  Fact 0.10: Ivan's destruction breaks the hypnosis.
+  Fact 0.11: The parents are reunited with their children.
+  Fact 0.12: The Rangers use the Great Power to restore the Command Center.
+  Fact 0.13: The Rangers use the Great Power to resurrect Zordon.
+
+Retrieved items:
+<item 1>
+Mighty Morphin Power Rangers: The Movie
+When Fred Kelman , a friend of the Rangers ' , discovers his father missing , he finds him working at the construction site and discovers Ivan 's plans . On
+Phaedos , the Rangers are almost killed by the Tengu , but are rescued by Dulcea , Phaedos ' Master Warrior . She initially tells them to leave for their own
+safety , but after hearing of Zordon 's plight , she agrees to help them and takes them to an ancient ruined temple where the Rangers will have to overcome
+obstacles to acquire the power of the Ninjetti . Dulcea awakens each Rangers ' animal spirit : Aisha is the bear , Rocky is the ape , Billy is the wolf ,
+Kimberly is the crane , Adam is the frog and Tommy is the falcon . The Rangers make their way to the Monolith housing the Great Power , defeating its guardians
+, and retrieve the Great Power . On Earth , Ivan 's Ecto - Morphicons are completely unearthed , and he unleashes them on Angel Grove , ordering the parents to
+commit suicide at the construction site . Fred , Bulk , Skull and the other kids head to the construction site to save their parents .
+</item 1>
+
+<item 2>
+Mighty Morphin Power Rangers: The Movie
+He felt that the characters , with the exception of Ivan Ooze , lacked personalities , and that the scenes of monsters rampaging through the city hearkened back
+to the worst Japanese monster films . Mick LaSalle of the San Francisco Chronicle found the fights `` only adequately choreographed , '' called the battle in
+the climax `` a complete disaster '' and stating that it made no sense in timing , that protagonists were not very intelligent , and the actors playing them
+unremarkable . Home media ( edit ) This section does not cite any sources . Please help improve this section by adding citations to reliable sources . Unsourced
+material may be challenged and removed . ( May 2015 ) ( Learn how and when to remove this template message ) The film was released on VHS and LaserDisc in late
+1995 and then as a double feature with 1997 's Turbo : A Power Rangers Movie on a double - sided DVD in 2001 by 20th Century Fox Home Entertainment . Bonus
+features included a theatrical trailer and a `` Making Of '' featurette . The film was then released separately on a single - sided DVD in 2003 .
+</item 2>
+
+<item 3>
+Mighty Morphin Power Rangers: The Movie
+The New York Times . Retrieved 2010 - 08 - 07 . Jump up ^ `` Mighty Morphin Power Rangers : The Movie '' . RogerEbert.com . June 30 , 1995 . Retrieved 2010 - 08
+- 07 . Jump up ^ Lasalle , Mick ( 1995 - 06 - 30 ) . `` Mighty Mindless ' Rangers ' '' . San Francisco Chronicle . Retrieved 2010 - 08 - 25 . External links (
+edit ) Mighty Morphin Power Rangers : The Movie on IMDb Power Rangers Media TV series Saban Entertainment Mighty Morphin Power Rangers ( 1993 -- 1995 ; 2010 )
+Season 1 2010 re-version Alien Rangers ( 1996 ) Zeo ( 1996 ) Episodes Turbo ( 1997 ) Episodes in Space ( 1998 ) Episodes Lost Galaxy ( 1999 ) Episodes
+Lightspeed Rescue ( 2000 ) Episodes Time Force ( 2001 ) Episodes Disney Wild Force ( 2002 ) Episodes Ninja Storm ( 2003 ) Episodes Dino Thunder ( 2004 )
+Episodes S.P.D. (
+</item 3>
+
+<item 4>
+Mighty Morphin Power Rangers: The Movie
+The Pink Ranger David Yost as Billy Cranston , The Blue Ranger Paul Schrier as Farkas `` Bulk '' Bulkmeier Jason Narvy as Eugene `` Skull '' Skullovitch Paul
+Freeman as Ivan Ooze Gabrielle Fitzpatrick as Dulcea Nicholas Bell as Zordon Peta - Maree Rixon as Alpha 5 Jean Paul Bell as Mordant Kerry Casey as Goldar Mark
+Ginther as Lord Zedd Julia Cortez as Rita Repulsa Jamie Croft as Fred Kelman Paul Goddard and Robert Simper as Construction workers Voices ( edit ) Kerrigan
+Mahan as Goldar Robert L. Manahan as Zordon Robert Axelrod as Lord Zedd Barbara Goodson as Rita Repulsa Richard Wood as Alpha 5 Martin G. Metcalf as Mordant
+Music ( edit ) See also : Mighty Morphin Power Rangers The Movie : Original Soundtrack Album and Mighty Morphin Power Rangers The Movie : Original Motion
+Picture Score Adaptations in other media ( edit ) This section does not cite any sources . Please help improve this section by adding citations to reliable
+sources . Unsourced material may be challenged and removed .
+</item 4>
+
+<item 5>
+Mighty Morphin Power Rangers: The Movie
+Fred , Bulk , Skull and the other kids head to the construction site to save their parents . The Rangers return with their new animal - themed Ninja Zords and
+destroy one of Ivan 's Ecto - Morphicons . Ivan takes control of the other and battles the Rangers himself . The Rangers lead Ivan into space right into the
+path of Ryan 's Comet , which destroys him . His destruction breaks the hypnosis and the parents are reunited with their children . The Rangers then use the
+Great Power to restore the Command Center and resurrect Zordon . In a mid-credits scene , Goldar briefly lounges in Zedd 's throne being served by Mordant only
+to panic when Zedd and Rita appear having been released after Ivan was destroyed . Cast ( edit ) Karan Ashley as Aisha Campbell , The Yellow Ranger Johnny Yong
+Bosch as Adam Park , The Black Ranger Steve Cardenas as Rocky DeSantos , The Red Ranger Jason David Frank as Tommy Oliver , The White Ranger Amy Jo Johnson as
+Kimberly Hart , The Pink Ranger David Yost as Billy Cranston ,
+</item 5>
+
+<item 6>
+Mighty Morphin Power Rangers: The Movie
+Mighty Morphin Power Rangers : the Movie - wikipedia Mighty Morphin Power Rangers : the Movie Jump to : navigation , search `` Power Rangers : The Movie ''
+redirects here . For the 2015 fan film , see Power / Rangers . For the 2017 film , see Power Rangers ( film ) .
+</item 6>
+
+<item 7>
+Mighty Morphin Power Rangers: The Movie
+Much like the television season that followed the release , it used concepts from the Japanese Super Sentai series Kyoryu Sentai Zyuranger , Ninja Sentai
+Kakuranger . It is the first Power Rangers production from Saban Entertainment not to feature any archived footage from Super Sentai . Filming took place in and
+around Sydney and Queensland , Australia . It was released by 20th Century Fox on June 30 , 1995 . The film grossed $66.43 million worldwide , but received
+middling and polarizing reviews from critics . Contents ( hide ) 1 Plot 2 Cast 2.1 Voices 3 Music 4 Adaptations in other media 5 Release 5.1 Critical reception
+6 Home media 7 References 8 External links Plot ( edit ) The Power Rangers participate with Bulk and Skull in a charity skydive for the Angel Grove observatory
+, in anticipation of Ryan 's Comet which is scheduled to pass by in two days . Bulk and Skull miss the target landing zone and accidentally land on a
+construction site where a giant egg has been unearthed .
+</item 7>
+
+<item 8>
+Mighty Morphin Power Rangers: The Movie
+Lord Zedd , Rita Repulsa , Goldar , and Mordant arrive at the construction site and crack open the egg , releasing Ivan Ooze after 6,000 years , a morphological
+being who ruled Earth with an iron fist before he was overthrown by Zordon and a group of young warriors . Ivan lays siege to the Rangers ' Command Center and
+incapacitates Zordon , robbing the Rangers of their powers . As the Rangers return to the Command Center , they find it destroyed and Zordon dying . Zordon 's
+assistant Alpha 5 sends the Rangers to the distant planet Phaedos to obtain the Great Power and save Zordon . On the Moon , Ivan usurps Rita and Zedd , trapping
+them in a snow globe , then sends his Tengu warriors to Phaedos and begins building an army . He uses children to bring his ooze to their parents , and it
+hypnotizes them into becoming his workforce to dig up his Ecto - Morphicon Titans , twin war machines built during his reign .
+</item 8>
+
+<item 9>
+Mighty Morphin Power Rangers: The Movie
+For the 2017 film , see Power Rangers ( film ) . Mighty Morphin Power Rangers : The Movie Theatrical release poster Directed by Bryan Spicer Produced by Haim
+Saban Shuki Levy Suzanne Todd Screenplay by Arne Olsen Story by John Kamps Arne Olsen Starring Karan Ashley Johnny Yong Bosch Steve Cardenas Jason David Frank
+Amy Jo Johnson David Yost Jason Narvy Paul Schrier Paul Freeman Music by Graeme Revell Cinematography Paul Murphy Edited by Wayne Wahrman Production company
+Saban Entertainment Toei Company Distributed by 20th Century Fox Release date June 30 , 1995 ( 1995 - 06 - 30 ) Running time 95 minutes Country United States
+Language English Budget $15 million Box office $66.4 million Mighty Morphin Power Rangers : The Movie ( also known as Power Rangers : The Movie ) is a 1995
+American superhero film based on the television series Mighty Morphin Power Rangers . It stars the ensemble cast of Karan Ashley , Johnny Yong Bosch , Steve
+Cardenas , Jason David Frank , Amy Jo Johnson , and David Yost alongside the villains cast from the original series and Paul Freeman as Ivan Ooze .
+</item 9>
+
+<item 10>
+Mighty Morphin Power Rangers: The Movie
+Unsourced material may be challenged and removed . ( May 2015 ) ( Learn how and when to remove this template message ) Four different video game titles based on
+the film were released for the Super NES , Sega Genesis , Game Boy , and Game Gear . Marvel Comics released a comic book adaptation and a photo comic book
+adaptation of the film in September 1995 . The comic book was printed with two different covers : one featuring fully morphed Rangers and the other featuring
+them in their Ninjetti uniforms . Release ( edit ) In its opening weekend , the film earned $13,104,788 , coming in fourth behind Apollo 13 and holdovers
+Pocahontas and Batman Forever . It ultimately grossed $66,433,194 against a $15 million budget , making it a financial success . Critical reception ( edit ) The
+film holds a 41 % `` Rotten '' rating based on 34 reviews on the review aggregator website Rotten Tomatoes , though there is no summarized consensus given for
+it .
+</item 10>
+=== END ITEM id=ee20b5bcd66f87d8 ===
+
+=== ITEM id=ac56a20606ee0505 ===
+Gold sentences and facts:
+Sentence 0: Although Surface Pro 4 is backward compatible with Type Cover accessory of Surface Pro 3 , an attachable keyboard which doubles as a screen protector , the Surface Pro 4 Type Cover has been announced with and without a fingerprint ID sensor . The new Type Cover is thinner and lighter than its predecessor , has improved magnetic stability for lap use , a mechanical keyboard with improved key spacing , as well as a larger touchpad .
+  Fact 0.0: Surface Pro 4 is backward compatible with the Type Cover accessory of Surface Pro 3.
+  Fact 0.1: The Type Cover is an attachable keyboard that doubles as a screen protector.
+  Fact 0.2: The Surface Pro 4 Type Cover has been announced with a fingerprint ID sensor.
+  Fact 0.3: The Surface Pro 4 Type Cover has been announced without a fingerprint ID sensor.
+  Fact 0.4: The new Type Cover is thinner than its predecessor.
+  Fact 0.5: The new Type Cover is lighter than its predecessor.
+  Fact 0.6: The new Type Cover has improved magnetic stability for lap use.
+  Fact 0.7: The new Type Cover has a mechanical keyboard with improved key spacing.
+  Fact 0.8: The new Type Cover has a larger touchpad.
+
+Retrieved items:
+<item 1>
+Surface Pro 4
+256 GB , 512 GB , or 1 TB Display 12.3 inches ( 31 cm ) 2736x1824 ( 267ppi ) PixelSense display with 3 : 2 aspect ratio Graphics m3 : Intel HD graphics 515 i5 :
+Intel HD graphics 520 i7 : Intel Iris 540 graphics 292.1 millimetres ( 11.50 in ) ( width ) 201.42 millimetres ( 7.930 in ) ( height ) 8.45 millimetres ( 0.333
+in ) ( depth ) Weight m3 : 766 grams ( 1.689 lb ) i5 : 786 grams ( 1.733 lb ) i7 : 786 grams ( 1.733 lb ) Predecessor Surface Pro 3 Successor Surface Pro ( 5th
+generation ) This article is part of a series on the Microsoft Surface Surface Surface Pro Pro 2 Pro 3 Pro 4 Pro ( 2017 ) Surface Book Surface Laptop Surface
+Studio Surface Hub Accessories Surface Pen Covers Dock Dial The Surface Pro 4 is the fourth - generation Surface - series 2 - in - 1 detachable , designed ,
+developed ,
+</item 1>
+
+<item 2>
+Surface Pro 4
+Microsoft subsequently developed a fix that was made available on February 17 , 2016 . Features ( edit ) Hardware ( edit ) The Surface Pro 4 is the same size as
+the Surface Pro 3 , but has a thinner screen bezel which allows for a display of a slightly greater size of 12.3 inches ( 31 cm ) . The screen resolution is
+also greater than the Surface Pro 3 's , at 2736x1824 at 267 PPI , with the same aspect ratio of 3 : 2 and 10 - point multi-touch . The chassis is 0.03 inches (
+0.76 mm ) thinner and 0.03 pounds ( 14 g ) lighter than the Surface Pro 3 . The cooling system of the 2 - in - 1 has been redesigned and dubbed hybrid liquid
+cooling system . It includes heat pipes with a flowing liquid , which is meant to avoid the use of the internal fan when the device is used for less demanding
+tasks such as web browsing .
+</item 2>
+
+<item 3>
+Surface Pro 4
+designed , developed , marketed , and produced by Microsoft . The Surface Pro 4 was announced on October 6 , 2015 alongside the Surface Book . In the U.S. and
+Canada , the Surface Pro 4 was released on October 26 , 2015 . The Surface Pro 4 is an update over its predecessor , featuring Skylake CPUs , more RAM and SSD
+options and a 12.3 - inch display with a greater resolution . At the same time , the device is compatible with most of its predecessor 's accessories . Contents
+( hide ) 1 History 2 Features 2.1 Hardware 2.2 Software 2.3 Accessories 3 Issues 4 Reception 5 Timeline 6 References History ( edit ) The Surface Pro 4 was
+announced on October 6 , 2015 alongside the Surface Book . Both devices were available for pre-order the following day and available for customers beginning on
+October 26 , 2015 . The device initially exhibited failure to sleep properly , which drained the battery very quickly . Microsoft subsequently developed a fix
+that was made available on February 17 , 2016 .
+</item 3>
+
+<item 4>
+Surface Pro 4
+Microsoft 's spokesperson acknowledged the issue stating : `` We are aware that some customers have experienced a screen flicker on Surface Pro 4 and are
+monitoring the situation closely . Customers impacted by this should contact Microsoft support . '' Microsoft has stated that bad batteries , pens and Type
+Covers may be repaired under warranty . Reception ( edit ) The Surface Pro 4 received generally positive reviews from technology critics . Most praise a sharper
+and larger display compared to the one found in the predecessor , redesigned cooling system , improved technical specifications , and an improved Type Cover .
+The common disadvantages found by reviewers were that the Type Cover is still a separate purchase , the relatively modest performance of the Intel Core m3 chip
+, and modest battery life . Timeline ( edit ) Source : Microsoft Devices Blog References ( edit ) Jump up ^ `` Microsoft Surface Pro 4 announced with new
+Surface Pen , starts at $899 '' . The Verge . Jump up ^ `` Here are the details of the Surface Book and Surface Pro 4 chips , and why they matter '' . Jump up ^
+`` ARK Intel Core m3 Specifications '' . Jump up ^ `` ARK Intel Core i5 Specifications '' .
+</item 4>
+
+<item 5>
+Microsoft’s fourth-generation Surface Pro is a detachable 2-in-1 announced October 6 and released October 26, 2015, starting at $899. It runs Windows 10 Pro and
+offers 6th-generation Intel Core m3, i5, or i7 processors, 4–16 GB RAM, and 128 GB–1 TB storage. Its 12.3-inch, 2736×1824 touchscreen fits a chassis similar to
+the Pro 3; it
+</item 5>
+
+<item 6>
+Surface Pro 4
+Although Surface Pro 4 is backward compatible with Type Cover accessory of Surface Pro 3 , an attachable keyboard which doubles as a screen protector , the
+Surface Pro 4 Type Cover has been announced with and without a fingerprint ID sensor . The new Type Cover is thinner and lighter than its predecessor , has
+improved magnetic stability for lap use , a mechanical keyboard with improved key spacing , as well as a larger touchpad . An updated version of Surface Pen is
+included with the Surface Pro 4 , which has 1024 levels of pressure sensitivity and is heavier with a rubberized tip . However , the new pen has only one button
+on the side rather than the previous pen 's two . There is a eraser on the end that doubles as a button , which may perform different tasks , like opening the
+OneNote app or activating Cortana , and can be customized using the Surface App . Issues ( edit ) The Surface Pro 4 is known to have wide spread flicker issues
+with the display named as Flickergate after the independent website flickergate.com which was sat up by the affected users after getting no fix from Microsoft .
+</item 6>
+
+<item 7>
+Surface Pro 4
+With Windows 10 the Tablet mode is available when the Type Cover is detached from the device . In this mode , all windows are opened full - screen and the
+interface becomes more touch - centric . The device also has a Windows Hello - compatible camera . It combines the use of a regular and infrared cameras to
+authenticate the user . Accessories ( edit ) The Surface Pro 4 is backward compatible with all accessories of its predecessor . At the Windows 10 Devices Event
+on 6 October , 2015 , alongside new Surface 2 - in - 1s , new accessories were announced . The Surface Dock is a redesigned docking accessory in a brick form
+factor . It is compatible with all past and future Surface models with a SurfaceConnect side port , previously used to connect a wall charger or Docking Station
+accessory : Surface Pro 3 , 4 and Surface Book . The Surface Dock will have 2 Mini DisplayPorts , 1 Gigabit Ethernet , 4 USB 3.0 , and 1 audio out ports .
+</item 7>
+
+<item 8>
+Surface Pro 4
+Surface Pro 4 - wikipedia Surface Pro 4 Jump to : navigation , search Surface Pro 4 Developer Microsoft Product family Surface Type 2 - in - 1 detachable
+Generation 4th Release date October 26 , 2015 Introductory price $899 ( £ 749 ) Operating system Windows 10 Pro CPU Intel Skylake low - voltage dual - core : m3
+- 6Y30 900 MHz up to 2.2 GHz , 4 MB cache , 4.5 W i5 - 6300U 2.4 up to 3.0 GHz , 3 MB cache , 15 W i7 - 6650U 2.2 up to 3.4 GHz , 4 MB cache , 15 W Memory 4 GB
+, 8 GB , or 16 GB Storage PCI - Express SSD : 128 GB , 256 GB , 512 GB , or 1 TB Display 12.
+</item 8>
+
+<item 9>
+Surface Pro 4
+The common traits , inherited from the previous generation device , are a continuous kickstand , magnesium casing with a silver - colored back side , 802.11 a /
+b / g / n / ac Wi - Fi radio , Bluetooth 4.0 Low Energy , full - size USB 3.0 port , microSD card reader , headset jack , Mini DisplayPort , Cover Port , and a
+renamed SurfaceConnect , a port on the side to connect a wall charger , Docking Station or Surface Dock accessories .
+</item 9>
+
+<item 10>
+Surface Pro 4
+( hide ) Surface Pro 4 Configuration Options Price Tier ( USD ) CPU Integrated GPU RAM Internal Storage 899 Intel Core m3 - 6Y30 ( 0.9 to 2.2 GHz ) HD 515 4 GB
+128 GB 999 Intel Core i5 - 6300U ( 2.4 to 3.0 GHz ) HD 520 1299 8 GB 256 GB 1499 16 GB 1699 8 GB 512 GB 1899 16 GB 1599 Intel Core i7 - 6650U ( 2.2 to 3.4 GHz )
+Iris 540 8 GB 256 GB 1799 16 GB 2199 512 GB 2699 1 TB Software ( edit ) All Surface Pro 4 models come with a 64 - bit version of Windows 10 Pro and a Microsoft
+Office 30 - day trial . Windows 10 comes pre-installed with Mail , Calendar , People , Xbox ( app ) , Photos , Movies and TV , Groove , and Microsoft Edge .
+With Windows 10 the Tablet mode is available when the Type Cover is detached from the device .
+</item 10>
+=== END ITEM id=ac56a20606ee0505 ===
+
+=== ITEM id=404bf627c6afbcc1 ===
+Gold sentences and facts:
+Sentence 0: The Partridge Family Genre Musical sitcom Created by Bernard Slade Starring Shirley Jones David Cassidy Danny Bonaduce Susan Dey Suzanne Crough Jeremy Gelbwaks Dave Madden Brian Forster Theme music composer Diane Hilderbrand Danny Janssen Wes Farrell Opening theme `` When We 're Singin ' '' ( 1970 -- 71 ) `` C'mon , Get Happy '' ( 1971 -- 74 ) Composer ( s ) George Duning Benny Golson Warren Barker Hugo Montenegro Shorty Rogers Country of origin United States Original language ( s ) English No. of seasons No. of episodes 96 ( list of episodes ) Production Executive producer ( s ) Bob Claver Producer ( s ) William Bickley Paul Junger Witt Dale McRaven Larry Rosen Mel Swope Cinematography Fred Jackman , Jr . Irving Lippman Camera setup Single - camera Running time 25 minutes Production company ( s ) Screen Gems Television ( 1970 -- 1974 ) Distributor Columbia Pictures Television ( 1974 -- 84 ; 1989 -- 96 ) DFS Program Exchange ( 1984 -- 87 ) The Program Exchange ( 1987 -- 89 ) Columbia TriStar Television ( 1996 -- 2002 ) Sony Pictures Television ( 2002 -- present ) Release Original network ABC Audio format Monaural Original release September 25 , 1970 ( 1970 - 09 - 25 ) -- March 23 , 1974 ( 1974 - 03 - 23 ) Chronology Related shows Getting Together Goober and the Ghost Chasers Partridge Family 2200 A.D.
+  Fact 0.0: The Partridge Family is a musical sitcom
+  Fact 0.1: The Partridge Family was created by Bernard Slade
+  Fact 0.2: The Partridge Family starred Shirley Jones
+  Fact 0.3: The Partridge Family starred David Cassidy
+  Fact 0.4: The Partridge Family starred Danny Bonaduce
+  Fact 0.5: The Partridge Family starred Susan Dey
+  Fact 0.6: The Partridge Family starred Suzanne Crough
+  Fact 0.7: The Partridge Family starred Jeremy Gelbwaks
+  Fact 0.8: The Partridge Family starred Dave Madden
+  Fact 0.9: The Partridge Family starred Brian Forster
+  Fact 0.10: The Partridge Family's theme music composers were Diane Hilderbrand, Danny Janssen and Wes Farrell
+  Fact 0.11: The Partridge Family's opening theme was 'When We're Singin'' (1970-71)
+  Fact 0.12: The Partridge Family's opening theme was 'C'mon, Get Happy' (1971-74)
+  Fact 0.13: The Partridge Family's composers were George Duning, Benny Golson, Warren Barker, Hugo Montenegro and Shorty Rogers
+  Fact 0.14: The Partridge Family is from the United States
+  Fact 0.15: The Partridge Family's original language is English
+  Fact 0.16: The Partridge Family has 96 episodes
+  Fact 0.17: The Partridge Family's executive producer was Bob Claver
+  Fact 0.18: The Partridge Family's producers were William Bickley, Paul Junger Witt, Dale McRaven, Larry Rosen and Mel Swope
+  Fact 0.19: The Partridge Family's cinematography was by Fred Jackman, Jr. and Irving Lippman
+  Fact 0.20: The Partridge Family uses a single-camera setup
+  Fact 0.21: The Partridge Family has a running time of 25 minutes
+  Fact 0.22: The Partridge Family was produced by Screen Gems Television (1970-1974)
+  Fact 0.23: The Partridge Family was distributed by Columbia Pictures Television (1974-84; 1989-96)
+  Fact 0.24: The Partridge Family was distributed by DFS Program Exchange (1984-87)
+  Fact 0.25: The Partridge Family was distributed by The Program Exchange (1987-89)
+  Fact 0.26: The Partridge Family was distributed by Columbia TriStar Television (1996-2002)
+  Fact 0.27: The Partridge Family was distributed by Sony Pictures Television (2002-present)
+  Fact 0.28: The Partridge Family aired originally on ABC
+  Fact 0.29: The Partridge Family has a monaural audio format
+  Fact 0.30: The Partridge Family originally aired from September 25, 1970 to March 23, 1974
+  Fact 0.31: Related shows include Getting Together
+  Fact 0.32: Related shows include Goober and the Ghost Chasers
+  Fact 0.33: Related shows include Partridge Family 2200 A.D.
+
+Retrieved items:
+<item 1>
+The Partridge Family
+Jump up ^ `` TSORT Song Artist 592 -- The Partridge Family '' . TSORT.info . Retrieved June 22 , 2010 . Jump up ^ `` TSORT Album Artist 994 -- The Partridge
+Family '' . TSORT.info . Retrieved June 22 , 2010 . Jump up ^ Whitburn , Joel ( 2004 ) . Christmas in the Charts ( 1920 -- 2004 ) . Wisconsin : Record Research
+Inc. p. 179 . ISBN 0 - 89820 - 161 - 6 . Jump up ^ Parry , Wayne ( April 10 , 2011 ) . David Cassidy , Danny Bonaduce play Partridge song . Associated Press .
+Retrieved 2011 - 04 - 10 . Jump up ^ Coopee , Todd . `` The Partridge Family Game '' . ToyTales.ca . Jump up ^ Shirley , Ian ( 2005 ) . Can Rock & Roll Save the
+World ? : An Illustrated History of Music and Comics . SAF Publishing Ltd. p. 88 - 89 .
+</item 1>
+
+<item 2>
+The Partridge Family
+The company promoted the show by releasing a series of albums featuring the family band , though David Cassidy and Shirley Jones , who sang background , were
+the only cast members who were actually featured on the recordings . As the show and other associated merchandising soared , David Cassidy became a teen idol .
+The producers signed Cassidy as a solo act as well . Cassidy began touring with his own group of musicians , performing Partridge songs as well as hits from his
+own albums , to thousands of screaming teenagers in major stadiums across the USA , UK , Europe , Japan and Australia . The Partridge Family 's biggest hit came
+in 1970 with the song `` I Think I Love You '' , written by Tony Romeo ( who had previously written several of the Cowsills ' hits ) , peaked at Number 1 on the
+Billboard charts in December of that year . It sold over five million copies , outselling the Beatles ' `` Let It Be '' , was awarded a gold disc , and made the
+group the third fictional artist to have a No. 1 hit ( after The Chipmunks and The Archies ) .
+</item 2>
+
+<item 3>
+The Partridge Family
+Irving Lippman Camera setup Single - camera Running time 25 minutes Production company ( s ) Screen Gems Television ( 1970 -- 1974 ) Distributor Columbia
+Pictures Television ( 1974 -- 84 ; 1989 -- 96 ) DFS Program Exchange ( 1984 -- 87 ) The Program Exchange ( 1987 -- 89 ) Columbia TriStar Television ( 1996 --
+2002 ) Sony Pictures Television ( 2002 -- present ) Release Original network ABC Audio format Monaural Original release September 25 , 1970 ( 1970 - 09 - 25 )
+-- March 23 , 1974 ( 1974 - 03 - 23 ) Chronology Related shows Getting Together Goober and the Ghost Chasers Partridge Family 2200 A.D. The Partridge Family is
+an American musical sitcom starring Shirley Jones and featuring David Cassidy . Jones played a widowed mother , and Cassidy played the oldest of her five
+children who embarked on a music career .
+</item 3>
+
+<item 4>
+The Partridge Family
+Actor David Cassidy sang lead on most of the records , and actor Shirley Jones can be heard on a few . But the other voices and all the instruments were
+recorded by session musicians . The Partridge Family 's instrumental sound was provided by musicians informally known as The Wrecking Crew , who did many of the
+pop hits of the day attributed to other performers . The actors pretended to play their instruments . None of the actors sang background ; they lip - synched to
+recorded singing by The Love Generation , AKA The Ron Hicklin Singers , composed of brothers John and Tom Bahler , Jackie Ward ( who as Robin Ward had a # 14
+hit `` Wonderful Summer '' on Dot Records in 1963 ) , and Ron Hicklin . Actor David Cassidy was originally to lip sync with the rest of the cast , but convinced
+Farrell that he could sing and was allowed to join the studio ensemble as the lead singer . He and his step - mother , Shirley , are the only two show actors
+allowed to sing for recording . The Partridge Family theme song , produced by Rogers , was shown over opening credits . More than one song was used as the theme
+song .
+</item 4>
+
+<item 5>
+The Partridge Family
+( hide ) The Partridge Family David Cassidy Shirley Jones Danny Bonaduce Susan Dey Jeremy Gelbwaks Brian Forster Suzanne Crough Dave Madden Studio albums The
+Partridge Family Album Up to Date Sound Magazine A Partridge Family Christmas Card Shopping Bag The Partridge Family Notebook Crossword Puzzle Bulletin Board
+Other albums At Home with Their Greatest Hits The World of the Partridge Family Greatest Hits The Definitive Collection Come On Get Happy ! : The Very Best of
+The Partridge Family Singles `` I Think I Love You '' `` Does n't Somebody Want to Be Wanted '' `` I 'll Meet You Halfway '' `` I Woke Up in Love This Morning
+'' `` It 's One of Those Nights ( Yes Love ) '' `` Breaking Up Is Hard to Do '' `` Looking Through the Eyes of Love '' Related articles List of The Partridge
+Family episodes The Partridge Family discography David Cassidy discography Wes Farrell Goober and the Ghost Chasers Partridge Family 2200 A.D. MusicBrainz :
+3376b487 - 95b4 - 42e6 - b7f4 - 71cffffcad97 Retrieved from `` https://en.wikipedia.org/w/index.
+</item 5>
+
+<item 6>
+The Partridge Family
+wikipedia.org/w/index.php?title=The_Partridge_Family&oldid=837155910 '' Categories : The Partridge Family 1970 American television series debuts 1974 American
+television series endings 1970s American sitcoms American Broadcasting Company network shows American television sitcoms Bell Records artists English - language
+television programs Fictional families Fictional musical groups Musical television series Television series based on singers and musicians Television series by
+Sony Pictures Television Television shows set in California Television series about families Television programs adapted into comics Hidden categories : Use mdy
+dates from October 2012 Articles needing additional references from May 2016 All articles needing additional references Articles containing potentially dated
+statements from January 2011 All articles containing potentially dated statements Wikipedia articles with MusicBrainz identifiers Talk Contents About Wikipedia
+Wikiquote Deutsch Español فارسی Français Italiano Nederlands 日本 語 Norsk nynorsk Português Русский Simple English Srpskohrvatski / српскохрватски Svenska 4 more
+Edit links This page was last edited on 19 April 2018 , at 02 : 06 .
+</item 6>
+
+<item 7>
+The Partridge Family
+The Partridge Family - wikipedia The Partridge Family Jump to : navigation , search The Partridge Family Genre Musical sitcom Created by Bernard Slade Starring
+Shirley Jones David Cassidy Danny Bonaduce Susan Dey Suzanne Crough Jeremy Gelbwaks Dave Madden Brian Forster Theme music composer Diane Hilderbrand Danny
+Janssen Wes Farrell Opening theme `` When We 're Singin ' '' ( 1970 -- 71 ) `` C'mon , Get Happy '' ( 1971 -- 74 ) Composer ( s ) George Duning Benny Golson
+Warren Barker Hugo Montenegro Shorty Rogers Country of origin United States Original language ( s ) English No. of seasons No. of episodes 96 ( list of episodes
+) Production Executive producer ( s ) Bob Claver Producer ( s ) William Bickley Paul Junger Witt Dale McRaven Larry Rosen Mel Swope Cinematography Fred Jackman
+, Jr .
+</item 7>
+
+<item 8>
+The Partridge Family
+True Hollywood Story , Biography and VH1 's Behind the Music . When the digital subchannel Antenna TV premiered in January 2011 , The Partridge Family became
+one of its offerings through the network 's distribution agreement with Sony Pictures Television ( parent company and successor of series producer Screen Gems )
+. Reception ( edit ) Awards and nominations ( edit ) Year Association Result 1971 Grammy Awards Best New Artist Nominated Golden Globe Awards Best TV Show --
+Musical / Comedy Nominated 1972 Best TV Show -- Musical / Comedy Nominated 2003 TV Land Awards Quintessential Non-Traditional Family Nominated Hippest Fashion
+Plate -- Male to David Cassidy Won Favorite Teen Dream -- Female to Susan Dey Won Irreplaceable Replacement for Brian Forster replacing Jeremy Gelbwaks
+Nominated 2006 Favorite Singing Siblings Nominated The Most Irreplaceable Replacement for Brian Forster replacing Jeremy Gelbwaks Nominated 2007 Most Beautiful
+Braces -- Susan Dey Nominated Media ( edit ) Discography ( edit ) Main article : The Partridge Family discography The Partridge Family was produced for ABC by
+Screen Gems .
+</item 8>
+
+<item 9>
+The Partridge Family
+Tatum claimed that she had submitted a similar premise to Screen Gems prior to 1970 called Baker 's Half - Dozen . The matter was resolved out of court , with
+Tatum receiving a reported $150,000 from Screen Gems . The Partridge Family , season 1 Cast and characters ( edit ) Shirley Jones as Shirley Partridge : vocals
+, keyboard , tambourine , percussion David Cassidy as Keith Partridge : lead vocals , rhythm guitar , electric lead guitar , banjo Susan Dey as Laurie Partridge
+: vocals , harmony , piano , Hammond organ , percussion Danny Bonaduce as Danny Partridge : vocals , bass guitar Jeremy Gelbwaks as Chris Partridge ( season 1 )
+: vocals , drums Brian Forster as Chris Partridge ( seasons 2 -- 4 ) : vocals , drums Suzanne Crough as Tracy Partridge : tambourine , percussion Dave Madden as
+Reuben Kincaid : band manager Ricky Segall as Ricky Stevens ( season 4 ) : singer Simone , the family 's pet dog ( season 1 only ) On the show 's soundtrack and
+records , none of the actors actually played the indicated instruments , and only Jones and primarily Cassidy sang .
+</item 9>
+
+<item 10>
+The Partridge Family
+The shows often contrast suburban life with the adventures of a show - business family on the road . After the first season , more of the show 's action takes
+place in their hometown than on tour . History ( edit ) This section needs additional citations for verification . Please help improve this article by adding
+citations to reliable sources . Unsourced material may be challenged and removed . ( May 2016 ) ( Learn how and when to remove this template message ) Created
+for television by Bernard Slade , the series ' executive producer was Bob Claver . The show was inspired by and loosely based on The Cowsills , a family pop
+music group that was famous in the late 1960s . In the show 's early development , the Cowsill children were considered by the producers , but because the
+Cowsills were not trained actors and were too old for the roles as scripted , Slade and Claver abandoned that idea . Shirley Jones had already been signed as
+mother Shirley Partridge and star of the show . The pilot was filmed in December 1969 . This unaired pilot differs from the pilot broadcast in 1970 .
+</item 10>
+=== END ITEM id=404bf627c6afbcc1 ===
+
+=== ITEM id=21b0ce01bec4fc0f ===
+Gold sentences and facts:
+Sentence 0: John James McCoy is a fictional character in the television drama Law & Order . He was created by Michael S. Chernuchin and portrayed by Sam Waterston from 1994 until the end of the series in 2010 . He is the second - longest tenured character on the show ( 16 seasons ) , after Lt. Anita Van Buren ( 17 seasons ; portrayed by S. Epatha Merkerson ) . He appeared in 368 episodes of Law & Order , four episodes of Law & Order : Special Victims Unit , two episodes of Law & Order : Trial by Jury , two episodes of Homicide : Life on the Street , and the made - for - TV movie Exiled .
+  Fact 0.0: John James McCoy is a fictional character in the television drama Law & Order.
+  Fact 0.1: John James McCoy was created by Michael S. Chernuchin.
+  Fact 0.2: John James McCoy was portrayed by Sam Waterston from 1994 until the end of the series in 2010.
+  Fact 0.3: John James McCoy is the second-longest tenured character on the show, with 16 seasons.
+  Fact 0.4: John James McCoy's tenure ranks just after Lt. Anita Van Buren, who had 17 seasons.
+  Fact 0.5: Lt. Anita Van Buren was portrayed by S. Epatha Merkerson.
+  Fact 0.6: John James McCoy appeared in 368 episodes of Law & Order.
+  Fact 0.7: John James McCoy appeared in four episodes of Law & Order: Special Victims Unit.
+  Fact 0.8: John James McCoy appeared in two episodes of Law & Order: Trial by Jury.
+  Fact 0.9: John James McCoy appeared in two episodes of Homicide: Life on the Street.
+  Fact 0.10: John James McCoy appeared in the made-for-TV movie Exiled.
+Sentence 1: Jack McCoy brings 24 years of experience with him as he is appointed executive assistant district attorney by Adam Schiff ( Steven Hill ) in the season - five premiere episode `` Second Opinion '' . He quickly establishes himself as a more unconventional , ruthless litigator than his predecessor , Ben Stone ( Michael Moriarty ) . He often bends -- and sometimes breaks -- trial rules to get convictions , finds tenuous rationales for charging defendants with crimes when the original charges fail to stick , and charges innocent people to frighten them into testifying against others . McCoy is found in contempt of court 80 times for such behavior , and his tactics occasionally incur negative publicity for the DA 's office . His underlying motivation , however , is not , he maintains , corruption , but a sincere desire to see justice done . To that end , McCoy has gone after defendants accused of perverting the justice system to arrange wrongful convictions with just as much determination as his more mundane cases . Such aggressive actions in the courts have earned him the nickname `` Hang ' em High McCoy '' . He has subsequently developed a reputation with both colleagues and rival attorneys , once being referred to as `` the top of the legal food chain '' by a rival attorney during a trial .
+  Fact 1.0: Jack McCoy brings 24 years of experience with him.
+  Fact 1.1: Jack McCoy is appointed executive assistant district attorney by Adam Schiff.
+  Fact 1.2: Adam Schiff is played by Steven Hill.
+  Fact 1.3: Jack McCoy is appointed in the season-five premiere episode 'Second Opinion'.
+  Fact 1.4: Jack McCoy quickly establishes himself as a more unconventional, ruthless litigator than his predecessor.
+  Fact 1.5: Jack McCoy's predecessor is Ben Stone.
+  Fact 1.6: Ben Stone is played by Michael Moriarty.
+  Fact 1.7: Jack McCoy often bends trial rules to get convictions.
+  Fact 1.8: Jack McCoy sometimes breaks trial rules to get convictions.
+  Fact 1.9: Jack McCoy finds tenuous rationales for charging defendants with crimes when the original charges fail to stick.
+  Fact 1.10: Jack McCoy charges innocent people to frighten them into testifying against others.
+  Fact 1.11: Jack McCoy is found in contempt of court 80 times for such behavior.
+  Fact 1.12: Jack McCoy's tactics occasionally incur negative publicity for the DA's office.
+  Fact 1.13: Jack McCoy's underlying motivation is not corruption, he maintains.
+  Fact 1.14: Jack McCoy's underlying motivation is a sincere desire to see justice done.
+  Fact 1.15: Jack McCoy has gone after defendants accused of perverting the justice system to arrange wrongful convictions.
+  Fact 1.16: Jack McCoy pursues those defendants with just as much determination as his more mundane cases.
+  Fact 1.17: Jack McCoy's aggressive actions in the courts have earned him the nickname 'Hang 'em High McCoy'.
+  Fact 1.18: Jack McCoy has developed a reputation with both colleagues and rival attorneys.
+  Fact 1.19: Jack McCoy was once referred to as 'the top of the legal food chain' by a rival attorney during a trial.
+Sentence 2: `` Entitled '' ( onscreen ) : McCoy makes his first appearance on the series . McCoy , working with his assistant , Abbie Carmichael ( Angie Harmon ) , assists the Special Victims Unit in solving a cold case , that Briscoe handled years ago with his former partner , Detective Mike Logan ( Chris Noth ) .
+  Fact 2.0: The episode 'Entitled' (onscreen) is where McCoy makes his first appearance on the series.
+  Fact 2.1: McCoy works with his assistant, Abbie Carmichael.
+  Fact 2.2: Abbie Carmichael is played by Angie Harmon.
+  Fact 2.3: McCoy assists the Special Victims Unit in solving a cold case.
+  Fact 2.4: Briscoe handled the cold case years ago.
+  Fact 2.5: Briscoe handled the cold case with his former partner, Detective Mike Logan.
+  Fact 2.6: Detective Mike Logan is played by Chris Noth.
+
+Retrieved items:
+<item 1>
+Jack McCoy
+Reception ( edit ) Entertainment Weekly television critic Ken Tucker has praised Law & Order 's creator Dick Wolf for putting McCoy at the center of `` some of
+the best episodes of the immortal series ' 19th season . '' Tucker elaborates how the character , riding `` herd over a couple of stubborn young bucks --
+assistant DAs Mike Cutter ( Linus Roache ) and Connie Rubirosa ( Alana de la Garza ) -- McCoy argues , bellows orders , and croaks with outrage when his charges
+disobey his legal advice . ''
+</item 1>
+
+<item 2>
+Jack McCoy
+Law & Order . Season 6 . Episode 23 . May 22 , 1996 . NBC . ^ Jump up to : `` In Vino Veritas '' . Law & Order . Season 17 . Episode 17 . November 3 , 2006 .
+NBC . Jump up ^ `` Wannabe '' . Law & Order . Season 5 . Episode 16 . March 15 , 1995 . NBC . Jump up ^ `` Patient Zero '' . Law & Order . Season 14 . Episode 3
+. October 8 , 2003 . NBC . Jump up ^ `` Fame '' . Law & Order . Season 17 . Episode 1 . September 22 , 2006 . NBC . Jump up ^ `` Excalibur '' . Law & Order .
+Season 18 . Episode 18 . May 21 , 2008 . NBC . Jump up ^ `` Loco Parentis '' . Law & Order . Season 10 . Episode 10 . January 5 , 2000 . NBC .
+</item 2>
+
+<item 3>
+Jack McCoy
+District attorney 's office timeline ( edit ) Time period Executive assistant district attorney ( EADA ) Assistant district attorney ( ADA ) District attorney (
+DA ) 1994 -- 1996 Jack McCoy Claire Kincaid Adam Schiff 1996 -- 1998 Jamie Ross 1998 -- 2000 Abbie Carmichael 2000 -- 2001 Nora Lewin 2001 -- 2002 Serena
+Southerlyn 2002 -- 2005 Arthur Branch 2005 -- 2006 Alexandra Borgia 2006 -- 2007 Connie Rubirosa 2008 -- 2010 Michael Cutter Jack McCoy Appearances on other TV
+shows ( edit ) Homicide : Life on the Street Season 6 Episode 5 : `` Baby ,
+</item 3>
+
+<item 4>
+Jack McCoy
+By the end of the 18th season , however , McCoy discovers that Shalvoy is involved in a prostitution scandal that is tied to a murder case he is prosecuting .
+Angered and disappointed , McCoy orders Cutter to start investigating Shalvoy , who retaliates by lending his support to McCoy 's opponent in the election . In
+the last episode of season 19 , `` The Drowned and the Saved '' , Cutter uncovers evidence that Shalvoy tried to buy a Senate seat for his wife , and threatens
+him with public disgrace unless he resigns . McCoy 's opponent suddenly has no patron , giving McCoy good prospects for victory . In the opening episode of
+season 20 , McCoy was revealed to have won the election ; he serves as DA for the remainder of this final season of Law & Order . Personal Life ( edit ) While
+he is a brilliant legal mind , McCoy has more than a few personal demons . He was abused by his father , an Irish Chicago policeman who had also beat Jack 's
+mother , and who eventually died of cancer . McCoy says that his determination and unyielding work ethic are a byproduct of having been harshly punished by his
+father for losing at anything .
+</item 4>
+
+<item 5>
+Jack McCoy
+His underlying motivation , however , is not , he maintains , corruption , but a sincere desire to see justice done . To that end , McCoy has gone after
+defendants accused of perverting the justice system to arrange wrongful convictions with just as much determination as his more mundane cases . Such aggressive
+actions in the courts have earned him the nickname `` Hang ' em High McCoy '' . He has subsequently developed a reputation with both colleagues and rival
+attorneys , once being referred to as `` the top of the legal food chain '' by a rival attorney during a trial . Following the 17th season ( 2006 -- 2007 ) ,
+Jack McCoy was appointed interim district attorney , taking over from Arthur Branch ( Fred Thompson ) . McCoy 's appearance on Law & Order : Special Victims
+Unit on the November 13 , 2007 , episode `` Blinded '' , marked his first appearance in the Law & Order universe as district attorney . The replacement for his
+former position is Michael Cutter ( Linus Roache ) , a prosecutor with a penchant for recklessness not unlike McCoy 's own in his younger days . This
+occasionally presents political difficulties for the new district attorney .
+</item 5>
+
+<item 6>
+Jack McCoy
+1 Season one 4.1. 2 Season two 4.2 As district attorney 4.2. 1 Season 9 4.2. 2 Season 10 4.2. 3 Season 11 4.2. 4 Season 12 4.2. 5 Season 13 4.2. 6 Season 19 5
+Reception 6 District attorney 's office timeline 7 Appearances on other TV shows 8 References Character overview ( edit ) Jack McCoy brings 24 years of
+experience with him as he is appointed executive assistant district attorney by Adam Schiff ( Steven Hill ) in the season - five premiere episode `` Second
+Opinion '' . He quickly establishes himself as a more unconventional , ruthless litigator than his predecessor , Ben Stone ( Michael Moriarty ) . He often bends
+-- and sometimes breaks -- trial rules to get convictions , finds tenuous rationales for charging defendants with crimes when the original charges fail to stick
+, and charges innocent people to frighten them into testifying against others . McCoy is found in contempt of court 80 times for such behavior , and his tactics
+occasionally incur negative publicity for the DA 's office .
+</item 6>
+
+<item 7>
+Graph query row:
+person: Jack McCoy
+relationship: RELATED_TO
+work: Second Opinion
+date: September 21, 1994
+</item 7>
+
+<item 8>
+Jack McCoy
+He was created by Michael S. Chernuchin and portrayed by Sam Waterston from 1994 until the end of the series in 2010 . He is the second - longest tenured
+character on the show ( 16 seasons ) , after Lt. Anita Van Buren ( 17 seasons ; portrayed by S. Epatha Merkerson ) . He appeared in 368 episodes of Law & Order
+, four episodes of Law & Order : Special Victims Unit , two episodes of Law & Order : Trial by Jury , two episodes of Homicide : Life on the Street , and the
+made - for - TV movie Exiled . Waterston 's performance as McCoy on the New York - based series was so popular that it resulted in him being declared a ``
+Living Landmark '' by the New York Landmarks Conservancy , along with fellow longtime series cast member Jerry Orbach ( who portrayed the popular police
+detective Lennie Briscoe for 12 years ) . Contents ( hide ) 1 Character overview 2 Personal life 3 Notable conflicts 4 In Law & Order : Special Victims Unit 4.1
+As executive assistant district attorney 4.1.
+</item 8>
+
+<item 9>
+Jack McCoy
+Although McCoy insists that he is a prosecutor , and not a politician , McCoy replaces Branch as the DA immediately thereafter . In Law & Order : Special
+Victims Unit ( edit ) McCoy has appeared in four episodes of Law & Order : Special Victims Unit ; however , he is often referred to in the series , and his
+actions affect the ADAs working with the Special Victims Unit . As executive assistant district attorney ( edit ) Season one ( edit ) `` Entitled '' ( onscreen
+) : McCoy makes his first appearance on the series . McCoy , working with his assistant , Abbie Carmichael ( Angie Harmon ) , assists the Special Victims Unit
+in solving a cold case , that Briscoe handled years ago with his former partner , Detective Mike Logan ( Chris Noth ) . Season two ( edit ) `` Baby Killer '' (
+mention ) : After a murder intertwines with ADA Alexandra Cabot 's ( Stephanie March ) sex - crimes case , Chief Assistant District Attorney Charlie Phillips (
+Jeffrey DeMunn ) , Lewin 's second in command , hands the murder case to McCoy . As district attorney ( edit ) Season 9 ( edit ) `` Blinded '' ( onscreen ) :
+McCoy had been promoted to district attorney .
+</item 9>
+
+<item 10>
+Jack McCoy
+Jack McCoy - wikipedia Jack McCoy Jump to : navigation , search For the politician and labor activist , see Jack E. McCoy . Jack McCoy Law & Order character
+First appearance `` Second Opinion '' `` Entitled '' ( SVU ) Last appearance `` Rubber Room '' ( Law & Order ) `` The Undiscovered Country '' ( SVU ) Portrayed
+by Sam Waterston Time on show 1994 -- 2010 , 2018 Seasons 5 , 6 , 7 , 8 , 9 , 10 , 11 , 12 , 13 , 14 , 15 , 16 , 17 , 18 , 19 , 20 Credited appearances 368
+episodes ( L&O ) 2 episodes ( HLOTS ) 4 episodes ( SVU ) 2 episodes ( TBJ ) 376 episodes ( total ) Preceded by Ben Stone ( EADA ) Arthur Branch ( DA ) ( L&O )
+Succeeded by Michael Cutter ( EADA ) Information Family Rebecca McCoy ( daughter ) John James McCoy is a fictional character in the television drama Law & Order
+.
+</item 10>
+=== END ITEM id=21b0ce01bec4fc0f ===

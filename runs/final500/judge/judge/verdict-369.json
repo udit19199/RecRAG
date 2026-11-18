@@ -1,0 +1,73 @@
+[
+{"id": "6df440d9b04c306d", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "0.5", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "But “all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []},
+{"fact": "2.6", "status": "missing", "evidence": []},
+{"fact": "2.7", "status": "missing", "evidence": []}
+]},
+{"id": "3d21cb9572dc2850", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "But “all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []},
+{"fact": "3.2", "status": "missing", "evidence": []},
+{"fact": "3.3", "status": "missing", "evidence": []}
+]},
+{"id": "c0ee55fa15896256", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "the generation of players and leaders that will call time on their international careers at week’s end"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]}
+]},
+{"id": "5fd1445bfbf7be68", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []}
+]},
+{"id": "9c469e10f85fe258", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []}
+]},
+{"id": "28b141b111bd904c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "In addition, Beeper Mini will be free for the time being given the unstable nature of Beeper’s status and Apple’s attempts at shutting it down."}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "In addition, Beeper Mini will be free for the time being given the unstable nature of Beeper’s status and Apple’s attempts at shutting it down."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "In addition, Beeper Mini will be free for the time being given the unstable nature of Beeper’s status and Apple’s attempts at shutting it down."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "a long weekend that saw Apple putting an end to Beeper’s services, claiming it was a security risk."}, {"item": 5, "quote": "Apple’s attempts at shutting it down."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "In addition, Beeper Mini will be free for the time being given the unstable nature of Beeper’s status and Apple’s attempts at shutting it down."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "Beeper Mini was made possible because the team behind the app has managed to reverse-engineer the iMessage protocol, they say."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "Beeper Mini was made possible because the team behind the app has managed to reverse-engineer the iMessage protocol, they say."}]}
+]}
+]

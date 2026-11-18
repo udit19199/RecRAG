@@ -1,0 +1,66 @@
+[
+ {"id": "5926634737519636306", "sentences": [["A new season of The Little Couple premiered on September 19, 2017."]]},
+ {"id": "5a70f9335542994082a3e46a", "sentences": [
+   ["Essence is a monthly magazine.", "Essence is for African American women.", "Essence is aimed at women between the ages of 18 and 49."],
+   ["ALT for Damerne is a women's magazine.", "ALT for Damerne means 'All for the Ladies' in English.", "ALT for Damerne is written in the Danish language.", "ALT for Damerne is a weekly magazine.", "ALT for Damerne is published in Copenhagen, Denmark."]
+ ]},
+ {"id": "-3553072210127301492", "sentences": [[
+   "Geoffrey Dyson Palmer, OBE, was born on 4 June 1927.",
+   "Geoffrey Dyson Palmer holds the OBE honour.",
+   "Geoffrey Dyson Palmer is an English actor.",
+   "Geoffrey Dyson Palmer is known for his roles in British television sitcoms.",
+   "Geoffrey Dyson Palmer played Jimmy Anderson in The Fall and Rise of Reginald Perrin, which aired from 1976 to 1979.",
+   "Geoffrey Dyson Palmer played Ben Parkinson in Butterflies, which aired from 1978 to 1983.",
+   "Geoffrey Dyson Palmer played Lionel Hardcastle in As Time Goes By, which aired from 1992 to 2005.",
+   "Geoffrey Dyson Palmer's film appearances include A Fish Called Wanda (1988).",
+   "Geoffrey Dyson Palmer's film appearances include The Madness of King George (1994).",
+   "Geoffrey Dyson Palmer's film appearances include Mrs. Brown (1997).",
+   "Geoffrey Dyson Palmer's film appearances include Tomorrow Never Dies (1997)."
+ ]]},
+ {"id": "5a8a265b5542992d82986ecc", "sentences": [
+   ["Frederick King Keller was born in 1954.", "Frederick King Keller was born in Buffalo, New York.", "Frederick King Keller is an American director.", "Frederick King Keller is an American producer.", "Frederick King Keller is an American screenwriter.", "Frederick King Keller works in film and television."],
+   ["Ian Schneider was born on October 3, 1992.", "Ian Schneider is an independent American film director.", "Ian Schneider is an American screenwriter."]
+ ]},
+ {"id": "multihop-rag-346", "sentences": [
+   ["The company's approach raises concerns regarding the GDPR.", "Pachl further noted this."],
+   ["Meta wants to shift back to the app stores the burden of monitoring teens' social media usage.", "Meta wants to shift back to parents the burden of monitoring teens' social media usage."],
+   ["Al Saadi said that her frustration with Meta is common among Palestinians.", "Al Saadi said that her frustration with Meta is common among Palestinians in occupied territories.", "Al Saadi said that her frustration with Meta is common among Palestinians across the diaspora."]
+ ]},
+ {"id": "5a7b63eb55429931da12ca7e", "sentences": [
+   ["Paul Clyne was the District Attorney of Albany County, New York.", "Paul Clyne held this office from January 2001.", "Paul Clyne held this office through December 2004."],
+   ["P. David Soares was born on October 26, 1969.", "P. David Soares was born in Brava, Cape Verde.", "P. David Soares is the District Attorney of Albany County, New York."]
+ ]},
+ {"id": "-5097374528538276327", "sentences": [[
+   "The Pan-American Highway is a network of roads.",
+   "The Pan-American Highway measures about 30,000 kilometres (19,000 mi) in total length.",
+   "The Pan-American Highway has a rainforest break of approximately 160 km (100 mi).",
+   "The rainforest break of the Pan-American Highway is called the Darién Gap.",
+   "Apart from the Darién Gap, the Pan-American Highway links almost all of the Pacific coastal countries of the Americas.",
+   "The Pan-American Highway links those countries in a connected highway system.",
+   "According to Guinness World Records, the Pan-American Highway is the world's longest 'motorable road'.",
+   "Because of the Darién Gap, it is not possible to cross between South America and Central America with conventional highway vehicles.",
+   "Without an all-terrain vehicle, it is necessary to go around the terrestrial stretch of the Darién Gap by sea."
+ ]]},
+ {"id": "multihop-rag-1154", "sentences": [
+   ["Climate change is one of the major sources of Gen Z's distress."],
+   ["We need to improve our understanding of the drivers of sea surface temperature patterns.", "Improving the understanding of drivers of sea surface temperature patterns is the first step.", "One driver of sea surface temperature patterns is decadal coupled variability.", "Another driver is the pace of ocean heat uptake.", "Another driver is the spatial structure of ocean heat uptake.", "Another driver is forcing by aerosols.", "Another driver is forcing by greenhouse gases.", "Another driver is forcing by volcanoes.", "We need to improve our understanding of the relative timing of these drivers."]
+ ]},
+ {"id": "5ab913205542991b5579f0e0", "sentences": [
+   ["The Eleanor and John Y. Brown Jr. Foundation gave a grant in 1972.", "The 1972 grant from the Eleanor and John Y. Brown Jr. Foundation led to the construction of the current facility."],
+   ["The 55th governor of Kentucky served from 1979 to 1983.", "The 55th governor of Kentucky may be best known for building Kentucky Fried Chicken (KFC) into a multimillion-dollar restaurant chain."]
+ ]},
+ {"id": "2112011235189339436", "sentences": [[
+   "The Uralic languages form a language family.",
+   "The Uralic languages are sometimes called Uralian languages.",
+   "The Uralic language family has 38 languages.",
+   "The Uralic languages are spoken by approximately 25 million people.",
+   "The Uralic languages are spoken predominantly in Northern Eurasia.",
+   "Hungarian, Finnish, and Estonian are the Uralic languages with the most native speakers.",
+   "Hungarian is the official language of Hungary.",
+   "Finnish is the official language of Finland.",
+   "Estonian is the official language of Estonia.",
+   "Hungarian, Finnish, and Estonian are official languages of the European Union.",
+   "Erzya, Moksha, Mari, Udmurt, and Komi are other Uralic languages with significant numbers of speakers.",
+   "Erzya, Moksha, Mari, Udmurt, and Komi are officially recognized languages in various regions of Russia."
+ ]]}
+]

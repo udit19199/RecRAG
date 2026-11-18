@@ -1,0 +1,77 @@
+[
+{"id": "de7d06a9c6f89ed3", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Kevin and his family decide to take a trip to Florida , but Kevin takes the wrong plane and ends up in New York City"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "but Kevin takes the wrong plane and ends up in New York City"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "takes the wrong plane and ends up in New York City"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "He tries to make do with what he has"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "such as using his father 's credit card to stay at the Plaza Hotel"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 8, "quote": "is soon confronted by the Wet Bandits and must outrun and out - prank them again"}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 8, "quote": "must outrun and out - prank them again"}]}
+]},
+{"id": "f6f971f314683a0a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "The current phrasing appears to have originated in the 1910 book Physics by Charles Riborg Mann"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "the 1910 book Physics by Charles Riborg Mann and George Ransom Twiss"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "The question `` When a tree falls in a lonely forest , and no animal is near by to hear it , does it make a sound ? Why ? '' is posed along with many other questions to quiz readers on the contents of the chapter"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "and as such , is posed from a purely physical point of view"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Philosopher George Berkeley , in his work , A Treatise Concerning the Principles of Human Knowledge ( 1710 )"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "proposes , `` But , say you , surely there is nothing easier than for me to imagine trees , for instance , in a park ( ... ) and nobody by to perceive them"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "The objects of sense exist only when they are perceived ; the trees therefore are in the garden ( ... ) no longer than while there is somebody by to perceive them"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "the quote from section 45 is arguably a statement of an objection to Berkeley 's view , and not a proclamation of it"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 3, "quote": "Nevertheless , Berkeley never actually wrote about the question"}]}
+]},
+{"id": "55dab9f2700570fa", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "The Roosevelt Corollary was an addition to the Monroe Doctrine articulated by President Theodore Roosevelt"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "The Roosevelt Corollary was an addition to the Monroe Doctrine articulated by President Theodore Roosevelt in his State of the Union address in 1904"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "articulated by President Theodore Roosevelt in his State of the Union address in 1904"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "in his State of the Union address in 1904 after the Venezuela Crisis of 1902 -- 03"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "The corollary states that the United States will intervene in conflicts between European countries and Latin American countries"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 3, "quote": "The corollary states that the United States will intervene in conflicts between European countries and Latin American countries to enforce legitimate claims of the European powers , rather than having the Europeans press their claims directly"}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 3, "quote": "The corollary states that the United States will intervene in conflicts between European countries and Latin American countries to enforce legitimate claims of the European powers , rather than having the Europeans press their claims directly"}]}
+]},
+{"id": "17786ff876b3fb74", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Climate data for The South Pole Month Jan Feb"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Climate data for The South Pole Month Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec Year Record high ° C ( ° F ) − 14.4 ( 6.1 ) − 20.6 ( − 5.1 ) − 26.7 ( − 16.1 ) − 27.8 ( − 18 ) − 25.1 ( − 13.2 ) − 28.8 ( − 19.8 ) − 33.9 ( − 29 ) − 32.8 ( − 27 ) − 29.3 ( − 20.7 ) − 25.1 ( − 13.2 ) − 18.9 ( − 2 ) − 12.3 ( 9.9 ) − 12.3 ( 9.9 )"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "The highest temperature ever recorded at the Amundsen -- Scott South Pole Station was − 12.3 ° C ( 9.9 ° F )"}]},
+{"fact": "0.3", "status": "contradicted", "evidence": [{"item": 1, "quote": "high temperatures at the South Pole in January average at − 25.9 ° C ( − 15 ° F )"}]},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "0.5", "status": "missing", "evidence": []},
+{"fact": "0.6", "status": "missing", "evidence": []},
+{"fact": "0.7", "status": "stated", "evidence": [{"item": 4, "quote": "Climate data for The South Pole Month Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec Year"}, {"item": 3, "quote": "Average low ° C ( ° F ) − 29.6 ( − 21.3 ) − 43.1 ( − 45.6 ) − 56.8 ( − 70.2 ) − 60.9 ( − 77.6 ) − 61.5 ( − 78.7 ) − 62.8 ( − 81 ) − 63.4 ( − 82.1 ) − 63.2 ( − 81.8 ) − 61.7 ( − 79.1 ) − 54.3 ( − 65.7 ) − 40.1 ( − 40.2 ) − 29.1 ( − 20.4 ) − 52.2 ( − 62 )"}]},
+{"fact": "0.8", "status": "stated", "evidence": [{"item": 4, "quote": "Climate data for The South Pole Month Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec Year"}, {"item": 3, "quote": "Average low ° C ( ° F ) − 29.6 ( − 21.3 ) − 43.1 ( − 45.6 ) − 56.8 ( − 70.2 ) − 60.9 ( − 77.6 ) − 61.5 ( − 78.7 ) − 62.8 ( − 81 ) − 63.4 ( − 82.1 ) − 63.2 ( − 81.8 ) − 61.7 ( − 79.1 ) − 54.3 ( − 65.7 ) − 40.1 ( − 40.2 ) − 29.1 ( − 20.4 ) − 52.2 ( − 62 )"}]},
+{"fact": "0.9", "status": "missing", "evidence": []},
+{"fact": "0.10", "status": "stated", "evidence": [{"item": 5, "quote": "and the lowest was − 82.8 ° C ( − 117.0 ° F ) on June 23 , 1982"}]},
+{"fact": "0.11", "status": "missing", "evidence": []},
+{"fact": "0.12", "status": "missing", "evidence": []},
+{"fact": "0.13", "status": "missing", "evidence": []},
+{"fact": "0.14", "status": "missing", "evidence": []},
+{"fact": "0.15", "status": "missing", "evidence": []},
+{"fact": "0.16", "status": "missing", "evidence": []},
+{"fact": "0.17", "status": "missing", "evidence": []},
+{"fact": "0.18", "status": "missing", "evidence": []},
+{"fact": "0.19", "status": "missing", "evidence": []},
+{"fact": "0.20", "status": "missing", "evidence": []},
+{"fact": "0.21", "status": "stated", "evidence": [{"item": 10, "quote": "Source # 1 : Pogoda.ru.net ( temperatures , 1981 -- 2010 , extremes 1957 -- present )"}]},
+{"fact": "0.22", "status": "stated", "evidence": [{"item": 10, "quote": "Source # 2 : Deutscher Wetterdienst ( precipitation 1957 -- 1988 and sun 1978 -- 1993 )"}]},
+{"fact": "0.23", "status": "stated", "evidence": [{"item": 10, "quote": "Source # 2 : Deutscher Wetterdienst ( precipitation 1957 -- 1988 and sun 1978 -- 1993 ) , NOAA ( snowy days data , 1961 -- 1988 )"}]}
+]},
+{"id": "b5a66b031d5c9c5f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Rigor mortis is very important in meat technology"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "The onset of rigor mortis and its resolution partially determine the tenderness of meat"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "The onset of rigor mortis and its resolution partially determine the tenderness of meat"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "If the post-slaughter meat is immediately chilled to 15 ° C ( 59 ° F ) , a phenomenon known as cold shortening occurs"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "If the post-slaughter meat is immediately chilled to 15 ° C ( 59 ° F ) , a phenomenon known as cold shortening occurs"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 4, "quote": "cold shortening occurs , whereby the muscle sarcomeres shrink to a third of their original length"}]}
+]},
+{"id": "fc423a524ddac3f2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "A regulatory site ( also known as an `` allosteric site '' ) is a site on an allosteric protein"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "A regulatory site ( also known as an `` allosteric site '' ) is a site on an allosteric protein"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "is a site on an allosteric protein to which a modulator molecule ( or allosteric regulator ) binds"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "to which a modulator molecule ( or allosteric regulator ) binds"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "This ligand - binding site on a receptor or enzyme is distinct from the active site"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 5, "quote": "Allosteric modulators alter enzyme activity by binding to the regulatory site"}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 5, "quote": "Some allosteric regulators activate enzymes , while others inhibit them"}]},
+{"fact": "0.7", "status": "stated", "evidence": [{"item": 5, "quote": "Some allosteric regulators activate enzymes , while others inhibit them"}]},
+{"fact": "0.8", "status": "stated", "evidence": [{"item": 5, "quote": "The working hypothesis is that when allosteric regulators bind to the regulatory site , the protein undergoes conformational changes"}]},
+{"fact": "0.9", "status": "stated", "evidence": [{"item": 5, "quote": "The working hypothesis is that when allosteric regulators bind to the regulatory site , the protein undergoes conformational changes which changes the enzyme 's activity"}]}
+]}
+]

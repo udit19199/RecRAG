@@ -1,0 +1,824 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=26c12827323274ff ===
+Gold sentences and facts:
+Sentence 0: Yadava ( Golla )
+  Fact 0.0: The text lists Golla in parentheses after Yadava.
+
+Retrieved items:
+<item 1>
+Andhra Pradesh Legislative Assembly election, 2014
+Prabhakar Chowdary 273 Kalyandurg Hanumatharaya Chowdari 274 Raptadu Paritala Sunitha 275 Madakasira K Eeranna 276 Hindupur Nandamuri Balakrishna 277 Penukonda
+BK Partha Sarathi 278 Puttaparthi Palle Raghunatha Reddy 279 Dharmavaram Suryanarayana 280 Kadiri Chand Basha Chittoor 281 Thamballapalle G. Shankar Yadav TDP
+282 Pileru Chinthala Ramachandra Reddy YSRCP 283 Madanapalle D Thippa Reddy 284 Punganur P Ramachandra Reddy 285 Chandragiri C Bhaskar Reddy 286 Tirupati
+Mannuru Suguna TDP 287 Srikalahasti Bojjala Gopala Krishna Reddy 288 Satyavedu Talari Aditya 289 Nagari R.K.
+</item 1>
+
+<item 2>
+List of Telugu castes
+Overseas Development Institute . p. 12 . Jump up ^ Vaugier - Chatterjee , Anne ( 2012 ) , `` Two Dominant Castes : The Socio - political System in Andhra
+Pradesh '' , in Jaffrelot , Christophe ; Kumar , Sanjay , Rise of the Plebeians ? : The Changing Face of the Indian Legislative Assemblies , Routledge , p. 280
+, ISBN 978 - 1 - 136 - 51662 - 7 Jump up ^ `` Central List Of Other Backward Classes '' . Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=List_of_Telugu_castes&oldid=825334364 '' Categories : Indian castes Telugu society Social groups of Andhra Pradesh
+Social groups of Telangana Hidden categories : Wikipedia indefinitely semi-protected pages Talk View source Contents About Wikipedia తెలుగు Edit links This page
+was last edited on 12 February 2018 , at 20 : 29 . About Wikipedia
+</item 2>
+
+<item 3>
+Andhra Pradesh Legislative Assembly election, 2014
+Kodali Sri Venkateswara Rao YSRCP 192 Kaikalur Kamineni Srinivasa Rao BJP 193 Pedana Kagitha Venkat Rao TDP 194 Machilipatnam Kollu Ravindra 195 Avanigadda
+Mandali Buddha Prasad 196 Pamarru ( SC ) Uppuleti Kalpana YSRCP 197 Penamaluru Bodepudi Prasad TDP 198 Vijayawada West Jallel Khan TDP 199 Vijayawada Central
+Bonda Umamaheswara Rao TDP 200 Vijayawada East Gadde Ramamohan 201 Mylavaram Devineni Uma Maheswara Rao 202 Nandigama ( SC ) Thangirala Sowmya 203 Jaggayyapeta
+Sreeram Rajagopal ( Tataiah ) Guntur 204 Pedakurapadu Sridhar 205 Tadikonda ( SC ) Tenali Sravana Kumar 206 Mangalagiri Aalla Ramakrishna Reddy YSRCP 207
+Ponnuru Dhulipalla Narendra Kumar
+</item 3>
+
+<item 4>
+List of Telugu castes
+List of telugu castes - wikipedia List of telugu castes Jump to : navigation , search Telugu society is nowadays officially classified into a number of groups ,
+some of which align with the concept of caste . Contents ( hide ) 1 Forward Classes 2 Backward Classes 3 See also 4 References Forward Classes Forward castes do
+not qualify for government reservations . Those present in Andhra Pradesh are : Brahmin Kamma Kapu Komati Kshatriya Reddy Velama Some communities within these
+groups are instead classified under other categories , as noted below . Backward Classes Some communities are classified as Other Backward Classes due to social
+, financial , educational , and / or political discrimination . Agnikulakshatriya Palli Vadabalija Bestha Jalari Gangavar Gangaputra Goondla Vanyakulakshtriya
+Vannekapu Vannereddi Pallikapu Pallireddi Nayyala Pattapu Balasanthu , Bahurupi Bandara Budabukkala Rajaka , Chakali ,
+</item 4>
+
+<item 5>
+List of Telugu castes
+Bahurupi Bandara Budabukkala Rajaka , Chakali , Vannar Dasari ( formerly engaged in Bhikshatana ) Dommara Gangiredlavaru Jangam whose traditional occupation is
+begging Jogi Katipapala Korcha , Koracha Medari or Mahendra Mondivaru Mondibanda Banda Nayi - Brahmin ( Mangali , Mangala , Bhajanthri ) Vamsha Raj Pamula
+Pardhi ( Mirshikari , Nirshikari ) Pambala Peddammavandlu , Devaravandlu , Yellammavandlu , Mutyalammavandlu Veeramushti ( Neetikotala ) , Veerabhadreeya
+Valmiki Boya ( Boya Bedar , Kirataka Nishadi , Yellappi , Yellapu / Yellapondlu , Pedda Boya ) Talayari , Chunduvallu Gudala Kanjara - Bhatta Kinthala Kalinga ,
+Buragana Kalinga , Buragam Kalinga , Pandiri Kalinga ,
+</item 5>
+
+<item 6>
+List of Telugu castes
+Mutrasi Tenugollu Munnurukapu ( Telangana ) Nagavasam ( Nagavamsa ) Neeli ( Nelli ) Pollinativelama ( of Srikakulam & Visakhapatnam Districts ) Poosala Passi
+Rangarez or Bhavasara Kshatriya Sadhuchetty Satani ( Chattadasrivaishnava , Chatadi ) Tammali Turupu Kapu and Gajula Kapu of Srikakulam , Vizianagram &
+Visakhapatnam Districts who are subject to social customs of divorce & remarriages among their women Uppara or Sagara Vanjara ( Vanjari ) Yadava ( Golla ) Pala
+- Ekari Ayyaraka Nagaralu Pondara Lodh , Lodha , Lodhi Kurakula Kasi kapadi Gajula Balija ( who are traditionally associated with selling of Bangles ) Vannia
+Vanniar Vannikula - Kshatriya Sarollu Atirasa ( of Polavaram , Gopalapuram , Koyyalagudem , Buttayagudem ,
+</item 6>
+
+<item 7>
+List of Telugu castes
+Puragiri Kshatriya ) Nessi or Kurni Padmasali ( Sali , Saliyan , Pattusali , Senapathulu , Thogata Sali ) Srisayana ( Segidi ) Swakulasali Thogata , Thogati or
+Thogata Veerakshatriya Viswabrahmin or Viswakarma ( Ausula or Kamsali , Kammari , Kanchari , Vadla or Vadra or Vadrangi and Silpi ) Scheduled Castes converts to
+Christianity and their progeny Agaru Arekatika , Katika , Quresh ( Muslim Butchers ) Atagara Bhataraju Chippolu ( Mera ) Gavara Godaba Hatkar Jakkala Jingar
+Kandra Koshti Kachi Surya Balija ( Kalavanthula ) , Ganika Krishnabhalija ( Dasari , Bukka , Bukka Ayavar ) Koppulavelama Mathura Mali ( where they are not
+Scheduled Tribe ) Mudiraj ,
+</item 7>
+
+<item 8>
+Andhra Pradesh Legislative Assembly election, 2014
+( SC ) P David raju 222 Darsi Shiddha Raghava Rao TDP 223 Parchur Y SAMBHA SIVA 224 Addanki G Ravi Kumar YSRCP 225 Chirala A Krishnamohan NP 226
+Santhanuthalapadu ( SC ) Adimulapau Suresh YSRCP 227 Ongole Damacharla Janardhana Rao TDP 228 Kandukur Pothula Ramarao YSRCP 229 Kondapi ( SC ) DBV Swamy TDP
+230 Markapuram Janke Venkata Reddy YSRCP 231 Giddalur Muttumula Ashok Reddy 232 Kanigiri Kadiri Babu rao TDP Nellore 233 Kavali PRATHAP KUMAR REDDY YSRCP 234
+Atmakur Mekapati Gautam Reddy 235 Kovur Polamreddy srinivasulu reddy TDP 236 Nellore City P Anil Kumar Yadav YSRCP 237 Nellore Rural K Srihar Reddy 238
+Sarvepalli Kakani
+</item 8>
+
+<item 9>
+List of Telugu castes
+Buragana Kalinga , Buragam Kalinga , Pandiri Kalinga , Kalinga Kepmare or Reddika Mondepatta Mondipatta Nokkar Pariki Muggula Yata Chopemari Kaikadi
+Joshinandiwala Odde Oddilu Vaddi Vaddelu Mandula Mehtar ( Muslim ) Kunapuli Achukatlavandlu Aryakshatriya , Chittari , Giniyar , Chitrakara , Nakhas Devanga
+Ediga Gowda ( Gamalla , Kalalee ) Goundla Settibalija ( of Visakhapatnam , East Godavari , West Godavari and Krishna District ) Dudekula , Laddaf , Pinjari or
+Noorbash Gandla , Telikula , Devathilakula Jandra Kummara or Kulala or Salivahana Karikalabhakthulu Kaikolan or Kaikola ( Sengundam or Sengunther )
+Karnabhakthulu Kuruba or Kuruma Nagavaddilu Neelakanthi Patkar ( Khatri ) Perika ( Perike Balija ,
+</item 9>
+
+<item 10>
+List of Telugu castes
+Gopalapuram , Koyyalagudem , Buttayagudem , Chagallu Mandals of West Godavari Distt. and Devipattanam , Korukonda and Gokavaram Mandals of East Godavari
+District ) Patra Sikligar Siddula Gudia / Gudiya ( confined to Srikakulam , Vizianagaram and Visakhapatnam Districts only ) Kurmi ( confined to Telangana Region
+and also Krishna District only ) Budubunjala / Bhunjwa / Bhadbhunja ( confined to Hyderabad and Ranga Reddy Districts only ) Lakkamari Kapu ( confined to
+Telangana Region only ) See also Scheduled Castes and Scheduled Tribes List of Scheduled Tribes in India # Andhra Pradesh References Jump up ^ Srinivasulu , K.
+`` Caste , Class and Social Articulation in Andhra Pradesh : Mapping Differential Regional Trajectories '' ( PDF ) . Overseas Development Institute . p. 12 .
+</item 10>
+=== END ITEM id=26c12827323274ff ===
+
+=== ITEM id=67b9bc1660e86bd8 ===
+Gold sentences and facts:
+Sentence 0: It was suggested that the interior of the 45 metre ( 147 ft ) wide dome should be covered with a mosaic decoration to make the most of the available light coming through the circular windows of the drum and through the lantern . Brunelleschi had proposed the vault to glimmer with resplendent gold , but his death in 1446 put an end to this project , and the walls of the dome were whitewashed . Grand Duke Cosimo I de ' Medici decided to have the dome painted with a representation of The Last Judgment . This enormous work , 3,600 metres2 ( 38 750 ft2 ) of painted surface , was started in 1568 by Giorgio Vasari and Federico Zuccari and would last till 1579 . The upper portion , near the lantern , representing The 24 Elders of Apoc. 4 was finished by Vasari before his death in 1574 . Federico Zuccari and a number of collaborators , such as Domenico Cresti , finished the other portions : ( from top to bottom ) Choirs of Angels ; Christ , Mary and Saints ; Virtues , Gifts of the Holy Spirit and Beatitudes ; and at the bottom of the cupola : Capital Sins and Hell . These frescoes are considered Zuccari 's greatest work . But the quality of the work is uneven because of the input of different artists and the different techniques . Vasari had used true fresco , while Zuccari had painted in secco . During the restoration work , which ended in 1995 , the entire pictorial cycle of The Last Judgment was photographed with specially designed equipment and all the information collected in a catalogue . All the restoration information along with reconstructed images of the frescos were stored and managed in the Thesaurus Florentinus computer system .
+  Fact 0.0: It was suggested that the interior of the 45 metre (147 ft) wide dome should be covered with a mosaic decoration.
+  Fact 0.1: The mosaic decoration was suggested to make the most of the available light coming through the circular windows of the drum.
+  Fact 0.2: The mosaic decoration was suggested to make the most of the available light coming through the lantern.
+  Fact 0.3: Brunelleschi had proposed that the vault glimmer with resplendent gold.
+  Fact 0.4: Brunelleschi died in 1446.
+  Fact 0.5: Brunelleschi's death in 1446 put an end to the gold vault project.
+  Fact 0.6: The walls of the dome were whitewashed.
+  Fact 0.7: Grand Duke Cosimo I de' Medici decided to have the dome painted with a representation of The Last Judgment.
+  Fact 0.8: The painting of The Last Judgment covers 3,600 square metres (38,750 square feet) of painted surface.
+  Fact 0.9: The painting of The Last Judgment was started in 1568 by Giorgio Vasari and Federico Zuccari.
+  Fact 0.10: The painting of The Last Judgment would last until 1579.
+  Fact 0.11: The upper portion of the painting, near the lantern, represents The 24 Elders of Apoc. 4.
+  Fact 0.12: Vasari finished the upper portion of the painting before his death in 1574.
+  Fact 0.13: Federico Zuccari and a number of collaborators, such as Domenico Cresti, finished the other portions of the painting.
+  Fact 0.14: The other portions, from top to bottom, are Choirs of Angels; Christ, Mary and Saints; Virtues, Gifts of the Holy Spirit and Beatitudes; and at the bottom of the cupola, Capital Sins and Hell.
+  Fact 0.15: The frescoes are considered Zuccari's greatest work.
+  Fact 0.16: The quality of the work is uneven because of the input of different artists and the different techniques.
+  Fact 0.17: Vasari had used true fresco.
+  Fact 0.18: Zuccari had painted in secco.
+  Fact 0.19: The restoration work ended in 1995.
+  Fact 0.20: During the restoration work, the entire pictorial cycle of The Last Judgment was photographed with specially designed equipment.
+  Fact 0.21: All the information collected during the restoration was put into a catalogue.
+  Fact 0.22: All the restoration information, along with reconstructed images of the frescos, was stored and managed in the Thesaurus Florentinus computer system.
+
+Retrieved items:
+<item 1>
+Florence Cathedral
+Grand Duke Cosimo I de ' Medici decided to have the dome painted with a representation of The Last Judgment . This enormous work , 3,600 metres2 ( 38 750 ft2 )
+of painted surface , was started in 1568 by Giorgio Vasari and Federico Zuccari and would last till 1579 . The upper portion , near the lantern , representing
+The 24 Elders of Apoc. 4 was finished by Vasari before his death in 1574 . Federico Zuccari and a number of collaborators , such as Domenico Cresti , finished
+the other portions : ( from top to bottom ) Choirs of Angels ; Christ , Mary and Saints ; Virtues , Gifts of the Holy Spirit and Beatitudes ; and at the bottom
+of the cupola : Capital Sins and Hell . These frescoes are considered Zuccari 's greatest work . But the quality of the work is uneven because of the input of
+different artists and the different techniques . Vasari had used true fresco , while Zuccari had painted in secco .
+</item 1>
+
+<item 2>
+Florence Cathedral
+This timetable was used until the 18th century . This is one of the few clocks from that time that still exist and are in working order . The church is
+particularly notable for its 44 stained glass windows , the largest undertaking of this kind in Italy in the 14th and 15th century . The windows in the aisles
+and in the transept depict saints from the Old and the New Testament , while the circular windows in the drum of the dome or above the entrance depict Christ
+and Mary . They are the work of the greatest Florentine artists of their times , such as Donatello , Lorenzo Ghiberti , Paolo Uccello and Andrea del Castagno .
+Christ crowning Mary as Queen , the stained - glass circular window above the clock , with a rich range of coloring , was designed by Gaddo Gaddi in the early
+14th century . Donatello designed the stained - glass window ( Coronation of the Virgin ) in the drum of the dome ( the only one that can be seen from the nave
+) .
+</item 2>
+
+<item 3>
+Florence Cathedral
+This fresco , transferred on canvas in the 19th century , in the same style as the previous one , is painted in a color resembling marble . However , it is more
+richly decorated and gives more the impression of movement . Both frescoes portray the condottieri as heroic figures riding triumphantly . Both painters had
+problems when applying in painting the new rules of perspective to foreshortening : they used two unifying points , one for the horse and one for the pedestal ,
+instead a single unifying point . Busts of Giotto ( by Benedetto da Maiano ) , Brunelleschi ( by Buggiano - 1447 ) , Marsilio Ficino , and Antonio Squarcialupi
+( a most famous organist ) . These busts all date from the 15th and the 16th centuries . Above the main door is the colossal clock face with fresco portraits of
+four Prophets or Evangelists by Paolo Uccello ( 1443 ) . This one - handed liturgical clock shows the 24 hours of the hora italica ( Italian time ) , a period
+of time ending with sunset at 24 hours .
+</item 3>
+
+<item 4>
+Florence Cathedral
+Unsourced material may be challenged and removed . ( July 2012 ) ( Learn how and when to remove this template message ) Interior of the cathedral Huge clock
+decorated by Paolo Uccello . Dante and the Divine Comedy . Trompe l'oeil of Niccolò da Tolentino . Vasari 's fresco begun in 1568 , and completed by Federico
+Zuccari in 1579 . Detail under the dome . The Last Judgement ( detail ) under the dome . Tomb of Antonio d'Orso by Tino da Camaino . The Gothic interior is vast
+and gives an empty impression . The relative bareness of the church corresponds with the austerity of religious life , as preached by Girolamo Savonarola . Many
+decorations in the church have been lost in the course of time , or have been transferred to the Museum Opera del Duomo , such as the magnificent cantorial
+pulpits ( the singing galleries for the choristers ) of Luca della Robbia and Donatello .
+</item 4>
+
+<item 5>
+Florence Cathedral
+The two main competitors were two master goldsmiths , Lorenzo Ghiberti and Filippo Brunelleschi , the latter of whom was supported by Cosimo de Medici .
+Ghiberti had been the winner of a competition for a pair of bronze doors for the Baptistery in 1401 and lifelong competition between the two remained sharp .
+Brunelleschi won and received the commission . Ghiberti , appointed coadjutator , drew a salary equal to Brunelleschi 's and , though neither was awarded the
+announced prize of 200 florins , was promised equal credit , although he spent most of his time on other projects . When Brunelleschi became ill , or feigned
+illness , the project was briefly in the hands of Ghiberti . But Ghiberti soon had to admit that the whole project was beyond him . In 1423 , Brunelleschi was
+back in charge and took over sole responsibility . Work started on the dome in 1420 and was completed in 1436 . The cathedral was consecrated by Pope Eugene IV
+on March 25 , 1436 , ( the first day of the year according to the Florentine calendar ) .
+</item 5>
+
+<item 6>
+Florence Cathedral
+Above this shrine is the painting Last Supper by the lesser - known Giovanni Balducci . There was also a glass - paste mosaic panel The Bust of Saint Zanobius
+by the 16th - century miniaturist Monte di Giovanni , but it is now on display in the Museum Opera del Duomo . Many decorations date from the 16th - century
+patronage of the Grand Dukes , such as the pavement in colored marble , attributed to Baccio d'Agnolo and Francesco da Sangallo ( 1520 -- 26 ) . Some pieces of
+marble from the façade were used , topside down , in the flooring ( as was shown by the restoration of the floor after the 1966 flooding ) . It was suggested
+that the interior of the 45 metre ( 147 ft ) wide dome should be covered with a mosaic decoration to make the most of the available light coming through the
+circular windows of the drum and through the lantern . Brunelleschi had proposed the vault to glimmer with resplendent gold , but his death in 1446 put an end
+to this project , and the walls of the dome were whitewashed .
+</item 6>
+
+<item 7>
+Florence Cathedral
+As this cathedral was built with funds from the public , some important works of art in this church honour illustrious men and military leaders of Florence :
+Lorenzo Ghiberti had a large artistic impact on the cathedral . Ghiberti worked with Filippo Brunelleschi on the cathedral for eighteen years and had a large
+number of projects on almost the whole east end . Some of his works were the stained glass designs , the bronze shrine of Saint Zenobius and marble revetments
+on the outside of the cathedral . Dante Before the City of Florence by Domenico di Michelino ( 1465 ) . This painting is especially interesting because it shows
+us , apart from scenes of the Divine Comedy , a view on Florence in 1465 , a Florence such as Dante himself could not have seen in his time . Funerary Monument
+to Sir John Hawkwood by Paolo Uccello ( 1436 ) . This almost monochrome fresco , transferred to canvas in the 19th century , is painted in terra verde , a color
+closest to the patina of bronze . Equestrian statue of Niccolò da Tolentino by Andrea del Castagno ( 1456 ) .
+</item 7>
+
+<item 8>
+Florence Cathedral
+It was the first ' octagonal ' dome in history to be built without a temporary wooden supporting frame . It was one of the most impressive projects of the
+Renaissance . During the consecration in 1436 , Guillaume Dufay 's motet Nuper rosarum flores was performed . The structure of this motet was strongly
+influenced by the structure of the dome . The Duomo and Baptistery of St. John from Piazza del Duomo The decoration of the exterior of the cathedral , begun in
+the 14th century , was not completed until 1887 , when the polychrome marble façade was completed with the design of Emilio De Fabris . The floor of the church
+was relaid in marble tiles in the 16th century . The exterior walls are faced in alternate vertical and horizontal bands of polychrome marble from Carrara (
+white ) , Prato ( green ) , Siena ( red ) , Lavenza and a few other places . These marble bands had to repeat the already existing bands on the walls of the
+earlier adjacent baptistery the Battistero di San Giovanni and Giotto 's Bell Tower .
+</item 8>
+
+<item 9>
+Florence Cathedral
+Vasari had used true fresco , while Zuccari had painted in secco . During the restoration work , which ended in 1995 , the entire pictorial cycle of The Last
+Judgment was photographed with specially designed equipment and all the information collected in a catalogue . All the restoration information along with
+reconstructed images of the frescos were stored and managed in the Thesaurus Florentinus computer system . Crypt ( edit ) Tomb of Filippo Brunelleschi . The
+cathedral underwent difficult excavations between 1965 and 1974 . The archaeological history of this huge area was reconstructed through the work of Dr.
+Franklin Toker : remains of Roman houses , an early Christian pavement , ruins of the former cathedral of Santa Reparata and successive enlargements of this
+church . Close to the entrance , in the part of the crypt open to the public , is the tomb of Brunelleschi . While its location is prominent , the actual tomb
+is simple and humble . That the architect was permitted such a prestigious burial place is proof of the high esteem he was given by the Florentines .
+</item 9>
+
+<item 10>
+Florence Cathedral
+He was declared the winner over his competitors Lorenzo Ghiberti and Antonio Ciaccheri . His design ( now on display in the Museum Opera del Duomo ) was for an
+octagonal lantern with eight radiating buttresses and eight high arched windows . Construction of the lantern was begun a few months before his death in 1446 .
+Then , for 15 years , little progress was possible , due to alterations by several architects . The lantern was finally completed by Brunelleschi 's friend
+Michelozzo in 1461 . The conical roof was crowned with a gilt copper ball and cross , containing holy relics , by Verrocchio in 1469 . This brings the total
+height of the dome and lantern to 114.5 meters ( 375 ft ) . This copper ball was struck by lightning on 17 July 1600 and fell down . It was replaced by an even
+larger one two years later . Cupola of the Dome The commission for this bronze ball ( atop the lantern ) went to the sculptor Andrea del Verrocchio , in whose
+workshop there was at this time a young apprentice named Leonardo da Vinci .
+</item 10>
+=== END ITEM id=67b9bc1660e86bd8 ===
+
+=== ITEM id=6cb74155cd364e59 ===
+Gold sentences and facts:
+Sentence 0: The Director of the United States Mint is the head of the United States Mint . The position is currently vacant . Since January 20 , 2017 , the senior career official at the Mint has been Acting Principal Deputy Director David Motl .
+  Fact 0.0: The Director of the United States Mint is the head of the United States Mint.
+  Fact 0.1: The position of Director of the United States Mint is currently vacant.
+  Fact 0.2: Since January 20, 2017, the senior career official at the Mint has been David Motl.
+  Fact 0.3: David Motl is the Acting Principal Deputy Director.
+Sentence 1: Name Assumed Office Left Office President Appointed By David Rittenhouse April 1792 June 1795 George Washington Henry William de Saussure July 1795 October 1795 Elias Boudinot October 1795 July 1805 Robert Patterson January 1806 July 1824 Thomas Jefferson Samuel Moore July 1824 July 1835 James Monroe Robert M. Patterson May 1835 July 1851 Andrew Jackson George Nicholas Eckert July 1851 April 1853 Millard Fillmore Thomas M. Pettit April 1853 May 1853 Franklin Pierce James Ross Snowden June 1853 May 1861 James Pollock May 1861 September 1866 Abraham Lincoln William Millward October 1866 April 1867 Andrew Johnson Henry Linderman April 1867 May 1869 James Pollock May 1869 March 1873 Ulysses S. Grant Henry Linderman April 1873 December 1878 Horatio C. Burchard February 1879 June 1885 Rutherford B. Hayes James P. Kimball July 1885 October 1889 Grover Cleveland Edward O. Leech October 1889 May 1893 Benjamin Harrison Robert E. Preston November 1893 February 1898 Grover Cleveland George E. Roberts February 1898 July 1907 William McKinley Frank A. Leach September 1907 August 1909 Theodore Roosevelt A. Piatt Andrew November 1909 June 1910 William Howard Taft George E. Roberts July 1910 November 1914 Robert W. Woolley March 1915 July 1916 Woodrow Wilson F.H. von Engelken September 1916 March 1917 Raymond T. Baker March 1917 March 1922 Frank Edgar Scobey March 1922 September 1923 Warren G. Harding Robert J. Grant November 1923 May 1933 Calvin Coolidge Nellie Tayloe Ross May 1933 April 1953 Franklin D. Roosevelt William H. Brett July 1954 January 1961 Dwight D. Eisenhower Eva Adams October 1961 August 1969 John F. Kennedy Mary Brooks September 1969 February 1977 Richard Nixon Stella Hackel Sims November 1977 April 1981 Jimmy Carter Donna Pope July 1981 August 1991 Ronald Reagan David J. Ryder September 1992 November 1993 George H.W. Bush Philip N. Diehl June 1994 March 2000 Bill Clinton Jay W. Johnson May 2000 August 2001 Henrietta H. Fore August 2001 August 2005 George W. Bush Edmund C. Moy September 2006 January 2011 David J. Ryder April 2018 Incumbent Donald Trump
+  Fact 1.0: David Rittenhouse held the office of Director of the Mint from April 1792 to June 1795, appointed by George Washington.
+  Fact 1.1: Henry William de Saussure held the office from July 1795 to October 1795.
+  Fact 1.2: Elias Boudinot held the office from October 1795 to July 1805.
+  Fact 1.3: Robert Patterson held the office from January 1806 to July 1824, appointed by Thomas Jefferson.
+  Fact 1.4: Samuel Moore held the office from July 1824 to July 1835, appointed by James Monroe.
+  Fact 1.5: Robert M. Patterson held the office from May 1835 to July 1851, appointed by Andrew Jackson.
+  Fact 1.6: George Nicholas Eckert held the office from July 1851 to April 1853, appointed by Millard Fillmore.
+  Fact 1.7: Thomas M. Pettit held the office from April 1853 to May 1853, appointed by Franklin Pierce.
+  Fact 1.8: James Ross Snowden held the office from June 1853 to May 1861.
+  Fact 1.9: James Pollock held the office from May 1861 to September 1866, appointed by Abraham Lincoln.
+  Fact 1.10: William Millward held the office from October 1866 to April 1867, appointed by Andrew Johnson.
+  Fact 1.11: Henry Linderman held the office from April 1867 to May 1869.
+  Fact 1.12: James Pollock held the office from May 1869 to March 1873, appointed by Ulysses S. Grant.
+  Fact 1.13: Henry Linderman held the office from April 1873 to December 1878.
+  Fact 1.14: Horatio C. Burchard held the office from February 1879 to June 1885, appointed by Rutherford B. Hayes.
+  Fact 1.15: James P. Kimball held the office from July 1885 to October 1889, appointed by Grover Cleveland.
+  Fact 1.16: Edward O. Leech held the office from October 1889 to May 1893, appointed by Benjamin Harrison.
+  Fact 1.17: Robert E. Preston held the office from November 1893 to February 1898, appointed by Grover Cleveland.
+  Fact 1.18: George E. Roberts held the office from February 1898 to July 1907, appointed by William McKinley.
+  Fact 1.19: Frank A. Leach held the office from September 1907 to August 1909, appointed by Theodore Roosevelt.
+  Fact 1.20: A. Piatt Andrew held the office from November 1909 to June 1910.
+  Fact 1.21: George E. Roberts held the office from July 1910 to November 1914, appointed by William Howard Taft.
+  Fact 1.22: Robert W. Woolley held the office from March 1915 to July 1916, appointed by Woodrow Wilson.
+  Fact 1.23: F.H. von Engelken held the office from September 1916 to March 1917.
+  Fact 1.24: Raymond T. Baker held the office from March 1917 to March 1922.
+  Fact 1.25: Frank Edgar Scobey held the office from March 1922 to September 1923, appointed by Warren G. Harding.
+  Fact 1.26: Robert J. Grant held the office from November 1923 to May 1933, appointed by Calvin Coolidge.
+  Fact 1.27: Nellie Tayloe Ross held the office from May 1933 to April 1953, appointed by Franklin D. Roosevelt.
+  Fact 1.28: William H. Brett held the office from July 1954 to January 1961, appointed by Dwight D. Eisenhower.
+  Fact 1.29: Eva Adams held the office from October 1961 to August 1969, appointed by John F. Kennedy.
+  Fact 1.30: Mary Brooks held the office from September 1969 to February 1977, appointed by Richard Nixon.
+  Fact 1.31: Stella Hackel Sims held the office from November 1977 to April 1981, appointed by Jimmy Carter.
+  Fact 1.32: Donna Pope held the office from July 1981 to August 1991, appointed by Ronald Reagan.
+  Fact 1.33: David J. Ryder held the office from September 1992 to November 1993, appointed by George H.W. Bush.
+  Fact 1.34: Philip N. Diehl held the office from June 1994 to March 2000, appointed by Bill Clinton.
+  Fact 1.35: Jay W. Johnson held the office from May 2000 to August 2001.
+  Fact 1.36: Henrietta H. Fore held the office from August 2001 to August 2005, appointed by George W. Bush.
+  Fact 1.37: Edmund C. Moy held the office from September 2006 to January 2011.
+  Fact 1.38: David J. Ryder has held the office since April 2018, appointed by Donald Trump.
+
+Retrieved items:
+<item 1>
+Director of the United States Mint
+Woolley March 1915 July 1916 Woodrow Wilson F.H. von Engelken September 1916 March 1917 Raymond T. Baker March 1917 March 1922 Frank Edgar Scobey March 1922
+September 1923 Warren G. Harding Robert J. Grant November 1923 May 1933 Calvin Coolidge Nellie Tayloe Ross May 1933 April 1953 Franklin D. Roosevelt William H.
+Brett July 1954 January 1961 Dwight D. Eisenhower Eva Adams October 1961 August 1969 John F. Kennedy Mary Brooks September 1969 February 1977 Richard Nixon
+Stella Hackel Sims November 1977 April 1981 Jimmy Carter Donna Pope July 1981 August 1991 Ronald Reagan David J. Ryder September 1992 November 1993 George H.W.
+</item 1>
+
+<item 2>
+Director of the United States Mint
+Hayes James P. Kimball July 1885 October 1889 Grover Cleveland Edward O. Leech October 1889 May 1893 Benjamin Harrison Robert E. Preston November 1893 February
+1898 Grover Cleveland George E. Roberts February 1898 July 1907 William McKinley Frank A. Leach September 1907 August 1909 Theodore Roosevelt A. Piatt Andrew
+November 1909 June 1910 William Howard Taft George E. Roberts July 1910 November 1914 Robert W. Woolley March 1915 July 1916 Woodrow Wilson F.H.
+</item 2>
+
+<item 3>
+Graph query row:
+entity: David Motl
+relationship: RELATED_TO
+related: Acting Principal Deputy Director
+</item 3>
+
+<item 4>
+Director of the United States Mint
+List of Directors of the United States Mint ( edit ) Name Assumed Office Left Office President Appointed By David Rittenhouse April 1792 June 1795 George
+Washington Henry William de Saussure July 1795 October 1795 Elias Boudinot October 1795 July 1805 Robert Patterson January 1806 July 1824 Thomas Jefferson
+Samuel Moore July 1824 July 1835 James Monroe Robert M. Patterson May 1835 July 1851 Andrew Jackson George Nicholas Eckert July 1851 April 1853 Millard Fillmore
+Thomas M. Pettit April 1853 May 1853 Franklin Pierce James Ross Snowden June 1853 May 1861 James Pollock May 1861 September 1866 Abraham Lincoln William
+Millward October 1866 April 1867 Andrew Johnson Henry Linderman April 1867 May 1869 James Pollock May 1869 March 1873 Ulysses S. Grant Henry Linderman April
+1873 December 1878 Horatio C. Burchard February 1879 June 1885 Rutherford B. Hayes James P. Kimball July 1885 October 1889 Grover Cleveland Edward O.
+</item 4>
+
+<item 5>
+United States two-dollar bill
+dollar U.S. Mint Philadelphia San Francisco Denver West Point Bureau of Engraving and Printing Mutilated currency Current coinage Penny ( 1 ¢ ) Nickel ( 5 ¢ )
+Dime ( 10 ¢ ) Quarter ( 25 ¢ ) Half dollar ( 50 ¢ ) Dollar ( $1 ) Bullion coinage America the Beautiful Silver Bullion Coins American Buffalo American Gold
+Eagle American Platinum Eagle American Silver Eagle American Palladium Eagle Current paper money $1 $2 $5 $10 $20 $50 $100 See also Bicentennial coinage
+Commemoratives Early Commemoratives Modern Commemoratives Confederate dollar Large denominations Obsolete denominations Promotional fake denominations
+Counterfeit United States currency Mill Coin production In God We Trust E pluribus unum Annuit cœptis Nicknames Replacement banknote Sales tax token Retrieved
+from `` https://en.wikipedia.org/w/index.
+</item 5>
+
+<item 6>
+Large denominations of United States currency
+dollar U.S. Mint Philadelphia San Francisco Denver West Point Bureau of Engraving and Printing Mutilated currency Current coinage Penny ( 1 ¢ ) Nickel ( 5 ¢ )
+Dime ( 10 ¢ ) Quarter ( 25 ¢ ) Half dollar ( 50 ¢ ) Dollar ( $1 ) Bullion coinage America the Beautiful Silver Bullion Coins American Buffalo American Gold
+Eagle American Platinum Eagle American Silver Eagle American Palladium Eagle Current paper money $1 $2 $5 $10 $20 $50 $100 See also Bicentennial coinage
+Commemoratives Early Commemoratives Modern Commemoratives Confederate dollar Large denominations Obsolete denominations Promotional fake denominations
+Counterfeit United States currency Mill Coin production In God We Trust E pluribus unum Annuit cœptis Nicknames Replacement banknote Sales tax token ( hide )
+Obsolete United States currency and coinage Topics United States coinage United States dollar History of the United States dollar Coins Half cent ( 1793 -- 1857
+) Fugio Cent ( 1787 ) Large cent ( 1793 -- 1857 ;
+</item 6>
+
+<item 7>
+Graph query row:
+entity: David Motl
+relationship: WORKS_FOR
+related: United States Mint
+</item 7>
+
+<item 8>
+Director of the United States Mint
+Bush Philip N. Diehl June 1994 March 2000 Bill Clinton Jay W. Johnson May 2000 August 2001 Henrietta H. Fore August 2001 August 2005 George W. Bush Edmund C.
+Moy September 2006 January 2011 David J. Ryder April 2018 Incumbent Donald Trump References ( edit ) Jump up ^ About the Mint at usmint.gov ( retrieved 20 April
+2015 ) . Jump up ^ Gilkes , Paul ( 23 January 2017 ) . `` Rhett Jeppson leaves U.S. Mint as principal deputy director '' . coinworld.com . Retrieved 13 April
+2017 . Jump up ^ `` Director 's Office '' . US Mint . Retrieved 13 April 2017 .
+</item 8>
+
+<item 9>
+Director of the United States Mint
+Director of the United States Mint - wikipedia Director of the United States Mint Jump to : navigation , search Seal of the United States Mint . The Director of
+the United States Mint is the head of the United States Mint . The position is currently vacant . Since January 20 , 2017 , the senior career official at the
+Mint has been Acting Principal Deputy Director David Motl . The office of Director has existed since the creation of the Mint by the Coinage Act of 1792 .
+Initially appointed serving at the pleasure of the President of the United States , the Coinage Act of 1873 specified a five - year term for Directors . The
+Director operates with general directions provided by the United States Secretary of the Treasury . Since the resignation of Edmund C. Moy in 2011 the mint has
+been without an official director . Initially Matthew Rhett Jeppson was nominated by US President Barack Obama to become the mint 's 39th director and was given
+the temporary title of principal deputy director , however the nomination was never confirmed by the Senate . Jeppson stepped down as principal deputy director
+in January 2017 , being replaced by Acting Principal Deputy Director David Motl .
+</item 9>
+
+<item 10>
+Director of the United States Mint
+US Mint . Retrieved 13 April 2017 . Retrieved from `` https://en.wikipedia.org/w/index.php?title=Director_of_the_United_States_Mint&oldid=836791366 ''
+Categories : Directors of the United States Mint United States Department of the Treasury 1792 establishments in the United States Talk About Wikipedia Add
+links This page was last edited on 16 April 2018 , at 21 : 26 . About Wikipedia
+</item 10>
+=== END ITEM id=6cb74155cd364e59 ===
+
+=== ITEM id=60651e4559a40f84 ===
+Gold sentences and facts:
+Sentence 0: Within eukaryotic cells , DNA is organized into long structures called chromosomes . During cell division these chromosomes are duplicated in the process of DNA replication , providing each cell its own complete set of chromosomes . Eukaryotic organisms ( animals , plants , fungi and protists ) store most of their DNA inside the cell nucleus and some of their DNA in organelles , such as mitochondria or chloroplasts . In contrast prokaryotes ( bacteria and archaea ) store their DNA only in the cytoplasm . Within the eukaryotic chromosomes , chromatin proteins such as histones compact and organize DNA . These compact structures guide the interactions between DNA and other proteins , helping control which parts of the DNA are transcribed .
+  Fact 0.0: Within eukaryotic cells, DNA is organized into long structures called chromosomes.
+  Fact 0.1: During cell division, chromosomes are duplicated in the process of DNA replication.
+  Fact 0.2: DNA replication during cell division provides each cell its own complete set of chromosomes.
+  Fact 0.3: Eukaryotic organisms (animals, plants, fungi and protists) store most of their DNA inside the cell nucleus.
+  Fact 0.4: Eukaryotic organisms store some of their DNA in organelles, such as mitochondria or chloroplasts.
+  Fact 0.5: Prokaryotes (bacteria and archaea) store their DNA only in the cytoplasm, in contrast to eukaryotes.
+  Fact 0.6: Within eukaryotic chromosomes, chromatin proteins such as histones compact and organize DNA.
+  Fact 0.7: The compact structures formed by chromatin proteins guide the interactions between DNA and other proteins.
+  Fact 0.8: The compact structures formed by chromatin proteins help control which parts of the DNA are transcribed.
+Sentence 1: Genomic DNA is tightly and orderly packed in the process called DNA condensation , to fit the small available volumes of the cell . In eukaryotes , DNA is located in the cell nucleus , with small amounts in mitochondria and chloroplasts . In prokaryotes , the DNA is held within an irregularly shaped body in the cytoplasm called the nucleoid . The genetic information in a genome is held within genes , and the complete set of this information in an organism is called its genotype . A gene is a unit of heredity and is a region of DNA that influences a particular characteristic in an organism . Genes contain an open reading frame that can be transcribed , and regulatory sequences such as promoters and enhancers , which control transcription of the open reading frame .
+  Fact 1.0: Genomic DNA is tightly and orderly packed in a process called DNA condensation.
+  Fact 1.1: DNA condensation fits genomic DNA into the small available volumes of the cell.
+  Fact 1.2: In eukaryotes, DNA is located in the cell nucleus, with small amounts in mitochondria and chloroplasts.
+  Fact 1.3: In prokaryotes, DNA is held within an irregularly shaped body in the cytoplasm called the nucleoid.
+  Fact 1.4: The genetic information in a genome is held within genes.
+  Fact 1.5: The complete set of genetic information in an organism is called its genotype.
+  Fact 1.6: A gene is a unit of heredity.
+  Fact 1.7: A gene is a region of DNA that influences a particular characteristic in an organism.
+  Fact 1.8: Genes contain an open reading frame that can be transcribed.
+  Fact 1.9: Genes contain regulatory sequences such as promoters and enhancers.
+  Fact 1.10: The regulatory sequences such as promoters and enhancers control transcription of the open reading frame.
+Sentence 2: DNA usually occurs as linear chromosomes in eukaryotes , and circular chromosomes in prokaryotes . The set of chromosomes in a cell makes up its genome ; the human genome has approximately 3 billion base pairs of DNA arranged into 46 chromosomes . The information carried by DNA is held in the sequence of pieces of DNA called genes . Transmission of genetic information in genes is achieved via complementary base pairing . For example , in transcription , when a cell uses the information in a gene , the DNA sequence is copied into a complementary RNA sequence through the attraction between the DNA and the correct RNA nucleotides . Usually , this RNA copy is then used to make a matching protein sequence in a process called translation , which depends on the same interaction between RNA nucleotides . In alternative fashion , a cell may simply copy its genetic information in a process called DNA replication . The details of these functions are covered in other articles ; here the focus is on the interactions between DNA and other molecules that mediate the function of the genome .
+  Fact 2.0: DNA usually occurs as linear chromosomes in eukaryotes.
+  Fact 2.1: DNA usually occurs as circular chromosomes in prokaryotes.
+  Fact 2.2: The set of chromosomes in a cell makes up its genome.
+  Fact 2.3: The human genome has approximately 3 billion base pairs of DNA.
+  Fact 2.4: The human genome's DNA is arranged into 46 chromosomes.
+  Fact 2.5: The information carried by DNA is held in the sequence of pieces of DNA called genes.
+  Fact 2.6: Transmission of genetic information in genes is achieved via complementary base pairing.
+  Fact 2.7: In transcription, when a cell uses the information in a gene, the DNA sequence is copied into a complementary RNA sequence.
+  Fact 2.8: The copying in transcription happens through attraction between the DNA and the correct RNA nucleotides.
+  Fact 2.9: The RNA copy is usually then used to make a matching protein sequence in a process called translation.
+  Fact 2.10: Translation depends on the same interaction between RNA nucleotides.
+  Fact 2.11: In an alternative fashion, a cell may simply copy its genetic information in a process called DNA replication.
+  Fact 2.12: The details of these functions are covered in other articles.
+  Fact 2.13: The focus of this text is on the interactions between DNA and other molecules that mediate the function of the genome.
+
+Retrieved items:
+<item 1>
+DNA
+Modern biology and biochemistry make intensive use of these techniques in recombinant DNA technology . Recombinant DNA is a man - made DNA sequence that has
+been assembled from other DNA sequences . They can be transformed into organisms in the form of plasmids or in the appropriate format , by using a viral vector
+. The genetically modified organisms produced can be used to produce products such as recombinant proteins , used in medical research , or be grown in
+agriculture . DNA profiling Further information : DNA profiling Forensic scientists can use DNA in blood , semen , skin , saliva or hair found at a crime scene
+to identify a matching DNA of an individual , such as a perpetrator . This process is formally termed DNA profiling , but may also be called `` genetic
+fingerprinting '' . In DNA profiling , the lengths of variable sections of repetitive DNA , such as short tandem repeats and minisatellites , are compared
+between people . This method is usually an extremely reliable technique for identifying a matching DNA . However , identification can be complicated if the
+scene is contaminated with DNA from several people .
+</item 1>
+
+<item 2>
+DNA
+DNA - wikipedia DNA Jump to : navigation , search For a non-technical introduction to the topic , see Introduction to genetics . For other uses , see DNA (
+disambiguation ) . The structure of the DNA double helix . The atoms in the structure are colour - coded by element and the detailed structures of two base
+pairs are shown in the bottom right . The structure of part of a DNA double helix Deoxyribonucleic acid ( / diˈɒksiˌraɪboʊnjʊˈkliːɪk , - ˈkleɪ. ɪk / ( listen )
+; DNA ) is a thread - like chain of nucleotides carrying the genetic instructions used in the growth , development , functioning and reproduction of all known
+living organisms and many viruses . DNA and ribonucleic acid ( RNA ) are nucleic acids ; alongside proteins , lipids and complex carbohydrates ( polysaccharides
+) , they are one of the four major types of macromolecules that are essential for all known forms of life . Most DNA molecules consist of two biopolymer strands
+coiled around each other to form a double helix .
+</item 2>
+
+<item 3>
+DNA
+Biological functions Location of eukaryote nuclear DNA within the chromosomes . DNA usually occurs as linear chromosomes in eukaryotes , and circular
+chromosomes in prokaryotes . The set of chromosomes in a cell makes up its genome ; the human genome has approximately 3 billion base pairs of DNA arranged into
+46 chromosomes . The information carried by DNA is held in the sequence of pieces of DNA called genes . Transmission of genetic information in genes is achieved
+via complementary base pairing . For example , in transcription , when a cell uses the information in a gene , the DNA sequence is copied into a complementary
+RNA sequence through the attraction between the DNA and the correct RNA nucleotides . Usually , this RNA copy is then used to make a matching protein sequence
+in a process called translation , which depends on the same interaction between RNA nucleotides . In alternative fashion , a cell may simply copy its genetic
+information in a process called DNA replication . The details of these functions are covered in other articles ; here the focus is on the interactions between
+DNA and other molecules that mediate the function of the genome .
+</item 3>
+
+<item 4>
+DNA
+Genes and genomes Further information : Cell nucleus , Chromatin , Chromosome , Gene , and Noncoding DNA Genomic DNA is tightly and orderly packed in the
+process called DNA condensation , to fit the small available volumes of the cell . In eukaryotes , DNA is located in the cell nucleus , with small amounts in
+mitochondria and chloroplasts . In prokaryotes , the DNA is held within an irregularly shaped body in the cytoplasm called the nucleoid . The genetic
+information in a genome is held within genes , and the complete set of this information in an organism is called its genotype . A gene is a unit of heredity and
+is a region of DNA that influences a particular characteristic in an organism . Genes contain an open reading frame that can be transcribed , and regulatory
+sequences such as promoters and enhancers , which control transcription of the open reading frame . In many species , only a small fraction of the total
+sequence of the genome encodes protein . For example , only about 1.5 % of the human genome consists of protein - coding exons , with over 50 % of human DNA
+consisting of non-coding repetitive sequences .
+</item 4>
+
+<item 5>
+DNA
+This information is replicated as and when the two strands separate . A large part of DNA ( more than 98 % for humans ) is non-coding , meaning that these
+sections do not serve as patterns for protein sequences . The two strands of DNA run in opposite directions to each other and are thus antiparallel . Attached
+to each sugar is one of four types of nucleobases ( informally , bases ) . It is the sequence of these four nucleobases along the backbone that encodes
+biological information . RNA strands are created using DNA strands as a template in a process called transcription . Under the genetic code , these RNA strands
+are translated to specify the sequence of amino acids within proteins in a process called translation . Within eukaryotic cells , DNA is organized into long
+structures called chromosomes . During cell division these chromosomes are duplicated in the process of DNA replication , providing each cell its own complete
+set of chromosomes . Eukaryotic organisms ( animals , plants , fungi and protists ) store most of their DNA inside the cell nucleus and some of their DNA in
+organelles , such as mitochondria or chloroplasts .
+</item 5>
+
+<item 6>
+DNA
+PMID 11562309 . Jump up ^ Venter JC , Adams MD , Myers EW , Li PW , Mural RJ , Sutton GG , et al. ( February 2001 ) . `` The sequence of the human genome '' .
+Science . 291 ( 5507 ) : 1304 -- 51 . Bibcode : 2001Sci ... 291.1304 V . doi : 10.1126 / science. 1058040 . PMID 11181995 . Jump up ^ Thanbichler M , Wang SC ,
+Shapiro L ( October 2005 ) . `` The bacterial nucleoid : a highly organized and dynamic structure '' . Journal of Cellular Biochemistry . 96 ( 3 ) : 506 -- 21 .
+doi : 10.1002 / jcb. 20519 . PMID 15988757 . Jump up ^ Wolfsberg TG , McEntyre J , Schuler GD ( February 2001 ) . `` Guide to the draft human genome '' . Nature
+. 409 ( 6822 ) : 824 -- 6 .
+</item 6>
+
+<item 7>
+DNA
+In contrast prokaryotes ( bacteria and archaea ) store their DNA only in the cytoplasm . Within the eukaryotic chromosomes , chromatin proteins such as histones
+compact and organize DNA . These compact structures guide the interactions between DNA and other proteins , helping control which parts of the DNA are
+transcribed . DNA was first isolated by Friedrich Miescher in 1869 . Its molecular structure was first identified by James Watson and Francis Crick at the
+Cavendish Laboratory within the University of Cambridge in 1953 , whose model - building efforts were guided by X-ray diffraction data acquired by Raymond
+Gosling , who was a post-graduate student of Rosalind Franklin . DNA is used by researchers as a molecular tool to explore physical laws and theories , such as
+the ergodic theorem and the theory of elasticity . The unique material properties of DNA have made it an attractive molecule for material scientists and
+engineers interested in micro - and nano - fabrication . Among notable advances in this field are DNA origami and DNA - based hybrid materials .
+</item 7>
+
+<item 8>
+DNA
+In this way , the base on the old strand dictates which base appears on the new strand , and the cell ends up with a perfect copy of its DNA . Extracellular
+nucleic acids Naked extracellular DNA ( eDNA ) , most of it released by cell death , is nearly ubiquitous in the environment . Its concentration in soil may be
+as high as 2 μg / L , and its concentration in natural aquatic environments may be as high at 88 μg / L. Various possible functions have been proposed for eDNA
+: it may be involved in horizontal gene transfer ; it may provide nutrients ; and it may act as a buffer to recruit or titrate ions or antibiotics .
+Extracellular DNA acts as a functional extracellular matrix component in the biofilms of several bacterial species . It may act as a recognition factor to
+regulate the attachment and dispersal of specific cell types in the biofilm ; it may contribute to biofilm formation ; and it may contribute to the biofilm 's
+physical strength and resistance to biological stress . Cell - free fetal DNA is found in the blood of the mother , and can be sequenced to determine a great
+deal of information about the developing fetus .
+</item 8>
+
+<item 9>
+DNA
+`` Jump up ^ Miescher F ( 1871 ) . `` Ueber die chemische Zusammensetzung der Eiterzellen '' ( On the chemical composition of pus cells ) . Medicinisch -
+chemische Untersuchungen ( in German ) . 4 : 441 -- 460 . Ich habe mich daher später mit meinen Versuchen an die ganzen Kerne gehalten , die Trennung der Körper
+, die ich einstweilen ohne weiteres Präjudiz als lösliches und unlösliches Nuclein bezeichnen will , einem günstigeren Material überlassend . ( Therefore , in
+my experiments I subsequently limited myself to the whole nucleus , leaving to a more favorable material the separation of the substances , that for the present
+, without further prejudice , I will designate as soluble and insoluble nuclear material ( `` Nuclein '' ) Jump up ^ Dahm R ( January 2008 ) . `` Discovering
+DNA : Friedrich Miescher and the early years of nucleic acid research '' . Human Genetics . 122 ( 6 ) : 565 -- 81 .
+</item 9>
+
+<item 10>
+DNA
+The DNA sequence may be aligned with other DNA sequences to identify homologous sequences and locate the specific mutations that make them distinct . These
+techniques , especially multiple sequence alignment , are used in studying phylogenetic relationships and protein function . Data sets representing entire
+genomes ' worth of DNA sequences , such as those produced by the Human Genome Project , are difficult to use without the annotations that identify the locations
+of genes and regulatory elements on each chromosome . Regions of DNA sequence that have the characteristic patterns associated with protein - or RNA - coding
+genes can be identified by gene finding algorithms , which allow researchers to predict the presence of particular gene products and their possible functions in
+an organism even before they have been isolated experimentally . Entire genomes may also be compared , which can shed light on the evolutionary history of
+particular organism and permit the examination of complex evolutionary events . DNA nanotechnology The DNA structure at left ( schematic shown ) will self -
+assemble into the structure visualized by atomic force microscopy at right . DNA nanotechnology is the field that seeks to design nanoscale structures using the
+molecular recognition properties of DNA molecules . Image from Strong , 2004 .
+</item 10>
+=== END ITEM id=60651e4559a40f84 ===
+
+=== ITEM id=9bc553b93f854e74 ===
+Gold sentences and facts:
+Sentence 0: Late in the 20th century , lithium became an important component of battery electrolytes and electrodes , because of its high electrode potential . Because of its low atomic mass , it has a high charge - and power - to - weight ratio . A typical lithium - ion battery can generate approximately 3 volts per cell , compared with 2.1 volts for lead - acid or 1.5 volts for zinc - carbon cells . Lithium - ion batteries , which are rechargeable and have a high energy density , should not be confused with lithium batteries , which are disposable ( primary ) batteries with lithium or its compounds as the anode . Other rechargeable batteries that use lithium include the lithium - ion polymer battery , lithium iron phosphate battery , and the nanowire battery .
+  Fact 0.0: Late in the 20th century, lithium became an important component of battery electrolytes.
+  Fact 0.1: Late in the 20th century, lithium became an important component of battery electrodes.
+  Fact 0.2: Lithium became an important battery component because of its high electrode potential.
+  Fact 0.3: Lithium has a low atomic mass.
+  Fact 0.4: Because of its low atomic mass, lithium has a high charge-to-weight ratio.
+  Fact 0.5: Because of its low atomic mass, lithium has a high power-to-weight ratio.
+  Fact 0.6: A typical lithium-ion battery can generate approximately 3 volts per cell.
+  Fact 0.7: Lead-acid batteries generate 2.1 volts.
+  Fact 0.8: Zinc-carbon cells generate 1.5 volts.
+  Fact 0.9: Lithium-ion batteries are rechargeable.
+  Fact 0.10: Lithium-ion batteries have a high energy density.
+  Fact 0.11: Lithium-ion batteries should not be confused with lithium batteries.
+  Fact 0.12: Lithium batteries are disposable (primary) batteries.
+  Fact 0.13: Lithium batteries have lithium or its compounds as the anode.
+  Fact 0.14: Other rechargeable batteries that use lithium include the lithium-ion polymer battery.
+  Fact 0.15: Other rechargeable batteries that use lithium include the lithium iron phosphate battery.
+  Fact 0.16: Other rechargeable batteries that use lithium include the nanowire battery.
+Sentence 1: Lithium and its compounds have several industrial applications , including heat - resistant glass and ceramics , lithium grease lubricants , flux additives for iron , steel and aluminium production , lithium batteries , and lithium - ion batteries . These uses consume more than three quarters of lithium production .
+  Fact 1.0: Lithium and its compounds have several industrial applications.
+  Fact 1.1: Lithium and its compounds are used in heat-resistant glass and ceramics.
+  Fact 1.2: Lithium and its compounds are used in lithium grease lubricants.
+  Fact 1.3: Lithium and its compounds are used as flux additives for iron, steel and aluminium production.
+  Fact 1.4: Lithium and its compounds are used in lithium batteries.
+  Fact 1.5: Lithium and its compounds are used in lithium-ion batteries.
+  Fact 1.6: These uses consume more than three quarters of lithium production.
+
+Retrieved items:
+<item 1>
+Lithium is a reactive, widely distributed element found mainly in brines and minerals such as spodumene and petalite, not naturally in pure form. Major reserves
+and production are concentrated in South America, Australia, and China; extraction commonly uses solar evaporation of brines. Discovered in 1817 and first
+isolated in 1821, lithium now serves chiefly in batteries, glass and ceramics, lubricants, and metallurgy. It occurs in organisms only in trace amounts,
+</item 1>
+
+<item 2>
+Lithium
+The stockpiled lithium was depleted in lithium - 6 by 75 % , which was enough to affect the measured atomic weight of lithium in many standardized chemicals ,
+and even the atomic weight of lithium in some `` natural sources '' of lithium ion which had been `` contaminated '' by lithium salts discharged from isotope
+separation facilities , which had found its way into ground water . Lithium was used to decrease the melting temperature of glass and to improve the melting
+behavior of aluminium oxide when using the Hall - Héroult process . These two uses dominated the market until the middle of the 1990s . After the end of the
+nuclear arms race , the demand for lithium decreased and the sale of Department of Energy stockpiles on the open market further reduced prices . In the mid
+1990s , several companies started to extract lithium from brine which proved to be a less expensive than underground or open - pit mining . Most of the mines
+closed or shifted their focus to other materials because only the ore from zoned pegmatites could be mined for a competitive price . For example , the US mines
+near Kings Mountain , North Carolina closed before the beginning of the 21st century .
+</item 2>
+
+<item 3>
+Lithium
+Lithium hydroxide is a strong base and , when heated with a fat , produces a soap made of lithium stearate . Lithium soap has the ability to thicken oils , and
+it is used to manufacture all - purpose , high - temperature lubricating greases . Metallurgy ( edit ) Lithium ( e.g. as lithium carbonate ) is used as an
+additive to continuous casting mould flux slags where it increases fluidity , a use which accounts for 5 % of global lithium use ( 2011 ) . Lithium compounds
+are also used as additives ( fluxes ) to foundry sand for iron casting to reduce veining . Lithium ( as lithium fluoride ) is used as an additive to aluminium
+smelters ( Hall -- Héroult process ) , reducing melting temperature and increasing electrical resistance , a use which accounts for 3 % of production ( 2011 ) .
+When used as a flux for welding or soldering , metallic lithium promotes the fusing of metals during the process and eliminates the forming of oxides by
+absorbing impurities .
+</item 3>
+
+<item 4>
+Lithium
+We are not aware of any discoveries of lithium , ' he said . '' Lithia ( `` lithium brine '' ) is associated with tin mining areas in Cornwall , England and an
+evaluation project from 400 - metre deep test boreholes is under consideration . If successful the hot brines will also provide geothermal energy to power the
+lithium extraction and refining process . Biological ( edit ) Lithium is found in trace amount in numerous plants , plankton , and invertebrates , at
+concentrations of 69 to 5,760 parts per billion ( ppb ) . In vertebrates the concentration is slightly lower , and nearly all vertebrate tissue and body fluids
+contain lithium ranging from 21 to 763 ppb . Marine organisms tend to bioaccumulate lithium more than terrestrial organisms . Whether lithium has a
+physiological role in any of these organisms is unknown . History ( edit ) Johan August Arfwedson is credited with the discovery of lithium in 1817 Petalite (
+LiAlSi O ) was discovered in 1800 by the Brazilian chemist and statesman José Bonifácio de Andrada e Silva in a mine on the island of Utö , Sweden .
+</item 4>
+
+<item 5>
+Lithium
+000,000 Portugal 200 60,000 N / A Russia - - 1,000,000 Serbia - - 1,000,000 United States 38,000 6,900,000 Zimbabwe 900 23,000 100,000 + World total 32,500
+14,000,000 46,900,000 See also : Lithium minerals Although lithium is widely distributed on Earth , it does not naturally occur in elemental form due to its
+high reactivity . The total lithium content of seawater is very large and is estimated as 230 billion tonnes , where the element exists at a relatively constant
+concentration of 0.14 to 0.25 parts per million ( ppm ) , or 25 micromolar ; higher concentrations approaching 7 ppm are found near hydrothermal vents .
+Estimates for the Earth 's crustal content range from 20 to 70 ppm by weight . In keeping with its name , lithium forms a minor part of igneous rocks , with the
+largest concentrations in granites . Granitic pegmatites also provide the greatest abundance of lithium - containing minerals , with spodumene and petalite
+being the most commercially viable sources .
+</item 5>
+
+<item 6>
+Lithium
+When cut open , it exhibits a metallic luster , but moist air corrodes it quickly to a dull silvery gray , then black tarnish . It never occurs freely in nature
+, but only in ( usually ionic ) compounds , such as pegmatitic minerals which were once the main source of lithium . Due to its solubility as an ion , it is
+present in ocean water and is commonly obtained from brines . Lithium metal is isolated electrolytically from a mixture of lithium chloride and potassium
+chloride . The nucleus of the lithium atom verges on instability , since the two stable lithium isotopes found in nature have among the lowest binding energies
+per nucleon of all stable nuclides . Because of its relative nuclear instability , lithium is less common in the solar system than 25 of the first 32 chemical
+elements even though its nuclei are very light : it is an exception to the trend that heavier nuclei are less common . For related reasons , lithium has
+important uses in nuclear physics . The transmutation of lithium atoms to helium in 1932 was the first fully man - made nuclear reaction , and lithium deuteride
+serves as a fusion fuel in staged thermonuclear weapons .
+</item 6>
+
+<item 7>
+Lithium
+Another significant mineral of lithium is lepidolite . A newer source for lithium is hectorite clay , the only active development of which is through the
+Western Lithium Corporation in the United States . At 20 mg lithium per kg of Earth 's crust , lithium is the 25th most abundant element . According to the
+Handbook of Lithium and Natural Calcium , `` Lithium is a comparatively rare element , although it is found in many rocks and some brines , but always in very
+low concentrations . There are a fairly large number of both lithium mineral and brine deposits but only comparatively few of them are of actual or potential
+commercial value . Many are very small , others are too low in grade . '' The US Geological Survey estimates that in 2010 , Chile had the largest reserves by
+far ( 7.5 million tonnes ) and the highest annual production ( 8,800 tonnes ) . One of the largest reserve bases of lithium is in the Salar de Uyuni area of
+Bolivia , which has 5.4 million tonnes . Other major suppliers include Australia , Argentina and China .
+</item 7>
+
+<item 8>
+Lithium
+Extraction ( edit ) Lithium salts are extracted from water in mineral springs , brine pools , and brine deposits . Lithium is present in seawater , but
+commercially viable methods of extraction have yet to be developed . Another potential source of lithium is the leachates of geothermal wells , which are
+carried to the surface . Recovery of lithium has been demonstrated in the field ; the lithium is separated by simple filtration . The process and environmental
+costs are primarily those of the already - operating well ; net environmental impacts may thus be positive . Uses ( edit ) Estimates of global lithium uses in
+2015 Ceramics and glass ( 32 % ) Batteries ( 35 % ) Lubricating greases ( 9 % ) Continuous casting ( 5 % ) Air treatment ( 5 % ) Polymers ( 4 % ) Primary
+aluminum production ( 1 % ) Pharmaceuticals ( < 1 % ) Other ( 9 % ) Ceramics and glass ( edit ) Lithium oxide is widely used as a flux for processing silica ,
+reducing the melting point and viscosity of the material and leading to glazes with improved physical properties including low coefficients of thermal expansion
+.
+</item 8>
+
+<item 9>
+Lithium
+Worldwide , this is one of the largest use for lithium compounds . Glazes containing lithium oxides are used for ovenware . Lithium carbonate ( Li CO ) is
+generally used in this application because it converts to the oxide upon heating . Electrical and electronics ( edit ) Late in the 20th century , lithium became
+an important component of battery electrolytes and electrodes , because of its high electrode potential . Because of its low atomic mass , it has a high charge
+- and power - to - weight ratio . A typical lithium - ion battery can generate approximately 3 volts per cell , compared with 2.1 volts for lead - acid or 1.5
+volts for zinc - carbon cells . Lithium - ion batteries , which are rechargeable and have a high energy density , should not be confused with lithium batteries
+, which are disposable ( primary ) batteries with lithium or its compounds as the anode . Other rechargeable batteries that use lithium include the lithium -
+ion polymer battery , lithium iron phosphate battery , and the nanowire battery . Lubricating greases ( edit ) Main article : Lithium grease The third most
+common use of lithium is in greases .
+</item 9>
+
+<item 10>
+A broad bibliography traces lithium from its 1817 discovery and early chemistry through geology, brines and seawater extraction, reserves, mining, production,
+pricing and supply constraints. It covers batteries, recycling and safety; alloys, ceramics, lubricants, medicine, nutrition, industrial and nuclear uses; and
+research in chemistry, materials science, geology, astronomy and isotope physics. Sources include historical papers, scientific journals, books, USGS and
+government reports, and news coverage, mostly from
+</item 10>
+=== END ITEM id=9bc553b93f854e74 ===
+
+=== ITEM id=9db3b184715116f6 ===
+Gold sentences and facts:
+Sentence 0: The Country Music Hall of Fame and Museum in Nashville , Tennessee , is one of the world 's largest museums and research centers dedicated to the preservation and interpretation of American vernacular music . Chartered in 1964 , the museum has amassed one of the world 's most extensive musical collections .
+  Fact 0.0: The Country Music Hall of Fame and Museum is in Nashville, Tennessee.
+  Fact 0.1: The Country Music Hall of Fame and Museum is one of the world's largest museums dedicated to the preservation and interpretation of American vernacular music.
+  Fact 0.2: The Country Music Hall of Fame and Museum is one of the world's largest research centers dedicated to the preservation and interpretation of American vernacular music.
+  Fact 0.3: The Country Music Hall of Fame and Museum was chartered in 1964.
+  Fact 0.4: The Country Music Hall of Fame and Museum has amassed one of the world's most extensive musical collections.
+Sentence 1: Country Music Hall of Fame and Museum Established 1961 ( 1961 ) Location 222 5th Ave S Nashville , Tennessee 37203 Type Hall of fame Visitors 1.1 million in 2015 Director Kyle Young Website www.countrymusichalloffame.org
+  Fact 1.0: The Country Music Hall of Fame and Museum was established in 1961.
+  Fact 1.1: The Country Music Hall of Fame and Museum is located at 222 5th Ave S, Nashville, Tennessee 37203.
+  Fact 1.2: The type of the Country Music Hall of Fame and Museum is Hall of fame.
+  Fact 1.3: The Country Music Hall of Fame and Museum had 1.1 million visitors in 2015.
+  Fact 1.4: The director of the Country Music Hall of Fame and Museum is Kyle Young.
+  Fact 1.5: The website of the Country Music Hall of Fame and Museum is www.countrymusichalloffame.org.
+
+Retrieved items:
+<item 1>
+Country Music Hall of Fame and Museum
+Current museum ( edit ) To become more accessible , in May 2001 the Country Music Hall of Fame and Museum moved to a new , 130,000 - square - foot ( 12,000 m )
+facility in the heart of downtown Nashville 's arts and entertainment district . In 2014 , the museum unveiled a $100 million expansion , doubling its size to
+350,000 square feet of galleries , archival storage , education classrooms , retail stores , and special event space . In the museum 's core exhibition , Sing
+Me Back Home : A Journey Through Country Music , visitors are immersed in the history and sounds of country music , its origins and traditions , and the stories
+and voices of many of its architects . The story is revealed through artifacts , photographs , and text panels , recorded sound , vintage video , and
+interactive touchscreens . Sing Me Back Home is enhanced by numerous , rotating limited - engagement exhibits . The new ACM Gallery and the Dinah and Fred
+Gretsch Family Gallery offer visitors a hands - on immersion into today 's country music with artifacts from today 's country stars and a series of technology -
+enhanced activities .
+</item 1>
+
+<item 2>
+Country Music Hall of Fame and Museum
+Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use
+and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 2>
+
+<item 3>
+Country Music Hall of Fame and Museum
+Nashville Post . February 17 , 2015 . Retrieved January 19 , 2016 . External links ( edit ) Wikimedia Commons has media related to Country Music Hall of Fame
+and Museum . Official website ( hide ) Nashville landmarks Existing AT&T Building Belmont Mansion Bicentennial Capitol Mall State Park Bluebird Café Bridgestone
+Arena Centennial Park Cheekwood Country Music Hall of Fame First Tennessee Park Fort Nashborough Fort Negley Frist Center for the Visual Arts Gaylord Opryland
+Resort Grand Ole Opry Greer Stadium The Hermitage Life & Casualty Tower Memorial Gymnasium Music City Center Nashville City Cemetery Nashville International
+Airport Nashville Zoo at Grassmere Nissan Stadium Parthenon Ryman Auditorium Schermerhorn Symphony Center John Seigenthaler Pedestrian Bridge Tennessee
+Performing Arts Center Tennessee State Capitol Tennessee State Museum Tennessee Tower Union Station Vanderbilt Stadium Former Opryland USA Starwood Amphitheatre
+Sulphur Dell Coordinates : 36 ° 09 ′ 29.80 '' N 86 ° 46 ′ 34.18 '' W ﻿ / ﻿ 36.1582778 ° N 86.7761611 ° W ﻿ / 36.
+</item 3>
+
+<item 4>
+Country Music Hall of Fame and Museum
+Award recipients are determined through a two - stage balloting process ; the first round of voting narrows each category to five candidates ; the second round
+selects winners . The large select committee of electors that votes on Hall of Fame membership is composed of CMA members who have participated in the country
+music industry for at least ten years . New Hall of Fame members receive special recognition in ceremonies at the Country Music Hall of Fame and Museum . Bas -
+relief portraits cast in bronze honoring each Hall of Fame member were originally displayed at the Tennessee State Museum in downtown Nashville until the
+Country Music Hall of Fame and Museum opened its own building in April 1967 ; in this barn - roofed facility at the head of Music Row , the bronze plaques
+comprised a special exhibit . Today the plaques are displayed in a seventy - foot - high rotunda at the museum 's enlarged downtown Nashville facility . The
+museum collection ( edit ) The museum 's archival and library storage , allows for the cultivation of the museum 's collection and includes more than 2.5
+million artifacts .
+</item 4>
+
+<item 5>
+Country Music Hall of Fame and Museum
+Country Music Hall of Fame and museum - wikipedia Country Music Hall of Fame and museum Jump to : navigation , search This article needs additional citations
+for verification . Please help improve this article by adding citations to reliable sources . Unsourced material may be challenged and removed . ( May 2016 ) (
+Learn how and when to remove this template message ) Country Music Hall of Fame and Museum Established 1961 ( 1961 ) Location 222 5th Ave S Nashville ,
+Tennessee 37203 Type Hall of fame Visitors 1.1 million in 2015 Director Kyle Young Website www.countrymusichalloffame.org The Country Music Hall of Fame and
+Museum in Nashville , Tennessee , is one of the world 's largest museums and research centers dedicated to the preservation and interpretation of American
+vernacular music . Chartered in 1964 , the museum has amassed one of the world 's most extensive musical collections .
+</item 5>
+
+<item 6>
+Country Music Hall of Fame and Museum
+In addition to the galleries , the museum has the 776 - seat CMA Theater , the Taylor Swift Education Center , and multi-purpose event rental spaces . Other
+historic properties of the Country Music Hall of Fame and Museum include the letterpress operation Hatch Show Print ( located inside the museum ) and Historic
+RCA Studio B ( located on Music Row ) , Nashville 's oldest surviving recording studio , where recordings by Elvis Presley , Dolly Parton , Waylon Jennings ,
+and many others were made . The Country Music Hall of Fame and Museum has developed multiple platforms to make its collection accessible to a wider audience .
+From weekly instrument demonstrations to its flagship songwriting program for schools , Words & Music , the museum offers an aggressive schedule of educational
+programs . The museum also operates CMF Records , a Grammy - winning re-issue label ( The Complete Hank Williams and Night Train to Nashville : Music City
+Rhythm & Blues , 1945 - 1970 ) ; and CMF Press , a book publishing arm that releases exhibit - related books in cooperation with Vanderbilt University Press and
+other major trade publishing houses .
+</item 6>
+
+<item 7>
+Country Music Hall of Fame and Museum
+Nashville , Tenn. : Country Music Foundation , 1990 . N.B. : The structure as described in this document is the original one which had opened in 1967 ; the book
+( amply ill . in b&w and col . ) describes the work , collections , etc. of the center 's Hall of Fame , Museum ( which includes a library ) , and recording
+studio , and also gives an account of the development and various aspects of the country music industry . ISBN 0 - 915608 - 12 - X References ( edit ) ^ Jump up
+to : `` About '' . Country Music Hall of Fame . Retrieved January 14 , 2016 . Jump up ^ McCall , Michael ( 2012 ) . The Encyclopedia of Country Music Second
+Edition . Oxford University Press . pp. 105 -- 106 . ISBN 0195395638 . Jump up ^ `` Home '' . Studio B. Retrieved August 26 , 2017 . Jump up ^ `` Country Music
+Hall of Fame promotes four to VP roles '' . Nashville Post .
+</item 7>
+
+<item 8>
+Country Music Hall of Fame and Museum
+Located at the head of Music Row , the museum was erected on the site of a small Nashville city park . At this point , artifacts began to be displayed and a
+small library was begun in a loft above one of the museum 's galleries . Early in the 1970s the basement of the museum building was partially complete , and
+library expansion began , embracing not only recordings but also books and periodicals , sheet music and songbooks , photographs , business documents , and
+other materials . At the outset , CMA staff had run the museum , but by 1972 the museum ( already governed by its own independent board of directors ) acquired
+its own small staff , which has steadily increased to over 150 full - time professionals . Building expansion took place in 1974 , 1977 , and 1984 to store and
+display the museum 's growing collection of costumes , films , historic cars , musical instruments , and other artifacts . An education department was created
+to conduct ongoing programs with Middle Tennessee schools , an oral history program was begun , and a publications department was launched to handle books , as
+well as the Journal of Country Music .
+</item 8>
+
+<item 9>
+Country Music Hall of Fame and Museum
+1582778 ° N 86.7761611 ° W ﻿ / 36.1582778 ; - 86.7761611 Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Country_Music_Hall_of_Fame_and_Museum&oldid=817101743 '' Categories : American country music American music awards
+Music halls of fame Halls of fame in Tennessee Music museums in Tennessee Museums in Nashville , Tennessee Institutions accredited by the American Alliance of
+Museums Organizations established in 1964 Museums established in 1967 1961 establishments in Tennessee Country Music Hall of Fame inductees Hidden categories :
+Use mdy dates from October 2017 Articles needing additional references from May 2016 All articles needing additional references Coordinates on Wikidata Talk
+Contents About Wikipedia Deutsch Español فارسی Français 한국어 Bahasa Indonesia Italiano Nederlands 日本 語 Norsk Русский Simple English Svenska 中文 Edit links This
+page was last edited on 26 December 2017 , at 04 : 35 . Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may
+apply .
+</item 9>
+
+<item 10>
+Country Music Hall of Fame and Museum
+Contents ( hide ) 1 History of the museum 2 Current museum 3 The Country Music Hall of Fame 4 The Museum collection 5 Architecture and design 6 Timeline 7
+Senior leadership 8 See also 9 Further reading 10 References 11 External links History of the museum ( edit ) The Country Music Hall of Fame and Museum is one
+of the world 's largest and most active popular music research centers and the world 's largest repository of country music artifacts . Early in the 1960s , as
+the Country Music Association 's campaign to publicize country music was accelerating , CMA leaders determined that a new organization was needed to operate a
+country music museum and to carry out research and education activities beyond CMA 's scope as a trade organization . Toward this end , the nonprofit Country
+Music Foundation ( CMF ) was chartered by the state of Tennessee in 1964 to collect , preserve , and publicize information and artifacts relating to the history
+of country music . Through CMF , industry leaders raised money to build the Country Music Hall of Fame and Museum , which opened on April 1 , 1967 .
+</item 10>
+=== END ITEM id=9db3b184715116f6 ===

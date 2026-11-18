@@ -1,0 +1,80 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5ae694a15542991bbc976141",
+   "sentences": [
+    " The pool lies directly south of Lichfield Cathedral and historically has been important to the defence of the Cathedral Close.",
+    " The Diocese of Lichfield covers all of Staffordshire, much of Shropshire and part of the Black Country and West Midlands."
+   ]
+  },
+  {
+   "id": "multihop-rag-2214",
+   "sentences": [
+    "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills.",
+    "By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter."
+   ]
+  },
+  {
+   "id": "5aba74ad55429955dce3ee35",
+   "sentences": [
+    "California State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States.",
+    " It is one of two polytechnics in the California State University system.",
+    " Ельцина, \"Uralʹskiĭ federalʹnyĭ universitet imeni pervogo Prezidenta Rossii B.N. Yelʹtsina\", often shortened to UrFU, УрФУ ) (formed by a merger of the Ural State Technical University and Ural State University) is one of the leading educational institutions in the Ural region.",
+    " Ural Federal University acts as a research and innovation center of the Ural region and has close cooperation with the Russian Academy of Sciences."
+   ]
+  },
+  {
+   "id": "3262882280361419647",
+   "sentences": [
+    "A primary ossification center is the first area of a bone to start ossifying . It usually appears during prenatal development in the central part of each developing bone . In long bones the primary centers occur in the diaphysis / shaft and in irregular bones the primary centers occur usually in the body of the bone . Most bones have only one primary center ( e.g. all long bones ) but some irregular bones such as the os coxa ( hip ) and vertebrae have multiple primary centers ."
+   ]
+  },
+  {
+   "id": "multihop-rag-145",
+   "sentences": [
+    "It gave the JackJumpers a game-high 19-point lead and just about put the result to bed after Sydney had lost Jaylin Galloway (shoulder) and Jonah Bolden (fouled out).",
+    "9:20 p.m. — Nathaniel Lowe makes the play to retire Carroll, and that will bring the Rangers back up to bat with a 10-0 lead."
+   ]
+  },
+  {
+   "id": "-9143071050751652249",
+   "sentences": [
+    "No . Title Original air date `` The Dark Dream Begins '' `` Kuroki Yume no Hajimari '' ( 黒き 夢 の はじまり ) August 28 , 2016 Elizabeth Liones goes to the Boar Hat , where all her friends are still asleep following the festival . After Elizabeth is greeted by Hawk outside , Meliodas introduces her to a meat pie made with vegetables that looks like Hawk , but it turns out to be unfit for human consumption . Meliodas has the idea of using pork as the main ingredient , which causes Hawk to make haste out of the bar . Meliodas comes up with a contest for his friends , in which he will obey any order for a day from whoever catches Hawk first . However , Hawk manages to outsmart them due to his small size . Hawk returns to the Boar Hat and eats food scraps made by Ban , who is declared the winner as a result . At night , Meliodas takes Elizabeth back to the palace while also assuring that his purpose in life is to protect her . Meliodas then goes to the catacombs to see the Horn of Cernunnos . When the goddess vessel taunts him for his reputation as a demon , Meliodas destroys the Horn of Cernunnos in retaliation . `` Our Fighting Festival '' `` Futari no Ken'ka Matsuri '' ( 二 人 の 喧嘩 祭り ) September 4 , 2016 Ban walks up to a mountaintop to finally settle matters with Meliodas , but the former is surprised to see Elizabeth and Hawk as well as the other members of the Seven Deadly Sins and the Holy Knights as part of an audience . Merlin casts a gigantic cubic barrier around Meliodas and Ban in order for the spectators to safely watch the fight . Meanwhile , King and Hauser have their own fight to win the attention of Diane . Ban initiates a brutal attack on Meliodas that somehow weakens most of the spectators . The fight ends in a stalemate after the two of them exchange rapid punches that cause the barrier to break . They remain friends and head back down to the Boar Hat for a drink . `` In Pursuit of First Love '' `` Hatsukoi o Oikakete '' ( 初恋 を 追いかけ て ) September 11 , 2016 King still hesitates to confess his feelings for Diane . Meanwhile , Diane leaves the Boar Hat and heads to a construction site in town , recalling the devastating collateral damage she caused due to her immense size . The construction workers there apologize to her and thank her for saving the kingdom . When King comes to see Diane , the two decide to play a game of tag across town . Outside a church , a wedding ceremony is interrupted by a demon , in which Diane and King combine their skills in defeating the demon . King asks Diane if she regained her memories , and she answers him with a kiss on his cheek . The moment is ruined when a brick suddenly falls on his head , and he later wakes up next to her , having forgotten what they did during the day . `` The Shape of Love '' `` Ai no Katachi '' ( 愛 の かたち ) September 18 , 2016 Merlin agrees to be a waitress at the Boar Hat , but first she wants Meliodas and Gowther to follow Gilthunder to find out if he is being stalked by someone . Meanwhile , Gilthunder , Hauser and Griamore are each hit with falling debris in the streets , unaware of the situation . Gowther is distracted by a boy named Pelliot , who asks him to retrieve a fat cat off a roof . Since Gowther reminds Pelliot of his mother , who recently passed away , Gowther transforms into Pelliot 's mother for a moment and disappears when Pelliot 's father finds Pelliot . Meliodas finds Gilthunder , Hauser and Griamore at a restaurant , where he purposely spills coffee to expose Vivian , revealed as the stalker . Merlin punishes Vivian by planting a cursed ring on her finger , which will bring pain to her each time the curse is activated , and Merlin explains that the Ten Commandments are the highest class in the demon race . At the Boar Hat , Merlin quits her job as a waitress , while Hawk and Gowther fill in for the position , much to the guys ' dismay ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1194",
+   "sentences": [
+    "But “all of that, all of it, was built on lies,” Rehn declared to the jury.",
+    "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry.",
+    "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-2187",
+   "sentences": [
+    "But “all of that, all of it, was built on lies,” Rehn declared to the jury.",
+    "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "7526277995958905171",
+   "sentences": [
+    "`` Too Much Time on My Hands '' is the second single released from Styx 's 1981 triple - platinum album Paradise Theatre . It was written and sung by Tommy Shaw , who also plays the lead guitar solo during the break in the song ."
+   ]
+  },
+  {
+   "id": "5a8af1e255429950cd6afc28",
+   "sentences": [
+    "John Alexander (born 5 October 1955) is an English former footballer who holds the post of club secretary at Manchester United.",
+    " Born in Liverpool, Alexander began his football career with a club called Ulysses, before being picked up by Millwall, for whom he made his league debut in 1976.",
+    " He is the uncle of Liverpool player Trent Alexander-Arnold.",
+    "Trent John Alexander-Arnold (born 7 October 1998) is an English professional footballer who plays as a right-back for Premier League club Liverpool."
+   ]
+  }
+ ]
+}

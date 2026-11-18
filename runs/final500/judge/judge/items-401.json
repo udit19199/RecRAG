@@ -1,0 +1,491 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "9a3590d6b0e3402a",
+   "gold": [
+    {
+     "sentence": " The Park is home to the first flume ride in Ireland (Pirates Plunge).",
+     "facts": {
+      "0.0": "The Park is home to the first flume ride in Ireland.",
+      "0.1": "The first flume ride in Ireland is named Pirates Plunge."
+     }
+    },
+    {
+     "sentence": "Grace O'Malley (c. 1530 – c. 1603; also Gráinne O'Malley, Irish: \"Gráinne Ní Mháille\" ) was lord of the Ó Máille dynasty in the west of Ireland, following in the footsteps of her father Eoghan Dubhdara Ó Máille.",
+     "facts": {
+      "1.0": "Grace O'Malley lived from about 1530 to about 1603.",
+      "1.1": "Grace O'Malley is also called Gráinne O'Malley.",
+      "1.2": "Grace O'Malley's Irish name is Gráinne Ní Mháille.",
+      "1.3": "Grace O'Malley was lord of the Ó Máille dynasty in the west of Ireland.",
+      "1.4": "Grace O'Malley followed in the footsteps of her father, Eoghan Dubhdara Ó Máille."
+     }
+    }
+   ],
+   "items": [
+    "Pirate Adventure Park\nPirate Adventure Park is a small theme park located beside Westport House in Westport, Ireland.\n\n The Park is home to the first flume ride in Ireland (Pirates Plunge).\n\n The Park is Pirate themed due to Wesport House's association with Grace O'Malley.\n\n The Park was developed by The 11th Marquess of Sligo on the grounds of Westport House.",
+    "Treasure Island Resort &amp; Casino\nAn expansion that was completed in fall 2008 included 230 new hotel rooms, 30,000-square-foot event center and a bowling center complete with an arcade area.\n\n In 2015, Tado Steakhouse was constructed, Tradewinds Buffet was remodeled and the water park & spa construction began.\n\n The Lagoon and Wave Spa opened February 9, 2016.",
+    "Glenwood Caverns Adventure Park\nGlenwood Caverns Adventure Park is an adventure park located above Glenwood Springs, Colorado, about 160 miles west of Denver.\n\n Prior to 2003, only cave tours were available until a major expansion took place.\n\n The park is unique because it sits at an altitude of 7,100 feet on a mountain above Glenwood.\n\n Today, the park features numerous attractions in addition to the cave tours.",
+    "Bullmoose\nBullmoose (aka Zach Dobbins) is a Canadian rock band formed in Elgin, Ontario in 1996.\n\n Three of the original members continue in the band, which today is based in Montreal.\n\n They include twin brothers Jeff Cowan (drums/vocals) and Seamus Cowan (bass/vocals) from Westport, Ontario and Eric Lawrance (guitar/vocals) from Delta, Ontario, who launched the band when they attended school at Montreal.\n\n The band performs in the rock music genre, citing experimental influences of the late 1960s and early 1970s.",
+    "Christchurch Adventure Park\nChristchurch Adventure Park is an Adventure park in the Port Hills of Christchurch, New Zealand.\n\n Built by the Canadian company Select Evolution, it had its opening function on 16 December 2016.\n\n The 1500 holders of special passes could ride from 17 December, while the park opened to the public on 21 December.\n\n According to the developer, the 358 ha park with a 1.8 km chairlift and initially 50 km of downhill tracks is the largest facility of its kind in the Southern Hemisphere.\n\n The park closed on 13 February as a precaution due to a nearby fire and two days later, most of the park's tree cover had been destroyed in a large wildfire.\n\n The lift and ziplines have suffered significant damage, and the park's condition is much worse than the operator initially thought.\n\n No reopening date has been set, and \"it won't be a quick fix\".",
+    "White Water Landing (Dorney Park)\nWhite Water Landing is a Shoot-the-Chutes ride at Dorney Park & Wildwater Kingdom amusement park in Allentown, Pennsylvania.\n\n It was built in 1992, 10 years after a sister park named Cedar Point Built a defunct flume using the same name: White Water Landing (Cedar Point).\n\n This ride is identical to Snake River Falls at Cedar Point in Sandusky, Ohio.\n\n It is located in the upper side near Hydra the Revenge.",
+    "New Bedford Bay Sox\nMiller was succeeded as manager prior to the 2015 season by Westport, MA native and former Boston Red Sox draft pick Kyle Fernandes.\n\n Fernandes has led the Bay Sox to back-to-back postseason appearances in his two seasons as manager, most recently losing in a three-game series to the eventual NECBL Champions the Mystic Schooners.",
+    "Grace O'Malley\nGrace O'Malley (c. 1530 – c. 1603; also Gráinne O'Malley, Irish: \"Gráinne Ní Mháille\" ) was lord of the Ó Máille dynasty in the west of Ireland, following in the footsteps of her father Eoghan Dubhdara Ó Máille.\n\n Commonly known as \"Gráinne Mhaol\" (anglicised as Granuaile) in Irish folklore, she is a well-known historical figure in 16th-century Irish history.",
+    "Castle Park (amusement park)\nCastle Park, formerly Castle Amusement Park, is a 25-acre amusement park and family amusement center located in Riverside, California.\n\n The park utilizes a medieval \"castle\" theme and includes attractions such as a miniature golf course, arcade, and 27 amusement rides including three roller coasters such as \"Merlin's Revenge\", a junior rollercoaster, \"Screamin' Demon\" a spinning Wild Mouse rollercoaster, and \"Little Dipper\", a children's rollercoaster.\n\n The main \"castle\" themed building, houses the arcade as well as its only dark ride; \"Ghost Blasters\", an interactive attraction, designed by Sally Corporation, which can also be found at other amusement parks throughout North America.\n\n The park was designed, built and operated by Bud Hurlbut, who designed several rides at Knott's Berry Farm.\n\n Castle Park is currently owned and operated by Palace Entertainment.",
+    "Treasure Island Resort &amp; Casino\nIn 1993, a 78,000-square-foot expansion was added which created three new restaurants, valet parking, state-of-the-art kitchen, a gift shop, players club, ballroom and a new entertainment area.\n\n In the following year, a 137-slip marina and 95-site RV park would open.\n\n Growth continued as 9,854-square-foot addition for business offices is established in 1995.\n\n In 1996, Treasure Island made a big step with a $20 million addition and redesign.\n\n A strategic marketing shift changed the name to Treasure Island Resort & Casino with the addition of new theming and a 250-room hotel transformed Treasure Island into a destination resort.\n\n The total square footage has 350,000 with 25,000 square feet designed for meeting space.\n\n In 2001, an additional 200,000 feet were added to the casino, which included a new great entry, higher ceilings to improve air quality, additional games, 70,000-square-foot office space and 60,000-square-foot warehouse."
+   ]
+  },
+  {
+   "id": "46f1a102daa56e9a",
+   "gold": [
+    {
+     "sentence": "Christopher Edward Nolan ( ; born 30 July 1970) is an English-American film director, producer, and screenwriter.",
+     "facts": {
+      "0.0": "Christopher Edward Nolan was born 30 July 1970",
+      "0.1": "Christopher Edward Nolan is English-American",
+      "0.2": "Christopher Edward Nolan is a film director",
+      "0.3": "Christopher Edward Nolan is a producer",
+      "0.4": "Christopher Edward Nolan is a screenwriter"
+     }
+    },
+    {
+     "sentence": "Paul Joseph Schrader (born July 22, 1946) is an American screenwriter, film director, and film critic.",
+     "facts": {
+      "1.0": "Paul Joseph Schrader was born July 22, 1946",
+      "1.1": "Paul Joseph Schrader is an American screenwriter",
+      "1.2": "Paul Joseph Schrader is a film director",
+      "1.3": "Paul Joseph Schrader is a film critic"
+     }
+    }
+   ],
+   "items": [
+    "David Fincher\nDavid Andrew Leo Fincher (born August 28, 1962) is an American director and producer, notably for films, television series and music videos.\n\n He was nominated for the Academy Award for Best Director for \"The Curious Case of Benjamin Button\" (2008) and \"The Social Network\" (2010).\n\n For the latter, he won the Golden Globe Award for Best Director and the BAFTA Award for Best Direction.",
+    "The Walker\nThe Walker is a 2007 American-British drama film written and directed by Paul Schrader.\n\n It is an independent production and is the latest installment in Schrader's \"night workers\" series of films, starting with \"Taxi Driver\" in 1976, followed by \"American Gigolo\" in 1980 and \"Light Sleeper\" in 1992.",
+    "Leonard Schrader\nLeonard Schrader (November 30, 1943 – November 2, 2006) was an American screenwriter and director, most notable for his ability to write Japanese language films and for his many collaborations with his brother, Paul Schrader.\n\n He earned an Academy Award Nomination for the screenplay he wrote for the film \"Kiss of the Spider Woman\".",
+    "Chris Gorak\nChris Gorak is an American film director who started as an art director and production designer.\n\n He directed the 2006 film \"Right at Your Door\" and the 2011 film \"The Darkest Hour\".\n\n Gorak began working in the film industry in the 1990s as an art director.\n\n In the 2000s, he worked on several films as production designer before becoming a film director.",
+    "Blue Collar (film)\nBlue Collar is a 1978 American crime drama film directed by Paul Schrader, in his directorial debut.\n\n It was written by Schrader and his brother Leonard, and stars Richard Pryor, Harvey Keitel and Yaphet Kotto.",
+    "Ian Schneider\nIan Schneider (born October 3, 1992), is an independent American film director and screenwriter.",
+    "Christopher Nolan\nChristopher Edward Nolan ( ; born 30 July 1970) is an English-American film director, producer, and screenwriter.\n\n He is one of the highest-grossing directors in history, and among the most successful and acclaimed filmmakers of the 21st century.",
+    "Paul Schrader\nPaul Joseph Schrader (born July 22, 1946) is an American screenwriter, film director, and film critic.\n\n Schrader wrote or co-wrote screenplays for four Martin Scorsese films: \"Taxi Driver\" (1976), \"Raging Bull\" (1980), \"The Last Temptation of Christ\" (1988), and \"Bringing Out the Dead\" (1999).\n\n Schrader has also directed 18 feature films, including his directing debut crime drama, \"Blue Collar\" (co-written with his brother, Leonard Schrader), the crime drama \"Hardcore\" (a loosely autobiographical film also written by Schrader), his 1982 remake of the horror classic \"Cat People\", the crime drama \"American Gigolo\" (1980), the biographical drama \"\" (1985), the cult film \"Light Sleeper\" (1992), the drama \"Affliction\" (1997), the biographical film \"Auto Focus\" (2002), and the erotic dramatic thriller \"The Canyons\" (2013).",
+    "Hardcore (1979 film)\nHardcore is a 1979 American crime drama film written and directed by Paul Schrader and starring George C. Scott, Peter Boyle and Season Hubley.\n\n The story concerns a father searching for his daughter, who has vanished only to appear in a pornographic film.\n\n Writer-director Schrader had previously written the screenplay for Martin Scorsese's \"Taxi Driver\", and both films share a theme of exploring an unseen subculture.",
+    "John Bailey (cinematographer)\nJohn Ira Bailey, A.S.C. (born August 10, 1942) is an American cinematographer and film director best known for his collaborations with directors Paul Schrader, Lawrence Kasdan, Michael Apted, and Ken Kwapis.\n\n In August 2017, Bailey was elected President of the Academy of Motion Picture Arts and Sciences for a four-year term."
+   ]
+  },
+  {
+   "id": "62cb8b44b70efa24",
+   "gold": [
+    {
+     "sentence": "Prof. Dr. Ernst Willi Messerschmid (born May 21, 1945) is a German physicist and former astronaut.",
+     "facts": {
+      "0.0": "Ernst Willi Messerschmid is Prof. Dr.",
+      "0.1": "Ernst Willi Messerschmid was born on May 21, 1945.",
+      "0.2": "Ernst Willi Messerschmid is a German physicist.",
+      "0.3": "Ernst Willi Messerschmid is a former astronaut."
+     }
+    },
+    {
+     "sentence": "Philippe Perrin (Colonel, French Air Force) (born January 6, 1963) is a French test pilot and former CNES and European Space Agency astronaut.",
+     "facts": {
+      "1.0": "Philippe Perrin was born on January 6, 1963.",
+      "1.1": "Philippe Perrin is a Colonel in the French Air Force.",
+      "1.2": "Philippe Perrin is a French test pilot.",
+      "1.3": "Philippe Perrin is a former CNES astronaut.",
+      "1.4": "Philippe Perrin is a former European Space Agency astronaut."
+     }
+    }
+   ],
+   "items": [
+    "François Englert\nFrançois Baron Englert (] ; born 6 November 1932) is a Belgian theoretical physicist and 2013 Nobel prize laureate (shared with Peter Higgs).\n\n He is Professor emeritus at the Université libre de Bruxelles (ULB) where he is member of the Service de Physique Théorique.\n\n He is also a Sackler Professor by Special Appointment in the School of Physics and Astronomy at Tel Aviv University and a member of the Institute for Quantum Studies at Chapman University in California.\n\n He was awarded the 2010 J. J. Sakurai Prize for Theoretical Particle Physics (with Gerry Guralnik, C. R. Hagen, Tom Kibble, Peter Higgs, and Robert Brout), the Wolf Prize in Physics in 2004 (with Brout and Higgs) and the High Energy and Particle Prize of the European Physical Society (with Brout and Higgs) in 1997 for the mechanism which unifies short and long range interactions by generating massive gauge vector bosons.\n\n He has made contributions in statistical physics, quantum field theory, cosmology, string theory and supergravity.",
+    "Helmuth von Moltke the Younger\nHelmuth Johann Ludwig von Moltke (] ; 23 May 1848 – 18 June 1916), also known as Moltke the Younger, was a nephew of \"Generalfeldmarschall\" (Field Marshal) Helmuth Karl Bernhard von Moltke and served as the Chief of the German General Staff from 1906 to 1914.\n\n The two are often differentiated as \"Moltke the Elder\" and \"Moltke the Younger\".",
+    "Émile Verdet\nMarcel Émile Verdet (13 March 1824 – 3 June 1866) was a French physicist.\n\n He worked in magnetism and optics, editing the works of Augustin-Jean Fresnel.\n\n Verdet did much to champion the early theory of the conservation of energy in France through his editorial supervision of the \"Annales de chimie et de physique\".",
+    "François Englert\nHe is the recipient of the 2013 Prince of Asturias Award in technical and scientific research, together with Peter Higgs and the CERN.",
+    "Philippe Perrin (artist)\nPhilippe Perrin, (La Tronche, 10 August 1964) is a French artist and contemporary photographer who lives and works in Paris.",
+    "Serge Haroche\nSerge Haroche (born 11 September 1944) is a French physicist who was awarded the 2012 Nobel Prize for Physics jointly with David J. Wineland for \"ground-breaking experimental methods that enable measuring and manipulation of individual quantum systems\", a study of the particle of light, the photon.\n\n This and his other works developed laser spectroscopy.\n\n Since 2001, Haroche is a Professor at the Collège de France and holds the Chair of Quantum Physics.\n\n In 1971 he defended his doctoral thesis in physics at the University of Paris VI, his research has been conducted under the direction of Claude Cohen-Tannoudji.",
+    "Philippe Perrin\nPhilippe Perrin (Colonel, French Air Force) (born January 6, 1963) is a French test pilot and former CNES and European Space Agency astronaut.",
+    "Ernst Messerschmid\nProf. Dr. Ernst Willi Messerschmid (born May 21, 1945) is a German physicist and former astronaut.",
+    "Hans Schlegel\nHans Wilhelm Schlegel (Überlingen, 3 August 1951) is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions.",
+    "Jean-Loup Puget\nJean-Loup Puget (born 7 March 1947) is a French astrophysicist.\n\n His current research interests lie in the Cosmic Microwave Background.\n\n Jean-Loup Puget and his collaborators reported the first identification of the Cosmic infrared background using COBE data.\n\n He is also, along with Alain Léger, credited with the origin of the hypothesis that the series of infrared lines observed in numerous astrophysical objects are caused by emission from polycyclic aromatic hydrocarbons.\n\n He is currently principal investigator of the HFI module of the Planck space mission."
+   ]
+  },
+  {
+   "id": "5e1460b42d6692d7",
+   "gold": [
+    {
+     "sentence": "Ash Lieb (born 22 August 1982) is an Australian artist, writer and comedian, known for his surreal humour and art.",
+     "facts": {
+      "0.0": "Ash Lieb was born on 22 August 1982.",
+      "0.1": "Ash Lieb is an Australian artist.",
+      "0.2": "Ash Lieb is an Australian writer.",
+      "0.3": "Ash Lieb is an Australian comedian.",
+      "0.4": "Ash Lieb is known for his surreal humour.",
+      "0.5": "Ash Lieb is known for his surreal art."
+     }
+    },
+    {
+     "sentence": "Helen Elswyth Thane Ricker Beebe (May 16, 1900 – July 31, 1984) was an American romance novelist.",
+     "facts": {
+      "1.0": "Helen Elswyth Thane Ricker Beebe was born on May 16, 1900.",
+      "1.1": "Helen Elswyth Thane Ricker Beebe died on July 31, 1984.",
+      "1.2": "Helen Elswyth Thane Ricker Beebe was an American romance novelist."
+     }
+    }
+   ],
+   "items": [
+    "The Preytells\nThe Preytells were an Australian indie rock band from Perth, formed in 2004 by Jessica Bennett (a.k.a. Audrey Tell) on lead guitar and backing vocals, Simon Okely (a.k.a. Will Tell) on guitar and lead vocals, Jaclyn Pearson on drums and percussion and Cameron Stewart on bass guitar and backing vocals.\n\n Their sole album, \"Flood Songs/June Songs\", was issued in September 2009; before they disbanded later that year.\n\n Their single, \"Shout!\"\n\n ( May 2008), was nominated for WAM Song of the Year in the Pop category in 2008; while, \"Lord Hold My Hand\", was nominated for the same category in 2009.",
+    "Elswyth Thane\nHelen Elswyth Thane Ricker Beebe (May 16, 1900 – July 31, 1984) was an American romance novelist.\n\n Born in Burlington, Iowa, she was the daughter of a local teacher and high school principal.\n\n The family moved to New York City in 1918, and \"Helen Ricker\" changed her name to \"Elswyth Thane\".\n\n She began working as a freelance writer in the 20s, and became a newspaper writer and a Hollywood screenwriter.\n\n Her first novel, \"Riders of the Wind\", was published in 1926.\n\n Her novel, \"The Tudor Wench\", about Elizabeth I of England, was made into a play.\n\n She was a collector of scarves.",
+    "Dan Ouellette\nDan Ouellette is an American artist, illustrator, director, author and production designer.\n\n He began drawing as a child inspired by Escher, Dalí and Moebius.\n\n His drawings usually begin with very rough sketches and are intended to capture a moment of tension or eroticism.\n\n His art pushes his audience into areas where people feel less than comfortable, stating that the \"US which is so puritanical, our bodies are usually a great source of anxiety and fear\".\n\n As a production designer, he has designed over fifteen independent feature films in the past decade as well as numerous commercials and music videos.\n\n He is best known as the director for the music videos \"Blue\" and \"Looking Glass\" by The Birthday Massacre, receiving over 4 million combined views on YouTube, and has directed music videos for the industrial band Android Lust.\n\n He has done production design for many films over the years including \"Chasing Sleep\" starring Jeff Daniels.\n\n Dan's artwork is strongly themed around surrealism and mostly done in pencil.\n\n As an artist he has exhibited widely.\n\n He has been published in numerous anthology art books including \"Bio-Mannerism\" which also features work by H.R.",
+    "Oliver Lieb\nOliver Lieb (born 1969 in Frankfurt, Germany) is a German electronic music producer and DJ.\n\n Lieb is known to have more than a dozen aliases with over 200 productions and remixes in various electronic genres such as trance, house, and techno.\n\n He has also produced tracks for other artists.",
+    "Scott Treleaven\nScott Treleaven is a Canadian artist whose work employs a variety of media including collage, film, video, drawing, photography and installation.",
+    "Tryst (novel)\nTryst, written in 1939 by Elswyth Thane, is a story of two people and a seemingly ordinary home.\n\n While a quick summary may make it sound like a Horror novel, it actually borders on Mystery and Romance.",
+    "Matt Thiessen\nMatthew Arnold \"Matt\" Thiessen (born August 12, 1980) is a Canadian-American musician, singer and songwriter known for being co-founder, lead singer, guitarist, pianist, and primary songwriter for the Christian rock band Relient K.\n\n With Relient K, he has released eight full-length albums, including three that were certified Gold, and three that peaked in the top twenty on the \"Billboard\" 200.\n\n Outside of his work with Relient K, Thiessen maintains a low-profile side project called Matthew Thiessen and the Earthquakes.\n\n In 2009, he co-produced and collaborated on Owl City's album \"Ocean Eyes\".",
+    "Dash and Lilly\nDash and Lilly is a 1999 Emmy and Golden Globe Award-nominated biographical television film about writers Dashiell Hammett and Lillian Hellman.\n\n The film was directed by actress Kathy Bates and written by Jerrold L. Ludwig.\n\n It stars Sam Shepard and Judy Davis.",
+    "Onyx (Cornish band)\nThe Onyx or Onyx is a psychedelic rock band formed in Wadebridge, Cornwall, UK in 1965.\n\n Out of the ashes of Rick & The Hayseeds the band came to be known as The Onyx Set, named after an Onyx ring owned by original band member Mike Black-Borow.\n\n After various changes in the line-up they shortened their name to The Onyx and the classic line-up was formed.\n\n The band members were: guitarist Alan Hodge, who had previously played with various local bands such as The Buccaneers and The Fabulous Jaguars, vocalist Tony Priest, bassist Dick Bland, keyboard player Steve Cotton and drummer Roger Dell.",
+    "Ash Lieb\nAsh Lieb (born 22 August 1982) is an Australian artist, writer and comedian, known for his surreal humour and art.\n\n Born in Ballarat, Ash Lieb began exhibiting art at eight years of age, and at the age of fifteen, wrote his first novel, \"The Secret Well\".\n\n Throughout his career, Lieb has created a diverse range of artworks, books, short films, and comedic performances, which have often possessed philosophical or psychiatric undertones."
+   ]
+  },
+  {
+   "id": "164d4e0f4853c4ac",
+   "gold": [
+    {
+     "sentence": "Pterostyrax, the epaulette tree, is a small genus of four species of deciduous large shrubs or small trees in the family Styracaceae, native to eastern Asia in China and Japan.",
+     "facts": {
+      "0.0": "Pterostyrax is also called the epaulette tree.",
+      "0.1": "Pterostyrax is a small genus.",
+      "0.2": "Pterostyrax has four species.",
+      "0.3": "Pterostyrax species are deciduous.",
+      "0.4": "Pterostyrax species are large shrubs or small trees.",
+      "0.5": "Pterostyrax is in the family Styracaceae.",
+      "0.6": "Pterostyrax is native to eastern Asia.",
+      "0.7": "Pterostyrax is native to China.",
+      "0.8": "Pterostyrax is native to Japan."
+     }
+    },
+    {
+     "sentence": "Dregea is a genus of vines in the Apocynaceae, first described as a genus with this name in 1838.",
+     "facts": {
+      "1.0": "Dregea is a genus of vines.",
+      "1.1": "Dregea is in the family Apocynaceae.",
+      "1.2": "Dregea was first described as a genus with this name in 1838."
+     }
+    },
+    {
+     "sentence": " It is native to Africa and southern Asia.",
+     "facts": {
+      "2.0": "Dregea is native to Africa.",
+      "2.1": "Dregea is native to southern Asia."
+     }
+    }
+   ],
+   "items": [
+    "The text covers several flowering plants. Pterostyrax is a four-species East Asian genus of deciduous shrubs and small trees; P. hispidus grows to 15 m and bears fragrant white summer flowers. Styrax comprises about 130 shrubs and trees, mostly from Asia; its resin, benzoin, is used in perfume, incense, flavoring, and medicine. Listed Styrax species are native to Malaysia, Singapore, Vietnam, and Peru;",
+    "Pterostyrax\nPterostyrax, the epaulette tree, is a small genus of four species of deciduous large shrubs or small trees in the family Styracaceae, native to eastern Asia in China and Japan.\n\n They grow 4 - tall, with alternate, simple ovate leaves 6 - long and 4 - broad.\n\n The flowers are white, produced in dense panicles 8 - long.\n\n The fruit is an oblong dry drupe, with longitudinal ribs or narrow wings (the wings are absent in the related genus \"Styrax\", whence the name \"Pterostyrax\", \"winged styrax\").",
+    "Pterostyrax hispidus\nPterostyrax hispidus, the epaulette tree or fragrant epaulette tree, is a species of flowering plant in the family Styracaceae, native to China and Japan.\n\n Growing to 15 m tall by 12 m broad, it is a substantial, spreading, deciduous shrub with oval leaves up to 20 cm long, and clusters of pure white, fragrant, pendent flowers in summer.",
+    "Lepidozamia\nLepidozamia is a genus of two species of cycad, both endemic to Australia.\n\n The name, derived from the Greek word lepidos, meaning scaly, refers to the scale-like structure of the stem and leaf bases.\n\n They are native to rainforest climates in eastern Queensland and eastern New South Wales.\n\n They have a chromosome number of 2n = 18.",
+    "Dregea\nDregea is a genus of vines in the Apocynaceae, first described as a genus with this name in 1838.\n\n It is native to Africa and southern Asia.",
+    "Deutzia\nDeutzia ( or ) is a genus of about 60 species of flowering plants in the family Hydrangeaceae, native to eastern and central Asia (from the Himalayas east to Japan and the Philippines), and Central America and also Europe.\n\n By far the highest species diversity is in China, where 50 species occur.",
+    "Dregea volubilis\nDregea volubilis is a species of plant in the Apocynaceae family that is native to India.",
+    "Styrax crotonoides\nStyrax crotonoides is a species of plant in the genus \"Styrax\" and family Styracaceae.\n\n It is found in Peninsular Malaysia and Singapore.",
+    "Dregea sinensis\nDregea sinensis is a species of plant in the Apocynaceae family that is native to China.",
+    "Styrax litseoides\nStyrax litseoides is a species of flowering plant in the genus \"Styrax\" and family Styracaceae.\n\n It is endemic to Vietnam."
+   ]
+  },
+  {
+   "id": "f2454327a581c7df",
+   "gold": [
+    {
+     "sentence": "Yucca is a genus of perennial shrubs and trees in the family Asparagaceae, subfamily Agavoideae.",
+     "facts": {
+      "0.0": "Yucca is a genus of perennial shrubs and trees.",
+      "0.1": "Yucca is in the family Asparagaceae.",
+      "0.2": "Yucca is in the subfamily Agavoideae."
+     }
+    },
+    {
+     "sentence": "Rodgersia is a genus of flowering plants in the Saxifragaceae family.",
+     "facts": {
+      "1.0": "Rodgersia is a genus of flowering plants.",
+      "1.1": "Rodgersia is in the Saxifragaceae family."
+     }
+    },
+    {
+     "sentence": " \"Rodgersia\" are herbaceous perennials originating from east Asia.",
+     "facts": {
+      "2.0": "Rodgersia are herbaceous perennials.",
+      "2.1": "Rodgersia originate from east Asia."
+     }
+    }
+   ],
+   "items": [
+    "Yucca brevifolia\nYucca brevifolia is a plant species belonging to the genus \"Yucca\".\n\n It is tree-like in habit, which is reflected in its common names: Joshua tree, yucca palm, tree yucca, and palm tree yucca.",
+    "Yucca × schottii\nYucca\" × \"schottii is a plant species in the genus \"Yucca\", native to southern Arizona, southwestern New Mexico, and the northern parts of Sonora and Chihuahua.\n\n.\n\n The common names are Schott's yucca, hoary yucca, and mountain yucca.\n\n The \"×\" in the name indicates that this is a nothospecies, regarded as being a natural hybrid between two other species.\n\n In this case, \"Yucca\" × \"schottii\" is believed to have originated as a hybrid between \"Y. baccata\" and \"Y. madrensis\".\n\n \"Yucca\" × \"schottii\" is firmly established and does reproduce freely in the wild.",
+    "Yucca rupicola\nYucca rupicola is a plant in the family Asparagaceae, known as the twistleaf yucca, twisted-leaf yucca, Texas yucca or twisted-leaf Spanish-dagger.\n\n The species was described by George Heinrich Adolf Scheele in 1850.\n\n This is a small, acaulescent plant with distinctive twisted leaves.\n\n It is native to the Edwards Plateau region of Texas and also to northeastern Mexico (Coahuila, Nuevo León).",
+    "Yucca\nYucca is a genus of perennial shrubs and trees in the family Asparagaceae, subfamily Agavoideae.\n\n Its 40-50 species are notable for their rosettes of evergreen, tough, sword-shaped leaves and large terminal panicles of white or whitish flowers.\n\n They are native to the hot and dry (arid) parts of the Americas and the Caribbean.\n\n Early reports of the species were confused with the cassava (\"Manihot esculenta\").\n\n Consequently, Linnaeus mistakenly derived the generic name from the Taíno word for the latter, \"yuca\" (spelled with a single \"c\").\n\n It is commonly found growing in rural graveyards and when in bloom the cluster of (usually pale) flowers on a thin stalk appear as floating apparitions.",
+    "Rodgersia\nRodgersia is a genus of flowering plants in the Saxifragaceae family.\n\n \"Rodgersia\" are herbaceous perennials originating from east Asia.",
+    "Haemodoraceae\nHaemodoraceae is a family of perennial herbaceous flowering plants with 14 genera and 102 known species.\n\n It is sometimes known as the \"bloodwort family\".\n\n Primarily a Southern Hemisphere family, they are found in South Africa, Australia and New Guinea, and in the Americas (from SE U.S.A. to tropical South America).\n\n Perhaps the best known are the widely cultivated and unusual kangaroo paws from Australia, of the two closely related genera \"Anigozanthos\" and \"Macropidia\".",
+    "Yucca aloifolia\nYucca aloifolia is the type species for the genus Yucca.\n\n Common names include aloe yucca, dagger plant, and Spanish bayonet.\n\n It grows in sandy soils, especially on sand dunes along the coast.\n\n \"Yucca aloifolia\" is native to the Atlantic and Gulf Coasts of the United States from southern Virginia south to Florida and west to the Texas Gulf Coast, to Mexico along the Yucatán coast, and to Bermuda, and parts of the Caribbean.\n\n Normally Yucca aloifolia is grown in USDA zones 8 through 11.\n\n Yucca aloifolia is a popular landscape plant in beach areas along the lower East Coast from Virginia to Florida.",
+    "Yucca glauca\nYucca glauca (syn.\n\n \"Yucca angustifolia\") is a species of perennial evergreen plant, adapted to xeric (dry)growth conditions.\n\n It is also known as small soapweed, soapweed yucca, Spanish bayonet, Great Plains yucca and beargrass.",
+    "Yucca jaliscensis\nYucca jaliscensis is a \"Yucca\" species native to the highlands of southwestern Mexico.\n\n Common names for this species include Jalisco Yucca, Jalisco Soapwort, Izote Yucca.\n\n It is native to mountainous areas at about 5000 feet in the States of Jalisco, Colima and Guanajuato.",
+    "Hesperoyucca whipplei\nHesperoyucca whipplei (syn.\n\n \"Yucca whipplei\" ) (chaparral yucca, our Lord's candle, Spanish bayonet, Quixote yucca or foothill yucca is a species of flowering plant closely related to, and formerly usually included in, the genus \"Yucca\".\n\n It is native to southern California, United States and Baja California, Mexico, where it occurs mainly in chaparral, coastal sage scrub, and oak woodland plant communities at altitudes of 0–2500 m."
+   ]
+  },
+  {
+   "id": "683fcdb5fbc586c6",
+   "gold": [
+    {
+     "sentence": "Samsung Galaxy S7 and Samsung Galaxy S7 Edge are Android smartphones manufactured and marketed by Samsung Electronics.",
+     "facts": {
+      "0.0": "Samsung Galaxy S7 is an Android smartphone.",
+      "0.1": "Samsung Galaxy S7 Edge is an Android smartphone.",
+      "0.2": "Samsung Galaxy S7 and S7 Edge are manufactured by Samsung Electronics.",
+      "0.3": "Samsung Galaxy S7 and S7 Edge are marketed by Samsung Electronics."
+     }
+    },
+    {
+     "sentence": " The S7 series serves as the successor to the Galaxy S6, S6 Edge and S6 Edge+ released in 2015.",
+     "facts": {
+      "1.0": "The S7 series is the successor to the Galaxy S6.",
+      "1.1": "The S7 series is the successor to the Galaxy S6 Edge.",
+      "1.2": "The S7 series is the successor to the Galaxy S6 Edge+.",
+      "1.3": "The Galaxy S6, S6 Edge and S6 Edge+ were released in 2015."
+     }
+    },
+    {
+     "sentence": "Samsung Galaxy S6, Samsung Galaxy S6 Edge, and Samsung Galaxy S6 Edge+ are Android smartphones manufactured and marketed by Samsung Electronics.",
+     "facts": {
+      "2.0": "Samsung Galaxy S6 is an Android smartphone.",
+      "2.1": "Samsung Galaxy S6 Edge is an Android smartphone.",
+      "2.2": "Samsung Galaxy S6 Edge+ is an Android smartphone.",
+      "2.3": "Samsung Galaxy S6, S6 Edge and S6 Edge+ are manufactured by Samsung Electronics.",
+      "2.4": "Samsung Galaxy S6, S6 Edge and S6 Edge+ are marketed by Samsung Electronics."
+     }
+    },
+    {
+     "sentence": " The S6 line serves as a successor to the Galaxy S5.",
+     "facts": {
+      "3.0": "The S6 line is a successor to the Galaxy S5."
+     }
+    },
+    {
+     "sentence": " The S6 and S6 Edge smartphones were officially unveiled in the first \"Samsung Unpacked 2015\" event at Mobile World Congress on 1 March 2015, while the bigger S6 Edge+ was officially unveiled together with the Samsung Galaxy Note 5 in the second \"Samsung Unpacked 2015\" event at New York on 13 August 2015.",
+     "facts": {
+      "4.0": "The S6 was officially unveiled in the first Samsung Unpacked 2015 event.",
+      "4.1": "The S6 Edge was officially unveiled in the first Samsung Unpacked 2015 event.",
+      "4.2": "The first Samsung Unpacked 2015 event was held at Mobile World Congress on 1 March 2015.",
+      "4.3": "The S6 Edge+ was officially unveiled together with the Samsung Galaxy Note 5.",
+      "4.4": "The S6 Edge+ was officially unveiled in the second Samsung Unpacked 2015 event.",
+      "4.5": "The second Samsung Unpacked 2015 event was held in New York on 13 August 2015."
+     }
+    }
+   ],
+   "items": [
+    "Microsoft My Phone (launched 2009) backed up Windows Mobile data online, offered photo sharing and paid lost-phone tools, and closed in 2011 as selected data moved to SkyDrive. Samsung devices covered include the T-Mobile-only 2008 Behold touchscreen, 2013 dual-SIM Galaxy S Duos 2, slider E900 and award-winning D500, budget Java-based REX phones, Galaxy S6/S7 flagships, 2011 Galaxy Tab 8.",
+    "Samsung SGH-T919\nThe Samsung Behold SGH-T919 is a touch-screen, 3G candybar-style mobile phone introduced by Samsung late in 2008.\n\n The Behold is one of the first Samsung mobile phones released to have a touch-screen along with the Samsung Omnia, the Samsung Instinct, the Samsung Eternity, and the Samsung Tocco.\n\n The Behold is the \"American\" release of Samsung Tocco, which is only sold in Europe, Asia and Australia so the features and design of both of these phones are similar.\n\n Some of the Behold's biggest competitors were Apple's iPhone, T-Mobile G1 (HTC Dream), LG Dare, Samsung Instinct, and Samsung Eternity.\n\n It was only available only to customers of T-Mobile.",
+    "Samsung REX\nThe Samsung REX series is a range of Samsung smartphones and feature phones, ranging from low to mid-end phones, running a Java-based operating system with Samsung's TouchWiz user interface.\n\n It is currently one of the Samsung line of devices that are aimed at the budget phone market alongside lower end Samsung Galaxy devices.\n\n Its main competition includes the Nokia Asha range and Firefox OS.",
+    "Samsung SGH-D500\nThe SGH-D500 has been succeeded by the Samsung SGH-D600.\n\n There is a very similar variant handset, the SGH-D500E.",
+    "Samsung Galaxy S Duos 2\nSamsung Galaxy S Duos 2 is a version of Samsung Galaxy Trend Plus with dual SIM Android smartphone, produced and marketed by Samsung Electronics, which serves as an immediate successor to the original Galaxy S Duos, which is made in second quarter of 2012.\n\n Unveiled on 30 November 2013 at some Asian markets, it was initially released on December 5, 2013 in several countries.\n\n In contrast with other dual sim Samsung models, this phone is a part of the high-end \"S\" series, this is why it is marketed as a part of the \"Galaxy S\" family.\n\n Despite being called as a direct successor to the original S Duos phone, external and physical design of the model is identical to the original model, placing emphasis on internal upgrades such as upgraded processor and updated Operating System software.",
+    "Samsung Galaxy Gear\nThe Samsung Galaxy Gear is a smartwatch produced by Samsung Electronics in the Samsung Gear family of devices.\n\n Unveiled during a \"Samsung Unpacked\" event in Berlin, Germany on September 4, 2013, the device serves as a companion for all Samsung Galaxy smartphones and tablets which run Android 4.3 or newer; it was released on September 25, 2013.\n\n Originally released as an Android-based device, Samsung replaced the operating system with Tizen through the May 2014 software update.",
+    "Samsung Galaxy S6\nSamsung Galaxy S6, Samsung Galaxy S6 Edge, and Samsung Galaxy S6 Edge+ are Android smartphones manufactured and marketed by Samsung Electronics.\n\n The S6 line serves as a successor to the Galaxy S5.\n\n The S6 and S6 Edge smartphones were officially unveiled in the first \"Samsung Unpacked 2015\" event at Mobile World Congress on 1 March 2015, while the bigger S6 Edge+ was officially unveiled together with the Samsung Galaxy Note 5 in the second \"Samsung Unpacked 2015\" event at New York on 13 August 2015.\n\n Alongside the S6, Samsung also unveiled the S6 Edge (and later on the bigger S6 Edge+), a variant whose screen is wrapped along the sides of the device; the curvature is usable for several additional features.\n\n The Galaxy S6 and S6 Edge were released on 10 April 2015 in 20 countries while the S6 Edge+ was released on 21 August 2015 in 20 countries.",
+    "Samsung Ativ S\nThe Samsung ATIV S is a touchscreen, slate smartphone manufactured by Samsung Electronics running the Windows Phone 8 operating system, upgradeable to Windows Phone 8.1.\n\n The ATIV S is Samsung's first Windows Phone 8 device, and one of the first devices under its ATIV series of Microsoft Windows-based products.\n\n It was shown at the IFA 2012 in Berlin and was the first Windows Phone 8 device to be officially unveiled, ahead of the Nokia Lumia 920.",
+    "Samsung SGH-E900\nThe Samsung E900, introduced in 2006, is a high-end mobile phone and is derived from Samsung's D500-D600-D800 series of slide phones.\n\n It is of a slide-up design and has touch-sensitive keys, similar to the LG Chocolate (KG800).\n\n It was one of the most popular phones at the time but was discontinued late 2007 when buyers then turned their attention to the Samsung D900i, followed by the Samsung U600, which was the slimmest phone by Samsung with a thickness of 1.09 cm until the E840 was released.",
+    "Samsung Galaxy S7\nSamsung Galaxy S7 and Samsung Galaxy S7 Edge are Android smartphones manufactured and marketed by Samsung Electronics.\n\n The S7 series serves as the successor to the Galaxy S6, S6 Edge and S6 Edge+ released in 2015.\n\n The phones were officially unveiled on 21 February 2016, during a Samsung press conference at Mobile World Congress, with a European and North American release on 11 March 2016."
+   ]
+  },
+  {
+   "id": "edfe632e13d1ae31",
+   "gold": [
+    {
+     "sentence": "Dictyosperma is a monotypic genus of flowering plant in the palm family found in the Mascarene Islands in the Indian Ocean (Mauritius, Réunion and Rodrigues).",
+     "facts": {
+      "0.0": "Dictyosperma is a monotypic genus of flowering plant.",
+      "0.1": "Dictyosperma is in the palm family.",
+      "0.2": "Dictyosperma is found in the Mascarene Islands in the Indian Ocean.",
+      "0.3": "Dictyosperma is found in Mauritius.",
+      "0.4": "Dictyosperma is found in Réunion.",
+      "0.5": "Dictyosperma is found in Rodrigues."
+     }
+    },
+    {
+     "sentence": "The genus Huernia (family Apocynaceae, subfamily Asclepiadoideae) consists of stem succulents from Eastern and Southern Africa, first described as a genus in 1810.",
+     "facts": {
+      "1.0": "The genus Huernia is in the family Apocynaceae.",
+      "1.1": "The genus Huernia is in the subfamily Asclepiadoideae.",
+      "1.2": "The genus Huernia consists of stem succulents.",
+      "1.3": "The stem succulents of the genus Huernia are from Eastern Africa.",
+      "1.4": "The stem succulents of the genus Huernia are from Southern Africa.",
+      "1.5": "The genus Huernia was first described as a genus in 1810."
+     }
+    }
+   ],
+   "items": [
+    "Zygotritonia\nZygotritonia is a genus of herbaceous, perennial and bulbous plants in the Iris family (Iridaceae).\n\n It contains four species distributed in Tropical Africa.\n\n The genus name is derived from the word zygomorphic (meaning bilabiate), and the apparent resemblance to some species in the genus \"Tritonia\".",
+    "Hymenocallideae\nHymenocallideae is a tribe (in the family Amaryllidaceae, subfamily Amaryllidoideae), where it forms part of the Andean clade, one of two American clades.\n\n The tribe was originally recognised by both Meerow (1995) and the Muller-Doblies' (1996).\n\n Its phylogenetic position within the Amaryllidoideae was established by Meerow \"et al.\" in 2000, while in-depth infratribal relationships were established in 2002.",
+    "Conophytum\nConophytum is a genus of South African and Namibian succulent plants that belong to the Aizoaceae family.\n\n The name is derived from the Latin “conus” (cone) and Greek “phytum” (plant).\n\n The plants are also known as knopies (buttons), waterblasies (water blisters), sphaeroids, conos, cone plants, dumplings, or button plants.",
+    "Huernia\nThe genus Huernia (family Apocynaceae, subfamily Asclepiadoideae) consists of stem succulents from Eastern and Southern Africa, first described as a genus in 1810.\n\n The flowers are five-lobed, usually somewhat more funnel- or bell-shaped than in the closely related genus \"Stapelia\", and often striped vividly in contrasting colours or tones, some glossy, others matt and wrinkled depending on the species concerned.\n\n To pollinate, the flowers attract flies by emitting a scent similar to that of carrion.\n\n The genus is considered close to the genera \"Stapelia\" and \"Hoodia\".\n\n The name is in honour of Justin Heurnius (1587–1652) a Dutch missionary who is reputed to have been the first collector of South African Cape plants.\n\n His name was actually mis-spelt by the collector.",
+    "Dregea\nDregea is a genus of vines in the Apocynaceae, first described as a genus with this name in 1838.\n\n It is native to Africa and southern Asia.",
+    "Harrimanella\nHarrimanella is a genus of flowering plant in the heath family Ericaceae, with a single species, Harrimanella hypnoides, also known as moss bell heather.\n\n It was originally named Cassiope hypnoides by Linnaeus (1737) in his Flora Lapponica, but \"Harrimanella hypnoides\" is now the accepted name at ITIS.\n\n The species name \"hypnoides\" means 'like \"Hypnum\" ', which is a genus mosses.",
+    "Lepidozamia\nLepidozamia is a genus of two species of cycad, both endemic to Australia.\n\n The name, derived from the Greek word lepidos, meaning scaly, refers to the scale-like structure of the stem and leaf bases.\n\n They are native to rainforest climates in eastern Queensland and eastern New South Wales.\n\n They have a chromosome number of 2n = 18.",
+    "Arnebia\nArnebia is a genus of flowering plants in the family Boraginaceae.",
+    "Deutzia\nDeutzia ( or ) is a genus of about 60 species of flowering plants in the family Hydrangeaceae, native to eastern and central Asia (from the Himalayas east to Japan and the Philippines), and Central America and also Europe.\n\n By far the highest species diversity is in China, where 50 species occur.",
+    "Dictyosperma\nDictyosperma is a monotypic genus of flowering plant in the palm family found in the Mascarene Islands in the Indian Ocean (Mauritius, Réunion and Rodrigues).\n\n The sole species, Dictyosperma album, is widely cultivated in the tropics but has been farmed to near extinction in its native habitat.\n\n It is commonly called princess palm or hurricane palm, the latter owing to its ability to withstand strong winds by easily shedding leaves.\n\n It is closely related to, and resembles, palms in the \"Archontophoenix\" genus.\n\n The genus is named from two Greek words meaning \"net\" and \"seed\" and the epithet is Latin for \"white\", the common color of the crownshaft at the top of the trunk."
+   ]
+  },
+  {
+   "id": "d9b68f55612aae01",
+   "gold": [
+    {
+     "sentence": "Race to Nowhere is a 2009 documentary film written by Maimone Attia and directed by Vicki Abeles and Jessica Congdon.",
+     "facts": {
+      "0.0": "Race to Nowhere is a 2009 documentary film.",
+      "0.1": "Race to Nowhere was written by Maimone Attia.",
+      "0.2": "Race to Nowhere was directed by Vicki Abeles.",
+      "0.3": "Race to Nowhere was directed by Jessica Congdon."
+     }
+    },
+    {
+     "sentence": "SlamNation is a documentary film by director Paul Devlin.",
+     "facts": {
+      "1.0": "SlamNation is a documentary film.",
+      "1.1": "SlamNation was directed by Paul Devlin."
+     }
+    },
+    {
+     "sentence": " The film follows the National Poetry Slam in Portland, Oregon.",
+     "facts": {
+      "2.0": "SlamNation follows the National Poetry Slam.",
+      "2.1": "The National Poetry Slam is in Portland, Oregon."
+     }
+    }
+   ],
+   "items": [
+    "War/Dance\nWar/Dance is a 2007 American documentary film written and directed by Sean Fine and Andrea Nix Fine and produced by Shine Global's Susan MacLaury, a professor at Kean University, and Albie Hecht.\n\n It was nominated for the 2008 Academy Award for Best Documentary Feature and received the Emmy Award for Best Documentary and Best Cinematography in 2010.",
+    "Alice Walker: Beauty in Truth\nAlice Walker: Beauty in Truth is a documentary film directed by Pratibha Parmar, made by Kali Films production company.\n\n The film follows the life of the Pulitzer Prize-winning author, poet and activist Alice Walker.\n\n Shooting began in May 2011.\n\n It was aired on the BBC on Monday July 8, 2013, and on PBS on February 7, 2014.",
+    "SlamNation\nSlamNation is a documentary film by director Paul Devlin.\n\n The film follows the National Poetry Slam in Portland, Oregon.",
+    "Bukowski (1973 film)\nBukowski is a 1973 documentary film produced by Taylor Hackford and directed by Richard Davies that follows Los Angeles poet Charles Bukowski to San Francisco for a poetry reading.\n\n The full 60-minute documentary begins with footage of Bukowski in his Los Angeles home and neighborhood as he discusses his history as a postal worker as well as his approach to and perspective on poetry.\n\n The film then shows him flying with Linda King to San Francisco for the poetry reading followed by interactions with attendees after the show.\n\n One night the window of his room is broken during a fight between some guests and then a fight between Charles and Linda causes her to leave.\n\n Interviews follow with Liza and Linda about their relationship with Charles.\n\n Bukowski is shown betting at the track and explaining his betting strategy.",
+    "Poetry in Motion (film)\nPoetry in Motion is a 1982 Canadian documentary film directed by Ron Mann featuring contemporary North American poetry and music.\n\n Featured are some of the Black Mountain poets, Beats, minimalist poets, and avant-garde poets.\n\n It was released in theaters, later being distributed on VHS, LaserDisc, and DVD.\n\n An extended CD-ROM version was also released.",
+    "A Summer in the Cage\nA Summer in the Cage is a 2007 documentary film about a man's experiences with bipolar disorder.\n\n The film follows the filmmaker's friend Sam and features an interview with mental health scholar Kay Redfield Jamison.\n\n It was directed by Benjamin Selkow.\n\n The documentary debuted on the Sundance Channel in 2007.",
+    "Rick Ray\nRick Ray is an American filmmaker best known for his 2006 documentary film 10 Questions for the Dalai Lama which he wrote, filmed and directed.\n\n His documentary \"Lynching Charlie Lynch\", about the trials of former medical marijuana dispensary owner Charles C. Lynch, premiered at the 2011 San Luis Obispo International Film Festival on March 9.",
+    "We Are Poets\nWe Are Poets is a documentary film directed by Daniel Lucchesi and Alex Ramseyer-Bache.\n\n It follows six young poets from Leeds Young Authors performance poetry group in Leeds on their visit to the international Poetry Slam Competition in Washington D.C, United States.\n\n It premièred at Europe's largest Documentary Film festival - Doc/Fest in Sheffield's Showroom Cinema on 11 June 2011, where it won the coveted Sheffield Youth Jury Award.",
+    "Beyond This Place (2010 film)\nBeyond This Place (2010) is a documentary film directed by Kaleo La Belle, screened at a number of film festivals.\n\n In it, La Belle reunites with his biological father Cloud Rock La Belle, a charismatic figure who was largely absent from his life.\n\n The film deals, in a personal and intimate way, with issues of parenting, issues of freedom versus responsibility, and with the aging of the 60's generation.",
+    "Race to Nowhere\nRace to Nowhere is a 2009 documentary film written by Maimone Attia and directed by Vicki Abeles and Jessica Congdon."
+   ]
+  },
+  {
+   "id": "eefd9cfc1f0fcaab",
+   "gold": [
+    {
+     "sentence": " It featured Reese Witherspoon and Paul Rudd, prior to both becoming considerably bigger film stars.",
+     "facts": {
+      "0.0": "The film featured Reese Witherspoon and Paul Rudd.",
+      "0.1": "Reese Witherspoon and Paul Rudd were in the film before both became considerably bigger film stars."
+     }
+    },
+    {
+     "sentence": " Born in New Orleans and raised in Tennessee, she began her career as a child actress, making her professional screen debut in \"The Man in the Moon\" (1991), for which she was nominated for a Young Artist Award.",
+     "facts": {
+      "1.0": "The actress was born in New Orleans.",
+      "1.1": "The actress was raised in Tennessee.",
+      "1.2": "The actress began her career as a child actress.",
+      "1.3": "The actress made her professional screen debut in 'The Man in the Moon' (1991).",
+      "1.4": "The actress was nominated for a Young Artist Award for her debut in 'The Man in the Moon'."
+     }
+    }
+   ],
+   "items": [
+    "City of New Orleans (train)\nThe City of New Orleans is an Amtrak passenger train which operates on an overnight schedule between Chicago and New Orleans.\n\n The train is a successor to the Illinois Central Railroad's \"Panama Limited\".\n\n The present name was revived in 1981.",
+    "Reese Witherspoon\nLaura Jeanne Reese Witherspoon ( ; born March 22, 1976) is an American actress, producer, and entrepreneur.\n\n Born in New Orleans and raised in Tennessee, she began her career as a child actress, making her professional screen debut in \"The Man in the Moon\" (1991), for which she was nominated for a Young Artist Award.\n\n Following breakout roles in \"\" (1992) and \"Jack the Bear\" (1993), she starred in the comedy-drama \"Pleasantville\" (1998), for which she won the Young Hollywood Award for Breakthrough Performance.\n\n Her leading role of Tracy Flick in \"Election\" (1999) was nominated for a Golden Globe Award.",
+    "Kathryn Drysdale\nKathryn Drysdale (born December 1981) is an English actress known for her role as Grace Shelley in The West End show \"The Ruling Class\" opposite James Mcavoy, as Taylor in the movie \"St Trinian's\", Rhoda Swartz in Mira Nair's Vanity Fair, and Louise Brooks in the BBC comedy series \"Two Pints of Lager and a Packet of Crisps\" from 2001 until her departure from the show in 2009.\n\n She has also starred in the fourth series of the ITV sitcom \"Benidorm\" and as Brownwell in William Boyd's award-winning \"Any Human Heart\" opposite Jim Broadbent.\n\n She previously worked with Broadbent on Mira Nair's feature adaptation of William Thackery's \"Vanity Fair\" starring Reese Witherspoon.\n\n She played the role of mixed-race heiress Rhoda Swartz.\n\n She is also known for her role as Lizzie in the drama series \"Tripping Over\" by Mike Bullen.\n\n She appeared in \"Doctor Who\" as Bliss in the episode \"Love & Monsters\".\n\n She currently plays Meghan Markle in season 2 of \"The Windsors\".",
+    "Overnight Delivery\nOvernight Delivery is a 1998 romantic comedy film directed by Jason Bloom.\n\n It was rated PG-13 by the MPAA and released direct-to-video.\n\n It featured Reese Witherspoon and Paul Rudd, prior to both becoming considerably bigger film stars.",
+    "Zooey Deschanel filmography\nAmerican actress Zooey Deschanel made her film debut in the 1999 comedy feature \"Mumford\".\n\n She went on to gained public attention by co-starred in the comedy-drama \"Almost Famous\" (2000), the independent drama \"Manic\" (2001), opposite Joseph Gordon-Levitt, and the comedy-drama \"The Good Girl\" (2002).\n\n She landed her first major role as a 18-year-old virgin in the romantic drama \"All the Real Girls\" (2003), for which she was nominated for an Independent Spirit Award for Best Female Lead.\n\n Deschanel's biggest commercial success, as of 2017, came with the Christmas-fantasy film \"Elf\" (also in 2003), which grossed over $220 million worldwide.",
+    "LSO (company)\nLSO, formerly Lone Star Overnight, is a regional shipping carrier that focuses on overnight delivery, utilizing both air and ground transportation, to every address in Texas, southeastern New Mexico and all major metro markets in Oklahoma, Louisiana, Arkansas, Alabama & Tennessee, plus the country of Mexico.\n\n Headquartered in Austin, Texas, LSO offers hundreds of drop box locations throughout its service area.\n\n Like its competitors, LSO’s brand distinguishes itself with a signature shade of blue.",
+    "Annie Belle\nAnnie Brilland (born 10 December 1956) is a French actress and social worker.\n\n Her acting career began in 1974 and throughout the seventies, has had a series of varied roles in both French and Italian cinema, working with such directors as Jean Rollin, Ruggero Deodato and Joe D'Amato.",
+    "Paul Soniat\nPaul Soniat is the Director of the New Orleans City Park Botanical Gardens.\n\n He was born at the old Touro Hospital in New Orleans.\n\n His family has been in New Orleans since 1727 and he grew up and later lived on the street bearing his family name.\n\n Paul is a self-taught piano player, and has released two CDs, absorbing the sights, sounds, and flavor of New Orleans.\n\n His first CD, titled \"Born in New Orleans\", was released in April 2005.\n\n His second CD was released after Hurricane Katrina hit the Gulf coast and the New Orleans' levees failed.\n\n This second CD is appropriately titled \"Below the Water Line\".",
+    "Doreen Ketchens\nDoreen Ketchens (born October 3, 1966 in New Orleans, Louisiana) is a jazz clarinetist, who performs Dixieland and Trad Jazz.\n\n She is one of the first and few female bandleaders in New Orleans, and a musical educator.\n\n She has performed at concert halls and music festivals, at U.S. Embassies and decades of weekly performances in Dixieland's tradition in the Royal Street Performing Arts Zone in the French Quarter of New Orleans with her band, Doreen's Jazz New Orleans.\n\n Ketchens has performed for four U.S. Presidents: Bill Clinton, George Bush Sr., Ronald Reagan and Jimmy Carter, and is widely considered one of the cultural ambassadors of New Orleans and of the traditional music",
+    "Anastasia Horne\nAnastasia Nicole \"Ana\" Horne (born August 5, 1978 in Claremont, California) is a former American actress and singer who has appeared on television and in the theater.\n\n Her last television role was \"Lori\" on the MTV series \"Undressed\" in 2000.\n\n She also starred as \"Lark Madison-Scanlon\" on the daytime soap opera \"Port Charles\" from 1997 to 1999.\n\n As a teenager, she was cast as \"Ana\" on the long-running NBC/The Disney Channel series \"Kids Incorporated\" from 1984, to 1985, and 1991 to the end of the series in 1994."
+   ]
+  },
+  {
+   "id": "d0f2dc6b1589ffd7",
+   "gold": [
+    {
+     "sentence": "Cars 2 is a 2011 American computer-animated action comedy spy film produced by Pixar Animation Studios for Walt Disney Pictures.",
+     "facts": {
+      "0.0": "Cars 2 is a film.",
+      "0.1": "Cars 2 was released in 2011.",
+      "0.2": "Cars 2 is American.",
+      "0.3": "Cars 2 is computer-animated.",
+      "0.4": "Cars 2 is an action comedy spy film.",
+      "0.5": "Cars 2 was produced by Pixar Animation Studios.",
+      "0.6": "Cars 2 was produced for Walt Disney Pictures."
+     }
+    },
+    {
+     "sentence": "Lin-Manuel Miranda ( ; born January 16, 1980) is an American composer, lyricist, playwright, and actor best known for creating and starring in the Broadway musicals \"Hamilton\" and \"In the Heights\".",
+     "facts": {
+      "1.0": "Lin-Manuel Miranda was born January 16, 1980.",
+      "1.1": "Lin-Manuel Miranda is American.",
+      "1.2": "Lin-Manuel Miranda is a composer, lyricist, playwright, and actor.",
+      "1.3": "Lin-Manuel Miranda is best known for creating and starring in the Broadway musical Hamilton.",
+      "1.4": "Lin-Manuel Miranda is best known for creating and starring in the Broadway musical In the Heights."
+     }
+    },
+    {
+     "sentence": " He co-wrote the songs for Disney's \"Moana\" soundtrack (2016) and is set to star in their upcoming film \"Mary Poppins Returns\".",
+     "facts": {
+      "2.0": "Lin-Manuel Miranda co-wrote the songs for Disney's Moana soundtrack.",
+      "2.1": "The Moana soundtrack is from 2016.",
+      "2.2": "Lin-Manuel Miranda is set to star in Disney's upcoming film Mary Poppins Returns."
+     }
+    }
+   ],
+   "items": [
+    "Moana (soundtrack)\nMoana: Original Motion Picture Soundtrack is the soundtrack to the 2016 Disney animated film \"Moana\".\n\n The soundtrack was released by Walt Disney Records on November 19, 2016.\n\n It features songs written by Lin-Manuel Miranda, Mark Mancina and Opetaia Foa'i, with lyrics in English, Samoan, Tokelauan, and Tuvalu.\n\n The two-disc deluxe edition includes the score, which was composed by Mancina, as well as demos, outtakes and instrumental karaoke tracks.",
+    "Wreck-It Ralph\nWreck-It Ralph is a 2012 American 3D computer-animated fantasy-comedy film produced by Walt Disney Animation Studios and released by Walt Disney Pictures.\n\n It is the 52nd Disney animated feature film.\n\n The film was directed by Rich Moore, who has directed episodes of \"The Simpsons\" and \"Futurama\", and the screenplay was written by Phil Johnston and Jennifer Lee from a story by Moore, Johnston, and Jim Reardon.\n\n John Lasseter served as the executive producer.\n\n The film features the voices of John C. Reilly, Sarah Silverman, Jack McBrayer, and Jane Lynch.\n\n The film tells the story of the eponymous arcade game villain who rebels against his role and dreams of becoming a hero.\n\n He travels between games in the arcade and ultimately must eliminate a dire threat that could affect the entire arcade and one that Ralph himself unintentionally started.",
+    "Cars 2 (video game)\nCars 2 (also known as Cars 2: The Video Game) is a racing game developed by Avalanche Software.\n\n It is based on the film \"Cars 2\", the sequel to the 2006 film \"Cars\".\n\n Originally announced at E3 2011, the game was released by Disney Interactive on major platforms in North America on June 21, 2011, and in Australia 2 days later.\n\n The game was released in Europe on July 22, 2011.\n\n The PlayStation 3 version of the game was reported to feature stereoscopic 3D gameplay.\n\n A Nintendo 3DS version was released on November 1, 2011 (the same day the film was released on DVD and Blu-ray).\n\n A PlayStation Portable version was released in North America on November 8, 2011.\n\n It was also released in Europe on November 4, 2011.\n\n It was the last Pixar game to be released for the PlayStation Portable.",
+    "Walt Disney Pictures\nWalt Disney Pictures, Inc. is an American film production company and a subsidiary of Walt Disney Studios, owned by The Walt Disney Company.\n\n The division is based at the Walt Disney Studios in Burbank, California, and is the main producer of live-action feature films within the Walt Disney Studios unit.\n\n It took on its current name in 1983.\n\n Today, in conjunction with the other units of Walt Disney Studios, Walt Disney Pictures is classified as one of Hollywood's \"Big Six\" film studios.\n\n Films produced by Walt Disney Animation Studios and Pixar Animation Studios are also released under this brand.",
+    "Toy Story 3\nToy Story 3 is a 2010 American 3D computer-animated comedy-drama film produced by Pixar Animation Studios for Walt Disney Pictures.\n\n It is the third installment in Pixar's \"Toy Story\" series, and the sequel to 1999's \"Toy Story 2\".\n\n It was directed by Lee Unkrich, the editor of the first two films and the co-director of \"Toy Story 2\", written by Michael Arndt, while Unkrich wrote the story along with John Lasseter and Andrew Stanton, respectively director and co-writer of the first two films.\n\n The plot focuses on the toys Woody, Buzz Lightyear, and their friends dealing with an uncertain future as their owner, Andy, prepares to leave for college.",
+    "Cars 2\nCars 2 is a 2011 American computer-animated action comedy spy film produced by Pixar Animation Studios for Walt Disney Pictures.\n\n It is the sequel to 2006's \"Cars\", and features the voices of Owen Wilson, Larry the Cable Guy, Michael Caine, Emily Mortimer, John Turturro, and Eddie Izzard.\n\n In the film, race car Lightning McQueen and tow truck Mater head to Japan and Europe to compete in the World Grand Prix, but Mater becomes sidetracked with international espionage.\n\n The film was directed by John Lasseter, written by Ben Queen, and produced by Denise Ream.",
+    "Lin-Manuel Miranda\nLin-Manuel Miranda ( ; born January 16, 1980) is an American composer, lyricist, playwright, and actor best known for creating and starring in the Broadway musicals \"Hamilton\" and \"In the Heights\".\n\n He co-wrote the songs for Disney's \"Moana\" soundtrack (2016) and is set to star in their upcoming film \"Mary Poppins Returns\".\n\n Miranda's awards include a Pulitzer Prize, two Grammy Awards, an Emmy Award, a MacArthur Fellowship, and three Tony Awards.",
+    "Hamilton (album)\nHamilton is the cast album to the 2015 musical \"Hamilton\".\n\n The musical is based on the 2004 biography of Alexander Hamilton written by Ron Chernow, with music, lyrics, and book by Lin-Manuel Miranda.\n\n The recording stars Lin-Manuel Miranda, Leslie Odom Jr., Phillipa Soo, Renée Elise Goldsberry, Christopher Jackson, Daveed Diggs, Anthony Ramos, Okieriete Onaodowan, Jasmine Cephas Jones, and Jonathan Groff.\n\n It also features Jon Rua, Thayne Jasperson, Sydney James Harcourt, Ariana DeBose, and Sasha Hutchings.\n\n It achieved the largest first week sales for a digital cast album and is the highest-charting cast album since 1963.\n\n It was the highest-selling Broadway cast album of 2015 and peaked at number one on the Rap Album chart, the first cast album to ever do so.",
+    "List of Walt Disney Pictures films\nThis is a list of films released theatrically under the Walt Disney Pictures banner (known as that since 1983, with \"Never Cry Wolf\" as its first release) and films released before that under the former name of the parent company, Walt Disney Productions (1929–1983).\n\n Most films listed here were distributed in the United States by the company's distribution division, Walt Disney Studios Motion Pictures (formerly known as Buena Vista Distribution Company [1953–1987] and Buena Vista Pictures Distribution [1987–2007]).\n\n The Disney features produced before \"Peter Pan\" (1953) were originally distributed by RKO Radio Pictures, and are now distributed by Walt Disney Studios Motion Pictures.",
+    "Frozen (2013 film)\nFrozen is a 2013 American 3D computer-animated musical fantasy film produced by Walt Disney Animation Studios and released by Walt Disney Pictures.\n\n It is the 53rd Disney animated feature film.\n\n Inspired by Hans Christian Andersen's fairy tale \"The Snow Queen\", the film tells the story of a fearless princess who sets off on a journey alongside a rugged iceman, his loyal pet reindeer, and a naïve snowman to find her estranged sister, whose icy powers have inadvertently trapped the kingdom in eternal winter."
+   ]
+  },
+  {
+   "id": "463d6cf35c5c314a",
+   "gold": [
+    {
+     "sentence": "Ronkonkoma is a major railroad station and transportation hub along the Main Line of the Long Island Rail Road in Ronkonkoma, New York.",
+     "facts": {
+      "0.0": "Ronkonkoma is a major railroad station.",
+      "0.1": "Ronkonkoma is a major transportation hub.",
+      "0.2": "Ronkonkoma is along the Main Line of the Long Island Rail Road.",
+      "0.3": "The Ronkonkoma railroad station is in Ronkonkoma, New York."
+     }
+    },
+    {
+     "sentence": "Ronkonkoma ( ) is a hamlet and census-designated place (CDP) on Long Island in the Town of Islip, New York, United States.",
+     "facts": {
+      "1.0": "Ronkonkoma is a hamlet.",
+      "1.1": "Ronkonkoma is a census-designated place (CDP).",
+      "1.2": "Ronkonkoma is on Long Island.",
+      "1.3": "Ronkonkoma is in the Town of Islip.",
+      "1.4": "The Town of Islip is in New York, United States."
+     }
+    }
+   ],
+   "items": [
+    "Long Island Electric Railway\nThe Long Island Electric Railway was a streetcar company operating in Brooklyn, Queens, and Nassau County, New York, United States between 1894 and 1926.\n\n The company was partially owned by the Long Island Consolidated Electric Companies, a holding company for the Long Island Rail Road and partially by August Belmont and the Interborough Rapid Transit Company.\n\n It connected the east end of the Fulton Street El at Crescent Street station in City Line, Brooklyn with Jamaica, Queens, and ran from there to the Nassau County line at Queens Village and to Far Rockaway, Queens via Nassau County.\n\n It also had a connection to Belmont Park.\n\n The New York and Long Island Traction Company used trackage rights over its line from Crescent Street to Queens Village.",
+    "Ronkonkoma, New York\nRonkonkoma ( ) is a hamlet and census-designated place (CDP) on Long Island in the Town of Islip, New York, United States.\n\n The population of the CDP was 19,082 at the 2010 census.",
+    "Lacona Railroad Station and Depot\nLacona Railroad Station and Depot, also known as New York Central and Hudson River Railroad Station and Depot, is a historic railway depot located at Lacona in Oswego County, New York.\n\n It was built in 1891 by the New York Central and Hudson River Railroad.\n\n It is a small rectangular, one story, gable ended structure.",
+    "Ronkonkoma (LIRR station)\nRonkonkoma is a major railroad station and transportation hub along the Main Line of the Long Island Rail Road in Ronkonkoma, New York.\n\n The station is the eastern terminus of the Ronkonkoma Branch and the western terminus of the out Branch.",
+    "New Rochelle Harbor (Long Island Sound)\nNew Rochelle Harbor is the name of a harbor located along Long Island Sound in the city of New Rochelle in Westchester County, New York.\n\n The Davenport Neck peninsula off the mainland divides New Rochelle's waterfront into two bays; the westerly referred to as New Rochelle Harbor and the easterly as Echo Bay.",
+    "New York State Route 108\nNew York State Route 108 (NY 108) is a 1.72 mi north–south state highway located on the Suffolk County side of the Suffolk–Nassau county line on Long Island, New York, in the United States.\n\n It is a spur route connecting NY 25A in Cold Spring Harbor to the Cold Spring Harbor station on the Long Island Rail Road's Port Jefferson Branch via Harbor Road.\n\n Harbor Road terminates at an intersection with Woodbury Road, on the Nassau County line, which carries County Route 11 to the east and unsigned County Route 12 to the west.\n\n NY 108, assigned in the early 1930s, is the shortest state highway on Long Island.",
+    "North Creek Railroad Station\nThe North Creek Railroad Station is a historic railroad station complex located at North Creek, Warren County, New York.\n\n The complex consists of the railroad station, the freight house, round house, turntable, and horse barn.\n\n The station was built in 1874 and is a simple, rectangular, gable roofed building with a broad, overhanging strut-supported roof in the Stick-Eastlake style.\n\n Its exterior is covered with vertical boards.",
+    "Jamestown Gateway Train Station\nThe Jamestown Gateway Train Station, also known as the Jamestown Erie Railroad station, and the Erie-Lackawanna Railroad Station, is a historic train station located at Jamestown in Chautauqua County, New York.\n\n Although no longer an active railroad station due to a lack of passenger service in the area after a restoration done in 2011 the building currently serves as a bus transportation center and community space for Jamestown.\n\n The first train arrived at Jamestown on August 25, 1860 as part of the Atlantic and Great Western Railroad.",
+    "Ridgefield Park station\nRidgefield Park Station, also known as West Shore Station, was railroad station in Ridgefield Park, New Jersey at the foot of Mount Vernon Street served by the New York, Susquehanna and Western Railroad (NYSW) and the West Shore Railroad, a division of New York Central (NYCRR) The New York, Ontario and Western Railway (NYO&W) had running rights along the West Shore and sometimes stopped at Ridgefield Park.\n\n First opened in 1883 it was one of three passenger stations in the village, the others being the Little Ferry Station to the south and Westview Station to the north.\n\n The station house, built at a cost $100,000 opened in 1927.\n\n Southbound service crossed Overpeck Creek and continued to terminals on the Hudson River waterfront where there was connecting ferry service across the Hudson River to Manhattan.\n\n Northbound near Bogota the parallel NYSW and West Shore lines diverge and continue into northern New Jersey, Pennsylviania, and upstate New York.\n\n Passenger service ended in 1966.",
+    "Old Country Road\nOld Country Road is a major east–west thoroughfare through central Nassau County and extending into western Suffolk County on Long Island, New York.\n\n It serves many of the major shopping centers in central Nassau County including Roosevelt Field Mall.\n\n The road also forms part of the border between the towns of Hempstead and North Hempstead.\n\n In Nassau County, Old Country Road is county-maintained as the unsigned County Route 25 (CR 25) west of Round Swamp Road."
+   ]
+  }
+ ]
+}

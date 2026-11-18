@@ -1,0 +1,51 @@
+[
+{"id": "8fb5fde01aa66a6b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Those yields were in turn catching up to the Fed’s main interest rate, which is above 5.25 per cent and at its highest level since 2001."}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "After already raising its main interest rate to the highest level since 2001"}, {"item": 4, "quote": "The Fed put such pressure on the economy intentionally, hoping to starve inflation of its fuel."}]}
+]},
+{"id": "d4540123d9fda93c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "b7966e6058df295b", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "3105b08da6897369", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "d1f5266d752b5873", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Erik ten Hag is a top coach from Ajax"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "they need a top blueprint not only for now but for the next five years, and work towards that"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "they need a top blueprint not only for now but for the next five years, and work towards that"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right things."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right things."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "The latest slip saw the Red Devils crash out of Europe"}]},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]}
+]

@@ -1,0 +1,62 @@
+[
+{"id": "9122d33290c4aeb9", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "fc0cf24ec6e468d3", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "contradicted", "evidence": [{"item": 9, "quote": "sentencing for seven counts tied to fraud and money laundering."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "In 2021, FTX was growing to millions of users, with $1 billion of revenue."}]},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The prosecution painted a picture of an empire “built on lies”"}, {"item": 2, "quote": "He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]}
+]},
+{"id": "f1d52282078343c7", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "a deal between Google and Samsung that Epic says was designed to prevent the Galaxy Store from being a competitive threat"}]},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 2, "quote": "how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "889b88f3e987093b", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "With a 10% surge in the stock this year"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]}
+]},
+{"id": "8d79a9556bd469d2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Under American Todd Boehly’s co-ownership, expanding Chelsea’s profile and reach in the U.S. would make sense,"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Under American Todd Boehly’s co-ownership, expanding Chelsea’s profile and reach in the U.S. would make sense,"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Under American Todd Boehly’s co-ownership, expanding Chelsea’s profile and reach in the U.S. would make sense,"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "especially with USWNT internationals Catarina Macario and Mia Fishel playing their club football there — and CBS Sports holding WSL rights."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "especially with USWNT internationals Catarina Macario and Mia Fishel playing their club football there — and CBS Sports holding WSL rights."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 8, "quote": "especially with USWNT internationals Catarina Macario and Mia Fishel playing their club football there — and CBS Sports holding WSL rights."}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 8, "quote": "especially with USWNT internationals Catarina Macario and Mia Fishel playing their club football there — and CBS Sports holding WSL rights."}]},
+{"fact": "0.7", "status": "stated", "evidence": [{"item": 8, "quote": "especially with USWNT internationals Catarina Macario and Mia Fishel playing their club football there — and CBS Sports holding WSL rights."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]}
+]

@@ -1,0 +1,850 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=5ebdc36b341a01a6 ===
+Gold sentences and facts:
+Sentence 0: The provisions relating to the right to property were changed a number of times . The Forty - Fourth Amendment of 1978 deleted the right to property from the list of fundamental rights A new provision , Article 300 - A , was added to the constitution , which provided that `` no person shall be deprived of his property save by authority of law '' . Thus if a legislature makes a law depriving a person of his property , there would be no obligation on the part of the State to pay anything as compensation . The aggrieved person shall have no right to move the court under Article 32 . Thus , the right to property is no longer a fundamental right , though it is still a constitutional right . If the government appears to have acted unfairly , the action can be challenged in a court of law by aggrieved citizens .
+  Fact 0.0: The provisions relating to the right to property were changed a number of times.
+  Fact 0.1: The Forty-Fourth Amendment of 1978 deleted the right to property from the list of fundamental rights.
+  Fact 0.2: A new provision, Article 300-A, was added to the constitution.
+  Fact 0.3: Article 300-A provides that no person shall be deprived of his property save by authority of law.
+  Fact 0.4: If a legislature makes a law depriving a person of his property, the State has no obligation to pay anything as compensation.
+  Fact 0.5: An aggrieved person shall have no right to move the court under Article 32 in that case.
+  Fact 0.6: The right to property is no longer a fundamental right.
+  Fact 0.7: The right to property is still a constitutional right.
+  Fact 0.8: If the government appears to have acted unfairly, the action can be challenged in a court of law by aggrieved citizens.
+
+Retrieved items:
+<item 1>
+Fundamental rights in India
+They are covered in Part III ( Articles 12 to 35 ) of Indian constitution . Contents ( hide ) 1 Genesis 2 Significance and characteristics 3 Right to equality 4
+Right to freedom 5 Right against exploitation 6 Right to freedom of religion 7 Right to life 8 Cultural and Educational rights 9 Right to constitutional
+remedies 10 Right to Privacy 11 Critical analysis 12 Amendments 13 Fundamental rights not sacrosanct 13.1 Validity of Article 31B 13.2 Amendment to Article 31C
+13.3 Right to property 13.4 Right to education 14 See also 15 References 16 Footnotes Genesis ( edit ) The development of constitutionally guaranteed
+fundamental human rights in India was inspired by historical examples such as England 's Bill of Rights ( 1689 ) , the United States Bill of Rights ( approved
+on 17 September 1787 , final ratification on 15 December 1791 ) and France 's Declaration of the Rights of Man ( created during the revolution of 1789 , and
+ratified on 26 August 1789 ) .
+</item 1>
+
+<item 2>
+Fundamental rights in India
+Jump up ^ Sovereign means possessing supreme or ultimate power . `` in modern democracies the people 's will is in theory sovereign '' synonyms : supreme ,
+absolute , unlimited , unrestricted , unrestrained , unbounded , boundless , infinite , ultimate , total , unconditional , full , utter , paramount ; principal
+, chief , dominant , predominant Jump up ^ `` What causes judicial delay ? Judgements diluting time frames in Code of Civil Procedure worsen the problem of
+adjournments '' . Retrieved 13 September 2017 . Jump up ^ `` Paras 316 and 317 of Kesavananda Bharati v. State of Kerala , ( AIR 1973 SC 1461 ) '' . 1973 .
+Retrieved 21 October 2016 . Jump up ^ `` IX Schedule laws open to review '' . 2007 . Retrieved 21 October 2017 . Jump up ^ 44th Amendment Act , 1978 . Jump up ^
+Mahapatra , Dhananjay ( 28 February 2009 ) . `` Should right to property return ? '' . The Times of India . Retrieved 8 July 2010 .
+</item 2>
+
+<item 3>
+Fundamental rights in India
+In 2007 , Supreme Court ruled that there could not be any blanket immunity from judicial review for the laws inserted in the Ninth Schedule . Apex court also
+stated it shall examine laws included in the Ninth Schedule after 1973 for any incompatibility with the basic structure doctrine . Amendment to Article 31C (
+edit ) Section 4 of the 42nd Amendment , had changed Article 31C of the constitution to accord precedence to the Directive Principles ( earlier applicable only
+to clauses b & c of Article 39 ) over the fundamental rights of individuals . In Minerva Mills v. Union of India case , supreme court ruled that the amendment
+to the Article 31C is not valid and ultra vires . Right to property ( edit ) The Constitution originally provided for the right to property under Articles 19
+and 31 . Article 19 guaranteed to all citizens the right to acquire , hold and dispose of property . Article 31 provided that `` no person shall be deprived of
+his property save by authority of law . '' It also provided that compensation would be paid to a person whose property has been taken for public purposes .
+</item 3>
+
+<item 4>
+Fundamental rights in India
+It is the principal foundation of all other rights and liberties , and guarantees the following : Equality before law : Article 14 of the constitution
+guarantees that all people shall be equally protected by the laws of the country . It means that the State will treat people in the same circumstances alike .
+This article also means that individuals , whether citizens of India or otherwise shall be treated differently if the circumstances are different . Social
+equality and equal access to public areas : Article 15 of the constitution states that no person shall be discriminated on the basis of religion , race , caste
+, sex or place of birth . Every person shall have equal access to public places like public parks , museums , wells , bathing ghats and temples etc . However ,
+the State may make any special provision for women and children . Special provisions may be made for the advancements of any socially or educationally backward
+class or scheduled castes or scheduled tribes . Equality in matters of public employment : Article 16 of the constitution lays down that the State can not
+discriminate against anyone in the matters of employment . All citizens can apply for government jobs . There are some exceptions .
+</item 4>
+
+<item 5>
+Fundamental rights in India
+The provisions relating to the right to property were changed a number of times . The Forty - Fourth Amendment of 1978 deleted the right to property from the
+list of fundamental rights A new provision , Article 300 - A , was added to the constitution , which provided that `` no person shall be deprived of his
+property save by authority of law '' . Thus if a legislature makes a law depriving a person of his property , there would be no obligation on the part of the
+State to pay anything as compensation . The aggrieved person shall have no right to move the court under Article 32 . Thus , the right to property is no longer
+a fundamental right , though it is still a constitutional right . If the government appears to have acted unfairly , the action can be challenged in a court of
+law by aggrieved citizens . The liberalisation of the economy and the government 's initiative to set up special economic zones has led to many protests by
+farmers and have led to calls for the reinstatement of the fundamental right to private property .
+</item 5>
+
+<item 6>
+India’s Fundamental Rights are basic freedoms for all citizens, regardless of race, birthplace, religion, caste, or gender, supporting personal development.
+They include equality before law; freedoms of speech, religion, culture, and peaceful assembly; and access to constitutional remedies through writs such as
+habeas corpus and mandamus. Violations may incur legal penalties. Citizens can approach the Supreme Court directly under Article 32; other constitutional rights
+generally require slower judicial processes. These rights draw on British, American,
+</item 6>
+
+<item 7>
+India is constitutionally defined as a union of states, with the text emphasizing that India is its people, not merely its territory. It says the lack of a
+constitutional right to speedy trial can delay Supreme Court decisions on fundamental-rights violations. Amendments to fundamental rights require a special
+majority in both houses: two-thirds of members present and voting, plus support from a majority of each house’s total membership. In the 1967 Golaknath case,
+the Supreme Court ruled Parliament could not curtail fundamental
+</item 7>
+
+<item 8>
+Fundamental rights in India
+. The Times of India . Retrieved 8 July 2010 . Jump up ^ `` Court rejects plea to make property a fundamental right '' . The Hindu . Chennai , India . 19
+October 2010 . Jump up ^ `` Education is now a fundamental right of every child '' . Hindustan Times . 1 April 2010 . Archived from the original on 9 July 2010
+. Retrieved 8 July 2010 . Footnotes ( edit ) Links to related articles ( hide ) Government of India Constitution Constitution Fundamental Rights , Directive
+Principles and Fundamental Duties Federalism ( Union List State List Concurrent List ) Executive Union Government Prime Minister ( list ) Cabinet Ministers
+President ( list ) Vice President ( list ) Civil Services All India Services ( IAS IFS / IFoS IPS ) Cabinet Secretary Secretaries ( Defence Finance Foreign Home
+) State governments Chief Minister ( list ) Chief Secretary Governors ( list ) Legislative Parliament Lok Sabha ( Speaker ) Rajya Sabha ( Chairman ) Vidhan
+Sabha Vidhan Parishad Leader of the Opposition Judiciary Supreme Court ( Chief Justice ) High Courts District Courts Retrieved from ``
+https://en.wikipedia.org/w/index.
+</item 8>
+
+<item 9>
+Fundamental rights in India
+The right to constitutional remedies is present for enforcement of Fundamental Rights . The right to privacy is an intrinsic part of Article 21 that protects
+life and liberty of the citizens . Fundamental rights for Indians have also been aimed at overturning the inequalities of pre-independence social practices .
+Specifically , they have also been used to abolish untouchability and thus prohibit discrimination on the grounds of religion , race , caste , sex , or place of
+birth . They also forbid trafficking of human beings and forced labour ( a crime ) . They also protect cultural and educational rights of religious and
+linguistic minorities by allowing them to preserve their languages and also establish and administer their own education institutions . They are covered in Part
+III ( Articles 12 to 35 ) of Indian constitution .
+</item 9>
+
+<item 10>
+India’s Constitution protects equality, freedoms, life and liberty, religious freedom, cultural and educational rights, protection from exploitation, and
+constitutional remedies; privacy is also mentioned. Equality bars discrimination and untouchability. Freedoms include speech, assembly, association, movement,
+residence, and occupation, subject to reasonable restrictions. Life and liberty cannot be suspended; some freedoms may be restricted during emergencies. RTI
+became a fundamental right under Article 19(1) in 2005. Articles 23–24
+</item 10>
+=== END ITEM id=5ebdc36b341a01a6 ===
+
+=== ITEM id=d12f68b07d25d9ba ===
+Gold sentences and facts:
+Sentence 0: Health or vitality is an attribute assigned to entities , such as the player character , enemies and objects within a role - playing or video game , that indicates its state in combat . Health is usually measured in hit points or health points , shortened to HP . When the HP of a player character reaches zero , the player may lose a life or their character might become incapacitated or die . When the HP of an enemy reaches zero , it may be defeated or die and the player is usually rewarded in some way .
+  Fact 0.0: Health or vitality is an attribute assigned to entities in a role-playing or video game.
+  Fact 0.1: Health or vitality is assigned to entities such as the player character, enemies, and objects.
+  Fact 0.2: Health or vitality indicates the state of an entity in combat.
+  Fact 0.3: Health is usually measured in hit points or health points.
+  Fact 0.4: Hit points or health points are shortened to HP.
+  Fact 0.5: When the HP of a player character reaches zero, the player may lose a life.
+  Fact 0.6: When the HP of a player character reaches zero, the character might become incapacitated or die.
+  Fact 0.7: When the HP of an enemy reaches zero, the enemy may be defeated or die.
+  Fact 0.8: When the HP of an enemy reaches zero, the player is usually rewarded in some way.
+
+Retrieved items:
+<item 1>
+Harry Potter (film series)
+Jump up ^ MuggleNet ( 19 January 2010 ) . `` CONFIRMED -- Desplat for DH '' . Mugglenet.com . Retrieved 2 March 2011 . Jump up ^ `` Pope on Desplat 's HP7 Pt. 1
+Score '' . Snitchseeker.com. 28 August 2010 . Retrieved 2 March 2011 . Jump up ^ `` Alexandre Desplat -- Composer of Part 1 and 2 ( NOTE : Click `` About the
+Movie '' , then `` Filmmakers '' , then `` Alexandre Desplat '' ) `` . Harrypotter.warnerbros.com . Retrieved 2 March 2011 . Jump up ^ MuggleNet ( 12 November
+2010 ) . `` Yates on Williams , Part 2 '' . Mugglenet.com . Retrieved 2 March 2011 . Jump up ^ `` Conrad Pope '' . www.facebook.com . Jump up ^ `` Framestore -
+We are Framestore . Extraordinary images , extraordinary talent '' . Framestore .
+</item 1>
+
+<item 2>
+Health (gaming)
+`` Disposable Bodies : Cyborg Regeneration and FPS Mechanics '' . Guns , Grenades , and Grunts : First - Person Shooter Games ( Google eBook ) . Bloomsbury
+Publishing USA . ISBN 1441191445 . Retrieved 2014 - 11 - 21 . ( hide ) Concepts of video games Glossary of video game terms Attributes Health Life Experience
+point Magic Mechanics Item Power - up HUD Warp Fog of war Invisible wall Cutscene Mini-map Paper doll Destructible environment Loading screen Replay value
+Scripted sequence Password Line of sight Critical hit Level Permadeath Status effect Hitbox Movement techniques Rocket jumping Strafe - jumping Strafing
+Trickjump Modes Player type Single - player Multiplayer Cooperative Competitive gameplay eSports Speedrun Gameplay type Capture the flag ( CTF ) Deathmatch Last
+man standing Retrieved from `` https://en.wikipedia.org/w/index.
+</item 2>
+
+<item 3>
+Health (gaming)
+US Navy used similar concept in their tactical war games already in 1920s and 1930s . In their simulation each ship had Life parameter . The unit of Life of the
+ship was a number of `` equivalent penetrative 14 - inch shell hits '' . The Navy considered ie. that Kongō - class battlecruiser had 12 Life points and Nagato
+- class battleship had 18.8 . A visual power meter representing stamina was used in Nintendo 's 1983 arcade game Punch - Out ! ! and Data East 's 1981 DECO
+Cassette System arcade game Flash Boy . Usage ( edit ) In action video games as well as in role - playing games , health points can usually be depleted by
+attacking the entity . A defense attribute might reduce the amount of HP that is lost when a character is damaged . It is common in role - playing games for a
+character 's maximum health and defense attributes to be gradually raised as the character levels up . In game design , it is deemed important that a player is
+aware of it when they are losing health , each hit playing a clear sound effect .
+</item 3>
+
+<item 4>
+Health (gaming)
+Author Scott Rogers states that `` health should deplete in an obvious manner , because with every hit , a player is closer to losing their life . '' The
+display of health also helps to dramatize the near - loss of a life . Regeneration ( edit ) Player characters can often restore their health points by consuming
+certain items , such as health potions , food or first - aid kits . Staying a night at an inn fully restores a character 's health in many role - playing video
+games . In general , the different methods of regenerating health has its uses in a particular genre . In action games , this method is very quick , whereas
+role - playing games feature slower paced methods to match the gameplay and realism . Some video games feature automatically regenerating health , where lost
+health points are regained over time . This can be useful to not `` cripple '' the player , making them still able to continue even after losing lots of health
+. However , automatically regenerating health may also cause a player to `` power through '' sections they might otherwise have had to approach cautiously ,
+simply because there are no lasting consequences to losing a large amount of health .
+</item 4>
+
+<item 5>
+Health (gaming)
+Health ( Gaming ) - wikipedia Health ( Gaming ) Jump to : navigation , search A health bar , a possible representation of the health of a character . Health or
+vitality is an attribute assigned to entities , such as the player character , enemies and objects within a role - playing or video game , that indicates its
+state in combat . Health is usually measured in hit points or health points , shortened to HP . When the HP of a player character reaches zero , the player may
+lose a life or their character might become incapacitated or die . When the HP of an enemy reaches zero , it may be defeated or die and the player is usually
+rewarded in some way . Any entity within a game could have a health value , including the player character , non-player characters and objects . Indestructible
+entities have no diminishable health value . Health might be displayed as a numeric value , such as `` 50 / 100 '' . Here , the first number indicates the
+current amount of HP an entity has and the second number indicates the entity 's maximum HP .
+</item 5>
+
+<item 6>
+Health (gaming)
+In these games , the fact that the enemies are being damaged is indicated by their behavior . On the other hand , many fighting games , such as the Street
+Fighter series , use easy - to - read health bars to clearly indicate the progress the player is making with each hit . It is common in first - person shooters
+to indicate low health of the player character by blood spatters or by a distorted red hue on the screen , attempting to mimic the effects of wounding and
+trauma . These visual effects fade as health regenerates . References ( edit ) ^ Jump up to : Moore , Michael ( 2011 - 03 - 23 ) . Basics of Game Design . CRC
+Press . pp. 151 , 194 . ISBN 1439867763 . Retrieved 2014 - 12 - 09 . Jump up ^ Chris Antista . `` The 10 most creative life bars '' . GamesRadar. 2010 - 08 - 17
+. p. 2 . Archived from the original on 2014 - 12 - 28 .
+</item 6>
+
+<item 7>
+Health (gaming)
+In video games , health can also be displayed graphically , such as with a bar that empties itself when an entity loses health ( a health bar , typically red )
+, icons that are `` chipped away '' , or in more novel ways . Contents ( hide ) 1 History 2 Usage 2.1 Regeneration 3 Display 4 References History ( edit )
+Dungeons & Dragons co-creator Dave Arneson described the origin of hit points in a 2002 interview . When Arneson was adapting the medieval wargame Chainmail (
+1971 ) to a fantasy setting , a process that with Gary Gygax would lead to Dungeons & Dragons , he saw that the emphasis of the gameplay was moving from large
+armies to small groups of heroes and eventually to the identification of one player and one character that is essential to role - playing as it was originally
+conceived . Players became attached to their heroes and did not want them to die every time they lost a die roll . Players were thus given multiple hit points
+which were incrementally decreased as they took damage . Arneson took the concept , along with armor class , from a set of a naval American Civil War game 's
+rules .
+</item 7>
+
+<item 8>
+Harry Potter (film series)
+Extraordinary images , extraordinary talent '' . Framestore . Jump up ^ `` Cinesite , HP 1 -- 7 '' . Cinesite.com . Archived from the original on 18 December
+2010 . Retrieved 2 March 2011 . Jump up ^ `` June 2010 Filming completed '' . Snitchseeker.com. 12 June 2010 . Retrieved 2 March 2011 . Jump up ^ `` 10 Years
+Filming -- 24Dec2010 '' . Snitchseeker.com. 21 December 2010 . Retrieved 2 March 2011 . Jump up ^ MuggleNet ( 21 December 2010 ) . `` JK Title reveal '' .
+Mugglenet.com . Retrieved 2 March 2011 . Jump up ^ `` Harry Potter and the Order of the Phoenix ( 2007 ) '' . IMDb.com . Jump up ^ `` WB Name Drops Big Titles
+'' . ERCBoxOffice. 23 February 2009 . Archived from the original on 26 February 2009 .
+</item 8>
+
+<item 9>
+Health (gaming)
+This mechanic initially appeared in action role - playing games , with early examples including the Hydlide series , the Ys series , and Woody Poco . In Woody
+Poco , the rate at which health recharges is based on food level . In Hydlide and Ys , the player character has to stand still for their health to automatically
+regenerate . This system was popularized in first - person shooters by Halo : Combat Evolved ( 2001 ) , though regenerating health in The Getaway ( 2002 ) has
+been cited to be more comparable to later use of the mechanic in first - person shooters . Display ( edit ) Heart - shaped icons can indicate the amount of
+health a player has left . The way health is displayed on the screen has an effect on the player . Many games only show the health of the player character ,
+while keeping the health of enemies hidden . This is done in the Legend of Zelda series , Minecraft and Monster Hunter series to keep the player 's progress in
+defeating their enemy unclear and therefore exciting . In these games , the fact that the enemies are being damaged is indicated by their behavior .
+</item 9>
+
+<item 10>
+Health (gaming)
+`` Falcom : Legacy of Ys '' . Games ( 111 ) : 152 -- 159 ( 153 ) . ( cf . Szczepaniak , John ( July 8 , 2011 ) . `` History of Ys interviews '' . Hardcore
+Gaming 101 . Retrieved 6 September 2011. ) Jump up ^ Jon Martindale ( 2012 - 10 - 03 ) . `` Let 's Kill off Health Bars '' . Kit Guru Gaming . Archived from the
+original on May 28 , 2015 . Retrieved 2014 - 11 - 21 . Jump up ^ Novak , Jeannie ( 2013 - 04 - 11 ) . The Official GameSalad Guide to Game Development . Cengage
+Learning . p. 31 . ISBN 1133605648 . Retrieved 2014 - 11 - 21 . Jump up ^ Voorhees , Gerald A. ; Call , Joshua ; Whitlock , Katie ( 2012 - 11 - 02 ) .
+</item 10>
+=== END ITEM id=d12f68b07d25d9ba ===
+
+=== ITEM id=10d65b6d269ada49 ===
+Gold sentences and facts:
+Sentence 0: The Osborne 1 is considered the first true mobile computer by most historians . Adam Osborne founded Osborne Computer and formed the Osborne 1 in 1981 . The Osborne 1 had a five - inch screen , incorporating a modem port , two 5 1 / 4 floppy drives , a big collection of bundled software applications , and a battery pack . The computer company was a failure and did not last for very long . Although it was large and heavy compared to today 's laptops , with a tiny 5 '' CRT monitor , it had a near - revolutionary impact on business , as professionals were able to take their computer and data with them for the first time . This and other `` luggables '' were inspired by what was probably the first portable computer , the Xerox NoteTaker . The Osborne was about the size of a portable sewing machine , and could be carried on commercial aircraft . The Osborne 1 weighed close to 11 kg and was priced at $1795 .
+  Fact 0.0: The Osborne 1 is considered the first true mobile computer by most historians.
+  Fact 0.1: Adam Osborne founded Osborne Computer.
+  Fact 0.2: Adam Osborne formed the Osborne 1 in 1981.
+  Fact 0.3: The Osborne 1 had a five-inch screen.
+  Fact 0.4: The Osborne 1 incorporated a modem port.
+  Fact 0.5: The Osborne 1 had two 5 1/4 floppy drives.
+  Fact 0.6: The Osborne 1 came with a big collection of bundled software applications.
+  Fact 0.7: The Osborne 1 had a battery pack.
+  Fact 0.8: The Osborne Computer company was a failure.
+  Fact 0.9: The Osborne Computer company did not last for very long.
+  Fact 0.10: Compared to today's laptops, the Osborne 1 was large and heavy.
+  Fact 0.11: The Osborne 1 had a tiny 5-inch CRT monitor.
+  Fact 0.12: The Osborne 1 had a near-revolutionary impact on business.
+  Fact 0.13: Professionals were able to take their computer and data with them for the first time because of the Osborne 1.
+  Fact 0.14: Other 'luggables' were inspired by the Osborne 1.
+  Fact 0.15: The Osborne 1 was inspired by what was probably the first portable computer, the Xerox NoteTaker.
+  Fact 0.16: The Osborne was about the size of a portable sewing machine.
+  Fact 0.17: The Osborne could be carried on commercial aircraft.
+  Fact 0.18: The Osborne 1 weighed close to 11 kg.
+  Fact 0.19: The Osborne 1 was priced at $1795.
+Sentence 1: The portable micro computer the `` Portal '' of the French company R2E Micral CCMC officially appeared in September 1980 at the Sicob show in Paris . The Portal was a portable microcomputer designed and marketed by the studies and developments department of the French firm R2E Micral in 1980 at the request of the company CCMC specializing in payroll and accounting . It was based on an Intel 8085 processor , 8 - bit , clocked at 2 MHz . It was equipped with a central 64K byte Ram , a keyboard with 58 alpha numeric keys and 11 numeric keys ( separate blocks ) , a 32 - character screen , a floppy disk : capacity = 140 000 characters , of a thermal printer : speed = 28 characters / second , an asynchronous channel , a synchronous channel , a 220V power supply . Designed for an operating temperature of 15 ° C to 35 ° C , it weighed 12 kg and its dimensions were 45cm x 45cm x 15cm . It provided total mobility . Its operating system was Prologue .
+  Fact 1.0: The portable micro computer the 'Portal' of the French company R2E Micral CCMC officially appeared in September 1980 at the Sicob show in Paris.
+  Fact 1.1: The Portal was a portable microcomputer designed and marketed by the studies and developments department of the French firm R2E Micral in 1980.
+  Fact 1.2: The Portal was designed at the request of the company CCMC, which specializes in payroll and accounting.
+  Fact 1.3: The Portal was based on an Intel 8085 processor.
+  Fact 1.4: The Portal's Intel 8085 processor was 8-bit and clocked at 2 MHz.
+  Fact 1.5: The Portal was equipped with a central 64K byte RAM.
+  Fact 1.6: The Portal had a keyboard with 58 alphanumeric keys and 11 numeric keys in separate blocks.
+  Fact 1.7: The Portal had a 32-character screen.
+  Fact 1.8: The Portal had a floppy disk with a capacity of 140 000 characters.
+  Fact 1.9: The Portal had a thermal printer with a speed of 28 characters per second.
+  Fact 1.10: The Portal had an asynchronous channel and a synchronous channel.
+  Fact 1.11: The Portal required a 220V power supply.
+  Fact 1.12: The Portal was designed for an operating temperature of 15 °C to 35 °C.
+  Fact 1.13: The Portal weighed 12 kg.
+  Fact 1.14: The Portal's dimensions were 45cm x 45cm x 15cm.
+  Fact 1.15: The Portal provided total mobility.
+  Fact 1.16: The Portal's operating system was Prologue.
+Sentence 2: The first laptop in the modern form was the Grid Compass 1101 , designed by Bill Moggridge in 1979 -- 80 , and released in 1983 . Enclosed in a magnesium case , it introduced the now familiar clamshell design , in which the flat display folded shut against the keyboard . The computer could be run from batteries , and was equipped with a 320 × 200 - pixel electroluminescent display and 384 kilobyte bubble memory . It was not IBM - compatible , and its high price ( US $ 8,000 -- 10,000 ) limited it to specialized applications . However , it was used heavily by the U.S. military , and by NASA on the Space Shuttle during the 1980s . The GRiD 's manufacturer subsequently earned significant returns on its patent rights as its innovations became commonplace . GRiD Systems Corp. was later bought by the Tandy ( now RadioShack ) Corporation .
+  Fact 2.0: The first laptop in the modern form was the Grid Compass 1101.
+  Fact 2.1: The Grid Compass 1101 was designed by Bill Moggridge in 1979-80.
+  Fact 2.2: The Grid Compass 1101 was released in 1983.
+  Fact 2.3: The Grid Compass 1101 was enclosed in a magnesium case.
+  Fact 2.4: The Grid Compass 1101 introduced the now familiar clamshell design, in which the flat display folded shut against the keyboard.
+  Fact 2.5: The Grid Compass 1101 could be run from batteries.
+  Fact 2.6: The Grid Compass 1101 had a 320 × 200-pixel electroluminescent display.
+  Fact 2.7: The Grid Compass 1101 had 384 kilobyte bubble memory.
+  Fact 2.8: The Grid Compass 1101 was not IBM-compatible.
+  Fact 2.9: The Grid Compass 1101 had a high price of US $8,000-10,000, which limited it to specialized applications.
+  Fact 2.10: The Grid Compass 1101 was used heavily by the U.S. military.
+  Fact 2.11: The Grid Compass 1101 was used by NASA on the Space Shuttle during the 1980s.
+  Fact 2.12: The GRiD manufacturer subsequently earned significant returns on its patent rights as its innovations became commonplace.
+  Fact 2.13: GRiD Systems Corp. was later bought by the Tandy (now RadioShack) Corporation.
+
+Retrieved items:
+<item 1>
+History of laptops
+Another significant machine announced in 1981 , although first sold widely in 1983 , was the Epson HX - 20 . A simple handheld computer , it featured a full -
+transit 68 - key keyboard , rechargeable nickel - cadmium batteries , a small ( 120 × 32 - pixel ) dot - matrix LCD with 4 lines of text , 20 characters per
+line text mode , a 24 column dot matrix printer , a Microsoft BASIC interpreter , and 16 KB of RAM ( expandable to 32 KB ) . Through at least the late 1980s
+Epson continued to release laptops such as the L3s . GRiD Compass ( edit ) Main article : Grid Compass The first laptop in the modern form was the Grid Compass
+1101 , designed by Bill Moggridge in 1979 -- 80 , and released in 1983 . Enclosed in a magnesium case , it introduced the now familiar clamshell design , in
+which the flat display folded shut against the keyboard . The computer could be run from batteries , and was equipped with a 320 × 200 - pixel
+electroluminescent display and 384 kilobyte bubble memory .
+</item 1>
+
+<item 2>
+History of laptops
+Both had LCDs , and could connect to optional external printers . The Dulmont Magnum , launched internationally in 1984 , was an Australian portable similar in
+layout to the Gavilan , which used the Intel 80186 processor . Kyotronic 85 ( edit ) The year 1983 also saw the launch of what was probably the biggest -
+selling early laptop , the Kyocera Kyotronic 85 . Owing much to the design of the previous Epson HX - 20 , and although at first a slow seller in Japan , it was
+quickly licensed by Tandy Corporation , Olivetti , and NEC , who recognised its potential and marketed it respectively as the TRS - 80 Model 100 line ( or Tandy
+100 ) , Olivetti M - 10 , and NEC PC - 8201 . The machines ran on standard AA batteries . The Tandy 's built - in programs , including a BASIC interpreter , a
+text editor , and a terminal program , were supplied by Microsoft , and was written in part by Bill Gates himself .
+</item 2>
+
+<item 3>
+Graph query row:
+path_nodes: [{'date': None, 'labels': ['__KGBuilder__', '__Entity__', 'Person'], 'name': 'Bill Moggridge'}, {'date': 'released in 1983', 'labels':
+['__KGBuilder__', '__Entity__', 'Work'], 'name': 'Grid Compass 1101'}]
+path_relationships: [{'properties': {}, 'type': 'CREATED'}]
+</item 3>
+
+<item 4>
+History of laptops
+Cambridge Z88 ( edit ) Another notable computer was the Cambridge Z88 , designed by Clive Sinclair , introduced in 1988 . About the size of an A4 sheet of paper
+as well , it ran on standard batteries , and contained basic spreadsheet , word processing , and communications programs . It anticipated the future
+miniaturization of the portable computer , and as a ROM - based machine with a small display , can -- like the TRS - 80 Model 100 -- also be seen as a
+forerunner of the personal digital assistant . Compaq SLT / 286 ( edit ) By the end of the 1980s , laptop computers were becoming popular among business people
+. The COMPAQ SLT / 286 debuted in October 1988 , being the first battery - powered laptop to support an internal hard disk drive and a VGA compatible LCD screen
+. It weighed 14 lbs . NEC Ultralite ( edit ) Main article : NEC UltraLite The NEC UltraLite , released in mid-1989 , was perhaps the first `` notebook ''
+computer , weighing just 2 kg ( 4.4 lbs ) .
+</item 4>
+
+<item 5>
+History of laptops
+They also introduced the now - standard `` resume '' feature to DOS - based machines : the computer could be paused between sessions without having to be
+restarted each time . U.S. Air Force ( edit ) The first laptops successful on a large scale came in large part due to a Request For Proposal ( RFP ) by the U.S.
+Air Force in 1987 . This contract would eventually lead to the purchase of over 200,000 laptops . Competition to supply this contract was fiercely contested and
+the major PC companies of the time ; IBM Corporation , To shins , Compaq , NEC , and Zenith Data Systems ( ZDS ) , rushed to develop laptops in an attempt to
+win this deal . ZDS , which had earlier won a landmark deal with the IRS for its Z - 171 , was awarded this contract for its SupersPort series . The SupersPort
+series was originally launched with an Intel 8086 processor , dual floppy disk drives , a backlit , blue and white STN LCD screen , and a NiCd battery pack .
+Later models featured an Intel 80286 processor and a 20 MB hard disk drive .
+</item 5>
+
+<item 6>
+History of laptops
+Commodore SX - 64 ( edit ) The Commodore SX - 64 , also known as the Executive 64 , or VIC - 64 in Europe , was a portable , briefcase or suitcase - size ``
+luggable '' version of the popular Commodore 64 home computer , and was the first full - color portable computer . The SX - 64 featured a built - in five - inch
+composite monitor and a built - in 1541 floppy drive . It weighed 20 pounds . The machine was carried by its sturdy handle , which doubled as an adjustable
+stand . It was announced in January 1983 and released a year later , at $995 USD . Kaypro 2000 ( edit ) Possibly the first commercial IBM - compatible laptop
+was the Kaypro 2000 , introduced in 1985 . With its brushed aluminum clamshell case , it was remarkably similar in design to modern laptops . It featured a 25
+line by 80 character LCD , a detachable keyboard , and a pop - up 90 mm ( 3.5 - inch ) floppy drive .
+</item 6>
+
+<item 7>
+History of laptops
+Before laptop / notebook computers were technically feasible , similar ideas had been proposed , most notably Alan Kay 's Dynabook concept , developed at Xerox
+PARC in the early 1970 s . One of the first reasonably portable computers was the Xerox NoteTaker , again developed at Xerox PARC , in 1976 . However , only 10
+prototypes were built . Contents ( hide ) 1 Portal R2E CCMC 2 Osborne 1 3 Bondwell 2 4 Compaq Portable 5 Epson HX - 20 6 Grid Compass 7 Dulmont Magnum /
+Kookaburra 8 Ampere 9 Tandy Model 100 10 Sharp and Gavilan 11 Kyotronic 85 12 Commodore SX - 64 13 Kaypro 2000 14 IBM PC Convertible 15 Toshiba T1100 , T1000 ,
+and T1200 16 US Air Force 17 Hewlett - Packard Vectra Portable CS 18 Cambridge Z88 19 Compaq SLT / 286 20 NEC UltraLite 21 Apple 21.1 Macintosh Portable 21.
+</item 7>
+
+<item 8>
+History of laptops
+IBM PC Convertible ( edit ) Also among the first commercial IBM - compatible laptops was the IBM PC Convertible , introduced in 1986 . It had a CGA - compatible
+LCD and 2 floppy drives . It weighed 13 pounds ( 5.9 kg ) . Toshiba T1100 , T1000 , and T1200 ( edit ) Toshiba launched the Toshiba T1100 in 1985 , and has
+subsequently described it as `` the world 's first mass - market laptop computer '' . It did not have a hard drive , and ran entirely from floppy disks . The
+CPU was a 4.77 MHz Intel 80C88 , a variation of the popular Intel 8088 , and the display was a monochrome , text - only 640x200 LCD . It was followed in 1987 by
+the T1000 and T1200 . Although limited floppy - based DOS machines , with the operating system stored in ROM , the Toshiba models were small and light enough to
+be carried in a backpack , and could be run from lead - acid batteries .
+</item 8>
+
+<item 9>
+History of laptops
+Retrieved 11 August 2015 . Jump up ^ See TRS - 80 Model 100 / 102 at old-computers.com Jump up ^ `` Commodore SX - 64 Portable '' . Retrieved 11 August 2015 .
+Jump up ^ `` Commodore SX - 64 portable computer '' . Retrieved 11 August 2015 . Jump up ^ `` World 's First Laptop PC '' . Toshiba Science Museum . Retrieved
+21 May 2017 . Jump up ^ `` Business Desktops / Calcs '' . HP Computer Museum . Retrieved 7 April 2014 . Jump up ^ Lewis , Peter H. ( 23 October 1988 ) . `` THE
+EXECUTIVE COMPUTER ; Compaq Finally Makes a Laptop '' . The New York Times . Jump up ^ Somerson , Paul ( July 1986 ) . `` Is It On Yet ? '' . PC . pp. 122 --
+123 . Retrieved 9 January 2015 . Jump up ^ `` IBM Power Systems archived white papers '' . Retrieved 11 August 2015 .
+</item 9>
+
+<item 10>
+History of laptops
+It was not IBM - compatible , and its high price ( US $ 8,000 -- 10,000 ) limited it to specialized applications . However , it was used heavily by the U.S.
+military , and by NASA on the Space Shuttle during the 1980s . The GRiD 's manufacturer subsequently earned significant returns on its patent rights as its
+innovations became commonplace . GRiD Systems Corp. was later bought by the Tandy ( now RadioShack ) Corporation . Dulmont Magnum / Kookaburra ( edit ) Main
+article : Dulmont Magnum Another contender for the first true laptop was the Dulmont Magnum , designed Barry Wilkinson and Terry Crews Engineering Manager at
+Dulmison in 1982 and released in Australia in 1983 It included an 80 × 8 display in a lid that closed against the keyboard . It was based on the MS - DOS
+operating system and applications stored in ROM ( A :) and also supported removable modules in expansion slots ( B : and C :) that could be custom programmed
+EPROM or standard word processing and spreadsheet applications .
+</item 10>
+=== END ITEM id=10d65b6d269ada49 ===
+
+=== ITEM id=0f647c274424b6cb ===
+Gold sentences and facts:
+Sentence 0: State and Territory Capitals of Australia Jurisdiction Capital City Population State / Territory Population Date of statehood Capital since Image Australia and Australian Capital Territory Canberra 435,019 403,468 Must remain a territory as per s. 125 of the Australian Constitution 1913 View of Civic from Mount Ainslie , with Telstra Tower in the background New South Wales Sydney 5,029,768 7,759,274 1788 1788 Skyline of the Sydney central business district Victoria Melbourne 4,725,316 6,179,249 1851 1851 The Melbourne skyline on the Yarra River Queensland Brisbane 2,360,241 4,848,877 1859 1860 Brisbane 's CBD , with the Story Bridge in the foreground Western Australia Perth 2,022,044 2,558,951 1829 1829 View of Perth CBD skyline South Australia Adelaide 1,324,279 1,713,054 1836 1836 View of Adelaide Skyline . Tasmania Hobart 224,462 517,588 1825 1826 View of the Hobart downtown district and Mount Wellington from Constitution Dock Northern Territory Darwin 145,916 245,740 Has not attained Statehood 1911 View of Darwin CBD
+  Fact 0.0: Canberra is the capital city of the Australian Capital Territory.
+  Fact 0.1: Canberra has a population of 435,019.
+  Fact 0.2: The Australian Capital Territory has a population of 403,468.
+  Fact 0.3: The Australian Capital Territory must remain a territory as per s. 125 of the Australian Constitution.
+  Fact 0.4: Canberra has been the capital since 1913.
+  Fact 0.5: There is an image of a view of Civic from Mount Ainslie, with Telstra Tower in the background, for Canberra.
+  Fact 0.6: Sydney is the capital city of New South Wales.
+  Fact 0.7: Sydney has a population of 5,029,768.
+  Fact 0.8: New South Wales has a population of 7,759,274.
+  Fact 0.9: New South Wales attained statehood in 1788.
+  Fact 0.10: Sydney has been the capital since 1788.
+  Fact 0.11: There is an image of the Sydney central business district skyline for Sydney.
+  Fact 0.12: Melbourne is the capital city of Victoria.
+  Fact 0.13: Melbourne has a population of 4,725,316.
+  Fact 0.14: Victoria has a population of 6,179,249.
+  Fact 0.15: Victoria attained statehood in 1851.
+  Fact 0.16: Melbourne has been the capital since 1851.
+  Fact 0.17: There is an image of the Melbourne skyline on the Yarra River for Melbourne.
+  Fact 0.18: Brisbane is the capital city of Queensland.
+  Fact 0.19: Brisbane has a population of 2,360,241.
+  Fact 0.20: Queensland has a population of 4,848,877.
+  Fact 0.21: Queensland attained statehood in 1859.
+  Fact 0.22: Brisbane has been the capital since 1860.
+  Fact 0.23: There is an image of Brisbane's CBD, with the Story Bridge in the foreground, for Brisbane.
+  Fact 0.24: Perth is the capital city of Western Australia.
+  Fact 0.25: Perth has a population of 2,022,044.
+  Fact 0.26: Western Australia has a population of 2,558,951.
+  Fact 0.27: Western Australia attained statehood in 1829.
+  Fact 0.28: Perth has been the capital since 1829.
+  Fact 0.29: There is an image of the Perth CBD skyline for Perth.
+  Fact 0.30: Adelaide is the capital city of South Australia.
+  Fact 0.31: Adelaide has a population of 1,324,279.
+  Fact 0.32: South Australia has a population of 1,713,054.
+  Fact 0.33: South Australia attained statehood in 1836.
+  Fact 0.34: Adelaide has been the capital since 1836.
+  Fact 0.35: There is an image of the Adelaide skyline for Adelaide.
+  Fact 0.36: Hobart is the capital city of Tasmania.
+  Fact 0.37: Hobart has a population of 224,462.
+  Fact 0.38: Tasmania has a population of 517,588.
+  Fact 0.39: Tasmania attained statehood in 1825.
+  Fact 0.40: Hobart has been the capital since 1826.
+  Fact 0.41: There is an image of the Hobart downtown district and Mount Wellington from Constitution Dock for Hobart.
+  Fact 0.42: Darwin is the capital city of the Northern Territory.
+  Fact 0.43: Darwin has a population of 145,916.
+  Fact 0.44: The Northern Territory has a population of 245,740.
+  Fact 0.45: The Northern Territory has not attained statehood.
+  Fact 0.46: Darwin has been the capital since 1911.
+  Fact 0.47: There is an image of the Darwin CBD for Darwin.
+
+Retrieved items:
+<item 1>
+Foreign relations of Australia
+Public Service Women Government leaders Government ministers Economy Agriculture Dollar ( currency ) Energy Gross state product Home ownership Public housing
+Household income Manufacturing Media Mining Poverty Reserve Bank Stock Exchange Superannuation Taxation Telecommunications Tourism Transportation Welfare system
+Society Crime Demographics Education Ethnic groups Healthcare Homelessness Immigration Languages Religion Women Culture Architecture Art Arts Australian English
+Cinema Cuisine Dance Literature Music Public holidays Radio Sport Symbols Television Theatre Outline Index Book Portal Politics of Australia Commonwealth
+Monarch Governor - General Prime Minister Cabinet ( Shadow Cabinet ) Executive Council Ministry Foreign relations Parliament House of Representatives Senate
+Opposition Leader High Court Lower courts Constitution Statute of Westminster Australia Act Federal elections pre-1969 1969 1972 1977 1980 1984 1993 1998 2007
+2013 2016 next by - elections State / Territory governments Governors and Administrators Premiers and Chief Ministers Parliaments and Assemblies NSW Vic Qld WA
+SA Tas ACT NT State / Territory elections Vic 2014 SA 2014 Tas 2014 NSW 2015 ACT 2016 NT 2016 WA 2017 Qld 2017 Vic 2018 SA 2018 Tas 2018 NSW 2019 ACT 2020 NT
+2020 WA 2021
+</item 1>
+
+<item 2>
+List of Australian capital cities
+List of Australian capital cities - wikipedia List of Australian capital cities Jump to : navigation , search There are eight capital cities in Australia , each
+of which function as the seat of government for the state or territory in which they are located . Melbourne was the initial capital following the 1901
+Federation of Australia . In 1913 , the seat of national government was moved to the newly created city of Canberra , which continues to serve as the national
+capital . Each capital city hosts the judicial , administrative and legislative functions for their jurisdiction . In the case of the states and internal
+territories , their capital cities also happen to be the most populous city in their respective jurisdiction . The Australian external territory of Norfolk
+Island has its official capital at Kingston , although this acts merely as the administrative centre of government ; its de facto capital is Burnt Pine .
+</item 2>
+
+<item 3>
+Prime Minister of Australia
+Caretaker government Court of Disputed Returns Locations Parliament House , Melbourne Old Parliament House Parliament House , Canberra Politics of Australia
+Commonwealth Monarch Governor - General Prime Minister Cabinet ( Shadow Cabinet ) Executive Council Ministry Foreign relations Parliament House of
+Representatives Senate Opposition Leader High Court Lower courts Constitution Statute of Westminster Australia Act Federal elections pre-1969 1969 1972 1977
+1980 1984 1990 1993 1998 2001 2007 2013 2016 next by - elections State / Territory governments Governors and Administrators Premiers and Chief Ministers
+Parliaments and Assemblies NSW Vic Qld WA SA Tas ACT NT State / Territory elections Vic 2014 NSW 2015 ACT 2016 NT 2016 WA 2017 Qld 2017 Tas 2018 SA 2018 Vic
+2018 NSW 2019 ACT 2020 NT 2020 WA 2021 Qld 2020 Tas 2022 SA 2022 Timeline of Elections Amalgamated Timeline Local government NSW Vic Qld WA SA Tas NT Political
+parties Coalition ( Liberal , National , Liberal National , Country Liberal ) Conservatives Greens Hinch Katter Labor Liberal Democrat One Nation Xenophon Other
+</item 3>
+
+<item 4>
+List of Australian capital cities
+WESTERN AUSTRALIA NORTHERN TERRITORY SOUTH AUSTRALIA QUEENSLAND NEW SOUTH WALES VICTORIA TASMANIA Perth Adelaide Melbourne Canberra ( ACT ) Sydney Brisbane
+Hobart Darwin State and Territory Capitals of Australia Jurisdiction Capital City Population State / Territory Population Date of statehood Capital since Image
+Australia and Australian Capital Territory Canberra 435,019 403,468 Must remain a territory as per s.
+</item 4>
+
+<item 5>
+List of Australian capital cities
+wikipedia.org/w/index.php?title=List_of_Australian_capital_cities&oldid=813441772 '' Categories : Australian capital cities Demographics of Australia Lists of
+capitals of country subdivisions Lists of cities in Australia Talk About Wikipedia Languages Bahasa Indonesia ქართული Македонски Bahasa Melayu Norsk Português
+Русский தமிழ் اردو Edit links This page was last edited on 3 December 2017 , at 19 : 08 . Text is available under the Creative Commons Attribution - ShareAlike
+License ; additional terms may apply . By using this site , you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark of the
+Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 5>
+
+<item 6>
+List of Australian capital cities
+02016?OpenDocument External links ( edit ) Capital cities of Australia National and ACT Canberra NSW Sydney NT Darwin QLD Brisbane SA Adelaide TAS Hobart VIC
+Melbourne WA Perth List of cities in Australia Australia articles History Timeline Bibliography Prehistory Archaeology European Exploration Territorial
+evolution 1788 -- 1850 1851 -- 1900 1901 -- 1945 Since 1945 By topic Constitutional Diplomatic Economic Federation Immigration Indigenous Military Monarchy
+Railway Geography Climate Continent Deserts Environment issues Earthquakes Flora Fauna Forests Geology Islands Mountains Regions Protected areas Rivers
+Subdivisions States and Territories Capitals Cities Politics Constitution Courts Elections Donations Electoral system Parties Federal budget Foreign relations
+Government Governor - General Human rights Intersex LGBT Transgender Intelligence and security Law Constitution Judiciary Enforcement Military Monarchy National
+debt Parliament Public Service Women Government leaders Government ministers Economy Agriculture Dollar ( currency ) Energy Gross state product Home ownership
+Public housing Household income Manufacturing Media Mining Poverty Reserve Bank Stock Exchange Superannuation Taxation Telecommunications Tourism Transportation
+Welfare system Society Crime Demographics Education Ethnic groups Healthcare Homelessness Immigration Languages Religion Women Culture Architecture Art Arts
+Australian English Cinema Cuisine Dance Literature Music Public holidays Radio Sport Symbols Television Theatre Outline Index Book Portal Retrieved from ``
+https://en.wikipedia.
+</item 6>
+
+<item 7>
+List of Australian capital cities
+Jump up ^ in 1911 , South Australia transferred responsibility for governing the Northern Territory to the Commonwealth Government of Australia . It was granted
+self - governance in 1978 , however the Northern Territory is still considered a territory under Commonwealth rule , not a state . References ( edit ) Jump up ^
+Norfolk Island - Kingston http://www.pitcairners.org/vt_kingston.html Norfolk Island 's Home on the Web Jump up ^
+http://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/3218.0Main+Features12016?OpenDocument Jump up ^ http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/3218.
+</item 7>
+
+<item 8>
+Capital punishment in Australia
+Capital punishment in Australia - wikipedia Capital punishment in Australia Jump to : navigation , search Capital punishment in Australia has been abolished in
+all jurisdictions . Queensland abolished the death penalty in 1922 . Tasmania did the same in 1968 , the federal government abolished the death penalty in 1973
+, with application also in the Australian Capital Territory and the Northern Territory . Victoria did so in 1975 , South Australia in 1976 , and Western
+Australia in 1984 . New South Wales abolished the death penalty for murder in 1955 , and for all crimes in 1985 . In 2010 , the federal government passed
+legislation prohibiting the re-establishment of capital punishment by any state or territory . Neither the Commonwealth nor any of the states will extradite or
+deport a prisoner to another jurisdiction if they will face the death penalty , and police co-operation with other countries which have the death penalty has
+been questioned . The last execution in Australia took place in 1967 , when Ronald Ryan was hanged in Victoria . Between Ryan 's execution in 1967 and 1984 ,
+several more people were sentenced to death , but had their sentences commuted to life imprisonment .
+</item 8>
+
+<item 9>
+Federalism
+The Australian continent was colonised by the United Kingdom in 1788 , which subsequently established six , eventually self - governing , colonies there . In
+the 1890s the governments of these colonies all held referendums on becoming a unified , self - governing `` Commonwealth '' within the British Empire . When
+all the colonies voted in favour of federation , the Federation of Australia commenced , resulting in the establishment of the Commonwealth of Australia in 1901
+. The model of Australian federalism adheres closely to the original model of the United States of America , although it does so through a parliamentary
+Westminster system rather than a presidential system . Brazil ( edit ) Brazil is a union of 26 states and its federal district , which is the site of the
+federal capital , Brasília . See also : States of Brazil In Brazil , the fall of the monarchy in 1889 by a military coup d'état led to the rise of the
+presidential system , headed by Deodoro da Fonseca .
+</item 9>
+
+<item 10>
+List of Australian capital cities
+125 of the Australian Constitution 1913 View of Civic from Mount Ainslie , with Telstra Tower in the background New South Wales Sydney 5,029,768 7,759,274 1788
+1788 Skyline of the Sydney central business district Victoria Melbourne 4,725,316 6,179,249 1851 1851 The Melbourne skyline on the Yarra River Queensland
+Brisbane 2,360,241 4,848,877 1859 1860 Brisbane 's CBD , with the Story Bridge in the foreground Western Australia Perth 2,022,044 2,558,951 1829 1829 View of
+Perth CBD skyline South Australia Adelaide 1,324,279 1,713,054 1836 1836 View of Adelaide Skyline . Tasmania Hobart 224,462 517,588 1825 1826 View of the Hobart
+downtown district and Mount Wellington from Constitution Dock Northern Territory Darwin 145,916 245,740 Has not attained Statehood 1911 View of Darwin CBD Notes
+( edit ) Jump up ^ Although the ACT has its own government , it remains a territory ultimately under Commonwealth rule .
+</item 10>
+=== END ITEM id=0f647c274424b6cb ===
+
+=== ITEM id=7ebb37ee32d15eed ===
+Gold sentences and facts:
+Sentence 0: All black military pilots who trained in the United States trained at Moton Field , the Tuskegee Army Air Field , and were educated at Tuskegee University , located near Tuskegee , Alabama . The group included five Haitians from the Haitian Air Force , and one pilot from Trinidad. . It also included a Hispanic or Latino airman born in the Dominican Republic .
+  Fact 0.0: All black military pilots who trained in the United States trained at Moton Field.
+  Fact 0.1: All black military pilots who trained in the United States trained at the Tuskegee Army Air Field.
+  Fact 0.2: All black military pilots who trained in the United States were educated at Tuskegee University.
+  Fact 0.3: Tuskegee University is located near Tuskegee, Alabama.
+  Fact 0.4: The group included five Haitians from the Haitian Air Force.
+  Fact 0.5: The group included one pilot from Trinidad.
+  Fact 0.6: The group included a Hispanic or Latino airman born in the Dominican Republic.
+
+Retrieved items:
+<item 1>
+Tuskegee Airmen
+Census Bureau reported there were only 124 African - American pilots in the nation . The exclusionary policies failed dramatically when the Air Corps received
+an abundance of applications from men who qualified , even under the restrictive requirements . Many of the applicants already had participated in the Civilian
+Pilot Training Program , unveiled in late December 1938 ( CPTP ) . Tuskegee University had participated since 1939 . Testing ( edit ) This section does not cite
+any sources . Please help improve this section by adding citations to reliable sources . Unsourced material may be challenged and removed . ( January 2017 ) (
+Learn how and when to remove this template message ) The U.S. Army Air Corps had established the Psychological Research Unit 1 at Maxwell Army Air Field ,
+Montgomery , Alabama , and other units around the country for aviation cadet training , which included the identification , selection , education , and training
+of pilots , navigators , and bombardiers .
+</item 1>
+
+<item 2>
+Tuskegee Airmen
+Finally , on 3 April 1939 , Appropriations Bill Public Law 18 was passed by Congress containing an amendment by Senator Harry H. Schwartz , designating funds
+for training African - American pilots . The War Department managed to put the money into funds of civilian flight schools willing to train black Americans .
+War Department tradition and policy mandated the segregation of African - Americans into separate military units staffed by white officers , as had been done
+previously with the 9th Cavalry , 10th Cavalry , 24th Infantry Regiment and 25th Infantry Regiment . When the appropriation of funds for aviation training
+created opportunities for pilot cadets , their numbers diminished the rosters of these older units . In 1941 , the War Department and the Army Air Corps , under
+pressure -- three months before its transformation into the USAAF -- constituted the first all - black flying unit , the 99th Pursuit Squadron . Due to the
+restrictive nature of selection policies , the situation did not seem promising for African - Americans since , in 1940 , the U.S. Census Bureau reported there
+were only 124 African - American pilots in the nation .
+</item 2>
+
+<item 3>
+Tuskegee Airmen
+This small number of enlisted men became the core of other black squadrons forming at Tuskegee and Maxwell Fields in Alabama . The Tuskegee program officially
+began June 1941 with the 99th Pursuit Squadron at Tuskegee University . The unit consisted of 47 officers and 429 enlisted men , and was backed by an entire
+service arm . After primary training at Moton Field , they were moved to the nearby Tuskegee Army Air Field , about 10 miles ( 16 km ) to the west for
+conversion training onto operational types . Consequently , Tuskegee Army Air Field became the only Army installation performing three phases of pilot training
+( basic , advanced , and transition ) at a single location . Initial planning called for 500 personnel in residence at a time . By mid-1942 , over six times
+that many were stationed at Tuskegee , even though only two squadrons were training there . War poster featuring a Tuskegee Airman Tuskegee Army Airfield was
+similar to already - existing airfields reserved for training white pilots , such as Maxwell Field , only 40 miles ( 64 km ) distant .
+</item 3>
+
+<item 4>
+Graph query row:
+entity: 99th Pursuit Squadron
+relationship: LOCATED_IN
+location: Tuskegee University
+</item 4>
+
+<item 5>
+Tuskegee Airmen
+They formed the 332nd Fighter Group and the 477th Bombardment Group of the United States Army Air Forces . The name also applies to the navigators , bombardiers
+, mechanics , instructors , crew chiefs , nurses , cooks and other support personnel . All black military pilots who trained in the United States trained at
+Moton Field , the Tuskegee Army Air Field , and were educated at Tuskegee University , located near Tuskegee , Alabama . The group included five Haitians from
+the Haitian Air Force , and one pilot from Trinidad. . It also included a Hispanic or Latino airman born in the Dominican Republic . Although the 477th
+Bombardment Group trained with North American B - 25 Mitchell bombers , they never served in combat . The 99th Pursuit Squadron ( later , 99th Fighter Squadron
+) was the first black flying squadron , and the first to deploy overseas ( to North Africa in April 1943 , and later to Sicily and Italy ) . The 332nd Fighter
+Group , which originally included the 100th , 301st , and 302nd Fighter Squadrons , was the first black flying group .
+</item 5>
+
+<item 6>
+Tuskegee Airmen
+Some ground crews trained at Mather before rotating to Inglewood . Gunners learned to shoot at Eglin Field , Florida . Bombers - navigators learned their trades
+at Hondo Army Air Field and Midland Air Field , Texas or at Roswell , New Mexico . Training of the new African - American crewmen also took place at Sioux Falls
+, South Dakota , Lincoln , Nebraska , and Scott Field , Belleville , Illinois . Once trained , the air and ground crews would be spliced into a working unit at
+Selfridge . Command difficulties ( edit ) The new group 's first commanding officer was Colonel Robert Selway , who had also commanded the 332nd Fighter Group
+before it deployed for combat overseas . Like his ranking officer , Major General Frank O'Driscoll Hunter from Georgia , Selway was a racial segregationist .
+Hunter was blunt about it , saying such things as , `` ... racial friction will occur if colored and white pilots are trained together . '' He backed Selway 's
+violations of Army Regulation 210 - 10 , which forbade segregation of air base facilities .
+</item 6>
+
+<item 7>
+Tuskegee Airmen
+Psychologists employed in these research studies and training programs used some of the first standardized tests to quantify IQ , dexterity and leadership
+qualities to select and train the best - suited personnel for the roles of bombardier , navigator , and pilot . The Air Corps determined that the existing
+programs would be used for all units , including all - black units . At Tuskegee , this effort continued with the selection and training of the Tuskegee Airmen
+. The War Department set up a system to accept only those with a level of flight experience or higher education which ensured that only the most able and
+intelligent African - American applicants were able to join . The first Lady 's flight ( edit ) The budding flight program at Tuskegee received a publicity
+boost when First Lady Eleanor Roosevelt inspected it in March 1941 , and flew with African - American chief civilian instructor C. Alfred `` Chief '' Anderson .
+Anderson , who had been flying since 1929 , and was responsible for training thousands of rookie pilots , took his prestigious passenger on a half - hour flight
+in a Piper J - 3 Cub . After landing , she cheerfully announced , `` Well , you can fly all right . ''
+</item 7>
+
+<item 8>
+Tuskegee Airmen
+The white population of Freeman Field was 250 officers and 600 enlisted men . Superimposed on it were 400 African - American officers and 2,500 enlisted men of
+the 477th and its associated units . Freeman Field had a firing range , usable runways , and other amenities useful for training . African - American airmen
+would work in proximity with white ones ; both would live in a public housing project adjacent to the base . Colonel Selway turned the non-commissioned officers
+out of their club and turned it into a second officers club . He then classified all white personnel as cadre , and all African - Americans as trainees . One
+officers club became the cadre 's club . The old Non-Commissioned Officers Club , promptly sarcastically dubbed `` Uncle Tom 's Cabin '' , became the trainee 's
+officers club . At least four of the trainees had flown combat in Europe as fighter pilots , and had about four years in service . Four others had completed
+training as pilots , bombardiers and navigators , and may have been the only triply qualified officers in the entire Air Corps .
+</item 8>
+
+<item 9>
+Tuskegee Airmen
+This was one of the earliest racially integrated courses in the U.S. Army . Seventeen flight surgeons served with the Tuskegee Airmen from 1941 - 49 . At that
+time , the typical tour of duty for a U.S. Army flight surgeon was four years . Six of these physicians lived under field conditions during operations in North
+Africa , Sicily , and Italy . The chief flight surgeon to the Tuskegee Airmen was Dr. Vance H. Marchbanks , Jr. , MD , a childhood friend of Benjamin Davis .
+The accumulation of washed - out cadets at Tuskegee and the propensity of other commands to `` dump '' African - American personnel on the post exacerbated the
+difficulties of administering Tuskegee . A shortage of jobs for them made these enlisted men a drag on Tuskegee 's housing and culinary departments . Trained
+officers were also left idle , as the plan to shift African - American officers into command slots stalled , and white officers not only continued to hold
+command , but were joined by additional white officers assigned to the post .
+</item 9>
+
+<item 10>
+Tuskegee Airmen
+Several of the Tuskegee Airmen had logged over 900 flight hours by this time . Nevertheless , by Colonel Selway 's fiat , they were trainees . Off - base was no
+better ; many businesses in Seymour would not serve African - Americans . A local laundry would not wash their clothes , yet willingly laundered those of
+captured German soldiers . In early April 1945 , the 118th Base Unit transferred in from Godman Field ; its African - American personnel held orders that
+specified they were base cadre , not trainees . On 5 April , officers of the 477th peaceably tried to enter the whites - only Officer 's Club . Selway had been
+tipped off by a phone call , and had the assistant provost marshal and base billeting manager stationed at the door to refuse the 477th officers entry . The
+latter , a major , ordered them to leave , and took their names as a means of arresting them when they refused . It was the beginning of the Freeman Field
+Mutiny .
+</item 10>
+=== END ITEM id=7ebb37ee32d15eed ===
+
+=== ITEM id=b1490858f5502c31 ===
+Gold sentences and facts:
+Sentence 0: Organization of the Petroleum Exporting Countries ( OPEC ) Flag Headquarters Vienna , Austria Official language English Type International cartel Membership 14 states ( May 2017 ) ( show ) Algeria Angola Ecuador Equatorial Guinea Gabon Iran * Iraq * Kuwait * Libya Nigeria Qatar Saudi Arabia * United Arab Emirates Venezuela * * founding member Leaders Secretary General Mohammed Barkindo Establishment Baghdad , Iraq Statute September 1960 In effect January 1961 Currency Indexed as USD per barrel ( US $ / bbl ) Website OPEC.org
+  Fact 0.0: The Organization of the Petroleum Exporting Countries (OPEC) has its headquarters in Vienna, Austria.
+  Fact 0.1: OPEC's official language is English.
+  Fact 0.2: OPEC is an international cartel.
+  Fact 0.3: OPEC has 14 member states as of May 2017.
+  Fact 0.4: The OPEC member states listed are Algeria, Angola, Ecuador, Equatorial Guinea, Gabon, Iran, Iraq, Kuwait, Libya, Nigeria, Qatar, Saudi Arabia, the United Arab Emirates, and Venezuela.
+  Fact 0.5: Iran, Iraq, Kuwait, Saudi Arabia, and Venezuela are marked with an asterisk, which the table defines as founding member.
+  Fact 0.6: The OPEC leader is Secretary General Mohammed Barkindo.
+  Fact 0.7: OPEC was established in Baghdad, Iraq.
+  Fact 0.8: The OPEC statute is dated September 1960 and was in effect from January 1961.
+  Fact 0.9: OPEC's prices are indexed as US dollars per barrel (US$/bbl).
+  Fact 0.10: OPEC's website is OPEC.org.
+Sentence 1: Organization of the Petroleum Exporting Countries ( OPEC , / ˈoʊpɛk / OH - pek , or OPEP in several other languages ) is an intergovernmental organization of 14 nations as of February 2018 , founded in 1960 in Baghdad by the first five members ( Iran , Iraq , Kuwait , Saudi Arabia , and Venezuela ) , and headquartered since 1965 in Vienna , Austria . As of 2016 , the 14 countries accounted for an estimated 44 percent of global oil production and 73 percent of the world 's `` proven '' oil reserves , giving OPEC a major influence on global oil prices that were previously determined by American - dominated multinational oil companies .
+  Fact 1.0: OPEC is an intergovernmental organization of 14 nations as of February 2018.
+  Fact 1.1: OPEC is pronounced OH-pek (IPA: ˈoʊpɛk), or OPEP in several other languages.
+  Fact 1.2: OPEC was founded in 1960 in Baghdad by its first five members: Iran, Iraq, Kuwait, Saudi Arabia, and Venezuela.
+  Fact 1.3: OPEC has been headquartered in Vienna, Austria since 1965.
+  Fact 1.4: As of 2016, the 14 OPEC countries accounted for an estimated 44 percent of global oil production.
+  Fact 1.5: As of 2016, the 14 OPEC countries held an estimated 73 percent of the world's 'proven' oil reserves.
+  Fact 1.6: OPEC has a major influence on global oil prices.
+  Fact 1.7: Global oil prices were previously determined by American-dominated multinational oil companies.
+Sentence 2: Country Region Membership Years Population ( 2016 est . ) Area ( km ) Oil Production ( bbl / day , 2016 ) Proven Reserves ( bbl , 2016 ) Algeria North Africa 1969 -- 40,606,052 2,381,740 1,348,361 12,200,000,000 Angola Southern Africa 2007 -- 28,813,463 1,246,700 1,769,615 8,423,000,000 Ecuador South America 1973 -- 1992 , 2007 -- 16,385,068 283,560 548,421 8,273,000,000 Equatorial Guinea Central Africa 2017 -- 1,221,490 28,051 227,000 1,100,000,000 Gabon Central Africa 1975 -- 1995 , 2016 -- 1,979,786 267,667 210,820 2,000,000,000 Iran Middle East 1960 -- 80,277,428 1,648,000 3,990,956 157,530,000,000 Iraq Middle East 1960 -- 37,202,572 437,072 4,451,516 143,069,000,000 Kuwait Middle East 1960 -- 4,052,584 17,820 2,923,825 101,500,000,000 Libya North Africa 1962 -- 6,293,253 1,759,540 384,686 48,363,000,000 Nigeria West Africa 1971 -- 185,989,640 923,768 1,999,885 37,070,000,000 Qatar Middle East 1961 -- 2,569,804 11,437 1,522,902 25,244,000,000 Saudi Arabia Middle East 1960 -- 32,275,687 2,149,690 10,460,710 266,578,000,000 United Arab Emirates Middle East 1967 -- 9,269,612 83,600 3,106,077 97,800,000,000 Venezuela South America 1960 -- 31,568,179 912,050 2,276,967 299,953,000,000 OPEC Total 478,498,000 12,150,695 35,221,740 1,209,103,000,000 World Total 7,618,511,000 510,072,000 80,622,287 1,650,585,000,000 OPEC Percent 6 % 2 % 44 % 73 %
+  Fact 2.0: Algeria (North Africa): membership from 1969; population 40,606,052 (2016 est.); area 2,381,740 km²; oil production 1,348,361 bbl/day (2016); proven reserves 12,200,000,000 bbl (2016).
+  Fact 2.1: Angola (Southern Africa): membership from 2007; population 28,813,463; area 1,246,700 km²; oil production 1,769,615 bbl/day; proven reserves 8,423,000,000 bbl.
+  Fact 2.2: Ecuador (South America): membership 1973 to 1992 and from 2007; population 16,385,068; area 283,560 km²; oil production 548,421 bbl/day; proven reserves 8,273,000,000 bbl.
+  Fact 2.3: Equatorial Guinea (Central Africa): membership from 2017; population 1,221,490; area 28,051 km²; oil production 227,000 bbl/day; proven reserves 1,100,000,000 bbl.
+  Fact 2.4: Gabon (Central Africa): membership 1975 to 1995 and from 2016; population 1,979,786; area 267,667 km²; oil production 210,820 bbl/day; proven reserves 2,000,000,000 bbl.
+  Fact 2.5: Iran (Middle East): membership from 1960; population 80,277,428; area 1,648,000 km²; oil production 3,990,956 bbl/day; proven reserves 157,530,000,000 bbl.
+  Fact 2.6: Iraq (Middle East): membership from 1960; population 37,202,572; area 437,072 km²; oil production 4,451,516 bbl/day; proven reserves 143,069,000,000 bbl.
+  Fact 2.7: Kuwait (Middle East): membership from 1960; population 4,052,584; area 17,820 km²; oil production 2,923,825 bbl/day; proven reserves 101,500,000,000 bbl.
+  Fact 2.8: Libya (North Africa): membership from 1962; population 6,293,253; area 1,759,540 km²; oil production 384,686 bbl/day; proven reserves 48,363,000,000 bbl.
+  Fact 2.9: Nigeria (West Africa): membership from 1971; population 185,989,640; area 923,768 km²; oil production 1,999,885 bbl/day; proven reserves 37,070,000,000 bbl.
+  Fact 2.10: Qatar (Middle East): membership from 1961; population 2,569,804; area 11,437 km²; oil production 1,522,902 bbl/day; proven reserves 25,244,000,000 bbl.
+  Fact 2.11: Saudi Arabia (Middle East): membership from 1960; population 32,275,687; area 2,149,690 km²; oil production 10,460,710 bbl/day; proven reserves 266,578,000,000 bbl.
+  Fact 2.12: United Arab Emirates (Middle East): membership from 1967; population 9,269,612; area 83,600 km²; oil production 3,106,077 bbl/day; proven reserves 97,800,000,000 bbl.
+  Fact 2.13: Venezuela (South America): membership from 1960; population 31,568,179; area 912,050 km²; oil production 2,276,967 bbl/day; proven reserves 299,953,000,000 bbl.
+  Fact 2.14: OPEC total: population 478,498,000; area 12,150,695 km²; oil production 35,221,740 bbl/day; proven reserves 1,209,103,000,000 bbl.
+  Fact 2.15: World total: population 7,618,511,000; area 510,072,000 km²; oil production 80,622,287 bbl/day; proven reserves 1,650,585,000,000 bbl.
+  Fact 2.16: OPEC percent of the world: population 6%; area 2%; oil production 44%; proven reserves 73%.
+
+Retrieved items:
+<item 1>
+OPEC
+269,612 83,600 3,106,077 97,800,000,000 Venezuela South America 1960 -- 31,568,179 912,050 2,276,967 299,953,000,000 OPEC Total 478,498,000 12,150,695
+35,221,740 1,209,103,000,000 World Total 7,618,511,000 510,072,000 80,622,287 1,650,585,000,000 OPEC Percent 6 % 2 % 44 % 73 % ^ Jump up to : One petroleum
+barrel ( bbl ) is approximately 42 U.S. gallons , or 159 liters , or 0.159 m , varying slightly with temperature . To put the production numbers in context , a
+supertanker typically holds 2,000,000 barrels ( 320,000 m ) , and the world 's current production rate would take approximately 56 years to exhaust the world 's
+current proven reserves . ^ Jump up to : The five founding members attended the first OPEC conference in September 1960 .
+</item 1>
+
+<item 2>
+OPEC
+As of 2016 , the 14 countries accounted for an estimated 44 percent of global oil production and 73 percent of the world 's `` proven '' oil reserves , giving
+OPEC a major influence on global oil prices that were previously determined by American - dominated multinational oil companies . OPEC 's stated mission is ``
+to coordinate and unify the petroleum policies of its member countries and ensure the stabilization of oil markets , in order to secure an efficient , economic
+and regular supply of petroleum to consumers , a steady income to producers , and a fair return on capital for those investing in the petroleum industry . ''
+The organization is also a significant provider of information about the international oil market . As of May 2017 , OPEC 's members are Algeria , Angola ,
+Ecuador , Equatorial Guinea , Gabon , Iran , Iraq , Kuwait , Libya , Nigeria , Qatar , Saudi Arabia ( the de facto leader ) , United Arab Emirates , and
+Venezuela , while Indonesia is a former member . Two - thirds of OPEC 's oil production and reserves are in its six Middle Eastern countries that surround the
+oil - rich Persian Gulf .
+</item 2>
+
+<item 3>
+OPEC
+However , their influence on international trade is periodically challenged by the expansion of non-OPEC energy sources , and by the recurring temptation for
+individual OPEC countries to exceed production ceilings and pursue conflicting self - interests . Contents ( hide ) 1 Membership 1.1 Current member countries
+1.2 Lapsed members 1.3 Observers 1.4 Leadership and decision - making 1.5 International cartel 1.6 Conflicts 2 Market information 2.1 Publications and research
+2.2 Crude oil benchmarks 2.3 Spare capacity 3 History and impact 3.1 Post-WWII situation 3.2 1959 -- 1960 anger from exporting countries 3.3 1960 -- 1975
+founding and expansion 3.4 1973 -- 1974 oil embargo 3.5 1975 -- 1980 Special Fund , now OFID 3.6 1975 hostage siege 3.7 1979 -- 1980 oil crisis and 1980s oil
+glut 3.8 1990 -- 2003 ample supply and modest disruptions 3.9 2003 -- 2011 volatility 3.
+</item 3>
+
+<item 4>
+OPEC
+During 1961 -- 1975 , the five founding nations were joined by Qatar ( 1961 ) , Indonesia ( 1962 -- 2008 , rejoined 2014 - 2016 ) , Libya ( 1962 ) , United Arab
+Emirates ( originally just the Emirate of Abu Dhabi , 1967 ) , Algeria ( 1969 ) , Nigeria ( 1971 ) , Ecuador ( 1973 -- 1992 , rejoined 2007 ) , and Gabon ( 1975
+-- 1994 , rejoined 2016 ) . By the early 1970s , OPEC 's membership accounted for more than half of worldwide oil production . Indicating that OPEC is not
+averse to further expansion , Mohammed Barkindo , OPEC 's Acting Secretary General in 2006 , urged his African neighbors Angola and Sudan to join , and Angola
+did in 2007 , followed by Equatorial Guinea in 2017 . Since the 1980s , representatives from Egypt , Mexico , Norway , Oman , Russia , and other oil - exporting
+nations have attended many OPEC meetings as observers , as an informal mechanism for coordinating policies .
+</item 4>
+
+<item 5>
+OPEC
+In May 2008 , Indonesia announced that it would leave OPEC when its membership expired at the end of that year , having become a net importer of oil and being
+unable to meet its production quota . It rejoined the organization in January 2016 , but announced another `` temporary suspension '' of its membership at year
+- end when OPEC requested a 5 percent production cut . Some commentators consider that the United States was a de facto member of OPEC during its formal
+occupation of Iraq , due to its leadership of the Coalition Provisional Authority in 2003 -- 2004 . But this is not borne out by the minutes of OPEC meetings ,
+as no US representative attended in an official capacity . Observers ( edit ) Since the 1980s , representatives from Egypt , Mexico , Norway , Oman , Russia ,
+and other oil - exporting nations have attended many OPEC meetings as observers . This arrangement serves as an informal mechanism for coordinating policies .
+</item 5>
+
+<item 6>
+OPEC
+Country Region Membership Years Population ( 2016 est . ) Area ( km ) Oil Production ( bbl / day , 2016 ) Proven Reserves ( bbl , 2016 ) Algeria North Africa
+1969 -- 40,606,052 2,381,740 1,348,361 12,200,000,000 Angola Southern Africa 2007 -- 28,813,463 1,246,700 1,769,615 8,423,000,000 Ecuador South America 1973 --
+1992 , 2007 -- 16,385,068 283,560 548,421 8,273,000,000 Equatorial Guinea Central Africa 2017 -- 1,221,490 28,051 227,000 1,100,000,000 Gabon Central Africa
+1975 -- 1995 , 2016 -- 1,979,786 267,667 210,820 2,000,000,000 Iran Middle East 1960 -- 80,277,428 1,648,000 3,990,956 157,530,000,
+</item 6>
+
+<item 7>
+OPEC
+Jump up ^ The UAE was founded in December 1971 . Its OPEC membership originated with the Emirate of Abu Dhabi . Lapsed members ( edit ) Country Region
+Membership Years Population ( 2016 est . ) Area ( km ) Oil Production ( bbl / day , 2016 ) Proven Reserves ( bbl , 2016 ) Indonesia Southeast Asia 1962 -- 2008
+, Jan - Nov 2016 261,115,456 1,904,569 833,667 3,692,500,000 For countries that export petroleum at relatively low volume , their limited negotiating power as
+OPEC members would not necessarily justify the burdens imposed by OPEC production quotas and membership costs . Ecuador withdrew from OPEC in December 1992 ,
+because it was unwilling to pay the annual US $2 million membership fee and felt that it needed to produce more oil than it was allowed under its OPEC quota at
+the time , although it rejoined in October 2007 . Similar concerns prompted Gabon to suspend membership in January 1995 ; it rejoined in July 2016 .
+</item 7>
+
+<item 8>
+OPEC
+OPEC - wikipedia OPEC Jump to : navigation , search Organization of the Petroleum Exporting Countries ( OPEC ) Flag Headquarters Vienna , Austria Official
+language English Type International cartel Membership 14 states ( May 2017 ) ( show ) Algeria Angola Ecuador Equatorial Guinea Gabon Iran * Iraq * Kuwait *
+Libya Nigeria Qatar Saudi Arabia * United Arab Emirates Venezuela * * founding member Leaders Secretary General Mohammed Barkindo Establishment Baghdad , Iraq
+Statute September 1960 In effect January 1961 Currency Indexed as USD per barrel ( US $ / bbl ) Website OPEC.org Organization of the Petroleum Exporting
+Countries ( OPEC , / ˈoʊpɛk / OH - pek , or OPEP in several other languages ) is an intergovernmental organization of 14 nations as of February 2018 , founded
+in 1960 in Baghdad by the first five members ( Iran , Iraq , Kuwait , Saudi Arabia , and Venezuela ) , and headquartered since 1965 in Vienna , Austria .
+</item 8>
+
+<item 9>
+OPEC
+9 2003 -- 2011 volatility 3.10 2008 production dispute 3.11 2014 -- 2017 oil glut 3.12 2017 - 2018 Production cut 4 See also 5 References 6 External links
+Membership ( edit ) Current member countries ( edit ) As of May 2017 , OPEC has 14 member countries : six in the Middle East ( Western Asia ) , six in Africa ,
+and two in South America . According to the U.S. Energy Information Administration ( EIA ) , OPEC 's combined rate of oil production ( including gas condensate
+) represented 44 percent of the world 's total in 2016 , and OPEC accounted for 73 percent of the world 's `` proven '' oil reserves , including 48 percent from
+just the six Middle Eastern members : Approval of a new member country requires agreement by three - quarters of OPEC 's existing members , including all five
+of the founders . In October 2015 , Sudan formally submitted an application to join , but it is not yet a member . Country Region Membership Years Population (
+2016 est . )
+</item 9>
+
+<item 10>
+OPEC
+A statement released by OPEC on 10 September 2008 confirmed Indonesia 's withdrawal , noting that OPEC `` regretfully accepted the wish of Indonesia to suspend
+its full membership in the organization , and recorded its hope that the country would be in a position to rejoin the organization in the not - too - distant
+future . '' 2008 production dispute ( edit ) Countries by net oil exports ( 2008 ) The differing economic needs of OPEC member states often affect the internal
+debates behind OPEC production quotas . Poorer members have pushed for production cuts from fellow members , to increase the price of oil and thus their own
+revenues . These proposals conflict with Saudi Arabia 's stated long - term strategy of being a partner with the world 's economic powers to ensure a steady
+flow of oil that would support economic expansion . Part of the basis for this policy is the Saudi concern that overly expensive oil or unreliable supply will
+drive industrial nations to conserve energy and develop alternative fuels , curtailing the worldwide demand for oil and eventually leaving unneeded barrels in
+the ground . To this point , Saudi Oil Minister Yamani famously remarked in 1973 : `` The Stone Age did n't end because we ran out of stones . ''
+</item 10>
+=== END ITEM id=b1490858f5502c31 ===

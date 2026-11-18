@@ -1,0 +1,70 @@
+[
+{"id": "5135857fb8361596", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "he confessed on his podcast that he tried and failed to give her a friendship bracelet"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "a friendship bracelet with his phone number on it"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "he confessed on his podcast that he tried and failed to give her a friendship bracelet"}]},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "9a3332a3315dd786", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Sept. 24: Swift attends Chiefs game"}, {"item": 1, "quote": "Swift took Kelce up on his offer and attended the Chiefs' Week 3 game against the Chicago Bears."}]},
+{"fact": "2.0", "status": "missing", "evidence": []}
+]},
+{"id": "e34649ba6a21923c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "claiming that the model meets or exceeds"}, {"item": 6, "quote": "the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "claiming that the model meets or exceeds"}, {"item": 6, "quote": "the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "0669e9d9d16f0363", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "203515d7fed62c7a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "anticompetitive by making deals with Apple and others."}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 2, "quote": "anticompetitive by making deals with Apple and others."}]},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "7f62bfb6c4c7b5a9", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]}
+]

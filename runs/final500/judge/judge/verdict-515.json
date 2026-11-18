@@ -1,0 +1,135 @@
+[
+{"id": "b0c41fb5eda2f522", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Charles Thomas \"Tom\" Johnston (born August 15, 1948) is an American musician."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Charles Thomas \"Tom\" Johnston (born August 15, 1948) is an American musician."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Charles Thomas \"Tom\" Johnston (born August 15, 1948) is an American musician."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Daryl Palumbo (born February 10, 1979) is an American musician, originally from Elmira, New York."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Daryl Palumbo (born February 10, 1979) is an American musician, originally from Elmira, New York."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Daryl Palumbo (born February 10, 1979) is an American musician, originally from Elmira, New York."}]}
+]},
+{"id": "74a5cdb10de7763c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Disteghil Sar or Distaghil Sar"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Disteghil Sar or Distaghil Sar"}, {"item": 10, "quote": "is the highest mountain in the Hispar Muztagh, a subrange of the Karakoram mountain range, in Gilgit-Baltistan."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Hispar Muztagh is a sub-range of the Karakoram mountain range."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "Disteghil Sar or Distaghil Sar"}, {"item": 10, "quote": "is the highest mountain in the Hispar Muztagh, a subrange of the Karakoram mountain range, in Gilgit-Baltistan."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Disteghil Sar or Distaghil Sar"}, {"item": 10, "quote": "The mountain has an about 3 km long top ridge above 7400m with three distinct summits:"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Disteghil Sar or Distaghil Sar"}, {"item": 10, "quote": "The mountain has an about 3 km long top ridge above 7400m with three distinct summits:"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Disteghil Sar or Distaghil Sar"}, {"item": 10, "quote": "The mountain has an about 3 km long top ridge above 7400m with three distinct summits:"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "Disteghil Sar or Distaghil Sar"}, {"item": 10, "quote": "(north)west 7885m, central 7760 m, and (south)east 7696m or 7535m"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 10, "quote": "Disteghil Sar or Distaghil Sar"}, {"item": 10, "quote": "(north)west 7885m, central 7760 m, and (south)east 7696m or 7535m"}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 10, "quote": "Disteghil Sar or Distaghil Sar"}, {"item": 10, "quote": "(north)west 7885m, central 7760 m, and (south)east 7696m or 7535m"}]},
+{"fact": "2.0", "status": "contradicted", "evidence": [{"item": 1, "quote": "The highest mountain in the range is Distaghil Sar (7,885m/25,869"}, {"item": 10, "quote": "(north)west 7885m, central 7760 m, and (south)east 7696m or 7535m"}]},
+{"fact": "2.1", "status": "contradicted", "evidence": [{"item": 7, "quote": "Its summit has an elevation of 7295 m and it is the highest peak in the Yengisogat subrange of the Karakoram."}]}
+]},
+{"id": "26a4edd619a30c1b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "He is best known for his roles in \"How To Be Indie\" (2009–2011), \"Wingin' It\" (2010–2013), \"\" (2012–2013), and \"Open Heart\" (2015)."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "He is best known for his roles in \"How To Be Indie\" (2009–2011), \"Wingin' It\" (2010–2013), \"\" (2012–2013), and \"Open Heart\" (2015)."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "He is best known for his roles in \"How To Be Indie\" (2009–2011), \"Wingin' It\" (2010–2013), \"\" (2012–2013), and \"Open Heart\" (2015)."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "He is best known for his roles in \"How To Be Indie\" (2009–2011), \"Wingin' It\" (2010–2013), \"\" (2012–2013), and \"Open Heart\" (2015)."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Open Heart is a 2015 American-Canadian mystery-drama television series produced by the Epitome Pictures unit of DHX Media in association with marblemedia."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Open Heart is a 2015 American-Canadian mystery-drama television series produced by the Epitome Pictures unit of DHX Media in association with marblemedia."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Open Heart is a 2015 American-Canadian mystery-drama television series produced by the Epitome Pictures unit of DHX Media in association with marblemedia."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "Open Heart is a 2015 American-Canadian mystery-drama television series produced by the Epitome Pictures unit of DHX Media in association with marblemedia."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 5, "quote": "Open Heart is a 2015 American-Canadian mystery-drama television series produced by the Epitome Pictures unit of DHX Media in association with marblemedia."}]}
+]},
+{"id": "71c390c49994c8f4", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "On February 25, 2017 he lost to Jarrett Hurd for the International Boxing Federation light middleweight world title."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "On February 25, 2017 he lost to Jarrett Hurd for the International Boxing Federation light middleweight world title."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Jarrett Hurd (born August 31, 1990) is an American light middleweight boxer from Accokeek, Maryland."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Jarrett Hurd (born August 31, 1990) is an American light middleweight boxer from Accokeek, Maryland."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Jarrett Hurd (born August 31, 1990) is an American light middleweight boxer from Accokeek, Maryland."}]}
+]},
+{"id": "5fc2db26ecc09089", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "It consists of a duet featuring vocalists Dave Hemingway and Briana Corrigan."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "It consists of a duet featuring vocalists Dave Hemingway and Briana Corrigan."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "It consists of a duet featuring vocalists Dave Hemingway and Briana Corrigan."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Briana Corrigan (born 30 May 1965) is a Northern Irish singer."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Briana Corrigan (born 30 May 1965) is a Northern Irish singer."}]}
+]},
+{"id": "7d9ee6839fad957a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "It was launched in March 1994 by Millivres Ltd, under the editorship of Frances Williams and is now published by Twin Media Group, which is owned by Silke Bader and Linda Riley."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "It was launched in March 1994 by Millivres Ltd, under the editorship of Frances Williams and is now published by Twin Media Group, which is owned by Silke Bader and Linda Riley."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "It was launched in March 1994 by Millivres Ltd, under the editorship of Frances Williams and is now published by Twin Media Group, which is owned by Silke Bader and Linda Riley."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "It was launched in March 1994 by Millivres Ltd, under the editorship of Frances Williams and is now published by Twin Media Group, which is owned by Silke Bader and Linda Riley."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 10, "quote": "It was launched in March 1994 by Millivres Ltd, under the editorship of Frances Williams and is now published by Twin Media Group, which is owned by Silke Bader and Linda Riley."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 10, "quote": "It was launched in March 1994 by Millivres Ltd, under the editorship of Frances Williams and is now published by Twin Media Group, which is owned by Silke Bader and Linda Riley."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Elle is a worldwide lifestyle magazine of French origin that focuses on fashion, beauty, health, and entertainment."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Elle is a worldwide lifestyle magazine of French origin that focuses on fashion, beauty, health, and entertainment."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Elle is a worldwide lifestyle magazine of French origin that focuses on fashion, beauty, health, and entertainment."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "Elle is a worldwide lifestyle magazine of French origin that focuses on fashion, beauty, health, and entertainment."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 4, "quote": "Elle is a worldwide lifestyle magazine of French origin that focuses on fashion, beauty, health, and entertainment."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 4, "quote": "Elle is a worldwide lifestyle magazine of French origin that focuses on fashion, beauty, health, and entertainment."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "\"Elle\" is also the world's best-selling fashion magazine."}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 4, "quote": "It was founded by Pierre Lazareff and his wife Hélène Gordon in 1945."}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 4, "quote": "It was founded by Pierre Lazareff and his wife Hélène Gordon in 1945."}]},
+{"fact": "3.2", "status": "stated", "evidence": [{"item": 4, "quote": "It was founded by Pierre Lazareff and his wife Hélène Gordon in 1945."}]}
+]},
+{"id": "4b37e0035ad5471b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Georg Ferdinand Ludwig Philipp Cantor"}, {"item": 4, "quote": "March 3 [O.S. February 19] 1845"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Georg Ferdinand Ludwig Philipp Cantor"}, {"item": 4, "quote": "March 3 [O.S. February 19] 1845"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Georg Ferdinand Ludwig Philipp Cantor"}, {"item": 4, "quote": "January 6, 1918) was a German mathematician."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "Georg Ferdinand Ludwig Philipp Cantor"}, {"item": 4, "quote": "January 6, 1918) was a German mathematician."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Vladimir Igorevich Arnold (alternative spelling Arnol'd,"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Russian: Влади́мир И́горевич Арно́льд"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "12 June 1937 – 3 June 2010) was a Soviet and Russian mathematician."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "12 June 1937 – 3 June 2010) was a Soviet and Russian mathematician."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 1, "quote": "12 June 1937 – 3 June 2010) was a Soviet and Russian mathematician."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 1, "quote": "12 June 1937 – 3 June 2010) was a Soviet and Russian mathematician."}]}
+]},
+{"id": "17bdc0108389dc85", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "In September, The Fader published an interview with CupcakKe, which she discussed her new album that would address \"rape, and everything else\"."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "In September, The Fader published an interview with CupcakKe, which she discussed her new album that would address \"rape, and everything else\"."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "In September, The Fader published an interview with CupcakKe, which she discussed her new album that would address \"rape, and everything else\"."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The Fader (stylized as The FADER) is a New York City-based music magazine launched in 1999 by Rob Stone and Jon Cohen, covering music, style and culture."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The Fader (stylized as The FADER) is a New York City-based music magazine launched in 1999 by Rob Stone and Jon Cohen, covering music, style and culture."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "The Fader (stylized as The FADER) is a New York City-based music magazine launched in 1999 by Rob Stone and Jon Cohen, covering music, style and culture."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "The Fader (stylized as The FADER) is a New York City-based music magazine launched in 1999 by Rob Stone and Jon Cohen, covering music, style and culture."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "It was the first print publication to be released on iTunes."}]}
+]},
+{"id": "dc178db02dba2f59", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Andrew and Jeremy Get Married is a 2004 British documentary film written and directed by Don Boyd for the BBC."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Andrew and Jeremy Get Married is a 2004 British documentary film written and directed by Don Boyd for the BBC."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Andrew and Jeremy Get Married is a 2004 British documentary film written and directed by Don Boyd for the BBC."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "Andrew and Jeremy Get Married is a 2004 British documentary film written and directed by Don Boyd for the BBC."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "Andrew and Jeremy Get Married is a 2004 British documentary film written and directed by Don Boyd for the BBC."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "The Last Lions is a 2011 African nature documentary film by National Geographic Society, videotaped and directed by Dereck and Beverly Joubert."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "The Last Lions is a 2011 African nature documentary film by National Geographic Society, videotaped and directed by Dereck and Beverly Joubert."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "The Last Lions is a 2011 African nature documentary film by National Geographic Society, videotaped and directed by Dereck and Beverly Joubert."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "The Last Lions is a 2011 African nature documentary film by National Geographic Society, videotaped and directed by Dereck and Beverly Joubert."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 7, "quote": "The Last Lions is a 2011 African nature documentary film by National Geographic Society, videotaped and directed by Dereck and Beverly Joubert."}]}
+]},
+{"id": "e2e8fcac445b2204", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Still Kicking: Six Artistic Women of Project Arts & Longevity is a 2006 32-minute documentary film by Pacific Grove filmmaker Greg Young, featuring six Bay Area women role models over 85 years old who remained artistically active."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Still Kicking: Six Artistic Women of Project Arts & Longevity is a 2006 32-minute documentary film by Pacific Grove filmmaker Greg Young, featuring six Bay Area women role models over 85 years old who remained artistically active."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Still Kicking: Six Artistic Women of Project Arts & Longevity is a 2006 32-minute documentary film by Pacific Grove filmmaker Greg Young, featuring six Bay Area women role models over 85 years old who remained artistically active."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "Still Kicking: Six Artistic Women of Project Arts & Longevity is a 2006 32-minute documentary film by Pacific Grove filmmaker Greg Young, featuring six Bay Area women role models over 85 years old who remained artistically active."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "Still Kicking: Six Artistic Women of Project Arts & Longevity is a 2006 32-minute documentary film by Pacific Grove filmmaker Greg Young, featuring six Bay Area women role models over 85 years old who remained artistically active."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 3, "quote": "Still Kicking: Six Artistic Women of Project Arts & Longevity is a 2006 32-minute documentary film by Pacific Grove filmmaker Greg Young, featuring six Bay Area women role models over 85 years old who remained artistically active."}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 3, "quote": "Still Kicking: Six Artistic Women of Project Arts & Longevity is a 2006 32-minute documentary film by Pacific Grove filmmaker Greg Young, featuring six Bay Area women role models over 85 years old who remained artistically active."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Time Bombs is a 2008 Canadian film produced by \"Productions de la ruelle\"."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Time Bombs is a 2008 Canadian film produced by \"Productions de la ruelle\"."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Time Bombs is a 2008 Canadian film produced by \"Productions de la ruelle\"."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "Time Bombs is a 2008 Canadian film produced by \"Productions de la ruelle\"."}]}
+]},
+{"id": "72f8ef6d745f129d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Bicycling is a cycling brand published by Rodale, Inc. in Emmaus, Pennsylvania."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Bicycling is a cycling brand published by Rodale, Inc. in Emmaus, Pennsylvania."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "National Review (NR) is an American semi-monthly conservative editorial magazine focusing on news and commentary pieces on political, social, and cultural affairs."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "National Review (NR) is an American semi-monthly conservative editorial magazine focusing on news and commentary pieces on political, social, and cultural affairs."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "National Review (NR) is an American semi-monthly conservative editorial magazine focusing on news and commentary pieces on political, social, and cultural affairs."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "National Review (NR) is an American semi-monthly conservative editorial magazine focusing on news and commentary pieces on political, social, and cultural affairs."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 5, "quote": "National Review (NR) is an American semi-monthly conservative editorial magazine focusing on news and commentary pieces on political, social, and cultural affairs."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 5, "quote": "National Review (NR) is an American semi-monthly conservative editorial magazine focusing on news and commentary pieces on political, social, and cultural affairs."}]},
+{"fact": "1.6", "status": "stated", "evidence": [{"item": 5, "quote": "National Review (NR) is an American semi-monthly conservative editorial magazine focusing on news and commentary pieces on political, social, and cultural affairs."}]}
+]},
+{"id": "214331c3338b806d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Buried Country is a highly regarded documentary film, book and soundtrack album and now also a stageshow as well."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Buried Country is a highly regarded documentary film, book and soundtrack album and now also a stageshow as well."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Buried Country is a highly regarded documentary film, book and soundtrack album and now also a stageshow as well."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "Buried Country is a highly regarded documentary film, book and soundtrack album and now also a stageshow as well."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "South of the Border is a 2009 American documentary film directed by Oliver Stone."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "South of the Border is a 2009 American documentary film directed by Oliver Stone."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "South of the Border is a 2009 American documentary film directed by Oliver Stone."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "South of the Border is a 2009 American documentary film directed by Oliver Stone."}]}
+]}
+]

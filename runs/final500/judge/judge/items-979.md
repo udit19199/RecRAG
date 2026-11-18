@@ -1,0 +1,880 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=c0c35d11f5a0fa99 ===
+Gold sentences and facts:
+Sentence 0: Rose Stagg ( Valene Kane ) , a woman who had a sexual relationship with Paul whilst at university . During a night of passion , Paul tried to strangle her to death . As the Belfast Strangler comes to the attention of the public , Stagg notices the similarities and contacts her close friend Reed Smith . Her husband was unaware the attack had taken place . She is later kidnapped and held captive by Spector . She is later found unconscious in a car trunk . During series three , Stagg reveals that her sexual relationship with Paul was entirely consensual , and that , during sex , he strangled her so aggressively she had to be revived .
+  Fact 0.0: Rose Stagg (played by Valene Kane) had a sexual relationship with Paul while at university.
+  Fact 0.1: During a night of passion, Paul tried to strangle Rose Stagg to death.
+  Fact 0.2: As the Belfast Strangler comes to the attention of the public, Rose Stagg notices the similarities.
+  Fact 0.3: Rose Stagg contacts her close friend Reed Smith.
+  Fact 0.4: Rose Stagg's husband was unaware the attack had taken place.
+  Fact 0.5: Rose Stagg is later kidnapped and held captive by Spector.
+  Fact 0.6: Rose Stagg is later found unconscious in a car trunk.
+  Fact 0.7: During series three, Rose Stagg reveals that her sexual relationship with Paul was entirely consensual.
+  Fact 0.8: During sex, Paul strangled Rose Stagg so aggressively that she had to be revived.
+Sentence 1: Actor Character Series 1 Series 2 Series 3 Total Appearances 5 6 7 8 9 10 11 12 13 14 15 16 17 Gillian Anderson DSI Stella Gibson 17 Jamie Dornan Paul Spector 17 John Lynch ACC Jim Burns 17 Aisling Franciosi Katie Benedetto N / A 16 Bronagh Waugh Sally Ann Spector N / A 15 Niamh McGrady PC Danielle Ferrington N / A N / A 15 Stuart Graham DCI Matthew Eastwood N / A N / A N / A 13 Bronágh Taggart DC Gail McNally N / A 12 Valene Kane Rose Stagg N / A N / A N / A N / A 11 Emmett J. Scanlan DC Glen Martin N / A N / A N / A 10 Archie Panjabi Prof. Reed Smith N / A N / A 9 Richard Clements DC Rick Turner N / A N / A N / A N / A 9 Colin Morgan DS Tom Anderson N / A 9 Karen Hassan Annie Brawley N / A N / A N / A N / A 8 Jonjo O'Neill Tom Stagg N / A N / A N / A 7 Nick Lee Ned Callan N / A N / A N / A 6 Brian Milligan James Tyler N / A N / A N / A 6 Seainin Brennan Liz Tyler N / A N / A N / A N / A 5 Ben Peel DS James Olson N / A N / A 5 Ian McElhinney Morgan Monroe N / A N / A 5 Aidan McArdle Sean Healy N / A 5 Ruth Bradley Wallace N / A 5 Michael McElhatton DI Rob Breedlove N / A Frank McCusker DCI Garrett Brink N / A N / A Aisling Bea Kiera Sheridan N / A N / A Barry Ward Dr. Patrick Spencer N / A N / A Krister Henriksson Dr. August Larson N / A Laura Donnelly Sarah Kay N / A N / A Richard Coyle Dr. Joe O'Donnell N / A N / A N / A Denise Gough Dr. Alison Walden N / A N / A Seán McGinley Fr . Peter Jensen N / A N / A Genevieve O'Reilly DCI Joan Kinkead N / A N / A Martin McCann David Alvarez N / A N / A
+  Fact 1.0: The cast table lists each actor's character and appearances across series one to three, with episode numbers 5 to 17 as column headers.
+  Fact 1.1: Gillian Anderson plays DSI Stella Gibson, with 17 total appearances.
+  Fact 1.2: Jamie Dornan plays Paul Spector, with 17 total appearances.
+  Fact 1.3: John Lynch plays ACC Jim Burns, with 17 total appearances.
+  Fact 1.4: Aisling Franciosi plays Katie Benedetto, with 16 total appearances.
+  Fact 1.5: Bronagh Waugh plays Sally Ann Spector, with 15 total appearances.
+  Fact 1.6: Niamh McGrady plays PC Danielle Ferrington, with 15 total appearances.
+  Fact 1.7: Stuart Graham plays DCI Matthew Eastwood, with 13 total appearances.
+  Fact 1.8: Bronágh Taggart plays DC Gail McNally, with 12 total appearances.
+  Fact 1.9: Valene Kane plays Rose Stagg, with 11 total appearances.
+  Fact 1.10: Emmett J. Scanlan plays DC Glen Martin, with 10 total appearances.
+  Fact 1.11: Archie Panjabi plays Prof. Reed Smith, with 9 total appearances.
+  Fact 1.12: Richard Clements plays DC Rick Turner, with 9 total appearances.
+  Fact 1.13: Colin Morgan plays DS Tom Anderson, with 9 total appearances.
+  Fact 1.14: Karen Hassan plays Annie Brawley, with 8 total appearances.
+  Fact 1.15: Jonjo O'Neill plays Tom Stagg, with 7 total appearances.
+  Fact 1.16: Nick Lee plays Ned Callan, with 6 total appearances.
+  Fact 1.17: Brian Milligan plays James Tyler, with 6 total appearances.
+  Fact 1.18: Seainin Brennan plays Liz Tyler, with 5 total appearances.
+  Fact 1.19: Ben Peel plays DS James Olson, with 5 total appearances.
+  Fact 1.20: Ian McElhinney plays Morgan Monroe, with 5 total appearances.
+  Fact 1.21: Aidan McArdle plays Sean Healy, with 5 total appearances.
+  Fact 1.22: Ruth Bradley plays Wallace, with 5 total appearances.
+  Fact 1.23: Michael McElhatton plays DI Rob Breedlove.
+  Fact 1.24: Frank McCusker plays DCI Garrett Brink.
+  Fact 1.25: Aisling Bea plays Kiera Sheridan.
+  Fact 1.26: Barry Ward plays Dr. Patrick Spencer.
+  Fact 1.27: Krister Henriksson plays Dr. August Larson.
+  Fact 1.28: Laura Donnelly plays Sarah Kay.
+  Fact 1.29: Richard Coyle plays Dr. Joe O'Donnell.
+  Fact 1.30: Denise Gough plays Dr. Alison Walden.
+  Fact 1.31: Seán McGinley plays Fr. Peter Jensen.
+  Fact 1.32: Genevieve O'Reilly plays DCI Joan Kinkead.
+  Fact 1.33: Martin McCann plays David Alvarez.
+
+Retrieved items:
+<item 1>
+List of The Fall characters
+Impressed with both his professional attitude and looks , Stella invites him to join her team . Seeing the parallels between Anderson and Spector , Stella
+allows him to conduct the arrest and interviews of Paul . He is later gunned down by James Tyler whilst cuffed to the serial killer , and suffers nerve damage
+as a result . After returning to active duty , Anderson is once again attacked by Spector whilst protecting Stella in an interview . Annie Brawley ( edit )
+Annie Brawley ( Karen Hassan ) , a woman who is recovering from an attack by Spector in which her brother died . Suffering from memory loss and unable to
+identify her attacker , Spector manipulates his way into her life . Tom Stagg ( edit ) Tom Stagg ( Jonjo O'Neill ) , Rose Stagg 's husband and a close friend of
+Professor Reed Smith . He is unaware of his wife 's past relationship with Paul , and is at first ignorant to her involvement in the current case . Like Spector
+, he is the father of two children . He is particularly hurt when his wife goes missing , and is the first one to raise the alarm to Gibson and her team .
+</item 1>
+
+<item 2>
+Slasher (TV series)
+Mark Ghanimé as Justin Faysal , who with husband Robin purchased several properties in Waterbury , including the storefront location that serves as Sarah 's art
+gallery . Dylan Taylor as Bryan Ingram , Sarah 's father Alysa King as Rachel Ingram , Sarah 's mother Victoria Snow as Sonja Edwards , Brenda 's former
+childhood friend and her intended victim in a prom night 1968 incident . Hannah Endicott - Douglas as Ariel Peterson , Heather 's missing daughter Shawn Ahmed
+as Sharma , an officer in Waterbury 's police force Booth Savage as Ronald Edwards , the Mayor of Waterbury Susannah Hoffman as Marjorie Travers , a prostitute
+and drug addict Season 2 : Guilty Party ( edit ) Leslie Hope as Judith Berry Lovell Adams - Gray as Peter Broome Jim Watson as Noah Jenkins Christopher Jacot as
+Antoine Paulino Nunes as Mark Rankin Ty Olsson as Glenn Morgan / Benny Ironside : A former prisoner , and the sixth to die in the present . A year ago , Benny
+was serving time in prison when he met a new inmate with whom he entered into a romantic relationship .
+</item 2>
+
+<item 3>
+List of The Fall characters
+After leaving Paul for a short time , believing he slept with Katie , the two reconcile and she flees Ireland with him . In series 2 , they return . Sally Ann
+is pregnant with her third child , though she suffers a miscarriage . Following her arrest for assisting an offender , Sally attempts to kill her children . Pc
+Danielle Ferrington ( edit ) PC Danielle Ferrington ( Niamh McGrady ) , a Police Constable first seen attending a breaking and entering call at Sarah Kay 's
+home . She blames herself for Kay 's murder and tells Gibson this , resulting in her being recruited by Stella to work with Operation Musicman . Dani is a
+skilled investigator , and proves herself invaluable to the team . She speaks openly of her homosexuality to bisexual Gibson , and as a result the two develop
+both a professional and a personal bond . She later returns to patrol , believing she can do the most good on the street . It is in this capacity that she is
+involved in a gunfight with Spector and , following her suspension from front - line duty , is re-recruited by Stella . Det . Ch . Insp .
+</item 3>
+
+<item 4>
+List of The Fall characters
+Ch . Insp . Joan Kinkead 2.33 David Alvarez 3 References 4 External links Cast overview ( edit ) Actor Character Series 1 Series 2 Series 3 Total Appearances 5
+6 7 8 9 10 11 12 13 14 15 16 17 Gillian Anderson DSI Stella Gibson 17 Jamie Dornan Paul Spector 17 John Lynch ACC Jim Burns 17 Aisling Franciosi Katie Benedetto
+N / A 16 Bronagh Waugh Sally Ann Spector N / A 15 Niamh McGrady PC Danielle Ferrington N / A N / A 15 Stuart Graham DCI Matthew Eastwood N / A N / A N / A 13
+Bronágh Taggart DC Gail McNally N / A 12 Valene Kane Rose Stagg N / A N / A N / A N / A 11 Emmett J. Scanlan DC Glen Martin N / A N / A N / A 10 Archie Panjabi
+Prof.
+</item 4>
+
+<item 5>
+Republic of Doyle
+Jake realizes he has other problems too ; his mischievous older brother , Christian makes an unexpected visit to his house , greeting him in the kitchen . After
+Christian offends Jake , their relationship swiftly intensifies . The last episode of the season shows the characters ' struggle to keep their republic strong
+as their relationships fall apart . Season two ( edit ) Season Two begins with Rose , Mal 's partner , dealing with the consequences of his recent heart attack
+. Meanwhile , Jake and Leslie take initiatives to move past the hiccups in their relationship and move on from one another . Tinny , Jake 's niece , embarks on
+an investment in order to raise personal funds , meanwhile , Mal discovers a secret that Rose has kept from him ; her mother stole her engagement ring . Jake
+learns what Leslie sees their relationship as . As the season progresses , so does Tinny 's income business along with the amount of friends she makes . Jake as
+well as the viewers are introduced to Allison , the crown attorney . Meanwhile , Mal and Rose experience issues in their marriage but are quickly able to
+recover and move forward .
+</item 5>
+
+<item 6>
+When Calls the Heart
+as Charles Kensington Mamie Laverock as Rosaleen Sullivan Adrian Hough as Reverend Anderson Lynda Boyd as Grace Thatcher Will Verchere - Gopaulsingh as Caleb
+Dunbar Ali Skovbye as Becky Hastings Garwin Sanford as William Thatcher Laura Bertram as Mary Dunbar Derek Hamilton as Dewitt Graves Niall Matter as Shane
+Cantrell ( season 4 ) Spencer Drever as Cyrus Rivera ( season 4 ) Josie Bissett as AJ Foster Characters ( edit ) This section may contain an excessive amount of
+intricate detail that may only interest a specific audience . Please help by spinning off or relocating any relevant information , and removing excessive detail
+that may be against Wikipedia 's inclusion policy . ( April 2018 ) ( Learn how and when to remove this template message ) Elizabeth Thatcher Thornton is an
+independent , strong - minded , passionate and dedicated young teacher from the city . The middle daughter of William and Grace Thatcher , Elizabeth has two
+sisters , older sister Viola and younger sister Julie .
+</item 6>
+
+<item 7>
+List of The Fall characters
+List of the Fall characters - wikipedia List of the Fall characters Jump to : navigation , search The Fall , starring Gillian Anderson , is a British - Irish
+drama series produced by Artists Studio and created by Allan Cubitt . It premiered in the Republic of Ireland at 21 : 30 on 12 May 2013 , and in the UK on BBC
+Two at 21 : 00 on 13 May 2013 . The series features Jamie Dornan , with John Lynch , Bronagh Waugh , Stuart Graham , and Niamh McGrady . Contents ( hide ) 1
+Cast overview 2 Main characters 2.1 Det . Supt . Stella Gibson 2.2 Peter Paul Spector 2.3 Asst . Ch . Constable Jim Burns 2.4 Katie Benedetto 2.5 Sally Ann
+Spector 2.6 PC Danielle Ferrington 2.7 Det . Ch . Insp . Matthew Eastwood 2.8 DC Gail McNally 2.9 Rose Stagg 2.10 DC Glen Martin 2.11 Professor Reed Smith 2.12
+DC Rick Turner 2.13 Det .
+</item 7>
+
+<item 8>
+When Calls the Heart
+Rosemary even came to like Elizabeth , even if only on an acquaintance level . Truthfully , she cares about everyone in Hope Valley , especially Lee , with whom
+she shares an mutual attraction . When Rosie is not spending time with Lee , talking to Abigail , or dreaming about the glamorous life of an actress , she can
+often be found somewhere writing her weekly advice column for Hope Valley 's newspaper ! In season 3 , Rosemary 's friendship with Elizabeth deepened . Instead
+of viewing her as an adversary , she finds a friend in Elizabeth . Throughout season 3 , Rosemary 's relationship with Lee becomes more romantic . In `` Heart
+Of A Hero , '' seeing that Lee needs to spend more time at the sawmill to help the new settlers find jobs , Rosemary tells Lee that the theatre does n't have to
+be built . He insists , but she says how important his job is . He smiles and tells her he will one day build her theatre , telling her that she is `` the best
+part of his life . '' The couple shares in their first kiss . In `` A Gentle Heart , '' Lee is injured .
+</item 8>
+
+<item 9>
+List of The Fall characters
+Reed Smith N / A N / A 9 Richard Clements DC Rick Turner N / A N / A N / A N / A 9 Colin Morgan DS Tom Anderson N / A 9 Karen Hassan Annie Brawley N / A N / A N
+/ A N / A 8 Jonjo O'Neill Tom Stagg N / A N / A N / A 7 Nick Lee Ned Callan N / A N / A N / A 6 Brian Milligan James Tyler N / A N / A N / A 6 Seainin Brennan
+Liz Tyler N / A N / A N / A N / A 5 Ben Peel DS James Olson N / A N / A 5 Ian McElhinney Morgan Monroe N / A N / A 5 Aidan McArdle Sean Healy N / A 5 Ruth
+Bradley Wallace N / A 5 Michael McElhatton DI Rob Breedlove N / A Frank McCusker DCI Garrett Brink N / A N / A Aisling Bea Kiera Sheridan N / A N / A Barry Ward
+Dr. Patrick Spencer N / A N / A Krister Henriksson Dr.
+</item 9>
+
+<item 10>
+List of The Fall characters
+Gibson relies on her heavily during the investigative process . Rose Stagg ( edit ) Rose Stagg ( Valene Kane ) , a woman who had a sexual relationship with Paul
+whilst at university . During a night of passion , Paul tried to strangle her to death . As the Belfast Strangler comes to the attention of the public , Stagg
+notices the similarities and contacts her close friend Reed Smith . Her husband was unaware the attack had taken place . She is later kidnapped and held captive
+by Spector . She is later found unconscious in a car trunk . During series three , Stagg reveals that her sexual relationship with Paul was entirely consensual
+, and that , during sex , he strangled her so aggressively she had to be revived . DC Glen Martin ( edit ) DC Glen Martin ( Emmett Scanlan ) , a capable
+detective with a somewhat boyish attitude towards his work . Martin is an invaluable member of Gibson 's team and , during series two , takes on a more
+prominent role in the decision making process . He is partnered with DC Gail McNally , and is fiercely protective of her , though not to a fault .
+</item 10>
+=== END ITEM id=c0c35d11f5a0fa99 ===
+
+=== ITEM id=5cb47930093db9d9 ===
+Gold sentences and facts:
+Sentence 0: The National Legal Aid & Defender Association ( NLADA ) is the oldest and largest national , nonprofit membership organization devoted to advocating equal justice for all Americans and was established in 1911 .
+  Fact 0.0: The National Legal Aid & Defender Association (NLADA) is the oldest national membership organization.
+  Fact 0.1: The National Legal Aid & Defender Association (NLADA) is the largest national membership organization.
+  Fact 0.2: The National Legal Aid & Defender Association (NLADA) is nonprofit.
+  Fact 0.3: The National Legal Aid & Defender Association (NLADA) is devoted to advocating equal justice for all Americans.
+  Fact 0.4: The National Legal Aid & Defender Association (NLADA) was established in 1911.
+
+Retrieved items:
+<item 1>
+American Bar Association Model Rules of Professional Conduct
+However , the Model Rules have been adopted , in whole or in part , and sometimes in variation , as the rules of professional conduct for attorneys in 49 states
+, the District of Columbia , and four of the five inhabited U.S. territories . The rules of professional conduct or professional responsibility adopted in a
+particular state are legally enforceable against the lawyers of that state as well as any lawyer practicing there on a pro hac vice basis . On December 17 ,
+2008 , New York announced that it would finally abandon the old ABA Model Code of Professional Responsibility ( the last state to do so ) and adopt a heavily
+modified version of the ABA Model Rules , effective April 1 , 2009 . New York 's version of the Model Rules was created by adjusting the standard Model Rules to
+reflect indigenous New York rules that had been incorporated over the years into its version of the Model Code .
+</item 1>
+
+<item 2>
+American Bar Association Model Rules of Professional Conduct
+In 2001 , the Commission for the Revision of the Rules of Professional Conduct of the State Bar of California began a comprehensive revision of the California
+rules that would , among other things , convert them into a localized version of the ABA Model Rules . However , the Commission 's progress had been extremely
+slow , simply because there are so many substantive and structural differences between the California rules and the ABA models . In October 2010 , the State Bar
+of California formally adopted the Commission 's report , recommending adoption of 67 proposed changes to harmonise the California Rules of Professional Conduct
+with the ABA Model Rules of Professional Responsibility . On September 19 , 2014 , however , for reasons that were not fully explained , the Supreme Court of
+California rejected all of the proposed revisions and returned them to the State Bar . The Court 's letter directed the State Bar to start the process all over
+again with a new Commission , and to submit a new set of revised rules by March 31 , 2017 . Professional regulation ( edit ) Except for the Patent Bar , there
+is no national legal profession in the United States but there are 56 separate legal professions .
+</item 2>
+
+<item 3>
+American Bar Association Model Rules of Professional Conduct
+In contrast to most Commonwealth countries , where transactional lawyers and litigators are separately licensed as `` solicitors '' and `` barristers , ''
+respectively ; all American attorneys are licensed to practice as both solicitors and barristers ( therefore these terms are almost never used ) . Likewise ,
+whereas solicitors in England and Wales are professionally self - regulated by the private - sector Law Society of England and Wales while barristers are self -
+regulated by the private - sector General Council of the Bar , attorneys in all states except California , all territories and the District of Columbia are
+generally regulated by the public sector judicial branch of state , district or territorial government , as officers of the court . The legal profession in
+California is regulated jointly by the California Supreme Court , mostly through its agency the State Bar of California and by the California Legislature ,
+which exercises legislative control over all professions . Within the public sector regulatory agencies , boards and organisations , officers are invariably
+licensed members of the pertinent profession while key managerial and general staff typically are not . The Executive Director and Deputy Executive Director of
+the State Bar of California , for example , are active members of the State Bar .
+</item 3>
+
+<item 4>
+American Bar Association Model Rules of Professional Conduct
+This is due to California law and public policy being so markedly different from the rest of the country in so many ways . For example , California is one of
+only four states where covenants not to compete are void as against public policy ; and it is one of only three states where trusts are presumed to be revocable
+unless the trust instrument explicitly states the trust is irrevocable ( whereas the opposite is true in the other 47 states ) . By way of comparative example ,
+California has long held the position that clients must be encouraged to speak candidly to their legal counsel about both past and future actions knowing their
+statements will be held in complete confidence . Their counsel can then explain the relevant law to them and urge them to conform their future conduct to the
+law , thus promoting lawful conduct . In contrast , ABA Model Rule 1.6 contains exceptions to confidentiality for both violent and nonviolent ( e.g. financial )
+future crimes , which California believes creates a strong disincentive for clients to discuss their future plans with their attorneys - but for which the
+client might chose to comply with the law instead of violating it .
+</item 4>
+
+<item 5>
+American Bar Association Model Rules of Professional Conduct
+California ( edit ) California still has its own set of unique rules governing professional attorney conduct . Although many of the rules are similar and
+sometimes identical to the ABA Model Rules , the California rules differ markedly from the ABA models in both format , scope and content . For example , under
+the ABA Model Rules , an attorney may be disciplined for the appearance of impropriety , regardless whether any actual impropriety occurred ; whereas the
+California rules permit discipline for only actual impropriety . This reflects the nature of California law . It is unlikely that California will ever adopt the
+ABA Model Rules apart beyond harmonising the format and existing California rules that are identical or nearly identical to ABA Model Rules . Reasons for this
+reluctance include the fact there are more than 280,000 attorneys licensed in California , so a drastic change from the existing rules to completely different
+rules would shock the profession and , ultimately , would most likely fail . Additionally , many of California 's rules of professional conduct are established
+by statute and , thus , would require action by the California Legislature to change them ; or , alternatively , action by the people of California through the
+voter initiative process .
+</item 5>
+
+<item 6>
+American Bar Association Model Rules of Professional Conduct
+As of 2015 , 49 states and four territories have adopted the rules in whole or in part , of which the most recent to do so was the Commonwealth of the Northern
+Mariana Islands in March 2015 . California is the only state that has not adopted the ABA Model Rules , while Puerto Rico is the only U.S. jurisdiction outside
+of confederation has not adopted them but instead has its own Código de Ética Profesional . Contents ( hide ) 1 State , commonwealth and territorial adoptions
+of the Rules 1.1 California 2 Professional regulation 3 See also 4 References 5 External links State , Commonwealth and territorial adoptions of the Rules (
+edit ) The American Bar Association is a private sector voluntary professional association . As such , it has no lawmaking power or regulatory authority , but
+it is just like any other nongovernmental bar association . Accordingly , the Model Rules are not legally binding on ABA members or within any particular
+jurisdiction .
+</item 6>
+
+<item 7>
+American Bar Association Model Rules of Professional Conduct
+While either of their secretaries could be a member of the State Bar , they most likely are not . Similarly , the Board of Trustees that oversee the business
+operations of the State Bar of California under supervision of the California Supreme Court is legally required to be a mix of attorneys licensed to practice in
+California and `` public members '' who may not be licensed attorneys . So , while American attorneys are regulated by public sector agencies instead of private
+sector law societies , most of the people who develop the regulatory policies are practising attorneys and sitting judges , so there is a degree of self -
+regulation but not nearly to the same degree that solicitors and barristers in England and Wales , and other Commonwealth jurisdictions are self - regulated by
+private sector associations . See also ( edit ) American Bar Association Model Code of Professional Responsibility American Bar Association References ( edit )
+Jump up ^ Press Release : New Attorney Rules of Professional Conduct Announced , Communications Office of the New York Courts , 17 December 2008 .
+</item 7>
+
+<item 8>
+American Bar Association Model Rules of Professional Conduct
+American Bar Association Model Rules of professional conduct - wikipedia American Bar Association Model Rules of professional conduct Jump to : navigation ,
+search Professional responsibility Duties to the client Confidentiality Avoiding conflict of interest Due diligence and Competence ( law ) Avoid commingling
+Avoid self - dealing Effective assistance Avoid fee splitting Withdrawal from representation Duties to the court Disclosure of perjury Disclosure of adverse
+authority Duties to the profession Limitations on legal advertising Report misconduct Sources of law ABA Model Rules Penalties for misconduct Disbarment
+Judicial misconduct The ABA Model Rules of Professional Conduct , created by the American Bar Association ( ABA ) , are a set of rules that prescribe baseline
+standards of legal ethics and professional responsibility for lawyers in the United States . They were promulgated by the ABA House of Delegates upon the
+recommendation of the Kutak Commission in 1983 . The rules are merely recommendations , or models , ( hence the name `` Model Rules '' ) and are not themselves
+binding . However , having a common set of Model Rules facilitates a common discourse on legal ethics , and simplifies professional responsibility training as
+well as the day - to - day application of such rules .
+</item 8>
+
+<item 9>
+American Bar Association Model Rules of Professional Conduct
+Another important factor is that the legal profession is regulated very differently in California than it is in the rest of the United States . Outside of
+California , the profession is regulated solely by the judicial branch of state government . Within California , the State Bar of California operates as a state
+government agency under the supervision of the California Supreme Court ; but the State Bar was created by the California Legislature , and the Legislature has
+full power to regulate the legal profession , if it so wishes . In particular , the State Bar can not collect annual member dues unless and until the California
+Legislature passes an annual State Bar Dues Bill , which the governor must sign into law . When Governor Pete Wilson vetoed the dues bill in 1997 , the State
+Bar effectively shut down operations except for self - funded activities like the California Bar Exam . In 2010 , Governor Arnold Schwarzenegger vetoed the dues
+bill but a crisis was averted on that occasion . But the most important reason the California Bar is reluctant to adopt the ABA Model Rules is that most members
+believe the ABA Model Rules would not sufficiently protect the California public from harm .
+</item 9>
+
+<item 10>
+American Bar Association Model Rules of Professional Conduct
+External links ( edit ) The ABA Model Rules of Professional Conduct Pre-2002 Changes to the Model Rules since its adoption in 1983 from Cornell Law School
+Retrieved from `` https://en.wikipedia.org/w/index.php?title=American_Bar_Association_Model_Rules_of_Professional_Conduct&oldid=789593953 '' Categories : 1983
+in law Legal ethics Codes of conduct American Bar Association United States law 1983 documents Hidden categories : Articles containing potentially dated
+statements from 2015 All articles containing potentially dated statements Talk Contents About Wikipedia 한국어 Suomi Edit links This page was last edited on 8 July
+2017 , at 08 : 30 . Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree
+to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 10>
+=== END ITEM id=5cb47930093db9d9 ===
+
+=== ITEM id=61b2d03160ae254d ===
+Gold sentences and facts:
+Sentence 0: Ladies ' singles at the XXIII Olympic Winter Games Venue Gangneung Ice Arena Gangneung , South Korea Dates 21 -- 23 February Competitors 30 from 20 nations Winning score 239.57 Medalists 01 ! Alina Zagitova Olympic Athletes from Russia 02 ! Evgenia Medvedeva Olympic Athletes from Russia 03 ! Kaetlyn Osmond Canada ← 2014 2022 →
+  Fact 0.0: The Ladies' singles event was held at the XXIII Olympic Winter Games.
+  Fact 0.1: The Ladies' singles event was held at the Gangneung Ice Arena in Gangneung, South Korea.
+  Fact 0.2: The Ladies' singles event was held on 21 to 23 February.
+  Fact 0.3: The Ladies' singles event had 30 competitors from 20 nations.
+  Fact 0.4: The winning score in the Ladies' singles event was 239.57.
+  Fact 0.5: Alina Zagitova of Olympic Athletes from Russia was the first-place medalist.
+  Fact 0.6: Evgenia Medvedeva of Olympic Athletes from Russia was the second-place medalist.
+  Fact 0.7: Kaetlyn Osmond of Canada was the third-place medalist.
+  Fact 0.8: The navigation links point to the previous event in 2014 and the next event in 2022.
+Sentence 1: The ladies ' single figure skating competition of the 2018 Winter Olympics was held at the Gangneung Ice Arena in Gangneung , South Korea . The short program was held on 21 February , and the free skating was held on 23 February .
+  Fact 1.0: The ladies' single figure skating competition was held at the 2018 Winter Olympics.
+  Fact 1.1: The ladies' single figure skating competition was held at the Gangneung Ice Arena in Gangneung, South Korea.
+  Fact 1.2: The short program was held on 21 February.
+  Fact 1.3: The free skating was held on 23 February.
+
+Retrieved items:
+<item 1>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+Figure skating at the 2018 Winter Olympics -- ladies ' singles - wikipedia Figure skating at the 2018 Winter Olympics -- ladies ' singles Jump to : navigation ,
+search Ladies ' singles at the XXIII Olympic Winter Games Venue Gangneung Ice Arena Gangneung , South Korea Dates 21 -- 23 February Competitors 30 from 20
+nations Winning score 239.57 Medalists 01 ! Alina Zagitova Olympic Athletes from Russia 02 ! Evgenia Medvedeva Olympic Athletes from Russia 03 ! Kaetlyn Osmond
+Canada ← 2014 2022 → Figure skating at the 2018 Winter Olympics Qualification Singles men ladies Pairs mixed Ice dancing mixed Team event mixed The ladies '
+single figure skating competition of the 2018 Winter Olympics was held at the Gangneung Ice Arena in Gangneung , South Korea . The short program was held on 21
+February , and the free skating was held on 23 February .
+</item 1>
+
+<item 2>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+25 55.13 52.12 6.50 6.29 6.61 6.54 6.64 - 1.00 19 Gabrielle Daleman Canada 103.56 45.81 61.75 8.00 7.64 7.39 7.93 7.64 - 4.00 16 20 Li Xiangning China 101.97
+50.56 51.41 6.57 6.21 6.46 6.39 6.50 0.00 5 21 Emmi Peltonen Finland 101.86 46.41 56.45 7.14 6.79 7.00 7.07 7.29 - 1.00 8 22 Alexia Paganini Switzerland 101.00
+50.94 50.06 6.43 6.00 6.29 6.32 6.25 0.00 23 Ivett Tóth Hungary 97.21 49.82 50.39 6.
+</item 2>
+
+<item 3>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+86 31.47 33.39 8.46 8.21 8.21 8.46 8.39 - 1.00 30 13 Nicole Rajičová Slovakia 60.59 32.36 28.23 7.18 6.82 7.21 7.00 7.07 0.00 18 14 Nicole Schott Germany 59.20
+31.62 27.58 6.96 6.61 7.07 6.86 6.96 0.00 17 15 Elizabet Tursynbayeva Kazakhstan 58.82 29.14 29.68 7.46 7.18 7.50 7.43 7.54 0.00 23 16 Kailani Craine Australia
+56.77 30.36 26.41 6.61 6.32 6.71 6.57 6.79 0.00 13 17 Isadora Williams Brazil 55.74 29.83 25.
+</item 3>
+
+<item 4>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+TES - Technical Element Score ; PCS - Program Component Score SS - Skating Skills ; TR - Transitions ; PE - Performance / Execution CH - Choreography ; IN -
+Interpretation ; Ded - Deduction ; StN - Starting Number Free skating ( edit ) The free skating was held on 23 February . Pl . Name Nation TSS TES PCS SS TR PE
+CH IN Ded StN Evgenia Medvedeva Olympic Athletes from Russia * 156.65 * 79.18 * 77.47 * 9.57 9.43 9.82 9.71 9.89 0.00 24 Alina Zagitova Olympic Athletes from
+Russia * 156.65 * 81.62 * 75.03 * 9.32 9.21 9.61 9.29 9.46 0.00 22 Kaetlyn Osmond Canada 152.15 76.50 75.65 9.50 9.21 9.57 9.39 9.61 0.00 23 Satoko Miyahara
+Japan 146.
+</item 4>
+
+<item 5>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+24 quotas were handed out during the 2017 World Figure Skating Championships and the remaining six were given out at the 2017 CS Nebelhorn Trophy . Each country
+decided the entry of its teams , and athletes winning the quota were not necessarily granted the right to compete . All athletes competing must have met the
+minimum total elements score , which does not include component scores . For the short program this was 20.00 and the free skate 36.00 . Schedule ( edit ) All
+times are ( UTC + 9 ) . Date Time Round 21 February 10 : 00 Short program 23 February 10 : 00 Free skating Results ( edit ) Short program ( edit ) The short
+program was held on 21 February . Pl . Name Nation TSS TES PCS SS TR PE CH IN Ded StN Alina Zagitova Olympic Athletes from Russia 82.92 WR 45.30 37.62 9.36 9.18
+9.64 9.43 9.43 0.00 28 Evgenia Medvedeva Olympic Athletes from Russia 81.61 43.
+</item 5>
+
+<item 6>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+33 21 121.38 10 14 Nicole Rajičová Slovakia 175.19 60.59 13 114.60 15 15 Gabrielle Daleman Canada 172.46 68.90 7 103.56 19 16 Loena Hendrickx Belgium 171.88
+55.16 20 116.72 14 17 Kailani Craine Australia 168.61 56.77 16 111.84 16 18 Nicole Schott Germany 168.46 59.20 14 109.26 17 19 Maé - Bérénice Méité France
+159.92 53.67 22 106.25 18 20 Emmi Peltonen Finland 157.14 55.28 18 101.86 21 21 Alexia Paganini Switzerland 156.26 55.26 19 101.00 22 22 Li Xiangning China
+154.43 52.46 24 101.97 20 23 Ivett Tóth Hungary 150.43 53.
+</item 6>
+
+<item 7>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+17 May 2016 . Retrieved 20 January 2018 . Jump up ^ `` Extract from ISU Communication 2097 '' . www.iceskating.org.uk/ . National Ice Skating Association ( UK )
+. Retrieved 20 January 2018 . Jump up ^ Short program results Jump up ^ Free skating results Jump up ^ Final results Olympic champions in figure skating --
+Ladies ' singles 1908 : Madge Syers ( GBR ) 1920 : Magda Julin ( SWE ) 1924 : Herma Szabo ( AUT ) 1928 : Sonja Henie ( NOR ) 1932 : Sonja Henie ( NOR ) 1936 :
+Sonja Henie ( NOR ) 1948 : Barbara Ann Scott ( CAN ) 1952 : Jeannette Altwegg ( GBR ) 1956 : Tenley Albright ( USA ) 1960 : Carol Heiss ( USA ) 1964 : Sjoukje
+Dijkstra ( NED ) 1968 : Peggy Fleming ( USA ) 1972 : Trixi Schuba ( AUT ) 1976 : Dorothy
+</item 7>
+
+<item 8>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+Fleming ( USA ) 1972 : Trixi Schuba ( AUT ) 1976 : Dorothy Hamill ( USA ) 1980 : Anett Pötzsch ( GDR ) 1984 : Katarina Witt ( GDR ) 1988 : Katarina Witt ( GDR )
+1992 : Kristi Yamaguchi ( USA ) 1994 : Oksana Baiul ( UKR ) 1998 : Tara Lipinski ( USA ) 2002 : Sarah Hughes ( USA ) 2006 : Shizuka Arakawa ( JPN ) 2010 : Yuna
+Kim ( KOR ) 2014 : Adelina Sotnikova ( RUS ) 2018 : Alina Zagitova ( OAR ) Record scores in figure skating Combined total ( Total ) Short program ( SP ) Free
+skating ( FS ) Short dance ( SD ) Free dance ( FD ) Juniors ( J ) Men Total : Yuzuru Hanyu 330.43 SP : Yuzuru Hanyu 112.72 FS : Yuzuru Hanyu 223.
+</item 8>
+
+<item 9>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+Contents ( hide ) 1 Records 2 Qualification 3 Schedule 4 Results 4.1 Short program 4.2 Free skating 4.3 Overall 5 References Records ( edit ) See also : World
+and Olympic records set at the 2018 Winter Olympics For a complete list of figure skating records , see list of highest scores in figure skating . The following
+new best scores were set during this competition : Component Skaters Score Date Ref Short program Evgenia Medvedeva ( OAR ) 81.61 21 February 2018 Alina
+Zagitova ( OAR ) 82.92 The Olympic Athletes from Russia set two subsequent world records in the short program on February 21 , with Evgenia Medvedeva scoring
+81.61 and then Alina Zagitova scoring 82.92 ten minutes later . Qualification ( edit ) Main article : Figure skating at the 2018 Winter Olympics --
+Qualification A total of 30 skaters qualified to compete in the event , with each country allowed to only enter a maximum of three .
+</item 9>
+
+<item 10>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+97 20 23 Ivett Tóth Hungary 150.43 53.22 23 97.21 23 24 Isadora Williams Brazil 144.18 55.74 17 88.44 24 Did not advance to free skating 25 Larkyn Austman
+Canada N / A 51.42 25 N / A N / A 26 Diāna Ņikitina Latvia N / A 51.12 26 N / A N / A 27 Giada Russo Italy N / A 50.88 27 N / A N / A 28 Anita Östlund Sweden N
+/ A 49.14 28 N / A N / A 29 Anna Khnychenkova Ukraine N / A 47.59 29 N / A N / A 30 Aiza Mambekova Kazakhstan N / A 44.40 30 N / A N / A References ( edit )
+Jump up ^ `` Venues '' . www.pyeongchang2018.com/ . Pyeongchang 2018 Olympic Organizing Committee for the 2018 Winter Olympics .
+</item 10>
+=== END ITEM id=61b2d03160ae254d ===
+
+=== ITEM id=47d5c236abc0a11f ===
+Gold sentences and facts:
+Sentence 0: Only Mexico , Italy , France , Germany ( West Germany until shortly after the 1990 World Cup ) and Brazil have hosted the event on two occasions . Mexico City 's Estadio Azteca and Rio de Janeiro 's Maracanã are the only venues ever to have hosted two FIFA World Cup finals . Only the 2002 FIFA World Cup had more than one host , being split between Japan and South Korea .
+  Fact 0.0: Only Mexico has hosted the event on two occasions.
+  Fact 0.1: Only Italy has hosted the event on two occasions.
+  Fact 0.2: Only France has hosted the event on two occasions.
+  Fact 0.3: Only Germany has hosted the event on two occasions.
+  Fact 0.4: Only Brazil has hosted the event on two occasions.
+  Fact 0.5: Germany's hosting covers West Germany until shortly after the 1990 World Cup.
+  Fact 0.6: Mexico City's Estadio Azteca is one of the only venues ever to have hosted two FIFA World Cup finals.
+  Fact 0.7: Rio de Janeiro's Maracanã is one of the only venues ever to have hosted two FIFA World Cup finals.
+  Fact 0.8: Estadio Azteca and the Maracanã are the only venues ever to have hosted two FIFA World Cup finals.
+  Fact 0.9: Only the 2002 FIFA World Cup had more than one host.
+  Fact 0.10: The 2002 FIFA World Cup was split between Japan and South Korea.
+
+Retrieved items:
+<item 1>
+FIFA World Cup hosts
+9 2.1 Champion England 1966 6 5 0 92 % 11 8 1.3 1.8 Champion Italy 1934 5 0 90 % 12 9 1.8 2.4 5 Champion West Germany 7 6 0 86 % 13 9 1.3 1.9 6 Champion
+Argentina 1978 7 5 79 % 15 9 1.3 2.1 7 Runner - up Brazil 1950 6 75 % 22 6 16 2.7 3.7 8 Runner - up Sweden 1958 6 75 % 12 7 5 0.8 9 Third place Italy 1990 7 6 0
+93 % 10 8 1.1 1.4 10 Third place Germany 2006 7 5 79 % 14 6 8 1.1 11 Third place Chile 1962 6 0 67 % 10 8 0.33 1.
+</item 1>
+
+<item 2>
+After early withdrawals and boycotts, FIFA alternated World Cup hosts between Europe and the Americas, then used Council votes. The United States won the 1994
+bid; France was selected for 1998. Japan and South Korea jointly hosted 2002, despite logistical tensions. Brazil won the unopposed 2014 bid as rotation ended.
+In 2010, Russia was chosen for 2018 and Qatar for 2022; allegations of bribery clouded the latter vote.
+</item 2>
+
+<item 3>
+FIFA World Cup hosts
+FIFA World Cup hosts - wikipedia FIFA World Cup hosts Jump to : navigation , search Map of FIFA World Cup final hosts , 1930 -- 2014 . Dark green : twice ;
+middle green : once ; light green : planned until 2022 Sixteen countries have been FIFA World Cup hosts in the competition 's twenty tournaments since the
+inaugural World Cup in 1930 . The organization at first awarded hosting to countries at meetings of FIFA 's congress . The choice of location was controversial
+in the earliest tournaments , given the three - week boat journey between South America and Europe , the two centers of strength in football at the time . The
+decision to hold the first cup in Uruguay , for example , led to only four European nations competing . The next two World Cups were both held in Europe . The
+decision to hold the second of these , the 1938 FIFA World Cup , in France was controversial , as the South American countries had been led to understand that
+the World Cup would rotate between the two continents . Both Argentina and Uruguay thus boycotted the tournament .
+</item 3>
+
+<item 4>
+FIFA World Cup hosts
+1962 , 1966 , 1974 , 1982 , 2006 Argentina 5 1938 , 1962 , 1970 , 1978 , 2030 Mexico 1970 , 1978 , 1986 , 2002 , 2026 Morocco 1994 , 1998 , 2006 , 2010 , 2026
+Spain 1930 , 1966 , 1974 , 1982 , 2018 Brazil 1950 , 1994 , 2006 , 2014 England 1966 , 1990 , 2006 , 2018 United States 1986 , 1994 , 2022 , 2026 Italy 1930 ,
+1934 , 1990 Japan 1970 , 2002 , 2022 Canada 1986 , 2026 Chile 1962 , 2014 Colombia 1986 , 2014 France 1938 , 1998 Netherlands 1930 , 2018 Russia 1990 , 2018
+South Africa 2006 , 2010 South Korea 2002 , 2022 Switzerland 1954 ,
+</item 4>
+
+<item 5>
+FIFA World Cup hosts
+( PDF ) . PricewaterhouseCoopers . May 2010 . pp. 6 -- 7 . Retrieved 2 August 2014 . Jump up ^ Smallwood , John ( 11 June 2014 ) . `` Ultimate home field
+advantage : Host nation luck '' . Philadelphia Daily News . Retrieved 2 August 2014 . External links ( edit ) FIFA World Cup Host Announcement Decision ( PDF )
+FIFA World Cup hosts 1930 : Uruguay 1934 : Italy 1938 : France 1950 : Brazil 1954 : Switzerland 1958 : Sweden 1962 : Chile 1966 : England 1970 : Mexico 1974 :
+West Germany 1978 : Argentina 1982 : Spain 1986 : Mexico 1990 : Italy 1994 : United States 1998 : France 2002 : South Korea & Japan 2006 : Germany 2010 : South
+Africa 2014 : Brazil 2018 : Russia 2022 : Qatar FIFA World Cup Tournaments Uruguay 1930 Italy 1934 France 1938 Brazil 1950 Switzerland 1954 Sweden 1958 Chile
+1962 England
+</item 5>
+
+<item 6>
+FIFA World Cup hosts
+FIFA World Cup bids 1930 Hungary Italy Netherlands Spain Sweden Uruguay 1934 Italy Sweden 1938 Argentina France Germany 1942 Brazil Germany 1946 None 1950
+Brazil 1954 Switzerland 1958 Sweden 1962 Argentina Chile West Germany 1966 England West Germany Spain 1970 Argentina Mexico Italy Netherlands Spain West Germany
+1978 Argentina Mexico 1982 Spain West Germany 1986 Canada Colombia Mexico United States 1990 Austria England France Greece Italy Soviet Union West Germany
+Yugoslavia 1994 Brazil Morocco United States 1998 France Morocco Switzerland 2002 Japan -- South Korea Mexico 2006 Brazil England Germany Morocco South Africa
+Egypt Libya -- Tunisia Morocco Nigeria South Africa 2014 Brazil Colombia 2018 Belgium -- Netherlands England Portugal -- Spain Russia 2022 Australia Japan Qatar
+South Korea United States 2026 Canada -- Mexico -- United States Morocco 2030 Argentina -- Paraguay -- Uruguay England Notes : Bold entries are those chosen as
+hosts Event cancelled due to World War II Colombia withdrew after being award event , which was re-awarded to Mexico Retrieved from ``
+https://en.wikipedia.org/w/index.
+</item 6>
+
+<item 7>
+FIFA World Cup hosts
+^ Jump up to : Joint bid by Libya and Tunisia . Host country performances ( edit ) Further information : National team appearances in the FIFA World Cup It is
+widely considered that home advantage is common in the World Cup , with the host team usually performing above average . Of the eight countries that have won
+the tournament , only Brazil and Spain were not champions at home , and both England and France had their only titles as hosts . Further , Sweden got to its
+only final as hosts of the 1958 tournament , and only the Swedes and Brazilians finished as runner - up in home soil . The host country reached the semi-finals
+thirteen times in twenty tournaments , and both Chile and South Korea had their only finishes on the top four at home . Only South Africa in 2010 managed to not
+go past the group stage . # Performance Team Year Pld Win % GF GA GD GD / M GF / M Champion Uruguay 1930 0 0 100 % 15 12 3.8 Champion France 1998 7 6 0 93 % 15
+13 1.9 2.
+</item 7>
+
+<item 8>
+The list records FIFA World Cup host bids from 1930 to 2030. Hosts included Uruguay (1930), Italy (1934), France (1938), Brazil (1950), Switzerland (1954),
+Sweden (1958), Chile (1962), England (1966), Mexico (1970, 1986), West Germany (1974), Argentina (1978), Spain (1982), United States (1994), France (1998),
+Japan and South Korea
+</item 8>
+
+<item 9>
+FIFA World Cup hosts
+Contents ( hide ) 1 List of hosts 2 1930 FIFA World Cup 3 1934 FIFA World Cup 4 1938 FIFA World Cup 5 Cancelled FIFA World Cups 1942 and 1946 6 1950 and 1954
+FIFA World Cups 6.1 1949 bid 6.2 1951 bid 7 1958 FIFA World Cup 8 1962 FIFA World Cup 9 1966 FIFA World Cup 10 1970 FIFA World Cup 11 1974 , 1978 , 1982 FIFA
+World Cups 11.1 1974 results 11.2 1978 results 11.3 1982 results 12 1986 FIFA World Cup 13 1990 FIFA World Cup 14 1994 FIFA World Cup 15 1998 FIFA World Cup 16
+2002 FIFA World Cup 17 2006 FIFA World Cup 17.1 Controversy 18 2010 FIFA World Cup 18.1 Controversy 19 2014 FIFA World Cup 20 2018 and 2022 FIFA World Cups 20.1
+Accusations of bribery 21
+</item 9>
+
+<item 10>
+FIFA World Cup hosts
+1938 Brazil 1950 Switzerland 1954 Sweden 1958 Chile 1962 England 1966 Mexico 1970 West Germany 1974 Argentina 1978 Spain 1982 Mexico 1986 Italy 1990 United
+States 1994 France 1998 South Korea / Japan 2002 Germany 2006 South Africa 2010 Brazil 2014 Russia 2018 Qatar 2022 2026 2030 2034 Qualification 1930 1934 1938
+1950 1954 1958 1962 1966 1970 1978 1982 1986 1990 1994 1998 2002 2006 2014 2018 Finals 1930 1934 1938 1950 1954 1958 1962 1966 1970 1978 1982 1986 1990 1994
+1998 2002 2006 2014 2018 Squads 1930 1934 1938 1950 1954 1958 1962 1966 1970 1978 1982 1986
+</item 10>
+=== END ITEM id=47d5c236abc0a11f ===
+
+=== ITEM id=714afd42095e587a ===
+Gold sentences and facts:
+Sentence 0: Simplified reaction : C H O ( s ) + 6 O ( g ) → 6 CO ( g ) + 6 H O ( l ) + heat ΔG = − 2880 kJ per mol of C H O
+  Fact 0.0: The simplified reaction is C H O (s) + 6 O (g) → 6 CO (g) + 6 H O (l) + heat.
+  Fact 0.1: The free energy change ΔG is −2880 kJ per mol of C H O.
+
+Retrieved items:
+<item 1>
+Cellular respiration
+The products of this process are carbon dioxide and water , but the energy transferred is used to break bonds in ADP as the third phosphate group is added to
+form ATP ( adenosine triphosphate ) , by substrate - level phosphorylation , NADH and FADH Simplified reaction : C H O ( s ) + 6 O ( g ) → 6 CO ( g ) + 6 H O (
+l ) + heat ΔG = − 2880 kJ per mol of C H O The negative ΔG indicates that the reaction can occur spontaneously . The potential of NADH and FADH is converted to
+more ATP through an electron transport chain with oxygen as the `` terminal electron acceptor '' . Most of the ATP produced by aerobic cellular respiration is
+made by oxidative phosphorylation . This works by the energy released in the consumption of pyruvate being used to create a chemiosmotic potential by pumping
+protons across a membrane . This potential is then used to drive ATP synthase and produce ATP from ADP and a phosphate group .
+</item 1>
+
+<item 2>
+Cellular respiration
+Lactate can also be used as an indirect precursor for liver glycogen . During recovery , when oxygen becomes available , NAD+ attaches to hydrogen from lactate
+to form ATP . In yeast , the waste products are ethanol and carbon dioxide . This type of fermentation is known as alcoholic or ethanol fermentation . The ATP
+generated in this process is made by substrate - level phosphorylation , which does not require oxygen . Fermentation is less efficient at using the energy from
+glucose : only 2 ATP are produced per glucose , compared to the 38 ATP per glucose nominally produced by aerobic respiration . This is because the waste
+products of fermentation still contain chemical potential energy that can be released by oxidation . Ethanol , for example , can be burned in an internal
+combustion engine like gasoline . Glycolytic ATP , however , is created more quickly . For prokaryotes to continue a rapid growth rate when they are shifted
+from an aerobic environment to an anaerobic environment , they must increase the rate of the glycolytic reactions .
+</item 2>
+
+<item 3>
+Cellular respiration
+Obviously this reduces the theoretical efficiency of the whole process and the likely maximum is closer to 28 -- 30 ATP molecules . In practice the efficiency
+may be even lower because the inner membrane of the mitochondria is slightly leaky to protons . Other factors may also dissipate the proton gradient creating an
+apparently leaky mitochondria . An uncoupling protein known as thermogenin is expressed in some cell types and is a channel that can transport protons . When
+this protein is active in the inner membrane it short circuits the coupling between the electron transport chain and ATP synthesis . The potential energy from
+the proton gradient is not used to make ATP but generates heat . This is particularly important in brown fat thermogenesis of newborn and hibernating mammals .
+Stoichiometry of aerobic respiration and most known fermentation types in eucaryotic cell . Numbers in circles indicate counts of carbon atoms in molecules , C6
+is glucose C H O , C1 carbon dioxide CO . Mitochondrial outer membrane is omitted .
+</item 3>
+
+<item 4>
+Cellular respiration
+Mitochondrial outer membrane is omitted . According to some of newer sources the ATP yield during aerobic respiration is not 36 -- 38 , but only about 30 -- 32
+ATP molecules / 1 molecule of glucose , because : ATP : NADH + H and ATP : FADH ratios during the oxidative phosphorylation appear to be not 3 and 2 , but 2.5
+and 1.5 respectively . Unlike in the substrate - level phosphorylation , the stoichiometry here is difficult to establish . ATP synthase produces 1 ATP / 3 H.
+However the exchange of matrix ATP for cytosolic ADP and Pi ( antiport with OH or symport with H ) mediated by ATP -- ADP translocase and phosphate carrier
+consumes 1 H / 1 ATP as a result of regeneration of the transmembrane potential changed during this transfer , so the net ratio is 1 ATP : 4 H . The
+mitochondrial electron transport chain proton pump transfers across the inner membrane 10 H / 1 NADH + H ( 4 + 2 + 4 ) or 6 H / 1 FADH ( 2 + 4 ) .
+</item 4>
+
+<item 5>
+Cellular respiration
+Aerobic respiration summed up 1 . Glycolysis : -- - 2 ATPs + Glucose → 2 Pyruvic Acid + 4 Hydrogen + 4 ATPs 2 . Formation of Acetyl CoA : -- - 2 Pyruvic Acid +
+2 CoA → 2 Acetyl CoA + 2 Carbon Dioxide + 2 Hydrogen 3 . Krebs Cycle : -- - 2 Acetyl CoA + 3 O2 → 6 Hydrogen + 4 Carbon Dioxide + 2 ATPs 4 . Electron Transport
+System : -- - 12 Hydrogen + 3 O2 → 6 Water + 32 ATPs Overall Reaction : -- - Glucose + 6 O2 → 6 Carbon Dioxide + 6 Water + 36 ATPs Glycolysis Out of the
+cytoplasm it goes into the Krebs cycle with the acetyl CoA . It then mixes with CO and makes 2 ATP , NADH , and FADH . From there the NADH and FADH go into the
+NADH reductase , which produces the enzyme .
+</item 5>
+
+<item 6>
+Cellular respiration
+The electrons are finally transferred to exogenous oxygen and , with the addition of two protons , water is formed . Efficiency of ATP production The table
+below describes the reactions involved when one glucose molecule is fully oxidized into carbon dioxide . It is assumed that all the reduced coenzymes are
+oxidized by the electron transport chain and used for oxidative phosphorylation . Step coenzyme yield ATP yield Source of ATP Glycolysis preparatory phase − 2
+Phosphorylation of glucose and fructose 6 - phosphate uses two ATP from the cytoplasm .
+</item 6>
+
+<item 7>
+Cellular respiration
+However , if oxygen is not present , fermentation of the pyruvate molecule will occur . In the presence of oxygen , when acetyl - CoA is produced , the molecule
+then enters the citric acid cycle ( Krebs cycle ) inside the mitochondrial matrix , and is oxidized to CO while at the same time reducing NAD to NADH . NADH can
+be used by the electron transport chain to create further ATP as part of oxidative phosphorylation . To fully oxidize the equivalent of one glucose molecule ,
+two acetyl - CoA must be metabolized by the Krebs cycle . Two waste products , H O and CO , are created during this cycle . The citric acid cycle is an 8 - step
+process involving 18 different enzymes and co-enzymes . During the cycle , acetyl - CoA ( 2 carbons ) + oxaloacetate ( 4 carbons ) yields citrate ( 6 carbons )
+, which is rearranged to a more reactive form called isocitrate ( 6 carbons ) .
+</item 7>
+
+<item 8>
+Cellular respiration
+Contents ( hide ) 1 Aerobic respiration 1.1 Aerobic respiration summed up 1.2 Glycolysis 1.3 Oxidative decarboxylation of pyruvate 1.4 Citric acid cycle 1.5
+Oxidative phosphorylation 2 Efficiency of ATP production 3 Fermentation 4 Anaerobic respiration 5 See also 6 References 7 External links Aerobic respiration
+Aerobic respiration ( red arrows ) is the main means by which both fungi and animals utilize chemical energy in the form of organic compounds that were
+previously created through photosynthesis ( green arrow ) . Aerobic respiration requires oxygen ( O ) in order to create ATP . Although carbohydrates , fats ,
+and proteins are consumed as reactants , it is the preferred method of pyruvate breakdown in glycolysis and requires that pyruvate enter the mitochondria in
+order to be fully oxidized by the Krebs cycle .
+</item 8>
+
+<item 9>
+Cellular respiration
+Biology textbooks often state that 38 ATP molecules can be made per oxidised glucose molecule during cellular respiration ( 2 from glycolysis , 2 from the Krebs
+cycle , and about 34 from the electron transport system ) . However , this maximum yield is never quite reached because of losses due to leaky membranes as well
+as the cost of moving pyruvate and ADP into the mitochondrial matrix , and current estimates range around 29 to 30 ATP per glucose . Aerobic metabolism is up to
+15 times more efficient than anaerobic metabolism ( which yields 2 molecules ATP per 1 molecule glucose ) . However some anaerobic organisms , such as
+methanogens are able to continue with anaerobic respiration , yielding more ATP by using other inorganic molecules ( not oxygen ) as final electron acceptors in
+the electron transport chain . They share the initial pathway of glycolysis but aerobic metabolism continues with the Krebs cycle and oxidative phosphorylation
+. The post-glycolytic reactions take place in the mitochondria in eukaryotic cells , and in the cytoplasm in prokaryotic cells . Aerobic respiration summed up 1
+.
+</item 9>
+
+<item 10>
+Cellular respiration
+5 ATP ( if glycerol phosphate shuttle transfers hydrogen atoms ) or 2 × 2.5 ATP ( malate - aspartate shuttle ) 2 NADH + H from the oxidative decarboxylation of
+pyruvate and 6 from Krebs cycle : 8 × 2.5 ATP 2 FADH from the Krebs cycle : 2 × 1.5 ATP Altogether this gives 4 + 3 ( or 5 ) + 20 + 3 = 30 ( or 32 ) ATP per
+molecule of glucose The total ATP yield in ethanol or lactic acid fermentation is only 2 molecules coming from glycolysis , because pyruvate is not transferred
+to the mitochondrion and finally oxidized to the carbon dioxide ( CO ) , but reduced to ethanol or lactic acid in the cytoplasm . Fermentation Main article :
+Fermentation Without oxygen , pyruvate ( pyruvic acid ) is not metabolized by cellular respiration but undergoes a process of fermentation .
+</item 10>
+=== END ITEM id=714afd42095e587a ===
+
+=== ITEM id=944295b4be741e15 ===
+Gold sentences and facts:
+Sentence 0: Country Name of animal Scientific name Pictures Ref . Algeria Fennec fox Vulpes zerda Angola Red - crested turaco ( national bird ) Tauraco erythrolophus Anguilla Zenaida dove Zenaida aurita Antigua and Barbuda Fallow deer ( national animal ) Dama dama Frigate ( national bird ) Fregata magnificens Hawksbill turtle ( national sea creature ) Eretmochelys imbricata Argentina Rufous hornero Furnarius rufus Australia Red kangaroo ( national animal ) Macropus rufus Emu ( national bird ) Dromaius novaehollandiae Austria Black eagle Ictinaetus malaiensis Azerbaijan Karabakh horse Equus ferus caballus Bangladesh Royal Bengal tiger ( national animal ) Panthera tigris tigris Magpie robin ( national bird ) Copsychus saularis Ilish ( national fish ) Tenualosa ilisha Belarus European bison Bison bonasus Belgium Lion ( heraldic Leo Belgicus ) Panthera leo Belize Baird 's tapir ( national animal ) Tapirus bairdii Keel - billed toucan ( national bird ) Ramphastos sulfuratus Bhutan Druk Mythical Takin Budorcas taxicolor Brazil Rufous - bellied thrush Turdus rufiventris Cambodia Kouprey Bos sauveli Canada North American beaver ( sovereignty animal symbol ) Castor canadensis Canadian horse ( national horse ) Equus ferus caballus China Giant panda ( national animal ) Ailuropoda melanoleuca Chinese dragon ( national animal ) Mythical Red - crowned crane ( national bird ) Grus japonensis Democratic Republic of the Congo Okapi Okapia johnstoni Colombia Andean condor Vultur gryphus Costa Rica Yigüirro ( national bird ) Turdus grayi White - tailed deer ( national animal ) Odocoileus virginianus West Indian manatee ( national aquatic animal ) Trichechus manatus Croatia Pine marten Martes martes Cuba Cuban trogon Priotelus temnurus Cyprus Cypriot mouflon Ovis orientalis Czech Republic Double - tailed lion Mythical Denmark Mute swan ( national bird ) Cygnus olor Small tortoiseshell ( national butterfly ) Aglais urticae Egypt Steppe eagle Aquila nipalensis Estonia Barn swallow ( national bird ) Hirundo rustica Eritrea Arabian camel Camelus dromedarius Ethiopia Lion Panthera leo Faroe Islands Eurasian oystercatcher ( national bird ) Haematopus ostralgus Finland Brown bear ( national animal ) Ursus arctos Whooper swan ( national bird ) Cygnus cygnus Holly blue ( national butterfly ) Celastrina argiolus European perch ( national fish ) Perca fluviatilis Seven - spot ladybird ( national insect ) Coccinella septempunctata France Gallic rooster Gallus gallus domesticus Germany Unspecified Eagle Members of Accipitridae Greece Phoenix Mythical Dolphins Delphinus Guatemala Quetzal Pharomachrus mocinno Haiti Hispaniolan Trogan Priotelus roseigaster Honduras White - tailed deer Odocoileus virginianus Hungary Turul Mythical ( most probably Falco cherrug ) Iceland Gyrfalcon Falco rusticolus India Bengal tiger ( National predator ) Panthera tigris tigris Indian peafowl ( National bird ) Pavo cristatus King cobra ( National reptile ) Ophiophagus hannah Ganges river dolphin ( National aquatic animal ) Platanista gangetica gangetica Indian elephant ( National heritage animal ) Elephas maximus indicus Indonesia Komodo dragon ( national animal ) Varanus komodoensis Garuda ( historic national animal ) Mythical Iran Persian lion Panthera leo persica Iraq Chukar partridge Alectoris chukar Goat ( KRG ) Capra aegagrus Israel Hoopoe ( national bird ) Upupa epops Jamaica Red - billed streamertail Trochilus polytmus Japan Green pheasant ( national bird ) Phasianus versicolor Carp ( national fish ) Cyprinus carpio Latvia White wagtail ( national bird ) Motacilla alba Two - spotted ladybird ( national insect ) Adalia bipunctata Lithuania White stork Ciconia ciconia Macedonia Lion ( in Macedonian heraldry ) Panthera leo Madagascar Zebu ( in Malagasy heraldry ) Bos primigenius indicus Ring - tailed lemur ( national animal ) Lemur catta Malaysia Malayan tiger ( national animal ) Panthera tigris jacksoni Malta Pharaoh Hound ( national animal ) Canis lupus familiaris ( 1 ) Moldova Aurochs ( national animal ) Bos primigenius Mauritius Dodo Raphus cucullatus Mexico Golden eagle ( national animal ) Aquila chrysaetos Xoloitzcuintli ( national dog ) Canis lupus familiaris Jaguar ( national mammal ) Panthera onca Grasshopper ( national arthropod ) Sphenarium purpurascens Vaquita ( national marine mammal ) Phocoena sinus Nepal Cow ( national animal ) Bos taurus indicus Danphe ( national bird ) Lophophorus impejanus Netherlands Lion ( heraldic symbol ) Panthera leo Black - tailed godwit ( national bird ) Limosa limosa New Zealand Kiwi Apteryx sp . North Korea Chollima Mythical Norway Lion ( royal national animal ) Panthera leo White - throated dipper ( national bird ) Cinclus cinclus Fjord horse ( national horse ) Equus ferus caballus Oman Arabian oryx ( national animal ) Oryx leucoryx Pakistan Markhor ( National animal ) Capra falconeri Indus river dolphin ( National aquatic mammal ) Platanista indicus minor minor Chukar ( National bird ) Alectoris chukar Indus crocodile ( National reptile ) Crocodylus palustris Shaheen falcon ( Heritage bird ) Falco peregrinus peregrinator Snow leopard ( National predator ) Panthera uncia Panama Harpy eagle Harpia harpyja Papua New Guinea Dugong ( national marine mammal ) Dugong dugon Peru Vicuña ( national animal ) Vicugna vicugna Philippines Carabao ( national animal ) Bubalus bubalis Philippine eagle ( national bird ) Pithecophaga jefferyi Poland White - tailed eagle ( national bird ) Haliaeetus albicilla White stork ( national bird ) Ciconia ciconia European bison ( national animal ) Bison bonasus Qatar Arabian oryx Oryx leucoryx Romania Lynx Lynx lynx Russia Eurasian brown bear Ursus arctos arctos Rwanda Leopard Panthera pardus Saint Vincent and the Grenadines Saint Vincent amazon Amazona guildingii Serbia Wolf Canis lupus lupus White eagle Mythical Lynx Lynx lynx Somalia Leopard ( national animal ) Panthera pardus South Africa Springbok ( national animal ) Antidorcas marsupialis Blue crane ( national bird ) Anthropoides paradiseus Galjoen ( national fish ) Dichistius capensis South Korea Siberian tiger Panthera tigris altaica Korean magpie ( national bird ) Pica ( pica ) sericea Sri Lanka Sri Lankan junglefowl ( national bird ) Gallus lafayettii Tanzania Giraffe Giraffa camelopardalis Thailand Elephant Elephas maximus United Arab Emirates Arabian oryx ( national animal ) Oryx leucoryx Peregrine falcon ( national bird ) Falco peregrinus United Kingdom Lion ( United Kingdom , England , Scotland , Wales ) Panthera leo Bulldog ( Britain as `` British Bulldog '' ) Canis lupus familiaris Red kite ( Wales ) Milvus milvus Unicorn ( Scotland ) Mythical Y Ddraig Goch ( Welsh Dragon Wales ) Mythical United States Bald eagle ( national bird ) Haliaeetus leucocephalus American bison ( national mammal ) Bison bison
+  Fact 0.0: In Algeria, the Fennec fox (Vulpes zerda) is listed as the animal.
+  Fact 0.1: In Angola, the Red-crested turaco (Tauraco erythrolophus) is listed as the national bird.
+  Fact 0.2: In Anguilla, the Zenaida dove (Zenaida aurita) is listed.
+  Fact 0.3: In Antigua and Barbuda, the Fallow deer (Dama dama) is listed as the national animal.
+  Fact 0.4: In Antigua and Barbuda, the Frigate (Fregata magnificens) is listed as the national bird.
+  Fact 0.5: In Antigua and Barbuda, the Hawksbill turtle (Eretmochelys imbricata) is listed as the national sea creature.
+  Fact 0.6: In Argentina, the Rufous hornero (Furnarius rufus) is listed.
+  Fact 0.7: In Australia, the Red kangaroo (Macropus rufus) is listed as the national animal.
+  Fact 0.8: In Australia, the Emu (Dromaius novaehollandiae) is listed as the national bird.
+  Fact 0.9: In Austria, the Black eagle (Ictinaetus malaiensis) is listed.
+  Fact 0.10: In Azerbaijan, the Karabakh horse (Equus ferus caballus) is listed.
+  Fact 0.11: In Bangladesh, the Royal Bengal tiger (Panthera tigris tigris) is listed as the national animal.
+  Fact 0.12: In Bangladesh, the Magpie robin (Copsychus saularis) is listed as the national bird.
+  Fact 0.13: In Bangladesh, the Ilish (Tenualosa ilisha) is listed as the national fish.
+  Fact 0.14: In Belarus, the European bison (Bison bonasus) is listed.
+  Fact 0.15: In Belgium, the Lion (Panthera leo) is listed as the heraldic Leo Belgicus.
+  Fact 0.16: In Belize, Baird's tapir (Tapirus bairdii) is listed as the national animal.
+  Fact 0.17: In Belize, the Keel-billed toucan (Ramphastos sulfuratus) is listed as the national bird.
+  Fact 0.18: In Bhutan, the Druk is listed as a mythical animal.
+  Fact 0.19: In Bhutan, the Takin (Budorcas taxicolor) is listed.
+  Fact 0.20: In Brazil, the Rufous-bellied thrush (Turdus rufiventris) is listed.
+  Fact 0.21: In Cambodia, the Kouprey (Bos sauveli) is listed.
+  Fact 0.22: In Canada, the North American beaver (Castor canadensis) is listed as the sovereignty animal symbol.
+  Fact 0.23: In Canada, the Canadian horse (Equus ferus caballus) is listed as the national horse.
+  Fact 0.24: In China, the Giant panda (Ailuropoda melanoleuca) is listed as the national animal.
+  Fact 0.25: In China, the Chinese dragon is listed as a mythical national animal.
+  Fact 0.26: In China, the Red-crowned crane (Grus japonensis) is listed as the national bird.
+  Fact 0.27: In the Democratic Republic of the Congo, the Okapi (Okapia johnstoni) is listed.
+  Fact 0.28: In Colombia, the Andean condor (Vultur gryphus) is listed.
+  Fact 0.29: In Costa Rica, the Yigüirro (Turdus grayi) is listed as the national bird.
+  Fact 0.30: In Costa Rica, the White-tailed deer (Odocoileus virginianus) is listed as the national animal.
+  Fact 0.31: In Costa Rica, the West Indian manatee (Trichechus manatus) is listed as the national aquatic animal.
+  Fact 0.32: In Croatia, the Pine marten (Martes martes) is listed.
+  Fact 0.33: In Cuba, the Cuban trogon (Priotelus temnurus) is listed.
+  Fact 0.34: In Cyprus, the Cypriot mouflon (Ovis orientalis) is listed.
+  Fact 0.35: In the Czech Republic, the Double-tailed lion is listed as a mythical animal.
+  Fact 0.36: In Denmark, the Mute swan (Cygnus olor) is listed as the national bird.
+  Fact 0.37: In Denmark, the Small tortoiseshell (Aglais urticae) is listed as the national butterfly.
+  Fact 0.38: In Egypt, the Steppe eagle (Aquila nipalensis) is listed.
+  Fact 0.39: In Estonia, the Barn swallow (Hirundo rustica) is listed as the national bird.
+  Fact 0.40: In Eritrea, the Arabian camel (Camelus dromedarius) is listed.
+  Fact 0.41: In Ethiopia, the Lion (Panthera leo) is listed.
+  Fact 0.42: In the Faroe Islands, the Eurasian oystercatcher (Haematopus ostralgus) is listed as the national bird.
+  Fact 0.43: In Finland, the Brown bear (Ursus arctos) is listed as the national animal.
+  Fact 0.44: In Finland, the Whooper swan (Cygnus cygnus) is listed as the national bird.
+  Fact 0.45: In Finland, the Holly blue (Celastrina argiolus) is listed as the national butterfly.
+  Fact 0.46: In Finland, the European perch (Perca fluviatilis) is listed as the national fish.
+  Fact 0.47: In Finland, the Seven-spot ladybird (Coccinella septempunctata) is listed as the national insect.
+  Fact 0.48: In France, the Gallic rooster (Gallus gallus domesticus) is listed.
+  Fact 0.49: In Germany, the Unspecified Eagle (a member of Accipitridae) is listed.
+  Fact 0.50: In Greece, the Phoenix is listed as a mythical animal.
+  Fact 0.51: In Greece, the Dolphins (Delphinus) are listed.
+  Fact 0.52: In Guatemala, the Quetzal (Pharomachrus mocinno) is listed.
+  Fact 0.53: In Haiti, the Hispaniolan Trogan (Priotelus roseigaster) is listed.
+  Fact 0.54: In Honduras, the White-tailed deer (Odocoileus virginianus) is listed.
+  Fact 0.55: In Hungary, the Turul is listed as a mythical animal, most probably Falco cherrug.
+  Fact 0.56: In Iceland, the Gyrfalcon (Falco rusticolus) is listed.
+  Fact 0.57: In India, the Bengal tiger (Panthera tigris tigris) is listed as the National predator.
+  Fact 0.58: In India, the Indian peafowl (Pavo cristatus) is listed as the National bird.
+  Fact 0.59: In India, the King cobra (Ophiophagus hannah) is listed as the National reptile.
+  Fact 0.60: In India, the Ganges river dolphin (Platanista gangetica gangetica) is listed as the National aquatic animal.
+  Fact 0.61: In India, the Indian elephant (Elephas maximus indicus) is listed as the National heritage animal.
+  Fact 0.62: In Indonesia, the Komodo dragon (Varanus komodoensis) is listed as the national animal.
+  Fact 0.63: In Indonesia, the Garuda is listed as the historic national animal, a mythical one.
+  Fact 0.64: In Iran, the Persian lion (Panthera leo persica) is listed.
+  Fact 0.65: In Iraq, the Chukar partridge (Alectoris chukar) is listed.
+  Fact 0.66: In Iraq, the Goat (Capra aegagrus) is listed for KRG.
+  Fact 0.67: In Israel, the Hoopoe (Upupa epops) is listed as the national bird.
+  Fact 0.68: In Jamaica, the Red-billed streamertail (Trochilus polytmus) is listed.
+  Fact 0.69: In Japan, the Green pheasant (Phasianus versicolor) is listed as the national bird.
+  Fact 0.70: In Japan, the Carp (Cyprinus carpio) is listed as the national fish.
+  Fact 0.71: In Latvia, the White wagtail (Motacilla alba) is listed as the national bird.
+  Fact 0.72: In Latvia, the Two-spotted ladybird (Adalia bipunctata) is listed as the national insect.
+  Fact 0.73: In Lithuania, the White stork (Ciconia ciconia) is listed.
+  Fact 0.74: In Macedonia, the Lion (Panthera leo) is listed as the animal in Macedonian heraldry.
+  Fact 0.75: In Madagascar, the Zebu (Bos primigenius indicus) is listed as the animal in Malagasy heraldry.
+  Fact 0.76: In Madagascar, the Ring-tailed lemur (Lemur catta) is listed as the national animal.
+  Fact 0.77: In Malaysia, the Malayan tiger (Panthera tigris jacksoni) is listed as the national animal.
+  Fact 0.78: In Malta, the Pharaoh Hound (Canis lupus familiaris) is listed as the national animal, with reference 1.
+  Fact 0.79: In Moldova, the Aurochs (Bos primigenius) is listed as the national animal.
+  Fact 0.80: In Mauritius, the Dodo (Raphus cucullatus) is listed.
+  Fact 0.81: In Mexico, the Golden eagle (Aquila chrysaetos) is listed as the national animal.
+  Fact 0.82: In Mexico, the Xoloitzcuintli (Canis lupus familiaris) is listed as the national dog.
+  Fact 0.83: In Mexico, the Jaguar (Panthera onca) is listed as the national mammal.
+  Fact 0.84: In Mexico, the Grasshopper (Sphenarium purpurascens) is listed as the national arthropod.
+  Fact 0.85: In Mexico, the Vaquita (Phocoena sinus) is listed as the national marine mammal.
+  Fact 0.86: In Nepal, the Cow (Bos taurus indicus) is listed as the national animal.
+  Fact 0.87: In Nepal, the Danphe (Lophophorus impejanus) is listed as the national bird.
+  Fact 0.88: In the Netherlands, the Lion (Panthera leo) is listed as the heraldic symbol.
+  Fact 0.89: In the Netherlands, the Black-tailed godwit (Limosa limosa) is listed as the national bird.
+  Fact 0.90: In New Zealand, the Kiwi (Apteryx sp.) is listed.
+  Fact 0.91: In North Korea, the Chollima is listed as a mythical animal.
+  Fact 0.92: In Norway, the Lion (Panthera leo) is listed as the royal national animal.
+  Fact 0.93: In Norway, the White-throated dipper (Cinclus cinclus) is listed as the national bird.
+  Fact 0.94: In Norway, the Fjord horse (Equus ferus caballus) is listed as the national horse.
+  Fact 0.95: In Oman, the Arabian oryx (Oryx leucoryx) is listed as the national animal.
+  Fact 0.96: In Pakistan, the Markhor (Capra falconeri) is listed as the National animal.
+  Fact 0.97: In Pakistan, the Indus river dolphin (Platanista indicus minor minor) is listed as the National aquatic mammal.
+  Fact 0.98: In Pakistan, the Chukar (Alectoris chukar) is listed as the National bird.
+  Fact 0.99: In Pakistan, the Indus crocodile (Crocodylus palustris) is listed as the National reptile.
+  Fact 0.100: In Pakistan, the Shaheen falcon (Falco peregrinus peregrinator) is listed as the Heritage bird.
+  Fact 0.101: In Pakistan, the Snow leopard (Panthera uncia) is listed as the National predator.
+  Fact 0.102: In Panama, the Harpy eagle (Harpia harpyja) is listed.
+  Fact 0.103: In Papua New Guinea, the Dugong (Dugong dugon) is listed as the national marine mammal.
+  Fact 0.104: In Peru, the Vicuña (Vicugna vicugna) is listed as the national animal.
+  Fact 0.105: In the Philippines, the Carabao (Bubalus bubalis) is listed as the national animal.
+  Fact 0.106: In the Philippines, the Philippine eagle (Pithecophaga jefferyi) is listed as the national bird.
+  Fact 0.107: In Poland, the White-tailed eagle (Haliaeetus albicilla) is listed as the national bird.
+  Fact 0.108: In Poland, the White stork (Ciconia ciconia) is listed as the national bird.
+  Fact 0.109: In Poland, the European bison (Bison bonasus) is listed as the national animal.
+  Fact 0.110: In Qatar, the Arabian oryx (Oryx leucoryx) is listed.
+  Fact 0.111: In Romania, the Lynx (Lynx lynx) is listed.
+  Fact 0.112: In Russia, the Eurasian brown bear (Ursus arctos arctos) is listed.
+  Fact 0.113: In Rwanda, the Leopard (Panthera pardus) is listed.
+  Fact 0.114: In Saint Vincent and the Grenadines, the Saint Vincent amazon (Amazona guildingii) is listed.
+  Fact 0.115: In Serbia, the Wolf (Canis lupus lupus) is listed.
+  Fact 0.116: In Serbia, the White eagle is listed as a mythical animal.
+  Fact 0.117: In Serbia, the Lynx (Lynx lynx) is listed.
+  Fact 0.118: In Somalia, the Leopard (Panthera pardus) is listed as the national animal.
+  Fact 0.119: In South Africa, the Springbok (Antidorcas marsupialis) is listed as the national animal.
+  Fact 0.120: In South Africa, the Blue crane (Anthropoides paradiseus) is listed as the national bird.
+  Fact 0.121: In South Africa, the Galjoen (Dichistius capensis) is listed as the national fish.
+  Fact 0.122: In South Korea, the Siberian tiger (Panthera tigris altaica) is listed.
+  Fact 0.123: In South Korea, the Korean magpie (Pica (pica) sericea) is listed as the national bird.
+  Fact 0.124: In Sri Lanka, the Sri Lankan junglefowl (Gallus lafayettii) is listed as the national bird.
+  Fact 0.125: In Tanzania, the Giraffe (Giraffa camelopardalis) is listed.
+  Fact 0.126: In Thailand, the Elephant (Elephas maximus) is listed.
+  Fact 0.127: In the United Arab Emirates, the Arabian oryx (Oryx leucoryx) is listed as the national animal.
+  Fact 0.128: In the United Arab Emirates, the Peregrine falcon (Falco peregrinus) is listed as the national bird.
+  Fact 0.129: In the United Kingdom, the Lion (Panthera leo) is listed for the United Kingdom, England, Scotland and Wales.
+  Fact 0.130: In the United Kingdom, the Bulldog (Canis lupus familiaris) is listed as Britain, called the British Bulldog.
+  Fact 0.131: In the United Kingdom, the Red kite (Milvus milvus) is listed for Wales.
+  Fact 0.132: In the United Kingdom, the Unicorn is listed as a mythical animal for Scotland.
+  Fact 0.133: In the United Kingdom, the Y Ddraig Goch (Welsh Dragon) is listed as a mythical animal for Wales.
+  Fact 0.134: In the United States, the Bald eagle (Haliaeetus leucocephalus) is listed as the national bird.
+  Fact 0.135: In the United States, the American bison (Bison bison) is listed as the national mammal.
+
+Retrieved items:
+<item 1>
+List of national animals
+Jump up ^ Jon Eldridge . `` Primeval Poland : where the bison roam '' . theguardian.com . Retrieved 2016 - 10 - 10 . Jump up ^ `` Poland '' . allaboutbison.com
+. Retrieved 2016 - 10 - 10 . Jump up ^ Tamra Orr ( 30 June 2008 ) . Qatar . Marshall Cavendish . p. 13 . ISBN 978 - 0 - 7614 - 2566 - 3 . Retrieved 30 July 2011
+. Jump up ^ `` Animalul national - Rasul - Sapte simboluri nationale ale Romaniei mai putin cunoscute '' . 9AM . Jump up ^ `` Birobidjan , Russia Beaverton 's
+sister city since 1990 '' . The City of Beaverton . Retrieved 2017 - 01 - 23 . Jump up ^ `` Rwanda State Symbols , Song , Flag , and More '' . worldatlas.com .
+Retrieved 2013 - 03 - 21 .
+</item 1>
+
+<item 2>
+List of national animals
+Magpie robin ( national bird ) Copsychus saularis Ilish ( national fish ) Tenualosa ilisha Belarus European bison Bison bonasus Belgium Lion ( heraldic Leo
+Belgicus ) Panthera leo Belize Baird 's tapir ( national animal ) Tapirus bairdii Keel - billed toucan ( national bird ) Ramphastos sulfuratus Bhutan Druk
+Mythical Takin Budorcas taxicolor Brazil Rufous - bellied thrush Turdus rufiventris Cambodia Kouprey Bos sauveli Canada North American beaver ( sovereignty
+animal symbol ) Castor canadensis Canadian horse ( national horse ) Equus ferus caballus China Giant panda ( national animal ) Ailuropoda melanoleuca Chinese
+dragon ( national animal ) Mythical Red - crowned crane ( national bird ) Grus japonensis Democratic Republic of the Congo Okapi Okapia johnstoni Colombia
+Andean condor Vultur gryphus Costa Rica Yigüirro ( national bird ) Turdus grayi White - tailed deer ( national animal ) Odocoileus virginianus West Indian
+manatee ( national aquatic animal ) Trichechus manatus Croatia Pine
+</item 2>
+
+<item 3>
+List of national animals
+Danphe ( national bird ) Lophophorus impejanus Netherlands Lion ( heraldic symbol ) Panthera leo Black - tailed godwit ( national bird ) Limosa limosa New
+Zealand Kiwi Apteryx sp . North Korea Chollima Mythical Norway Lion ( royal national animal ) Panthera leo White - throated dipper ( national bird ) Cinclus
+cinclus Fjord horse ( national horse ) Equus ferus caballus Oman Arabian oryx ( national animal ) Oryx leucoryx Pakistan Markhor ( National animal ) Capra
+falconeri Indus river dolphin ( National aquatic mammal ) Platanista indicus minor minor Chukar ( National bird ) Alectoris chukar Indus crocodile ( National
+reptile ) Crocodylus palustris Shaheen falcon ( Heritage bird ) Falco peregrinus peregrinator Snow leopard ( National predator ) Panthera uncia Panama Harpy
+eagle Harpia harpyja Papua New Guinea Dugong ( national marine mammal ) Dugong dugon Peru Vicuña ( national animal ) Vicugna vicugna Philippines Carabao (
+national animal ) Bubalus bubalis Philippine
+</item 3>
+
+<item 4>
+List of national animals
+bird ) Gallus lafayettii Tanzania Giraffe Giraffa camelopardalis Thailand Elephant Elephas maximus United Arab Emirates Arabian oryx ( national animal ) Oryx
+leucoryx Peregrine falcon ( national bird ) Falco peregrinus United Kingdom Lion ( United Kingdom , England , Scotland , Wales ) Panthera leo Bulldog ( Britain
+as `` British Bulldog '' ) Canis lupus familiaris Red kite ( Wales ) Milvus milvus Unicorn ( Scotland ) Mythical Y Ddraig Goch ( Welsh Dragon Wales ) Mythical
+United States Bald eagle ( national bird ) Haliaeetus leucocephalus American bison ( national mammal ) Bison bison See also Animals portal Lists portal State
+animal List of national birds Animals as heraldic charges Floral emblem National personification References Jump up ^ `` The Fennec Fox : Algeria 's National
+Animal '' . algeria.com . Retrieved 2013 - 03 - 21 . Jump up ^ `` THE NATIONAL BIRD OF ANGOLA '' . BIRDS ANGOLA . Retrieved 12 April 2016 .
+</item 4>
+
+<item 5>
+List of national animals
+List of National Animals - wikipedia List of National Animals Jump to : navigation , search This article is incomplete . Please help to improve it , or discuss
+the issue on the talk page . ( June 2017 ) This is a list of national animals . National animals Country Name of animal Scientific name Pictures Ref . Algeria
+Fennec fox Vulpes zerda Angola Red - crested turaco ( national bird ) Tauraco erythrolophus Anguilla Zenaida dove Zenaida aurita Antigua and Barbuda Fallow deer
+( national animal ) Dama dama Frigate ( national bird ) Fregata magnificens Hawksbill turtle ( national sea creature ) Eretmochelys imbricata Argentina Rufous
+hornero Furnarius rufus Australia Red kangaroo ( national animal ) Macropus rufus Emu ( national bird ) Dromaius novaehollandiae Austria Black eagle Ictinaetus
+malaiensis Azerbaijan Karabakh horse Equus ferus caballus Bangladesh Royal Bengal tiger ( national animal ) Panthera tigris tigris Magpie robin ( national bird
+) Copsychus saularis Ilish ( national fish )
+</item 5>
+
+<item 6>
+List of national animals
+versicolor Carp ( national fish ) Cyprinus carpio Latvia White wagtail ( national bird ) Motacilla alba Two - spotted ladybird ( national insect ) Adalia
+bipunctata Lithuania White stork Ciconia ciconia Macedonia Lion ( in Macedonian heraldry ) Panthera leo Madagascar Zebu ( in Malagasy heraldry ) Bos primigenius
+indicus Ring - tailed lemur ( national animal ) Lemur catta Malaysia Malayan tiger ( national animal ) Panthera tigris jacksoni Malta Pharaoh Hound ( national
+animal ) Canis lupus familiaris ( 1 ) Moldova Aurochs ( national animal ) Bos primigenius Mauritius Dodo Raphus cucullatus Mexico Golden eagle ( national animal
+) Aquila chrysaetos Xoloitzcuintli ( national dog ) Canis lupus familiaris Jaguar ( national mammal ) Panthera onca Grasshopper ( national arthropod )
+Sphenarium purpurascens Vaquita ( national marine mammal ) Phocoena sinus Nepal Cow ( national animal ) Bos taurus indicus Danphe ( national bird ) Lophophorus
+impejanus Netherlands Lion ( heraldic symbol
+</item 6>
+
+<item 7>
+List of national animals
+ISBN 978 - 0 - 313 - 34498 - 5 . Retrieved 2 January 2012 . Jump up ^ `` 12 countries that have cooler national animals than the United States '' .
+globalpost.com . Retrieved 3 October 2014 . Jump up ^ `` National Animals : The Legendary , Extinct and Imaginary - 8 of 9 '' . abcnews.go.com . Retrieved 2014
+- 10 - 03 . ^ Jump up to : `` Ten Unusual National Animals That Rival the Unicorn - 3 of 10 '' . Retrieved 2017 - 08 - 25 . Jump up ^ Shrestha , Nanda R. ( 2002
+) . Nepal and Bangladesh : a global studies handbook . ABC - CLIO . p. 163 . ISBN 978 - 1 - 57607 - 285 - 1 . Retrieved 1 January 2012 . Jump up ^ `` Galliforms
+and Pheasants '' . Archived from the original on 2007 - 01 - 12 .
+</item 7>
+
+<item 8>
+List of national animals
+Archived from the original on 2013 - 07 - 30 . Retrieved 2013 - 08 - 29 . Jump up ^ Minahan , James ( 2009 ) . The Complete Guide to National Symbols and
+Emblems : Volume 2 . Greenwood Press . p. 908 . ISBN 0313345007 . ^ Jump up to : `` South Africa 's national symbols '' . SouthAfrica.info . Brand South Africa
+. Archived from the original on 14 December 2011 . Retrieved 9 February 2012 . ^ Jump up to : `` South Korean Symbols '' . worldatlas . Retrieved 12 April 2016
+. Jump up ^ `` Sri Lanka National Bird '' . Government of Sri Lanka Official Web Portal . Archived from the original on 14 March 2012 . Jump up ^ `` National
+Symbols : National Animal '' . tanzania.go.tz . Tanzania Government Portal . Retrieved 14 January 2015 .
+</item 8>
+
+<item 9>
+List of national animals
+Canadian Heritage . 2016 . Retrieved 1 December 2016 . Jump up ^ `` National Symbols of China '' . 123independenceday.com . Jump up ^ `` China National Symbols
+'' . worldatlast.com. 2015 . Retrieved 2017 - 03 - 28 . Jump up ^ `` China Considers Red - crowned Crane for National Bird '' . www.china.org.cn . Jump up ^ ``
+El cóndor , ave nacional - banrepcultural.org '' . Jump up ^ `` 16 de diciembre : Declaración del yigüirro como ave nacional de Costa Rica '' . Jump up ^ `` El
+Venado Cola Blanca , Símbolo Nacional de la Fauna Silvestre '' . Jump up ^ `` Manatee Now Costa Rica 's New National Symbol '' . QCOSTARICA . Archived from the
+original on 14 September 2014 . Jump up ^ Bousfield , Jonathan ( 2003 ) . Croatia . Rough Guides . p. 72 . ISBN 1843530848 .
+</item 9>
+
+<item 10>
+List of national animals
+Vicugna vicugna Philippines Carabao ( national animal ) Bubalus bubalis Philippine eagle ( national bird ) Pithecophaga jefferyi Poland White - tailed eagle (
+national bird ) Haliaeetus albicilla White stork ( national bird ) Ciconia ciconia European bison ( national animal ) Bison bonasus Qatar Arabian oryx Oryx
+leucoryx Romania Lynx Lynx lynx Russia Eurasian brown bear Ursus arctos arctos Rwanda Leopard Panthera pardus Saint Vincent and the Grenadines Saint Vincent
+amazon Amazona guildingii Serbia Wolf Canis lupus lupus White eagle Mythical Lynx Lynx lynx Somalia Leopard ( national animal ) Panthera pardus South Africa
+Springbok ( national animal ) Antidorcas marsupialis Blue crane ( national bird ) Anthropoides paradiseus Galjoen ( national fish ) Dichistius capensis South
+Korea Siberian tiger Panthera tigris altaica Korean magpie ( national bird ) Pica ( pica ) sericea Sri Lanka Sri Lankan junglefowl ( national bird ) Gallus
+lafayettii Tanzania Giraffe Giraffa camelopardalis Thailand Elephant
+</item 10>
+=== END ITEM id=944295b4be741e15 ===

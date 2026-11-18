@@ -1,0 +1,27 @@
+[
+  {
+    "id": "74fe66db706ea5e9",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "If a significant majority of bettors are placing their money on one team to cover the spread, the top sports betting apps will adjust the point spread"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Bookmakers adjust the line to balance the action and protect themselves from potential losses."}]}
+    ]
+  },
+  {
+    "id": "3c987eb48e23dfca",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Alameda’s former CEO, Caroline Ellison"}]},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads"}]}
+    ]
+  }
+]

@@ -1,0 +1,73 @@
+[
+  {
+    "id": "b4739c54feafad95",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "she joked. “But nah, it was awesome.”"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "On Saturday, the competition also said goodbye to a range of players including Western Bulldogs forward Richelle Cranston"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "On Saturday, the competition also said goodbye to a range of players including Western Bulldogs forward Richelle Cranston"}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "Richelle Cranston, who has battled stage five chronic kidney disease while playing this season"}]},
+      {"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "On Saturday, the competition also said goodbye to a range of players including Western Bulldogs forward Richelle Cranston, who has battled stage five chronic kidney disease while playing this season, and Hawthorn’s Akec Makur Chuot"}]},
+      {"fact": "0.5", "status": "stated", "evidence": [{"item": 3, "quote": "Hawthorn’s Akec Makur Chuot, who played 40 games for three clubs."}]},
+      {"fact": "0.6", "status": "stated", "evidence": [{"item": 3, "quote": "Hawthorn’s Akec Makur Chuot, who played 40 games for three clubs."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The Dogs are Cranston’s third club after starting at Melbourne and having a stint with Geelong before heading to the Bulldogs last year."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "The Dogs are Cranston’s third club after starting at Melbourne and having a stint with Geelong before heading to the Bulldogs last year."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "The Dogs are Cranston’s third club after starting at Melbourne and having a stint with Geelong before heading to the Bulldogs last year."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "The Dogs are Cranston’s third club after starting at Melbourne and having a stint with Geelong before heading to the Bulldogs last year."}]}
+    ]
+  },
+  {
+    "id": "4490926d97833cb3",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "0.4", "status": "missing", "evidence": []},
+      {"fact": "0.5", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."}]},
+      {"fact": "1.4", "status": "stated", "evidence": [{"item": 5, "quote": "LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."}]},
+      {"fact": "1.5", "status": "stated", "evidence": [{"item": 5, "quote": "LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."}]}
+    ]
+  },
+  {
+    "id": "30c008561eb5515f",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "For all their own flaws Bayern are basically a good version of whatever it is United are attempting to piece together."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "For all their own flaws Bayern are basically a good version of whatever it is United are attempting to piece together."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]}
+    ]
+  },
+  {
+    "id": "5367312b02651e9d",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "28350b9b6f95fc9e",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "1.4", "status": "stated", "evidence": [{"item": 4, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "1.5", "status": "stated", "evidence": [{"item": 4, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+    ]
+  }
+]

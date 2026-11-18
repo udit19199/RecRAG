@@ -1,0 +1,574 @@
+{
+  "created_at": "20261107T160552Z",
+  "prompt_version": "2026-10-30.2",
+  "model": "gpt-6-luna",
+  "bootstrap_samples": 1000,
+  "seed": 0,
+  "runs": [
+    "runs/rag/20261101T222337340282Z",
+    "runs/raptor/20261101T222337384067Z",
+    "runs/hipporag/20261101T222337385884Z",
+    "runs/heldout400/judge_support/merged/r2-graphrag-s1"
+  ],
+  "definitions": [
+    "Primary, answer support: the judge sees the question, gold answer, gold sentences as one reference route, and the items. It quotes a chain to the gold answer by the reference route or any route the items state, says whether the chain is complete, and whether the answer is stated, only mentioned, or missing.",
+    "Support score: 3 complete verified chain and answer stated (yes/no answers: complete chain); 2 answer stated; 1 answer mentioned or some verified chain quote; 0 otherwise. Support score % = sum / (3 x questions) x 100; full support rate = share scoring 3.",
+    "Secondary, gold-sentence recall, as follows.",
+    "Gold sentences are split into claims once per question; every method is judged against the same frozen claims.",
+    "Each claim is stated, missing, or contradicted; stated and contradicted need a quote that appears verbatim (after normalization) in the cited item, otherwise the claim counts as missing.",
+    "Gold sentence score: 3 all claims stated; 2 main claim stated; 1 people or things mentioned or a minor claim stated; 0 otherwise. Any verified contradiction scores 0.",
+    "Question score: the lowest gold sentence score.",
+    "Retrieval score: sum of question scores / (3 x questions) x 100.",
+    "Full retrieval rate: share of questions scoring 3, x 100.",
+    "Budget view: ranked methods cut to Agentic GraphRAG's per-question token volume (as in retrieval_quality); quotes outside the cut do not count.",
+    "Judge sees no method name, no question, and items in a seeded shuffle.",
+    "Intervals are paired percentile bootstraps over the same questions."
+  ],
+  "judge_cost_usd": 5.104883685,
+  "datasets": [
+    {
+      "dataset": "multihop_rag",
+      "questions": 100,
+      "scored_questions": 100,
+      "failed_record_ids": [],
+      "methods": [
+        {
+          "method": "rag",
+          "run": "runs/rag/20261101T222337340282Z",
+          "questions": 100,
+          "support_score": {
+            "mean": 67.0,
+            "low": 63.0,
+            "high": 71.33333333333334
+          },
+          "full_support_rate": {
+            "mean": 22.0,
+            "low": 14.000000000000002,
+            "high": 30.0
+          },
+          "budget_support_score": {
+            "mean": 64.66666666666666,
+            "low": 60.00000000000001,
+            "high": 69.00000000000001
+          },
+          "budget_full_support_rate": {
+            "mean": 20.0,
+            "low": 12.0,
+            "high": 28.000000000000004
+          },
+          "support_counts": [
+            0,
+            21,
+            57,
+            22
+          ],
+          "support_unverified_quotes": 4,
+          "retrieval_score": {
+            "mean": 35.666666666666664,
+            "low": 31.324999999999996,
+            "high": 40.333333333333336
+          },
+          "full_retrieval_rate": {
+            "mean": 8.0,
+            "low": 3.0,
+            "high": 13.024999999999979
+          },
+          "budget_retrieval_score": {
+            "mean": 34.0,
+            "low": 29.333333333333332,
+            "high": 38.675
+          },
+          "budget_full_retrieval_rate": {
+            "mean": 8.0,
+            "low": 3.0,
+            "high": 13.024999999999979
+          },
+          "score_counts": [
+            12,
+            77,
+            3,
+            8
+          ],
+          "unverified_quotes": 4,
+          "total_quotes": 429
+        },
+        {
+          "method": "hipporag",
+          "run": "runs/hipporag/20261101T222337385884Z",
+          "questions": 100,
+          "support_score": {
+            "mean": 67.0,
+            "low": 62.33333333333334,
+            "high": 71.66666666666667
+          },
+          "full_support_rate": {
+            "mean": 24.0,
+            "low": 16.0,
+            "high": 32.0
+          },
+          "budget_support_score": {
+            "mean": 64.33333333333333,
+            "low": 59.66666666666667,
+            "high": 69.00000000000001
+          },
+          "budget_full_support_rate": {
+            "mean": 20.0,
+            "low": 12.975000000000003,
+            "high": 28.000000000000004
+          },
+          "support_counts": [
+            1,
+            21,
+            54,
+            24
+          ],
+          "support_unverified_quotes": 3,
+          "retrieval_score": {
+            "mean": 34.333333333333336,
+            "low": 30.0,
+            "high": 38.66666666666667
+          },
+          "full_retrieval_rate": {
+            "mean": 7.000000000000001,
+            "low": 2.0,
+            "high": 12.0
+          },
+          "budget_retrieval_score": {
+            "mean": 30.333333333333336,
+            "low": 25.666666666666664,
+            "high": 35.33333333333334
+          },
+          "budget_full_retrieval_rate": {
+            "mean": 6.0,
+            "low": 2.0,
+            "high": 11.0
+          },
+          "score_counts": [
+            12,
+            80,
+            1,
+            7
+          ],
+          "unverified_quotes": 1,
+          "total_quotes": 356
+        },
+        {
+          "method": "raptor",
+          "run": "runs/raptor/20261101T222337384067Z",
+          "questions": 100,
+          "support_score": {
+            "mean": 68.33333333333336,
+            "low": 64.66666666666666,
+            "high": 72.34166666666668
+          },
+          "full_support_rate": {
+            "mean": 22.0,
+            "low": 15.0,
+            "high": 30.0
+          },
+          "budget_support_score": {
+            "mean": 67.33333333333336,
+            "low": 63.65833333333333,
+            "high": 71.66666666666669
+          },
+          "budget_full_support_rate": {
+            "mean": 21.0,
+            "low": 13.0,
+            "high": 28.999999999999996
+          },
+          "support_counts": [
+            0,
+            17,
+            61,
+            22
+          ],
+          "support_unverified_quotes": 2,
+          "retrieval_score": {
+            "mean": 36.66666666666667,
+            "low": 33.0,
+            "high": 40.33333333333334
+          },
+          "full_retrieval_rate": {
+            "mean": 7.000000000000001,
+            "low": 3.0,
+            "high": 12.0
+          },
+          "budget_retrieval_score": {
+            "mean": 35.00000000000001,
+            "low": 30.999999999999993,
+            "high": 39.00000000000001
+          },
+          "budget_full_retrieval_rate": {
+            "mean": 7.000000000000001,
+            "low": 3.0,
+            "high": 12.0
+          },
+          "score_counts": [
+            7,
+            83,
+            3,
+            7
+          ],
+          "unverified_quotes": 2,
+          "total_quotes": 424
+        },
+        {
+          "method": "graphrag",
+          "run": "runs/heldout400/judge_support/merged/r2-graphrag-s1",
+          "questions": 100,
+          "support_score": {
+            "mean": 69.00000000000001,
+            "low": 64.66666666666666,
+            "high": 73.34166666666668
+          },
+          "full_support_rate": {
+            "mean": 25.0,
+            "low": 17.0,
+            "high": 34.0
+          },
+          "budget_support_score": {
+            "mean": 69.00000000000001,
+            "low": 64.66666666666666,
+            "high": 73.34166666666668
+          },
+          "budget_full_support_rate": {
+            "mean": 25.0,
+            "low": 17.0,
+            "high": 34.0
+          },
+          "support_counts": [
+            0,
+            18,
+            57,
+            25
+          ],
+          "support_unverified_quotes": 3,
+          "retrieval_score": {
+            "mean": 36.333333333333336,
+            "low": 32.666666666666664,
+            "high": 40.33333333333334
+          },
+          "full_retrieval_rate": {
+            "mean": 7.000000000000001,
+            "low": 2.0,
+            "high": 12.0
+          },
+          "budget_retrieval_score": {
+            "mean": 36.333333333333336,
+            "low": 32.666666666666664,
+            "high": 40.33333333333334
+          },
+          "budget_full_retrieval_rate": {
+            "mean": 7.000000000000001,
+            "low": 2.0,
+            "high": 12.0
+          },
+          "score_counts": [
+            7,
+            84,
+            2,
+            7
+          ],
+          "unverified_quotes": 1,
+          "total_quotes": 405
+        }
+      ],
+      "differences": [
+        {
+          "metric": "support_score",
+          "method": "rag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": -2.0,
+            "low": -6.333333333333332,
+            "high": 2.333333333333333
+          }
+        },
+        {
+          "metric": "full_support_rate",
+          "method": "rag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": -3.0,
+            "low": -12.0,
+            "high": 6.0
+          }
+        },
+        {
+          "metric": "budget_support_score",
+          "method": "rag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": -4.333333333333334,
+            "low": -9.0,
+            "high": 0.3333333333333335
+          }
+        },
+        {
+          "metric": "budget_full_support_rate",
+          "method": "rag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": -5.0,
+            "low": -14.000000000000002,
+            "high": 4.0
+          }
+        },
+        {
+          "metric": "retrieval_score",
+          "method": "rag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": -0.6666666666666665,
+            "low": -5.0,
+            "high": 3.6666666666666674
+          }
+        },
+        {
+          "metric": "full_retrieval_rate",
+          "method": "rag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": 1.0,
+            "low": -4.0,
+            "high": 6.0
+          }
+        },
+        {
+          "metric": "budget_retrieval_score",
+          "method": "rag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": -2.333333333333333,
+            "low": -6.675000000000001,
+            "high": 2.333333333333334
+          }
+        },
+        {
+          "metric": "budget_full_retrieval_rate",
+          "method": "rag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": 1.0,
+            "low": -4.0,
+            "high": 6.0
+          }
+        },
+        {
+          "metric": "support_score",
+          "method": "hipporag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": -1.9999999999999998,
+            "low": -6.666666666666667,
+            "high": 2.9999999999999996
+          }
+        },
+        {
+          "metric": "full_support_rate",
+          "method": "hipporag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": -1.0,
+            "low": -10.0,
+            "high": 9.0
+          }
+        },
+        {
+          "metric": "budget_support_score",
+          "method": "hipporag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": -4.666666666666667,
+            "low": -9.675000000000002,
+            "high": 0.6666666666666665
+          }
+        },
+        {
+          "metric": "budget_full_support_rate",
+          "method": "hipporag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": -5.0,
+            "low": -14.000000000000002,
+            "high": 5.0
+          }
+        },
+        {
+          "metric": "retrieval_score",
+          "method": "hipporag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": -2.0,
+            "low": -6.341666666666666,
+            "high": 2.6666666666666665
+          }
+        },
+        {
+          "metric": "full_retrieval_rate",
+          "method": "hipporag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": 0.0,
+            "low": -6.0,
+            "high": 6.0
+          }
+        },
+        {
+          "metric": "budget_retrieval_score",
+          "method": "hipporag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": -6.0,
+            "low": -10.666666666666668,
+            "high": -1.6666666666666652
+          }
+        },
+        {
+          "metric": "budget_full_retrieval_rate",
+          "method": "hipporag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": -1.0,
+            "low": -6.0,
+            "high": 4.0
+          }
+        },
+        {
+          "metric": "support_score",
+          "method": "raptor",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": -0.6666666666666667,
+            "low": -4.675,
+            "high": 3.6666666666666665
+          }
+        },
+        {
+          "metric": "full_support_rate",
+          "method": "raptor",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": -3.0,
+            "low": -11.0,
+            "high": 6.0
+          }
+        },
+        {
+          "metric": "budget_support_score",
+          "method": "raptor",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": -1.6666666666666663,
+            "low": -5.666666666666667,
+            "high": 2.6666666666666665
+          }
+        },
+        {
+          "metric": "budget_full_support_rate",
+          "method": "raptor",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": -4.0,
+            "low": -12.0,
+            "high": 4.0
+          }
+        },
+        {
+          "metric": "retrieval_score",
+          "method": "raptor",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": 0.3333333333333332,
+            "low": -4.0,
+            "high": 4.666666666666667
+          }
+        },
+        {
+          "metric": "full_retrieval_rate",
+          "method": "raptor",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": 0.0,
+            "low": -5.0,
+            "high": 5.0
+          }
+        },
+        {
+          "metric": "budget_retrieval_score",
+          "method": "raptor",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": -1.3333333333333337,
+            "low": -5.666666666666667,
+            "high": 3.0000000000000004
+          }
+        },
+        {
+          "metric": "budget_full_retrieval_rate",
+          "method": "raptor",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": 0.0,
+            "low": -5.0,
+            "high": 5.0
+          }
+        }
+      ],
+      "agreement": [
+        {
+          "method": "rag",
+          "gold_sentences": 331,
+          "offset_full_judge_3": 124,
+          "offset_full_judge_below_3": 3,
+          "offset_none_judge_0_or_1": 188,
+          "offset_none_judge_2_or_3": 16,
+          "offset_partial": 0,
+          "gold_complete_questions": 8,
+          "gold_complete_support_3": 8,
+          "gold_incomplete_questions": 92,
+          "gold_incomplete_support_3": 14
+        },
+        {
+          "method": "hipporag",
+          "gold_sentences": 331,
+          "offset_full_judge_3": 104,
+          "offset_full_judge_below_3": 2,
+          "offset_none_judge_0_or_1": 215,
+          "offset_none_judge_2_or_3": 10,
+          "offset_partial": 0,
+          "gold_complete_questions": 7,
+          "gold_complete_support_3": 7,
+          "gold_incomplete_questions": 93,
+          "gold_incomplete_support_3": 17
+        },
+        {
+          "method": "raptor",
+          "gold_sentences": 91,
+          "offset_full_judge_3": 37,
+          "offset_full_judge_below_3": 1,
+          "offset_none_judge_0_or_1": 51,
+          "offset_none_judge_2_or_3": 2,
+          "offset_partial": 0,
+          "gold_complete_questions": 7,
+          "gold_complete_support_3": 7,
+          "gold_incomplete_questions": 93,
+          "gold_incomplete_support_3": 15
+        },
+        {
+          "method": "graphrag",
+          "gold_sentences": 331,
+          "offset_full_judge_3": 118,
+          "offset_full_judge_below_3": 2,
+          "offset_none_judge_0_or_1": 196,
+          "offset_none_judge_2_or_3": 15,
+          "offset_partial": 0,
+          "gold_complete_questions": 7,
+          "gold_complete_support_3": 7,
+          "gold_incomplete_questions": 93,
+          "gold_incomplete_support_3": 18
+        }
+      ]
+    }
+  ]
+}

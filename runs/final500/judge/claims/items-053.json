@@ -1,0 +1,76 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "multihop-rag-156",
+   "sentences": [
+    "9:47 p.m. — The Bears answer right back and sack Dobbs, with Sweat and Brisker in there to take him down.",
+    "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030), while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)."
+   ]
+  },
+  {
+   "id": "5a8534305542997b5ce3ffc4",
+   "sentences": [
+    "Mosè in Egitto (\"Moses in Egypt)\" (] ) is a three-act opera written by Gioachino Rossini to an Italian libretto by Andrea Leone Tottola, which was based on a 1760 play by Francesco Ringhieri, \"L'Osiride\".",
+    "Lucrezia Borgia is a melodramatic opera in a prologue and two acts by Gaetano Donizetti."
+   ]
+  },
+  {
+   "id": "-3821358994539922203",
+   "sentences": [
+    "In episode 3 , `` Hugs Can Be Deceiving '' , Suzanne 's backstory is revealed via a flashback . She was adopted by white parents and raised in the suburbs , but her mental instability alienated her classmates and their parents alike . Her adoptive mother pushed her to excel at everything she did to prove that she was as good as everyone else ; ironically , the constant pressure only made Suzanne 's psychological problems worse . In the same episode , it is revealed that Suzanne had run outside and knocked Chapman unconscious after Chapman had beaten Tiffany `` Pennsatucky '' Doggett ( Taryn Manning ) unconscious at the end of season 1 ."
+   ]
+  },
+  {
+   "id": "2620904320274887581",
+   "sentences": [
+    "Deion Sanders Sanders in 2011 No. 21 , 37 Position : Cornerback Date of birth : ( 1967 - 08 - 09 ) August 9 , 1967 ( age 50 ) Place of birth : Fort Myers , Florida Height : 6 ft 1 in ( 1.85 m ) Weight : 198 lb ( 90 kg ) Career information High school : North Fort Myers ( FL ) College : Florida State NFL Draft : 1989 / Round : 1 / Pick : 5 Career history Atlanta Falcons ( 1989 -- 1993 ) San Francisco 49ers ( 1994 ) Dallas Cowboys ( 1995 -- 1999 ) Washington Redskins ( 2000 ) Baltimore Ravens ( 2004 -- 2005 ) Career highlights and awards 2 × Super Bowl champion ( XXIX , XXX ) 8 × Pro Bowl ( 1991 -- 1994 , 1996 -- 1999 ) 8 × First - team All - Pro ( 1991 -- 1994 , 1996 -- 1999 ) NFL Defensive Player of the Year ( 1994 ) NFL 1990s All - Decade Team Atlanta Falcons Ring of Honor Jim Thorpe Award ( 1988 ) 2 × Unanimous All - American ( 1987 , 1988 ) Florida State Seminoles No. 2 retired Career NFL statistics Interceptions : 53 Defensive touchdowns : 10 Return touchdowns : 9 Receptions : 60 Receiving yards : 784 Receiving touchdowns : 3 Player stats at NFL.com Player stats at PFR Pro Football Hall of Fame College Football Hall of Fame"
+   ]
+  },
+  {
+   "id": "8265744380270943125",
+   "sentences": [
+    "The ability to compare ammunition is a direct result of the invention of rifling around the turn of the 16th century . By forcing the bullet to spin as it travels down the barrel of the weapon the bullet 's accuracy greatly increases . At the same time , the rifling leaves marks on the bullet that are indicative of that particular barrel . Prior to mass production of firearms , each barrel and bullet mold was hand made by gunsmiths making them unique . The first successful documented case of forensic firearm examination occurred in 1835 when a member of the Bow Street Runners in London matched a recovered bullet from a murder victim to a specific mold in a suspect 's home confirming that he made the bullet . Further evidence that the bullet maker was the perpetrator was found in his home and he was convicted . As manufacturing and automation replaced hand tools , the ability to compare bullets became impossible due to the standardization of molds within a specific company . However , experts in the field postulated that there were microscopic differences on each barrel left during the manufacturing process . These differences were a result of wear on the machines and since each new weapon caused a tiny amount of wear , each barrel would be slightly different from every other barrel produced by that company . Also , each bullet fired from a specific barrel would be printed with the same marks , allowing investigators to identify the weapon that fired a specific bullet ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1385",
+   "sentences": [
+    "Another user said that no one can carry out such a major attack against Israel without intelligence support.",
+    "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion."
+   ]
+  },
+  {
+   "id": "multihop-rag-319",
+   "sentences": [
+    "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.",
+    "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-1937",
+   "sentences": [
+    "This whole line of argument is called “market definition.” If the court decides the relevant market is phones and app stores, not specifically Android ones, then Google’s on the road to victory.",
+    "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "5a7a7dc15542994f819ef1f2",
+   "sentences": [
+    "Andy Warhol ( ; born Andrew Warhola; August 6, 1928 – February 22, 1987) was an American artist, director and producer who was a leading figure in the visual art movement known as pop art.",
+    "Alexander Butler was a British film director who made over sixty features and short films during the 1910s and 1920s including many for G.B. Samuelson's production company."
+   ]
+  },
+  {
+   "id": "5a8466a75542993344746108",
+   "sentences": [
+    " It is the third of Gluck's so-called reform operas for Vienna, following \"Alceste\" and \"Orfeo ed Euridice\", and the least often performed of the three.",
+    "Orfeo ed Euridice (French version: Orphée et Eurydice ; English: \"Orpheus and Eurydice\") is an opera composed by Christoph Willibald Gluck based on the myth of Orpheus, set to a libretto by Ranieri de' Calzabigi.",
+    " The piece was first performed at the Burgtheater in Vienna on 5 October 1762 in the presence of Empress Maria Theresa."
+   ]
+  }
+ ]
+}

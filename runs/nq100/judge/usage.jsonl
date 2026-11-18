@@ -1,0 +1,2 @@
+{"stage":"answer_judge","file":"runs/nq100/judge/items-answers-000.json","agent":"a123859f28933ccf9","model":"haiku","subagent_tokens":72879,"seconds":73.2}
+{"stage":"answer_judge","file":"runs/nq100/judge/items-answers-001.json","agent":"a221778fbda3510a5","model":"haiku","subagent_tokens":67321,"seconds":93.4}

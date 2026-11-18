@@ -1,0 +1,69 @@
+[
+  {"id": "731a7ddda6fa12df", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "She was named co-CEO of Alameda with Sam Trabucco in 2021, while she and Bankman-Fried were broken up, and CEO in 2022."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from the inherent risk of the crypto markets."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from the inherent risk of the crypto markets."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from the inherent risk of the crypto markets."}]}
+  ]},
+  {"id": "f1fd3c37c75acc84", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "481174fadc233abf", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats, but Google will counter this as"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats, but Google will counter this as"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 9, "quote": "Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents."}]}
+  ]},
+  {"id": "52e92920c0a4b6c2", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks"}]}
+  ]},
+  {"id": "c83ffa490d1a6519", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Love Story This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Love Story This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Love Story This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "Love Story This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "Taylor Swift reveals secret start to her relationship with Travis Kelce"}, {"item": 2, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]}
+  ]},
+  {"id": "a542f7d2fb864570", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "OpenAI COO Brad Lightcap said yesterday’s announcement “took [the management team] by surprise” and that management had had “multiple conversations with the board to try to better understand the reasons and process behind their decision.”"}]},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]}
+]

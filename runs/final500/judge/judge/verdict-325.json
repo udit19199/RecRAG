@@ -1,0 +1,73 @@
+[
+  {"id": "4a47056b00c41fe3", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "0.5", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "He asked his boss if things were OK. He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "He asked his boss if things were OK. He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "He asked his boss if things were OK. He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "He asked his boss if things were OK. He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]}
+  ]},
+  {"id": "7e9fb2b22d683fe1", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs."}]},
+    {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 9, "quote": "Jadeja has been bowling some beautiful spells in this tournament for India, especially in the middle overs. He picked up 16 wickets, conceding just 398 at an economy rate of 4.25 in 10 matches."}]},
+    {"fact": "1.1", "status": "contradicted", "evidence": [{"item": 9, "quote": "Jadeja has been bowling some beautiful spells in this tournament for India, especially in the middle overs. He picked up 16 wickets, conceding just 398 at an economy rate of 4.25 in 10 matches."}]},
+    {"fact": "1.2", "status": "contradicted", "evidence": [{"item": 9, "quote": "Jadeja has been bowling some beautiful spells in this tournament for India, especially in the middle overs. He picked up 16 wickets, conceding just 398 at an economy rate of 4.25 in 10 matches."}]}
+  ]},
+  {"id": "78236b453177d269", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+  ]},
+  {"id": "a3413c2149612b87", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+  ]},
+  {"id": "b5462cdbc33e3057", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Love Story This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Love Story This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Love Story This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Love Story This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "She specified that she isn't trying to hide her relationship from the public eye."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "She specified that she isn't trying to hide her relationship from the public eye."}]}
+  ]},
+  {"id": "7e4cdc8abf932378", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 9, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 3, "quote": "His lawyer portrayed him as a good-faith startup founder whose businesses failed amid crypto-market turmoil, blaming Alameda CEO Caroline Ellison’s risk management."}]},
+    {"fact": "2.5", "status": "missing", "evidence": []},
+    {"fact": "2.6", "status": "missing", "evidence": []}
+  ]}
+]

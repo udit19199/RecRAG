@@ -1,0 +1,147 @@
+[
+ {
+  "id": "9742470822925c80",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.0",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "42fdb528a71033c3",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Jada then praised her children for how they’ve helped her grow"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "My children, they’re little gurus."
+     }
+    ]
+   },
+   {
+    "fact": "2.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "She praised her and Will’s two children - Jaden, 25, and Willow, 22"
+     }
+    ]
+   },
+   {
+    "fact": "2.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "She praised her and Will’s two children - Jaden, 25, and Willow, 22 - for being her “little gurus” throughout this time, noting that they’ve taught her “a deep sense of self-acceptance”."
+     }
+    ]
+   },
+   {
+    "fact": "2.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "She praised her and Will’s two children - Jaden, 25, and Willow, 22 - for being her “little gurus” throughout this time, noting that they’ve taught her “a deep sense of self-acceptance”."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "0fb727515c9242bc",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.2",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ }
+]

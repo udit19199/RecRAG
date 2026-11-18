@@ -1,0 +1,58 @@
+[
+{"id": "9490359e130a8892", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "At the time, the music video for the song – which featured a woman with blonde hair - sparked rumours that he and Spears broke up because she allegedly cheated on him."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "At the time, the music video for the song – which featured a woman with blonde hair - sparked rumours that he and Spears broke up because she allegedly cheated on him."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "At the time, the music video for the song – which featured a woman with blonde hair - sparked rumours that he and Spears broke up because she allegedly cheated on him."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Also, another thing that hints towards their breakup is Danis’s first press conference for the Logan Paul fight."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Also, another thing that hints towards their breakup is Danis’s first press conference for the Logan Paul fight."}]}
+]},
+{"id": "6fd2814352b7ab98", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "55f9c3c4d13b22c4", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+]},
+{"id": "35c114b212c0583b", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+]},
+{"id": "30e2690dffc3550c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago."}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "59e3df260f828cef", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep, but not all of them are effective and none are foolproof."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep, but not all of them are effective and none are foolproof."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep, but not all of them are effective and none are foolproof."}]}
+]}
+]

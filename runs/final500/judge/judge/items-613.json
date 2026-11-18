@@ -1,0 +1,479 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "09149cd6d147a3b3",
+   "gold": [
+    {
+     "sentence": "Homer Jay Simpson is a fictional character and the main protagonist of the American animated television series \"The Simpsons\" as the patriarch of the eponymous family.",
+     "facts": {
+      "0.0": "Homer Jay Simpson is a fictional character.",
+      "0.1": "Homer Jay Simpson is the main protagonist of the American animated television series 'The Simpsons'.",
+      "0.2": "Homer Jay Simpson is the patriarch of the Simpson family, the family the show is named after."
+     }
+    },
+    {
+     "sentence": " He is voiced by Dan Castellaneta and first appeared on television, along with the rest of his family, in \"The Tracey Ullman Show\" short \"Good Night\" on April 19, 1987.",
+     "facts": {
+      "1.0": "Homer Simpson is voiced by Dan Castellaneta.",
+      "1.1": "Homer Simpson first appeared on television along with the rest of his family.",
+      "1.2": "Homer Simpson's first television appearance was in the short 'Good Night' from 'The Tracey Ullman Show'.",
+      "1.3": "Homer Simpson's first television appearance was on April 19, 1987."
+     }
+    },
+    {
+     "sentence": "Daniel Louis Castellaneta ( ; born October 29, 1957) is an American actor, voice actor, comedian and screenwriter.",
+     "facts": {
+      "2.0": "Daniel Louis Castellaneta was born October 29, 1957.",
+      "2.1": "Daniel Louis Castellaneta is an American actor.",
+      "2.2": "Daniel Louis Castellaneta is a voice actor.",
+      "2.3": "Daniel Louis Castellaneta is a comedian.",
+      "2.4": "Daniel Louis Castellaneta is a screenwriter."
+     }
+    }
+   ],
+   "items": [
+    "Homer Simpson, This Is Your Wife\n\"Homer Simpson, This Is Your Wife\" is the fifteenth episode of the seventeenth season of the American animated television sitcom \"The Simpsons\".\n\n It originally aired on the Fox network in the United States on March 26, 2006, and was watched by around ten million people during that broadcast.\n\n In the episode, Homer signs the Simpson family up for a reality show in which the mothers of two families switch places.\n\n Marge gets to live with a friendly man named Charles and his perfect son, while Homer, Bart, and Lisa must spend time with Charles' strict wife Verity.",
+    "Grampa Simpson\nAbraham Jedediah Simpson II, often known as Grampa, is a fictional character in the animated television series \"The Simpsons\".\n\n He made his first appearance in the episode entitled \"Grampa and the Kids\", a Simpsons short on \"The Tracey Ullman Show\".\n\n Voiced by Dan Castellaneta, he is the father of Homer Simpson and the grandfather of Bart, Lisa and Maggie Simpson.\n\n In the 1000th issue of \"Entertainment Weekly\", Grampa was selected as the Grandpa for \"The Perfect TV Family\".",
+    "Mona Simpson (The Simpsons)\nMona Penelope Simpson (née Olsen) is a recurring fictional character in the animated television series \"The Simpsons\".\n\n She has been voiced by several actresses, including Maggie Roswell, Tress MacNeille, Pamela Hayden, and most prominently, Glenn Close.\n\n Glenn Close's performances as Mona have been well received by critics and she was named one of the top 25 guest stars on the show by IGN.",
+    "Dan Castellaneta\nDaniel Louis Castellaneta ( ; born October 29, 1957) is an American actor, voice actor, comedian and screenwriter.\n\n Noted for his long-running role as Homer Simpson on the animated television series \"The Simpsons\", he also voices many other characters for the show, including Abraham \"Grampa\" Simpson, Barney Gumble, Krusty the Clown, Sideshow Mel, Groundskeeper Willie, Mayor Quimby and Hans Moleman.",
+    "Moe Szyslak\nMorris \"Moe\" Szyslak is a fictional character from the American animated television series \"The Simpsons\".\n\n He is voiced by Hank Azaria and first appeared in the series premiere episode \"Simpsons Roasting on an Open Fire\".\n\n Moe is the proprietor and bartender of Moe's Tavern, a Springfield bar frequented by Homer Simpson, Barney Gumble, Carl Carlson, Lenny Leonard, Sam, Larry, and others.",
+    "Ned Flanders\nNedward \"Ned\" Flanders, Jr. is a recurring fictional character in the animated television series \"The Simpsons\".\n\n He is voiced by Harry Shearer, and first appeared in the series premiere episode \"Simpsons Roasting on an Open Fire\".\n\n He is the good-natured, cheery next-door neighbor to the Simpson family and is generally loathed by Homer Simpson.\n\n A devout Evangelical Christian with an annoyingly perfect family, he is among the friendliest and most compassionate of Springfield's residents and is generally considered a pillar of the Springfield community.",
+    "Homer to the Max\n\"Homer to the Max\" is the thirteenth episode of \"The Simpsons\"<nowiki>'</nowiki> tenth season.\n\n It originally aired on the Fox network in the United States on February 7, 1999.\n\n In the episode, Homer discovers that a new television show, \"Police Cops\", has a hero also named Homer Simpson.\n\n He is delighted with the positive attention he receives because of his name, but when the television character is rewritten from a hero to a bumbling idiot, he is mocked and taunted, so he changes his name to \"Max Power\" to rid himself of the negative attention.\n\n Max gains new friends, and is forced into a protest to prevent a forest from being knocked down.\n\n In the end, he changes his name back to Homer Simpson.",
+    "Homer Simpson\nHomer Jay Simpson is a fictional character and the main protagonist of the American animated television series \"The Simpsons\" as the patriarch of the eponymous family.\n\n He is voiced by Dan Castellaneta and first appeared on television, along with the rest of his family, in \"The Tracey Ullman Show\" short \"Good Night\" on April 19, 1987.\n\n Homer was created and designed by cartoonist Matt Groening while he was waiting in the lobby of James L. Brooks' office.\n\n Groening had been called to pitch a series of shorts based on his comic strip \"Life in Hell\" but instead decided to create a new set of characters.\n\n He named the character after his father, Homer Groening.\n\n After appearing for three seasons on \"The Tracey Ullman Show\", the Simpson family got their own series on Fox that debuted December 17, 1989.",
+    "The Itchy &amp; Scratchy Show\nThe Itchy & Scratchy Show (often shortened as Itchy & Scratchy) is a running gag and fictional animated television series featured in the American animated television series \"The Simpsons\".\n\n It usually appears as a part of \"The Krusty the Clown Show\", watched regularly by Bart Simpson and Lisa Simpson.\n\n Itself an animated cartoon, \"The Itchy & Scratchy Show\" depicts a sadistic anthropomorphic blue mouse, Itchy (voiced by Dan Castellaneta), who repeatedly maims and kills an anthropomorphic, hapless threadbare black cat, Scratchy (voiced by Harry Shearer).\n\n The cartoon first appeared in \"The Tracey Ullman Show\" short \"The Bart Simpson Show\", which originally aired November 20, 1988.\n\n The cartoon's first appearance in \"The Simpsons\" was in the 1990 episode \"There's No Disgrace Like Home\".\n\n Typically presented as 15-to-60-second-long cartoons, the show is filled with gratuitous violence.\n\n \"The Simpsons\" also occasionally features characters who are involved with the production of \"The Itchy & Scratchy Show\", including Roger Meyers Jr.",
+    "Citizen Joe\n\"Citizen Joe\" is the fifteenth episode for season eight of the Canadian-American military science fiction television series \"Stargate SG-1\".\n\n The episode features known voice actor Dan Castellaneta, who voices Homer Simpson in \"The Simpsons\".\n\n The episode was written by executive producer Robert C. Cooper, the episode was directed by Andy Mikita.\n\n The episode received a below average Nielsen household rating and received no syndication rating to compare.\n\n The episode got strong reviews from major media publishers worldwide."
+   ]
+  },
+  {
+   "id": "f781d25def68b971",
+   "gold": [
+    {
+     "sentence": "\"Collateral Damage\" is the eleventh episode of the third season of the crime-thriller television series \"Millennium\".",
+     "facts": {
+      "0.0": "'Collateral Damage' is the eleventh episode of the third season of the crime-thriller television series 'Millennium'.",
+      "0.1": "'Millennium' is a crime-thriller television series.",
+      "0.2": "'Collateral Damage' is in the third season of 'Millennium'."
+     }
+    },
+    {
+     "sentence": " \"Collateral Damage\" featured guest appearances by O'Quinn, Jacinda Barrett, James Marsters, and radio host Art Bell as himself.",
+     "facts": {
+      "1.0": "'Collateral Damage' featured a guest appearance by O'Quinn.",
+      "1.1": "'Collateral Damage' featured a guest appearance by Jacinda Barrett.",
+      "1.2": "'Collateral Damage' featured a guest appearance by James Marsters.",
+      "1.3": "'Collateral Damage' featured a guest appearance by radio host Art Bell.",
+      "1.4": "Art Bell appeared as himself in 'Collateral Damage'."
+     }
+    },
+    {
+     "sentence": " Bell's radio show \"Coast to Coast AM\" was among Perry's inspirations for the script.",
+     "facts": {
+      "2.0": "Art Bell's radio show 'Coast to Coast AM' was among Perry's inspirations for the script."
+     }
+    },
+    {
+     "sentence": "Coast to Coast AM is an American late-night radio talk show that deals with a variety of topics.",
+     "facts": {
+      "3.0": "Coast to Coast AM is an American late-night radio talk show.",
+      "3.1": "Coast to Coast AM deals with a variety of topics."
+     }
+    },
+    {
+     "sentence": " The program now airs seven nights a week 1:00 a.m. – 5:00 a.m. Eastern Time Zone.",
+     "facts": {
+      "4.0": "Coast to Coast AM now airs seven nights a week.",
+      "4.1": "Coast to Coast AM airs from 1:00 a.m. to 5:00 a.m. Eastern Time Zone."
+     }
+    }
+   ],
+   "items": [
+    "Late-night talk show\nA late-night talk show is a genre of talk show popular in the United States, where the format originated.\n\n It is generally structured around humorous monologues about the day's news, guest interviews, comedy sketches and music performances.\n\n The late-night talk show format was popularized, though not invented, by Johnny Carson with \"The Tonight Show Starring Johnny Carson\" on NBC.\n\n Typically the show's host conducts interviews from behind a desk, while the guest is seated on a couch.\n\n Many late night talk shows feature a house band which generally performs cover songs for the studio audience during commercial breaks and occasionally will back up a guest artist.",
+    "List of Jimmy Fallon games and sketches\nThe following is a list of recurring games, sketches, and other comedy routines from the NBC late night talk show \"The Tonight Show Starring Jimmy Fallon\", and its predecessor, \"Late Night with Jimmy Fallon\".\n\n The sketches feature host Jimmy Fallon, house band The Roots, announcer/sidekick Steve Higgins, the show's writers, celebrity guests, and audience members.\n\n Most of the skits below appeared only on \"Late Night\", while some have carried over to the \"Tonight Show\".",
+    "Open House Party\nOpen House Party (most of the time, shortened to OHP) is an American radio show hosted on Saturday and Sunday nights by Kannon, who also hosts the afternoon drive slot on 102.9 Now.\n\n The show promotes itself as \"the Biggest Party on the Planet\".\n\n It focuses on playing contemporary hit radio (CHR) music, also known as Top 40.\n\n The show differentiates itself from most Top 40 because it plays a high rotation of remixes.\n\n Unlike most radio stations or programs, every song played on OHP is by a listener request, rather than computer systems automatically inserting songs that may not even be popular anyways.\n\n The show started in 1987, and was hosted by John Garabedian from September 1987 to January 2017.\n\n Garabedian created the show, and hosted both Saturday and Sunday nights for a long period of time.\n\n Open House Party is broadcast on more than 50 stations around the world.",
+    "David Letterman\nDavid Michael Letterman (born April 12, 1947) is an American television host, comedian, writer, and producer.\n\n He hosted a late night television talk show for 33 years, beginning with the February 1, 1982 debut of \"Late Night with David Letterman\" on NBC, and ending with the May 20, 2015 broadcast of \"Late Show with David Letterman\" on CBS.\n\n In total, Letterman hosted 6,028 episodes of \"Late Night\" and \"Late Show\", surpassing friend and mentor Johnny Carson as the longest-serving late night talk show host in American television history.\n\n In 1996 Letterman was ranked 45th on \"TV Guide\"' s 50 Greatest TV Stars of All Time.",
+    "KKBN\nKKBN (93.5 FM) The Cabin a radio station since 1986 broadcasting a Country music format since March 2000.\n\n Licensed to Twain Harte, California, United States, the station serves the greater Mother Lode area comprising Tuolumne and Calaveras Counties with a combined population of approximately 110,000.\n\n The station is currently owned by Clarke Broadcasting Corporation.",
+    "Night After Night with Allan Havey\nNight After Night with Allan Havey was a late night talk show which aired on The Comedy Channel and, later, Comedy Central from 1989 to 1992.\n\n The show featured the stream of consciousness of host Allan Havey, and other departures from the standard late-night talk show format.\n\n Havey's sidekick was Nick Bakay, who moved on to act as sidekick on Dennis Miller's short-lived late night talk show.",
+    "Collateral Damage (Millennium)\n\"Collateral Damage\" is the eleventh episode of the third season of the crime-thriller television series \"Millennium\".\n\n It premiered on the Fox network on January 22, 1999.\n\n The episode was written by Michael R. Perry, and directed by Thomas J. Wright.\n\n \"Collateral Damage\" featured guest appearances by O'Quinn, Jacinda Barrett, James Marsters, and radio host Art Bell as himself.\n\n Bell's radio show \"Coast to Coast AM\" was among Perry's inspirations for the script.",
+    "The Week Show\nThe Week Show is a television late night talk show sketch comedy program on Bite TV in Canada.\n\n It originally ran from December 2008 to mid-2010.\n\n The show is hosted by Matt Chin and Ricky Thompson, who started on an internet late night talk show \"My Show with Matt Chin\" online in 2001.",
+    "Coast to Coast AM\nCoast to Coast AM is an American late-night radio talk show that deals with a variety of topics.\n\n Most frequently the topics relate to either the paranormal or conspiracy theories.\n\n The program is distributed by Premiere Networks, both as part of its talk network and separately as a syndicated program.\n\n The program now airs seven nights a week 1:00 a.m. – 5:00 a.m. Eastern Time Zone.",
+    "Morning Joe\nMorning Joe is a weekday NBC News morning news and talk show, airing from 6:00 a.m. to 9:00 a.m. Eastern Time on the network's cable news channel MSNBC.\n\n It features former GOP representative Joe Scarborough providing both enterprise reporting and discussion on the news of the day in a panel format with co-hosts Mika Brzezinski and Willie Geist.\n\n It was created as the replacement for \"Imus in the Morning,\" which was cancelled in April 2007 after simulcasting on MSNBC since 1996."
+   ]
+  },
+  {
+   "id": "28fd51e27d6a7e89",
+   "gold": [
+    {
+     "sentence": "Julia Compton Moore (February 10, 1929April 18, 2004) was the wife of Lieutenant General (Ret.)",
+     "facts": {
+      "0.0": "Julia Compton Moore's dates are February 10, 1929 to April 18, 2004.",
+      "0.1": "Julia Compton Moore was the wife of Lieutenant General (Ret.)."
+     }
+    },
+    {
+     "sentence": " Hal Moore, a United States Army officer.",
+     "facts": {
+      "1.0": "Hal Moore is a United States Army officer."
+     }
+    },
+    {
+     "sentence": "Harold Gregory \"Hal\" Moore, Jr. (February 13, 1922 – February 10, 2017) was a United States Army lieutenant general and author.",
+     "facts": {
+      "2.0": "Harold Gregory \"Hal\" Moore, Jr. lived from February 13, 1922 to February 10, 2017.",
+      "2.1": "Harold Gregory \"Hal\" Moore, Jr. was a United States Army lieutenant general.",
+      "2.2": "Harold Gregory \"Hal\" Moore, Jr. was an author."
+     }
+    },
+    {
+     "sentence": " He was a recipient of the Distinguished Service Cross, which is the U.S. military's second highest decoration for valor, and was the first of his West Point class (1945) to be promoted to brigadier general, major general, and lieutenant general.",
+     "facts": {
+      "3.0": "Hal Moore was a recipient of the Distinguished Service Cross.",
+      "3.1": "The Distinguished Service Cross is the U.S. military's second highest decoration for valor.",
+      "3.2": "Hal Moore was the first of his West Point class (1945) to be promoted to brigadier general.",
+      "3.3": "Hal Moore was the first of his West Point class (1945) to be promoted to major general.",
+      "3.4": "Hal Moore was the first of his West Point class (1945) to be promoted to lieutenant general."
+     }
+    }
+   ],
+   "items": [
+    "List of current United States first spouses\nIn the United States, the first spouse (first lady for women, first gentleman for men) is the term used to refer to the spouse of a chief executive - that is, of the spouse of the President of the United States (the First Lady of the United States and the First Gentleman of the United States) and the spouses of the governors of the 50 U.S. states and U.S. territories (Guam, Northern Mariana Islands, Puerto Rico, American Samoa, and the United States Virgin Islands) and the spouse of the mayor of the District of Columbia.\n\n (The spouses of many mayors are often called the \"first lady\" or \"first gentleman\" of the city as well, and the use of the terms sometimes extends even to the spouses of college presidents).",
+    "Hal Moore\nHarold Gregory \"Hal\" Moore, Jr. (February 13, 1922 – February 10, 2017) was a United States Army lieutenant general and author.\n\n He was a recipient of the Distinguished Service Cross, which is the U.S. military's second highest decoration for valor, and was the first of his West Point class (1945) to be promoted to brigadier general, major general, and lieutenant general.",
+    "Major general (United States)\nIn the United States Army, United States Marine Corps, and United States Air Force, major general is a two-star general-officer rank, with the pay grade of O-8.\n\n Major general ranks above brigadier general and below lieutenant general.\n\n A major general typically commands division-sized units of 10,000 to 15,000 soldiers.\n\n Major general is equivalent to the two-star rank of rear admiral in the United States Navy and United States Coast Guard and is the highest permanent rank during peacetime in the uniformed services.\n\n (The higher ranks are temporary ranks linked to specific positions, although virtually all officers who have been promoted to those ranks are approved to retire at their highest earned rank.)",
+    "Richard E. Cavazos\nRichard Edward Cavazos (born January 31, 1929), a Korean War recipient of the Distinguished Service Cross as a first lieutenant, who advanced in rank to become the United States Army's first Hispanic four-star general.\n\n During the Vietnam War, as a lieutenant colonel, Cavazos was awarded a second Distinguished Service Cross.\n\n In 1976, Cavazos became the first Mexican American to reach the rank of brigadier general in the U.S. Army.\n\n Cavazos served with great distinction for thirty-three years, with his final command as head of the U.S. Army Forces Command.",
+    "Andrew Davis Bruce\nLieutenant General Andrew Davis Bruce (September 14, 1894 – July 28, 1969) was an American academic and soldier who served as the third president of the University of Houston.\n\n He retired from the United States Army in 1954 as a lieutenant general after seeing action in both World War I and World War II and founding Fort Hood, Texas.\n\n Three countries, France, the Philippines, and the United States, awarded him service medals, including the Distinguished Service Cross, the U.S. Army's second highest military decoration.\n\n Bruce is interred in Arlington National Cemetery.",
+    "Nadja West\nNadja Y. West (born 1961) is a United States Army lieutenant general and the 44th U.S. Army Surgeon General and Commanding General of the U.S. Army Medical Command.\n\n West is the first black Army Surgeon General, and was the first black female, active-duty, major general and the first black female major general in Army Medicine.\n\n West is also the first Army black female lieutenant general.\n\n She is the highest ranking female to have graduated from the United States Military Academy.\n\n She received the Army Distinguished Service Medal, the Defense Superior Service Medal, the Legion of Merit, and others.",
+    "Julia Compton Moore\nJulia Compton Moore (February 10, 1929April 18, 2004) was the wife of Lieutenant General (Ret.)\n\n Hal Moore, a United States Army officer.\n\n Her efforts and complaints in the aftermath of the Battle of Ia Drang prompted the U.S. Army to set up survivor support networks and casualty notification teams consisting of uniformed officers, which are still in use.",
+    "Distinguished Service Cross (United States)\nThe Distinguished Service Cross is the second highest military award that can be given to a member of the United States Army (and previously, the United States Army Air Forces and the United States Air Force), for extreme gallantry and risk of life in actual combat with an armed enemy force.\n\n Actions that merit the Distinguished Service Cross must be of such a high degree that they are above those required for all other U.S. combat decorations but do not meet the criteria for the Medal of Honor.\n\n The Distinguished Service Cross is equivalent to the Navy Cross (Navy and Marine Corps), the Air Force Cross (Air Force), and the Coast Guard Cross (Coast Guard).",
+    "The text profiles military leaders across the U.S. and Allied services. James Winnefeld was U.S. vice chairman of the Joint Chiefs (2011–15); Matthew Ridgway led airborne forces in WWII; Arthur Tedder and naval officers Arthur Power and Algernon Willis helped plan or execute Allied Mediterranean campaigns. Hal Moore and Myron Diduryk served at Ia Drang. George Finch built the Air National Guard; Mark Mitchell earned the Distinguished Service Cross in Afghanistan. Other",
+    "Wayne W. Lambert\nWayne W. Lambert (born 1936) was an Air force Brigadier General (United States).\n\n He attended the United States Military Academy at West Point, New York, after already having served a year in the US Army.\n\n Lambert graduated from the Academy in 1959 and was commissioned a 2nd Lieutenant in the USAF that same year.\n\n He trained as a bomber pilot, receiving his Aviator badge in 1960.\n\n He has logged over 5,800 flying hours with the US Air Force.\n\n A seasoned combat veteran, Lambert flew over 225 combat missions in South East Asia as a B-52 crew member.\n\n He was awarded the Distinguished Flying Cross (United States) and received 10 awards of the Air Medal for his service during the Vietnamese War.\n\n After serving in a succession of lesser command positions, Lambert was promoted to the rank of Brigadier General in 1983, assuming command of the former Strategic Air Command’s 7th Air Division, headquartered then at Ramstein Air Base in West Germany, and overseeing SAC operations throughout the European theater.\n\n The Brigadier General retired from the US Air Force in 1989."
+   ]
+  },
+  {
+   "id": "62774ec47ecfc63b",
+   "gold": [
+    {
+     "sentence": "The Celluloid Closet is a 1995 American documentary film directed and written by Rob Epstein and Jeffrey Friedman.",
+     "facts": {
+      "0.0": "The Celluloid Closet is a 1995 American documentary film.",
+      "0.1": "The Celluloid Closet was directed by Rob Epstein and Jeffrey Friedman.",
+      "0.2": "The Celluloid Closet was written by Rob Epstein and Jeffrey Friedman."
+     }
+    },
+    {
+     "sentence": "Station to Station is the 2014 film of Doug Aitken's 2013 \"Nomadic Happening\", the film is made up of 62 one-minute films.",
+     "facts": {
+      "1.0": "Station to Station is the 2014 film of Doug Aitken's 2013 \"Nomadic Happening\".",
+      "1.1": "The film Station to Station is made up of 62 one-minute films."
+     }
+    }
+   ],
+   "items": [
+    "Station to Station (film)\nStation to Station is the 2014 film of Doug Aitken's 2013 \"Nomadic Happening\", the film is made up of 62 one-minute films.\n\n It was distributed internationally in 2015 following its release at the Sundance Film Festival.",
+    "High Octane Cult\nHigh Octane Cult is a United States and Japan greatest hits compilation featuring every single The Cult had released at the time, with the additional \"Beauty's on the Street\" and \"In the Clouds\".\n\n It was released by The Cult's then record company Beggars Banquet Records without The Cult's participation.\n\n In the years since its release, singer Ian Astbury and guitarist Billy Duffy have occasionally been vocal about their dislike of this release, with Astbury calling it \"sad\" on their official website in 2006.\n\n Beggars Banquet had planned on using handmade drawings by Ian Astbury for the album's artwork, but when the drawings were lost, the record company subsequently replaced it with less than stellar car photos, and the band photo from The Cult's \"Sonic Temple\" record was used in the jacket sleeve, along with a short bio about the band, which guitarist Billy Duffy publicly expressed his disapproval about.",
+    "Panic Stations (album)\nPanic Stations is the sixth and final studio album by American rock band Motion City Soundtrack.\n\n Produced by John Agnello, the album was released on September 18, 2015 by Epitaph Records.\n\n Following an extended touring cycle in which the group performed several past albums in full, Motion City Soundtrack lost one of its longest-serving members: drummer Tony Thaxton, who resigned from the group in 2013.\n\n The band continued to tour with new drummer Claudio Rivera over the ensuing year while writing new material for a sixth album.",
+    "The entries span film, television, documentaries, and film distribution: Philippine series Sine Novela adapts Viva classics; The Doom Generation (1995) is Gregg Araki’s violent “Teenage Apocalypse” film; Naked Gun 33⅓ concludes its comedy trilogy, while Naked City (1958–63) is a semi-documentary police drama. Night Life is a zombie comedy; The Runaways portrays the band’s formation and Currie-Jett relationship. Consolidated Film Industries was",
+    "Metro Station (band)\nMetro Station is an American pop rock band that was formed in Los Angeles by Trace Cyrus and Mason Musso.\n\n In late 2006, the band signed a recording contract with Columbia Records and RED Ink Records.\n\n The band is best known for the Top 10 \"Billboard\" hit single \"Shake It\" from the group's self-titled debut album.\n\n In 2010, tension between Cyrus and Musso caused the band to go on hiatus.\n\n In 2011 the band returned, however it was announced that Cyrus was no longer a part of the group and Musso had purchased the rights to the name.\n\n An EP entitled \"Middle of the Night\" was released in 2013, which was led by the single \"Every Time I Touch You\".\n\n In 2014 Cyrus and a new drummer, Spencer Steffan came to the band and a new single entitled \"Love & War\" was released.\n\n In 2015, the band released a second full-length album titled \"Savior\".",
+    "Hard to Explain\n\"Hard to Explain\" is the first single from New York garage rock band The Strokes (their only previously released material was \"The Modern Age\" EP).\n\n It was released first in the UK and was later released in the US with different album artwork.\n\n (The UK version has a photo of two chairs, one red and one black, facing the camera.\n\n The chairs appear to be in a diner or restaurant of some sort.)\n\n Because this single is the first from their debut LP \"Is This It\", \"Hard to Explain\" made the anticipation for the album proper very high, and when \"Is This It\" did come out it was widely hailed as one of the best of the year.\n\n The B-side of this single, \"New York City Cops\" was omitted from the US version of the album in the wake of the September 11 attacks on the World Trade Center (the chorus to the song contains the lines \"New York City cops/They ain't too smart\").",
+    "The Boxer (Kele Okereke album)\nThe Boxer is the debut solo album by Kele Okereke, the lead singer of British indie rock band Bloc Party.\n\n Okereke released the album under the professional name of Kele on 21 June 2010.\n\n As promotion, he uploaded the songs \"Rise\" and \"Walk Tall\" to his personal website on 13 May.\n\n The first single from \"The Boxer\" was \"Tenderoni\", released on 14 June, and the second, \"Everything You Wanted\", on 16 August.\n\n The album's third single \"On The Lam\" was released on 25 October.",
+    "From the Sea to the Land Beyond\nFrom The Sea to the Land Beyond: Britain's Coast on Film is a documentary feature film directed by Penny Woolcock, with an original soundtrack by British indie-rock band British Sea Power.\n\n The project was originally produced by Crossover and Sheffield Doc/Fest as part of The Space project from the BBC and the Arts Council England.\n\n The film was edited by Alex Fry.",
+    "Romance of Celluloid\nThe Romance of Celluloid is a 1937 short black and white documentary film, narrated by Frank Whitbeck, which goes behind the scenes to look at the manufacture of film and the making of motion pictures.\n\n The film was the first of the studio's \"Romance of Celluloid\" series, which also included;",
+    "The Celluloid Closet\nThe Celluloid Closet is a 1995 American documentary film directed and written by Rob Epstein and Jeffrey Friedman.\n\n The film is based on Vito Russo's book of the same name first published in 1981 and on lecture and film clip presentations he gave in 1972–1982.\n\n Russo had researched the history of how motion pictures, especially Hollywood films, had portrayed gay, lesbian, bisexual and transgender characters."
+   ]
+  },
+  {
+   "id": "ecffd30046a03e42",
+   "gold": [
+    {
+     "sentence": "\"White People Renovating Houses\" is the first episode in the twenty-first season of the American animated television series \"South Park\".",
+     "facts": {
+      "0.0": "'White People Renovating Houses' is the first episode of the twenty-first season of the American animated television series South Park."
+     }
+    },
+    {
+     "sentence": " It is the 278th episode of the series overall, and first aired on Comedy Central in the United States on September 13, 2017.",
+     "facts": {
+      "1.0": "'White People Renovating Houses' is the 278th episode of South Park overall.",
+      "1.1": "'White People Renovating Houses' first aired on Comedy Central in the United States.",
+      "1.2": "'White People Renovating Houses' first aired on September 13, 2017."
+     }
+    },
+    {
+     "sentence": "The twenty-first season of the American animated sitcom \"South Park\" premiered on Comedy Central on September 13, 2017, and will contain ten episodes.",
+     "facts": {
+      "2.0": "The twenty-first season of South Park is an American animated sitcom.",
+      "2.1": "The twenty-first season of South Park premiered on Comedy Central on September 13, 2017.",
+      "2.2": "The twenty-first season of South Park will contain ten episodes."
+     }
+    }
+   ],
+   "items": [
+    "Chickenlover\n\"Chickenlover\" is the fourth episode in the second season of the American animated television series \"South Park\".\n\n The 16th episode of the series overall, it originally aired on Comedy Central in the United States on May 27, 1998.\n\n The episode was written by series co-creators Trey Parker and Matt Stone, along with David R. Goodman, and directed by Parker.\n\n In the episode, Officer Barbrady resigns as South Park's only police officer because of his illiteracy.\n\n Anarchy ensues, just as chickens are mysteriously being molested across South Park.\n\n Barbrady enlists the help of the boys to learn to read and discover who is molesting the chickens.\n\n Cartman, meanwhile, masquerades as a police officer.",
+    "Holiday Special (South Park)\n\"Holiday Special\" is the third episode in the twenty-first season of the American animated television series \"South Park\".\n\n The 280th episode of the series overall, it first aired on Comedy Central in the United States on September 27, 2017.",
+    "South Park (season 10)\nThe tenth season of \"South Park\", an American animated television series created by Trey Parker and Matt Stone, began airing on March 22, 2006.\n\n The tenth season concluded after 14 episodes on November 15, 2006.\n\n This is the first season in which Kenny does not die and the last season featuring Isaac Hayes (the voice of Chef) as Hayes quit the show following the backlash behind season nine's \"Trapped in the Closet\" episode.\n\n This season also had a minor controversy when the Halloween episode \"Hell on Earth 2006\" depicted \"The Crocodile Hunter's\" Steve Irwin with a stingray lodged in his chest getting thrown out of Satan's Halloween party for not being in costume.\n\n Episode 2 in this season is the last one with the Braniff Airlines logo.\n\n All the episodes in this season were written and directed by Trey Parker.",
+    "Conjoined Fetus Lady\n\"Conjoined Fetus Lady\" is the fifth episode in the second season of the American animated television series \"South Park\".\n\n The 18th episode of the series overall, it originally aired on Comedy Central in the United States on June 3, 1998.\n\n The episode was written by series co-creators Trey Parker and Matt Stone, along with David R. Goodman, and directed by Parker.\n\n In the episode, South Park Elementary's dodgeball team travels to China to compete for the dodgeball championship, while the town of South Park pays tribute to the school nurse, who is living with conjoined twin myslexia.",
+    "White People Renovating Houses\n\"White People Renovating Houses\" is the first episode in the twenty-first season of the American animated television series \"South Park\".\n\n It is the 278th episode of the series overall, and first aired on Comedy Central in the United States on September 13, 2017.",
+    "South Park (season 21)\nThe twenty-first season of the American animated sitcom \"South Park\" premiered on Comedy Central on September 13, 2017, and will contain ten episodes.",
+    "Put It Down (South Park)\n\"Put It Down\" is the second episode in the twenty-first season of the American animated television series \"South Park\".\n\n The 279th episode of the series overall, it first aired on Comedy Central in the United States on September 20, 2017.",
+    "The Return of Chef\n\"The Return of Chef\" is the first episode in the tenth season of the American animated television series \"South Park\".\n\n The 140th episode of the series overall, it first aired on Comedy Central in the United States on March 22, 2006.\n\n The episode was the first after the departure of actor Isaac Hayes, who voiced the character Chef.\n\n Hayes, a Scientologist, left after a falling-out with the creators over their treatment of Scientology in the previous season's episode \"Trapped in the Closet\".\n\n Scientology has been accused of using brainwashing techniques, and the episode portrays Chef as having been brainwashed.",
+    "Moho House\n\"Moho House\" is the twenty first episode of the twenty-eighth season of the animated television series \"The Simpsons\", and the 617th episode of the series overall.\n\n It aired in the United States on Fox on May 7, 2017.",
+    "Something Wall-Mart This Way Comes\n\"Something Wall-Mart This Way Comes\" is the ninth episode of the eighth season of the American animated television series \"South Park\", and the 120th episode of the series overall.\n\n It originally aired on Comedy Central in the United States on November 3, 2004.\n\n In the episode, a Wall-Mart is built in South Park, and the people start to get addicted to shopping from it, due to its irresistibly attractive bargains, thus leading many businesses in South Park to close down.\n\n The four boys have to fight against Wall-Mart and to find a way to stop it from taking over the entire town."
+   ]
+  },
+  {
+   "id": "d043736b9fe357bb",
+   "gold": [
+    {
+     "sentence": " The body that was to become the Gran i General Consell was founded in 1249, and the Consell was abolished on 22 July 1718 by Philip V, empowered by the Nova Planta Decree of Majorca and Ibiza (28 November 1715).",
+     "facts": {
+      "0.0": "The body that was to become the Gran i General Consell was founded in 1249.",
+      "0.1": "The Consell was abolished on 22 July 1718.",
+      "0.2": "The Consell was abolished by Philip V.",
+      "0.3": "Philip V was empowered by the Nova Planta Decree of Majorca and Ibiza.",
+      "0.4": "The Nova Planta Decree of Majorca and Ibiza is dated 28 November 1715."
+     }
+    },
+    {
+     "sentence": "Philip V (Spanish: \"Felipe V\" , French: \"Philippe\" , Italian: \"Filippo\" ; 19 December 1683 – 9 July 1746) was King of Spain from 1 November 1700 to 15 January 1724, when he abdicated in favour of his son Louis, and from 6 September 1724, when he reassumed the throne upon his son's death, to his own death 9 July 1746.",
+     "facts": {
+      "1.0": "Philip V's Spanish name is Felipe V.",
+      "1.1": "Philip V's French name is Philippe.",
+      "1.2": "Philip V's Italian name is Filippo.",
+      "1.3": "Philip V was born on 19 December 1683.",
+      "1.4": "Philip V died on 9 July 1746.",
+      "1.5": "Philip V was King of Spain from 1 November 1700 to 15 January 1724.",
+      "1.6": "Philip V abdicated in favour of his son Louis on 15 January 1724.",
+      "1.7": "Philip V reassumed the Spanish throne on 6 September 1724, upon his son's death.",
+      "1.8": "Philip V was King of Spain from 6 September 1724 until his death on 9 July 1746."
+     }
+    }
+   ],
+   "items": [
+    "Eric III of Denmark\nEric III Lamb (Danish: \"Erik III Lam\" ) (  1120 – 27 August 1146) was the King of Denmark from 1137 until 1146.\n\n He was the grandson of Eric I of Denmark and the nephew of Eric II of Denmark, whom he succeeded on the throne.\n\n He abdicated in 1146, as the first and only Danish monarch to do so.\n\n His succession led to a period of civil war between Sweyn III, Canute V, and Valdemar I.",
+    "Succession to the British throne\nSuccession to the British throne is determined by descent, gender (for people born before October 2011), legitimacy, and religion.\n\n Under common law, the Crown is inherited by a sovereign's children or by a childless sovereign's nearest collateral line.\n\n The Bill of Rights 1689 and the Act of Settlement 1701, restrict succession to the throne to the legitimate Protestant descendants of Sophia of Hanover that are in \"communion with the Church of England\".\n\n Spouses of Roman Catholics were disqualified from 1689 until the law was amended in 2015.\n\n Protestant descendants of those excluded for being Roman Catholics are eligible.",
+    "Line of succession to the former Romanian throne\nThe succession order to the throne of the Romanian monarchy, abolished since 1947, was regulated by the monarchical constitution of 1923 and the 1884 Law of the Romanian Royal House Rules enacted pursuant to the 1866 Constitution of Romania which had confirmed the enthronement of Prince Karl (Carol) of Hohenzollern-Sigmaringen.\n\n The defunct 1923 Constitution stipulated Salic law, according to which the throne was hereditary in King Carol I's legitimate descent and, if his male issue failed, in the descent of his brothers of the Sigmaringen princely branch of the House of Hohenzollern, according to agnatic primogeniture and to the perpetual exclusion of females and their descendants.\n\n The last monarch to reign in Romania was King Michael I, who was born in 1921, abdicated his throne on 30 December 1947 under coercion, and went into exile in Switzerland.",
+    "Philip V of Spain\nPhilip V (Spanish: \"Felipe V\" , French: \"Philippe\" , Italian: \"Filippo\" ; 19 December 1683 – 9 July 1746) was King of Spain from 1 November 1700 to 15 January 1724, when he abdicated in favour of his son Louis, and from 6 September 1724, when he reassumed the throne upon his son's death, to his own death 9 July 1746.",
+    "Ernest Augustus, King of Hanover\nErnest Augustus (5 June 1771 – 18 November 1851) was King of Hanover from 20 June 1837 until his death.\n\n He was the fifth son and eighth child of King George III of the United Kingdom and Hanover.\n\n As a fifth son, Ernest seemed unlikely to become a monarch, but none of his four elder brothers had a legitimate son who survived infancy.\n\n The Salic Law, which barred succession to or through a female, prevailed in Hanover; therefore, when his elder brother King William IV died in 1837, Ernest succeeded him as King of Hanover.\n\n In the United Kingdom the succession to the monarchy was determined by primogeniture and his niece Victoria succeeded to the throne, thus ending the personal union between the British Isles and Hanover that had existed since 1714.",
+    "Gran i General Consell\nThe Gran i General Consell (Catalan: \"Great and General Council\") was the supreme political, administrative, and representative organ of the Kingdom of Majorca.\n\n Since the Kingdom of Majorca did not have courts, the Gran i General Consell took over most of the functions they would otherwise have had, including the role of a representative body.\n\n The Gran i General Consell evolved from the Catalan municipal councils, especially that of the City of Majorca (present-day Palma de Mallorca.\n\n The body that was to become the Gran i General Consell was founded in 1249, and the Consell was abolished on 22 July 1718 by Philip V, empowered by the Nova Planta Decree of Majorca and Ibiza (28 November 1715).\n\n At the same time, all other separate Majorcan institutions were dissolved.",
+    "Pedro Luis de Borja Lanzol de Romaní\nPedro Luis de Borja Lanzol de Romaní, O.S.Io.Hieros.\n\n (1472–1511) was a Roman Catholic cardinal and cardinal-nephew and papal military leader.\n\n He received a wide variety of sinecures during the papacy of his great-uncle, Pope Alexander VI, but was exiled to Naples on the election of Borja rival Pope Julius II.\n\n Borja also fought with the Knights Hospitaller in Jerusalem and Rhodes.",
+    "Duke of Bedford\nHe regained the earldom in 1485 when his nephew Henry VII came to the throne and was elevated to the dukedom the same year.\n\n He had no legitimate children and the titles became extinct on his death in 1495.",
+    "Papal conclave, September 1503\nThe papal conclave of September 1503 elected Pope Pius III to succeed Pope Alexander VI.\n\n Due to the Italian Wars, the College of Cardinals was surrounded by three potentially hostile armies, loyal to Louis XII of France, Ferdinand II of Aragon, and Cesare Borgia (the cardinal-nephew of Alexander VI).",
+    "Pier Luigi de Borgia, 1st duke of Gandía\nPier Luigi de Borgia, 1st duke of Gandía (Spanish: \"Pedro Luis de Borja\" , Latin: \"Petrus Ludovicus de Boria\" ) (1458 or 1460–1488 or 1491) was a Valencian noble.\n\n Pier Luigi was the son of Cardinal Rodrigo Borgia (later Pope Alexander VI), and half-brother of Cesare Borgia, Gioffre Borgia, Giovanni Borgia and Lucrezia Borgia."
+   ]
+  },
+  {
+   "id": "0368f616ccd50c4a",
+   "gold": [
+    {
+     "sentence": "The 1892 Auburn Tigers football team represented Auburn University in the 1892 college football season.",
+     "facts": {
+      "0.0": "The 1892 Auburn Tigers football team represented Auburn University.",
+      "0.1": "The 1892 Auburn Tigers football team played in the 1892 college football season."
+     }
+    },
+    {
+     "sentence": " It was the first college football team fielded by the Agricultural and Mechanical College of Alabama, now known as Auburn University.",
+     "facts": {
+      "1.0": "The 1892 Auburn Tigers football team was the first college football team fielded by the Agricultural and Mechanical College of Alabama.",
+      "1.1": "The Agricultural and Mechanical College of Alabama is now known as Auburn University."
+     }
+    },
+    {
+     "sentence": " With more than 22,000 undergraduate students and a total enrollment of more than 28,000 with 1,260 faculty members, Auburn is the second largest university in Alabama.",
+     "facts": {
+      "2.0": "Auburn University has more than 22,000 undergraduate students.",
+      "2.1": "Auburn University has a total enrollment of more than 28,000.",
+      "2.2": "Auburn University has 1,260 faculty members.",
+      "2.3": "Auburn University is the second largest university in Alabama."
+     }
+    }
+   ],
+   "items": [
+    "1997 Alabama Crimson Tide football team\nThe 1997 Alabama Crimson Tide football team represented the University of Alabama in the college football season of 1997–98.\n\n The team's head coach was Mike DuBose, who was entering his first year at Alabama.\n\n They played their home games at both Bryant–Denny Stadium in Tuscaloosa and Legion Field in Birmingham, Alabama and competed in the West Division of the Southeastern Conference.\n\n Alabama would finish with a record of 4–7 record in suffering the program's first losing season since the 1984 season.\n\n The loss against Kentucky marked Alabama's first ever overtime game, as overtime rules for college football had gone into effect the previous season.",
+    "Albanian University in Berat\nThe University of Berat is a private institution, independent and secular Higher Education, which operates the state fee.\n\n Licensed by the Council of Ministers, no. 697 dated 18.06.2009, he opened the doors in the academic year 2009- 2010, offering programs in two faculties: Faculty of Social Sciences Programs in Science Teaching Legal, Political Science and Psychology General Administration and the Faculty of Economics with Learning programs in Banking and Finance-Business Administration.\n\n During the first academic year, about 1,000 students attended studies.\n\n A year later, this new institution offering undergraduate degrees in study programs: Preschool Teacher Education, Primary Education Teacher, English Language, Nursing, Engineering Computer and Information Technology, thus finalizing the 2010-2011 academic year with the opening of two new faculties: Faculty of Medical Sciences and the Faculty of Architecture and Inxhinierive.\n\n Academic Year 2010-2011 finds the University Berat with about 2600 students in the first cycle of study.\n\n Since the first year of its inception, the institution pointed at the center of academic life, the promotion of intellectual product and melting learning and research.",
+    "1983 Alabama Crimson Tide football team\nThe 1983 Alabama Crimson Tide football team (variously \"Alabama\", \"UA\", \"Bama\" or \"The Tide\") represented the University of Alabama in the 1983 NCAA Division I-A football season.\n\n It was the Crimson Tide's 91st overall and 50th season as a member of the Southeastern Conference (SEC).\n\n The team was led by head coach Ray Perkins, in his first year, and played their home games at both Bryant–Denny Stadium in Tuscaloosa and Legion Field in Birmingham, Alabama.\n\n They finished the season with a record of eight wins and four losses (8–4 overall, 4–2 in the SEC).\n\n Ray Perkins, who played as a wide receiver for Bear Bryant in the 1960s, was named as the new head coach at Alabama on December 14, 1982, to succeed Bryant after his 25-year tenure as Alabama's head coach.",
+    "Auburn University\nAuburn University (AU or Auburn) is a public research university in Auburn, Alabama, United States.\n\n With more than 22,000 undergraduate students and a total enrollment of more than 28,000 with 1,260 faculty members, Auburn is the second largest university in Alabama.\n\n Auburn University is one of the state's two public flagship universities.",
+    "University of Arizona\nThe University of Arizona (also referred to as U of A, UA, or Arizona) is a public research university in Tucson, Arizona, United States.\n\n Founded in 1885, the UA was the first university in the Arizona Territory.\n\n The university operates two medical schools (University of Arizona College of Medicine - Tucson and the University of Arizona College of Medicine - Phoenix) and is affiliated with the region's only academic medical centers (Banner - University Medical Center Tucson and Banner - University Medical Center Phoenix).\n\n The university is also home to the James E. Rogers College of Law and numerous other nationally ranked graduate and professional schools.\n\n During the 2016–2017 academic year, there was a total enrollment of 43,625 students, including 34,072 undergraduates The University of Arizona is governed by the Arizona Board of Regents.\n\n The University of Arizona is one of the elected members of the Association of American Universities (an organization of North America's premier research institutions) and is the only representative from the state of Arizona to this group.",
+    "West Alabama Tigers football\nThe West Alabama Tigers football program is the intercollegiate American football team for the University of West Alabama located in the U.S. state of Alabama.\n\n The team competes in the NCAA Division II and are members of the Gulf South Conference.\n\n West Alabama's first football team was fielded in 1938.\n\n The team plays its home games at the 7,000 seat Tiger Stadium in Livingston, Alabama.\n\n The Tigers are coached by Brett Gilliland.",
+    "2012 Texas A&amp;M vs. Alabama football game\nThe 2012 Texas A&M vs. Alabama football game was a college football game between the Texas A&M Aggies and Alabama Crimson Tide at Bryant–Denny Stadium in Tuscaloosa, Alabama.\n\n This was the game where Texas A&M freshman quarterback and eventual Heisman Trophy winner Johnny Manziel completed 24 of 31 passes, had 253 passing yards, and two passing touchdowns with 92 rushing yards to help No. 15 Texas A&M upset No. 1 Alabama 29–24, which led him to being the first freshman to win the Heisman Trophy.",
+    "1905 Alabama Crimson White football team\nThe 1905 Alabama Crimson White football team (variously \"Alabama\", \"UA\" or \"Bama\") represented the University of Alabama in the 1905 Southern Intercollegiate Athletic Association football season.\n\n It was Alabama's 13th overall and 10th season as a member of the Southern Intercollegiate Athletic Association (SIAA).\n\n The team was led by head coach Jack Leavenworth, in his first year, and played their home games at both the University of Alabama Quad in Tuscaloosa and the Birmingham Fairgrounds in Birmingham, Alabama.\n\n They finished the season with a record of six wins and four losses (6–4 overall, 4–4 in the SIAA).",
+    "1906 Alabama Crimson White football team\nThe 1906 Alabama Crimson White football team (variously \"Alabama\", \"UA\" or \"Bama\") represented the University of Alabama in the 1906 Southern Intercollegiate Athletic Association football season.\n\n It was Alabama's 14th overall and 11th season as a member of the Southern Intercollegiate Athletic Association (SIAA).\n\n The team was led by head coach J. W. H. Pollard, in his first year, and played their home games at both the University of Alabama Quad in Tuscaloosa and the Birmingham Fairgrounds in Birmingham, Alabama.\n\n They finished the season with a record of five wins and one loss (5–1 overall, 3–1 in the SIAA).",
+    "1892 Auburn Tigers football team\nThe 1892 Auburn Tigers football team represented Auburn University in the 1892 college football season.\n\n It was the first college football team fielded by the Agricultural and Mechanical College of Alabama, now known as Auburn University.\n\n The squad was first coached by George Petrie.\n\n Auburn shut out Georgia Tech, 26–0, just two days after being shut out themselves by North Carolina, 64–0.\n\n The team finished the season with a record of 2–2."
+   ]
+  },
+  {
+   "id": "1c5879d2c4242d0b",
+   "gold": [
+    {
+     "sentence": " He is owner and chef of \"Dear.",
+     "facts": {
+      "0.0": "He is the owner of Dear.",
+      "0.1": "He is the chef of Dear."
+     }
+    },
+    {
+     "sentence": " It airs on JTBC on Mondays at 21:30 (KST) beginning November 17, 2014.",
+     "facts": {
+      "1.0": "The show airs on JTBC.",
+      "1.1": "The show airs on Mondays at 21:30 (KST).",
+      "1.2": "The show begins airing on November 17, 2014."
+     }
+    }
+   ],
+   "items": [
+    "Black (TV series)\nBlack () is an upcoming fantasy-thriller South Korean television series starring Song Seung-heon, Go Ara, Lee El and Kim Dong-jun.\n\n It is set to air on OCN starting October 14, 2017 on Saturdays and Sundays at 22:20 (KST) time slot, replacing \"Save Me\".",
+    "Panera Bread\nPanera Bread Company is an American chain of bakery-café fast casual restaurants in the United States and Canada.\n\n Its headquarters are in Sunset Hills, Missouri, a suburb of St. Louis, and operates as Saint Louis Bread Company in the St. Louis metropolitan area.\n\n Offerings include soups, salads, pasta, sandwiches, specialty drinks, and bakery items.",
+    "Please Take Care of My Refrigerator\nPlease Take Care of My Refrigerator () is a 2014 South Korean cooking-variety program starring by many chefs and celebrity guests.\n\n It airs on JTBC on Mondays at 21:30 (KST) beginning November 17, 2014.",
+    "Lee Won-il\nLee Won-il (; born December 12, 1979) is a South Korean chef and television personality.\n\n He is currently a cast member in the variety show \"Please Take Care of My Refrigerator\".\n\n He is owner and chef of \"Dear.\n\n bread\".",
+    "Ms Panda and Mr Hedgehog\nPanda and Hedgehog () is a 2012 South Korean romantic comedy television series starring Lee Donghae of Super Junior and Yoon Seung-ah.\n\n Produced by Song Hae-sung's TV production venture Lion Fish, it aired on Channel A from August 18 to October 7, 2012 on Saturdays and Sundays at 21:55 for 16 episodes.",
+    "The Week Show\nThe Week Show is a television late night talk show sketch comedy program on Bite TV in Canada.\n\n It originally ran from December 2008 to mid-2010.\n\n The show is hosted by Matt Chin and Ricky Thompson, who started on an internet late night talk show \"My Show with Matt Chin\" online in 2001.",
+    "Hidden Identity (TV series)\nHidden Identity () is a 2015 South Korean television series starring Kim Bum, Park Sung-woong, Yoon So-yi and Lee Won-jong.\n\n It aired on tvN from June 16 to August 4, 2015 on Mondays and Tuesdays at 23:00 for 16 episodes.",
+    "Baek Jong-won's Food Truck\nBaek Jong-won's Food Truck () is a South Korean cooking-variety program which has been broadcast since August 28, 2015.\n\n The program is currently hosted by Baek Jong-won and Kim Sung-joo, it airs on SBS every Friday at 23:20 (KST).",
+    "The Deal (2015 film)\nThe Deal (; lit.\n\n \"Murder Request\") is a 2015 South Korean crime thriller film directed by Son Yong-ho.",
+    "Cook Representative\nCook Representative (), also known as National Chef Team, is a 2016 South Korean cooking-variety program starring Kim Sung-joo, Ahn Jung-hwan, Kang Ho-dong, Choi Hyun-seok, Sam Kim, Lee Won-il and, , is the spin-off of \"Please Take Care of My Refrigerator\".\n\n It aired on JTBC during Wednesdays at 22:50 (KST) beginning February 17, 2016.\n\n The series aired its last episode August 10, 2016 after concluding the finals match of the World Championship."
+   ]
+  },
+  {
+   "id": "4c52150391c5486b",
+   "gold": [
+    {
+     "sentence": "Karen Joy Fowler (born February 7, 1950) is an American author of science fiction, fantasy, and literary fiction.",
+     "facts": {
+      "0.0": "Karen Joy Fowler was born on February 7, 1950.",
+      "0.1": "Karen Joy Fowler is American.",
+      "0.2": "Karen Joy Fowler is an author of science fiction.",
+      "0.3": "Karen Joy Fowler is an author of fantasy.",
+      "0.4": "Karen Joy Fowler is an author of literary fiction."
+     }
+    },
+    {
+     "sentence": "Charles Bruce Chatwin (13 May 194018 January 1989) was an English travel writer, novelist, and journalist.",
+     "facts": {
+      "1.0": "Charles Bruce Chatwin was born on 13 May 1940.",
+      "1.1": "Charles Bruce Chatwin died on 18 January 1989.",
+      "1.2": "Charles Bruce Chatwin was English.",
+      "1.3": "Charles Bruce Chatwin was a travel writer.",
+      "1.4": "Charles Bruce Chatwin was a novelist.",
+      "1.5": "Charles Bruce Chatwin was a journalist."
+     }
+    }
+   ],
+   "items": [
+    "The Jane Austen Book Club\nThe Jane Austen Book Club is a 2004 novel by American author Karen Joy Fowler.\n\n The story, which takes place near Sacramento, California, centers on a book club consisting of five women and one man who meet once a month to discuss Jane Austen's six novels.\n\n It was a critical success and became a national bestseller.",
+    "Bruce Chatwin\nCharles Bruce Chatwin (13 May 194018 January 1989) was an English travel writer, novelist, and journalist.\n\n His first book, \"In Patagonia\" (1977), established Chatwin as a travel writer, although he considered himself instead a storyteller, interested in bringing to light unusual tales.\n\n He won the James Tait Black Memorial Prize for his novel \"On the Black Hill\" (1982) and his novel \"Utz\" (1988) was shortlisted for the Man Booker Prize.\n\n In 2008 \"The Times\" named Chatwin #46 on their list of \"50 Greatest British Writers Since 1945.\"",
+    "Kim Warwick\nKim Warwick (born 8 April 1952) is an Australian former professional male tennis player who competed on the ATP Tour from 1970–1987 reaching the final of the singles Australian Open in 1980.\n\n He defeated over 35 players ranked in the top 10 including Guillermo Vilas, Raul Ramerez, Vitas Gerulaitis, Jan Kodeš, Bob Lutz and Arthur Ashe.\n\n Warwick's career-high singles ranking was World No. 15, achieved in 1981.\n\n He won three singles titles and 26 doubles, including Australian Open 1978 (with Wojtek Fibak) and Australian Open 1980 and 1981, Roland Garros 1986 and also a runner-up in Australian Open 1985, all of them partnering fellow countryman Mark Edmondson.\n\n Partnering with Evonne Goolagong, he won the French Open 1972, defeating Françoise Dürr and Jean-Claude Barclay in the final 6–2, 6–4.\n\n Evonne and Kim were finalists in 1972 at Wimbledon against Rosie Casals and Ilie Năstase who won 6–4, 6–4.",
+    "Louisa Adams\nLouisa Catherine Johnson Adams (February 12, 1775 – May 15, 1852), wife of John Quincy Adams, was First Lady of the United States from 1825 to 1829.\n\n The daughter of the American Consul in London, she was the first First Lady to be born outside the United States, or outside areas that were later to become part of the United States, such as the Thirteen Colonies – a distinction that would not be replicated until 192 years later by Melania Trump.",
+    "Karen Joy Fowler\nKaren Joy Fowler (born February 7, 1950) is an American author of science fiction, fantasy, and literary fiction.\n\n Her work often centers on the nineteenth century, the lives of women, and alienation.",
+    "Timeline of Mary Wollstonecraft\nThe lifetime of British writer, philosopher, and feminist Mary Wollstonecraft (1759–1797) encompassed most of the second half of the eighteenth century, a time of great political and social upheaval throughout Europe and America: political reform movements in Britain gained strength, the American colonists successfully rebelled, and the French revolution erupted.\n\n Wollstonecraft experienced only the headiest of these days, not living to see the end of the democratic revolution when Napoleon crowned himself emperor.\n\n Although Britain was still revelling in its mid-century imperial conquests and its triumph in the Seven Years' War, it was the French revolution that defined Wollstonecraft's generation.\n\n As poet Robert Southey later wrote: \"few persons but those who have lived in it can conceive or comprehend what the memory of the French Revolution was, nor what a visionary world seemed to open upon those who were just entering it.\n\n Old things seemed passing away, and nothing was dreamt of but the regeneration of the human race.\"",
+    "Mollie Gillen\nMollie Gillen (née Woolnough; 1908–2009) was an Australian historian, researcher, writer and novelist.\n\n Her work on the First Fleet, in \"The search for John Small,\" \"First Fleeter\" and The Founders of Australia: A Biographical Dictionary of the First Fleet, explored the idea that many of the founding families of Australia were descended from the convict population, rather than those sent to guard them.\n\n Gillen's article Maud Montgomery: The Girl Who Wrote Green Gables instigated a new era in scholarship on Lucy Maud Montgomery.",
+    "We Are All Completely Beside Ourselves\nWe Are All Completely Beside Ourselves is a 2013 novel by the American writer Karen Joy Fowler.\n\n The novel won the 2014 PEN/Faulkner Award for Fiction<ref name=\"The Guardian - 3 April 2014 - Karen Joy Fowler wins PEN/Faulkner award for fiction\"> </ref> and was also short-listed for the 2014 Man Booker Prize.",
+    "Penelope Fitzgerald\nPenelope Fitzgerald (17 December 1916 – 28 April 2000) was an English Booker Prize-winning novelist, poet, essayist and biographer.\n\n In 2008, \"The Times\" included her in a list of \"the 50 greatest British writers since 1945\".\n\n In 2012, \"The Observer\" named her final novel, \"The Blue Flower\" one of \"the ten best historical novels\".",
+    "Clinton Walker\nClinton Walker (born 1957) is an Australian writer, best known for his works on popular music but with a broader interest in social and cultural history and theory.\n\n Sydney's \"Sun-Herald\" has called him \"our best chronicler of Australian grass-roots culture.\"\n\n He has always been ahead of the curve.\n\n As \"Rhythms\" magazine said in 2015, \"Like many of Walker’s projects, \"Buried Country\" was at least a decade ahead of its time,\" and as such he is remarkable as a critic who has exerted a pro-active impact on Australian music and its development; groundbreaking books like \"Inner City Sound\" (1981) and \"Buried Country\" (2000) especially have informed and inspired successive generations of musicians.\n\n Similarly, while he found best-selling success as Bon Scott's biographer, Walker's non-music books like \"Football Life\" (1998) and \"Golden Miles\" (2005) have innovatively offered an appreciation of subjects hitherto hardly deemed worthy of serious consideration."
+   ]
+  },
+  {
+   "id": "af150b417a0c9a35",
+   "gold": [
+    {
+     "sentence": "Hou Hsiao-hsien (] born 8 April 1947) is a Taiwanese film director, screenwriter, producer and actor.",
+     "facts": {
+      "0.0": "Hou Hsiao-hsien was born on 8 April 1947.",
+      "0.1": "Hou Hsiao-hsien is a Taiwanese film director.",
+      "0.2": "Hou Hsiao-hsien is a Taiwanese screenwriter.",
+      "0.3": "Hou Hsiao-hsien is a Taiwanese producer.",
+      "0.4": "Hou Hsiao-hsien is a Taiwanese actor."
+     }
+    },
+    {
+     "sentence": " He is a leading figure in world cinema and in Taiwan's New Wave cinema movement, an auteur.",
+     "facts": {
+      "1.0": "Hou Hsiao-hsien is a leading figure in world cinema.",
+      "1.1": "Hou Hsiao-hsien is a leading figure in Taiwan's New Wave cinema movement.",
+      "1.2": "Hou Hsiao-hsien is an auteur."
+     }
+    },
+    {
+     "sentence": " He won the Golden Lion at the Venice Film Festival in 1989 for his film \"A City of Sadness\" (1989), and the Best Director award at the Cannes Film Festival in 2015 for \"The Assassin\" (2015).",
+     "facts": {
+      "2.0": "Hou Hsiao-hsien won the Golden Lion at the Venice Film Festival in 1989.",
+      "2.1": "Hou Hsiao-hsien won the Golden Lion for his film \"A City of Sadness\" (1989).",
+      "2.2": "Hou Hsiao-hsien won the Best Director award at the Cannes Film Festival in 2015.",
+      "2.3": "Hou Hsiao-hsien won the Best Director award at Cannes for his film \"The Assassin\" (2015)."
+     }
+    },
+    {
+     "sentence": " Other highly regarded works of his include \"The Puppetmaster\" (1993) and \"Flowers of Shanghai\" (1998).",
+     "facts": {
+      "3.0": "\"The Puppetmaster\" (1993) is a highly regarded work by Hou Hsiao-hsien.",
+      "3.1": "\"Flowers of Shanghai\" (1998) is a highly regarded work by Hou Hsiao-hsien."
+     }
+    },
+    {
+     "sentence": "Kenneth John \"Kenny\" Ortega (born April 18, 1950) is an American producer, director, and choreographer.",
+     "facts": {
+      "4.0": "Kenny Ortega (Kenneth John Ortega) was born on April 18, 1950.",
+      "4.1": "Kenny Ortega is an American producer.",
+      "4.2": "Kenny Ortega is an American director.",
+      "4.3": "Kenny Ortega is an American choreographer."
+     }
+    },
+    {
+     "sentence": " He is best known for directing \"Hocus Pocus\", the \"High School Musical\" trilogy, \"Descendants\" and Michael Jackson's \"This Is It\" concerts.",
+     "facts": {
+      "5.0": "Kenny Ortega is best known for directing \"Hocus Pocus\".",
+      "5.1": "Kenny Ortega is best known for directing the \"High School Musical\" trilogy.",
+      "5.2": "Kenny Ortega is best known for directing \"Descendants\".",
+      "5.3": "Kenny Ortega is best known for directing Michael Jackson's \"This Is It\" concerts."
+     }
+    }
+   ],
+   "items": [
+    "Academy Honorary Award\nThe Academy Honorary Award is often awarded in preference to those with noted achievements in motion pictures who have nevertheless never won an Academy Award.\n\n Thus, many of its recipients are Classic Hollywood stars, such as Lillian Gish, Barbara Stanwyck, Kirk Douglas, and Lauren Bacall.",
+    "Kenny Ortega\nKenneth John \"Kenny\" Ortega (born April 18, 1950) is an American producer, director, and choreographer.\n\n He is best known for directing \"Hocus Pocus\", the \"High School Musical\" trilogy, \"Descendants\" and Michael Jackson's \"This Is It\" concerts.",
+    "Flight of the Red Balloon\nFlight of the Red Balloon (French: Le voyage du ballon rouge ) is a 2007 French-Taiwanese film directed by Hou Hsiao-hsien.\n\n It is the first part in a new series of films produced by Musée d'Orsay, and tells the story of a French family as seen through the eyes of a Chinese student.\n\n The film was shot in August and September 2006 on location in Paris.\n\n This is Hou Hsiao-hsien's first non-Asian film.\n\n It references the classic 1956 French short \"The Red Balloon\" directed by Albert Lamorisse.",
+    "Mark Lee Ping-bing\nMark Lee Ping-bing (李屏賓; born August 8, 1954) is a Taiwanese cinematographer, photographer and author with over 70 films and 21 international awards to his credit including 2 Glory Of The Country Awards from the Government Information Office of Taiwan and the president of Taiwan's Light Of The Cinema Award.\n\n Lee began his film career in 1977 and in 1985 he started his prolific collaboration with Taiwanese filmmaker Hou Hsiao-hsien.\n\n Known best for his use of natural lighting utilizing real film and graceful camera movement, Lee received the Grand Technical Prize at the Cannes Film Festival in 2000 for \"In the Mood for Love\".\n\n A member of the Academy of Motion Picture Arts and Sciences, Lee was honored with nominations by the American Society of Cinematographers for its 2014 First Annual Spotlight Award for Best Cinematography for his work on the 2012 film \"Renoir\" and by the French Academy of Cinema Arts for a Cesar Award for Best Cinematography in 2014 also for the film \"Renoir\".",
+    "Hou Hsiao-hsien\nHou Hsiao-hsien (] born 8 April 1947) is a Taiwanese film director, screenwriter, producer and actor.\n\n He is a leading figure in world cinema and in Taiwan's New Wave cinema movement, an auteur.\n\n He won the Golden Lion at the Venice Film Festival in 1989 for his film \"A City of Sadness\" (1989), and the Best Director award at the Cannes Film Festival in 2015 for \"The Assassin\" (2015).\n\n Other highly regarded works of his include \"The Puppetmaster\" (1993) and \"Flowers of Shanghai\" (1998).",
+    "The Assassin (2015 film)\nThe Assassin (; or: \"The Assassin Niè Yǐnniáng\") is a 2015 wuxia film directed by Taiwanese director Hou Hsiao-hsien.\n\n A Taiwan/China/Hong Kong co-production, it was an official selection in the main competition section at the 2015 Cannes Film Festival.\n\n At Cannes, Hou won the award for Best Director.\n\n It was released in China and Hong Kong on 27 August, and a day later in Taiwan on 28 August 2015.\n\n It was selected as the Taiwanese entry for the Best Foreign Language Film at the 88th Academy Awards but it was not nominated.",
+    "Dust in the Wind (film)\nDust in the Wind is a 1986 film by Taiwanese filmmaker Hou Hsiao-hsien.\n\n It is based on co-screenwriter Wu Nien-jen's own experiences, and is the final part of Hou's coming-of-age trilogy, with the others being \"A Summer at Grandpa's\" (1984) and \"The Time to Live and the Time to Die\" (1985).",
+    "Academy Honorary Award\nThe Academy Honorary Award – instituted in 1948 for the 21st Academy Awards (previously called the Special Award, which was first presented in early 1929) – is given annually by the Board of Governors of the Academy of Motion Picture Arts and Sciences (AMPAS) to celebrate motion picture achievements that are not covered by existing Academy Awards, although prior winners of competitive Academy Awards are not excluded from receiving the Honorary Award.\n\n Unless otherwise specified, Honorary Award recipients receive the same gold Oscar statuettes received by winners of the competitive Academy Awards.\n\n Unlike the Special Achievement Award instituted in 1972 (and discontinued in 1995), those on whom the Academy confers its Honorary Award do not have to meet \"the Academy's eligibility year and deadline requirements.\"\n\n Like the Special Achievement Award, the Special Award and Honorary Award have been used to reward significant achievements of the year that did not fit in existing categories, subsequently leading the Academy to establish several new categories, and to honor exceptional career achievements, contributions to the motion picture industry, and service to the Academy.",
+    "The entries cover filmmakers, artists and films. Takeshi Fukunaga’s debut, *Out of My Hand* (2015), won the LA Film Festival’s top prize and earned an Independent Spirit nomination. Hou Hsiao-hsien, a Taiwan New Wave auteur, won Venice’s Golden Lion and Cannes’ Best Director award; his films include *The Assassin*, *Dust in the Wind* and *The Time to Live and the Time to Die*. Cinematographer Mark Lee",
+    "Academy Award for Best Film Editing\nThe Academy Award for Best Film Editing is one of the annual awards of the Academy of Motion Picture Arts and Sciences (AMPAS).\n\n Nominations for this award are closely correlated with the Academy Award for Best Picture.\n\n For 33 consecutive years, 1981 to 2013, every Best Picture winner had also been nominated for the Film Editing Oscar, and about two thirds of the Best Picture winners have also won for Film Editing.\n\n Only the principal, \"above the line\" editor(s) as listed in the film's credits are named on the award; additional editors, supervising editors, etc. are not currently eligible.\n\n The nominations for this Academy Award are determined by a ballot of the voting members of the Editing Branch of the Academy; there were 220 members of the Editing Branch in 2012.\n\n The members may vote for up to five of the eligible films in the order of their preference; the five films with the largest vote totals are selected as nominees.\n\n The Academy Award itself is selected from the nominated films by a subsequent ballot of all active and life members of the Academy."
+   ]
+  },
+  {
+   "id": "fb8d55a6c9174a08",
+   "gold": [
+    {
+     "sentence": " The show originally ran from 7 September 1977 to 20 November 1995, and was hosted by Gordon Burns and usually broadcast on the ITV network on Mondays at 7pm.",
+     "facts": {
+      "0.0": "The show originally ran from 7 September 1977 to 20 November 1995.",
+      "0.1": "The show was hosted by Gordon Burns.",
+      "0.2": "The show was usually broadcast on the ITV network.",
+      "0.3": "The show was usually broadcast on Mondays at 7pm."
+     }
+    },
+    {
+     "sentence": " He was the host of \"The Krypton Factor\" for its original 18-year run (1977–1995) and was the chief anchorman for the BBC regional news programme \"North West Tonight\" from January 1997 to October 2011.",
+     "facts": {
+      "1.0": "The person referred to as 'He' was the host of 'The Krypton Factor' for its original 18-year run.",
+      "1.1": "The Krypton Factor's original run was 1977–1995.",
+      "1.2": "The person referred to as 'He' was the chief anchorman for the BBC regional news programme 'North West Tonight'.",
+      "1.3": "The person referred to as 'He' was the chief anchorman for 'North West Tonight' from January 1997 to October 2011."
+     }
+    }
+   ],
+   "items": [
+    "Password (UK game show)\nPassword was a British panel game show based on the US version of the same name.\n\n It was originally aired on ITV produced by ATV from 12 March to 10 September 1963 hosted by Shaw Taylor, then it aired on BBC2 from 24 March to 28 April 1973 hosted by Brian Redhead before moving to its flagship channel BBC1 from 7 January 1974 to 1976 first hosted by Eleanor Summerfield then by Esther Rantzen, it was then aired on Channel 4 produced by Thames in association with Talbot Television and Goodson-Todman Productions from 6 November 1982 to 14 May 1983 hosted by Tom O'Connor and then finally aired back on ITV produced by Ulster from 22 July 1987 to 5 August 1988 hosted by Gordon Burns.",
+    "David Letterman\nDavid Michael Letterman (born April 12, 1947) is an American television host, comedian, writer, and producer.\n\n He hosted a late night television talk show for 33 years, beginning with the February 1, 1982 debut of \"Late Night with David Letterman\" on NBC, and ending with the May 20, 2015 broadcast of \"Late Show with David Letterman\" on CBS.\n\n In total, Letterman hosted 6,028 episodes of \"Late Night\" and \"Late Show\", surpassing friend and mentor Johnny Carson as the longest-serving late night talk show host in American television history.\n\n In 1996 Letterman was ranked 45th on \"TV Guide\"' s 50 Greatest TV Stars of All Time.",
+    "Morning Joe\nMorning Joe is a weekday NBC News morning news and talk show, airing from 6:00 a.m. to 9:00 a.m. Eastern Time on the network's cable news channel MSNBC.\n\n It features former GOP representative Joe Scarborough providing both enterprise reporting and discussion on the news of the day in a panel format with co-hosts Mika Brzezinski and Willie Geist.\n\n It was created as the replacement for \"Imus in the Morning,\" which was cancelled in April 2007 after simulcasting on MSNBC since 1996.",
+    "The Week Show\nThe Week Show is a television late night talk show sketch comedy program on Bite TV in Canada.\n\n It originally ran from December 2008 to mid-2010.\n\n The show is hosted by Matt Chin and Ricky Thompson, who started on an internet late night talk show \"My Show with Matt Chin\" online in 2001.",
+    "At Your Request\nAt Your Request was an Australian television daytime series which aired from 1958 to 1959.\n\n The series aired on Tuesdays at 2:30PM on Melbourne station HSV-7, and was hosted by baritone Charles Skase, who was also known as a radio personality.\n\n Information on this series is scarce.\n\n The series presented requested songs, but it is not clear how these songs were presented (such as whether it was a disc jockey series like \"TV Disc Jockey\", a lip-sync series like \"Hit Parade\", or a live music series like \"Sweet and Low\").\n\n The archival status of the series is also not known, although being a daytime series aired in a single city means it is unlikely (though not impossible) that kinescope recordings exist of it.",
+    "Coast to Coast AM\nCoast to Coast AM is an American late-night radio talk show that deals with a variety of topics.\n\n Most frequently the topics relate to either the paranormal or conspiracy theories.\n\n The program is distributed by Premiere Networks, both as part of its talk network and separately as a syndicated program.\n\n The program now airs seven nights a week 1:00 a.m. – 5:00 a.m. Eastern Time Zone.",
+    "A Word in Your Ear\nA Word in Your Ear is a game show that originally aired BBC1 from 19 April 1993 to 14 October 1994 then on The Family Channel from 1995.\n\n It was hosted by Gordon Burns.\n\n The host presided over male and female pairs of celebrities as they participate in a few rounds of communication games.\n\n Celebrities appearing included Lynsey De Paul, Nick Owen, Philippa Kennedy and Bob Holness.",
+    "Gordon Burns\nGordon Henry Burns (born 10 June 1942) is a Northern Irish journalist and broadcaster.\n\n He was the host of \"The Krypton Factor\" for its original 18-year run (1977–1995) and was the chief anchorman for the BBC regional news programme \"North West Tonight\" from January 1997 to October 2011.\n\n In November 2011 Gordon moved back to Belfast were he was born.",
+    "Gordon Burns (footballer)\nGordon Burns (born 2 December 1978) is a Scottish former professional footballer who is currently manager of Troon in the Scottish Junior Football Association, West Region.\n\n He has previously played in the Scottish Championship for Ayr United.",
+    "The Krypton Factor\nThe Krypton Factor is a British game show produced by Granada for broadcast on ITV.\n\n The show originally ran from 7 September 1977 to 20 November 1995, and was hosted by Gordon Burns and usually broadcast on the ITV network on Mondays at 7pm."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,69 @@
+[
+{"id": "3f0ab242ce872c1c", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Kelce confessed that he tried and failed to give Swift a friendship bracelet with his number on it during her Eras Tour show."}]},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium - an invitation she famously accepted on 24 September. Since then, Swift has attended three more of Kelce’s games."}]},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 7, "quote": "Taylor Swift reveals secret start to her relationship with Travis Kelce"}, {"item": 7, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]}
+]},
+{"id": "3461843f84b2ecae", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Caroline Ellison, Bankman-Fried’s ex-girlfriend."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics"}]},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []},
+{"fact": "3.2", "status": "missing", "evidence": []},
+{"fact": "3.3", "status": "missing", "evidence": []},
+{"fact": "3.4", "status": "missing", "evidence": []}
+]},
+{"id": "c56fbdc6d5ff6100", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "For all their own flaws Bayern are basically a good version of whatever it is United are attempting to piece together."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "For all their own flaws Bayern are basically a good version of whatever it is United are attempting to piece together."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "they find themselves out of Europe altogether"}, {"item": 10, "quote": "Manchester United, one of the grandest and richest names in this competition, have again gone out of the Champions League at the group stage."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "It was another utterly forgettable display."}, {"item": 10, "quote": "Another infamous European night at Old Trafford. It should be a landmark low, but almost the most deflating element of this 1-0 defeat to Bayern Munich"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "Bayern made it 1-0 in Manchester. Kingsley Coman got it"}, {"item": 5, "quote": "Kingsley Coman’s winning goal"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "the Bayern coach, Thomas Tuchel, said"}, {"item": 8, "quote": "Bayern made it 1-0 in Manchester. Kingsley Coman got it"}]}
+]},
+{"id": "cbdd0e7364ca93bf", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "The updated display is the highlight of the device, while things like faster charging, improved antennas and smoother haptics are welcome bonuses."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "The updated display is the highlight of the device, while things like faster charging, improved antennas and smoother haptics are welcome bonuses."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "As its name suggests, the most noticeable upgrade to the Steam Deck OLED is the display."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+]},
+{"id": "a18a42dcceb9dfbe", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "But it was ChatGPT’s explosion into public consciousness that thrust Altman into the spotlight as a face of generative AI"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "But it was ChatGPT’s explosion into public consciousness that thrust Altman into the spotlight as a face of generative AI"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "technology that can produce novel imagery, passages of text and other media."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "technology that can produce novel imagery, passages of text and other media."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 10, "quote": "technology that can produce novel imagery, passages of text and other media."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Sam Altman backs teens’ startup"}]},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]}
+]},
+{"id": "c1bd6289bbe65e33", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "For the masses of NFL fans across the U.S., Thursday's clash between the Lions and Packers will be aired on Amazon Prime Video."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "For the masses of NFL fans across the U.S."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "For the masses of NFL fans across the U.S., Thursday's clash between the Bears and Panthers will be aired on Amazon Prime Video."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "For the masses of NFL fans across the U.S."}]}
+]}
+]

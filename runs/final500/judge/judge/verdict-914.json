@@ -1,0 +1,946 @@
+[
+ {
+  "id": "ecfbc23f7857a444",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The village of New Earswick was built as a genuine mixed community ."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "There was housing for both workers and managers ,"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "There was housing for both workers and managers , in a green setting"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "in a green setting with gardens for each home with its own 2 fruit trees"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "in a green setting with gardens for each home with its own 2 fruit trees"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "It was founded by the York philanthropist , Joseph Rowntree"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "who was quoted as saying , `` I do not want to establish communities bearing the stamp of charity but rather of rightly ordered and self governing communities ''"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "The first 28 houses were built between 1902 and 1904"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "The first 28 houses were built between 1902 and 1904 by the architect Raymond Unwin"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "after which the Joseph Rowntree Village Trust ( now the Joseph Rowntree Housing Trust ) was established to continue building and manage the new village"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "The Joseph Rowntree Housing Trust is part of the Joseph Rowntree Foundation"
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "As a result of the report , Joseph Rowntree 's conviction that it must be"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Joseph Rowntree 's conviction that it must be possible to provide better housing for people on low incomes"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "led him to acquire 150 acres of land near the village of Earswick"
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "near the village of Earswick , two and a half miles to the north of the centre of York"
+     }
+    ]
+   },
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "The planner Raymond Unwin and the architect Barry Parker were commissioned to produce an overall plan for a new ' garden ' village"
+     }
+    ]
+   },
+   {
+    "fact": "1.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "The planner Raymond Unwin and the architect Barry Parker were commissioned to produce an overall plan for a new ' garden ' village and the detailed designs for its first houses"
+     }
+    ]
+   },
+   {
+    "fact": "1.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "They also designed the garden cities of Letchworth and Welwyn Garden City"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "c6a40e377e703719",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.5",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.6",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.7",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.8",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.9",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.10",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.11",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.12",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.13",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "1213c8f4b3e49410",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "After their plane crashes in the woods , Dr. Meredith Grey ( Ellen Pompeo ) , Dr. Lexie Grey ( Chyler Leigh ) , Dr. Cristina Yang ( Sandra Oh ) , Dr. Arizona Robbins ( Jessica Capshaw ) , Dr. Derek Shepherd ( Patrick Dempsey ) , and Dr. Mark Sloan ( Eric Dane ) desperately fight to stay alive"
+     },
+     {
+      "item": 7,
+      "quote": "After a plane crash, six doctors fight"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Dr. Meredith Grey ( Ellen Pompeo )"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Dr. Lexie Grey ( Chyler Leigh )"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Dr. Cristina Yang ( Sandra Oh )"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Dr. Arizona Robbins ( Jessica Capshaw )"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Dr. Derek Shepherd ( Patrick Dempsey )"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Dr. Mark Sloan ( Eric Dane )"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Meredith is relatively unscathed"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "while the rest have serious injuries"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "the pilot , Jerry ( James LeGros ) , has a major spine injury"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Yang dislocates her arm"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Robbins ' femur is broken and sticking through the skin"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Sloan has serious internal injuries"
+     }
+    ]
+   },
+   {
+    "fact": "0.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Sloan has serious internal injuries ; though initially adrenaline keeps him on his feet"
+     }
+    ]
+   },
+   {
+    "fact": "0.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Shepherd is sucked out the side of the plane and awakens alone in the wood"
+     }
+    ]
+   },
+   {
+    "fact": "0.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "his mangled hand having been pushed through the door of the plane"
+     }
+    ]
+   },
+   {
+    "fact": "0.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "none are in as bad shape as Lexie"
+     }
+    ]
+   },
+   {
+    "fact": "0.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Lexie , who is crushed under a piece of the plane"
+     }
+    ]
+   },
+   {
+    "fact": "0.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "While Meredith searches for Shepherd , Yang and Sloan try to move the debris off Lexie"
+     }
+    ]
+   },
+   {
+    "fact": "0.19",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Yang and Sloan try to move the debris off Lexie . Eventually , the two realize that they can not save her"
+     }
+    ]
+   },
+   {
+    "fact": "0.20",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "so Sloan holds her hand while she dies"
+     }
+    ]
+   },
+   {
+    "fact": "0.21",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "so Sloan holds her hand while she dies , telling her that he loves her"
+     }
+    ]
+   },
+   {
+    "fact": "0.22",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "As Sloan tells her of the life the two were meant to have together"
+     }
+    ]
+   },
+   {
+    "fact": "0.23",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Lexie dies with a smile on her face just as Meredith and Yang are approaching"
+     }
+    ]
+   },
+   {
+    "fact": "0.24",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Lexie dies with a smile on her face just as Meredith and Yang are approaching"
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "written by Shonda Rhimes and directed by Rob Corn"
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "written by Shonda Rhimes and directed by Rob Corn"
+     }
+    ]
+   },
+   {
+    "fact": "1.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "In the episode , six doctors from Seattle Grace Mercy West Hospital who are victims of an aviation accident fight to stay alive"
+     }
+    ]
+   },
+   {
+    "fact": "1.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "but Dr. Lexie Grey ( Chyler Leigh ) ultimately dies"
+     }
+    ]
+   },
+   {
+    "fact": "1.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Other storylines occur in Seattle"
+     }
+    ]
+   },
+   {
+    "fact": "1.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Dr. Richard Webber ( James Pickens , Jr . ) plans his annual dinner for the departing residents"
+     }
+    ]
+   },
+   {
+    "fact": "1.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Dr. Owen Hunt ( Kevin McKidd ) fires Dr. Teddy Altman ( Kim Raver )"
+     }
+    ]
+   },
+   {
+    "fact": "1.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Dr. Miranda Bailey ( Chandra Wilson ) gets engaged"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "e4cd9c3c7c2f2701",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "With the Intertropical Convergence Zone ( ITCZ ) swinging northward over West Africa from the Southern Hemisphere in April"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "in April , heavy showers coming from pre-monsoonal convective clouds mainly in the form of squall lines"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "squall lines also known as the north easterlies"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "formed mainly as a result of the interactions of the two dominant airmasses in Nigeria known as the Maritime tropical ( south westerlies ) and the Continental tropical ( north easterlies )"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "formed mainly as a result of the interactions of the two dominant airmasses in Nigeria known as the Maritime tropical ( south westerlies ) and the Continental tropical ( north easterlies )"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "heavy showers coming from pre-monsoonal convective clouds mainly in the form of squall lines also known as the north easterlies formed mainly as a result of the interactions of the two dominant airmasses in Nigeria known as the Maritime tropical ( south westerlies ) and the Continental tropical ( north easterlies ) , begins in central Nigeria"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "the Monsoons from the south atlantic ocean arrives in central Nigeria in July"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "the Monsoons from the south atlantic ocean arrives in central Nigeria in July bringing with it high humidity , heavy cloud cover and heavy rainfall"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "arrives in central Nigeria in July bringing with it high humidity , heavy cloud cover and heavy rainfall which can be daily occurrence lasting till September"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "can be daily occurrence lasting till September"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "lasting till September when the monsoons gradually begin retreating southward to the southern part of Nigeria"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Rainfall totals in central Nigeria varies from 1,100 mm ( 43.3 in ) in the lowlands of the river Niger Benue trough"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "to over 2,000 mm ( 78.7 in ) along the south western escarpment of the Jos Plateau"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "e0be8205808d10e8",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Spektor wrote and recorded the main title theme song , `` You 've Got Time '' , for the Netflix Original series Orange Is the New Black"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Spektor wrote and recorded the main title theme song , `` You 've Got Time '' , for the Netflix Original series Orange Is the New Black"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "for the Netflix Original series Orange Is the New Black , which premiered in July 2013"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "It was nominated in the Best Song Written for Visual Media category at the 56th Annual Grammy Awards"
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Regina wrote and recorded `` You 've Got Time '' to be the theme song for the Netflix Original Series Orange is the New Black"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Regina wrote and recorded `` You 've Got Time '' to be the theme song for the Netflix Original Series Orange is the New Black"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Orange is the New Black which premiered in 2013"
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "ea80cf96d5cbfea5",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The largest number of loyalists were found in the middle colonies : many tenant farmers of New York supported the king"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "were angry when forced by the Patriots to declare their opposition"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.5",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.6",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.7",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.8",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.9",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.10",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "New York City and Long Island were the British military and political base of operations in North America from 1776 to 1783 and had a large concentration of Loyalists , many of whom were refugees from other states"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "William Franklin ( ca . 1730 -- 1813 ) , Governor of New Jersey , son of Benjamin Franklin"
+     }
+    ]
+   },
+   {
+    "fact": "0.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "William Franklin ( ca . 1730 -- 1813 ) , Governor of New Jersey , son of Benjamin Franklin"
+     }
+    ]
+   },
+   {
+    "fact": "0.14",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.15",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.16",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ }
+]

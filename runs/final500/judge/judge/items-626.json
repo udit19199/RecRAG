@@ -1,0 +1,461 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "15c5548a0e18a734",
+   "gold": [
+    {
+     "sentence": "Pulandian District () is one of the seven districts under the administration of Dalian, located in the south of Liaoning province, People's Republic of China.",
+     "facts": {
+      "0.0": "Pulandian District is one of the seven districts under the administration of Dalian.",
+      "0.1": "Pulandian District is located in the south of Liaoning province.",
+      "0.2": "Liaoning province is in the People's Republic of China."
+     }
+    },
+    {
+     "sentence": "Kaiyuan () is a county-level city in the northeast of Liaoning, People's Republic of China, bordering Jilin for a small section to the north.",
+     "facts": {
+      "1.0": "Kaiyuan is a county-level city.",
+      "1.1": "Kaiyuan is in the northeast of Liaoning.",
+      "1.2": "Liaoning is in the People's Republic of China.",
+      "1.3": "Kaiyuan borders Jilin for a small section to the north."
+     }
+    }
+   ],
+   "items": [
+    "Kaiyuan West Railway Station\nKaiyuan West Railway Station is a railway station of Hada Passenger Railway and located in Liaoning, China",
+    "Kaiyuan, Liaoning\nKaiyuan () is a county-level city in the northeast of Liaoning, People's Republic of China, bordering Jilin for a small section to the north.\n\n It is under the administration of Tieling City, the centre of which lies 33 km to the southwest.",
+    "Pulandian District\nPulandian District () is one of the seven districts under the administration of Dalian, located in the south of Liaoning province, People's Republic of China.\n\n Its area is 2769.90 km² and its permanent population as of 2010 is 741,230.\n\n The district borders the prefecture-level city of Yingkou to the north.",
+    "Fuzhoucheng\nFuzhou, also Fuzhoucheng () is a town under the administration of Wafangdian City, in southern Liaoning province, China.\n\n It lies at the intersection of China National Highway 202 and Liaoning Provincial Highway 313, 57 km north by road from Pulandian.\n\n Dahe Reservoir is located several kilometres to the east.\n\n There is a 74,132 acres (30,000 hectares) bird reserve nearby with species such as Swan goose and Hooded crane about 15 km southwest of the town.\n\n , it has 2 residential communities (社区) and 14 villages under its administration.",
+    "Shuangta, Pulandian\nShuangta () is a town under the administration of Pulandian City in southern Liaoning province, China, located 58 km northeast of downtown Pulandian and about 120 km northeast of Dalian.\n\n , it has 9 villages under its administration.",
+    "Entries describe Chinese and Korean places, people, and organizations: Pungdo is an inhabited Yellow Sea island in Ansan, South Korea. Liaoning locations include Pulandian (2,770 km²; 741,230 people), Longkou (620,000), Kaiyuan, Qinghe District, Shuangta, Taiyang, Xingcheng, and Kaiyuan West station. Politicians Du Zheheng (1910–75), Liaoning’s first governor",
+    "Longkou\nLongkou (), formerly Huang County (), is a port city in northeastern Shandong province, China, facing the Bohai Sea to the north and the Laizhou Bay to the west.\n\n Longkou, a county-level city, is administered by the prefecture-level city of Yantai.\n\n The total population of Longkou is 620,000.",
+    "Qinghe District, Tieling\nQinghe District () is a district of Tieling, Liaoning province, People's Republic of China.\n\n However, it is located closer to Kaiyuan City than it is to downtown Tieling, which lies 39 km to the southwest.",
+    "Taiyang Subdistrict\nTaiyang Subdistrict () is a subdistrict of Wafangdian, Dalian District, Liaoning, China.\n\n It is based around the small town of Taiyang, Taiyangsheng or Taiyangshengxiang, which lies 19 kilometres east by road of Fuzhou, 64 kilometres north by road from Pulandian.\n\n To the east is the DFM reservoir.",
+    "Xingcheng\nXingcheng (), former name Ningyuan (宁远), is a county-level city of southwest Liaoning province, China, with a population of approximately 140,000 urban inhabitants, and is located on the Liaodong Bay, i.e. the northern coast of the Bohai Sea.\n\n Currently under the administration of Huludao City, the area is steeped in history, and contains one of the best preserved Ming Dynasty towns in China, as well as functioning as a laidback summer resort."
+   ]
+  },
+  {
+   "id": "5ed70ea2d7bd62c1",
+   "gold": [
+    {
+     "sentence": " Launched in 2006 and backed by Canadian industrialist David Harrison Gilmour (the founder of FIJI Water LLC), the bimonthly magazine is distributed by Zinio Systems, Inc.",
+     "facts": {
+      "0.0": "The magazine was launched in 2006.",
+      "0.1": "The magazine is backed by Canadian industrialist David Harrison Gilmour.",
+      "0.2": "David Harrison Gilmour is the founder of FIJI Water LLC.",
+      "0.3": "The magazine is bimonthly.",
+      "0.4": "The magazine is distributed by Zinio Systems, Inc."
+     }
+    },
+    {
+     "sentence": " The first issue appeared in January-February 2007.",
+     "facts": {
+      "1.0": "The first issue of the magazine appeared in January-February 2007."
+     }
+    },
+    {
+     "sentence": "La Belle Assemblée (in full La Belle Assemblée or, Bell's Court and Fashionable Magazine Addressed Particularly to the Ladies) was a British women's magazine published from 1806 to 1837, founded by John Bell (1745–1831).",
+     "facts": {
+      "2.0": "La Belle Assemblée is also known in full as 'La Belle Assemblée or, Bell's Court and Fashionable Magazine Addressed Particularly to the Ladies'.",
+      "2.1": "La Belle Assemblée was a British women's magazine.",
+      "2.2": "La Belle Assemblée was published from 1806 to 1837.",
+      "2.3": "La Belle Assemblée was founded by John Bell.",
+      "2.4": "John Bell lived from 1745 to 1831."
+     }
+    }
+   ],
+   "items": [
+    "Bogle-L'Ouverture Publications\nBogle-L’Ouverture Publications (BLP) is a radical London-based publishing company founded in 1968 by Guyanese activists Jessica Huntley (23 February 1927 – 13 October 2013) and Eric Huntley (born 25 September 1929).\n\n Named in honour of two outstanding liberation fighters in Caribbean history, Toussaint L'Ouverture and Paul Bogle, the company began operating during a period in the UK when \"books by Black authors or written with a sympathetic view of Black people’s history and culture were rare in mainstream bookshops in the UK.\"\n\n Alongside New Beacon Books (founded in 1966) and Allison & Busby (founded in 1967), BLP was one of the first black-owned independent publishing companies in the UK.\n\n BLP has been described as \"a small, unorthodox, self-financing venture that brought a radical perspective to non-fiction, fiction, poetry and children's books.\"",
+    "VIVmag\nVIVmag is one of the earliest exclusively digital, interactive women's lifestyle magazines.\n\n Launched in 2006 and backed by Canadian industrialist David Harrison Gilmour (the founder of FIJI Water LLC), the bimonthly magazine is distributed by Zinio Systems, Inc.\n\n The first issue appeared in January-February 2007.\n\n There is no print version.\n\n The paperless title can be viewed in most browsers or downloaded to your computer and read via the Zinio Reader.\n\n The magazine is based in Thousand Oaks, California.",
+    "Diva (magazine)\nDIVA is a leading lesbian magazine in the United Kingdom, published monthly.\n\n It was launched in March 1994 by Millivres Ltd, under the editorship of Frances Williams and is now published by Twin Media Group, which is owned by Silke Bader and Linda Riley.\n\n Silke Bader is also the publisher of Curve magazine in the USA and LOTL in Australia, and Linda Riley runs the European Diversity Awards and is the former publisher of g3 magazine in the UK.",
+    "Annales de chimie et de physique\nAnnales de chimie et de physique (French for \"Annals of Chemistry and of Physics\") is a scientific journal that was founded in Paris, France, in 1789 under the title \"Annales de chimie\".\n\n One of the early editors was the French chemist Antoine Lavoisier.\n\n In 1815, it became the \"Annales de chimie et de physique\", and was published under that name for the next 100 years.",
+    "British National Bibliography\nBritish National Bibliography (BNB) was established to publish a list of the books, journals and serials that are published in the United Kingdom and Republic of Ireland.\n\n It also includes information on forthcoming titles.\n\n New books and serials have been recorded in the British National Bibliography (BNB) since 1950.\n\n The British National Bibliography was first established at the British Museum.\n\n This is the single most comprehensive listing of UK titles.\n\n UK and Irish publishers are obliged by legal deposit to send a copy of all new publications, including serial titles to BNB for listing.\n\n The BNB publish the list weekly in electronic form: the last printed weekly list appeared in December 2011.",
+    "Louis Coues Page\nLouis Coues Page (1869–1956) was a publisher in Boston, Massachusetts.\n\n Born in Zurich to American parents, he attended Harvard College and worked for Boston publishers Estes & Lauriat, 1891–1892.\n\n In 1896 he bought the Joseph Knight Company and renamed it L.C. Page & Company; around 1914 it became The Page Company.\n\n It issued works of \"art, travel, music, belles lettres\" and fiction for adults and children.\n\n It operated from offices on Beacon Street in Beacon Hill.\n\n Authors published by the firm included Bliss Carman, Julia Caroline Dorr, Lucy Maud Montgomery, and Eleanor H. Porter.\n\n In 1914 the Page Company acquired Dana Estes & Co.",
+    "La Belle Assemblée\nLa Belle Assemblée (in full La Belle Assemblée or, Bell's Court and Fashionable Magazine Addressed Particularly to the Ladies) was a British women's magazine published from 1806 to 1837, founded by John Bell (1745–1831).",
+    "Elle (magazine)\nElle is a worldwide lifestyle magazine of French origin that focuses on fashion, beauty, health, and entertainment.\n\n \"Elle\" is also the world's best-selling fashion magazine.\n\n It was founded by Pierre Lazareff and his wife Hélène Gordon in 1945.\n\n The title, in French, means \"she\" or \"her\".",
+    "SexIs\nSexIs Magazine is a quarterly print publication and daily webzine devoted to sex and sexual culture, founded in 2008 by Web Merchants, parent company of sex toy e-tailer EdenFantasys.com.\n\n The first print issue debuted in November 2009, distributed nationwide as an insert in \"BUST magazine\".\n\n The website publishes articles, columns, video presentations and news items daily.",
+    "Auguste Brancart\nAugust or Auguste Brancart (21 July 1851 - 1894?)\n\n was a Belgian publisher of pornographic literature, credited with the first publication of \"My Secret Life\".\n\n He published translations of English pornography into French and vice versa for English publishers such as Edward Avery.\n\n He also published work of the Decadent movement such as \"Monsieur Vénus\" by Rachilde."
+   ]
+  },
+  {
+   "id": "38f91e3a516caa4a",
+   "gold": [
+    {
+     "sentence": "The Seven Days Battles were a series of six major battles over the seven days from June 25 to July 1, 1862, near Richmond, Virginia, during the American Civil War.",
+     "facts": {
+      "0.0": "The Seven Days Battles were a series of six major battles.",
+      "0.1": "The Seven Days Battles were fought over the seven days from June 25 to July 1, 1862.",
+      "0.2": "The Seven Days Battles were fought near Richmond, Virginia.",
+      "0.3": "The Seven Days Battles took place during the American Civil War."
+     }
+    },
+    {
+     "sentence": "The Battle of Manila (February 3, 1945 – March 3, 1945) was a major battle of the Philippine campaign of 1944-45, during the Second World War.",
+     "facts": {
+      "1.0": "The Battle of Manila took place from February 3, 1945 to March 3, 1945.",
+      "1.1": "The Battle of Manila was a major battle of the Philippine campaign of 1944-45.",
+      "1.2": "The Battle of Manila took place during the Second World War."
+     }
+    }
+   ],
+   "items": [
+    "Seven Days Battles\nThe Seven Days Battles were a series of six major battles over the seven days from June 25 to July 1, 1862, near Richmond, Virginia, during the American Civil War.\n\n Confederate General Robert E. Lee drove the invading Union Army of the Potomac, commanded by Maj. Gen. George B. McClellan, away from Richmond and into a retreat down the Virginia Peninsula.\n\n The series of battles is sometimes known erroneously as the Seven Days Campaign, but it was actually the culmination of the Peninsula Campaign, not a separate campaign in its own right.",
+    "Battle of Bataan\nThe surrender at Bataan, with 76,000 soldiers surrendering in the Philippines altogether, was the largest in American and Filipino military histories, and was the largest United States surrender since the American Civil War's Battle of Harper's Ferry.\n\n Soon afterwards, Filipino and American prisoners of war were forced into the Bataan Death March.",
+    "Battle of Manila (1898)\nThe Battle of Manila, sometimes called the Mock Battle of Manila, was a land engagement which took place in Manila on August 13, 1898, at the end of the Spanish–American War, four months after the decisive victory by Commodore Dewey's Asiatic Squadron at the Battle of Manila Bay.\n\n The belligerents were Spanish forces led by Governor-General of the Philippines Fermín Jáudenes, and American forces led by United States Army Brigadier General Wesley Merritt and United States Navy Commodore George Dewey.\n\n American forces were supported by units of the Philippine Revolutionary Army, led by Emilio Aguinaldo.",
+    "Seven Days Confederate order of battle\nThe following Confederate States Army units and commanders fought in the Seven Days Battles (from June 25 to July 1, 1862) of the American Civil War.\n\n Order of battle compiled from the army organization during the battle, the casualty returns and the reports.\n\n The Union order of battle is listed separately.",
+    "Battle of Manila (1574)\nThe Battle of Manilla (1574) was a battle in the Manila area mainly in the location of what is now Parañaque between Chinese pirates, led by Limahong and the Spanish colonial forces and their native allies.\n\n The battle occurred on November 29, 1574 when Limahong's fleet landed in the town of Parañaque and from there, began to assault the fortifications of Intramuros.\n\n Initially, the inhabitants where disorganized and Limahong's forces routed them.\n\n Furthermore, the Chinese killed the Master-of-Camp of the Spanish, Martin De Goiti.\n\n This caused them to delay their assault on Manila as Martin de Goiti's house was an obstacle in their march.\n\n However, upon the arrival of a certain Filipino hero called, Galo, resistance started to organize.\n\n Under Galo's command, they were able to resist China-born Limahong until Mexico-born Juan de Salcedo arrived from Ilocos with 300 Ilocano Warriors and Limahong was defeated and eventually forced to retreat.\n\n Thereafter Limahong abandoned his plans to invade Manila and instead, set up a temporary kingdom in Pangasinan.",
+    "Battle of Guam (1944)\nThe Second Battle of Guam (21 July – 10 August 1944) was the American recapture of the Japanese-held island of Guam, a U.S. territory in the Mariana Islands captured by the Japanese from the U.S. in the 1941 First Battle of Guam during the Pacific campaign of World War II.",
+    "Battle of Manila (1945)\nThe Battle of Manila (February 3, 1945 – March 3, 1945) was a major battle of the Philippine campaign of 1944-45, during the Second World War.\n\n It was fought by American and Filipino forces against Japanese troops in Manila, the capital city of the Philippines.\n\n The month-long battle, which resulted in the death of over 100,000 civilians and the complete devastation of the city, was the scene of the worst urban fighting in the Pacific theater.\n\n Japanese forces committed mass murder against Filipino civilians during the battle.\n\n Along with massive loss of life, the battle also destroyed architectural and cultural heritage dating back to the city's foundation.\n\n The battle ended the almost three years of Japanese military occupation in the Philippines (1942–1945).\n\n The city's capture was marked as General Douglas MacArthur's key to victory in the campaign of reconquest.",
+    "Battle of Guam (1941)\nThe First Battle of Guam was an engagement during the Pacific War in World War II, and took place from 8 December to 10 December 1941 on Guam in the Mariana Islands between Japan and the United States.\n\n The American garrison was defeated by Japanese forces on 10 December, which resulted in an occupation until the Second Battle of Guam in 1944.",
+    "Seven Days Union order of battle\nThe following Union Army units and commanders fought in the Seven Days Battles (from June 25 to July 1, 1862) of the American Civil War.\n\n Order of battle compiled from the army organization-return of casualties during the battle and the reports.\n\n The Confederate order of battle is listed separately.",
+    "Battle of Bataan\nThe Battle of Bataan (7 January – 9 April 1942) represented the most intense phase of Imperial Japan's invasion of the Philippines during World War II.\n\n In January 1942, forces of the Imperial Japanese Army and Navy invaded Luzon along with several islands in the Philippine Archipelago after the bombing of the American naval base at Pearl Harbor.\n\n The commander-in-chief of all Filipino and American forces in the islands, General Douglas MacArthur, consolidated all of his Luzon-based units on the Bataan Peninsula to fight against the Japanese invaders.\n\n By this time, the Japanese controlled nearly all of Southeast Asia.\n\n The Bataan peninsula and the island of Corregidor were the only remaining Allied strongholds in the region.\n\n Despite a lack of supplies, Filipino and American forces managed to fight the Japanese for three months, engaging them initially in a fighting retreat southward.\n\n As the combined Filipino and American forces made a last stand, the delay cost the Japanese valuable time and prevented immediate victory across the Pacific."
+   ]
+  },
+  {
+   "id": "3e8d8ed6c839a0e4",
+   "gold": [
+    {
+     "sentence": "Colocasia is a genus of flowering plants in the family Araceae, native to southeastern Asia and the Indian subcontinent.",
+     "facts": {
+      "0.0": "Colocasia is a genus of flowering plants.",
+      "0.1": "Colocasia is in the family Araceae.",
+      "0.2": "Colocasia is native to southeastern Asia.",
+      "0.3": "Colocasia is native to the Indian subcontinent."
+     }
+    },
+    {
+     "sentence": "The genus Coronilla contains about 20 species of flowering plants native to Europe and North Africa.",
+     "facts": {
+      "1.0": "The genus Coronilla contains about 20 species.",
+      "1.1": "The Coronilla species are flowering plants.",
+      "1.2": "The Coronilla species are native to Europe.",
+      "1.3": "The Coronilla species are native to North Africa."
+     }
+    }
+   ],
+   "items": [
+    "Caladium\nCaladium is a genus of flowering plants in the family Araceae.\n\n They are often known by the common name elephant ear (which they share with the closely related genera \"Alocasia\", \"Colocasia\", and \"Xanthosoma\"), Heart of Jesus, and Angel Wings.\n\n There are over 1000 named cultivars of \"Caladium bicolor\" from the original South American plant.",
+    "Conicosia\nConicosia is a genus of succulent plants in the ice plant family native to southern Africa.\n\n They are known commonly as narrow-leafed ice plants.\n\n These are relatively short-lived perennials with underground stems and tentacle-shaped, dull-pointed triangular leaves.\n\n They bear large tubular flowers often exceeding 10 centimeters in width, with up to 250 fringelike petals arranged in a ring around a center with hundreds of stamens.\n\n The fruit is a capsule which opens when it gets wet, slowly releasing the hundreds of tiny seeds as they fall out of its drying flesh.",
+    "Xanthosoma\nXanthosoma is a genus of flowering plants in the arum family, Araceae.\n\n The genus is native to tropical America but widely cultivated and naturalized in other tropical regions.\n\n Several are grown for their starchy corms, an important food staple of tropical regions, known variously as \"malanga\", \"otoy\", \"otoe\", cocoyam (or new cocoyam), \"tannia\", \"tannier\", \"yautía\", \"macabo\", \"ocumo\", \"macal\", \"taioba\", \"dasheen\", \"quequisque\", \"ʻ ape\" and (in Papua New Guinea) as Singapore taro (\"taro kongkong\").\n\n Many other species (including especially \"X. roseum\") are used as ornamental plants, and in popular horticultural literature are known as ‘ape or elephant ear (from the purported resemblance of the leaf to an elephant's ear), although the latter name is sometimes also applied to members with similar appearance and uses in the closely related genera \"Caladium\", \"Colocasia\" (i.e., taro), and \"Alocasia\".",
+    "Aspidistra\nAspidistra is a genus of flowering plants in the family Asparagaceae, subfamily Nolinoideae, native to eastern and southeastern Asia, particularly China and Vietnam.\n\n They grow in shade under trees and shrubs.\n\n Their leaves arise more or less directly from ground level, where their flowers also appear.\n\n The number of species known has increased considerably from the 1980s onwards, with around 100 accepted as of July 2013 . \"\n\nAspidistra elatior\" is common worldwide as a foliage house plant that is very tolerant of neglect.\n\n It and other species can also be grown in shade outside, where they are generally hardy to -5 C .",
+    "Strobilanthes\nStrobilanthes is a genus of about 350 species of flowering plants in the family Acanthaceae, mostly native to tropical Asia and Madagascar, but with a few species extending north into temperate regions of Asia.\n\n Many species are cultivated for their 2-lipped, hooded flowers in shades of blue, pink, white and purple.\n\n Most are frost-tender and require protection in frost-prone areas.",
+    "Caryophyllales\nCaryophyllales ( ) is an order of flowering plants that includes the cacti, carnations, amaranths, ice plants, beets, and many carnivorous plants.\n\n Many members are succulent, having fleshy stems or leaves.",
+    "Colocasia\nColocasia is a genus of flowering plants in the family Araceae, native to southeastern Asia and the Indian subcontinent.\n\n Some species are widely cultivated and naturalized in other tropical and subtropical regions.\n\n Common names include tarul, karkala ko ganu, elephant-ear, taro, cocoyam, dasheen, chembu, champadhumpa, shavige gadde, and eddoe.\n\n Elephant-ear and cocoyam are also used for some other large-leaved genera in the Araceae, notably \"Xanthosoma\" and \"Caladium\".\n\n The generic name is derived from the ancient Greek word \"kolokasion\", which in the Greek botanist Dioscorides (1st century AD) meant the edible roots of both \"Colocasia esculenta\" and \"Nelumbo nucifera\".\n\n It is thought that the edible roots of \"Colocasia esculenta\" have been cultivated in Asia for more than ten thousand years.\n\n The species \"Colocasia esculenta\" is an invasive species in wetlands along the American Gulf coast, where it threatens to displace native wetland plants.",
+    "Alismataceae\nThe water-plantains (Alismataceae) are a family of flowering plants, comprising 11 genera and between 85 and 95 species.\n\n The family has a cosmopolitan distribution, with the greatest number of species in temperate regions of the Northern Hemisphere.\n\n Most of the species are herbaceous aquatic plants growing in marshes and ponds.",
+    "Coronilla\nThe genus Coronilla contains about 20 species of flowering plants native to Europe and North Africa.",
+    "Thonningia\nThonningia is a monotypic genus of flowering plants in the family Balanophoraceae containing the single species Thonningia sanguinea.\n\n It is distributed throughout much of southern and western Africa, particularly the tropical regions.\n\n Common names for the plant include ground pineapple.\n\n A familiar plant to humans, it has an extremely long list of common names in many African languages.\n\n Many names are inspired by the resemblance of the plant's inflorescence to a pineapple or palm tree.\n\n Some of the names can be translated as pineapple of the bush (from Anyi), duiker's kolanut (from Igala), and crown of the ground (from Yoruba)."
+   ]
+  },
+  {
+   "id": "624f6be55b1a4783",
+   "gold": [
+    {
+     "sentence": "Park Sung-woong (born January 9, 1973) is a South Korean actor.",
+     "facts": {
+      "0.0": "Park Sung-woong was born on January 9, 1973.",
+      "0.1": "Park Sung-woong is a South Korean actor."
+     }
+    },
+    {
+     "sentence": " Following his acting debut in \"No. 3\" in 1997, Park has starred in several movies and television series, notably as a gangster in \"New World\" (2013) and a serial killer in \"The Deal\" (2015).",
+     "facts": {
+      "1.0": "Park Sung-woong made his acting debut in 'No. 3' in 1997.",
+      "1.1": "Park Sung-woong has starred in several movies and television series.",
+      "1.2": "Park Sung-woong notably starred as a gangster in 'New World' (2013).",
+      "1.3": "Park Sung-woong notably starred as a serial killer in 'The Deal' (2015)."
+     }
+    },
+    {
+     "sentence": "The Deal (; lit.",
+     "facts": {
+      "2.0": "The Deal's literal translation is given in the next sentence, after the 'lit.' marker."
+     }
+    },
+    {
+     "sentence": " \"Murder Request\") is a 2015 South Korean crime thriller film directed by Son Yong-ho.",
+     "facts": {
+      "3.0": "The literal translation of The Deal is 'Murder Request'.",
+      "3.1": "The Deal is a 2015 South Korean crime thriller film.",
+      "3.2": "The Deal was directed by Son Yong-ho."
+     }
+    }
+   ],
+   "items": [
+    "Office (2015 South Korean film)\nOffice (오피스 ) is 2015 South Korean slasher-thriller film directed by Hong Won-chan and starring Go Ah-sung and Park Sung-woong.\n\n It is about a detective trying to figure out why a mild-mannered man has killed his family and is targeting his co-workers.\n\n The film premiered at the Midnight Screenings section of the 2015 Cannes Film Festival.",
+    "Fatal Intuition\nFatal Intuition (; lit.\n\n \"It's Him\") is a 2015 South Korean crime thriller film written and directed by Yun Jun-hyeong.",
+    "A Company Man\nA Company Man () is a 2012 South Korean action thriller film starring So Ji-sub, Lee Mi-yeon, Kwak Do-won and Kim Dong-jun.\n\n It is about a hitman who find himself targeted by his ex-employers after he falls in love with a single mother and quits his job.",
+    "A Violent Prosecutor\nA Violent Prosecutor is a 2016 South Korean crime film directed by Lee Il-hyung, produced by Guk Su Ran and starring Hwang Jung-min, Kang Dong-won, Lee Sung-min and Park Sung-woong.\n\n It was released in South Korea on February 3, 2016 by Showbox.",
+    "The Deal (2015 film)\nThe Deal (; lit.\n\n \"Murder Request\") is a 2015 South Korean crime thriller film directed by Son Yong-ho.",
+    "Deep Trap\nDeep Trap () (previously known as Exchange) is a 2015 South Korean crime thriller film starring Ma Dong-seok, Jo Han-sun and Kim Min-kyung, and directed by Kwon Hyung-jin.\n\n Based on an actual SNS crime, it depicts the terror experienced by a married couple while on a trip to an isolated island.\n\n It won Best Film Award in the Orient Express section at the Fantasporto in 2016.",
+    "The Boys Who Cried Wolf\nThe Boys Who Cried Wolf (), also known as The Shepherd, is a 2015 South Korean crime thriller drama film.\n\n Written and directed by Kim Jin-hwang in his first feature-length for his Korean Academy of Film Arts (KAFA)'s final year undergraduate film project, it depicts how a former stage actor becomes involved in a murder case.",
+    "Hidden Identity (TV series)\nHidden Identity () is a 2015 South Korean television series starring Kim Bum, Park Sung-woong, Yoon So-yi and Lee Won-jong.\n\n It aired on tvN from June 16 to August 4, 2015 on Mondays and Tuesdays at 23:00 for 16 episodes.",
+    "The Swindlers (2017 film)\nThe Swindlers is an upcoming South Korean crime drama film directed by Jang Chang-won.\n\n The film stars Hyun Bin, Yoo Ji-tae, Bae Seong-woo, Park Sung-woong, Nana and Ahn Se-ha.",
+    "Park Sung-woong\nPark Sung-woong (born January 9, 1973) is a South Korean actor.\n\n Following his acting debut in \"No. 3\" in 1997, Park has starred in several movies and television series, notably as a gangster in \"New World\" (2013) and a serial killer in \"The Deal\" (2015)."
+   ]
+  },
+  {
+   "id": "b0c399f702d545ef",
+   "gold": [
+    {
+     "sentence": "The City Heiress is a play by Aphra Behn produced in 1682.",
+     "facts": {
+      "0.0": "The City Heiress is a play by Aphra Behn.",
+      "0.1": "The City Heiress was produced in 1682."
+     }
+    },
+    {
+     "sentence": "Aphra Behn ( ; 14 December 1640?",
+     "facts": {
+      "1.0": "Aphra Behn's birth date is listed as 14 December 1640, marked with a question mark as uncertain."
+     }
+    },
+    {
+     "sentence": " (baptismal date)–16 April 1689) was a British playwright, poet, translator and fiction writer from the Restoration era.",
+     "facts": {
+      "2.0": "The 14 December 1640 date for Aphra Behn is a baptismal date.",
+      "2.1": "Aphra Behn died on 16 April 1689.",
+      "2.2": "Aphra Behn was a British playwright.",
+      "2.3": "Aphra Behn was a poet.",
+      "2.4": "Aphra Behn was a translator.",
+      "2.5": "Aphra Behn was a fiction writer.",
+      "2.6": "Aphra Behn was from the Restoration era."
+     }
+    }
+   ],
+   "items": [
+    "Jules Wright\nJules Wright (25 February 1948 – 21 June 2015) was an Australian-born theatre director, a co-founder in 1984 of the Women’s Playhouse Trust (WPT), the first resident woman director at the Royal Court Theatre, being only the second woman to direct on its main stage, and founder of the Wapping Project arts space.",
+    "The Autumn Garden\nThe Autumn Garden is a 1951 play by Lillian Hellman.\n\n The play is set in September, 1949 in a summer home in a resort on the Gulf of Mexico, about 100 miles from New Orleans.\n\n The play is a study of the defeats, disappointments and diminished expectations of people reaching middle age.\n\n For inspiration, Hellman drew on her memories of her time in her aunts' boardinghouse.\n\n Dashiell Hammett, who had been Hellman's lover for 20 years, helped her write the play and received 15 percent of the royalties.\n\n Of all Hellman's plays it was her favorite.",
+    "Aphra Behn\nAphra Behn ( ; 14 December 1640?\n\n (baptismal date)–16 April 1689) was a British playwright, poet, translator and fiction writer from the Restoration era.\n\n As one of the first English women to earn her living by her writing, she broke cultural barriers and served as a literary role model for later generations of women authors.\n\n Rising from obscurity, she came to the notice of Charles II, who employed her as a spy in Antwerp.\n\n Upon her return to London and a probable",
+    "Lillian Hellman\nLillian Florence Hellman (June 20, 1905 – June 30, 1984) was an American dramatist and screenwriter known for her success as a playwright on Broadway, as well as her left-wing sympathies and political activism.\n\n She was blacklisted after her appearance before the House Committee on Un-American Activities (HUAC) at the height of the anti-communist campaigns of 1947–52.\n\n Although she continued to work on Broadway in the 1950s, her blacklisting by the American film industry caused a drop in her income.\n\n Many praised Hellman for refusing to answer questions by HUAC, but others believed, despite her denial, that she had belonged to the Communist Party.",
+    "The Heiress (1786 play)\nThe Heiress is a comedy play by the British playwright and soldier John Burgoyne.\n\n The play debuted at the Drury Lane Theatre on 14 January 1786.\n\n It concerns the engagement of Lord Gayville to Miss Alscrip, a fashionable woman he believes to be an heiress.\n\n Gayville later discovers that the woman who really stands to inherit the fortune is his true love Miss Clifford.\n\n The play was an enormous success, running for 31 performances in its initial season and being revived again the following year.\n\n The play was initially anonymous, but Burgoyne was soon widely reported to be the author and he acknowledged this after the play's debut.",
+    "Marisha Chamberlin\nMarisha Anne Chamberlain (born January 6, 1952) is an American writer.\n\n Her most recent work, the libretto for \"Mortals & Angels\", a collaboration with American composer Carol Barnett, premiered at Carnegie Hall in 2016, a companion piece to their widely produced collaborative piece, \"The World Beloved: A Bluegrass Mass\".\n\n Her stage plays, both original works and adaptations are widely produced.\n\n Her debut novel, \"The Rose Variations\", was published by Soho Press in 2009.\n\n Her play, \"Scheherazade\", won the Dramatists Guild/CBS National Award, and in her screenplay version, played on public television across the country, and was screened at the British Film Institute Festival in the category of Best of American Public Television.",
+    "Graph query row:\nperson: Aphra Behn\ndeath_date: 16 April 1689\nrelationship: CREATED_BY\ncreative_work: The City Heiress",
+    "Lillian Hellman: An Imperious Life\nLillian Hellman: An Imperious Life is a 2014 book by Dorothy Gallagher.\n\n It is a critical biography of the American playwright and writer Lillian Hellman.",
+    "Betty Ann Davies\nBetty Ann Davies (24 December 1910 – 14 May 1955) was a British stage and film actress active from the 1920s to the 1950s.\n\n She died young in 1955 aged 44 following an operation.\n\n Miss Davies made her first stage appearance at the Palladium in a revue in 1924.\n\n The following year she joined Cochran's Young Ladies in revues such as \"One Dam Thing After Another\" and \"This Year of Grace\".\n\n Betty Ann Davies enjoyed a long and distinguished West End career which included \"The Good Companions\" 1934, \"Morning Star\" 1942, and \"Blithe Spirit\" 1943.\n\n Her outstanding stage triumph was in the role of Blanche du Bois, which she took over from Vivien Leigh, in the original West End production of \" A Streetcar Named Desire\".\n\n Miss Davis appeared in 38 films, and was active in TV at the time of her death.\n\n She left one son Brook Blackford.",
+    "The City Heiress\nThe City Heiress is a play by Aphra Behn produced in 1682.\n\n The play conforms to the general rules of Restoration comedy, but it also keeps Behn's own highly Royalist political point of view."
+   ]
+  },
+  {
+   "id": "b93ede62d91d42e6",
+   "gold": [
+    {
+     "sentence": "Dangal (English: \"Wrestling competition\" ) is a 2016 Indian Hindi-language biographical sports drama film loosely based on the story of Mahavir Singh Phogat, an amateur wrestler, who trains his daughters Geeta Phogat and Babita Kumari to be world-class wrestlers.",
+     "facts": {
+      "0.0": "Dangal's English title is \"Wrestling competition\".",
+      "0.1": "Dangal is a 2016 film.",
+      "0.2": "Dangal is an Indian film.",
+      "0.3": "Dangal is a Hindi-language film.",
+      "0.4": "Dangal is a biographical sports drama film.",
+      "0.5": "Dangal is loosely based on the story of Mahavir Singh Phogat.",
+      "0.6": "Mahavir Singh Phogat is an amateur wrestler.",
+      "0.7": "Mahavir Singh Phogat trains his daughters Geeta Phogat and Babita Kumari.",
+      "0.8": "Mahavir Singh Phogat trains his daughters to be world-class wrestlers."
+     }
+    },
+    {
+     "sentence": "The Man from Snowy River II is a 1988 Australian drama film, the sequel to the 1982 film \"The Man from Snowy River\".",
+     "facts": {
+      "1.0": "The Man from Snowy River II is a 1988 film.",
+      "1.1": "The Man from Snowy River II is an Australian drama film.",
+      "1.2": "The Man from Snowy River II is the sequel to the 1982 film \"The Man from Snowy River\"."
+     }
+    }
+   ],
+   "items": [
+    "Return to Snowy River\nReturn to Snowy River is the original motion picture soundtrack from the 1988 film \"The Man from Snowy River II\".\n\n The soundtrack album is named after the American title for the film.",
+    "Dangal (film)\nDangal (English: \"Wrestling competition\" ) is a 2016 Indian Hindi-language biographical sports drama film loosely based on the story of Mahavir Singh Phogat, an amateur wrestler, who trains his daughters Geeta Phogat and Babita Kumari to be world-class wrestlers.\n\n It was directed by Nitesh Tiwari.\n\n Produced by Walt Disney Pictures, Aamir Khan Productions and UTV Motion Pictures, it stars Aamir Khan as the father.\n\n Both daughters go on to win medals at the 2010 Commonwealth Games.\n\n Babita won a silver medal at the Games, in the 51 kg class and gold at the 2014 Glasgow Games in the 55 kg class.\n\n In 2012, Geeta became the first Indian female wrestler to qualify for the Olympics.\n\n Mahavir's efforts inspired dozens of Indian women to take to wrestling.\n\n Fatima Sana Shaikh and Sanya Malhotra play the older selves of the sisters while Sakshi Tanwar plays their mother and Aparshakti Khurana, their cousin.",
+    "The Man from Snowy River and Other Verses\nThe Man from Snowy River and Other Verses (1895) is the first collection of poems by Australian poet Banjo Paterson.\n\n It was released in hardback by Angus and Robertson in 1895, and features the poet's widely anthologised poems \"The Man from Snowy River\", \"Clancy of the Overflow\", \"Saltbush Bill\" and \"The Man from Ironbark\".\n\n It also contains the poet's first two poems that featured in The Bulletin Debate, a famous dispute in \"The Bulletin\" magazine from 1892-93 between Paterson and Henry Lawson.",
+    "The Man from Snowy River (TV series)\nThe Man from Snowy River is an Australian adventure drama television series based on Banjo Paterson's poem \"The Man from Snowy River\".\n\n Released in Australia as \"Banjo Paterson's The Man from Snowy River\", the series was subsequently released in both the United States and the United Kingdom as \"Snowy River: The McGregor Saga\".",
+    "The Man from Snowy River II\nThe Man from Snowy River II is a 1988 Australian drama film, the sequel to the 1982 film \"The Man from Snowy River\".",
+    "The Man from Snowy River (1982 film)\nThe Man from Snowy River is a 1982 Australian drama film based on the Banjo Paterson poem \"The Man from Snowy River\".\n\n The film had a cast including Kirk Douglas in a dual role as the brothers Harrison (a character who appeared frequently in Paterson's poems) and Spur, Jack Thompson as Clancy, Tom Burlinson as Jim Craig, Sigrid Thornton as Harrison's daughter Jessica, Terence Donovan as Jim's father Henry Craig, and Chris Haywood as Curly.",
+    "Bruce Rowland\nBruce Rowland (born May 9, 1942 in Melbourne) is a well-known Australian composer.\n\n He composed the soundtrack for the 1982 movie \"The Man from Snowy River\", as well as the soundtrack for its 1988 sequel \"The Man from Snowy River II\" (which has the United States title of \"Return to Snowy River\", and the United Kingdom title of \"The Untamed\").\n\n Both films were based on Banjo Paterson's poem The Man from Snowy River.\n\n His other film scores include \"Now and Forever\" (1983), \"Phar Lap\" (1983), \"Bushfire Moon\" (1987), \"Cheetah\" (1989), \"Weekend with Kate\" (1990), \"Gross Misconduct\" (1993), \"Andre\" (1994), \"Lightning Jack\" (1994), \"Zeus and Roxanne\" (1997) and the TV movie \"\" (1997).",
+    "Bougainville – Our Island Our Fight\nBougainville – Our Island Our Fight is a 1998 Australian documentary film.\n\n It was produced and directed by Wayne Coles-Janess.",
+    "The Man from Snowy River (soundtrack)\n\"The Man from Snowy River is the original motion picture soundtrack from the 1982 film \"The Man from Snowy River\".",
+    "The Man from Snowy River (poem)\n\"The Man from Snowy River\" is a poem by Australian bush poet Banjo Paterson.\n\n It was first published in \"The Bulletin\", an Australian news magazine, on 26 April 1890, and was published by Angus & Robertson in October 1895, with other poems by Paterson, in \"The Man from Snowy River and Other Verses\"."
+   ]
+  },
+  {
+   "id": "cc0700cfd480904a",
+   "gold": [
+    {
+     "sentence": "The International Grenfell Association (IGA) is an organization founded by Sir Wilfred Grenfell to provide health care, education, religious services, and rehabilitation and other social activities to the fisherman and coastal communities in northern Newfoundland and the coast of Labrador.",
+     "facts": {
+      "0.0": "The International Grenfell Association (IGA) is an organization.",
+      "0.1": "The International Grenfell Association was founded by Sir Wilfred Grenfell.",
+      "0.2": "The International Grenfell Association provides health care.",
+      "0.3": "The International Grenfell Association provides education.",
+      "0.4": "The International Grenfell Association provides religious services.",
+      "0.5": "The International Grenfell Association provides rehabilitation.",
+      "0.6": "The International Grenfell Association provides other social activities.",
+      "0.7": "The International Grenfell Association serves fisherman and coastal communities in northern Newfoundland.",
+      "0.8": "The International Grenfell Association serves fisherman and coastal communities on the coast of Labrador."
+     }
+    },
+    {
+     "sentence": "Sir Wilfred Thomason Grenfell, KCMG (28 February 1865 – 9 October 1940) was a medical missionary to Newfoundland and Labrador.",
+     "facts": {
+      "1.0": "Sir Wilfred Thomason Grenfell held the title KCMG.",
+      "1.1": "Sir Wilfred Thomason Grenfell was born on 28 February 1865.",
+      "1.2": "Sir Wilfred Thomason Grenfell died on 9 October 1940.",
+      "1.3": "Sir Wilfred Thomason Grenfell was a medical missionary to Newfoundland.",
+      "1.4": "Sir Wilfred Thomason Grenfell was a medical missionary to Labrador."
+     }
+    }
+   ],
+   "items": [
+    "Ellis Gowing\nGowing was educated at Fort Street High School and the University of Sydney; and ordained in 1907.\n\n He began his career as a Curate at The Oaks, New South Wales, after which he served at Armidale Cathedral.\n\n Coming to England he was on the staff of St James the Less, Bethnal Green then domestic chaplain to the Bishop of Chelmsford from 1914 to 1917.\n\n He was vicar of Prittlewell from 1917 until his death; an honorary canon of Chelmsford Cathedral from 1921 to 1938 and Rural Dean of Canewdon from 1918 to 1938.\n\n He was given the Freedom of the County Borough of Southend-on-Sea in 1953.",
+    "Edmund Robert Harris\nEdmund Robert Harris (c. 1804 – 27 May 1877) was an English lawyer from Preston, Lancashire, UK who was the principal benefactor of the Harris Museum, Harris Institute or Art School, Harris Technical School and the Harris Orphanage.",
+    "Training centre for release of the Atma-energy\nTraining centre for release of the Atma-energy (German: \"Trainingszentrum zur Freisetzung der Atmaenergie\"), also known as \"Atman Foundation\", was a new religious movement active mainly on the island of Tenerife and in Germany.\n\n This sect was originally a splinter group of the Brahma Kumaris and is known for a police and media scare in which an alleged attempt to commit ritual suicide took place in Teide National Park in Tenerife.\n\n The group believed in the end of the world but according to the religious studies scholar Georg Schmid and the sociologist Massimo Introvigne had no intention of collective suicide.",
+    "John G. Wilson\nJohn Guy Wilson (1842–1892) was a Manchester, UK patent agent and the founder of Wilson Gunn, one of the oldest firms of Patent and Trade Mark Attorneys in the UK.\n\n John G. Wilson built up the business until his death in the 1890s.\n\n As a side line he acted as agent to the Alliance Insurance Company.\n\n There is no record that Mr. Wilson ever became a member of the Chartered Institute of Patent Agents.",
+    "Wilfred Grenfell\nSir Wilfred Thomason Grenfell, KCMG (28 February 1865 – 9 October 1940) was a medical missionary to Newfoundland and Labrador.",
+    "Angelino Apelar\nAngelino \"Andy\" Baldemor Apelar (June 16, 1927 - January 23, 2006) was an Evangelical Christian leader in the Filipino American community, and a founder of the Association of Filipino Churches (AFC) of the Christian and Missionary Alliance.\n\n He had served as a missionary/pastor and radio broadcaster in the Philippines before moving to the United States to start the AFC.\n\n He served as president for several terms.\n\n He graduated from the Far Eastern Bible Institute and Seminary, where he also met his future wife, Purita Palomar, a member of one of Capiz province's influential families.\n\n They have two children: Faith and Jemuel Apelar.",
+    "Paul Schulte\nPaul Schulte OMI (1896 – 1975), was a German priest and missionary, known as the \"Flying Priest\", who founded MIVA (\"Missionary International Vehicular Association\") to provide automobiles, boats and airplanes for the service of missions throughout the world.",
+    "Andrew Bryan (Baptist)\nAndrew Bryan (1737–1812) founded First Bryan Baptist Church, affectionately called the Mother Church of Black Baptists, and First African Baptist Church of Savannah in Savannah, Georgia, the first black Baptist churches to be established in America.\n\n Bryan was the former slave of Jonathan Bryan.",
+    "International Grenfell Association\nThe International Grenfell Association (IGA) is an organization founded by Sir Wilfred Grenfell to provide health care, education, religious services, and rehabilitation and other social activities to the fisherman and coastal communities in northern Newfoundland and the coast of Labrador.",
+    "Godwin Birchenough\nThe Very Reverend Godwin Birchenough (27 October 1880, Macclesfield, Cheshire – 3 March, 1953) was the only son of Walter Edwin Birchenough and was the grandson of John Birchenough, a prominent Macclesfield silk manufacturer.\n\n Godwin Birchenough, who was also a nephew of Sir Henry Birchenough, the President of the British South Africa Company, was educated at Rugby and Oriel College, Oxford.\n\n Birchenough was ordained in 1905 and was Vicar of Moor Allerton between 1913 and 1921.\n\n He became an honorary Canon of Chelmsford Cathedral in 1933 and in 1941 became Dean of Ripon Cathedral, becoming Dean Emeritus in 1951.\n\n An eminent author, he was also vice chairman of the Additional Curates Society between 1934 and 1944.\n\n Godwin Birchenough married Edith, daughter of Ernest Keay in 1912, he died on 3 March 1953."
+   ]
+  },
+  {
+   "id": "38262480c1748fb0",
+   "gold": [
+    {
+     "sentence": " The song is one of only two Van Halen tracks featuring Sammy Hagar playing a rhythm guitar part, which he played on a Gibson acoustic.",
+     "facts": {
+      "0.0": "The song is one of only two Van Halen tracks featuring Sammy Hagar playing a rhythm guitar part.",
+      "0.1": "Sammy Hagar played the rhythm guitar part on a Gibson acoustic."
+     }
+    },
+    {
+     "sentence": "OU812 (pronounced \"Oh You Ate One Too\") is the eighth studio album by American hard rock band Van Halen, released in 1988, and the second to feature vocalist Sammy Hagar.",
+     "facts": {
+      "1.0": "OU812 is pronounced 'Oh You Ate One Too'.",
+      "1.1": "OU812 is the eighth studio album by American hard rock band Van Halen.",
+      "1.2": "OU812 was released in 1988.",
+      "1.3": "OU812 is the second Van Halen album to feature vocalist Sammy Hagar."
+     }
+    }
+   ],
+   "items": [
+    "Hoarse &amp; Roaring\nHoarse & Roaring is the debut full-length album by neofolk band Parlor Hawk, released in 2010 on Northplatte Records.\n\n The album was produced by Joshua James and featured Neon Trees bassist Branden Campbell on each track (except \"Saddest Song\") as well as Fictionist member Stuart Maxfield on the tracks \"14 Years\" and \"Home\".\n\n It was mixed by Todd Burke (Ben Harper, Jack Johnson) and mastered by Reuben Cohen (Edward Sharpe & The Magnetic Zeros, Bruno Mars).",
+    "&quot;Happy&quot; in Galoshes\n\"Happy\" in Galoshes is the second solo album by American rock singer Scott Weiland.\n\n Weiland, known for his roles as the lead singer in Stone Temple Pilots and Velvet Revolver, released his first album, \"12 Bar Blues\" in 1998.\n\n Ten years later, \"\"Happy\" in Galoshes\" served as the official follow-up.\n\n Two versions have been released, a single disc and double disc deluxe version—the deluxe edition offers a second disc of 10 extra tracks.\n\n The album was released November 25, 2008 on Weiland's own Softdrive Records.\n\n Produced by Doug Grean and Scott Weiland, with select tracks recorded by Steve Albini, the album features guest appearances by Paul Oakenfold and No Doubt members Adrian Young, Tony Kanal, and Tom Dumont.\n\n Oakenfold appears on a cover of David Bowie's \"Fame.\"\n\n Weiland has cited Bowie as one of his main influences.",
+    "Keisuke Kuwata (album)\nKeisuke Kuwata is the eponymous studio album recorded by Keisuke Kuwata, a frontman of the Japanese rock band Southern All Stars.\n\n It was released by Taishita label under the Victor Entertainment in July 1988, shortly after the 10th anniversary of the band.\n\n Aside from the 1982 live recording album \"Kamon Yuzo and Victor Wheels Live\" released under the pseudonym Yūzō Kamon, it was first Kuwata's solo effort.",
+    "Joe Gooch\nJoe Gooch (born 3 May 1977) was Ten Years After's most recent lead vocalist and lead guitarist.",
+    "Keiko Utoku\nKeiko Utoku (宇徳敬子 , \"Utoku Keiko\" , born April 7, 1967 in Izumi, Kagoshima, Japan) is a Japanese singer and songwriter under UK Sweet label.Keiko made first debut with chorus part in band B.B.Queens then joined with J-pop female band Mi-Ke from 1991 to 1993, before starting a solo career.\n\n As a child, Utoku listened to a lot of music, including music made by Momoe Yamaguchi.\n\n She has written and sung many songs, such as \"Wasurenagusa\", and Sonic the Hedgehog fans remember her for her vocal work in the original version of the Sonic CD video game's opening and closing themes in Japan and Europe, \"Sonic – You Can Do Anything\" and \"Cosmic Eternity – Believe In Yourself\" in 1993.\n\n In addition, she also provided Sonic's vocals in the game.\n\n At recent dates, she has released 15 singles, 5 digital singles, 4 studio albums, 1 mini and 2 best albums.",
+    "OU812 Tour\nThe OU812 Tour was a concert tour by hard rock band Van Halen.\n\n It was the second tour to include dates in Japan, and was the second with Sammy Hagar as vocalist (who had settled into the role more by this point).\n\n It followed the Monsters of Rock Tour 1988, which had formed the first part of the promotion for the \"OU812\" album.",
+    "Go Too\nGo Too (1977) is Go's third album.\n\n Go was founded by Stomu Yamashta, Steve Winwood and Michael Shrieve.\n\n For this album, Jess Roden replaced Steve Winwood (who had left the group).\n\n The style of the music became modified accordingly.\n\n In addition, Linda Lewis was hired as a singer.\n\n Together with Paul Jackson, Jr. and the orchestra of Martyn Ford the album unified various soundscapes.",
+    "Finish What Ya Started\n\"Finish What Ya Started\" is a song by Van Halen taken from their 1988 album \"OU812\".\n\n Despite the album being seemingly complete, Eddie Van Halen came up with the riff at 2 in the morning and went down to his then-neighbor Sammy Hagar to show it.\n\n Hagar let Eddie in, and the two played guitars in his balcony until they had a completed song.\n\n Once Eddie left, Hagar decided to write the lyrics despite being late at night.\n\n The theme wound up being unfulfilled sex, summed up by Hagar as \"blue balls.\n\n In the song, Eddie Van Halen recorded his guitar part on a Fender Stratocaster plugged direct into the studio mixing console.\n\n The song is one of only two Van Halen tracks featuring Sammy Hagar playing a rhythm guitar part, which he played on a Gibson acoustic.",
+    "Keisuke Kuwata\nKeisuke Kuwata (桑田 佳祐 , Kuwata Keisuke , born February 26, 1956) is a Japanese multi-instrumentalist, singer-songwriter, and frontman for the Southern All Stars, as well of his own solo band, the Kuwata band.\n\n He has also done significant amount of scoring music for films.\n\n He went to Aoyama Gakuin University.",
+    "OU812\nOU812 (pronounced \"Oh You Ate One Too\") is the eighth studio album by American hard rock band Van Halen, released in 1988, and the second to feature vocalist Sammy Hagar.\n\n Van Halen started work on the album in September 1987 and completed it in April 1988, just one month before its release."
+   ]
+  },
+  {
+   "id": "2533d8eeec0a02df",
+   "gold": [
+    {
+     "sentence": "Stephanocereus is genus of cactus from Brazil, related to \"Arrojadoa\".",
+     "facts": {
+      "0.0": "Stephanocereus is a genus of cactus.",
+      "0.1": "Stephanocereus is from Brazil.",
+      "0.2": "Stephanocereus is related to \"Arrojadoa\"."
+     }
+    },
+    {
+     "sentence": " They are mostly liana-forming plants of the Old World tropics, ranging from South China, Indonesia, Malaysia and the Philippines; westward to Madagascar (two species) and the Seychelles (one); southward to Australia (three) and New Caledonia (one); and northward to India (one) and Sri Lanka (one).",
+     "facts": {
+      "1.0": "The plants in this sentence are mostly liana-forming.",
+      "1.1": "The plants in this sentence are found in the Old World tropics.",
+      "1.2": "The plants in this sentence range from South China, Indonesia, Malaysia and the Philippines.",
+      "1.3": "The plants in this sentence range westward to Madagascar, with two species there.",
+      "1.4": "The plants in this sentence range westward to the Seychelles, with one species there.",
+      "1.5": "The plants in this sentence range southward to Australia, with three species there.",
+      "1.6": "The plants in this sentence range southward to New Caledonia, with one species there.",
+      "1.7": "The plants in this sentence range northward to India, with one species there.",
+      "1.8": "The plants in this sentence range northward to Sri Lanka, with one species there."
+     }
+    }
+   ],
+   "items": [
+    "Huernia\nThe genus Huernia (family Apocynaceae, subfamily Asclepiadoideae) consists of stem succulents from Eastern and Southern Africa, first described as a genus in 1810.\n\n The flowers are five-lobed, usually somewhat more funnel- or bell-shaped than in the closely related genus \"Stapelia\", and often striped vividly in contrasting colours or tones, some glossy, others matt and wrinkled depending on the species concerned.\n\n To pollinate, the flowers attract flies by emitting a scent similar to that of carrion.\n\n The genus is considered close to the genera \"Stapelia\" and \"Hoodia\".\n\n The name is in honour of Justin Heurnius (1587–1652) a Dutch missionary who is reputed to have been the first collector of South African Cape plants.\n\n His name was actually mis-spelt by the collector.",
+    "Robert Cantley\nRobert Cantley is a conservationist and Managing Director of Borneo Exotics, a Sri Lankan-based plant nursery specialising in tissue-cultured and seed-grown \"Nepenthes\" species and hybrids.\n\n Cantley has contributed to a number of papers on \"Nepenthes\".\n\n The species \"Nepenthes robcantleyi\", the natural hybrid \"Nepenthes × cantleyi\" and the cultivar \"Nepenthes\" 'Cantley's Red' are named after him.",
+    "Nepenthes × kinabaluensis\nNepenthes × kinabaluensis , or the Kinabalu Pitcher-Plant, is the natural hybrid between \"N. rajah\" and \"N. villosa\".\n\n It was first collected near Kambarangoh on Mount Kinabalu, Borneo by Lilian Gibbs in 1910 and later mentioned by John Muirhead Macfarlane as \"\"Nepenthes\" sp.\"\n\n in 1914.\n\n Although Macfarlane did not formally name the plant, he noted that \"[a]ll available morphological details suggest that this is a hybrid between \"N. villosa\" and \"N. rajah\"\".\n\n It was finally described in 1976 by Shigeo Kurata as \"N. × kinabaluensis\".\n\n The name was first published in \"Nepenthes of Mount Kinabalu\", but was a \"nomen nudum\" at the time as it lacked an adequate description and information on the type specimen.\n\n The name was subsequently published validly by Kurata in 1984.",
+    "Graph query row:\nentity: Nepenthes\nrelationship: LOCATED_IN\nrelated: Old World tropics",
+    "Nepenthes boschiana\nNepenthes boschiana ( ; after Johannes van den Bosch), or Bosch's Pitcher-Plant, is a tropical pitcher plant endemic to Borneo.\n\n It is most closely allied to \"N. faizaliana\".\n\n \"Nepenthes borneensis\" is considered a synonym of this species.\n\n \"Nepenthes boschiana\" has no known natural hybrids.\n\n No valid forms or varieties have been described.\n\n \"Nepenthes boschiana\" belongs to the loosely defined \"\"N. maxima\" complex\", which also includes, among other species, \"N. chaniana\", \"N. epiphytica\", \"N. eymae\", \"N. faizaliana\", \"N. fusca\", \"N. klossii\", \"N. maxima\", \"N. platychila\", \"N. stenophylla\", and \"N. vogelii\".",
+    "Nepenthes veitchii\nNepenthes veitchii ( or ; after James Veitch, nurseryman of the Veitch Nurseries), or Veitch's Pitcher-Plant, is a \"Nepenthes\" species from the island of Borneo.\n\n The plant is widespread in north-western Borneo and can also be found in parts of Kalimantan.\n\n \"Nepenthes veitchii\" usually grows as an epiphyte, though the form from Bario seems to be strictly terrestrial and has not been observed to climb trees.",
+    "Nepenthes\nNepenthes ( ), also known as tropical pitcher plants, is a genus of carnivorous plants in the monotypic family Nepenthaceae.\n\n The genus comprises roughly 150 species, and numerous natural and many cultivated hybrids.\n\n They are mostly liana-forming plants of the Old World tropics, ranging from South China, Indonesia, Malaysia and the Philippines; westward to Madagascar (two species) and the Seychelles (one); southward to Australia (three) and New Caledonia (one); and northward to India (one) and Sri Lanka (one).\n\n The greatest diversity occurs on Borneo, Sumatra, and the Philippines, with many endemic species.\n\n Many are plants of hot, humid, lowland areas, but the majority are tropical montane plants, receiving warm days but cool to cold, humid nights year round.\n\n A few are considered tropical alpine, with cool days and nights near freezing.\n\n The name \"monkey cups\" refers to the fact that monkeys have been observed drinking rainwater from these plants.",
+    "Nepenthes chaniana\nNepenthes chaniana ( ; after Datuk Chan Chew Lun, Managing Director of Natural History Publications (Borneo)) is a tropical pitcher plant species belonging to the genus \"Nepenthes\".\n\n It is characterised by a dense indumentum of long, white hairs.\n\n Pitchers are cylindrical and mostly white to yellow in colouration.\n\n \"Nepenthes chaniana\" belongs to the loosely defined \"\"N. maxima\" complex\", which also includes, among other species, \"N. boschiana\", \"N. epiphytica\", \"N. eymae\", \"N. faizaliana\", \"N. fusca\", \"N. klossii\", \"N. maxima\", \"N. platychila\", \"N. stenophylla\", and \"N. vogelii\".",
+    "Nepenthes tenax\nNepenthes tenax ( ; from Latin: \"tenax\" \"tenacious\") is a lowland species of tropical pitcher plant native to northern Queensland, Australia.\n\n It is the third \"Nepenthes\" species recorded from the continent and its second endemic species.\n\n \"Nepenthes tenax\" is closely related to the two other Australian \"Nepenthes\" species: \"N. mirabilis\" and \"N. rowaniae\".",
+    "Stephanocereus\nStephanocereus is genus of cactus from Brazil, related to \"Arrojadoa\".\n\n This genus was monotypic until \"Pilosocereus luetzelburgii\" was included here, resulting in the combination \"Stephanocereus luetzelburgii\"."
+   ]
+  },
+  {
+   "id": "3793aa73c0ad762d",
+   "gold": [
+    {
+     "sentence": "\"Into Dust\" is a song by American duo Mazzy Star that appears as the ninth track on their second album \"So Tonight That I Might See\".",
+     "facts": {
+      "0.0": "'Into Dust' is a song by the American duo Mazzy Star.",
+      "0.1": "'Into Dust' appears as the ninth track on the second album of Mazzy Star.",
+      "0.2": "The second album of Mazzy Star is 'So Tonight That I Might See'."
+     }
+    },
+    {
+     "sentence": "Mazzy Star is an American alternative rock band formed in Santa Monica, California, in 1989 from the group Opal, a collaboration of guitarist David Roback and bassist Kendra Smith.",
+     "facts": {
+      "1.0": "Mazzy Star is an American alternative rock band.",
+      "1.1": "Mazzy Star was formed in Santa Monica, California, in 1989.",
+      "1.2": "Mazzy Star was formed from the group Opal.",
+      "1.3": "Opal was a collaboration of guitarist David Roback and bassist Kendra Smith."
+     }
+    }
+   ],
+   "items": [
+    "I Was Totally Destroying It\nI Was Totally Destroying It is a five-piece powerpop band from Chapel Hill, North Carolina, featuring current and former members of Saddle Creek band Sorry About Dresden.\n\n After self-releasing and touring the country behind their first full-length album, the band signed with Portland-based indie label Greyday Records.\n\n Since forming in 2007, the band has toured much of the country, playing with artists such as Conor Oberst and the Mystic Valley Band, Motion City Soundtrack, Cursive, Superchunk, Portastatic, Ryan Ferguson (formerly of No Knife), Dear and the Headlights, Margot & the Nuclear So and So's, Snowden, Billy Bragg, Annuals, Joan Jett, The Actual, Ozma, Polvo, Birds of Avalon and Blankface.\n\n Their next full-length, Horror Vacui, was released by Greyday in October 2009, and was co-produced by Josh Cain of Motion City Soundtrack.",
+    "Cosmic Dust (band)\nCosmic Dust, also known as the Cosmic Dust Fusion Band, is an instrumental jazz band formed in 1990 by Jim Templeton.\n\n The band was the first well-known group that guitarist Myles Kennedy played in.\n\n The original lineup consisted of Jim Templeton on keyboard, Gary Edighoffer on saxophone, Clipper Anderson on double bass, Myles Kennedy on guitar, and Scott Reusser on drums.\n\n Kennedy eventually left the band and went on to become the lead vocalist/lead guitarist for a jazz fusion group called Citizen Swing and later an alternative rock band called The Mayfield Four.\n\n Kennedy is now fronting and playing guitar for the hard rock/alternative metal band Alter Bridge, which he helped form with Creed members Mark Tremonti, Scott Phillips, and Brian Marshall in 2004, and is also the lead vocalist for Slash's solo band on tour.",
+    "Distortion Mirrors\nDistortion Mirrors is an English alternative rock band, based in Leeds, West Yorkshire, England, and who was formed in 2011.",
+    "Assembly of Dust\nAssembly of Dust (also known as AOD) is an American rock band formed in 2002 by former Strangefolk frontman Reid Genauer.\n\n After the breakup of Strangefolk, Genauer decided to record a solo album, and he recruited some friends from Strangefolk's days on the road to help out.\n\n After titling the 2003 solo release “Assembly of Dust,” Genauer decided to use the name for his new group.\n\n AOD originally featured Genauer on lead vocals and guitar, Nate Wilson on the keyboard, Adam Terrell on lead guitar, John Leccese on bass, and Andy Herrick on drums.\n\n In recent years the band has experienced some transformations, and the current status of the band now features Reid Genauer on lead vocals and guitar, Adam Terrell on lead guitar, John Leccese on bass, Jason Crosby on the keys and violin, and Dave Diamond on the drums.\n\n Despite the changes in the band's lineup, AOD has managed to maintain the same high energy and tight musical finesse for which they are known.",
+    "Berlin (band)\nBerlin is an American new wave band.\n\n The group was formed in Orange County in 1979 by John Crawford (bass guitar).\n\n Band members included Crawford, Terri Nunn (vocals), David Diamond (keyboards), Ric Olsen (guitar), Matt Reid (keyboards) and Rod Learned (drums).\n\n The band gained mainstream-commercial success in the early 1980s with singles including \"The Metro\", \"Sex (I'm A..\n\n.)\n\n\", \"No More Words\" and then in the mid 1980s with the chart-topping single \"Take My Breath Away\" from the 1986 film \"Top Gun\".",
+    "The Suicide File\nThe Suicide File was an American hardcore punk band from Boston, Massachusetts that formed in April 2001.\n\n The band wrote songs with a mostly political message, although many songs also dealt with social and personal problems.\n\n Most of the band's output was released on the Southern California-based hardcore label Indecision Records.\n\n The band reunited in June 2006 to embark on their first European Tour.\n\n Members of the bands are or have been affiliated with The Hope Conspiracy, Death By Stereo, When Tigers Fight, Adamantium, Give Up the Ghost/American Nightmare, Clouds, Panic and many more.\n\n Most of these are bands with whom Alexander has drummed for short periods of time.\n\n Dave Weinberg was also known for his frequent collaborations and duets with Julie Ecker and James \"Boom Boom\" Auclair (cf. unpublished correspondence with the artists).\n\n Despite their short tenure, The Suicide File continues to be revered within the hardcore punk community for their musical output and lasting impression on the flourishing Boston hardcore scene.\n\n The band since 2006 has played a small number of successfully sized reunion sets.",
+    "Into Dust\n\"Into Dust\" is a song by American duo Mazzy Star that appears as the ninth track on their second album \"So Tonight That I Might See\".\n\n The song's arrangement is sparse and features only acoustic guitar and violin as accompaniment to the vocals.",
+    "Candlelight Red\nCandlelight Red is a rock band from Williamsport, Pennsylvania.\n\n They have produced two studio albums and an EP.\n\n Their EP \"Demons\" and album \"Reclamation\" was produced by Morgan Rose of Sevendust.",
+    "The Shins\nThe Shins are an American indie rock band from Albuquerque, New Mexico, formed in 1996.\n\n The band's current lineup consists of James Mercer (vocals, guitar, songwriter), Jon Sortland (drums), Mark Watrous (guitar), Casey Foubert (guitar), Yuuki Matthews (bass), and Patti King (keyboards).\n\n The band is based in Portland, Oregon.",
+    "Onyx (Cornish band)\nThe Onyx or Onyx is a psychedelic rock band formed in Wadebridge, Cornwall, UK in 1965.\n\n Out of the ashes of Rick & The Hayseeds the band came to be known as The Onyx Set, named after an Onyx ring owned by original band member Mike Black-Borow.\n\n After various changes in the line-up they shortened their name to The Onyx and the classic line-up was formed.\n\n The band members were: guitarist Alan Hodge, who had previously played with various local bands such as The Buccaneers and The Fabulous Jaguars, vocalist Tony Priest, bassist Dick Bland, keyboard player Steve Cotton and drummer Roger Dell."
+   ]
+  },
+  {
+   "id": "be8d930252b16ea9",
+   "gold": [
+    {
+     "sentence": "Black (Bengali: ব্ল্যাক ) is a Bangladeshi rock band, formed in Dhaka, Bangladesh.",
+     "facts": {
+      "0.0": "Black is a Bangladeshi rock band.",
+      "0.1": "Black was formed in Dhaka, Bangladesh.",
+      "0.2": "The Bengali name of Black is ব্ল্যাক."
+     }
+    },
+    {
+     "sentence": "New Found Glory (formerly A New Found Glory) is an American rock band from Coral Springs, Florida, formed in 1997.",
+     "facts": {
+      "1.0": "New Found Glory is an American rock band.",
+      "1.1": "New Found Glory was formerly known as A New Found Glory.",
+      "1.2": "New Found Glory is from Coral Springs, Florida.",
+      "1.3": "New Found Glory was formed in 1997."
+     }
+    }
+   ],
+   "items": [
+    "Nothing Gold Can Stay (album)\nNothing Gold Can Stay is the debut studio album by American rock band New Found Glory, released on October 19, 1999 through independent record label Eulogy Recordings.\n\n At the time, the band was then named \"A New Found Glory\", but later dropped the indefinite article \"A\" due to some fans struggling to find their records in stores.\n\n The original pressings of the album contained samplings from several films including \"The Outsiders\" (1983), \"Weird Science\" (1985), and \"That Thing You Do!\n\n\" (1996), as well as Robert Frost's poem \"Nothing Gold Can Stay\", after which the album is named.",
+    "Chad Gilbert\nChad Everett Gilbert (born March 9, 1981) is an American musician and record producer.\n\n He is a founding member of the rock band New Found Glory, for whom he plays lead guitar, composes music and provides backing vocals.\n\n He was also the lead vocalist for New Found Glory's now-defunct side-project, International Superheroes of Hardcore.\n\n Additionally, Gilbert was the vocalist for the hardcore punk band Shai Hulud between 1995 and 1998, and he rejoined the band in 2012.",
+    "From the Screen to Your Stereo\nFrom the Screen to Your Stereo is an EP by A New Found Glory (now New Found Glory) released on 28 March 2000 by Drive-Thru Records.\n\n All the tracks are covers of songs from motion picture soundtracks.\n\n The album was pressed on 10\" vinyl and released in three different colors: light marble blue, marble red, and white.\n\n The vinyl pressing featured a bonus track.\n\n In 2002, the album was released on a non-US split with the Japanese band Nicotine entitled Movie Addiction, where on this split, Nicotine also covered songs from movies.\n\n In 2007 the band released a follow up, this time a full-length album titled \"From the Screen to Your Stereo Part II\".",
+    "It's All About the Girls\nIt's All About the Girls is the debut EP by A New Found Glory (now New Found Glory) released on December 20, 1997 by Fiddler Records.\n\n It is the only release with their original drummer Joe Marino.\n\n A re-release, featuring revised cover artwork, was issued by Fiddler in June, 2000.",
+    "A Very New Found Glory Christmas\nA Very New Found Glory Christmas is the third EP by American rock band New Found Glory.\n\n Self-produced by the band, it is a special edition Christmas-themed acoustic recording featuring two original songs and three covers.\n\n The EP was limited to 2,000 pressings and was released via cassette tape on December 1, 2012.\n\n 1,000 white copies were sold on tour, and 1,000 red copies were sold in their online store.\n\n The band released \"Nothing for Christmas\" via Rdio and Spotify on December 20, after debuting songs off the EP during the tenth anniversary tour of their \"Sticks and Stones\" album.\n\n The cover art is a parody of the 1990 blockbuster movie \"Home Alone\".",
+    "Radiosurgery (album)\nRadiosurgery is the seventh studio album by American rock band New Found Glory.\n\n It was first released on September 30, 2011 in Australia, before its wider release on October 4 through independent label Epitaph Records.\n\n It is the band's final studio album to feature founding guitarist Steve Klein.\n\n To follow up predecessor \"Not Without a Fight\" (2009), the band began writing new material during their stint on the 2010 Honda Civic Tour.\n\n After self-producing a set of demos and contacting long-term record producer Neal Avron, the band went on to record the album in Avron's home recording studio over a period of three months in 2011.\n\n The quintet set out to write an album that paid homage to classic punk rock records that first inspired them to form a band during the 1990s.\n\n Listening extensively to the likes of early Green Day and Ramones, New Found Glory strove to create a sound that could \"bridge the gap\" between old and new generations of the genre.",
+    "Glassjaw\nGlassjaw is an American post-hardcore band from Long Island, New York.\n\n The band is fronted by vocalist Daryl Palumbo and guitarist Justin Beck.\n\n The band has been influential in the progression of the underground music scene in the eastern United States and United Kingdom and on the post-hardcore genre, and are known for their intense live shows and frequent line-up changes.",
+    "Hit or Miss (New Found Glory song)\n\"Hit or Miss (Waited Too Long)\" is the first single by New Found Glory (formerly A New Found Glory), from their 1999 debut studio album, \"Nothing Gold Can Stay\".",
+    "Black (Bangladeshi band)\nBlack (Bengali: ব্ল্যাক ) is a Bangladeshi rock band, formed in Dhaka, Bangladesh.",
+    "New Found Glory\nNew Found Glory (formerly A New Found Glory) is an American rock band from Coral Springs, Florida, formed in 1997.\n\n The band currently consists of Jordan Pundik (lead vocals), Ian Grushka (bass guitar), Chad Gilbert (lead guitar, backing vocals), and Cyrus Bolooki (drums).\n\n Longtime rhythm guitarist and lyricist Steve Klein departed from the band in late 2013, following \"personal differences.\"\n\n During their lengthy recording career, the band have released nine studio albums, one live album, two EPs, and three cover albums."
+   ]
+  }
+ ]
+}

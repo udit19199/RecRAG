@@ -1,0 +1,1821 @@
+[
+ {
+  "id": "22899d10ef4ae8a4",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "The Earth 's magnetic field serves to deflect most of the solar wind"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "solar wind , whose charged particles would otherwise strip away the ozone layer that protects the Earth from harmful"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "strip away the ozone layer that protects the Earth from harmful ultraviolet radiation"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "One stripping mechanism is for gas to be caught in bubbles of magnetic field"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "bubbles of magnetic field , which are ripped off by solar winds"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Calculations of the loss of carbon dioxide from the atmosphere of Mars , resulting from scavenging of ions by the solar wind"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "indicate that the dissipation of the magnetic field of Mars caused a near total loss of its atmosphere"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "7fa784b731b18311",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "contradicted",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "1992 1st Abedi Pele Marseille 198"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "contradicted",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "1993 1st Abedi Pele Marseille 119"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "contradicted",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "1994 1st George Weah Paris Saint - Germain 148 2nd Emmanuel Amunike Sporting CP 133"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "contradicted",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "1994 1st George Weah Paris Saint - Germain 148 2nd Emmanuel Amunike Sporting CP 133"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.5",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.6",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.7",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.8",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.9",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.10",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.11",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.12",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.13",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.14",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.15",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.16",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.17",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.18",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.19",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.20",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.21",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.22",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.23",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.24",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.25",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.26",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.27",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.28",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.29",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.30",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.31",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.32",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.33",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.34",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.35",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.36",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.37",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.38",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.39",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.40",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.41",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "2007 1st Frédéric Kanouté Sevilla -- 2nd Michael Essien Chelsea -- 3rd Didier Drogba Chelsea"
+     }
+    ]
+   },
+   {
+    "fact": "0.42",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "2007 1st Frédéric Kanouté Sevilla -- 2nd Michael Essien Chelsea -- 3rd Didier Drogba Chelsea"
+     }
+    ]
+   },
+   {
+    "fact": "0.43",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "2007 1st Frédéric Kanouté Sevilla -- 2nd Michael Essien Chelsea -- 3rd Didier Drogba Chelsea"
+     }
+    ]
+   },
+   {
+    "fact": "0.44",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "2008 1st Emmanuel Adebayor Arsenal 74 2nd Mohamed Aboutrika Al - Ahly 53 3rd Michael Essien Chelsea 36"
+     }
+    ]
+   },
+   {
+    "fact": "0.45",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "2008 1st Emmanuel Adebayor Arsenal 74 2nd Mohamed Aboutrika Al - Ahly 53 3rd Michael Essien Chelsea 36"
+     }
+    ]
+   },
+   {
+    "fact": "0.46",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "2008 1st Emmanuel Adebayor Arsenal 74 2nd Mohamed Aboutrika Al - Ahly 53 3rd Michael Essien Chelsea 36"
+     }
+    ]
+   },
+   {
+    "fact": "0.47",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "2009 1st Didier Drogba Chelsea 92 2nd Samuel Eto'o Internazionale 69 3rd Michael Essien Chelsea 43"
+     }
+    ]
+   },
+   {
+    "fact": "0.48",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "2009 1st Didier Drogba Chelsea 92 2nd Samuel Eto'o Internazionale 69 3rd Michael Essien Chelsea 43"
+     }
+    ]
+   },
+   {
+    "fact": "0.49",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "2009 1st Didier Drogba Chelsea 92 2nd Samuel Eto'o Internazionale 69 3rd Michael Essien Chelsea 43"
+     }
+    ]
+   },
+   {
+    "fact": "0.50",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "3rd Michael Essien Chelsea 43 1st Samuel Eto'o Internazionale -- 2nd Asamoah Gyan Sunderland -- 3rd Didier Drogba Chelsea"
+     }
+    ]
+   },
+   {
+    "fact": "0.51",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "3rd Michael Essien Chelsea 43 1st Samuel Eto'o Internazionale -- 2nd Asamoah Gyan Sunderland -- 3rd Didier Drogba Chelsea"
+     }
+    ]
+   },
+   {
+    "fact": "0.52",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "3rd Michael Essien Chelsea 43 1st Samuel Eto'o Internazionale -- 2nd Asamoah Gyan Sunderland -- 3rd Didier Drogba Chelsea"
+     }
+    ]
+   },
+   {
+    "fact": "0.53",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "2011 1st Yaya Touré Manchester City -- 2nd Seydou Keita Barcelona -- 3rd André Ayew Marseille"
+     }
+    ]
+   },
+   {
+    "fact": "0.54",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "2011 1st Yaya Touré Manchester City -- 2nd Seydou Keita Barcelona -- 3rd André Ayew Marseille"
+     }
+    ]
+   },
+   {
+    "fact": "0.55",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "2011 1st Yaya Touré Manchester City -- 2nd Seydou Keita Barcelona -- 3rd André Ayew Marseille"
+     }
+    ]
+   },
+   {
+    "fact": "0.56",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "2012 1st Yaya Touré Manchester City -- 2nd Didier Drogba Shanghai Shenhua -- 3rd Alex Song Barcelona"
+     }
+    ]
+   },
+   {
+    "fact": "0.57",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "2012 1st Yaya Touré Manchester City -- 2nd Didier Drogba Shanghai Shenhua -- 3rd Alex Song Barcelona"
+     }
+    ]
+   },
+   {
+    "fact": "0.58",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "2012 1st Yaya Touré Manchester City -- 2nd Didier Drogba Shanghai Shenhua -- 3rd Alex Song Barcelona"
+     }
+    ]
+   },
+   {
+    "fact": "0.59",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "2013 1st Yaya Touré Manchester City 373 2nd John Obi Mikel Chelsea 265 3rd Didier Drogba Galatasaray 236"
+     }
+    ]
+   },
+   {
+    "fact": "0.60",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "2013 1st Yaya Touré Manchester City 373 2nd John Obi Mikel Chelsea 265 3rd Didier Drogba Galatasaray 236"
+     }
+    ]
+   },
+   {
+    "fact": "0.61",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "2013 1st Yaya Touré Manchester City 373 2nd John Obi Mikel Chelsea 265 3rd Didier Drogba Galatasaray 236"
+     }
+    ]
+   },
+   {
+    "fact": "0.62",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "2014 1st Yaya Touré Manchester City 175 2nd Pierre - Emerick Aubameyang Borussia Dortmund 120 3rd Vincent Enyeama Lille 105"
+     }
+    ]
+   },
+   {
+    "fact": "0.63",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "2014 1st Yaya Touré Manchester City 175 2nd Pierre - Emerick Aubameyang Borussia Dortmund 120 3rd Vincent Enyeama Lille 105"
+     }
+    ]
+   },
+   {
+    "fact": "0.64",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "2014 1st Yaya Touré Manchester City 175 2nd Pierre - Emerick Aubameyang Borussia Dortmund 120 3rd Vincent Enyeama Lille 105"
+     }
+    ]
+   },
+   {
+    "fact": "0.65",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "2015 1st Pierre - Emerick Aubameyang Borussia Dortmund 143 2nd Yaya Touré Manchester City 136 3rd André Ayew Swansea City 112"
+     }
+    ]
+   },
+   {
+    "fact": "0.66",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "2015 1st Pierre - Emerick Aubameyang Borussia Dortmund 143 2nd Yaya Touré Manchester City 136 3rd André Ayew Swansea City 112"
+     }
+    ]
+   },
+   {
+    "fact": "0.67",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "2015 1st Pierre - Emerick Aubameyang Borussia Dortmund 143 2nd Yaya Touré Manchester City 136 3rd André Ayew Swansea City 112"
+     }
+    ]
+   },
+   {
+    "fact": "0.68",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "2016 1st Riyad Mahrez Leicester City 361 2nd Pierre - Emerick Aubameyang Borussia Dortmund 313 3rd Sadio Mané Liverpool 186"
+     }
+    ]
+   },
+   {
+    "fact": "0.69",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "2016 1st Riyad Mahrez Leicester City 361 2nd Pierre - Emerick Aubameyang Borussia Dortmund 313 3rd Sadio Mané Liverpool 186"
+     }
+    ]
+   },
+   {
+    "fact": "0.70",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "2016 1st Riyad Mahrez Leicester City 361 2nd Pierre - Emerick Aubameyang Borussia Dortmund 313 3rd Sadio Mané Liverpool 186"
+     }
+    ]
+   },
+   {
+    "fact": "0.71",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "2017 1st Mohamed Salah Liverpool 625 2nd Sadio Mané Liverpool 507 3rd Pierre - Emerick Aubameyang Borussia Dortmund 311"
+     }
+    ]
+   },
+   {
+    "fact": "0.72",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "2017 1st Mohamed Salah Liverpool 625 2nd Sadio Mané Liverpool 507 3rd Pierre - Emerick Aubameyang Borussia Dortmund 311"
+     }
+    ]
+   },
+   {
+    "fact": "0.73",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "2017 1st Mohamed Salah Liverpool 625 2nd Sadio Mané Liverpool 507 3rd Pierre - Emerick Aubameyang Borussia Dortmund 311"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "13b923e98d469fc5",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Stone tools were made from a variety of stones"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "flint and chert were shaped ( or chipped ) for use as cutting tools and weapons"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "basalt and sandstone were used for ground stone tools , such as quern - stones"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "basalt and sandstone were used for ground stone tools , such as quern - stones"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Wood , bone , shell , antler ( deer ) and other materials were widely used , as well"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Wood , bone , shell , antler ( deer ) and other materials were widely used , as well"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "During the most recent part of the period , sediments ( such as clay ) were used to make pottery"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Agriculture was developed and certain animals were domesticated as well"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Agriculture was developed and certain animals were domesticated as well"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fc1f8e8ceec014af",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Year Mexico City Mexico 8,918,653 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "New York City United States 8,550,405 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Los Angeles United States 3,971,883 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Toronto Canada 2,826,498 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Chicago United States 2,720,546 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "6 Houston United States 2,296,224 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "7 Havana Cuba 2,117,625 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "8 Montreal Canada 1,753,034 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "9 Ecatepec de Morelos Mexico 1,677,678 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "10 Philadelphia United States 1,567,442 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "11 Phoenix United States 1,563,025 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "12 San Antonio United States 1,469,845 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "13 Guadalajara Mexico 1,460,148 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "14 Puebla Mexico 1,437,939 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "15 San Diego United States 1,394,928 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "16 Juárez Mexico 1,382,753 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "17 León Mexico 1,349,224 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "18 Dallas United States 1,300,092 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "19 Tijuana Mexico 1,298,475 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.19",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "20 Calgary Canada 1,230,915 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.20",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "21 Tegucigalpa Honduras 1,190,230 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.21",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "22 Zapopan Mexico 1,179,681 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.22",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "23 Monterrey Mexico 1,109,171 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.23",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "24 Managua Nicaragua 1,048,134 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.24",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "25 Nezahualcóyotl Mexico 1,039,867 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.25",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "26 San Jose United States 1,026,908 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.26",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "27 Santo Domingo Dominican Republic 1,007,997 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.27",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "28 Guatemala City Guatemala 994,078 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.28",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "29 Port - au - Prince Haiti 987,310 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.29",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "30 Naucalpan Mexico 970,012 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.30",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "31 Ottawa Canada 956,710 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.31",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "32 Austin United States 931,830 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.32",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "33 Edmonton Canada 899,447 2016"
+     }
+    ]
+   },
+   {
+    "fact": "0.33",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "34 Mérida Mexico 892,363 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.34",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "35 Querétaro Mexico 878,931 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.35",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "36 Toluca Mexico 873,536 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.36",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "37 Jacksonville United States 868,031 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.37",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "38 Chihuahua Mexico 867,736 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.38",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "39 San Francisco United States 864,816 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.39",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "40 Indianapolis United States 853,173 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.40",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "41 Columbus United States 850,106 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.41",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "42 Fort Worth United States 833,319 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.42",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "43 Charlotte United States 827,097 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.43",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "44 Hermosillo Mexico 819,999 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.44",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "45 Saltillo Mexico 791,074 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.45",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "46 Aguascalientes Mexico 785,942 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.46",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "47 Mississauga Canada 761,300 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.47",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "48 San Luis Potosí Mexico 759,854 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.48",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "49 Veracruz Mexico 752,171 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.49",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "50 San Pedro Sula Honduras 742,118 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.50",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "51 Santiago de los Caballeros Dominican Republic 723,162 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.51",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "52 Culiacán Mexico 720,798 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.52",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "53 Winnipeg Canada 718,400 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.53",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "54 Mexicali Mexico 717,628 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.54",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "55 Cancún Mexico 711,682 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.55",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "56 Acapulco Mexico 710,261 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.56",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "57 Tlalnepantla Mexico 700,734 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.57",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "58 Seattle United States 684,451 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.58",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "59 Guadalupe Mexico 682,880 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.59",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "60 Denver United States 682,545 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.60",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "61 El Paso United States 681,124 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.61",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "62 Chimalhuacán Mexico 679,811 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.62",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "63 Detroit United States 677,116 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.63",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "64 Washington , D.C. United States 672,228 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.64",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "65 Kingston Jamaica 669,627 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.65",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "66 Boston United States 667,137 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.66",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "67 Tlaquepaque Mexico 664,193 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.67",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "68 Memphis United States 655,770 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.68",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "69 Nashville United States 654,610 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.69",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "70 Torreón Mexico 653,150 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.70",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "71 Vancouver Canada 648,608 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.71",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "72 Portland United States 632,309 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.72",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "73 Reynosa Mexico 631,611 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.73",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "74 Oklahoma City United States 631,346 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.74",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "75 Las Vegas United States 623,747 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.75",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "76 Baltimore United States 621,849 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.76",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "77 Brampton Canada 620,700 2016"
+     }
+    ]
+   },
+   {
+    "fact": "0.77",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "78 Louisville United States 615,366 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.78",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "79 Morelia Mexico 608,190 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.79",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "80 Milwaukee United States 600,155 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.80",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "81 Tuxtla Gutiérrez Mexico 598,710 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.81",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "82 Apodaca Mexico 597,207 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.82",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.83",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.84",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.85",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.86",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.87",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.88",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.89",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.90",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.91",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.92",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.93",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.94",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "966143dfb63d41da",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The Super Bowl LI Halftime show took place on February 5 , 2017 , at NRG Stadium in Houston , Texas as part of Super Bowl LI"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The Super Bowl LI Halftime show took place on February 5 , 2017 , at NRG Stadium in Houston , Texas as part of Super Bowl LI"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The Super Bowl LI Halftime show took place on February 5 , 2017 , at NRG Stadium in Houston , Texas as part of Super Bowl LI"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The show was headlined by Lady Gaga , who performed a medley of her songs"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The Super Bowl LI Halftime show took place on February 5 , 2017 , at NRG Stadium in Houston , Texas as part of Super Bowl LI"
+     },
+     {
+      "item": 7,
+      "quote": "The show was headlined by Lady Gaga , who performed a medley of her songs , including newer material from her most recent studio album Joanne"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The show was headlined by Lady Gaga , who performed a medley of her songs , including newer material from her most recent studio album Joanne"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "93d47e7e23184cbb",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Because the states were preexisting political entities"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Because the states were preexisting political entities , the U.S. Constitution did not need to define or explain federalism in any one section"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "but it often mentions the rights and responsibilities of state governments and state officials in relation to the federal government"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "The federal government has certain express powers ( also called enumerated powers )"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "The federal government has certain express powers ( also called enumerated powers ) which are powers spelled out in the Constitution"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "including the right to levy taxes , declare war , and regulate interstate and foreign commerce"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "including the right to levy taxes , declare war , and regulate interstate and foreign commerce"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "including the right to levy taxes , declare war , and regulate interstate and foreign commerce"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "including the right to levy taxes , declare war , and regulate interstate and foreign commerce"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "which reserves all powers and rights that are not delegated to the Federal Government as left to the States and to the people"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.12",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.13",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.14",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ }
+]

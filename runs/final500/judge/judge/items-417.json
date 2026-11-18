@@ -1,0 +1,483 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "d681e04786bfe161",
+   "gold": [
+    {
+     "sentence": "Hayley Nichole Williams (born December 27, 1988) is an American singer, songwriter and musician.",
+     "facts": {
+      "0.0": "Hayley Nichole Williams was born on December 27, 1988.",
+      "0.1": "Hayley Nichole Williams is an American singer.",
+      "0.2": "Hayley Nichole Williams is an American songwriter.",
+      "0.3": "Hayley Nichole Williams is an American musician."
+     }
+    },
+    {
+     "sentence": " The band consists of Hayley Williams, Zac Farro and Taylor York.",
+     "facts": {
+      "1.0": "The band consists of Hayley Williams.",
+      "1.1": "The band consists of Zac Farro.",
+      "1.2": "The band consists of Taylor York."
+     }
+    },
+    {
+     "sentence": "Terrence Lee Glaze (born November 29, 1964, Columbus), known as Terry Lee, is a Texas-raised singer and guitarist who is most known for his work in American heavy metal bands Lord Tracy and Pantera.",
+     "facts": {
+      "2.0": "Terrence Lee Glaze was born on November 29, 1964, in Columbus.",
+      "2.1": "Terrence Lee Glaze is known as Terry Lee.",
+      "2.2": "Terry Lee is a Texas-raised singer.",
+      "2.3": "Terry Lee is a Texas-raised guitarist.",
+      "2.4": "Terry Lee is most known for his work in the American heavy metal band Lord Tracy.",
+      "2.5": "Terry Lee is most known for his work in the American heavy metal band Pantera."
+     }
+    }
+   ],
+   "items": [
+    "Terry Ray (actor)\nTerry Ray (born February 12, 1961) is an American actor, screenwriter, and producer.\n\n Some of his work includes \"Gaydar\" and \"Cost of Living\" (2009).\n\n Ray is the creator and writer of \"here!\n\n TV\"'s sitcom \"From Here on OUT\", the first original gay sitcom created by a gay network.\n\n Terry stars in the sitcom, along with Juliet Mills, Suzanne Whang and T.J. Hoban.\n\n<br><br>Terry Ray's 1987 appearance on Scrabble (game show) is noted as number 3 in the \"10 Great Gay Moments in Game Show History\", after Charles Nelson Reilly and Paul Lynde.\n\n In the same appearance, Terry was also named as one of the \"5 Weirdest Game Show Contestants Ever\", by Movieline.\n\n<br><br>Terry’s first professional writing job was the stage performance “Hollywood Goes Classical\" at the venerable Dorothy Chandler Pavilion starring Mickey Rooney, Michael York, Dean Jones, Rhonda Fleming and several other classic film stars.",
+    "Terry Ray (actor)\nHe wrote and starred in two more shows at the Dorothy Chandler Pavilion, one co-starring Amanda Bynes and the other Hilary Duff.\n\n<br><br>Terry is also the voice of the \"Gaydar Gun\", a spinoff toy from the film Gaydar.",
+    "Billie Joe Armstrong\nBillie Joe Armstrong (born February 17, 1972) is an American musician, singer, songwriter and actor who is best known as the lead vocalist, primary songwriter, and guitarist of the punk rock band Green Day, which he co-founded with Mike Dirnt.\n\n He is also a guitarist and vocalist for the punk rock band Pinhead Gunpowder and provides lead vocals for Green Day's side projects Foxboro Hot Tubs and The Network.",
+    "Zac Farro\nZachary Wayne \"Zac\" Farro (born June 4, 1990) is an American musician and drummer of the rock band Paramore.\n\n He is also the younger brother of Josh Farro, who is Paramore's former lead guitarist and backing vocalist.\n\n After he and his brother exited Paramore in 2010, Josh formed a band named Novel American, which Zac was also a part of.\n\n Zac is currently the sole member of the band HalfNoise.\n\n Farro rejoined Paramore on February 2, 2017.",
+    "Hayley Williams\nHayley Nichole Williams (born December 27, 1988) is an American singer, songwriter and musician.\n\n She serves as the lead vocalist, primary songwriter and occasional keyboardist of the rock band Paramore.\n\n The band was formed in 2004 by Josh Farro, Zac Farro, Jeremy Davis and Williams.\n\n The band consists of Hayley Williams, Zac Farro and Taylor York.\n\n The band has five studio albums: \"All We Know Is Falling\" (2005), \"Riot!\n\n\" (2007), \"Brand New Eyes\" (2009), \"Paramore\" (2013) and \"After Laughter\" (2017).",
+    "Jason White (musician)\nJason White (born November 11, 1973) is an American musician, best known as the current touring guitarist for the American punk rock band Green Day.\n\n He has played as a touring member of Green Day since 1999.\n\n However, in 2012, he was promoted to being an official member of the band before demoting himself back to his touring guitarist role in 2016.\n\n He is also the guitarist/vocalist for the Californian punk band Pinhead Gunpowder, lead guitarist/lead vocalist for California, and co-founder of Adeline Records alongside Billie Joe Armstrong.",
+    "Hayley Williams (ice hockey)\nHayley Williams (born June 3, 1990) is an American professional ice hockey player for the Brampton Thunder of the Canadian Women's Hockey League (CWHL).\n\n Williams has previously played for the Buffalo Beauts in the National Women's Hockey League (NWHL).",
+    "Paramore\nParamore is an American rock band from Franklin, Tennessee, formed in 2004.\n\n The band currently consists of lead vocalist Hayley Williams, guitarist Taylor York and drummer Zac Farro.",
+    "Paramore, formed in Franklin, Tennessee, in 2004, centers on Hayley Williams, guitarist Taylor York, and drummer Zac Farro, who rejoined in 2017. The band has five studio albums, from *All We Know Is Falling* (2005) to *After Laughter* (2017), whose bright pop sound contrasts with themes of anxiety and depression. Notable songs include “The Only Exception,” “Grow Up,” and “Hate to See Your Heart",
+    "Terry Glaze\nTerrence Lee Glaze (born November 29, 1964, Columbus), known as Terry Lee, is a Texas-raised singer and guitarist who is most known for his work in American heavy metal bands Lord Tracy and Pantera."
+   ]
+  },
+  {
+   "id": "020678739d5dfa54",
+   "gold": [
+    {
+     "sentence": "Pago Pago International Airport (IATA: PPG, ICAO: NSTU, FAA LID: PPG) , also known as Tafuna Airport, is a public airport located 7 miles (11.3 km) southwest of the central business district of Pago Pago, in the village and plains of Tafuna on the island of Tutuila in American Samoa, an unincorporated territory of the United States.",
+     "facts": {
+      "0.0": "Pago Pago International Airport has IATA code PPG.",
+      "0.1": "Pago Pago International Airport has ICAO code NSTU.",
+      "0.2": "Pago Pago International Airport has FAA LID PPG.",
+      "0.3": "Pago Pago International Airport is also known as Tafuna Airport.",
+      "0.4": "Pago Pago International Airport is a public airport.",
+      "0.5": "Pago Pago International Airport is located 7 miles (11.3 km) southwest of the central business district of Pago Pago.",
+      "0.6": "Pago Pago International Airport is located in the village and plains of Tafuna.",
+      "0.7": "Tafuna is on the island of Tutuila.",
+      "0.8": "Tutuila is in American Samoa.",
+      "0.9": "American Samoa is an unincorporated territory of the United States."
+     }
+    },
+    {
+     "sentence": "Hoonah Airport (IATA: HNH, ICAO: PAOH, FAA LID: HNH) is a state-owned public-use airport located one nautical mile (2 km) southeast of the central business district of Hoonah, Alaska.",
+     "facts": {
+      "1.0": "Hoonah Airport has IATA code HNH.",
+      "1.1": "Hoonah Airport has ICAO code PAOH.",
+      "1.2": "Hoonah Airport has FAA LID HNH.",
+      "1.3": "Hoonah Airport is a state-owned public-use airport.",
+      "1.4": "Hoonah Airport is located one nautical mile (2 km) southeast of the central business district of Hoonah.",
+      "1.5": "Hoonah is in Alaska."
+     }
+    }
+   ],
+   "items": [
+    "Tutuila\nTutuila is the largest and the main island of American Samoa in the archipelago of Samoan Islands.\n\n It is the third largest island in the Samoan Islands chain of the Central Pacific located roughly 4000 km northeast of Brisbane, Australia and over 1200 km northeast of Fiji.\n\n It contains a large, natural harbor, Pago Pago Harbor, where Pago Pago, the capital of American Samoa is situated.\n\n Pago Pago International Airport is also located on Tutuila island.\n\n Its land expanse is about 68% of the total land area of American Samoa and with 56,000 people accounts for 95% of its population.\n\n The island has six terrestrial and three marine ecosystems.",
+    "Graph query row:\nentity: Alaska\nrelationship: PART_OF\nrelated: United States",
+    "Pago Pago International Airport\nPago Pago International Airport (IATA: PPG, ICAO: NSTU, FAA LID: PPG) , also known as Tafuna Airport, is a public airport located 7 miles (11.3 km) southwest of the central business district of Pago Pago, in the village and plains of Tafuna on the island of Tutuila in American Samoa, an unincorporated territory of the United States.",
+    "Inter Island Airways\nInter Island Airways (also known as \"Inter Island Air\") is a South Pacific regional airline based in Pago Pago, American Samoa.\n\n Inter Island Airways operates passenger and cargo flights in and between American Samoa, Independent Samoa and to neighboring Pacific island countries.\n\n Its main base of operations is at Pago Pago International Airport.",
+    "Veterans Memorial Stadium (Pago Pago)\nVeterans Memorial Stadium is a football stadium located in Pago Pago Park, in Pago Pago, American Samoa.\n\n The 10,000 capacity venue is one of the smallest stadiums in Oceania, and serves as American Samoa's national stadium.\n\n It is the home venue of the American Samoa national football team, hosting all of their home games.\n\n It is currently used mostly for matches in various football codes, such as soccer, rugby league, and the territory's most popular code, American football.",
+    "Tafuna, American Samoa\nTafuna' is a village on the east coast of Tutuila Island, American Samoa.\n\n It is located on a peninsula a mile north of Pago Pago International Airport and one mile south of Nu'uuli, American Samoa.",
+    "Hoonah Airport\nHoonah Airport (IATA: HNH, ICAO: PAOH, FAA LID: HNH) is a state-owned public-use airport located one nautical mile (2 km) southeast of the central business district of Hoonah, Alaska.",
+    "Nu'uuli, American Samoa\nNu'uuli is a village on the central east coast of Tutuila Island, American Samoa.\n\n It is located on a peninsula several miles up from Pago Pago International Airport.",
+    "WNG710\nWNG710 (sometimes referred to as Pago Pago All Hazards) is a NOAA Weather Radio station that serves the entire United States territory island of American Samoa.\n\n It is programmed from the National Weather Service Forecast Office in Pago Pago.\n\n The station broadcasts weather and hazard information for the Eastern, Manu'a, and Western Districts, which are the three political divisions of American Samoa.\n\n WNG710 has a sister station, WZ2529 at Mt. Olotele.\n\n Its transmitter is located at the opposite side of the island.",
+    "Pago Pago\nPago Pago ( ; Samoan: ] ) is the territorial capital of American Samoa.\n\n It is on the main island of American Samoa, Tutuila.\n\n The territory is served by Pago Pago International Airport at Tafuna, some 8 miles south west of Pago Pago.\n\n Tourism, entertainment, food, and tuna canning are its main industries."
+   ]
+  },
+  {
+   "id": "1000c77667ecf329",
+   "gold": [
+    {
+     "sentence": " He was awarded the 2012 Nobel Prize in Physics, jointly with Serge Haroche, for \"ground-breaking experimental methods that enable measuring and manipulation of individual quantum systems.\"",
+     "facts": {
+      "0.0": "The recipient was awarded the 2012 Nobel Prize in Physics.",
+      "0.1": "The recipient shared the 2012 Nobel Prize in Physics jointly with Serge Haroche.",
+      "0.2": "The 2012 Nobel Prize in Physics was awarded for ground-breaking experimental methods that enable measuring and manipulation of individual quantum systems."
+     }
+    },
+    {
+     "sentence": " Since 2001, Haroche is a Professor at the Collège de France and holds the Chair of Quantum Physics.",
+     "facts": {
+      "1.0": "Since 2001, Serge Haroche has been a Professor at the Collège de France.",
+      "1.1": "Since 2001, Serge Haroche has held the Chair of Quantum Physics."
+     }
+    }
+   ],
+   "items": [
+    "Brian Josephson\nBrian David Josephson, {'1': \", '2': \", '3': \", '4': \"} (born 4 January 1940), is a Welsh theoretical physicist and professor emeritus of physics at the University of Cambridge.\n\n Best known for his pioneering work on superconductivity and quantum tunnelling, he was awarded the Nobel Prize in Physics in 1973 for his prediction of the Josephson effect, made in 1962 when he was a 22-year-old PhD student at Cambridge University.\n\n Josephson is the only Welshman to have won a Nobel Prize in Physics.\n\n He shared the prize with physicists Leo Esaki and Ivar Giaever, who jointly received half the award for their own work on quantum tunnelling.",
+    "List of Nobel laureates in Chemistry\nThe Nobel Prize in Chemistry (Swedish: \"Nobelpriset i kemi\" ) is awarded annually by the Royal Swedish Academy of Sciences to scientists in the various fields of chemistry.\n\n It is one of the five Nobel Prizes established by the 1895 will of Alfred Nobel, who died in 1896.\n\n These prizes are awarded for outstanding contributions in chemistry, physics, literature, peace, and physiology or medicine.\n\n As dictated by Nobel's will, the award is administered by the Nobel Foundation and awarded by a committee that consists of five members elected by the Royal Swedish Academy of Sciences.\n\n The first Nobel Prize in Chemistry was awarded in 1901 to Jacobus Henricus van 't Hoff, of the Netherlands.\n\n Each recipient receives a medal, a diploma and a monetary award prize that has varied throughout the years.\n\n In 1901, van 't Hoff received 150,782 SEK, which is equal to 7,731,004 SEK in December 2007.\n\n The award is presented in Stockholm at an annual ceremony on December 10, the anniversary of Nobel's death.",
+    "François Englert\nFrançois Baron Englert (] ; born 6 November 1932) is a Belgian theoretical physicist and 2013 Nobel prize laureate (shared with Peter Higgs).\n\n He is Professor emeritus at the Université libre de Bruxelles (ULB) where he is member of the Service de Physique Théorique.\n\n He is also a Sackler Professor by Special Appointment in the School of Physics and Astronomy at Tel Aviv University and a member of the Institute for Quantum Studies at Chapman University in California.\n\n He was awarded the 2010 J. J. Sakurai Prize for Theoretical Particle Physics (with Gerry Guralnik, C. R. Hagen, Tom Kibble, Peter Higgs, and Robert Brout), the Wolf Prize in Physics in 2004 (with Brout and Higgs) and the High Energy and Particle Prize of the European Physical Society (with Brout and Higgs) in 1997 for the mechanism which unifies short and long range interactions by generating massive gauge vector bosons.\n\n He has made contributions in statistical physics, quantum field theory, cosmology, string theory and supergravity.",
+    "Duncan Haldane\nFrederick Duncan Michael Haldane {'1': \", '2': \", '3': \", '4': \"} (born 14 September 1951), known as F. Duncan Haldane, is a British born physicist who is Eugene Higgins Professor of Physics at the physics department of Princeton University, and a Distinguished Visiting Research Chair at Perimeter Institute for Theoretical Physics.\n\n He won the 2016 Nobel Prize in Physics with David J. Thouless and John Michael Kosterlitz.",
+    "List of Nobel laureates in Physiology or Medicine\nEach recipient receives a medal, a diploma and a monetary award that has varied throughout the years.\n\n In 1901, von Behring received 150,782 SEK, which is equal to 7,731,004 SEK in December 2008.\n\n In 2013, the prize was awarded to James E. Rothman, Randy W. Schekman and Thomas C. Südhof; they were recognised \"after discovering how cells precisely transport material\".\n\n The award is presented in Stockholm at an annual ceremony on December 10, the anniversary of Nobel's death.",
+    "Graph query row:\nprofessor: Serge Haroche\naward: Nobel Prize in Physics\nyear: 2012\nschool: Collège de France",
+    "David J. Wineland\nDavid Jeffrey Wineland (born February 24, 1944) is an American Nobel-laureate physicist at the National Institute of Standards and Technology (NIST) physics laboratory.\n\n His work has included advances in optics, specifically laser cooling trapped ions and using ions for quantum computing operations.\n\n He was awarded the 2012 Nobel Prize in Physics, jointly with Serge Haroche, for \"ground-breaking experimental methods that enable measuring and manipulation of individual quantum systems.\"",
+    "François Englert\nHe is the recipient of the 2013 Prince of Asturias Award in technical and scientific research, together with Peter Higgs and the CERN.",
+    "Nobel Prize in Physics\nThe Nobel Prize in Physics (Swedish: \"Nobelpriset i fysik\" ) is a yearly award given by the Royal Swedish Academy of Sciences for those who conferred the most outstanding contributions for mankind in the field of physics.\n\n It is one of the five Nobel Prizes established by the will of Alfred Nobel in 1895 and awarded since 1901; the others being the Nobel Prize in Chemistry, Nobel Prize in Literature, Nobel Peace Prize, and Nobel Prize in Physiology or Medicine.",
+    "Serge Haroche\nSerge Haroche (born 11 September 1944) is a French physicist who was awarded the 2012 Nobel Prize for Physics jointly with David J. Wineland for \"ground-breaking experimental methods that enable measuring and manipulation of individual quantum systems\", a study of the particle of light, the photon.\n\n This and his other works developed laser spectroscopy.\n\n Since 2001, Haroche is a Professor at the Collège de France and holds the Chair of Quantum Physics.\n\n In 1971 he defended his doctoral thesis in physics at the University of Paris VI, his research has been conducted under the direction of Claude Cohen-Tannoudji."
+   ]
+  },
+  {
+   "id": "5796400f96ae6d43",
+   "gold": [
+    {
+     "sentence": "The University of California, Santa Barbara (commonly referred to as UC Santa Barbara or UCSB) is a public research university and one of the 10 campuses of the University of California system.",
+     "facts": {
+      "0.0": "The University of California, Santa Barbara is commonly referred to as UC Santa Barbara or UCSB",
+      "0.1": "The University of California, Santa Barbara is a public research university",
+      "0.2": "The University of California, Santa Barbara is one of the 10 campuses of the University of California system"
+     }
+    },
+    {
+     "sentence": " Tracing its roots back to 1891 as an independent teachers' college, UCSB joined the University of California system in 1944 and is the third-oldest general-education campus in the system.",
+     "facts": {
+      "1.0": "UCSB traces its roots back to 1891",
+      "1.1": "UCSB's roots as an independent teachers' college date to 1891",
+      "1.2": "UCSB joined the University of California system in 1944",
+      "1.3": "UCSB is the third-oldest general-education campus in the University of California system"
+     }
+    },
+    {
+     "sentence": " It was founded in 1991 by the renowned philanthropist Hakim Said of the Hamdard Foundation.",
+     "facts": {
+      "2.0": "UCSB was founded in 1991",
+      "2.1": "UCSB was founded by the renowned philanthropist Hakim Said",
+      "2.2": "Hakim Said is a philanthropist of the Hamdard Foundation"
+     }
+    }
+   ],
+   "items": [
+    "University of Arizona\nThe University of Arizona (also referred to as U of A, UA, or Arizona) is a public research university in Tucson, Arizona, United States.\n\n Founded in 1885, the UA was the first university in the Arizona Territory.\n\n The university operates two medical schools (University of Arizona College of Medicine - Tucson and the University of Arizona College of Medicine - Phoenix) and is affiliated with the region's only academic medical centers (Banner - University Medical Center Tucson and Banner - University Medical Center Phoenix).\n\n The university is also home to the James E. Rogers College of Law and numerous other nationally ranked graduate and professional schools.\n\n During the 2016–2017 academic year, there was a total enrollment of 43,625 students, including 34,072 undergraduates The University of Arizona is governed by the Arizona Board of Regents.\n\n The University of Arizona is one of the elected members of the Association of American Universities (an organization of North America's premier research institutions) and is the only representative from the state of Arizona to this group.",
+    "Dalhousie University\nDalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick.\n\n Dalhousie offers more than 4,000 courses and 180 degree programs in twelve undergraduate, graduate, and professional faculties.\n\n The university is a member of the U15, a group of research-intensive universities in Canada.",
+    "Santa Barbara International Marathon\nThe Santa Barbara International Marathon and Half Marathon is an annual race that takes place in Goleta, California and Santa Barbara, California.\n\n The inaugural race was on December 6, 2009.\n\n For the last five years the Santa Barbara City College has been the official host for the finish line and general operations.\n\n Rusty and June Snow are the co-directors of the race with Dan Campbell as the technical director.\n\n The Snow's moved from the East Coast and wanted to bring a marathon to Santa Barbara.\n\n After a few years of getting the race approved and organized it was finally set to happen in 2009, Rusty Snow states, “I learned to be stubborn from running marathons.”\n\n The Santa Barbara International Marathon course serves as a Boston Marathon qualifier.",
+    "Santa Barbara High School\nSanta Barbara Senior High School, \"Home of the Dons,\" is situated on a 40 acre campus in Santa Barbara, California and is part of the Santa Barbara Unified School District.\n\n One of the oldest high schools in California, it was established in 1875, and moved to its current site in 1924.\n\n Until the creation of two rival high schools in 1959 and 1966, it was the sole public high school serving the city of Santa Barbara.\n\n In November 2005, its 18th-century Spanish influenced design was named an official California and City historic landmark.\n\n Today, Santa Barbara High School has an enrollment of roughly 2,200 pupils and certified staff numbering 108.",
+    "Mission Santa Barbara\nMission Santa Barbara, also known as Santa Barbara Mission, is a Spanish mission founded by the Franciscan order near present-day Santa Barbara, California.\n\n It was founded by Padre Fermín Lasuén on December 4, 1786, the feast day of Saint Barbara, as the tenth mission for the religious conversion of the indigenous local Chumash-Barbareño tribe of Native American people.\n\n The mission is the namesake of the city of Santa Barbara as well as of Santa Barbara County.",
+    "Santa Barbara City College\nSanta Barbara City College (SBCC) is a two-year community college that opened in 1909 and is located on a 74 acre campus in the city of Santa Barbara, California, USA.\n\n SBCC was named co-winner of the 2013 Aspen Institute Prize for Community College Excellence, earning it a #1 national ranking.\n\n The college was recognized for its quality and focus in four areas: facilitating underrepresented and minority student success, student learning outcomes, degree completion and transfer rates, and labor market success in securing good jobs after college.\n\n Santa Barbara City College was established by the Santa Barbara High School District in 1909, making it one of the oldest community colleges in California.\n\n The college was discontinued shortly after World War I, and its work largely taken over by the Santa Barbara State Normal School, which became the Santa Barbara State College, and later, the University of California, Santa Barbara.",
+    "University of California, Santa Barbara Library\nThe University of California, Santa Barbara Library is the university library system of the University of California, Santa Barbara in Santa Barbara, California.\n\n The Library includes four facilities: Two libraries (the Main Library and the Music Library) and two annexes (Annex I and Annex II).\n\n The library has some three million print volumes, 30,000 electronic journals, 34,450 e-books, 900,055 digitized items, five million cartographic items (including some 467,000 maps and 3.2 million satellite and aerial images), more than 3.7 million pieces of microform, 167,500 sound recordings, and 4,100 manuscripts.\n\n The Library states that it holds 3.2 mi of manuscript and archival collections.\n\n According to data collected by the American Library Association, as of July 2010 the UC Santa Barbara Library holds the 99th largest library collection in America, reporting 2,948,999 volumes.",
+    "University of California, Santa Barbara\nThe University of California, Santa Barbara (commonly referred to as UC Santa Barbara or UCSB) is a public research university and one of the 10 campuses of the University of California system.\n\n The main campus is located on a 1022 acre site near Isla Vista, California, United States, 8 mi from Santa Barbara and 100 mi northwest of Los Angeles.\n\n Tracing its roots back to 1891 as an independent teachers' college, UCSB joined the University of California system in 1944 and is the third-oldest general-education campus in the system.",
+    "Hamdard University\nHamdard University (Urdu: ) is a private research university with campuses in Karachi and Islamabad, Pakistan.\n\n It was founded in 1991 by the renowned philanthropist Hakim Said of the Hamdard Foundation.\n\n Hamdard is one of the first and the oldest private institutions of higher education in Pakistan.\n\n In Karachi, Hamdard University is the largest private research university with a campus area of over 350 acres.",
+    "University of Copenhagen\nThe University of Copenhagen (UCPH) (Danish: \"Københavns Universitet\" ) is the oldest university and research institution in Denmark.\n\n Founded in 1479 as a studium generale, it is the second oldest institution for higher education in Scandinavia after Uppsala University (1477).\n\n The university has 23,473 undergraduate students, 17,398 postgraduate students, 2,968 doctoral students and over 9,000 employees.\n\n The university has four campuses located in and around Copenhagen, with the headquarters located in central Copenhagen.\n\n Most courses are taught in Danish; however, many courses are also offered in English and a few in German.\n\n The university has several thousands of foreign students, about half of whom come from Nordic countries."
+   ]
+  },
+  {
+   "id": "23e6f8473a109ada",
+   "gold": [
+    {
+     "sentence": "Brett Dallas McClure (born February 19, 1981 in Yakima, Washington) is a retired American gymnast.",
+     "facts": {
+      "0.0": "Brett Dallas McClure was born on February 19, 1981.",
+      "0.1": "Brett Dallas McClure was born in Yakima, Washington.",
+      "0.2": "Brett Dallas McClure is a retired American gymnast."
+     }
+    },
+    {
+     "sentence": " He won a bronze medal in the pommel horse at the 2001 Goodwill Games in Brisbane, Australia, and later helped his U.S. gymnastics team earn a silver in the team competition at the 2004 Summer Olympics in Athens.",
+     "facts": {
+      "1.0": "Brett Dallas McClure won a bronze medal in the pommel horse at the 2001 Goodwill Games in Brisbane, Australia.",
+      "1.1": "Brett Dallas McClure later helped his U.S. gymnastics team earn a silver medal in the team competition at the 2004 Summer Olympics in Athens."
+     }
+    },
+    {
+     "sentence": " The competition was held in Brisbane, Queensland, Australia from 29 August to 9 September 2001.",
+     "facts": {
+      "2.0": "The competition was held in Brisbane, Queensland, Australia.",
+      "2.1": "The competition was held from 29 August to 9 September 2001."
+     }
+    }
+   ],
+   "items": [
+    "2001 Goodwill Games\nThe 2001 Goodwill Games was the fifth and final edition of the international multi-sport event.\n\n The competition was held in Brisbane, Queensland, Australia from 29 August to 9 September 2001.\n\n A total around 1300 athletes took part in 14 sporting competitions.",
+    "Kevin Kelly (boxer)\nKevin \"Bones\" Kelly (born August 7, 1969 in La Perouse, New South Wales) is an Australian retired professional welter/light middle/middleweight boxer of the 1990s and 2000s who won the South Australia State welterweight title, New South Wales (Australia) State welterweight title, New South Wales (Australia) State light middleweight title, Australian light middleweight title, Pan Asian Boxing Association (PABA) light middleweight title, World Boxing Union (WBU) middleweight title, and Commonwealth light middleweight title (twice), and was a challenger for the World Boxing Association (WBA) World light middleweight title against David Reid, and World Boxing Organization (WBO) Inter-Continental light middleweight title against Gary Lockett, his professional fighting weight varied from 142 lb , i.e. welterweight to 158+1/4 lb , i.e. middleweight.",
+    "Nicole Gordon (badminton)\nNicole Gordon (born 17 March 1976 in Lower Hutt, New Zealand) is a female badminton player from New Zealand.\n\n At the 2002 Commonwealth Games she won a silver medal with Sara Petersen in the women's doubles, and a bronze medal in the mixed team.",
+    "Klete Keller\nKlete D. Keller (born March 21, 1982) is an American former competition swimmer who won medals at the 2000 Summer Olympics and the 2004 Summer Olympics in the 400-meter freestyle and the 4×200-meter freestyle relay.\n\n In the 4×200-meter freestyle relay, Keller held off a charging Ian Thorpe in the anchor leg to win the race by 0.13 seconds.\n\n This was the first time Australia had been beaten in the event in over seven years.\n\n The American relay of Michael Phelps, Ryan Lochte, Peter Vanderkaay, and Keller are undefeated since the Athens games.\n\n Vanderkaay, Larsen Jensen, Erik Vendt, and Keller make up the core of the premier American mid-distance/distance freestyle swimmers.",
+    "Brett McClure\nBrett Dallas McClure (born February 19, 1981 in Yakima, Washington) is a retired American gymnast.\n\n He won a bronze medal in the pommel horse at the 2001 Goodwill Games in Brisbane, Australia, and later helped his U.S. gymnastics team earn a silver in the team competition at the 2004 Summer Olympics in Athens.\n\n During his sporting career, McClure has collected two more silver medals in the same program at the World Artistic Gymnastics Championships (2001 and 2003).\n\n McClure is currently the High Performance Director with USA men's gymnastics.",
+    "Australia at the 2015 Pacific Games\nAustralia competed at the 2015 Pacific Games in Port Moresby, Papua New Guinea from 4 to 18 July 2015.\n\n Australia qualified 43 athletes.\n\n It was the first time that Australia has competed in the Pacific Games.",
+    "Anthony Biddle (Paralympian)\nAnthony John Biddle, OAM (born 18 June 1975) is an Australian Paralympic tandem cyclist and athlete.\n\n He was born in the New South Wales city of Gosford.\n\n He competed in athletics without winning any medals at the 1996 Atlanta Games and the 2000 Sydney Games.\n\n At the 2004 Athens Games, he switched to cycling and won a gold medal in the Men's 1 km Time Trial Tandem B1–3 event, for which he received a Medal of the Order of Australia, and a bronze medal in the Men's Sprint Tandem B1–3 event.\n\n Kial Stewart was his pilot for both events.",
+    "Brian MacLaren\nBrian MacLaren (born 21 December 1943) is a Canadian sprinter.\n\n He competed in the men's 400 metres at the 1972 Summer Olympics.\n\n He finished second in the 1967 Pan American Games 4 × 400 metres relay (with Bill Crothers, Ross MacKenzie, and Robert McLaren) and third in the 1967 Pan American Games 800 metres.\n\n He won a silver medal in the 1966 British Empire and Commonwealth Games 4 x 440 yards relay with Don Domansky, Ross MacKenzie and Bill Crothers.",
+    "John Lindsay (Paralympian)\nThat year, he had a Victorian Institute of Sport scholarship.\n\n He was also working as a fitness instructor in 1992, held world records in the 100 m and 200 m events, and was ranked 6th in the world in the 400 m.\n\n He won a gold medal in the men's athletics 100 m T52 event at the 1996 Summer Paralympics with a time of 15.22, a silver medal in the 200 m T52 event with a time of 27.38, and a bronze medal in the 400 m T52 event with a time of 52.93.\n\n At the 2000 Sydney Games, he won a gold medal in the Men's 100 m T53 event, a silver medal as part of the Men's 4x100 m Relay T54 team, and a bronze medal in the Men's 200 m T53 event; he was also part of the Men's 4x400 m Relay T54 team, which was the only one to qualify in its heat, but it did not make it to the finals.",
+    "2002 Commonwealth Games\nThe 2002 Commonwealth Games, officially known as the XVII Commonwealth Games and commonly known as Manchester 2002 were held in Manchester, England, from 25 July to 4 August 2002.\n\n The 2002 Games were to be hosted in the United Kingdom to coincide with the Golden Jubilee of Elizabeth II, head of the Commonwealth, and Manchester was selected for the 2002 Games ahead of London.\n\n The XVII Commonwealth Games was, prior to the 2012 Summer Olympics, the largest multi-sport event ever to be held in the UK, eclipsing the London 1948 Summer Olympics in numbers of teams and athletes participating.\n\n In terms of sports and events, the 2002 Games were the largest Commonwealth Games in history featuring 281 events across 17 sports."
+   ]
+  },
+  {
+   "id": "bdbd9990744838e7",
+   "gold": [
+    {
+     "sentence": " The band never played live or released any recordings, and, like London SS and Masters of the Backside, are more famed for the number of band members that later became well known, including: Sid Vicious of the Sex Pistols, Keith Levene (an early member of The Clash and later of Public Image Ltd) and Palmolive and Viv Albertine, who went on to play in The Slits.",
+     "facts": {
+      "0.0": "The band never played live.",
+      "0.1": "The band never released any recordings.",
+      "0.2": "Like London SS, the band is more famed for the number of band members who later became well known.",
+      "0.3": "Like Masters of the Backside, the band is more famed for the number of band members who later became well known.",
+      "0.4": "Sid Vicious is listed as a band member who later became well known as a member of the Sex Pistols.",
+      "0.5": "Keith Levene is listed as a band member who later became well known.",
+      "0.6": "Keith Levene was an early member of The Clash.",
+      "0.7": "Keith Levene was later a member of Public Image Ltd.",
+      "0.8": "Palmolive is listed as a band member who later became well known.",
+      "0.9": "Viv Albertine is listed as a band member who later became well known.",
+      "0.10": "Viv Albertine went on to play in The Slits."
+     }
+    },
+    {
+     "sentence": " Despite never playing live, they were interviewed by a fanzine named \"SKUM\", in which Sid Vicious proclaimed \"I'll just be the yob that I am now\".",
+     "facts": {
+      "1.0": "The band was interviewed by a fanzine named SKUM despite never playing live.",
+      "1.1": "In the SKUM interview, Sid Vicious proclaimed 'I'll just be the yob that I am now'."
+     }
+    },
+    {
+     "sentence": "Sid Vicious (born John Simon Ritchie, 10 May 1957 – 2 February 1979) was an English bassist and vocalist, most famous as a member of the influential punk rock band the Sex Pistols.",
+     "facts": {
+      "2.0": "Sid Vicious was born John Simon Ritchie.",
+      "2.1": "Sid Vicious was born on 10 May 1957.",
+      "2.2": "Sid Vicious died on 2 February 1979.",
+      "2.3": "Sid Vicious was an English bassist.",
+      "2.4": "Sid Vicious was an English vocalist.",
+      "2.5": "Sid Vicious was most famous as a member of the influential punk rock band the Sex Pistols."
+     }
+    }
+   ],
+   "items": [
+    "The Flowers of Romance (band)\nThe Flowers of Romance were an early punk band, formed in mid-1976 by Jo Faull and Sarah Hall.\n\n The band never played live or released any recordings, and, like London SS and Masters of the Backside, are more famed for the number of band members that later became well known, including: Sid Vicious of the Sex Pistols, Keith Levene (an early member of The Clash and later of Public Image Ltd) and Palmolive and Viv Albertine, who went on to play in The Slits.\n\n Despite never playing live, they were interviewed by a fanzine named \"SKUM\", in which Sid Vicious proclaimed \"I'll just be the yob that I am now\".",
+    "Sid Vicious\nSid Vicious (born John Simon Ritchie, 10 May 1957 – 2 February 1979) was an English bassist and vocalist, most famous as a member of the influential punk rock band the Sex Pistols.",
+    "Revolution in the Classroom\n\"Revolution in the Classroom\" was a single released by the Ex Pistols; despite its packaging, the record has nothing to do with the Sex Pistols.\n\n The single was released in 1989 on the STP Records label, pressed on various colours of vinyl.\n\n The song, along with its B-side \"Schools Are Prisons\", were both included on the Ex-Pistols album, \"Deny\".\n\n They also appear disguised as genuine Sex Pistols recordings on two Sex Pistols retrospective albums by former producer Dave Goodman, \"Pirates of Destiny\" (I Swirled Records, 1989) and \"We Have Cum For Your Children\" (Skyclad Records, 1988).\n\nUnder the title \"Revolution\" the song appears on a German Sex Pistols compilation \"Anarchy in the USA\" from 1992 released on MBC records.\n\n CD 084-60322 LP 008-60321",
+    "The entries profile rock, punk, and metal albums, bands, and musicians. Fuel’s *Puppet Strings* (2014) reunited singer Brett Scallions but featured none of the prior album’s recording personnel. Jizzy Pearl sang on Quiet Riot’s *10* and L.A. Guns’ *Shrinking Violet*. Other subjects include J. Geils Band, Green Day side projects and collaborators, Glassjaw and Daryl Palumbo, Clearview 77, Sons of Abraham,",
+    "Nancy Spungen\nNancy Laura Spungen (February 27, 1958 – October 12, 1978) was the American girlfriend of Sex Pistols bassist Sid Vicious and a figure of the 1970s punk rock scene.\n\n Spungen's life and death have been the subject of controversy among music historians and fans of the Sex Pistols.",
+    "The entries chiefly cover Sex Pistols history: Glen Matlock’s songwriting, Sid Vicious and Nancy Spungen, the Avengers’ 1978 Winterland set, and controversial songs and releases. They also describe the deceptive Ex Pistols, early punk band the Flowers of Romance, and numerous artists spanning post-punk, new wave, pop, psychedelic, dance, and alternative rock—including Talking Heads, Berlin, Afrodiziak, This Mortal Coil, and Age of Chance.",
+    "Bodies (Sex Pistols song)\n\"Bodies\" is a Sex Pistols song about the shock of abortion from the 1977 album \"Never Mind the Bollocks, Here's the Sex Pistols\".\n\n The lyrics contain very graphic imagery about a terminated fetus and feature a great deal of profanity for the time: the third and final verse begins with a couplet in which the word \"fuck\" is repeated five times in rapid succession.\n\n Along with the later \"Belsen Was a Gas,\" it is probably the most graphic and controversial Sex Pistols song in both its subject matter and style.\n\n Musically, it is also the fastest and heaviest song in the Sex Pistols canon — characterized by thudding drums, droning buzzsaw guitar, and shouted vocals.\n\n As such, it can be considered a significant antecedent to the genres of hardcore, thrash, and speed metal that was to emerge in the 1980s.",
+    "Ex Pistols\nThe Ex Pistols were a scam act introduced in 1979 by one-time Sex Pistols producer Dave Goodman after his services were substituted for those of professional producers.\n\n The Ex Pistols existed as a sound-alike band meant to mislead fans due to the similar music, name, and artwork, that led people to believe their songs were actually new or lost Sex Pistols recordings.",
+    "The Idols with Sid Vicious\nThe Idols with Sid Vicious is a concert album of former Sex Pistols bassist Sid Vicious performing with The Idols; though recorded in September 1978, it wasn't released until 1993.\n\n Steve Dior provided a recording of this performance to the New Rose record label.\n\n It was originally released by the Fan Club division of New Rose.\n\n It was also released in Japan by Teichiku Records, under license from New Rose.",
+    "Glen Matlock\nGlen Matlock (born 27 August 1956) is an English musician best known for being the bass guitarist in the original line-up of the punk rock band the Sex Pistols.\n\n He is sometimes credited as a co-author on 10 of the 12 songs on \"Never Mind the Bollocks, Here's the Sex Pistols\", although he had left the band by the time the record was released and the bass was played by Steve Jones.\n\n He also continues to make his own records and tour with various bands, including the Sex Pistols."
+   ]
+  },
+  {
+   "id": "ce4bda5b67c9866f",
+   "gold": [
+    {
+     "sentence": "John Kingsley \"Joe\" Orton (1 January 1933 – 9 August 1967) was an English playwright and author.",
+     "facts": {
+      "0.0": "John Kingsley Orton, known as Joe Orton, was born on 1 January 1933.",
+      "0.1": "Joe Orton died on 9 August 1967.",
+      "0.2": "Joe Orton was an English playwright.",
+      "0.3": "Joe Orton was an English author."
+     }
+    },
+    {
+     "sentence": " His public career was short but prolific, lasting from 1964 until his death three years later.",
+     "facts": {
+      "1.0": "Joe Orton's public career was short but prolific.",
+      "1.1": "Joe Orton's public career lasted from 1964 until his death.",
+      "1.2": "Joe Orton died three years after his public career began in 1964."
+     }
+    },
+    {
+     "sentence": " During this brief period he shocked, outraged, and amused audiences with his scandalous black comedies.",
+     "facts": {
+      "2.0": "During his brief public career, Joe Orton shocked audiences with his scandalous black comedies.",
+      "2.1": "During his brief public career, Joe Orton outraged audiences with his scandalous black comedies.",
+      "2.2": "During his brief public career, Joe Orton amused audiences with his scandalous black comedies."
+     }
+    },
+    {
+     "sentence": " The adjective \"Ortonesque\" is sometimes used to refer to work characterised by a similarly dark yet farcical cynicism.",
+     "facts": {
+      "3.0": "The adjective 'Ortonesque' is sometimes used to refer to work characterised by a dark yet farcical cynicism.",
+      "3.1": "The cynicism is similarly dark yet farcical."
+     }
+    },
+    {
+     "sentence": "Henry James, OM ((1843--)15 1843 – (1916--)28 1916 ) was an American author regarded as a key transitional figure between literary realism and literary modernism, and is considered by many to be among the greatest novelists in the English language.",
+     "facts": {
+      "4.0": "Henry James, OM, was an American author.",
+      "4.1": "Henry James was born in 1843.",
+      "4.2": "Henry James died in 1916.",
+      "4.3": "Henry James was regarded as a key transitional figure between literary realism and literary modernism.",
+      "4.4": "Henry James is considered by many to be among the greatest novelists in the English language."
+     }
+    },
+    {
+     "sentence": " He was the son of Henry James, Sr. and the brother of renowned philosopher and psychologist William James and diarist Alice James.",
+     "facts": {
+      "5.0": "Henry James was the son of Henry James, Sr.",
+      "5.1": "Henry James was the brother of the renowned philosopher and psychologist William James.",
+      "5.2": "Henry James was the brother of diarist Alice James."
+     }
+    }
+   ],
+   "items": [
+    "The Henry James Review\nThe Henry James Review is a triannual peer-reviewed academic journal established in 1979 and is the official publication of the Henry James Society.\n\n It is dedicated to the scholarly, critical, and theoretical study of the American writer Henry James.\n\n Each issue focuses on a specific theme of interest and seeks to promote understanding and study of James' contributions.\n\n The journal is published by the Johns Hopkins University Press and the current editor-in-chief is Susan M. Griffin (University of Louisville).",
+    "Henry James\nHenry James, OM ((1843--)15 1843 – (1916--)28 1916 ) was an American author regarded as a key transitional figure between literary realism and literary modernism, and is considered by many to be among the greatest novelists in the English language.\n\n He was the son of Henry James, Sr. and the brother of renowned philosopher and psychologist William James and diarist Alice James.",
+    "Joe Orton\nJohn Kingsley \"Joe\" Orton (1 January 1933 – 9 August 1967) was an English playwright and author.\n\n His public career was short but prolific, lasting from 1964 until his death three years later.\n\n During this brief period he shocked, outraged, and amused audiences with his scandalous black comedies.\n\n The adjective \"Ortonesque\" is sometimes used to refer to work characterised by a similarly dark yet farcical cynicism.",
+    "Prick Up Your Ears\nPrick Up Your Ears is a 1987 British film, directed by Stephen Frears, about the playwright Joe Orton and his lover Kenneth Halliwell.\n\n The screenplay was written by Alan Bennett, based on the biography by John Lahr.\n\n The film stars Gary Oldman as Orton, Alfred Molina as Halliwell, Wallace Shawn as Lahr and Vanessa Redgrave as Peggy Ramsay.",
+    "Simon Bent\nSimon Bent is a British screenwriter and playwright, notable for work including BBC TV drama \"\" (2006), the screenplay for the feature film \"Christie Malry's Own Double-Entry\" (2000), and the Joe Orton biographical play \"Prick Up Your Ears\" based on John Lahr's book.",
+    "Stephen R. Donaldson\nStephen Reeder Donaldson (born May 13, 1947) is an American fantasy, science fiction and mystery novelist, most famous for \"The Chronicles of Thomas Covenant\", his ten-novel fantasy series.\n\n His work is characterized by psychological complexity, conceptual abstractness, moral bleakness, and the use of an arcane vocabulary, and has attracted critical praise for its \"imagination, vivid characterizations, and fast pace\".\n\n He earned his bachelor's degree from The College of Wooster and a Master's degree from Kent State University.\n\n He currently resides in New Mexico.",
+    "The Ruffian on the Stair\nThe Ruffian On the Stair is a play by British playwright Joe Orton which was first broadcast on BBC Radio in August 1964.\n\n It is an unsympathetic yet comedic one-act portrayal of working class England, as played out by a couple and a mysterious young man who toys with their lives.\n\n It was based on \"The Boy Hairdresser\", a novel by Orton and his lover Kenneth Halliwell.\n\n The title and play are based on a few lines from poet and dramatist William Ernest Henley: \"Madam Life's a piece in bloom, / Death goes dogging everywhere: / She's the tenant of the room, / He's the ruffian on the stair.\"\n\n \"Ruffian\" is not as renowned as other works such as \"Loot\" and \"What the Butler Saw\", but it is still staged on occasion.",
+    "What the Butler Saw (play)\nWhat the Butler Saw is a farce written by the English playwright Joe Orton.\n\n It was premièred at the Queen's Theatre in London on 5 March 1969.\n\n It was Orton's final play and the second to be performed after his death, following \"Funeral Games\" in 1968.",
+    "Prick Up Your Ears (play)\nPrick Up Your Ears is a play by Simon Bent, based on the life of playwright Joe Orton.\n\n Produced by Sonia Friedman it opened at the Comedy Theatre in London's West End on 30 September 2009 following previews from 17 September.\n\n It starred Chris New as Joe Orton and Matt Lucas as Orton's lover and murderer, Kenneth Halliwell.",
+    "George Orwell\nEric Arthur Blair (25 June 1903 – 21 January 1950), better known by his pen name George Orwell, was an English novelist, essayist, journalist, and critic.\n\n His work is marked by lucid prose, awareness of social injustice, opposition to totalitarianism, and outspoken support of democratic socialism."
+   ]
+  },
+  {
+   "id": "0719129d5ae4b3fb",
+   "gold": [
+    {
+     "sentence": "Ravi Sethi (born 1947) is an Indian computer scientist retired from Bell Labs and president of Avaya Labs Research.",
+     "facts": {
+      "0.0": "Ravi Sethi was born in 1947.",
+      "0.1": "Ravi Sethi is an Indian computer scientist.",
+      "0.2": "Ravi Sethi retired from Bell Labs.",
+      "0.3": "Ravi Sethi is president of Avaya Labs Research."
+     }
+    },
+    {
+     "sentence": "Nokia Bell Labs (formerly named AT&T Bell Laboratories, Bell Telephone Laboratories and Bell Labs) is an American research and scientific development company, owned by Finnish company Nokia.",
+     "facts": {
+      "1.0": "Nokia Bell Labs was formerly named AT&T Bell Laboratories.",
+      "1.1": "Nokia Bell Labs was formerly named Bell Telephone Laboratories.",
+      "1.2": "Nokia Bell Labs was formerly named Bell Labs.",
+      "1.3": "Nokia Bell Labs is an American research and scientific development company.",
+      "1.4": "Nokia Bell Labs is owned by the Finnish company Nokia."
+     }
+    },
+    {
+     "sentence": " Its headquarters are located in Murray Hill, New Jersey, in addition to other laboratories around the rest of the United States and in other countries.",
+     "facts": {
+      "2.0": "The headquarters of Nokia Bell Labs are located in Murray Hill, New Jersey.",
+      "2.1": "Nokia Bell Labs has other laboratories around the rest of the United States.",
+      "2.2": "Nokia Bell Labs has laboratories in other countries."
+     }
+    }
+   ],
+   "items": [
+    "Sethi–Ullman algorithm\nIn computer science, the Sethi–Ullman algorithm is an algorithm named after Ravi Sethi and Jeffrey D. Ullman, its inventors, for translating abstract syntax trees into machine code that uses as few registers as possible.",
+    "Richard Yoo\nRichard Yoo is an American entrepreneur, the co-founder and former CEO of the web hosting company Rackspace, and the founder and former CEO of web hosting company ServerBeach.",
+    "Rinku Singh\nRinku Singh (born August 8, 1988 in Lucknow, India) is a left-handed baseball pitcher who is currently a free agent.\n\n Singh was signed by the Pittsburgh Pirates organization after he won a pitching contest on a 2008 reality television show, \"The Million Dollar Arm\".\n\n He was the first Indian to play professional baseball and has spent several seasons in the minor leagues, only reaching as high as the A level.\n\n He is the subject of the movie \"Million Dollar Arm\".",
+    "Pharma Medica\nPharma Medica Research Inc. is an American research and development company that works with pharmaceutical companies and performs clinical trials in the pharmaceutical and biotechnology industry.\n\n The company is based in Toronto, Canada with headquarters in Mississauga, Ontario.\n\n Pharma Medica has locations in Scarborough, Ontario and St. Charles, Missouri.",
+    "Genpact\nGenpact is a global business process management and services and IT corporation with key offices in New York City, United States.\n\n It’s listed on the New York Stock Exchange under the symbol G.In 2016, the company reported net revenues of US$2.57 billion with more than 77,000 employees in 20 countries.\n\n Genpact provides consulting services to hundreds of clients, including approximately one-fifth of the Fortune Global 500.",
+    "Joshua Bloom\nJoshua Simon Bloom (born June 8, 1974 in Washington, D.C.) is an American astrophysicist, full professor of astronomy at the University of California, Berkeley, and was the CTO and co-founder of the machine-learning company wise.io (acquired by General Electric, 2016).\n\n He received a Bachelor of Arts in astronomy and astrophysics and physics from the Harvard College in 1996, an M.Phil from Cambridge University in 1997, and a PhD in astronomy from the California Institute of Technology in 2002.\n\n He was a Junior Fellow of the Harvard Society of Fellows from 2002 to 2005.\n\n His astronomy research focuses on gamma-ray bursts and other astrophysical transients such as supernovae and tidal disruption events.\n\n He is author of the book \"What Are Gamma-Ray Bursts?\"\n\n published by Princeton University Press in 2011.",
+    "Bell Labs\nNokia Bell Labs (formerly named AT&T Bell Laboratories, Bell Telephone Laboratories and Bell Labs) is an American research and scientific development company, owned by Finnish company Nokia.\n\n Its headquarters are located in Murray Hill, New Jersey, in addition to other laboratories around the rest of the United States and in other countries.",
+    "Ravi Sethi\nRavi Sethi (born 1947) is an Indian computer scientist retired from Bell Labs and president of Avaya Labs Research.\n\n He also serves as a member of the National Science Foundation's Computer and Information Science and Engineering (CISE) Advisory Committee.\n\n He is best known as one of three authors of the classic computer science textbook \"\", also known as the \"Dragon Book\".",
+    "Umesh Varshney\nUmesh Varshney (born 1957) is an Indian molecular biologist, academician and the head of the \"Prof.Umesh Varshney's Lab\" at the Indian Institute of Science, Bengaluru.\n\n He is a J. C. Bose National Fellow of the Department of Science and Technology and is known for his studies on protein synthesis and DNA repair in \"Escherichia coli\" and Mycobacterium tuberculosis.\n\n An elected fellow of the Indian Academy of Sciences, Indian National Science Academy and the National Academy of Sciences (India), he is also a recipient of the National Bioscience Award for Career Development of the Government of India.\n\n The Council of Scientific and Industrial Research, the apex agency of the Government of India for scientific research, awarded him the Shanti Swarup Bhatnagar Prize for Science and Technology, one of the highest Indian science awards, in 2001, and then in 2014 with the G. N. Ramachandran Gold Medal for Excellence in Biological Sciences & Technology for his contributions to biological sciences.",
+    "Von Braun Center for Science &amp; Innovation\nThe Von Braun Center for Science & Innovation (VCSI ) is a non-profit research and development organization based in Huntsville, Alabama and is named for pioneering aerospace engineer Wernher von Braun.\n\n VCSI is affiliated with NASA, Department of Defense and other federal government agencies."
+   ]
+  },
+  {
+   "id": "11d64437909dc804",
+   "gold": [
+    {
+     "sentence": "Bertalan Farkas (born August 2, 1949) is the first Hungarian cosmonaut and the first Esperantist in space.",
+     "facts": {
+      "0.0": "Bertalan Farkas was born on August 2, 1949.",
+      "0.1": "Bertalan Farkas is the first Hungarian cosmonaut.",
+      "0.2": "Bertalan Farkas is the first Esperantist in space."
+     }
+    },
+    {
+     "sentence": "Hans Wilhelm Schlegel (Überlingen, 3 August 1951) is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions.",
+     "facts": {
+      "1.0": "Hans Wilhelm Schlegel was born in Überlingen on 3 August 1951.",
+      "1.1": "Hans Wilhelm Schlegel is a German physicist.",
+      "1.2": "Hans Wilhelm Schlegel is an ESA astronaut.",
+      "1.3": "Hans Wilhelm Schlegel is a veteran of two NASA Space Shuttle missions."
+     }
+    }
+   ],
+   "items": [
+    "Duncan Haldane\nFrederick Duncan Michael Haldane {'1': \", '2': \", '3': \", '4': \"} (born 14 September 1951), known as F. Duncan Haldane, is a British born physicist who is Eugene Higgins Professor of Physics at the physics department of Princeton University, and a Distinguished Visiting Research Chair at Perimeter Institute for Theoretical Physics.\n\n He won the 2016 Nobel Prize in Physics with David J. Thouless and John Michael Kosterlitz.",
+    "Karl Wilhelm Friedrich Schlegel\nKarl Wilhelm Friedrich (after 1814: von) Schlegel (10 March 1772 – 12 January 1829), usually cited as Friedrich Schlegel, was a German poet, literary critic, philosopher, philologist and Indologist.\n\n With his older brother, August Wilhelm Schlegel, he was one of the main figures of the Jena romantics.\n\n He was a zealous promoter of the Romantic movement and inspired Samuel Taylor Coleridge, Adam Mickiewicz and Kazimierz Brodziński.\n\n Schlegel was a pioneer in Indo-European studies, comparative linguistics, morphological typology, and was the first to notice what became known as Grimm's law.",
+    "Bertalan Farkas\nBertalan Farkas (born August 2, 1949) is the first Hungarian cosmonaut and the first Esperantist in space.\n\n He is currently the president of Airlines Service and Trade.\n\n With Charles Simonyi's travel, Farkas is no longer the only Hungarian who has been to space (he is still the only astronaut, as Simonyi flew as a space tourist).",
+    "Hans von Hentig\nHans von Hentig (9 June 1887 in Berlin – 6 July 1974 in Bad Tölz) was a German criminal psychologist and politician.He was the second son of lawyer Otto von Hentig (1852–1934) .\n\nHis older brother was later diplomat Werner Otto von Hentig.\n\n Otto von Hentig was one of the leading lawyers in Berlin.\n\n Hans von Hentig was instrumental in the setting up of a short-lived Bavarian Soviet Republic in 1919.\n\n During the 1920s he was a prominent exponent of National Bolshevism.\n\n He emigrated to United States in 1935.\n\n Hans von Hentig worked on Yale University.",
+    "Hermann Knoblauch\nKarl Hermann Knoblauch (11 April 1820 – 30 June 1895) was a German physicist.\n\n He is most notable for his studies of radiant heat.\n\n He was one of the six founding members of the Deutsche Physikalische Gesellschaft at Berlin on 14 January 1845.",
+    "Gassenhauer\nGassenhauer nach Hans Neusiedler (1536), commonly known as Gassenhauer (] ), is a short piece from Carl Orff's Schulwerk.\n\n As the full title indicates, it is either an arrangement of, or inspired by, a much older work by the lutenist Hans Neusiedler from 1536.\n\n It (along with several other pieces) is in fact credited to Orff's longtime collaborator, Gunild Keetman, on at least one recent release of the Schulwerk.\n\n As with many other pieces from the Schulwerk, it has been used multiple times on television, radio, and in films, including the films \"Badlands\" (1973), \"Ratcatcher\" (1999), \"Finding Forrester\" (2000), \"Monster\" (2003), and, most recently, Michael Moore's \"\" (2009) and \"The Simpsons\"′ 22nd-season episode \"The Scorpion's Tale\" (2011).\n\n The piece was used as the theme music for an afternoon radio program also titled \"Gassenhauer\" on the classical music station WCLV in Cleveland, Ohio, in the 1970s.",
+    "Hans Schlegel\nHans Wilhelm Schlegel (Überlingen, 3 August 1951) is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions.",
+    "Christer Fuglesang\nArne Christer Fuglesang (] ) (born March 18, 1957 in Stockholm) is a Swedish physicist and an ESA astronaut.\n\n He was first launched aboard the STS-116 Space Shuttle mission on December 10, 2006, at 01:47 GMT, making him the first Swedish citizen in space.",
+    "Søren Kierkegaard\nSøren Aabye Kierkegaard ( or ; ] ; 5 May 1813 – 11 November 1855) was a Danish philosopher, theologian, poet, social critic and religious author who is widely considered to be the first existentialist philosopher.\n\n He wrote critical texts on organized religion, Christendom, morality, ethics, psychology, and the philosophy of religion, displaying a fondness for metaphor, irony and parables. Much of his philosophical work deals with the issues of how one lives as a \"single individual\", giving priority to concrete human reality over abstract thinking and highlighting the importance of personal choice and commitment.\n\n He was against literary critics who defined idealist intellectuals and philosophers of his time, and thought that Swedenborg, Hegel, Goethe, Fichte, Schelling, Schlegel and Hans Christian Andersen were all \"understood\" far too quickly by \"scholars\".",
+    "François Englert\nFrançois Baron Englert (] ; born 6 November 1932) is a Belgian theoretical physicist and 2013 Nobel prize laureate (shared with Peter Higgs).\n\n He is Professor emeritus at the Université libre de Bruxelles (ULB) where he is member of the Service de Physique Théorique.\n\n He is also a Sackler Professor by Special Appointment in the School of Physics and Astronomy at Tel Aviv University and a member of the Institute for Quantum Studies at Chapman University in California.\n\n He was awarded the 2010 J. J. Sakurai Prize for Theoretical Particle Physics (with Gerry Guralnik, C. R. Hagen, Tom Kibble, Peter Higgs, and Robert Brout), the Wolf Prize in Physics in 2004 (with Brout and Higgs) and the High Energy and Particle Prize of the European Physical Society (with Brout and Higgs) in 1997 for the mechanism which unifies short and long range interactions by generating massive gauge vector bosons.\n\n He has made contributions in statistical physics, quantum field theory, cosmology, string theory and supergravity."
+   ]
+  },
+  {
+   "id": "6e40b089c813d766",
+   "gold": [
+    {
+     "sentence": " Other voice-over roles of his include Dr. Drakken and Motor Ed on \"Kim Possible\", Brother Blood on \"Teen Titans\", Aquaman in \"\", Rico in \"The Penguins of Madagascar\", and Ogre In \"\", Niblet on \"Pound Puppies\", the Scotsman on \"Samurai Jack\", and Shnitzel on \"Chowder\".",
+     "facts": {
+      "0.0": "The unnamed person in this passage has other voice-over roles",
+      "0.1": "The unnamed person voiced Dr. Drakken in Kim Possible",
+      "0.2": "The unnamed person voiced Motor Ed in Kim Possible",
+      "0.3": "The unnamed person voiced Brother Blood in Teen Titans",
+      "0.4": "The unnamed person voiced Aquaman in an unnamed work",
+      "0.5": "The unnamed person voiced Rico in The Penguins of Madagascar",
+      "0.6": "The unnamed person voiced Ogre in an unnamed work",
+      "0.7": "The unnamed person voiced Niblet in Pound Puppies",
+      "0.8": "The unnamed person voiced the Scotsman in Samurai Jack",
+      "0.9": "The unnamed person voiced Shnitzel in Chowder"
+     }
+    },
+    {
+     "sentence": "Chowder is an American animated television series created by C. H. Greenblatt for Cartoon Network.",
+     "facts": {
+      "1.0": "Chowder is an American animated television series",
+      "1.1": "Chowder was created by C. H. Greenblatt",
+      "1.2": "Chowder was created for Cartoon Network"
+     }
+    }
+   ],
+   "items": [
+    "Townsend Coleman\nTownsend Putnam Coleman III (born May 28, 1954) is an American voice actor who performed in many animated series and TV commercials beginning in the early 1980s.\n\n Among his most notable roles are Michaelangelo from \"Teenage Mutant Ninja Turtles\", Wayne Gretzky on \"ProStars\" and the title character in \"Where's Waldo?\n\n\" and the eponymous \"The Tick\" and he also did additional voices in \"Dexter's Laboratory\", \"The Powerpuff Girls\", \"Adventure Time\", \"Animaniacs\", \"The Buzz on Maggie\", \"Camp Lazlo\", \"CatDog\", \"Catscratch\", \"Danny Phantom\", \"Dave the Barbarian\", \"\", \"The Fairly OddParents\", \"Foster's Home for Imaginary Friends\", \"Gravity Falls\", \"Hi Hi Puffy AmiYumi\", \"\", \"The Loud House\", \"The Mighty B!\n\n\", \"My Life As A Teenage Robot\" and \"The Replacements\" and he also did the voice of Knotty in \"\" (1992) and he also did additional voices in films \"Fantasia 2000\" (1999) and \"Sing\" (2016)",
+    "The Itchy &amp; Scratchy Show\n(voiced by Alex Rocco, and, later, Hank Azaria), who runs the studio and produces the show.",
+    "Dwight Schultz\nWilliam Dwight Schultz (born November 24, 1947) is an American actor and voice artist.\n\n He is known for his roles as Captain \"Howling Mad\" Murdock on the 1980s action series \"The A-Team\", and as Reginald Barclay in \"\", \"\" and the film \"\".\n\n He is also well known in animation as the mad scientist Dr. Animo in the \"Ben 10\" series, Chef Mung Daal in the children's cartoon \"Chowder\", and Eddie the Squirrel in \"CatDog\".",
+    "John DiMaggio\nJohn William DiMaggio (born September 4, 1968) is an American voice actor and comedian, known for his gruff voice and for his work as Bender from the television show \"Futurama\", Jake the Dog on \"Adventure Time\", and Marcus Fenix in the hit Xbox video game \"Gears Of War\".\n\n Other voice-over roles of his include Dr. Drakken and Motor Ed on \"Kim Possible\", Brother Blood on \"Teen Titans\", Aquaman in \"\", Rico in \"The Penguins of Madagascar\", and Ogre In \"\", Niblet on \"Pound Puppies\", the Scotsman on \"Samurai Jack\", and Shnitzel on \"Chowder\".",
+    "Harvey Beaks\nHarvey Beaks is an American animated television series created by C.H. Greenblatt for Nickelodeon.\n\n The series premiered on March 28, 2015 following the 2015 Kids' Choice Awards.",
+    "Adventure Time\nAdventure Time is an American animated television series created by Pendleton Ward for Cartoon Network.\n\n It follows the adventures of a boy named Finn (voiced by Jeremy Shada) and his best friend and adoptive brother Jake (John DiMaggio)— a dog with the magical power to change shape and size at will.\n\n Finn and Jake live in the post-apocalyptic Land of Ooo, where they interact with Princess Bubblegum (Hynden Walch), the Ice King (Tom Kenny), Marceline the Vampire Queen (Olivia Olson), BMO (Niki Yang), and others.\n\n The series is based on a 2007 short produced for Nicktoons and Frederator Studios' animation incubator series \"Random!\n\n Cartoons\".\n\n After the short became a viral hit on the Internet, Cartoon Network commissioned a full-length series, which previewed on March 11, 2010, and officially premiered on April 5, 2010.",
+    "Chowder (TV series)\nChowder is an American animated television series created by C. H. Greenblatt for Cartoon Network.\n\n The series follows an aspiring young child named Chowder and his day-to-day adventures as an apprentice in Chef Mung Daal's catering company.\n\n Although he means well, Chowder often finds himself in predicaments due to his perpetual appetite and his nature as a scatterbrain.\n\n It is animated with both traditional animation as well as short stop motion and puppet sequences that are inter-cut into the episodes, and that run over the end credits.\n\n Stop motion sequences are produced by Screen Novelties.\n\n It is also the first Cartoon Network original series to premiere during Stuart Snyder's tenure as Jim Samples had resigned months before the series premiere.",
+    "Sherry Alberoni\nSharyn Eileen \"Sherry\" Alberoni (born December 4, 1946) is an American actress and voice artist.\n\n Alberoni got her start as a Mouseketeer on the weekday ABC television program \"The Mickey Mouse Club\".\n\n As an adult, she became a voice artist for Hanna-Barbera Productions.\n\n Besides providing voices for numerous incidental characters in series such as \"Jeannie\", Alberoni is best known as the voice of nasty rich-girl Alexandra Cabot from \"Josie and the Pussycats\" , \"superhero-in-training\" Wendy from the first season of \"Super Friends\", the heroic robot, Bo in \"Mighty Orbots\" and Glumdalclitch in \"The Three Worlds of Gulliver\".\n\n In 1971, she starred alongside Patty Andrews in the Sherman Brothers stage musical, \"Victory Canteen\".",
+    "Adventure Time (pilot)\n\"Adventure Time\" is an animated short created by Pendleton Ward, as well as the pilot to the Cartoon Network series of the same name.\n\n The short follows the adventures of Pen (voiced by Zack Shada), a human boy, and his best friend Jake (voiced by John DiMaggio), a dog with magical powers to change shape and grow and shrink at will.\n\n In this episode, Pen and Jake have to rescue Princess Bubblegum (voiced by Paige Moss) from the antagonistic Ice King (voiced by John Kassir).",
+    "Right Now Kapow\nRight Now Kapow is an American animated sketch comedy television series produced by Warner Bros.\n\n Animation for Disney XD.\n\n It is the first collaboration between Warner Bros.\n\n Animation and Disney.\n\n The series premiered on September 19, 2016 and ended on May 31, 2017.\n\n The series was created by Justin Becker and Marly Halpern-Graser, who previously worked on the Cartoon Network series \"Mad\".\n\n Becker also worked on Adult Swim infomercials, and Halpern-Graser also worked on Cartoon Network's \"DC Nation\".\n\n The series follows Dog, Candy, Ice Cream, Diamond, Plant, and Moon going on new adventures everyday...and find themselves in mischief.\n\n Every episode of the series has 3 main parts in every 11-minute segment and other random shorts.\n\n The series has a style of humor similar to Cartoon Network's previous series, \"Mad\"."
+   ]
+  },
+  {
+   "id": "4513ffaf38737d87",
+   "gold": [
+    {
+     "sentence": " Players compete in races on tracks inspired by attractions such as the Haunted Mansion, Pirates of the Caribbean, Space Mountain and Big Thunder Mountain Railroad to acquire missing parts for the park's fireworks machine, which was accidentally destroyed by Chip 'n' Dale while they were gathering acorns.",
+     "facts": {
+      "0.0": "Players compete in races.",
+      "0.1": "The race tracks are inspired by attractions such as the Haunted Mansion.",
+      "0.2": "The race tracks are inspired by attractions such as Pirates of the Caribbean.",
+      "0.3": "The race tracks are inspired by attractions such as Space Mountain.",
+      "0.4": "The race tracks are inspired by attractions such as Big Thunder Mountain Railroad.",
+      "0.5": "Players race on tracks to acquire missing parts for the park's fireworks machine.",
+      "0.6": "The park's fireworks machine was accidentally destroyed by Chip 'n' Dale.",
+      "0.7": "Chip 'n' Dale destroyed the fireworks machine while they were gathering acorns."
+     }
+    },
+    {
+     "sentence": " Opened on January 15, 1975, Space Mountain is the oldest operating roller coaster in the state of Florida, and is the original version of the iconic attraction that has since been replicated at all of The Walt Disney Company's Magic Kingdom-style theme parks worldwide, except for the Shanghai Disneyland Resort.",
+     "facts": {
+      "1.0": "Space Mountain opened on January 15, 1975.",
+      "1.1": "Space Mountain is the oldest operating roller coaster in the state of Florida.",
+      "1.2": "Space Mountain is the original version of an iconic attraction.",
+      "1.3": "The original version of Space Mountain has since been replicated at all of The Walt Disney Company's Magic Kingdom-style theme parks worldwide.",
+      "1.4": "The replication of Space Mountain excludes the Shanghai Disneyland Resort."
+     }
+    }
+   ],
+   "items": [
+    "Walt Disney World Dolphin\nThe Walt Disney World Dolphin is a resort hotel designed by architect Michael Graves located between Epcot and Disney's Hollywood Studios in the Walt Disney World Resort in Bay Lake, Florida, next to Disney's BoardWalk Resort area.\n\n It opened on June 1, 1990 and is joined to its sister hotel, the Walt Disney World Swan (also designed by Graves) by a palm-tree lined covered walkway crossing a lagoon.\n\n The Walt Disney World Swan and Dolphin is a joint venture between the Walt Disney Company, Tishman Hotel Corporation, MetLife and Starwood Hotels and Resorts.\n\n The land the resort occupies is owned by the Walt Disney Company, while the buildings themselves are leased by Disney to the Tishman Hotel Corporation and MetLife but operated by Starwood Hotels & Resorts Worldwide under the Sheraton Hotels brand.\n\n The Walt Disney World Swan and Dolphin are a part of the Walt Disney Collection of resorts; because of this they are Disney branded and guests of the resort have access to special Disney benefits available to Disney Resort Hotel guests only.",
+    "Castle Park (amusement park)\nCastle Park, formerly Castle Amusement Park, is a 25-acre amusement park and family amusement center located in Riverside, California.\n\n The park utilizes a medieval \"castle\" theme and includes attractions such as a miniature golf course, arcade, and 27 amusement rides including three roller coasters such as \"Merlin's Revenge\", a junior rollercoaster, \"Screamin' Demon\" a spinning Wild Mouse rollercoaster, and \"Little Dipper\", a children's rollercoaster.\n\n The main \"castle\" themed building, houses the arcade as well as its only dark ride; \"Ghost Blasters\", an interactive attraction, designed by Sally Corporation, which can also be found at other amusement parks throughout North America.\n\n The park was designed, built and operated by Bud Hurlbut, who designed several rides at Knott's Berry Farm.\n\n Castle Park is currently owned and operated by Palace Entertainment.",
+    "Millennium Force\nMillennium Force is a steel roller coaster built by Intamin at Cedar Point amusement park in Sandusky, Ohio, United States.\n\n It was the fourteenth roller coaster to be built at the park since Blue Streak opened in 1964.\n\n Upon completion in 2000, Millennium Force broke six world records and was the world's first Giga Coaster, a roller coaster that exceeds 300 ft in height and completes a full circuit.\n\n It was briefly the tallest and fastest in the world until Steel Dragon 2000 opened later the same year.\n\n The ride is also the third-longest roller coaster in North America after The Beast at Kings Island and Fury 325 at Carowinds.\n\n It was the first roller coaster to use a cable lift system rather than a traditional chain lift.\n\n The coaster has a 310 ft , 45-degree lift hill with a 300 ft drop and features two tunnels, three overbanked turns, and four hills.\n\n It has a top speed of 93 mph .",
+    "Walt Disney World Quest: Magical Racing Tour\nWalt Disney World Quest: Magical Racing Tour is a 2000 go-kart racing video game based on attractions at the Walt Disney World Resort.\n\n Players compete in races on tracks inspired by attractions such as the Haunted Mansion, Pirates of the Caribbean, Space Mountain and Big Thunder Mountain Railroad to acquire missing parts for the park's fireworks machine, which was accidentally destroyed by Chip 'n' Dale while they were gathering acorns.\n\n The game was developed by Crystal Dynamics and published by Eidos Interactive.\n\n The Game Boy Color version was developed by Prolific Publishing.",
+    "Primeval Whirl\nPrimeval Whirl is a steel wild mouse roller coaster at Disney's Animal Kingdom at the Walt Disney World Resort.\n\n The ride is a spinning roller coaster purchased from Reverchon Industries.\n\n The ride is part of Chester and Hester's Dino-Rama, which is itself part of DinoLand U.S.A. It is a roller coaster in the \"Mild But Wild Thrills\" category.\n\n It has cars that spin in circles while traveling on tracks, permitting the ride experience to vary greatly each time it is ridden.\n\n The ride features 13 cars, each seating up to 4 riders.",
+    "Space Mountain (Disneyland)\nSpace Mountain (known as Hyperspace Mountain from 2015 to 2017) is an indoor, space-themed roller coaster in Tomorrowland at Disneyland in Anaheim, California.\n\n Opened on May 27, 1977, it was the second roller coaster built at Disneyland, and was the second of the five versions of Space Mountain built by The Walt Disney Company.\n\n Its exterior façade is one of Disneyland's four \"mountain\" structures that serve as park landmarks.",
+    "Rock 'n' Roller Coaster Starring Aerosmith\nRock 'n' Roller Coaster Starring Aerosmith is an enclosed launched steel roller coaster at Disney's Hollywood Studios at the Walt Disney World Resort and at the Walt Disney Studios Park in Disneyland Paris (where it is called \"Rock 'n' Roller Coaster avec Aerosmith\").\n\n As the attraction's name suggests, the coaster features Aerosmith members, Steven Tyler, Joe Perry, Tom Hamilton, Joey Kramer, and Brad Whitford.",
+    "Best Western Lake Buena Vista Resort Hotel\nThe Best Western Lake Buena Vista Resort Hotel is a 325-room resort that is on the property of Walt Disney World Resort in Lake Buena Vista, Florida.\n\n The resort is located across from the Disney Springs area.\n\n The hotel originally opened in November 1972 as the Travelodge at Lake Buena Vista.\n\n It was operated by Travelodge from 1972 through 1983, then in 1984 the resort became the Viscount Hotel and operated as such until 1988.\n\n In 1989, it was reacquired by Travelodge.\n\n In 2000, the Travelodge hotel switched over to become the Best Western Lake Buena Vista Resort Hotel.\n\n The hotel was renovated in 2004 and has 2 outdoor pools.",
+    "Space Mountain (Magic Kingdom)\nSpace Mountain is an indoor dark outer space-themed steel roller coaster at the Magic Kingdom theme park at the Walt Disney World Resort in Lake Buena Vista, Florida.\n\n Opened on January 15, 1975, Space Mountain is the oldest operating roller coaster in the state of Florida, and is the original version of the iconic attraction that has since been replicated at all of The Walt Disney Company's Magic Kingdom-style theme parks worldwide, except for the Shanghai Disneyland Resort.\n\n RCA helped fund Space Mountain's construction and sponsored the ride from 1975 to 1993; FedEx sponsored Space Mountain from 1994 to 2004.",
+    "Space Mountain\nSpace Mountain is the name of a space-themed indoor roller coaster attraction located at five of the Magic Kingdom-style Disney Parks (all except for Shanghai Disneyland Park).\n\n Although all five versions of the attraction are different in nature, all have a similar domed exterior façade that is a landmark for the respective park.\n\n The first Space Mountain ride opened in 1975 at Walt Disney World Resort in Florida, and similar attractions were then eventually built at the other Disney parks."
+   ]
+  }
+ ]
+}

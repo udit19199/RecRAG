@@ -1,0 +1,10 @@
+{
+ "chunks_total": 7728,
+ "sampled": 100,
+ "calls_per_chunk": 1.0,
+ "input_per_chunk": 2059.62,
+ "output_per_chunk": 1652.37,
+ "reasoning_per_chunk": 974.38,
+ "list_usd_per_chunk": 0.001032147,
+ "list_usd_full_build": 7.9764320159999995
+}

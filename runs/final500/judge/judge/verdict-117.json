@@ -1,0 +1,53 @@
+[
+  {"id": "26f02c2f6f3bb249", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "According to a now-deleted profile from FTX investors Sequoia Capital"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "According to a now-deleted profile from FTX investors Sequoia Capital"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "According to a now-deleted profile from FTX investors Sequoia Capital, FTX was founded because of Bankman-Fried’s frustration with other exchanges when he was running Alameda Research, his crypto trading firm."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "because of Bankman-Fried’s frustration with other exchanges when he was running Alameda Research"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "Bankman-Fried’s frustration with other exchanges when he was running Alameda Research, his crypto trading firm."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "Binance has made headlines this past year for a range of reasons"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "including Zhao’s comments contributing to the collapse of FTX"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "including Zhao’s comments contributing to the collapse of FTX, which was once one of its top competitors."}]},
+    {"fact": "3.0", "status": "missing", "evidence": []},
+    {"fact": "3.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "191a7c0231f7197d", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "30b5d6d846eab681", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Hope has been rising on Wall Street recently"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Hope has been rising on Wall Street recently that the US economy is slowing from its recent hot pace by just the right amount."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "Hope has been rising on Wall Street recently that the US economy is slowing from its recent hot pace by just the right amount."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "A shutdown would drag on the US economy, raising the risk of a recession"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "A shutdown would drag on the US economy, raising the risk of a recession"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "though financial markets have held up relatively well through past shutdowns"}]}
+  ]},
+  {"id": "884e338d80407e6c", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "With inflation down from its peak two summers ago"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates and could soon turn to cutting them."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "foreign-exchange strategists at Bank of America wrote in a BofA Global Research report"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "Postponements of such reports could complicate things for the Fed"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy"}]}
+  ]},
+  {"id": "cbdd68839cd88da2", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks"}]}
+  ]}
+]

@@ -1,0 +1,607 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "adc08522a0f77526",
+   "kind": "answer",
+   "question": "when is the solar eclipse passing through kentucky",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "August 21, 2017"
+  },
+  {
+   "id": "2a8a25b3c2cb01f0",
+   "kind": "answer",
+   "question": "what awards did the harry potter movies win",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "BAFTAs, Saturn Awards, Empire Awards, MTV Movie Awards, and People’s Choice Awards."
+  },
+  {
+   "id": "a0a86872905c2deb",
+   "kind": "answer",
+   "question": "what guides santa home after he has delivered presents",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Rudolph the Red-Nosed Reindeer"
+  },
+  {
+   "id": "91c958fdbfddf3c2",
+   "kind": "answer",
+   "question": "central london properties v high trees house 1947",
+   "gold_answers": [
+    "Central London Property Trust Ltd v High Trees House Ltd ( 1947 ) KB 130 ( or the High Trees case ) is an English contract law decision in the High Court . It reaffirmed and extended the doctrine of promissory estoppel in contract law in England and Wales . However , the most significant part of the judgment is obiter dicta as it relates to hypothetical facts ; that is , the landlord did not seek repayment of the full wartime rent ."
+   ],
+   "model_answer": "Central London Property Trust Ltd v High Trees House Ltd (1947) KB 130"
+  },
+  {
+   "id": "6c69a39650815247",
+   "kind": "answer",
+   "question": "discuss the impact of devaluation on foreign exchange reserve",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Devaluation may initially drain reserves, but improve them over time by boosting exports and reducing imports."
+  },
+  {
+   "id": "0ec65f2116bde0ba",
+   "kind": "answer",
+   "question": "where is jj's husband on criminal minds",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Will LaMontagne Jr. is usually at home with JJ and their sons in Virginia."
+  },
+  {
+   "id": "6b6d2883b6c0c3ef",
+   "kind": "answer",
+   "question": "where have you been all my life arthur alexander",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "“Where Have You Been (All My Life)”—a song by Arthur Alexander."
+  },
+  {
+   "id": "5b3e955eb3a1ff6f",
+   "kind": "answer",
+   "question": "all i want for christmas is you mariah carey tour",
+   "gold_answers": [
+    "All I Want for Christmas Is You , a Night of Joy and Festivity is the first concert residency by American singer Mariah Carey . Performed annually at the Beacon Theatre in Manhattan , New York , the residency began on December 15 , 2014 , and will conclude on December 22 , 2017 , after completing six legs and thirty - four shows . Billboard revealed that the six dates had sold out with a total of 16,196 tickets while grossing $1.5 million during the first leg of the residency . The main set list for the show encompassed songs from Merry Christmas and Merry Christmas II You , with additional non-holiday tracks . The show also included `` a cast of forty , including a gospel choir , a clutch of carolers , several acrobats and a hyperactive round of kid singer / dancers . ''"
+   ],
+   "model_answer": "All I Want for Christmas Is You, a Night of Joy and Festivity"
+  },
+  {
+   "id": "60548c334f67fa27",
+   "kind": "answer",
+   "question": "where does the nitrogen for this fertilizer come from",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "From atmospheric nitrogen, fixed using hydrogen typically derived from natural gas."
+  },
+  {
+   "id": "0476e89f807cef4a",
+   "kind": "answer",
+   "question": "who starred in the movie summer of 42",
+   "gold_answers": [
+    "Gary Grimes",
+    "Jerry Houser",
+    "Oliver Conant",
+    "Jennifer O'Neill",
+    "Katherine Allentuck",
+    "Christopher Norris",
+    "Maureen Stapleton",
+    "Robert Mulligan"
+   ],
+   "model_answer": "Jennifer O’Neill, Gary Grimes, Jerry Houser, and Oliver Conant"
+  },
+  {
+   "id": "13e7243c9841c298",
+   "kind": "answer",
+   "question": "how much does.it cost to raise a child",
+   "gold_answers": [
+    "Dual - Parent Family - USDA Average Spending per Child ( not the basic cost of raising ) Age of Child Housing Food Transport . Clothing Health Child Care / Education Misc . Total Before - tax income : Less than $59,410 ( Average = $38,000 ) 0 to 2 2,990 1,160 1,170 640 630 2,040 420 9,050 3 to 5 2,990 1,260 1,230 500 590 1,910 620 9,100 6 to 8 2,990 1,710 1,350 570 660 1,290 630 8,760 9 to 11 2,990 1,970 1,350 580 710 1,910 630 9,520 12 to 14 2,990 2,130 1,480 690 1,090 1,110 700 9,960 15 to 17 2,990 2,120 1,630 730 1,010 1,290 580 9,970 Total 53,820 31,050 24,630 11,130 14,070 23,640 10,740 169,080 Before - tax income : $59,410 to $102,870 ( Average = $79,940 ) 0 to 2 3,920 1,405 1,690 760 850 2,860 890 12,370 3 to 5 3,920 1,490 1,740 610 800 2,740 1,090 12,390 6 to 8 3,920 2,100 1,860 680 940 1,680 1,110 12,290 9 to 11 3,920 2,400 1,870 710 1,000 2,110 1,100 13,110 12 to 14 3,920 2,580 1,990 840 1,410 1,910 1,170 13,820 15 to 17 3,920 2,570 2,150 900 1,330 2,400 1,050 14,320 Total 70,560 37,620 33,900 13,500 18,990 41,100 19,230 234,900 Before - tax income : More than $102,870 ( Average = $180,040 ) 0 to 2 7,100 1,900 2,550 1,050 980 5,090 1,790 20,460 3 to 5 7,100 2,000 2,610 880 930 4,970 1,990 20,480 6 to 8 7,100 2,630 2,730 970 1,080 3,910 2,000 20,420 9 to 11 7,100 2,980 2,730 1,010 1,150 4,350 2,000 21,320 12 to 14 7,100 3,190 2,860 1,170 1,610 4,700 2,070 22,700 15 to 17 7,100 3,180 3,020 1,280 1,520 6,460 1,950 24,510 Total 127,800 47,640 49,500 19,080 21,810 88,440 35,400 389,670"
+   ],
+   "model_answer": "About $169,080 in the U.S. for a child through age 17, for a middle-income two-parent family."
+  },
+  {
+   "id": "7aa7253cb983ec97",
+   "kind": "answer",
+   "question": "the first european town in the present-day united states was new orleans",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No—St. Augustine, Florida."
+  },
+  {
+   "id": "cc9a8fc5c97866ca",
+   "kind": "answer",
+   "question": "where did the first african american air force unit train",
+   "gold_answers": [
+    "Moton Field, the Tuskegee Army Air Field"
+   ],
+   "model_answer": "Tuskegee University in Alabama."
+  },
+  {
+   "id": "549fdf4623bad349",
+   "kind": "answer",
+   "question": "who was the french chef given credit for developing the classic kitchen​ brigade",
+   "gold_answers": [
+    "Georges Auguste Escoffier"
+   ],
+   "model_answer": "Auguste Escoffier"
+  },
+  {
+   "id": "6faa6638acba5932",
+   "kind": "answer",
+   "question": "where can you find dna in the body",
+   "gold_answers": [
+    "inside the cell nucleus",
+    "in organelles, such as mitochondria or chloroplasts",
+    "chromosomes in a cell"
+   ],
+   "model_answer": "In the chromosomes of cells."
+  },
+  {
+   "id": "03588cb8f4847094",
+   "kind": "answer",
+   "question": "british forces retreated when they saw how strong american defenses were",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Not exactly; they retreated after failed attacks and mounting losses."
+  },
+  {
+   "id": "c18d1b640dfb819b",
+   "kind": "answer",
+   "question": "what caused the breakup of the democratic republican party",
+   "gold_answers": [
+    "the disputed 1824 presidential election"
+   ],
+   "model_answer": "The disputed 1824 election and divisions over federal power and modernization."
+  },
+  {
+   "id": "572f2566b777e1fa",
+   "kind": "answer",
+   "question": "who is the owner of reading football club",
+   "gold_answers": [
+    "Dai Yongge",
+    "Dai Xiuli",
+    "Dai Yongge and Dai Xiuli (majority)",
+    "Xiu Li Dai",
+    "Yongge Dai"
+   ],
+   "model_answer": "Dai Yongge and Dai Xiuli (majority owners)"
+  },
+  {
+   "id": "28b766bc44029fa9",
+   "kind": "answer",
+   "question": "what are the importance of rigor mortis in meat processing",
+   "gold_answers": [
+    "rigor mortis and its resolution partially determine the tenderness of meat",
+    "tenderness of meat"
+   ],
+   "model_answer": "It influences meat tenderness, and managing it helps prevent cold shortening."
+  },
+  {
+   "id": "81c2d29951df9e4d",
+   "kind": "answer",
+   "question": "what part of the brain is in the middle cranial fossa",
+   "gold_answers": [
+    "the temporal lobes",
+    "temporal lobes",
+    "pituitary gland",
+    "the pituitary gland"
+   ],
+   "model_answer": "Temporal lobes of the cerebrum\n"
+  },
+  {
+   "id": "4c4bca2d957d3192",
+   "kind": "answer",
+   "question": "cast of law & order special victim unit",
+   "gold_answers": [
+    "Christopher Meloni",
+    "Mariska Hargitay",
+    "Richard Belzer",
+    "Dann Florek",
+    "Michelle Hurd",
+    "Stephanie March",
+    "Ice-T",
+    "Tamara Tunie",
+    "B. D. Wong",
+    "Diane Neal",
+    "Adam Beach",
+    "Michaela McManus",
+    "Danny Pino",
+    "Kelli Giddish",
+    "Raúl Esparza",
+    "Peter Scanavino"
+   ],
+   "model_answer": "Mariska Hargitay, Ice-T, Peter Scanavino, Octavio Pisano, and Kevin Kane."
+  },
+  {
+   "id": "bc4c60a600301472",
+   "kind": "answer",
+   "question": "the cast of a good day to die hard",
+   "gold_answers": [
+    "Bruce Willis",
+    "Jai Courtney",
+    "Sebastian Koch",
+    "Yuliya Snigir",
+    "Sergei Kolesnikov",
+    "Radivoje Bukvić",
+    "Mary Elizabeth Winstead"
+   ],
+   "model_answer": "Bruce Willis, Jai Courtney, Sebastian Koch, Yuliya Snigir, Cole Hauser, Rasha Bukvić, Mary Elizabeth Winstead, Aldis Hodge, and Amaury Nolasco."
+  },
+  {
+   "id": "8bd6c38ff82e4e33",
+   "kind": "answer",
+   "question": "when do the grand magic games start in fairy tail",
+   "gold_answers": [
+    "Crocus, the Flower-Blooming Capital"
+   ],
+   "model_answer": "In three months."
+  },
+  {
+   "id": "5efc2c79314abb54",
+   "kind": "answer",
+   "question": "florence and the machine i am not a robot",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "“I Am Not a Robot” is by Marina and the Diamonds."
+  },
+  {
+   "id": "462d65e4954378b8",
+   "kind": "answer",
+   "question": "who starred in the movie summer of 42",
+   "gold_answers": [
+    "Gary Grimes",
+    "Jerry Houser",
+    "Oliver Conant",
+    "Jennifer O'Neill",
+    "Katherine Allentuck",
+    "Christopher Norris",
+    "Maureen Stapleton",
+    "Robert Mulligan"
+   ],
+   "model_answer": "Jennifer O’Neill and Gary Grimes"
+  },
+  {
+   "id": "7457d1bba8c08430",
+   "kind": "answer",
+   "question": "polar moment of inertia vs area moment of inertia",
+   "gold_answers": [
+    "Polar moment of inertia is a quantity used to predict an object 's ability to resist torsion , in objects ( or segments of objects ) with an invariant circular cross section and no significant warping or out - of - plane deformation . It is used to calculate the angular displacement of an object subjected to a torque . It is analogous to the area moment of inertia , which characterizes an object 's ability to resist bending and is required to calculate displacement ."
+   ],
+   "model_answer": "Polar moment: resistance to twisting; area moment: resistance to bending."
+  },
+  {
+   "id": "aa5b9efccbcc2c36",
+   "kind": "answer",
+   "question": "how much does it cost for the olympics",
+   "gold_answers": [
+    "on average USD 5.2 billion and for the Winter Games USD 3.1 billion dollars"
+   ],
+   "model_answer": "On average, $5.2 billion for Summer Olympics and $3.1 billion for Winter Olympics."
+  },
+  {
+   "id": "c34c960dc27ac005",
+   "kind": "answer",
+   "question": "where do car factories tend to be located and why",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "In urban areas, near labor, transport, energy, materials, and markets."
+  },
+  {
+   "id": "e471119d7fc81ef6",
+   "kind": "answer",
+   "question": "the seed of a gymnosperm seed is made in the",
+   "gold_answers": [
+    "either on the surface of scales or leaves",
+    "either on the surface of scales or leaves, which are often modified to form cones, or solitary",
+    "the surface of scales or leaves"
+   ],
+   "model_answer": "Surface of cone scales"
+  },
+  {
+   "id": "5d94a118c6cf39cb",
+   "kind": "answer",
+   "question": "what does cost of goods sold consist of",
+   "gold_answers": [
+    "Costs are associated with particular goods using one of the several formulas , including specific identification , first - in first - out ( FIFO ) , or average cost . Costs include all costs of purchase , costs of conversion and other costs that are incurred in bringing the inventories to their present location and condition . Costs of goods made by the businesses include material , labor , and allocated overhead . The costs of those goods which are not yet sold are deferred as costs of inventory until the inventory is sold or written down in value ."
+   ],
+   "model_answer": "Product and raw-material costs, freight, storage, direct labor, and factory overhead."
+  },
+  {
+   "id": "b32186a0f92337e5",
+   "kind": "answer",
+   "question": "who were some of the survivors on the titanic",
+   "gold_answers": [
+    "Name Age Hometown Boarded Destination Lifeboat Body Allen , Miss Elizabeth Walton 29 St. Louis , Missouri , US Southampton St. Louis , Missouri , US Allison , Mr. Hudson Joshua Creighton 30 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada 135 and chauffeur , Mr. George Swane , 19 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada 294 and cook , Miss Amelia Mary `` Mildred '' Brown 18 London , England , UK Southampton Montreal , Quebec , Canada 11 Allison , Mrs. Bessie Waldo ( née Daniels ) 25 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada and maid , Miss Sarah Daniels 33 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada 8 Allison , Miss Helen Loraine Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada Allison , Master Hudson Trevor 0.11 ! 11 mo . Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada 11 and nurse , Miss Alice Catherine Cleaver 22 London , England , UK Southampton Montreal , Quebec , Canada 11 Anderson , Mr. Harry 47 New York City , New York , US Southampton New York City , New York , US Andrews , Miss Kornelia Theodosia 62 Hudson , New York , US Cherbourg Hudson , New York , US 10 Andrews , Mr. Thomas 39 Belfast , Ireland , UK Belfast New York City Appleton , Mrs. Charlotte Lane ( née Lamson ) 53 New York City Southampton New York City Artagaveytia , Mr. Ramon 71 Buenos Aires , Argentina Cherbourg New York City 22 Astor , Colonel John Jacob IV 47 New York City Cherbourg New York City 124 Astor , Mrs. Madeleine Talmage ( née Force ) 18 New York City Cherbourg New York City and maid , Miss Rosalie Bidois 46 New York City Cherbourg New York City and nurse , Miss Caroline Louise Endres 39 New York City Cherbourg New York City Aubart , Mrs. Léontine Pauline 24 Paris , France Cherbourg New York City 9 and maid , Miss Emma Sägesser 24 Paris , France Cherbourg New York City 9 Barkworth , Mr. Algernon Henry Wilson 47 Hessle , East Yorkshire , England , UK Southampton New York City Baumann , Mr. John D . 60 New York City Cherbourg New York City Baxter , Mrs. Hélène ( née de Lanaudière - Chaput ) 50 Montreal , Quebec , Canada Cherbourg Montreal , Quebec , Canada 6 Baxter , Mr. Quigg Edmond 24 Montreal , Quebec , Canada Cherbourg Montreal , Quebec , Canada Beattie , Mr. Thomson 36 Fergus , Ontario , Canada Southampton Fergus , Ontario , Canada 331 Beckwith , Mr. Richard Leonard 37 New York City Southampton New York City 5 Beckwith , Mrs. Sallie ( née Monypeny ) 46 New York City Southampton New York City 5 Behr , Mr. Karl Howell 26 New York City Cherbourg New York City 5 Birnbaum , Mr. Jakob 24 Antwerp , Belgium Cherbourg San Francisco , California , US 148 Bishop , Mr. Dickinson H. `` Dick '' 25 Dowagiac , Michigan , US Cherbourg Dowagiac , Michigan , US 7 Bishop , Mrs. Helen ( née Walton ) 19 Dowagiac , Michigan , US Cherbourg Dowagiac , Michigan , US 7 Björnström - Steffanson , Mr. Mauritz Håkan 28 Stockholm , Sweden Southampton Washington , D.C. , US Blackwell , Mr. Stephen Weart 45 Trenton , New Jersey , US Southampton Trenton , New Jersey , US Blank , Mr. Henry 39 Glen Ridge , New Jersey , US Cherbourg Glen Ridge , New Jersey , US 7 Bonnell , Miss Elizabeth 61 Youngstown , Ohio , US Southampton Youngstown , Ohio , US 8 Bonnell , Miss Caroline 30 Youngstown , Ohio , US Southampton Youngstown , Ohio , US 8 Borebank , Mr. John James 42 London , England , UK Southampton Toronto , Ontario , Canada Bowerman , Miss Elsie Edith 22 St. Leonards - on - Sea , East Sussex , England , UK Southampton New York City 6 Brady , Mr. John Bertram 41 Pomeroy , Washington , US Southampton Pomeroy , Washington , US Brandeis , Mr. Emil 48 Omaha , Nebraska , US Cherbourg Omaha , Nebraska , US 208 Brereton , Mr. George Andrew ( alias George A. Brayton ) 37 Los Angeles , US Southampton Los Angeles , California , US 9 Brewe , Dr. Arthur Jackson 45 Philadelphia , Pennsylvania , US Cherbourg Philadelphia , Pennsylvania , US Brown , Mrs. Caroline Lane ( née Lamson ) 59 Belmont , Massachusetts , US Southampton Belmont , Massachusetts , US Brown , Mrs. Margaret ( née Tobin ) 44 Denver , Colorado , US Cherbourg Denver , Colorado , US 6 Bucknell , Mrs. Emma Eliza ( née Ward ) 59 Philadelphia , Pennsylvania , US Cherbourg Philadelphia , Pennsylvania , US 8 and maid , Miss Albina Bazzani 36 Philadelphia , Pennsylvania , US Cherbourg Philadelphia , Pennsylvania , US 8 Butt , Major Archibald Willingham 46 Washington , D.C. , US Southampton Washington , D.C. , US Calderhead , Mr. Edward Pennington 42 New York City Southampton New York City 5 Candee , Mrs. Helen Churchill ( née Hungerford ) 53 Washington , D.C. , US Cherbourg Washington , D.C. , US 6 Cardeza , Mrs. Charlotte Wardle ( née Drake ) 58 Germantown , Pennsylvania , US Cherbourg Germantown , Pennsylvania , US and maid , Miss Annie Moore Ward 38 Germantown , Pennsylvania , US Cherbourg Germantown , Pennsylvania , US Cardeza , Mr. Thomas Drake Martinez 36 Germantown , Pennsylvania , US Cherbourg Germantown , Pennsylvania , US and valet , Mr. Gustave J. Lesueur 35 Germantown , Pennsylvania , US Cherbourg Germantown , Pennsylvania , US Carlsson , Mr. Frans Olof 33 New York City Southampton New York City Carrau , Mr. Francisco M . 31 Montevideo , Uruguay Southampton Montevideo , Uruguay Carrau , Mr. José Pedro 17 Montevideo , Uruguay Southampton Montevideo , Uruguay Carter , Mr. William Ernest 36 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US and valet , Mr. Alexander Cairns 28 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US and chauffeur , Mr. Charles Augustus Aldworth 30 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US Carter , Mrs. Lucile ( née Polk ) 36 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US and maid , Miss Auguste Serreplan 30 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US Carter , Miss Lucile Polk 13 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US Carter , Master William Thornton II 11 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US Case , Mr. Howard Brown 49 Ascot , Berkshire , England , UK Southampton Rochester , New York , US Cassebeer , Mrs. Eleanor Genevieve ( née Fosdick ) 36 New York City Cherbourg New York City 5 Cavendish , Mr. Tyrell William 36 London , England , UK Southampton New York City 172 Cavendish , Mrs. Julia Florence ( née Siegel ) 25 London , England , UK Southampton New York City 6 and maid , Miss Ellen `` Nellie '' Barber 26 London , England , UK Southampton New York City 6 Chaffee , Mr. Hubert Fuller 46 Amenia , North Dakota , US Southampton Amenia , North Dakota , US Chaffee , Mrs. Carrie Constance ( née Toogood ) 47 Amenia , North Dakota , US Southampton Amenia , North Dakota , US Chambers , Mr. Norman Campbell 27 New York City Southampton New York City 5 Chambers , Mrs. Bertha ( née Griggs ) 32 New York City Southampton New York City 5 Cherry , Miss Gladys 30 London , England , UK Southampton Vancouver , British Columbia , Canada 8 Chevré , Mr. Paul Romaine Marie Léonce 45 Paris , France Cherbourg Ottawa , Ontario , Canada 7 Chibnall , Mrs. Edith Martha Bowerman ( née Barber ) 48 St. Leonards - on - Sea , East Sussex , England , UK Southampton New York City 6 Chisholm , Mr. Roderick Robert Crispin 40 Belfast , Ireland , UK Belfast New York City Clark , Mr. Walter Miller 27 Los Angeles , California , US Cherbourg Los Angeles , California , US Clark , Mrs. Virginia Estelle ( née McDowell ) 26 Los Angeles , California , US Cherbourg Los Angeles , California , US Clifford , Mr. George Quincy 40 Stoughton , Massachusetts , US Southampton Stoughton , Massachusetts Colley , Mr. Edward Pomeroy 37 Dublin , Ireland , UK Southampton Vancouver , British Columbia , Canada Compton , Mrs. Mary Eliza ( née Ingersoll ) 64 Lakewood , New Jersey , US Cherbourg Lakewood , New Jersey , US 14 Compton , Miss Sara Rebecca 39 Lakewood , New Jersey , US Cherbourg Lakewood , New Jersey , US 14 Compton , Mr. Alexander Taylor Jr . 37 Lakewood , New Jersey , US Cherbourg Lakewood , New Jersey , US Cornell , Mrs. Malvina Helen ( née Lamson ) 55 New York City Southampton New York City Crafton , Mr. John Bertram 59 Roachdale , Indiana , US Southampton Roachdale , Indiana , US Crosby , Captain Edward 70 Milwaukee , Wisconsin , US Southampton Milwaukee , Wisconsin , US 269 Crosby , Mrs. Catherine Elizabeth ( née Halstead ) 64 Milwaukee , Wisconsin , US Southampton Milwaukee , Wisconsin , US 7 Crosby , Miss Harriette Rebecca 39 Milwaukee , Wisconsin , US Southampton Milwaukee , Wisconsin , US 7 Cumings , Mr. John Bradley 39 New York City Cherbourg New York City Cumings , Mrs. Florence Briggs ( née Thayer ) 35 New York City Cherbourg New York , US Daly , Mr. Peter Dennis 51 Lima , Peru Southampton Lima , Peru Daniel , Mr. Robert Williams 27 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US Davidson , Mr. Thornton 31 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada Davidson , Mrs. Orian ( née Hays ) 27 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada Dick , Mr. Albert Adrian 31 Calgary , Alberta , Canada Southampton Calgary , Alberta , Canada Dick , Mrs. Vera ( née Gillespie ) 17 Calgary , Alberta , Canada Southampton Calgary , Alberta , Canada Dineston , Mrs. Nancy May Bowles 28 London , England , UK Southampton New York City , USA Dineston , George Samuel 30 London , England , UK Southampton New York City , USA Dodge , Dr. Washington 52 San Francisco , California , US Southampton San Francisco , California , US 13 Dodge , Mrs. Ruth ( née Vidaver ) 34 San Francisco , California , US Southampton San Francisco , California , US 5 Dodge , Master Washington , Jr . San Francisco , California , US Southampton San Francisco , California , US 5 Douglas , Mr. Walter Donald 50 Minneapolis , Minnesota , US Cherbourg Minneapolis , Minnesota , US 62 Douglas , Mrs. Mahala ( née Dutton ) 48 Minneapolis , Minnesota , US Cherbourg Minneapolis , Minnesota , US and maid , Miss Berthe Leroy 27 Minneapolis , Minnesota , US Cherbourg Minneapolis , Minnesota , US Douglas , Mrs. Mary Hélène ( née Baxter ) 27 Montreal , Quebec , Canada Cherbourg Montreal , Quebec , Canada 6 Duff Gordon , Sir Cosmo Edmund 49 London , England , UK Cherbourg New York City Duff Gordon , Lucy Christiana , Lady ( née Sutherland ) 48 London , England , UK Cherbourg New York City and secretary , Miss Laura Mabel Francatelli 31 London , England , UK Cherbourg New York City Dulles , Mr. William Crothers 39 Philadelphia , Pennsylvania , US Cherbourg Philadelphia , Pennsylvania , US 133 Eustis , Miss Elizabeth Mussey 54 Brookline , Massachusetts , US Cherbourg Brookline , Massachusetts , US Evans , Miss Edith Corse 36 New York City Cherbourg New York City Flegenheim , Mrs. Antoinette ( née Wendt ) 48 New York City Cherbourg New York City 7 Flynn , Mr. John Irwin 36 Brooklyn , New York , US Southampton Brooklyn , New York , US 5 Foreman , Mr. Benjamin Laventall 30 New York City Southampton New York City Fortune , Mr. Mark 64 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada Fortune , Mrs. Mary ( née McDougald ) 60 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada 10 Fortune , Miss Ethel Flora 28 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada 10 Fortune , Miss Alice Elizabeth 24 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada 10 Fortune , Miss Mabel Helen 23 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada 10 Fortune , Mr. Charles Alexander 19 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada Franklin , Mr. Thomas Parnham 37 London , England , UK Southampton New York City Frauenthal , Dr. Henry William 49 London , England , UK Southampton New York City 5 Frauenthal , Mrs. Clara ( née Heinsheimer ) 42 London , England , UK Southampton New York City 5 Frauenthal , Mr. Isaac Gerald 43 London , England , UK Southampton New York City 5 Frölicher , Mr. Maximilian Josef 60 Zürich , Switzerland Cherbourg New York City 5 Frölicher , Mrs. Margaretha Emerentia ( née Stehli ) 48 Zürich , Switzerland Cherbourg New York City 5 Frölicher - Stehli , Miss Hedwig Margaritha 22 Zürich , Switzerland Cherbourg New York City 5 Futrelle , Mr. Jacques Heath 37 Scituate , Massachusetts , US Southampton Scituate , Massachusetts , US Futrelle , Mrs. Lily May ( née Peel ) 35 Scituate , Massachusetts , US Southampton Scituate , Massachusetts , US Gee , Mr. Arthur H . 47 St. Annes - on - Sea , Lancashire , England , UK Southampton Mexico City , Mexico 275 Gibson , Mrs. Pauline Caroline ( née Boeson ) 44 New York City Cherbourg New York City 7 Gibson , Miss Dorothy Winifred 22 New York City Cherbourg New York City 7 Goldenberg , Mr. Samuel L . 47 Paris , France Cherbourg New York City 5 Goldenberg , Mrs. Nella ( née Wiggins ) 40 Paris , France Cherbourg New York City 5 Goldschmidt , Mr. George B . 71 New York City Cherbourg New York City Gracie IV , Colonel Archibald 53 Washington , D.C. , US Southampton Washington , D.C. , US Graham , Mr. George Edward 38 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada 147 Graham , Mrs. Edith Ware ( née Junkins ) 59 Greenwich , Connecticut , US Southampton Greenwich , Connecticut , US Graham , Miss Margaret Edith 19 Greenwich , Connecticut , US Southampton Greenwich , Connecticut , US and governess , Miss Elizabeth Weed Shutes 40 Greenwich , Connecticut , US Southampton Greenwich , Connecticut , US Greenfield , Mrs. Blanche ( née Strouse ) 45 New York City Cherbourg New York City 7 Greenfield , Mr. William Bertram 23 New York City Cherbourg New York City 7 Guggenheim , Mr. Benjamin 46 Paris , France Cherbourg New York City and valet , Mr. Victor Giglio 24 Paris , France Cherbourg New York City and chauffeur , Mr. René Pernot 39 Paris , France Cherbourg New York City Harder , Mr. George Achilles 25 New York City Cherbourg New York City 5 Harder , Mrs. Dorothy ( née Annan ) 21 New York City Cherbourg New York City 5 Harper , Mr. Henry Sleeper 48 New York City Cherbourg New York City and dragoman , Mr. Hammad Hassab 27 Cairo , Egypt Cherbourg New York City Harper , Mrs. Myna ( née Haxtun ) 49 New York City Cherbourg New York City Harris , Mr. Henry Birkhardt 45 New York City Southampton New York City Harris , Mrs. Irene ( née Wallach ) 35 New York City Southampton New York City Hawksford , Mr. Walter James 45 Kingston , Surrey , England , UK Southampton New York City Hays , Mr. Charles Melville 55 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada 307 and clerk , Mr. Vivian Ponsonby Payne 22 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada Hays , Mrs. Clara Jennings ( née Grigg ) 52 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada and maid , Miss Mary Anne Perreault 33 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada Hays , Miss Margaret Bechstein 24 New York City Cherbourg New York City 7 Head , Mr. Christopher 42 Chelsea , London , England , UK Southampton New York City Hilliard , Mr. Herbert Henry 44 Brighton , Massachusetts , US Southampton Brighton , Massachusetts , US Hipkins , Mr. William Edward 55 Birmingham , West Midlands , England , UK Southampton New York City Hippach , Mrs. Ida Sophia ( née Fischer ) 44 Chicago , Illinois , US Cherbourg Chicago , Illinois , US Hippach , Miss Jean Gertrude 17 Chicago , Illinois , US Cherbourg Chicago , Illinois , US Hogeboom , Mrs. Anna Louisa ( née Andrews ) 51 Hudson , New York , US Cherbourg Hudson , New York , US 10 Holverson , Mr. Alexander Oskar 42 New York City Southampton New York City 38 Holverson , Mrs. Mary Aline ( née Towner ) 35 New York City Southampton New York City 8 Homer , Mr. Harry ( alias E. Haven ) 40 Indianapolis , Indiana , US Southampton Indianapolis , Indiana , US 15 Hoyt , Mr. Frederick Maxfield 35 New York City Southampton Stamford , Connecticut , US Hoyt , Mrs. Jane Anne ( née Forby ) 31 New York City Southampton Stamford , Connecticut , US Hoyt , Mr. William Fisher 42 New York City Cherbourg New York City 14 Isham , Miss Ann Elizabeth 50 Chicago , Illinois , US Cherbourg Chicago , Illinois , US Ismay , Mr. Joseph Bruce 49 Liverpool , Merseyside , England , UK Southampton New York City and valet , Mr. John Richard Fry 39 Liverpool , Merseyside , England , UK Southampton New York City and secretary , Mr. William Henry Harrison 45 Wallasey , Merseyside , England , UK Southampton New York City 110 Johnson , Mrs. Madeline Eliza ( née Austin ) 40 London , England , UK Southampton New York , New York , US 6 Johnson ( later changed to Langston ) , Mr. Samuel James 10 London , England , UK Southampton New York , New York , US Jones , Mr. Charles Cresson 46 Bennington , Vermont , US Southampton Bennington , Vermont , US 80 Julian , Mr. Henry Forbes 50 Torquay , Devon , England , UK Southampton San Francisco , US Kent , Mr. Edward Austin 58 Buffalo , New York , US Cherbourg Buffalo , New York , US 258 Kenyon , Mr. Frederick R . 41 Pittsburgh , Pennsylvania , US Southampton Pittsburgh , Pennsylvania , US Kenyon , Mrs. Marion ( née Stauffer ) 31 Pittsburgh , Pennsylvania , US Southampton Pittsburgh , Pennsylvania , US 8 Kimball , Mr. Edwin Nelson Jr . 42 Boston , Massachusetts , US Southampton Boston , Massachusetts , US 5 Kimball , Mrs. Gertrude ( née Parsons ) 45 Boston , Massachusetts , US Southampton Boston , Massachusetts , US 5 Klaber , Mr. Herman 45 Portland , Oregon , US Southampton Portland , Oregon , US Langston , Ms. Maxine Jane 25 Duncansville , Pennsylvania , US Southampton Duncansivlle , Pennsylvania , US Lambert - Williams , Mr. Fletcher Fellows 43 London , England , UK Southampton Newark , New Jersey , US Leader , Dr. Alice ( née Farnham ) 49 New York City Southampton New York City 8 Leslie , Lucy Noël Martha , Countess of Rothes ( née Dyer - Edwardes ) 27 Vancouver , British Columbia , Canada Southampton Vancouver , British Columbia , Canada 8 and maid , Miss Roberta Elizabeth Mary `` Cissy '' Maioni 20 Vancouver , British Columbia , Canada Southampton Vancouver , British Columbia , Canada 8 Lewy , Mr. Ervin G . 31 Chicago , Illinois , US Cherbourg Chicago , Illinois , US Lindeberg - Lind , Mr. Erik Gustav ( alias Edward Lingrey ) 42 Jordanstorp , Södermanland , Sweden Southampton New York City Lindström , Mrs. Sigrid ( née Posse ) 55 Stockholm , Sweden Cherbourg New York City 6 Lines , Mrs. Elizabeth Lindsey ( née James ) 50 Paris , France Cherbourg Hanover , New Hampshire , US 9 Lines , Miss Mary Conover 16 Paris , France Cherbourg Hanover , New Hampshire , US 9 Long , Mr. Milton Clyde 29 Springfield , Massachusetts , US Southampton Springfield , Massachusetts , US 126 Longley , Miss Gretchen Fiske 21 Hudson , New York , US Cherbourg Hudson , New York , US 10 Loring , Mr. Joseph Holland 30 London , England , UK Southampton New York City Madill , Miss Georgette Alexandra 16 St. Louis , Missouri , US Southampton St. Louis , Missouri , US Maguire , Mr. John Edward 30 Brockton , Massachusetts , US Southampton Brockton , Massachusetts , US Maréchal , Mr. Pierre , Sr . 28 Paris , France Cherbourg New York City 7 Marvin , Mr. Daniel Warner 18 New York City Southampton New York City Marvin , Mrs. Mary Graham Carmichael ( née Farquarson ) 18 New York City Southampton New York City 10 Mayné , Miss Bertha Antonine 24 Brussels , Belgium Cherbourg Montreal , Quebec , Canada 6 McCaffry , Mr. Thomas Francis 46 Vancouver , British Columbia , Canada Southampton Vancouver , British Columbia , Canada 292 McCarthy , Mr. Timothy J . 54 Dorchester , Massachusetts , US Southampton Dorchester , Massachusetts , US 175 McGough , Mr. James Robert 35 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US 7 Meyer , Mr. Edgar Joseph 28 New York City Cherbourg New York City Meyer , Mrs. Leila ( née Saks ) 25 New York City Cherbourg New York City 6 Millet , Mr. Francis Davis 65 East Bridgewater , Massachusetts , US Cherbourg East Bridgewater , Massachusetts , US 249 Minahan , Dr. William Edward 44 Fond du Lac , Wisconsin , US Southampton Fond du Lac , Wisconsin , US 230 Minahan , Mrs. Lillian E. ( née Thorpe ) 37 Fond du Lac , Wisconsin , US Southampton Fond du Lac , Wisconsin , US 14 Minahan , Miss Daisy E . 33 Fond du Lac , Wisconsin , US Southampton Fond du Lac , Wisconsin , US 14 Mock , Mr. Philipp Edmund 30 New York City Cherbourg New York City 11 Molson , Mr. Harry Markland 55 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada Moore , Mr. Clarence Bloomfield 47 Washington , D.C. , US Southampton Washington , D.C. , US and valet , Mr. Charles Henry Harrington 37 Washington , D.C. , US Southampton Washington , D.C. , US Natsch , Mr. Charles 36 Brooklyn , New York , US Cherbourg Brooklyn , New York , US Newell , Mr. Arthur Webster 58 Lexington , Massachusetts , US Cherbourg Lexington , Massachusetts , US 122 Newell , Miss Madeleine 31 Lexington , Massachusetts , US Cherbourg Lexington , Massachusetts , US 6 Newell , Miss Marjorie Anne 23 Lexington , Massachusetts , US Cherbourg Lexington , Massachusetts , US 6 Newsom , Miss Helen Monypeny 19 New York City Southampton New York City 5 Nicholson , Mr. Arthur Ernest 64 Shanklin , Isle of Wight , England , UK Southampton New York City 263 Nourney , Mr. Alfred 20 Cologne , German Empire Cherbourg New York City 7 Omont , Mr. Alfred Fernand 29 Le Havre , France Cherbourg New York City 7 Ostby , Mr. Engelhart Cornelius 64 Providence , Rhode Island , US Southampton Providence , Rhode Island , US 234 Ostby , Miss Helene Ragnhild 22 Providence , Rhode Island , US Southampton Providence , Rhode Island , US 5 Ovies y Rodriguez , Mr. Servando José Florentino 36 Havana , Cuba Cherbourg Havana , Cuba 189 Parr , Mr. William Henry Marsh 29 Belfast , Ireland , UK Belfast New York City Partner , Mr. Austin 40 Tolworth , London , England , UK Southampton Toronto , Ontario , Canada 166 Pears , Mr. Thomas Clinton 29 Isleworth , London , England , UK Southampton New York City Pears , Mrs. Edith ( née Wearne ) 22 Isleworth , London , England , UK Southampton New York City 8 Peñasco y Castellana , Mr. Victor 24 Madrid , Spain Cherbourg New York City Peñasco y Castellana , Mrs. Maria Josefa ( née Perez de Soto y Vallejo ) 22 Madrid , Spain Cherbourg New York City 8 and maid , Doña Fermina Oliva y Ocana 39 Madrid , Spain Cherbourg New York City 8 Peuchen , Major Arthur Godfrey 52 Toronto , Ontario , Canada Southampton Toronto , Ontario , Canada 6 Porter , Mr. Walter Chamberlain 46 Worcester , Massachusetts , US Southampton Worcester , Massachusetts , US 207 Potter , Mrs. Lily Alexenia ( née Wilson ) 56 Philadelphia , Pennsylvania , US Cherbourg Philadelphia , Pennsylvania , US 7 Reuchlin , The Honourable Mr. Johan George 38 Rotterdam , The Netherlands Southampton New York City Rheims , Mr. George Alexander Lucien 36 Paris , France Southampton New York City Robert , Mrs. Elisabeth Walton ( née McMillan ) 43 St. Louis , Missouri , US Southampton St. Louis , Missouri , US and maid , Miss Emilie Kreuchen 29 St. Louis , Missouri , US Southampton St. Louis , Missouri , US Roebling , Mr. Washington Augustus II 31 Trenton , New Jersey , US Southampton Trenton , New Jersey , US Romaine , Mr. Charles Hallance ( alias C. Rolmane ) 45 New York City Southampton New York City 9 Rood , Mr. Hugh Roscoe 38 Seattle , Washington , US Southampton Seattle , Washington , US Rosenbaum , Miss Edith Louise 34 Paris , France Cherbourg Cincinnati , Ohio , US 11 Rosenshine , Mr. George ( alias George Thorne ) 46 New York City Cherbourg New York City 16 Ross , Mr. John Hugo 36 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada Rothschild , Mr. Martin 46 New York City Cherbourg New York City Rothschild , Mrs. Elizabeth Jane Anne ( née Barrett ) 54 New York City Cherbourg New York City 6 Rowe , Mr. Alfred G . 59 Liverpool , Merseyside , England , UK Southampton New York City 109 Ryerson , Mr. Arthur Larned 61 Cooperstown , New York , US Cherbourg Cooperstown , New York , US Ryerson , Mrs. Emily Maria ( née Borie ) 48 Cooperstown , New York , US Cherbourg Cooperstown , New York , US and maid , Miss Victorine Chaudanson 36 Cooperstown , New York , US Cherbourg Cooperstown , New York , US Ryerson , Miss Susan Parker `` Suzette '' 21 Cooperstown , New York , US Cherbourg Cooperstown , New York , US Ryerson , Miss Emily Borie 18 Cooperstown , New York , US Cherbourg Cooperstown , New York , US Ryerson , Master John Borie `` Jack '' 13 Cooperstown , New York , US Cherbourg Cooperstown , New York , US and governess , Miss Grace Scott Bowen 45 Cooperstown , New York , US Cherbourg Cooperstown , New York , US Saalfeld , Mr. Adolphe 47 Manchester , England , UK Southampton New York City Salomon , Mr. Abraham Lincoln 43 New York City Cherbourg New York City Schabert , Mrs. Emma ( née Mock ) 35 Hamburg , German Empire Southampton New York City 11 Seward , Mr. Frederic Kimber 34 New York City Southampton New York City 7 Silverthorne , Mr. Spencer Victor 35 St. Louis , Missouri , US Southampton St. Louis , Missouri , US 5 Silvey , Mr. William Baird 50 Duluth , Minnesota , US Cherbourg Duluth , Minnesota , US Silvey , Mrs. Alice ( née Munger ) 39 Duluth , Minnesota , US Cherbourg Duluth , Minnesota , US 11 Simonius - Blumer , Colonel Alfons 56 Basel , Switzerland Southampton New York City Sloper , Mr. William Thompson 28 New Britain , Connecticut , US Southampton New Britain , Connecticut , US 7 Smart , Mr. John Montgomery 56 Kildale , North Yorkshire , England , UK Southampton New York City Smith , Mr. James Clinch 56 Paris , France Cherbourg Long Island , New York , US Smith , Mr. Lucien Philip 24 Huntington , West Virginia , US Cherbourg Huntington , West Virginia , US Smith , Mrs. Mary Eloise ( née Hughes ) 18 Huntington , West Virginia , US Cherbourg Huntington , West Virginia , US 6 Smith , Mr. Richard William 57 Streatham , London , England , UK Southampton New York City Snyder , Mr. John Pillsbury 24 Minneapolis , Minnesota , US Southampton Minneapolis , Minnesota , US 7 Snyder , Mrs. Nellie ( née Stevenson ) 23 Minneapolis , Minnesota , US Southampton Minneapolis , Minnesota , US 7 Spedden , Mr. Frederic Oakley 45 Tuxedo Park , New York , US Cherbourg Tuxedo Park , New York , US Spedden , Mrs. Margaretta Corning ( née Stone ) 39 Tuxedo Park , New York , US Cherbourg Tuxedo Park , New York , US and maid , Miss Helen Alice Wilson 31 Tuxedo Park , New York , US Cherbourg Tuxedo Park , New York , US Spedden , Master Robert Douglas 6 Tuxedo Park , New York , US Cherbourg Tuxedo Park , New York , US and nurse , Miss Elizabeth Margaret Burns 41 Tuxedo Park , New York , US Cherbourg Tuxedo Park , New York , US Spencer , Mr. William Augustus 57 New York City Cherbourg New York City Spencer , Mrs. Marie Eugénie ( née Demougeot ) 45 New York City Cherbourg New York City 6 and maid , Miss Eugenie Elise Lurette 59 New York City Cherbourg New York City 6 Stähelin - Maeglin , Dr. Max 32 Basel , Switzerland Southampton New York City Stead , Mr. William Thomas 62 London , England , UK Southampton New York City Stengel , Mr. Charles Emil Henry 54 Newark , New Jersey , US Cherbourg Newark , New Jersey , US Stengel , Mrs. Annie May ( née Morris ) 44 Newark , New Jersey , US Cherbourg Newark , New Jersey , US 5 Stephenson , Mrs. Martha ( née Eustis ) 52 Paris , France Cherbourg Haverford , Pennsylvania , US Stewart , Mr. Albert A . 54 Cincinnati , Ohio , US Cherbourg Gallipolis , Ohio , US Stone , Mrs. Martha Evelyn ( née Stevens ) 62 New York City Southampton New York City 6 and maid , Miss Amelie `` Amelia '' Icard 38 New York City Southampton New York City 6 Straus , Mr. Isidor 67 New York City Southampton New York City 96 and valet , Mr. John Farthing 57 New York City Southampton New York City Straus , Mrs. Rosalie Ida ( née Blun ) 63 New York City Southampton New York City and maid , Miss Ellen Bird 31 New York City Southampton New York City 8 Sutton , Mr. Frederick 61 Haddonfield , New Jersey , US Southampton Haddonfield , New Jersey , US 46 Swift , Mrs. Margaret Welles ( née Barron ) 46 New York City Southampton New York City 8 Taussig , Mr. Emil 52 New York City Southampton New York City Taussig , Mrs. Tillie ( née Mandelbaum ) 39 New York City Southampton New York City 8 Taussig , Miss Ruth 18 New York City Southampton New York City 8 Taylor , Mr. Elmer Zebley 48 London , England , UK Southampton East Orange , New Jersey , US 5 Taylor , Mrs. Juliet Cummins ( née Wright ) 48 London , England , UK Southampton East Orange , New Jersey , US 5 Thayer , Mr. John Borland II 49 Haverford , Pennsylvania , US Cherbourg Haverford , Pennsylvania , US Thayer , Mrs. Marian Longsteth ( née Morris ) 39 Haverford , Pennsylvania , US Cherbourg Haverford , Pennsylvania , US and maid , Miss Margaret Fleming 42 Haverford , Pennsylvania , US Cherbourg Haverford , Pennsylvania , US Thayer , Mr. John Borland `` Jack '' III 17 Haverford , Pennsylvania , US Cherbourg Haverford , Pennsylvania , US Thorne , Mrs. Gertrude Maybelle ( née McMinn ) 37 New York City , New York , US Cherbourg New York City , New York , US Tucker , Mr. Gilbert Milligan Jr . 31 Albany , New York , US Cherbourg Albany , New York , US 7 Uruchurtu , Don Manuel E . 40 Mexico City , Mexico Cherbourg Mexico City , Mexico Van der Hoef , Mr. Wyckoff 61 Brooklyn , New York , US Belfast Brooklyn , New York , US 245 Walker , Mr. William Anderson 48 East Orange , New Jersey , US Southampton East Orange , New Jersey , US Warren , Mr. Frank Manley 63 Portland , Oregon , US Cherbourg Portland , Oregon , US Warren , Mrs. Anna Sophia ( née Atkinson ) 60 Portland , Oregon , US Cherbourg Portland , Oregon , US 5 Weir , Colonel John 59 New York City Southampton New York City White , Mr. Percival Wayland 54 Brunswick , Maine , US Southampton Brunswick , Maine , US White , Mr. Richard Frasar 21 Brunswick , Maine , US Southampton Brunswick , Maine , US 169 White , Mrs. Ella ( née Holmes ) 55 New York City Cherbourg New York City 8 and maid , Miss Amelia Mayo `` Nellie '' Bessette 39 New York City Cherbourg New York City 8 and manservant , Mr. Sante Righini 22 New York City Cherbourg New York City 232 Wick , Colonel George Dennick 58 Youngstown , Ohio , US Southampton Youngstown , Ohio , US Wick , Mrs. Mary ( née Hitchcock ) 45 Youngstown , Ohio , US Southampton Youngstown , Ohio , US 8 Wick , Miss Mary Natalie 31 Youngstown , Ohio , US Southampton Youngstown , Ohio , US 8 Widener , Mr. George Dunton 50 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US and valet , Mr. Edwin Herbert Keeping 33 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US 45 Widener , Mrs. Eleanor ( née Elkins ) 50 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US and maid , Miss Amalie Henriette `` Emily '' Gieger 35 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US Widener , Mr. Harry Elkins 27 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US Willard , Miss Constance 21 Duluth , Minnesota , US Southampton Duluth , Minnesota , US 8 Williams , Mr. Charles Duane 51 Geneva , Switzerland Cherbourg Radnor , Pennsylvania , US Williams , Mr. Richard Norris II 21 Geneva , Switzerland Cherbourg Radnor , Pennsylvania , US Woolner , Mr. Hugh 45 London , England , UK Southampton New York City Wright , Mr. George 62 Halifax , Nova Scotia , Canada Southampton Halifax , Nova Scotia , Canada Young , Miss Marie Grice 36 New York City Cherbourg New York City 8"
+   ],
+   "model_answer": "Molly Brown, Millvina Dean, Eva Hart, and J. Bruce Ismay"
+  },
+  {
+   "id": "88ed64a5d5a120dd",
+   "kind": "answer",
+   "question": "who occupied the holy land after the 8th crusade",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The Mamluks under Baibars"
+  },
+  {
+   "id": "dd2a393e4d115291",
+   "kind": "answer",
+   "question": "right to property according to the constitution of india is a",
+   "gold_answers": [
+    "constitutional right"
+   ],
+   "model_answer": "Constitutional right, not a fundamental right"
+  },
+  {
+   "id": "1096a13d33b9e8e2",
+   "kind": "answer",
+   "question": "was nightmare before christmas originally a disney movie",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes—though it was originally released under Touchstone Pictures."
+  },
+  {
+   "id": "bc96e2df7b4862d5",
+   "kind": "answer",
+   "question": "when does the new season of law and order svu come on",
+   "gold_answers": [
+    "September 27, 2017"
+   ],
+   "model_answer": "Season 19 premiered October 5, 2017, at 9:40 p.m. in Australia."
+  },
+  {
+   "id": "ee7471ad3380ae00",
+   "kind": "answer",
+   "question": "90 day fiance 1st season where are they now",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "As of 2017, they were still together."
+  },
+  {
+   "id": "d3d1cda197e20d34",
+   "kind": "answer",
+   "question": "when is the next episode of flash airing",
+   "gold_answers": [
+    "May 8, 2018"
+   ],
+   "model_answer": "May 22, 2018"
+  },
+  {
+   "id": "40cd461c33f75ebd",
+   "kind": "answer",
+   "question": "i-o psychologists study our behavior on the job by",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Applying psychological principles to the workplace."
+  },
+  {
+   "id": "e18ddfb9c6c4df71",
+   "kind": "answer",
+   "question": "when did god save the queen became the national anthem",
+   "gold_answers": [
+    "in the 1780s and 1790s",
+    "After the Battle of Culloden"
+   ],
+   "model_answer": "1825 (officially recognized)"
+  },
+  {
+   "id": "f780b3c7bffe4def",
+   "kind": "answer",
+   "question": "where does captain america civil war take place",
+   "gold_answers": [
+    "approximately one year after Ultron's defeat in the nation of Sokovia at the hands of the Avengers"
+   ],
+   "model_answer": "Across locations including Lagos, Siberia, and Wakanda."
+  },
+  {
+   "id": "5f2f7ba768ca4b92",
+   "kind": "answer",
+   "question": "where does the word fore in golf originated",
+   "gold_answers": [
+    "`` Fore ! '' , originally an Australian interjection , is used to warn anyone standing or moving in the flight of a golf ball . The mention of the term in an 1881 Australian Golf Museum indicates that the term was in use at least as early as that period ."
+   ],
+   "model_answer": "Its origin is uncertain; it may come from “fore-caddie” or the military warning “beware before.”"
+  },
+  {
+   "id": "f92d7880077cf420",
+   "kind": "answer",
+   "question": "when is the rock n roll hall of fame",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "November 8, 2025."
+  },
+  {
+   "id": "6ab60800ce30fef9",
+   "kind": "answer",
+   "question": "where does captain america civil war take place",
+   "gold_answers": [
+    "approximately one year after Ultron's defeat in the nation of Sokovia at the hands of the Avengers"
+   ],
+   "model_answer": "Lagos, Vienna, Berlin, and Siberia."
+  },
+  {
+   "id": "9197bc11bade26bc",
+   "kind": "answer",
+   "question": "who said if a tree falls in the woods and nobody hears it",
+   "gold_answers": [
+    "Charles Riborg Mann",
+    "George Ransom Twiss",
+    "Charles Riborg Mann and George Ransom Twiss",
+    "Philosopher George Berkeley"
+   ],
+   "model_answer": "Unknown; it is not known whether Berkeley originated it."
+  },
+  {
+   "id": "5bc7ca4d79d10842",
+   "kind": "answer",
+   "question": "in opera buffa what key usually signifies peasants",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "G major"
+  },
+  {
+   "id": "6656445b66415c09",
+   "kind": "answer",
+   "question": "who is the speaker in shooting an elephant",
+   "gold_answers": [
+    "Orwell",
+    "Orwell, writing in the first person",
+    "possibly Orwell himself, called upon to shoot an aggressive elephant while working as a police officer in Burma",
+    "the English narrator, possibly Orwell himself"
+   ],
+   "model_answer": "The narrator, possibly George Orwell\n"
+  },
+  {
+   "id": "f48fc5650f996ba0",
+   "kind": "answer",
+   "question": "when do you hear the lub and dub sounds of the heart",
+   "gold_answers": [
+    "the closing of the atrioventricular valves and semilunar valves, respectively"
+   ],
+   "model_answer": "Lub at the start of ventricular systole; dub at the end of systole and start of diastole."
+  },
+  {
+   "id": "b1f0210967f9c606",
+   "kind": "answer",
+   "question": "who sings the theme song for the proud family",
+   "gold_answers": [
+    "Destiny's Child",
+    "Solange Knowles"
+   ],
+   "model_answer": "Solange featuring Destiny’s Child"
+  },
+  {
+   "id": "ac8151873fcc6334",
+   "kind": "answer",
+   "question": "where does kylo ren's name come from",
+   "gold_answers": [
+    "the character, \"came to the name Kylo Ren when he joined a group called the Knights of Ren.\""
+   ],
+   "model_answer": "He took the name upon joining the Knights of Ren."
+  },
+  {
+   "id": "fcfbd4cefa62883f",
+   "kind": "answer",
+   "question": "when does the miz and maryse show start",
+   "gold_answers": [
+    "2018"
+   ],
+   "model_answer": "July 24, 2018."
+  },
+  {
+   "id": "c820474b50a75d4d",
+   "kind": "answer",
+   "question": "did anyone die from ebola in the us",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes—Thomas Eric Duncan."
+  },
+  {
+   "id": "2cf66771a5f5a422",
+   "kind": "answer",
+   "question": "who did deion sanders go in the hall of fame as",
+   "gold_answers": [
+    "Cornerback"
+   ],
+   "model_answer": "Atlanta Falcons\n"
+  },
+  {
+   "id": "8a01f6972bdc4909",
+   "kind": "answer",
+   "question": "when is the next scandal episode coming out",
+   "gold_answers": [
+    "February 1, 2018"
+   ],
+   "model_answer": "No new episodes are planned; the series ended in 2018."
+  },
+  {
+   "id": "c6ac1f6dea0ae6cc",
+   "kind": "answer",
+   "question": "texas flip and move how does it work",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "They buy houses at auction, move and renovate them, then resell them to buyers who relocate them onto their land."
+  },
+  {
+   "id": "59ba013e2a16999b",
+   "kind": "answer",
+   "question": "what is bermuda competing in the winter olympics",
+   "gold_answers": [
+    "Cross-country skiing",
+    "yes"
+   ],
+   "model_answer": "Skeleton racing"
+  },
+  {
+   "id": "f17d9c616356461b",
+   "kind": "answer",
+   "question": "what does the board of directors consist of",
+   "gold_answers": [
+    "a recognized group of people who jointly oversee the activities of an organization"
+   ],
+   "model_answer": "A group of people who jointly oversee an organization’s activities."
+  },
+  {
+   "id": "d00f1f53e808113e",
+   "kind": "answer",
+   "question": "what does cost of goods sold consist of",
+   "gold_answers": [
+    "Costs are associated with particular goods using one of the several formulas , including specific identification , first - in first - out ( FIFO ) , or average cost . Costs include all costs of purchase , costs of conversion and other costs that are incurred in bringing the inventories to their present location and condition . Costs of goods made by the businesses include material , labor , and allocated overhead . The costs of those goods which are not yet sold are deferred as costs of inventory until the inventory is sold or written down in value ."
+   ],
+   "model_answer": "Purchase and production costs, including materials, freight, direct labor, storage, and factory overhead."
+  },
+  {
+   "id": "c1c15e7840c262d6",
+   "kind": "answer",
+   "question": "where is the national championship for college football played",
+   "gold_answers": [
+    "Mercedes-Benz Stadium in Atlanta, Georgia on January 8, 2018",
+    "Mercedes-Benz Stadium in Atlanta, Georgia"
+   ],
+   "model_answer": "At rotating neutral-site stadiums."
+  },
+  {
+   "id": "39099a5a565a7e73",
+   "kind": "answer",
+   "question": "head over boots for you by jon pardi",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "“Head Over Boots” by Jon Pardi."
+  },
+  {
+   "id": "d7e153debce911d8",
+   "kind": "answer",
+   "question": "who is the owner of reading football club",
+   "gold_answers": [
+    "Dai Yongge",
+    "Dai Xiuli",
+    "Dai Yongge and Dai Xiuli (majority)",
+    "Xiu Li Dai",
+    "Yongge Dai"
+   ],
+   "model_answer": "Dai Yongge and Dai Xiuli"
+  }
+ ],
+ "evidence": []
+}

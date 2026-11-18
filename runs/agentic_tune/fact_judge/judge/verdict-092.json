@@ -1,0 +1,37 @@
+[
+  {
+    "id": "932bd5eaebbf9690",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Most Americans consider the holiday a day to gather and express their thanks through food, family, and football"}]},
+      {"fact": "1.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "0c41f78b0647f59c",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "f422afc25057eb28",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "by the age of 16, she is public property – incapable of going outside without being mobbed, and her love of singing and dancing now a lucrative resource"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "by the age of 16, she is public property – incapable of going outside without being mobbed, and her love of singing and dancing now a lucrative resource"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "by the age of 16, she is public property – incapable of going outside without being mobbed, and her love of singing and dancing now a lucrative resource"}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []}
+    ]
+  }
+]

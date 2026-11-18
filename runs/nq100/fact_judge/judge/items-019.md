@@ -1,0 +1,922 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=87630cb0b14e18d4 ===
+Gold sentences and facts:
+Sentence 0: The provisions relating to the right to property were changed a number of times . The Forty - Fourth Amendment of 1978 deleted the right to property from the list of fundamental rights A new provision , Article 300 - A , was added to the constitution , which provided that `` no person shall be deprived of his property save by authority of law '' . Thus if a legislature makes a law depriving a person of his property , there would be no obligation on the part of the State to pay anything as compensation . The aggrieved person shall have no right to move the court under Article 32 . Thus , the right to property is no longer a fundamental right , though it is still a constitutional right . If the government appears to have acted unfairly , the action can be challenged in a court of law by aggrieved citizens .
+  Fact 0.0: The provisions relating to the right to property were changed a number of times.
+  Fact 0.1: The Forty-Fourth Amendment of 1978 deleted the right to property from the list of fundamental rights.
+  Fact 0.2: A new provision, Article 300-A, was added to the constitution.
+  Fact 0.3: Article 300-A provides that no person shall be deprived of his property save by authority of law.
+  Fact 0.4: If a legislature makes a law depriving a person of his property, the State has no obligation to pay anything as compensation.
+  Fact 0.5: An aggrieved person shall have no right to move the court under Article 32.
+  Fact 0.6: The right to property is no longer a fundamental right.
+  Fact 0.7: The right to property is still a constitutional right.
+  Fact 0.8: If the government appears to have acted unfairly, aggrieved citizens can challenge the action in a court of law.
+
+Retrieved items:
+<item 1>
+Graph query row:
+entity: right to property
+relationship: RELATED_TO
+relation: None
+fact: None
+action: None
+related: Forty-Fourth Amendment
+</item 1>
+
+<item 2>
+Fundamental rights in India
+These fundamental rights help not only in protection but also the prevention of gross violations of human rights . They emphasise on the fundamental unity of
+India by guaranteeing to all citizens the access and use of the same facilities , irrespective of background . Some fundamental rights apply for persons of any
+nationality whereas others are available only to the citizens of India . The right to life and personal liberty is available to all people and so is the right
+to freedom of religion . On the other hand , freedoms of speech and expression and freedom to reside and settle in any part of the country are reserved to
+citizens alone , including non-resident Indian citizens . The right to equality in matters of public employment can not be conferred to overseas citizens of
+India . Fundamental rights primarily protect individuals from any arbitrary state actions , but some rights are enforceable against individuals . For instance ,
+the Constitution abolishes untouchability and also prohibits begar . These provisions act as a check both on state action as well as the action of private
+individuals . However , these rights are not absolute or uncontrolled and are subject to reasonable restrictions as necessary for the protection of general
+welfare . They can also be selectively curtailed .
+</item 2>
+
+<item 3>
+Fundamental rights in India
+The right to constitutional remedies is present for enforcement of Fundamental Rights . The right to privacy is an intrinsic part of Article 21 that protects
+life and liberty of the citizens . Fundamental rights for Indians have also been aimed at overturning the inequalities of pre-independence social practices .
+Specifically , they have also been used to abolish untouchability and thus prohibit discrimination on the grounds of religion , race , caste , sex , or place of
+birth . They also forbid trafficking of human beings and forced labour ( a crime ) . They also protect cultural and educational rights of religious and
+linguistic minorities by allowing them to preserve their languages and also establish and administer their own education institutions . They are covered in Part
+III ( Articles 12 to 35 ) of Indian constitution .
+</item 3>
+
+<item 4>
+Fundamental rights in India
+. The Times of India . Retrieved 8 July 2010 . Jump up ^ `` Court rejects plea to make property a fundamental right '' . The Hindu . Chennai , India . 19
+October 2010 . Jump up ^ `` Education is now a fundamental right of every child '' . Hindustan Times . 1 April 2010 . Archived from the original on 9 July 2010
+. Retrieved 8 July 2010 . Footnotes ( edit ) Links to related articles ( hide ) Government of India Constitution Constitution Fundamental Rights , Directive
+Principles and Fundamental Duties Federalism ( Union List State List Concurrent List ) Executive Union Government Prime Minister ( list ) Cabinet Ministers
+President ( list ) Vice President ( list ) Civil Services All India Services ( IAS IFS / IFoS IPS ) Cabinet Secretary Secretaries ( Defence Finance Foreign Home
+) State governments Chief Minister ( list ) Chief Secretary Governors ( list ) Legislative Parliament Lok Sabha ( Speaker ) Rajya Sabha ( Chairman ) Vidhan
+Sabha Vidhan Parishad Leader of the Opposition Judiciary Supreme Court ( Chief Justice ) High Courts District Courts Retrieved from ``
+https://en.wikipedia.org/w/index.
+</item 4>
+
+<item 5>
+Fundamental rights in India
+Article 1 of Part 1 of the Indian constitution , defines India ( Bharat ) as union of states . In nutshell , India is its people not its land as enshrined in
+its constitution . Since speedy trial is not the constitutional right of the citizens , the cases involving violations of fundamental rights take inordinate
+time for resolution by the Supreme Court which is against the legal maxim ' justice delayed is justice denied ' . Amendments ( edit ) Changes to the fundamental
+rights require a constitutional amendment , which has to be passed by a special majority of both houses of Parliament . This means that an amendment requires
+the approval of two - thirds of the members present and voting . However , the number of members voting in support of the amendment shall not be less than the
+simple majority of the total members of a house -- whether the Lok Sabha or Rajya Sabha . Fundamental rights not sacrosanct ( edit ) While deciding the
+Golaknath case in February 1967 , Supreme Court ruled that the Parliament has no power to curtail the fundamental rights .
+</item 5>
+
+<item 6>
+Graph query row:
+entity: right to property
+relationship: RELATED_TO
+relation: None
+fact: None
+action: None
+related: Article 19
+</item 6>
+
+<item 7>
+Fundamental rights in India
+The provisions relating to the right to property were changed a number of times . The Forty - Fourth Amendment of 1978 deleted the right to property from the
+list of fundamental rights A new provision , Article 300 - A , was added to the constitution , which provided that `` no person shall be deprived of his
+property save by authority of law '' . Thus if a legislature makes a law depriving a person of his property , there would be no obligation on the part of the
+State to pay anything as compensation . The aggrieved person shall have no right to move the court under Article 32 . Thus , the right to property is no longer
+a fundamental right , though it is still a constitutional right . If the government appears to have acted unfairly , the action can be challenged in a court of
+law by aggrieved citizens . The liberalisation of the economy and the government 's initiative to set up special economic zones has led to many protests by
+farmers and have led to calls for the reinstatement of the fundamental right to private property .
+</item 7>
+
+<item 8>
+Graph query row:
+entity: right to property
+relationship: RELATED_TO
+relation: None
+fact: None
+action: None
+related: Article 300-A
+</item 8>
+
+<item 9>
+Fundamental rights in India
+These include individual rights common to most liberal democracies , such as equality before law freedom of speech and expression , religious and cultural
+freedom and peaceful assembly , freedom to practice religion , and the right to constitutional remedies for the protection of civil rights by means of writs
+such as habeas corpus , Mandamus , Prohibition , Certiorari and Quo Warranto . Violation of these rights result in punishments as prescribed in the Indian Penal
+Code or other special laws , subject to discretion of the judiciary . The Fundamental Rights are defined as basic human freedoms that every Indian citizen has
+the right to enjoy for a proper and harmonious development of personality . These rights universally apply to all citizens , irrespective of race , place of
+birth , religion , caste or gender . Though the rights conferred by the constitution other than fundamental rights are equally valid and their enforcement in
+case of violation shall be secured from the judiciary in a time consuming legal process . However , in case of fundamental rights violation , Supreme court of
+India can be approached directly for ultimate justice per Article 32 . The Rights have their origins in many sources , including England 's Bill of Rights , the
+United States Bill of Rights and France 's Declaration of the Rights of Man .
+</item 9>
+
+<item 10>
+Fundamental rights in India
+It is the principal foundation of all other rights and liberties , and guarantees the following : Equality before law : Article 14 of the constitution
+guarantees that all people shall be equally protected by the laws of the country . It means that the State will treat people in the same circumstances alike .
+This article also means that individuals , whether citizens of India or otherwise shall be treated differently if the circumstances are different . Social
+equality and equal access to public areas : Article 15 of the constitution states that no person shall be discriminated on the basis of religion , race , caste
+, sex or place of birth . Every person shall have equal access to public places like public parks , museums , wells , bathing ghats and temples etc . However ,
+the State may make any special provision for women and children . Special provisions may be made for the advancements of any socially or educationally backward
+class or scheduled castes or scheduled tribes . Equality in matters of public employment : Article 16 of the constitution lays down that the State can not
+discriminate against anyone in the matters of employment . All citizens can apply for government jobs . There are some exceptions .
+</item 10>
+
+<item 11>
+Fundamental rights in India
+They are covered in Part III ( Articles 12 to 35 ) of Indian constitution . Contents ( hide ) 1 Genesis 2 Significance and characteristics 3 Right to equality 4
+Right to freedom 5 Right against exploitation 6 Right to freedom of religion 7 Right to life 8 Cultural and Educational rights 9 Right to constitutional
+remedies 10 Right to Privacy 11 Critical analysis 12 Amendments 13 Fundamental rights not sacrosanct 13.1 Validity of Article 31B 13.2 Amendment to Article 31C
+13.3 Right to property 13.4 Right to education 14 See also 15 References 16 Footnotes Genesis ( edit ) The development of constitutionally guaranteed
+fundamental human rights in India was inspired by historical examples such as England 's Bill of Rights ( 1689 ) , the United States Bill of Rights ( approved
+on 17 September 1787 , final ratification on 15 December 1791 ) and France 's Declaration of the Rights of Man ( created during the revolution of 1789 , and
+ratified on 26 August 1789 ) .
+</item 11>
+
+<item 12>
+Fundamental rights in India
+The six fundamental rights recognised by the Indian constitution are the right to equality , right to freedom , right against exploitation , right to freedom of
+religion , cultural and educational rights , right to constitutional remedies and right to privacy . The right to equality includes equality before law ,
+prohibition of discrimination on grounds of religion , race , caste , gender or place of birth , and equality of opportunity in matters of employment ,
+abolition of untouchability and abolition of titles . The right to freedom includes freedom of speech and expression , assembly , association or union or
+cooperatives , movement , residence , and right to practice any profession or occupation , right to life and liberty , protection in respect to conviction in
+offences and protection against arrest and detention in certain cases . The right against exploitation prohibits all forms of forced labour , child labour and
+trafficking of human beings . The right to freedom of religion includes freedom of conscience and free profession , practice , and propagation of religion ,
+freedom to manage religious affairs , freedom from certain taxes and freedom from religious instructions in certain educational institutes . Cultural and
+educational rights preserve the right of any section of citizens to conserve their culture , language or script , and right of minorities to establish and
+administer educational institutions of their choice .
+</item 12>
+
+<item 13>
+Fundamental rights in India
+In 2007 , Supreme Court ruled that there could not be any blanket immunity from judicial review for the laws inserted in the Ninth Schedule . Apex court also
+stated it shall examine laws included in the Ninth Schedule after 1973 for any incompatibility with the basic structure doctrine . Amendment to Article 31C (
+edit ) Section 4 of the 42nd Amendment , had changed Article 31C of the constitution to accord precedence to the Directive Principles ( earlier applicable only
+to clauses b & c of Article 39 ) over the fundamental rights of individuals . In Minerva Mills v. Union of India case , supreme court ruled that the amendment
+to the Article 31C is not valid and ultra vires . Right to property ( edit ) The Constitution originally provided for the right to property under Articles 19
+and 31 . Article 19 guaranteed to all citizens the right to acquire , hold and dispose of property . Article 31 provided that `` no person shall be deprived of
+his property save by authority of law . '' It also provided that compensation would be paid to a person whose property has been taken for public purposes .
+</item 13>
+
+<item 14>
+Graph query row:
+entity: right to property
+relationship: RELATED_TO
+relation: None
+fact: None
+action: None
+related: Article 31
+</item 14>
+=== END ITEM id=87630cb0b14e18d4 ===
+
+=== ITEM id=741bf990048ed2a4 ===
+Gold sentences and facts:
+Sentence 0: Donald Trump is the 45th and current president , inaugurated on January 20 , 2017 .
+  Fact 0.0: Donald Trump is the 45th president.
+  Fact 0.1: Donald Trump is the current president.
+  Fact 0.2: Donald Trump was inaugurated on January 20, 2017.
+Sentence 1: President of the United States of America Presidential Seal Presidential Standard Incumbent Donald Trump since January 20 , 2017 Executive Branch of the U.S. Government Executive Office of the President Style Mr. President ( informal ) The Honorable ( formal ) His Excellency ( international correspondence ) Status Head of State Head of Government Member of Cabinet Domestic Policy Council National Economic Council National Security Council Residence White House Seat Washington , D.C. Appointer Electoral College of the United States Term length Four years , renewable once ( Amendment XXII ) Constituting instrument United States Constitution Inaugural holder George Washington Formation March 4 , 1789 ( 229 years ago ) ( 1789 - 03 - 04 ) Salary $400,000 annually Website whitehouse.gov
+  Fact 1.0: The office title is President of the United States of America.
+  Fact 1.1: The office has a Presidential Seal and a Presidential Standard.
+  Fact 1.2: Donald Trump has been the incumbent since January 20, 2017.
+  Fact 1.3: The office is in the Executive Branch of the U.S. Government.
+  Fact 1.4: The office is in the Executive Office of the President.
+  Fact 1.5: The informal style is Mr. President.
+  Fact 1.6: The formal style is The Honorable.
+  Fact 1.7: The style for international correspondence is His Excellency.
+  Fact 1.8: The status is Head of State and Head of Government.
+  Fact 1.9: The president is a member of the Cabinet.
+  Fact 1.10: The president is a member of the Domestic Policy Council.
+  Fact 1.11: The president is a member of the National Economic Council.
+  Fact 1.12: The president is a member of the National Security Council.
+  Fact 1.13: The residence is the White House.
+  Fact 1.14: The seat is in Washington, D.C.
+  Fact 1.15: The appointer is the Electoral College of the United States.
+  Fact 1.16: The term length is four years, renewable once (Amendment XXII).
+  Fact 1.17: The constituting instrument is the United States Constitution.
+  Fact 1.18: The inaugural holder was George Washington.
+  Fact 1.19: The office was formed on March 4, 1789, listed as 229 years ago (1789-03-04).
+  Fact 1.20: The salary is $400,000 annually.
+  Fact 1.21: The website is whitehouse.gov.
+
+Retrieved items:
+<item 1>
+President of the United States
+Kennedy ( 1961 -- 1963 ) Lyndon B. Johnson ( 1963 -- 1969 ) Richard Nixon ( 1969 -- 1974 ) Gerald Ford ( 1974 -- 1977 ) Jimmy Carter ( 1977 -- 1981 ) Ronald
+Reagan ( 1981 -- 1989 ) George H.W. Bush ( 1989 -- 1993 ) Bill Clinton ( 1993 -- 2001 ) George W. Bush ( 2001 -- 2009 ) Barack Obama ( 2009 -- 2017 ) Donald
+Trump ( 2017 -- present ) Presidency timelines Wilson Harding Coolidge Hoover F.D. Roosevelt Truman Eisenhower Kennedy L.B. Johnson Nixon Ford Carter Reagan
+G.H.W. Bush Clinton G.W. Bush Obama Trump Book Category Chief executives of the United States Federal President of the United States State governors ( current
+list ) Alabama Alaska Arizona Arkansas California list Colorado Connecticut Delaware Florida Georgia Hawaii list Idaho Illinois list Indiana list Iowa list
+Kansas Kentucky list Louisiana Maine list Maryland list Massachusetts Michigan list Minnesota list Mississippi Missouri Montana Nebraska list Nevada New
+Hampshire list New Jersey list New Mexico list New York list North Carolina list North Dakota list Ohio Oklahoma list Oregon
+</item 1>
+
+<item 2>
+President of the United States
+Book Category Portal Heads of state and government of North America Heads of state Sovereign states Antigua and Barbuda Bahamas Barbados Belize Canada Costa
+Rica Cuba Dominica Dominican Republic El Salvador Grenada Guatemala Haiti Honduras Jamaica Mexico Nicaragua Panama Saint Kitts and Nevis Saint Lucia Saint
+Vincent and the Grenadines Trinidad and Tobago United States Heads of government Sovereign states Antigua and Barbuda Bahamas Barbados Belize Canada Costa Rica
+Cuba Dominica Dominican Republic El Salvador Grenada Guatemala Haiti Honduras Jamaica Mexico Nicaragua Panama Saint Kitts and Nevis Saint Lucia Saint Vincent
+and the Grenadines Trinidad and Tobago United States VIAF : 123879793 LCCN : n80001199 ISNI : 0000 0001 2106 1812 GND : 2033432 - 1 SUDOC : 026377519 BNF :
+cb11863688j ( data ) Retrieved from `` https://en.wikipedia.org/w/index.php?title=President_of_the_United_States&oldid=837764569 '' Categories : Presidents of
+the United States Presidency of the United States United States presidential history 1789 establishments in the United States Hidden categories : CS1 : Julian
+-- Gregorian uncertainty
+</item 2>
+
+<item 3>
+President of the United States
+President of the United States - wikipedia President of the United States Jump to : navigation , search `` POTUS '' redirects here . For the political talk
+radio channel , see P.O.T.U.S. ( Sirius XM ) . For other uses , see President of the United States ( disambiguation ) . For a list , see List of Presidents of
+the United States . President of the United States of America Presidential Seal Presidential Standard Incumbent Donald Trump since January 20 , 2017 Executive
+Branch of the U.S. Government Executive Office of the President Style Mr. President ( informal ) The Honorable ( formal ) His Excellency ( international
+correspondence ) Status Head of State Head of Government Member of Cabinet Domestic Policy Council National Economic Council National Security Council Residence
+White House Seat Washington , D.C. Appointer Electoral College of the United States Term length Four years , renewable once ( Amendment XXII ) Constituting
+instrument United States Constitution Inaugural holder George Washington Formation March 4 , 1789 ( 229 years ago ) ( 1789 - 03 - 04 ) Salary $400,000 annually
+Website whitehouse.gov This article is part of a series on the Politics of the United
+</item 3>
+
+<item 4>
+Graph query row:
+connection: ['Donald Trump', 'Cabinet', 'Congress', 'President of the United States']
+relationships: ['MEMBER_OF', 'RELATED_TO', 'RELATED_TO']
+</item 4>
+
+<item 5>
+Graph query row:
+connection: ['Donald Trump', 'President of the United States', 'Blair House', 'President of the United States']
+relationships: ['RELATED_TO', 'RELATED_TO', 'RELATED_TO']
+</item 5>
+
+<item 6>
+Graph query row:
+connection: ['Donald Trump', 'Republican Party', 'Abraham Lincoln', 'Presidents of the United States']
+relationships: ['MEMBER_OF', 'MEMBER_OF', 'MEMBER_OF']
+</item 6>
+
+<item 7>
+Graph query row:
+connection: ['Donald Trump', 'President of the United States', 'George Washington', 'Presidents of the United States']
+relationships: ['RELATED_TO', 'RELATED_TO', 'MEMBER_OF']
+</item 7>
+
+<item 8>
+President of the United States
+Images of documents written by U.S. presidents Presidents of the United States ( list ) George Washington ( 1789 -- 1797 ) John Adams ( 1797 -- 1801 ) Thomas
+Jefferson ( 1801 -- 1809 ) James Madison ( 1809 -- 1817 ) James Monroe ( 1817 -- 1825 ) John Quincy Adams ( 1825 -- 1829 ) Andrew Jackson ( 1829 -- 1837 )
+Martin Van Buren ( 1837 -- 1841 ) William Henry Harrison ( 1841 ) John Tyler ( 1841 -- 1845 ) James K. Polk ( 1845 -- 1849 ) Zachary Taylor ( 1849 -- 1850 )
+Millard Fillmore ( 1850 -- 1853 ) Franklin Pierce ( 1853 -- 1857 ) James Buchanan ( 1857 -- 1861 ) Abraham Lincoln ( 1861 -- 1865 ) Andrew Johnson ( 1865 --
+1869 ) Ulysses S. Grant ( 1869 -- 1877 ) Rutherford B. Hayes ( 1877 -- 1881 ) James A.
+</item 8>
+
+<item 9>
+Graph query row:
+connection: ['Donald Trump', 'President of the United States', 'United States', 'President of the United States']
+relationships: ['RELATED_TO', 'RELATED_TO', 'RELATED_TO']
+</item 9>
+
+<item 10>
+President of the United States
+Jump up ^ The informal term POTUS originated in the Phillips Code , a shorthand method created in 1879 by Walter P. Phillips for the rapid transmission of press
+reports by telegraph . Jump up ^ The nine vice presidents who succeeded to the presidency upon their predecessor 's death or resignation and finished - out that
+unexpired term are John Tyler ( 1841 ) ; Millard Fillmore ( 1850 ) ; Andrew Johnson ( 1865 ) ; Chester A. Arthur ( 1881 ) ; Theodore Roosevelt ( 1901 ) ; Calvin
+Coolidge ( 1923 ) ; Harry S. Truman ( 1945 ) ; Lyndon B. Johnson ( 1963 ) ; and Gerald Ford ( 1974 ) . Jump up ^ Foreign - born American citizens who met the
+age and residency requirements at the time the Constitution was adopted were also eligible for the presidency . However , this allowance has since become
+obsolete . References Jump up ^ `` How To Address The President ; He Is Not Your Excellency Or Your Honor , But Mr. President '' . The New York Times . August 2
+, 1891 .
+</item 10>
+
+<item 11>
+Graph query row:
+connection: ['Donald Trump', 'President of the United States', 'presidency', 'President of the United States']
+relationships: ['RELATED_TO', 'RELATED_TO', 'RELATED_TO']
+</item 11>
+
+<item 12>
+Graph query row:
+connection: ['Donald Trump', 'Executive', 'Federal Government', 'President of the United States']
+relationships: ['WORKS_FOR', 'PART_OF', 'RELATED_TO']
+</item 12>
+
+<item 13>
+President of the United States
+Administrative powers Suffice it to say that the President is made the sole repository of the executive powers of the United States , and the powers entrusted
+to him as well as the duties imposed upon him are awesome indeed . William Rehnquist , Nixon v. General Services Administration , 433 U.S. 425 ( 1977 ) (
+dissenting opinion ) The president is the head of the executive branch of the federal government and is constitutionally obligated to `` take care that the laws
+be faithfully executed '' . The executive branch has over four million employees , including members of the military . Presidents make numerous executive branch
+appointments : an incoming president may make up to 6,000 before taking office and 8,000 more while serving . Ambassadors , members of the Cabinet , and other
+federal officers , are all appointed by a president with the `` advice and consent '' of a majority of the Senate . When the Senate is in recess for at least
+ten days , the president may make recess appointments . Recess appointments are temporary and expire at the end of the next session of the Senate . The power of
+a president to fire executive officials has long been a contentious political issue .
+</item 13>
+
+<item 14>
+Graph query row:
+connection: ['Donald Trump', 'Republican Party', 'Ulysses S. Grant', 'Presidents of the United States']
+relationships: ['MEMBER_OF', 'MEMBER_OF', 'MEMBER_OF']
+</item 14>
+
+<item 15>
+President of the United States
+The president is further empowered to grant federal pardons and reprieves , and to convene and adjourn either or both houses of Congress under extraordinary
+circumstances . The president directs the foreign and domestic policies of the United States , and takes an active role in promoting his policy priorities to
+members of Congress . In addition , as part of the system of checks and balances , Article One of the United States Constitution gives the president the power
+to sign or veto federal legislation . Since the office of president was established in 1789 , its power has grown substantially , as has the power of the
+federal government as a whole . Through the Electoral College , the registered voters indirectly elect the president and vice president to a four - year term .
+This is the only federal election in the United States which is not decided by popular vote . Nine vice presidents became president by virtue of a president 's
+intra-term death or resignation . The Twenty - second Amendment precludes any United States citizen from being elected president for a third term .
+</item 15>
+
+<item 16>
+President of the United States
+The President of the United States ( POTUS / ˈpoʊtəs / POH - təs ) is the head of state and head of government of the United States of America . The president
+directs the executive branch of the federal government and is the commander - in - chief of the United States Armed Forces . In contemporary times , the
+president is looked upon as the world 's most powerful political figure and as the leader of the only current global superpower . The role includes
+responsibility for the world 's most expensive military that has the second largest nuclear arsenal . The president also leads the nation with the largest
+economy by nominal GDP . The president possesses significant domestic and international hard and soft power . Article II of the Constitution establishes the
+executive branch of the federal government . It vests the executive power of the United States in the president . The power includes the execution and
+enforcement of federal law , alongside the responsibility of appointing federal executive , diplomatic , regulatory and judicial officers , and concluding
+treaties with foreign powers with the advice and consent of the Senate .
+</item 16>
+
+<item 17>
+Graph query row:
+connection: ['Donald Trump', 'Republican Party', 'Rutherford B. Hayes', 'Presidents of the United States']
+relationships: ['MEMBER_OF', 'MEMBER_OF', 'MEMBER_OF']
+</item 17>
+
+<item 18>
+President of the United States
+= Air Force CG = Coast Guard United States articles History By event Timeline of U.S. history Pre-Columbian era Colonial era Thirteen Colonies military history
+Continental Congress American Revolution War American frontier Confederation Period Drafting and ratification of Constitution Federalist Era War of 1812
+Territorial acquisitions Territorial evolution Mexican -- American War Civil War Reconstruction Era Indian Wars Gilded Age Progressive Era African - American
+civil rights movement 1865 -- 1896 / 1896 -- 1954 / 1954 -- 1968 Spanish -- American War Imperialism World War I Roaring Twenties Great Depression World War II
+home front Nazism in the United States American Century Cold War Korean War Space Race Feminist Movement Vietnam War Post-Cold War ( 1991 -- 2008 ) War on
+Terror War in Afghanistan Iraq War Recent events ( 2008 -- present ) By topic Outline of U.S. history Demographic Discoveries Economic debt ceiling Inventions
+before 1890 1890 -- 1945 1946 -- 91 after 1991 Military Postal Technological and industrial Geography Territory counties federal district federal enclaves
+Indian reservations insular zones minor outlying islands populated places states Earthquakes
+</item 18>
+
+<item 19>
+Graph query row:
+connection: ['Donald Trump', 'President of the United States', 'Federal Government', 'President of the United States']
+relationships: ['RELATED_TO', 'WORKS_FOR', 'RELATED_TO']
+</item 19>
+
+<item 20>
+President of the United States
+000 annually Website whitehouse.gov This article is part of a series on the Politics of the United States of America Federal Government ( show ) Constitution of
+the United States Law Taxation Legislature ( show ) United States Congress House of Representatives Speaker Paul Ryan ( R ) Majority Leader Kevin McCarthy ( R )
+Minority Leader Nancy Pelosi ( D ) Congressional districts United States Senate President Mike Pence ( R ) President Pro Tempore Orrin Hatch ( R ) President Pro
+Tempore Emeritus Patrick Leahy ( D ) Majority Leader Mitch McConnell ( R ) Minority Leader Chuck Schumer ( D ) Executive ( show ) President of the United States
+Donald Trump ( R ) Vice President of the United States Mike Pence ( R ) Cabinet Federal agencies Executive Office Judiciary ( show ) Supreme Court of the United
+States Chief Justice John Roberts Kennedy Thomas Ginsburg Breyer Alito Sotomayor Kagan Gorsuch Courts of Appeals District Courts ( list ) Other tribunals
+Elections ( show ) Presidential elections Midterm elections Off - year elections Political parties ( show ) Democratic Republican Third parties Federalism (
+show ) State Government Governors Legislatures ( List ) State courts Local government Other countries Atlas The President of the United States ( POTUS / ˈpoʊtəs
+/
+</item 20>
+=== END ITEM id=741bf990048ed2a4 ===
+
+=== ITEM id=7df257c4c02fb7b1 ===
+Gold sentences and facts:
+Sentence 0: In 2007 , Adobe 's first version release was Adobe Flash CS3 Professional , the ninth major version of Flash . It introduced the ActionScript 3.0 programming language , which supported modern programming practices and enabled business applications to be developed with Flash . Adobe Flex Builder ( built on Eclipse ) targeted the enterprise application development market , and was also released the same year . Flex Builder included the Flex SDK , a set of components that included charting , advanced UI , and data services ( Flex Data Services ) .
+  Fact 0.0: Adobe's first version release in 2007 was Adobe Flash CS3 Professional.
+  Fact 0.1: Adobe Flash CS3 Professional was the ninth major version of Flash.
+  Fact 0.2: Adobe Flash CS3 Professional introduced the ActionScript 3.0 programming language.
+  Fact 0.3: ActionScript 3.0 supported modern programming practices.
+  Fact 0.4: ActionScript 3.0 enabled business applications to be developed with Flash.
+  Fact 0.5: Adobe Flex Builder was built on Eclipse.
+  Fact 0.6: Adobe Flex Builder targeted the enterprise application development market.
+  Fact 0.7: Adobe Flex Builder was also released in 2007.
+  Fact 0.8: Flex Builder included the Flex SDK.
+  Fact 0.9: The Flex SDK is a set of components.
+  Fact 0.10: The Flex SDK components included charting.
+  Fact 0.11: The Flex SDK components included advanced UI.
+  Fact 0.12: The Flex SDK components included data services, called Flex Data Services.
+
+Retrieved items:
+<item 1>
+Adobe Flash
+, blend modes ( similar to Adobe Photoshop ) , and advanced features for FLV video . Adobe ( edit ) Macromedia was acquired by Adobe Systems in 2005 , and the
+entire Macromedia product line including Flash , Dreamweaver , Director / Shockwave , Fireworks ( which has since been discontinued ) and Authorware is now
+handled by Adobe . In 2007 , Adobe 's first version release was Adobe Flash CS3 Professional , the ninth major version of Flash . It introduced the ActionScript
+3.0 programming language , which supported modern programming practices and enabled business applications to be developed with Flash . Adobe Flex Builder (
+built on Eclipse ) targeted the enterprise application development market , and was also released the same year . Flex Builder included the Flex SDK , a set of
+components that included charting , advanced UI , and data services ( Flex Data Services ) . In 2008 , Adobe released the tenth version of Flash , Adobe Flash
+CS4 . Flash 10 improved animation capabilities within the Flash editor , adding a motion editor panel ( similar to Adobe After Effects ) , inverse kinematics (
+bones ) , basic 3D object animation , object - based animation , and other text and graphics features .
+</item 1>
+
+<item 2>
+Adobe Flash
+CreateJS is library that while available separately was also adopted by Adobe as a replacement for Wallaby in CS6 . Unlike Wallaby , which was a standalone
+program , the `` Toolkit for CreateJS '' only works as a plug - in inside Flash Professional ; it generates output for the HTML5 canvas , animated with
+JavaScript . Around December 2013 , the toolkit was integrated directly into Flash Professional CC . Criticisms ( edit ) Mobile support ( edit ) Websites built
+with Adobe Flash will not function on most modern mobile devices running Google Android or iOS ( iPhone , iPad ) . The only alternative is using HTML5 and
+responsive web design to build websites that support both desktop and mobile devices . However , Flash is still used to build mobile games using Adobe AIR .
+Such games will not work in mobile web browsers , but must be installed via the appropriate app store . Vendor dependence ( edit ) See also : Vendor lock - in
+The reliance on Adobe for decoding Flash makes its use on the World Wide Web a concern -- the completeness of its public specifications are debated , and no
+complete implementation of Flash is publicly available in source code form with a license that permits reuse .
+</item 2>
+
+<item 3>
+Adobe Flash
+Adobe AIR was upgraded to support 64 - bit computers , and to allow developers to add additional functionality to the AIR runtime using AIR Native Extensions (
+ANE ) . In 2014 , Adobe AIR reached a milestone with over 100,000 unique applications built , and over 1 billion installations logged across the world ( May
+2014 ) . Adobe AIR was voted the Best Mobile Application Development product at the Consumer Electronics Show on two consecutive years ( CES 2014 and CES 2015 )
+. In 2016 , Adobe renamed Flash Professional , the primary authoring software for Flash content , to Adobe Animate to reflect its growing use for authoring
+HTML5 content in favour of Flash content . Open Screen Project ( edit ) On May 1 , 2008 , Adobe announced the Open Screen Project , with the intent of providing
+a consistent application interface across devices such as personal computers , mobile devices , and consumer electronics .
+</item 3>
+
+<item 4>
+Adobe Flash
+Adobe Wallaby Server - side Adobe Flash Media Server Obsolete software Adobe Flash Builder Adobe Flash Catalyst Adobe Flash Lite SWFAddress SWFObject MTASC
+Scaleform GFx SWiSH Max Swift 3D Papervision3D Ajax Animator Shumway Swfdec OpenLaszlo Related topics Comparison of HTML5 and Flash Apple and Adobe Flash
+controversy Flash animation films television Protected Streaming Real - Time Messaging Protocol Real - Time Media Flow Protocol Developers FutureWave Software
+Macromedia Adobe Systems Adobe Creative Suite and Creative Cloud Current products Acrobat After Effects Animate Audition Bridge Dreamweaver Flash Builder
+Illustrator InCopy InDesign Lightroom Media Encoder Muse Photoshop Prelude Premiere Pro Spark XD Creative Cloud services Behance Business Catalyst Story Typekit
+Former products Contribute Device Central Edge Edge Animate Encore Flash Catalyst Fireworks GoLive ImageReady OnLocation Soundbooth Stock Photos Ultra Adobe
+eLearning Suite Current products Captivate Flash Dreamweaver Photoshop Acrobat Presenter Soundbooth Shared applications Bridge Device Central Adobe Systems
+Software Suites Creative Cloud ( Creative Suite ) eLearning Suite Technical Communication Suite Desktop Animate Acrobat After Effects Brackets Edge Code Edge
+Reflow Digital Editions Director Dreamweaver FrameMaker FreeHand Flash Player Flex Builder GoLive Illustrator InDesign Media Encoder Media Player Muse PageMaker
+Photoshop
+</item 4>
+
+<item 5>
+Adobe Flash
+The Apache Flex ActionScript 3.0 compiler generates SWF files from ActionScript 3 files . Flex was the primary ActionScript 3 compiler and was actively
+developed by Adobe before it was donated to Apache Software Foundation in 2011 . Adobe Animate -- primarily used to design graphics and animation , but supports
+ActionScript scripting and debugging . Adobe Flash Builder -- enterprise application development & debugging , contains the Flex SDK with UI and charting
+components . Adobe Scout -- a visual profiler to optimize performance of Flash content . CrossBridge -- a free SDK to cross-compile C++ code to run in Flash
+Player . Third - party tools ( edit ) Third - party development tools have been created to assist developers in creating software applications and video games
+with Flash . FlashDevelop is a free and open - source Flash ActionScript IDE , which includes a project manager and debugger for building applications on Flash
+Player and Adobe AIR . Powerflasher FDT is a commercial ActionScript IDE similar to FlashDevelop . Haxe is an open source , high - level object - oriented
+programming language geared towards web - content creation that can compile SWF files from Haxe programs .
+</item 5>
+
+<item 6>
+Adobe Flash
+FreeHand Flash Player Flex Builder GoLive Illustrator InDesign Media Encoder Media Player Muse PageMaker Photoshop Photoshop Lightroom Premiere Pro Reader
+Shockwave Player Server LiveCycle Flash Media Server BlazeDS ColdFusion JRun PhoneGap Build Technologies ActionScript Adobe AIR Adobe Flash Adobe Flex Adobe
+Shockwave Adobe Font Folio Digital Negative ( DNG ) Authorware FlashPaper Portable Document Format ( PDF ) PostScript Web services Acrobat.com Adobe Solutions
+Network Adobe Photoshop Express Adobe Premiere Express Adobe Spark Adobe Stock Acquisitions Aldus Macromedia Scene7 Omniture Behance Fotolia People Bruce Chizen
+Charles Geschke Shantanu Narayen John Warnock Del Yocam Commons Retrieved from `` https://en.wikipedia.org/w/index.php?title=Adobe_Flash&oldid=821675124 ''
+Categories : Adobe Flash American inventions Cross-platform software Computing platforms C++ software Mac OS multimedia software MacOS multimedia software
+Windows multimedia software Macromedia software Adobe software 1993 software Video game development software Hidden categories : Webarchive template wayback
+links Pages using web citations with no URL Pages using citations with accessdate and no URL Use mdy dates from April 2012 Articles containing potentially dated
+statements from February 2009 All articles containing potentially dated statements Articles containing potentially
+</item 6>
+
+<item 7>
+Adobe Flash
+Macromedia distributed Flash Player as a free browser plugin in order to quickly gain market share . By 2005 , more computers worldwide had Flash Player
+installed than any other Web media format , including Java , QuickTime , RealNetworks and Windows Media Player . Macromedia upgraded the Flash system between
+1996 and 1999 adding MovieClips , Actions ( the precursor to ActionScript ) , Alpha transparency , and other features . As Flash matured , Macromedia 's focus
+shifted from marketing it as a graphics and media tool to promoting it as a Web application platform , adding scripting and data access capabilities to the
+player while attempting to retain its small footprint . In 2000 , the first major version of ActionScript was developed , and released with Flash 5 .
+Actionscript 2.0 was released with Flash MX 2004 and supported object - oriented programming , improved UI components and other programming features . The last
+version of Flash released by Macromedia was Flash 8 , which focused on graphical upgrades such as filters ( blur , drop shadow , etc . ) , blend modes ( similar
+to Adobe Photoshop ) , and advanced features for FLV video .
+</item 7>
+
+<item 8>
+Adobe Flash
+Previously , developers could not use the specification for making SWF - compatible players , but only for making SWF - exporting authoring software . The
+specification still omits information on codecs such as Sorenson Spark , however . Animation tools ( edit ) Official tools ( edit ) Main article : Adobe Animate
+The Adobe Animate authoring program is primarily used to design graphics and animation and publish the same for websites , web applications , and video games .
+The program also offers limited support for audio and video embedding , and ActionScript scripting . Adobe released Adobe LiveMotion , designed to create
+interactive animation content and export it to a variety of formats , including SWF . LiveMotion failed to gain any notable user base . In February 2003 ,
+Macromedia purchased Presedia , which had developed a Flash authoring tool that automatically converted PowerPoint files into Flash . Macromedia subsequently
+released the new product as Breeze , which included many new enhancements .
+</item 8>
+
+<item 9>
+Adobe Flash
+Artists may produce Flash graphics and animations using Adobe Animate . Software developers may produce applications and video games using Adobe Flash Builder ,
+FlashDevelop , Flash Catalyst , or any text editor when used with the Apache Flex SDK . End - users can view Flash content via Flash Player ( for web browsers )
+, AIR ( for desktop or mobile apps ) or third - party players such as Scaleform ( for video games ) . Adobe Flash Player ( supported on Microsoft Windows ,
+macOS and Linux ) enables end - users to view Flash content using web browsers . Adobe Flash Lite enabled viewing Flash content on older smartphones , but has
+been discontinued and superseded by Adobe AIR . The ActionScript programming language allows the development of interactive animations , video games , web
+applications , desktop applications and mobile applications . Programmers can implement Flash software using an IDE such as Adobe Animate , Adobe Flash Builder
+, Adobe Director , FlashDevelop and Powerflasher FDT . Adobe AIR enables full - featured desktop and mobile applications to be developed with Flash and
+published for Windows , macOS , Android , iOS , Xbox One , PlayStation 4 , and Nintendo Wii U and Switch .
+</item 9>
+
+<item 10>
+Graph query row:
+work: Adobe Flash CS3 Professional
+kind: None
+relationship: RELATED_TO
+connection: ActionScript 3.0
+connection_kind: programming language
+</item 10>
+
+<item 11>
+Adobe Flash
+Adobe Flash - Wikipedia Adobe Flash Jump to : navigation , search For the application / animation - maker , see Adobe Animate . For other uses , see Adobe Flash
+( disambiguation ) . Adobe Flash Developer ( s ) Adobe Systems Macromedia FutureWave Target platform ( s ) Web browsers , iOS , Android , Windows , macOS Editor
+software Adobe Animate , Flash Builder , FlashDevelop , Powerflasher FDT , Flash Catalyst Scaleform Player software Flash Player Adobe AIR OpenFL Scaleform
+Gnash Lightspark Format ( s ) SWF FLV FLA Programming language ( s ) ActionScript Application ( s ) Animation Browser games Rich Internet applications Desktop
+applications Mobile apps Mobile games console games computer games Status Active ( Until 2020 ) License Proprietary Adobe Flash is a multimedia software
+platform used for production of animations , rich Internet applications , desktop applications , mobile applications , mobile games and embedded web browser
+video players . Flash displays text , vector graphics and raster graphics to provide animations , video games and applications . It allows streaming of audio
+and video , and can capture mouse , keyboard , microphone and camera input . Artists may produce Flash graphics and animations using Adobe Animate .
+</item 11>
+=== END ITEM id=7df257c4c02fb7b1 ===
+
+=== ITEM id=bf478ef404b7907b ===
+Gold sentences and facts:
+Sentence 0: Duncan 's diagnosis was publicly confirmed during a CDC news conference the same day . That evening , Duncan reported feeling better and requested to watch a movie . The following morning , Duncan was breathing rapidly and complaining of `` pain all over '' . By the afternoon , however , he was able to eat , and the doctor noted that he was feeling better . The next day , October 3 , Duncan again reported feeling abdominal pain . That evening , the hospital contacted Chimerix , a biotechnology company developing Brincidofovir to combat the disease . The next day , Duncan 's organs were failing , and he was intubated to help him breathe . In the afternoon , the hospital began administering Brincidofovir . Nurses Nina Pham and Amber Joy Vinson continued to care for Duncan around the clock . On October 7 , the hospital reported that Duncan 's condition was improving . However , Duncan died at 7 : 51 a.m. on October 8 , becoming the first person to die in the United States of Ebola virus disease and the index patient for the later infections of nurses Pham and Vinson .
+  Fact 0.0: Duncan's diagnosis was publicly confirmed the same day during a CDC news conference.
+  Fact 0.1: On the evening the diagnosis was confirmed, Duncan reported feeling better.
+  Fact 0.2: On the evening the diagnosis was confirmed, Duncan requested to watch a movie.
+  Fact 0.3: The following morning, Duncan was breathing rapidly.
+  Fact 0.4: The following morning, Duncan was complaining of 'pain all over'.
+  Fact 0.5: By the afternoon, Duncan was able to eat.
+  Fact 0.6: By the afternoon, the doctor noted that Duncan was feeling better.
+  Fact 0.7: On October 3, Duncan again reported feeling abdominal pain.
+  Fact 0.8: On the evening of October 3, the hospital contacted Chimerix.
+  Fact 0.9: Chimerix is a biotechnology company developing Brincidofovir to combat the disease.
+  Fact 0.10: The day after October 3, Duncan's organs were failing.
+  Fact 0.11: The day after October 3, Duncan was intubated to help him breathe.
+  Fact 0.12: In the afternoon of that day, the hospital began administering Brincidofovir.
+  Fact 0.13: Nurses Nina Pham and Amber Joy Vinson continued to care for Duncan around the clock.
+  Fact 0.14: On October 7, the hospital reported that Duncan's condition was improving.
+  Fact 0.15: Duncan died at 7:51 a.m. on October 8.
+  Fact 0.16: Duncan became the first person to die in the United States of Ebola virus disease.
+  Fact 0.17: Duncan was the index patient for the later infections of nurses Pham and Vinson.
+Sentence 1: In December 2014 , Ebola virus cases in the United States occurred due to four laboratory - confirmed cases of Ebola virus disease ( commonly known as `` Ebola '' ) in the United States . Eleven cases have been reported , including these four cases and seven cases medically evacuated from other countries ; the first was reported in September 2014 . Nine of the people contracted the disease outside the US and traveled into the country , either as regular airline passengers or as medical evacuees ; of those nine , two died . Two people have contracted Ebola in the United States . Both were nurses who treated an Ebola patient ; both have recovered .
+  Fact 1.0: In December 2014, there were four laboratory-confirmed cases of Ebola virus disease in the United States.
+  Fact 1.1: Ebola virus disease is commonly known as Ebola.
+  Fact 1.2: Eleven Ebola cases have been reported in the United States.
+  Fact 1.3: The eleven cases include the four cases in the United States and seven cases medically evacuated from other countries.
+  Fact 1.4: The first of the Ebola cases was reported in September 2014.
+  Fact 1.5: Nine of the people contracted Ebola outside the US and traveled into the country.
+  Fact 1.6: The nine people traveled into the country either as regular airline passengers or as medical evacuees.
+  Fact 1.7: Two of the nine people who contracted Ebola outside the US died.
+  Fact 1.8: Two people have contracted Ebola in the United States.
+  Fact 1.9: Both people who contracted Ebola in the United States were nurses who treated an Ebola patient.
+  Fact 1.10: Both nurses have recovered.
+Sentence 2: On September 30 , 2014 , the CDC announced that Thomas Eric Duncan , a reportedly 42 - year - old ( later corrected by CDC reports as a 45 - year - old ) Liberian national visiting the United States from Liberia , had been diagnosed with Ebola in Dallas , Texas . Duncan , who had been visiting family in Dallas , was treated at Texas Health Presbyterian Hospital Dallas . By October 4 , Duncan 's condition had deteriorated from `` serious but stable '' to `` critical '' . On October 8 , Duncan died of Ebola. The other three cases diagnosed in the United States as of October 2014 were :
+  Fact 2.0: On September 30, 2014, the CDC announced that Thomas Eric Duncan had been diagnosed with Ebola in Dallas, Texas.
+  Fact 2.1: Thomas Eric Duncan was reportedly 42 years old.
+  Fact 2.2: CDC reports later corrected Duncan's age to 45 years old.
+  Fact 2.3: Thomas Eric Duncan was a Liberian national.
+  Fact 2.4: Thomas Eric Duncan was visiting the United States from Liberia.
+  Fact 2.5: Duncan was visiting family in Dallas.
+  Fact 2.6: Duncan was treated at Texas Health Presbyterian Hospital Dallas.
+  Fact 2.7: By October 4, Duncan's condition had deteriorated from 'serious but stable' to 'critical'.
+  Fact 2.8: On October 8, Duncan died of Ebola.
+  Fact 2.9: As of October 2014, three other cases had been diagnosed in the United States besides Duncan's.
+Sentence 3: Ebola virus disease in the U.S. Map of Ebola cases and infrastructure throughout the U.S. Cases contracted in the U.S. Cases first diagnosed in U.S. Cases evacuated to U.S. from other countries 7 Total cases 11 Deaths Recoveries from Ebola 9 Active cases 0
+  Fact 3.0: The infographic is titled Ebola virus disease in the U.S.
+  Fact 3.1: The map shows Ebola cases and infrastructure throughout the U.S.
+  Fact 3.2: One category is cases contracted in the U.S.
+  Fact 3.3: One category is cases first diagnosed in the U.S.
+  Fact 3.4: One category is cases evacuated to the U.S. from other countries, with 7 listed.
+  Fact 3.5: Total cases are listed as 11.
+  Fact 3.6: Recoveries from Ebola are listed as 9.
+  Fact 3.7: Active cases are listed as 0.
+
+Retrieved items:
+<item 1>
+Graph query row:
+person: Thomas Eric Duncan
+event: Thomas Eric Duncan diagnosed with Ebola
+place: Dallas
+</item 1>
+
+<item 2>
+Ebola virus cases in the United States
+CBS News . November 13 , 2014 . Jump up ^ Sieff , Kevin ( November 17 , 2014 ) . `` A doctor 's mistaken Ebola test : ' We were celebrating ... Then everything
+fell apart ' '' . Washington Post . Jump up ^ `` Martin Salia , Surgeon With Ebola , Arrives in Nebraska From Sierra Leone '' . New York Times . November 15 ,
+2014 . Retrieved November 16 , 2014 . Jump up ^ Goodnough , Abby ; Trenchard , Tommy ( November 17 , 2014 ) . `` Doctor Being Treated for Ebola in Omaha Dies ''
+. The New York Times . Jump up ^ U.S.
+</item 2>
+
+<item 3>
+Ebola virus cases in the United States
+October 14 , 2014 , Amber Joy Vinson , another nurse who treated Duncan . October 23 , 2014 , physician Craig Spencer , diagnosed in New York City ; he had just
+returned from working with Doctors Without Borders in Guinea , a country in west Africa . Hundreds of people were tested or monitored for potential Ebola virus
+infection , but the two nurses were the only confirmed cases of locally transmitted Ebola . Public health experts and the Obama administration opposed
+instituting a travel ban on Ebola endemic areas , stating that it would be ineffective and would paradoxically worsen the situation . No one both contracted and
+died of Ebola virus disease while in the United States . No new cases have been diagnosed in the United States since Craig Spencer was released from a New York
+City hospital on November 11 , 2014 . Contents ( hide ) 1 Cases diagnosed in U.S. 1.1 First case : Thomas Eric Duncan 1.1. 1 Thomas Eric Duncan in Liberia 1.1.
+2 Duncan 's illness in Dallas 1.1. 3 Contact tracing 1.1.
+</item 3>
+
+<item 4>
+Ebola virus cases in the United States
+Nine of the people contracted the disease outside the US and traveled into the country , either as regular airline passengers or as medical evacuees ; of those
+nine , two died . Two people have contracted Ebola in the United States . Both were nurses who treated an Ebola patient ; both have recovered . On September 30
+, 2014 , the CDC announced that Thomas Eric Duncan , a reportedly 42 - year - old ( later corrected by CDC reports as a 45 - year - old ) Liberian national
+visiting the United States from Liberia , had been diagnosed with Ebola in Dallas , Texas . Duncan , who had been visiting family in Dallas , was treated at
+Texas Health Presbyterian Hospital Dallas . By October 4 , Duncan 's condition had deteriorated from `` serious but stable '' to `` critical '' . On October 8 ,
+Duncan died of Ebola. The other three cases diagnosed in the United States as of October 2014 were : October 11 , 2014 , a nurse , Nina Pham , who had provided
+care to Duncan at the hospital . October 14 , 2014 , Amber Joy Vinson , another nurse who treated Duncan .
+</item 4>
+
+<item 5>
+Ebola virus cases in the United States
+In addition , on September 21 , a CDC employee , who showed no symptoms of the disease , was flown back to the United States as a preventative measure after low
+- risk exposure with a healthcare worker ; he posed no risks to his family or the United States , and he is not known to have died . On September 28 , a fourth
+American doctor was admitted to National Institutes of Health hospital . On October 2 , NBC News photojournalist Ashoka Mukpo , covering the outbreak in Liberia
+, tested positive for Ebola after showing symptoms . Four other members of the NBC team , including physician Nancy Snyderman , were being closely monitored for
+symptoms . Mukpo was evacuated on October 6 to the University of Nebraska Medical Center for treatment in their isolation unit . On October 21 , Mukpo was
+declared Ebola - free and allowed to return to his home in Rhode Island . A government official in Sierra Leone announced on November 13 , that a doctor from
+Sierra Leone , a permanent resident of the United States married to a U.S. citizen , would be transported to the Nebraska Medical Center for treatment for Ebola
+. The doctor , identified later as Dr.
+</item 5>
+
+<item 6>
+Ebola virus cases in the United States
+Medical evacuations from West Africa ( edit ) Local transmissions -- no deaths : Texas Initial cases -- deaths : Texas Initial cases -- no deaths : New York
+Medically evacuated cases -- no deaths : Georgia , Maryland Medically evacuated cases -- deaths : Nebraska By the time the Ebola virus epidemic in West Africa
+was over in June 2016 , seven Americans had been evacuated to the U.S. for treatment after contracting Ebola virus while working with medical teams trying to
+stop the epidemic . Kent Brantly , a physician and medical director in Liberia for the aid group Samaritan 's Purse , and co-worker Nancy Writebol were infected
+in July 2014 , while working in Monrovia . Both were flown to the United States at the beginning of August via the CDC 's Aeromedical Biological Containment
+System for further treatment in Atlanta 's Emory University Hospital . On August 21 , Brantly and Writebol recovered and were discharged . Brantly has since
+donated blood to three others with Ebola ( Sacra , Mukpo and Pham ) .
+</item 6>
+
+<item 7>
+Ebola virus cases in the United States
+Jump up ^ `` First diagnosed case of Ebola in the U.S. '' CNN . September 30 , 2014 . Retrieved October 27 , 2014 . Jump up ^ `` New Details About Ebola In
+Dallas Revealed In CDC Report '' . HuffingtonPost . November 14 , 2014 . Retrieved November 14 , 2014 . Jump up ^ CDC confirms first ever Ebola case in United
+States , cdc.gov ; accessed October 9 , 2014 . Jump up ^ Fernandez , Manny ; Philipps , Dave ( October 9 , 2014 ) . `` Death of Thomas Eric Duncan in Dallas
+Fuels Alarm Over Ebola '' . The New York Times . Retrieved October 9 , 2014 . ^ Jump up to : Fernandez , Manny ; Onishi , Norimitsu ( October 1 , 2014 ) . ``
+U.S. Patient Aided Ebola Victim in Liberia '' . The New York Times . ^ Jump up to : `` Thomas Eric Duncan : From healthy to Ebola '' . WYFF4 . Retrieved October
+3 , 2014 .
+</item 7>
+
+<item 8>
+Graph query row:
+person: Martin Salia
+event: None
+place: None
+</item 8>
+
+<item 9>
+Ebola virus cases in the United States
+See also ( edit ) Ebola virus epidemic in Guinea Ebola virus epidemic in Liberia Ebola virus epidemic in Nigeria Ebola virus epidemic in Sierra Leone Ebola
+virus disease in Spain List of Ebola outbreaks West Nile virus in the United States Notes ( edit ) Jump up ^ Duncan contracted Ebola in Liberia and was
+diagnosed in the U.S. Two of the victims had had direct contact with Duncan . One victim was diagnosed in New York City ; his case is unrelated to the Texas
+cases . ^ Jump up to : This takes into account the seven Americans who were medically evacuated from West Africa with Ebola . References ( edit ) Jump up ^ ``
+Who are the American Ebola patients ? '' , CNN , October 6 , 2014 Jump up ^ `` Nebraska Hospital : Surgeon With Ebola Has Died '' . ABC News . November 17 ,
+2014 . Retrieved November 17 , 2014 . Jump up ^ `` 2014 Ebola Outbreak - Case Count '' . CDC . December 15 , 2014 . Retrieved December 16 , 2014 . Jump up ^ ``
+First diagnosed case of Ebola in the U.S. '' CNN .
+</item 9>
+
+<item 10>
+Graph query row:
+person: Dr. Martin Salia
+event: None
+place: None
+</item 10>
+
+<item 11>
+Ebola virus cases in the United States
+ABC News . September 25 , 2014 . Retrieved September 25 , 2014 . Jump up ^ Grady , Denise ( December 7 , 2014 ) . `` An Ebola Doctor 's Return From the Edge of
+Death '' . New York Times . Retrieved December 8 , 2014 . Jump up ^ du Lac , J. Freedom ( October 15 , 2014 ) . `` Little mentioned patient at Emory expects to
+be discharged very soon free from the Ebola virus '' . Washington Post . Jump up ^ `` Ebola patient arrives at Atlanta hospital '' . WCVB Boston . September 9 ,
+2014 . Retrieved September 10 , 2014 . Jump up ^ Addison , Stephen ( September 18 , 2014 ) . `` British Ebola survivor flies to United States for blood donation
+'' . Reuters . Retrieved September 25 , 2014 . Jump up ^ `` 2014 Ebola Outbreak in West Africa - September 25 , 2014 '' . CDC . September 25 , 2014 .
+</item 11>
+
+<item 12>
+Ebola virus cases in the United States
+WYFF4 . Retrieved October 3 , 2014 . Jump up ^ `` First US Ebola case Thomas Duncan ' critical ' '' . BBC News . October 4 , 2014 . Retrieved October 4 , 2014 .
+Jump up ^ `` Texas Ebola patient dies '' . CNN . October 8 , 2014 . Retrieved October 8 , 2014 . ^ Jump up to : Fernandez , Manny ( October 12 , 2014 ) . ``
+Texas Health Worker Tests Positive for Ebola '' . New York Times . Retrieved October 12 , 2014 . Jump up ^ `` Ebola outbreak : Second Texas health worker '
+tests positive ' '' . BBC News . October 15 , 2014 . Retrieved October 15 , 2014 . ^ Jump up to : `` New York Doctor Just Back From Africa Has Ebola '' . NBC
+News . October 23 , 2014 . Retrieved October 23 , 2014 . Jump up ^ Dan Diamond ( October 20 , 2014 ) .
+</item 12>
+
+<item 13>
+Ebola virus cases in the United States
+Ebola virus cases in the United States - wikipedia Ebola virus cases in the United States Jump to : navigation , search This article is about Ebola virus cases
+in the United States starting in 2014 . For the 2013 - 2016 outbreak in Africa , see Ebola virus epidemic in West Africa . For the U.S. discovery of a different
+species of the Ebolavirus genus in 1989 , see Reston virus . Ebola virus disease in the U.S. Map of Ebola cases and infrastructure throughout the U.S. Cases
+contracted in the U.S. Cases first diagnosed in U.S. Cases evacuated to U.S. from other countries 7 Total cases 11 Deaths Recoveries from Ebola 9 Active cases 0
+In December 2014 , Ebola virus cases in the United States occurred due to four laboratory - confirmed cases of Ebola virus disease ( commonly known as `` Ebola
+'' ) in the United States . Eleven cases have been reported , including these four cases and seven cases medically evacuated from other countries ; the first
+was reported in September 2014 .
+</item 13>
+=== END ITEM id=bf478ef404b7907b ===
+
+=== ITEM id=06d40d8625c44884 ===
+Gold sentences and facts:
+Sentence 0: It houses the temporal lobes of the brain and the pituitary gland . A middle fossa craniotomy is one means to surgically remove acoustic neuromas ( vestibular schwannoma ) growing within the internal auditory canal of the temporal bone .
+  Fact 0.0: An unnamed structure, referred to as 'it', houses the temporal lobes of the brain.
+  Fact 0.1: That structure houses the pituitary gland.
+  Fact 0.2: A middle fossa craniotomy is one means to surgically remove acoustic neuromas.
+  Fact 0.3: Acoustic neuromas are also called vestibular schwannomas.
+  Fact 0.4: Acoustic neuromas grow within the internal auditory canal of the temporal bone.
+
+Retrieved items:
+<item 1>
+Graph query row:
+entity: Middle cranial fossa
+relationship: RELATED_TO
+related: clivus
+</item 1>
+
+<item 2>
+Graph query row:
+entity: Middle cranial fossa
+relationship: RELATED_TO
+related: anterior clinoid processes
+</item 2>
+
+<item 3>
+Middle cranial fossa
+wikipedia.org/w/index.php?title=Middle_cranial_fossa&oldid=808415657 '' Categories : Wikipedia articles incorporating text from the 20th edition of Gray 's
+Anatomy ( 1918 ) Skull Hidden categories : Medicine infobox template using GraySubject or GrayPage Talk Contents About Wikipedia Deutsch فارسی Polski Edit links
+This page was last edited on 2 November 2017 , at 18 : 54 . Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may
+apply . By using this site , you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a
+non-profit organization . About Wikipedia
+</item 3>
+
+<item 4>
+Middle cranial fossa
+IV , V1 , VI ) to Pterygopalatine fossa : foramen rotundum ( CN - V2 ) pterygoid canal to Infratemporal fossa : foramen ovale ( CN - V3 ) foramen spinosum /
+carotid canal other : foramen lacerum hiatus for greater petrosal nerve hiatus for lesser petrosal nerve sphenoidal emissary foramen Posterior cranial fossa
+internal auditory meatus / facial canal / stylomastoid foramen ( CN - VII , VIII ) jugular foramen ( CN - IX , X ,
+</item 4>
+
+<item 5>
+Graph query row:
+entity: Middle cranial fossa
+relationship: PART_OF
+related: skull
+</item 5>
+
+<item 6>
+Graph query row:
+entity: Middle cranial fossa
+relationship: RELATED_TO
+related: anterior cranial fossa
+</item 6>
+
+<item 7>
+Middle cranial fossa
+Middle cranial fossa - wikipedia Middle cranial fossa Jump to : navigation , search Middle cranial fossa Base of the skull . Upper surface . ( Middle cranial
+fossa is the centermost of the three indentations , in pink and yellow . ) Details Identifiers Latin fossa cranii media TA A02. 1.00. 049 FMA 54369 Anatomical
+terminology ( edit on Wikidata ) The middle cranial fossa , deeper than the anterior cranial fossa , is narrow medially and widens laterally to the sides of the
+skull . It is separated from the posterior fossa by the clivus and the petrous crest . It is bounded in front by the posterior margins of the lesser wings of
+the sphenoid bone , the anterior clinoid processes , and the ridge forming the anterior margin of the chiasmatic groove ; behind , by the superior angles of the
+petrous portions of the temporal bones and the dorsum sellæ ; laterally by the temporal squamæ , sphenoidal angles of the parietals , and greater wings of the
+sphenoid .
+</item 7>
+
+<item 8>
+Middle cranial fossa
+It transmits to the orbital cavity the oculomotor , the trochlear , the ophthalmic division of the trigeminal , and the abducent nerves , some filaments from
+the cavernous plexus of the sympathetic , and the orbital branch of the middle meningeal artery ; and from the orbital cavity a recurrent branch from the
+lacrimal artery to the dura mater , and the ophthalmic veins . Behind the medial end of the superior orbital fissure is the foramen rotundum , for the passage
+of the maxillary nerve . Behind and lateral to the foramen rotundum is the foramen ovale , which transmits the mandibular nerve , the accessory meningeal artery
+, and the lesser superficial petrosal nerve . Medial to the foramen ovale is the foramen Vesalii , which varies in size in different individuals , and is often
+absent ; when present , it opens below at the lateral side of the scaphoid fossa , and transmits a small vein .
+</item 8>
+
+<item 9>
+Graph query row:
+entity: Middle cranial fossa
+relationship: PART_OF
+related: middle part
+</item 9>
+
+<item 10>
+Middle cranial fossa
+Behind the tuberculum sellæ is a deep depression , the sella turcica , containing the fossa hypophyseos , which lodges the hypophysis , and presents on its
+anterior wall the middle clinoid processes . The sella turcica is bounded posteriorly by a quadrilateral plate of bone , the dorsum sellae , the upper angles of
+which are surmounted by the posterior clinoid processes : these afford attachment to the tentorium cerebelli , and below each is a notch for the abducent nerve
+. On either side of the sella turcica is the carotid groove , which is broad , shallow , and curved somewhat like the italic letter f . It begins behind at the
+foramen lacerum , and ends on the medial side of the anterior clinoid process , where it is sometimes converted into a foramen ( carotico - clinoid ) by the
+union of the anterior with the middle clinoid process ; posteriorly , it is bounded laterally by the lingula . This groove lodges the cavernous sinus and the
+internal carotid artery , the latter being surrounded by a plexus of sympathetic nerves .
+</item 10>
+
+<item 11>
+Middle cranial fossa
+It is traversed by the squamosal , sphenoparietal , sphenosquamosal , and sphenopetrosal sutures . It houses the temporal lobes of the brain and the pituitary
+gland . A middle fossa craniotomy is one means to surgically remove acoustic neuromas ( vestibular schwannoma ) growing within the internal auditory canal of
+the temporal bone . Middle cranial fossa surgical anatomy as demonstrated in a right cadaver temporal bone by Dr Jack M Kartush - view from above . Contents (
+hide ) 1 Middle part 2 Lateral parts 3 See also 4 References 5 Additional images 6 External links Middle part ( edit ) The middle part of the fossa presents ,
+in front , the chiasmatic groove and tuberculum sellae ; the chiasmatic groove ends on either side at the optic foramen , which transmits the optic nerve and
+ophthalmic artery to the orbital cavity . Behind the optic foramen the anterior clinoid process is directed backward and medialward and gives attachment to the
+tentorium cerebelli .
+</item 11>
+
+<item 12>
+Middle cranial fossa
+On the anterior surface of the petrous portion of the temporal bone are seen the eminence caused by the projection of the superior semicircular canal ; in front
+of and a little lateral to this a depression corresponding to the roof of the tympanic cavity ; the groove leading to the hiatus of the facial canal , for the
+transmission of the greater superficial petrosal nerve and the petrosal branch of the middle meningeal artery ; beneath it , the smaller groove , for the
+passage of the lesser superficial petrosal nerve ; and , near the apex of the bone , the depression for the semilunar ganglion and the orifice of the carotid
+canal . See also ( edit ) Anterior cranial fossa Posterior cranial fossa References ( edit ) This article incorporates text in the public domain from the 20th
+edition of Gray 's Anatomy ( 1918 ) Jump up ^ Mancall , Elliott L. ; Brock , David G. , eds. ( 2011 ) . `` Cranial Fossae '' . Gray 's Clinical Anatomy .
+Elsevier Health Sciences . p. 154 . ISBN 9781437735802 .
+</item 12>
+
+<item 13>
+Graph query row:
+entity: Middle cranial fossa
+relationship: RELATED_TO
+related: lesser wings of the sphenoid bone
+</item 13>
+
+<item 14>
+Graph query row:
+entity: Middle cranial fossa
+relationship: RELATED_TO
+related: posterior fossa
+</item 14>
+
+<item 15>
+Middle cranial fossa
+p. 154 . ISBN 9781437735802 . Additional images ( edit ) Middle cranial fossa at human foetus Base of skull Middle cranial fossa Middle cranial fossa Middle
+cranial fossa External links ( edit ) Wikimedia Commons has media related to Middle cranial fossa . Anatomy photo : 22 : os - 0802 at the SUNY Downstate Medical
+Center Compound structures of skull Neurocranium Calvaria Diploë Asterion Pterion Stephanion Inion Bregma Lambda Fossae anterior middle posterior cranial cavity
+Base of skull Fontanelle anterior posterior sphenoidal mastoid Facial skeleton Nasion Gonion Both dacryon zygomatic arch temporal fossa infratemporal fossa
+pterygomaxillary fissure pterygopalatine fossa Foramina of the skull ( and canals , fissures , meatus , and hiatus ) Anterior cranial fossa to Orbit : ethmoidal
+foramina anterior posterior to Nasal cavity : olfactory foramina ( CN - I ) foramen cecum Middle cranial fossa to Orbit : optic canal ( CN - II ) superior
+orbital fissure ( CN - III ,
+</item 15>
+
+<item 16>
+Graph query row:
+entity: Middle cranial fossa
+relationship: RELATED_TO
+related: petrous crest
+</item 16>
+
+<item 17>
+Graph query row:
+entity: Middle cranial fossa
+relationship: PART_OF
+related: Lateral parts of the middle fossa
+</item 17>
+
+<item 18>
+Middle cranial fossa
+Lateral parts ( edit ) The lateral parts of the middle fossa are of considerable depth , and support the temporal lobes of the brain . They are marked by
+depressions for the brain convolutions and traversed by furrows for the anterior and posterior branches of the middle meningeal vessels . These furrows begin
+near the foramen spinosum , and the anterior runs forward and upward to the sphenoidal angle of the parietal , where it is sometimes converted into a bony canal
+; the posterior runs lateralward and backward across the temporal squama and passes on to the parietal near the middle of its lower border . The following
+apertures are also to be seen . In front is the superior orbital fissure , bounded above by the small wing , below , by the great wing , and medially , by the
+body of the sphenoid ; it is usually completed laterally by the orbital plate of the frontal bone .
+</item 18>
+
+<item 19>
+Middle cranial fossa
+Lateral to the foramen ovale is the foramen spinosum , for the passage of the middle meningeal vessels , and a recurrent branch from the mandibular nerve .
+Medial to the foramen ovale is the foramen lacerum ; in the fresh state the lower part of this aperture is filled up by a layer of fibrocartilage , while its
+upper and inner parts transmit the internal carotid artery surrounded by a plexus of sympathetic nerves . The nerve of the pterygoid canal and a meningeal
+branch from the ascending pharyngeal artery pierce the layer of fibrocartilage .
+</item 19>
+
+<item 20>
+Graph query row:
+entity: Middle cranial fossa
+relationship: PART_OF
+related: Orbital branch of the middle meningeal artery
+</item 20>
+=== END ITEM id=06d40d8625c44884 ===

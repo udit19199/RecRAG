@@ -1,0 +1,66 @@
+[
+  {"id": "ff02509fd6578469", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "tying FTX CEO Sam Bankman-Fried to the conspiracy"}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Alameda Research’s former CEO, Caroline Ellison"}]},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "0f3debc5fff0d392", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "2 hours to kickoff: Tata Martino has played his cards extremely close to his chest when it comes to the fitness of Lionel Messi."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "A report from well-connected Argentine journalist Gaston Edul"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "A report from well-connected Argentine journalist Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for this match in some capacity."}]}
+  ]},
+  {"id": "9bd4e01ab0a596fb", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]}
+  ]},
+  {"id": "13b91edc1609c51d", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]}
+  ]},
+  {"id": "19b8d74b6aaf3e30", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "3.0", "status": "stated", "evidence": [{"item": 6, "quote": "He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too."}]},
+    {"fact": "3.1", "status": "stated", "evidence": [{"item": 6, "quote": "He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too."}, {"item": 6, "quote": "He bought himself wealth, power and influence."}]},
+    {"fact": "3.2", "status": "stated", "evidence": [{"item": 6, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+    {"fact": "3.3", "status": "missing", "evidence": []},
+    {"fact": "3.4", "status": "stated", "evidence": [{"item": 6, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]}
+  ]},
+  {"id": "5b0f4f1126dfe27d", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]}
+]

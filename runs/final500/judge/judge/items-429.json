@@ -1,0 +1,418 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "05212074beb1f982",
+   "gold": [
+    {
+     "sentence": " During his early career, Cage starred in a variety of films such as \"Valley Girl\" (1983), \"Racing with the Moon\" (1984), \"Birdy\" (1984), \"Peggy Sue Got Married\" (1986), \"Raising Arizona\" (1987), \"Moonstruck\" (1987), \"Vampire's Kiss\" (1989), \"Wild at Heart\" (1990), \"Fire Birds\" (1990), \"Honeymoon in Vegas\" (1992), and \"Red Rock West\" (1993).",
+     "facts": {
+      "0.0": "During his early career, Nicolas Cage starred in a variety of films.",
+      "0.1": "Nicolas Cage starred in Valley Girl (1983).",
+      "0.2": "Nicolas Cage starred in Racing with the Moon (1984).",
+      "0.3": "Nicolas Cage starred in Birdy (1984).",
+      "0.4": "Nicolas Cage starred in Peggy Sue Got Married (1986).",
+      "0.5": "Nicolas Cage starred in Raising Arizona (1987).",
+      "0.6": "Nicolas Cage starred in Moonstruck (1987).",
+      "0.7": "Nicolas Cage starred in Vampire's Kiss (1989).",
+      "0.8": "Nicolas Cage starred in Wild at Heart (1990).",
+      "0.9": "Nicolas Cage starred in Fire Birds (1990).",
+      "0.10": "Nicolas Cage starred in Honeymoon in Vegas (1992).",
+      "0.11": "Nicolas Cage starred in Red Rock West (1993)."
+     }
+    },
+    {
+     "sentence": " It is about a widowed 37-year-old Italian-American woman (Cher) who falls in love with her fiancé's (Danny Aiello) estranged, hot-tempered younger brother (Nicolas Cage).",
+     "facts": {
+      "1.0": "The film is about a widowed 37-year-old Italian-American woman.",
+      "1.1": "Cher plays the widowed 37-year-old Italian-American woman.",
+      "1.2": "The widowed woman falls in love with her fiancé's estranged, hot-tempered younger brother.",
+      "1.3": "The widowed woman's fiancé is played by Danny Aiello.",
+      "1.4": "The fiancé's younger brother is estranged.",
+      "1.5": "The fiancé's younger brother is hot-tempered.",
+      "1.6": "The fiancé's younger brother is played by Nicolas Cage."
+     }
+    }
+   ],
+   "items": [
+    "Deadfall (1993 film)\nDeadfall is a 1993 crime drama film directed by Christopher Coppola.\n\n Coppola co-wrote the script with Nick Vallelonga.\n\n The film stars Michael Biehn, Nicolas Cage, Charlie Sheen, James Coburn, and Peter Fonda.\n\n It is also the prime influence on the song 'Deadfall', written by the American hardcore punk band Snot.\n\n A prequel/sequel, \"Arsenal\", starring Nicolas Cage as his character Eddie King, was released in 2017.",
+    "James Garner filmography\n(1969) with Walter Brennan, \"Murphy's Romance\" (1985) with Sally Field, \"Sunset\" (1988) with Bruce Willis, \"Maverick\" (1994) with Mel Gibson and Jodie Foster, \"Divine Secrets of the Ya-Ya Sisterhood\" (2002), and \"The Notebook\" (2004) with Ryan Gosling and Rachel McAdams.\n\n His television series credits include portraying Bret Maverick in \"Maverick\" (1957–1962) and \"Bret Maverick\" (1981–1982), Jim Rockford in \"The Rockford Files\" (1974–1980), and Jim Egan in \"8 Simple Rules\" (2003–2005).",
+    "3:10 to Yuma (2007 film)\n3:10 to Yuma is a 2007 American Western film directed by James Mangold and produced by Cathy Konrad, and starring Russell Crowe and Christian Bale in the lead roles, with supporting performances by Peter Fonda, Gretchen Mol, Ben Foster, Dallas Roberts, Alan Tudyk, Vinessa Shaw, and Logan Lerman.\n\n It is about a drought-impoverished rancher (Bale) who takes on the dangerous job of taking a notorious outlaw (Crowe) to justice.\n\n It is a remake of the , making it the second adaptation of Elmore Leonard's short story \"Three-Ten to Yuma\".\n\n Filming took place in various locations in New Mexico.\n\n \"3:10 to Yuma\" opened September 7, 2007, in the United States and received positive reviews from critics.",
+    "Sleepless in Seattle\nSleepless in Seattle is a 1993 American romantic comedy-drama film directed and co-written by Nora Ephron, based on a story by Jeff Arch.\n\n It stars Tom Hanks and Meg Ryan, alongside a supporting cast featuring Bill Pullman, Ross Malinger, Rob Reiner, Rosie O'Donnell, Gaby Hoffmann, Victor Garber, and Rita Wilson.\n\n The film was a critical and commercial success, grossing over $220 million worldwide.",
+    "License to Wed\nLicense to Wed is a 2007 American romantic comedy film starring Robin Williams, Mandy Moore and John Krasinski, and directed by Ken Kwapis.\n\n The film was released in theaters on July 3, 2007.",
+    "These Old Broads\nThese Old Broads is a 2001 television film written by Carrie Fisher and starring her mother Debbie Reynolds, as well as Shirley MacLaine, Joan Collins, and Elizabeth Taylor in her final film role.\n\n In a 2001 BBC \"Omnibus\" documentary about Elizabeth Taylor, Shirley MacLaine says that Julie Andrews and Lauren Bacall were originally planned to be in the movie.\n\n The role of Miriam Hodges was originally offered to June Allyson.",
+    "Old Boyfriends\nOld Boyfriends is a 1979 American drama film directed by Joan Tewkesbury and written by Paul Schrader and Leonard Schrader.\n\n The film stars Talia Shire, Richard Jordan, Keith Carradine, John Belushi, John Houseman and Buck Henry.\n\n The film was released on April 13, 1979, by Embassy Pictures.",
+    "Nicolas Cage\nNicolas Kim Coppola (born January 7, 1964), known professionally as Nicolas Cage, is an American actor, director and producer.\n\n During his early career, Cage starred in a variety of films such as \"Valley Girl\" (1983), \"Racing with the Moon\" (1984), \"Birdy\" (1984), \"Peggy Sue Got Married\" (1986), \"Raising Arizona\" (1987), \"Moonstruck\" (1987), \"Vampire's Kiss\" (1989), \"Wild at Heart\" (1990), \"Fire Birds\" (1990), \"Honeymoon in Vegas\" (1992), and \"Red Rock West\" (1993).",
+    "Moonstruck\nMoonstruck is a 1987 American romantic comedy film directed by Norman Jewison and written by John Patrick Shanley.\n\n It is about a widowed 37-year-old Italian-American woman (Cher) who falls in love with her fiancé's (Danny Aiello) estranged, hot-tempered younger brother (Nicolas Cage).\n\n Vincent Gardenia and Olympia Dukakis play supporting roles.",
+    "A Star Is Born (1976 film)\nA Star Is Born is a 1976 American musical drama film telling the story of a young woman, played by Barbra Streisand, who enters show business, and meets and falls in love with an established male star, played by Kris Kristofferson, only to find her career ascending while his goes into decline.\n\n It is a remake of two earlier versions – the 1937 version was a drama starring Janet Gaynor and Fredric March, and the 1954 version was a musical starring Judy Garland and James Mason.\n\n It will be remade for a third time in 2018 starring Stefani Germanotta and Bradley Cooper."
+   ]
+  },
+  {
+   "id": "653b282af347bac3",
+   "gold": [
+    {
+     "sentence": "Bertalan Farkas (born August 2, 1949) is the first Hungarian cosmonaut and the first Esperantist in space.",
+     "facts": {
+      "0.0": "Bertalan Farkas was born on August 2, 1949.",
+      "0.1": "Bertalan Farkas is the first Hungarian cosmonaut.",
+      "0.2": "Bertalan Farkas is the first Esperantist in space."
+     }
+    },
+    {
+     "sentence": "Hans Wilhelm Schlegel (Überlingen, 3 August 1951) is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions.",
+     "facts": {
+      "1.0": "Hans Wilhelm Schlegel was born in Überlingen on 3 August 1951.",
+      "1.1": "Hans Wilhelm Schlegel is a German physicist.",
+      "1.2": "Hans Wilhelm Schlegel is an ESA astronaut.",
+      "1.3": "Hans Wilhelm Schlegel is a veteran of two NASA Space Shuttle missions."
+     }
+    }
+   ],
+   "items": [
+    "Hans Aschenborn\nHans Anton Aschenborn (1 February 1888 – 10 April 1931) was a renowned animal painter of African wildlife.\n\n He worked both in Germany and in southern Africa.\n\n His work is featured in the older German Thieme-Becker or Saur art encyclopedia.\n\n A Master of Arts thesis by Karin Skawran concerning the graphic works of Hans Anton Aschenborn was published in the South African art and culture periodical, \"Lantern\" in 1965.)\n\n In 1963 the University of Pretoria published a book about Aschenborn as an artist entitled, \"Hans Anton Aschenborn : Mens en Kunstenaar\".\n\n In 1970 another one followed by the Pretoria Art Museum (South Africa).\n\n Other publications on Aschenborn feature his etchings and linocuts.",
+    "Bertalan Farkas\nBertalan Farkas (born August 2, 1949) is the first Hungarian cosmonaut and the first Esperantist in space.\n\n He is currently the president of Airlines Service and Trade.\n\n With Charles Simonyi's travel, Farkas is no longer the only Hungarian who has been to space (he is still the only astronaut, as Simonyi flew as a space tourist).",
+    "Hans von Hentig\nHans von Hentig (9 June 1887 in Berlin – 6 July 1974 in Bad Tölz) was a German criminal psychologist and politician.He was the second son of lawyer Otto von Hentig (1852–1934) .\n\nHis older brother was later diplomat Werner Otto von Hentig.\n\n Otto von Hentig was one of the leading lawyers in Berlin.\n\n Hans von Hentig was instrumental in the setting up of a short-lived Bavarian Soviet Republic in 1919.\n\n During the 1920s he was a prominent exponent of National Bolshevism.\n\n He emigrated to United States in 1935.\n\n Hans von Hentig worked on Yale University.",
+    "Karl Anselm, 4th Prince of Thurn and Taxis\nKarl Anselm, 4th Prince of Thurn and Taxis, full German name: \"Karl Anselm Fürst von Thurn und Taxis\" (2 June 1733, Frankfurt am Main, Free Imperial City of Frankfurt, Holy Roman Empire – 13 November 1805, Winzer bei Regensburg, Electorate of Bavaria, Holy Roman Empire) was the fourth Prince of Thurn and Taxis, Postmaster General of the Imperial Reichspost, and Head of the Princely House of Thurn and Taxis from 17 March 1773 until his death on 13 November 1805.\n\n Karl Anselm served as \"Prinzipalkommissar\" at the Perpetual Imperial Diet in Regensburg for Joseph II, Holy Roman Emperor and Francis II, Holy Roman Emperor from 1773 to 1797.",
+    "Hans Schlegel\nHans Wilhelm Schlegel (Überlingen, 3 August 1951) is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions.",
+    "Gottlieb Muffat\nGottlieb Muffat (April 1690 – 9 December 1770), son of Georg Muffat, served as \"Hofscholar\" under Johann Fux in Vienna from 1711 and was appointed to the position of third court organist at the \"Hofkapelle\" in 1717.\n\n He acquired additional duties over time including the instruction of members of the Imperial family, among them the future Empress Maria Theresa.\n\n He was promoted to second organist in 1729 and first organist upon the accession of Maria Theresa to the throne in 1741.\n\n He retired from official duties at the court in 1763.",
+    "Karl Wilhelm Friedrich Schlegel\nKarl Wilhelm Friedrich (after 1814: von) Schlegel (10 March 1772 – 12 January 1829), usually cited as Friedrich Schlegel, was a German poet, literary critic, philosopher, philologist and Indologist.\n\n With his older brother, August Wilhelm Schlegel, he was one of the main figures of the Jena romantics.\n\n He was a zealous promoter of the Romantic movement and inspired Samuel Taylor Coleridge, Adam Mickiewicz and Kazimierz Brodziński.\n\n Schlegel was a pioneer in Indo-European studies, comparative linguistics, morphological typology, and was the first to notice what became known as Grimm's law.",
+    "Richard Genée\nFranz Friedrich Richard Genée (February 7, 1823 – June 15, 1895) was a Prussian born Austrian librettist, playwright, and composer.\n\n He is most famous for the libretto of \"Die Fledermaus\", Johann Strauss II's most famous operetta.\n\n He co-wrote the libretto without having met top-billed librettist Karl Haffner, who constructed the new story based on a play by Henri Meilhac and Ludovic Halévy, which was considered too shocking to perform outside Paris.\n\n Genée, however, wrote the operetta's actual text and drew nothing from Haffner beyond the names of the characters.",
+    "Helmuth von Moltke the Younger\nHelmuth Johann Ludwig von Moltke (] ; 23 May 1848 – 18 June 1916), also known as Moltke the Younger, was a nephew of \"Generalfeldmarschall\" (Field Marshal) Helmuth Karl Bernhard von Moltke and served as the Chief of the German General Staff from 1906 to 1914.\n\n The two are often differentiated as \"Moltke the Elder\" and \"Moltke the Younger\".",
+    "Béla Bartók\nBéla Viktor János Bartók ( ; ] ; 25 March 1881 – 26 September 1945) was a Hungarian composer, pianist and an ethnomusicologist.\n\n He is considered one of the most important composers of the 20th century; he and Liszt are regarded as Hungary's greatest composers .\n\n Through his collection and analytical study of folk music, he was one of the founders of comparative musicology, which later became ethnomusicology."
+   ]
+  },
+  {
+   "id": "13dc6291e7563f4d",
+   "gold": [
+    {
+     "sentence": "Semyon Aronovich Gershgorin (August 24, 1901 – May 30, 1933) was a Soviet (born in Pruzhany, Belarus, Russian Empire) mathematician.",
+     "facts": {
+      "0.0": "Semyon Aronovich Gershgorin was born on August 24, 1901.",
+      "0.1": "Semyon Aronovich Gershgorin died on May 30, 1933.",
+      "0.2": "Semyon Aronovich Gershgorin was Soviet.",
+      "0.3": "Semyon Aronovich Gershgorin was born in Pruzhany, Belarus, Russian Empire.",
+      "0.4": "Semyon Aronovich Gershgorin was a mathematician."
+     }
+    },
+    {
+     "sentence": " He was a mathematician noted for his work on the decidability of various algebraic groups. Malcev algebras (generalisations of Lie algebras) are named after him.",
+     "facts": {
+      "1.0": "Semyon Aronovich Gershgorin was a mathematician.",
+      "1.1": "Semyon Aronovich Gershgorin was noted for his work on the decidability of various algebraic groups.",
+      "1.2": "Malcev algebras are generalisations of Lie algebras.",
+      "1.3": "Malcev algebras are named after Semyon Aronovich Gershgorin."
+     }
+    }
+   ],
+   "items": [
+    "Nicolai V. Krylov\nBellman equations), which were examined with stochastic methods.\n\n This led to the Evans-Krylov theory, for which he received with Lawrence C. Evans in 2004 the Leroy P. Steele Prize of the American Mathematical Society (for work done simultaneously and independently by both Krylov and Evans).\n\n They proved the second order differentiability (Hölder continuity of the second derivative) of the solutions of convex, completely nonlinear, second order elliptical partial differential equations and thus the existence of \"classical solutions\" (Theorem of Evans-Krylov).\n\n He was in 1978 at Helsinki and in 1986 at Berkeley an Invited Speaker for the ICM.\n\n He received the Humboldt Research Award in 2001.\n\n In 1993 he was elected a member of the American Academy of Arts and Sciences (1993).\n\n He should not be confused with the mathematician Nikolay M. Krylov.",
+    "Semyon Aranovich Gershgorin\nSemyon Aronovich Gershgorin (August 24, 1901 – May 30, 1933) was a Soviet (born in Pruzhany, Belarus, Russian Empire) mathematician.\n\n He began as a student at the Petrograd Technological Institute in 1923, became a Professor in 1930, and was given an appointment at the Leningrad Mechanical Engineering Institute in the same year.\n\n His contributions include the Gershgorin circle theorem.",
+    "Nikolay Mitrofanovich Krylov\nNikolay Mitrofanovich Krylov (Russian: Никола́й Митрофа́нович Крыло́в , Ukrainian: Микола Митрофанович Крилов ) (29 November [O.S. 17 November] 1879 – May 11, 1955) was a Russian and Soviet mathematician known for works on interpolation, non-linear mechanics, and numerical methods for solving equations of mathematical physics.",
+    "Nicolai V. Krylov\nNicolai Vladimirovich Krylov (Russian: Никола́й Влади́мирович Крыло́в ; born 5 June 1941) is a Russian mathematician specializing in partial differential equations, particularly stochastic partial differential equations and diffusion processes.\n\n Krylov studied at Lomonosov University, where he in 1966 under E. B. Dynkin attained a doctoral candidate title (similar to a PhD) and in 1973 a Russian doctoral degree (somewhat more prestigious than a PhD).\n\n He taught from 1966 to 1990 at the Lomonosov University and is since 1990 a professor at the University of Minnesota.\n\n At the beginning of his career (starting from 1963) he, in collaboration with Dynkin, worked on nonlinear stochastic control theory, making advances in the study of convex, nonlinear partial equations of 2nd order (\"i.e.\" Bellman equations), which were examined with stochastic methods.",
+    "Graph query row:\nperson: Semyon Aranovich Gershgorin\noccupation: ['mathematician', 'student', 'Professor']\nrelationship: None\ndiscipline: None",
+    "Anatoly Maltsev\nAnatoly Ivanovich Maltsev (also: Malcev, Mal'cev; Russian: Анато́лий Ива́нович Ма́льцев; 27 November N.S./14 November O.S. 1909, Moscow Governorate – 7 June 1967, Novosibirsk) was born in Misheronsky, near Moscow, and died in Novosibirsk, USSR.\n\n He was a mathematician noted for his work on the decidability of various algebraic groups. Malcev algebras (generalisations of Lie algebras) are named after him.",
+    "Aleksandr Ivanovsky\nAleksandr Ivanovsky (1881–1968) was a Russian screenwriter and film director who worked during the Soviet era.\n\n Ivanovsky was awarded the Stalin Prize in 1941, for his work on the 1940 film \"Musical Story\".\n\n His 1944 operetta film \"Silva\" was one of the most popular releases in the Soviet Union that year.",
+    "Vladimir Arnold\nVladimir Igorevich Arnold (alternative spelling Arnol'd, Russian: Влади́мир И́горевич Арно́льд , 12 June 1937 – 3 June 2010) was a Soviet and Russian mathematician.\n\n While he is best known for the Kolmogorov–Arnold–Moser theorem regarding the stability of integrable systems, he made important contributions in several areas including dynamical systems theory, catastrophe theory, topology, algebraic geometry, symplectic geometry, differential equations, classical mechanics, hydrodynamics and singularity theory, including posing the ADE classification problem, since his first main result—the solution of Hilbert's thirteenth problem in 1957 at the age of 19.",
+    "Graph query row:\nperson: Anatoly Maltsev\noccupation: mathematician\nrelationship: None\ndiscipline: None",
+    "Anatoly Fomenko\nAnatoly Timofeevich Fomenko (Russian: Анато́лий Тимофе́евич Фоме́нко ) (born 13 March 1945 in Stalino, USSR) is a Soviet and Russian mathematician, professor at Moscow State University, well known as a topologist, and a member of the Russian Academy of Sciences.\n\n He is author of a pseudoscientific theory known as New Chronology.\n\n He is also a member of the Russian Academy of Natural Sciences (1991)."
+   ]
+  },
+  {
+   "id": "f62c4b0f353cd06c",
+   "gold": [
+    {
+     "sentence": " She was born in Guangzhou, China.",
+     "facts": {
+      "0.0": "The woman referred to as \"she\" was born in Guangzhou, China."
+     }
+    },
+    {
+     "sentence": " These videos are an overview and recap of each year's viral videos, events, memes, and music.",
+     "facts": {
+      "1.0": "The videos being described are an overview of each year's viral videos, events, memes, and music.",
+      "1.1": "The videos being described are a recap of each year's viral videos, events, memes, and music."
+     }
+    }
+   ],
+   "items": [
+    "Lilly Singh\nLilly Singh (born 26 September 1988) is a Canadian YouTube personality, vlogger, comedian, writer, and actress.\n\n She is better known by her YouTube username IISuperwomanII.\n\n Since beginning her channel in October 2010, her videos have received over 2 billion views, and her channel has accumulated over 12 million subscribers.\n\n In 2016, she was ranked 3rd on the \"Forbes\" list of the world's highest paid YouTube stars (behind Roman Atwood and PewDiePie), earning a reported $7.5 million in 2016.\n\n Singh has featured in the annual YouTube Rewind every year since 2014.\n\n She ranked 1st on 2017 Forbes Top Influencers List in the entertainment category.",
+    "XVideos\nXVideos is the world's largest pornographic video sharing and viewing website.\n\n It's registered to the Polish company, WGCZ Holding.\n\n Alexa ranks it as the 50th most visited website in the world.",
+    "Wayne Goss (make-up artist)\nWayne Alan Goss (born 4 March 1978) is an English makeup artist, YouTube personality and entrepreneur.\n\n Best known for his \"Wayne Goss\" channel on YouTube, he is the creator and owner of the self-eponymous makeup brush line launched in September 2013.\n\n As of November 2016, Goss' main YouTube channel had over 2.7 million subscribers and had had 344 million views.",
+    "Issa Rae\nJo-Issa \"Issa\" Rae Diop (born January 12, 1985) is an American actress, writer, director, producer and web series creator.\n\n She is best known as the creator of the YouTube web series \"Awkward Black Girl\".\n\n Since the premiere of \"Awkward Black Girl\", Rae has developed her own YouTube platform where she features various content created by people of color.\n\n Rae's shows have garnered over 20 million views and over 260,000 subscribers on YouTube.",
+    "CVX Live\nCVX Live (Creator Viewer Experience Live) is an event designed to bring online media creators and their fans together.\n\n It was held for the first time in Orem, Utah, on August 7 to 8, 2015 Originally created by the team behind the \"Bored Shorts TV\" YouTube channel, the convention is Utah's first YouTube event, gathering thousands of online YouTube creators and fans together in one place.\n\n One of the creators, Brett Robers, described it as “...a very unique opportunity to bring YouTube to life.”",
+    "YouTube Rewind\nYouTube Rewind is a video series produced and created by YouTube and Portal A Interactive.\n\n These videos are an overview and recap of each year's viral videos, events, memes, and music.\n\n Each year, the number of YouTube celebrities featured in the video, as well as the presentation of the series, have increased.\n\n The latest episode of \"YouTube Rewind\" was released on December 8, 2016.",
+    "Wengie\nWendy Ayche (born January 9 1986) known professionally as Wengie, is an Australian YouTube personality and vlogger.\n\n She was born in Guangzhou, China.\n\n She got the nickname \"Wengie\" at a dance class when two people gave her a nickname inspired by her Chinese name, Wén Jié.\n\n Since starting her channel on February 11 2013, her videos have received over 281 million views, and her channel has accumulated over 11 followers In the January 2016 edition of \"ElleGirl Japan\", she was nominated as a channel to watch.\n\n In August 2016, she was ranked the 5th Fastest growing channel in the world.\n\n Ayche was featured in the annual YouTube Rewind in 2016 and was also singled out by Google as one of the top beauty creators in the Asia region.\n\n Ayche reached 5 million YouTube subscribers in January 2017, and her channel is currently in the 12th most subscribed How-To & Style Channel on YouTube.\n\n She is also currently a board member of the Internet Creators Guild, a non-profit focused on providing the protection, representation and guidance to online creators.",
+    "Wengie\nHer YouTube channel also recently got awarded with \"Best Channel\" as well as \"Overall Winner\" for the Australian Online Video Awards.",
+    "Kevin Nalty\nKevin 'Nalts' Nalty (born May 12, 1969) is a YouTube comedian and partner based in Doylestown, Pennsylvania better known under his YouTube username Nalts.\n\n Nalts began on YouTube as one of the top-20 most-viewed comedy channels, and collaborates with many of today's top YouTube personalities.\n\n He has more than 1,000 videos which, as of April 18, 2016, have been viewed more than 297 million times on YouTube alone.\n\n He has been ranked as one of YouTube's Most Subscribed users.\n\n He is the author of \"Beyond Viral: How to Attract Customers, Promote Your Brand, and Make Money with Online Video (Wiley & Sons, 2010).",
+    "Wong Jing\nWong Jing ( born 3 May 1955) is a Hong Kong film director, producer, actor, presenter, and screenwriter.\n\n A prolific filmmaker with strong instincts for crowd-pleasing and publicity, Wong Jin has played a prominent role in the Hong Kong cinema of the last quarter-century."
+   ]
+  },
+  {
+   "id": "c53b3c8a92fa6e64",
+   "gold": [
+    {
+     "sentence": "Kresy Wschodnie or Kresy (] , Eastern Borderlands, or Borderlands) was a region of the Second Polish Republic during the interwar period constituting nearly half of the territory of the state; where the ethnic Poles, being the largest group, were roughly equal in their number to the size of the national minorities (with notable exceptions).",
+     "facts": {
+      "0.0": "Kresy Wschodnie, also called Kresy, Eastern Borderlands, or Borderlands, was a region of the Second Polish Republic during the interwar period.",
+      "0.1": "Kresy constituted nearly half of the territory of the Second Polish Republic.",
+      "0.2": "In Kresy, ethnic Poles were the largest group.",
+      "0.3": "In Kresy, ethnic Poles were roughly equal in number to the size of the national minorities.",
+      "0.4": "The rough equality of ethnic Poles with the national minorities in Kresy had notable exceptions."
+     }
+    },
+    {
+     "sentence": " It was drawn for the first time by the Supreme War Council as the demarcation line between the newly emerging states, the Second Polish Republic, and the Soviet Union.",
+     "facts": {
+      "1.0": "Kresy was drawn for the first time by the Supreme War Council.",
+      "1.1": "Kresy was drawn as the demarcation line between the newly emerging states, the Second Polish Republic and the Soviet Union."
+     }
+    }
+   ],
+   "items": [
+    "Kresy\nKresy Wschodnie or Kresy (] , Eastern Borderlands, or Borderlands) was a region of the Second Polish Republic during the interwar period constituting nearly half of the territory of the state; where the ethnic Poles, being the largest group, were roughly equal in their number to the size of the national minorities (with notable exceptions).\n\n Administratively, the territory of Kresy was composed of voivodeships of Lwów, Nowogródek, Polesie, Stanisławów, Tarnopol, Wilno, Wołyń, and the Białystok.\n\n Today, these territories are divided between Western Ukraine, Western Belarus, and south-eastern Lithuania, with such major cities as Lviv, Vilnius, and Grodno no longer in Poland.\n\n In the Second Polish Republic the term \"Kresy\" roughly equated with the lands beyond the so-called Curzon Line, which was suggested after World War I in December 1919 by the British Foreign Office as the eastern border of the re-emerging sovereign Republic following the century of partitions.",
+    "Battle of Berestechko\nThe Battle of Berestechko (Polish: \"Bitwa pod Beresteczkiem\" ; Ukrainian: Берестецька битва, Битва під Берестечком ) was fought between the Ukrainian Cossacks, led by Hetman Bohdan Khmelnytsky, aided by their Crimean Tatar allies, and a Polish army under King John II Casimir.\n\n It was a battle of a Cossack rebellion in Ukraine that took place in the years 1648–1657 after the expiration of a two-year truce.\n\n Fought from 28 to 30 June 1651, the battle took place in the province of Volhynia, on the hilly plain south of the Styr River.\n\n The Polish camp was on the river opposite Berestechko and faced south, towards the Cossack army about two kilometers away, whose right flank was against the River Pliashivka (Pliashova) and the Tatar army on their left flank.\n\n It was probably the largest European land battle of the 17th century.",
+    "Saffron (singer)\nSamantha Marie Sprackling (born 3 June 1968, Lagos, Nigeria) more commonly known as Saffron, is a singer, songwriter, actress and the lead singer of the electronica band Republica.\n\n She also performed in London's \"Starlight Express\" for two years, appeared in the music video for the Chesney Hawkes hit, \"The One and Only\", and as a dancer in the music video for N-Joi's single, \"Mindflux\".",
+    "Kresy\nIn September 1939, after the Soviet Union joined Nazi Germany in their attack on Poland in accordance with the Molotov–Ribbentrop Pact, the territories were incorporated into Soviet Ukraine, Belarus and Lithuania in the atmosphere of terror.",
+    "Anti-Nebraska movement\nThe Anti-Nebraska movement was a political alignment in the United States formed in opposition to the Kansas-Nebraska Act of 1854 and to its repeal of the Missouri Compromise provision forbidding slavery in U.S. territories north of latitude 36° 30' N.\n\n (At the time, the name \"Nebraska\" could loosely refer to areas west of the Missouri River.)",
+    "Lithuanian Education Society Rytas\nThe Lithuanian Education Society Rytas (Lithuanian: \"Lietuvių švietimo draugija „Rytas“\" ; \"rytas\" means \"morning\" or \"dawn\") was a Roman Catholic society fostering education in the Lithuanian language mostly in the Vilnius Region, then fiercely contested between Lithuania and the Second Polish Republic, now split between Lithuanian and Belarus.\n\n Established in 1913, the society maintained some 100 primary schools (mostly one-room schools), 50 evening classes, and Teacher's Seminary in Vilnius (Wilno, Vilna) in 1927.\n\n Due to political tensions between Poland and Lithuania as well as wider Polonization policies, Rytas faced increasing difficulties and restrictions in maintaining its schools.\n\n Similar situation existed with Polish schools in Lithuania (see Lithuanization).\n\n The situation continued to worsen as both sides increased restrictions in retribution.\n\n As schools were closed, Rytas shifted its focus to maintaining community reading rooms.",
+    "Curzon Line\nThe history of the Curzon Line, with minor variations, goes back to the period following World War I.\n\n It was drawn for the first time by the Supreme War Council as the demarcation line between the newly emerging states, the Second Polish Republic, and the Soviet Union.\n\n The proposal was put forward by British Foreign Secretary George Curzon, to serve as a diplomatic basis for the future border agreement, and in that form, it never materialized because the war went on.",
+    "History of the New Jersey State Constitution\nOriginally, the state of New Jersey was a single British colony, the Province of New Jersey.\n\n After the English Civil War, Charles II assigned New Jersey as a proprietary colony to be held jointly by Sir George Carteret and John Berkeley, 1st Baron Berkeley of Stratton.\n\n Eventually, the collection of land fees, or quit-rents, from colonists proved inadequate for colonial profitability.\n\n Sir George Carteret sold his share of the colony to the Quakers in 1673.\n\n Following the sale, the land was divided into East and West Jersey.\n\n In 1681, West Jersey adopted a constitution.\n\n In 1683, East Jersey adopted one as well.\n\n In 1702, the colonies were united again under Anne, Queen of Great Britain, and adopted a constitution in 1776.",
+    "Tripartite Indenture\nThe Tripartite Indenture was an agreement made in February 1405 between Owain Glyndŵr, Edmund Mortimer, and Henry Percy, 1st Earl of Northumberland, agreeing to divide England and Wales up between them at the expense of Henry IV.\n\n Glyndŵr was to be given Wales, and a substantial part of the west of England, including the English portions of the Welsh Marches.\n\n Northumberland was to have received the north, as well as Northamptonshire, Norfolk, Warwickshire, and Leicestershire.\n\n The Mortimers were to have received the rest of southern England.",
+    "Register Cliff\nRegister Cliff is a sandstone cliff and featured key navigational landmark prominently listed in the 19th century guidebooks about the Oregon Trail, and a place where many emigrants chiseled the names of their families on the soft stones of the cliff it was one of the key checkpoint landmarks for parties heading west along the Platte River valley west of Fort John, Wyoming which allowed travelers to verify they were on the correct path up to South Pass and not moving into impassable mountain terrainsgeographically, it is on the eastern ascent of the Continental divide leading upward out of the great plains in the east of the U.S. state of Wyoming.\n\n It is notable as a historic landmark for 'registering' hundreds of emigrants on the Oregon Trail (thus also the other northern Emigrant Trails that split off farther west such as the California Trail and Mormon Trail) who came to follow custom and inscribed their names on its rocks during the western migrations of the 19th century.\n\n An estimated 500,000 emigrants used these trails from 1843–1869, with up to one-tenth dying along the way, usually due to disease."
+   ]
+  },
+  {
+   "id": "2a9d3dfea25604cc",
+   "gold": [
+    {
+     "sentence": "The Straight Story is a 1999 internationally co-produced biographical road drama film directed by David Lynch.",
+     "facts": {
+      "0.0": "The Straight Story is a 1999 film.",
+      "0.1": "The Straight Story is internationally co-produced.",
+      "0.2": "The Straight Story is a biographical road drama film.",
+      "0.3": "The Straight Story was directed by David Lynch."
+     }
+    },
+    {
+     "sentence": "Frozen is a 2013 American 3D computer-animated musical fantasy film produced by Walt Disney Animation Studios and released by Walt Disney Pictures.",
+     "facts": {
+      "1.0": "Frozen is a 2013 film.",
+      "1.1": "Frozen is American.",
+      "1.2": "Frozen is a 3D computer-animated film.",
+      "1.3": "Frozen is a musical fantasy film.",
+      "1.4": "Frozen was produced by Walt Disney Animation Studios.",
+      "1.5": "Frozen was released by Walt Disney Pictures."
+     }
+    }
+   ],
+   "items": [
+    "Disney Renaissance\nIn the history of The Walt Disney Company, the Disney Renaissance refers to the era from 1989 to 1999 during which Walt Disney Feature Animation (renamed Walt Disney Animation Studios in 2006) experienced a creative resurgence in producing successful animated films based on well-known stories, which restored public and critical interest in The Walt Disney Company as a whole.\n\n During this era, the studio produced and released ten animated films: \"The Little Mermaid\" (1989), \"The Rescuers Down Under\" (1990), \"Beauty and the Beast\" (1991), \"Aladdin\" (1992), \"The Lion King\" (1994), \"Pocahontas\" (1995), \"The Hunchback of Notre Dame\" (1996), \"Hercules\" (1997), \"Mulan\" (1998) and \"Tarzan\" (1999).",
+    "Toy Story\nToy Story is a 1995 American computer-animated buddy comedy adventure film produced by Pixar Animation Studios for Walt Disney Pictures.\n\n The directorial debut of John Lasseter, \"Toy Story\" was the first feature-length computer-animated film and the first feature film produced by Pixar.\n\n Taking place in a world where anthropomorphic toys pretend to be lifeless whenever humans are present, the film's plot focuses on the relationship between Woody, an old-fashioned pullstring cowboy doll (voiced by Tom Hanks), and Buzz Lightyear, an astronaut action figure (voiced by Tim Allen), as they evolve from rivals competing for the affections of Andy, their owner, to friends who work together to be reunited with Andy as his family prepares to move to a new home.\n\n The screenplay was written by Joss Whedon, Andrew Stanton, Joel Cohen and Alec Sokolow, based on a story by Lasseter, Pete Docter, Stanton and Joe Ranft.\n\n The film features music by Randy Newman, and was executive-produced by Steve Jobs and Edwin Catmull.",
+    "Film genre\nA film genre is a motion picture category based on similarities in either the narrative elements or the emotional response to the film (namely, serious, comic, etc.).\n\n Most theories of film genre are borrowed from literary genre criticism.\n\n The basic genres include fiction and documentary, from which subgenres have emerged, such as docufiction and docudrama.\n\n Other subgenres include the courtroom and trial-focused drama known as the legal drama.\n\n Types of fiction which may seem unrelated can also be combined to form hybrid subgenres, such as the melding of horror and comedy in the \"Evil Dead\" films.\n\n Other popular combinations are the romantic comedy and the action comedy film.",
+    "A Star Is Born (1976 film)\nA Star Is Born is a 1976 American musical drama film telling the story of a young woman, played by Barbra Streisand, who enters show business, and meets and falls in love with an established male star, played by Kris Kristofferson, only to find her career ascending while his goes into decline.\n\n It is a remake of two earlier versions – the 1937 version was a drama starring Janet Gaynor and Fredric March, and the 1954 version was a musical starring Judy Garland and James Mason.\n\n It will be remade for a third time in 2018 starring Stefani Germanotta and Bradley Cooper.",
+    "Fire and Ice (1983 film)\nFire and Ice is a 1983 American adult animated epic high fantasy adventure film directed by Ralph Bakshi.\n\n The film, a collaboration between Bakshi and Frank Frazetta, was distributed by 20th Century Fox, which also distributed Bakshi's 1977 release, \"Wizards\".\n\n The animated feature, based on characters Bakshi and Frazetta co-created, was made using the process of rotoscoping, in which scenes were shot in live action and then traced onto animation cels.",
+    "The Straight Story\nThe Straight Story is a 1999 internationally co-produced biographical road drama film directed by David Lynch.\n\n The film was edited and produced by Mary Sweeney, Lynch's longtime partner and co-worker.\n\n She co-wrote the script with John E. Roach.\n\n The film is based on the true story of Alvin Straight's 1994 journey across Iowa and Wisconsin on a lawn mower.\n\n Alvin (Richard Farnsworth) is an elderly World War II veteran who lives with his daughter Rose (Sissy Spacek), a kind woman with an intellectual disability.\n\n When he hears that his estranged brother Lyle (Harry Dean Stanton) has suffered a stroke, Alvin makes up his mind to go visit him and hopefully make amends before he dies.\n\n Because Alvin's legs and eyes are too impaired for him to receive a driving license, he hitches a trailer to his recently purchased thirty-year-old John Deere 110 Lawn Tractor, having a maximum speed of about 5 miles per hour, and sets off on the 240 mile journey from Laurens, Iowa to Mount Zion, Wisconsin.",
+    "The Polar Bears\nThe Polar Bears is a 2012 3D computer animated short film presented by The Coca-Cola Company, produced by Ridley Scott, written by David Reynolds, and directed by John Stevenson.\n\n The film features the voices of Lin-Manuel Miranda, Armie Hammer, Jonathan Adams, and Megyn Price.\n\n The film is based on Coca-Cola's iconic polar bears and was released on the company's website and YouTube channel on December 31, 2012.",
+    "Cool and the Crazy\nCool and the Crazy is a 1994 American drama film written and directed by Ralph Bakshi and starring Jared Leto and Alicia Silverstone.\n\n The story revolves around an unhappily married couple in the late 1950s who both lead separate affairs.\n\n The film was Bakshi's first feature-length live-action film, being primarily known as a director of animated films which heavily utilize live-action sequences, such as \"Fritz the Cat\", \"Heavy Traffic\", \"Wizards\", \"American Pop\" and \"The Lord of the Rings\".",
+    "The Blizzard (1923 film)\nThe Blizzard is a 1923 Swedish drama film directed by Mauritz Stiller, starring Einar Hanson, Mary Johnson, Pauline Brunius and Hugo Björne.\n\n The film's original Swedish title is Gunnar Hedes saga, which means \"The story of Gunnar Hede\".\n\n The narrative revolves a student who tries to save his family's mansion which is facing bankruptcy.\n\n The film is loosely based on the Selma Lagerlöf novel \"The Tale of a Manor\".",
+    "Frozen (2013 film)\nFrozen is a 2013 American 3D computer-animated musical fantasy film produced by Walt Disney Animation Studios and released by Walt Disney Pictures.\n\n It is the 53rd Disney animated feature film.\n\n Inspired by Hans Christian Andersen's fairy tale \"The Snow Queen\", the film tells the story of a fearless princess who sets off on a journey alongside a rugged iceman, his loyal pet reindeer, and a naïve snowman to find her estranged sister, whose icy powers have inadvertently trapped the kingdom in eternal winter."
+   ]
+  },
+  {
+   "id": "204a5caecf9f858c",
+   "gold": [
+    {
+     "sentence": "Jack and Jill is an American bimonthly magazine for children 7 to 12 years old that takes its title from the nursery rhyme of the same name.",
+     "facts": {
+      "0.0": "Jack and Jill is an American magazine for children.",
+      "0.1": "Jack and Jill is published bimonthly.",
+      "0.2": "Jack and Jill is for children 7 to 12 years old.",
+      "0.3": "The title of Jack and Jill comes from the nursery rhyme of the same name."
+     }
+    },
+    {
+     "sentence": "Paper, stylized as PAPER, is a New York City-based independent magazine focusing on fashion, popular culture, nightlife, music, art and film.",
+     "facts": {
+      "1.0": "Paper, stylized as PAPER, is a New York City-based magazine.",
+      "1.1": "Paper is an independent magazine.",
+      "1.2": "Paper focuses on fashion.",
+      "1.3": "Paper focuses on popular culture.",
+      "1.4": "Paper focuses on nightlife.",
+      "1.5": "Paper focuses on music.",
+      "1.6": "Paper focuses on art.",
+      "1.7": "Paper focuses on film."
+     }
+    }
+   ],
+   "items": [
+    "VIVmag\nVIVmag is one of the earliest exclusively digital, interactive women's lifestyle magazines.\n\n Launched in 2006 and backed by Canadian industrialist David Harrison Gilmour (the founder of FIJI Water LLC), the bimonthly magazine is distributed by Zinio Systems, Inc.\n\n The first issue appeared in January-February 2007.\n\n There is no print version.\n\n The paperless title can be viewed in most browsers or downloaded to your computer and read via the Zinio Reader.\n\n The magazine is based in Thousand Oaks, California.",
+    "Key demographic\nCertain radio formats (especially those dubbed \"classic\") and television outlets may target persons 35 to 64, especially since the late 2000s recession wiped out many career opportunities for millennials, since the 35–64 demographic has much more disposable income.",
+    "Jack and Jill (magazine)\nJack and Jill is an American bimonthly magazine for children 7 to 12 years old that takes its title from the nursery rhyme of the same name.\n\n It features stories and educational activities.",
+    "Paper (magazine)\nPaper, stylized as PAPER, is a New York City-based independent magazine focusing on fashion, popular culture, nightlife, music, art and film.\n\n Past cover models include Kim Kardashian, Demi Lovato, Katy Perry, Miley Cyrus, Prince, CL, and Jennifer Lopez.",
+    "Shape (magazine)\nShape is a monthly English language fitness magazine started by Weider Publications in 1981, founded by Christine MacIntyre (a pioneer in women's free weight fitness) and became the number one women's fitness magazine.\n\n At that time, Weider Enterprises consisted primarily of the bodybuilding magazine \"Muscle & Fitness\".\n\n Joe Weider and Christine MacIntyre had differing views of how to present \"Shape\", Weider endorsing a less journalistic and more commercial approach to articles, MacIntyre endorsing a more academic, doctor-based magazine.\n\n Weider also endorsed a sexier approach to editorial while MacIntyre endorsed a healthier look for women, eschewing sexiness in the models and the copy.\n\n MacIntyre largely won that battle, editing a magazine that required that every byline have an advanced medical degree, that cover models should look healthy rather than sexy, and that sexist language be avoided.\n\n Christine MacIntyre was the editor-in-chief until her death in 1988.\n\n Tara Kraft is the current editor-in-chief.\n\n \"Shape\" found a readership based on that formula.",
+    "Mighty Jill Off\nMighty Jill Off is a 2D platform independently developed freeware video game designed by Anna Anthropy, with art by James Harvey and music by Andrew Toups.\n\n It stars a submissive named Jill, who has a boot fetish and is forced to climb up a tower after her Queen kicks her down it as punishment.\n\n Jill does this by jumping and slowly descending over obstacles.\n\n Jill can be defeated in one hit by these obstacles, but will return to the last check point.\n\n The game serves as an homage to the 1986 arcade game \"Mighty Bomb Jack\".\n\n It had follow-ups, such as \"Mighty Jill Off - Jill Off Harder Edition\" and \"Jill Off With One Hand\".\n\n Jill made a cameo appearance in the 2010 video game \"Super Meat Boy\" as a playable character.",
+    "SexIs\nSexIs Magazine is a quarterly print publication and daily webzine devoted to sex and sexual culture, founded in 2008 by Web Merchants, parent company of sex toy e-tailer EdenFantasys.com.\n\n The first print issue debuted in November 2009, distributed nationwide as an insert in \"BUST magazine\".\n\n The website publishes articles, columns, video presentations and news items daily.",
+    "Essence (magazine)\nEssence is a monthly magazine for African American women between the ages of 18 and 49.\n\n It is the only magazine that focuses on reaching an audience of black women, revolves around the black woman experience, and has remained for a long period of time.\n\n The magazine covers fashion, lifestyle and beauty, with an intimate girlfriend-to-girlfriend tone, and its slogan \"Fierce, Fun, and Fabulous\" suggests the magazine's goal of empowering African-American women.\n\n The topics the magazine discusses range from celebrities, to fashion, to point-of-view pieces addressing current issues in the African-American community.\n\n A number of its readers engage closely and personally with the publication, and it claims to be the magazine \"for and about Black women\".",
+    "Golf Digest\nGolf Digest is a monthly golf magazine published by Condé Nast Publications in the United States.\n\n It is a generalist golf publication covering recreational golf and men's and women's competitive golf.\n\n Condé Nast Publications also publishes the more specialized \"Golf for Women\", \"Golf World\" and \"Golf World Business\".\n\n The magazine started in 1950, and was sold to The New York Times Company in 1969.\n\n The Times company sold their magazine division to Condé Nast in 2001.\n\n The headquarters of \"Golf Digest\" is in Des Moines, Iowa.",
+    "PC Magazine\nPC Magazine (shortened as PCMag) is an American computer magazine published by Ziff Davis.\n\n A print edition was published from 1982 to January 2009.\n\n Publication of online editions started in late 1994 and continues to this day."
+   ]
+  },
+  {
+   "id": "0b344ef2a997e06f",
+   "gold": [
+    {
+     "sentence": " The first edition was written by J. Eric Holmes based on Gary Gygax and Dave Arneson's original work.",
+     "facts": {
+      "0.0": "The first edition was written by J. Eric Holmes.",
+      "0.1": "The first edition was based on the original work of Gary Gygax and Dave Arneson."
+     }
+    },
+    {
+     "sentence": "John Eric Holmes M.D. (February 16, 1930 – March 20, 2010) was an associate professor of neurology at the University of Southern California School of Medicine, an author and promoter of fantasy role-playing games, a noted fan and enthusiast of Edgar Rice Burroughs, and an American writer of non-fiction, fantasy and science fiction.",
+     "facts": {
+      "1.0": "John Eric Holmes M.D. was born on February 16, 1930.",
+      "1.1": "John Eric Holmes M.D. died on March 20, 2010.",
+      "1.2": "John Eric Holmes M.D. was an associate professor of neurology at the University of Southern California School of Medicine.",
+      "1.3": "John Eric Holmes M.D. was an author and promoter of fantasy role-playing games.",
+      "1.4": "John Eric Holmes M.D. was a noted fan and enthusiast of Edgar Rice Burroughs.",
+      "1.5": "John Eric Holmes M.D. was an American writer of non-fiction, fantasy and science fiction."
+     }
+    }
+   ],
+   "items": [
+    "Dungeons &amp; Dragons Basic Game\nThe Dungeons & Dragons Basic Game is an introductory version of \"Dungeons & Dragons\" (\"D&D\") role-playing game packaged in the form of a board game.\n\n The original game was released in 2004 by Wizards of the Coast and was designed by Jonathan Tweet, one of the \"D&D\" 3rd edition designers.\n\n A new version of this game was released in September 2006.",
+    "The Lost City (Dungeons &amp; Dragons)\nThe Lost City (B4) is a \"Dungeons & Dragons\" adventure module by Tom Moldvay.\n\n It was first published by TSR in 1982 and was designed as a stand-alone adventure for use with the \"Dungeons & Dragons Basic Set\".\n\n The working title for the module was \"The Lost City of Cynidecia\".\n\n Moldvay designed the module to give novice Dungeon Masters experience fleshing out adventures and is only partially complete.\n\n The module is described as a low-level scenario, in which the only hope of the player characters' survival can be found in a ruined city slowly rising out of the sands.\n\n The adventure is set inside a huge step pyramid, with the lower pyramid only sketched out and the city itself described with a list of the major areas and a map.\n\n The adventure’s main villain is Zargon, a giant one-eyed monster and his minions.\n\n The entire double pyramid, not including the city, contains over 100 rooms.",
+    "Dungeons &amp; Dragons Companion Set\nThe Dungeons & Dragons Companion Set is an expansion boxed set for the \"Dungeons & Dragons\" (\"D&D\") fantasy role-playing game.\n\n It was first published in 1984 as an expansion to the \"Dungeons & Dragons Basic Set\".",
+    "Dungeons &amp; Dragons Immortals Rules\nDungeons & Dragons Immortals Rules, written by Frank Mentzer, is a boxed set for the \"Dungeons & Dragons\" (\"D&D\") fantasy role-playing game first published by TSR in 1986 as an expansion to the \"Basic Set\".",
+    "Dungeons &amp; Dragons Game (1991 boxed set)\nThe New Easy-to-Master Dungeons & Dragons Game is an introductory set for the \"Dungeons & Dragons\" fantasy role-playing game, published by TSR, Inc. in 1991.\n\n It was a replacement for the previous \"Dungeons & Dragons Basic Set\", serving to introduce new players to the game, using the rule set previously established.",
+    "The Keep on the Borderlands\nThe Keep on the Borderlands is a \"Dungeons & Dragons\" module by Gary Gygax, first printed in December 1979.\n\n In it, player characters are based at a keep and investigate a nearby series of caves that are filled with a variety of monsters.\n\n It was designed to be used with the \"Dungeons & Dragons Basic Set\", and was included in the 1979–1982 editions of the \"Basic Set\".\n\n It was designed for people new to \"Dungeons & Dragons\".",
+    "Dungeons &amp; Dragons Master Rules\nDungeons & Dragons Master Rules is an expansion boxed set for the \"Dungeons & Dragons\" (\"D&D\") fantasy role-playing game.\n\n It was first published in 1985 as an expansion to the \"Basic Set\".",
+    "GURPS Basic Set\nGURPS Basic Set is a hard-bound two volume set written by Steve Jackson, Sean M. Punch, and David L. Pulver.\n\n The first edition \"GURPS Basic Set\" was published in 1986.",
+    "Dungeons &amp; Dragons Basic Set\nThe Dungeons & Dragons Basic Set is a set of rulebooks for the \"Dungeons & Dragons\" (\"D&D\") fantasy role-playing game.\n\n First published in 1977, it saw a handful of revisions and reprintings.\n\n The first edition was written by J. Eric Holmes based on Gary Gygax and Dave Arneson's original work.\n\n Later editions were edited by Tom Moldvay, Dave Cook, and Frank Mentzer.",
+    "Castle Ravenloft Board Game\nCastle Ravenloft Board Game is a 2010 board game published by Wizards of the Coast.\n\n It was the first game released in the Dungeons & Dragons Adventure System board game series."
+   ]
+  },
+  {
+   "id": "cb9b44cf1817247d",
+   "gold": [
+    {
+     "sentence": "St. Elizabeths Hospital opened in 1855 as the first federally operated psychiatric hospital in the United States.",
+     "facts": {
+      "0.0": "St. Elizabeths Hospital opened in 1855.",
+      "0.1": "St. Elizabeths Hospital opened as the first federally operated psychiatric hospital in the United States."
+     }
+    },
+    {
+     "sentence": " Founded in 1861, it is the longest continuously operating hospital in the District.",
+     "facts": {
+      "1.0": "St. Elizabeths Hospital was founded in 1861.",
+      "1.1": "St. Elizabeths Hospital is the longest continuously operating hospital in the District."
+     }
+    }
+   ],
+   "items": [
+    "Vassar Brothers Medical Center\nIn 2002 Vassar Brothers Hospital officially became Vassar Brothers Medical Center.\n\n In September 2016, VBMC announced a new $500 million expansion which would almost double the number of available rooms.\n\n Construction on the expansion is expected to be completed in 2019.",
+    "History of psychiatric hospitals in Pittsburgh\nPittsburgh, Pennsylvania, United States, is home to a plethora of hospitals, be it for the physically ill or, what was defined as the insane and feeble minded.\n\n In 1891, the St. Margaret Memorial Hospital opened under John H. Shoenberger.\n\n In 1908, the Pittsburgh Hospital was run under C. A. Fagan, and on June 1, 1889, the South Side Hospital opened under Anna M. Rindlaub.\n\n Pittsburgh, commonly known as the \"Steel City,\" also built up a reputation for its abundance of hospitals that had opened up within a fairly close time period of each other.\n\n During this time, many new mental hospitals were established due to overcrowding.\n\n In 1899, a building to house the mentally insane, Mayview State Hospital, was constructed; but it was not long before the complex had a reputation “as a place of sorrow” due to the lack of proper health care patients received during their stay.",
+    "Westminster St Margaret and St John\nSt Margaret was an ancient parish in the City and Liberty of Westminster and the county of Middlesex.\n\n It included the core of modern Westminster, including the Palace of Westminster and the area around, but not including Westminster Abbey.\n\n In 1727 it was divided into St Margaret's and St John's, to coincide with the building of the Church of St John the Evangelist, constructed by the Commission for Building Fifty New Churches in Smith Square to meet the demands of the growing population, but there continued to be a single vestry for the parishes of St Margaret and St John.\n\n This was reformed in 1855 by the Metropolis Management Act, and the two parishes formed the Westminster District until 1887.\n\n In 1889 St Margaret and St John became part of the County of London.\n\n The vestry was abolished in 1900, to be replaced by Westminster City Council, but St Margaret and St John continued to have a nominal existence until 1922.",
+    "St. Elizabeths Hospital\nSt. Elizabeths Hospital opened in 1855 as the first federally operated psychiatric hospital in the United States.\n\n Housing over 8,000 patients at its peak in the 1950s, the hospital at one point had a fully functioning medical-surgical unit, a school of nursing, and accredited internships and psychiatric residencies.\n\n Its campus was designated a National Historic Landmark in 1990.",
+    "Heritage Hospital\nHeritage Hospital is a hospital located in Tarboro, North Carolina.\n\n It is a part of the University Health Systems of Eastern Carolina (UHSEC).\n\n Edgecombe General Hospital opened as a county-owned hospital in 1916.\n\n It succeeded Pittman Hospital, which opened in 1901.\n\n In 1959, the Hill-Burton Act helped combine Edgecombe General Hospital, with three other facilities.\n\n Edgecombe County sold the hospital to Hospital Corporation of America (HCA) in 1982.\n\n HCA opened a 127-bed facility in 1985, named Heritage Hospital.\n\n UHSEC bought Heritage Hospital in 1998 from HCA.\n\n The hospitals focus is as a community hospital.\n\n The hospital has 101 general and 16 rehabilitation hospital beds.\n\n It has five Shared Inpatient/Ambulatory Surgery, two Endoscopy, and one C-Section operating rooms.",
+    "Montefiore New Rochelle Hospital\nMontefiore New Rochelle Hospital (formerly Sound Shore Medical Center) is a community-based, teaching hospital located at 16 Guion Place in the city of New Rochelle, in Westchester County, New York, and affiliated with the Albert Einstein College of Medicine.\n\n The hospital opened in 1892 as New Rochelle Hospital.\n\n On November 6, 2013, Sound Shore was acquired by the Bronx-based Montefiore Medical Center, the University Hospital for the Albert Einstein College of Medicine, was renamed Montefiore New Rochelle Hospital, and became part of the Montefiore Health System.",
+    "Vassar Brothers Medical Center\nVassar Brother Medical Center (locally known as Vassar Hospital or VBMC) is a major medical facility located in the city of Poughkeepsie, New York that is a member of the Health Quest network, a nonprofit family of hospitals and healthcare centers in the Hudson Valley area.\n\n VBMC is one of two major medical centers located in Dutchess County, New York, the other being Mid-Hudson Regional Hospital of Westchester Medical Center.\n\n The hospital was first incorporated in 1882 under the name Vassar Brothers Hospital, following contributions made by John Guy Vassar following the death of his brother.\n\n The hospital opened its doors in 1887, and initially had 40 beds divided up into four wards, each containing ten beds.\n\n At the time the hospital opened it also contained a labor and delivery ward, a children's ward, a nursery, three private rooms, and two isolation rooms.\n\n Several major renovations occurred in 1983, 1991, and 2001; adding critical care areas, a new operating and delivery wing, and a cancer care center, respectively.",
+    "Providence Hospital (Washington, D.C.)\nProvidence Hospital is a 408 bed hospital located in the District of Columbia.\n\n Founded in 1861, it is the longest continuously operating hospital in the District.\n\n Providence Hospital is a member of Ascension Health, the largest non-profit health care organization in the United States.",
+    "Winfred Overholser\nWinfred Overholser (1892 – October 6, 1964) was an American psychiatrist, president of the American Psychiatric Association, and for 25 years the superintendent of St. Elizabeths Hospital, a federal institution for the mentally ill in Washington, D.C.",
+    "St. John's Regional Medical Center (California)\nSt. John's Regional Medical Center is a hospital located in Oxnard, California in the United States, and is operated by Dignity Health, along with its sister hospital, St. John's Pleasant Valley Hospital in Camarillo, California.\n\n The hospital was founded in 1912.\n\n St. John's Regional Medical Center and St. John's Pleasant Valley Hospital offer comprehensive medical services, including 24-hour emergency medical and surgical services and care, cancer and oncology care and support, cardiovascular care, community outreach and screenings, diagnostic imaging services, laboratory services, maternity and women's services, neonatal intensive care, palliative care, patient and family education, rehabilitation services, spine and orthopedic care, weight loss surgery, wound healing and oxygen therapy, and more.\n\n Together, St. John's Regional Medical Center and St. John's Pleasant Valley Hospital represent the largest acute-care health organization in Ventura County.\n\n St. John's hospitals serve all of Ventura County and beyond, including the cities of Camarillo, Moorpark, Oxnard, Port Hueneme, Ventura, and Somis."
+   ]
+  },
+  {
+   "id": "4a8ad719396c8ff4",
+   "gold": [
+    {
+     "sentence": "Sleepless in Seattle is a 1993 American romantic comedy-drama film directed and co-written by Nora Ephron, based on a story by Jeff Arch.",
+     "facts": {
+      "0.0": "Sleepless in Seattle is a 1993 film.",
+      "0.1": "Sleepless in Seattle is an American film.",
+      "0.2": "Sleepless in Seattle is a romantic comedy-drama film.",
+      "0.3": "Sleepless in Seattle was directed by Nora Ephron.",
+      "0.4": "Sleepless in Seattle was co-written by Nora Ephron.",
+      "0.5": "Sleepless in Seattle is based on a story by Jeff Arch."
+     }
+    },
+    {
+     "sentence": " It stars Tom Hanks and Meg Ryan, alongside a supporting cast featuring Bill Pullman, Ross Malinger, Rob Reiner, Rosie O'Donnell, Gaby Hoffmann, Victor Garber, and Rita Wilson.",
+     "facts": {
+      "1.0": "Sleepless in Seattle stars Tom Hanks.",
+      "1.1": "Sleepless in Seattle stars Meg Ryan.",
+      "1.2": "Sleepless in Seattle has a supporting cast featuring Bill Pullman.",
+      "1.3": "Sleepless in Seattle has a supporting cast featuring Ross Malinger.",
+      "1.4": "Sleepless in Seattle has a supporting cast featuring Rob Reiner.",
+      "1.5": "Sleepless in Seattle has a supporting cast featuring Rosie O'Donnell.",
+      "1.6": "Sleepless in Seattle has a supporting cast featuring Gaby Hoffmann.",
+      "1.7": "Sleepless in Seattle has a supporting cast featuring Victor Garber.",
+      "1.8": "Sleepless in Seattle has a supporting cast featuring Rita Wilson."
+     }
+    },
+    {
+     "sentence": "Roseann O'Donnell (born March 21, 1962) is an American comedian, actress, author, and television personality.",
+     "facts": {
+      "2.0": "Roseann O'Donnell was born on March 21, 1962.",
+      "2.1": "Roseann O'Donnell is an American comedian.",
+      "2.2": "Roseann O'Donnell is an American actress.",
+      "2.3": "Roseann O'Donnell is an American author.",
+      "2.4": "Roseann O'Donnell is an American television personality."
+     }
+    }
+   ],
+   "items": [
+    "The 'Burbs\nThe 'Burbs is a 1989 American comedy thriller film directed by Joe Dante starring Tom Hanks, Bruce Dern, Carrie Fisher, Rick Ducommun, Corey Feldman, Wendy Schaal and Henry Gibson.\n\n The film was written by Dana Olsen, who also has a cameo in the movie.\n\n The film pokes fun at suburban environments and their eccentric dwellers.",
+    "Christopher Guest\nChristopher Haden-Guest, 5th Baron Haden-Guest (born February 5, 1948), simply known as Christopher Guest, is an English-American screenwriter, composer, musician, director, actor, and comedian who holds dual British and American citizenship.\n\n Guest is most widely known in Hollywood for having written, directed and starred in his series of comedy films shot in mock-documentary (mockumentary) style.\n\n Many scenes and character backgrounds in Guest's films are written and directed, although actors have no rehearsal time and the ensemble improvise scenes while filming them.\n\n The series of films began with \"This Is Spinal Tap\" (directed by Rob Reiner), and continued with \"Waiting for Guffman\", \"Best In Show\", \"A Mighty Wind\", \"For Your Consideration\", and \"Mascots\".",
+    "Ken Kwapis\nKenneth William \"Ken\" Kwapis (born August 17, 1957) is an American film and television director and screenwriter.\n\n He specialized in the single-camera sitcom in the 1990s and 2000s and has directed feature films such as \"Sesame Street Presents Follow That Bird\" (1985), \"The Sisterhood of the Traveling Pants\" (2005), and \"He's Just Not That into You\" (2009).",
+    "In My Sleep\nIn My Sleep is a 2010 suspense thriller film written, directed and produced by film director Allen Wolf.\n\n It stars Philip Winchester, Lacey Chabert, Tim Draxl, Abigail Spencer and Kelly Overton.\n\n It also features Kirsten Vangsness from Criminal Minds in a cameo role and Tony Hale from Veep in a cameo as well.\n\n The story is about a massage therapist with chronic insomnia who fears he may have murdered a good friend while sleepwalking.",
+    "Carrie Fisher\nCarrie Frances Fisher (October 21, 1956 – December 27, 2016) was an American actress, writer, and humorist.\n\n Fisher was known for playing Princess Leia in the \"Star Wars\" films; a role for which she was nominated for three Saturn Awards.\n\n Her other film roles included \"Shampoo\" (1975), \"The Blues Brothers\" (1980), \"Hannah and Her Sisters\" (1986), \"The 'Burbs\" (1989), \"When Harry Met Sally...\" (1989), \"Soapdish\" (1991) and \"The Women\" (2008 film).\n\n She was nominated twice for the Primetime Emmy Award for Outstanding Guest Actress in a Comedy Series for her performances on the television series \"30 Rock\" and \"Catastrophe\".\n\n She was posthumously made a Disney Legend in 2017.",
+    "Sleepless in Seattle\nSleepless in Seattle is a 1993 American romantic comedy-drama film directed and co-written by Nora Ephron, based on a story by Jeff Arch.\n\n It stars Tom Hanks and Meg Ryan, alongside a supporting cast featuring Bill Pullman, Ross Malinger, Rob Reiner, Rosie O'Donnell, Gaby Hoffmann, Victor Garber, and Rita Wilson.\n\n The film was a critical and commercial success, grossing over $220 million worldwide.",
+    "Barry Sandler\nBarry Sandler (born February 23, 1947 in Buffalo, New York) is an American screenwriter and film producer.\n\n His career has spanned several decades, with the 1980s being his most prolific.\n\n The openly gay Sandler is perhaps best known for writing the 1982 film \"Making Love\", the first mainstream Hollywood film to deal seriously with issues of homosexuality and coming out.\n\n Sandler discussed \"Making Love\" in the 1995 documentary film \"The Celluloid Closet\".",
+    "Dunston Checks In\nDunston Checks In is a 1996 American family comedy film starring Eric Lloyd, Graham Sack, Jason Alexander, Faye Dunaway, Rupert Everett, Paul Reubens, Glenn Shadix, and introducing Sam the Orangutan as Dunston.\n\n It was written by John Hopkins and Bruce Graham and directed by Ken Kwapis.",
+    "Matthew Perry\nMatthew Langford Perry (born August 19, 1969) is a Canadian-American actor, best known for his role as Chandler Bing on the long-running NBC television sitcom \"Friends\", as well as his portrayal of Ron Clark in the 2006 television movie \"The Ron Clark Story\".",
+    "Marty Belafsky\nMarty Belafsky (born September 19, 1975) is an American actor/comedian born in Los Angeles, California.\n\n He began acting professionally at age 13 and was soon cast as Louis Plumb on the short-lived NBC series \"Hull High\".\n\n Shortly thereafter, Belafsky landed the role of Crutchy in the Disney musical film, \"Newsies\".\n\n He continued acting through his teens, making appearances in such television shows as \"The Wonder Years\", \"Great Scott\" and \"Step By Step\" and the film \"Wrestling Ernest Hemingway\".\n\n Belafsky also voiced Kent Swanson in the video game series \"Dead Rising\" released in 2006."
+   ]
+  },
+  {
+   "id": "c2da9c95f9e62b35",
+   "gold": [
+    {
+     "sentence": "The Nassau Herald is a weekly newspaper serving the Five Towns communities of Nassau County – Lawrence, Woodmere, Hewlett, Cedarhurst, Inwood and Atlantic Beach.",
+     "facts": {
+      "0.0": "The Nassau Herald is a weekly newspaper.",
+      "0.1": "The Nassau Herald serves the Five Towns communities of Nassau County.",
+      "0.2": "The Five Towns communities of Nassau County are Lawrence, Woodmere, Hewlett, Cedarhurst, Inwood, and Atlantic Beach."
+     }
+    },
+    {
+     "sentence": "Lawrence is a village in Nassau County, New York in the United States.",
+     "facts": {
+      "1.0": "Lawrence is a village.",
+      "1.1": "Lawrence is in Nassau County, New York, United States."
+     }
+    },
+    {
+     "sentence": " As of the 2010 United States Census, the village population was 6,483.",
+     "facts": {
+      "2.0": "As of the 2010 United States Census, the population of the village of Lawrence was 6,483."
+     }
+    }
+   ],
+   "items": [
+    "New York State Route 108\nNew York State Route 108 (NY 108) is a 1.72 mi north–south state highway located on the Suffolk County side of the Suffolk–Nassau county line on Long Island, New York, in the United States.\n\n It is a spur route connecting NY 25A in Cold Spring Harbor to the Cold Spring Harbor station on the Long Island Rail Road's Port Jefferson Branch via Harbor Road.\n\n Harbor Road terminates at an intersection with Woodbury Road, on the Nassau County line, which carries County Route 11 to the east and unsigned County Route 12 to the west.\n\n NY 108, assigned in the early 1930s, is the shortest state highway on Long Island.",
+    "Great Neck School District\nThe Great Neck School District is a comprehensive community public school district primarily serving students in Great Neck, New York.\n\n It also serves students in some parts of Manhasset and New Hyde Park.\n\n It is Union Free School District Number 7 in the Town of North Hempstead, Nassau County, New York, United States, on Long Island.",
+    "Great Neck, New York\nGreat Neck is a region on Long Island, New York, that covers a peninsula on the North Shore of Long Island, which includes the villages of Great Neck, Great Neck Estates, Great Neck Plaza, and others, as well as an area south of the peninsula near Lake Success and the border territory of Queens.\n\n The incorporated village of Great Neck had a population of 9,989 at the 2010 census, while the larger Great Neck area comprises a residential community of some 40,000 people in nine villages and hamlets in the town of North Hempstead, of which Great Neck is the northwestern quadrant.\n\n Great Neck has five ZIP Codes (11020–11024), and one school district.",
+    "Lawrence, Nassau County, New York\nLawrence is a village in Nassau County, New York in the United States.\n\n As of the 2010 United States Census, the village population was 6,483.",
+    "Ronkonkoma, New York\nRonkonkoma ( ) is a hamlet and census-designated place (CDP) on Long Island in the Town of Islip, New York, United States.\n\n The population of the CDP was 19,082 at the 2010 census.",
+    "The Hudson Reporter\nThe Hudson Reporter is a newspaper chain based in Hudson County, New Jersey.\n\n It is the only weekly newspaper chain in Hudson County and one of only two newspaper companies in this busy metropolitan area.\n\n \"The Hudson Reporter\" publications focus on local politics and community news.\n\n In addition to articles written by the staff, the papers print readers' letters to the editor.\n\n The oldest newspaper in the chain is the \"Hoboken Reporter\", founded in 1983.",
+    "Old Country Road\nOld Country Road is a major east–west thoroughfare through central Nassau County and extending into western Suffolk County on Long Island, New York.\n\n It serves many of the major shopping centers in central Nassau County including Roosevelt Field Mall.\n\n The road also forms part of the border between the towns of Hempstead and North Hempstead.\n\n In Nassau County, Old Country Road is county-maintained as the unsigned County Route 25 (CR 25) west of Round Swamp Road.",
+    "Anton Media Group\nAnton Media Group, formerly Anton Community Newspapers, and also known by its legal name Long Island Community Newspapers, Inc. is a print media company based in Mineola, NY on Long Island in Nassau County and produces 17 weekly newspapers in Nassau County as well as \"Long Island Weekly\" and special sections such as Healthy Living, Camp & School, and Dining Guides.\n\n Anton Community Newspapers is one of the largest privately owned newspaper companies in New York State.",
+    "Nassau Herald\nThe Nassau Herald is a weekly newspaper serving the Five Towns communities of Nassau County – Lawrence, Woodmere, Hewlett, Cedarhurst, Inwood and Atlantic Beach.\n\n It is part of the Long Island Herald newspaper chain, which includes The Jewish Star and The Oyster Bay Guardian is owned by Richner Communications, and covers Nassau County, New York.",
+    "Floral Park, New York\nFloral Park is an incorporated village in Nassau County, New York, United States, on Long Island.\n\n The neighborhood of Floral Park in the New York City borough of Queens, is adjacent to the village.\n\n The village is at the western border of Nassau County, and is located mainly in the Town of Hempstead, while the section north of Jericho Turnpike is within the Town of North Hempstead.\n\n The population as of the US Census of 2010 is 15,863."
+   ]
+  }
+ ]
+}

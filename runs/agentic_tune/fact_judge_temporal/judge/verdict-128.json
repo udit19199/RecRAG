@@ -1,0 +1,26 @@
+[
+  {"id": "426b3ab91aba13b7", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "as inflation fades leading the Fed to cut interest rates"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "as inflation fades leading the Fed to cut interest rates"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse."}]}
+  ]},
+  {"id": "936b9c105494aaa4", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "The guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "The guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "The guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "7f2213b46a7e694d", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]}
+]

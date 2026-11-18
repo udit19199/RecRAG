@@ -1,0 +1,52 @@
+[
+{"id": "d6f1573f5cd869af", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "And if the Braves let this be the story of their series, that's on them."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "And if the Braves let this be the story of their series, that's on them."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 9, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 9, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]}
+]},
+{"id": "55141bd4aaf66982", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "2d9d63f8aa8ebb7f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Second-year Seahawks back Kenneth Walker III suffered an oblique injury in Week 11"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 3, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]}
+]},
+{"id": "e50818d6b5d9ae0f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 5, "quote": "Smith did return, however, for the final drive of the game in the losing effort."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "backup Drew Lock took over under center"}]}
+]},
+{"id": "8cd5716b9627943b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+{"fact": "0.1", "status": "contradicted", "evidence": [{"item": 4, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}, {"item": 7, "quote": "Uber reported net income of $221 million in the third quarter"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]}
+]},
+{"id": "19c93fe9d5d743fd", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "10:59 p.m. — The Cowboys are moving the ball now"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "The Cowboys are moving the ball now, when it's a bit too late."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]}
+]

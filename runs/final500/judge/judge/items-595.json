@@ -1,0 +1,440 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "69fef15c552ebb9b",
+   "gold": [
+    {
+     "sentence": "The Battle of Okinawa (Japanese: 沖縄戦 , Hepburn: Okinawa-sen ) (Okinawan: 沖縄戦 , \"Uchinaa ikusa \" ), codenamed Operation Iceberg, was a major battle of the Pacific War fought on the island of Okinawa by United States Marine and Army forces against the Imperial Japanese Army and included the largest amphibious assault in the Pacific War during World War II, the April 1, 1945, invasion of Okinawa itself.",
+     "facts": {
+      "0.0": "The Battle of Okinawa is also known as 沖縄戦 (Okinawa-sen in Hepburn romanization) and as 'Uchinaa ikusa' in Okinawan.",
+      "0.1": "The Battle of Okinawa was codenamed Operation Iceberg.",
+      "0.2": "The Battle of Okinawa was a major battle of the Pacific War.",
+      "0.3": "The Battle of Okinawa was fought on the island of Okinawa.",
+      "0.4": "The Battle of Okinawa was fought by United States Marine and Army forces against the Imperial Japanese Army.",
+      "0.5": "The Battle of Okinawa included the largest amphibious assault in the Pacific War during World War II.",
+      "0.6": "The largest amphibious assault in the Pacific War was the April 1, 1945 invasion of Okinawa itself."
+     }
+    },
+    {
+     "sentence": "Operation Diadem, also referred to as the Fourth Battle of Monte Cassino or, in Canada, the Battle of the Liri Valley, was an offensive operation undertaken by the Allies of World War II (U.S. Fifth Army and British Eighth Army in May 1944, as part of the Italian Campaign of World War II.",
+     "facts": {
+      "1.0": "Operation Diadem was also referred to as the Fourth Battle of Monte Cassino.",
+      "1.1": "In Canada, Operation Diadem was called the Battle of the Liri Valley.",
+      "1.2": "Operation Diadem was an offensive operation undertaken by the Allies of World War II.",
+      "1.3": "The Allies in Operation Diadem included the U.S. Fifth Army.",
+      "1.4": "The Allies in Operation Diadem included the British Eighth Army.",
+      "1.5": "Operation Diadem took place in May 1944.",
+      "1.6": "Operation Diadem was part of the Italian Campaign of World War II."
+     }
+    }
+   ],
+   "items": [
+    "Battle of Saipan\nThe Battle of Saipan was a battle of the Pacific campaign of World War II, fought on the island of Saipan in the Mariana Islands from 15 June to 9 July 1944.\n\n The Allied invasion fleet embarking the expeditionary forces left Pearl Harbor on 5 June 1944, the day before Operation Overlord in Europe was launched.\n\n The U.S. 2nd Marine Division, 4th Marine Division, and the Army's 27th Infantry Division, commanded by Lieutenant General Holland Smith, defeated the 43rd Infantry Division of the Imperial Japanese Army, commanded by Lieutenant General Yoshitsugu Saito.",
+    "Operation Diadem\nOperation Diadem, also referred to as the Fourth Battle of Monte Cassino or, in Canada, the Battle of the Liri Valley, was an offensive operation undertaken by the Allies of World War II (U.S. Fifth Army and British Eighth Army in May 1944, as part of the Italian Campaign of World War II.\n\n \"Diadem\" was supported by air attacks called Operation Strangle.\n\n The opposing force was the German 10th Army.",
+    "Battle of Bataan\nThe Battle of Bataan (7 January – 9 April 1942) represented the most intense phase of Imperial Japan's invasion of the Philippines during World War II.\n\n In January 1942, forces of the Imperial Japanese Army and Navy invaded Luzon along with several islands in the Philippine Archipelago after the bombing of the American naval base at Pearl Harbor.\n\n The commander-in-chief of all Filipino and American forces in the islands, General Douglas MacArthur, consolidated all of his Luzon-based units on the Bataan Peninsula to fight against the Japanese invaders.\n\n By this time, the Japanese controlled nearly all of Southeast Asia.\n\n The Bataan peninsula and the island of Corregidor were the only remaining Allied strongholds in the region.\n\n Despite a lack of supplies, Filipino and American forces managed to fight the Japanese for three months, engaging them initially in a fighting retreat southward.\n\n As the combined Filipino and American forces made a last stand, the delay cost the Japanese valuable time and prevented immediate victory across the Pacific.",
+    "Battle of Okinawa\nThe Battle of Okinawa (Japanese: 沖縄戦 , Hepburn: Okinawa-sen ) (Okinawan: 沖縄戦 , \"Uchinaa ikusa \" ), codenamed Operation Iceberg, was a major battle of the Pacific War fought on the island of Okinawa by United States Marine and Army forces against the Imperial Japanese Army and included the largest amphibious assault in the Pacific War during World War II, the April 1, 1945, invasion of Okinawa itself.\n\n The 82-day battle lasted from April 1 until June 22, 1945.\n\n After a long campaign of island hopping, the Allies were planning to use Okinawa, a large island only 340 mi away from mainland Japan, as a base for air operations for the planned invasion of the Japanese home islands.",
+    "Operation Kikusui\nOperation Kikusui (菊水作戦 , Kikusui sakusen ) was a series of suicidal air attacks by Imperial Japanese forces during the Battle of Okinawa against Allied fleets in the waters around Okinawa, as part of Operation Ten-Go.\n\n The name of the operation, \"Kikusui\", comes from the hata-jirushi of the samurai Kusunoki Masashige.",
+    "Operation Diadem order of battle\nOperation Diadem order of battle is a listing of the significant formations that were involved in the fighting on the Winter Line and at the Anzio bridgehead south of Rome during \"Operation Diadem\" in May - June 1944 which resulted in the Allied breakthrough at Cassino and the breakout at Anzio leading to the capture of Rome.",
+    "HMS Illustrious (87)\nHer aircraft attacked several targets in the Japanese-occupied Dutch East Indies over the following year before \"Illustrious\" was transferred to the newly formed British Pacific Fleet (BPF).\n\n The carrier participated in the early stages of the Battle of Okinawa until mechanical defects arising from accumulated battle damage became so severe that she was ordered home early for repairs in May 1945.",
+    "Operation Epsom\nOperation Epsom, also known as the First Battle of the Odon, was a British Second World War offensive that took place between 26 and 30 June 1944, during the Battle of Normandy.\n\n The offensive was intended to outflank and seize the German-occupied city of Caen, an important Allied objective, in the early stages of Operation Overlord, the Allied invasion of north-west Europe.",
+    "Battle of Guam (1941)\nThe First Battle of Guam was an engagement during the Pacific War in World War II, and took place from 8 December to 10 December 1941 on Guam in the Mariana Islands between Japan and the United States.\n\n The American garrison was defeated by Japanese forces on 10 December, which resulted in an occupation until the Second Battle of Guam in 1944.",
+    "Battle of Guam (1944)\nThe Second Battle of Guam (21 July – 10 August 1944) was the American recapture of the Japanese-held island of Guam, a U.S. territory in the Mariana Islands captured by the Japanese from the U.S. in the 1941 First Battle of Guam during the Pacific campaign of World War II."
+   ]
+  },
+  {
+   "id": "7dfeb976a7907d69",
+   "gold": [
+    {
+     "sentence": "Haunted is the second album by American singer-songwriter Poe, released in 2000 (see 2000 in music) after a five-year hiatus from her debut album \"Hello\" in 1995.",
+     "facts": {
+      "0.0": "Haunted is the second album by American singer-songwriter Poe.",
+      "0.1": "Haunted was released in 2000.",
+      "0.2": "Haunted was released after a five-year hiatus from Poe's debut album 'Hello', which came out in 1995."
+     }
+    },
+    {
+     "sentence": " The self-produced album was created as a tribute to her father, and counterpart to her brother Mark Z. Danielewski's novel \"House of Leaves\".",
+     "facts": {
+      "1.0": "Haunted was self-produced.",
+      "1.1": "Haunted was created as a tribute to Poe's father.",
+      "1.2": "Haunted was created as a counterpart to the novel 'House of Leaves' by Poe's brother Mark Z. Danielewski."
+     }
+    },
+    {
+     "sentence": " A bestseller, it has been translated into a number of languages, and is followed by a companion piece, \"The Whalestoe Letters\".",
+     "facts": {
+      "2.0": "Haunted is a bestseller.",
+      "2.1": "Haunted has been translated into a number of languages.",
+      "2.2": "Haunted is followed by a companion piece, 'The Whalestoe Letters'."
+     }
+    }
+   ],
+   "items": [
+    "Uncle Wiggily in Connecticut\n\"Uncle Wiggily in Connecticut\" is a short story by J. D. Salinger, which appears in his collection \"Nine Stories\".\n\n It was originally published in the March 20, 1948 issue of \"The New Yorker\".",
+    "The Padlock\nThe Padlock is a two-act 'afterpiece' opera by Charles Dibdin.\n\n The text was by Isaac Bickerstaffe.\n\n It debuted in 1768 at the Drury Lane Theatre in London as a companion piece to \"The Earl of Warwick\".\n\n It partnered other plays before a run of six performances in tandem with \"The Fatal Discovery\" by John Home.\n\n \"The Padlock\" was a success, largely due to Dibdin's portrayal of Mungo, a blackface caricature of a black servant from the West Indies.\n\n The company took the production to the United States the next year, where a portrayal by Lewis Hallam, Jr. as Mungo met with even greater accolades.\n\n The libretto was first published in London in 1768 (?)\n\n and in Dublin in 1775.\n\n The play remained in regular circulation in the U.S. as late as 1843.\n\n It was revived by the Old Vic Company in London and on tour in the UK in 1979 in a new orchestration by Don Fraser and played in a double-bill with Garrick's \"Miss In Her Teens\".",
+    "The Spectre Knight\nThe Spectre Knight is a one-act \"fanciful operetta\" with a libretto by James Albery and music by Alfred Cellier.\n\n It was first performed on 9 February 1878 at the Opera Comique by the Comedy Opera Company as a companion piece to \"The Sorcerer\".\n\n The piece continued to run until 23 March 1878 and was revived by the company from 28 May 1878 to 10 August 1878 as a companion piece to \"H.M.S. Pinafore\".\n\n The piece had a run in New York in 1880 and was toured in Britain and America.",
+    "James Poe\nJames Poe (October 4, 1921 – January 24, 1980) was an American film and television screenwriter.\n\n He is best known for his work on the movies \"Around the World in 80 Days\" for which he jointly won an Academy Award in 1956, \"Cat on a Hot Tin Roof\", \"Summer and Smoke\", \"Lilies of the Field\", and \"They Shoot Horses, Don't They?\n\n\".",
+    "Brothers in Arms (Bujold novel)\nBrothers in Arms is a science fiction novel by American writer Lois McMaster Bujold, part of the Vorkosigan Saga.\n\n It was the fifth book published in the series, and is the twelfth story, including novellas, in the internal chronology of the series.\n\n \"Brothers in Arms\" was first published by Baen Books in January 1989, and is included in the 2002 omnibus \"Miles Errant\".",
+    "The Frost King\n\"The Frost King\" was a short story about King Jack Frost written by 11-year-old Helen Keller.\n\n Keller's teacher, Anne Sullivan, had mentioned that the autumn leaves were \"painted ruby, emerald, gold, crimson, and brown,\" and Keller, by her own account, imagined fairies doing the work.\n\n Keller wrote a story about how a cask of jewels, being transported by fairy servants, had melted in the sun and covered the leaves.\n\n As a birthday gift, Keller sent the story to Michael Anagnos, head of the Perkins School for the Blind, who published the story in \"The Mentor,\" the Perkins alumni magazine.\n\n It was picked up by \"The Goodson Gazette\", a journal on deaf-blind education, based in Virginia.",
+    "A Predicament\n\"A Predicament\" is a humorous short story by Edgar Allan Poe, usually combined with its companion piece \"How to Write a Blackwood Article.\"\n\n It was originally titled \"The Scythe of Time\".\n\n The paired stories parody the Gothic sensation tale, popular in England and America since the early 19th century.",
+    "Donald Allen\nDonald Merriam Allen (Iowa, 1912 – San Francisco, August 29, 2004) was an influential editor, publisher, and translator of contemporary American literature.\n\n He is perhaps best known for his project \"The New American Poetry 1945-1960\" (1960), among the several important anthologies of contemporary American innovative writing he made available to the public.\n\n Allen began his working life as a Japanese translator within the US military, serving in WWII.\n\n After his military service, Allen became an editor at Grove Press, where he worked for sixteen years.\n\n He was one of the first translators of the Romanian-French Absurdist playwright Eugène Ionesco, and Allen's 1958 volume \"Four Plays of Eugène Ionesco\" helped to introduce the playwright to American audiences in the 1960s.",
+    "Haunted (Poe album)\nHaunted is the second album by American singer-songwriter Poe, released in 2000 (see 2000 in music) after a five-year hiatus from her debut album \"Hello\" in 1995.\n\n The self-produced album was created as a tribute to her father, and counterpart to her brother Mark Z. Danielewski's novel \"House of Leaves\".",
+    "Epic Pooh\n\"Epic Pooh\" is a 1978 article by the British science fiction writer Michael Moorcock, which reviews the field of epic fantasy, with a particular focus on epic fantasy written for children.\n\n In it Moorcock critiques J. R. R. Tolkien's \"The Lord of the Rings\" for its politically conservative assumptions and for being escapist literature."
+   ]
+  },
+  {
+   "id": "b39a41635983b86f",
+   "gold": [
+    {
+     "sentence": "Pagliacci (] ; literal translation, \"Clowns\") is an Italian opera in a prologue and two acts, with music and libretto by Ruggero Leoncavallo.",
+     "facts": {
+      "0.0": "Pagliacci is an Italian opera.",
+      "0.1": "Pagliacci has a prologue and two acts.",
+      "0.2": "Pagliacci has music and libretto by Ruggero Leoncavallo.",
+      "0.3": "The literal translation of Pagliacci is 'Clowns'."
+     }
+    },
+    {
+     "sentence": "Suor Angelica (Sister Angelica) is an opera in one act by Giacomo Puccini to an original Italian libretto by Giovacchino Forzano.",
+     "facts": {
+      "1.0": "Suor Angelica (Sister Angelica) is an opera.",
+      "1.1": "Suor Angelica is in one act.",
+      "1.2": "Suor Angelica is by Giacomo Puccini.",
+      "1.3": "Suor Angelica has an original Italian libretto by Giovacchino Forzano."
+     }
+    }
+   ],
+   "items": [
+    "Jane Henschel\nJane Henschel (born 2 March 1952) is an American operatic mezzo soprano.\n\n Henschel, who was born in Wisconsin, studied at the University of Southern California, and then pursued further studies in Germany, where she has made her home.\n\n Her numerous opera appearances include Baba the Turk in Igor Stravinsky's \"The Rake’s Progress\" with Glyndebourne Festival Opera, the Saito Kinen Festival Matsumoto, and the Salzburg festival; Brangäne in Richard Wagner’s \"Die Walküre\" with Paris Opéra and the Los Angeles Opera; the Principessa in Giacomo Puccini’s \"Suor Angelica\" with conductor Riccardo Chailly and the Royal Concertgebouw Orchestra; Blanche de la Force in Francis Poulenc’s \"Dialogues des Carmélites\" in Amsterdam; Kostelnicka Buryjovka in Leoš Janáček’s \"Jenůfa\" under Seiji Ozawa in Japan; and the Kabanicka in Janáček’s \"Katya Kabanova\" at the Salzburg Festival among others.",
+    "Norine Burgess\nNorine Burgess is a Canadian singer.\n\n She is a graduate of the University of Calgary and the University of Toronto’s Opera School, mezzo-soprano.\n\n She received additional training as a member of the Canadian Opera Company (COC) Ensemble where she appeared in Electra, Suor Angelica, Lulu and Der Rosenkavalier.\n\n Ms. Burgess also performed Le Nozze di Figaro(Cherubino), Ariadne auf Naxos (Dryad), La Traviata(Flora) and Die Zauberflöte (Second Lady) with the COC.\n\n Additional operatic successes include Le Nozze di Figaro (Cherubino) and Carmen (Mercedes) with the Vancouver Opera, Fenena in Nabucco with Manitoba Opera, Albert Herring (Nancy) with the Calgary Opera and many appearances with the Edmonton Opera.",
+    "Barbara Frittoli\nBarbara Frittoli (born 19 April 1967) is an Italian operatic soprano who has sung leading roles in opera houses throughout Europe and in the United States.\n\n She was born in Milan and graduated from the Milan Conservatory.\n\n She made her Metropolitan Opera debut in 1995 as Micaela in \"Carmen\" and has gone on to sing in over 80 performances there including Donna Elvira in \"Don Giovanni\", Fiordiligi in \"Così fan tutte\", Angelica in \"Suor Angelica\", Desdemona in \"Otello\", the title role in \"Luisa Miller\", Amelia in \"Simon Boccanegra\", Vitellia in \"La clemenza di Tito\" and Alicia Ford in \"Falstaff\".",
+    "Anna Nechaeva\nAnna Nechaeva is Russian soprano singer who was born in Saratov and used attend its Conservatory in 1996.\n\n Later she was offered to perform the role of \"Tatiana\" in \"Eugene Onegin\" at the Saint Petersburg Conservatory and by 2003 became a soloist at the Saint Petersburg Opera where she continued her original role as well as other title roles in Giacomo Puccini's \"Gianni Schicchi\", Madama Butterfly, and \"Suor Angelica\".\n\n From 2008 to 2011 she became a soloist at the Mikhaylovsky Theatre where she performed roles of \"Nedda\" in \"Pagliacci\" and \"Rachel\" in \"The Jews\" as well as the title roles of \"Rusalka\" and of course \"Tatiana\" in \"Eugene Onegin\".\n\n In 2012, she made her first public appearance with Bolshoi Theatre where she sang in \"The Enchantress\" portraying \"Nastasya\" becoming soloist there the same year.",
+    "Il trittico\nIl trittico (\"The Triptych\") is the title of a collection of three one-act operas, \"Il tabarro\", \"Suor Angelica\", and \"Gianni Schicchi\", by Giacomo Puccini.\n\n The work received its world premiere at the Metropolitan Opera on 14 December 1918.",
+    "Rita Fornia\nRita Fornia (17 July 1878 – 27 October 1922) was an American opera singer.\n\n She began her career in Europe at the beginning of the 20th century singing coloratura soprano roles.\n\n Early on in her career her voice darkened and dropped slightly causing her to focus more within the mezzo-soprano repertoire while still singing some soprano roles.\n\n She joined the Metropolitan Opera company in 1907 where she performed regularly in mostly supporting roles until her retirement in 1922.\n\n She is best remembered today for portraying the role of the Abbess in the original production of Puccini's \"Suor Angelica\" in 1918.",
+    "Marie-Josée Lord\nMarie-Josée Lord is a Haitian-born Canadian soprano.\n\n Lord was adopted from Haiti at the age of six and grew up in Lévis.\n\n She made her professional debut as Liù in Turandot in 2003 at the Opéra de Québec.\n\n She was particularly noted for her Suor Angelica in 2006.\n\n Her debut album of arias was released in 2011, becoming one of the Canadian label Atma's best-selling recordings.",
+    "Suor Angelica\nSuor Angelica (Sister Angelica) is an opera in one act by Giacomo Puccini to an original Italian libretto by Giovacchino Forzano.\n\n It is the second opera of the trio of operas known as \"Il trittico\" (\"Triptych\").\n\n It received its world premiere at the Metropolitan Opera on December 14, 1918.",
+    "Pagliacci\nPagliacci (] ; literal translation, \"Clowns\") is an Italian opera in a prologue and two acts, with music and libretto by Ruggero Leoncavallo.\n\n It is the only Leoncavallo opera that is still widely performed.\n\n Opera companies have frequently staged \"Pagliacci\" with \"Cavalleria rusticana\" by Mascagni, a double bill known colloquially as 'Cav and Pag'.",
+    "Giovacchino Forzano\nGiovacchino Forzano (] ; 19 November 1884 – 28 October 1970) was an Italian playwright, librettist, stage director, and film director.\n\n A resourceful writer, he authored numerous popular plays and produced opera librettos for most of the major Italian composers of the early twentieth century, including the librettos for Giacomo Puccini's \"Suor Angelica\" and \"Gianni Schicchi\"."
+   ]
+  },
+  {
+   "id": "77b73a3411dd9120",
+   "gold": [
+    {
+     "sentence": "Toshimitsu Deyama (出山利三 , Deyama Toshimitsu , born October 10, 1965 in Tateyama, Chiba) , known exclusively by his stage name Toshi, is a Japanese singer and songwriter.",
+     "facts": {
+      "0.0": "Toshimitsu Deyama was born October 10, 1965 in Tateyama, Chiba.",
+      "0.1": "Toshimitsu Deyama's Japanese name is 出山利三.",
+      "0.2": "Toshimitsu Deyama's name is also written as Deyama Toshimitsu.",
+      "0.3": "Toshimitsu Deyama is known exclusively by his stage name Toshi.",
+      "0.4": "Toshimitsu Deyama is a Japanese singer and songwriter."
+     }
+    },
+    {
+     "sentence": " He is best known as the lead vocalist and a co-founder of the heavy metal band X Japan, which disbanded in 1997.",
+     "facts": {
+      "1.0": "Toshimitsu Deyama is best known as the lead vocalist of the heavy metal band X Japan.",
+      "1.1": "Toshimitsu Deyama is a co-founder of X Japan.",
+      "1.2": "X Japan disbanded in 1997."
+     }
+    },
+    {
+     "sentence": "Warrel Dane (born March 7, 1969) is the lead singer of the American power metal band Sanctuary.",
+     "facts": {
+      "2.0": "Warrel Dane was born March 7, 1969.",
+      "2.1": "Warrel Dane is the lead singer of the American power metal band Sanctuary."
+     }
+    }
+   ],
+   "items": [
+    "Dreaming Neon Black\nDreaming Neon Black is the third full-length album released by Seattle progressive metal band Nevermore, and was released through Century Media in 1999.\n\n Unlike its predecessor, \"The Politics of Ecstasy\", this album is very emotional and contains many slower, ballad-type songs.\n\n It is also notable that \"Dreaming Neon Black\" is a concept album of sorts.\n\n According to Nevermore's lead singer, Warrel Dane, \"it's a very simple story about a man who slowly goes insane after losing a woman that he was very close to.\n\n Progressive levels of insanity are expressed in the songs, he goes through phases of denial and self-blame, blaming God, then denouncing God.\n\n The ending is a little...tragic, a little depressing.\n\n Shakesperian.\n\n Everybody dies, it's all happy.\"\n\n, which may be based on an event in the life of Dane.\n\n Supposedly, his old girlfriend left him when she joined a religious cult and was never heard from again, and he began having nightmares of her crying out to him as she drowned.\n\n This has been confirmed by Warrel himself in an older interview.",
+    "Sanctuary (band)\nSanctuary is an American heavy metal band founded in Seattle in 1985.\n\n They split up in 1992, but reformed 18 years later.\n\n The band consists of Warrel Dane (vocals), Lenny Rutledge (guitar), Nick Cordle (guitar), George Hernandez (bass), and Dave Budbill (drums).\n\n To date, they have released four studio albums and one live EP.",
+    "Peter Wichers\nPeter Wichers is best known as one of the founding members of Swedish melodic death metal band, Soilwork.\n\n From 1995 until late 2005, when he announced his departure from the band, he was known as the lead guitarist and also a songwriter, especially on their \"Stabbing the Drama\" album., He rejoined Soilwork in 2008 and played on 2010s The Panic Broadcast and in June 2012 he quit Soilwork for the second time.\n\n After leaving Soilwork, he filled in for Adam Dutkiewicz when he was injured on Killswitch Engage's European tour.\n\n More recently, he has collaborated with singers from across the melodic death metal genre including Anders Fridén, former band mate Björn \"Speed\" Strid and John Bush (vocalist of Anthrax) to make a CD much in the same style as \"Roadrunner United\", entitled \"Nuclear Blast All-Stars\".\n\n He also co-wrote Warrel Dane's solo record \"Praises to the War Machine\".",
+    "Nevermore\nNevermore is an American progressive metal band from Seattle, Washington, United States.\n\n Formed in 1991, they are known to incorporate elements from various styles such as power metal, modern hard rock, classic heavy metal and technical thrash metal.\n\n The band has been on hiatus since 2011, due to personal issues between the band members.\n\n In April 2015, lead singer Warrel Dane confirmed that Nevermore has not disbanded, and there is a possibility for them to continue in the next two years with another album.",
+    "Warrel Dane\nWarrel Dane (born March 7, 1969) is the lead singer of the American power metal band Sanctuary.\n\n He is also known as the former lead singer of currently inactive progressive metal band Nevermore.\n\n He is a natural baritone, though he was known for his high-pitched vocals with Serpent's Knight and on the first two Sanctuary albums.\n\n Later in his career, Dane became more notable for his distinctively deep, dramatic voice.",
+    "Nevermore (album)\nNevermore is the eponymous debut studio album by American heavy metal band Nevermore, released on February 14, 1995 by Century Media Records.\n\n It was singer Warrel Dane and bassist Jim Sheppard's first release after departing from their previous band, Sanctuary, in 1994.\n\n Having recruited drummer Van Williams and former Sanctuary touring guitarist Jeff Loomis, they formed the band Nevermore and began anew.",
+    "Toshi (musician)\nToshimitsu Deyama (出山利三 , Deyama Toshimitsu , born October 10, 1965 in Tateyama, Chiba) , known exclusively by his stage name Toshi, is a Japanese singer and songwriter.\n\n He is best known as the lead vocalist and a co-founder of the heavy metal band X Japan, which disbanded in 1997.\n\n Toshi then went on to have an extensive solo career.\n\n In 2007, X Japan reunited and began an ongoing world tour in 2010.\n\n His distinctive, impassioned tenor vocals have been compared to those of Steve Perry.",
+    "Praises to the War Machine\nPraises to the War Machine is the debut and only solo release/album by heavy metal vocalist Warrel Dane from Nevermore, released on April 25, 2008.\n\n The album was produced by Peter Wichers, who was tapped by Dane to work on the album while Wichers was still a member of Soilwork.\n\n After leaving that band in 2007, Wichers co-wrote the album with Dane and played on eight of its tracks.\n\n Soilwork drummer Dirk Verbeuren and former Himsa guitarist Matt Wicklund also played on the album.\n\n Nevermore guitarist Jeff Loomis and the band's touring guitarist at the time Chris Broderick make guest appearances, along with James Murphy, who had performed on the Nevermore album \"This Godless Endeavor\".\n\n \"Praises to the War Machine\" includes two cover songs, The Sisters of Mercy's \"Lucretia My Reflection\" and \"Patterns\" by Paul Simon.\n\n Dane had previously covered a Simon song on Nevermore's album \"Dead Heart in a Dead World\".",
+    "Doug Grean\nDoug Grean is an American record producer, audio engineer, guitarist, based in Los Angeles.\n\n He has worked with artists Sheryl Crow, Ricki Lee Jones, Glen Campbell, Scott Weiland, Slash, Velvet Revolver, Stone Temple Pilots, The Crystal Method, Tim McGraw, Cyndi Lauper, Annabella Lwin (Bow Wow Wow), Corey Glover (Living Color), Camp Freddy, DJ Hurricane and John Taylor (Duran Duran).\n\n Grean was formerly the lead guitarist and touring musical director for Scott Weiland and the Wildabouts.\n\n Some of Grean's television appearances with Weiland include: VH1 Legends, Last Call with Carson Daly, The Tonight Show with Jay Leno, and the Grammy awards with Velvet Revolver as keyboardist, performing \"All Across the Universe\" with Stevie Wonder, Norah Jones, Bono, Steven Tyler, Brian Wilson, and Alison Krauss.",
+    "Into the Mirror Live\nInto The Mirror Live / Black Reflections is live promotional EP of the band Sanctuary recorded on May 12, 1990 at The Country Club in Reseda, California, during their \"Into the Mirror Black\" tour.\n\n Approximately 1000 CD copies of this were made and less than 500 were ever distributed to radio stations and record stores.\n\n Because of contractual problems with Epic Records, the full version was never released for public consumption.\n\n Epic Records destroyed 500+ copies of this CD.\n\n Warrel Dane has stated on several occasions that he has the master tapes and copyrights of the full show and intended to have it finally released.\n\n To date that has not happened.\n\n This CD has been heavily pirated over the years as a 2-on-1 CD with the Satan's Host \"Metal From Hell\" album on the notorious Reborn Classics record label."
+   ]
+  },
+  {
+   "id": "2d87d2902e4c7c1c",
+   "gold": [
+    {
+     "sentence": "The Beaver and Erie Canal, also known as the Erie Extension Canal, was part of the Pennsylvania Canal system and consisted of three sections: the Beaver Division, the Shenango Division, and the Conneaut Division.",
+     "facts": {
+      "0.0": "The Beaver and Erie Canal was also known as the Erie Extension Canal.",
+      "0.1": "The Beaver and Erie Canal was part of the Pennsylvania Canal system.",
+      "0.2": "The Beaver and Erie Canal consisted of three sections.",
+      "0.3": "The three sections of the Beaver and Erie Canal were the Beaver Division, the Shenango Division, and the Conneaut Division."
+     }
+    },
+    {
+     "sentence": "The Dismal Swamp Canal is located along the eastern edge of the Great Dismal Swamp in Virginia and North Carolina in the United States.",
+     "facts": {
+      "1.0": "The Dismal Swamp Canal is located along the eastern edge of the Great Dismal Swamp.",
+      "1.1": "The Dismal Swamp Canal is located in Virginia and North Carolina.",
+      "1.2": "Virginia and North Carolina are in the United States."
+     }
+    }
+   ],
+   "items": [
+    "Pennsylvania and Ohio Canal\nThe Pennsylvania and Ohio Canal, also known as the P & O Canal, the Cross Cut Canal and the Mahoning Canal was a shipping canal which operated from 1840 until 1877 (though the canal was completely abandoned by 1872).\n\n It was unique in that it served to connect canals in two states (the Ohio and Erie Canal in Ohio and the Beaver and Erie Canal in Pennsylvania) and was funded by private interests.",
+    "Brunswick–Altamaha canal\nThe Brunswick–Altamaha Canal was a 12-mile-long canal built to connect the Altamaha River to the city of Brunswick, Georgia at the Turtle River to transport goods from Brunswick's port to areas farther north and inland.\n\n It included locks on both ends of the canal.\n\n The canal was originally proposed in 1798 and after two failed charters (1826 and 1830), construction was started in 1836 by Thomas Butler King.\n\n The project was estimated to cost $450,000.\n\n The canal was finished and opened in 1854; however, by that time the canal was obsolete because of new railroads.\n\n The canal was closed by 1860.\n\n The Columbian mammoth was discovered during the construction of the canal.",
+    "Beaver and Erie Canal\nThe Beaver and Erie Canal, also known as the Erie Extension Canal, was part of the Pennsylvania Canal system and consisted of three sections: the Beaver Division, the Shenango Division, and the Conneaut Division.\n\n The canal ran 136 mi north–south near the western edge of the state from the Ohio River to Lake Erie through Beaver County, Lawrence County, Mercer County, Crawford County, and Erie County, Pennsylvania.",
+    "Great Dismal Swamp National Wildlife Refuge\nThe Great Dismal Swamp National Wildlife Refuge was created in 1974 to help protect and preserve a portion of the Great Dismal Swamp, a marshy region on the Coastal Plain of southeastern Virginia and northeastern North Carolina between Norfolk, Virginia, and Elizabeth City, North Carolina in the United States.\n\n It is located in parts of the independent cities of Chesapeake and Suffolk in Virginia, and the counties of Camden, Gates, and Pasquotank in North Carolina.",
+    "New York State Canal System\nThe New York State Canal System (formerly known as the New York State Barge Canal) is a successor to the Erie Canal and other canals within New York.\n\n Currently, the 525 mi system is composed of the Erie Canal, the Oswego Canal, the Cayuga–Seneca Canal, and the Champlain Canal.\n\n In 2014 the system was listed as a national historic district on the National Register of Historic Places in its entirety, and in 2016 it was designated a National Historic Landmark.",
+    "Dismal Swamp Canal\nThe Dismal Swamp Canal is located along the eastern edge of the Great Dismal Swamp in Virginia and North Carolina in the United States.\n\n It is the oldest continually operating man-made canal in the United States, opened in 1805, and closed in October 2016.\n\n It is part of the Intracoastal Waterway, an inland route, which parallels the east coast and offers boaters shelter from the Atlantic Ocean from Manasquan Inlet, New Jersey, to Brownsville, Texas.\n\n The route runs through bays, lakes, rivers, streams, and canals, and includes the Intracoastal Waterway running from Norfolk, Virginia, to the Florida Keys.",
+    "Pennsylvania Canal (Delaware Division)\nThe Delaware Division of the Pennsylvania Canal, more commonly called the Delaware Canal, runs for 60 mi parallel to the right bank of the Delaware River from the entry locks near the mouth of the Lehigh River and terminal end of the Lehigh Canal at Easton south to Bristol.\n\n At Easton, which today is the home of The National Canal Museum, the Delaware Canal also connected with the Morris Canal built to carry anthracite coal to energy starved New Jersey industries.\n\n Later, with a crossing-lock constructed at New Hope, the New Hope 'outlet lock' (1847) connected by Cable Ferry to a feeder navigation/canal at Bull's Island along the opposite shore from Lumberville, which ran over 22 mi south along the left bank through Trenton to Bordentown, the west end of the Delaware and Raritan Canal (1834) to New York City via New Brunswick.\n\n as part of the solution to the United States' first energy crisis.",
+    "Dismal Swamp State Park\nDismal Swamp State Park is a North Carolina state park in Camden County, North Carolina in the United States.\n\n The park was created as a state natural area in 1974 with the help of The Nature Conservancy, and on July 28, 2007 the NC General Assembly re-designated it as a state park.\n\n It opened to the public in 2008.\n\n This marked the first time that public access to Great Dismal Swamp was made possible in North Carolina.\n\n The park covers 14432 acre of protected land on the North Carolina/Virginia border.\n\n Park offices are three miles (5 km) south of the border on U.S. Route 17 near South Mills.\n\n Features of the park include the canal which is used regularly by boaters using the Intracoastal Waterway and several miles of hiking and biking trails.",
+    "Washington City Canal\nThe Washington City Canal operated from 1815 until the mid-1850s in Washington, D.C. The canal connected the Anacostia River, called the \"Eastern Branch\" at that time, to Tiber Creek, the Potomac River, and later the Chesapeake and Ohio Canal (C&O).\n\n The canal fell into disuse in the late 19th century and the city government covered over or filled in various sections.",
+    "Susquehanna and Tidewater Canal\nThe Susquehanna and Tidewater Canal between Wrightsville, Pennsylvania, and Havre de Grace, Maryland, at the head of Chesapeake Bay, provided an interstate shipping alternative to 19th-century arks, rafts, and boats plying the difficult waters of the lower Susquehanna River.\n\n Built between 1836 and 1840, it ran 43 mi along the west bank of the river and rendered obsolete an older, shorter canal along the east bank.\n\n Of its total length, 30 mi were in Pennsylvania and 13 mi in Maryland.\n\n Though rivalry between Philadelphia, Pennsylvania, and Baltimore, Maryland, delayed its construction, the finished canal brought increased shipments of coal and other raw materials to both cities from Pennsylvania's interior.\n\n Competition from railroads was a large factor in the canal's decline after 1855.\n\n Canal remnants, including a lock keeper's house, have been preserved in Maryland, and locks 12 and 15 have been preserved in Pennsylvania."
+   ]
+  },
+  {
+   "id": "a4694c599896c9e5",
+   "gold": [
+    {
+     "sentence": "Stephen Lawrence \"Steve\" Winwood (born 12 May 1948) is an English musician whose genres include rock, blue-eyed soul, rhythm and blues, blues rock, pop rock, and jazz.",
+     "facts": {
+      "0.0": "Stephen Lawrence 'Steve' Winwood was born 12 May 1948.",
+      "0.1": "Steve Winwood is an English musician.",
+      "0.2": "Steve Winwood's genres include rock, blue-eyed soul, rhythm and blues, blues rock, pop rock, and jazz."
+     }
+    },
+    {
+     "sentence": "Per \"Pelle\" Almqvist (born 29 May 1978), also known as Howlin' Pelle Almqvist, is a Swedish singer and songwriter.",
+     "facts": {
+      "1.0": "Per 'Pelle' Almqvist was born 29 May 1978.",
+      "1.1": "Per 'Pelle' Almqvist is also known as Howlin' Pelle Almqvist.",
+      "1.2": "Per 'Pelle' Almqvist is a Swedish singer and songwriter."
+     }
+    }
+   ],
+   "items": [
+    "Steve Winwood\nStephen Lawrence \"Steve\" Winwood (born 12 May 1948) is an English musician whose genres include rock, blue-eyed soul, rhythm and blues, blues rock, pop rock, and jazz.\n\n Though primarily a vocalist and keyboardist, Winwood also plays bass guitar, drums, acoustic and electric guitar, mandolin, violin, and other strings.",
+    "Revolutions – The Very Best of Steve Winwood\nRevolutions – The Very Best of Steve Winwood is the sixth compilation album by Steve Winwood.\n\n The album includes music from Winwood's solo career, as well as groups with which he has performed, including The Spencer Davis Group, Traffic, and Blind Faith.\n\n The CD was released as a box set and a single disc.\n\n As of October 2014, the box set is out of print (but can be purchased digitally), while the single disc is still available.\n\n The songs \"The Finer Things\" and \"Roll With It\" are exclusive to the single disc version and cannot be found on the box set.",
+    "Glen Matlock\nGlen Matlock (born 27 August 1956) is an English musician best known for being the bass guitarist in the original line-up of the punk rock band the Sex Pistols.\n\n He is sometimes credited as a co-author on 10 of the 12 songs on \"Never Mind the Bollocks, Here's the Sex Pistols\", although he had left the band by the time the record was released and the bass was played by Steve Jones.\n\n He also continues to make his own records and tour with various bands, including the Sex Pistols.",
+    "Winwood (album)\nWinwood is the first compilation album of music featuring Steve Winwood.\n\n This two-record set was issued in 1971 by United Artists Records and features music which Winwood performed with The Spencer Davis Group, Powerhouse, Traffic and Blind Faith.\n\n UA Records issued this album after Winwood's band Traffic left UA when their home label Island Records set up their own American operation.\n\n Issued without Winwood's authorization as catalogue number UAS-9950, it was taken off the market after legal action by Winwood and Island Records.\n\n It was then reissued with minor changes as catalogue number UAS-9964.\n\n Currently out of print, it was issued on CD by Universal Music of Japan for the Japanese market.",
+    "Steve Alvord\nSteven Lee Alvord (born October 2, 1964 in Bellingham, Washington) is a former professional American football defensive tackle and defensive end in the National Football League and World League of American Football.\n\n In his four-year pro career he played for the St. Louis/Phoenix Cardinals of the NFL, and the Barcelona Dragons of the WLAF.\n\n Alvord played college football at Washington.\n\nHe has a cool daughter, happy birthday Katie.",
+    "Pelle Almqvist\nPer \"Pelle\" Almqvist (born 29 May 1978), also known as Howlin' Pelle Almqvist, is a Swedish singer and songwriter.\n\n He is the lead singer of garage rock band The Hives.",
+    "Vince Guaraldi\nVincent Anthony Guaraldi (July 17, 1928 – February 6, 1976), born Vincent Anthony Dellaglio, was an American jazz pianist noted for his innovative compositions and arrangements and for composing music for animated television adaptations of the \"Peanuts\" comic strip, as well as his performances on piano as a member of Cal Tjader's late 50s ensemble and his own solo career which included the radio hit \"Cast Your Fate to the Wind\".",
+    "Paul Seelig\nPaul Seelig (5 October 1900 – June 1931) was a Swedish actor.\n\n He appeared in about 15 roles in films 1913 and 1931.\n\n His film debut was in Mauritz Stiller's film \"En pojke i livets strid\" in 1913, when he was thirteen years old.",
+    "Peter Wichers\nPeter Wichers is best known as one of the founding members of Swedish melodic death metal band, Soilwork.\n\n From 1995 until late 2005, when he announced his departure from the band, he was known as the lead guitarist and also a songwriter, especially on their \"Stabbing the Drama\" album., He rejoined Soilwork in 2008 and played on 2010s The Panic Broadcast and in June 2012 he quit Soilwork for the second time.\n\n After leaving Soilwork, he filled in for Adam Dutkiewicz when he was injured on Killswitch Engage's European tour.\n\n More recently, he has collaborated with singers from across the melodic death metal genre including Anders Fridén, former band mate Björn \"Speed\" Strid and John Bush (vocalist of Anthrax) to make a CD much in the same style as \"Roadrunner United\", entitled \"Nuclear Blast All-Stars\".\n\n He also co-wrote Warrel Dane's solo record \"Praises to the War Machine\".",
+    "Steve Winwood (album)\nSteve Winwood is the debut solo studio album by blue-eyed soulster Steve Winwood.\n\n It was released three years after the break-up of Traffic.\n\n Though the album sold moderately well in the USA, it was a commercial disappointment compared to Traffic's recent albums, peaking at number 22 on the \"Billboard\" 200 album chart.\n\n In Winwood's home country the situation was reversed; while Traffic's recent albums had only been moderately successful in the UK, \"Steve Winwood\" reached number 12 on The Official Charts.\n\n Island Records launched two singles from the album, \"Hold On\" and \"Time Is Running Out\", both of which failed to make the charts."
+   ]
+  },
+  {
+   "id": "1d1e5030aec462db",
+   "gold": [
+    {
+     "sentence": "The Celluloid Closet is a 1995 American documentary film directed and written by Rob Epstein and Jeffrey Friedman.",
+     "facts": {
+      "0.0": "The Celluloid Closet is a 1995 American documentary film.",
+      "0.1": "The Celluloid Closet was directed by Rob Epstein and Jeffrey Friedman.",
+      "0.2": "The Celluloid Closet was written by Rob Epstein and Jeffrey Friedman."
+     }
+    },
+    {
+     "sentence": "Station to Station is the 2014 film of Doug Aitken's 2013 \"Nomadic Happening\", the film is made up of 62 one-minute films.",
+     "facts": {
+      "1.0": "Station to Station is the 2014 film of Doug Aitken's 2013 \"Nomadic Happening\".",
+      "1.1": "The film Station to Station is made up of 62 one-minute films."
+     }
+    }
+   ],
+   "items": [
+    "Metro Station (band)\nMetro Station is an American pop rock band that was formed in Los Angeles by Trace Cyrus and Mason Musso.\n\n In late 2006, the band signed a recording contract with Columbia Records and RED Ink Records.\n\n The band is best known for the Top 10 \"Billboard\" hit single \"Shake It\" from the group's self-titled debut album.\n\n In 2010, tension between Cyrus and Musso caused the band to go on hiatus.\n\n In 2011 the band returned, however it was announced that Cyrus was no longer a part of the group and Musso had purchased the rights to the name.\n\n An EP entitled \"Middle of the Night\" was released in 2013, which was led by the single \"Every Time I Touch You\".\n\n In 2014 Cyrus and a new drummer, Spencer Steffan came to the band and a new single entitled \"Love & War\" was released.\n\n In 2015, the band released a second full-length album titled \"Savior\".",
+    "Commit This to Memory\nCommit This to Memory is the second studio album by American rock band Motion City Soundtrack.\n\n Produced by Mark Hoppus, the album was released on June 7, 2005, in the United States by Epitaph Records.\n\n Motion City Soundtrack, formed in 1997, had first found success with their debut album, \"I Am the Movie\" (2002).\n\n The band toured in the interim years, creating positive word-of-mouth.\n\n In 2004, the band joined Blink-182 on the road for a string of shows, which led to their bassist, Mark Hoppus, joining the band in the studio for his first producing effort.",
+    "Romance of Celluloid\nThe Romance of Celluloid is a 1937 short black and white documentary film, narrated by Frank Whitbeck, which goes behind the scenes to look at the manufacture of film and the making of motion pictures.\n\n The film was the first of the studio's \"Romance of Celluloid\" series, which also included;",
+    "Two Weeks Notice\nTwo Weeks Notice is a 2002 Australian-American romantic comedy film starring Hugh Grant and Sandra Bullock.\n\n The film was written and directed by Marc Lawrence, who had previously scripted two other box-office hits for Bullock, \"Miss Congeniality\" and \"Forces of Nature\".\n\n Although critical response was mixed, the film received a successful box office run, both in the United States and globally.",
+    "Graph query row:\nfilm: The Celluloid Closet\nrelease_date_or_year: 1995\nrelationship: None\nconnected_film: Station to Station\nconnected_release_date_or_year: 2014",
+    "Panic Stations (album)\nPanic Stations is the sixth and final studio album by American rock band Motion City Soundtrack.\n\n Produced by John Agnello, the album was released on September 18, 2015 by Epitaph Records.\n\n Following an extended touring cycle in which the group performed several past albums in full, Motion City Soundtrack lost one of its longest-serving members: drummer Tony Thaxton, who resigned from the group in 2013.\n\n The band continued to tour with new drummer Claudio Rivera over the ensuing year while writing new material for a sixth album.",
+    "Station to Station (film)\nStation to Station is the 2014 film of Doug Aitken's 2013 \"Nomadic Happening\", the film is made up of 62 one-minute films.\n\n It was distributed internationally in 2015 following its release at the Sundance Film Festival.",
+    "The Celluloid Closet\nThe Celluloid Closet is a 1995 American documentary film directed and written by Rob Epstein and Jeffrey Friedman.\n\n The film is based on Vito Russo's book of the same name first published in 1981 and on lecture and film clip presentations he gave in 1972–1982.\n\n Russo had researched the history of how motion pictures, especially Hollywood films, had portrayed gay, lesbian, bisexual and transgender characters.",
+    "The Boxer (Kele Okereke album)\nThe Boxer is the debut solo album by Kele Okereke, the lead singer of British indie rock band Bloc Party.\n\n Okereke released the album under the professional name of Kele on 21 June 2010.\n\n As promotion, he uploaded the songs \"Rise\" and \"Walk Tall\" to his personal website on 13 May.\n\n The first single from \"The Boxer\" was \"Tenderoni\", released on 14 June, and the second, \"Everything You Wanted\", on 16 August.\n\n The album's third single \"On The Lam\" was released on 25 October.",
+    "From the Sea to the Land Beyond\nFrom The Sea to the Land Beyond: Britain's Coast on Film is a documentary feature film directed by Penny Woolcock, with an original soundtrack by British indie-rock band British Sea Power.\n\n The project was originally produced by Crossover and Sheffield Doc/Fest as part of The Space project from the BBC and the Arts Council England.\n\n The film was edited by Alex Fry."
+   ]
+  },
+  {
+   "id": "8587726f75a098b9",
+   "gold": [
+    {
+     "sentence": " Her only novel, \"The Bone People\", won the Booker Prize in 1985.",
+     "facts": {
+      "0.0": "Her only novel is 'The Bone People'.",
+      "0.1": "'The Bone People' won the Booker Prize.",
+      "0.2": "'The Bone People' won the Booker Prize in 1985."
+     }
+    },
+    {
+     "sentence": " His novel \"Ender's Game\" (1985) and its sequel \"Speaker for the Dead\" (1986) both won Hugo and Nebula Awards, making Card the only author to win both science fiction's top U.S. prizes in consecutive years.",
+     "facts": {
+      "1.0": "Card's novel 'Ender's Game' was published in 1985.",
+      "1.1": "'Speaker for the Dead' is the sequel to 'Ender's Game'.",
+      "1.2": "'Speaker for the Dead' was published in 1986.",
+      "1.3": "'Ender's Game' won the Hugo Award.",
+      "1.4": "'Ender's Game' won the Nebula Award.",
+      "1.5": "'Speaker for the Dead' won the Hugo Award.",
+      "1.6": "'Speaker for the Dead' won the Nebula Award.",
+      "1.7": "Card is the only author to win both science fiction's top U.S. prizes in consecutive years."
+     }
+    }
+   ],
+   "items": [
+    "Ender in Exile\n\"Ender in Exile\" begins one year after Ender has won the bugger war, and begins with the short story \"Ender's Homecoming\" from Card's webzine Intergalactic Medicine Show.\n\n Other short stories that were published elsewhere are included as chapters of the novel.",
+    "Orson Scott Card (b. 1951), an American novelist and commentator, is best known for the Ender series. *Ender’s Game* (1985) and *Speaker for the Dead* (1986) won Hugo and Nebula Awards in consecutive years. Related works include *Ender in Exile* (2008), *A War of Gifts* (2007), and *Shadow of the Hegemon* (2001); the 1977 “Ender",
+    "A War of Gifts: An Ender Story\nA War of Gifts: An Ender Story (2007) is a science fiction novel by Orson Scott Card.\n\n This book is set in Card's Ender's Game series and takes place during Ender Wiggin's time at Battle School as described in Card's novels \"Ender's Game\" and \"Ender's Shadow\".",
+    "Ender Wiggin\nAndrew \"Ender\" Wiggin is a fictional character from Orson Scott Card's 1985 science fiction novel \"Ender's Game\" and its sequels (\"Speaker for the Dead\", \"Xenocide\", \"Children of the Mind\", \"Ender in Exile\"), as well as in the first part of the spin-off series, \"Ender's Shadow\".\n\n The book series itself is an expansion, with some changes to detail, of Card's 1977 short story \"Ender's Game.\"",
+    "Shadow of the Hegemon\nShadow of the Hegemon (2001) is the second novel in the \"Ender's Shadow\" series (often called the Bean Quartet) by Orson Scott Card.\n\n It is also the sixth novel in the \"Ender's Game\" series.\n\n It is told mostly from the point of view of Bean, a largely peripheral character in the original novel \"Ender's Game\" but the central protagonist of the parallel narrative \"Ender's Shadow.\"\n\n \"Shadow of the Hegemon\" was nominated for a Locus Award in 2002.",
+    "Ender in Exile\nEnder in Exile is a science fiction novel by Orson Scott Card, part of the \"Ender's Game\" series, published on November 11, 2008.\n\n It takes place between the two award-winning novels: \"Ender's Game\" and \"Speaker for the Dead\".\n\n It could also be considered a parallel novel to the first three sequels in the Shadow Saga, since the entirety of this \"trilogy\" takes place in the span of \"Ender in Exile\".\n\n The novel concludes a dangling story line of the Shadow Saga, while it makes several references to events that take place during the Shadow Saga.\n\n From yet another perspective, the novel expands (or \"replaces\") the last chapter of the original novel \"Ender's Game\".\n\n On the one hand, it fills the gap right before the last chapter, and on the other hand, it fills the gap between the last chapter and the original (first) sequel (both named \"Speaker for the Dead\").",
+    "Orson Scott Card\nOrson Scott Card (born August 24, 1951) is an American novelist, critic, public speaker, essayist, and columnist.\n\n He writes in several genres but is known best for science fiction.\n\n His novel \"Ender's Game\" (1985) and its sequel \"Speaker for the Dead\" (1986) both won Hugo and Nebula Awards, making Card the only author to win both science fiction's top U.S. prizes in consecutive years.\n\n A feature film adaptation of \"Ender's Game\", which Card co-produced, was released in late October 2013 in Europe and on November 1, 2013, in North America.",
+    "Ender's Game (short story)\n\"Ender's Game\" is a story by Orson Scott Card.\n\n It first appeared in the August 1977 issue of \"Analog\" magazine and was later expanded into the novel \"Ender's Game\".\n\n Although the foundation of the Ender's Game series, the short story is not properly part of the \"Ender's Game\" universe, as there are many discrepancies in continuity.",
+    "Keri Hulme\nKeri Hulme (born 9 March 1947) is a New Zealand writer.\n\n Her only novel, \"The Bone People\", won the Booker Prize in 1985.",
+    "The Bone People\nThe Bone People (styled by the writer and in some editions as the bone people) is a Booker Prize-winning 1984 novel by New Zealand writer Keri Hulme."
+   ]
+  },
+  {
+   "id": "7f084802a98a5a0d",
+   "gold": [
+    {
+     "sentence": "Giuseppe Fortunino Francesco Verdi (] ; 9 or 10 October 1813 – 27 January 1901) was an Italian opera composer.",
+     "facts": {
+      "0.0": "Giuseppe Fortunino Francesco Verdi was born on 9 or 10 October 1813.",
+      "0.1": "Giuseppe Fortunino Francesco Verdi died on 27 January 1901.",
+      "0.2": "Giuseppe Fortunino Francesco Verdi was an Italian opera composer."
+     }
+    },
+    {
+     "sentence": "Charles Louis Ambroise Thomas (5 August 1811 – 12 February 1896) was a French composer, best known for his operas \"Mignon\" (1866) and \"Hamlet\" (1868, after Shakespeare) and as Director of the Conservatoire de Paris from 1871 till his death.",
+     "facts": {
+      "1.0": "Charles Louis Ambroise Thomas was born on 5 August 1811.",
+      "1.1": "Charles Louis Ambroise Thomas died on 12 February 1896.",
+      "1.2": "Charles Louis Ambroise Thomas was a French composer.",
+      "1.3": "Charles Louis Ambroise Thomas is best known for his opera 'Mignon' (1866).",
+      "1.4": "Charles Louis Ambroise Thomas is best known for his opera 'Hamlet' (1868).",
+      "1.5": "The opera 'Hamlet' (1868) is after Shakespeare.",
+      "1.6": "Charles Louis Ambroise Thomas is best known as Director of the Conservatoire de Paris.",
+      "1.7": "Charles Louis Ambroise Thomas was Director of the Conservatoire de Paris from 1871 till his death."
+     }
+    }
+   ],
+   "items": [
+    "Ferdinando Provesi\nFerdinando Angelo Maria Provesi (1770 – 1833) was a native of Parma, Italy.\n\n He was regarded as one of the greatest Italian opera composers of the era .\n\n Provesi is best known as being an early tutor of Giuseppe Verdi when he was the \"Maestro di cappella\" (master of music) at the St. Bartolomeo cathedral in Busseto (the town very close to Le Roncole, the village where Verdi was born.)\n\n Provesi was also director of the municipal music school and local Philharmonic Society.\n\n He began teaching Verdi in 1824 when the future composer was 11 years old.",
+    "Bernhard Bötel\nHis stage repertoire included Belmonte in Wolfgang Amadeus Mozart's \"Die Entführung aus dem Serail\", Chapelou in Adolphe Adam's \"Le postillon de Lonjumeau\", Count Almaviva in Gioachino Rossini's \"The Barber of Seville\", Daniel in Franz Lehár's \"The Merry Widow\", the Duke of Mantua in Giuseppe Verdi's \"Rigoletto\", Gabriel von Eisenstein in Johann Strauss II's \"Die Fledermaus\", Indigo in Strauss' \"Indigo und die vierzig Räuber\", Jeník in Bedřich Smetana's \"The Bartered Bride\", Paolino in Domenico Cimarosa's \"Il matrimonio segreto\", Pâris in Jacques Offenbach's \"La belle Hélène\", Pietro in Franz von Suppé's \"Boccaccio\", and Wilhelm Meister in Ambroise Thomas' \"Mignon\".",
+    "Claudio Monteverdi\nClaudio Giovanni Antonio Monteverdi (] ; 15 May 1567 (baptized) – 29 November 1643) was an Italian composer, string player and choirmaster.\n\n A composer of both secular and sacred music, and a pioneer in the development of opera, he is considered a crucial transitional figure between the Renaissance and the Baroque periods of music history.",
+    "Ambroise Thomas\nCharles Louis Ambroise Thomas (5 August 1811 – 12 February 1896) was a French composer, best known for his operas \"Mignon\" (1866) and \"Hamlet\" (1868, after Shakespeare) and as Director of the Conservatoire de Paris from 1871 till his death.",
+    "Giuseppe Verdi (film)\nGiuseppe Verdi is a 1938 Italian biographical film directed by Carmine Gallone and starring Fosco Giachetti, Gaby Morlay and Germana Paolieri.\n\n The film portrays the life of the composer Giuseppe Verdi (1813-1901).\n\n The casting of Giachetti as Verdi was intended to emphasise the composer's patriotism, as he had recently played patriotic roles in films such as \"The White Squadron\".\n\n The film was made at the Cinecittà Studios in Rome.\n\n The film is also known by the alternative title The Life of Giuseppe Verdi.",
+    "Giuseppe Verdi\nGiuseppe Fortunino Francesco Verdi (] ; 9 or 10 October 1813 – 27 January 1901) was an Italian opera composer.",
+    "Armand Castelmary\nArmand Castelmary, real name Comte Armand de Castan, born Toulouse 16 August 1834, died New York City 10 February 1897, was a French operatic bass.\n\n He created roles in three major premieres at the Paris Opera – Don Diego in \"L'Africaine\" by Meyerbeer (1865), the Monk in Verdi's \"Don Carlos\" (1867), and Horatio in Ambroise Thomas's \"Hamlet\" (1868).\n\n Castelmary also appeared at opera houses in England and the United States, and died onstage at the Metropolitan Opera House, New York, during a performance of \"Martha\" by Friedrich von Flotow.",
+    "List of major opera composers\nThis list provides a guide to opera composers, as determined by their presence on a majority of compiled lists of significant opera composers.\n\n (See the \"Lists Consulted\" section for full details.)\n\n The composers run from Jacopo Peri, who wrote the first ever opera in late 16th century Italy, to John Adams, one of the leading figures in the contemporary operatic world.\n\n The brief accompanying notes offer an explanation as to why each composer has been considered major.\n\n Also included is a section about major women opera composers, compiled from the same lists.\n\n For an introduction to operatic history, see opera.\n\n The organisation of the list is by birthdate.",
+    "Alessandro Scarlatti\nPietro Alessandro Gaspare Scarlatti (2 May 1660 – 22 October 1725) was an Italian Baroque composer, especially famous for his operas and chamber cantatas.\n\n He is considered the founder of the Neapolitan school of opera.\n\n He was the father of two other composers, Domenico Scarlatti and Pietro Filippo Scarlatti.",
+    "Teatro Giuseppe Verdi\nTeatro Giuseppe Verdi (the Giuseppe Verdi Theatre) is a small opera house located in a wing of the Rocca dei Marchesi Pallavicino on the Piazza Giuseppe Verdi in Busseto, Italy, a town closely associated with the life of the opera composer, Giuseppe Verdi.\n\n From the 13th century, the “rocca” or “fortress” was the family’s palace; it is now the city hall after being acquired by the municipality in 1856.\n\n The theatre opened on 15 August 1868 and seats 300."
+   ]
+  },
+  {
+   "id": "7489b8b84845680a",
+   "gold": [
+    {
+     "sentence": " The first edition was written by J. Eric Holmes based on Gary Gygax and Dave Arneson's original work.",
+     "facts": {
+      "0.0": "The first edition was written by J. Eric Holmes.",
+      "0.1": "The first edition was based on the original work of Gary Gygax and Dave Arneson."
+     }
+    },
+    {
+     "sentence": "John Eric Holmes M.D. (February 16, 1930 – March 20, 2010) was an associate professor of neurology at the University of Southern California School of Medicine, an author and promoter of fantasy role-playing games, a noted fan and enthusiast of Edgar Rice Burroughs, and an American writer of non-fiction, fantasy and science fiction.",
+     "facts": {
+      "1.0": "John Eric Holmes M.D. was born on February 16, 1930.",
+      "1.1": "John Eric Holmes M.D. died on March 20, 2010.",
+      "1.2": "John Eric Holmes M.D. was an associate professor of neurology at the University of Southern California School of Medicine.",
+      "1.3": "John Eric Holmes M.D. was an author and promoter of fantasy role-playing games.",
+      "1.4": "John Eric Holmes M.D. was a noted fan and enthusiast of Edgar Rice Burroughs.",
+      "1.5": "John Eric Holmes M.D. was an American writer of non-fiction, fantasy and science fiction."
+     }
+    }
+   ],
+   "items": [
+    "Dungeons &amp; Dragons Basic Set\nThe Dungeons & Dragons Basic Set is a set of rulebooks for the \"Dungeons & Dragons\" (\"D&D\") fantasy role-playing game.\n\n First published in 1977, it saw a handful of revisions and reprintings.\n\n The first edition was written by J. Eric Holmes based on Gary Gygax and Dave Arneson's original work.\n\n Later editions were edited by Tom Moldvay, Dave Cook, and Frank Mentzer.",
+    "Dungeons &amp; Dragons Master Rules\nDungeons & Dragons Master Rules is an expansion boxed set for the \"Dungeons & Dragons\" (\"D&D\") fantasy role-playing game.\n\n It was first published in 1985 as an expansion to the \"Basic Set\".",
+    "Dungeons &amp; Dragons Companion Set\nThe Dungeons & Dragons Companion Set is an expansion boxed set for the \"Dungeons & Dragons\" (\"D&D\") fantasy role-playing game.\n\n It was first published in 1984 as an expansion to the \"Dungeons & Dragons Basic Set\".",
+    "John Eric Holmes\nJohn Eric Holmes M.D. (February 16, 1930 – March 20, 2010) was an associate professor of neurology at the University of Southern California School of Medicine, an author and promoter of fantasy role-playing games, a noted fan and enthusiast of Edgar Rice Burroughs, and an American writer of non-fiction, fantasy and science fiction.\n\n His father, Wilfred \"Jasper\" Holmes was also a writer of adventure stories under the pen name Alec Hudson.\n\n His writings appeared under his full name and under variants such as Eric Holmes and J. Eric Holmes and the pen name Sidney Leland.",
+    "The Keep on the Borderlands\nThe Keep on the Borderlands is a \"Dungeons & Dragons\" module by Gary Gygax, first printed in December 1979.\n\n In it, player characters are based at a keep and investigate a nearby series of caves that are filled with a variety of monsters.\n\n It was designed to be used with the \"Dungeons & Dragons Basic Set\", and was included in the 1979–1982 editions of the \"Basic Set\".\n\n It was designed for people new to \"Dungeons & Dragons\".",
+    "GURPS Basic Set\nGURPS Basic Set is a hard-bound two volume set written by Steve Jackson, Sean M. Punch, and David L. Pulver.\n\n The first edition \"GURPS Basic Set\" was published in 1986.",
+    "Dungeons &amp; Dragons Immortals Rules\nDungeons & Dragons Immortals Rules, written by Frank Mentzer, is a boxed set for the \"Dungeons & Dragons\" (\"D&D\") fantasy role-playing game first published by TSR in 1986 as an expansion to the \"Basic Set\".",
+    "Dungeons &amp; Dragons Game (1991 boxed set)\nThe New Easy-to-Master Dungeons & Dragons Game is an introductory set for the \"Dungeons & Dragons\" fantasy role-playing game, published by TSR, Inc. in 1991.\n\n It was a replacement for the previous \"Dungeons & Dragons Basic Set\", serving to introduce new players to the game, using the rule set previously established.",
+    "Dungeons &amp; Dragons Basic Game\nThe Dungeons & Dragons Basic Game is an introductory version of \"Dungeons & Dragons\" (\"D&D\") role-playing game packaged in the form of a board game.\n\n The original game was released in 2004 by Wizards of the Coast and was designed by Jonathan Tweet, one of the \"D&D\" 3rd edition designers.\n\n A new version of this game was released in September 2006.",
+    "The Lost City (Dungeons &amp; Dragons)\nThe Lost City (B4) is a \"Dungeons & Dragons\" adventure module by Tom Moldvay.\n\n It was first published by TSR in 1982 and was designed as a stand-alone adventure for use with the \"Dungeons & Dragons Basic Set\".\n\n The working title for the module was \"The Lost City of Cynidecia\".\n\n Moldvay designed the module to give novice Dungeon Masters experience fleshing out adventures and is only partially complete.\n\n The module is described as a low-level scenario, in which the only hope of the player characters' survival can be found in a ruined city slowly rising out of the sands.\n\n The adventure is set inside a huge step pyramid, with the lower pyramid only sketched out and the city itself described with a list of the major areas and a map.\n\n The adventure’s main villain is Zargon, a giant one-eyed monster and his minions.\n\n The entire double pyramid, not including the city, contains over 100 rooms."
+   ]
+  },
+  {
+   "id": "6f48a25d2443f23b",
+   "gold": [
+    {
+     "sentence": "Haringey Heartlands is a currently ongoing urban regeneration project in the London Borough of Haringey, in north London, England.",
+     "facts": {
+      "0.0": "Haringey Heartlands is an urban regeneration project.",
+      "0.1": "Haringey Heartlands is currently ongoing.",
+      "0.2": "Haringey Heartlands is in the London Borough of Haringey.",
+      "0.3": "The London Borough of Haringey is in north London, England."
+     }
+    },
+    {
+     "sentence": "The Mall Wood Green is a large shopping centre and residential complex in Wood Green, north London.",
+     "facts": {
+      "1.0": "The Mall Wood Green is a large shopping centre.",
+      "1.1": "The Mall Wood Green is a residential complex.",
+      "1.2": "The Mall Wood Green is in Wood Green, north London."
+     }
+    }
+   ],
+   "items": [
+    "The Mall Wood Green\nThe Mall Wood Green is a large shopping centre and residential complex in Wood Green, north London.\n\n It is generally still referred to by its former name of Wood Green Shopping City; the signage on the building still uses that name.",
+    "White Hart Lane Community Sports Centre\nWhite Hart Lane Community Sports Centre, also known as the New River Stadium is a rugby league and athletics stadium in Wood Green, Haringey, north London, England that is home to London Skolars rugby league club, Enfield and Haringey Athletic Club, Wood Green Weightlifting Club, Hashtag United F.C. (YouTube based football club), Haringey Rhinos rugby union club, Haringey Cycling Club, and the Next Level Football League.",
+    "London Skolars\nLondon Skolars R.L.F.C. are a professional rugby league club based at the New River Stadium, Wood Green, Haringey in north London.\n\n They were founded in 1995 and have been professional since 2003, operating in the Kingstone Press League 1 in the 2015 season.\n\n They also run an A-team (formerly known as \"Haringey Hornets\") that play in the South Premier Division of the Rugby League Conference.",
+    "Haringey London Borough Council\nHaringey London Borough Council is the local authority for the London Borough of Haringey in Greater London, England.\n\n It is a London borough council, one of 32 in the United Kingdom capital of London.\n\n Haringey is divided into 19 wards, each electing three councillors.\n\n Haringey London Borough Council comprises 48 Labour Party councillors, and 9 Liberal Democrats.\n\n The council was created by the London Government Act 1963 and replaced three local authorities: Hornsey Borough Council, Tottenham Borough Council and Wood Green Borough Council.\n\n The next election to the authority will be in 2018.",
+    "Wood Green Town F.C.\nWood Green Town Football Club was a football club based in Tottenham in the London Borough of Haringey, England.\n\n Formed in 1911 as a breakaway from Tufnell Park, they merged with Edmonton (a descendent of Tufnell Park) in 1973 to form Edmonton & Haringey.\n\n During their history the club were known as Tufnell Spartans, Wood Green, Wood Green Town and Haringey Borough.",
+    "Haringey Heartlands\nHaringey Heartlands is a currently ongoing urban regeneration project in the London Borough of Haringey, in north London, England.\n\n The site is located west of Shopping City in Wood Green.\n\n The aim of the development is \"to create a vibrant and attractive new urban quarter which acts as the civic and cultural Heart of Haringey, integrating with and benefiting wider communities.\"",
+    "Alexandra Palace railway station\nAlexandra Palace railway station (originally named Wood Green and later Wood Green (Alexandra Park)) is in the London Borough of Haringey in north London, and is in Zone 3.\n\n The station, and all trains serving it, are operated by Great Northern.\n\n Trains mostly go to and from Moorgate on weekdays and weekends.",
+    "Heartlands High School\nHeartlands High School is a state secondary school located in Wood Green in the London Borough of Haringey.\n\n It welcomed its first students in September 2010.\n\n The headteacher is Mr. Simon Garrill.",
+    "Wood Green War Memorial\nThe Wood Green War Memorial is located on the High Road, Wood Green, in the London Borough of Haringey.\n\n It was erected in 1920 and paid for by public subscription of the people of Wood Green to remember the men of the area who died during the First World War.\n\n It was subsequently adapted to include the dead of the Second World War.\n\n It is grade II listed with Historic England.",
+    "Wood Green tube station\nWood Green is a London Underground station on the Piccadilly line.\n\n The station is between Turnpike Lane and Bounds Green stations and is in Travelcard Zone 3.\n\n It is located at junction of High Road, Wood Green and Lordship Lane.\n\n It serves Wood Green Shopping City and the nearby Haringey Council administrative complex as well as a densely populated residential area.\n\n It is also the closest tube station to the Alexandra Palace Venue."
+   ]
+  },
+  {
+   "id": "fb4e021fedd7dc97",
+   "gold": [
+    {
+     "sentence": "Eryngium is a genus of flowering plants in the family Apiaceae.",
+     "facts": {
+      "0.0": "Eryngium is a genus of flowering plants.",
+      "0.1": "Eryngium is in the family Apiaceae."
+     }
+    },
+    {
+     "sentence": "Arnebia is a genus of flowering plants in the family Boraginaceae.",
+     "facts": {
+      "1.0": "Arnebia is a genus of flowering plants.",
+      "1.1": "Arnebia is in the family Boraginaceae."
+     }
+    }
+   ],
+   "items": [
+    "Ardisia\nArdisia (coralberry or marlberry) is a genus of flowering plants in the family Primulaceae.\n\n It was in the former Myrsinaceae family now recognised as the myrsine sub-family Myrsinoideae.\n\n They are distributed in the Americas, Asia, Australia, and the Pacific Islands, mainly in the tropics.\n\n There are 400 to 500 species.",
+    "Eriogonum\nEriogonum is the scientific name for a genus of flowering plants in the family Polygonaceae.\n\n The genus is found in North America and is known as wild buckwheat.\n\n This is a highly species-rich genus, and indications are that active speciation is continuing.\n\n It includes some common wildflowers such as the California buckwheat (\"Eriogonum fasciculatum\").",
+    "Ericaceae\nThe Ericaceae are a family of flowering plants, commonly known as the heath or heather family, found most commonly in acid and infertile growing conditions.\n\n The family is large, with c. 4250 known species spread across 124 genera, making it the 14th most species-rich family of flowering plants.\n\n The many well-known and economically important members of the Ericaceae include the cranberry, blueberry, huckleberry, rhododendron (including azaleas), and various common heaths and heathers (\"Erica\", \"Cassiope\", \"Daboecia\", and \"Calluna\" for example).",
+    "Lophodermium\nLophodermium is a genus of fungi within the family Rhytismataceae.\n\n The genus contains 145 species and has a global distribution.\n\n Species of this genus are usually observed producing zone lines, conidiomata and ascomata on dead fallen leaves, but at least some are known to colonize living leaves.\n\n In many cases they then live inside the colonized leaf as a symptomless endobiont, where they are regarded as detritivores utilising dead plant matter.\n\n In a few cases they may kill all or part of the leaf prematurely, and there is a substantial literature dealing with those species as plant pathogens.\n\n The genus infects many different plant families but with a notable concentration in the family Pinaceae; many \"Lophodermium\" species are restricted to a single host genus (or even species), but some, particularly those infecting grasses, may infect several genera.\n\n Some are economically important plant pathogens, such as those that cause needlecast disease in European Black Pine, Scots Pine and Red Pine in forestry and christmas tree plantations.",
+    "Cyanobiont\nSeveral cyanobionts involved with fungi and marine organisms also belong to the genera \"Richelia, Calothrix, Synechocystis, Aphanocapsa\" and \"Anabaena\", as well as the species \"Oscillatoria spongeliae\".\n\n Although there are many documented symbioses between cyanobacteria and marine organisms, little is known about the nature of many of these symbioses.\n\n The possibility of discovering more novel symbiotic relationships is apparent from preliminary microscopic observations.",
+    "Eryngium\nEryngium is a genus of flowering plants in the family Apiaceae.\n\n There are about 250 species.\n\n The genus has a cosmopolitan distribution, with the center of diversity in South America.\n\n Common names include eryngo and amethyst sea holly (though the genus is not related to the true hollies, \"Ilex\").",
+    "Hippeastrinae\nHippeastrinae is a subtribe of plants classified under the tribe Hippeastreae.\n\n It belongs to the subfamily Amaryllidoideae of the Amaryllis family (Amaryllidaceae).",
+    "Arnebia\nArnebia is a genus of flowering plants in the family Boraginaceae.",
+    "Extraterrestrial life\nExtraterrestrial life, also called alien life (or, if it is a sentient or relatively complex individual, an \"extraterrestrial\" or \"alien\"), is life that does not originate from Earth.\n\n These hypothetical life forms may range from simple prokaryotes to beings with civilizations far more advanced than humanity.\n\n The Drake equation speculates about the existence of intelligent life elsewhere in the universe.\n\n The science of extraterrestrial life in all its forms is known as exobiology.",
+    "Eucryphia\nEucryphia is a small genus of trees and large shrubs native to the south temperate regions of South America and coastal eastern Australia.\n\n Sometimes placed in a family of their own, the Eucryphiaceae, more recent classifications place them in the Cunoniaceae.\n\n There are seven species, two in South America and five in Australia, and several named hybrids.\n\n They are mostly evergreen though one species (\"E. glutinosa\") is usually deciduous."
+   ]
+  }
+ ]
+}

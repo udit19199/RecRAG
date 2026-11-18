@@ -1,0 +1,26 @@
+[
+  {"id": "faeeda94eea4bac4", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "contradicted", "evidence": [{"item": 2, "quote": "The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+    {"fact": "2.1", "status": "contradicted", "evidence": [{"item": 2, "quote": "The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+    {"fact": "2.2", "status": "contradicted", "evidence": [{"item": 2, "quote": "The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+    {"fact": "2.3", "status": "contradicted", "evidence": [{"item": 2, "quote": "The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+    {"fact": "2.4", "status": "contradicted", "evidence": [{"item": 2, "quote": "The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]}
+  ]},
+  {"id": "24137f06af4cc759", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Start by clicking our Caesars Sportsbook promo code link and sign up for a new account. If your first bet loses, Caesars will credit your account with bonus bets in the amount of your wager up to $1,000."}]}
+  ]},
+  {"id": "f64b18f865e6c86c", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "“I’m here until the end,” she said in her press conference on Friday."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]}
+]

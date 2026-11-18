@@ -1,0 +1,53 @@
+[
+{"id": "45f123902eea2a26", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022"}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "bc7bb7a63be032f8", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "but Google will counter this as well"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "well, saying it has provided the court with thousands of chat logs and millions of documents."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "well, saying it has provided the court with thousands of chat logs and millions of documents."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "be369a7fd5e520b4", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "If the debt continues to rise more than the economy, risks will increase"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "the government may “crowd out” private investment as it competes with the private sector for funds to service its debt."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "the government may “crowd out” private investment as it competes with the private sector for funds to service its debt."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}, {"item": 8, "quote": "told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 8, "quote": "told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."}]}
+]},
+{"id": "2533c4f8d866a5b9", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Entering Week 12, Tee Higgins (hamstring), Noah Brown (knee), Treylon Burks (concussion), and Kadarius Toney (ankle, hip) all failed to suit up due to nagging injuries."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Entering Week 12, Tee Higgins (hamstring), Noah Brown (knee), Treylon Burks (concussion), and Kadarius Toney (ankle, hip) all failed to suit up due to nagging injuries."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "Entering Week 12, Tee Higgins (hamstring), Noah Brown (knee), Treylon Burks (concussion), and Kadarius Toney (ankle, hip) all failed to suit up due to nagging injuries."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "Entering Week 12, Tee Higgins (hamstring), Noah Brown (knee), Treylon Burks (concussion), and Kadarius Toney (ankle, hip) all failed to suit up due to nagging injuries."}]}
+]},
+{"id": "0986a6fe6f57c578", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]}
+]}
+]

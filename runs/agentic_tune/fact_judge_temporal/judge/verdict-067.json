@@ -1,0 +1,28 @@
+[
+  {"id": "0fc502f3055290fc", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "In the long term, scientists also point to a number of recent developments"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and effectively."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Health coach Susan Saunders found herself “parenting” her mother"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia)"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "(who had dementia) while her own daughters were babies."}]}
+  ]},
+  {"id": "a2417ea5bc3bca40", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "ad200b0f46da5c54", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Erik ten Hag is a top coach from Ajax"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Erik ten Hag is a top coach from Ajax but they need a top blueprint not only for now but for the next five years"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "they need a top blueprint not only for now but for the next five years, and work towards that"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "sometimes on that journey there are hard moments when you don't get the right results"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 1, "quote": "sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right things."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]}
+]

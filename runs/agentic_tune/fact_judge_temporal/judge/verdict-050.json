@@ -1,0 +1,31 @@
+[
+{"id": "b500dc5126c6a5a8", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "distribution of apps to Android users and the market for payment processing solutions for content inside Android apps"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "and the market for payment processing solutions for content inside Android apps"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "ecdc2c4cb61d3f5f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "after he confessed on his podcast that he tried and failed to give her a friendship bracelet with"}, {"item": 1, "quote": "July 26: Kelce makes friendship bracelet for Swift"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "his phone number on it during one of her Eras Tour shows"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "after he confessed on his podcast that he tried and failed to give her a friendship bracelet with"}]},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 5, "quote": "While on the Pat McAfee show, Kelce discussed the rumors and sounded somehow surprised people are talking about it."}, {"item": 5, "quote": "He then admitted that he invited Swift to one of his games"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Sept. 24: Swift attends Chiefs game"}, {"item": 4, "quote": "Swift took Kelce up on his offer"}]},
+{"fact": "2.0", "status": "missing", "evidence": []}
+]},
+{"id": "429ca72dc565adbc", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]}
+]

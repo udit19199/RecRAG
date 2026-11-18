@@ -1,0 +1,126 @@
+[
+{"id": "b616341f93b6c37d", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "New Found Glory (formerly A New Found Glory) is an American rock band from Coral Springs, Florida, formed in 1997."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "New Found Glory (formerly A New Found Glory) is an American rock band from Coral Springs, Florida, formed in 1997."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "New Found Glory (formerly A New Found Glory) is an American rock band from Coral Springs, Florida, formed in 1997."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "New Found Glory (formerly A New Found Glory) is an American rock band from Coral Springs, Florida, formed in 1997."}]}
+]},
+{"id": "2b3e5002de2d4108", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The University of Arizona (also referred to as U of A, UA, or Arizona) is a public research university in Tucson, Arizona, United States."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "The University of Arizona (also referred to as U of A, UA, or Arizona) is a public research university in Tucson, Arizona, United States."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "The University of Arizona (also referred to as U of A, UA, or Arizona) is a public research university in Tucson, Arizona, United States."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "The University of Arizona (also referred to as U of A, UA, or Arizona) is a public research university in Tucson, Arizona, United States."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "The University of Arizona (also referred to as U of A, UA, or Arizona) is a public research university in Tucson, Arizona, United States."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "The Presbyterian University College, Ghana is a partially private & public university located at Abetifi-Kwahu in the Eastern Region of Ghana."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "The Presbyterian University College, Ghana is a partially private & public university located at Abetifi-Kwahu in the Eastern Region of Ghana."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "The Presbyterian University College, Ghana is a partially private & public university located at Abetifi-Kwahu in the Eastern Region of Ghana."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The Presbyterian University College, Ghana is a partially private & public university located at Abetifi-Kwahu in the Eastern Region of Ghana."}, {"item": 2, "quote": "It is one of the new universities in Ghana granted accreditation by the National Accreditation Board."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "The Presbyterian University College, Ghana is a partially private & public university located at Abetifi-Kwahu in the Eastern Region of Ghana."}, {"item": 2, "quote": "It is one of the new universities in Ghana granted accreditation by the National Accreditation Board."}]}
+]},
+{"id": "b415ac1041b3e4f6", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Basie Meets Bond is a 1966 album by Count Basie and his orchestra."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Basie Meets Bond is a 1966 album by Count Basie and his orchestra."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Basie Meets Bond is a 1966 album by Count Basie and his orchestra."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "The album is a collection of musical pieces from the first four James Bond films; \"Dr No\", \"From Russia with Love\", \"Goldfinger\" and \"Thunderball\"."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "The album is a collection of musical pieces from the first four James Bond films; \"Dr No\", \"From Russia with Love\", \"Goldfinger\" and \"Thunderball\"."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "The album is a collection of musical pieces from the first four James Bond films; \"Dr No\", \"From Russia with Love\", \"Goldfinger\" and \"Thunderball\"."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "The album is a collection of musical pieces from the first four James Bond films; \"Dr No\", \"From Russia with Love\", \"Goldfinger\" and \"Thunderball\"."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 10, "quote": "The album is a collection of musical pieces from the first four James Bond films; \"Dr No\", \"From Russia with Love\", \"Goldfinger\" and \"Thunderball\"."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 10, "quote": "The album is a collection of musical pieces from the first four James Bond films; \"Dr No\", \"From Russia with Love\", \"Goldfinger\" and \"Thunderball\"."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "William James \"Count\" Basie (August 21, 1904 – April 26, 1984) was an American jazz pianist, organist, bandleader, and composer."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "William James \"Count\" Basie (August 21, 1904 – April 26, 1984) was an American jazz pianist, organist, bandleader, and composer."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 8, "quote": "William James \"Count\" Basie (August 21, 1904 – April 26, 1984) was an American jazz pianist, organist, bandleader, and composer."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 8, "quote": "William James \"Count\" Basie (August 21, 1904 – April 26, 1984) was an American jazz pianist, organist, bandleader, and composer."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 8, "quote": "William James \"Count\" Basie (August 21, 1904 – April 26, 1984) was an American jazz pianist, organist, bandleader, and composer."}]}
+]},
+{"id": "908c511c6b8d5546", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "In Crash, there is no betting, as in Brag, but rather players aim to reach a total of 11 points, gained over successive deals."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "In Crash, there is no betting, as in Brag, but rather players aim to reach a total of 11 points, gained over successive deals."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "In Crash, there is no betting, as in Brag, but rather players aim to reach a total of 11 points, gained over successive deals."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Three-card brag is a 16th-century British card game, and the British national representative of the vying or \"bluffing\" family of gambling games."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Three-card brag is a 16th-century British card game, and the British national representative of the vying or \"bluffing\" family of gambling games."}]}
+]},
+{"id": "f04452a65d356475", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Jan Kodeš and Margaret Court won the singles titles."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Jan Kodeš and Margaret Court won the singles titles."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "She is currently a Christian minister in Perth, Western Australia."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "She is currently a Christian minister in Perth, Western Australia."}]}
+]},
+{"id": "41cdfcea31220028", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Migene González-Wippler is a Puerto Rican new-age author and a leading expert on the Afro-Caribbean religion of Santería."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Migene González-Wippler is a Puerto Rican new-age author and a leading expert on the Afro-Caribbean religion of Santería."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Migene González-Wippler is a Puerto Rican new-age author and a leading expert on the Afro-Caribbean religion of Santería."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Santería, also known as Regla de Ochá, La Regla de Ifá, or Lucumi, is an Afro-American religion of Caribbean origin that developed in the Spanish Empire among West African descendants."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Santería, also known as Regla de Ochá, La Regla de Ifá, or Lucumi, is an Afro-American religion of Caribbean origin that developed in the Spanish Empire among West African descendants."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Santería, also known as Regla de Ochá, La Regla de Ifá, or Lucumi, is an Afro-American religion of Caribbean origin that developed in the Spanish Empire among West African descendants."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "Santería, also known as Regla de Ochá, La Regla de Ifá, or Lucumi, is an Afro-American religion of Caribbean origin that developed in the Spanish Empire among West African descendants."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 3, "quote": "Santería, also known as Regla de Ochá, La Regla de Ifá, or Lucumi, is an Afro-American religion of Caribbean origin that developed in the Spanish Empire among West African descendants."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 3, "quote": "Santería, also known as Regla de Ochá, La Regla de Ifá, or Lucumi, is an Afro-American religion of Caribbean origin that developed in the Spanish Empire among West African descendants."}]},
+{"fact": "1.6", "status": "stated", "evidence": [{"item": 3, "quote": "Santería, also known as Regla de Ochá, La Regla de Ifá, or Lucumi, is an Afro-American religion of Caribbean origin that developed in the Spanish Empire among West African descendants."}]}
+]},
+{"id": "0091a12ab0546bd9", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Ghost Rider is a song by the protopunk band Suicide appearing on their debut album."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Ghost Rider is a song by the protopunk band Suicide appearing on their debut album."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Ghost Rider is a song by the protopunk band Suicide appearing on their debut album."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "The song is based on the Marvel Comics character."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "Suicide is the debut album from the American rock band Suicide."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "Suicide is the debut album from the American rock band Suicide."}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 5, "quote": "Suicide is the debut album from the American rock band Suicide."}, {"item": 5, "quote": "It was released in 1977 on Red Star Records and produced by Craig Leon and Marty Thau."}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 5, "quote": "Suicide is the debut album from the American rock band Suicide."}, {"item": 5, "quote": "It was released in 1977 on Red Star Records and produced by Craig Leon and Marty Thau."}]},
+{"fact": "3.2", "status": "stated", "evidence": [{"item": 5, "quote": "Suicide is the debut album from the American rock band Suicide."}, {"item": 5, "quote": "It was released in 1977 on Red Star Records and produced by Craig Leon and Marty Thau."}]},
+{"fact": "3.3", "status": "stated", "evidence": [{"item": 5, "quote": "Suicide is the debut album from the American rock band Suicide."}, {"item": 5, "quote": "It was released in 1977 on Red Star Records and produced by Craig Leon and Marty Thau."}]}
+]},
+{"id": "58f58fec37a3cccc", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Suzanne N.J. 'Susie' Chun Oakland is a Democratic member of the Hawaii Senate, representing the 13th District since 1996."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Suzanne N.J. 'Susie' Chun Oakland is a Democratic member of the Hawaii Senate, representing the 13th District since 1996."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Suzanne N.J. 'Susie' Chun Oakland is a Democratic member of the Hawaii Senate, representing the 13th District since 1996."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Suzanne N.J. 'Susie' Chun Oakland is a Democratic member of the Hawaii Senate, representing the 13th District since 1996."}, {"item": 4, "quote": "Previously she was a member of the Hawaii House of Representatives from 1990-96."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Suzanne N.J. 'Susie' Chun Oakland is a Democratic member of the Hawaii Senate, representing the 13th District since 1996."}, {"item": 4, "quote": "Previously she was a member of the Hawaii House of Representatives from 1990-96."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "The lower chamber of the legislature is the Hawaiʻi House of Representatives."}]}
+]},
+{"id": "18535177d3ffdca3", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Operation Lighthouse was the name given to the failed experimental launch of four Aggregate 3 liquid-fuel rockets by Wernher von Braun and Walter Dornberger on the German island of Greifswalder Oie in December 1937."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Operation Lighthouse was the name given to the failed experimental launch of four Aggregate 3 liquid-fuel rockets by Wernher von Braun and Walter Dornberger on the German island of Greifswalder Oie in December 1937."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Operation Lighthouse was the name given to the failed experimental launch of four Aggregate 3 liquid-fuel rockets by Wernher von Braun and Walter Dornberger on the German island of Greifswalder Oie in December 1937."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "Operation Lighthouse was the name given to the failed experimental launch of four Aggregate 3 liquid-fuel rockets by Wernher von Braun and Walter Dornberger on the German island of Greifswalder Oie in December 1937."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "Operation Lighthouse was the name given to the failed experimental launch of four Aggregate 3 liquid-fuel rockets by Wernher von Braun and Walter Dornberger on the German island of Greifswalder Oie in December 1937."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 2, "quote": "Operation Lighthouse was the name given to the failed experimental launch of four Aggregate 3 liquid-fuel rockets by Wernher von Braun and Walter Dornberger on the German island of Greifswalder Oie in December 1937."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Major-General Dr. Walter Robert Dornberger (6 September 1895 – 27 June 1980)"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Major-General Dr. Walter Robert Dornberger (6 September 1895 – 27 June 1980)"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Major-General Dr. Walter Robert Dornberger (6 September 1895 – 27 June 1980) was a German Army artillery officer whose career spanned World War I and World War II."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "Major-General Dr. Walter Robert Dornberger (6 September 1895 – 27 June 1980) was a German Army artillery officer whose career spanned World War I and World War II."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 4, "quote": "Major-General Dr. Walter Robert Dornberger (6 September 1895 – 27 June 1980) was a German Army artillery officer whose career spanned World War I and World War II."}]}
+]},
+{"id": "e48e9506d56b0a13", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Players compete in races on tracks inspired by attractions such as the Haunted Mansion, Pirates of the Caribbean, Space Mountain and Big Thunder Mountain Railroad to acquire missing parts for the park's fireworks machine, which was accidentally destroyed by Chip 'n' Dale while they were gathering acorns."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Players compete in races on tracks inspired by attractions such as the Haunted Mansion, Pirates of the Caribbean, Space Mountain and Big Thunder Mountain Railroad to acquire missing parts for the park's fireworks machine, which was accidentally destroyed by Chip 'n' Dale while they were gathering acorns."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Players compete in races on tracks inspired by attractions such as the Haunted Mansion, Pirates of the Caribbean, Space Mountain and Big Thunder Mountain Railroad to acquire missing parts for the park's fireworks machine, which was accidentally destroyed by Chip 'n' Dale while they were gathering acorns."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "Players compete in races on tracks inspired by attractions such as the Haunted Mansion, Pirates of the Caribbean, Space Mountain and Big Thunder Mountain Railroad to acquire missing parts for the park's fireworks machine, which was accidentally destroyed by Chip 'n' Dale while they were gathering acorns."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "Players compete in races on tracks inspired by attractions such as the Haunted Mansion, Pirates of the Caribbean, Space Mountain and Big Thunder Mountain Railroad to acquire missing parts for the park's fireworks machine, which was accidentally destroyed by Chip 'n' Dale while they were gathering acorns."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 7, "quote": "Players compete in races on tracks inspired by attractions such as the Haunted Mansion, Pirates of the Caribbean, Space Mountain and Big Thunder Mountain Railroad to acquire missing parts for the park's fireworks machine, which was accidentally destroyed by Chip 'n' Dale while they were gathering acorns."}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 7, "quote": "Players compete in races on tracks inspired by attractions such as the Haunted Mansion, Pirates of the Caribbean, Space Mountain and Big Thunder Mountain Railroad to acquire missing parts for the park's fireworks machine, which was accidentally destroyed by Chip 'n' Dale while they were gathering acorns."}]},
+{"fact": "0.7", "status": "stated", "evidence": [{"item": 7, "quote": "Players compete in races on tracks inspired by attractions such as the Haunted Mansion, Pirates of the Caribbean, Space Mountain and Big Thunder Mountain Railroad to acquire missing parts for the park's fireworks machine, which was accidentally destroyed by Chip 'n' Dale while they were gathering acorns."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Opened on January 15, 1975, Space Mountain is the oldest operating roller coaster in the state of Florida, and is the original version of the iconic attraction that has since been replicated at all of The Walt Disney Company's Magic Kingdom-style theme parks worldwide, except for the Shanghai Disneyland Resort."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Opened on January 15, 1975, Space Mountain is the oldest operating roller coaster in the state of Florida, and is the original version of the iconic attraction that has since been replicated at all of The Walt Disney Company's Magic Kingdom-style theme parks worldwide, except for the Shanghai Disneyland Resort."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Opened on January 15, 1975, Space Mountain is the oldest operating roller coaster in the state of Florida, and is the original version of the iconic attraction that has since been replicated at all of The Walt Disney Company's Magic Kingdom-style theme parks worldwide, except for the Shanghai Disneyland Resort."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "Opened on January 15, 1975, Space Mountain is the oldest operating roller coaster in the state of Florida, and is the original version of the iconic attraction that has since been replicated at all of The Walt Disney Company's Magic Kingdom-style theme parks worldwide, except for the Shanghai Disneyland Resort."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 3, "quote": "Opened on January 15, 1975, Space Mountain is the oldest operating roller coaster in the state of Florida, and is the original version of the iconic attraction that has since been replicated at all of The Walt Disney Company's Magic Kingdom-style theme parks worldwide, except for the Shanghai Disneyland Resort."}]}
+]},
+{"id": "844fe9ce104d54a7", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Catfish and the Bottlemen are a British rock band, formed in Llandudno, Wales in 2007."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Catfish and the Bottlemen are a British rock band, formed in Llandudno, Wales in 2007."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Catfish and the Bottlemen are a British rock band, formed in Llandudno, Wales in 2007."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "The Lumineers are an American folk rock/Americana band based in Denver, Colorado."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "The Lumineers are an American folk rock/Americana band based in Denver, Colorado."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "Schultz and Fraites began writing and performing together in Ramsey, New Jersey in 2005."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "Schultz and Fraites began writing and performing together in Ramsey, New Jersey in 2005."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "Schultz and Fraites began writing and performing together in Ramsey, New Jersey in 2005."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 1, "quote": "Schultz and Fraites began writing and performing together in Ramsey, New Jersey in 2005."}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 1, "quote": "The Lumineers emerged as one of the most popular folk rock/Americana artists during the revival of those genres and their growing popularity in the 2010s."}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 1, "quote": "The Lumineers emerged as one of the most popular folk rock/Americana artists during the revival of those genres and their growing popularity in the 2010s."}]},
+{"fact": "3.2", "status": "stated", "evidence": [{"item": 1, "quote": "The Lumineers emerged as one of the most popular folk rock/Americana artists during the revival of those genres and their growing popularity in the 2010s."}]}
+]}
+]

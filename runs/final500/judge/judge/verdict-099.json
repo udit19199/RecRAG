@@ -1,0 +1,67 @@
+[
+{"id": "3569cb476dc8eb54", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Shares of Rogers extended losses on news of the lawsuit, closing down 2.2% to C$53.07 in Toronto."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Shares of Rogers extended losses on news of the lawsuit, closing down 2.2% to C$53.07 in Toronto."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "aa0703ce851cd577", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "Sam acted in good faith and took reasonable business measures"}]},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "40620cc489b179f9", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter."}]}
+]},
+{"id": "219fbe7dbece74d2", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "f48d34550ee9b573", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "former Alameda CEO and ex-girlfriend Caroline Ellison"}]},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 2, "quote": "Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 6, "quote": "former Alameda CEO and ex-girlfriend Caroline Ellison"}]},
+{"fact": "1.2", "status": "contradicted", "evidence": [{"item": 6, "quote": "former Alameda CEO and ex-girlfriend Caroline Ellison"}]},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "His lawyer portrayed him as a good-faith startup founder"}]},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "db82fde31cf8b7a6", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "It was almost like this very strange, subtle clue to the media"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "they don't know everything that happened in that relationship"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "and I can have something really major and traumatic happen to me and they don't know about it"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "really major and traumatic happen to me and they don't know about it,\" she told NPR."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]}
+]}
+]

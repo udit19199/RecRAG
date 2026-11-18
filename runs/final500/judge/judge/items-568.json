@@ -1,0 +1,431 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "7797b633850754d1",
+   "gold": [
+    {
+     "sentence": " They competed at the 2015 Pacific Games, where they finished with an 0-4 record.",
+     "facts": {
+      "0.0": "The unnamed subject competed at the 2015 Pacific Games",
+      "0.1": "The unnamed subject finished the 2015 Pacific Games with an 0-4 record"
+     }
+    },
+    {
+     "sentence": "Basketball at the 2015 Pacific Games in Port Moresby, Papua New Guinea was held at the BSP Arena and PNG Power Dome on 3–12 July 2015.",
+     "facts": {
+      "1.0": "Basketball at the 2015 Pacific Games was held in Port Moresby, Papua New Guinea",
+      "1.1": "Basketball at the 2015 Pacific Games was held at the BSP Arena and PNG Power Dome",
+      "1.2": "Basketball at the 2015 Pacific Games was held on 3 to 12 July 2015"
+     }
+    }
+   ],
+   "items": [
+    "2015 Pacific Games\nThe 2015 Pacific Games was held in Port Moresby, Papua New Guinea, from 4 to 18 July 2015.\n\n It was the fifteenth staging of the Pacific Games.",
+    "Australia at the 2015 Pacific Games\nAustralia competed at the 2015 Pacific Games in Port Moresby, Papua New Guinea from 4 to 18 July 2015.\n\n Australia qualified 43 athletes.\n\n It was the first time that Australia has competed in the Pacific Games.",
+    "Athletics at the 2002 Asian Games\nAthletics was contested from October 7 to October 14 at the 2002 Asian Games in Busan Asiad Main Stadium, Busan, South Korea.\n\n A total of 460 athletes (comprising 281 men and 179 women) from 39 nations took part in the competition.\n\n Afghanistan, Bhutan, Brunei, Laos and Maldives were the only nations without a representative in the events.",
+    "Kiribati national basketball team\nThe Kiribati national basketball team are the basketball side that represent Kiribati in international competitions.\n\n They competed at the 2015 Pacific Games, where they finished with an 0-4 record.",
+    "2001 Goodwill Games\nThe 2001 Goodwill Games was the fifth and final edition of the international multi-sport event.\n\n The competition was held in Brisbane, Queensland, Australia from 29 August to 9 September 2001.\n\n A total around 1300 athletes took part in 14 sporting competitions.",
+    "Powerlifting at the 2015 Pacific Games\nPowerlifting at the 2015 Pacific Games was held from 9–10 July 2015 in the Sir John Guise Indoor Power Dome at Port Moresby, Papua New Guinea.\n\n The host nation Papua New Guinea was the dominant team, particularly in the women's divisions where it claimed six of the seven possible gold medals.\n\n Nauru was the strongest team in the men's divisions, winning four of the eight weight categories.\n\n Telupe Iosefa received the first ever gold medal won by Tuvalu at the Pacific Games in the 120 kg male division.",
+    "Basketball at the 2015 Pacific Games\nBasketball at the 2015 Pacific Games in Port Moresby, Papua New Guinea was held at the BSP Arena and PNG Power Dome on 3–12 July 2015.",
+    "Men's football at the 2015 Pacific Games\nThe 2015 Pacific Games men's football tournament was the 14th edition of the Pacific Games men's football tournament.\n\n The men's football tournament was held in Port Moresby, Papua New Guinea between 3–17 July 2015 as part of the 2015 Pacific Games.\n\n The tournament was age-restricted and open to men's under-23 national teams only.",
+    "Women's football at the 2015 Pacific Games\nThe 2015 Pacific Games women's football tournament was the 4th edition of the Pacific Games women's football tournament.\n\n The women's football tournament was held in Port Moresby, Papua New Guinea between 6–16 July 2015 as part of the 2015 Pacific Games.\n\n The tournament was open to full women's national teams (unlike the men's tournament, which was age-restricted).",
+    "Kiribati at the 2015 Pacific Games\nKiribati competed at the 2015 Pacific Games in Port Moresby, Papua New Guinea from 4 to 18 July 2015.\n\n A total of 86 competitors for Kiribati were listed as of 4 July 2015."
+   ]
+  },
+  {
+   "id": "d61d2a5de8bd4153",
+   "gold": [
+    {
+     "sentence": "Pennsylvania Route 145 (PA 145) is a 20.89 mi long north–south state highway in the Lehigh Valley area of eastern Pennsylvania.",
+     "facts": {
+      "0.0": "Pennsylvania Route 145 (PA 145) is a state highway.",
+      "0.1": "Pennsylvania Route 145 is 20.89 miles long.",
+      "0.2": "Pennsylvania Route 145 runs north-south.",
+      "0.3": "Pennsylvania Route 145 is in the Lehigh Valley area of eastern Pennsylvania."
+     }
+    },
+    {
+     "sentence": " MacArthur Road is a divided highway; between U.S. Route 22 (US 22) and Eberhart Road, it is six lanes wide with a Jersey barrier and jughandles while the remainder of the road a four-lane divided highway.",
+     "facts": {
+      "1.0": "MacArthur Road is a divided highway.",
+      "1.1": "Between U.S. Route 22 (US 22) and Eberhart Road, MacArthur Road is six lanes wide.",
+      "1.2": "Between U.S. Route 22 and Eberhart Road, MacArthur Road has a Jersey barrier.",
+      "1.3": "Between U.S. Route 22 and Eberhart Road, MacArthur Road has jughandles.",
+      "1.4": "The remainder of MacArthur Road is a four-lane divided highway."
+     }
+    },
+    {
+     "sentence": " Plastic water-filled barriers of the same general shape are also now commonly called Jersey barriers.",
+     "facts": {
+      "2.0": "Plastic water-filled barriers of the same general shape are also now commonly called Jersey barriers."
+     }
+    }
+   ],
+   "items": [
+    "Pennsylvania Route 145\nMacArthur Road is the location of the main commercial center of the Lehigh Valley.\n\n North of Eagle Point, PA 145 becomes a two-lane undivided road that parallels the Lehigh River, crossing the river into Northampton County at Treichlers.\n\n The route continues along the east bank of the river and passes through Walnutport before reaching its northern terminus.\n\n PA 145 is dedicated as the Battle of the Bulge Veterans Memorial Highway in honor of the veterans who fought in the Battle of the Bulge.",
+    "Pennsylvania Canal (Delaware Division)\nas part of the solution to the United States' first energy crisis.\n\n The Commonwealth of Pennsylvania built the Delaware canal to feed anthracite stone coal to energy-hungry Philadelphia as part of its transportation infrastructure building plan known as the Main Line of Public Works—a legislative initiative creating a collection of self-reinforcing internal improvements to commercial transportation capabilities.",
+    "Hanbys Corner, Delaware\nHanbys Corner is an unincorporated community in New Castle County, Delaware, United States.\n\n It is located at the intersection of Delaware Route 3 (Marsh Road) and Delaware Route 92 (Naamans Road), in Brandywine Hundred.\n\n The area is named for Richard G. Hanby, who first purchased the 125 acre parcel from the descendants of William Penn in 1753.\n\n His descendants included several notable figures in the local political scene including Samuel Winfield Hanby (1817-1892) who was elected as a State Representative in 1874, Jacob Klose Hanby (1839-1932) who was Samuel's son and was elected State Representative in 1904, Robert Johnson Hanby (1834-1898), who served in the 124th PA infantry during the Civil War and was elected State Senator in 1896, and Florence Wood Hanby (1870-1963), who was Robert's daughter-in-law and was the first woman elected to the Delaware House of Representatives in 1924.\n\n In addition Wayne Hanby and James Hanby have both served as Justices of the Peace for New Castle County.",
+    "Jersey barrier\nA Jersey barrier or Jersey wall is a modular concrete or plastic barrier employed to separate lanes of traffic.\n\n It is designed to minimize vehicle damage in cases of incidental contact while still preventing the crossover case of a head-on collision.\n\n Jersey barriers are also used to reroute traffic and protect pedestrians and workers during highway construction, as well as temporary and semi-permanent protections against landborne attack such as suicide vehicle bombs.\n\n A Jersey barrier is also known in the western United States as K-rail, or K-wall, a term borrowed from the California Department of Transportation specification for temporary concrete traffic barriers, or colloquially as a Jersey bump.\n\n Plastic water-filled barriers of the same general shape are also now commonly called Jersey barriers.",
+    "Susquehanna and Tidewater Canal\nThe Susquehanna and Tidewater Canal between Wrightsville, Pennsylvania, and Havre de Grace, Maryland, at the head of Chesapeake Bay, provided an interstate shipping alternative to 19th-century arks, rafts, and boats plying the difficult waters of the lower Susquehanna River.\n\n Built between 1836 and 1840, it ran 43 mi along the west bank of the river and rendered obsolete an older, shorter canal along the east bank.\n\n Of its total length, 30 mi were in Pennsylvania and 13 mi in Maryland.\n\n Though rivalry between Philadelphia, Pennsylvania, and Baltimore, Maryland, delayed its construction, the finished canal brought increased shipments of coal and other raw materials to both cities from Pennsylvania's interior.\n\n Competition from railroads was a large factor in the canal's decline after 1855.\n\n Canal remnants, including a lock keeper's house, have been preserved in Maryland, and locks 12 and 15 have been preserved in Pennsylvania.",
+    "Pennsylvania Route 145\nPennsylvania Route 145 (PA 145) is a 20.89 mi long north–south state highway in the Lehigh Valley area of eastern Pennsylvania.\n\n It connects Interstate 78 (I-78) and PA 309 in Lanark, Lehigh County to PA 248 in Weiders Crossing, Northampton County.\n\n PA 145 is the main north-south arterial into Allentown, the third-largest city in the state.\n\n The route enters the city on South 4th Street and follows multiple streets to downtown, where it follows the one-way pair of 6th Street northbound and 7th Street southbound.\n\n North of Allentown in Whitehall Township, a seven-mile (11.2 km) portion of PA 145 is known as MacArthur Road, named in honor of General Douglas MacArthur.\n\n MacArthur Road is a divided highway; between U.S. Route 22 (US 22) and Eberhart Road, it is six lanes wide with a Jersey barrier and jughandles while the remainder of the road a four-lane divided highway.\n\n MacArthur Road is the location of the main commercial center of the Lehigh Valley.",
+    "Breadon Field\nBreadon Field was a minor league ballpark in Whitehall Township, Pennsylvania, located on the east side of MacArthur Road, about 0.5 mile north of the U.S. Route 22 interchange.",
+    "Susquehanna Area Regional Airport Authority\nThe Susquehanna Area Regional Airport Authority (SARAA) is the governing authority of Harrisburg International Airport, Capital City Airport, Franklin County Regional Airport and Gettysburg Regional Airport in south-central Pennsylvania.\n\n SARAA was incorporated on September 9, 1997, and officially took over control of HIA and CXY airports from the Commonwealth of Pennsylvania on January 1, 1998.",
+    "Ocean To Ocean Bridge\nThe Ocean To Ocean Bridge is a through truss bridge spanning the Colorado River in Yuma, Arizona.\n\n Built in 1915, it was the first highway crossing of the lower Colorado and is the earliest example of a through truss bridge in Arizona.\n\n It is also the only example of a Pennsylvania truss within Arizona.\n\n Originally the bridge carried the transcontinental Ocean-to-Ocean Highway and later carried its successor, US 80 until a new bridge was built to the west in 1956.\n\n Between 1988 and 2001, the bridge was closed to vehicular traffic and only traversable by pedestrians and bicyclists.\n\n After a major restoration, the bridge was rehabilitated and reopened to vehicular traffic in 2002, with a re-dedication by the Quechan nation and Yuma Crossing National Heritage Area.",
+    "Pennsylvania Canal (Delaware Division)\nThe Delaware Division of the Pennsylvania Canal, more commonly called the Delaware Canal, runs for 60 mi parallel to the right bank of the Delaware River from the entry locks near the mouth of the Lehigh River and terminal end of the Lehigh Canal at Easton south to Bristol.\n\n At Easton, which today is the home of The National Canal Museum, the Delaware Canal also connected with the Morris Canal built to carry anthracite coal to energy starved New Jersey industries.\n\n Later, with a crossing-lock constructed at New Hope, the New Hope 'outlet lock' (1847) connected by Cable Ferry to a feeder navigation/canal at Bull's Island along the opposite shore from Lumberville, which ran over 22 mi south along the left bank through Trenton to Bordentown, the west end of the Delaware and Raritan Canal (1834) to New York City via New Brunswick.\n\n as part of the solution to the United States' first energy crisis."
+   ]
+  },
+  {
+   "id": "624e257e5f7e23c5",
+   "gold": [
+    {
+     "sentence": " They were first year members of the Mountain West Conference.",
+     "facts": {
+      "0.0": "They were first-year members of the Mountain West Conference."
+     }
+    },
+    {
+     "sentence": "The Mountain West Conference (MW) is one of the collegiate athletic conferences affiliated with the National Collegiate Athletic Association (NCAA) Division I Football Bowl Subdivision (FBS) (formerly I-A).",
+     "facts": {
+      "1.0": "The Mountain West Conference (MW) is a collegiate athletic conference.",
+      "1.1": "The Mountain West Conference is one of the collegiate athletic conferences affiliated with the National Collegiate Athletic Association (NCAA).",
+      "1.2": "The Mountain West Conference is affiliated with the NCAA Division I Football Bowl Subdivision (FBS).",
+      "1.3": "The Football Bowl Subdivision (FBS) was formerly called I-A."
+     }
+    }
+   ],
+   "items": [
+    "2012 Hawaii Warriors football team\nThe 2012 Hawaii Warriors football team represented the University of Hawaii at Manoa in the 2012 NCAA Division I FBS football season.\n\n They were led by first-year head coach Norm Chow and played their home games at Aloha Stadium.\n\n They were first year members of the Mountain West Conference.\n\n They finished the season 3–9, 1–7 in Mountain West play to finish in a tie for ninth place.",
+    "Women's National Collegiate Athletic Association\nThe Women's National Collegiate Athletic Association (WNCAA) is an athletic association in the Philippines exclusively for women.\n\n It was founded in 1970.\n\n Competition is divided into three divisions: Seniors for college students, Juniors for high school students, and Midgets for grade school and first year high school students.\n\n Its men's counterpart is the Men's National Collegiate Athletic Association, founded in 2004.",
+    "2011–12 Wagner Seahawks men's basketball team\nThe 2011–12 Wagner Seahawks men's basketball team represented Wagner College during the 2011–12 NCAA Division I men's basketball season.\n\n The Seahawks, led by second year head coach Dan Hurley, played their home games at Spiro Sports Center and are members of the Northeast Conference.\n\n They finished the season 25–6, 15–3 in NEC play to finish in second place.\n\n They lost in the semifinals of the NEC Basketball Tournament to Robert Morris.\n\n Despite having 25 wins, the Seahawks did not accept an invitation to a post season tournament.",
+    "Wayne State Warriors football\nThe Wayne State Warriors football team is the college football team at Wayne State University in Detroit, Michigan.\n\n The Wayne State football team played their first game in October 1918.\n\n The Wayne State Warriors have competed in the Great Lakes Intercollegiate Athletic Conference since 1999 (and previously from 1975-1989), and are currently a Division II member of the National Collegiate Athletic Association (NCAA).\n\n Wayne State plays their home games at Tom Adams Field at Wayne State Stadium.\n\n All Wayne State games are broadcast on WDTK radio.",
+    "List of Pacific Tigers head football coaches\nThe Pacific Tigers college football team represented University of the Pacific (CA).\n\n The Tigers competed in the National Collegiate Athletic Association (NCAA) College Division in the years 1937–1968.\n\n In 1969, the team moved to National Collegiate Athletic Association (NCAA) Division I and stayed there until disbanding after the 1995 season.",
+    "2013–14 Iona Gaels men's basketball team\nThe 2013–14 Iona Gaels men's basketball team represented Iona College during the 2013–14 NCAA Division I men's basketball season.\n\n The Gaels, led by fourth year head coach Tim Cluess, played their home games at the Hynes Athletic Center and were members of the Metro Atlantic Athletic Conference.\n\n They finished the season 22–11, 17–3 to win the MAAC regular season championship.\n\n They advanced to the championship game of the MAAC Tournament where they lost to Manhattan.\n\n As a regular season conference champion who failed to win their conference tournament, they received an automatic bid to the National Invitation Tournament where they lost in the first round to Louisiana Tech.",
+    "Hawaii Rainbow Warriors baseball\nThe Hawaii Rainbow Warriors baseball team is a varsity intercollegiate athletic team of the University of Hawaii at Manoa in Honolulu, Hawaii, United States.\n\n The team is a member of the Big West Conference, which is part of the National Collegiate Athletic Association's Division I.\n\n Hawaii's first baseball team was fielded in 1923.\n\n The team plays its home games at Les Murakami Stadium in Honolulu, Hawaii.\n\n The Rainbow Warriors are coached by Mike Trapasso.",
+    "Mountain West Conference\nThe Mountain West Conference (MW) is one of the collegiate athletic conferences affiliated with the National Collegiate Athletic Association (NCAA) Division I Football Bowl Subdivision (FBS) (formerly I-A).\n\n The MW officially began operations in July 1999.\n\n Geographically, the MW covers a broad expanse of the Western United States, with member schools located in California, Colorado, Hawaii, Idaho, Nevada, New Mexico, Utah, and Wyoming.\n\n Craig Thompson has served as Commissioner of the MW since its founding in 1999.",
+    "Men's National Collegiate Athletic Association\nThe Men's National Collegiate Athletic Association is an athletic association in the Philippines, and is the direct counterpart of the older Women's National Collegiate Athletic Association (founded in 1970).\n\n The Men's National Collegiate Athletic Association (MNCAA) is exclusive for men.\n\n The MNCAA was founded in 2004.\n\n Competition is divided into three divisions: Seniors for college students, Juniors for high school students, and Midgets for grade school and first year high school students.\n\n The competing sports of the tournament are Basketball, Volleyball, Futsal, Table Tennis, Badminton and Streetdance.",
+    "1981 Cal Poly Pomona Broncos football team\nThe 1981 Cal Poly Pomona Broncos football team represented California State Polytechnic University, Pomona during the 1981 NCAA Division II football season.\n\n Cal Poly Pomona competed in the California Collegiate Athletic Association (CCAA)."
+   ]
+  },
+  {
+   "id": "739860155fe4de22",
+   "gold": [
+    {
+     "sentence": " It was the first election for Governor of Maine, taking place after Maine separated from Massachusetts and was recognized as a state on March 15, 1820.",
+     "facts": {
+      "0.0": "The election was the first election for Governor of Maine.",
+      "0.1": "The election took place after Maine separated from Massachusetts.",
+      "0.2": "Maine was recognized as a state on March 15, 1820."
+     }
+    },
+    {
+     "sentence": " Maine's separation from Massachusetts came as a result of The Missouri Compromise.",
+     "facts": {
+      "1.0": "Maine's separation from Massachusetts came as a result of The Missouri Compromise."
+     }
+    },
+    {
+     "sentence": " This election saw the virtually unanimous election of William King, the man most chiefly responsible for the push for Maine statehood.",
+     "facts": {
+      "2.0": "The election saw the virtually unanimous election of William King.",
+      "2.1": "William King was the man most chiefly responsible for the push for Maine statehood."
+     }
+    },
+    {
+     "sentence": "William King (February 9, 1768June 17, 1852) was an American merchant, shipbuilder, army officer, and statesman from Bath, Maine.",
+     "facts": {
+      "3.0": "William King was born February 9, 1768.",
+      "3.1": "William King died June 17, 1852.",
+      "3.2": "William King was an American merchant.",
+      "3.3": "William King was an American shipbuilder.",
+      "3.4": "William King was an American army officer.",
+      "3.5": "William King was an American statesman.",
+      "3.6": "William King was from Bath, Maine."
+     }
+    }
+   ],
+   "items": [
+    "Ross Winans\nRoss Winans (1796–1877) was an American inventor, mechanic, and builder of locomotives and railroad machinery.\n\n He is also noted for design of pioneering cigar-hulled ships.\n\n Winans, one of the United States' first multi-millionaires, was involved in national and state politics, a southern-sympathizer and was a vehement \"states' rights\" advocate.\n\n His outspoken anti-federal stance as a member of the Maryland House of Delegates, the lower chamber of the General Assembly, (state legislature) led to his temporary arrest on board a Baltimore and Ohio Railroad train returning from an early session of the legislature held in the western Maryland town of Frederick to avoid the Union Army-occupied state capital of Annapolis in April–May, 1861, to consider the possibilities of state secession, during the early decisive period of the American Civil War.\n\n Winans was related to James McNeill Whistler through marriage (Whistler's brother George married Winans' daughter Julia).",
+    "Anti-Nebraska movement\nThe Anti-Nebraska movement was a political alignment in the United States formed in opposition to the Kansas-Nebraska Act of 1854 and to its repeal of the Missouri Compromise provision forbidding slavery in U.S. territories north of latitude 36° 30' N.\n\n (At the time, the name \"Nebraska\" could loosely refer to areas west of the Missouri River.)",
+    "Henry Smith Lane\nHenry Smith Lane (February 24, 1811 – June 19, 1881) was a United States Representative, Senator, and the 13th Governor of Indiana; he was by design the shortest-serving Governor of Indiana, having made plans to resign the office should his party take control of the Indiana General Assembly and elect him to the United States Senate.\n\n He held that office for only two days, and was known for his opposition to slavery.\n\n A Whig until the party collapsed, he supported compromise with the south.\n\n He became an early leader in the Republican Party starting in 1856 serving as the president of the first party convention, delivering its keynote address, and was influential in the nomination of Abraham Lincoln.\n\n With the repeal of the Missouri Compromise, he became a full-fledged",
+    "Benjamin Logan\nBenjamin Logan (c.1742 – December 11, 1802) was an American pioneer, soldier, and politician from Shelby County, Kentucky.\n\n As colonel of the Kentucky County, Virginia militia during the American Revolutionary War, he was second-in-command of all the militia in Kentucky.\n\n He was also a leader in Kentucky's efforts to become a state.\n\n His brother, John Logan, was the first state treasurer of Kentucky.",
+    "Missouri Compromise\nThe Missouri Compromise is the title generally attached to the legislation passed by the 16th United States Congress on May 8, 1820.\n\n The measures provided for the admission of Maine as a state along with Missouri as a slave state, thus maintaining the balance of power between North and South.\n\n As part of the compromise, slavery was prohibited North of the 36°30′ parallel, excluding Missouri.\n\n President James Monroe signed the legislation on April 6, 1820.",
+    "Compromise of 1790\nThe Compromise of 1790 was a compromise between Alexander Hamilton on the one hand and Thomas Jefferson and James Madison whereby Hamilton won the decision for the national government to take over and pay the state debts, while Jefferson and Madison obtained the national capital (District of Columbia) for the South.\n\n The compromise resolved the deadlock in Congress.\n\n Southerners were blocking the assumption of state debts by the treasury, thereby destroying the Hamiltonian program for building a fiscally strong nation state.\n\n Northerners rejected the proposal, much desired by Virginians, to locate the permanent national capital on the Virginia-Maryland border.\n\n The compromise made possible the passage of the Residence and Funding (Assumption) Acts in July and August 1790.\n\n Historian Jacob Cooke says it is, \"generally regarded as one of the most important bargains in American history, ranking just below the better known Missouri Compromise and the Compromise of 1850.\"",
+    "John Biddle (Michigan politician)\nJohn Biddle (March 2, 1792 – August 25, 1859) was a delegate to the United States Congress from the Michigan Territory.",
+    "John Bowman (pioneer)\nCol. John (Johannes) Bowman (17 December 1738 – May 4, 1784) was an 18th-century American pioneer, colonial militia officer and sheriff, the first appointed in Lincoln County, Kentucky.\n\n In 1781 he also presided as a justice of the peace over the first county court held in Kentucky.\n\n The first county-lieutenant and military governor of Kentucky County during the American Revolutionary War, Col. Bowman also, served in the American Revolution, many times, second in command to General George Rogers Clark, during the Illinois Campaign, which, at the time, doubled the size of the United States.",
+    "Maine gubernatorial election, 1820\nThe 1820 Maine gubernatorial election took place on April 3, 1820.\n\n It was the first election for Governor of Maine, taking place after Maine separated from Massachusetts and was recognized as a state on March 15, 1820.\n\n Maine's separation from Massachusetts came as a result of The Missouri Compromise.\n\n This election saw the virtually unanimous election of William King, the man most chiefly responsible for the push for Maine statehood.\n\n He had no opponents.",
+    "William King (governor)\nWilliam King (February 9, 1768June 17, 1852) was an American merchant, shipbuilder, army officer, and statesman from Bath, Maine.\n\n A proponent of statehood for Maine, he became its first governor when it separated from Massachusetts in 1820."
+   ]
+  },
+  {
+   "id": "a8d7c24d1f5b35e5",
+   "gold": [
+    {
+     "sentence": "The Rescuers is a 1977 American animated comedy-drama adventure film produced by Walt Disney Productions and first released on June 22, 1977, by Buena Vista Distribution.",
+     "facts": {
+      "0.0": "The Rescuers is a 1977 film.",
+      "0.1": "The Rescuers is an American animated film.",
+      "0.2": "The Rescuers is a comedy-drama adventure film.",
+      "0.3": "The Rescuers was produced by Walt Disney Productions.",
+      "0.4": "The Rescuers was first released on June 22, 1977.",
+      "0.5": "The Rescuers was first released by Buena Vista Distribution."
+     }
+    },
+    {
+     "sentence": "The Muppets is a 2011 American musical comedy film and the seventh theatrical film featuring the Muppets.",
+     "facts": {
+      "1.0": "The Muppets is a 2011 film.",
+      "1.1": "The Muppets is an American film.",
+      "1.2": "The Muppets is a musical comedy film.",
+      "1.3": "The Muppets is the seventh theatrical film featuring the Muppets."
+     }
+    }
+   ],
+   "items": [
+    "The Rescuers\nThe Rescuers is a 1977 American animated comedy-drama adventure film produced by Walt Disney Productions and first released on June 22, 1977, by Buena Vista Distribution.\n\n The 23rd Disney animated feature film, the film is about the Rescue Aid Society, an international mouse organization headquartered in New York City and shadowing the United Nations, dedicated to helping abduction victims around the world at large.\n\n Two of these mice, jittery janitor Bernard (Bob Newhart) and his co-agent, the elegant Miss Bianca (Eva Gabor), set out to rescue Penny (Michelle Stacy), an orphan girl being held prisoner in the Devil's Bayou by treasure huntress Madame Medusa (Geraldine Page).",
+    "The Muppets (film)\nThe Muppets is a 2011 American musical comedy film and the seventh theatrical film featuring the Muppets.\n\n The film is directed by James Bobin, written by Jason Segel and Nicholas Stoller, produced by David Hoberman and Todd Lieberman, and stars Segel, Amy Adams, Chris Cooper and Rashida Jones, as well as Muppet performers Steve Whitmire, Eric Jacobson, Dave Goelz, Bill Barretta, David Rudman, Matt Vogel, and Peter Linz.\n\n Bret McKenzie served as music supervisor, writing four of the film's five original songs, and Christophe Beck composed the film's score.\n\n In \"The Muppets\", devoted fan Walter, his brother Gary, and Gary's girlfriend Mary help Kermit the Frog reunite the disbanded Muppets, as they must raise $10 million to save the Muppet Theater from Tex Richman, a businessman who plans to demolish the studio to drill for oil.",
+    "Walt Disney Pictures, founded under that name in 1983, produces live-action films; Walt Disney Studios Motion Pictures distributes Disney studio releases, succeeding Buena Vista (1953–2007). Disney highlights include *Bambi* (1942), *Pinocchio* (1940), and the 1989–99 Renaissance, spanning ten animated films from *The Little Mermaid* to *Tarzan*. Buddy Baker scored several Disney films. Other entries cover Mickey and Donald, the",
+    "The Muppets (soundtrack)\nThe Muppets: An Original Walt Disney Records Soundtrack is a soundtrack album released by Walt Disney Records on November 22, 2011 for the musical comedy film \"The Muppets\".\n\n The soundtrack features five original songs, four re-recordings and remasterings of popular Muppet songs (\"The Muppet Show Theme\", \"Rainbow Connection\", and \"Mah Nà Mah Nà\"), two cover versions of existing songs (Cee Lo Green's \"Forget You\" and Nirvana's \"Smells Like Teen Spirit\"), two standalone songs (Paul Simon's \"Me and Julio Down by the Schoolyard\" and Starship's \"We Built This City\"), and fifteen dialogue tracks.\n\n It also features the song \"Man or Muppet\", which won the Academy Award for Best Original Song.\n\n The soundtrack was also nominated for Best Compilation Soundtrack for Visual Media at the 55th Grammy Awards.",
+    "List of The Muppets productions\nThis is a list of productions based on The Muppets characters and franchise, including films, television series and specials, and other media.\n\n The franchise's main work is \"The Muppet Show\", a syndicated television series which ran from 1976 to 1981.\n\n The franchise includes eight feature films; \"The Muppet Movie\", \"The Great Muppet Caper\", \"The Muppets Take Manhattan\", \"The Muppet Christmas Carol\", \"Muppet Treasure Island\", \"Muppets from Space\", \"The Muppets\", and \"Muppets Most Wanted\".\n\n The franchise also includes other series such as \"Muppets Tonight\" and \"The Muppets\".",
+    "Disney Renaissance\nIn the history of The Walt Disney Company, the Disney Renaissance refers to the era from 1989 to 1999 during which Walt Disney Feature Animation (renamed Walt Disney Animation Studios in 2006) experienced a creative resurgence in producing successful animated films based on well-known stories, which restored public and critical interest in The Walt Disney Company as a whole.\n\n During this era, the studio produced and released ten animated films: \"The Little Mermaid\" (1989), \"The Rescuers Down Under\" (1990), \"Beauty and the Beast\" (1991), \"Aladdin\" (1992), \"The Lion King\" (1994), \"Pocahontas\" (1995), \"The Hunchback of Notre Dame\" (1996), \"Hercules\" (1997), \"Mulan\" (1998) and \"Tarzan\" (1999).",
+    "Muppets Most Wanted (soundtrack)\nMuppets Most Wanted: An Original Walt Disney Records Soundtrack is a soundtrack album released by Walt Disney Records on March 18, 2014 for the musical comedy film \"Muppets Most Wanted\".\n\n The soundtrack features six original songs, two re-recordings of popular Muppet songs (\"The Muppet Show Theme\" and \"Together Again\"), three cover versions of existing songs (Allen Toussaint's \"Working in the Coal Mine\", Maroon 5's \"Moves Like Jagger\", and Los del Río's \"Macarena (Bayside Boys Mix)\"), an orchestral suite by Christophe Beck, five demos by Bret McKenzie, and eight dialogue tracks.",
+    "The Muppets at Walt Disney World\nThe Muppets at Walt Disney World is a television special starring Jim Henson's Muppets at Walt Disney World in Lake Buena Vista, Florida.\n\n The special aired on NBC as part of \"The Magical World of Disney\" on May 6, 1990, and turned out to be the last Muppets special that Henson would work on (he would die 10 days following its airing, on May 16).",
+    "Muppet Treasure Island\nMuppet Treasure Island is a 1996 American musical adventure comedy film based on Robert Louis Stevenson's \"Treasure Island\".\n\n It is the fifth feature film to star The Muppets, and was directed by Brian Henson.",
+    "The Rescuers Down Under\nThe Rescuers Down Under is a 1990 American animated comedy-drama adventure film produced by Walt Disney Feature Animation and released by Walt Disney Pictures on November 16, 1990.\n\n The 29th Disney animated feature film, the film is the sequel to the 1977 animated film \"The Rescuers\", which was based on the novels of Margery Sharp.\n\n Set in the Australian Outback, the film centers on Bernard and Bianca traveling to Australia to save a boy named Cody from a villainous poacher in pursuit of an endangered bird of prey."
+   ]
+  },
+  {
+   "id": "c1827d9daa959cb3",
+   "gold": [
+    {
+     "sentence": "Cassiope is a genus of 9-12 small shrubby species in the family Ericaceae.",
+     "facts": {
+      "0.0": "Cassiope is a genus of 9 to 12 small shrubby species.",
+      "0.1": "Cassiope is in the family Ericaceae."
+     }
+    },
+    {
+     "sentence": "Deutzia ( or ) is a genus of about 60 species of flowering plants in the family Hydrangeaceae, native to eastern and central Asia (from the Himalayas east to Japan and the Philippines), and Central America and also Europe.",
+     "facts": {
+      "1.0": "Deutzia is a genus of about 60 species of flowering plants.",
+      "1.1": "Deutzia is in the family Hydrangeaceae.",
+      "1.2": "Deutzia is native to eastern Asia.",
+      "1.3": "Deutzia is native to central Asia.",
+      "1.4": "Deutzia is native from the Himalayas east to Japan and the Philippines.",
+      "1.5": "Deutzia is native to Central America.",
+      "1.6": "Deutzia is also native to Europe."
+     }
+    }
+   ],
+   "items": [
+    "Cassiope mertensiana\nCassiope mertensiana is a species of flowering plant known by the common names western moss heather and white mountain heather.",
+    "Cassytha\nCassytha is a genus of some two dozen species of obligately parasitic vines in the family Lauraceae.\n\n Superficially, and in some aspects of their ecology, they closely resemble plants in the unrelated genus \"Cuscuta\", the dodders.\n\n When fruit and flowers are absent in the field, the physical resemblance is so close that few people without technical training can tell them apart.\n\n In this respect and in their ecology the two genera present a spectacular example of convergent evolution.\n\n In its divergence from habits typical of the Lauraceae, \"Cassytha\" also presents examples of mosaic evolution",
+    "Butea\nButea is a genus of flowering plants belonging to the pea family, Fabaceae.\n\n It is sometimes considered to have only two species, \"B. monosperma\" and \"B. superba\", or is expanded to include four or five species.",
+    "Deutzia ningpoensis\nDeutzia ningpoensis is a shrub in the family Hydrangeaceae.\n\n The species is endemic to China.\n\n It grows to between 1 and 2.5 metres high and produces panicles of white flowers from May to July in its native range.",
+    "Cassiope lycopodioides\nCassiope lycopodioides, Haida Gwaii mountain-heather or clubmoss mountain heather, is a plant species native to southern Alaska, British Columbia, and the US State of Washington.\n\n It is found on rocky slopes in arctic and alpine tundra at elevations up to 2000 m.\n\n In Washington, it is reported only from King County.\n\n The specific epithet \"\"lycopodioides\"\" refers to the plant's superficial resemblance to some species of clubmoss \"(Lycopodium\" sensu lato).",
+    "Aizoaceae\nAizoaceae (the fig-marigold family) is a large family of dicotyledonous flowering plants containing 135 genera and about 1900 species.\n\n They are commonly known as stone plants or carpet weeds.\n\n They are often called vygies in South Africa and New Zealand.\n\n Species that resemble stones or pebbles are sometimes called mesembs.\n\n Several species are known as ice plants because of the glistening globular bladder cells covering their stems, fruit and leaves, \"... they sparkle like ice crystals.\"",
+    "Cassiope\nCassiope is a genus of 9-12 small shrubby species in the family Ericaceae.\n\n They are native to the Arctic and north temperate montane regions.\n\n The genus is named after Cassiopeia of Greek mythology.\n\n Common names, shared with several other similar related genera, include heather and heath.\n\n They have scale-like leaves lying against the stems, and produce solitary bell-shaped flowers in late spring.\n\n Though hardy, flowers can be damaged by late frosts.",
+    "Deutzia silvestrii\nDeutzia silvestrii is a plant species in the family Hydrangeaceae.",
+    "Deutzia\nDeutzia ( or ) is a genus of about 60 species of flowering plants in the family Hydrangeaceae, native to eastern and central Asia (from the Himalayas east to Japan and the Philippines), and Central America and also Europe.\n\n By far the highest species diversity is in China, where 50 species occur.",
+    "Dieffenbachia\nDieffenbachia is a genus of tropical flowering plants in the family Araceae.\n\n It is native to the New World Tropics from Mexico and the West Indies south to Argentina.\n\n Some species are widely cultivated as ornamental plants, especially as houseplants, and have become naturalized on a few tropical islands."
+   ]
+  },
+  {
+   "id": "71d9dee3b3e907c5",
+   "gold": [
+    {
+     "sentence": "Samantha Cristoforetti (] ; born 26 April 1977 in Milan) is an Italian European Space Agency astronaut, Italian Air Force pilot and engineer.",
+     "facts": {
+      "0.0": "Samantha Cristoforetti was born 26 April 1977 in Milan.",
+      "0.1": "Samantha Cristoforetti is an Italian European Space Agency astronaut.",
+      "0.2": "Samantha Cristoforetti is an Italian Air Force pilot.",
+      "0.3": "Samantha Cristoforetti is an Italian engineer."
+     }
+    },
+    {
+     "sentence": "Jean-Loup Jacques Marie Chrétien (born 20 August 1938) is a French retired \"Général de Brigade\" (brigadier general) in the \"Armée de l'Air\" (French air force), and a former CNES spationaut.",
+     "facts": {
+      "1.0": "Jean-Loup Jacques Marie Chrétien was born 20 August 1938.",
+      "1.1": "Jean-Loup Jacques Marie Chrétien is French.",
+      "1.2": "Jean-Loup Jacques Marie Chrétien is retired.",
+      "1.3": "Jean-Loup Jacques Marie Chrétien holds the rank of Général de Brigade (brigadier general).",
+      "1.4": "Jean-Loup Jacques Marie Chrétien served as a general in the Armée de l'Air (French air force).",
+      "1.5": "Jean-Loup Jacques Marie Chrétien is a former CNES spationaut."
+     }
+    }
+   ],
+   "items": [
+    "Christer Fuglesang\nArne Christer Fuglesang (] ) (born March 18, 1957 in Stockholm) is a Swedish physicist and an ESA astronaut.\n\n He was first launched aboard the STS-116 Space Shuttle mission on December 10, 2006, at 01:47 GMT, making him the first Swedish citizen in space.",
+    "Soyuz T-6\nSoyuz T-6 was a manned spaceflight to Earth orbit to the Salyut 7 space station in 1982.\n\n Along with two Soviet cosmonauts, the crew included a Frenchman, Jean-Loup Chrétien.",
+    "Jean-Loup Chrétien\nJean-Loup Jacques Marie Chrétien (born 20 August 1938) is a French retired \"Général de Brigade\" (brigadier general) in the \"Armée de l'Air\" (French air force), and a former CNES spationaut.\n\n He flew on two Franco-Soviet space missions and a NASA Space Shuttle mission.\n\n Chrétien was the first Frenchman and the first western European in space.",
+    "Patrick Baudry\nPatrick Pierre Roger Baudry (born March 6, 1946 in Cameroon), is a retired Lieutenant Colonel in the French Air Force and a former CNES astronaut.\n\n In 1985, he became the second French citizen in space, after Jean-Loup Chrétien, when he flew aboard NASA's Space Shuttle mission STS-51-G.",
+    "Claude Nicollier\nClaude Nicollier (born 2 September 1944 in Vevey, Switzerland) is the first astronaut from Switzerland.\n\n He has flown on four Space Shuttle missions.\n\n His first spaceflight (STS-46) was in 1992, and his final spaceflight (STS-103) was in 1999.\n\n He took part in two servicing missions to the Hubble Space Telescope (called STS-61 and STS-103).\n\n During his final spaceflight he participated in a spacewalk, becoming the first European Space Agency astronaut to do so during a Space Shuttle mission (previous ESA astronauts conducted spacewalks aboard \"Mir\", see List of spacewalks and moonwalks 1965–1999).\n\n In 2000 he was assigned to the Astronaut Office Extravehicular Activity Branch, while maintaining a position as Lead ESA Astronaut in Houston.\n\n Nicollier retired from ESA in April 2007.",
+    "Philippe Perrin\nPhilippe Perrin (Colonel, French Air Force) (born January 6, 1963) is a French test pilot and former CNES and European Space Agency astronaut.",
+    "Samantha Cristoforetti\nSamantha Cristoforetti (] ; born 26 April 1977 in Milan) is an Italian European Space Agency astronaut, Italian Air Force pilot and engineer.\n\n She holds the record for the longest uninterrupted spaceflight of a European astronaut (199 days, 16 hours), and until June 2017 held the record for the longest single space flight by a woman until this was broken by Peggy Whitson.\n\n She is also the first Italian woman in space.\n\n Samantha Cristoforetti is also known as the first person who brewed an espresso coffee in space.",
+    "Jean-François Clervoy\nJean-François André Clervoy (born 19 November 1958) is a French engineer and a CNES and ESA astronaut.\n\n He is a veteran of three NASA Space Shuttle missions.",
+    "Jean-Loup Puget\nJean-Loup Puget (born 7 March 1947) is a French astrophysicist.\n\n His current research interests lie in the Cosmic Microwave Background.\n\n Jean-Loup Puget and his collaborators reported the first identification of the Cosmic infrared background using COBE data.\n\n He is also, along with Alain Léger, credited with the origin of the hypothesis that the series of infrared lines observed in numerous astrophysical objects are caused by emission from polycyclic aromatic hydrocarbons.\n\n He is currently principal investigator of the HFI module of the Planck space mission.",
+    "Sigmund Jähn\nSigmund Werner Paul Jähn (born 13 February 1937) is a German cosmonaut and pilot, who in 1978 became the first East German (and German native) to fly in space as part of the Soviet Union's Interkosmos programme."
+   ]
+  },
+  {
+   "id": "18b274b1350244a9",
+   "gold": [
+    {
+     "sentence": "Wilmington International Airport (IATA: ILM, ICAO: KILM, FAA LID: ILM) is a public airport located just north of Wilmington, North Carolina, in unincorporated Wrightsboro, Cape Fear Township, New Hanover County.",
+     "facts": {
+      "0.0": "Wilmington International Airport has the IATA code ILM.",
+      "0.1": "Wilmington International Airport has the ICAO code KILM.",
+      "0.2": "Wilmington International Airport has the FAA LID ILM.",
+      "0.3": "Wilmington International Airport is a public airport.",
+      "0.4": "Wilmington International Airport is located just north of Wilmington, North Carolina.",
+      "0.5": "Wilmington International Airport is located in unincorporated Wrightsboro, Cape Fear Township, New Hanover County."
+     }
+    },
+    {
+     "sentence": "Texarkana Regional Airport (IATA: TXK, ICAO: KTXK, FAA LID: TXK) , also known as Webb Field, is a public use airport located three nautical miles (6 km) northeast of the central business district of Texarkana, a city in Miller County, Arkansas, United States.",
+     "facts": {
+      "1.0": "Texarkana Regional Airport has the IATA code TXK.",
+      "1.1": "Texarkana Regional Airport has the ICAO code KTXK.",
+      "1.2": "Texarkana Regional Airport has the FAA LID TXK.",
+      "1.3": "Texarkana Regional Airport is also known as Webb Field.",
+      "1.4": "Texarkana Regional Airport is a public use airport.",
+      "1.5": "Texarkana Regional Airport is located three nautical miles (6 km) northeast of the central business district of Texarkana.",
+      "1.6": "Texarkana is a city in Miller County, Arkansas, United States."
+     }
+    }
+   ],
+   "items": [
+    "Pensacola International Airport\nPensacola International Airport (IATA: PNS, ICAO: KPNS, FAA LID: PNS) , formerly Pensacola Gulf Coast Regional Airport and Pensacola Regional Airport (Hagler Field), is a public use airport three nautical miles (6 km) northeast of the central business district of Pensacola, in Escambia County, Florida, United States.\n\n It is owned by the City of Pensacola.\n\n Despite the name, this airport does not offer direct international flights.\n\n This airport is one of the five major airports in North Florida, others being: Northwest Florida Beaches International Airport, Destin-Fort Walton Beach Airport Tallahassee International Airport, and Jacksonville International Airport.",
+    "Elizabeth City Regional Airport\nElizabeth City Regional Airport (IATA: ECG, ICAO: KECG, FAA LID: ECG) is a joint civil-military public and military use airport located three nautical miles (6 km) southeast of the central business district of Elizabeth City, in Pasquotank County, North Carolina, United States.\n\n The airport, on the shore of the Pasquotank River, is also known as Elizabeth City-Pasquotank County Regional Airport or ECG Regional Airport.\n\n It is included in the National Plan of Integrated Airport Systems for 2011–2015, which categorized it as a \"general aviation\" facility.",
+    "Lafayette Regional Airport\nLafayette Regional Airport (IATA: LFT, ICAO: KLFT, FAA LID: LFT) is a public airport two miles (4 km) southeast of Lafayette, in Lafayette Parish, Louisiana, United States.\n\n It is independently owned and operated.",
+    "Ta'if Regional Airport\nTa'if Regional Airport (IATA: TIF, ICAO: OETF) is an airport in Ta'if, Saudi Arabia.\n\n Despite its name, it also offers many international flights as well.\n\n The airport is located 30 km to the east of Taif and 70 km from Mecca.\n\n The airport is considered important in Saudi aviation history as it witnessed the first landing of Ibn Saud's plane, founder of the Kingdom.\n\n It was converted to a regional airport in 2009 when GACA allowed international airlines to operate at the airport as the city's population was increasing and to reduce pressure on the three main airports at the time.\n\n Despite being named as a \"Regional\" airport, the airport actually has international flights destinations in half a dozen countries outside of Saudi Arabia.",
+    "San Antonio International Airport\nSan Antonio International Airport (IATA: SAT, ICAO: KSAT, FAA LID: SAT) is an international airport located in San Antonio, Texas and serving the Greater San Antonio metropolitan area.\n\n It is located in Uptown Central San Antonio, about 8 miles north of Downtown.\n\n Its has three runways and covers 2,305 acres (933 ha).\n\n Its elevation is 809 ft above sea level.\n\n SAT is a Class C airport.",
+    "Wilmington International Airport\nWilmington International Airport (IATA: ILM, ICAO: KILM, FAA LID: ILM) is a public airport located just north of Wilmington, North Carolina, in unincorporated Wrightsboro, Cape Fear Township, New Hanover County.",
+    "Wilmington Airport (Delaware)\nWilmington Airport (IATA: ILG) (also known as Wilmington/Philadelphia Regional Airport, New Castle County Airport, or New Castle Airport) is an airport located in unincorporated New Castle County, Delaware near Wilmington, Delaware.\n\n Owned by the Delaware River and Bay Authority, it is five miles (8 km) south of Wilmington and about 30 miles (50 km) from Philadelphia.\n\n It is included in the Federal Aviation Administration (FAA) National Plan of Integrated Airport Systems for 2017–2021, in which it is categorized as a non-hub primary commercial service facility.",
+    "Sharp County Regional Airport\nSharp County Regional Airport (IATA: CKK, ICAO: KCVK, FAA LID: CVK) is a public-use airport in Sharp County, Arkansas, United States.\n\n It is located three nautical miles (4 mi, 6 km) northeast of the central business district of Ash Flat, Arkansas.\n\n The airport is owned by the Sharp County Regional Airport Authority.",
+    "Texas Air &amp; Space Museum\nThe Texas Air & Space Museum is an aviation museum located near Rick Husband Amarillo International Airport in Amarillo, Texas.\n\n The museum displays civilian and military aircraft as well as a wide range of air and space artifacts.",
+    "Texarkana Regional Airport\nTexarkana Regional Airport (IATA: TXK, ICAO: KTXK, FAA LID: TXK) , also known as Webb Field, is a public use airport located three nautical miles (6 km) northeast of the central business district of Texarkana, a city in Miller County, Arkansas, United States.\n\n It is owned by the Texarkana Airport Authority.\n\n The airport is located within the city limits of Texarkana, roughly 3 miles east of State Line Avenue.\n\n The front gate opens to the northwest, at the intersection of Arkansas Boulevard and U.S. Route 67.\n\n A Union Pacific Railroad line runs parallel to US 67 on the side of the highway facing the airport.\n\n It is mostly used for general aviation, but is also served by American Eagle."
+   ]
+  },
+  {
+   "id": "b02ad8e33e0ab069",
+   "gold": [
+    {
+     "sentence": " Most figures are all shaped with the body of Mickey Mouse but have different themed markings, colors, and patterns.",
+     "facts": {
+      "0.0": "Most figures are shaped with the body of Mickey Mouse.",
+      "0.1": "Most figures have different themed markings.",
+      "0.2": "Most figures have different themed colors.",
+      "0.3": "Most figures have different themed patterns."
+     }
+    },
+    {
+     "sentence": " He was created by Walt Disney and Ub Iwerks at the Walt Disney Studios in 1928.",
+     "facts": {
+      "1.0": "Mickey Mouse was created by Walt Disney.",
+      "1.1": "Mickey Mouse was created by Ub Iwerks.",
+      "1.2": "Mickey Mouse was created at the Walt Disney Studios.",
+      "1.3": "Mickey Mouse was created in 1928."
+     }
+    }
+   ],
+   "items": [
+    "Mickey Mouse\nMickey Mouse is a funny animal cartoon character and the official mascot of The Walt Disney Company.\n\n He was created by Walt Disney and Ub Iwerks at the Walt Disney Studios in 1928.\n\n An anthropomorphic mouse who typically wears red shorts, large yellow shoes, and white gloves, Mickey has become one of the world's most recognizable characters.",
+    "Vinylmation\nVinylmation is a brand of 1.5\", 3\", and 9\" vinyl collectibles sold at Disney theme parks, select Disney Stores, and the online Disney Store.\n\n The name \"Vinylmation\" is a combination of the word \"Animation\" and \"Vinyl\".\n\n Most figures are all shaped with the body of Mickey Mouse but have different themed markings, colors, and patterns.\n\n This means that all figures have round mouse ears, whether or not the painted character has them.\n\n This is accommodated by painting the ears with backgrounds - stars, stripes, rainbows - to match the painted character.\n\n The series exception is the Park Starz series which does not resemble Mickey at all, and more closely resembles iconic figures from the parks.\n\n Vinylmation was first introduced in July 2008, and the first figures were introduced in November 2008.",
+    "Bill Barretta\nWilliam Paul \"Bill\" Barretta (born June 19, 1964) is an American puppeteer and producer who has been performing with The Muppets since 1991, when he puppeteered the body of Sinclair family patriarch, Earl Sinclair on \"Dinosaurs\".\n\n He later developed several new characters on \"Muppets Tonight\", including Pepe the King Prawn, Johnny Fiama, Big Mean Carl and Bobo the Bear.\n\n Along with having his own Muppet characters, Barretta has taken over several of Jim Henson's roles, such as Dr. Teeth, Rowlf the Dog, Mahna Mahna and Swedish Chef, and briefly took over Jerry Nelson's role of Lew Zealand.\n\n His film debut as a principal puppeteer was in 1996's \"Muppet Treasure Island\" as Clueless Morgan.\n\n In addition, Barretta has produced two of the Muppets' television films, \"It's a Very Merry Muppet Christmas Movie\" (2002) and \"The Muppets' Wizard of Oz\" (2005).\n\n Barretta also provides additional voices on \"Kim Possible\".",
+    "Manimal Vinyl\nManimal has offices in Los Angeles and New York City.\n\n In 2015, Manimal signed on with legendary avant-garde artist Yoko Ono to release the highly anticipated sequel to 2007's \"Yes, I'm A Witch\" with \"Yes, I'm A Witch Too\" which features collaborations and remixes from Death Cab for Cutie, Miike Snow, Penguin Prison, Moby, Peter Bjorn and John, Cibo Matto, and Sparks.",
+    "Townsend Coleman\nTownsend Putnam Coleman III (born May 28, 1954) is an American voice actor who performed in many animated series and TV commercials beginning in the early 1980s.\n\n Among his most notable roles are Michaelangelo from \"Teenage Mutant Ninja Turtles\", Wayne Gretzky on \"ProStars\" and the title character in \"Where's Waldo?\n\n\" and the eponymous \"The Tick\" and he also did additional voices in \"Dexter's Laboratory\", \"The Powerpuff Girls\", \"Adventure Time\", \"Animaniacs\", \"The Buzz on Maggie\", \"Camp Lazlo\", \"CatDog\", \"Catscratch\", \"Danny Phantom\", \"Dave the Barbarian\", \"\", \"The Fairly OddParents\", \"Foster's Home for Imaginary Friends\", \"Gravity Falls\", \"Hi Hi Puffy AmiYumi\", \"\", \"The Loud House\", \"The Mighty B!\n\n\", \"My Life As A Teenage Robot\" and \"The Replacements\" and he also did the voice of Knotty in \"\" (1992) and he also did additional voices in films \"Fantasia 2000\" (1999) and \"Sing\" (2016)",
+    "Pete (Disney)\nPete (also called Peg-Leg Pete, Pistol Pete and Black Pete, among other names) is an anthropomorphic cartoon character created in 1925 by Walt Disney and Ub Iwerks.\n\n He is a character of The Walt Disney Company and often appears as a nemesis and the main antagonist in Mickey Mouse universe stories.\n\n He was originally an anthropomorphic bear but with the advent of Mickey Mouse in 1928, he was defined as a cat.\n\n Pete is the oldest continuing Disney character, having debuted three years before Mickey Mouse in the cartoon \"Alice Solves the Puzzle\" (1925).",
+    "Donald Duck\nDonald Duck is a cartoon character created in 1934 at Walt Disney Productions.\n\n Donald is an anthropomorphic white duck with a yellow-orange bill, legs, and feet.\n\n He typically wears a sailor shirt and cap with a bow tie.\n\n Donald is most famous for his semi-intelligible speech and his mischievous and temperamental personality.\n\n Along with his friend Mickey Mouse, Donald is one of the most popular Disney characters and was included in TV Guide's list of the 50 greatest cartoon characters of all time in 2002.\n\n He has appeared in more films than any other Disney character, and is the most published comic book character in the world outside of the superhero genre.",
+    "Jerry Beck\nJerry Beck (born February 9, 1955 in New York City) is an American animation historian, author, blogger, and video producer.\n\n The author and/or editor of several books on classic American animation and classic characters, including \"The 50 Greatest Cartoons\" (1994), \"The Animated Movie Guide\" (2005), \"Not Just Cartoons: Nicktoons!\"\n\n (2007), \"The Flintstones: The Official Guide to the Cartoon Classic\" (2011), \"The Hanna-Barbera Treasury: Rare Art Mementos from Your Favorite Cartoon Classics\" (2007), \"The SpongeBob SquarePants Experience: A Deep Dive into the World of Bikini Bottom\" (2013), \"Pink Panther: The Ultimate Guide\" (2005), and \"Looney Tunes and Merrie Melodies: A Complete Illustrated Guide to the Warner Bros.\n\n Cartoons\" (with Will Friedwald, 1989) alongside \"The 100 Greatest Looney Tunes Cartoons\" (2010).\n\n He is also an authority on the making of modern films, with his books detailing the art of \"Mr.",
+    "Manimal Vinyl\nManimal Vinyl is a Calabasas based record label founded in 2006 by experimental musician and fashion stylist, Paul Beahan.\n\n They were originally known as a psychedelic folk label that makes semi-annual tribute records for worldwide charities, having eventually switched to dance music and progressive underground.\n\n They are the label who has release debut records from act ranging from Warpaint to Bat for Lashes and exclusive singles from Moby, Duran Duran, Carla Bruni, Edward Sharpe and the Magnetic Zeros.\n\n In 2008, they founded the annual Manimal Festival in Pioneertown, California which ran from 2008-2010.\n\n The festival has featured line-ups with Edward Sharpe and the Magnetic Zeros, Warpaint, Ariel Pink and papercranes.\n\n Manimal has offices in Los Angeles and New York City.",
+    "Mickey's Christmas Carol\nMickey's Christmas Carol is a 1983 American animated featurette produced by Walt Disney Productions and released by Buena Vista Distribution.\n\n It was directed and produced by Burny Mattinson.\n\n The cartoon is an adaptation of Charles Dickens' \"A Christmas Carol\", starring Scrooge McDuck as Ebenezer Scrooge.\n\n Many other Disney characters, primarily from the Mickey Mouse universe, \"Robin Hood\", and \"The Adventures of Ichabod and Mr. Toad\", were cast throughout the film."
+   ]
+  },
+  {
+   "id": "27c7a8d3739b14b2",
+   "gold": [
+    {
+     "sentence": "Mulled wine is a beverage usually made with red wine along with various mulling spices and sometimes raisins.",
+     "facts": {
+      "0.0": "Mulled wine is a beverage.",
+      "0.1": "Mulled wine is usually made with red wine.",
+      "0.2": "Mulled wine is usually made with various mulling spices.",
+      "0.3": "Mulled wine is sometimes made with raisins."
+     }
+    },
+    {
+     "sentence": " It is served hot or warm and is alcoholic, although there are non-alcoholic versions of mulled wine.",
+     "facts": {
+      "1.0": "Mulled wine is served hot or warm.",
+      "1.1": "Mulled wine is alcoholic.",
+      "1.2": "There are non-alcoholic versions of mulled wine."
+     }
+    },
+    {
+     "sentence": "Blue Lagoon is a popular summer cocktail featuring blue Curaçao.",
+     "facts": {
+      "2.0": "Blue Lagoon is a popular summer cocktail.",
+      "2.1": "Blue Lagoon features blue Curaçao."
+     }
+    }
+   ],
+   "items": [
+    "Oz and Hugh Drink to Christmas\nOz and Hugh Drink to Christmas is a BBC television programme in which wine personality Oz Clarke and comedian Hugh Dennis travel through Britain to sample a wide array of seasonal Christmas beverages, including whisky, winter ales, mulled wine, wassail, sloe gin, Buck's Fizz, Port wine and Sherry.\n\n Upon its 20 December 2009 broadcast on BBC Two, it had a viewership of approximately 2.4 million with an audience share of 9%.",
+    "Mulled wine\nMulled wine is a beverage usually made with red wine along with various mulling spices and sometimes raisins.\n\n It is served hot or warm and is alcoholic, although there are non-alcoholic versions of mulled wine.\n\n It is a traditional drink during winter, especially around Christmas.",
+    "Mulling spices\nMulling spices is a spice mixture used in drink recipes.\n\n The spices are usually used to spice hot apple cider, mulled wine, wassail, and other drinks (such as juices) during the autumn or winter.\n\n A \"mulled\" drink is a drink which has been prepared with these spices (usually through heating the drink in a pot with mulling spices and then straining).\n\n Mulling spices may also be added to the brewing process to make spiced beer.",
+    "Blue Lagoon (cocktail)\nBlue Lagoon is a popular summer cocktail featuring blue Curaçao.",
+    "Flaming volcano\nThe flaming volcano is a large tropical group cocktail made of rum, brandy, pineapple juice, orange juice, almond syrup, and sometimes other ingredients.\n\n It is usually a multi-user drink, served to a group in a special, ritual vessel known as a volcano bowl, which is a decorative ceramic bowl (typically of about 32 USoz capacity) designed with a rising central hub feature usually resembling a crude volcano cone.\n\n The cone includes a second, much smaller central pit or \"crater\" which is partially filled with rum or other flammable high-alcohol liquor.\n\n The \"crater\" liquor is then ignited, creating a mild volcanic ambience with its central blue flame.",
+    "Flaming beverage\nFlaming beverages include cocktails and other mixed drinks that contain flammable, high-proof alcohol, which is ignited prior to consumption.\n\n The alcohol may be an integral part of the drink, or it may be floated as a thin layer across the top of the drink.\n\n The flames are mostly for dramatic flair.\n\n However, in combination with certain ingredients, the flavor of the drink is altered.\n\n Some flavors are enhanced, and it may impart a toasted flavor to some drinks.",
+    "The Blue Lagoon (novel)\nThe Blue Lagoon is a romance novel written by Henry De Vere Stacpoole and was first published by T. Fisher Unwin in 1908.\n\n It is the first novel of the \"Blue Lagoon\" trilogy, which also includes \"The Garden of God\" (1923) and \"The Gates of Morning\" (1925).\n\n The novel has inspired several film adaptations, most notably \"The Blue Lagoon\" starring Brooke Shields as Emmeline and Christopher Atkins as Richard (\"Dicky\" in the book).",
+    "Blue Lagoon: The Awakening\nBlue Lagoon: The Awakening is a 2012 American made-for-television film that premiered on Lifetime on June 16, 2012.\n\n Indiana Evans and Brenton Thwaites star in the film, which is based on the novel \"The Blue Lagoon\" and its previous film adaptations.\n\n Christopher Atkins, the male lead of the 1980 film \"The Blue Lagoon\", also appears in the film.",
+    "Feuerzangenbowle\nFeuerzangenbowle (] ) is a traditional German alcoholic drink for which a rum-soaked sugarloaf is set on fire and drips into mulled wine.\n\n It is often part of a Christmas or New Year's Eve tradition.\n\n The name translates literally to \"fire-tongs punch\".",
+    "Volcano bowl\nVolcano bowls are ceramic drinkware originally associated with mid-20th century American tiki bars and tropical-themed restaurants.\n\n Drinks served in volcano bowls are typically rum-based, mixed with tropical fruit juices and other liquors such as brandy, vodka, and triple sec, and garnished with fruit.\n\n The Flaming Volcano cocktail is especially associated with this drinkware."
+   ]
+  },
+  {
+   "id": "094f23a6272de154",
+   "gold": [
+    {
+     "sentence": "Midland F1 Racing (also known as MF1 Racing) was a Formula One constructor and racing team.",
+     "facts": {
+      "0.0": "Midland F1 Racing was a Formula One constructor.",
+      "0.1": "Midland F1 Racing was a racing team.",
+      "0.2": "Midland F1 Racing is also known as MF1 Racing."
+     }
+    },
+    {
+     "sentence": " In 2007, the team competed as Spyker F1, and in 2008 was sold to Indian businessman Vijay Mallya and was renamed Force India F1.",
+     "facts": {
+      "1.0": "In 2007, the team competed as Spyker F1.",
+      "1.1": "In 2008, the team was sold to Indian businessman Vijay Mallya.",
+      "1.2": "In 2008, the team was renamed Force India F1."
+     }
+    },
+    {
+     "sentence": "The Spyker F1 Team, known as the Etihad Aldar Spyker F1 Team for sponsorship reasons was a Formula One team that competed in the 2007 Formula One World Championship, and was created by Spyker Cars after their buyout of the short-lived Midland F1 (formerly Jordan Grand Prix) team.",
+     "facts": {
+      "2.0": "The Spyker F1 Team was known as the Etihad Aldar Spyker F1 Team for sponsorship reasons.",
+      "2.1": "The Spyker F1 Team was a Formula One team.",
+      "2.2": "The Spyker F1 Team competed in the 2007 Formula One World Championship.",
+      "2.3": "The Spyker F1 Team was created by Spyker Cars after their buyout of the short-lived Midland F1 team.",
+      "2.4": "Midland F1 was formerly known as Jordan Grand Prix."
+     }
+    }
+   ],
+   "items": [
+    "Midland F1 Racing\nMidland F1 Racing (also known as MF1 Racing) was a Formula One constructor and racing team.\n\n It competed in the 2006 Formula One season with drivers Christijan Albers and Tiago Monteiro.\n\n The team was created by the renaming of Jordan Grand Prix after its purchase by Canadian businessman, and owner of the Midland Group, Alex Shnaider.\n\n The team was registered as the first Russian Formula One team, reflecting Shnaider's roots, although it continued to be based in the United Kingdom, at Jordan's Silverstone factory.\n\n Towards the end of the 2006 season, the team was sold to Spyker Cars N.V.; the team raced in its last three Grands Prix under the official name \"Spyker MF1 Racing\".\n\n In 2007, the team competed as Spyker F1, and in 2008 was sold to Indian businessman Vijay Mallya and was renamed Force India F1.",
+    "Spyker F8-VII\nThe Spyker F8-VII (subsequently known as the Force India VJM01) was a Formula One car, constructed by Spyker F1 that competed in the 2007 Formula One World Championship.\n\n A \"B Specification\" car named the Spyker F8-VIIB was launched at the Italian Grand Prix and used for the remainder of the 2007 season.\n\n The engine of Spyker F8-VII car was Ferrari 056 despite the team opted for 2006-spec engine due to cost reasons.\n\n For the 2008 World Championship, Force India used a slightly modified version of the F8-VIIB, called the Force India VJM01 named after team owners Vijay Mallya, Jan Mol and Michiel Mol.\n\n The VJM01 used 2007-spec Ferrari 056 engines instead of 2008-spec.\n\n The F8-VII was the only car constructed by Spyker F1 in their own right after their take-over from the struggling Midland F1 team part way through 2006.",
+    "Jordan 194\nThe Jordan 194 was a Formula One car for the 1994 season.\n\n The number 14 seat was taken by Rubens Barrichello and the number 15 seat was taken by Eddie Irvine.\n\n Kelvin Burt was named as test driver, but his mileage in the car was limited.\n\n The engine was a Hart 1035 3.5 V10, a developed version of the engine which had proved promising in 1993.\n\n The team's main sponsor was Sasol, with additional financial support coming from Arisco, the Irish government and other smaller sponsors.\n\n With driver aids such as traction control and active suspension banned for the 1994 season, the car used a conventional semi-automatic gearbox and pushrod double wishbone suspension.\n\n The simpler technical regulations of 1994 seemed to benefit Jordan and the 194 recaptured the level of performance seen in the team's debut season, 1991.\n\n Indeed, the cut-down airbox and drooping front wing of the 194 recalled the design features of the 1991 car.",
+    "Spyker F1\nThe Spyker F1 Team, known as the Etihad Aldar Spyker F1 Team for sponsorship reasons was a Formula One team that competed in the 2007 Formula One World Championship, and was created by Spyker Cars after their buyout of the short-lived Midland F1 (formerly Jordan Grand Prix) team.\n\n The change to the Spyker name was accompanied by a switch in racing livery from the red and white previously used by Midland, to an orange and silver scheme—already seen on the Spyker Spyder GT2-R—orange being the national colour and the auto racing colour of the Netherlands.\n\n At the end of the 2007 season the team was sold and renamed Force India.",
+    "Jordan 195\nThe Jordan 195 was a Formula One car for the 1995 season.\n\n The number 14 seat was taken by Rubens Barrichello and the number 15 seat was taken by Eddie Irvine.\n\n The team never employed a test driver.\n\n The engine was a Peugeot A10 3.0 V10.\n\n The team's main sponsor was Total.",
+    "Jaguar R3\nThe Jaguar R3 is a Formula One racing car with which Jaguar Racing competed in the 2002 Formula One season.\n\n The car was launched on January 4, 2002.\n\n It was driven by Eddie Irvine and Pedro de la Rosa, both retained from 2001.",
+    "Simtek\nSimtek (Simulation Technology) was an engineering consultancy firm and Formula One racing team.\n\n The Formula One (F1) engineering consultancy arm, Simtek Research, was founded in 1989 by Max Mosley and Nick Wirth.\n\n It originally was involved in many areas of Formula One, including wind tunnel construction and chassis building for third parties.\n\n Simtek Grand Prix, the racing team, launched in 1993 and competed in the 1994 and 1995 seasons achieving a best result of ninth place.\n\n With large debts and a lack of sponsorship money, Simtek went into voluntary liquidation in June 1995.",
+    "2012–13 Midlands football leagues (levels 9–10)\nThe 2012–13 Midland Football Alliance season is the 19th in the history of Midland Football Alliance a football competition in England.\n\n The 2012–13 Midland Football Combination season (known as the 2012–13 Athium Midland Football Combination for sponsorship reasons) is the 76th in the history of Midland Football Combination a football competition in England and feeder to the Midland Football Alliance.\n\n The 2012–13 West Midlands (Regional) League season is the 113th in the history of the West Midlands (Regional) League.\n\n It is also a feeder league to the Midland Football Alliance.",
+    "2013–14 Midlands football leagues (levels 9–10)\nThe 2013–14 Midland Football Alliance season was the 20th and final in the history of Midland Football Alliance, a football competition in England.\n\n The 2013–14 Midland Football Combination season (known as the 2013–14 Athium Midland Football Combination for sponsorship reasons) was the 77th and final in the history of Midland Football Combination and it was a feeder to the Midland Football Alliance.\n\n The 2013–14 West Midlands (Regional) League season was the 114th in the history of the West Midlands (Regional) League.\n\n It was also a feeder league to the Midland Football Alliance.\n\n At the end of the season the Midland Alliance and the Midland Combination merged to form the Midland Football League.",
+    "Marussia F1\nThe Marussia F1 Team (subsequently Manor Marussia F1 Team) was an Anglo-Russian Formula One racing team and constructor which was based in Banbury, Oxfordshire in the United Kingdom.\n\n The team was operated by Manor Motorsport (formerly Marussia Manor Racing), which was previously a subsidiary of Marussia Motors, a now defunct sports car manufacturer which was based in Moscow.\n\n The team originally started racing in under the \"Virgin Racing\" name; the following year Virgin adopted Marussia as a title sponsor becoming \"Marussia Virgin Racing\" until being fully rebranded as the \"Marussia F1 Team\" for ."
+   ]
+  }
+ ]
+}

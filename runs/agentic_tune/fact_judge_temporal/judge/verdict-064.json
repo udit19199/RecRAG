@@ -1,0 +1,26 @@
+[
+  {
+    "id": "186e5d7124282419",
+    "facts": [
+      {"fact": "0.0", "status": "missing"},
+      {"fact": "0.1", "status": "missing"},
+      {"fact": "1.0", "status": "missing"},
+      {"fact": "1.1", "status": "missing"},
+      {"fact": "1.2", "status": "missing"},
+      {
+        "fact": "2.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 1, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}
+        ]
+      },
+      {
+        "fact": "2.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 1, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}
+        ]
+      }
+    ]
+  }
+]

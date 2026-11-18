@@ -1,0 +1,839 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=4ccd021d4d364dd5 ===
+Gold sentences and facts:
+Sentence 0: The Cylinder 's text has traditionally been seen by biblical scholars as corroborative evidence of Cyrus ' policy of the repatriation of the Jewish people following their Babylonian captivity ( an act that the Book of Ezra attributes to Cyrus ) , as the text refers to the restoration of cult sanctuaries and repatriation of deported peoples . This interpretation has been disputed , as the text identifies only Mesopotamian sanctuaries , and makes no mention of Jews , Jerusalem , or Judea . The Cylinder has also been referred to by Mohammad Reza Pahlavi , the last Shah of Iran as the first declaration of universal human rights , a view rejected by some historians as anachronistic and a misunderstanding of the Cylinder 's generic nature as a typical statement made by a new monarch at the beginning of his reign . Neil MacGregor , Director of the British Museum , has stated that the cylinder was `` the first attempt we know about running a society , a state with different nationalities and faiths -- a new kind of statecraft . '' It was adopted as a national symbol of Iran by the Imperial State which put it on display in Tehran in 1971 to commemorate 2,500 year celebration of the Persian Empire . On October 14 , the Mohammad Reza Shah 's sister , Princess Ashraf Pahlavi , presented the United Nations Secretary General U Thant with a replica of the Cylinder . The princess asserted that `` the heritage of Cyrus was the heritage of human understanding , tolerance , courage , compassion and , above all , human liberty '' .
+  Fact 0.0: The Cylinder's text has traditionally been seen by biblical scholars as corroborative evidence of Cyrus' policy of repatriating the Jewish people after their Babylonian captivity.
+  Fact 0.1: The Book of Ezra attributes the repatriation of the Jewish people after their Babylonian captivity to Cyrus.
+  Fact 0.2: The Cylinder's text refers to the restoration of cult sanctuaries.
+  Fact 0.3: The Cylinder's text refers to the repatriation of deported peoples.
+  Fact 0.4: The interpretation of the Cylinder's text as evidence of Cyrus' repatriation policy has been disputed.
+  Fact 0.5: The Cylinder's text identifies only Mesopotamian sanctuaries.
+  Fact 0.6: The Cylinder's text makes no mention of Jews, Jerusalem, or Judea.
+  Fact 0.7: Mohammad Reza Pahlavi, the last Shah of Iran, referred to the Cylinder as the first declaration of universal human rights.
+  Fact 0.8: Some historians reject the view that the Cylinder is the first declaration of universal human rights.
+  Fact 0.9: Some historians consider the view that the Cylinder is the first declaration of universal human rights anachronistic.
+  Fact 0.10: Some historians consider the view that the Cylinder is the first declaration of universal human rights a misunderstanding of the Cylinder's generic nature.
+  Fact 0.11: The Cylinder is a typical statement made by a new monarch at the beginning of his reign.
+  Fact 0.12: Neil MacGregor, Director of the British Museum, has stated that the Cylinder was "the first attempt we know about running a society, a state with different nationalities and faiths -- a new kind of statecraft."
+  Fact 0.13: The Imperial State of Iran adopted the Cylinder as a national symbol of Iran.
+  Fact 0.14: The Imperial State put the Cylinder on display in Tehran in 1971.
+  Fact 0.15: The 1971 display in Tehran commemorated the 2,500 year celebration of the Persian Empire.
+  Fact 0.16: On October 14, Princess Ashraf Pahlavi, the sister of Mohammad Reza Shah, presented United Nations Secretary General U Thant with a replica of the Cylinder.
+  Fact 0.17: Princess Ashraf Pahlavi asserted that "the heritage of Cyrus was the heritage of human understanding, tolerance, courage, compassion and, above all, human liberty."
+
+Retrieved items:
+<item 1>
+United States Bill of Rights
+In an FBI sting operation , it was recovered in 2003 . The copy retained by the First Congress has been on display ( along with the Constitution and the
+Declaration of Independence ) in the Rotunda for the Charters of Freedom room at the National Archives Building in Washington , D.C. since December 13 , 1952 .
+After fifty years on display , signs of deterioration in the casing were noted , while the documents themselves appeared to be well preserved . Accordingly ,
+the casing was updated and the Rotunda rededicated on September 17 , 2003 . In his dedicatory remarks , President George W. Bush stated , `` The true ( American
+) revolution was not to defy one earthly power , but to declare principles that stand above every earthly power -- the equality of each person before God , and
+the responsibility of government to secure the rights of all . '' In 1941 , President Franklin D. Roosevelt declared December 15 to be Bill of Rights Day ,
+commemorating the 150th anniversary of the ratification of the Bill of Rights .
+</item 1>
+
+<item 2>
+United States Bill of Rights
+Several sought to protect individual personal rights by limiting various Constitutional powers of Congress . Like Washington , Madison urged Congress to keep
+the revision to the Constitution `` a moderate one '' , limited to protecting individual rights . Madison was deeply read in the history of government and used
+a range of sources in composing the amendments . The English Magna Carta of 1215 inspired the right to petition and to trial by jury , for example , while the
+English Bill of Rights of 1689 provided an early precedent for the right to keep and bear arms ( although this applied only to Protestants ) and prohibited
+cruel and unusual punishment . The greatest influence on Madison 's text , however , was existing state constitutions . Many of his amendments , including his
+proposed new preamble , were based on the Virginia Declaration of Rights drafted by Anti-Federalist George Mason in 1776 . To reduce future opposition to
+ratification , Madison also looked for recommendations shared by many states . He did provide one , however , that no state had requested : `` No state shall
+violate the equal rights of conscience , or the freedom of the press , or the trial by jury in criminal cases . ''
+</item 2>
+
+<item 3>
+United States Bill of Rights
+wikipedia.org/w/index.php?title=United_States_Bill_of_Rights&oldid=838149973 '' Categories : 1st United States Congress 1791 in American politics 1791 in
+American law Amendments to the United States Constitution American Enlightenment George Mason History of the United States ( 1789 -- 1849 ) James Madison
+National human rights instruments Official documents of the United States Presidency of George Washington United States Constitution Hidden categories :
+Subscription required using via Pages containing links to subscription - only content Wikipedia indefinitely semi-protected pages Wikipedia indefinitely move -
+protected pages Good articles Use mdy dates from January 2017 Articles containing potentially dated statements from 2016 All articles containing potentially
+dated statements Articles with Encyclopædia Britannica links Articles with Project Gutenberg links Articles with LibriVox links Wikipedia articles with VIAF
+identifiers Wikipedia articles with LCCN identifiers Wikipedia articles with GND identifiers Talk View source Contents About Wikipedia Wikibooks Wikiquote
+Wikisource Languages Azərbaycanca Беларуская Български Català Čeština Deutsch Eesti Ελληνικά Español Esperanto فارسی Français
+</item 3>
+
+<item 4>
+Fundamental rights in India
+They are covered in Part III ( Articles 12 to 35 ) of Indian constitution . Contents ( hide ) 1 Genesis 2 Significance and characteristics 3 Right to equality 4
+Right to freedom 5 Right against exploitation 6 Right to freedom of religion 7 Right to life 8 Cultural and Educational rights 9 Right to constitutional
+remedies 10 Right to Privacy 11 Critical analysis 12 Amendments 13 Fundamental rights not sacrosanct 13.1 Validity of Article 31B 13.2 Amendment to Article 31C
+13.3 Right to property 13.4 Right to education 14 See also 15 References 16 Footnotes Genesis ( edit ) The development of constitutionally guaranteed
+fundamental human rights in India was inspired by historical examples such as England 's Bill of Rights ( 1689 ) , the United States Bill of Rights ( approved
+on 17 September 1787 , final ratification on 15 December 1791 ) and France 's Declaration of the Rights of Man ( created during the revolution of 1789 , and
+ratified on 26 August 1789 ) .
+</item 4>
+
+<item 5>
+Fundamental rights in India
+A notable development during that period having significant effect on the Indian constitution took place on 10 December 1948 when the United Nations General
+Assembly adopted the Universal Declaration of Human Rights and called upon all member states to adopt these rights in their respective constitutions . The
+fundamental rights were included in the First Draft Constitution ( February 1948 ) , the Second Draft Constitution ( 17 October 1948 ) and final Third Draft
+Constitution ( 26 November 1949 ) , prepared by the Drafting Committee . Significance and characteristics ( edit ) The fundamental rights were included in the
+constitution because they were considered essential for the development of the personality of every individual and to preserve human dignity . The writers of
+the constitution regarded democracy of no avail if civil liberties , like freedom of speech and religion were not recognised and protected by the State .
+According to them , `` democracy '' is , in essence , a government by opinion and therefore , the means of formulating public opinion should be secured to the
+people of a democratic nation . For this purpose , the constitution guaranteed to all the citizens of India the freedom of speech and expression and various
+other freedoms in the form of the fundamental rights .
+</item 5>
+
+<item 6>
+Cyrus Cylinder
+The Cylinder has also been referred to by Mohammad Reza Pahlavi , the last Shah of Iran as the first declaration of universal human rights , a view rejected by
+some historians as anachronistic and a misunderstanding of the Cylinder 's generic nature as a typical statement made by a new monarch at the beginning of his
+reign . Neil MacGregor , Director of the British Museum , has stated that the cylinder was `` the first attempt we know about running a society , a state with
+different nationalities and faiths -- a new kind of statecraft . '' It was adopted as a national symbol of Iran by the Imperial State which put it on display in
+Tehran in 1971 to commemorate 2,500 year celebration of the Persian Empire . On October 14 , the Mohammad Reza Shah 's sister , Princess Ashraf Pahlavi ,
+presented the United Nations Secretary General U Thant with a replica of the Cylinder . The princess asserted that `` the heritage of Cyrus was the heritage of
+human understanding , tolerance , courage , compassion and , above all , human liberty '' .
+</item 6>
+
+<item 7>
+United States Bill of Rights
+`` American Indians and the Constitution '' . Encyclopedia of the American Constitution . -- via HighBeam Research ( subscription required ) . Retrieved July 16
+, 2013 . Jump up ^ `` Primary Documents in American History '' , Library of Congress ^ Jump up to : Jeffrey Jowell and Jonathan Cooper ( 2002 ) . Understanding
+Human Rights Principles . Oxford and Portland , Oregon : Hart Publishing . p. 180 . ISBN 9781847313157 . Retrieved 16 March 2017 . ^ Jump up to : Loveland , Ian
+( 2002 ) . `` Chapter 18 -- Human Rights I : Traditional Perspectives '' . Constitutional Law , Administrative Law , and Human Rights : A Critical Introduction
+( Seventh ed . ) . London : Oxford University Press . p. 559 . ISBN 9780198709039 . Retrieved 16 March 2017 . ^ Jump up to : Jayawickrama , Nihal ( 2002 ) . The
+Judicial Application of Human Rights Law : National , Regional and International Jurisprudence . Cambridge : Cambridge University Press . p.
+</item 7>
+
+<item 8>
+United States Bill of Rights
+Bordewich , Fergus M. The First Congress : How James Madison , George Washington , and a Group of Extraordinary Men Invented the Government ( 2016 ) on 1789 --
+1791 . Cogan , Neil H. ( 2015 ) . The Complete Bill of Rights : The Drafts , Debates , Sources , and Origins . Second edition . New York : Oxford University
+Press . Schwartz , Bernard ( 1992 ) . The great rights of mankind : a history of the American Bill of Rights . Rowman & Littlefield . ISBN 978 - 0 - 945612 - 28
+- 5 -- via Google Books . Smith , Rich ( 2007 ) . The Bill of Rights : Defining Our Freedoms . ABDO . ISBN 978 - 1 - 59928 - 913 - 7 -- via Google Books . Stair
+, Nancy L. ( 2003 ) . The Bill of Rights : a primary source investigation into the first ten amendments of the Constitution . The Rosen Publishing Group . p. 53
+.
+</item 8>
+
+<item 9>
+Cyrus Cylinder
+121 ( author unknown ) ; Jump up ^ Damien Kingsbury , Human Rights in Asia : A Reassessment of the Asian Values Debate ( Macmillan , 2008 ) page 21 ; Sabine C.
+Carey , The Politics of Human Rights : The Quest for Dignity ( 2010 ) p 19 ; Paul Gordon Lauren , The Evolution of International Human Rights ( 2003 ) Page 11 ;
+Willem Adriaan Veenhoven , Case Studies on Human Rights and Fundamental Freedoms : A World Survey : Volume 1 ( 1975 ) Page 244 Jump up ^ Decolonisation ,
+Globalisation : Language - in - Education Policy and Practice , Peter W. Martin , p. 99 Jump up ^ Talbott , W.J. Which Rights Should be Universal ? , p. 40 .
+Oxford University Press US , 2005 . ISBN 978 - 0 - 19 - 517347 - 5 Jump up ^ Abtahi , pp. 1 -- 38 . Jump up ^ Cited in Shabani , p.
+</item 9>
+
+<item 10>
+Cyrus Cylinder
+Pahlavi Iranian government 's view ( edit ) Cyrus Cylinder at the center of the official emblem of 2,500 year celebration of the Persian Empire at Pahlavi
+Iranian imperial era The Cyrus Cylinder was dubbed the `` first declaration of human rights '' by the pre-Revolution Iranian government , a reading prominently
+advanced by Shah Mohammed Reza Pahlavi , in a 1967 book , The White Revolution of Iran . The Shah identified Cyrus as a key figure in government ideology and
+associated his government with the Achaemenids . He wrote that `` the history of our empire began with the famous declaration of Cyrus , which , for its
+advocacy of humane principles , justice and liberty , must be considered one of the most remarkable documents in the history of mankind . '' The Shah described
+Cyrus as the first ruler in history to give his subjects `` freedom of opinion and other basic rights '' . In 1968 , the Shah opened the first United Nations
+Conference on Human Rights in Tehran by saying that the Cyrus Cylinder was the precursor to the modern Universal Declaration of Human Rights .
+</item 10>
+=== END ITEM id=4ccd021d4d364dd5 ===
+
+=== ITEM id=c48da263889f720e ===
+Gold sentences and facts:
+Sentence 0: The phrase `` objects in ( the ) mirror are closer than they appear '' is a safety warning that is required to be engraved on passenger side mirrors of motor vehicles in the USA , Canada , Nepal , India and Saudi Arabia . It is present because while these mirrors ' convexity gives them a useful field of view , it also makes objects appear smaller . Since smaller - appearing objects seem farther away than they actually are , a driver might make a maneuver such as a lane change assuming an adjacent vehicle is a safe distance behind , when in fact it is quite a bit closer . The warning serves as a reminder to the driver of this potential problem .
+  Fact 0.0: The phrase 'objects in (the) mirror are closer than they appear' is a safety warning.
+  Fact 0.1: The safety warning is required to be engraved on passenger side mirrors of motor vehicles.
+  Fact 0.2: The engraving requirement applies in the USA, Canada, Nepal, India and Saudi Arabia.
+  Fact 0.3: The warning is present on passenger side mirrors because their convexity gives them a useful field of view.
+  Fact 0.4: The convexity of passenger side mirrors makes objects appear smaller.
+  Fact 0.5: Smaller-appearing objects seem farther away than they actually are.
+  Fact 0.6: A driver might make a maneuver such as a lane change assuming an adjacent vehicle is a safe distance behind.
+  Fact 0.7: In fact, the adjacent vehicle is quite a bit closer than the driver assumes.
+  Fact 0.8: The warning serves as a reminder to the driver of this potential problem.
+
+Retrieved items:
+<item 1>
+If a tree falls in a forest
+`` The mind is like akasa ( space ) . Just as there are the objects in the akasa , so there are thoughts in the mind . The akasa is the counterpart of the mind
+and objects are of thought . One can not hope to measure the universe and study the phenomena . It is impossible . For the objects are mental creations ... The
+universe is only an object created by the mind and has its being in the mind . '' ( Talks with Sri Ramana Maharshi , pp. 478 -- 479 ) . `` The shrutis ( a
+subdivision of the Vedas ) and the sages say that the objects are only mental creations . They have no substantive being . Investigate the matter and ascertain
+the truth of the statement . The result will be the conclusion that the objective world is in the subjective consciousness . '' ( TWSRM , p. 479 ) . In popular
+culture ( edit ) Canadian songwriter , social activist and environmentalist Bruce Cockburn poses the question in the chorus of his 1989 song `` If a Tree Falls
+'' and frames it with his lyrics as a pressing question regarding the cause and effect of deforestation .
+</item 1>
+
+<item 2>
+Speed limit
+3 -- Drivers Who Are Hazards : Vehicles may be partly hidden by blind intersections or alleys . If you only can see the rear or front end of a vehicle but not
+the driver , then he or she ca n't see you . Be alert because he / she may back out or enter into your lane . Always be prepared to stop ... ( pg 2 - 26 ) 2.11.
+4 -- Vehicle Factors : Headlights . At night your headlights will usually be the main source of light for you to see by and for others to see you . You ca n't
+see nearly as much with your headlights as you see in the daytime . With low beams you can see ahead about 250 feet and with high beams about 350 - 500 feet .
+You must adjust your speed to keep your stopping distance within your sight distance . This means going slowly enough to be able to stop within the range of
+your headlights ... ( pg 13 - 1 ) 13.1. 2 -- Intersections As you approach an intersection : Check traffic thoroughly in all directions . Decelerate gently .
+Brake smoothly and , if necessary , change gears .
+</item 2>
+
+<item 3>
+Objects in mirror are closer than they appear
+A reference in the 2011 film Transformers : Dark of the Moon film occurs when Dino , Bumblebee and Sideswipe are protecting Sentinel from the dreads , this
+appears in a brief shot in Dino 's mirror . `` Objects In The Mirror , '' a song performed by American rapper Mac Miller on his second studio album Watching
+Movies with the Sound Off `` Subjects in the mirror are more far than they appear '' the title of experimental visual project by Hungarian director / production
+designer Pater Sparrow `` Objects in the Mirror , '' a 2015 song by a-ha . Objects in the mirror , a song performed by Chris Miles . ( 2016 ) Objects in mirror
+are closer than they appear was a level in the videogame `` Bugs Bunny : Lost in time '' ( PlayStation 1 ) . In My Little Pony : The Movie , the sentence ``
+Objects in windows may be less mountainous than they appear '' is uttered .
+</item 3>
+
+<item 4>
+Objects in mirror are closer than they appear
+Explanation from PhysLink.com . Retrieved from `` https://en.wikipedia.org/w/index.php?title=Objects_in_mirror_are_closer_than_they_appear&oldid=838121569 ''
+Categories : English phrases Mirrors Car safety Hidden categories : Wikipedia articles needing clarification from March 2016 Interlanguage link template link
+number Talk About Wikipedia 한국어 Edit links This page was last edited on 25 April 2018 , at 01 : 58 . Text is available under the Creative Commons Attribution -
+ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark
+of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 4>
+
+<item 5>
+If a tree falls in a forest
+Washington - state - based wilderness conservatory Northwest Trek used a shortened form of the quote in its mid-1970s television advertisement , as such : ``
+There is no sound unless someone is there to see it or hear it . Experience it at Northwest Trek . '' See also ( edit ) Counterfactual definiteness Descartes '
+dream argument Epistemology Object ( philosophy ) Observer effect ( physics ) Kōan Ontology Schrödinger 's cat Principle of locality References ( edit ) Jump up
+^ A Treatise Concerning the Principles of Human Knowledge , 1734 . section 23 . Jump up ^ A Treatise Concerning the Principles of Human Knowledge , 1734 .
+section 45 . Jump up ^ Whether Berkeley thought objects continued to exist when unperceived by finite minds , and if so , in what manner , is the subject of
+serious debate among Berkeley scholars . Jump up ^ The Chautauquan , June 1883 , Volume 3 , Issue 9 , p. 543 Jump up ^ Scientific American , April 5 , 1884 , pg
+218 .
+</item 5>
+
+<item 6>
+Vanishing point
+This is one - point perspective . Similarly , when the image plane intersects two world - coordinate axes , lines parallel to those planes will meet at infinity
+and form two vanishing points . This is called two - point perspective . In three - point perspective the image plane intersects the x , y , and z axes and
+therefore lines parallel to these axes intersect , resulting in three different vanishing points . See also : Property 1 below Theorem ( edit ) The vanishing
+point theorem is the principal theorem in the science of perspective . It says that the image in a picture plane π of a line L in space , not parallel to the
+picture , is determined by its intersection with π and its vanishing point . Some authors have used the phrase , `` the image of a line includes its vanishing
+point '' . Guidobaldo del Monte gave several verifications , and Humphry Ditton called the result the `` main and Great Proposition '' . Brook Taylor wrote the
+first book in English on perspective in 1714 , which introduced the term `` vanishing point '' and was the first to fully explain the geometry of multipoint
+perspective , and historian Kirsti Andersen compiled these observations .
+</item 6>
+
+<item 7>
+Speed limit
+189 , p. 335 , ( California Supreme Court reporter ) . July 27 , 1922 . Retrieved 2013 - 07 - 27 . This is but a reiteration of the rule , in statutory form ,
+which has always been in force without regard to a statutory promulgation to the effect that drivers or operators of vehicles , and more particularly motor
+vehicles , must be specially watchful in anticipation of the presence of others at places where other vehicles are constantly passing , and where men , women ,
+and children are liable to be crossing , such as corners at the intersections of streets or other similar places or situations where people are likely to fail
+to observe an approaching automobile . ^ Jump up to : www.destatis.de ( 10 July 2013 ) . `` Unfallentwicklung auf deutschen Straßen 2012 ( Crashes on German
+Roads 2012 ) '' ( PDF ) . Statistisches Bundesamt ( Federal Statistics Office ) . Statistisches Bundesamt . Retrieved 2013 - 09 - 23 .
+</item 7>
+
+<item 8>
+Objects in mirror are closer than they appear
+In popular culture ( edit ) Despite its origin as a utilitarian safety warning , the phrase has become a well known catch phrase that has been used for many
+other purposes . Some of them are : Objects in the Mirror Are Closer Than They Appear , the 2000 debut album of rap rock group Confrontation Camp . Objects in
+the Mirror Are Closer Than They Appear , a 1993 album by Nancy Moran Objects in Mirror Are Closer Than They Appear , a 2005 album by Jozef van Wissem . Objects
+in Mirror Are Closer Than They Appear , a 1995 novel by Katharine Weber . Showing an approach of a Tyrannosaurus rex in the film Jurassic Park , which was
+parodied in Toy Story 2 . A Far Side cartoon by Gary Larson in which the side mirror showed a very large eyeball . A reference in Ace Ventura : Pet Detective ,
+in which a pejorative term replaces `` objects . '' `` Objects in the Rear View Mirror May Appear Closer than They Are , '' a 1994 song performed by Meat Loaf
+and written by Jim Steinman - the opposite of the safety warning .
+</item 8>
+
+<item 9>
+Objects in mirror are closer than they appear
+Iranian film Objects in Mirror ( fa ) See also ( edit ) Blind spot ( automobile ) Blind spot monitor Driver visibility Parking sensors Rear - view mirror Mind
+the gap , another safety warning used at various London Underground stations that has also become a well - known catchphrase . References ( edit ) Jump up ^ For
+example , in the U.S , PART 571 Federal Motor Vehicle Safety Standards , Section 571.111 S5. 4.2 `` Each convex mirror shall have permanently and indelibly
+marked at the lower edge of the mirror 's reflective surface , in letters not less than 4.8 mm nor more than 6.4 mm high the words `` Objects in Mirror Are
+Closer Than They Appear . '' Jump up ^ Why does the passenger side window on my car state ' objects in mirror are closer than they appear ? ' Explanation from
+PhysLink.com .
+</item 9>
+
+<item 10>
+Objects in mirror are closer than they appear
+Objects in mirror are Closer than they appear - wikipedia Objects in mirror are Closer than they appear Jump to : navigation , search Side - view mirror with
+legend Wing mirror on Korean - specification vehicle . Legend in Korean reads `` Objects in mirror are closer than they appear '' . Main article : Wing mirror
+The phrase `` objects in ( the ) mirror are closer than they appear '' is a safety warning that is required to be engraved on passenger side mirrors of motor
+vehicles in the USA , Canada , Nepal , India and Saudi Arabia . It is present because while these mirrors ' convexity gives them a useful field of view , it
+also makes objects appear smaller . Since smaller - appearing objects seem farther away than they actually are , a driver might make a maneuver such as a lane
+change assuming an adjacent vehicle is a safe distance behind , when in fact it is quite a bit closer . The warning serves as a reminder to the driver of this
+potential problem . Comparison of the real over-the - shoulder view ( green arrow ) and apparent through the passenger side mirror ( sum of red arrows )
+evaluation of distance between the driver 's head and the object behind .
+</item 10>
+=== END ITEM id=c48da263889f720e ===
+
+=== ITEM id=d9879320c7f886af ===
+Gold sentences and facts:
+Sentence 0: Cast Character Rank / Position Seasons Notes Regular Recurring Guest Christopher Meloni Elliot Stabler Detective 1 -- 12 Mariska Hargitay Olivia Benson Lieutenant 1 -- Richard Belzer John Munch DA Investigator 1 -- 15 15 , 17 Dann Florek Donald Cragen Captain 1 -- 15 16 Michelle Hurd Monique Jeffries Detective 1 -- 2 Stephanie March Alexandra Cabot Assistant District Attorney 2 -- 5 , 11 2 , 10 , 13 6 Ice - T Odafin `` Fin '' Tutuola Detective 2 -- Tamara Tunie Melinda Warner Medical Examiner 7 -- 12 2 -- 6 , 13 -- 17 19 B.D. Wong George Huang FBI Special Agent 4 -- 12 2 -- 3 13 -- 15 , 17 Diane Neal Casey Novak Senior Assistant District Attorney 5 -- 9 13 12 Adam Beach Chester Lake Detective 9 8 Michaela McManus Kim Greylek Assistant District Attorney 10 Danny Pino Nick Amaro Detective 13 -- 16 Kelli Giddish Amanda Rollins Detective 13 -- Raúl Esparza Rafael Barba Assistant District Attorney 15 -- 14 Peter Scanavino Dominick Carisi Jr . Detective 16 -- 16
+  Fact 0.0: Christopher Meloni plays Elliot Stabler.
+  Fact 0.1: Elliot Stabler is a Detective.
+  Fact 0.2: Christopher Meloni's season entry is 1 to 12.
+  Fact 0.3: Mariska Hargitay plays Olivia Benson.
+  Fact 0.4: Olivia Benson is a Lieutenant.
+  Fact 0.5: Mariska Hargitay's season entry starts at season 1.
+  Fact 0.6: Richard Belzer plays John Munch.
+  Fact 0.7: John Munch is a DA Investigator.
+  Fact 0.8: Richard Belzer's season entries are 1 to 15 and 15 and 17.
+  Fact 0.9: Dann Florek plays Donald Cragen.
+  Fact 0.10: Donald Cragen is a Captain.
+  Fact 0.11: Dann Florek's season entries are 1 to 15 and 16.
+  Fact 0.12: Michelle Hurd plays Monique Jeffries.
+  Fact 0.13: Monique Jeffries is a Detective.
+  Fact 0.14: Michelle Hurd's season entry is 1 to 2.
+  Fact 0.15: Stephanie March plays Alexandra Cabot.
+  Fact 0.16: Alexandra Cabot is an Assistant District Attorney.
+  Fact 0.17: Stephanie March's season entries are 2 to 5, 11, 2, 10, 13, and 6.
+  Fact 0.18: Ice - T plays Odafin "Fin" Tutuola.
+  Fact 0.19: Odafin "Fin" Tutuola is a Detective.
+  Fact 0.20: Ice - T's season entry starts at season 2.
+  Fact 0.21: Tamara Tunie plays Melinda Warner.
+  Fact 0.22: Melinda Warner is a Medical Examiner.
+  Fact 0.23: Tamara Tunie's season entries are 7 to 12, 2 to 6, 13 to 17, and 19.
+  Fact 0.24: B.D. Wong plays George Huang.
+  Fact 0.25: George Huang is an FBI Special Agent.
+  Fact 0.26: B.D. Wong's season entries are 4 to 12, 2 to 3, 13 to 15, and 17.
+  Fact 0.27: Diane Neal plays Casey Novak.
+  Fact 0.28: Casey Novak is a Senior Assistant District Attorney.
+  Fact 0.29: Diane Neal's season entries are 5 to 9, 13, and 12.
+  Fact 0.30: Adam Beach plays Chester Lake.
+  Fact 0.31: Chester Lake is a Detective.
+  Fact 0.32: Adam Beach's season entries are 9 and 8.
+  Fact 0.33: Michaela McManus plays Kim Greylek.
+  Fact 0.34: Kim Greylek is an Assistant District Attorney.
+  Fact 0.35: Michaela McManus's season entry is 10.
+  Fact 0.36: Danny Pino plays Nick Amaro.
+  Fact 0.37: Nick Amaro is a Detective.
+  Fact 0.38: Danny Pino's season entry is 13 to 16.
+  Fact 0.39: Kelli Giddish plays Amanda Rollins.
+  Fact 0.40: Amanda Rollins is a Detective.
+  Fact 0.41: Kelli Giddish's season entry starts at season 13.
+  Fact 0.42: Raúl Esparza plays Rafael Barba.
+  Fact 0.43: Rafael Barba is an Assistant District Attorney.
+  Fact 0.44: Raúl Esparza's season entry is 15 to 14.
+  Fact 0.45: Peter Scanavino plays Dominick Carisi Jr.
+  Fact 0.46: Dominick Carisi Jr. is a Detective.
+  Fact 0.47: Peter Scanavino's season entry is 16 to 16.
+
+Retrieved items:
+<item 1>
+Law & Order: Special Victims Unit
+On May 12 , 2017 , the series was renewed for a nineteenth season , which premiered on September 27 , 2017 . As of January 17 , 2018 , Law & Order : Special
+Victims Unit has aired 421 original episodes . Contents ( hide ) 1 Production 1.1 History and development 1.1. 1 Executive producers 1.2 Filming 1.3 Broadcast
+history 1.4 Russian adaptation 2 Casting 2.1 Salaries 3 Cast and characters 4 Series overview 5 Episodes 6 Reception 6.1 U.S. television ratings 6.2 Awards and
+honors 7 Broadcast and streaming 7.1 Syndication 8 International broadcast 9 References 9.1 Notes 9.2 Bibliography 10 External links Production ( edit ) History
+and development ( edit ) The idea for Law & Order : Special . Victims Unit originated with the 1986 `` preppie murder '' case of Robert Chambers , who strangled
+Jennifer Levin , a woman he dated whom he later killed during what he claimed was consensual `` rough sex '' in Manhattan 's Central Park .
+</item 1>
+
+<item 2>
+Law & Order: Special Victims Unit
+Cast and characters ( edit ) Main article : List of Law & Order : Special Victims Unit characters Cast Character Rank / Position Seasons Notes Regular Recurring
+Guest Christopher Meloni Elliot Stabler Detective 1 -- 12 Mariska Hargitay Olivia Benson Lieutenant 1 -- Richard Belzer John Munch DA Investigator 1 -- 15 15 ,
+17 Dann Florek Donald Cragen Captain 1 -- 15 16 Michelle Hurd Monique Jeffries Detective 1 -- 2 Stephanie March Alexandra Cabot Assistant District Attorney 2 --
+5 , 11 2 , 10 , 13 6 Ice - T Odafin `` Fin '' Tutuola Detective 2 -- Tamara Tunie Melinda Warner Medical Examiner 7 -- 12 2 -- 6 , 13 -- 17 19 B.D.
+</item 2>
+
+<item 3>
+Law & Order: Special Victims Unit
+External links ( edit ) Wikimedia Commons has media related to Law & Order : Special Victims Unit . Wikiquote has quotations related to : Law & Order : Special
+Victims Unit Official website on NBC Law & Order : Special Victims Unit on IMDb Law & Order : Special Victims Unit at TV.com `` List of Law & Order : SVU
+Episodes '' . TV Guide . Law & Order : Special Victims Unit on MyNetworkTV Law & Order franchise Series Law & Order ( 1990 -- 2010 ) Law & Order : Special
+Victims Unit ( 1999 -- present ) Law & Order : Criminal Intent ( 2001 -- 2011 ) Law & Order : Trial by Jury ( 2005 -- 2006 ) Law & Order : LA ( 2010 -- 2011 )
+Law & Order True Crime ( 2017 -- present ) Adaptations Paris enquêtes criminelles ( 2007 -- 2008 ) Law & Order : UK ( 2009 -- 2014 ) Video games Law & Order :
+Dead on the Money Law & Order : Double or Nothing Law & Order : Justice Is Served Law & Order : Criminal Intent Law & Order : Legacies Related series Homicide :
+</item 3>
+
+<item 4>
+Law & Order: Special Victims Unit
+1999 ( 1999 - 09 - 20 ) -- present Chronology Related shows Law & Order franchise External links Website Law & Order : Special Victims Unit ( often abbreviated
+to Law & Order : SVU or just SVU ) is an American police procedural , legal , crime drama television series set in New York City , where it is also primarily
+produced . In the style of the original Law & Order , episodes are often `` ripped from the headlines '' or loosely based on real crimes that have received
+media attention . Created by Dick Wolf , the series premiered on NBC on September 20 , 1999 , as the second series in Wolf 's successful Law & Order franchise .
+Law & Order : Special Victims Unit has been nominated for and won numerous awards , including the 2006 Emmy for Outstanding Lead Actress in a Drama Series for
+Mariska Hargitay , the first , and to date only , Emmy to be received by a regular on any Law & Order series . It is the current longest running scripted
+non-animated U.S.
+</item 4>
+
+<item 5>
+Law & Order: Special Victims Unit
+Law & Order : Special Victims Unit - Wikipedia Law & Order : Special Victims Unit Jump to : navigation , search For the current season , see Law & Order :
+Special Victims Unit ( season 19 ) . Law & Order : Special Victims Unit Also known as Law & Order : SVU SVU Genre Police procedural Legal drama Thriller Created
+by Dick Wolf Starring Christopher Meloni Mariska Hargitay Richard Belzer Dann Florek Michelle Hurd Stephanie March Ice - T B.D. Wong Diane Neal Tamara Tunie
+Adam Beach Michaela McManus Danny Pino Kelli Giddish Raúl Esparza Peter Scanavino Opening theme Theme of Law & Order : Special Victims Unit Composer ( s ) Mike
+Post Country of origin United States Original language ( s ) English No. of seasons 19 No. of episodes 421 ( list of episodes ) Production Executive producer (
+s ) Dick Wolf Robert Palm ( season 1 ) David J.
+</item 5>
+
+<item 6>
+Law & Order: Special Victims Unit
+The unit also works with the Manhattan District Attorney 's office as they prosecute cases and seek justice for SVU 's victims and survivors with precision and
+a passion to win and bring closure to the intense investigations . The series often uses stories that are `` ripped from the headlines '' or based on real
+crimes . Such episodes take a real crime and fictionalize it by changing some details . Originally the show focused around the detective pairings of Elliot
+Stabler & Olivia Benson and John Munch & Brian Cassidy . Stabler is a seasoned veteran of the unit who has seen it all and tries his best to protect his family
+from the horrors he sees every day . His partner Benson 's difficult past as the child of a rape victim is the reason she joined the unit . Backing them up is
+John Munch , and his first partner Brian Cassidy . Munch is a transfer from Baltimore 's homicide unit , who brings his acerbic wit , conspiracy theories , and
+street - honed investigative skills . Whilst Cassidy is young and eager to learn from his fellow detectives . These two detective teams received support from
+Detectives Monique Jeffries and Ken Briscoe .
+</item 6>
+
+<item 7>
+Law & Order: Special Victims Unit
+The series follows a unit of investigators in Moscow whose job is to investigate crimes of a sexual nature . The series airs on NTV and is produced by Pavel
+Korchagin , Felix Kleiman , and Edward Verzbovski and directed by Dmitry Brusnikin . The screenplays are written by Sergei Kuznvetsov , Elena Karavaeshnikova ,
+and Maya Shapovalova . Casting ( edit ) Cast of Law & Order : Special Victims Unit Cast of seasons 4 -- 5 ( 2002 -- 04 ) , from left : Ice - T , Richard Belzer
+, Mariska Hargitay , Dann Florek , Christopher Meloni , B.D.
+</item 7>
+
+<item 8>
+Law & Order: Special Victims Unit
+Wong , Stephanie March Cast of season 9 ( 2007 -- 08 ) , from left : Diane Neal , Wong , Tamara Tunie , Meloni , Florek , Hargitay , Ice - T , Belzer , Adam
+Beach Cast of season 10 ( 2008 -- 09 ) from left : Michaela McManus , Wong , Tunie , Meloni , Hargitay , Florek , Belzer , Ice - T The cast of season 15 ( 2013
+-- 2014 ) from left : Raúl Esparza , Florek , Danny Pino , Hargitay , Kelli Giddish , Belzer , Ice - T The cast of seasons 17 -- 18 ( 2015 -- 2017 ) . from left
+: Esparza , Giddish , Hargitay , Ice - T , Peter Scanavino Casting for the lead characters of Law & Order : Special Victims Unit occurred in the spring of 1999
+. Dick Wolf , along with officials from NBC and Studios USA were at the final auditions for the two leads at Rockefeller Center .
+</item 8>
+
+<item 9>
+Law & Order: Special Victims Unit
+Wong George Huang FBI Special Agent 4 -- 12 2 -- 3 13 -- 15 , 17 Diane Neal Casey Novak Senior Assistant District Attorney 5 -- 9 13 12 Adam Beach Chester Lake
+Detective 9 8 Michaela McManus Kim Greylek Assistant District Attorney 10 Danny Pino Nick Amaro Detective 13 -- 16 Kelli Giddish Amanda Rollins Detective 13 --
+Raúl Esparza Rafael Barba Assistant District Attorney 15 -- 14 Peter Scanavino Dominick Carisi Jr .
+</item 9>
+
+<item 10>
+Law & Order: Special Victims Unit
+Series overview ( edit ) In the criminal justice system , sexually based offenses are considered especially heinous . In New York City , the dedicated
+detectives who investigate these vicious felonies are members of an elite squad known as the Special Victims Unit . These are their stories . -- Opening
+narration spoken by Steven Zirnkilton Based out of the New York City Police Department 's 16th precinct in Manhattan , Law & Order : Special Victims Unit delves
+into the dark side of the New York underworld as the detectives of a new elite force , the Special Victims Unit ( SVU for short ) , investigate and prosecute
+various sexually - oriented crimes including rape , pedophilia , and domestic violence . They also investigate the abuses of children , the disabled and elderly
+victims of non-sexual crimes who require specialist handling . All the while trying to balance the effects of the investigation on their own lives . Its stories
+also touch on the political and societal issues associated with gender identity , sexual preferences , and equality rights . While the victim is often murdered
+, this is not always the case , and victims frequently play prominent roles in episodes .
+</item 10>
+=== END ITEM id=d9879320c7f886af ===
+
+=== ITEM id=0ea3096cfe4b1a15 ===
+Gold sentences and facts:
+Sentence 0: In Moulmein , the narrator -- Orwell , writing in the first person -- is a police officer during a period of intense anti-European sentiment . Although his intellectual sympathies lie with the Burmese , his official role makes him a symbol of the oppressive imperial power . As such , he is subjected to constant baiting and jeering by the local people .
+  Fact 0.0: In Moulmein, the narrator is a police officer.
+  Fact 0.1: The narrator is Orwell.
+  Fact 0.2: Orwell writes in the first person.
+  Fact 0.3: The narrator is a police officer during a period of intense anti-European sentiment.
+  Fact 0.4: The narrator's intellectual sympathies lie with the Burmese.
+  Fact 0.5: The narrator's official role makes him a symbol of the oppressive imperial power.
+  Fact 0.6: The narrator is subjected to constant baiting and jeering by the local people.
+  Fact 0.7: The narrator is subjected to this baiting because of his role as a symbol of imperial power.
+Sentence 1: The essay describes the experience of the English narrator , possibly Orwell himself , called upon to shoot an aggressive elephant while working as a police officer in Burma . Because the locals expect him to do the job , he does so against his better judgment , his anguish increased by the elephant 's slow and painful death . The story is regarded as a metaphor for British imperialism , and for Orwell 's view that `` when the white man turns tyrant it is his own freedom that he destroys . ''
+  Fact 1.0: The essay describes the experience of the English narrator.
+  Fact 1.1: The narrator is possibly Orwell himself.
+  Fact 1.2: The narrator is called upon to shoot an aggressive elephant.
+  Fact 1.3: The narrator is working as a police officer in Burma when he is called upon to shoot the elephant.
+  Fact 1.4: The locals expect the narrator to shoot the elephant.
+  Fact 1.5: The narrator shoots the elephant against his better judgment.
+  Fact 1.6: The narrator's anguish is increased by the elephant's slow and painful death.
+  Fact 1.7: The story is regarded as a metaphor for British imperialism.
+  Fact 1.8: The story is regarded as a metaphor for Orwell's view that when the white man turns tyrant it is his own freedom that he destroys.
+
+Retrieved items:
+<item 1>
+Shooting an Elephant
+The essay finishes with him wondering if they will even understand his motive for having killed the elephant as he merely wished to salvage his pride .
+Conscience ( edit ) The narrator 's conscience plagues him greatly as he finds himself trapped between the `` hatred of the empire ( he ) served '' and his ``
+rage against the evil - spirited little beasts who tried to make ( his ) job impossible . '' He claims that he is `` all for the Burmese and all against the
+British '' and goes on to say that `` feelings like these are the normal by - products of imperialism ; ask any Anglo - Indian official , if you can catch him
+off duty . '' This creates a sense of empathy from the imperialists for the natives , but as they treat their conquerors badly , they start to feel less guilty
+and so treat them badly once more . Film adaptation ( edit ) In 2015 , `` Shooting an Elephant '' was adapted into a short film by director Juan Pablo Rothie
+and Academy Award nominated writer Alec Sokolow . The film was shot entirely on location in Nepal starring Barry Sloane as Eric Blair . Fact or fiction ( edit )
+The degree to which the story is fiction has been disputed .
+</item 1>
+
+<item 2>
+Shooting an Elephant
+Kenny shooting an elephant in similar circumstances . When one biographer questioned Orwell 's wife , Sonia Brownell , she replied , `` Of course he shot a
+fucking a ( sic ) elephant . He said he did . Why do you always doubt his word ! '' See also ( edit ) Burmese Days Chunee George Orwell bibliography Musth Such
+, Such Were the Joys References ( edit ) ^ Jump up to : Runciman , David . Political Hypocrisy : The Mask of Power , from Hobbes to Orwell and Beyond .
+Princeton University Press , 2010 , pp. 182 -- 183 . ^ Jump up to : Orwell , George . `` Shooting an Elephant '' , The Literature Network , accessed April 17 ,
+2011 . Jump up ^ George Orwell : A Life ^ Jump up to : Larkin , Emma ( 2005 ) . Finding George Orwell in Burma ( First American ed . ) . New York : The Penguin
+Press . ISBN 1 - 59420 - 052 - 1 . Jump up ^ `` Elements of Fiction and Total Effect in Shooting an Elephant by George Orwell ( 2004 ) '' .
+</item 2>
+
+<item 3>
+Shooting an Elephant
+Retrieved 2011 - 10 - 08 . Jump up ^ `` Orwell still matters : Shooting an Elephant '' . rogalinski.com.pl -- Journalist blog . July 22 , 2011 . Archived from
+the original on May 19 , 2012 . Retrieved 2011 - 10 - 02 . ^ Jump up to : `` Staloysius : Shooting an Elephant analysis '' . Archived from the original on 2012
+- 04 - 06 . Retrieved 2011 - 10 - 08 . Jump up ^ `` Oppapers : Shooting an Elephant analysis '' . Retrieved 2011 - 10 - 10 . Jump up ^ `` Shooting an Elephant
+'' . IMDb . September 9 , 2014 . Retrieved February 21 , 2015 . Further reading ( edit ) Shooting an Elephant `` Audio Version of Shooting an Elephant '' Audio
+version of `` Shooting an Elephant '' read by Patrick E. McLean Orwell , George ( 1968 ) ( 1958 ) . Selected Writings . Heinemann Educational Books .
+</item 3>
+
+<item 4>
+Shooting an Elephant
+As ruler , he notes that it is his duty to appear resolute , with his word being final . I perceived in this moment that when the white man turns tyrant it is
+his own freedom that he destroys . He becomes a sort of hollow , posing dummy , the conventionalized figure of a sahib . For it is the condition of his rule
+that he shall spend his life in trying to impress the `` natives , '' and so in every crisis he has got to do what the `` natives '' expect of him . He wears a
+mask , and his face grows to fit it . I had got to shoot the elephant . I had committed myself to doing it when I sent for the rifle . A sahib has got to act
+like a sahib ; he has got to appear resolute , to know his own mind and do definite things . To come all that way , rifle in hand , with two thousand people
+marching at my heels , and then to trail feebly away , having done nothing -- no , that was impossible . The crowd would laugh at me . And my whole life , every
+white man 's life in the East , was one long struggle not to be laughed at .
+</item 4>
+
+<item 5>
+Shooting an Elephant
+Shooting an elephant - wikipedia Shooting an elephant Jump to : navigation , search `` Shooting an Elephant '' Cover of first anthology publication Author
+George Orwell Country United Kingdom Genre ( s ) Unknown whether fiction or non-fiction Published in New Writing Publication date 1936 `` Shooting an Elephant
+'' is an essay by George Orwell , first published in the literary magazine New Writing in late 1936 and broadcast by the BBC Home Service on 12 October 1948 .
+The essay describes the experience of the English narrator , possibly Orwell himself , called upon to shoot an aggressive elephant while working as a police
+officer in Burma . Because the locals expect him to do the job , he does so against his better judgment , his anguish increased by the elephant 's slow and
+painful death . The story is regarded as a metaphor for British imperialism , and for Orwell 's view that `` when the white man turns tyrant it is his own
+freedom that he destroys . '' Orwell spent some of his life in Burma in a position akin to that of the narrator , but the degree to which his account is
+autobiographical is disputed , with no conclusive evidence to prove it to be fact or fiction .
+</item 5>
+
+<item 6>
+Shooting an Elephant
+In Moulmein , the narrator -- Orwell , writing in the first person -- is a police officer during a period of intense anti-European sentiment . Although his
+intellectual sympathies lie with the Burmese , his official role makes him a symbol of the oppressive imperial power . As such , he is subjected to constant
+baiting and jeering by the local people . After receiving a call regarding a normally tame elephant 's rampage , the narrator , armed with a . 44 caliber
+Winchester rifle and riding on a pony , goes to the town where the elephant has been seen . Entering one of the poorest quarters , he receives conflicting
+reports and contemplates leaving , thinking the incident is a hoax . The narrator then sees a village woman chasing away children who are looking at the corpse
+of an Indian whom the elephant has trampled and killed . He sends an order to bring an elephant rifle and , followed by a group of roughly a few thousand people
+, heads toward the paddy field where the elephant has rested in its tracks . Although he does not want to kill the elephant now that it seems peaceful , the
+narrator feels pressured by the demand of the crowd for the act to be carried out .
+</item 6>
+
+<item 7>
+Shooting an Elephant
+wikipedia.org/w/index.php?title=Shooting_an_Elephant&oldid=825385267 '' Categories : Essays by George Orwell 1936 essays Works originally published in British
+magazines Works originally published in literary magazines Hidden categories : Pages using deprecated image syntax Talk Contents About Wikipedia Dansk Deutsch
+Español Esperanto עברית Svenska 中文 Edit links This page was last edited on 13 February 2018 , at 02 : 41 . About Wikipedia
+</item 7>
+
+<item 8>
+Shooting an Elephant
+Fact or fiction ( edit ) The degree to which the story is fiction has been disputed . In his biography of Orwell , George Orwell : A Life , Bernard Crick cast
+doubt on the idea that Orwell himself actually shot an elephant . No independent account of Orwell 's actions has been found and there was no official record of
+the incident , which was unusual considering the destruction of valuable property . Peter Davison , the editor of Orwell 's Complete Works , includes an
+interview with George Stuart , a contemporary of Orwell in Burma , who said that Orwell was transferred to Kathar as punishment for shooting an elephant . `` An
+elephant was considered a valuable asset to any timber firm ... and Orwell would have been severely reprimanded for such unnecessary slaughter . It was not long
+after the incident that he was transferred from Moulmein to a quiet post in Upper Burma called Katha . '' Davison also includes in the complete works a news
+item from the Rangoon Gazette , March 22 , 1926 which describes a Major E.C. Kenny shooting an elephant in similar circumstances .
+</item 8>
+
+<item 9>
+Shooting an Elephant
+He remarks in the first sentence , `` I was hated by large numbers of people -- the only time in my life that I have been important enough for this to happen to
+me . '' Only with the expectation of a killing do the locals find him `` momentarily worth watching . '' He describes how , as a police officer , he was often a
+target for mockery from the locals , as was any European who provided an easy target . In contrast to his description of the natives as `` little beasts '' ,
+the narrator labels the elephant as a `` great beast '' , suggesting he holds it in higher esteem than the locals . This is somewhat paradoxical , however , as
+the narrator 's own job is demeaning and forces him to see `` the dirty work of the Empire at close quarters '' . The narrator singles out `` Buddhist priests
+'' -- persons synonymous with peace and goodwill -- to be `` the worst of all '' and comments on how he would gladly `` drive a bayonet into a Buddhist priest
+'s guts '' . Having killed the elephant , the narrator considers how he was glad it killed the `` coolie '' as that gave him full legal backing .
+</item 9>
+
+<item 10>
+Shooting an Elephant
+Although it is not the narrator 's wish to shoot the elephant , and even though he holds a weapon far beyond the technological capabilities of the natives , his
+will is not his own and , due to their expectation , he realises that he must shoot the elephant ; `` I was only an absurd puppet pushed to and fro by the will
+of those yellow faces behind . '' Reflectively , the narrator realises that being forced to impose strict laws and to shoot the elephant -- he states his
+feelings against the act , but submits after comprehending he `` had got to shoot the elephant '' -- illustrates an inherent problem of hegemony : `` when the
+white man turns tyrant it is his own freedom that he destroys . '' By enforcing the strict British rule , he is forfeiting his freedom while concurrently
+oppressing the Burmese . Conqueror and conquered ( edit ) The narrator 's situation throughout the essay is one of little prospect or prominence . He comments
+on how , even though he is of the ruling class , he finds himself either largely ignored by the Burmese people or hated .
+</item 10>
+=== END ITEM id=0ea3096cfe4b1a15 ===
+
+=== ITEM id=ad22ef6e1ab1bae6 ===
+Gold sentences and facts:
+Sentence 0: In episode 3 , `` Hugs Can Be Deceiving '' , Suzanne 's backstory is revealed via a flashback . She was adopted by white parents and raised in the suburbs , but her mental instability alienated her classmates and their parents alike . Her adoptive mother pushed her to excel at everything she did to prove that she was as good as everyone else ; ironically , the constant pressure only made Suzanne 's psychological problems worse . In the same episode , it is revealed that Suzanne had run outside and knocked Chapman unconscious after Chapman had beaten Tiffany `` Pennsatucky '' Doggett ( Taryn Manning ) unconscious at the end of season 1 .
+  Fact 0.0: In episode 3, titled 'Hugs Can Be Deceiving', Suzanne's backstory is revealed via a flashback.
+  Fact 0.1: Suzanne was adopted by white parents.
+  Fact 0.2: Suzanne was raised in the suburbs.
+  Fact 0.3: Suzanne's mental instability alienated her classmates.
+  Fact 0.4: Suzanne's mental instability alienated her classmates' parents.
+  Fact 0.5: Suzanne's adoptive mother pushed her to excel at everything she did, to prove she was as good as everyone else.
+  Fact 0.6: Ironically, the constant pressure from Suzanne's adoptive mother made Suzanne's psychological problems worse.
+  Fact 0.7: In the same episode, it is revealed that Suzanne had run outside.
+  Fact 0.8: In the same episode, Suzanne knocked Chapman unconscious.
+  Fact 0.9: Suzanne knocked Chapman unconscious after Chapman had beaten Tiffany 'Pennsatucky' Doggett (Taryn Manning) unconscious.
+  Fact 0.10: Chapman beat Doggett unconscious at the end of season 1.
+
+Retrieved items:
+<item 1>
+Crazy Eyes (character)
+Crazy Eyes ( character ) - wikipedia Crazy Eyes ( character ) Jump to : navigation , search Suzanne `` Crazy Eyes '' Warren Orange Is the New Black character
+Uzo Aduba as Suzanne `` Crazy Eyes '' Warren in a promotional poster for season 2 of Orange Is the New Black First appearance `` I Was n't Ready '' Season 1 ,
+episode 1 July 11 , 2013 Portrayed by Uzo Aduba Eden Wiggins ( at age 10 ) Taliyah Whitaker ( at age 5 ) Information Significant other ( s ) Maureen Kukudio (
+ex-girlfriend ) Parents Pat and Dennis Warren Suzanne `` Crazy Eyes '' Warren is a fictional character played by Uzo Aduba on the Netflix series Orange Is the
+New Black . Warren is portrayed as intelligent , but lacking in social skills , and prone to spiral into emotional outbursts when agitated . The character is
+the only role that has received Emmy Award recognition both in the comedy and drama genres from the same show and only the second character to earn Emmy
+recognition in both genres .
+</item 1>
+
+<item 2>
+Crazy Eyes (character)
+Jump up ^ Schaefer , Megan ( June 3 , 2014 ) . `` ' Orange Is The New Black ' Season 1 Recap : Everything To Know Before The Season 2 Premiere '' .
+International Business Times . Retrieved September 6 , 2014 . Jump up ^ Foster , Lewis ( June 19 , 2014 ) . `` Visual Summary : Orange Is The New Black Season 1
+'' . Paste . Retrieved September 6 , 2014 . Jump up ^ O'Sullivan , Erin ( August 14 , 2013 ) . `` Orange Is The New Black : Uzo Aduba ( Suzanne Warren )
+Promoted To Series Regular '' . Access Hollywood . Retrieved September 6 , 2014 . Jump up ^ Henderson , Danielle ( August 16 , 2013 ) . `` Orange Is the New
+Black Episode Nine Recap : We Finally Experience the SHU '' . Vulture . Retrieved September 6 , 2014 . Jump up ^ `` Orange is the New Black Season 1 Episode 9 :
+F * cksgiving : Episode Cast & Crew '' . TV.com .
+</item 2>
+
+<item 3>
+Graph query row:
+character: Suzanne
+relationship: RELATED_TO
+role: None
+context: None
+relationship_detail: None
+relation: befriended by Vee; becomes Vee's loyal right-hand woman and serves as her muscle
+fact: None
+connected_entity: Yvonne Parker
+</item 3>
+
+<item 4>
+Graph query row:
+character: Suzanne
+relationship: RELATED_TO
+role: None
+context: None
+relationship_detail: None
+relation: adoptive parent
+fact: None
+connected_entity: Pat Warren
+</item 4>
+
+<item 5>
+Crazy Eyes (character)
+Suzanne gives a statement to prison officials confessing to the attack , but inmate counselor Sam Healy ( Michael J. Harney ) produces evidence that exonerates
+her . When she realizes that Vee used her , she breaks into tears . In episode 3 , `` Hugs Can Be Deceiving '' , Suzanne 's backstory is revealed via a
+flashback . She was adopted by white parents and raised in the suburbs , but her mental instability alienated her classmates and their parents alike . Her
+adoptive mother pushed her to excel at everything she did to prove that she was as good as everyone else ; ironically , the constant pressure only made Suzanne
+'s psychological problems worse . In the same episode , it is revealed that Suzanne had run outside and knocked Chapman unconscious after Chapman had beaten
+Tiffany `` Pennsatucky '' Doggett ( Taryn Manning ) unconscious at the end of season 1 . Season 3 ( edit ) In season 3 , Taystee has her hands full trying to
+control Suzanne , who is still grieving Vee 's death and is unstable , prone to losing her temper and constantly fighting with Poussey .
+</item 5>
+
+<item 6>
+Crazy Eyes (character)
+It is mentioned that she took a plea deal . When the inmates take advantage of a temporary lack of security and enjoy the nearby lake and woods , Kukudio
+insists that she and Suzanne run away together . Suzanne refuses and their relationship becomes rocky . In `` People Persons , CO Humphrey commands the two of
+them to fight . Suzanne rejects this but Maureen , who wants to fight , provokes her by launching into a stream of insults . Suzanne fully retaliates by
+throwing Maureen to the ground and beating her repeatedly , until the Dominicans pull her off . This fight leads her to extreme guilt and a wish to punish
+herself . She demonstrates this especially when a peaceful protest in the jail cafeteria turns into a chaotic scene and Poussey Washington dies by suffocation .
+Whilst the inmates grieve over her death , Suzanne believes that Poussey is alive and tries numerous times to suffocate herself . Finally , she is sent to
+Medical and is placed in a bed next to Kukudio . Season 5 ( edit ) In season five , Suzanne continues to recover from her injuries and also goes out of her way
+to help Maureen , whose injuries are severe .
+</item 6>
+
+<item 7>
+Crazy Eyes (character)
+Eventually , she turns to new prison counsellor Berdie Rogers 's drama class . There , she begins writing a surrealistic science - fiction erotica series called
+`` The Time Hump Chronicles '' which , although considered obscene and strange by both Rogers and Taystee , becomes an instant hit amongst the inmates .
+Although they prove to be therapeutic for her mental health , Suzanne becomes stressed and irritated with the constant harassment by the other inmates for more
+material , the persistent ideas that are being floated past her and the fan - fiction that is left at her bunk or lying around . Soon , some of the extracts
+find their way into the hands of the COs , resulting in Officer Donaldson being mocked by both his colleagues and the inmates alike upon the realization that he
+is the inspiration for one of the characters . This leads to Rogers ' suspension . Meanwhile , Suzanne is taken by surprise when she discovers that one of her
+more prolific fans , Maureen Kukudio , is actually interested in her romantically . Suzanne seeks advice from Lorna about how to respond ; she admits she finds
+Maureen attractive , but she has never had a girlfriend before and subsequently feels she must back away from a sexual liaison .
+</item 7>
+
+<item 8>
+Crazy Eyes (character)
+In the season finale , Suzanne assists Poussey and Taystee in caring for Brook Soso , whom they discover unconscious from a drug overdose , and develops a
+closer bond with Maureen in the final scene , owing to a misunderstanding over a turtle that bites Maureen 's foot . Season 4 ( edit ) In season 4 it is
+revealed that Suzanne 's crime was kidnapping and accidental manslaughter of a child she grew friendly with while working as a store greeter . Believing that
+she and the boy were simply being friends , she did not realize the implications of her actions when she came across him playing in the park and invited him to
+her apartment for ice cream and video games . The boy went willingly , but soon became frightened and wanted to call his dad . While Suzanne is out of the room
+preparing for what she plans as more fun , he calls 911 . Suzanne becomes agitated as she tells him that 911 should only be called when there is an emergency .
+The child panics and tries to get away . He goes onto the fire escape and falls to his death . It is mentioned that she took a plea deal .
+</item 8>
+
+<item 9>
+Crazy Eyes (character)
+Suzanne nicknames Chapman `` Dandelion '' , because of her blonde hair and puts in a request to become Chapman 's bunkmate . Nonetheless , Chapman resists her
+advances . As a result , Suzanne urinates on the floor in Chapman 's bunk quarters . In episode 9 , `` Fucksgiving '' , her white adoptive parents , Pat and
+Dennis Warren , are introduced . Season 2 ( edit ) As she rebounds from her unrequited love for Chapman , Suzanne is befriended by veteran inmate Yvonne `` Vee
+'' Parker ( Lorraine Toussaint ) as Vee develops her powerbase in the prison . Vee takes advantage of Suzanne 's desperation for affection , and Suzanne becomes
+Vee 's fanatically loyal right - hand woman . Suzanne serves Vee as muscle , even beating up her friend Poussey Washington ( Samira Wiley ) on Vee 's orders .
+When Vee attacks prison matriarch Galina `` Red '' Reznikov ( Kate Mulgrew ) and puts her in the hospital ward , she manipulates Suzanne into believing that she
+committed the crime .
+</item 9>
+
+<item 10>
+Graph query row:
+character: Suzanne Warren
+relationship: RELATED_TO
+role: None
+context: None
+relationship_detail: None
+relation: ex-girlfriend of
+fact: None
+connected_entity: Maureen Kukudio
+</item 10>
+=== END ITEM id=ad22ef6e1ab1bae6 ===
+
+=== ITEM id=c7ab188498aa4145 ===
+Gold sentences and facts:
+Sentence 0: Capital punishment in Australia has been abolished in all jurisdictions . Queensland abolished the death penalty in 1922 . Tasmania did the same in 1968 , the federal government abolished the death penalty in 1973 , with application also in the Australian Capital Territory and the Northern Territory . Victoria did so in 1975 , South Australia in 1976 , and Western Australia in 1984 . New South Wales abolished the death penalty for murder in 1955 , and for all crimes in 1985 . In 2010 , the federal government passed legislation prohibiting the re-establishment of capital punishment by any state or territory . Neither the Commonwealth nor any of the states will extradite or deport a prisoner to another jurisdiction if they will face the death penalty , and police co-operation with other countries which have the death penalty has been questioned .
+  Fact 0.0: Capital punishment in Australia has been abolished in all jurisdictions.
+  Fact 0.1: Queensland abolished the death penalty in 1922.
+  Fact 0.2: Tasmania abolished the death penalty in 1968.
+  Fact 0.3: The federal government abolished the death penalty in 1973.
+  Fact 0.4: The federal abolition of the death penalty in 1973 applied in the Australian Capital Territory.
+  Fact 0.5: The federal abolition of the death penalty in 1973 applied in the Northern Territory.
+  Fact 0.6: Victoria abolished the death penalty in 1975.
+  Fact 0.7: South Australia abolished the death penalty in 1976.
+  Fact 0.8: Western Australia abolished the death penalty in 1984.
+  Fact 0.9: New South Wales abolished the death penalty for murder in 1955.
+  Fact 0.10: New South Wales abolished the death penalty for all crimes in 1985.
+  Fact 0.11: In 2010, the federal government passed legislation prohibiting the re-establishment of capital punishment by any state or territory.
+  Fact 0.12: The Commonwealth will not extradite a prisoner to another jurisdiction if the prisoner will face the death penalty.
+  Fact 0.13: No state will extradite a prisoner to another jurisdiction if the prisoner will face the death penalty.
+  Fact 0.14: The Commonwealth will not deport a prisoner to another jurisdiction if the prisoner will face the death penalty.
+  Fact 0.15: No state will deport a prisoner to another jurisdiction if the prisoner will face the death penalty.
+  Fact 0.16: Police co-operation with other countries which have the death penalty has been questioned.
+
+Retrieved items:
+<item 1>
+Capital punishment in Australia
+During the 19th century , these crimes saw about 80 people hanged each year throughout Australia . Before and after federation , each state made its own
+criminal laws and punishments . For a full list see : Main article : List of people legally executed in Australia Commonwealth ( edit ) In 1973 the Death
+Penalty Abolition Act 1973 of the Commonwealth abolished the death penalty for federal offences . It provided in Section 3 that the Act applied to any offence
+against a law of the Commonwealth , the Territories or under an Imperial Act , and in s . 4 that `` ( a ) person is not liable to the punishment of death for
+any offence '' . No executions were carried out under the bridge of the federal government and the passage of the Death Penalty Abolition Act 1973 saw the death
+penalty replaced with life imprisonment as their maximum punishment . Since the Commonwealth effects of utilising this Act no more individuals have been exposed
+to the death penalty and it is now replaced with life imprisonment . On 11 March 2010 Federal Parliament passed laws that prevent the death penalty from being
+reintroduced by any state or territory in Australia .
+</item 1>
+
+<item 2>
+Capital punishment in Australia
+The last sentence of death in Western Australia ( indeed anywhere in Australia ) was passed in 1984 , but the female killer ( Brenda Hodge ) in question had her
+sentence commuted to imprisonment for life , as was customary by this stage . Capital punishment was formally removed from the statutes of the state with the
+passage of the Acts Amendment ( Abolition of Capital Punishment ) Act 1984 . South Australia ( edit ) The Adelaide Gaol was the site of forty - four hangings ,
+from Joseph Stagg on 18 November 1840 to Glen Sabre Valance , murderer and rapist , on 24 November 1964 and three executions also occurred at Mount Gambier Gaol
+. Two Ngarrindjeri men were controversially executed by hanging along the Coorong on 22 August 1840 , after a drumhead court - martial conducted by Police
+Commissioner O'Halloran on the orders of Governor George Gawler . The men were found to be guilty of murdering the twenty - five survivors of the shipwreck
+Maria a few months before .
+</item 2>
+
+<item 3>
+Capital punishment in Australia
+Most occasions where capital punishment is brought up in the media , it is regarding current cases of intense media coverage regarding murder , rape and in
+extreme circumstances such as terrorism . On various occasions , the media and public express support for capital punishment for the most heinous of crimes
+including mass murder such as in the cases of the Milat Backpacker Murders and the Bryant Port Arthur massacre , in which a total of 42 people were killed
+stirring strong emotions as to whether or not to reintroduce the death penalty . A similar surge in public support for reintroduction occurred when Lindy
+Chamberlain was convicted of murdering her baby Azaria in 1982 , although it was subsequently shown that she was not guilty . This miscarriage of justice has
+been used as a powerful example of the risks of the death penalty . However , no person of significant stature or influence has advocated the death penalty for
+quite some time since the last execution in 1967 . The death penalty was completely abolished in Australia with the Crimes Legislation Amendment ( Torture
+Prohibition and Death Penalty Abolition ) Bill 2009 passing the Australian Senate without amendments in March 2010 .
+</item 3>
+
+<item 4>
+Capital punishment in Australia
+Retrieved 24 April 2017 . Jump up ^ `` Small majority of Australians favour the death penalty for deadly terrorist acts in Australia '' . Roy Morgan . Melbourne
+, Vic. : Roy Morgan Research Ltd. 19 September 2014 . Retrieved 3 December 2017 . Sources ^ Death Penalty Abolition Act 1973 Capital Punishment from the
+Fremantle Prison site Trends & Issues in Crime and Criminal Justice No. 3 : Capital punishment from the Australian Institute of Criminology Dhakiyarr Wirrpanda
+-- Appeal for Justice `` Capital Punishment '' speech by The Ian Callinan , Justice of the High Court of Australia The History of Correctional Services in South
+Australia External links ( edit ) `` List of Executions in the State of Victoria '' . Archived from the original on 8 October 2011 . `` The Death Penalty (
+Queensland ) '' . Life & Death in the Sunshine State . Archived from the original on 11 May 2015 .
+</item 4>
+
+<item 5>
+Capital punishment in Australia
+The last death sentence was given in August 1984 , when Brenda Hodge was sentenced to death by Western Australia ( and subsequently had her sentence commuted to
+life imprisonment ) . Contents ( hide ) 1 History 1.1 Commonwealth 1.2 New South Wales 1.3 Victoria 1.4 Queensland 1.5 Western Australia 1.6 South Australia 1.7
+Tasmania 1.8 Australian Capital Territory 1.9 Northern Territory 2 Public opinion 3 References 4 External links History ( edit ) Death sentences were carried
+out under Aboriginal customary law , either directly or through sorcery . In some cases the condemned could be denied mortuary rites . The first executions
+carried out under European law in Australia took place in Western Australia in 1629 , when Dutch authorities hanged the mutineers of the Batavia . Capital
+punishment had been part of the legal system of Australia since British settlement and during the 19th century , crimes that could carry a death sentence
+included burglary , sheep stealing , forgery , sexual assaults , murder and manslaughter , and there is one reported case of someone being executed for `` being
+illegally at large '' .
+</item 5>
+
+<item 6>
+Capital punishment in Australia
+Neither the Commonwealth nor any of the states will extradite or deport a prisoner to another jurisdiction if they will face the death penalty . A recent case
+involving this was the case of American Gabe Watson , who was convicted of the manslaughter of his wife in North Queensland , and faced capital murder charges
+in his home state of Alabama . His deportation was delayed until the government received assurances that he would not be executed if found guilty . New South
+Wales ( edit ) The last execution in New South Wales was carried out on 24 August 1939 , when John Trevor Kelly was hanged at Sydney 's Long Bay Correctional
+Centre for the murder of Marjorie Constance Sommarlad . New South Wales abolished the death penalty for murder in 1955 , but retained it as a potential penalty
+for treason , piracy , and arson in naval dockyards until 1985 . New South Wales was the last Australian State to formally abolish the death penalty for all
+crimes .
+</item 6>
+
+<item 7>
+Capital punishment in Australia
+Capital punishment in Australia - wikipedia Capital punishment in Australia Jump to : navigation , search Capital punishment in Australia has been abolished in
+all jurisdictions . Queensland abolished the death penalty in 1922 . Tasmania did the same in 1968 , the federal government abolished the death penalty in 1973
+, with application also in the Australian Capital Territory and the Northern Territory . Victoria did so in 1975 , South Australia in 1976 , and Western
+Australia in 1984 . New South Wales abolished the death penalty for murder in 1955 , and for all crimes in 1985 . In 2010 , the federal government passed
+legislation prohibiting the re-establishment of capital punishment by any state or territory . Neither the Commonwealth nor any of the states will extradite or
+deport a prisoner to another jurisdiction if they will face the death penalty , and police co-operation with other countries which have the death penalty has
+been questioned . The last execution in Australia took place in 1967 , when Ronald Ryan was hanged in Victoria . Between Ryan 's execution in 1967 and 1984 ,
+several more people were sentenced to death , but had their sentences commuted to life imprisonment .
+</item 7>
+
+<item 8>
+Capital punishment in Australia
+The last person hanged was Ernest Austin , for the rape and murder of an 11 - year - old girl . Only one woman was hanged , Ellen Thompson ( 1887 ) . She was
+convicted of murdering her husband with the help of her lover . In 1922 Queensland became the first part of the British Commonwealth to abolish the death
+penalty . Western Australia ( edit ) In Western Australia , the first legal executions were under Dutch VOC law on 2 October 1629 on Long Island , Houtman
+Abrolhos ( near Geraldton ) , when Jeronimus Corneliszoon and six others were hanged as party to the murder of 125 men , women and children . Following British
+colonization , between 1833 and 1855 executions by firing squad and hanging were performed at a variety of places , often at the site of the offence . Even with
+the construction of the new Perth Gaol in 1855 as the main execution site in the state , executions were also carried out at various country locations until
+1900 .
+</item 8>
+
+<item 9>
+Capital punishment in Australia
+Elizabeth Woolcock , the only woman ever to have been executed under South Australian law , was hanged on 30 December 1873 . Her body was not released to the
+family and was buried between the inner and outer walls of the prison , identified by a number and the date of the execution . In 1976 , the Criminal Law
+Consolidation Act was modified so that the death sentence was changed to life imprisonment . Tasmania ( edit ) In the early days of colonial rule Tasmania ,
+then known as Van Diemen 's Land , was the site of penal transports . Mary McLauchlan was convicted in 1830 for infanticide ; she was sentenced to both death
+and dissection . She was the first woman to be hanged in Tasmania . The last execution was in 1946 , that of serial murderer and rapist Frederick Thompson . The
+death penalty was abolished in 1968 . Australian capital Territory ( edit ) No executions were carried out in the Australian Capital Territory , where federal
+legislation abolished capital punishment in 1973 .
+</item 9>
+
+<item 10>
+Capital punishment in Australia
+Northern Territory ( edit ) Aborigines who lived in the Northern Territory came under the European law of Australia even though they did not have any contact
+with the government . There were several outcries over Aborigines receiving mandatory death sentences for murder , leading to the passage of the Crimes
+Ordinance 1934 which allowed for discretionary sentences when both the accused and the victim were Aboriginal . The last execution was a double hanging in 1952
+, and the death penalty was abolished 1973 . Public opinion ( edit ) In Australia capital punishment was banned on a state - by - state basis through the 20th
+century . Despite the ban , polls have indicated varying support for the reintroduction of the practice . A 2005 Bulletin poll showed that most Australians
+supported capital punishment . The Australian National University 's 2007 Electoral Survey found that 44 per cent of people thought the death penalty should be
+reintroduced , while only 38 per cent disagreed . In the recent case of the Bali bombers , then prime minister John Howard stated that Australians expected
+their execution by Indonesia . On occasion the issue of capital punishment is published in the media or is subject to media and public support and scrutiny .
+</item 10>
+=== END ITEM id=c7ab188498aa4145 ===

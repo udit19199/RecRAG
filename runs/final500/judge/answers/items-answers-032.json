@@ -1,0 +1,576 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "104e4429ec29dada",
+   "kind": "answer",
+   "question": "when does bloom find out who she is",
+   "gold_answers": [
+    "Addio Magix!\"  / \"The Font of Dragon Fire"
+   ],
+   "model_answer": "Episode 18, “The Font of Dragon Fire”"
+  },
+  {
+   "id": "50dec5b309cee0cc",
+   "kind": "answer",
+   "question": "what was going on in 1954 in the us",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Brown v. Board of Education ruled school segregation unconstitutional amid Cold War tensions."
+  },
+  {
+   "id": "5d2e5f9bf927a1e1",
+   "kind": "answer",
+   "question": "explain how an operating system talks to hardware",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Through the kernel and device drivers, which communicate hardware requests to the appropriate components."
+  },
+  {
+   "id": "2abb525c10fe0a8a",
+   "kind": "answer",
+   "question": "who warned europe to stay out of the americas",
+   "gold_answers": [
+    "Roosevelt Corollary",
+    "Monroe Doctrine"
+   ],
+   "model_answer": "President Monroe"
+  },
+  {
+   "id": "ab68542a65901a78",
+   "kind": "answer",
+   "question": "whens the last time the patriots played the eagles",
+   "gold_answers": [
+    "Super Bowl LII"
+   ],
+   "model_answer": "2018, in Super Bowl LII."
+  },
+  {
+   "id": "4a9d8fbcae02907c",
+   "kind": "answer",
+   "question": "spike jones and his city slickers two front teeth",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Yes, they recorded it in 1947."
+  },
+  {
+   "id": "dc99cc4e802e40d8",
+   "kind": "answer",
+   "question": "lynyrd skynyrd last of a dying breed album",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "A 2012 Lynyrd Skynyrd studio album."
+  },
+  {
+   "id": "443da80ac7e992b7",
+   "kind": "answer",
+   "question": "where have the good guys gone to hideaway",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Into hiding."
+  },
+  {
+   "id": "dcb7356eb2c53a47",
+   "kind": "answer",
+   "question": "when do law students take the bar exam",
+   "gold_answers": [
+    "Each state controls where it administers its bar exam . Because the MBE ( below ) is a standardized test , it must be administered on the same day across the country . That day occurs twice a year as the last Wednesday in July and the last Wednesday in February . Two states , Delaware and North Dakota , may administer their bar exams only once , in July , if they do not have enough applicants to merit a second sitting . North Dakota requires ten applicants in order to administer the February exam . Most bar exams are administered on consecutive days . Louisiana is the exception , with the Louisiana Bar Exam being a three - day examination on Monday , Wednesday and Friday . Also , Louisiana 's examination is the longest in the country in terms of examination time , with seven hours on Monday and Wednesday and seven and one half hours on Friday for a total of 21.5 hours of testing . Montana 's bar examination also occurs over a three - day period , with a total of 18 hours of testing . The bar exams in Delaware , Nevada , Ohio , South Carolina , and Texas are also three days long . The California bar exam moved to a two - day format beginning with the July , 2017 exam .",
+    "To refresh their memory on `` black - letter rules '' tested on the bar , most students engage in a regimen of study ( called `` bar review '' ) between graduating from law school and sitting for the bar . For bar review , most students in the United States attend a private bar review course which is provided by a third - party company and not their law school ."
+   ],
+   "model_answer": "Usually on the last Wednesday of February or July."
+  },
+  {
+   "id": "3ac6f8df47bb704d",
+   "kind": "answer",
+   "question": "what is earth's magnetic field responsible for",
+   "gold_answers": [
+    "deflect most of the solar wind, whose charged particles would otherwise strip away the ozone layer that protects the Earth from harmful ultraviolet radiation"
+   ],
+   "model_answer": "Deflecting the solar wind and cosmic radiation."
+  },
+  {
+   "id": "925e7c675fb6587a",
+   "kind": "answer",
+   "question": "what are three different types of hotel properties",
+   "gold_answers": [
+    "Hotel barge",
+    "Bed and breakfast",
+    "Botel"
+   ],
+   "model_answer": "Boutique hotel, capsule hotel, and bed and breakfast."
+  },
+  {
+   "id": "a0bd531ebdbb6a52",
+   "kind": "answer",
+   "question": "differentiate between dot matrix printer and daisy wheel printer",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Dot-matrix printers form characters from dots and can print graphics; daisy-wheel printers strike preformed characters for sharper text but have limited graphics."
+  },
+  {
+   "id": "cda475e8c51255ab",
+   "kind": "answer",
+   "question": "what is the final season of downton abbey",
+   "gold_answers": [
+    "six",
+    "the sixth",
+    "the sixth series",
+    "sixth",
+    "Six"
+   ],
+   "model_answer": "Series 6"
+  },
+  {
+   "id": "c218dd37e37095a6",
+   "kind": "answer",
+   "question": "why top soil has most amount of humus",
+   "gold_answers": [
+    "Much of the humus in most soils has persisted for more than 100 years , rather than having been decomposed into CO , and can be regarded as stable ; this organic matter has been protected from decomposition by microbial or enzyme action because it is hidden ( occluded ) inside small aggregates of soil particles , or tightly sorbed or complexed ) to clays . Most humus that is not protected in this way is decomposed within 10 years and can be regarded as less stable or more labile . Stable humus contributes few plant - available nutrients in soil , but it helps maintain its physical structure . A very stable form of humus is formed from the slow oxidation of soil carbon after the incorporation of finely powdered charcoal into the topsoil . This process is speculated to have been important in the formation of the very fertile Amazonian terra preta do Indio ."
+   ],
+   "model_answer": "Because dead plant and animal matter accumulates and decomposes near the soil surface."
+  },
+  {
+   "id": "49e15974b901ad50",
+   "kind": "answer",
+   "question": "what is the use of adobe flash cs3 professional",
+   "gold_answers": [
+    "supported modern programming practices and enabled business applications to be developed with Flash"
+   ],
+   "model_answer": "Developing Flash applications, including business applications using ActionScript 3.0."
+  },
+  {
+   "id": "66edc33e6d5f1ca6",
+   "kind": "answer",
+   "question": "where was the original flight of the phoenix filmed",
+   "gold_answers": [
+    "20th Century-Fox Studios",
+    "20th Century-Fox Ranch, California",
+    "Buttercup Valley, Arizona",
+    "Pilot Knob Mesa, California",
+    "the 20th Century-Fox Studios",
+    "Pilot Knob Mesa near Winterhaven, located in California's Imperial Valley, on the western fringes of Yuma, Arizona",
+    "at the 20th Century-Fox Studios and 20th Century-Fox Ranch, California",
+    "Winterhaven, located in California's Imperial Valley, on the western fringes of Yuma, Arizona"
+   ],
+   "model_answer": "Buttercup Valley, Arizona, and Pilot Knob Mesa, California."
+  },
+  {
+   "id": "7dacadb072bed7ba",
+   "kind": "answer",
+   "question": "what are the band members names of the rolling stones",
+   "gold_answers": [
+    "Mick Jagger",
+    "Keith Richards",
+    "Charlie Watts",
+    "Ronnie Wood"
+   ],
+   "model_answer": "Mick Jagger, Keith Richards, Ronnie Wood, Brian Jones, Bill Wyman, and Charlie Watts."
+  },
+  {
+   "id": "cc234468c0d20ceb",
+   "kind": "answer",
+   "question": "british forces retreated when they saw how strong american defenses were",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Yes, Burgoyne withdrew to fortified positions."
+  },
+  {
+   "id": "18f2a9d0012b2bf5",
+   "kind": "answer",
+   "question": "was nightmare before christmas originally a disney movie",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes—released by Disney’s Touchstone Pictures."
+  },
+  {
+   "id": "6395f4338e48ba4c",
+   "kind": "answer",
+   "question": "what does the board of directors consist of",
+   "gold_answers": [
+    "a recognized group of people who jointly oversee the activities of an organization"
+   ],
+   "model_answer": "A group of directors who jointly oversee an organization\n"
+  },
+  {
+   "id": "e0109554ad864ec3",
+   "kind": "answer",
+   "question": "what are three different types of hotel properties",
+   "gold_answers": [
+    "Hotel barge",
+    "Bed and breakfast",
+    "Botel"
+   ],
+   "model_answer": "Bed and breakfast, boutique hotel, motel"
+  },
+  {
+   "id": "3f5f54929377aec6",
+   "kind": "answer",
+   "question": "where do car factories tend to be located and why",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "In urban areas, near labor, transportation, energy, materials, and markets."
+  },
+  {
+   "id": "d1bac27be4eaad03",
+   "kind": "answer",
+   "question": "results of the large-scale women's health initiative released in 2002 revealed hormone therapy may",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Increase the risk of breast cancer."
+  },
+  {
+   "id": "a2f6150baada70d0",
+   "kind": "answer",
+   "question": "when is marvel's most wanted coming out",
+   "gold_answers": [
+    "In August 2015 , the series was reinvented as Most Wanted and received a pilot order from ABC . The cast was filled out in early 2016 , and production was completed by late March . The episode was co-produced by ABC Studios and Marvel Television . In May 2016 , ABC announced that it would not pick up the pilot to series , and would look to develop other series with Marvel instead ."
+   ],
+   "model_answer": "It was never released as a series."
+  },
+  {
+   "id": "02081dec8bdb4eab",
+   "kind": "answer",
+   "question": "what is the moral of cat in the hat",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Take responsibility for the mess you make."
+  },
+  {
+   "id": "ea0624e93e61668d",
+   "kind": "answer",
+   "question": "where do we draw the line between painting and drawing",
+   "gold_answers": [
+    "Drawing is one of the major forms of expression within the visual arts . It is generally concerned with the marking of lines and areas of tone onto paper / other material , where the accurate representation of the visual world is expressed upon a plane surface . Traditional drawings were monochrome , or at least had little colour , while modern colored - pencil drawings may approach or cross a boundary between drawing and painting . In Western terminology , drawing is distinct from painting , even though similar media often are employed in both tasks . Dry media , normally associated with drawing , such as chalk , may be used in pastel paintings . Drawing may be done with a liquid medium , applied with brushes or pens . Similar supports likewise can serve both : painting generally involves the application of liquid paint onto prepared canvas or panels , but sometimes an underdrawing is drawn first on that same support ."
+   ],
+   "model_answer": "There is no sharp boundary; the two overlap."
+  },
+  {
+   "id": "1aadbcd148fcff04",
+   "kind": "answer",
+   "question": "who were the church fathers and what did they do in the catholic church",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Early Christian theologians and leaders who shaped Catholic doctrine and tradition."
+  },
+  {
+   "id": "8d445f6782e6b2ec",
+   "kind": "answer",
+   "question": "did anyone die from ebola in the us",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes—Thomas Eric Duncan died in the U.S. from Ebola."
+  },
+  {
+   "id": "89d2ad4abc3d7c4d",
+   "kind": "answer",
+   "question": "fitting of rim on a locomotive wheel is done by",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Heating the rim to expand it, then shrinking it onto the wheel."
+  },
+  {
+   "id": "13657ac773d91afb",
+   "kind": "answer",
+   "question": "suzanne's story orange is the new black",
+   "gold_answers": [
+    "In episode 3 , `` Hugs Can Be Deceiving '' , Suzanne 's backstory is revealed via a flashback . She was adopted by white parents and raised in the suburbs , but her mental instability alienated her classmates and their parents alike . Her adoptive mother pushed her to excel at everything she did to prove that she was as good as everyone else ; ironically , the constant pressure only made Suzanne 's psychological problems worse . In the same episode , it is revealed that Suzanne had run outside and knocked Chapman unconscious after Chapman had beaten Tiffany `` Pennsatucky '' Doggett ( Taryn Manning ) unconscious at the end of season 1 ."
+   ],
+   "model_answer": "Suzanne “Crazy Eyes” Warren is imprisoned for kidnapping and involuntary manslaughter after a child died in her care."
+  },
+  {
+   "id": "6b790de8dcc6e5dd",
+   "kind": "answer",
+   "question": "what material was used to build the roofs of houses in burzahom",
+   "gold_answers": [
+    "birch"
+   ],
+   "model_answer": "Wood and thatch"
+  },
+  {
+   "id": "73a4e35dbd33bcf5",
+   "kind": "answer",
+   "question": "the settlers were attracted to oregon for all of the following reasons except",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The chance to find gold"
+  },
+  {
+   "id": "ed741e886c9f0af1",
+   "kind": "answer",
+   "question": "global trade during the ming dynasty of china",
+   "gold_answers": [
+    "The Ming dynasty also engaged in a thriving trade with both Europe and Japan . The amount of silver flowing into the Ming dynasty was estimated by Joseph Needham at 300 million taels , which is equivalent to more than 190 billion dollars in today 's money . In addition to silver , the Ming also imported many European firearms , in order to ensure the modernness of their weapons ."
+   ],
+   "model_answer": "Thriving trade with Europe and Japan brought silver and firearms into China."
+  },
+  {
+   "id": "57a769a50c82fc6a",
+   "kind": "answer",
+   "question": "when do law students take the bar exam",
+   "gold_answers": [
+    "Each state controls where it administers its bar exam . Because the MBE ( below ) is a standardized test , it must be administered on the same day across the country . That day occurs twice a year as the last Wednesday in July and the last Wednesday in February . Two states , Delaware and North Dakota , may administer their bar exams only once , in July , if they do not have enough applicants to merit a second sitting . North Dakota requires ten applicants in order to administer the February exam . Most bar exams are administered on consecutive days . Louisiana is the exception , with the Louisiana Bar Exam being a three - day examination on Monday , Wednesday and Friday . Also , Louisiana 's examination is the longest in the country in terms of examination time , with seven hours on Monday and Wednesday and seven and one half hours on Friday for a total of 21.5 hours of testing . Montana 's bar examination also occurs over a three - day period , with a total of 18 hours of testing . The bar exams in Delaware , Nevada , Ohio , South Carolina , and Texas are also three days long . The California bar exam moved to a two - day format beginning with the July , 2017 exam .",
+    "To refresh their memory on `` black - letter rules '' tested on the bar , most students engage in a regimen of study ( called `` bar review '' ) between graduating from law school and sitting for the bar . For bar review , most students in the United States attend a private bar review course which is provided by a third - party company and not their law school ."
+   ],
+   "model_answer": "After law school, with timing varying by jurisdiction."
+  },
+  {
+   "id": "aa6ce9e136c6c8d1",
+   "kind": "answer",
+   "question": "the primary reason for the creation of federal whistleblower statutes was to",
+   "gold_answers": [
+    "The Whistleblower Protection Act of 1989 , Pub. L. 101 - 12 as amended , is a United States federal law that protects federal whistleblowers who work for the government and report agency misconduct . A federal agency violates the Whistleblower Protection Act if agency authorities take ( or threaten to take ) retaliatory personnel action against any employee or applicant because of disclosure of information by that employee or applicant . Whistleblowers may file complaints that they believe reasonably evidences a violation of a law , rule or regulation ; gross mismanagement ; gross waste of funds ; an abuse of authority ; or a substantial and specific danger to public health or safety ."
+   ],
+   "model_answer": "Protect federal employees from retaliation for reporting government misconduct."
+  },
+  {
+   "id": "2ca5cb806502fcf9",
+   "kind": "answer",
+   "question": "where was the original flight of the phoenix filmed",
+   "gold_answers": [
+    "20th Century-Fox Studios",
+    "20th Century-Fox Ranch, California",
+    "Buttercup Valley, Arizona",
+    "Pilot Knob Mesa, California",
+    "the 20th Century-Fox Studios",
+    "Pilot Knob Mesa near Winterhaven, located in California's Imperial Valley, on the western fringes of Yuma, Arizona",
+    "at the 20th Century-Fox Studios and 20th Century-Fox Ranch, California",
+    "Winterhaven, located in California's Imperial Valley, on the western fringes of Yuma, Arizona"
+   ],
+   "model_answer": "California’s 20th Century-Fox Studios and Ranch, Buttercup Valley, Arizona, and Pilot Knob Mesa, California."
+  },
+  {
+   "id": "9f5b88ddf60ae0d3",
+   "kind": "answer",
+   "question": "whens the last time the patriots played the eagles",
+   "gold_answers": [
+    "Super Bowl LII"
+   ],
+   "model_answer": "August 15, 2024."
+  },
+  {
+   "id": "d36e765c7609ae66",
+   "kind": "answer",
+   "question": "which of the following is the part of the bible meaning the law",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The Torah (Pentateuch)"
+  },
+  {
+   "id": "f2cc833d1045afa3",
+   "kind": "answer",
+   "question": "when does the nba season end this year",
+   "gold_answers": [
+    "April 11, 2018"
+   ],
+   "model_answer": "June 22, 2025."
+  },
+  {
+   "id": "4ac7a871826edecd",
+   "kind": "answer",
+   "question": "differentiate between dot matrix printer and daisy wheel printer",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Dot-matrix printers form characters from pins and dots, enabling graphics; daisy-wheel printers strike preformed characters for sharper text but limited graphics."
+  },
+  {
+   "id": "bf2c668e348fb54d",
+   "kind": "answer",
+   "question": "when did australia get rid of the death penalty",
+   "gold_answers": [
+    "Capital punishment in Australia has been abolished in all jurisdictions . Queensland abolished the death penalty in 1922 . Tasmania did the same in 1968 , the federal government abolished the death penalty in 1973 , with application also in the Australian Capital Territory and the Northern Territory . Victoria did so in 1975 , South Australia in 1976 , and Western Australia in 1984 . New South Wales abolished the death penalty for murder in 1955 , and for all crimes in 1985 . In 2010 , the federal government passed legislation prohibiting the re-establishment of capital punishment by any state or territory . Neither the Commonwealth nor any of the states will extradite or deport a prisoner to another jurisdiction if they will face the death penalty , and police co-operation with other countries which have the death penalty has been questioned ."
+   ],
+   "model_answer": "By 1985, when New South Wales abolished it for all crimes."
+  },
+  {
+   "id": "8f5db5348b80642b",
+   "kind": "answer",
+   "question": "what is the short story the gift of the magi about",
+   "gold_answers": [
+    "a young husband and wife and how they deal with the challenge of buying secret Christmas gifts for each other with very little money"
+   ],
+   "model_answer": "A young couple secretly sacrifices their prized possessions to buy each other Christmas gifts, revealing the depth of their love."
+  },
+  {
+   "id": "c1124daf2b6cebdd",
+   "kind": "answer",
+   "question": "did anyone die from ebola in the us",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes—Thomas Eric Duncan and Dr. Martin Salia died in the U.S. from Ebola."
+  },
+  {
+   "id": "9f229f377a1fa44a",
+   "kind": "answer",
+   "question": "90 day fiance 1st season where are they now",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Pao and Russ married and were still together as of 2017."
+  },
+  {
+   "id": "e39fef2ab70e9680",
+   "kind": "answer",
+   "question": "in which regions are most of africa petroleum and natural gas found",
+   "gold_answers": [
+    "Nigeria"
+   ],
+   "model_answer": "Sub-Saharan Africa, especially offshore West Africa."
+  },
+  {
+   "id": "56650ebe2be70cd8",
+   "kind": "answer",
+   "question": "which regions on earth have seasons tied to the amount of rainfall",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Tropical regions, especially near the equator."
+  },
+  {
+   "id": "0009a302fcfe1f5e",
+   "kind": "answer",
+   "question": "which regions on earth have seasons tied to the amount of rainfall",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Tropical and monsoon regions\n"
+  },
+  {
+   "id": "8f67f5908f11e50a",
+   "kind": "answer",
+   "question": "horatio spafford story it is well with my soul",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "He wrote “It Is Well with My Soul” after his four daughters died in a shipwreck."
+  },
+  {
+   "id": "7276c3261d8f5290",
+   "kind": "answer",
+   "question": "a best alternative to a negotiated agreement (batna)",
+   "gold_answers": [
+    "In negotiation theory , the best alternative to a negotiated agreement or BATNA is the most advantageous alternative course of action a party can take if negotiations fail and an agreement can not be reached . BATNA is the key focus and the driving force behind a successful negotiator . A party should generally not accept a worse resolution than its BATNA . Care should be taken , however , to ensure that deals are accurately valued , taking into account all considerations , such as relationship value , time value of money and the likelihood that the other party will live up to their side of the bargain . These other considerations are often difficult to value , since they are frequently based on uncertain or qualitative considerations , rather than easily measurable and quantifiable factors ."
+   ],
+   "model_answer": "The most advantageous actionable option if negotiations fail."
+  },
+  {
+   "id": "f570081ffb71035f",
+   "kind": "answer",
+   "question": "who has played for the most nba teams",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Ish Smith (13 teams)"
+  },
+  {
+   "id": "b44caf939903582a",
+   "kind": "answer",
+   "question": "discuss the impact of devaluation on foreign exchange reserve",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Devaluation can ease pressure on foreign-exchange reserves by reducing the need to defend the currency."
+  },
+  {
+   "id": "253f3e43c1b5ef0d",
+   "kind": "answer",
+   "question": "results of the large-scale women's health initiative released in 2002 revealed hormone therapy may",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Increase the risk of breast cancer and cardiovascular events"
+  },
+  {
+   "id": "f61a8f7a4bd162c4",
+   "kind": "answer",
+   "question": "youtube phil collins don't lose my number",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Phil Collins – “Don't Lose My Number” (Official Music Video) on YouTube"
+  },
+  {
+   "id": "88998b5c2e58e1ab",
+   "kind": "answer",
+   "question": "what is the weight of a honda fit",
+   "gold_answers": [
+    "1,020–1,080 kg"
+   ],
+   "model_answer": "1,020–1,170 kg, depending on model and trim."
+  },
+  {
+   "id": "0bb1e7e06ef0a110",
+   "kind": "answer",
+   "question": "who got what in the compromise of 1877",
+   "gold_answers": [
+    "The Compromise of 1877 was an informal , unwritten deal that settled the intensely disputed 1876 U.S. presidential election . It resulted in the United States federal government pulling the last troops out of the South , and formally ended the Reconstruction Era . Through the Compromise , Republican Rutherford B. Hayes was awarded the White House over Democrat Samuel J. Tilden on the understanding that Hayes would remove the federal troops whose support was essential for the survival of Republican state governments in South Carolina , Florida and Louisiana . The compromise involved Democrats who controlled the House of Representatives allowing the decision of the Electoral Commission to take effect . The outgoing president , Republican Ulysses S. Grant , removed the soldiers from Florida . As president , Hayes removed the remaining troops from South Carolina and Louisiana . As soon as the troops left , many white Republicans also left , and the `` Redeemer '' Democrats took control . They already dominated other state governments in the South . What was exactly agreed is somewhat contested as the documentation is insufficient ."
+   ],
+   "model_answer": "Hayes became president; Southern Democrats gained federal troop withdrawal and restored control of the South."
+  },
+  {
+   "id": "9524eedc08edc0fa",
+   "kind": "answer",
+   "question": "what caused the breakup of the democratic republican party",
+   "gold_answers": [
+    "the disputed 1824 presidential election"
+   ],
+   "model_answer": "Disputes over the 1824 election split the party into factions.\n"
+  },
+  {
+   "id": "b1e2edb72747dd2c",
+   "kind": "answer",
+   "question": "how often does a speed limit sign need to be posted",
+   "gold_answers": [
+    "In most of the world speed limit signs display the limitation within a red circle . This design follows the style set out by the Vienna Convention on Road Signs and Signals , with the exception of United States and Canada . All countries globally worldwide ( except the United Kingdom and United States ) use metric speed limits in kilometres per hour . Metric signs are optional in the United States though less commonly seen , while Samoa uses both units . In Ontario , Canada , the type , location , and frequency of speed limit signs is covered by regulation 615 of the Ontario Highway Traffic Act ."
+   ],
+   "model_answer": "No universal interval; in the EU, a repeater is usually posted 200–500 m after the first sign."
+  },
+  {
+   "id": "d8562f0d59c07e9c",
+   "kind": "answer",
+   "question": "how much does it cost for the olympics",
+   "gold_answers": [
+    "on average USD 5.2 billion and for the Winter Games USD 3.1 billion dollars"
+   ],
+   "model_answer": "Typically $10–15 billion to host a Summer Olympics."
+  },
+  {
+   "id": "4c126afaf549d13b",
+   "kind": "answer",
+   "question": "when was the last time penn state was #2",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "October 15, 2017."
+  },
+  {
+   "id": "2e02c1e45840c2c5",
+   "kind": "answer",
+   "question": "what are three different types of hotel properties",
+   "gold_answers": [
+    "Hotel barge",
+    "Bed and breakfast",
+    "Botel"
+   ],
+   "model_answer": "Bed-and-breakfast, boutique hotel, capsule hotel"
+  }
+ ],
+ "evidence": []
+}

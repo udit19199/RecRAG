@@ -1,0 +1,546 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "2550c45bcb2db4b9",
+   "kind": "answer",
+   "question": "What type of group does Pablo Carballo and Argentine Air Force have in common?",
+   "gold_answers": [
+    "military"
+   ],
+   "model_answer": "Military personnel and organization"
+  },
+  {
+   "id": "4ffcdbf594cd241a",
+   "kind": "answer",
+   "question": "What does Age of Chance and Vector share in common? ",
+   "gold_answers": [
+    "was a rock band"
+   ],
+   "model_answer": "They are rock bands."
+  },
+  {
+   "id": "8a76ccbf486f11a4",
+   "kind": "answer",
+   "question": "What was the profession of the one who wrote a song on a 2005 album he collaborated on with Marc Predka?",
+   "gold_answers": [
+    "professional wrestler, actor, and hip hop musician"
+   ],
+   "model_answer": "Rapper"
+  },
+  {
+   "id": "fd1be6b878ce8d17",
+   "kind": "answer",
+   "question": "What do the Church of St. Mary of the Spring and Hagia Irene have in common?",
+   "gold_answers": [
+    "Greek Eastern Orthodox church"
+   ],
+   "model_answer": "Both are Eastern Orthodox churches in Istanbul, Turkey."
+  },
+  {
+   "id": "a28884a9744eb608",
+   "kind": "answer",
+   "question": "Who is one other client that is represented by the same person that also represents a barrister at Doughty Street Chambers?",
+   "gold_answers": [
+    "Angelina Jolie"
+   ],
+   "model_answer": "Julian Assange"
+  },
+  {
+   "id": "c6e24bffabdd4d1a",
+   "kind": "answer",
+   "question": "What profession does Matt Thiessen and George Thorogood have in common?",
+   "gold_answers": [
+    "musician"
+   ],
+   "model_answer": "Musicians"
+  },
+  {
+   "id": "2c82e32b63d650b5",
+   "kind": "answer",
+   "question": "Which film was released first, Summer Magic or Around the World in 80 Days?",
+   "gold_answers": [
+    "Summer Magic"
+   ],
+   "model_answer": "Around the World in 80 Days (1956)"
+  },
+  {
+   "id": "010c7938533f2344",
+   "kind": "answer",
+   "question": "What was the profession of the one who wrote a song on a 2005 album he collaborated on with Marc Predka?",
+   "gold_answers": [
+    "professional wrestler, actor, and hip hop musician"
+   ],
+   "model_answer": "Musician"
+  },
+  {
+   "id": "fe6e8c73431891aa",
+   "kind": "answer",
+   "question": "Did the playwrights Eugène Ionesco and Paul Scott live during the same time period?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, they lived during the same time period."
+  },
+  {
+   "id": "b4b66328b29e794c",
+   "kind": "answer",
+   "question": "Kresy, which roughly was a part of the land beyond the so-called Curson Line, was drawn for what reason?",
+   "gold_answers": [
+    "demarcation line between the newly emerging states, the Second Polish Republic, and the Soviet Union"
+   ],
+   "model_answer": "To demarcate the border between Poland and the Soviet Union."
+  },
+  {
+   "id": "ae42718bd65b4544",
+   "kind": "answer",
+   "question": "Who played a more important role in the church George Albert Smith or Wong Jing?",
+   "gold_answers": [
+    "George Albert Smith"
+   ],
+   "model_answer": "George Albert Smith Sr."
+  },
+  {
+   "id": "c114e1ac67c9dc93",
+   "kind": "answer",
+   "question": "What is 25 miles south of Groom Lake?",
+   "gold_answers": [
+    "Rachel, Nevada"
+   ],
+   "model_answer": "Yucca Flat, Nevada"
+  },
+  {
+   "id": "5a838fe436938bbe",
+   "kind": "answer",
+   "question": "Which character did Tamzin Outhwaite play first: Connie (on \"Inside No. 9\") or Melanie Owen (\"EastEnders\")?",
+   "gold_answers": [
+    "Melanie Owen"
+   ],
+   "model_answer": "Melanie Owen (“EastEnders”)"
+  },
+  {
+   "id": "3a493b16b72b5b3e",
+   "kind": "answer",
+   "question": "Were either Hou Hsiao-hsien or Kenny Ortega winners of an Academy Award?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No, neither."
+  },
+  {
+   "id": "0aae67199a4113b1",
+   "kind": "answer",
+   "question": "What current NHL team owner played for the team that won the Stanley cup in 1992?",
+   "gold_answers": [
+    "Mario Lemieux"
+   ],
+   "model_answer": "Mario Lemieux—Pittsburgh Penguins owner"
+  },
+  {
+   "id": "f819441e85130e3d",
+   "kind": "answer",
+   "question": "Operalia, The World Opera Competition helped launch the career of an operatic soprano of what nationality?",
+   "gold_answers": [
+    "Bulgarian"
+   ],
+   "model_answer": "Mexican"
+  },
+  {
+   "id": "7c4512122f3094a1",
+   "kind": "answer",
+   "question": "What does Age of Chance and Vector share in common? ",
+   "gold_answers": [
+    "was a rock band"
+   ],
+   "model_answer": "Both are rock bands formed in the 1980s."
+  },
+  {
+   "id": "fdca95034879b11d",
+   "kind": "answer",
+   "question": "Are Buried Country and South of the Border both films turned into stage performances?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "97b296d378a48609",
+   "kind": "answer",
+   "question": "What is in both the Lithocarpus and Duranta species?",
+   "gold_answers": [
+    "trees"
+   ],
+   "model_answer": "Flowering plants"
+  },
+  {
+   "id": "133d367e40df7efc",
+   "kind": "answer",
+   "question": "What is in both the Lithocarpus and Duranta species?",
+   "gold_answers": [
+    "trees"
+   ],
+   "model_answer": "Tannins"
+  },
+  {
+   "id": "49feee15684ced92",
+   "kind": "answer",
+   "question": "Was Suzanne Chun Oakland a member of the upper of lower chamber of the Hawaii State Legislature?",
+   "gold_answers": [
+    "lower chamber"
+   ],
+   "model_answer": "Upper chamber (Hawaii Senate)"
+  },
+  {
+   "id": "49404c3c8c956eb4",
+   "kind": "answer",
+   "question": "Which airport Albany International Airport and Dane County Regional Airport is nearer its local town ?",
+   "gold_answers": [
+    "Dane County Regional Airport"
+   ],
+   "model_answer": "Dane County Regional Airport (6 miles from Madison)"
+  },
+  {
+   "id": "d96c4f40afc4d716",
+   "kind": "answer",
+   "question": "Myron F. Diduryk's exploits were described in a book by an author holding what military rank?",
+   "gold_answers": [
+    "lieutenant general"
+   ],
+   "model_answer": "United States Army lieutenant general"
+  },
+  {
+   "id": "0817fb4a75e1d0b4",
+   "kind": "answer",
+   "question": "Where is the county seat for people living in Henderson Point, Mississippi?",
+   "gold_answers": [
+    "Gulfport, Biloxi"
+   ],
+   "model_answer": "Gulfport"
+  },
+  {
+   "id": "8ef3859dbdcc8aef",
+   "kind": "answer",
+   "question": "What Kentucky county has a population of 60,316 and features the Lake Louisvilla neighborhood?",
+   "gold_answers": [
+    "Oldham County"
+   ],
+   "model_answer": "Oldham County, Kentucky"
+  },
+  {
+   "id": "a5caad43f654a7de",
+   "kind": "answer",
+   "question": "Come from the Heart:was first recorded by an artist that sang what genre of music?",
+   "gold_answers": [
+    "country"
+   ],
+   "model_answer": "Country music долгов\n"
+  },
+  {
+   "id": "3f2104d393f43eff",
+   "kind": "answer",
+   "question": "Are both Stephen R. Donaldson and Michael Moorcock science fiction writers?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both are science fiction writers."
+  },
+  {
+   "id": "84996f3df6508a75",
+   "kind": "answer",
+   "question": "Which was fought earlier in our nation's history, the Seven Days Battles or the Battle of Manila?",
+   "gold_answers": [
+    "The Seven Days Battles"
+   ],
+   "model_answer": "Battle of Manila (1574)"
+  },
+  {
+   "id": "fc3578f3f77120a2",
+   "kind": "answer",
+   "question": "Are Distortion Mirrors and OK Go both considered rock bands?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both are rock bands."
+  },
+  {
+   "id": "872f183b97d26fad",
+   "kind": "answer",
+   "question": "Who is one other client that is represented by the same person that also represents a barrister at Doughty Street Chambers?",
+   "gold_answers": [
+    "Angelina Jolie"
+   ],
+   "model_answer": "David Attenborough"
+  },
+  {
+   "id": "e99b07b248be8e1b",
+   "kind": "answer",
+   "question": "What day of the week does the Korean cooking-variety program featuring the owner of \"Dear. bread\" air?",
+   "gold_answers": [
+    "Mondays"
+   ],
+   "model_answer": "Friday\n"
+  },
+  {
+   "id": "5d68951fd7a9f50d",
+   "kind": "answer",
+   "question": "A Wind in the Door is part of a series written by who?",
+   "gold_answers": [
+    "Madeleine L'Engle"
+   ],
+   "model_answer": "Madeleine L’Engle"
+  },
+  {
+   "id": "2021e91ab71417a0",
+   "kind": "answer",
+   "question": "Who is younger, Terry Glaze or Hayley Williams?",
+   "gold_answers": [
+    "Hayley Williams"
+   ],
+   "model_answer": "Hayley Williams (the singer)"
+  },
+  {
+   "id": "48c9cafe1c59e898",
+   "kind": "answer",
+   "question": "What type of group does Pablo Carballo and Argentine Air Force have in common?",
+   "gold_answers": [
+    "military"
+   ],
+   "model_answer": "Argentine military aviation group"
+  },
+  {
+   "id": "3b1ae7bf7be9d97b",
+   "kind": "answer",
+   "question": "The Ronkonkama railroad station and the town of Islip, New York are near?",
+   "gold_answers": [
+    "Long Island"
+   ],
+   "model_answer": "Ronkonkoma, in the Town of Islip, New York."
+  },
+  {
+   "id": "e6652959045b749d",
+   "kind": "answer",
+   "question": "What was the Canadian movie called in Italy that stared a professional American football defensive end of the National Football League along with Michael Ironside?",
+   "gold_answers": [
+    "Anno 2053"
+   ],
+   "model_answer": "Firestorm"
+  },
+  {
+   "id": "9cdc4773181fceb0",
+   "kind": "answer",
+   "question": "What was the Volvo S70 essentially modeled after and was the first all wheel drive Volvo?",
+   "gold_answers": [
+    "Volvo 850"
+   ],
+   "model_answer": "Facelifted Volvo 850 saloon; the 850 was Volvo’s first AWD."
+  },
+  {
+   "id": "19d12477d1ab888e",
+   "kind": "answer",
+   "question": "Was Cars 2 released by the same company which used songs written by Lin-Manuel Miranda in another of its movies?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, Disney."
+  },
+  {
+   "id": "1a200b42b3d52e8f",
+   "kind": "answer",
+   "question": "Which magazine was founded first, Diva or Elle?",
+   "gold_answers": [
+    "Elle"
+   ],
+   "model_answer": "Elle (1945)"
+  },
+  {
+   "id": "5b5b518a9274afd8",
+   "kind": "answer",
+   "question": "In what county did Michael Ola attend high school?",
+   "gold_answers": [
+    "Clayton County, Georgia, United States"
+   ],
+   "model_answer": "Rutherford County"
+  },
+  {
+   "id": "fee2e3d3298b68d2",
+   "kind": "answer",
+   "question": "What does Age of Chance and Vector share in common? ",
+   "gold_answers": [
+    "was a rock band"
+   ],
+   "model_answer": "Both were rock bands."
+  },
+  {
+   "id": "9432edb6ab259c3d",
+   "kind": "answer",
+   "question": "What does Age of Chance and Vector share in common? ",
+   "gold_answers": [
+    "was a rock band"
+   ],
+   "model_answer": "Both are mobile games developed by Nekki."
+  },
+  {
+   "id": "86da87a4e6f1020b",
+   "kind": "answer",
+   "question": "Wheelock Whitney is just one member of the Whitney Family. Where did this American family originate from?",
+   "gold_answers": [
+    "London, England"
+   ],
+   "model_answer": "England (Whitney, Herefordshire)"
+  },
+  {
+   "id": "1b67cb1e8902cb37",
+   "kind": "answer",
+   "question": "Which character did Tamzin Outhwaite play first: Connie (on \"Inside No. 9\") or Melanie Owen (\"EastEnders\")?",
+   "gold_answers": [
+    "Melanie Owen"
+   ],
+   "model_answer": "Melanie Owen (EastEnders)"
+  },
+  {
+   "id": "4d7ee0d44febbbfb",
+   "kind": "answer",
+   "question": "How many seasons has a popular tv show had, in which one of the episodes is called Moho House?",
+   "gold_answers": [
+    "28"
+   ],
+   "model_answer": "37 seasons"
+  },
+  {
+   "id": "fa160269cfeea0db",
+   "kind": "answer",
+   "question": "At what theater is the composer and lyricist for the musical Big Fish a residential artist?",
+   "gold_answers": [
+    "Ars Nova Theater"
+   ],
+   "model_answer": "The O’Neill Theater Center"
+  },
+  {
+   "id": "eceef117eab05c11",
+   "kind": "answer",
+   "question": "What movies has Juno Temple starred in?",
+   "gold_answers": [
+    "She has appeared in films such as \" Black Mass\", \"The Other Boleyn Girl\", \"Wild Child\", \"Atonement\", \"Maleficent\", \"The Three Musketeers\" and \"The Dark Knight Rises\"."
+   ],
+   "model_answer": "*Dirty Girl*, *Killer Joe*, *Horns*, *Maleficent*, *Black Mass*, and *Unsane*."
+  },
+  {
+   "id": "0e5da1d1d1c64cf7",
+   "kind": "answer",
+   "question": "Is Edison Sault Power Canal somehow linked with or used with the Cayuga–Seneca Canal?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No connection is mentioned."
+  },
+  {
+   "id": "04c655630f9d6ab2",
+   "kind": "answer",
+   "question": "What are the letters of the radio station serves the area comprising all of Belknap County, among others?",
+   "gold_answers": [
+    "WANH"
+   ],
+   "model_answer": "WLNH-FM"
+  },
+  {
+   "id": "6e196348818eec9f",
+   "kind": "answer",
+   "question": "In what city does a Christian minister who won the singles title with Jan Kodes in the 1970 French Open currently reside?",
+   "gold_answers": [
+    "Perth, Western Australia"
+   ],
+   "model_answer": "Perth, Australia"
+  },
+  {
+   "id": "721b369dc6c1fa81",
+   "kind": "answer",
+   "question": "How many more singles titles did Kim Warwick win than Jorge Lozano?",
+   "gold_answers": [
+    "three singles titles"
+   ],
+   "model_answer": "1 title"
+  },
+  {
+   "id": "32040c60380fdde1",
+   "kind": "answer",
+   "question": "What city is the women's Vans Triple Crown of Surfing event hosted at?",
+   "gold_answers": [
+    "City and County of Honolulu"
+   ],
+   "model_answer": "Haleiwa, Hawaii"
+  },
+  {
+   "id": "f2991122bb35c826",
+   "kind": "answer",
+   "question": "Wangaratta Wahine, an album featuring the work of an Australian Living Treasure, was recorded by what band?",
+   "gold_answers": [
+    "The Captain Matchbox Whoopee Band"
+   ],
+   "model_answer": "Galapagos Duck"
+  },
+  {
+   "id": "dcd2a821c1039ad4",
+   "kind": "answer",
+   "question": "Where does the founder of The International Grenfell Association act as a missionary to?",
+   "gold_answers": [
+    "Newfoundland and Labrador"
+   ],
+   "model_answer": "Labrador and Newfoundland"
+  },
+  {
+   "id": "f1acb03d157aaec6",
+   "kind": "answer",
+   "question": "What are the professions of Tom Johnston and Daryl Palumbo?",
+   "gold_answers": [
+    "American musician"
+   ],
+   "model_answer": "Musicians; Tom Johnston is also a guitarist, vocalist, founder, and songwriter."
+  },
+  {
+   "id": "66eaf974c59538f2",
+   "kind": "answer",
+   "question": "Which satellite suburb of Melbourne is partially included in the Electoral district of Bass?",
+   "gold_answers": [
+    "Pakenham"
+   ],
+   "model_answer": "Cranbourne"
+  },
+  {
+   "id": "33450cce753b112e",
+   "kind": "answer",
+   "question": "Tritonia and Phyteuma are both names for a what of plants?",
+   "gold_answers": [
+    "genus"
+   ],
+   "model_answer": "Genera of flowering plants"
+  },
+  {
+   "id": "8df9456663bb6088",
+   "kind": "answer",
+   "question": "The primary jockey of Binocular was Champion Jockey how many consecutive times?",
+   "gold_answers": [
+    "20"
+   ],
+   "model_answer": "15 consecutive times"
+  },
+  {
+   "id": "b0d0c04353e92334",
+   "kind": "answer",
+   "question": "Where does the founder of The International Grenfell Association act as a missionary to?",
+   "gold_answers": [
+    "Newfoundland and Labrador"
+   ],
+   "model_answer": "Labrador and northern Newfoundland"
+  },
+  {
+   "id": "471716c2403899d5",
+   "kind": "answer",
+   "question": "What movies has Juno Temple starred in?",
+   "gold_answers": [
+    "She has appeared in films such as \" Black Mass\", \"The Other Boleyn Girl\", \"Wild Child\", \"Atonement\", \"Maleficent\", \"The Three Musketeers\" and \"The Dark Knight Rises\"."
+   ],
+   "model_answer": "Dirty Girl, Jack & Diane, Cracks, Lovelace, Black Mass, The Other Boleyn Girl, Wild Child, Atonement, Maleficent, The Three Musketeers, and The Dark Knight Rises."
+  }
+ ],
+ "evidence": []
+}

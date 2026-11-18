@@ -1,0 +1,372 @@
+[
+  {
+    "id": "32979d79d2076852",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning"
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories"
+          }
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "different stories of the former crypto mogul’s sudden rise and almost instantaneous fall"
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 7,
+            "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry"
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 7,
+            "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry"
+          }
+        ]
+      },
+      {
+        "fact": "2.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.3",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.4",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.3",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  },
+  {
+    "id": "8a51891ff1379e44",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years"
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years"
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "He was the richest person in the world under 30"
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Now he had $22.5 billion. He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction"
+          }
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "he was going to spend it to save humanity from extinction,” he said"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "7944fdf9d825d753",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "The official details have not been reported"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "though the report indicated it will shatter Mike Trout's record 12-year, $426.5 million deal"
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "contradicted",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Jeff Passan reports Ohtani has agreed to a colossal 10-year, $700 million contract"
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "contradicted",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Jeff Passan reports Ohtani has agreed to a colossal 10-year, $700 million contract"
+          }
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.3",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  },
+  {
+    "id": "6c1265c1bbbd03ba",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance"
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told"
+          }
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told"
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.3",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.4",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  },
+  {
+    "id": "5cf59874c43d3a17",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills"
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills"
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter"
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter"
+          }
+        ]
+      }
+    ]
+  }
+]

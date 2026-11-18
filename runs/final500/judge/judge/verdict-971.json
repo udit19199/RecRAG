@@ -1,0 +1,3962 @@
+[
+ {
+  "id": "6771b8ac3d208c6e",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Brain tissue consumes a large amount of energy in proportion to its volume , so large brains place severe metabolic demands on animals ."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Brain tissue consumes a large amount of energy in proportion to its volume , so large brains place severe metabolic demands on animals ."
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "need to limit body weight in order , for example , to fly , has apparently led to selection for a reduction of brain size in some species , such as bats ."
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "need to limit body weight in order , for example , to fly , has apparently led to selection for a reduction of brain size in some species , such as bats ."
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Most of the brain 's energy consumption goes into sustaining the electric charge ( membrane potential ) of neurons ."
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Most vertebrate species devote between 2 % and 8 % of basal metabolism to the brain ."
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Most vertebrate species devote between 2 % and 8 % of basal metabolism to the brain . In primates , however , the percentage is much higher"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "In primates , however , the percentage is much higher -- in humans it rises to 20 -- 25 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The energy consumption of the brain does not vary greatly over time"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "active regions of the cerebral cortex consume somewhat more energy than inactive regions"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "active regions of the cerebral cortex consume somewhat more energy than inactive regions ; this forms the basis for the functional brain imaging methods PET , fMRI , and NIRS ."
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The brain typically gets most of its energy from oxygen - dependent metabolism of glucose ( i.e. , blood sugar )"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The brain typically gets most of its energy from oxygen - dependent metabolism of glucose ( i.e. , blood sugar ) , but ketones provide a major alternative source"
+     }
+    ]
+   },
+   {
+    "fact": "0.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "together with contributions from medium chain fatty acids ( caprylic and heptanoic acids ) , lactate , acetate , and possibly amino acids ."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "98d92286a487263f",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.5",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.6",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.7",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "The judges rule Alex and Justin guilty"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Professor Crumbs sentences them both to be demoted to level one in the Family Wizard Competition , making them behind Max by two levels ."
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Meanwhile , Max sets up traps in the Sub Station for the `` government '' , but ends up falling for one of them ."
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Special guest star : Gregg Sulkin as Mason Guest star : Ian Abercrombie as Professor Crumbs"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Special guest star : Gregg Sulkin as Mason Guest star : Ian Abercrombie as Professor Crumbs"
+     }
+    ]
+   },
+   {
+    "fact": "0.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "81 `` Alex Gives Up '' Victor Gonzalez Todd J. Greenwald November 27 , 2010 ( 2010 - 11 - 27 ) 402 N / A"
+     }
+    ]
+   },
+   {
+    "fact": "0.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Alex decides to give up the wizard competition to spend more time with Mason and thinks that it does not matter since Max is all the way in the lead"
+     }
+    ]
+   },
+   {
+    "fact": "0.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Alex decides to give up the wizard competition to spend more time with Mason and thinks that it does not matter since Max is all the way in the lead"
+     }
+    ]
+   },
+   {
+    "fact": "0.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Chancellor Tootietootie tells Alex that non-wizards and werewolves can not date"
+     }
+    ]
+   },
+   {
+    "fact": "0.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Max 's picture on the front of Future Wizards magazine attracts the daughter of a family of Cucuys ( mythical Latino monster ) and they invite him to a dinner party on their yacht"
+     }
+    ]
+   },
+   {
+    "fact": "0.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "attracts the daughter of a family of Cucuys ( mythical Latino monster )"
+     }
+    ]
+   },
+   {
+    "fact": "0.19",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "and they invite him to a dinner party on their yacht"
+     }
+    ]
+   },
+   {
+    "fact": "0.20",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.21",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.22",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.23",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.24",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.25",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.26",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.27",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.28",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.29",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.30",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.31",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.32",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.33",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.34",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.35",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.36",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.37",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.38",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.39",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.40",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.41",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.42",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.43",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.44",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.45",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.46",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.47",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.48",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.49",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.50",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.51",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.52",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.53",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.54",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.55",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.56",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Dean then gives her his offer once again : he wants to get back with her"
+     }
+    ]
+   },
+   {
+    "fact": "0.57",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.58",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.59",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.60",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.61",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "They then shrink it and go into Mason 's mouth . While there , Alex , Max , and Justin see Mason 's thoughts"
+     }
+    ]
+   },
+   {
+    "fact": "0.62",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "While there , Alex , Max , and Justin see Mason 's thoughts , which are all of Alex ."
+     }
+    ]
+   },
+   {
+    "fact": "0.63",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "They get Dean out"
+     }
+    ]
+   },
+   {
+    "fact": "0.64",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Alex tells Dean that he was knocked out and the doctor 's solution was for them all to dress up as cows"
+     }
+    ]
+   },
+   {
+    "fact": "0.65",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Dean then gives her his offer once again : he wants to get back with her . Alex tells him ' no '"
+     }
+    ]
+   },
+   {
+    "fact": "0.66",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Alex tells him ' no ' , and then gets back together with Mason"
+     }
+    ]
+   },
+   {
+    "fact": "0.67",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Special guest star : Gregg Sulkin as Mason Guest stars : Daniel Samonas as Dean , Frank Pacheco as Felix , Shoshana Bush as Tyler"
+     }
+    ]
+   },
+   {
+    "fact": "0.68",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Special guest star : Gregg Sulkin as Mason Guest stars : Daniel Samonas as Dean , Frank Pacheco as Felix , Shoshana Bush as Tyler"
+     }
+    ]
+   },
+   {
+    "fact": "0.69",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Special guest star : Gregg Sulkin as Mason Guest stars : Daniel Samonas as Dean , Frank Pacheco as Felix , Shoshana Bush as Tyler"
+     }
+    ]
+   },
+   {
+    "fact": "0.70",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Special guest star : Gregg Sulkin as Mason Guest stars : Daniel Samonas as Dean , Frank Pacheco as Felix , Shoshana Bush as Tyler"
+     }
+    ]
+   },
+   {
+    "fact": "0.71",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "84 5 `` Three Maxes and a Little Lady '' Victor Gonzalez Richard Goodman January 7 , 2011 ( 2011 - 01 - 07 ) 405 4.0"
+     }
+    ]
+   },
+   {
+    "fact": "0.72",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Alex joins Justin 's wizard class to try to move up in the competition ."
+     }
+    ]
+   },
+   {
+    "fact": "0.73",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Max joins a sophisticated wizard society ."
+     }
+    ]
+   },
+   {
+    "fact": "0.74",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "They suggest he move the wizard competition up and he moves it to a few days away ."
+     }
+    ]
+   },
+   {
+    "fact": "0.75",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Max quits the society because he finds out that they are taking advantage of him ."
+     }
+    ]
+   },
+   {
+    "fact": "0.76",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Alex and Justin transform into Max in an attempt to change the date of the family wizard competition back to its original date and succeed ."
+     }
+    ]
+   },
+   {
+    "fact": "0.77",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "In the end of the episode they accidentally turn Max indefinitely into a little girl ."
+     }
+    ]
+   },
+   {
+    "fact": "0.78",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Guest stars : Bailee Madison as Maxine , Frank Pacheco as Felix , Kari Wahlgren as Helen , Shane Harper as Fidel"
+     }
+    ]
+   },
+   {
+    "fact": "0.79",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Guest stars : Bailee Madison as Maxine , Frank Pacheco as Felix , Kari Wahlgren as Helen , Shane Harper as Fidel"
+     }
+    ]
+   },
+   {
+    "fact": "0.80",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Guest stars : Bailee Madison as Maxine , Frank Pacheco as Felix , Kari Wahlgren as Helen , Shane Harper as Fidel"
+     }
+    ]
+   },
+   {
+    "fact": "0.81",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Guest stars : Bailee Madison as Maxine , Frank Pacheco as Felix , Kari Wahlgren as Helen , Shane Harper as Fidel"
+     }
+    ]
+   },
+   {
+    "fact": "0.82",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Note : Bailee Madison begins her recurring role as Maxine , the female Max in this episode ."
+     }
+    ]
+   },
+   {
+    "fact": "0.83",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Jake T. Austin was absent in four other episodes and returns at the end of the tenth episode `` Back to Max ''"
+     }
+    ]
+   },
+   {
+    "fact": "0.84",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "85 6 `` Daddy 's Little Girl '' Robbie Countryman Gigi McCreery & Perry Rein January 21 , 2011 ( 2011 - 01 - 21 ) 406 3.4"
+     }
+    ]
+   },
+   {
+    "fact": "0.85",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "With Max still a little girl , their parents pay more attention to Max ( Maxine ) , and Alex becomes jealous ."
+     }
+    ]
+   },
+   {
+    "fact": "0.86",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Justin takes Maxine to her ( Max 's ) karate class and Maxine kicks Justin 's butt ."
+     }
+    ]
+   },
+   {
+    "fact": "0.87",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Alex decides to make Jerry 's favorite sandwich in order to win his love back"
+     }
+    ]
+   },
+   {
+    "fact": "0.88",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "announcing that she beat Justin in karate , and Jerry immediately falls for her cuteness again"
+     }
+    ]
+   },
+   {
+    "fact": "0.89",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "They cast spells on Maxine , Justin using the spell he used on Max that turned him into Maxine , and Alex using the reverse spell . Unfortunately , it only makes Maxine cuter , which makes her furious ."
+     }
+    ]
+   },
+   {
+    "fact": "0.90",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "she demands that she kicks either Alex or Justin 's butt"
+     }
+    ]
+   },
+   {
+    "fact": "0.91",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Alex casts a spell on Justin to make him a karate master ."
+     }
+    ]
+   },
+   {
+    "fact": "0.92",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Too fast for Maxine , Justin beats her , and Maxine is hurt ( physically )"
+     }
+    ]
+   },
+   {
+    "fact": "0.93",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Jerry and Theresa rush to her side , caring for Maxine more than they care that Justin beat Maxine in karate ."
+     }
+    ]
+   },
+   {
+    "fact": "0.94",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Justin leaves , and Alex leaves after him , heartbroken ."
+     }
+    ]
+   },
+   {
+    "fact": "0.95",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Jerry tells Alex that he fell for Maxine because she reminded him of Alex when she was little"
+     }
+    ]
+   },
+   {
+    "fact": "0.96",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Zeke thinks the Russos hate him , but really it was just Harper 's alibi in order to keep him away from the Sub Station"
+     }
+    ]
+   },
+   {
+    "fact": "0.97",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Guest stars : Bailee Madison as Maxine , Dan Benson as Zeke , Lanny Joon as Sensei"
+     }
+    ]
+   },
+   {
+    "fact": "0.98",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Guest stars : Bailee Madison as Maxine , Dan Benson as Zeke , Lanny Joon as Sensei"
+     }
+    ]
+   },
+   {
+    "fact": "0.99",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Guest stars : Bailee Madison as Maxine , Dan Benson as Zeke , Lanny Joon as Sensei"
+     }
+    ]
+   },
+   {
+    "fact": "0.100",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Absent : Jake T. Austin as Max Russo"
+     }
+    ]
+   },
+   {
+    "fact": "0.101",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "86 7 `` Everything 's Rosie for Justin '' Victor Gonzalez Justin Varava February 4 , 2011 ( 2011 - 02 - 04 ) 407 3.9"
+     }
+    ]
+   },
+   {
+    "fact": "0.102",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Justin and his delinquent class have a wizard wand dance assessment to do which will get them back in Wiztech ."
+     }
+    ]
+   },
+   {
+    "fact": "0.103",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.104",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "In the episode `` Everything 's Rosie for Justin '' , Justin falls in love with Rosie , a guardian angel"
+     }
+    ]
+   },
+   {
+    "fact": "0.105",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.106",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.107",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.108",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.109",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.110",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.111",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.112",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.113",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.114",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.115",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.116",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.117",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.118",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.119",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.120",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.121",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.122",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.123",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.124",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.125",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.126",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.127",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.128",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.129",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.130",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.131",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.132",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.133",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.134",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.135",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.136",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.137",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.138",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.139",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.140",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.141",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.142",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.143",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.144",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.145",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.146",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.147",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.148",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.149",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.150",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.151",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.152",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.153",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.154",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.155",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.156",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.157",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.158",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.159",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.160",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.161",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.162",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.163",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.164",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.165",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.166",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.167",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.168",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.169",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.170",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.171",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.172",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.173",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.174",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.175",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.176",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.177",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.178",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.179",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.180",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.181",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.182",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.183",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.184",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.185",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.186",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.187",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.188",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.189",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.190",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.191",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.192",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.193",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.194",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.195",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.196",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.197",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.198",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.199",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.200",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.201",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.202",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.203",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.204",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.205",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.206",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.207",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.208",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.209",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "In the end Mason 's parents like her as a werewolf and she says to him that they do not know the real her"
+     }
+    ]
+   },
+   {
+    "fact": "0.210",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "he says that he truly loves Alex to his parents and that she is a wizard"
+     }
+    ]
+   },
+   {
+    "fact": "0.211",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "She changes back to a wizard and Mason turns back to human form"
+     }
+    ]
+   },
+   {
+    "fact": "0.212",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "After the parents find out they try to eat her and Mason and Alex make a near escape"
+     }
+    ]
+   },
+   {
+    "fact": "0.213",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Max makes his parents ' food taste like kid food in order to make it taste good"
+     }
+    ]
+   },
+   {
+    "fact": "0.214",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Afterwards Jerry and Theresa eat it , and as a result they act like little kids"
+     }
+    ]
+   },
+   {
+    "fact": "0.215",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Finally , Justin uses a spell on a pizza to turn them back into their regular selves"
+     }
+    ]
+   },
+   {
+    "fact": "0.216",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Max uses another spell on cookies to make them older , but they turn into teenagers"
+     }
+    ]
+   },
+   {
+    "fact": "0.217",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.218",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.219",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.220",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.221",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.222",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.223",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.224",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.225",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.226",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.227",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.228",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.229",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.230",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.231",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.232",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.233",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.234",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.235",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.236",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.237",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.238",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.239",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.240",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.241",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "In `` Wizard of the Year '' , Alex is crowned Wizard of the Year for saving the world from the angels of darkness"
+     }
+    ]
+   },
+   {
+    "fact": "0.242",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "and is reinstated in the Wizards Competition"
+     }
+    ]
+   },
+   {
+    "fact": "0.243",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.244",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.245",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.246",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.247",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.248",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.249",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.250",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.251",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.252",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.253",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.254",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.255",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.256",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.257",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.258",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.259",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.260",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.261",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.262",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.263",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.264",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.265",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.266",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.267",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.268",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.269",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.270",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.271",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.272",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.273",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.274",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.275",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.276",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.277",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.278",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.279",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.280",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.281",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.282",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.283",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.284",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.285",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.286",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.287",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.288",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.289",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.290",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.291",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.292",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.293",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.294",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.295",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.296",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.297",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.298",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.299",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.300",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.301",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.302",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.303",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.304",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.305",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.306",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.307",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.308",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.309",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.310",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.311",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.312",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.313",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.314",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.315",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.316",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.317",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.318",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.319",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.320",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.321",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.322",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.323",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.324",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.325",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.326",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.327",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.328",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.329",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.330",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.331",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.332",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.333",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.334",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.335",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.336",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.337",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.338",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.339",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.340",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.341",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.342",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.343",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.344",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.345",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.346",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.347",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.348",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.349",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.350",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.351",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.352",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.353",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.354",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.355",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.356",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.357",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.358",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.359",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.360",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.361",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.362",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.363",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.364",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.365",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.366",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.367",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.368",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.369",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.370",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.371",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.372",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.373",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.374",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.375",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.376",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.377",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.378",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.379",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.380",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.381",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.382",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.383",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.384",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.385",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.386",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.387",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.388",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.389",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.390",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.391",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.392",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.393",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.394",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.395",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.396",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.397",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.398",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.399",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.400",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.401",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.402",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.403",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.404",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.405",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.406",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.407",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.408",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.409",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.410",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.411",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.412",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.413",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.414",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "He is defeated and destroyed by Alex , Justin and Max who were using the Power of Three"
+     }
+    ]
+   },
+   {
+    "fact": "0.415",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.416",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Justin finally gets back together with Juliet"
+     }
+    ]
+   },
+   {
+    "fact": "0.417",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.418",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.419",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.420",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.421",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.422",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.423",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.424",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.425",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.426",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.427",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.428",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.429",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.430",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.431",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.432",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.433",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.434",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.435",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.436",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.437",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.438",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.439",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.440",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.441",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.442",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.443",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.444",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.445",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.446",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.447",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.448",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.449",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.450",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.451",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.452",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.453",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.454",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.455",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.456",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.457",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.458",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.459",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.460",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.461",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.462",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.463",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.464",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.465",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.466",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.467",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.468",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.469",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.470",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.471",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.472",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.473",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.474",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.475",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.476",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.477",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.478",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.479",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.480",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.481",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.482",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.483",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Alex , Justin and Max use their three time - outs to go and rescue their friends ."
+     }
+    ]
+   },
+   {
+    "fact": "0.484",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "They make it back , only to discover that they have been gone too long and have been disqualified from the competition"
+     }
+    ]
+   },
+   {
+    "fact": "0.485",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "They all return home , where the lair disappears and they all lose their magic , thus becoming mortals"
+     }
+    ]
+   },
+   {
+    "fact": "0.486",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Justin and Max begin to hate Alex because of her insistence on saving Zeke and Harper resulting in them losing"
+     }
+    ]
+   },
+   {
+    "fact": "0.487",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Convinced that the loss of their powers has ruined the family , Jerry decides to sell the sub shop"
+     }
+    ]
+   },
+   {
+    "fact": "0.488",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "The kids go for a day without magic , during which , slowly gaining back trust in each other as they reopen and run the shop"
+     }
+    ]
+   },
+   {
+    "fact": "0.489",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "where the host reveals that the griffin attack ( which was actually meant for Professor Crumbs ) and the weeks they went without magic were tests to test their family bond"
+     }
+    ]
+   },
+   {
+    "fact": "0.490",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "They enter the final round of the competition , a massive labyrinth . The first out of the maze will win"
+     }
+    ]
+   },
+   {
+    "fact": "0.491",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Justin makes it out first and is declared the Family Wizard"
+     }
+    ]
+   },
+   {
+    "fact": "0.492",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.493",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Alex wins and gains full wizardry"
+     }
+    ]
+   },
+   {
+    "fact": "0.494",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Justin becomes a full wizard as well when Professor Crumbs reveals he is retiring as headmaster of WizTech and passes the position to Justin"
+     }
+    ]
+   },
+   {
+    "fact": "0.495",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.496",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The series ends with hugging and Alex saying that they are all happy"
+     }
+    ]
+   },
+   {
+    "fact": "0.497",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.498",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.499",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.500",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.501",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.502",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "in the hour - long series finale , Alex , Justin , and Max compete in the family wizard competition"
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "In the end of the episode they accidentally turn Max indefinitely into a little girl"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Note : Bailee Madison begins her recurring role as Maxine , the female Max in this episode ."
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "She ends up making Alex jealous when their father prefers Maxine over Alex"
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Maxine remains until `` Back to Max ''"
+     }
+    ]
+   },
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "In the episode `` Everything 's Rosie for Justin '' , Justin falls in love with Rosie , a guardian angel"
+     }
+    ]
+   },
+   {
+    "fact": "1.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "but at the end of `` Dancing with Angels '' she becomes an Angel of Darkness"
+     }
+    ]
+   },
+   {
+    "fact": "1.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "In `` Zeke Finds Out '' , the Russos finally reveal to Zeke that they are wizards"
+     }
+    ]
+   },
+   {
+    "fact": "1.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "In `` Wizard of the Year '' , Alex is crowned Wizard of the Year for saving the world from the angels of darkness"
+     }
+    ]
+   },
+   {
+    "fact": "1.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "and is reinstated in the Wizards Competition"
+     }
+    ]
+   },
+   {
+    "fact": "1.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "In `` Justin 's Back In '' , Justin is reinstated in the Wizard Competition , after his class of delinquent wizards passes"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "00efb201b3081af2",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "The eighth and final season of the fantasy drama television series Game of Thrones was announced by HBO in July 2016 ."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Unlike the first six seasons that each had ten episodes"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "the seventh that had seven episodes"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "the eighth season will have only six episodes"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Like the previous season , it will largely consist of original content not found currently in George R.R. Martin 's A Song of Ice and Fire series"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "will instead adapt material Martin has revealed to showrunners about the upcoming novels in the series , The Winds of Winter and A Dream of Spring ."
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "will instead adapt material Martin has revealed to showrunners about the upcoming novels in the series , The Winds of Winter and A Dream of Spring ."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "e9a835bae90cc0d9",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Men 's ( 12 ) Basketball ( 3 ) : 1985 , 2016 , 2018"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Basketball ( 3 ) : 1985 , 2016 , 2018"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Cross Country ( 4 ) : 1966 , 1967 , 1968 , 1970"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Football ( 1 ) : 2009"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Indoor Track & Field ( 3 ) : 1968 , 1971 , 1979"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Outdoor Track & Field ( 1 ) : 1957"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Women 's ( 9 ) Cross Country"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Women 's ( 9 ) Cross Country ( 9 ) : 1989 , 1990 , 1991 , 1992 , 1993 , 1994 , 1998 , 2009 , 2010"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "see also : Big East Conference NCAA team championships"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "List of NCAA schools with the most NCAA Division I championships"
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Basketball ( 3 ) : 1985 , 2016 , 2018"
+     }
+    ]
+   },
+   {
+    "fact": "2.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "The Villanova Wildcats represent Villanova University in 24 varsity sports. Most compete in the Big East"
+     }
+    ]
+   },
+   {
+    "fact": "2.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Current Coach Jay Wright"
+     }
+    ]
+   },
+   {
+    "fact": "2.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "During the 2017 - 18 season , the team played its entire home schedule that season at the Wells Fargo Center"
+     }
+    ]
+   },
+   {
+    "fact": "2.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "the team played its entire home schedule that season at the Wells Fargo Center following the reconstruction of the Pavilion"
+     }
+    ]
+   },
+   {
+    "fact": "2.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "scheduled to be completed in time for the 2018 - 19 school year"
+     }
+    ]
+   },
+   {
+    "fact": "2.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Wright has taken the Wildcats to 12 postseason appearances"
+     }
+    ]
+   },
+   {
+    "fact": "2.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "including 7 consecutive trips ( 2005 -- 2011 ) and 5 consecutive trips ( 2013 - 2017 ) to the NCAA Tournament"
+     }
+    ]
+   },
+   {
+    "fact": "2.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "including 7 consecutive trips ( 2005 -- 2011 ) and 5 consecutive trips ( 2013 - 2017 ) to the NCAA Tournament"
+     }
+    ]
+   },
+   {
+    "fact": "2.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "The 2011 - 12 team struggled and missed postseason"
+     }
+    ]
+   },
+   {
+    "fact": "2.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Coach Wright brought a surprising young team back to the 2013 NCAA Tournament"
+     }
+    ]
+   },
+   {
+    "fact": "2.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Villanova has appeared in the NIT 17 times , winning in 1994"
+     }
+    ]
+   },
+   {
+    "fact": "2.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Villanova has appeared in the NIT 17 times , winning in 1994"
+     }
+    ]
+   },
+   {
+    "fact": "2.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "won the Big East Tournament in 1995 , 2015 and 2017"
+     }
+    ]
+   },
+   {
+    "fact": "2.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "The Wildcats have appeared in the NCAA Men 's Tournament 37 times"
+     }
+    ]
+   },
+   {
+    "fact": "2.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "The Wildcats have appeared in the NCAA Men 's Tournament 37 times , the 8th highest total in NCAA history"
+     }
+    ]
+   },
+   {
+    "fact": "2.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "have reached the Elite Eight 13 times"
+     }
+    ]
+   },
+   {
+    "fact": "2.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "They have been to the Final Four of the NCAA Division I Men 's Basketball Tournament on five occasions"
+     }
+    ]
+   },
+   {
+    "fact": "2.19",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "The 1939 team coached by Al Severance reached the inaugural NCAA Final Four played at the Palestra for the 1939 NCAA Basketball Tournament"
+     }
+    ]
+   },
+   {
+    "fact": "2.20",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "the inaugural NCAA Final Four played at the Palestra for the 1939 NCAA Basketball Tournament"
+     }
+    ]
+   },
+   {
+    "fact": "2.21",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "All - American Howard Porter led a Wildcat team coached by Jack Kraft to Final Four of the 1971 NCAA University Division Basketball Tournament"
+     }
+    ]
+   },
+   {
+    "fact": "2.22",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Coach Rollie Massimino took Villanova to a surprising 1985 National Championship"
+     }
+    ]
+   },
+   {
+    "fact": "2.23",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Current Coach Jay Wright reached the Final Four at the 2009 NCAA Division I Men 's Basketball Tournament"
+     }
+    ]
+   },
+   {
+    "fact": "2.24",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "reached the Final Four at the 2009 NCAA Division I Men 's Basketball Tournament behind Dante Cunningham and Scottie Reynolds"
+     }
+    ]
+   },
+   {
+    "fact": "2.25",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The team most recently won the 2018 NCAA Division I Men 's Basketball Tournament"
+     }
+    ]
+   },
+   {
+    "fact": "2.26",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The team most recently won the 2018 NCAA Division I Men 's Basketball Tournament for their third National Championship"
+     }
+    ]
+   },
+   {
+    "fact": "3.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Men 's ( 12 ) Basketball ( 3 ) : 1985 , 2016 , 2018"
+     }
+    ]
+   },
+   {
+    "fact": "3.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Basketball ( 3 ) : 1985 , 2016 , 2018"
+     }
+    ]
+   },
+   {
+    "fact": "3.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Cross Country ( 4 ) : 1966 , 1967 , 1968 , 1970"
+     }
+    ]
+   },
+   {
+    "fact": "3.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Football ( 1 ) : 2009"
+     }
+    ]
+   },
+   {
+    "fact": "3.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Indoor Track & Field ( 3 ) : 1968 , 1971 , 1979"
+     }
+    ]
+   },
+   {
+    "fact": "3.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Outdoor Track & Field ( 1 ) : 1957"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "30de6259d30b63e7",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "The poem survives in a single manuscript , the Cotton Nero A.x."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "which also includes three religious narrative poems : Pearl , Purity and Patience ."
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.5",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "7b3552e0e525abdd",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "A main vertical stroke is called a stem ."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The letter m has three , the left , middle , and right stems ."
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The central stroke of an s is called the spine"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "When the stroke is part of a lowercase and rises above the height of an x ( called the x height ) , it is called an ascender ."
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Letters with ascenders are bdfhkl ."
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "A stroke which drops below the baseline is a descender ."
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Letters with descenders are gjpqy ."
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "An arching stroke is called a shoulder as in the top of an R"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "An arching stroke is called a shoulder as in the top of an R or sometimes just an arch , as in hnm ."
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "A closed curved stroke is called a bowl in bdopq DOPQ"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "B has two bowls ."
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "A trailing outstroke , as in jy JQR is called a tail ."
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "The inferior diagonal stroke in K is called leg ."
+     }
+    ]
+   },
+   {
+    "fact": "0.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "A short horizontal stroke , as in the center of ef and the middle stroke of EF , is called a bar ."
+     }
+    ]
+   },
+   {
+    "fact": "0.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "When the strokes connect as in A and H or cross strokes as in t is also known as crossbar ."
+     }
+    ]
+   },
+   {
+    "fact": "0.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "A longer horizontal stroke at the top or bottom , as in ET , is called an arm ."
+     }
+    ]
+   },
+   {
+    "fact": "0.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "The bottom of the two - story g is called a loop"
+     }
+    ]
+   },
+   {
+    "fact": "0.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "the very short stroke at the top is called the ear ."
+     }
+    ]
+   },
+   {
+    "fact": "0.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "ij each have a dot , jot , or tittle ."
+     }
+    ]
+   },
+   {
+    "fact": "0.19",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Angles of strokes are called apices if at the top and vertices if at the bottom ."
+     }
+    ]
+   },
+   {
+    "fact": "0.20",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Angles of strokes are called apices if at the top and vertices if at the bottom ."
+     }
+    ]
+   },
+   {
+    "fact": "0.21",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "w has one apex and two vertices ; v has one vertex ."
+     }
+    ]
+   },
+   {
+    "fact": "0.22",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "w has one apex and two vertices ; v has one vertex ."
+     }
+    ]
+   }
+  ]
+ }
+]

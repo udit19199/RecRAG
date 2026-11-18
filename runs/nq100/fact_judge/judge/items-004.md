@@ -1,0 +1,906 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=c9df328f9ea38214 ===
+Gold sentences and facts:
+Sentence 0: Dragon Ball Z ( ドラゴンボール ゼット , Doragon Bōru Zetto , commonly abbreviated as DBZ ) is the long - running anime sequel to the Dragon Ball TV series , adapted from the final twenty - six volumes of the Dragon Ball manga written by Akira Toriyama . The manga portion of the series debuted in Weekly Shōnen Jump in October 4 , 1988 and lasted until 1995 ; the anime adaptation premiered in Japan on Fuji Television on April 26 , 1989 , taking over its predecessor 's time slot , and ran until its end on January 31 , 1996 , lasting 291 episodes in Japan , and 276 episodes in the United States originally , although all 291 episodes were later broadcast when content from the first 67 episodes was restored .
+  Fact 0.0: Dragon Ball Z, Japanese title Doragon Boru Zetto, is commonly abbreviated as DBZ.
+  Fact 0.1: Dragon Ball Z is the long-running anime sequel to the Dragon Ball TV series.
+  Fact 0.2: Dragon Ball Z is adapted from the final twenty-six volumes of the Dragon Ball manga written by Akira Toriyama.
+  Fact 0.3: The Dragon Ball Z manga portion debuted in Weekly Shonen Jump on October 4, 1988.
+  Fact 0.4: The Dragon Ball Z manga portion lasted until 1995.
+  Fact 0.5: The Dragon Ball Z anime premiered in Japan on Fuji Television on April 26, 1989.
+  Fact 0.6: The Dragon Ball Z anime took over its predecessor's time slot.
+  Fact 0.7: The Dragon Ball Z anime ran until its end on January 31, 1996.
+  Fact 0.8: The Dragon Ball Z anime lasted 291 episodes in Japan.
+  Fact 0.9: The Dragon Ball Z anime originally lasted 276 episodes in the United States.
+  Fact 0.10: All 291 Dragon Ball Z episodes were later broadcast.
+  Fact 0.11: All 291 episodes were later broadcast after content from the first 67 episodes was restored.
+
+Retrieved items:
+<item 1>
+List of Dragon Ball Z episodes
+! ブッ 飛べ ヤコン ) April 13 , 1994 October 18 , 2001 224 209 `` A Great Miscalculation ! ! Satan vs. Three Super-Warriors ! ? '' / `` Battle Supreme '' `` Daigosan !
+! Satan tai Sannin no Chōsenshi ! ? '' ( 大 誤算 ! ! サタン VS3 人 の 超 戦士 ! ? ) April 20 , 1994 October 22 , 2001 225 210 `` Such Strong Kids ! ! No. 18 's Close Fight
+! ? '' / `` Eighteen Unmasks '' `` Tsuyoi ze Chibikko ! ! Jūhachigō Daikusen ! ? '' ( 強い ぜ チビッコ ! ! 18 号 大 苦戦 ! ? )
+</item 1>
+
+<item 2>
+List of Dragon Ball Z episodes
+July 12 , 1989 October 25 , 1996 June 30 , 2005 ( re-dub ) 12 8 `` Catnap on the Serpentine Road Goku Takes a Tumble '' / `` Home For Infinite Losers '' (
+Global Training ) `` Hebi no Michi de Inemuri Gokū ga Okkochiru '' ( 蛇 の 道 で い ねむり 悟空 が 落っこちる ) July 19 , 1989 November 1 , 1996 July 4 , 2005 ( re-dub ) 13 8
+`` Hands Off ! Yama - sama 's Secret Fruit '' / `` Home For Infinite Losers '' ( Goz and Mez ) `` Te o Dasu na ! Enmasama no Himitsu no Kudamono '' ( 手 を 出す な !
+</item 2>
+
+<item 3>
+List of Dragon Ball Z episodes
+( Saiyan Sized Secret ) `` Ima da Gokū ! Subete o Kaketa Saigo no Ōwaza '' ( いまだ 悟空 ! すべて を 賭け た 最後 の 大 技 ) December 20 , 1989 May 3 , 1997 August 4 , 2005 (
+re-dub ) 32 24 `` Battle Power Times Ten ! ! Vegeta 's Great Metamorphosis '' / `` Vegeta ... Saiyan Style ! '' ( Spirit Bomb Away ! ) `` Sentōryoku Jūbai ! !
+Bejīta Daihenshin '' ( 戦闘 力 10 倍 ! ! ベジータ 大 変身 ) January 17 , 1990 May 10 , 1997 August 8 , 2005 ( re-dub ) 33 25 `` Do n't Die , Father ! ! This is the Depth
+of Gohan 's Power '' / `` Stop Vegeta Now ! ''
+</item 3>
+
+<item 4>
+List of Dragon Ball Z episodes
+? '' ( 炎 の 決勝 ! ! 悟空 か パイクーハン か ! ? ) August 25 , 1993 September 13 , 2001 199 184 `` Do n't Let Victory Get Away ! ! Finish With an Ultra-Fast Kamehame - Ha ''
+/ `` Goku vs. Pikkon '' `` Nigasu na Shōri ! ! Kimero Chōhaya Kamehameha '' ( 逃す な 勝利 ! ! 決めろ 超速 かめ はめ 波 ) September 1 , 1993 September 14 , 2001 200 185 ``
+Seven Years Since Then ! Starting Today , I 'm a High School Student '' / `` Gohan Goes to High School '' `` Are kara Shichinen ! Kyō kara Boku wa Kōkōsei '' (
+あれ から 7 年 !
+</item 4>
+
+<item 5>
+List of Dragon Ball Z episodes
+ジース と バータ が 悟空 を 襲う ) November 14 , 1990 May 23 , 1998 October 10 , 2005 ( re-dub ) 68 54 `` At Last , a Direct Confrontation ! ! Captain Ginyu Takes the Field
+'' / `` Ginyu Assault '' `` Tsui ni Chokusetsu Taiketsu ! ! Ginyū Taichō no Odemashi Da '' ( ついに 直接 対決 ! ! ギニュー 隊長 の お で まし だ ) November 21 , 1990 September 13
+, 1999 69 55 `` Incredible Force ! ! Did You See Goku 's Full Power ? '' / `` Incredible Force ! '' `` Susamajii Hakuryoku ! ! Mita ka , Gokū no Furu Pawā '' (
+凄まじい 迫力 ! !
+</item 5>
+
+<item 6>
+List of Dragon Ball Z episodes
+The series was broadcast in eight separate near - continuous blocks ( 1 - 35 , 36 - 67 , 68 - 107 , 108 - 116 , 117 - 194 , 195 - 237 , 238 - 276 , and 277 -
+291 ) , with breaks varying between four months to over a year between each block . In only one instance ( between episodes 194 and 195 ) was there actually
+parity between the DVD release and the actual broadcast sequence in terms of the end of one `` season '' and the beginning of the next .
+</item 6>
+
+<item 7>
+List of Dragon Ball Z episodes
+2001 35 -- 67 ( 26 -- 53 edited ) Ginyu Force 000000002000 - 10 - 01 - 0000 October 1 , 2000 68 -- 74 ( 54 -- 60 edited ) Frieza 000000002001 - 12 - 11 - 0000
+December 11 , 2001 75 -- 107 ( 61 -- 92 edited ) Garlic Jr . 5 000000002003 - 01 - 21 - 0000 January 21 , 2003 108 -- 117 ( 93 -- 102 edited ) Trunks 6
+000000002000 - 09 - 26 - 0000 September 26 , 2000 118 -- 125 ( 103 -- 110 edited ) Androids 7 000000002003 - 02 - 11 - 0000 February 11 , 2003 126 -- 139 ( 111
+-- 124 edited ) Imperfect Cell 8 000000002003 - 03 - 04 - 0000 March 4 ,
+</item 7>
+
+<item 8>
+List of Dragon Ball Z episodes
+! Yabō wa Yurusanai '' ( 待っ てろ バビディ ! ! 野望 は 許さ ない ) June 22 , 1994 October 31 , 2001 231 216 `` The Seal is Broken ! Out Comes the Vicious Majin Boo ! ! '' /
+`` Magic Ball of Buu '' `` Toketa Fūin ! Deruzo Kyōaku Majin Bū ! ! '' ( 解け た 封印 ! 出る ぞ 凶悪 魔 人 ブウ ! ! ) June 29 , 1994 November 1 , 2001 232 217 `` I Wo n't
+Allow the Revival ! ! A Kamehame - Ha of Resistance '' / `` Buu is Hatched ! '' `` Fukkatsu Sasenai ! ! Teikō no Kamehameha '' ( 復活 させない ! !
+</item 8>
+
+<item 9>
+List of Dragon Ball Z episodes
+2007 6 75 -- 107 Frieza Saga Season Four February 19 , 2008 6 108 -- 139 Garlic Jr. / Trunks / Androids Saga Season Five May 27 , 2008 6 140 -- 165 Imperfect
+Cell / Perfect Cell Saga Season Six September 16 , 2008 6 166 -- 194 Cell Games Saga Season Seven November 11 , 2008 6 195 -- 219 Great Saiyaman / World
+Tournament Saga Season Eight February 10 , 2009 6 220 -- 253 Babidi / Majin Buu Saga Season Nine May 19 , 2009 6 254 -- 291 Fusion / Kid Buu Saga Funimation
+Dragon Box Z Sets ( edit ) Name Date Discs Episodes Dragon Box Z , Vol. 1 November 17 , 2009 6 1 -- 42 Dragon Box Z , Vol. 2 February 16 , 2010 6 43 -- 84
+Dragon Box Z , Vol. 3 May 4 , 2010 6 85 -- 126 Dragon Box Z , Vol.
+</item 9>
+
+<item 10>
+List of Dragon Ball Z episodes
+Season Episodes Japanese airdates English airdates Saiyan Saga 39 ( 1 -- 39 ) April 26 , 1989 -- March 7 , 1990 September 13 , 1996 -- September 20 , 1997 (
+edited ) June 14 , 2005 -- August 18 , 2005 ( uncut ) Namek and Captain Ginyu Sagas 35 ( 40 -- 74 ) March 14 , 1990 -- January 16 , 1991 September 20 , 1997 --
+April 4 , 1998 ( edited ) September 13 , 1999 -- September 20 , 1999 ( uncut ep. 68 -- 74 ) August 22 , 2005 -- October 10 , 2005 ( uncut ep. 40 -- 67 ) Frieza
+Saga 33 ( 75 -- 107 ) January 23 , 1991 -- September 11 , 1991 September 21 , 1999 -- November 3 , 1999 Garlic Jr. , Trunks and Androids Sagas 32 ( 108 -- 139 )
+September 18 ,
+</item 10>
+=== END ITEM id=c9df328f9ea38214 ===
+
+=== ITEM id=7e10e7d90e467577 ===
+Gold sentences and facts:
+Sentence 0: Urdu lyrics كشورِ حسين شاد باد ‬ پاک سرزمین شاد باد ‬ ارضِ پاکستان ! ‏ ‬ تُو نشانِ عزمِ عالی شان ‬ مرکزِ یقین شاد باد ‬ قوّتِ اُخوّتِ عوام ‬ پاک سرزمین کا نظام ‬ پائنده تابنده باد ! ‏ ‬ قوم ، ملک ، سلطنت ‬ شاد باد منزلِ مراد ‬ رہبرِ ترقّی و کمال ‬ پرچمِ ستاره و ہلال ‬ جانِ استقبال ! ‏ ‬ ترجمانِ ماضی ، شانِ حال ‬ سایۂ خدائے ذوالجلال ‬ Transliteration ( ALA - LC ) Translation ( poetical ) Translation ( literal ) Pāk sarzamīn shād bād Kishwar - i ḥasīn shād bād Tū nishān - i ʿazm - i ʿālī shān Arẓ - i Pākistān ! Markaz - i yaqīn shād bād May the holy land , stay glad ; Beautious realm , stay glad . Thou , the sign of high resolve -- O Land of Pakistan ! Citadel of faith , stay glad . Blessed be the sacred land , Happy be the bounteous realm . Thou symbol of high resolve , O Land of Pakistan ! Blessed be the citadel of faith . Pāk sarzamīn kā niz̤ām Quwwat - i Ukhuwwat - i ʿawām Qaum , mulk , salt̤anat Pāyindah tābindah bād ! Shād bād manzil - i murād Order of the holy land , Power of fraternity of the populace ; The nation , country , and domain ; Ever luminous remain ! The cherished goal , stay glad . The order of this sacred land , The might of the brotherhood of the people , May the nation , the country , and the state , Shine in glory everlasting ! Blessed be the goal of our ambition . Parcam - i sitārah o - hilāl Rahbar - i taraqqī o - kamāl Tarjumān - i māẓī , shān - i ḥāl Jān - i istiqbāl ! Sāyah - yi Khudā - yi Ẕū l - jalāl Flag with the star and crescent , The leader of progress and ascent , Dragoman of past , the pride of present ; Soul of the future ! Shadow of the God of grandeur . The flag of the crescent and star , Leads the way to progress and perfection , Interpreter of our past , glory of our present , inspiration for our future ! Shade of God , the Glorious and Mighty .
+  Fact 0.0: The Urdu lyrics of the anthem are presented in Urdu script.
+  Fact 0.1: The transliteration of the lyrics follows the ALA-LC romanization system.
+  Fact 0.2: The first line of the Urdu lyrics, Pak sarzamin shad bad, asks that the holy land stay glad.
+  Fact 0.3: The poetical translation reads May the holy land stay glad and Beautious realm stay glad.
+  Fact 0.4: The literal translation reads Blessed be the sacred land and happy be the bounteous realm.
+  Fact 0.5: The lyrics address the Land of Pakistan as the sign of high resolve.
+  Fact 0.6: The lyrics call the land the citadel of faith.
+  Fact 0.7: The second stanza refers to the order of the holy land and the power of the fraternity of the populace.
+  Fact 0.8: The second stanza names the nation, the country, and the state, and asks that they shine in everlasting glory.
+  Fact 0.9: The second stanza describes the cherished goal as glad.
+  Fact 0.10: The third stanza refers to the flag with the star and crescent.
+  Fact 0.11: The third stanza calls the leader of progress and ascent a rahbar.
+  Fact 0.12: The third stanza calls the past's interpreter and the present's pride the dragoman of the past and the glory of the present.
+  Fact 0.13: The third stanza calls the soul of the future the inspiration for the future.
+  Fact 0.14: The final line refers to the shadow of God, the Glorious and Mighty.
+
+Retrieved items:
+<item 1>
+Qaumi Taranah
+In 1950 , the impending state visit of the Shah of Iran added urgency to the matter and resulted in the Government of Pakistan asking the NAC to submit an
+anthem without further delay . The NAC Chairman , then Federal Minister for Education , Fazlur Rahman , asked several poets and composers to write lyrics but
+none of the submitted works were deemed suitable . The NAC also examined several different tunes and eventually selected the one presented by Ahmed G. Chagla
+and submitted it for formal approval . On 21 August 1949 , the Government of Pakistan adopted Chagla 's tune for the national anthem . The anthem , without
+lyrics , was performed for the first time for a foreign head of state on the state visit of the Shah of Iran to Pakistan in Karachi on 1 March 1950 by a
+Pakistan Navy band . It was later played for Prime Minister Liaquat Ali Khan during his official visit to the United States on 3 May 1950 . It was played before
+the NAC on 10 August 1950 . Official recognition to the national anthem , however , was not given until August 1954 .
+</item 1>
+
+<item 2>
+Qaumi Taranah
+rɑː. nɑ ) , lit . `` National Anthem '' ) , also known as Pāk Sarzamīn ( Urdu : پاک سرزمین ‬ ‎ , pronounced ( ˈpɑːk ˈsər. zə. miːn ) , lit . `` The Sacred Land
+'' ) , is the national anthem of Pakistan . Its music was composed by Ahmad G. Chagla in 1949 , preceding the lyrics , which were written by Hafeez Jullundhri
+in 1952 . It was officially adopted as Pakistan 's national anthem in August 1954 and was recorded in the same year by eleven major singers of Pakistan
+including Ahmad Rushdi , Kaukab Jahan , Rasheeda Begum , Najam Ara , Naseema Shaheen , Zawar Hussain , Akhtar Abbas , Ghulam Dastagir , Anwar Zaheer and Akhtar
+Wasi Ali .
+</item 2>
+
+<item 3>
+Qaumi Taranah
+1954 -- Officially adopted as the national anthem and broadcast for the first time on Radio Pakistan on 13 August 1955 -- Sung by 11 famous Pakistani singers
+including Ahmad Rushdi , Shamim Bano , Kokab Jehan , Rasheeda Begum , Najam Ara , Naseema Shaheen , Zwar Hussain , Akhtar Abbas , Ghulam Dastgir , Anwar Zaheer
+and Akhtar Wassi 1996 -- Rendered in electric guitar for the first time by Pakistani rock band Junoon in their album Inquilaab 2009 -- Rendered as an acoustic
+instrumental for the first time by Pakistani musician Jehangir Aziz Hayat 2011 -- On 14 August , 5,857 people gathered in a stadium in Karachi to sing the Qaumi
+Taranah and set a new world record for most people gathered to sing a national anthem simultaneously . 2012 -- On 20 October , 42,813 people gathered in a
+stadium in Lahore to sing the Qaumi Taranah and set a new world record for most people gathered to sing a national anthem simultaneously , which was certified
+by Guinness World Records .
+</item 3>
+
+<item 4>
+Qaumi Taranah
+Contents ( hide ) 1 History 2 Music 3 Lyrics 4 Milestones 5 See also 6 References 7 External links History ( edit ) In early 1948 , A.R. Ghani , a Muslim from
+Transvaal , South Africa , offered two prizes of five thousand rupees each for the poet and composer of a new national anthem for the newly independent state of
+Pakistan . The prizes were announced through a government press advertisement published in June 1948 . In December 1948 , the Government of Pakistan established
+the National Anthem Committee ( NAC ) with the task of coming up with the composition and lyrics for the official national anthem of Pakistan . The NAC was
+initially chaired by the Information Secretary , Sheikh Muhammad Ikram , and its members included several politicians , poets and musicians , including Abdur
+Rab Nishtar , Ahmad G. Chagla and Hafeez Jullundhri . The NAC encountered early difficulties in finding suitable music and lyrics . When President Sukarno of
+Indonesia became the first foreign head of state to visit Pakistan on 30 January 1950 , there was no Pakistani national anthem to be played .
+</item 4>
+
+<item 5>
+Qaumi Taranah
+Qaumi Taranah - wikipedia Qaumi Taranah Jump to : navigation , search Qaumi Taranah قومی ترانہ English : National Anthem of Pakistan National Anthem National
+anthem of Pakistan Lyrics Hafeez Jullundhri , June 1952 Music Ahmad G. Chagla , 21 August 1949 Adopted 13 August 1954 Relinquished Present Audio sample Qaumi
+Taranah ( Instrumental ) file help Ahmad G. Chagla composed the music of the National Anthem of Pakistan in 1949 Ahmed Rushdi recorded the National Anthem of
+Pakistan in 1954 The Qaumi Taranah ( Urdu : قومی ترانہ ‬ ‎ , Qaumī Tarānah pronounced ( ˈqɔː. mi ˈt̪ə. rɑː. nɑ ) , lit .
+</item 5>
+
+<item 6>
+Qaumi Taranah
+Archived from the original on 2007 - 10 - 26 . Retrieved 2007 - 12 - 09 . National Anthem of Pakistan Pakistan National Songs National symbols of Pakistan Main
+symbols Qaumi Taranah ( national anthem ) State emblem of Pakistan Flag of Pakistan Iman , Ittihad , Nazm ( motto ) Lahore Resolution ( national document ) Urdu
+( national language ) People Muhammad Ali Jinnah ( Father of the Nation ) Muhammad Iqbal ( National poet ) Fatima Jinnah ( Mother of the Nation ) Other symbols
+Cedrus deodara ( national tree ) Chukar partridge ( national bird ) Jasminum officinale ( national flower ) Markhor ( national animal ) Structures Bab -
+e-Khyber ( monument ) Faisal Mosque Mazar - e-Quaid ( mausoleum ) Minar - e-Pakistan ( monument ) Pakistan Monument ( monument ) Quaid - e-Azam Residency
+National anthems of Asia National Abkhazia Afghanistan Armenia Artsakh ( Nagorno - Karabakh ) Azerbaijan Bahrain Bangladesh Bhutan Brunei Cambodia China Cyprus
+East Timor Egypt Georgia India Indonesia Iran Iraq Israel Japan Jordan Kazakhstan North Korea South Korea
+</item 6>
+
+<item 7>
+Qaumi Taranah
+BBC News . 2017 - 08 - 14 . Retrieved 2017 - 08 - 15 . Jump up ^ `` Indian A capella group sings Pakistan 's national anthem on 71st Independence Day '' .
+Firstpost. 2017 - 08 - 14 . Retrieved 2017 - 08 - 15 . Jump up ^ Staff , Images ( 2017 - 08 - 12 ) . `` Indians sing the Pakistani national anthem as a gift for
+our Independence Day '' . Images . Retrieved 2017 - 08 - 15 . External links ( edit ) This article contains Urdu text . Without proper rendering support , you
+may see unjoined letters running left to right or other symbols instead of Urdu script . Wikimedia Commons has media related to : Qaumi Taranah ( category ) Pak
+Sar Zameen Shad Bad Lyrics Pakistan : Qaumī Tarānah -- Audio of the national anthem of Pakistan , with information and lyrics Ministry of Information and
+Broadcasting , Government of Pakistan . `` National Anthem '' . Archived from the original on 2007 - 10 - 26 .
+</item 7>
+
+<item 8>
+Qaumi Taranah
+Official recognition to the national anthem , however , was not given until August 1954 . The NAC distributed records of the composed tune amongst prominent
+poets , who responded by writing and submitting several hundred songs for evaluation by the NAC . Eventually , the lyrics written by Hafeez Jullundhri were
+approved and the new national anthem was broadcast publicly for the first time on Radio Pakistan on 13 August 1954 , sung by Hafeez Jullundhri himself .
+Official approval was announced by the Ministry of Information and Broadcasting on 16 August 1954 . The composer , Ahmed G. Chagla , died in 1953 , before the
+new national anthem was officially adopted . In 1955 , there was a performance of the national anthem involving 11 major singers of Pakistan , including Ahmad
+Rushdi , Kaukab Jahan , Rasheeda Begum , Najam Ara , Naseema Shaheen , Zawar Hussain , Akhtar Abbas , Ghulam Dastagir , Anwar Zaheer and Akhtar Wasi Ali .
+</item 8>
+
+<item 9>
+Qaumi Taranah
+Retrieved 1 September 2016 . Jump up ^ National Anthem. http://anisshakur.tripod.com/id129.html Jump up ^ Michael Jamieson Bristow , National-Anthems.org . ``
+Forty National Anthems '' . Retrieved 2006 - 04 - 12 . ^ Jump up to : Aqeel Abbas Jafari ( 2010 ) . Pakistan Chronicle ( in Urdu ) ( 1st ed . ) . 94 / 1 , 26th
+St. , Ph. 6 , D.H.A. , Karachi , Pakistan : Wirsa Publishers . p. 42 . ISBN 9789699454004 . ^ Jump up to : `` National Anthem '' . Ministry of Information and
+Broadcasting , Government of Pakistan . Archived from the original on 2007 - 10 - 26 . Retrieved 2007 - 11 - 29 . Jump up ^ Mazhar Iqbal , Mazhar.dk . `` Ahmad
+Rushdi '' . http://mazhar.dk/film/singers/ahmadrushdi/ .
+</item 9>
+
+<item 10>
+Qaumi Taranah
+http://mazhar.dk/film/singers/ahmadrushdi/ . Retrieved 2006 - 04 - 12 . Jump up ^ Mazhar Iqbal , Mazhar.dk . `` National Anthem of Pakistan '' . Retrieved 2006
+- 04 - 12 . Jump up ^ Information Ministry , Government of Pakistan . `` Basic Facts '' . Retrieved 2006 - 04 - 12 . Jump up ^ ( 1 ) , National Anthem of
+Pakistan Jump up ^ ( 2 ) , The National Anthem of Pakistan Jump up ^ ( 3 ) , Switch to Urdu from English as official language a hurdle for Pakistan Jump up ^ (
+4 ) , History can not be falsely written and manufactured Jump up ^ ( 5 ) , Pakistan Basic Facts Jump up ^ Pasha , Muhammad A. English Composition ( Part II ) .
+Lahore : Command Publications . Jump up ^ `` Pakistan creates new anthem record '' . The Express Tribune . 2011 - 08 - 12 . Retrieved 2012 - 01 - 01 . Jump up ^
+`` Pakistan reclaims anthem singing record '' .
+</item 10>
+=== END ITEM id=7e10e7d90e467577 ===
+
+=== ITEM id=348d6014238341b2 ===
+Gold sentences and facts:
+Sentence 0: Cast Character Rank / Position Seasons Notes Regular Recurring Guest Christopher Meloni Elliot Stabler Detective 1 -- 12 Mariska Hargitay Olivia Benson Lieutenant 1 -- Richard Belzer John Munch DA Investigator 1 -- 15 15 , 17 Dann Florek Donald Cragen Captain 1 -- 15 16 Michelle Hurd Monique Jeffries Detective 1 -- 2 Stephanie March Alexandra Cabot Assistant District Attorney 2 -- 5 , 11 2 , 10 , 13 6 Ice - T Odafin `` Fin '' Tutuola Detective 2 -- Tamara Tunie Melinda Warner Medical Examiner 7 -- 12 2 -- 6 , 13 -- 17 19 B.D. Wong George Huang FBI Special Agent 4 -- 12 2 -- 3 13 -- 15 , 17 Diane Neal Casey Novak Senior Assistant District Attorney 5 -- 9 13 12 Adam Beach Chester Lake Detective 9 8 Michaela McManus Kim Greylek Assistant District Attorney 10 Danny Pino Nick Amaro Detective 13 -- 16 Kelli Giddish Amanda Rollins Detective 13 -- Raúl Esparza Rafael Barba Assistant District Attorney 15 -- 14 Peter Scanavino Dominick Carisi Jr . Detective 16 -- 16
+  Fact 0.0: Christopher Meloni played Elliot Stabler as a Detective in seasons 1 to 12.
+  Fact 0.1: Mariska Hargitay played Olivia Benson as a Lieutenant starting in season 1 with no end season listed.
+  Fact 0.2: Richard Belzer played John Munch as a DA Investigator in seasons 1 to 15.
+  Fact 0.3: Richard Belzer's John Munch is also listed for seasons 15 and 17.
+  Fact 0.4: Dann Florek played Donald Cragen as a Captain in seasons 1 to 15.
+  Fact 0.5: Dann Florek's Donald Cragen is also listed for season 16.
+  Fact 0.6: Michelle Hurd played Monique Jeffries as a Detective in seasons 1 to 2.
+  Fact 0.7: Stephanie March played Alexandra Cabot as an Assistant District Attorney in seasons 2 to 5 and 11.
+  Fact 0.8: Stephanie March's Alexandra Cabot is also listed for seasons 2, 10, 13, and 6.
+  Fact 0.9: Ice-T played Odafin Fin Tutuola as a Detective starting in season 2 with no end season listed.
+  Fact 0.10: Tamara Tunie played Melinda Warner as a Medical Examiner in seasons 7 to 12.
+  Fact 0.11: Tamara Tunie's Melinda Warner is also listed for seasons 2 to 6 and 13 to 17 and season 19.
+  Fact 0.12: B.D. Wong played George Huang as an FBI Special Agent in seasons 4 to 12.
+  Fact 0.13: B.D. Wong's George Huang is also listed for seasons 2 to 3, 13 to 15, and 17.
+  Fact 0.14: Diane Neal played Casey Novak as a Senior Assistant District Attorney in seasons 5 to 9.
+  Fact 0.15: Diane Neal's Casey Novak is also listed for seasons 13 and 12.
+  Fact 0.16: Adam Beach played Chester Lake as a Detective in season 9.
+  Fact 0.17: Adam Beach's Chester Lake is also listed for season 8.
+  Fact 0.18: Michaela McManus played Kim Greylek as an Assistant District Attorney in season 10.
+  Fact 0.19: Danny Pino played Nick Amaro as a Detective in seasons 13 to 16.
+  Fact 0.20: Kelli Giddish played Amanda Rollins as a Detective starting in season 13 with no end season listed.
+  Fact 0.21: Raul Esparza played Rafael Barba as an Assistant District Attorney starting in season 15.
+  Fact 0.22: Raul Esparza's Rafael Barba is also listed for season 14.
+  Fact 0.23: Peter Scanavino played Dominick Carisi Jr. as a Detective in season 16.
+
+Retrieved items:
+<item 1>
+Law & Order: Special Victims Unit
+On May 12 , 2017 , the series was renewed for a nineteenth season , which premiered on September 27 , 2017 . As of January 17 , 2018 , Law & Order : Special
+Victims Unit has aired 421 original episodes . Contents ( hide ) 1 Production 1.1 History and development 1.1. 1 Executive producers 1.2 Filming 1.3 Broadcast
+history 1.4 Russian adaptation 2 Casting 2.1 Salaries 3 Cast and characters 4 Series overview 5 Episodes 6 Reception 6.1 U.S. television ratings 6.2 Awards and
+honors 7 Broadcast and streaming 7.1 Syndication 8 International broadcast 9 References 9.1 Notes 9.2 Bibliography 10 External links Production ( edit ) History
+and development ( edit ) The idea for Law & Order : Special . Victims Unit originated with the 1986 `` preppie murder '' case of Robert Chambers , who strangled
+Jennifer Levin , a woman he dated whom he later killed during what he claimed was consensual `` rough sex '' in Manhattan 's Central Park .
+</item 1>
+
+<item 2>
+Law & Order: Special Victims Unit
+Cast and characters ( edit ) Main article : List of Law & Order : Special Victims Unit characters Cast Character Rank / Position Seasons Notes Regular Recurring
+Guest Christopher Meloni Elliot Stabler Detective 1 -- 12 Mariska Hargitay Olivia Benson Lieutenant 1 -- Richard Belzer John Munch DA Investigator 1 -- 15 15 ,
+17 Dann Florek Donald Cragen Captain 1 -- 15 16 Michelle Hurd Monique Jeffries Detective 1 -- 2 Stephanie March Alexandra Cabot Assistant District Attorney 2 --
+5 , 11 2 , 10 , 13 6 Ice - T Odafin `` Fin '' Tutuola Detective 2 -- Tamara Tunie Melinda Warner Medical Examiner 7 -- 12 2 -- 6 , 13 -- 17 19 B.D.
+</item 2>
+
+<item 3>
+Law & Order: Special Victims Unit
+External links ( edit ) Wikimedia Commons has media related to Law & Order : Special Victims Unit . Wikiquote has quotations related to : Law & Order : Special
+Victims Unit Official website on NBC Law & Order : Special Victims Unit on IMDb Law & Order : Special Victims Unit at TV.com `` List of Law & Order : SVU
+Episodes '' . TV Guide . Law & Order : Special Victims Unit on MyNetworkTV Law & Order franchise Series Law & Order ( 1990 -- 2010 ) Law & Order : Special
+Victims Unit ( 1999 -- present ) Law & Order : Criminal Intent ( 2001 -- 2011 ) Law & Order : Trial by Jury ( 2005 -- 2006 ) Law & Order : LA ( 2010 -- 2011 )
+Law & Order True Crime ( 2017 -- present ) Adaptations Paris enquêtes criminelles ( 2007 -- 2008 ) Law & Order : UK ( 2009 -- 2014 ) Video games Law & Order :
+Dead on the Money Law & Order : Double or Nothing Law & Order : Justice Is Served Law & Order : Criminal Intent Law & Order : Legacies Related series Homicide :
+</item 3>
+
+<item 4>
+Law & Order: Special Victims Unit
+1999 ( 1999 - 09 - 20 ) -- present Chronology Related shows Law & Order franchise External links Website Law & Order : Special Victims Unit ( often abbreviated
+to Law & Order : SVU or just SVU ) is an American police procedural , legal , crime drama television series set in New York City , where it is also primarily
+produced . In the style of the original Law & Order , episodes are often `` ripped from the headlines '' or loosely based on real crimes that have received
+media attention . Created by Dick Wolf , the series premiered on NBC on September 20 , 1999 , as the second series in Wolf 's successful Law & Order franchise .
+Law & Order : Special Victims Unit has been nominated for and won numerous awards , including the 2006 Emmy for Outstanding Lead Actress in a Drama Series for
+Mariska Hargitay , the first , and to date only , Emmy to be received by a regular on any Law & Order series . It is the current longest running scripted
+non-animated U.S.
+</item 4>
+
+<item 5>
+Law & Order: Special Victims Unit
+Series overview ( edit ) In the criminal justice system , sexually based offenses are considered especially heinous . In New York City , the dedicated
+detectives who investigate these vicious felonies are members of an elite squad known as the Special Victims Unit . These are their stories . -- Opening
+narration spoken by Steven Zirnkilton Based out of the New York City Police Department 's 16th precinct in Manhattan , Law & Order : Special Victims Unit delves
+into the dark side of the New York underworld as the detectives of a new elite force , the Special Victims Unit ( SVU for short ) , investigate and prosecute
+various sexually - oriented crimes including rape , pedophilia , and domestic violence . They also investigate the abuses of children , the disabled and elderly
+victims of non-sexual crimes who require specialist handling . All the while trying to balance the effects of the investigation on their own lives . Its stories
+also touch on the political and societal issues associated with gender identity , sexual preferences , and equality rights . While the victim is often murdered
+, this is not always the case , and victims frequently play prominent roles in episodes .
+</item 5>
+
+<item 6>
+Law & Order: Special Victims Unit
+The unit also works with the Manhattan District Attorney 's office as they prosecute cases and seek justice for SVU 's victims and survivors with precision and
+a passion to win and bring closure to the intense investigations . The series often uses stories that are `` ripped from the headlines '' or based on real
+crimes . Such episodes take a real crime and fictionalize it by changing some details . Originally the show focused around the detective pairings of Elliot
+Stabler & Olivia Benson and John Munch & Brian Cassidy . Stabler is a seasoned veteran of the unit who has seen it all and tries his best to protect his family
+from the horrors he sees every day . His partner Benson 's difficult past as the child of a rape victim is the reason she joined the unit . Backing them up is
+John Munch , and his first partner Brian Cassidy . Munch is a transfer from Baltimore 's homicide unit , who brings his acerbic wit , conspiracy theories , and
+street - honed investigative skills . Whilst Cassidy is young and eager to learn from his fellow detectives . These two detective teams received support from
+Detectives Monique Jeffries and Ken Briscoe .
+</item 6>
+
+<item 7>
+Law & Order: Special Victims Unit
+The series follows a unit of investigators in Moscow whose job is to investigate crimes of a sexual nature . The series airs on NTV and is produced by Pavel
+Korchagin , Felix Kleiman , and Edward Verzbovski and directed by Dmitry Brusnikin . The screenplays are written by Sergei Kuznvetsov , Elena Karavaeshnikova ,
+and Maya Shapovalova . Casting ( edit ) Cast of Law & Order : Special Victims Unit Cast of seasons 4 -- 5 ( 2002 -- 04 ) , from left : Ice - T , Richard Belzer
+, Mariska Hargitay , Dann Florek , Christopher Meloni , B.D.
+</item 7>
+
+<item 8>
+Law & Order: Special Victims Unit
+Wong , Stephanie March Cast of season 9 ( 2007 -- 08 ) , from left : Diane Neal , Wong , Tamara Tunie , Meloni , Florek , Hargitay , Ice - T , Belzer , Adam
+Beach Cast of season 10 ( 2008 -- 09 ) from left : Michaela McManus , Wong , Tunie , Meloni , Hargitay , Florek , Belzer , Ice - T The cast of season 15 ( 2013
+-- 2014 ) from left : Raúl Esparza , Florek , Danny Pino , Hargitay , Kelli Giddish , Belzer , Ice - T The cast of seasons 17 -- 18 ( 2015 -- 2017 ) . from left
+: Esparza , Giddish , Hargitay , Ice - T , Peter Scanavino Casting for the lead characters of Law & Order : Special Victims Unit occurred in the spring of 1999
+. Dick Wolf , along with officials from NBC and Studios USA were at the final auditions for the two leads at Rockefeller Center .
+</item 8>
+
+<item 9>
+Law & Order: Special Victims Unit
+Wong George Huang FBI Special Agent 4 -- 12 2 -- 3 13 -- 15 , 17 Diane Neal Casey Novak Senior Assistant District Attorney 5 -- 9 13 12 Adam Beach Chester Lake
+Detective 9 8 Michaela McManus Kim Greylek Assistant District Attorney 10 Danny Pino Nick Amaro Detective 13 -- 16 Kelli Giddish Amanda Rollins Detective 13 --
+Raúl Esparza Rafael Barba Assistant District Attorney 15 -- 14 Peter Scanavino Dominick Carisi Jr .
+</item 9>
+
+<item 10>
+Law & Order: Special Victims Unit
+Law & Order : Special Victims Unit - Wikipedia Law & Order : Special Victims Unit Jump to : navigation , search For the current season , see Law & Order :
+Special Victims Unit ( season 19 ) . Law & Order : Special Victims Unit Also known as Law & Order : SVU SVU Genre Police procedural Legal drama Thriller Created
+by Dick Wolf Starring Christopher Meloni Mariska Hargitay Richard Belzer Dann Florek Michelle Hurd Stephanie March Ice - T B.D. Wong Diane Neal Tamara Tunie
+Adam Beach Michaela McManus Danny Pino Kelli Giddish Raúl Esparza Peter Scanavino Opening theme Theme of Law & Order : Special Victims Unit Composer ( s ) Mike
+Post Country of origin United States Original language ( s ) English No. of seasons 19 No. of episodes 421 ( list of episodes ) Production Executive producer (
+s ) Dick Wolf Robert Palm ( season 1 ) David J.
+</item 10>
+=== END ITEM id=348d6014238341b2 ===
+
+=== ITEM id=6a0cf2b9ab13fdb2 ===
+Gold sentences and facts:
+Sentence 0: The music video for `` Total Eclipse of the Heart '' was directed by Russell Mulcahy and was filmed on location at the Holloway Sanatorium , a large Victorian Gothic hospital near Virginia Water , Surrey , England . The video features Bonnie Tyler clad in white , dreaming or fantasizing about her students in a boys ' boarding school . Young men are seen dancing and participating in various school activities and singing in a choir .
+  Fact 0.0: The music video for Total Eclipse of the Heart was directed by Russell Mulcahy.
+  Fact 0.1: The music video for Total Eclipse of the Heart was filmed on location at the Holloway Sanatorium.
+  Fact 0.2: The Holloway Sanatorium is a large Victorian Gothic hospital near Virginia Water, Surrey, England.
+  Fact 0.3: The video features Bonnie Tyler clad in white.
+  Fact 0.4: In the video Bonnie Tyler is dreaming or fantasizing about her students in a boys' boarding school.
+  Fact 0.5: Young men are seen dancing in the video.
+  Fact 0.6: Young men are seen participating in various school activities in the video.
+  Fact 0.7: Young men are seen singing in a choir in the video.
+
+Retrieved items:
+<item 1>
+Total Eclipse of the Heart
+Young men are seen dancing and participating in various school activities and singing in a choir . A long - running urban legend is that the boy who appears
+throughout the video and who shakes Tyler 's hand at the end is former Italian footballer Gianfranco Zola . In a 2012 interview , Zola confirmed that he did not
+appear in the video . Live performances ( edit ) Since the song 's release , Tyler performs `` Total Eclipse of the Heart '' in every concert she performs . ``
+I sing it much better now than I used to , '' she told The Huffington Post . `` I think my voice is probably not as husky as it was , I think it 's mellowed a
+bit . '' The song was performed at the 26th Annual Grammy Awards , held at the Shrine Auditorium , Los Angeles , on 28 February 1984 . Tyler performed a brief ,
+live performance of this song on a Royal Caribbean cruise during the solar eclipse of 21 August 2017 . Live recordings of Tyler performing the song have been
+released on her live albums Bonnie Tyler Live ( 2006 ) and Live in Germany 1993 ( 2011 ) .
+</item 1>
+
+<item 2>
+Total Eclipse of the Heart
+He also hand - picked the recording band for the song . `` Total Eclipse of the Heart '' had to be shortened for radio play . Tyler did not believe that the
+song was radio - friendly at its full length ; the song was reduced from seven minutes and two seconds to four minutes and thirty seconds . The power ballad
+remains Tyler 's most successful song , peaking at No. 1 in the United States , South Africa , Australia , New Zealand , Canada and the United Kingdom . At its
+peak , it sold 60,000 copies per day , and approximately 6 million copies in total . It won the Variety Club award in the UK for best single of 1983 . The song
+also made number 82 of VH1 's top 100 love songs . `` Total Eclipse of the Heart '' A sample of `` Total Eclipse of the Heart '' , performed by Bonnie Tyler .
+Problems playing this file ? See media help . Tyler told Record Mirror that she thought the song was about `` someone who wants to love so badly she 's lying
+there in complete darkness . ''
+</item 2>
+
+<item 3>
+Total Eclipse of the Heart
+; the singer who performed for this re-dub was Scott 's friend Felisha Noble using the pseudonym Persephone Maewyn . The video is still viewable on Funny or Die
+'s website , where it has received over 100,000 views , qualifying it for `` Immortal '' status since April 2012 . In 2010 , Tyler appeared in an advertisement
+for MasterCard , performing a short parody of the song with its noted new lyric `` Turn around , Neville . '' She performed the original song in a similar
+advertisement for Westpac in 2012 . Warby Parker produced a parody video in anticipation of the solar eclipse of August 21 , 2017 . See also ( edit ) 1983 in
+British music List of best - selling singles List of Billboard Hot 100 number - one singles of 1983 List of number - one singles of 1983 ( Australia ) List of
+number - one singles of 1983 ( Canada ) List of number - one singles of 1983 ( Ireland ) List of number - one singles in 1983 ( New Zealand ) References ( edit
+) ^ Jump up to : `` Tyler releases new Total Eclipse '' .
+</item 3>
+
+<item 4>
+Total Eclipse of the Heart
+Donald A. Guarisco , also from AllMusic , retrospectively reviewed Faster Than the Speed of Night , and noted the song as an `` epic ballad , '' describing the
+whole album as `` rock at its most melodramatic . '' Jim Beviglia from American Songwriter said that Tyler 's raspy vocals helped to legitimize the `` melodrama
+inherent in the lyrics , '' and described the song as a `` garment - rending , chest - beating ( and ) emotionally exhausting ballad '' that suits the throes of
+a turbulent relationship . Music video ( edit ) Holloway Sanatorium steps , which feature in the video The music video for `` Total Eclipse of the Heart '' was
+directed by Russell Mulcahy and was filmed on location at the Holloway Sanatorium , a large Victorian Gothic hospital near Virginia Water , Surrey , England .
+The video features Bonnie Tyler clad in white , dreaming or fantasizing about her students in a boys ' boarding school . Young men are seen dancing and
+participating in various school activities and singing in a choir .
+</item 4>
+
+<item 5>
+Total Eclipse of the Heart
+The song would have been released as the album 's second single but was cancelled due to their The Love Tour conflicts , though a promo release still reached
+No. 5 on the radio charts in the Philippines . Three official remixes have been made for their version as well as a remix done by Jim Steinman , which was
+ultimately rejected by the record label but has surfaced on the Internet . The song was released as promotional single on 2007 . Yuridia version ( edit )
+Mexican singer Yuridia covered the song in Spanish as `` Eclipse Total del Amor '' from her second studio album Habla El Corazón in 2006 . The single peaked at
+number 36 on the Billboard Latin Pop Songs chart . Parody versions ( edit ) A parody of the song and music video were published in 2009 , in what the fans and
+makers call a `` literal video version '' , which is a type of video that replaces the original song lyrics with humorous lyrics describing the images in the
+video . Time magazine listed it as the 6th best viral video of 2009 . This was also the 6th literal video produced by professional video editor David A. Scott
+Jr.
+</item 5>
+
+<item 6>
+Total Eclipse of the Heart
+Jump up ^ Wilson , Jess ( 20 March 2015 ) . `` Solar Eclipse : Spotify reveals streaming of Bonnie Tyler 's Total Eclipse of the Heart is up 214 per cent '' .
+Daily Mirror . Retrieved 2 April 2015 . Jump up ^ Caulfield , Keith ( 21 August 2017 ) . `` ' Total Eclipse of the Heart ' Sales Rise More Than 500 % '' .
+Billboard . Retrieved 21 August 2017 . Jump up ^ Pelletiere , Nicole ( 21 August 2017 ) . `` ' Total Eclipse of the Heart ' hits no . 1 on iTunes for solar
+eclipse '' . ABC News . Retrieved 22 August 2017 . Jump up ^ Bruner , Raisa ( 16 August 2017 ) . `` Bonnie Tyler Will Sing ' Total Eclipse of the Heart ' During
+the Actual Eclipse '' . Time . Retrieved 17 August 2017 . Jump up ^ Balfe , John ( 12 August 2014 ) . `` 80s Power Ballad queen Bonnie Tyler announced for
+Electric Picnic '' . entertainment.ie .
+</item 6>
+
+<item 7>
+Total Eclipse of the Heart
+( Sunset Strippers Verse Club Mix ) `` Total Eclipse of the Heart '' ( Sunset Strippers Dub Mix ) `` Total Eclipse of the Heart '' ( Sunset Strippers Radio Edit
+) Cover versions and impact in Mainstream Media ( edit ) In a 2013 UK survey , the song came first in a list of most popular songs to sing in the shower , above
+songs by Justin Bieber , Robbie Williams , One Direction and Elton John . In 2015 the song was voted by the British public as the nation 's third favourite
+1980s number one in a poll for ITV . `` Total Eclipse of the Heart '' received substantial media attention during the solar eclipse of March 20 , 2015 . Tyler
+'s version received a 214 % increase of Spotify streams throughout the day . A similar impact was experienced during the solar eclipse of August 21 , 2017 ,
+when Nielsen Music reported a 503 % increase in record sales . Around that time , the song hit number one on the iTunes chart .
+</item 7>
+
+<item 8>
+Total Eclipse of the Heart
+Steinman said in an interview with Playbill : with ' Total Eclipse of the Heart ' , I was trying to come up with a love song and I remembered I actually wrote
+that to be a vampire love song . Its original title was ' Vampires in Love ' because I was working on a musical of Nosferatu , the other great vampire story .
+If anyone listens to the lyrics , they 're really like vampire lines . It 's all about the darkness , the power of darkness and love 's place in the dark ... He
+also told People magazine that he thought Tyler sounded like John Fogerty , and wrote the song `` to be a showpiece for her voice . '' Tyler described the song
+as `` a challenge ( to sing ) , '' stating that she `` ( does n't ) like songs that anybody can sing . I like songs that need a lot of energy . '' After
+Steinman presented her with the song she told The Times , `` I just had shivers right up my spine ... I could n't wait to actually get in and record it . ''
+</item 8>
+
+<item 9>
+Total Eclipse of the Heart
+230 . Jump up ^ Scott , David ( 16 April 2011 ) . `` Total Eclipse of the Heart : Literal Video Version '' . Retrieved 26 August 2017 . Jump up ^ Benedictus ,
+Leo ( 21 April 2010 ) . `` A word on our sponsors : Total eclipse of the card '' . The Guardian . Retrieved 20 August 2014 . Jump up ^ `` Westpac brings in
+Bonnie Tyler to sing at couple 's fantasy wedding '' . mUmBRELLA. 21 November 2012 . Retrieved 22 August 2014 . Jump up ^ Matthewson , Samantha ( 1 August 2017
+) . `` This ' Total Eclipse of the Heart ' Parody Video for the 2017 Solar Eclipse Is Just Awesome '' . Space.com . Retrieved 3 August 2017 .
+</item 9>
+
+<item 10>
+Total Eclipse of the Heart
+Total Eclipse of the Heart - wikipedia Total Eclipse of the Heart Jump to : navigation , search For the episode of `` The Vampire Diaries '' , see Total Eclipse
+of the Heart ( The Vampire Diaries ) . `` Total Eclipse of the Heart '' Artwork for UK and some European releases Single by Bonnie Tyler from the album Faster
+Than the Speed of Night B - side `` Take Me Back '' ( UK ) `` Straight from the Heart '' ( US ) Released Format 7 '' 12 '' CD Length 6 : 59 ( album version ) 5
+: 53 ( 2013 re-recording for the album Rocks and Honey ) 5 : 32 ( music video version ) 4 : 35 ( 2011 single version ) 4 : 30 ( single version ) 3 : 49 ( 2005
+re-recording for the album Wings ) Label Columbia Songwriter ( s ) Jim Steinman Producer ( s ) Jim Steinman Bonnie Tyler singles chronology `` Sayonara Tokyo ''
+( 1981 ) `` Total Eclipse of the Heart '' ( 1983 ) `` Take Me Back '' ( 1983 ) `` Sayonara Tokyo '' ( 1981 ) `` Total Eclipse of the Heart
+</item 10>
+=== END ITEM id=6a0cf2b9ab13fdb2 ===
+
+=== ITEM id=959bb023429a89b3 ===
+Gold sentences and facts:
+Sentence 0: No . Name Province Birth / death Term of active service Term of service as Chief Length in days of active service Length in days as Chief Appointed by Law school Position prior to appointment Codrington Edmund Carrington England 1769 - 1849 March 1801 -- 2 April 1806 March 1801 -- 2 April 1806 North -- Counsel to the East India Company Edmund Henry Lushington England 1766 - 1839 5 September 1801 -- 1809 15 April 1807 - 1809 North University of Cambridge Barrister Alexander Johnston Scotland 1775 - 1849 15 April 1807 -- 14 February 1809 6 November 1811 - 1819 6 November 1811 - 1819 671 + ? Maitland University of Göttingen Advocate Fiscal of Ceylon William Coke England 1776 - 1818 6 March 1809 -- 1 September 1818 † 6 March 1809 -- 1811 3,466 Maitland University of Oxford Advocate Fiscal of Ceylon 5 Henry Byrne 5 November 1818 -- 1819 -- -- Brownrigg Barrister 6 Ambrose Hardinge Giffard Ireland 1771 -- 1827 8 April 1819 -- 2 March 1827 8 April 1819 -- 2 March 1827 2,885 2,885 Brownrigg Trinity College , Dublin Advocate Fiscal of Ceylon 7 Richard Ottley 1782 -- 1845 8 May 1820 -- 1833 1 November 1827 -- 1833 Barnes Chief Justice of Grenada 8 Henry Matthews England 1789 -- 1828 10 October 1827 -- 1828 -- -- Barnes King 's College , Cambridge Advocate Fiscal of Ceylon 9 Charles Marshall England 1788 - 1873 14 June 1828 -- 3 March 1836 18 February 1833 -- 3 March 1836 2,850 1,109 Barnes Jesus College , Cambridge 10 William Rough England 1772 - 1838 18 February 1833 - 1838 -- -- Trinity College , Cambridge 11 William Norris 1834 -- 1837 27 April 1836 -- 1837 Wilmot - Horton Advocate Fiscal of Ceylon 12 John Jeremie Guernsey 1795 - 1841 10 March 1836 -- 1840 -- -- Wilmot - Horton Public prosecutor of Mauritius 13 John Fredrick Stoddart Malta 1805 - 1839 2 June 1838 -- 19 August 1839 † -- 443 -- University of Glasgow 14 Anthony Oliphant Scotland 1793 -- 1859 22 October 1838 - 1854 22 October 1838 - 1854 Attorney General of the Cape Colony 15 J.G. Hildebrand 23 November 1839 -- -- -- 16 William Ogle Carr England 1802 - 1856 19 December 1939 - 1856 17 April 1854 -- 1856 Stewart - Mackenzie King 's Advocate of Ceylon 17 John Stark 10 October 1840 -- -- -- Queen 's Advocate of Ceylon 18 Christopher Temple 28 January 1854 -- -- -- Judge of the District Court of Colombo 19 Paul Ivy Sterling 20 November 1855 -- -- -- Attorney General of Hong Kong 20 William Carpenter Rowe - 1860 1857 -- 1859 -- 21 Edward Shepherd Creasy England 1812 - 1878 -- 27 March 1860 - 1875 University of Cambridge 22 Richard Morgan -- -- -- Queen 's Advocate of Ceylon 23 George Lawson -- -- -- 24 Henry Byerley Thompson - 1867 1 January 1863 -- -- -- Queen 's Advocate of Ceylon 25 Charles Henry Stewart 11 January 1867 -- -- -- 26 Richard Cayley England 26 July 1874 -- 1882 1 October 1879 -- 1882 -- Queen 's Advocate of Ceylon 27 Lovell Burchett Clarence 5 July 1879 -- -- -- 28 Harry Dias Bandaranaike 5 July 1879 -- -- -- 29 William Hackett 3 February 1877 - 1877 3 February 1877 - 1877 -- 30 John Budd Phear England 18 October 1877 -- -- -- 31 Archibald Campbell Lawrie 1837 - 1914 6 July 1892 -- 1901 -- -- Judge of the District Court of Kandy 32 Jacobus de Wet South Africa 31 May 1882 -- 29 May 1883 31 May 1882 -- 29 May 1883 363 363 33 Bruce Burnside Bahamas 21 May 1883 -- 1893 21 May 1883 -- 1893 -- Queen 's Advocate of Ceylon 34 John Winfield Bonser 13 November 1893 -- 1902 13 November 1893 -- 1902 Chief Justice of the Straits Settlements 35 George Henry Withers -- -- -- 36 Dodwell Browne -- -- -- 37 Fredrick Charles Moncrieff 4 April 1900 -- -- -- 38 Henry Lorentz Wendt 15 October 1901 -- 28 November 1910 -- -- 39 John Page Middleton 28 January 1902 -- 1912 -- -- Puisine Judge of the Supreme Court of Cyprus 40 Charles Layard Western 26 April 1902 -- 18 June 1906 26 April 1902 -- 18 June 1906 1,514 1,514 41 Joseph Richard Grenier 28 November 1910 -- 1912 -- -- 42 Alexander Wood Renton 3 September 1905 -- 1918 22 August 1914 - 1918 -- 43 Alfred George Lascelles England 1 May 1911 -- 1914 1 May 1911 -- 1914 -- 44 Joseph Turner Hutchinson England 23 October 1906 -- 1 May 1911 23 October 1906 -- 1 May 1911 1,651 1,651 45 James Cecil Walter Pereira 4 July 1912 -- -- -- 46 James Arthur Van Langenburg -- -- -- 47 Thomas De Sampayo 1915 -- -- -- University of Cambridge Commissioner of Assize 48 George Francis Macdaniel Ennis 5 August 1912 -- -- -- 49 Walter Shaw 10 December 1914 -- -- -- Chief Justice of British Honduras 50 Gualterus Stewart Schneider -- -- -- 51 Anton Bertram 1869 - 1937 26 July 1918 -- 1925 26 July 1918 -- 1925 University of Cambridge Attorney General of Ceylon 52 Hermann Albert Loos -- -- -- 53 William Thomas Porter 12 January 1922 -- -- -- 54 Thomas Garvin 1881 - 1940 21 June 1921 -- 1935 -- -- Manning Colombo Law College Solicitor General of Ceylon 55 John Adrian St. Valentine Jayewardene 1877 -- 1927 1923 -- -- -- Manning Judge of the District Court of Colombo 56 Llwellyn Chisholm Dalton 14 March 1925 -- -- -- 57 Lewis Matthew Maartensz 18 February 1935 -- -- -- 58 Maas Thajoon Akbar 1880 - 1944 -- -- -- University of Cambridge Solicitor General of Ceylon 59 Charles Ernest St. John Branch 1865 - 1939 3 July 1925 -- 25 May 1926 3 July 1925 -- 25 May 1926 326 326 Durham University 60 Stanley Fisher 1867 - 11 December 1926 -- 1930 11 December 1926 -- 1930 Chief Justice of Trinidad and Tobago 61 Robert William Lyall Grant 17 February 1926 -- -- -- 62 Allen Drieberg 19 September 1927 -- -- -- 63 Eugene Wilfred Jayewardene Western 1874 - 1932 May 1928 -- -- -- Fletcher Member of the Colombo Municipal Council 64 Philip James Macdonell 1873 - 1940 3 October 1930 - 1936 3 October 1930 - 1936 Chief Justice of Trinidad and Tobago 65 Lucian Macull Dominic de Silva -- -- -- 66 William Edward Barber -- -- -- 67 Francis Harold Bertram 19 February 1935 -- -- -- 68 Kenneth Poyser -- -- -- 69 Francis Soertsz - 1951 12 November 1936 -- -- -- 70 Sidney Abrahams England 1885 - 1957 3 July 1936 -- 1939 3 July 1936 -- 1939 University of Cambridge 71 Francis Moseley 2 August 1936 -- -- -- 72 Vincent Fernando 11 November 1937 -- -- -- 73 Hector Hearne 21 May 1937 -- -- -- 74 Arthur Eric Keuneman 4 March 1938 -- -- -- University of Cambridge 75 Oswald Leslie De Kretser II Western 1882 - 1959 8 April 1938 -- 1945 -- -- Caldecott University College , Colombo Commissioner of Assize 76 Arthur Wijewardena 1887 - 1964 22 August 1938 -- 1950 15 January 1949 -- 1950 University of Cambridge Solicitor General of Ceylon 77 J.H.B. Nihill 18 November 1938 -- -- -- 78 John Curtois Howard 1 December 1939 -- 1945 1 December 1939 -- 1945 Attorney General of Cyprus 79 G.H.F. Cannon -- -- -- 80 Edward Jayetileke 14 May 1942 -- 11 October 1951 1950 -- 11 October 1951 3,437 Caldecott Solicitor General of Ceylon 81 Alan Rose 11 January 1945 -- 1956 11 October 1951 -- 1956 82 A.R.H. Canakeratne 1886 - 1960 28 March 1945 -- -- -- Ceylon Law College University of London Commissioner of Assize 83 Manikku Wadumestri Hendrick de Silva -- -- -- Attorney General of Ceylon 84 Felix Reginald Dias Bandaranaike I 1861 - 1947 3 September 1946 -- -- -- University of Cambridge Judge of the District Court of Colombo 85 Chellappah Nagalingam 1893 - 1958 22 July 1947 -- 1958 -- -- Ceylon Law College Attorney General of Ceylon 86 Ralph Windham 23 July 1947 -- -- -- 87 Hema Henry Basnayake 1902 - 23 October 1947 -- 3 August 1964 1 January 1956 -- 3 August 1964 6,129 3,137 Senanayake Attorney General of Ceylon 88 Edward Frederick Noel Gratiaen 22 March 1948 -- -- -- Senanayake Attorney General of Ceylon 89 E.H.T. Gunasekera 1 March 1949 -- 25 January 1962 -- 4,713 -- Senanayake 90 M.F.S. Pulle 28 September 1949 -- -- -- Senanayake 91 V.L. St. C. Swan 1 May 1950 -- -- -- Senanayake 92 H.A. de Silva 30 November 1950 -- -- -- Senanayake 93 Kairshasp Choksy Western -- -- -- 94 Henry Weerasooriya 10 July 1953 -- 24 February 1964 -- 3,881 -- Senanayake 95 K.D. de Silva 10 July 1953 -- -- -- Senanayake 96 Miliani Sansoni 10 May 1954 -- 17 November 1966 3 August 1964 -- 17 November 1966 4,574 836 Kotelawala 97 Hugh Fernando 1910 - 1976 16 May 1955 -- 17 November 1973 20 November 1966 - 17 November 1973 6,760 2,554 Kotelawala 98 Thusew Samuel Fernando 2 May 1956 -- -- -- Bandaranaike Colombo Law College Solicitor General of Sri Lanka 99 Nadaraja Sinnetamby 3 May 1956 -- -- -- Bandaranaike 100 Lionel de Silva 5 November 1959 -- -- -- Dahanayake 101 Leonard de Silva 16 August 1966 -- -- -- Senanayake 102 Henry Thambiah Northern 1906 -- 1997 1 December 1961 -- 27 May 1968 -- 2,369 -- Bandaranaike University College , Colombo Ceylon Law College University of London Commissioner of Assize 103 Kingsley Herath 25 January 1962 -- -- -- Bandaranaike 104 Asoka Abeyesundere Southern 1906 - 1988 20 April 1962 -- 3 May 1968 -- 2,205 -- Bandaranaike Ceylon Law College 105 Ponnuduraiswamy Sriskandarajah 1905 - 1968 22 June 1962 -- 8 February 1967 -- 1,692 -- Bandaranaike Ceylon University College Ceylon Law College Commissioner of Assize 106 Gardiye Punchihewage Amaraseela Silva 22 June 1962 -- 1974 1973 -- 1974 -- Bandaranaike 107 Lionel Sirimanne -- -- -- Bandaranaike 108 Vaithalingam Manicavasagar Western 1906 - 1993 17 December 1964 -- 14 December 1967 -- 1,092 -- Bandaranaike Colombo Law College Commissioner of Assize 109 Anthony Alles Central 1911 -- 2003 1964 -- 1974 -- -- Bandaranaike University of Ceylon Ceylon Law College University of London Solicitor General of Sri Lanka 110 Veeravagu Sivasubramaniam 1908 - 1985 1966 -- 1970 -- -- Senanayake University of London Commissioner of Assize 111 George Samerawickrame 18 November 1966 -- 9 April 1981 -- 5,256 -- Senanayake 112 Victor Tennekoon Central 1914 - 8 February 1967 -- 1 July 1970 1 January 1974 - 8 September 1977 1 January 1974 - 8 September 1977 1,239 + 1,346 1,346 Senanayake University of London Ceylon Law College Judge of the Court of Appeal 113 Christopher Weeramantry Western 1926 - 1967 -- 30 April 1972 -- -- Senanayake University of Ceylon University of London Commissioner of Assize 114 Oswald Leslie De Kretser III Western 1910 - 1968 -- 21 January 1972 -- -- Senanayake University College , Colombo University of London Judge of the District Court of Panadura 115 Samarapilimudalige Wijayatilake Central 1912 - 1990 1968 -- 16 May 1975 -- -- Senanayake University College , Colombo Ceylon Law College Commissioner of Assize 116 Pandita Gunawadena 1968 -- 10 February 1971 -- -- Senanayake 117 Vincent Thamotheram 1915 - 23 March 1970 -- 1980 -- -- Senanayake Ceylon University College Ceylon Law College Commissioner of Assize 118 Hector Deheragoda 22 February 1972 -- 27 December 1976 -- 1,770 -- Bandaranaike 119 Cuda Banda Walgampaya 22 February 1972 -- 3 January 1976 -- 1,411 -- Bandaranaike 120 Jaya Pathirana - 2000 22 February 1972 -- 1978 -- -- Bandaranaike 121 Dharmadasa Wimalaratne 10 April 1972 - ? 20 October 1980 -- 15 September 1985 -- 1,791 -- Bandaranaike 122 Tellipalai Rajaratnam 1920 - 1994 10 April 1972 -- 1978 -- -- Bandaranaike Commissioner of Assize 123 Donald Sirimanne 1973 -- -- -- Gopallawa 124 Cyril Udalagama 1 January 1974 -- -- -- Gopallawa 125 T.A. de S. Wijesundera 1 January 1974 -- -- -- Gopallawa 126 Malcolm Perera 1 January 1974 -- -- -- Gopallawa 127 Izadean Mohamed Ismail 1 January 1974 -- 18 December 1981 -- 2,908 -- Gopallawa 128 Joe Weereratne 1 January 1974 -- -- -- Gopallawa 129 Arulampalam Vythialingam 1 January 1974 -- -- -- Gopallawa 130 Noel Tittawela 1 January 1974 -- -- -- Gopallawa 131 Suppiah Sharvananda Northern 1923 - 2007 1 January 1974 -- 1988 29 October 1984 -- 1988 Gopallawa Colombo Law College University of London 132 Somaratne Walpita 1 January 1974 -- -- -- Gopallawa 133 Wilmot Gunasekera 2 May 1974 -- -- -- Gopallawa 134 Barnes Ratwatte II 1918 - 2004 2 December 1974 -- ? 11 April 1981 -- 22 November 1983 -- 955 -- Gopallawa Jayewardene Ceylon Law College President of the Court of Appeal of Sri Lanka 135 Raja Wanasundera Sabaragamuwa 1924 - 2012 5 June 1975 -- ? -- -- Gopallawa University College , Colombo Ceylon Law College University of London Stanford University Solicitor General of Sri Lanka 136 Percy Colin - Thomé Southern 1922 - 12 January 1976 -- 1977 29 December 1981 -- ? -- -- Gopallawa Jayewardene University of Ceylon University of Cambridge Judge of the High Court of Colombo 137 Neville Samarakoon 1919 - 1990 -- 21 October 1984 1977 -- 21 October 1984 Jayewardene University College , Colombo Colombo Law College 138 Victor Perera 24 July 1981 -- 18 August 1983 -- 755 -- Jayewardene 139 Anton Soza Western 1919 - 2013 26 January 1982 -- 3 February 1984 -- 738 -- Jayewardene University of London Judge of the Court of Appeal 140 Parinda Ranasinghe 15 November 1982 -- 1991 1988 -- 1991 Jayewardene Colombo Law College 141 Abdul Cader 8 December 1982 -- 28 May 1985 -- 902 -- Jayewardene 142 Heevi Rodrigo 8 December 1982 -- 4 December 1984 -- 727 -- Jayewardene 143 E.A.D. Atukorale 27 November 1984 -- -- -- Jayewardene 144 Herbert Thambiah Northern 1926 -- 1992 27 November 1984 -- 1992 1991 -- 1991 Jayewardene University of Ceylon Ceylon Law College Judge of the Court of Appeal 145 Lucian Hector de Alwis 27 November 1984 -- -- -- Jayewardene 146 O.S.M. Seneviratne 10 February 1986 -- -- -- Jayewardene 147 H.A.G. de Silva 10 February 1986 -- -- -- Jayewardene Mark Fernando 1941 - 2009 4 March 1988 -- 2005 -- -- Jayewardene University of Ceylon , Peradeniya A.R.B. Amerasinghe 1937 - 2013 -- -- -- A.R.N. Fernando -- -- -- Ameer Ismail 1990 -- 1994 -- -- Premadasa University of Ceylon Ceylon Law College President of the Court of Appeal of Sri Lanka Andrew Ranjan Perera -- -- -- Pathmanathan Ramanathan 1932 - 2006 -- -- -- University of Wales President of the Court of Appeal of Sri Lanka K.M.M.B. Kulatunge -- -- -- G.P.S. de Silva -- 1991 -- 1999 Sarath N. Silva 1995 -- 16 September 1999 16 September 1999 -- 7 June 2009 3,552 Kumaratunga Sri Lanka Law College University of Brussels President of the Court of Appeal of Sri Lanka Shirani Bandaranayake North Western 1958 - 30 October 1996 -- 13 January 2013 28 January 2015 -- 29 January 2015 18 May 2011 -- 13 January 2013 28 January 2015 -- 29 January 2015 5,919 + 1 606 + 1 Kumaratunga University of Colombo University of London Lawyer C.V. Vigneswaran Western 1939 - March 2001 -- October 2004 -- -- Kumaratunga University of Ceylon Ceylon Law College Judge of the Court of Appeal Asoka de Silva 1946 - 1 August 2001 -- 17 May 2011 8 June 2009 -- 17 May 2011 3,576 708 Kumaratunga University of Peradeniya University of Colombo University of Illinois at Urbana -- Champaign President of the Court of Appeal of Sri Lanka Nihal Jayasinghe 19 February 2003 -- 29 February 2008 -- 1,836 -- Kumaratunga University of Colombo Judge of the Court of Appeal Nimal Dissanayake -- 23 April 2008 -- -- Kumaratunga Shiranee Tilakawardane 19 February 2003 - 5 April 2014 -- 1,901 -- Kumaratunga Sri Lanka Law College President of the Court of Appeal of Sri Lanka Nimal Gamini Amaratunga January 2005 -- March 2014 -- -- Kumaratunga University of Colombo International Maritime Law Institute Judge of the Court of Appeal Saleem Marsoof February 2005 -- 2014 -- -- Kumaratunga University of Colombo , University of San Diego School of Law President of the Court of Appeal of Sri Lanka Andrew Somawansa North Western 28 May 2006 -- October 2008 -- -- Rajapaksa University of Ceylon University of Nevada President of the Court of Appeal of Sri Lanka Jagath Balapatabendi Southern -- -- -- Rajapaksa Ceylon Law College Judge of the Court of Appeal Kanagasabapathy Sripavan † 1952 -- 27 March 2008 -- present 30 January 2015 -- 28 February 2017 7003368200000000000 ♠ 3,682 7003118200000000000 ♠ 1,182 Rajapaksa Sri Lanka Law College Judge of the Court of Appeal P.A. Ratnayake 2 May 2008 -- 15 February 2013 -- 7003175100000000000 ♠ 1,751 -- Rajapaksa University of Brussels Chandra Ekanayake November 2008 -- 2016 -- -- Rajapaksa Sri Lanka Law College President of the Court of Appeal of Sri Lanka S.I. Imam Central 9 January 2009 -- 20 February 2013 -- 1,503 -- Rajapaksa Judge of the Court of Appeal R.K.S. Suresh Chandra 17 June 2010 -- -- -- Rajapaksa Sathya Hettige 10 July 2011 -- 18 April 2014 -- 1,013 -- Rajapaksa University of Colombo President of the Court of Appeal of Sri Lanka Priyasath Dep † 10 July 2011 -- present 02 March 2017 - present -- 7003248200000000000 ♠ 2,482 -- Rajapaksa University of Colombo International Institute of Social Studies Solicitor General of Sri Lanka Eva Wansundera † North Western 7 July 2012 -- present -- 7003211900000000000 ♠ 2,119 -- Rajapaksa Sri Lanka Law College University of Leicester Attorney General of Sri Lanka Mohan Peiris ♠ 15 January 2013 -- 28 January 2015 15 January 2013 -- 28 January 2015 743 743 Rajapaksa Sri Lanka Law College Attorney General of Sri Lanka Rohini Marasinghe 26 April 2013 -- 2015 -- -- Rajapaksa University of Hartford Judge of the Court of Appeal Buwaneka Aluwihare † 4 December 2013 -- present -- 7003160400000000000 ♠ 1,604 -- Rajapaksa University of London Additional Solicitor General of Sri Lanka Sisira de Abrew † Western 7 May 2014 -- present -- 7003145000000000000 ♠ 1,450 -- Rajapaksa Sri Lanka Law College President of the Court of Appeal of Sri Lanka Sarath de Abrew 1953 -- 2016 7 May 2014 -- January 2016 -- -- Rajapaksa Sri Lanka Law College Judge of the Court of Appeal Priyantha Jayawardena † 7 May 2014 -- present -- 7003145000000000000 ♠ 1,450 -- Rajapaksa Sri Lanka Law College University of Aberdeen Upali Abeyratne † 17 December 2014 -- present -- 7003122600000000000 ♠ 1,226 -- Rajapaksa Judge of the Court of Appeal Anil Goonaratne † 30 January 2015 -- present -- 7003118200000000000 ♠ 1,182 -- Sirisena Sri Lanka Law College University of Exeter Judge of the Court of Appeal Kankanithanthri Chitrasiri † 3 December 2015 -- present -- 7002875000000000000 ♠ 875 -- Sirisena University of Sri Lanka Queen Mary University of London Judge of the Court of Appeal Nalin Perera † 3 March 2016 -- present -- 7002784000000000000 ♠ 784 -- Sirisena Judge of the Court of Appeal Prasanna Sujeewa Jayawardena † 16 June 2016 -- present -- 7002679000000000000 ♠ 679 -- Sirisena University of Colombo Judge of the Court of Appeal
+  Fact 0.0: Edmund Carrington Codrington was from England, lived 1769-1849, and served as Chief Justice from March 1801 to 2 April 1806 in the North province, and was previously Counsel to the East India Company.
+  Fact 0.1: Edmund Henry Lushington was from England, lived 1766-1839, and served from 5 September 1801 to 1809, as Chief from 15 April 1807 to 1809, in the North province, after studying at the University of Cambridge, and was previously a Barrister.
+  Fact 0.2: Alexander Johnston was from Scotland, lived 1775-1849, and served from 15 April 1807 to 14 February 1809, as Chief from 6 November 1811 to 1819, for 671 plus days, appointed by Maitland, after studying at the University of Gottingen, and was previously Advocate Fiscal of Ceylon.
+  Fact 0.3: William Coke was from England, lived 1776-1818, and served from 6 March 1809 to 1 September 1818, as Chief from 6 March 1809 to 1811, for 3,466 days, appointed by Maitland, after studying at the University of Oxford, and was previously Advocate Fiscal of Ceylon.
+  Fact 0.4: Henry Byrne served from 5 November 1818 to 1819, was appointed by Brownrigg, and was previously a Barrister.
+  Fact 0.5: Ambrose Hardinge Giffard was from Ireland, lived 1771-1827, and served from 8 April 1819 to 2 March 1827 for 2,885 days, appointed by Brownrigg, after studying at Trinity College Dublin, and was previously Advocate Fiscal of Ceylon.
+  Fact 0.6: Richard Ottley lived 1782-1845, served from 8 May 1820 to 1833, as Chief from 1 November 1827 to 1833, was appointed by Barnes, and was previously Chief Justice of Grenada.
+  Fact 0.7: Henry Matthews was from England, lived 1789-1828, served from 10 October 1827 to 1828, was appointed by Barnes, after studying at King's College Cambridge, and was previously Advocate Fiscal of Ceylon.
+  Fact 0.8: Charles Marshall was from England, lived 1788-1873, served from 14 June 1828 to 3 March 1836, as Chief from 18 February 1833 to 3 March 1836 for 2,850 days (1,109 as Chief), was appointed by Barnes, and studied at Jesus College Cambridge.
+  Fact 0.9: William Rough was from England, lived 1772-1838, served as Chief from 18 February 1833 to 1838, and studied at Trinity College Cambridge.
+  Fact 0.10: William Norris lived 1834-1837, served from 27 April 1836 to 1837, was appointed by Wilmot-Horton, and was previously Advocate Fiscal of Ceylon.
+  Fact 0.11: John Jeremie was from Guernsey, lived 1795-1841, served from 10 March 1836 to 1840, was appointed by Wilmot-Horton, and was previously Public prosecutor of Mauritius.
+  Fact 0.12: John Fredrick Stoddart was from Malta, lived 1805-1839, served from 2 June 1838 to 19 August 1839 for 443 days, and studied at the University of Glasgow.
+  Fact 0.13: Anthony Oliphant was from Scotland, lived 1793-1859, served from 22 October 1838 to 1854, and was previously Attorney General of the Cape Colony.
+  Fact 0.14: J.G. Hildebrand's term began on 23 November 1839.
+  Fact 0.15: William Ogle Carr was from England, lived 1802-1856, served as Chief from 17 April 1854 to 1856, was appointed by Stewart-Mackenzie, and was previously King's Advocate of Ceylon.
+  Fact 0.16: John Stark's term began on 10 October 1840 and he was previously Queen's Advocate of Ceylon.
+  Fact 0.17: Christopher Temple's term began on 28 January 1854 and he was previously Judge of the District Court of Colombo.
+  Fact 0.18: Paul Ivy Sterling's term began on 20 November 1855 and he was previously Attorney General of Hong Kong.
+  Fact 0.19: William Carpenter Rowe died in 1860 and served from 1857 to 1859.
+  Fact 0.20: Edward Shepherd Creasy was from England, lived 1812-1878, served from 27 March 1860 to 1875, and studied at the University of Cambridge.
+  Fact 0.21: Richard Morgan was previously Queen's Advocate of Ceylon.
+  Fact 0.22: George Lawson is listed without term dates or other details.
+  Fact 0.23: Henry Byerley Thompson's term began on 1 January 1863 and he was previously Queen's Advocate of Ceylon.
+  Fact 0.24: Charles Henry Stewart's term began on 11 January 1867.
+  Fact 0.25: Richard Cayley was from England, served from 26 July 1874 to 1882, as Chief from 1 October 1879 to 1882, and was previously Queen's Advocate of Ceylon.
+  Fact 0.26: Lovell Burchett Clarence's term began on 5 July 1879.
+  Fact 0.27: Harry Dias Bandaranaike's term began on 5 July 1879.
+  Fact 0.28: William Hackett served from 3 February 1877 to 1877.
+  Fact 0.29: John Budd Phear was from England and his term began on 18 October 1877.
+  Fact 0.30: Archibald Campbell Lawrie lived 1837-1914, served from 6 July 1892 to 1901, and was previously Judge of the District Court of Kandy.
+  Fact 0.31: Jacobus de Wet was from South Africa and served from 31 May 1882 to 29 May 1883 for 363 days.
+  Fact 0.32: Bruce Burnside was from the Bahamas, served from 21 May 1883 to 1893, and was previously Queen's Advocate of Ceylon.
+  Fact 0.33: John Winfield Bonser served from 13 November 1893 to 1902 and was previously Chief Justice of the Straits Settlements.
+  Fact 0.34: George Henry Withers is listed without term dates or other details.
+  Fact 0.35: Dodwell Browne is listed without term dates or other details.
+  Fact 0.36: Fredrick Charles Moncrieff's term began on 4 April 1900.
+  Fact 0.37: Henry Lorentz Wendt served from 15 October 1901 to 28 November 1910.
+  Fact 0.38: John Page Middleton served from 28 January 1902 to 1912 and was previously Puisine Judge of the Supreme Court of Cyprus.
+  Fact 0.39: Charles Layard Western served from 26 April 1902 to 18 June 1906 for 1,514 days.
+  Fact 0.40: Joseph Richard Grenier served from 28 November 1910 to 1912.
+  Fact 0.41: Alexander Wood Renton served from 3 September 1905 to 1918, as Chief from 22 August 1914 to 1918.
+  Fact 0.42: Alfred George Lascelles was from England and served from 1 May 1911 to 1914.
+  Fact 0.43: Joseph Turner Hutchinson was from England and served from 23 October 1906 to 1 May 1911 for 1,651 days.
+  Fact 0.44: James Cecil Walter Pereira's term began on 4 July 1912.
+  Fact 0.45: James Arthur Van Langenburg is listed without term dates or other details.
+  Fact 0.46: Thomas De Sampayo's term began in 1915, he studied at the University of Cambridge, and was previously Commissioner of Assize.
+  Fact 0.47: George Francis Macdaniel Ennis's term began on 5 August 1912.
+  Fact 0.48: Walter Shaw's term began on 10 December 1914 and he was previously Chief Justice of British Honduras.
+  Fact 0.49: Gualterus Stewart Schneider is listed without term dates or other details.
+  Fact 0.50: Anton Bertram lived 1869-1937, served from 26 July 1918 to 1925, studied at the University of Cambridge, and was previously Attorney General of Ceylon.
+  Fact 0.51: Hermann Albert Loos is listed without term dates or other details.
+  Fact 0.52: William Thomas Porter's term began on 12 January 1922.
+  Fact 0.53: Thomas Garvin lived 1881-1940, served from 21 June 1921 to 1935, was appointed by Manning, studied at Colombo Law College, and was previously Solicitor General of Ceylon.
+  Fact 0.54: John Adrian St. Valentine Jayewardene lived 1877 to 1927, was appointed by Manning, and was previously Judge of the District Court of Colombo.
+  Fact 0.55: Llwellyn Chisholm Dalton's term began on 14 March 1925.
+  Fact 0.56: Lewis Matthew Maartensz's term began on 18 February 1935.
+  Fact 0.57: Maas Thajoon Akbar lived 1880-1944, studied at the University of Cambridge, and was previously Solicitor General of Ceylon.
+  Fact 0.58: Charles Ernest St. John Branch lived 1865-1939, served from 3 July 1925 to 25 May 1926 for 326 days, and studied at Durham University.
+  Fact 0.59: Stanley Fisher lived 1867 to an unlisted death year, served from 11 December 1926 to 1930, and was previously Chief Justice of Trinidad and Tobago.
+  Fact 0.60: Robert William Lyall Grant's term began on 17 February 1926.
+  Fact 0.61: Allen Drieberg's term began on 19 September 1927.
+  Fact 0.62: Eugene Wilfred Jayewardene lived 1874-1932, served from May 1928, was appointed by Fletcher, and was previously a Member of the Colombo Municipal Council.
+  Fact 0.63: Philip James Macdonell lived 1873-1940, served from 3 October 1930 to 1936, and was previously Chief Justice of Trinidad and Tobago.
+  Fact 0.64: Lucian Macull Dominic de Silva is listed without term dates or other details.
+  Fact 0.65: William Edward Barber is listed without term dates or other details.
+  Fact 0.66: Francis Harold Bertram's term began on 19 February 1935.
+  Fact 0.67: Kenneth Poyser is listed without term dates or other details.
+  Fact 0.68: Francis Soertsz died in 1951 and his term began on 12 November 1936.
+  Fact 0.69: Sidney Abrahams was from England, lived 1885-1957, served from 3 July 1936 to 1939, and studied at the University of Cambridge.
+  Fact 0.70: Francis Moseley's term began on 2 August 1936.
+  Fact 0.71: Vincent Fernando's term began on 11 November 1937.
+  Fact 0.72: Hector Hearne's term began on 21 May 1937.
+  Fact 0.73: Arthur Eric Keuneman's term began on 4 March 1938 and he studied at the University of Cambridge.
+  Fact 0.74: Oswald Leslie De Kretser II was from the Western province, lived 1882-1959, served from 8 April 1938 to 1945, was appointed by Caldecott, studied at University College Colombo, and was previously Commissioner of Assize.
+  Fact 0.75: Arthur Wijewardena lived 1887-1964, served from 22 August 1938 to 1950, as Chief from 15 January 1949 to 1950, studied at the University of Cambridge, and was previously Solicitor General of Ceylon.
+  Fact 0.76: J.H.B. Nihill's term began on 18 November 1938.
+  Fact 0.77: John Curtois Howard served from 1 December 1939 to 1945 and was previously Attorney General of Cyprus.
+  Fact 0.78: G.H.F. Cannon is listed without term dates or other details.
+  Fact 0.79: Edward Jayetileke served from 14 May 1942 to 11 October 1951 for 3,437 days, as Chief from 1950 to 11 October 1951, was appointed by Caldecott, and was previously Solicitor General of Ceylon.
+  Fact 0.80: Alan Rose served from 11 January 1945 to 1956 and as Chief from 11 October 1951 to 1956.
+  Fact 0.81: A.R.H. Canakeratne lived 1886-1960, served from 28 March 1945, studied at Ceylon Law College and the University of London, and was previously Commissioner of Assize.
+  Fact 0.82: Manikku Wadumestri Hendrick de Silva is listed without term dates and was previously Attorney General of Ceylon.
+  Fact 0.83: Felix Reginald Dias Bandaranaike I lived 1861-1947, served from 3 September 1946, studied at the University of Cambridge, and was previously Judge of the District Court of Colombo.
+  Fact 0.84: Chellappah Nagalingam lived 1893-1958, served from 22 July 1947 to 1958, studied at Ceylon Law College, and was previously Attorney General of Ceylon.
+  Fact 0.85: Ralph Windham's term began on 23 July 1947.
+  Fact 0.86: Hema Henry Basnayake lived from 1902, served from 23 October 1947 to 3 August 1964 for 6,129 days, as Chief from 1 January 1956 to 3 August 1964 for 3,137 days, was appointed by Senanayake, and was previously Attorney General of Ceylon.
+  Fact 0.87: Edward Frederick Noel Gratiaen's term began on 22 March 1948 and he was appointed by Senanayake.
+  Fact 0.88: E.H.T. Gunasekera served from 1 March 1949 to 25 January 1962 for 4,713 days and was appointed by Senanayake.
+  Fact 0.89: M.F.S. Pulle's term began on 28 September 1949 and he was appointed by Senanayake.
+  Fact 0.90: V.L. St. C. Swan's term began on 1 May 1950 and he was appointed by Senanayake.
+  Fact 0.91: H.A. de Silva's term began on 30 November 1950 and he was appointed by Senanayake.
+  Fact 0.92: Kairshasp Choksy was from the Western province and is listed without term dates.
+  Fact 0.93: Henry Weerasooriya served from 10 July 1953 to 24 February 1964 for 3,881 days and was appointed by Senanayake.
+  Fact 0.94: K.D. de Silva's term began on 10 July 1953 and he was appointed by Senanayake.
+  Fact 0.95: Miliani Sansoni served from 10 May 1954 to 17 November 1966, as Chief from 3 August 1964 to 17 November 1966 for 4,574 days (836 as Chief), and was appointed by Kotelawala.
+  Fact 0.96: Hugh Fernando lived 1910-1976, served from 16 May 1955 to 17 November 1973, as Chief from 20 November 1966 to 17 November 1973 for 6,760 days (2,554 as Chief), and was appointed by Kotelawala.
+  Fact 0.97: Thusew Samuel Fernando's term began on 2 May 1956, he studied at Colombo Law College, and he was previously Solicitor General of Sri Lanka.
+  Fact 0.98: Nadaraja Sinnetamby's term began on 3 May 1956 and he was appointed by Bandaranaike.
+  Fact 0.99: Lionel de Silva's term began on 5 November 1959 and he was appointed by Dahanayake.
+  Fact 0.100: Leonard de Silva's term began on 16 August 1966 and he was appointed by Senanayake.
+  Fact 0.101: Henry Thambiah was from the Northern province, lived 1906-1997, served from 1 December 1961 to 27 May 1968 for 2,369 days, was appointed by Bandaranaike, studied at University College Colombo, Ceylon Law College, and the University of London, and was previously Commissioner of Assize.
+  Fact 0.102: Kingsley Herath's term began on 25 January 1962 and he was appointed by Bandaranaike.
+  Fact 0.103: Asoka Abeyesundere was from the Southern province, lived 1906-1988, served from 20 April 1962 to 3 May 1968 for 2,205 days, was appointed by Bandaranaike, and studied at Ceylon Law College.
+  Fact 0.104: Ponnuduraiswamy Sriskandarajah lived 1905-1968, served from 22 June 1962 to 8 February 1967 for 1,692 days, was appointed by Bandaranaike, studied at Ceylon University College and Ceylon Law College, and was previously Commissioner of Assize.
+  Fact 0.105: Gardiye Punchihewage Amaraseela Silva served from 22 June 1962 to 1974, as Chief from 1973 to 1974, and was appointed by Bandaranaike.
+  Fact 0.106: Lionel Sirimanne is listed without term dates and was appointed by Bandaranaike.
+  Fact 0.107: Vaithalingam Manicavasagar was from the Western province, lived 1906-1993, served from 17 December 1964 to 14 December 1967 for 1,092 days, was appointed by Bandaranaike, studied at Colombo Law College, and was previously Commissioner of Assize.
+  Fact 0.108: Anthony Alles was from the Central province, lived 1911-2003, served from 1964 to 1974, was appointed by Bandaranaike, studied at the University of Ceylon, Ceylon Law College, and the University of London, and was previously Solicitor General of Sri Lanka.
+  Fact 0.109: Veeravagu Sivasubramaniam lived 1908-1985, served from 1966 to 1970, was appointed by Senanayake, studied at the University of London, and was previously Commissioner of Assize.
+  Fact 0.110: George Samerawickrame served from 18 November 1966 to 9 April 1981 for 5,256 days and was appointed by Senanayake.
+  Fact 0.111: Victor Tennekoon was from the Central province, lived from 1914, served from 8 February 1967 to 1 July 1970, as Chief from 1 January 1974 to 8 September 1977 for 1,239 plus 1,346 days (1,346 as Chief), was appointed by Senanayake, studied at the University of London and Ceylon Law College, and was previously Judge of the Court of Appeal.
+  Fact 0.112: Christopher Weeramantry was from the Western province, lived 1926-1967, served from 30 April 1972, was appointed by Senanayake, studied at the University of Ceylon and the University of London, and was previously Commissioner of Assize.
+  Fact 0.113: Oswald Leslie De Kretser III was from the Western province, lived 1910-1968, served from 21 January 1972, was appointed by Senanayake, studied at University College Colombo and the University of London, and was previously Judge of the District Court of Panadura.
+  Fact 0.114: Samarapilimudalige Wijayatilake was from the Central province, lived 1912-1990, served from 1968 to 16 May 1975, was appointed by Senanayake, studied at University College Colombo and Ceylon Law College, and was previously Commissioner of Assize.
+  Fact 0.115: Pandita Gunawadena served from 1968 to 10 February 1971 and was appointed by Senanayake.
+  Fact 0.116: Vincent Thamotheram lived 1915 to 23 March 1970, served until 1980, was appointed by Senanayake, studied at Ceylon University College and Ceylon Law College, and was previously Commissioner of Assize.
+  Fact 0.117: Hector Deheragoda served from 22 February 1972 to 27 December 1976 for 1,770 days and was appointed by Bandaranaike.
+  Fact 0.118: Cuda Banda Walgampaya served from 22 February 1972 to 3 January 1976 for 1,411 days and was appointed by Bandaranaike.
+  Fact 0.119: Jaya Pathirana served from 22 February 1972 to 1978 and was appointed by Bandaranaike.
+  Fact 0.120: Jaya Pathirana's table entry includes the value 2000.
+  Fact 0.121: Dharmadasa Wimalaratne served from 10 April 1972 with an unlisted end, as Chief from 20 October 1980 to 15 September 1985 for 1,791 days, and was appointed by Bandaranaike.
+  Fact 0.122: Tellipalai Rajaratnam lived 1920-1994, served from 10 April 1972 to 1978, was appointed by Bandaranaike, and was previously Commissioner of Assize.
+  Fact 0.123: Donald Sirimanne's term began in 1973 and he was appointed by Gopallawa.
+  Fact 0.124: Cyril Udalagama's term began on 1 January 1974 and he was appointed by Gopallawa.
+  Fact 0.125: T.A. de S. Wijesundera's term began on 1 January 1974 and he was appointed by Gopallawa.
+  Fact 0.126: Malcolm Perera's term began on 1 January 1974 and he was appointed by Gopallawa.
+  Fact 0.127: Izadean Mohamed Ismail served from 1 January 1974 to 18 December 1981 for 2,908 days and was appointed by Gopallawa.
+  Fact 0.128: Joe Weereratne's term began on 1 January 1974 and he was appointed by Gopallawa.
+  Fact 0.129: Arulampalam Vythialingam's term began on 1 January 1974 and he was appointed by Gopallawa.
+  Fact 0.130: Noel Tittawela's term began on 1 January 1974 and he was appointed by Gopallawa.
+  Fact 0.131: Suppiah Sharvananda was from the Northern province, lived 1923-2007, served from 1 January 1974 to 1988, as Chief from 29 October 1984 to 1988, was appointed by Gopallawa, and studied at Colombo Law College and the University of London.
+  Fact 0.132: Somaratne Walpita's term began on 1 January 1974 and he was appointed by Gopallawa.
+  Fact 0.133: Wilmot Gunasekera's term began on 2 May 1974 and he was appointed by Gopallawa.
+  Fact 0.134: Barnes Ratwatte II lived 1918-2004, served from 2 December 1974 with an uncertain end, as Chief from 11 April 1981 to 22 November 1983 for 955 days, was appointed by Gopallawa, studied at Ceylon Law College, and was previously President of the Court of Appeal of Sri Lanka.
+  Fact 0.135: Barnes Ratwatte II's table row also lists Jayewardene.
+  Fact 0.136: Raja Wanasundera was from the Sabaragamuwa province, lived 1924-2012, served from 5 June 1975, was appointed by Gopallawa, studied at University College Colombo, Ceylon Law College, the University of London, and Stanford University, and was previously Solicitor General of Sri Lanka.
+  Fact 0.137: Percy Colin-Thome was from the Southern province, lived 1922 to an unlisted death year, served from 12 January 1976 to 1977, as Chief from 29 December 1981 to an uncertain end, was appointed by Gopallawa and Jayewardene, studied at the University of Ceylon and the University of Cambridge, and was previously Judge of the High Court of Colombo.
+  Fact 0.138: Neville Samarakoon lived 1919-1990, served until 21 October 1984, as Chief from 1977 to 21 October 1984, was appointed by Jayewardene, and studied at University College Colombo and Colombo Law College.
+  Fact 0.139: Victor Perera served from 24 July 1981 to 18 August 1983 for 755 days and was appointed by Jayewardene.
+  Fact 0.140: Anton Soza was from the Western province, lived 1919-2013, served from 26 January 1982 to 3 February 1984 for 738 days, was appointed by Jayewardene, studied at the University of London, and was previously Judge of the Court of Appeal.
+  Fact 0.141: Parinda Ranasinghe's term began on 15 November 1982 and ran to 1991, as Chief from 1988 to 1991, was appointed by Jayewardene, and studied at Colombo Law College.
+  Fact 0.142: Abdul Cader served from 8 December 1982 to 28 May 1985 for 902 days and was appointed by Jayewardene.
+  Fact 0.143: Heevi Rodrigo served from 8 December 1982 to 4 December 1984 for 727 days and was appointed by Jayewardene.
+  Fact 0.144: E.A.D. Atukorale's term began on 27 November 1984 and he was appointed by Jayewardene.
+  Fact 0.145: Herbert Thambiah was from the Northern province, lived 1926-1992, served from 27 November 1984 to 1992, as Chief in 1991, was appointed by Jayewardene, studied at the University of Ceylon and Ceylon Law College, and was previously Judge of the Court of Appeal.
+  Fact 0.146: Lucian Hector de Alwis's term began on 27 November 1984 and he was appointed by Jayewardene.
+  Fact 0.147: O.S.M. Seneviratne's term began on 10 February 1986 and he was appointed by Jayewardene.
+  Fact 0.148: H.A.G. de Silva's term began on 10 February 1986 and he was appointed by Jayewardene.
+  Fact 0.149: Mark Fernando lived 1941-2009, served from 4 March 1988 to 2005, was appointed by Jayewardene, and studied at the University of Ceylon, Peradeniya.
+  Fact 0.150: A.R.B. Amerasinghe lived 1937-2013.
+  Fact 0.151: A.R.N. Fernando is listed without term dates or other details.
+  Fact 0.152: Ameer Ismail served from 1990 to 1994, was appointed by Premadasa, studied at the University of Ceylon and Ceylon Law College, and was President of the Court of Appeal of Sri Lanka.
+  Fact 0.153: Andrew Ranjan Perera is listed without term dates or other details.
+  Fact 0.154: Pathmanathan Ramanathan lived 1932-2006, studied at the University of Wales, and was President of the Court of Appeal of Sri Lanka.
+  Fact 0.155: K.M.M.B. Kulatunge is listed without term dates or other details.
+  Fact 0.156: G.P.S. de Silva served from 1991 to 1999.
+  Fact 0.157: Sarath N. Silva lived from 1995, served from 16 September 1999 to 7 June 2009 for 3,552 days, was appointed by Kumaratunga, studied at Sri Lanka Law College and the University of Brussels, and was President of the Court of Appeal of Sri Lanka.
+  Fact 0.158: Shirani Bandaranayake was from the North Western province, lived 1958 to 30 October 1996, served from 18 May 2011 to 29 January 2015 for 5,919 plus 1 days (606 plus 1 as Chief), with a Chief term from 13 January 2013 to 28 January 2015 and 28 January 2015 to 29 January 2015, was appointed by Kumaratunga, studied at the University of Colombo and the University of London, and was a lawyer.
+  Fact 0.159: C.V. Vigneswaran was from the Western province, lived 1939 to March 2001, served from October 2004, was appointed by Kumaratunga, studied at the University of Ceylon and Ceylon Law College, and was previously Judge of the Court of Appeal.
+  Fact 0.160: Asoka de Silva lived 1946 to 1 August 2001, served from 8 June 2009 to 17 May 2011 for 3,576 days (708 as Chief), was appointed by Kumaratunga, studied at the University of Peradeniya, the University of Colombo, and the University of Illinois at Urbana-Champaign, and was President of the Court of Appeal of Sri Lanka.
+  Fact 0.161: Nihal Jayasinghe served from 19 February 2003 to 29 February 2008 for 1,836 days, was appointed by Kumaratunga, studied at the University of Colombo, and was previously Judge of the Court of Appeal.
+  Fact 0.162: Nimal Dissanayake's term began on 23 April 2008 and he was appointed by Kumaratunga.
+  Fact 0.163: Shiranee Tilakawardane served from 19 February 2003 to 5 April 2014 for 1,901 days, was appointed by Kumaratunga, studied at Sri Lanka Law College, and was President of the Court of Appeal of Sri Lanka.
+  Fact 0.164: Nimal Gamini Amaratunga's term ran from January 2005 to March 2014, was appointed by Kumaratunga, studied at the University of Colombo and the International Maritime Law Institute, and was previously Judge of the Court of Appeal.
+  Fact 0.165: Saleem Marsoof's term ran from February 2005 to 2014, was appointed by Kumaratunga, studied at the University of Colombo and the University of San Diego School of Law, and was President of the Court of Appeal of Sri Lanka.
+  Fact 0.166: Andrew Somawansa was from the North Western province, served from 28 May 2006 to October 2008, was appointed by Rajapaksa, studied at the University of Ceylon and the University of Nevada, and was President of the Court of Appeal of Sri Lanka.
+  Fact 0.167: Jagath Balapatabendi was from the Southern province, has no listed term dates, was appointed by Rajapaksa, studied at Ceylon Law College, and was previously Judge of the Court of Appeal.
+  Fact 0.168: Kanagasabapathy Sripavan lived from 1952, served from 27 March 2008 to present for 3,682 days, as Chief from 30 January 2015 to 28 February 2017 for 1,182 days, was appointed by Rajapaksa, studied at Sri Lanka Law College, and was previously Judge of the Court of Appeal.
+  Fact 0.169: P.A. Ratnayake served from 2 May 2008 to 15 February 2013 for 1,751 days, was appointed by Rajapaksa, and studied at the University of Brussels.
+  Fact 0.170: Chandra Ekanayake's term ran from November 2008 to 2016, was appointed by Rajapaksa, studied at Sri Lanka Law College, and was President of the Court of Appeal of Sri Lanka.
+  Fact 0.171: S.I. Imam was from the Central province, served from 9 January 2009 to 20 February 2013 for 1,503 days, was appointed by Rajapaksa, and was previously Judge of the Court of Appeal.
+  Fact 0.172: R.K.S. Suresh Chandra's term began on 17 June 2010 and he was appointed by Rajapaksa.
+  Fact 0.173: Sathya Hettige served from 10 July 2011 to 18 April 2014 for 1,013 days, was appointed by Rajapaksa, studied at the University of Colombo, and was President of the Court of Appeal of Sri Lanka.
+  Fact 0.174: Priyasath Dep's term began on 10 July 2011 and continues to present, as Chief from 2 March 2017 to present for 2,482 days, was appointed by Rajapaksa, studied at the University of Colombo and the International Institute of Social Studies, and was previously Solicitor General of Sri Lanka.
+  Fact 0.175: Eva Wansundera was from the North Western province, served from 7 July 2012 to present for 2,119 days, was appointed by Rajapaksa, studied at Sri Lanka Law College and the University of Leicester, and was Attorney General of Sri Lanka.
+  Fact 0.176: Mohan Peiris served from 15 January 2013 to 28 January 2015 for 743 days, was appointed by Rajapaksa, studied at Sri Lanka Law College, and was Attorney General of Sri Lanka.
+  Fact 0.177: Rohini Marasinghe served from 26 April 2013 to 2015, was appointed by Rajapaksa, studied at the University of Hartford, and was Judge of the Court of Appeal.
+  Fact 0.178: Buwaneka Aluwihare's term began on 4 December 2013 and continues to present for 1,604 days, was appointed by Rajapaksa, studied at the University of London, and was Additional Solicitor General of Sri Lanka.
+  Fact 0.179: Sisira de Abrew was from the Western province, served from 7 May 2014 to present for 1,450 days, was appointed by Rajapaksa, studied at Sri Lanka Law College, and was President of the Court of Appeal of Sri Lanka.
+  Fact 0.180: Sarath de Abrew lived 1953-2016, served from 7 May 2014 to January 2016, was appointed by Rajapaksa, studied at Sri Lanka Law College, and was Judge of the Court of Appeal.
+  Fact 0.181: Priyantha Jayawardena's term began on 7 May 2014 and continues to present for 1,450 days, was appointed by Rajapaksa, studied at Sri Lanka Law College and the University of Aberdeen.
+  Fact 0.182: Upali Abeyratne's term began on 17 December 2014 and continues to present for 1,226 days, was appointed by Rajapaksa, and was Judge of the Court of Appeal.
+  Fact 0.183: Anil Goonaratne's term began on 30 January 2015 and continues to present for 1,182 days, was appointed by Sirisena, studied at Sri Lanka Law College and the University of Exeter, and was Judge of the Court of Appeal.
+  Fact 0.184: Kankanithanthri Chitrasiri's term began on 3 December 2015 and continues to present for 875 days, was appointed by Sirisena, studied at the University of Sri Lanka and Queen Mary University of London, and was Judge of the Court of Appeal.
+  Fact 0.185: Nalin Perera's term began on 3 March 2016 and continues to present for 784 days, was appointed by Sirisena, and was Judge of the Court of Appeal.
+  Fact 0.186: Prasanna Sujeewa Jayawardena's term began on 16 June 2016 and continues to present for 679 days, was appointed by Sirisena, studied at the University of Colombo, and was Judge of the Court of Appeal.
+
+Retrieved items:
+<item 1>
+List of Justices of the Supreme Court of Sri Lanka
+University of San Diego School of Law President of the Court of Appeal of Sri Lanka Andrew Somawansa North Western 28 May 2006 -- October 2008 -- -- Rajapaksa
+University of Ceylon University of Nevada President of the Court of Appeal of Sri Lanka Jagath Balapatabendi Southern -- -- -- Rajapaksa Ceylon Law College
+Judge of the Court of Appeal Kanagasabapathy Sripavan † 1952 -- 27 March 2008 -- present 30 January 2015 -- 28 February 2017 7003368200000000000 ♠ 3,682
+7003118200000000000 ♠ 1,182 Rajapaksa Sri Lanka Law College Judge of the Court of Appeal P.A. Ratnayake 2 May 2008 -- 15 February 2013 -- 7003175100000000000 ♠
+1,751 -- Rajapaksa University of Brussels Chandra Ekanayake November 2008 -- 2016 -- -- Rajapaksa Sri Lanka Law College President of the Court of Appeal of Sri
+Lanka S.I.
+</item 1>
+
+<item 2>
+List of Justices of the Supreme Court of Sri Lanka
+760 2,554 Kotelawala 98 Thusew Samuel Fernando 2 May 1956 -- -- -- Bandaranaike Colombo Law College Solicitor General of Sri Lanka 99 Nadaraja Sinnetamby 3 May
+1956 -- -- -- Bandaranaike 100 Lionel de Silva 5 November 1959 -- -- -- Dahanayake 101 Leonard de Silva 16 August 1966 -- -- -- Senanayake 102 Henry Thambiah
+Northern 1906 -- 1997 1 December 1961 -- 27 May 1968 -- 2,369 -- Bandaranaike University College , Colombo Ceylon Law College University of London Commissioner
+of Assize 103 Kingsley Herath 25 January 1962 -- -- -- Bandaranaike 104 Asoka Abeyesundere Southern 1906 - 1988 20 April 1962 -- 3 May 1968 -- 2,
+</item 2>
+
+<item 3>
+List of Justices of the Supreme Court of Sri Lanka
+450 -- Rajapaksa Sri Lanka Law College President of the Court of Appeal of Sri Lanka Sarath de Abrew 1953 -- 2016 7 May 2014 -- January 2016 -- -- Rajapaksa Sri
+Lanka Law College Judge of the Court of Appeal Priyantha Jayawardena † 7 May 2014 -- present -- 7003145000000000000 ♠ 1,450 -- Rajapaksa Sri Lanka Law College
+University of Aberdeen Upali Abeyratne † 17 December 2014 -- present -- 7003122600000000000 ♠ 1,226 -- Rajapaksa Judge of the Court of Appeal Anil Goonaratne †
+30 January 2015 -- present -- 7003118200000000000 ♠ 1,
+</item 3>
+
+<item 4>
+List of Justices of the Supreme Court of Sri Lanka
+9 January - 5 June 1888 ) Jump up ^ On leave ( 25 November 1890 - February 1891 ) Jump up ^ Acting Justice ( 12 May 1903 -- 28 November 1910 ) References ( edit
+) Jump up ^ Amerasinghe , A. Ranjit B ( 1986 ) , The Supreme Court of Sri Lanka : the first 185 years , Sarvodaya Book Pub . Services , ISBN 978 - 955 - 599 -
+000 - 4 Jump up ^ Current to most recent page update . Jump up ^ Current to most recent page update . Jump up ^ Current to most recent page update . Jump up ^
+Current to most recent page update . Jump up ^ Current to most recent page update . Jump up ^ Current to most recent page update . Jump up ^ Current to most
+recent page update . Jump up ^ Current to most recent page update . Jump up ^ Current to most recent page update . Jump up ^ Current to most recent page update
+. Jump up ^ Current to most recent page update . Jump up ^ Current to most recent page update .
+</item 4>
+
+<item 5>
+List of Justices of the Supreme Court of Sri Lanka
+Imam Central 9 January 2009 -- 20 February 2013 -- 1,503 -- Rajapaksa Judge of the Court of Appeal R.K.S. Suresh Chandra 17 June 2010 -- -- -- Rajapaksa Sathya
+Hettige 10 July 2011 -- 18 April 2014 -- 1,013 -- Rajapaksa University of Colombo President of the Court of Appeal of Sri Lanka Priyasath Dep † 10 July 2011 --
+present 02 March 2017 - present -- 7003248200000000000 ♠ 2,482 -- Rajapaksa University of Colombo International Institute of Social Studies Solicitor General of
+Sri Lanka Eva Wansundera † North Western 7 July 2012 -- present -- 7003211900000000000 ♠ 2,
+</item 5>
+
+<item 6>
+List of Justices of the Supreme Court of Sri Lanka
+Kulatunge -- -- -- G.P.S. de Silva -- 1991 -- 1999 Sarath N. Silva 1995 -- 16 September 1999 16 September 1999 -- 7 June 2009 3,552 Kumaratunga Sri Lanka Law
+College University of Brussels President of the Court of Appeal of Sri Lanka Shirani Bandaranayake North Western 1958 - 30 October 1996 -- 13 January 2013 28
+January 2015 -- 29 January 2015 18 May 2011 -- 13 January 2013 28 January 2015 -- 29 January 2015 5,919 + 1 606 + 1 Kumaratunga University of Colombo University
+of London Lawyer C.V. Vigneswaran Western 1939 - March 2001 -- October 2004 -- -- Kumaratunga University of Ceylon Ceylon Law College Judge of the Court of
+Appeal Asoka de Silva 1946 - 1 August 2001 -- 17 May 2011 8 June 2009 -- 17 May 2011 3,
+</item 6>
+
+<item 7>
+List of Justices of the Supreme Court of Sri Lanka
+576 708 Kumaratunga University of Peradeniya University of Colombo University of Illinois at Urbana -- Champaign President of the Court of Appeal of Sri Lanka
+Nihal Jayasinghe 19 February 2003 -- 29 February 2008 -- 1,836 -- Kumaratunga University of Colombo Judge of the Court of Appeal Nimal Dissanayake -- 23 April
+2008 -- -- Kumaratunga Shiranee Tilakawardane 19 February 2003 - 5 April 2014 -- 1,901 -- Kumaratunga Sri Lanka Law College President of the Court of Appeal of
+Sri Lanka Nimal Gamini Amaratunga January 2005 -- March 2014 -- -- Kumaratunga University of Colombo International Maritime Law Institute Judge of the Court of
+Appeal Saleem Marsoof February 2005 -- 2014 -- -- Kumaratunga University of Colombo ,
+</item 7>
+
+<item 8>
+List of Justices of the Supreme Court of Sri Lanka
+List of justices of the Supreme Court of Sri Lanka - wikipedia List of justices of the Supreme Court of Sri Lanka Jump to : navigation , search Shirani
+Bandaranayake was the 43rd Chief Justice of Sri Lanka and the first and only woman to hold the position . List of Justices of the Supreme Court of Sri Lanka In
+this list , justices are placed in the order in which they took the judicial oath of office and thereby started their term of office . While many of the
+justices ' positions prior to appointment are simply listed as `` lawyer '' , many had part - time positions , such as teaching , or acted as counsel to various
+levels of government . Contents ( hide ) 1 Justices 2 See also 3 Notes 4 References 5 Bibliography Justices ( edit ) † Denotes current justices Began as
+Provisional or Acting Puisne Justice ♠ Tenure demoted to de facto † Died in office No .
+</item 8>
+
+<item 9>
+List of Justices of the Supreme Court of Sri Lanka
+182 -- Sirisena Sri Lanka Law College University of Exeter Judge of the Court of Appeal Kankanithanthri Chitrasiri † 3 December 2015 -- present --
+7002875000000000000 ♠ 875 -- Sirisena University of Sri Lanka Queen Mary University of London Judge of the Court of Appeal Nalin Perera † 3 March 2016 --
+present -- 7002784000000000000 ♠ 784 -- Sirisena Judge of the Court of Appeal Prasanna Sujeewa Jayawardena † 16 June 2016 -- present -- 7002679000000000000 ♠
+679 -- Sirisena University of Colombo Judge of the Court of Appeal See also ( edit ) List of Chief Justices of Sri Lanka List of Justices of the Supreme Court
+of Sri Lanka by court composition Notes ( edit ) Jump up ^ Provisional Chief Justice Jump up ^ On leave ( 1 January - 28 April 1871 ) Jump up ^ Acting Chief
+Justice ( 1 - 10 October 1879 ,
+</item 9>
+
+<item 10>
+List of Justices of the Supreme Court of Sri Lanka
+Jump up ^ Current to most recent page update . Bibliography ( edit ) Amerasinghe , A.R.B. ( 1986 ) . The Supreme Court of Sri Lanka : the first 185 years .
+Ratmalana , Sri Lanka : Sarvodaya Book Pub . Services . ISBN 955599000X . ( hide ) Supreme Court of Sri Lanka The Court Decisions Procedure History Court
+Building Current membership Chief Justice Kanagasabapathy Sripavan Puisne Justices Priyasath Dep Eva Wansundera Buwaneka Aluwihare Sisira De Abrew Priyantha
+Jayawardena Upaly Abeyratne Anil Goonaratne K.T.
+</item 10>
+=== END ITEM id=959bb023429a89b3 ===
+
+=== ITEM id=a8b8bb1a49d25360 ===
+Gold sentences and facts:
+Sentence 0: Because the states were preexisting political entities , the U.S. Constitution did not need to define or explain federalism in any one section but it often mentions the rights and responsibilities of state governments and state officials in relation to the federal government . The federal government has certain express powers ( also called enumerated powers ) which are powers spelled out in the Constitution , including the right to levy taxes , declare war , and regulate interstate and foreign commerce . In addition , the Necessary and Proper Clause gives the federal government the implied power to pass any law `` necessary and proper '' for the execution of its express powers . Other powers -- the reserved powers -- are reserved to the people or the states . The power delegated to the federal government was significantly expanded by the Supreme Court decision in McCulloch v. Maryland ( 1819 ) , amendments to the Constitution following the Civil War , and by some later amendments -- as well as the overall claim of the Civil War , that the states were legally subject to the final dictates of the federal government .
+  Fact 0.0: The states were preexisting political entities, so the U.S. Constitution did not need to define or explain federalism in any one section.
+  Fact 0.1: The U.S. Constitution often mentions the rights and responsibilities of state governments and state officials in relation to the federal government.
+  Fact 0.2: The federal government has express powers, also called enumerated powers, which are spelled out in the Constitution.
+  Fact 0.3: The express powers include the right to levy taxes, declare war, and regulate interstate and foreign commerce.
+  Fact 0.4: The Necessary and Proper Clause gives the federal government the implied power to pass any law necessary and proper for executing its express powers.
+  Fact 0.5: Reserved powers are reserved to the people or the states.
+  Fact 0.6: The Supreme Court decision in McCulloch v. Maryland (1819) significantly expanded the power delegated to the federal government.
+  Fact 0.7: Amendments to the Constitution following the Civil War significantly expanded the power delegated to the federal government.
+  Fact 0.8: Some later amendments also expanded the power delegated to the federal government.
+  Fact 0.9: The overall claim of the Civil War was that the states were legally subject to the final dictates of the federal government.
+
+Retrieved items:
+<item 1>
+Federalism
+- J. Proudhon , The Principle of Federation , 1863 . A Comparative Bibliography : Regulatory Competition on Corporate Law A Rhetoric for Ratification : The
+Argument of the Federalist and its Impact on Constitutional Interpretation Brainstorming National ( in French ) Teaching about Federalism in the United States -
+From the Education Resources Information Center Clearinghouse for Social Studies / Social Science Education Bloomington , Indiana . An Ottawa , Ontario , Canada
+- based international organization for federal countries that share best practices among countries with that system of government Tenth Amendment Center
+Federalism and States Rights in the U.S. BackStory Radio episode on the origins and current status of Federalism Constitutional law scholar Hester Lessard
+discusses Vancouver 's Downtown Eastside and jurisdictional justice McGill University ,
+</item 1>
+
+<item 2>
+Federalism
+they are already constitutional , parliamentary , and administratively modernized states ) . European vs. American federalism ( edit ) Main articles : Federal
+Europe and Federalism in the United States In Europe , `` Federalist '' is sometimes used to describe those who favor a common federal government , with
+distributed power at regional , national and supranational levels . Most European federalists want this development to continue within the European Union .
+European federalism originated in post-war Europe ; one of the more important initiatives was Winston Churchill 's speech in Zürich in 1946 . In the United
+States , federalism originally referred to belief in a stronger central government . When the U.S. Constitution was being drafted , the Federalist Party
+supported a stronger central government , while `` Anti-Federalists '' wanted a weaker central government . This is very different from the modern usage of ``
+federalism '' in Europe and the United States . The distinction stems from the fact that `` federalism '' is situated in the middle of the political spectrum
+between a confederacy and a unitary state . The U.S.
+</item 2>
+
+<item 3>
+Federalism
+This was reaffirmed by the Tenth Amendment to the United States Constitution , which reserves all powers and rights that are not delegated to the Federal
+Government as left to the States and to the people . Bicameralism ( edit ) The structures of most federal governments incorporate mechanisms to protect the
+rights of component states . One method , known as ' intrastate federalism ' , is to directly represent the governments of component states in federal political
+institutions . Where a federation has a bicameral legislature the upper house is often used to represent the component states while the lower house represents
+the people of the nation as a whole . A federal upper house may be based on a special scheme of apportionment , as is the case in the senates of the United
+States and Australia , where each state is represented by an equal number of senators irrespective of the size of its population .
+</item 3>
+
+<item 4>
+Federalism
+In 1995 the Supreme Court rejected the Gun - Free School Zones Act in the Lopez decision , and also rejected the civil remedy portion of the Violence Against
+Women Act of 1994 in the United States v. Morrison decision . Recently , the Commerce Clause was interpreted to include marijuana laws in the Gonzales v. Raich
+decision . Dual federalism holds that the federal government and the state governments are co-equals , each sovereign . However , since the Civil War Era , the
+national courts often interpret the federal government as the final judge of its own powers under dual federalism . The establishment of Native American
+governments ( which are separate and distinct from state and federal government ) exercising limited powers of sovereignty , has given rise to the concept of ``
+bi-federalism . '' Venezuela ( edit ) The Federal War ended in 1863 with the signing of the Treaty of Coche by both the centralist government of the time and
+the Federal Forces . The United States of Venezuela were subsequently incorporated under a `` Federation of Sovereign States '' upon principles borrowed from
+the Articles of Confederation of the United States of America .
+</item 4>
+
+<item 5>
+Federalism
+American government has evolved from a system of dual federalism to one of associative federalism . In `` Federalist No. 46 , '' James Madison asserted that the
+states and national government `` are in fact but different agents and trustees of the people , constituted with different powers . '' Alexander Hamilton ,
+writing in `` Federalist No. 28 , '' suggested that both levels of government would exercise authority to the citizens ' benefit : `` If their ( the peoples ' )
+rights are invaded by either , they can make use of the other as the instrument of redress . '' ( 1 ) The United States is composed of fifty self - governing
+states and several territories . Because the states were preexisting political entities , the U.S. Constitution did not need to define or explain federalism in
+any one section but it often mentions the rights and responsibilities of state governments and state officials in relation to the federal government . The
+federal government has certain express powers ( also called enumerated powers ) which are powers spelled out in the Constitution , including the right to levy
+taxes , declare war , and regulate interstate and foreign commerce .
+</item 5>
+
+<item 6>
+Federalism
+Its distinctive feature , exemplified in the founding example of modern federalism by the United States of America under the Constitution of 1787 , is a
+relationship of parity between the two levels of government established . It can thus be defined as a form of government in which there is a division of powers
+between two levels of government of equal status . Federalism differs from confederalism , in which the general level of government is subordinate to the
+regional level , and from devolution within a unitary state , in which the regional level of government is subordinate to the general level . It represents the
+central form in the pathway of regional integration or separation , bounded on the less integrated side by confederalism and on the more integrated side by
+devolution within a unitary state . Leading examples of the federation or federal state include the United States , Canada , Brazil , Germany , Switzerland ,
+Argentina , Australia and India . Some also today characterize the European Union as the pioneering example of federalism in a multi-state setting , in a
+concept termed the federal union of states . Contents ( hide ) 1 Overview 1.1 Explanations for adoption of federalist systems 2 European vs.
+</item 6>
+
+<item 7>
+Federalism
+Jump up ^ See Law , John ( 2013 ) , p. 104 . http://www.on-federalism.eu/attachments/169_download.pdf This author identifies two distinct federal forms , where
+before only one was known , based upon whether sovereignty ( conceived in its core meaning of ultimate authority ) resides in the whole ( in one people ) or in
+the parts ( in many peoples ) . This is determined by the absence or presence of a right of secession for the parts . The structures are termed , respectively ,
+the federal state ( or federation ) and the federal union of states ( or federal union ) . Jump up ^ Madison , James , Hamilton , Alexander and Jay , John (
+1987 ) The Federalist Papers , Penguin , Harmondsworth , p. 259 . Jump up ^ Law , John ( 2012 ) ' Sense on Federalism ' , in Political Quarterly , Vol. 83 , No.
+3 , p. 544 .
+</item 7>
+
+<item 8>
+Federalism
+The U.S. Constitution was written as a reaction to the Articles of Confederation , under which the United States was a loose confederation with a weak central
+government . In contrast , Europe has a greater history of unitary states than North America , thus European `` federalism '' argues for a weaker central
+government , relative to a unitary state . The modern American usage of the word is much closer to the European sense . As the power of the Federal government
+has increased , some people have perceived a much more unitary state than they believe the Founding Fathers intended . Most people politically advocating ``
+federalism '' in the United States argue in favor of limiting the powers of the federal government , especially the judiciary ( see Federalist Society , New
+Federalism ) . In Canada , federalism typically implies opposition to sovereigntist movements ( most commonly Quebec separatism ) . The governments of Argentina
+, Australia , Brazil , India , and Mexico , among others , are also organized along federalist principles . Federalism may encompass as few as two or three
+internal divisions , as is the case in Belgium or Bosnia and Herzegovina .
+</item 8>
+
+<item 9>
+Federalism
+The federalists , on the other hand , argued that it was impossible to list all the rights , and those that were not listed could be easily overlooked because
+they were not in the official bill of rights . Rather , rights in specific cases were to be decided by the judicial system of courts . After the American Civil
+War , the federal government increased greatly in influence on everyday life and in size relative to the state governments . Reasons included the need to
+regulate businesses and industries that span state borders , attempts to secure civil rights , and the provision of social services . The federal government
+acquired no substantial new powers until the acceptance by the Supreme Court of the Sherman Anti-Trust Act . From 1938 until 1995 , the U.S. Supreme Court did
+not invalidate any federal statute as exceeding Congress ' power under the Commerce Clause . Most actions by the federal government can find some legal support
+among the express powers , such as the Commerce Clause , whose applicability has been narrowed by the Supreme Court in recent years .
+</item 9>
+
+<item 10>
+Federalism
+See also ( edit ) Consociationalism Cooperative federalism Democratic World Federalists Federal Union Layer cake federalism Pillarisation States ' rights Union
+of Utrecht World Federalist Movement Notes and references ( edit ) Jump up ^ In 1946 , scholar Kenneth Wheare observed that the two levels of government in the
+US were ' co-equally supreme ' . In this he echoed the perspective of the founding fathers , James Madison in Federalist 39 having seen the several states as
+forming ' distinct and independent portions of the supremacy ' in relation to the general government . Wheare , Kenneth ( 1946 ) Federal Government , Oxford
+University Press , London , pp. 10 - 15 . Madison , James , Hamilton , Alexander and Jay , John ( 1987 ) The Federalist Papers , Penguin , Harmondsworth , p.
+258 . Jump up ^ Law , John ( 2013 ) ' How Can We Define Federalism ? ' , in Perspectives on Federalism , Vol. 5 , No. 3 , pp. E105 - 6 .
+</item 10>
+=== END ITEM id=a8b8bb1a49d25360 ===

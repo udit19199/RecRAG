@@ -1,0 +1,407 @@
+[
+ {
+  "id": "cdfc373de4c8fc31",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "76de10ab40fff029",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more."
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more."
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more."
+     }
+    ]
+   },
+   {
+    "fact": "2.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "3.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "3.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "3.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "3.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "3.4",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "65d77172ecb429b0",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Caroline Ellison, Bankman-Fried’s ex-girlfriend."
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "1193b326d39760a6",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide."
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide."
+     }
+    ]
+   },
+   {
+    "fact": "2.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."
+     }
+    ]
+   },
+   {
+    "fact": "2.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "8b6f3732f879ea96",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.5",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.6",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.5",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.6",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.7",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "4d87f86f5f1f2ad0",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "a clip that purported to show Hamas missile attacks on Israel but was actually footage from a video game."
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "posts identified as false have been spotted circulating on X — including, in one example, a clip that purported to show Hamas missile attacks on Israel but was actually footage from a video game."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "We’ve reached out to the Commission with questions about how it plans to respond to this latest analysis of X’s role in spreading disinformation."
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "We’ve reached out to the Commission with questions about how it plans to respond to this latest analysis of X’s role in spreading disinformation."
+     }
+    ]
+   }
+  ]
+ }
+]

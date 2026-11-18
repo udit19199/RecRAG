@@ -1,0 +1,408 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "d19db804a084534d",
+   "gold": [
+    {
+     "sentence": " It was released as the lead single from their fourth studio album, \"Elephant\", in March 2003, and reached number one on the Modern Rock Tracks—maintaining that position for three weeks.",
+     "facts": {
+      "0.0": "The song was released as the lead single from the fourth studio album of its act, \"Elephant.\"",
+      "0.1": "The song was released in March 2003.",
+      "0.2": "The song reached number one on the Modern Rock Tracks.",
+      "0.3": "The song maintained its number one position on the Modern Rock Tracks for three weeks."
+     }
+    },
+    {
+     "sentence": " Released on April 1, 2003 on V2 Records, its release garnered near unanimous critical acclaim and commercial success, garnering a nomination for Album of the Year and a win for Best Alternative Music Album at the 46th Grammy Awards in 2004, peaking at No. 6 in the US \"Billboard\" charts and topping the UK album charts.",
+     "facts": {
+      "1.0": "The album \"Elephant\" was released on April 1, 2003.",
+      "1.1": "The album \"Elephant\" was released on V2 Records.",
+      "1.2": "The album \"Elephant\" garnered near unanimous critical acclaim.",
+      "1.3": "The album \"Elephant\" garnered commercial success.",
+      "1.4": "The album \"Elephant\" received a nomination for Album of the Year at the 46th Grammy Awards in 2004.",
+      "1.5": "The album \"Elephant\" won Best Alternative Music Album at the 46th Grammy Awards in 2004.",
+      "1.6": "The album \"Elephant\" peaked at No. 6 on the US \"Billboard\" charts.",
+      "1.7": "The album \"Elephant\" topped the UK album charts."
+     }
+    }
+   ],
+   "items": [
+    "Meg White\nMegan Martha \"Meg\" White (born December 10, 1974) is an American drummer and occasional singer known for her work with Jack White in the Detroit rock duo The White Stripes.\n\n On an impulse, she played on Jack's drums in 1997.\n\n The two decided to form a band and began performing two months later, calling themselves The White Stripes because of their last name and Meg's affinity for peppermint candy.\n\n The band quickly became a Detroit underground favorite, before reaching national, then international fame.\n\n White has been nominated for various awards as a part of the White Stripes, and has received four Grammy Awards.",
+    "Premio Lo Nuestro 2003\nPremio Lo Nuestro 2003 was the 15th anniversary of the awards.\n\n the show was hosted by Mexican presenters Marco Antonio Regil and Adal Ramones.\n\n Juanes, Thalía, Marc Anthony, Pilar Montenegro, Sin Bandera, Banda el Recodo and other Latin music greats gave electrifying performances.\n\n In the show, there was 36 awards winners with 135 nominations.\n\n In Pop genre, Awards was given for : Album of the Year, Best Male Artist, Best Female Artist, Best Group or duo, Best New Artist and Song of the Year.\n\n In Rock Genre : Best Rock Album and Best rock Performer of the Year.\n\n In Tropical genre : Best Tropical Album of the Year, Best Tropical Male Artist, Best Tropical Female Artist, Best Tropical Group or Duo of the Year, Best Tropical New Artist, Tropical Song of the Year, Best Merengue Performance, Best Salsa Performance and Best Traditional Performance.\n\n Juanes was the biggest winner of night, took home four awards Best Pop Male Artist, Best Music Video, Best Rock Performance, and Pop Song of the Year .",
+    "The White Stripes\nThe White Stripes were an American rock duo formed in 1997 in Detroit, Michigan.\n\n The group consisted of Jack White (songwriter, vocals, guitar, piano, and mandolin) and Meg White (drums and vocals).\n\n After releasing several singles and three albums within the Detroit music scene, The White Stripes rose to prominence in 2002, as part of the garage rock revival scene.\n\n Their successful and critically acclaimed albums \"White Blood Cells\" and \"Elephant\" drew attention from a large variety of media outlets in the United States and the United Kingdom, with the single \"Seven Nation Army\" and its guitar line becoming their signature song.\n\n The band recorded two more albums, \"Get Behind Me Satan\" in 2005 and \"Icky Thump\" in 2007, and dissolved in 2011 after a lengthy hiatus from performing and recording.",
+    "Seven Nation Army\n\"Seven Nation Army\" (also stylized as \"7 Nation Army\") is a song by American rock duo The White Stripes.\n\n It was released as the lead single from their fourth studio album, \"Elephant\", in March 2003, and reached number one on the Modern Rock Tracks—maintaining that position for three weeks.\n\n It also became the third best-performing song of the decade on the same chart.\n\n It was well received commercially as well, and won the Grammy Award for Best Rock Song.",
+    "Elephant (album)\nElephant is the fourth album by the American alternative rock duo The White Stripes.\n\n Released on April 1, 2003 on V2 Records, its release garnered near unanimous critical acclaim and commercial success, garnering a nomination for Album of the Year and a win for Best Alternative Music Album at the 46th Grammy Awards in 2004, peaking at No. 6 in the US \"Billboard\" charts and topping the UK album charts.",
+    "The collection surveys music albums, artists, songs, and genres across rock, pop, metal, and electronic music. Highlights include Patty Griffin’s 2004 album *Impossible Dream*; Edward Sharpe and the Magnetic Zeros’ 2013 album and 2010 single; the White Stripes’ rise, breakup, acclaimed *Elephant* (2003), and Grammy-winning “Seven Nation Army”; and biographies of Meg White and Jack White. Other entries cover releases by Steve Winwood",
+    "Grammy Award for Best Female Rap Solo Performance\nThe Grammy Award for Best Female Rap Solo Performance was an honor presented to female recording artists at the 45th Grammy Awards in 2003 and the 46th Grammy Awards in 2004 for quality rap solo performances.\n\n The Grammy Awards, an annual ceremony that was established in 1958 and originally called the Gramophone Awards, are presented by the National Academy of Recording Arts and Sciences of the United States to \"honor artistic achievement, technical proficiency and overall excellence in the recording industry, without regard to album sales or chart position\".",
+    "The selections survey music history across patriotic songs and anthem protests; reggae, country, jazz, rock, pop, R&B, and electronic music; and radio programs, awards, and chart milestones. They profile artists including Cedric Myton, Florence Welch, Steve Winwood, and George Thorogood, and highlight releases by IU, S.H.E, BT, Icehouse, and others. Notable achievements include Grammy and award wins, platinum and multi-million sales, chart-topping singles,",
+    "Seven (Poco album)\nSeven is the sixth studio album (seventh overall) by American country rock band Poco.\n\n It is the first album they made after leader Richie Furay left the band.\n\n The front cover was designed by Phil Hartman.",
+    "Grammy Award for Best Male Rap Solo Performance\nThe Grammy Award for Best Male Rap Solo Performance was an honor presented to male recording artists at the 45th Grammy Awards in 2003 and the 46th Grammy Awards in 2004 for quality rap solo performances.\n\n The Grammy Awards, an annual ceremony that was established in 1958, and originally called the Gramophone Awards, are presented by the National Academy of Recording Arts and Sciences of the United States to \"honor artistic achievement, technical proficiency and overall excellence in the recording industry, without regard to album sales or chart position\"."
+   ]
+  },
+  {
+   "id": "473a25a1d2301aa1",
+   "gold": [
+    {
+     "sentence": "Enrico Cocozza (6 November 1921 – 27 December 1997), was a Scottish filmmaker who won many film awards during the 1940s and 1950s.",
+     "facts": {
+      "0.0": "Enrico Cocozza was born on 6 November 1921.",
+      "0.1": "Enrico Cocozza died on 27 December 1997.",
+      "0.2": "Enrico Cocozza was a Scottish filmmaker.",
+      "0.3": "Enrico Cocozza won many film awards during the 1940s and 1950s."
+     }
+    },
+    {
+     "sentence": "\", which was nominated for the Academy Award for Best Foreign Language Film.",
+     "facts": {
+      "1.0": "A film was nominated for the Academy Award for Best Foreign Language Film.",
+      "1.1": "The film whose title is quoted in this fragment was nominated for the Academy Award for Best Foreign Language Film."
+     }
+    }
+   ],
+   "items": [
+    "Takeshi Fukunaga\nTakeshi Fukunaga is a Japanese filmmaker based in New York.\n\n His first feature film, \"Out of My Hand\" (2015) premiered in the Panorama section at the 65th Berlin International Film Festival and won the Top Prize at the 2015 Los Angeles Film Festival.\n\n The film was later released worldwide through Ava DuVernay’s distribution company, ARRAY.\n\n Takeshi was nominated for the John Cassavetes Award at the 2016 Independent Spirit Awards.\n\n In 2017, he was selected for The Residence by Cannes Film Festival's Cinéfondation to develop his second feature film.",
+    "Eric Aghimien\nEric Enomamien Aghimien is a Nigerian director, producer, screenwriter and editor.\n\n His debut feature film, \"A Mile from Home\" won awards at both the 2014 Africa Magic Viewers Choice Awards and the 10th Africa Movie Academy Awards.",
+    "Enrico Cocozza\nEnrico Cocozza (6 November 1921 – 27 December 1997), was a Scottish filmmaker who won many film awards during the 1940s and 1950s.\n\n His often surreal films were mainly filmed in and around the town of Wishaw in Scotland, where his family owned the popular Belhaven Cafe.\n\n These include \"Chick's Day\" (1950), a prize winner at the 1951 Scottish Amateur Film Festival, \"The Living Ghost\" (1957), and \"Glasgow's Docklands\" (1959).\n\n Illness later forced him to give up making films and he spent most of his working life teaching at the University of Strathclyde in Glasgow.\n\n In 2001 he was the subject of the Channel 4 documentary \"Artery: the Story of Enrico Cocozza\".",
+    "Mira Nair\nMira Nair (born 15 October 1957) is an Indian American filmmaker based in New York City.\n\n Her production company, Mirabai Films, specializes in films for international audiences on Indian society, whether in the economic, social or cultural spheres.\n\n Among her best known films are \"Mississippi Masala\", \"The Namesake\", the Golden Lion-winning \"Monsoon Wedding\" and \"Salaam Bombay!\n\n\", which was nominated for the Academy Award for Best Foreign Language Film.",
+    "Maya Deren Award\nThe American Film Institute Award for Independent Film and Video Artists, subtitled and generally known as the Maya Deren Award, was an award presented to filmmakers and video artists by the American Film Institute to honor independent filmmaking.\n\n Named for the avant-garde experimental film artist Maya Deren, it was given from 1986 through 1996.",
+    "Illusions &amp; Mirrors\nIllusions & Mirrors is a 2013 short film directed by Iranian-born American artist and filmmaker Shirin Neshat.\n\n The film, shot in black-and-white, stars Tarek Aylouch, Michael Markiewicz, and the Israeli-born American actress Natalie Portman.\n\n The film was commissioned by Dior, for which Portman is a spokesmodel, for the Miss Dior Expo at the Grand Palais, Paris.\n\n Shirin Neshat said that the film is a tribute to the black-and-white silent films made by such surrealist filmmakers as Man Ray, Jean Cocteau, Luis Buñuel, and Maya Deren.",
+    "Salaam Bombay!\nSalaam Bombay!\n\n is a 1988 Hindi film directed by Mira Nair, and screenwritten by her longtime creative collaborator, Sooni Taraporevala.\n\n The film chronicles the day-to-day life of children living on the streets of Bombay, India's biggest city.\n\n It won the National Film Award for Best Feature Film in Hindi, the National Board of Review Award for Top Foreign Film, the Golden Camera and Audience Awards at the Cannes Film Festival, and three awards at the Montréal World Film Festival.\n\n The film was India's second film submission to be nominated for the Academy Award for Best Foreign Language Film.\n\n The film was among the list of \"The Best 1,000 Movies Ever Made\" by \"The New York Times\".",
+    "Academy Award for Best Film Editing\nThe Academy Award for Best Film Editing is one of the annual awards of the Academy of Motion Picture Arts and Sciences (AMPAS).\n\n Nominations for this award are closely correlated with the Academy Award for Best Picture.\n\n For 33 consecutive years, 1981 to 2013, every Best Picture winner had also been nominated for the Film Editing Oscar, and about two thirds of the Best Picture winners have also won for Film Editing.\n\n Only the principal, \"above the line\" editor(s) as listed in the film's credits are named on the award; additional editors, supervising editors, etc. are not currently eligible.\n\n The nominations for this Academy Award are determined by a ballot of the voting members of the Editing Branch of the Academy; there were 220 members of the Editing Branch in 2012.\n\n The members may vote for up to five of the eligible films in the order of their preference; the five films with the largest vote totals are selected as nominees.\n\n The Academy Award itself is selected from the nominated films by a subsequent ballot of all active and life members of the Academy.",
+    "Academy Honorary Award\nThe Academy Honorary Award – instituted in 1948 for the 21st Academy Awards (previously called the Special Award, which was first presented in early 1929) – is given annually by the Board of Governors of the Academy of Motion Picture Arts and Sciences (AMPAS) to celebrate motion picture achievements that are not covered by existing Academy Awards, although prior winners of competitive Academy Awards are not excluded from receiving the Honorary Award.\n\n Unless otherwise specified, Honorary Award recipients receive the same gold Oscar statuettes received by winners of the competitive Academy Awards.\n\n Unlike the Special Achievement Award instituted in 1972 (and discontinued in 1995), those on whom the Academy confers its Honorary Award do not have to meet \"the Academy's eligibility year and deadline requirements.\"\n\n Like the Special Achievement Award, the Special Award and Honorary Award have been used to reward significant achievements of the year that did not fit in existing categories, subsequently leading the Academy to establish several new categories, and to honor exceptional career achievements, contributions to the motion picture industry, and service to the Academy.",
+    "Loveleen Tandan\nLoveleen Tandan is an Indian film director and casting director.\n\n She is the \"Co-Director: India\" of the four time Golden Globe, seven time BAFTA Award and eight Academy Award winning (including best picture) \"Slumdog Millionaire\" (2008), for which she shared a New York Film Critics Online Award, Rotterdam International Film Festival Award and Amanda Awards, Norway, of \"Best Director\" with Danny Boyle.\n\n She has also been the Casting Director for several other films, including the Golden Lion winning and Golden Globe nominated \"Monsoon Wedding\" (2001) and the BAFTA Award nominated \"Brick Lane\" (2007).\n\n She has been a Casting Consultant for the Gotham Award and Independent Spirit Award nominated film \"The Namesake\" (2007)."
+   ]
+  },
+  {
+   "id": "78426f7718eadd78",
+   "gold": [
+    {
+     "sentence": "Sigmund Werner Paul Jähn (born 13 February 1937) is a German cosmonaut and pilot, who in 1978 became the first East German (and German native) to fly in space as part of the Soviet Union's Interkosmos programme.",
+     "facts": {
+      "0.0": "Sigmund Werner Paul Jähn was born on 13 February 1937.",
+      "0.1": "Sigmund Werner Paul Jähn is a German cosmonaut.",
+      "0.2": "Sigmund Werner Paul Jähn is a pilot.",
+      "0.3": "In 1978 Sigmund Werner Paul Jähn became the first East German to fly in space.",
+      "0.4": "In 1978 Sigmund Werner Paul Jähn became the first German native to fly in space.",
+      "0.5": "The 1978 flight by Sigmund Werner Paul Jähn was part of the Soviet Union's Interkosmos programme."
+     }
+    },
+    {
+     "sentence": "Arne Christer Fuglesang (] ) (born March 18, 1957 in Stockholm) is a Swedish physicist and an ESA astronaut.",
+     "facts": {
+      "1.0": "Arne Christer Fuglesang was born on March 18, 1957.",
+      "1.1": "Arne Christer Fuglesang was born in Stockholm.",
+      "1.2": "Arne Christer Fuglesang is a Swedish physicist.",
+      "1.3": "Arne Christer Fuglesang is an ESA astronaut."
+     }
+    },
+    {
+     "sentence": " He was first launched aboard the STS-116 Space Shuttle mission on December 10, 2006, at 01:47 GMT, making him the first Swedish citizen in space.",
+     "facts": {
+      "2.0": "Arne Christer Fuglesang was first launched aboard the STS-116 Space Shuttle mission.",
+      "2.1": "That launch was on December 10, 2006, at 01:47 GMT.",
+      "2.2": "Arne Christer Fuglesang became the first Swedish citizen in space."
+     }
+    }
+   ],
+   "items": [
+    "Eberhard Köllner\nEberhard Köllner (born 29 September 1939 in Stassfurt, Germany) was selected for Soyuz 31 as the backup for Sigmund Jähn.",
+    "Christer Fuglesang\nArne Christer Fuglesang (] ) (born March 18, 1957 in Stockholm) is a Swedish physicist and an ESA astronaut.\n\n He was first launched aboard the STS-116 Space Shuttle mission on December 10, 2006, at 01:47 GMT, making him the first Swedish citizen in space.",
+    "John Christiansen\nJohn “Chris” Christiansen (May 1, 1923 － September 12, 1998) was the chief military test pilot for Lockheed California Company for over 30 years.\n\n He might be most known for having performed Lockheed S-3 Viking's maiden flight on January 21, 1972.\n\n His assignments also included the initial test flights of Lockheed P-3 Orion.\n\n Christiansen was born in Oslo, Norway in 1923 and became an American citizen in 1939.\n\n He later served in the U.S. Navy during World War II and the Korean Conflict.\n\n He began experimental flying for Lockheed Martin in 1953, and worked there until his retirement in 1984.\n\n He was a fellow at Society of Experimental Test Pilots.",
+    "Claude Nicollier\nClaude Nicollier (born 2 September 1944 in Vevey, Switzerland) is the first astronaut from Switzerland.\n\n He has flown on four Space Shuttle missions.\n\n His first spaceflight (STS-46) was in 1992, and his final spaceflight (STS-103) was in 1999.\n\n He took part in two servicing missions to the Hubble Space Telescope (called STS-61 and STS-103).\n\n During his final spaceflight he participated in a spacewalk, becoming the first European Space Agency astronaut to do so during a Space Shuttle mission (previous ESA astronauts conducted spacewalks aboard \"Mir\", see List of spacewalks and moonwalks 1965–1999).\n\n In 2000 he was assigned to the Astronaut Office Extravehicular Activity Branch, while maintaining a position as Lead ESA Astronaut in Houston.\n\n Nicollier retired from ESA in April 2007.",
+    "Jean-Loup Chrétien\nJean-Loup Jacques Marie Chrétien (born 20 August 1938) is a French retired \"Général de Brigade\" (brigadier general) in the \"Armée de l'Air\" (French air force), and a former CNES spationaut.\n\n He flew on two Franco-Soviet space missions and a NASA Space Shuttle mission.\n\n Chrétien was the first Frenchman and the first western European in space.",
+    "Sigmund Jähn\nSigmund Werner Paul Jähn (born 13 February 1937) is a German cosmonaut and pilot, who in 1978 became the first East German (and German native) to fly in space as part of the Soviet Union's Interkosmos programme.",
+    "Hans Schlegel\nHans Wilhelm Schlegel (Überlingen, 3 August 1951) is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions.",
+    "Bertalan Farkas\nBertalan Farkas (born August 2, 1949) is the first Hungarian cosmonaut and the first Esperantist in space.\n\n He is currently the president of Airlines Service and Trade.\n\n With Charles Simonyi's travel, Farkas is no longer the only Hungarian who has been to space (he is still the only astronaut, as Simonyi flew as a space tourist).",
+    "Ulf Merbold\nDr. Ulf Dietrich Merbold (born June 20, 1941) is the first West German citizen and second German native (after Sigmund Jähn) to have flown in space.\n\n He is also the first member of the European Space Agency Astronaut Corps to participate in a spaceflight mission and the first non-US citizen to reach orbit in a US spacecraft.\n\n In 1983, he and Byron Lichtenberg became the first Payload Specialists to fly on the shuttle.",
+    "Ernst Messerschmid\nProf. Dr. Ernst Willi Messerschmid (born May 21, 1945) is a German physicist and former astronaut."
+   ]
+  },
+  {
+   "id": "9953a185c251a104",
+   "gold": [
+    {
+     "sentence": "David Michael Draiman (born March 13, 1973) is an American songwriter and the vocalist for the band Disturbed as well as for the band Device.",
+     "facts": {
+      "0.0": "David Michael Draiman was born on March 13, 1973.",
+      "0.1": "David Michael Draiman is an American songwriter.",
+      "0.2": "David Michael Draiman is the vocalist for the band Disturbed.",
+      "0.3": "David Michael Draiman is the vocalist for the band Device."
+     }
+    },
+    {
+     "sentence": "Terry Alan Kath (January 31, 1946 – January 23, 1978) was an American musician and songwriter, best known as the original guitarist, one of the lead singers and founding members of the rock band Chicago.",
+     "facts": {
+      "1.0": "Terry Alan Kath lived January 31, 1946 to January 23, 1978.",
+      "1.1": "Terry Alan Kath was an American musician.",
+      "1.2": "Terry Alan Kath was an American songwriter.",
+      "1.3": "Terry Alan Kath was best known as the original guitarist of the rock band Chicago.",
+      "1.4": "Terry Alan Kath was one of the lead singers of the rock band Chicago.",
+      "1.5": "Terry Alan Kath was a founding member of the rock band Chicago."
+     }
+    }
+   ],
+   "items": [
+    "David Draiman\nDavid Michael Draiman (born March 13, 1973) is an American songwriter and the vocalist for the band Disturbed as well as for the band Device.\n\n Draiman is known for his distorted voice and percussive singing style.\n\n In November 2006, Draiman was voted number 42 on the \"Hit Parader\"’s \"\"Top 100 Metal Vocalists of All Time\"\".\n\n Draiman has written some of Disturbed's most successful singles, such as \"Stupify\", \"Down with the Sickness\", \"Indestructible\", and \"Inside the Fire\".",
+    "Chicago’s “25 or 6 to 4,” written by Robert Lamm and sung by Peter Cetera, was recorded in 1969 and became the band’s first U.S. top-five hit; Terry Kath plays its wah-wah guitar solo. Kath, Chicago’s founding guitarist, singer, and songwriter, also leads “Free” and “Brand New Love Affair” (first half) and sings “Wishing You Were Here.” His final album was 1977’s *",
+    "Cosmic Dust (band)\nCosmic Dust, also known as the Cosmic Dust Fusion Band, is an instrumental jazz band formed in 1990 by Jim Templeton.\n\n The band was the first well-known group that guitarist Myles Kennedy played in.\n\n The original lineup consisted of Jim Templeton on keyboard, Gary Edighoffer on saxophone, Clipper Anderson on double bass, Myles Kennedy on guitar, and Scott Reusser on drums.\n\n Kennedy eventually left the band and went on to become the lead vocalist/lead guitarist for a jazz fusion group called Citizen Swing and later an alternative rock band called The Mayfield Four.\n\n Kennedy is now fronting and playing guitar for the hard rock/alternative metal band Alter Bridge, which he helped form with Creed members Mark Tremonti, Scott Phillips, and Brian Marshall in 2004, and is also the lead vocalist for Slash's solo band on tour.",
+    "Device (metal band)\nDevice was an industrial metal band started by David Draiman, frontman of the heavy metal group Disturbed.\n\n Draiman was approached by Geno Lenardo, former guitarist of Filter, and together they started to work on new material.\n\n The two started work on a debut album in June 2012.\n\n The result of those sessions, \"Device\", was released on April 9, 2013.\n\n The first single and third track, \"Vilify\" was released to radio ahead of the album on February 19, 2013, alongside its first music video, directed by P. R. Brown.\n\n The second single and the introductory track, \"You Think You Know\", was released on June 11, 2013, alongside its music video, directed once again by Brown.",
+    "Terry Glaze\nTerrence Lee Glaze (born November 29, 1964, Columbus), known as Terry Lee, is a Texas-raised singer and guitarist who is most known for his work in American heavy metal bands Lord Tracy and Pantera.",
+    "Peter Wichers\nPeter Wichers is best known as one of the founding members of Swedish melodic death metal band, Soilwork.\n\n From 1995 until late 2005, when he announced his departure from the band, he was known as the lead guitarist and also a songwriter, especially on their \"Stabbing the Drama\" album., He rejoined Soilwork in 2008 and played on 2010s The Panic Broadcast and in June 2012 he quit Soilwork for the second time.\n\n After leaving Soilwork, he filled in for Adam Dutkiewicz when he was injured on Killswitch Engage's European tour.\n\n More recently, he has collaborated with singers from across the melodic death metal genre including Anders Fridén, former band mate Björn \"Speed\" Strid and John Bush (vocalist of Anthrax) to make a CD much in the same style as \"Roadrunner United\", entitled \"Nuclear Blast All-Stars\".\n\n He also co-wrote Warrel Dane's solo record \"Praises to the War Machine\".",
+    "Terry Kath\nTerry Alan Kath (January 31, 1946 – January 23, 1978) was an American musician and songwriter, best known as the original guitarist, one of the lead singers and founding members of the rock band Chicago.\n\n He has been praised by the band for his guitar skills and Ray Charles-influenced vocal style.",
+    "Tom Johnston (musician)\nCharles Thomas \"Tom\" Johnston (born August 15, 1948) is an American musician.\n\n He is a guitarist and vocalist, known principally as a founder, guitarist, lead vocalist and songwriter for the rock group The Doobie Brothers, as well as for his own solo career.\n\n His off-and-on career with The Doobie Brothers spans more than 40 years, during which time the band exhibited numerous successful styles.",
+    "Daron Malakian\nDaron Vartan Malakian (Armenian: Տարօն/Տարոն Վարդան Մալաքեան, born July 18, 1975) is an Armenian–American singer-songwriter, multi-instrumentalist, and record producer.\n\n He is best known as the guitarist, songwriter and second vocalist of the rock band System of a Down and as the lead vocalist, lead guitarist and songwriter of the band Scars on Broadway.\n\n Like the rest of the Hollywood-based band System of a Down, he is of Armenian ancestry, but he is the only member to have been born in the United States.\n\n Daron Malakian is known for his distinctive playing and is ranked 40th in Loudwire's list of \"Top 50 Hard Rock + Metal Guitarists Of All Time\" and #11 in MusicRadar's poll, \"The 20 Greatest Metal Guitarists Ever\".\n\n He is placed 30th in Guitar World's List of The 100 Greatest Heavy Metal Guitarists of All Time.",
+    "Pantera\nPantera was an American heavy metal band from Arlington, Texas.\n\n The group was formed in 1981 by the Abbott brothers – drummer Vinnie Paul and guitarist Dimebag Darrell – along with lead vocalist Terry Glaze.\n\n Bassist Rex Brown joined the band the following year, replacing Tommy D. Bradford, who was the unofficial original.\n\n Having started as a glam metal band, Pantera released four albums during the 1980s.\n\n Looking for a new and heavier sound, Pantera replaced Glaze with Phil Anselmo in late 1986 and released \"Power Metal\" in 1988.\n\n With its fifth album, 1990's \"Cowboys from Hell\", Pantera introduced a groove metal sound.\n\n Pantera's sixth album, 1992's \"Vulgar Display of Power\", exhibited an even heavier sound. \"\n\nFar Beyond Driven\" (1994) debuted at number one on the \"Billboard\" 200."
+   ]
+  },
+  {
+   "id": "510a89ff1fbcba55",
+   "gold": [
+    {
+     "sentence": "Jack and Jill is an American bimonthly magazine for children 7 to 12 years old that takes its title from the nursery rhyme of the same name.",
+     "facts": {
+      "0.0": "Jack and Jill is an American magazine for children.",
+      "0.1": "Jack and Jill is published bimonthly.",
+      "0.2": "Jack and Jill is for children 7 to 12 years old.",
+      "0.3": "The title of Jack and Jill comes from the nursery rhyme of the same name."
+     }
+    },
+    {
+     "sentence": "Paper, stylized as PAPER, is a New York City-based independent magazine focusing on fashion, popular culture, nightlife, music, art and film.",
+     "facts": {
+      "1.0": "Paper, stylized as PAPER, is a New York City-based magazine.",
+      "1.1": "Paper is an independent magazine.",
+      "1.2": "Paper focuses on fashion.",
+      "1.3": "Paper focuses on popular culture.",
+      "1.4": "Paper focuses on nightlife.",
+      "1.5": "Paper focuses on music.",
+      "1.6": "Paper focuses on art.",
+      "1.7": "Paper focuses on film."
+     }
+    }
+   ],
+   "items": [
+    "SexIs\nSexIs Magazine is a quarterly print publication and daily webzine devoted to sex and sexual culture, founded in 2008 by Web Merchants, parent company of sex toy e-tailer EdenFantasys.com.\n\n The first print issue debuted in November 2009, distributed nationwide as an insert in \"BUST magazine\".\n\n The website publishes articles, columns, video presentations and news items daily.",
+    "VIVmag\nVIVmag is one of the earliest exclusively digital, interactive women's lifestyle magazines.\n\n Launched in 2006 and backed by Canadian industrialist David Harrison Gilmour (the founder of FIJI Water LLC), the bimonthly magazine is distributed by Zinio Systems, Inc.\n\n The first issue appeared in January-February 2007.\n\n There is no print version.\n\n The paperless title can be viewed in most browsers or downloaded to your computer and read via the Zinio Reader.\n\n The magazine is based in Thousand Oaks, California.",
+    "Mighty Jill Off\nMighty Jill Off is a 2D platform independently developed freeware video game designed by Anna Anthropy, with art by James Harvey and music by Andrew Toups.\n\n It stars a submissive named Jill, who has a boot fetish and is forced to climb up a tower after her Queen kicks her down it as punishment.\n\n Jill does this by jumping and slowly descending over obstacles.\n\n Jill can be defeated in one hit by these obstacles, but will return to the last check point.\n\n The game serves as an homage to the 1986 arcade game \"Mighty Bomb Jack\".\n\n It had follow-ups, such as \"Mighty Jill Off - Jill Off Harder Edition\" and \"Jill Off With One Hand\".\n\n Jill made a cameo appearance in the 2010 video game \"Super Meat Boy\" as a playable character.",
+    "Paper (magazine)\nPaper, stylized as PAPER, is a New York City-based independent magazine focusing on fashion, popular culture, nightlife, music, art and film.\n\n Past cover models include Kim Kardashian, Demi Lovato, Katy Perry, Miley Cyrus, Prince, CL, and Jennifer Lopez.",
+    "Shape (magazine)\nShape is a monthly English language fitness magazine started by Weider Publications in 1981, founded by Christine MacIntyre (a pioneer in women's free weight fitness) and became the number one women's fitness magazine.\n\n At that time, Weider Enterprises consisted primarily of the bodybuilding magazine \"Muscle & Fitness\".\n\n Joe Weider and Christine MacIntyre had differing views of how to present \"Shape\", Weider endorsing a less journalistic and more commercial approach to articles, MacIntyre endorsing a more academic, doctor-based magazine.\n\n Weider also endorsed a sexier approach to editorial while MacIntyre endorsed a healthier look for women, eschewing sexiness in the models and the copy.\n\n MacIntyre largely won that battle, editing a magazine that required that every byline have an advanced medical degree, that cover models should look healthy rather than sexy, and that sexist language be avoided.\n\n Christine MacIntyre was the editor-in-chief until her death in 1988.\n\n Tara Kraft is the current editor-in-chief.\n\n \"Shape\" found a readership based on that formula.",
+    "Jack &amp; Diane (film)\nJack & Diane is a 2012 American romantic horror film written and directed by Bradley Rust Gray, and starring Riley Keough and Juno Temple.\n\n Olivia Thirlby and Ellen Page were originally cast for the lead roles in 2008 before the project was postponed.",
+    "PC Magazine\nPC Magazine (shortened as PCMag) is an American computer magazine published by Ziff Davis.\n\n A print edition was published from 1982 to January 2009.\n\n Publication of online editions started in late 1994 and continues to this day.",
+    "Jack and Jill (magazine)\nJack and Jill is an American bimonthly magazine for children 7 to 12 years old that takes its title from the nursery rhyme of the same name.\n\n It features stories and educational activities.",
+    "Essence (magazine)\nEssence is a monthly magazine for African American women between the ages of 18 and 49.\n\n It is the only magazine that focuses on reaching an audience of black women, revolves around the black woman experience, and has remained for a long period of time.\n\n The magazine covers fashion, lifestyle and beauty, with an intimate girlfriend-to-girlfriend tone, and its slogan \"Fierce, Fun, and Fabulous\" suggests the magazine's goal of empowering African-American women.\n\n The topics the magazine discusses range from celebrities, to fashion, to point-of-view pieces addressing current issues in the African-American community.\n\n A number of its readers engage closely and personally with the publication, and it claims to be the magazine \"for and about Black women\".",
+    "Golf Digest\nGolf Digest is a monthly golf magazine published by Condé Nast Publications in the United States.\n\n It is a generalist golf publication covering recreational golf and men's and women's competitive golf.\n\n Condé Nast Publications also publishes the more specialized \"Golf for Women\", \"Golf World\" and \"Golf World Business\".\n\n The magazine started in 1950, and was sold to The New York Times Company in 1969.\n\n The Times company sold their magazine division to Condé Nast in 2001.\n\n The headquarters of \"Golf Digest\" is in Des Moines, Iowa."
+   ]
+  },
+  {
+   "id": "54432f2f5bf239ed",
+   "gold": [
+    {
+     "sentence": " It consists of a duet featuring vocalists Dave Hemingway and Briana Corrigan.",
+     "facts": {
+      "0.0": "The described act consists of a duet.",
+      "0.1": "Dave Hemingway is a vocalist featured in the duet.",
+      "0.2": "Briana Corrigan is a vocalist featured in the duet."
+     }
+    },
+    {
+     "sentence": "Briana Corrigan (born 30 May 1965) is a Northern Irish singer.",
+     "facts": {
+      "1.0": "Briana Corrigan was born on 30 May 1965.",
+      "1.1": "Briana Corrigan is a Northern Irish singer."
+     }
+    }
+   ],
+   "items": [
+    "Come from the Heart\n\"Come from the Heart\" is a country music song written by Richard Leigh and Susanna Clark and published in 1987.\n\n It is most known through the 1989 single by Kathy Mattea, released in conjunction with her album \"Willow in the Wind\", though the song was first recorded and released on the 1987 Don Williams album \"Traces\" and also released in 1988 by Clark's husband on his album \"Old Friends\".",
+    "Takes a Little Time (Total Contrast song)\n\"Takes a Little Time\" is a 1985 dance hit by British, techno-soul, duo, Total Contrast.\n\n Their debut American release went to number one on the U.S. dance chart for one week.\n\n \"Takes a Little Time\" did not make the Hot 100 but, peaked at number eighty on the R&B singles chart.",
+    "Just a Little Time\nJust a Little Time is an album by Lynsey de Paul.\n\n It was originally released in 30 September 1994 on the Music Deluxe (catalogue number MSCD9) label but has since been released on the Tring International PLC label (catalogue number JHD128) and on Arc Records/The Magic Collection (Catalogue number MEC 949080).\n\n All of the songs on the album are written or co-written by de Paul.\n\n The songs \"Sugar Me\", Getting a Drag\", \"Storm in a Teacup and \"Dancing on a Saturday Night\" are radical re-recordings of her earlier hits performed in an updated and uptempo fashion.\n\n \"Won't Somebody Dance with Me\" is still performed as a ballad, but has been updated and extended with an extra refrain.\n\n Never before released songs on the album include the ballads \"Words Don't Mean A Thing\" and title track \"Just a Little Time\" as well as the more uptempo \"Instant Love\" and \"Now & Then\".",
+    "Dave Hemingway\nDave Hemingway (born David Robert Hemingway, 20 September 1960) is an English musician and songwriter, and was a vocalist for the Hull-based band The Beautiful South until they disbanded in 2007.\n\n Previously he had been a member of The Housemartins.",
+    "Takes a Little Time (Amy Grant song)\n\"Takes a Little Time\" was a maxi-single released in 1997 (see 1997 in music) to promote Amy Grant's album \"Behind the Eyes\", which was also released that year.\n\n \"Takes a Little Time\" included two songs from \"Behind the Eyes\", as well as a new version of Grant's 1982 Christian radio hit, \"El Shaddai\".\n\n The maxi-single was also an enhanced CD (ECD), meaning it had a video that consumers could watch when they put it in their home computer.\n\n The ECD portion of the CD contained a live acoustic version of the song After the Fire, which Grant later released on her 2003 album \"Simple Things\"; Grant stated on Oprah that she had written the song for her mother.",
+    "A Little Time\n\"A Little Time\" is a song by The Beautiful South, and is the band's only single to reach number 1 in the UK Singles Chart.\n\n It consists of a duet featuring vocalists Dave Hemingway and Briana Corrigan.",
+    "Burn Your Playhouse Down – The Unreleased Duets\nBurn Your Playhouse Down – The Unreleased Duets is the 60th and final studio album by American country music singer George Jones released on August 19, 2008 on the Bandit Records label.\n\n It features duets never before released, including some that were cut from his 1994 duets album \"The Bradley Barn Sessions\".\n\n The only new recording in the collection is \"You And Me And Time\", a song Jones recorded with his daughter by Tammy Wynette, Georgette.\n\n A music video accompanied the song.\n\n The album features several duets with artist from outside the country music pantheon, including Mark Knopfler, Leon Russell, and Keith Richards.\n\n The album peaked at number 15 on the Billboard country albums chart.\n\n Of the album's title track, Andrew Meuller of \"Uncut\" opined in July 2013, \"The segue from Richards trying to sing like Jones to Jones actually singing like Jones is hilarious.\"",
+    "Graph query row:\nperson: Briana Corrigan\nnationality: Northern Irish\ncreative_work: None\nwork_connection: None\nrelated_person: None\nperson_connection: None",
+    "Houston (Means I'm One Day Closer to You)\n\"Houston (Means I'm One Day Closer to You)\" is a song written by Larry Gatlin and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band.\n\n It was released in September 1983 as the first single from the album \"\"Greatest Hits Vol.\n\n II\"\" then included to first track of \"\"Not Guilty\"\" (1984).\n\n \"Houston (Means I'm One Day Closer to You)\" was the group's third and last number one on the country chart.\n\n The single went to number one for two weeks and spent a total of fifteen weeks on the country chart.",
+    "There Ain't No Good Chain Gang\n\"There Ain't No Good Chain Gang\" is a song written by Hal Bynum and Dave Kirby, and recorded by American country music artists Johnny Cash and Waylon Jennings.\n\n It was released in May 1978 as the second single from the album \"I Would Like to See You Again\".\n\n The song reached #2 on the \"Billboard\" Hot Country Singles & Tracks chart."
+   ]
+  },
+  {
+   "id": "d8eeae0f70d1989d",
+   "gold": [
+    {
+     "sentence": "The Data Universal Numbering System, abbreviated as DUNS or D-U-N-S, is a proprietary system developed and regulated by Dun & Bradstreet (D&B) that assigns a unique numeric identifier, referred to as a \"DUNS number\" to a single business entity.",
+     "facts": {
+      "0.0": "The Data Universal Numbering System is abbreviated as DUNS or D-U-N-S.",
+      "0.1": "The Data Universal Numbering System is a proprietary system.",
+      "0.2": "The Data Universal Numbering System is developed by Dun & Bradstreet (D&B).",
+      "0.3": "The Data Universal Numbering System is regulated by Dun & Bradstreet (D&B).",
+      "0.4": "The Data Universal Numbering System assigns a unique numeric identifier to a single business entity.",
+      "0.5": "The unique numeric identifier is referred to as a DUNS number."
+     }
+    },
+    {
+     "sentence": " Often referred to as D&B, the company’s database contains more than 265 million business records worldwide.",
+     "facts": {
+      "1.0": "Dun & Bradstreet is often referred to as D&B.",
+      "1.1": "The company's database contains more than 265 million business records.",
+      "1.2": "The company's database contains business records worldwide."
+     }
+    }
+   ],
+   "items": [
+    "Universal Numbering System\nThe Universal Numbering System is a dental notation system for associating information to a specific tooth, and is commonly used in the United Kingdom.",
+    "Dun &amp; Bradstreet\nDun & Bradstreet, Inc. () is a company that provides commercial data, analytics and insights for business, headquartered in Short Hills, a community in Millburn, New Jersey, US.\n\n It offers a wide range of products, and services for risk and finance, operations and supply, and sales and marketing professionals, as well as research and insights on global business issues, serving customers in government and industries such as communications, technology, strategic financial services, and retail/telecommunications/manufacturing markets.\n\n Often referred to as D&B, the company’s database contains more than 265 million business records worldwide.",
+    "Data Universal Numbering System\nThe Data Universal Numbering System, abbreviated as DUNS or D-U-N-S, is a proprietary system developed and regulated by Dun & Bradstreet (D&B) that assigns a unique numeric identifier, referred to as a \"DUNS number\" to a single business entity.\n\n It was introduced in 1963 to support D&B's credit reporting practice.\n\n It is standard worldwide.\n\n DUNS users include the European Commission, the United Nations, and the United States government.\n\n More than 50 global industry and trade associations recognize, recommend, or require DUNS.\n\n The DUNS database contains over 250 million entries for businesses throughout the world.",
+    "Dunston Checks In\nDunston Checks In is a 1996 American family comedy film starring Eric Lloyd, Graham Sack, Jason Alexander, Faye Dunaway, Rupert Everett, Paul Reubens, Glenn Shadix, and introducing Sam the Orangutan as Dunston.\n\n It was written by John Hopkins and Bruce Graham and directed by Ken Kwapis.",
+    "DFDS\nDFDS is Northern Europe's largest shipping and logistics company.\n\n The company's name is an abbreviation of Det Forenede Dampskibs-Selskab (literally \"The United Steamship Company\").\n\n DFDS was founded in 1866, when C.F. Tietgen merged the three biggest Danish steamship companies of that day.",
+    "John Dunning (film producer)\nJohn Dunning (April 27, 1927–September 19, 2011) was a pioneering Canadian film producer from Montreal who co-founded the Canadian film production company Cinépix and produced early works by notable Canadian directors David Cronenberg and Ivan Reitman.\n\n Dunning launched Cinépix with partner André Link in Montreal in the early 1960s.\n\n Their biggest commercial success—and the first Canadian box office hit—came with Reitman’s \"Meatballs\" (1979).",
+    "University of Delaware\nThe University of Delaware (colloquially \"UD\") is the largest university in Delaware.\n\n The main campus is in Newark, with satellite campuses in Dover, Wilmington, Lewes, and Georgetown.\n\n It is considered a large institution with approximately 18,500 undergraduate and 4,500 graduate students. UD is a privately governed university which receives public funding for being a land-grant, sea-grant, space-grant and urban-grant state-supported research institution.",
+    "GeneDx\nGeneDx is genetic testing company that was founded in 2000 by two scientists from the National Institutes of Health (NIH), Drs. Sherri Bale and John Compton.\n\n They specialize in testing for rare inherited disorders.\n\n In 2006, BioReference laboratories acquired GeneDx.\n\n Since then GeneDx has operated as a subsidiary of this parent company under the leadership of Drs. Bale and Compton.",
+    "Animal Demography Unit\nThe Animal Demography Unit (ADU) is a formally recognized research unit of the University of Cape Town (UCT) located within the Department of Biological Sciences of UCT.\n\n (The Department of Biological Sciences was formed from the merger of the Department of Botany and the Department of Zoology at the start of the 2013 academic year).\n\n The Animal Demography Unit, popularly known as the ADU, was responsible for the management of the First and Second Southern African Bird Atlas Projects SABAP1 and SABAP2.\n\n The unit has submitted over eight million georeferenced biodiversity records to GBIF.",
+    "Dental notation\nDental professionals, in writing or speech, use several different dental notation systems for associating information with a specific tooth.\n\n The three most common systems are the ISO System, Universal Numbering System, and Palmer notation method.\n\n The ISO system is used worldwide, and the Universal is used widely in the United States.\n\n The ISO System can be easily adapted to computerized charting."
+   ]
+  },
+  {
+   "id": "33d0213090584e92",
+   "gold": [
+    {
+     "sentence": "Lithocarpus is a genus in the beech family Fagaceae, differing from \"Quercus\" in the erect spikes of insect-pollinated male flowers and the short styles with punctate stigmas on the female flowers.",
+     "facts": {
+      "0.0": "Lithocarpus is a genus in the beech family Fagaceae.",
+      "0.1": "Lithocarpus differs from \"Quercus\" in the erect spikes of insect-pollinated male flowers.",
+      "0.2": "Lithocarpus differs from \"Quercus\" in the short styles with punctate stigmas on the female flowers."
+     }
+    },
+    {
+     "sentence": " It contains 17 species of shrubs and small trees that are native from southern Florida to Mexico and South America.",
+     "facts": {
+      "1.0": "Lithocarpus contains 17 species of shrubs and small trees.",
+      "1.1": "The Lithocarpus species are native from southern Florida to Mexico and South America."
+     }
+    }
+   ],
+   "items": [
+    "Lithocarpus\nLithocarpus is a genus in the beech family Fagaceae, differing from \"Quercus\" in the erect spikes of insect-pollinated male flowers and the short styles with punctate stigmas on the female flowers.\n\n The World Checklist (see link below) accepts 334 species, though some other texts suggest as few as 100 species.\n\n About 100 Asian species of the genus were formerly treated in the genus \"Pasania\".\n\n All are native to east and southeast Asia.\n\n These Asian species do not have a well-known English vernacular name, though the generic term stone oak has been proposed.",
+    "Right Now Kapow\nRight Now Kapow is an American animated sketch comedy television series produced by Warner Bros.\n\n Animation for Disney XD.\n\n It is the first collaboration between Warner Bros.\n\n Animation and Disney.\n\n The series premiered on September 19, 2016 and ended on May 31, 2017.\n\n The series was created by Justin Becker and Marly Halpern-Graser, who previously worked on the Cartoon Network series \"Mad\".\n\n Becker also worked on Adult Swim infomercials, and Halpern-Graser also worked on Cartoon Network's \"DC Nation\".\n\n The series follows Dog, Candy, Ice Cream, Diamond, Plant, and Moon going on new adventures everyday...and find themselves in mischief.\n\n Every episode of the series has 3 main parts in every 11-minute segment and other random shorts.\n\n The series has a style of humor similar to Cartoon Network's previous series, \"Mad\".",
+    "Lamiaceae\nor Labiatae is a family of flowering plants commonly known as the mint or deadnettle family.\n\n Many of the plants are aromatic in all parts and include widely used culinary herbs, such as basil, mint, rosemary, sage, savory, marjoram, oregano, hyssop, thyme, lavender, and perilla.\n\n Some species are shrubs, trees (such as teak), or, rarely, vines.\n\n Many members of the family are widely cultivated, not only for their aromatic qualities but also their ease of cultivation, since they are readily propagated by stem cuttings.\n\n Besides those grown for their edible leaves, some are grown for decorative foliage, such as \"Coleus\".\n\n Others are grown for seed, such as \"Salvia hispanica\" (chia), or for their edible tubers, such as \"Plectranthus edulis\", \"Plectranthus esculentus\", \"Plectranthus rotundifolius\", and \"Stachys affinis\" (Chinese artichoke).",
+    "Lithocarpus glaber\nLithocarpus glaber, the Japanese oak, is a tree species in the genus \"Lithocarpus\" found in Japan, China and Taïwan.",
+    "Lithocarpus crassinervius\nLithocarpus crassinervius is a species of plant in the Fagaceae family.\n\n It is a tree endemic to Java in Indonesia.\n\n It is an endangered species threatened by habitat loss.",
+    "Yucca gloriosa var. tristis\nYucca gloriosa\" var.\n\n \"tristis (syn.\n\n Yucca recurvifolia, \"Yucca gloriosa\" var.\n\n \"recurvifolia\"), known as curve-leaf yucca, curved-leaved Spanish-dagger or pendulous yucca, is a variety of \"Yucca gloriosa\".\n\n It is often grown as an ornamental plant, but is native to the southeastern United States.\n\n In contrast to \"Y. gloriosa\" var.\n\n \"tristis\", the leaves of \"Y. gloriosa\" var.\n\n \"gloriosa\" are hard stiff, erect and narrower.",
+    "Lithocarpus platycarpus\nLithocarpus platycarpus is a species of plant in the Fagaceae family.\n\n It is a tree endemic to Java in Indonesia.\n\n It is an endangered species threatened by habitat loss.\n\n.",
+    "Lithocarpus kostermansii\nLithocarpus kostermansii is a species of plant in the Fagaceae family.\n\n It is a tree endemic to Java in Indonesia.\n\n It is an endangered species threatened by habitat loss.",
+    "Duranta\nDuranta is a genus of flowering plants in the verbena family, Verbenaceae.\n\n It contains 17 species of shrubs and small trees that are native from southern Florida to Mexico and South America.\n\n They are commonly cultivated as hedges and ornamental plants.",
+    "Duranta erecta\nDuranta erecta is a species of flowering shrub in the verbena family Verbenaceae, native from Mexico to South America and the Caribbean.\n\n It is widely cultivated as an ornamental plant in tropical and subtropical gardens throughout the world, and has become naturalized in many places.\n\n It is considered an invasive species in Australia, China, South Africa and on several Pacific Islands.\n\n Common names include golden dewdrop, pigeon berry, and skyflower.\n\n In Mexico, the native Nahuatl name for the plant is xcambocoché.\n\n In Tonga it is known as mavaetangi (tears of departure)."
+   ]
+  },
+  {
+   "id": "72c2fbac21fbdb99",
+   "gold": [
+    {
+     "sentence": " The body that was to become the Gran i General Consell was founded in 1249, and the Consell was abolished on 22 July 1718 by Philip V, empowered by the Nova Planta Decree of Majorca and Ibiza (28 November 1715).",
+     "facts": {
+      "0.0": "The body that was to become the Gran i General Consell was founded in 1249.",
+      "0.1": "The Consell was abolished on 22 July 1718.",
+      "0.2": "The Consell was abolished by Philip V.",
+      "0.3": "Philip V was empowered by the Nova Planta Decree of Majorca and Ibiza.",
+      "0.4": "The Nova Planta Decree of Majorca and Ibiza is dated 28 November 1715."
+     }
+    },
+    {
+     "sentence": "Philip V (Spanish: \"Felipe V\" , French: \"Philippe\" , Italian: \"Filippo\" ; 19 December 1683 – 9 July 1746) was King of Spain from 1 November 1700 to 15 January 1724, when he abdicated in favour of his son Louis, and from 6 September 1724, when he reassumed the throne upon his son's death, to his own death 9 July 1746.",
+     "facts": {
+      "1.0": "Philip V's Spanish name is Felipe V.",
+      "1.1": "Philip V's French name is Philippe.",
+      "1.2": "Philip V's Italian name is Filippo.",
+      "1.3": "Philip V was born on 19 December 1683.",
+      "1.4": "Philip V died on 9 July 1746.",
+      "1.5": "Philip V was King of Spain from 1 November 1700 to 15 January 1724.",
+      "1.6": "Philip V abdicated in favour of his son Louis on 15 January 1724.",
+      "1.7": "Philip V reassumed the Spanish throne on 6 September 1724, upon his son's death.",
+      "1.8": "Philip V was King of Spain from 6 September 1724 until his death on 9 July 1746."
+     }
+    }
+   ],
+   "items": [
+    "Philip V of Spain\nPhilip V (Spanish: \"Felipe V\" , French: \"Philippe\" , Italian: \"Filippo\" ; 19 December 1683 – 9 July 1746) was King of Spain from 1 November 1700 to 15 January 1724, when he abdicated in favour of his son Louis, and from 6 September 1724, when he reassumed the throne upon his son's death, to his own death 9 July 1746.",
+    "Line of succession to the former Romanian throne\nThe succession order to the throne of the Romanian monarchy, abolished since 1947, was regulated by the monarchical constitution of 1923 and the 1884 Law of the Romanian Royal House Rules enacted pursuant to the 1866 Constitution of Romania which had confirmed the enthronement of Prince Karl (Carol) of Hohenzollern-Sigmaringen.\n\n The defunct 1923 Constitution stipulated Salic law, according to which the throne was hereditary in King Carol I's legitimate descent and, if his male issue failed, in the descent of his brothers of the Sigmaringen princely branch of the House of Hohenzollern, according to agnatic primogeniture and to the perpetual exclusion of females and their descendants.\n\n The last monarch to reign in Romania was King Michael I, who was born in 1921, abdicated his throne on 30 December 1947 under coercion, and went into exile in Switzerland.",
+    "Duke of Bedford\nDuke of Bedford (named after Bedford, England) is a title that has been created six times (for five distinct people) in the Peerage of England.\n\n The first and second creations came in 1414 in favour of Henry IV's third son, John, who later served as regent of France.\n\n He was made Earl of Kendal at the same time and was made Earl of Richmond later the same year.\n\n The titles became extinct on his death in 1435.\n\n The third creation came in 1470 in favour of George Neville, nephew of Warwick the Kingmaker.\n\n He was deprived of the title by Act of Parliament in 1478.\n\n The fourth creation came 1478 in favour of George, the third son of Edward IV.\n\n He died the following year at the age of two.\n\n The fifth creation came in 1485 in favour of Jasper Tudor, half-brother of Henry VI and uncle of Henry VII.\n\n He had already been created Earl of Pembroke in 1452.\n\n However, as he was a Lancastrian, his title was forfeited between 1461 and 1485 during the predominance of the House of York.",
+    "Succession to the British throne\nSuccession to the British throne is determined by descent, gender (for people born before October 2011), legitimacy, and religion.\n\n Under common law, the Crown is inherited by a sovereign's children or by a childless sovereign's nearest collateral line.\n\n The Bill of Rights 1689 and the Act of Settlement 1701, restrict succession to the throne to the legitimate Protestant descendants of Sophia of Hanover that are in \"communion with the Church of England\".\n\n Spouses of Roman Catholics were disqualified from 1689 until the law was amended in 2015.\n\n Protestant descendants of those excluded for being Roman Catholics are eligible.",
+    "Gran i General Consell\nThe Gran i General Consell (Catalan: \"Great and General Council\") was the supreme political, administrative, and representative organ of the Kingdom of Majorca.\n\n Since the Kingdom of Majorca did not have courts, the Gran i General Consell took over most of the functions they would otherwise have had, including the role of a representative body.\n\n The Gran i General Consell evolved from the Catalan municipal councils, especially that of the City of Majorca (present-day Palma de Mallorca.\n\n The body that was to become the Gran i General Consell was founded in 1249, and the Consell was abolished on 22 July 1718 by Philip V, empowered by the Nova Planta Decree of Majorca and Ibiza (28 November 1715).\n\n At the same time, all other separate Majorcan institutions were dissolved.",
+    "Pedro Luis de Borja Lanzol de Romaní\nPedro Luis de Borja Lanzol de Romaní, O.S.Io.Hieros.\n\n (1472–1511) was a Roman Catholic cardinal and cardinal-nephew and papal military leader.\n\n He received a wide variety of sinecures during the papacy of his great-uncle, Pope Alexander VI, but was exiled to Naples on the election of Borja rival Pope Julius II.\n\n Borja also fought with the Knights Hospitaller in Jerusalem and Rhodes.",
+    "Duke of Bedford\nHe regained the earldom in 1485 when his nephew Henry VII came to the throne and was elevated to the dukedom the same year.\n\n He had no legitimate children and the titles became extinct on his death in 1495.",
+    "Ernest Augustus, King of Hanover\nErnest Augustus (5 June 1771 – 18 November 1851) was King of Hanover from 20 June 1837 until his death.\n\n He was the fifth son and eighth child of King George III of the United Kingdom and Hanover.\n\n As a fifth son, Ernest seemed unlikely to become a monarch, but none of his four elder brothers had a legitimate son who survived infancy.\n\n The Salic Law, which barred succession to or through a female, prevailed in Hanover; therefore, when his elder brother King William IV died in 1837, Ernest succeeded him as King of Hanover.\n\n In the United Kingdom the succession to the monarchy was determined by primogeniture and his niece Victoria succeeded to the throne, thus ending the personal union between the British Isles and Hanover that had existed since 1714.",
+    "Eric III of Denmark\nEric III Lamb (Danish: \"Erik III Lam\" ) (  1120 – 27 August 1146) was the King of Denmark from 1137 until 1146.\n\n He was the grandson of Eric I of Denmark and the nephew of Eric II of Denmark, whom he succeeded on the throne.\n\n He abdicated in 1146, as the first and only Danish monarch to do so.\n\n His succession led to a period of civil war between Sweyn III, Canute V, and Valdemar I.",
+    "The entries survey monarchs, dynasties, and succession systems. Hawaiʻi’s Kalākaua, its last king, revived public hula and Hawaiian culture. Hanover ruled Britain from 1714 until Victoria’s death; Hanover and Oldenburg branches remain linked to European royal families. Calenberg became Hanover’s core, while Hanover’s Ernest Augustus inherited its throne in 1837 under Salic law. Other topics include Silesian Bernstadt, Tus"
+   ]
+  },
+  {
+   "id": "38042405ea1b45d2",
+   "gold": [
+    {
+     "sentence": " She is a member of the \"Game of Thrones\" stunt teams that won two Screen Actors Guild Awards, and has done stunt performances for films including \"Rogue One\".",
+     "facts": {
+      "0.0": "The person is a member of the Game of Thrones stunt teams.",
+      "0.1": "The Game of Thrones stunt teams won two Screen Actors Guild Awards.",
+      "0.2": "The person has done stunt performances for films including Rogue One."
+     }
+    },
+    {
+     "sentence": " \"Rogue One\" follows a group of rebels on a mission to steal the plans for the Death Star, the Galactic Empire's superweapon.",
+     "facts": {
+      "1.0": "Rogue One follows a group of rebels.",
+      "1.1": "The rebels are on a mission to steal the plans for the Death Star.",
+      "1.2": "The Death Star is the Galactic Empire's superweapon."
+     }
+    }
+   ],
+   "items": [
+    "Race to Nowhere\nRace to Nowhere is a 2009 documentary film written by Maimone Attia and directed by Vicki Abeles and Jessica Congdon.",
+    "Amy O'Neill\nAmy O'Neill (born July 8, 1971) is an American performer and former actress.\n\n After appearing in several sitcoms and starring as Molly Stark on \"The Young and the Restless\" in 1986, she was cast in her notable role as Amy Szalinski in the 1989 Disney film, \"Honey, I Shrunk the Kids\", for which she was nominated for a Young Artist Award.\n\n She reprised her role as Amy Szalinski in the 1992 sequel, \"Honey, I Blew Up the Kid\" and appeared as Lisa Barnes in \"Where's Rodney?\n\n\".",
+    "The Runaways (film)\nThe Runaways is a 2010 American drama film about the 1970s rock band of the same name written and directed by Floria Sigismondi.\n\n It is based on the book \"Neon Angel: A Memoir of a Runaway\" by the band's original lead vocalist Cherie Currie.\n\n The film stars Dakota Fanning as Currie, Kristen Stewart as rhythm guitarist and vocalist Joan Jett, and Michael Shannon as record producer Kim Fowley.\n\n \"The Runaways\" depicts the formation of the band in 1975 and focuses on the relationship between Currie and Jett until Currie's departure from the band.\n\n The film grossed about $4.7 million worldwide and received generally favorable reviews from critics.",
+    "Innocence (2013 film)\nInnocence is a 2013 American horror drama film directed by Hilary Brougher, who co-wrote the film with Tristine Skyler.\n\n The movie is based on the 2000 novel of the same name by Jane Mendelsohn.\n\n It had its world premiere on 26 October, 2013 at the Austin Film Festival and received a limited theatrical release in the United States on 5 September, 2014.\n\n The movie stars Sophie Curtis, Kelly Reilly, Graham Phillips, Linus Roache, Sarah Sutherland and Stephanie March.",
+    "Zooey Deschanel filmography\nAmerican actress Zooey Deschanel made her film debut in the 1999 comedy feature \"Mumford\".\n\n She went on to gained public attention by co-starred in the comedy-drama \"Almost Famous\" (2000), the independent drama \"Manic\" (2001), opposite Joseph Gordon-Levitt, and the comedy-drama \"The Good Girl\" (2002).\n\n She landed her first major role as a 18-year-old virgin in the romantic drama \"All the Real Girls\" (2003), for which she was nominated for an Independent Spirit Award for Best Female Lead.\n\n Deschanel's biggest commercial success, as of 2017, came with the Christmas-fantasy film \"Elf\" (also in 2003), which grossed over $220 million worldwide.",
+    "Frenemies (film)\nFrenemies is a 2012 teen comedy-drama television film and anthology based on the novel of the same name by Alexa Young which premiered on Disney Channel.\n\n It features an ensemble cast starring Bella Thorne, Zendaya, Stefanie Scott, Nick Robinson, Mary Mouser and features Connor Price, Jascha Washington and Dylan Everett.\n\n The film follows three pairs of teenage friends that go from friends to enemies and back again.\n\n The film was directed by Daisy Mayer and written by Dava Savel, Wendy Weiner, and Jim Krieg.\n\n The Disney Channel Original Movie premiered on January 13, 2012 in the United States and Canada.",
+    "Rachelle Beinart\nRachelle Amy Beinart (born 29 September 1984) is a British actress and stunt performer.\n\n She is a member of the \"Game of Thrones\" stunt teams that won two Screen Actors Guild Awards, and has done stunt performances for films including \"Rogue One\".\n\n She has also acted in preschool children's shows as a suit actor, including the reboot of \"Teletubbies\".",
+    "Rogue One\nRogue One: A Star Wars Story, or simply Rogue One, is a 2016 American epic space opera film directed by Gareth Edwards.\n\n The screenplay by Chris Weitz and Tony Gilroy is from a story by John Knoll and Gary Whitta.\n\n It was produced by Lucasfilm and distributed by Walt Disney Studios Motion Pictures.\n\n It is the first installment of the \"Star Wars\" \"Anthology\" series, set immediately before the events of the original \"Star Wars\" film.\n\n The cast includes Felicity Jones, Diego Luna, Riz Ahmed, Ben Mendelsohn, Donnie Yen, Mads Mikkelsen, Alan Tudyk, Jiang Wen and Forest Whitaker.\n\n \"Rogue One\" follows a group of rebels on a mission to steal the plans for the Death Star, the Galactic Empire's superweapon.",
+    "Rachelle Lefevre\nRachelle Lefevre ( ; born February 1, 1979) is a Canadian actress.\n\n She has starred in the television series \"Big Wolf on Campus\" and had recurring roles in \"What About Brian\", \"Boston Legal\", and \"Swingtown\".\n\n She played the vampire Victoria Sutherland in the first two films of the \"Twilight\" saga, before being replaced by Bryce Dallas Howard in the third installment, \"\", due to scheduling conflicts with her role in the film \"Barney's Version\".\n\n In 2011, she starred in the ABC medical drama \"Off the Map\", followed by the CBS series \"A Gifted Man\" (2011–2012) and \"Under the Dome\" (2013–2015).",
+    "Rachelle Henry\nRachelle Henry (born December 16, 2000) is an American teen actress and filmmaker.\n\n She played the role of Sandy Hobbs in the TLC (TV network) Series \"Escaping the Prophet\"and Lissa Golaski in \"Depth\", the film prequel to the Soma (video game) by Frictional Games.\n\n She is also known for directing and producing short films containing messages of social influence and coming of age themes including \"MISSING\" and \"Almost Boyfriends\"."
+   ]
+  },
+  {
+   "id": "c18b046ae7735fe5",
+   "gold": [
+    {
+     "sentence": " Egoyan's most critically acclaimed film is the drama \"The Sweet Hereafter\" (1997), for which he received two Academy Award nominations, and his biggest commercial success is the erotic thriller \"Chloe\" (2009).",
+     "facts": {
+      "0.0": "Egoyan's most critically acclaimed film is the drama \"The Sweet Hereafter\".",
+      "0.1": "\"The Sweet Hereafter\" was released in 1997.",
+      "0.2": "Egoyan received two Academy Award nominations for \"The Sweet Hereafter\".",
+      "0.3": "Egoyan's biggest commercial success is the erotic thriller \"Chloe\".",
+      "0.4": "\"Chloe\" was released in 2009."
+     }
+    },
+    {
+     "sentence": "Chloe is a 2009 erotic thriller film directed by Atom Egoyan, a remake of the 2003 French film \"Nathalie...\".",
+     "facts": {
+      "1.0": "Chloe is a 2009 erotic thriller film.",
+      "1.1": "Chloe was directed by Atom Egoyan.",
+      "1.2": "Chloe is a remake of the 2003 French film \"Nathalie...\"."
+     }
+    }
+   ],
+   "items": [
+    "The entries cover diverse films and careers: crime drama *Deadfall* and its *Arsenal* follow-up; *Rogue One*’s rebels stealing Death Star plans; Mel Gibson, Nicolas Cage, James Garner and Tom Cruise filmographies; Everest disaster drama *Everest*; integration-themed sports films *Remember the Titans* and *McFarland, USA*; acclaimed *True Grit* and *The Hurt Locker*; espionage film *The Ipcress File*; Vietnam",
+    "Tom Cruise filmography\nHis next role was as anti-war activist Ron Kovic in the drama adaptation of Kovic's memoir of the same name, \"Born on the Fourth of July\" (1989).\n\n For his performance Cruise received the Golden Globe Award for Best Actor – Motion Picture Drama and his first nomination for the Academy Award for Best Actor.",
+    "Titan A.E.\nTitan A.E. is a 2000 American animated science fiction film directed by Don Bluth and Gary Goldman.\n\n Its title refers to the spacecraft central to the plot, with \"A.E.\" meaning \"After Earth\".\n\n It stars Matt Damon, Bill Pullman, John Leguizamo, Nathan Lane, Janeane Garofalo and Drew Barrymore.\n\n The film's animation technique combines traditional hand-drawn animation and extensive use of computer generated imagery.\n\n Its working title was \"Planet Ice\".\n\n It was theatrically released on June 16, 2000, by 20th Century Fox and was the final film for Fox Animation Studios.\n\n The film grossed $36.8 million on a $75–$90 million budget, making a $100-million loss for the studio.",
+    "The entries highlight acclaimed Israeli cinema: *The Band’s Visit* (2007), directed by Eran Kolirin, and *Hunting Elephants* (2013), Reshef Levi’s crime comedy starring Sasson Gabai, Moni Moshonov and Patrick Stewart. *Yana’s Friends* (1999) won 10 Ophir Awards and Karlovy Vary’s Crystal Globe. Joseph Cedar won Cannes’ 2011 screenplay prize for *Footnote",
+    "Beyond the Sea (1991 film)\nBeyond the Sea (translit.\n\n Me'ever Layam) is a 1991 Israeli drama film directed by Jacob Goldwasser.\n\n It stars Aryeh Moskona, Dafna Rechter, Moti Giladi.\n\n The film, a family drama set in the 1960s, was critically acclaimed, and won the Ophir Award for Best Film.\n\n The film was selected as the Israeli entry for the Best Foreign Language Film at the 64th Academy Awards, but was not accepted as a nominee.",
+    "Tom Cruise filmography\nTom Cruise is an American actor and producer who made his film debut with a minor role in the 1981 romantic drama \"Endless Love\".\n\n Two years later he made his breakthrough by starring in the romantic comedy \"Risky Business\" (1983), which garnered Cruise his first nomination for the Golden Globe Award for Best Actor – Motion Picture Musical or Comedy.\n\n In 1986, Cruise played a fighter pilot in the Tony Scott-directed action drama \"Top Gun\" (the highest-grossing film that year), and also starred opposite Paul Newman in the Martin Scorsese-directed drama \"The Color of Money\".\n\n Two years later he played opposite Dustin Hoffman in the Academy Award for Best Picture-winning drama \"Rain Man\" (1988), and also appeared in the Golden Raspberry Award for Worst Picture-winning romantic drama \"Cocktail\" (1988).\n\n In doing so Cruise became the first and only person as of 2014 to star in a Best Picture Oscar winner and a Worst Picture Razzie winner in the same year.",
+    "Mel Gibson filmography\nMel Gibson, AO, is an American actor, director, producer and screenwriter who made his acting debut on the Australian television drama series \"The Sullivans\" (1976– 1983).\n\n While a student at the National Institute of Dramatic Art in Sydney, he was given an uncredited role in \"I Never Promised You a Rose Garden\" and subsequently appeared as a leading actor in the micro budget surf drama \"Summer City\" (both in 1977).\n\n Gibson rose to prominence during the Australian New Wave cinema movement in the early 1980s, having appeared in his breakthrough role in George Miller's dystopian action film \"Mad Max\" (1979), portraying the eponymous hero.\n\n He reprised the role in its sequels, \"Mad Max 2\" (1981) and \"Mad Max Beyond Thunderdome\" (1985).\n\n He appeared in Peter Weir's war drama \"Gallipoli\" (1981) and the romantic drama \"The Year of Living Dangerously\" (1982).",
+    "The entries cover films across action, comedy, romance, horror, and drama. Bruce Willis stars in titles including *Last Man Standing* (a credited *Yojimbo* remake), *Unbreakable*, *Signs*, and *Die Hard with a Vengeance*. Shyamalan’s *Signs* explores faith and alien encounters; *Unbreakable* launches a superhero trilogy. Other highlights include *The Whole Nine Yards*, *Striking Distance*, *Mercury Rising",
+    "Zooey Deschanel filmography\nAmerican actress Zooey Deschanel made her film debut in the 1999 comedy feature \"Mumford\".\n\n She went on to gained public attention by co-starred in the comedy-drama \"Almost Famous\" (2000), the independent drama \"Manic\" (2001), opposite Joseph Gordon-Levitt, and the comedy-drama \"The Good Girl\" (2002).\n\n She landed her first major role as a 18-year-old virgin in the romantic drama \"All the Real Girls\" (2003), for which she was nominated for an Independent Spirit Award for Best Female Lead.\n\n Deschanel's biggest commercial success, as of 2017, came with the Christmas-fantasy film \"Elf\" (also in 2003), which grossed over $220 million worldwide.",
+    "Atom Egoyan\nAtom Egoyan, {'1': \", '2': \", '3': \", '4': \"} (born July 19, 1960) is a Canadian stage and film director, writer and producer.\n\n Egoyan made his career breakthrough with \"Exotica\" (1994), a film set primarily in and around the fictional Exotica strip club.\n\n Egoyan's most critically acclaimed film is the drama \"The Sweet Hereafter\" (1997), for which he received two Academy Award nominations, and his biggest commercial success is the erotic thriller \"Chloe\" (2009)."
+   ]
+  }
+ ]
+}

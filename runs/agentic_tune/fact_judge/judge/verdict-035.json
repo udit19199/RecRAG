@@ -1,0 +1,26 @@
+[
+  {
+    "id": "d2a1107592bc5ed7",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "despite Floyd’s massive net worth"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Canelo has inched closer to Floyd’s billionaire status over the years."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "e16ee5e1517bae1b",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "missing", "evidence": []},
+      {"fact": "2.4", "status": "missing", "evidence": []}
+    ]
+  }
+]

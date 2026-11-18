@@ -1,0 +1,1740 @@
+[
+ {
+  "id": "491694df9a850585",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Spain : 430"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "France : 128"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Italy : 104"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Russia : 100"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Portugal : 87"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Germany : 77"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "United Kingdom : 64"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Poland : 47"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Greece : 46"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Turkey : 41"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Belgium : 31"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Netherlands : 28"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Romania : 24"
+     }
+    ]
+   },
+   {
+    "fact": "0.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Switzerland : 20"
+     }
+    ]
+   },
+   {
+    "fact": "0.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Austria : 14"
+     }
+    ]
+   },
+   {
+    "fact": "0.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Sweden : 12"
+     }
+    ]
+   },
+   {
+    "fact": "0.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Croatia : 10"
+     }
+    ]
+   },
+   {
+    "fact": "0.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Ireland : 9"
+     }
+    ]
+   },
+   {
+    "fact": "0.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Ukraine : 9"
+     }
+    ]
+   },
+   {
+    "fact": "0.19",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Hungary : 8"
+     }
+    ]
+   },
+   {
+    "fact": "0.20",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Bulgaria : 6"
+     }
+    ]
+   },
+   {
+    "fact": "0.21",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Cyprus : 6"
+     }
+    ]
+   },
+   {
+    "fact": "0.22",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Czech Republic : 6"
+     }
+    ]
+   },
+   {
+    "fact": "0.23",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Finland : 5"
+     }
+    ]
+   },
+   {
+    "fact": "0.24",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Lithuania : 5"
+     }
+    ]
+   },
+   {
+    "fact": "0.25",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Norway : 5"
+     }
+    ]
+   },
+   {
+    "fact": "0.26",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Serbia : 5"
+     }
+    ]
+   },
+   {
+    "fact": "0.27",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Slovenia : 5"
+     }
+    ]
+   },
+   {
+    "fact": "0.28",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Denmark : 4"
+     }
+    ]
+   },
+   {
+    "fact": "0.29",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Latvia : 4"
+     }
+    ]
+   },
+   {
+    "fact": "0.30",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Estonia : 3"
+     }
+    ]
+   },
+   {
+    "fact": "0.31",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Azerbaijan : 3"
+     }
+    ]
+   },
+   {
+    "fact": "0.32",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Bosnia and Herzegovina : 3"
+     }
+    ]
+   },
+   {
+    "fact": "0.33",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Georgia : 3"
+     }
+    ]
+   },
+   {
+    "fact": "0.34",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Luxembourg : 3"
+     }
+    ]
+   },
+   {
+    "fact": "0.35",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Slovakia : 3"
+     }
+    ]
+   },
+   {
+    "fact": "0.36",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Armenia : 2"
+     }
+    ]
+   },
+   {
+    "fact": "0.37",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Albania : 1"
+     }
+    ]
+   },
+   {
+    "fact": "0.38",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Andorra : 1"
+     }
+    ]
+   },
+   {
+    "fact": "0.39",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Belarus : 1"
+     }
+    ]
+   },
+   {
+    "fact": "0.40",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Iceland : 1"
+     }
+    ]
+   },
+   {
+    "fact": "0.41",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Macedonia : 1"
+     }
+    ]
+   },
+   {
+    "fact": "0.42",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Malta : 1"
+     }
+    ]
+   },
+   {
+    "fact": "0.43",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Monaco : 1"
+     }
+    ]
+   },
+   {
+    "fact": "0.44",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Montenegro : 1"
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "United Kingdom : 64"
+     }
+    ]
+   },
+   {
+    "fact": "2.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Africa South Africa : 9"
+     }
+    ]
+   },
+   {
+    "fact": "2.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Africa South Africa : 9 Egypt : 5"
+     }
+    ]
+   },
+   {
+    "fact": "2.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Africa South Africa : 9 Egypt : 5 Morocco : 4"
+     }
+    ]
+   },
+   {
+    "fact": "2.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Africa South Africa : 9 Egypt : 5 Morocco : 4 Tunisia : 3"
+     }
+    ]
+   },
+   {
+    "fact": "2.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Africa South Africa : 9 Egypt : 5 Morocco : 4 Tunisia : 3 Algeria : 1"
+     }
+    ]
+   },
+   {
+    "fact": "2.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Americas United States : 85"
+     }
+    ]
+   },
+   {
+    "fact": "2.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Americas United States : 85 Mexico : 84"
+     }
+    ]
+   },
+   {
+    "fact": "2.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Americas United States : 85 Mexico : 84 Brazil : 56"
+     }
+    ]
+   },
+   {
+    "fact": "2.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32"
+     }
+    ]
+   },
+   {
+    "fact": "2.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14"
+     }
+    ]
+   },
+   {
+    "fact": "2.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10"
+     }
+    ]
+   },
+   {
+    "fact": "2.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9"
+     }
+    ]
+   },
+   {
+    "fact": "2.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8"
+     }
+    ]
+   },
+   {
+    "fact": "2.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4"
+     }
+    ]
+   },
+   {
+    "fact": "2.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4"
+     }
+    ]
+   },
+   {
+    "fact": "2.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3"
+     }
+    ]
+   },
+   {
+    "fact": "2.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3 Guatemala : 3"
+     }
+    ]
+   },
+   {
+    "fact": "2.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3 Guatemala : 3 Panama : 3"
+     }
+    ]
+   },
+   {
+    "fact": "2.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3 Guatemala : 3 Panama : 3 Costa Rica : 2"
+     }
+    ]
+   },
+   {
+    "fact": "2.19",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3 Guatemala : 3 Panama : 3 Costa Rica : 2 Ecuador : 2"
+     }
+    ]
+   },
+   {
+    "fact": "2.20",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3 Guatemala : 3 Panama : 3 Costa Rica : 2 Ecuador : 2 El Salvador : 2"
+     }
+    ]
+   },
+   {
+    "fact": "2.21",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3 Guatemala : 3 Panama : 3 Costa Rica : 2 Ecuador : 2 El Salvador : 2 Honduras : 2"
+     }
+    ]
+   },
+   {
+    "fact": "2.22",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3 Guatemala : 3 Panama : 3 Costa Rica : 2 Ecuador : 2 El Salvador : 2 Honduras : 2 Uruguay : 2"
+     }
+    ]
+   },
+   {
+    "fact": "2.23",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3 Guatemala : 3 Panama : 3 Costa Rica : 2 Ecuador : 2 El Salvador : 2 Honduras : 2 Uruguay : 2 Aruba : 1"
+     }
+    ]
+   },
+   {
+    "fact": "2.24",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3 Guatemala : 3 Panama : 3 Costa Rica : 2 Ecuador : 2 El Salvador : 2 Honduras : 2 Uruguay : 2 Aruba : 1 Nicaragua : 1"
+     }
+    ]
+   },
+   {
+    "fact": "2.25",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3 Guatemala : 3 Panama : 3 Costa Rica : 2 Ecuador : 2 El Salvador : 2 Honduras : 2 Uruguay : 2 Aruba : 1 Nicaragua : 1 Paraguay : 1"
+     }
+    ]
+   },
+   {
+    "fact": "2.26",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Asia China : 200"
+     }
+    ]
+   },
+   {
+    "fact": "2.27",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Asia China : 200 Japan : 99"
+     }
+    ]
+   },
+   {
+    "fact": "2.28",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Asia China : 200 Japan : 99 South Korea : 43"
+     }
+    ]
+   },
+   {
+    "fact": "2.29",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39"
+     }
+    ]
+   },
+   {
+    "fact": "2.30",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24"
+     }
+    ]
+   },
+   {
+    "fact": "2.31",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20"
+     }
+    ]
+   },
+   {
+    "fact": "2.32",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17"
+     }
+    ]
+   },
+   {
+    "fact": "2.33",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14"
+     }
+    ]
+   },
+   {
+    "fact": "2.34",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11"
+     }
+    ]
+   },
+   {
+    "fact": "2.35",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11"
+     }
+    ]
+   },
+   {
+    "fact": "2.36",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10"
+     }
+    ]
+   },
+   {
+    "fact": "2.37",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9"
+     }
+    ]
+   },
+   {
+    "fact": "2.38",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9"
+     }
+    ]
+   },
+   {
+    "fact": "2.39",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9 Philippines : 8"
+     }
+    ]
+   },
+   {
+    "fact": "2.40",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9 Philippines : 8 Lebanon : 7"
+     }
+    ]
+   },
+   {
+    "fact": "2.41",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9 Philippines : 8 Lebanon : 7 Kazakhstan : 5"
+     }
+    ]
+   },
+   {
+    "fact": "2.42",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9 Philippines : 8 Lebanon : 7 Kazakhstan : 5 Kuwait : 5"
+     }
+    ]
+   },
+   {
+    "fact": "2.43",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9 Philippines : 8 Lebanon : 7 Kazakhstan : 5 Kuwait : 5 Qatar : 5"
+     }
+    ]
+   },
+   {
+    "fact": "2.44",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9 Philippines : 8 Lebanon : 7 Kazakhstan : 5 Kuwait : 5 Qatar : 5 Jordan : 3"
+     }
+    ]
+   },
+   {
+    "fact": "2.45",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9 Philippines : 8 Lebanon : 7 Kazakhstan : 5 Kuwait : 5 Qatar : 5 Jordan : 3 Bahrain : 2"
+     }
+    ]
+   },
+   {
+    "fact": "2.46",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9 Philippines : 8 Lebanon : 7 Kazakhstan : 5 Kuwait : 5 Qatar : 5 Jordan : 3 Bahrain : 2 Macau : 2"
+     }
+    ]
+   },
+   {
+    "fact": "2.47",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9 Philippines : 8 Lebanon : 7 Kazakhstan : 5 Kuwait : 5 Qatar : 5 Jordan : 3 Bahrain : 2 Macau : 2 Oman : 1"
+     }
+    ]
+   },
+   {
+    "fact": "2.48",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9 Philippines : 8 Lebanon : 7 Kazakhstan : 5 Kuwait : 5 Qatar : 5 Jordan : 3 Bahrain : 2 Macau : 2 Oman : 1 Vietnam : 1"
+     }
+    ]
+   },
+   {
+    "fact": "2.49",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Europe Spain : 430"
+     }
+    ]
+   },
+   {
+    "fact": "2.50",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Europe Spain : 430 France : 128"
+     }
+    ]
+   },
+   {
+    "fact": "2.51",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Europe Spain : 430 France : 128 Italy : 104"
+     }
+    ]
+   },
+   {
+    "fact": "2.52",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Europe Spain : 430 France : 128 Italy : 104 Russia : 100"
+     }
+    ]
+   },
+   {
+    "fact": "2.53",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Europe Spain : 430 France : 128 Italy : 104 Russia : 100 Portugal : 87"
+     }
+    ]
+   },
+   {
+    "fact": "2.54",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Europe Spain : 430 France : 128 Italy : 104 Russia : 100 Portugal : 87 Germany : 77"
+     }
+    ]
+   },
+   {
+    "fact": "2.55",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.56",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.57",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.58",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.59",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.60",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.61",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.62",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.63",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.64",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.65",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.66",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.67",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.68",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.69",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.70",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.71",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.72",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.73",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.74",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.75",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.76",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.77",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.78",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.79",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.80",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.81",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.82",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.83",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.84",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.85",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.86",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.87",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.88",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.89",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.90",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.91",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.92",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.93",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.94",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Oceania Australia : 19"
+     }
+    ]
+   },
+   {
+    "fact": "2.95",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Oceania Australia : 19 New Zealand : 1"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "98d170c538de8eb0",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "In August 2015 , the series was reinvented as Most Wanted"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "In August 2015 , the series was reinvented as Most Wanted and received a pilot order from ABC"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "The cast was filled out in early 2016"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "production was completed by late March"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "The episode was co-produced by ABC Studios and Marvel Television"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "In May 2016 , ABC announced that it would not pick up the pilot to series"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "In May 2016 , ABC announced that it would not pick up the pilot to series , and would look to develop other series with Marvel instead"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "e11bb23d745840eb",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "The Pakistani National Assembly"
+     },
+     {
+      "item": 8,
+      "quote": "is the lower house of the bicameral Majlis - e-Shura"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "The Pakistani National Assembly ( Urdu"
+     },
+     {
+      "item": 8,
+      "quote": "Qaumī Asimbli'e Pākistān"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "bicameral Majlis - e-Shura , which also comprises the President of Pakistan"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "bicameral Majlis - e-Shura , which also comprises the President of Pakistan and Senate ( upper house )"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "The National Assembly and the Senate both convene at Parliament House in Islamabad"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "The National Assembly and the Senate both convene at Parliament House in Islamabad"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The National Assembly is a democratically elected body"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The National Assembly is a democratically elected body consisting of a total of 332 members"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "total of 332 members who are referred to as Members of the National Assembly ( MNAs )"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "of which 272 are directly elected members"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "70 reserved seats for women and religious minorities"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "A political party must secure 172 seats to obtain and preserve a majority"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "A political party must secure 172 seats to obtain and preserve a majority"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "11b9c24f41778ba6",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Loyalists were American colonists who remained loyal to the British Crown during the American Revolutionary War"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "At the time they were often called Tories , Royalists , or King 's Men"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Loyalists were American colonists who remained loyal to the British Crown during the American Revolutionary War . At the time they were often called Tories , Royalists , or King 's Men . They were opposed by the Patriots"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "They were opposed by the Patriots , those who supported the revolution"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "and called them `` persons inimical to the liberties of America ''"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Prominent Loyalists repeatedly assured the British government that many thousands of loyalists would spring to arms and fight for the crown"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "The British government acted in expectation of that , especially in the southern campaigns in 1780 - 81"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.8",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.9",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.10",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "New York City and Long Island were the British military and political base of operations in North America from 1776 to 1783 and had a large concentration of Loyalists , many of whom were refugees from other states"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.13",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.14",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.15",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.16",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "b424633de01528ad",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "The film is based loosely on Eminem 's actual upbringing"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "follows white rapper B - Rabbit ( Eminem )"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "follows white rapper B - Rabbit ( Eminem ) and his attempt to launch a career in a genre dominated by African - Americans"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "The title is derived from 8 Mile Road"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "8 Mile Road , the highway between the predominantly black city of Detroit and Wayne County"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "8 Mile Road , the highway between the predominantly black city of Detroit and Wayne County and the predominantly White Oakland County and Macomb County suburbs"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "It was filmed mostly on location"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "5fcaff4bbb0c1197",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "In healthy adults , there are two normal heart sounds"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "often described as a lub and a dub ( or dup )"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "that occur in sequence with each heartbeat"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "These are the first heart sound ( S ) and second heart sound ( S ) , produced by the closing of the atrioventricular valves and semilunar valves , respectively"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "These are the first heart sound ( S ) and second heart sound ( S ) , produced by the closing of the atrioventricular valves and semilunar valves , respectively"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "These are the first heart sound ( S ) and second heart sound ( S ) , produced by the closing of the atrioventricular valves and semilunar valves , respectively"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "In addition to these normal sounds , a variety of other sounds may be present"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "including heart murmurs , adventitious sounds , and gallop rhythms S and S"
+     }
+    ]
+   }
+  ]
+ }
+]

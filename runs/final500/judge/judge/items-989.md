@@ -1,0 +1,814 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=52fbacb21305a5e4 ===
+Gold sentences and facts:
+Sentence 0: DJ Lance Rock -- ( Portrayed by Lance Robertson U.S. , voice dubbed by Ortis Deley in the UK ) A DJ who is the narrator and friend of the other characters and the series ' host . Muno -- ( Voiced by Adam Deibert U.S. , Bob Golding UK ) A friendly red cyclops boy . He 's the tallest , is somewhat clumsy and has a close bond with Foofa ( though she also bonds with Brobee in the same way ) . He is also the band 's guitarist . In the episodes `` Family '' , `` Circus '' , and `` Baby '' , his family makes an appearance . During Super Bowl XLIV , he appeared in a commercial for the Kia Sorento . His realm resembles the moon , another planet , or a desert and he has a pet horse . He has three stomachs as seen in the X-ray in the Season 1 episode `` Halloween '' ( # 13 ) . However another X-ray in the Season 1 episode `` Imagine '' ( # 20 ) shows him with one stomach , a normal heart and lungs . His catchphrase is `` Razzle Dazzle '' . Foofa -- ( Voiced by Emma Jacobs - Briggs U.S. , Teresa Gallagher UK ) A female flower bubble character who 's `` pink and happy . '' She likes flowers , rainbows and unicorns . Her instrument is the tambourine . Her realm is a spring or summer meadow . Brobee -- ( Voiced by Amos Watene U.S. , Simon Feilder UK ) A small , green monster boy and the baby of the gabbas . He is the drummer for the Gabba band . He is the one of the characters whose facial expression changes depending on the situation ; his normal face turning into a frown , and vice versa . He is often subjected to trying new foods . His realm is a vast autumn forest . It is mentioned that he is four years old . Toodee -- ( Voiced by Erin Pearce U.S. , Jonell Elliot UK ) A blue arctic female cat - dragon who loves to have fun . She has a close bond with Plex and is the bassist for the Gabba band . She resides in a winter arctic realm , with icicles . Plex -- ( Voiced by Christian Jacobs U.S. , Simon Feilder UK ) A magic yellow robot boy and the oldest of the gabbas and he is Toodee 's love instest . He is portrayed as being smart and as the leader of Gabba Land . Plex usually teaches lessons to his friends and is a father figure to the gang . He can also use his special ray to bring things into existence . His instrument is the keytar . He has no realm in particular , though he seems to have a `` docking station '' between Foofa and Brobee 's realms . In `` Gabbaland Begins '' , Plex is the last in DJ Lance 's original creations after he goes through Muno , Foofa , Brobee , and Toodee , although , Brobee is supposedly a four - year - old in the series . Gooble - ( Voiced by Joel Fox U.S. ) A ghost who is always so sad and crying . He resides in a haunted house located in a non-gabba land - place named `` Gooble Land '' .
+  Fact 0.0: DJ Lance Rock is portrayed by Lance Robertson in the U.S.
+  Fact 0.1: DJ Lance Rock's voice is dubbed by Ortis Deley in the UK.
+  Fact 0.2: DJ Lance Rock is a DJ.
+  Fact 0.3: DJ Lance Rock is the narrator of the series.
+  Fact 0.4: DJ Lance Rock is a friend of the other characters.
+  Fact 0.5: DJ Lance Rock is the host of the series.
+  Fact 0.6: Muno is voiced by Adam Deibert in the U.S.
+  Fact 0.7: Muno is voiced by Bob Golding in the UK.
+  Fact 0.8: Muno is a friendly red cyclops boy.
+  Fact 0.9: Muno is the tallest.
+  Fact 0.10: Muno is somewhat clumsy.
+  Fact 0.11: Muno has a close bond with Foofa.
+  Fact 0.12: Foofa also bonds with Brobee in the same way.
+  Fact 0.13: Muno is also the band's guitarist.
+  Fact 0.14: Muno's family makes an appearance in the episodes 'Family', 'Circus', and 'Baby'.
+  Fact 0.15: Muno appeared in a commercial for the Kia Sorento during Super Bowl XLIV.
+  Fact 0.16: Muno's realm resembles the moon, another planet, or a desert.
+  Fact 0.17: Muno has a pet horse.
+  Fact 0.18: Muno has three stomachs as seen in the X-ray in the Season 1 episode 'Halloween' (#13).
+  Fact 0.19: Another X-ray in the Season 1 episode 'Imagine' (#20) shows Muno with one stomach.
+  Fact 0.20: Another X-ray in the Season 1 episode 'Imagine' (#20) shows Muno with a normal heart.
+  Fact 0.21: Another X-ray in the Season 1 episode 'Imagine' (#20) shows Muno with normal lungs.
+  Fact 0.22: Muno's catchphrase is 'Razzle Dazzle'.
+  Fact 0.23: Foofa is voiced by Emma Jacobs-Briggs in the U.S.
+  Fact 0.24: Foofa is voiced by Teresa Gallagher in the UK.
+  Fact 0.25: Foofa is a female flower bubble character.
+  Fact 0.26: Foofa is pink and happy.
+  Fact 0.27: Foofa likes flowers, rainbows and unicorns.
+  Fact 0.28: Foofa's instrument is the tambourine.
+  Fact 0.29: Foofa's realm is a spring or summer meadow.
+  Fact 0.30: Brobee is voiced by Amos Watene in the U.S.
+  Fact 0.31: Brobee is voiced by Simon Feilder in the UK.
+  Fact 0.32: Brobee is a small, green monster boy.
+  Fact 0.33: Brobee is the baby of the gabbas.
+  Fact 0.34: Brobee is the drummer for the Gabba band.
+  Fact 0.35: Brobee is one of the characters whose facial expression changes depending on the situation.
+  Fact 0.36: Brobee's normal face turns into a frown, and vice versa.
+  Fact 0.37: Brobee is often subjected to trying new foods.
+  Fact 0.38: Brobee's realm is a vast autumn forest.
+  Fact 0.39: It is mentioned that Brobee is four years old.
+  Fact 0.40: Toodee is voiced by Erin Pearce in the U.S.
+  Fact 0.41: Toodee is voiced by Jonell Elliot in the UK.
+  Fact 0.42: Toodee is a blue arctic female cat-dragon.
+  Fact 0.43: Toodee loves to have fun.
+  Fact 0.44: Toodee has a close bond with Plex.
+  Fact 0.45: Toodee is the bassist for the Gabba band.
+  Fact 0.46: Toodee resides in a winter arctic realm with icicles.
+  Fact 0.47: Plex is voiced by Christian Jacobs in the U.S.
+  Fact 0.48: Plex is voiced by Simon Feilder in the UK.
+  Fact 0.49: Plex is a magic yellow robot boy.
+  Fact 0.50: Plex is the oldest of the gabbas.
+  Fact 0.51: Plex is Toodee's love interest.
+  Fact 0.52: Plex is portrayed as smart.
+  Fact 0.53: Plex is portrayed as the leader of Gabba Land.
+  Fact 0.54: Plex usually teaches lessons to his friends.
+  Fact 0.55: Plex is a father figure to the gang.
+  Fact 0.56: Plex can use his special ray to bring things into existence.
+  Fact 0.57: Plex's instrument is the keytar.
+  Fact 0.58: Plex has no realm in particular.
+  Fact 0.59: Plex seems to have a 'docking station' between Foofa's and Brobee's realms.
+  Fact 0.60: In 'Gabbaland Begins', Plex is the last of DJ Lance's original creations.
+  Fact 0.61: In 'Gabbaland Begins', Plex comes after Muno, Foofa, Brobee, and Toodee in DJ Lance's original creations.
+  Fact 0.62: Brobee is supposedly a four-year-old in the series.
+  Fact 0.63: Gooble is voiced by Joel Fox in the U.S.
+  Fact 0.64: Gooble is a ghost.
+  Fact 0.65: Gooble is always so sad and crying.
+  Fact 0.66: Gooble resides in a haunted house.
+  Fact 0.67: The haunted house is located in a non-Gabba land place named 'Gooble Land'.
+Sentence 1: Hosted by a character named DJ Lance Rock , the series featured a mix of live - action segments featuring cartoonish costumed characters -- Muno ( the red cyclops ) , Foofa ( the pink flower bubble ) , Brobee ( a little hairy green monster ) , Toodee ( the blue cat - dragon ) and Plex ( the magic yellow robot ) -- and many short animated sketches and musical numbers .
+  Fact 1.0: The series was hosted by a character named DJ Lance Rock.
+  Fact 1.1: The series featured a mix of live-action segments.
+  Fact 1.2: The live-action segments featured cartoonish costumed characters.
+  Fact 1.3: The series featured many short animated sketches.
+  Fact 1.4: The series featured many musical numbers.
+  Fact 1.5: Muno is the red cyclops.
+  Fact 1.6: Foofa is the pink flower bubble.
+  Fact 1.7: Brobee is a little hairy green monster.
+  Fact 1.8: Toodee is the blue cat-dragon.
+  Fact 1.9: Plex is the magic yellow robot.
+
+Retrieved items:
+<item 1>
+Yo Gabba Gabba!
+( 2009 ) Yo Gabba Gabba ! ( 2010 ) Sesame Street ( 2011 ) Switched at Birth ( 2012 ) Bunheads ( 2013 ) The Fosters ( 2014 ) The Fosters ( 2015 ) Daniel Tiger 's
+Neighborhood ( 2016 ) Speechless ( 2017 ) MusicBrainz : fd649d06 - c1bc - 4c95 - 8c48 - eb7b91726e65 Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Yo_Gabba_Gabba!&oldid=837777521 '' Categories : 2007 American television series debuts 2000s American music
+television series 2015 American television series endings 2010s American music television series American children 's musical television series English -
+language television programs American television programs featuring anthropomorphic characters American television series with live action and animation
+Television series by DHX Media Animated musical television series Nick Jr.
+</item 1>
+
+<item 2>
+Yo Gabba Gabba!
+Yo Gabba Gabba ! - Wikipedia Yo Gabba Gabba ! Jump to : navigation , search Yo Gabba Gabba ! Yo Gabba Gabba ! title card Genre Educational Created by Christian
+Jacobs Scott Schultz Developed by Kay Wilson Stallings Directed by Christian Jacobs Scott Schultz Matt Fackrell Matt Chapman Presented by Lance Robertson Voices
+of Adam Delbert Christian Jacobs Amos `` Mossi '' Watene Erin Pearce Emma Jacobs - Briggs Country of origin United States Original language ( s ) English No. of
+seasons No. of episodes 66 ( list of episodes ) Production Executive producer ( s ) Michael Polis Jon Berrett Producer ( s ) Justin Lyon Ritamarie Peruggi
+Running time 25 minutes Production company ( s ) The Magic Store W ! ldbrain Entertainment Nickelodeon Productions Distributor DHX Media Release Original
+network Nickelodeon Nick Jr . Original release August 20 , 2007 ( 2007 - 08 - 20 ) -- November 12 , 2015 ( 2015 - 11 - 12 ) External links Website Yo Gabba
+Gabba !
+</item 2>
+
+<item 3>
+Yo Gabba Gabba!
+Trademarks relating to Yo Gabba Gabba ! and its characters are held by GabbaCaDabra , LLC. in partnership with The Magic Store and WildBrain . Contents ( hide )
+1 Overview 2 History 3 Production 4 Episode structure 5 The Stars 6 Regular segments 7 Episodes 8 Video releases 9 Soundtrack releases 10 Stage shows 11 Mobile
+streaming 12 Critical reception 13 In other media 14 References 15 External links Overview ( edit ) Hosted by a character named DJ Lance Rock , the series
+featured a mix of live - action segments featuring cartoonish costumed characters -- Muno ( the red cyclops ) , Foofa ( the pink flower bubble ) , Brobee ( a
+little hairy green monster ) , Toodee ( the blue cat - dragon ) and Plex ( the magic yellow robot ) -- and many short animated sketches and musical numbers .
+</item 3>
+
+<item 4>
+Yo Gabba Gabba!
+( three times by saying `` it 's fun to '' do whatever he is teaching ) in chants , using four repeated steps . ( Season 1 only ) Play Pretend with Muno , in
+which Muno encourages viewers to pretend along with him , as he imagines himself as various creatures and objects . ( Season 1 only ) Listen with Toodee , in
+which Toodee listens to sounds and encourages the viewer to help her identify them . ( Season 1 only ) Color with Brobee , in which the viewer guesses what
+color Brobee is thinking of by the examples he gives . ( Season 1 only ) Play Games with Foofa , in which Foofa solves simple puzzles , such as mazes and
+matching games , and encourages the viewer to help her find the solution . ( Season 1 only ) DJ Lance Dance , in which DJ Lance Rock teaches the viewers a
+different dance . Funny Faces , in which DJ Lance Rock encourages viewers to make funny faces . Knock - Knock Joke of the Day , a segment where Jack McBrayer
+and Paul Scheer tell knock - knock jokes . This segment first appeared in season two .
+</item 4>
+
+<item 5>
+Yo Gabba Gabba!
+Music is ... Awesome ! ( 2009 ) Music is ... Awesome ! Volume 2 ( 2010 ) Music is ... Awesome ! Volume 3 ( 2011 ) Music is ... Awesome ! Volume 4 ( 2012 ) Hey !
+( 2017 ) Fantastic Voyages ( 2017 ) ABC for Kids released a CD in 2010 titled Yo Gabba Gabba ! Party In My Tummy . Stage shows ( edit ) The world premiere live
+concert tour of Yo Gabba Gabba ! took place in Australia in May 2009 . DJ Lance Rock , Muno , Foofa , Brobee , Toodee and Plex performed in Wollongong ,
+Melbourne , Brisbane and Sydney with an indie house - band and secret special guests at each show . Additional tours in the United States and other countries
+have been performed throughout 2013 . Shows have been toured including three presented by Kia Motors and a special Christmas one presented by Citi , Just Dance
+Kids & Toys for Tots . `` Yo Gabba Gabba ! LIVE ! : There 's a Party in My City ! ''
+</item 5>
+
+<item 6>
+Yo Gabba Gabba!
+Yo Gabba Gabba ! won for the year 2009 and 2010 . In February 2013 , Yo Gabba Gabba ! won two Kidscreen Awards for `` Best Non-Animated or Mixed Series 2013 ''
+and `` Best Music 2013 '' In other Media ( edit ) In 2009 , the cast was featured in their own float in the Macy 's Thanksgiving Day Parade . Muno was featured
+in a commercial for the Kia Sorento that aired during the 2010 Super Bowl and a subsequent Kia commercials in 2011 , also the character Brobee appeared in a
+2011 advertisement for Wonderful Pistachios . The cast appeared in the Big Time Rush episodes `` Big Time Audition '' , `` Big Time Halloween '' and `` Big Time
+Cameos . '' Yo Gabba Gabba ! appeared in True Jackson VP in the episode `` Trapped in Paris . '' Garry Lyon , of The Footy Show , an Australian Football League
+panel show , performed an interpretive cycle ( Yo Gabba Gazza ! ) based on the Yo Gabba Gabba ! dancing style after losing a humorous bet .
+</item 6>
+
+<item 7>
+Yo Gabba Gabba!
+Episode structure ( edit ) All episodes follow a similar format . In the opening scene , DJ Lance Rock is shown walking on a plain white background while
+holding a gray radio with colorful buttons . He then gets to a table scenery that involves four different colored lands and a gray cloth underneath it . He then
+places down the radio , and then he shouts `` YOOOO Gabba Gabba ! '' and opens the radio , and inside it are 5 toy figures : Toodee , Muno , Foofa , Plex , and
+Brobee . He places down the figures one - by - one , and then they become alive . The episode features four main segments ( it was shortened to three after the
+first season ) that are connected to each other as a plot . They involve DJ Lance and the gabbas doing an activity . After each main segment , a short clip is
+shown that shows a kid dancing around . The kid says his or her name , followed by `` I like to dance ! '' . Between the main segments , there is another
+segment called `` The Super Music Friends Show '' , which features a performance by a band about the episode 's topic .
+</item 7>
+
+<item 8>
+Yo Gabba Gabba!
+Other small segments include `` Mark 's Magic Pictures '' and `` Biz 's Beat of the Day '' . Near the end of each episode , DJ Lance and the gabbas do a mix -
+like song about what had occurred during the main segments . After it is finished , DJ Lance shouts `` YOOOO Gabba Gabba ! '' once again , and then Brobee ,
+Muno , Toodee , Foofa , and Plex turn back into toys . One - by - one , DJ Lance puts them back in the radio , closes the radio , and then walks off carrying it
+. The credits then roll . The stars ( edit ) DJ Lance Rock -- ( Portrayed by Lance Robertson U.S. , voice dubbed by Ortis Deley in the UK ) A DJ who is the
+narrator and friend of the other characters and the series ' host . Muno -- ( Voiced by Adam Deibert U.S. , Bob Golding UK ) A friendly red cyclops boy . He 's
+the tallest , is somewhat clumsy and has a close bond with Foofa ( though she also bonds with Brobee in the same way ) .
+</item 8>
+
+<item 9>
+Yo Gabba Gabba!
+His instrument is the keytar . He has no realm in particular , though he seems to have a `` docking station '' between Foofa and Brobee 's realms . In ``
+Gabbaland Begins '' , Plex is the last in DJ Lance 's original creations after he goes through Muno , Foofa , Brobee , and Toodee , although , Brobee is
+supposedly a four - year - old in the series . Gooble - ( Voiced by Joel Fox U.S. ) A ghost who is always so sad and crying . He resides in a haunted house
+located in a non-gabba land - place named `` Gooble Land '' . Regular segments ( edit ) Jingles , each episode has animated music videos featuring music by a
+guest musician and animation by guest artists , designers , and animators . They often happen after the first segment in an episode . ( One episode does not
+have the segment . ) Mark 's Magic Pictures , featuring Mark Mothersbaugh , drawing simple pictures that often come alive at the end of the segment . Biz 's
+Beat of the Day , starring Biz Markie , demonstrating new beatboxing beats .
+</item 9>
+
+<item 10>
+Yo Gabba Gabba!
+He is also the band 's guitarist . In the episodes `` Family '' , `` Circus '' , and `` Baby '' , his family makes an appearance . During Super Bowl XLIV , he
+appeared in a commercial for the Kia Sorento . His realm resembles the moon , another planet , or a desert and he has a pet horse . He has three stomachs as
+seen in the X-ray in the Season 1 episode `` Halloween '' ( # 13 ) . However another X-ray in the Season 1 episode `` Imagine '' ( # 20 ) shows him with one
+stomach , a normal heart and lungs . His catchphrase is `` Razzle Dazzle '' . Foofa -- ( Voiced by Emma Jacobs - Briggs U.S. , Teresa Gallagher UK ) A female
+flower bubble character who 's `` pink and happy . '' She likes flowers , rainbows and unicorns . Her instrument is the tambourine . Her realm is a spring or
+summer meadow . Brobee -- ( Voiced by Amos Watene U.S. , Simon Feilder UK ) A small , green monster boy and the baby of the gabbas .
+</item 10>
+=== END ITEM id=52fbacb21305a5e4 ===
+
+=== ITEM id=1bb9aab8d8c9df28 ===
+Gold sentences and facts:
+Sentence 0: The nineteenth season of Law & Order : Special Victims Unit premiered on September 27 , 2017 .
+  Fact 0.0: The nineteenth season of Law & Order: Special Victims Unit premiered.
+  Fact 0.1: The nineteenth season of Law & Order: Special Victims Unit premiered on September 27, 2017.
+
+Retrieved items:
+<item 1>
+Law & Order: Special Victims Unit
+ET for the first nine episodes , from September 20 through November 29 , 1999 . It was then shifted to Friday nights at 10 p.m. ET on January 7 , 2000 , and
+remained in that time slot through the end of season four on May 16 , 2003 . Beginning with the season five premiere on September 23 , 2003 , SVU moved to
+Tuesday nights at 10 : 00 p.m. ET . NBC airs repeats on Saturday nights at varying times and previous episodes are shown on the USA Network on varying days in
+marathon blocks With the season eleven premiere on September 23 , 2009 , the series vacated its Tuesday 10 p.m. ET slot because NBC began a prime - time
+weeknight Jay Leno series . The new time slot became Wednesday nights at 9 : 00 p.m. ET on NBC , with CTV still airing SVU on Tuesdays at 10 : 00 in Canada .
+After the 2010 Winter Olympics on March 3 , 2010 , the time slot for SVU changed again to Wednesdays at 10 p.m.
+</item 1>
+
+<item 2>
+Law & Order: Special Victims Unit
+`` ' Law & Order : SVU ' Leaves New Jersey Over Nixed Tax Credit & May Move Into ' L&O ' Set '' . Deadline . Mail.com Media . Retrieved June 25 , 2010 . Jump up
+^ Mitovich , Matt . `` Fall TV : NBC Announces Premiere Dates '' . TV Guide . Retrieved June 25 , 2009 . Jump up ^ Hibberd , James ( January 10 , 2010 ) . ``
+NBC firms up post - ' Leno ' schedule '' . The Hollywood Reporter . Archived from the original on January 23 , 2010 . Retrieved January 22 , 2010 . Jump up ^ ``
+Breaking News -- NBC Announces Updated Fall Schedule Premieres '' . The Futon Critic . July 30 , 2010 . Retrieved June 17 , 2012 . Jump up ^ Stanhope , Kate (
+January 18 , 2011 ) . `` NBC Benches Law & Order : Los Angeles Following Cast Shake - Up '' . TV Guide . Retrieved June 17 , 2012 .
+</item 2>
+
+<item 3>
+Law & Order: Special Victims Unit
+During post-production of season 18 , following the announcement that SVU was renewed for a nineteenth season , it was revealed that Rick Eid departed the
+series . He will be taking over another Dick Wolf / NBC series . Chicago P.D. It was announced on May 25 , 2017 that original Law & Order and Law & Order :
+Criminal Intent showrunner Michael S. Chernuchin would be reprising his role starting on season nineteen . Chernuchin was also co-creator and executive
+producing showrunner of Chicago Justice , another Wolf - related show that was canceled by NBC at the end of the 2016 -- 17 TV season . Filming ( edit ) SVU
+shooting on location in Central Park at night Many exterior scenes of Law & Order : Special Victims Unit are filmed on location in New York City , Wolf 's
+hometown , throughout all five of New York City 's boroughs . As the NYPD encounters varied law enforcement challenges on a daily basis , the backdrop provides
+the writers a supply of ideal locations from which to choose . Fort Lee , New Jersey served as the filming location for Detective Elliot Stabler 's residence in
+Queens , New York .
+</item 3>
+
+<item 4>
+Law & Order: Special Victims Unit
+Deadline Hollywood . May 26 , 2017 . Retrieved May 26 , 2017 . Jump up ^ @ https://twitter.com/RobertBCohen/status/950776144315539462?s=17 . ( Tweet )
+https://twitter.com/ -- via Twitter . Missing or empty title = ( help ) ; Missing or empty number = ( help ) ; Missing or empty date = ( help ) Jump up ^ Porter
+, Rick ( September 28 , 2017 ) . `` ' Survivor ' premiere adjusts up : Wednesday final ratings '' . TV by the Numbers . Retrieved September 28 , 2017 . Jump up
+^ `` Golden Globe Wins : Law & Order : Special Victims Unit '' . Archived from the original on August 1 , 2012 . Retrieved December 14 , 2009 . Jump up ^ `` SVU
+Emmy Nominations '' . Academy of Television Arts & Sciences . Retrieved 2012 - 12 - 27 . Jump up ^ `` Watch Law & Order : SVU Videos , Highlights & Clips -
+NBC.com '' . NBC .
+</item 4>
+
+<item 5>
+Law & Order: Special Victims Unit
+Jump up ^ Ausiello , Michael ( April 11 , 2011 ) . `` Scoop : NBC Taps New Law & Order : SVU Boss '' . TVLine . Jump up ^ Littleton , Cynthia ( March 13 , 2015
+) . `` ' Law & Order : SVU ' Showrunner Warren Leight Sets Overall Deal with Sony TV ( EXCLUSIVE ) '' . Variety . Retrieved May 11 , 2015 . Jump up ^ Stanhope ,
+Kate ( March 10 , 2016 ) . `` ' Law & Order : SVU ' Taps Flagship Series Vet as New Showrunner '' . The Hollywood Reporter . Retrieved March 20 , 2016 . Jump up
+^ Andreeva , Nellie ( May 12 , 2017 ) . `` ' Law & Order : SVU ' Showrunner Rick Eid to Run ' Chicago P.D. ' Next Season '' . Deadline.com . Retrieved May 13 ,
+2017 . Jump up ^ Otterson , Joe ( May 25 , 2017 ) .
+</item 5>
+
+<item 6>
+Law & Order: Special Victims Unit
+The first episode , `` Payback '' , premiered on NBC on September 20 , 1999 . Executive producers ( edit ) Executive producer Neal Baer left Law & Order : SVU
+as showrunner at the end of season twelve , after eleven years ( seasons 2 -- 12 ) on the show , in order to sign a three - year deal with CBS Studios . Baer
+was replaced by former Law & Order : Criminal Intent showrunner Warren Leight . In March 2015 , it was announced that Warren Leight signed a three - year deal
+with Sony Pictures Television , that will allow him to work on SVU one more season , its seventeenth . Leight joined the show in season thirteen . It was
+announced on March 10 , 2016 that original Law & Order veteran producer Rick Eid would take Leight 's place as showrunner starting in season 18 . Creator Dick
+Wolf commented to The Hollywood Reporter , `` I 'm extremely pleased that Rick had decided to rejoin the family and hope that he will be here for years to come
+. ''
+</item 6>
+
+<item 7>
+Law & Order: Special Victims Unit
+Jump up ^ Otterson , Joe ( May 12 , 2017 ) . `` ' Law & Order : SVU ' Renewed for Season 19 , Showrunner Rick Eid Exits for ' Chicago PD ' '' . Variety .
+Retrieved May 21 , 2017 . Jump up ^ `` NBC Announces Fall Premiere Dates for New 2017 - 18 Season '' . The Futon Critic . June 19 , 2017 . Retrieved June 19 ,
+2017 . Jump up ^ Green and Dawn ( 2009 ) , p. 2 Jump up ^ Green and Dawn ( 2009 ) , pp. 10 -- 11 Jump up ^ Green and Dawn ( 2009 ) , p. 187 Jump up ^ Andreeva ,
+Nellie ( November 23 , 2010 ) . `` ' Law & Order : SVU ' Show - runner Neal Baer Signs Big Overall Deal With CBS TV Studios '' . Deadline.com . Jump up ^
+Ausiello , Michael ( April 11 , 2011 ) .
+</item 7>
+
+<item 8>
+Law & Order: Special Victims Unit
+2017 ( 2017 - 09 - 27 ) TBA TBA TBA Reception ( edit ) U.S. television Ratings ( edit ) Law & Order : Special Victims Unit premiered on Monday , September 20 ,
+1999 . After nine episodes , the show was moved to Friday nights , where it found its audience and following its first and second seasons became a Top 20 -
+overall show , overcoming the `` Friday night death slot '' phenomenon . Beginning with the season five , the show aired on Tuesdays to compete with CBS '
+Judging Amy and ABC 's NYPD Blue . In its later years , Law & Order : Special Victims Unit consistently outperformed Law & Order in the Nielsen ratings for
+first run episodes until the latter 's cancellation in 2010 . In 2016 , a New York Times study of the 50 TV shows with the most Facebook Likes found that SVU 's
+popularity was `` atypical : generally slightly more popular in rural areas and the Black Belt , but largely restricted to the eastern half of the country . It
+'s most popular in Albany , N.Y. ; least in Colorado and Utah '' .
+</item 8>
+
+<item 9>
+Law & Order: Special Victims Unit
+1999 ( 1999 - 09 - 20 ) -- present Chronology Related shows Law & Order franchise External links Website Law & Order : Special Victims Unit ( often abbreviated
+to Law & Order : SVU or just SVU ) is an American police procedural , legal , crime drama television series set in New York City , where it is also primarily
+produced . In the style of the original Law & Order , episodes are often `` ripped from the headlines '' or loosely based on real crimes that have received
+media attention . Created by Dick Wolf , the series premiered on NBC on September 20 , 1999 , as the second series in Wolf 's successful Law & Order franchise .
+Law & Order : Special Victims Unit has been nominated for and won numerous awards , including the 2006 Emmy for Outstanding Lead Actress in a Drama Series for
+Mariska Hargitay , the first , and to date only , Emmy to be received by a regular on any Law & Order series . It is the current longest running scripted
+non-animated U.S.
+</item 9>
+
+<item 10>
+Law & Order: Special Victims Unit
+ET , where it stayed until the twelfth season . In the 12th season , SVU moved back to 9 : 00 p.m. to lead in the newest Law & Order spinoff , Law & Order : LA
+, until it was pulled from the network in January 2011 to be retooled . SVU moved back to 10 : 00 p.m. on January 12 , 2011 , until the end of the 13th season .
+With season 14 , SVU moved back to 9 : 00 p.m. after a two - hour season premiere event on September 26 , 2012 , a position the show has held since . Russian
+adaptation ( edit ) In 2007 , the Russian production company Studio 2B purchased the rights to create an adaptation of Law & Order : Special Victims Unit for
+Russian television . Titled Закон и порядок : отдел оперативных расследований ( Law & Order : Division of Field Investigation ) , the series stars Alisa Bogart
+as Major Olga Bobrova .
+</item 10>
+=== END ITEM id=1bb9aab8d8c9df28 ===
+
+=== ITEM id=c042e017edd47066 ===
+Gold sentences and facts:
+Sentence 0: In healthy adults , there are two normal heart sounds , often described as a lub and a dub ( or dup ) , that occur in sequence with each heartbeat . These are the first heart sound ( S ) and second heart sound ( S ) , produced by the closing of the atrioventricular valves and semilunar valves , respectively . In addition to these normal sounds , a variety of other sounds may be present including heart murmurs , adventitious sounds , and gallop rhythms S and S .
+  Fact 0.0: In healthy adults there are two normal heart sounds.
+  Fact 0.1: The two normal heart sounds are often described as a lub and a dub (or dup).
+  Fact 0.2: The two normal heart sounds occur in sequence with each heartbeat.
+  Fact 0.3: The first heart sound (S) is produced by the closing of the atrioventricular valves.
+  Fact 0.4: The second heart sound (S) is produced by the closing of the semilunar valves.
+  Fact 0.5: The closing of the atrioventricular valves and the semilunar valves produces the first and second heart sounds, respectively.
+  Fact 0.6: In addition to the normal sounds, a variety of other sounds may be present.
+  Fact 0.7: The other sounds that may be present include heart murmurs, adventitious sounds, and gallop rhythms labeled S and S.
+
+Retrieved items:
+<item 1>
+Heart sounds
+Heart sounds - wikipedia Heart sounds Jump to : navigation , search Normal heart sounds Normal heart sounds as heard with a stethoscope Problems playing this
+file ? See media help . 72 BPM Heart sound Front of thorax , showing surface relations of bones , lungs ( purple ) , pleura ( blue ) , and heart ( red outline )
+. The locations of best auscultation for each heart valve are labeled with `` M '' , `` T '' , `` A '' , and `` P '' . First heart sound : caused by
+atrioventricular valves - Mitral ( M ) and Tricuspid ( T ) . Second heart sound caused by semilunar valves -- Aortic ( A ) and Pulmonary / Pulmonic ( P ) .
+Diagram showing relations of opened heart to front of thoracic wall . Ant . Anterior segment of tricuspid valve . A O. Aorta . A.P. Anterior papillary muscle .
+In . Innominate artery . L.C.C. Left common carotid artery . L.S. Left subclavian artery . L.V. Left ventricle . P.A. Pulmonary artery .
+</item 1>
+
+<item 2>
+Heart sounds
+The reason the third heart sound does not occur until the middle third of diastole is probably that during the early part of diastole , the ventricles are not
+filled sufficiently to create enough tension for reverberation . It may also be a result of tensing of the chordae tendineae during rapid filling and expansion
+of the ventricle . In other words , an S3 heart sound indicates increased volume of blood within the ventricle . An S3 heart sound is best heard with the bell -
+side of the stethoscope ( used for lower frequency sounds ) . A left - sided S3 is best heard in the left lateral decubitus position and at the apex of the
+heart , which is normally located in the 5th left intercostal space at the midclavicular line . A right - sided S3 is best heard at the lower - left sternal
+border . The way to distinguish between a left and right - sided S3 is to observe whether it increases in intensity with inhalation or exhalation . A right -
+sided S3 will increase on inhalation , while a left - sided S3 will increase on exhalation .
+</item 2>
+
+<item 3>
+Heart sounds
+See also ( edit ) Pulse Physical examination Precordial examination Benign pediatric heart murmur Iambic pentameter , a metre in poetry which follows a similar
+rhythm to the human heartbeat Pulsatile tinnitus - hearing a heartbeat sound in one or both ears Notes and references ( edit ) Jump up ^
+https://depts.washington.edu/physdx/heart/tech2.html Jump up ^ https://depts.washington.edu/physdx/heart/tech2.html Jump up ^ `` thrill '' . Medline Plus
+Medical Dictionary . Jump up ^ Bernstein , Lenny ( 2016 - 01 - 02 ) , `` Heart doctors are listening for clues to the future of their stethoscopes '' ,
+Washington Post . External links ( edit ) University of Michigan Heart Sound and Murmur Library . Auscultation Assistant . UCLA Heart Sounds - Heart Murmurs .
+practicalclinicalskills.com Physiology of the cardiovascular system Heart Cardiac output Cardiac cycle Cardiac output Heart rate Stroke volume Stroke volume End
+- diastolic volume End - systolic volume Afterload Preload Frank -- Starling law Cardiac function curve Venous return curve Wiggers diagram Pressure volume
+diagram Ultrasound Fractional
+</item 3>
+
+<item 4>
+Heart sounds
+S3 can be a normal finding in young patients but is generally pathologic over the age of 40 . The most common cause of pathologic S3 is congestive heart failure
+. Main article : Fourth heart sound S4 when audible in an adult is called a presystolic gallop or atrial gallop . This gallop is produced by the sound of blood
+being forced into a stiff or hypertrophic ventricle . `` ta - lub - dub '' or `` a-stiff - wall '' It is a sign of a pathologic state , usually a failing or
+hypertrophic left ventricle , as in systemic hypertension , severe valvular aortic stenosis , and hypertrophic cardiomyopathy . The sound occurs just after
+atrial contraction at the end of diastole and immediately before S1 , producing a rhythm sometimes referred to as the `` Tennessee '' gallop where S4 represents
+the `` Ten - '' syllable . It is best heard at the cardiac apex with the patient in the left lateral decubitus position and holding his breath . The combined
+presence of S3 and S4 is a quadruple gallop , also known as the `` Hello - Goodbye '' gallop .
+</item 4>
+
+<item 5>
+Heart sounds
+Aortic valve ( to aorta ) right second intercostal space upper right sternal border Pulmonary valve ( to pulmonary trunk ) left second intercostal space upper
+left sternal border Erb 's point Left third intercostal space left sternal border Tricuspid valve ( to right ventricle ) left fourth , fifth intercostal spaces
+lower left sternal border Mitral valve ( to left ventricle ) left fifth intercostal space left midclavicular line Recording heart sounds ( edit ) Using
+electronic stethoscopes , it is possible to record heart sounds via direct output to an external recording device , such as a laptop or MP3 recorder . The same
+connection can be used to listen to the previously recorded auscultation through the stethoscope headphones , allowing for more detailed study of murmurs and
+other heart sounds , for general research as well as evaluation of a particular patient 's condition .
+</item 5>
+
+<item 6>
+Heart sounds
+At rapid heart rates , S3 and S4 may merge to produce a summation gallop , sometimes referred to as S7 . Atrial contraction must be present for production of an
+S4 . It is absent in atrial fibrillation and in other rhythms in which atrial contraction does not precede ventricular contraction . Murmurs ( edit )
+Auscultogram from normal and abnormal heart sounds . Heart murmurs are produced as a result of turbulent flow of blood strong enough to produce audible noise .
+They are usually heard as a whooshing sound . The term murmur only refers to a sound believed to originate within blood flow through or near the heart ; rapid
+blood velocity is necessary to produce a murmur . Most heart problems do not produce any murmur and most valve problems also do not produce an audible murmur .
+Murmurs can be heard in many situations in adults without major congenital heart abnormalities : Regurgitation through the mitral valve is by far the most
+commonly heard murmur , producing a pansystolic / holosystolic murmur which is sometimes fairly loud to a practiced ear , even though the volume of regurgitant
+blood flow may be quite small .
+</item 6>
+
+<item 7>
+Heart sounds
+L.V. Left ventricle . P.A. Pulmonary artery . R.A. Right atrium . R.V. Right ventricle . V.S. Ventricular septum . Heart sounds are the noises generated by the
+beating heart and the resultant flow of blood through it . Specifically , the sounds reflect the turbulence created when the heart valves snap shut . In cardiac
+auscultation , an examiner may use a stethoscope to listen for these unique and distinct sounds that provide important auditory data regarding the condition of
+the heart . In healthy adults , there are two normal heart sounds , often described as a lub and a dub ( or dup ) , that occur in sequence with each heartbeat .
+These are the first heart sound ( S ) and second heart sound ( S ) , produced by the closing of the atrioventricular valves and semilunar valves , respectively
+. In addition to these normal sounds , a variety of other sounds may be present including heart murmurs , adventitious sounds , and gallop rhythms S and S .
+Heart murmurs are generated by turbulent flow of blood , which may occur inside or outside the heart .
+</item 7>
+
+<item 8>
+Heart sounds
+This is a characteristic scratching , creaking , high - pitched sound emanating from the rubbing of both layers of inflamed pericardium . It is the loudest in
+systole , but can often be heard at the beginning and at the end of diastole . It is very dependent on body position and breathing , and changes from hour to
+hour . Surface anatomy ( edit ) The aortic area , pulmonic area , tricuspid area and mitral area are areas on the surface of the chest where the heart is
+auscultated . Heart sounds result from reverberation within the blood associated with the sudden block of flow reversal by the valves closing . Because of this
+, auscultation to determine function of a valve is usually not performed at the position of the valve , but at the position to where the sound waves reverberate
+.
+</item 8>
+
+<item 9>
+Heart sounds
+Main article : Third heart sound Rarely , there may be a third heart sound also called a protodiastolic gallop , ventricular gallop , or informally the ``
+Kentucky '' gallop as an onomatopoeic reference to the rhythm and stress of S1 followed by S2 and S3 together ( S1 = Ken ; S2 = tuck ; S3 = y ) . `` lub - dub -
+ta '' or `` slosh - ing - in '' If new , indicates heart failure or volume overload . It occurs at the beginning of diastole after S2 and is lower in pitch than
+S1 or S2 as it is not of valvular origin . The third heart sound is benign in youth , some trained athletes , and sometimes in pregnancy but if it re-emerges
+later in life it may signal cardiac problems , such as a failing left ventricle as in dilated congestive heart failure ( CHF ) . S3 is thought to be caused by
+the oscillation of blood back and forth between the walls of the ventricles initiated by blood rushing in from the atria .
+</item 9>
+
+<item 10>
+Heart sounds
+The sudden tensing of the chordae tendineae and the squeezing of the ventricles against closed semilunar valves , sends blood rushing back toward the atria ,
+and the parachute - like valves catch the rush of blood in their leaflets causing the valve to snap shut . The S1 sound results from reverberation within the
+blood associated with the sudden block of flow reversal by the valves . The delay of T1 even more than normally causes the split S1 which is heard in a right
+bundle branch blockage . The second heart sound , or S , forms the `` dub '' of `` lub - dub '' and is composed of components A ( aortic valve closure ) and P (
+pulmonary valve closure ) . Normally A precedes P especially during inspiration where a split of S can be heard . It is caused by the closure of the semilunar
+valves ( the aortic valve and pulmonary valve ) at the end of ventricular systole and the beginning of ventricular diastole . As the left ventricle empties ,
+its pressure falls below the pressure in the aorta .
+</item 10>
+=== END ITEM id=c042e017edd47066 ===
+
+=== ITEM id=1b4fdfd156be034b ===
+Gold sentences and facts:
+Sentence 0: The story of Shakespeare 's Hamlet was derived from the legend of Amleth , preserved by 13th - century chronicler Saxo Grammaticus in his Gesta Danorum , as subsequently retold by the 16th - century scholar François de Belleforest . Shakespeare may also have drawn on an earlier Elizabethan play known today as the Ur - Hamlet , though some scholars believe he himself wrote the Ur - Hamlet , later revising it to create the version of Hamlet we now have . He almost certainly wrote his version of the title role for his fellow actor , Richard Burbage , the leading tragedian of Shakespeare 's time . In the 400 years since its inception , the role has been performed by numerous highly acclaimed actors in each successive century .
+  Fact 0.0: The story of Shakespeare's Hamlet was derived from the legend of Amleth.
+  Fact 0.1: The legend of Amleth was preserved by the 13th-century chronicler Saxo Grammaticus in his Gesta Danorum.
+  Fact 0.2: The legend of Amleth was subsequently retold by the 16th-century scholar François de Belleforest.
+  Fact 0.3: Shakespeare may also have drawn on an earlier Elizabethan play known today as the Ur-Hamlet.
+  Fact 0.4: Some scholars believe Shakespeare himself wrote the Ur-Hamlet and later revised it to create the version of Hamlet we have today.
+  Fact 0.5: Shakespeare almost certainly wrote his version of the title role for his fellow actor Richard Burbage.
+  Fact 0.6: Richard Burbage was the leading tragedian of Shakespeare's time.
+  Fact 0.7: In the 400 years since the role of Hamlet was created, it has been performed by numerous highly acclaimed actors.
+  Fact 0.8: The role of Hamlet has been performed by highly acclaimed actors in each successive century for 400 years.
+
+Retrieved items:
+<item 1>
+Hamlet
+Firm evidence for specific early performances of the play is scant . What is known is that the crew of the ship Red Dragon , anchored off Sierra Leone ,
+performed Hamlet in September 1607 ; that the play toured in Germany within five years of Shakespeare 's death ; and that it was performed before James I in
+1619 and Charles I in 1637 . Oxford editor George Hibbard argues that , since the contemporary literature contains many allusions and references to Hamlet (
+only Falstaff is mentioned more , from Shakespeare ) , the play was surely performed with a frequency that the historical record misses . All theatres were
+closed down by the Puritan government during the Interregnum . Even during this time , however , playlets known as drolls were often performed illegally ,
+including one called The Grave - Makers based on Act 5 , Scene 1 of Hamlet . Restoration and 18th century ( edit ) Title page and frontispiece for Hamlet ,
+Prince of Denmark : A Tragedy . As it is now acted at the Theatres - Royal in Drury - Lane and Covent - Garden . London , 1776 The play was revived early in the
+Restoration .
+</item 1>
+
+<item 2>
+Hamlet
+It was probably one of Shakespeare 's most popular works during his lifetime , and still ranks among his most performed , topping the performance list of the
+Royal Shakespeare Company and its predecessors in Stratford - upon - Avon since 1879 . It has inspired many other writers -- from Johann Wolfgang von Goethe and
+Charles Dickens to James Joyce and Iris Murdoch -- and has been described as `` the world 's most filmed story after Cinderella '' . The story of Shakespeare 's
+Hamlet was derived from the legend of Amleth , preserved by 13th - century chronicler Saxo Grammaticus in his Gesta Danorum , as subsequently retold by the 16th
+- century scholar François de Belleforest . Shakespeare may also have drawn on an earlier Elizabethan play known today as the Ur - Hamlet , though some scholars
+believe he himself wrote the Ur - Hamlet , later revising it to create the version of Hamlet we now have . He almost certainly wrote his version of the title
+role for his fellow actor , Richard Burbage , the leading tragedian of Shakespeare 's time .
+</item 2>
+
+<item 3>
+Hamlet
+Hamlet is not among them , suggesting that it had not yet been written . As Hamlet was very popular , Bernard Lott , the series editor of New Swan , believes it
+`` unlikely that he ( Meres ) would have overlooked ... so significant a piece '' . The phrase `` little eyases '' in the First Folio ( F1 ) may allude to the
+Children of the Chapel , whose popularity in London forced the Globe company into provincial touring . This became known as the War of the Theatres , and
+supports a 1601 dating . Katherine Duncan - Jones accepts a 1600 -- 1 attribution for the date Hamlet was written , but notes that the Lord Chamberlain 's Men ,
+playing Hamlet in the 3000 - capacity Globe , were unlikely to be put to any disadvantage by an audience of `` barely one hundred '' for the Children of the
+Chapel 's equivalent play , Antonio 's Revenge ; she believes that Shakespeare , confident in the superiority of his own work , was making a playful and
+charitable allusion to his friend John Marston 's very similar piece .
+</item 3>
+
+<item 4>
+Hamlet
+London , 1776 The play was revived early in the Restoration . When the existing stock of pre-civil war plays was divided between the two newly created patent
+theatre companies , Hamlet was the only Shakespearean favourite that Sir William Davenant 's Duke 's Company secured . It became the first of Shakespeare 's
+plays to be presented with movable flats painted with generic scenery behind the proscenium arch of Lincoln 's Inn Fields Theatre . This new stage convention
+highlighted the frequency with which Shakespeare shifts dramatic location , encouraging the recurrent criticism of his failure to maintain unity of place . In
+the title role , Davenant cast Thomas Betterton , who continued to play the Dane until he was 74 . David Garrick at Drury Lane produced a version that adapted
+Shakespeare heavily ; he declared : `` I had sworn I would not leave the stage till I had rescued that noble play from all the rubbish of the fifth act . I have
+brought it forth without the grave - digger 's trick , Osrick , & the fencing match '' . The first actor known to have played Hamlet in North America is Lewis
+Hallam . Jr.
+</item 4>
+
+<item 5>
+Hamlet
+Jenkins suggests that any personal satire may be found in the name `` Polonius '' , which might point to a Polish or Polonian connection . G.R. Hibbard
+hypothesised that differences in names ( Corambis / Polonius : Montano / Raynoldo ) between the First Quarto and other editions might reflect a desire not to
+offend scholars at Oxford University . Date ( edit ) John Barrymore as Hamlet ( 1922 ) `` Any dating of Hamlet must be tentative '' , cautions the New Cambridge
+editor , Phillip Edwards . The earliest date estimate relies on Hamlet 's frequent allusions to Shakespeare 's Julius Caesar , itself dated to mid-1599 . The
+latest date estimate is based on an entry , of 26 July 1602 , in the Register of the Stationers ' Company , indicating that Hamlet was `` latelie Acted by the
+Lo : Chamberleyne his servantes '' . In 1598 , Francis Meres published his Palladis Tamia , a survey of English literature from Chaucer to its present day ,
+within which twelve of Shakespeare 's plays are named .
+</item 5>
+
+<item 6>
+Hamlet
+1 Act I 2.2 Act II 2.3 Act III 2.4 Act IV 2.5 Act V 3 Sources 4 Date 5 Texts 6 Analysis and criticism 6.1 Critical history 6.2 Dramatic structure 6.3 Length 6.4
+Language 7 Context and interpretation 7.1 Religious 7.2 Philosophical 7.3 Psychoanalytic 7.4 Feminist 8 Influence 9 Performance history 9.1 Shakespeare 's day
+to the Interregnum 9.2 Restoration and 18th century 9.3 19th century 9.4 20th century 9.5 21st century 9.6 Film and TV performances 9.7 Stage pastiches 10 Notes
+and references 10.1 Notes 10.2 References 11 Sources 11.1 Editions of Hamlet 11.2 Secondary sources 12 External links 12.1 Texts 12.2 Analysis 12.3 Related
+works Characters ( edit ) Main article : Characters in Hamlet Hamlet -- Son of the late King and nephew of the present King , Claudius .
+</item 6>
+
+<item 7>
+Hamlet
+In the 400 years since its inception , the role has been performed by numerous highly acclaimed actors in each successive century . Three different early
+versions of the play are extant : the First Quarto ( Q1 , 1603 ) ; the Second Quarto ( Q2 , 1604 ) ; and the First Folio ( F1 , 1623 ) . Each version includes
+lines and entire scenes missing from the others . The play 's structure and depth of characterisation have inspired much critical scrutiny . One such example is
+the centuries - old debate about Hamlet 's hesitation to kill his uncle , which some see as merely a plot device to prolong the action , but which others argue
+is a dramatisation of the complex philosophical and ethical issues that surround cold - blooded murder , calculated revenge , and thwarted desire . More
+recently , psychoanalytic critics have examined Hamlet 's unconscious desires , while feminist critics have re-evaluated and attempted to rehabilitate the often
+maligned characters of Ophelia and Gertrude . Contents ( hide ) 1 Characters 2 Plot 2.1 Act I 2.2 Act II 2.3 Act III 2.
+</item 7>
+
+<item 8>
+Hamlet
+For Ian Charleson : A Tribute . London : Constable and Company . ISBN 978 - 0094702509 . Moody , Jane ( 2002 ) . `` Romantic Shakespeare '' . In Wells , Stanley
+; Stanton , Sarah . The Cambridge Companion to Shakespeare on Stage . Cambridge Companions to Literature . Cambridge : Cambridge University Press . pp. 37 -- 57
+. ISBN 0 - 521 - 79711 - X . Morrison , Michael A. ( 2002 ) . `` Shakespeare in North America '' . In Wells , Stanley ; Stanton , Sarah . The Cambridge
+Companion to Shakespeare on Stage . Cambridge Companions to Literature . Cambridge : Cambridge University Press . pp. 230 -- 58 . ISBN 0 - 521 - 79711 - X .
+Morrison , Michael A. ( 1997 ) . John Barrymore , Shakespearean Actor . Cambridge : Cambridge University Press . ISBN 0 - 521 - 62028 - 7 . `` Hamlet 1963 '' .
+Royal National Theatre . n.d.
+</item 8>
+
+<item 9>
+Hamlet
+He is dethroned by the spectre of an actor , and we shall never be able to keep the usurper out of our dreams . Maurice Maeterlinck in La Jeune Belgique ( 1890
+) . Shakespeare 's day to the Interregnum ( edit ) Shakespeare almost certainly wrote the role of Hamlet for Richard Burbage . He was the chief tragedian of the
+Lord Chamberlain 's Men , with a capacious memory for lines and a wide emotional range . Judging by the number of reprints , Hamlet appears to have been
+Shakespeare 's fourth most popular play during his lifetime -- only Henry IV Part 1 , Richard III and Pericles eclipsed it . Shakespeare provides no clear
+indication of when his play is set ; however , as Elizabethan actors performed at the Globe in contemporary dress on minimal sets , this would not have affected
+the staging . Firm evidence for specific early performances of the play is scant .
+</item 9>
+
+<item 10>
+Hamlet
+( father ) Mary Arden ( mother ) Gilbert Shakespeare ( brother ) Joan Shakespeare ( sister ) Edmund Shakespeare ( brother ) Richard Shakespeare ( grandfather )
+John Hall ( son - in - law ) Thomas Quiney ( son - in - law ) Thomas Nash ( grandson - in - law ) * Shakespeare and other authors Lost William Shakespeare 's
+Hamlet Characters Hamlet Claudius Gertrude Ghost Polonius Laertes Ophelia Horatio Rosencrantz and Guildenstern Fortinbras The Gravediggers Yorick Soliloquies ``
+To be , or not to be '' `` Mortal coil '' `` What a piece of work is a man '' `` Speak the speech '' Words and phrases `` The lady doth protest too much ,
+methinks '' `` Thy name is '' `` Primrose path '' Terminology Dumbshow Induction Quiddity Substitution Sources Criticism Legend of Hamlet The Spanish Tragedy Ur
+- Hamlet Critical approaches Bibliographies Horwendill Saxo Grammaticus House of Gonzaga Damon and Pythias Influence Common phrases from Hamlet Hamlet in
+popular culture References to Ophelia Language of flowers Human skull symbolism Performances Moscow Art Theatre ( 1911 -- 1912 )
+</item 10>
+=== END ITEM id=1b4fdfd156be034b ===
+
+=== ITEM id=784a47124cccde7a ===
+Gold sentences and facts:
+Sentence 0: The Sahara ( Arabic : الصحراء الكبرى ‎ , aṣ - ṣaḥrāʼ al - kubrá , ' the Great Desert ' ) is the largest hot desert and the third largest desert in the world after Antarctica and the Arctic . Its area of 9,200,000 square kilometres ( 3,600,000 sq mi ) is comparable to the area of China or the United States . The name ' Sahara ' is derived from dialectal Arabic word for `` desert '' , ṣaḥra ( صحرا / ˈsʕaħra / ) .
+  Fact 0.0: The Sahara is a desert.
+  Fact 0.1: The Sahara's Arabic name is الصحراء الكبرى, transliterated aṣ-ṣaḥrāʼ al-kubrá, meaning 'the Great Desert'.
+  Fact 0.2: The Sahara is the largest hot desert in the world.
+  Fact 0.3: The Sahara is the third largest desert in the world, after Antarctica and the Arctic.
+  Fact 0.4: The Sahara's area is 9,200,000 square kilometres (3,600,000 sq mi).
+  Fact 0.5: The Sahara's area is comparable to the area of China.
+  Fact 0.6: The Sahara's area is comparable to the area of the United States.
+  Fact 0.7: The name 'Sahara' is derived from a dialectal Arabic word for 'desert'.
+  Fact 0.8: The dialectal Arabic word is ṣaḥra (صحرا).
+
+Retrieved items:
+<item 1>
+Sahara
+These schemes often lead to soil degradation and salinization . Researchers from Hacettepe University ( Yücekutlu , N. et al. , 2011 ) have reported that
+Saharan soil may have bio-available iron and also some essential macro and micro nutrient elements suitable for use as fertilizer for growing wheat . History
+People lived on the edge of the desert thousands of years ago since the end of the last glacial period . The Sahara was then a much wetter place than it is
+today . Over 30,000 petroglyphs of river animals such as crocodiles survive , with half found in the Tassili n'Ajjer in southeast Algeria . Fossils of dinosaurs
+, including Afrovenator , Jobaria and Ouranosaurus , have also been found here . The modern Sahara , though , is not lush in vegetation , except in the Nile
+Valley , at a few oases , and in the northern highlands , where Mediterranean plants such as the olive tree are found to grow .
+</item 1>
+
+<item 2>
+Sahara
+The Saharan halophytics cover 54,000 square kilometres ( 21,000 sq mi ) including : the Qattara and Siwa depressions in northern Egypt , the Tunisian salt lakes
+of central Tunisia , Chott Melghir in Algeria , and smaller areas of Algeria , Mauritania , and the southern part of Morocco . The Tanezrouft is one of the
+harshest regions on Earth as well as one of the hottest and driest parts of the Sahara , with no vegetation and very little life . It is along the borders of
+Algeria , Niger ) ) and Mali , west of the Hoggar mountains . Flora and fauna The flora of the Sahara is highly diversified based on the bio-geographical
+characteristics of this vast desert . Floristically , the Sahara has three zones based on the amount of rainfall received -- the Northern ( Mediterranean ) ,
+Central and Southern Zones . There are two transitional zones -- the Mediterranean - Sahara transition and the Sahel transition zone . The Saharan flora
+comprises around 2800 species of vascular plants . Approximately a quarter of these are endemic . About half of these species are common to the flora of the
+Arabian deserts .
+</item 2>
+
+<item 3>
+Sahara
+The desert comprises much of North Africa , excluding the fertile region on the Mediterranean Sea coast , the Atlas Mountains of the Maghreb , and the Nile
+Valley in Egypt and Sudan . It stretches from the Red Sea in the east and the Mediterranean in the north to the Atlantic Ocean in the west , where the landscape
+gradually changes from desert to coastal plains . To the south , it is bounded by the Sahel , a belt of semi-arid tropical savanna around the Niger River valley
+and the Sudan Region of Sub-Saharan Africa . The Sahara can be divided into several regions including : the western Sahara , the central Ahaggar Mountains , the
+Tibesti Mountains , the Aïr Mountains , the Ténéré desert , and the Libyan Desert . For several hundred thousand years , the Sahara has alternated between
+desert and savanna grassland in a 41,000 year cycle caused by changes ( `` precession '' ) in the Earth 's axis as it rotates around the sun , which change the
+location of the North African Monsoon . It is next expected to become green in about 15,000 years ( 17,000 AD ) .
+</item 3>
+
+<item 4>
+Sahara
+Oases support some life forms in extremely arid deserts . An intense Saharan dust storm sent a massive dust plume northwestward over the Atlantic Ocean on 2
+March 2003 Butte naturally sculpted by the wind The Sahara covers large parts of Algeria , Chad , Egypt , Libya , Mali , Mauritania , Niger , Western Sahara ,
+Sudan and Tunisia . It covers 9 million square kilometres ( 3,500,000 sq mi ) , amounting to 31 % of Africa . If all areas with a mean annual precipitation of
+less than 250 mm were included , the Sahara would be 11 million square kilometres ( 4,200,000 sq mi ) . It is one of three distinct physiographic provinces of
+the African massive physiographic division . The Sahara is mainly rocky hamada ( stone plateaus ) , Ergs ( sand seas - large areas covered with sand dunes )
+form only a minor part , but many of the sand dunes are over 180 metres ( 590 ft ) high .
+</item 4>
+
+<item 5>
+Sahara
+The Tuareg once controlled the central Sahara and its trade . Ottoman turkish era In the 16th century the northern fringe of the Sahara , such as coastal
+regencies in present - day Algeria and Tunisia , as well as some parts of present - day Libya , together with the semi-autonomous kingdom of Egypt , were
+occupied by the Ottoman Empire . From 1517 Egypt was a valued part of the Ottoman Empire , ownership of which provided the Ottomans with control over the Nile
+Valley , the east Mediterranean and North Africa . The benefit of the Ottoman Empire was the freedom of movement for citizens and goods . Traders exploited the
+Ottoman land routes to handle the spices , gold and silk from the East , manufactured goods from Europe , and the slave and gold traffic from Africa . Arabic
+continued as the local language and Islamic culture was much reinforced . The Sahel and southern Sahara regions were home to several independent states or to
+roaming Tuareg clans . European colonialism European colonialism in the Sahara began in the 19th century .
+</item 5>
+
+<item 6>
+Sahara
+The Garamantes ' civilization eventually collapsed after they had depleted available water in the aquifers and could no longer sustain the effort to extend the
+tunnels further into the mountains . Berbers Zawiya at the entrance of Taghit , Algeria The Berber people occupied ( and still occupy ) much of the Sahara . The
+Garamantes Berbers built a prosperous empire in the heart of the desert . The Tuareg nomads continue to inhabit and move across wide Sahara surfaces to the
+present day . Islamic expansion Main articles : Trans - Saharan trade and Islamization of Sudan The Byzantine Empire ruled the northern shores of the Sahara
+from the 5th to the 7th centuries . After the Muslim conquest of Arabia , specifically the Arabian peninsula , the Muslim conquest of North Africa began in the
+mid-7th to early 8th centuries and Islamic influence expanded rapidly on the Sahara . By the end of 641 all of Egypt was in Muslim hands . Trade across the
+desert intensified , and a significant slave trade crossed the desert . It has been estimated that from the 10th to 19th centuries some 6,000 to 7,000 slaves
+were transported north each year .
+</item 6>
+
+<item 7>
+Sahara
+Stone arrowheads , knives and scrapers from the era are commonly found . Burial items included pottery , jewelry , farming and hunting equipment , and assorted
+foods including dried meat and fruit . Burial in desert environments appears to enhance Egyptian preservation rites , and the dead were buried facing due west .
+By 3400 BCE , the Sahara was as dry as it is today , due to reduced precipitation and higher temperatures resulting from a shift in the Earth 's orbit . As a
+result of this aridification , it became a largely impenetrable barrier to humans , with the remaining settlements mainly being concentrated around the numerous
+oases that dot the landscape . Little trade or commerce is known to have passed through the interior in subsequent periods , the only major exception being the
+Nile Valley . The Nile , however , was impassable at several cataracts , making trade and contact by boat difficult . Phoenicians Further information : History
+of Western Sahara The people of Phoenicia , who flourished from 1200 -- 800 BCE , created a confederation of kingdoms across the entire Sahara to Egypt .
+</item 7>
+
+<item 8>
+Sahara
+Contents ( hide ) 1 Geography 2 Climate 2.1 Temperature 2.2 Precipitation 2.3 Desertification and prehistoric climate 2.3. 1 Evidence for cycles 3 Ecoregions 4
+Flora and fauna 5 History 5.1 Kiffians 5.2 Tenerians 5.3 Tashwinat Mummy 5.4 Nubians 5.5 Egyptians 5.6 Phoenicians 5.7 Greeks 5.8 Urban civilization 5.9 Berbers
+5.10 Islamic expansion 5.11 Ottoman Turkish era 5.12 European colonialism 5.13 Breakup of the empires and afterwards 6 People and languages 7 See also 8
+References 9 Bibliography 10 External links Geography A geographical map of Africa , showing the ecological break that defines the Saharan area . An oasis in
+the Ahaggar Mountains . Oases support some life forms in extremely arid deserts .
+</item 8>
+
+<item 9>
+Sahara
+It was long believed that the region had been this way since about 1600 BCE , after shifts in the Earth 's axis increased temperatures and decreased
+precipitation , which led to the abrupt desertification of North Africa about 5,400 years ago . However , this theory has recently been called into dispute ,
+when samples taken from several 7 million year old sand deposits led scientists to reconsider the timeline for desertification . Kiffians The Kiffian culture is
+a prehistoric industry , or domain , that existed between 10,000 and 8,000 years ago in the Sahara , during the Neolithic Subpluvial . Human remains from this
+culture were found in 2000 at a site known as Gobero , located in Niger in the Ténéré Desert . The site is known as the largest and earliest grave of Stone Age
+people in the Sahara desert . The Kiffians were skilled hunters . Bones of many large savannah animals that were discovered in the same area suggest that they
+lived on the shores of a lake that was present during the Holocene Wet Phase , a period when the Sahara was verdant and wet . The Kiffian people were tall ,
+standing over six feet in height .
+</item 9>
+
+<item 10>
+Sahara
+Centralized states thus surrounded the desert on the north and east ; it remained outside the control of these states . Raids from the nomadic Berber people of
+the desert were of constant concern to those living on the edge of the desert . Urban civilization Market on the main square of Ghardaïa ( 1971 ) An urban
+civilization , the Garamantes , arose around 500 BCE in the heart of the Sahara , in a valley that is now called the Wadi al - Ajal in Fezzan , Libya . The
+Garamantes achieved this development by digging tunnels far into the mountains flanking the valley to tap fossil water and bring it to their fields . The
+Garamantes grew populous and strong , conquering their neighbors and capturing many slaves ( who were put to work extending the tunnels ) . The ancient Greeks
+and the Romans knew of the Garamantes and regarded them as uncivilized nomads . However , they traded with them , and a Roman bath has been found in the
+Garamantes ' capital of Garama . Archaeologists have found eight major towns and many other important settlements in the Garamantes ' territory .
+</item 10>
+=== END ITEM id=784a47124cccde7a ===
+
+=== ITEM id=e80cdc89099426d4 ===
+Gold sentences and facts:
+Sentence 0: Sinéad ( / ʃɪˈneɪd / shi - NADE ; Irish pronunciation : ( ˈʃɪnjeːd̪ɣ ) or ( ʃɪˈnjeːd̪ɣ ) ) , is an Irish feminine name . It is derived from the French Jeanette , which is cognate to the English Janet , itself a feminine form of the Hebrew Yohannan , `` God forgave / God gratified '' . In English , Sinéad is also commonly spelled Sinead . The name is generally translated into English as either Jane or Jennifer , or as the female version of the Scottish name Jean .
+  Fact 0.0: Sinéad is an Irish feminine name.
+  Fact 0.1: Sinéad is pronounced /ʃɪˈneɪd/, shi-NADE, in English.
+  Fact 0.2: Sinéad has an Irish pronunciation of /ˈʃɪnjeːd̪ɣ/ or /ʃɪˈnjeːd̪ɣ/.
+  Fact 0.3: Sinéad is derived from the French name Jeanette.
+  Fact 0.4: Jeanette is cognate to the English name Janet.
+  Fact 0.5: Janet is itself a feminine form of the Hebrew name Yohannan.
+  Fact 0.6: Yohannan means 'God forgave' or 'God gratified'.
+  Fact 0.7: Sinéad is also commonly spelled Sinead in English.
+  Fact 0.8: The name Sinéad is generally translated into English as Jane or Jennifer.
+  Fact 0.9: The name Sinéad is generally translated into English as the female version of the Scottish name Jean.
+
+Retrieved items:
+<item 1>
+I before E except after C
+You can help by expanding it with reliably sourced entries . / aɪ / PRICE eider , either * , einsteinium , feisty , gneiss , heigh - ho * , height , heist ,
+kaleidoscope , leitmotiv , neither * , Rottweiler , seismic , sleight , stein , zeitgeist . ( This sound may also be spelled ie , but only at the end of a
+morpheme as in die , pies , cried . ) / ɪ / or / ə / ( see weak - vowel merger ) counterfeit , foreign , forfeit , reveille * , sovereign , surfeit / ɛ / DRESS
+heifer , leisure * , nonpareil * , peignoir * . ( This sound is spelled ie in the word friend . ) / æ / TRAP reveille * / ɜ / NURSE O'Beirne e and i in separate
+segments ( and often separate syllables or morphemes ) Prefixes de - or re - before words starting with i ( deindustrialize , reignite , etc . )
+</item 1>
+
+<item 2>
+Sinéad
+a character on the TV series Hollyoaks , played by Stephanie Davis Sinead Starling is a fictional character from The 39 Clues . Sinéad Ní Shúilleabháin , a
+fictional character in The Wind That Shakes the Barley See also ( edit ) Siobhán , feminine Irish - language name ultimately derived from the same Hebrew name
+References ( edit ) ( hide ) Gaelic given names Native masculine names Aodh Aodhán Aonghus Art Breandán Breasal Brian Cailean Cainnech Caoimhín Cathal Cearbhall
+Cian Cianán Ciarán Cinnéididh Colm Conall Conán Conchobhar Cormac Criofan Dáire Déaglán Diarmaid Domhnall Donn Donnchadh Eachann Éibhear Eochaidh Eóghan
+Fearghal Fearghus Féilim Fiach Fínghin Fionn Fionnbharr Fionnlagh Fionntán Flann Garaidh Iarlaith Lorcan Lughaidh Muircheartach Muiredach Muirgheas Murchadh
+</item 2>
+
+<item 3>
+Sing (2016 American film)
+The animation was created entirely in France by Illumination MacGuff . Soundtrack ( edit ) Main article : Sing : Original Motion Picture Soundtrack A soundtrack
+album for the film was released on December 21 , 2016 . Release ( edit ) The almost complete film was screened as a work in progress beginning September 11 ,
+2016 at the Toronto International Film Festival . Universal Studios released the film on December 21 , 2016 . Home Media ( edit ) Sing was released on Blu - ray
+, Blu - ray 3D , Ultra HD Blu - ray and DVD on March 21 , 2017 . It includes three short films : Gunter Babysits , Love at First Sight , and Eddie 's Life Coach
+. In Gunter Babysits , Gunter offers to watch over Rosita and Norman 's piglets while they are away as he works to prove himself to be a good babysitter . In
+Love at First Sight , Johnny sets Miss Crawly up with an online dating website where she manages to score a date with a lizard named Herman .
+</item 3>
+
+<item 4>
+I before E except after C
+In the Great Vowel Shift , sounds ( eː ) and ( ɛː ) were raised to ( iː ) and ( eː ) respectively , with the latter subsequently becoming the diphthong ( eɪ ) .
+Exceptionally , words in - ceive and their derivatives evolved from ( eː ) to ( iː ) rather than ( eɪ ) . History of the mnemonic ( edit ) The mnemonic ( in its
+short form ) is found as early as 1866 , as a footnote in Manual of English Spelling , edited by schools inspector James Stuart Laurie from the work of a
+Tavistock schoolmaster named Marshall . Michael Quinion surmises the rhyme was already established before this date . An 1834 manual states a similar rule in
+prose ; others in 1855 and 1862 use different rhymes . Many textbooks from the 1870s on use the same rhyme as Laurie 's book .
+</item 4>
+
+<item 5>
+Sinéad
+Sinéad - wikipedia Sinéad Jump to : navigation , search Sinéad ( / ʃɪˈneɪd / shi - NADE ; Irish pronunciation : ( ˈʃɪnjeːd̪ɣ ) or ( ʃɪˈnjeːd̪ɣ ) ) , is an Irish
+feminine name . It is derived from the French Jeanette , which is cognate to the English Janet , itself a feminine form of the Hebrew Yohannan , `` God forgave
+/ God gratified '' . In English , Sinéad is also commonly spelled Sinead . The name is generally translated into English as either Jane or Jennifer , or as the
+female version of the Scottish name Jean . Sinéad may refer to : Contents ( hide ) 1 People 2 Fiction 3 See also 4 References People ( edit ) Sports Sinéad
+Cahalan , camogie player Sinead Jennings , rower Sinead Kerr , ice dancer Sinéad Millea , former camogie player Sinead Miller , cyclist Sinead Russell , Olympic
+Swimmer Music `` Sinéad '' ,
+</item 5>
+
+<item 6>
+Sinéad
+Lughaidh Muircheartach Muiredach Muirgheas Murchadh Niall Oisín Rían Rónán Ruairí Searbhreathach Tadhg Toirdelbach Native feminine names Aíbinn Aifric Áine
+Aisling Aoife Barrdhubh Bébinn Bríd Cacht Caoimhe Ciara Clíona Clodagh Cobhlaith Dearbhail Dearbhfhorghaill Deirbhile Deirdre Dubhchobhlaigh Eithne Éadaoin
+Feidhelm Fíona Fionnuala Forbflaith Fíneamhain Gormflaith Gráinne Íde Lasairfhíona Meabh Mór Muirgheal Muirenn Niamh Nuala Órlaith Sadhbh Saoirse Síthmaith
+Sláine Sorcha Úna Germanic - derived masculine names Amhlaoibh Annraoi Dubhghall Éamonn Gearóid Gofraid Ímar Lachlann Liam Maghnus Raghnall Risteárd Roibeárd
+Séarlas
+</item 6>
+
+<item 7>
+Sing (2016 American film)
+Accolades ( edit ) List of awards and nominations Award Date of ceremony Recipient ( s ) Result Ref ( s ) AARP Annual Movies for Grownups Awards February 6 ,
+2017 Best Movie for Grownups who Refuse to Grow Up Sing Nominated Annie Awards February 4 , 2017 Outstanding Achievement , Music in an Animated Feature
+Production Joby Talbot Golden Globe Awards January 8 , 2017 Best Animated Feature Film Sing Best Original Song `` Faith '' -- Ryan Tedder , Stevie Wonder and
+Francis Farewell Starlite Hollywood Music in Media Awards November 17 , 2016 Best Song -- Animated Film Best Soundtrack Album Sing : Original Motion Picture
+Soundtrack Outstanding Music Supervision -- Film Jojo Villanueva Won Nickelodeon Kids ' Choice Awards March 11 , 2017 Favorite Animated Movie Sing Nominated
+Favorite Voice From an Animated Movie Reese Witherspoon Most Wanted Pet Favorite Soundtrack Sing Saturn Awards June 28 , 2017 Best Animated Film Nominated
+Sequel ( edit ) Universal and Illumination have announced plans for a sequel , tentatively titled Sing 2 , slated for December 25 , 2020 .
+</item 7>
+
+<item 8>
+Sinéad
+Liam Maghnus Raghnall Risteárd Roibeárd Séarlas Somhairle Tiobóid Tormond Ualtar Ùisdean Bible - derived masculine names Abracham Adhamh Árón Biniáimin Daibhí
+Dainéal Eafráim Gaibrial Íosac Maitiú Maois Mícheál ( Maidhc ) Nóe Seán Séamus Seosamh Síomón Solamh Tomás Bible - derived feminine names Abigeál Ánna Eábha
+Eilís Léá Madailéin Máire Mallaidh Náoimí Ráichéal Ríobhca Rút Sinéad Siobhán Seacailín Seosaimhín Latin / Greek - derived masculine names Aindréas Antóin
+Críostóir Damhnaic Pádraig Proinsias Giolla Críost Gréagóir Labhrás León Máirtín Nioclás Nollaig Peadar Pilib Pól Seoirse Stíofán Téodóir Uinseann See also
+Goidelic languages
+</item 8>
+
+<item 9>
+Sinéad
+cyclist Sinead Russell , Olympic Swimmer Music `` Sinéad '' , a song by Within Temptation from their album The Unforgiving , and the name of a character in the
+album 's tie - in comic book Sinead Harnett , singer / songwriter Sinéad Lohan , singer / songwriter Sinéad Madden , singer / songwriter Sinéad Mulvey , singer
+, air hostess Sinéad O'Carroll , singer with Irish pop band B * Witched Sinéad O'Connor , singer / songwriter Sinéad Quinn , recording artist , reality show
+contestant Film and television Sinéad Cusack , actress Sinead Desmond , TV presenter Sinead Keenan , actress Sinead Matthews , actress Sinéad Moynihan , model
+and actress Sinéad Noonan , model and actress Other Sinéad de Valera , children 's book author Sinéad Morrissey , poet Sinéad Ní Loideáin , presenter Sinéad Ní
+Neachtain , magazine editor Sinéad Sheppard , dancer Fiction ( edit ) Sinead O'Connor ( Hollyoaks ) , a character on the TV series Hollyoaks ,
+</item 9>
+
+<item 10>
+Sinéad
+Stíofán Téodóir Uinseann See also Goidelic languages Irish language Scottish Gaelic language Manx language Irish name List of Scottish Gaelic given names
+Scottish Gaelic name Irish genealogy This page or section lists people that share the same given name . If an internal link led you here , you may wish to
+change that link to point directly to the intended article . Retrieved from `` https://en.wikipedia.org/w/index.php?title= Sinéad&oldid = 792745813 ''
+Categories : Given names Irish feminine given names Irish - language feminine given names Hidden categories : All set index articles Talk Contents About
+Wikipedia Čeština Deutsch Español Français Italiano 日本 語 Edit links This page was last edited on 28 July 2017 , at 11 : 52 . Text is available under the
+Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use and Privacy Policy .
+Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 10>
+=== END ITEM id=e80cdc89099426d4 ===

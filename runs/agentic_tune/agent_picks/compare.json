@@ -1,0 +1,114 @@
+{
+ "Answered right": {
+  "old": {
+   "per_repeat": [
+    23,
+    17,
+    22
+   ],
+   "in_all_3": 9,
+   "in_none": 7,
+   "mixed": 22
+  },
+  "new": {
+   "per_repeat": [
+    26,
+    28,
+    27
+   ],
+   "in_all_3": 22,
+   "in_none": 5,
+   "mixed": 11
+  },
+  "matrix_2of3_new_vs_old": [
+   20,
+   6,
+   2,
+   10
+  ]
+ },
+ "Gold facts ≥50%": {
+  "old": {
+   "per_repeat": [
+    24,
+    23,
+    20
+   ],
+   "in_all_3": 13,
+   "in_none": 5,
+   "mixed": 20
+  },
+  "new": {
+   "per_repeat": [
+    28,
+    29,
+    31
+   ],
+   "in_all_3": 25,
+   "in_none": 2,
+   "mixed": 11
+  },
+  "matrix_2of3_new_vs_old": [
+   19,
+   8,
+   2,
+   9
+  ]
+ },
+ "Gold facts ≥75%": {
+  "old": {
+   "per_repeat": [
+    19,
+    15,
+    11
+   ],
+   "in_all_3": 3,
+   "in_none": 10,
+   "mixed": 25
+  },
+  "new": {
+   "per_repeat": [
+    21,
+    22,
+    24
+   ],
+   "in_all_3": 15,
+   "in_none": 7,
+   "mixed": 16
+  },
+  "matrix_2of3_new_vs_old": [
+   11,
+   10,
+   3,
+   14
+  ]
+ },
+ "Gold facts 100%": {
+  "old": {
+   "per_repeat": [
+    15,
+    11,
+    7
+   ],
+   "in_all_3": 0,
+   "in_none": 16,
+   "mixed": 22
+  },
+  "new": {
+   "per_repeat": [
+    17,
+    22,
+    21
+   ],
+   "in_all_3": 12,
+   "in_none": 11,
+   "mixed": 15
+  },
+  "matrix_2of3_new_vs_old": [
+   9,
+   12,
+   2,
+   15
+  ]
+ }
+}

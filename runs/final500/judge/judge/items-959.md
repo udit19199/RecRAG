@@ -1,0 +1,830 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=1ca1687f3245d169 ===
+Gold sentences and facts:
+Sentence 0: In the light - dependent reactions ( mainly three vital reaction steps : ( I ) Hill and Bendall 's Z - scheme of cyclic and non-cyclic reactions , ( II ) Mitchell 's chemi - osmosis for ATP synthesis and ( III ) Dolai 's S - state diagrams in water - splitting ) , one molecule of the pigment chlorophyll absorbs one photon and loses one electron . This electron is passed to a modified form of chlorophyll called pheophytin , which passes the electron to a quinone molecule , starting the flow of electrons down an electron transport chain that leads to the ultimate reduction of NADP to NADPH . In addition , this creates a proton gradient ( energy gradient ) across the chloroplast membrane , which is used by ATP synthase in the synthesis of ATP . The chlorophyll molecule ultimately regains the electron it lost when a water molecule is split in a process called photolysis , which releases a dioxygen ( O ) molecule as a waste product .
+  Fact 0.0: The light-dependent reactions have three vital reaction steps.
+  Fact 0.1: Step I of the light-dependent reactions is Hill and Bendall's Z-scheme of cyclic and non-cyclic reactions.
+  Fact 0.2: Step II of the light-dependent reactions is Mitchell's chemi-osmosis for ATP synthesis.
+  Fact 0.3: Step III of the light-dependent reactions is Dolai's S-state diagrams in water-splitting.
+  Fact 0.4: In the light-dependent reactions, one molecule of the pigment chlorophyll absorbs one photon.
+  Fact 0.5: In the light-dependent reactions, one molecule of chlorophyll loses one electron.
+  Fact 0.6: The lost electron is passed to a modified form of chlorophyll called pheophytin.
+  Fact 0.7: Pheophytin passes the electron to a quinone molecule.
+  Fact 0.8: This starts the flow of electrons down an electron transport chain.
+  Fact 0.9: The electron transport chain leads to the ultimate reduction of NADP to NADPH.
+  Fact 0.10: The electron flow creates a proton gradient (energy gradient) across the chloroplast membrane.
+  Fact 0.11: ATP synthase uses the proton gradient in the synthesis of ATP.
+  Fact 0.12: The chlorophyll molecule ultimately regains the electron it lost.
+  Fact 0.13: The electron is regained when a water molecule is split in a process called photolysis.
+  Fact 0.14: Photolysis releases a dioxygen (O) molecule as a waste product.
+Sentence 1: Although photosynthesis is performed differently by different species , the process always begins when energy from light is absorbed by proteins called reaction centres that contain green chlorophyll pigments . In plants , these proteins are held inside organelles called chloroplasts , which are most abundant in leaf cells , while in bacteria they are embedded in the plasma membrane . In these light - dependent reactions , some energy is used to strip electrons from suitable substances , such as water , producing oxygen gas . The hydrogen freed by the splitting of water is used in the creation of two further compounds that act as an immediate energy storage means : reduced nicotinamide adenine dinucleotide phosphate ( NADPH ) and adenosine triphosphate ( ATP ) , the `` energy currency '' of cells .
+  Fact 1.0: Photosynthesis is performed differently by different species.
+  Fact 1.1: Photosynthesis always begins when energy from light is absorbed by proteins called reaction centres.
+  Fact 1.2: Reaction centres are proteins that contain green chlorophyll pigments.
+  Fact 1.3: In plants, reaction centres are held inside organelles called chloroplasts.
+  Fact 1.4: Chloroplasts are most abundant in leaf cells.
+  Fact 1.5: In bacteria, reaction centres are embedded in the plasma membrane.
+  Fact 1.6: In the light-dependent reactions, some energy is used to strip electrons from suitable substances, such as water.
+  Fact 1.7: The light-dependent reactions produce oxygen gas.
+  Fact 1.8: The hydrogen freed by splitting water is used in the creation of two further compounds.
+  Fact 1.9: The two compounds act as an immediate energy storage means.
+  Fact 1.10: The two compounds are reduced nicotinamide adenine dinucleotide phosphate (NADPH) and adenosine triphosphate (ATP).
+  Fact 1.11: ATP is the energy currency of cells.
+Sentence 2: Photosynthesis occurs in two stages . In the first stage , light - dependent reactions or light reactions capture the energy of light and use it to make the energy - storage molecules ATP and NADPH . During the second stage , the light - independent reactions use these products to capture and reduce carbon dioxide .
+  Fact 2.0: Photosynthesis occurs in two stages.
+  Fact 2.1: In the first stage, light-dependent reactions (light reactions) capture the energy of light.
+  Fact 2.2: In the first stage, the light-dependent reactions use the captured energy to make the energy-storage molecules ATP and NADPH.
+  Fact 2.3: During the second stage, the light-independent reactions use ATP and NADPH.
+  Fact 2.4: In the second stage, the light-independent reactions capture and reduce carbon dioxide.
+
+Retrieved items:
+<item 1>
+Photosynthesis
+but canceling n water molecules from each side gives the net equation : CO + H O + photons → ( CH O ) + O carbon dioxide + water + light energy → carbohydrate +
+oxygen Other processes substitute other compounds ( such as arsenite ) for water in the electron - supply role ; for example some microbes use sunlight to
+oxidize arsenite to arsenate : The equation for this reaction is : CO + ( AsO 3 − 3 ) + photons → ( AsO 3 − 4 ) + CO carbon dioxide + arsenite + light energy →
+arsenate + carbon monoxide ( used to build other compounds in subsequent reactions ) Photosynthesis occurs in two stages . In the first stage , light -
+dependent reactions or light reactions capture the energy of light and use it to make the energy - storage molecules ATP and NADPH . During the second stage ,
+the light - independent reactions use these products to capture and reduce carbon dioxide . Most organisms that utilize oxygenic photosynthesis use visible
+light for the light - dependent reactions , although at least three use shortwave infrared or , more specifically , far - red radiation . Some organisms employ
+even more radical variants of photosynthesis .
+</item 1>
+
+<item 2>
+Photosynthesis
+The overall equation for the light - independent reactions in green plants is 3 CO + 9 ATP + 6 NADPH + 6 H → C H O - phosphate + 9 ADP + 8 P + 6 NADP + 3 H O
+Overview of the Calvin cycle and carbon fixation Carbon fixation produces the intermediate three - carbon sugar product , which is then converted to the final
+carbohydrate products . The simple carbon sugars produced by photosynthesis are then used in the forming of other organic compounds , such as the building
+material cellulose , the precursors for lipid and amino acid biosynthesis , or as a fuel in cellular respiration . The latter occurs not only in plants but also
+in animals when the energy from plants is passed through a food chain . The fixation or reduction of carbon dioxide is a process in which carbon dioxide
+combines with a five - carbon sugar , ribulose 1 , 5 - bisphosphate , to yield two molecules of a three - carbon compound , glycerate 3 - phosphate , also known
+as 3 - phosphoglycerate .
+</item 2>
+
+<item 3>
+Photosynthesis
+Louis N.M. Duysens and Jan Amesz discovered that chlorophyll a will absorb one light , oxidize cytochrome f , chlorophyll a ( and other pigments ) will absorb
+another light , but will reduce this same oxidized cytochrome , stating the two light reactions are in series . Development of the concept In 1893 , Charles
+Reid Barnes proposed two terms , photosyntax and photosynthesis , for the biological process of synthesis of complex carbon compounds out of carbonic acid , in
+the presence of chlorophyll , under the influence of light . Over time , the term photosynthesis came into common usage as the term of choice . Later discovery
+of anoxygenic photosynthetic bacteria and photophosphorylation necessitated redefinition of the term . C3 : C4 photosynthesis Research After WWII at late 1940
+at the University of California , Berkeley , the details of photosynthetic carbon metabolism were sorted out by the chemists Melvin Calvin , Andrew Benson ,
+James Bassham and a score of students and researchers utilizing the carbon - 14 isotope and paper chromatography techniques .
+</item 3>
+
+<item 4>
+Photosynthesis
+The source of electrons in green - plant and cyanobacterial photosynthesis is water . Two water molecules are oxidized by four successive charge - separation
+reactions by photosystem II to yield a molecule of diatomic oxygen and four hydrogen ions ; the electrons yielded are transferred to a redox - active tyrosine
+residue that then reduces the oxidized chlorophyll a ( called P680 ) that serves as the primary light - driven electron donor in the photosystem II reaction
+center . That photo receptor is in effect reset and is then able to repeat the absorption of another photon and the release of another photo - dissociated
+electron . The oxidation of water is catalyzed in photosystem II by a redox - active structure that contains four manganese ions and a calcium ion ; this oxygen
+- evolving complex binds two water molecules and contains the four oxidizing equivalents that are used to drive the water - oxidizing reaction ( Dolai 's S -
+state diagrams ) . Ref . Dolai , U ( 2017 ) . `` Chemical Scheme of Water - Splitting Process during Photosynthesis by the way of Experimental Analysis `` .
+IOSR Journal of Pharmacy and Biological Sciences .
+</item 4>
+
+<item 5>
+Photosynthesis
+Z scheme The `` Z scheme '' In plants , light - dependent reactions occur in the thylakoid membranes of the chloroplasts where they drive the synthesis of ATP
+and NADPH . The light - dependent reactions are of two forms : cyclic and non-cyclic . In the non-cyclic reaction , the photons are captured in the light -
+harvesting antenna complexes of photosystem II by chlorophyll and other accessory pigments ( see diagram at right ) . The absorption of a photon by the antenna
+complex frees an electron by a process called photoinduced charge separation . The antenna system is at the core of the chlorophyll molecule of the photosystem
+II reaction center . That freed electron is transferred to the primary electron - acceptor molecule , pheophytin . As the electrons are shuttled through an
+electron transport chain ( the so - called Z - scheme shown in the diagram ) , it initially functions to generate a chemiosmotic potential by pumping proton
+cations ( H ) across the membrane and into the thylakoid space .
+</item 5>
+
+<item 6>
+Photosynthesis
+Light - dependent reactions Light - dependent reactions of photosynthesis at the thylakoid membrane Main article : Light - dependent reactions In the light -
+dependent reactions ( mainly three vital reaction steps : ( I ) Hill and Bendall 's Z - scheme of cyclic and non-cyclic reactions , ( II ) Mitchell 's chemi -
+osmosis for ATP synthesis and ( III ) Dolai 's S - state diagrams in water - splitting ) , one molecule of the pigment chlorophyll absorbs one photon and loses
+one electron . This electron is passed to a modified form of chlorophyll called pheophytin , which passes the electron to a quinone molecule , starting the flow
+of electrons down an electron transport chain that leads to the ultimate reduction of NADP to NADPH . In addition , this creates a proton gradient ( energy
+gradient ) across the chloroplast membrane , which is used by ATP synthase in the synthesis of ATP . The chlorophyll molecule ultimately regains the electron it
+lost when a water molecule is split in a process called photolysis , which releases a dioxygen ( O ) molecule as a waste product .
+</item 6>
+
+<item 7>
+Photosynthesis
+The cyclic reaction takes place only at photosystem I. Once the electron is displaced from the photosystem , the electron is passed down the electron acceptor
+molecules and returns to photosystem I , from where it was emitted , hence the name cyclic reaction . Water photolysis Main articles : Photodissociation and
+Oxygen evolution The NADPH is the main reducing agent produced by chloroplasts , which then goes on to provide a source of energetic electrons in other cellular
+reactions . Its production leaves chlorophyll in photosystem I with a deficit of electrons ( chlorophyll has been oxidized ) , which must be balanced by some
+other reducing agent that will supply the missing electron . The excited electrons lost from chlorophyll from photosystem I are supplied from the electron
+transport chain by plastocyanin . However , since photosystem II is the first step of the Z - scheme , an external source of electrons is required to reduce its
+oxidized chlorophyll a molecules . The source of electrons in green - plant and cyanobacterial photosynthesis is water .
+</item 7>
+
+<item 8>
+Photosynthesis
+IOSR Journal of Pharmacy and Biological Sciences . 12 ( 6 ) : 65 - 67 . doi : 10.9790 / 3008 - 1206026567 . ISSN 2319 - 7676 . Photosystem II is the only known
+biological enzyme that carries out this oxidation of water . The hydrogen ions released contribute to the transmembrane chemiosmotic potential that leads to ATP
+synthesis . Oxygen is a waste product of light - dependent reactions , but the majority of organisms on Earth use oxygen for cellular respiration , including
+photosynthetic organisms . Light - independent reactions Calvin cycle Main articles : Calvin cycle , Carbon fixation , and Light - independent reactions In the
+light - independent ( or `` dark '' ) reactions , the enzyme RuBisCO captures CO from the atmosphere and , in a process called the Calvin - Benson cycle , it
+uses the newly formed NADPH and releases three - carbon sugars , which are later combined to form sucrose and starch .
+</item 8>
+
+<item 9>
+Photosynthesis
+A highly simplified summary is : 2 glycolate + ATP → 3 - phosphoglycerate + carbon dioxide + ADP + NH The salvaging pathway for the products of RuBisCO
+oxygenase activity is more commonly known as photorespiration , since it is characterized by light - dependent oxygen consumption and the release of carbon
+dioxide . See also Environment portal Ecology portal Earth sciences portal Metabolism portal Jan Anderson ( scientist ) Artificial photosynthesis Calvin -
+Benson cycle Carbon fixation Cellular respiration Chemosynthesis Integrated fluorometer Light - dependent reaction Organic reaction Photobiology Photoinhibition
+Photosynthetic reaction center Photosynthetically active radiation Photosystem Photosystem I Photosystem II Quantum biology Radiosynthesis Red edge Vitamin D
+Hill reaction References Jump up ^ `` photosynthesis '' . Online Etymology Dictionary . Jump up ^ φῶς . Liddell , Henry George ; Scott , Robert ; A Greek --
+English Lexicon at the Perseus Project Jump up ^ σύνθεσις .
+</item 9>
+
+<item 10>
+Photosynthesis
+The process is most productive when the absorption of quanta are equal in both the PSII and PSI , assuring that input energy from the antenna complex is divided
+between the PSI and PSII system , which in turn powers the photochemistry . Melvin Calvin works in his photosynthesis laboratory . Robert Hill thought that a
+complex of reactions consisting of an intermediate to cytochrome b ( now a plastoquinone ) , another is from cytochrome f to a step in the carbohydrate -
+generating mechanisms . These are linked by plastoquinone , which does require energy to reduce cytochrome f for it is a sufficient reductant . Further
+experiments to prove that the oxygen developed during the photosynthesis of green plants came from water , were performed by Hill in 1937 and 1939 . He showed
+that isolated chloroplasts give off oxygen in the presence of unnatural reducing agents like iron oxalate , ferricyanide or benzoquinone after exposure to light
+. The Hill reaction is as follows : 2 H O + 2 A + ( light , chloroplasts ) → 2 AH + O where A is the electron acceptor .
+</item 10>
+=== END ITEM id=1ca1687f3245d169 ===
+
+=== ITEM id=39473f2deb1f6017 ===
+Gold sentences and facts:
+Sentence 0: People 's Postcode Lottery has a number of celebrity `` ambassadors '' . In March 2018 , these included David Attenborough , Clare Balding , Brian Blessed , Judi Dench , Shobna Gulati , Tim Healy , Stephen Jardine , Ellen MacArthur , Aggie MacKenzie , Carey Mulligan , John Stapleton and Emma Thompson . Fiona Phillips became an ambassador for People 's Postcode Lottery at the end of 2012 , leading the organisation 's DRTV campaigns .
+  Fact 0.0: People's Postcode Lottery has a number of celebrity 'ambassadors'.
+  Fact 0.1: In March 2018, the celebrity ambassadors of People's Postcode Lottery included David Attenborough.
+  Fact 0.2: In March 2018, the celebrity ambassadors of People's Postcode Lottery included Clare Balding.
+  Fact 0.3: In March 2018, the celebrity ambassadors of People's Postcode Lottery included Brian Blessed.
+  Fact 0.4: In March 2018, the celebrity ambassadors of People's Postcode Lottery included Judi Dench.
+  Fact 0.5: In March 2018, the celebrity ambassadors of People's Postcode Lottery included Shobna Gulati.
+  Fact 0.6: In March 2018, the celebrity ambassadors of People's Postcode Lottery included Tim Healy.
+  Fact 0.7: In March 2018, the celebrity ambassadors of People's Postcode Lottery included Stephen Jardine.
+  Fact 0.8: In March 2018, the celebrity ambassadors of People's Postcode Lottery included Ellen MacArthur.
+  Fact 0.9: In March 2018, the celebrity ambassadors of People's Postcode Lottery included Aggie MacKenzie.
+  Fact 0.10: In March 2018, the celebrity ambassadors of People's Postcode Lottery included Carey Mulligan.
+  Fact 0.11: In March 2018, the celebrity ambassadors of People's Postcode Lottery included John Stapleton.
+  Fact 0.12: In March 2018, the celebrity ambassadors of People's Postcode Lottery included Emma Thompson.
+  Fact 0.13: Fiona Phillips became an ambassador for People's Postcode Lottery at the end of 2012.
+  Fact 0.14: Fiona Phillips was leading People's Postcode Lottery's DRTV campaigns.
+
+Retrieved items:
+<item 1>
+People's Postcode Lottery
+In 2017 Novamedia BV threatened to sue the Free Postcode Lottery ( an alternative free service which raises money through advertising and offers daily prizes to
+registered users ) on the basis that they were `` passing themselves off '' as the People 's Postcode Lottery . This claim was made in spite of the fact that
+the free Postcode lottery was completely free while the Peoples Postcode lottery is a paid for subscription service . Process ( edit ) People 's Postcode
+Lottery is a subscription lottery . Players sign up to pay monthly in advance by direct debit or debit card . There are ten draws each month with prizes every
+day . A player 's tickets are based on their playing postcode , which is most commonly their home postcode . A given postcode in Britain will usually represent
+a group of houses . If more than one resident has tickets in a winning postcode , all playing neighbours collect prizes . In accordance with restrictions under
+the Gambling Act 2005 , the maximum amount which can be won by a single ticket is £ 400,000 or 10 % of the total draw proceeds .
+</item 1>
+
+<item 2>
+People's Postcode Lottery
+Postcode Challenge ( edit ) From 2008 to 2010 , People 's Postcode Lottery sponsored Postcode Challenge , a quiz show hosted by Angus Purden on STV .
+Sponsorship ( edit ) Novamedia has worked with a number of leading TV production companies and public and commercial broadcasters to support the promotion of
+its lotteries . Novamedia inspired and paid Endemol to produce TV game shows such as Deal or No Deal and 1 vs 100 .
+</item 2>
+
+<item 3>
+Dancing on Ice
+Daniel Whiston Robin Cousins Karen Barber Nicky Slater Jason Gardiner Emma Bunton Michael Ball ( week 6 ) Angela Rippon ( week 7 ) 6 9 January 2011 27 March
+2011 16 Sam Attwater Brianne Delcourt Robin Cousins Jason Gardiner Emma Bunton N / A 7 8 January 2012 25 March 2012 15 Matthew Wolfenden Nina Ulanova Phillip
+Schofield Christine Bleakley Robin Cousins Louie Spence Katarina Witt 8 6 January 2013 10 March 2013 12 10 Beth Tweddle Daniel Whiston Robin Cousins Karen
+Barber Jason Gardiner Ashley Roberts 9 5 January 2014 9 March 2014 14 Ray Quinn Maria Filippov Nicky Slater ( weeks 6 & 7 ) 10 7 January 2018 11 March 2018 12
+Jake Quickenden Vanessa Bauer Phillip Schofield Holly Willoughby Jordan Banjo ( Backstage ) Christopher Dean Jayne Torvill Jason Gardiner Ashley Banjo N / A
+Presenters , judges and coaches Presenters gallery Phillip Schofield ( 2006 -- 2014 ,
+</item 3>
+
+<item 4>
+People's Postcode Lottery
+By using this site , you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit
+organization . About Wikipedia
+</item 4>
+
+<item 5>
+People's Postcode Lottery
+Beneficiaries ( edit ) A minimum of 32 % goes to various trusts , which in turn provide funding to charities and community projects across Great Britain and
+internationally . As an external lottery manager , People 's Postcode Lottery manages several society lotteries promoted by different charities . Over 4,000
+causes have received support . Ambassadors ( edit ) People 's Postcode Lottery has a number of celebrity `` ambassadors '' . In March 2018 , these included
+David Attenborough , Clare Balding , Brian Blessed , Judi Dench , Shobna Gulati , Tim Healy , Stephen Jardine , Ellen MacArthur , Aggie MacKenzie , Carey
+Mulligan , John Stapleton and Emma Thompson . Fiona Phillips became an ambassador for People 's Postcode Lottery at the end of 2012 , leading the organisation
+'s DRTV campaigns . Presenters Judie McCourt , Danyl Johnson , Jeff Brazier and Matt Johnson visit People 's Postcode Lottery winners to present them with their
+cheques , attend Postcode Million events and take part in People 's Postcode Lottery advertising campaigns .
+</item 5>
+
+<item 6>
+People's Postcode Lottery
+References ( edit ) Jump up ^ Gambling Commission Account details Jump up ^ Novamedia Website , About Charity Lotteries section Jump up ^ People 's Postcode
+Lottery - Charities webpage Jump up ^ People 's Postcode Lottery - Ambassadors webpage External links ( edit ) Official website Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=People%27s_Postcode_Lottery&oldid=836422769 '' Categories : Lotteries in the United Kingdom 2005 establishments in
+the United Kingdom Hidden categories : All articles with unsourced statements Articles with unsourced statements from March 2018 Articles lacking sources from
+November 2017 All articles lacking sources Articles with a promotional tone from January 2017 All articles with a promotional tone Use dmy dates from September
+2014 Use British English from September 2014 Articles with unsourced statements from October 2012 Talk Contents About Wikipedia Add links This page was last
+edited on 14 April 2018 , at 18 : 44 . Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using
+this site , you agree to the Terms of Use and Privacy Policy .
+</item 6>
+
+<item 7>
+List of owners of English football clubs
+$36 M MYA Cosmetic Surgery Construction Keepmoat Fleetwood Town Andy Pilley ( 98 % ) BES Group Gillingham Paul Scally Milton Keynes Dons Pete Winkelman InterMK
+Group Northampton Town David Anthony Cardoza Anthony Michael Cardoza Deborah Jones Trustees of Stuart Wilson Oldham Athletic Simon Corney ( 97 % ) Oxford United
+Ian Lenagan Peterborough United Darragh MacAnthony Property Investment Rochdale Chris Dunphy Plymouth Argyle James Brent Portsmouth Michael Eisner $1 B Media ;
+former CEO of The Walt Disney Company ; Tornante Rotherham United Tony Stewart 49 % J Stewart 46 % R Stewart 5 % $180 M Lighting industry Scunthorpe United
+Peter Swann and family $445 M Retail ; live entertainments ; horse racing Shrewsbury Town Roland Wycherley Southend United Ron Martin Property Walsall Jeff
+Bonser Wigan Athletic Dave Whelan 17 !
+</item 7>
+
+<item 8>
+People's Postcode Lottery
+People 's Postcode Lottery - wikipedia People 's Postcode Lottery Jump to : navigation , search This article does not cite any sources . Please help improve
+this article by adding citations to reliable sources . Unsourced material may be challenged and removed . ( November 2017 ) ( Learn how and when to remove this
+template message ) This article contains content that is written like an advertisement . Please help improve it by removing promotional content and
+inappropriate external links , and by adding encyclopedic content written from a neutral point of view . ( January 2017 ) ( Learn how and when to remove this
+template message ) People 's Postcode Lottery is a subscription lottery in Great Britain , run by Postcode Lottery Limited ( Gambling Commission licence numbers
+000 - 000829 - N - 102511 and 000 - 000829 - R - 10251 ) .
+</item 8>
+
+<item 9>
+List of owners of English football clubs
+$26 M JobServe Coventry City Joy Seppala & Dermot Coleman Sisu Capital Crawley Town The Executors of Bruce Winfield 's Estate Freight transport and inheritance
+from marketing services Crewe Alexandra N. Hassall ( 32 % of 60 % holding company ) D. Potts ( 23 % of 60 % holding company ) RJ Rowlinson ( 25 % ) The
+Rowlinson Group Exeter City Exeter City FC Supporters ' Trust - Trust Ownership Working Group Supporters Trust Grimsby Town John Fenty ( 42.91 % ) Mike Parker (
+22 % ) The Mariners Trust ( 14.13 % ) $18 M Five Star Fish Entrepreneur Supporters Trust Luton Town Luton Town Football Club 2020 LTD Mansfield Town John
+Radford Morecambe Peter McGuigan Newport County Newport County AFC Supporters Trust Supporters Trust Notts County Alan Hardy ( 1 ) Paragon ) , private companies
+Port Vale Norman Smurthwaite ( 100 % ) $39 M Property Stevenage Phil Wallace ( 91 % ) 05 !
+</item 9>
+
+<item 10>
+People's Postcode Lottery
+Contents ( hide ) 1 History 2 Process 3 Beneficiaries 4 Ambassadors 5 Postcode Challenge 6 Sponsorship 7 References 8 External links History ( edit ) The
+Postcode Lottery format was introduced by the Dutch company Novamedia BV , which launched its first postcode lottery in the Netherlands in 1989 . Novamedia now
+runs six lotteries using cause marketing : Nationale Postcode Loterij , Vrienden Loterij and BankGiro Loterij in the Netherlands , Svenska Postkod Lotteriet in
+Sweden , People 's Postcode Lottery in Great Britain and , since July 2016 , Deutsche Postcode Lotterie in Germany . Together , they claim to have contributed
+over € 7.9 billion to charitable organisations around the world . People 's Postcode Lottery was launched in the north of England in 2005 as a pilot scheme .
+After a successful launch , it expanded into Scotland in 2007 and Wales in July 2010 . The lottery uses cause marketing , claiming to have been established to
+raise money for charity and to increase awareness of the work of the various charities and causes supported by its players .
+</item 10>
+=== END ITEM id=39473f2deb1f6017 ===
+
+=== ITEM id=bd025987231f38c2 ===
+Gold sentences and facts:
+Sentence 0: Adobe Flash Player Original author ( s ) FutureWave Macromedia Developer ( s ) Adobe Systems Initial release 1996 ; 22 years ago ( 1996 ) Stable release ( s ) ( ± ) Windows , macOS , Linux , Chrome OS 28.0. 0.137 / January 9 , 2018 ; 16 days ago ( 2018 - 01 - 09 ) Android 4.0. x 11.1. 115.81 / September 10 , 2013 ; 4 years ago ( 2013 - 09 - 10 ) Android 2. x and 3. x 11.1. 111.73 / September 10 , 2013 ; 4 years ago ( 2013 - 09 - 10 ) Solaris 11.2. 202.223 / March 28 , 2012 ; 5 years ago ( 2012 - 03 - 28 ) Preview release ( s ) ( ± ) Windows , macOS , Linux , Chrome OS 28.0. 0.152 Beta / January 24 , 2018 ; 1 day ago ( 2018 - 01 - 24 ) Written in C++ Operating system Windows , macOS , Linux , Chrome OS , Solaris , BlackBerry Tablet OS , Android , and Pocket PC Platform Web browsers and ActiveX - based software Available in Chinese Simplified , Chinese Traditional , English , French , German , Italian , Japanese , Polish , Russian , Spanish , Korean , and Turkish Type Run - time environment , Media player , and Browser extension License Freeware Website www.adobe.com/products/flashplayer.html
+  Fact 0.0: Adobe Flash Player's original authors were FutureWave and Macromedia.
+  Fact 0.1: Adobe Flash Player's developer is Adobe Systems.
+  Fact 0.2: Adobe Flash Player's initial release was in 1996.
+  Fact 0.3: Adobe Flash Player stable release 28.0.0.137 for Windows, macOS, Linux, and Chrome OS was released January 9, 2018.
+  Fact 0.4: Adobe Flash Player stable release 11.1.115.81 for Android 4.0.x was released September 10, 2013.
+  Fact 0.5: Adobe Flash Player stable release 11.1.111.73 for Android 2.x and 3.x was released September 10, 2013.
+  Fact 0.6: Adobe Flash Player stable release 11.2.202.223 for Solaris was released March 28, 2012.
+  Fact 0.7: Adobe Flash Player preview release 28.0.0.152 Beta for Windows, macOS, Linux, and Chrome OS was released January 24, 2018.
+  Fact 0.8: Adobe Flash Player is written in C++.
+  Fact 0.9: Adobe Flash Player runs on Windows, macOS, Linux, Chrome OS, Solaris, BlackBerry Tablet OS, Android, and Pocket PC.
+  Fact 0.10: Adobe Flash Player's platform is web browsers and ActiveX-based software.
+  Fact 0.11: Adobe Flash Player is available in Chinese Simplified, Chinese Traditional, English, French, German, Italian, Japanese, Polish, Russian, Spanish, Korean, and Turkish.
+  Fact 0.12: Adobe Flash Player's type is run-time environment, media player, and browser extension.
+  Fact 0.13: Adobe Flash Player is freeware.
+  Fact 0.14: Adobe Flash Player's website is www.adobe.com/products/flashplayer.html.
+Sentence 1: Availability on desktop operating systems Platform Latest version Browser support Windows XP and later Windows Server 2003 and later 28.0. 0.137 Firefox , Chrome , Chromium , Safari , Opera , Internet Explorer , Microsoft Edge Windows 2000 11.1. 102.55 ? Windows 98 and ME 9.0. 115.0 ? Windows 95 and NT 4 7.0. 14.0 ? Mac OS X 10.6 or later 28.0. 0.137 Firefox , Chrome , Chromium , Safari , Opera Mac OS X 10.5 10.3. 183.90 ? Classic Mac OS , PowerPC 7.0. 14.0 ? Classic Mac OS , 68k 5.0 ? Linux 28.0. 0.137 Firefox , Chrome , Chromium , Opera Solaris 11.2. 202.223 ?
+  Fact 1.0: On Windows XP and later and Windows Server 2003 and later, the latest Adobe Flash Player version is 28.0.0.137.
+  Fact 1.1: On Windows XP and later and Windows Server 2003 and later, Adobe Flash Player is supported in Firefox, Chrome, Chromium, Safari, Opera, Internet Explorer, and Microsoft Edge.
+  Fact 1.2: On Windows 2000, the latest Adobe Flash Player version is 11.1.102.55, marked as uncertain in the source.
+  Fact 1.3: On Windows 98 and ME, the latest Adobe Flash Player version is 9.0.115.0, marked as uncertain in the source.
+  Fact 1.4: On Windows 95 and NT 4, the latest Adobe Flash Player version is 7.0.14.0, marked as uncertain in the source.
+  Fact 1.5: On Mac OS X 10.6 or later, the latest Adobe Flash Player version is 28.0.0.137.
+  Fact 1.6: On Mac OS X 10.6 or later, Adobe Flash Player is supported in Firefox, Chrome, Chromium, Safari, and Opera.
+  Fact 1.7: On Mac OS X 10.5, the latest Adobe Flash Player version is 10.3.183.90, marked as uncertain in the source.
+  Fact 1.8: On Classic Mac OS for PowerPC, the latest Adobe Flash Player version is 7.0.14.0, marked as uncertain in the source.
+  Fact 1.9: On Classic Mac OS for 68k, the latest Adobe Flash Player version is 5.0, marked as uncertain in the source.
+  Fact 1.10: On Linux, the latest Adobe Flash Player version is 28.0.0.137.
+  Fact 1.11: On Linux, Adobe Flash Player is supported in Firefox, Chrome, Chromium, and Opera.
+  Fact 1.12: On Solaris, the latest Adobe Flash Player version is 11.2.202.223, marked as uncertain in the source.
+
+Retrieved items:
+<item 1>
+Adobe Flash Player
+183.5 ) ( August 14 , 2011 ) Adobe Flash Player 10.3 ( version 10.3. 183.7 ) ( August 24 , 2011 ) Adobe Flash Player 10.3 ( version 10.3. 183.10 ) ( September
+21 , 2011 ) Adobe Flash Player 10.3 ( version 10.3. 183.11 ) ( November 11 , 2011 ) Adobe Flash Player 10.3 ( version 10.3. 183.25 ) ( September 18 , 2012 )
+Adobe Flash Player 10.3 ( version 10.3. 183.29 ) ( October 8 , 2012 ) Adobe Flash Player 11 ( version 11.0. 1.152 , codenamed Serrano ) ( October 4 , 2011 )
+Desktop only Stage 3D accelerated graphics rendering Desktop : Windows ( DirectX 9 ) , OS X ( Intel processor only ) and Linux ( OpenGL 1.3 ) , SwiftShader
+fallback Mobile : Android and iOS ( OpenGL ES 2 ) H.
+</item 1>
+
+<item 2>
+Adobe Flash Player
+0.11 , codenamed ( Atka ) ) ( November 16 , 2017 ) See also ( edit ) Adobe AIR Adobe Shockwave Apache Flex Microsoft Silverlight References and Notes ( edit ) ^
+Jump up to : `` Adobe - Flash Player '' . Adobe.com . Adobe Systems . Retrieved 9 January 2018 . ^ Jump up to : `` Archived Flash Player versions '' . Adobe.com
+. Adobe Systems . Retrieved 20 October 2015 . Jump up ^ `` Download Flash Player 28 Beta '' . labs.adobe.com . Adobe Systems . Retrieved 2018 - 01 - 25 . Jump
+up ^ `` Adobe Flash Player Download '' . Adobe Systems . Retrieved August 10 , 2016 . Jump up ^ `` Why You Should Ditch Adobe Shockwave '' . Krebs on Security .
+May 14 , 2014 . Retrieved February 21 , 2015 . Jump up ^ `` Adobe Flash Runtimes Statistics '' . Adobe Systems Incorporated . Retrieved January 2 , 2013 .
+</item 2>
+
+<item 3>
+Adobe Flash Player
+Adobe Flash Player - wikipedia Adobe Flash Player Jump to : navigation , search Adobe Flash Player Original author ( s ) FutureWave Macromedia Developer ( s )
+Adobe Systems Initial release 1996 ; 22 years ago ( 1996 ) Stable release ( s ) ( ± ) Windows , macOS , Linux , Chrome OS 28.0. 0.137 / January 9 , 2018 ; 16
+days ago ( 2018 - 01 - 09 ) Android 4.0. x 11.1. 115.81 / September 10 , 2013 ; 4 years ago ( 2013 - 09 - 10 ) Android 2. x and 3. x 11.1. 111.73 / September 10
+, 2013 ; 4 years ago ( 2013 - 09 - 10 ) Solaris 11.2. 202.223 / March 28 , 2012 ; 5 years ago ( 2012 - 03 - 28 ) Preview release ( s ) ( ± ) Windows , macOS ,
+Linux , Chrome OS 28.0.
+</item 3>
+
+<item 4>
+Adobe Flash Player
+0.186 , codenamed ( Van Ness Avenue Van Ness ) ) ( December 13 , 2016 ) Adobe Flash Player 24 ( version 24.0. 0.194 ) ( January 10 , 2017 ) Adobe Flash Player
+25 ( version 25.0. 0.127 , codenamed Webster ) ( March 14 , 2017 ) Adobe Flash Player 25 ( version 25.0. 0.148 ) ( April 11 , 2017 ) Adobe Flash Player 25 (
+version 25.0. 0.163 ) ( April 20 , 2017 ) Adobe Flash Player 26 ( version 26.0. 0.131 , codenamed York ) ( June 13 , 2017 ) Adobe Flash Player 27 ( version
+27.0. 0.130 , codenamed Zoe ) ( September 12 , 2017 ) Adobe Flash Player 27 ( version 27.0. 0.159 ) ( October 10 , 2017 ) Adobe Flash Player 28 ( version 28.0.
+</item 4>
+
+<item 5>
+Adobe Flash Player
+202.228 ) ( March 28 , 2012 ) Adobe Flash Player 11.2 ( version 11.2. 202.233 ) ( April 12 , 2012 ) Adobe Flash Player 11.2 ( version 11.2. 202.235 , codenamed
+Brannan ) ( May 3 , 2012 ) The Windows version offers automatic updater options Dropped support of the browser plug - in for mobile devices ( Android ) .
+Android app developers are encouraged to use Adobe Air and Android web developers should switch to HTML5 . Extended support for Flash player 11.2 on Solaris as
+it is the last version to be supported . Adobe replaced Extended Support Release 11.2 on Linux with 24.0 on December 13 , 2016 . Adobe Flash Player 11.3 (
+version 11.3. 300.257 ) ( June 8 , 2012 ) Adobe Flash Player 11.3 ( version 11.3. 300.262 ) ( June 21 , 2012 ) Adobe Flash Player 11.3 ( version 11.3.
+</item 5>
+
+<item 6>
+Adobe Flash Player
+0.134 , codenamed Octavia ) ( March 12 , 2015 ) Control Panel improvements Installer improvements for Mac Adobe Flash Player 18 ( version 18.0. 0.160 ,
+codenamed ( Presidio of San Francisco Presidio ) ) ( June 9 , 2015 ) Contains fixes for Adobe Security Bulletin APSB 15 -- 11 Adobe Flash Player 19 ( version
+19.0. 0.185 , codenamed Quint ) ( September 21 , 2015 ) Adobe Flash Player 20 ( version 20.0. 0.228 , codenamed Rankin ) ( December 8 , 2015 ) Adobe Flash
+Player 21 ( version 21.0. 0.182 , codenamed Sutter ) ( March 10 , 2016 ) Adobe Flash Player 22 ( version 22.0. 0.192 , codenamed Townsend ) ( June 16 , 2016 )
+Adobe Flash Player 23 ( version 23.0. 0.164 , codenamed Underwood ) ( September 13 , 2016 ) Adobe Flash Player 24 ( version 24.0.
+</item 6>
+
+<item 7>
+Adobe Flash Player
+181.14 , codenamed Wasabi ) ( May 12 , 2011 ) Media measurement ( video analytics for websites ; desktop only ) Acoustic Echo Cancellation ( acoustic echo
+cancellation , noise suppression , voice activity detection , automatic compensation for microphone input levels ; desktop only ) Integration with browser
+privacy controls for managing local storage ( ClearSiteData NPAPI ) Native control panel Auto - update notification for Mac OS X Last version for Mac OS X 10.5
+and Windows 2000 ( unofficially bypassing the XP installer ) Adobe replaced Extended Support Release 10.3 by 11.7 on July 9 , 2013 . Adobe Flash Player 10.3 (
+version 10.3. 181.23 ) ( June 5 , 2011 ) Adobe Flash Player 10.3 ( version 10.3. 181.26 ) ( June 14 , 2011 ) Adobe Flash Player 10.3 ( version 10.3. 181.34 ) (
+June 29 , 2011 ) Adobe Flash Player 10.3 ( version 10.3.
+</item 7>
+
+<item 8>
+Adobe Flash Player
+Adobe Systems . November 11 , 2014 . Retrieved January 12 , 2015 . Jump up ^ `` 12 / 9 / 2014 -- Release -- Flash Player 16 '' . Adobe Systems . December 9 ,
+2014 . Retrieved January 12 , 2015 . Jump up ^ `` 12 / 3 / 2015 -- Release -- Flash Player 17 '' . Adobe Systems . March 12 , 2014 . Retrieved March 13 , 2015 .
+Jump up ^ `` Adobe Security Bulletin '' . Retrieved March 25 , 2017 . Further reading ( edit ) Understanding Flash Player with Adobe Scout -- an article
+discussing the internals of the player and the Adobe Scout profiling tool External links ( edit ) Adobe Flash Player Flash Tester ( explains official old
+working version check ) Adobe Flash File formats ActionScript ( AS ) Action Message Format ( AMF ) Flash Video ( FLV ) Flash XML Graphics ( FXG ) Local shared
+objects ( LSOs ) MXML Flash Movie ( SWF ) Flash Code Library ( SWC ) Software ( list ) Players Adobe AIR Adobe Flash Player OpenFL Gnash Lightspark
+</item 8>
+
+<item 9>
+Adobe Flash Player
+152.26 , codenamed Spicy ) ( February 8 , 2011 ) Stage Video , a full hardware - accelerated video pipeline Internet Explorer 9 hardware - accelerated rendering
+support Custom native mouse cursors Multiple monitor fullscreen support Enhanced subpixel rendering for text Adobe Flash Player 10.2 ( version 10.2. 152.32 ) (
+February 28 , 2011 ) Adobe Flash Player 10.2 ( version 10.2. 153.1 ) ( March 21 , 2011 ) Adobe Flash Player 10.2 ( version 10.2. 159.1 ) ( April 15 , 2011 )
+Adobe Flash Player 10.3 ( version 10.3.
+</item 9>
+
+<item 10>
+Adobe Flash Player
+0.152 , codenamed ( Market Street ( San Francisco ) Market ) ) ( September 9 , 2014 ) Improved support for browser zoom levels Adobe Flash Player 15 ( version
+15.0. 0.167 ) ( September 24 , 2014 ) Adobe Flash Player 15 ( version 15.0. 0.223 ) ( November 11 , 2014 ) Adobe Flash Player 15 ( version 15.0. 0.239 ) (
+November 25 , 2014 ) Adobe Flash Player 16 ( version 16.0. 0.235 , codenamed Natoma ) ( December 12 , 2014 ) Stage3D -- Standard Constrained Profile PPAPI
+Installers for Windows and Mac Adobe Flash Player 16 ( version 16.0. 0.257 ) ( January 13 , 2015 ) Adobe Flash Player 16 ( version 16.0. 0.287 ) ( January 22 ,
+2015 ) Adobe Flash Player 17 ( version 17.0.
+</item 10>
+=== END ITEM id=bd025987231f38c2 ===
+
+=== ITEM id=a9b04745907468e2 ===
+Gold sentences and facts:
+Sentence 0: During the 1995 -- 96 season , Alan Shearer became the first player to score 100 Premier League goals , and holds the record for the fewest games taken to reach 100 , doing so in 124 appearances . He also holds the record for most goals scored in the Premier League . After Shearer , Harry Kane is the second - fastest to 100 goals , doing so in 141 games .
+  Fact 0.0: During the 1995-96 season, Alan Shearer became the first player to score 100 Premier League goals.
+  Fact 0.1: Alan Shearer holds the record for the fewest games taken to reach 100 goals.
+  Fact 0.2: Alan Shearer reached 100 goals in 124 appearances.
+  Fact 0.3: Alan Shearer holds the record for most goals scored in the Premier League.
+  Fact 0.4: Harry Kane is the second-fastest player to reach 100 goals.
+  Fact 0.5: Harry Kane reached 100 goals in 141 games.
+Sentence 1: List of Premier League players with 100 or more goals Rank Player Position Premier League club ( s ) Goals Played Ratio Shearer , Alan Alan Shearer Blackburn Rovers , Newcastle United 260 441 0.59 Rooney , Wayne Wayne Rooney Everton , Manchester United 208 484 0.43 Cole , Andy Andy Cole Newcastle United , Manchester United , Blackburn Rovers , Fulham , Manchester City , Portsmouth 187 414 0.45 Lampard , Frank Frank Lampard MF West Ham United , Chelsea , Manchester City 177 609 0.29 Henry , Thierry Thierry Henry Arsenal 175 258 0.68 6 Fowler , Robbie Robbie Fowler Liverpool , Leeds United , Manchester City 163 379 0.43 7 Defoe , Jermain Jermain Defoe West Ham United , Portsmouth , Tottenham Hotspur , Sunderland , Bournemouth 162 485 0.33 8 Owen , Michael Michael Owen Liverpool , Newcastle United , Manchester United , Stoke City 150 326 0.46 9 Ferdinand , Les Les Ferdinand Queens Park Rangers , Newcastle United , Tottenham Hotspur , West Ham United , Leicester City , Bolton Wanderers 149 351 0.42 10 Sheringham , Teddy Teddy Sheringham Nottingham Forest , Tottenham Hotspur , Manchester United , Portsmouth , West Ham United 146 418 0.35 11 van Persie , Robin Robin van Persie Arsenal , Manchester United 144 280 0.51 12 Agüero , Sergio Sergio Agüero Manchester City 143 204 0.70 13 Hasselbaink , Jimmy Floyd Jimmy Floyd Hasselbaink Leeds United , Chelsea , Middlesbrough , Charlton Athletic 127 288 0.44 14 Keane , Robbie Robbie Keane Coventry City , Leeds United , Tottenham Hotspur , Liverpool , West Ham United , Aston Villa 126 349 0.36 15 Anelka , Nicolas Nicolas Anelka Arsenal , Liverpool , Manchester City , Bolton Wanderers , Chelsea , West Bromwich Albion 125 364 0.34 16 Yorke , Dwight Dwight Yorke Aston Villa , Manchester United , Blackburn Rovers , Birmingham City , Sunderland 123 375 0.33 17 Gerrard , Steven Steven Gerrard MF Liverpool 120 504 0.24 18 Wright , Ian Ian Wright Arsenal , West Ham United 113 213 0.53 19 Dublin , Dion Dion Dublin Manchester United , Coventry City , Aston Villa 111 312 0.36 20 Heskey , Emile Emile Heskey Leicester City , Liverpool , Birmingham City , Wigan Athletic , Aston Villa 110 516 0.21 21 Giggs , Ryan Ryan Giggs MF Manchester United 109 632 0.17 22 Crouch , Peter Peter Crouch Aston Villa , Southampton , Liverpool , Portsmouth , Tottenham Hotspur , Stoke City 107 454 0.23 22 Scholes , Paul Paul Scholes MF Manchester United 107 499 0.21 24 Bent , Darren Darren Bent Ipswich Town , Charlton Athletic , Tottenham Hotspur , Sunderland , Aston Villa , Fulham 106 276 0.38 25 Kane , Harry Harry Kane Tottenham Hotspur , Norwich City 104 149 0.70 26 Drogba , Didier Didier Drogba Chelsea 104 254 0.41 27 Lukaku , Romelu Romelu Lukaku West Bromwich Albion , Everton , Manchester United 101 216 0.47 28 Le Tissier , Matt Matt Le Tissier MF Southampton 100 270 0.37 Italics show players still playing professional football ; Bold shows players still playing in the Premier League .
+  Fact 1.0: The list is of Premier League players with 100 or more goals.
+  Fact 1.1: The table columns are rank, player, position, Premier League club(s), goals, games played, and ratio.
+  Fact 1.2: Alan Shearer played for Blackburn Rovers and Newcastle United, scoring 260 goals in 441 games (ratio 0.59).
+  Fact 1.3: Wayne Rooney played for Everton and Manchester United, scoring 208 goals in 484 games (ratio 0.43).
+  Fact 1.4: Andy Cole played for Newcastle United, Manchester United, Blackburn Rovers, Fulham, Manchester City and Portsmouth, scoring 187 goals in 414 games (ratio 0.45).
+  Fact 1.5: Frank Lampard (position MF) played for West Ham United, Chelsea and Manchester City, scoring 177 goals in 609 games (ratio 0.29).
+  Fact 1.6: Thierry Henry played for Arsenal, scoring 175 goals in 258 games (ratio 0.68).
+  Fact 1.7: Rank 6: Robbie Fowler played for Liverpool, Leeds United and Manchester City, scoring 163 goals in 379 games (ratio 0.43).
+  Fact 1.8: Rank 7: Jermain Defoe played for West Ham United, Portsmouth, Tottenham Hotspur, Sunderland and Bournemouth, scoring 162 goals in 485 games (ratio 0.33).
+  Fact 1.9: Rank 8: Michael Owen played for Liverpool, Newcastle United, Manchester United and Stoke City, scoring 150 goals in 326 games (ratio 0.46).
+  Fact 1.10: Rank 9: Les Ferdinand played for Queens Park Rangers, Newcastle United, Tottenham Hotspur, West Ham United, Leicester City and Bolton Wanderers, scoring 149 goals in 351 games (ratio 0.42).
+  Fact 1.11: Rank 10: Teddy Sheringham played for Nottingham Forest, Tottenham Hotspur, Manchester United, Portsmouth and West Ham United, scoring 146 goals in 418 games (ratio 0.35).
+  Fact 1.12: Rank 11: Robin van Persie played for Arsenal and Manchester United, scoring 144 goals in 280 games (ratio 0.51).
+  Fact 1.13: Rank 12: Sergio Aguero played for Manchester City, scoring 143 goals in 204 games (ratio 0.70).
+  Fact 1.14: Rank 13: Jimmy Floyd Hasselbaink played for Leeds United, Chelsea, Middlesbrough and Charlton Athletic, scoring 127 goals in 288 games (ratio 0.44).
+  Fact 1.15: Rank 14: Robbie Keane played for Coventry City, Leeds United, Tottenham Hotspur, Liverpool, West Ham United and Aston Villa, scoring 126 goals in 349 games (ratio 0.36).
+  Fact 1.16: Rank 15: Nicolas Anelka played for Arsenal, Liverpool, Manchester City, Bolton Wanderers, Chelsea and West Bromwich Albion, scoring 125 goals in 364 games (ratio 0.34).
+  Fact 1.17: Rank 16: Dwight Yorke played for Aston Villa, Manchester United, Blackburn Rovers, Birmingham City and Sunderland, scoring 123 goals in 375 games (ratio 0.33).
+  Fact 1.18: Rank 17: Steven Gerrard (position MF) played for Liverpool, scoring 120 goals in 504 games (ratio 0.24).
+  Fact 1.19: Rank 18: Ian Wright played for Arsenal and West Ham United, scoring 113 goals in 213 games (ratio 0.53).
+  Fact 1.20: Rank 19: Dion Dublin played for Manchester United, Coventry City and Aston Villa, scoring 111 goals in 312 games (ratio 0.36).
+  Fact 1.21: Rank 20: Emile Heskey played for Leicester City, Liverpool, Birmingham City, Wigan Athletic and Aston Villa, scoring 110 goals in 516 games (ratio 0.21).
+  Fact 1.22: Rank 21: Ryan Giggs (position MF) played for Manchester United, scoring 109 goals in 632 games (ratio 0.17).
+  Fact 1.23: Rank 22: Peter Crouch played for Aston Villa, Southampton, Liverpool, Portsmouth, Tottenham Hotspur and Stoke City, scoring 107 goals in 454 games (ratio 0.23).
+  Fact 1.24: Rank 22: Paul Scholes (position MF) played for Manchester United, scoring 107 goals in 499 games (ratio 0.21).
+  Fact 1.25: Rank 24: Darren Bent played for Ipswich Town, Charlton Athletic, Tottenham Hotspur, Sunderland, Aston Villa and Fulham, scoring 106 goals in 276 games (ratio 0.38).
+  Fact 1.26: Rank 25: Harry Kane played for Tottenham Hotspur and Norwich City, scoring 104 goals in 149 games (ratio 0.70).
+  Fact 1.27: Rank 26: Didier Drogba played for Chelsea, scoring 104 goals in 254 games (ratio 0.41).
+  Fact 1.28: Rank 27: Romelu Lukaku played for West Bromwich Albion, Everton and Manchester United, scoring 101 goals in 216 games (ratio 0.47).
+  Fact 1.29: Rank 28: Matt Le Tissier (position MF) played for Southampton, scoring 100 goals in 270 games (ratio 0.37).
+  Fact 1.30: Italics mark players still playing professional football.
+  Fact 1.31: Bold marks players still playing in the Premier League.
+
+Retrieved items:
+<item 1>
+List of Premier League players with 100 or more goals
+During the 1995 -- 96 season , Alan Shearer became the first player to score 100 Premier League goals , and holds the record for the fewest games taken to reach
+100 , doing so in 124 appearances . He also holds the record for most goals scored in the Premier League . After Shearer , Harry Kane is the second - fastest to
+100 goals , doing so in 141 games . Players ( edit ) As of 18 April 2018 . Sources : List of Premier League players with 100 or more goals Rank Player Position
+Premier League club ( s ) Goals Played Ratio Shearer , Alan Alan Shearer Blackburn Rovers , Newcastle United 260 441 0.59 Rooney , Wayne Wayne Rooney Everton ,
+Manchester United 208 484 0.43 Cole , Andy Andy Cole Newcastle United , Manchester United , Blackburn Rovers , Fulham , Manchester City , Portsmouth 187 414
+0.45 Lampard , Frank Frank Lampard MF West Ham United , Chelsea , Manchester City 177 609 0.29 Henry , Thierry Thierry Henry Arsenal 175 258 0.68 6 Fowler ,
+Robbie Robbie Fowler Liverpool ,
+</item 1>
+
+<item 2>
+Graph query row:
+person: Wayne Rooney
+relationship: RELATED_TO
+connected_entity: Alan Shearer
+kind: None
+date: None
+score: None
+fact: Wayne Rooney was behind only Alan Shearer in Premier League goals of 200 or more
+context: None
+relationship_detail: None
+relation_detail: None
+role: None
+result: None
+outcome: None
+</item 2>
+
+<item 3>
+List of Premier League players with 100 or more goals
+gulf Associated competitions Asia Trophy FA Community Shield FA Cup EFL Cup UEFA Champions League UEFA Europa League Premier League 2 U18 Premier League Premier
+League International Cup Retrieved from `` https://en.wikipedia.org/w/index.php?title=List_of_Premier_League_players_with_100_or_more_goals&oldid=837185393 ''
+Categories : Lists of Premier League players Association football records and statistics Hidden categories : Wikipedia pending changes protected pages Use dmy
+dates from March 2012 Articles with hCards Talk About Wikipedia Bosanski Dansk Español Italiano Shqip Українська Edit links This page was last edited on 19
+April 2018 , at 07 : 24 . About Wikipedia
+</item 3>
+
+<item 4>
+List of Premier League players with 100 or more goals
+68 6 Fowler , Robbie Robbie Fowler Liverpool , Leeds United , Manchester City 163 379 0.43 7 Defoe , Jermain Jermain Defoe West Ham United , Portsmouth ,
+Tottenham Hotspur , Sunderland , Bournemouth 162 485 0.33 8 Owen , Michael Michael Owen Liverpool , Newcastle United , Manchester United , Stoke City 150 326
+0.46 9 Ferdinand , Les Les Ferdinand Queens Park Rangers , Newcastle United , Tottenham Hotspur , West Ham United , Leicester City , Bolton Wanderers 149 351
+0.42 10 Sheringham , Teddy Teddy Sheringham Nottingham Forest , Tottenham Hotspur , Manchester United , Portsmouth , West Ham United 146 418 0.35 11 van Persie
+, Robin Robin van Persie Arsenal , Manchester United 144 280 0.51 12 Agüero , Sergio Sergio Agüero Manchester City 143 204 0.70 13 Hasselbaink , Jimmy Floyd
+Jimmy Floyd Hasselbaink Leeds United , Chelsea , Middlesbrough , Charlton Athletic 127 288 0.44 14 Keane ,
+</item 4>
+
+<item 5>
+List of Premier League players with 100 or more goals
+Ryan Ryan Giggs MF Manchester United 109 632 0.17 22 Crouch , Peter Peter Crouch Aston Villa , Southampton , Liverpool , Portsmouth , Tottenham Hotspur , Stoke
+City 107 454 0.23 22 Scholes , Paul Paul Scholes MF Manchester United 107 499 0.21 24 Bent , Darren Darren Bent Ipswich Town , Charlton Athletic , Tottenham
+Hotspur , Sunderland , Aston Villa , Fulham 106 276 0.38 25 Kane , Harry Harry Kane Tottenham Hotspur , Norwich City 104 149 0.70 26 Drogba , Didier Didier
+Drogba Chelsea 104 254 0.41 27 Lukaku , Romelu Romelu Lukaku West Bromwich Albion , Everton , Manchester United 101 216 0.47 28 Le Tissier , Matt Matt Le
+Tissier MF Southampton 100 270 0.37 Italics show players still playing professional football ; Bold shows players still playing in the Premier League .
+</item 5>
+
+<item 6>
+List of Premier League players with 100 or more goals
+List of Premier League players with 100 or more goals - wikipedia List of Premier League players with 100 or more goals This is the latest accepted revision ,
+reviewed on 19 April 2018 . Jump to : navigation , search See also : List of footballers in England and Scotland by number of league goals Alan Shearer was the
+first player to score 200 Premier League goals , and only player to score 100 goals for two clubs . Wayne Rooney is the second Premier League player to score
+200 goals or more , behind only Shearer and the only active player as of 2018 to do so . Frank Lampard is the Premier League 's highest scoring midfielder of
+all time . Thierry Henry scored 175 Premier League goals , the most by a foreign player . Ryan Giggs is the only player to have scored in each of the first 21
+Premier League seasons . Didier Drogba is the only African player to score 100 Premier League goals . Since the Premier League 's formation at the start of the
+1992 -- 93 season , 28 players have managed to accrue 100 or more goals in the competition .
+</item 6>
+
+<item 7>
+List of Premier League players with 100 or more goals
+Charlton Athletic 127 288 0.44 14 Keane , Robbie Robbie Keane Coventry City , Leeds United , Tottenham Hotspur , Liverpool , West Ham United , Aston Villa 126
+349 0.36 15 Anelka , Nicolas Nicolas Anelka Arsenal , Liverpool , Manchester City , Bolton Wanderers , Chelsea , West Bromwich Albion 125 364 0.34 16 Yorke ,
+Dwight Dwight Yorke Aston Villa , Manchester United , Blackburn Rovers , Birmingham City , Sunderland 123 375 0.33 17 Gerrard , Steven Steven Gerrard MF
+Liverpool 120 504 0.24 18 Wright , Ian Ian Wright Arsenal , West Ham United 113 213 0.53 19 Dublin , Dion Dion Dublin Manchester United , Coventry City , Aston
+Villa 111 312 0.36 20 Heskey , Emile Emile Heskey Leicester City , Liverpool , Birmingham City , Wigan Athletic , Aston Villa 110 516 0.21 21 Giggs , Ryan Ryan
+Giggs MF Manchester United 109 632 0.17 22 Crouch ,
+</item 7>
+
+<item 8>
+List of Premier League players with 100 or more goals
+Bold shows players still playing in the Premier League . See also ( edit ) English football first tier top scorers List of top Premier League goal scorers by
+season List of Premier League players with 500 or more appearances References ( edit ) Jump up ^ `` Bent poised to join 100 club '' . PremierLeague.com .
+Premier League . 30 January 2012 . Archived from the original on 20 October 2013 . Retrieved 2 February 2012 . Jump up ^ `` Bent delighted to join 100 goals
+club '' . PremierLeague.com . Premier League . 2 February 2012 . Retrieved 2 February 2012 . Jump up ^ Dan Kilpatrick ( 4 February 2018 ) . `` Tottenham striker
+Harry Kane scores 100th Premier League goal '' . ESPN . ^ Jump up to : `` Premier League Player Stats : Goals '' . PremierLeague.com . Premier League .
+Retrieved 10 December 2017 . Jump up ^ `` Premier League Players -- Overview and Stats '' . PremierLeague.com . Premier League .
+</item 8>
+
+<item 9>
+List of Premier League players with 100 or more goals
+PremierLeague.com . Premier League . Retrieved 10 December 2017 . Premier League Seasons 1992 -- 93 1993 -- 94 1994 -- 95 1995 -- 96 1996 -- 97 1997 -- 98 1998
+-- 99 1999 -- 2000 2000 -- 01 2001 -- 02 2002 -- 03 2003 -- 04 2004 -- 05 2005 -- 06 2006 -- 07 2007 -- 08 2008 -- 09 2009 -- 10 2010 -- 11 2011 -- 12 2012 --
+13 2013 -- 14 2014 -- 15 2015 -- 16 2016 -- 17 2017 -- 18 2018 -- 19 Clubs 2017 -- 18 AFC Bournemouth Arsenal Brighton & Hove Albion Burnley Chelsea Crystal
+Palace Everton Huddersfield Town Leicester City Liverpool Manchester City Manchester United Newcastle United Southampton Stoke City Swansea City Tottenham
+Hotspur Watford West Bromwich Albion West Ham
+</item 9>
+
+<item 10>
+List of Premier League players with 100 or more goals
+Newcastle United Southampton Stoke City Swansea City Tottenham Hotspur Watford West Bromwich Albion West Ham United Former Aston Villa Barnsley Birmingham City
+Blackburn Rovers Blackpool Bolton Wanderers Bradford City Cardiff City Charlton Athletic Coventry City Derby County Fulham Hull City Ipswich Town Leeds United
+Middlesbrough Norwich City Nottingham Forest Oldham Athletic Portsmouth Queens Park Rangers Reading Sheffield United Sheffield Wednesday Sunderland Swindon Town
+Wigan Athletic Wimbledon ( defunct ) Wolverhampton Wanderers ( returning in 2018 - 19 ) Competition Teams winners Players foreign foreign scorers winners
+Managers Stadia Founding Broadcasting foundation Broadcasters Referees Statistics and awards Records All - time table Hat - tricks Highest scores Golden Boot
+Golden Glove Manager of the Season Player of the Season Manager of the Month Player of the Month Goal of the Month Players with 500 + appearances Players with
+100 + goals Top scorers by season Goalkeepers with 100 + clean sheets 10 Seasons Awards 20 Seasons Awards Finances Richest clubs : Deloitte list Forbes ' list
+Team owners Transfer records Game 39 Premier League -- Football League gulf Associated competitions Asia Trophy FA Community Shield FA Cup EFL Cup UEFA
+Champions League UEFA Europa League
+</item 10>
+=== END ITEM id=a9b04745907468e2 ===
+
+=== ITEM id=88dbdb1c7f000659 ===
+Gold sentences and facts:
+Sentence 0: ( hide ) Climate data for The South Pole Month Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec Year Record high ° C ( ° F ) − 14.4 ( 6.1 ) − 20.6 ( − 5.1 ) − 26.7 ( − 16.1 ) − 27.8 ( − 18 ) − 25.1 ( − 13.2 ) − 28.8 ( − 19.8 ) − 33.9 ( − 29 ) − 32.8 ( − 27 ) − 29.3 ( − 20.7 ) − 25.1 ( − 13.2 ) − 18.9 ( − 2 ) − 12.3 ( 9.9 ) − 12.3 ( 9.9 ) Average high ° C ( ° F ) − 26.0 ( − 14.8 ) − 37.9 ( − 36.2 ) − 49.6 ( − 57.3 ) − 53.0 ( − 63.4 ) − 53.6 ( − 64.5 ) − 54.5 ( − 66.1 ) − 55.2 ( − 67.4 ) − 54.9 ( − 66.8 ) − 54.4 ( − 65.9 ) − 48.4 ( − 55.1 ) − 36.2 ( − 33.2 ) − 26.3 ( − 15.3 ) − 45.8 ( − 50.4 ) Daily mean ° C ( ° F ) − 28.4 ( − 19.1 ) − 40.9 ( − 41.6 ) − 53.7 ( − 64.7 ) − 57.8 ( − 72 ) − 58.0 ( − 72.4 ) − 58.9 ( − 74 ) − 59.8 ( − 75.6 ) − 59.7 ( − 75.5 ) − 59.1 ( − 74.4 ) − 51.6 ( − 60.9 ) − 38.2 ( − 36.8 ) − 28.0 ( − 18.4 ) − 49.5 ( − 57.1 ) Average low ° C ( ° F ) − 29.6 ( − 21.3 ) − 43.1 ( − 45.6 ) − 56.8 ( − 70.2 ) − 60.9 ( − 77.6 ) − 61.5 ( − 78.7 ) − 62.8 ( − 81 ) − 63.4 ( − 82.1 ) − 63.2 ( − 81.8 ) − 61.7 ( − 79.1 ) − 54.3 ( − 65.7 ) − 40.1 ( − 40.2 ) − 29.1 ( − 20.4 ) − 52.2 ( − 62 ) Record low ° C ( ° F ) − 41.1 ( − 42 ) − 58.9 ( − 74 ) − 71.1 ( − 96 ) − 75.0 ( − 103 ) − 78.3 ( − 108.9 ) − 82.8 ( − 117 ) − 80.6 ( − 113.1 ) − 79.3 ( − 110.7 ) − 79.4 ( − 110.9 ) − 72.0 ( − 97.6 ) − 55.0 ( − 67 ) − 41.1 ( − 42 ) − 82.8 ( − 117 ) Average precipitation mm ( inches ) 0.3 ( 0.012 ) 0.6 ( 0.024 ) 0.2 ( 0.008 ) 0.1 ( 0.004 ) 0.2 ( 0.008 ) 0.1 ( 0.004 ) Trace Trace 0.1 ( 0.004 ) 0.1 ( 0.004 ) 0.1 ( 0.004 ) 0.3 ( 0.012 ) 2.3 ( 0.091 ) Average precipitation days ( ≥ 0.1 mm ) 0.2 0.3 0.2 0.0 0.2 0.1 0.0 0.0 0.1 0.1 0.1 0.3 1.6 Average snowy days 22.0 19.6 13.6 11.4 17.2 17.3 18.2 17.5 11.7 16.7 16.9 20.6 203.0 Mean monthly sunshine hours 406.1 497.2 195.3 0.0 0.0 0.0 0.0 0.0 34.1 390.6 558.0 616.9 2,698.2 Mean daily sunshine hours 13.1 17.6 6.3 0.0 0.0 0.0 0.0 0.0 1.1 12.6 18.6 19.9 7.4 Source # 1 : Pogoda.ru.net ( temperatures , 1981 -- 2010 , extremes 1957 -- present ) Source # 2 : Deutscher Wetterdienst ( precipitation 1957 -- 1988 and sun 1978 -- 1993 ) , NOAA ( snowy days data , 1961 -- 1988 )
+  Fact 0.0: The climate data table is for The South Pole.
+  Fact 0.1: The record high temperatures at The South Pole in degrees Celsius (Fahrenheit) are -14.4 (6.1) in January, -20.6 (-5.1) in February, -26.7 (-16.1) in March, -27.8 (-18) in April, -25.1 (-13.2) in May, -28.8 (-19.8) in June, -33.9 (-29) in July, -32.8 (-27) in August, -29.3 (-20.7) in September, -25.1 (-13.2) in October, -18.9 (-2) in November and -12.3 (9.9) in December.
+  Fact 0.2: The record high temperature for the year at The South Pole is -12.3 (9.9) degrees Celsius (Fahrenheit).
+  Fact 0.3: The average high temperatures at The South Pole in degrees Celsius (Fahrenheit) are -26.0 (-14.8) in January, -37.9 (-36.2) in February, -49.6 (-57.3) in March, -53.0 (-63.4) in April, -53.6 (-64.5) in May, -54.5 (-66.1) in June, -55.2 (-67.4) in July, -54.9 (-66.8) in August, -54.4 (-65.9) in September, -48.4 (-55.1) in October, -36.2 (-33.2) in November and -26.3 (-15.3) in December.
+  Fact 0.4: The average high temperature for the year at The South Pole is -45.8 (-50.4) degrees Celsius (Fahrenheit).
+  Fact 0.5: The daily mean temperatures at The South Pole in degrees Celsius (Fahrenheit) are -28.4 (-19.1) in January, -40.9 (-41.6) in February, -53.7 (-64.7) in March, -57.8 (-72) in April, -58.0 (-72.4) in May, -58.9 (-74) in June, -59.8 (-75.6) in July, -59.7 (-75.5) in August, -59.1 (-74.4) in September, -51.6 (-60.9) in October, -38.2 (-36.8) in November and -28.0 (-18.4) in December.
+  Fact 0.6: The daily mean temperature for the year at The South Pole is -49.5 (-57.1) degrees Celsius (Fahrenheit).
+  Fact 0.7: The average low temperatures at The South Pole in degrees Celsius (Fahrenheit) are -29.6 (-21.3) in January, -43.1 (-45.6) in February, -56.8 (-70.2) in March, -60.9 (-77.6) in April, -61.5 (-78.7) in May, -62.8 (-81) in June, -63.4 (-82.1) in July, -63.2 (-81.8) in August, -61.7 (-79.1) in September, -54.3 (-65.7) in October, -40.1 (-40.2) in November and -29.1 (-20.4) in December.
+  Fact 0.8: The average low temperature for the year at The South Pole is -52.2 (-62) degrees Celsius (Fahrenheit).
+  Fact 0.9: The record low temperatures at The South Pole in degrees Celsius (Fahrenheit) are -41.1 (-42) in January, -58.9 (-74) in February, -71.1 (-96) in March, -75.0 (-103) in April, -78.3 (-108.9) in May, -82.8 (-117) in June, -80.6 (-113.1) in July, -79.3 (-110.7) in August, -79.4 (-110.9) in September, -72.0 (-97.6) in October, -55.0 (-67) in November and -41.1 (-42) in December.
+  Fact 0.10: The record low temperature for the year at The South Pole is -82.8 (-117) degrees Celsius (Fahrenheit).
+  Fact 0.11: The average precipitation at The South Pole in millimeters (inches) is 0.3 (0.012) in January, 0.6 (0.024) in February, 0.2 (0.008) in March, 0.1 (0.004) in April, 0.2 (0.008) in May, 0.1 (0.004) in June, Trace in July, Trace in August, 0.1 (0.004) in September, 0.1 (0.004) in October, 0.1 (0.004) in November and 0.3 (0.012) in December.
+  Fact 0.12: The average precipitation for the year at The South Pole is 2.3 (0.091) millimeters (inches).
+  Fact 0.13: The average number of days with precipitation of at least 0.1 mm at The South Pole is 0.2 in January, 0.3 in February, 0.2 in March, 0.0 in April, 0.2 in May, 0.1 in June, 0.0 in July, 0.0 in August, 0.1 in September, 0.1 in October, 0.1 in November and 0.3 in December.
+  Fact 0.14: The average number of days with precipitation of at least 0.1 mm at The South Pole is 1.6 for the year.
+  Fact 0.15: The average number of snowy days at The South Pole is 22.0 in January, 19.6 in February, 13.6 in March, 11.4 in April, 17.2 in May, 17.3 in June, 18.2 in July, 17.5 in August, 11.7 in September, 16.7 in October, 16.9 in November and 20.6 in December.
+  Fact 0.16: The average number of snowy days at The South Pole is 203.0 for the year.
+  Fact 0.17: The mean monthly sunshine hours at The South Pole are 406.1 in January, 497.2 in February, 195.3 in March, 0.0 in April, 0.0 in May, 0.0 in June, 0.0 in July, 0.0 in August, 34.1 in September, 390.6 in October, 558.0 in November and 616.9 in December.
+  Fact 0.18: The mean monthly sunshine hours at The South Pole total 2,698.2 for the year.
+  Fact 0.19: The mean daily sunshine hours at The South Pole are 13.1 in January, 17.6 in February, 6.3 in March, 0.0 in April, 0.0 in May, 0.0 in June, 0.0 in July, 0.0 in August, 1.1 in September, 12.6 in October, 18.6 in November and 19.9 in December.
+  Fact 0.20: The mean daily sunshine hours at The South Pole are 7.4 for the year.
+  Fact 0.21: Source 1 for the data is Pogoda.ru.net, for temperatures from 1981 to 2010 and extremes from 1957 to present.
+  Fact 0.22: Source 2 for the data is Deutscher Wetterdienst, for precipitation from 1957 to 1988 and sun from 1978 to 1993.
+  Fact 0.23: Source 2 also includes NOAA, for snowy days data from 1961 to 1988.
+
+Retrieved items:
+<item 1>
+South Pole
+More recent buildings are raised on stilts so that the snow does not build up against the sides of them . ( hide ) Climate data for The South Pole Month Jan Feb
+Mar Apr May Jun Jul Aug Sep Oct Nov Dec Year Record high ° C ( ° F ) − 14.4 ( 6.1 ) − 20.6 ( − 5.1 ) − 26.7 ( − 16.1 ) − 27.8 ( − 18 ) − 25.1 ( − 13.2 ) − 28.8
+( − 19.8 ) − 33.9 ( − 29 ) − 32.8 ( − 27 ) − 29.3 ( − 20.7 ) − 25.1 ( − 13.2 ) − 18.9 ( − 2 ) − 12.3 ( 9.9 ) − 12.3 ( 9.9 ) Average high ° C ( ° F ) − 26.0 ( −
+14.8 ) − 37.9 ( − 36.2 ) − 49.6 ( − 57.3 ) − 53.
+</item 1>
+
+<item 2>
+South Pole
+Deutscher Wetterdienst . Retrieved 5 April 2017 . Jump up ^ `` Amundsen -- Scott Climate Normals 1961 − 1990 '' . National Oceanic and Atmospheric
+Administration . Retrieved 5 April 2017 . Jump up ^ Mark Sabbatini , `` Non-human life form seen at Pole '' , The Antarctic Sun , 5 January 2003 . Jump up ^ ``
+Snow microbes found at South Pole '' , BBC News , 10 July 2000 External links ( edit ) Wikimedia Commons has media related to South Pole . Wikivoyage has a
+travel guide for South Pole . NOAA South Pole Webcam 360 ° Panoramas of the South Pole Images of this location are available at the Degree Confluence Project
+South Pole Photo Gallery Poles by the Australian Antarctic Division The Antarctic Sun -- Online news source for the U.S. Antarctic Program Big Dead Place UK
+team makes polar trek history -- BBC News article on first expedition to Pole of Inaccessibility without mechanical assistance Listen to Ernest Shackleton
+describing his 1908 South Pole Expedition , and read more about the recording on ( australianscreen online ) .
+</item 2>
+
+<item 3>
+South Pole
+The polar ice sheet is moving at a rate of roughly 10 metres per year in a direction between 37 ° and 40 ° west of grid north , down towards the Weddell Sea .
+Therefore , the position of the station and other artificial features relative to the geographic pole gradually shift over time . The Geographic South Pole is
+marked by a stake in the ice alongside a small sign ; these are repositioned each year in a ceremony on New Year 's Day to compensate for the movement of the
+ice . The sign records the respective dates that Roald Amundsen and Robert F. Scott reached the Pole , followed by a short quotation from each man , and gives
+the elevation as `` 9,301 FT . '' . A new marker stake is designed and fabricated each year by staff at the site . Ceremonial South Pole ( edit ) The Ceremonial
+South Pole is an area set aside for photo opportunities at the South Pole Station . It is located some meters from the Geographic South Pole , and consists of a
+metallic sphere on a short bamboo pole , surrounded by the flags of the original Antarctic Treaty signatory states .
+</item 3>
+
+<item 4>
+South Pole
+The highest temperature ever recorded at the Amundsen -- Scott South Pole Station was − 12.3 ° C ( 9.9 ° F ) on Christmas Day , 2011 , and the lowest was − 82.8
+° C ( − 117.0 ° F ) on June 23 , 1982 ( for comparison , the lowest temperature directly recorded anywhere on earth was − 89.2 ° C ( − 128.6 ° F ) at Vostok
+Station on July 21 , 1983 , though − 93.2 ° C ( − 135.8 ° F ) was measured indirectly by satellite in East Antarctica between Dome A and Dome F in August 2010 )
+. The South Pole has a desert climate , receiving very little precipitation . Air humidity is near zero . However , high winds can cause the blowing of snowfall
+, and the accumulation of snow amounts to about 20 cm ( 8 in ) per year . The former dome seen in pictures of the Amundsen -- Scott station is partially buried
+due to snow storms , and the entrance to the dome had to be regularly bulldozed to uncover it .
+</item 4>
+
+<item 5>
+South Pole
+2 ) − 49.6 ( − 57.3 ) − 53.0 ( − 63.4 ) − 53.6 ( − 64.5 ) − 54.5 ( − 66.1 ) − 55.2 ( − 67.4 ) − 54.9 ( − 66.8 ) − 54.4 ( − 65.9 ) − 48.4 ( − 55.1 ) − 36.2 ( −
+33.2 ) − 26.3 ( − 15.3 ) − 45.8 ( − 50.4 ) Daily mean ° C ( ° F ) − 28.4 ( − 19.1 ) − 40.9 ( − 41.6 ) − 53.7 ( − 64.7 ) − 57.8 ( − 72 ) − 58.0 ( − 72.4 ) − 58.9
+( − 74 ) − 59.8 ( − 75.6 ) − 59.7 ( − 75.5 ) − 59.1 ( − 74.4 ) − 51.
+</item 5>
+
+<item 6>
+South Pole
+However , it is always low in the sky , reaching a maximum of 23.5 ° in December . Much of the sunlight that does reach the surface is reflected by the white
+snow . This lack of warmth from the sun , combined with the high altitude ( about 2,800 metres ( 9,200 ft ) ) , means that the South Pole has one of the coldest
+climates on Earth ( though it is not quite the coldest ; that record goes to the region in the vicinity of the Vostok Station , also in Antarctica , which lies
+at a higher elevation ) . Temperatures at the South Pole are much lower than at the North Pole , primarily because the South Pole is located at altitude in the
+middle of a continental land mass , while the North Pole is at sea level in the middle of an ocean , which acts as a reservoir of heat . The South Pole is at an
+altitude of 9,300 feet ( 2,800 m ) but feels like 11,000 feet ( 3,400 m ). . Centrifugal force from the spin of the planet pulls the atmosphere toward the
+equator .
+</item 6>
+
+<item 7>
+South Pole
+The geographic coordinates of the South Pole are usually given simply as 90 ° S , since its longitude is geometrically undefined and irrelevant . When a
+longitude is desired , it may be given as 0 ° . At the South Pole , all directions face north . For this reason , directions at the Pole are given relative to
+`` grid north '' , which points northwards along the prime meridian . Along tight latitude circles , clockwise is east , and counterclockwise is west , opposite
+to the North Pole . The Geographic South Pole is located on the continent of Antarctica ( although this has not been the case for all of Earth 's history
+because of continental drift ) . It sits atop a featureless , barren , windswept and icy plateau at an altitude of 2,835 metres ( 9,301 ft ) above sea level ,
+and is located about 1,300 km ( 800 mi ) from the nearest open sea at Bay of Whales . The ice is estimated to be about 2,700 metres ( 9,000 ft ) thick at the
+Pole , so the land surface under the ice sheet is actually near sea level .
+</item 7>
+
+<item 8>
+South Pole
+Centrifugal force from the spin of the planet pulls the atmosphere toward the equator . The South Pole is colder than the North Pole because of the elevation
+difference . The North Pole is a few feet from sea level . In midsummer , as the sun reaches its maximum elevation of about 23.5 degrees , high temperatures at
+the South Pole in January average at − 25.9 ° C ( − 15 ° F ) . As the six - month `` day '' wears on and the sun gets lower , temperatures drop as well : they
+reach − 45 ° C ( − 49 ° F ) around sunset ( late March ) and sunrise ( late September ) . In midwinter , the average temperature remains steady at around − 58 °
+C ( − 72 ° F ) .
+</item 8>
+
+<item 9>
+Graph query row:
+location: Amundsen–Scott South Pole Station
+relationship: LOCATED_IN
+related: South Pole
+date: None
+kind: geographic pole
+fact: None
+context: None
+</item 9>
+
+<item 10>
+South Pole
+0 0.0 1.1 12.6 18.6 19.9 7.4 Source # 1 : Pogoda.ru.net ( temperatures , 1981 -- 2010 , extremes 1957 -- present ) Source # 2 : Deutscher Wetterdienst (
+precipitation 1957 -- 1988 and sun 1978 -- 1993 ) , NOAA ( snowy days data , 1961 -- 1988 ) Time ( edit ) In most places on Earth , local time is determined by
+longitude , such that the time of day is more - or-less synchronised to the position of the sun in the sky ( for example , at midday the sun is roughly at its
+highest ) . This line of reasoning fails at the South Pole , where the sun rises and sets only once per year , and all lines of longitude , and hence all time
+zones , converge . There is no a priori reason for placing the South Pole in any particular time zone , but as a matter of practical convenience the Amundsen --
+Scott South Pole Station keeps New Zealand Time ( UTC + 12 ) .
+</item 10>
+=== END ITEM id=88dbdb1c7f000659 ===
+
+=== ITEM id=73d961c1fbdc7eaa ===
+Gold sentences and facts:
+Sentence 0: The gymnosperms are a group of seed - producing plants that includes conifers , cycads , Ginkgo , and gnetophytes . The term `` gymnosperm '' comes from the Greek composite word γυμνόσπερμος ( γυμνός gymnos , `` naked '' and σπέρμα sperma , `` seed '' ) , meaning `` naked seeds '' . The name is based on the unenclosed condition of their seeds ( called ovules in their unfertilized state ) . The non-encased condition of their seeds stands in contrast to the seeds and ovules of flowering plants ( angiosperms ) , which are enclosed within an ovary . Gymnosperm seeds develop either on the surface of scales or leaves , which are often modified to form cones , or solitary as in Yew , Torreya , Ginkgo .
+  Fact 0.0: The gymnosperms are a group of seed-producing plants.
+  Fact 0.1: Gymnosperms include conifers, cycads, Ginkgo, and gnetophytes.
+  Fact 0.2: The term gymnosperm comes from the Greek composite word γυμνόσπερμος.
+  Fact 0.3: The Greek word γυμνός (gymnos) means naked.
+  Fact 0.4: The Greek word σπέρμα (sperma) means seed.
+  Fact 0.5: The term gymnosperm means naked seeds.
+  Fact 0.6: The name gymnosperm is based on the unenclosed condition of gymnosperm seeds.
+  Fact 0.7: Gymnosperm ovules are called ovules in their unfertilized state.
+  Fact 0.8: Gymnosperm seeds are not encased.
+  Fact 0.9: The seeds and ovules of flowering plants (angiosperms) are enclosed within an ovary.
+  Fact 0.10: Gymnosperm seeds develop either on the surface of scales or leaves.
+  Fact 0.11: The scales or leaves on which gymnosperm seeds develop are often modified to form cones.
+  Fact 0.12: Gymnosperm seeds can also be solitary, as in Yew, Torreya, and Ginkgo.
+
+Retrieved items:
+<item 1>
+Gymnosperm
+The name is based on the unenclosed condition of their seeds ( called ovules in their unfertilized state ) . The non-encased condition of their seeds stands in
+contrast to the seeds and ovules of flowering plants ( angiosperms ) , which are enclosed within an ovary . Gymnosperm seeds develop either on the surface of
+scales or leaves , which are often modified to form cones , or solitary as in Yew , Torreya , Ginkgo . The gymnosperms and angiosperms together compose the
+spermatophytes or seed plants . The gymnosperms are divided into six phyla . Organisms that belong to the Cycadophyta , Ginkgophyta , Gnetophyta , and Pinophyta
+( also known as Coniferophyta ) phyla are still in existence while those in the Pteridospermales and Cordaitales phyla are now extinct .
+</item 1>
+
+<item 2>
+Gymnosperm
+External links ( edit ) Wikimedia Commons has media related to Gymnosperm . Gymnosperm Database Gymnosperms on the Tree of Life Albert Seward ( 1911 ) . ``
+Gymnosperms '' . Encyclopædia Britannica ( 11th ed . ) . Botany History of botany Subdisciplines Plant systematics Ethnobotany Paleobotany Plant anatomy Plant
+ecology Phytogeography Geobotany Flora Phytochemistry Plant pathology Bryology Phycology Floristics Dendrology Plant groups Algae Archaeplastida Bryophyte
+Non-vascular plants Vascular plants Spermatophytes Pteridophyte Gymnosperm Angiosperm Plant morphology ( glossary ) Plant cells Cell wall Phragmoplast Plastid
+Plasmodesma Vacuole Tissues Meristem Vascular tissue Vascular bundle Ground tissue Mesophyll Cork Wood Storage organs Vegetative Root Rhizoid Bulb Rhizome Shoot
+Stem Leaf Petiole Cataphyll Bud Sessility Reproductive ( Flower ) Flower development Inflorescence Umbel Raceme Bract Pedicellate Flower Whorl Floral symmetry
+Floral diagram Floral formula Receptacle
+</item 2>
+
+<item 3>
+Gymnosperm
+By far the largest group of living gymnosperms are the conifers ( pines , cypresses , and relatives ) , followed by cycads , gnetophytes ( Gnetum , Ephedra and
+Welwitschia ) , and Ginkgo biloba ( a single living species ) . Roots in some genera have fungal association with roots in the form of mycorrhiza ( Pinus ) ,
+while in some others ( Cycas ) small specialised roots called coralloid roots are associated with nitrogen - fixing cyanobacteria . Contents ( hide ) 1
+Classification 2 Diversity and origin 3 Uses 4 Life cycle 5 Genetics 6 References 7 External links Classification ( edit ) Further information : Spermatophyte
+In early classification schemes , the gymnosperms ( Gymnospermae ) were regarded as a `` natural '' group . There is conflicting evidence on the question of
+whether the living gymnosperms form a clade .
+</item 3>
+
+<item 4>
+Gymnosperm
+After syngamy ( joining of the sperm and egg cell ) , the zygote develops into an embryo ( young sporophyte ) . More than one embryo is usually initiated in
+each gymnosperm seed . The mature seed comprises the embryo and the remains of the female gametophyte , which serves as a food supply , and the seed coat .
+Genetics ( edit ) The first published sequenced genome for any gymnosperm was the genome of Picea abies in 2013 . References ( edit ) ^ Jump up to : ``
+Gymnosperms on The Plant List '' . Theplantlist.org . Retrieved 2013 - 07 - 24 . ^ Jump up to : Raven , P.H. ( 2013 ) . Biology of Plants . New York : W.H.
+Freeman and Co . Jump up ^ Jeffrey D. Palmer ; Douglas E. Soltis ; Mark W. Chase ( 2004 ) . `` The plant tree of life : an overview and some points of view '' .
+American Journal of Botany. 91 ( 10 ) : 1437 -- 1445 .
+</item 4>
+
+<item 5>
+Gymnosperm
+Two spore types , microspores and megaspores , are typically produced in pollen cones or ovulate cones , respectively . Gametophytes , as with all heterosporous
+plants , develop within the spore wall . Pollen grains ( microgametophytes ) mature from microspores , and ultimately produce sperm cells . Megagametophytes
+develop from megaspores and are retained within the ovule . Gymnosperms produce multiple archegonia , which produce the female gamete . During pollination ,
+pollen grains are physically transferred between plants from the pollen cone to the ovule . Pollen is usually moved by wind or insects . Whole grains enter each
+ovule through a microscopic gap in the ovule coat ( integument ) called the micropyle . The pollen grains mature further inside the ovule and produce sperm
+cells . Two main modes of fertilization are found in gymnosperms . Cycads and Ginkgo have motile sperm that swim directly to the egg inside the ovule , whereas
+conifers and gnetophytes have sperm with no flagella that are moved along a pollen tube to the egg .
+</item 5>
+
+<item 6>
+Gymnosperm
+Diselma , Fitzroya , Callitris ( incl . Actinostrobus and Neocallitropsis ) , Thujopsis , Thuja , Fokienia , Chamaecyparis , Callitropsis , Cupressus ,
+Juniperus , Xanthocyparis , Calocedrus , Tetraclinis , Platycladus , Microbiota Family Taxaceae : Austrotaxus , Pseudotaxus , Taxus , Cephalotaxus , Amentotaxus
+, Torreya Diversity and origin ( edit ) There are more than 1000 extant or currently living species of gymnosperms in 88 plant genera belonging to 14 plant
+families . It is widely accepted that the gymnosperms originated in the late Carboniferous period , replacing the lycopsid rainforests of the tropical region .
+This appears to have been the result of a whole genome duplication event around 319 million years ago . Early characteristics of seed plants were evident in
+fossil progymnosperms of the late Devonian period around 383 million years ago .
+</item 6>
+
+<item 7>
+Gymnosperm
+91 ( 10 ) : 1437 -- 1445 . doi : 10.3732 / ajb. 91.10. 1437 . PMID 21652302 . Jump up ^ Stevens , P.F. `` Angiosperm Phylogeny Website - Seed Plant Evolution ''
+. Jump up ^ Hilton , Jason , and Richard M. Bateman. 2006 . Pteridosperms are the backbone of seed - plant phylogeny . Journal of the Torrey Botanical Society
+133 : 119 - 168 ( abstract ) Jump up ^ Christenhusz , M.J.M. ; Reveal , J.L. ; Farjon , A. ; Gardner , M.F. ; Mill , R.R. ; Chase , M.W. ( 2011 ) . `` A new
+classification and linear sequence of extant gymnosperms '' ( PDF ) . Phytotaxa. 19 : 55 -- 70 . Jump up ^ Christenhusz , M.J.M. ; Byng , J.W. ( 2016 ) .
+</item 7>
+
+<item 8>
+Gymnosperm
+There is conflicting evidence on the question of whether the living gymnosperms form a clade . The fossil record of gymnosperms includes many distinctive taxa
+that do not belong to the four modern groups , including seed - bearing trees that have a somewhat fern - like vegetative morphology ( the so - called `` seed
+ferns '' or pteridosperms . ) When fossil gymnosperms such as Bennettitales , Caytonia and the glossopterids are considered , it is clear that angiosperms are
+nested within a larger gymnosperm clade , although which group of gymnosperms is their closest relative remains unclear . For the most recent classification on
+extant gymnosperms see Christenhusz et al. ( 2011 ) . There are 12 families , 83 known genera with a total of ca 1080 known species ( Christenhusz & Byng 2016 )
+.
+</item 8>
+
+<item 9>
+Gymnosperm
+Agathis in Araucariaceae and Nageia in Podocarpaceae have broad , flat strap - shaped leaves . Cycads are the next most abundant group of gymnosperms , with two
+or three families , 11 genera , and approximately 338 species . A majority of cycads are native to tropical climates and are most abundantly found in regions
+near the equator . The other extant groups are the 95 - 100 species of Gnetales and one species of Ginkgo . Uses ( edit ) Gymnosperms have major economic uses .
+Pine , fir , spruce , and cedar are all examples of conifers that are used for lumber , paper production , and resin . Some other common uses for gymnosperms
+are soap , varnish , nail polish , food , gum , and perfumes . Life cycle ( edit ) Example of gymnosperm lifecycle Gymnosperms , like all vascular plants , have
+a sporophyte - dominant life cycle , which means they spend most of their life cycle with diploid cells , while the gametophyte ( gamete - bearing phase ) is
+relatively short - lived .
+</item 9>
+
+<item 10>
+Gymnosperm
+Gymnosperm - wikipedia Gymnosperm Jump to : navigation , search Gymnosperms Temporal range : 370 -- 0 Ma PreЄ Є Pg Devonian - Present Various gymnosperms .
+Scientific classification Kingdom : Plantae Subkingdom : Embryophyta ( unranked ) : Gymnospermae ( paraphyletic ) Divisions Pinophyta ( or Coniferophyta ) -
+Conifers Ginkgophyta - Ginkgo Cycadophyta - Cycads Gnetophyta - Gnetum , Ephedra , Welwitschia Encephalartos sclavoi cone , about 30 cm long The gymnosperms are
+a group of seed - producing plants that includes conifers , cycads , Ginkgo , and gnetophytes . The term `` gymnosperm '' comes from the Greek composite word
+γυμνόσπερμος ( γυμνός gymnos , `` naked '' and σπέρμα sperma , `` seed '' ) , meaning `` naked seeds '' .
+</item 10>
+=== END ITEM id=73d961c1fbdc7eaa ===

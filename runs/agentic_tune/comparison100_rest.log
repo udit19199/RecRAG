@@ -1,0 +1,21 @@
+graphrag: saved retrieval for multihop-rag-2345
+graphrag: saved retrieval for multihop-rag-2366
+graphrag: saved retrieval for multihop-rag-2369
+graphrag: saved retrieval for multihop-rag-2388
+graphrag: saved retrieval for multihop-rag-2396
+graphrag: saved retrieval for multihop-rag-2408
+graphrag: saved retrieval for multihop-rag-2440
+graphrag: saved retrieval for multihop-rag-2448
+graphrag: saved retrieval for multihop-rag-2514
+graphrag: saved retrieval for multihop-rag-2554
+graphrag record 0: EM=0.00, F1=0.00
+graphrag record 1: EM=0.00, F1=0.00
+graphrag record 2: EM=0.00, F1=0.00
+graphrag record 3: EM=1.00, F1=1.00
+graphrag record 4: EM=1.00, F1=1.00
+graphrag record 5: EM=1.00, F1=1.00
+graphrag record 6: EM=1.00, F1=1.00
+graphrag record 7: EM=1.00, F1=1.00
+graphrag record 8: EM=1.00, F1=1.00
+graphrag record 9: EM=0.00, F1=0.00
+RESULTS /Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/agentic_tune/graphrag/20261110T081249950821Z/results.jsonl

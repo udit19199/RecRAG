@@ -1,0 +1,58 @@
+[
+{"id": "51feff173ccc7ab7", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "It could, though, mean some sort of progress"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "It could, though, mean some sort of progress, if the Manchester born Ratcliffe follows through with his vision to revolutionise the club."}]},
+{"fact": "0.2", "status": "contradicted", "evidence": [{"item": 10, "quote": "if the Manchester born Ratcliffe follows through"}, {"item": 4, "quote": "between Oldham-born Ratcliffe, who had previously offered"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "follows through with his vision to revolutionise the club."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "ee08a3b5e018097d", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "But they've also seen the fourth-lowest ADOT from tight ends (5.0 yards per target)"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "But they've also seen the fourth-lowest ADOT from tight ends (5.0 yards per target)"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "almost as if teams know they won't be able to succeed on downfield shots against them"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "(zero completions of 20-plus yards from tight ends)"}]}
+]},
+{"id": "b09816c622ff746e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "And if the Braves let this be the story of their series, that's on them."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "And if the Braves let this be the story of their series, that's on them."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "it also uses major pieces of lore from Konami’s Castlevania: Rondo of Blood"}]},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []}
+]},
+{"id": "fcc91281b64e457b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "bde53106f59daa61", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []}
+]},
+{"id": "a505f116a0ace207", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 3, "quote": "Smith did return, however, for the final drive of the game in the losing effort."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "and backup Drew Lock took over under center with 18 seconds left in the third quarter."}]}
+]}
+]

@@ -1,0 +1,79 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5a8d0e4e5542994ba4e3dbbf",
+   "sentences": [
+    "The 2012 United States Libertarian National Convention, in which delegates of the Libertarian Party (LP) chose the party's nominees for President of the United States and Vice President of the United States in the 2012 general election, was held May 2–6, 2012 in Las Vegas, Nevada at the Red Rock Resort Spa and Casino.",
+    " Former Governor of New Mexico Gary Johnson won the presidential nomination on the first ballot.",
+    "Gary Earl Johnson (born January 1, 1953) is an American businessman, author, and politician.",
+    " He was the 29th Governor of New Mexico from 1995 to 2003 as a member of the Republican Party."
+   ]
+  },
+  {
+   "id": "multihop-rag-966",
+   "sentences": [
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.",
+    "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-1421",
+   "sentences": [
+    "With inflation down from its peak two summers ago, Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates and could soon turn to cutting them.",
+    "For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report.",
+    "Postponements of such reports could complicate things for the Fed, which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy."
+   ]
+  },
+  {
+   "id": "multihop-rag-2017",
+   "sentences": [
+    "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s.",
+    "In the year since Altman catapulted ChatGPT to global fame, he has become Silicon Valley’s sought-after voice on the promise and potential dangers of artificial intelligence and his sudden and mostly unexplained exit brought uncertainty to the industry’s future.",
+    "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."
+   ]
+  },
+  {
+   "id": "-6470661682628568770",
+   "sentences": [
+    "State and Territory Capitals of Australia Jurisdiction Capital City Population State / Territory Population Date of statehood Capital since Image Australia and Australian Capital Territory Canberra 435,019 403,468 Must remain a territory as per s. 125 of the Australian Constitution 1913 View of Civic from Mount Ainslie , with Telstra Tower in the background New South Wales Sydney 5,029,768 7,759,274 1788 1788 Skyline of the Sydney central business district Victoria Melbourne 4,725,316 6,179,249 1851 1851 The Melbourne skyline on the Yarra River Queensland Brisbane 2,360,241 4,848,877 1859 1860 Brisbane 's CBD , with the Story Bridge in the foreground Western Australia Perth 2,022,044 2,558,951 1829 1829 View of Perth CBD skyline South Australia Adelaide 1,324,279 1,713,054 1836 1836 View of Adelaide Skyline . Tasmania Hobart 224,462 517,588 1825 1826 View of the Hobart downtown district and Mount Wellington from Constitution Dock Northern Territory Darwin 145,916 245,740 Has not attained Statehood 1911 View of Darwin CBD"
+   ]
+  },
+  {
+   "id": "multihop-rag-864",
+   "sentences": [
+    "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX.",
+    "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "8358137531154800533",
+   "sentences": [
+    "Symphony No. 40 in G minor , KV. 550 was written by Wolfgang Amadeus Mozart in 1788 . It is sometimes referred to as the `` Great G minor symphony '' , to distinguish it from the `` Little G minor symphony '' , No. 25 . The two are the only extant minor key symphonies Mozart wrote ."
+   ]
+  },
+  {
+   "id": "multihop-rag-674",
+   "sentences": [
+    "The post came after Swift was seen enthusiastically cheering him on in the box seats at Arrowhead Stadium, fuelling speculation that she and the athlete are dating.",
+    "Swifties were immediately on high alert, with some capturing Swift and Kelce leaving the stadium together."
+   ]
+  },
+  {
+   "id": "5adfc06d55429906c02daa2a",
+   "sentences": [
+    " The ground was home to the Boston Reds, that played in the Players' League in 1890 and the American Association in 1891.",
+    " It is home to the Port of Boston, a major shipping facility in the northeastern United States."
+   ]
+  },
+  {
+   "id": "6091079313707220510",
+   "sentences": [
+    "Life of Pi is a Canadian fantasy adventure novel by Yann Martel published in 2001 . The protagonist is Piscine Molitor `` Pi '' Patel , an Indian boy from Pondicherry who explores issues of spirituality and practicality from an early age . He survives 227 days after a shipwreck while stranded on a lifeboat in the Pacific Ocean with a Bengal tiger named Richard Parker ."
+   ]
+  }
+ ]
+}

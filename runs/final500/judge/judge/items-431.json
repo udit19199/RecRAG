@@ -1,0 +1,494 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "507637acc0d73a22",
+   "gold": [
+    {
+     "sentence": " They competed at the 2015 Pacific Games, where they finished with an 0-4 record.",
+     "facts": {
+      "0.0": "The unnamed subject competed at the 2015 Pacific Games",
+      "0.1": "The unnamed subject finished the 2015 Pacific Games with an 0-4 record"
+     }
+    },
+    {
+     "sentence": "Basketball at the 2015 Pacific Games in Port Moresby, Papua New Guinea was held at the BSP Arena and PNG Power Dome on 3–12 July 2015.",
+     "facts": {
+      "1.0": "Basketball at the 2015 Pacific Games was held in Port Moresby, Papua New Guinea",
+      "1.1": "Basketball at the 2015 Pacific Games was held at the BSP Arena and PNG Power Dome",
+      "1.2": "Basketball at the 2015 Pacific Games was held on 3 to 12 July 2015"
+     }
+    }
+   ],
+   "items": [
+    "Kiribati at the 2015 Pacific Games\nKiribati competed at the 2015 Pacific Games in Port Moresby, Papua New Guinea from 4 to 18 July 2015.\n\n A total of 86 competitors for Kiribati were listed as of 4 July 2015.",
+    "Women's football at the 2015 Pacific Games\nThe 2015 Pacific Games women's football tournament was the 4th edition of the Pacific Games women's football tournament.\n\n The women's football tournament was held in Port Moresby, Papua New Guinea between 6–16 July 2015 as part of the 2015 Pacific Games.\n\n The tournament was open to full women's national teams (unlike the men's tournament, which was age-restricted).",
+    "Graph query row:\nevent: 2015 Pacific Games\nevent_location: Port Moresby\nplace: Port Moresby\nlocated_in: Papua New Guinea\nparticipating_team: None\nparticipation_relationship: None\nparticipated: False",
+    "Men's football at the 2015 Pacific Games\nThe 2015 Pacific Games men's football tournament was the 14th edition of the Pacific Games men's football tournament.\n\n The men's football tournament was held in Port Moresby, Papua New Guinea between 3–17 July 2015 as part of the 2015 Pacific Games.\n\n The tournament was age-restricted and open to men's under-23 national teams only.",
+    "2015 Pacific Games\nThe 2015 Pacific Games was held in Port Moresby, Papua New Guinea, from 4 to 18 July 2015.\n\n It was the fifteenth staging of the Pacific Games.",
+    "Athletics at the 2002 Asian Games\nAthletics was contested from October 7 to October 14 at the 2002 Asian Games in Busan Asiad Main Stadium, Busan, South Korea.\n\n A total of 460 athletes (comprising 281 men and 179 women) from 39 nations took part in the competition.\n\n Afghanistan, Bhutan, Brunei, Laos and Maldives were the only nations without a representative in the events.",
+    "Kiribati national basketball team\nThe Kiribati national basketball team are the basketball side that represent Kiribati in international competitions.\n\n They competed at the 2015 Pacific Games, where they finished with an 0-4 record.",
+    "Powerlifting at the 2015 Pacific Games\nPowerlifting at the 2015 Pacific Games was held from 9–10 July 2015 in the Sir John Guise Indoor Power Dome at Port Moresby, Papua New Guinea.\n\n The host nation Papua New Guinea was the dominant team, particularly in the women's divisions where it claimed six of the seven possible gold medals.\n\n Nauru was the strongest team in the men's divisions, winning four of the eight weight categories.\n\n Telupe Iosefa received the first ever gold medal won by Tuvalu at the Pacific Games in the 120 kg male division.",
+    "Basketball at the 2015 Pacific Games\nBasketball at the 2015 Pacific Games in Port Moresby, Papua New Guinea was held at the BSP Arena and PNG Power Dome on 3–12 July 2015.",
+    "Australia at the 2015 Pacific Games\nAustralia competed at the 2015 Pacific Games in Port Moresby, Papua New Guinea from 4 to 18 July 2015.\n\n Australia qualified 43 athletes.\n\n It was the first time that Australia has competed in the Pacific Games."
+   ]
+  },
+  {
+   "id": "eb949541e34b67c7",
+   "gold": [
+    {
+     "sentence": "Aliens of the Deep is a 2005 documentary film, directed in part by James Cameron alongside fellow cameraman and friend Steven Quale, who would go on to direct \"Final Destination 5\" six years later, and filmed in the IMAX 3D format.",
+     "facts": {
+      "0.0": "Aliens of the Deep is a 2005 documentary film.",
+      "0.1": "Aliens of the Deep was directed in part by James Cameron.",
+      "0.2": "James Cameron directed Aliens of the Deep alongside fellow cameraman and friend Steven Quale.",
+      "0.3": "Steven Quale would go on to direct Final Destination 5 six years later.",
+      "0.4": "Aliens of the Deep was filmed in the IMAX 3D format."
+     }
+    },
+    {
+     "sentence": " Cameron teams with NASA scientists to explore the Mid-Ocean Ridges, submerged chains of mountains in the Atlantic and Pacific oceans that are home to some of the planet's more unusual forms of life.",
+     "facts": {
+      "1.0": "James Cameron teams with NASA scientists to explore the Mid-Ocean Ridges.",
+      "1.1": "The Mid-Ocean Ridges are submerged chains of mountains.",
+      "1.2": "The Mid-Ocean Ridges are in the Atlantic and Pacific oceans.",
+      "1.3": "The Mid-Ocean Ridges are home to some of the planet's more unusual forms of life."
+     }
+    },
+    {
+     "sentence": "Poetry in Motion is a 1982 Canadian documentary film directed by Ron Mann featuring contemporary North American poetry and music.",
+     "facts": {
+      "2.0": "Poetry in Motion is a 1982 Canadian documentary film.",
+      "2.1": "Poetry in Motion was directed by Ron Mann.",
+      "2.2": "Poetry in Motion features contemporary North American poetry.",
+      "2.3": "Poetry in Motion features contemporary North American music."
+     }
+    },
+    {
+     "sentence": " Featured are some of the Black Mountain poets, Beats, minimalist poets, and avant-garde poets.",
+     "facts": {
+      "3.0": "Poetry in Motion features some Black Mountain poets.",
+      "3.1": "Poetry in Motion features some Beat poets.",
+      "3.2": "Poetry in Motion features some minimalist poets.",
+      "3.3": "Poetry in Motion features some avant-garde poets."
+     }
+    },
+    {
+     "sentence": " It was released in theaters, later being distributed on VHS, LaserDisc, and DVD.",
+     "facts": {
+      "4.0": "Poetry in Motion was released in theaters.",
+      "4.1": "Poetry in Motion was later distributed on VHS.",
+      "4.2": "Poetry in Motion was later distributed on LaserDisc.",
+      "4.3": "Poetry in Motion was later distributed on DVD."
+     }
+    },
+    {
+     "sentence": " An extended CD-ROM version was also released.",
+     "facts": {
+      "5.0": "An extended CD-ROM version of Poetry in Motion was also released."
+     }
+    }
+   ],
+   "items": [
+    "War/Dance\nWar/Dance is a 2007 American documentary film written and directed by Sean Fine and Andrea Nix Fine and produced by Shine Global's Susan MacLaury, a professor at Kean University, and Albie Hecht.\n\n It was nominated for the 2008 Academy Award for Best Documentary Feature and received the Emmy Award for Best Documentary and Best Cinematography in 2010.",
+    "SlamNation\nSlamNation is a documentary film by director Paul Devlin.\n\n The film follows the National Poetry Slam in Portland, Oregon.",
+    "We Are Poets\nWe Are Poets is a documentary film directed by Daniel Lucchesi and Alex Ramseyer-Bache.\n\n It follows six young poets from Leeds Young Authors performance poetry group in Leeds on their visit to the international Poetry Slam Competition in Washington D.C, United States.\n\n It premièred at Europe's largest Documentary Film festival - Doc/Fest in Sheffield's Showroom Cinema on 11 June 2011, where it won the coveted Sheffield Youth Jury Award.",
+    "Deep Dark Canyon\nDeep Dark Canyon is a 2012 American independent dramatic thriller film by husband and wife writer/director team Abe Levy and Silver Tree.\n\n The film stars Ted Levine, Nick Eversman and Spencer Treat Clark.\n\n The film was originally called \"Lawless\" and was shot on location in the rural town of Guerneville, California.",
+    "Poetry in Motion (film)\nPoetry in Motion is a 1982 Canadian documentary film directed by Ron Mann featuring contemporary North American poetry and music.\n\n Featured are some of the Black Mountain poets, Beats, minimalist poets, and avant-garde poets.\n\n It was released in theaters, later being distributed on VHS, LaserDisc, and DVD.\n\n An extended CD-ROM version was also released.",
+    "Titan A.E.\nTitan A.E. is a 2000 American animated science fiction film directed by Don Bluth and Gary Goldman.\n\n Its title refers to the spacecraft central to the plot, with \"A.E.\" meaning \"After Earth\".\n\n It stars Matt Damon, Bill Pullman, John Leguizamo, Nathan Lane, Janeane Garofalo and Drew Barrymore.\n\n The film's animation technique combines traditional hand-drawn animation and extensive use of computer generated imagery.\n\n Its working title was \"Planet Ice\".\n\n It was theatrically released on June 16, 2000, by 20th Century Fox and was the final film for Fox Animation Studios.\n\n The film grossed $36.8 million on a $75–$90 million budget, making a $100-million loss for the studio.",
+    "The Polar Bears\nThe Polar Bears is a 2012 3D computer animated short film presented by The Coca-Cola Company, produced by Ridley Scott, written by David Reynolds, and directed by John Stevenson.\n\n The film features the voices of Lin-Manuel Miranda, Armie Hammer, Jonathan Adams, and Megyn Price.\n\n The film is based on Coca-Cola's iconic polar bears and was released on the company's website and YouTube channel on December 31, 2012.",
+    "Oceans (film)\nOceans (French: Océans ) is a 2009 French nature documentary film directed, produced, co-written, and narrated by Jacques Perrin, with Jacques Cluzaud as co-director.\n\n The film explores the marine species of Earth's five oceans and reflects on the negative aspects of human activity on the environment, with Perrin (Pierce Brosnan in English) providing narration.",
+    "From the Sea to the Land Beyond\nFrom The Sea to the Land Beyond: Britain's Coast on Film is a documentary feature film directed by Penny Woolcock, with an original soundtrack by British indie-rock band British Sea Power.\n\n The project was originally produced by Crossover and Sheffield Doc/Fest as part of The Space project from the BBC and the Arts Council England.\n\n The film was edited by Alex Fry.",
+    "Aliens of the Deep\nAliens of the Deep is a 2005 documentary film, directed in part by James Cameron alongside fellow cameraman and friend Steven Quale, who would go on to direct \"Final Destination 5\" six years later, and filmed in the IMAX 3D format.\n\n It was produced by Walden Media and Walt Disney Pictures.\n\n Cameron teams with NASA scientists to explore the Mid-Ocean Ridges, submerged chains of mountains in the Atlantic and Pacific oceans that are home to some of the planet's more unusual forms of life."
+   ]
+  },
+  {
+   "id": "dd1acd0d4b8541e0",
+   "gold": [
+    {
+     "sentence": "The Beaver and Erie Canal, also known as the Erie Extension Canal, was part of the Pennsylvania Canal system and consisted of three sections: the Beaver Division, the Shenango Division, and the Conneaut Division.",
+     "facts": {
+      "0.0": "The Beaver and Erie Canal was also known as the Erie Extension Canal.",
+      "0.1": "The Beaver and Erie Canal was part of the Pennsylvania Canal system.",
+      "0.2": "The Beaver and Erie Canal consisted of three sections.",
+      "0.3": "The three sections of the Beaver and Erie Canal were the Beaver Division, the Shenango Division, and the Conneaut Division."
+     }
+    },
+    {
+     "sentence": "The Dismal Swamp Canal is located along the eastern edge of the Great Dismal Swamp in Virginia and North Carolina in the United States.",
+     "facts": {
+      "1.0": "The Dismal Swamp Canal is located along the eastern edge of the Great Dismal Swamp.",
+      "1.1": "The Dismal Swamp Canal is located in Virginia and North Carolina.",
+      "1.2": "Virginia and North Carolina are in the United States."
+     }
+    }
+   ],
+   "items": [
+    "Pennsylvania and Ohio Canal\nThe Pennsylvania and Ohio Canal, also known as the P & O Canal, the Cross Cut Canal and the Mahoning Canal was a shipping canal which operated from 1840 until 1877 (though the canal was completely abandoned by 1872).\n\n It was unique in that it served to connect canals in two states (the Ohio and Erie Canal in Ohio and the Beaver and Erie Canal in Pennsylvania) and was funded by private interests.",
+    "Dismal Swamp Canal\nThe Dismal Swamp Canal is located along the eastern edge of the Great Dismal Swamp in Virginia and North Carolina in the United States.\n\n It is the oldest continually operating man-made canal in the United States, opened in 1805, and closed in October 2016.\n\n It is part of the Intracoastal Waterway, an inland route, which parallels the east coast and offers boaters shelter from the Atlantic Ocean from Manasquan Inlet, New Jersey, to Brownsville, Texas.\n\n The route runs through bays, lakes, rivers, streams, and canals, and includes the Intracoastal Waterway running from Norfolk, Virginia, to the Florida Keys.",
+    "Susquehanna and Tidewater Canal\nThe Susquehanna and Tidewater Canal between Wrightsville, Pennsylvania, and Havre de Grace, Maryland, at the head of Chesapeake Bay, provided an interstate shipping alternative to 19th-century arks, rafts, and boats plying the difficult waters of the lower Susquehanna River.\n\n Built between 1836 and 1840, it ran 43 mi along the west bank of the river and rendered obsolete an older, shorter canal along the east bank.\n\n Of its total length, 30 mi were in Pennsylvania and 13 mi in Maryland.\n\n Though rivalry between Philadelphia, Pennsylvania, and Baltimore, Maryland, delayed its construction, the finished canal brought increased shipments of coal and other raw materials to both cities from Pennsylvania's interior.\n\n Competition from railroads was a large factor in the canal's decline after 1855.\n\n Canal remnants, including a lock keeper's house, have been preserved in Maryland, and locks 12 and 15 have been preserved in Pennsylvania.",
+    "Brunswick–Altamaha canal\nThe Brunswick–Altamaha Canal was a 12-mile-long canal built to connect the Altamaha River to the city of Brunswick, Georgia at the Turtle River to transport goods from Brunswick's port to areas farther north and inland.\n\n It included locks on both ends of the canal.\n\n The canal was originally proposed in 1798 and after two failed charters (1826 and 1830), construction was started in 1836 by Thomas Butler King.\n\n The project was estimated to cost $450,000.\n\n The canal was finished and opened in 1854; however, by that time the canal was obsolete because of new railroads.\n\n The canal was closed by 1860.\n\n The Columbian mammoth was discovered during the construction of the canal.",
+    "Great Dismal Swamp National Wildlife Refuge\nThe Great Dismal Swamp National Wildlife Refuge was created in 1974 to help protect and preserve a portion of the Great Dismal Swamp, a marshy region on the Coastal Plain of southeastern Virginia and northeastern North Carolina between Norfolk, Virginia, and Elizabeth City, North Carolina in the United States.\n\n It is located in parts of the independent cities of Chesapeake and Suffolk in Virginia, and the counties of Camden, Gates, and Pasquotank in North Carolina.",
+    "Raritan Water Power Canal\nThe Raritan Water Power Canal in Raritan, New Jersey was a three-mile long water power canal built during the early 1840s to power industries.\n\n The canal has been determined to be eligible for the National Register.\n\n The canal is included in Duke Island Park, as part of the Somerset County Park System.",
+    "New York State Canal System\nThe New York State Canal System (formerly known as the New York State Barge Canal) is a successor to the Erie Canal and other canals within New York.\n\n Currently, the 525 mi system is composed of the Erie Canal, the Oswego Canal, the Cayuga–Seneca Canal, and the Champlain Canal.\n\n In 2014 the system was listed as a national historic district on the National Register of Historic Places in its entirety, and in 2016 it was designated a National Historic Landmark.",
+    "Pennsylvania Canal (Delaware Division)\nThe Delaware Division of the Pennsylvania Canal, more commonly called the Delaware Canal, runs for 60 mi parallel to the right bank of the Delaware River from the entry locks near the mouth of the Lehigh River and terminal end of the Lehigh Canal at Easton south to Bristol.\n\n At Easton, which today is the home of The National Canal Museum, the Delaware Canal also connected with the Morris Canal built to carry anthracite coal to energy starved New Jersey industries.\n\n Later, with a crossing-lock constructed at New Hope, the New Hope 'outlet lock' (1847) connected by Cable Ferry to a feeder navigation/canal at Bull's Island along the opposite shore from Lumberville, which ran over 22 mi south along the left bank through Trenton to Bordentown, the west end of the Delaware and Raritan Canal (1834) to New York City via New Brunswick.\n\n as part of the solution to the United States' first energy crisis.",
+    "Beaver and Erie Canal\nThe Beaver and Erie Canal, also known as the Erie Extension Canal, was part of the Pennsylvania Canal system and consisted of three sections: the Beaver Division, the Shenango Division, and the Conneaut Division.\n\n The canal ran 136 mi north–south near the western edge of the state from the Ohio River to Lake Erie through Beaver County, Lawrence County, Mercer County, Crawford County, and Erie County, Pennsylvania.",
+    "Dismal Swamp State Park\nDismal Swamp State Park is a North Carolina state park in Camden County, North Carolina in the United States.\n\n The park was created as a state natural area in 1974 with the help of The Nature Conservancy, and on July 28, 2007 the NC General Assembly re-designated it as a state park.\n\n It opened to the public in 2008.\n\n This marked the first time that public access to Great Dismal Swamp was made possible in North Carolina.\n\n The park covers 14432 acre of protected land on the North Carolina/Virginia border.\n\n Park offices are three miles (5 km) south of the border on U.S. Route 17 near South Mills.\n\n Features of the park include the canal which is used regularly by boaters using the Intracoastal Waterway and several miles of hiking and biking trails."
+   ]
+  },
+  {
+   "id": "b44eea7dfee99c2b",
+   "gold": [
+    {
+     "sentence": " He creates bespoke millinery under the J Smith Esquire brand for a portfolio of private clients that includes Angelina Jolie, Brad Pitt and Amal Clooney.",
+     "facts": {
+      "0.0": "This person creates bespoke millinery under the J Smith Esquire brand.",
+      "0.1": "This person creates bespoke millinery for a portfolio of private clients.",
+      "0.2": "The portfolio of private clients includes Angelina Jolie.",
+      "0.3": "The portfolio of private clients includes Brad Pitt.",
+      "0.4": "The portfolio of private clients includes Amal Clooney."
+     }
+    },
+    {
+     "sentence": "Amal Clooney (\"née\" Alamuddin, Arabic: أمل علم الدين‎ ‎ ; born 3 February 1978) is a barrister at Doughty Street Chambers, specialising in international law and human rights.",
+     "facts": {
+      "1.0": "Amal Clooney is also known by the name Alamuddin (née Alamuddin).",
+      "1.1": "Amal Clooney's Arabic name is أمل علم الدين.",
+      "1.2": "Amal Clooney was born on 3 February 1978.",
+      "1.3": "Amal Clooney is a barrister at Doughty Street Chambers.",
+      "1.4": "Amal Clooney specialises in international law.",
+      "1.5": "Amal Clooney specialises in human rights."
+     }
+    }
+   ],
+   "items": [
+    "Doughty Street Chambers\nDoughty Street Chambers is a British set of barristers' chambers situated in Bristol, Manchester and London's Doughty Street, undertaking criminal justice, public law, immigration, employment, human rights and civil liberties work.",
+    "Amal Clooney\nAmal Clooney (\"née\" Alamuddin, Arabic: أمل علم الدين‎ ‎ ; born 3 February 1978) is a barrister at Doughty Street Chambers, specialising in international law and human rights.\n\n Her clients include Julian Assange, the founder of WikiLeaks, in his fight against extradition.\n\n She has also represented the former prime minister of Ukraine, Yulia Tymoshenko, and Egyptian-Canadian journalist Mohamed Fahmy.\n\n She is married to the American actor George Clooney.",
+    "Doughty Street\nDoughty Street is a broad tree lined street in the Holborn district of the London Borough of Camden.\n\n The southern part is a continuation of the short John Street, which comes off Theobald's Road.\n\n The northern part crosses Guilford Street and ends at Mecklenburgh Square.\n\n The street is named after a landlord of the area at the time it was built, Henry Doughty.",
+    "Pupil master\nOccasionally, a pupil barrister may undertake a third \"six\", extending the training period a further six months.\n\n At the end of pupillage, to continue practising the law, a barrister may attempt to become a tenant in a set of barristers' chambers, or find a position as an employed barrister.",
+    "Mónica Feria Tinta\nMónica Feria Tinta is a leading public international lawyer.\n\n She practises as a Barrister at 20 Essex Street Chambers.\n\n In 2000 she became the first Peruvian-born lawyer to receive the Diploma of the Hague Academy of International Law in history.\n\n Her litigation work led to the first international human rights court decision ordering the prosecution of a former Head of State for crimes under international law.\n\n She was awarded the Inge Genefke International Award for her work as an international lawyer in 2006 and was co-recipient of the Gruber Justice Prize 2007, for her contributions advancing the cause of justice as delivered through the legal system.\n\n She is a member of the Bar of England and Wales, and the American Society of International Law.",
+    "Edward Fitzgerald (barrister)\nEdward Hamilton Fitzgerald CBE QC is an English barrister who specialises in criminal law, public law, and international human rights law.\n\n His work against the death penalty has led him to represent despised criminals such as: Myra Hindley, a perpetrator in the Moors murders; Mary Bell, a child killer; Maxine Carr; Jon Venables, one of James Bulger's killers; various IRA prisoners; and Abu Hamza, the controversial Muslim cleric.\n\n Fitzgerald is currently the joint head of Doughty Street Chambers along with Geoffrey Robertson QC.\n\n Fitzgerald has been called to the Bar in a number of jurisdictions including Belize, Grenada and St Vincent, and has been granted rights of audience to appear in cases in Hong Kong, Trinidad and Tobago, St Lucia, Bahamas, and the British Virgin Islands.\n\n He is also a trustee and patron of a number of charities including The Death Penalty Project and The Longford Trust.",
+    "Edmund Bartley-Denniss\nSir Edmund Robert Bartley Bartley-Denniss KC (9 April 1854 – 20 March 1931), born Edmund Robert Bartley Denniss, was a barrister, prominent Freemason and Conservative Party Member of Parliament in the United Kingdom.\n\n He was also a pioneer of the sport of cycling in Britain.",
+    "Shahram Taghavi\nShahram Taghavi is a barrister practising in the United Kingdom.\n\n He is a specialist in Judicial Review, Human Rights, Immigration and EU law.\n\n He was called to the England & Wales bar in 1994.\n\n He is a partner at Article 1, a law firm specialising in immigration, EU freedoms of movement and human rights law.\n\n He practised as an independent barrister at Doughty Street Chambers specialising in immigration and public law.\n\n He was head of both the Immigration and Public Law departments at Simons Muirhead & Burton solicitors.\n\n He was a Senior Barrister at Bates Wells & Braithwaite LLP as a member of their Public & Regulatory and Immigration departments, Deputy Head of Immigration at Lewis Silkin LLP, Head of Immigration at Charles Russell LLP (now Charles Russell Speechly LLP) and National Head of Immigration at Grant Thornton LLP.",
+    "Barbados Bar Association\nThe Barbados Bar Association is a voluntary association of attorneys in Barbados who practise at the independent bar as barristers and Queen's Counsel.\n\n It was created by the Barbados Bar Association Act of 1940.",
+    "Pupil master\nA pupil master ('pupilmaster' or 'pupil-master') or in the case of a female barrister, 'pupil mistress' etc., is the former name given to an experienced barrister who a pupil shadows during their pupillage.\n\n The term pupil master or mistress has now been replaced by the term 'pupil supervisor'.\n\n Barristers are called to the Bar via one of the four Inns of Court upon successful completion of the BPTC and having undertaken a required number of \"qualifying sessions\" in their chosen Inn of Court.\n\n In most cases, the newly called barrister is then required to undertake training for a period of at least a year before the barrister can start their own private practice.\n\n This training period is known as pupillage, usually split into two periods of six months known as \"sixes\".\n\n The first \"six\" is a non-practising six, during which the pupil will shadow their pupil master; the second is usually a practising \"six\", when the pupil, with their pupil master's permission, can undertake the supply of legal services and exercise rights of audience in court."
+   ]
+  },
+  {
+   "id": "55988be4c289cf32",
+   "gold": [
+    {
+     "sentence": "Bernard Malamud (April 26, 1914 – March 18, 1986) was an American novelist and short story writer.",
+     "facts": {
+      "0.0": "Bernard Malamud was born on April 26, 1914.",
+      "0.1": "Bernard Malamud died on March 18, 1986.",
+      "0.2": "Bernard Malamud was an American novelist.",
+      "0.3": "Bernard Malamud was an American short story writer."
+     }
+    },
+    {
+     "sentence": "Lois McMaster Bujold ( ; born November 2, 1949) is an American speculative fiction writer.",
+     "facts": {
+      "1.0": "Lois McMaster Bujold was born on November 2, 1949.",
+      "1.1": "Lois McMaster Bujold is an American speculative fiction writer."
+     }
+    }
+   ],
+   "items": [
+    "Horizon (novel)\nHorizon is a fantasy novel by American writer Lois McMaster Bujold.\n\n It is the fourth in the tetralogy \"The Sharing Knife\".",
+    "Shards of Honor\nShards of Honor is an English language science fiction novel by Lois McMaster Bujold, first published in June 1986.\n\n It is a part of the Vorkosigan Saga, and is the first full-length novel in publication order.\n\n \"Shards of Honor\" is paired with Bujold's 1991 \"Barrayar\" in the omnibus \"Cordelia's Honor\" (1996).",
+    "Brothers in Arms (Bujold novel)\nBrothers in Arms is a science fiction novel by American writer Lois McMaster Bujold, part of the Vorkosigan Saga.\n\n It was the fifth book published in the series, and is the twelfth story, including novellas, in the internal chronology of the series.\n\n \"Brothers in Arms\" was first published by Baen Books in January 1989, and is included in the 2002 omnibus \"Miles Errant\".",
+    "Lois McMaster Bujold\nLois McMaster Bujold ( ; born November 2, 1949) is an American speculative fiction writer.\n\n She is one of the most acclaimed writers in her field, having won the Hugo Award for best novel four times, matching Robert A. Heinlein's record, not counting his Retro Hugo.\n\n Her novella \"The Mountains of Mourning\" won both the Hugo Award and Nebula Award.\n\n In the fantasy genre, \"The Curse of Chalion\" won the Mythopoeic Award for Adult Literature and was nominated for the 2002 World Fantasy Award for best novel, and both her fourth Hugo Award and second Nebula Award were for \"Paladin of Souls\".\n\n In 2011 she was awarded the Skylark Award.\n\n In 2013 she was awarded the Forry Award.\n\n In 2017 she won a Hugo Award for Best Series, for the Vorkosigan Saga.",
+    "Passage (Bujold novel)\nPassage is a novel by American writer Lois McMaster Bujold, published in 2008.\n\n It is the third in the tetralogy \"The Sharing Knife\".",
+    "Cryoburn\nCryoburn is a science fiction novel by Lois McMaster Bujold, first published in October 2010.\n\n Part of the Vorkosigan Saga, it was nominated for the Hugo Award for Best Novel in 2011, as Bujold's ninth Best Novel nomination.\n\n Also in 2011, it was one of the top five finishers in the poll for the Locus Award for Best Science Fiction Novel.",
+    "Barrayar\nBarrayar is a science fiction novel by Lois McMaster Bujold.\n\n It was first published as four installments in \"Analog\" in July–October 1991, and then published in book form by Baen Books in October 1991.\n\n \"Barrayar\" won both the Hugo Award for Best Novel and the Locus Award for Best Science Fiction Novel in 1992.\n\n It is a part of the Vorkosigan Saga, and is the seventh full-length novel of the series, in publication order.\n\n \"Barrayar\" is a direct sequel to Bujold's first novel, \"Shards of Honor\" (1986), and the two are paired in the 1996 omnibus \"Cordelia's Honor\".",
+    "Lois McMaster Bujold (born 1949), acclaimed American speculative-fiction writer, created the Vorkosigan Saga and won four Hugo Awards for Best Novel; the series won Best Series in 2017. Its works include *Shards of Honor* (1986), followed by Hugo- and Locus-winning *Barrayar* (1991); *Ethan of Athos* (1986), featuring Dr. Ethan Urquhart; *Brothers in Arms* (",
+    "Gentleman Jole and the Red Queen\nGentleman Jole and the Red Queen is a science fiction novel by Lois McMaster Bujold.\n\n It is an installment in Bujold's Vorkosigan Saga.\n\n Bujold has described it as \"not a war story.\n\n It is about grownups.\"",
+    "Bernard Malamud\nBernard Malamud (April 26, 1914 – March 18, 1986) was an American novelist and short story writer.\n\n Along with Saul Bellow and Philip Roth, he was one of the best known American Jewish authors of the 20th century.\n\n His baseball novel, \"The Natural\", was adapted into a 1984 film starring Robert Redford.\n\n His 1966 novel \"The Fixer\" (also filmed), about antisemitism in Tsarist Russia, won both the National Book Award and the Pulitzer Prize."
+   ]
+  },
+  {
+   "id": "31e8ea474437dca5",
+   "gold": [
+    {
+     "sentence": "Alice Ann Munro ( , \"née\" Laidlaw ; born 10 July 1931) is a Canadian short story writer and Nobel Prize winner.",
+     "facts": {
+      "0.0": "Alice Ann Munro's nee name is Laidlaw.",
+      "0.1": "Alice Ann Munro was born on 10 July 1931.",
+      "0.2": "Alice Ann Munro is a Canadian short story writer.",
+      "0.3": "Alice Ann Munro is a Nobel Prize winner."
+     }
+    },
+    {
+     "sentence": "Lillian Florence Hellman (June 20, 1905 – June 30, 1984) was an American dramatist and screenwriter known for her success as a playwright on Broadway, as well as her left-wing sympathies and political activism.",
+     "facts": {
+      "1.0": "Lillian Florence Hellman was born on June 20, 1905.",
+      "1.1": "Lillian Florence Hellman died on June 30, 1984.",
+      "1.2": "Lillian Florence Hellman was an American dramatist.",
+      "1.3": "Lillian Florence Hellman was an American screenwriter.",
+      "1.4": "Lillian Florence Hellman is known for her success as a playwright on Broadway.",
+      "1.5": "Lillian Florence Hellman is known for her left-wing sympathies.",
+      "1.6": "Lillian Florence Hellman is known for her political activism."
+     }
+    }
+   ],
+   "items": [
+    "Dash and Lilly\nDash and Lilly is a 1999 Emmy and Golden Globe Award-nominated biographical television film about writers Dashiell Hammett and Lillian Hellman.\n\n The film was directed by actress Kathy Bates and written by Jerrold L. Ludwig.\n\n It stars Sam Shepard and Judy Davis.",
+    "Alice Munro\nAlice Ann Munro ( , \"née\" Laidlaw ; born 10 July 1931) is a Canadian short story writer and Nobel Prize winner.\n\n Munro's work has been described as having revolutionized the architecture of short stories, especially in its tendency to move forward and backward in time.\n\n Her stories have been said to \"embed more than announce, reveal more than parade.\"",
+    "Rea Wilmshurst\nRea Wilmshurst (August 10, 1941 – March 22, 1996) graduated from the University of Toronto with a degree in English in 1970.\n\n She went on to edit eight volumes of Lucy Maud Montgomery's previously unknown short stories and publish them through McClelland & Stewart.\n\n In 1985, she published a bibliography of Montgomery's short stories, poems, and articles.\n\n Wilmshurst was also an editorial assistant for the projects that compiled the Collected Works of John Stuart Mill and the Collected Works of Samuel Taylor Coleridge.",
+    "Lillian Hellman\nLillian Florence Hellman (June 20, 1905 – June 30, 1984) was an American dramatist and screenwriter known for her success as a playwright on Broadway, as well as her left-wing sympathies and political activism.\n\n She was blacklisted after her appearance before the House Committee on Un-American Activities (HUAC) at the height of the anti-communist campaigns of 1947–52.\n\n Although she continued to work on Broadway in the 1950s, her blacklisting by the American film industry caused a drop in her income.\n\n Many praised Hellman for refusing to answer questions by HUAC, but others believed, despite her denial, that she had belonged to the Communist Party.",
+    "The Autumn Garden\nThe Autumn Garden is a 1951 play by Lillian Hellman.\n\n The play is set in September, 1949 in a summer home in a resort on the Gulf of Mexico, about 100 miles from New Orleans.\n\n The play is a study of the defeats, disappointments and diminished expectations of people reaching middle age.\n\n For inspiration, Hellman drew on her memories of her time in her aunts' boardinghouse.\n\n Dashiell Hammett, who had been Hellman's lover for 20 years, helped her write the play and received 15 percent of the royalties.\n\n Of all Hellman's plays it was her favorite.",
+    "Alice Walker\nAlice Malsenior Walker (born February 9, 1944) is an American novelist, short story writer, poet, and activist.\n\n She wrote the critically acclaimed novel \"The Color Purple\" (1982) for which she won the National Book Award and the Pulitzer Prize for Fiction.\n\n She also wrote the novels \"Meridian\" (1976) and \"The Third Life of Grange Copeland\" (1970), among other works.",
+    "Lillian Hellman: An Imperious Life\nLillian Hellman: An Imperious Life is a 2014 book by Dorothy Gallagher.\n\n It is a critical biography of the American playwright and writer Lillian Hellman.",
+    "Anne Perry\nAnne Perry (born 28 October 1938 as Juliet Marion Hulme) is an English author of historical detective fiction, best known for her Thomas Pitt and William Monk series.\n\n At the age of fifteen she was convicted of participating in the murder of her friend's mother, in 1954.\n\n She changed her name after serving her five-year sentence.",
+    "Mollie Gillen\nMollie Gillen (née Woolnough; 1908–2009) was an Australian historian, researcher, writer and novelist.\n\n Her work on the First Fleet, in \"The search for John Small,\" \"First Fleeter\" and The Founders of Australia: A Biographical Dictionary of the First Fleet, explored the idea that many of the founding families of Australia were descended from the convict population, rather than those sent to guard them.\n\n Gillen's article Maud Montgomery: The Girl Who Wrote Green Gables instigated a new era in scholarship on Lucy Maud Montgomery.",
+    "Lucy Maud Montgomery\nLucy Maud Montgomery {'1': \", '2': \", '3': \", '4': \"} (November 30, 1874 – April 24, 1942) published as L.M. Montgomery, was a Canadian author best known for a series of novels beginning in 1908 with \"Anne of Green Gables\".\n\n The book was an immediate success.\n\n The central character, Anne Shirley, an orphaned girl, made Montgomery famous in her lifetime and gave her an international following."
+   ]
+  },
+  {
+   "id": "579acb24b110e668",
+   "gold": [
+    {
+     "sentence": "Icehouse pieces, or Icehouse Pyramids, Treehouse pieces, Treehouse Pyramids and officially Looney Pyramids, are nestable and stackable pyramid-shaped gaming pieces and a game system.",
+     "facts": {
+      "0.0": "Icehouse pieces are also called Icehouse Pyramids.",
+      "0.1": "Treehouse pieces are also called Treehouse Pyramids.",
+      "0.2": "Icehouse pieces, Icehouse Pyramids, Treehouse pieces, and Treehouse Pyramids are officially called Looney Pyramids.",
+      "0.3": "Icehouse pieces, Icehouse Pyramids, Treehouse pieces, Treehouse Pyramids, and Looney Pyramids are nestable pyramid-shaped gaming pieces.",
+      "0.4": "Icehouse pieces, Icehouse Pyramids, Treehouse pieces, Treehouse Pyramids, and Looney Pyramids are stackable pyramid-shaped gaming pieces.",
+      "0.5": "Icehouse pieces, Icehouse Pyramids, Treehouse pieces, Treehouse Pyramids, and Looney Pyramids are a game system."
+     }
+    },
+    {
+     "sentence": " The game system was invented by Andrew Looney and John Cooper in 1987, originally for use in the game of Icehouse.",
+     "facts": {
+      "1.0": "The Looney Pyramids game system was invented by Andrew Looney.",
+      "1.1": "The Looney Pyramids game system was invented by John Cooper.",
+      "1.2": "The Looney Pyramids game system was invented in 1987.",
+      "1.3": "The Looney Pyramids game system was originally for use in the game of Icehouse."
+     }
+    },
+    {
+     "sentence": " In 1998, \"Kill Doctor Lucky\" won the Origins Award for \"Best Abstract Board Game of 1997\".",
+     "facts": {
+      "2.0": "\"Kill Doctor Lucky\" won the Origins Award in 1998.",
+      "2.1": "\"Kill Doctor Lucky\" won the Origins Award for \"Best Abstract Board Game of 1997\"."
+     }
+    }
+   ],
+   "items": [
+    "Can't Help Myself\n\"Can't Help Myself\" is the first single released by the Australian synthpop/rock band Flowers, later known as Icehouse.\n\n It was released in May 1980 as a 7\" vinyl single on independent label, Regular Records, five months ahead of debut album \"Icehouse\".\n\n A 10\" vinyl single was released in July and had a cover depicting individual images of band members diagonally across the band's name and the single's title (see infobox at right middle).\n\n It peaked at #10 on the Australian Singles Charts.",
+    "Icehouse pieces\nIcehouse pieces, or Icehouse Pyramids, Treehouse pieces, Treehouse Pyramids and officially Looney Pyramids, are nestable and stackable pyramid-shaped gaming pieces and a game system.\n\n The game system was invented by Andrew Looney and John Cooper in 1987, originally for use in the game of Icehouse.",
+    "Attack! (board game)\nAttack!\n\n is a board game created by Glenn Drover and published by Eagle Games in 2003.\n\n It is a light war game that is midway between \"Risk\" and \"Axis and Allies\" in complexity.\n\n The game is loosely set in the 1930s and includes plastic pieces featuring tanks, planes, infantry, and artillery.\n\n \"Attack!\"\n\n won the Origins Award for \"Best Historical Game 2003\".",
+    "The Hunter (EP)\nThe Hunter is the first EP (and follow up to the 2010 solo album \"The Boxer\") by Kele Okereke (under the professional name Kele), lead singer and rhythm guitarist of the British rock band Bloc Party.\n\n It was released on 7 November 2011 by Wichita Recordings in the UK, set back a week from the original release date, and 3 days earlier on 4 November 2011 by Wichita Recordings and Liberator Music in Australia.\n\n The first single released from the EP was \"What Did I Do?\n\n\", which features guest vocals from Lucy Taylor.\n\n The music video was released on 13 September 2011, with the song released as a digital single in Japan 10 days later.",
+    "Icehouse (song)\n\"Icehouse\" is a song by the Australian rock band Flowers.\n\n It was released as a single in Europe in 1982 by Chrysalis Records from the band's first album, \"Icehouse\", after the band changed its name to Icehouse.\n\n In the United States, the song peaked at number 28 on the \"Billboard\" Top Tracks chart in 1981.",
+    "Kill Doctor Lucky\nKill Doctor Lucky is a humorous board game designed by James Ernest and released in 1996 by Cheapass Games.\n\n In 1998, \"Kill Doctor Lucky\" won the Origins Award for \"Best Abstract Board Game of 1997\".",
+    "No Promises (Icehouse song)\n\"No Promises\" is the first single released by Australian band, Icehouse from the band's 1986 album, \"Measure for Measure\" and was released in November 1985 on Regular Records as 7\" Vinyl Single and 12\" Vinyl Single formats.\n\n It was also released in the UK and Europe by Chrysalis Records again on 7\" and 12\" formats but with different track listings.\n\n It was subsequently released in the US by Chrysalis on 7\" and 12\" formats, again with different track listings.\n\n It peaked at #30 on the Australian singles charts.\n\n A remix version by [love] tatto was released on the Icehouse album \"Meltdown\" in 2002.",
+    "Treehouse (game)\nTreehouse is a game in which players try to get their configuration of Icehouse pieces to match the central configuration, shared by all players.\n\n The rolling of the special \"Treehouse Die\" tells the player what kind of move to make to change his own or the central configuration, and then he does so to best move towards the goal.",
+    "Boxes (Icehouse album)\nBoxes is a soundtrack album by Australian band Icehouse, released by Festival Records / Chrysalis Records in November 1985.\n\n The work was originally conceived by its composers, Iva Davies and Robert Kretschmer, in collaboration with choreographer Graeme Murphy of the Sydney Dance Company for performance as the ballet \"Boxes\".\n\n The first live performance of \"Boxes\" was given by the Sydney Dance Company together with Davies and Kretschmer of Icehouse and guest percussionist Masaki Tanazawa in the Opera Theatre of the Sydney Opera House on 7 November 1985.\n\n \"Boxes\" was released in the US under the name Sydney Dance Company.\n\n The single \"No Promises\" was released as a 12\" in November and a cassingle in December on Regular Records for Australian and New Zealand markets, it contained other tracks from \"Boxes\"; two tracks from \"Boxes\" were later released on their next studio album \"Measure for Measure\" in April 1986.",
+    "Love in Motion (song)\n\"Love in Motion\" is the first new material released by the Australian rock synthpop band Icehouse as a 7\" vinyl single-only in October 1981 on Regular Records for the Australian market.\n\n The band had been known as Flowers until 27 June 1981 after which they changed their name to Icehouse, they had signed to Chrysalis Records and most of Flowers' material was released under the new name into Europe, UK and US markets.\n\n \"Love in Motion\" peaked at #10 on the Australian singles charts.\n\n The B-side, \"Goodnight, Mr. Matthews\" was included on the 1982 album \"Primitive Man\" with \"Love in Motion\" included on the Chrysalis Records US / European versions of the album, the UK 1983 version of the album was re-titled \"Love in Motion\"."
+   ]
+  },
+  {
+   "id": "87bb08f2c9a65cf5",
+   "gold": [
+    {
+     "sentence": " This episode represents a milestone in the history of the series as Snowball II is killed off, which, excluding the death of Homer's mother in season 19's \"Mona Leaves-a\", is to date the closest thing to an actual Simpson family member actually being killed off.",
+     "facts": {
+      "0.0": "This episode is a milestone in the history of the series.",
+      "0.1": "In this episode, Snowball II is killed off.",
+      "0.2": "Homer's mother died in season 19's Mona Leaves-a.",
+      "0.3": "Excluding the death of Homer's mother, the killing of Snowball II is to date the closest thing to an actual Simpson family member being killed off."
+     }
+    },
+    {
+     "sentence": "Mona Penelope Simpson (née Olsen) is a recurring fictional character in the animated television series \"The Simpsons\".",
+     "facts": {
+      "1.0": "Mona Penelope Simpson's maiden name is Olsen.",
+      "1.1": "Mona Penelope Simpson is a recurring fictional character.",
+      "1.2": "Mona Penelope Simpson is a character in the animated television series The Simpsons."
+     }
+    }
+   ],
+   "items": [
+    "My Mother the Carjacker\n\"My Mother the Carjacker\" is the second episode of \"The Simpsons\"<nowiki>'</nowiki> fifteenth season.\n\n It first aired on the Fox network in the United States on November 9, 2003.\n\n Homer receives a cryptic message in the newspaper informing him to come to a certain place at midnight, and soon discovers that the person who wrote the message is his mother, Mona Simpson.\n\n It was written by Michael Price and directed by Nancy Kruse.\n\n Glenn Close makes her second of six guest spots as Homer's mother.\n\n It has a direct link from the season seven episode, \"Mother Simpson\".\n\n It was nominated for a Writers Guild of America Award in 2004.\n\n In its original run, the episode received 12.4 million viewers.",
+    "Future-Drama\n\"Future-Drama\" is the fifteenth episode of \"The Simpsons\"<nowiki>'</nowiki> sixteenth season.\n\n The 350th episode overall, it originally aired on the Fox network in the United States on April 17, 2005.\n\n In the episode, Bart and Lisa stumble into Professor Frink's basement, and he gives them a look into their future as teenagers as they get ready for their high school graduation.\n\n Matt Selman wrote the episode, and Mike B. Anderson served as director.\n\n Amy Poehler and John DiMaggio guest-starred as the characters of Jenda and Bender respectively.",
+    "Good Night (The Simpsons short)\n\"Good Night\" (also known as \"Good Night Simpsons\") is the first of forty-eight Simpsons shorts that appeared on the variety show \"The Tracey Ullman Show\".\n\n It originally aired on the Fox network in the United States on April 19, 1987, during the third episode of \"The Tracey Ullman Show\" and marks the first appearance of the Simpson family — Homer, Marge, Bart, Lisa, and Maggie — on television.\n\n After three seasons on Tracey Ullman, the shorts would be adapted into the animated show \"The Simpsons\".\n\n \"Good Night\" has since been aired on the show in the episode \"The Simpsons 138th Episode Spectacular\" (in its entirety), along with several other Ullman shorts, and is one of the few shorts to ever be released on DVD, being included in the Season 1 DVD set.",
+    "Mona Simpson (The Simpsons)\nMona Penelope Simpson (née Olsen) is a recurring fictional character in the animated television series \"The Simpsons\".\n\n She has been voiced by several actresses, including Maggie Roswell, Tress MacNeille, Pamela Hayden, and most prominently, Glenn Close.\n\n Glenn Close's performances as Mona have been well received by critics and she was named one of the top 25 guest stars on the show by IGN.",
+    "Judge Me Tender\n\"Judge Me Tender\" is the twenty-third episode and season finale of \"The Simpsons'\" twenty-first season.\n\n The 464th episode of the series overall, it originally aired on the Fox network in the United States on May 23, 2010.\n\n In the episode, Moe discovers his talent for judging in competitions and is invited to appear on the show \"American Idol\".\n\n Meanwhile, Homer drives Marge crazy when he starts spending too much time at home, and Lisa tries to comfort Santa's Little Helper.",
+    "I, (Annoyed Grunt)-bot\n\"I, (Annoyed Grunt)-Bot\", also known as \"\"I, D'oh-Bot\"\", is the ninth episode of \"The Simpsons\"<nowiki>'</nowiki> fifteenth season.\n\n It originally aired on the Fox network in the United States on January 11, 2004.\n\n This episode represents a milestone in the history of the series as Snowball II is killed off, which, excluding the death of Homer's mother in season 19's \"Mona Leaves-a\", is to date the closest thing to an actual Simpson family member actually being killed off.",
+    "Lisa the Drama Queen\n\"Lisa the Drama Queen\" is the ninth episode of the twentieth season of \"The Simpsons\".\n\n It originally aired on the Fox network in the United States on January 25, 2009 and guest starred Emily Blunt as Juliet.\n\n A special version of the end credits theme was performed by Fall Out Boy, although they do not guest star in the actual episode.\n\n This was the last episode in the series to be presented only in standard definition, the first regular episode to begin right after the opening credits without a commercial break, with an episode now having four segments, and the last episode to use the original opening sequence starting from Season 2.\n\n Brian Kelley returns as a writer after five seasons of being absent from the show.\n\n The episode is very loosely based on the 1994 film \"Heavenly Creatures\".",
+    "Flaming Moe's\n\"Flaming Moe's\" is the tenth episode of \"The Simpsons\"' third season.\n\n It first aired on the Fox network in the United States on November 21, 1991.\n\n In the episode, Homer tells Moe Szyslak of a secret alcoholic cocktail that includes cough medicine and fire that he calls \"Flaming Homer\".\n\n Moe steals the recipe from Homer, renames the drink the \"Flaming Moe\" and begins selling it at his tavern.\n\n The drink is a success and boosts business and patronage, but Homer is angry at Moe for his betrayal, and seeks revenge.",
+    "The Squirt and the Whale\n\"The Squirt and the Whale\" is the nineteenth episode of \"The Simpsons\" twenty-first season.\n\n The 460th episode of the series overall, it originally aired on the Fox network in the United States on April 25, 2010.\n\n In the episode, the Simpson family attempt to save a beached whale that washed up onshore, only for it to die.",
+    "Mona Leaves-a\n\"Mona Leaves-a\" is the nineteenth episode of \"The Simpsons\"<nowiki>'</nowiki> nineteenth season.\n\n It originally aired on the Fox network in the United States on May 11, 2008.\n\n The episode features the death of Homer's mother, Mona Simpson.\n\n Homer is reunited with his mother, Mona, but is not willing to forgive her for all the times she left him as a child.\n\n When she dies, a guilt-ridden Homer attempts to make it up to her by fulfilling her final wishes.\n\n It was written by Joel H. Cohen and directed by Mike B. Anderson and Ralph Sosa.\n\n Glenn Close makes her third appearance as Mona Simpson, and Lance Armstrong has a cameo as himself."
+   ]
+  },
+  {
+   "id": "fc9f0b46b6097fb1",
+   "gold": [
+    {
+     "sentence": " It features former GOP representative Joe Scarborough providing both enterprise reporting and discussion on the news of the day in a panel format with co-hosts Mika Brzezinski and Willie Geist.",
+     "facts": {
+      "0.0": "The program described features former GOP representative Joe Scarborough.",
+      "0.1": "Joe Scarborough provides enterprise reporting on the program.",
+      "0.2": "Joe Scarborough provides discussion on the news of the day on the program.",
+      "0.3": "The program is in a panel format.",
+      "0.4": "Mika Brzezinski is a co-host of the program.",
+      "0.5": "Willie Geist is a co-host of the program."
+     }
+    },
+    {
+     "sentence": "Charles Joseph Scarborough ( ; born April 9, 1963) is an American cable news and talk radio host.",
+     "facts": {
+      "1.0": "Charles Joseph Scarborough was born on April 9, 1963.",
+      "1.1": "Charles Joseph Scarborough is an American cable news host.",
+      "1.2": "Charles Joseph Scarborough is an American talk radio host."
+     }
+    }
+   ],
+   "items": [
+    "David Gold (talk radio host)\nDavid Gold is an American conservative talk radio host.\n\n Gold, who has been a talk radio host since the mid-1970s, one of the first U.S. conservative talk radio hosts.\n\n His philosophy has been characterized as in the conservative/libertarian vein.",
+    "Ronn Owens\nRonn Owens (born Ronald Lowenstein on October 17, 1945, in New York City), is an American talk radio host.\n\n Owens was the sole remaining weekday talk radio host on KGO in San Francisco after KGO was reorganized as an all-news station in December 2011.",
+    "Mike Hogan (sportscaster)\nMike Hogan (born 1963 in Kingston, Ontario) is a Canadian sportscaster who is a sports talk radio host on TSN Radio 1050 in Toronto.\n\n He also serves as the play-by-play voice for the Toronto Argonauts of the Canadian Football League for that station's gameday broadcasts.\n\n Hogan was formerly a long time sports talk radio host on Toronto station CJCL (AM), branded \"The Fan 590\", until he was relieved of those duties on June 24, 2010.\n\n On 2017 Oscar Vanity fair party 1st live broadcast Mike Hogan was the podcast hosts.",
+    "Jim Geraghty\nJim Geraghty is a conservative blogger and regular contributor to \"National Review Online\" and \"National Review\".\n\n In addition to writing columns for \"National Review\", Geraghty also blogs for National Review Online and is a former reporter for States News Service.",
+    "Steve Malzberg\nStephen D. Malzberg (born April 20, 1959) is an American television and radio host, syndicated columnist, and political commentator.\n\n He is the host of \"The Steve Malzberg Show\", a cable news and opinion show on Newsmax TV.\n\n He has also hosted \"The Steve Malzberg Show\" on various talk radio outlets.",
+    "Talk radio\nTalk radio is a radio format containing discussion about topical issues and consisting entirely or almost entirely of original spoken word content rather than outside music.\n\n Jason Culpepper is highly recognized as the father of talk radio.\n\n Jason a Jacksonville native rose to social prominence during the World War utilizing talk radio to warn french and american troops of German U boats.\n\n Most shows are regularly hosted by a single individual, and often feature interviews with a number of different guests.\n\n Talk radio typically includes an element of listener participation, usually by broadcasting live conversations between the host and listeners who \"call in\" (usually via telephone) to the show.\n\n Listener contributions are usually screened by a show's producers in order to maximize audience interest and, in the case of commercial talk radio, attract advertisers.\n\n Generally, the shows are organized into segments, each separated by a pause for advertisements; however, in public or non-commercial radio, music is sometimes played in place of commercials to separate the program segments.\n\n Variations of talk radio include conservative talk, hot talk, liberal talk (increasingly known as progressive talk) and sports talk.",
+    "Sean Hannity\nSean Patrick Hannity (born December 30, 1961) is an American talk show host, author, and conservative political commentator.\n\n Hannity is the host of \"The Sean Hannity Show\", a nationally syndicated talk radio show.\n\n He also hosts a cable news show, \"Hannity\", on Fox News Channel.",
+    "Graph query row:\nperson: Joe Scarborough\noccupation: ['cable news and talk radio host', 'co-host', 'lawyer', 'politician']\nrelationship: MEMBER_OF\nconnected_entity: United States House of Representatives",
+    "Morning Joe\nMorning Joe is a weekday NBC News morning news and talk show, airing from 6:00 a.m. to 9:00 a.m. Eastern Time on the network's cable news channel MSNBC.\n\n It features former GOP representative Joe Scarborough providing both enterprise reporting and discussion on the news of the day in a panel format with co-hosts Mika Brzezinski and Willie Geist.\n\n It was created as the replacement for \"Imus in the Morning,\" which was cancelled in April 2007 after simulcasting on MSNBC since 1996.",
+    "Joe Scarborough\nCharles Joseph Scarborough ( ; born April 9, 1963) is an American cable news and talk radio host.\n\n He is currently the co-host of \"Morning Joe\" on MSNBC, and previously hosted \"Scarborough Country\" on the same channel.\n\n Scarborough was previously a lawyer and a politician, and served in the United States House of Representatives from 1995 to 2001 as a Republican from the 1st district of Florida."
+   ]
+  },
+  {
+   "id": "e3cefd41da1ffa64",
+   "gold": [
+    {
+     "sentence": " It is known for producing the long-running series \"Tom Goes to the Mayor\", \"Nathan For You\", \"Tim and Eric Awesome Show, Great Job!",
+     "facts": {
+      "0.0": "The entity referred to as 'It' is known for producing the long-running series 'Tom Goes to the Mayor'.",
+      "0.1": "The entity referred to as 'It' is known for producing the long-running series 'Nathan For You'.",
+      "0.2": "The entity referred to as 'It' is known for producing the long-running series 'Tim and Eric Awesome Show, Great Job!'."
+     }
+    },
+    {
+     "sentence": "\" and \"Check It Out!",
+     "facts": {
+      "1.0": "'Check It Out!' is a series title."
+     }
+    },
+    {
+     "sentence": " with Dr. Steve Brule\".",
+     "facts": {
+      "2.0": "The series title is 'Check It Out! with Dr. Steve Brule'."
+     }
+    },
+    {
+     "sentence": "Check It Out!",
+     "facts": {
+      "3.0": "Check It Out! is a title."
+     }
+    },
+    {
+     "sentence": " with Dr. Steve Brule is an American sketch comedy television series that is a spin-off of \"Tim and Eric Awesome Show, Great Job!",
+     "facts": {
+      "4.0": "Check It Out! with Dr. Steve Brule is an American sketch comedy television series.",
+      "4.1": "Check It Out! with Dr. Steve Brule is a spin-off of 'Tim and Eric Awesome Show, Great Job!'."
+     }
+    }
+   ],
+   "items": [
+    "Friends of the People\nFriends of the People is an American sketch comedy television series.\n\n It was slated to premiere on TruTV in summer 2014, but was pushed to October 28, 2014, as part of the network's shift in their programming direction.\n\n Many of the cast members (Jennifer Bartels, Jermaine Fowler, and Lil Rel Howery) were originally reported to be cast members of a planned revival of In Living Color which never materialized.\n\n The show's first season consists of 10 episodes.\n\n This makes it the network's first sketch comedy show.\n\n The series holds a TV-14 rating, though select episodes are rated TV-MA--also a first for the truTV network.",
+    "Richard Appel\nRichard James Appel (born May 21, 1963) is an American writer, producer and former attorney.\n\n Since 2012, he has served as an Executive Producer and co-showrunner of \"Family Guy\" on Fox.\n\n Growing up in Wilmette, Illinois, Appel developed a love of comedy and dreamed of a career as a comedy writer; he attended Harvard University and wrote for the \"Harvard Lampoon\".\n\n Following in his mother's footsteps, Appel instead became a lawyer.\n\n After attending law school he started out as a law clerk for Judge John M. Walker, Jr. before becoming a federal attorney, serving as assistant U.S. attorney for the United States District Court for the Southern District of New York for three years.\n\n In 1994, he moved into comedy writing when he was hired for \"The Simpsons\", writing seven episodes of the show including \"Mother Simpson\".\n\n He moved on to become showrunner and executive producer of \"King of the Hill\" before creating the sitcom \"A.U.S.A.\".\n\n He then worked on \"The Bernie Mac Show\", \"Family Guy\" and \"American Dad!\n\n\" before co-creating \"The Cleveland Show\".\n\n He was married to the writer Mona Simpson.",
+    "David Jablin\nDavid Jablin is an award winning comedy producer and director and one of the pioneers of original television programming for Pay Television.\n\n In 1981 he created and produced the innovative comedy anthology series \"Likely Stories\" for HBO/Cinemax, which featured the directing debuts of Rob Reiner, Danny DeVito, Christopher Guest, and Billy Crystal.",
+    "In Living Color\nIn Living Color is an American sketch comedy television series that originally ran on Fox from April 15, 1990, to May 19, 1994.\n\n Brothers Keenen and Damon Wayans created, wrote and starred in the program.\n\n The show was produced by Ivory Way Productions in association with 20th Century Fox Television and was taped at stage 7 at the Fox Television Center on Sunset Boulevard in Hollywood, California.\n\n The title of the series was inspired by the NBC announcement of broadcasts being presented \"in living color\" during the 1960s, prior to mainstream color television.\n\n It also refers to the fact that most of the show's cast were black, unlike other sketch comedy shows such as \"Saturday Night Live\" whose casts are mostly white.\n\n It was controversial due to the Wayans' decision to portray African-American humor from the ghetto in a time when mainstream American tastes regarding black comedy had been set by more upscale shows such as \"The Cosby Show\", causing an eventual feud for control between Fox executives and the Wayans.",
+    "Abso Lutely Productions\nAbso Lutely Productions is a film and television production company owned by actor and producers Tim Heidecker, Eric Wareheim and producer Dave Kneebone.\n\n It is known for producing the long-running series \"Tom Goes to the Mayor\", \"Nathan For You\", \"Tim and Eric Awesome Show, Great Job!\n\n\" and \"Check It Out!\n\n with Dr. Steve Brule\".",
+    "Check It Out! with Dr. Steve Brule\nCheck It Out!\n\n with Dr. Steve Brule is an American sketch comedy television series that is a spin-off of \"Tim and Eric Awesome Show, Great Job!\n\n\" starring John C. Reilly as Dr. Steve Brule.\n\n The series premiered on Cartoon Network's late night programming block, Adult Swim, on May 16, 2010.\n\n The program follows Brule as he examines different facets of living.\n\n His severe naivete and social awkwardness generally land him in embarrassing situations, though he largely remains ignorant of any embarrassment he's causing himself.\n\n As the series progresses, he reveals shocking and sometimes horrifying details about his past and personal life.",
+    "Upright Citizens Brigade (TV series)\nUpright Citizens Brigade is an American sketch comedy television series that premiered on August 19, 1998 on Comedy Central.\n\n The show aired for three seasons with each season consisting of ten episodes.\n\n The series featured four members of Upright Citizens Brigade, an improvisational sketch comedy group.\n\n The cast included Matt Besser, Amy Poehler, Ian Roberts, and Matt Walsh.\n\n The cast would later reunite for another series of a similar format that premiered in 2016 on Seeso.",
+    "And There's More\nAnd There's More is a comedy sketch show starring Jimmy Cricket produced by Central Independent Television for ITV from 1985 till 1988.",
+    "Bagboy (TV special)\nBagboy is a 2015 American television special produced for Adult Swim, and aired on February 21, 2015, to positive critical reception.\n\n Written and directed by Tim Heidecker and Eric Wareheim for Abso Lutely Productions and John C. Reilly, the special is a fictional sitcom pilot in the universe of \"Tim and Eric Awesome Show, Great Job!\n\n\", written by and starring Reilly's recurring \"Tim and Eric\" character Dr. Steve Brule.\n\n This is the second \"Tim and Eric\" spin-off to feature the Dr. Steve Brule character after \"Check it Out!\n\n with Dr. Steve Brule\".",
+    "Dave Kneebone\nDave Kneebone is an American producer.\n\n Along with Eric Wareheim and Tim Heidecker he runs Abso Lutely Productions which produces a variety of television and films.\n\n His role has been described as the business chief and \"straight man\" at Abso Lutely.\n\n Kneebone has worked as a producer on a variety of television shows including \"Comedy Bang!\n\n Bang!\n\n\", \"Nathan for You\", and \"Tim and Eric Awesome Show, Great Job!\n\n\".\n\n He is also listed a producer on the feature film \"Tim and Eric's Billion Dollar Movie\"."
+   ]
+  },
+  {
+   "id": "cf6c1435f0a65aea",
+   "gold": [
+    {
+     "sentence": "The City Heiress is a play by Aphra Behn produced in 1682.",
+     "facts": {
+      "0.0": "The City Heiress is a play by Aphra Behn.",
+      "0.1": "The City Heiress was produced in 1682."
+     }
+    },
+    {
+     "sentence": "Aphra Behn ( ; 14 December 1640?",
+     "facts": {
+      "1.0": "Aphra Behn's birth date is listed as 14 December 1640, marked with a question mark as uncertain."
+     }
+    },
+    {
+     "sentence": " (baptismal date)–16 April 1689) was a British playwright, poet, translator and fiction writer from the Restoration era.",
+     "facts": {
+      "2.0": "The 14 December 1640 date for Aphra Behn is a baptismal date.",
+      "2.1": "Aphra Behn died on 16 April 1689.",
+      "2.2": "Aphra Behn was a British playwright.",
+      "2.3": "Aphra Behn was a poet.",
+      "2.4": "Aphra Behn was a translator.",
+      "2.5": "Aphra Behn was a fiction writer.",
+      "2.6": "Aphra Behn was from the Restoration era."
+     }
+    }
+   ],
+   "items": [
+    "Lillian Hellman: An Imperious Life\nLillian Hellman: An Imperious Life is a 2014 book by Dorothy Gallagher.\n\n It is a critical biography of the American playwright and writer Lillian Hellman.",
+    "The Heiress (1786 play)\nThe Heiress is a comedy play by the British playwright and soldier John Burgoyne.\n\n The play debuted at the Drury Lane Theatre on 14 January 1786.\n\n It concerns the engagement of Lord Gayville to Miss Alscrip, a fashionable woman he believes to be an heiress.\n\n Gayville later discovers that the woman who really stands to inherit the fortune is his true love Miss Clifford.\n\n The play was an enormous success, running for 31 performances in its initial season and being revived again the following year.\n\n The play was initially anonymous, but Burgoyne was soon widely reported to be the author and he acknowledged this after the play's debut.",
+    "Marisha Chamberlin\nMarisha Anne Chamberlain (born January 6, 1952) is an American writer.\n\n Her most recent work, the libretto for \"Mortals & Angels\", a collaboration with American composer Carol Barnett, premiered at Carnegie Hall in 2016, a companion piece to their widely produced collaborative piece, \"The World Beloved: A Bluegrass Mass\".\n\n Her stage plays, both original works and adaptations are widely produced.\n\n Her debut novel, \"The Rose Variations\", was published by Soho Press in 2009.\n\n Her play, \"Scheherazade\", won the Dramatists Guild/CBS National Award, and in her screenplay version, played on public television across the country, and was screened at the British Film Institute Festival in the category of Best of American Public Television.",
+    "Lillian Hellman\nLillian Florence Hellman (June 20, 1905 – June 30, 1984) was an American dramatist and screenwriter known for her success as a playwright on Broadway, as well as her left-wing sympathies and political activism.\n\n She was blacklisted after her appearance before the House Committee on Un-American Activities (HUAC) at the height of the anti-communist campaigns of 1947–52.\n\n Although she continued to work on Broadway in the 1950s, her blacklisting by the American film industry caused a drop in her income.\n\n Many praised Hellman for refusing to answer questions by HUAC, but others believed, despite her denial, that she had belonged to the Communist Party.",
+    "Graph query row:\nperson: Aphra Behn\nyear_of_death: 16 April 1689\nrelationship: CREATED_BY\ncreative_work: The City Heiress",
+    "The Autumn Garden\nThe Autumn Garden is a 1951 play by Lillian Hellman.\n\n The play is set in September, 1949 in a summer home in a resort on the Gulf of Mexico, about 100 miles from New Orleans.\n\n The play is a study of the defeats, disappointments and diminished expectations of people reaching middle age.\n\n For inspiration, Hellman drew on her memories of her time in her aunts' boardinghouse.\n\n Dashiell Hammett, who had been Hellman's lover for 20 years, helped her write the play and received 15 percent of the royalties.\n\n Of all Hellman's plays it was her favorite.",
+    "The City Heiress\nThe City Heiress is a play by Aphra Behn produced in 1682.\n\n The play conforms to the general rules of Restoration comedy, but it also keeps Behn's own highly Royalist political point of view.",
+    "Betty Ann Davies\nBetty Ann Davies (24 December 1910 – 14 May 1955) was a British stage and film actress active from the 1920s to the 1950s.\n\n She died young in 1955 aged 44 following an operation.\n\n Miss Davies made her first stage appearance at the Palladium in a revue in 1924.\n\n The following year she joined Cochran's Young Ladies in revues such as \"One Dam Thing After Another\" and \"This Year of Grace\".\n\n Betty Ann Davies enjoyed a long and distinguished West End career which included \"The Good Companions\" 1934, \"Morning Star\" 1942, and \"Blithe Spirit\" 1943.\n\n Her outstanding stage triumph was in the role of Blanche du Bois, which she took over from Vivien Leigh, in the original West End production of \" A Streetcar Named Desire\".\n\n Miss Davis appeared in 38 films, and was active in TV at the time of her death.\n\n She left one son Brook Blackford.",
+    "Elswyth Thane\nHelen Elswyth Thane Ricker Beebe (May 16, 1900 – July 31, 1984) was an American romance novelist.\n\n Born in Burlington, Iowa, she was the daughter of a local teacher and high school principal.\n\n The family moved to New York City in 1918, and \"Helen Ricker\" changed her name to \"Elswyth Thane\".\n\n She began working as a freelance writer in the 20s, and became a newspaper writer and a Hollywood screenwriter.\n\n Her first novel, \"Riders of the Wind\", was published in 1926.\n\n Her novel, \"The Tudor Wench\", about Elizabeth I of England, was made into a play.\n\n She was a collector of scarves.",
+    "Aphra Behn\nAphra Behn ( ; 14 December 1640?\n\n (baptismal date)–16 April 1689) was a British playwright, poet, translator and fiction writer from the Restoration era.\n\n As one of the first English women to earn her living by her writing, she broke cultural barriers and served as a literary role model for later generations of women authors.\n\n Rising from obscurity, she came to the notice of Charles II, who employed her as a spy in Antwerp.\n\n Upon her return to London and a probable"
+   ]
+  },
+  {
+   "id": "e1e3ea51b9c8e253",
+   "gold": [
+    {
+     "sentence": " Built in 1988 by the TOGO company, it was the fastest roller coaster in the world when it was built (taking the record from American Eagle at Six Flags Great America).",
+     "facts": {
+      "0.0": "The roller coaster was built in 1988 by the TOGO company.",
+      "0.1": "The roller coaster built by the TOGO company was the fastest roller coaster in the world when it was built.",
+      "0.2": "The roller coaster built by the TOGO company took the record for fastest roller coaster in the world from American Eagle at Six Flags Great America."
+     }
+    },
+    {
+     "sentence": "TOGO (株式会社トーゴ , Kabushiki-gaisha Tōgo ) was a Japanese amusement ride company that built roller coasters, giant wheels, carousels, flumes, dark rides, sky cycles and other amusement rides.",
+     "facts": {
+      "1.0": "TOGO (株式会社トーゴ, Kabushiki-gaisha Tōgo) was a Japanese amusement ride company.",
+      "1.1": "TOGO built roller coasters.",
+      "1.2": "TOGO built giant wheels.",
+      "1.3": "TOGO built carousels.",
+      "1.4": "TOGO built flumes.",
+      "1.5": "TOGO built dark rides.",
+      "1.6": "TOGO built sky cycles.",
+      "1.7": "TOGO built other amusement rides."
+     }
+    }
+   ],
+   "items": [
+    "Giovanola\nGiovanola Freres SA was one of the prominent thrill ride manufacturers in the world.\n\n It was well known for thrill rides and also built electrical power stations, water storage tanks, pipelines, highway bridges, and many other steel products.\n\n The company started out as a small metal forging shop, founded by Joseph Giovanola in 1888.\n\n It served as a subcontractor to Intamin supplying rides and roller coasters.\n\n In 1998 Giovanola started marketing directly under the name Giovanola Amusement Rides Worldwide.\n\n The company was based in Monthey, Switzerland.\n\n During its last years in business, Giovanola fashioned steel behind the scenes for companies such as Intamin and Bolliger & Mabillard.\n\n The company also built its own thrill rides and roller coasters from 1998 to 2001.\n\n Examples of Giovanola roller coasters are Goliath at Six Flags Magic Mountain, Titan at Six Flags Over Texas and Anaconda at South Africa's Gold Reef City.",
+    "Castle Park (amusement park)\nCastle Park, formerly Castle Amusement Park, is a 25-acre amusement park and family amusement center located in Riverside, California.\n\n The park utilizes a medieval \"castle\" theme and includes attractions such as a miniature golf course, arcade, and 27 amusement rides including three roller coasters such as \"Merlin's Revenge\", a junior rollercoaster, \"Screamin' Demon\" a spinning Wild Mouse rollercoaster, and \"Little Dipper\", a children's rollercoaster.\n\n The main \"castle\" themed building, houses the arcade as well as its only dark ride; \"Ghost Blasters\", an interactive attraction, designed by Sally Corporation, which can also be found at other amusement parks throughout North America.\n\n The park was designed, built and operated by Bud Hurlbut, who designed several rides at Knott's Berry Farm.\n\n Castle Park is currently owned and operated by Palace Entertainment.",
+    "Mack Rides\nMack Rides GmbH & Co KG, also known simply as Mack Rides, is a German company that designs and constructs amusement rides.\n\n Mack Rides in headquartered in Waldkirch, Baden-Württemberg, Germany.\n\n Mack Rides is one of the world's oldest amusement industry suppliers and builds all kinds of amusement devices including several types of flat rides, dark rides, log flumes, tow boat rides and roller coasters.\n\n The family that owns Mack Rides also owns Europa-Park.",
+    "Bandit (Yomiuriland)\nBandit (バンデット , Bandetto ) is a steel roller coaster located at Yomiuriland in the city of Inagi, near Tokyo, Japan.\n\n Built in 1988 by the TOGO company, it was the fastest roller coaster in the world when it was built (taking the record from American Eagle at Six Flags Great America).\n\n It lost the record to Magnum XL-200 at Cedar Point one year later.",
+    "Millennium Force\nMillennium Force is a steel roller coaster built by Intamin at Cedar Point amusement park in Sandusky, Ohio, United States.\n\n It was the fourteenth roller coaster to be built at the park since Blue Streak opened in 1964.\n\n Upon completion in 2000, Millennium Force broke six world records and was the world's first Giga Coaster, a roller coaster that exceeds 300 ft in height and completes a full circuit.\n\n It was briefly the tallest and fastest in the world until Steel Dragon 2000 opened later the same year.\n\n The ride is also the third-longest roller coaster in North America after The Beast at Kings Island and Fury 325 at Carowinds.\n\n It was the first roller coaster to use a cable lift system rather than a traditional chain lift.\n\n The coaster has a 310 ft , 45-degree lift hill with a 300 ft drop and features two tunnels, three overbanked turns, and four hills.\n\n It has a top speed of 93 mph .",
+    "TOGO\nTOGO (株式会社トーゴ , Kabushiki-gaisha Tōgo ) was a Japanese amusement ride company that built roller coasters, giant wheels, carousels, flumes, dark rides, sky cycles and other amusement rides.",
+    "List of roller coaster rankings\nRoller coasters are amusement rides developed for amusement parks and modern theme parks.\n\n During the 16th and 17th centuries, rides consisting of wooden sleds that took riders down large slides made from ice were popular in Russia.\n\n The first roller coasters, where the train was attached to a wooden track, first appeared in France in the early 1800s.\n\n Although wooden roller coasters are still being produced, steel roller coasters are more common and can be found on every continent except Antarctica.",
+    "Anton Schwarzkopf\nAnton Schwarzkopf (8 July 1924 – 30 July 2001) was a German engineer of amusement rides, and founder of the Schwarzkopf Industries Company, which built numerous amusement rides and large roller coasters for both amusement parks and traveling funfairs.",
+    "White Cyclone\nWhite Cyclone (ホワイトサイクロン , Howaito Saikuron ) is a wooden roller coaster at Nagashima Spa Land in Mie Prefecture, Japan.\n\n At 1700 m in length, White Cyclone is the third longest wooden roller coaster in the world, and is the longest wooden roller coaster outside of the United States.\n\n Despite its length, White Cyclone is still considerably shorter than the 2479 m Steel Dragon 2000, the world's longest steel roller coaster, which is also at Nagashima Spa Land.\n\n In addition to being the third longest wooden roller coaster, White Cyclone is the seventh tallest wooden roller coaster in the world and the fourth tallest wooden roller coaster outside the United States.\n\n A single ride on the White Cyclone costs ¥1,000 (approximately $9 USD), and the ride is restricted to those individuals above 1.3 m in height; and those individuals under 54 years of age.",
+    "Pretzel Amusement Ride Company\nThe Pretzel Amusement Ride Company was a famous manufacturer of pretzel dark rides. Pretzel built over 1400 pretzel rides and sold them to carnivals and parks.\n\n The pretzel ride was invented by Marvin Rempfer.\n\n Leon Cassidy was Marvin's partner in the Pretzel Amusement Ride Company.\n\n Both names are on the patent.\n\n Leon Cassidy patented the single-rail dark ride in 1928 along with Marvin Rempfer.\n\n The company originated in Tumbling Dam Park on the banks of Sunset Lake in Bridgeton, New Jersey.\n\n A rider said that \"\"It felt like I was turned and twisted like a Pretzel\"\", so the name Pretzel was chosen.\n\n A large heavy pretzel design was originally affixed to the front of each car to prevent the car from flipping backwards.\n\n In 1929, a standard Pretzel ride had five cars, 350 feet of track, and was one and a half minutes per ride.\n\n A pretzel ride sold for $1,200."
+   ]
+  }
+ ]
+}

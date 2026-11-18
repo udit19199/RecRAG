@@ -1,0 +1,91 @@
+[
+{"id": "42e8e96a6bb6fa78", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "6876eeb6ef4f1602", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "stated", "evidence": [
+  {"item": 1, "quote": "After already raising its main interest rate to the highest level since 2001, the Fed has indicated it may keep its overnight rate higher next year than it had earlier expected."},
+  {"item": 5, "quote": "raises worries about the Federal Reserve keeping its main interest rate high for a long time, as it tries to undercut inflation by knocking down investment"}
+]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "bd34f49443d6c9dc", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [
+  {"item": 7, "quote": "In the wake of the Wallabies’ World Cup flop, the Queensland Rugby Union have reaffirmed their position that they are committed to moving to a centralised"}
+]},
+{"fact": "0.1", "status": "stated", "evidence": [
+  {"item": 7, "quote": "the Queensland Rugby Union have reaffirmed their position that they are committed to moving to a centralised"}
+]},
+{"fact": "0.2", "status": "stated", "evidence": [
+  {"item": 7, "quote": "they are committed to moving to a centralised"},
+  {"item": 7, "quote": "high-performance model but won’t follow the NSW Waratahs by handing over the keys to Rugby Australia."}
+]},
+{"fact": "0.3", "status": "stated", "evidence": [
+  {"item": 7, "quote": "high-performance model but won’t follow the NSW Waratahs by handing over the keys to Rugby Australia."}
+]},
+{"fact": "0.4", "status": "stated", "evidence": [
+  {"item": 4, "quote": "the New South Wales Rugby Union was in the latter stages of handing over their license to RA."},
+  {"item": 4, "quote": "By doing so, the NSW Waratahs, who were on the brink of insolvency, handed over their commercial and high-performance property."}
+]},
+{"fact": "1.0", "status": "stated", "evidence": [
+  {"item": 2, "quote": "He will also be tasked with “integrating” the programs, with RA trying to centralise all of the Super Rugby’s high-performance programs."}
+]},
+{"fact": "1.1", "status": "stated", "evidence": [
+  {"item": 2, "quote": "with RA trying to centralise all of the Super Rugby’s high-performance programs."}
+]}
+]},
+{"id": "4a14bacb16cc2a1d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [
+  {"item": 7, "quote": "This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}
+]},
+{"fact": "0.1", "status": "stated", "evidence": [
+  {"item": 7, "quote": "cheering on No. 87 with gusto."}
+]},
+{"fact": "1.0", "status": "stated", "evidence": [
+  {"item": 10, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}
+]},
+{"fact": "1.1", "status": "stated", "evidence": [
+  {"item": 10, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}
+]},
+{"fact": "1.2", "status": "stated", "evidence": [
+  {"item": 10, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}
+]},
+{"fact": "2.0", "status": "stated", "evidence": [
+  {"item": 2, "quote": "Swift also confirmed that when she famously first attended Kelce’s game at Arrowhead Stadium in September, she was already dating the NFL star."}
+]},
+{"fact": "2.1", "status": "stated", "evidence": [
+  {"item": 2, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}
+]},
+{"fact": "2.2", "status": "stated", "evidence": [
+  {"item": 2, "quote": "Swift also confirmed that when she famously first attended Kelce’s game at Arrowhead Stadium in September"},
+  {"item": 2, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}
+]}
+]},
+{"id": "56fc2cd518b50807", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [
+  {"item": 6, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}
+]},
+{"fact": "0.1", "status": "stated", "evidence": [
+  {"item": 6, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}
+]},
+{"fact": "0.2", "status": "stated", "evidence": [
+  {"item": 6, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}
+]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]}
+]

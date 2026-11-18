@@ -1,0 +1,242 @@
+[
+ {
+  "id": "a088-71b3651e15fe35ca",
+  "facts": [
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "He was the host of \"The Krypton Factor\" for its original 18-year run (1977–1995)"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a085-26b735a246658695",
+  "facts": [
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Rick Husband Amarillo International Airport (IATA: AMA, ICAO: KAMA, FAA LID: AMA) is a public airport six miles (10 km) east of downtown Amarillo"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a106-8b68a8a5c6e79488",
+  "facts": [
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Christopher Edward Nolan ( ; born 30 July 1970) is an English-American film director, producer, and screenwriter."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a077-9c0c47f313db40d8",
+  "facts": [
+   {
+    "fact": "1.0",
+    "status": "missing"
+   }
+  ]
+ },
+ {
+  "id": "a100-329c006eda769187",
+  "facts": [
+   {
+    "fact": "1.5",
+    "status": "missing"
+   }
+  ]
+ },
+ {
+  "id": "a124-ff4ad07848c4134a",
+  "facts": [
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Margaret Landon (September 7, 1903 – December 4, 1993) was an American writer"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a078-6e40b089c813d766",
+  "facts": [
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Chowder is an American animated television series created by C. H. Greenblatt for Cartoon Network."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a092-3fb5735c13e1b7fd",
+  "facts": [
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Juno Temple (born 21 July 1989) is an English actress known for films including *Black Mass*, *The Other Boleyn Girl*, *Wild Child*, *Atonement*, *Maleficent*"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a003-72eb50561fbeb609",
+  "facts": [
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a016-aa40793277a448d6",
+  "facts": [
+   {
+    "fact": "1.0",
+    "status": "missing"
+   }
+  ]
+ },
+ {
+  "id": "a131-1bdd3436857a738d",
+  "facts": [
+   {
+    "fact": "2.3",
+    "status": "missing"
+   }
+  ]
+ },
+ {
+  "id": "a043-7f9ecbfa97a507a0",
+  "facts": [
+   {
+    "fact": "0.2",
+    "status": "missing"
+   }
+  ]
+ },
+ {
+  "id": "a060-8dbe62248ad588d8",
+  "facts": [
+   {
+    "fact": "1.2",
+    "status": "missing"
+   }
+  ]
+ },
+ {
+  "id": "a122-85cc761972810b23",
+  "facts": [
+   {
+    "fact": "2.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The Decadent Movement was a late 19th-century artistic and literary movement, centered in Western Europe, that followed an aesthetic ideology of excess"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a049-c6e13c59a01ff032",
+  "facts": [
+   {
+    "fact": "1.4",
+    "status": "missing"
+   }
+  ]
+ },
+ {
+  "id": "a133-341e5bd338da21a0",
+  "facts": [
+   {
+    "fact": "2.6",
+    "status": "missing"
+   }
+  ]
+ },
+ {
+  "id": "a000-35ccf7b1a23ac1aa",
+  "facts": [
+   {
+    "fact": "2.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a115-c0374516833d00c8",
+  "facts": [
+   {
+    "fact": "2.2",
+    "status": "missing"
+   }
+  ]
+ },
+ {
+  "id": "a079-5a6e13414d4d6d7a",
+  "facts": [
+   {
+    "fact": "2.3",
+    "status": "missing"
+   }
+  ]
+ },
+ {
+  "id": "a025-e260d70b2e7ef22f",
+  "facts": [
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Tyreek Hill (vs. Titans in Week 14), stands as the unquestioned WR1 for Week 14 after torching the Commanders to the tune of five catches, 157 yards, and two TDs."
+     }
+    ]
+   }
+  ]
+ }
+]

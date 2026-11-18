@@ -1,0 +1,586 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "cf9cd394b22e34d3",
+   "kind": "answer",
+   "question": "what is the significance of the sahara desert",
+   "gold_answers": [
+    "the largest hot desert and the third largest desert in the world after Antarctica and the Arctic",
+    "the largest hot desert",
+    "the third largest desert in the world after Antarctica and the Arctic"
+   ],
+   "model_answer": "The world’s largest hot desert, spanning much of North Africa."
+  },
+  {
+   "id": "a409b7e7645f1c1f",
+   "kind": "answer",
+   "question": "what kind of fish live in the salton sea",
+   "gold_answers": [
+    "tilapia"
+   ],
+   "model_answer": "Introduced tilapia and the salt-tolerant desert pupfish."
+  },
+  {
+   "id": "7f392191bab6094e",
+   "kind": "answer",
+   "question": "who sang rip it up and start again",
+   "gold_answers": [
+    "Orange Juice",
+    "Scottish post-punk band Orange Juice"
+   ],
+   "model_answer": "Orange Juice and the Rolling Stones"
+  },
+  {
+   "id": "e2a2210370cd3e03",
+   "kind": "answer",
+   "question": "where are located the acetabulum and the glenoid cavities",
+   "gold_answers": [
+    "Compared to the acetabulum ( at the hip - joint ) the glenoid cavity is relatively shallow . This makes the shoulder joint prone to dislocation ( luxation ) . Strong glenohumeral ligaments and muscles prevents dislocation in most cases ."
+   ],
+   "model_answer": "The acetabulum is in the pelvis; the glenoid cavities are on the scapulae."
+  },
+  {
+   "id": "6b7b9fb398a0f1ed",
+   "kind": "answer",
+   "question": "what are three different types of hotel properties",
+   "gold_answers": [
+    "Hotel barge",
+    "Bed and breakfast",
+    "Botel"
+   ],
+   "model_answer": "Boutique hotel, capsule hotel, bed and breakfast"
+  },
+  {
+   "id": "0f369285b266a8ad",
+   "kind": "answer",
+   "question": "will there be a third season of the durells in corfu",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, it already aired.\n"
+  },
+  {
+   "id": "fd99f04172370ddf",
+   "kind": "answer",
+   "question": "what is the short story the gift of the magi about",
+   "gold_answers": [
+    "a young husband and wife and how they deal with the challenge of buying secret Christmas gifts for each other with very little money"
+   ],
+   "model_answer": "A poor couple secretly sacrifices their most prized possessions to buy each other Christmas gifts, showing the depth of their love."
+  },
+  {
+   "id": "3e00555a7710931c",
+   "kind": "answer",
+   "question": "whens the last time the patriots played the eagles",
+   "gold_answers": [
+    "Super Bowl LII"
+   ],
+   "model_answer": "February 4, 2018 (Super Bowl LII)"
+  },
+  {
+   "id": "777fa2dfc5a897d4",
+   "kind": "answer",
+   "question": "who dies in season 6 of once upon a time",
+   "gold_answers": [
+    "Edmond Dantes, The Count of Monte Cristo",
+    "Jekyll",
+    "Hyde"
+   ],
+   "model_answer": "Robert dies in a flashback."
+  },
+  {
+   "id": "3cfcdb4cf6a0155f",
+   "kind": "answer",
+   "question": "the arp request is sent to which of the following layer 2 destination addresses",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "FF:FF:FF:FF:FF:FF"
+  },
+  {
+   "id": "bbfa04eb71f34b4c",
+   "kind": "answer",
+   "question": "steps party on the dance floor tour review",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Highly praised: four out of five stars in Belfast and five out of five in Dublin."
+  },
+  {
+   "id": "ba7ce507432ff927",
+   "kind": "answer",
+   "question": "differentiate between dot matrix printer and daisy wheel printer",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Dot-matrix printers form characters from dots and can print graphics; daisy-wheel printers strike preformed characters for sharper text but have limited graphics capability."
+  },
+  {
+   "id": "8b7e6cde14fe6a20",
+   "kind": "answer",
+   "question": "when does the i come before the e",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Except after c."
+  },
+  {
+   "id": "4bbedbe947e94bec",
+   "kind": "answer",
+   "question": "what was the relationship between japan’s emperors and military leaders",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Military leaders pledged loyalty to the Emperor and reported directly to him, while operating independently of civilian government."
+  },
+  {
+   "id": "49a34f524bc7246f",
+   "kind": "answer",
+   "question": "cast of law & order special victim unit",
+   "gold_answers": [
+    "Christopher Meloni",
+    "Mariska Hargitay",
+    "Richard Belzer",
+    "Dann Florek",
+    "Michelle Hurd",
+    "Stephanie March",
+    "Ice-T",
+    "Tamara Tunie",
+    "B. D. Wong",
+    "Diane Neal",
+    "Adam Beach",
+    "Michaela McManus",
+    "Danny Pino",
+    "Kelli Giddish",
+    "Raúl Esparza",
+    "Peter Scanavino"
+   ],
+   "model_answer": "Mariska Hargitay, Christopher Meloni, Richard Belzer, Dann Florek, Ice-T, Kelli Giddish, Peter Scanavino, and Raúl Esparza."
+  },
+  {
+   "id": "5c7c93d1b892ab8c",
+   "kind": "answer",
+   "question": "where is the national championship for college football played",
+   "gold_answers": [
+    "Mercedes-Benz Stadium in Atlanta, Georgia on January 8, 2018",
+    "Mercedes-Benz Stadium in Atlanta, Georgia"
+   ],
+   "model_answer": "At a rotating host stadium across the United States."
+  },
+  {
+   "id": "04d52ec711d7eb65",
+   "kind": "answer",
+   "question": "when was the drinking age set to 21",
+   "gold_answers": [
+    "By mid-1988"
+   ],
+   "model_answer": "1984; all states complied by 1988."
+  },
+  {
+   "id": "cf3245f13de37c35",
+   "kind": "answer",
+   "question": "why did government sponsored surveys and land acts encourage migration to the west",
+   "gold_answers": [
+    "The Homestead Acts were several United States federal laws that gave an applicant ownership of land , typically called a `` homestead , '' at no cost . In all , more than 270 million acres of public land , or nearly 10 % of the total area of the U.S. , was given away free to 1.6 million homesteaders ; most of the homesteads were west of the Mississippi River .",
+    "An extension of the Homestead Principle in law , the Homestead Acts were an expression of the `` Free Soil '' policy of Northerners who wanted individual farmers to own and operate their own farms , as opposed to Southern slave - owners who wanted to buy up large tracts of land and use slave labor , thereby shutting out free white men ."
+   ],
+   "model_answer": "They made western land available cheaply or for free to settlers."
+  },
+  {
+   "id": "c06c004d6588f6e4",
+   "kind": "answer",
+   "question": "where was the music video what ifs filmed",
+   "gold_answers": [
+    "along the Californian coast at The Inn at Newport Ranch, a resort and cattle ranch to the north of San Francisco"
+   ],
+   "model_answer": "The Inn at Newport Ranch on the California coast, north of San Francisco."
+  },
+  {
+   "id": "46ab0a937a7603d1",
+   "kind": "answer",
+   "question": "when is the next time easter falls on april 11th",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "2066"
+  },
+  {
+   "id": "1ee48bab85b64a6d",
+   "kind": "answer",
+   "question": "what does the board of directors consist of",
+   "gold_answers": [
+    "a recognized group of people who jointly oversee the activities of an organization"
+   ],
+   "model_answer": "Executive and non-executive directors."
+  },
+  {
+   "id": "8d462f661622043e",
+   "kind": "answer",
+   "question": "who has the talismans in sailor moon s",
+   "gold_answers": [
+    "Haruka and Michiru",
+    "Haruka",
+    "Michiru",
+    "Sailor Pluto"
+   ],
+   "model_answer": "Haruka, Michiru, and Sailor Pluto"
+  },
+  {
+   "id": "867549b54b9ba018",
+   "kind": "answer",
+   "question": "where did the idea of fortnite come from",
+   "gold_answers": [
+    "as a cross between Minecraft and Left 4 Dead"
+   ],
+   "model_answer": "An internal game-jam project at Epic Games"
+  },
+  {
+   "id": "9e5ae1d8bae12ed4",
+   "kind": "answer",
+   "question": "positive and negative impacts of internal migration in china",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Benefits: remittances, skills, jobs, and mobility; costs: hukou restrictions, high migration costs, inequality, and reduced productivity."
+  },
+  {
+   "id": "26eca16aa8f65b42",
+   "kind": "answer",
+   "question": "with which regions does australia have historical ties",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The British Isles and New Zealand"
+  },
+  {
+   "id": "2e461594fd5e0b1f",
+   "kind": "answer",
+   "question": "what does the transfer case control module do",
+   "gold_answers": [
+    "transfers power from the transmission to the front and rear axles by means of drive shafts",
+    "transfers power from the transmission to the front and rear axles",
+    "synchronizes the difference between the rotation of the front and rear wheels",
+    "may contain one or more sets of low range gears for off-road use"
+   ],
+   "model_answer": "Controls the transfer case and shifts power between two- and four-wheel drive."
+  },
+  {
+   "id": "facd2459167ce276",
+   "kind": "answer",
+   "question": "what is windows defender and what does it do",
+   "gold_answers": [
+    "Windows Defender , officially called Windows Defender Antivirus in Windows 10 Creators Update , is an anti-malware component of Microsoft Windows.It was first released as a free antispyware program download for Windows XP , shipped with Windows Vista and Windows 7 and made into a full antivirus program replacing Microsoft Security Essentials as part of Windows 8 and later versions ."
+   ],
+   "model_answer": "Microsoft’s built-in security software that scans for and blocks malware."
+  },
+  {
+   "id": "2a9bb6122253a90d",
+   "kind": "answer",
+   "question": "what happens to the rbc in acute hemolytic reaction",
+   "gold_answers": [
+    "rapid destruction of the donor red blood cells by host antibodies"
+   ],
+   "model_answer": "Rapid intravascular hemolysis of red blood cells."
+  },
+  {
+   "id": "7554e5ca16f3da09",
+   "kind": "answer",
+   "question": "what caused the breakup of the democratic republican party",
+   "gold_answers": [
+    "the disputed 1824 presidential election"
+   ],
+   "model_answer": "The disputed 1824 election and growing disagreements over federal power and economic policy."
+  },
+  {
+   "id": "ac4f14d46b42a526",
+   "kind": "answer",
+   "question": "who was kat slater's sisters in eastenders",
+   "gold_answers": [
+    "Lynne",
+    "Little Mo",
+    "Zoe"
+   ],
+   "model_answer": "Lynne, Little Mo, and Belinda."
+  },
+  {
+   "id": "42ca4176d171c671",
+   "kind": "answer",
+   "question": "what is the legislature of the united states called",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Congress"
+  },
+  {
+   "id": "498f2f62db9c43a7",
+   "kind": "answer",
+   "question": "florence and the machine i am not a robot",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "“I Am Not a Robot” is by Marina and the Diamonds, not Florence + the Machine."
+  },
+  {
+   "id": "8743e16f179cc95d",
+   "kind": "answer",
+   "question": "who is jessie's girl on breaking bad",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Andrea Cantillo"
+  },
+  {
+   "id": "9f0a92f3f9638969",
+   "kind": "answer",
+   "question": "who wrote the music for the partridge family",
+   "gold_answers": [
+    "The Partridge Family Genre Musical sitcom Created by Bernard Slade Starring Shirley Jones David Cassidy Danny Bonaduce Susan Dey Suzanne Crough Jeremy Gelbwaks Dave Madden Brian Forster Theme music composer Diane Hilderbrand Danny Janssen Wes Farrell Opening theme `` When We 're Singin ' '' ( 1970 -- 71 ) `` C'mon , Get Happy '' ( 1971 -- 74 ) Composer ( s ) George Duning Benny Golson Warren Barker Hugo Montenegro Shorty Rogers Country of origin United States Original language ( s ) English No. of seasons No. of episodes 96 ( list of episodes ) Production Executive producer ( s ) Bob Claver Producer ( s ) William Bickley Paul Junger Witt Dale McRaven Larry Rosen Mel Swope Cinematography Fred Jackman , Jr . Irving Lippman Camera setup Single - camera Running time 25 minutes Production company ( s ) Screen Gems Television ( 1970 -- 1974 ) Distributor Columbia Pictures Television ( 1974 -- 84 ; 1989 -- 96 ) DFS Program Exchange ( 1984 -- 87 ) The Program Exchange ( 1987 -- 89 ) Columbia TriStar Television ( 1996 -- 2002 ) Sony Pictures Television ( 2002 -- present ) Release Original network ABC Audio format Monaural Original release September 25 , 1970 ( 1970 - 09 - 25 ) -- March 23 , 1974 ( 1974 - 03 - 23 ) Chronology Related shows Getting Together Goober and the Ghost Chasers Partridge Family 2200 A.D."
+   ],
+   "model_answer": "Diane Hilderbrand, Danny Janssen, and Wes Farrell"
+  },
+  {
+   "id": "8bee7bcde9faae14",
+   "kind": "answer",
+   "question": "fitting of rim on a locomotive wheel is done by",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Heating the steel tire to expand it, then fitting it over the wheel rim."
+  },
+  {
+   "id": "c051b0f6f9d3ed50",
+   "kind": "answer",
+   "question": "what were the technological developments of the old stone age",
+   "gold_answers": [
+    "Stone tools were made from a variety of stones . For example , flint and chert were shaped ( or chipped ) for use as cutting tools and weapons , while basalt and sandstone were used for ground stone tools , such as quern - stones . Wood , bone , shell , antler ( deer ) and other materials were widely used , as well . During the most recent part of the period , sediments ( such as clay ) were used to make pottery . Agriculture was developed and certain animals were domesticated as well ."
+   ],
+   "model_answer": "Oldowan and Acheulean stone-tool technologies (Mode 1 and Mode 2)."
+  },
+  {
+   "id": "ec84064c199f25a4",
+   "kind": "answer",
+   "question": "when do the grand magic games start in fairy tail",
+   "gold_answers": [
+    "Crocus, the Flower-Blooming Capital"
+   ],
+   "model_answer": "November 10, 2012 (episode 156)"
+  },
+  {
+   "id": "f1ed91a4dab55979",
+   "kind": "answer",
+   "question": "akhada the authorized biography of mahavir singh phogat",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "A 2017 authorized biography by Saurabh Duggal."
+  },
+  {
+   "id": "f3fd45f96a4a4e09",
+   "kind": "answer",
+   "question": "how has australia been influenced by other cultures",
+   "gold_answers": [
+    "The culture of Australia is a Western culture , derived primarily from Britain but also influenced by the unique geography of Australia , the diverse input of Aboriginal , Torres Strait Islander and other Australian people . The British colonization of Australia began in 1788 , and waves of multi-ethnic migration followed . Evidence of a significant Anglo - Celtic heritage includes the predominance of the English language , the existence of a democratic system of government drawing upon the British traditions of Westminster Government , Parliamentarianism and constitutional monarchy , American constitutionalist and federalist traditions , Christianity as the dominant religion , and the popularity of sports originating in ( or influenced by ) the British Isles . Australian culture has diverged significantly since British settlement ."
+   ],
+   "model_answer": "Through Indigenous traditions, British settlement, and migration from around the world, which have shaped Australian food, arts, lifestyle, and sport."
+  },
+  {
+   "id": "77e84fe5f60cd150",
+   "kind": "answer",
+   "question": "what caused the breakup of the democratic republican party",
+   "gold_answers": [
+    "the disputed 1824 presidential election"
+   ],
+   "model_answer": "Disputes over the 1824 presidential election split the party into Adams and Jackson factions."
+  },
+  {
+   "id": "5808d2f2fe33bd8a",
+   "kind": "answer",
+   "question": "how did rogue get super strength and flight",
+   "gold_answers": [
+    "Rogue permanently absorbed the superhuman powers and the psyche of Carol Danvers, the original Ms. Marvel"
+   ],
+   "model_answer": "By permanently absorbing Ms. Marvel’s powers."
+  },
+  {
+   "id": "c84ec030a5fd74fa",
+   "kind": "answer",
+   "question": "what is the most current adobe flash player version",
+   "gold_answers": [
+    "28.0.0.137"
+   ],
+   "model_answer": "32.0.0.465"
+  },
+  {
+   "id": "a191a238bb923aad",
+   "kind": "answer",
+   "question": "what is the total eclipse of the heart video about",
+   "gold_answers": [
+    "The music video for `` Total Eclipse of the Heart '' was directed by Russell Mulcahy and was filmed on location at the Holloway Sanatorium , a large Victorian Gothic hospital near Virginia Water , Surrey , England . The video features Bonnie Tyler clad in white , dreaming or fantasizing about her students in a boys ' boarding school . Young men are seen dancing and participating in various school activities and singing in a choir ."
+   ],
+   "model_answer": "Bonnie Tyler dreaming about boys at a boarding school."
+  },
+  {
+   "id": "2319389ad71d3ec2",
+   "kind": "answer",
+   "question": "where is the north pole on the world map",
+   "gold_answers": [
+    "90°N 0°W﻿ / ﻿90°N -0°E",
+    "latitude 90° North"
+   ],
+   "model_answer": "At 90°N in the Arctic Ocean."
+  },
+  {
+   "id": "cab43f0c0cb78558",
+   "kind": "answer",
+   "question": "last man on earth what caused the virus",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Its origin is never explained."
+  },
+  {
+   "id": "04fdd182f288553a",
+   "kind": "answer",
+   "question": "when did the animal rights movement began in the us",
+   "gold_answers": [
+    "In the United States , there is an Animal Welfare Act that was produced in 1966 . This law protects animals in acts of research , transportation , and sale . Generally , animals are protected from any torture , neglect , or killing . There have been many amendments made towards this act to keep it updated . In order to be charged for animal abuse , there has to be prosecution and a trial . While there is only one act covering the entire United States , there are more current laws surrounding animal rights , which vary by state . Even though there are policies and severe consequences , the laws are not normally enforced with as much force or timeliness as regular crime ."
+   ],
+   "model_answer": "1866, with the founding of the ASPCA."
+  },
+  {
+   "id": "bac28741ef848276",
+   "kind": "answer",
+   "question": "who was on the first season of dwts",
+   "gold_answers": [
+    "Trista Sutter",
+    "Evander Holyfield",
+    "Rachel Hunter",
+    "Joey McIntyre",
+    "John O'Hurley",
+    "Kelly Monaco"
+   ],
+   "model_answer": "Trista Sutter & Louis Van Amstel, Evander Holyfield & Edyta Śliwińska, Rachel Hunter & Jonathan Roberts, Joey McIntyre & Ashly DelGrosso, John O’Hurley & Charlotte Jørgensen, and Kelly Monaco & Alec Mazo."
+  },
+  {
+   "id": "f51cdf33c60a3d9a",
+   "kind": "answer",
+   "question": "dean koontz dark rivers of the heart summary",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Spencer Grant and Valerie Keene flee a secret government agency, confront Spencer’s troubled past, and begin a new life together with a resistance group."
+  },
+  {
+   "id": "468aa6079bf41906",
+   "kind": "answer",
+   "question": "what were the technological developments of the old stone age",
+   "gold_answers": [
+    "Stone tools were made from a variety of stones . For example , flint and chert were shaped ( or chipped ) for use as cutting tools and weapons , while basalt and sandstone were used for ground stone tools , such as quern - stones . Wood , bone , shell , antler ( deer ) and other materials were widely used , as well . During the most recent part of the period , sediments ( such as clay ) were used to make pottery . Agriculture was developed and certain animals were domesticated as well ."
+   ],
+   "model_answer": "Stone tools, fire-making, and simple shelters."
+  },
+  {
+   "id": "e4e5c58cf576c033",
+   "kind": "answer",
+   "question": "what is the sentencing reform act of 1984",
+   "gold_answers": [
+    "U.S. federal statute intended to increase consistency in United States federal sentencing",
+    "a U.S. federal statute intended to increase consistency in United States federal sentencing"
+   ],
+   "model_answer": "A U.S. federal law that established the Sentencing Commission and largely abolished federal parole."
+  },
+  {
+   "id": "a31e1fb35f515805",
+   "kind": "answer",
+   "question": "suzanne's story orange is the new black",
+   "gold_answers": [
+    "In episode 3 , `` Hugs Can Be Deceiving '' , Suzanne 's backstory is revealed via a flashback . She was adopted by white parents and raised in the suburbs , but her mental instability alienated her classmates and their parents alike . Her adoptive mother pushed her to excel at everything she did to prove that she was as good as everyone else ; ironically , the constant pressure only made Suzanne 's psychological problems worse . In the same episode , it is revealed that Suzanne had run outside and knocked Chapman unconscious after Chapman had beaten Tiffany `` Pennsatucky '' Doggett ( Taryn Manning ) unconscious at the end of season 1 ."
+   ],
+   "model_answer": "Suzanne “Crazy Eyes” Warren is a socially troubled but intelligent inmate whose accidental kidnapping and manslaughter conviction leads to prison, where she forms complicated friendships and relationships."
+  },
+  {
+   "id": "3c0233f6c9e887ba",
+   "kind": "answer",
+   "question": "why did government sponsored surveys and land acts encourage migration to the west",
+   "gold_answers": [
+    "The Homestead Acts were several United States federal laws that gave an applicant ownership of land , typically called a `` homestead , '' at no cost . In all , more than 270 million acres of public land , or nearly 10 % of the total area of the U.S. , was given away free to 1.6 million homesteaders ; most of the homesteads were west of the Mississippi River .",
+    "An extension of the Homestead Principle in law , the Homestead Acts were an expression of the `` Free Soil '' policy of Northerners who wanted individual farmers to own and operate their own farms , as opposed to Southern slave - owners who wanted to buy up large tracts of land and use slave labor , thereby shutting out free white men ."
+   ],
+   "model_answer": "They made western land easier and cheaper to claim.\n"
+  },
+  {
+   "id": "b11c16e82128a3c9",
+   "kind": "answer",
+   "question": "where does the saying like a boss come from",
+   "gold_answers": [
+    "`` Like a Boss '' is a song written and recorded by comedy hip hop troupe The Lonely Island for their debut studio album Incredibad . The song is a parody of the first official single from Slim Thug 's first album Already Platinum , also named `` Like a Boss '' . The song had multiple versions , including an audio - only that did not have the celebrity interviewer and a clean version that was produced in both audio and video . In 2011 it was also subject to a lawsuit from the producers of the song who claimed they never received proper compensation for their work ."
+   ],
+   "model_answer": "Popularized by The Lonely Island’s 2009 SNL song “Like a Boss.”"
+  },
+  {
+   "id": "70eb80b876e906e6",
+   "kind": "answer",
+   "question": "discuss the impact of devaluation on foreign exchange reserve",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Devaluation may initially raise reserves’ domestic-currency value and improve them over time if exports increase and imports decline."
+  },
+  {
+   "id": "2fd91d35e01dd65f",
+   "kind": "answer",
+   "question": "last man on earth what caused the virus",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The virus’s cause is never revealed."
+  },
+  {
+   "id": "c014e4fde9142658",
+   "kind": "answer",
+   "question": "what continents does the ring of fire touch",
+   "gold_answers": [
+    "The Ring of Fire is a direct result of plate tectonics : the movement and collisions of lithospheric plates . The eastern section of the ring is the result of the Nazca Plate and the Cocos Plate being subducted beneath the westward - moving South American Plate . The Cocos Plate is being subducted beneath the Caribbean Plate , in Central America . A portion of the Pacific Plate and the small Juan de Fuca Plate are being subducted beneath the North American Plate . Along the northern portion , the northwestward - moving Pacific plate is being subducted beneath the Aleutian Islands arc . Farther west , the Pacific plate is being subducted along the Kamchatka Peninsula arcs on south past Japan . The southern portion is more complex , with a number of smaller tectonic plates in collision with the Pacific plate from the Mariana Islands , the Philippines , Bougainville , Tonga , and New Zealand ; this portion excludes Australia , since it lies in the center of its tectonic plate . Indonesia lies between the Ring of Fire along the northeastern islands adjacent to and including New Guinea and the Alpide belt along the south and west from Sumatra , Java , Bali , Flores , and Timor . The famous and very active San Andreas Fault zone of California is a transform fault which offsets a portion of the East Pacific Rise under southwestern United States and Mexico . The motion of the fault generates numerous small earthquakes , at multiple times a day , most of which are too small to be felt . The active Queen Charlotte Fault on the west coast of the Haida Gwaii , British Columbia , has generated three large earthquakes during the 20th century : a magnitude 7 event in 1929 ; a magnitude 8.1 in 1949 ( Canada 's largest recorded earthquake ) ; and a magnitude 7.4 in 1970 ."
+   ],
+   "model_answer": "North America, South America, Asia, and Antarctica"
+  },
+  {
+   "id": "0c712f8686e5fe3d",
+   "kind": "answer",
+   "question": "what was one effect of the camp david accords 1977",
+   "gold_answers": [
+    "The time that has elapsed since the Camp David Accords has left no doubt as to their enormous ramifications on Middle Eastern politics . Most notably , the perception of Egypt within the Arab world changed . With the most powerful of the Arab militaries and a history of leadership in the Arab world under Nasser , Egypt had more leverage than any of the other Arab states to advance Arab interests . Egypt was subsequently suspended from the Arab League from 1979 until 1989 ."
+   ],
+   "model_answer": "Egypt and Israel signed a peace treaty."
+  },
+  {
+   "id": "3cbf4a7aa7f88e40",
+   "kind": "answer",
+   "question": "who may be affected by monetary penalties imposed by the irs",
+   "gold_answers": [
+    "Taxpayers in the United States"
+   ],
+   "model_answer": "Individuals and businesses that fail to comply with tax laws."
+  },
+  {
+   "id": "2f90cafda2a4de5e",
+   "kind": "answer",
+   "question": "akhada the authorized biography of mahavir singh phogat",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "A 2016 autobiography of Mahavir Singh Phogat by Saurabh Duggal."
+  },
+  {
+   "id": "766e296134d0714f",
+   "kind": "answer",
+   "question": "who occupied the holy land after the 8th crusade",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The Mamluks"
+  }
+ ],
+ "evidence": []
+}

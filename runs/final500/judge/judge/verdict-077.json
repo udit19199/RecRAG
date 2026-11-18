@@ -1,0 +1,60 @@
+[
+  {"id": "2103f5d6fcb77293", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "McHenry himself has brushed off attempts to take the job more permanently after he was appointed to the role after the unprecedented ouster of McCarthy more than two weeks ago."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "McHenry himself has brushed off attempts to take the job more permanently after he was appointed to the role after the unprecedented ouster of McCarthy more than two weeks ago."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "McHenry himself has brushed off attempts to take the job more permanently after he was appointed to the role after the unprecedented ouster of McCarthy more than two weeks ago."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "McHenry himself has brushed off attempts to take the job more permanently after he was appointed to the role after the unprecedented ouster of McCarthy more than two weeks ago."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "The House had never ousted its speaker before McCarthy"}, {"item": 4, "quote": "since the sudden ouster of Kevin McCarthy"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "The House had never ousted its speaker before McCarthy"}, {"item": 4, "quote": "since the sudden ouster of Kevin McCarthy"}]}
+  ]},
+  {"id": "59d2ffc0ebea0a8f", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go, especially since he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go, especially since he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go, especially since he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go, especially since he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go, especially since he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Kincaid was a limited participant in practice on Wednesday due to a shoulder injury, but it’s been reported he’s likely to suit up on Saturday at less than 100%."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Kincaid was a limited participant in practice on Wednesday due to a shoulder injury, but it’s been reported he’s likely to suit up on Saturday at less than 100%."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Kincaid was a limited participant in practice on Wednesday due to a shoulder injury, but it’s been reported he’s likely to suit up on Saturday at less than 100%."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "Kincaid was a limited participant in practice on Wednesday due to a shoulder injury, but it’s been reported he’s likely to suit up on Saturday at less than 100%."}]}
+  ]},
+  {"id": "8331a247910d4eb3", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "3.0", "status": "missing", "evidence": []},
+    {"fact": "3.1", "status": "missing", "evidence": []},
+    {"fact": "3.2", "status": "missing", "evidence": []},
+    {"fact": "3.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "31b17138a9baa270", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "With inflation down from its peak two summers ago"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates and could soon turn to cutting them."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates and could soon turn to cutting them."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "For investors around the world, the “Fed matters more than other central banks,”"}, {"item": 7, "quote": "foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "weak US data is “the only game-changer for markets”"}, {"item": 7, "quote": "foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "d7d2a7a55fe3f4ec", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "The former CEO of FTX oversaw a supposedly thriving crypto exchange"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+    {"fact": "3.0", "status": "missing", "evidence": []},
+    {"fact": "3.1", "status": "missing", "evidence": []},
+    {"fact": "3.2", "status": "missing", "evidence": []},
+    {"fact": "3.3", "status": "missing", "evidence": []}
+  ]}
+]

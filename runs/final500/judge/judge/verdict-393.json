@@ -1,0 +1,64 @@
+[
+{"id": "1cd8f4d3569f560c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal"}, {"item": 4, "quote": "but this time around, the pair meet in the semi-finals of the 2023 tournament"}]},
+{"fact": "1.2", "status": "contradicted", "evidence": [{"item": 4, "quote": "Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal"}]}
+]},
+{"id": "6bc764d6bf6de0af", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "One of the hardest things is resentment can build up if you feel like you need to buy gifts for your family and you can barely make your student loan payments, so bring things up,” Alev said."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "so bring things up,” Alev said."}]}
+]},
+{"id": "09abda467458b946", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "But while this will probably come up later in the trial"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "52ea63202fe4548b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "But it was ChatGPT’s explosion into public consciousness that thrust Altman into the spotlight as a face of generative AI"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "a face of generative AI — technology that can produce novel imagery, passages of text and other media."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []},
+{"fact": "3.2", "status": "missing", "evidence": []}
+]},
+{"id": "f315b275c881c8e6", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "The understandings that Israel reached with Hamas in 2012"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."}]},
+{"fact": "2.0", "status": "missing", "evidence": []}
+]},
+{"id": "b0e6c4bfa7716d06", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX?"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "over the collapse of FTX, the bankrupt cryptocurrency exchange"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 10, "quote": "is on trial for seven counts of wire fraud and conspiracy."}, {"item": 6, "quote": "has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+]}
+]

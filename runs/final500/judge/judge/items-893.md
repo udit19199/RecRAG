@@ -1,0 +1,864 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=1a3ef6fee3ada3e1 ===
+Gold sentences and facts:
+Sentence 0: Callability -- Some bonds give the issuer the right to repay the bond before the maturity date on the call dates ; see call option . These bonds are referred to as callable bonds . Most callable bonds allow the issuer to repay the bond at par . With some bonds , the issuer has to pay a premium , the so - called call premium . This is mainly the case for high - yield bonds . These have very strict covenants , restricting the issuer in its operations . To be free from these covenants , the issuer can repay the bonds early , but only at a high cost .
+  Fact 0.0: Some bonds give the issuer the right to repay the bond before the maturity date on the call dates.
+  Fact 0.1: Bonds that give the issuer this right are referred to as callable bonds.
+  Fact 0.2: Most callable bonds allow the issuer to repay the bond at par.
+  Fact 0.3: With some bonds, the issuer has to pay a premium, called the call premium.
+  Fact 0.4: Call premiums are mainly the case for high-yield bonds.
+  Fact 0.5: High-yield bonds have very strict covenants that restrict the issuer in its operations.
+  Fact 0.6: To be free from these covenants, the issuer can repay high-yield bonds early.
+  Fact 0.7: Repaying high-yield bonds early to be free from covenants is possible only at a high cost.
+
+Retrieved items:
+<item 1>
+Bond (finance)
+A European callable has only one call date . This is a special case of a Bermudan callable . An American callable can be called at any time until the maturity
+date . A death put is an optional redemption feature on a debt instrument allowing the beneficiary of the estate of a deceased bondholder to put ( sell ) the
+bond back to the issuer at face value in the event of the bondholder 's death or legal incapacitation . This is also known as a `` survivor 's option '' .
+Sinking fund provision of the corporate bond indenture requires a certain portion of the issue to be retired periodically . The entire bond issue can be
+liquidated by the maturity date ; if not , the remainder is called balloon maturity . Issuers may either pay to trustees , which in turn call randomly selected
+bonds in the issue , or , alternatively , purchase bonds in open market , then return them to trustees . Bonds are often identified by its international
+securities identification number , or ISIN , which is a 12 digit alphanumeric code that uniquely identifies debt securities .
+</item 1>
+
+<item 2>
+Bond (finance)
+Book - entry bond is a bond that does not have a paper certificate . As physically processing paper bonds and interest coupons became more expensive , issuers (
+and banks that used to collect coupon interest for depositors ) have tried to discourage their use . Some book - entry bond issues do not offer the option of a
+paper certificate , even to investors who prefer them . Lottery bonds are issued by European and other states . Interest is paid as on a traditional fixed rate
+bond , but the issuer will redeem randomly selected individual bonds within the issue according to a schedule . Some of these redemptions will be for a higher
+value than the face value of the bond . War bond is a bond issued by a government to fund military operations during wartime . This type of bond has low return
+rate . Serial bond is a bond that matures in installments over a period of time . In effect , a $100,000 , 5 - year serial bond would mature in a $20,000
+annuity over a 5 - year interval . Revenue bond is a special type of municipal bond distinguished by its guarantee of repayment solely from revenues generated
+by a specified revenue - generating entity associated with the purpose of the bonds .
+</item 2>
+
+<item 3>
+Bond (finance)
+Optionality : Occasionally a bond may contain an embedded option ; that is , it grants option - like features to the holder or the issuer : Callability -- Some
+bonds give the issuer the right to repay the bond before the maturity date on the call dates ; see call option . These bonds are referred to as callable bonds .
+Most callable bonds allow the issuer to repay the bond at par . With some bonds , the issuer has to pay a premium , the so - called call premium . This is
+mainly the case for high - yield bonds . These have very strict covenants , restricting the issuer in its operations . To be free from these covenants , the
+issuer can repay the bonds early , but only at a high cost . Putability -- Some bonds give the holder the right to force the issuer to repay the bond before the
+maturity date on the put dates ; see put option . These are referred to as retractable or putable bonds . Call dates and put dates -- the dates on which
+callable and putable bonds can be redeemed early . There are four main categories : A Bermudan callable has several call dates , usually coinciding with coupon
+dates .
+</item 3>
+
+<item 4>
+Bond (finance)
+A variation are stepped - coupon bonds , whose coupon increases during the life of the bond . Floating rate notes ( FRNs , floaters ) have a variable coupon
+that is linked to a reference rate of interest , such as Libor or Euribor . For example , the coupon may be defined as three - month USD LIBOR + 0.20 % . The
+coupon rate is recalculated periodically , typically every one or three months . Zero - coupon bonds ( zeros ) pay no regular interest . They are issued at a
+substantial discount to par value , so that the interest is effectively rolled up to maturity ( and usually taxed as such ) . The bondholder receives the full
+principal amount on the redemption date . An example of zero coupon bonds is Series E savings bonds issued by the U.S. government . Zero - coupon bonds may be
+created from fixed rate bonds by a financial institution separating ( `` stripping off '' ) the coupons from the principal . In other words , the separated
+coupons and the final principal payment of the bond may be traded separately . See IO ( Interest Only ) and PO ( Principal Only ) .
+</item 4>
+
+<item 5>
+Bond (finance)
+The net proceeds that the issuer receives are thus the issue price , less issuance fees . The market price of the bond will vary over its life : it may trade at
+a premium ( above par , usually because market interest rates have fallen since issue ) , or at a discount ( price below par , if market rates have risen or
+there is a high probability of default on the bond ) . Others ( edit ) Indentures and Covenants -- An indenture is a formal debt agreement that establishes the
+terms of a bond issue , while covenants are the clauses of such an agreement . Covenants specify the rights of bondholders and the duties of issuers , such as
+actions that the issuer is obligated to perform or is prohibited from performing . In the U.S. , federal and state securities and commercial laws apply to the
+enforcement of these agreements , which are construed by courts as contracts between issuers and bondholders . The terms may be changed only with great
+difficulty while the bonds are outstanding , with amendments to the governing document generally requiring approval by a majority ( or super-majority ) vote of
+the bondholders .
+</item 5>
+
+<item 6>
+Bond (finance)
+The name `` coupon '' arose because in the past , paper bond certificates were issued which had coupons attached to them , one for each interest payment . On
+the due dates the bondholder would hand in the coupon to a bank in exchange for the interest payment . Interest can be paid at different frequencies : generally
+semi-annual , i.e. every 6 months , or annual . Bond issued by the Dutch East India Company in 1623 Yield ( edit ) The yield is the rate of return received from
+investing in the bond . It usually refers either to The current yield , or running yield , which is simply the annual interest payment divided by the current
+market price of the bond ( often the clean price ) . The yield to maturity , or redemption yield , which is a more useful measure of the return of the bond .
+This takes into account the current market price , and the amount and timing of all remaining coupon payments and of the repayment due on maturity . It is
+equivalent to the internal rate of return of a bond . Credit quality ( edit ) The quality of the issue refers to the probability that the bondholders will
+receive the amounts promised at the due dates .
+</item 6>
+
+<item 7>
+Bond (finance)
+That relationship is the definition of the redemption yield on the bond , which is likely to be close to the current market interest rate for other bonds with
+similar characteristics . ( Otherwise there would be arbitrage opportunities . ) The yield and price of a bond are inversely related so that when market
+interest rates rise , bond prices fall and vice versa . The market price of a bond may be quoted including the accrued interest since the last coupon date . (
+Some bond markets include accrued interest in the trading price and others add it on separately when settlement is made . ) The price including accrued interest
+is known as the `` full '' or `` dirty price '' . ( See also Accrual bond . ) The price excluding accrued interest is known as the `` flat '' or `` clean price
+'' . The interest payment ( `` coupon payment '' ) divided by the current price of the bond is called the current yield ( this is the nominal yield multiplied
+by the par value and divided by the price ) . There are other yield measures that exist such as the yield to first call , yield to worst , yield to first par
+call , yield to put , cash flow yield and yield to maturity .
+</item 7>
+
+<item 8>
+Bond (finance)
+The most common types of bonds include municipal bonds and corporate bonds . The bond is a debt security , under which the issuer owes the holders a debt and (
+depending on the terms of the bond ) is obliged to pay them interest ( the coupon ) or to repay the principal at a later date , termed the maturity date .
+Interest is usually payable at fixed intervals ( semiannual , annual , sometimes monthly ) . Very often the bond is negotiable , that is , the ownership of the
+instrument can be transferred in the secondary market . This means that once the transfer agents at the bank medallion stamp the bond , it is highly liquid on
+the secondary market . Thus a bond is a form of loan or IOU : the holder of the bond is the lender ( creditor ) , the issuer of the bond is the borrower (
+debtor ) , and the coupon is the interest . Bonds provide the borrower with external funds to finance long - term investments , or , in the case of government
+bonds , to finance current expenditure . Certificates of deposit ( CDs ) or short - term commercial paper are considered to be money market instruments and not
+bonds : the main difference is the length of the term of the instrument .
+</item 8>
+
+<item 9>
+Bond (finance)
+For other uses , see Bond ( disambiguation ) . Securities Securities ( show ) Banknote Bond Debenture Derivative Stock Markets ( show ) Stock market Commodity
+market Foreign exchange market Futures exchange Over-the - counter market ( OTC ) Spot market Bonds by coupon ( show ) Fixed rate bond Floating rate note
+Inflation - indexed bond Perpetual bond Zero - coupon bond Commercial paper Bonds by issuer ( show ) Corporate bond Government bond Municipal bond Pfandbrief
+Equities ( stocks ) ( show ) Stock Share Initial public offering ( IPO ) Short selling Investment funds ( show ) Mutual fund Closed - end fund Exchange - traded
+fund ( ETF ) Hedge fund Index fund Segregated fund Structured finance ( show ) Securitization Agency security Asset - backed security Mortgage - backed security
+Commercial mortgage - backed security Residential mortgage - backed security Tranche Collateralized debt obligation Collateralized fund obligation
+Collateralized mortgage obligation Credit - linked note Unsecured debt Derivatives ( show ) Forward Futures Option Swap Warrant Credit derivative Hybrid
+security In finance , a bond is an instrument of indebtedness of the bond issuer to the holders . The most common types of bonds include municipal bonds and
+corporate bonds .
+</item 9>
+
+<item 10>
+Bond (finance)
+The length of time until the maturity date is often referred to as the term or tenure or maturity of a bond . The maturity can be any length of time , although
+debt securities with a term of less than one year are generally designated money market instruments rather than bonds . Most bonds have a term of up to 30 years
+. Some bonds have been issued with terms of 50 years or more , and historically there have been some issues with no maturity date ( irredeemable ) . In the
+market for United States Treasury securities , there are three categories of bond maturities : short term ( bills ) : maturities between one and five years ;
+medium term ( notes ) : maturities between six and twelve years ; long term ( bonds ) : maturities longer than twelve years . Coupon ( edit ) The coupon is the
+interest rate that the issuer pays to the holder . Usually this rate is fixed throughout the life of the bond . It can also vary with a money market index ,
+such as LIBOR , or it can be even more exotic .
+</item 10>
+=== END ITEM id=1a3ef6fee3ada3e1 ===
+
+=== ITEM id=b407ec686de92296 ===
+Gold sentences and facts:
+Sentence 0: Chance 's friend Pat Wheeler ( Ward Bond ) and his wagon train of supplies stop in town , with a young gunslinger , Colorado Ryan ( Ricky Nelson ) , riding guard . Inside the jail , Stumpy ( Walter Brennan ) , Chance 's game - legged deputy , keeps watch over the jail and Joe , who knows that Stumpy holds an old grudge against Joe 's wealthy and powerful brother . Joe warns his jailers that Nathan Burdette will not like how his brother is being treated .
+  Fact 0.0: Pat Wheeler is Chance's friend.
+  Fact 0.1: Pat Wheeler is played by Ward Bond.
+  Fact 0.2: Pat Wheeler has a wagon train of supplies.
+  Fact 0.3: Pat Wheeler and his wagon train of supplies stop in town.
+  Fact 0.4: Colorado Ryan is a young gunslinger.
+  Fact 0.5: Colorado Ryan is played by Ricky Nelson.
+  Fact 0.6: Colorado Ryan is riding guard as Pat Wheeler's wagon train stops in town.
+  Fact 0.7: Joe is in the jail.
+  Fact 0.8: Stumpy is played by Walter Brennan.
+  Fact 0.9: Stumpy is Chance's game-legged deputy.
+  Fact 0.10: Stumpy keeps watch over the jail.
+  Fact 0.11: Stumpy keeps watch over Joe.
+  Fact 0.12: Joe knows that Stumpy holds an old grudge against Joe's wealthy and powerful brother.
+  Fact 0.13: Joe's brother is wealthy and powerful.
+  Fact 0.14: Joe warns his jailers.
+  Fact 0.15: Joe warns his jailers that Nathan Burdette will not like how Joe, Nathan's brother, is being treated.
+Sentence 1: Walter Brennan as Stumpy
+  Fact 1.0: Walter Brennan plays the character Stumpy.
+
+Retrieved items:
+<item 1>
+Rio Bravo (film)
+Chance is ordered to take the men to the jail to let Joe go . He is reluctant to do so , but Dude implores Chance to cooperate , saying that Stumpy is alone and
+has no food or water to hold out very long . The remaining Burdette men at the hotel take Dude hostage and Nathan Burdette offers to trade him later for Joe .
+Stumpy opens fire at the jail , holding off Burdette 's men . Chance and Colorado then take Joe to make the trade for Dude at a warehouse , leaving Stumpy
+behind because of his bad leg . During the trade , walking in opposite directions , Dude tackles Joe and they scuffle while a gunfight erupts . Stumpy turns up
+and helps even the odds . Dude overpowers Joe . The lawmen throw dynamite sticks at the warehouse where Burdette and his men are based , shooting the sticks to
+explode them . After a few explosions rock the warehouse , the criminals surrender . All is quiet in town as Chance gets reacquainted with Feathers , who models
+a skimpy new costume she will be wearing in her new job singing at the hotel .
+</item 1>
+
+<item 2>
+Rio Bravo (film)
+Inspirations ( edit ) Feathers ' dialogue was occasionally inspired by the character of `` Slim '' ( Lauren Bacall ) in the 1944 To Have and Have Not , as when
+, after the first kiss , she says : `` It 's better when two people do it , '' recalling the phrase `` It 's even better when you help ; '' and again later when
+she says , `` I 'm hard to get -- you 're going to have to say you want me , '' recalling Slim 's `` I 'm hard to get , Steve -- all you have to do is ask me .
+'' L'homme à l'étoile d'argent ( The Man with the Silver Star ) , a 1969 album from the French comics series Lt. Blueberry was directly inspired by Rio Bravo .
+The plot is virtually the same . Blueberry plays the role of sheriff John T. Chance ; McClure , a whiskey - adoring old man , combines the roles of Dude and
+Stumpy ; Dusty plays the role of Colorado ; Miss March , the teacher , plays the role of a less morally challenged Feathers ; and instead of the Burdettes , it
+has the Bass brothers .
+</item 2>
+
+<item 3>
+Rio Bravo (film)
+In Rio Bravo , Chance is surrounded by allies -- a deputy who is brave and good with a gun , despite recovering from alcoholism ( Dude ) , a young untried but
+self - assured gunfighter ( Colorado ) , a limping `` crippled '' old man who is doggedly loyal ( Stumpy ) , a Mexican innkeeper ( Carlos ) , his wife (
+Consuela ) , and an attractive young woman ( Feathers ) -- and repeatedly turns down aid from anyone he does not think is capable of helping him , though in the
+final shootout they come to help him anyway . `` Who 'll turn up next ? '' Wayne asks amid the gunfire , to which Colorado replies : `` Maybe the girl with
+another flower pot . '' Reception ( edit ) In the United Kingdom , Rio Bravo was not originally even reviewed for Sight & Sound ; in August 1976 , Leslie
+Halliwell gave the film two out of four stars , describing it as a `` cheerfully overlong and slow - moving Western '' that was nevertheless `` very watchable
+for those with time to spare '' .
+</item 3>
+
+<item 4>
+Rio Bravo (film)
+In this film , Robert Mitchum played the Dean Martin role , Arthur Hunnicutt the Walter Brennan character , and James Caan the Ricky Nelson role . Hawks again
+named the Nelson / Caan character after a state ( in this case , Mississippi ) and in a wry , humorous twist on the original film , Hawks made him inept with
+firearms , but skilled with a knife . The second remake , Rio Lobo , was made in 1970 with a plot much further off the original mold , starting with the absence
+of a lawman - turned - drunkard character . This began with a Confederate train robbery of a Union gold shipment during the American Civil War , then moved to a
+postwar Texas county thoroughly controlled by a rich , arrogant rancher . The heroes , with the exception of an old man similar to Brennan and Hunnicutt 's
+characters in the previous pictures ( Jack Elam here ) , were complete outsiders . Along with Wayne and Elam , this movie starred Mexican film star Jorge Rivero
+( as Frenchie ) , Christopher Mitchum ( Robert Mitchum 's son ) , and Jennifer O'Neill .
+</item 4>
+
+<item 5>
+Rio Bravo (film)
+Both remember how good with a gun Dude used to be . Chance 's friend Pat Wheeler ( Ward Bond ) and his wagon train of supplies stop in town , with a young
+gunslinger , Colorado Ryan ( Ricky Nelson ) , riding guard . Inside the jail , Stumpy ( Walter Brennan ) , Chance 's game - legged deputy , keeps watch over the
+jail and Joe , who knows that Stumpy holds an old grudge against Joe 's wealthy and powerful brother . Joe warns his jailers that Nathan Burdette will not like
+how his brother is being treated . A mysterious woman nicknamed Feathers ( Angie Dickinson ) is in the saloon , playing poker . In the meantime , Dude and
+Chance patrol the town . Hotel owner Carlos ( Pedro Gonzalez - Gonzalez ) stops the sheriff , saying Wheeler has been talking too much about Chance needing help
+. In the saloon , Chance implores Wheeler to stop , as it will draw attention from the wrong people . Wheeler suggests that Colorado could be of assistance ,
+but Colorado politely declines , saying he wants to `` mind my own business '' . Colorado also promises not to start any trouble without telling the sheriff
+first .
+</item 5>
+
+<item 6>
+Rio Bravo (film)
+McCampbell , the film is about the sheriff of the town of Rio Bravo , Texas , who arrests the brother of a powerful local rancher to help his drunken deputy /
+friend . With the help of a cripple and a young gunfighter , they hold off the rancher 's gang . Rio Bravo was filmed on location at Old Tucson Studios outside
+Tucson , Arizona , in Technicolor . In 2014 , Rio Bravo was deemed `` culturally , historically , or aesthetically significant '' by the Library of Congress and
+selected for preservation in the National Film Registry . Contents ( hide ) 1 Plot 2 Cast 3 Production 4 High Noon debate 5 Reception 6 Remakes and inspirations
+6.1 Remakes 6.2 Inspirations 7 Music 8 Comic book adaption 9 See also 10 References 11 Further reading 12 External links Plot ( edit ) In the town of Rio Bravo
+, Texas , sheriff 's deputy Dude ( Dean Martin ) , who has acquired the contemptuous nickname Borrachón ( pronounced ( bo.
+</item 6>
+
+<item 7>
+Rio Bravo (film)
+Rio Bravo ( film ) - wikipedia Rio Bravo ( film ) Jump to : navigation , search For other uses , see Rio Bravo . Rio Bravo Theatrical release poster Directed by
+Howard Hawks Produced by Howard Hawks Screenplay by Jules Furthman Leigh Brackett Based on `` Rio Bravo '' by B.H. McCampbell Starring John Wayne Dean Martin
+Ricky Nelson Angie Dickinson Walter Brennan Ward Bond John Russell Music by Dimitri Tiomkin Cinematography Russell Harlan Edited by Folmar Blangsted Production
+company Warner Bros . Distributed by Warner Bros . Release date March 18 , 1959 ( 1959 - 03 - 18 ) ( USA ) Running time 141 minutes Country United States
+Language English Box office $5.2 million ( est . US / Canada rentals ) Rio Bravo is a 1959 American Western film produced and directed by Howard Hawks and
+starring John Wayne , Dean Martin , Ricky Nelson , Angie Dickinson , Walter Brennan , and Ward Bond . Written by Jules Furthman and Leigh Brackett , based on
+the short story `` Rio Bravo '' by B.H.
+</item 7>
+
+<item 8>
+Rio Bravo (film)
+The Nest , a 2002 film by Florent Emilio Siri , starring Samy Naceri , Benoît Magimel , Nadia Farès , Pascal Greggory , and Sami Bouajila , is a quasi-remake of
+Assault on Precinct 13 . Borrachón : A Prequel to Rio Bravo , by Kevin Cullen , 2016 . This book is a prequel to the Rio Bravo story and film and provides the
+complete background leading up to the classic tale . Music ( edit ) `` My Rifle , My Pony and Me '' -- sung by Dean Martin and Ricky Nelson `` Cindy '' -- sung
+by Ricky Nelson , Dean Martin and Walter Brennan `` Rio Bravo '' -- sung by Dean Martin ( end credits ) Comic book adaption ( edit ) Dell Four Color # 1018 (
+June 1959 ) See also ( edit ) List of American films of 1959 John Wayne filmography El Dorado ( 1966 ) Rio Lobo ( 1970 ) References ( edit ) Jump up ^ `` 1959 :
+Probable Domestic Take '' , Variety , 6 January 1960 p. 34 .
+</item 8>
+
+<item 9>
+Rio Bravo (film)
+( 1962 ) Man 's Favorite Sport ? ( 1964 ) Red Line 7000 ( 1965 ) El Dorado ( 1966 ) Rio Lobo ( 1970 ) VIAF : 316751659 GND : 4764446 - 1 SUDOC : 104486708 BNF :
+cb145169957 ( data ) Retrieved from `` https://en.wikipedia.org/w/index.php?title=Rio_Bravo_(film)&oldid=817646117 '' Categories : 1959 films English - language
+films 1950s Western ( genre ) films American Western ( genre ) films American buddy films Films scored by Dimitri Tiomkin Films about alcoholism Films directed
+by Howard Hawks Films set in Texas Films shot in Arizona Films shot in California Screenplays by Leigh Brackett Warner Bros.
+</item 9>
+
+<item 10>
+Rio Bravo (film)
+After a pair of sheer tights comes floating from a window to the street , a delighted Stumpy retrieves it , but Dude cautions him to mind his own business .
+Cast ( edit ) John Wayne and Angie Dickinson in Rio Bravo John Wayne as John T. Chance Dean Martin as Dude Ricky Nelson as Colorado / Ryan Angie Dickinson as
+Feathers Walter Brennan as Stumpy Ward Bond as Pat Wheeler John Russell as Nathan Burdette Pedro Gonzalez Gonzalez as Carlos Robante Estelita Rodriguez as
+Consuela Robante Claude Akins as Joe Burdette Joseph Shimada as Burt Malcolm Atterbury and Harry Carey Jr. also receive a screen credit in the film 's opening ,
+but their scenes were deleted from the final film . Production ( edit ) Ricky Nelson performing the song `` Get Along Home , Cindy '' in Rio Bravo Exteriors for
+the film were shot at Old Tucson Studios , just outside Tucson . Filming took place in the summer of 1958 , and the movie 's credits gave 1958 as the year of
+production , although the film was not released until 1959 .
+</item 10>
+=== END ITEM id=b407ec686de92296 ===
+
+=== ITEM id=bd6e9a2df073362e ===
+Gold sentences and facts:
+Sentence 0: `` For What It 's Worth ( Stop , Hey What 's That Sound ) '' ( often referred to as simply `` For What It 's Worth '' ) is a song written by Stephen Stills . It was performed by Buffalo Springfield , recorded on December 5 , 1966 , and released as a single on Atco Records in January 1967 . The single peaked at number seven on the Billboard Hot 100 chart . This song is currently ranked number 63 on Rolling Stone 's list of The 500 Greatest Songs of All Time as well as the eighth best song of 1967 by Acclaimed Music .
+  Fact 0.0: 'For What It's Worth (Stop, Hey What's That Sound)' is often referred to as simply 'For What It's Worth'.
+  Fact 0.1: 'For What It's Worth' is a song.
+  Fact 0.2: 'For What It's Worth' was written by Stephen Stills.
+  Fact 0.3: 'For What It's Worth' was performed by Buffalo Springfield.
+  Fact 0.4: 'For What It's Worth' was recorded on December 5, 1966.
+  Fact 0.5: 'For What It's Worth' was released as a single on Atco Records in January 1967.
+  Fact 0.6: The 'For What It's Worth' single peaked at number seven on the Billboard Hot 100 chart.
+  Fact 0.7: 'For What It's Worth' is currently ranked number 63 on Rolling Stone's list of The 500 Greatest Songs of All Time.
+  Fact 0.8: 'For What It's Worth' is the eighth best song of 1967 according to Acclaimed Music.
+
+Retrieved items:
+<item 1>
+Closing Time (album)
+Jump up ^ `` Tom Waits : Album Guide '' . Rolling Stone . Archived from the original on September 19 , 2011 . Retrieved November 25 , 2015 . Jump up ^ Holden ,
+Stephen ( April 26 , 1973 ) . `` Closing Time by Tom Waits Music Reviews '' . Rolling Stone . Retrieved April 23 , 2011 . ^ Jump up to : `` Discography Tom
+Waits '' . irish-charts.com . Hung Medien . Retrieved July 26 , 2012 . Jump up ^ Welcome to the Neighborhood -- Meat Loaf at AllMusic . Retrieved July 26 , 2012
+. Jump up ^ On the Border -- Eagles at AllMusic . Retrieved July 26 , 2012 . Jump up ^ Pursuit of Happiness -- Beat Farmers at AllMusic . Retrieved July 26 ,
+2012 . Jump up ^ Black Music for White People -- Screamin ' Jay Hawkins at AllMusic . Retrieved July 26 , 2012 .
+</item 1>
+
+<item 2>
+For What It's Worth
+Against the background of these civil disturbances , Stills recorded the song on December 5 , 1966 . Production ( edit ) Stills said in an interview that the
+name of the song came about when he presented it to the record company executive Ahmet Ertegun who signed Buffalo Springfield to the Atlantic Records - owned
+ATCO label . He said : `` I have this song here , for what it 's worth , if you want it . '' Another producer , Charlie Greene , claims that Stills first said
+the above sentence to him , but credits Ahmet Ertegun with subtitling the single `` Stop , Hey What 's That Sound '' so that the song would be more easily
+recognized . The song was recorded on December 5 , 1966 at Columbia Studios , Hollywood . Tom Dowd claims he mixed the song at Atlantic 's studio in New York ,
+though this is disputed by others . He did take part in the production of Cher 's version of the song in 1969. . The song is distinguished with the use of the
+guitar harmonics technique and sound . Legacy ( edit ) The song quickly became a well - known protest song .
+</item 2>
+
+<item 3>
+Let My Love Open the Door
+Songfacts.com . Jump up ^ `` Pete Townshend UK charts '' . Official Charts . Jump up ^ `` Pete Townshend US charts '' . Billboard . Jump up ^ Joel Whitburn 's
+Top Pop Singles 1955 - 1990 - ISBN 0 - 89820 - 089 - X Jump up ^ Collectionscanada.gc.ca Archived 2016 - 04 - 25 at the Wayback Machine . Jump up ^
+Musicoutfitters.com Jump up ^ `` The Covers EP : Various artists : MP3 Downloads '' . Amazon.com . Retrieved 2016 - 10 - 16 . Jump up ^ `` Help us open the door
+to better cancer care # LetMyLoveOpenTheDoor '' . Firstcitizens.com . Retrieved 2016 - 10 - 16 . Jump up ^ `` Walmart TV Commercial , ' Christmas Like a Rock
+Star ' Song by Pete Townshend '' . Ispot.tv . Retrieved December 6 , 2017 . Jump up ^ `` Leathal Weapon ( TV series ) `` Fools Rush '' Soundtracks ( 2017 ) `` .
+</item 3>
+
+<item 4>
+For What It's Worth
+Released January 1967 Format 7 - inch single Recorded December 5 , 1966 Studio Columbia Studios , Hollywood Genre Folk rock country rock psychedelic rock Length
+2 : 37 Label Atco Songwriter ( s ) Stephen Stills Producer ( s ) Charles Greene Brian Stone Buffalo Springfield singles chronology `` Burned '' ( 1966 ) `` For
+What It 's Worth '' ( 1967 ) `` Bluebird '' ( 1967 ) `` Burned '' ( 1966 ) `` For What It 's Worth '' ( 1967 ) `` Bluebird '' ( 1967 ) `` For What It 's Worth (
+Stop , Hey What 's That Sound ) '' ( often referred to as simply `` For What It 's Worth '' ) is a song written by Stephen Stills . It was performed by Buffalo
+Springfield , recorded on December 5 , 1966 , and released as a single on Atco Records in January 1967 . The single peaked at number seven on the Billboard Hot
+100 chart .
+</item 4>
+
+<item 5>
+Closing Time (album)
+Critical reaction to Closing Time was positive . The album 's only single , `` Ol ' ' 55 '' , attracted attention due to a cover version by Waits 's more
+popular label mates , the Eagles . Other songs from the album were covered by Tim Buckley and Bette Midler . The album was certified Gold in the UK and has
+gained a contemporary cult following among rock fans . Since its release , the album has been reissued on LP in 1976 , on CD in 1992 and 1999 , and 180 gram LP
+in 2010 . Contents ( hide ) 1 Background 2 Recording 3 Composition 4 Packaging 5 Release 6 Reception 7 Influence 8 Track listing 9 Personnel 9.1 Musicians 9.2
+Guest musicians 9.3 Technical personnel 10 Chart positions 11 Certifications 11.1 References 11.2 Bibliography Background ( edit ) The Troubadour was the site
+of many early Waits performances Tom Waits began his musical career in 1970 , performing every Monday night at The Troubadour , a venue in Los Angeles ,
+California .
+</item 5>
+
+<item 6>
+For What It's Worth
+( Part 2 ) : UNT Digital Library '' ( audio ) . Pop Chronicles . University of North Texas Libraries . ^ Jump up to : `` Sunset Strip Riots Closing of club
+ignited the ' Sunset Strip riots ' '' . Los Angeles Times . 2007 - 08 - 05 . Retrieved 2012 - 01 - 16 . Jump up ^ Einarson , John ; Furay , Richie ( 2004 ) .
+For What It 's Worth : The Story of Buffalo Springfield . Taylor Trade Publications . p. 127 . ISBN 978 - 0 - 8154 - 1281 - 6 . Jump up ^ Jimmy McDonough ( 2003
+) . Shakey : Neil Young 's Biography . Random House . p. 201 . Jump up ^ `` Top 20 Pop Spotlight Cher - For What It 's Worth '' . Billboard . Nielsen Business
+Media , Inc. 16 Aug 1969 . Jump up ^ Lustig , Jay ( 18 February 2011 ) .
+</item 6>
+
+<item 7>
+For What It's Worth
+For What It 's Worth - wikipedia For What It 's Worth Jump to : navigation , search This article is about the Stephen Stills song . For other uses , see For
+What It 's Worth ( disambiguation ) . `` What 's that sound ? '' redirects here . For the album , see What 's That Sound ? `` For What It 's Worth '' Single by
+Buffalo Springfield from the album Buffalo Springfield B - side `` Do I Have to Come Right Out and Say It ? ''
+</item 7>
+
+<item 8>
+Closing Time (album)
+`` Closing Time '' ( instrumental ) 4 : 20 Total length : 45 : 46 Personnel ( edit ) Musicians ( edit ) Tom Waits -- vocals , piano , guitar , harmonium ,
+harpsichord , celeste Delbert Bennett -- trumpet Shep Cooke -- guitar , backing vocals on `` Old Shoes ( & Picture Postcards ) '' Peter Klimes -- guitar , pedal
+steel guitar on `` Rosie '' Bill Plummer -- double bass John Seiter -- drums ; backing vocals on `` Ol ' 55 '' and `` Rosie '' Guest musicians ( edit ) Arni
+Egilsson -- bass guitar on `` Closing Time '' ( Instrumental ) Jesse Ehrlich -- cello on `` Martha '' Tony Terran -- trumpet on `` Closing Time '' (
+Instrumental ) Technical personnel ( edit ) Ed Caraeff -- photography Richie Moore -- additional engineering Cal Schenkel -- design , artwork Jerry Yester --
+production , engineering Chart positions ( edit ) Chart ( 2000 ) Peak position Irish Albums Chart 29 Certifications ( edit ) Region Certification Certified
+units / Sales United Kingdom ( BPI ) Gold 100,000 Summaries shipments figures based on certification alone References ( edit ) Jump up ^ `` Releases '' .
+</item 8>
+
+<item 9>
+For What It's Worth
+Entertainment.time.com . Retrieved 2016 - 09 - 30 . Jump up ^ `` Oui 3 '' . Blair Booth Music . Retrieved 6 April 2016 . Jump up ^ `` Oui 3 '' . Official Charts
+. Retrieved 6 April 2016 . Jump up ^ `` EXCLUSIVE ! Haley Reinhart Covering The ' 60s Classic For What It 's Worth Is As Chilling As Our Current Political
+Climate ! Listen ! '' . PerezHilton . August 10 , 2017 . Retrieved August 10 , 2017 . External links ( edit ) Reasontorock analysis of song Lyrics of this song
+at MetroLyrics Buffalo Springfield Richie Furay Dewey Martin Jim Messina Stephen Stills Neil Young Bruce Palmer Studio albums Buffalo Springfield Buffalo
+Springfield Again Last Time Around Compilations and box sets Retrospective : The Best of Buffalo Springfield Buffalo Springfield ( compilation album ) Buffalo
+Springfield ( box set ) Songs `` For What It 's Worth '' `` Sit Down , I Think I Love You '' `` Mr.
+</item 9>
+
+<item 10>
+Stranger Things
+Jump up ^ Galbraith , Alex ( June 8 , 2017 ) . `` The ' Stranger Things ' Soundtrack Is Coming Out On A Cassette That Looks Like A Old VHS '' . Uproxx .
+Retrieved June 9 , 2017 . Jump up ^ Holub , Christian ( December 6 , 2016 ) . `` Stranger Things soundtracks score Grammy nods '' . Entertainment Weekly .
+Retrieved December 11 , 2016 . Jump up ^ Cantrell , Liza ( October 12 , 2017 ) . `` Listen to a New Song From the Stranger Things Season 2 Soundtrack '' . Spin
+. Retrieved October 12 , 2017 . Jump up ^ Leight , Elisa ( October 12 , 2017 ) . `` ' Stranger Things ' Previews Season Two Soundtrack With Majestic New Song ''
+. Rolling Stone . Retrieved October 12 , 2017 . Jump up ^ de Moraes , Lisa ( January 17 , 2016 ) .
+</item 10>
+=== END ITEM id=bd6e9a2df073362e ===
+
+=== ITEM id=1ae46d8f4adbac3a ===
+Gold sentences and facts:
+Sentence 0: Economy of India Mumbai , Maharashtra the financial center of India Currency Indian rupee ( INR ) ₹ 1 = 100 Paise Fiscal year 1 April -- 31 March Trade organisations WTO , WCO , WFTU , G - 20 and others Statistics GDP $2.848 trillion ( nominal ; 2018 est ) $10.385 trillion ( PPP ; 2018 est ) GDP rank 6th ( nominal ) 3rd ( PPP ) GDP growth 7.2 % ( Q3 , 2017 - 18 ) ( MOSPI ) GDP per capita $2,134 ( nominal ; 2018 est ) $7,783 ( PPP ; 2018 est ) GDP per capita rank 141st ( nominal ) 123rd ( PPP ) GDP by sector Agriculture : 17.32 % Industry : 29.02 % Services : 53.66 % ( 2016 est . ) Inflation ( CPI ) 4.28 % ( March 2018 ) Base borrowing rate 6.25 % ( as on 16 Mar. 2018 ) Population below poverty line 21.2 % 58 % live less than $3.10 / day ( 2011 ; World bank estimate ) Gini coefficient 33.9 ( 2013 ) Human Development Index 0.624 ( 2015 ) medium ( 131st ) Labour force 520.2 million ( 2017 ) Labour force by occupation Agriculture : 47 % Industry : 22 % Services : 31 % ( FY 2014 est . ) Unemployment 8.8 % ( 2017 ) Average net salary ₹ 82,269 / $1,284 annually ( 2016 - 17 ) Main industries Textiles chemicals food processing steel cement mining petroleum machinery software pharmaceuticals transportation equipment Ease - of - doing - business rank 100 ( 2017 ) External Exports $275.8 billion ( 2017 ) Export goods Agricultural products 13.2 % Fuels and mining products 15.7 % Manufacturers 68.4 % Others 2.7 % Main export partners European Union 17.6 % United States 16.1 % United Arab Emirates 11.5 % Hong Kong 5.1 % China 3.4 % Other 46.3 % Imports $384.3 billion ( 2017 ) Import goods Agricultural products 7.1 % Fuels and mining products 33.1 % Manufacturers 47.8 % Other 12 % Main import partners China 17 % European Union 11.3 % United States 5.7 % United Arab Emirates 5.4 % Saudi Arabia 5.2 % Other 55.5 % FDI stock Inward : $318.50 billion Outward : $144.13 billion ( 2016 ) Current account 0.7 % of GDP ( 2016 -- 17 ) Gross external debt $471.9 billion ( 31 March 2017 ) Net international investment position - $404.8 billion ( Sept. 2017 ) Public finances Public debt 67.7 % of GDP ( 2017 ) Revenues ₹ 35.41 trillion ( US $540 billion ) ( 2017 ) Expenses ₹ 46.25 trillion ( US $710 billion ) ( 2017 ) Economic aid $2.68 billion ( 2016 ) Credit rating Standard & Poor 's : BBB − ( Domestic ) BBB − ( Foreign ) BBB+ ( T&C Assessment ) Outlook : Stable Moody 's : Baa2 Outlook : Stable Fitch : BBB − Outlook : Stable Foreign reserves $426.082 billion ( 13 April 2018 ) ( 8th ) Main data source : CIA World Fact Book All values , unless otherwise stated , are in US dollars .
+  Fact 0.0: Mumbai, Maharashtra is the financial center of India.
+  Fact 0.1: The currency of India is the Indian rupee (INR).
+  Fact 0.2: 1 rupee equals 100 paise.
+  Fact 0.3: India's fiscal year runs from 1 April to 31 March.
+  Fact 0.4: India's trade organisations include WTO, WCO, WFTU, G-20 and others.
+  Fact 0.5: India's nominal GDP is $2.848 trillion (2018 estimate).
+  Fact 0.6: India's PPP GDP is $10.385 trillion (2018 estimate).
+  Fact 0.7: India's nominal GDP rank is 6th.
+  Fact 0.8: India's PPP GDP rank is 3rd.
+  Fact 0.9: India's GDP growth is 7.2% (Q3, 2017-18), per MOSPI.
+  Fact 0.10: India's nominal GDP per capita is $2,134 (2018 estimate).
+  Fact 0.11: India's PPP GDP per capita is $7,783 (2018 estimate).
+  Fact 0.12: India's nominal GDP per capita rank is 141st.
+  Fact 0.13: India's PPP GDP per capita rank is 123rd.
+  Fact 0.14: Agriculture makes up 17.32% of India's GDP by sector (2016 estimate).
+  Fact 0.15: Industry makes up 29.02% of India's GDP by sector (2016 estimate).
+  Fact 0.16: Services make up 53.66% of India's GDP by sector (2016 estimate).
+  Fact 0.17: India's CPI inflation is 4.28% (March 2018).
+  Fact 0.18: India's base borrowing rate is 6.25% (as on 16 March 2018).
+  Fact 0.19: 21.2% of India's population is below the poverty line.
+  Fact 0.20: 58% of India's population lives on less than $3.10 per day (2011, World Bank estimate).
+  Fact 0.21: India's Gini coefficient is 33.9 (2013).
+  Fact 0.22: India's Human Development Index is 0.624 (2015), rated medium and ranked 131st.
+  Fact 0.23: India's labour force is 520.2 million (2017).
+  Fact 0.24: Agriculture accounts for 47% of India's labour force by occupation (FY 2014 estimate).
+  Fact 0.25: Industry accounts for 22% of India's labour force by occupation (FY 2014 estimate).
+  Fact 0.26: Services account for 31% of India's labour force by occupation (FY 2014 estimate).
+  Fact 0.27: India's unemployment rate is 8.8% (2017).
+  Fact 0.28: India's average net salary is ₹82,269 or $1,284 annually (2016-17).
+  Fact 0.29: Main industries in India include textiles, chemicals, food processing, steel, cement, mining, petroleum, machinery, software, pharmaceuticals and transportation equipment.
+  Fact 0.30: India's ease-of-doing-business rank is 100 (2017).
+  Fact 0.31: India's exports are $275.8 billion (2017).
+  Fact 0.32: Agricultural products make up 13.2% of India's export goods.
+  Fact 0.33: Fuels and mining products make up 15.7% of India's export goods.
+  Fact 0.34: Manufacturers make up 68.4% of India's export goods.
+  Fact 0.35: Other export goods make up 2.7% of India's exports.
+  Fact 0.36: The European Union is 17.6% of India's main export partners.
+  Fact 0.37: The United States is 16.1% of India's main export partners.
+  Fact 0.38: The United Arab Emirates is 11.5% of India's main export partners.
+  Fact 0.39: Hong Kong is 5.1% of India's main export partners.
+  Fact 0.40: China is 3.4% of India's main export partners.
+  Fact 0.41: Other export partners make up 46.3% of India's exports.
+  Fact 0.42: India's imports are $384.3 billion (2017).
+  Fact 0.43: Agricultural products make up 7.1% of India's import goods.
+  Fact 0.44: Fuels and mining products make up 33.1% of India's import goods.
+  Fact 0.45: Manufacturers make up 47.8% of India's import goods.
+  Fact 0.46: Other import goods make up 12% of India's imports.
+  Fact 0.47: China is 17% of India's main import partners.
+  Fact 0.48: The European Union is 11.3% of India's main import partners.
+  Fact 0.49: The United States is 5.7% of India's main import partners.
+  Fact 0.50: The United Arab Emirates is 5.4% of India's main import partners.
+  Fact 0.51: Saudi Arabia is 5.2% of India's main import partners.
+  Fact 0.52: Other import partners make up 55.5% of India's imports.
+  Fact 0.53: India's inward FDI stock is $318.50 billion (2016).
+  Fact 0.54: India's outward FDI stock is $144.13 billion (2016).
+  Fact 0.55: India's current account is 0.7% of GDP (2016-17).
+  Fact 0.56: India's gross external debt is $471.9 billion (31 March 2017).
+  Fact 0.57: India's net international investment position is -$404.8 billion (Sept. 2017).
+  Fact 0.58: India's public debt is 67.7% of GDP (2017).
+  Fact 0.59: India's public revenues are ₹35.41 trillion, or US$540 billion (2017).
+  Fact 0.60: India's public expenses are ₹46.25 trillion, or US$710 billion (2017).
+  Fact 0.61: India's economic aid is $2.68 billion (2016).
+  Fact 0.62: Standard & Poor's gives India a BBB- domestic credit rating.
+  Fact 0.63: Standard & Poor's gives India a BBB- foreign credit rating.
+  Fact 0.64: Standard & Poor's gives India a BBB+ T&C assessment.
+  Fact 0.65: Standard & Poor's outlook for India is stable.
+  Fact 0.66: Moody's gives India a Baa2 rating with a stable outlook.
+  Fact 0.67: Fitch gives India a BBB- rating with a stable outlook.
+  Fact 0.68: India's foreign reserves are $426.082 billion (13 April 2018), ranked 8th.
+  Fact 0.69: The main data source for these figures is the CIA World Fact Book.
+  Fact 0.70: All values, unless otherwise stated, are in US dollars.
+Sentence 1: India has one of the fastest growing service sectors in the world with an annual growth rate above 9 % since 2001 , which contributed to 57 % of GDP in 2012 -- 13 . India has become a major exporter of IT services , Business Process Outsourcing ( BPO ) services , and software services with $154 billion revenue in FY 2017 . This is the fastest - growing part of the economy . The IT industry continues to be the largest private - sector employer in India . India is the third - largest start - up hub in the world with over 3,100 technology start - ups in 2014 -- 15 The agricultural sector is the largest employer in India 's economy but contributes to a declining share of its GDP ( 17 % in 2013 -- 14 ) . India ranks second worldwide in farm output . The industry ( manufacturing ) sector has held a steady share of its economic contribution ( 26 % of GDP in 2013 -- 14 ) . The Indian automobile industry is one of the largest in the world with an annual production of 21.48 million vehicles ( mostly two and three - wheelers ) in 2013 -- 14 . India had $600 billion worth of retail market in 2015 and one of world 's fastest growing e-commerce markets .
+  Fact 1.0: India has one of the fastest growing service sectors in the world.
+  Fact 1.1: India's service sector has grown at an annual rate above 9% since 2001.
+  Fact 1.2: India's service sector contributed 57% of GDP in 2012-13.
+  Fact 1.3: India has become a major exporter of IT services, Business Process Outsourcing (BPO) services and software services.
+  Fact 1.4: India's IT, BPO and software services exports had $154 billion in revenue in FY 2017.
+  Fact 1.5: The IT and services export part of the economy is the fastest-growing part of the economy.
+  Fact 1.6: The IT industry is the largest private-sector employer in India.
+  Fact 1.7: India is the third-largest start-up hub in the world.
+  Fact 1.8: India had over 3,100 technology start-ups in 2014-15.
+  Fact 1.9: The agricultural sector is the largest employer in India's economy.
+  Fact 1.10: Agriculture's share of India's GDP is declining, at 17% in 2013-14.
+  Fact 1.11: India ranks second worldwide in farm output.
+  Fact 1.12: The industry (manufacturing) sector has held a steady share of India's economic contribution, at 26% of GDP in 2013-14.
+  Fact 1.13: The Indian automobile industry is one of the largest in the world.
+  Fact 1.14: The Indian automobile industry produced 21.48 million vehicles in 2013-14, mostly two- and three-wheelers.
+  Fact 1.15: India had a $600 billion retail market in 2015.
+  Fact 1.16: India has one of the world's fastest growing e-commerce markets.
+Sentence 2: India ranks second worldwide in farm output . Agriculture and allied sectors like forestry , logging and fishing accounted for 17 % of the GDP and employed 49 % of its total workforce in 2014 . Agriculture accounted for 23 % of GDP , and employed 59 % of the country 's total workforce in 2016 . As the Indian economy has diversified and grown , agriculture 's contribution to GDP has steadily declined from 1951 to 2011 , yet it is still the country 's largest employment source and a significant piece of its overall socio - economic development . Crop - yield - per - unit - area of all crops has grown since 1950 , due to the special emphasis placed on agriculture in the five - year plans and steady improvements in irrigation , technology , application of modern agricultural practices and provision of agricultural credit and subsidies since the Green Revolution in India . However , international comparisons reveal the average yield in India is generally 30 % to 50 % of the highest average yield in the world . The states of Uttar Pradesh , Punjab , Haryana , Madhya Pradesh , Andhra Pradesh , Telangana , Bihar , West Bengal , Gujarat and Maharashtra are key contributors to Indian agriculture .
+  Fact 2.0: India ranks second worldwide in farm output.
+  Fact 2.1: Agriculture and allied sectors, such as forestry, logging and fishing, accounted for 17% of India's GDP in 2014.
+  Fact 2.2: Agriculture and allied sectors employed 49% of India's total workforce in 2014.
+  Fact 2.3: Agriculture accounted for 23% of India's GDP in 2016.
+  Fact 2.4: Agriculture employed 59% of India's total workforce in 2016.
+  Fact 2.5: Agriculture's contribution to India's GDP has steadily declined from 1951 to 2011.
+  Fact 2.6: Agriculture is still the country's largest employment source.
+  Fact 2.7: Agriculture is a significant piece of India's overall socio-economic development.
+  Fact 2.8: Crop yield per unit area of all crops in India has grown since 1950.
+  Fact 2.9: Crop yield growth in India is due to the special emphasis on agriculture in the five-year plans.
+  Fact 2.10: Crop yield growth in India is due to steady improvements in irrigation and technology.
+  Fact 2.11: Crop yield growth in India is due to application of modern agricultural practices.
+  Fact 2.12: Crop yield growth in India is due to provision of agricultural credit and subsidies since the Green Revolution.
+  Fact 2.13: International comparisons reveal that the average yield in India is generally 30% to 50% of the highest average yield in the world.
+  Fact 2.14: Uttar Pradesh, Punjab, Haryana, Madhya Pradesh, Andhra Pradesh, Telangana, Bihar, West Bengal, Gujarat and Maharashtra are key contributors to Indian agriculture.
+
+Retrieved items:
+<item 1>
+Agriculture’s share of India’s GDP is declining as the economy diversifies, but the sector remains the country’s broadest employer and socially significant. In
+2013, India exported $38 billion in agricultural products, ranking seventh globally as an agricultural exporter and sixth as a net exporter. Its agricultural,
+horticultural, and processed foods reach over 120 countries, mainly in the Middle East, Southeast Asia, SAARC nations, the EU, and the United States; many
+exports go to
+</item 1>
+
+<item 2>
+Agriculture in India
+The economic contribution of agriculture to India 's GDP is steadily declining with the country 's broad - based economic growth . Still , agriculture is
+demographically the broadest economic sector and plays a significant role in the overall socio - economic fabric of India . India exported $38 billion worth of
+agricultural products in 2013 , making it the seventh largest agricultural exporter worldwide and the sixth largest net exporter . Most of its agriculture
+exports serve developing and least developed nations . Indian agricultural / horticultural and processed foods are exported to more than 120 countries ,
+primarily in the Middle East , Southeast Asia , SAARC countries , the EU and the United States .
+</item 2>
+
+<item 3>
+India’s agricultural economy is changing: agriculture’s GDP share fell from 43% in 1970 to 16% in 2011, largely because services and industry grew rapidly, not
+because farming became less important. Irrigation relies most on groundwater; of 160 million cultivated hectares, wells can irrigate 39 million and canals 22
+million, while only 35% was reliably irrigated in 2010 and about two-thirds depended on monsoons. Irrigation improvements have boosted
+</item 3>
+
+<item 4>
+Economy of India
+Agriculture and allied sectors like forestry , logging and fishing accounted for 17 % of the GDP and employed 49 % of its total workforce in 2014 . Agriculture
+accounted for 23 % of GDP , and employed 59 % of the country 's total workforce in 2016 . As the Indian economy has diversified and grown , agriculture 's
+contribution to GDP has steadily declined from 1951 to 2011 , yet it is still the country 's largest employment source and a significant piece of its overall
+socio - economic development . Crop - yield - per - unit - area of all crops has grown since 1950 , due to the special emphasis placed on agriculture in the
+five - year plans and steady improvements in irrigation , technology , application of modern agricultural practices and provision of agricultural credit and
+subsidies since the Green Revolution in India . However , international comparisons reveal the average yield in India is generally 30 % to 50 % of the highest
+average yield in the world . The states of Uttar Pradesh , Punjab , Haryana , Madhya Pradesh , Andhra Pradesh , Telangana , Bihar , West Bengal , Gujarat and
+Maharashtra are key contributors to Indian agriculture .
+</item 4>
+
+<item 5>
+Agriculture in India dates to the Indus Valley era and remains vital to the economy. In 2013, agriculture and related sectors contributed 13.7% of GDP and
+employed about half the workforce; India ranked second globally in farm output. Most farms are small. Indian agriculture developed sophisticated irrigation and
+water management, influenced global trade, and introduced crops abroad. By about 500 BC, Indians had developed sugar-crystal production.
+</item 5>
+
+<item 6>
+India’s economy is commonly divided into agriculture, industry, and services, with major historical phases including British rule, 1947–1991, and post-1991
+liberalisation. Agriculture covers crops, livestock, fisheries, forestry, and related activities; India ranks second worldwide in farm output and exports
+products such as rice, spices, tea, cotton, and meat. Industry contributes 26% of GDP and employs 22% of workers; reforms since 1991 opened markets, encouraged
+foreign investment
+</item 6>
+
+<item 7>
+Agriculture is vital to India, employing about two-thirds of its people, and the country has 52% of its land under cultivation—the world’s second-largest arable
+area. Yet yields and farmer incomes remain low due to unsustainable practices, weak irrigation and extension services, poor roads and markets, and excessive
+regulation. India is the world’s largest tractor producer and market. Rapid economic growth and a young, expanding workforce coincide with urban migration of
+roughly 10 million people annually, driving major needs for
+</item 7>
+
+<item 8>
+As of 2011, agriculture was a major part of India’s economy, contributing about 16% of GDP and 10% of export earnings. India had the world’s second-largest
+arable land area and largest irrigated crop area. It ranked among the top three producers of wheat, rice, pulses, cotton, peanuts, fruits, and vegetables, and
+led the world in buffalo and cattle herds and milk production. Poultry was also a large, rapidly growing industry. Examples include Am
+</item 8>
+
+<item 9>
+Agriculture in India
+Contents ( hide ) 1 Overview 2 History 2.1 Agriculture and colonialism 2.2 Indian agriculture after independence 3 Irrigation 4 Output 4.1 Major crops and
+yields 4.2 Horticulture 4.3 Organic Agriculture 5 Problems 5.1 Infrastructure 5.2 Productivity 5.3 Farmer suicides 5.4 Diversion of agricultural land for non
+agricultural purpose 6 Initiatives 7 Maps 8 See also 9 Bibliography 10 References 11 Further reading 12 External links Overview ( edit ) Rice Paddy Fields in
+Tamil Nadu As per the 2010 FAO world agriculture statistics India is the world 's largest producer of many fresh fruits and vegetables , milk , major spices ,
+select fibrous crops such as jute , staples such as millets and castor oil seed . India is the second largest producer of wheat and rice , the world 's major
+food staples . India is the world 's second or third largest producer of several dry fruits , agriculture - based textile raw materials , roots and tuber crops
+, pulses , farmed fish , eggs , coconut , sugarcane and numerous vegetables .
+</item 9>
+
+<item 10>
+Agriculture and allied sectors contributed 17% of India’s GDP and employed 49% of its workforce in 2014; agriculture alone accounted for 23% of GDP and 59% of
+employment in 2016. Though its GDP share has declined as the economy diversified, agriculture remains the largest source of jobs and vital to development. Crop
+yields have risen since 1950 through irrigation, technology, modern practices, credit and subsidies, but average yields remain 30–50% of
+</item 10>
+=== END ITEM id=1ae46d8f4adbac3a ===
+
+=== ITEM id=c1263fbd838eb547 ===
+Gold sentences and facts:
+Sentence 0: The formation of ATP from ADP and P is energetically unfavorable and would normally proceed in the reverse direction . In order to drive this reaction forward , ATPase couples ATP synthesis during cellular respiration to an electrochemical gradient created by the difference in proton ( H ) concentration across the mitochondrial membrane in eukaryotes or the plasma membrane in bacteria . During photosynthesis in plants , ATP is synthesized by ATPase using a proton gradient created in the thylakoid lumen through the thylakoid membrane and into the chloroplast stroma .
+  Fact 0.0: The formation of ATP from ADP and P is energetically unfavorable.
+  Fact 0.1: The formation of ATP from ADP and P would normally proceed in the reverse direction.
+  Fact 0.2: ATPase couples ATP synthesis during cellular respiration to an electrochemical gradient in order to drive the reaction forward.
+  Fact 0.3: The electrochemical gradient is created by the difference in proton (H) concentration across the mitochondrial membrane in eukaryotes.
+  Fact 0.4: The electrochemical gradient is created by the difference in proton (H) concentration across the plasma membrane in bacteria.
+  Fact 0.5: During photosynthesis in plants, ATP is synthesized by ATPase using a proton gradient.
+  Fact 0.6: During photosynthesis in plants, the proton gradient is created in the thylakoid lumen through the thylakoid membrane.
+  Fact 0.7: During photosynthesis in plants, the proton gradient passes into the chloroplast stroma.
+Sentence 1: Located within the thylakoid membrane and the inner mitochondrial membrane , ATP synthase consists of two regions F and F. F causes rotation of F and is made of c - ring and subunits a , b , d , F6. F is made of α , β , γ , δ ( \ displaystyle \ alpha , \ beta , \ gamma , \ delta ) subunits . F has a water soluble par that can hydrolyze ATP . F on the other hand has mainly hydrophobic regions . F F creates a pathway for protons movement across the membrane .
+  Fact 1.0: ATP synthase is located within the thylakoid membrane and the inner mitochondrial membrane.
+  Fact 1.1: ATP synthase consists of two regions, F and F.
+  Fact 1.2: The F region causes rotation of the F region.
+  Fact 1.3: The F region is made of a c-ring and subunits a, b, d, and F6.
+  Fact 1.4: The F region is made of alpha, beta, gamma, and delta subunits.
+  Fact 1.5: The F region has a water soluble part that can hydrolyze ATP.
+  Fact 1.6: The F region has mainly hydrophobic regions.
+  Fact 1.7: The F and F regions together create a pathway for protons to move across the membrane.
+Sentence 2: The crystal structure of the F showed alternating alpha and beta subunits ( 3 of each ) , arranged like segments of an orange around a rotating asymmetrical gamma subunit . According to the current model of ATP synthesis ( known as the alternating catalytic model ) , the transmembrane potential created by ( H+ ) proton cations supplied by the electron transport chain , drives the ( H+ ) proton cations from the intermembrane space through the membrane via the F region of ATP synthase . A portion of the F ( the ring of c - subunits ) rotates as the protons pass through the membrane . The c - ring is tightly attached to the asymmetric central stalk ( consisting primarily of the gamma subunit ) , causing it to rotate within the alpha beta of F causing the 3 catalytic nucleotide binding sites to go through a series of conformational changes that leads to ATP synthesis . The major F subunits are prevented from rotating in sympathy with the central stalk rotor by a peripheral stalk that joins the alpha beta to the non-rotating portion of F. The structure of the intact ATP synthase is currently known at low - resolution from electron cryo - microscopy ( cryo - EM ) studies of the complex . The cryo - EM model of ATP synthase suggests that the peripheral stalk is a flexible structure that wraps around the complex as it joins F to F. Under the right conditions , the enzyme reaction can also be carried out in reverse , with ATP hydrolysis driving proton pumping across the membrane .
+  Fact 2.0: The crystal structure of the F region showed alternating alpha and beta subunits, three of each.
+  Fact 2.1: The alpha and beta subunits are arranged like segments of an orange around a rotating asymmetrical gamma subunit.
+  Fact 2.2: The current model of ATP synthesis is known as the alternating catalytic model.
+  Fact 2.3: In the alternating catalytic model, the transmembrane potential created by proton cations supplied by the electron transport chain drives proton cations from the intermembrane space through the membrane via the F region of ATP synthase.
+  Fact 2.4: A portion of the F region, the ring of c-subunits, rotates as protons pass through the membrane.
+  Fact 2.5: The c-ring is tightly attached to the asymmetric central stalk, which consists primarily of the gamma subunit.
+  Fact 2.6: The c-ring causes the central stalk to rotate within the alpha and beta subunits of F.
+  Fact 2.7: The rotation causes the 3 catalytic nucleotide binding sites to go through a series of conformational changes that leads to ATP synthesis.
+  Fact 2.8: The major F subunits are prevented from rotating in sympathy with the central stalk rotor by a peripheral stalk.
+  Fact 2.9: The peripheral stalk joins the alpha and beta subunits to the non-rotating portion of F.
+  Fact 2.10: The structure of the intact ATP synthase is currently known at low resolution from electron cryo-microscopy (cryo-EM) studies of the complex.
+  Fact 2.11: The cryo-EM model of ATP synthase suggests that the peripheral stalk is a flexible structure that wraps around the complex as it joins F to F.
+  Fact 2.12: Under the right conditions, the enzyme reaction can also be carried out in reverse.
+  Fact 2.13: In reverse, ATP hydrolysis drives proton pumping across the membrane.
+
+Retrieved items:
+<item 1>
+ATP synthase
+The cryo - EM model of ATP synthase suggests that the peripheral stalk is a flexible structure that wraps around the complex as it joins F to F. Under the right
+conditions , the enzyme reaction can also be carried out in reverse , with ATP hydrolysis driving proton pumping across the membrane . The binding change
+mechanism involves the active site of a β subunit 's cycling between three states . In the `` loose '' state , ADP and phosphate enter the active site ; in the
+adjacent diagram , this is shown in pink . The enzyme then undergoes a change in shape and forces these molecules together , with the active site in the
+resulting `` tight '' state ( shown in red ) binding the newly produced ATP molecule with very high affinity . Finally , the active site cycles back to the open
+state ( orange ) , releasing ATP and binding more ADP and phosphate , ready for the next cycle of ATP production . Physiological role ( edit ) Like other
+enzymes , the activity of F F ATP synthase is reversible .
+</item 1>
+
+<item 2>
+ATP synthase
+This may have evolved to carry out the reverse reaction and act as an ATP synthase . In different species ( edit ) E coli ( edit ) E. coli ATP synthase is the
+simplest known form of ATP synthase , with 8 different subunit types . Yeast ( edit ) Yeast ATP synthase is one of the best - studied eukaryotic ATP synthases ;
+and five F , eight F subunits , and seven associated proteins have been identified . Most of these proteins have homologues in other eukaryotes . Plant ( edit )
+In plants , ATP synthase is also present in chloroplasts ( CF F - ATP synthase ) . The enzyme is integrated into thylakoid membrane ; the CF - part sticks into
+stroma , where dark reactions of photosynthesis ( also called the light - independent reactions or the Calvin cycle ) and ATP synthesis take place . The overall
+structure and the catalytic mechanism of the chloroplast ATP synthase are almost the same as those of the mitochondrial enzyme . However , in chloroplasts , the
+proton motive force is generated not by respiratory electron transport chain but by primary photosynthetic proteins .
+</item 2>
+
+<item 3>
+ATP synthase
+According to the current model of ATP synthesis ( known as the alternating catalytic model ) , the transmembrane potential created by ( H+ ) proton cations
+supplied by the electron transport chain , drives the ( H+ ) proton cations from the intermembrane space through the membrane via the F region of ATP synthase .
+A portion of the F ( the ring of c - subunits ) rotates as the protons pass through the membrane . The c - ring is tightly attached to the asymmetric central
+stalk ( consisting primarily of the gamma subunit ) , causing it to rotate within the alpha beta of F causing the 3 catalytic nucleotide binding sites to go
+through a series of conformational changes that leads to ATP synthesis . The major F subunits are prevented from rotating in sympathy with the central stalk
+rotor by a peripheral stalk that joins the alpha beta to the non-rotating portion of F. The structure of the intact ATP synthase is currently known at low -
+resolution from electron cryo - microscopy ( cryo - EM ) studies of the complex .
+</item 3>
+
+<item 4>
+ATP synthase
+Chloroplast Electron transfer chain Flavoprotein Mitochondrion Oxidative phosphorylation P - ATPase Proton pump Rotating locomotion in living systems
+Transmembrane ATPase V - ATPase References ( edit ) Jump up ^ Okuno D , Iino R , Noji H ( April 2011 ) . `` Rotation and structure of FOF1 - ATP synthase '' .
+Journal of Biochemistry . 149 ( 6 ) : 655 -- 64 . doi : 10.1093 / jb / mvr049 . PMID 21524994 . Jump up ^ Junge W , Nelson N ( June 2015 ) . `` ATP synthase ''
+. Annual Review of Biochemistry . 84 : 631 -- 57 . doi : 10.1146 / annurev - biochem - 060614 - 034124 . PMID 25839341 . Jump up ^ Kagawa Y , Racker E ( May
+1966 ) . `` Partial resolution of the enzymes catalyzing oxidative phosphorylation. 8 .
+</item 4>
+
+<item 5>
+ATP synthase
+Large - enough quantities of ATP cause it to create a transmembrane proton gradient , this is used by fermenting bacteria that do not have an electron transport
+chain , but rather hydrolyze ATP to make a proton gradient , which they use to drive flagella and the transport of nutrients into the cell . In respiring
+bacteria under physiological conditions , ATP synthase , in general , runs in the opposite direction , creating ATP while using the proton motive force created
+by the electron transport chain as a source of energy . The overall process of creating energy in this fashion is termed oxidative phosphorylation . The same
+process takes place in the mitochondria , where ATP synthase is located in the inner mitochondrial membrane and the F - part projects into mitochondrial matrix
+. The consumption of ATP by ATP - synthase pumps proton cations into the matrix . Evolution ( edit ) The evolution of ATP synthase is thought to have been
+modular whereby two functionally independent subunits became associated and gained new functionality . This association appears to have occurred early in
+evolutionary history , because essentially the same structure and activity of ATP synthase enzymes are present in all kingdoms of life .
+</item 5>
+
+<item 6>
+ATP synthase
+ATP synthase - wikipedia ATP synthase Jump to : navigation , search ATP Synthase Molecular model of ATP synthase determined by X-ray crystallography . Stator is
+not shown here . Identifiers EC number 3.6. 3.14 CAS number 9000 - 83 - 3 Databases IntEnz IntEnz view BRENDA BRENDA entry ExPASy NiceZyme view KEGG KEGG entry
+MetaCyc metabolic pathway PRIAM profile PDB structures RCSB PDB PDBe PDBsum Gene Ontology AmiGO / QuickGO ( show ) Search PMC articles PubMed articles NCBI
+proteins ATP synthase is an enzyme that creates the energy storage molecule adenosine triphosphate ( ATP ) . ATP is the most commonly used `` energy currency ''
+of cells for most organisms . It is formed from adenosine diphosphate ( ADP ) and inorganic phosphate ( P ) .
+</item 6>
+
+<item 7>
+Cellular respiration
+The electrons are finally transferred to exogenous oxygen and , with the addition of two protons , water is formed . Efficiency of ATP production The table
+below describes the reactions involved when one glucose molecule is fully oxidized into carbon dioxide . It is assumed that all the reduced coenzymes are
+oxidized by the electron transport chain and used for oxidative phosphorylation . Step coenzyme yield ATP yield Source of ATP Glycolysis preparatory phase − 2
+Phosphorylation of glucose and fructose 6 - phosphate uses two ATP from the cytoplasm .
+</item 7>
+
+<item 8>
+ATP synthase
+A. 2 ) H ( F - type ) H transporting , mitochondrial : ATP5A1 ATP5B ATP5C1 ATP5C2 ATP5D ATP5E ATP5F1 ATP5G1 ATP5G2 ATP5G3 ATP5H ATP5I ATP5J ATP5J2 ATP5L ATP5L2
+ATP5O ATP5S H ( V - type ) H transporting , lysosomal : ATP6AP1 ATP6AP2 ATP6V1A ATP6V1B1 ATP6V1B2 ATP6V1C1 ATP6V1C2 ATP6V1D ATP6V1E1 ATP6V1E2 ATP6V1F ATP6V1G1
+ATP6V1G2 ATP6V1G3 ATP6V1H ATP6V0A1 ATP6V0A2 ATP6V0A4 ATP6V0B ATP6V0C ATP6V0D1 ATP6V0D2 ATP6V0E ATP6V0E1 TCIRG1 A-ATPase found in Archea P - type ATPase ( 3. A.
+</item 8>
+
+<item 9>
+ATP synthase
+Depiction of ATP synthase using the chemiosmotic proton gradient to power ATP synthesis through oxidative phosphorylation . In the 1960s through the 1970s ,
+Paul Boyer , a UCLA Professor , developed the binding change , or flip - flop , mechanism theory , which postulated that ATP synthesis is dependent on a
+conformational change in ATP synthase generated by rotation of the gamma subunit . The research group of John E. Walker , then at the MRC Laboratory of
+Molecular Biology in Cambridge , crystallized the F catalytic - domain of ATP synthase . The structure , at the time the largest asymmetric protein structure
+known , indicated that Boyer 's rotary - catalysis model was , in essence , correct . For elucidating this , Boyer and Walker shared half of the 1997 Nobel
+Prize in Chemistry . The crystal structure of the F showed alternating alpha and beta subunits ( 3 of each ) , arranged like segments of an orange around a
+rotating asymmetrical gamma subunit .
+</item 9>
+
+<item 10>
+ATP synthase
+The overall reaction catalyzed by ATP synthase is : ADP + P + H ⇌ ATP + H O + H The formation of ATP from ADP and P is energetically unfavorable and would
+normally proceed in the reverse direction . In order to drive this reaction forward , ATPase couples ATP synthesis during cellular respiration to an
+electrochemical gradient created by the difference in proton ( H ) concentration across the mitochondrial membrane in eukaryotes or the plasma membrane in
+bacteria . During photosynthesis in plants , ATP is synthesized by ATPase using a proton gradient created in the thylakoid lumen through the thylakoid membrane
+and into the chloroplast stroma . ATP synthase consists of two main subunits , F and F , which has a rotational motor mechanism allowing for ATP production .
+Because of its rotating subunit ATP Synthase is a molecular machine .
+</item 10>
+=== END ITEM id=c1263fbd838eb547 ===
+
+=== ITEM id=9dddd8595330987e ===
+Gold sentences and facts:
+Sentence 0: Windows Defender , officially called Windows Defender Antivirus in Windows 10 Creators Update , is an anti-malware component of Microsoft Windows.It was first released as a free antispyware program download for Windows XP , shipped with Windows Vista and Windows 7 and made into a full antivirus program replacing Microsoft Security Essentials as part of Windows 8 and later versions .
+  Fact 0.0: Windows Defender is an anti-malware component of Microsoft Windows.
+  Fact 0.1: Windows Defender is officially called Windows Defender Antivirus in Windows 10 Creators Update.
+  Fact 0.2: Windows Defender was first released as a free antispyware program download for Windows XP.
+  Fact 0.3: Windows Defender shipped with Windows Vista.
+  Fact 0.4: Windows Defender shipped with Windows 7.
+  Fact 0.5: Windows Defender was made into a full antivirus program as part of Windows 8 and later versions.
+  Fact 0.6: Windows Defender replaced Microsoft Security Essentials as part of Windows 8 and later versions.
+
+Retrieved items:
+<item 1>
+Windows Defender
+Security agents Security agents monitor the computer for malicious activities . Auto Start -- Monitors lists of programs that are allowed to automatically run
+when the user starts the computer System Configuration ( settings ) -- Monitors security - related settings in Windows Internet Explorer Add - ons -- Monitors
+programs that automatically run when the user starts Internet Explorer Internet Explorer Configurations ( settings ) -- Monitors browser security settings
+Internet Explorer Downloads -- Monitors files and programs that are designed to work with Internet Explorer Services and Drivers -- Monitors services and
+drivers as they interact with Windows and programs Application Execution -- Monitors when programs start and any operations they perform while running
+Application Registration -- Monitors tools and files in the operating system where programs can register to run at any time Windows Add - ons -- Monitors add -
+on programs for Windows Software Explorer The Advanced Tools section allows users to discover potential vulnerabilities with a series of Software Explorers .
+They provide views of startup programs , currently running software , network connected applications , and Winsock providers ( Winsock LSPs ) . In each Explorer
+, every element is rated as either `` Known '' , `` Unknown '' or `` Potentially Unwanted '' .
+</item 1>
+
+<item 2>
+Windows Defender
+The first and last categories carry a link to learn more about the particular item , and the second category invites users to submit the program to Microsoft
+SpyNet for analysis by community members . The Software Explorer feature has been removed from Windows Defender in Windows 7 . Notification of startup programs
+that run as an administrator Windows Defender in Windows Vista automatically blocks all startup items that require administrator privileges to run ( this is
+considered suspicious behavior for a startup item ) . This automatic blocking is related to the User Account Control functionality in Windows Vista , and
+requires users to manually run each of these startup items each time they log in if they desire the item to run at startup . User interface In Windows Vista ,
+it is possible to close the window and have the program run in the system tray while a scan is running . However , in Windows 7 , this functionality was removed
+and the window must remain open while a scan is running . Windows Defender offline ( edit ) Windows Defender Offline ( formerly known as Standalone System
+Sweeper Beta ) is a bootable standalone antimalware program that runs from a bootable disk and is designed to scan infected systems while their operating
+systems are offline .
+</item 2>
+
+<item 3>
+Windows Defender
+Initially , its `` Settings '' dialog box was replaced by dedicated page in the Settings app . In Windows 10 Creators Update , Windows Defender is renamed
+Windows Defender Antivirus to distinguish it from Windows Defender Security Center . The latter has become the default avenue to interface with Windows Defender
+. While there is no shortcut on the Start menu for Windows Defender 's native client , it can still run . Advanced features ( edit ) Windows Defender
+successfully blocks the EICAR test file Real - time protection In the Windows Defender options , the user can configure real - time protection options . Browser
+integration Integration with Internet Explorer and Microsoft Edge enables files to be scanned as they are downloaded to detect malicious software inadvertently
+downloaded . Although it does not integrate with non-Microsoft web browsers , Windows Defender scans for malicious downloaded files as part of its real - time
+protection . Windows 10 's Anniversary Update introduced Limited Periodic Scanning , which optionally allows Windows Defender to scan a system periodically if
+another antivirus app is installed . It also introduced Block at First Sight , which uses machine learning to predict whether a file is malicious . Windows
+Vista - specific functionality ( edit ) Windows Defender had additional functionality in Windows Vista which was removed in subsequent versions of Windows .
+</item 3>
+
+<item 4>
+Windows Defender
+General availability ( edit ) On October 24 , 2006 , Microsoft released Windows Defender . It supports Windows XP and Windows Server 2003 ; however , unlike the
+betas , it does not run on Windows 2000 . Conversion to antivirus ( edit ) Windows Defender was released with Windows Vista and Windows 7 , serving as their
+built - in antispyware component . In Windows Vista and Windows 7 , Windows Defender was superseded by Microsoft Security Essentials , an antivirus product from
+Microsoft which provided protection against a wider range of malware . Upon installation , Microsoft Security Essentials disabled and replaced Windows Defender
+. In Windows 8 , Microsoft upgraded Windows Defender into an antivirus program very similar to Microsoft Security Essentials for Windows 7 and using the same
+virus definition updates . MSE itself does not run on Windows versions beyond 7 . In Windows 8 and Windows 10 , Windows Defender is on by default . It switches
+itself off upon installation of a third party anti-virus package . Starting with Windows 10 , Microsoft began to transfer the control of Windows Defender out of
+its native client . Initially , its `` Settings '' dialog box was replaced by dedicated page in the Settings app .
+</item 4>
+
+<item 5>
+Windows Defender
+The same update introduced a new flat logo . History ( edit ) Beta ( edit ) Microsoft AntiSpyware Beta 1 ( Version 1.0. 701 ) Windows Defender is based on GIANT
+AntiSpyware , which was originally developed by GIANT Company Software , Inc . The company 's acquisition was announced by Microsoft on December 16 , 2004 .
+While the original GIANT AntiSpyware supported older Windows versions , support for the Windows 9x line of operating systems was later dropped . The first beta
+version of Microsoft AntiSpyware was released on January 6 , 2005 and was basically a repackaged GIANT AntiSpyware . More builds were released in 2005 , with
+the last Beta 1 refresh released on November 21 , 2005 . At the 2005 RSA Security conference , Chief Software Architect and co-founder of Microsoft , Bill Gates
+, announced that Windows Defender ( which was known as Microsoft AntiSpyware prior to November 4 , 2005 ) would be made available free of charge to all validly
+licensed Windows 2000 , Windows XP , and Windows Server 2003 users to help secure their systems against the increasing malware threat .
+</item 5>
+
+<item 6>
+Windows Defender
+Contents ( hide ) 1 Basic features 2 History 2.1 Beta 2.2 General availability 2.3 Conversion to antivirus 3 Advanced features 4 Windows Vista - specific
+functionality 5 Windows Defender Offline 6 Mitigated security vulnerability 7 See also 8 References 9 External links Basic features ( edit ) Before Windows 8 ,
+Windows Defender protected against spyware . It included a number of real - time security agents that monitored several common areas of Windows for changes
+which might have been caused by spyware . It also included the ability to easily remove installed ActiveX software. Windows Defender featured integrated support
+for Microsoft SpyNet that allows users to report to Microsoft what they consider to be spyware , and what applications and device drivers they allow to be
+installed on their system . Protection against viruses was added in Windows 8 ; Windows Defender in Windows 8 resembles Microsoft Security Essentials ( MSE )
+and uses the same virus definitions . In Windows 10 , Windows Defender settings are controlled by the Settings app , and the Settings button opens the Settings
+app . In the Windows 10 Anniversary Update , toast notifications appear to announce the results of a scan , even if no viruses are found .
+</item 6>
+
+<item 7>
+Windows Defender
+Windows Defender - wikipedia Windows Defender Jump to : navigation , search Not to be confused with Windows Defender Security Center . This article needs
+additional citations for verification . Please help improve this article by adding citations to reliable sources . Unsourced material may be challenged and
+removed . ( July 2009 ) ( Learn how and when to remove this template message ) Windows Defender A component of Microsoft Windows Windows Defender Antivirus , as
+appears in the Windows 10 Creators Update Details Type Antivirus software on Windows 8 and later ; formerly spyware removal software Included with Windows Vista
+and later , Windows Server 2016 Also available for Windows XP and Windows Server 2003 Support status Same as the version of Windows with which it is integrated
+Related components Microsoft Security Essentials Windows Defender Security Center Windows Defender , officially called Windows Defender Antivirus in Windows 10
+Creators Update , is an anti-malware component of Microsoft Windows.It was first released as a free antispyware program download for Windows XP , shipped with
+Windows Vista and Windows 7 and made into a full antivirus program replacing Microsoft Security Essentials as part of Windows 8 and later versions .
+</item 7>
+
+<item 8>
+Windows Defender
+Since Windows 10 Anniversary Update , offline functionality is integrated into the regular Windows Defender program . Mitigated Security vulnerability ( edit )
+On 5 May 2017 , Tavis Ormandy , a vulnerability researcher for Google , discovered a security vulnerability in the JavaScript analysis module ( NScript ) of
+Microsoft Antimalware Engine ( MsMpEngine ) that impacted Windows Defender , Microsoft Security Essentials and System Center Endpoint Protection . By 8 May 2017
+, Microsoft had released a patch to all affected systems . Ars Technica commended Microsoft for its unprecedented patching speed and said that the disaster had
+been averted . See also ( edit ) Security and safety features new to Windows Vista References ( edit ) Jump up ^ `` Windows Defender '' . Download Center .
+Microsoft . 23 May 2007 . Archived from the original on 29 April 2012 . ^ Jump up to : `` What is Windows Defender ? '' . Computer Hope . Retrieved 31 December
+2017 . Jump up ^ Shultz , Greg . `` Windows Defender : Past , present , and future '' . Retrieved 13 June 2017 .
+</item 8>
+
+<item 9>
+Windows Defender
+wikipedia.org/w/index.php?title=Windows_Defender&oldid=818651625 '' Categories : Microsoft software Microsoft Windows security technology Windows - only
+freeware Spyware removal Windows components 2006 software Windows security software Hidden categories : CS1 German - language sources ( de ) CS1 Japanese -
+language sources ( ja ) Articles needing additional references from July 2009 All articles needing additional references Talk Search Contents About Wikipedia
+Čeština Dansk Deutsch Ελληνικά Español فارسی Français 한국어 Bahasa Indonesia Italiano עברית Bahasa Melayu Nederlands 日本 語 Norsk Polski Português Română Русский
+සිංහල Simple English Suomi Svenska Tagalog தமிழ் ไทย Türkçe Українська Tiếng Việt 中文 Edit links This page was last edited on 4 January 2018 , at 20 : 09 . Text
+is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply .
+</item 9>
+
+<item 10>
+Windows Defender
+Windows Defender ( Beta 2 ) was released on February 13 , 2006 . It featured the program 's new name and a significant user interface redesign . The core engine
+was rewritten in C++ , unlike the original GIANT - developed one , which was written in Visual Basic . This improved the application 's performance . Also ,
+since beta 2 , the program works as a Windows service , unlike earlier releases , which enables the application to protect the computer even when a user is not
+logged on . Beta 2 also requires Windows Genuine Advantage validation . However , Windows Defender ( Beta 2 ) did not contain some of the tools found in
+Microsoft AntiSpyware ( Beta 1 ) ; Microsoft removed the System Inoculation , Secure Shredder and System Explorer tools found in MSAS ( Beta 1 ) as well as the
+Tracks Eraser tool , which allowed users to easily delete many different types of temporary files related to Internet Explorer 6 , including HTTP cookies , web
+cache , and Windows Media Player playback history . Microsoft later released German and Japanese versions of Windows Defender ( Beta 2 ) . General availability
+( edit ) On October 24 , 2006 , Microsoft released Windows Defender .
+</item 10>
+=== END ITEM id=9dddd8595330987e ===

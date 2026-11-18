@@ -1,0 +1,834 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=fa0e8aa7b06174f1 ===
+Gold sentences and facts:
+Sentence 0: Reading Full name Reading Football Club Nickname ( s ) The Royals Founded 1871 ; 147 years ago ( 1871 ) Ground Madejski Stadium Ground Capacity 24,161 Owner Dai Yongge and Dai Xiuli ( majority ) Chairman Sir John Madejski Manager Jaap Stam League Championship 2016 -- 17 Championship , 3rd Website Club website Home colours Away colours Current season
+  Fact 0.0: The full name of the club is Reading Football Club.
+  Fact 0.1: The club's nickname is The Royals.
+  Fact 0.2: Reading was founded in 1871.
+  Fact 0.3: Reading was founded 147 years ago.
+  Fact 0.4: Reading's ground is Madejski Stadium, with a ground capacity of 24,161.
+  Fact 0.5: Reading's owners are Dai Yongge and Dai Xiuli (majority).
+  Fact 0.6: Reading's chairman is Sir John Madejski.
+  Fact 0.7: Reading's manager is Jaap Stam.
+  Fact 0.8: Reading competed in the Championship in the 2016-17 season, finishing 3rd.
+  Fact 0.9: Reading's website is listed as the club website.
+Sentence 1: Reading Football Club ownership structure : 75 % Owned by Renhe Sports Management Ltd , 100 % owned by Xiu Li Dai and Yongge Dai . 25 % Owned by Narin Niruttinanon
+  Fact 1.0: Reading Football Club's ownership structure is 75% owned by Renhe Sports Management Ltd.
+  Fact 1.1: Renhe Sports Management Ltd is 100% owned by Xiu Li Dai and Yongge Dai.
+  Fact 1.2: 25% of Reading Football Club is owned by Narin Niruttinanon.
+
+Retrieved items:
+<item 1>
+Reading F.C.
+On 24 May 2007 , it was announced that planning permission had been granted to extend the stadium to a capacity of 36,900 . Reading have made plans for a new
+training ground at Bearwood Golf Club to replace Hogwood park their current training facility . On 5 July 2016 , at the end of Eamonn Dolan 's funeral , Reading
+announced that the North Stand would be renamed the `` Eamonn Dolan Stand '' . Support ( edit ) See also : Supporters ' Trust at Reading Supporters at a Reading
+match at Elm Park in 1913 In 2001 , Reading became the first football club to register their fans as an official member of their squad , giving the `` player ''
+registered with squad number 13 as ' Reading Fans ' . Rivalries ( edit ) Before going out of business in 1992 , Aldershot were Reading 's biggest rivals . There
+was a strong rift between the two sets of fans , with fighting between fans occurring on several occasions . Strong feelings remain between fans of Reading and
+fans of Aldershot Town , the refounded club in Aldershot .
+</item 1>
+
+<item 2>
+Reading F.C.
+. Official website Supporters ' Trust At Reading Reading F.C. on BBC Sport : Club news -- Recent results -- Upcoming fixtures Reading Football Club Current
+season Under - 21s & Academy Records & Statistics Honours History History Seasons Thames Valley Royals proposal Grounds Elm Park ( 1896 -- 1998 ) Madejski
+Stadium ( 1998 -- present ) People Managers Players with 1 -- 24 appearances 25 -- 99 appearances 100 + appearances Internationals Player of the Season Notable
+matches Level 2 play - off finals 1995 2011 2017 Level 3 play - off finals Full Members ' Cup finals 1988 Other matches Portsmouth 7 -- 4 Reading Related
+articles Hob Nob Anyone ? Supporters ' Trust At Reading Reading Women Marussia F1 Book : Reading F.C. Category : Reading F.C. Portal : Association football
+Commons : Reading F.C. Reading F.C. seasons 1940 -- 41 1941 -- 42 1942 -- 43 1943 -- 44 1944 -- 45 1945 -- 46 1946 -- 47 1947 -- 48 1948 -- 49
+</item 2>
+
+<item 3>
+Graph query row:
+club: Reading Football Club
+owner: Dai Yongge
+relationship: RELATED_TO
+role: majority owner
+relation: None
+relationship_detail: None
+fact: None
+context: None
+</item 3>
+
+<item 4>
+Reading F.C.
+Reading were promoted to English football 's top division for the first time in their history . The 2006 -- 07 season saw Reading make their first appearance in
+the top flight of English football . Reading defied pre-season predictions of relegation to finish the season in eighth place with 55 points . Reading turned
+down the chance to play in the UEFA Intertoto Cup . In the run up to their second season in the Premier League , Reading took part in the 2007 Peace Cup in
+South Korea . This second season was less successful , however , and Reading were relegated back to the Championship . Reading started the 2008 -- 09 season
+with a 15 match unbeaten home run . They finished fourth and qualify for the play - offs , where they lost to Burnley in the semi-final . Manager Steve Coppell
+resigned just hours after the game , replaced by Brendan Rodgers . Rodgers left the club by mutual consent on 16 December 2009 and Brian McDermott made
+caretaker manager the same day .
+</item 4>
+
+<item 5>
+Reading F.C.
+internationals Former players ( edit ) Main article : List of Reading F.C. players Club officials ( edit ) Board of Directors & Senior Club Staff Chief
+Executive : Ron Gourlay Commercial Director : Adam Benson Club Secretary : Sue Hewett Financial Controller : Bryan Stabler Directors : Sir John Madejski ( Co
+Chairman ) , Sasima Srivikorn ( Co Chairwoman ) , Nigel Howe , Narin Niruttinanon , Sumrith Thanakarnjanasuth , Taweesuk Srisumrid and Theekharoj Piamphongsarn
+Management team Director of Football : Brian Tevreden First Team Manager : Jaap Stam Assistant Manager : Andries Ulderink & Said Bakkati First Team Coach :
+Michael Gilkes Goalkeeping Coach : Dave Beasant First Team Sports Scientist : Tristan Baker First Team Physio : Jon Urwin Academy Manager : Lee Herron Assistant
+Academy Manager : David Dodds Academy Loan Manager : Mikele Leigertwood Kit Manager : Stewart Bannister First Team Head Scout : Steve Shorey Masseur : Dan
+Buchanan Managers ( edit ) Main article : List of Reading F.C.
+</item 5>
+
+<item 6>
+Reading F.C.
+Reading then finished eighth in the 2006 -- 07 Premier League , their first ever season as a top flight club . Contents ( hide ) 1 History 2 Crest and colours 3
+Stadium 4 Support 4.1 Rivalries 5 Sponsorship 5.1 Additional kit sponsors 6 Ownership and finances 7 Players 7.1 First - team squad 7.2 Under - 23 squad 7.3
+Under - 18 squad 7.4 Out on loan 8 Records and statistics 8.1 Notable players 8.2 Player of the season 8.3 International players 8.4 Former players 9 Club
+officials 10 Managers 11 Women 's team 12 Honours 12.1 Managerial 13 Affiliated clubs 14 References 15 Bibliography 16 External links History ( edit ) Main
+article : History of Reading F.C. See also : Thames Valley Royals proposal Reading were formed on 25 December 1871 , following a public meeting at the Bridge
+Street Rooms organised by the future club secretary Joseph Edward Sydenham .
+</item 6>
+
+<item 7>
+Reading F.C.
+25 % Owned by Narin Niruttinanon Reading F.C. Directors : Xiu Li Dai , Yongge Dai , Ronald Gourlay , Narin Niruttinanon , Nigel Howe Players ( edit ) As of 8
+January 2018 First - team squad ( edit ) Note : Flags indicate national team as defined under FIFA eligibility rules . Players may hold more than one non-FIFA
+nationality . No . Position Player GK Vito Mannone DF Chris Gunter MF Joey van den Berg 5 DF Paul McShane ( captain ) 6 DF Liam Moore 7 MF Roy Beerens 8 MF
+George Evans 9 FW Joseph Mendes 10 MF John Swift 11 DF Jordan Obita 12 MF Garath McCleary 14 FW Sone Aluko 15 MF Callum Harriott 16 MF David Edwards 17 FW Modou
+Barrow 18 FW Yann Kermorgant 19 MF Leandro Bacuna No .
+</item 7>
+
+<item 8>
+Reading F.C.
+Reading FC - Wikipedia Reading FC Jump to : navigation , search Not to be confused with Reading F.C. Women . Reading Full name Reading Football Club Nickname (
+s ) The Royals Founded 1871 ; 147 years ago ( 1871 ) Ground Madejski Stadium Ground Capacity 24,161 Owner Dai Yongge and Dai Xiuli ( majority ) Chairman Sir
+John Madejski Manager Jaap Stam League Championship 2016 -- 17 Championship , 3rd Website Club website Home colours Away colours Current season Reading Football
+Club ( / ˈrɛdɪŋ / ( listen ) RED - ing ) is a professional association football club based in Reading , Berkshire , England . The team play in the Championship
+, the second tier of English football . Reading are nicknamed The Royals , due to Reading 's location in the Royal County of Berkshire , though they were
+previously known as The Biscuitmen , due to the town 's association with Huntley and Palmers .
+</item 8>
+
+<item 9>
+Graph query row:
+club: Reading Football Club
+owner: Dai Xiuli
+relationship: RELATED_TO
+role: majority owner
+relation: None
+relationship_detail: None
+fact: None
+context: None
+</item 9>
+
+<item 10>
+Reading F.C.
+Retrieved on 17 July 2013 . Jump up ^ HOW SOUTH GEORGIA UNITED BECAME A READING FC AFFILIATE CLUB . South Georgia United . Retrieved on 5 June 2014 .
+Bibliography ( edit ) Digby , Bob ( 2001 ) . It 's a World Thing . Oxford , Oxfordshire : Oxford University Press . ISBN 978 - 0 - 19 - 913428 - 1 . Retrieved 2
+June 2011 . Yeo , Stephen ( 1976 ) . Religion and Voluntary Organisations in Crisis . Abingdon , Oxfordshire : Taylor & Francis . ISBN 978 - 0 - 85664 - 017 - 9
+. Retrieved 1 June 2011 . External links ( edit ) Wikimedia Commons has media related to Reading F.C. . Official website Supporters ' Trust At Reading Reading
+F.C.
+</item 10>
+=== END ITEM id=fa0e8aa7b06174f1 ===
+
+=== ITEM id=a38566a54d0c5ce2 ===
+Gold sentences and facts:
+Sentence 0: Year Film Role Notes Dumb and Dumber State Trooper Down Periscope E.T. `` Sonar '' Lovacelli RocketMan Fred Z . Randall Wag the Dog Pet Wrangler Space Ghost Coast to Coast Himself 1 episode 1998 Half Baked Kenny Davis There 's Something About Mary Hitchhiker ( uncredited ) Dog Park Callum Ned 's Newt Newton ( voice ) Mr. Headmistress Tucker 1999 Superstar Slater 2000 The Whole Nine Yards Special Agent Steve Hanson Big Money Hustlas Officer Harry Cox Becoming Dick Richard Breggs Freddy Got Fingered Darren Gary & Mike Mike Bonner ( voice ) 2002 Back by Midnight Sheriff Hubbard Sorority Boys Doofer / Roberta 2003 Family Tree Jake Kart Racer Zee 2005 Lucky 13 Bleckman Because of Winn - Dixie Policeman Robots Lugnut ( voice ) 2006 Employee of the Month Russell Porpis - Gunders Surf School Rip Ergo Proxy Head Dog Cop ( voice ) 1 episode 2007 Meet the Robinsons Carl ( voice ) The Dukes of Hazzard : The Beginning Sheriff Rosco P. Coltrane 2008 Bachelor Party 2 : The Last Temptation Derek Madagascar : Escape 2 Africa Giraffe ( voice ) 2009 Fudgy Wudgy Fudge Face Elmore P. Fudge My Life in Ruins Big Al Sawchuck 2009 The Haunted World of El Superbeasto Gerard the Exterminator ( voice ) 2011 Spooky Buddies Warwick the Warlock Lloyd the Conqueror Vulcan Dahmer Vs. Gacy God Dan Vs . Hiram Episode : Technology Robot Chicken Professor Cornelius Q. Quibblefingers ( voice ) 1 episode ; also writes 4 episodes 2012 The High Fructose Adventures of Annoying Orange Apple ( voice ) Robot and Monster Monster ( voice ) Main Role 2014 Back in the Day Skunk 2015 Jake and the Never Land Pirates Captain Frost ( voice ) Penn Zero : Part - Time Hero Helper Hue ( voice ) 2016 Sausage Party Ketchup Bottle / Drug Dealer / Baba Ganoush ( voice ) Skylanders Academy Hugo ( voice ) 2017 - present Puppy Dog Pals Bob ( voice ) Also show creator
+  Fact 0.0: The listed performer had the role State Trooper in Dumb and Dumber.
+  Fact 0.1: The listed performer appeared in Down Periscope, with no role given.
+  Fact 0.2: The listed performer had the role 'Sonar' Lovacelli in E.T.
+  Fact 0.3: The listed performer had the role Fred Z. Randall in RocketMan.
+  Fact 0.4: The listed performer had the role Pet Wrangler in Wag the Dog.
+  Fact 0.5: The listed performer had the role Himself in Space Ghost Coast to Coast, for 1 episode.
+  Fact 0.6: In 1998, the listed performer had the role Kenny Davis in Half Baked.
+  Fact 0.7: In 1998, the listed performer had the role Hitchhiker, uncredited, in There's Something About Mary.
+  Fact 0.8: In 1998, the listed performer had the role Callum in Dog Park.
+  Fact 0.9: In 1998, the listed performer had the role Newton, a voice role, in Ned's Newt.
+  Fact 0.10: In 1998, the listed performer had the role Tucker in Mr. Headmistress.
+  Fact 0.11: In 1999, the listed performer had the role Slater in Superstar.
+  Fact 0.12: In 2000, the listed performer had the role Special Agent Steve Hanson in The Whole Nine Yards.
+  Fact 0.13: In 2000, the listed performer had the role Officer Harry Cox in Big Money Hustlas.
+  Fact 0.14: In 2000, the listed performer had the role Richard Breggs in Becoming Dick.
+  Fact 0.15: In 2000, the listed performer had the role Darren in Freddy Got Fingered.
+  Fact 0.16: In 2000, the listed performer had the role Mike Bonner, a voice role, in Gary & Mike.
+  Fact 0.17: In 2002, the listed performer had the role Sheriff Hubbard in Back by Midnight.
+  Fact 0.18: In 2002, the listed performer had the role Doofer / Roberta in Sorority Boys.
+  Fact 0.19: In 2003, the listed performer had the role Jake in Family Tree.
+  Fact 0.20: In 2003, the listed performer had the role Zee in Kart Racer.
+  Fact 0.21: In 2005, the listed performer had the role Bleckman in Lucky 13.
+  Fact 0.22: In 2005, the listed performer had the role Policeman in Because of Winn-Dixie.
+  Fact 0.23: In 2005, the listed performer had the role Lugnut, a voice role, in Robots.
+  Fact 0.24: In 2006, the listed performer had the role Russell Porpis-Gunders in Employee of the Month.
+  Fact 0.25: In 2006, the listed performer had the role Rip in Surf School.
+  Fact 0.26: In 2006, the listed performer had the role Head Dog Cop, a voice role, for 1 episode, in Ergo Proxy.
+  Fact 0.27: In 2007, the listed performer had the role Carl, a voice role, in Meet the Robinsons.
+  Fact 0.28: In 2007, the listed performer had the role Sheriff Rosco P. Coltrane in The Dukes of Hazzard: The Beginning.
+  Fact 0.29: In 2008, the listed performer had the role Derek in Bachelor Party 2: The Last Temptation.
+  Fact 0.30: In 2008, the listed performer had the role Giraffe, a voice role, in Madagascar: Escape 2 Africa.
+  Fact 0.31: In 2009, the listed performer had the role Fudge Face Elmore P. Fudge in Fudgy Wudgy.
+  Fact 0.32: In 2009, the listed performer had the role Big Al Sawchuck in My Life in Ruins.
+  Fact 0.33: In 2009, the listed performer had the role Gerard the Exterminator, a voice role, in The Haunted World of El Superbeasto.
+  Fact 0.34: In 2011, the listed performer had the role Warwick the Warlock, Lloyd the Conqueror, and Vulcan in Spooky Buddies.
+  Fact 0.35: In 2011, the listed performer had the role God in Dahmer Vs. Gacy.
+  Fact 0.36: In 2011, the listed performer had the role Robot in Dan Vs. Hiram, Episode: Technology.
+  Fact 0.37: In 2011, the listed performer had the role Professor Cornelius Q. Quibblefingers, a voice role, for 1 episode, in Robot Chicken.
+  Fact 0.38: The listed performer also wrote 4 episodes of Robot Chicken.
+  Fact 0.39: In 2012, the listed performer had the role Apple, a voice role, in The High Fructose Adventures of Annoying Orange.
+  Fact 0.40: In 2012, the listed performer had the role Monster, a voice role and a main role, in Robot and Monster.
+  Fact 0.41: In 2014, the listed performer had the role Skunk in Back in the Day.
+  Fact 0.42: In 2015, the listed performer had the role Captain Frost, a voice role, in Jake and the Never Land Pirates.
+  Fact 0.43: In 2015, the listed performer had the role Helper Hue, a voice role, in Penn Zero: Part-Time Hero.
+  Fact 0.44: In 2016, the listed performer had the role Ketchup Bottle / Drug Dealer / Baba Ganoush, a voice role, in Sausage Party.
+  Fact 0.45: In 2016, the listed performer had the role Hugo, a voice role, in Skylanders Academy.
+  Fact 0.46: From 2017 to the present, the listed performer had the role Bob, a voice role, in Puppy Dog Pals.
+  Fact 0.47: The listed performer is also the creator of Puppy Dog Pals.
+
+Retrieved items:
+<item 1>
+Harland Williams
+Williams created the Disney Junior series Puppy Dog Pals that debuted in 2017 . Filmography ( edit ) Year Film Role Notes Dumb and Dumber State Trooper Down
+Periscope E.T. `` Sonar '' Lovacelli RocketMan Fred Z . Randall Wag the Dog Pet Wrangler Space Ghost Coast to Coast Himself 1 episode 1998 Half Baked Kenny
+Davis There 's Something About Mary Hitchhiker ( uncredited ) Dog Park Callum Ned 's Newt Newton ( voice ) Mr.
+</item 1>
+
+<item 2>
+Graph query row:
+person: Harland Williams
+work: Dumb and Dumber
+relationship: RELATED_TO
+role: State Trooper
+</item 2>
+
+<item 3>
+California Highway Patrol
+Peyer declined to provide a sample , nor explain why he declined to do so . Media references ( edit ) CHiPs was a fictional television drama show ( 1977 - 1983
+) about the CHP , and the CHP helped out in the 1955 TV show Highway Patrol starring Broderick Crawford . Also the CHiPs TV series was made into a modern
+television film called CHiPs ' 99 . A comical motion picture version of the show has been released in 2017 ( CHiPS ) but it has not been endorsed by the CHP at
+all . Former CHP Commissioner Maury Hannigan was the host of the syndicated TV series Real Stories of the Highway Patrol , which aired in the mid-to - late
+1990s . The show featured not just the CHP , but also the Minnesota State Patrol , the Nevada Highway Patrol , the Alaska State Troopers , the South Dakota
+Highway Patrol , the Rhode Island State Police , the Massachusetts State Police , the West Virginia State Police and many other state police and highway patrol
+agencies in the United State of America , and in one episode , the Royal Newfoundland Constabulary .
+</item 3>
+
+<item 4>
+Harland Williams
+Headmistress Tucker 1999 Superstar Slater 2000 The Whole Nine Yards Special Agent Steve Hanson Big Money Hustlas Officer Harry Cox Becoming Dick Richard Breggs
+Freddy Got Fingered Darren Gary & Mike Mike Bonner ( voice ) 2002 Back by Midnight Sheriff Hubbard Sorority Boys Doofer / Roberta 2003 Family Tree Jake Kart
+Racer Zee 2005 Lucky 13 Bleckman Because of Winn - Dixie Policeman Robots Lugnut ( voice ) 2006 Employee of the Month Russell Porpis - Gunders Surf School Rip
+Ergo Proxy Head Dog Cop ( voice ) 1 episode 2007 Meet the Robinsons Carl ( voice ) The Dukes of Hazzard : The Beginning Sheriff Rosco P. Coltrane 2008 Bachelor
+Party 2 : The Last Temptation Derek Madagascar : Escape 2 Africa Giraffe ( voice ) 2009 Fudgy Wudgy Fudge Face Elmore P.
+</item 4>
+
+<item 5>
+The Dukes of Hazzard (film)
+Gainey as Sheriff Rosco P. Coltrane Michael Weston as Deputy Enos Strate Lynda Carter as Pauline James Roday as Billy Prickett Kevin Heffernan as Derek `` Sheev
+'' Sheevington Nikki Griffin as Katie - Lynn Johnson Jacqui Maxwell as Annette Alice Greczyn as Laurie Pullman Junior Brown as The Balladeer ( narrator ) Joe
+Don Baker as Governor Jim Applewhite Barry Corbin as Bill Pullman Andrew Prine as Angry Man Randy Orton as Bo Duke ( Stunt double ) Cameos ( edit ) All five
+members of the comedy film troupe Broken Lizard make appearances in the film , classified as cameos , except for Kevin Heffernan , who had a larger speaking
+role ( Sheev ) . Broken Lizard cameos Steve Lemme appears as Jimmy Pullman , the son of Bill Pullman , in an early car chase scene in which he accidentally
+shoots the inside of his father 's truck . Jay Chandrasekhar and Erik Stolhanske reprise their roles as Ramathorn and Rabbit from the Broken Lizard comedy ,
+Super Troopers .
+</item 5>
+
+<item 6>
+The Dukes of Hazzard (film)
+The characters are now campus security officers , who give a warning to the Duke boys for driving too slowly . Paul Soter appears as TV newsman Rick Shakely ,
+who is reporting from the Hazzard Road Rally . Charlie Finn , who played a dimwitted fast - food employee in Super Troopers , appears as a dimwitted geology
+student who assists the Duke boys with the coal samples . Other notable cameos During the bar - fight scene , Indy - car driver A.J. Foyt IV appears as himself
+. Bloopers roll under the ending credits , one of which features Rip Taylor interrupting the bedroom scene with Luke and the two college girls . Taylor had
+previously appeared with Knoxville in Jackass : The Movie . Production ( edit ) Stunts ( edit ) Knoxville said he was initially reluctant to take on the role ,
+but was persuaded by script changes and the presence of Dan Bradley as stunt coordinator and second unit for the car chase scenes . Knoxville praised him ,
+saying , `` everyone in Hollywood wants Dan Bradley to shoot their car stuff '' . Locations ( edit ) The majority of the film was shot in and around Clinton ,
+Louisiana .
+</item 6>
+
+<item 7>
+Harland Williams
+Finding a creative outlet in poetry and painting while working as a forest ranger for five years after dropping out of Sheridan College , Williams set his goals
+to leave the forest as a stand - up comic and actor , soon moving to Los Angeles to pursue his newfound calling . Williams is cousin to Barenaked Ladies
+keyboardist Kevin Hearn , and together they have a hobby band called The Cousins . Career ( edit ) Williams is known for his movie roles , which include Dumb
+and Dumber , Freddy Got Fingered , There 's Something About Mary , Half Baked , RocketMan , Sorority Boys , Down Periscope , and Employee of The Month .
+Williams starred as the security guard in the music video for the 2001 Barenaked Ladies song `` Falling for the First Time '' . He has performed his stand - up
+comedy routines on Late Night with David Letterman , The Tonight Show with Jay Leno , Late Night with Conan O'Brien , HBO , Comedy Central and at comedy clubs
+throughout the country . His improvisational skills led to him winning the award for ' Best Improviser ' on an episode of NBC 's prime time series Thank God You
+'re Here in 2007 .
+</item 7>
+
+<item 8>
+The Dukes of Hazzard (film)
+The cousins ' primary mode of transportation is an orange 1969 Dodge Charger that the boys affectionately refer to as the `` General Lee '' . Along the way ,
+the family is tormented by corrupt Hazzard County Commissioner Jefferson Davis Hogg , widely known as `` Boss Hogg '' ( Burt Reynolds ) , and his willing but
+dimwitted henchman , Sheriff Rosco P. Coltrane ( M.C. Gainey ) . After Rosco has the General Lee impounded after Bo and Luke 's attempt to run away from a
+daughter of one their many moonshine customers , Billy Prickett ( James Roday ) , a famous stock - car driver , enters Hazzard to participate in the rally .
+Meanwhile , Rosco plants a fake moonshine still ( `` ' cause he 's too dumb to find the real one '' ) in Uncle Jesse 's barn and seizes the Duke property in the
+interest of eminent domain for Boss Hogg , forcing the family to temporarily reside with neighbor and Uncle Jesse 's love - interest , Pauline ( Lynda Carter )
+.
+</item 8>
+
+<item 9>
+California Highway Patrol
+They spotted the car , fell in behind , called for backup , and began the stop procedure . When the suspects ' vehicle came to a halt in the parking lot , the
+driver was instructed to step out of the vehicle and spread his hands on the hood . Gore approached him and Frago moved to the passenger side . The passenger
+side door suddenly swung open and the passenger sprung out , firing at Frago , who fell with two shots in his chest . The gunman , later identified as Jack
+Twinning , then turned and fired once at Gore , who returned fire . In that moment the driver , Bobby Davis , turned and shot Gore twice at close range . Both
+officers died instantly . When Officers James Pence and George Alleyn drove in moments later , they could not see suspects or other officers , but both
+immediately came under fire . Pence put out an 11 ‐ 99 call ( `` officer down '' ) then took cover behind the passenger door . Alleyn grabbed his shotgun , and
+positioned himself behind the driver - side door . Both officers were mortally wounded in the ensuing exchange , and one suspect was hit .
+</item 9>
+
+<item 10>
+The Dukes of Hazzard (film)
+They are later arrested by Atlanta Police after running from campus police . Back in Hazzard , Daisy learns , with the help of Sheriff 's Deputy Enos Strate (
+Michael Weston ) , that Billy Prickett has been hired by Boss Hogg to participate in the rally as a ringer . Boss Hogg then heads to Atlanta , where he informs
+the Duke boys , in lock - up , that they are too late to stop him and reveals that the vote on Hogg 's proposition is at the same time as the rally , explaining
+Billy Prickett 's involvement . During a transfer from detainment , Daisy helps the boys escape from the patrol car , and they speed home to try to inform the
+townsfolk , escaping Atlanta Police , and the Georgia State Patrol after Bo outmaneuvers the city cops . Upon returning home , the Dukes discover that Boss Hogg
+and Rosco had taken Uncle Jesse and Pauline hostage , an obvious trap for the boys , and that Billy is in on the scheme because he is ashamed of the town 's low
+status .
+</item 10>
+=== END ITEM id=a38566a54d0c5ce2 ===
+
+=== ITEM id=571f841bef2ea8ec ===
+Gold sentences and facts:
+Sentence 0: On the Origin of Species ( or more completely , On the Origin of Species by Means of Natural Selection , or the Preservation of Favoured Races in the Struggle for Life ) , published on 24 November 1859 , is a work of scientific literature by Charles Darwin which is considered to be the foundation of evolutionary biology . Darwin 's book introduced the scientific theory that populations evolve over the course of generations through a process of natural selection . It presented a body of evidence that the diversity of life arose by common descent through a branching pattern of evolution . Darwin included evidence that he had gathered on the Beagle expedition in the 1830s and his subsequent findings from research , correspondence , and experimentation .
+  Fact 0.0: The full title of On the Origin of Species is On the Origin of Species by Means of Natural Selection, or the Preservation of Favoured Races in the Struggle for Life.
+  Fact 0.1: On the Origin of Species was published on 24 November 1859.
+  Fact 0.2: On the Origin of Species is a work of scientific literature by Charles Darwin.
+  Fact 0.3: On the Origin of Species is considered to be the foundation of evolutionary biology.
+  Fact 0.4: Charles Darwin's book On the Origin of Species introduced the scientific theory that populations evolve over the course of generations.
+  Fact 0.5: The scientific theory in On the Origin of Species holds that populations evolve through a process of natural selection.
+  Fact 0.6: On the Origin of Species presented a body of evidence.
+  Fact 0.7: The evidence in On the Origin of Species holds that the diversity of life arose by common descent.
+  Fact 0.8: The evidence in On the Origin of Species holds that this common descent follows a branching pattern of evolution.
+  Fact 0.9: Charles Darwin included evidence he had gathered on the Beagle expedition in the 1830s in On the Origin of Species.
+  Fact 0.10: Charles Darwin included his subsequent findings from research in On the Origin of Species.
+  Fact 0.11: Charles Darwin included his subsequent findings from correspondence in On the Origin of Species.
+  Fact 0.12: Charles Darwin included his subsequent findings from experimentation in On the Origin of Species.
+Sentence 1: On the Origin of Species The title page of the 1859 edition of On the Origin of Species Author Charles Darwin Country United Kingdom of Great Britain and Ireland Language English Subject Natural selection Evolutionary biology Published 24 November 1859 ( John Murray ) Media type Print ( Hardback ) Pages 502 OCLC 352242 Preceded by On the Tendency of Species to form Varieties ; and on the Perpetuation of Varieties and Species by Natural Means of Selection Followed by Fertilisation of Orchids
+  Fact 1.0: On the Origin of Species has the author Charles Darwin.
+  Fact 1.1: On the Origin of Species has the country United Kingdom of Great Britain and Ireland.
+  Fact 1.2: On the Origin of Species is written in English.
+  Fact 1.3: On the Origin of Species has the subject natural selection.
+  Fact 1.4: On the Origin of Species has the subject evolutionary biology.
+  Fact 1.5: On the Origin of Species was published on 24 November 1859 by John Murray.
+  Fact 1.6: The title page of the 1859 edition of On the Origin of Species is shown.
+  Fact 1.7: The media type of On the Origin of Species is print (hardback).
+  Fact 1.8: On the Origin of Species has 502 pages.
+  Fact 1.9: On the Origin of Species has OCLC number 352242.
+  Fact 1.10: On the Origin of Species was preceded by On the Tendency of Species to form Varieties; and on the Perpetuation of Varieties and Species by Natural Means of Selection.
+  Fact 1.11: On the Origin of Species was followed by Fertilisation of Orchids.
+
+Retrieved items:
+<item 1>
+On the Origin of Species
+The second edition of 3,000 copies was quickly brought out on 7 January 1860 , and incorporated numerous corrections as well as a response to religious
+objections by the addition of a new epigraph on page ii , a quotation from Charles Kingsley , and the phrase `` by the Creator '' added to the closing sentence
+. During Darwin 's lifetime the book went through six editions , with cumulative changes and revisions to deal with counter-arguments raised . The third edition
+came out in 1861 , with a number of sentences rewritten or added and an introductory appendix , An Historical Sketch of the Recent Progress of Opinion on the
+Origin of Species , while the fourth in 1866 had further revisions . The fifth edition , published on 10 February 1869 , incorporated more changes and for the
+first time included the phrase `` survival of the fittest '' , which had been coined by the philosopher Herbert Spencer in his Principles of Biology ( 1864 ) .
+In January 1871 , George Jackson Mivart 's On the Genesis of Species listed detailed arguments against natural selection , and claimed it included false
+metaphysics .
+</item 1>
+
+<item 2>
+On the Origin of Species
+The theory explains the diversity of living organisms and their adaptation to the environment . It makes sense of the geologic record , biogeography , parallels
+in embryonic development , biological homologies , vestigiality , cladistics , phylogenetics and other fields , with unrivalled explanatory power ; it has also
+become essential to applied sciences such as medicine and agriculture . Despite the scientific consensus , a religion - based political controversy has
+developed over how evolution is taught in schools , especially in the United States . Interest in Darwin 's writings continues , and scholars have generated an
+extensive literature , the Darwin Industry , about his life and work . The text of Origin itself has been subject to much analysis including a variorum ,
+detailing the changes made in every edition , first published in 1959 , and a concordance , an exhaustive external index published in 1981 . Worldwide
+commemorations of the 150th anniversary of the publication of On the Origin of Species and the bicentenary of Darwin 's birth were scheduled for 2009 . They
+celebrated the ideas which `` over the last 150 years have revolutionised our understanding of nature and our place within it '' .
+</item 2>
+
+<item 3>
+On the Origin of Species
+On the Origin of species - wikipedia On the Origin of species Jump to : navigation , search `` Origin of Species '' redirects here . For other uses , see Origin
+of Species ( disambiguation ) . On the Origin of Species The title page of the 1859 edition of On the Origin of Species Author Charles Darwin Country United
+Kingdom of Great Britain and Ireland Language English Subject Natural selection Evolutionary biology Published 24 November 1859 ( John Murray ) Media type Print
+( Hardback ) Pages 502 OCLC 352242 Preceded by On the Tendency of Species to form Varieties ; and on the Perpetuation of Varieties and Species by Natural Means
+of Selection Followed by Fertilisation of Orchids Part of a series on Evolutionary biology Key topics ( show ) Introduction to evolution Common descent Evidence
+of common descent Processes and outcomes ( show ) Population genetics Variation Diversity Mutation Natural selection Adaptation Polymorphism Genetic drift Gene
+flow Speciation Adaptive radiation Co-operation Coevolution Divergence Convergence Parallel evolution Extinction Natural history ( show ) Origin of life History
+of life Timeline of evolution Human evolution Phylogeny Biodiversity Biogeography Classification Evolutionary taxonomy Cladistics Transitional fossil Extinction
+event History
+</item 3>
+
+<item 4>
+On the Origin of Species
+a Molecular Disease '' Fred Sanger Max Perutz John Kendrew Sydney Brenner Joshua Lederberg Walter Gilbert Kary Mullis Emmanuelle Charpentier Jennifer Doudna
+Ecology Rachel Carson Frederic Clements Charles Elton Henry Gleason Arthur Tansley Eugenius Warming Ethology Niko Tinbergen Karl von Frisch Konrad Lorenz Frans
+de Waal Jane Goodall Ivan Pavlov Related History of science Philosophy of biology Teleology Ethnobotany Eugenics History of the creation - evolution controversy
+Human Genome Project Humboldtian science Natural history Natural philosophy Natural theology Relationship between religion and science Timeline of biology and
+organic chemistry Category Commons Portal Evolutionary biology portal VIAF : 313683363 LCCN : n81105854 GND : 4303201 - 1 SELIBR : 261642 SUDOC : 031705685 BNF
+: cb122870840 ( data ) NDL : 00627375 BNE : XX2039885 Retrieved from `` https://en.wikipedia.org/w/index.php?title=On_the_Origin_of_Species&oldid=836566097 ''
+Categories : 1859 books 1859 in science Books about evolution
+</item 4>
+
+<item 5>
+On the Origin of Species
+In a survey conducted by a group of academic booksellers , publishers and librarians in advance of Academic Book Week in the United Kingdom , On the Origin of
+Species was voted the most influential academic book ever written . It was hailed as `` the supreme demonstration of why academic books matter '' and `` a book
+which has changed the way we think about everything '' . See also ( edit ) Book : Evolution On the Origin of Species -- full text at Wikisource of the first
+edition , 1859 The Origin of Species -- full text at Wikisource of the 6th edition , 1872 Charles Darwin bibliography History of biology History of evolutionary
+thought History of speciation Modern evolutionary synthesis The Complete Works of Charles Darwin Online The Descent of Man , and Selection in Relation to Sex ,
+published in 1871 ; his second major book on evolutionary theory . Transmutation of species Notes ( edit ) Jump up ^ Darwin 1859 , p. iii ^ Jump up to : Freeman
+1977 ^ Jump up to : The book 's full original title was On the Origin of Species by Means of Natural Selection , or the Preservation of Favoured Races in the
+Struggle for Life .
+</item 5>
+
+<item 6>
+On the Origin of Species
+By 1977 , it had appeared in an additional 18 languages . Content ( edit ) Title pages and introduction ( edit ) John Gould 's illustration of Darwin 's rhea
+was published in 1841 . The existence of two rhea species with overlapping ranges influenced Darwin . Page ii contains quotations by William Whewell and Francis
+Bacon on the theology of natural laws , harmonising science and religion in accordance with Isaac Newton 's belief in a rational God who established a law -
+abiding cosmos . In the second edition , Darwin added an epigraph from Joseph Butler affirming that God could work through scientific laws as much as through
+miracles , in a nod to the religious concerns of his oldest friends . The Introduction establishes Darwin 's credentials as a naturalist and author , then
+refers to John Herschel 's letter suggesting that the origin of species `` would be found to be a natural in contradistinction to a miraculous process '' : WHEN
+on board HMS Beagle , as naturalist , I was much struck with certain facts in the distribution of the inhabitants of South America , and in the geological
+relations of the present to the past inhabitants of that continent .
+</item 6>
+
+<item 7>
+On the Origin of Species
+Biodiversity Biogeography Classification Evolutionary taxonomy Cladistics Transitional fossil Extinction event History of evolutionary theory ( show ) Overview
+Renaissance Before Darwin Darwin Origin of Species Before synthesis Modern synthesis Molecular evolution Evo - devo Current research History of speciation
+History of paleontology ( timeline ) Fields and applications ( show ) Applications of evolution Biosocial criminology Ecological genetics Evolutionary
+aesthetics Evolutionary anthropology Evolutionary computation Evolutionary ecology Evolutionary economics Evolutionary epistemology Evolutionary ethics
+Evolutionary game theory Evolutionary linguistics Evolutionary medicine Evolutionary neuroscience Evolutionary physiology Evolutionary psychology Experimental
+evolution Phylogenetics Paleontology Selective breeding Speciation experiments Sociobiology Systematics Universal Darwinism Social implications ( show )
+Evolution as fact and theory Social effects Creation -- evolution controversy Objections to evolution Level of support Evolutionary biology portal Category Book
+Related topics On the Origin of Species ( or more completely , On the Origin of Species by Means of Natural Selection , or the Preservation of Favoured Races in
+the Struggle for Life ) , published on 24 November 1859 , is a work of scientific literature by Charles Darwin which is considered to be the foundation of
+evolutionary biology .
+</item 7>
+
+<item 8>
+On the Origin of Species
+His 1846 estimate that writing his `` big book '' would take five years proved optimistic . Events leading to publication : `` big book '' manuscript ( edit ) A
+photograph of Alfred Russel Wallace ( 1823 -- 1913 ) taken in Singapore in 1862 An 1855 paper on the `` introduction '' of species , written by Alfred Russel
+Wallace , claimed that patterns in the geographical distribution of living and fossil species could be explained if every new species always came into existence
+near an already existing , closely related species . Charles Lyell recognised the implications of Wallace 's paper and its possible connection to Darwin 's work
+, although Darwin did not , and in a letter written on 1 -- 2 May 1856 Lyell urged Darwin to publish his theory to establish priority . Darwin was torn between
+the desire to set out a full and convincing account and the pressure to quickly produce a short paper . He met Lyell , and in correspondence with Joseph Dalton
+Hooker affirmed that he did not want to expose his ideas to review by an editor as would have been required to publish in an academic journal .
+</item 8>
+
+<item 9>
+On the Origin of Species
+Wikisource has original text related to this article : On the Origin of Species Library resources about On the origin of species Online books Resources in your
+library Resources in other libraries The Complete Works of Charles Darwin Online : Table of contents , bibliography of On the Origin of Species -- links to text
+and images of all six British editions of The Origin of Species , the 6th edition with additions and corrections ( final text ) , the first American edition ,
+and translations into Danish , Dutch , French , German , Polish , Russian and Spanish . Online Variorum , showing every change between the six British editions
+. On the Origin of Species on In Our Time at the BBC . On the Origin of Species , full text with embedded audio . Victorian Science Texts Darwin Correspondence
+Project Home Page , University Library , Cambridge . On the Origin of Species eBook provided by Project Gutenberg View online at the Biodiversity Heritage
+Library On the Origin of Species 1860 American edition , D Appleton and Company , New York , with front insert by H.E. Barker , Lincolniana .
+</item 9>
+
+<item 10>
+On the Origin of Species
+He used the term broadly , and as well as discussions of `` the several races , for instance , of the cabbage '' and `` the hereditary varieties or races of our
+domestic animals and plants '' , there are three instances in the book where the phrase `` races of man '' is used , referring to races of humans . Publication
+and subsequent editions ( edit ) On the Origin of Species was first published on Thursday 24 November 1859 , priced at fifteen shillings with a first printing
+of 1250 copies . The book had been offered to booksellers at Murray 's autumn sale on Tuesday 22 November , and all available copies had been taken up
+immediately . In total , 1,250 copies were printed but after deducting presentation and review copies , and five for Stationers ' Hall copyright , around 1,170
+copies were available for sale . Significantly , 500 were taken by Mudie 's Library , ensuring that the book promptly reached a large number of subscribers to
+the library .
+</item 10>
+=== END ITEM id=571f841bef2ea8ec ===
+
+=== ITEM id=eea58edb7bfa87ce ===
+Gold sentences and facts:
+Sentence 0: The optic chiasm or optic chiasma ( / ɒptɪk kaɪæzəm / ; Greek χίασμα , `` crossing '' , from the Greek χιάζω ' to mark with an X ' , after the Greek letter ' Χ ' , chi ) is the part of the brain where the optic nerves partially cross . The optic chiasm is located at the bottom of the brain immediately below the hypothalamus . The optic chiasm is found in all vertebrates , although in cyclostomes ( lampreys and hagfishes ) it is located within the brain .
+  Fact 0.0: The optic chiasm is also called the optic chiasma.
+  Fact 0.1: The name optic chiasm comes from the Greek word chiasma, meaning crossing.
+  Fact 0.2: The name optic chiasm comes from the Greek word chiazo, meaning to mark with an X.
+  Fact 0.3: The name optic chiasm is after the Greek letter chi.
+  Fact 0.4: The optic chiasm is the part of the brain where the optic nerves partially cross.
+  Fact 0.5: The optic chiasm is located at the bottom of the brain.
+  Fact 0.6: The optic chiasm is located immediately below the hypothalamus.
+  Fact 0.7: The optic chiasm is found in all vertebrates.
+  Fact 0.8: In cyclostomes (lampreys and hagfishes), the optic chiasm is located within the brain.
+
+Retrieved items:
+<item 1>
+Optic chiasm
+The cranial nerves terminal Nuclei Septal nuclei Course no significant branches olfactory Nuclei Anterior olfactory nucleus Course olfactory bulb olfactory
+tract optic Nuclei Lateral geniculate nucleus Course optic chiasm optic tract oculomotor Nuclei Oculomotor nucleus Edinger -- Westphal nucleus Branches superior
+parasympathetic root of ciliary ganglion / ciliary ganglion inferior trochlear Nucleus Branches no significant branches trigeminal Nuclei PSN Spinal trigeminal
+nucleus MN TMN Course trigeminal ganglion Branches ophthalmic maxillary mandibular abducens Nucleus Branches no significant branches facial near origin
+intermediate nerve geniculate inside facial canal greater petrosal pterygopalatine ganglion nerve to the stapedius chorda tympani lingual nerve submandibular
+ganglion at stylomastoid foramen posterior auricular suprahyoid digastric stylohyoid parotid plexus temporal zygomatic buccal mandibular cervical Nuclei Facial
+motor nucleus Solitary nucleus Superior salivary nucleus vestibulocochlear Nuclei Vestibular nuclei Cochlear
+</item 1>
+
+<item 2>
+Optic chiasm
+J Comp Neurol. 427 ( 2 ) : 209 -- 19 . doi : 10.1002 / 1096 - 9861 ( 20001113 ) 427 : 2 < 209 : : aid - cne4 > 3.0.co ; 2 - 3 . PMID 11054689 . Jump up ^
+Guillery , RW ; Kaas , JH ( June 1973 ) . `` Genetic abnormality of the visual pathways in a `` white '' tiger `` . Science . 180 ( 4092 ) : 1287 -- 9 . Bibcode
+: 1973Sci ... 180.1287 G . doi : 10.1126 / science. 180.4092. 1287 . PMID 4707916 . Jump up ^ Guillery RW ( May 1974 ) . `` Visual pathways in albinos '' . Sci.
+Am. 230 ( 5 ) : 44 -- 54 . doi : 10.1038 / scientificamerican0574 - 44 . PMID 4822986 .
+</item 2>
+
+<item 3>
+Optic chiasm
+PMID 4822986 . Jump up ^ Davis , Matthew C. ; Griessenauer , Christoph J. ; Bosmia , Anand N. ; Tubbs , R. Shane ; Shoja , Mohammadali M. ( 2014 - 01 - 01 ) .
+`` The naming of the cranial nerves : A historical review '' . Clinical Anatomy. 27 ( 1 ) : 14 -- 19 . doi : 10.1002 / ca. 22345 . ISSN 1098 - 2353 . Jeffery G
+( October 2001 ) . `` Architecture of the optic chiasm and the mechanisms that sculpt its development '' . Physiol. Rev. 81 ( 4 ) : 1393 -- 414 . PMID 11581492
+. External links ( edit ) `` Anatomy diagram : 13048.000 - 1 '' . Roche Lexicon - illustrated navigator . Elsevier . Archived from the original on 2014 - 01 -
+01 . ( hide ) The cranial nerves terminal Nuclei Septal nuclei Course no significant branches olfactory Nuclei
+</item 3>
+
+<item 4>
+Optic chiasm
+arXiv : 1003.1872 . doi : 10.1163 / 157075611X617102 . ISSN 1570 - 7555 . Jump up ^ Purves , Dale ; Augustine , George ; Fitzpatrick , David ; Hall , William ;
+LaMantia , Anthony - Samuel ; White , Leonard ( 2012 ) . Neuroscience . Sinauer Associates . p. 261 . ISBN 978 - 0 - 87893 - 695 - 3 . Jump up ^ `` eye , human
+. '' Encyclopædia Britannica from Encyclopædia Britannica 2006 Ultimate Reference Suite DVD 2009 Jump up ^ Schmolesky MT , Wang Y , Creel DJ , Leventhal AG . ``
+Abnormal retinotopic organization of the dorsal lateral geniculate nucleus of the tyrosinase - negative albino cat '' . J Comp Neurol. 427 ( 2 ) : 209 -- 19 .
+</item 4>
+
+<item 5>
+Optic chiasm
+Other animals ( edit ) In Siamese cats with certain genotypes of the albino gene , this wiring is disrupted , with more of the nerve - crossing than is normal ,
+as a number of scholars have reported . To compensate for lack of crossing in their brains , they cross their eyes ( strabismus ) . This is also seen in albino
+tigers , as Guillery & Kaas report . Additional images ( edit ) Scheme showing central connections of the optic nerves and optic tracts . Base of brain . 3D
+schematic representation of optic tracts Transformations of the visual field toward the visual map on the primary visual cortex . Human brainstem anterior view
+Optic chiasm Optic chiasma Cerebrum. Inferior view. Deep dissection . Cerebrum. Inferior view . Deep dissection . History ( edit ) The crossing of nerve fibres
+, and the impact on vision that this had , was probably first identified by Persian physician `` Esmail Jorjani '' , who appears to be Zayn al - Din Gorgani (
+1042 -- 1137 ) .
+</item 5>
+
+<item 6>
+Optic chiasm
+Optic chiasm - wikipedia Optic chiasm Jump to : navigation , search For other meanings of `` chiasm '' , see Chiasm . Optic chiasma Brain viewed from below ;
+the front of the brain is above . Visual pathway with optic chiasm ( X shape ) is shown in red ( 1543 image from Andreas Vesalius ' Fabrica ) Optic nerves ,
+chiasm , and optic tracts Details Part of Visual system Identifiers Latin chiasma opticum MeSH A08. 800.800. 120.680. 600 NeuroLex ID Optic chiasm TA A14. 1.08.
+403 FMA 62045 Anatomical terms of neuroanatomy ( edit on Wikidata ) The optic chiasm or optic chiasma ( / ɒptɪk kaɪæzəm / ; Greek χίασμα , `` crossing '' , from
+the Greek χιάζω ' to mark with an X ' , after the Greek letter ' Χ ' , chi ) is the part of the brain where the optic nerves partially cross .
+</item 6>
+
+<item 7>
+Optic chiasm
+Nucleus Branches lingual Retrieved from `` https://en.wikipedia.org/w/index.php?title=Optic_chiasm&oldid=815119276 '' Categories : Cerebrum Visual system Optic
+nerve Hidden categories : Medicine infobox template using GraySubject or GrayPage Articles containing Ancient Greek - language text All articles with unsourced
+statements Articles with unsourced statements from January 2016 Talk Contents About Wikipedia Čeština Deutsch Eesti Español فارسی Français Italiano עברית
+Nederlands Polski Português Русский Simple English Српски / srpski Svenska தமிழ் 中文 Edit links This page was last edited on 12 December 2017 , at 21 : 54 . Text
+is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use and
+Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 7>
+
+<item 8>
+Optic chiasm
+The optic chiasm is located at the bottom of the brain immediately below the hypothalamus . The optic chiasm is found in all vertebrates , although in
+cyclostomes ( lampreys and hagfishes ) it is located within the brain . Contents ( hide ) 1 Structure 2 Other animals 3 Additional images 4 History 5 See also 6
+References 7 External links Structure ( edit ) The optic nerve fibres on the nasal sides of each retina cross over ( decussate ) to the opposite side of the
+brain via the optic nerve at the optic chiasm ( decussation of medial fibers ) . The temporal hemiretina , on the other hand , stays on the same side . The
+inferonasal retina are related to anterior portion of the optic chiasm whereas superonasal retinal fibers are related to the posterior portion of the optic
+chiasm . The crossing over of optic nerve fibres at the optic chiasm allows the visual cortex to receive the same hemispheric visual field from both eyes .
+Superimposing and processing these monocular visual signals allow the visual cortex to generate binocular and stereoscopic vision .
+</item 8>
+
+<item 9>
+Optic chiasm
+For example , the right visual cortex receives the temporal visual field from the left eye , and the nasal visual field from the right eye , which results in
+the right visual cortex producing a binocular image of the left hemispheric visual field . The net result of optic nerve crossing over at the optic chiasm is
+for the right cerebral hemisphere to sense and process left hemispheric vision , and for the left cerebral hemisphere to sense and process right hemispheric
+vision . This crossing is an adaptive feature of frontally oriented eyes , found mostly in predatory animals requiring precise visual depth perception . ( Prey
+animals , with laterally positioned eyes , have little binocular vision , so there is a more complete crossover of visual signals . ) Beyond the optic chiasm ,
+with crossed and uncrossed fibers , the optic nerves become optic tracts . The signals are passed on to the lateral geniculate body , in turn giving them to the
+occipital cortex ( the outer matter of the rear brain ) .
+</item 9>
+
+<item 10>
+Optic chiasm
+See also ( edit ) Wikimedia Commons has media related to Optic chiasm . Chiasmal syndrome References ( edit ) Jump up ^ Colman , Andrew M. ( 2006 ) . Oxford
+Dictionary of Psychology ( 2nd ed . ) . Oxford University Press . p. 530 . ISBN 0 - 19 - 861035 - 1 . Jump up ^ Bainbridge , David ( 30 June 2009 ) . Beyond the
+Zonules of Zinn : A Fantastic Journey Through Your Brain . Harvard University Press . p. 162 . ISBN 978 - 0 - 674 - 02042 - 9 . Retrieved 22 November 2015 .
+Jump up ^ de Lussanet , Marc H.E. ; Osse , Jan W.M. ( 2012 ) . `` An ancestral axial twist explains the contralateral forebrain and the optic chiasm in
+vertebrates '' . Animal Biology . 62 ( 2 ) : 193 -- 216 . arXiv : 1003.1872 .
+</item 10>
+=== END ITEM id=eea58edb7bfa87ce ===
+
+=== ITEM id=8e0546b85c028f12 ===
+Gold sentences and facts:
+Sentence 0: Callability -- Some bonds give the issuer the right to repay the bond before the maturity date on the call dates ; see call option . These bonds are referred to as callable bonds . Most callable bonds allow the issuer to repay the bond at par . With some bonds , the issuer has to pay a premium , the so - called call premium . This is mainly the case for high - yield bonds . These have very strict covenants , restricting the issuer in its operations . To be free from these covenants , the issuer can repay the bonds early , but only at a high cost .
+  Fact 0.0: Some bonds give the issuer the right to repay the bond before the maturity date on the call dates.
+  Fact 0.1: Bonds that give the issuer this right are referred to as callable bonds.
+  Fact 0.2: Most callable bonds allow the issuer to repay the bond at par.
+  Fact 0.3: With some bonds, the issuer has to pay a premium, called the call premium.
+  Fact 0.4: Call premiums are mainly the case for high-yield bonds.
+  Fact 0.5: High-yield bonds have very strict covenants that restrict the issuer in its operations.
+  Fact 0.6: To be free from these covenants, the issuer can repay high-yield bonds early.
+  Fact 0.7: Repaying high-yield bonds early to be free from covenants is possible only at a high cost.
+
+Retrieved items:
+<item 1>
+Bond (finance)
+A European callable has only one call date . This is a special case of a Bermudan callable . An American callable can be called at any time until the maturity
+date . A death put is an optional redemption feature on a debt instrument allowing the beneficiary of the estate of a deceased bondholder to put ( sell ) the
+bond back to the issuer at face value in the event of the bondholder 's death or legal incapacitation . This is also known as a `` survivor 's option '' .
+Sinking fund provision of the corporate bond indenture requires a certain portion of the issue to be retired periodically . The entire bond issue can be
+liquidated by the maturity date ; if not , the remainder is called balloon maturity . Issuers may either pay to trustees , which in turn call randomly selected
+bonds in the issue , or , alternatively , purchase bonds in open market , then return them to trustees . Bonds are often identified by its international
+securities identification number , or ISIN , which is a 12 digit alphanumeric code that uniquely identifies debt securities .
+</item 1>
+
+<item 2>
+Bond (finance)
+The latter are often issued in tranches . The senior tranches get paid back first , the subordinated tranches later . Covered bonds are backed by cash flows
+from mortgages or public sector assets . Contrary to asset - backed securities the assets for such bonds remain on the issuers balance sheet . Perpetual bonds
+are also often called perpetuities or ' Perps ' . They have no maturity date . The most famous of these are the UK Consols , which are also known as Treasury
+Annuities or Undated Treasuries . Some of these were issued back in 1888 and still trade today , although the amounts are now insignificant . Some ultra-long -
+term bonds ( sometimes a bond can last centuries : West Shore Railroad issued a bond which matures in 2361 ( i.e. 24th century ) are virtually perpetuities from
+a financial point of view , with the current value of principal near zero . Bearer bond is an official certificate issued without a named holder . In other
+words , the person who has the paper certificate can claim the value of the bond .
+</item 2>
+
+<item 3>
+A bond is a tradable debt security: the issuer borrows from holders and typically pays periodic interest (fixed or variable) and repays principal at maturity.
+Terms range from months to decades or perpetuity. Features may include early redemption options, sinking funds, or installment maturities. Types include
+government, municipal, corporate, asset-backed, covered, subordinated, and revenue bonds. Seniority affects repayment priority and risk; government bonds are
+generally safest. Bonds may be registered, bearer, or
+</item 3>
+
+<item 4>
+Bond (finance)
+The name `` coupon '' arose because in the past , paper bond certificates were issued which had coupons attached to them , one for each interest payment . On
+the due dates the bondholder would hand in the coupon to a bank in exchange for the interest payment . Interest can be paid at different frequencies : generally
+semi-annual , i.e. every 6 months , or annual . Bond issued by the Dutch East India Company in 1623 Yield ( edit ) The yield is the rate of return received from
+investing in the bond . It usually refers either to The current yield , or running yield , which is simply the annual interest payment divided by the current
+market price of the bond ( often the clean price ) . The yield to maturity , or redemption yield , which is a more useful measure of the return of the bond .
+This takes into account the current market price , and the amount and timing of all remaining coupon payments and of the repayment due on maturity . It is
+equivalent to the internal rate of return of a bond . Credit quality ( edit ) The quality of the issue refers to the probability that the bondholders will
+receive the amounts promised at the due dates .
+</item 4>
+
+<item 5>
+Bond (finance)
+The most common types of bonds include municipal bonds and corporate bonds . The bond is a debt security , under which the issuer owes the holders a debt and (
+depending on the terms of the bond ) is obliged to pay them interest ( the coupon ) or to repay the principal at a later date , termed the maturity date .
+Interest is usually payable at fixed intervals ( semiannual , annual , sometimes monthly ) . Very often the bond is negotiable , that is , the ownership of the
+instrument can be transferred in the secondary market . This means that once the transfer agents at the bank medallion stamp the bond , it is highly liquid on
+the secondary market . Thus a bond is a form of loan or IOU : the holder of the bond is the lender ( creditor ) , the issuer of the bond is the borrower (
+debtor ) , and the coupon is the interest . Bonds provide the borrower with external funds to finance long - term investments , or , in the case of government
+bonds , to finance current expenditure . Certificates of deposit ( CDs ) or short - term commercial paper are considered to be money market instruments and not
+bonds : the main difference is the length of the term of the instrument .
+</item 5>
+
+<item 6>
+Bond (finance)
+Bonds and stocks are both securities , but the major difference between the two is that ( capital ) stockholders have an equity stake in a company ( that is ,
+they are owners ) , whereas bondholders have a creditor stake in the company ( that is , they are lenders ) . Being a creditor , bondholders have priority over
+stockholders . This means they will be repaid in advance of stockholders , but will rank behind secured creditors , in the event of bankruptcy . Another
+difference is that bonds usually have a defined term , or maturity , after which the bond is redeemed , whereas stocks typically remain outstanding indefinitely
+. An exception is an irredeemable bond , such as a consol , which is a perpetuity , that is , a bond with no maturity .
+</item 6>
+
+<item 7>
+Bond (finance)
+The length of time until the maturity date is often referred to as the term or tenure or maturity of a bond . The maturity can be any length of time , although
+debt securities with a term of less than one year are generally designated money market instruments rather than bonds . Most bonds have a term of up to 30 years
+. Some bonds have been issued with terms of 50 years or more , and historically there have been some issues with no maturity date ( irredeemable ) . In the
+market for United States Treasury securities , there are three categories of bond maturities : short term ( bills ) : maturities between one and five years ;
+medium term ( notes ) : maturities between six and twelve years ; long term ( bonds ) : maturities longer than twelve years . Coupon ( edit ) The coupon is the
+interest rate that the issuer pays to the holder . Usually this rate is fixed throughout the life of the bond . It can also vary with a money market index ,
+such as LIBOR , or it can be even more exotic .
+</item 7>
+
+<item 8>
+Bond (finance)
+The net proceeds that the issuer receives are thus the issue price , less issuance fees . The market price of the bond will vary over its life : it may trade at
+a premium ( above par , usually because market interest rates have fallen since issue ) , or at a discount ( price below par , if market rates have risen or
+there is a high probability of default on the bond ) . Others ( edit ) Indentures and Covenants -- An indenture is a formal debt agreement that establishes the
+terms of a bond issue , while covenants are the clauses of such an agreement . Covenants specify the rights of bondholders and the duties of issuers , such as
+actions that the issuer is obligated to perform or is prohibited from performing . In the U.S. , federal and state securities and commercial laws apply to the
+enforcement of these agreements , which are construed by courts as contracts between issuers and bondholders . The terms may be changed only with great
+difficulty while the bonds are outstanding , with amendments to the governing document generally requiring approval by a majority ( or super-majority ) vote of
+the bondholders .
+</item 8>
+
+<item 9>
+Bonds are debt securities: holders are creditors, rank ahead of shareholders in bankruptcy, and usually receive scheduled interest and principal at maturity.
+Yield measures return; yield to maturity includes all payments and repayment. Types include floating-rate, zero-coupon, high-yield, convertible, exchangeable,
+and inflation-indexed bonds. Bonds are often less volatile and more liquid than stocks, but carry interest-rate, credit, reinvestment, inflation, liquidity, and
+other risks. Rising rates or credit downgrades can
+</item 9>
+
+<item 10>
+Bond (finance)
+Optionality : Occasionally a bond may contain an embedded option ; that is , it grants option - like features to the holder or the issuer : Callability -- Some
+bonds give the issuer the right to repay the bond before the maturity date on the call dates ; see call option . These bonds are referred to as callable bonds .
+Most callable bonds allow the issuer to repay the bond at par . With some bonds , the issuer has to pay a premium , the so - called call premium . This is
+mainly the case for high - yield bonds . These have very strict covenants , restricting the issuer in its operations . To be free from these covenants , the
+issuer can repay the bonds early , but only at a high cost . Putability -- Some bonds give the holder the right to force the issuer to repay the bond before the
+maturity date on the put dates ; see put option . These are referred to as retractable or putable bonds . Call dates and put dates -- the dates on which
+callable and putable bonds can be redeemed early . There are four main categories : A Bermudan callable has several call dates , usually coinciding with coupon
+dates .
+</item 10>
+=== END ITEM id=8e0546b85c028f12 ===
+
+=== ITEM id=8d843228850d2325 ===
+Gold sentences and facts:
+Sentence 0: Place Actor / Actress Episodes Finals Total score ( 175 ) 3 - 4 5 - 6 7 - 8 9 - 10 11 - 12 13 - 14 15 - 16 17 - 18 19 - 20 21 - 22 23 - 24 25 - 26 Aman Gandotra 8 12 14 14 7 + 3 = 10 9 + 3 = 12 10 + 3 = 13 10 + 4 = 14 10 + 5 = 15 10 + 5 = 15 10 + 4 = 14 Winner 141 Natasha Bharadwaj 9 18 14 15 10 + 5 = 15 10 + 5 = 15 10 + 5 = 15 10 + 5 = 15 10 + 5 = 15 10 + 5 = 15 10 + 5 = 15 Winner 166 2 / 3 Finalists Aashish Mehrotra 8 16 18 20 8 + 4 = 12 10 + 4 = 14 8 + 4 = 12 10 + 4 = 14 10 + 5 = 15 8 + 5 = 13 10 + 4 = 14 Runner up 156 Shruti Sharma 9 18 19 18 10 + 5 = 15 10 + 4 = 14 10 + 4 = 14 10 + 4 = 14 10 + 5 = 15 10 + 5 = 15 10 + 5 = 15 Runner up 166 Harshvardhan Deo NOT IN COMPETITION Debut 8 + 4 = 12 10 + 4 = 14 10 + 4 = 14 10 + 4 = 14 Runner up 54 Naina Singh 7 15 15 18 10 + 4 = 14 7 + 3 = 10 8 + 4 = 12 10 + 4 = 14 8 + 5 = 13 10 + 5 = 15 10 + 4 = 14 Runner up 147 Semifinalists Ansh Bagri 10 19 18 17 10 + 4 = 14 7 + 4 = 11 8 + 4 = 12 8 + 4 = 12 10 + 5 = 15 10 + 5 = 15 8 + 4 = 12 ELIMINATED 155 Lekha Prajapati 7 16 16 16 8 + 4 = 12 8 + 4 = 12 8 + 4 = 12 9 + 4 = 13 10 + 4 = 14 10 + 5 = 15 10 + 4 = 14 ELIMINATED 147 5 Shariq Nanda 9 16 14 14 10 + 3 = 13 8 + 4 = 12 8 + 3 = 11 10 + 4 = 14 8 + 5 = 13 ELIMINATED 116 Elisha Mayor NOT IN COMPETITION Debut 8 + 4 = 12 8 + 5 = 13 ELIMINATED 25 6 Tapan Singh NOT IN COMPETITION Debut 6 + 3 = 9 ELIMINATED 9 Simran Choudhary NOT IN COMPETITION Debut 8 + 4 = 12 ELIMINATED 12 7 Karan Taluja 7 17 16 16 6 + 3 = 9 8 + 4 = 12 6 + 3 = 9 ELIMINATED 86 Angela Krislinzki 9 18 20 16 8 + 5 = 13 6 + 3 = 9 6 + 3 = 9 ELIMINATED 97 8 Ahmed Masih 8 14 16 18 6 + 3 = 9 6 + 4 = 10 ELIMINATED 75 Kanikka Kapur 10 19 19 19 6 + 3 = 9 6 + 3 = 9 ELIMINATED 97 9 Harshvardhan Ahlawat 7 14 12 13 6 + 3 = 9 ELIMINATED 55 Pranati Rai Prakash 7 13 17 14 6 + 3 = 9 ELIMINATED 60 10 Jash Bahl 10 14 12 ELIMINATED 36 Heli Vyas 6 12 12 ELIMINATED 30 11 Shivank Chaudhary 6 12 ELIMINATED 18 Sahiba Bhasin 7 12 ELIMINATED 19 12 Karanraj Sharma 6 ELIMINATED 6 Laveena Keswani 6 ELIMINATED 6
+  Fact 0.0: The table is headed Place, Actor / Actress, Episodes, Finals, and Total score (175), with round columns labeled 3-4 through 25-26.
+  Fact 0.1: Aman Gandotra's total score is 141 and he is a Winner.
+  Fact 0.2: Natasha Bharadwaj's total score is 166 and she is a Winner.
+  Fact 0.3: Aashish Mehrotra is a Finalist with a Runner up placement and a total score of 156.
+  Fact 0.4: Shruti Sharma is a Finalist with a Runner up placement and a total score of 166.
+  Fact 0.5: Harshvardhan Deo was not in the competition and made a Debut, with a Runner up placement and a total score of 54.
+  Fact 0.6: Naina Singh is a Finalist with a Runner up placement and a total score of 147.
+  Fact 0.7: Ansh Bagri is a Semifinalist who was ELIMINATED with a total score of 155.
+  Fact 0.8: Lekha Prajapati is a Semifinalist who was ELIMINATED with a total score of 147.
+  Fact 0.9: Shariq Nanda was ELIMINATED with a total score of 116.
+  Fact 0.10: Elisha Mayor was not in the competition, made a Debut, was ELIMINATED, and has a total score of 25.
+  Fact 0.11: Tapan Singh was not in the competition, made a Debut, was ELIMINATED, and has a total score of 9.
+  Fact 0.12: Simran Choudhary was not in the competition, made a Debut, was ELIMINATED, and has a total score of 12.
+  Fact 0.13: Karan Taluja was ELIMINATED with a total score of 86.
+  Fact 0.14: Angela Krislinzki was ELIMINATED with a total score of 97.
+  Fact 0.15: Ahmed Masih was ELIMINATED with a total score of 75.
+  Fact 0.16: Kanikka Kapur was ELIMINATED with a total score of 97.
+  Fact 0.17: Harshvardhan Ahlawat was ELIMINATED with a total score of 55.
+  Fact 0.18: Pranati Rai Prakash was ELIMINATED with a total score of 60.
+  Fact 0.19: Jash Bahl was ELIMINATED with a total score of 36.
+  Fact 0.20: Heli Vyas was ELIMINATED with a total score of 30.
+  Fact 0.21: Shivank Chaudhary was ELIMINATED with a total score of 18.
+  Fact 0.22: Sahiba Bhasin was ELIMINATED with a total score of 19.
+  Fact 0.23: Karanraj Sharma was ELIMINATED with a total score of 6.
+  Fact 0.24: Laveena Keswani was ELIMINATED with a total score of 6.
+Sentence 1: India 's Next Superstars is a talent - searcher Indian reality show , which premiered on Star Plus and is streamed on Hotstar . Karan Johar and Rohit Shetty are the judges for the show . Aman Gandotra and Natasha Bharadwaj are declared winners of 2018 season , alongside Shruti Sharma who won a ' Special Mention ' award . Runners up in the male category were Aashish Mehrotra and Harshvardhan Deo and in the female category were Naina Singh and Shruti Sharma .
+  Fact 1.0: India's Next Superstars is an Indian talent-searcher reality show.
+  Fact 1.1: India's Next Superstars premiered on Star Plus.
+  Fact 1.2: India's Next Superstars is streamed on Hotstar.
+  Fact 1.3: Karan Johar and Rohit Shetty are the judges for India's Next Superstars.
+  Fact 1.4: Aman Gandotra and Natasha Bharadwaj are declared winners of the 2018 season.
+  Fact 1.5: Shruti Sharma is declared a winner of the 2018 season alongside Aman Gandotra and Natasha Bharadwaj.
+  Fact 1.6: Shruti Sharma won a 'Special Mention' award.
+  Fact 1.7: Aashish Mehrotra and Harshvardhan Deo were the runners up in the male category.
+  Fact 1.8: Naina Singh and Shruti Sharma were the runners up in the female category.
+
+Retrieved items:
+<item 1>
+India's Next Superstars
+Episode 23 This episode was aired on 31 Mar 2018 ( Saturday ) . This was the semi-finale weekend . The contestants were mentored by judge Shetty and all the
+contestants were very happy . Their performance appeared a notch above their previous ones . Johar and Shetty introduced all the eight semi-finalists and took a
+grand entry with them . Sharma and Bharadwaj started the show with a traditional Ghoomar dance performance from the famous movie Padmaavat . The judges
+appreciated their performance and mentioned that it looked like two Deepika Padukone are dancing on the stage . This dance form is very difficult to perform
+with a pot on the head , and brass plates in hand . The mixed another dance form using elastics giving the feel of dolls dancing with strings ( Kathputli ) . It
+had some moves of robotics . Both scored a perfect five . Even when Sharma 's plate fell off , she still maintained her composure . Later Deo and Gandotra were
+given the task of doing the same dance after balancing the pots on their head . The comedy made everyone laugh .
+</item 1>
+
+<item 2>
+India's Next Superstars
+The contestants and judges were asked about their definition of love . Prakash , Singh and Bharadwaj were called on stage by Shetty and they were asked to
+choose three guys . Gandotra , Ahlawat and Vali were asked to pair up with the ladies and dance with a prop ( Orange ) . This was a close dance and Singh and
+Gandotra won the contest . The fun quotient was enjoyed by the rest of the contestants a lot . Sharma was the spotlight winner of this week and she portrayed
+the life of warrior queen Rani Lakshmibai . This power packed performance was loved by everyone . Shetty stated that he felt that he is watching a play on the
+stage . The difficulties of holding a baby and doing a sword fight was narrated by Sharma . She got a score of nineteen . It was also informed that she was the
+captain in the academy and she handled the ' ' Roudra Ras ' ' ( anger ) very well . ' ' Ek tarfa pyar ki taaqat hi kuch aur hoti hai ' ' ( One sided love has a
+lot of power ) was the dialogue for the third act .
+</item 2>
+
+<item 3>
+India's Next Superstars
+Then after some leg pulling , the next set of guests was called in - ' ' Gyancho ' ' baba Aashish and Natasha . Natasha was handcuffed and blind - folded , and
+then Karan and Aashish touched her with ice cubes , chocolate sauce , brush , balloon and other stuffs . Then was the turn of Aashish . Both of them sang item
+songs like ' ' Oo la la , ' ' ' ' baby doll main sone di , ' ' kaate nahin katte yeh din yeh raat ' ' to make the game seductive . Finally Aashish won the gift
+hamper . Episode 10 This episode was telecast on 06 Apr 2018 ( Friday ) on hotstar . The finale episode started with KJo and Rohit Shetty speculating about the
+possibilities of different winners of this show . All the technicians were sad because the show was ending and they did n't have the next project in hand .
+First set of guests were Harshvardhan , Natasha and Shruti . Karan Wahi showed the superstars their past and future via a Time Machine which was created by him
+.
+</item 3>
+
+<item 4>
+India's Next Superstars
+Contents ( hide ) 1 Concept 2 Contestants 3 Guest appearance 4 Scoring chart 5 Synopsis of Episodes 6 Lights Camera Superstar cocktails 7 Superstars Ki
+Paathshaala 8 References 9 External links Concept ( edit ) The new talent hunt show of Karan Johar and Rohit Shetty is concerned , ten males and ten females
+will be living under one roof , and every day they will be assigned for tasks and will be judged on the basis of their performances . Additionally , two more
+males and females , will join the competition as Wild - Cards . The two winners will be rewarded with a three - film deal with Dharma Productions house .
+Contestants ( edit ) BOYS Names Notes Aashish Mehrotra RUNNER UP Ahmed Masih ELIMINATED ON 25 FEBRUARY 2018 Aman Gandotra WINNER Ansh Bagri SEMIFINALIST ;
+</item 4>
+
+<item 5>
+India's Next Superstars
+of seasons No. of episodes INS : 25 ( as of 7 April 2018 ) INS Pathshala : 60 ( as of 6 April 2018 ) Production Running time 1 hr 30 mins Production company ( s
+) Dharma Productions Endemol Shine India Distributor Star India Release Original network STAR Plus Picture format 720p SDTV 1080p HDTV Original release 13
+January ( 2018 - 01 - 13 ) -- 8 April 2018 External links Hotstar India 's Next Superstars is a talent - searcher Indian reality show , which premiered on Star
+Plus and is streamed on Hotstar . Karan Johar and Rohit Shetty are the judges for the show . Aman Gandotra and Natasha Bharadwaj are declared winners of 2018
+season , alongside Shruti Sharma who won a ' Special Mention ' award . Runners up in the male category were Aashish Mehrotra and Harshvardhan Deo and in the
+female category were Naina Singh and Shruti Sharma .
+</item 5>
+
+<item 6>
+India's Next Superstars
+Quizzing in India Sell Me the Answer Thatt Antha Heli Singing Airtel Super Singer Airtel Super Singer Junior Fame Gurukul Idea Star Singer Indian Idol Sa Re Ga
+Ma Pa ( Sa Re Ga Ma Pa L'il Champs ) Voice of India Lip Sing Battle Sports Box Cricket League BCL Punjab Zee 20 Cricket League Others Bigg Boss Bigg Boss Bangla
+Bigg Boss Tamil Bigg Boss Kannada Bigg Boss Telugu Biggest Loser Jeetega India 's Got Talent Lead India Malayalee House National Bingo Night Sacch Ka Saamna
+Defunct Ad Mad Show Antakshari -- The Great Challenge Baazi Kiski Biggest Loser Jeetega Boogie Woogie Champions of the World Dance Premier League Deal Ya No
+Deal Fame X Idea Star Singer India 's Magic Star Iss Jungle Se Mujhe Bachao Jo Jeeta Wohi Super Star Junoon Lead India Mastermind India Perfect Bride National
+Bingo Night Sawaal Dus Crore Ka Swayamwar Titan Antakshari Zee Cinestars Zor Ka Jhatka Retrieved from `` https://en.wikipedia.org/w/index.
+</item 6>
+
+<item 7>
+India's Next Superstars
+The judges stated that they liked the performance of the girls more than that of the boys . Bagri who was the winner of the spotlight challenge depicted the
+life of ace cricketer Yuvraj Singh very successfully on stage . The roars and clapping from the audience clearly showed how much they appreciated this act . The
+tragic portion of the act when Singh was battling with cancer brought tears to the eyes of many . Shetty was very impressed with the performance , and mentioned
+that it 's good that he did n't try to copy Singh , it would have looked comic . Bagri talked about the battle his father had to fight when he was detected with
+cancer . The final score for this act was a perfect ten . Kapur and Ahlawat presented a sweet act based on Karva Chauth . The judges liked the way Ahlawat
+picked up the Hariyanvi dialect and gave him a score of six . They pointed out the areas of improvement for him . This was the lowest score for the evening
+which later created Ahlawat 's exit . Kapur scored six for the act too .
+</item 7>
+
+<item 8>
+India's Next Superstars
+14 14 7 + 3 = 10 9 + 3 = 12 10 + 3 = 13 10 + 4 = 14 10 + 5 = 15 10 + 5 = 15 10 + 4 = 14 Winner 141 Natasha Bharadwaj 9 18 14 15 10 + 5 = 15 10 + 5 = 15 10 + 5 =
+15 10 + 5 = 15 10 + 5 = 15 10 + 5 = 15 10 + 5 = 15 Winner 166 2 / 3 Finalists Aashish Mehrotra 8 16 18 20 8 + 4 = 12 10 + 4 = 14 8 + 4 = 12 10 + 4 = 14 10 + 5 =
+15 8 + 5 = 13 10 + 4 = 14 Runner up 156 Shruti Sharma 9 18 19 18 10 + 5 = 15 10 + 4 = 14 10 + 4 =
+</item 8>
+
+<item 9>
+India's Next Superstars
+ELIMINATED ON 18 MARCH 2018 Heli Vyas ELIMINATED ON 4 FEBRUARY 2018 Kanikka Kapur ELIMINATED ON 25 FEBRUARY 2018 Laveena Keswani ELIMINATED ON 21 JANUARY 2018
+Lekha Prajapati SEMIFINALIST ; ELIMINATED ON 1 APRIL 2018 Naina Singh RUNNER UP Natasha Bharadwaj WINNER Pranati Rai Prakash ELIMINATED ON 18 FEBRUARY 2018
+Sahiba Bhasin ELIMINATED ON 28 JANUARY 2018 Simran Choudhary WILD - CARD ENTRY ON 3 MARCH 2018 ; ELIMINATED ON 11 MARCH 2018 Shruti Sharma 2nd Winner Guest
+appearance ( edit ) Episode 1 & 2 - Priyanka Chopra Episode 3 & 4 - Sidharth Malhotra Episode 5 & 6 - Kangana Ranaut Episode 9 & 10 - Kartik Aaryan ,
+</item 9>
+
+<item 10>
+India's Next Superstars
+India 's next Superstars - Wikipedia India 's next Superstars Jump to : navigation , search This article may require copy editing for MOS issues (
+Capitalization , bold , etc . ) . You can assist by editing it . ( April 2018 ) ( Learn how and when to remove this template message ) India 's Next Superstars
+Genre Reality Based on Acting Presented by Rithvik Dhanjani Karan Wahi Judges INS Judges : Rohit Shetty Karan Johar INS Pathshala Judges : Mukesh Chhabra Mahesh
+Bhatt Country of origin India No. of seasons No.
+</item 10>
+=== END ITEM id=8d843228850d2325 ===

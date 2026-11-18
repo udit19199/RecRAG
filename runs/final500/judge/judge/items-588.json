@@ -1,0 +1,472 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "ff4ad07848c4134a",
+   "gold": [
+    {
+     "sentence": "Margaret Landon (September 7, 1903 – December 4, 1993) was an American writer best remembered for \"Anna and the King of Siam\", her best-selling 1944 novel of the life of Anna Leonowens which eventually sold over a million copies and was translated into more than twenty languages.",
+     "facts": {
+      "0.0": "Margaret Landon was born September 7, 1903.",
+      "0.1": "Margaret Landon died December 4, 1993.",
+      "0.2": "Margaret Landon was an American writer.",
+      "0.3": "Margaret Landon is best remembered for 'Anna and the King of Siam'.",
+      "0.4": "'Anna and the King of Siam' is Margaret Landon's best-selling novel, published in 1944.",
+      "0.5": "'Anna and the King of Siam' is a novel about the life of Anna Leonowens.",
+      "0.6": "'Anna and the King of Siam' eventually sold over a million copies.",
+      "0.7": "'Anna and the King of Siam' was translated into more than twenty languages."
+     }
+    },
+    {
+     "sentence": " In 1950, Landon sold the musical play rights to Richard Rodgers and Oscar Hammerstein II, who created the musical \"The King and I\" from her book.",
+     "facts": {
+      "1.0": "In 1950, Margaret Landon sold the musical play rights to Richard Rodgers and Oscar Hammerstein II.",
+      "1.1": "Richard Rodgers and Oscar Hammerstein II created the musical 'The King and I' from Margaret Landon's book."
+     }
+    },
+    {
+     "sentence": " A later work, \"Never Dies the Dream\", appeared in 1949.",
+     "facts": {
+      "2.0": "'Never Dies the Dream' is a later work.",
+      "2.1": "'Never Dies the Dream' appeared in 1949."
+     }
+    },
+    {
+     "sentence": "Dame Elizabeth Rosemond Taylor, DBE (February 27, 1932 – March 23, 2011) was a British-American actress, businesswoman, and humanitarian.",
+     "facts": {
+      "3.0": "Dame Elizabeth Rosemond Taylor, DBE, was born February 27, 1932.",
+      "3.1": "Dame Elizabeth Rosemond Taylor, DBE, died March 23, 2011.",
+      "3.2": "Dame Elizabeth Rosemond Taylor was a British-American actress.",
+      "3.3": "Dame Elizabeth Rosemond Taylor was a businesswoman.",
+      "3.4": "Dame Elizabeth Rosemond Taylor was a humanitarian."
+     }
+    },
+    {
+     "sentence": " She began her career as a child actress in the early 1940s, and was one of the most popular stars of classical Hollywood cinema in the 1950s.",
+     "facts": {
+      "4.0": "Elizabeth Taylor began her career as a child actress in the early 1940s.",
+      "4.1": "Elizabeth Taylor was one of the most popular stars of classical Hollywood cinema in the 1950s."
+     }
+    },
+    {
+     "sentence": " She continued her career successfully into the 1960s, and remained a well known public figure for the rest of her life.",
+     "facts": {
+      "5.0": "Elizabeth Taylor continued her career successfully into the 1960s.",
+      "5.1": "Elizabeth Taylor remained a well known public figure for the rest of her life."
+     }
+    },
+    {
+     "sentence": " In 1999, the American Film Institute named her the seventh-greatest female screen legend.",
+     "facts": {
+      "6.0": "In 1999, the American Film Institute named Elizabeth Taylor the seventh-greatest female screen legend."
+     }
+    }
+   ],
+   "items": [
+    "Anna and the King of Siam (novel)\nAnna and the King is a 1944 semi-fictionalized biographical novel by Margaret Landon.",
+    "Elizabeth Taylor\nDame Elizabeth Rosemond Taylor, DBE (February 27, 1932 – March 23, 2011) was a British-American actress, businesswoman, and humanitarian.\n\n She began her career as a child actress in the early 1940s, and was one of the most popular stars of classical Hollywood cinema in the 1950s.\n\n She continued her career successfully into the 1960s, and remained a well known public figure for the rest of her life.\n\n In 1999, the American Film Institute named her the seventh-greatest female screen legend.",
+    "Anna and the King of Siam (film)\nAnna and the King of Siam is a 1946 drama film directed by John Cromwell.\n\n An adaptation of the 1944 novel of the same name by Margaret Landon, it was based on the fictionalized diaries of Anna Leonowens, an Anglo-Indian woman who claimed to be British and became governess in the Royal Court of Siam (now modern Thailand) during the 1860s.\n\n Darryl F. Zanuck read Landon's book in galleys and immediately bought the film rights.",
+    "Dash and Lilly\nDash and Lilly is a 1999 Emmy and Golden Globe Award-nominated biographical television film about writers Dashiell Hammett and Lillian Hellman.\n\n The film was directed by actress Kathy Bates and written by Jerrold L. Ludwig.\n\n It stars Sam Shepard and Judy Davis.",
+    "These Old Broads\nThese Old Broads is a 2001 television film written by Carrie Fisher and starring her mother Debbie Reynolds, as well as Shirley MacLaine, Joan Collins, and Elizabeth Taylor in her final film role.\n\n In a 2001 BBC \"Omnibus\" documentary about Elizabeth Taylor, Shirley MacLaine says that Julie Andrews and Lauren Bacall were originally planned to be in the movie.\n\n The role of Miriam Hodges was originally offered to June Allyson.",
+    "At Land\nAt Land (1944) is a 15-minute silent experimental film written, directed by, and starring Maya Deren.\n\n It has a dream-like narrative in which a woman, played by Deren, is washed up on a beach and goes on a strange journey encountering other people and other versions of herself.\n\n Deren once said that the film is about the struggle to maintain one's personal identity.",
+    "Margaret Landon\nMargaret Landon (September 7, 1903 – December 4, 1993) was an American writer best remembered for \"Anna and the King of Siam\", her best-selling 1944 novel of the life of Anna Leonowens which eventually sold over a million copies and was translated into more than twenty languages.\n\n In 1950, Landon sold the musical play rights to Richard Rodgers and Oscar Hammerstein II, who created the musical \"The King and I\" from her book.\n\n A later work, \"Never Dies the Dream\", appeared in 1949.",
+    "Kate Winslet filmography\nKate Winslet is a British actress and singer who has appeared in numerous films and television series.\n\n Her film debut was as Juliet Hulme in the 1994 film \"Heavenly Creatures\".\n\n She went on to appear in the later 1990s films \"Sense and Sensibility\" as Marianne Dashwood (1995), which earned her a nomination for the Academy Award for Best Supporting Actress, \"Jude\" as Sue Bridehead (1996), \"Hamlet\" as Ophelia (1996) and \"Titanic\" as Rose DeWitt Bukater (1997).\n\n For her role in \"Titanic\", it earned her Best Actress nominations for an Academy Award, Golden Globe and Screen Actors Guild Award.",
+    "Cate Blanchett\nCatherine Elise Blanchett, {'1': \", '2': \", '3': \", '4': \"} ( ; born 14 May 1969) is an Australian actress and theatre director.\n\n She has received international acclaim and many accolades, including two Academy Awards, three Golden Globe Awards, three BAFTA Awards, six AACTA Awards, and three Screen Actors Guild Awards. Blanchett came to international attention for her role as Elizabeth I of England in Shekhar Kapur's 1998 film \"Elizabeth\", for which she won the BAFTA Award for Best Actress, the Golden Globe Award, and earned her first Academy Award for Best Actress nomination.\n\n Her portrayal of Katharine Hepburn in Martin Scorsese's 2004 film \"The Aviator\" brought her critical acclaim and many accolades, including the Academy Award for Best Actress in a Supporting Role, making her the only actor to win an Oscar for portraying another Oscar-winning actor.\n\n In 2013, she starred as Jasmine Francis in Woody Allen's \"Blue Jasmine\", for which she won numerous accolades including the Academy Award for Best Actress.",
+    "Sam Taylor (director)\nSam Taylor (August 13, 1895, New York City – March 6, 1958, Santa Monica) was a film director, screenwriter, and producer, most active in the silent film era.\n\n Taylor is best known for his comedic directorial work with Harold Lloyd and Mary Pickford, and also later worked with Laurel and Hardy."
+   ]
+  },
+  {
+   "id": "728187949f8ec9d4",
+   "gold": [
+    {
+     "sentence": " Upon Victoria's death, the British throne passed to her eldest son Edward VII, a member of the House of Saxe-Coburg and Gotha through his father.",
+     "facts": {
+      "0.0": "Victoria died.",
+      "0.1": "The British throne passed to Victoria's eldest son Edward VII upon her death.",
+      "0.2": "Edward VII was a member of the House of Saxe-Coburg and Gotha through his father."
+     }
+    },
+    {
+     "sentence": "The House of Saxe-Coburg and Gotha ( ; German: \"\") is a German dynasty that ruled the duchy of Saxe-Coburg and Gotha, which was one of the Ernestine duchies.",
+     "facts": {
+      "1.0": "The House of Saxe-Coburg and Gotha is a German dynasty.",
+      "1.1": "The House of Saxe-Coburg and Gotha ruled the duchy of Saxe-Coburg and Gotha.",
+      "1.2": "The duchy of Saxe-Coburg and Gotha was one of the Ernestine duchies."
+     }
+    }
+   ],
+   "items": [
+    "Duke of Bedford\nDuke of Bedford (named after Bedford, England) is a title that has been created six times (for five distinct people) in the Peerage of England.\n\n The first and second creations came in 1414 in favour of Henry IV's third son, John, who later served as regent of France.\n\n He was made Earl of Kendal at the same time and was made Earl of Richmond later the same year.\n\n The titles became extinct on his death in 1435.\n\n The third creation came in 1470 in favour of George Neville, nephew of Warwick the Kingmaker.\n\n He was deprived of the title by Act of Parliament in 1478.\n\n The fourth creation came 1478 in favour of George, the third son of Edward IV.\n\n He died the following year at the age of two.\n\n The fifth creation came in 1485 in favour of Jasper Tudor, half-brother of Henry VI and uncle of Henry VII.\n\n He had already been created Earl of Pembroke in 1452.\n\n However, as he was a Lancastrian, his title was forfeited between 1461 and 1485 during the predominance of the House of York.",
+    "Canada under British rule\nAlthough confederation in 1867 led to an enlarged Dominion with increased autonomy over domestic affairs, Canada still remained a colony within the British Empire and was thus subordinate to the British Parliament until the enactment of the Statute of Westminster in 1931.\n\n This statute recognized Canada as an independent peer coequal with the United Kingdom, and thus provided the Parliament of Canada with legislative sovereignty over all federal matters except the power to change the constitutional laws of Canada which remained under the purview of the Parliament of the United Kingdom.\n\n Canada's final vestige of legal dependence on the United Kingdom was terminated in 1982 with the enactment of the Canada Act, subsequently providing Canada with full legal sovereignty completely independent of the United Kingdom.",
+    "House of Saxe-Coburg and Gotha\nThe House of Saxe-Coburg and Gotha ( ; German: \"\") is a German dynasty that ruled the duchy of Saxe-Coburg and Gotha, which was one of the Ernestine duchies.\n\n It is a cadet branch of the Saxon House of Wettin.",
+    "Duke of Bedford\nHe regained the earldom in 1485 when his nephew Henry VII came to the throne and was elevated to the dukedom the same year.\n\n He had no legitimate children and the titles became extinct on his death in 1495.",
+    "Principality of Calenberg\nThe Principality of Calenberg was a dynastic division of the Welf duchy of Brunswick-Lüneburg established in 1432.\n\n Calenberg was ruled by the House of Hanover from 1635 onwards; the princes received the ninth electoral dignity of the Holy Roman Empire in 1692.\n\n Their territory became the nucleus of the Electorate of Hanover, ruled in personal union with the Kingdom of Great Britain from 1714 onwards.\n\n The principality received its name from Calenberg Castle, a residence of the Brunswick dukes.",
+    "House of Hanover\nThe House of Hanover (or the Hanoverians ; German: \"Haus Hannover\" ) is a German royal dynasty that ruled the Electorate and then the Kingdom of Hanover, and that also provided monarchs of Great Britain and Ireland from 1714 and ruled the United Kingdom until the death of Queen Victoria in 1901.\n\n Upon Victoria's death, the British throne passed to her eldest son Edward VII, a member of the House of Saxe-Coburg and Gotha through his father.",
+    "Succession to the British throne\nSuccession to the British throne is determined by descent, gender (for people born before October 2011), legitimacy, and religion.\n\n Under common law, the Crown is inherited by a sovereign's children or by a childless sovereign's nearest collateral line.\n\n The Bill of Rights 1689 and the Act of Settlement 1701, restrict succession to the throne to the legitimate Protestant descendants of Sophia of Hanover that are in \"communion with the Church of England\".\n\n Spouses of Roman Catholics were disqualified from 1689 until the law was amended in 2015.\n\n Protestant descendants of those excluded for being Roman Catholics are eligible.",
+    "Ernest Augustus, King of Hanover\nErnest Augustus (5 June 1771 – 18 November 1851) was King of Hanover from 20 June 1837 until his death.\n\n He was the fifth son and eighth child of King George III of the United Kingdom and Hanover.\n\n As a fifth son, Ernest seemed unlikely to become a monarch, but none of his four elder brothers had a legitimate son who survived infancy.\n\n The Salic Law, which barred succession to or through a female, prevailed in Hanover; therefore, when his elder brother King William IV died in 1837, Ernest succeeded him as King of Hanover.\n\n In the United Kingdom the succession to the monarchy was determined by primogeniture and his niece Victoria succeeded to the throne, thus ending the personal union between the British Isles and Hanover that had existed since 1714.",
+    "Prince Christian of Hanover (born 1985)\nPrince Christian of Hanover (Christian Heinrich Clemens Paul Frank Peter Welf Wilhelm-Ernst Friedrich Franz Prince of Hanover, Duke of Brunswick and Lüneburg; born 1 June 1985) is the younger son of Ernst August, Prince of Hanover, and his first wife Chantal Hochuli.\n\n He is the second in the line of succession to the former Hanoverian throne, after his elder brother Prince Ernst August.\n\n As a descendant of George III of the United Kingdom, Christian is also in the line of succession to the British throne.",
+    "House of Oldenburg\nThe House of Oldenburg is a European dynasty of North German origin.\n\n It is one of Europe's most influential royal houses, with branches that rule or have ruled in Denmark, Iceland, Greece, Norway, Russia, Sweden, Schleswig, Holstein, and Oldenburg.\n\n The current Queen of Denmark and King of Norway, the former King of Greece, the consorts of Greece and the United Kingdom, as well as the first twelve names in the line of succession to the British throne, are all patrilineal members of the Glücksburg branch of this house."
+   ]
+  },
+  {
+   "id": "a63dbc1ecb2d79ea",
+   "gold": [
+    {
+     "sentence": "Sigmund Werner Paul Jähn (born 13 February 1937) is a German cosmonaut and pilot, who in 1978 became the first East German (and German native) to fly in space as part of the Soviet Union's Interkosmos programme.",
+     "facts": {
+      "0.0": "Sigmund Werner Paul Jähn was born on 13 February 1937.",
+      "0.1": "Sigmund Werner Paul Jähn is a German cosmonaut.",
+      "0.2": "Sigmund Werner Paul Jähn is a pilot.",
+      "0.3": "In 1978 Sigmund Werner Paul Jähn became the first East German to fly in space.",
+      "0.4": "In 1978 Sigmund Werner Paul Jähn became the first German native to fly in space.",
+      "0.5": "The 1978 flight by Sigmund Werner Paul Jähn was part of the Soviet Union's Interkosmos programme."
+     }
+    },
+    {
+     "sentence": "Arne Christer Fuglesang (] ) (born March 18, 1957 in Stockholm) is a Swedish physicist and an ESA astronaut.",
+     "facts": {
+      "1.0": "Arne Christer Fuglesang was born on March 18, 1957.",
+      "1.1": "Arne Christer Fuglesang was born in Stockholm.",
+      "1.2": "Arne Christer Fuglesang is a Swedish physicist.",
+      "1.3": "Arne Christer Fuglesang is an ESA astronaut."
+     }
+    },
+    {
+     "sentence": " He was first launched aboard the STS-116 Space Shuttle mission on December 10, 2006, at 01:47 GMT, making him the first Swedish citizen in space.",
+     "facts": {
+      "2.0": "Arne Christer Fuglesang was first launched aboard the STS-116 Space Shuttle mission.",
+      "2.1": "That launch was on December 10, 2006, at 01:47 GMT.",
+      "2.2": "Arne Christer Fuglesang became the first Swedish citizen in space."
+     }
+    }
+   ],
+   "items": [
+    "Bertalan Farkas\nBertalan Farkas (born August 2, 1949) is the first Hungarian cosmonaut and the first Esperantist in space.\n\n He is currently the president of Airlines Service and Trade.\n\n With Charles Simonyi's travel, Farkas is no longer the only Hungarian who has been to space (he is still the only astronaut, as Simonyi flew as a space tourist).",
+    "Samantha Cristoforetti\nSamantha Cristoforetti (] ; born 26 April 1977 in Milan) is an Italian European Space Agency astronaut, Italian Air Force pilot and engineer.\n\n She holds the record for the longest uninterrupted spaceflight of a European astronaut (199 days, 16 hours), and until June 2017 held the record for the longest single space flight by a woman until this was broken by Peggy Whitson.\n\n She is also the first Italian woman in space.\n\n Samantha Cristoforetti is also known as the first person who brewed an espresso coffee in space.",
+    "John Christiansen\nJohn “Chris” Christiansen (May 1, 1923 － September 12, 1998) was the chief military test pilot for Lockheed California Company for over 30 years.\n\n He might be most known for having performed Lockheed S-3 Viking's maiden flight on January 21, 1972.\n\n His assignments also included the initial test flights of Lockheed P-3 Orion.\n\n Christiansen was born in Oslo, Norway in 1923 and became an American citizen in 1939.\n\n He later served in the U.S. Navy during World War II and the Korean Conflict.\n\n He began experimental flying for Lockheed Martin in 1953, and worked there until his retirement in 1984.\n\n He was a fellow at Society of Experimental Test Pilots.",
+    "Christer Fuglesang\nArne Christer Fuglesang (] ) (born March 18, 1957 in Stockholm) is a Swedish physicist and an ESA astronaut.\n\n He was first launched aboard the STS-116 Space Shuttle mission on December 10, 2006, at 01:47 GMT, making him the first Swedish citizen in space.",
+    "Hans Schlegel\nHans Wilhelm Schlegel (Überlingen, 3 August 1951) is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions.",
+    "Ulf Merbold\nDr. Ulf Dietrich Merbold (born June 20, 1941) is the first West German citizen and second German native (after Sigmund Jähn) to have flown in space.\n\n He is also the first member of the European Space Agency Astronaut Corps to participate in a spaceflight mission and the first non-US citizen to reach orbit in a US spacecraft.\n\n In 1983, he and Byron Lichtenberg became the first Payload Specialists to fly on the shuttle.",
+    "Jean-Loup Chrétien\nJean-Loup Jacques Marie Chrétien (born 20 August 1938) is a French retired \"Général de Brigade\" (brigadier general) in the \"Armée de l'Air\" (French air force), and a former CNES spationaut.\n\n He flew on two Franco-Soviet space missions and a NASA Space Shuttle mission.\n\n Chrétien was the first Frenchman and the first western European in space.",
+    "Sigmund Jähn\nSigmund Werner Paul Jähn (born 13 February 1937) is a German cosmonaut and pilot, who in 1978 became the first East German (and German native) to fly in space as part of the Soviet Union's Interkosmos programme.",
+    "Claude Nicollier\nClaude Nicollier (born 2 September 1944 in Vevey, Switzerland) is the first astronaut from Switzerland.\n\n He has flown on four Space Shuttle missions.\n\n His first spaceflight (STS-46) was in 1992, and his final spaceflight (STS-103) was in 1999.\n\n He took part in two servicing missions to the Hubble Space Telescope (called STS-61 and STS-103).\n\n During his final spaceflight he participated in a spacewalk, becoming the first European Space Agency astronaut to do so during a Space Shuttle mission (previous ESA astronauts conducted spacewalks aboard \"Mir\", see List of spacewalks and moonwalks 1965–1999).\n\n In 2000 he was assigned to the Astronaut Office Extravehicular Activity Branch, while maintaining a position as Lead ESA Astronaut in Houston.\n\n Nicollier retired from ESA in April 2007.",
+    "Eberhard Köllner\nEberhard Köllner (born 29 September 1939 in Stassfurt, Germany) was selected for Soyuz 31 as the backup for Sigmund Jähn."
+   ]
+  },
+  {
+   "id": "77517805a7c300af",
+   "gold": [
+    {
+     "sentence": "Georg Ferdinand Ludwig Philipp Cantor ( ; ] ; March 3 [O.S. February 19] 1845  – January 6, 1918) was a German mathematician.",
+     "facts": {
+      "0.0": "Georg Ferdinand Ludwig Philipp Cantor was born on March 3, 1845.",
+      "0.1": "The birth date of Georg Ferdinand Ludwig Philipp Cantor is also given as February 19, 1845 in the Old Style calendar.",
+      "0.2": "Georg Ferdinand Ludwig Philipp Cantor died on January 6, 1918.",
+      "0.3": "Georg Ferdinand Ludwig Philipp Cantor was a German mathematician."
+     }
+    },
+    {
+     "sentence": "Vladimir Igorevich Arnold (alternative spelling Arnol'd, Russian: Влади́мир И́горевич Арно́льд , 12 June 1937 – 3 June 2010) was a Soviet and Russian mathematician.",
+     "facts": {
+      "1.0": "Vladimir Igorevich Arnold is also spelled Arnol'd.",
+      "1.1": "Vladimir Igorevich Arnold's name in Russian is Влади́мир И́горевич Арно́льд.",
+      "1.2": "Vladimir Igorevich Arnold was born on 12 June 1937.",
+      "1.3": "Vladimir Igorevich Arnold died on 3 June 2010.",
+      "1.4": "Vladimir Igorevich Arnold was a Soviet mathematician.",
+      "1.5": "Vladimir Igorevich Arnold was a Russian mathematician."
+     }
+    }
+   ],
+   "items": [
+    "Benedict Arnold\nBenedict Arnold (January 14, 1741 [O.S. January 3, 1740] June 14, 1801) was a general during the American Revolutionary War, who fought for the American Continental Army, and later defected to the British Army.\n\n While a general on the American side, he obtained command of the fortifications at West Point, New York (which after 1802 would become the site of the U.S. Military Academy), overlooking the cliffs at the Hudson River (upriver from British-occupied New York City), and planned to surrender them to British forces.\n\n This plan was exposed in September 1780.\n\n He was commissioned into the British Army as a brigadier general.",
+    "Otto Struve\nOtto Struve (August 12, 1897 – April 6, 1963) was a astronomer.\n\n In Russian, his name is sometimes given as Otto Lyudvigovich Struve (Отто Людвигович Струве); however, he spent most of his life and his entire scientific career in the United States.\n\n Otto was the descendant of famous astronomers of the Struve family; he was the son of Ludwig Struve, grandson of Otto Wilhelm von Struve and great-grandson of Friedrich Georg Wilhelm von Struve.\n\n He was also the nephew of Karl Hermann Struve.",
+    "Cantor–Bernstein theorem\nIn set theory and order theory, the Cantor–Bernstein theorem states that the cardinality of the second type class, the class of countable order types, equals the cardinality of the continuum.\n\n It was used by Felix Hausdorff and named by him after Georg Cantor and Felix Bernstein.\n\n Cantor constructed a family of countable order types with the cardinality of the continuum, and in his 1901 inaugural dissertation Bernstein proved that such a family can have no higher cardinality.",
+    "Walter Dornberger\nMajor-General Dr. Walter Robert Dornberger (6 September 1895 – 27 June 1980) was a German Army artillery officer whose career spanned World War I and World War II.\n\n He was a leader of Nazi Germany's V-2 rocket program and other projects at the Peenemünde Army Research Center.",
+    "Georg Cantor's first set theory article\nGeorg Cantor's first set theory article was published in 1874 and contains the first theorems of transfinite set theory, which studies infinite sets and their properties.\n\n One of these theorems is \"Cantor's revolutionary discovery\" that the set of all real numbers is uncountably, rather than countably, infinite.\n\n This theorem is proved using Cantor's first uncountability proof, which differs from the more familiar proof using his diagonal argument.\n\n The title of the article, \"On a Property of the Collection of All Real Algebraic Numbers\" (\"Ueber eine Eigenschaft des Inbegriffes aller reellen algebraischen Zahlen \"), refers to its first theorem: the set of real algebraic numbers is countable.",
+    "Semyon Aranovich Gershgorin\nSemyon Aronovich Gershgorin (August 24, 1901 – May 30, 1933) was a Soviet (born in Pruzhany, Belarus, Russian Empire) mathematician.\n\n He began as a student at the Petrograd Technological Institute in 1923, became a Professor in 1930, and was given an appointment at the Leningrad Mechanical Engineering Institute in the same year.\n\n His contributions include the Gershgorin circle theorem.",
+    "Georg Cantor\nGeorg Ferdinand Ludwig Philipp Cantor ( ; ] ; March 3 [O.S. February 19] 1845  – January 6, 1918) was a German mathematician.\n\n He invented set theory, which has become a fundamental theory in mathematics.\n\n Cantor established the importance of one-to-one correspondence between the members of two sets, defined infinite and well-ordered sets, and proved that the real numbers are more numerous than the natural numbers.\n\n In fact, Cantor's method of proof of this theorem implies the existence of an \"infinity of infinities\".\n\n He defined the cardinal and ordinal numbers and their arithmetic.\n\n Cantor's work is of great philosophical interest, a fact of which he was well aware.",
+    "Alfred von Arneth\nAlfred Ritter von Arneth (10 July 181930 July 1897) was an Austrian historian.\n\n His principal scholarly work is a ten-volume biography of the Habsburg Empress Maria Theresa, first published in installments from 1863 to 1879 and still regarded as the standard work on the subject.\n\n Born at Vienna, he was the son of Joseph Calasanza von Arneth (1791–1863), a well-known historian and archaeologist, who wrote a history of the Austrian Empire (Vienna, 1827) and several works on numismatics and brother of Doctor Franz Hektor von Arneth (1818–1907).",
+    "Vladimir Arnold\nVladimir Igorevich Arnold (alternative spelling Arnol'd, Russian: Влади́мир И́горевич Арно́льд , 12 June 1937 – 3 June 2010) was a Soviet and Russian mathematician.\n\n While he is best known for the Kolmogorov–Arnold–Moser theorem regarding the stability of integrable systems, he made important contributions in several areas including dynamical systems theory, catastrophe theory, topology, algebraic geometry, symplectic geometry, differential equations, classical mechanics, hydrodynamics and singularity theory, including posing the ADE classification problem, since his first main result—the solution of Hilbert's thirteenth problem in 1957 at the age of 19.",
+    "Anatoly Maltsev\nAnatoly Ivanovich Maltsev (also: Malcev, Mal'cev; Russian: Анато́лий Ива́нович Ма́льцев; 27 November N.S./14 November O.S. 1909, Moscow Governorate – 7 June 1967, Novosibirsk) was born in Misheronsky, near Moscow, and died in Novosibirsk, USSR.\n\n He was a mathematician noted for his work on the decidability of various algebraic groups. Malcev algebras (generalisations of Lie algebras) are named after him."
+   ]
+  },
+  {
+   "id": "a68960d7fff7aef5",
+   "gold": [
+    {
+     "sentence": "The University of Delaware (colloquially \"UD\") is the largest university in Delaware.",
+     "facts": {
+      "0.0": "The University of Delaware is colloquially called 'UD'.",
+      "0.1": "The University of Delaware is the largest university in Delaware."
+     }
+    },
+    {
+     "sentence": "The University of Debrecen (Hungarian: \"Debreceni Egyetem\" ) is a university located in Debrecen, Hungary.",
+     "facts": {
+      "1.0": "The University of Debrecen's Hungarian name is 'Debreceni Egyetem'.",
+      "1.1": "The University of Debrecen is a university.",
+      "1.2": "The University of Debrecen is located in Debrecen, Hungary."
+     }
+    }
+   ],
+   "items": [
+    "Ellendale, Delaware\nEllendale is a town in Sussex County, Delaware, United States.\n\n The population was 381 at the 2010 census, an increase of 16.5% since 2000.\n\n It is part of the Salisbury, Maryland-Delaware Metropolitan Statistical Area.\n\n Ellendale is the \"Gateway to Delaware's Resort Beaches\" because it is the town located on U.S. Highway 113, the resort area's westernmost border, and Delaware Route 16, the resort area's northernmost border with the eastern border being the Delaware Bay and Atlantic Ocean and the southern border being the state line with Maryland.\n\n Ellendale is home to the Philadelphia Bible College and the Harbor Christian Academy.",
+    "University of Copenhagen\nThe University of Copenhagen (UCPH) (Danish: \"Københavns Universitet\" ) is the oldest university and research institution in Denmark.\n\n Founded in 1479 as a studium generale, it is the second oldest institution for higher education in Scandinavia after Uppsala University (1477).\n\n The university has 23,473 undergraduate students, 17,398 postgraduate students, 2,968 doctoral students and over 9,000 employees.\n\n The university has four campuses located in and around Copenhagen, with the headquarters located in central Copenhagen.\n\n Most courses are taught in Danish; however, many courses are also offered in English and a few in German.\n\n The university has several thousands of foreign students, about half of whom come from Nordic countries.",
+    "Dalhousie University\nDalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick.\n\n Dalhousie offers more than 4,000 courses and 180 degree programs in twelve undergraduate, graduate, and professional faculties.\n\n The university is a member of the U15, a group of research-intensive universities in Canada.",
+    "Delaware–William &amp; Mary football rivalry\nThe Delaware–William & Mary football rivalry between the Delaware Fightin' Blue Hens and the William & Mary Tribe is a match-up between two public universities, the University of Delaware and the College of William and Mary, that are also members of the Colonial Athletic Association.\n\n Both schools have academic reputations that have labeled them as Public Ivies.\n\n Both schools are also Colonial Colleges having been founded before the United States became independent in 1776; the College of William and Mary was founded in 1693 and the University of Delaware's predecessor school was founded in 1743.",
+    "Graph query row:\nuniversity: University of Delaware\nlocated_in: Delaware\ncountry: United States\ncountry_relationship: LOCATED_IN",
+    "Rutgers University–Camden\nRutgers University–Camden is one of three regional campuses of Rutgers University, New Jersey's public research university.\n\n It is located in Camden, New Jersey, United States.\n\n Founded in the 1920s, Rutgers–Camden began as an amalgam of the South Jersey Law School and the College of South Jersey.\n\n It is the southernmost of the three regional campuses of Rutgers—the others being located in New Brunswick and Newark.\n\n The city of Camden is located on the Delaware River, east of Philadelphia.",
+    "University of Debrecen\nThe University of Debrecen (Hungarian: \"Debreceni Egyetem\" ) is a university located in Debrecen, Hungary.\n\n It is the oldest continuously operating institution of higher education in Hungary (since 1538).\n\n The university has a well established programme in the English language for international students, particularly in the Medical field, which first established education in English in 1986.\n\n There are nearly 4000 international students studying at the university.",
+    "University of Delaware Botanic Gardens\nThe University of Delaware Botanic Gardens are botanical gardens and an arboretum located on the campus of the University of Delaware, in Newark, Delaware, United States.\n\n The gardens are open to the public without charge.",
+    "College Park, Delaware\nCollege Park is an unincorporated community in New Castle County, Delaware, United States.\n\n College Park is located along Delaware Route 896 southwest of Newark.",
+    "University of Delaware\nThe University of Delaware (colloquially \"UD\") is the largest university in Delaware.\n\n The main campus is in Newark, with satellite campuses in Dover, Wilmington, Lewes, and Georgetown.\n\n It is considered a large institution with approximately 18,500 undergraduate and 4,500 graduate students. UD is a privately governed university which receives public funding for being a land-grant, sea-grant, space-grant and urban-grant state-supported research institution."
+   ]
+  },
+  {
+   "id": "9bb00bc44e2d0166",
+   "gold": [
+    {
+     "sentence": " It consists of three shots, two Sourz Apple and one Cherry Brandy.",
+     "facts": {
+      "0.0": "The described drink consists of three shots.",
+      "0.1": "The described drink has two shots of Sourz Apple.",
+      "0.2": "The described drink has one shot of Cherry Brandy."
+     }
+    },
+    {
+     "sentence": " Each shot is taken from an average shot glass which is around 1.5 ounces (roughly 45 ml).",
+     "facts": {
+      "1.0": "Each shot is taken from an average shot glass.",
+      "1.1": "An average shot glass holds around 1.5 ounces (roughly 45 ml)."
+     }
+    },
+    {
+     "sentence": "The flaming volcano is a large tropical group cocktail made of rum, brandy, pineapple juice, orange juice, almond syrup, and sometimes other ingredients.",
+     "facts": {
+      "2.0": "The flaming volcano is a large tropical group cocktail.",
+      "2.1": "The flaming volcano is made of rum, brandy, pineapple juice, orange juice and almond syrup.",
+      "2.2": "The flaming volcano is sometimes made with other ingredients."
+     }
+    },
+    {
+     "sentence": " It is usually a multi-user drink, served to a group in a special, ritual vessel known as a volcano bowl, which is a decorative ceramic bowl (typically of about 32 USoz capacity) designed with a rising central hub feature usually resembling a crude volcano cone.",
+     "facts": {
+      "3.0": "The flaming volcano is usually a multi-user drink.",
+      "3.1": "The flaming volcano is served to a group in a special ritual vessel known as a volcano bowl.",
+      "3.2": "A volcano bowl is a decorative ceramic bowl.",
+      "3.3": "A volcano bowl typically has a capacity of about 32 USoz.",
+      "3.4": "A volcano bowl is designed with a rising central hub feature.",
+      "3.5": "The rising central hub feature of a volcano bowl usually resembles a crude volcano cone."
+     }
+    }
+   ],
+   "items": [
+    "Volcano bowl\nVolcano bowls are ceramic drinkware originally associated with mid-20th century American tiki bars and tropical-themed restaurants.\n\n Drinks served in volcano bowls are typically rum-based, mixed with tropical fruit juices and other liquors such as brandy, vodka, and triple sec, and garnished with fruit.\n\n The Flaming Volcano cocktail is especially associated with this drinkware.",
+    "Hotlum Glacier\nThe Hotlum Glacier is a glacier situated on the northeast flank of Mount Shasta, in the US state of California.\n\n It is the largest and most voluminous glacier in California, although not as thick or long as the nearby Whitney Glacier.\n\n The Hotlum Glacier flows from a large cirque on the northeast side of Mount Shasta's main summit below the Hotlum Headwall at roughly 13600 ft .\n\n It flows northeastward down the steep slope, forming three lobes which terminate near 10400 ft .",
+    "Flaming Moe's\n\"Flaming Moe's\" is the tenth episode of \"The Simpsons\"' third season.\n\n It first aired on the Fox network in the United States on November 21, 1991.\n\n In the episode, Homer tells Moe Szyslak of a secret alcoholic cocktail that includes cough medicine and fire that he calls \"Flaming Homer\".\n\n Moe steals the recipe from Homer, renames the drink the \"Flaming Moe\" and begins selling it at his tavern.\n\n The drink is a success and boosts business and patronage, but Homer is angry at Moe for his betrayal, and seeks revenge.",
+    "Volcanic bomb\nA volcanic bomb is a mass of molten rock (tephra) larger than 64 mm (2.5 inches) in diameter, formed when a volcano ejects viscous fragments of lava during an eruption.\n\n They cool into solid fragments before they reach the ground.\n\n Because volcanic bombs cool after they leave the volcano, they are extrusive igneous rocks.\n\n Volcanic bombs can be thrown many kilometres from an erupting vent, and often acquire aerodynamic shapes during their flight.\n\n Bombs can be extremely large; the 1935 eruption of Mount Asama in Japan expelled bombs measuring 5–6 m in diameter up to 600 m from the vent.\n\n Volcanic bombs are a significant volcanic hazard, and can cause severe injuries and death to people in an eruption zone.\n\n One such incident occurred at Galeras volcano in Colombia in 1993; six people near the summit were killed and several seriously injured by lava bombs when the volcano erupted unexpectedly.",
+    "Tweed Volcano\nTweed Volcano is a partially eroded Early Miocene shield volcano located in northeastern New South Wales, which formed when this region of Australia passed over the East Australia hotspot around 23 million years ago.\n\n Mount Warning, Lamington Plateau and the Border Ranges between New South Wales and Queensland are among the remnants of this volcano that was originally over 100 km in diameter and nearly twice the height of Mount Warning today, at 1156 m .\n\n Despite its size, Tweed Volcano was not a supervolcano; other shield volcanoes - such as on Hawaii - are much larger.\n\n In the 23 million years since the volcano was active, erosion has been extensive, forming a large erosion caldera around the volcanic plug of Mount Warning.\n\n Its erosion caldera is the largest in the Southern Hemisphere.",
+    "Flaming volcano\nThe flaming volcano is a large tropical group cocktail made of rum, brandy, pineapple juice, orange juice, almond syrup, and sometimes other ingredients.\n\n It is usually a multi-user drink, served to a group in a special, ritual vessel known as a volcano bowl, which is a decorative ceramic bowl (typically of about 32 USoz capacity) designed with a rising central hub feature usually resembling a crude volcano cone.\n\n The cone includes a second, much smaller central pit or \"crater\" which is partially filled with rum or other flammable high-alcohol liquor.\n\n The \"crater\" liquor is then ignited, creating a mild volcanic ambience with its central blue flame.",
+    "Apple-Kneel\nThe Apple-Kneel is a cocktail.\n\n It consists of three shots, two Sourz Apple and one Cherry Brandy.\n\n Each shot is taken from an average shot glass which is around 1.5 ounces (roughly 45 ml).\n\n Firstly, you put two shots of Sourz Apple into a glass and then put in one shot of Cherry Brandy in and mix.\n\n It is customary to sip this cocktail.\n\n It can be served 'neat' or 'on the rocks'.",
+    "Flaming Doctor Pepper\nA Flaming Doctor Pepper is a flaming cocktail said to taste like the soft drink Dr Pepper, although Dr Pepper is not one of its ingredients.",
+    "Man-eating tree\nMan-eating tree can refer to any of the various legendary carnivorous plants large enough to kill and consume a person or other large animal.\n\n The carnivorous plant with the largest known traps is probably Nepenthes rajah, which produces pitchers up to 41 cm tall with a volume up to 3.5 l .\n\n The pitcher of this species are designed to trap arthropods.\n\n However, the same bait may also attract rodents like the summit rat (\"Rattus baluensis\") and the Mountain treeshrew (\"Tupaia montana\").\n\n Only very rarely will the rodents fall into the large pitchers of this species.\n\n Other large carnivorous plants that have similar properties include Nepenthes robcantleyi and Nepenthes attenboroughi.",
+    "Flaming beverage\nFlaming beverages include cocktails and other mixed drinks that contain flammable, high-proof alcohol, which is ignited prior to consumption.\n\n The alcohol may be an integral part of the drink, or it may be floated as a thin layer across the top of the drink.\n\n The flames are mostly for dramatic flair.\n\n However, in combination with certain ingredients, the flavor of the drink is altered.\n\n Some flavors are enhanced, and it may impart a toasted flavor to some drinks."
+   ]
+  },
+  {
+   "id": "3f3877016c14cd1a",
+   "gold": [
+    {
+     "sentence": "Tender Fictions is a 1996 autobiographical documentary film directed by American experimental filmmaker Barbara Hammer.",
+     "facts": {
+      "0.0": "Tender Fictions is a 1996 autobiographical documentary film.",
+      "0.1": "Tender Fictions was directed by American experimental filmmaker Barbara Hammer."
+     }
+    },
+    {
+     "sentence": "Bougainville – Our Island Our Fight is a 1998 Australian documentary film.",
+     "facts": {
+      "1.0": "Bougainville – Our Island Our Fight is a 1998 Australian documentary film."
+     }
+    },
+    {
+     "sentence": " It was produced and directed by Wayne Coles-Janess.",
+     "facts": {
+      "2.0": "Bougainville – Our Island Our Fight was produced by Wayne Coles-Janess.",
+      "2.1": "Bougainville – Our Island Our Fight was directed by Wayne Coles-Janess."
+     }
+    }
+   ],
+   "items": [
+    "Wayne Coles-Janess\nWayne Coles-Janess is an Australian producer, writer and director of drama and documentary film and TV programs.\n\n Based in Melbourne, Australia, he has produced documentaries about frontier places in the country.\n\n He has also made some documentaries in several international locations, including during times of war.",
+    "Beyond This Place (2010 film)\nBeyond This Place (2010) is a documentary film directed by Kaleo La Belle, screened at a number of film festivals.\n\n In it, La Belle reunites with his biological father Cloud Rock La Belle, a charismatic figure who was largely absent from his life.\n\n The film deals, in a personal and intimate way, with issues of parenting, issues of freedom versus responsibility, and with the aging of the 60's generation.",
+    "Bougainville – Our Island Our Fight\nBougainville – Our Island Our Fight is a 1998 Australian documentary film.\n\n It was produced and directed by Wayne Coles-Janess.",
+    "Life at the End of the Rainbow\nLife at the End of the Rainbow is a 2002 documentary by Australian filmmaker Wayne Coles-Janess about the small farming community of Rainbow, population 500, which lies on the edge of the Big Desert, North Western Victoria, Australia.\n\n It is 55 minutes long.",
+    "The Boys in Company C\nThe Boys in Company C, directed by Sidney J. Furie, starring Stan Shaw, Andrew Stevens, Craig Wasson, James Canning, and Michael Lembeck, is a 1978 film about United States Marine Corps recruits preparing for duty, and their subsequent combat in the Vietnam War.\n\n It was among the first Vietnam War films to appear after the Vietnam Era, and was also the first role for R. Lee Ermey of \"Full Metal Jacket\" fame.\n\n \"The Boys in Company C\" is the first in Furie's Vietnam War motion picture trilogy, followed by 2001's \"Under Heavy Fire\" and 2006's \"The Veteran\".",
+    "The Man from Snowy River (1982 film)\nThe Man from Snowy River is a 1982 Australian drama film based on the Banjo Paterson poem \"The Man from Snowy River\".\n\n The film had a cast including Kirk Douglas in a dual role as the brothers Harrison (a character who appeared frequently in Paterson's poems) and Spur, Jack Thompson as Clancy, Tom Burlinson as Jim Craig, Sigrid Thornton as Harrison's daughter Jessica, Terence Donovan as Jim's father Henry Craig, and Chris Haywood as Curly.",
+    "Bruce Rowland\nBruce Rowland (born May 9, 1942 in Melbourne) is a well-known Australian composer.\n\n He composed the soundtrack for the 1982 movie \"The Man from Snowy River\", as well as the soundtrack for its 1988 sequel \"The Man from Snowy River II\" (which has the United States title of \"Return to Snowy River\", and the United Kingdom title of \"The Untamed\").\n\n Both films were based on Banjo Paterson's poem The Man from Snowy River.\n\n His other film scores include \"Now and Forever\" (1983), \"Phar Lap\" (1983), \"Bushfire Moon\" (1987), \"Cheetah\" (1989), \"Weekend with Kate\" (1990), \"Gross Misconduct\" (1993), \"Andre\" (1994), \"Lightning Jack\" (1994), \"Zeus and Roxanne\" (1997) and the TV movie \"\" (1997).",
+    "The Coconut Revolution\nThe Coconut Revolution is a 2001 multi-award winning documentary film about the struggle of the indigenous peoples of Bougainville Island during the Bougainville Civil War.\n\n The movement is described as the \"world's first successful eco-revolution\" and has drawn parallels with the conflict depicted in the 2009 film, \"Avatar\".",
+    "Tender Fictions\nTender Fictions is a 1996 autobiographical documentary film directed by American experimental filmmaker Barbara Hammer.\n\n It is the second of a trilogy of documentary films that includes \"Nitrate Kisses\" and \"History Lessons\".\n\n Together, the three films are sometimes known as the \"History trilogy\".\n\n \"Tender Fictions\" details Hammer's life and her attempts to \"construct\" a self.\n\n The film was nominated for a prize at the 1996 Sundance Film Festival.",
+    "In the Shadow of the Palms\nIn the Shadow of the Palms (2005) is a documentary produced and directed by the Australian filmmaker Wayne Coles-Janess.\n\n He filmed it in Iraq prior to, during and after the fall of Saddam Hussein after the United States invasion of 2003.\n\n An Arab-language film, it documents the changes in Iraqi society and the lives of ordinary Iraqis by focusing on a cross-section of individuals."
+   ]
+  },
+  {
+   "id": "8510ea1504f8654e",
+   "gold": [
+    {
+     "sentence": "Adam Fox (1883 – 1977), Canon, was the Dean of Divinity at Magdalen College, Oxford.",
+     "facts": {
+      "0.0": "Adam Fox lived from 1883 to 1977.",
+      "0.1": "Adam Fox was a Canon.",
+      "0.2": "Adam Fox was the Dean of Divinity at Magdalen College, Oxford."
+     }
+    },
+    {
+     "sentence": " He was one of the first members of the \"Inklings\", a literary group which also included C.S. Lewis and J.R.R. Tolkien.",
+     "facts": {
+      "1.0": "Adam Fox was one of the first members of the Inklings.",
+      "1.1": "The Inklings was a literary group.",
+      "1.2": "The Inklings also included C.S. Lewis.",
+      "1.3": "The Inklings also included J.R.R. Tolkien."
+     }
+    },
+    {
+     "sentence": "The Inklings was an informal literary discussion group associated with the University of Oxford, England, for nearly two decades between the early 1930s and late 1949.",
+     "facts": {
+      "2.0": "The Inklings was an informal literary discussion group.",
+      "2.1": "The Inklings was associated with the University of Oxford, England.",
+      "2.2": "The Inklings lasted for nearly two decades.",
+      "2.3": "The Inklings operated between the early 1930s and late 1949."
+     }
+    }
+   ],
+   "items": [
+    "Litbits\nLitbits is a literary discussion radio programme and podcast, hosted by academic Adam Smyth and literary journalist James Kidd.\n\n Guests on the programme have included Polly Russell, Paul Myerscough, Alex von Tunzelmann, Samantha Ellis, Jonathan Beckman, Hallie Rubenhold, Steve Rose, Joe Brooker, Dennis Duncan, Dinah Roe, Giles Milton and Liane Strauss.\n\n Subjects covered include Rooms and Procrastination.",
+    "Andrew Benjamin\nAndrew Benjamin (born 1952, Australia) is an Australian philosopher.\n\n Currently he holds two academic posts: Distinguished Professor of Philosophy and the Humanities at Kingston University, London and Professor of Philosophy and Jewish Thought in the Department of Philosophy and the Australian Centre for Jewish Civilization at Monash University, Melbourne, Australia.\n\n Benjamin first came to critical attention with his writings in continental philosophy, writing articles and editing books on the thinking of Martin Heidegger, Theodor Adorno, Walter Benjamin, Julia Kristeva and Jean-François Lyotard.\n\n Benjamin has become involved in the field of architecture, to the extent that he has also taught in various schools of architecture in UK, US and Australia.",
+    "Donald Allen\nDonald Merriam Allen (Iowa, 1912 – San Francisco, August 29, 2004) was an influential editor, publisher, and translator of contemporary American literature.\n\n He is perhaps best known for his project \"The New American Poetry 1945-1960\" (1960), among the several important anthologies of contemporary American innovative writing he made available to the public.\n\n Allen began his working life as a Japanese translator within the US military, serving in WWII.\n\n After his military service, Allen became an editor at Grove Press, where he worked for sixteen years.\n\n He was one of the first translators of the Romanian-French Absurdist playwright Eugène Ionesco, and Allen's 1958 volume \"Four Plays of Eugène Ionesco\" helped to introduce the playwright to American audiences in the 1960s.",
+    "Inklings\nThe Inklings was an informal literary discussion group associated with the University of Oxford, England, for nearly two decades between the early 1930s and late 1949.\n\n The Inklings were literary enthusiasts who praised the value of narrative in fiction and encouraged the writing of fantasy.",
+    "Adam Fox\nAdam Fox (1883 – 1977), Canon, was the Dean of Divinity at Magdalen College, Oxford.\n\n He was one of the first members of the \"Inklings\", a literary group which also included C.S. Lewis and J.R.R. Tolkien.\n\n Between 1938 and 1942 he was Professor of Poetry.\n\n Later he became Canon of Westminster Abbey and he is buried there in Poet's Corner.\n\n He was also Warden (Headmaster) of the famous Radley College.",
+    "James F. Light\nJames F. Light was an American literary scholar, university vice president, and provost.\n\n During his academic career, he helped revive the works of satirist Nathanael West, with the first book length critical study of his work, \"Nathanael West: An Interpretive Study\", (Northwestern Univ.\n\n Press, 1961).\n\n He was also the leading authority on John William De Forest, the early American realist whose work he critiqued in \"John William De Forest\" (Twayne Pub., 1965), and he wrote extensively on J. D. Salinger, Robert Penn Warren and others.",
+    "Eagle Street College\nThe Eagle Street College was an informal literary society established in 1885 at the home of James William Wallace in Eagle Street, Bolton, to read and discuss literary works, particularly the poetry of Walt Whitman, (1819–91).\n\n The group subsequently became known as the Bolton Whitman Fellowship or Whitmanites.\n\n Its founder members were Wallace, Dr John Johnston and Fred Wild.\n\n The group held an annual 'Whitman Day' celebration around the 31 May which was the poet's birthday.",
+    "Falmouth University\nFalmouth University (Cornish: Pennskol Aberfala ) is a specialist University for the creative industries based in Falmouth and Penryn, Cornwall, England.\n\n Founded in 1902, it had previously been the Falmouth School of Art, Falmouth College of Art and Design and then Falmouth College of Arts until it received taught degree-awarding powers, and the right to use the title \"University College\", in March 2005.\n\n In April 2008, University College Falmouth merged with Dartington College of Arts, adding a range of Performance courses to its portfolio.\n\n On 27 November 2012, a communication was released to the staff and students and local press that 'University College Falmouth is to be granted full university status in a move that will further its ambition to become one of the top five arts universities in the world.'\n\n On 9 December 2012, the University College was officially granted full university status by the Privy Council.\n\n Falmouth University was judged by The Sunday Times to be the UK’s top arts university from 2015-2017.",
+    "Alpha Gamma\nAlpha Gamma (ΑΓ) was an American collegiate fraternity.\n\n It was founded at Cumberland University in Lebanon, Tennessee in 1867.\n\n About 21 chapters developed, with prominent chapters at Washington & Jefferson College, Trinity University, Mercersburg College, Southwestern Presbyterian University, Cumberland University, and the West Virginia University.\n\n The fraternity's badge consisted of a golden shield with a globe, six stars, and a pennant with \"ΑΓ.\"",
+    "We Are Poets\nWe Are Poets is a documentary film directed by Daniel Lucchesi and Alex Ramseyer-Bache.\n\n It follows six young poets from Leeds Young Authors performance poetry group in Leeds on their visit to the international Poetry Slam Competition in Washington D.C, United States.\n\n It premièred at Europe's largest Documentary Film festival - Doc/Fest in Sheffield's Showroom Cinema on 11 June 2011, where it won the coveted Sheffield Youth Jury Award."
+   ]
+  },
+  {
+   "id": "78577320ce777739",
+   "gold": [
+    {
+     "sentence": " He appeared in 57 films between 1919 and 1932.",
+     "facts": {
+      "0.0": "The person described appeared in 57 films.",
+      "0.1": "The person described appeared in 57 films between 1919 and 1932."
+     }
+    },
+    {
+     "sentence": " He also directed 54 films between 1920 and 1933, including one Harry Langdon short, two of the Tay Garnett- penned comedies Stan Laurel made for Joe Rock, and fifteen of the earliest entries in the Edgar Kennedy \"Average Man\" series.",
+     "facts": {
+      "1.0": "The person described directed 54 films.",
+      "1.1": "The person described directed these films between 1920 and 1933.",
+      "1.2": "The person's directed films include one Harry Langdon short.",
+      "1.3": "The person's directed films include two of the Tay Garnett-penned comedies Stan Laurel made for Joe Rock.",
+      "1.4": "The person's directed films include fifteen of the earliest entries in the Edgar Kennedy \"Average Man\" series."
+     }
+    },
+    {
+     "sentence": "John Scott Biddle (1925–2008) was a foremost yachting cinematographer and lecturer, establishing a film-making career that spanned more than forty years.",
+     "facts": {
+      "2.0": "John Scott Biddle lived from 1925 to 2008.",
+      "2.1": "John Scott Biddle was a foremost yachting cinematographer.",
+      "2.2": "John Scott Biddle was a lecturer.",
+      "2.3": "John Scott Biddle established a film-making career.",
+      "2.4": "John Scott Biddle's film-making career spanned more than forty years."
+     }
+    }
+   ],
+   "items": [
+    "Charles John Biddle\nCharles John Biddle (April 30, 1819 – September 28, 1873) was an American soldier, lawyer, congressman, and newspaper editor.",
+    "Millard Webb\nMillard Webb (6 December 1893 – 21 April 1935), was an American screenwriter and director.\n\n He directed 20 films between 1920 and 1933.\n\n His best-known film is the 1926 silent John Barrymore adventure \"The Sea Beast\" costarring Dolores Costello.\n\n Webb also directed the early sound Florenz Ziegfeld produced talkie \"Glorifying the American Girl\" released by Paramount in 1929.\n\n His active years were from 1916 to 1933.",
+    "Charles J. Biddle (aviator)\nMajor Charles John Biddle (13 May 1890 – 22 March 1972) was an American aviator, attorney, and author.\n\n He was a flying ace during World War I.\n\n Postwar, he launched a career in law and wrote his memoirs.",
+    "Alexander Butler\nAlexander Butler was a British film director who made over sixty features and short films during the 1910s and 1920s including many for G.B. Samuelson's production company.\n\n Butler directed several British films in Hollywood in 1920, where Samuelson had made an arrangement with Universal Pictures.\n\n Amongst his notable films are the Sherlock Holmes adaptation \"The Valley of Fear\" (1916) and the early British horror film \"The Beetle\" (1919).",
+    "John Biddle (Michigan politician)\nJohn Biddle (March 2, 1792 – August 25, 1859) was a delegate to the United States Congress from the Michigan Territory.",
+    "John Biddle (Unitarian)\nJohn Biddle or Bidle (born Wotton-under-Edge, Gloucestershire, England, 14 January 1615 – died 22 September 1662) was an influential English nontrinitarian, and Unitarian.\n\n He is often called \"the Father of English Unitarianism\".",
+    "Biddle family\nThe American Biddle family of Philadelphia began when William Biddle (1630–1712) and Sarah Kempe (1634–1709), Quakers, emigrated from England to America in 1681, in part, to avoid religious persecution.\n\n Having acquired extensive rights to over 43000 acre of lands in Quaker West Jersey, they settled first at Burlington.\n\n Two third generation brothers, William Biddle, 3rd (1698–1756), and John Biddle (1707–1789), moved from Mount Hope (1684) near Bordentown to Philadelphia in the 1720s and 1730s and constituted the first generation of the Philadelphia Biddle family.",
+    "Harry Sweet\nHarry Sweet (October 2, 1901 – June 18, 1933) was an American actor, director and screenwriter.\n\n He appeared in 57 films between 1919 and 1932.\n\n He also directed 54 films between 1920 and 1933, including one Harry Langdon short, two of the Tay Garnett- penned comedies Stan Laurel made for Joe Rock, and fifteen of the earliest entries in the Edgar Kennedy \"Average Man\" series.",
+    "John Biddle (United States Army general)\nJohn Biddle (February 2, 1859 – January 18, 1936) was career United States Army officer who became superintendent of the United States Military Academy.",
+    "John Biddle (yachting cinematographer)\nJohn Scott Biddle (1925–2008) was a foremost yachting cinematographer and lecturer, establishing a film-making career that spanned more than forty years.\n\n His films captured not only the technical aspects of sailing but also the human story in events as tranquil as a Nova Scotia cruise and as grand as the America's Cup Races."
+   ]
+  },
+  {
+   "id": "0dc5c55a9aadf0b2",
+   "gold": [
+    {
+     "sentence": " The 381-ton vessel was armed with a 12-pounder 12cwt QF gun, a 20mm Oerlikon cannon, a .303-inch Vickers machine gun, and four Type D depth charges, and was commissioned into the RAN on 11 June 1941.",
+     "facts": {
+      "0.0": "The vessel weighed 381 tons.",
+      "0.1": "The vessel was armed with a 12-pounder 12cwt QF gun.",
+      "0.2": "The vessel was armed with a 20mm Oerlikon cannon.",
+      "0.3": "The vessel was armed with a .303-inch Vickers machine gun.",
+      "0.4": "The vessel was armed with four Type D depth charges.",
+      "0.5": "The vessel was commissioned into the RAN on 11 June 1941."
+     }
+    },
+    {
+     "sentence": " It was in service from before the First World War until the 1960s, with air-cooled versions of it on many Allied World War I fighter aircraft.",
+     "facts": {
+      "1.0": "This item was in service from before the First World War until the 1960s.",
+      "1.1": "Air-cooled versions of this item were on many Allied World War I fighter aircraft."
+     }
+    }
+   ],
+   "items": [
+    "AK-630\nThe AK-630 is a Soviet and Russian fully automatic naval close-in weapon system based on a six-barreled 30 mm rotary cannon.\n\n In \"630\", \"6\" means 6 barrels and \"30\" means 30 mm.\n\n It is mounted in an enclosed automatic turret and directed by radar and television detection and tracking.\n\n The system's primary purpose is defense against anti-ship missiles and other precision guided weapons.\n\n However it can also be employed against fixed or rotary wing aircraft, ships and other small craft, coastal targets, and floating mines.\n\n Once operational, this weapon system was rapidly adopted, with up to 8 units installed in every new Soviet warship (from mine-hunters to aircraft carriers), and hundreds produced in total.",
+    "HMAS Narani\nHMAS \"Narani\" was an auxiliary minesweeper operated by the Royal Australian Navy (RAN) during World War II.\n\n \"Narani\" was requisitioned from the Illawarra & South Coast Steam Navigation Company as auxiliaries.\n\n The 381-ton vessel was armed with a 12-pounder 12cwt QF gun, a 20mm Oerlikon cannon, a .303-inch Vickers machine gun, and four Type D depth charges, and was commissioned into the RAN on 11 June 1941.",
+    "HMS Illustrious (87)\nHer aircraft attacked several targets in the Japanese-occupied Dutch East Indies over the following year before \"Illustrious\" was transferred to the newly formed British Pacific Fleet (BPF).\n\n The carrier participated in the early stages of the Battle of Okinawa until mechanical defects arising from accumulated battle damage became so severe that she was ordered home early for repairs in May 1945.",
+    "Vickers machine gun\nThe Vickers machine gun or Vickers gun is a name primarily used to refer to the water-cooled .303 British (7.7 mm) machine gun produced by Vickers Limited, originally for the British Army.\n\n The machine gun typically required a six to eight-man team to operate: one fired, one fed the ammunition, the rest helped to carry the weapon, its ammunition, and spare parts.\n\n It was in service from before the First World War until the 1960s, with air-cooled versions of it on many Allied World War I fighter aircraft.",
+    "SWARM\nThe SWARM Remote Weapon System (Stabilised Weapon And Reconnaissance Mount) is a fully armored remote weapon system designed and built by the Thales Group in Glasgow, Scotland.\n\n The SWARM system consists of two main assemblies: the Gun Processing and Interface Unit (GPIU), which is operated inside the vehicle, and the external Weapon and Sensor Platform (WASP).\n\n It can fire a variety of weapons, and utilize multiple sensors.\n\n On the US Marine Corps' Gladiator Tactical Unmanned Ground Vehicle (TUGV), it is equipped with a 7.62 mm M240 and day/night sensors.",
+    "Pershing II\nThe Pershing II Weapon System was a solid-fueled two-stage ballistic missile designed and built by Martin Marietta to replace the Pershing 1a Field Artillery Missile System as the United States Army's primary nuclear-capable theater-level weapon.\n\n The U.S. Army replaced the Pershing 1a with the Pershing II Weapon System in 1983 while the German Air Force retained Pershing 1a until all Pershings were eliminated in 1991.\n\n The U.S. Army Missile Command (MICOM) managed the development and improvements while the Field Artillery Branch deployed the systems and developed tactical doctrine.",
+    "HMS Illustrious (87)\nHMS \"Illustrious\" was the lead ship of her class of aircraft carriers built for the Royal Navy before World War II.\n\n Her first assignment after completion and working up was with the Mediterranean Fleet, in which her aircraft's most notable achievement was sinking one Italian battleship and badly damaging two others during the Battle of Taranto in late 1940.\n\n Two months later the carrier was crippled by German dive bombers and was repaired in the United States.\n\n After sustaining damage on the voyage home in late 1941 by a collision with her sister ship \"Formidable\" , \"Illustrious\" was sent to the Indian Ocean in early 1942 to support the invasion of Vichy French Madagascar (Operation Ironclad).\n\n After returning home in early 1943, the ship was given a lengthy refit and briefly assigned to the Home Fleet.\n\n She was transferred to Force H for the Battle of Salerno in mid-1943 and then rejoined the Eastern Fleet in the Indian Ocean at the beginning of 1944.",
+    "HMS Diomede (D92)\nHMS \"Diomede\" was a \"Danae\"-class cruiser of the Royal Navy.\n\n Constructed at Vickers Armstrong, Barrow, she was constructed too late to take part in World War I and was consequently completed at the Royal Dockyard, Portsmouth.\n\n Between the wars, she served on the China Station, Pacific waters, East Indies Waters and from 1936 onwards, in reserve.\n\n In World War II she performed four years of arduous war duty, during which time she captured the German blockade runner \"Idarwald\" .\n\n Between 22 July 1942 and 24 September 1943 she was converted to a training ship at Rosyth Dockyard.\n\n In 1945 she was placed in reserve and scrapped a year later.",
+    "List of sunken aircraft carriers\nWith the advent of heavier-than-air flight, the aircraft carrier has become a decisive weapon at sea.\n\n In 1911 aircraft began to be successfully launched and landed on ships with the successful flight of a Curtiss Pusher aboard the USS \"Pennsylvania\".\n\n The British Royal Navy pioneered the first aircraft carrier as floatplanes, as flying boats under performed compared to traditional land based aircraft.\n\n The first true aircraft carrier was the HMS \"Argus\" , launched in late 1917 with a complement of 20 aircraft, a flight deck of 550 ft and 68 ft wide.\n\n The last aircraft carrier sunk in wartime was the Japanese carrier \"Amagi\", in Kure Harbour in July 1945.\n\n The greatest loss of life was the 2,046 killed on the \"Akitsu Maru\"—a converted passenger liner with a small flight deck, carrying the Imperial Japanese Army's 64th Infantry Regiment.",
+    "Weapon system\nWeapon System is a United States military term that designated, along with a weapon system number (e.g., WS-110), military experimental (MX) weapons prior to official naming (e.g., under a military aircraft designation system.\n\n Preceded by the first Skunk Works program (MX-813 for the Convair XF-92 in 1946), the earliest \"WS\" designation was the 1954 WS-117L.\n\n Circa February 1950, an Air Research and Development Command \"\"study prepared by Maj Gen Gordon P. Saville ... recommended that a 'systems approach' to new weapons be adopted \"[whereby]\" development of a weapon \"system\" required development of support equipment as well as the actual hardware itself.\"\""
+   ]
+  },
+  {
+   "id": "c76137c01940cd86",
+   "gold": [
+    {
+     "sentence": "Jeffrey Charles \"Jeff\" Ragsdale ( ) is an American author, documentary filmmaker, actor and stand-up comedian.",
+     "facts": {
+      "0.0": "Jeffrey Charles \"Jeff\" Ragsdale is an American author.",
+      "0.1": "Jeffrey Charles \"Jeff\" Ragsdale is a documentary filmmaker.",
+      "0.2": "Jeffrey Charles \"Jeff\" Ragsdale is an actor.",
+      "0.3": "Jeffrey Charles \"Jeff\" Ragsdale is a stand-up comedian."
+     }
+    },
+    {
+     "sentence": "Millard Webb (6 December 1893 – 21 April 1935), was an American screenwriter and director.",
+     "facts": {
+      "1.0": "Millard Webb was born on 6 December 1893.",
+      "1.1": "Millard Webb died on 21 April 1935.",
+      "1.2": "Millard Webb was an American screenwriter.",
+      "1.3": "Millard Webb was an American director."
+     }
+    }
+   ],
+   "items": [
+    "Speedy West\nWesley Webb West (January 25, 1924 – November 15, 2003), better known as Speedy West, was an American pedal steel guitarist and record producer.\n\n He frequently played with Jimmy Bryant, both in their own duo and as part of the regular Capitol Records backing band for Tennessee Ernie Ford and many others.\n\n He also played on Loretta Lynn's first single.",
+    "Jerry Beck\nJerry Beck (born February 9, 1955 in New York City) is an American animation historian, author, blogger, and video producer.\n\n The author and/or editor of several books on classic American animation and classic characters, including \"The 50 Greatest Cartoons\" (1994), \"The Animated Movie Guide\" (2005), \"Not Just Cartoons: Nicktoons!\"\n\n (2007), \"The Flintstones: The Official Guide to the Cartoon Classic\" (2011), \"The Hanna-Barbera Treasury: Rare Art Mementos from Your Favorite Cartoon Classics\" (2007), \"The SpongeBob SquarePants Experience: A Deep Dive into the World of Bikini Bottom\" (2013), \"Pink Panther: The Ultimate Guide\" (2005), and \"Looney Tunes and Merrie Melodies: A Complete Illustrated Guide to the Warner Bros.\n\n Cartoons\" (with Will Friedwald, 1989) alongside \"The 100 Greatest Looney Tunes Cartoons\" (2010).\n\n He is also an authority on the making of modern films, with his books detailing the art of \"Mr.",
+    "Jeff Ragsdale\nJeffrey Charles \"Jeff\" Ragsdale ( ) is an American author, documentary filmmaker, actor and stand-up comedian.\n\n In 2011 he posted a flyer in New York City as a \"social experiment\", stating his phone number and asking people to call him, describing himself as \"Jeff, one lonely guy\".\n\n He was overwhelmed with thousands of calls after photos of the flyer were posted on the internet.\n\n The experience led to his 2012 book \"Jeff, One Lonely Guy\", and indirectly to a 2013 pilot episode for a reality television show, \"Being Noticed\", and a starring role in the 2014 documentary \"Hotline\".",
+    "Uncle Wiggily\nUncle Wiggily Longears is the main character of a series of children's stories by American author Howard R. Garis.\n\n He began writing the stories for the \"Newark News\" in 1910.\n\n Garis penned an Uncle Wiggily story every day (except Sundays) for more than 30 years, and published 79 books within the author's lifetime.\n\n According to his obituary in the \"Chicago Tribune\", a walk in the woods in Verona, New Jersey was his inspiration.\n\n The books featured work by several illustrators, notably Lansing Campbell.\n\n Other illustrators of the series included George L. Carlson, Louis Wisa, Elmer Rache, Edward Bloomfield, Lang Campbell and Mary and Wallace Stover.",
+    "Richard Yoo\nRichard Yoo is an American entrepreneur, the co-founder and former CEO of the web hosting company Rackspace, and the founder and former CEO of web hosting company ServerBeach.",
+    "Howard R. Garis\nHoward Roger Garis ((1873--) 25, 1873 – (1962--) 6, 1962 ) was an American author, best known for a series of books, published under his own name, that featured the character of Uncle Wiggily Longears, an engaging elderly rabbit.\n\n Garis and his wife were possibly the most prolific children's authors of the early 20th century.\n\n Many of his books were illustrated by Lansing Campbell.",
+    "Sandy Rothman\nSandy Rothman (born January 30, 1946, Miami, Florida) is a San Francisco Bay Area bluegrass multi-instrumentalist and record producer.\n\n He plays mandolin, dobro and banjo, and he also sings.\n\n Rothman was a friend and colleague of Grateful Dead bandleader Jerry Garcia, and a member of the Jerry Garcia Acoustic Band.\n\n He played bluegrass with Garcia and David Nelson as the Black Mountain Boys in 1964, and has played with Bill Monroe and his Blue Grass Boys, Earl Taylor, Red Allen, Jimmie Skinner, Larry Sparks, the Kentucky Colonels, Country Joe McDonald, Kathy Kallick and Clarence White, among other musicians.\n\n He has been described as \"one of the chief biscuits when and where bluegrass music is discussed, scribed, or performed in northern California.\"",
+    "Roger Garis\nRoger (Carroll) Garis, ((1901--) 10, 1901 – (1967--) 30, 1967 ) was an American author known as a writer for magazines and the author of \"The Outboard Boys\" series of books.\n\n Roger also wrote several books under pseudonyms for the Stratemeyer Syndicate, as his parents did (see My Father Was Uncle Wiggily for further details).",
+    "Millard Webb\nMillard Webb (6 December 1893 – 21 April 1935), was an American screenwriter and director.\n\n He directed 20 films between 1920 and 1933.\n\n His best-known film is the 1926 silent John Barrymore adventure \"The Sea Beast\" costarring Dolores Costello.\n\n Webb also directed the early sound Florenz Ziegfeld produced talkie \"Glorifying the American Girl\" released by Paramount in 1929.\n\n His active years were from 1916 to 1933.",
+    "Jeff, One Lonely Guy\nJeff, One Lonely Guy is a 2012 nonfiction book by Jeff Ragsdale.\n\n It was published on March 20, 2012 by New Harvest.\n\n Dave Eggers selected the book for inclusion in The Best American Nonrequired Reading 2012, and it was a GQ 2012 \"Book of the Year\".\n\n In 2014 Amitava Kumar included portions of \"Jeff, One Lonely Guy\" in his newly released book, \"A Matter of Rats: A Short Biography of Patna\".\n\n Kumar previously interviewed Ragsdale and wrote about him in \"The New York Times\"."
+   ]
+  }
+ ]
+}

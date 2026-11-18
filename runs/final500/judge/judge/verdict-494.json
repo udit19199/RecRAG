@@ -1,0 +1,102 @@
+[
+{"id": "03e65bc7580720a0", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "All matches were played at HC Davos's home arena, Eisstadion Davos."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "All matches were played at HC Davos's home arena, Eisstadion Davos."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Hockey Club Davos is a professional Swiss ice hockey club based in Davos, Switzerland."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Hockey Club Davos is a professional Swiss ice hockey club based in Davos, Switzerland."}]}
+]},
+{"id": "54402cca68e35bd7", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "He played college football at Hampton University and attended Riverdale High School in Riverdale, Georgia."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "He played college football at Hampton University and attended Riverdale High School in Riverdale, Georgia."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "He played college football at Hampton University and attended Riverdale High School in Riverdale, Georgia."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "04bf9e5f9447e7b0", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "And There's More is a comedy sketch show starring Jimmy Cricket produced by Central Independent Television for ITV from 1985 till 1988."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "And There's More is a comedy sketch show starring Jimmy Cricket produced by Central Independent Television for ITV from 1985 till 1988."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "And There's More is a comedy sketch show starring Jimmy Cricket produced by Central Independent Television for ITV from 1985 till 1988."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "And There's More is a comedy sketch show starring Jimmy Cricket produced by Central Independent Television for ITV from 1985 till 1988."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "And There's More is a comedy sketch show starring Jimmy Cricket produced by Central Independent Television for ITV from 1985 till 1988."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "0025710997fd0a3f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Rick Ray is an American filmmaker best known for his 2006 documentary film 10 Questions for the Dalai Lama which he wrote, filmed and directed."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Rick Ray is an American filmmaker best known for his 2006 documentary film 10 Questions for the Dalai Lama which he wrote, filmed and directed."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Rick Ray is an American filmmaker best known for his 2006 documentary film 10 Questions for the Dalai Lama which he wrote, filmed and directed."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "John Alan Lasseter (born January 12, 1957) is an American animator, film director, screenwriter, and film producer."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "John Alan Lasseter (born January 12, 1957) is an American animator, film director, screenwriter, and film producer."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "John Alan Lasseter (born January 12, 1957) is an American animator, film director, screenwriter, and film producer."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "John Alan Lasseter (born January 12, 1957) is an American animator, film director, screenwriter, and film producer."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 8, "quote": "John Alan Lasseter (born January 12, 1957) is an American animator, film director, screenwriter, and film producer."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "John Alan Lasseter (born January 12, 1957) is an American animator, film director, screenwriter, and film producer."}, {"item": 8, "quote": "He is also the Principal Creative Advisor for Walt Disney Imagineering."}]}
+]},
+{"id": "2cbacc949180f431", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Isaac Asimov ( ; born Isaak Ozimov; January 2, 1920 – April 6, 1992) was a Russian-American writer and professor of biochemistry at Boston University."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Isaac Asimov ( ; born Isaak Ozimov; January 2, 1920 – April 6, 1992) was a Russian-American writer and professor of biochemistry at Boston University."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Isaac Asimov ( ; born Isaak Ozimov; January 2, 1920 – April 6, 1992) was a Russian-American writer and professor of biochemistry at Boston University."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "Isaac Asimov ( ; born Isaak Ozimov; January 2, 1920 – April 6, 1992) was a Russian-American writer and professor of biochemistry at Boston University."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "Isaac Asimov ( ; born Isaak Ozimov; January 2, 1920 – April 6, 1992) was a Russian-American writer and professor of biochemistry at Boston University."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Michael Cunningham (born November 6, 1952) is a U.S. novelist and screenwriter."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Michael Cunningham (born November 6, 1952) is a U.S. novelist and screenwriter."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "Michael Cunningham (born November 6, 1952) is a U.S. novelist and screenwriter."}]}
+]},
+{"id": "64131c0a7076ddb7", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "In Crash, there is no betting, as in Brag, but rather players aim to reach a total of 11 points, gained over successive deals."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "In Crash, there is no betting, as in Brag, but rather players aim to reach a total of 11 points, gained over successive deals."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "In Crash, there is no betting, as in Brag, but rather players aim to reach a total of 11 points, gained over successive deals."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Three-card brag is a 16th-century British card game, and the British national representative of the vying or \"bluffing\" family of gambling games."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Three-card brag is a 16th-century British card game, and the British national representative of the vying or \"bluffing\" family of gambling games."}]}
+]},
+{"id": "c1aa6326a869a384", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Chester Erskine (November 29, 1905 – April 7, 1986) was a Hollywood and Broadway director, writer, and producer."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Chester Erskine (November 29, 1905 – April 7, 1986) was a Hollywood and Broadway director, writer, and producer."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Chester Erskine (November 29, 1905 – April 7, 1986) was a Hollywood and Broadway director, writer, and producer."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "Chester Erskine (November 29, 1905 – April 7, 1986) was a Hollywood and Broadway director, writer, and producer."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "Chester Erskine (November 29, 1905 – April 7, 1986) was a Hollywood and Broadway director, writer, and producer."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Sam Taylor (August 13, 1895, New York City – March 6, 1958, Santa Monica) was a film director, screenwriter, and producer, most active in the silent film era."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Sam Taylor (August 13, 1895, New York City – March 6, 1958, Santa Monica) was a film director, screenwriter, and producer, most active in the silent film era."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "Sam Taylor (August 13, 1895, New York City – March 6, 1958, Santa Monica) was a film director, screenwriter, and producer, most active in the silent film era."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "Sam Taylor (August 13, 1895, New York City – March 6, 1958, Santa Monica) was a film director, screenwriter, and producer, most active in the silent film era."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 1, "quote": "Sam Taylor (August 13, 1895, New York City – March 6, 1958, Santa Monica) was a film director, screenwriter, and producer, most active in the silent film era."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 1, "quote": "Sam Taylor (August 13, 1895, New York City – March 6, 1958, Santa Monica) was a film director, screenwriter, and producer, most active in the silent film era."}]}
+]},
+{"id": "be04e9f6f8a1f539", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Popular Science (also known as PopSci) is an American bi-monthly magazine carrying popular science content, which refers to articles for the general reader on science and technology subjects."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Popular Science (also known as PopSci) is an American bi-monthly magazine carrying popular science content, which refers to articles for the general reader on science and technology subjects."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Popular Science (also known as PopSci) is an American bi-monthly magazine carrying popular science content, which refers to articles for the general reader on science and technology subjects."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "Popular Science (also known as PopSci) is an American bi-monthly magazine carrying popular science content, which refers to articles for the general reader on science and technology subjects."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Girlfriends was a women's magazine that provided critical coverage of culture, entertainment and world events from a lesbian perspective."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Girlfriends was a women's magazine that provided critical coverage of culture, entertainment and world events from a lesbian perspective."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Girlfriends was a women's magazine that provided critical coverage of culture, entertainment and world events from a lesbian perspective."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "Girlfriends was a women's magazine that provided critical coverage of culture, entertainment and world events from a lesbian perspective."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 9, "quote": "Girlfriends was a women's magazine that provided critical coverage of culture, entertainment and world events from a lesbian perspective."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "Girlfriends was a women's magazine that provided critical coverage of culture, entertainment and world events from a lesbian perspective."}, {"item": 9, "quote": "Published monthly from San Francisco since 1993, it was distributed nationwide by Disticor."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "Girlfriends was a women's magazine that provided critical coverage of culture, entertainment and world events from a lesbian perspective."}, {"item": 9, "quote": "Published monthly from San Francisco since 1993, it was distributed nationwide by Disticor."}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 9, "quote": "\"Girlfriends\" magazine ceased publication in 2006."}]}
+]},
+{"id": "931ace3bff0a982f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Mirrors is a 2008 supernatural horror film directed by Alexandre Aja, starring Kiefer Sutherland, Paula Patton, and Amy Smart."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Mirrors is a 2008 supernatural horror film directed by Alexandre Aja, starring Kiefer Sutherland, Paula Patton, and Amy Smart."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Mirrors is a 2008 supernatural horror film directed by Alexandre Aja, starring Kiefer Sutherland, Paula Patton, and Amy Smart."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "Mirrors is a 2008 supernatural horror film directed by Alexandre Aja, starring Kiefer Sutherland, Paula Patton, and Amy Smart."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 10, "quote": "Mirrors is a 2008 supernatural horror film directed by Alexandre Aja, starring Kiefer Sutherland, Paula Patton, and Amy Smart."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Paula Maxine Patton (born December 5, 1975) is an American actress."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Paula Maxine Patton (born December 5, 1975) is an American actress."}]}
+]},
+{"id": "7cbdc7750284c70b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Cacareco's candidacy inspired the Rhinoceros Party of Canada, nominally led by the rhinoceros Cornelius the First."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Cacareco's candidacy inspired the Rhinoceros Party of Canada, nominally led by the rhinoceros Cornelius the First."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "The Rhinoceros Party (French: \"Parti Rhinocéros\") was a registered political party in Canada from the 1960s to the 1990s."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "The Rhinoceros Party (French: \"Parti Rhinocéros\") was a registered political party in Canada from the 1960s to the 1990s."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "The Rhinoceros Party (French: \"Parti Rhinocéros\") was a registered political party in Canada from the 1960s to the 1990s."}]}
+]},
+{"id": "a5e630e82a1cdb8c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Akrofuom is located in the Obuasi Municipal district of the Ashanti Region of Ghana."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Akrofuom is located in the Obuasi Municipal district of the Ashanti Region of Ghana."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "The Obuasi Municipality District is one of the twenty-seven (27) districts of the Ashanti Region of Ghana."}]}
+]}
+]

@@ -1,0 +1,751 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=f4a6f9fc5f74ea20 ===
+Gold sentences and facts:
+Sentence 0: The Eastern Coastal Plains refers to a wide stretch of landmass of India , lying between the Eastern Ghats and the Bay of Bengal . It is wider and leveled than the western coastal plains and stretches from Tamil Nadu in the south to West Bengal in the north through Andhra Pradesh and Odisha . Chilka Lake is a brackish water lake along the eastern coastal plain . It lies in the state of Odisha and stretches to the south of the Mahanadi Delta .
+  Fact 0.0: The Eastern Coastal Plains refers to a wide stretch of landmass of India.
+  Fact 0.1: The Eastern Coastal Plains lie between the Eastern Ghats and the Bay of Bengal.
+  Fact 0.2: The Eastern Coastal Plains are wider and more leveled than the western coastal plains.
+  Fact 0.3: The Eastern Coastal Plains stretch from Tamil Nadu in the south to West Bengal in the north.
+  Fact 0.4: The Eastern Coastal Plains stretch through Andhra Pradesh and Odisha.
+  Fact 0.5: Chilka Lake is a brackish water lake along the eastern coastal plain.
+  Fact 0.6: Chilka Lake lies in the state of Odisha.
+  Fact 0.7: Chilka Lake stretches to the south of the Mahanadi Delta.
+Sentence 1: It is locally known as Utkal Plains in the Northern part between Cossye and Rushikulya Rivers , Northern Circars in the Central part between Rushikulya and Krishna Rivers and , as Coromandel Coast in the Southern part from the south of river Krishna till the Southern tip of Mainland India at Cape Comorin where it merges with the Western Coastal Plains .
+  Fact 1.0: The Eastern Coastal Plains are locally known as Utkal Plains in the northern part between the Cossye and Rushikulya Rivers.
+  Fact 1.1: The Eastern Coastal Plains are known as Northern Circars in the central part between the Rushikulya and Krishna Rivers.
+  Fact 1.2: The Eastern Coastal Plains are known as Coromandel Coast in the southern part from the south of the river Krishna to the southern tip of mainland India at Cape Comorin.
+  Fact 1.3: The Coromandel Coast merges with the Western Coastal Plains at Cape Comorin.
+
+Retrieved items:
+<item 1>
+Economy of India
+India receives an average annual rainfall of 1,208 millimetres ( 47.6 in ) and a total annual precipitation of 4000 billion cubic metres , with the total
+utilisable water resources , including surface and groundwater , amounting to 1123 billion cubic metres . 546,820 square kilometres ( 211,130 sq mi ) of the
+land area , or about 39 % of the total cultivated area , is irrigated . India 's inland water resources and marine resources provide employment to nearly six
+million people in the fisheries sector . In 2010 , India had the world 's sixth - largest fishing industry . Amul Dairy Plant at Anand was a highly successful
+co-operative started during the green revolution in the 1960s India exports more than 100,000 tonnes of processed cashew kernels every year . There are more
+than 600 cashew processing units in Kollam alone . India is the largest producer of milk , jute and pulses , and has the world 's second - largest cattle
+population with 170 million animals in 2011 .
+</item 1>
+
+<item 2>
+Eastern coastal plains
+pp. 20 -- 21 . ISBN 8171725163 . Geography of India Climate Climate Climatic regions Geology Fossil Parks Geology of India Indian Plate Stones Landforms Beaches
+Canals Desert Extreme points Glaciers Islands Lakes Mountains Rivers Valleys Volcanoes Waterfalls Plains Indo - Gangetic Eastern Coastal Western Coastal Regions
+North India Northeast India East India South India West India Central India Subdivisions Autonomous administrative divisions States and territories Districts
+Cities Towns Municipalities Environment Biogeographic classification Ecoregions Fauna Flora Forests Issues Protected Areas Wildlife This Indian location article
+is a stub . You can help Wikipedia by expanding it . Retrieved from `` https://en.wikipedia.org/w/index.php?title=Eastern_coastal_plains&oldid=812520937 ''
+Categories : Plains of India Coasts of India India geography stubs Hidden categories : Articles needing additional references from May 2015 All articles needing
+additional references India articles missing geocoordinate data All articles needing coordinates All stub articles Talk About Wikipedia हिन्दी Português தமிழ்
+Edit links This page was last edited on 28 November 2017 , at 08 : 32 .
+</item 2>
+
+<item 3>
+Eastern coastal plains
+Eastern coastal plains - Wikipedia Eastern coastal plains Jump to : navigation , search This article relies largely or entirely on a single source . Relevant
+discussion may be found on the talk page . Please help improve this article by introducing citations to additional sources . ( May 2015 ) View of Fields at
+Biccavolu , Eastern coastal plains , Andhra Pradesh The Eastern Coastal Plains refers to a wide stretch of landmass of India , lying between the Eastern Ghats
+and the Bay of Bengal . It is wider and leveled than the western coastal plains and stretches from Tamil Nadu in the south to West Bengal in the north through
+Andhra Pradesh and Odisha . Chilka Lake is a brackish water lake along the eastern coastal plain . It lies in the state of Odisha and stretches to the south of
+the Mahanadi Delta . Deltas of many of India 's rivers form a major portion of these plains . The Mahanadi , Godavari , Kaveri and Krishna rivers drain these
+plains . The region receives both the Northeast & Southwest monsoon rains with its annual rainfall averaging between 1,000 and 3,000 mm ( 39 and 118 in ) .
+</item 3>
+
+<item 4>
+Dead Sea
+Kur - Araz Lowland Lankaran Lowland Alborz Absheron Peninsula Anatolia Cilicia Cappadocia Alpide belt South Greater India Indian subcontinent Himalayas Hindu
+Kush Western Ghats Eastern Ghats Ganges Basin Ganges Delta Pashtunistan Punjab Balochistan Kashmir Kashmir Valley Pir Panjal Range Thar Desert Indus Valley
+Indus River Delta Indus Valley Desert Indo - Gangetic Plain Eastern coastal plains Western Coastal Plains Meghalaya subtropical forests MENASA Lower Gangetic
+plains moist deciduous forests Northwestern Himalayan alpine shrub and meadows Doab Bagar tract Great Rann of Kutch Little Rann of Kutch Deccan Plateau
+Coromandel Coast Konkan False Divi Point Hindi Belt Ladakh Aksai Chin Gilgit - Baltistan Baltistan Shigar Valley Karakoram Saltoro Mountains Siachen Glacier Bay
+of Bengal Gulf of Khambhat Gulf of Kutch Gulf of Mannar Trans - Karakoram Tract Wakhan Corridor Wakhjir Pass Lakshadweep Andaman and Nicobar Islands Andaman
+Islands Nicobar Islands Maldive Islands Alpide belt Southeast Mainland Indochina Malay Peninsula Maritime Peninsular Malaysia Sunda Islands Greater
+</item 4>
+
+<item 5>
+Eastern coastal plains
+The width of the plains varies between 100 and 130 km ( 62 to 80 miles ) . It is locally known as Utkal Plains in the Northern part between Cossye and
+Rushikulya Rivers , Northern Circars in the Central part between Rushikulya and Krishna Rivers and , as Coromandel Coast in the Southern part from the south of
+river Krishna till the Southern tip of Mainland India at Cape Comorin where it merges with the Western Coastal Plains . See also ( edit ) Western Coastal Plains
+References ( edit ) Jump up ^ Sr. Bimcy ; Sr. Sisily ; Charlotte . Bibliographic information . Scholar Publishing House . pp. 20 -- 21 . ISBN 8171725163 .
+</item 5>
+
+<item 6>
+Sub-Saharan Africa
+Indo - Gangetic Plain Eastern coastal plains Western Coastal Plains Meghalaya subtropical forests MENASA Lower Gangetic plains moist deciduous forests
+Northwestern Himalayan alpine shrub and meadows Doab Bagar tract Great Rann of Kutch Little Rann of Kutch Deccan Plateau Coromandel Coast Konkan False Divi
+Point Hindi Belt Ladakh Aksai Chin Gilgit - Baltistan Baltistan Shigar Valley Karakoram Saltoro Mountains Siachen Glacier Bay of Bengal Gulf of Khambhat Gulf of
+Kutch Gulf of Mannar Trans - Karakoram Tract Wakhan Corridor Wakhjir Pass Lakshadweep Andaman and Nicobar Islands Andaman Islands Nicobar Islands Maldive
+Islands Alpide belt Southeast Mainland Indochina Malay Peninsula Maritime Peninsular Malaysia Sunda Islands Greater Sunda Islands Lesser Sunda Islands
+Indonesian Archipelago Timor New Guinea Bonis Peninsula Papuan Peninsula Huon Peninsula Huon Gulf Bird 's Head Peninsula Gazelle Peninsula Philippine
+Archipelago Luzon Visayas Mindanao Leyte Gulf Gulf of Thailand East Indies Nanyang Alpide belt Asia - Pacific Tropical Asia Ring of Fire Regions of Europe North
+Nordic Northwestern Scandinavia Scandinavian Peninsula
+</item 6>
+
+<item 7>
+Geography of Nigeria
+Plains rise to the north of the valleys . To the southwest of the Niger there is `` rugged '' highland , and to the southeast of the Benue hills and mountains
+are found all the way to the border with Cameroon . Coastal plains are found in both the southwest and the southeast . Niger Delta ( edit ) This section needs
+expansion . You can help by adding to it . ( January 2011 ) The Niger Delta is located in the southern part of Nigeria . It is one of the world 's largest
+arcuate fan - shaped river deltas . The riverine area of the Niger Delta is a coastal belt of swamps bordering the Atlantic ocean . The swamps are vegetated
+tidal flats formed by a reticulate pattern of interconnected meandering creeks and distributaries of the River Niger . Vegetation of the Niger Delta ( edit )
+The vegetation of the Niger Delta consist mainly of forest swamps . The forest are of two types , nearest the sea is a belt of saline / brackish Mangrove swamp
+separated from the sea by sand beach ridges within the mangrove swamp . Numerous sandy islands occur with fresh water vegetation .
+</item 7>
+
+<item 8>
+Ring of Fire
+Aram Eber - Nari Suhum Eastern Mediterranean Mashriq Kurdistan Levant Southern Levant Transjordan Jordan Rift Valley Levantine Sea Golan Heights Hula Valley
+Gaza Strip West Bank Galilee Gilead Judea Samaria Arabah Anti-Lebanon Mountains Sinai Peninsula Arabian Desert Syrian Desert Fertile Crescent Azerbaijan Syria
+Palestine Iranian Plateau Armenian Highlands Caucasus Caucasus Mountains Greater Caucasus Lesser Caucasus North Caucasus South Caucasus Kur - Araz Lowland
+Lankaran Lowland Alborz Absheron Peninsula Anatolia Cilicia Cappadocia Alpide belt South Greater India Indian subcontinent Himalayas Hindu Kush Western Ghats
+Eastern Ghats Ganges Basin Ganges Delta Pashtunistan Punjab Balochistan Kashmir Kashmir Valley Pir Panjal Range Thar Desert Indus Valley Indus River Delta Indus
+Valley Desert Indo - Gangetic Plain Eastern coastal plains Western Coastal Plains Meghalaya subtropical forests MENASA Lower Gangetic plains moist deciduous
+forests Northwestern Himalayan alpine shrub and meadows Doab Bagar tract Great Rann of Kutch Little Rann of Kutch Deccan Plateau Coromandel Coast Konkan False
+Divi Point Hindi Belt Ladakh Aksai Chin
+</item 8>
+
+<item 9>
+Sub-Saharan Africa
+Arabian Peninsula Najd Hejaz Tihamah Eastern Arabia South Arabia Hadhramaut Arabian Peninsula coastal fog desert Tigris -- Euphrates Mesopotamia Upper
+Mesopotamia Lower Mesopotamia Sawad Nineveh plains Akkad ( region ) Babylonia Canaan Aram Eber - Nari Suhum Eastern Mediterranean Mashriq Kurdistan Levant
+Southern Levant Transjordan Jordan Rift Valley Israel Levantine Sea Golan Heights Hula Valley Galilee Gilead Judea Samaria Arabah Anti-Lebanon Mountains Sinai
+Peninsula Arabian Desert Syrian Desert Fertile Crescent Azerbaijan Syria Palestine Iranian Plateau Armenian Highlands Caucasus Caucasus Mountains Greater
+Caucasus Lesser Caucasus North Caucasus South Caucasus Kur - Araz Lowland Lankaran Lowland Alborz Absheron Peninsula Anatolia Cilicia Cappadocia Alpide belt
+South Greater India Indian subcontinent Himalayas Hindu Kush Western Ghats Eastern Ghats Ganges Basin Ganges Delta Pashtunistan Punjab Balochistan Kashmir
+Kashmir Valley Pir Panjal Range Thar Desert Indus Valley Indus River Delta Indus Valley Desert Indo - Gangetic Plain Eastern coastal plains Western Coastal
+Plains Meghalaya subtropical forests MENASA Lower
+</item 9>
+
+<item 10>
+Eastern coastal plains
+Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use
+and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 10>
+=== END ITEM id=f4a6f9fc5f74ea20 ===
+
+=== ITEM id=fb9605aeff0040c9 ===
+Gold sentences and facts:
+Sentence 0: This Academy Awards ceremony is notable for Peter Finch becoming the first posthumous winner of an Oscar for acting , a feat matched only by fellow Australian Heath Ledger 32 years later ; Finch had suffered a fatal heart attack in mid-January . Beatrice Straight set another record by becoming the actor with the shortest performance ever in a film to win an acting Oscar , with only five minutes and two seconds of screen - time in Network . Network , along with All the President 's Men , were the two biggest champs of the ceremony with four Oscars each , but Best Picture and Best Director ultimately went to Rocky .
+  Fact 0.0: This Academy Awards ceremony is notable for Peter Finch becoming the first posthumous winner of an Oscar for acting.
+  Fact 0.1: Peter Finch's posthumous acting Oscar was matched only by fellow Australian Heath Ledger, 32 years later.
+  Fact 0.2: Peter Finch had suffered a fatal heart attack in mid-January.
+  Fact 0.3: Beatrice Straight set a record as the actor with the shortest performance ever in a film to win an acting Oscar.
+  Fact 0.4: Beatrice Straight's performance in Network had only five minutes and two seconds of screen time.
+  Fact 0.5: Beatrice Straight won an acting Oscar for her performance in Network.
+  Fact 0.6: Network and All the President's Men were the two biggest winners of the ceremony.
+  Fact 0.7: Network won four Oscars.
+  Fact 0.8: All the President's Men won four Oscars.
+  Fact 0.9: Best Picture and Best Director ultimately went to Rocky.
+
+Retrieved items:
+<item 1>
+49th Academy Awards
+producers John G. Avildsen -- Rocky Alan J. Pakula -- All the President 's Men Ingmar Bergman -- Face to Face Sidney Lumet -- Network Lina Wertmüller -- Seven
+Beauties Best Actor Best Actress Peter Finch -- Network as Howard Beale Robert De Niro -- Taxi Driver as Travis Bickle Giancarlo Giannini -- Seven Beauties as
+Pasqualino William Holden -- Network as Max Schumacher Sylvester Stallone -- Rocky as Rocky Balboa Faye Dunaway -- Network as Diana Christensen Marie -
+Christine Barrault -- Cousin Cousine as Marthe Talia Shire -- Rocky as Adriana Pennino Sissy Spacek -- Carrie as Carrie White Liv Ullmann -- Face to Face as
+Jenny Isaksson Best Supporting Actor Best Supporting Actress Jason Robards -- All the President 's Men as Ben Bradlee Ned Beatty -- Network as Arthur Jensen
+Burgess Meredith -- Rocky as `` Mickey '' Goldmill Laurence Olivier -- Marathon Man as Dr.
+</item 1>
+
+<item 2>
+Summer of '42
+On this point , Raucher said in May 2002 that his ten percent of the gross , in addition to royalties from book sales , `` has paid bills ever since . '' As
+well as being a commercial success , Summer of ' 42 also received rave critical reviews . It went on to be nominated for over a dozen awards , including Golden
+Globe Awards for `` Best Motion Picture -- Drama '' and `` Best Director '' , and five Academy Award nominations for Best Original Music Score , Best
+Cinematography , Best Editing , Best Writing - Story and Best Screenplay . Ultimately , the film won two awards : the 1972 44th Academy Awards Oscar for
+Original Dramatic Score , and the 1971 BAFTA Anthony Asquith Award for Film Music , both to Michel Legrand . It counted among its fans Stanley Kubrick , who had
+the film play on a television in a scene in The Shining .
+</item 2>
+
+<item 3>
+49th Academy Awards
+USA -- Barbara Kopple Hollywood on Trial -- David Helpern Off the Edge -- Michael Firth People of the Wind -- Anthony Howarth and David Koff Volcano : An
+Inquiry into the Life and Death of Malcolm Lowry -- Donald Brittain and John Kramer Number Our Days -- Lynne Littman and Barbara Myerhoff American Shoeshine
+Blackwood The End of the Road Universe Best Live Action Short Film Best Animated Short Film In the Region of Ice -- Peter Werner Kudzu -- Marjorie Anne Short
+The Morning Spider -- Julian Chagrin and Claude Chagrin Nightlife -- Claire Wilbur and Robin Lehman Number One -- Dyan Cannon and Vince Cannon Leisure --
+Suzanne Baker Dedalo -- Manfredo Manfredi The Street -- Caroline Leaf and Guy Glover Best Original Score Best Original Song Score or Adaptation Score The Omen
+-- Jerry Goldsmith Obsession -- Bernard Herrmann ( posthumous nomination ) The Outlaw Josey Wales -- Jerry Fielding Taxi Driver -- Bernard Herrmann ( posthumous
+nomination ) Voyage of the Damned -- Lalo Schifrin Bound for Glory -- Leonard Rosenman Bugsy Malone -- Paul Williams A Star Is Born -- Roger Kellaway Best
+Original Song Best Sound ``
+</item 3>
+
+<item 4>
+49th Academy Awards
+Hank Hank Simms Announcer of the 49th annual Academy Awards Mirisch , Walter Walter Mirisch ( AMPAS President ) Gave opening remarks welcoming guests to the
+awards ceremony Chase , Chevy Chevy Chase Explains the voting rules to the public O'Neal , Tatum Tatum O'Neal Presenter of the award for Best Supporting Actor
+Feldman , Marty Marty Feldman Presenter of the Short Films Awards Scheider , Roy Roy Scheider Presenter of the Special Achievement Award Keller , Marthe Marthe
+Keller Presenter of the award for Best Art Direction Ali , Muhammad Muhammad Ali Sylvester Stallone Presenters of the award for Best Supporting Actress Holden ,
+William William Holden Presenter of the award for Best Film Editing Skelton , Red Red Skelton Presenter of the award for Best Sound Tyson , Cicely Cicely Tyson
+Presenter of the Irving G. Thalberg Memorial Award to Pandro S. Berman Sutherland , Donald Donald Sutherland Presenter of the award for Best Cinematography
+Bailey , Pearl Pearl Bailey Presenter of the award for Best Foreign Language Film Ann - Margret Presenter of the Music Awards Hellman , Lillian Lillian Hellman
+Presenter of the Documentary Awards Diamond ,
+</item 4>
+
+<item 5>
+49th Academy Awards
+Kline Logan 's Run -- Ernest Laszlo Network -- Owen Roizman A Star Is Born -- Robert L. Surtees Best Film Editing Rocky -- Richard Halsey and Scott Conrad All
+the President 's Men -- Robert L. Wolfe Bound for Glory -- Robert C. Jones and Pembroke J. Herring Network -- Alan Heim Two - Minute Warning -- Eve Newman and
+Walter Hannemann Special Achievement Award ( edit ) Carlo Rambaldi , Glen Robinson , and Frank Van der Veer for the visual effects of King Kong L.B.
+</item 5>
+
+<item 6>
+49th Academy Awards
+Mitchell , Richard Tyler and Douglas Williams A Star Is Born -- Robert Glass , Robert Knudson , Tom Overton and Dan Wallin Best Foreign Language Film Best
+Costume Design Black and White in Color ( Côte d'Ivoire ) Cousin Cousine ( France ) Jacob the Liar ( East Germany ) Nights and Days ( Poland ) Seven Beauties (
+Italy ) Fellini 's Casanova -- Danilo Donati Bound for Glory -- William Ware Theiss The Incredible Sarah -- Anthony Mendleson The Passover Plot -- Mary Wills
+The Seven - Per - Cent Solution -- Alan Barrett Best Art Direction Best Cinematography All the President 's Men -- Art Direction : George Jenkins ; Set
+Decoration : George Gaines The Incredible Sarah -- Art Direction : Elliot Scott ; Set Decoration : Norman Reynolds The Last Tycoon -- Art Direction : Gene
+Callahan and Jack T. Collis ; Set Decoration : Jerry Wunderlich Logan 's Run -- Art Direction : Dale Hennesy ; Set Decoration : Robert De Vestel The Shootist --
+Art Direction : Robert F. Boyle ; Set Decoration : Arthur Jeph Parker Bound for Glory -- Haskell Wexler King Kong -- Richard H.
+</item 6>
+
+<item 7>
+49th Academy Awards
+Christian Szell Burt Young -- Rocky as Paulie Pennino Beatrice Straight -- Network as Louise Schumacher Jane Alexander -- All the President 's Men as Judy
+Graham Hoback Jodie Foster -- Taxi Driver as Iris Steensma Lee Grant -- Voyage of the Damned as Lillian Rosen Piper Laurie -- Carrie as Margaret White Best
+Screenplay Written Directly for the Screen Best Screenplay Based on Material from Another Medium Network -- Paddy Chayefsky Cousin Cousine -- Jean - Charles
+Tacchella and Danièle Thompson The Front -- Walter Bernstein Rocky -- Sylvester Stallone Seven Beauties -- Lina Wertmüller All the President 's Men -- William
+Goldman based on the book by Carl Bernstein and Bob Woodward Bound for Glory -- Robert Getchell based on the book by Woody Guthrie Fellini 's Casanova --
+Federico Fellini and Bernardino Zapponi based on the autobiography Histoire de ma vie by Giacomo Casanova The Seven - Per - Cent Solution -- Nicholas Meyer
+based on his novel Voyage of the Damned -- David Butler and Steve Shagan based on the book by Gordon Thomas and Max Morgan Witts Best Documentary Feature Best
+Documentary Short Subject Harlan County , USA -- Barbara
+</item 7>
+
+<item 8>
+The Deer Hunter
+In addition , the film was nominated in four other categories : Best Actor in a Leading Role -- Robert De Niro ( lost to Jon Voight for Coming Home ) Best
+Actress in a Supporting Role -- Meryl Streep ( lost to Maggie Smith for California Suite ) Best Cinematography -- Vilmos Zsigmond ( lost to Néstor Almendros for
+Days of Heaven ) Best Writing , Screenplay Written Directly for the Screen -- Michael Cimino , Deric Washburn , Louis Garfinkle and Quinn Redeker ( lost to
+Robert C. Jones , Waldo Salt and Nancy Dowd for Coming Home ) Golden globes ( edit ) Cimino won the film 's only Golden Globe Award for Best Director . Other
+nominations the film included Best Motion Picture -- Drama , De Niro for Best Motion Picture Actor -- Drama , Walken for Best Motion Picture Actor in a
+Supporting Role , Streep for Best Motion Picture Actress in a Supporting Role , and Washburn for Best Screenplay -- Motion Picture . Complete list of awards (
+edit ) Award Recipients and nominees Result 51st Academy Awards Academy Award for Best Picture Barry Spikings , Michael Deeley ,
+</item 8>
+
+<item 9>
+49th Academy Awards
+The two events conflicted again five years later in 1982 . Contents ( hide ) 1 Winners and nominees 1.1 Special Achievement Award 1.2 Irving G. Thalberg
+Memorial Award 1.3 Multiple nominations and awards 2 Presenters and performers 2.1 Presenters 2.2 Performers 3 See also 4 References Winners and Nominees ( edit
+) Peter Finch , Best Actor winner Faye Dunaway , Best Actress winner Jason Robards , Best Supporting Actor winner Beatrice Straight , Best Supporting Actress
+winner Winners are listed first , highlighted in boldface and indicated with a double dagger ( ) . Best Picture Best Director Rocky -- Robert Chartoff and Irwin
+Winkler , producers All the President 's Men -- Walter Coblenz , producer Bound for Glory -- Robert F. Blumofe and Harold Leventhal , producers Network --
+Howard Gottfried , producer Taxi Driver -- Julia Phillips and Michael Phillips , producers John G. Avildsen -- Rocky Alan J.
+</item 9>
+
+<item 10>
+Gerald Ford
+Buckley Ronald Reagan Harold Stassen Third party and independent candidates American Party Nominee Thomas J. Anderson American Independent Party Nominee Lester
+Maddox Communist Party Nominee Gus Hall VP nominee Jarvis Tyner Libertarian Party Nominee Roger MacBride VP nominee David Bergland People 's Party Nominee
+Margaret Wright VP nominee Benjamin Spock Prohibition Party Nominee Ben Bubar VP nominee Earl Dodge Socialist Workers Party Nominee Peter Camejo VP nominee
+Willie Mae Reid U.S. Labor Party Nominee Lyndon LaRouche Other 1976 elections : House Senate Gubernatorial Theodore Roosevelt Award winners 1967 : Eisenhower
+1968 : Saltonstall 1969 : White 1970 : Hovde 1971 : Kraft Jr . 1972 : Holland 1973 : Bradley 1974 : Owens 1975 : Ford 1976 : Hamilton 1977 : Bradley 1978 :
+Zornow 1979 : Chandler 1980 : Cooley 1981 : Linkletter 1982 : Cosby 1983 : Palmer 1984 : Lawrence 1985 : Fleming 1986 : Bush 1987 : Zable 1988 : Not presented
+1989 : Ebert 1990 :
+</item 10>
+=== END ITEM id=fb9605aeff0040c9 ===
+
+=== ITEM id=9b888162960c99d3 ===
+Gold sentences and facts:
+Sentence 0: Large denominations of United States currency greater than $100 were circulated by the United States Treasury until 1969 . Since then , U.S. dollar banknotes have only been issued in seven denominations : $1 , $2 , $5 , $10 , $20 , $50 , and $100 .
+  Fact 0.0: Large denominations of United States currency greater than $100 were circulated by the United States Treasury until 1969.
+  Fact 0.1: Since 1969, U.S. dollar banknotes have only been issued in seven denominations.
+  Fact 0.2: The seven denominations of U.S. dollar banknotes issued since 1969 are $1, $2, $5, $10, $20, $50, and $100.
+
+Retrieved items:
+<item 1>
+Large denominations of United States currency
+1928 1934 -- GC Gold certificate Small 1928 -- 1934 1928 1928 1934 1928 1928 1934 1934 High - denomination United States banknotes ( edit ) The National
+Numismatic Collection at the Smithsonian Institution contains ( among other things ) the Bureau of Engraving and Printing ( BEP ) certified proofs and the
+Treasury Department collection of United States currency . Using a combination of proofs and issued notes , a nearly complete type set of high - denomination
+currency was compiled . Notably missing are several types of Compound and Interest Bearing Notes . Printed during the early to mid-1860s on very thin paper ,
+these high - denomination notes are virtually non-existent . Their issuance ( 1861 -- 65 ) pre-dates the BEP 's responsibility for U.S. Currency ( 1870s ) , so
+it is fortunate that any proofs exist in the current archives . High denomination United States banknotes Value Type Series Fr . Image Portrait / engraving
+Comments 000500 $500 LT 1862 -- 63 Fr.
+</item 1>
+
+<item 2>
+Large denominations of United States currency
+Large denominations of United States currency - wikipedia Large denominations of United States currency Jump to : navigation , search This article needs
+additional citations for verification . Please help improve this article by adding citations to reliable sources . Unsourced material may be challenged and
+removed . ( February 2016 ) ( Learn how and when to remove this template message ) Large denominations of United States currency greater than $100 were
+circulated by the United States Treasury until 1969 . Since then , U.S. dollar banknotes have only been issued in seven denominations : $1 , $2 , $5 , $10 , $20
+, $50 , and $100 . Contents ( hide ) 1 Overview and history 2 Public versus institutional use 3 Passive retirement 4 In popular culture 5 High - denomination (
+HD ) banknote issuing data 6 High - denomination United States banknotes 7 See also 8 References 8.1 Footnotes 8.2 Notes 8.3 Bibliography 9 External links
+Overview and history ( edit ) Large - denomination currency ( i.e.
+</item 2>
+
+<item 3>
+Large denominations of United States currency
+In popular culture ( edit ) Before they were ' retired ' , host Monty Hall regularly tempted or teased contestants on Let 's Make a Deal with a $1,000 bill
+featuring Grover Cleveland . High - denomination ( HD ) banknote issuing data ( edit ) Key to high denomination banknote type abbreviations Abbr Type Size
+Series dates High denomination series date Comments $500 $1,000 $5,000 $10,000 $100,000 LT Legal tender Large 1862 -- 1923 1862 1863 1869 1874 1875 1878 1880
+1862 1863 1869 1878 1880 1878 1878 -- CITN Compound interest treasury note Exception 1863 -- 1864 1863 1864 1864 -- -- -- IBN Interest bearing note Exception
+1861 -- 1865 1861 1863 1864 1865 1861 1863 1864 1865 1861 1863 1864 1865 -- -- SC Silver certificate Large 1878 -- 1923 1878 1880 1878 1880
+</item 3>
+
+<item 4>
+Large denominations of United States currency
+See history of the United States dollar . Passive retirement ( edit ) Although they are still legal tender in the United States , high - denomination bills were
+last printed on December 27 , 1945 , and officially discontinued on July 14 , 1969 , by the Federal Reserve System , due to ' lack of use ' . The $5,000 and
+$10,000 effectively disappeared well before then . The Federal Reserve began taking high - denomination currency out of circulation ( destroying large bills
+received by banks ) in 1969 . As of May 30 , 2009 , only 336 $10,000 bills were known to exist ; 342 remaining $5,000 bills ; and 165,372 remaining $1,000 bills
+. Due to their rarity , collectors often pay considerably more than the face value of the bills to acquire them . Some are in museums in other parts of the
+world . For the most part , these bills were used by banks and the Federal government for large financial transactions . This was especially true for gold
+certificates from 1865 to 1934 .
+</item 4>
+
+<item 5>
+Large denominations of United States currency
+This was especially true for gold certificates from 1865 to 1934 . However , for the most part , the introduction of an electronic money system has made large -
+scale cash transactions obsolete . When combined with concerns about counterfeiting and the use of cash in unlawful activities such as the illegal drug trade
+and money laundering , it is unlikely that the U.S. government will re-issue large denomination currency in the near future , despite the amount of inflation
+that has occurred since 1969 ( a $500 bill is now worth less , in real terms , than a $100 bill was worth in 1969 ) . According to the U.S. Department of
+Treasury website , `` The present denominations of our currency in production are $1 , $2 , $5 , $10 , $20 , $50 and $100 . The purpose of the United States
+currency system is to serve the needs of the public and these denominations meet that goal . Neither the Department of the Treasury nor the Federal Reserve
+System has any plans to change the denominations in use today . ''
+</item 5>
+
+<item 6>
+Large denominations of United States currency
+The display has since been dismantled and the bills sold to private collectors . Jump up ^ The following types of United States banknotes were not issued in
+high denominations and are not included in the list below : Demand notes , Federal Reserve bank notes ( large or small size ) , legal tender ( small size ) ,
+silver certificates ( small size ) , National Bank Notes ( small size ) The table sections are sorted by their appearance in the Friedberg reference book . Jump
+up ^ Large size notes represent the earlier types or series of U.S. banknotes . Their `` average '' dimension is ​ 7 ⁄ × ​ 3 ⁄ inches ( 187 × 79 mm ) . Small
+size notes ( described as such due to their size relative to the earlier large size notes ) are an `` average '' ​ 6 ⁄ × ​ 2 ⁄ ( 156 × 67 mm ) , the size of
+modern U.S. currency . `` Each measurement is ± 0.08 inches ( 2 mm ) to account for margins and cutting '' .
+</item 6>
+
+<item 7>
+Large denominations of United States currency
+( 1995 ) . United States Large Size National Bank Notes . Society of Paper Money Collectors , Inc . ISBN 0 - 9648774 - 1 - 4 . Newman , Eric P. ( 2008 ) . The
+Early Paper Money of America ( 5 ed . ) . Krause Publications . ISBN 0 - 89689 - 326 - X . Schwartz , John ; Lindquist , Scott ( 2011 ) . Standard Guide to
+Small - Size U.S. Paper Money -- 1928 to Date . Krause Publications . ISBN 978 - 1 - 4402 - 1703 - 6 . Retrieved 14 February 2014 . External links ( edit )
+Media related to Money of the United States by denomination at Wikimedia Commons Large Denominations from the Bureau of Engraving and Printing U.S. Department
+of the Treasury United States currency and coinage Topics Federal Reserve System Federal Reserve Note U.S. dollar U.S.
+</item 7>
+
+<item 8>
+Large denominations of United States currency
+379c Meade - George George Meade ( Charles Burt ) 2 known ( variety ) 3 known ( type ) 001000 $1,000 NBN 1865 -- 75 Fr. 465 Proof zScott - Winfield - Washington
+- George Scott entering City of Mexico ( left ) ( Alfred Jones ) United States Capitol ( right ) ( James Smillie ) Washington resigning his commission ( rev ) (
+Frederick Girsch ) Unknown 001000 $1,000 FRN 1918 Fr. 1133d Hamilton - Alexander Alexander Hamilton ( G.F.C. Smillie ) Eagle ( rev ) ( Marcus W. Baldwin )
+001000 $1,000 GC 1863 Fr. 1166e Proof zEagle - shield - Justice - scales Eagle with shield or E Pluribus Unum ( Charles Skinner ) Justice with scales Unique
+001000 $1,000 GC 1870 -- 75 Fr. 1166o Proof Hamilton - Alexander Alexander Hamilton ( Charles Burt ) Unique 001000 $1,000 GC 1882 Fr. 1218g Hamilton - Alexander
+Alexander Hamilton ( G.F.C.
+</item 8>
+
+<item 9>
+Large denominations of United States currency
+currency were issued in high - denomination notes across nearly 20 different series dates . The obverse of United States banknotes generally depict either
+historical figures , allegorical figures symbolizing significant concepts ( e.g. , liberty , justice ) , or a combination of both . The reverse designs range
+from abstract scroll - work with ornate denomination identifiers to reproductions of historical art works . Public versus institutional use ( edit ) Series 1934
+gold certificates ( $100 , $1,000 , $10,000 and $100,000 ) were issued after the gold standard was repealed and gold was compulsorily confiscated by order of
+President Franklin Roosevelt on March 9 , 1933 ( see United States Executive Order 6102 ) . Thus the series 1934 notes were used only for intragovernmental (
+i.e. , Federal Reserve Bank ) transactions and were not issued to the public . This series was discontinued in 1940 . The series 1928 gold certificate reverse
+was printed in black and green . See history of the United States dollar .
+</item 9>
+
+<item 10>
+Large denominations of United States currency
+, banknotes with a face value of $500 or higher ) had been used in the United States since the late 18th century . The first $500 note was issued by the
+Province of North Carolina , authorized by legislation dated May 10 , 1780 . Virginia quickly followed suit and authorized the printing of $500 and $1,000 notes
+on October 16 , 1780 and $2,000 notes on May 7 , 1781 . High - denomination treasury notes were issued , for example during the War of 1812 ( $1,000 notes
+authorized by an act dated June 30 , 1812 ) . During the American Civil War Confederate currency included $500 and $1,000 notes . During the Federal banknote
+issuing period ( 1861 to present ) , the earliest high - denomination notes included three - year Interest - bearing notes of $500 , $1,000 , and $5,000 ,
+authorized by Congress on July 17 , 1861 . In total , 11 different types of U.S. currency were issued in high - denomination notes across nearly 20 different
+series dates .
+</item 10>
+=== END ITEM id=9b888162960c99d3 ===
+
+=== ITEM id=aaff85250ab67b5a ===
+Gold sentences and facts:
+Sentence 0: A muscle relaxant is a drug that affects skeletal muscle function and decreases the muscle tone . It may be used to alleviate symptoms such as muscle spasms , pain , and hyperreflexia . The term `` muscle relaxant '' is used to refer to two major therapeutic groups : neuromuscular blockers and spasmolytics . Neuromuscular blockers act by interfering with transmission at the neuromuscular end plate and have no central nervous system ( CNS ) activity . They are often used during surgical procedures and in intensive care and emergency medicine to cause temporary paralysis . Spasmolytics , also known as `` centrally acting '' muscle relaxants , are used to alleviate musculoskeletal pain and spasms and to reduce spasticity in a variety of neurological conditions . While both neuromuscular blockers and spasmolytics are often grouped together as muscle relaxants , the term is commonly used to refer to spasmolytics only .
+  Fact 0.0: A muscle relaxant is a drug that affects skeletal muscle function.
+  Fact 0.1: A muscle relaxant decreases muscle tone.
+  Fact 0.2: A muscle relaxant may be used to alleviate muscle spasms.
+  Fact 0.3: A muscle relaxant may be used to alleviate pain.
+  Fact 0.4: A muscle relaxant may be used to alleviate hyperreflexia.
+  Fact 0.5: The term 'muscle relaxant' is used to refer to two major therapeutic groups.
+  Fact 0.6: The two major therapeutic groups referred to by 'muscle relaxant' are neuromuscular blockers and spasmolytics.
+  Fact 0.7: Neuromuscular blockers act by interfering with transmission at the neuromuscular end plate.
+  Fact 0.8: Neuromuscular blockers have no central nervous system (CNS) activity.
+  Fact 0.9: Neuromuscular blockers are often used during surgical procedures.
+  Fact 0.10: Neuromuscular blockers are often used in intensive care and emergency medicine.
+  Fact 0.11: Neuromuscular blockers are used to cause temporary paralysis.
+  Fact 0.12: Spasmolytics are also known as 'centrally acting' muscle relaxants.
+  Fact 0.13: Spasmolytics are used to alleviate musculoskeletal pain and spasms.
+  Fact 0.14: Spasmolytics are used to reduce spasticity in a variety of neurological conditions.
+  Fact 0.15: Neuromuscular blockers and spasmolytics are often grouped together as muscle relaxants.
+  Fact 0.16: The term 'muscle relaxant' is commonly used to refer to spasmolytics only.
+
+Retrieved items:
+<item 1>
+Muscle relaxant
+Muscle relaxant - wikipedia Muscle relaxant Jump to : navigation , search This article is about skeletal muscle relaxants . For information on smooth muscle
+relaxants , see Antispasmodic . A muscle relaxant is a drug that affects skeletal muscle function and decreases the muscle tone . It may be used to alleviate
+symptoms such as muscle spasms , pain , and hyperreflexia . The term `` muscle relaxant '' is used to refer to two major therapeutic groups : neuromuscular
+blockers and spasmolytics . Neuromuscular blockers act by interfering with transmission at the neuromuscular end plate and have no central nervous system ( CNS
+) activity . They are often used during surgical procedures and in intensive care and emergency medicine to cause temporary paralysis . Spasmolytics , also
+known as `` centrally acting '' muscle relaxants , are used to alleviate musculoskeletal pain and spasms and to reduce spasticity in a variety of neurological
+conditions . While both neuromuscular blockers and spasmolytics are often grouped together as muscle relaxants , the term is commonly used to refer to
+spasmolytics only .
+</item 1>
+
+<item 2>
+Spasmolytic muscle relaxants reduce motor-neuron-driven muscle contractions by increasing inhibition or decreasing excitation. They may mimic or enhance
+inhibitory substances such as GABA. Although traditionally called “centrally acting” because many act in the cortex, brain stem, or spinal cord, the term is
+inaccurate: some, including dantrolene, do not act in the CNS.
+</item 2>
+
+<item 3>
+Muscle relaxants reduce skeletal-muscle tone and may relieve spasms, pain, or hyperreflexia. They comprise neuromuscular blockers, which interrupt neuromuscular
+transmission without CNS activity and cause temporary paralysis during surgery or critical care, and spasmolytics, commonly called muscle relaxants, which treat
+musculoskeletal spasms and pain or neurological spasticity. Their history includes Amazonian curare, documented by Europeans in the 16th century; tubocur
+</item 3>
+
+<item 4>
+Muscle relaxant
+Chemical diagram of pancuronium , with red lines indicating the two acetylcholine `` molecules '' in the structure Spasmolytics ( edit ) Main article :
+antispasmodic A view of the spinal cord and skeletal muscle showing the action of various muscle relaxants -- black lines ending in arrow heads represent
+chemicals or actions that enhance the target of the lines , blue lines ending in squares represent chemicals or actions that inhibition the target of the line
+The generation of the neuronal signals in motor neurons that cause muscle contractions are dependent on the balance of synaptic excitation and inhibition the
+motor neuron receives . Spasmolytic agents generally work by either enhancing the level of inhibition , or reducing the level of excitation . Inhibition is
+enhanced by mimicking or enhancing the actions of endogenous inhibitory substances , such as GABA . Terminology ( edit ) Because they may act at the level of
+the cortex , brain stem or spinal cord , or all three areas , they have traditionally been referred to as `` centrally acting '' muscle relaxants . However , it
+is now known not every agent in this class has CNS activity ( e.g. dantrolene ) , so this name is inaccurate .
+</item 4>
+
+<item 5>
+Muscle relaxant
+dantrolene ) , so this name is inaccurate . Most sources still use the term `` centrally acting muscle relaxant '' . According to MeSH , dantrolene is usually
+classified as a centrally acting muscle relaxant . The World Health Organization , in its ATC , uses the term `` centrally acting agents '' , but adds a
+distinct category of `` directly acting agents '' , for dantrolene . Use of this terminology dates back to at least 1973 . The term `` spasmolytic '' is also
+considered a synonym for antispasmodic . Clinical use ( edit ) Spasmolytics such as carisoprodol , cyclobenzaprine , metaxalone , and methocarbamol are commonly
+prescribed for low back pain or neck pain , fibromyalgia , tension headaches and myofascial pain syndrome . However , they are not recommended as first - line
+agents ; in acute low back pain , they are not more effective than paracetamol or nonsteroidal anti-inflammatory drugs ( NSAIDs ) , and in fibromyalgia they are
+not more effective than antidepressants .
+</item 5>
+
+<item 6>
+Skeletal muscle relaxants include centrally acting drugs such as baclofen, tizanidine, diazepam, orphenadrine, methocarbamol and carisoprodol, and directly
+acting dantrolene. Peripheral neuromuscular blockers include non-depolarizing agents (e.g., rocuronium, atracurium) and depolarizing succinylcholine; botulinum
+toxin inhibits acetylcholine release. Older, rarely
+</item 6>
+
+<item 7>
+“Centrally acting muscle relaxant” remains common terminology, though dantrolene acts directly on muscle; “spasmolytic” is synonymous with antispasmodic.
+Carisoprodol, cyclobenzaprine, metaxalone, and methocarbamol treat musculoskeletal pain but are not first-line and offer limited advantage over standard
+treatments. Baclofen reduces spasticity via GABA-B activity and may relieve pain; tizanidine suppress
+</item 7>
+
+<item 8>
+Muscle relaxant
+Other skeletal muscle relaxants of that type used around the world come from a number of drug categories and other drugs used primarily for this indication
+include orphenadrine ( anticholinergic ) , chlorzoxazone , tizanidine ( clonidine relative ) , diazepam , tetrazepam and other benzodiazepines , mephenoxalone ,
+methocarbamol , dantrolene , baclofen , Drugs once but no longer or very rarely used to relax skeletal muscles include meprobamate , barbiturates , methaqualone
+, glutethimide and the like ; some subcategories of opioids have muscle relaxant properties , and some are marketed in combination drugs with skeletal and / or
+smooth muscle relaxants such as whole opium products , some ketobemidone , piritramide and fentanyl preparations and Equagesic . Neuromuscular blockers ( edit )
+Detailed view of a neuromuscular junction : 1 . Presynaptic terminal 2 . Sarcolemma 3 . Synaptic vesicle 4 . Nicotinic acetylcholine receptor 5 .
+</item 8>
+
+<item 9>
+Muscle relaxant
+Retrieved 2010 - 07 - 09 . External links ( edit ) Skeletal Muscle Relaxants at the US National Library of Medicine Medical Subject Headings ( MeSH ) Skeletal
+muscle relaxants ( M03 ) Peripherally acting ( primarily antinicotinic , NMJ block ) Non-depolarizing Curare alkaloids Alcuronium Dimethyltubocurarine
+Tubocurarine 4 ° ammonium agents ultra-short duration : Gantacurium short duration : Mivacurium Chandonium intermediate duration : Atracurium Cisatracurium
+Fazadinium Rocuronium Vecuronium long duration : Doxacurium Dimethyltubocurarine Pancuronium Pipecuronium Laudexium Gallamine unsorted : Hexafluronium (
+Hexafluorenium ) Depolarizing Choline derivatives : Suxamethonium ( Succinylcholine ) Polyalkylene derivatives : Hexamethonium ACh release inhibitors Botulinum
+toxin Centrally acting Carbamic acid esters Carisoprodol Cyclarbamate Difebarbamate Febarbamate Meprobamate Phenprobamate Styramate Tybamate
+</item 9>
+
+<item 10>
+The passage lists references on muscle relaxants, including pharmacology texts, a review of neuromuscular blockade, WHO classifications of centrally acting
+relaxants and dantrolene, research on dantrolene as a direct-acting skeletal muscle relaxant, and a study of GABAergic control of spinal locomotor networks. It
+also cites Mayo Clinic material and brief-history webpages.
+</item 10>
+=== END ITEM id=aaff85250ab67b5a ===
+
+=== ITEM id=31a9e19cdc5474e3 ===
+Gold sentences and facts:
+Sentence 0: Group 3 in the periodic table Hydrogen Helium Lithium Beryllium Boron Carbon Nitrogen Oxygen Fluorine Neon Sodium Magnesium Aluminium Silicon Phosphorus Sulfur Chlorine Argon Potassium Calcium Scandium Titanium Vanadium Chromium Manganese Iron Cobalt Nickel Copper Zinc Gallium Germanium Arsenic Selenium Bromine Krypton Rubidium Strontium Yttrium Zirconium Niobium Molybdenum Technetium Ruthenium Rhodium Palladium Silver Cadmium Indium Tin Antimony Tellurium Iodine Xenon Caesium Barium Lanthanum Cerium Praseodymium Neodymium Promethium Samarium Europium Gadolinium Terbium Dysprosium Holmium Erbium Thulium Ytterbium Lutetium Hafnium Tantalum Tungsten Rhenium Osmium Iridium Platinum Gold Mercury ( element ) Thallium Lead Bismuth Polonium Astatine Radon Francium Radium Actinium Thorium Protactinium Uranium Neptunium Plutonium Americium Curium Berkelium Californium Einsteinium Fermium Mendelevium Nobelium Lawrencium Rutherfordium Dubnium Seaborgium Bohrium Hassium Meitnerium Darmstadtium Roentgenium Copernicium Nihonium Flerovium Moscovium Livermorium Tennessine Oganesson alkaline earth metals ← → group 4 IUPAC group number Name by element scandium group CAS group number ( US , pattern A-B-A ) IIIB old IUPAC number ( Europe , pattern A-B ) IIIA ↓ Period Scandium ( Sc ) 21 Transition metal 5 Yttrium ( Y ) 39 Transition metal 6 Lanthanum ( La * ) 57 Lanthanide 7 Actinium ( Ac * ) 89 Actinide * Whether the elements lutetium ( Lu ) and lawrencium ( Lr ) , in period 6 and 7 , are in group 3 is disputed . The grouping used in this article places La and Ac in group 3 , which is the most common form . For other groupings , see group 3 borders . Legend primordial element synthetic element Atomic number color : black = solid
+  Fact 0.0: The periodic table has a group 3.
+  Fact 0.1: The text lists the element names from Hydrogen through Oganesson.
+  Fact 0.2: The text mentions alkaline earth metals.
+  Fact 0.3: The article's grouping places lanthanum (La) and actinium (Ac) in group 3.
+  Fact 0.4: The article says placing La and Ac in group 3 is the most common form.
+  Fact 0.5: Scandium (Sc) has atomic number 21 and is a transition metal.
+  Fact 0.6: Yttrium (Y) has atomic number 39, is in period 5, and is a transition metal.
+  Fact 0.7: Lanthanum (La) has atomic number 57, is in period 6, and is a lanthanide.
+  Fact 0.8: Actinium (Ac) has atomic number 89, is in period 7, and is an actinide.
+  Fact 0.9: Whether lutetium (Lu) and lawrencium (Lr), in periods 6 and 7, are in group 3 is disputed.
+  Fact 0.10: For other groupings, the article refers readers to group 3 borders.
+  Fact 0.11: The scandium group has CAS group number IIIB (US pattern A-B-A).
+  Fact 0.12: The scandium group has old IUPAC number IIIA (Europe pattern A-B).
+  Fact 0.13: The article has a legend distinguishing primordial elements and synthetic elements.
+  Fact 0.14: The article has a legend for atomic number colors, where black means solid.
+
+Retrieved items:
+<item 1>
+Group 3 element
+Three group 3 elements occur naturally , scandium , yttrium , and either lanthanum or lutetium . Lanthanum continues the trend started by two lighter members in
+general chemical behavior , while lutetium behaves more similarly to yttrium . While the choice of lutetium would be in accordance with the trend for period 6
+transition metals to behave more similarly to their upper periodic table neighbors , the choice of lanthanum is in accordance with the trends in the s - block ,
+which the group 3 elements are chemically more similar to . They all are silvery - white metals under standard conditions . The fourth element , either actinium
+or lawrencium , has only radioactive isotopes . Actinium , which occurs only in trace amounts , continues the trend in chemical behavior for metals that form
+tripositive ions with a noble gas configuration ; synthetic lawrencium is calculated and partially shown to be more similar to lutetium and yttrium . So far ,
+no experiments have been conducted to synthesize any element that could be the next group 3 element .
+</item 1>
+
+<item 2>
+Group 3 element
+in period 6 and 7 , are in group 3 is disputed . The grouping used in this article places La and Ac in group 3 , which is the most common form . For other
+groupings , see group 3 borders . Legend primordial element synthetic element Atomic number color : black = solid Group 3 is a group of elements in the periodic
+table . This group , like other d - block groups , should contain four elements , but it is not agreed what elements belong in the group . Scandium ( Sc ) and
+yttrium ( Y ) are always included , but the other two spaces are usually occupied by lanthanum ( La ) and actinium ( Ac ) , or by lutetium ( Lu ) and lawrencium
+( Lr ) ; less frequently , it is considered the group should be expanded to 32 elements ( with all the lanthanides and actinides included ) or contracted to
+contain only scandium and yttrium . When the group is understood to contain all of the lanthanides , its trivial name is the rare - earth metals .
+</item 2>
+
+<item 3>
+Group 3 element
+Characteristics ( edit ) Chemical ( edit ) Electron configurations of the group 3 elements Z Element Electron configuration 21 scandium 2 , 8 , 9 , 2 39 yttrium
+2 , 8 , 18 , 9 , 2 57 lanthanum 2 , 8 , 18 , 18 , 9 , 2 89 actinium 2 , 8 , 18 , 32 , 18 , 9 , 2 Like other groups , the members of this family show patterns in
+their electron configurations , especially the outermost shells , resulting in trends in chemical behavior . However , lawrencium is an exception , since its
+last electron is transferred to the 7p subshell due to relativistic effects . Most of the chemistry has been observed only for the first three members of the
+group ; chemical properties of both actinium and especially lawrencium are not well - characterized . The remaining elements of the group ( scandium , yttrium ,
+lutetium ) are reactive metals with high melting points ( 1541 ° C , 1526 ° C , 1652 ° C respectively ) .
+</item 3>
+
+<item 4>
+Group 3 element
+ISBN 0 - 19 - 850341 - 5 . Links to related articles ( edit ) ( hide ) Periodic table ( Large cells ) 5 6 7 8 9 10 11 12 13 14 15 16 17 18 He Li Be O Ne Na Mg
+Al Si Cl Ar Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr 5 Rb Sr Y Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Sb Te Xe 6 Cs Ba La Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm
+Yb Lu Hf Ta Re Os Ir Pt Au Hg Tl Pb Bi Po At Rn 7 Fr Ra Ac Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr Rf Db Sg Bh Hs Mt Ds Rg Cn Nh Fl Mc Lv Ts Og Alkali metal
+Alkaline earth metal Lanthanide Actinide Transition metal Post - ​ transition metal Metalloid Reactive nonmetal Noble gas Unknown chemical properties Periodic
+table Periodic table forms Standard 18 - column 18 - column ,
+</item 4>
+
+<item 5>
+Group 3 element
+Lanthanum and actinium are sometimes considered the remaining members of group 3 . In their most commonly encountered tripositive ion forms , these elements do
+not possess any partially filled f - orbitals , thus continuing the scandium -- yttrium -- lanthanum -- actinium trend , in which all the elements have
+relationship similar to that of elements of the calcium -- strontium -- barium -- radium series , the elements ' left neighbors in s - block . However ,
+different behavior is observed in other d - block groups , especially in group 4 , in which zirconium , hafnium and rutherfordium share similar chemical
+properties lacking a clear trend . It has however been argued that this is irrelevant because the principle of increasing basicity down the table is more
+fundamental , and because the behavior of the group 3 elements is more similar to their s - block neighbors than their d - block neighbors . In other tables ,
+lutetium and lawrencium are classified as the remaining members of group 3 . In these tables , lutetium and lawrencium end ( or sometimes succeed ) the
+lanthanide and actinide series , respectively .
+</item 5>
+
+<item 6>
+Group 3 element
+^ Jump up to : Barbalace , Kenneth . `` Periodic Table of Elements '' . Environmental Chemistry.com . Retrieved 2007 - 04 - 14 . Jump up ^ `` WebElements
+Periodic Table of the Elements '' . Webelements.com . Retrieved 2010 - 04 - 03 . Jump up ^ `` Periodic Table of the Elements '' . International Union of Pure
+and Applied Chemistry ( IUPAC ) . Retrieved 2010 - 04 - 03 . ^ Jump up to : `` Visual Elements '' . Royal Society of Chemistry . Retrieved 4 July 2011 . Jump up
+^ Dolg , Michael . `` Lanthanides and Actinides '' ( PDF ) . Max - Planck - Institut für Physik komplexer Systeme , Dresden , Germany . CLA01 . Retrieved 4 July
+2011 . Jump up ^ IUPAC ( 2015 ) . `` The constitution of group 3 of the periodic table '' . Retrieved 2016 - 11 - 10 . Jump up ^ Greenwood , N.N.
+</item 6>
+
+<item 7>
+Group 3 element
+Group 3 element - wikipedia Group 3 element Jump to : navigation , search For the other group formerly named Group III ( boron group ) , see Group 13 element .
+Group 3 in the periodic table Hydrogen Helium Lithium Beryllium Boron Carbon Nitrogen Oxygen Fluorine Neon Sodium Magnesium Aluminium Silicon Phosphorus Sulfur
+Chlorine Argon Potassium Calcium Scandium Titanium Vanadium Chromium Manganese Iron Cobalt Nickel Copper Zinc Gallium Germanium Arsenic Selenium Bromine Krypton
+Rubidium Strontium Yttrium Zirconium Niobium Molybdenum Technetium Ruthenium Rhodium Palladium Silver Cadmium Indium Tin Antimony Tellurium Iodine Xenon Caesium
+Barium Lanthanum Cerium Praseodymium Neodymium Promethium Samarium Europium Gadolinium Terbium Dysprosium Holmium Erbium Thulium Ytterbium Lutetium Hafnium
+Tantalum Tungsten Rhenium Osmium Iridium Platinum Gold Mercury ( element ) Thallium Lead Bismuth Polonium Astatine Radon Francium Radium
+</item 7>
+
+<item 8>
+Group 3 element
+element ) Thallium Lead Bismuth Polonium Astatine Radon Francium Radium Actinium Thorium Protactinium Uranium Neptunium Plutonium Americium Curium Berkelium
+Californium Einsteinium Fermium Mendelevium Nobelium Lawrencium Rutherfordium Dubnium Seaborgium Bohrium Hassium Meitnerium Darmstadtium Roentgenium Copernicium
+Nihonium Flerovium Moscovium Livermorium Tennessine Oganesson alkaline earth metals ← → group 4 IUPAC group number Name by element scandium group CAS group
+number ( US , pattern A-B-A ) IIIB old IUPAC number ( Europe , pattern A-B ) IIIA ↓ Period Scandium ( Sc ) 21 Transition metal 5 Yttrium ( Y ) 39 Transition
+metal 6 Lanthanum ( La * ) 57 Lanthanide 7 Actinium ( Ac * ) 89 Actinide * Whether the elements lutetium ( Lu ) and lawrencium ( Lr ) , in period 6 and 7 , are
+in group 3 is disputed .
+</item 8>
+
+<item 9>
+Group 3 element
+( 3d'4s2 ) Scandium and its analogous are the first d - elements of thair period i.e. they are the first whose d - subs - hell of the penultimate shell being to
+be filled the presency of just one electron in the d - state accounts for the stabiliry oxidation state of III in scandium and its analogous . the stable
+co-ordonationv number increases in the transition from scandium to yttrium and References ( edit ) Jump up ^ van der Krogt , Peter . `` 39 Yttrium --
+Elementymology & Elements Multidict '' . Elements.vanderkrogt.net . Retrieved 2008 - 08 - 06 . Jump up ^ Emsley 2001 , p. 496 Jump up ^ Gadolin , Johan ( 1794 )
+. `` Undersökning af en svart tung Stenart ifrån Ytterby Stenbrott i Roslagen '' . Kongl . Vetenskaps Academiens Nya Handlingar ( in Swedish ) . 15 : 137 -- 155
+.
+</item 9>
+
+<item 10>
+Group 3 element
+Jump up ^ Greenwood , N.N. ; Harrington , T.J. ( 1973 ) . The chemistry of the transition elements . Oxford : Clarendon Press . p. 50 . ISBN 0 - 19 - 855435 - 4
+. Jump up ^ Aylward , G. ; Findlay , T. ( 2008 ) . SI chemical data ( 6th ed . ) . Milton , Queensland : John Wiley & Sons . ISBN 978 - 0 - 470 - 81638 - 7 .
+Jump up ^ Wiberg , N. ( 2001 ) . Inorganic Chemistry . San Diego : Academic Press . p. 119 . ISBN 0 - 12 - 352651 - 5 . Jump up ^ Wulfsberg , G. ( 2006 ) . ``
+Periodic table : Trends in the properties of the elements '' . Encyclopedia of Inorganic Chemistry . New York : John Wiley & Sons . p. 3 .
+</item 10>
+=== END ITEM id=31a9e19cdc5474e3 ===
+
+=== ITEM id=87ac429c1915aaf6 ===
+Gold sentences and facts:
+Sentence 0: Year Film Nominees 2001 ( 74th ) Shrek Aron Warner Jimmy Neutron : Boy Genius Steve Oedekerk and John A. Davis Monsters , Inc . Pete Docter and John Lasseter 2002 ( 75th ) Spirited Away Hayao Miyazaki Ice Age Chris Wedge Lilo & Stitch Chris Sanders Spirit : Stallion of the Cimarron Jeffrey Katzenberg Treasure Planet Ron Clements 2003 ( 76th ) Finding Nemo Andrew Stanton Brother Bear Aaron Blaise and Robert Walker The Triplets of Belleville Sylvain Chomet ( 77th ) The Incredibles Brad Bird Shark Tale Bill Damaschke Shrek 2 Andrew Adamson 2005 ( 78th ) Wallace & Gromit : The Curse of the Were - Rabbit Nick Park and Steve Box Howl 's Moving Castle Hayao Miyazaki Corpse Bride Mike Johnson and Tim Burton 2006 ( 79th ) Happy Feet George Miller Cars John Lasseter Monster House Gil Kenan 2007 ( 80th ) Ratatouille Brad Bird Persepolis Marjane Satrapi and Vincent Paronnaud Surf 's Up Ash Brannon and Chris Buck 2008 ( 81st ) WALL - E Andrew Stanton Bolt Chris Williams and Byron Howard Kung Fu Panda John Stevenson and Mark Osborne 2009 ( 82nd ) Up Pete Docter Coraline Henry Selick Fantastic Mr. Fox Wes Anderson The Princess and the Frog John Musker and Ron Clements The Secret of Kells Tomm Moore
+  Fact 0.0: At the 2001 (74th) list, Shrek was nominated with Aron Warner as nominee.
+  Fact 0.1: At the 2001 (74th) list, Jimmy Neutron: Boy Genius was nominated with Steve Oedekerk and John A. Davis as nominees.
+  Fact 0.2: At the 2001 (74th) list, Monsters, Inc. was nominated with Pete Docter and John Lasseter as nominees.
+  Fact 0.3: At the 2002 (75th) list, Spirited Away was nominated with Hayao Miyazaki as nominee.
+  Fact 0.4: At the 2002 (75th) list, Ice Age was nominated with Chris Wedge as nominee.
+  Fact 0.5: At the 2002 (75th) list, Lilo & Stitch was nominated with Chris Sanders as nominee.
+  Fact 0.6: At the 2002 (75th) list, Spirit: Stallion of the Cimarron was nominated with Jeffrey Katzenberg as nominee.
+  Fact 0.7: At the 2002 (75th) list, Treasure Planet was nominated with Ron Clements as nominee.
+  Fact 0.8: At the 2003 (76th) list, Finding Nemo was nominated with Andrew Stanton as nominee.
+  Fact 0.9: At the 2003 (76th) list, Brother Bear was nominated with Aaron Blaise and Robert Walker as nominees.
+  Fact 0.10: At the 2003 (76th) list, The Triplets of Belleville was nominated with Sylvain Chomet as nominee.
+  Fact 0.11: At the (77th) list, The Incredibles was nominated with Brad Bird as nominee.
+  Fact 0.12: At the (77th) list, Shark Tale was nominated with Bill Damaschke as nominee.
+  Fact 0.13: At the (77th) list, Shrek 2 was nominated with Andrew Adamson as nominee.
+  Fact 0.14: At the 2005 (78th) list, Wallace & Gromit: The Curse of the Were-Rabbit was nominated with Nick Park and Steve Box as nominees.
+  Fact 0.15: At the 2005 (78th) list, Howl's Moving Castle was nominated with Hayao Miyazaki as nominee.
+  Fact 0.16: At the 2005 (78th) list, Corpse Bride was nominated with Mike Johnson and Tim Burton as nominees.
+  Fact 0.17: At the 2006 (79th) list, Happy Feet was nominated with George Miller as nominee.
+  Fact 0.18: At the 2006 (79th) list, Cars was nominated with John Lasseter as nominee.
+  Fact 0.19: At the 2006 (79th) list, Monster House was nominated with Gil Kenan as nominee.
+  Fact 0.20: At the 2007 (80th) list, Ratatouille was nominated with Brad Bird as nominee.
+  Fact 0.21: At the 2007 (80th) list, Persepolis was nominated with Marjane Satrapi and Vincent Paronnaud as nominees.
+  Fact 0.22: At the 2007 (80th) list, Surf's Up was nominated with Ash Brannon and Chris Buck as nominees.
+  Fact 0.23: At the 2008 (81st) list, WALL-E was nominated with Andrew Stanton as nominee.
+  Fact 0.24: At the 2008 (81st) list, Bolt was nominated with Chris Williams and Byron Howard as nominees.
+  Fact 0.25: At the 2008 (81st) list, Kung Fu Panda was nominated with John Stevenson and Mark Osborne as nominees.
+  Fact 0.26: At the 2009 (82nd) list, Up was nominated with Pete Docter as nominee.
+  Fact 0.27: At the 2009 (82nd) list, Coraline was nominated with Henry Selick as nominee.
+  Fact 0.28: At the 2009 (82nd) list, Fantastic Mr. Fox was nominated with Wes Anderson as nominee.
+  Fact 0.29: At the 2009 (82nd) list, The Princess and the Frog was nominated with John Musker and Ron Clements as nominees.
+  Fact 0.30: At the 2009 (82nd) list, The Secret of Kells was nominated with Tomm Moore as nominee.
+
+Retrieved items:
+<item 1>
+Academy Award for Best Animated Feature
+In 2009 , when the nominee slots for Best Picture were doubled to ten , Up was nominated for both Best Animated Feature and Best Picture at the 82nd Academy
+Awards , the first film to do so since the creation of the Animated Feature category . This feat was repeated the following year by Toy Story 3 . Since 2010
+onward , with the increasing competitiveness of the Animated Feature category , Pixar ( a perennial nominee ) did not receive nominations for several recent
+films considering the studio has released films of more mixed critical reaction and box office earnings , while Pixar 's sister studio Disney Animation won
+their first three awards . In 2010 , the Academy enacted a new rule regarding the performance capture technique employed in films such as Disney 's A Christmas
+Carol from Robert Zemeckis and The Adventures of Tintin from Steven Spielberg , and how they might not be eligible in this category in the future . This rule
+was possibly made to prevent nominations of live - action films that rely heavily on motion capture , such as James Cameron 's Avatar . When the category was
+first instated , the nomination went to the person ( s ) most involved in creating the winning film .
+</item 1>
+
+<item 2>
+The Academy Award for Best Animated Feature honors animated films by the Academy of Motion Picture Arts and Sciences. Eligible films must run over 40 minutes,
+feature a significant number of animated major characters, and use animation for at least 75% of their running time. First awarded at the 2002 Oscars for films
+released in 2001, it initially required at least eight eligible theatrical releases that year. Shrek won the inaugural award. Some critics argue the category
+limits animated films’ chances of winning
+</item 2>
+
+<item 3>
+Academy Award for Best Animated Feature
+This could be the producer , the director , or both . For the 76th Academy Awards in 2004 , only the director ( s ) of the film received the nomination . For
+the 86th Academy Awards ten years later , this was amended to include one producer and up to two directors . Winners and nominations ( edit ) 2000s ( edit )
+Year Film Nominees 2001 ( 74th ) Shrek Aron Warner Jimmy Neutron : Boy Genius Steve Oedekerk and John A. Davis Monsters , Inc . Pete Docter and John Lasseter
+2002 ( 75th ) Spirited Away Hayao Miyazaki Ice Age Chris Wedge Lilo & Stitch Chris Sanders Spirit : Stallion of the Cimarron Jeffrey Katzenberg Treasure Planet
+Ron Clements 2003 ( 76th ) Finding Nemo Andrew Stanton Brother Bear Aaron Blaise and Robert Walker The Triplets of Belleville Sylvain Chomet ( 77th ) The
+Incredibles Brad Bird Shark Tale Bill Damaschke Shrek 2 Andrew Adamson 2005 ( 78th ) Wallace & Gromit : The Curse of the Were -
+</item 3>
+
+<item 4>
+Academy Award for Best Animated Feature
+The Academy Award for Best Animated Feature was first awarded in 2002 for films made in 2001 . The entire AMPAS membership has been eligible to choose the
+winner since the award 's inception . If there are sixteen or more films submitted for the category , the winner is voted from a shortlist of five films , which
+has happened eight times , otherwise there will only be three films on the shortlist . Additionally , eight eligible animated features must have been
+theatrically released in Los Angeles County within the calendar year for this category to be activated . Animated films can be nominated for other categories ,
+but have rarely been so ; Beauty and the Beast ( 1991 ) was the first animated film ever nominated for Best Picture . Up ( 2009 ) and Toy Story 3 ( 2010 ) also
+received Best Picture nominations after the Academy expanded the number of nominees from five to ten . Waltz with Bashir ( 2008 ) is the only animated film ever
+nominated for Best Foreign Language Film ( though it did not receive a nomination for Best Animated Feature ) .
+</item 4>
+
+<item 5>
+Academy Award for Best Animated Feature
+The Academy Award for Best Animated Feature was first given out at the 74th Academy Awards , held on March 24 , 2002 . The Academy included a rule that stated
+that the award would not be presented in a year in which fewer than eight eligible films opened in theaters . People in the animation industry and fans
+expressed hope that the prestige from this award and the resulting boost to the box office would encourage the increased production of animated features . Some
+members and fans have criticized the award , however , saying it is only intended to prevent animated films from having a chance of winning Best Picture .
+DreamWorks had advertised heavily during the holiday 2001 season for Shrek , but was disappointed when the rumored Best Picture nomination did not materialize ,
+though it was nominated for and ended up winning the inaugural Best Animated Feature award. . the Shrek franchise to date is most succsfull franchise with one
+win and three nomtied .
+</item 5>
+
+<item 6>
+The Academy Award for Best Animated Feature recognizes animated films, with nominees’ credited directors and, under later rules, producers. The excerpt lists
+winners from 2001–2016, including *Shrek*, *Spirited Away*, *Finding Nemo*, *Wallace & Gromit: The Curse of the Were-Rabbit*, *Ratatouille*, *Up*, *Frozen*, and
+*Zootopia*. It also catalogs nominated films by studio and animation technique, highlighting Pixar,
+</item 6>
+
+<item 7>
+Academy Award for Best Animated Feature
+( 82nd ) Up Pete Docter Coraline Henry Selick Fantastic Mr. Fox Wes Anderson The Princess and the Frog John Musker and Ron Clements The Secret of Kells Tomm
+Moore 2010s ( edit ) Year Film Nominees ( 83rd ) Toy Story 3 Lee Unkrich How to Train Your Dragon Chris Sanders and Dean DeBlois The Illusionist Sylvain Chomet
+2011 ( 84th ) Rango Gore Verbinski A Cat in Paris Alain Gagnol and Jean - Loup Felicioli Chico & Rita Fernando Trueba and Javier Mariscal Kung Fu Panda 2
+Jennifer Yuh Nelson Puss in Boots Chris Miller 2012 ( 85th ) Brave Mark Andrews and Brenda Chapman Frankenweenie Tim Burton ParaNorman Sam Fell and Chris Butler
+The Pirates ! Band of Misfits Peter Lord Wreck - It Ralph Rich Moore 2013 ( 86th ) Frozen Chris Buck , Jennifer Lee , and Peter Del Vecho The Croods Chris
+Sanders , Kirk DeMicco , and Kristine Belson Despicable Me 2 Pierre Coffin , Chris Renaud ,
+</item 7>
+
+<item 8>
+The Best Animated Feature Oscar began in 2002 for films released in 2001, after animation’s growing output made a regular award viable. Eligibility requires at
+least eight qualifying theatrical releases in Los Angeles County; the shortlist has three films, or five when at least 16 are submitted. All Academy members may
+vote. Animated films have occasionally earned nominations elsewhere: Beauty and the Beast, Up, and Toy Story 3 for Best Picture; Waltz with Bashir for Foreign
+Language Film;
+</item 8>
+
+<item 9>
+Academy Award for Best Animated Feature
+Book Portal Academy Award for Best Animated Feature Shrek -- Aron Warner ( 2001 ) Spirited Away -- Hayao Miyazaki ( 2002 ) Finding Nemo -- Andrew Stanton ( 2003
+) The Incredibles -- Brad Bird ( 2004 ) Wallace & Gromit : The Curse of the Were - Rabbit -- Nick Park and Steve Box ( 2005 ) Happy Feet -- George Miller ( 2006
+) Ratatouille -- Brad Bird ( 2007 ) WALL - E -- Andrew Stanton ( 2008 ) Up -- Pete Docter ( 2009 ) Toy Story 3 -- Lee Unkrich ( 2010 ) Rango -- Gore Verbinski (
+2011 ) Brave -- Mark Andrews and Brenda Chapman ( 2012 ) Frozen -- Chris Buck , Jennifer Lee , and Peter Del Vecho ( 2013 ) Big Hero 6 -- Don Hall , Chris
+Williams , and Roy Conli ( 2014 ) Inside Out -- Pete Docter and Jonas Rivera ( 2015 ) Zootopia -- Byron Howard , Rich Moore , and Clark Spencer ( 2016 )
+Retrieved from `` https://en.wikipedia.org/w/index.
+</item 9>
+
+<item 10>
+Academy Award for Best Animated Feature
+2005 ( 78th ) Wallace & Gromit : The Curse of the Were - Rabbit Nick Park and Steve Box Howl 's Moving Castle Hayao Miyazaki Corpse Bride Mike Johnson and Tim
+Burton 2006 ( 79th ) Happy Feet George Miller Cars John Lasseter Monster House Gil Kenan 2007 ( 80th ) Ratatouille Brad Bird Persepolis Marjane Satrapi and
+Vincent Paronnaud Surf 's Up Ash Brannon and Chris Buck 2008 ( 81st ) WALL - E Andrew Stanton Bolt Chris Williams and Byron Howard Kung Fu Panda John Stevenson
+and Mark Osborne 2009 ( 82nd ) Up Pete Docter Coraline Henry Selick Fantastic Mr.
+</item 10>
+=== END ITEM id=87ac429c1915aaf6 ===

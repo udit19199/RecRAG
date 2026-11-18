@@ -1,0 +1,43 @@
+[
+ {"id": "5ade17d255429939a52fe80e", "sentences": [
+   ["The Wire Fox Terrier is a breed of dog.", "The Wire Fox Terrier is one of many terrier breeds."],
+   ["The West Siberian Laika, also called WSL, is a breed of hunting dog.", "The West Siberian Laika, also called WSL, is a breed of spitz type."]
+ ]},
+ {"id": "5a893fc855429951533612f0", "sentences": [
+   ["The breed is used for hunting in packs.", "The breed descends from the old Hound of Saintonge type of large hunting dog."],
+   ["The Kritikos Lagonikos, also called the Cretan Hound, is a hunting breed of dog.", "The Kritikos Lagonikos has the Greek name Κρητικός Λαγωνικός.", "The Kritikos Lagonikos is from the island of Crete, in Greece."]
+ ]},
+ {"id": "5a779fd95542997042120ab5", "sentences": [
+   ["The 1997 European Athletics Junior Championships were held in Ljubljana, Slovenia.", "The 1997 European Athletics Junior Championships were held on July 24-27."],
+   ["Ljubljana is the capital of Slovenia.", "Ljubljana is the largest city of Slovenia.", "Ljubljana is also known by other, historical names."]
+ ]},
+ {"id": "multihop-rag-815", "sentences": [
+   ["The speaker explained this at the time of the 2022 Academy Awards.", "Will slapped Chris Rock at the 2022 Academy Awards.", "At the time Will slapped Chris Rock, the speaker and Will had been separated for six years."],
+   ["Outsiders are now aware that Jada and Will have been separated since 2016.", "The timeline of Jada's relationship with Alsina is still fuzzy."]
+ ]},
+ {"id": "multihop-rag-1449", "sentences": [
+   ["A source told Entertainment Tonight that Taylor Swift likes that Travis Kelce 'pursued her'.", "A source told Entertainment Tonight that Taylor Swift and Travis Kelce are having a 'great time getting to know each other'."],
+   ["In the picture, Taylor Swift could be seen standing next to Travis Kelce.", "In the picture, Taylor Swift could be seen reaching to kiss Travis Kelce's cheek."],
+   ["The post came after Taylor Swift was seen enthusiastically cheering Travis Kelce on in the box seats at Arrowhead Stadium.", "Taylor Swift being seen cheering on Travis Kelce fuelled speculation that Taylor Swift and Travis Kelce are dating."]
+ ]},
+ {"id": "-4340755100872459608", "sentences": [
+   ["Health or vitality is an attribute assigned to entities in a role-playing or video game.", "Health or vitality is assigned to entities such as the player character, enemies, and objects.", "Health or vitality indicates the state of an entity in combat.", "Health is usually measured in hit points or health points.", "Hit points or health points are shortened to HP.", "When the HP of a player character reaches zero, the player may lose a life.", "When the HP of a player character reaches zero, the character might become incapacitated or die.", "When the HP of an enemy reaches zero, the enemy may be defeated or die.", "When the HP of an enemy reaches zero, the player is usually rewarded in some way."]
+ ]},
+ {"id": "multihop-rag-1912", "sentences": [
+   ["Jerry Dipoto is president of baseball operations.", "Those referred to as 'they' would all have significant value if Jerry Dipoto decided to move one for a bat."],
+   ["Aaron Judge came away with a new contract.", "Justin Verlander came away with a new contract.", "Trea Turner came away with a new contract.", "Xander Bogaerts came away with a new contract."]
+ ]},
+ {"id": "3551294051380047804", "sentences": [
+   ["Bruce Willis plays John McClane.", "Jai Courtney plays John 'Jack' McClane, Jr.", "Sebastian Koch plays Yuri Komarov.", "Yuliya Snigir plays Irina Komarova.", "Sergei Kolesnikov plays Viktor Chagarin.", "Radivoje Bukvić plays Alik.", "Mary Elizabeth Winstead plays Lucy McClane."]
+ ]},
+ {"id": "5ae6152d5542996de7b71b38", "sentences": [
+   ["The Cat in the Hat is a Dr. Seuss film.", "The Cat in the Hat is a 2003 film.", "The Cat in the Hat is an American film.", "The Cat in the Hat is a family comedy film.", "The Cat in the Hat was directed by Bo Welch."],
+   ["Robert W. 'Bo' Welch III was born November 30, 1951.", "Robert W. 'Bo' Welch III is an American production designer.", "Robert W. 'Bo' Welch III is an American director."]
+ ]},
+ {"id": "multihop-rag-1625", "sentences": [
+   ["Google's report states that Google has no additional measures planned for YouTube.", "Google has no additional measures planned for YouTube over the next six months."],
+   ["In the last roundup, the writers learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms.", "In the last roundup, the writers learned how Google tried to have Chrome preinstalled on iPhones."],
+   ["The lawsuit will attempt to argue that Google restrains competition within two separate markets.", "One of the two markets is the distribution of apps to Android users.", "One of the two markets is the market for payment processing solutions for content inside Android apps."],
+   ["The case was filed by the Arkansas-based publisher Helena World Chronicle.", "The case argues that Google 'siphons off' news publishers' content through anticompetitive means.", "The case argues that Google 'siphons off' news publishers' readers through anticompetitive means.", "The case argues that Google 'siphons off' news publishers' ad revenue through anticompetitive means."]
+ ]}
+]

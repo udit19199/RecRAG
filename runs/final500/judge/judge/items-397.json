@@ -1,0 +1,455 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "cd2e6ae54e0783ea",
+   "gold": [
+    {
+     "sentence": " It is known for producing the long-running series \"Tom Goes to the Mayor\", \"Nathan For You\", \"Tim and Eric Awesome Show, Great Job!",
+     "facts": {
+      "0.0": "The entity referred to as 'It' is known for producing the long-running series 'Tom Goes to the Mayor'.",
+      "0.1": "The entity referred to as 'It' is known for producing the long-running series 'Nathan For You'.",
+      "0.2": "The entity referred to as 'It' is known for producing the long-running series 'Tim and Eric Awesome Show, Great Job!'."
+     }
+    },
+    {
+     "sentence": "\" and \"Check It Out!",
+     "facts": {
+      "1.0": "'Check It Out!' is a series title."
+     }
+    },
+    {
+     "sentence": " with Dr. Steve Brule\".",
+     "facts": {
+      "2.0": "The series title is 'Check It Out! with Dr. Steve Brule'."
+     }
+    },
+    {
+     "sentence": "Check It Out!",
+     "facts": {
+      "3.0": "Check It Out! is a title."
+     }
+    },
+    {
+     "sentence": " with Dr. Steve Brule is an American sketch comedy television series that is a spin-off of \"Tim and Eric Awesome Show, Great Job!",
+     "facts": {
+      "4.0": "Check It Out! with Dr. Steve Brule is an American sketch comedy television series.",
+      "4.1": "Check It Out! with Dr. Steve Brule is a spin-off of 'Tim and Eric Awesome Show, Great Job!'."
+     }
+    }
+   ],
+   "items": [
+    "Abso Lutely Productions\nAbso Lutely Productions is a film and television production company owned by actor and producers Tim Heidecker, Eric Wareheim and producer Dave Kneebone.\n\n It is known for producing the long-running series \"Tom Goes to the Mayor\", \"Nathan For You\", \"Tim and Eric Awesome Show, Great Job!\n\n\" and \"Check It Out!\n\n with Dr. Steve Brule\".",
+    "The collection profiles entertainers, creators, and fictional characters across film, television, music, comedy, and magic. Highlights include magician Criss Angel’s Las Vegas shows; actors such as Michael Crawford, Matthew Perry, Josh Charles, and Glenn Quinn; comedians and creators behind *In Living Color*, *Upright Citizens Brigade*, and *Family Guy*; and performers including Nat and Alex Wolff and MatPat. It also covers productions such as *American Pie Presents: Band Camp* and *",
+    "Dave Kneebone\nDave Kneebone is an American producer.\n\n Along with Eric Wareheim and Tim Heidecker he runs Abso Lutely Productions which produces a variety of television and films.\n\n His role has been described as the business chief and \"straight man\" at Abso Lutely.\n\n Kneebone has worked as a producer on a variety of television shows including \"Comedy Bang!\n\n Bang!\n\n\", \"Nathan for You\", and \"Tim and Eric Awesome Show, Great Job!\n\n\".\n\n He is also listed a producer on the feature film \"Tim and Eric's Billion Dollar Movie\".",
+    "Check It Out! with Dr. Steve Brule\nCheck It Out!\n\n with Dr. Steve Brule is an American sketch comedy television series that is a spin-off of \"Tim and Eric Awesome Show, Great Job!\n\n\" starring John C. Reilly as Dr. Steve Brule.\n\n The series premiered on Cartoon Network's late night programming block, Adult Swim, on May 16, 2010.\n\n The program follows Brule as he examines different facets of living.\n\n His severe naivete and social awkwardness generally land him in embarrassing situations, though he largely remains ignorant of any embarrassment he's causing himself.\n\n As the series progresses, he reveals shocking and sometimes horrifying details about his past and personal life.",
+    "David Jablin\nDavid Jablin is an award winning comedy producer and director and one of the pioneers of original television programming for Pay Television.\n\n In 1981 he created and produced the innovative comedy anthology series \"Likely Stories\" for HBO/Cinemax, which featured the directing debuts of Rob Reiner, Danny DeVito, Christopher Guest, and Billy Crystal.",
+    "Upright Citizens Brigade (TV series)\nUpright Citizens Brigade is an American sketch comedy television series that premiered on August 19, 1998 on Comedy Central.\n\n The show aired for three seasons with each season consisting of ten episodes.\n\n The series featured four members of Upright Citizens Brigade, an improvisational sketch comedy group.\n\n The cast included Matt Besser, Amy Poehler, Ian Roberts, and Matt Walsh.\n\n The cast would later reunite for another series of a similar format that premiered in 2016 on Seeso.",
+    "And There's More\nAnd There's More is a comedy sketch show starring Jimmy Cricket produced by Central Independent Television for ITV from 1985 till 1988.",
+    "Bagboy (TV special)\nBagboy is a 2015 American television special produced for Adult Swim, and aired on February 21, 2015, to positive critical reception.\n\n Written and directed by Tim Heidecker and Eric Wareheim for Abso Lutely Productions and John C. Reilly, the special is a fictional sitcom pilot in the universe of \"Tim and Eric Awesome Show, Great Job!\n\n\", written by and starring Reilly's recurring \"Tim and Eric\" character Dr. Steve Brule.\n\n This is the second \"Tim and Eric\" spin-off to feature the Dr. Steve Brule character after \"Check it Out!\n\n with Dr. Steve Brule\".",
+    "HGTV Design Star S3 (2008): Katrina-home finale; Jennifer Bertrand won a viewer vote and her own show. Friends of the People (2014): TruTV’s first sketch series, with 10 episodes and former In Living Color revival cast members. In Living Color (1990–94): Wayans-created Fox series, notable for Black-centered humor and disputes with executives. Key & Peele (2012–15): 53 episodes across five seasons, plus a Super",
+    "Friends of the People\nFriends of the People is an American sketch comedy television series.\n\n It was slated to premiere on TruTV in summer 2014, but was pushed to October 28, 2014, as part of the network's shift in their programming direction.\n\n Many of the cast members (Jennifer Bartels, Jermaine Fowler, and Lil Rel Howery) were originally reported to be cast members of a planned revival of In Living Color which never materialized.\n\n The show's first season consists of 10 episodes.\n\n This makes it the network's first sketch comedy show.\n\n The series holds a TV-14 rating, though select episodes are rated TV-MA--also a first for the truTV network."
+   ]
+  },
+  {
+   "id": "fec440afe107b307",
+   "gold": [
+    {
+     "sentence": "Frederick King Keller (born 1954 in Buffalo, New York) is an American director, producer and screenwriter for film and television.",
+     "facts": {
+      "0.0": "Frederick King Keller was born in 1954.",
+      "0.1": "Frederick King Keller was born in Buffalo, New York.",
+      "0.2": "Frederick King Keller is an American director.",
+      "0.3": "Frederick King Keller is an American producer.",
+      "0.4": "Frederick King Keller is an American screenwriter.",
+      "0.5": "Frederick King Keller works in film and television."
+     }
+    },
+    {
+     "sentence": "Ian Schneider (born October 3, 1992), is an independent American film director and screenwriter.",
+     "facts": {
+      "1.0": "Ian Schneider was born on October 3, 1992.",
+      "1.1": "Ian Schneider is an independent American film director.",
+      "1.2": "Ian Schneider is an American screenwriter."
+     }
+    }
+   ],
+   "items": [
+    "Colby Keller\nColby Keller (born October 18, 1980) is an American visual artist, blogger, and pornographic film actor.\n\n His career in porn film started in 2004 at Sean Cody and has since expanded to include such studios as Cocksure Men, Randy Blue, Titan Men, Falcon, CockyBoys and Men.com.\n\n Keller has amassed a large fan base with both his films and his long-standing blog, \"The Big Shoe Diaries\".\n\n He has been nominated for a number of awards and in 2013, World of Wonder awarded him the WOWie Award for Best Blog.\n\n Keller is nominated for 8 2015 Grabby Awards.\n\n Keller has also appeared in the short, Zolushka, a queer retelling of Cinderella and the popular series Capitol Hill both by the cult filmmaker Wes Hurley.",
+    "Dan Ouellette\nGiger and Beksinski, and he has been featured in magazines internationally.\n\n David Bowie commented while looking at Dan's art that he has noticed a strong influence of science fiction on contemporary art.\n\n Giger saw a different aspect, saying simply \"Very bony.\"\n\n He grew to adore the cinema of Fellini and later to marvel at Lynch's \"Eraserhead\".\n\n Rather than pursue a formal education in the fine arts he chose to study the craft of film making and after college he became a production designer working on feature films in New York City starting with his work as a production designer for Hal Hartley in 1990 with Trust and then, in 1992, with Simple Men.",
+    "Paul Schrader\nPaul Joseph Schrader (born July 22, 1946) is an American screenwriter, film director, and film critic.\n\n Schrader wrote or co-wrote screenplays for four Martin Scorsese films: \"Taxi Driver\" (1976), \"Raging Bull\" (1980), \"The Last Temptation of Christ\" (1988), and \"Bringing Out the Dead\" (1999).\n\n Schrader has also directed 18 feature films, including his directing debut crime drama, \"Blue Collar\" (co-written with his brother, Leonard Schrader), the crime drama \"Hardcore\" (a loosely autobiographical film also written by Schrader), his 1982 remake of the horror classic \"Cat People\", the crime drama \"American Gigolo\" (1980), the biographical drama \"\" (1985), the cult film \"Light Sleeper\" (1992), the drama \"Affliction\" (1997), the biographical film \"Auto Focus\" (2002), and the erotic dramatic thriller \"The Canyons\" (2013).",
+    "Allen Klein\nAllen Klein (December 18, 1931 July 4, 2009) was an American businessman, music publisher, writers' representative, filmmaker and record label executive, most noted for his tough persona and aggressive, innovative negotiation tactics, many of which established higher industry standards for compensating recording artists.\n\n He founded ABKCO Music & Records Incorporated.\n\n Klein revolutionized the income potential of recording artists, who previously had been routinely victimized by onerous record company contracts.\n\n He first scored massive monetary and contractual windfalls for Buddy Knox and Jimmy Bowen, one-hit rockabillies of the late 1950s, then parlayed his early successes into a position managing Sam Cooke, and eventually managed the Beatles and the Rolling Stones simultaneously, along with many other artists, becoming one of the most powerful individuals in the music industry during his era.",
+    "Frederick King Keller\nFrederick King Keller (born 1954 in Buffalo, New York) is an American director, producer and screenwriter for film and television.\n\n He is also credited under the names Frederick K. Keller, Fred K. Keller and Fred Keller.\n\n He is the son of actor/screenwriter .\n\n His father was a television pioneer who produced and directed the first weekly dramatic series seen on television.Besides acting and directing in theater his father also ran several art house movie theaters in Buffalo which the young Fred became intimately involved with and which formed the root of his cinematic education.",
+    "Leonard Schrader\nLeonard Schrader (November 30, 1943 – November 2, 2006) was an American screenwriter and director, most notable for his ability to write Japanese language films and for his many collaborations with his brother, Paul Schrader.\n\n He earned an Academy Award Nomination for the screenplay he wrote for the film \"Kiss of the Spider Woman\".",
+    "Ian Schneider\nIan Schneider (born October 3, 1992), is an independent American film director and screenwriter.",
+    "John Bailey (cinematographer)\nJohn Ira Bailey, A.S.C. (born August 10, 1942) is an American cinematographer and film director best known for his collaborations with directors Paul Schrader, Lawrence Kasdan, Michael Apted, and Ken Kwapis.\n\n In August 2017, Bailey was elected President of the Academy of Motion Picture Arts and Sciences for a four-year term.",
+    "Klete Keller\nKlete D. Keller (born March 21, 1982) is an American former competition swimmer who won medals at the 2000 Summer Olympics and the 2004 Summer Olympics in the 400-meter freestyle and the 4×200-meter freestyle relay.\n\n In the 4×200-meter freestyle relay, Keller held off a charging Ian Thorpe in the anchor leg to win the race by 0.13 seconds.\n\n This was the first time Australia had been beaten in the event in over seven years.\n\n The American relay of Michael Phelps, Ryan Lochte, Peter Vanderkaay, and Keller are undefeated since the Athens games.\n\n Vanderkaay, Larsen Jensen, Erik Vendt, and Keller make up the core of the premier American mid-distance/distance freestyle swimmers.",
+    "Kurt Voss\nKurt Voss (born Kurt Christopher Peter Wössner) is an American film director, screenwriter and musician-songwriter.\n\n Voss's credits include Will Smith's debut \"Where The Day Takes You\"; the Justin Theroux, Alyssa Milano and Ice T action film \"Below Utopia\"; actress Jaime Pressly's debut feature \"\", and rock and roll related films including \"Down and Out with the Dolls\" and \"Ghost on The Highway: A Portrait of Jeffrey Lee Pierce and The Gun Club\"."
+   ]
+  },
+  {
+   "id": "def0f1a0204c6597",
+   "gold": [
+    {
+     "sentence": "Xingcheng (), former name Ningyuan (宁远), is a county-level city of southwest Liaoning province, China, with a population of approximately 140,000 urban inhabitants, and is located on the Liaodong Bay, i.e. the northern coast of the Bohai Sea.",
+     "facts": {
+      "0.0": "Xingcheng is a county-level city of southwest Liaoning province, China.",
+      "0.1": "Xingcheng's former name was Ningyuan (宁远).",
+      "0.2": "Xingcheng has a population of approximately 140,000 urban inhabitants.",
+      "0.3": "Xingcheng is located on Liaodong Bay, the northern coast of the Bohai Sea."
+     }
+    },
+    {
+     "sentence": " It covers an area of 2046 square kilometers and has a population of about one million.",
+     "facts": {
+      "1.0": "Xingcheng covers an area of 2046 square kilometers.",
+      "1.1": "Xingcheng has a population of about one million."
+     }
+    }
+   ],
+   "items": [
+    "Longkou\nLongkou (), formerly Huang County (), is a port city in northeastern Shandong province, China, facing the Bohai Sea to the north and the Laizhou Bay to the west.\n\n Longkou, a county-level city, is administered by the prefecture-level city of Yantai.\n\n The total population of Longkou is 620,000.",
+    "Ezhou\nEzhou () is a prefecture-level city in eastern Hubei Province, China.\n\n As of the 2010 census, the city had a population of 1,048,668, of which 668,727 lived in the core Echeng District.\n\n The Ezhou - Huanggang built-up (\"or metro\") area was home to 1,035,496 inhabitants from the Echeng and Huangzhou, Huanggang Districts.",
+    "Linzhou, Henan\nLinzhou (), formerly Lin County (林县), is a county-level city in Anyang, Henan, China.\n\n Adjacent to Shanxi Province and Hebei Province, it is located in the north of Henan Province and at the eastern foot of the Taihang Mountains.\n\n It covers an area of 2046 square kilometers and has a population of about one million.",
+    "Dongtai\nDongtai () is a coastal county-level city under the administration of Yancheng, Jiangsu province, China.\n\n It has a population of roughly 1,170,000 estimated for 2007.\n\n Out of the total population, about 260,000 live in the Dongtai urban core, others are distributed in the 23 suburban towns and rural regions (Some famous towns include Touzao, Anfeng, Qingdong, Sancang, Qianggang, Fu'an, Tangyang, etc.).\n\n With some Yellow Sea coast, it borders the prefecture-level cities of Nantong to the south and Taizhou to the west, and is the southernmost county-level division of Yancheng.",
+    "Xingcheng\nXingcheng (), former name Ningyuan (宁远), is a county-level city of southwest Liaoning province, China, with a population of approximately 140,000 urban inhabitants, and is located on the Liaodong Bay, i.e. the northern coast of the Bohai Sea.\n\n Currently under the administration of Huludao City, the area is steeped in history, and contains one of the best preserved Ming Dynasty towns in China, as well as functioning as a laidback summer resort.",
+    "Wenling\nWenling (Wenling dialect: Uen-lin Zy ] ; ) is a coastal county-level city in the municipal region of Taizhou, in southeastern Zhejiang province, China.\n\n It borders Luqiao and Huangyan to the north, Yuhuan to the south, Yueqing to the west, looks out to the East China Sea to the east.\n\n Wenling locates on 28°22'N, 121°21'E, approximately 300 km south of Shanghai.",
+    "Shanxi–Henan–Shandong Railway\nThe line can accommodate train speeds of up to 120 km/h .\n\n Cities along route include Lüliang, Liulin, Hongdong, Changzhi and Pingshun in Shanxi; Linzhou, Anyang, Tangyin, Puyang, Hebi, Fan County and Taiqian County in Henan; Liangshan County, Dongping, Ningyang, Xintai, Laiwu, Yiyuan, Yishui, Ju County, Junan and Rizhao in Shandong.\n\n The line was built from 2010 to 2014 and operations began on December 30, 2014.",
+    "Suining\nSuining (; Sichuanese Pinyin: Xunin; Sichuanese pronunciation: ; ) is a prefecture-level city of eastern Sichuan province in Southwest China.\n\n In 2002, Suining had a population of 658,798.",
+    "Daying County\nDaying County () is a county of Sichuan province, China, under the administration of Suining City and in the central part of the Sichuan Basin.\n\n In 2002, it had a population of 520,000 residing in an area of 703 km2 .\n\n Daying is remarkable for being the home of the \"Chinese Dead Sea\", a tourist attraction that is based on a salt lake with 9 times the salinity of the ocean and which constitutes the largest indoor water park in China.\n\n The G42 Shanghai–Chengdu Expressway and Dazhou–Chengdu Railway (达成铁路) traverses east–west through the entire length of the county.",
+    "Fuzhoucheng\nFuzhou, also Fuzhoucheng () is a town under the administration of Wafangdian City, in southern Liaoning province, China.\n\n It lies at the intersection of China National Highway 202 and Liaoning Provincial Highway 313, 57 km north by road from Pulandian.\n\n Dahe Reservoir is located several kilometres to the east.\n\n There is a 74,132 acres (30,000 hectares) bird reserve nearby with species such as Swan goose and Hooded crane about 15 km southwest of the town.\n\n , it has 2 residential communities (社区) and 14 villages under its administration."
+   ]
+  },
+  {
+   "id": "75cc7b786e1c7984",
+   "gold": [
+    {
+     "sentence": "Operation Lighthouse was the name given to the failed experimental launch of four Aggregate 3 liquid-fuel rockets by Wernher von Braun and Walter Dornberger on the German island of Greifswalder Oie in December 1937.",
+     "facts": {
+      "0.0": "Operation Lighthouse was the name given to a failed experimental launch.",
+      "0.1": "The Operation Lighthouse launch involved four Aggregate 3 liquid-fuel rockets.",
+      "0.2": "Wernher von Braun conducted the Operation Lighthouse launch.",
+      "0.3": "Walter Dornberger conducted the Operation Lighthouse launch.",
+      "0.4": "The Operation Lighthouse launch took place on the German island of Greifswalder Oie.",
+      "0.5": "The Operation Lighthouse launch took place in December 1937."
+     }
+    },
+    {
+     "sentence": "Major-General Dr. Walter Robert Dornberger (6 September 1895 – 27 June 1980) was a German Army artillery officer whose career spanned World War I and World War II.",
+     "facts": {
+      "1.0": "Major-General Dr. Walter Robert Dornberger was born on 6 September 1895.",
+      "1.1": "Walter Robert Dornberger died on 27 June 1980.",
+      "1.2": "Walter Robert Dornberger was a German Army artillery officer.",
+      "1.3": "Walter Robert Dornberger's career spanned World War I.",
+      "1.4": "Walter Robert Dornberger's career spanned World War II."
+     }
+    }
+   ],
+   "items": [
+    "Mount Von Braun\nMount Von Braun ( ) is a mountain (3,275 m) located 4 nautical miles (7 km) south of Mount Sabine in the Admiralty Mountains.\n\n Mapped by United States Geological Survey (USGS) from surveys and U.S. Navy air photos, 1960–63.\n\n Named by Advisory Committee on Antarctic Names (US-ACAN) for Wernher von Braun of the National Aeronautics and Space Administration, a visitor at McMurdo Station, 1966–67.",
+    "Ulf Merbold\nDr. Ulf Dietrich Merbold (born June 20, 1941) is the first West German citizen and second German native (after Sigmund Jähn) to have flown in space.\n\n He is also the first member of the European Space Agency Astronaut Corps to participate in a spaceflight mission and the first non-US citizen to reach orbit in a US spacecraft.\n\n In 1983, he and Byron Lichtenberg became the first Payload Specialists to fly on the shuttle.",
+    "Von Braun (crater)\nvon Braun, named after the rocket pioneer Wernher von Braun, is a lunar crater located near the northwestern limb of the Moon.\n\n It lies along the western edge of the Oceanus Procellarum, to the northeast of the crater Lavoisier.\n\n The northeastern rim of this crater is on the edge of the Sinus Roris, a bay feature in the northwestern part of the Oceanus Procellarum.\n\n Due to its proximity to the limb, this crater appears significantly foreshortened when viewed from the Earth.",
+    "Man Will Conquer Space Soon!\nMan Will Conquer Space Soon!\n\n was the title of a famous series of 1950s magazine articles in \"Collier's\" detailing Wernher von Braun's plans for manned spaceflight.\n\n Edited by Cornelius Ryan, the individual articles were authored by such space notables of the time as Willy Ley, Fred Lawrence Whipple, Dr. Joseph Kaplan, Dr. Heinz Haber, and von Braun.\n\n The articles were illustrated with paintings and drawings by Chesley Bonestell, Fred Freeman, and Rolf Klep, some of the finest magazine illustrators of the time.",
+    "Operation Lighthouse (1937)\nOperation Lighthouse was the name given to the failed experimental launch of four Aggregate 3 liquid-fuel rockets by Wernher von Braun and Walter Dornberger on the German island of Greifswalder Oie in December 1937.",
+    "Von Braun Ferry Rocket\nVon Braun Ferry Rocket was a concept design for a shuttle spacecraft that was developed by Wernher von Braun in a seminal series of early-1950s Collier's magazine articles, Man Will Conquer Space Soon!\n\n by Wernher von Braun \"et al.\" The Ferry Rocket concept has evolved over time.",
+    "Magnus von Braun\nMagnus \"Mac\" Freiherr von Braun (10 May 1919 – 21 June 2003) was a German chemical engineer, Luftwaffe aviator, and rocket scientist at Peenemünde, the Mittelwerk, and after emigrating to the United States via Operation Paperclip, at Fort Bliss.\n\n He was the brother of Sigismund and Wernher von Braun.",
+    "Walter Dornberger\nMajor-General Dr. Walter Robert Dornberger (6 September 1895 – 27 June 1980) was a German Army artillery officer whose career spanned World War I and World War II.\n\n He was a leader of Nazi Germany's V-2 rocket program and other projects at the Peenemünde Army Research Center.",
+    "Ulrich Walter\nProf. Dr. Ulrich Hans Walter (born February 9, 1954) is a German physicist/engineer and a former DFVLR astronaut.",
+    "Von Braun Center for Science &amp; Innovation\nThe Von Braun Center for Science & Innovation (VCSI ) is a non-profit research and development organization based in Huntsville, Alabama and is named for pioneering aerospace engineer Wernher von Braun.\n\n VCSI is affiliated with NASA, Department of Defense and other federal government agencies."
+   ]
+  },
+  {
+   "id": "3468bb862879a8dd",
+   "gold": [
+    {
+     "sentence": " The S70 was essentially a facelifted 850 saloon.",
+     "facts": {
+      "0.0": "The S70 was essentially a facelifted 850 saloon."
+     }
+    },
+    {
+     "sentence": "The Volvo 850 is a compact executive car that was produced by the Swedish manufacturer Volvo Cars from 1991 to 1996.",
+     "facts": {
+      "1.0": "The Volvo 850 is a compact executive car.",
+      "1.1": "The Volvo 850 was produced by the Swedish manufacturer Volvo Cars.",
+      "1.2": "The Volvo 850 was produced from 1991 to 1996."
+     }
+    },
+    {
+     "sentence": " The 850 was the first front-wheel drive vehicle from Volvo to be sold in North America and also the first all-wheel drive Volvo.",
+     "facts": {
+      "2.0": "The Volvo 850 was the first front-wheel drive vehicle from Volvo to be sold in North America.",
+      "2.1": "The Volvo 850 was the first all-wheel drive Volvo."
+     }
+    }
+   ],
+   "items": [
+    "Volvo P2 platform\nThe Volvo P2 platform is a global full-size unibody automobile platform developed and produced by Volvo.\n\n It is designed for single wheelbases and is adaptable to front- or all wheel drive configurations.\n\n It was developed by the automaker before its 1999 acquisition by Ford Motor Company, and debuted with the 1998 Volvo S80.",
+    "Volvo C30\nThe Volvo C30 is a near-luxury compact hatchback, manufactured and marketed by Volvo Cars for model years 2006-2013, available across its single generation as a three-door hatchback.\n\n Powered by inline-four and straight-five engines, the C30 is variant of the Volvo S40/V50/C70 range, sharing the same Ford C1/Volvo P1 platform.\n\n Volvo marketed the C30 as a premium hatchback / sports coupe.",
+    "Volvo 164\nThe Volvo 164 is a 4-door, 6-cylinder luxury sedan unveiled by Volvo at the Paris Motor Show early in October 1968 and first sold as a 1969 model.\n\n 46,008 164s were built before the car was superseded by the 264 in 1975.\n\n The 164 was Volvo's first venture into the luxury segment since the end of PV 60 production in 1950, and was the first six-cylinder Volvo since the PV800 last produced in 1958.",
+    "Volvo S40\nThe Volvo S40 is a compact luxury car marketed and produced by the Swedish manufacturer Volvo Cars from 1995 to 2012 across two generations.",
+    "Volvo S90\nThe Volvo S90 is an executive sedan manufactured and marketed by Swedish automaker Volvo Cars since 2016.\n\n Its estate variant is called the Volvo V90.",
+    "Volvo S70\nThe Volvo S70 was a compact executive car produced by Volvo Cars from 1996 to 2000.\n\n The S70 was essentially a facelifted 850 saloon.\n\n The S70 was replaced with the Volvo S60.",
+    "Volvo V50\n\"For the sedan variant of the car, see Volvo S40.\"",
+    "Volvo SI6 engine\nVolvo designed the SI6 (\"short inline 6\") straight-6 automobile engine for use in 2007 models.\n\n An evolution of the company's long-used straight-5 Volvo Modular engine, which itself is an evolution of the Volvo B6304 straight six engine, the SI6 can be mounted transversely for front wheel drive or all wheel drive applications.\n\n Despite the added cylinder and displacement, the engine remains compact, and is in fact 1 mm shorter than the previous straight-5.\n\n The engine was initially offered in two displacements — a 3.0 L turbocharged version and a 3.2 L naturally aspirated version.\n\n Both offered variable cam timing, though only the turbo version varies both the intake and exhaust valves.\n\n On top of the variable cam timing used on the intake cam of the naturally aspirated engine it also had variable valve lift by using Cam Profile Switching (CPS).",
+    "Volvo P80 platform\nThe Volvo P80 platform was a Swedish mid-size unibody automobile platform developed and produced by Volvo Cars.\n\n It was in use from 1991 to 2005.\n\n It is designed for different wheelbases in front-wheel drive configurations and was adapted to all wheel drive.\n\n It debuted with the 1991 Volvo 850 and again in autumn 1996 with the Volvo 850 AWD.\n\n Although heavily modified by TWR, the same basic chassis was used as the underpinnings for the C70.\n\n After the model year 2000 most P80 models were replaced by their P2 successors, with the exception of the C70 convertible which remained in production until 2005.\n\n A total of 1,360,522 cars based on this platform were built.",
+    "Volvo 850\nThe Volvo 850 is a compact executive car that was produced by the Swedish manufacturer Volvo Cars from 1991 to 1996.\n\n Designed by Jan Wilsgaard it was available in saloon and estate body styles.\n\n The 850 was the first front-wheel drive vehicle from Volvo to be sold in North America and also the first all-wheel drive Volvo.\n\n The range was replaced for 1997 by the Volvo S70 and Volvo V70."
+   ]
+  },
+  {
+   "id": "15ba088807e9a431",
+   "gold": [
+    {
+     "sentence": " It is the third installment of the \"Naked\" series \"Naked Killer\" (1992) and \"Naked Weapon\" (2002).",
+     "facts": {
+      "0.0": "The work is the third installment of the 'Naked' series.",
+      "0.1": "'Naked Killer' is a work in the 'Naked' series released in 1992.",
+      "0.2": "'Naked Weapon' is a work in the 'Naked' series released in 2002."
+     }
+    },
+    {
+     "sentence": "Naked Weapon (赤裸特工) is a 2002 Hong Kong action-thriller film directed by action choreographer Tony Ching and starring Maggie Q, Anya Wu and Daniel Wu.",
+     "facts": {
+      "1.0": "Naked Weapon is also titled 赤裸特工.",
+      "1.1": "Naked Weapon is a 2002 film.",
+      "1.2": "Naked Weapon is a Hong Kong film.",
+      "1.3": "Naked Weapon is an action-thriller film.",
+      "1.4": "Naked Weapon was directed by action choreographer Tony Ching.",
+      "1.5": "Naked Weapon stars Maggie Q.",
+      "1.6": "Naked Weapon stars Anya Wu.",
+      "1.7": "Naked Weapon stars Daniel Wu."
+     }
+    }
+   ],
+   "items": [
+    "The Naked Gun 2½: The Smell of Fear\nThe Naked Gun 2½: The Smell of Fear is a 1991 comedy film.\n\n It is the sequel to the 1988 film \"\" and the second installment in \"The Naked Gun\" film series.\n\n The film stars Leslie Nielsen as the comically bumbling Police Lt. Frank Drebin of \"Police Squad!\n\n\".\n\n Priscilla Presley plays the role of Jane, with O. J. Simpson as Nordberg and George Kennedy as police captain Ed Hocken.\n\n The film also features Robert Goulet (who previously made a \"special guest star\" appearance on \"Police Squad!\")\n\n as the villainous Quentin Hapsburg and Richard Griffiths as renewable fuel advocate Dr. Albert S. Meinheimer (as well as his evil double, Earl Hacker).\n\n Zsa Zsa Gabor, Mel Tormé and members of the Chicago Bears have cameo roles.",
+    "Naked Gun 33⅓: The Final Insult\nNaked Gun 33⅓: The Final Insult is a 1994 comedy film, and the third and final installment in \"The Naked Gun\" film series, which was based on the \"Police Squad!\n\n\" television series.",
+    "First Kill\nFirst Kill is a 2001 Dutch documentary film that revolves around the psychology of war.\n\n Important turning points in the Vietnam War are used to illustrate the effect of war on body and mind.\n\n The documentary consists of interviews with Michael Herr and several Vietnam veterans.\n\n The depth of the interviews provides insight into the feelings that accompany violence, fear, hate, seduction and pleasure.",
+    "The Human Centipede 2 (Full Sequence)\nThe Human Centipede 2 (Full Sequence) is a 2011 Dutch black and white exploitation-horror film written, directed, and co-produced by Dutch filmmaker Tom Six.\n\n The sequel to Six's 2009 film \"The Human Centipede (First Sequence)\", the film stars Laurence R. Harvey as a mentally impaired English man who watches and becomes obsessed with the first \"Human Centipede\" film, and decides to make his own \"centipede\" consisting of twelve people, including Ashlynn Yennie, an actress from the first film.",
+    "Naked Soldier\nNaked Soldier (絕色武器) is a 2012 Hong Kong action film directed by Marco Mak and starring Jennifer Tse.\n\n It is the third installment of the \"Naked\" series \"Naked Killer\" (1992) and \"Naked Weapon\" (2002).",
+    "Mel Gibson filmography\nFive years later he played Martin Riggs in the buddy cop action comedy \"Lethal Weapon\" alongside Danny Glovera role he later reprised in its sequels \"Lethal Weapon 2\" (1989), \"Lethal Weapon 3\" (1992), and \"Lethal Weapon 4\" (1998).",
+    "Die Hard with a Vengeance\nDie Hard with a Vengeance is a 1995 American action film and the third in the \"Die Hard\" film series.\n\n It was co-produced and directed by John McTiernan (who directed \"Die Hard\"), written by Jonathan Hensleigh, and stars Bruce Willis as New York City Police Department Lieutenant John McClane, Samuel L. Jackson as McClane's reluctant partner Zeus Carver, and Jeremy Irons as Simon Gruber.\n\n It was released on May 19, 1995, five years after \"Die Hard 2\", becoming the highest-grossing film at the worldwide box-office that year, but received mixed reviews.\n\n It was followed by \"Live Free or Die Hard\" and \"A Good Day to Die Hard\" in 2007 and 2013, respectively.",
+    "Naked Weapon\nNaked Weapon (赤裸特工) is a 2002 Hong Kong action-thriller film directed by action choreographer Tony Ching and starring Maggie Q, Anya Wu and Daniel Wu.",
+    "Naked City (TV series)\nNaked City is a police drama series from Screen Gems which was broadcast from 1958 to 1959 and from 1960 to 1963 on the ABC television network.\n\n It was inspired by the 1948 motion picture \"The Naked City\" and mimics its dramatic \"semi-documentary\" format.\n\n As in the film, each episode concluded with a narrator intoning the iconic line: \"There are eight million stories in the naked city.\n\n This has been one of them.\"",
+    "American Pie Presents: The Naked Mile\nAmerican Pie Presents: The Naked Mile (also known as American Pie: The Naked Mile) is a 2006 American sex comedy film released by Universal Pictures.\n\n It is the second installment in the \"American Pie Presents\" series and the fifth installment in the \"American Pie\" franchise.\n\n The film begins a story arc that concludes with \"\" (2007).\n\n John White stars as Erik Stifler, a high school senior who is given a \"guilt free pass\" by his girlfriend, Tracy Sterling (Jessy Schram), and so visits the Beta House fraternity led by his cousin, Dwight Stifler (Steve Talley), to run a mile naked.\n\n Christopher McDonald co-stars as Erik's father, Harry, and Eugene Levy once again plays Jim's Dad, who turns out to be a family friend of both Erik's and Tracy's.\n\n Also, it is in this film that his name is revealed to be \"Noah Levenstein\"."
+   ]
+  },
+  {
+   "id": "8715f91dfa89e942",
+   "gold": [
+    {
+     "sentence": " She is a member of the \"Game of Thrones\" stunt teams that won two Screen Actors Guild Awards, and has done stunt performances for films including \"Rogue One\".",
+     "facts": {
+      "0.0": "The person is a member of the Game of Thrones stunt teams.",
+      "0.1": "The Game of Thrones stunt teams won two Screen Actors Guild Awards.",
+      "0.2": "The person has done stunt performances for films including Rogue One."
+     }
+    },
+    {
+     "sentence": " \"Rogue One\" follows a group of rebels on a mission to steal the plans for the Death Star, the Galactic Empire's superweapon.",
+     "facts": {
+      "1.0": "Rogue One follows a group of rebels.",
+      "1.1": "The rebels are on a mission to steal the plans for the Death Star.",
+      "1.2": "The Death Star is the Galactic Empire's superweapon."
+     }
+    }
+   ],
+   "items": [
+    "Rachelle Henry\nRachelle Henry (born December 16, 2000) is an American teen actress and filmmaker.\n\n She played the role of Sandy Hobbs in the TLC (TV network) Series \"Escaping the Prophet\"and Lissa Golaski in \"Depth\", the film prequel to the Soma (video game) by Frictional Games.\n\n She is also known for directing and producing short films containing messages of social influence and coming of age themes including \"MISSING\" and \"Almost Boyfriends\".",
+    "Rachelle Henry (born 2000) is an American teen actress and filmmaker, known for *Escaping the Prophet*, *Depth*, and directing socially themed shorts *MISSING* and *Almost Boyfriends*. British actress and stunt performer Rachelle Beinart (born 1984) worked on *Game of Thrones*’ award-winning stunt teams, *Rogue One*, and *Teletubbies*. Paula Patton (born 1975) is an American actress whose films include",
+    "The Runaways (film)\nThe Runaways is a 2010 American drama film about the 1970s rock band of the same name written and directed by Floria Sigismondi.\n\n It is based on the book \"Neon Angel: A Memoir of a Runaway\" by the band's original lead vocalist Cherie Currie.\n\n The film stars Dakota Fanning as Currie, Kristen Stewart as rhythm guitarist and vocalist Joan Jett, and Michael Shannon as record producer Kim Fowley.\n\n \"The Runaways\" depicts the formation of the band in 1975 and focuses on the relationship between Currie and Jett until Currie's departure from the band.\n\n The film grossed about $4.7 million worldwide and received generally favorable reviews from critics.",
+    "The passage profiles actresses, voice performers, filmmakers, singers, and pageant figures. Highlights include Rachelle Henry’s acting and socially themed short films; Rachelle Lefevre’s *Twilight* role; Eva Gabor’s *Green Acres* and Disney voice work; Andrea Robinson’s singing in *Sister Act*; and Kelly Metzger’s animation roles. It also notes Amy O’Neill in *Honey, I Shrunk the Kids*, Heather Burns in *Miss Cong",
+    "Amy O’Neill (born 1971) played Amy Szalinski in *Honey, I Shrunk the Kids* (1989) and its 1992 sequel, earning a Young Artist Award nomination. *Rhoda*, Valerie Harper’s *Mary Tyler Moore Show* spin-off, ran five seasons (1974–78), followed Rhoda back to New York, and won two Golden Globes and two Emmys. Allison Miller (born 1985) starred in *K",
+    "Rachelle Lefevre\nRachelle Lefevre ( ; born February 1, 1979) is a Canadian actress.\n\n She has starred in the television series \"Big Wolf on Campus\" and had recurring roles in \"What About Brian\", \"Boston Legal\", and \"Swingtown\".\n\n She played the vampire Victoria Sutherland in the first two films of the \"Twilight\" saga, before being replaced by Bryce Dallas Howard in the third installment, \"\", due to scheduling conflicts with her role in the film \"Barney's Version\".\n\n In 2011, she starred in the ABC medical drama \"Off the Map\", followed by the CBS series \"A Gifted Man\" (2011–2012) and \"Under the Dome\" (2013–2015).",
+    "Rachelle Beinart\nRachelle Amy Beinart (born 29 September 1984) is a British actress and stunt performer.\n\n She is a member of the \"Game of Thrones\" stunt teams that won two Screen Actors Guild Awards, and has done stunt performances for films including \"Rogue One\".\n\n She has also acted in preschool children's shows as a suit actor, including the reboot of \"Teletubbies\".",
+    "Rogue One\nRogue One: A Star Wars Story, or simply Rogue One, is a 2016 American epic space opera film directed by Gareth Edwards.\n\n The screenplay by Chris Weitz and Tony Gilroy is from a story by John Knoll and Gary Whitta.\n\n It was produced by Lucasfilm and distributed by Walt Disney Studios Motion Pictures.\n\n It is the first installment of the \"Star Wars\" \"Anthology\" series, set immediately before the events of the original \"Star Wars\" film.\n\n The cast includes Felicity Jones, Diego Luna, Riz Ahmed, Ben Mendelsohn, Donnie Yen, Mads Mikkelsen, Alan Tudyk, Jiang Wen and Forest Whitaker.\n\n \"Rogue One\" follows a group of rebels on a mission to steal the plans for the Death Star, the Galactic Empire's superweapon.",
+    "The entries profile filmmakers, producers, performers, and artists: Tim Bedore is a Chicago-born comedian; Rogue One (2016) depicts rebels stealing Death Star plans; Frederick K. Keller, Peter Guber, Baltasar Kormákur, Steve Rash, Jonathan Kaplan, Kurt Voss, Jim Sharman, Barry Sandler, and Howard Rosenman are directors or producers. Other highlights include Titan A.E.’s commercial failure; Vito Russo’s documentary; Scott Free’s founding by the",
+    "Canadian actress Rachelle Lefevre starred in *Big Wolf on Campus*, played Victoria in the first two *Twilight* films, and appeared in *Off the Map*, *A Gifted Man*, and *Under the Dome*. American actress Gloria Garayua debuted in *Fun with Dick and Jane* and had roles in *Grey’s Anatomy*, *Cougar Town*, and *How to Get Away with Murder*. Zooey Deschanel’s films include *Almost Famous*, *All"
+   ]
+  },
+  {
+   "id": "1999a2f26ed9f6ce",
+   "gold": [
+    {
+     "sentence": "888 7th Avenue is a 628 ft (191m) tall modern-style office skyscraper in Midtown Manhattan which was completed in 1969 and has 46 floors.",
+     "facts": {
+      "0.0": "888 7th Avenue is a 628 ft (191 m) tall modern-style office skyscraper.",
+      "0.1": "888 7th Avenue is in Midtown Manhattan.",
+      "0.2": "888 7th Avenue was completed in 1969.",
+      "0.3": "888 7th Avenue has 46 floors."
+     }
+    },
+    {
+     "sentence": "200 West Street is the global headquarters of the Goldman Sachs investment banking firm.",
+     "facts": {
+      "1.0": "200 West Street is the global headquarters of the Goldman Sachs investment banking firm."
+     }
+    },
+    {
+     "sentence": " The building is a 749 ft , 44-story building located on West Street, between Vesey and Murray Streets in Lower Manhattan.",
+     "facts": {
+      "2.0": "The building is 749 ft tall.",
+      "2.1": "The building has 44 stories.",
+      "2.2": "The building is located on West Street.",
+      "2.3": "The building is located between Vesey Street and Murray Street.",
+      "2.4": "The building is in Lower Manhattan."
+     }
+    }
+   ],
+   "items": [
+    "245 Park Avenue\n245 Park Avenue (formerly American Tobacco Company Building, American Brands Building and Bear Stearns Building) is a 648-ft (198 m) tall skyscraper in New York City, New York.\n\n It was completed in 1967 and has 48 floors (1.7 million square feet).\n\n Shreve, Lamb and Harmon designed the building.\n\n The Building Owners and Managers Association awarded the 2000/2001 Pinnacle Award to 245 Park Avenue.\n\n The site used to be occupied by the second Grand Central Palace exhibition hall, which was demolished in 1964 to make way for 245 Park Avenue.",
+    "The entries cover notable U.S. buildings, districts, businesses, and people. New York features prominently: office towers such as 888 Seventh Avenue, 245 Park Avenue, 383 and 270 Madison/Park Avenue, and Goldman Sachs’ 200 West Street; landmarks including the Woolworth Building and 90 West Street; and residential or mixed-use towers such as MiMA and Random House Tower. Other topics include historic theaters, retail and media companies, transportation firms, and real-estate developer",
+    "1 New York Plaza\n1 New York Plaza is an office building in New York City's Financial District, built in 1969 at the intersection of South and Whitehall Streets.\n\n It is the southernmost of all Manhattan skyscrapers.",
+    "383 Madison Avenue\n383 Madison Avenue is an office building owned and occupied by JP Morgan Chase in New York City on a full block bound by Madison Avenue and Vanderbilt Avenue between East 46th and 47th Streets.\n\n Formerly known as the Bear Stearns Building, it housed the world headquarters of the now-defunct Bear Stearns from the building's completion until Bear's collapse and sale to JPMorgan Chase in 2008.\n\n The building now houses the New York offices for J.P. Morgan's investment banking division, which formerly occupied 277 Park Avenue.\n\n Both 383 Madison and 277 Park are adjacent to JPMorgan Chase's world headquarters at 270 Park Avenue.",
+    "888 7th Avenue\n888 7th Avenue is a 628 ft (191m) tall modern-style office skyscraper in Midtown Manhattan which was completed in 1969 and has 46 floors.\n\n Emery Roth & Sons designed the building, which is tied with Central Park Place for the 65th tallest building in New York City.\n\n It currently carries the Vornado Realty Trust corporate headquarters.\n\n Previously known as the Arlen Building, its namesake being the company responsible for its construction, Arlen Realty & Development Corporation.\n\n The Red Eye Grill is located in the building at street level.",
+    "90 West Street\n90 West Street (alternatively West Street Building) is a building in Lower Manhattan, New York City.\n\n It was designed by architect Cass Gilbert and structural engineer Gunvald Aus for the West Street Improvement Corporation.\n\n When completed in 1907, the building's Gothic styling and ornamentation served to emphasize its 23-story height, and foreshadowed Gilbert's later work on the Woolworth Building.\n\n Originally built as an office building, the main tenant was the Delaware, Lackawanna and Western Railroad and the top floor was occupied by Garret's Restaurant, which advertised itself as the \"world's highest restaurant\".",
+    "Woolworth Building\nThe Woolworth Building, at 233 Broadway, Manhattan, New York City, designed by architect Cass Gilbert and constructed between 1910 and 1912, is an early US skyscraper.\n\n The original site for the building was purchased by F. W. Woolworth and his real estate agent Edward J. Hogan by April 15, 1910, from the Trenor Luther Park Estate and other owners for $1.65 million.\n\n By January 18, 1911, Woolworth and Hogan had acquired the final site for the project, totaling $4.5 million.\n\n More than a century after its construction, it remains, at 241.4 m , one of the 100 tallest buildings in the United States as well as one of the 30 tallest buildings in New York City.\n\n It has been a National Historic Landmark since 1966, and a New York City landmark since 1983.",
+    "270 Park Avenue\n270 Park Avenue (also known as the JPMorgan Chase Tower and formerly the Union Carbide Building) is a high-rise office building located in Midtown Manhattan, New York City.\n\n It was designed by Natalie de Blois for Skidmore, Owings & Merrill.",
+    "Transportation Building\nThe Transportation Building is a 44-story office building located at 225 Broadway on the corner of Barclay Street in the Civic Center neighborhood of Lower Manhattan in New York City.\n\n It also carries the address 2-4 Barclay Street.\n\n It was built in 1927 and was designed by the architecture firm of York & Sawyer, in the Renaissance Revival style, using setbacks common to skyscrapers built after the adoption of the 1916 Zoning Resolution.\n\n It sits across Barclay Street from the Woolworth Building.",
+    "200 West Street\n200 West Street is the global headquarters of the Goldman Sachs investment banking firm.\n\n The building is a 749 ft , 44-story building located on West Street, between Vesey and Murray Streets in Lower Manhattan.\n\n It is adjacent to the World Financial Center and the Conrad Hotel, the Verizon Building to the east across West Street, and diagonally opposite the World Trade Center.\n\n It is the only office building in Battery Park City north of the World Financial Center."
+   ]
+  },
+  {
+   "id": "bf95c3c5a0144f64",
+   "gold": [
+    {
+     "sentence": " The trains were built between 1994 and 2009 – for the most part by Talbot, part of Bombardier Inc., with some railcars built by De Dietrich.",
+     "facts": {
+      "0.0": "The trains were built between 1994 and 2009.",
+      "0.1": "The trains were built for the most part by Talbot.",
+      "0.2": "Talbot is part of Bombardier Inc.",
+      "0.3": "Some railcars were built by De Dietrich."
+     }
+    },
+    {
+     "sentence": "Bombardier Inc. (] ) is a multinational aerospace and transportation company based in Montreal, Quebec, Canada.",
+     "facts": {
+      "1.0": "Bombardier Inc. is a multinational aerospace and transportation company.",
+      "1.1": "Bombardier Inc. is based in Montreal, Quebec, Canada."
+     }
+    }
+   ],
+   "items": [
+    "Toland, Pennsylvania\nToland is an unincorporated community in Cumberland County, Pennsylvania, United States.\n\n The very small village is located on Pine Grove Road, east of Mountain Creek Campground.\n\n Michaux State Forest, the site of Laurel Lake, Fuller Lake and Pine Grove Furnace State Park lie a few miles to the west near the intersection of Pine Grove Road and PA route 233.\n\n Toland has a mailing address of Gardners Pennsylvania, because the size of the community doesn't warrant a post-office, nor an official incorporated name.\n\n What is now a sand pit operation was originally a clay bank mining operation that was the reason for the location of the village of Toland.\n\n Less than 50 people reside in the close-knit community, which was built for the clay bank company workers in the first quarter of the 20th century.\n\n The original community of Toland, Pennsylvania consisted of 11 duplex houses, built side by side along Pine Grove Road, with less than 0.17 of an acre of land to each.\n\n Additional homes have been built since.\n\n When the community was originally built there was only a common well with a hand pump for all of the families to draw from.",
+    "Marquette Transportation Company\nThe Marquette Transportation Company is a marine transportation company based in Paducah, Kentucky, United States.",
+    "Toland, Pennsylvania\nToland is less than 1/4 of a mile long, and it is located less than half a mile from the Appalachian trail crossing.\n\n The closest town is Mount Holly Springs, Pennsylvania located (3 miles north of Toland).\n\n The village is roughly 10 miles south of Carlisle, Pennsylvania, 7 miles south east of Boiling Springs, Pennsylvania, and 15 miles South of Gettysburg, Pennsylvania.\n\n The only business in Toland is the Cherokee Campground formerly known as the Tagg Run Campground.\n\n The campground restaurant is now closed.\n\n Toland Mission is a small non-denominational church that can hold up to 74 persons.\n\n It was originally built by the owner of Beetem Lumber Company in Carlisle for the families of the community of Toland.\n\n A one-room school house near the church originally served the community, but it was converted to a home when residents' children were transported to a township school.\n\n Local people in Toland usually travel to the town of Mount Holly Springs for necessities such as gas, food, and toiletries.",
+    "Transportation in Jacksonville, Florida\nThe Jacksonville transportation network includes ground, air, and sea options for passenger and freight transit.\n\n The Jacksonville Port Authority (Jaxport) operates the Port of Jacksonville, which includes container shipping facilities at \"Blount Island Marine Terminal\", the \"Talleyrand Marine Terminal\" and the \"Dames Point Marine Terminal\".\n\n Jacksonville Aviation Authority managers Jacksonville International Airport in Northside, as well as several smaller airports.\n\n The Jacksonville Transportation Authority (JTA) operates bus, people mover, and park-n-ride services throughout the city and region.\n\n A major bus terminal at the intermodal Rosa Parks Transit Station serves as JTA's main transit hub.\n\n Various intercity bus companies terminate near Central Station.\n\n Amtrak operates passenger rail service to and from major cities throughout North America.\n\n The city is bisected by major highways, I-95 and I-10, I-295 creates a full beltway around the city.",
+    "Merchants Transportation Company\nThe Merchants Transportation Company was a shipping firm that operated on Puget Sound from 1905 to 1929.\n\n This company should not be confused with the similarly named Merchants Transportation Company of Olympia, formed in 1874 and a completely separate firm.",
+    "Northern Transportation Company\nNorthern Transportation Company Limited (NTCL) is a marine transportation company in the Canadian and American Arctic owned by Norterra, a holding company that is owned by the Inuvialuit of the Northwest Territories.\n\n While primarily a marine freight hauler on Canadian rivers, like the Mackenzie and the Hay and along the Arctic coast of Canada, they are also a petroleum wholesaler.\n\n Its head office is now in the town of Hay River, Northwest Territories.\n\n Today, it primarily utilizes tugs and barges.",
+    "Transportation Building\nThe Transportation Building is a 44-story office building located at 225 Broadway on the corner of Barclay Street in the Civic Center neighborhood of Lower Manhattan in New York City.\n\n It also carries the address 2-4 Barclay Street.\n\n It was built in 1927 and was designed by the architecture firm of York & Sawyer, in the Renaissance Revival style, using setbacks common to skyscrapers built after the adoption of the 1916 Zoning Resolution.\n\n It sits across Barclay Street from the Woolworth Building.",
+    "New York Transportation Company\nThe New York Transportation Company (originally New York Electrical Vehicle Transportation Company) was a company incorporated in New Jersey in 1899 as the 'New York Electrical Vehicle Transportation Company' which changed its name to the \"New York Transportation Company\" in 1902 and was wound up in 1936.\n\n From 1922 it was controlled by the 'Fifth Avenue Bus Securities Corporation' which was incorporated in Delaware in 1922 which was controlled by The Omnibus Corporation also incorporated in Delaware.",
+    "Bombardier Inc.\nBombardier Inc. (] ) is a multinational aerospace and transportation company based in Montreal, Quebec, Canada.\n\n Starting as a maker of snow machines or snowmobiles, over the years it has grown into a large manufacturer of regional airliners, business jets, mass transportation equipment, and recreational equipment, and a provider of financial services.",
+    "Shaver Transportation Company\nThe Shaver Transportation Company is an inland water freight transportation company based in Portland, Oregon, United States.\n\n The company was founded in 1880 and played a major role in the development of freight transport in the Portland area and along the Columbia."
+   ]
+  },
+  {
+   "id": "60cce9249c4ab6d7",
+   "gold": [
+    {
+     "sentence": "Hydrangea ( ; common names hydrangea or hortensia) is a genus of 70–75 species of flowering plants native to southern and eastern Asia (China, Japan, Korea, the Himalayas, and Indonesia) and the Americas.",
+     "facts": {
+      "0.0": "Hydrangea is a genus of flowering plants.",
+      "0.1": "Hydrangea's common names are hydrangea or hortensia.",
+      "0.2": "The Hydrangea genus has 70 to 75 species.",
+      "0.3": "Hydrangea plants are native to southern and eastern Asia.",
+      "0.4": "Hydrangea plants are native to China, Japan, Korea, the Himalayas, and Indonesia.",
+      "0.5": "Hydrangea plants are native to the Americas."
+     }
+    },
+    {
+     "sentence": " It contains, 13–18 species, but is best known for a single species, Jequirity (\"A. precatorius\").",
+     "facts": {
+      "1.0": "The subject of this sentence contains 13 to 18 species.",
+      "1.1": "The subject of this sentence is best known for a single species.",
+      "1.2": "That single species is Jequirity.",
+      "1.3": "Jequirity is also called A. precatorius."
+     }
+    }
+   ],
+   "items": [
+    "Deutzia\nDeutzia ( or ) is a genus of about 60 species of flowering plants in the family Hydrangeaceae, native to eastern and central Asia (from the Himalayas east to Japan and the Philippines), and Central America and also Europe.\n\n By far the highest species diversity is in China, where 50 species occur.",
+    "Hydrangea serrata\nHydrangea serrata is a species of flowering plant in the family Hydrangeaceae, native to mountainous regions of Korea and Japan.\n\n Common names include mountain hydrangea and tea of heaven.\n\n Growing to 1.2 m tall and broad, it is a deciduous shrub with oval leaves and panicles of blue and pink flowers in summer and autumn (fall).\n\n It is widely cultivated as an attractive ornamental shrub throughout the world in areas with suitable climate and soil.",
+    "Hydrangea arborescens\nHydrangea arborescens, commonly known as smooth hydrangea, wild hydrangea, or sevenbark, is a species of flowering plant in the family Hydrangeaceae.\n\n It is a small- to medium-sized, deciduous shrub up to 3 m tall that is native to the eastern United States.",
+    "Hydrangea paniculata\nHydrangea paniculata, the panicled hydrangea, is a species of flowering plant in the family Hydrangeaceae native to southern and eastern China, Korea, Japan and Russia (Sakhalin).\n\n It was first formally described by Philipp Franz von Siebold in 1829.\n\n It is a deciduous shrub or small tree, 1 - tall by 2.5 m broad, growing in sparse forests or thickets in valleys or on mountain slopes.",
+    "Hydrangea macrophylla\nHydrangea macrophylla is a species of flowering plant in the family Hydrangeaceae, native to Japan.\n\n It is a deciduous shrub growing to 2 m tall by 2.5 m broad with large heads of pink or blue flowers in summer and autumn.\n\n Common names include bigleaf hydrangea, French hydrangea, lacecap hydrangea, mophead hydrangea, penny mac and hortensia.\n\n It is widely cultivated in many parts of the world in many climates.\n\n It is not to be confused with \"H. aspera\" 'Macrophylla'.",
+    "Hydrangea quercifolia\nHydrangea quercifolia, commonly known by its translation oakleaf hydrangea or oak-leaved hydrangea, is a species of flowering plant native to the Southeastern United States, in woodland habitats from North Carolina west to Tennessee, and south to Florida and Louisiana.\n\n A deciduous shrub with white showy flower heads, it is a commonly grown garden plant.\n\n Numerous cultivars are available commercially.",
+    "Abrus canescens\nAbrus canescens is a species of flowering plant belonging to the legume family, native to Africa.\n\n It is considered almost extinct.",
+    "Hydrangea heteromalla\nHydrangea heteromalla is a species of \"Hydrangea\" flower, native to the Himalayas and China.\n\n Average height is 10'-15' with inflorescences that are 5\"-8\" across and bloom May-June,full flowering only occurs in full sun.Is a very adaptable plant that is hardy to USDA zones (4)5-7.\n\n This plant is seldom seen in American gardens although there is nice specimen at the Hillier Arboretum.",
+    "Hydrangea\nHydrangea ( ; common names hydrangea or hortensia) is a genus of 70–75 species of flowering plants native to southern and eastern Asia (China, Japan, Korea, the Himalayas, and Indonesia) and the Americas.\n\n By far the greatest species diversity is in eastern Asia, notably China, Japan, and Korea.\n\n Most are shrubs 1 to 3 meters tall, but some are small trees, and others lianas reaching up to 30 m by climbing up trees.\n\n They can be either deciduous or evergreen, though the widely cultivated temperate species are all deciduous.",
+    "Abrus\nAbrus is a genus of flowering plants in the pea family, Fabaceae and the only genus found in the tribe Abreae.\n\n It contains, 13–18 species, but is best known for a single species, Jequirity (\"A. precatorius\").\n\n The highly toxic seeds of that species are used to make jewellery."
+   ]
+  },
+  {
+   "id": "de8bcdb308c71e5e",
+   "gold": [
+    {
+     "sentence": "Age of Chance were a British alternative rock-dance crossover band from Leeds, England active from 1985 to 1991.",
+     "facts": {
+      "0.0": "Age of Chance was a British alternative rock-dance crossover band.",
+      "0.1": "Age of Chance was from Leeds, England.",
+      "0.2": "Age of Chance was active from 1985 to 1991."
+     }
+    },
+    {
+     "sentence": "Vector was a rock band formed in Sacramento, California in the early 1980s by Jimmy Abegg, Steve Griffith and Charlie Peacock.",
+     "facts": {
+      "1.0": "Vector was a rock band.",
+      "1.1": "Vector was formed in Sacramento, California.",
+      "1.2": "Vector was formed in the early 1980s.",
+      "1.3": "Vector was formed by Jimmy Abegg.",
+      "1.4": "Vector was formed by Steve Griffith.",
+      "1.5": "Vector was formed by Charlie Peacock."
+     }
+    }
+   ],
+   "items": [
+    "A Wind in the Door\nA Wind in the Door is a young adult science fantasy novel by Madeleine L'Engle.\n\n It is a companion book to \"A Wrinkle in Time\", and part of the Time Quintet.",
+    "William Gibson\nWilliam Ford Gibson (born March 17, 1948) is an American-Canadian speculative fiction writer and essayist widely credited with pioneering the science fiction subgenre known as cyberpunk.\n\n Beginning his writing career in the late 1970s, his early works were noir, near-future stories that explored the effects of technology, cybernetics, and computer networks on humans—a \"combination of lowlife and high tech\"—and helped to create an iconography for the information age before the ubiquity of the Internet in the 1990s.\n\n Gibson notably coined the term \"cyberspace\" in his short story \"Burning Chrome\" (1982) and later popularized the concept in his acclaimed debut novel \"Neuromancer\" (1984).\n\n These early works have been credited with \"renovating\" science fiction literature after it had fallen largely into insignificance in the 1970s.",
+    "Word2vec\nWord2vec is a group of related models that are used to produce word embeddings.\n\n These models are shallow, two-layer neural networks that are trained to reconstruct linguistic contexts of words.\n\n Word2vec takes as its input a large corpus of text and produces a vector space, typically of several hundred dimensions, with each unique word in the corpus being assigned a corresponding vector in the space.\n\n Word vectors are positioned in the vector space such that words that share common contexts in the corpus are located in close proximity to one another in the space.",
+    "Vector (band)\nVector was a rock band formed in Sacramento, California in the early 1980s by Jimmy Abegg, Steve Griffith and Charlie Peacock.\n\n The band had several drummers over the years, including Aaron Smith and Bruce Spencer, both of whom also played drums for The 77s.",
+    "Age of Chance\nAge of Chance were a British alternative rock-dance crossover band from Leeds, England active from 1985 to 1991.\n\n They were perhaps most known for their mutant metallic cover of Prince's \"Kiss\" which topped the UK Indie Chart in 1986, and peaked at No. 50 in the UK Singles Chart in January the following year.\n\n Despite signing for major label Virgin, and being favourites with the UK music press, they never enjoyed a major hit in the UK, although \"Don't Get Mad… Get Even\" reached No. 8 on the US \"Billboard\" Hot Dance/Club Play chart.",
+    "Multivariate random variable\nIn probability, and statistics, a multivariate random variable or random vector is a list of mathematical variables each of whose value is unknown, either because the value has not yet occurred or because there is imperfect knowledge of its value.\n\n The individual variables in a random vector are grouped together because they are all part of a single mathematical system — often they represent different properties of an individual statistical unit.\n\n For example, while a given person has a specific age, height and weight, the representation of these features of \"an unspecified person\" from within a group would be a random vector.\n\n Normally each element of a random vector is a real number.",
+    "Viceland (Canada)\nViceland is a Canadian English language Category A specialty channel.\n\n Owned by Rogers Media, it is a Canadian version of Vice Media's Viceland network, and broadcasts lifestyle-oriented documentary and reality series aimed towards a young adult demographic.",
+    "Christopher Evans (author)\nChristopher Evans (born 1951 in Tredegar, Wales) is a British science fiction writer and children's author.\n\n His novels include \"Capella's Golden Eyes\" (1980), \"The Insider\" (1981), \"Mortal Remains\" (1995) and \"Ice Tower\" (2000).\n\n He is the co-editor (with Robert Holdstock) of three original SF anthologies, \"Other Edens\" (1987), \"Other Edens II\" (1988) and \"Other Edens III\" (1989).",
+    "The Four Winds of Love\nThe Four Winds of Love is the overall title for a series of six novels written by Compton Mackenzie, \"The East Wind of Love\" (1937), \"The South Wind of Love\" (1938), \"The West Wind of Love\" (1940), \"West to North\" (1942), \"The North Wind of Love, Book 1\" (1944) and \"The North Wind of Love, Book 2\" (1945), which taken together constitute a major fictional chronicle of the first forty years of the twentieth century.\n\n The main protagonist of the hexalogy is the semi-autobiographical character of John Ogilvie.",
+    "New Valley LLC\nNew Valley LLC is an investment company owned by Vector Group.\n\n Western Union was renamed New Valley in the early 1990s as the corporate parent of all Western Union related businesses.\n\n In 1994, New Valley sold its Western Union businesses to First Financial Management (later acquired by First Data) for $1.2 Billion.\n\n After more than 100 years of being a publicly traded entity, New Valley became a wholly owned subsidiary of Vector Group on December 13, 2005 when Vector Group acquired the remaining 42.3% of New Valley's common shares that it did not already own.\n\n New Valley presently has a 70% stake in Douglas Elliman Realty, the largest residential real estate brokerage in the New York metropolitan area.\n\n The company also has stakes in various hotels and golf courses in the United States.\n\n In conjunction with the spin-off of its Ladenburg Thalmann subsidiary New Valley retained a 7.6% stake in Ladenburg Thalmann Financial Services, an investment bank and stock brokerage based in Miami."
+   ]
+  },
+  {
+   "id": "4503ac2e841433d3",
+   "gold": [
+    {
+     "sentence": "Dr. Seuss' The Cat in the Hat is a 2003 American family comedy film directed by Bo Welch.",
+     "facts": {
+      "0.0": "The Cat in the Hat is a Dr. Seuss film.",
+      "0.1": "The Cat in the Hat is a 2003 film.",
+      "0.2": "The Cat in the Hat is an American film.",
+      "0.3": "The Cat in the Hat is a family comedy film.",
+      "0.4": "The Cat in the Hat was directed by Bo Welch."
+     }
+    },
+    {
+     "sentence": "Robert W. \"Bo\" Welch III (born November 30, 1951) is an American production designer and director.",
+     "facts": {
+      "1.0": "Robert W. 'Bo' Welch III was born November 30, 1951.",
+      "1.1": "Robert W. 'Bo' Welch III is an American production designer.",
+      "1.2": "Robert W. 'Bo' Welch III is an American director."
+     }
+    }
+   ],
+   "items": [
+    "That Darn Cat!\nThat Darn Cat!\n\n is a 1965 American Walt Disney Productions thriller comedy film starring Hayley Mills (in her last of the six films she made for the Walt Disney Studios) and Dean Jones (starring in his first film for Disney) in a story about bank robbers, a kidnapping and a mischievous cat.\n\n The film was based on the 1963 novel \"Undercover Cat\" by Gordon and Mildred Gordon and was directed by Robert Stevenson.\n\n The title song was written by the Sherman Brothers and sung by Bobby Darin.\n\n The 1997 remake includes a cameo appearance by Dean Jones.",
+    "The Cat in the Hat (film)\nDr. Seuss' The Cat in the Hat is a 2003 American family comedy film directed by Bo Welch.\n\n It is based on the 1957 Dr. Seuss book \"of the same name\".\n\n The film stars Mike Myers in the title role of the Cat in the Hat, and Dakota Fanning as Sally.\n\n Sally's brother (who is unnamed in the book and the 1971 TV special), Conrad, is portrayed by Spencer Breslin.\n\n The film is the second feature-length Dr. Seuss adaptation after the 2000 holiday film \"How the Grinch Stole Christmas\".",
+    "Peter Jackson\nSir Peter Robert Jackson {'1': \", '2': \", '3': \", '4': \"} (born 31 October 1961) is a New Zealand film director, screenwriter and film producer.\n\n He is best known as the director, writer, and producer of \"The Lord of the Rings\" trilogy (2001–03) and \"The Hobbit\" trilogy (2012–14), both of which are adapted from the novels of the same name by J. R. R. Tolkien.\n\n Other notable films include the critically lauded drama \"Heavenly Creatures\" (1994), the mockumentary \"Forgotten Silver\" (1995), the horror comedy \"The Frighteners\" (1996), the epic monster remake film \"King Kong\" (2005), and the supernatural drama film \"The Lovely Bones\" (2009).\n\n He also produced \"District 9\" (2009), \"The Adventures of Tintin: The Secret of the Unicorn\" (2011), and the documentary \"West of Memphis\" (2012).",
+    "That Darn Cat (1997 film)\nThat Darn Cat is a 1997 American mystery comedy film starring Christina Ricci and Doug E. Doug.\n\n It is a remake of the 1965 film \"That Darn Cat!\n\n\", which in turn was based on the book \"Undercover Cat\" by Gordon and Mildred Gordon.\n\n It is directed by British TV veteran Bob Spiers (most famous for \"Fawlty Towers\", as well as \"Spice World\") and written by Scott Alexander and Larry Karaszewski, best known for \"Ed Wood\" and the first two \"Problem Child\" films.",
+    "Bo Welch\nRobert W. \"Bo\" Welch III (born November 30, 1951) is an American production designer and director.",
+    "Winnie the Pooh (2011 film)\nThe film is directed by Stephen Anderson and Don Hall, adapted from Milne's books by a story team led by Burny Mattinson, produced by Peter Del Vecho, Clark Spencer, John Lasseter, and Craig Sost, and narrated by John Cleese.",
+    "Nitish Roy\nNitish Roy is an Indian film art director, production designer, and costume designer in Hindi cinema and a Bengali Film Director, who is also known for his work with art cinema directors, Shyam Benegal, Mrinal Sen and Govind Nihlani, Hindi mainstream cinema, directors like Rajkumar Santoshi, as well as international directors like Mira Nair and Gurinder Chadha.",
+    "Dan Ouellette\nDan Ouellette is an American artist, illustrator, director, author and production designer.\n\n He began drawing as a child inspired by Escher, Dalí and Moebius.\n\n His drawings usually begin with very rough sketches and are intended to capture a moment of tension or eroticism.\n\n His art pushes his audience into areas where people feel less than comfortable, stating that the \"US which is so puritanical, our bodies are usually a great source of anxiety and fear\".\n\n As a production designer, he has designed over fifteen independent feature films in the past decade as well as numerous commercials and music videos.\n\n He is best known as the director for the music videos \"Blue\" and \"Looking Glass\" by The Birthday Massacre, receiving over 4 million combined views on YouTube, and has directed music videos for the industrial band Android Lust.\n\n He has done production design for many films over the years including \"Chasing Sleep\" starring Jeff Daniels.\n\n Dan's artwork is strongly themed around surrealism and mostly done in pencil.\n\n As an artist he has exhibited widely.\n\n He has been published in numerous anthology art books including \"Bio-Mannerism\" which also features work by H.R.",
+    "Fritz the Cat (film)\nFritz the Cat is a 1972 American adult animated comedy film written and directed by Ralph Bakshi.\n\n It was Bakshi's feature film debut and is loosely based on the Fritz the Cat comic strips by Robert Crumb.\n\n It was the first animated feature film to receive an X rating in the United States.",
+    "Rick Carter\nRick Carter (born 1950) is an American production designer and art director.\n\n He is known for his work in the film \"Forrest Gump\", which earned him an Oscar nomination, as well as numerous nominations of other awards for his work in \"Amistad\" and \"A.I. Artificial Intelligence\".\n\n Other films include \"Cast Away\", \"War of the Worlds\", \"What Lies Beneath\", \"Jurassic Park\", \"Avatar\", and \"Back to the Future Part II\" and \"Part III\".\n\n Many of the films that he has worked on are directed by Steven Spielberg or Robert Zemeckis.\n\n For his part in the Art Direction of \"Avatar\", he was awarded the Academy Award for Best Production Design alongside Robert Stromberg and Kim Sinclair.\n\n In 2013, Carter won his second Academy Award, for production design on Steven Spielberg's biopic, \"Lincoln\"."
+   ]
+  }
+ ]
+}

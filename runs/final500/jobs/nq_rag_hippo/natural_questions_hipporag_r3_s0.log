@@ -1,0 +1,3 @@
+0it [00:00, ?it/s]2166it [00:00, 21652.38it/s]4981it [00:00, 25472.43it/s]7816it [00:00, 26782.70it/s]10648it [00:00, 27389.30it/s]13387it [00:00, 10946.26it/s]16076it [00:01, 13663.55it/s]18403it [00:01, 15545.53it/s]20641it [00:01, 16434.17it/s]21551it [00:01, 16865.19it/s]
+/Users/uditagarwal19199/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/multiprocessing/resource_tracker.py:279: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

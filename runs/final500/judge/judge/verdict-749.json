@@ -1,0 +1,636 @@
+[
+  {
+    "id": "874aabcaa66f1c48",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "the series was renewed for a nineteenth season , which premiered on September 27 , 2017"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "the series was renewed for a nineteenth season , which premiered on September 27 , 2017"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5b011e672f1e09e6",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "A transfer case is a part of the drivetrain of four - wheel - drive , all - wheel - drive , and other multiple powered axle vehicles ."
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "The transfer case transfers power from the transmission to the front and rear axles by means of drive shafts ."
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "It also synchronizes the difference between the rotation of the front and rear wheels"
+          }
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "may contain one or more sets of low range gears for off - road use ."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "b643c6eb6c5364a2",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Queen Elizabeth II is the sovereign , and her heir apparent is her eldest son , Charles , Prince of Wales ."
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Queen Elizabeth II is the sovereign , and her heir apparent is her eldest son , Charles , Prince of Wales ."
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Queen Elizabeth II is the sovereign , and her heir apparent is her eldest son , Charles , Prince of Wales ."
+          }
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Charles , Prince of Wales . Next in line after him is Prince William , Duke of Cambridge , the Prince of Wales 's elder son ."
+          }
+        ]
+      },
+      {
+        "fact": "0.4",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Charles , Prince of Wales . Next in line after him is Prince William , Duke of Cambridge , the Prince of Wales 's elder son ."
+          }
+        ]
+      },
+      {
+        "fact": "0.5",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.6",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.7",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.8",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.9",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.10",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.11",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.12",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  },
+  {
+    "id": "b1c0dbfa96c75aeb",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "A primary ossification center is the first area of a bone to start ossifying . It usually appears during prenatal development in the central part of each developing bone ."
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "A primary ossification center is the first area of a bone to start ossifying . It usually appears during prenatal development in the central part of each developing bone ."
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "A primary ossification center is the first area of a bone to start ossifying . It usually appears during prenatal development in the central part of each developing bone ."
+          }
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "In long bones the primary centers occur in the diaphysis / shaft and in irregular bones the primary centers occur usually in the body of the bone ."
+          }
+        ]
+      },
+      {
+        "fact": "0.4",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "In long bones the primary centers occur in the diaphysis / shaft and in irregular bones the primary centers occur usually in the body of the bone ."
+          }
+        ]
+      },
+      {
+        "fact": "0.5",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Most bones have only one primary center ( e.g. all long bones ) but some irregular bones such as the os coxa ( hip ) and vertebrae have multiple primary centers"
+          }
+        ]
+      },
+      {
+        "fact": "0.6",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Most bones have only one primary center ( e.g. all long bones ) but some irregular bones such as the os coxa ( hip ) and vertebrae have multiple primary centers"
+          }
+        ]
+      },
+      {
+        "fact": "0.7",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Most bones have only one primary center ( e.g. all long bones ) but some irregular bones such as the os coxa ( hip ) and vertebrae have multiple primary centers"
+          }
+        ]
+      },
+      {
+        "fact": "0.8",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Most bones have only one primary center ( e.g. all long bones ) but some irregular bones such as the os coxa ( hip ) and vertebrae have multiple primary centers"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "16c799c95083f756",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "With the Intertropical Convergence Zone ( ITCZ ) swinging northward over West Africa from the Southern Hemisphere in April ,"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "With the Intertropical Convergence Zone ( ITCZ ) swinging northward over West Africa from the Southern Hemisphere in April , heavy showers coming from pre-monsoonal convective clouds mainly in the form of squall lines"
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "in the form of squall lines also known as the north easterlies"
+          }
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "formed mainly as a result of the interactions of the two dominant airmasses in Nigeria known as the Maritime tropical ( south westerlies ) and the Continental tropical ( north easterlies )"
+          }
+        ]
+      },
+      {
+        "fact": "0.4",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "formed mainly as a result of the interactions of the two dominant airmasses in Nigeria known as the Maritime tropical ( south westerlies ) and the Continental tropical ( north easterlies )"
+          }
+        ]
+      },
+      {
+        "fact": "0.5",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "heavy showers coming from pre-monsoonal convective clouds mainly in the form of squall lines also known as the north easterlies formed mainly as a result of the interactions of the two dominant airmasses in Nigeria known as the Maritime tropical ( south westerlies ) and the Continental tropical ( north easterlies ) , begins in central Nigeria"
+          }
+        ]
+      },
+      {
+        "fact": "0.6",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "while the Monsoons from the south atlantic ocean arrives in central Nigeria in July"
+          }
+        ]
+      },
+      {
+        "fact": "0.7",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "arrives in central Nigeria in July bringing with it high humidity , heavy cloud cover and heavy rainfall which can be daily occurrence lasting till September"
+          }
+        ]
+      },
+      {
+        "fact": "0.8",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "arrives in central Nigeria in July bringing with it high humidity , heavy cloud cover and heavy rainfall which can be daily occurrence lasting till September"
+          }
+        ]
+      },
+      {
+        "fact": "0.9",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "arrives in central Nigeria in July bringing with it high humidity , heavy cloud cover and heavy rainfall which can be daily occurrence lasting till September"
+          }
+        ]
+      },
+      {
+        "fact": "0.10",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "lasting till September when the monsoons gradually begin retreating southward to the southern part of Nigeria"
+          }
+        ]
+      },
+      {
+        "fact": "0.11",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Rainfall totals in central Nigeria varies from 1,100 mm ( 43.3 in ) in the lowlands of the river Niger Benue trough to over 2,000 mm ( 78.7 in ) along the south western escarpment of the Jos Plateau"
+          }
+        ]
+      },
+      {
+        "fact": "0.12",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Rainfall totals in central Nigeria varies from 1,100 mm ( 43.3 in ) in the lowlands of the river Niger Benue trough to over 2,000 mm ( 78.7 in ) along the south western escarpment of the Jos Plateau"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5c8d46a46e2e31fa",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Top 20 rankings as of 16 October 2017 Rank Change Team Points Germany 1631 Brazil 1619 Portugal 1446 Argentina 1445 5 Belgium 1333 6 Poland 1323 7 France 1226 8 Spain 1218 9 Chile 1173 10 Peru 1160 11 Switzerland 1134 12 England 1116 13 Colombia 1095 14 Wales 1072 15 Italy 1066 16 Mexico 1060 17 Uruguay 1034 18 Croatia 1013 19 7 Denmark 1001 20 9 Netherlands 931"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Top 20 rankings as of 16 October 2017 Rank Change Team Points Germany 1631 Brazil 1619 Portugal 1446 Argentina 1445 5 Belgium 1333 6 Poland 1323 7 France 1226 8 Spain 1218 9 Chile 1173 10 Peru 1160 11 Switzerland 1134 12 England 1116 13 Colombia 1095 14 Wales 1072 15 Italy 1066 16 Mexico 1060 17 Uruguay 1034 18 Croatia 1013 19 7 Denmark 1001 20 9 Netherlands 931"
+          },
+          {
+            "item": 4,
+            "quote": "currently led by Germany"
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Top 20 rankings as of 16 October 2017 Rank Change Team Points Germany 1631 Brazil 1619 Portugal 1446 Argentina 1445 5 Belgium 1333 6 Poland 1323 7 France 1226 8 Spain 1218 9 Chile 1173 10 Peru 1160 11 Switzerland 1134 12 England 1116 13 Colombia 1095 14 Wales 1072 15 Italy 1066 16 Mexico 1060 17 Uruguay 1034 18 Croatia 1013 19 7 Denmark 1001 20 9 Netherlands 931"
+          }
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Top 20 rankings as of 16 October 2017 Rank Change Team Points Germany 1631 Brazil 1619 Portugal 1446 Argentina 1445 5 Belgium 1333 6 Poland 1323 7 France 1226 8 Spain 1218 9 Chile 1173 10 Peru 1160 11 Switzerland 1134 12 England 1116 13 Colombia 1095 14 Wales 1072 15 Italy 1066 16 Mexico 1060 17 Uruguay 1034 18 Croatia 1013 19 7 Denmark 1001 20 9 Netherlands 931"
+          }
+        ]
+      },
+      {
+        "fact": "0.4",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Top 20 rankings as of 16 October 2017 Rank Change Team Points Germany 1631 Brazil 1619 Portugal 1446 Argentina 1445 5 Belgium 1333 6 Poland 1323 7 France 1226 8 Spain 1218 9 Chile 1173 10 Peru 1160 11 Switzerland 1134 12 England 1116 13 Colombia 1095 14 Wales 1072 15 Italy 1066 16 Mexico 1060 17 Uruguay 1034 18 Croatia 1013 19 7 Denmark 1001 20 9 Netherlands 931"
+          }
+        ]
+      },
+      {
+        "fact": "0.5",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Top 20 rankings as of 16 October 2017 Rank Change Team Points Germany 1631 Brazil 1619 Portugal 1446 Argentina 1445 5 Belgium 1333 6 Poland 1323 7 France 1226 8 Spain 1218 9 Chile 1173 10 Peru 1160 11 Switzerland 1134 12 England 1116 13 Colombia 1095 14 Wales 1072 15 Italy 1066 16 Mexico 1060 17 Uruguay 1034 18 Croatia 1013 19 7 Denmark 1001 20 9 Netherlands 931"
+          }
+        ]
+      },
+      {
+        "fact": "0.6",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Top 20 rankings as of 16 October 2017 Rank Change Team Points Germany 1631 Brazil 1619 Portugal 1446 Argentina 1445 5 Belgium 1333 6 Poland 1323 7 France 1226 8 Spain 1218 9 Chile 1173 10 Peru 1160 11 Switzerland 1134 12 England 1116 13 Colombia 1095 14 Wales 1072 15 Italy 1066 16 Mexico 1060 17 Uruguay 1034 18 Croatia 1013 19 7 Denmark 1001 20 9 Netherlands 931"
+          }
+        ]
+      },
+      {
+        "fact": "0.7",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Top 20 rankings as of 16 October 2017 Rank Change Team Points Germany 1631 Brazil 1619 Portugal 1446 Argentina 1445 5 Belgium 1333 6 Poland 1323 7 France 1226 8 Spain 1218 9 Chile 1173 10 Peru 1160 11 Switzerland 1134 12 England 1116 13 Colombia 1095 14 Wales 1072 15 Italy 1066 16 Mexico 1060 17 Uruguay 1034 18 Croatia 1013 19 7 Denmark 1001 20 9 Netherlands 931"
+          }
+        ]
+      },
+      {
+        "fact": "0.8",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Top 20 rankings as of 16 October 2017 Rank Change Team Points Germany 1631 Brazil 1619 Portugal 1446 Argentina 1445 5 Belgium 1333 6 Poland 1323 7 France 1226 8 Spain 1218 9 Chile 1173 10 Peru 1160 11 Switzerland 1134 12 England 1116 13 Colombia 1095 14 Wales 1072 15 Italy 1066 16 Mexico 1060 17 Uruguay 1034 18 Croatia 1013 19 7 Denmark 1001 20 9 Netherlands 931"
+          }
+        ]
+      },
+      {
+        "fact": "0.9",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Top 20 rankings as of 16 October 2017 Rank Change Team Points Germany 1631 Brazil 1619 Portugal 1446 Argentina 1445 5 Belgium 1333 6 Poland 1323 7 France 1226 8 Spain 1218 9 Chile 1173 10 Peru 1160 11 Switzerland 1134 12 England 1116 13 Colombia 1095 14 Wales 1072 15 Italy 1066 16 Mexico 1060 17 Uruguay 1034 18 Croatia 1013 19 7 Denmark 1001 20 9 Netherlands 931"
+          }
+        ]
+      },
+      {
+        "fact": "0.10",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Top 20 rankings as of 16 October 2017 Rank Change Team Points Germany 1631 Brazil 1619 Portugal 1446 Argentina 1445 5 Belgium 1333 6 Poland 1323 7 France 1226 8 Spain 1218 9 Chile 1173 10 Peru 1160 11 Switzerland 1134 12 England 1116 13 Colombia 1095 14 Wales 1072 15 Italy 1066 16 Mexico 1060 17 Uruguay 1034 18 Croatia 1013 19 7 Denmark 1001 20 9 Netherlands 931"
+          }
+        ]
+      },
+      {
+        "fact": "0.11",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Top 20 rankings as of 16 October 2017 Rank Change Team Points Germany 1631 Brazil 1619 Portugal 1446 Argentina 1445 5 Belgium 1333 6 Poland 1323 7 France 1226 8 Spain 1218 9 Chile 1173 10 Peru 1160 11 Switzerland 1134 12 England 1116 13 Colombia 1095 14 Wales 1072 15 Italy 1066 16 Mexico 1060 17 Uruguay 1034 18 Croatia 1013 19 7 Denmark 1001 20 9 Netherlands 931"
+          }
+        ]
+      },
+      {
+        "fact": "0.12",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Top 20 rankings as of 16 October 2017 Rank Change Team Points Germany 1631 Brazil 1619 Portugal 1446 Argentina 1445 5 Belgium 1333 6 Poland 1323 7 France 1226 8 Spain 1218 9 Chile 1173 10 Peru 1160 11 Switzerland 1134 12 England 1116 13 Colombia 1095 14 Wales 1072 15 Italy 1066 16 Mexico 1060 17 Uruguay 1034 18 Croatia 1013 19 7 Denmark 1001 20 9 Netherlands 931"
+          }
+        ]
+      },
+      {
+        "fact": "0.13",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Top 20 rankings as of 16 October 2017 Rank Change Team Points Germany 1631 Brazil 1619 Portugal 1446 Argentina 1445 5 Belgium 1333 6 Poland 1323 7 France 1226 8 Spain 1218 9 Chile 1173 10 Peru 1160 11 Switzerland 1134 12 England 1116 13 Colombia 1095 14 Wales 1072 15 Italy 1066 16 Mexico 1060 17 Uruguay 1034 18 Croatia 1013 19 7 Denmark 1001 20 9 Netherlands 931"
+          }
+        ]
+      },
+      {
+        "fact": "0.14",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Top 20 rankings as of 16 October 2017 Rank Change Team Points Germany 1631 Brazil 1619 Portugal 1446 Argentina 1445 5 Belgium 1333 6 Poland 1323 7 France 1226 8 Spain 1218 9 Chile 1173 10 Peru 1160 11 Switzerland 1134 12 England 1116 13 Colombia 1095 14 Wales 1072 15 Italy 1066 16 Mexico 1060 17 Uruguay 1034 18 Croatia 1013 19 7 Denmark 1001 20 9 Netherlands 931"
+          }
+        ]
+      },
+      {
+        "fact": "0.15",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Top 20 rankings as of 16 October 2017 Rank Change Team Points Germany 1631 Brazil 1619 Portugal 1446 Argentina 1445 5 Belgium 1333 6 Poland 1323 7 France 1226 8 Spain 1218 9 Chile 1173 10 Peru 1160 11 Switzerland 1134 12 England 1116 13 Colombia 1095 14 Wales 1072 15 Italy 1066 16 Mexico 1060 17 Uruguay 1034 18 Croatia 1013 19 7 Denmark 1001 20 9 Netherlands 931"
+          }
+        ]
+      },
+      {
+        "fact": "0.16",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Top 20 rankings as of 16 October 2017 Rank Change Team Points Germany 1631 Brazil 1619 Portugal 1446 Argentina 1445 5 Belgium 1333 6 Poland 1323 7 France 1226 8 Spain 1218 9 Chile 1173 10 Peru 1160 11 Switzerland 1134 12 England 1116 13 Colombia 1095 14 Wales 1072 15 Italy 1066 16 Mexico 1060 17 Uruguay 1034 18 Croatia 1013 19 7 Denmark 1001 20 9 Netherlands 931"
+          }
+        ]
+      },
+      {
+        "fact": "0.17",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Top 20 rankings as of 16 October 2017 Rank Change Team Points Germany 1631 Brazil 1619 Portugal 1446 Argentina 1445 5 Belgium 1333 6 Poland 1323 7 France 1226 8 Spain 1218 9 Chile 1173 10 Peru 1160 11 Switzerland 1134 12 England 1116 13 Colombia 1095 14 Wales 1072 15 Italy 1066 16 Mexico 1060 17 Uruguay 1034 18 Croatia 1013 19 7 Denmark 1001 20 9 Netherlands 931"
+          }
+        ]
+      },
+      {
+        "fact": "0.18",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Top 20 rankings as of 16 October 2017 Rank Change Team Points Germany 1631 Brazil 1619 Portugal 1446 Argentina 1445 5 Belgium 1333 6 Poland 1323 7 France 1226 8 Spain 1218 9 Chile 1173 10 Peru 1160 11 Switzerland 1134 12 England 1116 13 Colombia 1095 14 Wales 1072 15 Italy 1066 16 Mexico 1060 17 Uruguay 1034 18 Croatia 1013 19 7 Denmark 1001 20 9 Netherlands 931"
+          }
+        ]
+      },
+      {
+        "fact": "0.19",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Top 20 rankings as of 16 October 2017 Rank Change Team Points Germany 1631 Brazil 1619 Portugal 1446 Argentina 1445 5 Belgium 1333 6 Poland 1323 7 France 1226 8 Spain 1218 9 Chile 1173 10 Peru 1160 11 Switzerland 1134 12 England 1116 13 Colombia 1095 14 Wales 1072 15 Italy 1066 16 Mexico 1060 17 Uruguay 1034 18 Croatia 1013 19 7 Denmark 1001 20 9 Netherlands 931"
+          }
+        ]
+      },
+      {
+        "fact": "0.20",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Top 20 rankings as of 16 October 2017 Rank Change Team Points Germany 1631 Brazil 1619 Portugal 1446 Argentina 1445 5 Belgium 1333 6 Poland 1323 7 France 1226 8 Spain 1218 9 Chile 1173 10 Peru 1160 11 Switzerland 1134 12 England 1116 13 Colombia 1095 14 Wales 1072 15 Italy 1066 16 Mexico 1060 17 Uruguay 1034 18 Croatia 1013 19 7 Denmark 1001 20 9 Netherlands 931"
+          }
+        ]
+      },
+      {
+        "fact": "0.21",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "* Change from 14 September 2017"
+          }
+        ]
+      },
+      {
+        "fact": "0.22",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Complete rankings at FIFA.com"
+          }
+        ]
+      }
+    ]
+  }
+]

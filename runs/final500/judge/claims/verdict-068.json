@@ -1,0 +1,224 @@
+[
+  {
+    "id": "5a7f244255429934daa2fcec",
+    "sentences": [
+      [
+        "The institution has three divisions.",
+        "Through its three divisions, the institution offers a wide variety of liberal arts courses.",
+        "Through its three divisions, the institution offers a wide variety of science courses.",
+        "The courses are offered at the secondary level.",
+        "The courses are offered at the British A-level level.",
+        "The courses are offered at the United States junior college level."
+      ],
+      [
+        "Grammar was a core liberal art.",
+        "Logic was a core liberal art.",
+        "Rhetoric was a core liberal art.",
+        "Arithmetic also played a somewhat lesser part in education.",
+        "Geometry also played a somewhat lesser part in education.",
+        "The theory of music also played a somewhat lesser part in education.",
+        "Astronomy also played a somewhat lesser part in education."
+      ]
+    ]
+  },
+  {
+    "id": "-6959456828837530300",
+    "sentences": [
+      [
+        "The coordinates are listed as 90 degrees N, 0 degrees W.",
+        "The coordinates are listed as 90 degrees N, 0 degrees E.",
+        "The coordinates are listed as 90, -0."
+      ],
+      [
+        "The North Pole is the northernmost point on the Earth.",
+        "The North Pole lies diametrically opposite the South Pole.",
+        "The North Pole defines geodetic latitude 90 degrees North.",
+        "The North Pole defines the direction of true north.",
+        "At the North Pole all directions point south.",
+        "At the North Pole all lines of longitude converge.",
+        "The longitude of the North Pole can be defined as any degree value.",
+        "Along tight latitude circles, counterclockwise is east.",
+        "Along tight latitude circles, clockwise is west.",
+        "The North Pole is at the center of the Northern Hemisphere."
+      ]
+    ]
+  },
+  {
+    "id": "1311019403755331535",
+    "sentences": [
+      [
+        "His roles continued in the 1990s.",
+        "He appeared in the TV series Cracker from 1993 to 1996.",
+        "He returned to the TV series Cracker in 2006 for a one-off special.",
+        "In Cracker he starred as forensic psychologist Dr. Edward \"Fitz\" Fitzgerald.",
+        "The role in Cracker won him three BAFTA awards.",
+        "Roles in bigger films followed.",
+        "He appeared in the James Bond film GoldenEye (1995).",
+        "He appeared in the James Bond film The World Is Not Enough (1999).",
+        "He had a supporting role in From Hell (2001).",
+        "He played half-giant Rubeus Hagrid in the Harry Potter films from 2001 to 2011.",
+        "J.K. Rowling, author of the Harry Potter series, had him at the top of her list to play Hagrid.",
+        "When asked whom she would like to see in the role, Rowling responded \"Robbie Coltrane for Hagrid\" in one quick breath.",
+        "An unnamed 8ft actor stands in for the 6ft 1in Coltrane in some scenes."
+      ],
+      [
+        "Robbie Coltrane holds the OBE honour.",
+        "A photo caption shows Coltrane in April 2007.",
+        "Coltrane's birth name is Anthony Robert McMillan.",
+        "Coltrane was born on 30 March 1950.",
+        "Coltrane is listed as age 67.",
+        "Coltrane was born in Rutherglen, South Lanarkshire, Scotland.",
+        "Coltrane's nationality is British.",
+        "Coltrane's alma mater is the University of Edinburgh.",
+        "Coltrane's occupations are actor and author.",
+        "Coltrane has been active as a performer from 1979 to the present.",
+        "Coltrane's height is 6 ft 1 in (185 cm).",
+        "Coltrane's spouse was Rhona Gemmell, married from 1999 to 2003.",
+        "The children field is listed with no value."
+      ]
+    ]
+  },
+  {
+    "id": "multihop-rag-2308",
+    "sentences": [
+      [
+        "The Justice Department is focused on the deals Google makes.",
+        "Google makes deals with Apple.",
+        "Google makes deals with Samsung.",
+        "Google makes deals with Mozilla.",
+        "Google makes deals with many others.",
+        "The deals are meant to ensure Google is the default search engine on practically every platform."
+      ],
+      [
+        "This will probably come up later in the trial.",
+        "Epic chose to focus more on simply painting Google as the bad guy.",
+        "Epic did this on day one."
+      ],
+      [
+        "The case was filed by Arkansas-based publisher Helena World Chronicle.",
+        "The case argues that Google \"siphons off\" news publishers' content.",
+        "The case argues that Google siphons off news publishers' readers.",
+        "The case argues that Google siphons off news publishers' ad revenue.",
+        "The case says this is done through anticompetitive means."
+      ]
+    ]
+  },
+  {
+    "id": "multihop-rag-890",
+    "sentences": [
+      [
+        "This will probably come up later in the trial.",
+        "Epic chose to focus more on simply painting Google as the bad guy.",
+        "Epic did this on day one."
+      ],
+      [
+        "The company did not release the full model, Gemini Ultra.",
+        "Only a \"lite\" version called Gemini Pro was released."
+      ],
+      [
+        "The case was filed by Arkansas-based publisher Helena World Chronicle.",
+        "The case argues that Google \"siphons off\" news publishers' content.",
+        "The case argues that Google siphons off news publishers' readers.",
+        "The case argues that Google siphons off news publishers' ad revenue.",
+        "The case says this is done through anticompetitive means."
+      ]
+    ]
+  },
+  {
+    "id": "2246133419130953189",
+    "sentences": [
+      [
+        "Anthropomorphism is a form of personification that applies human-like characteristics to animals and objects.",
+        "The Adventures of Pinocchio by Carlo Collodi is an example of anthropomorphism.",
+        "The Cheshire Cat of Alice's Adventures in Wonderland by Lewis Carroll is an example of anthropomorphism.",
+        "Hamartia is the character flaw of an initially rich and powerful hero that leads to his tragic downfall.",
+        "Hamartia is also referred to as the tragic flaw.",
+        "Oedipus kills his own father because he does not understand his true parentage.",
+        "Pathetic fallacy reflects a character's, usually the protagonist's, mood in the atmosphere or inanimate objects.",
+        "Pathetic fallacy is related to anthropomorphism and projection.",
+        "The storm in William Shakespeare's King Lear is an example of pathetic fallacy.",
+        "The storm in King Lear mirrors Lear's mental deterioration.",
+        "Personification uses comparative metaphors and similes to give living characteristics to abstract concepts and non-human entities.",
+        "Taken from Act I, Scene II of Romeo and Juliet: \"When well-appareled April on the heel / Of limping winter treads.\""
+      ]
+    ]
+  },
+  {
+    "id": "-7428135141357814239",
+    "sentences": [
+      [
+        "Take action immediately upon hearing thunder.",
+        "Anyone close enough to the storm to hear thunder can be struck by lightning.",
+        "Avoid electrical appliances, including corded telephones.",
+        "Cordless and wireless telephones are safe to use during a thunderstorm.",
+        "Close and stay away from windows and doors.",
+        "Glass can become a serious hazard in high wind.",
+        "Do not bathe or shower.",
+        "Plumbing conducts electricity.",
+        "If driving, safely exit the roadway.",
+        "If driving, turn on hazard lights.",
+        "If driving, park.",
+        "Remain in the vehicle and avoid touching metal."
+      ],
+      [
+        "Take action immediately upon hearing thunder.",
+        "Anyone close enough to the storm to hear thunder can be struck by lightning."
+      ]
+    ]
+  },
+  {
+    "id": "multihop-rag-1430",
+    "sentences": [
+      [
+        "The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night.",
+        "The Cowboys' win kept the heat on the Eagles.",
+        "The Eagles were a losing team.",
+        "The Eagles were ahead of the Cowboys.",
+        "The Cowboys will host the Eagles in Dallas in Week 14."
+      ],
+      [
+        "The Lions' win was fueled by a stout defensive showing.",
+        "The Lions' win was fueled by a gritty run game.",
+        "The Lions' win was fueled by a bit of fairy dust from St. Brown.",
+        "The Lions' win was fueled by a bit of fairy dust from Sam LaPorta.",
+        "The Lions' win was fueled by a bit of fairy dust from Josh Reynolds.",
+        "The Lions cruised to a 34-20 win.",
+        "The Lions beat Green Bay 34-20.",
+        "Green Bay is the Lions' hated NFC North rival."
+      ]
+    ]
+  },
+  {
+    "id": "5ae17a9b5542990adbacf7a2",
+    "sentences": [
+      [
+        "The Shins are an American indie rock band.",
+        "The Shins are from Albuquerque, New Mexico.",
+        "The Shins were formed in 1996."
+      ],
+      [
+        "Paramore is an American rock band.",
+        "Paramore is from Franklin, Tennessee.",
+        "Paramore was formed in 2004."
+      ]
+    ]
+  },
+  {
+    "id": "multihop-rag-1729",
+    "sentences": [
+      [
+        "The Springboks took a 12-3 lead after 34 minutes.",
+        "The Springboks took the lead when the All Blacks once again failed to release on their goal line.",
+        "The All Blacks failed to release on their goal line once again."
+      ],
+      [
+        "The All Blacks sensed an opportunity to strike against 14 men.",
+        "On a couple of occasions, the All Blacks kicked for the corner out wide."
+      ],
+      [
+        "This comes despite Argentina beating the All Blacks last year in Christchurch.",
+        "Argentina also gave the All Blacks a maiden defeat in 2020 in Sydney."
+      ]
+    ]
+  }
+]

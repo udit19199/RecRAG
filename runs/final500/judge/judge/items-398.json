@@ -1,0 +1,481 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "6bc072f1b47f0c7a",
+   "gold": [
+    {
+     "sentence": "Giovanni \"Tinto\" Brass (born 26 March 1933) is an Italian filmmaker.",
+     "facts": {
+      "0.0": "Giovanni 'Tinto' Brass was born on 26 March 1933.",
+      "0.1": "Giovanni 'Tinto' Brass is an Italian filmmaker."
+     }
+    },
+    {
+     "sentence": "Baltasar Kormákur Samper (born 27 February 1966) is an Icelandic actor, theater and film director, and film producer.",
+     "facts": {
+      "1.0": "Baltasar Kormakur Samper was born on 27 February 1966.",
+      "1.1": "Baltasar Kormakur Samper is an Icelandic actor.",
+      "1.2": "Baltasar Kormakur Samper is an Icelandic theater director.",
+      "1.3": "Baltasar Kormakur Samper is an Icelandic film director.",
+      "1.4": "Baltasar Kormakur Samper is an Icelandic film producer."
+     }
+    }
+   ],
+   "items": [
+    "Actor John Steiner became a fixture in Italian genre films, including works by Tinto Brass. Ruggero Deodato, Italian director, writer and actor, reportedly directed most of 1964’s horror-inflected peplum *Hercules, Prisoner of Evil* while credited assistant director Antonio Margheriti was occupied elsewhere. Deodato’s *Cannibal Holocaust* (1980), filmed in Colombia, drew on staged-seeming news coverage and helped drive the 197",
+    "Baltasar Breki Samper\nBaltasar Breki Samper (born 22 July 1989), sometimes referred to as Baltasar Breki Baltasarsson, is an Icelandic actor.\n\n He is the son of Icelandic director Baltasar Kormákur.\n\n Before graduating from the Icelandic Academy of the Arts in 2015 Samper helped his father on several films as second assistant director.\n\n He is known for his role as Hjörtur in the Icelandic TV series \"Trapped\".",
+    "Lev Kuleshov (1899–1970), Soviet filmmaker and theorist, pioneered Soviet montage, the Kuleshov effect, and creative geography. Hermann Brunn (1862–1939), German mathematician, contributed to convex geometry and knot theory. Mercury’s 165-km Chaikovskij crater honors composer Pyotr Tchaikovsky; a 1970 Soviet biopic about him earned two Oscar nominations. Søren Kierkegaard (",
+    "Fermo posta Tinto Brass\nFermo posta Tinto Brass is a 1995 Italian comedy film-erotic film directed by Tinto Brass and set in vignettes.",
+    "John Steiner\nHe found himself in demand in Italy and moved there, appearing in a great number of Italian exploitation and B-films including police actioners (\"Violent Rome\"), westerns (\"Mannaja\"), war films (\"The Last Hunter\"), nazisploitation (\"Deported Women of the SS Special Section\"), sci-fi adventure films (\"Yor, the Hunter from the Future\"), and horror films, such as Mario Bava's \"Shock\", Dario Argento's \"Tenebrae\", and Ruggero Deodato's \"Body Count\".\n\n He also became a favourite of famed Italian filmmaker Tinto Brass, featuring in \"Salon Kitty\", the infamous \"Caligula\", \"Action\", and \"Paprika\".",
+    "Tinto Brass\nGiovanni \"Tinto\" Brass (born 26 March 1933) is an Italian filmmaker.\n\n In the 1960s and 1970s, he directed many critically acclaimed avant-garde films of various genres.\n\n Today, he is mainly known for his later work in the erotic genre, with films such as \"Caligula\", \"Così fan tutte\" (released under the English title \"All Ladies Do It\"), \"Paprika\", \"Monella\" (\"Frivolous Lola\") and \"Trasgredire\".",
+    "Baltasar Kormákur\nBaltasar Kormákur Samper (born 27 February 1966) is an Icelandic actor, theater and film director, and film producer.\n\n He is best known for directing the films \"101 Reykjavík\", \"Hafið\", \"A Little Trip to Heaven\" (starring Julia Stiles and Forest Whitaker), a film based on the book \"Mýrin\" \"(Jar City)\" by Arnaldur Indriðason, \"Contraband\", \"2 Guns\" (starring Mark Wahlberg and Denzel Washington) and \"Everest\".\n\n His father is the Spanish painter Baltasar Samper and actor Baltasar Breki Samper is his son.",
+    "Austrian director-screenwriter Stefan Ruzowitzky made *The Inheritors* (1998), Austria’s unsuccessful Oscar submission, and *The Counterfeiters* (2007), a WWII drama about Nazi forgery at Sachsenhausen that won the foreign-language-film Oscar; Devid Striesow played Bernhard Krüger. German director Wolfgang Becker is known for *Good Bye, Lenin!* (2003), starring Daniel Brühl and Katrin Saß. Other entries",
+    "The entries survey European films and music drama, 1913–1961. Swedish director Mauritz Stiller’s works include *The Blizzard* (a student saves his family estate), *Erotikon* (a professor’s wife attracts suitors), and *The Saga of Gösta Berling*, Greta Garbo’s breakout film. Hungarian director Béla Gaál made comedies including *The Dream Car*. Other highlights: *Triumph of the Will*, Riefenstahl’s",
+    "Contraband (2012 film)\nContraband is a 2012 American crime thriller film directed by Baltasar Kormákur, starring Mark Wahlberg, Kate Beckinsale, Ben Foster, Caleb Landry Jones, Giovanni Ribisi, Lukas Haas, Diego Luna and J. K. Simmons.\n\n The film is a remake of the 2008 Icelandic film \"Reykjavík-Rotterdam\" which Baltasar Kormákur starred in.\n\n It was released on January 13, 2012 in the United States by Universal Pictures."
+   ]
+  },
+  {
+   "id": "ea2579ed58f13fc4",
+   "gold": [
+    {
+     "sentence": "Icehouse pieces, or Icehouse Pyramids, Treehouse pieces, Treehouse Pyramids and officially Looney Pyramids, are nestable and stackable pyramid-shaped gaming pieces and a game system.",
+     "facts": {
+      "0.0": "Icehouse pieces are also called Icehouse Pyramids.",
+      "0.1": "Treehouse pieces are also called Treehouse Pyramids.",
+      "0.2": "Icehouse pieces, Icehouse Pyramids, Treehouse pieces, and Treehouse Pyramids are officially called Looney Pyramids.",
+      "0.3": "Icehouse pieces, Icehouse Pyramids, Treehouse pieces, Treehouse Pyramids, and Looney Pyramids are nestable pyramid-shaped gaming pieces.",
+      "0.4": "Icehouse pieces, Icehouse Pyramids, Treehouse pieces, Treehouse Pyramids, and Looney Pyramids are stackable pyramid-shaped gaming pieces.",
+      "0.5": "Icehouse pieces, Icehouse Pyramids, Treehouse pieces, Treehouse Pyramids, and Looney Pyramids are a game system."
+     }
+    },
+    {
+     "sentence": " The game system was invented by Andrew Looney and John Cooper in 1987, originally for use in the game of Icehouse.",
+     "facts": {
+      "1.0": "The Looney Pyramids game system was invented by Andrew Looney.",
+      "1.1": "The Looney Pyramids game system was invented by John Cooper.",
+      "1.2": "The Looney Pyramids game system was invented in 1987.",
+      "1.3": "The Looney Pyramids game system was originally for use in the game of Icehouse."
+     }
+    },
+    {
+     "sentence": " In 1998, \"Kill Doctor Lucky\" won the Origins Award for \"Best Abstract Board Game of 1997\".",
+     "facts": {
+      "2.0": "\"Kill Doctor Lucky\" won the Origins Award in 1998.",
+      "2.1": "\"Kill Doctor Lucky\" won the Origins Award for \"Best Abstract Board Game of 1997\"."
+     }
+    }
+   ],
+   "items": [
+    "Kolejka (game)\nKolejka ( ; Polish for \"queue\" or \"line (of people)\") is a board game designed by Karol Madaj and launched in February 2011 by Poland's Institute of National Remembrance.\n\n It was designed to teach young generations about the hardships under communism (1945–1989), particularly the difficulty of acquiring consumer goods in the shortage economy.\n\n The game has been described as inspired by \"Monopoly\".",
+    "Treehouse (game)\nTreehouse is a game in which players try to get their configuration of Icehouse pieces to match the central configuration, shared by all players.\n\n The rolling of the special \"Treehouse Die\" tells the player what kind of move to make to change his own or the central configuration, and then he does so to best move towards the goal.",
+    "Icehouse (song)\n\"Icehouse\" is a song by the Australian rock band Flowers.\n\n It was released as a single in Europe in 1982 by Chrysalis Records from the band's first album, \"Icehouse\", after the band changed its name to Icehouse.\n\n In the United States, the song peaked at number 28 on the \"Billboard\" Top Tracks chart in 1981.",
+    "Love in Motion (song)\n\"Love in Motion\" is the first new material released by the Australian rock synthpop band Icehouse as a 7\" vinyl single-only in October 1981 on Regular Records for the Australian market.\n\n The band had been known as Flowers until 27 June 1981 after which they changed their name to Icehouse, they had signed to Chrysalis Records and most of Flowers' material was released under the new name into Europe, UK and US markets.\n\n \"Love in Motion\" peaked at #10 on the Australian singles charts.\n\n The B-side, \"Goodnight, Mr. Matthews\" was included on the 1982 album \"Primitive Man\" with \"Love in Motion\" included on the Chrysalis Records US / European versions of the album, the UK 1983 version of the album was re-titled \"Love in Motion\".",
+    "Icehouse pieces\nIcehouse pieces, or Icehouse Pyramids, Treehouse pieces, Treehouse Pyramids and officially Looney Pyramids, are nestable and stackable pyramid-shaped gaming pieces and a game system.\n\n The game system was invented by Andrew Looney and John Cooper in 1987, originally for use in the game of Icehouse.",
+    "Alhambra (board game)\nAlhambra (German: Der Palast von Alhambra , literally \"The Palace of the Alhambra\") is a 2003 tile-based German-style board game designed by Dirk Henn.\n\n It was originally published in Germany by Queen Games in a language-interdependent version; an English-specific version was released in North America by the now-defunct Überplay.\n\n The game is an Arabian-themed update, set during the construction of the Alhambra palace in 14th century Granada, of the 1998 stock trading board game \"Stimmt So!\"\n\n, which in turn was an update of the 1992 mafia influence board game \"Al Capone\"; the original version was subsequently released as \"\".",
+    "Kill Doctor Lucky\nKill Doctor Lucky is a humorous board game designed by James Ernest and released in 1996 by Cheapass Games.\n\n In 1998, \"Kill Doctor Lucky\" won the Origins Award for \"Best Abstract Board Game of 1997\".",
+    "Boxes (Icehouse album)\nBoxes is a soundtrack album by Australian band Icehouse, released by Festival Records / Chrysalis Records in November 1985.\n\n The work was originally conceived by its composers, Iva Davies and Robert Kretschmer, in collaboration with choreographer Graeme Murphy of the Sydney Dance Company for performance as the ballet \"Boxes\".\n\n The first live performance of \"Boxes\" was given by the Sydney Dance Company together with Davies and Kretschmer of Icehouse and guest percussionist Masaki Tanazawa in the Opera Theatre of the Sydney Opera House on 7 November 1985.\n\n \"Boxes\" was released in the US under the name Sydney Dance Company.\n\n The single \"No Promises\" was released as a 12\" in November and a cassingle in December on Regular Records for Australian and New Zealand markets, it contained other tracks from \"Boxes\"; two tracks from \"Boxes\" were later released on their next studio album \"Measure for Measure\" in April 1986.",
+    "Hidden Expedition\nHidden Expedition is a series of single player hidden object casual games developed by the internal studios of Big Fish Games for the first five installments (using Big Fish Games Framework as the engine, and with the help of Flood Light Games in the 5th game), and by Eipix Entertainment for all subsequent installments.\n\n As of September 2017, a total of fifteen games in the series have been released.\n\n The Hidden Expedition series marks the second major hidden object game brand from Big Fish Games.\n\n The second game in the series, \"Hidden Expedition: Everest\", would go on to be the first game Big Fish released to the iPhone.",
+    "Attack! (board game)\nAttack!\n\n is a board game created by Glenn Drover and published by Eagle Games in 2003.\n\n It is a light war game that is midway between \"Risk\" and \"Axis and Allies\" in complexity.\n\n The game is loosely set in the 1930s and includes plastic pieces featuring tanks, planes, infantry, and artillery.\n\n \"Attack!\"\n\n won the Origins Award for \"Best Historical Game 2003\"."
+   ]
+  },
+  {
+   "id": "3fb5735c13e1b7fd",
+   "gold": [
+    {
+     "sentence": " The film stars Juno Temple, Julia Garner, Alessandro Nivola, Maggie Siff, Olivia Luccardi and Philip Ettinger.",
+     "facts": {
+      "0.0": "The film stars Juno Temple.",
+      "0.1": "The film stars Julia Garner.",
+      "0.2": "The film stars Alessandro Nivola.",
+      "0.3": "The film stars Maggie Siff.",
+      "0.4": "The film stars Olivia Luccardi.",
+      "0.5": "The film stars Philip Ettinger."
+     }
+    },
+    {
+     "sentence": " She has appeared in films such as \" Black Mass\", \"The Other Boleyn Girl\", \"Wild Child\", \"Atonement\", \"Maleficent\", \"The Three Musketeers\" and \"The Dark Knight Rises\".",
+     "facts": {
+      "1.0": "The actress has appeared in the film Black Mass.",
+      "1.1": "The actress has appeared in the film The Other Boleyn Girl.",
+      "1.2": "The actress has appeared in the film Wild Child.",
+      "1.3": "The actress has appeared in the film Atonement.",
+      "1.4": "The actress has appeared in the film Maleficent.",
+      "1.5": "The actress has appeared in the film The Three Musketeers.",
+      "1.6": "The actress has appeared in the film The Dark Knight Rises."
+     }
+    }
+   ],
+   "items": [
+    "Juno Temple\nJuno Temple (born 21 July 1989) is an English actress.\n\n She has appeared in films such as \" Black Mass\", \"The Other Boleyn Girl\", \"Wild Child\", \"Atonement\", \"Maleficent\", \"The Three Musketeers\" and \"The Dark Knight Rises\".\n\n She also had a starring role in the HBO period drama series \"Vinyl\".",
+    "Jack &amp; Diane (film)\nJack & Diane is a 2012 American romantic horror film written and directed by Bradley Rust Gray, and starring Riley Keough and Juno Temple.\n\n Olivia Thirlby and Ellen Page were originally cast for the lead roles in 2008 before the project was postponed.",
+    "Dirty Girl (2010 film)\nDirty Girl is a 2010 American coming of age comedy-drama film written and directed by Abe Sylvia.\n\n It stars Juno Temple, Milla Jovovich and William H. Macy.\n\n It premiered at the 2010 Toronto International Film Festival on September 12, 2010.\n\n It was distributed theatrically by The Weinstein Company on October 7, 2011.",
+    "Zooey Deschanel filmography\nAmerican actress Zooey Deschanel made her film debut in the 1999 comedy feature \"Mumford\".\n\n She went on to gained public attention by co-starred in the comedy-drama \"Almost Famous\" (2000), the independent drama \"Manic\" (2001), opposite Joseph Gordon-Levitt, and the comedy-drama \"The Good Girl\" (2002).\n\n She landed her first major role as a 18-year-old virgin in the romantic drama \"All the Real Girls\" (2003), for which she was nominated for an Independent Spirit Award for Best Female Lead.\n\n Deschanel's biggest commercial success, as of 2017, came with the Christmas-fantasy film \"Elf\" (also in 2003), which grossed over $220 million worldwide.",
+    "Juliet Weber\nJuliet Weber is a producer, director, writer, and an editor for the film industry.\n\n She co-produced films such as Fastpitch (2000) and Unchained Memories (2003).",
+    "Kate Winslet, a British actress and singer, debuted as Juliet Hulme in *Heavenly Creatures* (1994). Her early films included *Sense and Sensibility* (1995), earning a Best Supporting Actress Oscar nomination; *Jude* and *Hamlet* (1996); and *Titanic* (1997), which brought Best Actress nominations from the Academy, Golden Globe, and Screen Actors Guild Awards.",
+    "Juliet Weber works in the film industry as a producer, director, writer, and editor. She co-produced *Fastpitch* (2000) and *Unchained Memories* (2003).",
+    "The entries profile performers and productions, including *Doctor Who*, *EastEnders* and *Waterloo Road*. Juliet Weber is a producer, director, writer and editor. Juno Temple starred in *Vinyl*; Holly Hunter won major awards for *The Piano*. Kathryn Drysdale played Louise Brooks and Meghan Markle. Kate Winslet rose to prominence with *Heavenly Creatures* and *Titanic*. Cate Blanchett won two Oscars, including for *The Aviator*. Reese",
+    "Cracks (film)\nCracks is a 2009 independent drama psychological thriller film starring Eva Green, James McGovern, Juno Temple, María Valverde, and Imogen Poots, which was released theatrically in the UK and Ireland on 4 December 2009.\n\n In the United States it was released by IFC Films on 18 March 2011, and premiered on Showtime in late 2011.",
+    "Juno Temple (born 21 July 1989) is an English actress known for films including *Black Mass*, *The Other Boleyn Girl*, *Wild Child*, *Atonement*, *Maleficent*, *The Three Musketeers* and *The Dark Knight Rises*. She starred in HBO’s period drama *Vinyl*."
+   ]
+  },
+  {
+   "id": "6a731ac96c1d5fd1",
+   "gold": [
+    {
+     "sentence": "Fastbacks were a Seattle, Washington, punk rock band.",
+     "facts": {
+      "0.0": "Fastbacks were a punk rock band.",
+      "0.1": "Fastbacks were from Seattle, Washington."
+     }
+    },
+    {
+     "sentence": "Local Natives (previously known as Cavil at Rest) is an American indie rock band based in Silver Lake, Los Angeles, California, United States.",
+     "facts": {
+      "1.0": "Local Natives is an American indie rock band.",
+      "1.1": "Local Natives was previously known as Cavil at Rest.",
+      "1.2": "Local Natives is based in Silver Lake, Los Angeles, California, United States."
+     }
+    }
+   ],
+   "items": [
+    "Fastbacks\nFastbacks were a Seattle, Washington, punk rock band.\n\n Formed in 1979 by songwriter/guitarist Kurt Bloch (born August 28, 1960), and friends Lulu Gargiulo (guitar and vocals, born October 12, 1960) and Kim Warnick (bass and vocals, born April 7, 1959), they disbanded in 2001.\n\n Their sound mixed a generally punk rock approach to vocals and sound textures with poppy tunes and strong musicianship.",
+    "The Lumineers\nThe Lumineers are an American folk rock/Americana band based in Denver, Colorado.\n\n The founding members are Wesley Schultz (lead vocals, guitar) and Jeremiah Fraites (drums, percussion).\n\n Schultz and Fraites began writing and performing together in Ramsey, New Jersey in 2005.\n\n Cellist and vocalist Neyla Pekarek joined the band in 2010.\n\n The Lumineers emerged as one of the most popular folk rock/Americana artists during the revival of those genres and their growing popularity in the 2010s.\n\n The band's stripped back raw sound draws heavily from artists that influenced Schultz and Fraites such as Bruce Springsteen, Bob Dylan and Tom Petty.\n\n They are known for their energetic live shows and several international hit singles including \"Ho Hey”, “Stubborn Love”, “Ophelia” and “Cleopatra”.\n\n The band has become one of the top touring bands in the U.S. and also sells out shows around the world.",
+    "Hummingbird (Local Natives album)\nHummingbird is the second studio album by American indie rock band Local Natives, released on January 29, 2013 on Frenchkiss Records in the US, and on Infectious Records in Europe.\n\n Produced by The National guitarist Aaron Dessner, the album was preceded by the singles, \"Breakers\" and \"Heavy Feet.\"\n\n \"Breakers\" reached #12 on the Billboard Top 200.\n\n The song \"Mt. Washington\" was also featured in the 2015 video game \"Life Is Strange\".",
+    "Native Tour\nThe Native Tour (also known as the Native Summer Tour in North America or Native Fall Tour in Europe) is the third headlining concert tour by American pop-rock band, OneRepublic in support of their third studio album, \"Native\" (2013).\n\n OneRepublic were joined on the Native Summer leg of the tour by, The Script and American Authors, and on the European \"Native Fall Tour\" leg by Kongos.\n\n The tour has traveled across five continents; Asia, Europe, Oceania, North America, and Africa.\n\n The tour began on April 2, 2013, in Milan, Italy and finished on September 20, 2015, in São Paulo, Brazil.",
+    "Local Natives\nLocal Natives (previously known as Cavil at Rest) is an American indie rock band based in Silver Lake, Los Angeles, California, United States.\n\n Their debut album, \"Gorilla Manor\", was first released in the UK in November 2009, and later released in the US on February 16, 2010.\n\n The album received mostly positive reviews and debuted in the Billboard 200 and at No. 3 in the New Artist Chart.\n\n Their second album, \"Hummingbird\", was released in January 2013.\n\n Their third album, \"Sunlit Youth\", was released in September 2016.",
+    "The Shins\nThe Shins are an American indie rock band from Albuquerque, New Mexico, formed in 1996.\n\n The band's current lineup consists of James Mercer (vocals, guitar, songwriter), Jon Sortland (drums), Mark Watrous (guitar), Casey Foubert (guitar), Yuuki Matthews (bass), and Patti King (keyboards).\n\n The band is based in Portland, Oregon.",
+    "Chief (band)\nChief is a four-person band from Santa Monica, California, stationed in Los Angeles, California.\n\n Chief has released three singles entitled \"Mighty Proud,\" \"Breaking Walls\", and \"Night And Day,\" as well as an EP called \"The Castle Is Gone\" and their debut and only full album, \"Modern Rituals\".\n\n All of these releases (except for the EP which was released under their own record label) have been via Domino Records.\n\n They have been compared to bands such as Coldplay and Local Natives by \"The New York Times\".\n\n The \"Times\" goes on to say \"Mr. Koga can sound like the young Tom Petty.\"\n\n Other reviews of Chief have similarly been generally good.\n\n On June 14, 2011, they played their farewell show at The Troubadour but began performing together again one year later.",
+    "OK Go\nOK Go is an American rock band originally from Chicago, Illinois, now based in Los Angeles, California.\n\n The band is composed of Damian Kulash (lead vocals, guitar), Tim Nordwind (bass guitar and vocals), Dan Konopka (drums and percussion) and Andy Ross (guitar, keyboards and vocals), who joined them in 2005, replacing Andy Duncan.\n\n The band is known for its often quirky and elaborate one-take music videos.",
+    "I Was Totally Destroying It\nI Was Totally Destroying It is a five-piece powerpop band from Chapel Hill, North Carolina, featuring current and former members of Saddle Creek band Sorry About Dresden.\n\n After self-releasing and touring the country behind their first full-length album, the band signed with Portland-based indie label Greyday Records.\n\n Since forming in 2007, the band has toured much of the country, playing with artists such as Conor Oberst and the Mystic Valley Band, Motion City Soundtrack, Cursive, Superchunk, Portastatic, Ryan Ferguson (formerly of No Knife), Dear and the Headlights, Margot & the Nuclear So and So's, Snowden, Billy Bragg, Annuals, Joan Jett, The Actual, Ozma, Polvo, Birds of Avalon and Blankface.\n\n Their next full-length, Horror Vacui, was released by Greyday in October 2009, and was co-produced by Josh Cain of Motion City Soundtrack.",
+    "American Hi-Fi\nAmerican Hi-Fi is an American rock band formed in Boston in 1998.\n\n The band consists of lead vocalist/rhythm guitarist Stacy Jones, lead guitarist Jamie Arentzen, bassist/backing vocalist Drew Parsons, and drummer Brian Nolan.\n\n Prior to the group's formation, Stacy Jones was well known for being a drummer in the successful alternative rock bands Veruca Salt and Letters to Cleo.\n\n American Hi-Fi has a close relationship with Miley Cyrus, whose band shares two members with American Hi-Fi.\n\n The group has a mixed musical style that includes influences from pop punk, alternative rock, and power pop."
+   ]
+  },
+  {
+   "id": "6b0e1c4c1abc5534",
+   "gold": [
+    {
+     "sentence": " He creates bespoke millinery under the J Smith Esquire brand for a portfolio of private clients that includes Angelina Jolie, Brad Pitt and Amal Clooney.",
+     "facts": {
+      "0.0": "This person creates bespoke millinery under the J Smith Esquire brand.",
+      "0.1": "This person creates bespoke millinery for a portfolio of private clients.",
+      "0.2": "The portfolio of private clients includes Angelina Jolie.",
+      "0.3": "The portfolio of private clients includes Brad Pitt.",
+      "0.4": "The portfolio of private clients includes Amal Clooney."
+     }
+    },
+    {
+     "sentence": "Amal Clooney (\"née\" Alamuddin, Arabic: أمل علم الدين‎ ‎ ; born 3 February 1978) is a barrister at Doughty Street Chambers, specialising in international law and human rights.",
+     "facts": {
+      "1.0": "Amal Clooney is also known by the name Alamuddin (née Alamuddin).",
+      "1.1": "Amal Clooney's Arabic name is أمل علم الدين.",
+      "1.2": "Amal Clooney was born on 3 February 1978.",
+      "1.3": "Amal Clooney is a barrister at Doughty Street Chambers.",
+      "1.4": "Amal Clooney specialises in international law.",
+      "1.5": "Amal Clooney specialises in human rights."
+     }
+    }
+   ],
+   "items": [
+    "Doughty Street Chambers\nDoughty Street Chambers is a British set of barristers' chambers situated in Bristol, Manchester and London's Doughty Street, undertaking criminal justice, public law, immigration, employment, human rights and civil liberties work.",
+    "Amal Clooney\nAmal Clooney (\"née\" Alamuddin, Arabic: أمل علم الدين‎ ‎ ; born 3 February 1978) is a barrister at Doughty Street Chambers, specialising in international law and human rights.\n\n Her clients include Julian Assange, the founder of WikiLeaks, in his fight against extradition.\n\n She has also represented the former prime minister of Ukraine, Yulia Tymoshenko, and Egyptian-Canadian journalist Mohamed Fahmy.\n\n She is married to the American actor George Clooney.",
+    "Doughty Street\nDoughty Street is a broad tree lined street in the Holborn district of the London Borough of Camden.\n\n The southern part is a continuation of the short John Street, which comes off Theobald's Road.\n\n The northern part crosses Guilford Street and ends at Mecklenburgh Square.\n\n The street is named after a landlord of the area at the time it was built, Henry Doughty.",
+    "Barbados Bar Association\nThe Barbados Bar Association is a voluntary association of attorneys in Barbados who practise at the independent bar as barristers and Queen's Counsel.\n\n It was created by the Barbados Bar Association Act of 1940.",
+    "Mónica Feria Tinta\nMónica Feria Tinta is a leading public international lawyer.\n\n She practises as a Barrister at 20 Essex Street Chambers.\n\n In 2000 she became the first Peruvian-born lawyer to receive the Diploma of the Hague Academy of International Law in history.\n\n Her litigation work led to the first international human rights court decision ordering the prosecution of a former Head of State for crimes under international law.\n\n She was awarded the Inge Genefke International Award for her work as an international lawyer in 2006 and was co-recipient of the Gruber Justice Prize 2007, for her contributions advancing the cause of justice as delivered through the legal system.\n\n She is a member of the Bar of England and Wales, and the American Society of International Law.",
+    "Edward Fitzgerald (barrister)\nEdward Hamilton Fitzgerald CBE QC is an English barrister who specialises in criminal law, public law, and international human rights law.\n\n His work against the death penalty has led him to represent despised criminals such as: Myra Hindley, a perpetrator in the Moors murders; Mary Bell, a child killer; Maxine Carr; Jon Venables, one of James Bulger's killers; various IRA prisoners; and Abu Hamza, the controversial Muslim cleric.\n\n Fitzgerald is currently the joint head of Doughty Street Chambers along with Geoffrey Robertson QC.\n\n Fitzgerald has been called to the Bar in a number of jurisdictions including Belize, Grenada and St Vincent, and has been granted rights of audience to appear in cases in Hong Kong, Trinidad and Tobago, St Lucia, Bahamas, and the British Virgin Islands.\n\n He is also a trustee and patron of a number of charities including The Death Penalty Project and The Longford Trust.",
+    "Edmund Bartley-Denniss\nSir Edmund Robert Bartley Bartley-Denniss KC (9 April 1854 – 20 March 1931), born Edmund Robert Bartley Denniss, was a barrister, prominent Freemason and Conservative Party Member of Parliament in the United Kingdom.\n\n He was also a pioneer of the sport of cycling in Britain.",
+    "Pupil master\nOccasionally, a pupil barrister may undertake a third \"six\", extending the training period a further six months.\n\n At the end of pupillage, to continue practising the law, a barrister may attempt to become a tenant in a set of barristers' chambers, or find a position as an employed barrister.",
+    "Pupil master\nA pupil master ('pupilmaster' or 'pupil-master') or in the case of a female barrister, 'pupil mistress' etc., is the former name given to an experienced barrister who a pupil shadows during their pupillage.\n\n The term pupil master or mistress has now been replaced by the term 'pupil supervisor'.\n\n Barristers are called to the Bar via one of the four Inns of Court upon successful completion of the BPTC and having undertaken a required number of \"qualifying sessions\" in their chosen Inn of Court.\n\n In most cases, the newly called barrister is then required to undertake training for a period of at least a year before the barrister can start their own private practice.\n\n This training period is known as pupillage, usually split into two periods of six months known as \"sixes\".\n\n The first \"six\" is a non-practising six, during which the pupil will shadow their pupil master; the second is usually a practising \"six\", when the pupil, with their pupil master's permission, can undertake the supply of legal services and exercise rights of audience in court.",
+    "Shahram Taghavi\nShahram Taghavi is a barrister practising in the United Kingdom.\n\n He is a specialist in Judicial Review, Human Rights, Immigration and EU law.\n\n He was called to the England & Wales bar in 1994.\n\n He is a partner at Article 1, a law firm specialising in immigration, EU freedoms of movement and human rights law.\n\n He practised as an independent barrister at Doughty Street Chambers specialising in immigration and public law.\n\n He was head of both the Immigration and Public Law departments at Simons Muirhead & Burton solicitors.\n\n He was a Senior Barrister at Bates Wells & Braithwaite LLP as a member of their Public & Regulatory and Immigration departments, Deputy Head of Immigration at Lewis Silkin LLP, Head of Immigration at Charles Russell LLP (now Charles Russell Speechly LLP) and National Head of Immigration at Grant Thornton LLP."
+   ]
+  },
+  {
+   "id": "3ea941320535aaa6",
+   "gold": [
+    {
+     "sentence": "Andy Warhol ( ; born Andrew Warhola; August 6, 1928 – February 22, 1987) was an American artist, director and producer who was a leading figure in the visual art movement known as pop art.",
+     "facts": {
+      "0.0": "Andy Warhol was born Andrew Warhola.",
+      "0.1": "Andy Warhol's life span runs from August 6, 1928 to February 22, 1987.",
+      "0.2": "Andy Warhol was an American artist.",
+      "0.3": "Andy Warhol was an American director.",
+      "0.4": "Andy Warhol was an American producer.",
+      "0.5": "Andy Warhol was a leading figure in the visual art movement known as pop art."
+     }
+    },
+    {
+     "sentence": "Alexander Butler was a British film director who made over sixty features and short films during the 1910s and 1920s including many for G.B. Samuelson's production company.",
+     "facts": {
+      "1.0": "Alexander Butler was a British film director.",
+      "1.1": "Alexander Butler made over sixty features and short films.",
+      "1.2": "Alexander Butler made those features and short films during the 1910s and 1920s.",
+      "1.3": "Alexander Butler made many of those features and short films for G.B. Samuelson's production company."
+     }
+    }
+   ],
+   "items": [
+    "I Shot Andy Warhol\nI Shot Andy Warhol is a 1996 American-British independent film about the life of Valerie Solanas and her relationship with the artist Andy Warhol.\n\n The film marked the debut of Canadian director Mary Harron.\n\n The film stars Lili Taylor as Valerie, Jared Harris as Andy Warhol, and Martha Plimpton as Valerie's friend Stevie.\n\n Stephen Dorff plays Warhol superstar Candy Darling.\n\n John Cale of The Velvet Underground wrote the film's score despite protests from former band member Lou Reed.\n\n Yo La Tengo plays an anonymous band that is somewhat reminiscent of the group.",
+    "Charles Andrew Whitney\nCharles Andrew Whitney (November 14, 1864- December 31, 1912) was an American businessman and industrialist in the late 19th century, born in Princeton, Massachusetts.\n\n He was part of the prominent American Whitney family.\n\n In 1859, Charles, his brother Levi L. Whitney, and Orville E. Thompson helped lead the large-scale manufacturing of leather boots and shoes in Chicago and were attributed with successfully running the first factory of its kind there.\n\n Whitney himself held patents for the manufacture of leather.",
+    "The Andy Warhol Story\nThe Andy Warhol Story (1966) is an underground film directed by Andy Warhol with cinematography by Paul Morrissey, and starring Edie Sedgwick and Rene Ricard (as Andy Warhol).",
+    "John Warhola\nJohn Warhola (May 31, 1925 – December 24, 2010) played a pivotal role in maintaining the legacy of his younger brother, pop artist Andy Warhol, assigned responsibility by their father on his deathbed to ensure that Andy attended college and serving as a trustee of the Andy Warhol Foundation for the Visual Arts after his brother's death in 1987.\n\n Warhola oversaw the establishment of The Andy Warhol Museum in Pittsburgh and the Andy Warhol Museum of Modern Art in Medzilaborce, Slovakia.",
+    "Green Coca-Cola Bottles\nGreen Coca-Cola Bottles is a 1962 painting by Andy Warhol that depicts numerous Coca-Cola bottles.\n\n Andy Warhol’s painting “Green Coca-Cola Bottles” attempted to take a mainstream item and converted it into a piece of art.\n\n Warhol’s piece was a hybrid craft that is to say that he utilized a silkscreen technique, which mechanicalized some aspects of the painting, but also kept it so that he had to put in some of his individualized “unevenness” across the painting, to reel in the human aspect.\n\n The painting engenders an optimistic message for the American public, which is best described in Warhol’s own words, “What’s grand about this country is that America started the tradition where the richest consumers buy essentially the same thing as the poorest... you can know that the President drinks Coke, Liz Taylor drinks Coke, and, just think, you can drink Coke, too.\n\n A Coke is a Coke, and no amount of money can get you a better Coke.”\n\n Here Warhol goes to show that the democratic equality, which allowed the birth of a uniformly governed consumerist mindset, has given them an equal satiating medium.",
+    "Green Coca-Cola Bottles\nWith respect to its artistic merits, Warhol’s painting utilizes repetitive imagery in the shape of hundred and twelve almost identical bottles, evoking a sense of mechanicalization which overlaps his former usage of mass culture objects.\n\n The widespread display of advertisement flooded the American public during the sixties, and Warhol had been successful in mapping it onto his canvas, no wonder it is considered one of Warhol’s masterpieces.",
+    "Andy Warhol\nAndy Warhol ( ; born Andrew Warhola; August 6, 1928 – February 22, 1987) was an American artist, director and producer who was a leading figure in the visual art movement known as pop art.\n\n His works explore the relationship between artistic expression, celebrity culture, and advertising that flourished by the 1960s, and span a variety of media, including painting, silkscreening, photography, film, and sculpture.\n\n Some of his best known works include the silkscreen paintings \"Campbell's Soup Cans\" (1962) and \"Marilyn Diptych\" (1962), the experimental film \"Chelsea Girls\" (1966), and the multimedia events known as the \"Exploding Plastic Inevitable\" (1966–67).",
+    "Beautiful Darling\nBeautiful Darling: The Life and Times of Candy Darling, Andy Warhol Superstar is a 2010 feature-length documentary film about Candy Darling, the transgender pioneer, actress and Andy Warhol Superstar.\n\n The film was written and directed by James Rasin and features Chloë Sevigny as \"the voice of Candy Darling\", reading from Candy's private diaries and letters.\n\n Patton Oswalt voices Andy Warhol and Truman Capote.\n\n Louis Durra composed the score.",
+    "Exploding Plastic Inevitable\nThe Exploding Plastic Inevitable, sometimes simply called Plastic Inevitable or EPI, was a series of multimedia events organized by Andy Warhol between 1966 and 1967, featuring musical performances by The Velvet Underground and Nico, screenings of Warhol's films, and dancing and performances by regulars of Warhol's Factory, especially Mary Woronov and Gerard Malanga.\n\n \"Andy Warhol's Exploding Plastic Inevitable\" is also the title of an 18-minute film by Ronald Nameth with recordings from one week of performances of the shows which were filmed in Chicago, Illinois, in 1966.\n\n In December 1966 Warhol included a one-off magazine called \"The Plastic Exploding Inevitable\" as part of the \"Aspen\" No. 3 package.",
+    "Alexander Butler\nAlexander Butler was a British film director who made over sixty features and short films during the 1910s and 1920s including many for G.B. Samuelson's production company.\n\n Butler directed several British films in Hollywood in 1920, where Samuelson had made an arrangement with Universal Pictures.\n\n Amongst his notable films are the Sherlock Holmes adaptation \"The Valley of Fear\" (1916) and the early British horror film \"The Beetle\" (1919)."
+   ]
+  },
+  {
+   "id": "e2c796efb2024255",
+   "gold": [
+    {
+     "sentence": " They are most well known for being the team that includes former UFC light heavyweight champions 'Sugar' Rashad Evans and Vitor Belfort and former UFC lightweight champion Eddie Alvarez.",
+     "facts": {
+      "0.0": "This team is most well known for including Sugar Rashad Evans.",
+      "0.1": "Sugar Rashad Evans is a former UFC light heavyweight champion.",
+      "0.2": "This team is most well known for including Vitor Belfort.",
+      "0.3": "Vitor Belfort is a former UFC light heavyweight champion.",
+      "0.4": "This team is most well known for including Eddie Alvarez.",
+      "0.5": "Eddie Alvarez is a former UFC lightweight champion."
+     }
+    },
+    {
+     "sentence": "Vitor Vieira Belfort (] ; born April 1, 1977) is a Brazilian mixed martial artist currently competing in the Middleweight division of the Ultimate Fighting Championship.",
+     "facts": {
+      "1.0": "Vitor Vieira Belfort was born on April 1, 1977.",
+      "1.1": "Vitor Vieira Belfort is a Brazilian mixed martial artist.",
+      "1.2": "Vitor Vieira Belfort is currently competing in the Middleweight division of the Ultimate Fighting Championship."
+     }
+    }
+   ],
+   "items": [
+    "Vitor Belfort\nVitor Vieira Belfort (] ; born April 1, 1977) is a Brazilian mixed martial artist currently competing in the Middleweight division of the Ultimate Fighting Championship.\n\n He is the former UFC Light Heavyweight Champion, UFC 12 Heavyweight Tournament Champion, and the Cage Rage World Light Heavyweight Champion.\n\n As of June 16, 2017, he is the #11 contender in official UFC Middleweight rankings.",
+    "Jack Marshman\nJack \"Hammer\" Marshman (born December 19, 1989) is a Welsh mixed martial artist.\n\n He was the Middleweight Cage Warriors Fighting Championship (CWFC) champion and Lonsdale Middleweight Champion.\n\n He currently competes in Middleweight division in the Ultimate Fighting Championship(UFC).",
+    "Sam Alvey\nSamuel Alvey (born May 6, 1986) is an American mixed martial artist currently competing in the Middleweight division of the Ultimate Fighting Championship.\n\n A professional MMA competitor since 2008, Alvey has also formerly competed for Bellator, King of the Cage, the MFC, and was a contestant on .\n\n As of March 2017, Alvey is #14 in the official UFC Middleweight Rankings.",
+    "Paulo Borrachinha\nPaulo Henrique Costa (born April 21, 1991), better known as Paulo Borrachinha, is a Brazilian mixed martial artist currently competing in the Middleweight division of the Ultimate Fighting Championship.\n\n In the day August 3 of 2017, Borracinha and the Clube Atlético Mineiro officialized institutional partnership.\n\n The agreement did not create a bond between the club and the athlete.\n\n The agreement allows the use of the athletic shield of Atlético in the training uniforms of the fighter, within the possibilities of his contract with the UFC.",
+    "Luke Zachrich\nLuke Zachrich (born October 1, 1981) is an American mixed martial artist and former professional boxer who formerly competed in the Middleweight division of the Ultimate Fighting Championship A professional mixed martial arts competitor since 2006, Zachrich was a member of Team Forrest on the seventh season of The Ultimate Fighter, and has also fought for King of the Cage, Xtreme Fighting Organization, Bellator, and Ultimate Victory Challenge, the latter of which he was the inaugural Middleweight Champion.",
+    "David Branch (fighter)\nDavid Branch (born September 26, 1981) is an American mixed martial artist currently competing in the Middleweight division of the Ultimate Fighting Championship.\n\n A professional competitor since 2007, he has also formerly competed for the World Series of Fighting, Bellator, Shark Fights, and Titan FC.\n\n Branch was the inaugural World Series of Fighting Light Heavyweight and Middleweight Champion.\n\n He is currently ranked as the #9 Middleweight in the world according to Sherdog.",
+    "Blackzilians\nThe Blackzilians is a defunct professional team of fighters in mixed martial arts, boxing, kickboxing, amateur wrestling and catch wrestling located in South Florida.\n\n They are most well known for being the team that includes former UFC light heavyweight champions 'Sugar' Rashad Evans and Vitor Belfort and former UFC lightweight champion Eddie Alvarez.",
+    "Kelvin Gastelum\nKelvin Gastelum (born October 24, 1991) is an American professional mixed martial artist who is currently signed to the Ultimate Fighting Championship (UFC).\n\n He was the winner of \"The Ultimate Fighter 17\".\n\n Gastelum is currently competing as a middleweight and is ranked #8 in the UFC official middleweight rankings.",
+    "Rashad Evans\nRashad Anton Evans (born September 25, 1979) is an American mixed martial artist currently competing in the Middleweight division of the Ultimate Fighting Championship.\n\n A professional competitor since 2003, Evans was the Heavyweight winner of The Ultimate Fighter 2 and is also a former UFC Light Heavyweight Champion.",
+    "Luke Barnatt\nLuke Barnatt (born 13 April 1988) is an English mixed martial artist who fought as a Middleweight for the Ultimate Fighting Championship.\n\n He was a member of FX's , and has also competed for BAMMA and UCMMA in England.\n\n At 6' 6\" Barnatt is one of the tallest fighters currently competing in his weight class.\n\n Barnatt received his nickname \"Bigslow\" from brothers John Maguire and Tommy Maguire, for his size and being slow in response to their jokes and insults.\n\n Barnatt competes in the middleweight division of the Absolute Championship Berkut."
+   ]
+  },
+  {
+   "id": "1939d16678154d7a",
+   "gold": [
+    {
+     "sentence": "Ionolyce is a small genus of butterflies in the family Lycaenidae.",
+     "facts": {
+      "0.0": "Ionolyce is a small genus of butterflies.",
+      "0.1": "Ionolyce is in the family Lycaenidae."
+     }
+    },
+    {
+     "sentence": " \"I. helicon\" is widespread in the Indoaustralasian region (India to the Malay Archipelago.",
+     "facts": {
+      "1.0": "I. helicon is widespread in the Indoaustralasian region.",
+      "1.1": "I. helicon is widespread from India to the Malay Archipelago."
+     }
+    },
+    {
+     "sentence": "India lies on the Indian Plate, the northern portion of the Indo-Australian Plate, whose continental crust forms the Indian subcontinent.",
+     "facts": {
+      "2.0": "India lies on the Indian Plate.",
+      "2.1": "The Indian Plate is the northern portion of the Indo-Australian Plate.",
+      "2.2": "The continental crust of the Indian Plate forms the Indian subcontinent."
+     }
+    },
+    {
+     "sentence": " It is the seventh-largest country in the world, with a total area of 3287263 km2 .",
+     "facts": {
+      "3.0": "India is the seventh-largest country in the world.",
+      "3.1": "India has a total area of 3287263 km2."
+     }
+    }
+   ],
+   "items": [
+    "Aulacodes peribocalis\nAulacodes peribocalis is a moth in the Crambidae family.\n\n It was described by Walker in 1859.\n\n It is found in Yemen and India.",
+    "Psychopsis\nPsychopsis, abbreviated Psychp in horticultural trade, is a genus of 5 known species of orchids native to northern South America, Central America and Trinidad.\n\n It was formerly included in the massively paraphyletic \"wastebin genus\" \"Oncidium\".\n\n The genus as a whole is commonly called butterfly orchids, but some species of other orchid genera are also called thus.",
+    "White-bellied musk deer\nThe White-bellied musk deer or Himalayan musk deer (\"Moschus leucogaster\") is a musk deer species occurring in the Himalayas of Nepal, Bhutan, India, Pakistan and China.\n\n It is listed as endangered by the IUCN because of overexploitation resulting in a probable serious population decline.",
+    "Honeyguide\nHoneyguides (family Indicatoridae) are near passerine bird species of the order Piciformes.\n\n They are also known as indicator birds, or honey birds, although the latter term is also used more narrowly to refer to species of the genus \"Prodotiscus\".\n\n They have an Old World tropical distribution, with the greatest number of species in Africa and two in Asia.\n\n These birds are best known for their interaction with humans.\n\n Honeyguides are noted and named for one or two species that will deliberately lead humans (but, contrary to popular claims, not honey badgers) directly to bee colonies, so that they can feast on the grubs and beeswax that are left behind.",
+    "Indian muntjac\nThe Indian muntjac (\"Muntiacus muntjak\"), also called red muntjac and barking deer, is a common muntjac deer species in South and Southeast Asia.\n\n It is listed as Least Concern on the IUCN Red List.",
+    "Kallima paralekta\nKallima paralekta, the Indian leafwing or Malayan leafwing, is a species of brush-footed butterfly of the genus \"Kallima\".\n\n Despite its common names, it is not found in India or Malaysia, but is endemic to Java and Sumatra of Indonesia.\n\n Like other members of its genus, it is remarkable for its strong resemblance to a dead leaf when its wings are folded.\n\n It was one of the species encountered by the British naturalist Alfred Russel Wallace in his travels in maritime Southeast Asia.\n\n It is mentioned in his famous 19th-century work \"The Malay Archipelago\" as one of the best examples of protective camouflage achieved through natural selection.",
+    "Dregea volubilis\nDregea volubilis is a species of plant in the Apocynaceae family that is native to India.",
+    "Strobilanthes\nStrobilanthes is a genus of about 350 species of flowering plants in the family Acanthaceae, mostly native to tropical Asia and Madagascar, but with a few species extending north into temperate regions of Asia.\n\n Many species are cultivated for their 2-lipped, hooded flowers in shades of blue, pink, white and purple.\n\n Most are frost-tender and require protection in frost-prone areas.",
+    "Ionolyce\nIonolyce is a small genus of butterflies in the family Lycaenidae.\n\n \"I. helicon\" is widespread in the Indoaustralasian region (India to the Malay Archipelago.\n\n \"I selkon\"and \"I.brunnescens\" are both endemic to the Solomon Islands.",
+    "Consul fabius\nConsul fabius, the tiger leafwing, is the most common and well known species of the genus \"Consul\" of subfamily Charaxinae in the brush-footed butterfly family (Nymphalidae).\n\n It is found all over the Neotropics."
+   ]
+  },
+  {
+   "id": "35b98951c0989064",
+   "gold": [
+    {
+     "sentence": "California State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States.",
+     "facts": {
+      "0.0": "California State Polytechnic University, Pomona is also called CPP, Cal Poly Pomona, or Cal Poly.",
+      "0.1": "California State Polytechnic University, Pomona is a public polytechnic university.",
+      "0.2": "California State Polytechnic University, Pomona is located in Pomona, California, United States."
+     }
+    },
+    {
+     "sentence": " It is one of two polytechnics in the California State University system.",
+     "facts": {
+      "1.0": "California State Polytechnic University, Pomona is one of two polytechnics in the California State University system."
+     }
+    },
+    {
+     "sentence": " Ельцина, \"Uralʹskiĭ federalʹnyĭ universitet imeni pervogo Prezidenta Rossii B.N. Yelʹtsina\", often shortened to UrFU, УрФУ ) (formed by a merger of the Ural State Technical University and Ural State University) is one of the leading educational institutions in the Ural region.",
+     "facts": {
+      "2.0": "The university is named after the first President of Russia, B.N. Yeltsin.",
+      "2.1": "The full name of the university is 'Uralʹskiĭ federalʹnyĭ universitet imeni pervogo Prezidenta Rossii B.N. Yelʹtsina'.",
+      "2.2": "The university, Ural Federal University, is often shortened to UrFU or УрФУ.",
+      "2.3": "Ural Federal University was formed by a merger of the Ural State Technical University and Ural State University.",
+      "2.4": "Ural Federal University is one of the leading educational institutions in the Ural region."
+     }
+    },
+    {
+     "sentence": " Ural Federal University acts as a research and innovation center of the Ural region and has close cooperation with the Russian Academy of Sciences.",
+     "facts": {
+      "3.0": "Ural Federal University acts as a research and innovation center of the Ural region.",
+      "3.1": "Ural Federal University has close cooperation with the Russian Academy of Sciences."
+     }
+    }
+   ],
+   "items": [
+    "Ural Federal University\nThe links between the university and intermediate educational institutions are actively developed.\n\n The University also performs consistent work on establishing strategic partnership with employers for the sake of development of the regional economy: employers are involved in the educational environment as direct participants, large-scale enployers-sponsored and corporate education is carried out based on the client-centered approach, joint business projects in economic and social areas are realized.",
+    "Cal Poly Pomona Broncos\nThe Cal Poly Pomona Broncos or Cal Poly Broncos are the athletic sports teams for the California State Polytechnic University, Pomona (Cal Poly Pomona).\n\n Cal Poly Pomona has 10 varsity sports teams and offers student participation in a wide range of sports including soccer, volleyball, track and field, basketball, softball, and baseball.\n\n Cal Poly Pomona participates at the NCAA's Division II (DII) level in the California Collegiate Athletic Association (CCAA).\n\n The Broncos have 65 CCAA championships and 14 NCAA National Championships.\n\n Current and former Cal Poly athletes have won 7 Olympic medals (3 gold, 1 silver, and 3 bronze).",
+    "International Polytechnic High School\nInternational Polytechnic High School, commonly abbreviated merely as iPoly, is a public college preparatory demonstration high school (9-12) located on the California State Polytechnic University, Pomona (Cal Poly Pomona) campus and operated by the Los Angeles County Office of Education (LACOE) in conjunction with the College of Education and Integrative Studies at the university.\n\n iPoly's curriculum is fully accredited by the Western Association of Schools and Colleges and is approved by the University of California and California State University.\n\n It maintains a unique affiliation with the Los Angeles County High School for the Arts (LACHSA), which is also run by LACOE.\n\n Since iPoly does not lie in a fixed school district, it draws students from throughout Los Angeles, San Bernardino, Orange and Riverside counties.\n\n The majority of students come from the Pomona and San Gabriel valleys.\n\n In 2009 and 2013, iPoly was honored as a California Distinguished School by the California Department of Education.",
+    "Cal Poly Pomona Broncos women's basketball\nThe Cal Poly Pomona Broncos women's basketball team is the women's basketball team that represents California State Polytechnic University, Pomona, in Pomona, California.\n\n The school's team currently competes in the California Collegiate Athletic Association.",
+    "California State Polytechnic University, Pomona\nCalifornia State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States.\n\n It is one of two polytechnics in the California State University system.",
+    "Ural Federal University\nThe Ural Federal University named after the first President of Russia B. N. Yeltsin (Russian: Уральский федеральный университет имени первого Президента России Б.Н.\n\n Ельцина, \"Uralʹskiĭ federalʹnyĭ universitet imeni pervogo Prezidenta Rossii B.N. Yelʹtsina\", often shortened to UrFU, УрФУ ) (formed by a merger of the Ural State Technical University and Ural State University) is one of the leading educational institutions in the Ural region.\n\n Ural Federal University acts as a research and innovation center of the Ural region and has close cooperation with the Russian Academy of Sciences.\n\n Training of students is carried out in four main areas of knowledge and 108 academic majors.\n\n The links between the university and intermediate educational institutions are actively developed.",
+    "Cal Poly Pomona College of Environmental Design\nThe Cal Poly Pomona College of Environmental Design (CENV) is a college part of the California State Polytechnic University, Pomona (Cal Poly Pomona).\n\n The college houses over 1,600 students; making it one of largest environmental design programs in the United States.\n\n The college offers bachelor's degrees in five departments, as well as three master's degree programs.\n\n It is the only academic unit within the California State University system to be associated with a Pritzker Prize laureate (often referred to as \"The Nobel Prize in Architecture\").",
+    "Cal Poly Pomona University Library\nThe Cal Poly Pomona University Library is the main library on the campus of California State Polytechnic University, Pomona (Cal Poly Pomona).\n\n It has in its collection 670,580 books; 6,883 serial subscriptions and 10,417 audiovisual materials.",
+    "Cal Poly Pomona College of Engineering\nThe Cal Poly Pomona College of Engineering is the engineering college at California State Polytechnic University, Pomona (Cal Poly Pomona or Cal Poly) located in Pomona, California, United States.\n\n Well known for its \"learn by doing\" philosophy, the college's motto is: \"\"making imagination real\"\".\n\n Cal Poly has one of the top engineering college among public schools in California and, with over 5,600 students (as of fall 2015), it is also the largest engineering college in Southern California, the second largest college of engineering in the California State University system, and the seventeenth largest engineering college in the United States.\n\n In the 2017 \"U.S. News & World Report\" the College of Engineering is ranked the 5th best undergraduate program among public universities (11th overall) in the West for Master's-granting universities, and \"has one of the top ranked engineering programs, and graduates roughly 1 of every 14 engineers in the state of California.\"",
+    "1981 Cal Poly Pomona Broncos football team\nThe 1981 Cal Poly Pomona Broncos football team represented California State Polytechnic University, Pomona during the 1981 NCAA Division II football season.\n\n Cal Poly Pomona competed in the California Collegiate Athletic Association (CCAA)."
+   ]
+  },
+  {
+   "id": "df1475aeabb41581",
+   "gold": [
+    {
+     "sentence": "Nicolae Titulescu (] ; March 4, 1882 – March 17, 1941) was a well-known Romanian diplomat, at various times government minister, finance and foreign minister, and for two terms President of the General Assembly of the League of Nations (1930–32).",
+     "facts": {
+      "0.0": "Nicolae Titulescu was born on March 4, 1882.",
+      "0.1": "Nicolae Titulescu died on March 17, 1941.",
+      "0.2": "Nicolae Titulescu was a well-known Romanian diplomat.",
+      "0.3": "Nicolae Titulescu was at various times a government minister.",
+      "0.4": "Nicolae Titulescu was at various times finance minister.",
+      "0.5": "Nicolae Titulescu was at various times foreign minister.",
+      "0.6": "Nicolae Titulescu served for two terms as President of the General Assembly of the League of Nations.",
+      "0.7": "Nicolae Titulescu's two terms as President of the General Assembly of the League of Nations are dated 1930–32."
+     }
+    },
+    {
+     "sentence": "The League of Nations (abbreviated as LN in English, \"La Société des Nations \" ] abbreviated as SDN or SdN in French) was an intergovernmental organisation founded on 10 January 1920 as a result of the Paris Peace Conference that ended the First World War.",
+     "facts": {
+      "1.0": "The League of Nations is abbreviated as LN in English.",
+      "1.1": "The League of Nations is abbreviated as SDN or SdN in French.",
+      "1.2": "The French name of the League of Nations is 'La Société des Nations'.",
+      "1.3": "The League of Nations was an intergovernmental organisation.",
+      "1.4": "The League of Nations was founded on 10 January 1920.",
+      "1.5": "The League of Nations was founded as a result of the Paris Peace Conference.",
+      "1.6": "The Paris Peace Conference ended the First World War."
+     }
+    }
+   ],
+   "items": [
+    "Nicolae Titulescu\nNicolae Titulescu (] ; March 4, 1882 – March 17, 1941) was a well-known Romanian diplomat, at various times government minister, finance and foreign minister, and for two terms President of the General Assembly of the League of Nations (1930–32).",
+    "Gheorghe Tătărescu\nGheorghe I. Tătărescu (also known as \"Guță Tătărescu\", with a slightly antiquated pet form of his given name; 2 November 1886 – 28 March 1957) was a Romanian politician who served 36th Prime Minister of Romania (1934–1937; 1939–1940), three times as Minister of Foreign Affairs (\"interim\" in 1934 and 1938; appointed to the office in 1945-1947), and once as Minister of War (1934).\n\n Representing the \"young liberals\" faction inside the National Liberal Party (PNL), Tătărescu began his political career as a collaborator of Ion G. Duca, becoming noted for his anti-Communism and, in time, for his conflicts with the PNL's leader Dinu Brătianu and the Foreign Minister Nicolae Titulescu.",
+    "Václav Havel\nVáclav Havel (] ; 5 October 193618 December 2011) was a Czech writer and former dissident, who served as the 1st President of the Czech Republic from 1993 to 2003.\n\n Prior to that he also served as the last president of Czechoslovakia from 1989 until its dissolution in 1992.\n\n As a writer of Czech literature, he is known for his plays, essays, and memoirs.",
+    "Remus Nicolai\nRemus Nicolai (b. June 10, 1977 in Bistriţa, Romania) is a retired Romanian aerobic gymnast.\n\n He had a successful career winning six world championships medals (one gold, two silver and three bronze) and five European championships medals (two gold, two silver and one bronze).\n\n After retiring from aerobic gymnastics he opened together with his wife (Daniela Mărănducă) a private gymnastics club in Constanţa.\n\n As of 2013 he trains, together with his wife, the junior artistic women's National Team of Romania at the National Olympic Center in Onesti.",
+    "Ioan Silviu Suciu\nIoan Silviu Suciu (born 24 November 1977 in Sibiu) is a retired Romanian artistic gymnast.\n\n His best event was the pommel horse.\n\n One of his closest rivals was his team mate and pommel horse Olympic champion Marius Urzică, who was defeated by Suciu in Ljubljana, 2004, when the latter won the title while Urzică took 8th place.\n\n Suciu is an Olympic bronze medalist with the team, a silver world medalist on pommel horse and a six-time European medalist (pommel horse, vault and team).\n\n Suciu was one of the key team members of the Romanian gymnastics team for several years contributing to the 2004 Olympic team bronze medal and three continental team medals (two gold and one silver).\n\n He also placed fourth all around at the 2004 Olympic Games.",
+    "Line of succession to the former Romanian throne\nThe succession order to the throne of the Romanian monarchy, abolished since 1947, was regulated by the monarchical constitution of 1923 and the 1884 Law of the Romanian Royal House Rules enacted pursuant to the 1866 Constitution of Romania which had confirmed the enthronement of Prince Karl (Carol) of Hohenzollern-Sigmaringen.\n\n The defunct 1923 Constitution stipulated Salic law, according to which the throne was hereditary in King Carol I's legitimate descent and, if his male issue failed, in the descent of his brothers of the Sigmaringen princely branch of the House of Hohenzollern, according to agnatic primogeniture and to the perpetual exclusion of females and their descendants.\n\n The last monarch to reign in Romania was King Michael I, who was born in 1921, abdicated his throne on 30 December 1947 under coercion, and went into exile in Switzerland.",
+    "Académie Diplomatique Internationale\nThe Académie Diplomatique Internationale (ADI; english \"International Diplomatic Academy\") is an international organization based in Paris, France, focused on modern diplomacy and international affairs.\n\n Founded in 1926, the ADI was, along with Chatham House in London and the Council on Foreign Relations in New York, one of the first policy institutions devoted to the sustained study and analysis of international relations.\n\n Early members included Aristide Briand, Nicolae Titulescu, Gustav Stresemann, and Franklin D. Roosevelt.\n\n Under the Presidency of His Highness the Aga Khan IV, who was elected in 2000, the ADI has focused its efforts on diplomatic training and emerging dynamics in international relations and modern diplomacy.",
+    "Lippo Hertzka\nLippo Hertzka (19 November 1904 – 14 March 1951) was a Hungarian football player and manager.\n\n He played for Essener Turnerbund, MTK Budapest and Real Sociedad.\n\n After retiring, he coached seven teams, including Real Sociedad and Real Madrid, a team which he coached for 2 years (1930–1932) and led to an undefeated La Liga championship during the 1931-32 season, which meant the first La Liga title for the \"white\" squad.\n\n He also won two league titles in Portugal for Benfica.",
+    "Gheorghe Tătărescu\nDuring his first time in office, he moved closer to King Carol II, leading an ambivalent policy toward the fascist Iron Guard and ultimately becoming instrumental in establishing the authoritarian and corporatist regime around the National Renaissance Front.\n\n In 1940, he accepted the cession of Bessarabia and Northern Bukovina to the Soviet Union, and consequently had to resign.",
+    "Ghimpețeni\nGhimpețeni is a commune in Olt County, Romania.\n\n It is composed of two villages, Ghimpețeni and Ghimpețenii Noi.\n\n These were part of Nicolae Titulescu Commune until 2004, when they were split off."
+   ]
+  },
+  {
+   "id": "a3553a88b00c31f5",
+   "gold": [
+    {
+     "sentence": "Am Rong (1929 – May 1975) was a Cambodian soldier and filmmaker, who acted as a spokesman on military matters for the Khmer Republic during the Cambodian Civil War.",
+     "facts": {
+      "0.0": "Am Rong was born in 1929.",
+      "0.1": "Am Rong died in May 1975.",
+      "0.2": "Am Rong was Cambodian.",
+      "0.3": "Am Rong was a soldier.",
+      "0.4": "Am Rong was a filmmaker.",
+      "0.5": "Am Rong acted as a spokesman on military matters for the Khmer Republic.",
+      "0.6": "Am Rong acted as a spokesman during the Cambodian Civil War."
+     }
+    },
+    {
+     "sentence": "Ava Marie DuVernay ( ; born August 24, 1972) is an American director, screenwriter, film marketer, and film distributor.",
+     "facts": {
+      "1.0": "Ava Marie DuVernay was born August 24, 1972.",
+      "1.1": "Ava Marie DuVernay is American.",
+      "1.2": "Ava Marie DuVernay is a director.",
+      "1.3": "Ava Marie DuVernay is a screenwriter.",
+      "1.4": "Ava Marie DuVernay is a film marketer.",
+      "1.5": "Ava Marie DuVernay is a film distributor."
+     }
+    }
+   ],
+   "items": [
+    "Ava DuVernay\nAva Marie DuVernay ( ; born August 24, 1972) is an American director, screenwriter, film marketer, and film distributor.\n\n At the 2012 Sundance Film Festival, DuVernay won the Best Director Prize for her second feature film \"Middle of Nowhere\", becoming the first African-American woman to win the award.\n\n For her work in \"Selma\" (2014), DuVernay was the first black female director to be nominated for a Golden Globe Award.\n\n With \"Selma\", she was also the first black female director to have her film nominated for the Academy Award for Best Picture.\n\n In 2017, she was nominated for the Academy Award for Best Documentary Feature for her film \"13th\" (2016).",
+    "Selma (film)\nSelma is a 2014 American historical drama film directed by Ava DuVernay and written by Paul Webb.\n\n It is based on the 1965 Selma to Montgomery voting rights marches led by James Bevel, Hosea Williams, Martin Luther King, Jr. and John Lewis.\n\n The film stars actors David Oyelowo as King, Tom Wilkinson as President Lyndon B. Johnson, Tim Roth as George Wallace, Carmen Ejogo as Coretta Scott King and Common as Bevel.",
+    "Spencer Averick\nSpencer Averick is an American film editor and producer.\n\n Best known for his work an editor on critically acclaimed films \"Middle of Nowhere\" (2012), \"Selma\" (2014) and for producing 2016 acclaimed documentary \"13th\" for which he received Academy Award for Best Documentary Feature nominations at 89th Academy Awards, that he shared with director Ava DuVernay and co-producer Howard Barish.",
+    "Annie Belle\nAnnie Brilland (born 10 December 1956) is a French actress and social worker.\n\n Her acting career began in 1974 and throughout the seventies, has had a series of varied roles in both French and Italian cinema, working with such directors as Jean Rollin, Ruggero Deodato and Joe D'Amato.",
+    "The entries profile filmmakers Pamela B. Green, Ava DuVernay, Howard Barish, Dana Brown, Matthew O’Neill, and the Maya Deren Award; actors Emayatzy Corinealdi and Issa Rae; musicians Emel Mathlouthi, Siti binti Saad, and Angélique Kidjo; fitness figures Ingrid Romero and Anais Zanotti; and YouTubers Lilly Singh, Wayne Goss, and Wengie. They",
+    "Howard Barish\nHoward Barish is an Oscar nominated, Emmy award winning producer and director known for his producing partnership with acclaimed director, writer Ava DuVernay.\n\n Their most recognized project to date, \"13TH\", is a 2016 American documentary from Netflix directed by DuVernay.\n\n Centered on race in the United States criminal justice system, the critically lauded film is titled after the Thirteenth Amendment to the United States Constitution, which outlawed slavery (unless as punishment for a crime).\n\n It argues that slavery is being effectively perpetuated through mass incarceration.",
+    "Middle of Nowhere (2012 film)\nMiddle of Nowhere is a 2012 independent feature film written and directed by Ava DuVernay and starring Emayatzy Corinealdi, David Oyelowo, Omari Hardwick and Lorraine Toussaint.\n\n The film was the winner of the Directing Award for U.S. Dramatic Film at the 2012 Sundance Film Festival.",
+    "Ava DuVernay (born 1972) became the first African-American woman to win Sundance’s directing prize for Middle of Nowhere (2012). Selma (2014) brought historic Golden Globe and Best Picture Oscar nominations; 13th (2016), examining race and mass incarceration, earned Oscar documentary nominations for DuVernay, editor-producer Spencer Averick and producer Howard Barish. The entries also cover filmmakers Kathryn Bigelow and Steve McQueen, The",
+    "Am Rong\nAm Rong (1929 – May 1975) was a Cambodian soldier and filmmaker, who acted as a spokesman on military matters for the Khmer Republic during the Cambodian Civil War.\n\n Western journalists commented on the irony of his name as he gave briefings which \"painted a rosy picture of the increasingly desperate situation on the ground\" during the war.",
+    "Emayatzy Corinealdi\nEmayatzy Evett Corinealdi ( ; born January 14, 1980) is an American actress.\n\n She is best known for her leading role in the Ava DuVernay film \"Middle of Nowhere\" (2012)."
+   ]
+  },
+  {
+   "id": "46eaf71980da468f",
+   "gold": [
+    {
+     "sentence": "Alice Ann Munro ( , \"née\" Laidlaw ; born 10 July 1931) is a Canadian short story writer and Nobel Prize winner.",
+     "facts": {
+      "0.0": "Alice Ann Munro's nee name is Laidlaw.",
+      "0.1": "Alice Ann Munro was born on 10 July 1931.",
+      "0.2": "Alice Ann Munro is a Canadian short story writer.",
+      "0.3": "Alice Ann Munro is a Nobel Prize winner."
+     }
+    },
+    {
+     "sentence": "Lillian Florence Hellman (June 20, 1905 – June 30, 1984) was an American dramatist and screenwriter known for her success as a playwright on Broadway, as well as her left-wing sympathies and political activism.",
+     "facts": {
+      "1.0": "Lillian Florence Hellman was born on June 20, 1905.",
+      "1.1": "Lillian Florence Hellman died on June 30, 1984.",
+      "1.2": "Lillian Florence Hellman was an American dramatist.",
+      "1.3": "Lillian Florence Hellman was an American screenwriter.",
+      "1.4": "Lillian Florence Hellman is known for her success as a playwright on Broadway.",
+      "1.5": "Lillian Florence Hellman is known for her left-wing sympathies.",
+      "1.6": "Lillian Florence Hellman is known for her political activism."
+     }
+    }
+   ],
+   "items": [
+    "Lucy Maud Montgomery\nLucy Maud Montgomery {'1': \", '2': \", '3': \", '4': \"} (November 30, 1874 – April 24, 1942) published as L.M. Montgomery, was a Canadian author best known for a series of novels beginning in 1908 with \"Anne of Green Gables\".\n\n The book was an immediate success.\n\n The central character, Anne Shirley, an orphaned girl, made Montgomery famous in her lifetime and gave her an international following.",
+    "Alice Munro\nAlice Ann Munro ( , \"née\" Laidlaw ; born 10 July 1931) is a Canadian short story writer and Nobel Prize winner.\n\n Munro's work has been described as having revolutionized the architecture of short stories, especially in its tendency to move forward and backward in time.\n\n Her stories have been said to \"embed more than announce, reveal more than parade.\"",
+    "Rea Wilmshurst\nRea Wilmshurst (August 10, 1941 – March 22, 1996) graduated from the University of Toronto with a degree in English in 1970.\n\n She went on to edit eight volumes of Lucy Maud Montgomery's previously unknown short stories and publish them through McClelland & Stewart.\n\n In 1985, she published a bibliography of Montgomery's short stories, poems, and articles.\n\n Wilmshurst was also an editorial assistant for the projects that compiled the Collected Works of John Stuart Mill and the Collected Works of Samuel Taylor Coleridge.",
+    "Lillian Hellman: An Imperious Life\nLillian Hellman: An Imperious Life is a 2014 book by Dorothy Gallagher.\n\n It is a critical biography of the American playwright and writer Lillian Hellman.",
+    "The Autumn Garden\nThe Autumn Garden is a 1951 play by Lillian Hellman.\n\n The play is set in September, 1949 in a summer home in a resort on the Gulf of Mexico, about 100 miles from New Orleans.\n\n The play is a study of the defeats, disappointments and diminished expectations of people reaching middle age.\n\n For inspiration, Hellman drew on her memories of her time in her aunts' boardinghouse.\n\n Dashiell Hammett, who had been Hellman's lover for 20 years, helped her write the play and received 15 percent of the royalties.\n\n Of all Hellman's plays it was her favorite.",
+    "Alice Walker\nAlice Malsenior Walker (born February 9, 1944) is an American novelist, short story writer, poet, and activist.\n\n She wrote the critically acclaimed novel \"The Color Purple\" (1982) for which she won the National Book Award and the Pulitzer Prize for Fiction.\n\n She also wrote the novels \"Meridian\" (1976) and \"The Third Life of Grange Copeland\" (1970), among other works.",
+    "Lillian Hellman\nLillian Florence Hellman (June 20, 1905 – June 30, 1984) was an American dramatist and screenwriter known for her success as a playwright on Broadway, as well as her left-wing sympathies and political activism.\n\n She was blacklisted after her appearance before the House Committee on Un-American Activities (HUAC) at the height of the anti-communist campaigns of 1947–52.\n\n Although she continued to work on Broadway in the 1950s, her blacklisting by the American film industry caused a drop in her income.\n\n Many praised Hellman for refusing to answer questions by HUAC, but others believed, despite her denial, that she had belonged to the Communist Party.",
+    "Keri Hulme\nKeri Hulme (born 9 March 1947) is a New Zealand writer.\n\n Her only novel, \"The Bone People\", won the Booker Prize in 1985.",
+    "Mollie Gillen\nMollie Gillen (née Woolnough; 1908–2009) was an Australian historian, researcher, writer and novelist.\n\n Her work on the First Fleet, in \"The search for John Small,\" \"First Fleeter\" and The Founders of Australia: A Biographical Dictionary of the First Fleet, explored the idea that many of the founding families of Australia were descended from the convict population, rather than those sent to guard them.\n\n Gillen's article Maud Montgomery: The Girl Who Wrote Green Gables instigated a new era in scholarship on Lucy Maud Montgomery.",
+    "Dash and Lilly\nDash and Lilly is a 1999 Emmy and Golden Globe Award-nominated biographical television film about writers Dashiell Hammett and Lillian Hellman.\n\n The film was directed by actress Kathy Bates and written by Jerrold L. Ludwig.\n\n It stars Sam Shepard and Judy Davis."
+   ]
+  }
+ ]
+}

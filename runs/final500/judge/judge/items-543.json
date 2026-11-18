@@ -1,0 +1,492 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "2531885f7b4b30e6",
+   "gold": [
+    {
+     "sentence": " He has written three novels, three collections of short stories, a collection of novellas, and seven volumes of essays, three of which have won National Book Critics Circle Award prizes and one of which, \"A Temple of Texts\" (2006), won the Truman Capote Award for Literary Criticism.",
+     "facts": {
+      "0.0": "The writer has written three novels.",
+      "0.1": "The writer has written three collections of short stories.",
+      "0.2": "The writer has written a collection of novellas.",
+      "0.3": "The writer has written seven volumes of essays.",
+      "0.4": "Three of the writer's essay volumes have won National Book Critics Circle Award prizes.",
+      "0.5": "One of the writer's essay volumes, 'A Temple of Texts' (2006), won the Truman Capote Award for Literary Criticism."
+     }
+    },
+    {
+     "sentence": "Naguib Mahfouz (Arabic: نجيب محفوظ‎ ‎ \"Nagīb Maḥfūẓ \", ] ; December 11, 1911 – August 30, 2006) was an Egyptian writer who won the 1988 Nobel Prize for Literature.",
+     "facts": {
+      "1.0": "Naguib Mahfouz was born on December 11, 1911.",
+      "1.1": "Naguib Mahfouz died on August 30, 2006.",
+      "1.2": "Naguib Mahfouz's Arabic name is نجيب محفوظ, transliterated Nagīb Maḥfūẓ.",
+      "1.3": "Naguib Mahfouz was an Egyptian writer.",
+      "1.4": "Naguib Mahfouz won the 1988 Nobel Prize for Literature."
+     }
+    }
+   ],
+   "items": [
+    "Frances Liardet\nFrances E. Liardet is a writer and translator of Arabic literature.\n\n She studied Creative Writing at the University of East Anglia.\n\n She has translated several book-length works, including two books by the modernist Egyptian writer Edwar al-Kharrat and one by Nobel Prize winner Naguib Mahfouz.",
+    "The Beginning and the End (novel)\nThe Beginning and the End (بداية ونهاية) is a novel by Naguib Mahfouz, who was awarded the Nobel Prize in literature in 1988.\n\n An Egyptian, Naguib has been credited with modernizing Arabic literature, with his prolific writing style and his themes on existentialism.\n\n The novel is marked by very bold characterization by Naguib Mahfouz, for the time period that the story is set in.\n\n The story moves at a prolific pace and tries to look at the world from each characters view point.",
+    "Naguib Mahfouz Medal for Literature\nThe Naguib Mahfouz Medal for Literature is a literary award for Arabic literature.\n\n It is given to the best contemporary novel written in Arabic, but not available in English translation.\n\n The winning book is then translated into English, and published by American University in Cairo Press.\n\n It was first awarded in 1996 and is presented annually on December 11, the birthday of Nobel laureate Naguib Mahfouz, by the President of the American University in Cairo.",
+    "The entries profile writers, artists, scholars, and public figures across literature, journalism, film, and politics. Highlights include Thomas Merton, the Catholic monk and writer honored by a peace award and studied by an international society; W. Somerset Maugham, whose namesake prize supports young writers’ travel; and notable authors such as Mencken, Orwell, Updike, Malamud, Chatwin, and Gass. Other topics include literary awards, bibliographies, influential editors, Camb",
+    "Arabian Nights and Days\nArabian Nights and Days (1979) is a novel by Egyptian writer Naguib Mahfouz, winner of the Nobel Prize for Literature.\n\n The novel serves as a sequel and companion piece for \"One Thousand and One Nights\" and includes many of the same characters that appeared in the original work such as Shahryar, Scheherazade, and Aladdin.",
+    "Naguib Mahfouz\nNaguib Mahfouz (Arabic: نجيب محفوظ‎ ‎ \"Nagīb Maḥfūẓ \", ] ; December 11, 1911 – August 30, 2006) was an Egyptian writer who won the 1988 Nobel Prize for Literature.\n\n He is regarded as one of the first contemporary writers of Arabic literature, along with Tawfiq el-Hakim, to explore themes of existentialism.\n\n He published 34 novels, over 350 short stories, dozens of movie scripts, and five plays over a 70-year career.\n\n Many of his works have been made into Egyptian and foreign films.",
+    "The entries cover major Arab cultural figures and works: Egyptian actor Ahmed Zaki and director Salah Abu Seif, known for intense performances and Egyptian neorealism; and writer Naguib Mahfouz, Nobel laureate whose novels include *The Cairo Trilogy*, *The Beginning and the End*, *Thebes at War* and *Arabian Nights and Days*. Abu Seif’s 1960 *Bidaya wa Nihaya* adapted Mahfouz. Other topics include Tayeb",
+    "Cairo Trilogy\nThe Cairo Trilogy (Arabic: الثلاثية‎ ‎ (\"The Trilogy\") or ثلاثية القاهرة (\"The Cairo Trilogy\")) is a trilogy of novels written by the Egyptian novelist and Nobel Prize winner Naguib Mahfouz, and one of the prime works of his literary career.",
+    "William H. Gass\nWilliam Howard Gass (born July 30, 1924) is an American novelist, short-story writer, essayist, critic, and former philosophy professor.\n\n He has written three novels, three collections of short stories, a collection of novellas, and seven volumes of essays, three of which have won National Book Critics Circle Award prizes and one of which, \"A Temple of Texts\" (2006), won the Truman Capote Award for Literary Criticism.\n\n His 1995 novel \"The Tunnel\" received the American Book Award.\n\n His 2013 novel \"Middle C\" won the 2015 William Dean Howells Medal.",
+    "Thebes at War\nThebes at War is an early novel by the Egyptian writer Naguib Mahfouz.\n\n It was originally published in Arabic in 1944.\n\n An English translation by Humphrey Davies appeared in 2003.\n\n The novel is one of several that Mahfouz wrote at the beginning of his career, with Pharaonic Egypt as their setting.\n\n Others in this series of novels include \"Khufu's Wisdom\" (1939) and \"Rhadopis of Nubia\" (1943).\n\n All have been translated into English and appeared in one volume under the title \"Three Novels of Ancient Egypt\" (Everyman's Library, 2007)."
+   ]
+  },
+  {
+   "id": "e64fe8bc3560c2b9",
+   "gold": [
+    {
+     "sentence": "Bank Street () is a short street in Central, Hong Kong.",
+     "facts": {
+      "0.0": "Bank Street is a short street.",
+      "0.1": "Bank Street is located in Central, Hong Kong."
+     }
+    },
+    {
+     "sentence": " It links Des Voeux Road Central to Queen's Road Central.",
+     "facts": {
+      "1.0": "Bank Street links Des Voeux Road Central to Queen's Road Central."
+     }
+    },
+    {
+     "sentence": " It is named after its location between HSBC Building and the Bank of China Building, the former headquarters of HSBC and Bank of China (Hong Kong) respectively.",
+     "facts": {
+      "2.0": "Bank Street is named after its location between the HSBC Building and the Bank of China Building.",
+      "2.1": "The HSBC Building was the former headquarters of HSBC.",
+      "2.2": "The Bank of China Building was the former headquarters of Bank of China (Hong Kong)."
+     }
+    },
+    {
+     "sentence": "HSBC Main Building () is a headquarters building of The Hongkong and Shanghai Banking Corporation, which is today a wholly owned subsidiary of London-based HSBC Holdings.",
+     "facts": {
+      "3.0": "HSBC Main Building is a headquarters building of The Hongkong and Shanghai Banking Corporation.",
+      "3.1": "The Hongkong and Shanghai Banking Corporation is today a wholly owned subsidiary of London-based HSBC Holdings."
+     }
+    }
+   ],
+   "items": [
+    "HSBC\nHSBC Holdings PLC is a British multinational banking and financial services holding company, tracing its origin to a hong in Hong Kong.\n\n It is the world's seventh largest bank by total assets and the largest in Europe with total assets of US$2.374 trillion (as of December 2016).\n\n It was established in its present form in London in 1991 by The Hongkong and Shanghai Banking Corporation Limited to act as a new group holding company.\n\n The origins of the bank lie mainly in Hong Kong and to a lesser extent in Shanghai, where branches were first opened in 1865.\n\n The HSBC name is derived from the initials of the Hongkong and Shanghai Banking Corporation.\n\n The company was first formally incorporated in 1866.\n\n The company continues to see both the United Kingdom and Hong Kong as its \"home markets\".",
+    "Bank of Canton\nBank of Canton () was established in 1912 in Canton but registered as a British company in Hong Kong.\n\n This made it the first Chinese-owned bank in Hong Kong.\n\n At the time, all the other banks in Hong Kong were foreign, primarily British, including the locally incorporated but British-run Hongkong and Shanghai Banking Corporation.\n\n Security Pacific National Bank (SPNB) bought a majority share in Bank of Canton in 1971.\n\n In 1988, Security Pacific succeeded in wholly acquiriing Bank of Canton, which became Security Pacific Asia Bank.\n\n When Bank of America acquired Security Pacific Corporation in 1993 it changed Security Pacific Asia Bank’s name to Bank of America (Asia).\n\n China Construction Bank acquired Bank of America (Asia) in 2006.",
+    "Bank Street (Hong Kong)\nBank Street () is a short street in Central, Hong Kong.\n\n It links Des Voeux Road Central to Queen's Road Central.\n\n It is named after its location between HSBC Building and the Bank of China Building, the former headquarters of HSBC and Bank of China (Hong Kong) respectively.",
+    "HSBC lions\nVarious headquarters and branch buildings of The Hongkong and Shanghai Banking Corporation and the HSBC Group, into which the Hongkong and Shanghai Banking Corporation has evolved, feature a pair of lion sculptures.\n\n The HSBC lions have become distinctive landmarks in their own right in Hong Kong and Shanghai respectively, with a further pair to be found in London.",
+    "Transportation Building\nThe Transportation Building is a 44-story office building located at 225 Broadway on the corner of Barclay Street in the Civic Center neighborhood of Lower Manhattan in New York City.\n\n It also carries the address 2-4 Barclay Street.\n\n It was built in 1927 and was designed by the architecture firm of York & Sawyer, in the Renaissance Revival style, using setbacks common to skyscrapers built after the adoption of the 1916 Zoning Resolution.\n\n It sits across Barclay Street from the Woolworth Building.",
+    "200 West Street\n200 West Street is the global headquarters of the Goldman Sachs investment banking firm.\n\n The building is a 749 ft , 44-story building located on West Street, between Vesey and Murray Streets in Lower Manhattan.\n\n It is adjacent to the World Financial Center and the Conrad Hotel, the Verizon Building to the east across West Street, and diagonally opposite the World Trade Center.\n\n It is the only office building in Battery Park City north of the World Financial Center.",
+    "HSBC Building, the Bund\nThe HSBC Building (also known as the Municipal Government Building) is a six-floor neo-classical building in the Bund area of Shanghai, China.\n\n It served as the headquarters of the Shanghai branch of The Hongkong and Shanghai Banking Corporation from 1923 to 1955, and currently houses the Shanghai Pudong Development Bank.\n\n The building is situated at number 12, the Bund.\n\n Designed by the British architecture firm Palmer & Turner Architects and Surveyors, construction of the building lasted from 5 May 1921 to 23 June 1923.",
+    "383 Madison Avenue\n383 Madison Avenue is an office building owned and occupied by JP Morgan Chase in New York City on a full block bound by Madison Avenue and Vanderbilt Avenue between East 46th and 47th Streets.\n\n Formerly known as the Bear Stearns Building, it housed the world headquarters of the now-defunct Bear Stearns from the building's completion until Bear's collapse and sale to JPMorgan Chase in 2008.\n\n The building now houses the New York offices for J.P. Morgan's investment banking division, which formerly occupied 277 Park Avenue.\n\n Both 383 Madison and 277 Park are adjacent to JPMorgan Chase's world headquarters at 270 Park Avenue.",
+    "270 Park Avenue\n270 Park Avenue (also known as the JPMorgan Chase Tower and formerly the Union Carbide Building) is a high-rise office building located in Midtown Manhattan, New York City.\n\n It was designed by Natalie de Blois for Skidmore, Owings & Merrill.",
+    "HSBC Building (Hong Kong)\nHSBC Main Building () is a headquarters building of The Hongkong and Shanghai Banking Corporation, which is today a wholly owned subsidiary of London-based HSBC Holdings.\n\n It is located along the southern side of Statue Square near the location of the old City Hall, Hong Kong (built in 1869, demolished in 1933).\n\n The previous HSBC building was built in 1935 and pulled down to make way for the current building.\n\n The address remains as 1 Queen's Road Central (the north facing side of the building was served by Des Voeux Road, which was seashore, making Queen's Road was the main entrance, in contrast to modern day that usually accessed the bank from Des Voeux Road).\n\n The building can be reached from Exit K of Central MTR Station and facing Statue Square."
+   ]
+  },
+  {
+   "id": "7a36221c72172d58",
+   "gold": [
+    {
+     "sentence": " He won three singles titles and 26 doubles, including Australian Open 1978 (with Wojtek Fibak) and Australian Open 1980 and 1981, Roland Garros 1986 and also a runner-up in Australian Open 1985, all of them partnering fellow countryman Mark Edmondson.",
+     "facts": {
+      "0.0": "He won three singles titles.",
+      "0.1": "He won 26 doubles titles.",
+      "0.2": "He won the Australian Open 1978 doubles title with Wojtek Fibak.",
+      "0.3": "He won the Australian Open 1980 title with fellow countryman Mark Edmondson.",
+      "0.4": "He won the Australian Open 1981 title with fellow countryman Mark Edmondson.",
+      "0.5": "He won the Roland Garros 1986 title with fellow countryman Mark Edmondson.",
+      "0.6": "He was a runner-up at the Australian Open 1985 with fellow countryman Mark Edmondson.",
+      "0.7": "Mark Edmondson is a fellow countryman of his."
+     }
+    },
+    {
+     "sentence": " In his career, he won nine doubles titles, but no singles titles.",
+     "facts": {
+      "1.0": "In his career, he won nine doubles titles.",
+      "1.1": "In his career, he won no singles titles."
+     }
+    }
+   ],
+   "items": [
+    "Jorge Lozano\nIn Davis Cup play, represented Mexico for 15 years, 1981–1995, won 12 doubles matches, and lost 12 as well.\n\n He lost 11 singles matches, and won 8, making his overall win / loss record at the Davis Cup 20–23.\n\n Lozano won his first title at Forest Hills in 1988, with his partner Todd Witsken, and won his last at Athens in 1993.\n\n He resides in Guadalajara, Mexico where he directs a tennis academy for kids and also coaches the men and women tennis team at the University Tec de Monterrey.\n\n He is currently the captain of the Mexican Davis Cup Team.",
+    "1988 Volvo International – Doubles\nJorge Lozano and Todd Witsken won in the final 6–3, 7–6 against Pieter Aldrich and Danie Visser.",
+    "1994 Athens International – Doubles\nHoracio de la Peña and Jorge Lozano were the defending champions, but did not participate this year.",
+    "1996 Nottingham Open – Singles\nJavier Frana was the defending champion but lost in the first round to Marc-Kevin Goellner.",
+    "1990 Stockholm Open – Doubles\nJorge Lozano and Todd Witsken were the defending champions, but lost in the quarterfinals this year.",
+    "Jorge Lozano\nJorge Lozano (born 17 May 1963 in San Luis Potosí) is a retired professional tennis player from Mexico.\n\n He reached his highest doubles ranking of World No. 4 in August 1988.\n\n His highest singles ranking was World No. 51, achieved the following month.\n\n During his career, he won two mixed doubles titles at the French Open: in 1990 with Arantxa Sánchez, and in 1988 with Lori McNeil.\n\n He reached the round of 16 in singles at the 1988 US Open and also the semifinal in doubles that same year.\n\n Qualified twice for the Doubles Masters at the Royal Albert Hall in London and reached the semifinals in 1988.\n\n In his career, he won nine doubles titles, but no singles titles.\n\n He turned professional in 1986, and in his career, he won $U.S.739,424 in prize money.\n\n He was the first player to be beaten by Pete Sampras in the main draw of a Grand Slam tournament, at the French Open in 1989.",
+    "1989 Volvo International – Doubles\nJorge Lozano and Todd Witsken were the defending champions but did not compete that year.",
+    "Kim Warwick\nKim Warwick (born 8 April 1952) is an Australian former professional male tennis player who competed on the ATP Tour from 1970–1987 reaching the final of the singles Australian Open in 1980.\n\n He defeated over 35 players ranked in the top 10 including Guillermo Vilas, Raul Ramerez, Vitas Gerulaitis, Jan Kodeš, Bob Lutz and Arthur Ashe.\n\n Warwick's career-high singles ranking was World No. 15, achieved in 1981.\n\n He won three singles titles and 26 doubles, including Australian Open 1978 (with Wojtek Fibak) and Australian Open 1980 and 1981, Roland Garros 1986 and also a runner-up in Australian Open 1985, all of them partnering fellow countryman Mark Edmondson.\n\n Partnering with Evonne Goolagong, he won the French Open 1972, defeating Françoise Dürr and Jean-Claude Barclay in the final 6–2, 6–4.\n\n Evonne and Kim were finalists in 1972 at Wimbledon against Rosie Casals and Ilie Năstase who won 6–4, 6–4.",
+    "1996 Abierto Mexicano de Tenis – Doubles\nJavier Frana and Leonardo Lavalle were the defending champions but lost in the first round to Luis Lobo and Javier Sánchez.",
+    "1990 Canadian Open – Men's Doubles\nKelly Evernden and Todd Witsken were the defending champions but they competed with different partners that year, Evernden with Nicolás Pereira and Witsken with Jorge Lozano."
+   ]
+  },
+  {
+   "id": "6267386ca7aab0e4",
+   "gold": [
+    {
+     "sentence": " Her favorite events are 800 metres and 1500 metres.",
+     "facts": {
+      "0.0": "This person's favorite events are the 800 metres.",
+      "0.1": "This person's favorite events are the 1500 metres."
+     }
+    },
+    {
+     "sentence": " The distance has been contested at the Summer Olympics since 1896 and the World Championships in Athletics since 1983.",
+     "facts": {
+      "1.0": "The distance has been contested at the Summer Olympics since 1896.",
+      "1.1": "The distance has been contested at the World Championships in Athletics since 1983."
+     }
+    }
+   ],
+   "items": [
+    "Sinimole Paulose\nSinimol Paulose (born 24 June 1983) is an Indian middle distance runner.\n\n Her favorite events are 800 metres and 1500 metres.\n\n In 2009, she received Arjuna Award for her contribution to the Indian athletics.\n\n Sinimol was born in Piravom in Ernakulam district of Kerala state.\n\n She represented India at Beijing Olympics.",
+    "John Lindsay (Paralympian)\nThat year, he had a Victorian Institute of Sport scholarship.\n\n He was also working as a fitness instructor in 1992, held world records in the 100 m and 200 m events, and was ranked 6th in the world in the 400 m.\n\n He won a gold medal in the men's athletics 100 m T52 event at the 1996 Summer Paralympics with a time of 15.22, a silver medal in the 200 m T52 event with a time of 27.38, and a bronze medal in the 400 m T52 event with a time of 52.93.\n\n At the 2000 Sydney Games, he won a gold medal in the Men's 100 m T53 event, a silver medal as part of the Men's 4x100 m Relay T54 team, and a bronze medal in the Men's 200 m T53 event; he was also part of the Men's 4x400 m Relay T54 team, which was the only one to qualify in its heat, but it did not make it to the finals.",
+    "1500 metres\nThe 1500 metres or 1,500-metre run (typically pronounced 'fifteen-hundred metres') is the foremost middle distance track event in athletics.\n\n The distance has been contested at the Summer Olympics since 1896 and the World Championships in Athletics since 1983.\n\n It is equivalent to 1.5 kilometers or approximately ⁄  miles.",
+    "John Lindsay (Paralympian)\nJohn Lindsay, OAM (born 29 January 1970) is an Australian Paralympic athlete from Melbourne.\n\n He competed in the 1988 Seoul games in distances ranging from 100 m to 800 m, but did not win any medals.\n\n At the 1992 Barcelona Games, he won a gold medal in the Men's 200 m TW3 event, for which he received a Medal of the Order of Australia, a silver medal in the Men's 100 m TW3 event and a bronze medal in the Men's 400 m TW3 event.\n\n That year, he had a Victorian Institute of Sport scholarship.",
+    "Ross MacKenzie (athlete)\nRoss MacKenzie (born 18 July 1946) is a Canadian sprinter.\n\n He competed in the men's 400 metres at the 1968 Summer Olympics.\n\n He finished second in the 1967 Pan American Games 4 × 400 metres relay (with Brian MacLaren, Bill Crothers, and Robert McLaren).\n\n MacKenzie also finished fifth in the 1967 Pan American Games 400 metres.\n\n He won a silver medal in the 1966 British Empire and Commonwealth Games 4 x 440 yards relay with Don Domansky, Brian MacLaren and Bill Crothers.",
+    "Caster Semenya\nMokgadi Caster Semenya Bronze OIB (born 7 January 1991) is a South African middle-distance runner and 2016 Olympic gold medallist.\n\n Semenya won gold in the women's 800 metres at the 2009 World Championships with a time of 1:55.45 and at the 2017 World Championships in her new personal best, 1:55.16.\n\n Semenya also won silver medals at the 2011 World Championships and the 2012 Summer Olympics, both in the 800 metres.\n\n She was the winner of the gold medal in the 800 metre event at the 2016 Summer Olympics.",
+    "Siegmar Ohlemann\nSiegmar (\"Sig\") Ohlemann (born May 11, 1938) is a retired middle distance runner, who represented Canada in three events (800 metres, 4 × 100 metres and 4 × 400 metres) at the 1960 Summer Olympics in Rome, Italy.\n\n He claimed the silver medal in 800 metres at the 1963 Pan American Games in Brazil, behind fellow Canadian Don Bertoia.",
+    "European 10,000m Cup\nThe European 10,000m Cup is an annual 10,000 metres race for European athletes which was first held in 1997.\n\n The competition is organised by the European Athletics Association and first began as the European 10000 Metres Challenge after the event was removed from the European Cup programme.\n\n The competition has roots in the Iberian 10,000 metres Championships – a competition between Spanish and Portuguese athletes that was held between 1991 and 1996 – and the first five editions of the European 10000 Metres Challenge were held in the Iberian Peninsula.\n\n The event was first held under its current title in 2005.",
+    "Athletics at the 2002 Asian Games\nAthletics was contested from October 7 to October 14 at the 2002 Asian Games in Busan Asiad Main Stadium, Busan, South Korea.\n\n A total of 460 athletes (comprising 281 men and 179 women) from 39 nations took part in the competition.\n\n Afghanistan, Bhutan, Brunei, Laos and Maldives were the only nations without a representative in the events.",
+    "K. M. Binu\nKalayathumkuzhi Mathews Binu (born 20 December 1980) is an Indian track and field athlete from Kerala who specializes in 400 metres and 800 metres.\n\n He holds the current 400 metres national record of 45.48 s set at the 2004 Athens Olympics on 20 August 2004.\n\n He broke the 44-year-old Olympics mark (by an Indian) held by Milkha Singh who set an Indian National Record with a timing of 45.73 s at the 1960 Rome Olympics.\n\n He and his elder sister K. M. Beenamol made history when they became the first Indian siblings to win medals in a major international competition.\n\n They won medals at the Busan Asian Games (2002).\n\n While Binu won the men's 800 metres silver, his sister won the gold medal in the women's event.\n\n Binu received the Arjuna Award for the year 2006 for his achievements in the Indian athletics."
+   ]
+  },
+  {
+   "id": "0a1f077e97398960",
+   "gold": [
+    {
+     "sentence": "Maximillian Oppenheimer (6 May 1902 – 26 March 1957), known as Max Ophüls (] ), was a German-born film director who worked in Germany (1931–1933), France (1933–1940 and 1950–1957), and the United States (1947–1950).",
+     "facts": {
+      "0.0": "Maximillian Oppenheimer was born on 6 May 1902.",
+      "0.1": "Maximillian Oppenheimer died on 26 March 1957.",
+      "0.2": "Maximillian Oppenheimer was known as Max Ophüls.",
+      "0.3": "Max Ophüls was a German-born film director.",
+      "0.4": "Max Ophüls worked in Germany from 1931 to 1933.",
+      "0.5": "Max Ophüls worked in France from 1933 to 1940.",
+      "0.6": "Max Ophüls worked in France from 1950 to 1957.",
+      "0.7": "Max Ophüls worked in the United States from 1947 to 1950."
+     }
+    },
+    {
+     "sentence": "Shirley Clarke (October 2, 1919 – September 23, 1997) was an American experimental and independent filmmaker.",
+     "facts": {
+      "1.0": "Shirley Clarke was born on October 2, 1919.",
+      "1.1": "Shirley Clarke died on September 23, 1997.",
+      "1.2": "Shirley Clarke was an American experimental filmmaker.",
+      "1.3": "Shirley Clarke was an American independent filmmaker."
+     }
+    }
+   ],
+   "items": [
+    "Dan Ouellette\nGiger and Beksinski, and he has been featured in magazines internationally.\n\n David Bowie commented while looking at Dan's art that he has noticed a strong influence of science fiction on contemporary art.\n\n Giger saw a different aspect, saying simply \"Very bony.\"\n\n He grew to adore the cinema of Fellini and later to marvel at Lynch's \"Eraserhead\".\n\n Rather than pursue a formal education in the fine arts he chose to study the craft of film making and after college he became a production designer working on feature films in New York City starting with his work as a production designer for Hal Hartley in 1990 with Trust and then, in 1992, with Simple Men.",
+    "Shirley Clarke\nShirley Clarke (October 2, 1919 – September 23, 1997) was an American experimental and independent filmmaker.\n\n She was also a director and editor to many famous works.",
+    "Jacques Natanson\nFrench writer Jacques Natanson (15 May 1901 – 19 May 1975) first became involved in the movies in 1929 when one of his plays was adapted for the screen.\n\n He enjoyed a fruitful collaboration with Max Ophüls, on such films as \"La Ronde\" (1951, earning an Academy Award nomination), \"Le Plaisir\" (1952) and \"Lola Montès\" (1955).",
+    "Elmer Clifton\nElmer Clifton (March 14, 1890 – October 15, 1949) was an American writer, director and actor from the early silent days.\n\n A collaborator of D.W. Griffith, he appeared in \"The Birth of a Nation\" (1915) and \"Intolerance\" (1916) before giving up acting in 1917 to concentrate on work behind the camera, with Griffith and Joseph Henabery as his mentors.\n\n His first feature-length solo effort as a director was \"The Flame of Youth\" with Jack Mulhall.",
+    "Oswalt Kolle\nOswalt Kolle (2 October 1928, Kiel – 24 September 2010, Amsterdam) was a German sex educator, who became famous during the late 1960s and early 1970s for his numerous pioneering books and films on human sexuality.\n\n His work was translated into all major languages, while his films found an audience of 140 million worldwide.\n\n In his 1997 book \"Open to Both Sides\" he came out as bisexual.\n\n He was awarded the Magnus Hirschfeld Medal in 2000.",
+    "Lev Kuleshov\nLev Vladimirovich Kuleshov (Russian: Лев Влади́мирович Кулешо́в ; 13 January [O.S. 1 January] 1899 – 29 March 1970) was a Russian and Soviet filmmaker and film theorist, one of the founders of the world's first film school, the Moscow Film School.\n\n He was given the title People's Artist of the RSFSR in 1969.\n\n He was intimately involved in development of the style of film making known as Soviet montage, especially it's psychological underpinning, including the use of editing and the cut to emotionally influence the audience, a principle known as the Kuleshov effect.\n\n He also developed the theory of creative geography, which is the use of the action around a cut to connect otherwise disparate settings into a cohesive narrative.",
+    "Dan Ouellette\nDan Ouellette is an American artist, illustrator, director, author and production designer.\n\n He began drawing as a child inspired by Escher, Dalí and Moebius.\n\n His drawings usually begin with very rough sketches and are intended to capture a moment of tension or eroticism.\n\n His art pushes his audience into areas where people feel less than comfortable, stating that the \"US which is so puritanical, our bodies are usually a great source of anxiety and fear\".\n\n As a production designer, he has designed over fifteen independent feature films in the past decade as well as numerous commercials and music videos.\n\n He is best known as the director for the music videos \"Blue\" and \"Looking Glass\" by The Birthday Massacre, receiving over 4 million combined views on YouTube, and has directed music videos for the industrial band Android Lust.\n\n He has done production design for many films over the years including \"Chasing Sleep\" starring Jeff Daniels.\n\n Dan's artwork is strongly themed around surrealism and mostly done in pencil.\n\n As an artist he has exhibited widely.\n\n He has been published in numerous anthology art books including \"Bio-Mannerism\" which also features work by H.R.",
+    "Max Ophüls\nMaximillian Oppenheimer (6 May 1902 – 26 March 1957), known as Max Ophüls (] ), was a German-born film director who worked in Germany (1931–1933), France (1933–1940 and 1950–1957), and the United States (1947–1950).\n\n He made nearly 30 films, the latter ones being especially notable: \"La Ronde\" (1950), \"Le Plaisir\" (1952), \"The Earrings of Madame de...\" (1953) and \"Lola Montès\" (1955).",
+    "The Earrings of Madame de…\nThe Earrings of Madame de… (French: Madame de… ] ) is a 1953 drama film directed by Max Ophüls, adapted from Louise Leveque de Vilmorin's period novel by Ophüls, Marcel Archard and Annette Wadement.\n\n The film is considered a masterpiece of the 1950s French cinema.\n\n Andrew Sarris called it \"the most perfect film ever made\".\n\n Ophüls said the story's construction attracted him, stating \"there is always the same axis around which the action continually turns like a carousel.\n\n A tiny, scarcely visible axis: a pair of earrings.\"",
+    "Marcel Ophüls\nMarcel Ophuls (] ; born 1 November 1927) is a documentary film maker and former actor, best known for his films \"The Sorrow and the Pity\" and \"\"."
+   ]
+  },
+  {
+   "id": "d0f319f2938ee3b7",
+   "gold": [
+    {
+     "sentence": "Hänt Extra is a Swedish language weekly celebrity and youth magazine published by Aller Media in Stockholm, Sweden.",
+     "facts": {
+      "0.0": "Hänt Extra is a Swedish language magazine.",
+      "0.1": "Hänt Extra is a weekly magazine.",
+      "0.2": "Hänt Extra is a celebrity and youth magazine.",
+      "0.3": "Hänt Extra is published by Aller Media.",
+      "0.4": "Hänt Extra is published in Stockholm, Sweden."
+     }
+    },
+    {
+     "sentence": "Tea Moderna (Macedonian: Теа Модерна ) is a Macedonian woman's weekly magazine women.",
+     "facts": {
+      "1.0": "Tea Moderna is a Macedonian woman's weekly magazine.",
+      "1.1": "Tea Moderna's name in Macedonian is Теа Модерна.",
+      "1.2": "Tea Moderna is a magazine for women."
+     }
+    }
+   ],
+   "items": [
+    "Katarina Ivanovska\nKatarina Ivanovska (Macedonian: Катарина Ивановска ; born 18 August 1988) is a Macedonian model and actress.\n\n She began her modeling career in 2004, appearing at Milan Fashion Week after winning the Look Models International model search in Macedonia.\n\n In December, 2004, she appeared in a pictorial for \"Elle\" magazine and has also appeared in \"Citizen K\", \"Stiletto\" and the Italian and Russian \"Vogue\".\n\n She has been featured on the covers of \"Diva\" and \"Maxima\" magazines and in advertisements for D&G in 2006.\n\n She is considered the most successful Macedonian model.\n\n In 2010, Ivanovska appeared in Serbian \"Elle\" magazine.\n\n In 2011 she signed a contract for advertising Victoria's Secret products.\n\n In 2011 she got her first acting job in the Macedonian World War II film, \"The Third Half\", landing the lead role of a young Jewish girl named Rebecca.",
+    "Nikola Mladenov\nNikola Mladenov (Macedonian: Никола Младенов ; 10 March 1964 – 26 March 2013) was a Macedonian journalist, actor, founder and managing editor of the weekly newspaper \"Fokus\", widely regarded as one of the most reputable journalists in Macedonia, who along with his colleagues from the newspaper \"Mlad borec\" is considered to have laid the basis for the pluralistic principles in the Macedonian journalism.\n\n The \"Award for best research story of the year – Nikola Mladenov\", which is awarded by the Macedonian Institute for Media, is named after him.",
+    "Makedonsko Sonce\nMakedonsko Sonce (Macedonian: ; English: Macedonian Sun ) is a weekly magazine published in the Republic of Macedonia.\n\n The title means \"Macedonian Sun\", referring to the Vergina Sun, which is used in the logo of the magazine.\n\n It was established by Gjorgija (George) Atanasoski and the first edition was published on June 24, 1994.\n\n It describes its own political stance as affirming \"Macedonian national values, not only on territory of Macedonia but also in the other parts of ethnic Macedonia\".",
+    "Den Za Nas\nDen Za Nas (in Macedonian: Ден за нас ) is the title of the fourth Macedonian language album by the Macedonian superstar Toše Proeski released in 2004.\n\n It is a 2-CD set which contains all of the songs performed on the National final in order to select a song for the Eurovision Song Contest 2004 with which Proeski would represent Macedonia in the contest.\n\n The winning song was \"Life\" which qualified for the final and finished on the 14th place in the final.\n\n Some extra songs such as \"Dzvezdo Severnice\", \"Me Sakaš So Zborovi\", \"Ima Li Den Za Nas\" and others were recorded especially for the album.",
+    "Essence (magazine)\nEssence is a monthly magazine for African American women between the ages of 18 and 49.\n\n It is the only magazine that focuses on reaching an audience of black women, revolves around the black woman experience, and has remained for a long period of time.\n\n The magazine covers fashion, lifestyle and beauty, with an intimate girlfriend-to-girlfriend tone, and its slogan \"Fierce, Fun, and Fabulous\" suggests the magazine's goal of empowering African-American women.\n\n The topics the magazine discusses range from celebrities, to fashion, to point-of-view pieces addressing current issues in the African-American community.\n\n A number of its readers engage closely and personally with the publication, and it claims to be the magazine \"for and about Black women\".",
+    "Hänt Extra\nHänt Extra is a Swedish language weekly celebrity and youth magazine published by Aller Media in Stockholm, Sweden.",
+    "Tea Moderna (magazine)\nTea Moderna (Macedonian: Теа Модерна ) is a Macedonian woman's weekly magazine women.",
+    "Hänt Bild\nHänt Bild is a celebrity magazine published in Sweden.\n\n The magazine was started in 2003.\n\n It is part of Aller Media AB.\n\n It is published on a weekly basis.",
+    "2015 Macedonian Football Supercup\nThe 2015 Macedonian Supercup was the 3rd Macedonian Football Supercup, an annual Macedonian football match played between the winners of the previous season's First League and Macedonian Cup.\n\n The game will be played between Rabotnički, who beat Teteks to win the 2015 Macedonian Cup Final, and Vardar, champions of the 2014–15 First League.\n\n It was played at Philip II Arena, Skopje and was won by Vardar by 4–3 on penalties after the match was ended 1–1 after the regular and extra time.",
+    "Albanians in the Republic of Macedonia\nAlbanians are the largest ethnic minority in the Republic of Macedonia.\n\n Of the 2,022,547 citizens of Macedonia, 509,083, or 25.2%, are Albanian according to the latest national census in 2002.\n\n The Albanian minority lives mostly in the north-western part of the country.\n\n The largest Albanian communities are in the municipalities of Tetovo (70.3% of the total population), Gostivar (66.7%), Debar (58.1%), Struga (56.8%), Kičevo (54.5%), Kumanovo (25.8%) and Skopje (20.4%)."
+   ]
+  },
+  {
+   "id": "d7902825dc95f521",
+   "gold": [
+    {
+     "sentence": "Margaret Landon (September 7, 1903 – December 4, 1993) was an American writer best remembered for \"Anna and the King of Siam\", her best-selling 1944 novel of the life of Anna Leonowens which eventually sold over a million copies and was translated into more than twenty languages.",
+     "facts": {
+      "0.0": "Margaret Landon was born September 7, 1903.",
+      "0.1": "Margaret Landon died December 4, 1993.",
+      "0.2": "Margaret Landon was an American writer.",
+      "0.3": "Margaret Landon is best remembered for 'Anna and the King of Siam'.",
+      "0.4": "'Anna and the King of Siam' is Margaret Landon's best-selling novel, published in 1944.",
+      "0.5": "'Anna and the King of Siam' is a novel about the life of Anna Leonowens.",
+      "0.6": "'Anna and the King of Siam' eventually sold over a million copies.",
+      "0.7": "'Anna and the King of Siam' was translated into more than twenty languages."
+     }
+    },
+    {
+     "sentence": " In 1950, Landon sold the musical play rights to Richard Rodgers and Oscar Hammerstein II, who created the musical \"The King and I\" from her book.",
+     "facts": {
+      "1.0": "In 1950, Margaret Landon sold the musical play rights to Richard Rodgers and Oscar Hammerstein II.",
+      "1.1": "Richard Rodgers and Oscar Hammerstein II created the musical 'The King and I' from Margaret Landon's book."
+     }
+    },
+    {
+     "sentence": " A later work, \"Never Dies the Dream\", appeared in 1949.",
+     "facts": {
+      "2.0": "'Never Dies the Dream' is a later work.",
+      "2.1": "'Never Dies the Dream' appeared in 1949."
+     }
+    },
+    {
+     "sentence": "Dame Elizabeth Rosemond Taylor, DBE (February 27, 1932 – March 23, 2011) was a British-American actress, businesswoman, and humanitarian.",
+     "facts": {
+      "3.0": "Dame Elizabeth Rosemond Taylor, DBE, was born February 27, 1932.",
+      "3.1": "Dame Elizabeth Rosemond Taylor, DBE, died March 23, 2011.",
+      "3.2": "Dame Elizabeth Rosemond Taylor was a British-American actress.",
+      "3.3": "Dame Elizabeth Rosemond Taylor was a businesswoman.",
+      "3.4": "Dame Elizabeth Rosemond Taylor was a humanitarian."
+     }
+    },
+    {
+     "sentence": " She began her career as a child actress in the early 1940s, and was one of the most popular stars of classical Hollywood cinema in the 1950s.",
+     "facts": {
+      "4.0": "Elizabeth Taylor began her career as a child actress in the early 1940s.",
+      "4.1": "Elizabeth Taylor was one of the most popular stars of classical Hollywood cinema in the 1950s."
+     }
+    },
+    {
+     "sentence": " She continued her career successfully into the 1960s, and remained a well known public figure for the rest of her life.",
+     "facts": {
+      "5.0": "Elizabeth Taylor continued her career successfully into the 1960s.",
+      "5.1": "Elizabeth Taylor remained a well known public figure for the rest of her life."
+     }
+    },
+    {
+     "sentence": " In 1999, the American Film Institute named her the seventh-greatest female screen legend.",
+     "facts": {
+      "6.0": "In 1999, the American Film Institute named Elizabeth Taylor the seventh-greatest female screen legend."
+     }
+    }
+   ],
+   "items": [
+    "Krupp Diamond\nThe Elizabeth Taylor Diamond, formerly known as the Krupp Diamond, is a 33.19 carat diamond that was bought by Richard Burton for his wife, Elizabeth Taylor in 1968.\n\n The Krupp diamond was one of a number of significant pieces of jewellery owned by Taylor, her collection also included the 68 carat Taylor–Burton Diamond, which was bought by the couple in 1969.\n\n The Krupp diamond was sold by Taylor's estate in 2011 for $8.8 million.",
+    "These Old Broads\nThese Old Broads is a 2001 television film written by Carrie Fisher and starring her mother Debbie Reynolds, as well as Shirley MacLaine, Joan Collins, and Elizabeth Taylor in her final film role.\n\n In a 2001 BBC \"Omnibus\" documentary about Elizabeth Taylor, Shirley MacLaine says that Julie Andrews and Lauren Bacall were originally planned to be in the movie.\n\n The role of Miriam Hodges was originally offered to June Allyson.",
+    "Cate Blanchett\nCatherine Elise Blanchett, {'1': \", '2': \", '3': \", '4': \"} ( ; born 14 May 1969) is an Australian actress and theatre director.\n\n She has received international acclaim and many accolades, including two Academy Awards, three Golden Globe Awards, three BAFTA Awards, six AACTA Awards, and three Screen Actors Guild Awards. Blanchett came to international attention for her role as Elizabeth I of England in Shekhar Kapur's 1998 film \"Elizabeth\", for which she won the BAFTA Award for Best Actress, the Golden Globe Award, and earned her first Academy Award for Best Actress nomination.\n\n Her portrayal of Katharine Hepburn in Martin Scorsese's 2004 film \"The Aviator\" brought her critical acclaim and many accolades, including the Academy Award for Best Actress in a Supporting Role, making her the only actor to win an Oscar for portraying another Oscar-winning actor.\n\n In 2013, she starred as Jasmine Francis in Woody Allen's \"Blue Jasmine\", for which she won numerous accolades including the Academy Award for Best Actress.",
+    "Mary Elizabeth Bliss\nMary Elizabeth \"Betty\" Taylor Bliss Dandridge, born Mary Elizabeth Taylor (April 20, 1824 – July 25, 1909), was the youngest of the three surviving daughters of President Zachary Taylor (1849-1850) and Margaret Mackall Smith Taylor.",
+    "Elizabeth Taylor\nDame Elizabeth Rosemond Taylor, DBE (February 27, 1932 – March 23, 2011) was a British-American actress, businesswoman, and humanitarian.\n\n She began her career as a child actress in the early 1940s, and was one of the most popular stars of classical Hollywood cinema in the 1950s.\n\n She continued her career successfully into the 1960s, and remained a well known public figure for the rest of her life.\n\n In 1999, the American Film Institute named her the seventh-greatest female screen legend.",
+    "At Land\nAt Land (1944) is a 15-minute silent experimental film written, directed by, and starring Maya Deren.\n\n It has a dream-like narrative in which a woman, played by Deren, is washed up on a beach and goes on a strange journey encountering other people and other versions of herself.\n\n Deren once said that the film is about the struggle to maintain one's personal identity.",
+    "Cate Blanchett (born 14 May 1969) is an acclaimed Australian actress and theatre director who has won two Academy Awards, three Golden Globes, three BAFTAs, six AACTA Awards and three Screen Actors Guild Awards. She rose to international prominence as Elizabeth I in *Elizabeth* (1998), won a supporting-actress Oscar for portraying Katharine Hepburn in *The Aviator* (2004), and earned a best-actress Oscar for *Blue",
+    "Anna and the King of Siam (novel)\nAnna and the King is a 1944 semi-fictionalized biographical novel by Margaret Landon.",
+    "Sam Taylor (director)\nSam Taylor (August 13, 1895, New York City – March 6, 1958, Santa Monica) was a film director, screenwriter, and producer, most active in the silent film era.\n\n Taylor is best known for his comedic directorial work with Harold Lloyd and Mary Pickford, and also later worked with Laurel and Hardy.",
+    "Margaret Landon\nMargaret Landon (September 7, 1903 – December 4, 1993) was an American writer best remembered for \"Anna and the King of Siam\", her best-selling 1944 novel of the life of Anna Leonowens which eventually sold over a million copies and was translated into more than twenty languages.\n\n In 1950, Landon sold the musical play rights to Richard Rodgers and Oscar Hammerstein II, who created the musical \"The King and I\" from her book.\n\n A later work, \"Never Dies the Dream\", appeared in 1949."
+   ]
+  },
+  {
+   "id": "8542001cd9f66981",
+   "gold": [
+    {
+     "sentence": "of Montreal is an American experimental pop band from Athens, Georgia.",
+     "facts": {
+      "0.0": "of Montreal is an American band.",
+      "0.1": "of Montreal is an experimental pop band.",
+      "0.2": "of Montreal is from Athens, Georgia."
+     }
+    },
+    {
+     "sentence": "Vib Gyor was a band that was formed in Leeds, England.",
+     "facts": {
+      "1.0": "Vib Gyor was a band.",
+      "1.1": "Vib Gyor was formed in Leeds, England."
+     }
+    }
+   ],
+   "items": [
+    "Vib Gyor\nVib Gyor was a band that was formed in Leeds, England.\n\n The name was derived from the first letters of all the colours in the rainbow, in order from the shortest to longest wavelengths.",
+    "Montreal Victorias\nThe Victoria Hockey Club of Montreal, Quebec, Canada was an early men's amateur ice hockey club.\n\n Its date of origin is ascribed to either 1874, 1877 or 1881, making it either the first or second organized ice hockey club after McGill University.\n\n The club played at its own rink, the Victoria Skating Rink in Montreal.\n\n The club was winners of the Stanley Cup in 1895 and held it except for a period in 1896 until 1899.\n\n The club remained amateur, splitting from the ranks of teams turned professional in 1908.\n\n The amateur hockey club was the first winner of the Allan Cup and continued in play until 1939 after its 65th season.\n\n The club often also fielded junior and intermediate teams.",
+    "Leeds band Vib Gyor took its name from rainbow colors ordered by wavelength. Its debut single “Fallen” (July 2006) gained acclaim and radio play. The Secret EP (March 2007), recorded in Bath by Paul Corkett, includes a hidden instrumental; The White EP followed in November, recorded at Rockfield by Ken Thomas. Leeds alternative-rock band Distortion Mirrors formed in 2011. Other releases include Edward Sharpe and the Magnetic Zeros’ 201",
+    "The White EP (Vib Gyor EP)\nThe \"White EP\" is a promo EP from the Leeds band Vib Gyor.\n\n It was first sold on their UK tour with American band Transfer and was released through their My Space page and official web-site on 13 November 2007.\n\n It is the follow-up to their The Secret EP.\n\n It was recorded in Rockfield studios in South Wales and produced by Ken Thomas.",
+    "Fallen (Vib Gyor song)\n\"Fallen\" was the first single from the Leeds band Vib Gyor.\n\n It was first given limited release in July 2006, and has attained critical acclaim and a large amount of radio play on both sides of the atlantic.",
+    "Bullmoose\nBullmoose (aka Zach Dobbins) is a Canadian rock band formed in Elgin, Ontario in 1996.\n\n Three of the original members continue in the band, which today is based in Montreal.\n\n They include twin brothers Jeff Cowan (drums/vocals) and Seamus Cowan (bass/vocals) from Westport, Ontario and Eric Lawrance (guitar/vocals) from Delta, Ontario, who launched the band when they attended school at Montreal.\n\n The band performs in the rock music genre, citing experimental influences of the late 1960s and early 1970s.",
+    "The V.I.P.s (band)\nThe V.I.P.s were a British R&B musical ensemble formed in Carlisle, Cumberland, (North West England) in late 1963, out of an earlier outfit known as The Ramrods, who had formed in Carlisle in 1960.\n\n After a change of personnel in April 1967, the band changed their name to \"Art\", and released the album \"Supernatural Fairy Tales\".\n\n They also participated to a psychedelic bizarre album called \"Featuring The Human Host And The Heavy Metal Kids\" by a collective known as Hapshash and the Coloured Coat, formed by Guy Stevens and an influential British graphic design and avant-garde musical partnership between Michael English and Nigel Waymouth.\n\n The musicians involved in that project were Mike Harrison on keys and vocals, Luther Grosvenor on guitars, Greg Ridley on bass and Mike Kellie on drums, as well as performances by Stevens, English and Waymouth.\n\n It was the first time that the term \"heavy metal\" was ever used in music, even though that album had nothing to do with heavy metal music, being closer to psychedelic music.",
+    "The Gorgeous\nThe Gorgeous were a Canadian metalcore band formed in the summer of 2003 in Montreal.\n\n The band formed with Dali Shaw on guitar, Julien Brousseau on Bass and Miguel Shaw on drums.\n\n The three played a few shows without a vocalist and quickly recruited Jordon Daniel.",
+    "Of Montreal\nof Montreal is an American experimental pop band from Athens, Georgia.\n\n It was founded by frontman Kevin Barnes in 1996, named after a failed romance between Barnes and a woman \"of Montreal.\"\n\n The band is identified as part of the Elephant 6 collective.\n\n Throughout its existence, of Montreal's musical style has evolved considerably and drawn inspiration from numerous 1960s psychedelic pop acts.",
+    "The Famines (band)\nThe Famines are a Canadian indie rock band formed in 2008 in Edmonton, Alberta, Canada now based in Montreal, Quebec, Canada.\n\n The two piece band uses a modern and minimalistic approach that draws comparison to mid 1970's protopunk and fuzzy garage rock.\n\nThe band name is meant to be a commentary on the continued feeling of emptiness and lacking in a society that is materially fulfilled.\n\n The band has two members, R. E. Biesinger on guitar and vocals, and Drew Demers on the drums."
+   ]
+  },
+  {
+   "id": "94579f64b1c93ebc",
+   "gold": [
+    {
+     "sentence": "Triumph of the Will (German: Triumph des Willens ) is a 1935 German propaganda film directed, produced, edited, and co-written by Leni Riefenstahl.",
+     "facts": {
+      "0.0": "Triumph of the Will's German title is Triumph des Willens.",
+      "0.1": "Triumph of the Will is a 1935 German propaganda film.",
+      "0.2": "Leni Riefenstahl directed Triumph of the Will.",
+      "0.3": "Leni Riefenstahl produced Triumph of the Will.",
+      "0.4": "Leni Riefenstahl edited Triumph of the Will.",
+      "0.5": "Leni Riefenstahl co-wrote Triumph of the Will."
+     }
+    },
+    {
+     "sentence": "The End of America is a 2008 documentary film directed by Annie Sundberg and Ricki Stern, adapted from Naomi Wolf's 2007 book, \"\".",
+     "facts": {
+      "1.0": "The End of America is a 2008 documentary film.",
+      "1.1": "Annie Sundberg directed The End of America.",
+      "1.2": "Ricki Stern directed The End of America.",
+      "1.3": "The End of America is adapted from Naomi Wolf's 2007 book."
+     }
+    }
+   ],
+   "items": [
+    "The Sorrow and the Pity\nThe Sorrow and the Pity (French: Le Chagrin et la Pitié ) is a two-part 1969 documentary film by Marcel Ophüls about the collaboration between the Vichy government and Nazi Germany during World War II.\n\n The film uses interviews with a German officer, collaborators, and resistance fighters from Clermont-Ferrand.\n\n They comment on the nature of and reasons for collaboration.\n\n The reasons include antisemitism, anglophobia, fear of Bolsheviks and Soviet invasion, the desire for power, and simple caution.",
+    "The End of America (film)\nThe End of America is a 2008 documentary film directed by Annie Sundberg and Ricki Stern, adapted from Naomi Wolf's 2007 book, \"\".\n\n The film analyzes policy changes made during the Bush Administration, and makes the case that these changes threaten American democracy.",
+    "Viennese Girls\nViennese Girls (German:Wiener Mädeln) is a 1945 historical musical film directed by Willi Forst and starring Forst, Anton Edthofer and Judith Holzmeister.\n\n The film was made by Wien-Film, a Vienna-based company set up after Austria had been incorporated into Greater Germany following the 1938 Anschluss.\n\n It was the third film in Forst's \"Viennese Trilogy\" which also included \"Operetta\" (1940) and \"Vienna Blood\" (1942).\n\n The film was finished in 1945, during the closing days of the Second World War.\n\n This led to severe delays in its release, which eventually took place in 1949 in two separate versions.\n\n One was released by the Soviet-backed Sovexport in the Eastern Bloc and the other by Forst.",
+    "Empire (1964 film)\nEmpire is a 1964 American black and white silent film written, produced, and directed by Andy Warhol.\n\n It consists of eight hours and five minutes of continuous slow motion footage of the Empire State Building in New York City.\n\n Abridged showings of the film were never allowed, and supposedly the unwatchability of the film was an important part of the reason the film was created.\n\n However, a legitimate Italian VHS produced in association with the Andy Warhol Museum in 2000 contains only an extract of 60 minutes.\n\n Its use of the long take \"in extremis\" is an extension of Warhol's earlier work the previous year with \"Sleep\".\n\n Warhol employed Rob Trains to be the projectionist for a screening of the film.\n\n Trains miscalculated and mixed the order and speed of the reels for the eight-hour movie.\n\n After a positive review in \"The New York Times\", Warhol actually liked the \"mistake\" and employed Trains for the entire summer.",
+    "Town Without Pity\nTown Without Pity (German: Stadt ohne Mitleid) is a 1961 American, Swiss, and West German international co-production drama film directed by Gottfried Reinhardt.\n\n Produced by The Mirisch Corporation, the film stars Kirk Douglas, Christine Kaufmann, and E. G. Marshall.\n\n Coincidentally, this movie came out the same year that John A. Bennett, to this day the last man executed by the U.S. Army, was hanged for raping an 11-year-old girl.",
+    "Reunion (1989 film)\nThe story is centred on the \"enchanted friendship\" of two teenagers in 1933 Germany.\n\n Hans Strauss (Christien Anholt) is the son of a Jewish doctor and Konradin Von Lohenburg (Samuel West) is from an aristocratic family.\n\n The background is the rise of Nazism.\n\n Jason Robards plays the older Hans in the 1970s as he prepares to travel to Germany for the first time since the 1930s.\n\n The film was shot on location in Berlin, New York and Stuttgart.\n\n \"Reunion\" was nominated for a Golden Palm at the 1989 Cannes Film Festival.",
+    "Kaiserjäger (film)\nKaiserjäger is a 1956 Austrian film directed by Willi Forst.",
+    "Operetta (film)\nOperetta (German: Operette) is a 1940 musical film directed by Willi Forst and starring Forst, Maria Holst and Dora Komar.\n\n The film was made by Wien-Film, a Vienna-based company set up after Austria had been incorporated into Greater Germany following the 1938 Anschluss.\n\n It is the first film in director Willi Forst's \"Viennese Trilogy\" followed by \"Vienna Blood\" (1942) and \"Viennese Girls\" (1945).\n\n The film portrays the life of Franz Jauner (1832–1900), a leading musical figure in the city.\n\n It is both an operetta film and a Wiener Film.",
+    "Olympia (1938 film)\nOlympia is a 1938 German documentary film written, directed and produced by Leni Riefenstahl, documenting the 1936 Summer Olympics, held in the Olympic Stadium in Berlin, Germany.\n\n The film was released in two parts: \"Olympia 1.\n\n Teil — Fest der Völker\" (Festival of Nations) and \"Olympia 2.\n\n Teil — Fest der Schönheit\" (Festival of Beauty).\n\n It was the first documentary feature film of the Olympic Games ever made.\n\n Many advanced motion picture techniques, which later became industry standards but which were groundbreaking at the time, were employed —including unusual camera angles, smash cuts, extreme close-ups, placing tracking shot rails within the bleachers, and the like.\n\n The techniques employed are almost universally admired, but the film is controversial due to its political context.\n\n Nevertheless, the film appears on many lists of the greatest films of all time, including \"Time\" magazine's \"All-Time 100 Movies.\"",
+    "Triumph of the Will\nTriumph of the Will (German: Triumph des Willens ) is a 1935 German propaganda film directed, produced, edited, and co-written by Leni Riefenstahl.\n\n It chronicles the 1934 Nazi Party Congress in Nuremberg, which was attended by more than 700,000 Nazi supporters.\n\n The film contains excerpts from speeches given by Nazi leaders at the Congress, including Adolf Hitler, Rudolf Hess and Julius Streicher, interspersed with footage of massed Sturmabteilung (SA) and Schutzstaffel (SS) troops and public reaction.\n\n Hitler commissioned the film and served as an unofficial executive producer; his name appears in the opening titles.\n\n The film's overriding theme is the return of Germany as a great power, with Hitler as the leader who will bring glory to the nation.\n\n Because the film was made after the 1934 Night of the Long Knives (on 30 June) many prominent Sturmabteilung (SA) members are absent—they were murdered in that Party purge, organised and orchestrated by Hitler to replace the SA with the Schutzstaffel (SS) as his main paramilitary force."
+   ]
+  },
+  {
+   "id": "66e8dbcb1a1edf90",
+   "gold": [
+    {
+     "sentence": " It is most known through the 1989 single by Kathy Mattea, released in conjunction with her album \"Willow in the Wind\", though the song was first recorded and released on the 1987 Don Williams album \"Traces\" and also released in 1988 by Clark's husband on his album \"Old Friends\".",
+     "facts": {
+      "0.0": "This song is most known through the 1989 single by Kathy Mattea.",
+      "0.1": "The 1989 single by Kathy Mattea was released in conjunction with her album Willow in the Wind.",
+      "0.2": "This song was first recorded and released on the 1987 Don Williams album Traces.",
+      "0.3": "This song was also released in 1988 by Clark's husband on his album Old Friends."
+     }
+    },
+    {
+     "sentence": "This is a detailed discography for American country music artist Don Williams.",
+     "facts": {
+      "1.0": "The discography is detailed.",
+      "1.1": "The discography is for American country music artist Don Williams."
+     }
+    }
+   ],
+   "items": [
+    "Come On (Earl King song)\n\"Come On\" (often called \"Let the Good Times Roll\") is a song written by New Orleans rhythm and blues artist Earl King.\n\n He first recorded the song as \"Darling Honey Angel Child\" in 1960 for the Ace Records subsidiary Rex.\n\n Later that year, he recorded it as a two-part song for Imperial Records using some new lyrics.\n\n Retitled \"Come On\", it was released in 1960 with \"Come On - Part I” as the A-side backed with “Come On - Part II” (Imperial 5713).",
+    "Hjärtats trakt\nHjärtats trakt was released on 20 April 1993 and is a compilation album from Swedish pop artist Per Gessle.\n\n The album includes songs taken from Gessle's solo albums \"Per Gessle\" and \"Scener\".\n\n It was also released under license by the British record company Pickwick and it is the only Gessle album released by another label than EMI.\n\n In 1998 the album was re-released by the Dutch record company Disky Communications B.V. which is a subsidiary of EMI.",
+    "Night Is Fallin' in My Heart\n\"Night Is Fallin' in My Heart\" is a song written by Dennis Linde.\n\n The song was first recorded by Country music artist J.P. Pennington for his 1991 album, \"Whatever It Takes\".\n\n It was later recorded and released as a single in October 1994 by American country music group Diamond Rio.\n\n It was the second single released from their third album, \"Love a Little Stronger\".\n\n It peaked at number 9 in the United States, and number 6 in Canada.",
+    "Every Beat of My Heart (song)\n\"Every Beat of My Heart\" is a rhythm and blues song by Johnny Otis.\n\n It was first recorded in 1954 by his group, The Royals (later to be known as The Midnighters).\n\n In 1961 Gladys Knight & the Pips recorded the song for their debut single on the Vee-Jay label.\n\n Credited to The Pips, it was the first of eleven releases by the group to make it to number one on the R&B/soul chart.\n\n It was also the group's first top ten on the \"Billboard\" Hot 100.\n\n \"Every Beat of My Heart\" was first recorded for the Huntom label, who later sold the master to Vee-Jay.\n\n At the time of the song's release, The Pips were on the Fury label where they re-recorded the song without piano.\n\n In an unusual occurrence, the Fury recording of the song also made the top twenty on the R&B Sides chart and also made the Hot 100.",
+    "Streets of Heaven (song)\n\"Streets of Heaven\" is a song co-written and recorded by Australian country music artist Sherrié Austin.\n\n It was released in June 2003 as the first single and title track from her album \"Streets of Heaven\".\n\n Austin wrote the song with Paul Duncan and Al Kasha.",
+    "Patti Page\nClara Ann Fowler (November 8, 1927 – January 1, 2013), known by her professional name Patti Page, was an American singer of traditional pop music and country music.\n\n She was the top-charting female vocalist and best-selling female artist of the 1950s, selling over 100 million records during a six-decade long career.\n\n She was often introduced as \"the Singin' Rage, Miss Patti Page\".\n\n New York WNEW disc-jockey William B. Williams introduced her as \"A Page in my life called Patti\".",
+    "Don Williams discography\nThis is a detailed discography for American country music artist Don Williams.",
+    "Come from the Heart\n\"Come from the Heart\" is a country music song written by Richard Leigh and Susanna Clark and published in 1987.\n\n It is most known through the 1989 single by Kathy Mattea, released in conjunction with her album \"Willow in the Wind\", though the song was first recorded and released on the 1987 Don Williams album \"Traces\" and also released in 1988 by Clark's husband on his album \"Old Friends\".",
+    "Progressive country\nProgressive country is a subgenre of country music developed in the early 1970s.\n\n In the late 1960s and early 1970s, mainstream country music was dominated by the slick Nashville sound and the rock-influenced Bakersfield sound of artists like Merle Haggard.\n\n A new generation of country artists emerged, influenced by contemporary rock music, singer-songwriters such as Bob Dylan, and the liberal politics of the 1960s counterculture.",
+    "Refugees of the Heart\nRefugees of the Heart is the sixth solo studio album by Steve Winwood, released in 1990.\n\n The album contained the hit single, \"One and Only Man\", which topped the Mainstream Rock Tracks chart and saw the return of former Traffic bandmate Jim Capaldi to Winwood's songwriting team.\n\n By coincidence, a Traffic reunion followed in 1994.\n\n Because of that collaboration, Winwood would not record another solo album until late 1997.\n\n Also \"I Will Be Here\" and \"Another Deal Goes Down\" were released as singles.\n\n Winwood stated about the closing track, “In The Light Of Day”: 'When Will and I wrote the song (.\n\n.)\n\n it was our idea of what Nelson Mandela's dream was, while he was in prison.\n\n It was really just a fantasy of ours, but that’s what we based the song on.'"
+   ]
+  },
+  {
+   "id": "71a0c405f5be1ed1",
+   "gold": [
+    {
+     "sentence": "The Edison Sault Power Canal supplies the Saint Marys Falls Hydropower Plant, a Cloverland Electric Cooperative hydroelectric plant, in Sault Ste. Marie, Michigan.",
+     "facts": {
+      "0.0": "The Edison Sault Power Canal supplies the Saint Marys Falls Hydropower Plant.",
+      "0.1": "The Saint Marys Falls Hydropower Plant is a Cloverland Electric Cooperative hydroelectric plant.",
+      "0.2": "The Saint Marys Falls Hydropower Plant is in Sault Ste. Marie, Michigan."
+     }
+    },
+    {
+     "sentence": " Excavation of the power canal began in September 1898 and was completed in June 1902.",
+     "facts": {
+      "1.0": "Excavation of the Edison Sault Power Canal began in September 1898.",
+      "1.1": "Excavation of the Edison Sault Power Canal was completed in June 1902."
+     }
+    },
+    {
+     "sentence": " The canal and hydroelectric complex were named a Historic Civil Engineering Landmark in 1983.",
+     "facts": {
+      "2.0": "The canal was named a Historic Civil Engineering Landmark in 1983.",
+      "2.1": "The hydroelectric complex was named a Historic Civil Engineering Landmark in 1983."
+     }
+    },
+    {
+     "sentence": "The Cayuga–Seneca Canal is a canal in New York, United States.",
+     "facts": {
+      "3.0": "The Cayuga–Seneca Canal is a canal in New York, United States."
+     }
+    },
+    {
+     "sentence": " It is now part of the New York State Canal System.",
+     "facts": {
+      "4.0": "The Cayuga–Seneca Canal is now part of the New York State Canal System."
+     }
+    }
+   ],
+   "items": [
+    "The entries cover historic U.S. canals, waterways, water systems, and sites. Transport canals include Beaver–Erie (136 miles), Delaware (60), Whitewater (76), and Susquehanna–Tidewater (43), plus interstate and regional routes; many declined with railroad competition. The Dismal Swamp Canal, opened in 1805 and closed in 2016, served the Intracoastal Waterway; nearby park and refuge protect the swamp.",
+    "Seneca River Crossing Canals Historic District\nSeneca River Crossing Canals Historic District is a national historic district located at Montezuma and Tyre in Cayuga and Seneca Counties, New York.\n\n The district includes more than a mile of the Enlarged Erie Canal prism (built here between 1849 and 1857); towpath and heelpath; a drydock; the remains of the Richmond (Montezuma) Aqueduct crossing the Seneca River; remnants of the original Erie Canal, built between 1817 and 1825 and including Lock #62 and piers of the original mule bridge from that era; and a culvert that carries a stream beneath the Enlarged Erie Canal.",
+    "New York State Canal Corporation\nThe New York State Canal Corporation is responsible for the oversight, administration and maintenance of the New York State Canal System, which consists of the Erie Canal, Cayuga–Seneca Canal, Oswego Canal and Champlain Canal.\n\n It is also involved with the development and maintenance of the New York State Canalway Trail and with the general development and promotion of the Erie Canal Corridor as both a tourist attraction and a working waterway.",
+    "Dundee Canal\nThe Dundee Canal was an industrial canal in Clifton and Passaic in Passaic County, New Jersey.\n\n It was built between 1858 and 1861 and ran parallel to the Passaic River.\n\n It supplied hydropower and water for manufacturing.\n\n There was interest by some members of the business community to modify the canal to support navigational uses, but the canal was never used for that purpose.",
+    "Edison Sault Power Canal\nThe Edison Sault Power Canal supplies the Saint Marys Falls Hydropower Plant, a Cloverland Electric Cooperative hydroelectric plant, in Sault Ste. Marie, Michigan.\n\n Excavation of the power canal began in September 1898 and was completed in June 1902.\n\n The canal and hydroelectric complex were named a Historic Civil Engineering Landmark in 1983.",
+    "Cayuga–Seneca Canal\nThe Cayuga–Seneca Canal is a canal in New York, United States.\n\n It is now part of the New York State Canal System.",
+    "New York State Canal System\nThe New York State Canal System (formerly known as the New York State Barge Canal) is a successor to the Erie Canal and other canals within New York.\n\n Currently, the 525 mi system is composed of the Erie Canal, the Oswego Canal, the Cayuga–Seneca Canal, and the Champlain Canal.\n\n In 2014 the system was listed as a national historic district on the National Register of Historic Places in its entirety, and in 2016 it was designated a National Historic Landmark.",
+    "Erie Canal Lock 52 Complex\nErie Canal Lock 52 Complex is a national historic district located at Port Byron and Mentz in Cayuga County, New York.\n\n The district includes two contributing buildings (the Erie House and the blacksmith shop / mule barn); three contributing engineering structures (Erie Canal Lock 52, culvert, and canal prism of the enlarged Erie Canal); and archaeological sites associated with the canal operations.\n\n Lock 52 was constructed 1849-1853 as part of the Enlarged Erie Canal program.\n\n It remained in operation until the rerouting of the canal under the New York State Barge Canal System in 1917.\n\n The Erie House was built in 1894 and is a two story frame structure that housed a saloon and hotel.",
+    "New York’s Erie Canal heritage includes Lock 52 (1849–53), canal buildings and archaeological sites; the 1836–42 Broad Street Aqueduct later became a road and subway route. The 1905 song “Low Bridge” recalls mule-powered canal traffic. The 525-mile state canal system includes the Erie, Oswego, Cayuga–Seneca and Champlain canals. The Genesee River and tributaries Black Creek and Oatka Creek drain western New",
+    "Lowell Power Canal System and Pawtucket Gatehouse\nThe Lowell Power Canal System is the largest power canal system in the United States, at 5.6 miles in length.\n\n The system's estimated output is 10,000 horsepower, operating six major canals on two levels, controlled by numerous gates.\n\n The system was begun in the 1790s, beginning its life as a transportation canal called the Pawtucket Canal, which was constructed to get logs from New Hampshire down the Merrimack River to shipbuilding centers at Newburyport, Massachusetts, bypassing the 30-plus-foot drop of the Pawtucket Falls."
+   ]
+  },
+  {
+   "id": "882513bddb073bfc",
+   "gold": [
+    {
+     "sentence": " For almost 20 years, it held the record for selling 2 million copies in the UK in the fastest time, doing so in 42 days; in 2015, Adele surpassed the record when her album \"25\" took just 29 days to reach the landmark.",
+     "facts": {
+      "0.0": "For almost 20 years, a record (held by a subject not named in this sentence) stood for selling 2 million copies in the UK in the fastest time.",
+      "0.1": "The record for selling 2 million copies in the UK in the fastest time was set in 42 days.",
+      "0.2": "In 2015, Adele surpassed the record.",
+      "0.3": "Adele's album '25' took just 29 days to reach the 2 million copies landmark."
+     }
+    },
+    {
+     "sentence": " At the 51st Grammy Awards in 2009, Adele received the awards for Best New Artist and Best Female Pop Vocal Performance.",
+     "facts": {
+      "1.0": "The 51st Grammy Awards were held in 2009.",
+      "1.1": "Adele received the Best New Artist award at the 51st Grammy Awards.",
+      "1.2": "Adele received the Best Female Pop Vocal Performance award at the 51st Grammy Awards."
+     }
+    }
+   ],
+   "items": [
+    "Billboard’s 2002 chart ranked U.S. albums using Nielsen SoundScan weekly sales. Twenty-five acts reached No. 1. Eminem’s *The Eminem Show* led the year with about 7.6 million sales, six nonconsecutive weeks at No. 1, and a 1.322-million opening week. Other notable debuts included Shania Twain’s *Up!* (857,000), Nelly’s *Nellyville* (714,000",
+    "Billboard Year-End\nThe same method was used for albums based on the \"Billboard\" 200, and songs appearing on the other charts (e.g. Hot Country Singles).",
+    "List of Billboard 200 number-one albums of 2002\nThe highest-selling albums and EPs in the United States are ranked in the \"Billboard\" 200, published by \"Billboard\" magazine.\n\n The data are compiled by Nielsen Soundscan based on each album's weekly physical and digital sales.\n\n 25 acts achieved number one albums during this year with artist such as Nelly and Shania Twain who had their albums debut at number one on the chart.\n\n Rapper Eminem's \"The Eminem Show\" is the best selling album of 2002 selling over approximately 7.6 million copies by the end of the year.\n\n It is also the longest running album of 2002 spending six non-consecutive weeks the chart and was known for its first full week of sales debut of 1.322 million copies which Nielsen SoundScan scanned as the sixth largest sales of all time in its first week.\n\n Its debut of 1.322 million copies has still not been matched by any album today since except for Taylor Swift's album \"1989\", which opened with first week sales of 1.279 million copies.",
+    "MTV Video Music Award for Best New Artist\nThe MTV Video Music Award for Best New Artist have been given out since the first annual MTV Video Music Awards in 1984.\n\n From then to 2006, the award was named Best New Artist in a Video.\n\n In 2007 its name was changed to Best New Artist, as the category underwent a format change to award the artist's body of work for the full year rather than a specific video.\n\n For the 2008 ceremony, though, while the award retained its 2007 name, it returned to the format of awarding a specific video rather than the artist's full body of work.\n\n The category was later renamed Artist to Watch through 2013 to 2015 while still keeping the format of an award going to a certain video.",
+    "Robson &amp; Jerome (album)\nRobson & Jerome is the debut studio album by British singing duo Robson & Jerome.\n\n It was released in the UK in 1995 by RCA Records, and reached number one on the UK Albums Chart.\n\n It was the Christmas number one album of 1995, and was the biggest-selling album of the year, with sales of 2,040,000.\n\n For almost 20 years, it held the record for selling 2 million copies in the UK in the fastest time, doing so in 42 days; in 2015, Adele surpassed the record when her album \"25\" took just 29 days to reach the landmark.",
+    "The Foundation (2008), Zac Brown Band’s major-label debut, sold 3.4 million US copies by 2015, earned Grammy and ACM nominations, and won the band a Best New Artist Grammy. Tevin Campbell’s Babyface-produced “Can We Talk” reached Hot 100 #9, topped the R&B chart for three weeks, went gold, and won a Soul Train award. John Cena’s 2005 album introduced his entrance theme; Bow Wow’s “Fresh Azim",
+    "Robson & Jerome’s 1995 debut topped the UK chart, selling 2.04 million copies; its 42-day record for reaching two million lasted until Adele’s *25*. Forbes’ Beatles tribute won Sweden’s 1977 selection but finished last at Eurovision. Dylan’s 1978 “Baby, Stop Crying” reached UK #13. Jobim’s “Corcovado” became “Quiet Nights of Quiet Stars”; Andy Williams and Kitty Kallen recorded it. “",
+    "List of Billboard 200 number-one albums of 2002\nCountry music singer Shania Twain's album \"Up!\n\n\" opened up with a huge first week sales of 857,000 copies in its first week alone, giving her the recognition of the highest first week sales of her career and second highest of the year, only behind Eminem's \"The Eminem Show\" and at the time the fastest selling solo female album ever.\n\n Nelly's album \"Nellyville\" opened up with his highest first week sales of his career which logged on with huge sales of 714,000 copies in its first week alone, which beat his sales of his debut album \"Country Grammar\", which opened up with first week sales of 235,000 copies.\n\n Country singer Alan Jackson album \"Drive\" gave him his first number one album on the chart and opened up with first week sales of 211,000 copies alone.",
+    "List of Billboard 200 number-one albums of 2002\nThe band Creed continued its eight week long run on the chart but is credited as the longest running album 2001.\n\n Jennifer Lopez earned her second number one album on the charts with \"\", which became the highest first week sales of a remix album at the time.\n\n R&B artist Ashanti earned her first number one album with her self-titled debut album \"Ashanti\", which opened up with first week sales of 503,000 copies in its first week alone.\n\n Puff Daddy earned his first number one album since \"No Way Out\" back in 1997.\n\n Rapper Jay-Z earned his fifth chart topper with \"\", which opened up with first week sales of 545,000 copies alone.\n\n Heavy metal band Disturbed earned its first number one album on the chart with \"Believe\", which opened up with first week sales of 284,000 copies alone.\n\n Country music singer Shania Twain's album \"Up!\n\n\"",
+    "Adele\nAdele Laurie Blue Adkins (born 5 May 1988) ( ) is an English singer-songwriter.\n\n After graduating from the BRIT School for Performing Arts and Technology in 2006, Adele was given a recording contract by XL Recordings after a friend posted her demo on Myspace the same year.\n\n In 2007, she received the Brit Awards \"Critics' Choice\" award and won the BBC Sound of 2008 poll.\n\n Her debut album, \"19\", was released in 2008 to commercial and critical success.\n\n It is certified seven times platinum in the UK, and three times platinum in the US.\n\n The album contains her first song, \"Hometown Glory\", written when she was 16, which is based on her home suburb of West Norwood in London.\n\n An appearance she made on \"Saturday Night Live\" in late 2008 boosted her career in the US.\n\n At the 51st Grammy Awards in 2009, Adele received the awards for Best New Artist and Best Female Pop Vocal Performance."
+   ]
+  }
+ ]
+}

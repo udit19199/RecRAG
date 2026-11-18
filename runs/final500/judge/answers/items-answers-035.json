@@ -1,0 +1,564 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "0b3426052442865f",
+   "kind": "answer",
+   "question": "the primary reason for the creation of federal whistleblower statutes was to",
+   "gold_answers": [
+    "The Whistleblower Protection Act of 1989 , Pub. L. 101 - 12 as amended , is a United States federal law that protects federal whistleblowers who work for the government and report agency misconduct . A federal agency violates the Whistleblower Protection Act if agency authorities take ( or threaten to take ) retaliatory personnel action against any employee or applicant because of disclosure of information by that employee or applicant . Whistleblowers may file complaints that they believe reasonably evidences a violation of a law , rule or regulation ; gross mismanagement ; gross waste of funds ; an abuse of authority ; or a substantial and specific danger to public health or safety ."
+   ],
+   "model_answer": "Protect whistleblowers from retaliation for exposing government misconduct."
+  },
+  {
+   "id": "438f880f09e7ac42",
+   "kind": "answer",
+   "question": "i-o psychologists study our behavior on the job by",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Applying psychological principles and research methods to the workplace."
+  },
+  {
+   "id": "5d850869aa69caa1",
+   "kind": "answer",
+   "question": "list of states of australia and their capitals",
+   "gold_answers": [
+    "State and Territory Capitals of Australia Jurisdiction Capital City Population State / Territory Population Date of statehood Capital since Image Australia and Australian Capital Territory Canberra 435,019 403,468 Must remain a territory as per s. 125 of the Australian Constitution 1913 View of Civic from Mount Ainslie , with Telstra Tower in the background New South Wales Sydney 5,029,768 7,759,274 1788 1788 Skyline of the Sydney central business district Victoria Melbourne 4,725,316 6,179,249 1851 1851 The Melbourne skyline on the Yarra River Queensland Brisbane 2,360,241 4,848,877 1859 1860 Brisbane 's CBD , with the Story Bridge in the foreground Western Australia Perth 2,022,044 2,558,951 1829 1829 View of Perth CBD skyline South Australia Adelaide 1,324,279 1,713,054 1836 1836 View of Adelaide Skyline . Tasmania Hobart 224,462 517,588 1825 1826 View of the Hobart downtown district and Mount Wellington from Constitution Dock Northern Territory Darwin 145,916 245,740 Has not attained Statehood 1911 View of Darwin CBD"
+   ],
+   "model_answer": "New South Wales—Sydney; Victoria—Melbourne; Queensland—Brisbane; Western Australia—Perth; South Australia—Adelaide; Tasmania—Hobart."
+  },
+  {
+   "id": "d8cbcb9bd5dd4312",
+   "kind": "answer",
+   "question": "in us national flood insurance is available for which of the following",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Property owners and renters in participating communities."
+  },
+  {
+   "id": "a5269d633cf1098e",
+   "kind": "answer",
+   "question": "where does the word fore in golf originated",
+   "gold_answers": [
+    "`` Fore ! '' , originally an Australian interjection , is used to warn anyone standing or moving in the flight of a golf ball . The mention of the term in an 1881 Australian Golf Museum indicates that the term was in use at least as early as that period ."
+   ],
+   "model_answer": "It was likely derived from the military warning “beware before.”"
+  },
+  {
+   "id": "43889e0be745b3aa",
+   "kind": "answer",
+   "question": "subcommittee on antitrust competition policy and consumer rights",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "A subcommittee of the United States Senate Judiciary Committee."
+  },
+  {
+   "id": "a7c499635fbe7f3e",
+   "kind": "answer",
+   "question": "when is the next scandal episode coming out",
+   "gold_answers": [
+    "February 1, 2018"
+   ],
+   "model_answer": "January 25, 2018"
+  },
+  {
+   "id": "b6e2d2808222bc75",
+   "kind": "answer",
+   "question": "make a project report on agricultural crops grown in india",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Agricultural crops grown in India: rice, wheat, pulses, oilseeds, sugarcane, tea, cotton, cassava, banana, mustard, coffee, and coconut."
+  },
+  {
+   "id": "869975c7a0c78203",
+   "kind": "answer",
+   "question": "when will the next episode of my next guest needs no introduction",
+   "gold_answers": [
+    "May 31, 2018"
+   ],
+   "model_answer": "May 4, 2018"
+  },
+  {
+   "id": "2d6e865056cef8f1",
+   "kind": "answer",
+   "question": "what is the sentencing reform act of 1984",
+   "gold_answers": [
+    "U.S. federal statute intended to increase consistency in United States federal sentencing",
+    "a U.S. federal statute intended to increase consistency in United States federal sentencing"
+   ],
+   "model_answer": "A 1984 U.S. law that created federal sentencing guidelines and abolished federal parole."
+  },
+  {
+   "id": "843611d4ccf62d01",
+   "kind": "answer",
+   "question": "an edge that is between a vertex and itself is a",
+   "gold_answers": [
+    "loop (also called a self-loop or a \"buckle\")",
+    "loop"
+   ],
+   "model_answer": "A loop (self-loop)"
+  },
+  {
+   "id": "e570eb4121a93503",
+   "kind": "answer",
+   "question": "who has trained the most melbourne cup winners",
+   "gold_answers": [
+    "Bart Cummings"
+   ],
+   "model_answer": "Bart Cummings (12 wins)"
+  },
+  {
+   "id": "06edab6e6315b331",
+   "kind": "answer",
+   "question": "where do honey bees live in the world",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Worldwide, though most species are native to South and Southeast Asia."
+  },
+  {
+   "id": "3d64a7bf7141b30f",
+   "kind": "answer",
+   "question": "was nightmare before christmas originally a disney movie",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes—released under Disney’s Touchstone label."
+  },
+  {
+   "id": "e2cde3f2c3502578",
+   "kind": "answer",
+   "question": "what are three different types of hotel properties",
+   "gold_answers": [
+    "Hotel barge",
+    "Bed and breakfast",
+    "Botel"
+   ],
+   "model_answer": "Apartment hotel, boutique hotel, capsule hotel"
+  },
+  {
+   "id": "a9f2b8989e08488e",
+   "kind": "answer",
+   "question": "what were the technological developments of the old stone age",
+   "gold_answers": [
+    "Stone tools were made from a variety of stones . For example , flint and chert were shaped ( or chipped ) for use as cutting tools and weapons , while basalt and sandstone were used for ground stone tools , such as quern - stones . Wood , bone , shell , antler ( deer ) and other materials were widely used , as well . During the most recent part of the period , sediments ( such as clay ) were used to make pottery . Agriculture was developed and certain animals were domesticated as well ."
+   ],
+   "model_answer": "Stone-tool making, from Oldowan flakes to Acheulean hand axes and large cutting tools."
+  },
+  {
+   "id": "a1e1878f489395e7",
+   "kind": "answer",
+   "question": "who do the characters represent in 8 mile",
+   "gold_answers": [
+    "loosely on Eminem"
+   ],
+   "model_answer": "B-Rabbit represents Eminem; most other characters are fictional or composites."
+  },
+  {
+   "id": "c1b32f81a734997a",
+   "kind": "answer",
+   "question": "who played ricky in secret life of the american teenager",
+   "gold_answers": [
+    "Daren Maxwell Kagasoff"
+   ],
+   "model_answer": "Daren Kagasoff"
+  },
+  {
+   "id": "69b6ff1818d5591e",
+   "kind": "answer",
+   "question": "meaning of lyrics to wade in the water",
+   "gold_answers": [
+    "The song relates to both the Old and New Testaments . The verses reflect the Israelites ' escape out of Egypt as found in Exodus 14 . The chorus refers to healing : see John 5 : 4 , `` For an angel went down at a certain season into the pool , and troubled the water : whosoever then first after the troubling of the water stepped in was made whole of whatsoever disease he had . ''"
+   ],
+   "model_answer": "A spiritual song about freedom, deliverance, and escape from slavery."
+  },
+  {
+   "id": "971e4a858ca7dd5b",
+   "kind": "answer",
+   "question": "differentiate between dot matrix printer and daisy wheel printer",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Dot matrix: prints characters as dots; daisy wheel: prints fully formed characters from a rotating wheel."
+  },
+  {
+   "id": "4e3a03d600254edf",
+   "kind": "answer",
+   "question": "which of the following areas has nothing to do with the reinforcing effects of drugs",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Please provide the options."
+  },
+  {
+   "id": "d52866623f057b94",
+   "kind": "answer",
+   "question": "when does the i come before the e",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Before E, except after C."
+  },
+  {
+   "id": "6d23bcfffec42e2e",
+   "kind": "answer",
+   "question": "dean koontz dark rivers of the heart summary",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Spencer Grant and his dog Rocky search for Valerie Keene while fleeing a secret government agency, eventually joining a resistance group together."
+  },
+  {
+   "id": "19a057a39fa7451f",
+   "kind": "answer",
+   "question": "what are the requirements of passing national senior certificate",
+   "gold_answers": [
+    "Subjects are all taken on the same level - there is no higher or standard grade as in the past . There are three pass levels , each with different pass requirements. First is a pass with Higher certificate , one must obtain 40 % in home language , 40 % in two other subjects and must obtain 30 % in three other subjects . A learner who passed matric with higher certificate level , can not enroll for a University Degree nor a Diploma at an institute of higher learning . The mean mark in any subject is usually about 55 . Only a small proportion of candidates score an ' A ' in any subject ( from as little as 2 % to a maximum of about 10 % in subjects taken by highly select groups . ) A further 8 -- 15 % are likely to gain a ' B ' and about 20 -- 25 % achieve a ' C ' grade . The National Senior Certificate is a group certificate and records an aggregate mark ."
+   ],
+   "model_answer": "At least 40% in the home language, 40% in two other subjects, and 30% in three others."
+  },
+  {
+   "id": "f2cb80407c819714",
+   "kind": "answer",
+   "question": "what caused the breakup of the democratic republican party",
+   "gold_answers": [
+    "the disputed 1824 presidential election"
+   ],
+   "model_answer": "Factional divisions over federal power and the disputed 1824 election split the party."
+  },
+  {
+   "id": "70d3276a775e2268",
+   "kind": "answer",
+   "question": "who has won the mens singles title in the australian open tennis tournament",
+   "gold_answers": [
+    "Roger Federer"
+   ],
+   "model_answer": "Jannik Sinner"
+  },
+  {
+   "id": "3e11360d96b2f43c",
+   "kind": "answer",
+   "question": "my first love was a castle in the sky",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Castle in the Sky (Laputa)"
+  },
+  {
+   "id": "53e15ec85789cefd",
+   "kind": "answer",
+   "question": "where does the autobahn have no speed limit",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Mostly outside densely populated areas, especially in eastern Germany."
+  },
+  {
+   "id": "414618a79bfa1ba5",
+   "kind": "answer",
+   "question": "who were the church fathers and what did they do in the catholic church",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Ancient Christian theologians and teachers who helped shape Catholic doctrine and tradition."
+  },
+  {
+   "id": "8b71004069b244f2",
+   "kind": "answer",
+   "question": "what was going on in 1954 in the us",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Brown v. Board, McCarthy hearings, polio vaccinations, and “under God” added to the Pledge of Allegiance."
+  },
+  {
+   "id": "7fc340883defd436",
+   "kind": "answer",
+   "question": "where are the orcs made in lord of the rings",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "In muddy pits."
+  },
+  {
+   "id": "36fd1533bf3255e8",
+   "kind": "answer",
+   "question": "who was kat slater's sisters in eastenders",
+   "gold_answers": [
+    "Lynne",
+    "Little Mo",
+    "Zoe"
+   ],
+   "model_answer": "Lynne Slater, Little Mo Mitchell, and Zoe Slater."
+  },
+  {
+   "id": "cf5bae4329d28a61",
+   "kind": "answer",
+   "question": "with which regions does australia have historical ties",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Europe and the Asia-Pacific region"
+  },
+  {
+   "id": "3047293ba951f90c",
+   "kind": "answer",
+   "question": "differentiate between dot matrix printer and daisy wheel printer",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Dot-matrix: faster, lower-quality, can print graphics; daisy-wheel: higher-quality text, slower, limited to preset characters."
+  },
+  {
+   "id": "199569b8cfeea57e",
+   "kind": "answer",
+   "question": "meaning of joy to the world by three dog night",
+   "gold_answers": [
+    "When Hoyt Axton performed the song to the group , two of the three main vocalists -- Danny Hutton and Cory Wells -- rejected the song , but Chuck Negron felt that the band needed a `` silly song '' to help bring the band back together as a working unit . Negron also felt that the song `` was n't even close to our best record , but it might have been one of our most honest . ''",
+    "The song , which has been described by members of Three Dog Night as a `` kid 's song '' and a `` silly song '' , topped the main singles charts in North America , was certified gold by the RIAA , and has since been covered by multiple artists ."
+   ],
+   "model_answer": "A carefree celebration of life, love, and living in the moment."
+  },
+  {
+   "id": "ba3f26f67bbf2bd5",
+   "kind": "answer",
+   "question": "when did jack mccoy join law and order",
+   "gold_answers": [
+    "1994",
+    "the season-five premiere episode \"Second Opinion\"",
+    "in the season-five premiere episode \"Second Opinion\""
+   ],
+   "model_answer": "1994, in the Season 5 premiere “Second Opinion.”"
+  },
+  {
+   "id": "b0af2f1aadbeb382",
+   "kind": "answer",
+   "question": "where in the constitution is the concept of federalism established",
+   "gold_answers": [
+    "Because the states were preexisting political entities , the U.S. Constitution did not need to define or explain federalism in any one section but it often mentions the rights and responsibilities of state governments and state officials in relation to the federal government . The federal government has certain express powers ( also called enumerated powers ) which are powers spelled out in the Constitution , including the right to levy taxes , declare war , and regulate interstate and foreign commerce . In addition , the Necessary and Proper Clause gives the federal government the implied power to pass any law `` necessary and proper '' for the execution of its express powers . Other powers -- the reserved powers -- are reserved to the people or the states . The power delegated to the federal government was significantly expanded by the Supreme Court decision in McCulloch v. Maryland ( 1819 ) , amendments to the Constitution following the Civil War , and by some later amendments -- as well as the overall claim of the Civil War , that the states were legally subject to the final dictates of the federal government ."
+   ],
+   "model_answer": "No single section; reaffirmed by the Tenth Amendment."
+  },
+  {
+   "id": "84f6ba978549331c",
+   "kind": "answer",
+   "question": "the cast of a good day to die hard",
+   "gold_answers": [
+    "Bruce Willis",
+    "Jai Courtney",
+    "Sebastian Koch",
+    "Yuliya Snigir",
+    "Sergei Kolesnikov",
+    "Radivoje Bukvić",
+    "Mary Elizabeth Winstead"
+   ],
+   "model_answer": "Bruce Willis, Jai Courtney, Sebastian Koch, Yulia Snigir, and Rasha Bukvic."
+  },
+  {
+   "id": "ccdfab9518a1979f",
+   "kind": "answer",
+   "question": "is president's day a bank holiday in the us",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "e208faed48f51612",
+   "kind": "answer",
+   "question": "what is the share of agriculture in indian economy",
+   "gold_answers": [
+    "17.32%",
+    "23%"
+   ],
+   "model_answer": "23% of GDP (2016)"
+  },
+  {
+   "id": "0ebcfe38c7253ede",
+   "kind": "answer",
+   "question": "who has scored more goals in the premier league",
+   "gold_answers": [
+    "Alan Shearer"
+   ],
+   "model_answer": "Between whom?"
+  },
+  {
+   "id": "87d672f998d6ecb5",
+   "kind": "answer",
+   "question": "what were the technological developments of the old stone age",
+   "gold_answers": [
+    "Stone tools were made from a variety of stones . For example , flint and chert were shaped ( or chipped ) for use as cutting tools and weapons , while basalt and sandstone were used for ground stone tools , such as quern - stones . Wood , bone , shell , antler ( deer ) and other materials were widely used , as well . During the most recent part of the period , sediments ( such as clay ) were used to make pottery . Agriculture was developed and certain animals were domesticated as well ."
+   ],
+   "model_answer": "Simple stone tools, later refined into more advanced tools, along with the use of wood and bone."
+  },
+  {
+   "id": "45e7d3e010caad57",
+   "kind": "answer",
+   "question": "what awards did the harry potter movies win",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "BAFTA, Saturn, Empire, Phoenix Film Critics Society, BMI Film Music, ITV National Movie, National Movie, AFI Special, and Michael Balcon awards."
+  },
+  {
+   "id": "9bb56124644cfa21",
+   "kind": "answer",
+   "question": "what does hp mean in war and order",
+   "gold_answers": [
+    "hit points or health points"
+   ],
+   "model_answer": "Health points (hit points)"
+  },
+  {
+   "id": "75e33dbb6296be83",
+   "kind": "answer",
+   "question": "a best alternative to a negotiated agreement (batna)",
+   "gold_answers": [
+    "In negotiation theory , the best alternative to a negotiated agreement or BATNA is the most advantageous alternative course of action a party can take if negotiations fail and an agreement can not be reached . BATNA is the key focus and the driving force behind a successful negotiator . A party should generally not accept a worse resolution than its BATNA . Care should be taken , however , to ensure that deals are accurately valued , taking into account all considerations , such as relationship value , time value of money and the likelihood that the other party will live up to their side of the bargain . These other considerations are often difficult to value , since they are frequently based on uncertain or qualitative considerations , rather than easily measurable and quantifiable factors ."
+   ],
+   "model_answer": "Your best fallback option if negotiations fail."
+  },
+  {
+   "id": "05dcf51b4027e27c",
+   "kind": "answer",
+   "question": "how many credits for a bachelor's degree in science",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "360 credits for an honours degree; 300 for an ordinary degree."
+  },
+  {
+   "id": "08d9dcb07213e730",
+   "kind": "answer",
+   "question": "what are the kinds of dance and its definition",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Ballet—formal, graceful dance; hip-hop—street-style dance; salsa—energetic Latin partner dance; tap—rhythmic dance using footwork; folk—traditional cultural dance."
+  },
+  {
+   "id": "df89f79bb2d0c718",
+   "kind": "answer",
+   "question": "positive and negative impacts of internal migration in china",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Positive: boosts urban economies and incomes; negative: increases overcrowding, inequality, and family separation."
+  },
+  {
+   "id": "e56e5acefe6686b9",
+   "kind": "answer",
+   "question": "global trade during the ming dynasty of china",
+   "gold_answers": [
+    "The Ming dynasty also engaged in a thriving trade with both Europe and Japan . The amount of silver flowing into the Ming dynasty was estimated by Joseph Needham at 300 million taels , which is equivalent to more than 190 billion dollars in today 's money . In addition to silver , the Ming also imported many European firearms , in order to ensure the modernness of their weapons ."
+   ],
+   "model_answer": "Trade with Europe and Japan flourished, bringing large amounts of silver into Ming China."
+  },
+  {
+   "id": "c0a0dda3c87745d3",
+   "kind": "answer",
+   "question": "90 day fiance 1st season where are they now",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "They were still together as of 2017."
+  },
+  {
+   "id": "b5fadf0a44e4476c",
+   "kind": "answer",
+   "question": "who sings the theme song for the proud family",
+   "gold_answers": [
+    "Destiny's Child",
+    "Solange Knowles"
+   ],
+   "model_answer": "Solange Knowles and Destiny’s Child"
+  },
+  {
+   "id": "c404d4ff522a632c",
+   "kind": "answer",
+   "question": "when does bloom find out who she is",
+   "gold_answers": [
+    "Addio Magix!\"  / \"The Font of Dragon Fire"
+   ],
+   "model_answer": "In the first episode, when she discovers she’s a fairy."
+  },
+  {
+   "id": "3ec168ce7079db0c",
+   "kind": "answer",
+   "question": "polar moment of inertia vs area moment of inertia",
+   "gold_answers": [
+    "Polar moment of inertia is a quantity used to predict an object 's ability to resist torsion , in objects ( or segments of objects ) with an invariant circular cross section and no significant warping or out - of - plane deformation . It is used to calculate the angular displacement of an object subjected to a torque . It is analogous to the area moment of inertia , which characterizes an object 's ability to resist bending and is required to calculate displacement ."
+   ],
+   "model_answer": "Polar moment measures resistance to twisting; area moment measures resistance to bending."
+  },
+  {
+   "id": "2c2bf597f94e2595",
+   "kind": "answer",
+   "question": "why top soil has most amount of humus",
+   "gold_answers": [
+    "Much of the humus in most soils has persisted for more than 100 years , rather than having been decomposed into CO , and can be regarded as stable ; this organic matter has been protected from decomposition by microbial or enzyme action because it is hidden ( occluded ) inside small aggregates of soil particles , or tightly sorbed or complexed ) to clays . Most humus that is not protected in this way is decomposed within 10 years and can be regarded as less stable or more labile . Stable humus contributes few plant - available nutrients in soil , but it helps maintain its physical structure . A very stable form of humus is formed from the slow oxidation of soil carbon after the incorporation of finely powdered charcoal into the topsoil . This process is speculated to have been important in the formation of the very fertile Amazonian terra preta do Indio ."
+   ],
+   "model_answer": "Dead plant and animal matter accumulates and decays at the soil surface."
+  },
+  {
+   "id": "6ddcd88f73a91dfd",
+   "kind": "answer",
+   "question": "the primary reason for the creation of federal whistleblower statutes was to",
+   "gold_answers": [
+    "The Whistleblower Protection Act of 1989 , Pub. L. 101 - 12 as amended , is a United States federal law that protects federal whistleblowers who work for the government and report agency misconduct . A federal agency violates the Whistleblower Protection Act if agency authorities take ( or threaten to take ) retaliatory personnel action against any employee or applicant because of disclosure of information by that employee or applicant . Whistleblowers may file complaints that they believe reasonably evidences a violation of a law , rule or regulation ; gross mismanagement ; gross waste of funds ; an abuse of authority ; or a substantial and specific danger to public health or safety ."
+   ],
+   "model_answer": "Protect employees who report government wrongdoing."
+  },
+  {
+   "id": "3f5318528a6fd9e8",
+   "kind": "answer",
+   "question": "meaning of joy to the world by three dog night",
+   "gold_answers": [
+    "When Hoyt Axton performed the song to the group , two of the three main vocalists -- Danny Hutton and Cory Wells -- rejected the song , but Chuck Negron felt that the band needed a `` silly song '' to help bring the band back together as a working unit . Negron also felt that the song `` was n't even close to our best record , but it might have been one of our most honest . ''",
+    "The song , which has been described by members of Three Dog Night as a `` kid 's song '' and a `` silly song '' , topped the main singles charts in North America , was certified gold by the RIAA , and has since been covered by multiple artists ."
+   ],
+   "model_answer": "A playful, silly song with some nonsensical lyrics."
+  },
+  {
+   "id": "4a8628fe81790d8a",
+   "kind": "answer",
+   "question": "where does kylo ren's name come from",
+   "gold_answers": [
+    "the character, \"came to the name Kylo Ren when he joined a group called the Knights of Ren.\""
+   ],
+   "model_answer": "He took the name Kylo Ren upon joining the Knights of Ren."
+  },
+  {
+   "id": "116124a1c9373d52",
+   "kind": "answer",
+   "question": "where in the constitution is the concept of federalism established",
+   "gold_answers": [
+    "Because the states were preexisting political entities , the U.S. Constitution did not need to define or explain federalism in any one section but it often mentions the rights and responsibilities of state governments and state officials in relation to the federal government . The federal government has certain express powers ( also called enumerated powers ) which are powers spelled out in the Constitution , including the right to levy taxes , declare war , and regulate interstate and foreign commerce . In addition , the Necessary and Proper Clause gives the federal government the implied power to pass any law `` necessary and proper '' for the execution of its express powers . Other powers -- the reserved powers -- are reserved to the people or the states . The power delegated to the federal government was significantly expanded by the Supreme Court decision in McCulloch v. Maryland ( 1819 ) , amendments to the Constitution following the Civil War , and by some later amendments -- as well as the overall claim of the Civil War , that the states were legally subject to the final dictates of the federal government ."
+   ],
+   "model_answer": "No single section; federalism is reflected throughout the Constitution."
+  },
+  {
+   "id": "a941c9265d6438b8",
+   "kind": "answer",
+   "question": "what does the board of directors consist of",
+   "gold_answers": [
+    "a recognized group of people who jointly oversee the activities of an organization"
+   ],
+   "model_answer": "Directors, including inside and outside directors."
+  },
+  {
+   "id": "2a2991f85d635f6e",
+   "kind": "answer",
+   "question": "where is episode 13 of attack on titan",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Trost District"
+  }
+ ],
+ "evidence": []
+}

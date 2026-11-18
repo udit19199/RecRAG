@@ -1,0 +1,63 @@
+[
+  {"id": "1c2cb5dd9326bb52", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "is on trial for seven counts of wire fraud and conspiracy."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "ea42863f87bddd73", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "There was no attempt to remove Sam Altman from OpenAI by the co-founders of Anthropic,” said an Anthropic spokesperson, Sally Aldous."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "said an Anthropic spokesperson, Sally Aldous."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Altman’s exit “is indeed shocking as he has been the face of” generative AI technology, said Gartner analyst Arun Chandrasekaran."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Altman’s exit “is indeed shocking as he has been the face of” generative AI technology, said Gartner analyst Arun Chandrasekaran."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Altman’s exit “is indeed shocking as he has been the face of” generative AI technology, said Gartner analyst Arun Chandrasekaran."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]}
+  ]},
+  {"id": "0504a3fd89389d7d", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Republican lawmakers in each state believe that — and said explicitly in the course of debating and passing these laws"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "and we are hereby ordering them to stop doing that."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Under Musk, Twitter — now called X — has prioritized “free speech” managed by crowdsourced-based moderation."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Under Musk, Twitter — now called X — has prioritized “free speech” managed by crowdsourced-based moderation."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Under Musk, Twitter — now called X — has prioritized “free speech” managed by crowdsourced-based moderation."}]}
+  ]},
+  {"id": "c48ef296fa685566", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "152.67 -- After missing last week's game, Tyreek Hill now needs to"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]}
+  ]},
+  {"id": "5fb881294ba578c9", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "ac2fd8dab6256b75", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX?"}, {"item": 8, "quote": "After FTX declared bankruptcy, Bankman-Fried went on an extensive media tour"}]},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]}
+]

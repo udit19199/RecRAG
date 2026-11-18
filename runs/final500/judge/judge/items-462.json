@@ -1,0 +1,426 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "0f108695e4e4d855",
+   "gold": [
+    {
+     "sentence": " This episode represents a milestone in the history of the series as Snowball II is killed off, which, excluding the death of Homer's mother in season 19's \"Mona Leaves-a\", is to date the closest thing to an actual Simpson family member actually being killed off.",
+     "facts": {
+      "0.0": "This episode is a milestone in the history of the series.",
+      "0.1": "In this episode, Snowball II is killed off.",
+      "0.2": "Homer's mother died in season 19's Mona Leaves-a.",
+      "0.3": "Excluding the death of Homer's mother, the killing of Snowball II is to date the closest thing to an actual Simpson family member being killed off."
+     }
+    },
+    {
+     "sentence": "Mona Penelope Simpson (née Olsen) is a recurring fictional character in the animated television series \"The Simpsons\".",
+     "facts": {
+      "1.0": "Mona Penelope Simpson's maiden name is Olsen.",
+      "1.1": "Mona Penelope Simpson is a recurring fictional character.",
+      "1.2": "Mona Penelope Simpson is a character in the animated television series The Simpsons."
+     }
+    }
+   ],
+   "items": [
+    "Homer Simpson\nHomer Jay Simpson is a fictional character and the main protagonist of the American animated television series \"The Simpsons\" as the patriarch of the eponymous family.\n\n He is voiced by Dan Castellaneta and first appeared on television, along with the rest of his family, in \"The Tracey Ullman Show\" short \"Good Night\" on April 19, 1987.\n\n Homer was created and designed by cartoonist Matt Groening while he was waiting in the lobby of James L. Brooks' office.\n\n Groening had been called to pitch a series of shorts based on his comic strip \"Life in Hell\" but instead decided to create a new set of characters.\n\n He named the character after his father, Homer Groening.\n\n After appearing for three seasons on \"The Tracey Ullman Show\", the Simpson family got their own series on Fox that debuted December 17, 1989.",
+    "Mona Simpson (The Simpsons)\nMona Penelope Simpson (née Olsen) is a recurring fictional character in the animated television series \"The Simpsons\".\n\n She has been voiced by several actresses, including Maggie Roswell, Tress MacNeille, Pamela Hayden, and most prominently, Glenn Close.\n\n Glenn Close's performances as Mona have been well received by critics and she was named one of the top 25 guest stars on the show by IGN.",
+    "I, (Annoyed Grunt)-bot\n\"I, (Annoyed Grunt)-Bot\", also known as \"\"I, D'oh-Bot\"\", is the ninth episode of \"The Simpsons\"<nowiki>'</nowiki> fifteenth season.\n\n It originally aired on the Fox network in the United States on January 11, 2004.\n\n This episode represents a milestone in the history of the series as Snowball II is killed off, which, excluding the death of Homer's mother in season 19's \"Mona Leaves-a\", is to date the closest thing to an actual Simpson family member actually being killed off.",
+    "Good Night (The Simpsons short)\n\"Good Night\" (also known as \"Good Night Simpsons\") is the first of forty-eight Simpsons shorts that appeared on the variety show \"The Tracey Ullman Show\".\n\n It originally aired on the Fox network in the United States on April 19, 1987, during the third episode of \"The Tracey Ullman Show\" and marks the first appearance of the Simpson family — Homer, Marge, Bart, Lisa, and Maggie — on television.\n\n After three seasons on Tracey Ullman, the shorts would be adapted into the animated show \"The Simpsons\".\n\n \"Good Night\" has since been aired on the show in the episode \"The Simpsons 138th Episode Spectacular\" (in its entirety), along with several other Ullman shorts, and is one of the few shorts to ever be released on DVD, being included in the Season 1 DVD set.",
+    "My Mother the Carjacker\n\"My Mother the Carjacker\" is the second episode of \"The Simpsons\"<nowiki>'</nowiki> fifteenth season.\n\n It first aired on the Fox network in the United States on November 9, 2003.\n\n Homer receives a cryptic message in the newspaper informing him to come to a certain place at midnight, and soon discovers that the person who wrote the message is his mother, Mona Simpson.\n\n It was written by Michael Price and directed by Nancy Kruse.\n\n Glenn Close makes her second of six guest spots as Homer's mother.\n\n It has a direct link from the season seven episode, \"Mother Simpson\".\n\n It was nominated for a Writers Guild of America Award in 2004.\n\n In its original run, the episode received 12.4 million viewers.",
+    "Girly Edition\n\"Girly Edition\" is the twenty-first episode in the ninth season of the American animated television series \"The Simpsons\".\n\n It originally aired on the Fox network in the United States on April 19, 1998.\n\n In the episode, Lisa and Bart Simpson must co-anchor a new news program, though when Bart is seen as a more successful news anchor, Lisa becomes jealous and seeks revenge.\n\n Meanwhile, in the subplot, Homer Simpson gets a monkey helper because of his laziness.\n\n \"Girly Edition\" was the first episode written by Larry Doyle and was directed by Mark Kirkland.\n\n Much of the subplot was inspired by the film \"Monkey Shines\".\n\n Critics gave the episode positive reviews and it was well received by Lisa's voice actress Yeardley Smith.",
+    "Mona Leaves-a\n\"Mona Leaves-a\" is the nineteenth episode of \"The Simpsons\"<nowiki>'</nowiki> nineteenth season.\n\n It originally aired on the Fox network in the United States on May 11, 2008.\n\n The episode features the death of Homer's mother, Mona Simpson.\n\n Homer is reunited with his mother, Mona, but is not willing to forgive her for all the times she left him as a child.\n\n When she dies, a guilt-ridden Homer attempts to make it up to her by fulfilling her final wishes.\n\n It was written by Joel H. Cohen and directed by Mike B. Anderson and Ralph Sosa.\n\n Glenn Close makes her third appearance as Mona Simpson, and Lance Armstrong has a cameo as himself.",
+    "Moho House\n\"Moho House\" is the twenty first episode of the twenty-eighth season of the animated television series \"The Simpsons\", and the 617th episode of the series overall.\n\n It aired in the United States on Fox on May 7, 2017.",
+    "Homer Simpson, This Is Your Wife\n\"Homer Simpson, This Is Your Wife\" is the fifteenth episode of the seventeenth season of the American animated television sitcom \"The Simpsons\".\n\n It originally aired on the Fox network in the United States on March 26, 2006, and was watched by around ten million people during that broadcast.\n\n In the episode, Homer signs the Simpson family up for a reality show in which the mothers of two families switch places.\n\n Marge gets to live with a friendly man named Charles and his perfect son, while Homer, Bart, and Lisa must spend time with Charles' strict wife Verity.",
+    "The Squirt and the Whale\n\"The Squirt and the Whale\" is the nineteenth episode of \"The Simpsons\" twenty-first season.\n\n The 460th episode of the series overall, it originally aired on the Fox network in the United States on April 25, 2010.\n\n In the episode, the Simpson family attempt to save a beached whale that washed up onshore, only for it to die."
+   ]
+  },
+  {
+   "id": "2992ecffb290c5a9",
+   "gold": [
+    {
+     "sentence": "Andy Warhol ( ; born Andrew Warhola; August 6, 1928 – February 22, 1987) was an American artist, director and producer who was a leading figure in the visual art movement known as pop art.",
+     "facts": {
+      "0.0": "Andy Warhol was born Andrew Warhola.",
+      "0.1": "Andy Warhol's life span runs from August 6, 1928 to February 22, 1987.",
+      "0.2": "Andy Warhol was an American artist.",
+      "0.3": "Andy Warhol was an American director.",
+      "0.4": "Andy Warhol was an American producer.",
+      "0.5": "Andy Warhol was a leading figure in the visual art movement known as pop art."
+     }
+    },
+    {
+     "sentence": "Alexander Butler was a British film director who made over sixty features and short films during the 1910s and 1920s including many for G.B. Samuelson's production company.",
+     "facts": {
+      "1.0": "Alexander Butler was a British film director.",
+      "1.1": "Alexander Butler made over sixty features and short films.",
+      "1.2": "Alexander Butler made those features and short films during the 1910s and 1920s.",
+      "1.3": "Alexander Butler made many of those features and short films for G.B. Samuelson's production company."
+     }
+    }
+   ],
+   "items": [
+    "Alan Crosland\nAlan Crosland (August 10, 1894 – July 16, 1936) was an American stage actor and film director.",
+    "Kevin Brownlow\nKevin Brownlow (born 2 June 1938) is a British film historian, television documentary-maker, filmmaker, author, and film editor.\n\n Brownlow is best known for his work documenting the history of the silent era.\n\n Brownlow became interested in silent film at the age of eleven.\n\n This interest grew into a career spent documenting and restoring film.\n\n He has rescued many silent films and their history.\n\n His initiative in interviewing many largely forgotten, elderly film pioneers in the 1960s and 1970s preserved a legacy of early mass-entertainment cinema.\n\n Brownlow received an Academy Honorary Award at the 2nd Annual Governors Awards given by the Academy of Motion Picture Arts and Sciences on 13 November 2010.\n\n This was the first occasion on which an Academy Honorary Award was given to a film preservationist.",
+    "David Fincher\nDavid Andrew Leo Fincher (born August 28, 1962) is an American director and producer, notably for films, television series and music videos.\n\n He was nominated for the Academy Award for Best Director for \"The Curious Case of Benjamin Button\" (2008) and \"The Social Network\" (2010).\n\n For the latter, he won the Golden Globe Award for Best Director and the BAFTA Award for Best Direction.",
+    "Andy Warhol\nAndy Warhol ( ; born Andrew Warhola; August 6, 1928 – February 22, 1987) was an American artist, director and producer who was a leading figure in the visual art movement known as pop art.\n\n His works explore the relationship between artistic expression, celebrity culture, and advertising that flourished by the 1960s, and span a variety of media, including painting, silkscreening, photography, film, and sculpture.\n\n Some of his best known works include the silkscreen paintings \"Campbell's Soup Cans\" (1962) and \"Marilyn Diptych\" (1962), the experimental film \"Chelsea Girls\" (1966), and the multimedia events known as the \"Exploding Plastic Inevitable\" (1966–67).",
+    "Alexander Butler\nAlexander Butler was a British film director who made over sixty features and short films during the 1910s and 1920s including many for G.B. Samuelson's production company.\n\n Butler directed several British films in Hollywood in 1920, where Samuelson had made an arrangement with Universal Pictures.\n\n Amongst his notable films are the Sherlock Holmes adaptation \"The Valley of Fear\" (1916) and the early British horror film \"The Beetle\" (1919).",
+    "John Warhola\nJohn Warhola (May 31, 1925 – December 24, 2010) played a pivotal role in maintaining the legacy of his younger brother, pop artist Andy Warhol, assigned responsibility by their father on his deathbed to ensure that Andy attended college and serving as a trustee of the Andy Warhol Foundation for the Visual Arts after his brother's death in 1987.\n\n Warhola oversaw the establishment of The Andy Warhol Museum in Pittsburgh and the Andy Warhol Museum of Modern Art in Medzilaborce, Slovakia.",
+    "Green Coca-Cola Bottles\nWith respect to its artistic merits, Warhol’s painting utilizes repetitive imagery in the shape of hundred and twelve almost identical bottles, evoking a sense of mechanicalization which overlaps his former usage of mass culture objects.\n\n The widespread display of advertisement flooded the American public during the sixties, and Warhol had been successful in mapping it onto his canvas, no wonder it is considered one of Warhol’s masterpieces.",
+    "I Shot Andy Warhol\nI Shot Andy Warhol is a 1996 American-British independent film about the life of Valerie Solanas and her relationship with the artist Andy Warhol.\n\n The film marked the debut of Canadian director Mary Harron.\n\n The film stars Lili Taylor as Valerie, Jared Harris as Andy Warhol, and Martha Plimpton as Valerie's friend Stevie.\n\n Stephen Dorff plays Warhol superstar Candy Darling.\n\n John Cale of The Velvet Underground wrote the film's score despite protests from former band member Lou Reed.\n\n Yo La Tengo plays an anonymous band that is somewhat reminiscent of the group.",
+    "John Bailey (cinematographer)\nJohn Ira Bailey, A.S.C. (born August 10, 1942) is an American cinematographer and film director best known for his collaborations with directors Paul Schrader, Lawrence Kasdan, Michael Apted, and Ken Kwapis.\n\n In August 2017, Bailey was elected President of the Academy of Motion Picture Arts and Sciences for a four-year term.",
+    "The Andy Warhol Story\nThe Andy Warhol Story (1966) is an underground film directed by Andy Warhol with cinematography by Paul Morrissey, and starring Edie Sedgwick and Rene Ricard (as Andy Warhol)."
+   ]
+  },
+  {
+   "id": "db63edec30a742a2",
+   "gold": [
+    {
+     "sentence": "Francis Keogh Gleason (April 14, 1906 – December 18, 1982) was a resident set decorator at MGM studios for over 40 years.",
+     "facts": {
+      "0.0": "Francis Keogh Gleason was born on April 14, 1906.",
+      "0.1": "Francis Keogh Gleason died on December 18, 1982.",
+      "0.2": "Francis Keogh Gleason was a resident set decorator at MGM studios.",
+      "0.3": "Francis Keogh Gleason was a resident set decorator at MGM studios for over 40 years."
+     }
+    },
+    {
+     "sentence": " In that time he won 4 Academy Awards (for \"An American in Paris\" in 1951, \"The Bad and the Beautiful\" in 1952, \"Somebody Up There Likes Me\" in 1956 and \"Gigi\" in 1958) and was nominated an additional 3 times.",
+     "facts": {
+      "1.0": "Francis Keogh Gleason won 4 Academy Awards during his time at MGM.",
+      "1.1": "Francis Keogh Gleason won an Academy Award for 'An American in Paris' in 1951.",
+      "1.2": "Francis Keogh Gleason won an Academy Award for 'The Bad and the Beautiful' in 1952.",
+      "1.3": "Francis Keogh Gleason won an Academy Award for 'Somebody Up There Likes Me' in 1956.",
+      "1.4": "Francis Keogh Gleason won an Academy Award for 'Gigi' in 1958.",
+      "1.5": "Francis Keogh Gleason was nominated for an Academy Award an additional 3 times."
+     }
+    },
+    {
+     "sentence": "Somebody Up There Likes Me is a 1956 American drama film based on the life of middleweight boxing legend Rocky Graziano.",
+     "facts": {
+      "2.0": "Somebody Up There Likes Me is a 1956 American drama film.",
+      "2.1": "Somebody Up There Likes Me is based on the life of middleweight boxing legend Rocky Graziano."
+     }
+    }
+   ],
+   "items": [
+    "Rocky Graziano\nThomas Rocco Barbella (January 1, 1919 – May 22, 1990), better known as Rocky Graziano, was an American professional boxer who held the World Middleweight title.\n\n Graziano is considered one of the greatest knockout artists in boxing history, often displaying the capacity to take his opponent out with a single punch.\n\n He was ranked 23rd on \"The Ring\" magazine list of the greatest punchers of all time.\n\n He fought many of the best middleweights of the era including Sugar Ray Robinson.\n\n His turbulent and violent life story was the basis of the 1956 Oscar-winning drama film, \"Somebody Up There Likes Me\", based on his 1955 autobiography of the same title.",
+    "Rocky V\nRocky V is a 1990 American sports drama film.\n\n It is the fifth film in the \"Rocky\" series, written by and starring Sylvester Stallone, and co-starring Talia Shire, Stallone's real-life son Sage, and real-life boxer Tommy Morrison, with Morrison in the role of Tommy Gunn, a talented yet raw boxer.\n\n Sage played Robert Balboa, whose relationship with his famous father is explored.\n\n After Stallone directed the second through fourth films in the series, \"Rocky V\" saw the return of John G. Avildsen, whose direction of \"Rocky\" won him an Academy Award for Best Directing.",
+    "The Man with the Golden Arm\nThe Man with the Golden Arm is a 1955 American drama film with elements of film noir, based on the novel of the same name by Nelson Algren, which tells the story of a drug addict who gets clean while in prison, but struggles to stay that way in the outside world.\n\n Although the addictive drug is never identified in the film, according to the American Film Institute \"most contemporary and modern sources assume that it is heroin\", in contrast to Algren's book which named the drug as morphine.\n\n The film stars Frank Sinatra, Eleanor Parker, Kim Novak, Arnold Stang and Darren McGavin.\n\n It was adapted for the screen by Walter Newman, Lewis Meltzer and Ben Hecht (uncredited), and directed by Otto Preminger.\n\n The film's initial release sparked controversy due to its serious, in-depth treatment of the then-taboo subject of drug addiction.",
+    "Steve McQueen (director)\nSteven Rodney \"Steve\" McQueen (born 9 October 1969) is an English film director, producer, screenwriter, and video artist.\n\n For his 2013 film, \"12 Years a Slave\", a historical drama adaptation of an 1853 slave narrative memoir, he won an Academy Award, BAFTA Award for Best Film, and Golden Globe Award for Best Motion Picture – Drama, as a producer, and he also received the award for Best Director from the New York Film Critics Circle.\n\n McQueen is the first black filmmaker to win an Academy Award for Best Picture.\n\n McQueen is known for his collaborations with actor Michael Fassbender, who has starred in all three of McQueen's feature films as of 2014.\n\n McQueen's other feature films are \"Hunger\" (2008), a historical drama about the 1981 Irish hunger strike, and \"Shame\" (2011), a drama about an executive struggling with sex addiction.",
+    "Paul Schrader\nPaul Joseph Schrader (born July 22, 1946) is an American screenwriter, film director, and film critic.\n\n Schrader wrote or co-wrote screenplays for four Martin Scorsese films: \"Taxi Driver\" (1976), \"Raging Bull\" (1980), \"The Last Temptation of Christ\" (1988), and \"Bringing Out the Dead\" (1999).\n\n Schrader has also directed 18 feature films, including his directing debut crime drama, \"Blue Collar\" (co-written with his brother, Leonard Schrader), the crime drama \"Hardcore\" (a loosely autobiographical film also written by Schrader), his 1982 remake of the horror classic \"Cat People\", the crime drama \"American Gigolo\" (1980), the biographical drama \"\" (1985), the cult film \"Light Sleeper\" (1992), the drama \"Affliction\" (1997), the biographical film \"Auto Focus\" (2002), and the erotic dramatic thriller \"The Canyons\" (2013).",
+    "Somebody Up There Likes Me (1956 film)\nSomebody Up There Likes Me is a 1956 American drama film based on the life of middleweight boxing legend Rocky Graziano.\n\n Joseph Ruttenberg was awarded a 1956 Oscar in the category of Best Cinematography (Black and White).\n\n The film also won the Oscar for Best Art Direction (Cedric Gibbons, Malcolm F. Brown, Edwin B. Willis, F. Keogh Gleason).\n\n It was directed by Robert Wise.",
+    "F. Keogh Gleason\nFrancis Keogh Gleason (April 14, 1906 – December 18, 1982) was a resident set decorator at MGM studios for over 40 years.\n\n In that time he won 4 Academy Awards (for \"An American in Paris\" in 1951, \"The Bad and the Beautiful\" in 1952, \"Somebody Up There Likes Me\" in 1956 and \"Gigi\" in 1958) and was nominated an additional 3 times.\n\n Gleason graduated from the Minnesota School of Fine Arts (now known as the Minneapolis College of Art and Design) in 1927.",
+    "Geoffrey Rush\nGeoffrey Roy Rush {'1': \", '2': \", '3': \", '4': \"} (born 6 July 1951) is an Australian actor and film producer.\n\n Rush is the youngest amongst the few people who have won the \"Triple Crown of Acting\": the Academy Award, the Primetime Emmy Award, and the Tony Award.\n\n He has won one Academy Award for acting (from four nominations), three British Academy Film Awards (from five nominations), two Golden Globe Awards and four Screen Actors Guild Awards. Rush is the founding President of the Australian Academy of Cinema and Television Arts and was named the 2012 Australian of the Year.\n\n He is also the first actor to win the Academy Award, BAFTA Award, Critics' Choice Movie Award, Golden Globe Award, and Screen Actors Guild Award for a single performance in film for his performance in \"Shine\" (1996).",
+    "Richard Farnsworth\nRichard W. Farnsworth (September 1, 1920 – October 6, 2000) was an American actor and stuntman.\n\n He is best known for his performances in \"The Grey Fox\" (1982), for which he received a Golden Globe Award nomination, \"Anne of Green Gables\" (1985), \"Misery\" (1990), and \"The Straight Story\" (1999), for which he received a nomination for the Academy Award for Best Actor.\n\n His sudden death followed a long struggle with prostate cancer.",
+    "The Life of Emile Zola\nThe Life of Emile Zola is a 1937 American biographical film about French author Émile Zola, played by Paul Muni and directed by William Dieterle.\n\n It has the distinction of being the second biographical film to win the Oscar for Best Picture.\n\n It premiered at the Los Angeles Carthay Circle Theatre to great success both critically and financially.\n\n Contemporary reviews cited it the best biographical film made up to that time.\n\n In 2000, it was selected for preservation in the United States National Film Registry by the Library of Congress as being \"culturally, historically, or aesthetically significant\"."
+   ]
+  },
+  {
+   "id": "6f590686cb328a4a",
+   "gold": [
+    {
+     "sentence": "Sigmund Werner Paul Jähn (born 13 February 1937) is a German cosmonaut and pilot, who in 1978 became the first East German (and German native) to fly in space as part of the Soviet Union's Interkosmos programme.",
+     "facts": {
+      "0.0": "Sigmund Werner Paul Jähn was born on 13 February 1937.",
+      "0.1": "Sigmund Werner Paul Jähn is a German cosmonaut.",
+      "0.2": "Sigmund Werner Paul Jähn is a pilot.",
+      "0.3": "In 1978 Sigmund Werner Paul Jähn became the first East German to fly in space.",
+      "0.4": "In 1978 Sigmund Werner Paul Jähn became the first German native to fly in space.",
+      "0.5": "The 1978 flight by Sigmund Werner Paul Jähn was part of the Soviet Union's Interkosmos programme."
+     }
+    },
+    {
+     "sentence": "Arne Christer Fuglesang (] ) (born March 18, 1957 in Stockholm) is a Swedish physicist and an ESA astronaut.",
+     "facts": {
+      "1.0": "Arne Christer Fuglesang was born on March 18, 1957.",
+      "1.1": "Arne Christer Fuglesang was born in Stockholm.",
+      "1.2": "Arne Christer Fuglesang is a Swedish physicist.",
+      "1.3": "Arne Christer Fuglesang is an ESA astronaut."
+     }
+    },
+    {
+     "sentence": " He was first launched aboard the STS-116 Space Shuttle mission on December 10, 2006, at 01:47 GMT, making him the first Swedish citizen in space.",
+     "facts": {
+      "2.0": "Arne Christer Fuglesang was first launched aboard the STS-116 Space Shuttle mission.",
+      "2.1": "That launch was on December 10, 2006, at 01:47 GMT.",
+      "2.2": "Arne Christer Fuglesang became the first Swedish citizen in space."
+     }
+    }
+   ],
+   "items": [
+    "Bertalan Farkas\nBertalan Farkas (born August 2, 1949) is the first Hungarian cosmonaut and the first Esperantist in space.\n\n He is currently the president of Airlines Service and Trade.\n\n With Charles Simonyi's travel, Farkas is no longer the only Hungarian who has been to space (he is still the only astronaut, as Simonyi flew as a space tourist).",
+    "Jean-Loup Chrétien\nJean-Loup Jacques Marie Chrétien (born 20 August 1938) is a French retired \"Général de Brigade\" (brigadier general) in the \"Armée de l'Air\" (French air force), and a former CNES spationaut.\n\n He flew on two Franco-Soviet space missions and a NASA Space Shuttle mission.\n\n Chrétien was the first Frenchman and the first western European in space.",
+    "Jean-François Clervoy\nJean-François André Clervoy (born 19 November 1958) is a French engineer and a CNES and ESA astronaut.\n\n He is a veteran of three NASA Space Shuttle missions.",
+    "Sigmund Jähn\nSigmund Werner Paul Jähn (born 13 February 1937) is a German cosmonaut and pilot, who in 1978 became the first East German (and German native) to fly in space as part of the Soviet Union's Interkosmos programme.",
+    "Eberhard Köllner\nEberhard Köllner (born 29 September 1939 in Stassfurt, Germany) was selected for Soyuz 31 as the backup for Sigmund Jähn.",
+    "Ulf Merbold\nDr. Ulf Dietrich Merbold (born June 20, 1941) is the first West German citizen and second German native (after Sigmund Jähn) to have flown in space.\n\n He is also the first member of the European Space Agency Astronaut Corps to participate in a spaceflight mission and the first non-US citizen to reach orbit in a US spacecraft.\n\n In 1983, he and Byron Lichtenberg became the first Payload Specialists to fly on the shuttle.",
+    "Samantha Cristoforetti\nSamantha Cristoforetti (] ; born 26 April 1977 in Milan) is an Italian European Space Agency astronaut, Italian Air Force pilot and engineer.\n\n She holds the record for the longest uninterrupted spaceflight of a European astronaut (199 days, 16 hours), and until June 2017 held the record for the longest single space flight by a woman until this was broken by Peggy Whitson.\n\n She is also the first Italian woman in space.\n\n Samantha Cristoforetti is also known as the first person who brewed an espresso coffee in space.",
+    "Christer Fuglesang\nArne Christer Fuglesang (] ) (born March 18, 1957 in Stockholm) is a Swedish physicist and an ESA astronaut.\n\n He was first launched aboard the STS-116 Space Shuttle mission on December 10, 2006, at 01:47 GMT, making him the first Swedish citizen in space.",
+    "Claude Nicollier\nClaude Nicollier (born 2 September 1944 in Vevey, Switzerland) is the first astronaut from Switzerland.\n\n He has flown on four Space Shuttle missions.\n\n His first spaceflight (STS-46) was in 1992, and his final spaceflight (STS-103) was in 1999.\n\n He took part in two servicing missions to the Hubble Space Telescope (called STS-61 and STS-103).\n\n During his final spaceflight he participated in a spacewalk, becoming the first European Space Agency astronaut to do so during a Space Shuttle mission (previous ESA astronauts conducted spacewalks aboard \"Mir\", see List of spacewalks and moonwalks 1965–1999).\n\n In 2000 he was assigned to the Astronaut Office Extravehicular Activity Branch, while maintaining a position as Lead ESA Astronaut in Houston.\n\n Nicollier retired from ESA in April 2007.",
+    "Hans Schlegel\nHans Wilhelm Schlegel (Überlingen, 3 August 1951) is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions."
+   ]
+  },
+  {
+   "id": "e663ec512b15d915",
+   "gold": [
+    {
+     "sentence": "Todos Me Miran (\"\"Everyone looks at me\"\") is a single from the Mexican artist Gloria Trevi reaching number 32 on Latin charts, and becoming a club anthem that confirmed Trevi's status as a gay icon.",
+     "facts": {
+      "0.0": "Todos Me Miran ('Everyone looks at me') is a single from the Mexican artist Gloria Trevi.",
+      "0.1": "Todos Me Miran reached number 32 on Latin charts.",
+      "0.2": "Todos Me Miran became a club anthem.",
+      "0.3": "Todos Me Miran confirmed Trevi's status as a gay icon."
+     }
+    },
+    {
+     "sentence": "Gloria Trevi (] ; born Gloria de los Ángeles Treviño Ruiz on February 15, 1968) is a Mexican singer and songwriter.",
+     "facts": {
+      "1.0": "Gloria Trevi was born Gloria de los Angeles Trevino Ruiz.",
+      "1.1": "Gloria Trevi was born on February 15, 1968.",
+      "1.2": "Gloria Trevi is a Mexican singer.",
+      "1.3": "Gloria Trevi is a Mexican songwriter."
+     }
+    }
+   ],
+   "items": [
+    "Tu Ángel de la Guarda\nTu Ángel de la Guarda (\"Your guardian angel\") is Gloria Trevi's second album, and it contained one of her signature songs and her most widely known hit, \"Pelo Suelto\".\n\n It also contained other hit songs such as \"Tu angel de la guarda\", \"Ya no\", \"Virgen de las virgenes\", and \"Hoy me ire de casa\".\n\n This album was very controversial different from other artists' albums such as Lucero.\n\n \"Virgen de las virgenes\" mocked girls who said they were virgins but had actually lost their virginity, and \"¡Ya no!\"\n\n went against the machismo movement of México.\n\n Following the release of the album, Gloria was working hard in promoting radio, television and print media.\n\n Trevi first traveled abroad visiting American Union countries, Puerto Rico, Argentina, Colombia, Guatemala, Venezuela, Costa Rica, and received a Gold and Platinum for high sales achieved.",
+    "Todos Los Romances\nTodos Los Romances (English: \"All the Romances\" ) is a three-disc compilation album by Mexican singer Luis Miguel.\n\n Released on 11 August 1998 by WEA Latina, the record features the three previously released \"Romance\"-themed albums in which Miguel covered classic boleros in each of them: \"Romance\" (1991), \"Segundo Romance\" (1994), and \"Romances\" (1997).\n\n An editor for AllMusic rated the album four of five stars.\n\n Commercially, \"Todos Los Romances\" peaked at number four in Spain and was certified double Platinum in the country.\n\n It also achieved Gold status in Argentina and peaked at number 12 on the \"Billboard\"'s Top Latin Albums in the United States.",
+    "Graph query row:\nsong: Todos Me Miran\nrelationship: CREATED_BY\nperson: Gloria Trevi\noccupation: singer\nnationality: Mexican",
+    "Mexico Espanol Airplay\nMexico Espanol Airplay is a record chart published weekly by \"Billboard\" magazine for Spanish language singles released in Mexico.\n\n According to \"Billboard\"' s electronic database, the first chart was published on October 1, 2011, with the track \"Amor Clandestino\" by Mexican band Maná at number one; in the same year, fellow Mexican duo Jesse & Joy reached the top of the chart with their single \"¡Corre!\n\n\", the first of their six number-one singles in the chart, the most for any act. \"\n\n¡Corre!\"\n\n also won the Latin Grammy Awards for Record of the Year and Song of the Year in 2012.\n\n Starting on December 1, 2012, Mexican singer Thalía spent 10 non-consecutive weeks at number-one with \"Manías\", the first single from the album \"Habítame Siempre\", which won the Lo Nuestro Award for Pop Album of the Year. \"\n\nHoy Tengo Ganas de Ti\" by Mexican artist Alejandro Fernández and American singer Christina Aguilera reached number-one in 2013, and also peaked at number four in Spain.",
+    "Gloria Trevi\nGloria Trevi (] ; born Gloria de los Ángeles Treviño Ruiz on February 15, 1968) is a Mexican singer and songwriter.",
+    "No eres tú, soy yo\nNo eres tú, soy yo (English: It's not you, it's me ) is a 2010 Mexican romantic comedy directed by Alejandro Springall starring Eugenio Derbez, Alejandra Barros and Martina García and based on the Argentinean film \"No sos vos, soy yo\" (2004), written by Juan Taratuto.\n\n It was produced by Matthias Eherenberg and filmed in Mexico City.",
+    "Todos Me Miran\nTodos Me Miran (\"\"Everyone looks at me\"\") is a single from the Mexican artist Gloria Trevi reaching number 32 on Latin charts, and becoming a club anthem that confirmed Trevi's status as a gay icon.\n\n The song, as interpreted in the music video, is about a young man who dares to crossdress in spite of society's opinions.",
+    "Premio Lo Nuestro 2003\nIn the Regional Mexican, Pilar Montenegro took three awards for Regional Mexican Song of the Year, Pop Song of the Year (\"Quitame Ese Hombre\"), and for Best Regional Mexican Female Artist.\n\n In the tropical genre, Celia Cruz took home with four great awards of the night for Best Salsa Performance, Best Tropical Female Artist, Best Tropical Song of the year and Tropical Album of the Year.\n\n At the night, the greatest performance was a medley of top Latin hits from the last 15 years, performed by the artists that made them famous, including Vikki Carr, Son by Four, Los Ilegales, La Mafia, Luis Enrique, Wilfrido Vargas and Olga Tañón.\n\n There was a great tribute to Celia Cruz by the world-famous salsa group \"Fania All-Stars\", of which Cruz was a member during the 1970s, reunited for an exclusive performance that rocked the house.",
+    "De Contrabando\n\"De Contrabando\" (\"Smuggled\") is a song written by Joan Sebastian.\n\n It was first performed by Mexican singer Imelda, and included on her album \"Aparentemente\", released in 1991.\n\n Six years later, was performed by fellow Mexican singer Zayda Y Los Culpables and released by Musart Records as the second single from her self-titled album in 1997.\n\n Mexican-American singer Jenni Rivera recorded a cover version for her studio album \"Parrandera, Rebelde y Atrevida\".\n\n \"De Contrabando\" was released as the second single from the album in 2006.\n\n In the United States, the song peaked at number fourteen on the \"Billboard\" Hot Latin Songs chart and number one on the \"Billboard\" Regional Mexican Songs chart.\n\n The song was nominated for a Lo Nuestro Award for Regional Mexican Song of the Year at the 2007 Lo Nuestro Awards.\n\n Rivera was also recognized for Regional Mexican Female Artist of the Year.\n\n Rivera was also awarded Regional Mexican Airplay Song of the Year for at the 2007 Latin \"Billboard\" Music Awards.",
+    "La Trayectoria (Gloria Trevi album)\nLa Trayectoria (In English: The Trajectory) is a 2006 double live CD and multimedia DVD release by the Mexican singer Gloria Trevi.\n\n The DVD includes scenes from parts of the tour from the Palacio de los Deportes of the Mexico City and The Arena Monterrey and the CD includes four new songs like: \"Todos Me Miran\" (They All Look At Me) is the first single compilation study of Mexican singer \"Gloria Trevi\", this is an unreleased song from the album."
+   ]
+  },
+  {
+   "id": "78549c2f54c28591",
+   "gold": [
+    {
+     "sentence": "US Airways Flight 1549 was an Airbus A320-214 which, three minutes after takeoff from New York City's LaGuardia Airport on January 15, 2009, struck a flock of Canada geese just northeast of the George Washington Bridge and consequently lost all engine power.",
+     "facts": {
+      "0.0": "US Airways Flight 1549 was an Airbus A320-214.",
+      "0.1": "US Airways Flight 1549 took off from New York City's LaGuardia Airport.",
+      "0.2": "US Airways Flight 1549 took off on January 15, 2009.",
+      "0.3": "US Airways Flight 1549 struck a flock of Canada geese three minutes after takeoff.",
+      "0.4": "The bird strike happened just northeast of the George Washington Bridge.",
+      "0.5": "US Airways Flight 1549 consequently lost all engine power."
+     }
+    },
+    {
+     "sentence": " Unable to reach any airport, pilots Chesley Sullenberger and Jeffrey Skiles glided the plane to a ditching in the Hudson River off Midtown Manhattan.",
+     "facts": {
+      "1.0": "Pilots could not reach any airport.",
+      "1.1": "Pilots Chesley Sullenberger and Jeffrey Skiles glided the plane to a ditching in the Hudson River.",
+      "1.2": "The Hudson River ditching was off Midtown Manhattan."
+     }
+    },
+    {
+     "sentence": "Chesley Burnett \"Sully\" Sullenberger III (born 1951) is an American retired airline captain celebrated for the January 15, 2009 water landing of US Airways Flight 1549 in the Hudson River off Manhattan after the plane was disabled by striking a flock of Canada geese immediately after takeoff; all 155 people aboard survived.",
+     "facts": {
+      "2.0": "Chesley Burnett \"Sully\" Sullenberger III was born in 1951.",
+      "2.1": "Chesley Sullenberger is an American retired airline captain.",
+      "2.2": "Chesley Sullenberger is celebrated for the January 15, 2009 water landing of US Airways Flight 1549 in the Hudson River off Manhattan.",
+      "2.3": "The plane was disabled by striking a flock of Canada geese immediately after takeoff.",
+      "2.4": "All 155 people aboard survived."
+     }
+    }
+   ],
+   "items": [
+    "Chesley Sullenberger\nChesley Burnett \"Sully\" Sullenberger III (born 1951) is an American retired airline captain celebrated for the January 15, 2009 water landing of US Airways Flight 1549 in the Hudson River off Manhattan after the plane was disabled by striking a flock of Canada geese immediately after takeoff; all 155 people aboard survived.\n\n Sullenberger is an international speaker on airline safety and has helped develop new protocols for airline safety.\n\n He served as the co-chairman, along with First Officer Jeffrey Skiles, of the EAA's Young Eagles youth introduction-to-aviation program from 2009 to 2013.\n\n He retired from US Airways after 30 years as a commercial pilot on March 3, 2010.\n\n In May of the following year, Sullenberger was hired by CBS News as an Aviation and Safety Expert.",
+    "US Airline Pilots Association\nThe US Airline Pilots Association (USAPA) was the collective bargaining agent for the majority former US Airways \"East\" pilots, and the minority former America West Airlines \"West\" pilots.\n\n USAPA bullied its West pilots, and violated its duty to fairly represent them.\n\n USAPA was led by East pilot Mike Cleary.\n\n USAPA was formed by East pilots for the exclusive and immoral - if not illegal - purpose of attempting to renege upon the results of a binding arbitration into which the East pilots had previously entered with the West pilots.\n\n After USAPA's dissolution, a number of East activists withheld millions of dollars from the entire membership.\n\n During the fair representation trial, USAPA used as courtroom witnesses East pilots Sully Sullenberger and Jeffrey Skiles of the infamous Hudson River flight 1549.\n\n Both witnesses testified in support of the discriminatory practices of USAPA, and why they felt justified in bullying, and attempting to break their arbitrated agreement with the innocent West pilots.",
+    "ALM Flight 980\nALM Antillean Airlines Flight 980 was a flight scheduled to fly from John F. Kennedy International Airport in New York City to Princess Juliana International Airport in St. Maarten, Netherlands Antilles, on 2 May 1970.\n\n After several unsuccessful landing attempts, the aircraft's fuel was exhausted and it made a forced water landing (ditching) in the Caribbean Sea 48 km (30 mi) off St. Croix, with 23 fatalities and 40 survivors.\n\n The accident is one of a small number of intentional water ditchings of jet airliners.",
+    "Charles J. Biddle (aviator)\nMajor Charles John Biddle (13 May 1890 – 22 March 1972) was an American aviator, attorney, and author.\n\n He was a flying ace during World War I.\n\n Postwar, he launched a career in law and wrote his memoirs.",
+    "Water landing\nA water landing is, in the broadest sense, a landing on a body of water.\n\n Some aircraft such as floatplanes land on water as a matter of course.",
+    "1965 Carmel mid-air collision\nThe 1965 Carmel mid-air collision occurred on December 4, 1965, when Eastern Air Lines Flight 853 (N6218C), a Lockheed Super Constellation en route from Boston Logan International Airport to Newark International Airport, collided in mid-air with Trans World Airlines Flight 42 (N748TW), a Boeing 707-131B en route from San Francisco International Airport to John F. Kennedy International Airport, over Carmel, New York, United States.",
+    "Wayne W. Lambert\nWayne W. Lambert (born 1936) was an Air force Brigadier General (United States).\n\n He attended the United States Military Academy at West Point, New York, after already having served a year in the US Army.\n\n Lambert graduated from the Academy in 1959 and was commissioned a 2nd Lieutenant in the USAF that same year.\n\n He trained as a bomber pilot, receiving his Aviator badge in 1960.\n\n He has logged over 5,800 flying hours with the US Air Force.\n\n A seasoned combat veteran, Lambert flew over 225 combat missions in South East Asia as a B-52 crew member.\n\n He was awarded the Distinguished Flying Cross (United States) and received 10 awards of the Air Medal for his service during the Vietnamese War.\n\n After serving in a succession of lesser command positions, Lambert was promoted to the rank of Brigadier General in 1983, assuming command of the former Strategic Air Command’s 7th Air Division, headquartered then at Ramstein Air Base in West Germany, and overseeing SAC operations throughout the European theater.\n\n The Brigadier General retired from the US Air Force in 1989.",
+    "Bird strike\nA bird strike—sometimes called birdstrike, bird ingestion (for an engine), bird hit, or bird aircraft strike hazard (BASH)—is a collision between an airborne animal (usually a bird or bat) and a manmade vehicle, especially an aircraft.\n\n The term is also used for bird deaths resulting from collisions with structures such as power lines, towers and wind turbines (see Bird-skyscraper collisions and Towerkill).",
+    "US Airways Flight 1549\nUS Airways Flight 1549 was an Airbus A320-214 which, three minutes after takeoff from New York City's LaGuardia Airport on January 15, 2009, struck a flock of Canada geese just northeast of the George Washington Bridge and consequently lost all engine power.\n\n Unable to reach any airport, pilots Chesley Sullenberger and Jeffrey Skiles glided the plane to a ditching in the Hudson River off Midtown Manhattan.\n\n All 155 people aboard were rescued by nearby boats and there were few serious injuries.",
+    "John Christiansen\nJohn “Chris” Christiansen (May 1, 1923 － September 12, 1998) was the chief military test pilot for Lockheed California Company for over 30 years.\n\n He might be most known for having performed Lockheed S-3 Viking's maiden flight on January 21, 1972.\n\n His assignments also included the initial test flights of Lockheed P-3 Orion.\n\n Christiansen was born in Oslo, Norway in 1923 and became an American citizen in 1939.\n\n He later served in the U.S. Navy during World War II and the Korean Conflict.\n\n He began experimental flying for Lockheed Martin in 1953, and worked there until his retirement in 1984.\n\n He was a fellow at Society of Experimental Test Pilots."
+   ]
+  },
+  {
+   "id": "fa54093ccd2bc89c",
+   "gold": [
+    {
+     "sentence": "Martin Archer Flavin (November 2, 1883 – December 27, 1967) was an American playwright and novelist.",
+     "facts": {
+      "0.0": "Martin Archer Flavin was born on November 2, 1883.",
+      "0.1": "Martin Archer Flavin died on December 27, 1967.",
+      "0.2": "Martin Archer Flavin was an American playwright.",
+      "0.3": "Martin Archer Flavin was an American novelist."
+     }
+    },
+    {
+     "sentence": "Peter Bradford Benchley (May 8, 1940 – February 11, 2006) was an American author and screenwriter.",
+     "facts": {
+      "1.0": "Peter Bradford Benchley was born on May 8, 1940.",
+      "1.1": "Peter Bradford Benchley died on February 11, 2006.",
+      "1.2": "Peter Bradford Benchley was an American author.",
+      "1.3": "Peter Bradford Benchley was an American screenwriter."
+     }
+    }
+   ],
+   "items": [
+    "Aaron Barrett\nAaron Asher Barrett (born August 30, 1974) is the lead singer, lead guitarist, and primary songwriter of the American ska-punk band Reel Big Fish.\n\n Prior to forming Reel Big Fish, Barrett played trombone in another ska-punk act, The Scholars, along with future Reel Big Fish bandmates Scott Klopfenstein and Grant Barry.",
+    "Martin Flavin\nMartin Archer Flavin (November 2, 1883 – December 27, 1967) was an American playwright and novelist.",
+    "Martin Flavin (politician)\nMartin Flavin (1841– 30 December 1916) was an Irish nationalist politician, butter merchant and prominent businessman from Cork.\n\n He was a Member of Parliament (MP) from 1891 to 1892 .",
+    "Michael Breed\nMichael S. Breed (born May 14, 1962, in Greenwich, Connecticut) is a professional golf instructor and television host.\n\n In 2003, he was selected as a Top 100 Instructor in America by \"Golf Magazine\", in 2011, he was voted one of the Top 50 Instructors in America by Golf Digest (now 13th on this list, and #1 in the state of New York.)\n\n, in 2012, Breed was chosen as the PGA's National Teacher of the Year.\n\n Prior to his time as a television host, Breed was the Head Golf Professional at Sunningdale Country Club for 12 years from 2001–2012, and the Head Golf Professional at Birchwood Country Club, as well as the Assistant Professional at Deepdale Golf Club and Augusta National Golf Club.\n\n He has served on different boards for the Metropolitan PGA for over 10 years and has represented the PGA of America at the National Golf Day in Washington D.C. since 2012.\n\n He is involved in charities such as The First Tee, Folds of Honor, Hope for the Warriors, Wounded Warriors Foundation and Salute Military Golf Association.",
+    "Jerry Beck\nJerry Beck (born February 9, 1955 in New York City) is an American animation historian, author, blogger, and video producer.\n\n The author and/or editor of several books on classic American animation and classic characters, including \"The 50 Greatest Cartoons\" (1994), \"The Animated Movie Guide\" (2005), \"Not Just Cartoons: Nicktoons!\"\n\n (2007), \"The Flintstones: The Official Guide to the Cartoon Classic\" (2011), \"The Hanna-Barbera Treasury: Rare Art Mementos from Your Favorite Cartoon Classics\" (2007), \"The SpongeBob SquarePants Experience: A Deep Dive into the World of Bikini Bottom\" (2013), \"Pink Panther: The Ultimate Guide\" (2005), and \"Looney Tunes and Merrie Melodies: A Complete Illustrated Guide to the Warner Bros.\n\n Cartoons\" (with Will Friedwald, 1989) alongside \"The 100 Greatest Looney Tunes Cartoons\" (2010).\n\n He is also an authority on the making of modern films, with his books detailing the art of \"Mr.",
+    "Mark Benton\nMark Benton (born 16 November 1965) is an English actor, known for his roles as Eddie in \"Early Doors\", Howard in \"Northern Lights\" and Martin Pond in \"Barbara\".\n\n Benton has also starred in BBC One drama, \"Waterloo Road\" as maths teacher, Daniel Chalk from 2011 to 2013 and again in 2014.",
+    "Peter Benchley\nPeter Bradford Benchley (May 8, 1940 – February 11, 2006) was an American author and screenwriter.\n\n He is known for the bestselling novel \"Jaws\" and co-wrote its subsequent film adaptation with Carl Gottlieb.\n\n Several more of his works were also adapted for cinema, including \"The Deep\", \"The Island\", \"Beast\", and \"White Shark\".",
+    "John Biddle (yachting cinematographer)\nJohn Scott Biddle (1925–2008) was a foremost yachting cinematographer and lecturer, establishing a film-making career that spanned more than forty years.\n\n His films captured not only the technical aspects of sailing but also the human story in events as tranquil as a Nova Scotia cruise and as grand as the America's Cup Races.",
+    "Journey in the Dark\nJourney in the Dark is a 1943 novel by Martin Flavin.\n\n It won both the 1943 Harper Prize and the 1944 Pulitzer Prize.",
+    "William Flynn Martin\nWilliam Flynn Martin (born October 4, 1950) is an American energy economist, educator and international diplomat.\n\n Martin served as Special Assistant to President Reagan for National Security Affairs, Executive Secretary of the National Security Council in the West Wing of the White House and Deputy Secretary of the Department of Energy during the Ronald Reagan administration.\n\n He was President of the Council of the University for Peace, appointed to the Council by Secretary General of the United Nations Kofi Annan and served as the Executive Director of the Republican Platform Committee during the re-election bid of George H.W. Bush.\n\n He has held senior appointments and advisory positions under several Presidents including: Ronald Reagan, George H.W. Bush and George W. Bush."
+   ]
+  },
+  {
+   "id": "7b2cfe6ffbd08cf3",
+   "gold": [
+    {
+     "sentence": "Nikolay Mitrofanovich Krylov (Russian: Никола́й Митрофа́нович Крыло́в , Ukrainian: Микола Митрофанович Крилов ) (29 November [O.S. 17 November] 1879 – May 11, 1955) was a Russian and Soviet mathematician known for works on interpolation, non-linear mechanics, and numerical methods for solving equations of mathematical physics.",
+     "facts": {
+      "0.0": "Nikolay Mitrofanovich Krylov was born on 29 November [O.S. 17 November] 1879.",
+      "0.1": "Nikolay Mitrofanovich Krylov died on May 11, 1955.",
+      "0.2": "Nikolay Mitrofanovich Krylov's Russian name is Николай Митрофанович Крылов.",
+      "0.3": "Nikolay Mitrofanovich Krylov's Ukrainian name is Микола Митрофанович Крилов.",
+      "0.4": "Nikolay Mitrofanovich Krylov was a Russian mathematician.",
+      "0.5": "Nikolay Mitrofanovich Krylov was a Soviet mathematician.",
+      "0.6": "Nikolay Mitrofanovich Krylov is known for works on interpolation.",
+      "0.7": "Nikolay Mitrofanovich Krylov is known for works on non-linear mechanics.",
+      "0.8": "Nikolay Mitrofanovich Krylov is known for works on numerical methods for solving equations of mathematical physics."
+     }
+    },
+    {
+     "sentence": "Anatoly Timofeevich Fomenko (Russian: Анато́лий Тимофе́евич Фоме́нко ) (born 13 March 1945 in Stalino, USSR) is a Soviet and Russian mathematician, professor at Moscow State University, well known as a topologist, and a member of the Russian Academy of Sciences.",
+     "facts": {
+      "1.0": "Anatoly Timofeevich Fomenko's Russian name is Анатолий Тимофеевич Фоменко.",
+      "1.1": "Anatoly Timofeevich Fomenko was born on 13 March 1945 in Stalino, USSR.",
+      "1.2": "Anatoly Timofeevich Fomenko is a Soviet mathematician.",
+      "1.3": "Anatoly Timofeevich Fomenko is a Russian mathematician.",
+      "1.4": "Anatoly Timofeevich Fomenko is a professor at Moscow State University.",
+      "1.5": "Anatoly Timofeevich Fomenko is well known as a topologist.",
+      "1.6": "Anatoly Timofeevich Fomenko is a member of the Russian Academy of Sciences."
+     }
+    }
+   ],
+   "items": [
+    "Lev Kuleshov (1899–1970), Soviet filmmaker and theorist, pioneered Soviet montage, the Kuleshov effect, and creative geography. Hermann Brunn (1862–1939), German mathematician, contributed to convex geometry and knot theory. Mercury’s 165-km Chaikovskij crater honors composer Pyotr Tchaikovsky; a 1970 Soviet biopic about him earned two Oscar nominations. Søren Kierkegaard (",
+    "Nicolai V. Krylov\nBellman equations), which were examined with stochastic methods.\n\n This led to the Evans-Krylov theory, for which he received with Lawrence C. Evans in 2004 the Leroy P. Steele Prize of the American Mathematical Society (for work done simultaneously and independently by both Krylov and Evans).\n\n They proved the second order differentiability (Hölder continuity of the second derivative) of the solutions of convex, completely nonlinear, second order elliptical partial differential equations and thus the existence of \"classical solutions\" (Theorem of Evans-Krylov).\n\n He was in 1978 at Helsinki and in 1986 at Berkeley an Invited Speaker for the ICM.\n\n He received the Humboldt Research Award in 2001.\n\n In 1993 he was elected a member of the American Academy of Arts and Sciences (1993).\n\n He should not be confused with the mathematician Nikolay M. Krylov.",
+    "Anatoly Maltsev\nAnatoly Ivanovich Maltsev (also: Malcev, Mal'cev; Russian: Анато́лий Ива́нович Ма́льцев; 27 November N.S./14 November O.S. 1909, Moscow Governorate – 7 June 1967, Novosibirsk) was born in Misheronsky, near Moscow, and died in Novosibirsk, USSR.\n\n He was a mathematician noted for his work on the decidability of various algebraic groups. Malcev algebras (generalisations of Lie algebras) are named after him.",
+    "Lev Kuleshov\nLev Vladimirovich Kuleshov (Russian: Лев Влади́мирович Кулешо́в ; 13 January [O.S. 1 January] 1899 – 29 March 1970) was a Russian and Soviet filmmaker and film theorist, one of the founders of the world's first film school, the Moscow Film School.\n\n He was given the title People's Artist of the RSFSR in 1969.\n\n He was intimately involved in development of the style of film making known as Soviet montage, especially it's psychological underpinning, including the use of editing and the cut to emotionally influence the audience, a principle known as the Kuleshov effect.\n\n He also developed the theory of creative geography, which is the use of the action around a cut to connect otherwise disparate settings into a cohesive narrative.",
+    "Anatoly Fomenko\nAnatoly Timofeevich Fomenko (Russian: Анато́лий Тимофе́евич Фоме́нко ) (born 13 March 1945 in Stalino, USSR) is a Soviet and Russian mathematician, professor at Moscow State University, well known as a topologist, and a member of the Russian Academy of Sciences.\n\n He is author of a pseudoscientific theory known as New Chronology.\n\n He is also a member of the Russian Academy of Natural Sciences (1991).",
+    "Nicolai V. Krylov\nNicolai Vladimirovich Krylov (Russian: Никола́й Влади́мирович Крыло́в ; born 5 June 1941) is a Russian mathematician specializing in partial differential equations, particularly stochastic partial differential equations and diffusion processes.\n\n Krylov studied at Lomonosov University, where he in 1966 under E. B. Dynkin attained a doctoral candidate title (similar to a PhD) and in 1973 a Russian doctoral degree (somewhat more prestigious than a PhD).\n\n He taught from 1966 to 1990 at the Lomonosov University and is since 1990 a professor at the University of Minnesota.\n\n At the beginning of his career (starting from 1963) he, in collaboration with Dynkin, worked on nonlinear stochastic control theory, making advances in the study of convex, nonlinear partial equations of 2nd order (\"i.e.\" Bellman equations), which were examined with stochastic methods.",
+    "Nikolay Mitrofanovich Krylov\nNikolay Mitrofanovich Krylov (Russian: Никола́й Митрофа́нович Крыло́в , Ukrainian: Микола Митрофанович Крилов ) (29 November [O.S. 17 November] 1879 – May 11, 1955) was a Russian and Soviet mathematician known for works on interpolation, non-linear mechanics, and numerical methods for solving equations of mathematical physics.",
+    "Semyon Aranovich Gershgorin\nSemyon Aronovich Gershgorin (August 24, 1901 – May 30, 1933) was a Soviet (born in Pruzhany, Belarus, Russian Empire) mathematician.\n\n He began as a student at the Petrograd Technological Institute in 1923, became a Professor in 1930, and was given an appointment at the Leningrad Mechanical Engineering Institute in the same year.\n\n His contributions include the Gershgorin circle theorem.",
+    "Vladimir Arnold\nVladimir Igorevich Arnold (alternative spelling Arnol'd, Russian: Влади́мир И́горевич Арно́льд , 12 June 1937 – 3 June 2010) was a Soviet and Russian mathematician.\n\n While he is best known for the Kolmogorov–Arnold–Moser theorem regarding the stability of integrable systems, he made important contributions in several areas including dynamical systems theory, catastrophe theory, topology, algebraic geometry, symplectic geometry, differential equations, classical mechanics, hydrodynamics and singularity theory, including posing the ADE classification problem, since his first main result—the solution of Hilbert's thirteenth problem in 1957 at the age of 19.",
+    "The entries profile Russian and Soviet figures across science, arts, politics, and activism: entomologist and prolific author Pavel Marikovsky; film director Aleksandr Ivanovsky; animator Vladimir Danilevich; actors and collectors Ekaterina and Vladimir Semenikhin; and actor Aleksei Petrenko. They also describe the anti-tsarist Petrashevsky Circle and member Nikolay Speshnev, plus Marxist revolutionaries, thinkers, and officials including Bazarov, Bag"
+   ]
+  },
+  {
+   "id": "a92cd812ff3e8153",
+   "gold": [
+    {
+     "sentence": "Wheelock Whitney may refer to one of three members of the Whitney family:",
+     "facts": {
+      "0.0": "Wheelock Whitney may refer to one of three members of the Whitney family."
+     }
+    },
+    {
+     "sentence": "The Whitney family is an American family notable for their social prominence, wealth, business enterprises and philanthropy, founded by John Whitney (1592–1673) who came from London, England to Watertown, Massachusetts in 1635.",
+     "facts": {
+      "1.0": "The Whitney family is an American family.",
+      "1.1": "The Whitney family is notable for their social prominence, wealth, business enterprises and philanthropy.",
+      "1.2": "The Whitney family was founded by John Whitney (1592–1673).",
+      "1.3": "John Whitney came from London, England.",
+      "1.4": "John Whitney came to Watertown, Massachusetts.",
+      "1.5": "John Whitney came to Watertown, Massachusetts in 1635."
+     }
+    }
+   ],
+   "items": [
+    "Wheelock Whitney\nWheelock Whitney may refer to one of three members of the Whitney family:",
+    "John Hay Whitney\nJohn Hay Whitney (August 17, 1904 – February 8, 1982), colloquially known as Jock Whitney, was U.S. Ambassador to the United Kingdom, publisher of the \"New York Herald Tribune\", and president of the Museum of Modern Art.\n\n He was a member of the Whitney family.",
+    "Whitney family\nThe Whitney family is an American family notable for their social prominence, wealth, business enterprises and philanthropy, founded by John Whitney (1592–1673) who came from London, England to Watertown, Massachusetts in 1635.\n\n The historic family mansion in Watertown, known as The Elms, was built in 1710.",
+    "Charles Andrew Whitney\nCharles Andrew Whitney (November 14, 1864- December 31, 1912) was an American businessman and industrialist in the late 19th century, born in Princeton, Massachusetts.\n\n He was part of the prominent American Whitney family.\n\n In 1859, Charles, his brother Levi L. Whitney, and Orville E. Thompson helped lead the large-scale manufacturing of leather boots and shoes in Chicago and were attributed with successfully running the first factory of its kind there.\n\n Whitney himself held patents for the manufacture of leather.",
+    "Harry Payne Whitney\nHarry Payne Whitney (April 29, 1872 – October 26, 1930) was an American businessman, thoroughbred horse breeder, and member of the prominent Whitney family.",
+    "Greentree Stable\nGreentree Stable, in Red Bank, New Jersey, was a major American thoroughbred horse racing stable and breeding farm established in 1914 by Payne Whitney of the Whitney family of New York City.\n\n Payne Whitney operated a horse farm and stable at Saratoga Springs, New York with his brother Harry Payne Whitney, who also had a large stable of horses.\n\n Greentree Stable had a training base at Aiken, South Carolina, while Greentree Farm in Lexington, Kentucky was established in 1925 as its breeding arm.",
+    "James Scollay Whitney\nJames Scollay Whitney (May 19, 1811 – October 24, 1878) was an American business executive and politician.\n\n He was the father of Henry Melville Whitney and William Collins Whitney, founders of the Whitney family business interests.",
+    "Gertrude Vanderbilt Whitney\nGertrude Vanderbilt Whitney (January 9, 1875 – April 18, 1942) was an American sculptor, art patron and collector, and founder in 1931 of the Whitney Museum of American Art in New York City.\n\n She was a prominent social figure and hostess, who was born into the wealthy Vanderbilt family and married into the Whitney family.",
+    "Manhasset Stable\nThe Manhasset Stable was the \"nom de course\" for an American Thoroughbred horse racing stable established in the early 1930s by Joan Whitney Payson, founder of the New York Mets baseball team and a member of the prominent New York City Whitney family who have been major figures in the sport for more than one hundred years.\n\n Joan Payson named the stable for Manhasset, New York where she grew up.",
+    "Roscoe Channing\nRoscoe H. Channing, Jr. (January 7, 1868 – April 1, 1961) was an All-American football player, member of the Rough Riders and mining executive.\n\n Channing was an All-American halfback for Princeton University.\n\n He was one of eleven players selected by Caspar Whitney for the first ever College Football All-America Team in 1889.\n\n When the Spanish–American War commenced in 1898, Channing enlisted in Theodore Roosevelt's Rough Riders.\n\n Roosevelt took pride in how many Ivy League football players enlisted in the Rough Riders.\n\n Channing later went into the mining business and managed the mining operations of the Whitney family.\n\n In the 1920s, he formed a partnership with his friend Cornelius Vanderbilt Whitney.\n\n The two formed the Hudson Bay Mining and Smelting Company in Flin Flon, Saskatchewan, Canada, and Channing served as the company's President.\n\n Channing died in 1961."
+   ]
+  },
+  {
+   "id": "c13c315b3cdfce7c",
+   "gold": [
+    {
+     "sentence": "The 1997 European Athletics Junior Championships were held in Ljubljana, Slovenia on July 24–27.",
+     "facts": {
+      "0.0": "The 1997 European Athletics Junior Championships were held in Ljubljana, Slovenia.",
+      "0.1": "The 1997 European Athletics Junior Championships were held on July 24-27."
+     }
+    },
+    {
+     "sentence": "Ljubljana (] , ] ; also known by other, historical names) is the capital and largest city of Slovenia.",
+     "facts": {
+      "1.0": "Ljubljana is the capital of Slovenia.",
+      "1.1": "Ljubljana is the largest city of Slovenia.",
+      "1.2": "Ljubljana is also known by other, historical names."
+     }
+    }
+   ],
+   "items": [
+    "Micom Film and TV Productions\nMICOM Film and TV Productions was established in 1989 by Sreco Mihelcic in a Former Yugoslavian republic Slovenia.\n\n In the early 90' company joined two sons, Matjaz Mihelcic - Program director, Producer and Vasja Mihelcic - technical director and Executive Producer.\n\n MICOM was in 1990s the leading Slovenian creative house, producing TV shows for youth, popular entertainment TV shows and discovered many new TV concepts.\n\n Micom discovered many talents, different creative people and gave them possibility to express themselves.\n\n The most popular TV shows were: Lahkih nog naokrog (educational youth TV series), Cari zacimb (entertaining cooking TV series), Razpoke v casu (fantasy TV series).\n\n They also produced documentary movies.\n\n One of them got in 1996 internationally release - Fight for the river and it's distributed by International Historic Films.\n\n.\n\n In the beginning of 2000 company joined Marjana Mihelcic.\n\n It was a family based company with long tradition in show and entertainment business.",
+    "1964 European Junior Games\nThe 1964 European Junior Games was the first edition of the biennial athletics competition for European athletes aged under twenty.\n\n It was an unofficial competition without sanction from the European Athletic Association.\n\n The event was held at the 10th-Anniversary Stadium in Warsaw, Poland.\n\n The competition eventually led to the creation of the European Athletics Junior Championships in 1970.",
+    "Eliška Drahotová\nEliška Drahotová (] ; born 22 July 1995, Rumburk, Czech Republic) is a Czech athletics competitor in racewalking and road cycling, like her twin sister, Anežka.\n\n She won the bronze medal in the 2013 European Athletics Junior Championships, while her twin sister Anežka Drahotová took the gold.\n\n Her global debut in cycling also came that year at the 2013 UCI Road World Championships.\n\n There she placed 34th in the junior time trial.",
+    "Ljubljana\nLjubljana (] , ] ; also known by other, historical names) is the capital and largest city of Slovenia.\n\n It has been the cultural, educational, economic, political, and administrative center of independent Slovenia since 1991.\n\n Its central geographic location within Slovenia, transport connections, concentration of industry, scientific and research institutions, and cultural tradition are contributing factors to its leading position.",
+    "2015 European Athletics Junior Championships\nThe 2015 European Athletics Junior Championships were the 23rd edition of the biennial European U20 athletics championships.\n\n They were held in Eskilstuna, Sweden from 16 July to 19 July.",
+    "1997 European Athletics Junior Championships\nThe 1997 European Athletics Junior Championships were held in Ljubljana, Slovenia on July 24–27.",
+    "Amela Terzić\nAmela Terzić (Serbian Cyrillic: Амела Терзић, born 2 January 1993 in Priboj, FR Yugoslavia) is a Serbian middle-distance runner.\n\n She won two gold medals at 2011 European Athletics Junior Championships in Tallinn and was the junior champion at the 2012 European Cross Country Championships.\n\n She has also been a medallist in the 1500 metres at the World Junior and World Youth Championships and a gold medalist at the 2013 European U23 Championship.",
+    "European Athletics U20 Championships\nThe European Athletics U20 Championships (formerly named the European Athletics Junior Championships up to 2015) are the European championships for athletes who are 19 years of age or under, which is the age range recognised by the IAAF as junior athletes.\n\n The event is currently organized by the European Athletic Association.",
+    "Ioan Silviu Suciu\nIoan Silviu Suciu (born 24 November 1977 in Sibiu) is a retired Romanian artistic gymnast.\n\n His best event was the pommel horse.\n\n One of his closest rivals was his team mate and pommel horse Olympic champion Marius Urzică, who was defeated by Suciu in Ljubljana, 2004, when the latter won the title while Urzică took 8th place.\n\n Suciu is an Olympic bronze medalist with the team, a silver world medalist on pommel horse and a six-time European medalist (pommel horse, vault and team).\n\n Suciu was one of the key team members of the Romanian gymnastics team for several years contributing to the 2004 Olympic team bronze medal and three continental team medals (two gold and one silver).\n\n He also placed fourth all around at the 2004 Olympic Games.",
+    "1968 European Junior Games\nThe 1968 European Junior Games was the third edition of the biennial athletics competition for European athletes aged under twenty.\n\n It was the final edition of the competition under that name and was succeeded by the European Athletics Junior Championships in 1970.\n\n The event was held in Leipzig, part of the German Democratic Republic at that time.\n\n The competition was mainly between Eastern European countries, with Belgium, Austria, Netherlands and Greece being present from the west."
+   ]
+  },
+  {
+   "id": "aa43ba178b2ddb97",
+   "gold": [
+    {
+     "sentence": " Պողոսյան , born July 15, 1990) is an American professional ice hockey defenseman currently playing for the Buffalo Sabres.",
+     "facts": {
+      "0.0": "Պողոսյան was born on July 15, 1990.",
+      "0.1": "Պողոսյան is an American professional ice hockey defenseman.",
+      "0.2": "Պողոսյան is currently playing for the Buffalo Sabres."
+     }
+    },
+    {
+     "sentence": "Daron Vartan Malakian (Armenian: Տարօն/Տարոն Վարդան Մալաքեան, born July 18, 1975) is an Armenian–American singer-songwriter, multi-instrumentalist, and record producer.",
+     "facts": {
+      "1.0": "The Armenian name of Daron Vartan Malakian is Տարօն/Տարոն Վարդան Մալաքեան.",
+      "1.1": "Daron Vartan Malakian was born on July 18, 1975.",
+      "1.2": "Daron Vartan Malakian is an Armenian-American singer-songwriter.",
+      "1.3": "Daron Vartan Malakian is a multi-instrumentalist.",
+      "1.4": "Daron Vartan Malakian is a record producer."
+     }
+    }
+   ],
+   "items": [
+    "Daron Malakian\nDaron Vartan Malakian (Armenian: Տարօն/Տարոն Վարդան Մալաքեան, born July 18, 1975) is an Armenian–American singer-songwriter, multi-instrumentalist, and record producer.\n\n He is best known as the guitarist, songwriter and second vocalist of the rock band System of a Down and as the lead vocalist, lead guitarist and songwriter of the band Scars on Broadway.\n\n Like the rest of the Hollywood-based band System of a Down, he is of Armenian ancestry, but he is the only member to have been born in the United States.\n\n Daron Malakian is known for his distinctive playing and is ranked 40th in Loudwire's list of \"Top 50 Hard Rock + Metal Guitarists Of All Time\" and #11 in MusicRadar's poll, \"The 20 Greatest Metal Guitarists Ever\".\n\n He is placed 30th in Guitar World's List of The 100 Greatest Heavy Metal Guitarists of All Time.",
+    "Graph query row:\nperson: Daron Malakian\noccupation: ['singer-songwriter', 'multi-instrumentalist', 'record producer', 'guitarist', 'songwriter', 'vocalist']",
+    "Doug Grean\nDoug Grean is an American record producer, audio engineer, guitarist, based in Los Angeles.\n\n He has worked with artists Sheryl Crow, Ricki Lee Jones, Glen Campbell, Scott Weiland, Slash, Velvet Revolver, Stone Temple Pilots, The Crystal Method, Tim McGraw, Cyndi Lauper, Annabella Lwin (Bow Wow Wow), Corey Glover (Living Color), Camp Freddy, DJ Hurricane and John Taylor (Duran Duran).\n\n Grean was formerly the lead guitarist and touring musical director for Scott Weiland and the Wildabouts.\n\n Some of Grean's television appearances with Weiland include: VH1 Legends, Last Call with Carson Daly, The Tonight Show with Jay Leno, and the Grammy awards with Velvet Revolver as keyboardist, performing \"All Across the Universe\" with Stevie Wonder, Norah Jones, Bono, Steven Tyler, Brian Wilson, and Alison Krauss.",
+    "Dave Kneebone\nDave Kneebone is an American producer.\n\n Along with Eric Wareheim and Tim Heidecker he runs Abso Lutely Productions which produces a variety of television and films.\n\n His role has been described as the business chief and \"straight man\" at Abso Lutely.\n\n Kneebone has worked as a producer on a variety of television shows including \"Comedy Bang!\n\n Bang!\n\n\", \"Nathan for You\", and \"Tim and Eric Awesome Show, Great Job!\n\n\".\n\n He is also listed a producer on the feature film \"Tim and Eric's Billion Dollar Movie\".",
+    "Jimmy Chamberlin\nJames Joseph Chamberlin (born June 10, 1964) is an American drummer and record producer.\n\n He is best known as the drummer for the alternative rock band The Smashing Pumpkins.\n\n Following the 2000 breakup of the band, Chamberlin joined Pumpkins frontman Billy Corgan in the supergroup Zwan and also formed his own group, the Jimmy Chamberlin Complex.\n\n In 2005, Chamberlin joined Corgan in reforming The Smashing Pumpkins; he eventually left the group in March 2009, though he returned again in 2015 for a summer tour.\n\n He performed in the group Skysaw until 2012.\n\n He is currently active under the Jimmy Chamberlin Complex name.\n\n In addition to his current work as CEO, Chamberlin has joined Chicago jazz saxophonist Frank Catalano for a string of 2013–15 performances in the Chicago area.\n\n An EP by Catalano and Chamberlin \"Love Supreme Collective - EP\" was released on the 29th of July 2014.",
+    "Zach Bogosian\nIn his second season, he tied a team record for goals by a defenseman.\n\n Bogosian first played in an international tournament when he joined the American national team at the 2009 IIHF World Championship.",
+    "Bad Acid Trip\nBad Acid Trip is an American metal band, currently signed to System of a Down lead singer Serj Tankian's record label, Serjical Strike Records.\n\n Their 2004 album, \"Lynch the Weirdo\", was produced by Daron Malakian, another System of a Down member.\n\n In 2006 they performed on the second stage at the Ozzfest summer tour.\n\n The band has three full-length releases (\"For the Weird by the Weird\", \"Lynch the Weirdo\", and \"Humanly Possible\") and multiple EPs.",
+    "Daron Jones\nDaron Tavaris Jones (born December 27, 1976) is an American singer-songwriter, record producer.\n\n He is a member in Bad Boy Records group 112.\n\n His debut solo album titled \"Uncensored\" was released December 5, 2010.\n\n The first single from the album is the digitally-released \"Money.\"\n\n Daron digitally released \"Christmas in Atlanta\" in December 2014, which reached the top 30 on the iTunes R&B chart.\n\n Daron is currently in the studio working on new music.",
+    "Zach Bogosian\nZachary M. Bogosian (Armenian: Զաքարի Մ.\n\n Պողոսյան , born July 15, 1990) is an American professional ice hockey defenseman currently playing for the Buffalo Sabres.\n\n Bogosian attended Cushing Academy in Massachusetts before he joined the Peterborough Petes of the Ontario Hockey League (OHL) in 2006.\n\n He played two seasons in the OHL, and was nominated for the Red Tilson Trophy as the league's most outstanding player in his second season.\n\n Bogosian was regarded as a complete, physical defenseman who could contribute on both offense and defense; he was rated as one of the top players heading into the 2008 NHL Entry Draft, where the Atlanta Thrashers selected him third overall.\n\n He signed a contract with the team a few weeks after the draft and began the season with the Thrashers, though he missed several weeks of his rookie year due to injury.\n\n In his second season, he tied a team record for goals by a defenseman.",
+    "Greg Davis (musician)\nGreg Davis is an American electronic musician who has recorded albums drawing from a wide variety of sources, including guitar, field recording, various world/ethnic/traditional instruments, percussion, and voice, all processed through digital manipulation.\n\n After years of experience in hip-hop groups, jazz combos, free improvisation, and experimental composition, Davis moved toward computer-based music in 1997.\n\n At Depaul University in Chicago, he studied classical and jazz guitar alongside composition and jazz studies.\n\n In 1997, he started his own label, Autumn Records, to release his own music and the music of others.\n\n Davis moved to Boston in 1999 to pursue a master's degree in composition (which he received in June 2001) while independently immersing himself in the study of electronic music.\n\n Since 2001, he has played shows all around the world and released records on a number of different labels.\n\n He has collaborated with Keith Fullerton Whitman, Ben Vida, Sebastien Roux, Chris Weisman, Steven Hess, Jeph Jerman, Akron/Family, Toby Aronson (as Harmonizer), and Zach Wallace (as Sun Circle)."
+   ]
+  }
+ ]
+}

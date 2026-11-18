@@ -1,0 +1,58 @@
+[
+{"id": "8b33066e3335819c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "UPDATE: NFL Network's Ian Rapoport reported Sunday morning that Hockenson is expected to play against New Orleans."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "UPDATE: NFL Network's Ian Rapoport reported Sunday morning that Hockenson is expected to play against New Orleans."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "UPDATE: NFL Network's Ian Rapoport reported Sunday morning that Hockenson is expected to play against New Orleans."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]}
+]},
+{"id": "000afb85ae4cfb44", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "c597768cfcb59f8e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "He also believes that after everything on social media becomes so perfectly curated for us, our brains will start to crave things that are not."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "He also believes that after everything on social media becomes so perfectly curated for us, our brains will start to crave things that are not."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "What we have done since then, all the success and failures [matters in our preparation]."}]}
+]},
+{"id": "6fee9a16d8a6b5ac", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "With inflation down from its peak two summers ago, Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates and could soon turn to cutting them."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "With inflation down from its peak two summers ago, Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates and could soon turn to cutting them."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "With inflation down from its peak two summers ago, Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates and could soon turn to cutting them."}]}
+]},
+{"id": "40be558b9947927f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "that model, Gemini Ultra, is set to launch sometime next year"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "A “lite” version of Gemini, Gemini Pro, began rolling out to Bard yesterday"}]}
+]},
+{"id": "5b5a99f820f8ec8d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "the generation of players and leaders that will call time on their international careers at week’s end."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]}
+]}
+]

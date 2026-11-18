@@ -1,0 +1,68 @@
+[
+{"id": "7d2fd793f2be23bd", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "5b67330da24dc969", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX?"}]},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 9, "quote": "according to Mark Cohen, one of his lawyers."}, {"item": 9, "quote": "a nerdy startup founder who acted in “good faith,”"}]},
+{"fact": "3.2", "status": "missing", "evidence": []},
+{"fact": "3.3", "status": "missing", "evidence": []}
+]},
+{"id": "910a461901c94aed", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "If the debt continues to rise more than the economy, risks will increase, and the government may “crowd out” private investment"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "If the debt continues to rise more than the economy, risks will increase, and the government may “crowd out” private investment"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "the government may “crowd out” private investment as it competes with the private sector for funds to service its debt."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "“We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "“We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "President Ferdinand Marcos, Jr."}, {"item": 4, "quote": "told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."}]}
+]},
+{"id": "c69a912e887cd16e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "The feature is currently available in France, Germany, Japan, the U.K. and the U.S., with plans for further expansion."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "The feature is currently available in France, Germany, Japan, the U.K. and the U.S., with plans for further expansion."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "The feature is currently available in France, Germany, Japan, the U.K. and the U.S., with plans for further expansion."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "The feature is currently available in France, Germany, Japan, the U.K. and the U.S., with plans for further expansion."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "The feature is currently available in France, Germany, Japan, the U.K. and the U.S., with plans for further expansion."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 3, "quote": "The feature is currently available in France, Germany, Japan, the U.K. and the U.S., with plans for further expansion."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 4, "quote": "LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 4, "quote": "LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."}]}
+]},
+{"id": "6d7512644bd38bc6", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "“Certainly there wasn’t a valid alternative to Google at the time,” Cue said."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "accuses Google and parent company Alphabet of anticompetitive behavior in violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "5407a7c3dfe1287f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "The survivors in the joined lawsuit also allege that Uber’s “fast and shallow background checks” are substandard"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "The survivors in the joined lawsuit also allege that Uber’s “fast and shallow background checks” are substandard and designed to make it as easy as possible for drivers to sign up quickly."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "Uber has attempted to address sexual assaults by drivers — which the lawsuits claim Uber has known about since 2014 — through new safety features in its app,"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "Uber has attempted to address sexual assaults by drivers — which the lawsuits claim Uber has known about since 2014 — through new safety features in its app,"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "like a 911 button and the ability to share location with a friend."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "like a 911 button and the ability to share location with a friend."}]},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "contradicted", "evidence": [{"item": 5, "quote": "Uber reported net income of $221 million in the third quarter"}]}
+]}
+]

@@ -1,0 +1,217 @@
+[
+ {"id": "multihop-rag-1631", "sentences": [
+   ["Kooker added later in the speech.", "Kooker said music is a tremendous driver for AI technology.", "Kooker said AI technology presents a tremendous opportunity for the creative development of music."],
+   ["Robert Kyncl is CEO of Warner Music Group.", "Robert Kyncl is a former high flyer at YouTube.", "Robert Kyncl commented that with each major leap in technology, the music industry navigates a fresh set of challenges and opportunities."]
+ ]},
+ {"id": "multihop-rag-1636", "sentences": [
+   ["Davidson said the player was not playing in the NHL during the last few years.", "Davidson said the player's level of performance in junior showed how he could control and dominate a game.", "Davidson said the junior performance indicated the player was going to be able to do that at some point in the NHL."],
+   ["The player helped guide more than a few future NHL stalwarts at that place.", "Mattias Ekholm was one of the future NHL stalwarts the player helped guide.", "Ryan Ellis was one of the future NHL stalwarts the player helped guide.", "Filip Forsberg was one of the future NHL stalwarts the player helped guide.", "Calle Jarnkrok was one of the future NHL stalwarts the player helped guide.", "Viktor Arvidsson was one of the future NHL stalwarts the player helped guide.", "Kevin Fiala was one of the future NHL stalwarts the player helped guide.", "The player helped guide many other future NHL stalwarts besides those six."]
+ ]},
+ {"id": "multihop-rag-1651", "sentences": [
+   ["FTX had grown so much.", "The speaker said that because FTX had grown so much, he could no longer run both companies."],
+   ["After Bankman-Fried left Jane Street, he persuaded Yedidia to join him as a trader at Alameda.", "Bankman-Fried left Jane Street.", "Jane Street is a high-frequency trading firm.", "Bankman-Fried got his start in finance at Jane Street after MIT.", "Bankman-Fried is a former billionaire.", "Bankman-Fried later persuaded Yedidia to join him as a developer at FTX."],
+   ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.", "The defense argued that the FTX founder acted in good faith.", "The defense argued that the FTX founder never meant to commit fraud or steal.", "The defense argued that the FTX founder basically got in over his head."]
+ ]},
+ {"id": "multihop-rag-1656", "sentences": [
+   ["Defense analysts agree that much of the outlook for Ukraine depends on the outcome of the U.S. vote."],
+   ["Any illusion that globalization had succeeded was stripped away with Russia's most recent invasion of Ukraine.", "Any illusion that the twenty-first century represented a break from the brutal twentieth century was stripped away with Russia's most recent invasion of Ukraine.", "The invasion of Ukraine was Russia's most recent invasion."]
+ ]},
+ {"id": "multihop-rag-1700", "sentences": [
+   ["McHenry has brushed off attempts to take the job more permanently.", "McHenry was appointed to the role after the unprecedented ouster of McCarthy.", "The ouster of McCarthy was more than two weeks ago."],
+   ["Wall Street is also absorbing the ouster of Kevin McCarthy as speaker of the House of Representatives."]
+ ]},
+ {"id": "multihop-rag-1704", "sentences": [
+   ["The product 6PPD-quinone was identified in late 2020.", "The product 6PPD-quinone requires more research to understand what impact, if any, it may have on aquatic life or the environment.", "Chris Helsel is SVP of global operations and CTO at Goodyear.", "Chris Helsel says this."],
+   ["A former VP at an industrial automation vendor shared a view in the report.", "The former VP said digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."]
+ ]},
+ {"id": "multihop-rag-1729", "sentences": [
+   ["The Springboks took a 12-3 lead after 34 minutes.", "The Springboks took the lead when the All Blacks once again failed to release on their goal line."],
+   ["The All Blacks sensed an opportunity to strike against 14 men.", "The All Blacks kicked for the corner on a couple occasions out wide."],
+   ["Argentina knocked over the All Blacks last year in Christchurch.", "Argentina also inflicted a maiden defeat on the All Blacks in 2020 in Sydney.", "This comes despite Argentina's earlier wins over the All Blacks."]
+ ]},
+ {"id": "multihop-rag-1758", "sentences": [
+   ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.", "The defense argued that the FTX founder acted in good faith.", "The defense argued that the FTX founder never meant to commit fraud or steal.", "The defense argued that the FTX founder basically got in over his head."],
+   ["The speaker said the decision was Bankman-Fried's.", "Bankman-Fried was the CEO of FTX."]
+ ]},
+ {"id": "multihop-rag-1802", "sentences": [
+   ["GPT-4 is more likely to follow the instructions of 'jailbreaking' prompts.", "The co-authors claim that GPT-4 can be more easily prompted than other LLMs to spout toxic, biased text.", "The co-authors claim GPT-4 can be more easily prompted to spout toxic, biased text because it is more likely to follow jailbreaking prompts."],
+   ["The entity's earlier actions were focused on concerns about the spread of illegal content related to the Israel-Hamas war.", "The entity's earlier actions were focused on concerns about the spread of disinformation related to the Israel-Hamas war."]
+ ]},
+ {"id": "multihop-rag-1827", "sentences": [
+   ["Al Saadi said her frustration with Meta is common among Palestinians.", "Al Saadi said the frustration with Meta is common among Palestinians in occupied territories.", "Al Saadi said the frustration with Meta is common among Palestinians across the diaspora."],
+   ["Meta wants to shift the burden of monitoring social media usage among teens back to the app stores.", "Meta wants to shift the burden of monitoring social media usage among teens to parents."]
+ ]},
+ {"id": "multihop-rag-1844", "sentences": [
+   ["Caroline Ellison was Bankman-Fried's on-again off-again girlfriend.", "Caroline Ellison was the CEO of Alameda.", "The government claimed Bankman-Fried used Caroline Ellison as a front.", "The government claimed Bankman-Fried had 'secret access' to customer money, both cash and crypto."],
+   ["Bankman-Fried was the richest person in the world under 30.", "Bankman-Fried said he was going to spend his wealth to save humanity from extinction."],
+   ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.", "The defense argued that the FTX founder acted in good faith.", "The defense argued that the FTX founder never meant to commit fraud or steal.", "The defense argued that the FTX founder basically got in over his head."]
+ ]},
+ {"id": "multihop-rag-1846", "sentences": [
+   ["The feature is currently available in France, Germany, Japan, the U.K. and the U.S.", "There are plans for further expansion of the feature."],
+   ["LinkedIn leans into AI tools.", "LinkedIn this week unveiled a string of new AI features.", "The new AI features span LinkedIn's job hunting, marketing and sales products.", "Ingrid wrote about LinkedIn's new AI features."]
+ ]},
+ {"id": "multihop-rag-1877", "sentences": [
+   ["A Michigan quarterback led the Buccaneers to the promised land last time.", "The text suggests that lightning might strike twice."],
+   ["The Big Ten is reviewing the lengthy written responses from Michigan.", "The Big Ten is reviewing the lengthy written responses from Jim Harbaugh.", "The source said this."]
+ ]},
+ {"id": "multihop-rag-1895", "sentences": [
+   ["Sportsbooks are also gathering this information.", "Sportsbooks begin to tighten the NBA Rookie of the Year lines in response."],
+   ["This allows sportsbooks to earn the profit built into the odds and lines.", "Sportsbooks earn that profit without worrying about which side wins."]
+ ]},
+ {"id": "multihop-rag-1912", "sentences": [
+   ["Jerry Dipoto is president of baseball operations.", "Those players would all have significant value if Jerry Dipoto decided to move one for a bat."],
+   ["Aaron Judge came away with a new contract.", "Justin Verlander came away with a new contract.", "Trea Turner came away with a new contract.", "Xander Bogaerts came away with a new contract."]
+ ]},
+ {"id": "multihop-rag-1916", "sentences": [
+   ["Microsoft also has a stripped-down Elite Series 2 'Core' version priced at $129.99.", "The Elite Series 2 Core is the same controller in white-and-black, red-and-black, or blue-and-black finishes.", "The Elite Series 2 Core version lacks the rear paddles.", "The Elite Series 2 Core version lacks the accessory charging case.", "The Elite Series 2 Core version lacks extra stick toppers and D-pad."],
+   ["These models are still quite new.", "Versions that actual humans buy have begun receiving discounts."]
+ ]},
+ {"id": "multihop-rag-1926", "sentences": [
+   ["The 12th over was on 13 Dec 2023 at 00.58 GMT.", "West Indies were 102-4 in the 12th over, with Hope on 26 and Hetmyer on 1.", "The 12th over produced just a single and a wicket.", "Shai Hope cannot break the legspin shackles."],
+   ["The 16th over was 6 days ago at 22.54 GMT.", "West Indies were 112-4 in the 16th over, with Hope on 29 and Powell on 8.", "Shai Hope is playing an exemplary innings.", "Shai Hope opens the face to steer Rehan for his first boundary."]
+ ]},
+ {"id": "multihop-rag-1950", "sentences": [
+   ["McTominay is now United's top scorer for the season.", "McTominay has six goals this season.", "McTominay is one goal ahead of Bruno Fernandes.", "McTominay is one goal ahead of Rasmus Hojlund."],
+   ["McTominay has already scored many top-flight goals this term.", "McTominay was the joint-leading scorer from the Champions League group stages."]
+ ]},
+ {"id": "multihop-rag-1958", "sentences": [
+   ["The speaker said she had conversations with investors as part of their due diligence.", "Alameda was taking on losses from FTX.", "Alameda took on the losses to keep FTX's balance sheet pristine."],
+   ["Those accounts were not able to avoid liquidation.", "Those accounts were not able to have an overall negative balance.", "Wang testified that Alameda could avoid liquidation.", "Wang testified that Alameda could have an overall negative balance."],
+   ["The speaker described the company as a 'very innovative, successful company.'", "The speaker argued that the business practices between the two were reasonable.", "The speaker argued that Alameda acted legally as an FTX customer.", "The speaker argued that Alameda acted legally as a payment processor.", "The speaker argued that Alameda acted legally as a market maker.", "A market maker is a financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."]
+ ]},
+ {"id": "multihop-rag-1959", "sentences": [
+   ["Shares of Rogers extended losses on news of the lawsuit.", "Rogers shares closed down 2.2% to C$53.07 in Toronto."],
+   ["The Federal Trade Commission filed an antitrust lawsuit against Amazon.", "17 state attorneys general filed an antitrust lawsuit against Amazon.", "Amazon tumbled 4 per cent after the lawsuit."]
+ ]},
+ {"id": "multihop-rag-1999", "sentences": [
+   ["The item is from Netflix.", "Jess and Bill Walker are doing their best to keep their family connected.", "The Walkers' children are growing older.", "The Walkers' children are growing more independent.", "The Walkers' children are growing more distant."],
+   ["McLean was born in New Rochelle, New York.", "McLean spoke about the Christmas season.", "McLean said the holidays are a time for families to come together."]
+ ]},
+ {"id": "multihop-rag-2014", "sentences": [
+   ["Caroline Ellison was Bankman-Fried's on-again off-again girlfriend.", "Caroline Ellison was the CEO of Alameda.", "The government claimed Bankman-Fried used Caroline Ellison as a front.", "The government claimed Bankman-Fried had 'secret access' to customer money, both cash and crypto."],
+   ["The second week of the trial's standout testimony came from Caroline Ellison.", "Caroline Ellison is Alameda Research's former CEO.", "Caroline Ellison claimed she took $14 billion from customers.", "Caroline Ellison claimed she took the $14 billion to repay debts to lenders.", "Caroline Ellison claimed she used customers as a line of credit.", "Caroline Ellison claimed she acted under the instruction of SBF."]
+ ]},
+ {"id": "multihop-rag-2016", "sentences": [
+   ["The seller offers some of the best value in its class.", "The seller offers this value from one of the top names in the business."],
+   ["Ramon Fernandez is Chief Financial Officer of CMA CGM.", "Ramon Fernandez told reporters on Friday.", "Ramon Fernandez said each actor will have to be responsible to ensure that the market remains reasonable amid rates that are relatively low."]
+ ]},
+ {"id": "multihop-rag-2020", "sentences": [
+   ["This allows the collection of data from complex equipment.", "This enables operators to track equipment performance.", "This enables operators to predict maintenance and downtimes."],
+   ["A track that is not used or taken care of for an extended period of time will start to wear out.", "A track that is not used or taken care of for an extended period of time will eventually become completely unsuitable for any kind of racing.", "A track that is not used or taken care of becomes unsuitable for racing unless it is taken apart and rebuilt."]
+ ]},
+ {"id": "multihop-rag-2022", "sentences": [
+   ["PMS provides expert guidance in navigating volatile markets.", "Mutual funds provide expert guidance in navigating volatile markets.", "PMS provides expert guidance in seizing investment opportunities that help create wealth.", "Mutual funds provide expert guidance in seizing investment opportunities that help create wealth."],
+   ["Brown added that he was surprised.", "Brown was surprised that a second valuation expert had not been drafted in to value the HSF portfolio for the latest interim results.", "Kroll was appointed to consider the reasonableness of Citrin Cooperman's assumptions for HSF's previous set of results.", "HSF's previous set of results runs to the end of March 2023."]
+ ]},
+ {"id": "multihop-rag-2072", "sentences": [
+   ["Bankman-Fried was compared to Warren Buffet.", "Many people called Bankman-Fried the white horse of crypto.", "TechCrunch never called Bankman-Fried the white horse of crypto."],
+   ["Wang testified that he heard Bankman-Fried tell another trader.", "Bankman-Fried told another trader it was okay to continue withdrawing money from the account.", "Bankman-Fried said the withdrawals were okay as long as the amount was less than FTX's total trading revenue."],
+   ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.", "The defense argued that the FTX founder acted in good faith.", "The defense argued that the FTX founder never meant to commit fraud or steal.", "The defense argued that the FTX founder basically got in over his head."]
+ ]},
+ {"id": "multihop-rag-2079", "sentences": [
+   ["Google unveiled new hardware.", "This week was Google's annual hardware event.", "At the event, Google showed off what it has been working on.", "Google is a search and consumer tech giant."],
+   ["Wired removed the article for not meeting its standards.", "The article was widely shared on social media.", "The article was boosted in write-ups at other outlets.", "The degree to which the article was shared and boosted shows how willing people are to accept foul play on Google's part."],
+   ["The case was filed by Arkansas-based publisher Helena World Chronicle.", "The case argues that Google 'siphons off' news publishers' content, their readers and ad revenue.", "The case argues that Google does this through anticompetitive means."]
+ ]},
+ {"id": "multihop-rag-2092", "sentences": [
+   ["The case will attempt to argue that Google restrains competition within two separate markets.", "One of the two markets is the distribution of apps to Android users.", "The other market is the market for payment processing solutions for content inside Android apps."],
+   ["Wired removed the article for not meeting its standards.", "The article was widely shared on social media.", "The article was boosted in write-ups at other outlets.", "The degree to which the article was shared and boosted shows how willing people are to accept foul play on Google's part."],
+   ["The case was filed by Arkansas-based publisher Helena World Chronicle.", "The case argues that Google 'siphons off' news publishers' content, their readers and ad revenue.", "The case argues that Google does this through anticompetitive means."]
+ ]},
+ {"id": "multihop-rag-2096", "sentences": [
+   ["Back then, home prices had boomed for years.", "Today, home prices have boomed, just like back then.", "Fed officials were ultimately forced to hike interest rates aggressively.", "The Fed hiked interest rates in an attempt to fight inflation."],
+   ["Postponements of such reports could complicate things for the Fed.", "The Fed has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy."]
+ ]},
+ {"id": "multihop-rag-2153", "sentences": [
+   ["The Wallabies had a World Cup flop.", "The Queensland Rugby Union reaffirmed its position.", "The Queensland Rugby Union is committed to moving to a centralised high-performance model.", "The Queensland Rugby Union will not follow the NSW Waratahs by handing over the keys to Rugby Australia.", "The NSW Waratahs handed over the keys to Rugby Australia."],
+   ["The person will also be tasked with 'integrating' the programs.", "Rugby Australia is trying to centralise all of the Super Rugby high-performance programs."]
+ ]},
+ {"id": "multihop-rag-2197", "sentences": [
+   ["This brings us to the fated sighting of Swift at Arrowhead Stadium on Monday.", "Swift was cheering on a player numbered 'No.' (the sentence is cut off)."],
+   ["The game is taking place at Arrowhead Stadium.", "Swift has performed at Arrowhead Stadium herself.", "Swift has attended a game at Arrowhead Stadium before."],
+   ["Swift has a new relationship with Kelce.", "Swift has shared that she has nothing to hide.", "Swift has said she has nothing to hide in her new relationship with Kelce."]
+ ]},
+ {"id": "multihop-rag-2205", "sentences": [
+   ["Swift has a new relationship with Kelce.", "Swift has shared that she has nothing to hide.", "Swift has said she has nothing to hide in her new relationship with Kelce."],
+   ["Kelce invited the 'Anti-Hero' singer on his podcast.", "Kelce later invited the 'Anti-Hero' singer to one of his games at Arrowhead Stadium.", "The 'Anti-Hero' singer famously accepted the invitation on 24 September."]
+ ]},
+ {"id": "multihop-rag-2210", "sentences": [
+   ["Todd Boehly is American.", "Todd Boehly is a co-owner of Chelsea.", "Expanding Chelsea's profile and reach in the U.S. would make sense under Todd Boehly's co-ownership.", "Catarina Macario is a USWNT international.", "Mia Fishel is a USWNT international.", "Catarina Macario and Mia Fishel play their club football in the U.S.", "CBS Sports holds WSL rights."],
+   ["The match was on 24 September.", "The match was Chelsea's second home Premier League defeat in a row.", "The defeat followed the one against Nottingham Forest.", "Chelsea were booed off again."],
+   ["Late checks will be made on the fitness of Reece James.", "Late checks will be made on the fitness of Axel Disasi.", "Late checks will be made on the fitness of Nicolas Jackson.", "Benoit Badiashile could return from a long-term injury."]
+ ]},
+ {"id": "multihop-rag-2214", "sentences": [
+   ["Today, social networks are often run by large corporations.", "Meta, Snap and Google are examples of such large corporations.", "Advertisers pay the bills for these social networks."],
+   ["By the end of 2012, Google was angling to acquire the London lab.", "By the end of 2012, Facebook was angling to acquire the London lab.", "Three people familiar with the matter said this."]
+ ]},
+ {"id": "multihop-rag-2230", "sentences": [
+   ["Lee was hampered by injury in 2023.", "Lee slashed .349/.421/.575 in 2022.", "Lee hit 36 doubles in 2022.", "Lee hit 10 triples in 2022.", "Lee hit a career-best 23 home runs in 2022."],
+   ["The player picked up 16 wickets.", "The player conceded just 398.", "The player had an economy rate of 4.25.", "The player played 10 matches."]
+ ]},
+ {"id": "multihop-rag-2231", "sentences": [
+   ["The company did not release the full model, Gemini Ultra.", "The company released only a 'lite' version called Gemini Pro."],
+   ["Cue said there was certainly not a valid alternative to Google at the time.", "Cue said this."],
+   ["The case was filed by Arkansas-based publisher Helena World Chronicle.", "The case argues that Google 'siphons off' news publishers' content, their readers and ad revenue.", "The case argues that Google does this through anticompetitive means."]
+ ]},
+ {"id": "multihop-rag-2252", "sentences": [
+   ["Ketamine is primarily used as an anesthetic during surgical procedures.", "In recent years, ketamine has been used as a remedy for treatment-resistant depression."],
+   ["If the approach worked with the fish, researchers might then be able to figure out how the diet affects behavior.", "If the approach worked with the fish, researchers might then be able to improve the effectiveness of the treatment for humans."]
+ ]},
+ {"id": "multihop-rag-2262", "sentences": [
+   ["The 12th over was on 13 Dec 2023 at 00.58 GMT.", "West Indies were 102-4 in the 12th over, with Hope on 26 and Hetmyer on 1.", "The 12th over produced just a single and a wicket.", "Shai Hope cannot break the legspin shackles."],
+   ["The 16th over was 6 days ago at 22.54 GMT.", "West Indies were 112-4 in the 16th over, with Hope on 29 and Powell on 8.", "Shai Hope is playing an exemplary innings.", "Shai Hope opens the face to steer Rehan for his first boundary."]
+ ]},
+ {"id": "multihop-rag-2317", "sentences": [
+   ["These delays may lead to bets being refunded.", "Whether bets are refunded depends on the circumstances.", "Whether bets are refunded depends on the specific rules of the sportsbook."],
+   ["Every sportsbook jumps on board when a line moves or odds change for a legitimate reason.", "An injury or roster move is an example of a legitimate reason for a line or odds change."],
+   ["Sportsbooks are also gathering this information.", "Sportsbooks begin to tighten the NBA Rookie of the Year lines in response."]
+ ]},
+ {"id": "multihop-rag-2327", "sentences": [
+   ["Harbaugh reportedly watched the game from the team hotel.", "The leading piece of drama now returns."],
+   ["The Big Ten suspended coach Jim Harbaugh for three games.", "The Big Ten suspended Harbaugh on Friday.", "The team was on a plane en route to Penn State when the suspension happened.", "Michigan had hoped to block the suspension.", "The Wolverines will be without their coach on the sidelines in Happy Valley."]
+ ]},
+ {"id": "multihop-rag-2345", "sentences": [
+   ["If you have your gift list handy, now is a good time to start checking it off.", "Starting to check off the gift list now avoids being pressed for time or funds when Black Friday and Cyber Monday come around next month.", "Black Friday and Cyber Monday come around next month."],
+   ["Alev said one of the hardest things is that resentment can build up.", "Resentment can build up if you feel you need to buy gifts for your family and can barely make your student loan payments.", "Alev advised bringing things up."]
+ ]},
+ {"id": "multihop-rag-2366", "sentences": [
+   ["Bankman-Fried was the richest person in the world under 30.", "Bankman-Fried said he was going to spend his wealth to save humanity from extinction."],
+   ["FTX had grown so much.", "The speaker said that because FTX had grown so much, he could no longer run both companies."],
+   ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.", "The defense argued that the FTX founder acted in good faith.", "The defense argued that the FTX founder never meant to commit fraud or steal.", "The defense argued that the FTX founder basically got in over his head."]
+ ]},
+ {"id": "multihop-rag-2369", "sentences": [
+   ["Miami has five remaining opponents.", "Four of Miami's five remaining opponents have pass defenses ranked in the league's top eight."],
+   ["Tyreek Hill missed last week's game.", "Tyreek Hill now needs to average almost 153 yards per game in his final three games.", "Tyreek Hill's stated goal is 2,000 receiving yards this season.", "Tyreek Hill needs to reach 2,000 receiving yards this season to meet his goal."]
+ ]},
+ {"id": "multihop-rag-2388", "sentences": [
+   ["Miami has five remaining opponents.", "Four of Miami's five remaining opponents have pass defenses ranked in the league's top eight."],
+   ["The required average is 152.67.", "Tyreek Hill missed last week's game.", "Tyreek Hill now needs to average almost 153 yards per game in his final three games.", "Tyreek Hill's stated goal is 2,000 receiving yards this season.", "Tyreek Hill needs to reach 2,000 receiving yards this season to meet his goal."]
+ ]},
+ {"id": "multihop-rag-2396", "sentences": [
+   ["Users' natural behavior for search is to follow the path of least resistance."],
+   ["A speaker said 'We make Google be the default search engine.'", "The speaker said this because they have always thought Google was the best."]
+ ]},
+ {"id": "multihop-rag-2408", "sentences": [
+   ["Tyreek Hill had two touchdowns.", "Tyreek Hill had 157 receiving yards.", "Tyreek Hill's two touchdowns were among his 157 receiving yards.", "Tyreek Hill helped the Miami Dolphins rout the Washington Commanders.", "The Washington Commanders were 4-9."],
+   ["Tyreek Hill made six catches for 163 yards and a touchdown against Carolina.", "The Carolina game was the one in which Tyreek Hill made six catches for 163 yards and a touchdown.", "Tyreek Hill had 812 yards through the first six games.", "Tyreek Hill is a Dolphins player."],
+   ["Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."]
+ ]},
+ {"id": "multihop-rag-2440", "sentences": [
+   ["The agreement meant that Apple never switched to a Google competitor.", "The agreement meant that Apple never allowed users to choose their browser when setting up their iPhones."],
+   ["Apple has already indicated that it plans to appeal.", "Appealing is a lengthy process.", "Appealing can take around 18 months."],
+   ["Google uses its store.", "Google uses its payments.", "Google forces developers to all have the same terms.", "Google forces OEMs to all have the same terms.", "Google forces carriers to all have the same terms."]
+ ]},
+ {"id": "multihop-rag-2448", "sentences": [
+   ["New customers can get up to $1000 in bonus bets.", "New customers get bonus bets if they lose their first bet."],
+   ["The writer expects Caesars to offer the same offer in VT as it has elsewhere.", "New sign-ups would be eligible to receive up to a $1,000 Bonus Bet if their first bet loses."]
+ ]},
+ {"id": "multihop-rag-2514", "sentences": [
+   ["She said 'I'm here until the end' in her press conference on Friday."],
+   ["He has been out of work since his Blues tenure came to a close back in April.", "It would be a hard sell to fans.", "His time with the London club went so poorly."]
+ ]},
+ {"id": "multihop-rag-2554", "sentences": [
+   ["During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue.", "Huang said Paradigm was told Bankman-Fried didn't want investors as directors.", "Huang said Bankman-Fried did plan on having a board with experts."],
+   ["Caroline Ellison was Alameda Research's former CEO.", "The second week of the trial's standout testimony came from Caroline Ellison.", "Caroline Ellison claimed she took $14 billion from customers.", "Caroline Ellison claimed she took the $14 billion to repay debts to lenders.", "Caroline Ellison claimed she used customers as a line of credit.", "Caroline Ellison claimed she acted under the instruction of SBF."],
+   ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.", "The defense argued that the FTX founder acted in good faith.", "The defense argued that the FTX founder never meant to commit fraud or steal.", "The defense argued that the FTX founder basically got in over his head."]
+ ]}
+]

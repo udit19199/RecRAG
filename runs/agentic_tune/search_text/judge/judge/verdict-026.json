@@ -1,0 +1,62 @@
+[
+{"id": "be4d8d4e278ea55d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night, keeping the heat on the losing Eagles"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "keeping the heat on the losing Eagles"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 6, "quote": "the losing Eagles ahead of them before hosting that team"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 6, "quote": "keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 5, "quote": "End of fourth quarter: Lions 34, Packers 20"}, {"item": 5, "quote": "11:19 p.m.: Lions complete yet another fourth down, officially putting the game on ice."}]},
+{"fact": "1.6", "status": "missing", "evidence": []}
+]},
+{"id": "5811dfba0c632d5b", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "swarmed Dobbs throughout the night, sacking him only twice"}]},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1)"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1)"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030)"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030)"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 1, "quote": "while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)"}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 1, "quote": "while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)"}]},
+{"fact": "1.6", "status": "stated", "evidence": [{"item": 1, "quote": "while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)"}]}
+]},
+{"id": "6eb5c9517aec1d24", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "despite Floyd’s massive net worth"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Canelo has inched closer to Floyd’s billionaire status over the years."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "4ddbf184272fe5a7", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "2681b82c8526084f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "But then, there’s MJ as well who has made a comeback from the first installment."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "But then, there’s MJ as well who has made a comeback from the first installment."}]}
+]},
+{"id": "6c6b4425c56e8d09", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]}
+]}
+]

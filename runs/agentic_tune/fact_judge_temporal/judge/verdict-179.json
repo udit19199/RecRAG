@@ -1,0 +1,66 @@
+[
+  {
+    "id": "1e7ec4e14b4f831a",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "18ed8b040635c0fd",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "With a 10% surge in the stock this year"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]}
+    ]
+  },
+  {
+    "id": "6cf466f6f2d64630",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "That answer ultimately lies with the jury"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "the former CEO and co-founder of collapsed crypto exchange FTX"}]},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "never meant to commit fraud or steal"}]},
+      {"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "basically got in over his head"}]}
+    ]
+  },
+  {
+    "id": "6e26ddb282ec12b0",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The company did accomplish that goal, but in doing so, it inadvertently and profoundly changed how the internet looked."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "The company did accomplish that goal, but in doing so, it inadvertently and profoundly changed how the internet looked."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "c22bce7d647fa941",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "stated", "evidence": [{"item": 3, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads"}]}
+    ]
+  }
+]

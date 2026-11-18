@@ -1,0 +1,112 @@
+[
+  {"id": "a26a1ebef48c9e29", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Paola Suárez (born 23 June 1976) is a retired professional tennis player from Argentina."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Paola Suárez (born 23 June 1976) is a retired professional tennis player from Argentina."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Paola Suárez (born 23 June 1976) is a retired professional tennis player from Argentina."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "She was one of the most prominent women's doubles players throughout the early and mid-2000s"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "winning eight Grand Slam titles, all of them with Virginia Ruano Pascual"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "winning eight Grand Slam titles, all of them with Virginia Ruano Pascual"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "holding the No. 1 doubles ranking for 87 non-consecutive weeks."}]},
+    {"fact": "2.0", "status": "contradicted", "evidence": [{"item": 1, "quote": "Michael Venus (born 16 October 1987) is a New Zealand professional tennis player."}, {"item": 1, "quote": "He reached a career high singles ranking of 274 in July 2011"}]},
+    {"fact": "2.1", "status": "contradicted", "evidence": [{"item": 1, "quote": "Michael Venus (born 16 October 1987) is a New Zealand professional tennis player."}, {"item": 1, "quote": "is much better known as a leading doubles player with a huge serve."}]}
+  ]},
+  {"id": "dbab0a7b2877e25c", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Victor Ronald Salva (born March 29, 1958) is an American film director and screenwriter."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Victor Ronald Salva (born March 29, 1958) is an American film director and screenwriter."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Victor Ronald Salva (born March 29, 1958) is an American film director and screenwriter."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Emilio \"El Indio\" Fernández (born Emilio Fernández Romo, ] ; March 26, 1904 – August 6, 1986) was a Mexican film director, actor and screenwriter."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Emilio \"El Indio\" Fernández (born Emilio Fernández Romo, ] ; March 26, 1904 – August 6, 1986) was a Mexican film director, actor and screenwriter."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "Emilio \"El Indio\" Fernández (born Emilio Fernández Romo, ] ; March 26, 1904 – August 6, 1986) was a Mexican film director, actor and screenwriter."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "Emilio \"El Indio\" Fernández (born Emilio Fernández Romo, ] ; March 26, 1904 – August 6, 1986) was a Mexican film director, actor and screenwriter."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 8, "quote": "Emilio \"El Indio\" Fernández (born Emilio Fernández Romo, ] ; March 26, 1904 – August 6, 1986) was a Mexican film director, actor and screenwriter."}]},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 8, "quote": "Emilio \"El Indio\" Fernández (born Emilio Fernández Romo, ] ; March 26, 1904 – August 6, 1986) was a Mexican film director, actor and screenwriter."}]}
+  ]},
+  {"id": "f7c6bad20fbba387", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Mr. Wilson's Cabinet of Wonder: Pronged Ants, Horned Humans, Mice on Toast, and Other Marvels of Jurassic Technology is a book by Lawrence Weschler primarily"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "is a book by Lawrence Weschler primarily"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Lawrence Weschler primarily about the Museum of Jurassic Technology and, more broadly, the history and role of museums."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "Lawrence Weschler primarily about the Museum of Jurassic Technology and, more broadly, the history and role of museums."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "The Museum of Jurassic Technology is a museum located at 9341 Venice Boulevard in the Palms district of Los Angeles, California."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "The Museum of Jurassic Technology is a museum located at 9341 Venice Boulevard in the Palms district of Los Angeles, California."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "The Museum of Jurassic Technology is a museum located at 9341 Venice Boulevard in the Palms district of Los Angeles, California."}]}
+  ]},
+  {"id": "1a53f472aa2805d8", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Batman is a 1989 American superhero film directed by Tim Burton and produced by Jon Peters and Peter Guber, based on the DC Comics character of the same name."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Batman is a 1989 American superhero film directed by Tim Burton and produced by Jon Peters and Peter Guber, based on the DC Comics character of the same name."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Batman is a 1989 American superhero film directed by Tim Burton and produced by Jon Peters and Peter Guber, based on the DC Comics character of the same name."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "Batman is a 1989 American superhero film directed by Tim Burton and produced by Jon Peters and Peter Guber, based on the DC Comics character of the same name."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Howard Peter Guber (born March 1, 1942) is an executive, entrepreneur, educator, and author."}, {"item": 10, "quote": "He is Chairman and CEO of Mandalay Entertainment."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Howard Peter Guber (born March 1, 1942) is an executive, entrepreneur, educator, and author."}, {"item": 10, "quote": "He is Chairman and CEO of Mandalay Entertainment."}]}
+  ]},
+  {"id": "52bc10fb5f907841", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Ezhou () is a prefecture-level city in eastern Hubei Province, China."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Ezhou () is a prefecture-level city in eastern Hubei Province, China."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Ezhou () is a prefecture-level city in eastern Hubei Province, China."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "As of the 2010 census, the city had a population of 1,048,668, of which 668,727 lived in the core Echeng District."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "As of the 2010 census, the city had a population of 1,048,668, of which 668,727 lived in the core Echeng District."}]},
+    {"fact": "3.0", "status": "stated", "evidence": [{"item": 4, "quote": "The Ezhou - Huanggang built-up (\"or metro\") area was home to 1,035,496 inhabitants from the Echeng and Huangzhou, Huanggang Districts."}]},
+    {"fact": "3.1", "status": "stated", "evidence": [{"item": 4, "quote": "The Ezhou - Huanggang built-up (\"or metro\") area was home to 1,035,496 inhabitants from the Echeng and Huangzhou, Huanggang Districts."}]}
+  ]},
+  {"id": "15db15c6f108ff32", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "The Bishop of Ely is the ordinary of the Church of England Diocese of Ely in the Province of Canterbury."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "The Bishop of Ely is the ordinary of the Church of England Diocese of Ely in the Province of Canterbury."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "The Bishop of Ely is the ordinary of the Church of England Diocese of Ely in the Province of Canterbury."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Conway became Bishop of Ely in 2010, translated from the Diocese of Salisbury where he was Bishop suffragan of Ramsbury."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Conway became Bishop of Ely in 2010, translated from the Diocese of Salisbury where he was Bishop suffragan of Ramsbury."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Conway became Bishop of Ely in 2010, translated from the Diocese of Salisbury where he was Bishop suffragan of Ramsbury."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "Conway became Bishop of Ely in 2010, translated from the Diocese of Salisbury where he was Bishop suffragan of Ramsbury."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "The Diocese of Salisbury is a Church of England diocese in the south of England, within the ecclesiastical Province of Canterbury."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "The Diocese of Salisbury is a Church of England diocese in the south of England, within the ecclesiastical Province of Canterbury."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 6, "quote": "The Diocese of Salisbury is a Church of England diocese in the south of England, within the ecclesiastical Province of Canterbury."}]}
+  ]},
+  {"id": "fb5fcfead0ef114e", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "He played three seasons for the Philadelphia Eagles (1940) and the Pittsburgh Steelers (1941–1942)."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "He played three seasons for the Philadelphia Eagles (1940) and the Pittsburgh Steelers (1941–1942)."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "He played three seasons for the Philadelphia Eagles (1940) and the Pittsburgh Steelers (1941–1942)."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "He played three seasons for the Philadelphia Eagles (1940) and the Pittsburgh Steelers (1941–1942)."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "He was drafted by the Philadelphia Eagles in the second round of the 2008 NFL Draft, and played for the Washington Redskins for three seasons after his departure from the Eagles."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "He was drafted by the Philadelphia Eagles in the second round of the 2008 NFL Draft, and played for the Washington Redskins for three seasons after his departure from the Eagles."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "He was drafted by the Philadelphia Eagles in the second round of the 2008 NFL Draft, and played for the Washington Redskins for three seasons after his departure from the Eagles."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "He was drafted by the Philadelphia Eagles in the second round of the 2008 NFL Draft, and played for the Washington Redskins for three seasons after his departure from the Eagles."}]}
+  ]},
+  {"id": "1cd45b071720c8a2", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Samantha Cristoforetti (] ; born 26 April 1977 in Milan) is an Italian European Space Agency astronaut, Italian Air Force pilot and engineer."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Samantha Cristoforetti (] ; born 26 April 1977 in Milan) is an Italian European Space Agency astronaut, Italian Air Force pilot and engineer."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Samantha Cristoforetti (] ; born 26 April 1977 in Milan) is an Italian European Space Agency astronaut, Italian Air Force pilot and engineer."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "Samantha Cristoforetti (] ; born 26 April 1977 in Milan) is an Italian European Space Agency astronaut, Italian Air Force pilot and engineer."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Jean-Loup Jacques Marie Chrétien (born 20 August 1938) is a French retired \"Général de Brigade\" (brigadier general) in the \"Armée de l'Air\" (French air force),"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Jean-Loup Jacques Marie Chrétien (born 20 August 1938) is a French retired \"Général de Brigade\" (brigadier general) in the \"Armée de l'Air\" (French air force),"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Jean-Loup Jacques Marie Chrétien (born 20 August 1938) is a French retired \"Général de Brigade\" (brigadier general) in the \"Armée de l'Air\" (French air force),"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "Jean-Loup Jacques Marie Chrétien (born 20 August 1938) is a French retired \"Général de Brigade\" (brigadier general) in the \"Armée de l'Air\" (French air force),"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 3, "quote": "Jean-Loup Jacques Marie Chrétien (born 20 August 1938) is a French retired \"Général de Brigade\" (brigadier general) in the \"Armée de l'Air\" (French air force),"}]},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 3, "quote": "and a former CNES spationaut."}]}
+  ]},
+  {"id": "aa6c6768526d0cc4", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "German Spitz is used to refer to both a breed of dog and category or type of dog."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "German Spitz is used to refer to both a breed of dog and category or type of dog."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Several modern breeds have been developed from the German Spitz, and are either registered as separate breeds or as varieties of German Spitz."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Several modern breeds have been developed from the German Spitz, and are either registered as separate breeds or as varieties of German Spitz."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Several modern breeds have been developed from the German Spitz, and are either registered as separate breeds or as varieties of German Spitz."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "The term was used to designate springer type spaniels that were neither Sussex nor Clumber Spaniels,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "The term was used to designate springer type spaniels that were neither Sussex nor Clumber Spaniels, and attempts were made to use it to specify a breed that would later become known as the English Springer Spaniel."}]}
+  ]},
+  {"id": "f796eb81ec62a9d4", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "\"Quiet in Heaven\"/\"Song of Liberty\" is a double A-side single, and is the only official release, by Faith No Man (stylised as Faith•No Man•)"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "\"Quiet in Heaven\"/\"Song of Liberty\" is a double A-side single, and is the only official release, by Faith No Man (stylised as Faith•No Man•)"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "\"Quiet in Heaven\"/\"Song of Liberty\" is a double A-side single, and is the only official release, by Faith No Man (stylised as Faith•No Man•)"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "is the only official release, by Faith No Man (stylised as Faith•No Man•), before the majority of their members quit and formed Faith No More."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 6, "quote": "is the only official release, by Faith No Man (stylised as Faith•No Man•), before the majority of their members quit and formed Faith No More."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "is the only official release, by Faith No Man (stylised as Faith•No Man•)"}]}
+  ]},
+  {"id": "65788f49907ec8c1", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Aulacodes peribocalis is a moth in the Crambidae family."}, {"item": 2, "quote": "It is found in Yemen and India."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Aulacodes peribocalis is a moth in the Crambidae family."}, {"item": 2, "quote": "It is found in Yemen and India."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]}
+]

@@ -1,0 +1,481 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "36f61da6f2d09103",
+   "gold": [
+    {
+     "sentence": "Heavenly Creatures is a 1994 New Zealand psychological drama directed by Peter Jackson, from a screenplay he co-wrote with his partner, Fran Walsh, about the notorious 1954 Parker–Hulme murder case in Christchurch, New Zealand.",
+     "facts": {
+      "0.0": "Heavenly Creatures is a 1994 New Zealand psychological drama.",
+      "0.1": "Heavenly Creatures was directed by Peter Jackson.",
+      "0.2": "Peter Jackson co-wrote the screenplay with his partner, Fran Walsh.",
+      "0.3": "Heavenly Creatures is about the notorious 1954 Parker-Hulme murder case.",
+      "0.4": "The Parker-Hulme murder case took place in Christchurch, New Zealand."
+     }
+    },
+    {
+     "sentence": " The main premise deals with the relationship between two teenage girls, Pauline Parker and Juliet Hulme, who murder Parker's mother.",
+     "facts": {
+      "1.0": "The main premise of Heavenly Creatures deals with the relationship between two teenage girls, Pauline Parker and Juliet Hulme.",
+      "1.1": "Pauline Parker and Juliet Hulme murder Pauline Parker's mother."
+     }
+    },
+    {
+     "sentence": "Anne Perry (born 28 October 1938 as Juliet Marion Hulme) is an English author of historical detective fiction, best known for her Thomas Pitt and William Monk series.",
+     "facts": {
+      "2.0": "Anne Perry was born on 28 October 1938 as Juliet Marion Hulme.",
+      "2.1": "Anne Perry is an English author of historical detective fiction.",
+      "2.2": "Anne Perry is best known for her Thomas Pitt and William Monk series."
+     }
+    }
+   ],
+   "items": [
+    "Jane Henschel\nJane Henschel (born 2 March 1952) is an American operatic mezzo soprano.\n\n Henschel, who was born in Wisconsin, studied at the University of Southern California, and then pursued further studies in Germany, where she has made her home.\n\n Her numerous opera appearances include Baba the Turk in Igor Stravinsky's \"The Rake’s Progress\" with Glyndebourne Festival Opera, the Saito Kinen Festival Matsumoto, and the Salzburg festival; Brangäne in Richard Wagner’s \"Die Walküre\" with Paris Opéra and the Los Angeles Opera; the Principessa in Giacomo Puccini’s \"Suor Angelica\" with conductor Riccardo Chailly and the Royal Concertgebouw Orchestra; Blanche de la Force in Francis Poulenc’s \"Dialogues des Carmélites\" in Amsterdam; Kostelnicka Buryjovka in Leoš Janáček’s \"Jenůfa\" under Seiji Ozawa in Japan; and the Kabanicka in Janáček’s \"Katya Kabanova\" at the Salzburg Festival among others.",
+    "Keri Hulme\nKeri Hulme (born 9 March 1947) is a New Zealand writer.\n\n Her only novel, \"The Bone People\", won the Booker Prize in 1985.",
+    "Kate Winslet filmography\nKate Winslet is a British actress and singer who has appeared in numerous films and television series.\n\n Her film debut was as Juliet Hulme in the 1994 film \"Heavenly Creatures\".\n\n She went on to appear in the later 1990s films \"Sense and Sensibility\" as Marianne Dashwood (1995), which earned her a nomination for the Academy Award for Best Supporting Actress, \"Jude\" as Sue Bridehead (1996), \"Hamlet\" as Ophelia (1996) and \"Titanic\" as Rose DeWitt Bukater (1997).\n\n For her role in \"Titanic\", it earned her Best Actress nominations for an Academy Award, Golden Globe and Screen Actors Guild Award.",
+    "The Bone People\nThe Bone People (styled by the writer and in some editions as the bone people) is a Booker Prize-winning 1984 novel by New Zealand writer Keri Hulme.",
+    "Juno Temple\nJuno Temple (born 21 July 1989) is an English actress.\n\n She has appeared in films such as \" Black Mass\", \"The Other Boleyn Girl\", \"Wild Child\", \"Atonement\", \"Maleficent\", \"The Three Musketeers\" and \"The Dark Knight Rises\".\n\n She also had a starring role in the HBO period drama series \"Vinyl\".",
+    "Cate Blanchett\nCatherine Elise Blanchett, {'1': \", '2': \", '3': \", '4': \"} ( ; born 14 May 1969) is an Australian actress and theatre director.\n\n She has received international acclaim and many accolades, including two Academy Awards, three Golden Globe Awards, three BAFTA Awards, six AACTA Awards, and three Screen Actors Guild Awards. Blanchett came to international attention for her role as Elizabeth I of England in Shekhar Kapur's 1998 film \"Elizabeth\", for which she won the BAFTA Award for Best Actress, the Golden Globe Award, and earned her first Academy Award for Best Actress nomination.\n\n Her portrayal of Katharine Hepburn in Martin Scorsese's 2004 film \"The Aviator\" brought her critical acclaim and many accolades, including the Academy Award for Best Actress in a Supporting Role, making her the only actor to win an Oscar for portraying another Oscar-winning actor.\n\n In 2013, she starred as Jasmine Francis in Woody Allen's \"Blue Jasmine\", for which she won numerous accolades including the Academy Award for Best Actress.",
+    "Kathryn Drysdale\nKathryn Drysdale (born December 1981) is an English actress known for her role as Grace Shelley in The West End show \"The Ruling Class\" opposite James Mcavoy, as Taylor in the movie \"St Trinian's\", Rhoda Swartz in Mira Nair's Vanity Fair, and Louise Brooks in the BBC comedy series \"Two Pints of Lager and a Packet of Crisps\" from 2001 until her departure from the show in 2009.\n\n She has also starred in the fourth series of the ITV sitcom \"Benidorm\" and as Brownwell in William Boyd's award-winning \"Any Human Heart\" opposite Jim Broadbent.\n\n She previously worked with Broadbent on Mira Nair's feature adaptation of William Thackery's \"Vanity Fair\" starring Reese Witherspoon.\n\n She played the role of mixed-race heiress Rhoda Swartz.\n\n She is also known for her role as Lizzie in the drama series \"Tripping Over\" by Mike Bullen.\n\n She appeared in \"Doctor Who\" as Bliss in the episode \"Love & Monsters\".\n\n She currently plays Meghan Markle in season 2 of \"The Windsors\".",
+    "Heavenly Creatures\nHeavenly Creatures is a 1994 New Zealand psychological drama directed by Peter Jackson, from a screenplay he co-wrote with his partner, Fran Walsh, about the notorious 1954 Parker–Hulme murder case in Christchurch, New Zealand.\n\n The film features Melanie Lynskey and Kate Winslet in their screen debuts with supporting roles by Sarah Peirse, Diana Kent, Clive Merrison, and Simon O'Connor.\n\n The main premise deals with the relationship between two teenage girls, Pauline Parker and Juliet Hulme, who murder Parker's mother.\n\n The events of the film cover the period from their meeting in 1952 to the murder in 1954.",
+    "Peter Elliott (actor)\nPeter Elliott is a leading New Zealand actor.\n\n He has appeared in numerous television shows including \"Shortland Street\", \"Gloss\" and .\n\n He has also appeared in several movies including \"Heavenly Creatures\".\n\n Peter has a daughter Lucy Elliott who is an actress, playing character Dayna Jenkins on \"Shortland Street\" in 2013.",
+    "Parker–Hulme murder case\nThe Parker–Hulme murder case began in the city of Christchurch, New Zealand, on 22 June 1954, when Honora Rieper (also known as Honora Parker, her legal name) was killed by her teenaged daughter, Pauline Parker, and Pauline's close friend Juliet Hulme (later known as Anne Perry).\n\n Parker was 16 at the time, while Hulme was 15."
+   ]
+  },
+  {
+   "id": "adce55ef25d85f9f",
+   "gold": [
+    {
+     "sentence": " Other voice-over roles of his include Dr. Drakken and Motor Ed on \"Kim Possible\", Brother Blood on \"Teen Titans\", Aquaman in \"\", Rico in \"The Penguins of Madagascar\", and Ogre In \"\", Niblet on \"Pound Puppies\", the Scotsman on \"Samurai Jack\", and Shnitzel on \"Chowder\".",
+     "facts": {
+      "0.0": "The unnamed person in this passage has other voice-over roles",
+      "0.1": "The unnamed person voiced Dr. Drakken in Kim Possible",
+      "0.2": "The unnamed person voiced Motor Ed in Kim Possible",
+      "0.3": "The unnamed person voiced Brother Blood in Teen Titans",
+      "0.4": "The unnamed person voiced Aquaman in an unnamed work",
+      "0.5": "The unnamed person voiced Rico in The Penguins of Madagascar",
+      "0.6": "The unnamed person voiced Ogre in an unnamed work",
+      "0.7": "The unnamed person voiced Niblet in Pound Puppies",
+      "0.8": "The unnamed person voiced the Scotsman in Samurai Jack",
+      "0.9": "The unnamed person voiced Shnitzel in Chowder"
+     }
+    },
+    {
+     "sentence": "Chowder is an American animated television series created by C. H. Greenblatt for Cartoon Network.",
+     "facts": {
+      "1.0": "Chowder is an American animated television series",
+      "1.1": "Chowder was created by C. H. Greenblatt",
+      "1.2": "Chowder was created for Cartoon Network"
+     }
+    }
+   ],
+   "items": [
+    "Band Geeks\n\"Band Geeks\" is the second part of the 15th episode of the second season, and the second half of the 35th episode overall, of the American animated television program \"SpongeBob SquarePants\".\n\n It originally aired on Nickelodeon in the United States on September 7, 2001.\n\n It was written by C. H. Greenblatt, Aaron Springer, and Merriwether Williams, and the animation was directed by Frank Weiss.\n\n Springer served as storyboard director, and Greenblatt served as storyboard artist.\n\n The song \"Sweet Victory\" by David Glen Eisley was featured in the episode and was later released on the album \"\" in 2005.",
+    "Townsend Coleman\nTownsend Putnam Coleman III (born May 28, 1954) is an American voice actor who performed in many animated series and TV commercials beginning in the early 1980s.\n\n Among his most notable roles are Michaelangelo from \"Teenage Mutant Ninja Turtles\", Wayne Gretzky on \"ProStars\" and the title character in \"Where's Waldo?\n\n\" and the eponymous \"The Tick\" and he also did additional voices in \"Dexter's Laboratory\", \"The Powerpuff Girls\", \"Adventure Time\", \"Animaniacs\", \"The Buzz on Maggie\", \"Camp Lazlo\", \"CatDog\", \"Catscratch\", \"Danny Phantom\", \"Dave the Barbarian\", \"\", \"The Fairly OddParents\", \"Foster's Home for Imaginary Friends\", \"Gravity Falls\", \"Hi Hi Puffy AmiYumi\", \"\", \"The Loud House\", \"The Mighty B!\n\n\", \"My Life As A Teenage Robot\" and \"The Replacements\" and he also did the voice of Knotty in \"\" (1992) and he also did additional voices in films \"Fantasia 2000\" (1999) and \"Sing\" (2016)",
+    "Chowder (TV series)\nChowder is an American animated television series created by C. H. Greenblatt for Cartoon Network.\n\n The series follows an aspiring young child named Chowder and his day-to-day adventures as an apprentice in Chef Mung Daal's catering company.\n\n Although he means well, Chowder often finds himself in predicaments due to his perpetual appetite and his nature as a scatterbrain.\n\n It is animated with both traditional animation as well as short stop motion and puppet sequences that are inter-cut into the episodes, and that run over the end credits.\n\n Stop motion sequences are produced by Screen Novelties.\n\n It is also the first Cartoon Network original series to premiere during Stuart Snyder's tenure as Jim Samples had resigned months before the series premiere.",
+    "List of Adventure Time episodes\n\"Adventure Time\" is an American animated television series created by Pendleton Ward for Cartoon Network.\n\n The series follows the adventures of Finn (voiced by Jeremy Shada), a human boy, and his best friend and adoptive brother Jake (voiced by John DiMaggio), a dog with magical powers to change shape and grow and shrink at will.\n\n Finn and Jake live in the post-apocalyptic Land of Ooo.\n\n Throughout the series, they interact with the show's other main characters: Princess Bubblegum (voiced by Hynden Walch), the sovereign of the Candy Kingdom; the Ice King (voiced by Tom Kenny), a demented but largely misunderstood ice wizard; Marceline the Vampire Queen (voiced by Olivia Olson), a thousand-year-old vampire and rock music enthusiast; Lumpy Space Princess (voiced by Ward), a melodramatic and immature princess made out of \"irradiated stardust\"; BMO (voiced by Niki Yang), a sentient video game console-shaped robot that lives with Finn and Jake; and Flame Princess (voiced by Jessica DiCicco), a flame elemental and ruler of the Fire Kingdom.",
+    "Harvey Beaks\nHarvey Beaks is an American animated television series created by C.H. Greenblatt for Nickelodeon.\n\n The series premiered on March 28, 2015 following the 2015 Kids' Choice Awards.",
+    "Dwight Schultz\nWilliam Dwight Schultz (born November 24, 1947) is an American actor and voice artist.\n\n He is known for his roles as Captain \"Howling Mad\" Murdock on the 1980s action series \"The A-Team\", and as Reginald Barclay in \"\", \"\" and the film \"\".\n\n He is also well known in animation as the mad scientist Dr. Animo in the \"Ben 10\" series, Chef Mung Daal in the children's cartoon \"Chowder\", and Eddie the Squirrel in \"CatDog\".",
+    "Adventure Time (pilot)\n\"Adventure Time\" is an animated short created by Pendleton Ward, as well as the pilot to the Cartoon Network series of the same name.\n\n The short follows the adventures of Pen (voiced by Zack Shada), a human boy, and his best friend Jake (voiced by John DiMaggio), a dog with magical powers to change shape and grow and shrink at will.\n\n In this episode, Pen and Jake have to rescue Princess Bubblegum (voiced by Paige Moss) from the antagonistic Ice King (voiced by John Kassir).",
+    "John DiMaggio\nJohn William DiMaggio (born September 4, 1968) is an American voice actor and comedian, known for his gruff voice and for his work as Bender from the television show \"Futurama\", Jake the Dog on \"Adventure Time\", and Marcus Fenix in the hit Xbox video game \"Gears Of War\".\n\n Other voice-over roles of his include Dr. Drakken and Motor Ed on \"Kim Possible\", Brother Blood on \"Teen Titans\", Aquaman in \"\", Rico in \"The Penguins of Madagascar\", and Ogre In \"\", Niblet on \"Pound Puppies\", the Scotsman on \"Samurai Jack\", and Shnitzel on \"Chowder\".",
+    "Adventure Time\nAdventure Time is an American animated television series created by Pendleton Ward for Cartoon Network.\n\n It follows the adventures of a boy named Finn (voiced by Jeremy Shada) and his best friend and adoptive brother Jake (John DiMaggio)— a dog with the magical power to change shape and size at will.\n\n Finn and Jake live in the post-apocalyptic Land of Ooo, where they interact with Princess Bubblegum (Hynden Walch), the Ice King (Tom Kenny), Marceline the Vampire Queen (Olivia Olson), BMO (Niki Yang), and others.\n\n The series is based on a 2007 short produced for Nicktoons and Frederator Studios' animation incubator series \"Random!\n\n Cartoons\".\n\n After the short became a viral hit on the Internet, Cartoon Network commissioned a full-length series, which previewed on March 11, 2010, and officially premiered on April 5, 2010.",
+    "Elements (miniseries)\nElements is an American animated miniseries based on the show \"Adventure Time\" by Pendleton Ward.\n\n It aired as part of the show's ninth season on Cartoon Network from April 24 to April 27, 2017.\n\n \"Adventure Time\" follows the adventures of Finn (voiced by Jeremy Shada), a human boy, and his best friend and adoptive brother Jake (voiced by John DiMaggio), a dog with magical powers to change shape, grow and shrink at will.\n\n In this limited event series, which itself follows the events of the \"Islands\" miniseries, Finn, Jake, and BMO return home to discover that Ooo has been turned into a veritable dystopia thanks to extreme elemental magic.\n\n Finn and Jake team up with Ice King (voiced by Tom Kenny), Betty (voiced by Felicia Day), and Lumpy Space Princess (voiced by Ward) to set things straight."
+   ]
+  },
+  {
+   "id": "a96524e5a29595c4",
+   "gold": [
+    {
+     "sentence": "The University of Delaware (colloquially \"UD\") is the largest university in Delaware.",
+     "facts": {
+      "0.0": "The University of Delaware is colloquially called 'UD'.",
+      "0.1": "The University of Delaware is the largest university in Delaware."
+     }
+    },
+    {
+     "sentence": "The University of Debrecen (Hungarian: \"Debreceni Egyetem\" ) is a university located in Debrecen, Hungary.",
+     "facts": {
+      "1.0": "The University of Debrecen's Hungarian name is 'Debreceni Egyetem'.",
+      "1.1": "The University of Debrecen is a university.",
+      "1.2": "The University of Debrecen is located in Debrecen, Hungary."
+     }
+    }
+   ],
+   "items": [
+    "University of Copenhagen\nThe University of Copenhagen (UCPH) (Danish: \"Københavns Universitet\" ) is the oldest university and research institution in Denmark.\n\n Founded in 1479 as a studium generale, it is the second oldest institution for higher education in Scandinavia after Uppsala University (1477).\n\n The university has 23,473 undergraduate students, 17,398 postgraduate students, 2,968 doctoral students and over 9,000 employees.\n\n The university has four campuses located in and around Copenhagen, with the headquarters located in central Copenhagen.\n\n Most courses are taught in Danish; however, many courses are also offered in English and a few in German.\n\n The university has several thousands of foreign students, about half of whom come from Nordic countries.",
+    "St. John's College, Belize\nSt. John's College has three divisions, and a number of central academic centres and activities.\n\n Through its three divisions, it offers a wide variety of liberal arts and science courses at the secondary, British A-level, and United States junior college levels.\n\n St. John's College is a Roman Catholic institution in the Jesuit tradition, one of the oldest, largest, and most diverse educational institutions in Belize, founded by the Jesuits in 1887.",
+    "Rutgers University–Camden\nRutgers University–Camden is one of three regional campuses of Rutgers University, New Jersey's public research university.\n\n It is located in Camden, New Jersey, United States.\n\n Founded in the 1920s, Rutgers–Camden began as an amalgam of the South Jersey Law School and the College of South Jersey.\n\n It is the southernmost of the three regional campuses of Rutgers—the others being located in New Brunswick and Newark.\n\n The city of Camden is located on the Delaware River, east of Philadelphia.",
+    "Dalhousie University\nDalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick.\n\n Dalhousie offers more than 4,000 courses and 180 degree programs in twelve undergraduate, graduate, and professional faculties.\n\n The university is a member of the U15, a group of research-intensive universities in Canada.",
+    "University of Delaware Botanic Gardens\nThe University of Delaware Botanic Gardens are botanical gardens and an arboretum located on the campus of the University of Delaware, in Newark, Delaware, United States.\n\n The gardens are open to the public without charge.",
+    "Ellendale, Delaware\nEllendale is a town in Sussex County, Delaware, United States.\n\n The population was 381 at the 2010 census, an increase of 16.5% since 2000.\n\n It is part of the Salisbury, Maryland-Delaware Metropolitan Statistical Area.\n\n Ellendale is the \"Gateway to Delaware's Resort Beaches\" because it is the town located on U.S. Highway 113, the resort area's westernmost border, and Delaware Route 16, the resort area's northernmost border with the eastern border being the Delaware Bay and Atlantic Ocean and the southern border being the state line with Maryland.\n\n Ellendale is home to the Philadelphia Bible College and the Harbor Christian Academy.",
+    "University of Debrecen\nThe University of Debrecen (Hungarian: \"Debreceni Egyetem\" ) is a university located in Debrecen, Hungary.\n\n It is the oldest continuously operating institution of higher education in Hungary (since 1538).\n\n The university has a well established programme in the English language for international students, particularly in the Medical field, which first established education in English in 1986.\n\n There are nearly 4000 international students studying at the university.",
+    "College Park, Delaware\nCollege Park is an unincorporated community in New Castle County, Delaware, United States.\n\n College Park is located along Delaware Route 896 southwest of Newark.",
+    "Delaware–William &amp; Mary football rivalry\nThe Delaware–William & Mary football rivalry between the Delaware Fightin' Blue Hens and the William & Mary Tribe is a match-up between two public universities, the University of Delaware and the College of William and Mary, that are also members of the Colonial Athletic Association.\n\n Both schools have academic reputations that have labeled them as Public Ivies.\n\n Both schools are also Colonial Colleges having been founded before the United States became independent in 1776; the College of William and Mary was founded in 1693 and the University of Delaware's predecessor school was founded in 1743.",
+    "University of Delaware\nThe University of Delaware (colloquially \"UD\") is the largest university in Delaware.\n\n The main campus is in Newark, with satellite campuses in Dover, Wilmington, Lewes, and Georgetown.\n\n It is considered a large institution with approximately 18,500 undergraduate and 4,500 graduate students. UD is a privately governed university which receives public funding for being a land-grant, sea-grant, space-grant and urban-grant state-supported research institution."
+   ]
+  },
+  {
+   "id": "0048cadaa2d348ea",
+   "gold": [
+    {
+     "sentence": "Akademisches Kunstmuseum (English:Academic Art Museum) is an art museum in Bonn, Germany.",
+     "facts": {
+      "0.0": "Akademisches Kunstmuseum is also known in English as the Academic Art Museum.",
+      "0.1": "Akademisches Kunstmuseum is an art museum.",
+      "0.2": "Akademisches Kunstmuseum is located in Bonn, Germany."
+     }
+    },
+    {
+     "sentence": "The Federal City of Bonn (] ) is a city on the banks of the Rhine in the German state of North Rhine-Westphalia, with a population of over 300,000.",
+     "facts": {
+      "1.0": "The Federal City of Bonn is a city.",
+      "1.1": "The Federal City of Bonn is on the banks of the Rhine.",
+      "1.2": "The Federal City of Bonn is in the German state of North Rhine-Westphalia.",
+      "1.3": "The Federal City of Bonn has a population of over 300,000."
+     }
+    }
+   ],
+   "items": [
+    "Imperial War Museum (disambiguation)\nThe Imperial War Museum is a British national museum organisation with branches at five locations in England.",
+    "Akademisches Kunstmuseum\nAkademisches Kunstmuseum (English:Academic Art Museum) is an art museum in Bonn, Germany.\n\n It is the oldest museum in Bonn and houses the antique collection of the University of Bonn with more than 500 antique statues and reliefs, and over 2,000 originals.\n\n It is located in a neoclassical building at the southern end of the Hofgarten, near the Electoral Palace.",
+    "National Museum, Kraków\nThe National Museum in Kraków (Polish: \"Muzeum Narodowe w Krakowie\" ), popularly abbreviated as MNK, established in 1879, is the main branch of Poland's National Museum, which has several independent branches with permanent collections around the country.\n\n The Museum consists of 21 departments which are divided by art period; 11 galleries, 2 libraries, and 12 conservation workshops.\n\n It holds some 780,000 art objects, spanning from classical archeology to modern art, with special focus on Polish painting.\n\n<ref name=\"culture.pl/muzea\"> </ref><ref name=\"muzeum/Zbiory\"> </ref>",
+    "University of Copenhagen\nThe University of Copenhagen (UCPH) (Danish: \"Københavns Universitet\" ) is the oldest university and research institution in Denmark.\n\n Founded in 1479 as a studium generale, it is the second oldest institution for higher education in Scandinavia after Uppsala University (1477).\n\n The university has 23,473 undergraduate students, 17,398 postgraduate students, 2,968 doctoral students and over 9,000 employees.\n\n The university has four campuses located in and around Copenhagen, with the headquarters located in central Copenhagen.\n\n Most courses are taught in Danish; however, many courses are also offered in English and a few in German.\n\n The university has several thousands of foreign students, about half of whom come from Nordic countries.",
+    "Bonn\nThe Federal City of Bonn (] ) is a city on the banks of the Rhine in the German state of North Rhine-Westphalia, with a population of over 300,000.\n\n About 24 km south-southeast of Cologne, Bonn is in the southernmost part of the Rhine-Ruhr region, Germany's largest metropolitan area, with over 11 million inhabitants.",
+    "Harris Museum\nThe Harris Museum, Art Gallery & Preston Free Public Library is a Grade I listed museum building in Preston.",
+    "Croatian Natural History Museum\nThe Croatian Natural History Museum (Croatian: \"Hrvatski prirodoslovni muzej\" ) is the oldest and biggest natural history museum and the main body for natural history research, preservation and collection in Croatia.\n\n Located on Dimitrije Demeter Street in Gornji Grad, one of the oldest neighbourhoods of the Croatian capital Zagreb, it owns one of the biggest museum collections in Croatia, with over 2 million artefacts, including over 1.1 million animal specimens.\n\n It was founded in 1846 as the \"National Museum\".\n\n The National Museum was later split up into five museums, three of which were in 1986 merged as departments of the newly named Croatian Natural History Museum.\n\n The museum contains a large scientific library open to the public, and publishes the first Croatian natural history scientific journal, \"Natura Croatica\".",
+    "Palace of Music (Miskolc)\nThe Palace of Music (\"Zenepalota\") is a building in Bartók square, Miskolc, Hungary.\n\n It is the building of the Béla Bartók Secondary School and the Béla Bartók Music Institute (a faculty of the University of Miskolc.)\n\n The Palace was designed by Gyula Waelder in Neo-baroque style and was built between 1926 and 1927.\n\n The construction was financed from USA loans, just like that of the Hotel Palace in Lillafüred and the Market Hall on Búza tér.",
+    "National Museum of Poland\n\"National Museum of Poland\" is the common name for several of the country's largest and most notable museums. Poland's National Museum comprises several independent branches, each operating a number of smaller museums.\n\n The main branch is the National Museum in Kraków (Polish: \"Muzeum Narodowe w Krakowie\" ), established in 1879 with permanent collections consisting of several hundred thousand items – kept in big part at the Main Building (along the 3 Maja St.), but also in the eight of its divisions around the city.",
+    "List of Kerala cities by population\nThe article lists major cities in Kerala based on the total population in city corporations or municipalities and their outgrowths.\n\n This list is based on the latest census data.\n\n Population of cities after major mergers post to latest census are also included."
+   ]
+  },
+  {
+   "id": "063e5ab375f9f03b",
+   "gold": [
+    {
+     "sentence": "Samsung Galaxy S7 and Samsung Galaxy S7 Edge are Android smartphones manufactured and marketed by Samsung Electronics.",
+     "facts": {
+      "0.0": "Samsung Galaxy S7 is an Android smartphone.",
+      "0.1": "Samsung Galaxy S7 Edge is an Android smartphone.",
+      "0.2": "Samsung Galaxy S7 and S7 Edge are manufactured by Samsung Electronics.",
+      "0.3": "Samsung Galaxy S7 and S7 Edge are marketed by Samsung Electronics."
+     }
+    },
+    {
+     "sentence": " The S7 series serves as the successor to the Galaxy S6, S6 Edge and S6 Edge+ released in 2015.",
+     "facts": {
+      "1.0": "The S7 series is the successor to the Galaxy S6.",
+      "1.1": "The S7 series is the successor to the Galaxy S6 Edge.",
+      "1.2": "The S7 series is the successor to the Galaxy S6 Edge+.",
+      "1.3": "The Galaxy S6, S6 Edge and S6 Edge+ were released in 2015."
+     }
+    },
+    {
+     "sentence": "Samsung Galaxy S6, Samsung Galaxy S6 Edge, and Samsung Galaxy S6 Edge+ are Android smartphones manufactured and marketed by Samsung Electronics.",
+     "facts": {
+      "2.0": "Samsung Galaxy S6 is an Android smartphone.",
+      "2.1": "Samsung Galaxy S6 Edge is an Android smartphone.",
+      "2.2": "Samsung Galaxy S6 Edge+ is an Android smartphone.",
+      "2.3": "Samsung Galaxy S6, S6 Edge and S6 Edge+ are manufactured by Samsung Electronics.",
+      "2.4": "Samsung Galaxy S6, S6 Edge and S6 Edge+ are marketed by Samsung Electronics."
+     }
+    },
+    {
+     "sentence": " The S6 line serves as a successor to the Galaxy S5.",
+     "facts": {
+      "3.0": "The S6 line is a successor to the Galaxy S5."
+     }
+    },
+    {
+     "sentence": " The S6 and S6 Edge smartphones were officially unveiled in the first \"Samsung Unpacked 2015\" event at Mobile World Congress on 1 March 2015, while the bigger S6 Edge+ was officially unveiled together with the Samsung Galaxy Note 5 in the second \"Samsung Unpacked 2015\" event at New York on 13 August 2015.",
+     "facts": {
+      "4.0": "The S6 was officially unveiled in the first Samsung Unpacked 2015 event.",
+      "4.1": "The S6 Edge was officially unveiled in the first Samsung Unpacked 2015 event.",
+      "4.2": "The first Samsung Unpacked 2015 event was held at Mobile World Congress on 1 March 2015.",
+      "4.3": "The S6 Edge+ was officially unveiled together with the Samsung Galaxy Note 5.",
+      "4.4": "The S6 Edge+ was officially unveiled in the second Samsung Unpacked 2015 event.",
+      "4.5": "The second Samsung Unpacked 2015 event was held in New York on 13 August 2015."
+     }
+    }
+   ],
+   "items": [
+    "Samsung SGH-D500\nThe Samsung SGH-D500 is a slider-style mobile phone created by Samsung.\n\n It was announced in Q4 2004 as a replacement to the popular Samsung E800.\n\n It has a 1.3 megapixel digital camera with an integrated LED flash.\n\n The phone can be purchased in various colors such as black, grey/silver, silver/white, silver/blue, black/blue, and black/silver.\n\n The D500 won the prestigious award \"the worlds best cellphone\" at the 3GSM world congress in Cannes, 2005.\n\n The SGH-D500 was popular with consumers because of the large screen-size to front-surface ratio, the smooth button and sliding action, powerful flash, and good video/photograph/sound quality.\n\n The D500 was regarded as compact and as having a good feature set for its time.\n\n Samsung experienced remarkable success with the introduction of the D500 and has therefore introduced several other slider-style mobile phones in recent years, some fairly successful, others not so much.\n\n This phone helped to popularise the 'active' sliding phone concept across all brands.\n\n The SGH-D500 has been succeeded by the Samsung SGH-D600.",
+    "Samsung SGH-E900\nThe Samsung E900, introduced in 2006, is a high-end mobile phone and is derived from Samsung's D500-D600-D800 series of slide phones.\n\n It is of a slide-up design and has touch-sensitive keys, similar to the LG Chocolate (KG800).\n\n It was one of the most popular phones at the time but was discontinued late 2007 when buyers then turned their attention to the Samsung D900i, followed by the Samsung U600, which was the slimmest phone by Samsung with a thickness of 1.09 cm until the E840 was released.",
+    "Samsung Galaxy S7\nSamsung Galaxy S7 and Samsung Galaxy S7 Edge are Android smartphones manufactured and marketed by Samsung Electronics.\n\n The S7 series serves as the successor to the Galaxy S6, S6 Edge and S6 Edge+ released in 2015.\n\n The phones were officially unveiled on 21 February 2016, during a Samsung press conference at Mobile World Congress, with a European and North American release on 11 March 2016.",
+    "Samsung Ativ S\nThe Samsung ATIV S is a touchscreen, slate smartphone manufactured by Samsung Electronics running the Windows Phone 8 operating system, upgradeable to Windows Phone 8.1.\n\n The ATIV S is Samsung's first Windows Phone 8 device, and one of the first devices under its ATIV series of Microsoft Windows-based products.\n\n It was shown at the IFA 2012 in Berlin and was the first Windows Phone 8 device to be officially unveiled, ahead of the Nokia Lumia 920.",
+    "Samsung SGH-T919\nThe Samsung Behold SGH-T919 is a touch-screen, 3G candybar-style mobile phone introduced by Samsung late in 2008.\n\n The Behold is one of the first Samsung mobile phones released to have a touch-screen along with the Samsung Omnia, the Samsung Instinct, the Samsung Eternity, and the Samsung Tocco.\n\n The Behold is the \"American\" release of Samsung Tocco, which is only sold in Europe, Asia and Australia so the features and design of both of these phones are similar.\n\n Some of the Behold's biggest competitors were Apple's iPhone, T-Mobile G1 (HTC Dream), LG Dare, Samsung Instinct, and Samsung Eternity.\n\n It was only available only to customers of T-Mobile.",
+    "Samsung SGH-D500\nThe SGH-D500 has been succeeded by the Samsung SGH-D600.\n\n There is a very similar variant handset, the SGH-D500E.",
+    "Samsung Galaxy S Duos 2\nSamsung Galaxy S Duos 2 is a version of Samsung Galaxy Trend Plus with dual SIM Android smartphone, produced and marketed by Samsung Electronics, which serves as an immediate successor to the original Galaxy S Duos, which is made in second quarter of 2012.\n\n Unveiled on 30 November 2013 at some Asian markets, it was initially released on December 5, 2013 in several countries.\n\n In contrast with other dual sim Samsung models, this phone is a part of the high-end \"S\" series, this is why it is marketed as a part of the \"Galaxy S\" family.\n\n Despite being called as a direct successor to the original S Duos phone, external and physical design of the model is identical to the original model, placing emphasis on internal upgrades such as upgraded processor and updated Operating System software.",
+    "Samsung Galaxy S6\nSamsung Galaxy S6, Samsung Galaxy S6 Edge, and Samsung Galaxy S6 Edge+ are Android smartphones manufactured and marketed by Samsung Electronics.\n\n The S6 line serves as a successor to the Galaxy S5.\n\n The S6 and S6 Edge smartphones were officially unveiled in the first \"Samsung Unpacked 2015\" event at Mobile World Congress on 1 March 2015, while the bigger S6 Edge+ was officially unveiled together with the Samsung Galaxy Note 5 in the second \"Samsung Unpacked 2015\" event at New York on 13 August 2015.\n\n Alongside the S6, Samsung also unveiled the S6 Edge (and later on the bigger S6 Edge+), a variant whose screen is wrapped along the sides of the device; the curvature is usable for several additional features.\n\n The Galaxy S6 and S6 Edge were released on 10 April 2015 in 20 countries while the S6 Edge+ was released on 21 August 2015 in 20 countries.",
+    "Samsung Galaxy Gear\nThe Samsung Galaxy Gear is a smartwatch produced by Samsung Electronics in the Samsung Gear family of devices.\n\n Unveiled during a \"Samsung Unpacked\" event in Berlin, Germany on September 4, 2013, the device serves as a companion for all Samsung Galaxy smartphones and tablets which run Android 4.3 or newer; it was released on September 25, 2013.\n\n Originally released as an Android-based device, Samsung replaced the operating system with Tizen through the May 2014 software update.",
+    "Samsung REX\nThe Samsung REX series is a range of Samsung smartphones and feature phones, ranging from low to mid-end phones, running a Java-based operating system with Samsung's TouchWiz user interface.\n\n It is currently one of the Samsung line of devices that are aimed at the budget phone market alongside lower end Samsung Galaxy devices.\n\n Its main competition includes the Nokia Asha range and Firefox OS."
+   ]
+  },
+  {
+   "id": "47ef14c420ba22a4",
+   "gold": [
+    {
+     "sentence": " Her only novel, \"The Bone People\", won the Booker Prize in 1985.",
+     "facts": {
+      "0.0": "Her only novel is 'The Bone People'.",
+      "0.1": "'The Bone People' won the Booker Prize.",
+      "0.2": "'The Bone People' won the Booker Prize in 1985."
+     }
+    },
+    {
+     "sentence": " His novel \"Ender's Game\" (1985) and its sequel \"Speaker for the Dead\" (1986) both won Hugo and Nebula Awards, making Card the only author to win both science fiction's top U.S. prizes in consecutive years.",
+     "facts": {
+      "1.0": "Card's novel 'Ender's Game' was published in 1985.",
+      "1.1": "'Speaker for the Dead' is the sequel to 'Ender's Game'.",
+      "1.2": "'Speaker for the Dead' was published in 1986.",
+      "1.3": "'Ender's Game' won the Hugo Award.",
+      "1.4": "'Ender's Game' won the Nebula Award.",
+      "1.5": "'Speaker for the Dead' won the Hugo Award.",
+      "1.6": "'Speaker for the Dead' won the Nebula Award.",
+      "1.7": "Card is the only author to win both science fiction's top U.S. prizes in consecutive years."
+     }
+    }
+   ],
+   "items": [
+    "Ender in Exile\nEnder in Exile is a science fiction novel by Orson Scott Card, part of the \"Ender's Game\" series, published on November 11, 2008.\n\n It takes place between the two award-winning novels: \"Ender's Game\" and \"Speaker for the Dead\".\n\n It could also be considered a parallel novel to the first three sequels in the Shadow Saga, since the entirety of this \"trilogy\" takes place in the span of \"Ender in Exile\".\n\n The novel concludes a dangling story line of the Shadow Saga, while it makes several references to events that take place during the Shadow Saga.\n\n From yet another perspective, the novel expands (or \"replaces\") the last chapter of the original novel \"Ender's Game\".\n\n On the one hand, it fills the gap right before the last chapter, and on the other hand, it fills the gap between the last chapter and the original (first) sequel (both named \"Speaker for the Dead\").",
+    "Keri Hulme\nKeri Hulme (born 9 March 1947) is a New Zealand writer.\n\n Her only novel, \"The Bone People\", won the Booker Prize in 1985.",
+    "Orson Scott Card bibliography\nThis is a list of the works of Orson Scott Card.\n\n This list does not include criticisms, reviews, or related material written by Card.\n\n Orson Scott Card is the author of The Ender saga and Homecoming Saga among many other works.",
+    "Shadow of the Hegemon\nShadow of the Hegemon (2001) is the second novel in the \"Ender's Shadow\" series (often called the Bean Quartet) by Orson Scott Card.\n\n It is also the sixth novel in the \"Ender's Game\" series.\n\n It is told mostly from the point of view of Bean, a largely peripheral character in the original novel \"Ender's Game\" but the central protagonist of the parallel narrative \"Ender's Shadow.\"\n\n \"Shadow of the Hegemon\" was nominated for a Locus Award in 2002.",
+    "Orson Scott Card\nOrson Scott Card (born August 24, 1951) is an American novelist, critic, public speaker, essayist, and columnist.\n\n He writes in several genres but is known best for science fiction.\n\n His novel \"Ender's Game\" (1985) and its sequel \"Speaker for the Dead\" (1986) both won Hugo and Nebula Awards, making Card the only author to win both science fiction's top U.S. prizes in consecutive years.\n\n A feature film adaptation of \"Ender's Game\", which Card co-produced, was released in late October 2013 in Europe and on November 1, 2013, in North America.",
+    "Ender in Exile\n\"Ender in Exile\" begins one year after Ender has won the bugger war, and begins with the short story \"Ender's Homecoming\" from Card's webzine Intergalactic Medicine Show.\n\n Other short stories that were published elsewhere are included as chapters of the novel.",
+    "A War of Gifts: An Ender Story\nA War of Gifts: An Ender Story (2007) is a science fiction novel by Orson Scott Card.\n\n This book is set in Card's Ender's Game series and takes place during Ender Wiggin's time at Battle School as described in Card's novels \"Ender's Game\" and \"Ender's Shadow\".",
+    "Ender's Game (short story)\n\"Ender's Game\" is a story by Orson Scott Card.\n\n It first appeared in the August 1977 issue of \"Analog\" magazine and was later expanded into the novel \"Ender's Game\".\n\n Although the foundation of the Ender's Game series, the short story is not properly part of the \"Ender's Game\" universe, as there are many discrepancies in continuity.",
+    "The Bone People\nThe Bone People (styled by the writer and in some editions as the bone people) is a Booker Prize-winning 1984 novel by New Zealand writer Keri Hulme.",
+    "Ender Wiggin\nAndrew \"Ender\" Wiggin is a fictional character from Orson Scott Card's 1985 science fiction novel \"Ender's Game\" and its sequels (\"Speaker for the Dead\", \"Xenocide\", \"Children of the Mind\", \"Ender in Exile\"), as well as in the first part of the spin-off series, \"Ender's Shadow\".\n\n The book series itself is an expansion, with some changes to detail, of Card's 1977 short story \"Ender's Game.\""
+   ]
+  },
+  {
+   "id": "1d958d39819b278c",
+   "gold": [
+    {
+     "sentence": "Electronic Attack Squadron 138 (VAQ-138), also known as the \"Yellow Jackets\", is an expeditionary EA-18G Growler squadron of the United States Navy based at Naval Air Station Whidbey Island, Washington.",
+     "facts": {
+      "0.0": "Electronic Attack Squadron 138 (VAQ-138) is also known as the \"Yellow Jackets\".",
+      "0.1": "Electronic Attack Squadron 138 is an expeditionary EA-18G Growler squadron of the United States Navy.",
+      "0.2": "Electronic Attack Squadron 138 is based at Naval Air Station Whidbey Island, Washington."
+     }
+    },
+    {
+     "sentence": "The Boeing EA-18G Growler is an American carrier-based electronic warfare aircraft, a specialized version of the two-seat F/A-18F Super Hornet.",
+     "facts": {
+      "1.0": "The Boeing EA-18G Growler is an American carrier-based electronic warfare aircraft.",
+      "1.1": "The Boeing EA-18G Growler is a specialized version of the two-seat F/A-18F Super Hornet."
+     }
+    }
+   ],
+   "items": [
+    "VFA-154\nStrike Fighter Squadron 154 (VFA-154), also known as the \"Black Knights\", is a United States Navy strike fighter squadron stationed at Naval Air Station Lemoore.\n\n The Black Knights are an operational fleet squadron flying the F/A-18F Super Hornet.\n\n They are currently attached to Carrier Air Wing Eleven and deployed aboard the aircraft carrier USS \"Nimitz\" .\n\n Their tailcode is NH and their callsign is \"Knight\".",
+    "VAQ-135\nElectronic Attack Squadron 135 (VAQ-135), known as the \"Black Ravens\", is a United States Navy electronic attack squadron that currently operates the EA-18G Growler carrier-based electronic warfare jet aircraft.\n\n The squadron is permanently stationed at Naval Air Station Whidbey Island with a radio callsign of \"\"Thunder\"\".",
+    "VFA-2\nStrike Fighter Squadron 2 (VFA-2) also known as the \"Bounty Hunters\" is a United States Navy F/A-18F Super Hornet strike fighter squadron based at Naval Air Station Lemoore, California.\n\n Their tail code is NE and their callsign is \"Bullet\".\n\n They are attached to Carrier Air Wing 2 (CVW-2), a composite unit made up of a wide array of aircraft performing a variety of combat and support missions that deploy aboard the \"Carl Vinson\" .",
+    "Boeing EA-18G Growler\nThe Boeing EA-18G Growler is an American carrier-based electronic warfare aircraft, a specialized version of the two-seat F/A-18F Super Hornet.\n\n The EA-18G replaced the Northrop Grumman EA-6B Prowlers in service with the United States Navy.\n\n The Growler's electronic warfare capability is primarily provided by Northrop Grumman.\n\n The EA-18G began production in 2007 and entered operational service with the US Navy in late 2009.\n\n Australia has also purchased twelve EA-18Gs, which entered service with the Royal Australian Air Force in 2017.",
+    "Boeing F/A-18E/F Super Hornet\nThe Boeing F/A-18E and F/A-18F Super Hornet are twin-engine carrier-capable multirole fighter aircraft variants based on the McDonnell Douglas F/A-18 Hornet.\n\n The F/A-18E single-seat and F/A-18F tandem-seat variants are larger and more advanced derivatives of the F/A-18C and D Hornet.\n\n The Super Hornet has an internal 20 mm M61 rotary cannon and can carry air-to-air missiles and air-to-surface weapons.\n\n Additional fuel can be carried in up to five external fuel tanks and the aircraft can be configured as an airborne tanker by adding an external air refueling system.",
+    "VAQ-138\nElectronic Attack Squadron 138 (VAQ-138), also known as the \"Yellow Jackets\", is an expeditionary EA-18G Growler squadron of the United States Navy based at Naval Air Station Whidbey Island, Washington.\n\n Their radio callsign is \"RAMPAGE\".",
+    "The EA-18G Growler, based on the two-seat F/A-18F Super Hornet, replaced the US Navy’s EA-6B and entered service in 2009; Australia operates 12. US Navy Growler squadrons include VAQ-138, -209 and -135. Australia’s Amberley is its largest operational airbase, hosting Super Hornet squadrons and other units, including No. 1 Squadron, part of No. 82 Wing. The material",
+    "No. 82 Wing RAAF\nNo. 82 Wing is the strike and reconnaissance wing of the Royal Australian Air Force (RAAF).\n\n It is headquartered at RAAF Base Amberley, Queensland.\n\n Coming under the control of Air Combat Group, the wing operates F/A-18F Super Hornet multirole fighters and Pilatus PC-9 forward air control aircraft.\n\n Its units include Nos. 1 and 6 Squadrons, operating the Super Hornet, and No. 4 Squadron, operating the PC-9.",
+    "No. 1 Squadron RAAF\nNo. 1 Squadron is a Royal Australian Air Force (RAAF) squadron headquartered at RAAF Base Amberley, Queensland.\n\n Controlled by No. 82 Wing, it is equipped with Boeing F/A-18F Super Hornet multi-role fighters.\n\n The squadron was formed under the Australian Flying Corps in 1916 and saw action in the Sinai and Palestine Campaigns during World War I.\n\n It flew obsolete Royal Aircraft Factory B.E.2s, B.E.12s, Martinsyde G.100s and G.102s, as well as Airco DH.6s, Bristol Scouts and Nieuport 17s, before re-equipping with the R.E.8 in October 1917 and finally the Bristol Fighter in December.\n\n Its commanding officer in 1917–18 was Major Richard Williams, later known as the \"Father of the RAAF\".\n\n Disbanded in 1919, No. 1 Squadron was re-formed on paper as part of the RAAF in 1922, and re-established as an operational unit three years later.",
+    "VAQ-209\nElectronic Attack Squadron 209 (VAQ-209) is a United States Navy Reserve electronic attack squadron.\n\n Known as the \"Star Warriors\", the squadron flies the EA-18G Growler carrier-based electronic warfare jet aircraft.\n\n Based at Naval Air Station Whidbey Island, WA, it is assigned to the Tactical Support Wing."
+   ]
+  },
+  {
+   "id": "a24dd203acc9bdcb",
+   "gold": [
+    {
+     "sentence": "Giuseppe Fortunino Francesco Verdi (] ; 9 or 10 October 1813 – 27 January 1901) was an Italian opera composer.",
+     "facts": {
+      "0.0": "Giuseppe Fortunino Francesco Verdi was born on 9 or 10 October 1813.",
+      "0.1": "Giuseppe Fortunino Francesco Verdi died on 27 January 1901.",
+      "0.2": "Giuseppe Fortunino Francesco Verdi was an Italian opera composer."
+     }
+    },
+    {
+     "sentence": "Charles Louis Ambroise Thomas (5 August 1811 – 12 February 1896) was a French composer, best known for his operas \"Mignon\" (1866) and \"Hamlet\" (1868, after Shakespeare) and as Director of the Conservatoire de Paris from 1871 till his death.",
+     "facts": {
+      "1.0": "Charles Louis Ambroise Thomas was born on 5 August 1811.",
+      "1.1": "Charles Louis Ambroise Thomas died on 12 February 1896.",
+      "1.2": "Charles Louis Ambroise Thomas was a French composer.",
+      "1.3": "Charles Louis Ambroise Thomas is best known for his opera 'Mignon' (1866).",
+      "1.4": "Charles Louis Ambroise Thomas is best known for his opera 'Hamlet' (1868).",
+      "1.5": "The opera 'Hamlet' (1868) is after Shakespeare.",
+      "1.6": "Charles Louis Ambroise Thomas is best known as Director of the Conservatoire de Paris.",
+      "1.7": "Charles Louis Ambroise Thomas was Director of the Conservatoire de Paris from 1871 till his death."
+     }
+    }
+   ],
+   "items": [
+    "Ferdinando Provesi\nFerdinando Angelo Maria Provesi (1770 – 1833) was a native of Parma, Italy.\n\n He was regarded as one of the greatest Italian opera composers of the era .\n\n Provesi is best known as being an early tutor of Giuseppe Verdi when he was the \"Maestro di cappella\" (master of music) at the St. Bartolomeo cathedral in Busseto (the town very close to Le Roncole, the village where Verdi was born.)\n\n Provesi was also director of the municipal music school and local Philharmonic Society.\n\n He began teaching Verdi in 1824 when the future composer was 11 years old.",
+    "Giuseppe Verdi (film)\nGiuseppe Verdi is a 1938 Italian biographical film directed by Carmine Gallone and starring Fosco Giachetti, Gaby Morlay and Germana Paolieri.\n\n The film portrays the life of the composer Giuseppe Verdi (1813-1901).\n\n The casting of Giachetti as Verdi was intended to emphasise the composer's patriotism, as he had recently played patriotic roles in films such as \"The White Squadron\".\n\n The film was made at the Cinecittà Studios in Rome.\n\n The film is also known by the alternative title The Life of Giuseppe Verdi.",
+    "List of major opera composers\nThis list provides a guide to opera composers, as determined by their presence on a majority of compiled lists of significant opera composers.\n\n (See the \"Lists Consulted\" section for full details.)\n\n The composers run from Jacopo Peri, who wrote the first ever opera in late 16th century Italy, to John Adams, one of the leading figures in the contemporary operatic world.\n\n The brief accompanying notes offer an explanation as to why each composer has been considered major.\n\n Also included is a section about major women opera composers, compiled from the same lists.\n\n For an introduction to operatic history, see opera.\n\n The organisation of the list is by birthdate.",
+    "Armand Castelmary\nArmand Castelmary, real name Comte Armand de Castan, born Toulouse 16 August 1834, died New York City 10 February 1897, was a French operatic bass.\n\n He created roles in three major premieres at the Paris Opera – Don Diego in \"L'Africaine\" by Meyerbeer (1865), the Monk in Verdi's \"Don Carlos\" (1867), and Horatio in Ambroise Thomas's \"Hamlet\" (1868).\n\n Castelmary also appeared at opera houses in England and the United States, and died onstage at the Metropolitan Opera House, New York, during a performance of \"Martha\" by Friedrich von Flotow.",
+    "Alessandro Scarlatti\nPietro Alessandro Gaspare Scarlatti (2 May 1660 – 22 October 1725) was an Italian Baroque composer, especially famous for his operas and chamber cantatas.\n\n He is considered the founder of the Neapolitan school of opera.\n\n He was the father of two other composers, Domenico Scarlatti and Pietro Filippo Scarlatti.",
+    "Claudio Monteverdi\nClaudio Giovanni Antonio Monteverdi (] ; 15 May 1567 (baptized) – 29 November 1643) was an Italian composer, string player and choirmaster.\n\n A composer of both secular and sacred music, and a pioneer in the development of opera, he is considered a crucial transitional figure between the Renaissance and the Baroque periods of music history.",
+    "Bernhard Bötel\nHis stage repertoire included Belmonte in Wolfgang Amadeus Mozart's \"Die Entführung aus dem Serail\", Chapelou in Adolphe Adam's \"Le postillon de Lonjumeau\", Count Almaviva in Gioachino Rossini's \"The Barber of Seville\", Daniel in Franz Lehár's \"The Merry Widow\", the Duke of Mantua in Giuseppe Verdi's \"Rigoletto\", Gabriel von Eisenstein in Johann Strauss II's \"Die Fledermaus\", Indigo in Strauss' \"Indigo und die vierzig Räuber\", Jeník in Bedřich Smetana's \"The Bartered Bride\", Paolino in Domenico Cimarosa's \"Il matrimonio segreto\", Pâris in Jacques Offenbach's \"La belle Hélène\", Pietro in Franz von Suppé's \"Boccaccio\", and Wilhelm Meister in Ambroise Thomas' \"Mignon\".",
+    "Teatro Giuseppe Verdi\nTeatro Giuseppe Verdi (the Giuseppe Verdi Theatre) is a small opera house located in a wing of the Rocca dei Marchesi Pallavicino on the Piazza Giuseppe Verdi in Busseto, Italy, a town closely associated with the life of the opera composer, Giuseppe Verdi.\n\n From the 13th century, the “rocca” or “fortress” was the family’s palace; it is now the city hall after being acquired by the municipality in 1856.\n\n The theatre opened on 15 August 1868 and seats 300.",
+    "Ambroise Thomas\nCharles Louis Ambroise Thomas (5 August 1811 – 12 February 1896) was a French composer, best known for his operas \"Mignon\" (1866) and \"Hamlet\" (1868, after Shakespeare) and as Director of the Conservatoire de Paris from 1871 till his death.",
+    "Giuseppe Verdi\nGiuseppe Fortunino Francesco Verdi (] ; 9 or 10 October 1813 – 27 January 1901) was an Italian opera composer."
+   ]
+  },
+  {
+   "id": "fba442969a331e42",
+   "gold": [
+    {
+     "sentence": "Mulled wine is a beverage usually made with red wine along with various mulling spices and sometimes raisins.",
+     "facts": {
+      "0.0": "Mulled wine is a beverage.",
+      "0.1": "Mulled wine is usually made with red wine.",
+      "0.2": "Mulled wine is usually made with various mulling spices.",
+      "0.3": "Mulled wine is sometimes made with raisins."
+     }
+    },
+    {
+     "sentence": " It is served hot or warm and is alcoholic, although there are non-alcoholic versions of mulled wine.",
+     "facts": {
+      "1.0": "Mulled wine is served hot or warm.",
+      "1.1": "Mulled wine is alcoholic.",
+      "1.2": "There are non-alcoholic versions of mulled wine."
+     }
+    },
+    {
+     "sentence": "Blue Lagoon is a popular summer cocktail featuring blue Curaçao.",
+     "facts": {
+      "2.0": "Blue Lagoon is a popular summer cocktail.",
+      "2.1": "Blue Lagoon features blue Curaçao."
+     }
+    }
+   ],
+   "items": [
+    "Flaming beverage\nFlaming beverages include cocktails and other mixed drinks that contain flammable, high-proof alcohol, which is ignited prior to consumption.\n\n The alcohol may be an integral part of the drink, or it may be floated as a thin layer across the top of the drink.\n\n The flames are mostly for dramatic flair.\n\n However, in combination with certain ingredients, the flavor of the drink is altered.\n\n Some flavors are enhanced, and it may impart a toasted flavor to some drinks.",
+    "Mulled wine\nMulled wine is a beverage usually made with red wine along with various mulling spices and sometimes raisins.\n\n It is served hot or warm and is alcoholic, although there are non-alcoholic versions of mulled wine.\n\n It is a traditional drink during winter, especially around Christmas.",
+    "Mulling spices\nMulling spices is a spice mixture used in drink recipes.\n\n The spices are usually used to spice hot apple cider, mulled wine, wassail, and other drinks (such as juices) during the autumn or winter.\n\n A \"mulled\" drink is a drink which has been prepared with these spices (usually through heating the drink in a pot with mulling spices and then straining).\n\n Mulling spices may also be added to the brewing process to make spiced beer.",
+    "Blue Lagoon (cocktail)\nBlue Lagoon is a popular summer cocktail featuring blue Curaçao.",
+    "Oz and Hugh Drink to Christmas\nOz and Hugh Drink to Christmas is a BBC television programme in which wine personality Oz Clarke and comedian Hugh Dennis travel through Britain to sample a wide array of seasonal Christmas beverages, including whisky, winter ales, mulled wine, wassail, sloe gin, Buck's Fizz, Port wine and Sherry.\n\n Upon its 20 December 2009 broadcast on BBC Two, it had a viewership of approximately 2.4 million with an audience share of 9%.",
+    "Volcano bowl\nVolcano bowls are ceramic drinkware originally associated with mid-20th century American tiki bars and tropical-themed restaurants.\n\n Drinks served in volcano bowls are typically rum-based, mixed with tropical fruit juices and other liquors such as brandy, vodka, and triple sec, and garnished with fruit.\n\n The Flaming Volcano cocktail is especially associated with this drinkware.",
+    "Feuerzangenbowle\nFeuerzangenbowle (] ) is a traditional German alcoholic drink for which a rum-soaked sugarloaf is set on fire and drips into mulled wine.\n\n It is often part of a Christmas or New Year's Eve tradition.\n\n The name translates literally to \"fire-tongs punch\".",
+    "Flaming volcano\nThe flaming volcano is a large tropical group cocktail made of rum, brandy, pineapple juice, orange juice, almond syrup, and sometimes other ingredients.\n\n It is usually a multi-user drink, served to a group in a special, ritual vessel known as a volcano bowl, which is a decorative ceramic bowl (typically of about 32 USoz capacity) designed with a rising central hub feature usually resembling a crude volcano cone.\n\n The cone includes a second, much smaller central pit or \"crater\" which is partially filled with rum or other flammable high-alcohol liquor.\n\n The \"crater\" liquor is then ignited, creating a mild volcanic ambience with its central blue flame.",
+    "The Blue Lagoon (novel)\nThe Blue Lagoon is a romance novel written by Henry De Vere Stacpoole and was first published by T. Fisher Unwin in 1908.\n\n It is the first novel of the \"Blue Lagoon\" trilogy, which also includes \"The Garden of God\" (1923) and \"The Gates of Morning\" (1925).\n\n The novel has inspired several film adaptations, most notably \"The Blue Lagoon\" starring Brooke Shields as Emmeline and Christopher Atkins as Richard (\"Dicky\" in the book).",
+    "Joulupöytä\nJoulupöytä (translated \"Yule table\") is the traditional assortment of foods served at Christmas in Finland, similar to the Swedish julbord.\n\n It contains many different dishes, most of them typical for the season.\n\n The main dish is usually a large Christmas ham, which is eaten with mustard or bread along with the other dishes.\n\n Fish is also served (often lutefisk and gravlax), and the ham is served with \"laatikko\"s, casseroles made with swede, potato and carrot, occasionally liver.\n\n The traditional Christmas beverage is either alcoholic or non-alcoholic mulled wine (\"glögi\" in Finnish)."
+   ]
+  },
+  {
+   "id": "a1f00a9fbc9d7d96",
+   "gold": [
+    {
+     "sentence": " Along with competing in the league, the club will also participate in the FA Cup, EFL Cup and EFL Trophy.",
+     "facts": {
+      "0.0": "The club will compete in the league.",
+      "0.1": "The club will also participate in the FA Cup.",
+      "0.2": "The club will also participate in the EFL Cup.",
+      "0.3": "The club will also participate in the EFL Trophy."
+     }
+    },
+    {
+     "sentence": "The EFL Cup (referred to historically, and colloquially, as simply the League Cup), currently known as the Carabao Cup for sponsorship reasons, is an annual knockout football competition in men's domestic English football.",
+     "facts": {
+      "1.0": "The EFL Cup is historically referred to as the League Cup.",
+      "1.1": "The EFL Cup is colloquially referred to as simply the League Cup.",
+      "1.2": "The EFL Cup is currently known as the Carabao Cup for sponsorship reasons.",
+      "1.3": "The EFL Cup is an annual knockout football competition.",
+      "1.4": "The EFL Cup is a competition in men's domestic English football."
+     }
+    }
+   ],
+   "items": [
+    "2007–08 Wigan Athletic F.C. season\nThe 2007–08 Wigan Athletic F.C. season was the club's 30th season in the Football League and their third season in the Premier League.",
+    "1978–79 Wigan Athletic F.C. season\nThe 1978–79 season was the 41st season in the history of Wigan Athletic F.C. and their first as a professional club in the Football League.\n\n After finishing 2nd in the Northern Premier League during the previous season, the club was nominated to apply for Football League status, and were elected into the league to replace Southport.\n\n After a poor start, the club exceeded expectations in the league, and towards the end of the season, a second consecutive promotion seemed possible.\n\n The club eventually fell short, finishing the season in 6th place with a total of 55 points.",
+    "2017–18 Wigan Athletic F.C. season\nThe 2017–18 season is Wigan Athletic's 86th year in existence and their first back in League One, after being relegated the previous season.\n\n Along with competing in the league, the club will also participate in the FA Cup, EFL Cup and EFL Trophy.\n\n Paul Cook was appointed as manager on 31 May 2017, signing a 3 year deal, following the departure of much of the previous coaching staff the day before.",
+    "EFL Cup\nThe EFL Cup (referred to historically, and colloquially, as simply the League Cup), currently known as the Carabao Cup for sponsorship reasons, is an annual knockout football competition in men's domestic English football.\n\n Organised by the English Football League (EFL), it is open to any club within the top four levels of the English football league system – 92 clubs in total – comprising the top level Premier League, and the three divisions of the English Football League's own league competition (Championship, League One and League Two).",
+    "List of Wigan Borough F.C. players\nWigan Borough F.C. was an English football club based in the town of Wigan.\n\n The club was founded in 1920 and joined the Lancashire Combination.\n\n In 1921, Borough turned professional when their application was accepted to play in the inaugural season of the newly formed Football League Third Division North.\n\n The team played in the Football League for ten seasons, with their most successful season coming in 1928–29, finishing fourth in the league and reaching the third round of the FA Cup.\n\n Wigan Borough folded during the 1931–32 season due to financial problems, and League football did not return to the town until Wigan Athletic F.C. were elected into the Football League in 1978.",
+    "2013–14 Midlands football leagues (levels 9–10)\nThe 2013–14 Midland Football Alliance season was the 20th and final in the history of Midland Football Alliance, a football competition in England.\n\n The 2013–14 Midland Football Combination season (known as the 2013–14 Athium Midland Football Combination for sponsorship reasons) was the 77th and final in the history of Midland Football Combination and it was a feeder to the Midland Football Alliance.\n\n The 2013–14 West Midlands (Regional) League season was the 114th in the history of the West Midlands (Regional) League.\n\n It was also a feeder league to the Midland Football Alliance.\n\n At the end of the season the Midland Alliance and the Midland Combination merged to form the Midland Football League.",
+    "Springfield Park (Wigan)\nSpringfield Park was a multi-purpose stadium in Wigan, Greater Manchester.\n\n It was the home ground of Wigan Athletic F.C. until the club moved to the new JJB Stadium (now DW Stadium) after the 1998–99 season.\n\n At its largest, the stadium held 40,000.\n\n In its 102-year existence the ground only saw 32 years as a Football League venue, 11 years for Wigan Borough F.C. and 21 years for Wigan Athletic FC, before it was demolished to make way for a housing estate in 1999.",
+    "2006–07 Wigan Athletic F.C. season\nThe 2006–07 Wigan Athletic F.C. season was the club's 29th season in the Football League and their second season in the Premier League.",
+    "2012–13 Midlands football leagues (levels 9–10)\nThe 2012–13 Midland Football Alliance season is the 19th in the history of Midland Football Alliance a football competition in England.\n\n The 2012–13 Midland Football Combination season (known as the 2012–13 Athium Midland Football Combination for sponsorship reasons) is the 76th in the history of Midland Football Combination a football competition in England and feeder to the Midland Football Alliance.\n\n The 2012–13 West Midlands (Regional) League season is the 113th in the history of the West Midlands (Regional) League.\n\n It is also a feeder league to the Midland Football Alliance.",
+    "1979–80 Wigan Athletic F.C. season\nThe 1979–80 season was the 42nd season in the history of Wigan Athletic F.C. and their second as a professional club in the Football League."
+   ]
+  },
+  {
+   "id": "a315e85a8f7ae726",
+   "gold": [
+    {
+     "sentence": " He creates bespoke millinery under the J Smith Esquire brand for a portfolio of private clients that includes Angelina Jolie, Brad Pitt and Amal Clooney.",
+     "facts": {
+      "0.0": "This person creates bespoke millinery under the J Smith Esquire brand.",
+      "0.1": "This person creates bespoke millinery for a portfolio of private clients.",
+      "0.2": "The portfolio of private clients includes Angelina Jolie.",
+      "0.3": "The portfolio of private clients includes Brad Pitt.",
+      "0.4": "The portfolio of private clients includes Amal Clooney."
+     }
+    },
+    {
+     "sentence": "Amal Clooney (\"née\" Alamuddin, Arabic: أمل علم الدين‎ ‎ ; born 3 February 1978) is a barrister at Doughty Street Chambers, specialising in international law and human rights.",
+     "facts": {
+      "1.0": "Amal Clooney is also known by the name Alamuddin (née Alamuddin).",
+      "1.1": "Amal Clooney's Arabic name is أمل علم الدين.",
+      "1.2": "Amal Clooney was born on 3 February 1978.",
+      "1.3": "Amal Clooney is a barrister at Doughty Street Chambers.",
+      "1.4": "Amal Clooney specialises in international law.",
+      "1.5": "Amal Clooney specialises in human rights."
+     }
+    }
+   ],
+   "items": [
+    "Edward Fitzgerald (barrister)\nEdward Hamilton Fitzgerald CBE QC is an English barrister who specialises in criminal law, public law, and international human rights law.\n\n His work against the death penalty has led him to represent despised criminals such as: Myra Hindley, a perpetrator in the Moors murders; Mary Bell, a child killer; Maxine Carr; Jon Venables, one of James Bulger's killers; various IRA prisoners; and Abu Hamza, the controversial Muslim cleric.\n\n Fitzgerald is currently the joint head of Doughty Street Chambers along with Geoffrey Robertson QC.\n\n Fitzgerald has been called to the Bar in a number of jurisdictions including Belize, Grenada and St Vincent, and has been granted rights of audience to appear in cases in Hong Kong, Trinidad and Tobago, St Lucia, Bahamas, and the British Virgin Islands.\n\n He is also a trustee and patron of a number of charities including The Death Penalty Project and The Longford Trust.",
+    "Pupil master\nA pupil master ('pupilmaster' or 'pupil-master') or in the case of a female barrister, 'pupil mistress' etc., is the former name given to an experienced barrister who a pupil shadows during their pupillage.\n\n The term pupil master or mistress has now been replaced by the term 'pupil supervisor'.\n\n Barristers are called to the Bar via one of the four Inns of Court upon successful completion of the BPTC and having undertaken a required number of \"qualifying sessions\" in their chosen Inn of Court.\n\n In most cases, the newly called barrister is then required to undertake training for a period of at least a year before the barrister can start their own private practice.\n\n This training period is known as pupillage, usually split into two periods of six months known as \"sixes\".\n\n The first \"six\" is a non-practising six, during which the pupil will shadow their pupil master; the second is usually a practising \"six\", when the pupil, with their pupil master's permission, can undertake the supply of legal services and exercise rights of audience in court.",
+    "Pupil master\nOccasionally, a pupil barrister may undertake a third \"six\", extending the training period a further six months.\n\n At the end of pupillage, to continue practising the law, a barrister may attempt to become a tenant in a set of barristers' chambers, or find a position as an employed barrister.",
+    "Barbados Bar Association\nThe Barbados Bar Association is a voluntary association of attorneys in Barbados who practise at the independent bar as barristers and Queen's Counsel.\n\n It was created by the Barbados Bar Association Act of 1940.",
+    "Shahram Taghavi\nShahram Taghavi is a barrister practising in the United Kingdom.\n\n He is a specialist in Judicial Review, Human Rights, Immigration and EU law.\n\n He was called to the England & Wales bar in 1994.\n\n He is a partner at Article 1, a law firm specialising in immigration, EU freedoms of movement and human rights law.\n\n He practised as an independent barrister at Doughty Street Chambers specialising in immigration and public law.\n\n He was head of both the Immigration and Public Law departments at Simons Muirhead & Burton solicitors.\n\n He was a Senior Barrister at Bates Wells & Braithwaite LLP as a member of their Public & Regulatory and Immigration departments, Deputy Head of Immigration at Lewis Silkin LLP, Head of Immigration at Charles Russell LLP (now Charles Russell Speechly LLP) and National Head of Immigration at Grant Thornton LLP.",
+    "Mónica Feria Tinta\nMónica Feria Tinta is a leading public international lawyer.\n\n She practises as a Barrister at 20 Essex Street Chambers.\n\n In 2000 she became the first Peruvian-born lawyer to receive the Diploma of the Hague Academy of International Law in history.\n\n Her litigation work led to the first international human rights court decision ordering the prosecution of a former Head of State for crimes under international law.\n\n She was awarded the Inge Genefke International Award for her work as an international lawyer in 2006 and was co-recipient of the Gruber Justice Prize 2007, for her contributions advancing the cause of justice as delivered through the legal system.\n\n She is a member of the Bar of England and Wales, and the American Society of International Law.",
+    "The entries cover British and Irish figures, families, and titles: Edmund Bartley-Denniss, barrister, Conservative MP, Freemason, and cycling pioneer; several Mortimers and their royal claims, marriages, and fortunes; the 1405 Tripartite Indenture dividing England and Wales; and Lady Elizabeth Percy. They also trace Richard Sherman and Miles Barne’s parliamentary careers, peerages including Plunket, Norbury, Cardross, Cowper, and Galway, North",
+    "City Cruises runs year-round, wheelchair-accessible Thames sightseeing services between major London piers, plus private charters, the London Showboat dinner cruise and permanently moored Hispaniola restaurant. The remaining entries describe London locations and institutions: Doughty Street Chambers’ legal work and Doughty Street’s history; Westminster’s landmarks and former parishes; Abbey Road and its Beatles association; Westminster Underground station; Temple Bar’s ceremonial role and Wren gateway; and the former Westminster Magistrates’",
+    "Doughty Street Chambers\nDoughty Street Chambers is a British set of barristers' chambers situated in Bristol, Manchester and London's Doughty Street, undertaking criminal justice, public law, immigration, employment, human rights and civil liberties work.",
+    "Doughty Street\nDoughty Street is a broad tree lined street in the Holborn district of the London Borough of Camden.\n\n The southern part is a continuation of the short John Street, which comes off Theobald's Road.\n\n The northern part crosses Guilford Street and ends at Mecklenburgh Square.\n\n The street is named after a landlord of the area at the time it was built, Henry Doughty."
+   ]
+  },
+  {
+   "id": "100db07a3e7e8e49",
+   "gold": [
+    {
+     "sentence": "Montague (Monty) Banks (15 July 1897 [registered on 18 July 1897] – 7 January 1950 born Mario Bianchi) was an Italian comedian and film director who achieved success in the United States and in England.",
+     "facts": {
+      "0.0": "Montague (Monty) Banks was born Mario Bianchi.",
+      "0.1": "Montague (Monty) Banks was born 15 July 1897.",
+      "0.2": "Montague (Monty) Banks' birth was registered on 18 July 1897.",
+      "0.3": "Montague (Monty) Banks died on 7 January 1950.",
+      "0.4": "Montague (Monty) Banks was an Italian comedian.",
+      "0.5": "Montague (Monty) Banks was an Italian film director.",
+      "0.6": "Montague (Monty) Banks achieved success in the United States.",
+      "0.7": "Montague (Monty) Banks achieved success in England."
+     }
+    },
+    {
+     "sentence": "George Seaton (April 17, 1911 – July 28, 1979) was an American screenwriter, playwright, film director and producer, and theatre director.",
+     "facts": {
+      "1.0": "George Seaton was born April 17, 1911.",
+      "1.1": "George Seaton died July 28, 1979.",
+      "1.2": "George Seaton was an American screenwriter.",
+      "1.3": "George Seaton was an American playwright.",
+      "1.4": "George Seaton was an American film director.",
+      "1.5": "George Seaton was an American film producer.",
+      "1.6": "George Seaton was an American theatre director."
+     }
+    }
+   ],
+   "items": [
+    "George Seaton\nGeorge Seaton (April 17, 1911 – July 28, 1979) was an American screenwriter, playwright, film director and producer, and theatre director.",
+    "Everett Greenbaum\nEverett Greenbaum (December 20, 1919 – July 11, 1999) was an American television and film writer and actor who contributed to such shows as \"The Andy Griffith Show\" (24 Episodes), \"M*A*S*H\" (35 Episodes), \"Love American Style\", \"The Real McCoys\" (32 Episodes), \"Sanford and Son\", and \"The George Gobel Show\".\n\n Greenbaum was a co-creator with Jim Fritzell of \"Mister Peepers\" an important early television show which starred Wally Cox.\n\n He wrote the Hollywood feature film \"Good Neighbor Sam\", as well as a series of films starring Don Knotts that included \"The Shakiest Gun in the West\", \"The Reluctant Astronaut\", and \"The Ghost and Mr. Chicken\".",
+    "Keep Your Seats, Please\nKeep Your Seats, Please is a 1936 British comedy film directed by Monty Banks and starring George Formby, Florence Desmond and Alastair Sim.\n\n It marked the film debut of the child star Binkie Stuart.\n\n The film was made by Associated Talking Pictures.",
+    "Ken Barrie\nLeslie Hulme (9 January 1933 – 29 July 2016), known professionally as Ken Barrie, was an English voice actor and singer best known for narrating, and singing the theme tune of the BBC television programmes \"Postman Pat\" and \"Charlie Chalk\".\n\n He was also responsible for providing the voices of several of the series' characters.",
+    "The Church Mouse\nThe Church Mouse is a 1934 British comedy film directed by Monty Banks and starring Laura La Plante, Ian Hunter and Edward Chapman.\n\n It was made by the British subsidiary of Warner Brothers at the company's Teddington Studios.\n\n It was made as a more expensive production than much of the studio's low-budget quota quickie output.",
+    "Jebb Fink\nJebb Fink is an American-Canadian stand-up comedian and television personality.\n\n Best known as a reporter and host for \"the Big Breakfast\" on A-Channel, Calgary.\n\n He won a Gemini as co-creator of the CBC comedy \"An American in Canada\" and was a weather presenter on \"Your City\" for City TV Calgary, he also hosted the short-lived late night talk show \"Global Late Night\" for the Global Television Network in 2004.",
+    "Joey Bishop\nJoseph Abraham Gottlieb (February 3, 1918 – October 17, 2007), known professionally as Joey Bishop, was an American entertainer who appeared on television as early as 1948 and eventually starred in his own weekly comedy series playing a talk show host, then later hosted a late night talk show.\n\n He later became a member of the \"Rat Pack\" with Frank Sinatra, Peter Lawford, Sammy Davis, Jr., and Dean Martin.",
+    "Stanley Bing\nStanley Bing is the pen name of Gil Schwartz (born May 20, 1951 in New York, NY), a business humorist and novelist.\n\n He has written a column for \"Fortune\" magazine for more than twenty years, after having spent a decade at \"Esquire\".\n\n He is the author of thirteen books including \"What Would Machiavelli Do?\"\n\n and \"The Curriculum\", a satirical textbook for a business school that also offers lessons on the Web.\n\n Schwartz is the senior executive vice president of corporate communications and Chief Communications Officer for CBS.",
+    "Mark Benton\nMark Benton (born 16 November 1965) is an English actor, known for his roles as Eddie in \"Early Doors\", Howard in \"Northern Lights\" and Martin Pond in \"Barbara\".\n\n Benton has also starred in BBC One drama, \"Waterloo Road\" as maths teacher, Daniel Chalk from 2011 to 2013 and again in 2014.",
+    "Monty Banks\nMontague (Monty) Banks (15 July 1897 [registered on 18 July 1897] – 7 January 1950 born Mario Bianchi) was an Italian comedian and film director who achieved success in the United States and in England."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,122 @@
+[
+{"id": "e1cffe06d89e0136", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "After the Blackhawks jumped to an early 4–1 lead in the first game of the series"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "After the Blackhawks jumped to an early 4–1 lead in the first game of the series, Mario Lemieux and the Penguins came back to win the game"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Mario Lemieux and the Penguins came back to win the game, sweep the series in four games"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Mario Lemieux and the Penguins came back to win the game, sweep the series in four games, and win their second consecutive and second overall Stanley Cup."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "Mario Lemieux and the Penguins came back to win the game, sweep the series in four games, and win their second consecutive and second overall Stanley Cup."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "born October 5, 1965"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Mario Lemieux, OC, CQ"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "is a Canadian former professional ice hockey player"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "is a Canadian former professional ice hockey player"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 9, "quote": "current owner of the Pittsburgh Penguins team"}]}
+]},
+{"id": "8576c17c3f134519", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Samsung Galaxy S7 and Samsung Galaxy S7 Edge are Android smartphones manufactured and marketed by Samsung Electronics."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Samsung Galaxy S7 and Samsung Galaxy S7 Edge are Android smartphones manufactured and marketed by Samsung Electronics."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Samsung Galaxy S7 and Samsung Galaxy S7 Edge are Android smartphones manufactured and marketed by Samsung Electronics."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Samsung Galaxy S7 and Samsung Galaxy S7 Edge are Android smartphones manufactured and marketed by Samsung Electronics."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The S7 series serves as the successor to the Galaxy S6, S6 Edge and S6 Edge+ released in 2015."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The S7 series serves as the successor to the Galaxy S6, S6 Edge and S6 Edge+ released in 2015."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "The S7 series serves as the successor to the Galaxy S6, S6 Edge and S6 Edge+ released in 2015."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "The S7 series serves as the successor to the Galaxy S6, S6 Edge and S6 Edge+ released in 2015."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "Samsung Galaxy S6, Samsung Galaxy S6 Edge, and Samsung Galaxy S6 Edge+ are Android smartphones manufactured and marketed by Samsung Electronics."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "Samsung Galaxy S6, Samsung Galaxy S6 Edge, and Samsung Galaxy S6 Edge+ are Android smartphones manufactured and marketed by Samsung Electronics."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "Samsung Galaxy S6, Samsung Galaxy S6 Edge, and Samsung Galaxy S6 Edge+ are Android smartphones manufactured and marketed by Samsung Electronics."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 10, "quote": "Samsung Galaxy S6, Samsung Galaxy S6 Edge, and Samsung Galaxy S6 Edge+ are Android smartphones manufactured and marketed by Samsung Electronics."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 10, "quote": "Samsung Galaxy S6, Samsung Galaxy S6 Edge, and Samsung Galaxy S6 Edge+ are Android smartphones manufactured and marketed by Samsung Electronics."}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 10, "quote": "The S6 line serves as a successor to the Galaxy S5."}]},
+{"fact": "4.0", "status": "stated", "evidence": [{"item": 10, "quote": "The S6 and S6 Edge smartphones were officially unveiled in the first \"Samsung Unpacked 2015\" event at Mobile World Congress on 1 March 2015"}]},
+{"fact": "4.1", "status": "stated", "evidence": [{"item": 10, "quote": "The S6 and S6 Edge smartphones were officially unveiled in the first \"Samsung Unpacked 2015\" event at Mobile World Congress on 1 March 2015"}]},
+{"fact": "4.2", "status": "stated", "evidence": [{"item": 10, "quote": "The S6 and S6 Edge smartphones were officially unveiled in the first \"Samsung Unpacked 2015\" event at Mobile World Congress on 1 March 2015"}]},
+{"fact": "4.3", "status": "stated", "evidence": [{"item": 10, "quote": "S6 Edge+ was officially unveiled together with the Samsung Galaxy Note 5 in the second \"Samsung Unpacked 2015\" event at New York on 13 August 2015."}]},
+{"fact": "4.4", "status": "stated", "evidence": [{"item": 10, "quote": "S6 Edge+ was officially unveiled together with the Samsung Galaxy Note 5 in the second \"Samsung Unpacked 2015\" event at New York on 13 August 2015."}]},
+{"fact": "4.5", "status": "stated", "evidence": [{"item": 10, "quote": "S6 Edge+ was officially unveiled together with the Samsung Galaxy Note 5 in the second \"Samsung Unpacked 2015\" event at New York on 13 August 2015."}]}
+]},
+{"id": "7f009948369db296", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Game included wild boar, and red, fallow and roe deer."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Game included wild boar, and red, fallow and roe deer."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Game included wild boar, and red, fallow and roe deer."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "Game included wild boar, and red, fallow and roe deer."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "This common species is native to western Eurasia"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "but has been introduced to Antigua & Barbuda, Argentina, South Africa, Fernando Pó, São Tomé, Madagascar, Mauritius, Mayotte, Réunion, Seychelles, Comoro Islands, Morocco, Algeria, Tunisia, Cyprus, Israel, Cape Verde, Lebanon, Australia, New Zealand, Canada, the United States, the Falkland Islands, and Peru."}]}
+]},
+{"id": "b95b45f47f7d7ff0", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "It contains about 200 species, including several notable radiations"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "It contains about 200 species, including several notable radiations"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "such as the matipo of New Zealand and the kōlea of Hawaiʻ i"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "such as the matipo of New Zealand and the kōlea of Hawaiʻ i"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "(the New Zealand \"black matipo\", \"Pittosporum tenuifolium\", is not related to \"Myrsine\")"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Storax or snowbell is the common names of Styrax, a genus of about 130 species of large shrubs or small trees in the family Styracaceae"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Storax or snowbell is the common names of Styrax, a genus of about 130 species of large shrubs or small trees in the family Styracaceae"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "Storax or snowbell is the common names of Styrax, a genus of about 130 species of large shrubs or small trees in the family Styracaceae"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "Storax or snowbell is the common names of Styrax, a genus of about 130 species of large shrubs or small trees in the family Styracaceae"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 1, "quote": "mostly native to warm temperate to tropical regions of the Northern Hemisphere, with the majority in eastern and southeastern Asia, but also crossing the equator in South America."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 1, "quote": "mostly native to warm temperate to tropical regions of the Northern Hemisphere, with the majority in eastern and southeastern Asia, but also crossing the equator in South America."}]},
+{"fact": "1.6", "status": "stated", "evidence": [{"item": 1, "quote": "mostly native to warm temperate to tropical regions of the Northern Hemisphere, with the majority in eastern and southeastern Asia, but also crossing the equator in South America."}]}
+]},
+{"id": "bc84c40beb6dd411", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Groom Lake is a salt flat in Nevada used for runways of the Nellis Bombing Range Test Site airport (KXTA)."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Groom Lake is a salt flat in Nevada used for runways of the Nellis Bombing Range Test Site airport (KXTA)."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Groom Lake is a salt flat in Nevada used for runways of the Nellis Bombing Range Test Site airport (KXTA)."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Located within the namesake Groom Lake Valley portion of the Tonopah Basin, the lake is 25 mi south of Rachel, Nevada."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Located within the namesake Groom Lake Valley portion of the Tonopah Basin, the lake is 25 mi south of Rachel, Nevada."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Located within the namesake Groom Lake Valley portion of the Tonopah Basin, the lake is 25 mi south of Rachel, Nevada."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "Rachel is a census-designated place (CDP) in Lincoln County, Nevada, United States."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "Rachel is a census-designated place (CDP) in Lincoln County, Nevada, United States."}]}
+]},
+{"id": "98ee5233b978a383", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Dogo Cubano also known as the Cuban Mastiff, Cuban Dogo and Cuban Dogge is an extinct dog breed from Cuba."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Dogo Cubano also known as the Cuban Mastiff, Cuban Dogo and Cuban Dogge is an extinct dog breed from Cuba."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Dogo Cubano also known as the Cuban Mastiff, Cuban Dogo and Cuban Dogge is an extinct dog breed from Cuba."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "Dogo Cubano also known as the Cuban Mastiff, Cuban Dogo and Cuban Dogge is an extinct dog breed from Cuba."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "Dogo Cubano also known as the Cuban Mastiff, Cuban Dogo and Cuban Dogge is an extinct dog breed from Cuba."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "The Dutch Shepherd is a herding dog of Dutch origin."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "The Dutch Shepherd is a herding dog of Dutch origin."}]}
+]},
+{"id": "28875201cde0bdb0", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "The Church of the Guanche People (Spanish: \"Iglesia del Pueblo Guanche\" ) is a religious organisation, founded in 2001 in the city of San Cristóbal de La Laguna"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "The Church of the Guanche People (Spanish: \"Iglesia del Pueblo Guanche\" ) is a religious organisation, founded in 2001 in the city of San Cristóbal de La Laguna"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "The Church of the Guanche People (Spanish: \"Iglesia del Pueblo Guanche\" ) is a religious organisation, founded in 2001 in the city of San Cristóbal de La Laguna"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "The Church of the Guanche People (Spanish: \"Iglesia del Pueblo Guanche\" ) is a religious organisation, founded in 2001 in the city of San Cristóbal de La Laguna"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "San Cristóbal de La Laguna (Tenerife, Canary Islands, Spain)."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Tenerife is the largest and most populous island of Macaronesia."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Tenerife is the largest and most populous island of Macaronesia."}]}
+]},
+{"id": "078e7c967b39df11", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Awolnation is an American alternative rock band, formed and fronted by Aaron Bruno, formerly of Under the Influence of Giants, Home Town Hero, and Insurgence."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Awolnation is an American alternative rock band, formed and fronted by Aaron Bruno, formerly of Under the Influence of Giants, Home Town Hero, and Insurgence."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Awolnation is an American alternative rock band, formed and fronted by Aaron Bruno, formerly of Under the Influence of Giants, Home Town Hero, and Insurgence."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "Awolnation is an American alternative rock band, formed and fronted by Aaron Bruno, formerly of Under the Influence of Giants, Home Town Hero, and Insurgence."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 1, "quote": "Awolnation is an American alternative rock band, formed and fronted by Aaron Bruno, formerly of Under the Influence of Giants, Home Town Hero, and Insurgence."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 1, "quote": "Awolnation is an American alternative rock band, formed and fronted by Aaron Bruno, formerly of Under the Influence of Giants, Home Town Hero, and Insurgence."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "This Mortal Coil was a music collective led by Ivo Watts-Russell, founder of the British record label 4AD."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "This Mortal Coil was a music collective led by Ivo Watts-Russell, founder of the British record label 4AD."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "This Mortal Coil was a music collective led by Ivo Watts-Russell, founder of the British record label 4AD."}]}
+]},
+{"id": "c9738815aed0985a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "That Darn Cat is a 1997 American mystery comedy film starring Christina Ricci and Doug E. Doug."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "That Darn Cat is a 1997 American mystery comedy film starring Christina Ricci and Doug E. Doug."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "That Darn Cat is a 1997 American mystery comedy film starring Christina Ricci and Doug E. Doug."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "That Darn Cat is a 1997 American mystery comedy film starring Christina Ricci and Doug E. Doug."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "That Darn Cat is a 1997 American mystery comedy film starring Christina Ricci and Doug E. Doug."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 3, "quote": "That Darn Cat is a 1997 American mystery comedy film starring Christina Ricci and Doug E. Doug."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Honey, I Blew Up the Kid is a 1992 American comedy science fiction film and the sequel to the 1989 film \"Honey, I Shrunk the Kids\"."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Honey, I Blew Up the Kid is a 1992 American comedy science fiction film and the sequel to the 1989 film \"Honey, I Shrunk the Kids\"."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "Honey, I Blew Up the Kid is a 1992 American comedy science fiction film and the sequel to the 1989 film \"Honey, I Shrunk the Kids\"."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "Honey, I Blew Up the Kid is a 1992 American comedy science fiction film and the sequel to the 1989 film \"Honey, I Shrunk the Kids\"."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 6, "quote": "Honey, I Blew Up the Kid is a 1992 American comedy science fiction film and the sequel to the 1989 film \"Honey, I Shrunk the Kids\"."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 6, "quote": "Honey, I Blew Up the Kid is a 1992 American comedy science fiction film and the sequel to the 1989 film \"Honey, I Shrunk the Kids\"."}]}
+]},
+{"id": "c7468a24c9264377", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "In 2003, he received the award for his actions during the Battle of Qala-i-Jangi, which took place in late November – early December 2001."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "In 2003, he received the award for his actions during the Battle of Qala-i-Jangi, which took place in late November – early December 2001."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "The Battle of Qala-i-Jangi (also incorrectly referred to as the \"Battle of Mazar-i-Sharif\") was a prisoner-of-war camp uprising"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "The Battle of Qala-i-Jangi (also incorrectly referred to as the \"Battle of Mazar-i-Sharif\") was a prisoner-of-war camp uprising"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "took place between November 25 and December 1, 2001, in northern Afghanistan"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "took place between November 25 and December 1, 2001, in northern Afghanistan"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 9, "quote": "following the armed intervention by United States-led coalition forces to try to overthrow the Taliban's Islamic Emirate of Afghanistan, which it had accused of harboring al-Qaeda operatives."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 9, "quote": "following the armed intervention by United States-led coalition forces to try to overthrow the Taliban's Islamic Emirate of Afghanistan, which it had accused of harboring al-Qaeda operatives."}]},
+{"fact": "1.6", "status": "stated", "evidence": [{"item": 9, "quote": "following the armed intervention by United States-led coalition forces to try to overthrow the Taliban's Islamic Emirate of Afghanistan, which it had accused of harboring al-Qaeda operatives."}]}
+]}
+]

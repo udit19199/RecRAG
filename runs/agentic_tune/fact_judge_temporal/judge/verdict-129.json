@@ -1,0 +1,35 @@
+[
+{"id": "deb3fa7db9549a50", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "You can find value in player and team props by gathering information from multiple sources"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Proposition bets, or props, are easy to understand, numerous, and cover both player props and team props"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Proposition bets, or props, are easy to understand, numerous, and cover both player props and team props"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "team props can range from which team will score the first bucket to the total points scored in a quarter to which team will lead at halftime."}]},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "da0ce650e55dd1c8", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "from companies including Apple, Samsung and Mozilla"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "from companies including Apple, Samsung and Mozilla, The Verge reports."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "042ba5d73be3da03", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "It will attempt to argue that Google restrains competition within two separate markets"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "within two separate markets, including the distribution of apps to Android users"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "and the market for payment processing solutions for content inside Android apps"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]}
+]

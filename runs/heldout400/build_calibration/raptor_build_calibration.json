@@ -1,0 +1,7 @@
+{
+ "summary_calls": 1462,
+ "input_tokens_total": 1941634.744250491,
+ "output_per_call": 179.475,
+ "reasoning_per_call": 69.425,
+ "list_usd_full_build": 0.3253596994250491
+}

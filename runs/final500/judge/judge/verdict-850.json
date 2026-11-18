@@ -1,0 +1,4757 @@
+[
+  {
+    "id": "ec5c4a3a83d8b0d0",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Spain : 430"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "France : 128"
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Italy : 104"
+          }
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Russia : 100"
+          }
+        ]
+      },
+      {
+        "fact": "0.4",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Portugal : 87"
+          }
+        ]
+      },
+      {
+        "fact": "0.5",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Germany : 77"
+          }
+        ]
+      },
+      {
+        "fact": "0.6",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "United Kingdom : 64"
+          }
+        ]
+      },
+      {
+        "fact": "0.7",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Poland : 47"
+          }
+        ]
+      },
+      {
+        "fact": "0.8",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Greece : 46"
+          }
+        ]
+      },
+      {
+        "fact": "0.9",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Turkey : 41"
+          }
+        ]
+      },
+      {
+        "fact": "0.10",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Belgium : 31"
+          }
+        ]
+      },
+      {
+        "fact": "0.11",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Netherlands : 28"
+          }
+        ]
+      },
+      {
+        "fact": "0.12",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Romania : 24"
+          }
+        ]
+      },
+      {
+        "fact": "0.13",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Switzerland : 20"
+          }
+        ]
+      },
+      {
+        "fact": "0.14",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Austria : 14"
+          }
+        ]
+      },
+      {
+        "fact": "0.15",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Sweden : 12"
+          }
+        ]
+      },
+      {
+        "fact": "0.16",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Croatia : 10"
+          }
+        ]
+      },
+      {
+        "fact": "0.17",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Ireland : 9"
+          }
+        ]
+      },
+      {
+        "fact": "0.18",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Ukraine : 9"
+          }
+        ]
+      },
+      {
+        "fact": "0.19",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Hungary : 8"
+          }
+        ]
+      },
+      {
+        "fact": "0.20",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Bulgaria : 6"
+          }
+        ]
+      },
+      {
+        "fact": "0.21",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Cyprus : 6"
+          }
+        ]
+      },
+      {
+        "fact": "0.22",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Czech Republic : 6"
+          }
+        ]
+      },
+      {
+        "fact": "0.23",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Finland : 5"
+          }
+        ]
+      },
+      {
+        "fact": "0.24",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Lithuania : 5"
+          }
+        ]
+      },
+      {
+        "fact": "0.25",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Norway : 5"
+          }
+        ]
+      },
+      {
+        "fact": "0.26",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Serbia : 5"
+          }
+        ]
+      },
+      {
+        "fact": "0.27",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Slovenia : 5"
+          }
+        ]
+      },
+      {
+        "fact": "0.28",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Denmark : 4"
+          }
+        ]
+      },
+      {
+        "fact": "0.29",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Latvia : 4"
+          }
+        ]
+      },
+      {
+        "fact": "0.30",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Estonia : 3"
+          }
+        ]
+      },
+      {
+        "fact": "0.31",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Azerbaijan : 3"
+          }
+        ]
+      },
+      {
+        "fact": "0.32",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Bosnia and Herzegovina : 3"
+          }
+        ]
+      },
+      {
+        "fact": "0.33",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Georgia : 3"
+          }
+        ]
+      },
+      {
+        "fact": "0.34",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Luxembourg : 3"
+          }
+        ]
+      },
+      {
+        "fact": "0.35",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Slovakia : 3"
+          }
+        ]
+      },
+      {
+        "fact": "0.36",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Armenia : 2"
+          }
+        ]
+      },
+      {
+        "fact": "0.37",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Albania : 1"
+          }
+        ]
+      },
+      {
+        "fact": "0.38",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Andorra : 1"
+          }
+        ]
+      },
+      {
+        "fact": "0.39",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Belarus : 1"
+          }
+        ]
+      },
+      {
+        "fact": "0.40",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Iceland : 1"
+          }
+        ]
+      },
+      {
+        "fact": "0.41",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Macedonia : 1"
+          }
+        ]
+      },
+      {
+        "fact": "0.42",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Malta : 1"
+          }
+        ]
+      },
+      {
+        "fact": "0.43",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Monaco : 1"
+          }
+        ]
+      },
+      {
+        "fact": "0.44",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Montenegro : 1"
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "United Kingdom : 64"
+          }
+        ]
+      },
+      {
+        "fact": "2.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Africa South Africa : 9"
+          }
+        ]
+      },
+      {
+        "fact": "2.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Africa South Africa : 9 Egypt : 5"
+          }
+        ]
+      },
+      {
+        "fact": "2.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Africa South Africa : 9 Egypt : 5 Morocco : 4"
+          }
+        ]
+      },
+      {
+        "fact": "2.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Africa South Africa : 9 Egypt : 5 Morocco : 4 Tunisia : 3"
+          }
+        ]
+      },
+      {
+        "fact": "2.4",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Africa South Africa : 9 Egypt : 5 Morocco : 4 Tunisia : 3 Algeria : 1"
+          }
+        ]
+      },
+      {
+        "fact": "2.5",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Americas United States : 85"
+          }
+        ]
+      },
+      {
+        "fact": "2.6",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Americas United States : 85 Mexico : 84"
+          }
+        ]
+      },
+      {
+        "fact": "2.7",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Americas United States : 85 Mexico : 84 Brazil : 56"
+          }
+        ]
+      },
+      {
+        "fact": "2.8",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32"
+          }
+        ]
+      },
+      {
+        "fact": "2.9",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14"
+          }
+        ]
+      },
+      {
+        "fact": "2.10",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10"
+          }
+        ]
+      },
+      {
+        "fact": "2.11",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9"
+          }
+        ]
+      },
+      {
+        "fact": "2.12",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8"
+          }
+        ]
+      },
+      {
+        "fact": "2.13",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4"
+          }
+        ]
+      },
+      {
+        "fact": "2.14",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4"
+          }
+        ]
+      },
+      {
+        "fact": "2.15",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3"
+          }
+        ]
+      },
+      {
+        "fact": "2.16",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3 Guatemala : 3"
+          }
+        ]
+      },
+      {
+        "fact": "2.17",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3 Guatemala : 3 Panama : 3"
+          }
+        ]
+      },
+      {
+        "fact": "2.18",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3 Guatemala : 3 Panama : 3 Costa Rica : 2"
+          }
+        ]
+      },
+      {
+        "fact": "2.19",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3 Guatemala : 3 Panama : 3 Costa Rica : 2 Ecuador : 2"
+          }
+        ]
+      },
+      {
+        "fact": "2.20",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3 Guatemala : 3 Panama : 3 Costa Rica : 2 Ecuador : 2 El Salvador : 2"
+          }
+        ]
+      },
+      {
+        "fact": "2.21",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3 Guatemala : 3 Panama : 3 Costa Rica : 2 Ecuador : 2 El Salvador : 2 Honduras : 2"
+          }
+        ]
+      },
+      {
+        "fact": "2.22",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3 Guatemala : 3 Panama : 3 Costa Rica : 2 Ecuador : 2 El Salvador : 2 Honduras : 2 Uruguay : 2"
+          }
+        ]
+      },
+      {
+        "fact": "2.23",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3 Guatemala : 3 Panama : 3 Costa Rica : 2 Ecuador : 2 El Salvador : 2 Honduras : 2 Uruguay : 2 Aruba : 1"
+          }
+        ]
+      },
+      {
+        "fact": "2.24",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3 Guatemala : 3 Panama : 3 Costa Rica : 2 Ecuador : 2 El Salvador : 2 Honduras : 2 Uruguay : 2 Aruba : 1 Nicaragua : 1"
+          }
+        ]
+      },
+      {
+        "fact": "2.25",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3 Guatemala : 3 Panama : 3 Costa Rica : 2 Ecuador : 2 El Salvador : 2 Honduras : 2 Uruguay : 2 Aruba : 1 Nicaragua : 1 Paraguay : 1"
+          }
+        ]
+      },
+      {
+        "fact": "2.26",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Asia China : 200"
+          }
+        ]
+      },
+      {
+        "fact": "2.27",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Asia China : 200 Japan : 99"
+          }
+        ]
+      },
+      {
+        "fact": "2.28",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Asia China : 200 Japan : 99 South Korea : 43"
+          }
+        ]
+      },
+      {
+        "fact": "2.29",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39"
+          }
+        ]
+      },
+      {
+        "fact": "2.30",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24"
+          }
+        ]
+      },
+      {
+        "fact": "2.31",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20"
+          }
+        ]
+      },
+      {
+        "fact": "2.32",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17"
+          }
+        ]
+      },
+      {
+        "fact": "2.33",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14"
+          }
+        ]
+      },
+      {
+        "fact": "2.34",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11"
+          }
+        ]
+      },
+      {
+        "fact": "2.35",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11"
+          }
+        ]
+      },
+      {
+        "fact": "2.36",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10"
+          }
+        ]
+      },
+      {
+        "fact": "2.37",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9"
+          }
+        ]
+      },
+      {
+        "fact": "2.38",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9"
+          }
+        ]
+      },
+      {
+        "fact": "2.39",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9 Philippines : 8"
+          }
+        ]
+      },
+      {
+        "fact": "2.40",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9 Philippines : 8 Lebanon : 7"
+          }
+        ]
+      },
+      {
+        "fact": "2.41",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9 Philippines : 8 Lebanon : 7 Kazakhstan : 5"
+          }
+        ]
+      },
+      {
+        "fact": "2.42",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9 Philippines : 8 Lebanon : 7 Kazakhstan : 5 Kuwait : 5"
+          }
+        ]
+      },
+      {
+        "fact": "2.43",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9 Philippines : 8 Lebanon : 7 Kazakhstan : 5 Kuwait : 5 Qatar : 5"
+          }
+        ]
+      },
+      {
+        "fact": "2.44",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9 Philippines : 8 Lebanon : 7 Kazakhstan : 5 Kuwait : 5 Qatar : 5 Jordan : 3"
+          }
+        ]
+      },
+      {
+        "fact": "2.45",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9 Philippines : 8 Lebanon : 7 Kazakhstan : 5 Kuwait : 5 Qatar : 5 Jordan : 3 Bahrain : 2"
+          }
+        ]
+      },
+      {
+        "fact": "2.46",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9 Philippines : 8 Lebanon : 7 Kazakhstan : 5 Kuwait : 5 Qatar : 5 Jordan : 3 Bahrain : 2 Macau : 2"
+          }
+        ]
+      },
+      {
+        "fact": "2.47",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9 Philippines : 8 Lebanon : 7 Kazakhstan : 5 Kuwait : 5 Qatar : 5 Jordan : 3 Bahrain : 2 Macau : 2 Oman : 1"
+          }
+        ]
+      },
+      {
+        "fact": "2.48",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9 Philippines : 8 Lebanon : 7 Kazakhstan : 5 Kuwait : 5 Qatar : 5 Jordan : 3 Bahrain : 2 Macau : 2 Oman : 1 Vietnam : 1"
+          }
+        ]
+      },
+      {
+        "fact": "2.49",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Europe Spain : 430"
+          }
+        ]
+      },
+      {
+        "fact": "2.50",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Europe Spain : 430 France : 128"
+          }
+        ]
+      },
+      {
+        "fact": "2.51",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Europe Spain : 430 France : 128 Italy : 104"
+          }
+        ]
+      },
+      {
+        "fact": "2.52",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Europe Spain : 430 France : 128 Italy : 104 Russia : 100"
+          }
+        ]
+      },
+      {
+        "fact": "2.53",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Europe Spain : 430 France : 128 Italy : 104 Russia : 100 Portugal : 87"
+          }
+        ]
+      },
+      {
+        "fact": "2.54",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Europe Spain : 430 France : 128 Italy : 104 Russia : 100 Portugal : 87 Germany : 77"
+          }
+        ]
+      },
+      {
+        "fact": "2.55",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.56",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.57",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.58",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.59",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.60",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.61",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.62",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.63",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.64",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.65",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.66",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.67",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.68",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.69",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.70",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.71",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.72",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.73",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.74",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.75",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.76",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.77",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.78",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.79",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.80",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.81",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.82",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.83",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.84",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.85",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.86",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.87",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.88",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.89",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.90",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.91",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.92",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.93",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.94",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Oceania Australia : 19"
+          }
+        ]
+      },
+      {
+        "fact": "2.95",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Oceania Australia : 19 New Zealand : 1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "4793292610f7cee7",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "In 1980 , The Shining became the basis for a film adaptation"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "In 1980 , The Shining became the basis for a film adaptation directed by Stanley Kubrick"
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Kubrick 's vision for the movie differed from King 's significantly in many ways"
+          }
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "differed from King 's significantly in many ways , including the portrayal of the Overlook Hotel"
+          }
+        ]
+      },
+      {
+        "fact": "0.4",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "The exteriors of Kubrick 's Overlook were supplied by the Timberline Lodge on the slopes of Mt . Hood in Oregon"
+          }
+        ]
+      },
+      {
+        "fact": "0.5",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "the Timberline Lodge on the slopes of Mt . Hood in Oregon"
+          }
+        ]
+      },
+      {
+        "fact": "0.6",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Inspiration for the interior sets ( erected at Elstree Studios in England ) came from the 1927 Ahwahnee Hotel in Yosemite National Park"
+          }
+        ]
+      },
+      {
+        "fact": "0.7",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Inspiration for the interior sets ( erected at Elstree Studios in England )"
+          }
+        ]
+      },
+      {
+        "fact": "0.8",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "The management of the Timberline Lodge , fearful that guests would refuse to stay in their Room 217 if it were featured in a horror movie"
+          }
+        ]
+      },
+      {
+        "fact": "0.9",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "insisted that Kubrick change the haunted room in the film to Room 237"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "7a61273c287ddf99",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "written by Kenny Gamble & Leon Huff"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "is a song performed by R&B singer Lou Rawls on his 1976 album All Things in Time"
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "is a song performed by R&B singer Lou Rawls on his 1976 album All Things in Time"
+          }
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "The song proved to be Rawls ' breakthrough hit"
+          }
+        ]
+      },
+      {
+        "fact": "0.4",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "reaching number one on both the R&B and Easy Listening charts"
+          }
+        ]
+      },
+      {
+        "fact": "0.5",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "reaching number one on both the R&B and Easy Listening charts"
+          }
+        ]
+      },
+      {
+        "fact": "0.6",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "as well as number four on the dance chart"
+          }
+        ]
+      },
+      {
+        "fact": "0.7",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "number two on the US Billboard Hot 100"
+          }
+        ]
+      },
+      {
+        "fact": "0.8",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "kept from the top spot for two weeks by `` You Should Be Dancing '' by The Bee Gees and `` ( Shake , Shake , Shake ) Shake Your Booty '' by KC and the Sunshine Band , respectively"
+          }
+        ]
+      },
+      {
+        "fact": "0.9",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "This was the first and only time that one of Rawls ' records managed to reach Billboard 's pop top ten"
+          }
+        ]
+      },
+      {
+        "fact": "0.10",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "It was the first big hit for Philadelphia International to feature the reformulated MFSB"
+          }
+        ]
+      },
+      {
+        "fact": "0.11",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "after many of the original members left Gamble and Huff for better opportunities"
+          }
+        ]
+      },
+      {
+        "fact": "0.12",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "The song started Rawls ' live shows from 1977 on"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "0ef0f89d705607e5",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Each state controls where it administers its bar exam"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Because the MBE ( below ) is a standardized test"
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "it must be administered on the same day across the country"
+          }
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "That day occurs twice a year as the last Wednesday in July and the last Wednesday in February"
+          }
+        ]
+      },
+      {
+        "fact": "0.4",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "That day occurs twice a year as the last Wednesday in July and the last Wednesday in February"
+          }
+        ]
+      },
+      {
+        "fact": "0.5",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Two states , Delaware and North Dakota , may administer their bar exams only once , in July"
+          }
+        ]
+      },
+      {
+        "fact": "0.6",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "if they do not have enough applicants to merit a second sitting"
+          }
+        ]
+      },
+      {
+        "fact": "0.7",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "North Dakota requires ten applicants in order to administer the February exam"
+          }
+        ]
+      },
+      {
+        "fact": "0.8",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Most bar exams are administered on consecutive days"
+          }
+        ]
+      },
+      {
+        "fact": "0.9",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Louisiana is the exception , with the Louisiana Bar Exam being a three - day examination on Monday , Wednesday and Friday"
+          }
+        ]
+      },
+      {
+        "fact": "0.10",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Louisiana is the exception , with the Louisiana Bar Exam being a three - day examination on Monday , Wednesday and Friday"
+          }
+        ]
+      },
+      {
+        "fact": "0.11",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Louisiana 's examination is the longest in the country in terms of examination time"
+          }
+        ]
+      },
+      {
+        "fact": "0.12",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Louisiana 's examination is the longest in the country in terms of examination time , with seven hours on Monday and Wednesday"
+          }
+        ]
+      },
+      {
+        "fact": "0.13",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "with seven hours on Monday and Wednesday and seven and one half hours on Friday"
+          }
+        ]
+      },
+      {
+        "fact": "0.14",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "seven and one half hours on Friday for a total of 21.5 hours of testing"
+          }
+        ]
+      },
+      {
+        "fact": "0.15",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Montana 's bar examination also occurs over a three - day period"
+          }
+        ]
+      },
+      {
+        "fact": "0.16",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Montana 's bar examination also occurs over a three - day period , with a total of 18 hours of testing"
+          }
+        ]
+      },
+      {
+        "fact": "0.17",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "The bar exams in Delaware , Nevada , Ohio , South Carolina , and Texas are also three days long"
+          }
+        ]
+      },
+      {
+        "fact": "0.18",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "The California bar exam moved to a two - day format beginning with the July , 2017 exam"
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "most students engage in a regimen of study ( called `` bar review '' )"
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "To refresh their memory on `` black - letter rules '' tested on the bar"
+          }
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "between graduating from law school and sitting for the bar"
+          }
+        ]
+      },
+      {
+        "fact": "1.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "For bar review , most students in the United States attend a private bar review course"
+          }
+        ]
+      },
+      {
+        "fact": "1.4",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "which is provided by a third - party company"
+          }
+        ]
+      },
+      {
+        "fact": "1.5",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "attend a private bar review course which is provided by a third - party company and not their law school"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "42e90128bc53135e",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "DJ Lance Rock -- ( Portrayed by Lance Robertson U.S. , voice dubbed by Ortis Deley in the UK ) A DJ who is the narrator and friend of the other characters and the series ' host"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "DJ Lance Rock -- ( Portrayed by Lance Robertson U.S. , voice dubbed by Ortis Deley in the UK ) A DJ who is the narrator and friend of the other characters and the series ' host"
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "DJ Lance Rock -- ( Portrayed by Lance Robertson U.S. , voice dubbed by Ortis Deley in the UK ) A DJ who is the narrator and friend of the other characters and the series ' host"
+          }
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "DJ Lance Rock -- ( Portrayed by Lance Robertson U.S. , voice dubbed by Ortis Deley in the UK ) A DJ who is the narrator and friend of the other characters and the series ' host"
+          }
+        ]
+      },
+      {
+        "fact": "0.4",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "DJ Lance Rock -- ( Portrayed by Lance Robertson U.S. , voice dubbed by Ortis Deley in the UK ) A DJ who is the narrator and friend of the other characters and the series ' host"
+          }
+        ]
+      },
+      {
+        "fact": "0.5",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "DJ Lance Rock -- ( Portrayed by Lance Robertson U.S. , voice dubbed by Ortis Deley in the UK ) A DJ who is the narrator and friend of the other characters and the series ' host"
+          }
+        ]
+      },
+      {
+        "fact": "0.6",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "Muno -- ( Voiced by Adam Deibert U.S. , Bob Golding UK )"
+          }
+        ]
+      },
+      {
+        "fact": "0.7",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "Muno -- ( Voiced by Adam Deibert U.S. , Bob Golding UK )"
+          }
+        ]
+      },
+      {
+        "fact": "0.8",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "Muno -- ( Voiced by Adam Deibert U.S. , Bob Golding UK ) A friendly red cyclops boy . He 's the tallest , is somewhat clumsy and has a close bond with Foofa"
+          }
+        ]
+      },
+      {
+        "fact": "0.9",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "Muno -- ( Voiced by Adam Deibert U.S. , Bob Golding UK ) A friendly red cyclops boy . He 's the tallest , is somewhat clumsy and has a close bond with Foofa"
+          }
+        ]
+      },
+      {
+        "fact": "0.10",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "Muno -- ( Voiced by Adam Deibert U.S. , Bob Golding UK ) A friendly red cyclops boy . He 's the tallest , is somewhat clumsy and has a close bond with Foofa"
+          }
+        ]
+      },
+      {
+        "fact": "0.11",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "Muno -- ( Voiced by Adam Deibert U.S. , Bob Golding UK ) A friendly red cyclops boy . He 's the tallest , is somewhat clumsy and has a close bond with Foofa"
+          }
+        ]
+      },
+      {
+        "fact": "0.12",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "has a close bond with Foofa ( though she also bonds with Brobee in the same way )"
+          }
+        ]
+      },
+      {
+        "fact": "0.13",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "He is also the band 's guitarist"
+          }
+        ]
+      },
+      {
+        "fact": "0.14",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "In the episodes `` Family '' , `` Circus '' , and `` Baby '' , his family makes an appearance"
+          }
+        ]
+      },
+      {
+        "fact": "0.15",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "During Super Bowl XLIV , he appeared in a commercial for the Kia Sorento"
+          }
+        ]
+      },
+      {
+        "fact": "0.16",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "His realm resembles the moon , another planet , or a desert"
+          }
+        ]
+      },
+      {
+        "fact": "0.17",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "His realm resembles the moon , another planet , or a desert and he has a pet horse"
+          }
+        ]
+      },
+      {
+        "fact": "0.18",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "He has three stomachs as seen in the X-ray in the Season 1 episode `` Halloween '' ( # 13 )"
+          }
+        ]
+      },
+      {
+        "fact": "0.19",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "However another X-ray in the Season 1 episode `` Imagine '' ( # 20 ) shows him with one stomach"
+          }
+        ]
+      },
+      {
+        "fact": "0.20",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "shows him with one stomach , a normal heart and lungs"
+          }
+        ]
+      },
+      {
+        "fact": "0.21",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "shows him with one stomach , a normal heart and lungs"
+          }
+        ]
+      },
+      {
+        "fact": "0.22",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "His catchphrase is `` Razzle Dazzle ''"
+          }
+        ]
+      },
+      {
+        "fact": "0.23",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Foofa -- ( Voiced by Emma Jacobs - Briggs U.S. , Teresa Gallagher UK )"
+          }
+        ]
+      },
+      {
+        "fact": "0.24",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Foofa -- ( Voiced by Emma Jacobs - Briggs U.S. , Teresa Gallagher UK )"
+          }
+        ]
+      },
+      {
+        "fact": "0.25",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "A female flower bubble character who 's `` pink and happy . ''"
+          }
+        ]
+      },
+      {
+        "fact": "0.26",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "A female flower bubble character who 's `` pink and happy . ''"
+          }
+        ]
+      },
+      {
+        "fact": "0.27",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "She likes flowers , rainbows and unicorns"
+          }
+        ]
+      },
+      {
+        "fact": "0.28",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Her instrument is the tambourine"
+          }
+        ]
+      },
+      {
+        "fact": "0.29",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Her realm is a spring or summer meadow"
+          }
+        ]
+      },
+      {
+        "fact": "0.30",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Brobee -- ( Voiced by Amos Watene U.S. , Simon Feilder UK )"
+          }
+        ]
+      },
+      {
+        "fact": "0.31",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Brobee -- ( Voiced by Amos Watene U.S. , Simon Feilder UK )"
+          }
+        ]
+      },
+      {
+        "fact": "0.32",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Brobee -- ( Voiced by Amos Watene U.S. , Simon Feilder UK ) A small , green monster boy and the baby of the gabbas"
+          }
+        ]
+      },
+      {
+        "fact": "0.33",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Brobee -- ( Voiced by Amos Watene U.S. , Simon Feilder UK ) A small , green monster boy and the baby of the gabbas"
+          }
+        ]
+      },
+      {
+        "fact": "0.34",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.35",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.36",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.37",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.38",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.39",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "Brobee is supposedly a four - year - old in the series"
+          }
+        ]
+      },
+      {
+        "fact": "0.40",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.41",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.42",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.43",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.44",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.45",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.46",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.47",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.48",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.49",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.50",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.51",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.52",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.53",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.54",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.55",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.56",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.57",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "His instrument is the keytar"
+          }
+        ]
+      },
+      {
+        "fact": "0.58",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "He has no realm in particular"
+          }
+        ]
+      },
+      {
+        "fact": "0.59",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "he seems to have a `` docking station '' between Foofa and Brobee 's realms"
+          }
+        ]
+      },
+      {
+        "fact": "0.60",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "In `` Gabbaland Begins '' , Plex is the last in DJ Lance 's original creations"
+          }
+        ]
+      },
+      {
+        "fact": "0.61",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "Plex is the last in DJ Lance 's original creations after he goes through Muno , Foofa , Brobee , and Toodee"
+          }
+        ]
+      },
+      {
+        "fact": "0.62",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "Brobee is supposedly a four - year - old in the series"
+          }
+        ]
+      },
+      {
+        "fact": "0.63",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "Gooble - ( Voiced by Joel Fox U.S. )"
+          }
+        ]
+      },
+      {
+        "fact": "0.64",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "Gooble - ( Voiced by Joel Fox U.S. ) A ghost who is always so sad and crying"
+          }
+        ]
+      },
+      {
+        "fact": "0.65",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "Gooble - ( Voiced by Joel Fox U.S. ) A ghost who is always so sad and crying"
+          }
+        ]
+      },
+      {
+        "fact": "0.66",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "Gooble - ( Voiced by Joel Fox U.S. ) A ghost who is always so sad and crying . He resides in a haunted house"
+          }
+        ]
+      },
+      {
+        "fact": "0.67",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "He resides in a haunted house located in a non-gabba land - place named `` Gooble Land ''"
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Hosted by a character named DJ Lance Rock , the series featured a mix of live - action segments"
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Hosted by a character named DJ Lance Rock , the series featured a mix of live - action segments"
+          }
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "the series featured a mix of live - action segments featuring cartoonish costumed characters"
+          }
+        ]
+      },
+      {
+        "fact": "1.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "and many short animated sketches and musical numbers"
+          }
+        ]
+      },
+      {
+        "fact": "1.4",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "and many short animated sketches and musical numbers"
+          }
+        ]
+      },
+      {
+        "fact": "1.5",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Muno ( the red cyclops )"
+          }
+        ]
+      },
+      {
+        "fact": "1.6",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Foofa ( the pink flower bubble )"
+          }
+        ]
+      },
+      {
+        "fact": "1.7",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Brobee ( a little hairy green monster )"
+          }
+        ]
+      },
+      {
+        "fact": "1.8",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Toodee ( the blue cat - dragon )"
+          }
+        ]
+      },
+      {
+        "fact": "1.9",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Plex ( the magic yellow robot )"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "15dcd4fc3251c735",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Somalia 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.3",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.4",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.5",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.6",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.7",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.8",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.9",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.10",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.11",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.12",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "South Africa ( 7.1 million ) , followed by Nigeria ( 3.2 million ) , and India ( 2.1 million ) had the highest HIV / AIDS number of cases by the end of 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.13",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.14",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.15",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.16",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.17",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Zimbabwe 13.50 % 1,300,000 30,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.18",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Zimbabwe 13.50 % 1,300,000 30,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.19",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Zimbabwe 13.50 % 1,300,000 30,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.20",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Zambia 12.40 % 1,200,000 21,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.21",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Zambia 12.40 % 1,200,000 21,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.22",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Zambia 12.40 % 1,200,000 21,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.23",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Mozambique 12.30 % 1,800,000 62,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.24",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Mozambique 12.30 % 1,800,000 62,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.25",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Mozambique 12.30 % 1,800,000 62,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.26",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Malawi 9.20 % 1,000,000 24,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.27",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Malawi 9.20 % 1,000,000 24,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.28",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Malawi 9.20 % 1,000,000 24,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.29",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Uganda 6.50 % 1,400,000 28,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.30",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Uganda 6.50 % 1,400,000 28,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.31",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Uganda 6.50 % 1,400,000 28,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.32",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Equatorial Guinea 6.20 % 35,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.33",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Equatorial Guinea 6.20 % 35,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.34",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Kenya 5.40 % 1,600,000 36,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.35",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Kenya 5.40 % 1,600,000 36,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.36",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Kenya 5.40 % 1,600,000 36,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.37",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Tanzania 4.70 % 1,400,000 33,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.38",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Tanzania 4.70 % 1,400,000 33,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.39",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Tanzania 4.70 % 1,400,000 33,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.40",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Central African Republic 4.00 % 130,000 7,300 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.41",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Central African Republic 4.00 % 130,000 7,300 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.42",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Central African Republic 4.00 % 130,000 7,300 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.43",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Cameroon 3.80 % 560,000 29,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.44",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Cameroon 3.80 % 560,000 29,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.45",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Cameroon 3.80 % 560,000 29,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.46",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Gabon 3.60 % 48,000 1,500 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.47",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Gabon 3.60 % 48,000 1,500 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.48",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Gabon 3.60 % 48,000 1,500 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.49",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Bahamas , The 3.30 % 8,200 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.50",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Bahamas , The 3.30 % 8,200 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.51",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Rwanda 3.10 % 220,000 3,300 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.52",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Rwanda 3.10 % 220,000 3,300 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.53",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Rwanda 3.10 % 220,000 3,300 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.54",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Congo , Republic of the 3.10 % 91,000 3,800 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.55",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Congo , Republic of the 3.10 % 91,000 3,800 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.56",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Congo , Republic of the 3.10 % 91,000 3,800 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.57",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Guinea - Bissau 3.10 % 36,000 2,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.58",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Guinea - Bissau 3.10 % 36,000 2,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.59",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Guinea - Bissau 3.10 % 36,000 2,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.60",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Nigeria 2.90 % 3,200,000 160,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.61",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Nigeria 2.90 % 3,200,000 160,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.62",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Nigeria 2.90 % 3,200,000 160,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.63",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Cote d'Ivoire 2.70 % 460,000 25,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.64",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Cote d'Ivoire 2.70 % 460,000 25,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.65",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Cote d'Ivoire 2.70 % 460,000 25,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.66",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "South Sudan 2.70 % 200,000 13,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.67",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "South Sudan 2.70 % 200,000 13,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.68",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "South Sudan 2.70 % 200,000 13,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.69",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Haiti 2.10 % 150,000 4,600 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.70",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Haiti 2.10 % 150,000 4,600 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.71",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Haiti 2.10 % 150,000 4,600 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.72",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Togo 2.10 % 100,000 5,100 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.73",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Togo 2.10 % 100,000 5,100 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.74",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Togo 2.10 % 100,000 5,100 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.75",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Angola 1.90 % 280,000 11,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.76",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Angola 1.90 % 280,000 11,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.77",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Angola 1.90 % 280,000 11,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.78",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Belize 1.80 % 4,300 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.79",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Belize 1.80 % 4,300 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.80",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Sierra Leone 1.70 % 67,000 2,800 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.81",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Sierra Leone 1.70 % 67,000 2,800 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.82",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Sierra Leone 1.70 % 67,000 2,800 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.83",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Gambia , The 1.70 % 20,000 1,100 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.84",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Gambia , The 1.70 % 20,000 1,100 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.85",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Gambia , The 1.70 % 20,000 1,100 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.86",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.87",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.88",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.89",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.90",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.91",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.92",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.93",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.94",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.95",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.96",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.97",
+        "status": "contradicted",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Guinea 0.90 % 46,000 1,100 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.98",
+        "status": "contradicted",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Guinea 0.90 % 46,000 1,100 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.99",
+        "status": "contradicted",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Guinea 0.90 % 46,000 1,100 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.100",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.101",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.102",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.103",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.104",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.105",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.106",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.107",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.108",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.109",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.110",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.111",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.112",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.113",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.114",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.115",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.116",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.117",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.118",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.119",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.120",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.121",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.122",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.123",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Mali 1.00 % 110,000 6,100 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.124",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Mali 1.00 % 110,000 6,100 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.125",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Mali 1.00 % 110,000 6,100 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.126",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Dominican Republic 1.00 % 67,000 2,200 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.127",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Dominican Republic 1.00 % 67,000 2,200 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.128",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Dominican Republic 1.00 % 67,000 2,200 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.129",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Ukraine 0.90 % 240,000 8,500 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.130",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Ukraine 0.90 % 240,000 8,500 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.131",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Ukraine 0.90 % 240,000 8,500 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.132",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Papua New Guinea 0.90 % 46,000 1,100 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.133",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Papua New Guinea 0.90 % 46,000 1,100 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.134",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Papua New Guinea 0.90 % 46,000 1,100 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.135",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Cabo Verde 0.80 % 2,800 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.136",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Cabo Verde 0.80 % 2,800 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.137",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Panama 0.80 % 21,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.138",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Panama 0.80 % 21,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.139",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Burma 0.80 % 230,000 7,800 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.140",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Burma 0.80 % 230,000 7,800 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.141",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Burma 0.80 % 230,000 7,800 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.142",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Burkina Faso 0.80 % 95,000 3,100 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.143",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Burkina Faso 0.80 % 95,000 3,100 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.144",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Burkina Faso 0.80 % 95,000 3,100 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.145",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Latvia 0.70 % 6,600 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.146",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Latvia 0.70 % 6,600 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.147",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Congo , Democratic Republic of 0.70 % 370,000 19,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.148",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Congo , Democratic Republic of 0.70 % 370,000 19,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.149",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Congo , Democratic Republic of 0.70 % 370,000 19,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.150",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Cambodia 0.60 % 71,000 1,800 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.151",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Cambodia 0.60 % 71,000 1,800 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.152",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Cambodia 0.60 % 71,000 1,800 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.153",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Venezuela 0.60 % 120,000 2,500 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.154",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Venezuela 0.60 % 120,000 2,500 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.155",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Venezuela 0.60 % 120,000 2,500 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.156",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Moldova 0.60 % 15,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.157",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Moldova 0.60 % 15,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.158",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.159",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.160",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.161",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.162",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.163",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.164",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.165",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.166",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.167",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.168",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.169",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.170",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.171",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.172",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.173",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.174",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.175",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.176",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.177",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.178",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.179",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.180",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.181",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.182",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.183",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.184",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.185",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.186",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.187",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.188",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.189",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.190",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.191",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.192",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.193",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Costa Rica 0.40 % 13,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.194",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Costa Rica 0.40 % 13,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.195",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Colombia 0.40 % 120,000 2,800 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.196",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Colombia 0.40 % 120,000 2,800 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.197",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Colombia 0.40 % 120,000 2,800 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.198",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Vietnam 0.40 % 250,000 8,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.199",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Vietnam 0.40 % 250,000 8,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.200",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Vietnam 0.40 % 250,000 8,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.201",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Argentina 0.40 % 120,000 2,400 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.202",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Argentina 0.40 % 120,000 2,400 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.203",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Argentina 0.40 % 120,000 2,400 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.204",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Belarus 0.40 % 19,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.205",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Belarus 0.40 % 19,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.206",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "USA 0.30 % 1,100,000 - 2015"
+          }
+        ]
+      },
+      {
+        "fact": "0.207",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "USA 0.30 % 1,100,000 - 2015"
+          }
+        ]
+      },
+      {
+        "fact": "0.208",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Senegal 0.40 % 41,000 1,900 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.209",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Senegal 0.40 % 41,000 1,900 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.210",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Senegal 0.40 % 41,000 1,900 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.211",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "India 0.30 % 2,100,000 62,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.212",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "India 0.30 % 2,100,000 62,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.213",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "India 0.30 % 2,100,000 62,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.214",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Ecuador 0.30 % 33,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.215",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Ecuador 0.30 % 33,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.216",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Bolivia 0.30 % 19,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.217",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Bolivia 0.30 % 19,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.218",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Tajikistan 0.30 % 14,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.219",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Tajikistan 0.30 % 14,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.220",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Peru 0.30 % 70,000 2,200 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.221",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Peru 0.30 % 70,000 2,200 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.222",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Peru 0.30 % 70,000 2,200 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.223",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Italy 0.30 % 130,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.224",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Italy 0.30 % 130,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.225",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Laos 0.30 % 11,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.226",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Laos 0.30 % 11,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.227",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Mexico 0.30 % 220,000 4,200 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.228",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Mexico 0.30 % 220,000 4,200 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.229",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Mexico 0.30 % 220,000 4,200 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.230",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Armenia 0.20 % 3,300 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.231",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Armenia 0.20 % 3,300 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.232",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Ireland 0.20 % 6,200 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.233",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Ireland 0.20 % 6,200 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.234",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Kazakhstan 0.20 % 26,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.235",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Kazakhstan 0.20 % 26,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.236",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Kyrgyzstan 0.20 % 8,500 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.237",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Kyrgyzstan 0.20 % 8,500 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.238",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Lithuania 0.20 % 2,900 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.239",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Lithuania 0.20 % 2,900 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.240",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Madagascar 0.20 % 31,000 1,600 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.241",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Madagascar 0.20 % 31,000 1,600 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.242",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Madagascar 0.20 % 31,000 1,600 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.243",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Nepal 0.20 % 32,000 1,700 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.244",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Nepal 0.20 % 32,000 1,700 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.245",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Nepal 0.20 % 32,000 1,700 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.246",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Netherlands 0.20 % 23,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.247",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Netherlands 0.20 % 23,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.248",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Nicaragua 0.20 % 8,900 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.249",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Nicaragua 0.20 % 8,900 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.250",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Sudan 0.20 % 56,000 3,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.251",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Sudan 0.20 % 56,000 3,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.252",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Sudan 0.20 % 56,000 3,000 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.253",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Sweden 0.20 % 11,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.254",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Sweden 0.20 % 11,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.255",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Albania 0.10 % 1,700 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.256",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Albania 0.10 % 1,700 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.257",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Australia 0.10 % 25,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.258",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Australia 0.10 % 25,000 - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.259",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Fiji 0.10 % - - 2016"
+          }
+        ]
+      },
+      {
+        "fact": "0.260",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.261",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.262",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.263",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.264",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.265",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.266",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.267",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.268",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.269",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.270",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.271",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.272",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.273",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.274",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.275",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.276",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.277",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.278",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.279",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.280",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.281",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.282",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.283",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.284",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.285",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.286",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.287",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.288",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.289",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.290",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.291",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.292",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.293",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  }
+]

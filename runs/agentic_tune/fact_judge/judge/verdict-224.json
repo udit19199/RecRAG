@@ -1,0 +1,65 @@
+[
+  {
+    "id": "21af09951ffe1fcd",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "that model, Gemini Ultra, is set to launch sometime next year in Bard and other products."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "A “lite” version of Gemini, Gemini Pro, began rolling out to Bard yesterday"}, {"item": 9, "quote": "that model, Gemini Ultra, is set to launch sometime next year in Bard and other products."}]}
+    ]
+  },
+  {
+    "id": "ae421e0bc1328362",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]}
+    ]
+  },
+  {
+    "id": "6440947b472c2202",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks"}, {"item": 6, "quote": "the fast-moving and bloody events unfolding in Israel and Gaza"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks"}, {"item": 6, "quote": "the fast-moving and bloody events unfolding in Israel and Gaza"}]}
+    ]
+  },
+  {
+    "id": "4b4e563d47362ebe",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "That allows sportsbooks to earn the profit built into the odds and lines without worrying about which side wins."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "That allows sportsbooks to earn the profit built into the odds and lines without worrying about which side wins."}]}
+    ]
+  },
+  {
+    "id": "bb162ef524f1e75b",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "They’d all have significant value if president of baseball operations Jerry Dipoto decided to move one for a bat."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "They’d all have significant value if president of baseball operations Jerry Dipoto decided to move one for a bat."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts."}]}
+    ]
+  },
+  {
+    "id": "cc27aa3bfd69d643",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "0.4", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "While these models are still quite new, versions that actual humans buy have begun receiving discounts."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "While these models are still quite new, versions that actual humans buy have begun receiving discounts."}]}
+    ]
+  }
+]

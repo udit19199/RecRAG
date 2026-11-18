@@ -1,0 +1,772 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=2196d4eff14c569d ===
+Gold sentences and facts:
+Sentence 0: The Curse of Oak Island follows brothers Marty and Rick Lagina , originally from Kingsford , Michigan , through their efforts to find the speculated treasure or historical artifacts believed to be on Oak Island . The series discusses the history of the island , recent discoveries , theories , and prior attempts to investigate the site . Areas of interest include the `` Money Pit '' , Borehole 10 - x , Smith 's Cove , `` Nolan 's Cross '' , the `` Hatch '' , the `` Watchtower '' and the `` Swamp '' .
+  Fact 0.0: The Curse of Oak Island is a series.
+  Fact 0.1: The Curse of Oak Island follows brothers Marty and Rick Lagina.
+  Fact 0.2: Marty and Rick Lagina are originally from Kingsford, Michigan.
+  Fact 0.3: The Curse of Oak Island follows the Laginas' efforts to find the speculated treasure or historical artifacts believed to be on Oak Island.
+  Fact 0.4: The series discusses the history of Oak Island.
+  Fact 0.5: The series discusses recent discoveries on Oak Island.
+  Fact 0.6: The series discusses theories about Oak Island.
+  Fact 0.7: The series discusses prior attempts to investigate the site on Oak Island.
+  Fact 0.8: Areas of interest in the series include the "Money Pit".
+  Fact 0.9: Areas of interest in the series include Borehole 10-x.
+  Fact 0.10: Areas of interest in the series include Smith's Cove.
+  Fact 0.11: Areas of interest in the series include "Nolan's Cross".
+  Fact 0.12: Areas of interest in the series include the "Hatch".
+  Fact 0.13: Areas of interest in the series include the "Watchtower".
+  Fact 0.14: Areas of interest in the series include the "Swamp".
+
+Retrieved items:
+<item 1>
+The Curse of Oak Island
+Series overview ( edit ) Season Episodes Originally aired First aired Last aired 5 January 5 , 2014 ( 2014 - 01 - 05 ) February 9 , 2014 ( 2014 - 02 - 09 ) 10
+November 4 , 2014 ( 2014 - 11 - 04 ) January 13 , 2015 ( 2015 - 01 - 13 ) 13 November 10 , 2015 ( 2015 - 11 - 10 ) February 2 , 2016 ( 2016 - 02 - 02 ) 16
+November 15 , 2016 ( 2016 - 11 - 15 ) February 21 , 2017 ( 2017 - 02 - 21 ) 5 18 November 7 , 2017 ( 2017 - 11 - 07 ) March 6 , 2018 ( 2018 - 03 - 06 )
+Production ( edit ) Having started in 2014 , The Curse of Oak Island is currently in its fifth season . On August 2 , 2016 , it was announced that Nova Scotia
+Business Inc.
+</item 1>
+
+<item 2>
+The Curse of Oak Island
+S. Wild West Tech The XY Factor Upcoming Blue Book The Commanders Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=The_Curse_of_Oak_Island&oldid=832882458 '' Categories : 2014 American television series debuts History ( U.S. TV
+channel ) original programs English - language television programs 2010s American television series Television shows set in Nova Scotia Oak Island Hidden
+categories : Use mdy dates from August 2014 Talk Contents About Wikipedia Français Latviešu Română Русский Edit links This page was last edited on 28 March 2018
+, at 14 : 10 . About Wikipedia
+</item 2>
+
+<item 3>
+The Curse of Oak Island
+overall No. in season Title Original air date Viewers ( millions ) 29 `` Going for Broke '' November 15 , 2016 ( 2016 - 11 - 15 ) 2.62 The team agrees to turn
+focus over to the Money Pit and review what they have collected . Researcher Zena Halpern presents a handmade copy of what she claims is a French map from 1347
+of Oak Island . The map shows locations for a `` hatch '' , a `` valve '' and an `` anchor '' on the Island . A theory is presented based on a purported
+decoding of a cipher that Joab at the time of King David transported the Ark of the Covenant to North Africa from which it was later transported onward by the
+Knights Templar from the then - Portuguese town of Safi in Morocco to Oak Island . 30 `` Always Forward '' November 22 , 2016 ( 2016 - 11 - 22 ) 2.66 While
+preparing to excavate the Money Pit , the team investigates an 18th century well on mainland Nova Scotia .
+</item 3>
+
+<item 4>
+The Curse of Oak Island
+On August 2 , 2016 , it was announced that Nova Scotia Business Inc. approved $1,271,546 in film funding for the production of the 4th season . In October 2017
+, a fifth season was announced , which began airing on November 7 , 2017 . Episodes ( edit ) Season 1 ( 2014 ) ( edit ) No . overall No. in season Title
+Original air date Viewers ( millions ) `` What Lies Below '' January 5 , 2014 ( 2014 - 01 - 05 ) 2.53 Brothers Rick and Marty Lagina now own most of Oak Island
+. Determined to resume the search for treasure on the island , they explore an abandoned shaft called Borehole 10 - X and use water pressure to pump material to
+the surface . They find a tiny piece of metal .
+</item 4>
+
+<item 5>
+The Curse of Oak Island
+2018 '' . Showbuzz Daily . Retrieved March 7 , 2018 . Further reading ( edit ) MacDonald , David ( 1965 ) . `` Treasure Hunt : The Mystery of Oak Island '' .
+Reader 's Digest -- via readersdigest.ca .
+</item 5>
+
+<item 6>
+The Curse of Oak Island
+61 17 `` A Family Album '' February 27 , 2018 ( 2018 - 02 - 27 ) 1.98 The episode includes accounts of activities on the Oak Island by the McGinnis family ,
+descendants of Samuel Ball , William Chappell 's family , the Restall Family and the family of Robert Dunfield . The Blankenship / Nolan disputes on Oak Island
+are discussed . The episode ends with a short history of the Lagina brothers ' interest in Oak Island . Note : This episode is a special . 62 18 `` Amazing
+Discoveries '' March 6 , 2018 ( 2018 - 03 - 06 ) 2.89 The gem in the Jewelry fragment found on the island is a Rhodolite Garnet stone of small value . The
+drilling obstruction in the `` money pit '' borehole is determined by divers to be a granite boulder . References ( edit ) ^ Jump up to : `` Shows A-Z - curse
+of oak island , the on history '' . The Futon Critic . Retrieved December 6 , 2017 .
+</item 6>
+
+<item 7>
+The Curse of Oak Island
+The Curse of Oak Island - wikipedia The Curse of Oak Island Jump to : navigation , search The Curse of Oak Island Genre Reality Narrated by Robert Clotworthy
+Country of origin Canada Original language ( s ) English No. of seasons 5 No. of episodes 62 Production Executive producer ( s ) Kevin Burns Camera setup
+Multiple Running time 43 minutes Production company ( s ) Prometheus Entertainment Distributor A&E Networks Release Original network History Canada Original
+release January 5 , 2014 ( 2014 - 01 - 05 ) -- present External links Website Production website The Curse of Oak Island is an active reality television series
+that first premiered in Canada on the History network on January 5 , 2014 . The show features what is known as the Oak Island mystery , showing efforts to
+search for historical artifacts and treasure .
+</item 7>
+
+<item 8>
+The Curse of Oak Island
+Contents ( hide ) 1 Overview 1.1 Background 1.2 Theories 2 Series overview 3 Production 4 Episodes 4.1 Season 1 ( 2014 ) 4.2 Season 2 ( 2014 -- 2015 ) 4.3
+Season 3 ( 2015 -- 2016 ) 4.4 Season 4 ( 2016 -- 2017 ) 4.5 Season 5 ( 2017 -- 2018 ) 5 References 6 Further reading 7 External links Overview ( edit ) The
+Curse of Oak Island follows brothers Marty and Rick Lagina , originally from Kingsford , Michigan , through their efforts to find the speculated treasure or
+historical artifacts believed to be on Oak Island . The series discusses the history of the island , recent discoveries , theories , and prior attempts to
+investigate the site . Areas of interest include the `` Money Pit '' , Borehole 10 - x , Smith 's Cove , `` Nolan 's Cross '' , the `` Hatch '' , the ``
+Watchtower '' and the `` Swamp '' .
+</item 8>
+
+<item 9>
+The Curse of Oak Island
+Background ( edit ) The Lagina brothers became fascinated with the island after reading the January 1965 issue of Reader 's Digest magazine that features an
+article on the Restall family 's work to investigate the so - called `` Money Pit '' . Marty and his brother Rick obtained a controlling interest in Oak Island
+Tours , which reportedly owns most of the island . The brothers were later approached by Prometheus Entertainment to do a reality show . Rick and Marty have
+engaged the assistance of father - and - son Dan and Dave Blankenship , permanent residents of the island who have likewise been searching for treasure since
+the 1960s . Theories ( edit ) The series explores various Oak Island theories and conjectures through conversations with independent researchers .
+</item 9>
+
+<item 10>
+Graph query row:
+show: The Curse of Oak Island
+place: Oak Island
+place_kind: island
+connections: ['PART_OF', 'LOCATED_IN']
+</item 10>
+=== END ITEM id=2196d4eff14c569d ===
+
+=== ITEM id=b77ad485229980da ===
+Gold sentences and facts:
+Sentence 0: Philippe Petit ( French pronunciation : ​ ( filip pəti ) ; born 13 August 1949 ) is a French high - wire artist who gained fame for his high - wire walk between the Twin Towers of the World Trade Center in New York City , on the morning of August 7 , 1974 as well as his high wire walk between the Notre Dame cathedral in Paris , 1971 . For his unauthorized feat 400 metres ( 1,000 feet ) above the ground -- which he referred to as `` le coup '' -- he rigged a 200 - kilogram ( 440 - pound ) cable and used a custom - made 8 - metre ( 30 - foot ) long , 25 - kilogram ( 55 - pound ) balancing pole . He performed for 45 minutes , making eight passes along the wire . The following week , he celebrated his 25th birthday . All charges were dismissed in exchange for him doing a performance in Central Park for children .
+  Fact 0.0: Philippe Petit is French.
+  Fact 0.1: Philippe Petit was born on 13 August 1949.
+  Fact 0.2: Philippe Petit is a high-wire artist.
+  Fact 0.3: Philippe Petit gained fame for his high-wire walk between the Twin Towers of the World Trade Center in New York City.
+  Fact 0.4: Philippe Petit's Twin Towers walk took place on the morning of 7 August 1974.
+  Fact 0.5: Philippe Petit made a high-wire walk between the Notre Dame cathedral in Paris in 1971.
+  Fact 0.6: Philippe Petit's feat was unauthorized.
+  Fact 0.7: Philippe Petit's feat took place 400 metres (1,000 feet) above the ground.
+  Fact 0.8: Philippe Petit referred to the feat as 'le coup'.
+  Fact 0.9: Philippe Petit rigged a 200-kilogram (440-pound) cable.
+  Fact 0.10: Philippe Petit used a custom-made balancing pole.
+  Fact 0.11: The balancing pole was 8 metres (30 feet) long.
+  Fact 0.12: The balancing pole weighed 25 kilograms (55 pounds).
+  Fact 0.13: Philippe Petit performed for 45 minutes.
+  Fact 0.14: Philippe Petit made eight passes along the wire.
+  Fact 0.15: Philippe Petit celebrated his 25th birthday the following week.
+  Fact 0.16: All charges against Philippe Petit were dismissed.
+  Fact 0.17: The charges were dismissed in exchange for Philippe Petit doing a performance in Central Park for children.
+
+Retrieved items:
+<item 1>
+Philippe Petit
+The song `` Stand Up Comedy '' by U2 on their twelfth album , No Line On The Horizon , references `` The wire is stretched in between our two towers '' . Petit
+was the inspiration for the 5th Anniversary 9 / 11 cover of The New Yorker magazine ( Sep. 11 , 2006 ) , `` Soaring Spirit '' , by John Mavroudis ( concept )
+and Owen Smith ( art ) . That cover was named Cover of the Year by the American Society of Magazine Editors ( ASME ) . The two - part cover was a first for The
+New Yorker . See also ( edit ) Harry Gardiner Dan Goodwin Ivan Kristoff Owen Quinn Alain Robert The Flying Wallendas George Willig References ( edit ) Notes (
+edit ) ^ Jump up to : Lichtenstein , Grace ( 8 August 1974 ) . `` Stuntman , Eluding Guards , Walks a Tightrope Between Trade Center Towers '' . The New York
+Times . Retrieved 18 April 2008 .
+</item 1>
+
+<item 2>
+Philippe Petit
+Among those who have associated with some of his projects are such artists as : Mikhail Baryshnikov , Werner Herzog , Annie Leibovitz , Miloš Forman , Volker
+Schlöndorff , Twyla Tharp , Peter Beard , Marcel Marceau , Paul Auster , Paul Winter , Debra Winger , Robin Williams and Sting . Director James Signorelli
+assisted with the creation of the book To Reach the Clouds ( 2002 ) , about the Twin Towers walk . In the book , Petit not only wrote about his spectacular feat
+, and the events of his life which led up to it , but also expressed his feelings following the September 11 attacks during which the Twin Towers were destroyed
+. He wrote that on that morning , `` My towers became our towers . I saw them collapse -- hurling , crushing thousands of lives . Disbelief preceded sorrow for
+the obliteration of the buildings , perplexity descended before rage at the unbearable loss of life . ''
+</item 2>
+
+<item 3>
+Philippe Petit
+Besides paying tribute to those who were killed , Petit also called for a rebuilding of the towers , promising that `` When the towers again twin - tickle the
+clouds , I offer to walk again , to be the expression of the builders ' collective voice . Together , we will rejoice in an aerial song of victory . ''
+Notwithstanding Petit 's wishes , the Twin Towers were eventually replaced by a different complex of buildings , thus precluding the possibility of Petit ( or
+anyone else ) repeating a similar feat at the World Trade Center site . Legacy and honors ( edit ) James Park Morton Interfaith Award Streb Action Maverick
+Award The Byrdcliffe Award Works and performances ( edit ) Major high - wire performances ( edit ) This section does not cite any sources . Please help improve
+this section by adding citations to reliable sources . Unsourced material may be challenged and removed . ( August 2017 ) ( Learn how and when to remove this
+template message ) Year Walk Location Notes 1971 Vallauris Vallauris , Alpes - Maritimes , France performance for artist Pablo Picasso 's 90th birthday Notre
+Dame Cathedral Notre Dame Cathedral Paris ,
+</item 3>
+
+<item 4>
+Philippe Petit
+The song , `` Sleepwalking , '' by Danish composer Ste van Holm is a tribute to Petit 's World Trade Center walk . The Low Anthem 's song , `` Boeing 737 '' ,
+from their 2011 album Smart Flesh , refers to Petit 's Twin Towers walk . American rock band Incubus used a photo of Petit as the cover art for their album , If
+Not Now , When ? ( 2011 ) . Colum McCann 's National Book Award - winning novel , Let the Great World Spin ( 2009 ) , features Petit 's Twin Towers walk as its
+opening passage and a centrepiece to which numerous characters are connected . `` Funambulist '' , a song by American metal band Cormorant , is about his walk
+between the Twin Towers . The song `` Step Out Of The Void '' by musician Howard Moss is a tribute to Philippe Petit , in the album Outside the Pale ( 2013 ) .
+The song `` Man On A Wire '' by The Script on their fourth album , No Sound Without Silence , is influenced by Petit 's high - wire legacy .
+</item 4>
+
+<item 5>
+Philippe Petit
+I learned the backward somersault , the front somersault , the unicycle , the bicycle , the chair on the wire , jumping through hoops . But I thought , `` What
+is the big deal here ? It looks almost ugly . '' So I started to discard those tricks and to reinvent my art . In June 1971 , Petit secretly installed a cable
+between the two towers of Notre Dame de Paris . On the morning of June 26 , 1971 , he `` juggled balls '' and `` pranced back and forth '' as the crowd below
+applauded . World Trade Center walk ( edit ) Before his Twin Towers walk , Petit was known to New Yorkers for his frequent tightrope - walking performances and
+magic shows in the parks of New York , especially Washington Square Park . Petit 's most famous performance was in August 1974 , conducted on a wire between the
+roofs of the Twin Towers of the World Trade Center in Manhattan , a quarter mile above the ground . He performed for 45 minutes , making eight passes along the
+wire , during which he walked , danced , lay down on the wire , and saluted watchers from a kneeling position .
+</item 5>
+
+<item 6>
+Philippe Petit
+MSA - The Man Who Walked Between The Towers . Co-produced by Michael Sporn Animation and Weston Woods Studios Philippe Petit Signature visible in the 1980s
+photos of Philippe Petit crossing the Twin Towers along with others Philippe Petit : The journey across the high wire , TED2012 , Filmed Mar 2012 , Posted May
+2012 . Retrieved from `` https://en.wikipedia.org/w/index.
+</item 6>
+
+<item 7>
+Philippe Petit
+The Port Authority of New York and New Jersey gave Petit a lifetime pass to the Twin Towers ' Observation Deck . He autographed a steel beam close to the point
+where he began his walk . Petit 's high - wire walk is credited with bringing the Twin Towers much needed attention and even affection , as they initially had
+been unpopular . Critics such as historian Lewis Mumford had regarded them as ugly and utilitarian in design , and too large a development for the area . The
+Port Authority was having trouble renting out all of the office space . Mordicai Gerstein wrote and illustrated a children 's book , The Man Who Walked Between
+The Towers ( 2003 ) , which won a Caldecott Medal for his art . It was adapted and produced as an animated short film by the same title , directed by Michael
+Sporn and released in 2005 , which won several awards . The documentary film Man on Wire ( 2008 ) by UK director James Marsh is about Petit and his 1974 WTC
+performance ; it won both the World Cinema Jury and Audience awards at the Sundance Film Festival 2008 .
+</item 7>
+
+<item 8>
+Philippe Petit
+In planning for the Twin Towers walk , Petit had to learn how to accommodate such issues as the swaying of the high towers due to wind , which was part of their
+design ; effects of wind and weather on the wire at that height , how to rig a 200 ft ( 61 m ) steel cable across the 138 ft ( 42 m ) gap between the towers (
+at a height of 1,368 ft ( 417 m ) ) , and how to gain entry with his collaborators , first to scope out the conditions and lastly , to stage the project . They
+had to get heavy equipment to the rooftops . He traveled to New York on numerous occasions to make first - hand observations . Since the towers were still under
+construction , Petit and one of his collaborators , New York - based photographer Jim Moore , rented a helicopter to take aerial photographs of the buildings .
+Jean - François and Jean - Louis helped him practice in a field in France , and accompanied him to take part in the final rigging of the project , as well as to
+photograph it . Francis Brunn , a German juggler , provided financial support for the proposed project and its planning .
+</item 8>
+
+<item 9>
+Philippe Petit
+9 - 11 : Artists Respond feature entitled `` He Walks on Air 110 Stories High '' ( DC Comics , 2002 ) ISBN 978 - 1 - 56389 - 881 - 5 Ralph Keyes , Chancing It :
+Why We Take Risks ( Little , Brown & Company , 1985 ) ISBN 0 - 316 - 49132 - 2 Angus K. Gillespie , Twin Towers : the Life of New York City 's World Trade
+Center ( Rutgers University Press , 1999 ) ISBN 978 - 0 - 8135 - 2742 - 0 James Glanz and Eric Lipton , City in the Sky ( New York : Times Book , 2003 ) ISBN 0
+- 8050 - 7691 - 3 Colum McCann , Let the Great World Spin ( New York : Random House , 2009 ) ISBN 978 - 0 - 8129 - 7399 - 0 Articles and interviews ( edit )
+Rosenthal , Adam ( 1 September 2012 ) . `` Suspended Reading : Man on Wire , 9 / 11 and the Logic of the High - Wire . ''
+</item 9>
+
+<item 10>
+Philippe Petit
+The New York Times . Retrieved 18 April 2008 . Combining the cunning of a second - story man with the nerve of an Evel Knievel , a French high - wire artist
+sneaked past guards at the World Trade center , ran a cable between the tops of its twin towers and tightrope - walked across it yesterday morning . ^ Jump up
+to : Marsh , James ( Director ) ( 2008 ) . Man on Wire ( Documentary ) . Jump up ^ Tomkins , Calvin , `` The Man Who Walks on Air , '' New Yorker Magazine ,
+1999 , excerpted in Life Story , by David Remnick , Modern Library Paperback edition , 2001 . Jump up ^ `` Sneaky Juggler Has Ball Up In Sky At Notre Dame '' .
+The Ogden - Standard Examiner ( AP story ) . June 27 , 1971 . p. 1 . Jump up ^ `` WGBH American Experience . New York : The Center of the World - PBS '' . Jump
+up ^ Man On Wire DVD , `` Philippe Petit 's Sydney Harbor Bridge Crossing '' bonus feature .
+</item 10>
+=== END ITEM id=b77ad485229980da ===
+
+=== ITEM id=87d957ed9db774de ===
+Gold sentences and facts:
+Sentence 0: We admitted we were powerless over alcohol -- that our lives had become unmanageable . Came to believe that a Power greater than ourselves could restore us to sanity . Made a decision to turn our will and our lives over to the care of God as we understood Him . Made a searching and fearless moral inventory of ourselves . Admitted to God , to ourselves , and to another human being the exact nature of our wrongs . Were entirely ready to have God remove all these defects of character . Humbly asked Him to remove our shortcomings . Made a list of all persons we had harmed , and became willing to make amends to them all . Made direct amends to such people wherever possible , except when to do so would injure them or others . Continued to take personal inventory , and when we were wrong , promptly admitted it . Sought through prayer and meditation to improve our conscious contact with God as we understood Him , praying only for knowledge of His will for us and the power to carry that out . Having had a spiritual awakening as the result of these steps , we tried to carry this message to alcoholics , and to practice these principles in all our affairs .
+  Fact 0.0: We admitted we were powerless over alcohol.
+  Fact 0.1: We admitted our lives had become unmanageable.
+  Fact 0.2: We came to believe that a Power greater than ourselves could restore us to sanity.
+  Fact 0.3: We made a decision to turn our will and our lives over to the care of God as we understood Him.
+  Fact 0.4: We made a searching and fearless moral inventory of ourselves.
+  Fact 0.5: We admitted to God, to ourselves, and to another human being the exact nature of our wrongs.
+  Fact 0.6: We were entirely ready to have God remove all these defects of character.
+  Fact 0.7: We humbly asked God to remove our shortcomings.
+  Fact 0.8: We made a list of all persons we had harmed.
+  Fact 0.9: We became willing to make amends to all persons we had harmed.
+  Fact 0.10: We made direct amends to such people wherever possible, except when to do so would injure them or others.
+  Fact 0.11: We continued to take personal inventory.
+  Fact 0.12: When we were wrong, we promptly admitted it.
+  Fact 0.13: We sought through prayer and meditation to improve our conscious contact with God as we understood Him.
+  Fact 0.14: We prayed only for knowledge of God's will for us.
+  Fact 0.15: We prayed only for the power to carry out God's will for us.
+  Fact 0.16: Having had a spiritual awakening as the result of these steps, we tried to carry this message to alcoholics.
+  Fact 0.17: We tried to practice these principles in all our affairs.
+Sentence 1: We admitted we were powerless over alcohol -- that our lives had become unmanageable .
+  Fact 1.0: We admitted we were powerless over alcohol.
+  Fact 1.1: We admitted our lives had become unmanageable.
+
+Retrieved items:
+<item 1>
+Twelve-step program
+Contents ( hide ) 1 Overview 2 History 3 Twelve Steps 4 Twelve Traditions 5 Process 6 Sponsorship 7 Effectiveness 8 Criticism 8.1 Confidentiality 8.2 Cultural
+identity 9 See also 10 References 11 Further reading 11.1 Scholarly publications Overview ( edit ) Twelve - step methods have been adapted to address a wide
+range of alcoholism , substance - abuse and dependency problems . Over 200 self - help organizations -- often known as fellowships -- with a worldwide
+membership of millions -- now employ twelve - step principles for recovery . Narcotics Anonymous was formed by addicts who did not relate to the specifics of
+alcohol dependency . Demographic preferences related to the addicts ' drug of choice has led to the creation of Cocaine Anonymous , Crystal Meth Anonymous and
+Marijuana Anonymous . Behavioral issues such as compulsion for , and / or addiction to , gambling , crime , food , sex , hoarding , debting and work are
+addressed in fellowships such as Gamblers Anonymous , Overeaters Anonymous , Sexaholics Anonymous and Debtors Anonymous .
+</item 1>
+
+<item 2>
+Twelve-step program
+As AA chapters were increasing in number during the 1930s and 1940s , the guiding principles were gradually defined as the Twelve Traditions . A singleness of
+purpose emerged as Tradition Five : `` Each group has but one primary purpose -- to carry its message to the alcoholic who still suffers '' . Consequently ,
+drug addicts who do not suffer from the specifics of alcoholism involved in AA hoping for recovery technically are not welcome in `` closed '' meetings unless
+they have a desire to stop drinking alcohol . The principles of AA have been used to form many numbers of other fellowships specifically designed for those
+recovering from various pathologies ; each emphasizes recovery from the specific malady which brought the sufferer into the fellowship . Twelve steps ( edit )
+For more details on this topic , see List of Twelve Step alternate wordings . The following are the original twelve steps as published by Alcoholics Anonymous :
+We admitted we were powerless over alcohol -- that our lives had become unmanageable . Came to believe that a Power greater than ourselves could restore us to
+sanity . Made a decision to turn our will and our lives over to the care of God as we understood Him .
+</item 2>
+
+<item 3>
+Twelve-step program
+It is in this spirit that members often identify themselves along with an admission of their problem , often as `` Hi , I 'm ( first name only ) , and I 'm an
+alcoholic '' . Sponsorship ( edit ) A sponsor is a more experienced person in recovery who guides the less - experienced aspirant ( `` sponsee '' ) through the
+program 's twelve steps . New members in twelve - step programs are encouraged to secure a relationship with at least one sponsor who both has a sponsor and has
+taken the twelves steps themselves . Publications from twelve - step fellowships emphasize that sponsorship is a `` one on one '' nonhierarchical relationship
+of shared experiences focused on working the Twelve Steps . According to Narcotics Anonymous : Sponsors share their experience , strength , and hope with their
+sponsees ... A sponsor 's role is not that of a legal adviser , a banker , a parent , a marriage counselor , or a social worker . Nor is a sponsor a therapist
+offering some sort of professional advice . A sponsor is simply another addict in recovery who is willing to share his or her journey through the Twelve Steps .
+Sponsors and sponsees participate in activities that lead to spiritual growth .
+</item 3>
+
+<item 4>
+Twelve-step program
+The mental obsession is described as the cognitive processes that causes the individual to repeat the compulsive behavior after some period of abstinence ,
+either knowing that the result will be an inability to stop or operating under the delusion that the result will be different . The description in the First
+Step of the life of the alcoholic or addict as `` unmanageable '' refers to the lack of choice that the mind of the addict or alcoholic affords concerning
+whether to drink or use again . The illness of the spiritual dimension , or `` spiritual malady , '' is considered in all twelve - step groups to be self -
+centeredness . The process of working the steps is intended to replace self - centeredness with a growing moral consciousness and a willingness for self -
+sacrifice and unselfish constructive action . In twelve - step groups , this is known as a spiritual awakening or religious experience . This should not be
+confused with abreaction , which produces dramatic , but ephemeral , changes . In twelve - step fellowships , `` spiritual awakening '' is believed to develop ,
+most frequently , slowly over a period of time . In accordance with the First Step , twelve - step groups emphasize self - admission by members of the problem
+they are recovering from .
+</item 4>
+
+<item 5>
+Twelve-step program
+Confidentiality ( edit ) The Twelve Traditions encourage members to practice the spiritual principle of anonymity in the public media and members are also asked
+to respect each others ' confidentiality . This is a group norm , however , and not legally mandated ; there are no legal consequences to discourage those
+attending twelve - step groups from revealing information disclosed during meetings . Statutes on group therapy do not encompass those associations that lack a
+professional therapist or clergyman to whom confidentiality and privilege might apply . Professionals and paraprofessionals who refer patients to these groups ,
+to avoid both civil liability and licensure problems , have been advised that they should alert their patients that , at any time , their statements made in
+meetings may be disclosed . Cultural identity ( edit ) One review warned of detrimental iatrogenic effects of twelve - step philosophy and labeled the
+organizations as cults , while another review asserts that these programs bore little semblance to religious cults and that the techniques used appeared
+beneficial to some . Another study found that a twelve - step program 's focus on self - admission of having a problem increases deviant stigma and strips
+members of their previous cultural identity , replacing it with the deviant identity .
+</item 5>
+
+<item 6>
+Twelve-step program
+Twelve - step program - wikipedia Twelve - step program Jump to : navigation , search A twelve - step program is a set of guiding principles outlining a course
+of action for recovery from addiction , compulsion , or other behavioral problems . Originally proposed by Alcoholics Anonymous ( AA ) as a method of recovery
+from alcoholism , the Twelve Steps were first published in the 1939 book Alcoholics Anonymous : The Story of How More Than One Hundred Men Have Recovered from
+Alcoholism . The method was adapted and became the foundation of other twelve - step programs . As summarized by the American Psychological Association , the
+process involves the following : admitting that one can not control one 's alcoholism , addiction or compulsion ; recognizing a higher power that can give
+strength ; examining past errors with the help of a sponsor ( experienced member ) ; making amends for these errors ; learning to live a new life with a new
+code of behavior ; helping others who suffer from the same alcoholism , addictions or compulsions .
+</item 6>
+
+<item 7>
+Twelve-step program
+Sponsors and sponsees participate in activities that lead to spiritual growth . Experiences in the program are often shared by outgoing members with incoming
+members . This rotation of experience is often considered to have a great spiritual reward . These may include practices such as literature discussion and study
+, meditation , and writing . Completing the program usually implies competency to guide newcomers which is often encouraged . Sponsees typically do their Fifth
+Step , review their moral inventory written as part of the Fourth Step , with their sponsor . The Fifth Step , as well as the Ninth Step , have been compared to
+confession and penitence . Michel Foucault , a French philosopher , noted such practices produce intrinsic modifications in the person -- exonerating ,
+redeeming and purifying them ; relieves them of their burden of wrong , liberating them and promising salvation . The personal nature of the behavioral issues
+that lead to seeking help in twelve - step fellowships results in a strong relationship between sponsee and sponsor . As the relationship is based on spiritual
+principles , it is unique and not generally characterized as `` friendship '' .
+</item 7>
+
+<item 8>
+Twelve-step program
+`` Twelve - step recovery and community service '' . Health & Social Work . 28 ( 2 ) : 137 -- 145 . doi : 10.1093 / hsw / 28.2. 137 . CS1 maint : Multiple names
+: authors list ( link ) Lile , B. ( 2003 ) . `` Twelve step programs : An update '' . Addictive Disorders & Their Treatment . 2 ( 1 ) : 19 -- 24 . Morgenstern ,
+J. , Bux , D. , Labouvie , E. , Blanchard , K.A. , & Morgan , T.J. ( November 2002 ) . `` Examining mechanisms of action in 12 - step treatment : The role of 12
+- step cognitions '' . Journal of Studies on Alcohol . 63 ( 6 ) : 665 -- 672 . PMID 12529066 . CS1 maint : Multiple names : authors list ( link ) Sheehan , T. (
+2004 ) . `` Twelve Step Facilitation : A Necessary Treatment for Offenders '' .
+</item 8>
+
+<item 9>
+Twelve-step program
+Made a searching and fearless moral inventory of ourselves . Admitted to God , to ourselves , and to another human being the exact nature of our wrongs . Were
+entirely ready to have God remove all these defects of character . Humbly asked Him to remove our shortcomings . Made a list of all persons we had harmed , and
+became willing to make amends to them all . Made direct amends to such people wherever possible , except when to do so would injure them or others . Continued
+to take personal inventory , and when we were wrong , promptly admitted it . Sought through prayer and meditation to improve our conscious contact with God as
+we understood Him , praying only for knowledge of His will for us and the power to carry that out . Having had a spiritual awakening as the result of these
+steps , we tried to carry this message to alcoholics , and to practice these principles in all our affairs . In some cases , where other twelve - step groups
+have adapted the AA steps as guiding principles , step one is uniquely different for each organization , these are sometimes altered to emphasize principles
+important to those particular fellowships , or to remove gender - biased language .
+</item 9>
+
+<item 10>
+Twelve-step program
+AA , as such , ought never be organized ; but we may create service boards or committees directly responsible to those they serve . Alcoholics Anonymous has no
+opinion on outside issues ; hence the AA name ought never be drawn into public controversy . Our public relations policy is based on attraction rather than
+promotion ; we need always to maintain personal anonymity at the level of press , radio , and films . Anonymity is the spiritual foundation of all our
+traditions , ever reminding us to place principles before personalities . Process ( edit ) In the twelve - step program human structure is symbolically
+represented in three dimensions : physical , mental , and spiritual . The problems the groups deal with are understood to manifest themselves in each dimension
+. For addicts and alcoholics the physical dimension is best described by the allergy - like bodily reaction resulting in the compulsion to continue using
+substances after the initial use . The statement in the First Step that the individual is `` powerless '' over the substance - abuse related behavior at issue
+refers to the lack of control over this compulsion , which persists despite any negative consequences that may be endured as a result .
+</item 10>
+=== END ITEM id=87d957ed9db774de ===
+
+=== ITEM id=c43f9de6db011d23 ===
+Gold sentences and facts:
+Sentence 0: Third Generation ( GK Series ) Overview Production 2013 -- present Model years 2014 -- present Assembly Yorii , Japan Sumaré , Brazil Ayutthaya , Thailand Pingtung , Taiwan Karawang , Indonesia Malacca , Malaysia Guangzhou , China ( Guangqi Honda ) Celaya , Guanajuato , Mexico ( from Feb 2014 ) Tapukara , India ( from Jan 2015 ) Designer Riku Wada ( 2010 ) Body and chassis Related Honda City Honda HR - V Honda Freed Honda Shuttle Acura CDX Powertrain Engine 1.2 L L12B i - VTEC I4 petrol 1.3 L L13B Earth Dreams i - VTEC I4 1.5 L L15A I4 ( petrol ) 1.5 L L15B1 I4 ( petrol ) 1.5 L L15B Earth Dreams i - VTEC I4 1.5 L i - DTEC diesel Transmission 5 - speed manual ( China Only ) 6 - speed manual 7 - speed semi-automatic ( DCT ) CVT automatic Dimensions Wheelbase 2,530 mm ( 99.6 in ) Length 3,955 mm ( 155.7 in ) Width 1,695 mm ( 66.7 in ) Height 1,525 -- 1,550 mm ( 60.0 -- 61.0 in ) Curb weight 1,020 -- 1,080 kg ( 2,249 -- 2,381 lb ) 1,080 -- 1,170 kg ( 2,381 -- 2,579 lb ) ( Hybrid )
+  Fact 0.0: The Third Generation (GK Series) has production from 2013 to the present.
+  Fact 0.1: The Third Generation (GK Series) has model years from 2014 to the present.
+  Fact 0.2: The Third Generation (GK Series) is assembled in Yorii, Japan.
+  Fact 0.3: The Third Generation (GK Series) is assembled in Sumaré, Brazil.
+  Fact 0.4: The Third Generation (GK Series) is assembled in Ayutthaya, Thailand.
+  Fact 0.5: The Third Generation (GK Series) is assembled in Pingtung, Taiwan.
+  Fact 0.6: The Third Generation (GK Series) is assembled in Karawang, Indonesia.
+  Fact 0.7: The Third Generation (GK Series) is assembled in Malacca, Malaysia.
+  Fact 0.8: The Third Generation (GK Series) is assembled in Guangzhou, China (Guangqi Honda).
+  Fact 0.9: The Third Generation (GK Series) is assembled in Celaya, Guanajuato, Mexico, from February 2014.
+  Fact 0.10: The Third Generation (GK Series) is assembled in Tapukara, India, from January 2015.
+  Fact 0.11: The Third Generation (GK Series) was designed by Riku Wada in 2010.
+  Fact 0.12: The Third Generation (GK Series) is related to the Honda City.
+  Fact 0.13: The Third Generation (GK Series) is related to the Honda HR-V.
+  Fact 0.14: The Third Generation (GK Series) is related to the Honda Freed.
+  Fact 0.15: The Third Generation (GK Series) is related to the Honda Shuttle.
+  Fact 0.16: The Third Generation (GK Series) is related to the Acura CDX.
+  Fact 0.17: The Third Generation (GK Series) has a 1.2 L L12B i-VTEC I4 petrol engine.
+  Fact 0.18: The Third Generation (GK Series) has a 1.3 L L13B Earth Dreams i-VTEC I4 engine.
+  Fact 0.19: The Third Generation (GK Series) has a 1.5 L L15A I4 petrol engine.
+  Fact 0.20: The Third Generation (GK Series) has a 1.5 L L15B1 I4 petrol engine.
+  Fact 0.21: The Third Generation (GK Series) has a 1.5 L L15B Earth Dreams i-VTEC I4 engine.
+  Fact 0.22: The Third Generation (GK Series) has a 1.5 L i-DTEC diesel engine.
+  Fact 0.23: The 5-speed manual transmission is available in China only.
+  Fact 0.24: The Third Generation (GK Series) has a 6-speed manual transmission.
+  Fact 0.25: The Third Generation (GK Series) has a 7-speed semi-automatic (DCT) transmission.
+  Fact 0.26: The Third Generation (GK Series) has a CVT automatic transmission.
+  Fact 0.27: The Third Generation (GK Series) has a wheelbase of 2,530 mm (99.6 in).
+  Fact 0.28: The Third Generation (GK Series) has a length of 3,955 mm (155.7 in).
+  Fact 0.29: The Third Generation (GK Series) has a width of 1,695 mm (66.7 in).
+  Fact 0.30: The Third Generation (GK Series) has a height of 1,525 to 1,550 mm (60.0 to 61.0 in).
+  Fact 0.31: The Third Generation (GK Series) has a curb weight of 1,020 to 1,080 kg (2,249 to 2,381 lb).
+  Fact 0.32: The hybrid version of the Third Generation (GK Series) has a curb weight of 1,080 to 1,170 kg (2,381 to 2,579 lb).
+
+Retrieved items:
+<item 1>
+Honda Fit
+Japan JDM - spec Honda Fit . Two engines ( 1.3 i - DSI and 1.5 VTEC ) were offered , each with a number of trim lines ranging from the basic `` Y '' to the
+sporty `` S '' . The 1.3 L i - DSI was available with only the regular CVT automatic . The 1.5 L VTEC model with the CVT - 7 was added in September 2002 . A
+five - speed manual was added in June 2004 for FWD model with the larger engine . Unique to the Japanese market , the Fit is also available in 4WD . Starting at
+a price of about JPY1 , 123,000 is the basic 1.3 Y model . At the top of the range is the 1.5 W four - wheel - drive version for JPY1 , 743,000 . A bewildering
+range of options and accessories are available at most levels , including Honda 's HDD GPS Navigation System called Internavi with its 6.5 - inch ( 170 mm )
+colour screen . This system incorporates TV and FM radio .
+</item 1>
+
+<item 2>
+Honda Fit
+National Highway Traffic Safety Administration ( NHTSA ) crash test ratings . The engine is a 1.5 L ( 92 cu in ) i - VTEC 4 - cylinder with 117 horsepower at
+6600 rpm mated to a five - speed manual transmission or a five - speed automatic transmission . The second generation Honda Fit went on sale in North America
+around August 26 , 2008 , for the 2009 model year . It was considered the most expensive within the subcompact class when equipped as such , but was also
+described as modestly priced . It was reported in September 2009 that Honda is considering producing the Fit in North America in response to the increasing
+strength of the Japanese yen against the U.S. dollar . For the 2011 models , Vehicle Stability Assist , cruise control , remote entry and USB audio interface
+became standard across all trim levels . In addition , the Fit Sport now comes with carpeted floor mats .
+</item 2>
+
+<item 3>
+Honda Fit
+Indonesia Santa Rosa , Philippines Guangzhou , China ( Guangqi Honda ) Sumaré , Brazil ( Honda Brazil ) Designer Mitsuhiro Honda ( 1999 ) Body and chassis
+Related Honda Airwave Honda City / Fit Aria Powertrain Engine 1.2 L L12A I4 ( petrol ) 1.3 L L13A I4 ( petrol ) 1.5 L L15A I4 ( petrol ) Transmission 5 - speed
+manual 5 - speed automatic CVT automatic Dimensions Wheelbase 2,450 mm ( 96.5 in ) Length 3,845 mm ( 151.4 in ) ( Worldwide ) 4,000 mm ( 157.4 in ) ( U.S. &
+Canada ) Width 1,675 mm ( 65.9 in ) Height 1,525 mm ( 60.0 in ) Curb weight 1,084 kg ( 2,390 lb ) The Honda Fit debuted in June 2001 in Japan and immediately
+became a big hit . At its introduction in 2001 , it won the Car of the Year Japan Award .
+</item 3>
+
+<item 4>
+Honda Fit
+A total of 56,432 Fits were sold in the United States in 2007 . The 2008 Honda Fit was largely unchanged from the 2007 with the exception of the TPMS and new
+windshield wipers that abandon the large rubber blade design to a more traditional rigid plastic with thin rubber blade design . MSRP was also increased by
+roughly US $100 . Total sales in the United States for the year were 79,794 , an increase of almost 41 % over previous year . Reception Honda marketed the Fit
+as `` Small is the New Big '' . Car and Driver magazine described that `` ( n ) ot only is it endowed with an impressive array of standard features and an
+upscale interior , but its dynamics rival the responses of cars with much fancier pedigrees and price tags . '' The magazine even cited its lane - change number
+of 71.4 mph edged the best run by a Ferrari F430 Spider F1 tested . And the car was included in Car and Driver 's 10 Best Lists for three times . In May 2006 ,
+Fit was placed first in a Car and Driver comparison of seven economy cars that included Nissan Versa and Toyota Yaris .
+</item 4>
+
+<item 5>
+Honda Fit
+In addition , the Fit Sport now comes with carpeted floor mats . As of the 2011 model year , the base Fit comes with a remote entry , 15 - inch wheels with
+covers , power windows , power locks , cruise control , a tilt and telescoping steering wheel , a 160 - watt AM / FM / CD audio system with four speakers , a
+USB audio interface , a 12 - volt power outlet , and other features . The Fit Sport adds a ground appearance package , 16 - inch ( 410 mm ) alloy wheels ,
+paddle shifters , a navigation system , a security system , fog lights , chrome exhaust finisher , a leather - wrapped steering wheel , steering wheel - mounted
+audio controls , floor mats , a 6 - speaker AM / FM / CD audio system , and other features . 2010 Honda Fit Sport 2012 Honda Fit Sport ( US ) For 2012 , the Fit
+features revised floor , front fenders , A-pillars , and front corner - window glass . The Fit Sport features a revised grille , dark `` machined surface ''
+finish alloy wheels , a black monochrome theme interior with chrome accents .
+</item 5>
+
+<item 6>
+Electric car
+However , in a collision , the occupants of a heavy vehicle will , on average , suffer fewer and less serious injuries than the occupants of a lighter vehicle ;
+therefore , the additional weight brings safety benefits despite having a negative effect on the car 's performance . They also use up interior space if
+packaged ineffectively . If stored under the passenger cell , not only is this not the case , they also lower the vehicles 's center of gravity , increasing
+driving stability , thereby lowering the risk of an accident through loss of control . An accident in a 2,000 lb ( 900 kg ) vehicle will on average cause about
+50 % more injuries to its occupants than a 3,000 lb ( 1,400 kg ) vehicle . In a single car accident , and for the other car in a two car accident , the
+increased mass causes an increase in accelerations and hence an increase in the severity of the accident . Some electric cars use low rolling resistance tires ,
+which typically offer less grip than normal tires . Many electric cars have a small , light and fragile body , though , and therefore offer inadequate safety
+protection .
+</item 6>
+
+<item 7>
+Honda Fit
+525 -- 1,550 mm ( 60.0 -- 61.0 in ) Curb weight 1,020 -- 1,080 kg ( 2,249 -- 2,381 lb ) 1,080 -- 1,170 kg ( 2,381 -- 2,579 lb ) ( Hybrid ) The third generation
+Fit retains the overall design concept of previous generations , notably the center - located fuel tank and multi-configuration interior concept , marketed as
+Magic Seating . Honda 's all - new `` Global Small Car Platform '' employing ultra-high strength 780 MPa yield steel for 27 % of its bodywork -- and a shorter
+overall length ( - 1.6 inches ) , longer wheelbase ( + 1.2 inch ) increased rear legroom ( + 4.8 inches ) and increased passenger volume ( + 4.9 cu ft )
+compared to its previous generation . Body panels are both welded and bolted to the frame in a hybrid monocoque and spaceframe fusion -- and rear torsion beam
+suspension is more compact , no longer using an anti-sway bar to maximize interior and cargo space . The HR - V shares its platform with the Fit .
+</item 7>
+
+<item 8>
+Honda Fit
+The base model receives body - color exterior mirrors ( previously black ) , standard security system and new wheel covers for 2012 . Canadian trims include the
+DX ( two speakers , black door handles and side mirrors ) , DX - A ( adds factory - installed air conditioning ) , LX ( adds among other things , body - colored
+door handles and side mirrors , 15 - inch lightweight alloy wheels from the 2006 -- 11 Civic Hybrid and DX - G , rear spoiler , power locks and remote entry ,
+two speakers for a total of four , cruise control ) , and Fit Sport ( adds USB jack and Vehicle Stability Assist ) . The Fit Sport is similar to its American
+counterpart , however a navigation system is not offered as an option . There are plans to build subcompact cars , which many rumoured to be Fit , in Honda 's
+new plant in Mexico . NHTSA Crash Test Ratings : Frontal Driver and Passenger : Side Driver Impact : Side Rear Passenger Impact : Rollover : Brazil The Sumare -
+built new Fit was introduced in October 2008 in Brazil at the Sao Paulo Auto Show .
+</item 8>
+
+<item 9>
+Honda Fit
+Retrieved 2009 - 12 - 11 . Jump up ^ James Healey ( Feb 28 , 2011 ) . `` Consumer Reports lauds Honda Fit for value , rips Jeep Wrangler '' . USA Today . Jump
+up ^ `` Honda Fit tops list of best value cars '' . The Boston Globe . Mar 25 , 2012 . Archived from the original on July 9 , 2012 . Jump up ^ `` 2012 Best Cars
+for Families Awards '' . U.S. News Rankings and Reviews . Retrieved 2012 - 04 - 01 . External links ( edit ) Look up fit in Wiktionary , the free dictionary .
+Wikimedia Commons has media related to Honda Fit , Honda Jazz and Honda Fit EV . Fit / Jazz at Honda Worldwide Honda Electric Vehicles Honda Fit Hybrid video at
+Honda World site Honda recalls since 1977 Honda Motor Company Divisions and subsidiaries Acura American Honda Honda Canada Canada Manufacturing Aircraft
+Performance Development India Motorcycles Racing F1 Taiwan China ( 65 % ) UK Joint ventures and shareholdings Bangladesh Honda Private Limited ( 70 % ) Dongfeng
+Honda ( 50 % ) GE Honda Aero
+</item 9>
+
+<item 10>
+Honda Fit
+3 L L13A I4 ( petrol ) 1.5 L L15A I4 ( petrol ) Transmission 5 - speed manual 6 - speed manual 5 - speed automatic CVT automatic ( Japan ) Dimensions Wheelbase
+2,500 mm ( 98.4 in ) Length 3,985 mm ( 156.9 in ) ( 2009 -- 11 ) 4,100 mm ( 161.4 in ) ( 2012 -- 13 ) 4,410 mm ( 173.6 in ) ( Fit Shuttle ) Width 1,695 mm (
+66.7 in ) Height 1,525 mm ( 60.0 in ) 1,540 mm ( 60.6 in ) ( Fit Shuttle ) Curb weight 1,070 kg ( 2,359 lb ) The second generation Fit debuted on 17 October
+2007 at the Tokyo Motor Show . At its introduction in 2007 , it won the Car of the Year Japan Award for the second time . The vehicle offered a longer wheelbase
+than its predecessor and is wider and longer overall . Overall height is unchanged , while interior height increased by . 3 in .
+</item 10>
+=== END ITEM id=c43f9de6db011d23 ===
+
+=== ITEM id=12774f96e625648a ===
+Gold sentences and facts:
+Sentence 0: `` A Whiter Shade of Pale '' is the debut single by the British rock band Procol Harum , released 12 May 1967 . The single reached number one in the UK Singles Chart on 8 June 1967 and stayed there for six weeks . Without much promotion , it reached number 5 on the Bilboard pop chart in the United States . One of the anthems of the 1967 Summer of Love , it is one of fewer than 30 singles to have sold over 10 million copies worldwide .
+  Fact 0.0: "A Whiter Shade of Pale" is the debut single by the British rock band Procol Harum.
+  Fact 0.1: "A Whiter Shade of Pale" was released on 12 May 1967.
+  Fact 0.2: "A Whiter Shade of Pale" reached number one in the UK Singles Chart on 8 June 1967.
+  Fact 0.3: "A Whiter Shade of Pale" stayed at number one in the UK Singles Chart for six weeks.
+  Fact 0.4: Without much promotion, "A Whiter Shade of Pale" reached number 5 on the Billboard pop chart in the United States.
+  Fact 0.5: "A Whiter Shade of Pale" is one of the anthems of the 1967 Summer of Love.
+  Fact 0.6: "A Whiter Shade of Pale" is one of fewer than 30 singles to have sold over 10 million copies worldwide.
+
+Retrieved items:
+<item 1>
+A Whiter Shade of Pale
+`` A Whiter Shade of Pale '' has continued to receive critical acclaim . Along with Queen 's `` Bohemian Rhapsody '' , `` A Whiter Shade of Pale '' was jointly
+recognised as `` The Best British Pop Single 1952 -- 1977 '' at the BRIT Awards , part of Elizabeth II 's Silver Jubilee . In 1998 the song was inducted into
+the Grammy Hall of Fame . In 2004 , it appeared at number 57 on Rolling Stone magazine 's list of the `` 500 Greatest Songs of All Time '' . British TV station
+Channel 4 placed the song at number 19 in its chart of `` The 100 Greatest No. 1 Singles '' . In 2018 , the song was inducted into the Rock and Roll Hall of
+Fame in a new category for singles . Promotional films ( edit ) One of the clips for the song was filmed at Witley Court , part of which was gutted by fire in
+1937 . The first promotional clip for `` A Whiter Shade of Pale '' was shot in the ruins of Witley Court in Worcestershire , England .
+</item 1>
+
+<item 2>
+A Whiter Shade of Pale
+Lyrics ( edit ) Reid got the title and starting point for the song at a party . He overheard someone at the party saying to a woman , `` You 've turned a whiter
+shade of pale '' , and the phrase stuck in his mind . The original lyrics had four verses , of which only two are heard on the original recording . The third
+verse has been heard in live performances by Procol Harum , and more seldom also the fourth . The author of Procol Harum : Beyond the Pale , Claes Johansen ,
+suggests that the song `` deals in metaphorical form with a male / female relationship which after some negotiation ends in a sexual act '' . This is supported
+by Tim de Lisle in Lives of the Great Songs , who remarks that the lyrics concern a drunken seduction , which is described through references to sex as a form
+of travel , usually nautical , using mythical and literary journeys . Other observers have also commented that the lyrics concern a sexual relationship .
+</item 2>
+
+<item 3>
+Released in 1967, “A Whiter Shade of Pale” became a Summer of Love anthem, topping charts in several countries with its Bach-inspired organ, soulful vocals and
+enigmatic lyrics. It reached No. 5 in the US and reportedly sold over 10 million copies worldwide. Honours include the 1977 Brit Award (shared with Queen’s
+“Bohemian Rhapsody”), Grammy Hall of Fame induction (1998), Rolling Stone’s No. 57 ranking (200
+</item 3>
+
+<item 4>
+A Whiter Shade of Pale
+In his 1981 article on the musical and societal developments of 1967 , for The History of Rock , sociomusicologist Simon Frith described `` A Whiter Shade of
+Pale '' as the year 's `` most distinctive single '' , through its combination of `` white soul vocal and a Bach organ exercise '' and enigmatic lyrics that ``
+hinted at a vital secret open only to people in the right , drug - determined , state of mind '' . In the United States , the single reached number 5 on the
+Billboard Hot 100 and sold over 1 million copies . It also peaked at number 22 on the soul charts there . In the Netherlands , the song entered the chart at
+number 1 in June 1967 and again reached number 1 in July 1972 . A May 1972 re-release on Fly Records stayed in the UK charts for a total of 12 weeks and peaked
+at number 13 . `` A Whiter Shade of Pale '' has continued to receive critical acclaim .
+</item 4>
+
+<item 5>
+A Whiter Shade of Pale
+Contents ( hide ) 1 Recording and personnel 2 Lyrics 3 Composition 4 Release and reception 5 Promotional films 6 Authorship lawsuit 7 Chart performance 7.1
+Weekly singles charts 7.2 Year - end charts 8 Annie Lennox version 8.1 Charts 9 References 10 Sources 11 External links Recording and personnel ( edit ) The
+song was performed and recorded at Olympic Sound Studios in London , England , with Gary Brooker providing the vocals and piano , Matthew Fisher on a Hammond M
+- 102 organ , David Knights on bass and Ray Royer on guitar . Drums were by session drummer Bill Eyden . A few days later , the song was re-recorded with the
+band 's then newly recruited drummer Bobby Harrison , but that version was discarded , and one of the original mono recordings was chosen for release . Producer
+for the record was Denny Cordell , and Keith Grant was the sound engineer . The song was included on the US release of the Procol Harum album , in September
+1967 , but not on the later UK version . Lyrics ( edit ) Reid got the title and starting point for the song at a party .
+</item 5>
+
+<item 6>
+A Whiter Shade of Pale
+One of the anthems of the 1967 Summer of Love , it is one of fewer than 30 singles to have sold over 10 million copies worldwide . With its Bach - derived
+instrumental melody , soulful vocals , and unusual lyrics -- by the song 's co-authors Gary Brooker , Keith Reid and Matthew Fisher -- `` A Whiter Shade of Pale
+'' reached No. 1 in several countries when released in 1967 . In the years since , it has become an enduring classic . It was the most played song in the last
+75 years in public places in the UK ( as of 2009 ) , and the United Kingdom performing rights group Phonographic Performance Limited in 2004 recognised it as
+the most - played record by British broadcasting of the past 70 years . Also in 2004 , Rolling Stone placed `` A Whiter Shade of Pale '' 57th on its list of the
+500 Greatest Songs of All Time . In 1977 , the song was named joint winner ( along with Queen 's `` Bohemian Rhapsody '' ) of `` The Best British Pop Single
+1952 -- 1977 '' at the Brit Awards .
+</item 6>
+
+<item 7>
+Released by Deram in the UK on 12 May 1967, “A Whiter Shade of Pale” reached number one within two weeks and stayed there for six weeks. Its allusive lyrics,
+including references to Chaucer’s “The Miller’s Tale,” were unusually complex for the era and helped mark it as an early progressive-rock song. The title phrase
+became a widely used expression and a snowclone template. Musically, its Hammond M102 organ melody, Bach-inspired but not directly
+</item 7>
+
+<item 8>
+Procol Harum recorded “A Whiter Shade of Pale” at London’s Olympic Sound Studios, with Gary Brooker on vocals and piano, Matthew Fisher on Hammond organ, David
+Knights on bass, Ray Royer on guitar, and session drummer Bill Eyden. Produced by Denny Cordell, it was released in 1967 using an original mono take. Keith Reid
+drew its title from a party remark. Only two of four verses appeared on the recording. Its evocative, loosely rh
+</item 8>
+
+<item 9>
+A Whiter Shade of Pale
+A Whiter Shade of Pale - wikipedia A Whiter Shade of Pale Jump to : navigation , search `` A Whiter Shade of Pale '' A-side label of the UK vinyl single Single
+by Procol Harum from the album Procol Harum B - side `` Lime Street Blues '' Released 12 May 1967 Format 7 - inch record Recorded Olympic Sound Studios , London
+Genre Baroque pop Length 4 : 03 Label Deram Songwriter ( s ) Gary Brooker , Keith Reid , Matthew Fisher Producer ( s ) Denny Cordell Procol Harum singles
+chronology `` A Whiter Shade of Pale '' ( 1967 ) `` Homburg '' ( 1967 ) `` A Whiter Shade of Pale '' ( 1967 ) `` Homburg '' ( 1967 ) `` A Whiter Shade of Pale
+'' is the debut single by the British rock band Procol Harum , released 12 May 1967 . The single reached number one in the UK Singles Chart on 8 June 1967 and
+stayed there for six weeks . Without much promotion , it reached number 5 on the Bilboard pop chart in the United States .
+</item 9>
+
+<item 10>
+“A Whiter Shade of Pale” is Procol Harum’s debut single, released on 12 May 1967 by Deram and later included on the band’s debut album. Recorded at London’s
+Olympic Sound Studios, the 4:03 baroque-pop song was written by Gary Brooker, Keith Reid and Matthew Fisher, and produced by Denny Cordell; its B-side was “Lime
+Street Blues.” It topped the UK chart for six weeks and reached No. 5 in
+</item 10>
+=== END ITEM id=12774f96e625648a ===
+
+=== ITEM id=0b0c2b8dafb346a1 ===
+Gold sentences and facts:
+Sentence 0: `` Ca n't Get You Out of My Head '' is a song recorded by Australian singer Kylie Minogue for her eighth studio album , titled Fever , which she released in 2001 . The song was released in Australia by Parlophone as the lead single from the album on 8 September 2001 . It was released on 17 September 2001 in the United Kingdom . In the United States , the single was released on 18 February 2002 . Jointly written , composed , and produced by Cathy Dennis and Rob Davis , `` Ca n't Get You Out of My Head '' is a midtempo dance - pop song which lyrically details its narrator 's obsession towards her lover . The song is famous for its `` la la la '' hook .
+  Fact 0.0: 'Can't Get You Out of My Head' is a song.
+  Fact 0.1: 'Can't Get You Out of My Head' is recorded by Australian singer Kylie Minogue.
+  Fact 0.2: 'Can't Get You Out of My Head' was recorded for Kylie Minogue's eighth studio album.
+  Fact 0.3: The eighth studio album is titled Fever.
+  Fact 0.4: Kylie Minogue released Fever in 2001.
+  Fact 0.5: 'Can't Get You Out of My Head' was released in Australia by Parlophone.
+  Fact 0.6: 'Can't Get You Out of My Head' was released in Australia as the lead single from Fever.
+  Fact 0.7: The Australian release of 'Can't Get You Out of My Head' was on 8 September 2001.
+  Fact 0.8: 'Can't Get You Out of My Head' was released in the United Kingdom on 17 September 2001.
+  Fact 0.9: 'Can't Get You Out of My Head' was released in the United States as a single on 18 February 2002.
+  Fact 0.10: 'Can't Get You Out of My Head' was jointly written by Cathy Dennis and Rob Davis.
+  Fact 0.11: 'Can't Get You Out of My Head' was jointly composed by Cathy Dennis and Rob Davis.
+  Fact 0.12: 'Can't Get You Out of My Head' was jointly produced by Cathy Dennis and Rob Davis.
+  Fact 0.13: 'Can't Get You Out of My Head' is a midtempo dance-pop song.
+  Fact 0.14: 'Can't Get You Out of My Head' lyrically details its narrator's obsession towards her lover.
+  Fact 0.15: The song is famous for its 'la la la' hook.
+
+Retrieved items:
+<item 1>
+Can't Get You Out of My Head
+The music , excluding the guitar part , was programmed using Korg Triton workstation via MIDI . Dennis later remarked : `` Even though Kylie was n't the first
+artist to be offered the song , I do n't believe it was meant to go to anyone other than Kylie , and I do n't believe anyone else would have done the incredible
+job she did with it , with the video , looking super-hot ! '' Composition ( edit ) `` Ca n't Get You Out of My Head '' A 21 - second sample of `` Ca n't Get You
+Out of My Head '' containing the hook and part of the chorus of the song . The song is known for its `` la la la '' hook . Problems playing this file ? See
+media help . `` Ca n't Get You Out of My Head '' is a `` robotic '' midtempo dance - pop song , with a tempo of 126 beats per minute .
+</item 1>
+
+<item 2>
+Graph query row:
+writer: Cathy Dennis
+role: None
+work: Can't Get You Out of My Head
+</item 2>
+
+<item 3>
+Can't Get You Out of My Head
+`` Limitless Joy : Kylie Minogue Interviewed '' . The Quietus . Retrieved 6 October 2013 . ^ Jump up to : `` I Wrote That : Ca n't Get You Out of My Head '' . M
+Magazine . PRS for Music . 26 September 2011 . Retrieved 5 October 2013 . Jump up ^ `` The Kylie hit you ca n't get out of your head '' . BBC . 31 December 2011
+. Retrieved 16 August 2013 . ^ Jump up to : Inglis , Sam ( May 2002 ) . `` People + Opinion : Rob Davis '' . Sound on Sound . SOS Publications Group . Archived
+from the original on 2004 - 02 - 28 . Retrieved 25 June 2014 . Jump up ^ Dorian , Lynskey ( 21 May 2012 ) . `` The best No 1 records : Kylie Minogue -- Ca n't
+Get You Out of My Head '' . The Guardian . Retrieved 22 July 2013 .
+</item 3>
+
+<item 4>
+Can't Get You Out of My Head
+Through the lyrics of the song , its singer expresses an obsession with an anonymous figure . Dorian Lynskey from The Guardian termed the song a `` mystery ''
+as Minogue never reveals the identity of her object of infatuation . The critic suggested that the person Minogue is referring to is either `` a partner , an
+evasive one - night stand or someone who does n't know she exists . '' Writing for the same newspaper , Everett True identified a `` darker element '' in the
+simple lyrics and felt this sentiment was echoed in Minogue 's restrained vocals . Further , True emphasised that while Minogue 's 1987 single `` I Should Be So
+Lucky '' had presented an optimistic romantic future , `` Ca n't Get You Out of My Head '' focuses on an `` unhealthy '' and potentially destructive obsession .
+He also noted that in the former song , Minogue played `` the wide - eyed ingénue with alacrity , '' but in the latter song she is aware of the harmful nature
+of her infatuation , calling it a `` desire that is wholly dependent on her own self - control . ''
+</item 4>
+
+<item 5>
+Can't Get You Out of My Head
+In 2013 , a survey of 700 people was conducted as part of the Manchester Science Festival to find out which song they considered the `` catchiest , '' and `` Ca
+n't Get You Out of My Head '' topped the poll . Lee Barron , in his essay The Seven Ages of Kylie Minogue : Postmodernism , Identity , and Performative Mimicry
+, noted that the song `` further established Minogue 's cultural and commercial relevance in the new millennium . '' He remarked that the song `` with its
+hypnotic ' la la la ' refrain and the deceptively uncomplicated , catchily repetitive beats and synth - sound , marked yet another clearly defined image
+transformation from the camp - infused Light Years to an emphasis upon a cool , machine - like sexuality , a trait clearly identifiable within the promotional
+video for ' Ca n't Get You Out of My Head . '
+</item 5>
+
+<item 6>
+Can't Get You Out of My Head
+It was released on 17 September 2001 in the United Kingdom . In the United States , the single was released on 18 February 2002 . Jointly written , composed ,
+and produced by Cathy Dennis and Rob Davis , `` Ca n't Get You Out of My Head '' is a midtempo dance - pop song which lyrically details its narrator 's
+obsession towards her lover . The song is famous for its `` la la la '' hook . In addition to positive reviews from music critics , `` Ca n't Get You Out of My
+Head '' found commercial success on a large scale . It peaked at number one on the charts of Austria , Belgium , France , Germany , Italy , Poland , Switzerland
+, the United Kingdom , and every other European country excluding Finland . It also topped the charts of Minogue 's native country Australia , Canada and New
+Zealand . In the United States , the song peaked at number seven on the US Billboard Hot 100 chart , becoming Minogue 's biggest hit in the region since `` The
+Loco - Motion '' . `` Ca n't Get You Out of My Head '' reportedly reached number one in 40 countries across the globe .
+</item 6>
+
+<item 7>
+Can't Get You Out of My Head
+In 2012 , Priya Elan from NME ranked the song at number four on his `` The Greatest Pop Songs in History '' list , saying : `` It was unlike any song I remember
+hearing before . '' In 2012 , The Guardian included the song in their list of `` The Best Number One Records , '' labelling it to be `` sleek , Arctic - blue
+minimalism , like an emotionally thwarted retelling of Donna Summer 's `` I Feel Love . '' In the same year , PRS for Music , a UK copyright collection society
+and performance rights organisation which collects royalties on behalf of songwriters and composers , named `` Ca n't Get You Out of My Head '' the `` Most
+Popular Song of the Decade '' as it received the highest airplay and live covers in the 2000s ( decade ) . Minogue performing `` Ca n't Get You Out of My Head
+'' during her KylieX Tour ( 2008 ) .
+</item 7>
+
+<item 8>
+Can't Get You Out of My Head
+My A&R at the time , Miles Leonard and Jamie Nelson , said , `` We 've got something . Come into the office . We 've got to play you something . '' So I went to
+the EMI office , and I had the same reaction you did , about 20 seconds in . I could n't even fathom what I was hearing . It just ... did something . I was
+beside myself . Then at the end of the song , panic set in . I was saying `` Are you sure we 've got this song ? Do n't tell me that we do n't ! Is it secured ?
+Can we have it ? '' And we did ! And that kick - started a whole different phase in my career . -- Minogue , about her reaction to hearing the demo of the song
+. `` Ca n't Get You Out of My Head '' was jointly written , composed , and produced by Cathy Dennis and Rob Davis . Dennis and Davis had been brought together
+by British artist manager Simon Fuller , who wanted the duo to come up with a song for British pop group S Club 7 .
+</item 8>
+
+<item 9>
+Can't Get You Out of My Head
+`` Ca n't Get You Out of My Head '' garnered Minogue a number of awards . At the 2001 Top of the Pops Awards ceremony , the song won the award for `` Best
+Single . '' At the 2002 ARIA Music Awards ceremony , `` Ca n't Get You Out of My Head '' won the awards for `` Single of the Year '' and `` Highest Selling
+Single , '' and Minogue won the `` Outstanding Achievement Award . '' In 2002 , it won a Dutch Edison Award for `` Single of the Year . '' In the same year ,
+Dennis and Davis won three awards at the 47th Ivor Novello Awards for their composition of the song ; they won the awards `` The Ivors Dance Award , '' `` Most
+Performed Work , '' and `` International Hit of the Year . '' At the inaugural Premios Oye ! in 2002 , the song received a nomination in the category of `` Song
+of the Year . '' In the 2007 episode of The Simpsons , `` Homerazzi '' , the track is heard playing in a celebrity - packed nightclub into which Homer storms .
+</item 9>
+
+<item 10>
+Graph query row:
+writer: Rob Davis
+role: None
+work: Can't Get You Out of My Head
+</item 10>
+=== END ITEM id=0b0c2b8dafb346a1 ===

@@ -1,0 +1,400 @@
+[
+ {
+  "id": "d3b6598a3594d56e",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "215b6d6059184351",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "the trustworthy face of a sometimes-shady industry"
+     }
+    ]
+   },
+   {
+    "fact": "2.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "3.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "3.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "3.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "3.3",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "d09613bdf218947a",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "One of the hardest things is resentment can build up if you feel like you need to buy gifts for your family and you can barely make your student loan payments, so bring things up,” Alev said."
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "One of the hardest things is resentment can build up if you feel like you need to buy gifts for your family and you can barely make your student loan payments, so bring things up,” Alev said."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "752b4d39f2694af1",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.3",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "7ebb144d944a2bb7",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "People flat out lost their minds over the new AI and its CEO, Sam Altman."
+     },
+     {
+      "item": 2,
+      "quote": "ChatGPT was a certified phenomenon"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "embraced AI image generation"
+     },
+     {
+      "item": 9,
+      "quote": "having it make words instead of pictures wasn’t a large one"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "having it make words instead of pictures wasn’t a large one"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.2",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "c3870cb90b081cdf",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.3",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ }
+]

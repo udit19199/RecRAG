@@ -1,0 +1,215 @@
+[
+ {
+  "id": "5a7ca74c55429907fabeefe9",
+  "sentences": [
+   [
+    "Aram Saroyan was born on September 25, 1943.",
+    "Aram Saroyan is an American poet.",
+    "Aram Saroyan is an American novelist.",
+    "Aram Saroyan is an American biographer.",
+    "Aram Saroyan is an American memoirist.",
+    "Aram Saroyan is an American playwright.",
+    "Aram Saroyan is especially known for his minimalist poetry.",
+    "A famous example of Aram Saroyan's minimalist poetry is the one-word poem \"lighght\".",
+    "A famous example of Aram Saroyan's minimalist poetry is a one-letter poem comprising a four-legged version of the letter \"m\"."
+   ],
+   [
+    "Dr. Edward Keonjian was born on 14 August 1909.",
+    "Dr. Edward Keonjian died on 6 September 1999.",
+    "Dr. Edward Keonjian was a prominent engineer.",
+    "Dr. Edward Keonjian was an early leader in the field of low-power electronics.",
+    "Dr. Edward Keonjian was the father of microelectronics."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-693",
+  "sentences": [
+   [
+    "Wired removed the article.",
+    "Wired removed the article for not meeting Wired's standards.",
+    "The article was shared on social media to a high degree.",
+    "The article was boosted in write-ups at other outlets.",
+    "The degree to which the article was shared and boosted shows how willing people are to accept foul play on Google's part."
+   ],
+   [
+    "The case was filed by Arkansas-based publisher Helena World Chronicle.",
+    "The case argues that Google \"siphons off\" news publishers' content.",
+    "The case argues that Google \"siphons off\" news publishers' readers.",
+    "The case argues that Google \"siphons off\" news publishers' ad revenue.",
+    "The case argues that Google does this through anticompetitive means."
+   ]
+  ]
+ },
+ {
+  "id": "2588583207329611463",
+  "sentences": [
+   [
+    "\"A Whiter Shade of Pale\" is the debut single by the British rock band Procol Harum.",
+    "\"A Whiter Shade of Pale\" was released on 12 May 1967.",
+    "\"A Whiter Shade of Pale\" reached number one in the UK Singles Chart on 8 June 1967.",
+    "\"A Whiter Shade of Pale\" stayed at number one in the UK Singles Chart for six weeks.",
+    "Without much promotion, \"A Whiter Shade of Pale\" reached number 5 on the Billboard pop chart in the United States.",
+    "\"A Whiter Shade of Pale\" is one of the anthems of the 1967 Summer of Love.",
+    "\"A Whiter Shade of Pale\" is one of fewer than 30 singles to have sold over 10 million copies worldwide."
+   ]
+  ]
+ },
+ {
+  "id": "5adfee9c55429906c02daa8a",
+  "sentences": [
+   [
+    "The Fader published an interview with CupcakKe in September.",
+    "In the interview, CupcakKe discussed her new album.",
+    "CupcakKe's new album would address \"rape, and everything else\"."
+   ],
+   [
+    "The Fader, stylized as The FADER, is a New York City-based music magazine.",
+    "The Fader was launched in 1999.",
+    "The Fader was launched by Rob Stone and Jon Cohen.",
+    "The Fader covers music, style and culture."
+   ],
+   [
+    "The Fader was the first print publication to be released on iTunes."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-2366",
+  "sentences": [
+   [
+    "The speaker was the richest person in the world under 30.",
+    "The speaker was going to spend that wealth to save humanity from extinction.",
+    "The speaker said this."
+   ],
+   [
+    "FTX had grown so much.",
+    "Because FTX had grown so much, the speaker could no longer run both companies.",
+    "The speaker said this."
+   ],
+   [
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud.",
+    "The prosecution said Bankman-Fried committed fraud to achieve great wealth, power and influence.",
+    "The defense countered that the FTX founder acted in good faith.",
+    "The defense countered that the FTX founder never meant to commit fraud or steal.",
+    "The defense countered that the FTX founder basically got in over his head."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-1368",
+  "sentences": [
+   [
+    "The speaker said it was Bankman-Fried's decision.",
+    "The speaker said Bankman-Fried was the CEO of FTX.",
+    "The speaker said it was Bankman-Fried's decision because Bankman-Fried was the CEO of FTX."
+   ],
+   [
+    "Wang testified.",
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account.",
+    "Bankman-Fried said it was okay to continue withdrawing money from the account as long as the amount was less than FTX's total trading revenue."
+   ],
+   [
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud.",
+    "The prosecution said Bankman-Fried committed fraud to achieve great wealth, power and influence.",
+    "The defense countered that the FTX founder acted in good faith.",
+    "The defense countered that the FTX founder never meant to commit fraud or steal.",
+    "The defense countered that the FTX founder basically got in over his head."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-1910",
+  "sentences": [
+   [
+    "Google unveiled new hardware.",
+    "This week was Google's annual hardware event.",
+    "Google is a search and consumer tech giant.",
+    "At the hardware event, Google showed off what Google had been working on."
+   ],
+   [
+    "The last roundup reported how Google spent $26.3 billion in 2021 making Google the default search engine across platforms.",
+    "The last roundup reported how Google tried to have Chrome preinstalled on iPhones."
+   ],
+   [
+    "The case was filed by Arkansas-based publisher Helena World Chronicle.",
+    "The case argues that Google \"siphons off\" news publishers' content.",
+    "The case argues that Google \"siphons off\" news publishers' readers.",
+    "The case argues that Google \"siphons off\" news publishers' ad revenue.",
+    "The case argues that Google does this through anticompetitive means."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-265",
+  "sentences": [
+   [
+    "Wang testified.",
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account.",
+    "Bankman-Fried said it was okay to continue withdrawing money from the account as long as the amount was less than FTX's total trading revenue."
+   ],
+   [
+    "Bankman-Fried left Jane Street.",
+    "Jane Street is a high-frequency trading firm.",
+    "Bankman-Fried was a former billionaire.",
+    "Bankman-Fried got his start in finance at Jane Street.",
+    "Bankman-Fried got his start in finance after MIT.",
+    "Bankman-Fried persuaded Yedidia to join him as a trader at Alameda.",
+    "Bankman-Fried persuaded Yedidia to later join him as a developer at FTX."
+   ],
+   [
+    "The speaker said it was Bankman-Fried's decision.",
+    "The speaker said Bankman-Fried was the CEO of FTX.",
+    "The speaker said it was Bankman-Fried's decision because Bankman-Fried was the CEO of FTX."
+   ],
+   [
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud.",
+    "The prosecution said Bankman-Fried committed fraud to achieve great wealth, power and influence.",
+    "The defense countered that the FTX founder acted in good faith.",
+    "The defense countered that the FTX founder never meant to commit fraud or steal.",
+    "The defense countered that the FTX founder basically got in over his head."
+   ]
+  ]
+ },
+ {
+  "id": "-4112499438130311497",
+  "sentences": [
+   [
+    "Transcription occurs in the cell nucleus.",
+    "The DNA is held in the cell nucleus.",
+    "The DNA structure of the cell is made up of two helixes.",
+    "Each helix of the DNA structure is made up of sugar and phosphate.",
+    "The two helixes of the DNA structure are held together by hydrogen bonds between the bases of opposite strands.",
+    "The sugar and the phosphate in each strand of DNA are joined together by phosphodiester covalent bonds.",
+    "The phosphodiester covalent bonds are stronger than the hydrogen bonds.",
+    "The DNA is \"unzipped\" by the enzyme helicase.",
+    "The unzipping of the DNA is disruption of hydrogen bonds between different single strands.",
+    "Unzipping the DNA leaves the single nucleotide chain open to be copied.",
+    "RNA polymerase reads the DNA strand from the 3' end to the 5' end.",
+    "While reading the DNA strand, RNA polymerase synthesizes a single strand of messenger RNA.",
+    "RNA polymerase synthesizes the messenger RNA in the 5' to 3' direction.",
+    "The general RNA structure is very similar to the DNA structure.",
+    "In RNA, the nucleotide uracil takes the place that thymine occupies in DNA.",
+    "The single strand of messenger RNA leaves the nucleus through nuclear pores.",
+    "The single strand of messenger RNA migrates into the cytoplasm."
+   ]
+  ]
+ },
+ {
+  "id": "5adc020a5542994650320c4c",
+  "sentences": [
+   [
+    "Jeffrey Charles \"Jeff\" Ragsdale is an American author.",
+    "Jeffrey Charles \"Jeff\" Ragsdale is a documentary filmmaker.",
+    "Jeffrey Charles \"Jeff\" Ragsdale is an actor.",
+    "Jeffrey Charles \"Jeff\" Ragsdale is a stand-up comedian."
+   ],
+   [
+    "Millard Webb was born on 6 December 1893.",
+    "Millard Webb died on 21 April 1935.",
+    "Millard Webb was an American screenwriter.",
+    "Millard Webb was an American director."
+   ]
+  ]
+ }
+]

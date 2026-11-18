@@ -1,0 +1,36 @@
+{
+  "method": "graphrag",
+  "dataset": "multihop_rag",
+  "count": 100,
+  "precision": 0.94,
+  "recall": 0.94,
+  "f1": 0.94,
+  "exact_match": 0.92,
+  "overlap_accuracy": 0.94,
+  "retrieval_accuracy": 0.94,
+  "total_construction_seconds": 0.0,
+  "mean_retrieval_seconds": 25.59609654658823,
+  "mean_answer_seconds": 1.6880741158284946,
+  "mean_retrieved_tokens": 4342.36,
+  "total_storage_mb": 0.006413,
+  "categories": [
+    {
+      "question_type": "inference_query",
+      "count": 100,
+      "accuracy": 0.94,
+      "complexity": null
+    }
+  ],
+  "total_question_cost_usd": 0.28982768999999997,
+  "mean_question_cost_usd": 0.0028982769,
+  "mean_retrieval_and_answer_seconds": 27.284170662416727,
+  "options": {
+    "top_k": 10,
+    "rerank": false,
+    "rerank_candidate_k": 20,
+    "rerank_top_k": 10,
+    "ircot": false,
+    "max_steps": 2
+  },
+  "novelqa_categories": []
+}

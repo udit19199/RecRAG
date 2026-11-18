@@ -1,0 +1,96 @@
+[
+  {
+    "id": "0049809c2341517e",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "tying FTX CEO Sam Bankman-Fried to the conspiracy to take FTX customer funds"}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []},
+      {"fact": "1.4", "status": "missing", "evidence": []},
+      {"fact": "1.5", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "d2ce3432e48281b3",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "0.4", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []},
+      {"fact": "1.4", "status": "missing", "evidence": []},
+      {"fact": "1.5", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "b34c1941bfd4fa8c",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "3.0", "status": "missing", "evidence": []},
+      {"fact": "3.1", "status": "missing", "evidence": []},
+      {"fact": "3.2", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "0cc1b0d5606e686b",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told."}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "missing", "evidence": []},
+      {"fact": "2.4", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "79588d57e9eac299",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "3.0", "status": "missing", "evidence": []},
+      {"fact": "3.1", "status": "missing", "evidence": []},
+      {"fact": "3.2", "status": "missing", "evidence": []},
+      {"fact": "3.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "9b45e7b9fb2b73aa",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "William (Rufus Kampa) is left heartbroken with grief and angry"}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "William (Rufus Kampa) is left heartbroken with grief"}]},
+      {"fact": "0.4", "status": "stated", "evidence": [{"item": 1, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]}
+    ]
+  }
+]

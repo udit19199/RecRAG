@@ -1,0 +1,451 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "723e2e079a24a855",
+   "gold": [
+    {
+     "sentence": "Eugène Ionesco (born Eugen Ionescu, ] ; 26 November 1909 – 28 March 1994) was a Romanian-French playwright who wrote mostly in French, and one of the foremost figures of the French Avant-garde theatre.",
+     "facts": {
+      "0.0": "Eugène Ionesco was born Eugen Ionescu.",
+      "0.1": "Eugène Ionesco was born on 26 November 1909.",
+      "0.2": "Eugène Ionesco died on 28 March 1994.",
+      "0.3": "Eugène Ionesco was a Romanian-French playwright.",
+      "0.4": "Eugène Ionesco wrote mostly in French.",
+      "0.5": "Eugène Ionesco was one of the foremost figures of the French Avant-garde theatre."
+     }
+    },
+    {
+     "sentence": "Paul Mark Scott (25 March 19201 March 1978) was an English novelist, playwright, and poet, best known for his monumental tetralogy \"The Raj Quartet.\"",
+     "facts": {
+      "1.0": "Paul Mark Scott was born on 25 March 1920.",
+      "1.1": "Paul Mark Scott died on 1 March 1978.",
+      "1.2": "Paul Mark Scott was an English novelist.",
+      "1.3": "Paul Mark Scott was an English playwright.",
+      "1.4": "Paul Mark Scott was an English poet.",
+      "1.5": "Paul Mark Scott is best known for his monumental tetralogy \"The Raj Quartet.\""
+     }
+    }
+   ],
+   "items": [
+    "The New Tenant\nThe New Tenant (French: \"Le Nouveau Locataire\" ) is a play written by Eugène Ionesco in 1955.\n\n The central image is common to many Ionesco plays: something accumulates on stage and overwhelms the characters.\n\n In this case its furniture.\n\n The main characters are a gentleman, a caretaker, and two movers.\n\n The caretaker talks as the gentleman, the \"new tenant\" of the title, directs the two movers who continuously bring in furniture.",
+    "Paul Scott (novelist)\nPaul Mark Scott (25 March 19201 March 1978) was an English novelist, playwright, and poet, best known for his monumental tetralogy \"The Raj Quartet.\"\n\n His novel \"Staying On\" won the Booker Prize for 1977.",
+    "Exit the King\nExit the King (French: Le Roi se meurt ) is an absurdist drama by Eugène Ionesco that premiered in 1962.\n\n It is the third in Ionesco's \"Berenger Cycle\", preceded by \"The Killer\" (1958) and \"Rhinocéros\" (1959), and followed by \"A Stroll in the Air\" (1963).",
+    "Eugène Ionesco\nEugène Ionesco (born Eugen Ionescu, ] ; 26 November 1909 – 28 March 1994) was a Romanian-French playwright who wrote mostly in French, and one of the foremost figures of the French Avant-garde theatre.\n\n Beyond ridiculing the most banal situations, Ionesco's plays depict the solitude and insignificance of human existence in a tangible way.",
+    "The Killer (play)\nThe Killer (French: Tueur sans gages , sometimes translated \"The Killer without Reason\" or \"The Killer without Cause\") is a play written by Eugène Ionesco in 1958.\n\n It is the first of Ionesco's Berenger plays, the others being \"Rhinocéros\" (1959), \"Exit the King\" (1962), and \"A Stroll in the Air\" (1963).",
+    "Joe Orton\nJohn Kingsley \"Joe\" Orton (1 January 1933 – 9 August 1967) was an English playwright and author.\n\n His public career was short but prolific, lasting from 1964 until his death three years later.\n\n During this brief period he shocked, outraged, and amused audiences with his scandalous black comedies.\n\n The adjective \"Ortonesque\" is sometimes used to refer to work characterised by a similarly dark yet farcical cynicism.",
+    "Bill Scott (author)\nWilliam Neville \"Bill\" Scott OAM (4 October 1923 – 22 December 2005) was an Australian author, folklorist, songwriter, poet and a collector of bush ballads and Australian folk history.\n\n He has published anthologies of Australian bush songs, including the best selling book \"The Complete Book of Australian Folklore\" published in 1976.\n\n He was awarded the Order of Australia in 1992 for his contributions to folklore, folk music and Australian literature.\n\n He was considered a living treasure and his anthologies of songs and his donated collections continue his legacy.",
+    "The Lesson\nThe Lesson (French: \"La Leçon\" ) is a one-act play by French-Romanian playwright Eugène Ionesco.\n\n It was first performed in 1951 in a production directed by Marcel Cuvelier (who also played the Professor).\n\n Since 1957 it has been in permanent showing at Paris' Théâtre de la Huchette, on an Ionesco double-bill with The Bald Soprano.\n\n The play is regarded as an important work in the \"Theatre of the Absurd\".",
+    "Victims of Duty\nVictims of Duty (French: Victimes du Devoir ) is a one-act play written in 1953 by French-Romanian playwright Eugène Ionesco.\n\n An early work, it has not received the notoriety of his other works.\n\n The play is in the Theatre of the Absurd style, of which Ionesco was a pioneer.",
+    "Lonely Planet (play)\nLonely Planet is a two character play written by Steven Dietz.\n\n The play tells the story of Jody and Carl, two gay men who live in an unnamed American city.\n\n The play was written during the midst of the AIDS epidemic, which is the central focus of the story, though ultimately the play sends the message that one should pay attention to the world around them and realize its problems rather than shun it.\n\n The play heavily references the Eugène Ionesco comedy \"The Chairs\"."
+   ]
+  },
+  {
+   "id": "c8823846d4495a68",
+   "gold": [
+    {
+     "sentence": "The Data Universal Numbering System, abbreviated as DUNS or D-U-N-S, is a proprietary system developed and regulated by Dun & Bradstreet (D&B) that assigns a unique numeric identifier, referred to as a \"DUNS number\" to a single business entity.",
+     "facts": {
+      "0.0": "The Data Universal Numbering System is abbreviated as DUNS or D-U-N-S.",
+      "0.1": "The Data Universal Numbering System is a proprietary system.",
+      "0.2": "The Data Universal Numbering System is developed by Dun & Bradstreet (D&B).",
+      "0.3": "The Data Universal Numbering System is regulated by Dun & Bradstreet (D&B).",
+      "0.4": "The Data Universal Numbering System assigns a unique numeric identifier to a single business entity.",
+      "0.5": "The unique numeric identifier is referred to as a DUNS number."
+     }
+    },
+    {
+     "sentence": " Often referred to as D&B, the company’s database contains more than 265 million business records worldwide.",
+     "facts": {
+      "1.0": "Dun & Bradstreet is often referred to as D&B.",
+      "1.1": "The company's database contains more than 265 million business records.",
+      "1.2": "The company's database contains business records worldwide."
+     }
+    }
+   ],
+   "items": [
+    "Data Universal Numbering System\nThe Data Universal Numbering System, abbreviated as DUNS or D-U-N-S, is a proprietary system developed and regulated by Dun & Bradstreet (D&B) that assigns a unique numeric identifier, referred to as a \"DUNS number\" to a single business entity.\n\n It was introduced in 1963 to support D&B's credit reporting practice.\n\n It is standard worldwide.\n\n DUNS users include the European Commission, the United Nations, and the United States government.\n\n More than 50 global industry and trade associations recognize, recommend, or require DUNS.\n\n The DUNS database contains over 250 million entries for businesses throughout the world.",
+    "Graph query row:\nentity: Data Universal Numbering System\nrelationship: CREATED_BY\nrelated: Dun & Bradstreet",
+    "Dun &amp; Bradstreet\nDun & Bradstreet, Inc. () is a company that provides commercial data, analytics and insights for business, headquartered in Short Hills, a community in Millburn, New Jersey, US.\n\n It offers a wide range of products, and services for risk and finance, operations and supply, and sales and marketing professionals, as well as research and insights on global business issues, serving customers in government and industries such as communications, technology, strategic financial services, and retail/telecommunications/manufacturing markets.\n\n Often referred to as D&B, the company’s database contains more than 265 million business records worldwide.",
+    "Universal Pictures\nUniversal Pictures (also referred to as Universal Studios or simply Universal) is an American film studio owned by Comcast through the Universal Filmed Entertainment Group division of its wholly owned subsidiary NBCUniversal.\n\n The company was founded in 1912 by Carl Laemmle, Mark Dintenfass, Charles O. Baumann, Adam Kessel, Pat Powers, William Swanson, David Horsley, Robert H. Cochrane, and Jules Brulatour, and is the oldest surviving film studio in the United States, the world's fourth oldest after Gaumont, Pathé and Nordisk Film, and the oldest in terms of the overall film market .\n\n Its studios are located in Universal City, California, and its corporate offices are located in New York City.",
+    "DFDS\nDFDS is Northern Europe's largest shipping and logistics company.\n\n The company's name is an abbreviation of Det Forenede Dampskibs-Selskab (literally \"The United Steamship Company\").\n\n DFDS was founded in 1866, when C.F. Tietgen merged the three biggest Danish steamship companies of that day.",
+    "Universal Numbering System\nThe Universal Numbering System is a dental notation system for associating information to a specific tooth, and is commonly used in the United Kingdom.",
+    "University of Delaware\nThe University of Delaware (colloquially \"UD\") is the largest university in Delaware.\n\n The main campus is in Newark, with satellite campuses in Dover, Wilmington, Lewes, and Georgetown.\n\n It is considered a large institution with approximately 18,500 undergraduate and 4,500 graduate students. UD is a privately governed university which receives public funding for being a land-grant, sea-grant, space-grant and urban-grant state-supported research institution.",
+    "The Denver Dry Goods Company\nThe Denver Dry Goods Company, also known as \"The Denver\", was established in Denver, Colorado in 1879 by Michael.\n\n J. McNamara and L.H. Flanders as M.J. McNamara & Company and later The McNamara Dry Goods Company.\n\n The beginnings of the company can be traced back to 1876 when they had both worked as clerks at another dry goods store in Denver.\n\n In 1877, McNamara left that store and formed a partnership with Edgar H. Drew.\n\n After two years, Drew left and L. H. Flanders came on as co-owner.\n\n In 1893, McNamara turned the store's ownership over to Dennis Sheedy and Charles Kountz and in 1894, the company was reorganized under the name, \"Denver Dry Goods Company\".\n\n For a while it was claimed to be the largest department store west of Chicago.\n\n A description on one postcard from 1916 read: \"The Largest Store in the Central West, 400 Feet long-Seven Acres Floor Area, 1,200 Employees, A $1,500,000 Stock, 15th to 16th on California Street Denver Colorado\".",
+    "Dental notation\nDental professionals, in writing or speech, use several different dental notation systems for associating information with a specific tooth.\n\n The three most common systems are the ISO System, Universal Numbering System, and Palmer notation method.\n\n The ISO system is used worldwide, and the Universal is used widely in the United States.\n\n The ISO System can be easily adapted to computerized charting.",
+    "United Nations (band)\nThe idea of the side project can be traced back to the early 2000s, but it was not until 2008 that United Nations took shape.\n\n Geoff Rickly has said the band started over tequila with Daryl Palumbo.\n\n At the start of the band, all members except for Rickly were under contracts with other record labels and were not legally permitted to work in projects released by another, making it difficult for the official lineup of the band to be well known.\n\n However some members from the band's original line-up have been revealed through interviews and social media posts, such as Daryl Palumbo, Jonah Bayer and Lukas Previn.\n\n Since Rickly was the only member whose primary band was not under contract, his name is the only one that could legally appear in press materials.\n\n Press photos of the band released in 2008 depict four people wearing Ronald Reagan masks."
+   ]
+  },
+  {
+   "id": "f0ca4c78c8352689",
+   "gold": [
+    {
+     "sentence": "The Dundee Canal was an industrial canal in Clifton and Passaic in Passaic County, New Jersey.",
+     "facts": {
+      "0.0": "The Dundee Canal was an industrial canal.",
+      "0.1": "The Dundee Canal was in Clifton and Passaic.",
+      "0.2": "Clifton and Passaic are in Passaic County, New Jersey."
+     }
+    },
+    {
+     "sentence": " It was built between 1858 and 1861 and ran parallel to the Passaic River.",
+     "facts": {
+      "1.0": "The Dundee Canal was built between 1858 and 1861.",
+      "1.1": "The Dundee Canal ran parallel to the Passaic River."
+     }
+    },
+    {
+     "sentence": " It runs parallel to the coast, and is separated from the Atlantic Ocean by barrier beaches, including Palm Beach Island.",
+     "facts": {
+      "2.0": "It runs parallel to the coast.",
+      "2.1": "It is separated from the Atlantic Ocean by barrier beaches.",
+      "2.2": "The barrier beaches include Palm Beach Island."
+     }
+    },
+    {
+     "sentence": " The lagoon is connected to the Atlantic Ocean by two permanent, man-made inlets.",
+     "facts": {
+      "3.0": "The lagoon is connected to the Atlantic Ocean.",
+      "3.1": "The lagoon is connected to the Atlantic Ocean by two inlets.",
+      "3.2": "The two inlets are permanent.",
+      "3.3": "The two inlets are man-made."
+     }
+    }
+   ],
+   "items": [
+    "Erie Canal Lock 52 Complex\nErie Canal Lock 52 Complex is a national historic district located at Port Byron and Mentz in Cayuga County, New York.\n\n The district includes two contributing buildings (the Erie House and the blacksmith shop / mule barn); three contributing engineering structures (Erie Canal Lock 52, culvert, and canal prism of the enlarged Erie Canal); and archaeological sites associated with the canal operations.\n\n Lock 52 was constructed 1849-1853 as part of the Enlarged Erie Canal program.\n\n It remained in operation until the rerouting of the canal under the New York State Barge Canal System in 1917.\n\n The Erie House was built in 1894 and is a two story frame structure that housed a saloon and hotel.",
+    "Power canal\nA Power Canal refers to a canal used for hydraulic power generation, rather than for transport of watercraft.\n\n The power canal was a major factor in the Industrial revolution in New England in the 19th century.\n\n Most early power canals were mill races used mechanically to transfer power directly from falling water to machinery in mill buildings.\n\n Later, the hydraulic power generated electricity locally for the same mill factories.\n\n These power canals were often filled in as electricity (transported by power lines) replaced the need for local water power, and road transport needs or city expansion needs reclaimed the land.\n\n Some hydraulic power canals were transformed into local electric generators, but most were closed.\n\n Remains of power canals can be seen in old mill towns and are often protected as historical structures today.",
+    "Dismal Swamp Canal\nThe Dismal Swamp Canal is located along the eastern edge of the Great Dismal Swamp in Virginia and North Carolina in the United States.\n\n It is the oldest continually operating man-made canal in the United States, opened in 1805, and closed in October 2016.\n\n It is part of the Intracoastal Waterway, an inland route, which parallels the east coast and offers boaters shelter from the Atlantic Ocean from Manasquan Inlet, New Jersey, to Brownsville, Texas.\n\n The route runs through bays, lakes, rivers, streams, and canals, and includes the Intracoastal Waterway running from Norfolk, Virginia, to the Florida Keys.",
+    "Lowell Power Canal System and Pawtucket Gatehouse\nThe Lowell Power Canal System is the largest power canal system in the United States, at 5.6 miles in length.\n\n The system's estimated output is 10,000 horsepower, operating six major canals on two levels, controlled by numerous gates.\n\n The system was begun in the 1790s, beginning its life as a transportation canal called the Pawtucket Canal, which was constructed to get logs from New Hampshire down the Merrimack River to shipbuilding centers at Newburyport, Massachusetts, bypassing the 30-plus-foot drop of the Pawtucket Falls.",
+    "Brunswick–Altamaha canal\nThe Brunswick–Altamaha Canal was a 12-mile-long canal built to connect the Altamaha River to the city of Brunswick, Georgia at the Turtle River to transport goods from Brunswick's port to areas farther north and inland.\n\n It included locks on both ends of the canal.\n\n The canal was originally proposed in 1798 and after two failed charters (1826 and 1830), construction was started in 1836 by Thomas Butler King.\n\n The project was estimated to cost $450,000.\n\n The canal was finished and opened in 1854; however, by that time the canal was obsolete because of new railroads.\n\n The canal was closed by 1860.\n\n The Columbian mammoth was discovered during the construction of the canal.",
+    "Caisson lock\nA caisson lock was invented in the late 18th century as a solution to minimise the use of great volumes of water required to raise and lower canal boats through large height differences.\n\n It was normal to only raise and lower boats through small height differences of a few feet when traversing undulating terrain.\n\n A solution was required when either large height differences were encountered or water was in short supply.\n\n The Caisson (or Caisoon) was thought to be one solution.\n\n The technology of the time was not capable of achieving this type of construction economically with current building materials.\n\n This design attempted was a type of canal lock in which a narrowboat is floated into a sealed watertight box and raised or lowered between two different canal water levels.\n\n It was designed primarily as a water-saving measure, and also was an attempt to minimise construction costs compared with other engineering solutions of the time.\n\n In use it was capable of replacing up to seven conventional locks.\n\n Other design benefits were speed of boat descent/ascent, and only a little loss of water when operating compared with a conventional boat lock.",
+    "Dundee Canal\nThe Dundee Canal was an industrial canal in Clifton and Passaic in Passaic County, New Jersey.\n\n It was built between 1858 and 1861 and ran parallel to the Passaic River.\n\n It supplied hydropower and water for manufacturing.\n\n There was interest by some members of the business community to modify the canal to support navigational uses, but the canal was never used for that purpose.",
+    "Raritan Water Power Canal\nThe Raritan Water Power Canal in Raritan, New Jersey was a three-mile long water power canal built during the early 1840s to power industries.\n\n The canal has been determined to be eligible for the National Register.\n\n The canal is included in Duke Island Park, as part of the Somerset County Park System.",
+    "Lake Worth Lagoon\nThe Lake Worth Lagoon is a lagoon located in Palm Beach County, Florida.\n\n It runs parallel to the coast, and is separated from the Atlantic Ocean by barrier beaches, including Palm Beach Island.\n\n The lagoon is connected to the Atlantic Ocean by two permanent, man-made inlets.",
+    "Edison Sault Power Canal\nThe Edison Sault Power Canal supplies the Saint Marys Falls Hydropower Plant, a Cloverland Electric Cooperative hydroelectric plant, in Sault Ste. Marie, Michigan.\n\n Excavation of the power canal began in September 1898 and was completed in June 1902.\n\n The canal and hydroelectric complex were named a Historic Civil Engineering Landmark in 1983."
+   ]
+  },
+  {
+   "id": "b3e8c0b1749a7220",
+   "gold": [
+    {
+     "sentence": "Summer Magic is a 1963 Walt Disney Productions film starring Hayley Mills, Burl Ives, and Dorothy McGuire in a story about a Boston widow and her children taking up residence in a small town in Maine.",
+     "facts": {
+      "0.0": "Summer Magic is a 1963 Walt Disney Productions film.",
+      "0.1": "Summer Magic stars Hayley Mills.",
+      "0.2": "Summer Magic stars Burl Ives.",
+      "0.3": "Summer Magic stars Dorothy McGuire.",
+      "0.4": "Summer Magic is a story about a Boston widow and her children.",
+      "0.5": "In Summer Magic, the Boston widow and her children take up residence in a small town in Maine."
+     }
+    },
+    {
+     "sentence": "Around the World in 80 Days is a 2004 American action-adventure comedy family film based on Jules Verne's novel of the same name.",
+     "facts": {
+      "1.0": "Around the World in 80 Days is a 2004 American film.",
+      "1.1": "Around the World in 80 Days is an action-adventure comedy family film.",
+      "1.2": "Around the World in 80 Days is based on Jules Verne's novel of the same name."
+     }
+    }
+   ],
+   "items": [
+    "List of Walt Disney Pictures films\nThis is a list of films released theatrically under the Walt Disney Pictures banner (known as that since 1983, with \"Never Cry Wolf\" as its first release) and films released before that under the former name of the parent company, Walt Disney Productions (1929–1983).\n\n Most films listed here were distributed in the United States by the company's distribution division, Walt Disney Studios Motion Pictures (formerly known as Buena Vista Distribution Company [1953–1987] and Buena Vista Pictures Distribution [1987–2007]).\n\n The Disney features produced before \"Peter Pan\" (1953) were originally distributed by RKO Radio Pictures, and are now distributed by Walt Disney Studios Motion Pictures.",
+    "Michael Palin: Around the World in 80 Days\nAround the World in 80 Days is a 7-part BBC television travel series first broadcast on BBC1 in 1989.\n\n It was presented by comedian and actor Michael Palin.\n\n The show was inspired by Jules Verne's classic novel \"Around the World in Eighty Days\", in which a character named Phileas Fogg accepts a wager to circumnavigate the globe in eighty days or less.\n\n Palin was given the same deadline, and not allowed to use aircraft, which did not exist in Jules Verne's time and would make completing the journey far too easy.\n\n He followed Phileas Fogg's route as closely as possible.\n\n Along the way he commented on the sights and cultures he encountered.\n\n Palin encountered several setbacks during his voyage, partly because he travelled with a five-person film crew, who are collectively named after Passepartout, Phileas Fogg's manservant.",
+    "Around the World (1956 song)\n\"Around the World\" was the theme tune from the 1956 movie \"Around the World in 80 Days\" In the film, only an instrumental version of the song appeared, although the vocal version has become by far the better known one.\n\n The song was written by Harold Adamson and Victor Young; Young died in 1956, several weeks after the film's release and he received the Academy Award for Best Music, Scoring of a Dramatic or Comedy Picture posthumously.\n\n Young's orchestral version was a #13 hit on the Billboard charts in 1957.\n\n The recording by Bing Crosby was the B-side of the Victor Young version in 1957, on Festival SP45-1274 in Australia, and was a joint charting success.",
+    "Around the World in 80 Days (1956 film)\nAround the World in 80 Days (sometimes spelled as Around the World in Eighty Days) is a 1956 American epic adventure-comedy film starring Cantinflas and David Niven , produced by the Michael Todd Company and released by United Artists.",
+    "Summer Holiday (1963 film)\nSummer Holiday is a British CinemaScope and Technicolor musical film featuring singer Cliff Richard.\n\n The film was directed by Peter Yates (his debut), produced by Kenneth Harper.\n\n The original screenplay was written by Peter Myers and Ronald Cass (who also wrote most of the song numbers and lyrics).\n\n The cast includes Lauri Peters, Melvyn Hayes, Teddy Green, Jeremy Bulloch, Una Stubbs, Pamela Hart, Jacqueline Daryl, Lionel Murton, Madge Ryan, David Kossoff, Nicholas Phipps, Ron Moody and The Shadows.\n\n Herbert Ross choreographed the musical numbers.",
+    "Love Begins at 20\nLove Begins at 20 is a 1936 American comedy film directed by Frank McDonald and written by Dalton Trumbo and Tom Reed, based on the 1929 play \"Broken Dishes\" by Martin Flavin.\n\n The film stars Hugh Herbert, Patricia Ellis, Warren Hull, Hobart Cavanaugh, Dorothy Vaughan and Clarence Wilson.\n\n The film was released by Warner Bros. on August 22, 1936.",
+    "Around the World in 80 Days (1988 film)\nAround the World in 80 Days is an Australian 48-minute direct-to-video animated film from Burbank Films Australia.\n\n It was originally released in 1988.\n\n The film is based on Jules Verne's classic French novel, \"Around the World in 80 Days\", first published in 1873, and was adapted by Leonard Lee.\n\n It was produced by Roz Phillips and featured original music by Simon Walker.\n\n The film imitated BRB Internacional's Spanish 1981 series, \"La vuelta al mundo de Willy Fog\", in its use of anthropomorphic animals in the human roles.\n\n The copyright in this film is now owned by Pulse Distribution and Entertainment and administered by digital rights management firm NuTech Digital.",
+    "Around the World in Eighty Days\nAround the World in Eighty Days (French: \"Le tour du monde en quatre-vingts jours\" ) is a classic adventure novel by the French writer Jules Verne, published in 1873.\n\n In the story, Phileas Fogg of London and his newly employed French valet Passepartout attempt to circumnavigate the world in 80 days on a £20,000 wager (the approximate equivalent of £2 million in 2016) set by his friends at the Reform Club.\n\n It is one of Verne's most acclaimed works .",
+    "Summer Magic\nSummer Magic is a 1963 Walt Disney Productions film starring Hayley Mills, Burl Ives, and Dorothy McGuire in a story about a Boston widow and her children taking up residence in a small town in Maine.\n\n The film was based on the novel \"Mother Carey's Chickens\" by Kate Douglas Wiggin and was directed by James Neilson.\n\n This was the fourth of six film Mills did for Disney, and the young actress received a Golden Globe nomination for her work here.",
+    "Around the World in 80 Days (2004 film)\nAround the World in 80 Days is a 2004 American action-adventure comedy family film based on Jules Verne's novel of the same name.\n\n It stars Jackie Chan, Steve Coogan and Cécile de France.\n\n The film is set in 19th-century Britain and centers on Phileas Fogg (Steve Coogan), here reimagined as an eccentric inventor, and his efforts to circumnavigate the globe in 80 days.\n\n During the trip, he is accompanied by his Chinese valet, Passepartout (Jackie Chan).\n\n For comedic reasons, the film intentionally deviated wildly from the novel and included a number of anachronistic elements.\n\n With production costs of about $110 million and estimated marketing costs of $30 million, it earned $24 million at the U.S. box office and $72 million worldwide, making it a box office flop.\n\n It was Arnold Schwarzenegger's last film before he took a hiatus from acting to become Governor of California until 2010's \"The Expendables\"."
+   ]
+  },
+  {
+   "id": "05f8908bb457b597",
+   "gold": [
+    {
+     "sentence": "Chester Erskine (November 29, 1905 – April 7, 1986) was a Hollywood and Broadway director, writer, and producer.",
+     "facts": {
+      "0.0": "Chester Erskine was born on November 29, 1905.",
+      "0.1": "Chester Erskine died on April 7, 1986.",
+      "0.2": "Chester Erskine was a Hollywood and Broadway director.",
+      "0.3": "Chester Erskine was a Hollywood and Broadway writer.",
+      "0.4": "Chester Erskine was a Hollywood and Broadway producer."
+     }
+    },
+    {
+     "sentence": "Sam Taylor (August 13, 1895, New York City – March 6, 1958, Santa Monica) was a film director, screenwriter, and producer, most active in the silent film era.",
+     "facts": {
+      "1.0": "Sam Taylor was born on August 13, 1895, in New York City.",
+      "1.1": "Sam Taylor died on March 6, 1958, in Santa Monica.",
+      "1.2": "Sam Taylor was a film director.",
+      "1.3": "Sam Taylor was a screenwriter.",
+      "1.4": "Sam Taylor was a film producer.",
+      "1.5": "Sam Taylor was most active in the silent film era."
+     }
+    }
+   ],
+   "items": [
+    "Clare Taylor\nClare Elizabeth Taylor MBE (born 22 May 1965) is an English sportswoman, the first woman to have played on a World Cup team in both cricket and football.\n\n She represented England at both cricket, as a member of the winning World Cup cricket team in 1993, and football (World Cup 1995).\n\n She was awarded the MBE in the Queen's Birthday Honours in 2000 for her services to women’s sport.\n\n Taylor attended Moor End High School and still has her name on the athletics records board.",
+    "Mary Elizabeth Bliss\nMary Elizabeth \"Betty\" Taylor Bliss Dandridge, born Mary Elizabeth Taylor (April 20, 1824 – July 25, 1909), was the youngest of the three surviving daughters of President Zachary Taylor (1849-1850) and Margaret Mackall Smith Taylor.",
+    "Speedy West\nWesley Webb West (January 25, 1924 – November 15, 2003), better known as Speedy West, was an American pedal steel guitarist and record producer.\n\n He frequently played with Jimmy Bryant, both in their own duo and as part of the regular Capitol Records backing band for Tennessee Ernie Ford and many others.\n\n He also played on Loretta Lynn's first single.",
+    "Chester Erskine\nChester Erskine (November 29, 1905 – April 7, 1986) was a Hollywood and Broadway director, writer, and producer.",
+    "William Farrar Smith\nWilliam Farrar Smith (February 17, 1824 – February 28, 1903), known as ‘Baldy’ Smith, was a Union general in the American Civil War, notable for attracting the extremes of glory and blame.\n\n He was praised for his gallantry in the Seven Days Battles and the Battle of Antietam, but was demoted for insubordination after the disastrous defeat at the Battle of Fredericksburg.\n\n As chief engineer of the Army of the Cumberland, he achieved recognition by restoring a supply line that saved that army from starvation and surrender, known the “Cracker Line”, that helped Union troops to success in the Chattanooga Campaign in the autumn of 1863.\n\n Leading the first operation against Petersburg, Smith’s hesitation, possibly illness-related, cost the Union a prime opportunity for a quick end to the war, and he was relieved of command.",
+    "Sam Taylor (director)\nSam Taylor (August 13, 1895, New York City – March 6, 1958, Santa Monica) was a film director, screenwriter, and producer, most active in the silent film era.\n\n Taylor is best known for his comedic directorial work with Harold Lloyd and Mary Pickford, and also later worked with Laurel and Hardy.",
+    "Buford Abner\nJames Buford Abner (November 10, 1917 - November 19, 2011) was an American songwriter, musician and singer who worked during the early days of country music, working in both secular and gospel country music genres.\n\n With his brother Merle Abner, his uncle Stacy Abner, George Hughes and Billy Carrier, he was a member of the Swanee River Boys.\n\n He was inducted into the Southern Gospel Music Association Hall of Fame in 2002 and the Atlanta Country Music Hall of Fame as a member of the Swanee River Boys.",
+    "Dick Herrick\nThe Very Rev Richard William Herrick (3 December 1913 - 5 May 1981) was an eminent Anglican priest in the 20th century.\n\n He was educated at King Edward VI School Retford and Leeds University and was initially a civil servant.\n\n He was ordained after a period of study at the College of the Resurrection, Mirfield in 1940.\n\n he held curacies at Duston and Portsea, Portsmouth before being appointed Vicar of St Michael’s, Northampton in 1947, a post he held for a decade.\n\n He was then a Canon Residentiary of Chelmsford Cathedral until 1978 when he was appointed Provost of Chelmsford.\n\n He died in post.",
+    "Albert Sharpe\nAlbert Sharpe (15 April 1885 – 13 February 1970) was an Irish stage and film actor.\n\n His most famous roles were those of Darby O'Gill in Disney's \"Darby O'Gill and the Little People\" and as Finian McLonergan in the Original Broadway production of the musical \"Finian's Rainbow\".\n\n (the film version, made in 1968, had Fred Astaire in the role.)\n\n On screen he played Fiona's father Andrew in the MGM musical Brigadoon.\n\n He was also a member of the Abbey Players.\n\n His last ten years were spent in retirement.\n\n He died in 1970 in Belfast at the age of 84.",
+    "Elizabeth Taylor\nDame Elizabeth Rosemond Taylor, DBE (February 27, 1932 – March 23, 2011) was a British-American actress, businesswoman, and humanitarian.\n\n She began her career as a child actress in the early 1940s, and was one of the most popular stars of classical Hollywood cinema in the 1950s.\n\n She continued her career successfully into the 1960s, and remained a well known public figure for the rest of her life.\n\n In 1999, the American Film Institute named her the seventh-greatest female screen legend."
+   ]
+  },
+  {
+   "id": "6a77a96b22f28ac4",
+   "gold": [
+    {
+     "sentence": " They have produced two studio albums and an EP.",
+     "facts": {
+      "0.0": "They have produced two studio albums.",
+      "0.1": "They have produced an EP."
+     }
+    },
+    {
+     "sentence": "Motion City Soundtrack was an American rock band that formed in Minneapolis, Minnesota in 1997.",
+     "facts": {
+      "1.0": "Motion City Soundtrack was an American rock band.",
+      "1.1": "Motion City Soundtrack formed in Minneapolis, Minnesota.",
+      "1.2": "Motion City Soundtrack formed in 1997."
+     }
+    },
+    {
+     "sentence": " Over the course of their nearly twenty-year career, the group toured heavily and released six studio albums, the majority on independent label Epitaph Records.",
+     "facts": {
+      "2.0": "Motion City Soundtrack had a nearly twenty-year career.",
+      "2.1": "Motion City Soundtrack toured heavily over the course of its career.",
+      "2.2": "Motion City Soundtrack released six studio albums.",
+      "2.3": "The majority of Motion City Soundtrack's six studio albums were released on the independent label Epitaph Records."
+     }
+    }
+   ],
+   "items": [
+    "Back to the Beat (EP)\nBack to the Beat was the first significant EP release by the Minneapolis based pop punk band Motion City Soundtrack.\n\n The EP was recorded in Sound In Motion Recordings and released by Modern Radio Records and includes tracks that were later re-released.\n\n \"Throw Down\", \"Back to the Beat\" and \"Capital H\" were re-released on a split EP with Schatzi.\n\n \"Capital H\" was re-released on Motion City Soundtrack's first album \"I Am the Movie\".\n\n At the time of recording, the band members differed from the Motion City Soundtrack line-up formed in 2002.\n\n They were Joshua Cain on guitar and vocals, Austin Lindstrom on bass guitar, Joel Habedank on drums and Justin Pierre on lead vocals, guitar and keyboard.",
+    "Motion City Soundtrack\nMotion City Soundtrack was an American rock band that formed in Minneapolis, Minnesota in 1997.\n\n The band's line-up consisted of vocalist and guitarist Justin Pierre, lead guitarist Joshua Cain, keyboardist Jesse Johnson, bassist Matthew Taylor, and drummer Tony Thaxton.\n\n Over the course of their nearly twenty-year career, the group toured heavily and released six studio albums, the majority on independent label Epitaph Records.\n\n The band's sound, at times described as pop punk or emo, made notable use of the Moog synthesizer.",
+    "List of songs recorded by Motion City Soundtrack\nAmerican rock band Motion City Soundtrack recorded songs for six studio albums, various soundtracks, compilations, and non-album singles.\n\n The majority of the group's original material was written by vocalist and guitarist Justin Pierre.\n\n The band also recorded cover versions of other artists' songs at various points throughout their career, including by the Beatles, Limbeck, the Police, R.E.M., the Rentals, Rilo Kiley, Trampled by Turtles, and the Weakerthans.\n\n In all, the group recorded 107 songs, nine of which were covers.",
+    "My Dinosaur Life\nMy Dinosaur Life is the fourth studio album by the American rock band Motion City Soundtrack.\n\n Produced by Mark Hoppus, the album was released on January 19, 2010 by Columbia Records.\n\n After many years on independent label Epitaph Records, Motion City Soundtrack signed to major label Columbia in 2006, prior to the release of their third album, \"Even If It Kills Me\" (2007).\n\n Blink-182 bassist Mark Hoppus returned to produce the album; he had previously worked with the band on their 2005 breakthrough \"Commit This to Memory\".",
+    "Even If It Kills Me\nEven if It Kills Me is the third studio album by American rock band Motion City Soundtrack.\n\n Produced by Ric Ocasek, Adam Schlesinger and Eli Janney, the album was released on September 18, 2007, in the United States by Epitaph Records.\n\n Motion City Soundtrack, based in Minneapolis, Minnesota, made a breakthrough with their second album, \"Commit This to Memory\", garnering praise and independent buzz upon its 2005 release.\n\n Following the release, the band toured relentlessly over the next two years, during which time frontman Justin Pierre struggled with alcohol and substance abuse.\n\n These addictions were infused into the writing process of \"Even If Kills Me\", which was recorded in early 2007 Stratosphere Studios in Chelsea and the legendary Electric Lady Studios in Greenwich Village.",
+    "Commit This to Memory\nCommit This to Memory is the second studio album by American rock band Motion City Soundtrack.\n\n Produced by Mark Hoppus, the album was released on June 7, 2005, in the United States by Epitaph Records.\n\n Motion City Soundtrack, formed in 1997, had first found success with their debut album, \"I Am the Movie\" (2002).\n\n The band toured in the interim years, creating positive word-of-mouth.\n\n In 2004, the band joined Blink-182 on the road for a string of shows, which led to their bassist, Mark Hoppus, joining the band in the studio for his first producing effort.",
+    "From the Screen to Your Stereo\nFrom the Screen to Your Stereo is an EP by A New Found Glory (now New Found Glory) released on 28 March 2000 by Drive-Thru Records.\n\n All the tracks are covers of songs from motion picture soundtracks.\n\n The album was pressed on 10\" vinyl and released in three different colors: light marble blue, marble red, and white.\n\n The vinyl pressing featured a bonus track.\n\n In 2002, the album was released on a non-US split with the Japanese band Nicotine entitled Movie Addiction, where on this split, Nicotine also covered songs from movies.\n\n In 2007 the band released a follow up, this time a full-length album titled \"From the Screen to Your Stereo Part II\".",
+    "Candlelight Red\nCandlelight Red is a rock band from Williamsport, Pennsylvania.\n\n They have produced two studio albums and an EP.\n\n Their EP \"Demons\" and album \"Reclamation\" was produced by Morgan Rose of Sevendust.",
+    "Motion City Soundtrack discography\nThe following is the discography of Motion City Soundtrack, an American rock band that formed in Minneapolis, Minnesota in 1997.\n\n The band's line-up consisted of vocalist and guitarist Justin Pierre, lead guitarist Joshua Cain, keyboardist Jesse Johnson, bassist Matthew Taylor, and drummer Tony Thaxton.\n\n Over the course of their nearly twenty-year career, the group toured heavily and released six studio albums, the majority on independent label Epitaph Records.\n\n The band's sound, at times described as pop punk or emo, made notable use of the Moog synthesizer.",
+    "Panic Stations (album)\nPanic Stations is the sixth and final studio album by American rock band Motion City Soundtrack.\n\n Produced by John Agnello, the album was released on September 18, 2015 by Epitaph Records.\n\n Following an extended touring cycle in which the group performed several past albums in full, Motion City Soundtrack lost one of its longest-serving members: drummer Tony Thaxton, who resigned from the group in 2013.\n\n The band continued to tour with new drummer Claudio Rivera over the ensuing year while writing new material for a sixth album."
+   ]
+  },
+  {
+   "id": "cc665a918489ccb0",
+   "gold": [
+    {
+     "sentence": "Catfish and the Bottlemen are a British rock band, formed in Llandudno, Wales in 2007.",
+     "facts": {
+      "0.0": "Catfish and the Bottlemen are a British rock band.",
+      "0.1": "Catfish and the Bottlemen were formed in Llandudno, Wales.",
+      "0.2": "Catfish and the Bottlemen were formed in 2007."
+     }
+    },
+    {
+     "sentence": "The Lumineers are an American folk rock/Americana band based in Denver, Colorado.",
+     "facts": {
+      "1.0": "The Lumineers are an American folk rock/Americana band.",
+      "1.1": "The Lumineers are based in Denver, Colorado."
+     }
+    },
+    {
+     "sentence": " Schultz and Fraites began writing and performing together in Ramsey, New Jersey in 2005.",
+     "facts": {
+      "2.0": "Schultz and Fraites began writing together in 2005.",
+      "2.1": "Schultz and Fraites began performing together in 2005.",
+      "2.2": "Schultz and Fraites began writing together in Ramsey, New Jersey.",
+      "2.3": "Schultz and Fraites began performing together in Ramsey, New Jersey."
+     }
+    },
+    {
+     "sentence": " The Lumineers emerged as one of the most popular folk rock/Americana artists during the revival of those genres and their growing popularity in the 2010s.",
+     "facts": {
+      "3.0": "The Lumineers emerged as one of the most popular folk rock/Americana artists.",
+      "3.1": "The Lumineers emerged during the revival of folk rock and Americana genres.",
+      "3.2": "The Lumineers emerged during the growing popularity of folk rock and Americana in the 2010s."
+     }
+    }
+   ],
+   "items": [
+    "Local Natives\nLocal Natives (previously known as Cavil at Rest) is an American indie rock band based in Silver Lake, Los Angeles, California, United States.\n\n Their debut album, \"Gorilla Manor\", was first released in the UK in November 2009, and later released in the US on February 16, 2010.\n\n The album received mostly positive reviews and debuted in the Billboard 200 and at No. 3 in the New Artist Chart.\n\n Their second album, \"Hummingbird\", was released in January 2013.\n\n Their third album, \"Sunlit Youth\", was released in September 2016.",
+    "The Balcony (album)\nThe Balcony is the debut studio album by Welsh rock band Catfish and the Bottlemen.\n\n It was released on 15 September 2014 in the United Kingdom and 15 January 2015 in the United States.\n\n On 20 March 2015, \"The Balcony\" was awarded a Gold certification from the British Phonographic Industry.\n\n The album cover depicts outlines of two headless people pleasuring each other's genitals.\n\n The illustration is by New York artist Tim Lahan who originally posted it to his Flickr account in 2009 and was subsequently contacted by the band.",
+    "Billy Bibby &amp; The Wry Smiles\nBilly Bibby & The Wry Smiles are a British indie rock band formed in the autumn of 2015 in the area around Llandudno, North Wales and Chester, UK.\n\n The band is fronted by Billy Bibby, former lead guitarist and founding member of Catfish and the Bottlemen.\n\n Bibby parted ways with Catfish and the Bottlemen in the summer of 2014, shortly after co-writing and recording their Platinum selling debut album, \"The Balcony\".\n\n Soon thereafter, Billy Bibby began writing songs and playing acoustic shows in various UK cities in order to test public response to his new music.\n\n In the spring of 2015, Billy Bibby began seeking musicians to form a new band.\n\n Auditions were conducted with the help of Simon Jones, formerly of The Verve.\n\n Band members Rob Jones (lead guitar), Matt Bassy (bass), and Michael Pearce (drums) were selected to form the four-piece ensemble.",
+    "The Lumineers\nThe Lumineers are an American folk rock/Americana band based in Denver, Colorado.\n\n The founding members are Wesley Schultz (lead vocals, guitar) and Jeremiah Fraites (drums, percussion).\n\n Schultz and Fraites began writing and performing together in Ramsey, New Jersey in 2005.\n\n Cellist and vocalist Neyla Pekarek joined the band in 2010.\n\n The Lumineers emerged as one of the most popular folk rock/Americana artists during the revival of those genres and their growing popularity in the 2010s.\n\n The band's stripped back raw sound draws heavily from artists that influenced Schultz and Fraites such as Bruce Springsteen, Bob Dylan and Tom Petty.\n\n They are known for their energetic live shows and several international hit singles including \"Ho Hey”, “Stubborn Love”, “Ophelia” and “Cleopatra”.\n\n The band has become one of the top touring bands in the U.S. and also sells out shows around the world.",
+    "Catfish and the Bottlemen\nCatfish and the Bottlemen are a British rock band, formed in Llandudno, Wales in 2007.\n\n Their debut album, \"The Balcony\", reached number 10 in the UK Albums Chart and achieved Platinum status on 30 December 2016.\n\n The band have toured in South America, Japan, UK, Europe, North America, and Australia and have featured in a number of festivals including Lollapalooza, Glastonbury, Latitude, Community festival, Reading and Leeds, T in the Park, Governors Ball and Bonnaroo.\n\n They won a Brit Award for British Breakthrough act on 24 February 2016.\n\n On 27 May 2016, they released their second album, \"The Ride\".",
+    "Kathleen (song)\n\"Kathleen\" is the third single by Welsh indie rock band, Catfish and the Bottlemen.\n\n The song was included in their EP, \"Kathleen and the Other Three\", and their debut studio album, \"The Balcony\".\n\n The single was digitally released on 18 March 2014 as a music video, and on 7 April 2014, the 7-inch version of the single was released.\n\n The single did not contain a B-side.",
+    "The Ride Tour\nThe Ride Tour is the ongoing second concert tour by English indie rock band Catfish and the Bottlemen, in support of the group's second studio album \"The Ride\".\n\n The tour was announced in February 2016 and began on 4 April 2016, in Glasgow, United Kingdom at the O2 Academy Glasgow.\n\n The tour is planned to travel across Europe and North America with a total of 50 shows planned so far.\n\n On 22 February 2016, the band announced an April 2016 stint of shows in UK, including Glasgow, Halifax, Southend On Sea, Doncaster, London and Brighton.\n\n The band will also headline several festivals across the UK throughout the summer, including Liverpool's 'Sound City' in May 2016, Bristol's Summer Series in July 2016 and Manchester's Castlebowl in July 2016.\n\n On 14 March 2016 it was announced that the band will play several dates in North America in June 2016.",
+    "The Ride (Catfish and the Bottlemen album)\nThe Ride is the second studio album by British indie rock band Catfish and the Bottlemen.\n\n It was released on 27 May 2016 through Capitol Records.",
+    "Beautiful Decay\nBeautiful Decay is the second extended play by Welsh indie rock band, Catfish and the Bottlemen.\n\n Released on 10 March 2010, the EP contained one song that would later be featured in their debut studio album, \"The Balcony\".",
+    "Soundcheck (song)\n\"Soundcheck\" is the eighth single by Welsh indie rock band, Catfish and the Bottlemen.\n\n The song was the lead single off of their sophomore album, \"The Ride\".\n\n The single was a promotional single that was digitally released on 16 February 2016."
+   ]
+  },
+  {
+   "id": "1c30905cc6a64a07",
+   "gold": [
+    {
+     "sentence": "Dictyosperma is a monotypic genus of flowering plant in the palm family found in the Mascarene Islands in the Indian Ocean (Mauritius, Réunion and Rodrigues).",
+     "facts": {
+      "0.0": "Dictyosperma is a monotypic genus of flowering plant.",
+      "0.1": "Dictyosperma is in the palm family.",
+      "0.2": "Dictyosperma is found in the Mascarene Islands in the Indian Ocean.",
+      "0.3": "Dictyosperma is found in Mauritius.",
+      "0.4": "Dictyosperma is found in Réunion.",
+      "0.5": "Dictyosperma is found in Rodrigues."
+     }
+    },
+    {
+     "sentence": "The genus Huernia (family Apocynaceae, subfamily Asclepiadoideae) consists of stem succulents from Eastern and Southern Africa, first described as a genus in 1810.",
+     "facts": {
+      "1.0": "The genus Huernia is in the family Apocynaceae.",
+      "1.1": "The genus Huernia is in the subfamily Asclepiadoideae.",
+      "1.2": "The genus Huernia consists of stem succulents.",
+      "1.3": "The stem succulents of the genus Huernia are from Eastern Africa.",
+      "1.4": "The stem succulents of the genus Huernia are from Southern Africa.",
+      "1.5": "The genus Huernia was first described as a genus in 1810."
+     }
+    }
+   ],
+   "items": [
+    "Genoplesium\nGenoplesium commonly known as midge orchids, is a genus of about 50 species of flowering plants in the orchid family, Orchidaceae and is found in Australia, New Zealand and New Caledonia.\n\n Midge orchids are terrestrial herbs with a single leaf at the base of the plant.\n\n They are similar to orchids in the genus \"Prasophyllum\" in that plants without flowers have a hollow, onion-like leaf.\n\n The flowers are small but often scented and attractive to their insect pollinators.\n\n There is disagreement about which species belong to this genus and some taxonomists suggest that most belong in the genus \"Corunastylis\".",
+    "The entries describe diverse plants and one crab genus. Mascarene Dictyosperma album, the wind-shedding “hurricane palm,” is widely cultivated but nearly extinct in its native range. Canary Islands Adenocarpus viscosus grows above 1,800 m. Dregea vines occur in Africa and southern Asia; Duranta shrubs and trees are ornamental, with D. erecta invasive in several regions. Tropical Dieffenbachia are popular houseplants",
+    "Dictyosperma\nDictyosperma is a monotypic genus of flowering plant in the palm family found in the Mascarene Islands in the Indian Ocean (Mauritius, Réunion and Rodrigues).\n\n The sole species, Dictyosperma album, is widely cultivated in the tropics but has been farmed to near extinction in its native habitat.\n\n It is commonly called princess palm or hurricane palm, the latter owing to its ability to withstand strong winds by easily shedding leaves.\n\n It is closely related to, and resembles, palms in the \"Archontophoenix\" genus.\n\n The genus is named from two Greek words meaning \"net\" and \"seed\" and the epithet is Latin for \"white\", the common color of the crownshaft at the top of the trunk.",
+    "Huernia is an African stem-succulent genus whose carrion-scented flowers attract flies. The Asian emerald ash borer devastates ash trees abroad. Oenanthe javanica is an Asian water vegetable. California botanist Samuel Parish is commemorated by many plant names. Ardisia, Myrsine and Rapanea are Primulaceae genera; Broughtonia is Caribbean orchids; Stephanocereus Brazilian cacti; Bognera a rare",
+    "Deutzia\nDeutzia ( or ) is a genus of about 60 species of flowering plants in the family Hydrangeaceae, native to eastern and central Asia (from the Himalayas east to Japan and the Philippines), and Central America and also Europe.\n\n By far the highest species diversity is in China, where 50 species occur.",
+    "Hymenocallideae\nHymenocallideae is a tribe (in the family Amaryllidaceae, subfamily Amaryllidoideae), where it forms part of the Andean clade, one of two American clades.\n\n The tribe was originally recognised by both Meerow (1995) and the Muller-Doblies' (1996).\n\n Its phylogenetic position within the Amaryllidoideae was established by Meerow \"et al.\" in 2000, while in-depth infratribal relationships were established in 2002.",
+    "Huernia\nThe genus Huernia (family Apocynaceae, subfamily Asclepiadoideae) consists of stem succulents from Eastern and Southern Africa, first described as a genus in 1810.\n\n The flowers are five-lobed, usually somewhat more funnel- or bell-shaped than in the closely related genus \"Stapelia\", and often striped vividly in contrasting colours or tones, some glossy, others matt and wrinkled depending on the species concerned.\n\n To pollinate, the flowers attract flies by emitting a scent similar to that of carrion.\n\n The genus is considered close to the genera \"Stapelia\" and \"Hoodia\".\n\n The name is in honour of Justin Heurnius (1587–1652) a Dutch missionary who is reputed to have been the first collector of South African Cape plants.\n\n His name was actually mis-spelt by the collector.",
+    "Cyrtanthus\nCyrtanthus is a genus of perennial, herbaceous and bulbous plants in the family Amaryllidaceae, subfamily Amaryllidoideae.",
+    "Harrimanella\nHarrimanella is a genus of flowering plant in the heath family Ericaceae, with a single species, Harrimanella hypnoides, also known as moss bell heather.\n\n It was originally named Cassiope hypnoides by Linnaeus (1737) in his Flora Lapponica, but \"Harrimanella hypnoides\" is now the accepted name at ITIS.\n\n The species name \"hypnoides\" means 'like \"Hypnum\" ', which is a genus mosses.",
+    "Zygotritonia\nZygotritonia is a genus of herbaceous, perennial and bulbous plants in the Iris family (Iridaceae).\n\n It contains four species distributed in Tropical Africa.\n\n The genus name is derived from the word zygomorphic (meaning bilabiate), and the apparent resemblance to some species in the genus \"Tritonia\"."
+   ]
+  },
+  {
+   "id": "885250237b79e275",
+   "gold": [
+    {
+     "sentence": "The Bishop of Ely is the ordinary of the Church of England Diocese of Ely in the Province of Canterbury.",
+     "facts": {
+      "0.0": "The Bishop of Ely is the ordinary of the Diocese of Ely.",
+      "0.1": "The Diocese of Ely is a Church of England diocese.",
+      "0.2": "The Diocese of Ely is in the Province of Canterbury."
+     }
+    },
+    {
+     "sentence": " Conway became Bishop of Ely in 2010, translated from the Diocese of Salisbury where he was Bishop suffragan of Ramsbury.",
+     "facts": {
+      "1.0": "Conway became Bishop of Ely in 2010.",
+      "1.1": "Conway was translated to Bishop of Ely from the Diocese of Salisbury.",
+      "1.2": "Conway was Bishop suffragan of Ramsbury before becoming Bishop of Ely.",
+      "1.3": "Conway was Bishop suffragan of Ramsbury in the Diocese of Salisbury."
+     }
+    },
+    {
+     "sentence": "The Diocese of Salisbury is a Church of England diocese in the south of England, within the ecclesiastical Province of Canterbury.",
+     "facts": {
+      "2.0": "The Diocese of Salisbury is a Church of England diocese.",
+      "2.1": "The Diocese of Salisbury is in the south of England.",
+      "2.2": "The Diocese of Salisbury is within the ecclesiastical Province of Canterbury."
+     }
+    }
+   ],
+   "items": [
+    "Ecclesiastical Province of Ontario\nThe Ecclesiastical Province of Ontario is one of the Anglican Church of Canada's four ecclesiastical provinces.\n\n It was established in 1912 out of six dioceses of the Ecclesiastical Province of Canada located in the civil Province of Ontario, and the Diocese of Moosonee from the Ecclesiastical Province of Rupert's Land.",
+    "Paul Burbridge\nJohn Paul Burbridge was the Dean of Norwich in the latter part of the 20th century (1983-1995).\n\n Born on 21 May 1932, he was educated at The King's School, Canterbury and King's College, Cambridge, New College, Oxford, and Wells Theological College.\n\n After National Service with the Royal Artillery, he was ordained to a curacy at Eastbourne Parish Church in 1959.\n\n In 1962 he was appointed vicar choral and chamberlain at York Minster.\n\n He was appointed residentiary canon precentor at York Minster in 1966.\n\n In 1976 he was appointed Archdeacon of Richmond and canon residentiary at Ripon Cathedral, a post he held until his appointment as Dean of Norwich in 1983 (F.S.A).",
+    "Bishop of Ely\nThe Bishop of Ely is the ordinary of the Church of England Diocese of Ely in the Province of Canterbury.\n\n The diocese roughly covers the county of Cambridgeshire (with the exception of the Soke of Peterborough), together with a section of north-west Norfolk and has its episcopal see in the City of Ely, Cambridgeshire, where the seat is located at the Cathedral Church of the Holy Trinity.\n\n The current bishop is Stephen Conway, who signs \"+Stephen Elien:\" (abbreviation of the Latin adjective \"Eliensis\", meaning \"of Ely\").\n\n The diocesan bishops now reside in Bishop's House, Ely, the former cathedral deanery.\n\n Conway became Bishop of Ely in 2010, translated from the Diocese of Salisbury where he was Bishop suffragan of Ramsbury.",
+    "Roman Catholic Ecclesiastical Province of Miami\nThe Ecclesiastical Province of Miami is a Catholic ecclesiastical province covering the U.S. state of Florida.\n\n Its metropolitan bishop is the Archbishop of Miami, head of the Archdiocese of Miami.\n\n The province additionally includes the suffragan dioceses of Orlando, Palm Beach, Pensacola-Tallahassee, St. Augustine, St. Petersburg, and Venice.",
+    "Ecclesiastical Province of Freiburg\nThe Ecclesiastical Province of Freiburg (\"Kirchenprovinz Freiburg\") or Upper Rhenish Ecclesiastical Province (\"Oberrheinische Kirchenprovinz\") is an ecclesiastical province of the Roman Catholic Church in the Upper Rhine area of Germany, centring on Freiburg im Breisgau.\n\n It covers the Roman Catholic Archdiocese of Freiburg, the Roman Catholic Diocese of Mainz and the Roman Catholic Diocese of Rottenburg-Stuttgart, covering large areas of Baden-Württemberg and Hesse and small parts of Rhineland-Palatinate.\n\n Its metropolitan bishop is the Archbishop of Freiburg - that Archdiocese and the Province were both set up in 1821 in the wake of the 1801 Concordat and the 1815 Congress of Vienna.",
+    "Roman Catholic Archdiocese of Cashel and Emly\nThe Archdiocese of Cashel and Emly (Irish: \"Ard-Deoise Chaisil agus Imligh\" ) is a Roman Catholic archdiocese in mid-western Ireland.\n\n The archdiocese is led by the Archbishop of Cashel and Emly, who serves as pastor of the mother church, the Cathedral of the Assumption and metropolitan of the ecclesiastical province of Cashel and Emly.\n\n The Diocese of Cashel was established in 1111 by the Synod of Rathbreasail.\n\n The ecclesiastical province, which was roughly co-extensive with the secular province of Munster, was created in 1152 by the Synod of Kells.\n\n The cathedral church of the archdiocese is located in Thurles, County Tipperary.\n\n The incumbent archbishop is Kieran O'Reilly.",
+    "An ecclesiastical province groups dioceses under a metropolitan archbishop or bishop. Examples include Bamenda, Cameroon (created in 1982; suffragans Buea, Kumbo, and Mamfe; 35 parishes in six deaneries as of 2013); Freiburg, Germany (Freiburg, Mainz, and Rottenburg-Stuttgart); Miami, Florida (six suffragan dioceses); and Owerri, Nigeria, which includes",
+    "Diocese of Guildford\nThe Diocese of Guildford is a Church of England diocese covering nine of the eleven districts in Surrey, much of north-east Hampshire and a parish in Greater London.\n\n The cathedral is Guildford Cathedral and the bishop is the Bishop of Guildford.\n\n Of the two provinces of the church it falls within the Province of Canterbury.",
+    "Diocese of Salisbury\nThe Diocese of Salisbury is a Church of England diocese in the south of England, within the ecclesiastical Province of Canterbury.\n\n The diocese covers most of Dorset (excepting the deaneries of Bournemouth and Christchurch, which fall within the Diocese of Winchester), and most of Wiltshire (excepting a part in the north and Swindon).\n\n The diocese is led by the Bishop of Salisbury (Nick Holtam) and the diocesan synod.\n\n The bishop's seat is at Salisbury Cathedral.",
+    "Ecclesiastical province\nAn ecclesiastical province is a general term for one of the basic forms of jurisdiction in Christian Churches with traditional hierarchical structure, including Western Christianity and Eastern Christianity.\n\n In general, ecclesiastical province is consisted of several dioceses (or eparchies), one of them being the archdiocese (or archeparchy), headed by metropolitan bishop or archbishop who has ecclesiastical jurisdiction over all other bishops of the province."
+   ]
+  },
+  {
+   "id": "a3052705fe1f6349",
+   "gold": [
+    {
+     "sentence": "\"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011).",
+     "facts": {
+      "0.0": "What the Water Gave Me is a song",
+      "0.1": "What the Water Gave Me is by English indie rock band Florence and the Machine",
+      "0.2": "What the Water Gave Me is from the band's second studio album Ceremonials",
+      "0.3": "The album Ceremonials is dated 2011"
+     }
+    },
+    {
+     "sentence": " The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth.",
+     "facts": {
+      "1.0": "Lead singer Florence Welch wrote the song What the Water Gave Me",
+      "1.1": "Francis Eg White wrote the song What the Water Gave Me",
+      "1.2": "Paul Epworth produced the song What the Water Gave Me"
+     }
+    },
+    {
+     "sentence": "What the Water Gave Me (\"Lo que el agua me dio\" in Spanish) is an oil painting by Frida Kahlo that was completed in 1938.",
+     "facts": {
+      "2.0": "What the Water Gave Me is an oil painting by Frida Kahlo",
+      "2.1": "The painting is titled Lo que el agua me dio in Spanish",
+      "2.2": "Frida Kahlo completed the painting in 1938"
+     }
+    }
+   ],
+   "items": [
+    "Never Let Me Go (Florence and the Machine song)\n\"Never Let Me Go\" is a song by English indie rock band Florence and the Machine from their second studio album, \"Ceremonials\" (2011).\n\n The song was written by Florence Welch and Paul Epworth while production was handled by Epworth.\n\n Island Records released the song as the third single from the album on 30 March 2012.\n\n The band first premiered the song during one of their concerts before the release of the album on 15 October 2011.\n\n A Clams Casino remix of the song was placed on the 12\" white vinyl single which was available for pre-order on 22 March 2012.",
+    "Lover to Lover\n\"Lover to Lover\" is a song by English indie rock band Florence and the Machine.\n\n The song was released on 30 November 2012, as a digital download on iTunes as the fifth and final single from their second studio album \"Ceremonials\" (2011).\n\n The song was written by Florence Welch and Francis \"Eg\" White and produced by Paul Epworth.\n\n The Ceremonials Tour version of \"Lover to Lover\" is an edited version of the original with further production by Chris Hayden.\n\n The song became the band's first single to miss the top 200 in the UK Singles Chart.",
+    "What the Water Gave Me (song)\n\"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011).\n\n The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth.\n\n It was released on 23 August 2011 as the first promotional single from \"Ceremonials\".\n\n After the band performed the song in Berkeley, California on 12 June 2011, the studio version premiered on Florence and the Machine's official website.\n\n Welch decided to name the song \"What the Water Gave Me\" after seeing a Frida Kahlo painting of the same name.\n\n During an interview, she confirmed that the song was inspired by English writer Virginia Woolf.",
+    "Florence Welch\nFlorence Leontine Mary Welch (born 28 August 1986) is an English musician, singer and songwriter, best known as the vocalist of indie rock band Florence and the Machine.",
+    "What the Water Gave Me (painting)\nWhat the Water Gave Me (\"Lo que el agua me dio\" in Spanish) is an oil painting by Frida Kahlo that was completed in 1938.\n\n It is sometimes referred to as \"What I Saw in the Water\".",
+    "Lungs (album)\nLungs is the debut studio album by English indie rock band Florence and the Machine, released on 3 July 2009 on Island Records.\n\n Frontwoman Florence Welch experimented with and honed the album's sound with bandmate Isabella Summers, while also collaborating with five record producers including James Ford, Paul Epworth, Steve Mackey.\n\n The music on \"Lungs\" established Florence and the Machine as an internationally successful rock act, and also featured the group's successful mix of string arrangements centered around Welch's vocal prowess.",
+    "Florence and the Machine\nFlorence and the Machine (stylised as Florence + the Machine) are an English indie rock band that formed in London in 2007, consisting of lead singer Florence Welch, keyboardist Isabella Summers, and a collaboration of other artists.\n\n The band's music received praise across the media, especially from the BBC, which played a large part in their rise to prominence by promoting Florence and the Machine as part of \"BBC Introducing\".\n\n At the 2009 Brit Awards they received the Brit Awards \"Critics' Choice\" award.\n\n The band's music is renowned for its dramatic and eccentric production and also Welch's powerful vocal performances.",
+    "Wish That You Were Here\n\"Wish That You Were Here\" is a song by the English indie rock band Florence and the Machine, written by Florence Welch, Andrew Wyatt, and Emilie Haynie, and was released on Island Records on 26 August 2016.\n\n The song was made available via digital download, and is featured on the soundtrack of the film \"Miss Peregrine's Home for Peculiar Children\" which was directed by Tim Burton.\n\n Welch — a long-time fan of Burton's work — had expressed interest in collaborating with him long before the recording of \"Wish That You Were Here\" as they shared similar artistic themes.\n\n Upon release, the composition was positively received by music critics and reached number 128 on the UK Singles Chart.",
+    "Spectrum (Say My Name)\n\"Spectrum\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011).\n\n It was written by lead singer Florence Welch and Paul Epworth with production being handled by Epworth.\n\n The band premiered the song during a concert at Brooklyn's Creators Project on 15 October 2011, prior to the release of the album.\n\n The album version of \"Spectrum\" is a downtempo orchestral pop, R&B, krautrock and disco song.\n\n The accompanying music video for the song premiered on 30 May 2012.\n\n It was directed by David LaChapelle and John Byrne.",
+    "Shake It Out\n\"Shake It Out\" is a song by English indie rock band Florence and the Machine, released as the first official single from their second studio album, \"Ceremonials\" (2011).\n\n It was written by Florence Welch and Paul Epworth, while production was handled by Epworth.\n\n The song was digitally released in Australia on 14 September 2011, and it was available in the United States on 19 October.\n\n It had its radio debut on XFM on 14 September 2011 in the United Kingdom.\n\n Welch revealed that the song was written within an hour and according to her it talked about shaking the regrets and the things that were haunting her."
+   ]
+  },
+  {
+   "id": "8ecf4f1c5cc98b2d",
+   "gold": [
+    {
+     "sentence": "\"Into Dust\" is a song by American duo Mazzy Star that appears as the ninth track on their second album \"So Tonight That I Might See\".",
+     "facts": {
+      "0.0": "'Into Dust' is a song by the American duo Mazzy Star.",
+      "0.1": "'Into Dust' appears as the ninth track on the second album of Mazzy Star.",
+      "0.2": "The second album of Mazzy Star is 'So Tonight That I Might See'."
+     }
+    },
+    {
+     "sentence": "Mazzy Star is an American alternative rock band formed in Santa Monica, California, in 1989 from the group Opal, a collaboration of guitarist David Roback and bassist Kendra Smith.",
+     "facts": {
+      "1.0": "Mazzy Star is an American alternative rock band.",
+      "1.1": "Mazzy Star was formed in Santa Monica, California, in 1989.",
+      "1.2": "Mazzy Star was formed from the group Opal.",
+      "1.3": "Opal was a collaboration of guitarist David Roback and bassist Kendra Smith."
+     }
+    }
+   ],
+   "items": [
+    "Candlelight Red\nCandlelight Red is a rock band from Williamsport, Pennsylvania.\n\n They have produced two studio albums and an EP.\n\n Their EP \"Demons\" and album \"Reclamation\" was produced by Morgan Rose of Sevendust.",
+    "Berlin (band)\nBerlin is an American new wave band.\n\n The group was formed in Orange County in 1979 by John Crawford (bass guitar).\n\n Band members included Crawford, Terri Nunn (vocals), David Diamond (keyboards), Ric Olsen (guitar), Matt Reid (keyboards) and Rod Learned (drums).\n\n The band gained mainstream-commercial success in the early 1980s with singles including \"The Metro\", \"Sex (I'm A..\n\n.)\n\n\", \"No More Words\" and then in the mid 1980s with the chart-topping single \"Take My Breath Away\" from the 1986 film \"Top Gun\".",
+    "The Suicide File\nThe Suicide File was an American hardcore punk band from Boston, Massachusetts that formed in April 2001.\n\n The band wrote songs with a mostly political message, although many songs also dealt with social and personal problems.\n\n Most of the band's output was released on the Southern California-based hardcore label Indecision Records.\n\n The band reunited in June 2006 to embark on their first European Tour.\n\n Members of the bands are or have been affiliated with The Hope Conspiracy, Death By Stereo, When Tigers Fight, Adamantium, Give Up the Ghost/American Nightmare, Clouds, Panic and many more.\n\n Most of these are bands with whom Alexander has drummed for short periods of time.\n\n Dave Weinberg was also known for his frequent collaborations and duets with Julie Ecker and James \"Boom Boom\" Auclair (cf. unpublished correspondence with the artists).\n\n Despite their short tenure, The Suicide File continues to be revered within the hardcore punk community for their musical output and lasting impression on the flourishing Boston hardcore scene.\n\n The band since 2006 has played a small number of successfully sized reunion sets.",
+    "Profiles cover rock and metal acts, musicians, albums, and songs. Candlelight Red’s “Demons” and *Reclamation* were produced by Sevendust’s Morgan Rose; Louis XIV reunited after a 2009 breakup. Mazzy Star’s sparse “Into Dust” features acoustic guitar and violin. Other highlights include Assembly of Dust’s Reid Genauer, American Hi-Fi’s pop-punk mix, Mastodon’s *Leviathan*, Pantera’s shift to groove metal, and",
+    "Distortion Mirrors\nDistortion Mirrors is an English alternative rock band, based in Leeds, West Yorkshire, England, and who was formed in 2011.",
+    "Assembly of Dust\nAssembly of Dust (also known as AOD) is an American rock band formed in 2002 by former Strangefolk frontman Reid Genauer.\n\n After the breakup of Strangefolk, Genauer decided to record a solo album, and he recruited some friends from Strangefolk's days on the road to help out.\n\n After titling the 2003 solo release “Assembly of Dust,” Genauer decided to use the name for his new group.\n\n AOD originally featured Genauer on lead vocals and guitar, Nate Wilson on the keyboard, Adam Terrell on lead guitar, John Leccese on bass, and Andy Herrick on drums.\n\n In recent years the band has experienced some transformations, and the current status of the band now features Reid Genauer on lead vocals and guitar, Adam Terrell on lead guitar, John Leccese on bass, Jason Crosby on the keys and violin, and Dave Diamond on the drums.\n\n Despite the changes in the band's lineup, AOD has managed to maintain the same high energy and tight musical finesse for which they are known.",
+    "The Shins\nThe Shins are an American indie rock band from Albuquerque, New Mexico, formed in 1996.\n\n The band's current lineup consists of James Mercer (vocals, guitar, songwriter), Jon Sortland (drums), Mark Watrous (guitar), Casey Foubert (guitar), Yuuki Matthews (bass), and Patti King (keyboards).\n\n The band is based in Portland, Oregon.",
+    "I Was Totally Destroying It\nI Was Totally Destroying It is a five-piece powerpop band from Chapel Hill, North Carolina, featuring current and former members of Saddle Creek band Sorry About Dresden.\n\n After self-releasing and touring the country behind their first full-length album, the band signed with Portland-based indie label Greyday Records.\n\n Since forming in 2007, the band has toured much of the country, playing with artists such as Conor Oberst and the Mystic Valley Band, Motion City Soundtrack, Cursive, Superchunk, Portastatic, Ryan Ferguson (formerly of No Knife), Dear and the Headlights, Margot & the Nuclear So and So's, Snowden, Billy Bragg, Annuals, Joan Jett, The Actual, Ozma, Polvo, Birds of Avalon and Blankface.\n\n Their next full-length, Horror Vacui, was released by Greyday in October 2009, and was co-produced by Josh Cain of Motion City Soundtrack.",
+    "Cosmic Dust (band)\nCosmic Dust, also known as the Cosmic Dust Fusion Band, is an instrumental jazz band formed in 1990 by Jim Templeton.\n\n The band was the first well-known group that guitarist Myles Kennedy played in.\n\n The original lineup consisted of Jim Templeton on keyboard, Gary Edighoffer on saxophone, Clipper Anderson on double bass, Myles Kennedy on guitar, and Scott Reusser on drums.\n\n Kennedy eventually left the band and went on to become the lead vocalist/lead guitarist for a jazz fusion group called Citizen Swing and later an alternative rock band called The Mayfield Four.\n\n Kennedy is now fronting and playing guitar for the hard rock/alternative metal band Alter Bridge, which he helped form with Creed members Mark Tremonti, Scott Phillips, and Brian Marshall in 2004, and is also the lead vocalist for Slash's solo band on tour.",
+    "Into Dust\n\"Into Dust\" is a song by American duo Mazzy Star that appears as the ninth track on their second album \"So Tonight That I Might See\".\n\n The song's arrangement is sparse and features only acoustic guitar and violin as accompaniment to the vocals."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "multihop-rag-890",
+   "sentences": [
+    "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one.",
+    "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "multihop-rag-891",
+   "sentences": [
+    "In the long term, scientists also point to a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and effectively.",
+    "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."
+   ]
+  },
+  {
+   "id": "multihop-rag-924",
+   "sentences": [
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.",
+    "Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on."
+   ]
+  },
+  {
+   "id": "multihop-rag-926",
+   "sentences": [
+    "Erik ten Hag is a top coach from Ajax but they need a top blueprint not only for now but for the next five years, and work towards that, and sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right things.",
+    "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."
+   ]
+  },
+  {
+   "id": "multihop-rag-941",
+   "sentences": [
+    "Despite the suspension, Jim Harbaugh held his usual weekly news conference Monday, though he mostly avoided addressing the only topic on anyone's mind.",
+    "It would be Harbaugh's second suspension of the season, as the Wolverines self-imposed a three-game ban on Harbaugh to start the season amid an NCAA investigation that found Harbaugh lied to investigators.",
+    "Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns."
+   ]
+  },
+  {
+   "id": "multihop-rag-952",
+   "sentences": [
+    "As an added bonus, Harris is also the preferred goal-line back, scoring in three of those games.",
+    "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."
+   ]
+  },
+  {
+   "id": "multihop-rag-961",
+   "sentences": [
+    "The process also loops in the European Commission to help facilitate dialogue, assess issues and bring pressure to bear on unfair practices.",
+    "We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage.",
+    "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."
+   ]
+  },
+  {
+   "id": "multihop-rag-966",
+   "sentences": [
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.",
+    "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-970",
+   "sentences": [
+    "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports.",
+    "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "multihop-rag-1003",
+   "sentences": [
+    "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight.",
+    "152.67 -- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."
+   ]
+  }
+ ]
+}

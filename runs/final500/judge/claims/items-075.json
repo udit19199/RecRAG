@@ -1,0 +1,73 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "-7156311873296217154",
+   "sentences": [
+    "Drawing is one of the major forms of expression within the visual arts . It is generally concerned with the marking of lines and areas of tone onto paper / other material , where the accurate representation of the visual world is expressed upon a plane surface . Traditional drawings were monochrome , or at least had little colour , while modern colored - pencil drawings may approach or cross a boundary between drawing and painting . In Western terminology , drawing is distinct from painting , even though similar media often are employed in both tasks . Dry media , normally associated with drawing , such as chalk , may be used in pastel paintings . Drawing may be done with a liquid medium , applied with brushes or pens . Similar supports likewise can serve both : painting generally involves the application of liquid paint onto prepared canvas or panels , but sometimes an underdrawing is drawn first on that same support ."
+   ]
+  },
+  {
+   "id": "3400990959340670350",
+   "sentences": [
+    "A '' Time for Choosing Speech '' Play media In support of Goldwater , Reagan delivers the address , A Time for Choosing . The speech launches Reagan to national prominence . Date October 27 , 1964 ( 1964 - 10 - 27 ) Duration 29 : 33 Location Los Angeles County , California , U.S. Also known as `` The Speech '' Type Televised campaign speech Participants Ronald Reagan Website Video clip , audio , transcript",
+    "Many versions of the speech exist , since it was altered over many weeks . Contrary to popular belief , however , the speech was not given at the 1964 Republican National Convention in San Francisco , California as a nomination speech for presidential candidate Senator Barry Goldwater ; Richard Nixon gave that nomination speech . Reagan , though he campaigned for Goldwater , did not use `` A Time for Choosing '' until October 27 , 1964 , when it was part of a pre-recorded television program , Rendezvous with Destiny . In his autobiography , An American Life , Reagan recalled going to bed that night `` hoping I had n't let Barry down . ''"
+   ]
+  },
+  {
+   "id": "multihop-rag-884",
+   "sentences": [
+    "\"We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen,\" he told Fox News Digital.",
+    "We used to play in person, but since the pandemic I run the game virtually online from my house."
+   ]
+  },
+  {
+   "id": "5a8aed1755429950cd6afbf1",
+   "sentences": [
+    "Fastbacks were a Seattle, Washington, punk rock band.",
+    "Local Natives (previously known as Cavil at Rest) is an American indie rock band based in Silver Lake, Los Angeles, California, United States."
+   ]
+  },
+  {
+   "id": "multihop-rag-1197",
+   "sentences": [
+    "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats, but Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents.",
+    "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "8678345068092193884",
+   "sentences": [
+    "`` Knightfall '' is a 1993 - 1994 Batman story arc published by DC Comics . It consists of a trilogy of storylines that ran from 1993 to 1994 , consisting of `` Knightfall '' , `` Knightquest '' , and `` KnightsEnd '' . The story takes place over approximately six months . Bruce Wayne ( Batman ) suffers burnout and is systematically assaulted and crippled by a `` super steroid '' - enhanced genius named Bane . Wayne is replaced as Batman by an apprentice named Jean - Paul Valley ( a.k.a. Azrael ) , who becomes increasingly violent and unstable , tarnishing Batman 's reputation . Eventually , Wayne is healed through paranormal means , and reclaims his role as Batman ."
+   ]
+  },
+  {
+   "id": "5a75fbe855429976ec32bcde",
+   "sentences": [
+    "War/Dance is a 2007 American documentary film written and directed by Sean Fine and Andrea Nix Fine and produced by Shine Global's Susan MacLaury, a professor at Kean University, and Albie Hecht.",
+    "The Sorrow and the Pity (French: Le Chagrin et la Pitié ) is a two-part 1969 documentary film by Marcel Ophüls about the collaboration between the Vichy government and Nazi Germany during World War II."
+   ]
+  },
+  {
+   "id": "multihop-rag-1926",
+   "sentences": [
+    "13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1) Just a single and the wicket off the over, Shai Hope can’t break the legspin shackles.",
+    "6d ago 22.54 GMT 16th over: West Indies 112-4 (Hope 29, Powell 8) Hope, who is playing an exemplary innings, opens the face to steer Rehan for his first boundary."
+   ]
+  },
+  {
+   "id": "4390525747986386908",
+   "sentences": [
+    "Taron Egerton as Johnny , a teenage gorilla who wants to sing , though his father would rather have him follow his criminal footsteps ."
+   ]
+  },
+  {
+   "id": "-125564053796187750",
+   "sentences": [
+    "The coastline of the island consists of a combination of long beaches , dunes , red sandstone cliffs , salt water marshes and numerous bays and harbours . The beaches , dunes and sandstone cliffs consist of sedimentary rock and other material with a high iron concentration which oxidizes upon exposure to the air . The geological properties of a white silica sand found at Basin Head are unique in the province ; the sand grains cause a scrubbing noise as they rub against each other when walked on . Large dune fields on the north shore can be found on barrier islands at the entrances to various bays and harbours . The magnificent sand dunes at Greenwich are of particular significance . The shifting , parabolic dune system is home to a variety of birds and rare plants and is also a site of significant archeological interest ."
+   ]
+  }
+ ]
+}

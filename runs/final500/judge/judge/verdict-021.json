@@ -1,0 +1,66 @@
+[
+{"id": "00ff978a461aa153", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "and how Google tried to have Chrome preinstalled on iPhones"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "3.2", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "3.3", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "3.4", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "308947414e551791", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "In the third quarter, Uber generated $394 million in operating income"}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 8, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}, {"item": 7, "quote": "Uber reported net income of $221 million in the third quarter"}]}
+]},
+{"id": "535009cd3c66cc2a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "10:59 p.m. — The Cowboys are moving the ball now, when it's a bit too late."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "The Cowboys are moving the ball now, when it's a bit too late."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 4, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}]}
+]},
+{"id": "8df6a75eb40405ea", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]}
+]},
+{"id": "698565187f8bad10", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX?"}]},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}, {"item": 10, "quote": "has been found guilty on seven counts including charges of wire fraud"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 2, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 2, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]},
+{"fact": "3.2", "status": "stated", "evidence": [{"item": 2, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]},
+{"fact": "3.3", "status": "stated", "evidence": [{"item": 2, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]}
+]},
+{"id": "e83742b5d3509264", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]}
+]

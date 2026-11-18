@@ -1,0 +1,453 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "a7f699fe5e5ee931",
+   "gold": [
+    {
+     "sentence": "Operalia, The World Opera Competition is an annual international competition for young opera singers.",
+     "facts": {
+      "0.0": "Operalia, The World Opera Competition is an annual international competition.",
+      "0.1": "Operalia is a competition for young opera singers."
+     }
+    },
+    {
+     "sentence": " Founded in 1993 by Plácido Domingo, the competition has helped launch the careers of several important artists, such as Joseph Calleja, Giuseppe Filianoti, Rolando Villazón, José Cura, Joyce DiDonato, Elizabeth Futral, Inva Mula, Ana María Martínez and Sonya Yoncheva.",
+     "facts": {
+      "1.0": "Operalia was founded in 1993.",
+      "1.1": "Operalia was founded by Plácido Domingo.",
+      "1.2": "Operalia has helped launch the careers of several important artists.",
+      "1.3": "Operalia has helped launch the career of Joseph Calleja.",
+      "1.4": "Operalia has helped launch the career of Giuseppe Filianoti.",
+      "1.5": "Operalia has helped launch the career of Rolando Villazón.",
+      "1.6": "Operalia has helped launch the career of José Cura.",
+      "1.7": "Operalia has helped launch the career of Joyce DiDonato.",
+      "1.8": "Operalia has helped launch the career of Elizabeth Futral.",
+      "1.9": "Operalia has helped launch the career of Inva Mula.",
+      "1.10": "Operalia has helped launch the career of Ana María Martínez.",
+      "1.11": "Operalia has helped launch the career of Sonya Yoncheva."
+     }
+    },
+    {
+     "sentence": "Sonya Yoncheva (Bulgarian: Соня Йончева, born 25 December 1981) is a Bulgarian operatic soprano.",
+     "facts": {
+      "2.0": "Sonya Yoncheva was born on 25 December 1981.",
+      "2.1": "Sonya Yoncheva’s Bulgarian name is Соня Йончева.",
+      "2.2": "Sonya Yoncheva is a Bulgarian operatic soprano."
+     }
+    }
+   ],
+   "items": [
+    "Andrea Carroll (soprano)\nAndrea Carroll is an American soprano who has had an active international career in concerts and operas since 2012.\n\n A finalist in the 2015 Operalia, The World Opera Competition, she is particularly known for her performances with the Houston Grand Opera and the Vienna State Opera.",
+    "Rita Fornia\nRita Fornia (17 July 1878 – 27 October 1922) was an American opera singer.\n\n She began her career in Europe at the beginning of the 20th century singing coloratura soprano roles.\n\n Early on in her career her voice darkened and dropped slightly causing her to focus more within the mezzo-soprano repertoire while still singing some soprano roles.\n\n She joined the Metropolitan Opera company in 1907 where she performed regularly in mostly supporting roles until her retirement in 1922.\n\n She is best remembered today for portraying the role of the Abbess in the original production of Puccini's \"Suor Angelica\" in 1918.",
+    "Ao Li\nAo Li (born 8 February 1988) is a Chinese operatic bass-baritone and voice teacher who is particularly known for his performances at the San Francisco Opera.\n\n In 2013 he won first prize in the Operalia, The World Opera Competition and in 2014 he won the Metropolitan Opera National Council Auditions.",
+    "Operalia, The World Opera Competition\nOperalia, The World Opera Competition is an annual international competition for young opera singers.\n\n Founded in 1993 by Plácido Domingo, the competition has helped launch the careers of several important artists, such as Joseph Calleja, Giuseppe Filianoti, Rolando Villazón, José Cura, Joyce DiDonato, Elizabeth Futral, Inva Mula, Ana María Martínez and Sonya Yoncheva.",
+    "Rachel Willis-Sørensen\nRachel Willis-Sørensen (born 1984) is an American operatic soprano.\n\n She was a winner of the Metropolitan Opera National Council Auditions in 2010.\n\n In 2014, she won first prize, the Birgit Nilsson Prize, and the Zarzuela Prize of the Operalia competition.\n\n Other awards include first place in the 2009 Eleanor McCollum Competition for Young Singers in Houston and the 2010 Sara Tucker Grant from the Richard Tucker Music Foundation.",
+    "Maria Katzarava\nMaria Katzarava (born 1984) is an opera singer from Mexico who achieved international fame by winning first place in the Operalia competition in the opera and zarzuela categories.\n\n Prior to this, she came to the attention of notable Mexican tenor Ramón Vargas, who helped her get a scholarship, and then won Mexico's Carlo Morelli national singing competition in 2005, which earned her a debut at the Palacio de Bellas Artes.\n\n Since winning the Operalia competition, Katzarava has performed in Europe, where she currently lives, Asia and the Americas.\n\n She currently trains with soprano Mirella Freni.",
+    "Barbara Frittoli\nBarbara Frittoli (born 19 April 1967) is an Italian operatic soprano who has sung leading roles in opera houses throughout Europe and in the United States.\n\n She was born in Milan and graduated from the Milan Conservatory.\n\n She made her Metropolitan Opera debut in 1995 as Micaela in \"Carmen\" and has gone on to sing in over 80 performances there including Donna Elvira in \"Don Giovanni\", Fiordiligi in \"Così fan tutte\", Angelica in \"Suor Angelica\", Desdemona in \"Otello\", the title role in \"Luisa Miller\", Amelia in \"Simon Boccanegra\", Vitellia in \"La clemenza di Tito\" and Alicia Ford in \"Falstaff\".",
+    "Guanqun Yu\nGuanqun Yu (; born 1982) is a Chinese soprano who has sung in opera houses and concert halls internationally.\n\n In 2008 she won the Belvedere International Singing Competition and in 2012 she placed 2nd in the Operalia, The World Opera Competition.\n\n She is particularly known for portraying heroines in the operas of Wolfgang Amadeus Mozart, Giacomo Puccini, and Giuseppe Verdi.",
+    "Jane Rhodes\nJane Marie Andrée Rhodes (March 13, 1929 – May 7, 2011) was a French opera singer whose voice encompassed both the soprano and high mezzo-soprano ranges.\n\n Her most celebrated role was Carmen, which she sang in the opera's first ever staging at the Palais Garnier.\n\n She also created the roles of Isadora in Marcel Landowski's \"Le Fou\" and Maguelone in Georges Delerue's \"Le Chevalier de Neige\" and sang Renata in the first recorded performance of Prokofiev's \"The Fiery Angel\".\n\n Admired for both her voice and her glamorous stage presence, she was nicknamed the \"Bardot of the Opéra\".\n\n She was married to conductor Roberto Benzi.",
+    "Norine Burgess\nNorine Burgess is a Canadian singer.\n\n She is a graduate of the University of Calgary and the University of Toronto’s Opera School, mezzo-soprano.\n\n She received additional training as a member of the Canadian Opera Company (COC) Ensemble where she appeared in Electra, Suor Angelica, Lulu and Der Rosenkavalier.\n\n Ms. Burgess also performed Le Nozze di Figaro(Cherubino), Ariadne auf Naxos (Dryad), La Traviata(Flora) and Die Zauberflöte (Second Lady) with the COC.\n\n Additional operatic successes include Le Nozze di Figaro (Cherubino) and Carmen (Mercedes) with the Vancouver Opera, Fenena in Nabucco with Manitoba Opera, Albert Herring (Nancy) with the Calgary Opera and many appearances with the Edmonton Opera."
+   ]
+  },
+  {
+   "id": "9f5f80a45db6fab5",
+   "gold": [
+    {
+     "sentence": "Steve Rash is an American film director and producer best known for directing such films as \"The Buddy Holly Story\", \"Can't Buy Me Love\", \"Queens Logic\", \"\" and \"\".",
+     "facts": {
+      "0.0": "Steve Rash is an American film director.",
+      "0.1": "Steve Rash is an American producer.",
+      "0.2": "Steve Rash is best known for directing The Buddy Holly Story.",
+      "0.3": "Steve Rash is best known for directing Can't Buy Me Love.",
+      "0.4": "Steve Rash is best known for directing Queens Logic.",
+      "0.5": "Steve Rash is best known for directing two further films whose titles are blank in the source text."
+     }
+    },
+    {
+     "sentence": "Can't Buy Me Love is a 1987 American teen romantic comedy feature film starring Patrick Dempsey and Amanda Peterson in a story about a nerd at a high school in Tucson, Arizona who gives a cheerleader $1,000 to pretend to be his girlfriend for a month.",
+     "facts": {
+      "1.0": "Can't Buy Me Love is a 1987 American film.",
+      "1.1": "Can't Buy Me Love is a teen romantic comedy feature film.",
+      "1.2": "Can't Buy Me Love stars Patrick Dempsey.",
+      "1.3": "Can't Buy Me Love stars Amanda Peterson.",
+      "1.4": "The story of Can't Buy Me Love is about a nerd at a high school in Tucson, Arizona.",
+      "1.5": "In Can't Buy Me Love, the nerd gives a cheerleader $1,000 to pretend to be his girlfriend for a month."
+     }
+    }
+   ],
+   "items": [
+    "Bring It On: In It to Win It\nBring It On: In It to Win It is a 2007 teen film directed by Steve Rash and starring Ashley Benson, Cassie Scerbo and Michael Copon.",
+    "Just Friends\nJust Friends is a 2005 American romantic comedy film directed by Roger Kumble, written by Adam 'Tex' Davis and starring Ryan Reynolds, Amy Smart, Anna Faris, Chris Klein and Christopher Marquette.\n\n The plot focuses on a formerly overweight high school nerd (Reynolds) who attempts to free himself from the friend zone after reconnecting with his lifelong crush and best friend (Smart) while visiting his hometown for Christmas.",
+    "Jimmy Tatro\nJames Richard Tatro (born February 16, 1992) is an American actor, comedian, writer and YouTube personality.\n\n He is the creator and star of the YouTube channel \"LifeAccordingToJimmy\", which has about 2.7 million subscribers and over 440 million video views.\n\n Tatro writes, produces and directs each of his video sketches with his friend, Christian A. Pierce.\n\n Tatro has appeared in \"Divergent\", \"Grown Ups 2\", \"22 Jump Street\" and \"\", and will appear in the film \"Camp Manna\" alongside Gary Busey, set to be released in 2017.\n\n He is also starring in the true-crime satire, \"American Vandal\", in which he plays Dylan Maxwell, the accused vandal.\n\n He will also appear in the movie, Action No. 1, a film about a group of people who attempt to steal the first comic book with Superman off the actor Nicholas Cage.",
+    "Brian Ralston\nBrian Ralston (born April 12, 1974) is a composer and musician living in Los Angeles.\n\n Ralston is a graduate of the University of Arizona and the USC Thornton School of Music Scoring for Motion Pictures and Television program.\n\n Brian's latest film is the 2017 drama Rose starring Cybill Shepherd, James Brolin and Pam Grier.\n\n In 2012 he scored the 20th Century Fox inspirational sports film Crooked Arrows, starring Brandon Routh, directed by Steve Rash.\n\n He has also composed music for the television series \"Angel\" (Season 4) and scores to the theatrical motion pictures \"9/Tenths\", directed by Bob Degus (\"Pleasantville\") starring Gabrielle Anwar, Henry Ian Cusick and Dave Ortiz, the Magnolia Pictures teen heist movie Graduation directed by Mike Mayer and starring Adam Arkin, Shannon Lucio, Chris Marquette, Riley Smith and Chris Lowell, and the dramatic feature Don't Fade Away directed by Luke Kasdan, starring Beau Bridges, Mischa Barton and Ryan Kwanten.",
+    "The Cool Ones\nThe Cool Ones (aka \"Cool, Baby Cool\") is a 1967 film starring Roddy McDowall and directed by Gene Nelson.\n\n Mrs. Miller performs in a cameo role, and the film features cameo performances by bands the Leaves and the Bantams, as well as a cameo appearance by Glen Campbell.",
+    "Marty Belafsky\nMarty Belafsky (born September 19, 1975) is an American actor/comedian born in Los Angeles, California.\n\n He began acting professionally at age 13 and was soon cast as Louis Plumb on the short-lived NBC series \"Hull High\".\n\n Shortly thereafter, Belafsky landed the role of Crutchy in the Disney musical film, \"Newsies\".\n\n He continued acting through his teens, making appearances in such television shows as \"The Wonder Years\", \"Great Scott\" and \"Step By Step\" and the film \"Wrestling Ernest Hemingway\".\n\n Belafsky also voiced Kent Swanson in the video game series \"Dead Rising\" released in 2006.",
+    "The Night Before (1988 film)\nThe Night Before is a 1988 film starring Keanu Reeves and Lori Loughlin.\n\n Reeves plays Winston Connelly, the so-called high school nerd and vice president of the astronomy club.\n\n Loughlin plays Tara Mitchell, the pretty and popular head cheerleader who also happens to be the local police chief's daughter.\n\n The Tagline was: \"You lost your father's car, sold your prom date and a guy called 'Tito' wants you dead.\n\n It's a date that's the time of your life.\"\n\n It was filmed and set entirely in Los Angeles, California.",
+    "Steve Rash\nSteve Rash is an American film director and producer best known for directing such films as \"The Buddy Holly Story\", \"Can't Buy Me Love\", \"Queens Logic\", \"\" and \"\".",
+    "Howard Rosenman\nHoward Rosenman (born February 1, 1945), also known as Zvi Howard Rosenman, is an American producer and motion picture executive.\n\n He specializes in producing romantic comedy films and documentary films.\n\n Some of his most popular productions include \"Father of the Bride\" (1991) starring Steve Martin and Diane Keaton, Joss Whedon's \"Buffy the Vampire Slayer\" (1992) and \"The Family Man\" (2000) starring Nicolas Cage.\n\n Rosenman's documentary film \"\" won the Peabody Award and the 1990 Academy Award for Best Documentary Feature; his film \"The Celluloid Closet\" also won the Peabody Award.",
+    "Can't Buy Me Love (film)\nCan't Buy Me Love is a 1987 American teen romantic comedy feature film starring Patrick Dempsey and Amanda Peterson in a story about a nerd at a high school in Tucson, Arizona who gives a cheerleader $1,000 to pretend to be his girlfriend for a month.\n\n The film was directed by Steve Rash and takes its title from a Beatles song with the same title."
+   ]
+  },
+  {
+   "id": "01ea33301325264a",
+   "gold": [
+    {
+     "sentence": " It was released as the lead single from their fourth studio album, \"Elephant\", in March 2003, and reached number one on the Modern Rock Tracks—maintaining that position for three weeks.",
+     "facts": {
+      "0.0": "The song was released as the lead single from the fourth studio album of its act, \"Elephant.\"",
+      "0.1": "The song was released in March 2003.",
+      "0.2": "The song reached number one on the Modern Rock Tracks.",
+      "0.3": "The song maintained its number one position on the Modern Rock Tracks for three weeks."
+     }
+    },
+    {
+     "sentence": " Released on April 1, 2003 on V2 Records, its release garnered near unanimous critical acclaim and commercial success, garnering a nomination for Album of the Year and a win for Best Alternative Music Album at the 46th Grammy Awards in 2004, peaking at No. 6 in the US \"Billboard\" charts and topping the UK album charts.",
+     "facts": {
+      "1.0": "The album \"Elephant\" was released on April 1, 2003.",
+      "1.1": "The album \"Elephant\" was released on V2 Records.",
+      "1.2": "The album \"Elephant\" garnered near unanimous critical acclaim.",
+      "1.3": "The album \"Elephant\" garnered commercial success.",
+      "1.4": "The album \"Elephant\" received a nomination for Album of the Year at the 46th Grammy Awards in 2004.",
+      "1.5": "The album \"Elephant\" won Best Alternative Music Album at the 46th Grammy Awards in 2004.",
+      "1.6": "The album \"Elephant\" peaked at No. 6 on the US \"Billboard\" charts.",
+      "1.7": "The album \"Elephant\" topped the UK album charts."
+     }
+    }
+   ],
+   "items": [
+    "Elephant (album)\nElephant is the fourth album by the American alternative rock duo The White Stripes.\n\n Released on April 1, 2003 on V2 Records, its release garnered near unanimous critical acclaim and commercial success, garnering a nomination for Album of the Year and a win for Best Alternative Music Album at the 46th Grammy Awards in 2004, peaking at No. 6 in the US \"Billboard\" charts and topping the UK album charts.",
+    "Seven (Poco album)\nSeven is the sixth studio album (seventh overall) by American country rock band Poco.\n\n It is the first album they made after leader Richie Furay left the band.\n\n The front cover was designed by Phil Hartman.",
+    "The White Stripes\nThe White Stripes were an American rock duo formed in 1997 in Detroit, Michigan.\n\n The group consisted of Jack White (songwriter, vocals, guitar, piano, and mandolin) and Meg White (drums and vocals).\n\n After releasing several singles and three albums within the Detroit music scene, The White Stripes rose to prominence in 2002, as part of the garage rock revival scene.\n\n Their successful and critically acclaimed albums \"White Blood Cells\" and \"Elephant\" drew attention from a large variety of media outlets in the United States and the United Kingdom, with the single \"Seven Nation Army\" and its guitar line becoming their signature song.\n\n The band recorded two more albums, \"Get Behind Me Satan\" in 2005 and \"Icky Thump\" in 2007, and dissolved in 2011 after a lengthy hiatus from performing and recording.",
+    "Seven Nation Army\n\"Seven Nation Army\" (also stylized as \"7 Nation Army\") is a song by American rock duo The White Stripes.\n\n It was released as the lead single from their fourth studio album, \"Elephant\", in March 2003, and reached number one on the Modern Rock Tracks—maintaining that position for three weeks.\n\n It also became the third best-performing song of the decade on the same chart.\n\n It was well received commercially as well, and won the Grammy Award for Best Rock Song.",
+    "Late Night Tales: The Flaming Lips\nLate Night Tales: The Flaming Lips is a compilation album compiled by the members of The Flaming Lips, featuring songs by various artists.\n\n The album was released on March 7, 2005 and it features one new Flaming Lips recording, a cover of the White Stripes' \"Seven Nation Army\".",
+    "The Boys Are Back (The Oak Ridge Boys album)\nThe Boys Are Back is the thirtieth studio album of country music group The Oak Ridge Boys.\n\n It was released in 2009 under the Spring Hill Music Group label.\n\n The album marked the group's return to secular country music after releasing gospel albums since 1992.\n\n The track \"Seven Nation Army,\" a cover of The White Stripes's 2003 song from their album \"Elephant\", was released as the album's first single.",
+    "Meg White\nMegan Martha \"Meg\" White (born December 10, 1974) is an American drummer and occasional singer known for her work with Jack White in the Detroit rock duo The White Stripes.\n\n On an impulse, she played on Jack's drums in 1997.\n\n The two decided to form a band and began performing two months later, calling themselves The White Stripes because of their last name and Meg's affinity for peppermint candy.\n\n The band quickly became a Detroit underground favorite, before reaching national, then international fame.\n\n White has been nominated for various awards as a part of the White Stripes, and has received four Grammy Awards.",
+    "Premio Lo Nuestro 2003\nPremio Lo Nuestro 2003 was the 15th anniversary of the awards.\n\n the show was hosted by Mexican presenters Marco Antonio Regil and Adal Ramones.\n\n Juanes, Thalía, Marc Anthony, Pilar Montenegro, Sin Bandera, Banda el Recodo and other Latin music greats gave electrifying performances.\n\n In the show, there was 36 awards winners with 135 nominations.\n\n In Pop genre, Awards was given for : Album of the Year, Best Male Artist, Best Female Artist, Best Group or duo, Best New Artist and Song of the Year.\n\n In Rock Genre : Best Rock Album and Best rock Performer of the Year.\n\n In Tropical genre : Best Tropical Album of the Year, Best Tropical Male Artist, Best Tropical Female Artist, Best Tropical Group or Duo of the Year, Best Tropical New Artist, Tropical Song of the Year, Best Merengue Performance, Best Salsa Performance and Best Traditional Performance.\n\n Juanes was the biggest winner of night, took home four awards Best Pop Male Artist, Best Music Video, Best Rock Performance, and Pop Song of the Year .",
+    "Grammy Award for Best Male Rap Solo Performance\nThe Grammy Award for Best Male Rap Solo Performance was an honor presented to male recording artists at the 45th Grammy Awards in 2003 and the 46th Grammy Awards in 2004 for quality rap solo performances.\n\n The Grammy Awards, an annual ceremony that was established in 1958, and originally called the Gramophone Awards, are presented by the National Academy of Recording Arts and Sciences of the United States to \"honor artistic achievement, technical proficiency and overall excellence in the recording industry, without regard to album sales or chart position\".",
+    "Grammy Award for Best Female Rap Solo Performance\nThe Grammy Award for Best Female Rap Solo Performance was an honor presented to female recording artists at the 45th Grammy Awards in 2003 and the 46th Grammy Awards in 2004 for quality rap solo performances.\n\n The Grammy Awards, an annual ceremony that was established in 1958 and originally called the Gramophone Awards, are presented by the National Academy of Recording Arts and Sciences of the United States to \"honor artistic achievement, technical proficiency and overall excellence in the recording industry, without regard to album sales or chart position\"."
+   ]
+  },
+  {
+   "id": "dc3123469dff085a",
+   "gold": [
+    {
+     "sentence": "Enrico Cocozza (6 November 1921 – 27 December 1997), was a Scottish filmmaker who won many film awards during the 1940s and 1950s.",
+     "facts": {
+      "0.0": "Enrico Cocozza was born on 6 November 1921.",
+      "0.1": "Enrico Cocozza died on 27 December 1997.",
+      "0.2": "Enrico Cocozza was a Scottish filmmaker.",
+      "0.3": "Enrico Cocozza won many film awards during the 1940s and 1950s."
+     }
+    },
+    {
+     "sentence": "\", which was nominated for the Academy Award for Best Foreign Language Film.",
+     "facts": {
+      "1.0": "A film was nominated for the Academy Award for Best Foreign Language Film.",
+      "1.1": "The film whose title is quoted in this fragment was nominated for the Academy Award for Best Foreign Language Film."
+     }
+    }
+   ],
+   "items": [
+    "Mira Nair\nMira Nair (born 15 October 1957) is an Indian American filmmaker based in New York City.\n\n Her production company, Mirabai Films, specializes in films for international audiences on Indian society, whether in the economic, social or cultural spheres.\n\n Among her best known films are \"Mississippi Masala\", \"The Namesake\", the Golden Lion-winning \"Monsoon Wedding\" and \"Salaam Bombay!\n\n\", which was nominated for the Academy Award for Best Foreign Language Film.",
+    "Hysterical Blindness (film)\nHysterical Blindness is a TV movie made for HBO, directed by Mira Nair and starring Gena Rowlands, Uma Thurman, Juliette Lewis and Ben Gazzara.\n\n The movie premiered on HBO on August 21, 2002 to good reviews.\n\n In 2003, Uma Thurman won a Golden Globe Award for her portrayal of Debby Miller.\n\n Ben Gazzara and Gena Rowlands also won Best Supporting Actor/Actress awards for their performances as Virginia Miller and Nick Piccolo at the 2003 Emmy Awards.",
+    "Illusions &amp; Mirrors\nIllusions & Mirrors is a 2013 short film directed by Iranian-born American artist and filmmaker Shirin Neshat.\n\n The film, shot in black-and-white, stars Tarek Aylouch, Michael Markiewicz, and the Israeli-born American actress Natalie Portman.\n\n The film was commissioned by Dior, for which Portman is a spokesmodel, for the Miss Dior Expo at the Grand Palais, Paris.\n\n Shirin Neshat said that the film is a tribute to the black-and-white silent films made by such surrealist filmmakers as Man Ray, Jean Cocteau, Luis Buñuel, and Maya Deren.",
+    "Enrico Cocozza\nEnrico Cocozza (6 November 1921 – 27 December 1997), was a Scottish filmmaker who won many film awards during the 1940s and 1950s.\n\n His often surreal films were mainly filmed in and around the town of Wishaw in Scotland, where his family owned the popular Belhaven Cafe.\n\n These include \"Chick's Day\" (1950), a prize winner at the 1951 Scottish Amateur Film Festival, \"The Living Ghost\" (1957), and \"Glasgow's Docklands\" (1959).\n\n Illness later forced him to give up making films and he spent most of his working life teaching at the University of Strathclyde in Glasgow.\n\n In 2001 he was the subject of the Channel 4 documentary \"Artery: the Story of Enrico Cocozza\".",
+    "Kathryn Drysdale\nKathryn Drysdale (born December 1981) is an English actress known for her role as Grace Shelley in The West End show \"The Ruling Class\" opposite James Mcavoy, as Taylor in the movie \"St Trinian's\", Rhoda Swartz in Mira Nair's Vanity Fair, and Louise Brooks in the BBC comedy series \"Two Pints of Lager and a Packet of Crisps\" from 2001 until her departure from the show in 2009.\n\n She has also starred in the fourth series of the ITV sitcom \"Benidorm\" and as Brownwell in William Boyd's award-winning \"Any Human Heart\" opposite Jim Broadbent.\n\n She previously worked with Broadbent on Mira Nair's feature adaptation of William Thackery's \"Vanity Fair\" starring Reese Witherspoon.\n\n She played the role of mixed-race heiress Rhoda Swartz.\n\n She is also known for her role as Lizzie in the drama series \"Tripping Over\" by Mike Bullen.\n\n She appeared in \"Doctor Who\" as Bliss in the episode \"Love & Monsters\".\n\n She currently plays Meghan Markle in season 2 of \"The Windsors\".",
+    "Loveleen Tandan\nLoveleen Tandan is an Indian film director and casting director.\n\n She is the \"Co-Director: India\" of the four time Golden Globe, seven time BAFTA Award and eight Academy Award winning (including best picture) \"Slumdog Millionaire\" (2008), for which she shared a New York Film Critics Online Award, Rotterdam International Film Festival Award and Amanda Awards, Norway, of \"Best Director\" with Danny Boyle.\n\n She has also been the Casting Director for several other films, including the Golden Lion winning and Golden Globe nominated \"Monsoon Wedding\" (2001) and the BAFTA Award nominated \"Brick Lane\" (2007).\n\n She has been a Casting Consultant for the Gotham Award and Independent Spirit Award nominated film \"The Namesake\" (2007).",
+    "Vanity Fair (2004 film)\nVanity Fair is a 2004 British-American historical drama film directed by Mira Nair and adapted from William Makepeace Thackeray's novel of the same name.\n\n The novel has been the subject of numerous television and film adaptations, and Nair's version made notable changes in the development of main character Becky Sharp.",
+    "Nitish Roy\nNitish Roy is an Indian film art director, production designer, and costume designer in Hindi cinema and a Bengali Film Director, who is also known for his work with art cinema directors, Shyam Benegal, Mrinal Sen and Govind Nihlani, Hindi mainstream cinema, directors like Rajkumar Santoshi, as well as international directors like Mira Nair and Gurinder Chadha.",
+    "Salaam Bombay!\nSalaam Bombay!\n\n is a 1988 Hindi film directed by Mira Nair, and screenwritten by her longtime creative collaborator, Sooni Taraporevala.\n\n The film chronicles the day-to-day life of children living on the streets of Bombay, India's biggest city.\n\n It won the National Film Award for Best Feature Film in Hindi, the National Board of Review Award for Top Foreign Film, the Golden Camera and Audience Awards at the Cannes Film Festival, and three awards at the Montréal World Film Festival.\n\n The film was India's second film submission to be nominated for the Academy Award for Best Foreign Language Film.\n\n The film was among the list of \"The Best 1,000 Movies Ever Made\" by \"The New York Times\".",
+    "The Namesake (film)\nThe Namesake is a 2006 Indian-American drama film which was released in the United States on 9 March 2007, following screenings at film festivals in Toronto and New York City.\n\n It was directed by Mira Nair and is based upon the novel of the same name by Jhumpa Lahiri, who appeared in the movie.\n\n Sooni Taraporevala wrote the screenplay.\n\n The film received positive reviews from American critics.\n\n The film stars Tabu, Irrfan Khan, Kal Penn and Sahira Nair."
+   ]
+  },
+  {
+   "id": "c6f1bac468893a87",
+   "gold": [
+    {
+     "sentence": "Elizabeth Austin (born 1958) is an American writer living in Oak Park, Illinois.",
+     "facts": {
+      "0.0": "Elizabeth Austin was born in 1958.",
+      "0.1": "Elizabeth Austin is an American writer.",
+      "0.2": "Elizabeth Austin lives in Oak Park, Illinois."
+     }
+    },
+    {
+     "sentence": " She has also written for \"The Washington Monthly, Ladies Home Journal, Good Housekeeping, Self\", and \"Shape\".",
+     "facts": {
+      "1.0": "Elizabeth Austin has also written for The Washington Monthly.",
+      "1.1": "Elizabeth Austin has also written for Ladies Home Journal.",
+      "1.2": "Elizabeth Austin has also written for Good Housekeeping.",
+      "1.3": "Elizabeth Austin has also written for Self.",
+      "1.4": "Elizabeth Austin has also written for Shape."
+     }
+    },
+    {
+     "sentence": "Shape is a monthly English language fitness magazine started by Weider Publications in 1981, founded by Christine MacIntyre (a pioneer in women's free weight fitness) and became the number one women's fitness magazine.",
+     "facts": {
+      "2.0": "Shape is a monthly English language fitness magazine.",
+      "2.1": "Shape was started by Weider Publications in 1981.",
+      "2.2": "Shape was founded by Christine MacIntyre.",
+      "2.3": "Christine MacIntyre is a pioneer in women's free weight fitness.",
+      "2.4": "Shape became the number one women's fitness magazine."
+     }
+    }
+   ],
+   "items": [
+    "Muscle &amp; Fitness (British magazine)\nMuscle & Fitness is a British fitness magazine, which contains articles on strength and fitness training, diet plans and strategies for men and women, and tips and advice.",
+    "Ingrid Romero\nIngrid Romero (born July 10, 1985) is an international fitness model, fitness competitor, and fitness coach.\n\n Training & Fitness Magazine called her \"one of the most recognized faces in the fitness industry,\" and \"one of the most accomplished female fitness stars ever.\"",
+    "Anais Zanotti\nAnais Zanotti (born January 8, 1986 in Saint-Tropez) is a French model and stunt woman of French and Italian ancestry who lives in Miami, Florida.\n\n She has been featured in magazines such as \"Playboy\", \"FHM\", \"Maxim\", \"GQ\", \"Cosmopolitan\", \"Vogue\", and \"People\", Men's Fitness magazine, Muscle and Fitness, Women Fitness magazine and more.\n\n She has over 40 magazine covers.\n\n Zanotti is also a certified skydiver with over 1250 jumps.GS .",
+    "Essence (magazine)\nEssence is a monthly magazine for African American women between the ages of 18 and 49.\n\n It is the only magazine that focuses on reaching an audience of black women, revolves around the black woman experience, and has remained for a long period of time.\n\n The magazine covers fashion, lifestyle and beauty, with an intimate girlfriend-to-girlfriend tone, and its slogan \"Fierce, Fun, and Fabulous\" suggests the magazine's goal of empowering African-American women.\n\n The topics the magazine discusses range from celebrities, to fashion, to point-of-view pieces addressing current issues in the African-American community.\n\n A number of its readers engage closely and personally with the publication, and it claims to be the magazine \"for and about Black women\".",
+    "Bicycling (magazine)\nBicycling is a cycling brand published by Rodale, Inc. in Emmaus, Pennsylvania.\n\n \"Bicycling\" claims to be the world’s largest cycling magazine.",
+    "Football World\nFootball World, later renamed \"Athletic World\", was an American magazine devoted to the coverage of inter-collegiate sports.\n\n Its masthead described it as \"A Magazine With a Mission to Serve the College Man,\" a publication \"devoted to Inter-collegiate Athletics and sports of Amateur standing only.\"\n\n It was founded in 1921 by J. D. Fetzer.\n\n The name of the magazine was later changed to \"Athletic World\" as the coverage extended to a broader range of sports, including women's swimming.\n\n Unlike other sports magazines of the era, which focused on promoting a healthy lifestyle, \"Football World/Athletic World\" celebrated the entertainment value of sports with a special emphasis on the personalities of famous athletes.\n\n The magazine was renamed \"Outing\" in December 1924, reflecting a change in its focus.",
+    "Shape (magazine)\nShape is a monthly English language fitness magazine started by Weider Publications in 1981, founded by Christine MacIntyre (a pioneer in women's free weight fitness) and became the number one women's fitness magazine.\n\n At that time, Weider Enterprises consisted primarily of the bodybuilding magazine \"Muscle & Fitness\".\n\n Joe Weider and Christine MacIntyre had differing views of how to present \"Shape\", Weider endorsing a less journalistic and more commercial approach to articles, MacIntyre endorsing a more academic, doctor-based magazine.\n\n Weider also endorsed a sexier approach to editorial while MacIntyre endorsed a healthier look for women, eschewing sexiness in the models and the copy.\n\n MacIntyre largely won that battle, editing a magazine that required that every byline have an advanced medical degree, that cover models should look healthy rather than sexy, and that sexist language be avoided.\n\n Christine MacIntyre was the editor-in-chief until her death in 1988.\n\n Tara Kraft is the current editor-in-chief.\n\n \"Shape\" found a readership based on that formula.",
+    "Computer Magazine\n\"Computer Magazine\" is a free publication (in addition to their webcasts and other resources) sponsored by the nonprofit UTCP (United Technology and Computing Professionals) organization, and as such charges no fees for the publication nor is influenced by advertising, so their reviews are relied on in the industry and considered unbiased and thorough.\n\n \"Computer Magazine\" is one of the early large technology publications and resources available on the web still existent and thriving today and that has remained independent.\n\n ComputerMagazine.com is a tech news and resources consolidator that publishes part of the site in a semi-time line/blogging format that is popular among their wide following of subscriber and non-subscriber readers, allowing readers to respond and comment on various articles.\n\n Site contributors include many of the well known technology authors, experts and publication sources, content and articles are provided by major technology syndicators and by external expert technology sources (such as \"Computer World\", \"Information Week\", \"Network World\", \"Wired,\" \"Time\", etc.)",
+    "Elizabeth Austin (writer)\nElizabeth Austin (born 1958) is an American writer living in Oak Park, Illinois.\n\n Austin has lived in the Midwestern United States all her life.\n\n She began her journalism career at the now-defunct City News Bureau of Chicago and has written articles for national news magazines such as \"Newsweek\" and \"Time\", in addition to a wide range of other national and regional publications, such as \"People\", and the \"Chicago Tribune\".\n\n She has also written for \"The Washington Monthly, Ladies Home Journal, Good Housekeeping, Self\", and \"Shape\".\n\n She has often written about medicine and health care.\n\n Austin also has been heard on WBEZ, the National Public Radio station in Chicago, as well as the BBC in the UK and Scotland.\n\n She has appeared on the Today Show and on ITV in Europe.",
+    "Wendy Austin\nDr Wendy Elizabeth Austin Hewitt, Wendy Austin is a BBC journalist and broadcaster in BBC Northern Ireland, and former presenter of BBC Radio Ulster’s current affairs programme \"Talkback\"."
+   ]
+  },
+  {
+   "id": "6807526e365fc28d",
+   "gold": [
+    {
+     "sentence": " It features former GOP representative Joe Scarborough providing both enterprise reporting and discussion on the news of the day in a panel format with co-hosts Mika Brzezinski and Willie Geist.",
+     "facts": {
+      "0.0": "The program described features former GOP representative Joe Scarborough.",
+      "0.1": "Joe Scarborough provides enterprise reporting on the program.",
+      "0.2": "Joe Scarborough provides discussion on the news of the day on the program.",
+      "0.3": "The program is in a panel format.",
+      "0.4": "Mika Brzezinski is a co-host of the program.",
+      "0.5": "Willie Geist is a co-host of the program."
+     }
+    },
+    {
+     "sentence": "Charles Joseph Scarborough ( ; born April 9, 1963) is an American cable news and talk radio host.",
+     "facts": {
+      "1.0": "Charles Joseph Scarborough was born on April 9, 1963.",
+      "1.1": "Charles Joseph Scarborough is an American cable news host.",
+      "1.2": "Charles Joseph Scarborough is an American talk radio host."
+     }
+    }
+   ],
+   "items": [
+    "Ronn Owens\nRonn Owens (born Ronald Lowenstein on October 17, 1945, in New York City), is an American talk radio host.\n\n Owens was the sole remaining weekday talk radio host on KGO in San Francisco after KGO was reorganized as an all-news station in December 2011.",
+    "Mike Hogan (sportscaster)\nMike Hogan (born 1963 in Kingston, Ontario) is a Canadian sportscaster who is a sports talk radio host on TSN Radio 1050 in Toronto.\n\n He also serves as the play-by-play voice for the Toronto Argonauts of the Canadian Football League for that station's gameday broadcasts.\n\n Hogan was formerly a long time sports talk radio host on Toronto station CJCL (AM), branded \"The Fan 590\", until he was relieved of those duties on June 24, 2010.\n\n On 2017 Oscar Vanity fair party 1st live broadcast Mike Hogan was the podcast hosts.",
+    "Jim Geraghty\nJim Geraghty is a conservative blogger and regular contributor to \"National Review Online\" and \"National Review\".\n\n In addition to writing columns for \"National Review\", Geraghty also blogs for National Review Online and is a former reporter for States News Service.",
+    "Steve Malzberg\nStephen D. Malzberg (born April 20, 1959) is an American television and radio host, syndicated columnist, and political commentator.\n\n He is the host of \"The Steve Malzberg Show\", a cable news and opinion show on Newsmax TV.\n\n He has also hosted \"The Steve Malzberg Show\" on various talk radio outlets.",
+    "David Gold (talk radio host)\nDavid Gold is an American conservative talk radio host.\n\n Gold, who has been a talk radio host since the mid-1970s, one of the first U.S. conservative talk radio hosts.\n\n His philosophy has been characterized as in the conservative/libertarian vein.",
+    "Joe Scarborough\nCharles Joseph Scarborough ( ; born April 9, 1963) is an American cable news and talk radio host.\n\n He is currently the co-host of \"Morning Joe\" on MSNBC, and previously hosted \"Scarborough Country\" on the same channel.\n\n Scarborough was previously a lawyer and a politician, and served in the United States House of Representatives from 1995 to 2001 as a Republican from the 1st district of Florida.",
+    "Mark Hinkle\nMark Hinkle (born January 28, 1951) is an American libertarian activist and businessperson.\n\n He was the National Chairman of the United States Libertarian Party until 2012.\n\n He was elected by the delegates of the 2010 Libertarian National Convention in St. Louis, Missouri on May 30, 2010.",
+    "Talk radio\nTalk radio is a radio format containing discussion about topical issues and consisting entirely or almost entirely of original spoken word content rather than outside music.\n\n Jason Culpepper is highly recognized as the father of talk radio.\n\n Jason a Jacksonville native rose to social prominence during the World War utilizing talk radio to warn french and american troops of German U boats.\n\n Most shows are regularly hosted by a single individual, and often feature interviews with a number of different guests.\n\n Talk radio typically includes an element of listener participation, usually by broadcasting live conversations between the host and listeners who \"call in\" (usually via telephone) to the show.\n\n Listener contributions are usually screened by a show's producers in order to maximize audience interest and, in the case of commercial talk radio, attract advertisers.\n\n Generally, the shows are organized into segments, each separated by a pause for advertisements; however, in public or non-commercial radio, music is sometimes played in place of commercials to separate the program segments.\n\n Variations of talk radio include conservative talk, hot talk, liberal talk (increasingly known as progressive talk) and sports talk.",
+    "Morning Joe\nMorning Joe is a weekday NBC News morning news and talk show, airing from 6:00 a.m. to 9:00 a.m. Eastern Time on the network's cable news channel MSNBC.\n\n It features former GOP representative Joe Scarborough providing both enterprise reporting and discussion on the news of the day in a panel format with co-hosts Mika Brzezinski and Willie Geist.\n\n It was created as the replacement for \"Imus in the Morning,\" which was cancelled in April 2007 after simulcasting on MSNBC since 1996.",
+    "Sean Hannity\nSean Patrick Hannity (born December 30, 1961) is an American talk show host, author, and conservative political commentator.\n\n Hannity is the host of \"The Sean Hannity Show\", a nationally syndicated talk radio show.\n\n He also hosts a cable news show, \"Hannity\", on Fox News Channel."
+   ]
+  },
+  {
+   "id": "333ff329948ec02c",
+   "gold": [
+    {
+     "sentence": "Disteghil Sar or Distaghil Sar (Urdu: ‎ ) is the highest mountain in the Hispar Muztagh, a subrange of the Karakoram mountain range, in Gilgit-Baltistan.",
+     "facts": {
+      "0.0": "Disteghil Sar is also called Distaghil Sar.",
+      "0.1": "Disteghil Sar is the highest mountain in the Hispar Muztagh.",
+      "0.2": "The Hispar Muztagh is a subrange of the Karakoram mountain range.",
+      "0.3": "Disteghil Sar is in Gilgit-Baltistan."
+     }
+    },
+    {
+     "sentence": " The mountain has an about 3 km long top ridge above 7400m with three distinct summits: (north)west 7885m, central 7760 m, and (south)east 7696m or 7535m ().",
+     "facts": {
+      "1.0": "Disteghil Sar has a top ridge about 3 km long.",
+      "1.1": "The top ridge of Disteghil Sar is above 7400 m.",
+      "1.2": "Disteghil Sar has three distinct summits.",
+      "1.3": "The (north)west summit of Disteghil Sar is 7885 m high.",
+      "1.4": "The central summit of Disteghil Sar is 7760 m high.",
+      "1.5": "The (south)east summit of Disteghil Sar is 7696 m or 7535 m high."
+     }
+    },
+    {
+     "sentence": " Its summit has an elevation of 7295 m and it is the highest peak in the Yengisogat subrange of the Karakoram.",
+     "facts": {
+      "2.0": "The summit of Disteghil Sar has an elevation of 7295 m.",
+      "2.1": "Disteghil Sar is the highest peak in the Yengisogat subrange of the Karakoram."
+     }
+    }
+   ],
+   "items": [
+    "Yutmaru Sar\nYutmaru Sar is a mountain in the Hispar mountain range, a subrange of the Karakoram.\n\n At an elevation of 7283 m it is the 88th highest mountain in the world.\n\n Yutmaru Sar is located in Gilgit-Baltistan, Pakistan.\n\n It was first climbed in 1980.",
+    "The Crown (mountain)\nThe Crown, also known as Huang Guan Shan and sometimes Crown Peak, is a mountain in the Karakoram mountain range in China.\n\n It is located in the Xinjiang Uyghur Autonomous Region of China.\n\n Its summit has an elevation of 7295 m and it is the highest peak in the Yengisogat subrange of the Karakoram.",
+    "Kanjut Sar\nKanjut Sar (Urdu: کنجت سر‎ ) or Kunjudh Sar as pronounced in \"Wakhi\" is a mountain located in the Hispar Muztagh, a subrange of the Karakoram mountain range.\n\n Kunjudh Sar in wakhi language mean that which overlooks Kunjudh, or above Kunjudh, while Khujudh is the wakhi name for Lower Hunza.\n\n It is the 26th highest mountain on Earth and the 11th highest in Pakistan.",
+    "Hispar Muztagh\nHispar Muztagh is a sub-range of the Karakoram mountain range.\n\n It is located in the Gojal region of Gilgit-Baltistan, Pakistan, north of Hispar Glacier, south of Shimshal Valley, and east of the Hunza Valley.\n\n It is the second highest sub-range of the Karakoram, the highest being the Baltoro Muztagh.\n\n The highest mountain in the range is Distaghil Sar (7,885m/25,869 ft).",
+    "Momhil Sar\nMomhil Sar, or Mumhail Sar as pronounced in Wakhi is at 7343 m above sea level, is the 64th highest mountain peak in the world.\n\n Mumhail Sar in Wakhi means the mountain that overlooks or is above Grandmother's cattle pen or paddock.\n\n It is situated in the Hispar Muztagh subrange of the Karakoram range, a few kilometres to the north-west of its parent peak Trivor.",
+    "Kezhen Peak\nKezhen Peak, also known as Karpogo Sar, is a mountain in the Karakoram mountain range.\n\n It is located in the Xinjiang Autonomous Region of China.",
+    "Mingli Sar\nMingli Sar is a mountain located in the Shimshal valley in Gilgit-Baltistan, Pakistan.\n\n The mountain, located in the Karakoram mountain range, is 6050 meters high and located at the southernmost part of the Pamir mountain range.\n\n It was first climbed in 1988 by the famous Pakistani climber Nazir Sabir.\n\n Shimshal lake sits at the base of the mountain.\n\n China is located to the north, while to the left is the Hindukush mountain range.\n\n K2 is located on the south eastern side of the valley.",
+    "Passu Sar\nPassu Sar (Urdu: ‎ ; or Passu Sar, Passu I) is a mountain peak in the Batura Muztagh, a sub-range of the Karakoram mountain range, located in the Gilgit District of Gilgit-Baltistan, Pakistan, west of the Hunza Valley.\n\n It is the high point of the Passu massif, which also includes Passu Diar (or \"Passu East\", \"Pasu II\").\n\n The peak lies on the main ridge of the Batura Muztagh, about 7 km (4 mi) east of Batura Sar.",
+    "Yengisogat\nThe Yengisogat range (音苏盖提 ), also known as the Wesm Mountains, is a Chinese subrange of the Karakoram mountain range.\n\n It lies north of the Baltoro Muztagh, home of the eight-thousanders of the Karakoram.\n\n The highest peak is Huangguan Shan, or Crown Peak, 7,265 m (23,835 ft) (also sometimes given as 7,295 m/23,934 ft).",
+    "Distaghil Sar\nDisteghil Sar or Distaghil Sar (Urdu: ‎ ) is the highest mountain in the Hispar Muztagh, a subrange of the Karakoram mountain range, in Gilgit-Baltistan.\n\n It is the 19th highest mountain on earth and the 7th highest peak in Pakistan.\n\n Destghil sar is a Wakhi language word, that means \"above the inner ranch.\"\n\n The mountain has an about 3 km long top ridge above 7400m with three distinct summits: (north)west 7885m, central 7760 m, and (south)east 7696m or 7535m ()."
+   ]
+  },
+  {
+   "id": "b60117c41a176347",
+   "gold": [
+    {
+     "sentence": "Rivermaya is a Filipino rock band.",
+     "facts": {
+      "0.0": "Rivermaya is a Filipino rock band."
+     }
+    },
+    {
+     "sentence": "Kodaline ( ) are an Irish band.",
+     "facts": {
+      "1.0": "Kodaline is an Irish band."
+     }
+    }
+   ],
+   "items": [
+    "Native Tour\nThe Native Tour (also known as the Native Summer Tour in North America or Native Fall Tour in Europe) is the third headlining concert tour by American pop-rock band, OneRepublic in support of their third studio album, \"Native\" (2013).\n\n OneRepublic were joined on the Native Summer leg of the tour by, The Script and American Authors, and on the European \"Native Fall Tour\" leg by Kongos.\n\n The tour has traveled across five continents; Asia, Europe, Oceania, North America, and Africa.\n\n The tour began on April 2, 2013, in Milan, Italy and finished on September 20, 2015, in São Paulo, Brazil.",
+    "Ciaran Gribbin\nCiaran Gribbin (born 1976) is a Northern Irish singer-songwriter, guitarist and producer who hails from Castledawson, Northern Ireland.",
+    "Rivermaya\nRivermaya is a Filipino rock band.\n\n Formed in 1994, it is one of several bands who spearheaded the 1990s Philippine alternative rock explosion.\n\n Rivermaya is currently composed of original members Mark Escueta and Nathan Azarcon, together with Mike Elgar and Ryan Peralta.\n\n Former original members include Rico Blanco, who had been the original songwriter of the band and vocalist Bamboo Mañalac, who later formed the band Bamboo and later went on his solo career.\n\n Rivermaya is listed as the twentieth biggest-selling artists/act in the Philippines as of present.",
+    "Kodaline\nKodaline ( ) are an Irish band.\n\n Originally known as 21 Demands, in 2012 the band changed their name to Kodaline.",
+    "Leah Flanagan\nLeah Flanagan is a singer-songwriter from Sydney, NSW.\n\n Leah has appeared on Australian TV shows Spicks & Specks and RockQuiz, has released 2 albums and toured extensively through Australia with her music and part of festival ensembles.\n\n Leah’s status as an Indigenous musician is one of pride and respect; she has helped make history with such recent essential albums as Archie Roach’s 25th anniversary reissue of Charcoal Lane and Buried Country 1.5, The Story of Aboriginal Country Music.\n\n Her latest album Saudades was recorded at the studio of Midnight Oil's Jim Moginie and mixed by Paul McKercher (You Am I, Augie March)",
+    "Raindancer\nRaindancer was an electroacoustic rock band formed in Newport, Wales in the early 1990s.\n\n The band featured Grant Nicholas and Jon Lee, who later became founding members of Feeder.",
+    "Diwa de Leon\nDiwa de Leon is a composer, arranger and musician based in Manila, Philippines.\n\n He makes music mainly for television shows, films, and stage productions.\n\n His most notable work is his arrangement of GMA Network's \"Survivor Philippines\" theme music.\n\n His songs included in \"Emir\".\n\n He won the Cinema One Originals Best Musical Score award for his work on the film \"Kolorete\" and Best Music Score for \"Kamera Obskura\" at the 8th Cinemalaya Independent Film Festival.\n\n He is also a founding member of the world music group Makiling.\n\n His first mainstream film project is Mamarazzi produced by Regal Films.",
+    "Kaydean\nKaydean is a British-American record and TV producer, composer, DJ, record label executive and artist manager.\n\n Kaydean produces, composes and arranges music in the Dance, Electronica, Latin Pop, Contemporary R&B, and Electronica genres.\n\n Born in London, he has worked with many artists including Janet Jackson, Maxi Priest, Robyn, Man Parrish, Angel \"Cucco\" Peña, Baron Lopez, Raekwon, Ky-Mani Marley, Frankie Cutlass and Nocera amongst others.\n\n He is also known for discovering Latin Pop Star Janid and managing her career.\n\n He produced her Spanish album \"La Magia\" under the Sony Music Latin imprint label, Handshake and her Hit Single \"Penicilina\".\n\n In 2015 he debuted as a TV executive producer with Janid's reality show on Mega TV, The first episode aired on September 6, 2015.",
+    "Honest (Kodaline song)\n\"Honest\" is a song by Dublin-based alternative rock quartet Kodaline.\n\n The song was released on 1 February 2015 as the lead single from the band's second studio album, \"Coming Up for Air\" (2015).\n\n \"Honest\" became the band's third top 10 single in their home country, Ireland, following \"High Hopes\" (2013) and \"Love Like This\" (2013).",
+    "Catfish and the Bottlemen\nCatfish and the Bottlemen are a British rock band, formed in Llandudno, Wales in 2007.\n\n Their debut album, \"The Balcony\", reached number 10 in the UK Albums Chart and achieved Platinum status on 30 December 2016.\n\n The band have toured in South America, Japan, UK, Europe, North America, and Australia and have featured in a number of festivals including Lollapalooza, Glastonbury, Latitude, Community festival, Reading and Leeds, T in the Park, Governors Ball and Bonnaroo.\n\n They won a Brit Award for British Breakthrough act on 24 February 2016.\n\n On 27 May 2016, they released their second album, \"The Ride\"."
+   ]
+  },
+  {
+   "id": "de77bfe23b2f35df",
+   "gold": [
+    {
+     "sentence": "Erving Goffman (11 June 1922 – 19 November 1982) was a Canadian-American sociologist and writer, considered by some \"the most influential American sociologist of the twentieth century\".",
+     "facts": {
+      "0.0": "Erving Goffman was born on 11 June 1922.",
+      "0.1": "Erving Goffman died on 19 November 1982.",
+      "0.2": "Erving Goffman was a Canadian-American sociologist.",
+      "0.3": "Erving Goffman was a writer.",
+      "0.4": "Some consider Erving Goffman the most influential American sociologist of the twentieth century."
+     }
+    },
+    {
+     "sentence": " In 2007 he was listed by \"The Times Higher Education Guide\" as the sixth most-cited author in the humanities and social sciences, behind Anthony Giddens, Pierre Bourdieu and Michel Foucault, and ahead of Jürgen Habermas.",
+     "facts": {
+      "1.0": "In 2007 Erving Goffman was listed by The Times Higher Education Guide.",
+      "1.1": "The Times Higher Education Guide listed Goffman as the sixth most-cited author in the humanities and social sciences in 2007.",
+      "1.2": "In that 2007 listing, Anthony Giddens, Pierre Bourdieu and Michel Foucault were ranked ahead of Goffman.",
+      "1.3": "In that 2007 listing, Goffman was ranked ahead of Jürgen Habermas."
+     }
+    },
+    {
+     "sentence": "Paul-Michel Foucault (15 October 1926 – 25 June 1984), generally known as Michel Foucault (] ), was a French philosopher, historian of ideas, social theorist, and literary critic.",
+     "facts": {
+      "2.0": "Paul-Michel Foucault was born on 15 October 1926.",
+      "2.1": "Paul-Michel Foucault died on 25 June 1984.",
+      "2.2": "Paul-Michel Foucault is generally known as Michel Foucault.",
+      "2.3": "Michel Foucault was a French philosopher.",
+      "2.4": "Michel Foucault was a historian of ideas.",
+      "2.5": "Michel Foucault was a social theorist.",
+      "2.6": "Michel Foucault was a literary critic."
+     }
+    }
+   ],
+   "items": [
+    "Dramaturgy (sociology)\nDramaturgy is a sociological perspective commonly used in microsociological accounts of social interaction in everyday life.\n\n The term was first adapted into sociology from the theatre by Erving Goffman, who developed most of the related terminology and ideas in his 1959 book, \"The Presentation of Self in Everyday Life\".\n\n Kenneth Burke, whom Goffman would later acknowledge as an influence, had earlier presented his notions of dramatism in 1945, which in turn derives from Shakespeare.\n\n However, the fundamental difference between Burke's and Goffman's view is that Burke believed that life was in fact theatre, whereas Goffman viewed theatre as a metaphor.\n\n If we imagine ourselves as directors observing what goes on in the theatre of everyday life, we are doing what Goffman called dramaturgical analysis, the study of social interaction in terms of theatrical performance.",
+    "Ray Birdwhistell\nCollaborations with others, including initially Margaret Mead and Gregory Bateson, and later, Erving Goffman and Dell Hymes had huge influence on his work.\n\n For example, the book he is best known for, \"Kinesics and Context\", \"would not have appeared if it had not been envisaged by Erving Goffman\" and he explicitly stated \"the paramount and sustaining influence upon my work has been that of anthropological linguistics\", a tradition most directly represented at the University of Pennsylvania by Hymes.",
+    "The entries profile writers, artists, scholars, and public figures across literature, journalism, film, and politics. Highlights include Thomas Merton, the Catholic monk and writer honored by a peace award and studied by an international society; W. Somerset Maugham, whose namesake prize supports young writers’ travel; and notable authors such as Mencken, Orwell, Updike, Malamud, Chatwin, and Gass. Other topics include literary awards, bibliographies, influential editors, Camb",
+    "Erving Goffman\nErving Goffman (11 June 1922 – 19 November 1982) was a Canadian-American sociologist and writer, considered by some \"the most influential American sociologist of the twentieth century\".\n\n In 2007 he was listed by \"The Times Higher Education Guide\" as the sixth most-cited author in the humanities and social sciences, behind Anthony Giddens, Pierre Bourdieu and Michel Foucault, and ahead of Jürgen Habermas.",
+    "Identity Performance\nIn everyday interactions, the body serves as a critical site of identity performance.\n\n In conveying who we are to other people, we use our bodies to project information about ourselves.\n\n This is done through movement, clothes, speech, and facial expressions.\n\n What we put forward is our best effort at what we want to say about who we are.\n\n Yet while we intend to convey one impression, our performance is not always interpreted as we might expect.\n\n Through learning to make sense of others’ responses to our behavior, we can assess how well we have conveyed what we intended.\n\n We can then alter our performance accordingly.\n\n This process of performance, interpretation, and adjustment is what Erving Goffman calls impression management.\n\n Impression management is a part of a larger process where people seek to define a situation through their behavior.\n\n People seek to define social situations by using contextual cues from the environment around them.\n\n Social norms emerge from situational definitions, as people learn to read cues from the environment and the people present to understand what is appropriate behavior.",
+    "William H. Gass\nWilliam Howard Gass (born July 30, 1924) is an American novelist, short-story writer, essayist, critic, and former philosophy professor.\n\n He has written three novels, three collections of short stories, a collection of novellas, and seven volumes of essays, three of which have won National Book Critics Circle Award prizes and one of which, \"A Temple of Texts\" (2006), won the Truman Capote Award for Literary Criticism.\n\n His 1995 novel \"The Tunnel\" received the American Book Award.\n\n His 2013 novel \"Middle C\" won the 2015 William Dean Howells Medal.",
+    "Goffman (disambiguation)\nErving Goffman (1922–1982) was a Canadian sociologist",
+    "The Presentation of Self in Everyday Life\nThe Presentation of Self in Everyday Life is a 1956 sociology book by Erving Goffman, in which Goffman uses the imagery of the theatre in order to portray the importance of human social interaction.\n\n Originally published in Scotland in 1956 and in the United States in 1959, it is Goffman’s first and most famous book, for which he received the American Sociological Association’s MacIver award in 1961.",
+    "George Orwell bibliography\nThe bibliography of George Orwell includes journalism, essays, novels and non-fiction books written by the British writer Eric Blair (1903–50), either under his own name or, more usually, under his pen name George Orwell.\n\n Orwell was a prolific writer on topics related to contemporary English society and literary criticism, whom the British newsweekly \"The Economist\" in 2008 declared \"perhaps the 20th century's best chronicler of English culture.\"\n\n His non-fiction cultural and political criticism constitutes the majority of his work, but Orwell also wrote in several genres of fictional literature.",
+    "The entries survey literature, theatre, film, music, and curiosities: French Decadence favored artifice and excess; Camus staged Dostoyevsky’s *The Possessed* in 1959; Algren won the 1950 National Book Award; Poe satirized Gothic fiction; Moorcock wrote Elric and science-fiction novels; Nin’s diaries and erotica appeared partly posthumously. Wilde’s *Dorian Gray* faced censorship and condemnation. Verne’s"
+   ]
+  },
+  {
+   "id": "0355d264bd9c2d4a",
+   "gold": [
+    {
+     "sentence": "Jeffrey Charles \"Jeff\" Ragsdale ( ) is an American author, documentary filmmaker, actor and stand-up comedian.",
+     "facts": {
+      "0.0": "Jeffrey Charles \"Jeff\" Ragsdale is an American author.",
+      "0.1": "Jeffrey Charles \"Jeff\" Ragsdale is a documentary filmmaker.",
+      "0.2": "Jeffrey Charles \"Jeff\" Ragsdale is an actor.",
+      "0.3": "Jeffrey Charles \"Jeff\" Ragsdale is a stand-up comedian."
+     }
+    },
+    {
+     "sentence": "Millard Webb (6 December 1893 – 21 April 1935), was an American screenwriter and director.",
+     "facts": {
+      "1.0": "Millard Webb was born on 6 December 1893.",
+      "1.1": "Millard Webb died on 21 April 1935.",
+      "1.2": "Millard Webb was an American screenwriter.",
+      "1.3": "Millard Webb was an American director."
+     }
+    }
+   ],
+   "items": [
+    "Jeff, One Lonely Guy\nJeff, One Lonely Guy is a 2012 nonfiction book by Jeff Ragsdale.\n\n It was published on March 20, 2012 by New Harvest.\n\n Dave Eggers selected the book for inclusion in The Best American Nonrequired Reading 2012, and it was a GQ 2012 \"Book of the Year\".\n\n In 2014 Amitava Kumar included portions of \"Jeff, One Lonely Guy\" in his newly released book, \"A Matter of Rats: A Short Biography of Patna\".\n\n Kumar previously interviewed Ragsdale and wrote about him in \"The New York Times\".",
+    "Jerry Beck\nJerry Beck (born February 9, 1955 in New York City) is an American animation historian, author, blogger, and video producer.\n\n The author and/or editor of several books on classic American animation and classic characters, including \"The 50 Greatest Cartoons\" (1994), \"The Animated Movie Guide\" (2005), \"Not Just Cartoons: Nicktoons!\"\n\n (2007), \"The Flintstones: The Official Guide to the Cartoon Classic\" (2011), \"The Hanna-Barbera Treasury: Rare Art Mementos from Your Favorite Cartoon Classics\" (2007), \"The SpongeBob SquarePants Experience: A Deep Dive into the World of Bikini Bottom\" (2013), \"Pink Panther: The Ultimate Guide\" (2005), and \"Looney Tunes and Merrie Melodies: A Complete Illustrated Guide to the Warner Bros.\n\n Cartoons\" (with Will Friedwald, 1989) alongside \"The 100 Greatest Looney Tunes Cartoons\" (2010).\n\n He is also an authority on the making of modern films, with his books detailing the art of \"Mr.",
+    "Sandy Rothman\nSandy Rothman (born January 30, 1946, Miami, Florida) is a San Francisco Bay Area bluegrass multi-instrumentalist and record producer.\n\n He plays mandolin, dobro and banjo, and he also sings.\n\n Rothman was a friend and colleague of Grateful Dead bandleader Jerry Garcia, and a member of the Jerry Garcia Acoustic Band.\n\n He played bluegrass with Garcia and David Nelson as the Black Mountain Boys in 1964, and has played with Bill Monroe and his Blue Grass Boys, Earl Taylor, Red Allen, Jimmie Skinner, Larry Sparks, the Kentucky Colonels, Country Joe McDonald, Kathy Kallick and Clarence White, among other musicians.\n\n He has been described as \"one of the chief biscuits when and where bluegrass music is discussed, scribed, or performed in northern California.\"",
+    "Jeff Ragsdale\nJeffrey Charles \"Jeff\" Ragsdale ( ) is an American author, documentary filmmaker, actor and stand-up comedian.\n\n In 2011 he posted a flyer in New York City as a \"social experiment\", stating his phone number and asking people to call him, describing himself as \"Jeff, one lonely guy\".\n\n He was overwhelmed with thousands of calls after photos of the flyer were posted on the internet.\n\n The experience led to his 2012 book \"Jeff, One Lonely Guy\", and indirectly to a 2013 pilot episode for a reality television show, \"Being Noticed\", and a starring role in the 2014 documentary \"Hotline\".",
+    "Herbert Lottman\nHerbert Lottman (August 16, 1927, Brooklyn - August 27, 2014, Paris) was an American author who specialized in writing biographies on French subjects.\n\n An influential biographer, he published 17 biographies, 15 of which were related to French culture, commerce, or politics; including works on Albert Camus, Colette, Gustave Flaubert, Henri Philippe Pétain, Jules Verne, and the Rothschild banking family of France.\n\n He wrote that, just before dying, Albert Camus was pledged to marry.\n\n Camus's estate tried to block his book, partly because of this controversial statement.",
+    "Howard R. Garis\nHoward Roger Garis ((1873--) 25, 1873 – (1962--) 6, 1962 ) was an American author, best known for a series of books, published under his own name, that featured the character of Uncle Wiggily Longears, an engaging elderly rabbit.\n\n Garis and his wife were possibly the most prolific children's authors of the early 20th century.\n\n Many of his books were illustrated by Lansing Campbell.",
+    "Kim Edwards\nKim Edwards (born May 4, 1958) is an American author and educator.\n\n She was born in Killeen, Texas, grew up in the Finger Lakes region of upstate New York, and graduated from Colgate University and The University of Iowa, where she earned an MFA in fiction and an MA in linguistics.\n\n She is the author of a story collection, \"The Secrets of a Fire King\", which was a finalist for the PEN/Hemingway Award; her stories have been published in \"The Paris Review, Story, Ploughshares, Zoetrope\", and many other periodicals.\n\n She has received many awards for the short story as well, including a Pushcart Prize, the National Magazine Award, the Nelson Algren Award, and inclusion in both \"The Best American Short Stories\" and the Symphony Space program ‘Selected Shorts.’\n\n She is the recipient of a Whiting Writers’ Award, as well as grants from the Pennsylvania and Kentucky Arts Councils, the Kentucky Foundation for Women, and the National Endowment for the Arts.",
+    "Uncle Wiggily\nUncle Wiggily Longears is the main character of a series of children's stories by American author Howard R. Garis.\n\n He began writing the stories for the \"Newark News\" in 1910.\n\n Garis penned an Uncle Wiggily story every day (except Sundays) for more than 30 years, and published 79 books within the author's lifetime.\n\n According to his obituary in the \"Chicago Tribune\", a walk in the woods in Verona, New Jersey was his inspiration.\n\n The books featured work by several illustrators, notably Lansing Campbell.\n\n Other illustrators of the series included George L. Carlson, Louis Wisa, Elmer Rache, Edward Bloomfield, Lang Campbell and Mary and Wallace Stover.",
+    "Roger Garis\nRoger (Carroll) Garis, ((1901--) 10, 1901 – (1967--) 30, 1967 ) was an American author known as a writer for magazines and the author of \"The Outboard Boys\" series of books.\n\n Roger also wrote several books under pseudonyms for the Stratemeyer Syndicate, as his parents did (see My Father Was Uncle Wiggily for further details).",
+    "Millard Webb\nMillard Webb (6 December 1893 – 21 April 1935), was an American screenwriter and director.\n\n He directed 20 films between 1920 and 1933.\n\n His best-known film is the 1926 silent John Barrymore adventure \"The Sea Beast\" costarring Dolores Costello.\n\n Webb also directed the early sound Florenz Ziegfeld produced talkie \"Glorifying the American Girl\" released by Paramount in 1929.\n\n His active years were from 1916 to 1933."
+   ]
+  },
+  {
+   "id": "ef2c480c86dfb287",
+   "gold": [
+    {
+     "sentence": "The Metropolitan Cathedral Church and Basilica of Saint Chad is the mother church of the Archdiocese of Birmingham and province of the Catholic Church in Great Britain and is dedicated to Saint Chad of Mercia.",
+     "facts": {
+      "0.0": "The Metropolitan Cathedral Church and Basilica of Saint Chad is the mother church of the Archdiocese of Birmingham.",
+      "0.1": "The Metropolitan Cathedral Church and Basilica of Saint Chad is the mother church of the province of the Catholic Church in Great Britain.",
+      "0.2": "The Metropolitan Cathedral Church and Basilica of Saint Chad is dedicated to Saint Chad of Mercia."
+     }
+    },
+    {
+     "sentence": " Built by Augustus Welby Pugin and substantially complete by 1841, St Chad's is one of the first four Catholic churches that were constructed after the English Reformation and raised to cathedral status in 1852.",
+     "facts": {
+      "1.0": "St Chad's was built by Augustus Welby Pugin.",
+      "1.1": "St Chad's was substantially complete by 1841.",
+      "1.2": "St Chad's is one of the first four Catholic churches constructed after the English Reformation.",
+      "1.3": "St Chad's was raised to cathedral status in 1852."
+     }
+    },
+    {
+     "sentence": "Chelmsford Cathedral in the city of Chelmsford, Essex, England, is dedicated to St Mary the Virgin, St Peter and St Cedd.",
+     "facts": {
+      "2.0": "Chelmsford Cathedral is in the city of Chelmsford, Essex, England.",
+      "2.1": "Chelmsford Cathedral is dedicated to St Mary the Virgin.",
+      "2.2": "Chelmsford Cathedral is dedicated to St Peter.",
+      "2.3": "Chelmsford Cathedral is dedicated to St Cedd."
+     }
+    },
+    {
+     "sentence": " It became a cathedral when the Anglican Diocese of Chelmsford was created in 1914 and is the seat of the Bishop of Chelmsford.",
+     "facts": {
+      "3.0": "Chelmsford Cathedral became a cathedral when the Anglican Diocese of Chelmsford was created in 1914.",
+      "3.1": "Chelmsford Cathedral is the seat of the Bishop of Chelmsford."
+     }
+    }
+   ],
+   "items": [
+    "Ellis Gowing\nGowing was educated at Fort Street High School and the University of Sydney; and ordained in 1907.\n\n He began his career as a Curate at The Oaks, New South Wales, after which he served at Armidale Cathedral.\n\n Coming to England he was on the staff of St James the Less, Bethnal Green then domestic chaplain to the Bishop of Chelmsford from 1914 to 1917.\n\n He was vicar of Prittlewell from 1917 until his death; an honorary canon of Chelmsford Cathedral from 1921 to 1938 and Rural Dean of Canewdon from 1918 to 1938.\n\n He was given the Freedom of the County Borough of Southend-on-Sea in 1953.",
+    "Bishop's House, Birmingham\nThe Bishop's House in Birmingham, England was designed by Augustus Pugin as the residence of Thomas Walsh, the first Roman Catholic Bishop of Birmingham.\n\n It was situated opposite St Chad's Cathedral, on the corner of Bath Street and Weaman Street in Birmingham City Centre.",
+    "St Philip's Cathedral, Birmingham\nThe Cathedral Church of Saint Philip is the Church of England cathedral and the seat of the Bishop of Birmingham.\n\n Built as a parish church and consecrated in 1715, St Philip's became the cathedral of the newly formed Diocese of Birmingham in 1905.\n\n St Philip's was built in the early 18th century in the Baroque style by Thomas Archer and is located on Colmore Row, Birmingham, England.\n\n The cathedral is a Grade I listed building.\n\n St Philip's is the third smallest cathedral in England after Derby and Chelmsford.",
+    "La Belle Iron Works\nLa Belle Iron Works, also known as La Belle Cut Nail Works, is a historic factory complex and national historic district located at Wheeling, Ohio County, West Virginia.\n\n The district includes four contributing buildings; three Italianate style brick buildings dated to the founding of the company in 1852, and a tin plate mill built 1894-1897.\n\n After 1902, the buildings were combined under a single roof, although the truss systems date to different periods achieving the configuration visible today.\n\n When listed in 1997, it was known as the \"La Belle Cut Nail Plant, The Largest in the World, Wheeling Corrugating Company, A Division of Wheeling Pittsburgh Steel Corporation.\"\n\n The cut nail machinery still in use by La Belle dates to 1852 and the 1860s.\n\n The machinery at La Belle along with the different processes were documented by the Historic American Buildings Survey team during the summer of 1990.",
+    "St Chad's Cathedral, Birmingham\nThe Metropolitan Cathedral Church and Basilica of Saint Chad is the mother church of the Archdiocese of Birmingham and province of the Catholic Church in Great Britain and is dedicated to Saint Chad of Mercia.\n\n Built by Augustus Welby Pugin and substantially complete by 1841, St Chad's is one of the first four Catholic churches that were constructed after the English Reformation and raised to cathedral status in 1852.\n\n It is one of only four minor basilicas in England (the others being Downside Abbey, the National Shrine of Our Lady at Walsingham and Corpus Christi Priory, this last now disused).\n\n St Chad's is a Grade II* listed building.\n\n The cathedral is located in a public greenspace near St Chad's Queensway, in central Birmingham.\n\n s of 2014 the Archbishop was Bernard Longley and the Dean Canon Gerry Breen.",
+    "Dick Herrick\nThe Very Rev Richard William Herrick (3 December 1913 - 5 May 1981) was an eminent Anglican priest in the 20th century.\n\n He was educated at King Edward VI School Retford and Leeds University and was initially a civil servant.\n\n He was ordained after a period of study at the College of the Resurrection, Mirfield in 1940.\n\n he held curacies at Duston and Portsea, Portsmouth before being appointed Vicar of St Michael’s, Northampton in 1947, a post he held for a decade.\n\n He was then a Canon Residentiary of Chelmsford Cathedral until 1978 when he was appointed Provost of Chelmsford.\n\n He died in post.",
+    "Chelmsford Cathedral\nChelmsford Cathedral in the city of Chelmsford, Essex, England, is dedicated to St Mary the Virgin, St Peter and St Cedd.\n\n It became a cathedral when the Anglican Diocese of Chelmsford was created in 1914 and is the seat of the Bishop of Chelmsford.",
+    "Saint Michael the Archangel Church (Monroe, MI)\nSaint Michael the Archangel Church (St. Michael Church) is located on the west side of the city of Monroe, Michigan along the River Raisin.\n\n It is home to 1,200 families and it is one of most important religious institutes in Monroe County.\n\n It was founded in the year 1852.\n\n The present building was built from 1866-1867.\n\n It is in the Archdiocese of Detroit.\n\n Its current priest is Rev. Phillip Ching.\n\n When the parish was first established, the mayor of Monroe palatial residence was remodeled as a temporary church.\n\n It was used as a church on the first floor and on the second it was used for the school.\n\n Later it would only be used as St. Michael School.\n\n Then in 1866 the cornerstone for the present church was laid.\n\n The large 187 foot steeple wasn't added until 1883.\n\n In 1874 the 3-story rectory was built east of the church.\n\n In 1918 the parish built the present building of St.",
+    "St Chad's College, Durham\nSt Chad's College is a recognised (independent) college of Durham University in England, founded in 1904 as an Anglican hall for the training of Church of England clergy.\n\n The main part of the college is located on the Bailey, occupying nine historic buildings at the east end of Durham Cathedral.\n\n It neighbours Hatfield College to its north, while St John's College and St Cuthbert's Society are to its south.\n\n The college is named after St Chad of Mercia, a 7th-century bishop.",
+    "Dean of Chelmsford\nThe Dean of Chelmsford is the head (\"primus inter pares\" – first among equals) and chair of the Cathedral Chapter, the governing body of Chelmsford Cathedral, the Cathedral Church of St Mary the Virgin, St Peter and St Cedd.\n\n Before 2000 the post was designated as a provost, which was then the equivalent of a dean at most English cathedrals.\n\n The cathedral is the mother church of the Diocese of Chelmsford and seat of the Bishop of Chelmsford.\n\n The Dean of Chelmsford is also responsible for the Chapel of St Peter-on-the-Wall at Bradwell-on-Sea, founded by St Cedd, among the oldest church buildings in regular use in England."
+   ]
+  }
+ ]
+}

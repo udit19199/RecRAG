@@ -1,0 +1,1543 @@
+[
+ {
+  "id": "e8b41c4917ee6de0",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "R.H. Thomson as Matthew Cuthbert"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "62adec49ebbbc8a5",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Arsenal ( more information ) E. Stanley Kroenke ( 67.05 % ) Alisher Usmanov ( 30.04 % )"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Arsenal ( more information ) E. Stanley Kroenke ( 67.05 % ) Alisher Usmanov ( 30.04 % )"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Arsenal ( more information ) E. Stanley Kroenke ( 67.05 % ) Alisher Usmanov ( 30.04 % )"
+     },
+     {
+      "item": 3,
+      "quote": "$22.4 B Kroenke Sports Enterprises"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Arsenal ( more information ) E. Stanley Kroenke ( 67.05 % ) Alisher Usmanov ( 30.04 % )"
+     },
+     {
+      "item": 3,
+      "quote": "Kroenke Sports Enterprises Metal and mining , investment"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Arsenal ( more information ) E. Stanley Kroenke ( 67.05 % ) Alisher Usmanov ( 30.04 % )"
+     },
+     {
+      "item": 3,
+      "quote": "$22.4 B Kroenke Sports Enterprises"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Bournemouth Maxim Demin ( 75 % )"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "PEAK6 Investments ( 25 % )"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "PEAK6 Investments ( 25 % ) Petrochemicals trading"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Petrochemicals trading Seven Developments"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Brighton & Hove Albion Tony Bloom ( 75.61 % )"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Tony Bloom ( 75.61 % ) 12 ! $1.7 B"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Online Gambling , Real Estate , Property , Land Development & Investments"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Burnley Mike Garlick ( 49.3 % )"
+     }
+    ]
+   },
+   {
+    "fact": "0.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "John Banaszkiewicz ( 27.55 % )"
+     }
+    ]
+   },
+   {
+    "fact": "0.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "John Banaszkiewicz ( 27.55 % ) 18 ! $80 M"
+     }
+    ]
+   },
+   {
+    "fact": "0.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Michael Bailey Associates Freight Investor Services"
+     }
+    ]
+   },
+   {
+    "fact": "0.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Chelsea ( more information ) Roman Abramovich"
+     }
+    ]
+   },
+   {
+    "fact": "0.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Roman Abramovich 03 ! $9.3 B"
+     }
+    ]
+   },
+   {
+    "fact": "0.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "$9.3 B Oil and industry"
+     }
+    ]
+   },
+   {
+    "fact": "0.19",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Crystal Palace Steve Parish Martin Long Joshua Harris David S. Blitzer Jeremy Hosking Stephen Browett"
+     }
+    ]
+   },
+   {
+    "fact": "0.20",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "15 ! $65 M $100 M $3.2 B $1.3 B $250 M $110 M"
+     }
+    ]
+   },
+   {
+    "fact": "0.21",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Tag Worldwide Churchill Insurance Apollo Global Management Blackstone Group Marathon Asset Management Farr Vintners"
+     }
+    ]
+   },
+   {
+    "fact": "0.22",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Everton ( more information ) Farhad Moshiri ( 49.9 % )"
+     }
+    ]
+   },
+   {
+    "fact": "0.23",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Everton ( more information ) Farhad Moshiri ( 49.9 % ) Bill Kenwright CBE Jon Woods"
+     }
+    ]
+   },
+   {
+    "fact": "0.24",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.25",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.26",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.27",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.28",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.29",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.30",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.31",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.32",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.33",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.34",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.35",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.36",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.37",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.38",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.39",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.40",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.41",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.42",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.43",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.44",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.45",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.46",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.47",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.48",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.49",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.50",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.51",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.52",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Swansea City Stephen Kaplan & Jason Levien ( 68 % )"
+     }
+    ]
+   },
+   {
+    "fact": "0.53",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Swansea City Supporters Trust ( 21.1 % )"
+     }
+    ]
+   },
+   {
+    "fact": "0.54",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Memphis Grizzlies and D.C. United Investment trust"
+     }
+    ]
+   },
+   {
+    "fact": "0.55",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Tottenham Hotspur ( more information ) Joe Lewis ( 70.6 % of 85 % holding company )"
+     }
+    ]
+   },
+   {
+    "fact": "0.56",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Daniel Levy ( 29.4 % of 85 % holding company )"
+     }
+    ]
+   },
+   {
+    "fact": "0.57",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Daniel Levy ( 29.4 % of 85 % holding company ) 05 ! $5.6 B"
+     }
+    ]
+   },
+   {
+    "fact": "0.58",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Tavistock Group ENIC Group"
+     }
+    ]
+   },
+   {
+    "fact": "0.59",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "ENIC Group Watford Gino Pozzo"
+     }
+    ]
+   },
+   {
+    "fact": "0.60",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Watford Gino Pozzo -- - Businessman"
+     }
+    ]
+   },
+   {
+    "fact": "0.61",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "West Bromwich Albion ( more information ) Guochuan Lai ( 87.8 % )"
+     }
+    ]
+   },
+   {
+    "fact": "0.62",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Guochuan Lai ( 87.8 % ) 18 ! $6.2 B"
+     }
+    ]
+   },
+   {
+    "fact": "0.63",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "18 ! $6.2 B Investment"
+     }
+    ]
+   },
+   {
+    "fact": "0.64",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "West Ham United ( more information ) David Sullivan ( 51.1 % )"
+     }
+    ]
+   },
+   {
+    "fact": "0.65",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "David Gold ( 35.1 % )"
+     }
+    ]
+   },
+   {
+    "fact": "0.66",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Straumur Investment Bank ( 10 % )"
+     }
+    ]
+   },
+   {
+    "fact": "0.67",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Straumur Investment Bank ( 10 % ) 13 ! $520 M $325 M"
+     }
+    ]
+   },
+   {
+    "fact": "0.68",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Daily Sport , Sunday Sport Gold Group International Straumur Investment Bank"
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Aston Villa ( more information ) Dr. Tony Xia $1.2 B !"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Aston Villa ( more information ) Dr. Tony Xia $1.2 B !"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Aston Villa ( more information ) Dr. Tony Xia $1.2 B !"
+     },
+     {
+      "item": 1,
+      "quote": "Tony Xia $1.2 B ! $1.2 B Recon Group"
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Barnsley Patrick Cryne"
+     }
+    ]
+   },
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Barnsley Patrick Cryne 14 ! $40 M"
+     }
+    ]
+   },
+   {
+    "fact": "1.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "14 ! $40 M iSOFT"
+     }
+    ]
+   },
+   {
+    "fact": "1.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Paul Suen ( 60.78 % ) Wang Lei ( 5.28 % ) Carson Yeung ( 6.51 % )"
+     }
+    ]
+   },
+   {
+    "fact": "1.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Carson Yeung ( 6.51 % ) 21 ! $570 M"
+     }
+    ]
+   },
+   {
+    "fact": "1.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "21 ! $570 M Birmingham International Holdings"
+     }
+    ]
+   },
+   {
+    "fact": "1.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Bolton Wanderers Eddie Davies CBE"
+     }
+    ]
+   },
+   {
+    "fact": "1.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Eddie Davies CBE 13 ! $52 M"
+     }
+    ]
+   },
+   {
+    "fact": "1.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "13 ! $52 M Strix"
+     }
+    ]
+   },
+   {
+    "fact": "1.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Brentford Matthew Benham ( 96 % )"
+     }
+    ]
+   },
+   {
+    "fact": "1.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Bristol City Stephen Lansdown 01 ! $1.9 B"
+     }
+    ]
+   },
+   {
+    "fact": "1.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Bristol City Stephen Lansdown 01 ! $1.9 B"
+     }
+    ]
+   },
+   {
+    "fact": "1.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "01 ! $1.9 B Hargreaves Lansdown"
+     }
+    ]
+   },
+   {
+    "fact": "1.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Burton Albion Ben Robinson"
+     }
+    ]
+   },
+   {
+    "fact": "1.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Cardiff City Vincent Tan ( 51 % )"
+     }
+    ]
+   },
+   {
+    "fact": "1.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Vincent Tan ( 51 % ) 01 ! $820 M"
+     }
+    ]
+   },
+   {
+    "fact": "1.19",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "01 ! $820 M Berjaya Group"
+     }
+    ]
+   },
+   {
+    "fact": "1.20",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Derby County Mel Morris"
+     }
+    ]
+   },
+   {
+    "fact": "1.21",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Mel Morris $520 M King"
+     }
+    ]
+   },
+   {
+    "fact": "1.22",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Fulham ( more information ) Shahid Khan"
+     }
+    ]
+   },
+   {
+    "fact": "1.23",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Shahid Khan 09 ! $8.9 B"
+     }
+    ]
+   },
+   {
+    "fact": "1.24",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Flex - N-Gate Corp ( automobile parts manufacturer )"
+     }
+    ]
+   },
+   {
+    "fact": "1.25",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Hull City The Allam Family"
+     }
+    ]
+   },
+   {
+    "fact": "1.26",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Family 15 ! $325 M Allam Marine"
+     }
+    ]
+   },
+   {
+    "fact": "1.27",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Family 15 ! $325 M Allam Marine"
+     }
+    ]
+   },
+   {
+    "fact": "1.28",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Ipswich Town Marcus Evans 02 ! $825 M Marcus Evans Group"
+     }
+    ]
+   },
+   {
+    "fact": "1.29",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Ipswich Town Marcus Evans 02 ! $825 M Marcus Evans Group"
+     }
+    ]
+   },
+   {
+    "fact": "1.30",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Ipswich Town Marcus Evans 02 ! $825 M Marcus Evans Group"
+     }
+    ]
+   },
+   {
+    "fact": "1.31",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Leeds United Andrea Radrizzani Eleonora Sports Ltd Aser Group Company"
+     }
+    ]
+   },
+   {
+    "fact": "1.32",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Middlesbrough Steve Gibson 10 !"
+     }
+    ]
+   },
+   {
+    "fact": "1.33",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Middlesbrough Steve Gibson 10 !"
+     },
+     {
+      "item": 8,
+      "quote": "$260 M Bulkhaul Limited"
+     }
+    ]
+   },
+   {
+    "fact": "1.34",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Middlesbrough Steve Gibson 10 !"
+     },
+     {
+      "item": 8,
+      "quote": "$260 M Bulkhaul Limited"
+     }
+    ]
+   },
+   {
+    "fact": "1.35",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Millwall John Berylson Richard Smith 11 !"
+     }
+    ]
+   },
+   {
+    "fact": "1.36",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Richard Smith 11 ! $175 M"
+     }
+    ]
+   },
+   {
+    "fact": "1.37",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "11 ! $175 M Chestnut Hill Ventures"
+     }
+    ]
+   },
+   {
+    "fact": "1.38",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Norwich City ( more information ) Delia Smith and Michael Wynn - Jones ( 53 % )"
+     }
+    ]
+   },
+   {
+    "fact": "1.39",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Michael Foulger ( 15 % )"
+     }
+    ]
+   },
+   {
+    "fact": "1.40",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Michael Foulger ( 15 % ) 20 ! $30 M"
+     }
+    ]
+   },
+   {
+    "fact": "1.41",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "20 ! $30 M Food industry Publishing Poultry"
+     }
+    ]
+   },
+   {
+    "fact": "1.42",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Nottingham Forest Evangelos Marinakis 21 !"
+     }
+    ]
+   },
+   {
+    "fact": "1.43",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Evangelos Marinakis 21 ! $650 M"
+     }
+    ]
+   },
+   {
+    "fact": "1.44",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Evangelos Marinakis 21 ! $650 M Owner of Olympiacos F.C."
+     }
+    ]
+   },
+   {
+    "fact": "1.45",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Preston North End Trevor Hemmings CVO ( 51.4 % )"
+     }
+    ]
+   },
+   {
+    "fact": "1.46",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Trevor Hemmings CVO ( 51.4 % ) 02 ! $720 M"
+     }
+    ]
+   },
+   {
+    "fact": "1.47",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Blackpool Tower , horse racing , investment , Northern Trust , Sportech"
+     }
+    ]
+   },
+   {
+    "fact": "1.48",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Queens Park Rangers ( more information ) Tony Fernandes ( 66 % )"
+     }
+    ]
+   },
+   {
+    "fact": "1.49",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Lakshmi Mittal ( 33 % )"
+     }
+    ]
+   },
+   {
+    "fact": "1.50",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "03 ! $345 M $16.4 B"
+     }
+    ]
+   },
+   {
+    "fact": "1.51",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "03 ! $345 M $16.4 B Air Asia , Tune Group ArcelorMittal"
+     }
+    ]
+   },
+   {
+    "fact": "1.52",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Reading ( more information ) Narin Niruttinanon ( 50 % ) Sasima Srivikorn ( 25 % ) Sumrith Thanakarnjanasuth ( 25 % )"
+     }
+    ]
+   },
+   {
+    "fact": "1.53",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Sheffield United Abdullah bin Musa'ed ( 50 % )"
+     }
+    ]
+   },
+   {
+    "fact": "1.54",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Abdullah bin Musa'ed ( 50 % ) 03 !"
+     },
+     {
+      "item": 6,
+      "quote": "$155 M Property Oil"
+     }
+    ]
+   },
+   {
+    "fact": "1.55",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Abdullah bin Musa'ed ( 50 % ) 03 !"
+     },
+     {
+      "item": 6,
+      "quote": "$155 M Property Oil"
+     }
+    ]
+   },
+   {
+    "fact": "1.56",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Sheffield Wednesday Dejphon Chansiri Thai Union Group"
+     }
+    ]
+   },
+   {
+    "fact": "1.57",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Dejphon Chansiri Thai Union Group"
+     }
+    ]
+   },
+   {
+    "fact": "1.58",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Sunderland Ellis Short 09 ! $2.9 B Lone Star Funds , Skibo Castle"
+     }
+    ]
+   },
+   {
+    "fact": "1.59",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Sunderland Ellis Short 09 ! $2.9 B Lone Star Funds , Skibo Castle"
+     }
+    ]
+   },
+   {
+    "fact": "1.60",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Sunderland Ellis Short 09 ! $2.9 B Lone Star Funds , Skibo Castle"
+     }
+    ]
+   },
+   {
+    "fact": "1.61",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Wolverhampton Wanderers Fosun International ( parent company ) Guo Guangchang ( co-owner of Fosun )"
+     }
+    ]
+   },
+   {
+    "fact": "1.62",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Guo Guangchang ( co-owner of Fosun ) $6.2 B"
+     }
+    ]
+   },
+   {
+    "fact": "1.63",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "$6.2 B Investment League One"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "602cd316b268d682",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.5",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.6",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.7",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Guangzhou , China ( Guangqi Honda )"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Celaya , Guanajuato , Mexico ( from Feb 2014 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Tapukara , India ( from Jan 2015 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Designer Riku Wada ( 2010 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Related Honda City Honda HR - V Honda Freed Honda Shuttle Acura CDX"
+     }
+    ]
+   },
+   {
+    "fact": "0.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Related Honda City Honda HR - V Honda Freed Honda Shuttle Acura CDX"
+     }
+    ]
+   },
+   {
+    "fact": "0.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Related Honda City Honda HR - V Honda Freed Honda Shuttle Acura CDX"
+     }
+    ]
+   },
+   {
+    "fact": "0.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Related Honda City Honda HR - V Honda Freed Honda Shuttle Acura CDX"
+     }
+    ]
+   },
+   {
+    "fact": "0.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Related Honda City Honda HR - V Honda Freed Honda Shuttle Acura CDX"
+     }
+    ]
+   },
+   {
+    "fact": "0.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Engine 1.2 L L12B i - VTEC I4 petrol"
+     }
+    ]
+   },
+   {
+    "fact": "0.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "1.3 L L13B Earth Dreams i - VTEC I4"
+     }
+    ]
+   },
+   {
+    "fact": "0.19",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "1.5 L L15A I4 ( petrol )"
+     }
+    ]
+   },
+   {
+    "fact": "0.20",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "1.5 L L15B1 I4 ( petrol )"
+     }
+    ]
+   },
+   {
+    "fact": "0.21",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "1.5 L L15B Earth Dreams i - VTEC I4"
+     }
+    ]
+   },
+   {
+    "fact": "0.22",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "1.5 L i - DTEC diesel"
+     }
+    ]
+   },
+   {
+    "fact": "0.23",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "5 - speed manual ( China Only )"
+     }
+    ]
+   },
+   {
+    "fact": "0.24",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "6 - speed manual 7 - speed semi-automatic ( DCT ) CVT automatic"
+     }
+    ]
+   },
+   {
+    "fact": "0.25",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "6 - speed manual 7 - speed semi-automatic ( DCT ) CVT automatic"
+     }
+    ]
+   },
+   {
+    "fact": "0.26",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "6 - speed manual 7 - speed semi-automatic ( DCT ) CVT automatic"
+     }
+    ]
+   },
+   {
+    "fact": "0.27",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Wheelbase 2,530 mm ( 99.6 in )"
+     }
+    ]
+   },
+   {
+    "fact": "0.28",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Length 3,955 mm ( 155.7 in )"
+     }
+    ]
+   },
+   {
+    "fact": "0.29",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Width 1,695 mm ( 66.7 in )"
+     }
+    ]
+   },
+   {
+    "fact": "0.30",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Height 1,525 -- 1,550 mm ( 60.0 -- 61."
+     },
+     {
+      "item": 4,
+      "quote": "525 -- 1,550 mm ( 60.0 -- 61.0 in )"
+     }
+    ]
+   },
+   {
+    "fact": "0.31",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Curb weight 1,020 -- 1,080 kg ( 2,249 -- 2,381 lb )"
+     }
+    ]
+   },
+   {
+    "fact": "0.32",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "1,080 -- 1,170 kg ( 2,381 -- 2,579 lb ) ( Hybrid )"
+     }
+    ]
+   }
+  ]
+ }
+]

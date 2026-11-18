@@ -1,0 +1,49 @@
+multihop_rag: splitting claims for 0 questions
+multihop_rag: judging 0 method-question pairs
+  rag
+  hipporag
+  raptor
+  graphrag
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/evals/retrieval_quality.py:590: RuntimeWarning: Mean of empty slice
+  boots = values[samples].mean(axis=1)
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:134: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/evals/retrieval_quality.py:592: RuntimeWarning: Mean of empty slice
+  mean=float(values.mean()),
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+
+multihop_rag: 0/100 questions scored
+method     support score % [95% CI]    full support % [95% CI]     budget score % budget full %  scores 0/1/2/3
+rag          nan [  nan,  nan]           nan [  nan,  nan]                    nan           nan  0/0/0/0
+hipporag     nan [  nan,  nan]           nan [  nan,  nan]                    nan           nan  0/0/0/0
+raptor       nan [  nan,  nan]           nan [  nan,  nan]                    nan           nan  0/0/0/0
+graphrag     nan [  nan,  nan]           nan [  nan,  nan]                    nan           nan  0/0/0/0
+  secondary, gold-sentence recall:
+rag          nan [  nan,  nan]           nan [  nan,  nan]                    nan           nan  0/0/0/0
+hipporag     nan [  nan,  nan]           nan [  nan,  nan]                    nan           nan  0/0/0/0
+raptor       nan [  nan,  nan]           nan [  nan,  nan]                    nan           nan  0/0/0/0
+graphrag     nan [  nan,  nan]           nan [  nan,  nan]                    nan           nan  0/0/0/0
+  paired differences (method - graphrag), percentage points:
+    rag      support_score          nan [  nan,  nan]
+    rag      full_support_rate      nan [  nan,  nan]
+    rag      retrieval_score        nan [  nan,  nan]
+    hipporag support_score          nan [  nan,  nan]
+    hipporag full_support_rate      nan [  nan,  nan]
+    hipporag retrieval_score        nan [  nan,  nan]
+    raptor   support_score          nan [  nan,  nan]
+    raptor   full_support_rate      nan [  nan,  nan]
+    raptor   retrieval_score        nan [  nan,  nan]
+  judge vs offset coverage (questions with only traceable items):
+    rag      offset full: judge 3 0, <3 0 | offset none: judge 0-1 0, 2-3 0 | partial 0
+    hipporag offset full: judge 3 0, <3 0 | offset none: judge 0-1 0, 2-3 0 | partial 0
+    raptor   offset full: judge 3 0, <3 0 | offset none: judge 0-1 0, 2-3 0 | partial 0
+    graphrag offset full: judge 3 0, <3 0 | offset none: judge 0-1 0, 2-3 0 | partial 0
+  support vs gold-sentence recall (questions):
+    rag      all gold found: support 3 in 0/0 | gold missing: support 3 in 0/0
+    hipporag all gold found: support 3 in 0/0 | gold missing: support 3 in 0/0
+    raptor   all gold found: support 3 in 0/0 | gold missing: support 3 in 0/0
+    graphrag all gold found: support 3 in 0/0 | gold missing: support 3 in 0/0
+
+Judge cost so far (all cached calls): $5.10
+Wrote runs/heldout400/judge_support/r2-s2

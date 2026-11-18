@@ -1,0 +1,43 @@
+[
+ {"id": "multihop-rag-244", "sentences": [
+   ["Tyreek Hill is the league's leading receiver.", "Tyreek Hill played against the Titans in Week 14.", "Tyreek Hill is the unquestioned WR1 for Week 14.", "Tyreek Hill torched the Commanders.", "Tyreek Hill had five catches against the Commanders.", "Tyreek Hill had 157 yards against the Commanders.", "Tyreek Hill had two TDs against the Commanders.", "Tyreek Hill's WR1 status for Week 14 came after his game against the Commanders."],
+   ["The figure given at the start of the sentence is 152.67.", "Tyreek Hill missed last week's game.", "Tyreek Hill needs to average almost 153 yards per game.", "Tyreek Hill needs to average almost 153 yards per game in his final three games.", "Tyreek Hill's stated goal is 2,000 receiving yards this season.", "Tyreek Hill needs to reach 2,000 receiving yards this season to meet his goal."],
+   ["Miami has five remaining opponents.", "Four of Miami's five remaining opponents have pass defenses ranked in the league's top eight."]
+ ]},
+ {"id": "multihop-rag-2210", "sentences": [
+   ["Todd Boehly is American.", "Todd Boehly is a co-owner of Chelsea.", "Expanding Chelsea's profile and reach in the U.S. would make sense under Todd Boehly's co-ownership.", "Catarina Macario is a USWNT international.", "Mia Fishel is a USWNT international.", "Catarina Macario plays her club football in the U.S.", "Mia Fishel plays her club football in the U.S.", "CBS Sports holds WSL rights."],
+   ["The date was 24 September.", "Chelsea suffered a home Premier League defeat on 24 September.", "The 24 September defeat was Chelsea's second home Premier League defeat in a row.", "Chelsea's home Premier League defeat before the 24 September defeat was against Nottingham Forest.", "Chelsea were booed off again after the 24 September defeat."],
+   ["Late fitness checks will be made on Reece James.", "Late fitness checks will be made on Axel Disasi.", "Late fitness checks will be made on Nicolas Jackson.", "Benoit Badiashile could return from a long-term injury."]
+ ]},
+ {"id": "multihop-rag-168", "sentences": [
+   ["Benjamin Netanyahu is the Israeli Prime Minister.", "Benjamin Netanyahu said that Israel had been at war since this morning.", "Benjamin Netanyahu said that Israel's first objective was to clear out the hostile forces that infiltrated its territory."],
+   ["A source offers an in-depth breakdown of what to expect from both sides of the SBF case.", "The breakdown covers where the prosecution and defense could gain ground or fall short in their arguments in the SBF case.", "The breakdown covers the takeaways from the opening arguments in the SBF case."]
+ ]},
+ {"id": "5ae022ab554299025d62a428", "sentences": [
+   ["The described species is common across temperate parts of Eurasia, northern Africa, and the Americas.", "The described species is common across subtropical parts of Eurasia, northern Africa, and the Americas.", "The described species is naturalized in Australia.", "The described species is naturalized on various islands."],
+   ["Echeveria is a large genus of flowering plants.", "Echeveria is in the Crassulaceae family.", "Echeveria is native to semi-desert areas of Central America.", "Echeveria is native to semi-desert areas of Mexico.", "Echeveria is native to semi-desert areas of northwestern South America."]
+ ]},
+ {"id": "5a8408a9554299123d8c21d3", "sentences": [
+   ["The film takes its title from an album by Leonard Cohen.", "Ira Nadel wrote a biography of Leonard Cohen.", "The subject of the film is not Leonard Cohen.", "The subject of the film has no affiliation with the work."],
+   ["Leonard Norman Cohen was born on September 21, 1934.", "Leonard Norman Cohen died on November 7, 2016.", "Leonard Norman Cohen was a Canadian singer.", "Leonard Norman Cohen was a Canadian songwriter.", "Leonard Norman Cohen was a Canadian musician.", "Leonard Norman Cohen was a Canadian poet.", "Leonard Norman Cohen was a Canadian novelist.", "Leonard Norman Cohen was a Canadian painter."]
+ ]},
+ {"id": "4590422471265833514", "sentences": [
+   ["On Earth, Ivan's Ecto-Morphicons are completely unearthed.", "Ivan unleashes the Ecto-Morphicons on Angel Grove.", "Ivan orders the parents to commit suicide at the construction site.", "Fred, Bulk, Skull and the other kids head to the construction site to save their parents.", "The Rangers return with their new animal-themed Ninja Zords.", "The Rangers destroy one of Ivan's Ecto-Morphicons.", "Ivan takes control of the other Ecto-Morphicon.", "Ivan battles the Rangers himself.", "The Rangers lead Ivan into space, right into the path of Ryan's Comet.", "Ryan's Comet destroys Ivan.", "Ivan's destruction breaks the hypnosis.", "The parents are reunited with their children.", "The Rangers use the Great Power to restore the Command Center.", "The Rangers use the Great Power to resurrect Zordon."]
+ ]},
+ {"id": "5a7b88165542997c3ec971fe", "sentences": [
+   ["And There's More is a comedy sketch show.", "And There's More stars Jimmy Cricket.", "And There's More was produced by Central Independent Television.", "And There's More was produced for ITV.", "And There's More was produced from 1985 till 1988."],
+   ["The person described in this passage currently lives with his family in Rochdale, North West England.", "The person described in this passage currently lives in Rochdale.", "Rochdale is in North West England."]
+ ]},
+ {"id": "5adfed5e55429942ec259b92", "sentences": [
+   ["Bumble and bumble Products, LLC is one of 27 brands.", "The 27 brands are owned by Estée Lauder Companies, Inc.", "Bumble and bumble Products, LLC is owned by Estée Lauder Companies, Inc."],
+   ["Estée Lauder Companies, Inc. owns a diverse portfolio of brands.", "The brand portfolio is distributed internationally through retail channels.", "The brand portfolio is distributed internationally through digital commerce.", "Estée Lauder Companies, Inc. has its headquarters in Midtown Manhattan, New York City."]
+ ]},
+ {"id": "5a74a62b55429916b01641a0", "sentences": [
+   ["Jean-François André Clervoy was born on 19 November 1958.", "Jean-François André Clervoy is a French engineer.", "Jean-François André Clervoy is a CNES astronaut.", "Jean-François André Clervoy is an ESA astronaut."],
+   ["Prof. Dr. Ulrich Hans Walter was born on February 9, 1954.", "Prof. Dr. Ulrich Hans Walter is a German physicist.", "Prof. Dr. Ulrich Hans Walter is a German engineer.", "Prof. Dr. Ulrich Hans Walter is a former DFVLR astronaut."]
+ ]},
+ {"id": "5ab29c24554299449642c932", "sentences": [
+   ["Giuseppe Fortunino Francesco Verdi was born on 9 or 10 October 1813.", "Giuseppe Fortunino Francesco Verdi died on 27 January 1901.", "Giuseppe Fortunino Francesco Verdi was an Italian opera composer."],
+   ["Charles Louis Ambroise Thomas was born on 5 August 1811.", "Charles Louis Ambroise Thomas died on 12 February 1896.", "Charles Louis Ambroise Thomas was a French composer.", "Charles Louis Ambroise Thomas is best known for his opera 'Mignon' (1866).", "Charles Louis Ambroise Thomas is best known for his opera 'Hamlet' (1868).", "The opera 'Hamlet' (1868) is after Shakespeare.", "Charles Louis Ambroise Thomas is best known as Director of the Conservatoire de Paris.", "Charles Louis Ambroise Thomas was Director of the Conservatoire de Paris from 1871 till his death."]
+ ]}
+]

@@ -1,0 +1,79 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "-7232598118423691501",
+   "sentences": [
+    "Simplified reaction : C H O ( s ) + 6 O ( g ) → 6 CO ( g ) + 6 H O ( l ) + heat ΔG = − 2880 kJ per mol of C H O"
+   ]
+  },
+  {
+   "id": "5ade286e5542997c77aded81",
+   "sentences": [
+    "Catfish and the Bottlemen are a British rock band, formed in Llandudno, Wales in 2007.",
+    "The Lumineers are an American folk rock/Americana band based in Denver, Colorado.",
+    " Schultz and Fraites began writing and performing together in Ramsey, New Jersey in 2005.",
+    " The Lumineers emerged as one of the most popular folk rock/Americana artists during the revival of those genres and their growing popularity in the 2010s."
+   ]
+  },
+  {
+   "id": "multihop-rag-1846",
+   "sentences": [
+    "The feature is currently available in France, Germany, Japan, the U.K. and the U.S., with plans for further expansion.",
+    "LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."
+   ]
+  },
+  {
+   "id": "-8462578313793667601",
+   "sentences": [
+    "The original Princess Maru incarnation of the character made her cinematic debut in the 2017 film Wonder Woman , portrayed by Spanish actress Elena Anaya .",
+    "Doctor Poison appears in the DC Extended Universe film Wonder Woman ( 2017 ) , portrayed by Elena Anaya . In this adaptation , her identity is Isabel Maru , a Spanish chemist recruited by General Erich Ludendorff to create chemical weapons for the German army . Due to facial disfigurement , she wears a ceramic mask over the left side of her face . It marks the character 's first live action appearance , although the setting is World War I rather than the World War II setting of the comic books . When Steve Trevor steals a book of Doctor Maru 's notes on her new chemical weapons that would render the gas masks useless against them , he crash - lands on Themyscira during his escape , which alerts Diana to the current war . She initially believes that Ares is directly responsible for the war , but later learns that all he did was provide a few ideas for the weapons to the likes of Maru while the decision to use the weapons was still the choice of the humans themselves . Ares attempts to sway Diana to his point of view by offering her a chance to kill Maru for her sins and part in the war , but Diana rejects his offer upon realizing of Trevor 's sacrifice that inspires her to recognize that she must accept humanity for its flaws rather than condemn it for not being perfect . This leads Diana to spare Maru out of mercy , who then flees ."
+   ]
+  },
+  {
+   "id": "8144663807018769234",
+   "sentences": [
+    "Spektor wrote and recorded the main title theme song , `` You 've Got Time '' , for the Netflix Original series Orange Is the New Black , which premiered in July 2013 . It was nominated in the Best Song Written for Visual Media category at the 56th Annual Grammy Awards .",
+    "Regina wrote and recorded `` You 've Got Time '' to be the theme song for the Netflix Original Series Orange is the New Black which premiered in 2013 . Spektor was approached by the show 's creator , Jenji Kohan , to create the opening number ."
+   ]
+  },
+  {
+   "id": "multihop-rag-970",
+   "sentences": [
+    "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports.",
+    "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "multihop-rag-983",
+   "sentences": [
+    "But “all of that, all of it, was built on lies,” Rehn declared to the jury.",
+    "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-2111",
+   "sentences": [
+    "For all the other benefits they get from Android, Google could solve this problem today if they wanted to.",
+    "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "5abced075542993a06baf9ac",
+   "sentences": [
+    " The show originally ran from 7 September 1977 to 20 November 1995, and was hosted by Gordon Burns and usually broadcast on the ITV network on Mondays at 7pm.",
+    " He was the host of \"The Krypton Factor\" for its original 18-year run (1977–1995) and was the chief anchorman for the BBC regional news programme \"North West Tonight\" from January 1997 to October 2011."
+   ]
+  },
+  {
+   "id": "-3916314455221861524",
+   "sentences": [
+    "People 's Postcode Lottery has a number of celebrity `` ambassadors '' . In March 2018 , these included David Attenborough , Clare Balding , Brian Blessed , Judi Dench , Shobna Gulati , Tim Healy , Stephen Jardine , Ellen MacArthur , Aggie MacKenzie , Carey Mulligan , John Stapleton and Emma Thompson . Fiona Phillips became an ambassador for People 's Postcode Lottery at the end of 2012 , leading the organisation 's DRTV campaigns ."
+   ]
+  }
+ ]
+}

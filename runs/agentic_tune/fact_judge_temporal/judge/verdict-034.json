@@ -1,0 +1,36 @@
+[
+  {"id": "e73a4bdd7729647c", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [
+      {"item": 9, "quote": "Bellshaw never quite said it, but the DOJ’s implication seemed to be that, essentially, Google is a privacy menace anathema to everything Apple believes is important to its users, but Apple gives it a central place in its platform because Google pays it so handsomely."}
+    ]},
+    {"fact": "0.1", "status": "stated", "evidence": [
+      {"item": 10, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports."},
+      {"item": 5, "quote": "We’re nearly two months into the Justice Department’s landmark antitrust case against Google"}
+    ]},
+    {"fact": "0.2", "status": "stated", "evidence": [
+      {"item": 10, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports."},
+      {"item": 5, "quote": "We’re nearly two months into the Justice Department’s landmark antitrust case against Google"}
+    ]},
+    {"fact": "0.3", "status": "stated", "evidence": [
+      {"item": 3, "quote": "The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering"},
+      {"item": 5, "quote": "We’re nearly two months into the Justice Department’s landmark antitrust case against Google"}
+    ]},
+    {"fact": "0.4", "status": "stated", "evidence": [
+      {"item": 10, "quote": "the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}
+    ]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [
+      {"item": 4, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}
+    ]},
+    {"fact": "2.1", "status": "stated", "evidence": [
+      {"item": 4, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}
+    ]},
+    {"fact": "2.2", "status": "stated", "evidence": [
+      {"item": 4, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}
+    ]},
+    {"fact": "2.3", "status": "stated", "evidence": [
+      {"item": 4, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}
+    ]}
+  ]}
+]

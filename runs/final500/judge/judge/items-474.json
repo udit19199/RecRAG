@@ -1,0 +1,412 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "b6b1f20201e50323",
+   "gold": [
+    {
+     "sentence": " After the Blackhawks jumped to an early 4–1 lead in the first game of the series, Mario Lemieux and the Penguins came back to win the game, sweep the series in four games, and win their second consecutive and second overall Stanley Cup.",
+     "facts": {
+      "0.0": "The Blackhawks jumped to an early 4–1 lead in the first game of the series.",
+      "0.1": "Mario Lemieux and the Penguins came back to win the first game of the series.",
+      "0.2": "Mario Lemieux and the Penguins swept the series in four games.",
+      "0.3": "The Penguins won their second consecutive Stanley Cup.",
+      "0.4": "The Penguins won their second overall Stanley Cup."
+     }
+    },
+    {
+     "sentence": "Mario Lemieux, OC, CQ ( ; ] ; born October 5, 1965) is a Canadian former professional ice hockey player and current owner of the Pittsburgh Penguins team.",
+     "facts": {
+      "1.0": "Mario Lemieux was born on October 5, 1965.",
+      "1.1": "Mario Lemieux has the honorifics OC and CQ.",
+      "1.2": "Mario Lemieux is a Canadian.",
+      "1.3": "Mario Lemieux is a former professional ice hockey player.",
+      "1.4": "Mario Lemieux is the current owner of the Pittsburgh Penguins team."
+     }
+    }
+   ],
+   "items": [
+    "1984 Stanley Cup Finals\nThe 1984 Stanley Cup Final was held between the Edmonton Oilers and the then-defending champion New York Islanders.\n\n The Islanders had swept the Oilers in four straight games to win the Cup.\n\n In 1984, the Islanders were seeking their fifth consecutive Stanley Cup championship, but the upstart Oilers would win the best-of-seven series four games to one to win their first Stanley Cup, becoming the third post-1967 expansion team and first former World Hockey Association team to win the Cup, and also the first team based west of Chicago to win the Cup since the WCHL's Victoria Cougars became the last non-NHL team to win it in .\n\n It was also the fifth straight Finals of teams that joined the NHL in 1967 or later and a rematch of the 1983 Finals—a Stanley Cup Finals rematch would not happen again until the Finals.\n\n s of 2017 , the Islanders' four consecutive Cup wins (, , , 1983) and their appearance in the 1984 Cup Finals is an NHL record of 19 consecutive playoff series wins that currently stands unbroken.",
+    "1917–18 Toronto Hockey Club season\nThe 1917–18 Toronto Hockey Club season was the first season of the new \"Toronto\" franchise in the newly organized National Hockey League (NHL).\n\n The team was intended as a 'temporary' franchise, operating without an official club nickname (the press would dub them the \"Blue Shirts\" or \"Torontos\", and in 1948 the NHL would engrave \"Toronto Arenas\" on the Stanley Cup as the 1917–18 winner) and without a formal organization separate from the Toronto Arena Company that managed the Arena Gardens.\n\n Despite this, the team came together to win the first NHL Championship, competing against existing teams that had transferred directly from the National Hockey Association (NHA).\n\n Toronto would go on to win the Stanley Cup by defeating the Pacific Coast Hockey Association champion Vancouver Millionaires – the first Stanley Cup for an NHL team and the second Cup for a Toronto team after the Toronto Blueshirts' victory in the 1913–14 season of the NHA.",
+    "Mike Babcock\nMichael \"Mike\" Babcock Jr. (born April 29, 1963) is a Canadian professional ice hockey head coach, currently serving as head coach of the Toronto Maple Leafs of the National Hockey League (NHL).\n\n He previously spent 10 seasons as head coach of the Detroit Red Wings, winning the Stanley Cup with them in 2008 and helping them to the Stanley Cup Playoffs every year during his tenure.\n\n He holds the record as the coach with the most wins in Red Wings history, surpassing that of Jack Adams.\n\n He has also served as head coach of the Mighty Ducks of Anaheim, whom he helped to the 2003 Stanley Cup Finals.",
+    "History of the National Hockey League\nThe history of the National Hockey League begins with the end of its predecessor league, the National Hockey Association (NHA), in 1917.\n\n After unsuccessfully attempting to resolve disputes with Eddie Livingstone, owner of the Toronto Blueshirts, executives of the three other NHA franchises suspended the NHA, and formed the National Hockey League (NHL), replacing the Livingstone team with a temporary team in Toronto, the Arenas.\n\n The NHL's first quarter-century saw the league compete against two rival major leagues—the Pacific Coast Hockey Association and Western Canada Hockey League—for players and the Stanley Cup.\n\n The NHL first expanded into the United States in 1924 with the founding of the Boston Bruins, and by 1926 consisted of ten teams in Ontario, Quebec, the Great Lakes region, and the Northeastern United States.\n\n At the same time, the NHL emerged as the only major league and the sole competitor for the Stanley Cup; in 1947, the NHL completed a deal with the Stanley Cup trustees to gain full control of the Cup.\n\n The NHL's footprint spread across Canada as Foster Hewitt's radio broadcasts were heard coast-to-coast starting in 1933.",
+    "1983 Stanley Cup Finals\nThe 1983 Stanley Cup Finals was contested by the Edmonton Oilers in their first-ever Finals appearance and the defending champion New York Islanders, in their fourth, and fourth consecutive, Finals appearance.\n\n The Islanders would win the best-of-seven series four games to none, to win their fourth-straight and fourth-overall Stanley Cup.\n\n It was also the fourth straight Finals of post-1967 expansion teams, and the first involving a former World Hockey Association (WHA) team.\n\n This is also the most recent time that a defending Stanley Cup champion has won the cup four years in a row, and also the first (and, to date, only) time a North American professional sports team has won four consecutive titles in any league competition with more than twenty teams.\n\n Since 1983, no professional sports team on the continent has managed to win four straight championships and no NHL team has won more than two consecutive championships (most recently the Pittsburgh Penguins in and ).",
+    "1998 Stanley Cup Finals\nDetroit coach Scotty Bowman won his eighth Stanley Cup in that capacity (having previously done so with the Montreal Canadiens in , , , , and , the Pittsburgh Penguins in , and the Wings the previous year), tying him with former Canadiens coach Toe Blake for the record of most Cups won by a coach (which he would break when he helped the Red Wings win the 2002 Cup).",
+    "1992 Stanley Cup Finals\nThe 1992 Stanley Cup Finals NHL championship series was contested by the Prince of Wales Conference and defending Stanley Cup champion Pittsburgh Penguins and the Clarence Campbell Conference champion Chicago Blackhawks.\n\n The Blackhawks were appearing in their first Finals since .\n\n After the Blackhawks jumped to an early 4–1 lead in the first game of the series, Mario Lemieux and the Penguins came back to win the game, sweep the series in four games, and win their second consecutive and second overall Stanley Cup.\n\n It was the 99th year of the Stanley Cup, and the first to extend into the month of June.\n\n It was the last final for Chicago Stadium as it closed in 1994.",
+    "Gordon Haidy\nGordon Adam \"Gord\" Haidy (April 11, 1928 – October 6, 2004) was a professional ice hockey player who played right wing, shooting right.\n\n He was born in Windsor, Ontario.\n\n Gordon played only one game, in the semi-finals, for the Stanley Cup champion Detroit Red Wings in 1950.\n\n Haidy's name was not included on the Stanley Cup, because he was not a regular member of the Red Wings.\n\n He did qualify to be on the cup, however, so the NHL credits him with winning one Stanley Cup.\n\n Haidy never played another game in the NHL but played for several more years in the minors and at the senior hockey level for the Ontario Hockey League.\n\n Haidy is one of only three players who played their only NHL game in the playoffs for a Stanley Cup winning team (See Doug McKay, Chris Hayes).\n\n Haidy and his teammate Doug McKay accomplished the same feat of the winning both the Calder Cup and Stanley Cup in the same season.",
+    "Mario Lemieux\nMario Lemieux, OC, CQ ( ; ] ; born October 5, 1965) is a Canadian former professional ice hockey player and current owner of the Pittsburgh Penguins team.\n\n He played parts of 17 seasons in the National Hockey League's (NHL) with the Pittsburgh Penguins, between 1984 and 2006.\n\n Dubbed \"The Magnificent One\" or \"Le Magnifique\" (as well as \"Super Mario\"), he is widely acknowledged to have been one of the best players of all time.\n\n He is the only player to score one goal in each of the five possible situations in a single NHL game, a feat he accomplished in 1988.\n\n A gifted playmaker and fast skater despite his large size, Lemieux often beat defencemen with fakes and dekes.",
+    "1998 Stanley Cup Finals\nThe 1998 Stanley Cup Finals was the championship series of the National Hockey League's (NHL) 1997–1998 season, and the culmination of the 1998 Stanley Cup playoffs.\n\n It was contested by the Western Conference champion and defending Stanley Cup champion Detroit Red Wings and the Eastern Conference champion Washington Capitals.\n\n It was the 105th year of the Stanley Cup being contested.\n\n The series was the Capitals' first appearance in a Stanley Cup Final since the franchise's inception in 1974.\n\n The Red Wings won the series for the second year in a row, four games to none.\n\n It was the Wings' ninth Stanley Cup, and the most recent time when a Finals concluded with a sweep (as of 2017).\n\n This was also the last time until that a Stanley Cup Finals ended after an NBA Finals in the same season had concluded."
+   ]
+  },
+  {
+   "id": "dbc192e65b93377f",
+   "gold": [
+    {
+     "sentence": "Blinding Edge Pictures is an American film production company, founded in 2000 by M. Night Shyamalan, which is known for producing films written and directed by Shyamalan like \"Unbreakable\" (2000), \"Signs\" (2002), \"The Village\" (2004), \"The Happening\" (2008), \"After Earth\" (2013), \"The Visit\" (2015) and \"Split\" (2017).",
+     "facts": {
+      "0.0": "Blinding Edge Pictures is an American film production company.",
+      "0.1": "Blinding Edge Pictures was founded in 2000 by M. Night Shyamalan.",
+      "0.2": "Blinding Edge Pictures is known for producing films written and directed by Shyamalan.",
+      "0.3": "Blinding Edge Pictures produced Unbreakable (2000), written and directed by Shyamalan.",
+      "0.4": "Blinding Edge Pictures produced Signs (2002), written and directed by Shyamalan.",
+      "0.5": "Blinding Edge Pictures produced The Village (2004), written and directed by Shyamalan.",
+      "0.6": "Blinding Edge Pictures produced The Happening (2008), written and directed by Shyamalan.",
+      "0.7": "Blinding Edge Pictures produced After Earth (2013), written and directed by Shyamalan.",
+      "0.8": "Blinding Edge Pictures produced The Visit (2015), written and directed by Shyamalan.",
+      "0.9": "Blinding Edge Pictures produced Split (2017), written and directed by Shyamalan."
+     }
+    },
+    {
+     "sentence": "Unbreakable is a 2000 American superhero thriller film written, produced, and directed by M. Night Shyamalan, and starring Bruce Willis and Samuel L. Jackson, alongside Robin Wright and Spencer Treat Clark.",
+     "facts": {
+      "1.0": "Unbreakable is a 2000 American superhero thriller film.",
+      "1.1": "Unbreakable was written by M. Night Shyamalan.",
+      "1.2": "Unbreakable was produced by M. Night Shyamalan.",
+      "1.3": "Unbreakable was directed by M. Night Shyamalan.",
+      "1.4": "Unbreakable stars Bruce Willis.",
+      "1.5": "Unbreakable stars Samuel L. Jackson.",
+      "1.6": "Robin Wright is in the cast of Unbreakable.",
+      "1.7": "Spencer Treat Clark is in the cast of Unbreakable."
+     }
+    }
+   ],
+   "items": [
+    "Striking Distance\nStriking Distance is a 1993 American action thriller film starring Bruce Willis as Pittsburgh Police homicide detective Thomas Hardy.\n\n The film co-stars Sarah Jessica Parker, Dennis Farina, and Tom Sizemore.\n\n It was directed by Rowdy Herrington and written by Herrington and Marty Kaplan.\n\n The film was shot on location throughout Pittsburgh; its early title was \"Three Rivers\".",
+    "Die Hard with a Vengeance\nDie Hard with a Vengeance is a 1995 American action film and the third in the \"Die Hard\" film series.\n\n It was co-produced and directed by John McTiernan (who directed \"Die Hard\"), written by Jonathan Hensleigh, and stars Bruce Willis as New York City Police Department Lieutenant John McClane, Samuel L. Jackson as McClane's reluctant partner Zeus Carver, and Jeremy Irons as Simon Gruber.\n\n It was released on May 19, 1995, five years after \"Die Hard 2\", becoming the highest-grossing film at the worldwide box-office that year, but received mixed reviews.\n\n It was followed by \"Live Free or Die Hard\" and \"A Good Day to Die Hard\" in 2007 and 2013, respectively.",
+    "Blinding Edge Pictures\nBlinding Edge Pictures is an American film production company, founded in 2000 by M. Night Shyamalan, which is known for producing films written and directed by Shyamalan like \"Unbreakable\" (2000), \"Signs\" (2002), \"The Village\" (2004), \"The Happening\" (2008), \"After Earth\" (2013), \"The Visit\" (2015) and \"Split\" (2017).\n\n In 2015, the company released its first television series \"Wayward Pines\".",
+    "Titan A.E.\nTitan A.E. is a 2000 American animated science fiction film directed by Don Bluth and Gary Goldman.\n\n Its title refers to the spacecraft central to the plot, with \"A.E.\" meaning \"After Earth\".\n\n It stars Matt Damon, Bill Pullman, John Leguizamo, Nathan Lane, Janeane Garofalo and Drew Barrymore.\n\n The film's animation technique combines traditional hand-drawn animation and extensive use of computer generated imagery.\n\n Its working title was \"Planet Ice\".\n\n It was theatrically released on June 16, 2000, by 20th Century Fox and was the final film for Fox Animation Studios.\n\n The film grossed $36.8 million on a $75–$90 million budget, making a $100-million loss for the studio.",
+    "Last Man Standing (1996 film)\nLast Man Standing is a 1996 American action thriller film written and directed by Walter Hill and starring Bruce Willis, Christopher Walken and Bruce Dern.\n\n It is a credited remake of Akira Kurosawa's \"Yojimbo\".",
+    "Unbreakable (film)\nUnbreakable is a 2000 American superhero thriller film written, produced, and directed by M. Night Shyamalan, and starring Bruce Willis and Samuel L. Jackson, alongside Robin Wright and Spencer Treat Clark.\n\n The movie is the first installment in a trilogy.\n\n In \"Unbreakable\", a security guard named David Dunn survives a horrific train crash.\n\n After the incident, with the help of a manipulative disabled comic book shop owner named Elijah Price, he learns that he possesses superhuman powers.\n\n As Dunn explores and reluctantly confronts his powers while trying to navigate a difficult family life, he begins to fight crime and learns the true nature of Elijah Price.",
+    "Cop Out (2010 film)\nCop Out is a 2010 American buddy cop action-comedy film directed and edited by Kevin Smith, written by Mark and Robb Cullen and starring Bruce Willis, Tracy Morgan, Kevin Pollak and Seann William Scott.\n\n The plot revolves around two veteran NYPD partners (Willis and Morgan) on the trail of a stolen, rare, mint-condition baseball card who find themselves up against a relentless, memorabilia-obsessed bloodthirsty gangster.\n\n This is the first film that Smith directed that he did not also write.\n\n Upon its release, the film was met with negative reviews by critics and underperformed at the box office.\n\n It is nevertheless Kevin Smith's highest grossing film.",
+    "In Country\nIn Country is a 1989 American drama film produced and directed by Norman Jewison, starring Bruce Willis and Emily Lloyd.\n\n The screenplay by Frank Pierson and Cynthia Cidre was based on the novel by Bobbie Ann Mason.\n\n The original music score was composed by James Horner.\n\n Willis earned a best supporting actor Golden Globe nomination for his role.",
+    "Signs (film)\nSigns is a 2002 American science fiction horror film written and directed by M. Night Shyamalan and executive produced by Shyamalan, Frank Marshall, Kathleen Kennedy and Sam Mercer.\n\n A joint collective effort to commit to the film's production was made by Blinding Edge Pictures and The Kennedy/Marshall Company.\n\n It was commercially distributed by Touchstone Pictures theatrically, and by Touchstone Home Entertainment in home media format.\n\n Its story focuses on a former Episcopal priest named Graham Hess, played by Mel Gibson, who discovers a series of crop circles in his cornfield.\n\n Hess slowly discovers that the phenomena are a result of extraterrestrial life.\n\n It also stars Joaquin Phoenix, Rory Culkin, and Abigail Breslin.\n\n \"Signs\" explores faith, kinship, and extraterrestrials.",
+    "Mercury Rising\nMercury Rising is a 1998 American political action thriller film starring Bruce Willis and Alec Baldwin.\n\n Directed by Harold Becker, the movie is based on Ryne Douglas Pearson's 1996 novel originally published as \"Simple Simon\".\n\n Willis plays Art Jeffries, an undercover FBI agent who protects a 9-year-old boy with autism who is targeted by government assassins after he cracks a top secret government code."
+   ]
+  },
+  {
+   "id": "630c121cbd5de664",
+   "gold": [
+    {
+     "sentence": "The Nassau Herald is a weekly newspaper serving the Five Towns communities of Nassau County – Lawrence, Woodmere, Hewlett, Cedarhurst, Inwood and Atlantic Beach.",
+     "facts": {
+      "0.0": "The Nassau Herald is a weekly newspaper.",
+      "0.1": "The Nassau Herald serves the Five Towns communities of Nassau County.",
+      "0.2": "The Five Towns communities of Nassau County are Lawrence, Woodmere, Hewlett, Cedarhurst, Inwood, and Atlantic Beach."
+     }
+    },
+    {
+     "sentence": "Lawrence is a village in Nassau County, New York in the United States.",
+     "facts": {
+      "1.0": "Lawrence is a village.",
+      "1.1": "Lawrence is in Nassau County, New York, United States."
+     }
+    },
+    {
+     "sentence": " As of the 2010 United States Census, the village population was 6,483.",
+     "facts": {
+      "2.0": "As of the 2010 United States Census, the population of the village of Lawrence was 6,483."
+     }
+    }
+   ],
+   "items": [
+    "Lawrence, Nassau County, New York\nLawrence is a village in Nassau County, New York in the United States.\n\n As of the 2010 United States Census, the village population was 6,483.",
+    "Old Country Road\nOld Country Road is a major east–west thoroughfare through central Nassau County and extending into western Suffolk County on Long Island, New York.\n\n It serves many of the major shopping centers in central Nassau County including Roosevelt Field Mall.\n\n The road also forms part of the border between the towns of Hempstead and North Hempstead.\n\n In Nassau County, Old Country Road is county-maintained as the unsigned County Route 25 (CR 25) west of Round Swamp Road.",
+    "Newshold\nNewshold SGPS is a Luso-Angolan media group, owned by Pineview Overseas, a Panama-based company, whose shareholders are powerful Angolan figures including tycoon Alvaro Sobrinho, who represents the Madalena family in this group.\n\n The company headquarters is in Lisbon.\n\n It has a share of 15.08% in Cofina, which owns the daily sales leader, the \"Correio da Manhã\", the largest-circulation Lisbon based tabloid.\n\n Newshold controls 97% of \"Sol\", Portugal's third largest weekly newspaper, fully owns daily newspaper \"i\" and owns minor stakes in two leading magazines, \"Visão\" and \"Expresso\".",
+    "Anton Media Group\nAnton Media Group, formerly Anton Community Newspapers, and also known by its legal name Long Island Community Newspapers, Inc. is a print media company based in Mineola, NY on Long Island in Nassau County and produces 17 weekly newspapers in Nassau County as well as \"Long Island Weekly\" and special sections such as Healthy Living, Camp & School, and Dining Guides.\n\n Anton Community Newspapers is one of the largest privately owned newspaper companies in New York State.",
+    "Great Neck School District\nThe Great Neck School District is a comprehensive community public school district primarily serving students in Great Neck, New York.\n\n It also serves students in some parts of Manhasset and New Hyde Park.\n\n It is Union Free School District Number 7 in the Town of North Hempstead, Nassau County, New York, United States, on Long Island.",
+    "Nassau Herald\nThe Nassau Herald is a weekly newspaper serving the Five Towns communities of Nassau County – Lawrence, Woodmere, Hewlett, Cedarhurst, Inwood and Atlantic Beach.\n\n It is part of the Long Island Herald newspaper chain, which includes The Jewish Star and The Oyster Bay Guardian is owned by Richner Communications, and covers Nassau County, New York.",
+    "New York State Route 108\nNew York State Route 108 (NY 108) is a 1.72 mi north–south state highway located on the Suffolk County side of the Suffolk–Nassau county line on Long Island, New York, in the United States.\n\n It is a spur route connecting NY 25A in Cold Spring Harbor to the Cold Spring Harbor station on the Long Island Rail Road's Port Jefferson Branch via Harbor Road.\n\n Harbor Road terminates at an intersection with Woodbury Road, on the Nassau County line, which carries County Route 11 to the east and unsigned County Route 12 to the west.\n\n NY 108, assigned in the early 1930s, is the shortest state highway on Long Island.",
+    "Outer barrier\nThe outer barrier, also known as the Long Island and New York City barrier islands, refers to the string of barrier islands that divide the lagoons south of Long Island, New York from the Atlantic Ocean.\n\n These islands include Coney Island, Long Beach Barrier Island, Island Park, Jones Beach Island, Fire Island and Westhampton Island.\n\n The outer barrier extends 75 mi along the South Shore of Long Island, from Rockaway Beach on the New York City/Nassau County border from Long Beach Barrier Islands' western edge, to Suffolk County's east end of Shinnecock Bay.",
+    "Floral Park, New York\nFloral Park is an incorporated village in Nassau County, New York, United States, on Long Island.\n\n The neighborhood of Floral Park in the New York City borough of Queens, is adjacent to the village.\n\n The village is at the western border of Nassau County, and is located mainly in the Town of Hempstead, while the section north of Jericho Turnpike is within the Town of North Hempstead.\n\n The population as of the US Census of 2010 is 15,863.",
+    "Great Neck, New York\nGreat Neck is a region on Long Island, New York, that covers a peninsula on the North Shore of Long Island, which includes the villages of Great Neck, Great Neck Estates, Great Neck Plaza, and others, as well as an area south of the peninsula near Lake Success and the border territory of Queens.\n\n The incorporated village of Great Neck had a population of 9,989 at the 2010 census, while the larger Great Neck area comprises a residential community of some 40,000 people in nine villages and hamlets in the town of North Hempstead, of which Great Neck is the northwestern quadrant.\n\n Great Neck has five ZIP Codes (11020–11024), and one school district."
+   ]
+  },
+  {
+   "id": "9fdc1a41b74c9da5",
+   "gold": [
+    {
+     "sentence": " It was launched in March 1994 by Millivres Ltd, under the editorship of Frances Williams and is now published by Twin Media Group, which is owned by Silke Bader and Linda Riley.",
+     "facts": {
+      "0.0": "The publication was launched in March 1994.",
+      "0.1": "The publication was launched by Millivres Ltd.",
+      "0.2": "The publication was launched under the editorship of Frances Williams.",
+      "0.3": "The publication is now published by Twin Media Group.",
+      "0.4": "Twin Media Group is owned by Silke Bader.",
+      "0.5": "Twin Media Group is owned by Linda Riley."
+     }
+    },
+    {
+     "sentence": "Elle is a worldwide lifestyle magazine of French origin that focuses on fashion, beauty, health, and entertainment.",
+     "facts": {
+      "1.0": "Elle is a worldwide lifestyle magazine.",
+      "1.1": "Elle is of French origin.",
+      "1.2": "Elle focuses on fashion.",
+      "1.3": "Elle focuses on beauty.",
+      "1.4": "Elle focuses on health.",
+      "1.5": "Elle focuses on entertainment."
+     }
+    },
+    {
+     "sentence": " \"Elle\" is also the world's best-selling fashion magazine.",
+     "facts": {
+      "2.0": "Elle is also the world's best-selling fashion magazine."
+     }
+    },
+    {
+     "sentence": " It was founded by Pierre Lazareff and his wife Hélène Gordon in 1945.",
+     "facts": {
+      "3.0": "Elle was founded by Pierre Lazareff.",
+      "3.1": "Elle was founded by Hélène Gordon, the wife of Pierre Lazareff.",
+      "3.2": "Elle was founded in 1945."
+     }
+    }
+   ],
+   "items": [
+    "VIVmag\nVIVmag is one of the earliest exclusively digital, interactive women's lifestyle magazines.\n\n Launched in 2006 and backed by Canadian industrialist David Harrison Gilmour (the founder of FIJI Water LLC), the bimonthly magazine is distributed by Zinio Systems, Inc.\n\n The first issue appeared in January-February 2007.\n\n There is no print version.\n\n The paperless title can be viewed in most browsers or downloaded to your computer and read via the Zinio Reader.\n\n The magazine is based in Thousand Oaks, California.",
+    "Essence (magazine)\nEssence is a monthly magazine for African American women between the ages of 18 and 49.\n\n It is the only magazine that focuses on reaching an audience of black women, revolves around the black woman experience, and has remained for a long period of time.\n\n The magazine covers fashion, lifestyle and beauty, with an intimate girlfriend-to-girlfriend tone, and its slogan \"Fierce, Fun, and Fabulous\" suggests the magazine's goal of empowering African-American women.\n\n The topics the magazine discusses range from celebrities, to fashion, to point-of-view pieces addressing current issues in the African-American community.\n\n A number of its readers engage closely and personally with the publication, and it claims to be the magazine \"for and about Black women\".",
+    "Diva (magazine)\nDIVA is a leading lesbian magazine in the United Kingdom, published monthly.\n\n It was launched in March 1994 by Millivres Ltd, under the editorship of Frances Williams and is now published by Twin Media Group, which is owned by Silke Bader and Linda Riley.\n\n Silke Bader is also the publisher of Curve magazine in the USA and LOTL in Australia, and Linda Riley runs the European Diversity Awards and is the former publisher of g3 magazine in the UK.",
+    "The Fader\nThe Fader (stylized as The FADER) is a New York City-based music magazine launched in 1999 by Rob Stone and Jon Cohen, covering music, style and culture.\n\n It was the first print publication to be released on iTunes.",
+    "La Belle Assemblée\nLa Belle Assemblée (in full La Belle Assemblée or, Bell's Court and Fashionable Magazine Addressed Particularly to the Ladies) was a British women's magazine published from 1806 to 1837, founded by John Bell (1745–1831).",
+    "Esquire (magazine)\nEsquire is an American men's magazine, published by the Hearst Corporation in the United States.\n\n Founded in 1933, it flourished during the Great Depression under the guidance of founders Arnold Gingrich, David A. Smart and Henry L. Jackson.",
+    "Elle (magazine)\nElle is a worldwide lifestyle magazine of French origin that focuses on fashion, beauty, health, and entertainment.\n\n \"Elle\" is also the world's best-selling fashion magazine.\n\n It was founded by Pierre Lazareff and his wife Hélène Gordon in 1945.\n\n The title, in French, means \"she\" or \"her\".",
+    "Girls' Life (magazine)\nGirls' Life is an American teen magazine.\n\n It was launched in 1994 by Monarch Services.\n\n The magazine is headquartered in Baltimore, Maryland.",
+    "Shape (magazine)\nShape is a monthly English language fitness magazine started by Weider Publications in 1981, founded by Christine MacIntyre (a pioneer in women's free weight fitness) and became the number one women's fitness magazine.\n\n At that time, Weider Enterprises consisted primarily of the bodybuilding magazine \"Muscle & Fitness\".\n\n Joe Weider and Christine MacIntyre had differing views of how to present \"Shape\", Weider endorsing a less journalistic and more commercial approach to articles, MacIntyre endorsing a more academic, doctor-based magazine.\n\n Weider also endorsed a sexier approach to editorial while MacIntyre endorsed a healthier look for women, eschewing sexiness in the models and the copy.\n\n MacIntyre largely won that battle, editing a magazine that required that every byline have an advanced medical degree, that cover models should look healthy rather than sexy, and that sexist language be avoided.\n\n Christine MacIntyre was the editor-in-chief until her death in 1988.\n\n Tara Kraft is the current editor-in-chief.\n\n \"Shape\" found a readership based on that formula.",
+    "Golf Digest\nGolf Digest is a monthly golf magazine published by Condé Nast Publications in the United States.\n\n It is a generalist golf publication covering recreational golf and men's and women's competitive golf.\n\n Condé Nast Publications also publishes the more specialized \"Golf for Women\", \"Golf World\" and \"Golf World Business\".\n\n The magazine started in 1950, and was sold to The New York Times Company in 1969.\n\n The Times company sold their magazine division to Condé Nast in 2001.\n\n The headquarters of \"Golf Digest\" is in Des Moines, Iowa."
+   ]
+  },
+  {
+   "id": "1cf460b72e6d4955",
+   "gold": [
+    {
+     "sentence": "Bank Street () is a short street in Central, Hong Kong.",
+     "facts": {
+      "0.0": "Bank Street is a short street.",
+      "0.1": "Bank Street is located in Central, Hong Kong."
+     }
+    },
+    {
+     "sentence": " It links Des Voeux Road Central to Queen's Road Central.",
+     "facts": {
+      "1.0": "Bank Street links Des Voeux Road Central to Queen's Road Central."
+     }
+    },
+    {
+     "sentence": " It is named after its location between HSBC Building and the Bank of China Building, the former headquarters of HSBC and Bank of China (Hong Kong) respectively.",
+     "facts": {
+      "2.0": "Bank Street is named after its location between the HSBC Building and the Bank of China Building.",
+      "2.1": "The HSBC Building was the former headquarters of HSBC.",
+      "2.2": "The Bank of China Building was the former headquarters of Bank of China (Hong Kong)."
+     }
+    },
+    {
+     "sentence": "HSBC Main Building () is a headquarters building of The Hongkong and Shanghai Banking Corporation, which is today a wholly owned subsidiary of London-based HSBC Holdings.",
+     "facts": {
+      "3.0": "HSBC Main Building is a headquarters building of The Hongkong and Shanghai Banking Corporation.",
+      "3.1": "The Hongkong and Shanghai Banking Corporation is today a wholly owned subsidiary of London-based HSBC Holdings."
+     }
+    }
+   ],
+   "items": [
+    "383 Madison Avenue\n383 Madison Avenue is an office building owned and occupied by JP Morgan Chase in New York City on a full block bound by Madison Avenue and Vanderbilt Avenue between East 46th and 47th Streets.\n\n Formerly known as the Bear Stearns Building, it housed the world headquarters of the now-defunct Bear Stearns from the building's completion until Bear's collapse and sale to JPMorgan Chase in 2008.\n\n The building now houses the New York offices for J.P. Morgan's investment banking division, which formerly occupied 277 Park Avenue.\n\n Both 383 Madison and 277 Park are adjacent to JPMorgan Chase's world headquarters at 270 Park Avenue.",
+    "Transportation Building\nThe Transportation Building is a 44-story office building located at 225 Broadway on the corner of Barclay Street in the Civic Center neighborhood of Lower Manhattan in New York City.\n\n It also carries the address 2-4 Barclay Street.\n\n It was built in 1927 and was designed by the architecture firm of York & Sawyer, in the Renaissance Revival style, using setbacks common to skyscrapers built after the adoption of the 1916 Zoning Resolution.\n\n It sits across Barclay Street from the Woolworth Building.",
+    "HSBC lions\nVarious headquarters and branch buildings of The Hongkong and Shanghai Banking Corporation and the HSBC Group, into which the Hongkong and Shanghai Banking Corporation has evolved, feature a pair of lion sculptures.\n\n The HSBC lions have become distinctive landmarks in their own right in Hong Kong and Shanghai respectively, with a further pair to be found in London.",
+    "270 Park Avenue\n270 Park Avenue (also known as the JPMorgan Chase Tower and formerly the Union Carbide Building) is a high-rise office building located in Midtown Manhattan, New York City.\n\n It was designed by Natalie de Blois for Skidmore, Owings & Merrill.",
+    "Bank Street (Hong Kong)\nBank Street () is a short street in Central, Hong Kong.\n\n It links Des Voeux Road Central to Queen's Road Central.\n\n It is named after its location between HSBC Building and the Bank of China Building, the former headquarters of HSBC and Bank of China (Hong Kong) respectively.",
+    "HSBC Building (Hong Kong)\nHSBC Main Building () is a headquarters building of The Hongkong and Shanghai Banking Corporation, which is today a wholly owned subsidiary of London-based HSBC Holdings.\n\n It is located along the southern side of Statue Square near the location of the old City Hall, Hong Kong (built in 1869, demolished in 1933).\n\n The previous HSBC building was built in 1935 and pulled down to make way for the current building.\n\n The address remains as 1 Queen's Road Central (the north facing side of the building was served by Des Voeux Road, which was seashore, making Queen's Road was the main entrance, in contrast to modern day that usually accessed the bank from Des Voeux Road).\n\n The building can be reached from Exit K of Central MTR Station and facing Statue Square.",
+    "Bank of Canton\nBank of Canton () was established in 1912 in Canton but registered as a British company in Hong Kong.\n\n This made it the first Chinese-owned bank in Hong Kong.\n\n At the time, all the other banks in Hong Kong were foreign, primarily British, including the locally incorporated but British-run Hongkong and Shanghai Banking Corporation.\n\n Security Pacific National Bank (SPNB) bought a majority share in Bank of Canton in 1971.\n\n In 1988, Security Pacific succeeded in wholly acquiriing Bank of Canton, which became Security Pacific Asia Bank.\n\n When Bank of America acquired Security Pacific Corporation in 1993 it changed Security Pacific Asia Bank’s name to Bank of America (Asia).\n\n China Construction Bank acquired Bank of America (Asia) in 2006.",
+    "HSBC\nHSBC Holdings PLC is a British multinational banking and financial services holding company, tracing its origin to a hong in Hong Kong.\n\n It is the world's seventh largest bank by total assets and the largest in Europe with total assets of US$2.374 trillion (as of December 2016).\n\n It was established in its present form in London in 1991 by The Hongkong and Shanghai Banking Corporation Limited to act as a new group holding company.\n\n The origins of the bank lie mainly in Hong Kong and to a lesser extent in Shanghai, where branches were first opened in 1865.\n\n The HSBC name is derived from the initials of the Hongkong and Shanghai Banking Corporation.\n\n The company was first formally incorporated in 1866.\n\n The company continues to see both the United Kingdom and Hong Kong as its \"home markets\".",
+    "200 West Street\n200 West Street is the global headquarters of the Goldman Sachs investment banking firm.\n\n The building is a 749 ft , 44-story building located on West Street, between Vesey and Murray Streets in Lower Manhattan.\n\n It is adjacent to the World Financial Center and the Conrad Hotel, the Verizon Building to the east across West Street, and diagonally opposite the World Trade Center.\n\n It is the only office building in Battery Park City north of the World Financial Center.",
+    "HSBC Building, the Bund\nThe HSBC Building (also known as the Municipal Government Building) is a six-floor neo-classical building in the Bund area of Shanghai, China.\n\n It served as the headquarters of the Shanghai branch of The Hongkong and Shanghai Banking Corporation from 1923 to 1955, and currently houses the Shanghai Pudong Development Bank.\n\n The building is situated at number 12, the Bund.\n\n Designed by the British architecture firm Palmer & Turner Architects and Surveyors, construction of the building lasted from 5 May 1921 to 23 June 1923."
+   ]
+  },
+  {
+   "id": "0d58fd86f531d1e3",
+   "gold": [
+    {
+     "sentence": "Darby O'Gill and the Little People is a 1959 Walt Disney Productions feature film starring Albert Sharpe, Janet Munro, Sean Connery and Jimmy O'Dea, in a tale about a wily Irishman and his battle of wits with leprechauns.",
+     "facts": {
+      "0.0": "Darby O'Gill and the Little People is a feature film.",
+      "0.1": "Darby O'Gill and the Little People was made by Walt Disney Productions.",
+      "0.2": "Darby O'Gill and the Little People was released in 1959.",
+      "0.3": "Darby O'Gill and the Little People stars Albert Sharpe.",
+      "0.4": "Darby O'Gill and the Little People stars Janet Munro.",
+      "0.5": "Darby O'Gill and the Little People stars Sean Connery.",
+      "0.6": "Darby O'Gill and the Little People stars Jimmy O'Dea.",
+      "0.7": "Darby O'Gill and the Little People tells a tale about a wily Irishman.",
+      "0.8": "The Irishman in Darby O'Gill and the Little People has a battle of wits with leprechauns."
+     }
+    },
+    {
+     "sentence": " Produced by Walt Disney Pictures, Aamir Khan Productions and UTV Motion Pictures, it stars Aamir Khan as the father.",
+     "facts": {
+      "1.0": "The film named in this sentence was produced by Walt Disney Pictures.",
+      "1.1": "The film named in this sentence was produced by Aamir Khan Productions.",
+      "1.2": "The film named in this sentence was produced by UTV Motion Pictures.",
+      "1.3": "Aamir Khan stars as the father in the film named in this sentence."
+     }
+    }
+   ],
+   "items": [
+    "Walt Disney's Treasury of Classic Tales\nWalt Disney's Treasury of Classic Tales is an American Sunday comic strip, which ran in newspapers from 13 July 1952 until 15 February 1987.\n\n Each story adapted a different Disney film, such as Darby O'Gill and the Little People, Peter Pan, or Davy Crockett.\n\n It was run in relatively few papers with 58 in 1957 and 55 in 1966 and was principally a vehicle for promoting new and re-released Disney films.",
+    "Walt Disney Studios Motion Pictures\nWalt Disney Studios Motion Pictures (formerly Buena Vista Pictures Distribution and Buena Vista Film Distribution Company) is an American film distributor owned by The Walt Disney Company.\n\n Established in 1953 as Buena Vista Film Distribution Company, the company handles theatrical distribution, marketing and promotion for films produced and released by the Walt Disney Studios, including Walt Disney Pictures, Walt Disney Animation Studios, Pixar Animation Studios, DisneyToon Studios, Marvel Studios, Lucasfilm, Disneynature, and Touchstone Pictures.\n\n The division took on its current name in late 2007, which before that had been Buena Vista Pictures Distribution since 1987.",
+    "Walt Disney Pictures\nWalt Disney Pictures, Inc. is an American film production company and a subsidiary of Walt Disney Studios, owned by The Walt Disney Company.\n\n The division is based at the Walt Disney Studios in Burbank, California, and is the main producer of live-action feature films within the Walt Disney Studios unit.\n\n It took on its current name in 1983.\n\n Today, in conjunction with the other units of Walt Disney Studios, Walt Disney Pictures is classified as one of Hollywood's \"Big Six\" film studios.\n\n Films produced by Walt Disney Animation Studios and Pixar Animation Studios are also released under this brand.",
+    "Disney Renaissance\nIn the history of The Walt Disney Company, the Disney Renaissance refers to the era from 1989 to 1999 during which Walt Disney Feature Animation (renamed Walt Disney Animation Studios in 2006) experienced a creative resurgence in producing successful animated films based on well-known stories, which restored public and critical interest in The Walt Disney Company as a whole.\n\n During this era, the studio produced and released ten animated films: \"The Little Mermaid\" (1989), \"The Rescuers Down Under\" (1990), \"Beauty and the Beast\" (1991), \"Aladdin\" (1992), \"The Lion King\" (1994), \"Pocahontas\" (1995), \"The Hunchback of Notre Dame\" (1996), \"Hercules\" (1997), \"Mulan\" (1998) and \"Tarzan\" (1999).",
+    "Mickey's Christmas Carol\nMickey's Christmas Carol is a 1983 American animated featurette produced by Walt Disney Productions and released by Buena Vista Distribution.\n\n It was directed and produced by Burny Mattinson.\n\n The cartoon is an adaptation of Charles Dickens' \"A Christmas Carol\", starring Scrooge McDuck as Ebenezer Scrooge.\n\n Many other Disney characters, primarily from the Mickey Mouse universe, \"Robin Hood\", and \"The Adventures of Ichabod and Mr. Toad\", were cast throughout the film.",
+    "Dangal (film)\nDangal (English: \"Wrestling competition\" ) is a 2016 Indian Hindi-language biographical sports drama film loosely based on the story of Mahavir Singh Phogat, an amateur wrestler, who trains his daughters Geeta Phogat and Babita Kumari to be world-class wrestlers.\n\n It was directed by Nitesh Tiwari.\n\n Produced by Walt Disney Pictures, Aamir Khan Productions and UTV Motion Pictures, it stars Aamir Khan as the father.\n\n Both daughters go on to win medals at the 2010 Commonwealth Games.\n\n Babita won a silver medal at the Games, in the 51 kg class and gold at the 2014 Glasgow Games in the 55 kg class.\n\n In 2012, Geeta became the first Indian female wrestler to qualify for the Olympics.\n\n Mahavir's efforts inspired dozens of Indian women to take to wrestling.\n\n Fatima Sana Shaikh and Sanya Malhotra play the older selves of the sisters while Sakshi Tanwar plays their mother and Aparshakti Khurana, their cousin.",
+    "Pinocchio (1940 film)\nPinocchio is a 1940 American animated musical fantasy film produced by Walt Disney Productions and based on the Italian children's novel \"The Adventures of Pinocchio\" by Carlo Collodi.\n\n It was the second animated feature film produced by Disney, made after the success of \"Snow White and the Seven Dwarfs\" (1937).",
+    "List of Walt Disney Pictures films\nThis is a list of films released theatrically under the Walt Disney Pictures banner (known as that since 1983, with \"Never Cry Wolf\" as its first release) and films released before that under the former name of the parent company, Walt Disney Productions (1929–1983).\n\n Most films listed here were distributed in the United States by the company's distribution division, Walt Disney Studios Motion Pictures (formerly known as Buena Vista Distribution Company [1953–1987] and Buena Vista Pictures Distribution [1987–2007]).\n\n The Disney features produced before \"Peter Pan\" (1953) were originally distributed by RKO Radio Pictures, and are now distributed by Walt Disney Studios Motion Pictures.",
+    "Walt Disney Pictures, founded under that name in 1983, produces live-action films; Walt Disney Studios Motion Pictures distributes Disney studio releases, succeeding Buena Vista (1953–2007). Disney highlights include *Bambi* (1942), *Pinocchio* (1940), and the 1989–99 Renaissance, spanning ten animated films from *The Little Mermaid* to *Tarzan*. Buddy Baker scored several Disney films. Other entries cover Mickey and Donald, the",
+    "Darby O'Gill and the Little People\nDarby O'Gill and the Little People is a 1959 Walt Disney Productions feature film starring Albert Sharpe, Janet Munro, Sean Connery and Jimmy O'Dea, in a tale about a wily Irishman and his battle of wits with leprechauns.\n\n The film was directed by Robert Stevenson and its screenplay written by Lawrence Edward Watkin after the books of Herminie Templeton Kavanagh."
+   ]
+  },
+  {
+   "id": "5cb5b8149fb55528",
+   "gold": [
+    {
+     "sentence": "Pagliacci (] ; literal translation, \"Clowns\") is an Italian opera in a prologue and two acts, with music and libretto by Ruggero Leoncavallo.",
+     "facts": {
+      "0.0": "Pagliacci is an Italian opera.",
+      "0.1": "Pagliacci has a prologue and two acts.",
+      "0.2": "Pagliacci has music and libretto by Ruggero Leoncavallo.",
+      "0.3": "The literal translation of Pagliacci is 'Clowns'."
+     }
+    },
+    {
+     "sentence": "Suor Angelica (Sister Angelica) is an opera in one act by Giacomo Puccini to an original Italian libretto by Giovacchino Forzano.",
+     "facts": {
+      "1.0": "Suor Angelica (Sister Angelica) is an opera.",
+      "1.1": "Suor Angelica is in one act.",
+      "1.2": "Suor Angelica is by Giacomo Puccini.",
+      "1.3": "Suor Angelica has an original Italian libretto by Giovacchino Forzano."
+     }
+    }
+   ],
+   "items": [
+    "Lucrezia Borgia (opera)\nLucrezia Borgia is a melodramatic opera in a prologue and two acts by Gaetano Donizetti.\n\n Felice Romani wrote the Italian libretto after the play \"Lucrezia Borgia\" by Victor Hugo, in its turn after the legend of Lucrezia Borgia.\n\n \"Lucrezia Borgia\" was first performed on 26 December 1833 at La Scala, Milan.",
+    "Giovacchino Forzano\nGiovacchino Forzano (] ; 19 November 1884 – 28 October 1970) was an Italian playwright, librettist, stage director, and film director.\n\n A resourceful writer, he authored numerous popular plays and produced opera librettos for most of the major Italian composers of the early twentieth century, including the librettos for Giacomo Puccini's \"Suor Angelica\" and \"Gianni Schicchi\".",
+    "Pagliacci\nPagliacci (] ; literal translation, \"Clowns\") is an Italian opera in a prologue and two acts, with music and libretto by Ruggero Leoncavallo.\n\n It is the only Leoncavallo opera that is still widely performed.\n\n Opera companies have frequently staged \"Pagliacci\" with \"Cavalleria rusticana\" by Mascagni, a double bill known colloquially as 'Cav and Pag'.",
+    "Stiffelio\nStiffelio is an opera in three acts by Giuseppe Verdi, from an Italian libretto by Francesco Maria Piave.\n\n The origin of this was the novel “Le pasteur d’hommes”, by Émile Souvestre, which was published in 1838.\n\n This was adapted into the French play \"Le pasteur, ou L'évangile et le foyer\" by Émile Souvestre and Eugène Bourgeois.\n\n That was in turn translated into Italian by Gaetano Vestri as \"Stifellius\"; this formed the basis of Piave's libretto.",
+    "Rita Fornia\nRita Fornia (17 July 1878 – 27 October 1922) was an American opera singer.\n\n She began her career in Europe at the beginning of the 20th century singing coloratura soprano roles.\n\n Early on in her career her voice darkened and dropped slightly causing her to focus more within the mezzo-soprano repertoire while still singing some soprano roles.\n\n She joined the Metropolitan Opera company in 1907 where she performed regularly in mostly supporting roles until her retirement in 1922.\n\n She is best remembered today for portraying the role of the Abbess in the original production of Puccini's \"Suor Angelica\" in 1918.",
+    "Operalia, The World Opera Competition\nOperalia, The World Opera Competition is an annual international competition for young opera singers.\n\n Founded in 1993 by Plácido Domingo, the competition has helped launch the careers of several important artists, such as Joseph Calleja, Giuseppe Filianoti, Rolando Villazón, José Cura, Joyce DiDonato, Elizabeth Futral, Inva Mula, Ana María Martínez and Sonya Yoncheva.",
+    "Suor Angelica\nSuor Angelica (Sister Angelica) is an opera in one act by Giacomo Puccini to an original Italian libretto by Giovacchino Forzano.\n\n It is the second opera of the trio of operas known as \"Il trittico\" (\"Triptych\").\n\n It received its world premiere at the Metropolitan Opera on December 14, 1918.",
+    "Bernhard Bötel\nHis stage repertoire included Belmonte in Wolfgang Amadeus Mozart's \"Die Entführung aus dem Serail\", Chapelou in Adolphe Adam's \"Le postillon de Lonjumeau\", Count Almaviva in Gioachino Rossini's \"The Barber of Seville\", Daniel in Franz Lehár's \"The Merry Widow\", the Duke of Mantua in Giuseppe Verdi's \"Rigoletto\", Gabriel von Eisenstein in Johann Strauss II's \"Die Fledermaus\", Indigo in Strauss' \"Indigo und die vierzig Räuber\", Jeník in Bedřich Smetana's \"The Bartered Bride\", Paolino in Domenico Cimarosa's \"Il matrimonio segreto\", Pâris in Jacques Offenbach's \"La belle Hélène\", Pietro in Franz von Suppé's \"Boccaccio\", and Wilhelm Meister in Ambroise Thomas' \"Mignon\".",
+    "Barbara Frittoli\nBarbara Frittoli (born 19 April 1967) is an Italian operatic soprano who has sung leading roles in opera houses throughout Europe and in the United States.\n\n She was born in Milan and graduated from the Milan Conservatory.\n\n She made her Metropolitan Opera debut in 1995 as Micaela in \"Carmen\" and has gone on to sing in over 80 performances there including Donna Elvira in \"Don Giovanni\", Fiordiligi in \"Così fan tutte\", Angelica in \"Suor Angelica\", Desdemona in \"Otello\", the title role in \"Luisa Miller\", Amelia in \"Simon Boccanegra\", Vitellia in \"La clemenza di Tito\" and Alicia Ford in \"Falstaff\".",
+    "Il trittico\nIl trittico (\"The Triptych\") is the title of a collection of three one-act operas, \"Il tabarro\", \"Suor Angelica\", and \"Gianni Schicchi\", by Giacomo Puccini.\n\n The work received its world premiere at the Metropolitan Opera on 14 December 1918."
+   ]
+  },
+  {
+   "id": "6c5c661e1c98f1a6",
+   "gold": [
+    {
+     "sentence": "The Battle of Saipan was a battle of the Pacific campaign of World War II, fought on the island of Saipan in the Mariana Islands from 15 June to 9 July 1944.",
+     "facts": {
+      "0.0": "The Battle of Saipan was a battle of the Pacific campaign of World War II.",
+      "0.1": "The Battle of Saipan was fought on the island of Saipan in the Mariana Islands.",
+      "0.2": "The Battle of Saipan was fought from 15 June to 9 July 1944."
+     }
+    },
+    {
+     "sentence": " The U.S. 2nd Marine Division, 4th Marine Division, and the Army's 27th Infantry Division, commanded by Lieutenant General Holland Smith, defeated the 43rd Infantry Division of the Imperial Japanese Army, commanded by Lieutenant General Yoshitsugu Saito.",
+     "facts": {
+      "1.0": "The U.S. 2nd Marine Division, 4th Marine Division, and the Army's 27th Infantry Division were commanded by Lieutenant General Holland Smith.",
+      "1.1": "The U.S. 2nd Marine Division, 4th Marine Division, and the Army's 27th Infantry Division defeated the 43rd Infantry Division of the Imperial Japanese Army.",
+      "1.2": "The 43rd Infantry Division of the Imperial Japanese Army was commanded by Lieutenant General Yoshitsugu Saito."
+     }
+    },
+    {
+     "sentence": " It was fought by American and Filipino forces against Japanese troops in Manila, the capital city of the Philippines.",
+     "facts": {
+      "2.0": "The battle referred to here was fought by American and Filipino forces against Japanese troops.",
+      "2.1": "The battle referred to here took place in Manila, the capital city of the Philippines."
+     }
+    }
+   ],
+   "items": [
+    "Battle of Okinawa\nThe Battle of Okinawa (Japanese: 沖縄戦 , Hepburn: Okinawa-sen ) (Okinawan: 沖縄戦 , \"Uchinaa ikusa \" ), codenamed Operation Iceberg, was a major battle of the Pacific War fought on the island of Okinawa by United States Marine and Army forces against the Imperial Japanese Army and included the largest amphibious assault in the Pacific War during World War II, the April 1, 1945, invasion of Okinawa itself.\n\n The 82-day battle lasted from April 1 until June 22, 1945.\n\n After a long campaign of island hopping, the Allies were planning to use Okinawa, a large island only 340 mi away from mainland Japan, as a base for air operations for the planned invasion of the Japanese home islands.",
+    "Battle of Manila (1898)\nThe Battle of Manila, sometimes called the Mock Battle of Manila, was a land engagement which took place in Manila on August 13, 1898, at the end of the Spanish–American War, four months after the decisive victory by Commodore Dewey's Asiatic Squadron at the Battle of Manila Bay.\n\n The belligerents were Spanish forces led by Governor-General of the Philippines Fermín Jáudenes, and American forces led by United States Army Brigadier General Wesley Merritt and United States Navy Commodore George Dewey.\n\n American forces were supported by units of the Philippine Revolutionary Army, led by Emilio Aguinaldo.",
+    "Battle of Manila (1574)\nThe Battle of Manilla (1574) was a battle in the Manila area mainly in the location of what is now Parañaque between Chinese pirates, led by Limahong and the Spanish colonial forces and their native allies.\n\n The battle occurred on November 29, 1574 when Limahong's fleet landed in the town of Parañaque and from there, began to assault the fortifications of Intramuros.\n\n Initially, the inhabitants where disorganized and Limahong's forces routed them.\n\n Furthermore, the Chinese killed the Master-of-Camp of the Spanish, Martin De Goiti.\n\n This caused them to delay their assault on Manila as Martin de Goiti's house was an obstacle in their march.\n\n However, upon the arrival of a certain Filipino hero called, Galo, resistance started to organize.\n\n Under Galo's command, they were able to resist China-born Limahong until Mexico-born Juan de Salcedo arrived from Ilocos with 300 Ilocano Warriors and Limahong was defeated and eventually forced to retreat.\n\n Thereafter Limahong abandoned his plans to invade Manila and instead, set up a temporary kingdom in Pangasinan.",
+    "Battle of Attu\nThe Battle of Attu, which took place from 11–30 May 1943, was a battle fought between forces of the United States, aided by Canadian reconnaissance and fighter-bomber support, and the Empire of Japan on Attu Island off the coast of the Territory of Alaska as part of the Aleutian Islands Campaign during the American Theater and the Pacific Theater and was the only land battle of World War II fought on incorporated territory of the United States.\n\n It is also the only land battle in which Japanese and American forces fought in Arctic conditions.",
+    "Battle of Bataan\nThe surrender at Bataan, with 76,000 soldiers surrendering in the Philippines altogether, was the largest in American and Filipino military histories, and was the largest United States surrender since the American Civil War's Battle of Harper's Ferry.\n\n Soon afterwards, Filipino and American prisoners of war were forced into the Bataan Death March.",
+    "Battle of Bataan\nThe Battle of Bataan (7 January – 9 April 1942) represented the most intense phase of Imperial Japan's invasion of the Philippines during World War II.\n\n In January 1942, forces of the Imperial Japanese Army and Navy invaded Luzon along with several islands in the Philippine Archipelago after the bombing of the American naval base at Pearl Harbor.\n\n The commander-in-chief of all Filipino and American forces in the islands, General Douglas MacArthur, consolidated all of his Luzon-based units on the Bataan Peninsula to fight against the Japanese invaders.\n\n By this time, the Japanese controlled nearly all of Southeast Asia.\n\n The Bataan peninsula and the island of Corregidor were the only remaining Allied strongholds in the region.\n\n Despite a lack of supplies, Filipino and American forces managed to fight the Japanese for three months, engaging them initially in a fighting retreat southward.\n\n As the combined Filipino and American forces made a last stand, the delay cost the Japanese valuable time and prevented immediate victory across the Pacific.",
+    "Battle of Guam (1944)\nThe Second Battle of Guam (21 July – 10 August 1944) was the American recapture of the Japanese-held island of Guam, a U.S. territory in the Mariana Islands captured by the Japanese from the U.S. in the 1941 First Battle of Guam during the Pacific campaign of World War II.",
+    "Battle of Manila (1945)\nThe Battle of Manila (February 3, 1945 – March 3, 1945) was a major battle of the Philippine campaign of 1944-45, during the Second World War.\n\n It was fought by American and Filipino forces against Japanese troops in Manila, the capital city of the Philippines.\n\n The month-long battle, which resulted in the death of over 100,000 civilians and the complete devastation of the city, was the scene of the worst urban fighting in the Pacific theater.\n\n Japanese forces committed mass murder against Filipino civilians during the battle.\n\n Along with massive loss of life, the battle also destroyed architectural and cultural heritage dating back to the city's foundation.\n\n The battle ended the almost three years of Japanese military occupation in the Philippines (1942–1945).\n\n The city's capture was marked as General Douglas MacArthur's key to victory in the campaign of reconquest.",
+    "Battle of Saipan\nThe Battle of Saipan was a battle of the Pacific campaign of World War II, fought on the island of Saipan in the Mariana Islands from 15 June to 9 July 1944.\n\n The Allied invasion fleet embarking the expeditionary forces left Pearl Harbor on 5 June 1944, the day before Operation Overlord in Europe was launched.\n\n The U.S. 2nd Marine Division, 4th Marine Division, and the Army's 27th Infantry Division, commanded by Lieutenant General Holland Smith, defeated the 43rd Infantry Division of the Imperial Japanese Army, commanded by Lieutenant General Yoshitsugu Saito.",
+    "Battle of Guam (1941)\nThe First Battle of Guam was an engagement during the Pacific War in World War II, and took place from 8 December to 10 December 1941 on Guam in the Mariana Islands between Japan and the United States.\n\n The American garrison was defeated by Japanese forces on 10 December, which resulted in an occupation until the Second Battle of Guam in 1944."
+   ]
+  },
+  {
+   "id": "1ef07773cf8db9af",
+   "gold": [
+    {
+     "sentence": "War/Dance is a 2007 American documentary film written and directed by Sean Fine and Andrea Nix Fine and produced by Shine Global's Susan MacLaury, a professor at Kean University, and Albie Hecht.",
+     "facts": {
+      "0.0": "War/Dance is a 2007 American documentary film.",
+      "0.1": "War/Dance was written by Sean Fine and Andrea Nix Fine.",
+      "0.2": "War/Dance was directed by Sean Fine and Andrea Nix Fine.",
+      "0.3": "War/Dance was produced by Shine Global's Susan MacLaury.",
+      "0.4": "Susan MacLaury is a professor at Kean University.",
+      "0.5": "War/Dance was produced by Albie Hecht."
+     }
+    },
+    {
+     "sentence": "The Sorrow and the Pity (French: Le Chagrin et la Pitié ) is a two-part 1969 documentary film by Marcel Ophüls about the collaboration between the Vichy government and Nazi Germany during World War II.",
+     "facts": {
+      "1.0": "The Sorrow and the Pity is a documentary film.",
+      "1.1": "The Sorrow and the Pity's French title is Le Chagrin et la Pitié.",
+      "1.2": "The Sorrow and the Pity is in two parts.",
+      "1.3": "The Sorrow and the Pity was released in 1969.",
+      "1.4": "The Sorrow and the Pity was made by Marcel Ophüls.",
+      "1.5": "The Sorrow and the Pity is about the collaboration between the Vichy government and Nazi Germany.",
+      "1.6": "That collaboration occurred during World War II."
+     }
+    }
+   ],
+   "items": [
+    "Dana Brown\nDana Brown (born December 11, 1959 in Dana Point, California) is an American surfer and filmmaker, and is the oldest son of filmmaker Bruce Brown.\n\n His films include \"The Endless Summer Revisited\" (2000) which is made up of unused footage from \"The Endless Summer\" (1964) and \"The Endless Summer II\" (1994), as well as some original interviews with the stars of those films.\n\n His first all-original film was \"Step Into Liquid\" (2003) followed by a documentary on the Baja 1000 titled \"Dust to Glory\" (2005).\n\n In 2009, he debuted a new film called \"Highwater\" during the 100th anniversary of the Santa Monica Pier; the film follows life on the North Shore and the surfers who compete in the Vans Triple Crown of Surfing.\n\n In 2014, the movie \"On Any Sunday, The Next Chapter\" continues the saga of motocross documentaries which began with the 1972 Academy Award for Documentary Feature nominated film \"On Any Sunday\" (1971).",
+    "Gasland\nGasland is a 2010 American documentary written and directed by Josh Fox.\n\n Nominated for an Academy Award for Best Documentary in 2011, the film focuses on communities in the United States affected by natural gas drilling and, specifically, a method of horizontal drilling into shale formations known as hydraulic fracturing.\n\n The film was a key mobilizer for the anti-fracking movement, and \"brought the term 'hydraulic fracturing' into the nation's living rooms\" according to \"The New York Times\".\n\n The film was nominated for the Academy Award for Best Documentary Feature.",
+    "Marcel Ophüls\nMarcel Ophuls (] ; born 1 November 1927) is a documentary film maker and former actor, best known for his films \"The Sorrow and the Pity\" and \"\".",
+    "Polio v/s Polio victims\nPolio v/s Polio Victims is the National Award Winning Documentary film.\n\n The documentary won \"Best Motivational/ Educational Film\" at the 56th National Film Awards.\n\n The documentary follows a group of polio victims who took to the streets in 2008 to spread the message of the Pulse Polio Campaign.\n\n The film follows them as they go door to door, in various slums in Mumbai, to spread awareness about the upcoming \"Pulse Polio Day\".",
+    "The Sorrow and the Pity\nThe Sorrow and the Pity (French: Le Chagrin et la Pitié ) is a two-part 1969 documentary film by Marcel Ophüls about the collaboration between the Vichy government and Nazi Germany during World War II.\n\n The film uses interviews with a German officer, collaborators, and resistance fighters from Clermont-Ferrand.\n\n They comment on the nature of and reasons for collaboration.\n\n The reasons include antisemitism, anglophobia, fear of Bolsheviks and Soviet invasion, the desire for power, and simple caution.",
+    "War/Dance\nWar/Dance is a 2007 American documentary film written and directed by Sean Fine and Andrea Nix Fine and produced by Shine Global's Susan MacLaury, a professor at Kean University, and Albie Hecht.\n\n It was nominated for the 2008 Academy Award for Best Documentary Feature and received the Emmy Award for Best Documentary and Best Cinematography in 2010.",
+    "The Great War (documentary)\nThe Great War is a 26-episode documentary series from 1964 on the First World War.\n\n The documentary was a co-production of the Imperial War Museum, the British Broadcasting Corporation, the Canadian Broadcasting Corporation and the Australian Broadcasting Commission.\n\n The narrator was Michael Redgrave, with readings by Marius Goring, Ralph Richardson, Cyril Luckham, Sebastian Shaw and Emlyn Williams.\n\n Each episode is  40 minutes long.",
+    "Tender Fictions\nTender Fictions is a 1996 autobiographical documentary film directed by American experimental filmmaker Barbara Hammer.\n\n It is the second of a trilogy of documentary films that includes \"Nitrate Kisses\" and \"History Lessons\".\n\n Together, the three films are sometimes known as the \"History trilogy\".\n\n \"Tender Fictions\" details Hammer's life and her attempts to \"construct\" a self.\n\n The film was nominated for a prize at the 1996 Sundance Film Festival.",
+    "Christian de la Mazière\nChristian de la Mazière (August 22, 1922 in Tunis – February 15, 2006) was a journalist and member of the Charlemagne Division of the Waffen SS.\n\n He is known for discussing his role in the documentary \"The Sorrow and the Pity\" and also wrote a book titled \"The Captive Dreamer\".\n\n At the start of the war, he served in the French Army and was later retained in the military of Vichy France until 1942.\n\n After being discharged, he worked for the fascist newspaper \"Le Pays Libre\", joining the Charlemagne Division just before the Liberation of Paris in 1944.\n\n He was taken prisoner in Pomerania by Polish forces in the Red Army.",
+    "Poetry in Motion (film)\nPoetry in Motion is a 1982 Canadian documentary film directed by Ron Mann featuring contemporary North American poetry and music.\n\n Featured are some of the Black Mountain poets, Beats, minimalist poets, and avant-garde poets.\n\n It was released in theaters, later being distributed on VHS, LaserDisc, and DVD.\n\n An extended CD-ROM version was also released."
+   ]
+  },
+  {
+   "id": "d291cf075323860d",
+   "gold": [
+    {
+     "sentence": "The Random House Tower, also known as the Park Imperial Apartments, is a 52-story mixed-use tower in New York City, United States, that is used as the headquarters of book publisher Random House and a luxury apartment complex.",
+     "facts": {
+      "0.0": "The Random House Tower is also known as the Park Imperial Apartments.",
+      "0.1": "The Random House Tower is a 52-story mixed-use tower.",
+      "0.2": "The Random House Tower is in New York City, United States.",
+      "0.3": "The Random House Tower is used as the headquarters of book publisher Random House.",
+      "0.4": "The Random House Tower is used as a luxury apartment complex."
+     }
+    },
+    {
+     "sentence": " It currently carries the Vornado Realty Trust corporate headquarters.",
+     "facts": {
+      "1.0": "The Random House Tower currently carries the Vornado Realty Trust corporate headquarters."
+     }
+    }
+   ],
+   "items": [
+    "270 Park Avenue\n270 Park Avenue (also known as the JPMorgan Chase Tower and formerly the Union Carbide Building) is a high-rise office building located in Midtown Manhattan, New York City.\n\n It was designed by Natalie de Blois for Skidmore, Owings & Merrill.",
+    "245 Park Avenue\n245 Park Avenue (formerly American Tobacco Company Building, American Brands Building and Bear Stearns Building) is a 648-ft (198 m) tall skyscraper in New York City, New York.\n\n It was completed in 1967 and has 48 floors (1.7 million square feet).\n\n Shreve, Lamb and Harmon designed the building.\n\n The Building Owners and Managers Association awarded the 2000/2001 Pinnacle Award to 245 Park Avenue.\n\n The site used to be occupied by the second Grand Central Palace exhibition hall, which was demolished in 1964 to make way for 245 Park Avenue.",
+    "383 Madison Avenue\n383 Madison Avenue is an office building owned and occupied by JP Morgan Chase in New York City on a full block bound by Madison Avenue and Vanderbilt Avenue between East 46th and 47th Streets.\n\n Formerly known as the Bear Stearns Building, it housed the world headquarters of the now-defunct Bear Stearns from the building's completion until Bear's collapse and sale to JPMorgan Chase in 2008.\n\n The building now houses the New York offices for J.P. Morgan's investment banking division, which formerly occupied 277 Park Avenue.\n\n Both 383 Madison and 277 Park are adjacent to JPMorgan Chase's world headquarters at 270 Park Avenue.",
+    "Random House Tower\nThe Random House Tower, also known as the Park Imperial Apartments, is a 52-story mixed-use tower in New York City, United States, that is used as the headquarters of book publisher Random House and a luxury apartment complex.\n\n The book publisher entrance is on Broadway and goes up to 27 floors, while the apartment complex entrance is on West 56th Street.",
+    "888 7th Avenue\n888 7th Avenue is a 628 ft (191m) tall modern-style office skyscraper in Midtown Manhattan which was completed in 1969 and has 46 floors.\n\n Emery Roth & Sons designed the building, which is tied with Central Park Place for the 65th tallest building in New York City.\n\n It currently carries the Vornado Realty Trust corporate headquarters.\n\n Previously known as the Arlen Building, its namesake being the company responsible for its construction, Arlen Realty & Development Corporation.\n\n The Red Eye Grill is located in the building at street level.",
+    "90 West Street\n90 West Street (alternatively West Street Building) is a building in Lower Manhattan, New York City.\n\n It was designed by architect Cass Gilbert and structural engineer Gunvald Aus for the West Street Improvement Corporation.\n\n When completed in 1907, the building's Gothic styling and ornamentation served to emphasize its 23-story height, and foreshadowed Gilbert's later work on the Woolworth Building.\n\n Originally built as an office building, the main tenant was the Delaware, Lackawanna and Western Railroad and the top floor was occupied by Garret's Restaurant, which advertised itself as the \"world's highest restaurant\".",
+    "655 Park Avenue\n655 Park Avenue is a Georgian-style co-op residential building on Manhattan's Upper East Side, located on Park Avenue between 67th Street and 68th Street, adjacent to the Park Avenue Armory.\n\n It was developed in 1924 by Dwight P. Robinson & Company.\n\n The building at 655 Park Avenue was designed by architects James Edwin Ruthven Carpenter, Jr., often referred to by the initials \"J.E.R. Carpenter\", and Mott B. Schmidt.\n\n Carpenter is considered the leading architect for luxury residential high-rise buildings in New York City in the early 1900s, while Schmidt is known for his buildings in the American Georgian Classical style, including Sutton Place and houses for New York City's society figures and business elite.",
+    "1 New York Plaza\n1 New York Plaza is an office building in New York City's Financial District, built in 1969 at the intersection of South and Whitehall Streets.\n\n It is the southernmost of all Manhattan skyscrapers.",
+    "200 West Street\n200 West Street is the global headquarters of the Goldman Sachs investment banking firm.\n\n The building is a 749 ft , 44-story building located on West Street, between Vesey and Murray Streets in Lower Manhattan.\n\n It is adjacent to the World Financial Center and the Conrad Hotel, the Verizon Building to the east across West Street, and diagonally opposite the World Trade Center.\n\n It is the only office building in Battery Park City north of the World Financial Center.",
+    "Transportation Building\nThe Transportation Building is a 44-story office building located at 225 Broadway on the corner of Barclay Street in the Civic Center neighborhood of Lower Manhattan in New York City.\n\n It also carries the address 2-4 Barclay Street.\n\n It was built in 1927 and was designed by the architecture firm of York & Sawyer, in the Renaissance Revival style, using setbacks common to skyscrapers built after the adoption of the 1916 Zoning Resolution.\n\n It sits across Barclay Street from the Woolworth Building."
+   ]
+  }
+ ]
+}

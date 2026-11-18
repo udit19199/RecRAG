@@ -1,0 +1,50 @@
+[
+{"id": "565adc20c5cf16b2", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Geno Smith's night appears to be done as Drew Lock is back in for the Seahawks."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Geno Smith's night appears to be done as Drew Lock is back in for the Seahawks."}]}
+]},
+{"id": "43821385aaf3954c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]}
+]},
+{"id": "5e99780ec9676ab9", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}]}
+]},
+{"id": "6fdac8ff5364bd60", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "19057d2b26982075", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]}
+]},
+{"id": "9ddd3bd3f3f1ca14", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "tying FTX CEO Sam Bankman-Fried to the conspiracy to take FTX customer funds."}, {"item": 4, "quote": "Bankman-Fried handed the company off to Caroline Ellison and Sam Trabucco"}, {"item": 7, "quote": "After FTX declared bankruptcy, Bankman-Fried went on an extensive media tour"}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "They argue that Bankman-Fried lied about consumer protection"}, {"item": 6, "quote": "is facing seven counts of criminal charges: two counts of wire fraud"}]},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]}
+]

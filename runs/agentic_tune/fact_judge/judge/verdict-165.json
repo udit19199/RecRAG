@@ -1,0 +1,48 @@
+[
+{"id": "470e2e687b071244", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "560aa87553c01273", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "But by the age of 16, she is public property"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "incapable of going outside without being mobbed"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "mobbed, and her love of singing and dancing now a lucrative resource."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "77476c86c6f99128", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "The winger came firing out of the gate"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "the outlook has changed for the Devils in recent days after losing the superstar center Hughes to injury."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "the outlook has changed for the Devils in recent days after losing the superstar center Hughes to injury."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Having to depend much on his weaker arm, Hamlin stayed in contention for the championship four race until the final race in Martinsville."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Having to depend much on his weaker arm, Hamlin stayed in contention for the championship four race until the final race in Martinsville."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Having to depend much on his weaker arm, Hamlin stayed in contention for the championship four race until the final race in Martinsville."}]}
+]},
+{"id": "28716330c342ac5e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Alameda Research’s former CEO Caroline Ellison"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 10, "quote": "Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "“This man stole billions of dollars from thousands of people,” prosecutor Thane Rehn told the court. “He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too."}]},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 1, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]}
+]},
+{"id": "a4f8696b3409828e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "At the time, the music video for the song"}, {"item": 8, "quote": "which featured a woman with blonde hair"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "At the time, the music video for the song"}, {"item": 8, "quote": "sparked rumours that he and Spears broke up"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "sparked rumours that he and Spears broke up because she allegedly cheated on him."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Danis’s first press conference for the Logan Paul fight."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Also, another thing that hints towards their breakup is Danis’s first press conference for the Logan Paul fight."}]}
+]}
+]

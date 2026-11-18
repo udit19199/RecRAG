@@ -1,0 +1,54 @@
+[
+{"id": "51a37160aff2693b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "We identify with his struggles and his little glimmers of connection and triumph"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "We identify with his struggles and his little glimmers of connection and triumph"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "which makes him the perfect superhero for Thanksgiving."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "a596b39b04bbe633", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "But by the age of 16, she is public property"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "But by the age of 16, she is public property"}, {"item": 8, "quote": "incapable of going outside without being mobbed"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "But by the age of 16, she is public property"}, {"item": 8, "quote": "her love of singing and dancing now a lucrative resource"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "5bbb5a24357d002b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "claiming that the model meets or exceeds"}, {"item": 6, "quote": "the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "claiming that the model meets or exceeds"}, {"item": 6, "quote": "the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "But while this will probably come up later in the trial"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Epic chose to focus more on simply painting Google as"}, {"item": 1, "quote": "the bad guy on day one."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "50ab6a15d8ba8e17", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "in advance of a potential"}, {"item": 3, "quote": "ground invasion."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+]},
+{"id": "eab0bdfa16a9f9ef", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "But it didn’t release the full model, Gemini Ultra"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "only a “lite” version called Gemini Pro."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "The Justice Department is focused on the deals Google makes"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 3, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and"}, {"item": 3, "quote": "many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 3, "quote": "The Justice Department is focused on the deals Google makes"}, {"item": 3, "quote": "to ensure it is the default search engine on practically every platform."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]}
+]

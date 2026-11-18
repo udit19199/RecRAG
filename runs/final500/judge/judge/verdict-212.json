@@ -1,0 +1,77 @@
+[
+  {"id": "65b0c131f4065589", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones"}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "3.0", "status": "missing", "evidence": []},
+    {"fact": "3.1", "status": "missing", "evidence": []},
+    {"fact": "3.2", "status": "missing", "evidence": []},
+    {"fact": "3.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "bb684ffec0d06e0f", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Wired removed the article for not meeting its standards"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "it was shared on social media and boosted in write-ups at other outlets"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "from companies including Apple, Samsung and Mozilla, The Verge reports"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "Google compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "GPT-4’s predecessor, GPT-3.5"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "GPT-3.5, a model that’s around a year old"}]},
+    {"fact": "3.0", "status": "stated", "evidence": [{"item": 7, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+    {"fact": "3.1", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+    {"fact": "3.2", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+    {"fact": "3.3", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+    {"fact": "3.4", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]}
+  ]},
+  {"id": "0ba8d968fe506727", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Google’s public documentation says it uses three categories to rank results that are local to a searcher"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]}
+  ]},
+  {"id": "399d6a65f468e931", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Philadelphia rolled to a 31-17 win over Miami"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Philadelphia rolled to a 31-17 win over Miami on \"Sunday Night Football,\""}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "Philadelphia rolled to a 31-17 win over Miami on \"Sunday Night Football,\" keeping the Dolphins' offense off the scoreboard in the second half"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "keeping the Dolphins' offense off the scoreboard in the second half"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 6, "quote": "playing smart football every step of the way down the stretch"}]}
+  ]},
+  {"id": "fdb0daa167a3b10a", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "missing", "evidence": []}
+  ]},
+  {"id": "2b8831f99e51cfd3", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "It could, though, mean some sort of progress"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "if the Manchester born Ratcliffe follows through with his vision"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "follows through with his vision to revolutionise the club"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "It could, though, mean some sort of progress, if the Manchester born Ratcliffe follows through with his vision to revolutionise the club"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Manchester United, one of the grandest and richest names in this competition, have again gone out of the Champions League at the group stage"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Another infamous European night at Old Trafford"}, {"item": 5, "quote": "this 1-0 defeat to Bayern Munich"}, {"item": 2, "quote": "There was nothing much at all. Where was the energy? Where was the intensity?"}]},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]}
+]

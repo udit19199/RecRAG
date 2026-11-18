@@ -1,0 +1,270 @@
+[
+  {
+    "id": "c1b35892c357383a",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."
+          }
+        ]
+      },
+      {
+        "fact": "2.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bfdac19d792f84aa",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "The pastor went on to explain that Jesus brought more positivity than anyone"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "which is why it's important to keep faith aligned with that practice of positive thinking."
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "The pastor went on to explain that Jesus brought more positivity than anyone — which is why it's important to keep faith aligned with that practice of positive thinking."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "contradicted",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Roumie said that building a habit of prayer \"is easier than people think.\""
+          },
+          {
+            "item": 3,
+            "quote": "He added, \"As you consistently tap into that habit, you find your relationship with Jesus growing deeper and deeper, just automatically."
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "contradicted",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Roumie said that building a habit of prayer \"is easier than people think.\""
+          },
+          {
+            "item": 3,
+            "quote": "He added, \"As you consistently tap into that habit, you find your relationship with Jesus growing deeper and deeper, just automatically."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "7f4f1cc8c95e9468",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse."
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "7fde8a84a8ec823e",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "The guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "The guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "The guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  },
+  {
+    "id": "ebfbde7e367d162d",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."
+          }
+        ]
+      },
+      {
+        "fact": "2.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.3",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  }
+]

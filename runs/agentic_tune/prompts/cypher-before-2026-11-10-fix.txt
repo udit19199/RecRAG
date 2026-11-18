@@ -1,0 +1,29 @@
+
+Task: Generate one read-only Cypher statement for a Neo4j 5 graph database from a user input.
+
+Schema:
+{schema}
+
+Examples:
+{examples}
+
+Rules:
+- Use only node labels, relationship types, and properties listed in the schema.
+- Every extracted entity also has the label __Entity__ with a name and optional aliases.
+- Match names case-insensitively: compare toLower(n.name), and each alias in coalesce(n.aliases, []), with a lowercase string.
+- To find passages, match entities by name and follow FROM_CHUNK to the Chunk; never filter Chunk.text with CONTAINS.
+- Write alternative relationship types as [:A|B].
+- Return names and short properties, never embedding, and end with LIMIT 10 or less.
+
+Input:
+{query_text}
+
+Return only the Cypher statement, with no triple backticks or other text.
+
+Cypher query:
+
+
+=== EXAMPLES ===
+USER INPUT: 'What is connected to Ada Lovelace?' QUERY: MATCH (n:__Entity__)-[r]-(m:__Entity__) WHERE (toLower(n.name) CONTAINS 'ada lovelace' OR any(alias IN coalesce(n.aliases, []) WHERE toLower(alias) CONTAINS 'ada lovelace')) RETURN n.name AS entity, type(r) AS relationship, m.name AS related LIMIT 10
+USER INPUT: 'Which passages mention Acme Corp?' QUERY: MATCH (n:__Entity__)-[:FROM_CHUNK]->(c:Chunk)-[:FROM_DOCUMENT]->(d:Document) WHERE (toLower(n.name) CONTAINS 'acme corp' OR any(alias IN coalesce(n.aliases, []) WHERE toLower(alias) CONTAINS 'acme corp')) RETURN n.name AS entity, d.title AS page, c.text AS passage LIMIT 10
+USER INPUT: 'Which organizations is Jane Doe part of?' QUERY: MATCH (p:Person)-[:MEMBER_OF|WORKS_FOR]->(o:Organization) WHERE (toLower(p.name) CONTAINS 'jane doe' OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'jane doe')) RETURN p.name AS person, o.name AS organization LIMIT 10

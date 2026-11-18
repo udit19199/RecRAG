@@ -1,0 +1,586 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "5be2b3d291e3bd66",
+   "kind": "answer",
+   "question": "make a project report on agricultural crops grown in india",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "India grows rice, wheat, millets, pulses, cotton, jute, sugarcane, tea, fruits, and vegetables."
+  },
+  {
+   "id": "066aa1c1f468c269",
+   "kind": "answer",
+   "question": "are there many copies of sir gawain and the green knight",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No—only one medieval manuscript survives."
+  },
+  {
+   "id": "4908d80d0cf15245",
+   "kind": "answer",
+   "question": "when is the womens ice skating for the olympics",
+   "gold_answers": [
+    "21–23 February",
+    "21 February",
+    "23 February"
+   ],
+   "model_answer": "February 17 and 19, 2026."
+  },
+  {
+   "id": "c75fe9409ab01b81",
+   "kind": "answer",
+   "question": "what caused the breakup of the democratic republican party",
+   "gold_answers": [
+    "the disputed 1824 presidential election"
+   ],
+   "model_answer": "Disagreements after the disputed 1824 election split the party into Jacksonian and National Republican factions."
+  },
+  {
+   "id": "49cdcc80a8de6e65",
+   "kind": "answer",
+   "question": "when is the womens ice skating for the olympics",
+   "gold_answers": [
+    "21–23 February",
+    "21 February",
+    "23 February"
+   ],
+   "model_answer": "February 21 (short program) and February 23, 2018 (free skate), both at 10:00 KST."
+  },
+  {
+   "id": "ac854463abb99885",
+   "kind": "answer",
+   "question": "discuss the impact of devaluation on foreign exchange reserve",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Devaluation reduces the value of foreign-exchange reserves and can cause substantial losses."
+  },
+  {
+   "id": "e8a1301b54233830",
+   "kind": "answer",
+   "question": "yadav caste belongs to which category in andhra pradesh",
+   "gold_answers": [
+    "Yadava ( Golla )"
+   ],
+   "model_answer": "Backward Class (BC)"
+  },
+  {
+   "id": "f1484962860e917d",
+   "kind": "answer",
+   "question": "when do law students take the bar exam",
+   "gold_answers": [
+    "Each state controls where it administers its bar exam . Because the MBE ( below ) is a standardized test , it must be administered on the same day across the country . That day occurs twice a year as the last Wednesday in July and the last Wednesday in February . Two states , Delaware and North Dakota , may administer their bar exams only once , in July , if they do not have enough applicants to merit a second sitting . North Dakota requires ten applicants in order to administer the February exam . Most bar exams are administered on consecutive days . Louisiana is the exception , with the Louisiana Bar Exam being a three - day examination on Monday , Wednesday and Friday . Also , Louisiana 's examination is the longest in the country in terms of examination time , with seven hours on Monday and Wednesday and seven and one half hours on Friday for a total of 21.5 hours of testing . Montana 's bar examination also occurs over a three - day period , with a total of 18 hours of testing . The bar exams in Delaware , Nevada , Ohio , South Carolina , and Texas are also three days long . The California bar exam moved to a two - day format beginning with the July , 2017 exam .",
+    "To refresh their memory on `` black - letter rules '' tested on the bar , most students engage in a regimen of study ( called `` bar review '' ) between graduating from law school and sitting for the bar . For bar review , most students in the United States attend a private bar review course which is provided by a third - party company and not their law school ."
+   ],
+   "model_answer": "After graduating from law school, usually in February or July."
+  },
+  {
+   "id": "c4699f5d65eb170b",
+   "kind": "answer",
+   "question": "how did the apostles creed get its name",
+   "gold_answers": [
+    "The first mention of the expression `` Apostles ' Creed '' occurs in a letter of AD 390 from a synod in Milan and may have been associated with the belief , widely accepted in the 4th century , that , under the inspiration of the Holy Spirit , each of the Twelve Apostles contributed an article of a creed .",
+    "The title Symbolum Apostolicum ( Symbol or Creed of the Apostles ) appears for the first time in a letter , probably written by Ambrose , from a Council in Milan to Pope Siricius in about AD 390 `` Let them give credit to the Creed of the Apostles , which the Roman Church has always kept and preserved undefiled '' . But what existed at that time was not what is now known as the Apostles ' Creed but a shorter statement of belief that , for instance , did not include the phrase `` maker of heaven and earth '' , a phrase that may have been inserted only in the 7th century ."
+   ],
+   "model_answer": "From the belief that each of the Twelve Apostles contributed an article of faith."
+  },
+  {
+   "id": "18897922336dd840",
+   "kind": "answer",
+   "question": "when is the rock n roll hall of fame",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Founded in 1983; the museum opened in 1995."
+  },
+  {
+   "id": "4860a3b23d7bc243",
+   "kind": "answer",
+   "question": "fear the walking dead season 1 episode 4 explained",
+   "gold_answers": [
+    "No . overall No. in season Title Directed by Written by Original air date U.S. viewers ( millions ) `` Pilot '' Adam Davidson Robert Kirkman & Dave Erickson August 23 , 2015 ( 2015 - 08 - 23 ) 10.13 Nick awakens in a heroin den in an abandoned church , to find his girlfriend Gloria eating a corpse . While fleeing , he is hit by a car and hospitalized . The doctor tells Madison and Travis that Nick 's claims about the incident are heroin hallucinations , but Travis believes Nick after visiting the church himself . Alicia becomes more worried about Nick 's chemical dependency . The next day , school closes early due to the high levels of absenteeism and rumors of an epidemic . Nick escapes from the hospital and meets with Calvin , hoping to learn if the drugs Calvin sold him caused him to hallucinate in the church . Calvin tries to kill Nick to prevent him from exposing Calvin as a drug dealer or impugning the quality of his drugs . In the ensuing struggle , Calvin is mortally shot . After Travis and Madison arrive , the zombified Calvin attacks them . Nick runs over Calvin repeatedly with Travis ' truck , and the three watch in disbelief as the mutilated Calvin is still able to turn his head towards them . `` So Close , Yet So Far '' Adam Davidson Marco Ramirez August 30 , 2015 ( 2015 - 08 - 30 ) 8.18 After the run - in with zombified Calvin , Nick , Madison , and Travis choose to flee to the desert , and they want Alicia , Liza , and Chris to follow . Alicia finds Matt ill in his disheveled house . Travis arrives and sees a bite on Matt , who convinces Alicia to leave . The group returns to Madison 's home to gather supplies . Nick suffers from heroin withdrawal , so Madison drives to her school to get him Oxycodone . There , she encounters Tobias scavenging food . A zombified Artie tries to bite Tobias , so Madison kills Artie and drives Tobias home . Chris ' bus is trapped in a traffic jam caused by a zombie shooting by the police . He films the event and joins in a protest against that and other recent fatal police shootings , when Travis and Liza meet up with him . A riot erupts after police shoot down another zombie , but the three Manawas find refuge with the Salazars in their gated barbershop - home . Travis tells Madison to take the kids to the desert without him ; he will catch up . Alicia witnesses her zombified neighbor , Mr. Dawson , attacking Mrs. Cruz across the street , but Madison prevents her from intervening . The group inside the barbershop remains trapped , while the riot outside intensifies . `` The Dog '' Adam Davidson Jack LoGiudice September 13 , 2015 ( 2015 - 09 - 13 ) 7.19 While a riot rages outside , a mob sets fire to the store adjoining the barbershop , forcing the Salazars and Manawas to flee . The group reaches Travis ' truck and escapes , but not before Griselda is injured by a collapsing scaffold . Unable to reach a hospital , the group drives to Madison 's house , where Nick , Madison , and Alicia temporarily flee when the zombified Mr. Dawson attempts to enter , attracted by the barking dog Nick had let in . Nick leads Madison and Alicia to the Trans ' house next door , where they take a shotgun . Travis arrives and is attacked by Mr. Dawson , who is shot and killed by Daniel . All three families decide to stay the night and evacuate in the morning . Nurse Liza tends to Griselda 's injured foot but notes that Griselda will die if not treated by a doctor . Ofelia tells Daniel they should flee with Travis , but Daniel insists his family can survive alone and will join his cousin later . The next morning , as the Clarks and Manawas start driving away , the National Guard arrives and quarantines the block . While Travis says , `` It 's going to get better , '' Daniel laments that it 's , `` too late , '' as he watches a guardsman mark the neighboring house . `` Not Fade Away '' Kari Skogland Meaghan Oppenheimer September 20 , 2015 ( 2015 - 09 - 20 ) 6.62 Days after the National Guard quarantines the neighborhood into a Safe Zone , residents try to live normally . Tensions build under the military rule . Madison is stressed by extra work caused by her home 's being overcrowded and Travis ' new role as civilian liaison . Chris shows a video to Travis and Madison of a light signaling from the Dead Zone . Travis talks Doug into getting mental help . Liza medically helps neighbors . Nick steals morphine from Hector via IV drip . Ofelia kisses Adams , who was unable to get Griselda 's medicine . Madison exchanges signals with the flashing light in the Dead Zone . She sneaks outside the fence to investigate and finds evidence that the guardsmen killed civilians , even the uninfected . Travis learns that Doug has been hospitalized for his mental issues . Dr. Exner determines that Liza is not technically a nurse . Daniel warns Madison of his El Salvador experience , when the sick were taken under the guise of receiving hospitalization but instead killed . Soldiers take Griselda and Nick to a hospital , but Nick 's family protests his departure . Liza agrees to go to assist the medical team , despite not wanting to leave her son . Travis retreats to the roof and sees the signal from the Dead Zone . Seconds later , he sees and hears gunfire , followed by darkness . 5 5 `` Cobalt '' Kari Skogland David Wiener September 27 , 2015 ( 2015 - 09 - 27 ) 6.66 In a military cell , Strand bribes a guardsman to save feverish Nick from being moved . Liza helps Dr. Exner with patients at the hospital . Chris is devastated that Liza left voluntarily to help at the hospital , but Travis promises to bring her back . Madison discovers Daniel detaining Adams in the Trans ' basement . Alicia and Chris get drunk in and vandalize the abandoned home of a wealthy family . Strand recruits Nick for an escape plot . Travis convinces Moyers ' squad to take him to the hospital to check on his friends . While en route , Moyers encourages Travis to shoot a zombie , but Travis is emotionally unable to pull the trigger . The soldiers stop to assist another squad in a building infested by zombies , and most of those soldiers , including Moyers , are overcome . The few survivors flee and drop off Travis near the Safe Zone . Travis learns that Daniel tortured Adams into revealing what `` Cobalt '' means : in the morning , all civilians will be killed , and the guardsmen will evacuate the city . Griselda dies of septic shock at the hospital ; Liza shoots her brain to prevent reanimation . Daniel visits a nearby sports arena to verify Adams ' story that it was sealed with 2,000 now - zombified civilians inside . 6 6 `` The Good Man '' Stefan Schwartz Robert Kirkman & Dave Erickson October 4 , 2015 ( 2015 - 10 - 04 ) 6.86 The group drives to the National Guard 's headquarters to rescue Liza , Griselda , and Nick . Adams agrees to be their guide when let go by Travis . The group infiltrates the base after Daniel distracts the guards by leading a horde of walkers from the arena . Travis , Madison , Daniel , and Ofelia go inside , while Alicia and Chris stay behind . Meanwhile , the walkers breach the perimeter defenses and swarm the base . Travis ' group reach the holding cells and set the detainees free before reuniting with Nick , Liza , and Strand . They try to escape through the medical ward , where they discover Dr. Exner has euthanized all of the patients . Dr. Exner tells them of an escape route before presumably committing suicide . Before they can escape , the group encounters Adams , who shoots Ofelia in the arm . Enraged , Travis brutally beats Adams and leaves him for dead . Strand leads the group to his oceanside mansion , where he reveals to Nick that he owns a yacht which he plans to escape on , called the Abigail . On the beach , Liza reveals to Madison that she had been bitten during the escape . Liza pleads with Madison and Travis to euthanize her before she turns . Travis promises to protect Chris before shooting Liza ."
+   ],
+   "model_answer": "Madison discovers the National Guard has killed civilians, while tensions grow in the quarantined neighborhood."
+  },
+  {
+   "id": "1f4fbc610aa2ae8b",
+   "kind": "answer",
+   "question": "who is jessie's girl on breaking bad",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Jane Margolis"
+  },
+  {
+   "id": "1cb9731a34f65028",
+   "kind": "answer",
+   "question": "curious incident of the dog in the nighttime singapore wikipedia",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The Curious Incident of the Dog in the Night-Time is a 2003 novel by Mark Haddon."
+  },
+  {
+   "id": "5dc40eb7c1538de7",
+   "kind": "answer",
+   "question": "describe the impact of the crisis at little rock on the american government",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "President Eisenhower sent federal troops to enforce school integration."
+  },
+  {
+   "id": "44c47ba242ea1cf6",
+   "kind": "answer",
+   "question": "what is the final season of downton abbey",
+   "gold_answers": [
+    "six",
+    "the sixth",
+    "the sixth series",
+    "sixth",
+    "Six"
+   ],
+   "model_answer": "Season 6"
+  },
+  {
+   "id": "7d595eb4d1d368c3",
+   "kind": "answer",
+   "question": "steps party on the dance floor tour review",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "A high-energy, slick pop triumph, praised by critics and audiences."
+  },
+  {
+   "id": "d8b8045f62411eef",
+   "kind": "answer",
+   "question": "how many languages do they speak in africa",
+   "gold_answers": [
+    "The total number of languages natively spoken in Africa is variously estimated ( depending on the delineation of language vs. dialect ) at between 1,250 to 2,100 , and by some counts at `` over 3,000 '' , Nigeria alone has over 500 languages ( according to the count of SIL Ethnologue ) , one of the greatest concentrations of linguistic diversity in the world ."
+   ],
+   "model_answer": "About 2,000 languages."
+  },
+  {
+   "id": "8f70ee4f29248880",
+   "kind": "answer",
+   "question": "akhada the authorized biography of mahavir singh phogat",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "3cd974f670cad580",
+   "kind": "answer",
+   "question": "what is the moral of cat in the hat",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Have fun, but clean up your mess."
+  },
+  {
+   "id": "474e68452bedb8d5",
+   "kind": "answer",
+   "question": "what awards did the harry potter movies win",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "BAFTAs, Saturn Awards, Empire Awards, BMI Film Music Award, National Movie Awards, Phoenix Film Critics Society Awards, and AFI and Michael Balcon special awards."
+  },
+  {
+   "id": "493ad637d473b3d0",
+   "kind": "answer",
+   "question": "90 day fiance 1st season where are they now",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Russ and Paola have one son; Alan and Kirlyam have two; Mike and Aziza have two; Louis and Aya have three; Danny and Amy have three. All remain married."
+  },
+  {
+   "id": "37ee286929926ff0",
+   "kind": "answer",
+   "question": "what are the requirements of passing national senior certificate",
+   "gold_answers": [
+    "Subjects are all taken on the same level - there is no higher or standard grade as in the past . There are three pass levels , each with different pass requirements. First is a pass with Higher certificate , one must obtain 40 % in home language , 40 % in two other subjects and must obtain 30 % in three other subjects . A learner who passed matric with higher certificate level , can not enroll for a University Degree nor a Diploma at an institute of higher learning . The mean mark in any subject is usually about 55 . Only a small proportion of candidates score an ' A ' in any subject ( from as little as 2 % to a maximum of about 10 % in subjects taken by highly select groups . ) A further 8 -- 15 % are likely to gain a ' B ' and about 20 -- 25 % achieve a ' C ' grade . The National Senior Certificate is a group certificate and records an aggregate mark ."
+   ],
+   "model_answer": "At least 40% in one Home Language, 30% in two other subjects, and 30% in three more subjects, with required assessment completed in the seventh subject."
+  },
+  {
+   "id": "5c1aa9e6cdc290ac",
+   "kind": "answer",
+   "question": "when are two events said to be independent",
+   "gold_answers": [
+    "if the occurrence of one does not affect the probability of occurrence of the other",
+    "if the occurrence of one does not affect the probability of occurrence of the other."
+   ],
+   "model_answer": "When the probability of both occurring equals the product of their individual probabilities."
+  },
+  {
+   "id": "5815f0811f203bf4",
+   "kind": "answer",
+   "question": "where does the nitrogen for this fertilizer come from",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Atmospheric nitrogen (N₂)"
+  },
+  {
+   "id": "47e899e545073a92",
+   "kind": "answer",
+   "question": "the private ownership of real property is known as",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Freehold ownership"
+  },
+  {
+   "id": "5835da3c61f72d15",
+   "kind": "answer",
+   "question": "how has australia been influenced by other cultures",
+   "gold_answers": [
+    "The culture of Australia is a Western culture , derived primarily from Britain but also influenced by the unique geography of Australia , the diverse input of Aboriginal , Torres Strait Islander and other Australian people . The British colonization of Australia began in 1788 , and waves of multi-ethnic migration followed . Evidence of a significant Anglo - Celtic heritage includes the predominance of the English language , the existence of a democratic system of government drawing upon the British traditions of Westminster Government , Parliamentarianism and constitutional monarchy , American constitutionalist and federalist traditions , Christianity as the dominant religion , and the popularity of sports originating in ( or influenced by ) the British Isles . Australian culture has diverged significantly since British settlement ."
+   ],
+   "model_answer": "Through immigration, especially from Britain, Europe, Asia, and other regions, shaping Australia’s arts, cuisine, sport, and everyday life."
+  },
+  {
+   "id": "e5cf64cda050e9c9",
+   "kind": "answer",
+   "question": "what are the importance of rigor mortis in meat processing",
+   "gold_answers": [
+    "rigor mortis and its resolution partially determine the tenderness of meat",
+    "tenderness of meat"
+   ],
+   "model_answer": "It affects meat tenderness and helps guide measures to prevent cold shortening."
+  },
+  {
+   "id": "8c256e312530fcd1",
+   "kind": "answer",
+   "question": "describe the impact of the crisis at little rock on the american government",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "It prompted federal intervention to enforce school desegregation and the Supreme Court’s ruling."
+  },
+  {
+   "id": "616c35c80785779d",
+   "kind": "answer",
+   "question": "what material was used to build the roofs of houses in burzahom",
+   "gold_answers": [
+    "birch"
+   ],
+   "model_answer": "Wooden logs and branches"
+  },
+  {
+   "id": "242c4f59f2601cb5",
+   "kind": "answer",
+   "question": "what events occurred in the fighting at seas and near the great lakes",
+   "gold_answers": [
+    "The Battle of Lake Erie , sometimes called the Battle of Put - in - Bay , was fought on 10 September 1813 , in Lake Erie off the coast of Ohio during the War of 1812 . Nine vessels of the United States Navy defeated and captured six vessels of the British Royal Navy . This ensured American control of the lake for the rest of the war , which in turn allowed the Americans to recover Detroit and win the Battle of the Thames to break the Indian confederation of Tecumseh . It was one of the biggest naval battles of the War of 1812 ."
+   ],
+   "model_answer": "Naval battles and clashes on the Great Lakes during the War of 1812."
+  },
+  {
+   "id": "5400a7255d00b62d",
+   "kind": "answer",
+   "question": "yadav caste belongs to which category in andhra pradesh",
+   "gold_answers": [
+    "Yadava ( Golla )"
+   ],
+   "model_answer": "Backward Class (BC-D)"
+  },
+  {
+   "id": "2bccdbf69916b245",
+   "kind": "answer",
+   "question": "list of american league and national league teams",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "**American League:** Orioles, Red Sox, Yankees, Rays, Blue Jays; White Sox, Guardians, Tigers, Royals, Twins; Astros, Athletics, Angels, Mariners, Rangers.\n\n**National League:** Braves, Marlins, Mets, Phillies, Nationals; Cubs, Reds, Brewers, Pirates, Cardinals; Diamondbacks, Rockies, Dodgers, Padres, Giants."
+  },
+  {
+   "id": "456065430dffc870",
+   "kind": "answer",
+   "question": "who is the richest club in the championship",
+   "gold_answers": [
+    "Manchester City",
+    "Aston Villa"
+   ],
+   "model_answer": "Queens Park Rangers (QPR)"
+  },
+  {
+   "id": "4994780838644686",
+   "kind": "answer",
+   "question": "where does the autobahn have no speed limit",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Mostly outside densely populated areas, especially in parts of eastern Germany."
+  },
+  {
+   "id": "1332f5f912e330dc",
+   "kind": "answer",
+   "question": "when did the philadelphia eagles play in the super bowl last",
+   "gold_answers": [
+    "Super Bowl LII"
+   ],
+   "model_answer": "Super Bowl LII in 2018 (following the 2017 season)"
+  },
+  {
+   "id": "bf744f3da9e6b243",
+   "kind": "answer",
+   "question": "what are the kinds of dance and its definition",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Ballet—classical; hip-hop—street dance; salsa—Latin partner dance; tap—rhythmic footwork; contemporary—expressive modern dance."
+  },
+  {
+   "id": "c44fbf7fd2377b8d",
+   "kind": "answer",
+   "question": "did the bush family own a baseball team",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "George W. Bush owned a share of the Texas Rangers."
+  },
+  {
+   "id": "6ae411079acdedbb",
+   "kind": "answer",
+   "question": "was nightmare before christmas originally a disney movie",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, though it was released under Touchstone Pictures."
+  },
+  {
+   "id": "be36b12adf85c614",
+   "kind": "answer",
+   "question": "where are located the acetabulum and the glenoid cavities",
+   "gold_answers": [
+    "Compared to the acetabulum ( at the hip - joint ) the glenoid cavity is relatively shallow . This makes the shoulder joint prone to dislocation ( luxation ) . Strong glenohumeral ligaments and muscles prevents dislocation in most cases ."
+   ],
+   "model_answer": "The acetabulum is in the hip bone; the glenoid cavity is at the lateral angle of the scapula."
+  },
+  {
+   "id": "b3a5e754a0a100d1",
+   "kind": "answer",
+   "question": "cast of law & order special victim unit",
+   "gold_answers": [
+    "Christopher Meloni",
+    "Mariska Hargitay",
+    "Richard Belzer",
+    "Dann Florek",
+    "Michelle Hurd",
+    "Stephanie March",
+    "Ice-T",
+    "Tamara Tunie",
+    "B. D. Wong",
+    "Diane Neal",
+    "Adam Beach",
+    "Michaela McManus",
+    "Danny Pino",
+    "Kelli Giddish",
+    "Raúl Esparza",
+    "Peter Scanavino"
+   ],
+   "model_answer": "Mariska Hargitay, Christopher Meloni, Richard Belzer, Dann Florek, and Ice-T."
+  },
+  {
+   "id": "e406b17fed304af8",
+   "kind": "answer",
+   "question": "when does the new season of law and order svu come on",
+   "gold_answers": [
+    "September 27, 2017"
+   ],
+   "model_answer": "Wednesday, September 27, 2017, at 9 p.m. ET."
+  },
+  {
+   "id": "d69e7eb39d23e5da",
+   "kind": "answer",
+   "question": "what part of new york likes the jets",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Long Island and the New York City area."
+  },
+  {
+   "id": "f6c61c16354b6a78",
+   "kind": "answer",
+   "question": "in which sea pearl is found in india",
+   "gold_answers": [
+    "the Indian Ocean"
+   ],
+   "model_answer": "Gulf of Mannar"
+  },
+  {
+   "id": "bf10f6c01ab8c0d0",
+   "kind": "answer",
+   "question": "are there many copies of sir gawain and the green knight",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No; it survives in a single manuscript."
+  },
+  {
+   "id": "c0594955adec7be0",
+   "kind": "answer",
+   "question": "what is the current mac os operating system",
+   "gold_answers": [
+    "10.13.4",
+    "macOS High Sierra, which was publicly released in September 2017",
+    "macOS High Sierra"
+   ],
+   "model_answer": "macOS Sequoia (version 15)"
+  },
+  {
+   "id": "d3665c17f85c0bcd",
+   "kind": "answer",
+   "question": "when is the rock n roll hall of fame",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The induction ceremony is usually held in the fall."
+  },
+  {
+   "id": "f05742ec3d210c73",
+   "kind": "answer",
+   "question": "british forces retreated when they saw how strong american defenses were",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The Battle of Baltimore (1814)"
+  },
+  {
+   "id": "84f05f57a6deb14f",
+   "kind": "answer",
+   "question": "who wrote the story of my life by neil diamond",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Burt Bacharach and Hal David"
+  },
+  {
+   "id": "d79d2bc9914a4027",
+   "kind": "answer",
+   "question": "where does kylo ren's name come from",
+   "gold_answers": [
+    "the character, \"came to the name Kylo Ren when he joined a group called the Knights of Ren.\""
+   ],
+   "model_answer": "From the Knights of Ren."
+  },
+  {
+   "id": "3550b630f3b7cceb",
+   "kind": "answer",
+   "question": "spike jones and his city slickers two front teeth",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Recorded in 1947 by Spike Jones & His City Slickers."
+  },
+  {
+   "id": "557a5c50771829bf",
+   "kind": "answer",
+   "question": "who turned out to be the mother on how i met your mother",
+   "gold_answers": [
+    "Tracy McConnell"
+   ],
+   "model_answer": "Tracy McConnell (Cristin Milioti)"
+  },
+  {
+   "id": "79a2ad3226e34665",
+   "kind": "answer",
+   "question": "lynyrd skynyrd last of a dying breed album",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "*Last of a Dyin’ Breed* is Lynyrd Skynyrd’s 14th studio album, released August 21, 2012."
+  },
+  {
+   "id": "8fe2050c5285fa96",
+   "kind": "answer",
+   "question": "what are the band members names of the rolling stones",
+   "gold_answers": [
+    "Mick Jagger",
+    "Keith Richards",
+    "Charlie Watts",
+    "Ronnie Wood"
+   ],
+   "model_answer": "Mick Jagger, Keith Richards, Charlie Watts, Ronnie Wood, Brian Jones, Ian Stewart, Bill Wyman, and Mick Taylor."
+  },
+  {
+   "id": "a87cc4e4614f796c",
+   "kind": "answer",
+   "question": "where does the word fore in golf originated",
+   "gold_answers": [
+    "`` Fore ! '' , originally an Australian interjection , is used to warn anyone standing or moving in the flight of a golf ball . The mention of the term in an 1881 Australian Golf Museum indicates that the term was in use at least as early as that period ."
+   ],
+   "model_answer": "From “forecaddie,” a warning to someone ahead of the players."
+  },
+  {
+   "id": "9b2d12af22633be8",
+   "kind": "answer",
+   "question": "how has australia been influenced by other cultures",
+   "gold_answers": [
+    "The culture of Australia is a Western culture , derived primarily from Britain but also influenced by the unique geography of Australia , the diverse input of Aboriginal , Torres Strait Islander and other Australian people . The British colonization of Australia began in 1788 , and waves of multi-ethnic migration followed . Evidence of a significant Anglo - Celtic heritage includes the predominance of the English language , the existence of a democratic system of government drawing upon the British traditions of Westminster Government , Parliamentarianism and constitutional monarchy , American constitutionalist and federalist traditions , Christianity as the dominant religion , and the popularity of sports originating in ( or influenced by ) the British Isles . Australian culture has diverged significantly since British settlement ."
+   ],
+   "model_answer": "Through immigration and global influences, shaping its cuisine, arts, sports, and everyday culture."
+  },
+  {
+   "id": "432a2b2338125371",
+   "kind": "answer",
+   "question": "an american colonist who did not support the fight for independence",
+   "gold_answers": [
+    "Loyalists were American colonists who remained loyal to the British Crown during the American Revolutionary War . At the time they were often called Tories , Royalists , or King 's Men . They were opposed by the Patriots , those who supported the revolution and called them `` persons inimical to the liberties of America '' . Prominent Loyalists repeatedly assured the British government that many thousands of loyalists would spring to arms and fight for the crown . The British government acted in expectation of that , especially in the southern campaigns in 1780 - 81 . In practice , the number of loyalists in military service was far lower than expected . Across the colonies , Patriots watched suspected Loyalists very closely , and would not tolerate any organized Loyalist opposition . Many outspoken or militarily active loyalists were forced to flee , especially to their stronghold of New York City . William Franklin , the royal governor of New Jersey and son of Patriot leader Benjamin Franklin , became the leader of the Loyalists after his release from a Patriot prison in 1778 . He worked to build Loyalist military units to fight in the war , but the number of volunteers was much fewer than London expected ."
+   ],
+   "model_answer": "Loyalist"
+  },
+  {
+   "id": "70d2c23299edd398",
+   "kind": "answer",
+   "question": "the cast of a good day to die hard",
+   "gold_answers": [
+    "Bruce Willis",
+    "Jai Courtney",
+    "Sebastian Koch",
+    "Yuliya Snigir",
+    "Sergei Kolesnikov",
+    "Radivoje Bukvić",
+    "Mary Elizabeth Winstead"
+   ],
+   "model_answer": "Bruce Willis, Jai Courtney, Sebastian Koch, Yulia Snigir, Mary Elizabeth Winstead, and Rasha Bukvić."
+  },
+  {
+   "id": "78d3cf34c1e80e76",
+   "kind": "answer",
+   "question": "horatio spafford story it is well with my soul",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Horatio Spafford wrote “It Is Well with My Soul” after his four daughters died in the 1873 shipwreck of the Ville du Havre."
+  },
+  {
+   "id": "03f93251db9a9601",
+   "kind": "answer",
+   "question": "who warned europe to stay out of the americas",
+   "gold_answers": [
+    "Roosevelt Corollary",
+    "Monroe Doctrine"
+   ],
+   "model_answer": "The United States via the Monroe Doctrine"
+  },
+  {
+   "id": "cb90a76d89e5a28f",
+   "kind": "answer",
+   "question": "how do i loathe thee let me count the ways shakespeare",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Not Shakespeare; it’s from “Sonnets from the Portuguese.”"
+  }
+ ],
+ "evidence": []
+}

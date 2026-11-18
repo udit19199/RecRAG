@@ -1,0 +1,108 @@
+[
+{"id": "b2080bba53aff01b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Semyon Aronovich Gershgorin (August 24, 1901 – May 30, 1933) was a Soviet (born in Pruzhany, Belarus, Russian Empire) mathematician."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Semyon Aronovich Gershgorin (August 24, 1901 – May 30, 1933) was a Soviet (born in Pruzhany, Belarus, Russian Empire) mathematician."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Semyon Aronovich Gershgorin (August 24, 1901 – May 30, 1933) was a Soviet (born in Pruzhany, Belarus, Russian Empire) mathematician."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "Semyon Aronovich Gershgorin (August 24, 1901 – May 30, 1933) was a Soviet (born in Pruzhany, Belarus, Russian Empire) mathematician."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 10, "quote": "Semyon Aronovich Gershgorin (August 24, 1901 – May 30, 1933) was a Soviet (born in Pruzhany, Belarus, Russian Empire) mathematician."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Semyon Aronovich Gershgorin (August 24, 1901 – May 30, 1933) was a Soviet (born in Pruzhany, Belarus, Russian Empire) mathematician."}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 7, "quote": "Anatoly Ivanovich Maltsev (also: Malcev, Mal'cev;"}, {"item": 7, "quote": "He was a mathematician noted for his work on the decidability of various algebraic groups."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Malcev algebras (generalisations of Lie algebras) are named after him."}]},
+{"fact": "1.3", "status": "contradicted", "evidence": [{"item": 7, "quote": "Anatoly Ivanovich Maltsev (also: Malcev, Mal'cev;"}, {"item": 7, "quote": "Malcev algebras (generalisations of Lie algebras) are named after him."}]}
+]},
+{"id": "f0c364f8d29975fe", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Her favorite events are 800 metres and 1500 metres."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Her favorite events are 800 metres and 1500 metres."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "The distance has been contested at the Summer Olympics since 1896 and the World Championships in Athletics since 1983."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "The distance has been contested at the Summer Olympics since 1896 and the World Championships in Athletics since 1983."}]}
+]},
+{"id": "4a380b82bea459e4", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "St. Elizabeths Hospital opened in 1855 as the first federally operated psychiatric hospital in the United States."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "St. Elizabeths Hospital opened in 1855 as the first federally operated psychiatric hospital in the United States."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 4, "quote": "St. Elizabeths Hospital opened in 1855 as the first federally operated psychiatric hospital in the United States."}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 8, "quote": "Providence Hospital is a 408 bed hospital located in the District of Columbia."}, {"item": 8, "quote": "Founded in 1861, it is the longest continuously operating hospital in the District."}]}
+]},
+{"id": "7dda7778e42aa4a8", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Mr. Wilson's Cabinet of Wonder: Pronged Ants, Horned Humans, Mice on Toast, and Other Marvels of Jurassic Technology is a book by Lawrence Weschler primarily about the Museum of Jurassic Technology and, more broadly, the history and role of museums."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Mr. Wilson's Cabinet of Wonder: Pronged Ants, Horned Humans, Mice on Toast, and Other Marvels of Jurassic Technology is a book by Lawrence Weschler primarily about the Museum of Jurassic Technology and, more broadly, the history and role of museums."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Mr. Wilson's Cabinet of Wonder: Pronged Ants, Horned Humans, Mice on Toast, and Other Marvels of Jurassic Technology is a book by Lawrence Weschler primarily about the Museum of Jurassic Technology and, more broadly, the history and role of museums."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "Mr. Wilson's Cabinet of Wonder: Pronged Ants, Horned Humans, Mice on Toast, and Other Marvels of Jurassic Technology is a book by Lawrence Weschler primarily about the Museum of Jurassic Technology and, more broadly, the history and role of museums."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The Museum of Jurassic Technology is a museum located at 9341 Venice Boulevard in the Palms district of Los Angeles, California."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "The Museum of Jurassic Technology is a museum located at 9341 Venice Boulevard in the Palms district of Los Angeles, California."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "The Museum of Jurassic Technology is a museum located at 9341 Venice Boulevard in the Palms district of Los Angeles, California."}]}
+]},
+{"id": "845b9be1c99bb573", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "California State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "California State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "California State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "California State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly)"}, {"item": 6, "quote": "It is one of two polytechnics in the California State University system."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "The Ural Federal University named after the first President of Russia B. N. Yeltsin"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "Uralʹskiĭ federalʹnyĭ universitet imeni pervogo Prezidenta Rossii B.N. Yelʹtsina"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 5, "quote": "The Ural Federal University named after the first President of Russia B. N. Yeltsin"}, {"item": 5, "quote": "often shortened to UrFU, УрФУ"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 5, "quote": "(formed by a merger of the Ural State Technical University and Ural State University) is one of the leading educational institutions in the Ural region."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 5, "quote": "(formed by a merger of the Ural State Technical University and Ural State University) is one of the leading educational institutions in the Ural region."}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 5, "quote": "Ural Federal University acts as a research and innovation center of the Ural region and has close cooperation with the Russian Academy of Sciences."}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 5, "quote": "Ural Federal University acts as a research and innovation center of the Ural region and has close cooperation with the Russian Academy of Sciences."}]}
+]},
+{"id": "a4c951de0e1578fb", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Garajonay National Park (Spanish:"}, {"item": 7, "quote": "It occupies 40 km (15 sq mi) and it extends into each of the six municipalities on the island."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Garajonay National Park (Spanish:"}, {"item": 7, "quote": "It occupies 40 km (15 sq mi) and it extends into each of the six municipalities on the island."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Sierra de Guadarrama National Park (in Spanish: \"Parque Nacional de la Sierra de Guadarrama\") is a national park in Spain, covering nearly 34,000 hectares, the fifth largest in Spain's national parks system."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Sierra de Guadarrama National Park (in Spanish: \"Parque Nacional de la Sierra de Guadarrama\") is a national park in Spain, covering nearly 34,000 hectares, the fifth largest in Spain's national parks system."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Sierra de Guadarrama National Park (in Spanish: \"Parque Nacional de la Sierra de Guadarrama\") is a national park in Spain, covering nearly 34,000 hectares, the fifth largest in Spain's national parks system."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "Sierra de Guadarrama National Park (in Spanish: \"Parque Nacional de la Sierra de Guadarrama\") is a national park in Spain, covering nearly 34,000 hectares, the fifth largest in Spain's national parks system."}]}
+]},
+{"id": "787d214ea2df2c4d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "For the sedan variant of the car, see Volvo S40."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "The Volvo S40 is a compact luxury car marketed and produced by the Swedish manufacturer Volvo Cars from 1995 to 2012 across two generations."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "The Volvo S40 is a compact luxury car marketed and produced by the Swedish manufacturer Volvo Cars from 1995 to 2012 across two generations."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "The Volvo S40 is a compact luxury car marketed and produced by the Swedish manufacturer Volvo Cars from 1995 to 2012 across two generations."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "The Volvo S40 is a compact luxury car marketed and produced by the Swedish manufacturer Volvo Cars from 1995 to 2012 across two generations."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 5, "quote": "The Volvo S40 is a compact luxury car marketed and produced by the Swedish manufacturer Volvo Cars from 1995 to 2012 across two generations."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 5, "quote": "The Volvo S40 is a compact luxury car marketed and produced by the Swedish manufacturer Volvo Cars from 1995 to 2012 across two generations."}]}
+]},
+{"id": "f9db86f91a28223d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Edward Sharpe and the Magnetic Zeros is an American folk rock band formed in Los Angeles, California in 2007."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Edward Sharpe and the Magnetic Zeros is an American folk rock band formed in Los Angeles, California in 2007."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "Edward Sharpe and the Magnetic Zeros is an American folk rock band formed in Los Angeles, California in 2007."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Louis XIV is an American rock band from San Diego, California."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Louis XIV is an American rock band from San Diego, California."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "The band has released four EPs between 2003 and 2007, and three albums between 2003 and 2008, the latter two of which were distributed by Atlantic Records."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "The band has released four EPs between 2003 and 2007, and three albums between 2003 and 2008, the latter two of which were distributed by Atlantic Records."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "The band has released four EPs between 2003 and 2007, and three albums between 2003 and 2008, the latter two of which were distributed by Atlantic Records."}]}
+]},
+{"id": "83f1f3fec2f7ea20", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Rivermaya is a Filipino rock band."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Kodaline ( ) are an Irish band."}]}
+]},
+{"id": "1b47b0c8601ef1d2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Return to Never Land (also known as Peter Pan 2 or Peter Pan In: Return to Never Land) is a 2002 American animated musical fantasy-adventure film produced by Walt Disney Television Animation, and released by Walt Disney Pictures and distributed by Walt Disney Studios Motion Pictures."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Return to Never Land (also known as Peter Pan 2 or Peter Pan In: Return to Never Land) is a 2002 American animated musical fantasy-adventure film produced by Walt Disney Television Animation, and released by Walt Disney Pictures and distributed by Walt Disney Studios Motion Pictures."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Return to Never Land (also known as Peter Pan 2 or Peter Pan In: Return to Never Land) is a 2002 American animated musical fantasy-adventure film produced by Walt Disney Television Animation, and released by Walt Disney Pictures and distributed by Walt Disney Studios Motion Pictures."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Return to Never Land (also known as Peter Pan 2 or Peter Pan In: Return to Never Land) is a 2002 American animated musical fantasy-adventure film produced by Walt Disney Television Animation, and released by Walt Disney Pictures and distributed by Walt Disney Studios Motion Pictures."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "Return to Never Land (also known as Peter Pan 2 or Peter Pan In: Return to Never Land) is a 2002 American animated musical fantasy-adventure film produced by Walt Disney Television Animation, and released by Walt Disney Pictures and distributed by Walt Disney Studios Motion Pictures."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 8, "quote": "Return to Never Land (also known as Peter Pan 2 or Peter Pan In: Return to Never Land) is a 2002 American animated musical fantasy-adventure film produced by Walt Disney Television Animation, and released by Walt Disney Pictures and distributed by Walt Disney Studios Motion Pictures."}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 8, "quote": "Return to Never Land (also known as Peter Pan 2 or Peter Pan In: Return to Never Land) is a 2002 American animated musical fantasy-adventure film produced by Walt Disney Television Animation, and released by Walt Disney Pictures and distributed by Walt Disney Studios Motion Pictures."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "a0055e1f49f5b627", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "The Great War is a 26-episode documentary series from 1964 on the First World War."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "The Great War is a 26-episode documentary series from 1964 on the First World War."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "The Great War is a 26-episode documentary series from 1964 on the First World War."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "The Great War is a 26-episode documentary series from 1964 on the First World War."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The documentary was a co-production of the Imperial War Museum, the British Broadcasting Corporation, the Canadian Broadcasting Corporation and the Australian Broadcasting Commission."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The documentary was a co-production of the Imperial War Museum, the British Broadcasting Corporation, the Canadian Broadcasting Corporation and the Australian Broadcasting Commission."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "The documentary was a co-production of the Imperial War Museum, the British Broadcasting Corporation, the Canadian Broadcasting Corporation and the Australian Broadcasting Commission."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "The documentary was a co-production of the Imperial War Museum, the British Broadcasting Corporation, the Canadian Broadcasting Corporation and the Australian Broadcasting Commission."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "The narrator was Michael Redgrave, with readings by Marius Goring, Ralph Richardson, Cyril Luckham, Sebastian Shaw and Emlyn Williams."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "The narrator was Michael Redgrave, with readings by Marius Goring, Ralph Richardson, Cyril Luckham, Sebastian Shaw and Emlyn Williams."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 8, "quote": "The narrator was Michael Redgrave, with readings by Marius Goring, Ralph Richardson, Cyril Luckham, Sebastian Shaw and Emlyn Williams."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 8, "quote": "The narrator was Michael Redgrave, with readings by Marius Goring, Ralph Richardson, Cyril Luckham, Sebastian Shaw and Emlyn Williams."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 8, "quote": "The narrator was Michael Redgrave, with readings by Marius Goring, Ralph Richardson, Cyril Luckham, Sebastian Shaw and Emlyn Williams."}]},
+{"fact": "2.5", "status": "stated", "evidence": [{"item": 8, "quote": "The narrator was Michael Redgrave, with readings by Marius Goring, Ralph Richardson, Cyril Luckham, Sebastian Shaw and Emlyn Williams."}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 2, "quote": "Imperial War Museums (IWM) is a British national museum organisation with branches at five locations in England, three of which are in London."}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 2, "quote": "Imperial War Museums (IWM) is a British national museum organisation with branches at five locations in England, three of which are in London."}]},
+{"fact": "3.2", "status": "stated", "evidence": [{"item": 2, "quote": "Imperial War Museums (IWM) is a British national museum organisation with branches at five locations in England, three of which are in London."}]}
+]}
+]

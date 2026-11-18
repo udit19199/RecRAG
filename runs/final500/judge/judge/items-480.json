@@ -1,0 +1,490 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "50c890b1672cb3fd",
+   "gold": [
+    {
+     "sentence": "Eugène Ionesco (born Eugen Ionescu, ] ; 26 November 1909 – 28 March 1994) was a Romanian-French playwright who wrote mostly in French, and one of the foremost figures of the French Avant-garde theatre.",
+     "facts": {
+      "0.0": "Eugène Ionesco was born Eugen Ionescu.",
+      "0.1": "Eugène Ionesco was born on 26 November 1909.",
+      "0.2": "Eugène Ionesco died on 28 March 1994.",
+      "0.3": "Eugène Ionesco was a Romanian-French playwright.",
+      "0.4": "Eugène Ionesco wrote mostly in French.",
+      "0.5": "Eugène Ionesco was one of the foremost figures of the French Avant-garde theatre."
+     }
+    },
+    {
+     "sentence": "Paul Mark Scott (25 March 19201 March 1978) was an English novelist, playwright, and poet, best known for his monumental tetralogy \"The Raj Quartet.\"",
+     "facts": {
+      "1.0": "Paul Mark Scott was born on 25 March 1920.",
+      "1.1": "Paul Mark Scott died on 1 March 1978.",
+      "1.2": "Paul Mark Scott was an English novelist.",
+      "1.3": "Paul Mark Scott was an English playwright.",
+      "1.4": "Paul Mark Scott was an English poet.",
+      "1.5": "Paul Mark Scott is best known for his monumental tetralogy \"The Raj Quartet.\""
+     }
+    }
+   ],
+   "items": [
+    "The Decadent Movement, originating in late-19th-century France, prized excess, artificiality, perversion, skepticism, and creativity over nature and logic; key examples include Rops and Huysmans’s *Against Nature*. In 1959 Camus adapted Dostoyevsky’s *The Possessed*, directing an acclaimed, technically ambitious four-hour production. Ionesco, a Romanian-French absurdist playwright, explored human insignificance in works including *The Lesson*, *",
+    "Exit the King\nExit the King (French: Le Roi se meurt ) is an absurdist drama by Eugène Ionesco that premiered in 1962.\n\n It is the third in Ionesco's \"Berenger Cycle\", preceded by \"The Killer\" (1958) and \"Rhinocéros\" (1959), and followed by \"A Stroll in the Air\" (1963).",
+    "The entries survey literature, theatre, film, music, and curiosities: French Decadence favored artifice and excess; Camus staged Dostoyevsky’s *The Possessed* in 1959; Algren won the 1950 National Book Award; Poe satirized Gothic fiction; Moorcock wrote Elric and science-fiction novels; Nin’s diaries and erotica appeared partly posthumously. Wilde’s *Dorian Gray* faced censorship and condemnation. Verne’s",
+    "The Killer (play)\nThe Killer (French: Tueur sans gages , sometimes translated \"The Killer without Reason\" or \"The Killer without Cause\") is a play written by Eugène Ionesco in 1958.\n\n It is the first of Ionesco's Berenger plays, the others being \"Rhinocéros\" (1959), \"Exit the King\" (1962), and \"A Stroll in the Air\" (1963).",
+    "Victims of Duty\nVictims of Duty (French: Victimes du Devoir ) is a one-act play written in 1953 by French-Romanian playwright Eugène Ionesco.\n\n An early work, it has not received the notoriety of his other works.\n\n The play is in the Theatre of the Absurd style, of which Ionesco was a pioneer.",
+    "Lonely Planet (play)\nLonely Planet is a two character play written by Steven Dietz.\n\n The play tells the story of Jody and Carl, two gay men who live in an unnamed American city.\n\n The play was written during the midst of the AIDS epidemic, which is the central focus of the story, though ultimately the play sends the message that one should pay attention to the world around them and realize its problems rather than shun it.\n\n The play heavily references the Eugène Ionesco comedy \"The Chairs\".",
+    "The Lesson\nThe Lesson (French: \"La Leçon\" ) is a one-act play by French-Romanian playwright Eugène Ionesco.\n\n It was first performed in 1951 in a production directed by Marcel Cuvelier (who also played the Professor).\n\n Since 1957 it has been in permanent showing at Paris' Théâtre de la Huchette, on an Ionesco double-bill with The Bald Soprano.\n\n The play is regarded as an important work in the \"Theatre of the Absurd\".",
+    "Paul Scott (novelist)\nPaul Mark Scott (25 March 19201 March 1978) was an English novelist, playwright, and poet, best known for his monumental tetralogy \"The Raj Quartet.\"\n\n His novel \"Staying On\" won the Booker Prize for 1977.",
+    "Eugène Ionesco\nEugène Ionesco (born Eugen Ionescu, ] ; 26 November 1909 – 28 March 1994) was a Romanian-French playwright who wrote mostly in French, and one of the foremost figures of the French Avant-garde theatre.\n\n Beyond ridiculing the most banal situations, Ionesco's plays depict the solitude and insignificance of human existence in a tangible way.",
+    "The New Tenant\nThe New Tenant (French: \"Le Nouveau Locataire\" ) is a play written by Eugène Ionesco in 1955.\n\n The central image is common to many Ionesco plays: something accumulates on stage and overwhelms the characters.\n\n In this case its furniture.\n\n The main characters are a gentleman, a caretaker, and two movers.\n\n The caretaker talks as the gentleman, the \"new tenant\" of the title, directs the two movers who continuously bring in furniture."
+   ]
+  },
+  {
+   "id": "c78f34791400a6ff",
+   "gold": [
+    {
+     "sentence": "Jeffrey Charles \"Jeff\" Ragsdale ( ) is an American author, documentary filmmaker, actor and stand-up comedian.",
+     "facts": {
+      "0.0": "Jeffrey Charles \"Jeff\" Ragsdale is an American author.",
+      "0.1": "Jeffrey Charles \"Jeff\" Ragsdale is a documentary filmmaker.",
+      "0.2": "Jeffrey Charles \"Jeff\" Ragsdale is an actor.",
+      "0.3": "Jeffrey Charles \"Jeff\" Ragsdale is a stand-up comedian."
+     }
+    },
+    {
+     "sentence": "Millard Webb (6 December 1893 – 21 April 1935), was an American screenwriter and director.",
+     "facts": {
+      "1.0": "Millard Webb was born on 6 December 1893.",
+      "1.1": "Millard Webb died on 21 April 1935.",
+      "1.2": "Millard Webb was an American screenwriter.",
+      "1.3": "Millard Webb was an American director."
+     }
+    }
+   ],
+   "items": [
+    "Nathanael West\nNathanael West (born Nathan Weinstein; October 17, 1903 – December 22, 1940) was an American author, screenwriter and satirist.",
+    "Howard R. Garis\nHoward Roger Garis ((1873--) 25, 1873 – (1962--) 6, 1962 ) was an American author, best known for a series of books, published under his own name, that featured the character of Uncle Wiggily Longears, an engaging elderly rabbit.\n\n Garis and his wife were possibly the most prolific children's authors of the early 20th century.\n\n Many of his books were illustrated by Lansing Campbell.",
+    "Jeff, One Lonely Guy\nJeff, One Lonely Guy is a 2012 nonfiction book by Jeff Ragsdale.\n\n It was published on March 20, 2012 by New Harvest.\n\n Dave Eggers selected the book for inclusion in The Best American Nonrequired Reading 2012, and it was a GQ 2012 \"Book of the Year\".\n\n In 2014 Amitava Kumar included portions of \"Jeff, One Lonely Guy\" in his newly released book, \"A Matter of Rats: A Short Biography of Patna\".\n\n Kumar previously interviewed Ragsdale and wrote about him in \"The New York Times\".",
+    "Jeff Ragsdale\nJeffrey Charles \"Jeff\" Ragsdale ( ) is an American author, documentary filmmaker, actor and stand-up comedian.\n\n In 2011 he posted a flyer in New York City as a \"social experiment\", stating his phone number and asking people to call him, describing himself as \"Jeff, one lonely guy\".\n\n He was overwhelmed with thousands of calls after photos of the flyer were posted on the internet.\n\n The experience led to his 2012 book \"Jeff, One Lonely Guy\", and indirectly to a 2013 pilot episode for a reality television show, \"Being Noticed\", and a starring role in the 2014 documentary \"Hotline\".",
+    "Bernard Malamud\nBernard Malamud (April 26, 1914 – March 18, 1986) was an American novelist and short story writer.\n\n Along with Saul Bellow and Philip Roth, he was one of the best known American Jewish authors of the 20th century.\n\n His baseball novel, \"The Natural\", was adapted into a 1984 film starring Robert Redford.\n\n His 1966 novel \"The Fixer\" (also filmed), about antisemitism in Tsarist Russia, won both the National Book Award and the Pulitzer Prize.",
+    "Roger Garis\nRoger (Carroll) Garis, ((1901--) 10, 1901 – (1967--) 30, 1967 ) was an American author known as a writer for magazines and the author of \"The Outboard Boys\" series of books.\n\n Roger also wrote several books under pseudonyms for the Stratemeyer Syndicate, as his parents did (see My Father Was Uncle Wiggily for further details).",
+    "Lionel Snell\nRamsey Dukes is the current and most well-known pen name of Lionel Snell, a contemporary English magician, publisher and author on magic and philosophy.\n\n He has also under the pen names Lemuel Johnston.\n\n Angerford and Lea, Adamai Philotunus and Per Anum Ad Astra.\n\n His regular satirical column \"The Satanist's Diary\" was published in the magazine \"Aquarian Arrow\" during the 1980s and early 1990s under the pen name The Hon Hugo C StJ l'Estrange and included a multitude of other pen names as contributors.",
+    "Millard Webb\nMillard Webb (6 December 1893 – 21 April 1935), was an American screenwriter and director.\n\n He directed 20 films between 1920 and 1933.\n\n His best-known film is the 1926 silent John Barrymore adventure \"The Sea Beast\" costarring Dolores Costello.\n\n Webb also directed the early sound Florenz Ziegfeld produced talkie \"Glorifying the American Girl\" released by Paramount in 1929.\n\n His active years were from 1916 to 1933.",
+    "Everett Greenbaum\nEverett Greenbaum (December 20, 1919 – July 11, 1999) was an American television and film writer and actor who contributed to such shows as \"The Andy Griffith Show\" (24 Episodes), \"M*A*S*H\" (35 Episodes), \"Love American Style\", \"The Real McCoys\" (32 Episodes), \"Sanford and Son\", and \"The George Gobel Show\".\n\n Greenbaum was a co-creator with Jim Fritzell of \"Mister Peepers\" an important early television show which starred Wally Cox.\n\n He wrote the Hollywood feature film \"Good Neighbor Sam\", as well as a series of films starring Don Knotts that included \"The Shakiest Gun in the West\", \"The Reluctant Astronaut\", and \"The Ghost and Mr. Chicken\".",
+    "Nelson DeMille\nNelson Richard DeMille (born August 23, 1943) is an American author of action adventure and suspense novels.\n\n His novels include \"Plum Island\", \"The Charm School\", and \"The Gold Coast\".\n\n DeMille has also written under the pen names Jack Cannon, Kurt Ladner, Ellen Kay and Brad Matthews."
+   ]
+  },
+  {
+   "id": "7a9a55fb9781bde4",
+   "gold": [
+    {
+     "sentence": "Andrew and Jeremy Get Married is a 2004 British documentary film written and directed by Don Boyd for the BBC.",
+     "facts": {
+      "0.0": "Andrew and Jeremy Get Married is a 2004 film.",
+      "0.1": "Andrew and Jeremy Get Married is a British documentary film.",
+      "0.2": "Andrew and Jeremy Get Married was written by Don Boyd.",
+      "0.3": "Andrew and Jeremy Get Married was directed by Don Boyd.",
+      "0.4": "Andrew and Jeremy Get Married was made for the BBC."
+     }
+    },
+    {
+     "sentence": "The Last Lions is a 2011 African nature documentary film by National Geographic Society, videotaped and directed by Dereck and Beverly Joubert.",
+     "facts": {
+      "1.0": "The Last Lions is a 2011 film.",
+      "1.1": "The Last Lions is an African nature documentary film.",
+      "1.2": "The Last Lions is by the National Geographic Society.",
+      "1.3": "The Last Lions was videotaped by Dereck and Beverly Joubert.",
+      "1.4": "The Last Lions was directed by Dereck and Beverly Joubert."
+     }
+    }
+   ],
+   "items": [
+    "Aliens of the Deep\nAliens of the Deep is a 2005 documentary film, directed in part by James Cameron alongside fellow cameraman and friend Steven Quale, who would go on to direct \"Final Destination 5\" six years later, and filmed in the IMAX 3D format.\n\n It was produced by Walden Media and Walt Disney Pictures.\n\n Cameron teams with NASA scientists to explore the Mid-Ocean Ridges, submerged chains of mountains in the Atlantic and Pacific oceans that are home to some of the planet's more unusual forms of life.",
+    "Richard T. Jones\nRichard Timothy Jones (born January 16, 1972), known professionally as Richard T. Jones, is an American actor.\n\n Jones is best known for his portrayals of Laveinio in the dramatic film \"The Wood\" and Mike of the dramatic films \"Why Did I Get Married?\n\n\" and \"Why Did I Get Married Too?\n\n\".",
+    "The Wolf of Wall Street (2013 film)\nThe film marks the director's fifth collaboration with DiCaprio, after \"Gangs of New York\" (2002), \"The Aviator\" (2004), \"The Departed\" (2006) and \"Shutter Island\" (2010), as well as his second collaboration with Winter after the television series \"Boardwalk Empire\" (2010–14).",
+    "Andrew and Jeremy Get Married\nAndrew and Jeremy Get Married is a 2004 British documentary film written and directed by Don Boyd for the BBC.\n\n It tells the story of two Englishmen, Andrew Thomas and Jeremy Trafford, as they plan for their commitment ceremony.\n\n Originally commissioned for the \"BBC Storyville\" series, the film premiered at the 2004 Toronto International Film Festival.",
+    "Get Married 3\nGet Married 3 is an Indonesian romantic comedy directed by Monty Tiwa and released in 2011.\n\n A sequel to Hanung Bramantyo's \"Get Married\" and \"Get Married 2\", it stars Nirina Zubir and Fedi Nuril as a married couple attempting to raise their triplets while under intense pressure from their family and friends.\n\n The film was a commercial success and received favourable reviews in \"The Jakarta Post\" and \"Suara Karya\".",
+    "The Little Foxes (film)\nThe Little Foxes (1941) is an American drama film directed by William Wyler.\n\n The screenplay by Lillian Hellman is based on her 1939 play of the same name.\n\n Hellman's ex-husband Arthur Kober, Dorothy Parker and her husband Alan Campbell contributed additional scenes and dialogue.",
+    "The Last Lions\nThe Last Lions is a 2011 African nature documentary film by National Geographic Society, videotaped and directed by Dereck and Beverly Joubert.\n\n It was shot at the Okavango Delta in Botswana.\n\n The film premiered at the Palm Springs International Film Festival in January 2011 and was released in select theaters on February 18, 2011.\n\n The film follows in the tradition of other National Geographic big cat films, such as \"India: Land of the Tiger\" and \"Eye of the Leopard\".",
+    "Peter Jackson\nSir Peter Robert Jackson {'1': \", '2': \", '3': \", '4': \"} (born 31 October 1961) is a New Zealand film director, screenwriter and film producer.\n\n He is best known as the director, writer, and producer of \"The Lord of the Rings\" trilogy (2001–03) and \"The Hobbit\" trilogy (2012–14), both of which are adapted from the novels of the same name by J. R. R. Tolkien.\n\n Other notable films include the critically lauded drama \"Heavenly Creatures\" (1994), the mockumentary \"Forgotten Silver\" (1995), the horror comedy \"The Frighteners\" (1996), the epic monster remake film \"King Kong\" (2005), and the supernatural drama film \"The Lovely Bones\" (2009).\n\n He also produced \"District 9\" (2009), \"The Adventures of Tintin: The Secret of the Unicorn\" (2011), and the documentary \"West of Memphis\" (2012).",
+    "Two Brides and a Baby\nTwo Brides and a Baby is a 2011 Nigerian romantic drama film directed by Teco Benson, starring Keira Hewatch, Kalu Ikeagwu, OC Ukeje, Chelsea Eze, Stella Damasus-Aboderin and Okey Uzoeshi.\n\n It premiered on November 17, 2011.\n\n It received awards and nominations at Africa Movie Academy Awards, Best of Nollywood Awards and Africa Magic Viewers Choice Awards.",
+    "The Lion (2010 novel)\nThe Lion is a 2010 novel by American author Nelson DeMille.\n\n It is the fifth of DeMille's novels to feature Detective John Corey, now working as a contractor for the fictional FBI Anti-Terrorist Task Force in New York City.\n\n The novel is the sequel to \"Wild Fire\".\n\n The Lion is followed by DeMille’s 2012 novel, \"The Panther\"."
+   ]
+  },
+  {
+   "id": "78e5c930e7fda8b0",
+   "gold": [
+    {
+     "sentence": " Launched in 2006 and backed by Canadian industrialist David Harrison Gilmour (the founder of FIJI Water LLC), the bimonthly magazine is distributed by Zinio Systems, Inc.",
+     "facts": {
+      "0.0": "The magazine was launched in 2006.",
+      "0.1": "The magazine is backed by Canadian industrialist David Harrison Gilmour.",
+      "0.2": "David Harrison Gilmour is the founder of FIJI Water LLC.",
+      "0.3": "The magazine is bimonthly.",
+      "0.4": "The magazine is distributed by Zinio Systems, Inc."
+     }
+    },
+    {
+     "sentence": " The first issue appeared in January-February 2007.",
+     "facts": {
+      "1.0": "The first issue of the magazine appeared in January-February 2007."
+     }
+    },
+    {
+     "sentence": "La Belle Assemblée (in full La Belle Assemblée or, Bell's Court and Fashionable Magazine Addressed Particularly to the Ladies) was a British women's magazine published from 1806 to 1837, founded by John Bell (1745–1831).",
+     "facts": {
+      "2.0": "La Belle Assemblée is also known in full as 'La Belle Assemblée or, Bell's Court and Fashionable Magazine Addressed Particularly to the Ladies'.",
+      "2.1": "La Belle Assemblée was a British women's magazine.",
+      "2.2": "La Belle Assemblée was published from 1806 to 1837.",
+      "2.3": "La Belle Assemblée was founded by John Bell.",
+      "2.4": "John Bell lived from 1745 to 1831."
+     }
+    }
+   ],
+   "items": [
+    "SexIs\nSexIs Magazine is a quarterly print publication and daily webzine devoted to sex and sexual culture, founded in 2008 by Web Merchants, parent company of sex toy e-tailer EdenFantasys.com.\n\n The first print issue debuted in November 2009, distributed nationwide as an insert in \"BUST magazine\".\n\n The website publishes articles, columns, video presentations and news items daily.",
+    "VIVmag\nVIVmag is one of the earliest exclusively digital, interactive women's lifestyle magazines.\n\n Launched in 2006 and backed by Canadian industrialist David Harrison Gilmour (the founder of FIJI Water LLC), the bimonthly magazine is distributed by Zinio Systems, Inc.\n\n The first issue appeared in January-February 2007.\n\n There is no print version.\n\n The paperless title can be viewed in most browsers or downloaded to your computer and read via the Zinio Reader.\n\n The magazine is based in Thousand Oaks, California.",
+    "Essence (magazine)\nEssence is a monthly magazine for African American women between the ages of 18 and 49.\n\n It is the only magazine that focuses on reaching an audience of black women, revolves around the black woman experience, and has remained for a long period of time.\n\n The magazine covers fashion, lifestyle and beauty, with an intimate girlfriend-to-girlfriend tone, and its slogan \"Fierce, Fun, and Fabulous\" suggests the magazine's goal of empowering African-American women.\n\n The topics the magazine discusses range from celebrities, to fashion, to point-of-view pieces addressing current issues in the African-American community.\n\n A number of its readers engage closely and personally with the publication, and it claims to be the magazine \"for and about Black women\".",
+    "Annales de chimie et de physique\nAnnales de chimie et de physique (French for \"Annals of Chemistry and of Physics\") is a scientific journal that was founded in Paris, France, in 1789 under the title \"Annales de chimie\".\n\n One of the early editors was the French chemist Antoine Lavoisier.\n\n In 1815, it became the \"Annales de chimie et de physique\", and was published under that name for the next 100 years.",
+    "Diva (magazine)\nDIVA is a leading lesbian magazine in the United Kingdom, published monthly.\n\n It was launched in March 1994 by Millivres Ltd, under the editorship of Frances Williams and is now published by Twin Media Group, which is owned by Silke Bader and Linda Riley.\n\n Silke Bader is also the publisher of Curve magazine in the USA and LOTL in Australia, and Linda Riley runs the European Diversity Awards and is the former publisher of g3 magazine in the UK.",
+    "PC Magazine\nPC Magazine (shortened as PCMag) is an American computer magazine published by Ziff Davis.\n\n A print edition was published from 1982 to January 2009.\n\n Publication of online editions started in late 1994 and continues to this day.",
+    "La Belle Assemblée\nLa Belle Assemblée (in full La Belle Assemblée or, Bell's Court and Fashionable Magazine Addressed Particularly to the Ladies) was a British women's magazine published from 1806 to 1837, founded by John Bell (1745–1831).",
+    "Auguste Brancart\nAugust or Auguste Brancart (21 July 1851 - 1894?)\n\n was a Belgian publisher of pornographic literature, credited with the first publication of \"My Secret Life\".\n\n He published translations of English pornography into French and vice versa for English publishers such as Edward Avery.\n\n He also published work of the Decadent movement such as \"Monsieur Vénus\" by Rachilde.",
+    "André Laguerre\nMarc André Laguerre (February 21, 1915 – January 18, 1979) was a journalist and magazine editor, best known as the managing editor of \"Sports Illustrated\" from 1960 to 1974, during which time he oversaw the growth in the magazine from a niche publication to become the industry leader in weekly sports magazines.\n\n It was under his leadership that the annual \"Sports Illustrated Swimsuit Issue\" was first published.\n\n When he retired in 1974, he had been managing editor of the magazine for 704 issues, then a record among magazines published by Time, Inc., SI's parent company.",
+    "Elle (magazine)\nElle is a worldwide lifestyle magazine of French origin that focuses on fashion, beauty, health, and entertainment.\n\n \"Elle\" is also the world's best-selling fashion magazine.\n\n It was founded by Pierre Lazareff and his wife Hélène Gordon in 1945.\n\n The title, in French, means \"she\" or \"her\"."
+   ]
+  },
+  {
+   "id": "4754d97e53440aaf",
+   "gold": [
+    {
+     "sentence": " His primary jockey is Tony McCoy.",
+     "facts": {
+      "0.0": "The unnamed subject of this sentence has Tony McCoy as its primary jockey.",
+      "0.1": "Tony McCoy is a primary jockey."
+     }
+    },
+    {
+     "sentence": " Based in Ireland and the UK, McCoy rode a record 4,358 winners, and was Champion Jockey a record 20 consecutive times, every year he was a professional.",
+     "facts": {
+      "1.0": "Tony McCoy is based in Ireland and the UK.",
+      "1.1": "Tony McCoy rode a record 4,358 winners.",
+      "1.2": "Tony McCoy was Champion Jockey a record 20 consecutive times.",
+      "1.3": "Tony McCoy was Champion Jockey every year he was a professional."
+     }
+    }
+   ],
+   "items": [
+    "German flat racing Champion Jockey\nThe Champion Jockey of flat racing in Germany is the jockey who has ridden the most winning horses during a season.\n\n The list of the Champion Jockey started 1870.\n\n The list below shows the Champion Jockey for each year since 1984.",
+    "Binocular (horse)\nBinocular, foaled on March 17, 2004 in France, is a French thoroughbred retired racehorse, born to sire, Enrique and dam Bleu Ciel Et Blanc.\n\n He is owned by J. P. McManus and trained by Nicky Henderson.\n\n His primary jockey is Tony McCoy.",
+    "Ernest Piggott\nErnest \"Ernie\" Piggott (1878–1967) born Nantwich, Cheshire, England was a leading British jump racing jockey, whose family has become one of the leading dynasties in British horseracing.\n\n He was three times Champion Jockey and three times Grand National winner.\n\n His son, (Ernest) Keith Piggott (1904–1993), was also a leading jump jockey and National-winning trainer, while his grandson is the 11-times British flat racing Champion Jockey, Lester Piggott.",
+    "British flat racing Champion Jockey\nThe Champion Jockey of flat racing in Great Britain is the jockey who has ridden the most winning horses during a season.\n\n The list below shows the Champion Jockey and the number of winners for each year since 1840.\n\n The seasonal record of jockeys' winners was published for the first time in 1846.\n\n The championship was sponsored for the first time in 2009 by online casino 32Red and is currently sponsored by Stobart Group.\n\n The 2016 title was determined by the number of winners ridden between 30 April and 15 October, in both turf and all-weather racing.\n\n Prior to 2015 the title was decided over the full length of the Flat turf season, from March to November, and carried no prize money to the winner.\n\n A prize of £25,000 to the champion jockey was also introduced as part of the 2015 changes.",
+    "Irish jump racing Champion Jockey\nThe Champion Jockey of National Hunt racing in Ireland is the jockey who has ridden the most winning horses during a season.\n\n The list below shows the Champion Jockey for each year since 1947.\n\n The current champion, as of 2017, is Ruby Walsh.",
+    "Fred Winter\nFrederick Thomas Winter CBE (20 September 1926 – 5 April 2004) was a British National Hunt racing racehorse jockey and trainer.\n\n He was British jump racing Champion Jockey four times and British jump racing Champion Trainer eight times.\n\n He is the only person to have won the Cheltenham Gold Cup, Champion Hurdle and Grand National as both jockey and trainer.\n\n Winter won the Grand National four times, as a jockey in 1957 (Sundew) and 1962 (Kilmore), and as a trainer in 1965 (Jay Trump) and 1966 (Anglo).",
+    "Tony McCoy\nSir Anthony Peter McCoy, OBE (born 4 May 1974), commonly known as A. P. McCoy or Tony McCoy, is a Northern Irish former horse racing jockey.\n\n Based in Ireland and the UK, McCoy rode a record 4,358 winners, and was Champion Jockey a record 20 consecutive times, every year he was a professional.\n\n He stands 1.78 m (5'10\"), far taller than most jockeys.",
+    "Bart Cummings\nJames Bartholomew Cummings {'1': \", '2': \", '3': \", '4': \"} (14 November 1927 – 30 August 2015), also known by his initials J. B. Cummings, was one of the most successful Australian racehorse trainers.\n\n He was known as the \"Cups King\", referring to the Melbourne Cup, as he won 'the race that stops a nation' a record twelve times.\n\n During his lifetime Cummings was considered an Australian cultural icon and an Australian National Living Treasure.",
+    "Irish flat racing Champion Jockey\nThe Champion Jockey of flat racing in Ireland is the jockey who has ridden the most winning horses during a season.\n\n The list below shows the Champion Jockey for each year since 1950.",
+    "Gordon Richards\nSir Gordon Richards (5 May 1904 – 10 November 1986) was an English jockey.\n\n He was the British flat racing Champion Jockey 26 times and is often considered the world's greatest ever jockey.\n\n He remains the only flat jockey to have been knighted."
+   ]
+  },
+  {
+   "id": "9b5dcfef8f32c4fc",
+   "gold": [
+    {
+     "sentence": " After the Blackhawks jumped to an early 4–1 lead in the first game of the series, Mario Lemieux and the Penguins came back to win the game, sweep the series in four games, and win their second consecutive and second overall Stanley Cup.",
+     "facts": {
+      "0.0": "The Blackhawks jumped to an early 4–1 lead in the first game of the series.",
+      "0.1": "Mario Lemieux and the Penguins came back to win the first game of the series.",
+      "0.2": "Mario Lemieux and the Penguins swept the series in four games.",
+      "0.3": "The Penguins won their second consecutive Stanley Cup.",
+      "0.4": "The Penguins won their second overall Stanley Cup."
+     }
+    },
+    {
+     "sentence": "Mario Lemieux, OC, CQ ( ; ] ; born October 5, 1965) is a Canadian former professional ice hockey player and current owner of the Pittsburgh Penguins team.",
+     "facts": {
+      "1.0": "Mario Lemieux was born on October 5, 1965.",
+      "1.1": "Mario Lemieux has the honorifics OC and CQ.",
+      "1.2": "Mario Lemieux is a Canadian.",
+      "1.3": "Mario Lemieux is a former professional ice hockey player.",
+      "1.4": "Mario Lemieux is the current owner of the Pittsburgh Penguins team."
+     }
+    }
+   ],
+   "items": [
+    "History of the National Hockey League\nThe history of the National Hockey League begins with the end of its predecessor league, the National Hockey Association (NHA), in 1917.\n\n After unsuccessfully attempting to resolve disputes with Eddie Livingstone, owner of the Toronto Blueshirts, executives of the three other NHA franchises suspended the NHA, and formed the National Hockey League (NHL), replacing the Livingstone team with a temporary team in Toronto, the Arenas.\n\n The NHL's first quarter-century saw the league compete against two rival major leagues—the Pacific Coast Hockey Association and Western Canada Hockey League—for players and the Stanley Cup.\n\n The NHL first expanded into the United States in 1924 with the founding of the Boston Bruins, and by 1926 consisted of ten teams in Ontario, Quebec, the Great Lakes region, and the Northeastern United States.\n\n At the same time, the NHL emerged as the only major league and the sole competitor for the Stanley Cup; in 1947, the NHL completed a deal with the Stanley Cup trustees to gain full control of the Cup.\n\n The NHL's footprint spread across Canada as Foster Hewitt's radio broadcasts were heard coast-to-coast starting in 1933.",
+    "1983 Stanley Cup Finals\nThe 1983 Stanley Cup Finals was contested by the Edmonton Oilers in their first-ever Finals appearance and the defending champion New York Islanders, in their fourth, and fourth consecutive, Finals appearance.\n\n The Islanders would win the best-of-seven series four games to none, to win their fourth-straight and fourth-overall Stanley Cup.\n\n It was also the fourth straight Finals of post-1967 expansion teams, and the first involving a former World Hockey Association (WHA) team.\n\n This is also the most recent time that a defending Stanley Cup champion has won the cup four years in a row, and also the first (and, to date, only) time a North American professional sports team has won four consecutive titles in any league competition with more than twenty teams.\n\n Since 1983, no professional sports team on the continent has managed to win four straight championships and no NHL team has won more than two consecutive championships (most recently the Pittsburgh Penguins in and ).",
+    "1984 Stanley Cup Finals\nThe 1984 Stanley Cup Final was held between the Edmonton Oilers and the then-defending champion New York Islanders.\n\n The Islanders had swept the Oilers in four straight games to win the Cup.\n\n In 1984, the Islanders were seeking their fifth consecutive Stanley Cup championship, but the upstart Oilers would win the best-of-seven series four games to one to win their first Stanley Cup, becoming the third post-1967 expansion team and first former World Hockey Association team to win the Cup, and also the first team based west of Chicago to win the Cup since the WCHL's Victoria Cougars became the last non-NHL team to win it in .\n\n It was also the fifth straight Finals of teams that joined the NHL in 1967 or later and a rematch of the 1983 Finals—a Stanley Cup Finals rematch would not happen again until the Finals.\n\n s of 2017 , the Islanders' four consecutive Cup wins (, , , 1983) and their appearance in the 1984 Cup Finals is an NHL record of 19 consecutive playoff series wins that currently stands unbroken.",
+    "1992 Spengler Cup\nThe 1992 Spengler Cup was held in Davos, Switzerland, between December 26, 1992, and December 31, 1992.\n\n All matches were played at HC Davos's home arena, Eisstadion Davos.\n\n The final was won 6-5 by Team Canada over Färjestad BK.",
+    "1998 Stanley Cup Finals\nThe 1998 Stanley Cup Finals was the championship series of the National Hockey League's (NHL) 1997–1998 season, and the culmination of the 1998 Stanley Cup playoffs.\n\n It was contested by the Western Conference champion and defending Stanley Cup champion Detroit Red Wings and the Eastern Conference champion Washington Capitals.\n\n It was the 105th year of the Stanley Cup being contested.\n\n The series was the Capitals' first appearance in a Stanley Cup Final since the franchise's inception in 1974.\n\n The Red Wings won the series for the second year in a row, four games to none.\n\n It was the Wings' ninth Stanley Cup, and the most recent time when a Finals concluded with a sweep (as of 2017).\n\n This was also the last time until that a Stanley Cup Finals ended after an NBA Finals in the same season had concluded.",
+    "1917–18 Toronto Hockey Club season\nThe 1917–18 Toronto Hockey Club season was the first season of the new \"Toronto\" franchise in the newly organized National Hockey League (NHL).\n\n The team was intended as a 'temporary' franchise, operating without an official club nickname (the press would dub them the \"Blue Shirts\" or \"Torontos\", and in 1948 the NHL would engrave \"Toronto Arenas\" on the Stanley Cup as the 1917–18 winner) and without a formal organization separate from the Toronto Arena Company that managed the Arena Gardens.\n\n Despite this, the team came together to win the first NHL Championship, competing against existing teams that had transferred directly from the National Hockey Association (NHA).\n\n Toronto would go on to win the Stanley Cup by defeating the Pacific Coast Hockey Association champion Vancouver Millionaires – the first Stanley Cup for an NHL team and the second Cup for a Toronto team after the Toronto Blueshirts' victory in the 1913–14 season of the NHA.",
+    "1992 Stanley Cup Finals\nThe 1992 Stanley Cup Finals NHL championship series was contested by the Prince of Wales Conference and defending Stanley Cup champion Pittsburgh Penguins and the Clarence Campbell Conference champion Chicago Blackhawks.\n\n The Blackhawks were appearing in their first Finals since .\n\n After the Blackhawks jumped to an early 4–1 lead in the first game of the series, Mario Lemieux and the Penguins came back to win the game, sweep the series in four games, and win their second consecutive and second overall Stanley Cup.\n\n It was the 99th year of the Stanley Cup, and the first to extend into the month of June.\n\n It was the last final for Chicago Stadium as it closed in 1994.",
+    "1984 Stanley Cup Finals\nThis would be the second of eight consecutive Finals contested by a team from Alberta (the Oilers appeared in six, the Calgary Flames in two), and the first of five consecutive Finals to end with the Cup presentation on Alberta ice (the Oilers won four times, the Montreal Canadiens one).",
+    "Mario Lemieux\nMario Lemieux, OC, CQ ( ; ] ; born October 5, 1965) is a Canadian former professional ice hockey player and current owner of the Pittsburgh Penguins team.\n\n He played parts of 17 seasons in the National Hockey League's (NHL) with the Pittsburgh Penguins, between 1984 and 2006.\n\n Dubbed \"The Magnificent One\" or \"Le Magnifique\" (as well as \"Super Mario\"), he is widely acknowledged to have been one of the best players of all time.\n\n He is the only player to score one goal in each of the five possible situations in a single NHL game, a feat he accomplished in 1988.\n\n A gifted playmaker and fast skater despite his large size, Lemieux often beat defencemen with fakes and dekes.",
+    "Graph query row:\nperson: Mario Lemieux\nperson_team_relationship: MEMBER_OF\nrelationship_details: {'role': 'player and current owner'}\nteam: Pittsburgh Penguins\nteam_event_relationship: None\nrelated_event: None\nevent_date: None"
+   ]
+  },
+  {
+   "id": "6ee924df2ffe49db",
+   "gold": [
+    {
+     "sentence": " Reed, along with Mike Pringle and Johnny Bright, is one of the players most often mentioned as being the greatest running back in CFL history.",
+     "facts": {
+      "0.0": "Reed is one of the players most often mentioned as being the greatest running back in CFL history.",
+      "0.1": "Mike Pringle is one of the players most often mentioned as being the greatest running back in CFL history.",
+      "0.2": "Johnny Bright is one of the players most often mentioned as being the greatest running back in CFL history."
+     }
+    },
+    {
+     "sentence": "Johnny D. Bright (June 11, 1930 – December 14, 1983) was a professional Canadian football player in the Canadian Football League.",
+     "facts": {
+      "1.0": "Johnny D. Bright was born June 11, 1930.",
+      "1.1": "Johnny D. Bright died December 14, 1983.",
+      "1.2": "Johnny D. Bright was a professional Canadian football player.",
+      "1.3": "Johnny D. Bright played in the Canadian Football League."
+     }
+    },
+    {
+     "sentence": " He played college football at Drake University.",
+     "facts": {
+      "2.0": "Johnny D. Bright played college football at Drake University."
+     }
+    }
+   ],
+   "items": [
+    "Dolph Pulliam\nAdolphus \"Dolph\" Pulliam (born March 14, 1946 in West Point, Mississippi) is a former American basketball player.\n\n He played collegiately at Drake University.\n\n He was named to Drake University's All-Century basketball team.\n\n He helped lead the Drake men's basketball team to the 1969 Final Four and a third-place finish.\n\n On 7 February 2009, Drake University retired Pulliam's #5 jersey that he wore for the Bulldogs.",
+    "Johnny Bright\nJohnny D. Bright (June 11, 1930 – December 14, 1983) was a professional Canadian football player in the Canadian Football League.\n\n He played college football at Drake University.\n\n He is a member of the Canadian Football Hall of Fame, the National Football Foundation's College Football Hall of Fame, the Missouri Valley Conference Hall of Fame, the Edmonton Eskimos Wall of Honour, the Alberta Sports Hall of Fame, and the \"Des Moines Register's\" Iowa Sports Hall of Fame.",
+    "The entries profile NFL/CFL players, coaches, executives, and records. Jim O’Brien won Super Bowl V for Baltimore with a last-second field goal; Marc Mueller coaches Calgary, and Johnny Bright and George Reed are CFL legends. Damon Allen retired with 72,381 passing yards. The NFL’s seven-member 2,000-yard club began with O.J. Simpson; Eric Dickerson holds the record (2,105). Philadelphia’s 2010 “Miracle at the New Meadowlands”",
+    "Madre Hill\nMadre Hill (born January 2, 1976) is a former American football running back, playing last for the Oakland Raiders of the National Football League.\n\n Considered one of the greatest running backs to come out of the University of Arkansas , Hill was named 1st Team All-SEC in 1995 and was named to the Razorbacks' All-time team for the 1990s.\n\n He formerly held the all-time season rushing record for Arkansas high schools and for the Arkansas Razorbacks.",
+    "Richard Harris (American football)\nRichard Drew Harris (January 21, 1948 – July 26, 2011) was an American football defensive end who played seven seasons in the National Football League.\n\n He was and All-American in 1970 for Grambling and was drafted in the first round (5th overall pick) of the 1971 NFL Draft by the Philadelphia Eagles.\n\n He was named All-Rookie in 1971, playing defensive end.\n\n Harris spent seven seasons as a defensive end in the NFL, the first three with the Philadelphia Eagles, the next two with the Chicago Bears and the final two with the Seattle Seahawks.",
+    "George Reed (Canadian football)\nGeorge Robert Reed, CM, SOM (born October 2, 1939), is a former American college football and Canadian Football League player.\n\n Reed, along with Mike Pringle and Johnny Bright, is one of the players most often mentioned as being the greatest running back in CFL history.\n\n In November 2006, Reed was voted one of the CFL's Top 50 players (#2) of the league's modern era by Canadian sports network TSN.",
+    "Basketball coach David Hobbs served as Alabama head coach (1992–98) and now assists Iowa State. St. John’s Jack Kaiser led baseball to 11 postseason appearances, helped establish the Big East, and is honored by its tournament award and stadium. Drake’s Dolph Pulliam reached the 1969 Final Four; his No. 5 was retired. NBA All-Star John Wall was the 2010 top draft pick; high-school standout Zion Williamson drew attention for dunks.",
+    "Damon Allen\nDamon Allen (born July 29, 1963) is a former professional quarterback who played in the Canadian Football League.\n\n He is currently second in all-time professional football passing yards and second in all-time CFL passing yards after he was surpassed for first place by the Montréal Alouettes' Anthony Calvillo on October 10, 2011.\n\n He is pro-football's combined passing & rushing leader with a total of 84,301 yards.\n\n Allen retired as professional football's all-time leading passer with 72,381 passing yards after he surpassed Warren Moon's total of 70,553 yards (in both the CFL and NFL combined) on September 4, 2006 in the annual Labour Day Classic.\n\n He also retired in third place in all-time CFL rushing yards with 11,920 yards, behind Mike Pringle and George Reed.\n\n The 2007 season marked Allen's twenty-third season in the CFL and he officially announced his retirement on May 28, 2008 at age 44.\n\n Allen is the younger brother of Pro Football Hall of Famer Marcus Allen.",
+    "Marc Mueller\nMarc Mueller (born April 15, 1989) is the current running backs coach of the Calgary Stampeders of the Canadian Football League (CFL).\n\n In college, he played quarterback for the Regina Rams of the CIS.\n\n He signed as an undrafted free agent with the Edmonton Eskimos of the CFL on May 9, 2011 following the 2011 CFL Draft.\n\n He was released on June 20, 2011 in order to play his final year for the Rams.\n\n Mueller is the grandson of former CFL quarterback and coach Ron Lancaster.",
+    "2,000-yard club\nThe 2,000-yard club is a group of seven National Football League (NFL) running backs that have rushed for 2,000 or more yards in a season.\n\n These seven rushing seasons rank as the highest single-season rushing totals in NFL history, and reaching the 2,000-yard mark is considered a significant achievement for running backs.\n\n No running back has yet achieved this feat twice.\n\n The first 2,000-yard season was recorded in 1973 by Buffalo Bills running back O.J. Simpson.\n\n He is the only player to have surpassed 2,000 yards in a 14-game season, as all others occurred in 16-game seasons; he finished the season with 2,003 rushing yards, averaging six yards per carry and an NFL-record 143.1 rushing yards per game.\n\n Los Angeles Rams running back Eric Dickerson, who had broken the single-season rookie rushing record in 1983, recorded the second 2,000-yard season in 1984.\n\n Dickerson rushed for 2,105 yards, the current NFL rushing record, and averaged 131.6 rushing yards per game."
+   ]
+  },
+  {
+   "id": "796e51808ea89ae6",
+   "gold": [
+    {
+     "sentence": "The Silent Historian (original title: \"Het zwijgen van Loe de Jong [The Silence of Loe de Jong]\") is a 2011 Dutch documentary film by Simonka de Jong, shown as part of the January 2012 New York Jewish Film Festival, presented in partnership with Jewish Museum and Film Society of Lincoln Center.",
+     "facts": {
+      "0.0": "The Silent Historian has the original title 'Het zwijgen van Loe de Jong [The Silence of Loe de Jong]'.",
+      "0.1": "The Silent Historian is a 2011 Dutch documentary film.",
+      "0.2": "The Silent Historian is a documentary film by Simonka de Jong.",
+      "0.3": "The Silent Historian was shown as part of the January 2012 New York Jewish Film Festival.",
+      "0.4": "The January 2012 New York Jewish Film Festival screening of The Silent Historian was presented in partnership with the Jewish Museum.",
+      "0.5": "The January 2012 New York Jewish Film Festival screening of The Silent Historian was presented in partnership with the Film Society of Lincoln Center."
+     }
+    },
+    {
+     "sentence": "The Betrayal — Nerakhoon is a 2008 documentary film directed by Ellen Kuras and Thavisouk Phrasavath.",
+     "facts": {
+      "1.0": "The Betrayal — Nerakhoon is a 2008 documentary film.",
+      "1.1": "The Betrayal — Nerakhoon was directed by Ellen Kuras.",
+      "1.2": "The Betrayal — Nerakhoon was directed by Thavisouk Phrasavath."
+     }
+    }
+   ],
+   "items": [
+    "The Counterfeiters (2007 film)\nThe Counterfeiters (German: \"Die Fälscher\" ) is a 2007 Austrian-German drama film written and directed by Stefan Ruzowitzky.\n\n It fictionalizes Operation Bernhard, a secret plan by Nazi Germany during World War II to destabilize the United Kingdom by flooding its economy with forged Bank of England pound notes.\n\n The film centres on a Jewish counterfeiter, Salomon 'Sally' Sorowitsch, who is coerced into assisting the operation at the Sachsenhausen concentration camp.",
+    "Deep Trap\nDeep Trap () (previously known as Exchange) is a 2015 South Korean crime thriller film starring Ma Dong-seok, Jo Han-sun and Kim Min-kyung, and directed by Kwon Hyung-jin.\n\n Based on an actual SNS crime, it depicts the terror experienced by a married couple while on a trip to an isolated island.\n\n It won Best Film Award in the Orient Express section at the Fantasporto in 2016.",
+    "Innocence (2013 film)\nInnocence is a 2013 American horror drama film directed by Hilary Brougher, who co-wrote the film with Tristine Skyler.\n\n The movie is based on the 2000 novel of the same name by Jane Mendelsohn.\n\n It had its world premiere on 26 October, 2013 at the Austin Film Festival and received a limited theatrical release in the United States on 5 September, 2014.\n\n The movie stars Sophie Curtis, Kelly Reilly, Graham Phillips, Linus Roache, Sarah Sutherland and Stephanie March.",
+    "No Names on the Doors\nNo Names on the Doors (Hebrew: אין שמות על הדלתות‎ ) is a 1997 Israeli drama directed by Nadav Levitan.\n\n The film was screened at the Berlin International Film Festival, the Montpellier Film Festival, the Shanghai International Film Festival, and the Melbourne International Film Festival.\n\n It received two nominations for an Ophir Award in the categories of Best Actor and Best Screenplay.",
+    "The Price of Betrayal\nThe Price of Betrayal (Swedish: \"Judaspengar\" ) is a 1915 Swedish silent drama film directed by Victor Sjöström.",
+    "The Silent Historian\nThe Silent Historian (original title: \"Het zwijgen van Loe de Jong [The Silence of Loe de Jong]\") is a 2011 Dutch documentary film by Simonka de Jong, shown as part of the January 2012 New York Jewish Film Festival, presented in partnership with Jewish Museum and Film Society of Lincoln Center.",
+    "The Betrayal – Nerakhoon\nThe Betrayal — Nerakhoon is a 2008 documentary film directed by Ellen Kuras and Thavisouk Phrasavath.",
+    "The Decembrists (film)\nThe Decembrists (Russian: Декабристы , \"Dekabristy \" ) is a 1927 Soviet silent historical drama film directed by Aleksandr Ivanovsky.",
+    "Thérèse Raquin (1928 film)\nThérèse Raquin is a 1928 drama film directed by Jacques Feyder.\n\n It is the third silent film adaptation of the novel of the same name by Émile Zola.\n\n The film stars Gina Manès as Thérèse Raquin, Wolfgang Zilzer as Monsieur Raquin, and Jeanne Marie Laurent as Madame Raquin.\n\n The décors of the Paris suburbs for the film were built by André Andrejew.\n\n The film was produced by Deutsche Film Union in Germany, with German and French actors, in a French-German co-production, to be later released at the same time in France as \"Thérèse Raquin\" and Germany as Du sollst nicht ehebrechen!\n\n.\n\n As no words were spoken, both versions differed only with the language of intertitles.\n\n The British title at the time of the film's original release was Thou Shalt Not.\n\n This is last silent film imports distributed by Warner Bros.' newly acquired First National subsidiary.\n\n No dialong with music score and sound effects.",
+    "Betrayal (1929 film)\nBetrayal was a 1929 drama film produced for Famous Players-Lasky and released by Paramount Pictures.\n\n The film is the last silent film directed by Lewis Milestone, the last silent performance by Gary Cooper, the last silent performance by Germany's Emil Jannings, and the only onscreen pairing of Cooper and Jannings.\n\n It is considered a lost film."
+   ]
+  },
+  {
+   "id": "5dede9293d5d36ca",
+   "gold": [
+    {
+     "sentence": " He is best known for his roles in \"How To Be Indie\" (2009–2011), \"Wingin' It\" (2010–2013), \"\" (2012–2013), and \"Open Heart\" (2015).",
+     "facts": {
+      "0.0": "The person described is best known for a role in 'How To Be Indie' (2009–2011).",
+      "0.1": "The person described is best known for a role in 'Wingin' It' (2010–2013).",
+      "0.2": "The person described is best known for a role in an untitled work (2012–2013).",
+      "0.3": "The person described is best known for a role in 'Open Heart' (2015)."
+     }
+    },
+    {
+     "sentence": "Open Heart is a 2015 American-Canadian mystery-drama television series produced by the Epitome Pictures unit of DHX Media in association with marblemedia.",
+     "facts": {
+      "1.0": "Open Heart is a 2015 television series.",
+      "1.1": "Open Heart is an American-Canadian television series.",
+      "1.2": "Open Heart is a mystery-drama television series.",
+      "1.3": "Open Heart was produced by the Epitome Pictures unit of DHX Media.",
+      "1.4": "Open Heart was produced in association with marblemedia."
+     }
+    }
+   ],
+   "items": [
+    "Terry Ray (actor)\nTerry Ray (born February 12, 1961) is an American actor, screenwriter, and producer.\n\n Some of his work includes \"Gaydar\" and \"Cost of Living\" (2009).\n\n Ray is the creator and writer of \"here!\n\n TV\"'s sitcom \"From Here on OUT\", the first original gay sitcom created by a gay network.\n\n Terry stars in the sitcom, along with Juliet Mills, Suzanne Whang and T.J. Hoban.\n\n<br><br>Terry Ray's 1987 appearance on Scrabble (game show) is noted as number 3 in the \"10 Great Gay Moments in Game Show History\", after Charles Nelson Reilly and Paul Lynde.\n\n In the same appearance, Terry was also named as one of the \"5 Weirdest Game Show Contestants Ever\", by Movieline.\n\n<br><br>Terry’s first professional writing job was the stage performance “Hollywood Goes Classical\" at the venerable Dorothy Chandler Pavilion starring Mickey Rooney, Michael York, Dean Jones, Rhonda Fleming and several other classic film stars.",
+    "Everest (2015 film)\nEverest is a 2015 British-American biographical adventure film directed and co-produced by Baltasar Kormákur, co-produced by Tim Bevan, Eric Fellner, Nicky Kentish Barnes, Tyler Thompson and Brian Oliver and written by William Nicholson and Simon Beaufoy, adapted from Beck Weathers' memoir \"Left for Dead: My Journey Home from Everest\" (2000).\n\n It stars an ensemble cast of Jason Clarke, Josh Brolin, John Hawkes, Robin Wright, Michael Kelly, Sam Worthington, Keira Knightley, Emily Watson, and Jake Gyllenhaal.\n\n It is based on the real events of the 1996 Mount Everest disaster, and focuses on the survival attempts of two expedition groups, one led by Rob Hall (Clarke) and the other by Scott Fischer (Gyllenhaal).",
+    "Don't Stop Believing (TV series)\nDon't Stop Believing is a British television talent show that aired on Channel 5 in summer 2010.\n\n It was inspired by the musical comedy-drama \"Glee\", which airs in the United States on the Fox network.\n\n The series featured live shows in which musical performance groups competed against each other, with viewers voting on the winner.\n\n Solo singers were also sought to join a group to represent the United Kingdom on the American glee club circuit.\n\n The show was hosted by Emma Bunton, and judged by Anastacia, Duncan James, Tamzin Outhwaite and Charles \"Chucky\" Klapow.\n\n The programme was shown in simulcast on Irish TV channel 3e and repeated a week later on parent channel TV3 Ireland.\n\n The show was not renewed for a second series due to low ratings.",
+    "Frenemies (film)\nFrenemies is a 2012 teen comedy-drama television film and anthology based on the novel of the same name by Alexa Young which premiered on Disney Channel.\n\n It features an ensemble cast starring Bella Thorne, Zendaya, Stefanie Scott, Nick Robinson, Mary Mouser and features Connor Price, Jascha Washington and Dylan Everett.\n\n The film follows three pairs of teenage friends that go from friends to enemies and back again.\n\n The film was directed by Daisy Mayer and written by Dava Savel, Wendy Weiner, and Jim Krieg.\n\n The Disney Channel Original Movie premiered on January 13, 2012 in the United States and Canada.",
+    "Open Heart (TV series)\nOpen Heart is a 2015 American-Canadian mystery-drama television series produced by the Epitome Pictures unit of DHX Media in association with marblemedia.\n\n It first aired on January 20, 2015, on TeenNick in the United States and previously on YTV; now currently on ABC Spark in Canada.",
+    "Dylan Everett\nDylan Everett (born January 24, 1995) is a Canadian actor.\n\n He is best known for his roles in \"How To Be Indie\" (2009–2011), \"Wingin' It\" (2010–2013), \"\" (2012–2013), and \"Open Heart\" (2015).",
+    "Dean Winchester\nDean Winchester is a fictional character and one of the two protagonists of the American drama television series \"Supernatural\".\n\n He is portrayed by Jensen Ackles.\n\n Other versions of the character having been portrayed by Hunter Brochu (toddler), Ridge Canipe (child), Nicolai Lawton-Giustra (pre-teen), Brock Kelly and Dylan Everett (teen), and Chad Everett (elderly).",
+    "Wingin' It\nWingin' It (originally titled Angel on Campus prior to its debut) is a Canadian teen sitcom which aired on Family.\n\n The series was produced by Temple Street Productions in association with Family.\n\n It stars Demetrius Joyette and Dylan Everett.\n\n This show included guest-stars from other Family Channel shows such as \"The Latest Buzz\".\n\n It was announced that the series was renewed for a third season on June 13, 2011.\n\n Family announced that the series is not planned for a fourth season.",
+    "Terry Ray (actor)\nHe wrote and starred in two more shows at the Dorothy Chandler Pavilion, one co-starring Amanda Bynes and the other Hilary Duff.\n\n<br><br>Terry is also the voice of the \"Gaydar Gun\", a spinoff toy from the film Gaydar.",
+    "Kathryn Drysdale\nKathryn Drysdale (born December 1981) is an English actress known for her role as Grace Shelley in The West End show \"The Ruling Class\" opposite James Mcavoy, as Taylor in the movie \"St Trinian's\", Rhoda Swartz in Mira Nair's Vanity Fair, and Louise Brooks in the BBC comedy series \"Two Pints of Lager and a Packet of Crisps\" from 2001 until her departure from the show in 2009.\n\n She has also starred in the fourth series of the ITV sitcom \"Benidorm\" and as Brownwell in William Boyd's award-winning \"Any Human Heart\" opposite Jim Broadbent.\n\n She previously worked with Broadbent on Mira Nair's feature adaptation of William Thackery's \"Vanity Fair\" starring Reese Witherspoon.\n\n She played the role of mixed-race heiress Rhoda Swartz.\n\n She is also known for her role as Lizzie in the drama series \"Tripping Over\" by Mike Bullen.\n\n She appeared in \"Doctor Who\" as Bliss in the episode \"Love & Monsters\".\n\n She currently plays Meghan Markle in season 2 of \"The Windsors\"."
+   ]
+  },
+  {
+   "id": "f080836ae9893d3a",
+   "gold": [
+    {
+     "sentence": " They competed at the 2015 Pacific Games, where they finished with an 0-4 record.",
+     "facts": {
+      "0.0": "The unnamed subject competed at the 2015 Pacific Games",
+      "0.1": "The unnamed subject finished the 2015 Pacific Games with an 0-4 record"
+     }
+    },
+    {
+     "sentence": "Basketball at the 2015 Pacific Games in Port Moresby, Papua New Guinea was held at the BSP Arena and PNG Power Dome on 3–12 July 2015.",
+     "facts": {
+      "1.0": "Basketball at the 2015 Pacific Games was held in Port Moresby, Papua New Guinea",
+      "1.1": "Basketball at the 2015 Pacific Games was held at the BSP Arena and PNG Power Dome",
+      "1.2": "Basketball at the 2015 Pacific Games was held on 3 to 12 July 2015"
+     }
+    }
+   ],
+   "items": [
+    "Graph query row:\nevent: 2015 Pacific Games\nevent_relationship: LOCATED_IN\ncity: Port Moresby\ncity_relationship: LOCATED_IN\ncountry: Papua New Guinea",
+    "Women's football at the 2015 Pacific Games\nThe 2015 Pacific Games women's football tournament was the 4th edition of the Pacific Games women's football tournament.\n\n The women's football tournament was held in Port Moresby, Papua New Guinea between 6–16 July 2015 as part of the 2015 Pacific Games.\n\n The tournament was open to full women's national teams (unlike the men's tournament, which was age-restricted).",
+    "Kiribati at the 2015 Pacific Games\nKiribati competed at the 2015 Pacific Games in Port Moresby, Papua New Guinea from 4 to 18 July 2015.\n\n A total of 86 competitors for Kiribati were listed as of 4 July 2015.",
+    "Men's football at the 2015 Pacific Games\nThe 2015 Pacific Games men's football tournament was the 14th edition of the Pacific Games men's football tournament.\n\n The men's football tournament was held in Port Moresby, Papua New Guinea between 3–17 July 2015 as part of the 2015 Pacific Games.\n\n The tournament was age-restricted and open to men's under-23 national teams only.",
+    "2015 Pacific Games\nThe 2015 Pacific Games was held in Port Moresby, Papua New Guinea, from 4 to 18 July 2015.\n\n It was the fifteenth staging of the Pacific Games.",
+    "Athletics at the 2002 Asian Games\nAthletics was contested from October 7 to October 14 at the 2002 Asian Games in Busan Asiad Main Stadium, Busan, South Korea.\n\n A total of 460 athletes (comprising 281 men and 179 women) from 39 nations took part in the competition.\n\n Afghanistan, Bhutan, Brunei, Laos and Maldives were the only nations without a representative in the events.",
+    "Kiribati national basketball team\nThe Kiribati national basketball team are the basketball side that represent Kiribati in international competitions.\n\n They competed at the 2015 Pacific Games, where they finished with an 0-4 record.",
+    "Australia at the 2015 Pacific Games\nAustralia competed at the 2015 Pacific Games in Port Moresby, Papua New Guinea from 4 to 18 July 2015.\n\n Australia qualified 43 athletes.\n\n It was the first time that Australia has competed in the Pacific Games.",
+    "Basketball at the 2015 Pacific Games\nBasketball at the 2015 Pacific Games in Port Moresby, Papua New Guinea was held at the BSP Arena and PNG Power Dome on 3–12 July 2015.",
+    "Powerlifting at the 2015 Pacific Games\nPowerlifting at the 2015 Pacific Games was held from 9–10 July 2015 in the Sir John Guise Indoor Power Dome at Port Moresby, Papua New Guinea.\n\n The host nation Papua New Guinea was the dominant team, particularly in the women's divisions where it claimed six of the seven possible gold medals.\n\n Nauru was the strongest team in the men's divisions, winning four of the eight weight categories.\n\n Telupe Iosefa received the first ever gold medal won by Tuvalu at the Pacific Games in the 120 kg male division."
+   ]
+  },
+  {
+   "id": "a5990fa191791347",
+   "gold": [
+    {
+     "sentence": "The Basset Bleu de Gascogne (] ), also known as the Blue Gascony Basset, is a long-backed, short legged breed of dog of the hound type.",
+     "facts": {
+      "0.0": "The Basset Bleu de Gascogne is also known as the Blue Gascony Basset.",
+      "0.1": "The Basset Bleu de Gascogne is a long-backed, short-legged breed of dog.",
+      "0.2": "The Basset Bleu de Gascogne is a dog of the hound type."
+     }
+    },
+    {
+     "sentence": " A French native breed, it is rare outside of its homeland.",
+     "facts": {
+      "1.0": "The Basset Bleu de Gascogne is a French native breed.",
+      "1.1": "The Basset Bleu de Gascogne is rare outside of its homeland."
+     }
+    },
+    {
+     "sentence": "The Bulldog is a medium-sized breed of dog commonly referred to as the English Bulldog or British Bulldog.",
+     "facts": {
+      "2.0": "The Bulldog is a medium-sized breed of dog.",
+      "2.1": "The Bulldog is commonly referred to as the English Bulldog.",
+      "2.2": "The Bulldog is commonly referred to as the British Bulldog."
+     }
+    }
+   ],
+   "items": [
+    "Braque Francais\nThe Braques français are hunting dogs, from a very old type of gun dog used for pointing the location of game birds for a hunter.\n\n There are two breeds of Braque français, both from the south of France, the Braque français, type Gascogne (French Pointing Dog - Gascogne type, larger size) and the Braque français, type Pyrénées (French Pointing Dog - Pyrenean type, smaller size) They are popular hunting dogs in France, but are seldom seen elsewhere.",
+    "Ariegeois\nThe Ariegeois is a breed of dog from the \"département\" of Ariège in the Midi-Pyrenées region of southern France.\n\n It is a medium-sized pack-hunting scenthound deriving from crossing of Grand Bleu de Gascogne and Grand Gascon-Saintongeois hounds with local Briquet dogs.\n\n It is used both as a courser and for driving game to waiting guns.\n\n While most successful with hares, it is also used for hunting deer and boar.\n\n It is distinguished by its friendly nature with other hounds and affection for human companions.",
+    "Basset Bleu de Gascogne\nThe Basset Bleu de Gascogne (] ), also known as the Blue Gascony Basset, is a long-backed, short legged breed of dog of the hound type.\n\n The breed originated in the Middle Ages, descended from the Grand Bleu de Gascogne.\n\n It nearly became extinct around the early 19th century; its salvation was attributed to one Alain Bourbon.\n\n A French native breed, it is rare outside of its homeland.\n\n It is recognized internationally by the Fédération Cynologique Internationale, in the UK by The Kennel Club, and by the United Kennel Club in the United States.\n\n The \"bleu\" of its name is a reference to its coat which has a ticked appearance.",
+    "The entries cover French hounds and regional wines. Gascony scenthounds—including Griffon, Petit and Grand Bleu, Basset Bleu, Ariegeois, and French and Anglo-French breeds—are chiefly pack hunters; the Ariegeois is sociable, while “Petit” refers to small-game use, not size. Braque Français are southern French pointing dogs in larger Gascogne and smaller Pyrénées types. Côtes de Gascogne is a",
+    "Griffon Bleu de Gascogne\nThe Griffon Bleu de Gascogne (FCI No.32) Is a breed of dog of the scenthound type, originating in France, and is a versatile hunting dog, used on small and large game, in packs or individually.\n\n The Griffon Bleu de Gascogne has a speckled, rough coat.",
+    "Grand Bleu de Gascogne\nThe Grand Bleu de Gascogne (FCI No.22) is a breed of dog of the scenthound type, originating in France and used for hunting in packs.\n\n Today's breed is the descendant of a very old type of large hunting dog, and is an important breed in the ancestry of many other hounds.",
+    "Chien Français Blanc et Noir\nThe Chien Français Blanc et Noir (FCI No.220) translated into English as the French White and Black Hound, is a breed of dog of the scenthound type, originating in France.\n\n The breed is used for hunting in packs and descends from the old Hound of Saintonge type of large hunting dog.",
+    "Petit Bleu de Gascogne\nThe Petit Bleu de Gascogne (FCI No.31) Is a breed of dog of the scenthound type, originating in France and used for hunting in packs.\n\n Today's breed is the descendant of a very old type of large hunting dog.\n\n The Petit Bleu de Gascogne is not a small (petite) dog, the name comes from its use on small game.",
+    "Bulldog\nThe Bulldog is a medium-sized breed of dog commonly referred to as the English Bulldog or British Bulldog.\n\n Other scent-hound breeds include the Small Greek Domestic Dog, Irish Wolfhound, Bluetick Coonhound, Finnish Lapphund, and the Basset Hound.\n\n The Bulldog is a muscular, hefty dog with a wrinkled face and a distinctive pushed-in nose.\n\n The American Kennel Club (AKC), The Kennel Club (UK), and the United Kennel Club (UKC) oversee breeding records.\n\n Bulldogs were the fourth most popular purebreed in the US in 2007 according to the American Kennel Club.",
+    "Chien Français Tricolore\nThe Chien Français Tricolore (FCI No.219) translated into English as the French Tricolour Hound, is a breed of dog of the scenthound type, originating in France.\n\n The breed is used for hunting in packs."
+   ]
+  },
+  {
+   "id": "658664d576db62d3",
+   "gold": [
+    {
+     "sentence": "The Nashville Tribute Band is a Mormon music group founded by Jason Deere and Dan Truman, the pianist of the popular country group Diamond Rio.",
+     "facts": {
+      "0.0": "The Nashville Tribute Band is a Mormon music group.",
+      "0.1": "The Nashville Tribute Band was founded by Jason Deere.",
+      "0.2": "The Nashville Tribute Band was founded by Dan Truman.",
+      "0.3": "Dan Truman is the pianist of the popular country group Diamond Rio."
+     }
+    },
+    {
+     "sentence": "Diamond Rio is an American country and Christian country music band.",
+     "facts": {
+      "1.0": "Diamond Rio is an American country music band.",
+      "1.1": "Diamond Rio is a Christian country music band."
+     }
+    },
+    {
+     "sentence": " The band was founded in 1982 as an attraction for the Opryland USA theme park in Nashville, Tennessee, and was originally known as the Grizzly River Boys, then the Tennessee River Boys.",
+     "facts": {
+      "2.0": "Diamond Rio was founded in 1982.",
+      "2.1": "Diamond Rio was founded as an attraction for the Opryland USA theme park in Nashville, Tennessee.",
+      "2.2": "Diamond Rio was originally known as the Grizzly River Boys.",
+      "2.3": "Diamond Rio was later known as the Tennessee River Boys."
+     }
+    }
+   ],
+   "items": [
+    "Diamond Rio\nDiamond Rio is an American country and Christian country music band.\n\n The band was founded in 1982 as an attraction for the Opryland USA theme park in Nashville, Tennessee, and was originally known as the Grizzly River Boys, then the Tennessee River Boys.\n\n It was founded by Matt Davenport, Danny Gregg, and Ty Herndon, the last of whom became a solo artist in the mid-1990s.\n\n After undergoing several membership changes in its initial years, the band has consisted of the same six members since 1989: Marty Roe (lead vocals, rhythm guitar), Gene Johnson (mandolin, guitar, fiddle, tenor vocals), Jimmy Olander (lead guitar, Dobro, banjo), Brian Prout (drums), Dan Truman (keyboards, organ, synthesizer), and Dana Williams (bass guitar, baritone vocals).",
+    "Bullmoose\nBullmoose (aka Zach Dobbins) is a Canadian rock band formed in Elgin, Ontario in 1996.\n\n Three of the original members continue in the band, which today is based in Montreal.\n\n They include twin brothers Jeff Cowan (drums/vocals) and Seamus Cowan (bass/vocals) from Westport, Ontario and Eric Lawrance (guitar/vocals) from Delta, Ontario, who launched the band when they attended school at Montreal.\n\n The band performs in the rock music genre, citing experimental influences of the late 1960s and early 1970s.",
+    "Beasts of Bourbon\nBeasts of Bourbon are an Australian alternative rock, blues rock band formed in August 1983, with James Baker on drums (ex-Hoodoo Gurus), Spencer P. Jones on guitar (The Johnnys), Tex Perkins on vocals (Dum Dums), Kim Salmon on guitar and Boris Sujdovic on bass guitar (both ex-The Scientists).\n\n Except for mainstays, Jones and Perkins, the line-up has changed as the group splintered and reformed several times.\n\n Their debut album, \"The Axeman's Jazz\" (July 1984), was the best selling Australian alternative rock album for 1984.\n\n Their debut single, \"Psycho\", is a cover version of the Leon Payne original, and was the best selling Australian alternative rock single for that year.\n\n However the group disbanded by mid-1985 and each member pursued other musical projects.\n\n They reformed in 1987 and issued a second album, \"Sour Mash\", in December 1988 on Red Eye Records.\n\n According to rock music historian, Ian McFarlane, it \"virtually redefined the parameters of guitar-based rock'n'roll.",
+    "Rivermaya\nRivermaya is a Filipino rock band.\n\n Formed in 1994, it is one of several bands who spearheaded the 1990s Philippine alternative rock explosion.\n\n Rivermaya is currently composed of original members Mark Escueta and Nathan Azarcon, together with Mike Elgar and Ryan Peralta.\n\n Former original members include Rico Blanco, who had been the original songwriter of the band and vocalist Bamboo Mañalac, who later formed the band Bamboo and later went on his solo career.\n\n Rivermaya is listed as the twentieth biggest-selling artists/act in the Philippines as of present.",
+    "The Studdogs\nThe band was signed by Orange Recordings in Los Angeles and toured all over the country, sharing bills with the Demolition Doll Rods, Bob Log III, The Fleshtones, and Immortal Lee County Killers and a one-time show with the Suicide Girls Burlesque Tour in Orlando.\n\n While in the Studdogs, Rich Evans began promoting concerts under the tag \"Mutiny Productions\".\n\n He now heads the independent \"Florida's Dying\" label, promoting and releasing material from the Florida-underground music scene.\n\n Kyle Justin joined the band on drums in early 2002 to replace Jason, who was moving to Texas.\n\n Kyle vacated his position as drummer in 2003 to pursue a music career in Los Angeles.\n\n Eric Gebhardt left the band in 2005 to pursue a solo career under the alias Red Mouth.",
+    "The Pilgrims (band)\nThe Pilgrims are an alternative rock band from Windsor, Vermont.\n\n Seven Days contributor Dan Bolles compared their style to alt-punk and indie rock, while John Powell, writing for www.angelica-music.com, has likened them to rock and roll bands from the 1960s and 1970s.\n\n They are part of the Windsor, VT music collective What Doth Life, which has released albums by The Pilgrims, Giant Travel Avant Garde, Derek and The Demons, Carton, and Luke Chrisinger.",
+    "Nashville Tribute Band\nThe Nashville Tribute Band is a Mormon music group founded by Jason Deere and Dan Truman, the pianist of the popular country group Diamond Rio.",
+    "The Hillmen (album)\nThe Hillmen is a studio album by The Hillmen, a southern California bluegrass band originally known as The Golden State Boys.\n\n The Hillmen consisted of Chris Hillman (later of The Byrds, The Flying Burrito Brothers, Manassas and The Desert Rose Band) on mandolin, country singer/songwriter Vern Gosdin on guitar and lead vocals, his brother Rex Gosdin on double bass, and Don Parmley (later of the Bluegrass Cardinals) on banjo.",
+    "The Studdogs\nThe Studdogs was a rock band from Orlando, Florida.\n\n The band's music contains elements of punk, blues rock, garage rock, and noise rock.\n\n The band was formed in 2000 and stayed active until 2005.\n\n They released a lot of material, particularly the full-length album, \"The Gospel According to the Studdogs\" and the 7\" vinyl 3-song EP, and gained local and national notoriety.\n\n They were featured in several national music magazines, including Magnet and Amplifier.\n\n Comparisons were made to the Stooges, Dead Boys, and it was said they sounded \"like absolute victory by way of slurring, Rolling Stones-y garage rock from nowhere in particular.\"\n\n Their drunken, abrasive live shows often ended with someone bleeding or being thrown out of the venue.\n\n Their live shows were said to be \"what Howling Wolf would sound like through a wall of noise and distortion.\"",
+    "Creedence Clearwater Revisited\nCreedence Clearwater Revisited is an American rock band formed in 1995 by two former members of Creedence Clearwater Revival – a much more well-known band with a very similar name.\n\n It is known for playing the music that was originally made famous by Creedence Clearwater Revival.\n\n The two common band members are Stu Cook (bass) and Doug \"Cosmo\" Clifford (drums)."
+   ]
+  },
+  {
+   "id": "874c8be593b1d49f",
+   "gold": [
+    {
+     "sentence": "David Ross Lederman (December 12, 1894 – August 24, 1972) was an American film director noted for his Western/action/adventure films of the 1930s and 1940s.",
+     "facts": {
+      "0.0": "David Ross Lederman was born December 12, 1894.",
+      "0.1": "David Ross Lederman died August 24, 1972.",
+      "0.2": "David Ross Lederman was an American film director.",
+      "0.3": "David Ross Lederman was noted for his Western, action, and adventure films of the 1930s and 1940s."
+     }
+    },
+    {
+     "sentence": "Stefan Ruzowitzky (born 25 December 1961) is an Austrian film director and screenwriter.",
+     "facts": {
+      "1.0": "Stefan Ruzowitzky was born 25 December 1961.",
+      "1.1": "Stefan Ruzowitzky is an Austrian film director.",
+      "1.2": "Stefan Ruzowitzky is an Austrian screenwriter."
+     }
+    }
+   ],
+   "items": [
+    "Howard Rosenman\nHoward Rosenman (born February 1, 1945), also known as Zvi Howard Rosenman, is an American producer and motion picture executive.\n\n He specializes in producing romantic comedy films and documentary films.\n\n Some of his most popular productions include \"Father of the Bride\" (1991) starring Steve Martin and Diane Keaton, Joss Whedon's \"Buffy the Vampire Slayer\" (1992) and \"The Family Man\" (2000) starring Nicolas Cage.\n\n Rosenman's documentary film \"\" won the Peabody Award and the 1990 Academy Award for Best Documentary Feature; his film \"The Celluloid Closet\" also won the Peabody Award.",
+    "Elem Klimov\nElem Germanovich Klimov (Russian: Эле́м Ге́рманович Кли́мов ; 9 July 1933 – 26 October 2003) was a Soviet Russian film director.\n\n He studied at VGIK, and was married to film director Larisa Shepitko.\n\n Klimov is best known in the West for his final film, 1985's \"Come and See\" (\"Иди и смотри\"), which follows a teenage boy in German-occupied Belarus during the German-Soviet War and is often considered one of the greatest war films ever made.\n\n He also directed dark comedies, children's movies, and historical pictures.",
+    "Devid Striesow\nDevid Striesow (born 1 October 1973 in Bergen auf Rügen) is a German actor.\n\n He starred as \"Sturmbannführer Herzog\" (Bernhard Krüger) in Stefan Ruzowitzky's 2007 film \"The Counterfeiters\", which was awarded the Academy Award for Best Foreign Language Film for that year.",
+    "Stefan Walz\nStefan Walz (born 1963) is a Swiss actor.\n\n His best known role is as Sigmund Jähn in the film \"Good Bye, Lenin!\n\n\".",
+    "Max Ophüls\nMaximillian Oppenheimer (6 May 1902 – 26 March 1957), known as Max Ophüls (] ), was a German-born film director who worked in Germany (1931–1933), France (1933–1940 and 1950–1957), and the United States (1947–1950).\n\n He made nearly 30 films, the latter ones being especially notable: \"La Ronde\" (1950), \"Le Plaisir\" (1952), \"The Earrings of Madame de...\" (1953) and \"Lola Montès\" (1955).",
+    "D. Ross Lederman\nDavid Ross Lederman (December 12, 1894 – August 24, 1972) was an American film director noted for his Western/action/adventure films of the 1930s and 1940s.",
+    "Ruggero Deodato\nRuggero Deodato (born 7 May 1939) is an Italian film director, screenwriter, and actor.",
+    "Wolfgang Becker\nWolfgang Becker (born 22 June 1954) is a German film director and writer.\n\n He is best known to the international audience for his work \"Good Bye Lenin!\n\n\" (2003).",
+    "Stefan Ruzowitzky\nStefan Ruzowitzky (born 25 December 1961) is an Austrian film director and screenwriter.",
+    "Lev Kuleshov\nLev Vladimirovich Kuleshov (Russian: Лев Влади́мирович Кулешо́в ; 13 January [O.S. 1 January] 1899 – 29 March 1970) was a Russian and Soviet filmmaker and film theorist, one of the founders of the world's first film school, the Moscow Film School.\n\n He was given the title People's Artist of the RSFSR in 1969.\n\n He was intimately involved in development of the style of film making known as Soviet montage, especially it's psychological underpinning, including the use of editing and the cut to emotionally influence the audience, a principle known as the Kuleshov effect.\n\n He also developed the theory of creative geography, which is the use of the action around a cut to connect otherwise disparate settings into a cohesive narrative."
+   ]
+  }
+ ]
+}

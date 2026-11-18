@@ -1,0 +1,25 @@
+[
+  {
+    "id": "966777c20abc7256",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Even so, Kelce's 81.3 average receiving yards per game against the Raiders since 2019 suggests the All-Pro tight end is in line for a productive outing and could potentially snap his four-game scoring drought."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Even so, Kelce's 81.3 average receiving yards per game against the Raiders since 2019 suggests the All-Pro tight end is in line for a productive outing and could potentially snap his four-game scoring drought."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Even so, Kelce's 81.3 average receiving yards per game against the Raiders since 2019 suggests the All-Pro tight end is in line for a productive outing and could potentially snap his four-game scoring drought."}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "Even so, Kelce's 81.3 average receiving yards per game against the Raiders since 2019 suggests the All-Pro tight end is in line for a productive outing and could potentially snap his four-game scoring drought."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "The first link between Swift and Kelce was established in 2016, when Kelce – who helped bring his team to Super Bowl victory in both 2020 and 2023 – played the classic game “Kiss, Marry, Kill”."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "The first link between Swift and Kelce was established in 2016, when Kelce – who helped bring his team to Super Bowl victory in both 2020 and 2023 – played the classic game “Kiss, Marry, Kill”."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "The first link between Swift and Kelce was established in 2016, when Kelce – who helped bring his team to Super Bowl victory in both 2020 and 2023 – played the classic game “Kiss, Marry, Kill”."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "The first link between Swift and Kelce was established in 2016, when Kelce – who helped bring his team to Super Bowl victory in both 2020 and 2023 – played the classic game “Kiss, Marry, Kill”."}]}
+    ]
+  },
+  {
+    "id": "f869f1ba96b82508",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Depending on which one you get, it might come with USB ports so you can charge multiple devices in one outlet."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Depending on which one you get, it might come with USB ports so you can charge multiple devices in one outlet."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []}
+    ]
+  }
+]

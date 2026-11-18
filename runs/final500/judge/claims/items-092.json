@@ -1,0 +1,80 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "multihop-rag-976",
+   "sentences": [
+    "After turning in three limited practices this week, we'll trust that Hockenson is ready to go, especially since he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center.",
+    "Kincaid was a limited participant in practice on Wednesday due to a shoulder injury, but it’s been reported he’s likely to suit up on Saturday at less than 100%."
+   ]
+  },
+  {
+   "id": "5a87868c5542996e4f308828",
+   "sentences": [
+    " It began in 1995 as the merger of two take-and-bake pizza companies: Papa Aldo's Pizza (founded in 1981) and Murphy's Pizza (founded in 1981).",
+    "Gino's Pizza and Spaghetti is a restaurant chain with 40 locations, most of them within the U.S. state of West Virginia.",
+    " The company was founded by Kenney Grant in 1961."
+   ]
+  },
+  {
+   "id": "5a7b5af7554299042af8f752",
+   "sentences": [
+    "The Data Universal Numbering System, abbreviated as DUNS or D-U-N-S, is a proprietary system developed and regulated by Dun & Bradstreet (D&B) that assigns a unique numeric identifier, referred to as a \"DUNS number\" to a single business entity.",
+    " Often referred to as D&B, the company’s database contains more than 265 million business records worldwide."
+   ]
+  },
+  {
+   "id": "5a8b2ccf55429971feec4665",
+   "sentences": [
+    "Summer Magic is a 1963 Walt Disney Productions film starring Hayley Mills, Burl Ives, and Dorothy McGuire in a story about a Boston widow and her children taking up residence in a small town in Maine.",
+    "Around the World in 80 Days is a 2004 American action-adventure comedy family film based on Jules Verne's novel of the same name."
+   ]
+  },
+  {
+   "id": "7029908801940506034",
+   "sentences": [
+    "We admitted we were powerless over alcohol -- that our lives had become unmanageable . Came to believe that a Power greater than ourselves could restore us to sanity . Made a decision to turn our will and our lives over to the care of God as we understood Him . Made a searching and fearless moral inventory of ourselves . Admitted to God , to ourselves , and to another human being the exact nature of our wrongs . Were entirely ready to have God remove all these defects of character . Humbly asked Him to remove our shortcomings . Made a list of all persons we had harmed , and became willing to make amends to them all . Made direct amends to such people wherever possible , except when to do so would injure them or others . Continued to take personal inventory , and when we were wrong , promptly admitted it . Sought through prayer and meditation to improve our conscious contact with God as we understood Him , praying only for knowledge of His will for us and the power to carry that out . Having had a spiritual awakening as the result of these steps , we tried to carry this message to alcoholics , and to practice these principles in all our affairs .",
+    "We admitted we were powerless over alcohol -- that our lives had become unmanageable ."
+   ]
+  },
+  {
+   "id": "5a8230af554299676cceb227",
+   "sentences": [
+    "Enrico Cocozza (6 November 1921 – 27 December 1997), was a Scottish filmmaker who won many film awards during the 1940s and 1950s.",
+    "\", which was nominated for the Academy Award for Best Foreign Language Film."
+   ]
+  },
+  {
+   "id": "multihop-rag-358",
+   "sentences": [
+    "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "5a8a575a554299515336136e",
+   "sentences": [
+    "Rynella is an unincorporated community in Iberia Parish, Louisiana, that consists of a few residential dwellings and a volunteer fire department along Highway 329 (also known as the Avery Island Highway).",
+    " The name \"Rynella\" allegedly is an acronym deriving from the last two letters of the first names of three local women, Rosema\"RY\", Pauli\"NE\", and Lei\"LA\" McIlhenny (someone eventually adding an extra L to the resulting word).",
+    " They were daughters of Edward Avery McIlhenny, a noted Louisiana conservationist who presided over McIlhenny Company, maker of Tabasco brand pepper sauce at nearby Avery Island.",
+    "Tabasco sauce is a brand of hot sauce made exclusively from tabasco peppers (\"Capsicum frutescens\" var.",
+    " \"tabasco\"), vinegar, and salt."
+   ]
+  },
+  {
+   "id": "-7855437198803764135",
+   "sentences": [
+    "Late in the 20th century , lithium became an important component of battery electrolytes and electrodes , because of its high electrode potential . Because of its low atomic mass , it has a high charge - and power - to - weight ratio . A typical lithium - ion battery can generate approximately 3 volts per cell , compared with 2.1 volts for lead - acid or 1.5 volts for zinc - carbon cells . Lithium - ion batteries , which are rechargeable and have a high energy density , should not be confused with lithium batteries , which are disposable ( primary ) batteries with lithium or its compounds as the anode . Other rechargeable batteries that use lithium include the lithium - ion polymer battery , lithium iron phosphate battery , and the nanowire battery .",
+    "Lithium and its compounds have several industrial applications , including heat - resistant glass and ceramics , lithium grease lubricants , flux additives for iron , steel and aluminium production , lithium batteries , and lithium - ion batteries . These uses consume more than three quarters of lithium production ."
+   ]
+  },
+  {
+   "id": "5ae4bcfc55429913cc2044eb",
+   "sentences": [
+    "Leitneria floridana (corkwood), the sole species in the genus Leitneria, is a deciduous dioecious shrub or small tree, found only in the southeastern United States states of Arkansas, Florida, Georgia, Missouri and Texas.",
+    "Tricyrtis is a genus of Asian flowering plants in the lily family, with approximately 20 known species."
+   ]
+  }
+ ]
+}

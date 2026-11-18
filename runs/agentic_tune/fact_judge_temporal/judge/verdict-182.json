@@ -1,0 +1,72 @@
+[
+  {
+    "id": "14256a175275376c",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "If you’re in the midst of a new relationship this holiday season"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family."}]}
+    ]
+  },
+  {
+    "id": "5bae534042f0f6f1",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Sept. 24: Swift attends Chiefs game"}, {"item": 2, "quote": "Swift took Kelce up on his offer"}]},
+      {"fact": "2.0", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "eee7d64587fc897d",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Jada and Will have often opened up about their relationship over the years"}, {"item": 7, "quote": "I made a promise that there will never be a reason for us to get a divorce"}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Jada then praised her children for how they’ve helped her grow"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "My children, they’re little gurus."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "She praised her and Will’s two children - Jaden, 25, and Willow, 22 - for being her “little gurus” throughout this time"}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "She praised her and Will’s two children - Jaden, 25, and Willow, 22 - for being her “little gurus” throughout this time"}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "noting that they’ve taught her “a deep sense of self-acceptance”"}]}
+    ]
+  },
+  {
+    "id": "2e50f85f112b5887",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "10:03 p.m.: Love hits Dillon out in the front, who makes his defender miss before racing beyond the marker for a first down."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "10:03 p.m.: Love hits Dillon out in the front, who makes his defender miss before racing beyond the marker for a first down."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "10:03 p.m.: Love hits Dillon out in the front, who makes his defender miss before racing beyond the marker for a first down."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "9b67d9971f340ad5",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Rookie Zach Charbonnet, who entered Week 11 with just over 200 rushing yards on the year, replaced Walker as Seattle's top ball carrier."}]},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]}
+    ]
+  },
+  {
+    "id": "a0ca88c8bca9f13b",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []}
+    ]
+  }
+]

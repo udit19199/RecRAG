@@ -1,0 +1,1877 @@
+[
+ {
+  "id": "e4280058e434d1fc",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.5",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.6",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.7",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.8",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.9",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.10",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.11",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.12",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.13",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.14",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.15",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.16",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.17",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.18",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.19",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.5",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.6",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.7",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.8",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.9",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.10",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.11",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.12",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.13",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.14",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.15",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.16",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "The first laptop in the modern form was the Grid Compass 1101"
+     }
+    ]
+   },
+   {
+    "fact": "2.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "designed by Bill Moggridge in 1979 -- 80"
+     }
+    ]
+   },
+   {
+    "fact": "2.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "and released in 1983"
+     }
+    ]
+   },
+   {
+    "fact": "2.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Enclosed in a magnesium case"
+     }
+    ]
+   },
+   {
+    "fact": "2.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "it introduced the now familiar clamshell design , in which the flat display folded shut against the keyboard"
+     }
+    ]
+   },
+   {
+    "fact": "2.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "The computer could be run from batteries"
+     }
+    ]
+   },
+   {
+    "fact": "2.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "was equipped with a 320 × 200 - pixel electroluminescent display"
+     }
+    ]
+   },
+   {
+    "fact": "2.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "384 kilobyte bubble memory"
+     }
+    ]
+   },
+   {
+    "fact": "2.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "It was not IBM - compatible"
+     }
+    ]
+   },
+   {
+    "fact": "2.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "its high price ( US $ 8,000 -- 10,000 ) limited it to specialized applications"
+     }
+    ]
+   },
+   {
+    "fact": "2.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "it was used heavily by the U.S. military"
+     }
+    ]
+   },
+   {
+    "fact": "2.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "and by NASA on the Space Shuttle during the 1980s"
+     }
+    ]
+   },
+   {
+    "fact": "2.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "The GRiD 's manufacturer subsequently earned significant returns on its patent rights as its innovations became commonplace"
+     }
+    ]
+   },
+   {
+    "fact": "2.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "GRiD Systems Corp. was later bought by the Tandy ( now RadioShack ) Corporation"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "8e009a7087d743f2",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Somatic motor neurons originate in the central nervous system"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "project their axons to skeletal muscles"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "such as the muscles of the limbs , abdominal , and intercostal muscles"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "which are involved in locomotion"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "The three types of these neurons are the alpha efferent neurons , beta efferent neurons , and gamma efferent neurons"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "The three types of these neurons are the alpha efferent neurons , beta efferent neurons , and gamma efferent neurons"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "They are called efferent to indicate the flow of information from the central nervous system ( CNS ) to the periphery"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "They are called efferent to indicate the flow of information from the central nervous system ( CNS ) to the periphery"
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "The term ' motor neuron ' is usually restricted to the lower motor neurons"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "restricted to the lower motor neurons , the efferent nerves that directly innervate muscles"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "afe7a81a5c1c5f87",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "is an anti-malware component of Microsoft Windows.It"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Windows Defender , officially called Windows Defender Antivirus in Windows 10 Creators Update"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "It was first released as a free antispyware program download for Windows XP"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "shipped with Windows Vista and Windows 7"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "shipped with Windows Vista and Windows 7"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "made into a full antivirus program replacing Microsoft Security Essentials as part of Windows 8 and later versions"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "made into a full antivirus program replacing Microsoft Security Essentials as part of Windows 8 and later versions"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "640602631a0b7ab9",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The park lies in the north - east of South Africa , in the eastern parts of Limpopo and Mpumalanga provinces"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The park lies in the north - east of South Africa , in the eastern parts of Limpopo and Mpumalanga provinces"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Phalaborwa , Limpopo is the only town in South Africa that borders the Kruger National Park"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "It is one of the largest national parks in the world"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "with an area of 19,485 square kilometres ( 7,523 sq mi )"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "The park is approximately 360 kilometres ( 220 mi ) long"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "and has an average width of 65 kilometres ( 40 mi )"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "At its widest point , the park is 90 kilometres ( 56 mi ) wide from east to west"
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Kruger National Park is one of the largest game reserves in Africa"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "It covers an area of 19,485 square kilometres ( 7,523 sq mi )"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "in the provinces of Limpopo and Mpumalanga in northeastern South Africa"
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "in the provinces of Limpopo and Mpumalanga in northeastern South Africa"
+     }
+    ]
+   },
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "and extends 360 kilometres ( 220 mi ) from north to south"
+     }
+    ]
+   },
+   {
+    "fact": "1.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "and 65 kilometres ( 40 mi ) from east to west"
+     }
+    ]
+   },
+   {
+    "fact": "1.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The administrative headquarters are in Skukuza"
+     }
+    ]
+   },
+   {
+    "fact": "1.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Areas of the park were first protected by the government of the South African Republic in 1898"
+     }
+    ]
+   },
+   {
+    "fact": "1.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "it became South Africa 's first national park in 1926"
+     }
+    ]
+   },
+   {
+    "fact": "2.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Kruger National reserve IUCN category II ( national park )"
+     }
+    ]
+   },
+   {
+    "fact": "2.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Location Limpopo and Mpumalanga provinces , South Africa"
+     }
+    ]
+   },
+   {
+    "fact": "2.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Nearest city Nelspruit ( southern ) Phalaborwa ( central )"
+     }
+    ]
+   },
+   {
+    "fact": "2.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Nearest city Nelspruit ( southern ) Phalaborwa ( central )"
+     }
+    ]
+   },
+   {
+    "fact": "2.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Coordinates 24 ° 0 ′ 41 '' S 31 ° 29 ′ 7 '' E"
+     }
+    ]
+   },
+   {
+    "fact": "2.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Area 19,485 km ( 7,523 sq mi )"
+     }
+    ]
+   },
+   {
+    "fact": "2.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Established 31 May 1926 ( 1898 )"
+     }
+    ]
+   },
+   {
+    "fact": "2.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Visitors 1,336,981 ( in 2004 )"
+     }
+    ]
+   },
+   {
+    "fact": "2.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Governing body South African National Parks"
+     }
+    ]
+   },
+   {
+    "fact": "2.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "www.sanparks.org/parks/kruger/"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "9cefd38ae8b124f1",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "2001 ( 74th ) Shrek Aron Warner Jimmy Neutron : Boy Genius"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Jimmy Neutron : Boy Genius Steve Oedekerk and John A. Davis"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Monsters , Inc . Pete Docter and John Lasseter"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "2002 ( 75th ) Spirited Away Hayao Miyazaki Ice Age Chris Wedge"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "2002 ( 75th ) Spirited Away Hayao Miyazaki Ice Age Chris Wedge"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Lilo & Stitch Chris Sanders"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Spirit : Stallion of the Cimarron Jeffrey Katzenberg"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Treasure Planet Ron Clements"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "2003 ( 76th ) Finding Nemo Andrew Stanton"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Brother Bear Aaron Blaise and Robert Walker"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "The Triplets of Belleville Sylvain Chomet"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "( 77th ) The Incredibles Brad Bird Shark Tale Bill Damaschke Shrek 2 Andrew Adamson"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "( 77th ) The Incredibles Brad Bird Shark Tale Bill Damaschke Shrek 2 Andrew Adamson"
+     }
+    ]
+   },
+   {
+    "fact": "0.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "( 77th ) The Incredibles Brad Bird Shark Tale Bill Damaschke Shrek 2 Andrew Adamson"
+     }
+    ]
+   },
+   {
+    "fact": "0.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2005 ( 78th ) Wallace & Gromit : The Curse of the Were - Rabbit Nick Park and Steve Box"
+     }
+    ]
+   },
+   {
+    "fact": "0.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Howl 's Moving Castle Hayao Miyazaki"
+     }
+    ]
+   },
+   {
+    "fact": "0.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Corpse Bride Mike Johnson and Tim Burton"
+     }
+    ]
+   },
+   {
+    "fact": "0.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2006 ( 79th ) Happy Feet George Miller"
+     }
+    ]
+   },
+   {
+    "fact": "0.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Cars John Lasseter"
+     }
+    ]
+   },
+   {
+    "fact": "0.19",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Monster House Gil Kenan"
+     }
+    ]
+   },
+   {
+    "fact": "0.20",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2007 ( 80th ) Ratatouille Brad Bird"
+     }
+    ]
+   },
+   {
+    "fact": "0.21",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Persepolis Marjane Satrapi and Vincent Paronnaud"
+     }
+    ]
+   },
+   {
+    "fact": "0.22",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Surf 's Up Ash Brannon and Chris Buck"
+     }
+    ]
+   },
+   {
+    "fact": "0.23",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2008 ( 81st ) WALL - E Andrew Stanton"
+     }
+    ]
+   },
+   {
+    "fact": "0.24",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Bolt Chris Williams and Byron Howard"
+     }
+    ]
+   },
+   {
+    "fact": "0.25",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Kung Fu Panda John Stevenson and Mark Osborne"
+     }
+    ]
+   },
+   {
+    "fact": "0.26",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2009 ( 82nd ) Up Pete Docter"
+     }
+    ]
+   },
+   {
+    "fact": "0.27",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Coraline Henry Selick"
+     }
+    ]
+   },
+   {
+    "fact": "0.28",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Fantastic Mr. Fox Wes Anderson"
+     }
+    ]
+   },
+   {
+    "fact": "0.29",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The Princess and the Frog John Musker and Ron Clements"
+     }
+    ]
+   },
+   {
+    "fact": "0.30",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The Secret of Kells Tomm Moore"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "910a692c18ddcfca",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "No . overall No. in season Title Directed by Written by Original release date"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Chapter One : The Vanishing of Will Byers '' The Duffer Brothers The Duffer Brothers"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "The Duffer Brothers July 15 , 2016 ( 2016 - 07 - 15 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "On November 6 , 1983 , in a U.S. Department of Energy laboratory in the town of Hawkins , Indiana , a scientist is attacked by an unseen creature"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "While bicycling home from a Dungeons & Dragons session with his friends , 12 - year - old Will Byers encounters the creature and vanishes"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "The next day , a buzz - cut young girl wearing a hospital gown steals food from a local diner"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "The owner , Benny , takes pity on her and feeds her before calling social services"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "From a tattoo on her arm , he learns that her name is Eleven"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "A woman posing as a social worker arrives and murders Benny"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Armed men search the diner for Eleven , but she escapes"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Will 's mother Joyce believes she hears Will 's voice on a distorted phone call , but her phone short circuits"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.12",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.13",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.14",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.15",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.16",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.17",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.18",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.19",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.20",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.21",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.22",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.23",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.24",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.25",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.26",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.27",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.28",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.29",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.30",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.31",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.32",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.33",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.34",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.35",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.36",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.37",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.38",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.39",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.40",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.41",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.42",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.43",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.44",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.45",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.46",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.47",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.48",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.49",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.50",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.51",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.52",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.53",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.54",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.55",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.56",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.57",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.58",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.59",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.60",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.61",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.62",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.63",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.64",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.65",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.66",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.67",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.68",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.69",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.70",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.71",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.72",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.73",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.74",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.75",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.76",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.77",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.78",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.79",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.80",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.81",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.82",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.83",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.84",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.85",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.86",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.87",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.88",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.89",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.90",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.91",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.92",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.93",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.94",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.95",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.96",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.97",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.98",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.99",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.100",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.101",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.102",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.103",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.104",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.105",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.106",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.107",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.108",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.109",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.110",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.111",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.112",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.113",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.114",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.115",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.116",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.117",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.118",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.119",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.120",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.121",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.122",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.123",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.124",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.125",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "As Brenner cradles her , the monster attacks , apparently killing him"
+     }
+    ]
+   },
+   {
+    "fact": "0.126",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "The boys hide Eleven in a classroom"
+     }
+    ]
+   },
+   {
+    "fact": "0.127",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "The monster corners them , but Eleven pins it against a wall"
+     }
+    ]
+   },
+   {
+    "fact": "0.128",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "She says goodbye to Mike , disintegrates the monster , and vanishes"
+     }
+    ]
+   },
+   {
+    "fact": "0.129",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Will is hospitalized and reunited with his mother , brother , and friends"
+     }
+    ]
+   },
+   {
+    "fact": "0.130",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Hopper is reluctantly picked up by a black car"
+     }
+    ]
+   },
+   {
+    "fact": "0.131",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "One month later , Nancy and Steve are back together , and both are friends with Jonathan"
+     }
+    ]
+   },
+   {
+    "fact": "0.132",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Hopper leaves Eggo waffles and other food in a box in the woods"
+     }
+    ]
+   },
+   {
+    "fact": "0.133",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Will coughs up a slug - like creature and has a vision of the world as the Upside Down , but he hides this from his family"
+     }
+    ]
+   }
+  ]
+ }
+]

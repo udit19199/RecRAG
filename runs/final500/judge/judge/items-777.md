@@ -1,0 +1,832 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=ed95b5aeb43f4836 ===
+Gold sentences and facts:
+Sentence 0: The provisions relating to the right to property were changed a number of times . The Forty - Fourth Amendment of 1978 deleted the right to property from the list of fundamental rights A new provision , Article 300 - A , was added to the constitution , which provided that `` no person shall be deprived of his property save by authority of law '' . Thus if a legislature makes a law depriving a person of his property , there would be no obligation on the part of the State to pay anything as compensation . The aggrieved person shall have no right to move the court under Article 32 . Thus , the right to property is no longer a fundamental right , though it is still a constitutional right . If the government appears to have acted unfairly , the action can be challenged in a court of law by aggrieved citizens .
+  Fact 0.0: The provisions relating to the right to property were changed a number of times.
+  Fact 0.1: The Forty-Fourth Amendment of 1978 deleted the right to property from the list of fundamental rights.
+  Fact 0.2: A new provision, Article 300-A, was added to the constitution.
+  Fact 0.3: Article 300-A provides that no person shall be deprived of his property save by authority of law.
+  Fact 0.4: If a legislature makes a law depriving a person of his property, the State has no obligation to pay anything as compensation.
+  Fact 0.5: An aggrieved person shall have no right to move the court under Article 32 in that case.
+  Fact 0.6: The right to property is no longer a fundamental right.
+  Fact 0.7: The right to property is still a constitutional right.
+  Fact 0.8: If the government appears to have acted unfairly, the action can be challenged in a court of law by aggrieved citizens.
+
+Retrieved items:
+<item 1>
+Fundamental rights in India
+The right to constitutional remedies is present for enforcement of Fundamental Rights . The right to privacy is an intrinsic part of Article 21 that protects
+life and liberty of the citizens . Fundamental rights for Indians have also been aimed at overturning the inequalities of pre-independence social practices .
+Specifically , they have also been used to abolish untouchability and thus prohibit discrimination on the grounds of religion , race , caste , sex , or place of
+birth . They also forbid trafficking of human beings and forced labour ( a crime ) . They also protect cultural and educational rights of religious and
+linguistic minorities by allowing them to preserve their languages and also establish and administer their own education institutions . They are covered in Part
+III ( Articles 12 to 35 ) of Indian constitution .
+</item 1>
+
+<item 2>
+Fundamental rights in India
+. The Times of India . Retrieved 8 July 2010 . Jump up ^ `` Court rejects plea to make property a fundamental right '' . The Hindu . Chennai , India . 19
+October 2010 . Jump up ^ `` Education is now a fundamental right of every child '' . Hindustan Times . 1 April 2010 . Archived from the original on 9 July 2010
+. Retrieved 8 July 2010 . Footnotes ( edit ) Links to related articles ( hide ) Government of India Constitution Constitution Fundamental Rights , Directive
+Principles and Fundamental Duties Federalism ( Union List State List Concurrent List ) Executive Union Government Prime Minister ( list ) Cabinet Ministers
+President ( list ) Vice President ( list ) Civil Services All India Services ( IAS IFS / IFoS IPS ) Cabinet Secretary Secretaries ( Defence Finance Foreign Home
+) State governments Chief Minister ( list ) Chief Secretary Governors ( list ) Legislative Parliament Lok Sabha ( Speaker ) Rajya Sabha ( Chairman ) Vidhan
+Sabha Vidhan Parishad Leader of the Opposition Judiciary Supreme Court ( Chief Justice ) High Courts District Courts Retrieved from ``
+https://en.wikipedia.org/w/index.
+</item 2>
+
+<item 3>
+Fundamental rights in India
+The provisions relating to the right to property were changed a number of times . The Forty - Fourth Amendment of 1978 deleted the right to property from the
+list of fundamental rights A new provision , Article 300 - A , was added to the constitution , which provided that `` no person shall be deprived of his
+property save by authority of law '' . Thus if a legislature makes a law depriving a person of his property , there would be no obligation on the part of the
+State to pay anything as compensation . The aggrieved person shall have no right to move the court under Article 32 . Thus , the right to property is no longer
+a fundamental right , though it is still a constitutional right . If the government appears to have acted unfairly , the action can be challenged in a court of
+law by aggrieved citizens . The liberalisation of the economy and the government 's initiative to set up special economic zones has led to many protests by
+farmers and have led to calls for the reinstatement of the fundamental right to private property .
+</item 3>
+
+<item 4>
+Fundamental rights in India
+In 2007 , Supreme Court ruled that there could not be any blanket immunity from judicial review for the laws inserted in the Ninth Schedule . Apex court also
+stated it shall examine laws included in the Ninth Schedule after 1973 for any incompatibility with the basic structure doctrine . Amendment to Article 31C (
+edit ) Section 4 of the 42nd Amendment , had changed Article 31C of the constitution to accord precedence to the Directive Principles ( earlier applicable only
+to clauses b & c of Article 39 ) over the fundamental rights of individuals . In Minerva Mills v. Union of India case , supreme court ruled that the amendment
+to the Article 31C is not valid and ultra vires . Right to property ( edit ) The Constitution originally provided for the right to property under Articles 19
+and 31 . Article 19 guaranteed to all citizens the right to acquire , hold and dispose of property . Article 31 provided that `` no person shall be deprived of
+his property save by authority of law . '' It also provided that compensation would be paid to a person whose property has been taken for public purposes .
+</item 4>
+
+<item 5>
+Fundamental rights in India
+These fundamental rights help not only in protection but also the prevention of gross violations of human rights . They emphasise on the fundamental unity of
+India by guaranteeing to all citizens the access and use of the same facilities , irrespective of background . Some fundamental rights apply for persons of any
+nationality whereas others are available only to the citizens of India . The right to life and personal liberty is available to all people and so is the right
+to freedom of religion . On the other hand , freedoms of speech and expression and freedom to reside and settle in any part of the country are reserved to
+citizens alone , including non-resident Indian citizens . The right to equality in matters of public employment can not be conferred to overseas citizens of
+India . Fundamental rights primarily protect individuals from any arbitrary state actions , but some rights are enforceable against individuals . For instance ,
+the Constitution abolishes untouchability and also prohibits begar . These provisions act as a check both on state action as well as the action of private
+individuals . However , these rights are not absolute or uncontrolled and are subject to reasonable restrictions as necessary for the protection of general
+welfare . They can also be selectively curtailed .
+</item 5>
+
+<item 6>
+Fundamental rights in India
+Right to Privacy ( edit ) The right to privacy is protected as an intrinsic part of the right to life and personal liberty under Article 21 and as a part of the
+freedoms guaranteed by Part III of the Constitution . It protects the inner sphere of the individual from interference from both State , and non-State actors
+and allows the individuals to make autonomous life choices . On 24 August 2017 the Supreme Court ruled that : `` Right to Privacy is an integral part of Right
+to Life and Personal Liberty guaranteed in Article 21 of the Constitution , '' -- Supreme Court Critical analysis ( edit ) The fundamental rights have been
+revised for many reasons . Political groups have demanded that the right to work , the right to economic assistance in case of unemployment , old age , and
+similar rights be enshrined as constitutional guarantees to address issues of poverty and economic insecurity , though these provisions have been enshrined in
+the Directive Principles of state policy . The right to freedom and personal liberty has a number of limiting clauses , and thus have been criticised for
+failing to check the sanctioning of powers often deemed `` excessive '' . There is also the provision of preventive detention and suspension of fundamental
+rights in times of Emergency .
+</item 6>
+
+<item 7>
+Fundamental rights in India
+Article 1 of Part 1 of the Indian constitution , defines India ( Bharat ) as union of states . In nutshell , India is its people not its land as enshrined in
+its constitution . Since speedy trial is not the constitutional right of the citizens , the cases involving violations of fundamental rights take inordinate
+time for resolution by the Supreme Court which is against the legal maxim ' justice delayed is justice denied ' . Amendments ( edit ) Changes to the fundamental
+rights require a constitutional amendment , which has to be passed by a special majority of both houses of Parliament . This means that an amendment requires
+the approval of two - thirds of the members present and voting . However , the number of members voting in support of the amendment shall not be less than the
+simple majority of the total members of a house -- whether the Lok Sabha or Rajya Sabha . Fundamental rights not sacrosanct ( edit ) While deciding the
+Golaknath case in February 1967 , Supreme Court ruled that the Parliament has no power to curtail the fundamental rights .
+</item 7>
+
+<item 8>
+Fundamental rights in India
+They are covered in Part III ( Articles 12 to 35 ) of Indian constitution . Contents ( hide ) 1 Genesis 2 Significance and characteristics 3 Right to equality 4
+Right to freedom 5 Right against exploitation 6 Right to freedom of religion 7 Right to life 8 Cultural and Educational rights 9 Right to constitutional
+remedies 10 Right to Privacy 11 Critical analysis 12 Amendments 13 Fundamental rights not sacrosanct 13.1 Validity of Article 31B 13.2 Amendment to Article 31C
+13.3 Right to property 13.4 Right to education 14 See also 15 References 16 Footnotes Genesis ( edit ) The development of constitutionally guaranteed
+fundamental human rights in India was inspired by historical examples such as England 's Bill of Rights ( 1689 ) , the United States Bill of Rights ( approved
+on 17 September 1787 , final ratification on 15 December 1791 ) and France 's Declaration of the Rights of Man ( created during the revolution of 1789 , and
+ratified on 26 August 1789 ) .
+</item 8>
+
+<item 9>
+Fundamental rights in India
+The six fundamental rights recognised by the Indian constitution are the right to equality , right to freedom , right against exploitation , right to freedom of
+religion , cultural and educational rights , right to constitutional remedies and right to privacy . The right to equality includes equality before law ,
+prohibition of discrimination on grounds of religion , race , caste , gender or place of birth , and equality of opportunity in matters of employment ,
+abolition of untouchability and abolition of titles . The right to freedom includes freedom of speech and expression , assembly , association or union or
+cooperatives , movement , residence , and right to practice any profession or occupation , right to life and liberty , protection in respect to conviction in
+offences and protection against arrest and detention in certain cases . The right against exploitation prohibits all forms of forced labour , child labour and
+trafficking of human beings . The right to freedom of religion includes freedom of conscience and free profession , practice , and propagation of religion ,
+freedom to manage religious affairs , freedom from certain taxes and freedom from religious instructions in certain educational institutes . Cultural and
+educational rights preserve the right of any section of citizens to conserve their culture , language or script , and right of minorities to establish and
+administer educational institutions of their choice .
+</item 9>
+
+<item 10>
+Fundamental rights in India
+Jump up ^ Sovereign means possessing supreme or ultimate power . `` in modern democracies the people 's will is in theory sovereign '' synonyms : supreme ,
+absolute , unlimited , unrestricted , unrestrained , unbounded , boundless , infinite , ultimate , total , unconditional , full , utter , paramount ; principal
+, chief , dominant , predominant Jump up ^ `` What causes judicial delay ? Judgements diluting time frames in Code of Civil Procedure worsen the problem of
+adjournments '' . Retrieved 13 September 2017 . Jump up ^ `` Paras 316 and 317 of Kesavananda Bharati v. State of Kerala , ( AIR 1973 SC 1461 ) '' . 1973 .
+Retrieved 21 October 2016 . Jump up ^ `` IX Schedule laws open to review '' . 2007 . Retrieved 21 October 2017 . Jump up ^ 44th Amendment Act , 1978 . Jump up ^
+Mahapatra , Dhananjay ( 28 February 2009 ) . `` Should right to property return ? '' . The Times of India . Retrieved 8 July 2010 .
+</item 10>
+=== END ITEM id=ed95b5aeb43f4836 ===
+
+=== ITEM id=1c2026b4663822d2 ===
+Gold sentences and facts:
+Sentence 0: Douglas Irving Pederson ( born January 31 , 1968 ) is an American football coach who is currently the head coach of the Philadelphia Eagles of the National Football League ( NFL ) . He served as the offensive coordinator of the Kansas City Chiefs from 2013 -- 2015 . He spent most of his playing career as a member of the Green Bay Packers , serving as a backup quarterback to Brett Favre and holder on placekicks , and winning Super Bowl XXXI with the team over the New England Patriots . He was also a backup to Dan Marino as a member of the Miami Dolphins , and a starting quarterback for the Eagles and Cleveland Browns .
+  Fact 0.0: Douglas Irving Pederson was born on January 31, 1968.
+  Fact 0.1: Douglas Irving Pederson is an American football coach.
+  Fact 0.2: Douglas Irving Pederson is currently the head coach of the Philadelphia Eagles.
+  Fact 0.3: The Philadelphia Eagles are a team of the National Football League (NFL).
+  Fact 0.4: Douglas Irving Pederson served as the offensive coordinator of the Kansas City Chiefs from 2013 to 2015.
+  Fact 0.5: Douglas Irving Pederson spent most of his playing career as a member of the Green Bay Packers.
+  Fact 0.6: Douglas Irving Pederson served as a backup quarterback to Brett Favre with the Green Bay Packers.
+  Fact 0.7: Douglas Irving Pederson served as holder on placekicks with the Green Bay Packers.
+  Fact 0.8: Douglas Irving Pederson won Super Bowl XXXI with the Green Bay Packers over the New England Patriots.
+  Fact 0.9: Douglas Irving Pederson was also a backup to Dan Marino as a member of the Miami Dolphins.
+  Fact 0.10: Douglas Irving Pederson was a starting quarterback for the Philadelphia Eagles.
+  Fact 0.11: Douglas Irving Pederson was a starting quarterback for the Cleveland Browns.
+
+Retrieved items:
+<item 1>
+Doug Pederson
+Retrieved 2010 - 02 - 28 . Jump up ^ `` 2011 Coaching Staff Complete '' . Philadelphiaeagles.com. 2011 - 02 - 08 . Retrieved 2011 - 02 - 08 . Jump up ^ ``
+Chiefs hire Doug Pederson and Bob Sutton as Coordinators '' . nfl.com. 2013 - 01 - 11 . Retrieved 2013 - 01 - 11 . Jump up ^ Sheridan , Phil ( January 18 , 2016
+) . `` Doug Pederson announced as Eagles coach '' . ESPN.com . Retrieved 2017 - 08 - 06 . Jump up ^ Wells , Mike ( 11 February 2018 ) . `` Eagles OC Frank Reich
+named new Colts coach '' . ESPN . Retrieved 11 February 2018 . Jump up ^ `` Gordon `` Gordy '' Pederson `` . Legacy.com . September 29 , 2016 . Retrieved 2017 -
+08 - 06 .
+</item 1>
+
+<item 2>
+Doug Pederson
+625 0 1.000 Coaching tree ( edit ) NFL head coaches under whom Pederson has served : Andy Reid , Philadelphia Eagles ( 2009 -- 2012 ) Kansas City Chiefs ( 2013
+- 2015 ) Assistant coaches under Pederson who have become NFL head coaches : Frank Reich , Indianapolis Colts ( 2018 -- present ) Personal life ( edit )
+Pederson was born to Teri ( née Boykin ) and Gordon `` Gordy '' Pederson ( 1939 -- 2016 ) on January 31 , 1968 , in Bellingham , Washington . A devout Christian
+, Pederson and his wife Jeannie have three sons . Pederson has been a resident of Moorestown , New Jersey . References ( edit ) Jump up ^ Cahill , Dan ( January
+25 , 2016 ) . `` Ron Rivera could become one of four to win Super Bowl as player and coach '' . chicago.suntimes.com . Retrieved February 19 , 2018 . Jump up ^
+McCallister , Laura ( January 11 , 2013 ) . `` Andy Reid fills out coaching staff , including coordinators '' .
+</item 2>
+
+<item 3>
+Doug Pederson
+Retrieved 2017 - 08 - 06 . Jump up ^ `` Eagles head coach Doug Pederson gives glory to God , says his faith keeps him grounded '' . Jump up ^ McLane , Jeff (
+September 11 , 2016 ) . `` Pederson goes on without his first mentor -- his late father '' . The Philadelphia Inquirer . Retrieved 2017 - 08 - 06 . Jump up ^
+Cuellar , Dann . `` Doug Pedersons ' neighbors ready to welcome him back home '' , WPVI - TV , January 19 , 2016 . Accessed November 29 , 2017 . `` New
+Philadelphia Eagles head coach Doug Pederson and his family are excited about moving back to the area ... Before moving to Kansas City in 2011 , the Pederson
+family lived on a cul - de-sac in the unit block of Hamilton Court in Moorestown , New Jersey . '' External links ( edit ) Philadelphia Eagles profile Current
+head coaches of the National Football League American Football Conference AFC East AFC North AFC South AFC West Sean McDermott ( Buffalo Bills ) Adam Gase (
+Miami Dolphins ) Bill Belichick ( New England Patriots ) Todd Bowles
+</item 3>
+
+<item 4>
+Philadelphia Eagles
+Doug Pederson era ( 2016 -- present ) 2016 Carson Wentz made his debut in the 2016 season The Eagles hired Chiefs offensive coordinator Doug Pederson as their
+next head coach . The team made the official announcement on January 18 , 2016 . Eagles owner Jeffrey Lurie said in a statement : `` Doug is a strategic thinker
+, a compelling leader and communicator , and someone who truly knows how to get the best out of his players . All of these factors were what initially attracted
+us to Doug and we believe that he is the right man to help us achieve our ultimate goal . '' Pederson had been with the Chiefs for the preceding three years
+after spending the four seasons previous to those with the Eagles . He served as a quality control assistant for the Eagles in 2009 and 2010 before being
+promoted to quarterbacks coach for the 2011 and 2012 seasons . He was praised for his work with Chiefs quarterback Alex Smith over the preceding few seasons ,
+particularly 2015 , as the Chiefs moved into the top 10 in scoring offense .
+</item 4>
+
+<item 5>
+Doug Pederson
+3 Philadelphia Eagles 1.2. 4 Cleveland Browns 1.2. 5 Green Bay Packers ( second stint ) 2 Coaching career 2.1 High school 2.2 NFL assistant coaching positions
+2.3 NFL head coach 2.4 Head coaching record 2.5 Coaching tree 3 Personal life 4 References 5 External links Playing career ( edit ) Early years ( edit )
+Pederson was born in Bellingham , Washington , in 1968 . He attended Ferndale High School in nearby Ferndale , Washington , and was an All - State selection in
+football , basketball , and baseball . After high school he graduated from Northeast Louisiana University , where he was quarterback from 1987 through 1990 . He
+still holds multiple passing records at the school . Professional ( edit ) Miami Dolphins ( edit ) Pederson originally signed as a rookie free agent by the
+Miami Dolphins on May 1 , 1991 , out of Northeast Louisiana University ( now University of Louisiana at Monroe ) in Monroe , Louisiana . He was waived on August
+17 , 1991 , before the start of the regular season .
+</item 5>
+
+<item 6>
+Doug Pederson
+Calvary was going into its second year as a program when Pederson signed on in March 2005 . Pederson was the head coach at Calvary for four years , and held a
+33 -- 7 record in the regular season and an 8 -- 3 record in the post-season . The Cavaliers were in the state playoffs all four years with Pederson as head
+coach . In his first season in 2005 , the Cavaliers went 5 -- 6 and lost in the first round of the state playoffs . In 2007 , he led the Cavaliers to the
+semi-finals and to their first district title . NFL assistant coaching positions ( edit ) On January 29 , 2009 , Pederson was hired as the offensive quality
+control coach for the Philadelphia Eagles , reuniting him with his former head coach , Andy Reid . He was promoted to quarterbacks coach on February 8 , 2011 ,
+replacing James Urban , who was promoted to assistant offensive coordinator . On January 11 , 2013 , Pederson followed Andy Reid to the Kansas City Chiefs to
+serve as offensive coordinator .
+</item 6>
+
+<item 7>
+Doug Pederson
+He spent most of his playing career as a member of the Green Bay Packers , serving as a backup quarterback to Brett Favre and holder on placekicks , and winning
+Super Bowl XXXI with the team over the New England Patriots . He was also a backup to Dan Marino as a member of the Miami Dolphins , and a starting quarterback
+for the Eagles and Cleveland Browns . In his second season as the Eagles ' head coach , Pederson won Super Bowl LII ( also against the Patriots ) , marking the
+first Super Bowl title in franchise history . He also became just the fourth person , after Mike Ditka , Tom Flores , and Tony Dungy to win a Super Bowl as both
+a player and head coach . Contents ( hide ) 1 Playing career 1.1 Early years 1.2 Professional 1.2. 1 Miami Dolphins 1.2. 2 First stint with Packers 1.2. 3
+Philadelphia Eagles 1.2. 4 Cleveland Browns 1.2.
+</item 7>
+
+<item 8>
+Doug Pederson
+NFL head coach ( edit ) On January 18 , 2016 , Pederson was hired as head coach of the Eagles replacing Chip Kelly . Despite having Sam Bradford on the roster
+as the starting quarterback , the Eagles drafted Carson Wentz with the second overall pick in 2016 . Right before the 2016 season began , Bradford was traded to
+the Minnesota Vikings and Wentz was named the starting quarterback as a rookie . Pederson and Wentz won their first three NFL games together , but finished the
+season 7 -- 9 , missing the playoffs . Pederson 's second season was much more successful as he led the Eagles to a 13 - 3 record , winning them the NFC East
+division championship and allotting them home - field advantage throughout the playoffs . Wentz , who was having a career year and was considered a front runner
+for league MVP , tore his ACL in Week 14 , leaving backup Nick Foles with the starting job for the remainder of the year .
+</item 8>
+
+<item 9>
+Doug Pederson
+Doug Pederson - wikipedia Doug Pederson Jump to : navigation , search Not to be confused with Doug Peterson . Doug Pederson Pederson in 2016 Philadelphia Eagles
+Position : Head coach Born : ( 1968 - 01 - 31 ) January 31 , 1968 ( age 50 ) Bellingham , Washington Height : 6 ft 3 in ( 1.91 m ) Weight : 221 lb ( 100 kg )
+Career information High school : Ferndale ( WA ) College : Northeast Louisiana Undrafted : 1991 Career history As player : Miami Dolphins ( 1991 ) * New York /
+New Jersey Knights ( 1992 ) Miami Dolphins ( 1992 -- 1994 ) Carolina Panthers ( 1995 ) * Rhein Fire ( 1995 ) Miami Dolphins ( 1995 ) Green Bay Packers ( 1995 --
+1998 ) Philadelphia Eagles ( 1999 ) Cleveland Browns ( 2000 ) Green Bay Packers ( 2001 -- 2004 ) * Offseason and / or practice squad member only As coach :
+Calvary Baptist Academy ( 2005 -- 2008 ) Head coach Philadelphia Eagles ( 2009 -- 2010 ) Offensive quality
+</item 9>
+
+<item 10>
+Doug Pederson
+-- 2008 ) Head coach Philadelphia Eagles ( 2009 -- 2010 ) Offensive quality control coordinator Philadelphia Eagles ( 2011 -- 2012 ) Quarterbacks coach Kansas
+City Chiefs ( 2013 -- 2015 ) Offensive coordinator Philadelphia Eagles ( 2016 -- present ) Head coach Career highlights and awards As player Super Bowl champion
+( XXXI ) As coach Super Bowl champion ( LII ) Career NFL statistics Pass attempts : 522 Pass completions : 286 Percentage : 54.7 TD -- INT : 12 -- 19 Passing
+yards : 2,762 Passer rating : 62.3 Player stats at NFL.com Head coaching record Regular season : 20 -- 12 (. 625 ) Postseason : 3 -- 0 ( 1.000 ) Career : 23 --
+12 (. 657 ) Coaching stats at PFR Douglas Irving Pederson ( born January 31 , 1968 ) is an American football coach who is currently the head coach of the
+Philadelphia Eagles of the National Football League ( NFL ) . He served as the offensive coordinator of the Kansas City Chiefs from 2013 -- 2015 .
+</item 10>
+=== END ITEM id=1c2026b4663822d2 ===
+
+=== ITEM id=6ee323f10ec5825a ===
+Gold sentences and facts:
+Sentence 0: `` Baby , Now That I 've Found You '' ( Tony Macaulay , John MacLeod ) -- 3 : 49 ( Previously Unreleased ) `` Oh , Atlanta '' ( Mick Ralphs ) -- 4 : 41 ( Previously Unreleased ) `` Broadway '' ( Sidney & Suzanne Cox ) -- 3 : 57 ( Previously Unreleased ) `` Every Time You Say Goodbye '' ( John Pennell ) -- 3 : 13 ( From the Album `` Every Time You Say Goodbye '' by Alison Krauss & Union Station ) `` Tonight I 'll Be Lonely Too '' ( Sidney Cox ) -- 3 : 25 ( From the Album `` I 've Got That Old Feeling '' by Alison Krauss ) `` Teardrops Will Kiss the Morning Dew '' ( Paul Craft ) -- 3 : 38 ( From the Album `` Two Highways '' by Alison Krauss & Union Station ) `` Sleep On '' ( Nelson Mandrell ) -- 2 : 23 ( From the Album `` Too Late to Cry '' by Alison Krauss ) `` When God Dips His Pen of Love in My Heart '' ( Cleavant Derricks ) -- 2 : 26 ( From the Album `` Everybody 's Reaching Out for Someone '' by The Cox Family ) `` I Will '' ( John Lennon , Paul McCartney ) -- 4 : 04 ( From the Album `` Within Reach '' by Tony Furtado ) `` I Do n't Believe You 've Met My Baby '' ( Autry Inman ) -- 3 : 10 ( From the Album `` Slide Rule '' by Jerry Douglas ) `` In the Palm of Your Hand '' ( Ron Block ) -- 3 : 24 ( From the Album `` I Know Who Holds Tomorrow '' by Alison Krauss & The Cox Family ) `` When You Say Nothing at All '' ( Paul Overstreet , Don Schlitz ) -- 4 : 21 ( From the Album `` Keith Whitley : A Tribute Album '' performed by Alison Krauss & Union Station )
+  Fact 0.0: 'Baby, Now That I've Found You' was written by Tony Macaulay and John MacLeod.
+  Fact 0.1: 'Baby, Now That I've Found You' runs 3 minutes 49 seconds.
+  Fact 0.2: 'Baby, Now That I've Found You' is previously unreleased.
+  Fact 0.3: 'Oh, Atlanta' was written by Mick Ralphs.
+  Fact 0.4: 'Oh, Atlanta' runs 4 minutes 41 seconds.
+  Fact 0.5: 'Oh, Atlanta' is previously unreleased.
+  Fact 0.6: 'Broadway' was written by Sidney & Suzanne Cox.
+  Fact 0.7: 'Broadway' runs 3 minutes 57 seconds.
+  Fact 0.8: 'Broadway' is previously unreleased.
+  Fact 0.9: 'Every Time You Say Goodbye' was written by John Pennell.
+  Fact 0.10: 'Every Time You Say Goodbye' runs 3 minutes 13 seconds.
+  Fact 0.11: 'Every Time You Say Goodbye' is from the album 'Every Time You Say Goodbye' by Alison Krauss & Union Station.
+  Fact 0.12: 'Tonight I'll Be Lonely Too' was written by Sidney Cox.
+  Fact 0.13: 'Tonight I'll Be Lonely Too' runs 3 minutes 25 seconds.
+  Fact 0.14: 'Tonight I'll Be Lonely Too' is from the album 'I've Got That Old Feeling' by Alison Krauss.
+  Fact 0.15: 'Teardrops Will Kiss the Morning Dew' was written by Paul Craft.
+  Fact 0.16: 'Teardrops Will Kiss the Morning Dew' runs 3 minutes 38 seconds.
+  Fact 0.17: 'Teardrops Will Kiss the Morning Dew' is from the album 'Two Highways' by Alison Krauss & Union Station.
+  Fact 0.18: 'Sleep On' was written by Nelson Mandrell.
+  Fact 0.19: 'Sleep On' runs 2 minutes 23 seconds.
+  Fact 0.20: 'Sleep On' is from the album 'Too Late to Cry' by Alison Krauss.
+  Fact 0.21: 'When God Dips His Pen of Love in My Heart' was written by Cleavant Derricks.
+  Fact 0.22: 'When God Dips His Pen of Love in My Heart' runs 2 minutes 26 seconds.
+  Fact 0.23: 'When God Dips His Pen of Love in My Heart' is from the album 'Everybody's Reaching Out for Someone' by The Cox Family.
+  Fact 0.24: 'I Will' was written by John Lennon and Paul McCartney.
+  Fact 0.25: 'I Will' runs 4 minutes 4 seconds.
+  Fact 0.26: 'I Will' is from the album 'Within Reach' by Tony Furtado.
+  Fact 0.27: 'I Don't Believe You've Met My Baby' was written by Autry Inman.
+  Fact 0.28: 'I Don't Believe You've Met My Baby' runs 3 minutes 10 seconds.
+  Fact 0.29: 'I Don't Believe You've Met My Baby' is from the album 'Slide Rule' by Jerry Douglas.
+  Fact 0.30: 'In the Palm of Your Hand' was written by Ron Block.
+  Fact 0.31: 'In the Palm of Your Hand' runs 3 minutes 24 seconds.
+  Fact 0.32: 'In the Palm of Your Hand' is from the album 'I Know Who Holds Tomorrow' by Alison Krauss & The Cox Family.
+  Fact 0.33: 'When You Say Nothing at All' was written by Paul Overstreet and Don Schlitz.
+  Fact 0.34: 'When You Say Nothing at All' runs 4 minutes 21 seconds.
+  Fact 0.35: 'When You Say Nothing at All' is performed by Alison Krauss & Union Station on the album 'Keith Whitley: A Tribute Album'.
+
+Retrieved items:
+<item 1>
+What Ifs
+The song is the first No. 1 on the chart for both Brown and Alaina . The following week , for charts dated October 28 , 2017 , `` What Ifs '' stayed at number
+one , as well as topping the Country Airplay and Country Streaming Songs charts . Together with the release of the deluxe edition of the album which also
+reached number on Top Country Albums , and another number one for a new track `` Heaven '' on digital sales , Brown became the first artist to have simultaneous
+number ones on all five main country charts . The song was certified Platinum by the RIAA on October 2 , 2017 . It was the third most - consumed country song of
+2017 , with 1,551,000 including streams ( 599,000 in pure sale ) sold in the year . It has sold 679,000 copies in the US as of March 2018 . Music video ( edit )
+The official music video for the song was directed by P.R. Brown and produced by Steve Lamar . The video was filmed along the Californian coast at The Inn at
+Newport Ranch , a resort and cattle ranch to the north of San Francisco .
+</item 1>
+
+<item 2>
+For What It's Worth
+I Hope You Find It '' `` Take It Like a Man '' `` I Walk Alone '' Guest singles `` A Love Like Yours ( Do n't Come Knocking Everyday ) '' `` Dead Ringer for
+Love '' `` I Got You Babe '' `` It Ai n't Necessarily So '' `` Love Can Build a Bridge '' `` Più che puoi '' `` Bewitched , Bothered and Bewildered '' Book
+Portal Haley Reinhart Discography Videography Songs Studio albums Listen Up ! ( 2012 ) Better ( 2016 ) What 's That Sound ? ( 2017 ) EPs American Idol Season 10
+Highlights : Haley Reinhart ( 2011 ) Songs `` Baby , It 's Cold Outside '' `` Free '' `` Ca n't Help Falling in Love '' `` Better '' Concert tours American
+Idols LIVE !
+</item 2>
+
+<item 3>
+Now That I've Found You: A Collection
+Close and Personal Retrieved from `` https://en.wikipedia.org/w/index.php?title=Now_That_I%27ve_Found_You:_A_Collection&oldid=808197945 '' Categories : 1995
+compilation albums Alison Krauss & Union Station albums Rounder Records compilation albums Hidden categories : Articles with hAudio microformats Music infoboxes
+with deprecated parameters Talk Contents About Wikipedia Add links This page was last edited on 1 November 2017 , at 13 : 34 . About Wikipedia
+</item 3>
+
+<item 4>
+Now That I've Found You: A Collection
+1995 Succeeded by Starting Over by Reba McEntire ( hide ) Alison Krauss & Union Station Alison Krauss Barry Bales Ron Block Jerry Douglas Dan Tyminski John
+Pennell Jeff White Brent Truitt Mike Harman Adam Steffey Tim Stafford Studio albums Different Strokes Too Late to Cry Two Highways I 've Got That Old Feeling
+Every Time You Say Goodbye I Know Who Holds Tomorrow So Long So Wrong Forget About It New Favorite Lonely Runs Both Ways Paper Airplane Windy City Compilation
+albums Now That I 've Found You : A Collection Live A Hundred Miles or More : A Collection Essential Alison Krauss With Robert Plant Raising Sand Singles ``
+When You Say Nothing at All '' `` Baby Now That I 've Found You '' `` Baby Mine '' `` The Lucky One '' `` Missing You '' `` Please Read the Letter '' `` Rich
+Woman '' Featured singles `` Teach Your Children '' `` Somewhere in the Vicinity of the Heart '' `` It 's Not Over '' `` Buy Me a Rose '' `` Whiskey Lullaby ''
+Related articles Discography Awards and nominations Alison Brown Robert Plant Viktor Krauss Up !
+</item 4>
+
+<item 5>
+Now That I've Found You: A Collection
+Paul McCartney ) -- 4 : 04 ( From the Album `` Within Reach '' by Tony Furtado ) `` I Do n't Believe You 've Met My Baby '' ( Autry Inman ) -- 3 : 10 ( From the
+Album `` Slide Rule '' by Jerry Douglas ) `` In the Palm of Your Hand '' ( Ron Block ) -- 3 : 24 ( From the Album `` I Know Who Holds Tomorrow '' by Alison
+Krauss & The Cox Family ) `` When You Say Nothing at All '' ( Paul Overstreet , Don Schlitz ) -- 4 : 21 ( From the Album `` Keith Whitley : A Tribute Album ''
+performed by Alison Krauss & Union Station ) Personnel ( edit ) Alison Krauss : Vocal , Fiddle , Viola Ron Block : Vocal , Acoustic & Electric Guitars , Banjo
+Russ Barenberg , Mike Marshall , Scott Nygaard , Tim Stafford : Guitars Jerry Douglas : Guitars , Dobro Sam Bush , Brent Truitt : Mandolin Stuart Duncan :
+Fiddle , Harmonica ,
+</item 5>
+
+<item 6>
+Now That I've Found You: A Collection
+John MacLeod ) -- 3 : 49 ( Previously Unreleased ) `` Oh , Atlanta '' ( Mick Ralphs ) -- 4 : 41 ( Previously Unreleased ) `` Broadway '' ( Sidney & Suzanne Cox
+) -- 3 : 57 ( Previously Unreleased ) `` Every Time You Say Goodbye '' ( John Pennell ) -- 3 : 13 ( From the Album `` Every Time You Say Goodbye '' by Alison
+Krauss & Union Station ) `` Tonight I 'll Be Lonely Too '' ( Sidney Cox ) -- 3 : 25 ( From the Album `` I 've Got That Old Feeling '' by Alison Krauss ) ``
+Teardrops Will Kiss the Morning Dew '' ( Paul Craft ) -- 3 : 38 ( From the Album `` Two Highways '' by Alison Krauss & Union Station ) `` Sleep On '' ( Nelson
+Mandrell ) -- 2 : 23 ( From the Album `` Too Late to Cry '' by Alison Krauss ) `` When God Dips His Pen of Love in My Heart '' ( Cleavant Derricks ) -- 2 : 26 (
+From the Album `` Everybody 's Reaching Out for Someone '' by The Cox Family ) `` I Will '' ( John Lennon ,
+</item 6>
+
+<item 7>
+Now That I've Found You: A Collection
+It is a retrospective of the early part of Krauss ' recording career . It includes songs that appeared on her solo albums , albums by Alison Krauss & Union
+Station , and some that appeared on an album by Alison Krauss & the Cox Family . It also contains some new material . The album features the hit country single
+`` When You Say Nothing at All '' , sold over two million copies earning double platinum RIAA certification . The title single `` Baby , Now That I 've Found
+You '' won the Grammy Award for Best Female Country Vocal Performance and `` When You Say Nothing at All '' was named Single of the Year by the Country Music
+Association . Contents ( hide ) 1 Track listing 2 Personnel 3 Chart performance 3.1 Album 4 References Track listing ( edit ) `` Baby , Now That I 've Found You
+'' ( Tony Macaulay , John MacLeod ) -- 3 : 49 ( Previously Unreleased ) `` Oh ,
+</item 7>
+
+<item 8>
+Now That I've Found You: A Collection
+Now That I 've Found You : a Collection - wikipedia Now That I 've Found You : a Collection Jump to : navigation , search Now That I 've Found You : A
+Collection Compilation album by Alison Krauss Released February 7 , 1995 Genre Bluegrass / Country Length 42 : 31 Label Rounder Producer Alison Krauss & Union
+Station Alison Krauss chronology I Know Who Holds Tomorrow ( 1994 ) I Know Who Holds Tomorrow 1994 Now That I 've Found You : A Collection ( 1995 ) So Long So
+Wrong ( 1997 ) So Long So Wrong 1997 Singles from Now That I 've Found You : A Collection `` Baby , Now That I 've Found You '' Released : 1995 `` Oh , Atlanta
+'' Released : 1995 Professional ratings Review scores Source Rating Allmusic Robert Christgau A − Rolling Stone Now That I 've Found You : A Collection is an
+album by Alison Krauss , released February 7 , 1995 . It is a retrospective of the early part of Krauss ' recording career .
+</item 8>
+
+<item 9>
+What Ifs
+Music Canada . Retrieved February 8 , 2018 . Preceded by `` Body Like a Back Road '' by Sam Hunt Billboard Hot Country Songs number - one single October 21 --
+November 11 , 2017 Succeeded by `` When It Rains It Pours '' by Luke Combs Preceded by `` All the Pretty Girls '' by Kenny Chesney Billboard Country Airplay
+number - one single October 28 , 2017 Kane Brown Studio albums Kane Brown ( 2016 ) EPs Closer ( 2015 ) Chapter 1 ( 2016 ) Singles `` Do n't Go City on Me '' ``
+Used to Love You Sober '' `` What Ifs '' `` Heaven '' Lauren Alaina Studio albums Wildflower Road Less Traveled EPs Lauren Alaina Singles `` Like My Mother Does
+'' `` Georgia Peaches '' `` Eighteen Inches '' `` Barefoot and Buckwild '' `` Next Boyfriend '' `` Road Less Traveled '' `` Doin ' Fine '' Other singles `` My
+Grown Up Christmas List '' `` What Ifs '' Retrieved from `` https://en.wikipedia.org/w/index.
+</item 9>
+
+<item 10>
+Now That I've Found You: A Collection
+Brent Truitt : Mandolin Stuart Duncan : Fiddle , Harmonica , Cymbals Adam Steffey : Mandolin & Mandola Pete Wasner : Piano Chart performance ( edit ) Album (
+edit ) Chart ( 1995 ) Peak position Canadian RPM Country Albums U.S. Billboard 200 13 U.S. Billboard Top Country Albums References ( edit ) Jump up ^ Allmusic
+review Jump up ^ Robert Christgau review Jump up ^ Rolling Stone review ^ Jump up to : Alison Krauss Artist Chart Position at Billboard Now That I 've Found You
+for Rounder Records . Retrieved August 28 , 2010 . Alison Krauss bio for CMT.com . Retrieved June 7 , 2006 . Now That I 've Found You on Amazon . Retrieved June
+7 , 2006 . Preceded by The Woman in Me by Shania Twain RPM Country Albums number - one album October 30 - November 5 ,
+</item 10>
+=== END ITEM id=6ee323f10ec5825a ===
+
+=== ITEM id=e950be5c4871aab8 ===
+Gold sentences and facts:
+Sentence 0: His roles continued in the 1990s with the TV series Cracker ( 1993 -- 1996 , returning in 2006 for a one - off special ) , in which he starred as forensic psychologist Dr. Edward `` Fitz '' Fitzgerald . The role won him three BAFTA awards . Roles in bigger films followed ; the James Bond films GoldenEye ( 1995 ) and The World Is Not Enough ( 1999 ) , a supporting role in From Hell ( 2001 ) , as well as half - giant Rubeus Hagrid in the Harry Potter films ( 2001 -- 2011 ) . J.K. Rowling , author of the Harry Potter series , had Coltrane at the top of her list to play Hagrid and , when asked whom she would like to see in the role , responded `` Robbie Coltrane for Hagrid '' in one quick breath . There is also an unnamed 8ft actor who stands in for the 6ft 1in Coltrane in some scenes .
+  Fact 0.0: His roles continued in the 1990s.
+  Fact 0.1: He appeared in the TV series Cracker from 1993 to 1996.
+  Fact 0.2: He returned to the TV series Cracker in 2006 for a one-off special.
+  Fact 0.3: In Cracker he starred as forensic psychologist Dr. Edward "Fitz" Fitzgerald.
+  Fact 0.4: The role in Cracker won him three BAFTA awards.
+  Fact 0.5: Roles in bigger films followed.
+  Fact 0.6: He appeared in the James Bond film GoldenEye (1995).
+  Fact 0.7: He appeared in the James Bond film The World Is Not Enough (1999).
+  Fact 0.8: He had a supporting role in From Hell (2001).
+  Fact 0.9: He played half-giant Rubeus Hagrid in the Harry Potter films from 2001 to 2011.
+  Fact 0.10: J.K. Rowling, author of the Harry Potter series, had him at the top of her list to play Hagrid.
+  Fact 0.11: When asked whom she would like to see in the role, Rowling responded "Robbie Coltrane for Hagrid" in one quick breath.
+  Fact 0.12: An unnamed 8ft actor stands in for the 6ft 1in Coltrane in some scenes.
+Sentence 1: Robbie Coltrane OBE Coltrane in April 2007 Anthony Robert McMillan ( 1950 - 03 - 30 ) 30 March 1950 ( age 67 ) Rutherglen , South Lanarkshire , Scotland Nationality British Alma mater University of Edinburgh Occupation Actor , Author Years active 1979 -- present Height 6 ft 1 in ( 185 cm ) Spouse ( s ) Rhona Gemmell ( m . 1999 -- 2003 ) Children
+  Fact 1.0: Robbie Coltrane holds the OBE honour.
+  Fact 1.1: A photo caption shows Coltrane in April 2007.
+  Fact 1.2: Coltrane's birth name is Anthony Robert McMillan.
+  Fact 1.3: Coltrane was born on 30 March 1950.
+  Fact 1.4: Coltrane is listed as age 67.
+  Fact 1.5: Coltrane was born in Rutherglen, South Lanarkshire, Scotland.
+  Fact 1.6: Coltrane's nationality is British.
+  Fact 1.7: Coltrane's alma mater is the University of Edinburgh.
+  Fact 1.8: Coltrane's occupations are actor and author.
+  Fact 1.9: Coltrane has been active as a performer from 1979 to the present.
+  Fact 1.10: Coltrane's height is 6 ft 1 in (185 cm).
+  Fact 1.11: Coltrane's spouse was Rhona Gemmell, married from 1999 to 2003.
+  Fact 1.12: The children field is listed with no value.
+
+Retrieved items:
+<item 1>
+Harry Potter (film series)
+Notable recurring cast members include Helena Bonham Carter as Bellatrix Lestrange , Warwick Davis as Filius Flitwick , Ralph Fiennes as Lord Voldemort ,
+Brendan Gleeson as Alastor Moody , Richard Griffiths as Vernon Dursley , Jason Isaacs as Lucius Malfoy , Gary Oldman as Sirius Black , Fiona Shaw as Petunia
+Dursley , Timothy Spall as Peter Pettigrew , David Thewlis as Remus Lupin , Emma Thompson as Sybill Trelawney , Mark Williams as Arthur Weasley , and Julie
+Walters as Molly Weasley . The series has seen many returning crew members from various departments , including Tim Burke , visual effects supervisor ; Peter
+Doyle , digital film colourist ; Nick Dudman , make - up and creature effects designer ; David Holmes , stunt double ; Amanda Knight , make - up artist ;
+Stephenie McMillan , set designer ; Greg Powell , stunt coordinator ; Jany Temime , costume designer ; and Fiona Weir , casting director . Set design The Hall
+of Christ Church in Oxford , England , the inspiration for the studio film set of The Great Hall of Hogwarts . The production designer for all eight films is
+Stuart Craig .
+</item 1>
+
+<item 2>
+Harry Potter (film series)
+2001 ) The Chamber of Secrets ( 2002 ) The Prisoner of Azkaban ( 2004 ) The Goblet of Fire ( 2005 ) The Order of the Phoenix ( 2007 ) The Half - Blood Prince (
+2009 ) The Deathly Hallows -- Part 1 ( 2010 ) The Deathly Hallows -- Part 2 ( 2011 ) Music The Philosopher 's Stone The Chamber of Secrets The Prisoner of
+Azkaban The Goblet of Fire The Order of the Phoenix The Half - Blood Prince The Deathly Hallows -- Part 1 The Deathly Hallows -- Part 2 Related Cast members
+Production of The Deathly Hallows Characters Main Harry Potter Ron Weasley Hermione Granger Lord Voldemort Albus Dumbledore Severus Snape Rubeus Hagrid Draco
+Malfoy Supporting Ginny Weasley Fred and George Weasley Hogwarts staff Order of the Phoenix Dumbledore 's Army Death Eaters Fictional universe Hogwarts Magic
+Magical creatures Magical objects Ministry of Magic Muggle Places Potions Quidditch Related works Fantastic Beasts and Where to Find Them Quidditch Through the
+Ages The Tales of Beedle the Bard Prequel Pottermore The Cursed Child Hogwarts
+</item 2>
+
+<item 3>
+Harry Potter (film series)
+Radcliffe had already established himself as an actor in the 1999 BBC television production of David Copperfield in which he played the title role 's childhood
+years . Heyman persuaded Radcliffe 's parents to allow him to audition for the part of Harry Potter , which involved Radcliffe being filmed . ( This screen test
+footage was released via the first set of Ultimate Editions in 2009 . ) Rowling was enthusiastic after viewing Radcliffe 's filmed test , saying she did n't
+think there was a better choice for the part of Harry Potter . Also in 2000 , the then unknown British actors Emma Watson and Rupert Grint were selected from
+thousands of auditioning children to play the roles of Hermione Granger and Ron Weasley , respectively . Their only previous acting experience was in school
+plays . Grint was eleven years old and Watson ten at the time they were cast . Los Angeles Times writer Geoff Boucher , who conducted the above - mentioned
+interview with Heyman , added that the casting of the three major roles `` is especially impressive in hindsight .
+</item 3>
+
+<item 4>
+Robbie Coltrane
+Robbie Coltrane - wikipedia Robbie Coltrane Jump to : navigation , search Robbie Coltrane OBE Coltrane in April 2007 Anthony Robert McMillan ( 1950 - 03 - 30 )
+30 March 1950 ( age 67 ) Rutherglen , South Lanarkshire , Scotland Nationality British Alma mater University of Edinburgh Occupation Actor , Author Years active
+1979 -- present Height 6 ft 1 in ( 185 cm ) Spouse ( s ) Rhona Gemmell ( m . 1999 -- 2003 ) Children Robbie Coltrane , OBE ( born Anthony Robert McMillan ; 30
+March 1950 ) is a Scottish actor and author . He is known for his roles as Rubeus Hagrid in the Harry Potter films , as Valentin Dmitrovich Zukovsky in the
+James Bond films GoldenEye and The World Is Not Enough , and as Dr. Eddie `` Fitz '' Fitzgerald in the British TV series Cracker during the 1990s .
+</item 4>
+
+<item 5>
+Harry Potter (film series)
+Warner Bros. had initially planned to release the first film over the 4 July 2001 weekend , making for such a short production window that several of the
+originally proposed directors had withdrawn themselves from contention . Eventually , due to time constraints , the date was put back to 16 November 2001 .
+Casting the roles of Harry , Ron , and Hermione Daniel Radcliffe , Emma Watson , and Rupert Grint at the world premiere of Harry Potter and the Deathly Hallows
+-- Part 2 in Trafalgar Square , London on 7 July 2011 . In 2000 , after a seven - month search , lead actor Daniel Radcliffe was discovered by producer David
+Heyman and writer Steve Kloves seated just behind them in a theatre . In Heyman 's own words , `` There sitting behind me was this boy with these big blue eyes
+. It was Dan Radcliffe . I remember my first impressions : He was curious and funny and so energetic . There was real generosity too , and sweetness . But at
+the same time he was really voracious and with hunger for knowledge of whatever kind . ''
+</item 5>
+
+<item 6>
+Robbie Coltrane
+Bill Lintz 1998 Frogs for Snakes Al 1998 Montana The Boss 1999 World Is Not Enough , The The World Is Not Enough Valentin Dmitrovich Zukovsky 1999 Message in a
+Bottle Charlie Toschi 2001 Harry Potter and the Philosopher 's Stone Rubeus Hagrid Nominated -- BAFTA Award for Best Actor in a Supporting Role Nominated --
+Saturn Award for Best Supporting Actor 2001 On the Nose Delaney 2001 From Hell Sergeant Peter Godley 2002 Harry Potter and the Chamber of Secrets Rubeus Hagrid
+Nominated -- Phoenix Film Critics Society Award for Best Ensemble Acting Ocean 's Twelve Matsui Harry Potter and the Prisoner of Azkaban Rubeus Hagrid Van
+Helsing : The London Assignment Mr. Hyde voice Van Helsing Mr.
+</item 6>
+
+<item 7>
+Harry Potter (film series)
+My favourite character is Hermione . ' And I think for some weird reason , from that moment on , she sort of trusted me . '' Cast and crew See also : List of
+Harry Potter cast members Aside from the three lead actors , other notable cast members include Robbie Coltrane as Rubeus Hagrid , Tom Felton as Draco Malfoy ,
+Alan Rickman as Severus Snape , and Dame Maggie Smith as Minerva McGonagall . Richard Harris , who played the role of Professor Albus Dumbledore , died on 25
+October 2002 causing the role to be re-cast for the third instalment , Harry Potter and the Prisoner of Azkaban . David Heyman and director Alfonso Cuarón chose
+Michael Gambon to portray the character of Dumbledore , which he did for all succeeding films .
+</item 7>
+
+<item 8>
+Robbie Coltrane
+Hyde voice Van Helsing Mr. Hyde voice 2005 Harry Potter and the Goblet of Fire Rubeus Hagrid 2006 Stormbreaker The Prime Minister of Europe 2006 Provoked Lord
+Edward Foster 2007 Harry Potter and the Order of the Phoenix Rubeus Hagrid 2008 Tale of Despereaux , The The Tale of Despereaux Gregory voice 2008 Brothers
+Bloom , The The Brothers Bloom The Curator 2009 Harry Potter and the Half - Blood Prince Rubeus Hagrid 2009 Gooby Gooby voice Harry Potter and the Deathly
+Hallows -- Part 1 Rubeus Hagrid 2011 Harry Potter and the Deathly Hallows -- Part 2 Rubeus Hagrid 2012 Brave Lord Dingwall voice Great Expectations Mr.
+</item 8>
+
+<item 9>
+Robbie Coltrane
+Retrieved 15 August 2011 . ( Accio Quote ! , the Largest Archive of J.K. Rowling quotes on the web ) Jump up ^ Ezard , John ( 5 June 2002 ) . `` Size means
+everything as Harry 's big secret slips out '' . The Guardian . Retrieved 1 October 2016 . Jump up ^ Femia , Will ( 13 November 2001 ) . `` Chat Flashback : The
+cinematic debut of Rubeus Hagrid '' . MSNBC . NBC News . Retrieved 1 October 2016 . In real life , I 'm 6'1 '' -- each way pretty well , north and south and
+east and west , unfortunately Jump up ^ The Robbie Coltrane Special at the Internet Movie Database Jump up ^ `` The Gruffalo 's Child '' . BBC One . Retrieved
+10 December 2011 . External links ( edit ) Wikimedia Commons has media related to Robbie Coltrane .
+</item 9>
+
+<item 10>
+Harry Potter (film series)
+Rowling Starring Daniel Radcliffe Rupert Grint Emma Watson ( See below ) Music by John Williams ( 1 -- 3 ) Patrick Doyle ( 4 ) Nicholas Hooper ( 5 -- 6 )
+Alexandre Desplat ( 7 -- 8 ) Cinematography John Seale ( 1 ) Roger Pratt ( 2 , 4 ) Michael Seresin ( 3 ) Sławomir Idziak ( 5 ) Bruno Delbonnel ( 6 ) Eduardo
+Serra ( 7 -- 8 ) Edited by Richard Francis - Bruce ( 1 ) Peter Honess ( 2 ) Steven Weisberg ( 3 ) Mick Audsley ( 4 ) Mark Day ( 5 -- 8 ) Production company
+Heyday Films 1492 Pictures ( 1 -- 3 ) Distributed by Warner Bros. Pictures Release date 2001 -- 2011 Running time 1179 minutes Country United Kingdom United
+States Language English Budget Total ( 8 films ) $1.2 billion Box office Total ( 8 films ) $7.7 billion Harry Potter is a British - American film series based
+on the Harry Potter novels by author J.K. Rowling .
+</item 10>
+=== END ITEM id=e950be5c4871aab8 ===
+
+=== ITEM id=44c05c0d225494e2 ===
+Gold sentences and facts:
+Sentence 0: The following season , a cancerous desmoid tumor was found in Dravecky 's pitching arm . On October 7 , 1988 , he underwent surgery , which removed half of the deltoid muscle in his pitching arm and froze the humerus bone in an effort to eliminate all of the cancerous cells . Doctors advised Dravecky to wait until 1990 to pitch again , but Dravecky was determined to pitch in 1989 . By July 1989 , he was pitching in the minors , and on August 10 , he made a highly publicized return to the major leagues , pitching eight innings and defeating Cincinnati 4 -- 3 . In his following start , five days later in Montreal , Dravecky pitched three no - hit innings , but in the fifth inning , he felt a tingling sensation in his arm . In the sixth inning , he started off shaky , allowing a home run to the leadoff batter and then hitting the second batter , Andrés Galarraga . Then , on his first pitch to Tim Raines , his humerus bone snapped ; the sound of it breaking could be heard throughout the stadium . Dravecky collapsed on the mound . He 'd suffered a clean break midway between his shoulder and elbow , ending his season .
+  Fact 0.0: The following season, a cancerous desmoid tumor was found in Dravecky's pitching arm.
+  Fact 0.1: On October 7, 1988, Dravecky underwent surgery.
+  Fact 0.2: The surgery removed half of the deltoid muscle in Dravecky's pitching arm.
+  Fact 0.3: The surgery froze the humerus bone in Dravecky's pitching arm in an effort to eliminate all of the cancerous cells.
+  Fact 0.4: Doctors advised Dravecky to wait until 1990 to pitch again.
+  Fact 0.5: Dravecky was determined to pitch in 1989.
+  Fact 0.6: By July 1989, Dravecky was pitching in the minors.
+  Fact 0.7: On August 10, Dravecky made a highly publicized return to the major leagues.
+  Fact 0.8: In that return, Dravecky pitched eight innings and defeated Cincinnati 4-3.
+  Fact 0.9: In his following start, five days later in Montreal, Dravecky pitched three no-hit innings.
+  Fact 0.10: In the fifth inning of that start, Dravecky felt a tingling sensation in his arm.
+  Fact 0.11: In the sixth inning, Dravecky started off shaky.
+  Fact 0.12: In the sixth inning, Dravecky allowed a home run to the leadoff batter.
+  Fact 0.13: In the sixth inning, Dravecky hit the second batter, Andrés Galarraga.
+  Fact 0.14: On his first pitch to Tim Raines, Dravecky's humerus bone snapped.
+  Fact 0.15: The sound of the bone breaking could be heard throughout the stadium.
+  Fact 0.16: Dravecky collapsed on the mound.
+  Fact 0.17: Dravecky suffered a clean break midway between his shoulder and elbow.
+  Fact 0.18: The broken bone ended Dravecky's season.
+
+Retrieved items:
+<item 1>
+Houston Astros
+McMullen showed the city of Houston that he too wanted a winning team , signing nearby Alvin , Texas native Nolan Ryan to the first million - dollar - a-year
+deal . Ryan had four career no - hitters already and had struck out 383 in one season . 1980 : on the brink ( edit ) Joe Morgan returned in 1980 . Now back in
+Houston with two MVP awards and two World Series rings , Morgan wanted to help make the Astros a pennant winner . The 1980 pitching staff was one of the best
+Houston ever had , with the fastball of Ryan , the knuckleball of Joe Niekro and the terrifying 6 ft 8 in frame of J.R. Richard . Teams felt lucky to face Ken
+Forsch , who was a double - digit winner in the previous two seasons . Richard became the first Astros pitcher to start an All - Star game . After a medical
+examination three days later , Richard was told to rest his arm and he collapsed during a July 30 workout . He had suffered a stroke after a blood clot in the
+arm apparently moved to his neck and cut off blood flow to the brain .
+</item 1>
+
+<item 2>
+Houston Astros
+Surgery was done to save his life , but the Astros had lost their ace pitcher after a 10 -- 4 start with a stingy 1.89 ERA . Richard attempted a comeback , but
+would never again pitch a big league game . After the loss of Richard and some offensive struggles , the Astros slipped to third place in the division behind
+the Dodgers and the Reds . They bounced back to first with a ten - game winning streak , but the Dodgers had regained a two - game lead when they arrived in
+Houston on September 9 . The Astros won the first two games of that series and the two teams were tied for the division lead . The Astros held a three - game
+lead over the Dodgers with three games left in the season against the Dodgers . The Dodgers swept the series games , forcing a one - game playoff the next day .
+The Astros would however win the one - game playoff 7 - 1 , and advance to their first post-season . The team would face the Philadelphia Phillies in the 1980
+National League Championship Series . The Phillies sent out Steve Carlton in game one of the NLCS after a six - hour flight the night before .
+</item 2>
+
+<item 3>
+2005 World Series
+In the White Sox half of the fourth , Joe Crede hit what turned out to be the game - winning home run . In the bottom of the eighth , Scott Podsednik hit a
+triple with Pierzynski on second off of Russ Springer for an insurance run . Roger Clemens recorded his shortest World Series start , leaving after the second
+inning with 53 pitches , including 35 for strikes , due to a sore hamstring that he had previously injured ( which had caused him to also miss his last regular
+season start ) as the loss went to Wandy Rodríguez . José Contreras pitched seven innings , allowing three runs on six hits for the win . Before exiting ,
+Contreras allowed a leadoff double by Willie Taveras with no outs . Neal Cotts entered the game in the top of the eighth inning . It marked the first time in
+five games that the White Sox had gone to their bullpen . Cotts pitched ​ ⁄ innings before Bobby Jenks was called upon by manager Ozzie Guillén to relieve him .
+Guillen signaled for the large pitcher by holding his arms out wide and then up high .
+</item 3>
+
+<item 4>
+Dave Dravecky
+Crisis and comeback ( edit ) The following season , a cancerous desmoid tumor was found in Dravecky 's pitching arm . On October 7 , 1988 , he underwent surgery
+, which removed half of the deltoid muscle in his pitching arm and froze the humerus bone in an effort to eliminate all of the cancerous cells . Doctors advised
+Dravecky to wait until 1990 to pitch again , but Dravecky was determined to pitch in 1989 . By July 1989 , he was pitching in the minors , and on August 10 , he
+made a highly publicized return to the major leagues , pitching eight innings and defeating Cincinnati 4 -- 3 . In his following start , five days later in
+Montreal , Dravecky pitched three no - hit innings , but in the fifth inning , he felt a tingling sensation in his arm . In the sixth inning , he started off
+shaky , allowing a home run to the leadoff batter and then hitting the second batter , Andrés Galarraga .
+</item 4>
+
+<item 5>
+2005 World Series
+Guillen signaled for the large pitcher by holding his arms out wide and then up high . In the postgame conference , the Sox manager joked that he wanted to be
+clear he was asking for `` The Big Boy . '' Jenks returned in the ninth to earn the save , giving the White Sox a 1 -- 0 lead in the series . Game 2 ( edit )
+Sunday , October 23 , 2005 7 : 16 pm ( CDT ) at U.S.
+</item 5>
+
+<item 6>
+Dave Dravecky
+Fred Anderson Johnny Antonelli Jesse Barnes Virgil Barnes Jim Barr Larry Benton Vida Blue Tom Bradley Madison Bumgarner John Burkett Matt Cain Mark Davis Phil
+Douglas Dave Dravecky Shawn Estes Freddie Fitzsimmons Mark Gardner Rubén Gómez Harry Gumbert Atlee Hammaker Liván Hernández Al Holland Carl Hubbell Larry Jansen
+Bob Knepper Mike Krukow Mark Leiter Tim Lincecum Bill Lohrman Sal Maglie Juan Marichal Rube Marquard Christy Mathewson Joe McGinnity Hugh McQuillan Cliff Melton
+John Montefusco Terry Mulholland Art Nehf Gaylord Perry Rick Reuschel Kirk Rueter Rosy Ryan Jack Sanford Jason Schmidt Hal Schumacher Bill Swift Dummy Taylor
+Jeff Tesreau Bill Voiselle Bill Walker Barry Zito VIAF : 77929919 LCCN : n89666209 Retrieved from `` https://en.wikipedia.org/w/index.
+</item 6>
+
+<item 7>
+Dave Dravecky
+Both retrieved from Google News May 23 , 2013 . Jump up ^ Dravecky , Dave ( 2004 ) . Called Up : Stories of Life and Faith from the Great Game of Baseball .
+Zondervan . p. 162 . ISBN 031087159X . Jump up ^ Thomas , Robert ( August 9 , 1989 ) . `` Dravecky is Back on Center Stage '' . New York Times . Retrieved June
+24 , 2010 . ^ Jump up to : Thomas , Robert ( August 17 , 1989 ) . `` Dravecky Was Told He Risked Fracture '' . New York Times . Retrieved June 24 , 2010 . Jump
+up ^ Associated Press ( June 19 , 1991 ) . `` SPORTS PEOPLE : BASEBALL ; Dravecky 's Left Arm Amputated , Giants Say '' . New York Times . Retrieved June 24 ,
+2010 . Jump up ^ Associated Press ( October 10 , 1989 ) . `` Dravecky Hurt Again '' .
+</item 7>
+
+<item 8>
+Dave Dravecky
+1980 : Brett 1981 : Bench 1982 : Thornton 1983 : Knight 1984 : Robinson 1985 : Reuschel 1986 : Leonard 1987 : Molitor 1988 : Oester 1989 : Dravecky 1990 : Bream
+1991 : Wegman 1992 : Lansford 1993 : Olerud 1994 : Dawson 1995 : Abbott 1996 : Vizquel 1997 : Davis 1998 : Cone 1999 : Casey 2000 : Giambi 2001 : Schilling 2002
+: Salmon 2003 : Moyer 2004 : Hoffman 2005 : Biggio 2006 : Loretta 2007 : Sweeney 2008 : Lester 2009 : Teahen 2010 : Hudson 2011 : Butler 2012 : Zito 2013 :
+Ibañez 2014 : Gordon 2015 : Wainwright 2016 : McGowan New York / San Francisco Giants Opening Day starting pitchers Red Ames Fred Anderson Johnny Antonelli
+Jesse Barnes Virgil Barnes Jim Barr Larry Benton Vida Blue Tom Bradley Madison
+</item 8>
+
+<item 9>
+Dave Dravecky
+Then , on his first pitch to Tim Raines , his humerus bone snapped ; the sound of it breaking could be heard throughout the stadium . Dravecky collapsed on the
+mound . He 'd suffered a clean break midway between his shoulder and elbow , ending his season . The Giants won the National League pennant in 1989 ( defeating
+the Chicago Cubs in the NLCS in five games ) , and in the post-game celebration , Dravecky 's arm was broken a second time when he was running out to the mound
+to celebrate . A doctor examining Dravecky 's x-rays noticed a mass in his arm , which turned out to be malignant . Dravecky 's cancer had returned , ending his
+career . Eighteen days later , Dravecky retired from baseball with a 64 -- 57 record with 558 strikeouts and a 3.13 ERA in 1,062 2⁄3 innings . He won the 1989
+Willie Mac Award honoring his spirit and leadership .
+</item 9>
+
+<item 10>
+2017 World Series
+Game 1 : The ceremonial first pitch was thrown out by members of former Dodger Jackie Robinson 's family , including his widow Rachel . The game marked the 45th
+anniversary of Robinson 's death , and the 2017 season was the 70th anniversary of his breaking of the baseball color line . Keith Williams Jr. , a gospel
+singer , performed `` The Star - Spangled Banner '' , the national anthem . Game 2 : Fernando Valenzuela threw out the ceremonial first pitch to Steve Yeager ;
+both were introduced by retired Dodgers broadcaster Vin Scully . Country music 's Brad Paisley performed the national anthem . Game 3 : Houston Texans defensive
+end J.J. Watt , who had raised $37 million for Hurricane Harvey victims , threw out the first pitch . The ball was given to him by Astros ' Hall of Famer Craig
+Biggio . The national anthem was performed by Texas Air National Guard Master Sergeant Promise Harris . Game 4 : Hailey Dawson , a seven - year - old girl from
+Nevada , threw out the ceremonial first pitch using a 3D printed hand . The national anthem was performed by the Houston Police Department Quartet .
+</item 10>
+=== END ITEM id=44c05c0d225494e2 ===
+
+=== ITEM id=8e7ca98b921985e8 ===
+Gold sentences and facts:
+Sentence 0: The Rolling Stones The Rolling Stones performing at Summerfest in Milwaukee in 2015 . Left to right : Charlie Watts , Ronnie Wood , Mick Jagger and Keith Richards Background information Origin London , England Genres Rock blues Years active 1962 -- present Labels Decca London Rolling Stones Virgin ABKCO Interscope Polydor Associated acts The New Barbarians Billy Preston Faces The Pretty Things John Mayall & the Bluesbreakers Bill Wyman 's Rhythm Kings Website rollingstones.com Members Mick Jagger Keith Richards Charlie Watts Ronnie Wood Past members Brian Jones Ian Stewart Dick Taylor Bill Wyman Mick Taylor
+  Fact 0.0: The Rolling Stones performed at Summerfest in Milwaukee in 2015.
+  Fact 0.1: The photo shows, from left to right, Charlie Watts, Ronnie Wood, Mick Jagger and Keith Richards.
+  Fact 0.2: The Rolling Stones have origin London, England.
+  Fact 0.3: The Rolling Stones' genres are rock and blues.
+  Fact 0.4: The Rolling Stones have been active from 1962 to the present.
+  Fact 0.5: The Rolling Stones' labels include Decca, London, Rolling Stones, Virgin, ABKCO, Interscope, and Polydor.
+  Fact 0.6: The Rolling Stones' associated acts include The New Barbarians, Billy Preston, Faces, The Pretty Things, John Mayall & the Bluesbreakers, and Bill Wyman's Rhythm Kings.
+  Fact 0.7: The Rolling Stones' website is rollingstones.com.
+  Fact 0.8: The current members of the Rolling Stones are Mick Jagger, Keith Richards, Charlie Watts, and Ronnie Wood.
+  Fact 0.9: The past members of the Rolling Stones include Brian Jones, Ian Stewart, Dick Taylor, Bill Wyman, and Mick Taylor.
+Sentence 1: Mick Jagger -- vocals , harmonica , rhythm guitar , percussion , keyboards ( 1962 -- present ) Keith Richards -- rhythm and lead guitar , bass guitar , vocals ( 1962 -- present ) Charlie Watts -- drums , percussion ( 1963 -- present ) Ronnie Wood -- lead and rhythm guitar , bass guitar , backing vocals ( 1975 -- present )
+  Fact 1.0: Mick Jagger plays vocals, harmonica, rhythm guitar, percussion, and keyboards, and has been active from 1962 to the present.
+  Fact 1.1: Keith Richards plays rhythm and lead guitar, bass guitar, and vocals, and has been active from 1962 to the present.
+  Fact 1.2: Charlie Watts plays drums and percussion, and has been active from 1963 to the present.
+  Fact 1.3: Ronnie Wood plays lead and rhythm guitar, bass guitar, and backing vocals, and has been active from 1975 to the present.
+Sentence 2: The Rolling Stones are an English rock band formed in London , England in 1962 . The first stable line - up consisted of Brian Jones ( guitar , harmonica ) , Mick Jagger ( lead vocals ) , Keith Richards ( guitar , backing vocals ) , Bill Wyman ( bass ) , Charlie Watts ( drums ) , and Ian Stewart ( piano ) . Stewart was removed from the official line - up in 1963 but continued as a touring member until his death in 1985 . Jones left the band less than a month before his death in 1969 , having already been replaced by Mick Taylor , who remained until 1974 . After Taylor left the band , Ronnie Wood took his place in 1975 and has been on guitar in tandem with Richards ever since . Following Wyman 's departure in 1993 , Darryl Jones joined as their touring bassist . Touring keyboardists for the band have been Nicky Hopkins ( 1967 -- 1982 ) , Ian McLagan ( 1978 -- 1981 ) , Billy Preston ( through the mid-1970s ) and Chuck Leavell ( 1982 -- present ) . The band was first led by Brian Jones , but after developing into the band 's songwriters , Jagger and Richards assumed leadership when Jones was dealing with personal troubles and legal issues .
+  Fact 2.0: The Rolling Stones are an English rock band.
+  Fact 2.1: The Rolling Stones were formed in London, England in 1962.
+  Fact 2.2: The first stable line-up of the Rolling Stones consisted of Brian Jones, Mick Jagger, Keith Richards, Bill Wyman, Charlie Watts, and Ian Stewart.
+  Fact 2.3: Brian Jones played guitar and harmonica in the first stable line-up.
+  Fact 2.4: Mick Jagger was the lead vocalist in the first stable line-up.
+  Fact 2.5: Keith Richards played guitar and backing vocals in the first stable line-up.
+  Fact 2.6: Bill Wyman played bass in the first stable line-up.
+  Fact 2.7: Charlie Watts played drums in the first stable line-up.
+  Fact 2.8: Ian Stewart played piano in the first stable line-up.
+  Fact 2.9: Ian Stewart was removed from the official line-up in 1963.
+  Fact 2.10: Ian Stewart continued as a touring member of the Rolling Stones until his death in 1985.
+  Fact 2.11: Brian Jones left the Rolling Stones less than a month before his death in 1969.
+  Fact 2.12: Mick Taylor replaced Brian Jones in the band.
+  Fact 2.13: Mick Taylor remained in the band until 1974.
+  Fact 2.14: Ronnie Wood took Mick Taylor's place in 1975 after Taylor left the band.
+  Fact 2.15: Ronnie Wood has been on guitar in tandem with Keith Richards ever since 1975.
+  Fact 2.16: Darryl Jones joined the Rolling Stones as their touring bassist after Bill Wyman's departure in 1993.
+  Fact 2.17: Bill Wyman departed from the Rolling Stones in 1993.
+  Fact 2.18: Nicky Hopkins was a touring keyboardist for the Rolling Stones from 1967 to 1982.
+  Fact 2.19: Ian McLagan was a touring keyboardist for the Rolling Stones from 1978 to 1981.
+  Fact 2.20: Billy Preston was a touring keyboardist for the Rolling Stones through the mid-1970s.
+  Fact 2.21: Chuck Leavell has been a touring keyboardist for the Rolling Stones since 1982.
+  Fact 2.22: The band was first led by Brian Jones.
+  Fact 2.23: Jagger and Richards became the band's songwriters.
+  Fact 2.24: Jagger and Richards assumed leadership of the band when Brian Jones was dealing with personal troubles and legal issues.
+
+Retrieved items:
+<item 1>
+The Rolling Stones
+ISBN 978 - 1 - 59240 - 655 - 5 . External links ( edit ) Find more aboutThe Rolling Stonesat Wikipedia 's sister projects Media from Wikimedia Commons
+Quotations from Wikiquote Data from Wikidata Discussion from Meta - Wiki Official website The Rolling Stones at Encyclopædia Britannica The Rolling Stones at
+Curlie ( based on DMOZ ) `` The Rolling Stones '' . Rock and Roll Hall of Fame . The Rolling Stones at AllMusic The Rolling Stones discography at Discogs The
+Rolling Stones on IMDb The Rolling Stones discography at MusicBrainz The Rolling Stones The Rolling Stones Mick Jagger Keith Richards Charlie Watts Ronnie Wood
+Brian Jones Ian Stewart Mick Taylor Bill Wyman Tony Chapman Ricky Fenson Colin Golding Carlo Little Dick Taylor Video releases Let 's Spend the Night Together (
+1983 ) Stones at the Max ( 1992 ) The Rolling Stones : Voodoo Lounge Live ( 1995 ) The Rolling Stones Rock and Roll Circus ( 1996 ) Bridges to Babylon Tour ' 97
+-- 98 ( 1998 ) Four Flicks ( 2003 ) The Biggest Bang ( 2007 ) Ladies and Gentlemen : The Rolling Stones ( 2010
+</item 1>
+
+<item 2>
+The Rolling Stones
+1981 European Tour 1982 Steel Wheels / Urban Jungle Tour Voodoo Lounge Tour Bridges to Babylon Tour No Security Tour Licks Tour A Bigger Bang 50 & Counting 14
+On Fire Zip Code Tour América Latina Olé Tour 2016 Fall 2016 US Tour No Filter Tour Associated places Redlands Stargroves Nellcôte The Wick Downe House The Mick
+Jagger Centre Related Discography Songs The Rolling Stones concerts Jagger / Richards Nanker Phelge Rolling Stones Records Promotone The Stones in the Park
+Altamont Free Concert Rolling Stones Mobile Studio The Rolling Stones : An Illustrated Record The Rolling Stones Rock and Roll Circus Andrew Loog Oldham Allen
+Klein Peter Meaden John Pasche Instruments played Book Portal The Rolling Stones singles discography Decca ( UK ) and London ( US ) singles `` Come On '' `` I
+Wanna Be Your Man '' / `` Stoned '' `` Not Fade Away '' / `` Little by Little '' `` It 's All Over Now '' `` Tell Me '' / `` I Just Want to Make Love to You ''
+`` Time Is on My Side '' `` Little Red Rooster '' `` Heart of Stone '' `` The Last Time '' / `` Play with Fire '' `` ( I Ca
+</item 2>
+
+<item 3>
+The Rolling Stones
+According to Richards , Jones named the band during a phone call to Jazz News . When asked by a journalist for the band 's name , Jones saw a Muddy Waters LP
+lying on the floor ; one of the tracks was `` Rollin ' Stone '' . 1962 -- 1964 : building a following ( edit ) The back room of what was the Crawdaddy Club in
+Richmond , London where the Rolling Stones had their first residency in 1963 Jones , Jagger , Richards , Stewart and Taylor played a gig billed as `` the Rollin
+' Stones '' on 12 July 1962 , at the Marquee Club in London . Shortly afterwards the band went on their first tour of the UK , which they called a `` training
+ground '' tour , because it was a new experience for all of them . Their material included the Chicago blues as well as Chuck Berry and Bo Diddley songs . At
+that time , the line - up included neither bassist Bill Wyman , who joined in December 1962 , nor drummer Charlie Watts , who joined in January 1963 , thus
+completing the band 's original rhythm section .
+</item 3>
+
+<item 4>
+The Rolling Stones
+The Rolling Stones - wikipedia The Rolling Stones Jump to : navigation , search `` Rolling Stones '' redirects here . For other uses , see Rolling Stones (
+disambiguation ) . For the magazine , see Rolling Stone . The Rolling Stones The Rolling Stones performing at Summerfest in Milwaukee in 2015 . Left to right :
+Charlie Watts , Ronnie Wood , Mick Jagger and Keith Richards Background information Origin London , England Genres Rock blues Years active 1962 -- present
+Labels Decca London Rolling Stones Virgin ABKCO Interscope Polydor Associated acts The New Barbarians Billy Preston Faces The Pretty Things John Mayall & the
+Bluesbreakers Bill Wyman 's Rhythm Kings Website rollingstones.com Members Mick Jagger Keith Richards Charlie Watts Ronnie Wood Past members Brian Jones Ian
+Stewart Dick Taylor Bill Wyman Mick Taylor The Rolling Stones are an English rock band formed in London , England in 1962 . The first stable line - up consisted
+of Brian Jones ( guitar , harmonica ) , Mick Jagger ( lead vocals ) , Keith Richards ( guitar , backing vocals ) , Bill Wyman ( bass ) , Charlie Watts ( drums )
+, and Ian Stewart ( piano ) .
+</item 4>
+
+<item 5>
+The Rolling Stones
+Mick Jagger : Primitive Cool . New York : Cooper Square Press . ISBN 978 - 0 - 8154 - 1002 - 7 . Sandford , Christopher ( 2003 ) . Keith Richards : Satisfaction
+. New York : Caroll & Graf . ISBN 978 - 0 - 7867 - 1368 - 4 . Schinder , Scott ; Schwartz , Andy ( 2010 ) . Icons of Rock : An Encyclopedia of the Legends Who
+Changed Music Forever . ABC - CLIO . p. 230 . Szatmary , David P. ( 2014 ) . Rockin ' in Time ( 8th ed . ) . Pearson . Wells , Simon ( 2012 ) . The Great
+Rolling Stones Drug Bust . Omnibus Press . ISBN 978 - 0 - 857 - 12711 - 2 . Wyman , Bill ( 1990 ) . Bill Wyman , Stone Alone : The Story of a Rock ' n ' Roll
+Band . New York : Viking .
+</item 5>
+
+<item 6>
+The Rolling Stones
+bass guitar , vocals ( 1962 -- present ) Charlie Watts -- drums , percussion ( 1963 -- present ) Ronnie Wood -- lead and rhythm guitar , bass guitar , backing
+vocals ( 1975 -- present ) Former members Brian Jones -- rhythm guitar , harmonica , keyboards , piano , backing vocals ( 1962 -- 1969 ; died 1969 ) Ian Stewart
+-- keyboards , piano ( 1962 -- 1963 ; touring 1969 , 1975 -- 1976 , 1978 , 1981 -- 1982 ; died 1985 ) Mick Taylor -- lead guitar , bass guitar , backing vocals
+( 1969 -- 1974 ; guest 1981 , 2012 -- 2014 ) Bill Wyman -- bass guitar , keyboards , piano , backing vocals ( 1962 -- 1993 ;
+</item 6>
+
+<item 7>
+The Rolling Stones
+The group sent a tape of their best recordings to Korner , who was favourably impressed . On 7 April , Korner visited Ealing Jazz Club , where they met the
+members of Blues Incorporated , who included the slide guitarist Brian Jones , the keyboardist Ian Stewart and the drummer Charlie Watts . After a meeting with
+Korner , Jagger and Richards started jamming with the group . Jones , no longer in a band , advertised for bandmates in Jazz Weekly , while Stewart found them a
+practice space ; together they decided to start a band playing Chicago blues . Soon after , Jagger , Taylor and Richards left Blues Incorporated to join Jones
+and Stewart . At the first rehearsal were also the guitarist Geoff Bradford and the vocalist Brian Knight , both of whom decided not to join the band , citing
+objections to playing the Chuck Berry and Bo Diddley songs preferred by Jagger and Richards . In June 1962 the line - up of Jagger , Richards , Jones , Stewart
+and Taylor was completed with the addition of the drummer Tony Chapman . According to Richards , Jones named the band during a phone call to Jazz News .
+</item 7>
+
+<item 8>
+The Rolling Stones
+: A Trip Across Latin America ( 2016 ) From The Vault - Sticky Fingers : Live At The Fonda Theatre 2015 ( 2017 ) Rock and Roll Hall of Fame Class of 1989
+Performers Dion Otis Redding The Rolling Stones ( Mick Jagger , Brian Jones , Keith Richards , Ian Stewart , Mick Taylor , Charlie Watts , Ronnie Wood , Bill
+Wyman ) The Temptations ( Dennis Edwards , Melvin Franklin , Eddie Kendricks , David Ruffin , Otis Williams , Paul Williams ) Stevie Wonder Early influences The
+Ink Spots Bessie Smith The Soul Stirrers Non-performers ( Ahmet Ertegun Award ) Phil Spector Mick Jagger Albums She 's the Boss Primitive Cool Wandering Spirit
+Goddess in the Doorway Alfie The Very Best of Mick Jagger Songs `` Memo from Turner '' `` State of Shock '' `` Just Another Night '' `` Lucky in Love '' ``
+Dancing in the Street '' `` Let 's Work '' `` Sweet Thing '' `` God Gave Me Everything '' `` Visions of Paradise '' `` Joy '' `` Old Habits Die Hard '' ``
+England Lost '' `` Gotta Get a Grip '' Featured singles `` T.H.E.
+</item 8>
+
+<item 9>
+The Rolling Stones
+( The Hardest Ever ) '' See also The Rolling Stones Jagger / Richards SuperHeavy Performance ( soundtrack ) Being Mick The Mick Jagger Centre Chris Jagger ``
+Moves like Jagger '' Vinyl Species named for Jagger Aegrotocatellus jaggeri -- trilobite Anomphalus jaggerius -- snail Jaggermeryx naida -- anthracotheriidae
+Keith Richards Albums Talk Is Cheap Live at the Hollywood Palladium , December 15 , 1988 Main Offender Vintage Vinos Crosseyed Heart Songs `` Take It So Hard ''
+`` Trouble '' Bands The Rolling Stones The Dirty Mac The New Barbarians Related articles Jagger / Richards Life Anita Pallenberg Patti Hansen ( wife ) Theodora
+Richards ( daughter ) Alexandra Richards ( daughter ) Hail ! Hail !
+</item 9>
+
+<item 10>
+The Rolling Stones
+Musical development ( edit ) See also : Instruments played by the Rolling Stones A copy of `` Micawber '' , Keith Richards ' signature Telecaster model , in the
+Fender Guitar Factory Museum The Rolling Stones have assimilated various musical genres into their own collective sound . Throughout the band 's career , their
+musical contributions have been marked by a continual reference and reliance on musical styles including blues , psychedelia , R&B , country , folk , reggae ,
+dance , and world music , exemplified by Jones ' collaboration with the Master Musicians of Jajouka , as well as traditional English styles that use stringed
+instrumentation like harps . Brian Jones experimented with the use of non-traditional instruments such as the sitar and slide guitar in their early days . The
+group started out covering early rock ' n ' roll and blues songs , and have never stopped playing live or recording cover songs . Jagger and Richards shared an
+admiration of Jimmy Reed , Muddy Waters , Howlin ' Wolf , and Little Walter , which influenced Brian Jones , of whom Richards says , `` He was more into T -
+Bone Walker and jazz blues stuff .
+</item 10>
+=== END ITEM id=8e7ca98b921985e8 ===

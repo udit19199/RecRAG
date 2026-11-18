@@ -1,0 +1,2468 @@
+[
+ {
+  "id": "5eba6f223606cde7",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Transcription occurs in the cell nucleus , where the DNA is held ."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Transcription occurs in the cell nucleus , where the DNA is held ."
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "The DNA structure of the cell is made up of two helixes"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "two helixes made up of sugar and phosphate"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "held together by hydrogen bonds between the bases of opposite strands"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "The sugar and the phosphate in each strand are joined together by stronger phosphodiester covalent bonds"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "held together by hydrogen bonds between the bases of opposite strands . The sugar and the phosphate in each strand are joined together by stronger phosphodiester covalent bonds"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "The DNA is `` unzipped '' ( disruption of hydrogen bonds between different single strands ) by the enzyme helicase"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "`` unzipped '' ( disruption of hydrogen bonds between different single strands )"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "by the enzyme helicase , leaving the single nucleotide chain open to be copied"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "RNA polymerase reads the DNA strand from the 3 - prime ( 3 ' ) end to the 5 - prime ( 5 ' ) end"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "RNA polymerase reads the DNA strand from the 3 - prime ( 3 ' ) end to the 5 - prime ( 5 ' ) end , while it synthesizes a single strand of messenger RNA"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "while it synthesizes a single strand of messenger RNA in the 5 ' - to - 3 ' direction"
+     }
+    ]
+   },
+   {
+    "fact": "0.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "The general RNA structure is very similar to the DNA structure"
+     }
+    ]
+   },
+   {
+    "fact": "0.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "but in RNA the nucleotide uracil takes the place that thymine occupies in DNA"
+     }
+    ]
+   },
+   {
+    "fact": "0.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "The single strand of mRNA leaves the nucleus through nuclear pores"
+     }
+    ]
+   },
+   {
+    "fact": "0.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "The single strand of mRNA leaves the nucleus through nuclear pores , and migrates into the cytoplasm"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "93185214091729a4",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.5",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.6",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.7",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.8",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.9",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.10",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.11",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.12",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.13",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.14",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.15",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.16",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.17",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.18",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.19",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.20",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.21",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Catch Me If You Can is a 2002 American biographical crime film directed and co-produced by Steven Spielberg from a screenplay by Jeff Nathanson"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Catch Me If You Can is a 2002 American biographical crime film directed and co-produced by Steven Spielberg from a screenplay by Jeff Nathanson"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Catch Me If You Can is a 2002 American biographical crime film directed and co-produced by Steven Spielberg from a screenplay by Jeff Nathanson"
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Catch Me If You Can is a 2002 American biographical crime film directed and co-produced by Steven Spielberg from a screenplay by Jeff Nathanson"
+     }
+    ]
+   },
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The film is based on the life of Frank Abagnale"
+     }
+    ]
+   },
+   {
+    "fact": "1.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "who , before his 19th birthday , successfully performed cons worth millions of dollars"
+     }
+    ]
+   },
+   {
+    "fact": "1.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "by posing as a Pan American World Airways pilot"
+     }
+    ]
+   },
+   {
+    "fact": "1.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "by posing as a Pan American World Airways pilot , a Georgia doctor and a Louisiana parish prosecutor"
+     }
+    ]
+   },
+   {
+    "fact": "1.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "by posing as a Pan American World Airways pilot , a Georgia doctor and a Louisiana parish prosecutor"
+     }
+    ]
+   },
+   {
+    "fact": "1.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "His primary crime was check fraud"
+     }
+    ]
+   },
+   {
+    "fact": "1.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "he became so experienced that the FBI eventually turned to him for help in catching other checking forgers"
+     }
+    ]
+   },
+   {
+    "fact": "1.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "he became so experienced that the FBI eventually turned to him for help in catching other checking forgers"
+     }
+    ]
+   },
+   {
+    "fact": "1.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The film stars Leonardo DiCaprio and Tom Hanks"
+     }
+    ]
+   },
+   {
+    "fact": "1.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The film stars Leonardo DiCaprio and Tom Hanks"
+     }
+    ]
+   },
+   {
+    "fact": "1.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "with Christopher Walken , Martin Sheen , and Nathalie Baye in supporting roles"
+     }
+    ]
+   },
+   {
+    "fact": "2.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Development for the film started in 1980 , but did not progress until 1997"
+     }
+    ]
+   },
+   {
+    "fact": "2.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Development for the film started in 1980 , but did not progress until 1997"
+     }
+    ]
+   },
+   {
+    "fact": "2.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "did not progress until 1997 , when the film rights to Abagnale 's book were sold to Spielberg 's DreamWorks"
+     }
+    ]
+   },
+   {
+    "fact": "2.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "David Fincher , Gore Verbinski , Lasse Hallström , Miloš Forman , and Cameron Crowe had all been possible candidates for director before Spielberg decided to direct"
+     }
+    ]
+   },
+   {
+    "fact": "2.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "David Fincher , Gore Verbinski , Lasse Hallström , Miloš Forman , and Cameron Crowe had all been possible candidates for director before Spielberg decided to direct"
+     }
+    ]
+   },
+   {
+    "fact": "2.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "David Fincher , Gore Verbinski , Lasse Hallström , Miloš Forman , and Cameron Crowe had all been possible candidates for director before Spielberg decided to direct"
+     }
+    ]
+   },
+   {
+    "fact": "2.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "David Fincher , Gore Verbinski , Lasse Hallström , Miloš Forman , and Cameron Crowe had all been possible candidates for director before Spielberg decided to direct"
+     }
+    ]
+   },
+   {
+    "fact": "2.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "David Fincher , Gore Verbinski , Lasse Hallström , Miloš Forman , and Cameron Crowe had all been possible candidates for director before Spielberg decided to direct"
+     }
+    ]
+   },
+   {
+    "fact": "2.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Filming took place from February to May 2002"
+     }
+    ]
+   },
+   {
+    "fact": "2.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "The film was a financial success , recouping the $52 million budget six times over"
+     }
+    ]
+   },
+   {
+    "fact": "2.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The film was a financial and critical success"
+     }
+    ]
+   },
+   {
+    "fact": "2.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "was received positively by both critics and Abagnale"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "11494f8a6120a450",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.5",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.6",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.7",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.8",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.9",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.10",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.11",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.12",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.13",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.14",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.15",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.16",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.17",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.18",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.19",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.20",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.21",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.22",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.23",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.24",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.25",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.26",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.27",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.28",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.29",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.30",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.31",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.32",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.33",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.34",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.35",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.36",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.37",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.38",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.39",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.40",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.41",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.42",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.43",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.44",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.45",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.46",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.47",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.48",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.49",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.50",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.51",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.52",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.53",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.54",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.55",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.56",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.57",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.58",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.59",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.60",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.61",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.62",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.63",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.64",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.65",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.66",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.67",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.68",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.69",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.70",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.71",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.72",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.73",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.74",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.75",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.76",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.77",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.78",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.79",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.80",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.81",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.82",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.83",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.84",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.85",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.86",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.87",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.88",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.89",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.90",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.91",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.92",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.93",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.94",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.95",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.96",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.97",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.98",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.99",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.100",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.101",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.102",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.103",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.104",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.105",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.106",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.107",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.108",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "The Right Honourable Benjamin Disraeli 1st Earl of Beaconsfield KG PC FRS MP for Buckinghamshire ( 1804 -- 1881 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.109",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.110",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.111",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "The Right Honourable William Ewart Gladstone FSS MP for Greenwich ( 1809 -- 1898 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.112",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "The Right Honourable William Ewart Gladstone FSS MP for Greenwich ( 1809 -- 1898 ) See also § Premierships : 2 First Lord of the Treasury Leader of the House of Commons Chancellor of the Exchequer Liberal Gladstone I 3 December 1868 17 February 1874 1868 7003190300000000000 ♠ 5 years and 77 days"
+     }
+    ]
+   },
+   {
+    "fact": "0.113",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "The Right Honourable William Ewart Gladstone FSS MP for Greenwich ( 1809 -- 1898 ) See also § Premierships : 2 First Lord of the Treasury Leader of the House of Commons Chancellor of the Exchequer Liberal Gladstone I 3 December 1868 17 February 1874 1868 7003190300000000000 ♠ 5 years and 77 days"
+     }
+    ]
+   },
+   {
+    "fact": "0.114",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "The Right Honourable Benjamin Disraeli 1st Earl of Beaconsfield KG PC FRS MP for Buckinghamshire ( 1804 -- 1881 )"
+     },
+     {
+      "item": 6,
+      "quote": "Disraeli II 20 February 1874 21 April 1880 1874 7003225300000000000 ♠ 6 years and 62 days"
+     }
+    ]
+   },
+   {
+    "fact": "0.115",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Conservative Disraeli II 20 February 1874 21 April 1880"
+     }
+    ]
+   },
+   {
+    "fact": "0.116",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.117",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.118",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.119",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.120",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.121",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.122",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.123",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.124",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.125",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.126",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.127",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.128",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.129",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.130",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.131",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.132",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.133",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.134",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.135",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.136",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.137",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.138",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.139",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.140",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.141",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.142",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.143",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.144",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.145",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.146",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.147",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.148",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.149",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.150",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.151",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.152",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.153",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.154",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.155",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.156",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.157",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.158",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.159",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.160",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.161",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.162",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.163",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.164",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.165",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.166",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.167",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.168",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.169",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.170",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.171",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.172",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.173",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.174",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.175",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.176",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.177",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.178",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.179",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.180",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.181",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.182",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.183",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.184",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.185",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.186",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.187",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.188",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.189",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.190",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.191",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.192",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.193",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.194",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.195",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.196",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.197",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.198",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.199",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.200",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.201",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.202",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.203",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.204",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.205",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.206",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.207",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.208",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.209",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.210",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.211",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.212",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.213",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.214",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.215",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.216",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.217",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.218",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.219",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "34653f4e10fbf78c",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Production of still wine per state in 2016 was as follows"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 10,
+      "quote": "Alabama 34,966 0.004 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 10,
+      "quote": "Arizona 190,008 0.024 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 10,
+      "quote": "Arkansas 246,363 0.031 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 10,
+      "quote": "California 680,272,512 84.354 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 10,
+      "quote": "Colorado 556,994 0.069 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 10,
+      "quote": "Connecticut 134,517 0.017 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 10,
+      "quote": "Florida 1,634,103 0.203 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 10,
+      "quote": "Georgia 276,144 0.034 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 10,
+      "quote": "Idaho 497,007 0.062 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 10,
+      "quote": "Illinois 391,805 0.049 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 10,
+      "quote": "Indiana 1,411,540 0.175 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 10,
+      "quote": "Iowa 335,522 0.042 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 10,
+      "quote": "Kansas 104,129 0.013 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 8,
+      "quote": "Kentucky 2,176,059 0.270 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 8,
+      "quote": "Louisiana 38,232 0.005 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 8,
+      "quote": "Maine 48,222 0.006 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 8,
+      "quote": "Maryland 436,185 0.054 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 8,
+      "quote": "Massachusetts 792,884 0.098"
+     }
+    ]
+   },
+   {
+    "fact": "0.19",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 8,
+      "quote": "Michigan 2,576,238 0.319 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.20",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 8,
+      "quote": "Minnesota 331,946 0.041 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.21",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 8,
+      "quote": "Missouri 993,831 0.123 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.22",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 8,
+      "quote": "Montana 33,445 0.004 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.23",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 8,
+      "quote": "Nebraska 120,366 0.015 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.24",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 8,
+      "quote": "New Hampshire 159,316 0.020 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.25",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 8,
+      "quote": "New Jersey 1,832,325 0.227 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.26",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 8,
+      "quote": "New Mexico 749,818 0.093 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.27",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 8,
+      "quote": "New York 27,969,308 3.468 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.28",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 8,
+      "quote": "North Carolina 1,903,060 0.236 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.29",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 8,
+      "quote": "Ohio 5,938,738 0.736 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.30",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 8,
+      "quote": "Oklahoma 70,204 0.009 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.31",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 8,
+      "quote": "Oregon 11,822,972 1.466 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.32",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 8,
+      "quote": "Pennsylvania 12,405,181 1.538 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.33",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "2016 production of still wine State Production ( gal ) Production ( % )"
+     },
+     {
+      "item": 8,
+      "quote": "South Carolina 77,842 0.010 %"
+     }
+    ]
+   },
+   {
+    "fact": "0.34",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.35",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.36",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.37",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.38",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.39",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.40",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.41",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.42",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.43",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "b004ab7a6895bec2",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Take action immediately upon hearing thunder ."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Anyone close enough to the storm to hear thunder can be struck by lightning ."
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Avoid electrical appliances , including corded telephones ."
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Cordless and wireless telephones are safe to use during a thunderstorm ."
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Close and stay away from windows and doors"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "glass can become a serious hazard in high wind"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Do not bathe or shower"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "as plumbing conducts electricity"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "If driving , safely exit the roadway , turn on hazard lights , and park"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "If driving , safely exit the roadway , turn on hazard lights , and park"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "If driving , safely exit the roadway , turn on hazard lights , and park"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Remain in the vehicle and avoid touching metal"
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Take action immediately upon hearing thunder ."
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Anyone close enough to the storm to hear thunder can be struck by lightning ."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "716896be455f24ee",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "The centerpiece of contemporary Thanksgiving in the United States and Canada is a large meal"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "generally centered on a large roasted turkey"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "It is served with a variety of side dishes"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "vary from traditional dishes such as mashed potatoes , stuffing , and cranberry sauce"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "to ones that reflect regional or cultural heritage"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "The majority of the dishes in the traditional American version of Thanksgiving dinner are made from foods native to the New World"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "according to tradition the Pilgrims received these foods , or learned how to grow them , from the Native Americans"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Thanksgiving dinner is the largest eating event in the United States"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "people eat more on Thanksgiving than on any other day of the year"
+     }
+    ]
+   }
+  ]
+ }
+]

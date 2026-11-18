@@ -1,0 +1,798 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=dba2e8e1c951ef74 ===
+Gold sentences and facts:
+Sentence 0: The book became an instant hit , and the online version received about 20 million views as of 2009 ; many online readers requested a printed version . Kinney had agreed , and in April 2007 , Diary of a Wimpy Kid was published . To date , twelve Wimpy Kid books have been released , plus one do - it - yourself book and two movie diaries . In April 2009 , TIME named Kinney one of The World 's Most Influential People .
+  Fact 0.0: The book became an instant hit.
+  Fact 0.1: The online version of the book received about 20 million views as of 2009.
+  Fact 0.2: Many online readers requested a printed version of the book.
+  Fact 0.3: Kinney agreed to a printed version of the book.
+  Fact 0.4: Diary of a Wimpy Kid was published in April 2007.
+  Fact 0.5: To date, twelve Wimpy Kid books have been released.
+  Fact 0.6: To date, one do-it-yourself Wimpy Kid book has been released.
+  Fact 0.7: To date, two Wimpy Kid movie diaries have been released.
+  Fact 0.8: In April 2009, TIME named Kinney one of The World's Most Influential People.
+Sentence 1: # Title Date ISBN Diary of a Wimpy Kid April 1 , 2007 ISBN 978 - 0 - 8109 - 9313 - 6 The introduction to the series introduces the protagonist , Greg Heffley , his best friend Rowley , his middle school problems , Halloween , and the Cheese Touch . Rodrick Rules February 1 , 2008 ISBN 978 - 0 - 8109 - 9473 - 7 Greg must stop Rodrick from revealing the secrets that had happened last summer . The Last Straw January 13 , 2009 ISBN 978 - 0 - 8109 - 7068 - 7 When Greg 's father threatens to send Greg to a military academy , Greg must find a way to prevent this from happening . Dog Days October 12 , 2009 ISBN 978 - 0 - 8109 - 8391 - 5 Summer is here , but when the family has not that much money to go to the beach ( money is tight at that time ) , it might not be the best summer ever . 5 The Ugly Truth November 9 , 2010 ISBN 978 - 0 - 8109 - 8491 - 2 Greg is growing up , and he will have to face the challenges of this period ( like changing dentists , and a school lock - in ) . 6 Cabin Fever November 15 , 2011 ISBN 978 - 1 - 4197 - 0223 - 5 The family is stranded in the house as snow begins to fall . 7 The Third Wheel November 13 , 2012 ISBN 978 - 1 - 4197 - 0584 - 7 The Valentine 's Day dance is coming up , and Greg has no one go with . But when Michael Sampson ( Abigail 's date ) will not be going , things turn around . 8 Hard Luck November 5 , 2013 ISBN 978 - 1 - 4197 - 1132 - 9 Greg 's friend count is dropping as Rowley now has a girlfriend , named Abigail ( continuing the last book ) . 9 The Long Haul November 4 , 2014 ISBN 978 - 1 - 4197 - 1189 - 3 This is the family 's second summer trip , but instead , it 's a road trip . But with the Heffleys , you know what to expect from this disaster . 10 Old School November 3 , 2015 ISBN 978 - 1 - 4197 - 1701 - 7 The neighborhood is going to cut electricity for the weekend , and as the family 's car has a fender bender , it forces Greg to go to the farm trip . Will Greg survive the electricity - free days ? 11 Double Down November 1 , 2016 ISBN 978 - 1 - 4197 - 2344 - 5 Greg 's mom wants him to do something else than video games , so he makes a movie in collaboration with Rowley and joins the music program . 12 The Getaway November 7 , 2017 ISBN 978 - 1 - 4197 - 2545 - 6 Instead of celebrating the holidays at home , Greg and his family head on a tropical vacation to a resort . But what first starts as an relaxing trip , later turns into a Christmas nightmare . Will Greg be able to turn this vacation around ?
+  Fact 1.0: Diary of a Wimpy Kid was released on April 1, 2007, with ISBN 978-0-8109-9313-6.
+  Fact 1.1: The introduction to the Diary of a Wimpy Kid series introduces the protagonist Greg Heffley, his best friend Rowley, his middle school problems, Halloween, and the Cheese Touch.
+  Fact 1.2: Rodrick Rules was released on February 1, 2008, with ISBN 978-0-8109-9473-7.
+  Fact 1.3: In Rodrick Rules, Greg must stop Rodrick from revealing the secrets that happened last summer.
+  Fact 1.4: The Last Straw was released on January 13, 2009, with ISBN 978-0-8109-7068-7.
+  Fact 1.5: In The Last Straw, when Greg's father threatens to send Greg to a military academy, Greg must find a way to prevent this.
+  Fact 1.6: Dog Days was released on October 12, 2009, with ISBN 978-0-8109-8391-5.
+  Fact 1.7: In Dog Days, summer is here, but the family does not have much money to go to the beach, so it might not be the best summer ever.
+  Fact 1.8: The Ugly Truth was released on November 9, 2010, with ISBN 978-0-8109-8491-2.
+  Fact 1.9: In The Ugly Truth, Greg is growing up and will have to face the challenges of this period, like changing dentists and a school lock-in.
+  Fact 1.10: Cabin Fever was released on November 15, 2011, with ISBN 978-1-4197-0223-5.
+  Fact 1.11: In Cabin Fever, the family is stranded in the house as snow begins to fall.
+  Fact 1.12: The Third Wheel was released on November 13, 2012, with ISBN 978-1-4197-0584-7.
+  Fact 1.13: In The Third Wheel, the Valentine's Day dance is coming up and Greg has no one to go with.
+  Fact 1.14: In The Third Wheel, things turn around when Michael Sampson, Abigail's date, will not be going.
+  Fact 1.15: Hard Luck was released on November 5, 2013, with ISBN 978-1-4197-1132-9.
+  Fact 1.16: In Hard Luck, Greg's friend count is dropping as Rowley now has a girlfriend, named Abigail.
+  Fact 1.17: Hard Luck continues the story from The Third Wheel.
+  Fact 1.18: The Long Haul was released on November 4, 2014, with ISBN 978-1-4197-1189-3.
+  Fact 1.19: In The Long Haul, this is the family's second summer trip, and it is a road trip.
+  Fact 1.20: Old School was released on November 3, 2015, with ISBN 978-1-4197-1701-7.
+  Fact 1.21: In Old School, the neighborhood is going to cut electricity for the weekend.
+  Fact 1.22: In Old School, the family's car has a fender bender, which forces Greg to go on the farm trip.
+  Fact 1.23: Old School asks whether Greg will survive the electricity-free days.
+  Fact 1.24: Double Down was released on November 1, 2016, with ISBN 978-1-4197-2344-5.
+  Fact 1.25: In Double Down, Greg's mom wants him to do something other than video games, so he makes a movie in collaboration with Rowley.
+  Fact 1.26: In Double Down, Greg joins the music program.
+  Fact 1.27: The Getaway was released on November 7, 2017, with ISBN 978-1-4197-2545-6.
+  Fact 1.28: In The Getaway, instead of celebrating the holidays at home, Greg and his family head on a tropical vacation to a resort.
+  Fact 1.29: In The Getaway, what first starts as a relaxing trip later turns into a Christmas nightmare.
+  Fact 1.30: The Getaway asks whether Greg will be able to turn the vacation around.
+Sentence 2: Diary of a Wimpy Kid The logo of the series , appearing on the book covers , blogs , web comic , and the films . Diary of a Wimpy Kid Diary of a Wimpy Kid : Rodrick Rules Diary of a Wimpy Kid : The Last Straw Diary of a Wimpy Kid : Dog Days Diary of a Wimpy Kid : The Ugly Truth Diary of a Wimpy Kid : Cabin Fever Diary of a Wimpy Kid : The Third Wheel Diary of a Wimpy Kid : Hard Luck Diary of a Wimpy Kid : The Long Haul Diary of a Wimpy Kid : Old School Diary of a Wimpy Kid : Double Down Diary of a Wimpy Kid : The Getaway Author Jeff Kinney Country United States Language English Genre Realistic fiction Publisher Scholastic Publishing / Amulet Books / Puffin Books Published April 1 , 2007 -- present Media type Print ( hardback & paperback ) Audiobook E-book
+  Fact 2.0: The logo of the Diary of a Wimpy Kid series appears on the book covers, blogs, web comic, and films.
+  Fact 2.1: The Diary of a Wimpy Kid series includes the books Rodrick Rules, The Last Straw, Dog Days, The Ugly Truth, Cabin Fever, The Third Wheel, Hard Luck, The Long Haul, Old School, Double Down, and The Getaway.
+  Fact 2.2: The Diary of a Wimpy Kid series was written by Jeff Kinney.
+  Fact 2.3: The Diary of a Wimpy Kid series is from the United States.
+  Fact 2.4: The Diary of a Wimpy Kid series is in English.
+  Fact 2.5: The Diary of a Wimpy Kid series is in the realistic fiction genre.
+  Fact 2.6: The Diary of a Wimpy Kid series is published by Scholastic Publishing, Amulet Books, and Puffin Books.
+  Fact 2.7: The Diary of a Wimpy Kid series was published from April 1, 2007 to the present.
+  Fact 2.8: The Diary of a Wimpy Kid series is available in print (hardback and paperback), as an audiobook, and as an e-book.
+
+Retrieved items:
+<item 1>
+Diary of a Wimpy Kid (book series)
+USA Today , which ranks best sellers based on sales alone regardless of genre or intended audience , has listed Diary of a Wimpy Kid in its top 150 , peaking at
+number 8 , for 141 weeks as of April 4 , 2010 . As of the same date , Rodrick Rules has been on the list for 117 weeks ( peaking at number 4 ) , The Last Straw
+has been on the list for 65 weeks ( peaking at number 1 ) , Dog Days has been on the list for all 25 weeks of its publication ( peaking at number 1 ) , and The
+Wimpy Kid Movie Diary has been listed for all three weeks of its publication , peaking at number 2 . The series has sold over 194 million books in more than 30
+countries . The series has also generated over $500 million in revenue . Films ( edit ) Main article : Diary of a Wimpy Kid ( film series ) This section needs
+to be updated . Please update this article to reflect recent events or newly available information .
+</item 1>
+
+<item 2>
+Diary of a Wimpy Kid (book series)
+All the main books are the journals of the main character , Greg Heffley . Befitting a teen 's diary , the books are filled with hand - written notes and simple
+drawings of Greg 's daily adventures . Since the release of the online version in May 2004 , most of the books have garnered positive reviews and commercial
+success . As of February 2008 , it has been purchased one million times . The first , second , fourth , and ninth installments have been adapted into films by
+20th Century Fox . The website Poptropica released islands in the theme of Diary of a Wimpy Kid called Wimpy Wonderland and Wimpy Boardwalk , both of which
+credit Kinney in an ambiguous contributor 's role .
+</item 2>
+
+<item 3>
+Diary of a Wimpy Kid (book series)
+Will Greg be able to turn this vacation around ? Supplementary books ( edit ) Diary of a Wimpy Kid Do - It - Yourself Book ( published between Rodrick Rules and
+The Last Straw ) is an activity book that features a blank section encouraging readers to keep their own journal in the style of the books . The Wimpy Kid Do -
+It - Yourself Book : Extended Edition ( published after Wimpy Kid Movie Diary 2 and before Cabin Fever ) is the same book as the first Do - It - Yourself Book ,
+but with extra 60 pages and 16 more full - color comics . The Wimpy Kid Movie Diary is a book about the making of the first film , which features stills and
+brand - new illustrations . Jeff Kinney dedicated the book to the film 's main stars , Zachary Gordon and Robert Capron . The Wimpy Kid Movie Diary 2 : Rodrick
+Rules is an updated version of the first book , now featuring stills from the second film Rodrick Rules , more new illustrations , and information on how the
+second film was made .
+</item 3>
+
+<item 4>
+Diary of a Wimpy Kid (book series)
+2007 ) Diary of a Wimpy Kid : Rodrick Rules ( February 1 , 2008 ) Diary of a Wimpy Kid : The Last Straw ( January 13 , 2009 ) Diary of a Wimpy Kid : Dog Days (
+October 12 , 2009 ) Diary of a Wimpy Kid : The Ugly Truth ( November 9 , 2010 ) Diary of a Wimpy Kid : Cabin Fever ( November 15 , 2011 ) Diary of a Wimpy Kid :
+The Third Wheel ( November 13 , 2012 ) Diary of a Wimpy Kid : Hard Luck ( November 5 , 2013 ) Diary of a Wimpy Kid : The Long Haul ( November 4 , 2014 ) Diary
+of a Wimpy Kid : Old School ( November 3 , 2015 ) Diary of a Wimpy Kid : Double Down ( November 1 , 2016 ) Diary of a Wimpy Kid : The Getaway ( November 7 ,
+</item 4>
+
+<item 5>
+Diary of a Wimpy Kid (book series)
+Diary of a Wimpy Kid Diary of a Wimpy Kid : Rodrick Rules Diary of a Wimpy Kid : The Last Straw Diary of a Wimpy Kid : Dog Days Diary of a Wimpy Kid : The Ugly
+Truth Diary of a Wimpy Kid : Cabin Fever Diary of a Wimpy Kid : The Third Wheel Diary of a Wimpy Kid : Hard Luck Diary of a Wimpy Kid : The Long Haul Diary of a
+Wimpy Kid : Old School Diary of a Wimpy Kid : Double Down Diary of a Wimpy Kid : The Getaway Author Jeff Kinney Country United States Language English Genre
+Realistic fiction Publisher Scholastic Publishing / Amulet Books / Puffin Books Published April 1 , 2007 -- present Media type Print ( hardback & paperback )
+Audiobook E-book Diary of a Wimpy Kid is a series of fiction books written by the American author and cartoonist Jeff Kinney . All the main books are the
+journals of the main character , Greg Heffley .
+</item 5>
+
+<item 6>
+Diary of a Wimpy Kid (book series)
+ISBN 0 - 8109 - 9313 - 9 . ^ Jump up to : `` '' Diary of a Wimpy Kid ( 2010 ) '' on `` . Comingsoon.net . March 19 , 2010 . Retrieved May 7 , 2011 . ^ Jump up
+to : `` Diary of a Wimpy Kid '' . FunBrain . Family Education Network . Retrieved March 5 , 2011 . Jump up ^ `` WIMPY 2 LAST '' . 3 November 2015 . Retrieved 6
+March 2016 . Jump up ^ The 2009 TIME 100 : Jeff Kinney Time magazine 's 2009 list of The World 's Most Influential People Jump up ^ Kinney , Jeff . `` The Wimpy
+Kid Movie Diary : The Next Chapter '' . Retrieved March 28 , 2017 . Jump up ^ Nickelodeon Kids ' Choice Awards , Nick.com Jump up ^ Dixler , Elsa . `` The New
+York Times Best Sellers : Children 's Books '' . The New York Times .
+</item 6>
+
+<item 7>
+Diary of a Wimpy Kid (book series)
+Diary of a Wimpy Kid ( book series ) - Wikipedia Diary of a Wimpy Kid ( book series ) This is the latest accepted revision , reviewed on 22 April 2018 . Jump to
+: navigation , search `` Diary of a Wimpy Kid ( series ) '' redirects here . For the film series , see Diary of a Wimpy Kid ( film series ) . Diary of a Wimpy
+Kid The logo of the series , appearing on the book covers , blogs , web comic , and the films .
+</item 7>
+
+<item 8>
+Diary of a Wimpy Kid (book series)
+, to turn Diary of a Wimpy Kid into a print series . The book became an instant hit , and the online version received about 20 million views as of 2009 ; many
+online readers requested a printed version . Kinney had agreed , and in April 2007 , Diary of a Wimpy Kid was published . To date , twelve Wimpy Kid books have
+been released , plus one do - it - yourself book and two movie diaries . In April 2009 , TIME named Kinney one of The World 's Most Influential People .
+Chronology ( edit ) # Title Date ISBN Diary of a Wimpy Kid April 1 , 2007 ISBN 978 - 0 - 8109 - 9313 - 6 The introduction to the series introduces the
+protagonist , Greg Heffley , his best friend Rowley , his middle school problems , Halloween , and the Cheese Touch . Rodrick Rules February 1 , 2008 ISBN 978 -
+0 - 8109 - 9473 - 7 Greg must stop Rodrick from revealing the secrets that had happened last summer .
+</item 8>
+
+<item 9>
+Diary of a Wimpy Kid (book series)
+Achievements ( edit ) Awards and honors ( edit ) Award Category Result # 1 New York Times Best Seller ( 114 weeks ) Won 2008 Nickelodeon Kids ' Choice Awards
+Favorite Book 2009 Nickelodeon Kids ' Choice Awards Nominated ALA Notable Book Won 2010 Nickelodeon Kids ' Choice Awards Favorite Book 2010 Most Favorite Book
+Around the World 2011 Nickelodeon Kids ' Choice Awards Favorite Book 2012 Nickelodeon Kids ' Choice Awards 2013 Nickelodeon Kids ' Choice Awards Nominated 2014
+Nickelodeon Kids ' Choice Awards Won 2015 Nickelodeon Kids ' Choice Awards 2016 Nickelodeon Kids ' Choice Awards Commercial success ( edit ) Diary of a Wimpy
+Kid was well received from The Princeton Review , Gold Card Association , The Dallas News , The TRR Editors , The NW Press , and The JJ Printing Company . The
+New York Times , which ranks children 's serials collectively on a `` Series Books '' bestseller list , has included the Wimpy Kid series for 64 weeks as of
+August 10 , 2015 .
+</item 9>
+
+<item 10>
+Diary of a Wimpy Kid (book series)
+Contents ( hide ) 1 Background 2 Chronology 2.1 Supplementary books 2.2 Toys and games 2.3 Audiobooks 3 Characters 4 Achievements 4.1 Awards and honors 4.2
+Commercial success 5 Films 6 Musical 7 References 8 External links Background ( edit ) In January 1998 , Diary of a Wimpy Kid officially began , when Kinney
+brought up an idea about a middle - school weakling named Greg Heffley , who wrote about his personal life . In May 2004 , FunBrain and Kinney released an
+online version of Diary of a Wimpy Kid . The website made daily entries until June 2005 . He worked on his book for almost eight years , before showing it to a
+publisher in New York . In February 2006 , during the New York Comic Con , Jeff signed a multi book deal with publisher Harry N. Abrams , Inc. , to turn Diary
+of a Wimpy Kid into a print series .
+</item 10>
+=== END ITEM id=dba2e8e1c951ef74 ===
+
+=== ITEM id=527c89b6814af4f9 ===
+Gold sentences and facts:
+Sentence 0: Life of Pi is a Canadian fantasy adventure novel by Yann Martel published in 2001 . The protagonist is Piscine Molitor `` Pi '' Patel , an Indian boy from Pondicherry who explores issues of spirituality and practicality from an early age . He survives 227 days after a shipwreck while stranded on a lifeboat in the Pacific Ocean with a Bengal tiger named Richard Parker .
+  Fact 0.0: Life of Pi is a Canadian fantasy adventure novel.
+  Fact 0.1: Life of Pi is a novel by Yann Martel.
+  Fact 0.2: Life of Pi was published in 2001.
+  Fact 0.3: The protagonist of Life of Pi is Piscine Molitor 'Pi' Patel.
+  Fact 0.4: Piscine Molitor 'Pi' Patel is an Indian boy from Pondicherry.
+  Fact 0.5: Piscine Molitor 'Pi' Patel explores issues of spirituality and practicality from an early age.
+  Fact 0.6: Pi survives 227 days after a shipwreck.
+  Fact 0.7: Pi is stranded on a lifeboat in the Pacific Ocean.
+  Fact 0.8: Pi is stranded on the lifeboat with a Bengal tiger named Richard Parker.
+
+Retrieved items:
+<item 1>
+Life of Pi
+His father owns a zoo in Pondicherry . The livelihood provides the family with a relatively affluent lifestyle and some understanding of animal psychology . The
+narrator describes how he acquired his full name , Piscine Molitor Patel , as a tribute to the swimming pool in France . After hearing schoolmates tease him by
+transforming the first name into `` Pissing '' , he establishes the short form of his name as `` Pi '' when he starts secondary school . The name , he says ,
+pays tribute to the irrational number which is the ratio of the circumference of a circle to its diameter . In recounting his experiences , Pi describes several
+other unusual situations involving proper names : two visitors to the zoo , one a devout Muslim , and the other a committed atheist , bear identical names ; and
+a 450 - pound tiger at the zoo bears the name Richard Parker as the result of a clerical error , in which human and animal names were reversed . Pi is raised as
+a Hindu who practices vegetarianism . At the age of fourteen , he investigates Christianity and Islam , and decides to become an adherent of all three religions
+, much to his parents ' dismay , saying he `` just wants to love God . ''
+</item 1>
+
+<item 2>
+Life of Pi
+A recurring theme throughout the novel seems to be believability . Pi at the end of the book asks the two investigators `` If you stumble at mere believability
+, what are you living for ? '' According to Gordon Houser there are two main themes of the book : `` that all life is interdependent , and that we live and
+breathe via belief . '' Growth through adversity ( edit ) PBS has described Martel 's story as one of `` personal growth through adversity . '' The main
+character learns that `` tigers are dangerous '' at a young age when his father forces him to watch the zoo 's Royal Bengal tiger patriarch , Mahisha , devour a
+live goat . Later , after he has been reduced to eking out a desperate existence on the lifeboat with the company of a fully grown tiger , Pi develops `` alpha
+'' qualities as he musters the strength , will and skills he needs to survive . Inspiration ( edit ) In a 2002 interview with PBS , Martel said `` I was sort of
+looking for a story , not only with a small ' s ' but sort of with a capital ' S ' -- something that would direct my life . ''
+</item 2>
+
+<item 3>
+Life of Pi
+Suddenly emerging from his hideaway , Richard Parker kills and eats the hyena . Frightened , Pi constructs a small raft out of rescue flotation devices ,
+tethers it to the bow of the boat and makes it his place of retirement . He begins conditioning Richard Parker to take a submissive role by using food as a
+positive reinforcer , and seasickness as a punishment mechanism , while using a whistle for signals . Soon , Pi asserts himself as the alpha animal , and is
+eventually able to share the boat with his feline companion , admitting in the end that Richard Parker is the one who helped him survive his ordeal . Pi
+recounts various events while adrift in the Pacific Ocean . At his lowest point , exposure renders him blind and unable to catch fish . In a state of delirium ,
+he talks with a marine `` echo '' , which he initially identifies as Richard Parker having gained the ability to speak , but it turns out to be another blind
+castaway , a Frenchman , who boards the lifeboat with the intention of killing and eating Pi , but is eventually killed by Richard Parker .
+</item 3>
+
+<item 4>
+Life of Pi
+He was named after a swimming pool in Paris , despite the fact that neither his mother nor his father particularly liked swimming . The story is told as a
+narrative from the perspective of a middle - aged Pi , now married with his own family , and living in Canada . At the time of main events of the story , he is
+sixteen years old . He recounts the story of his life and his 227 - day journey on a lifeboat when his ship sinks in the middle of the Pacific Ocean during a
+voyage to North America . Richard Parker ( edit ) A Bengal tiger Richard Parker is a royal Bengal tiger who is stranded on the lifeboat with Pi when the ship
+sinks . Richard Parker lives on the lifeboat with Pi and is kept alive with the food and water Pi delivers . Richard Parker develops a relationship with Pi that
+allows them to coexist in their struggle . In the novel , a hunter named Richard Parker is hired to kill a panther thought to have killed seven people within
+two months . Instead , he accidentally immobilizes a female Bengal tiger with tranquilizer darts while her cub escapes hiding in a bush . Parker names the cub
+Thirsty after his enthusiasm when drinking from a nearby river .
+</item 4>
+
+<item 5>
+Life of Pi
+Parker names the cub Thirsty after his enthusiasm when drinking from a nearby river . The paperwork that accompanies the shipment of the two tigers to Pi 's
+family 's zoo in Pondicherry states that the cub 's name is `` Richard Parker '' and the hunter 's given name is `` Thirsty '' and his surname is `` None Given
+'' , due to a mix - up with the names . Pi 's father finds the story so amusing that they continue to call the tiger `` Richard Parker '' . Reception ( edit )
+Brian Bethune of Maclean 's describes Life of Pi as a `` head - scratching combination of dense religious allegory , zoological lore and enthralling adventure
+tale , written with warmth and grace '' . Master Plots suggested that the `` central themes of Life of Pi concern religion and human faith in God '' . Reutter
+said , `` So believable is Pi 's story telling that readers will be amazed . '' Gregory Stephens added that it `` achieves something more quietly spectacular .
+'' Smith stated that there was `` no bamboozlement here . ''
+</item 5>
+
+<item 6>
+Life of Pi
+He tries to understand God through the lens of each religion , and comes to recognize benefits in each one . A few years later in 1977 , during the period when
+Indian Prime Minister Indira Gandhi declares `` The Emergency '' , Pi 's father decides to sell the zoo and immigrate with his wife and sons to Canada . Part
+two ( edit ) The second part of the novel begins with Pi 's family aboard the Tsimtsum , a Japanese freighter that is transporting animals from their zoo to
+North America . A few days out of port from Manila , the ship encounters a storm and sinks . Pi manages to escape in a small lifeboat , only to learn that the
+boat also holds a spotted hyena , an injured Grant 's zebra , and an orangutan named Orange Juice . Much to the boy 's distress , the hyena kills the zebra and
+then Orange Juice . A tiger has been hiding under the boat 's tarpaulin : it 's Richard Parker , who had boarded the lifeboat with ambivalent assistance from Pi
+himself some time before the hyena attack . Suddenly emerging from his hideaway , Richard Parker kills and eats the hyena .
+</item 6>
+
+<item 7>
+Life of Pi
+The cook amputates the sailor 's leg for use as fishing bait , then kills the sailor himself as well as Pi 's mother for food , and soon he is killed by Pi ,
+who dines on him . The investigators note parallels between the two stories . They soon conclude that the hyena symbolizes the cook , the zebra the sailor , the
+orangutan Pi 's mother , and the tiger represents Pi . Pi points out that neither story can be proven and neither explains the cause of the shipwreck , so he
+asks the officials which story they prefer : the one without animals or the one with animals . They eventually choose the story with the animals . Pi thanks
+them and says : `` And so it goes with God . '' The investigators then leave and file a report . Major themes ( edit ) Life is a story ( edit ) Life of Pi ,
+according to Yann Martel , can be summarized in three statements : `` Life is a story ... You can choose your story ... A story with God is the better story .
+'' A recurring theme throughout the novel seems to be believability .
+</item 7>
+
+<item 8>
+Life of Pi
+He spoke of being lonely and needing direction in his life , and found that writing the novel met this need . Richard Parker and shipwreck narratives ( edit )
+The name of Martel 's tiger , Richard Parker , was inspired by a character in Edgar Allan Poe 's nautical adventure novel The Narrative of Arthur Gordon Pym of
+Nantucket ( 1838 ) . In this book , Richard Parker is a mutineer who is stranded and eventually cannibalized on the hull of an overturned ship ( and there is a
+dog aboard who is named Tiger ) . The author also had in mind another occurrence of the name , in the famous legal case R v Dudley and Stephens ( 1884 ) where a
+shipwreck again results in the cannibalism of a cabin boy named Richard Parker , this time in a lifeboat . A third Richard Parker drowned in the sinking of the
+Francis Spaight in 1846 , described by author Jack London , and later the cabin boy ( not Richard Parker ) was cannibalized . Having read about these events ,
+Yann Martel thought , `` So many victimized Richard Parkers had to mean something . ''
+</item 8>
+
+<item 9>
+Life of Pi
+Some time later , Pi 's boat comes ashore on a floating island network of algae and inhabited by hundreds of thousands of meerkats . Soon , Pi and Richard
+Parker regain strength , but the boy 's discovery of the carnivorous nature of the island 's plant life forces him to return to the ocean . Two hundred and
+twenty - seven days after the ship 's sinking , the lifeboat washes onto a beach in Mexico , after which Richard Parker disappears into the nearby jungle
+without looking back , leaving Pi heartbroken at the abrupt farewell . Part three ( edit ) The third part of the novel describes a conversation between Pi and
+two officials from the Japanese Ministry of Transport , who are conducting an inquiry into the shipwreck . They meet him at the hospital in Mexico where he is
+recovering . Pi tells them his tale , but the officials reject it as unbelievable . Pi then offers them a second story in which he is adrift on a lifeboat not
+with zoo animals , but with the ship 's cook , a Taiwanese sailor with a broken leg , and his own mother .
+</item 9>
+
+<item 10>
+Life of Pi
+Canongate Books . 14 May 2002 . Archived from the original on 18 March 2008 . Retrieved 1 September 2010 . Jump up ^ Martel , Yann . `` How Richard Parker Came
+to Get His Name '' . Amazon.com . Retrieved 1 September 2010 . Jump up ^ `` From the Author -- Yann Martel -- Powell 's Books '' . Powells.com . Archived from
+the original on 14 January 2013 . Retrieved 30 December 2012 . Jump up ^ Mitgang , Herbert ( 11 July 1990 ) . `` Books of The Times ; Fleeing the Nazis With a
+Jaguar That May Be Real '' . The New York Times . Retrieved 2 September 2010 . Jump up ^ Rohter , Larry ( 11 July 1990 ) . `` Tiger in a Lifeboat , Panther in a
+Lifeboat : A Furor Over a Novel '' . The New York Times . Retrieved 2 September 2010 .
+</item 10>
+=== END ITEM id=527c89b6814af4f9 ===
+
+=== ITEM id=fb346e7aeddd65b1 ===
+Gold sentences and facts:
+Sentence 0: `` Sacrifice '' is a ballad performed by musician Elton John . The lyrics are by Bernie Taupin and the music by John . The song appears on the 1989 album Sleeping with the Past . It was first released in October 1989 , then in 1990 , and was the second single from the album . It achieved success , particularly in France and the UK , where it became his first solo chart - topper , spending five weeks at the top .
+  Fact 0.0: 'Sacrifice' is a ballad performed by musician Elton John.
+  Fact 0.1: The lyrics of 'Sacrifice' are by Bernie Taupin.
+  Fact 0.2: The music of 'Sacrifice' is by Elton John.
+  Fact 0.3: 'Sacrifice' appears on the 1989 album Sleeping with the Past.
+  Fact 0.4: 'Sacrifice' was first released in October 1989.
+  Fact 0.5: 'Sacrifice' was released in 1990.
+  Fact 0.6: 'Sacrifice' was the second single from the album Sleeping with the Past.
+  Fact 0.7: 'Sacrifice' achieved success, particularly in France and the UK.
+  Fact 0.8: 'Sacrifice' became Elton John's first solo chart-topper in France and the UK.
+  Fact 0.9: 'Sacrifice' spent five weeks at the top of the chart.
+
+Retrieved items:
+<item 1>
+Sacrifice (song)
+Awarded as The Best Song Retrieved from `` https://en.wikipedia.org/w/index.php?title=Sacrifice_(song)&oldid=833955469 '' Categories : 1989 singles 1990 singles
+Disney songs Elton John songs European Hot 100 Singles number - one singles SNEP Top Singles number - one singles UK Singles Chart number - one singles Songs
+with lyrics by Bernie Taupin Songs with music by Elton John Pop ballads Rock ballads Song recordings produced by Chris Thomas ( record producer ) 1989 songs MCA
+Records singles The Rocket Record Company singles Music videos directed by Alek Keshishian Hidden categories : CS1 Dutch - language sources ( nl ) CS1 French -
+language sources ( fr ) Webarchive template wayback links CS1 Norwegian - language sources ( no ) CS1 German - language sources ( de ) Articles with hAudio
+microformats Use dmy dates from August 2010 Talk Contents About Wikipedia Dansk Español Français Italiano Nederlands Norsk nynorsk Polski Português Edit links
+This page was last edited on 3 April 2018 , at 05 : 22 .
+</item 1>
+
+<item 2>
+Sacrifice (song)
+000 Personnel ( edit ) Elton John : vocals , Roland RD - 1000 digital piano Davey Johnstone : electric guitar Romeo Williams : bass Jonathan Moffett : drums Guy
+Babylon : keyboards Fred Mandel : keyboards Preceded by `` Words '' by The Christians French SNEP number - one single 26 May 1990 -- 9 June 1990 ( 3 weeks )
+Succeeded by `` Bo le lavabo ( WC Kiss ) '' by Lagaf ' Preceded by `` Vogue '' by Madonna Eurochart Hot 100 number - one single 16 June 1990 -- 28 July 1990 ( 7
+weeks ) Succeeded by `` U Ca n't Touch This '' by MC Hammer Preceded by `` World In Motion '' by Englandneworder UK number - one single 17 June 1990 -- 21 July
+1990 ( 5 weeks ) Succeeded by `` Turtle Power '' by Partners in Kryme References ( edit ) ^ Jump up to : `` Elton John - Full Official Chart History '' .
+Official Charts Company . Official Charts Company . Retrieved 20 January 2016 .
+</item 2>
+
+<item 3>
+Sacrifice (song)
+Jump up ^ `` UK certifications , database '' . Bpi . Retrieved 9 September 2008 . External links ( edit ) Lyrics of this song at MetroLyrics Elton John songs
+1960s and 1970s `` Skyline Pigeon '' ( 1968 ) `` I 've Been Loving You '' ( 1968 ) `` Lady Samantha '' ( 1969 ) `` It 's Me That You Need '' ( 1969 ) `` Border
+Song '' ( 1970 ) `` Rock and Roll Madonna '' ( 1970 ) `` From Denver to L.A. '' ( 1970 ) `` Take Me to the Pilot '' ( 1970 ) `` Your Song '' ( 1970 ) `` Friends
+'' ( 1971 ) `` Levon '' ( 1971 ) `` Tiny Dancer '' ( 1972 ) `` Rocket Man '' ( 1972 ) `` Honky Cat '' ( 1972 ) `` I Think I 'm Going to Kill Myself '' ( 1972 )
+`` Mona Lisas and Mad Hatters '' ( 1972 ) `` Crocodile Rock '' ( 1972 ) `` Elderberry Wine '' (
+</item 3>
+
+<item 4>
+Sacrifice (song)
+Sacrifice ( song ) - wikipedia Sacrifice ( song ) Jump to : navigation , search For other songs with the same title , see Sacrifice ( disambiguation ) § Songs .
+`` Sacrifice '' Single by Elton John from the album Sleeping with the Past A-side `` Healing Hands '' ( second release ) B - side `` Love Is a Cannibal '' (
+first release ) Released October 1989 ( first release ) May 1990 ( second release ) Format CD , vinyl record ( 7 '' and 12 `` ) , audio cassette Length 5 : 11
+Label Rocket , MCA Songwriter ( s ) Elton John , Bernie Taupin Producer ( s ) Chris Thomas Elton John singles chronology `` Healing Hands '' ( 1989 ) ``
+Sacrifice '' ( 1989 ) `` Club at the End of the Street '' ( 1990 ) `` Healing Hands '' ( 1989 ) `` Sacrifice '' ( 1989 ) `` Club at the End of the Street '' (
+1990 ) `` Sacrifice '' is a ballad performed by musician Elton John . The lyrics are by Bernie Taupin and the music by John .
+</item 4>
+
+<item 5>
+Sacrifice (song)
+Official Charts Company . Official Charts Company . Retrieved 20 January 2016 . ^ Jump up to : `` Elton John singles , Billboard charts '' . allmusic .
+Retrieved 9 September 2008 . Jump up ^ `` '' Sacrifice `` , Australian Singles Chart '' . australian - charts . Retrieved 13 December 2007 . Jump up ^ `` ''
+Sacrifice `` , Dutch Mega Top 100 '' ( in Dutch ) . dutchcharts . Retrieved 11 April 2010 . Jump up ^ `` '' Sacrifice `` , French Singles Chart '' ( in French )
+. lescharts . Retrieved 13 December 2007 . Jump up ^ German Singles Chart Charts-surfer.de Archived 8 January 2009 at the Wayback Machine . ( Retrieved 9
+September 2008 ) Jump up ^ `` Irish Single Chart , database '' . irishcharts . Retrieved 9 September 2008 . Jump up ^ `` '' Sacrifice '' New Zealand Singles
+Chart `` . charts.org.nz . Retrieved 11 April 2010 .
+</item 5>
+
+<item 6>
+Sacrifice (song)
+Thus , it became John 's first solo number - one single in the UK Singles Chart , remaining on the top spot for five weeks . With this re-release , Elton John
+also got his first number one in France and stayed on the chart for 26 weeks . Track listings ( edit ) First release 12 '' single -- UK `` Sacrifice '' -- 5 :
+07 `` Love Is a Cannibal '' ( From the Columbia Motion Picture Ghostbusters II ) -- 3 : 53 CD single -- U.S. `` Sacrifice '' -- 5 : 07 `` Love Is a Cannibal ''
+( from the Columbia Motion Picture Ghostbusters II ) -- 3 : 53 `` Durban Deep '' Second release UK single `` Sacrifice '' -- 5 : 07 `` Healing Hands '' -- 4 :
+22 Charts and sales ( edit ) Weekly charts ( edit ) Chart ( 1989 ) Peak position UK Singles Chart 55 U.S.
+</item 6>
+
+<item 7>
+Sacrifice (song)
+Billboard Hot Adult Contemporary Tracks Chart ( 1990 ) Peak position Australian ARIA Singles Chart 7 Dutch Mega Top 100 Eurochart Hot 100 French SNEP Singles
+Chart German Singles Chart 36 Irish Singles Chart New Zealand RIANZ Singles Chart 7 Norwegian Singles Chart Swiss Singles Chart 23 UK Singles Chart U.S.
+Billboard Hot 100 18 Zimbabwe Singles Chart 6 Year - end charts ( edit ) Chart ( 1990 ) Rank Australian Singles Chart 47 Dutch Top 40 11 UK Singles Charts
+Certifications and sales ( edit ) Country Certification Date Sales certified Physical sales France Silver 200,000 380,000 UK Platinum 1 September 1990 600,000
+Personnel ( edit ) Elton John : vocals ,
+</item 7>
+
+<item 8>
+Sacrifice (song)
+'' ( 1997 ) `` Something About the Way You Look Tonight '' ( 1997 ) `` Candle in the Wind 1997 '' ( 1997 ) `` Written in the Stars '' ( 1999 ) 2000s `` I Want
+Love '' ( 2001 ) `` This Train Do n't Stop There Anymore '' ( 2002 ) `` Original Sin '' ( 2002 ) `` Are You Ready for Love '' ( 2003 ) `` Ghetto Gospel '' (
+2005 ) `` Electricity '' ( 2005 ) `` The Bridge '' ( 2006 ) `` Joseph , Better You than Me '' ( 2008 ) `` Tiny Dancer ( Hold Me Closer ) '' ( 2009 ) Related
+articles Albums discography Videography Book : Elton John Category : Elton John Ivor Novello Awards -- Best Song Musically and Lyrically 1960s She 's Leaving
+Home ( 1968 ) 1970s Where Do You Go To ( My Lovely ) ? ( 1970 ) Something ( 1971 ) Do n't Let It Die ( 1972 ) Without You ( 1973 ) Daniel ( 1974 ) Streets
+</item 8>
+
+<item 9>
+Sacrifice (song)
+The song is beloved by both John and Bernie Taupin and deemed a bookend of sorts to their first hit `` Your Song '' . Taupin has said he is surprised he wrote
+it , and said in an interview , `` I think ' Sacrifice ' is one of the best songs we 've written . '' The song is not a typical love song , but rather a song
+about a breakup of a marriage where the loss of the relationship is `` no sacrifice . '' Although the single was successful , Elton John did not tour Europe in
+both 1989 -- 1990 to support the Sleeping with the Past album ( with the exception of one appearance in Knebworth Park on 30 June 1990 ) touring only in the
+U.S. and Australia . The 1989 European tour was , instead , in support of the Reg Strikes Back album , with no material representing Sleeping with the Past . In
+all shows that were done to support Sleeping with the Past in 1989 -- 1990 , Elton played this song solo on his Roland RD - 1000 Digital Piano .
+</item 9>
+
+<item 10>
+Sacrifice (song)
+The lyrics are by Bernie Taupin and the music by John . The song appears on the 1989 album Sleeping with the Past . It was first released in October 1989 , then
+in 1990 , and was the second single from the album . It achieved success , particularly in France and the UK , where it became his first solo chart - topper ,
+spending five weeks at the top . A country music cover of the song was performed by Don Henley and Vince Gill as part of the 2018 tribute album Restoration :
+Reimagining the Songs of Elton John and Bernie Taupin . Contents ( hide ) 1 Overview 1.1 Background and writing 1.2 Music video 1.3 Chart performance 2 Track
+listings 3 Charts and sales 3.1 Weekly charts 3.2 Year - end charts 3.3 Certifications and sales 4 Personnel 5 References 6 External links Overview ( edit )
+Background and writing ( edit ) `` Sacrifice '' is inspired both by the Aretha Franklin song `` Do Right Woman , Do Right Man '' and described as a Percy Sledge
+song by Elton John .
+</item 10>
+=== END ITEM id=fb346e7aeddd65b1 ===
+
+=== ITEM id=7628af0e433b0879 ===
+Gold sentences and facts:
+Sentence 0: In vertebrates , the gallbladder is a small hollow organ where bile is stored and concentrated before it is released into the small intestine . In humans , the pear - shaped gallbladder lies beneath the liver , although the structure and position of the gallbladder can vary significantly among animal species . It receives and stores bile , produced by the liver , via the common hepatic duct , and releases it via the common bile duct into the duodenum , where the bile helps in the digestion of fats .
+  Fact 0.0: In vertebrates, the gallbladder is a small hollow organ.
+  Fact 0.1: In vertebrates, bile is stored in the gallbladder before it is released into the small intestine.
+  Fact 0.2: In vertebrates, bile is concentrated in the gallbladder before it is released into the small intestine.
+  Fact 0.3: In humans, the gallbladder is pear-shaped.
+  Fact 0.4: In humans, the gallbladder lies beneath the liver.
+  Fact 0.5: The structure and position of the gallbladder can vary significantly among animal species.
+  Fact 0.6: The gallbladder receives bile produced by the liver via the common hepatic duct.
+  Fact 0.7: The gallbladder stores bile produced by the liver via the common hepatic duct.
+  Fact 0.8: The gallbladder releases bile via the common bile duct into the duodenum.
+  Fact 0.9: Bile helps in the digestion of fats in the duodenum.
+
+Retrieved items:
+<item 1>
+Gallbladder
+This sits on a thin layer of connective tissue , the lamina propria . The mucosa is curved and collected into tiny outpouchings called rugae . A muscular layer
+sits beneath the mucosa . This is formed by smooth muscle , with fibres that lie in longitudinal , oblique and transverse directions , and are not arranged in
+separate layers . The muscle fibres here contract to expel bile from the gallbladder . A distinctive feature of the gallbladder is the presence of Rokitansky --
+Aschoff sinuses , deep outpouchings of the mucosa that can extend through the muscular layer . The muscular layer is surrounded by a layer of connective and fat
+tissue . The outer layer of the fundus of gallbladder , and the surfaces not in contact with the liver , are covered by a thick serosa , which is exposed to the
+peritoneum . The serosa contains blood vessels and lymphatics . The surfaces in contact with the liver are covered in connective tissue . Variation ( edit ) The
+gallbladder varies in size , shape , and position between different people .
+</item 1>
+
+<item 2>
+Gallbladder
+In adults , the gallbladder measures approximately 7 to 10 centimetres ( 2.8 to 3.9 inches ) in length and 4 centimetres ( 1.6 in ) in diameter when fully
+distended . The gallbladder has a capacity of about 50 millilitres ( 1.8 imperial fluid ounces ) . The gallbladder is shaped like a pear , with its tip opening
+into the cystic duct . The gallbladder is divided into three sections : the fundus , body , and neck . The fundus is the rounded base , angled so that it faces
+the abdominal wall . The body lies in a depression in the surface of the lower liver . The neck tapers and is continuous with the cystic duct , part of the
+biliary tree . The gallbladder fossa , against which the fundus and body of the gallbladder lie , is found beneath the junction of hepatic segments IVB and V .
+The cystic duct unites with the common hepatic duct to become the common bile duct .
+</item 2>
+
+<item 3>
+Gallbladder
+doi : 10.1080 / 136518202753598726 . Jump up ^ Naganuma , S. ; Ishida , H. ; Konno , K. ; Hamashima , Y. ; Hoshino , T. ; Naganuma , H. ; Komatsuda , T. ;
+Ohyama , Y. ; Yamada , N. ; Ishida , J. ; Masamune , O. ( March 6 , 2014 ) . `` Sonographic findings of anomalous position of the gallbladder '' . Abdominal
+Imaging. 23 ( 1 ) : 67 -- 72 . doi : 10.1007 / s002619900287 . PMID 9437066 . Jump up ^ Meilstrup JW ; Hopper KD ; Thieme GA ( December 1991 ) . `` Imaging of
+gallbladder variants '' . AJR Am J Roentgenol. 157 ( 6 ) : 1205 -- 8 . doi : 10.2214 / ajr. 157.6. 1950867 . PMID 1950867 .
+</item 3>
+
+<item 4>
+Gallbladder
+`` Anatomy of the Murine Hepatobiliary System : A Whole - Organ - Level Analysis Using a Transparency Method '' . The Anatomical Record . 299 ( 2 ) : 161 -- 172
+. doi : 10.1002 / ar. 23287 . PMID 26559382 . Jump up ^ Romer , Alfred Sherwood ; Parsons , Thomas S. ( 1977 ) . The Vertebrate Body . Philadelphia , PA : Holt
+- Saunders International . p. 355 . ISBN 0 - 03 - 910284 - X . Jump up ^ Actman , Jani ( 5 May 2016 ) . `` Inside the Disturbing World of Bear - Bile Farming ''
+. National Geographic . Retrieved 23 October 2017 . Jump up ^ Hance , Jeremy ( 9 April 2015 ) . `` Is the end of ' house of horror ' bear bile factories in
+sight ? '' . The Guardian . Retrieved 23 October 2017 .
+</item 4>
+
+<item 5>
+Gallbladder
+( hide ) Anatomy of the liver , pancreas and biliary tree Liver Bare area Cantlie line Ligamentum venosum Porta hepatis Round ligament Lobes of liver Caudate
+Quadrate Fibrous capsule of Glisson Perisinusoidal space Liver sinusoid Periportal space Portal triad Lobules of liver Liver segment Microanatomy Hepatocyte
+Hepatic stellate cell Kupffer cell Biliary tract Bile ducts Intrahepatic bile ducts Bile canaliculus Canals of Hering Interlobular Left hepatic duct Right
+hepatic duct Common hepatic duct Gallbladder Cystic duct Common bile duct Ampulla of Vater Sphincter of Oddi Cells Cholecystocyte Pancreas Gross Tail Body Neck
+Head ( Uncinate process ) Ducts main accessory Microanatomy Pancreatic islets Centroacinar cell Stellate cell GND : 4071544 - 9 NDL : 00572670 Retrieved from ``
+https://en.wikipedia.org/w/index.
+</item 5>
+
+<item 6>
+Gallbladder
+Function ( edit ) 1 . Bile ducts : 2 . Intrahepatic bile ducts , 3 . Left and right hepatic ducts , 4 . Common hepatic duct , 5 . Cystic duct , 6 . Common bile
+duct , 7 . Ampulla of Vater , 8 . Major duodenal papilla 9 . Gallbladder , 10 -- 11 . Right and left lobes of liver . 12 . Spleen . 13 . Esophagus. 14 . Stomach
+. 15 . Pancreas : 16 . Accessory pancreatic duct , 17 . Pancreatic duct . 18 . Small intestine : 19 . Duodenum , 20 . Jejunum 21 -- 22 . Right and left kidneys
+. The front border of the liver has been lifted up ( brown arrow ) . The main purpose of the gallbladder is to store bile , also called gall , needed for the
+digestion of fats in food .
+</item 6>
+
+<item 7>
+Gallbladder
+Gallbladder - Wikipedia Gallbladder This is the latest accepted revision , reviewed on 18 January 2018 . Jump to : navigation , search Gallbladder The
+gallbladder sits beneath the liver . Details Precursor Foregut System Digestive system Artery Cystic artery Vein Cystic vein Nerve Celiac ganglia , Vagus nerve
+Identifiers Latin Vesica biliaris , vesica fellea MeSH A03. 159.439 Dorlands / Elsevier 12383343 TA A05. 8.02. 001 FMA 7202 Anatomical terminology ( edit on
+Wikidata ) In vertebrates , the gallbladder is a small hollow organ where bile is stored and concentrated before it is released into the small intestine . In
+humans , the pear - shaped gallbladder lies beneath the liver , although the structure and position of the gallbladder can vary significantly among animal
+species . It receives and stores bile , produced by the liver , via the common hepatic duct , and releases it via the common bile duct into the duodenum , where
+the bile helps in the digestion of fats .
+</item 7>
+
+<item 8>
+Gallbladder
+Early in development , the human embryo has three germ layers and abuts an embryonic yolk sac . During the second week of embryogenesis , as the embryo grows ,
+it begins to surround and envelop portions of this sac . The enveloped portions form the basis for the adult gastrointestinal tract . Sections of this foregut
+begin to differentiate into the organs of the gastrointestinal tract , such as the esophagus , stomach , and intestines . During the fourth week of
+embryological development , the stomach rotates . The stomach , originally lying in the midline of the embryo , rotates so that its body is on the left . This
+rotation also affects the part of the gastrointestinal tube immediately below the stomach , which will go on to become the duodenum . By the end of the fourth
+week , the developing duodenum begins to spout a small outpouching on its right side , the hepatic diverticulum , which will go on to become the biliary tree .
+Just below this is a second outpouching , known as the cystic diverticulum , that will eventually develop into the gallbladder . Function ( edit ) 1 .
+</item 8>
+
+<item 9>
+Gallbladder
+30 . Archived from the original on April 1 , 2008 . Retrieved June 29 , 2007 . ^ Jump up to : Gray 's Anatomy 2008 , p. 1187 - 81 . Jump up ^ Jon W. Meilstrup (
+1994 ) . Imaging Atlas of the Normal Gallbladder and Its Variants . Boca Raton : CRC Press . p. 4 . ISBN 0 - 8493 - 4788 - 2 . Jump up ^ Nagral , Sanjay ( 2005
+) . `` Anatomy relevant to cholecystectomy '' . Journal of Minimal Access Surgery . 1 ( 2 ) : 53 . doi : 10.4103 / 0972 - 9941.16527 . Jump up ^ Shakelford 's
+Surgery of Alimentary Tract , ed. 7 . 2013 ^ Jump up to : Young , Barbara ; et al. ( 2006 ) . Wheater 's functional histology : a text and colour atlas ( 5th ed
+. ) . ( Edinburgh ? )
+</item 9>
+
+<item 10>
+Gallbladder
+5 ( 1 ) : 89 -- 94 . Books editor - in - chief , Susan Standring ; section editors , Neil R. Borley ; et al. ( 2008 ) . Gray 's anatomy : the anatomical basis
+of clinical practice ( 40th ed . ) . London : Churchill Livingstone . ISBN 978 - 0 - 8089 - 2371 - 8 . CS1 maint : Explicit use of et al. ( link ) CS1 maint :
+Multiple names : authors list ( link ) CS1 maint : Extra text : authors list ( link ) External links ( edit ) Wikimedia Commons has media related to Gallbladder
+. Diagram of Human Stomach and Gallbladder -- Human Anatomy Online dd , MyHealthScore.com . ( hide ) Anatomy of the liver ,
+</item 10>
+=== END ITEM id=7628af0e433b0879 ===
+
+=== ITEM id=ee5062575298fe33 ===
+Gold sentences and facts:
+Sentence 0: Subjects are all taken on the same level - there is no higher or standard grade as in the past . There are three pass levels , each with different pass requirements. First is a pass with Higher certificate , one must obtain 40 % in home language , 40 % in two other subjects and must obtain 30 % in three other subjects . A learner who passed matric with higher certificate level , can not enroll for a University Degree nor a Diploma at an institute of higher learning . The mean mark in any subject is usually about 55 . Only a small proportion of candidates score an ' A ' in any subject ( from as little as 2 % to a maximum of about 10 % in subjects taken by highly select groups . ) A further 8 -- 15 % are likely to gain a ' B ' and about 20 -- 25 % achieve a ' C ' grade . The National Senior Certificate is a group certificate and records an aggregate mark .
+  Fact 0.0: All subjects are taken on the same level, and there is no higher or standard grade as in the past.
+  Fact 0.1: There are three pass levels, each with different pass requirements.
+  Fact 0.2: The first pass level is a pass with Higher certificate.
+  Fact 0.3: To pass with Higher certificate, a learner must obtain 40% in home language, 40% in two other subjects, and 30% in three other subjects.
+  Fact 0.4: A learner who passed matric with Higher certificate level cannot enroll for a University Degree.
+  Fact 0.5: A learner who passed matric with Higher certificate level cannot enroll for a Diploma at an institute of higher learning.
+  Fact 0.6: The mean mark in any subject is usually about 55.
+  Fact 0.7: Only a small proportion of candidates score an 'A' in any subject, from as little as 2% to a maximum of about 10% in subjects taken by highly select groups.
+  Fact 0.8: A further 8 to 15% of candidates are likely to gain a 'B' in a subject.
+  Fact 0.9: About 20 to 25% of candidates achieve a 'C' grade.
+  Fact 0.10: The National Senior Certificate is a group certificate.
+  Fact 0.11: The National Senior Certificate records an aggregate mark.
+
+Retrieved items:
+<item 1>
+National Senior Certificate
+National Senior certificate - wikipedia National Senior certificate Jump to : navigation , search This article needs additional citations for verification .
+Please help improve this article by adding citations to reliable sources . Unsourced material may be challenged and removed . ( April 2010 ) ( Learn how and
+when to remove this template message ) The National Senior Certificate or NSC is a high school diploma and is the main school - leaving certificate in South
+Africa . This certificate is commonly known as the matriculation ( matric ) certificate , as grade 12 is the matriculation grade . The NSC , previously known as
+the Further Education and Training Certificate or FETC , replaced the Senior Certificate with effect from 2008 and was phased in starting with grade 10 in 2006
+. Pupils study at least seven subjects , including two compulsory official South African languages , either Mathematics or Mathematical Literacy , Life
+Orientation and three elective subjects . Subjects are all taken on the same level - there is no higher or standard grade as in the past . There are three pass
+levels , each with different pass requirements.
+</item 1>
+
+<item 2>
+National Senior Certificate
+For example a learner who obtains a mark of zero ( 0 ) out of 300 will obtain 5 % of zero ( which is zero ) for language compensation ; a learner who obtains 10
+out of 300 will receive 5 % of 10 , which is 0 , 5 marks , for language compensation ; a learner who obtains 100 out of 300 marks will obtain an additional 5
+marks for language compensation . '' This kind of compensation has some impact on pass rates , but does provide significant impact at the upper end of the scale
+, affecting those applying for admission to university . For example , a qualifying learner obtaining 95 % would receive 95 x 1.05 = 99.75 % ( which rounds to
+100 % ) . A learner obtaining 40 % would receive 40 x 1.05 = 42.0 % . University entrance ( edit ) In addition to minimum grades required in each subject ,
+universities either set their own entrance tests and / or use the National Benchmark Tests ( NBT ) .
+</item 2>
+
+<item 3>
+National Senior Certificate
+Citizenship and Responsibility , this section teaches learners about their rights and their duties as citizens . Assessment ( edit ) There are three types of
+subjects : General Subjects An end - of - year examination : 75 % of the total mark Portfolio ( Continuous Assessment ) : 25 % of the total mark Practical
+Subjects An end - of - year examination : 50 % of the total mark Portfolio ( Continuous Assessment ) : 25 % of the total mark Practical component : 25 % of the
+total mark Language Subjects An end - of - year examination : 50 % of the total mark Portfolio ( Continuous Assessment ) : 25 % of the total mark Oral
+Examination : 25 % of the total mark Continuous Assessment ( CASS ) includes all the tests , examinations , tasks , activities , orals and projects done
+throughout the year . Matric results are usually out of 400 marks .
+</item 3>
+
+<item 4>
+National Senior Certificate
+Life Orientation is a broad - learning subject that covers non-academic skills needed in everyday life . Life Orientation is examined , marked and moderated
+internally and comprises the following sections : World of Work , helping learners find guidance in their choice of career and prepare them for the working
+world Health Education , this sections includes sex education , HIV / Aids talks , pregnancy , etc . Physical Education , involves physical exercise and
+training , it is done on a separate basis but eventually forms part of the Life Orientation mark Religious Education , each South African school decides which
+religion to adhere to ( as according to the South African schools act ) , learners may be exempted from these classes . In practice this means that learners may
+be exempted from , example , the Bible Studies class , but are compelled to attend the Religious Studies class ( which deals with all religions as a study ) .
+Citizenship and Responsibility , this section teaches learners about their rights and their duties as citizens .
+</item 4>
+
+<item 5>
+National Senior Certificate
+: 10 - 2007 ) Jump up ^ Politicsweb , 3 January 2011 , `` Umalusi explains matric mark adjustments '' , Dr Sizwe Mabizela , 03 January 2011 Jump up ^
+http://nbt.ac.za/ About NBT Retrieved 21 March 2011 Jump up ^ http://wced.pgwc.gov.za/circulars/circulars08/e33_08.html External links ( edit ) Department of
+Education official site IEB official site Retrieved from `` https://en.wikipedia.org/w/index.php?title=National_Senior_Certificate&oldid=837110357 '' Categories
+: Education in South Africa Secondary school qualifications Hidden categories : Articles needing additional references from April 2010 All articles needing
+additional references Talk Contents About Wikipedia Add links This page was last edited on 18 April 2018 , at 19 : 39 . About Wikipedia
+</item 5>
+
+<item 6>
+National Senior Certificate
+Matric results are usually out of 400 marks . Level system ( 1 to 7 ) ( edit ) Level 7 : 80 - 100 % ( Outstanding achievement ) Level 6 : 70 - 79 % (
+Meritorious achievement ) Level 5 : 60 - 69 % ( Substantial achievement ) Level 4 : 50 - 59 % ( Moderate achievement ) Level 3 : 40 - 49 % ( Adequate
+achievement ) Level 2 : 30 - 39 % ( Elementary achievement ) Level 1 : 0 - 29 % ( Not achieved - Fail ) The 5 % language compensation ( edit ) Language
+compensation is described by several sources : `` To the final mark is added the language compensation , which is 5 % of the mark attained by the candidate for
+all non-language subjects , for candidates whose mother tongue is not English or Afrikaans . The 5 % compensates learners for the disadvantage suffered by these
+candidates being instructed in a language that is not their mother tongue . ''
+</item 6>
+
+<item 7>
+National Senior Certificate
+The IEB operates on a national level catering primarily for independent schools . Contents ( hide ) 1 Subject requirements 1.1 Group A : Fundamentals (
+Compulsory ) 1.2 Group B : Electives 2 Life Orientation 3 Assessment 4 Level system ( 1 to 7 ) 5 The 5 % language compensation 6 University entrance 7 See also
+8 References 9 External links Subject requirements. ( edit ) Learners study at least 7 subjects - 4 compulsory and at least 3 electives . All subjects are
+written on one grade only and are no longer written on Higher or Standard Grade . Not all schools offer the full range of Elective subjects listed here . Each
+school may offer subjects specific to its academic orientation . For example , Agriculture Schools offer the agriculture - orientated subjects whereas technical
+Schools offer the practical and mechanical - orientated subjects.
+</item 7>
+
+<item 8>
+National Senior Certificate
+To study for a bachelor 's degree at a South African university requires that the applicant has at least an NSC endorsed by Umalusi , with a pass of 30 % in the
+chosen university 's language of learning and teaching , as well as a level 4 or higher in the following list of designated , 19 - credit subjects : Accounting
+Agricultural Sciences Business Studies Dramatic Arts Economics Engineering Graphics and Design Geography History Consumer Studies Information Technology
+Languages ( one language of learning and teaching at a higher education institution and two other recognised language subjects ) Life Sciences Mathematics
+Mathematical Literacy Music Physical Sciences Religion Studies Visual Arts See also ( edit ) High school # South Africa Matriculation in South Africa
+Independent Examinations Board References ( edit ) Jump up ^ SOUTH AFRICAN NATIONAL ASSEMBLY : QUESTION 757 , DATE OF PUBLICATION OF INTERNAL QUESTION PAPER :
+11 / 03 / 2011 ( INTERNAL QUESTION PAPER : 06 / 2011 ) Jump up ^ SOUTH AFRICAN NATIONAL ASSEMBLY : WRITTEN REPLY TO QUESTION 469 , DATE OF PUBLICATION IN
+INTERNAL QUESTION PAPER : 26 - 03 - 2007 ( INTERNAL QUESTION PAPER NO.
+</item 8>
+
+<item 9>
+National Senior Certificate
+V Group a : fundamentals ( compulsory ) ( edit ) Learners must study 4 compulsory subjects , Two official languages of South Africa must be studied : Afrikaans
+English Ndebele Northern Sotho Sesotho Siswati Tsonga Tswana Venda Xhosa Zulu Mathematics or Mathematical Literacy Life Orientation Group B : electives ( edit )
+At least 3 subjects from the following : Accounting Agricultural Management Practices Agricultural Sciences Agricultural Technology Business Studies Civil
+Technology Computer Applications Technology ( previously Computer Studies Standard Grade - Literacy ) Consumer Studies Dance Studies Design Dramatic Arts
+Economics Electrical Technology Engineering Graphics & Design Geography History Hospitality Studies ( previously Home Economics ) Information Technology (
+previously Computer Studies Higher Grade - Programming ) Life Sciences ( previously Biology ) Mechanical Technology Music Physical Science Religion Studies
+Second Additional Language Third Additional Language Tourism Visual Arts Life Orientation ( edit ) Life Orientation ( colloquially abbreviated as `` LO '' ) has
+been introduced into the senior high school phase as an examination subject . Life Orientation is a broad - learning subject that covers non-academic skills
+needed in everyday life .
+</item 9>
+
+<item 10>
+National Senior Certificate
+There are three pass levels , each with different pass requirements. First is a pass with Higher certificate , one must obtain 40 % in home language , 40 % in
+two other subjects and must obtain 30 % in three other subjects . A learner who passed matric with higher certificate level , can not enroll for a University
+Degree nor a Diploma at an institute of higher learning . The mean mark in any subject is usually about 55 . Only a small proportion of candidates score an ' A
+' in any subject ( from as little as 2 % to a maximum of about 10 % in subjects taken by highly select groups . ) A further 8 -- 15 % are likely to gain a ' B '
+and about 20 -- 25 % achieve a ' C ' grade . The National Senior Certificate is a group certificate and records an aggregate mark . The Department of Basic
+Education has responsibility for general educational policy to be implemented by nine provincial education departments and private providers such as the
+Independent Examinations Board ( IEB ) . There are nine provincial examination boards and three independent boards , of which the IEB is the biggest . The IEB
+operates on a national level catering primarily for independent schools .
+</item 10>
+=== END ITEM id=ee5062575298fe33 ===
+
+=== ITEM id=a4627db53eb54470 ===
+Gold sentences and facts:
+Sentence 0: As a young woman , Rogue permanently absorbed the superhuman powers and the psyche of Carol Danvers , the original Ms. Marvel . This provided her with superhuman strength , stamina , durability , reflexes , speed and a 7th sense . She was able to repel bullets and fly at sub-sonic speeds , much like Ms. Marvel could . In addition , she possessed an amalgamated mutant human / Kree physiology that rendered her resistant to most toxins and poisons , with the added effect of making her virtually invulnerable .
+  Fact 0.0: Rogue, as a young woman, permanently absorbed the superhuman powers of Carol Danvers.
+  Fact 0.1: Rogue, as a young woman, permanently absorbed the psyche of Carol Danvers.
+  Fact 0.2: Carol Danvers is the original Ms. Marvel.
+  Fact 0.3: Rogue's absorption gave Rogue superhuman strength.
+  Fact 0.4: Rogue's absorption gave Rogue superhuman stamina.
+  Fact 0.5: Rogue's absorption gave Rogue superhuman durability.
+  Fact 0.6: Rogue's absorption gave Rogue superhuman reflexes.
+  Fact 0.7: Rogue's absorption gave Rogue superhuman speed.
+  Fact 0.8: Rogue's absorption gave Rogue a 7th sense.
+  Fact 0.9: Rogue was able to repel bullets.
+  Fact 0.10: Rogue was able to fly at sub-sonic speeds.
+  Fact 0.11: Rogue's ability to fly at sub-sonic speeds was much like Ms. Marvel's.
+  Fact 0.12: Rogue possessed an amalgamated mutant human/Kree physiology.
+  Fact 0.13: Rogue's amalgamated mutant human/Kree physiology made Rogue resistant to most toxins.
+  Fact 0.14: Rogue's amalgamated mutant human/Kree physiology made Rogue resistant to most poisons.
+  Fact 0.15: The added effect of Rogue's amalgamated physiology was that Rogue was virtually invulnerable.
+
+Retrieved items:
+<item 1>
+Rogue (comics)
+She possesses superhuman strength sufficient enough to lift well over 100 tons , as well as some degree of superhuman speed , agility , and reflexes . In
+addition , Rogue is virtually invulnerable to damage and is capable of flying at high speeds . Rogue 's eyes glow in darkness and her vision extends somewhat
+into the infrared spectrum , allowing her to see in the dark . Her new ionic physiology also grants her a form of immortality , protecting her from age and
+disease . Natural skills ( edit ) Rogue has shown a fair knowledge of unarmed combat when in a position where she has to fight in situations where she can not
+simply use her powers to knock her foe out . She has also received a degree of training from Professor X to protect herself against even subtle telepathic
+attacks , this training allowing her to escape Kobik 's reprogramming of various Avengers and villains to reassemble her teammates against this new threat when
+even experienced telepaths like Cable were trapped in the illusion . Rogue 's real name ( edit ) In the Going Rogue arc of her 2004 ongoing series , Rogue 's
+real name is finally established as Anna Marie .
+</item 1>
+
+<item 2>
+Rogue (comics)
+She also still possessed a `` fluid genome '' that enabled Sage to use her as a conduit through which to channel the mutant powers of the X-Treme X-Men team in
+a fight against Bogan . Sunfire powers ( edit ) In the short - lived volume three of her self - entitield series ( 2004 -- 2005 ) , Rogue absorbed a large
+portion of the mutant Sunfire 's solar - absorption based powers . In addition to her own natural mutant abilities Rogue could then project intense heat and
+flame , envelop her body in a fiery aura , fly by focusing her power downwards in a tight stream to propel her like a rocket , focus her power inward to
+increase her strength ( though not at her Ms. Marvel levels ) , exercise immunity to heat and radiation , and see the infra - red spectrum . Rogue was
+eventually purged of these abilities when she came into contact with Hope Summers . Wonder Man powers ( edit ) Rogue currently possesses Wonder Man 's essence ,
+including his powers and psyche . Her organic tissues have been permeated with ionic energy , granting her an array of superhuman abilities .
+</item 2>
+
+<item 3>
+Rogue (comics)
+Sauron Masque Thornn Fatale Random Aurora Post Sabre Sabretooth Fever Pitch Juggernaut Domino Related topics List of Brotherhood of Mutants members X-Men X-Men
+Creators : Stan Lee Jack Kirby Original members Professor X Cyclops Iceman Beast Angel Phoenix Later members Anole Ariel Armor Aurora Banshee Bishop Blindfold
+Blink Boom - Boom Box Cable Cannonball Chamber Changeling Cipher Cloak and Dagger Colossus Cypher Darwin Dazzler Deadpool Doctor Nemesis Domino Dust Elixir
+Fantomex Firestar Forge Frenzy Emma Frost Gambit Gentle Graymalkin Havok Hellion Hepzibah Hope Husk Ink Joseph Jubilee Karma Lady Mastermind Lifeguard Lockheed
+Longshot Maggott Magik Magma Magneto Marrow Mercury Mimic Moonstar Mystique Namor Nightcrawler Northstar Omega Sentinel Petra Pixie Polaris Prodigy Psylocke
+Revanche Rockslide Rogue Sabretooth Sage Shadowcat Slipstream Spyke Stacy X Storm Rachel Summers Sunfire Sunspot Surge Sway Thunderbird ( John Proudstar )
+Thunderbird ( Neal Shaara ) Warlock Warpath Wolf Cub Wolverine X-23 X-Man Shen Xorn Secondary teams Alpha Squadron Excalibur Generation X New
+</item 3>
+
+<item 4>
+Rogue (comics)
+Her visual cue is often the white streak that runs through her hair . Contents ( hide ) 1 Publication history 2 Fictional character biography 2.1 Early life 2.2
+Brotherhood of Evil Mutants 2.3 X-Men 2.4 Return 2.5 X-Treme X-Men team 2.6 Back to the X-Men 2.7 Blood of Apocalypse 2.8 Endangered Species : Rogue 's X-Men
+2.9 Messiah Complex 2.10 Being cured 2.11 Utopia 2.12 Nation - X 2.13 Necrosha 2.14 Post-Siege 2.15 Second Coming 2.16 Post `` Age of X '' 2.17 Avengers vs.
+X-Men 2.18 Uncanny Avengers 2.19 X-Men ( Volume 4 ) 2.20 AXIS and return to Uncanny Avengers 2.21 All - New , All - Different Marvel 3 Powers and abilities 3.1
+Mutant powers 3.2 Fully developed mutant abilities 3.3 Ms.
+</item 4>
+
+<item 5>
+Rogue (comics)
+When Professor Xavier removes the blocks , her powers are allowed to develop normally . With this new control , Rogue demonstrates the ability to absorb and
+collectively utilize all the powers of the New X-Men , in order to defeat a rogue Predator X , with no apparent harm to either them or herself . Her power also
+affects aliens , such as when she was transferred to a planet in another dimension by Magik , and one of the aliens involuntarily touches her and she gains the
+ability to communicate in their language , along with their knowledge . She later uses a more lethal version of her powers against the Avengers during her fight
+with them , even making Falcon and She - Hulk immediately unconscious without any negative feedback on her physical self ( besides She - Hulk 's green skin )
+but she can not control the minds of the ones she absorbs . She absorbs their powers and renders them unconscious for a long time . The new twist in Rogue 's
+powers consists of prompting her victims of her skin - to - skin contact , for a consent on the process .
+</item 5>
+
+<item 6>
+Rogue (comics)
+Ms. Marvel powers ( edit ) As a young woman , Rogue permanently absorbed the superhuman powers and the psyche of Carol Danvers , the original Ms. Marvel . This
+provided her with superhuman strength , stamina , durability , reflexes , speed and a 7th sense . She was able to repel bullets and fly at sub-sonic speeds ,
+much like Ms. Marvel could . In addition , she possessed an amalgamated mutant human / Kree physiology that rendered her resistant to most toxins and poisons ,
+with the added effect of making her virtually invulnerable . Rogue on the cover of Rogue vol 3 # 7 ( March 2005 ) ; art by Frank G. D'Armata , Scot Eaton , and
+Don Hillsman Rogue also gained a precognitive `` seventh sense '' that enables her to predict an enemy 's move subconsciously during battle . She used this
+ability to predict where Nightcrawler would teleport and from which direction Magus of the Technarchy would attack . This ability was not always reliable ,
+however , and would randomly and sporadically activate .
+</item 6>
+
+<item 7>
+Rogue (comics)
+She is also depicted as suffering side - effects from the mass terrigenesis , requiring regular injections to stop herself becoming ill or dying . When various
+Avengers are brainwashed into civilian lives in the community of Pleasant Hill -- a S.H.I.E.L.D. project to ' reprogram ' supervillains into regular civilians
+using fragments of a Cosmic Cube that has since gained sentience -- Rogue 's new identity of Claire sees through the deception thanks to telepathic training
+provided by Professor X , allowing her mind to plant various clues that lead her to the rest of the team . Later on , the Red Skull attempts to mount a new
+attack on the team , but Deadpool is able to resist the telepathic attack long enough to get Magneto 's old helmet on Rogue so that she can resist the Skull 's
+telepathy . Rogue subsequently takes the Skull to a new facility where Beast is able to extract the uniquely Xavier elements from the Skull 's brain , depriving
+him of Xavier 's telepathy , while Rogue and Johnny Storm incinerate the brain . Powers and abilities ( edit ) This section relies too much on references to
+primary sources .
+</item 7>
+
+<item 8>
+Rogue (comics)
+Cub Wolverine X-23 X-Man Shen Xorn Secondary teams Alpha Squadron Excalibur Generation X New Mutants Paragons X-Corporation X-Corps X-Factor X-Force X-Statix
+X-Terminators X.S.E. X-Treme Sanctions Executive Xavier 's Security Enforcers Supporting characters Senator Robert Kelly Legion Moira MacTaggert Lilandra
+Neramani Villains Apocalypse Arcade Bastion Black Tom Cassidy Graydon Creed Count Nefaria Dark Beast Demon Bear Exodus Trevor Fitzroy Emma Frost Henry Peter
+Gyrich Cameron Hodge High Evolutionary Juggernaut Kid Omega Kree Lady Deathstrike Steven Lang Master Mold Mastermind Mesmero Mister Sinister Mojo Moses Magnum
+Mystique N'astirh Negasonic Teenage Warhead Nimrod Cassandra Nova Omega Red Onslaught Predator X Proteus Madelyne Pryor Sauron Selene Shadow King Sebastian Shaw
+Silver Samurai Spiral Stryfe William Stryker Sublime Sugar Man Terrax Toad Bolivar Trask Lawrence Trask Vulcan X-Cutioner Kuan - Yin Xorn Villain teams Acolytes
+Alliance of Evil Brood Brotherhood of Mutants Children of the Vault Externals Factor Three Fenris
+</item 8>
+
+<item 9>
+Rogue (comics)
+Through meditation , Rogue learned how to suppress the random manifestations of most of these abilities , but found herself with a new ' default ' state for a
+time , where she possessed Wolverine 's claws and healing factor , Cyclops ' optic blasts - requiring her to wear ruby quartz glasses - while also still
+retaining her mutant and Ms. Marvel powers . Later , Sage used her own mutant abilities to ' jump - start ' Rogue 's power , giving her the control to manifest
+any ability she had ever absorbed , whenever she wished to . It is generally accepted that after regaining her abilities after X-Treme X-Men , she has lost this
+ability . Though Z'Cann was a telepath , Rogue never displayed this power ( though she did manifest telepathy , it was with the Phoenix energy form , so it was
+most likely an echo of Jean Grey 's powers ) . Powerless ( edit ) For a time Rogue lost all of her powers , including her original mutant ones , after she was
+fatally injured in a fight with the mysterious warrior Vargas . During this period , she displayed exceptional fighting skills and agility , though it was said
+these were not superhuman in nature .
+</item 9>
+
+<item 10>
+Rogue (comics)
+Marvel personality could , they can occasionally make their presences known . Fully developed mutant abilities ( edit ) Following the conclusion of Messiah
+Complex , Rogue 's slate was wiped clean . The mutant baby 's touch mysteriously erased all of the previous memories and abilities Rogue had absorbed ,
+including those of the Hecatomb . It also cured her of the Strain 88 virus . Rogue 's touch now simply steals the memories and abilities of individuals with
+whom she comes in direct skin - to - skin contact . The longer the contact , the longer Rogue retains the absorbed information , powers , and also the abilities
+of the individuals she absorbs . She can now control her powers , making her touch lethal -- or non-lethal -- at will . Following the events of X-Men : Legacy ,
+Rogue appears to be able to activate her powers at will , as opposed to them being constantly active , as demonstrated when she kisses Gambit without incident .
+Her inability to control her powers stemmed from mental blocks within her mind which formed each time she used her abilities , crippling the development of her
+powers from their nascent stage . When Professor Xavier removes the blocks , her powers are allowed to develop normally .
+</item 10>
+=== END ITEM id=a4627db53eb54470 ===

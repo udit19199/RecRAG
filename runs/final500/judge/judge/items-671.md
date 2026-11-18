@@ -1,0 +1,798 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=6cbb817e2b673c0e ===
+Gold sentences and facts:
+Sentence 0: Fortnite is set in contemporary Earth , where the sudden appearance of a worldwide storm causes 98 % of the world 's population to disappear , and zombie - like creatures rise to attack the remainder . Considered by Epic as a cross between Minecraft and Left 4 Dead , Fortnite has up to four players cooperating on various missions on randomly - generated maps to collect resources , build fortifications around defensive objectives that are meant to help fight the storm and protect survivors , and construct weapons and traps to engage in combat with waves of these creatures that attempt to destroy the objectives . Players gain rewards through these missions to improve their hero characters , support teams , and arsenal of weapon and trap schematics to be able to take on more difficult missions . The game is supported through microtransactions to purchase in - game currency that can be used towards these upgrades .
+  Fact 0.0: Fortnite is set in contemporary Earth.
+  Fact 0.1: A sudden appearance of a worldwide storm causes 98% of the world's population to disappear.
+  Fact 0.2: Zombie-like creatures rise to attack the remainder of the population.
+  Fact 0.3: Epic considers Fortnite a cross between Minecraft and Left 4 Dead.
+  Fact 0.4: Fortnite has up to four players cooperating on various missions.
+  Fact 0.5: The missions are on randomly generated maps.
+  Fact 0.6: Players collect resources in the missions.
+  Fact 0.7: Players build fortifications around defensive objectives.
+  Fact 0.8: The fortifications are meant to help fight the storm and protect survivors.
+  Fact 0.9: Players construct weapons and traps.
+  Fact 0.10: Players engage in combat with waves of zombie-like creatures.
+  Fact 0.11: The creatures attempt to destroy the objectives.
+  Fact 0.12: Players gain rewards through the missions.
+  Fact 0.13: Rewards are used to improve hero characters, support teams, and arsenal of weapon and trap schematics.
+  Fact 0.14: The rewards help players take on more difficult missions.
+  Fact 0.15: The game is supported through microtransactions.
+  Fact 0.16: Microtransactions purchase in-game currency.
+  Fact 0.17: In-game currency can be used towards these upgrades.
+Sentence 1: Fortnite was first revealed at the 2011 Spike Video Game Awards ( VGA ) , with Epic 's former design director Cliff Bleszinski introducing a trailer for the game . Donald Mustard , creative lead at Epic , said in 2017 that this announcement was `` three weeks after we came up with the idea , before we even made the game '' . The title , which started out as an internal game jam project , represents a departure from the company 's previous work . As Bleszinski explained during the Spike event , Epic wanted to `` switch things up a little bit and do something different and fun '' with Fortnite , describing it as `` a world where you explore , you scavenge , you build and ultimately you survive . '' In an interview with Engadget , he also echoed these statements , claiming that the game would be different from the Gears of War series : `` There 's no dudebros in it ... Not that there 's anything wrong with that , right ? But creatively for the team , Gears has been amazing for us . But it 's fun to kind of stretch our wings and do something that 's a little different from the usual . '' Epic Games Vice President of Publishing Mike Fischer said in 2015 that Epic recognized that they `` announced this game too soon '' , and that its lengthy development period was due to `` very good reasons . ''
+  Fact 1.0: Fortnite was first revealed at the 2011 Spike Video Game Awards (VGA).
+  Fact 1.1: Epic's former design director Cliff Bleszinski introduced a trailer for the game at the 2011 Spike Video Game Awards.
+  Fact 1.2: Donald Mustard, creative lead at Epic, said in 2017 that the announcement was three weeks after we came up with the idea, before we even made the game.
+  Fact 1.3: Fortnite started out as an internal game jam project.
+  Fact 1.4: Fortnite represents a departure from the company's previous work.
+  Fact 1.5: Bleszinski said Epic wanted to switch things up a little bit and do something different and fun with Fortnite.
+  Fact 1.6: Bleszinski described Fortnite as a world where you explore, you scavenge, you build and ultimately you survive.
+  Fact 1.7: In an interview with Engadget, Bleszinski claimed the game would be different from the Gears of War series.
+  Fact 1.8: Bleszinski said there are no dudebros in Fortnite.
+  Fact 1.9: Bleszinski said Gears has been amazing for the team.
+  Fact 1.10: Bleszinski said it is fun to stretch the team's wings and do something a little different from the usual.
+  Fact 1.11: Epic Games Vice President of Publishing Mike Fischer said in 2015 that Epic recognized they announced this game too soon.
+  Fact 1.12: Mike Fischer said the lengthy development period was due to very good reasons.
+
+Retrieved items:
+<item 1>
+Fortnite
+Jump up ^ Brown , Fraser ( December 10 , 2014 ) . `` Epic pulls back the curtain ( and flesh ) on Fortnite 's monster design '' . PCGamesN . Archived from the
+original on July 30 , 2017 . Retrieved July 29 , 2017 . Jump up ^ Greening , Chris ( October 22 , 2016 ) . `` Game Releases Calendar : 2016 Edition '' . Game
+Music Online . Archived from the original on September 30 , 2017 . Retrieved July 16 , 2017 . Jump up ^ McWhertor , Michael ( July 12 , 2012 ) . `` Epic Games '
+' Fortnite ' will be the developer 's first Unreal Engine 4 game '' . Polygon . Archived from the original on July 30 , 2017 . Retrieved August 1 , 2017 . Jump
+up ^ Makuch , Eddie ( July 12 , 2013 ) . `` Epic : Fortnite is `` Minecraft meets Left 4 Dead '' `` . GameSpot . Archived from the original on March 27 , 2015 .
+</item 1>
+
+<item 2>
+Fortnite
+Contents ( hide ) 1 Synopsis 2 Gameplay 3 Development 3.1 History 3.2 Art and design 4 Reception 4.1 Sales 4.2 Accolades 5 References 6 External links Synopsis
+One day , 98 % of Earth 's population suddenly disappeared , and the remaining population found the skies covered in dense clouds , creating chaotic storms that
+dropped husks , humanoid zombie - like creatures , that attacked the living . The survivors found ways to construct `` storm shields '' , a field that cleared
+the storm clouds from immediately overhead and reduced the attacks from husks , and used these to set up survivor bases across the globe . The player is a
+commander of one of these bases , charged with going out of the storm shield to find resources , survivors , and other allies to help expand their storm shield
+and find a way to return Earth to its normal state . Gameplay Currently , the paid - for product Fortnite provides two distinct modes : access to Fortnite
+Battle Royale , ( which is also available as a separate free - to - play title ) and the cooperative player - versus - environment `` Save the World '' , which
+is unique to the main Fortnite game .
+</item 2>
+
+<item 3>
+Fortnite
+Fortnite was being developed alongside Paragon , which Epic announced on November 2015 . As Paragon seemed to take Epic 's focus , leaving little news about
+Fortnite , CEO Tim Sweeney said in March 2016 that they were still committed to Fortnite once Paragon was launched and established , given that much of the work
+on Fortnite would take time to get the right balance for gameplay . `` We figure we should start with one major successful launch and do one at a time .
+Fortnite will be next . '' By June 2017 , Epic Games announced that Fortnite was now set for a 2018 release across Windows , macOS , and the PlayStation 4 and
+Xbox One consoles . Leading up to this free - to - play release , the game was offered as a paid early access period starting on July 25 , 2017 for all
+platforms ; players who pre-ordered Founder 's Packs were granted access to the game on July 21 . The lengthy period since the game 's alpha phases was ascribed
+to developing Fortnite as a games - as - a-service model , according to creative lead Donald Mustard .
+</item 3>
+
+<item 4>
+Fortnite
+Epic Games Vice President of Publishing Mike Fischer said in 2015 that Epic recognized that they `` announced this game too soon '' , and that its lengthy
+development period was due to `` very good reasons . '' As the game was at its very preliminary stages at the VGA reveal , the goal of this reveal was to seek
+public interest in the title and potential publishing partners as to decide on the game 's release platforms and timeframe . During the July 2012 San Diego
+Comic Con , Epic announced that Fortnite would be an exclusive personal computer title , and the first one to be developed by Epic using their new Unreal 4 game
+engine , with a planned release in 2013 . The game 's development was originally started in the Unreal 3 engine , but as they progressed , they had seen the
+opportunity to work in several of the new feature sets and scripting language offered by Unreal 4 for Fortnite , while still running on most personal computers
+at that time .
+</item 4>
+
+<item 5>
+Fortnite
+Considered by Epic as a cross between Minecraft and Left 4 Dead , Fortnite has up to four players cooperating on various missions on randomly - generated maps
+to collect resources , build fortifications around defensive objectives that are meant to help fight the storm and protect survivors , and construct weapons and
+traps to engage in combat with waves of these creatures that attempt to destroy the objectives . Players gain rewards through these missions to improve their
+hero characters , support teams , and arsenal of weapon and trap schematics to be able to take on more difficult missions . The game is supported through
+microtransactions to purchase in - game currency that can be used towards these upgrades . A standalone mode , Fortnite Battle Royale , based on the battle
+royale game genre but based on the core Fortnite gameplay , was released for the same platforms in September 2017 .
+</item 5>
+
+<item 6>
+Fortnite
+Engadget . Archived from the original on October 1 , 2017 . Retrieved July 24 , 2017 . Jump up ^ Orland , Kyle ( June 8 , 2015 ) . `` Hands - on : Fortnite is
+an overwhelming zombie defense experience '' . Ars Technica . Archived from the original on December 8 , 2017 . Retrieved December 7 , 2017 . Jump up ^ Yin -
+Pool , Wesley ( December 12 , 2011 ) . `` Epic reveals Minecraft inspiration for Fortnite '' . Eurogamer . Archived from the original on December 1 , 2017 .
+Retrieved November 29 , 2017 . Jump up ^ Rigney , Ryan ( July 12 , 2012 ) . `` First Screens : Epic 's Fortnite Is the First Unreal Engine 4 Game '' . Wired .
+Archived from the original on December 22 , 2016 . Retrieved November 29 , 2017 . Jump up ^ Hafer , T.J. ( July 12 , 2012 ) .
+</item 6>
+
+<item 7>
+Fortnite
+Development History Fortnite was first revealed at the 2011 Spike Video Game Awards ( VGA ) , with Epic 's former design director Cliff Bleszinski introducing a
+trailer for the game . Donald Mustard , creative lead at Epic , said in 2017 that this announcement was `` three weeks after we came up with the idea , before
+we even made the game '' . The title , which started out as an internal game jam project , represents a departure from the company 's previous work . As
+Bleszinski explained during the Spike event , Epic wanted to `` switch things up a little bit and do something different and fun '' with Fortnite , describing
+it as `` a world where you explore , you scavenge , you build and ultimately you survive . '' In an interview with Engadget , he also echoed these statements ,
+claiming that the game would be different from the Gears of War series : `` There 's no dudebros in it ... Not that there 's anything wrong with that , right ?
+But creatively for the team , Gears has been amazing for us . But it 's fun to kind of stretch our wings and do something that 's a little different from the
+usual . ''
+</item 7>
+
+<item 8>
+Fortnite
+Fortnite - wikipedia Fortnite Jump to : navigation , search For the battle royale version of the game , see Fortnite Battle Royale . Fortnite European box art
+Developer ( s ) Epic Games People Can Fly Publisher ( s ) Epic Games Director ( s ) Darren Sugg Artist ( s ) Pete Ellis Composer ( s ) Rom Di Prisco Engine
+Unreal Engine 4 Platform ( s ) Microsoft Windows macOS PlayStation 4 Xbox One iOS Release 2018 Genre ( s ) Survival Mode ( s ) Single - player , multiplayer
+Fortnite is a co-op sandbox survival game developed by Epic Games and People Can Fly and published by Epic Games . The game was released as a paid - for early
+access title for Microsoft Windows , macOS , PlayStation 4 and Xbox One on July 25 , 2017 , with a full free - to - play release expected in 2018 . The retail
+versions of the game were published by Gearbox Publishing , while online distribution of the PC versions is handled by Epic 's launcher . Fortnite is set in
+contemporary Earth , where the sudden appearance of a worldwide storm causes 98 % of the world 's population to disappear , and zombie - like creatures rise to
+attack the remainder .
+</item 8>
+
+<item 9>
+Fortnite
+They further opted for personal computer exclusivity to avoid the difficulty of having to go through console certification , and as they planned to be
+constantly monitoring and tweaking the game , acting as a dungeon master , the personal computer approach would allow them to do this without restrictions
+normally set by console manfuctures . Bleszinski later clarified that they would not rule out release on other platforms as they developed the title . Fortnite
+cosplayers at Gamescom 2017 Fortnite 's development was spread among several of Epic 's satellite studios , and was also co-developed by the Polish studio
+People Can Fly , which had worked with Epic previously on earlier games , and had been fully acquired by Epic sometime in 2012 . People Can Fly were briefly
+renamed Epic Games Poland in 2013 as to align with Epic 's other studios . By March 2014 , there were about 90 developers working on the game . People Can Fly
+later returned to being an independent studio and their own name in 2015 , but continued to help Epic with Fortnite 's development . During Fortnite 's
+development , Epic had seen the game industry shifting to games as a service model .
+</item 9>
+
+<item 10>
+Fortnite
+( July 12 , 2012 ) . `` Fortnite will be a PC exclusive and Epic 's first Unreal Engine 4 game '' . PC Gamer . Archived from the original on December 1 , 2017 .
+Retrieved November 29 , 2017 . Jump up ^ McGee , Maxwell ( July 13 , 2012 ) . `` Epic 's Cliff Bleszinski and Tanya Jessen Talk Up Fortnite '' . GameSpot .
+Archived from the original on February 6 , 2018 . Retrieved November 29 , 2017 . ^ Jump up to : Purchase , Robert ( September 1 , 2012 ) . `` Fortnite detailed
+at PAX Prime ; Minecraft meets DayZ '' . Eurogamer . Archived from the original on December 1 , 2017 . Retrieved November 29 , 2017 . Jump up ^ Sheridan ,
+Connor ( November 1 , 2013 ) . `` People Can Fly working on Fortnite , renamed Epic Games Poland '' . GamesRadar . Archived from the original on December 2 ,
+2017 .
+</item 10>
+=== END ITEM id=6cbb817e2b673c0e ===
+
+=== ITEM id=838f60cb8bdee889 ===
+Gold sentences and facts:
+Sentence 0: Dollree Mapp was an employee in the illegal gambling rackets dominated by Cleveland rackets kingpin Shon Birns . On May 23 , 1957 , police officers in Cleveland , Ohio , received an anonymous tip by phone that Virgil Ogletree , a numbers operator who was wanted for questioning in the bombing of rival numbers racketeer and future boxing promoter Don King 's home three days earlier , might be found at Mapp 's house , as well as illegal betting slips and equipment employed in the `` California Gold '' numbers operation set up by Mapp 's boyfriend Edward Keeling . Three officers went to the home and asked for permission to enter , but Mapp , after consulting her lawyer by telephone , refused to admit them without a search warrant . Two officers left , and one remained , watching the house from across the street .
+  Fact 0.0: Dollree Mapp was an employee in the illegal gambling rackets.
+  Fact 0.1: The illegal gambling rackets were dominated by Cleveland rackets kingpin Shon Birns.
+  Fact 0.2: On May 23, 1957, police officers in Cleveland, Ohio, received an anonymous tip by phone.
+  Fact 0.3: The anonymous tip said Virgil Ogletree might be found at Dollree Mapp's house.
+  Fact 0.4: Virgil Ogletree was a numbers operator.
+  Fact 0.5: Virgil Ogletree was wanted for questioning in the bombing of Don King's home three days before the tip.
+  Fact 0.6: Don King was a rival numbers racketeer.
+  Fact 0.7: Don King was a future boxing promoter.
+  Fact 0.8: The anonymous tip said illegal betting slips might be found at Dollree Mapp's house.
+  Fact 0.9: The anonymous tip said equipment employed in the "California Gold" numbers operation might be found at Dollree Mapp's house.
+  Fact 0.10: The "California Gold" numbers operation was set up by Dollree Mapp's boyfriend Edward Keeling.
+  Fact 0.11: Edward Keeling was Dollree Mapp's boyfriend.
+  Fact 0.12: Three officers went to Dollree Mapp's home.
+  Fact 0.13: The three officers asked for permission to enter the home.
+  Fact 0.14: Dollree Mapp consulted her lawyer by telephone.
+  Fact 0.15: Dollree Mapp refused to admit the officers without a search warrant.
+  Fact 0.16: Two officers left.
+  Fact 0.17: One officer remained, watching the house from across the street.
+
+Retrieved items:
+<item 1>
+Mapp v. Ohio
+When asked about the warrant during oral argument at the Supreme Court , the Cleveland prosecutor arguing the case cautiously deflected the question , which the
+court did not press . As the search of Mapp 's second - floor , 2 - bedroom apartment began , police handcuffed her for being belligerent . The police searched
+the house thoroughly , and discovered Ogletree , who was subsequently cleared on the bombing charge , hiding in the apartment of the downstairs tenant , Minerva
+Tate . In the search of Mapp 's apartment and in a footlocker in the basement of the house police found a quantity of `` California Gold '' betting slips and
+paraphernalia . They also found a pistol and a small quantity of pornographic books and pictures which Mapp stated a previous tenant named Morris Jones had left
+behind .
+</item 1>
+
+<item 2>
+Mapp v. Ohio
+§ 1983 Monroe v. Pape ( 1961 ) Malley v. Briggs ( 1986 ) ( hide ) Incorporation against States Unreasonable search and seizure Wolf v. Colorado ( 1949 ) Rochin
+v. California ( 1952 ) Irvine v. California ( 1954 ) Elkins v. United States ( 1960 ) Mapp v. Ohio ( 1961 ) Warrant requirements Ker v. California ( 1963 )
+Aguilar v. Texas ( 1964 ) Retrieved from `` https://en.wikipedia.org/w/index.php?title=Mapp_v._Ohio&oldid=819300745 '' Categories : United States Supreme Court
+decisions that overrule a prior Supreme Court decision Cuyahoga County , Ohio United States Supreme Court cases United States Fourth Amendment case law 20th
+century American trials 1961 in United States case law Incorporation case law American Civil Liberties Union litigation United States Supreme Court cases of the
+Warren Court Cleveland Division of Police Hidden categories : Articles needing additional references from October 2017 All articles needing additional
+references Talk Contents About Wikipedia Simple English Edit links This page was last edited on 8 January 2018 , at 16 : 31 .
+</item 2>
+
+<item 3>
+Mapp v. Ohio
+ISBN 0 - 8204 - 7267 - 0 . External links ( edit ) Wikisource has original text related to this article : Mapp v. Ohio Archival source documents relating to the
+Mapp case at Cleveland Memory Dollree Mapp , Who Defied Police Search in Landmark Case , Is Dead - New York Times `` Supreme Court Landmark Case Mapp v. Ohio ''
+from C - SPAN 's Landmark Cases : 12 Historic Supreme Court Decisions ( hide ) United States 4th Amendment case law Scope of the Fourth Amendment What
+constitutes a search ? Ex parte Jackson ( 1878 ) Boyd v. United States ( 1886 ) Gouled v. United States ( 1921 ) Burdeau v. McDowell ( 1921 ) Hester v. United
+States ( 1924 ) United States v. Lee ( 1927 ) Olmstead v. United States ( 1928 ) Goldman v. United States ( 1942 ) On Lee v. United States ( 1952 ) Abel v.
+United States ( 1960 ) Silverman v. United States ( 1961 ) Lewis v.
+</item 3>
+
+<item 4>
+Mapp v. Ohio
+Mapp was arrested , charged , and cleared on a misdemeanor charge of possessing numbers paraphernalia ; but several months later , after she refused to testify
+against Shon Birns , Edward Keeling and their associates at their trial that October for the attempted shakedown of Don King , she was prosecuted for possession
+of the books , found guilty at a 1958 trial of `` knowingly having had in her possession and under her control certain lewd and lascivious books , pictures ,
+and photographs in violation of 2905.34 of Ohio 's Revised Code '' , and sentenced to one to seven years in prison . Mapp then appealed her case to the Supreme
+Court , on the grounds that the police had no probable cause to suspect her of having the books . She stated that the 4th Amendment should be incorporated to
+the state and local level . She argued that the police could n't use the books as evidence in trial because they were found without a warrant and therefore
+illegally recovered . Mapp is the first to call upon this law . Decision ( edit ) The U.S. Supreme Court voted 5 - 3 in favor of Mapp .
+</item 4>
+
+<item 5>
+Mapp v. Ohio
+The Supreme Court accomplished this by use of a principle known as selective incorporation ; in Mapp this involved the incorporation of the provisions , as
+interpreted by the Court , of the Fourth Amendment which are applicable only to actions of the federal government into the Fourteenth Amendment due process
+clause which is applicable to actions of the states . Contents ( hide ) 1 Circumstances of the case 2 Decision 3 See also 4 References 5 Further reading 6
+External links Circumstances of the case ( edit ) This section needs additional citations for verification . Please help improve this article by adding
+citations to reliable sources . Unsourced material may be challenged and removed . ( October 2017 ) ( Learn how and when to remove this template message )
+Dollree Mapp was an employee in the illegal gambling rackets dominated by Cleveland rackets kingpin Shon Birns .
+</item 5>
+
+<item 6>
+Mapp v. Ohio
+On May 23 , 1957 , police officers in Cleveland , Ohio , received an anonymous tip by phone that Virgil Ogletree , a numbers operator who was wanted for
+questioning in the bombing of rival numbers racketeer and future boxing promoter Don King 's home three days earlier , might be found at Mapp 's house , as well
+as illegal betting slips and equipment employed in the `` California Gold '' numbers operation set up by Mapp 's boyfriend Edward Keeling . Three officers went
+to the home and asked for permission to enter , but Mapp , after consulting her lawyer by telephone , refused to admit them without a search warrant . Two
+officers left , and one remained , watching the house from across the street . Thirteen hours later , four cars full of police arrived and knocked on the door .
+When she did n't answer , they forced the door . Mapp asked to see the alleged warrant and was shown a piece of paper which she snatched away from an officer ,
+putting it inside her dress . The officers struggled with Mapp and recovered the piece of paper which was not seen by her or her lawyers again , and was not
+introduced as evidence in any of the ensuing court proceedings .
+</item 6>
+
+<item 7>
+Mapp v. Ohio
+Ohio Supreme Court reversed . Court membership Chief Justice Earl Warren Associate Justices Hugo Black Felix Frankfurter William O. Douglas Tom C. Clark John M.
+Harlan II William J. Brennan , Jr . Charles E. Whittaker Potter Stewart Case opinions Majority Clark , joined by Warren , Black , Douglas , Brennan Concurrence
+Black Concurrence Douglas Concurrence Stewart Dissent Harlan , joined by Frankfurter , Whittaker Laws applied U.S. Const . amends. IV , XIV This case overturned
+a previous ruling or rulings Wolf v. Colorado ( 1949 ) Mapp v. Ohio , 367 U.S. 643 ( 1961 ) , was a landmark case in criminal procedure , in which the United
+States Supreme Court decided that evidence obtained in violation of the Fourth Amendment , which protects against `` unreasonable searches and seizures , '' may
+not be used in state law criminal prosecutions in state courts , as well as in federal criminal law prosecutions in federal courts as had previously been the
+law .
+</item 7>
+
+<item 8>
+Mapp v. Ohio
+Supreme Court voted 5 - 3 in favor of Mapp . The Court overturned the conviction , and five justices found that the States were bound to exclude evidence seized
+in violation of the 4th Amendment . This ruling officially applied the exclusionary rule to the states . See also ( edit ) United States Bill of Rights Fruit of
+the poisonous tree Exclusionary rule References ( edit ) Jump up ^ Zotti , Priscilla . Injustice for All ( Peter Lang , 2005 ) . Jump up ^ Mapp v. Ohio , 367
+U.S. 643 ( U.S. 1961 ) . Jump up ^ Duignan , Brian ( 2012 - 05 - 25 ) . `` Mapp v. Ohio '' . Encyclopædia Britannica Online . Encyclopædia Britannica Inc .
+Retrieved March 19 , 2014 . Jump up ^ https://www.law.cornell.edu/supremecourt/text/367/643#writing - Jump up ^ Williams , Bob . `` Dolly Mapp Sheds Glamour Gal
+Role '' , Cleveland Call and Post , Nov.
+</item 8>
+
+<item 9>
+Mapp v. Ohio
+23 , 1957 , p. 1 . Jump up ^ http://www.infoplease.com/us/supreme-court/cases/ar19.html Further reading ( edit ) Long , Carolyn ( 2006 ) . Mapp v. Ohio :
+Guarding Against Unreasonable Searches and Seizures . University Press of Kansas . ISBN 0 - 7006 - 1441 - 9 . Stewart , Potter ( 1983 ) . `` The Road to Mapp v.
+Ohio and beyond : The Origins , Development and Future of the Exclusionary Rule in Search - and - Seizure Cases '' . Columbia Law Review . 83 ( 6 ) : 1365 --
+1404 . doi : 10.2307 / 1122492 . JSTOR 1122492 . Zotti , Priscilla H. Machado ( 2005 ) . Injustice for All : Mapp vs. Ohio and the Fourth Amendment . New York :
+Peter Lang . ISBN 0 - 8204 - 7267 - 0 .
+</item 9>
+
+<item 10>
+Mapp v. Ohio
+Mapp v. Ohio - wikipedia Mapp v. Ohio Jump to : navigation , search Mapp v. Ohio Supreme Court of the United States Argued March 29 , 1961 Decided June 19 ,
+1961 Full case name Dollree Mapp v. State of Ohio Citations 367 U.S. 643 ( more ) 81 S. Ct. 1684 ; 6 L. Ed . 2d 1081 ; 1961 U.S. LEXIS 812 ; 86 Ohio L. Abs. 513
+; 16 Ohio Op . 2d 384 ; 84 A.L.R. 2d 933 Prior history Defendant convicted , Cuyahoga County , Ohio Court of Common Pleas ; affirmed , Ohio Court of Appeals ;
+affirmed , Ohio Supreme Court 166 N.E. 2d 387 ( Ohio 1960 ) Subsequent history Rehearing denied , 368 U.S. 871 ( 1961 ) Holding The Fourth Amendment prohibition
+against unreasonable searches and seizures , as applied to the states through the Fourteenth , excludes unconstitutionally obtained evidence from use in
+criminal prosecutions . Ohio Supreme Court reversed .
+</item 10>
+=== END ITEM id=838f60cb8bdee889 ===
+
+=== ITEM id=852c6e6c0ba58e99 ===
+Gold sentences and facts:
+Sentence 0: In healthy adults , there are two normal heart sounds , often described as a lub and a dub ( or dup ) , that occur in sequence with each heartbeat . These are the first heart sound ( S ) and second heart sound ( S ) , produced by the closing of the atrioventricular valves and semilunar valves , respectively . In addition to these normal sounds , a variety of other sounds may be present including heart murmurs , adventitious sounds , and gallop rhythms S and S .
+  Fact 0.0: In healthy adults there are two normal heart sounds.
+  Fact 0.1: The two normal heart sounds are often described as a lub and a dub (or dup).
+  Fact 0.2: The two normal heart sounds occur in sequence with each heartbeat.
+  Fact 0.3: The first heart sound (S) is produced by the closing of the atrioventricular valves.
+  Fact 0.4: The second heart sound (S) is produced by the closing of the semilunar valves.
+  Fact 0.5: The closing of the atrioventricular valves and the semilunar valves produces the first and second heart sounds, respectively.
+  Fact 0.6: In addition to the normal sounds, a variety of other sounds may be present.
+  Fact 0.7: The other sounds that may be present include heart murmurs, adventitious sounds, and gallop rhythms labeled S and S.
+
+Retrieved items:
+<item 1>
+Heart sounds
+The sudden tensing of the chordae tendineae and the squeezing of the ventricles against closed semilunar valves , sends blood rushing back toward the atria ,
+and the parachute - like valves catch the rush of blood in their leaflets causing the valve to snap shut . The S1 sound results from reverberation within the
+blood associated with the sudden block of flow reversal by the valves . The delay of T1 even more than normally causes the split S1 which is heard in a right
+bundle branch blockage . The second heart sound , or S , forms the `` dub '' of `` lub - dub '' and is composed of components A ( aortic valve closure ) and P (
+pulmonary valve closure ) . Normally A precedes P especially during inspiration where a split of S can be heard . It is caused by the closure of the semilunar
+valves ( the aortic valve and pulmonary valve ) at the end of ventricular systole and the beginning of ventricular diastole . As the left ventricle empties ,
+its pressure falls below the pressure in the aorta .
+</item 1>
+
+<item 2>
+Heart sounds
+The reason the third heart sound does not occur until the middle third of diastole is probably that during the early part of diastole , the ventricles are not
+filled sufficiently to create enough tension for reverberation . It may also be a result of tensing of the chordae tendineae during rapid filling and expansion
+of the ventricle . In other words , an S3 heart sound indicates increased volume of blood within the ventricle . An S3 heart sound is best heard with the bell -
+side of the stethoscope ( used for lower frequency sounds ) . A left - sided S3 is best heard in the left lateral decubitus position and at the apex of the
+heart , which is normally located in the 5th left intercostal space at the midclavicular line . A right - sided S3 is best heard at the lower - left sternal
+border . The way to distinguish between a left and right - sided S3 is to observe whether it increases in intensity with inhalation or exhalation . A right -
+sided S3 will increase on inhalation , while a left - sided S3 will increase on exhalation .
+</item 2>
+
+<item 3>
+Heart sounds
+Heart sounds - wikipedia Heart sounds Jump to : navigation , search Normal heart sounds Normal heart sounds as heard with a stethoscope Problems playing this
+file ? See media help . 72 BPM Heart sound Front of thorax , showing surface relations of bones , lungs ( purple ) , pleura ( blue ) , and heart ( red outline )
+. The locations of best auscultation for each heart valve are labeled with `` M '' , `` T '' , `` A '' , and `` P '' . First heart sound : caused by
+atrioventricular valves - Mitral ( M ) and Tricuspid ( T ) . Second heart sound caused by semilunar valves -- Aortic ( A ) and Pulmonary / Pulmonic ( P ) .
+Diagram showing relations of opened heart to front of thoracic wall . Ant . Anterior segment of tricuspid valve . A O. Aorta . A.P. Anterior papillary muscle .
+In . Innominate artery . L.C.C. Left common carotid artery . L.S. Left subclavian artery . L.V. Left ventricle . P.A. Pulmonary artery .
+</item 3>
+
+<item 4>
+Heart sounds
+This is a characteristic scratching , creaking , high - pitched sound emanating from the rubbing of both layers of inflamed pericardium . It is the loudest in
+systole , but can often be heard at the beginning and at the end of diastole . It is very dependent on body position and breathing , and changes from hour to
+hour . Surface anatomy ( edit ) The aortic area , pulmonic area , tricuspid area and mitral area are areas on the surface of the chest where the heart is
+auscultated . Heart sounds result from reverberation within the blood associated with the sudden block of flow reversal by the valves closing . Because of this
+, auscultation to determine function of a valve is usually not performed at the position of the valve , but at the position to where the sound waves reverberate
+.
+</item 4>
+
+<item 5>
+Heart sounds
+Murmurs may be physiological ( benign ) or pathological ( abnormal ) . Abnormal murmurs can be caused by stenosis restricting the opening of a heart valve ,
+resulting in turbulence as blood flows through it . Abnormal murmurs may also occur with valvular insufficiency ( regurgitation ) , which allows backflow of
+blood when the incompetent valve closes with only partial effectiveness . Different murmurs are audible in different parts of the cardiac cycle , depending on
+the cause of the murmur . Contents ( hide ) 1 Primary heart sounds 2 Extra heart sounds 3 Murmurs 3.1 Effects of breathing 3.2 Interventions that change murmurs
+4 Other abnormal sounds 5 Surface anatomy 6 Recording heart sounds 7 See also 8 Notes and references 9 External links Primary heart sounds ( edit ) Normal heart
+sounds are associated with heart valves closing : S ( edit ) The first heart sound , or S , forms the `` lub '' of `` lub - dub '' and is composed of components
+M ( mitral valve closure ) and T ( tricuspid valve closure ) . Normally M precedes T slightly .
+</item 5>
+
+<item 6>
+Heart sounds
+Aortic blood flow quickly reverses back toward the left ventricle , catching the pocket - like cusps of the aortic valve , and is stopped by aortic valve
+closure . Similarly , as the pressure in the right ventricle falls below the pressure in the pulmonary artery , the pulmonary valve closes . The S sound results
+from reverberation within the blood associated with the sudden block of flow reversal . Splitting of S2 , also known as physiological split , normally occurs
+during inhalation because the decrease in intrathoracic pressure increases the time needed for pulmonary pressure to exceed that of the right ventricular
+pressure . A widely split S2 can be associated with several different cardiovascular conditions , including left bundle branch block , pulmonary stenosis , and
+atrial septal defect . Extra heart sounds ( edit ) The rarer extra heart sounds form gallop rhythms and are heard in both normal and abnormal situations .
+</item 6>
+
+<item 7>
+Heart sounds
+Aortic valve ( to aorta ) right second intercostal space upper right sternal border Pulmonary valve ( to pulmonary trunk ) left second intercostal space upper
+left sternal border Erb 's point Left third intercostal space left sternal border Tricuspid valve ( to right ventricle ) left fourth , fifth intercostal spaces
+lower left sternal border Mitral valve ( to left ventricle ) left fifth intercostal space left midclavicular line Recording heart sounds ( edit ) Using
+electronic stethoscopes , it is possible to record heart sounds via direct output to an external recording device , such as a laptop or MP3 recorder . The same
+connection can be used to listen to the previously recorded auscultation through the stethoscope headphones , allowing for more detailed study of murmurs and
+other heart sounds , for general research as well as evaluation of a particular patient 's condition .
+</item 7>
+
+<item 8>
+Heart sounds
+See also ( edit ) Pulse Physical examination Precordial examination Benign pediatric heart murmur Iambic pentameter , a metre in poetry which follows a similar
+rhythm to the human heartbeat Pulsatile tinnitus - hearing a heartbeat sound in one or both ears Notes and references ( edit ) Jump up ^
+https://depts.washington.edu/physdx/heart/tech2.html Jump up ^ https://depts.washington.edu/physdx/heart/tech2.html Jump up ^ `` thrill '' . Medline Plus
+Medical Dictionary . Jump up ^ Bernstein , Lenny ( 2016 - 01 - 02 ) , `` Heart doctors are listening for clues to the future of their stethoscopes '' ,
+Washington Post . External links ( edit ) University of Michigan Heart Sound and Murmur Library . Auscultation Assistant . UCLA Heart Sounds - Heart Murmurs .
+practicalclinicalskills.com Physiology of the cardiovascular system Heart Cardiac output Cardiac cycle Cardiac output Heart rate Stroke volume Stroke volume End
+- diastolic volume End - systolic volume Afterload Preload Frank -- Starling law Cardiac function curve Venous return curve Wiggers diagram Pressure volume
+diagram Ultrasound Fractional
+</item 8>
+
+<item 9>
+Heart sounds
+L.V. Left ventricle . P.A. Pulmonary artery . R.A. Right atrium . R.V. Right ventricle . V.S. Ventricular septum . Heart sounds are the noises generated by the
+beating heart and the resultant flow of blood through it . Specifically , the sounds reflect the turbulence created when the heart valves snap shut . In cardiac
+auscultation , an examiner may use a stethoscope to listen for these unique and distinct sounds that provide important auditory data regarding the condition of
+the heart . In healthy adults , there are two normal heart sounds , often described as a lub and a dub ( or dup ) , that occur in sequence with each heartbeat .
+These are the first heart sound ( S ) and second heart sound ( S ) , produced by the closing of the atrioventricular valves and semilunar valves , respectively
+. In addition to these normal sounds , a variety of other sounds may be present including heart murmurs , adventitious sounds , and gallop rhythms S and S .
+Heart murmurs are generated by turbulent flow of blood , which may occur inside or outside the heart .
+</item 9>
+
+<item 10>
+Heart sounds
+Main article : Third heart sound Rarely , there may be a third heart sound also called a protodiastolic gallop , ventricular gallop , or informally the ``
+Kentucky '' gallop as an onomatopoeic reference to the rhythm and stress of S1 followed by S2 and S3 together ( S1 = Ken ; S2 = tuck ; S3 = y ) . `` lub - dub -
+ta '' or `` slosh - ing - in '' If new , indicates heart failure or volume overload . It occurs at the beginning of diastole after S2 and is lower in pitch than
+S1 or S2 as it is not of valvular origin . The third heart sound is benign in youth , some trained athletes , and sometimes in pregnancy but if it re-emerges
+later in life it may signal cardiac problems , such as a failing left ventricle as in dilated congestive heart failure ( CHF ) . S3 is thought to be caused by
+the oscillation of blood back and forth between the walls of the ventricles initiated by blood rushing in from the atria .
+</item 10>
+=== END ITEM id=852c6e6c0ba58e99 ===
+
+=== ITEM id=ba943006df92a68f ===
+Gold sentences and facts:
+Sentence 0: The resort is the first to be built in the complex in over seven years and the fifth to be placed in the value - priced category , along with Disney 's All - Star Sports Resort , the All - Star Music Resort , the All - Star Movies Resort , and Disney 's Pop Century Resort . Family suites opened on May 31 , 2012 , and standard rooms opened on September 15 , 2012 .
+  Fact 0.0: The resort is the first to be built in the complex in over seven years.
+  Fact 0.1: The resort is the fifth to be placed in the value-priced category.
+  Fact 0.2: The other resorts in the value-priced category are Disney's All-Star Sports Resort, the All-Star Music Resort, the All-Star Movies Resort, and Disney's Pop Century Resort.
+  Fact 0.3: Family suites opened on May 31, 2012.
+  Fact 0.4: Standard rooms opened on September 15, 2012.
+Sentence 1: Disney 's Art of Animation Resort Location ESPN Wide World of Sports Resort Area Resort type Value resort Opened May 31 , 2012 Theme Walt Disney characters Areas Cars Finding Nemo The Lion King The Little Mermaid Rooms 984 Suites 1,120 Green lodge yes
+  Fact 1.0: Disney's Art of Animation Resort is located at the ESPN Wide World of Sports Resort area.
+  Fact 1.1: Disney's Art of Animation Resort is a value resort.
+  Fact 1.2: Disney's Art of Animation Resort opened on May 31, 2012.
+  Fact 1.3: Disney's Art of Animation Resort has a Walt Disney characters theme.
+  Fact 1.4: Disney's Art of Animation Resort has areas named Cars, Finding Nemo, The Lion King, and The Little Mermaid.
+  Fact 1.5: Disney's Art of Animation Resort has 984 rooms.
+  Fact 1.6: Disney's Art of Animation Resort has 1,120 suites.
+  Fact 1.7: Disney's Art of Animation Resort is marked as a green lodge.
+
+Retrieved items:
+<item 1>
+Disney's Art of Animation Resort
+Four Seasons Hilton Holiday Inn Shades of Green Walt Disney World Dolphin Walt Disney World Swan Wyndham Coordinates : 28 ° 21 ′ 0.98 '' N 81 ° 32 ′ 54.59 '' W
+﻿ / ﻿ 28.3502722 ° N 81.5484972 ° W ﻿ / 28.3502722 ; - 81.5484972 Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Disney%27s_Art_of_Animation_Resort&oldid=799926127 '' Categories : Walt Disney World Hotels in Walt Disney World
+Resort Hotel buildings completed in 2012 Hidden categories : Use mdy dates from September 2017 Coordinates on Wikidata Talk About Wikipedia Français Edit links
+This page was last edited on 10 September 2017 , at 17 : 08 . About Wikipedia
+</item 1>
+
+<item 2>
+Alice in Wonderland (1951 film)
+( 2007 ) People Executives Edwin Catmull Roy Conli Roy E. Disney Walt Disney Don Hahn Jeffrey Katzenberg John Lasseter Peter Schneider Thomas Schumacher David
+Stainton Disney 's Nine Old Men Les Clark Marc Davis Ollie Johnston Milt Kahl Ward Kimball Eric Larson John Lounsbery Wolfgang Reitherman Frank Thomas Related
+topics History Disney animators ' strike Disney Renaissance Methods and technologies 12 basic principles of animation Computer Animation Production System
+Disney Animation : The Illusion of Life Multiplane camera Documentaries Frank and Ollie ( 1995 ) The Sweatbox ( 2001 ) Dream On Silly Dreamer ( 2005 ) Waking
+Sleeping Beauty ( 2009 ) Other Disney animation units Disney Television Animation DisneyToon Studios ( WDAS unit ) Lucasfilm Animation Marvel Animation Pixar
+Animation Studios Circle 7 ( defunct ) Miscellaneous Alice Comedies Laugh - O - Gram Studio List of Disney animated shorts List of Disney theatrical animated
+features unproduced Oswald the Lucky Rabbit Mickey Mouse ( film series ) Silly Symphonies Once Upon a Time GND : 4478992 - 0 Retrieved from ``
+https://en.wikipedia.
+</item 2>
+
+<item 3>
+Disney's Art of Animation Resort
+Resort buildings are themed with the movie 's characters , including Lightning McQueen , Sally , Mater , and Luigi and Guido . The second section of the resort
+opened on June 18 , 2012 . The Lion King : The Lion King section of the resort features a `` natural '' setting , such as that found in the wild . The third
+section of the resort opened its doors on August 10 , 2012 . The Little Mermaid : The Little Mermaid section of the resort is themed with 600 cutout objects on
+resort balconies. `` Under the Sea '' decorations are incorporated throughout the section . This section of the resort has exterior walkways , where the other
+sections have enclosed interior walkways between the rooms . ( This section uses a couple of buildings that were originally built for Pop Century 's ``
+Legendary Years '' section before construction halted , which left them unfinished for years . ) It opened on September 15 , 2012 , as the fourth and final
+section of the resort . Dining and shopping ( edit ) Landscape of Flavors - a food court selling American cuisine and deli style market items .
+</item 3>
+
+<item 4>
+Disney's Art of Animation Resort
+Floridian Resort & Spa Boulder Ridge Villas at Disney 's Wilderness Lodge Copper Creek Villas & Cabins at Disney 's Wilderness Lodge Epcot Resort Area Disney 's
+Beach Club Resort Disney 's BoardWalk Inn Disney 's Yacht Club Resort Star Wars Hotel Disney 's Caribbean Beach Resort None Disney 's Beach Club Villas Disney
+'s BoardWalk Villas Disney Riviera Resort Animal Kingdom Resort Area Disney 's Animal Kingdom Lodge Disney 's Coronado Springs Resort Disney 's All - Star
+Movies Resort Disney 's All - Star Music Resort Disney 's All - Star Sports Resort Disney 's Animal Kingdom Villas Disney Springs Resort Area None Disney 's
+Port Orleans Resort - French Quarter Disney 's Port Orleans Resort - Riverside None Disney 's Old Key West Resort Disney 's Saratoga Springs Resort & Spa ESPN
+Wide World of Sports Resort Area None None Disney 's Art of Animation Resort Disney 's Pop Century Resort None Campsites and cabins Disney 's Fort Wilderness
+Resort & Campground Residental Golden Oak at Walt Disney World Resort Non-Disney Resorts B Resort & Spa Best Western Buena Vista Palace Doubletree Four Seasons
+Hilton Holiday Inn Shades of Green Walt Disney World Dolphin Walt Disney World Swan Wyndham
+</item 4>
+
+<item 5>
+Disney's Art of Animation Resort
+The Generation Gap Bridge would have connected both halves of the resort . Originally , the land the Art of Animation Resort occupies was planned to be part of
+Disney 's Pop Century Resort as part of the `` Legendary Years '' section . Several buildings were constructed for these plans , some even to the point of
+adding decorative details . While one - half of Pop Century ( the `` Classic Years '' ) opened in 2003 , the other half was left abandoned following the tourism
+halt after the September 11 attacks on the United States . Disney started to prepare the land for the resort in January 2010 , and construction began in the
+summer of that year . At the time of this announcement on May 12 , 2010 , Disney did not say how much construction is expecting to cost , but it was mentioned
+that approximately 800 jobs would be produced . When the `` Legendary Years '' buildings were first being made , a bridge named the Generation Gap Bridge was
+constructed to connect both parts of Pop Century and made them accessible to each other . The bridge connects Pop Century to the Finding Nemo section of the Art
+of Animation Resort . Theming ( edit ) The resort is designed `` with families in mind . ''
+</item 5>
+
+<item 6>
+Disney's Art of Animation Resort
+The Landscape of Flavors Food Court serves omelets , pancakes , French toast , pizza , pasta , sandwiches , salads , burgers , burritos , ice cream and bakery
+items . The food court seats 606 people . Pizza Delivery - pizza , sandwiches , salad , dessert and beverages are available in the evening for delivery to guest
+rooms . Ink & Paint Shop - gift shop that offers a range of items from Disney souvenirs to Disney 's Art of Animation themed clothing . The store also has
+grocery section that sells items including snacks , liquor , drinks , and sundries . Gallery ( edit ) Wikimedia Commons has media related to Disney 's Art of
+Animation Resort . Sign at the entrance to the Art of Animation Resort Exterior of Animation Hall , central hall of the resort Swimming pool within the Finding
+Nemo section of the resort References ( edit ) Jump up ^ `` Disney 's Art of Animation Resort '' . ^ Jump up to : `` New Disney hotel : Disney to build 2,000 -
+room hotel dubbed Disney 's Art of Animation Resort '' . TheDailyDisney.com . Retrieved June 6 , 2010 .
+</item 6>
+
+<item 7>
+The Nightmare Before Christmas
+( 2007 ) People Executives Edwin Catmull Roy Conli Roy E. Disney Walt Disney Don Hahn Jeffrey Katzenberg John Lasseter Peter Schneider Thomas Schumacher David
+Stainton Disney 's Nine Old Men Les Clark Marc Davis Ollie Johnston Milt Kahl Ward Kimball Eric Larson John Lounsbery Wolfgang Reitherman Frank Thomas Related
+topics History Disney animators ' strike Disney Renaissance Methods and technologies 12 basic principles of animation Computer Animation Production System
+Disney Animation : The Illusion of Life Multiplane camera Documentaries Frank and Ollie ( 1995 ) The Sweatbox ( 2001 ) Dream On Silly Dreamer ( 2005 ) Waking
+Sleeping Beauty ( 2009 ) Other Disney animation units Disney Television Animation DisneyToon Studios ( WDAS unit ) Lucasfilm Animation Marvel Animation Pixar
+Animation Studios Circle 7 ( defunct ) Miscellaneous Alice Comedies Laugh - O - Gram Studio List of Disney animated shorts List of Disney theatrical animated
+features unproduced Oswald the Lucky Rabbit Mickey Mouse ( film series ) Silly Symphonies Once Upon a Time Saturn Award for Best Fantasy Film The Golden Voyage
+of Sinbad ( 1973 ) Doc Savage : The Man of Bronze ( 1974 / 75 ) The Holes ( 1976 ) Oh ,
+</item 7>
+
+<item 8>
+Disney's Art of Animation Resort
+Disney 's Art of Animation resort - wikipedia Disney 's Art of Animation resort Jump to : navigation , search Disney 's Art of Animation Resort Location ESPN
+Wide World of Sports Resort Area Resort type Value resort Opened May 31 , 2012 Theme Walt Disney characters Areas Cars Finding Nemo The Lion King The Little
+Mermaid Rooms 984 Suites 1,120 Green lodge yes Disney 's Art of Animation Resort is a resort within Walt Disney World Resort in Lake Buena Vista , Florida . It
+is located where construction on the unfinished half of Disney 's Pop Century Resort was started but later abandoned after the September 11 attacks . The resort
+is the first to be built in the complex in over seven years and the fifth to be placed in the value - priced category , along with Disney 's All - Star Sports
+Resort , the All - Star Music Resort , the All - Star Movies Resort , and Disney 's Pop Century Resort . Family suites opened on May 31 , 2012 , and standard
+rooms opened on September 15 , 2012 . Overview ( edit ) An incomplete Pop Century Legendary Years building can be seen across the Hourglass Lake .
+</item 8>
+
+<item 9>
+Disney's Art of Animation Resort
+TheDailyDisney.com . Retrieved June 6 , 2010 . ^ Jump up to : `` More details on Disney 's Art of Animation Resort '' . TheDisneyBlog.com . Retrieved June 10 ,
+2010 . Jump up ^ `` Disney 's Art of Animation Resort Unveiled `` Disney Parks Blog '' . Disneyparks.disney.go.com . May 12 , 2010 . Retrieved June 6 , 2010 .
+Jump up ^ `` First look at new Art of Animation Resort concept art and rooms shown at Destination D: Walt Disney World '' . Inside the Magic . External links (
+edit ) Official website Art of Animation Photo Gallery at HanBan Photos Walt Disney World Resorts Location Deluxe Moderate Value Deluxe Villa / Disney Vacation
+Club Magic Kingdom Resort Area Disney 's Contemporary Resort Disney 's Grand Floridian Resort & Spa Disney 's Polynesian Village Resort Disney 's Wilderness
+Lodge None None Bay Lake Tower at Disney 's Contemporary Resort Disney 's Polynesian Villas & Bungalows The Villas at Disney 's Grand Floridian Resort & Spa
+Boulder Ridge Villas at Disney 's Wilderness Lodge Copper Creek Villas &
+</item 9>
+
+<item 10>
+Disney's Art of Animation Resort
+Theming ( edit ) The resort is designed `` with families in mind . '' It features four of Disney 's popular character themes : Cars , Finding Nemo , The Lion
+King , and The Little Mermaid . Much like the other Disney Value Resorts , giant versions of various items are built around the hotel on each of the ten wings ,
+such as a 35 - foot ( 11 m ) model of King Triton . In total , there are 1,984 rooms. of which 1,120 are family suites capable of housing up to six people ,
+featuring living rooms and bedrooms . The remaining 864 sport the standard value layout . The resort has a total of ten buildings , as well as three themed
+pools . Finding Nemo : The Finding Nemo section of the resort is themed with the ocean setting featured in the film , with underwater plant and animal
+decorations throughout the buildings . This is the first area of the resort , which opened on May 31 , 2012 . Cars : The Cars section of the resort is themed
+like the Cozy Cone Motel that has featured in the film .
+</item 10>
+=== END ITEM id=ba943006df92a68f ===
+
+=== ITEM id=f789702ee0cf40cf ===
+Gold sentences and facts:
+Sentence 0: Ford was involved in the Boy Scouts of America , and earned that program 's highest rank , Eagle Scout . He is the only Eagle Scout to have ascended to the U.S. Presidency .
+  Fact 0.0: Ford was involved in the Boy Scouts of America.
+  Fact 0.1: Ford earned the Boy Scouts of America program's highest rank, Eagle Scout.
+  Fact 0.2: Ford is the only Eagle Scout to have ascended to the U.S. Presidency.
+
+Retrieved items:
+<item 1>
+Gerald Ford
+Legacy of Honor : The Values and Influence of America 's Eagle Scouts . New York : St. Martin 's Press . pp. 12 -- 13 and 87 . ISBN 0 - 312 - 36653 - 1 .
+Retrieved December 29 , 2006 . Jump up ^ `` Investigatory Records on Gerald Ford , Applicant for a Commission '' ( PDF ) . Gerald R. Ford Presidential Library .
+December 30 , 1941 . Retrieved November 18 , 2010 . Jump up ^ Wertheimer , Linda ( December 27 , 2006 ) . `` Special Report : Former President Gerald Ford Dies
+; Sought to Heal Nation Disillusioned by Watergate Scandal '' . National Public Radio . Retrieved April 26 , 2009 . Jump up ^ Perry , Will ( 1974 ) . `` No
+Cheers From the Alumni '' . The Wolverines : A Story of Michigan Football ( PDF ) . Huntsville , Alabama : The Strode Publishers . pp. 150 -- 152 . ISBN 0 -
+87397 - 055 - 1 .
+</item 1>
+
+<item 2>
+President of the United States
+Boy Scouts of America . Retrieved November 9 , 2017 . Jump up ^ Grier , Peter ( April 25 , 2011 ) . `` The ( not so ) secret history of the White House Easter
+Egg Roll '' . The Christian Science Monitor . Archived from the original on July 30 , 2012 . Retrieved July 30 , 2012 . Jump up ^ Hesse , Monica ( November 21 ,
+2007 ) . `` Turkey Pardons , The Stuffing of Historic Legend '' . The Washington Post . Retrieved May 14 , 2011 . Jump up ^ Gibbs , Nancy ( November 13 , 2008 )
+. `` How Presidents Pass The Torch '' . Time . Retrieved May 6 , 2011 . Jump up ^ Dorning , Mike ( January 22 , 2009 ) . `` A note from Bush starts morning in
+the Oval Office '' . Chicago Tribune . Archived from the original on December 28 , 2011 . Retrieved May 6 , 2011 .
+</item 2>
+
+<item 3>
+Gerald Ford
+That year his biological father , whom Ford described as a `` carefree , well - to - do man who did n't really give a damn about the hopes and dreams of his
+firstborn son '' , approached Ford while he was waiting tables in a Grand Rapids restaurant . The two `` maintained a sporadic contact '' until Leslie King ,
+Sr. 's death in 1941 . Ford said , `` My stepfather was a magnificent person and my mother equally wonderful . So I could n't have written a better prescription
+for a superb family upbringing . '' Eagle Scout Gerald Ford ( circled in red ) in 1929 ; Michigan Governor Fred W. Green at far left , holding hat Ford as a
+center on the University of Michigan football team , 1933 Ford was involved in the Boy Scouts of America , and earned that program 's highest rank , Eagle Scout
+. He is the only Eagle Scout to have ascended to the U.S. Presidency . Ford attended Grand Rapids South High School , where he was a star athlete and captain of
+the football team . In 1930 , he was selected to the All - City team of the Grand Rapids City League .
+</item 3>
+
+<item 4>
+Gerald Ford
+Ford was made a 33 ° Scottish Rite Mason on September 26 , 1962 . In April 1975 , Ford was elected by a unanimous vote Honorary Grand Master of the
+International Supreme Council , Order of DeMolay , a position in which he served until January 1977 . Ford received the degrees of York Rite Masonry ( Chapter
+and Council degrees ) in a special ceremony in the Oval Office on January 11 , 1977 , during his term as President of the United States . Honors ( edit ) Ford
+honored on U.S Postage , issue of 2007 Ford received the Distinguished Eagle Scout Award in May 1970 , as well as the Silver Buffalo Award , from the Boy Scouts
+of America . In 1974 , he also received the highest distinction of the Scout Association of Japan , the Golden Pheasant Award . In 1985 , he received the 1985
+Old Tom Morris Award from the Golf Course Superintendents Association of America , GCSAA 's highest honor . In 1992 , the U.S. Navy Memorial Foundation awarded
+Ford its Lone Sailor Award for his naval service and his subsequent government service .
+</item 4>
+
+<item 5>
+Gerald Ford
+Immediately after taking the oath of office in the East Room of the White House , he spoke to the assembled audience in a speech broadcast live to the nation .
+Ford noted the peculiarity of his position : `` I am acutely aware that you have not elected me as your president by your ballots , and so I ask you to confirm
+me as your president with your prayers . '' He went on to state : Ford and his golden retriever , Liberty , in the Oval Office , 1974 I have not sought this
+enormous responsibility , but I will not shirk it . Those who nominated and confirmed me as Vice President were my friends and are my friends . They were of
+both parties , elected by all the people and acting under the Constitution in their name . It is only fitting then that I should pledge to them and to you that
+I will be the President of all the people . He also stated : My fellow Americans , our long national nightmare is over . Our Constitution works ; our great
+Republic is a government of laws and not of men . Here , the people rule .
+</item 5>
+
+<item 6>
+Gerald Ford
+Bush , Peter Dominick , Robert Griffin , Thomas Kuchel , Mel Laird , Bob Mathias , George Murphy , Dick Poff , Chuck Percy , Al Quie , Charlotte Reid , Hugh
+Scott , Bill Steiger , John Tower ( 1968 ) Vacant Title next held by Donald Fraser , Scoop Jackson , Mike Mansfield , John McCormack , Patsy Mink , Ed Muskie ,
+Bill Proxmire Preceded by Richard Nixon Republican nominee for President of the United States 1976 Succeeded by Ronald Reagan Political offices Preceded by
+Spiro Agnew Vice President of the United States 1973 -- 1974 Succeeded by Nelson Rockefeller Preceded by Richard Nixon President of the United States 1974 --
+1977 Succeeded by Jimmy Carter Diplomatic posts Preceded by Valéry Giscard d'Estaing Chair of the Group of Seven 1976 Succeeded by James Callaghan Honorary
+titles Preceded by Ronald Reagan Oldest living President of the United States 2004 -- 2006 Succeeded by George H.W.
+</item 6>
+
+<item 7>
+Gerald Ford
+Ford was the only person to hold the presidential office without being elected as either president or vice-president . The choice of Ford to fulfill Spiro Agnew
+'s vacated role as vice president was based on Ford 's reputation for openness and honesty . `` In all the years I sat in the House , I never knew Mr. Ford to
+make a dishonest statement nor a statement part - true and part - false . He never attempted to shade a statement , and I never heard him utter an unkind word ,
+'' said Martha Griffiths . The trust the American people had in him was rapidly and severely tarnished by his pardon of Nixon . Nonetheless , many grant in
+hindsight that he had respectably discharged with considerable dignity a great responsibility that he had not sought . His subsequent loss to Carter in 1976 has
+come to be seen as an honorable sacrifice he made for the nation . In spite of his athletic record and remarkable career accomplishments , Ford acquired a
+reputation as a clumsy , likable , and simple - minded Everyman .
+</item 7>
+
+<item 8>
+President of the United States
+Jump up ^ `` Obama signs protection bill for former presidents '' . The Washington Times . January 10 , 2013 . Retrieved August 14 , 2013 . Jump up ^ `` Shock
+and Anger Flash Throughout the United States '' . Associated Press . March 31 , 1981 . Retrieved March 11 , 2011 . Jump up ^ `` Four Presidents '' . Reagan
+Presidential Library , National Archives and Records Administration . Retrieved April 3 , 2011 . Jump up ^ `` Biography of Richard M. Nixon '' .
+obamawhitehouse.archives.gov . , The White House . Jump up ^ 44 U.S.C. § 2112 Further reading Balogh , Brian and Bruce J. Schulman , eds . Recapturing the Oval
+Office : New Historical Approaches to the American Presidency ( Cornell University Press , 2015 ) , 311 pp . Bumiller , Elisabeth ( January 2009 ) . `` Inside
+the Presidency '' . National Geographic . 215 ( 1 ) : 130 -- 149 . Couch , Ernie .
+</item 8>
+
+<item 9>
+President of the United States
+Educational site on the American presidency `` Presidents ' Occupations '' . Retrieved August 20 , 2007 . Listing of every president 's occupations before and
+after becoming the commander in chief `` The Masonic Presidents Tour '' . The Masonic Library and Museum of Pennsylvania . Archived from the original on October
+12 , 2014 . Retrieved October 7 , 2005 . Brief histories of the Masonic careers of presidents who were members of the Freemasons `` The Presidents '' . American
+Experience . Retrieved March 4 , 2007 . PBS site on the American presidency Presidents of the United States : Resource Guides from the Library of Congress
+Shapell Manuscript Foundation . Images of documents written by U.S.
+</item 9>
+
+<item 10>
+Gerald Ford
+An incident in 1975 , when he tripped while exiting Air Force One in Austria , was famously and repeatedly parodied by Chevy Chase , cementing Ford 's image as
+a klutz . Pieces of Ford 's common Everyman image have also been attributed to Ford 's inevitable comparison to Nixon , as well as his perceived Midwestern
+stodginess and self - deprecation . Civic and fraternal organizations ( edit ) Ford was a member of several civic organizations , including the Junior Chamber
+of Commerce ( Jaycees ) , American Legion , AMVETS , Benevolent and Protective Order of Elks , Sons of the Revolution , and Veterans of Foreign Wars .
+Freemasonry ( edit ) Ford was initiated into Freemasonry on September 30 , 1949 . He later said in 1975 , `` When I took my obligation as a master mason --
+incidentally , with my three younger brothers -- I recalled the value my own father attached to that order . But I had no idea that I would ever be added to the
+company of the Father of our Country and 12 other members of the order who also served as Presidents of the United States . ''
+</item 10>
+=== END ITEM id=f789702ee0cf40cf ===
+
+=== ITEM id=fa037e12dddea776 ===
+Gold sentences and facts:
+Sentence 0: The Rana rulers of Nepal made Vikram Samvat the official Hindu calendar in 1901 CE , which started as Samvat 1958 . In Nepal , the new year begins with the first day of the month of Baishakh , which usually falls within the months of April -- May in the Gregorian calendar . The first day of the new year is passionately celebrated in a historical carnival that takes place every year in Bhaktapur , called Bisket Jatra.As before , from 2007 AD Nepal Sambat is recognized as the national calender .
+  Fact 0.0: The Rana rulers of Nepal made Vikram Samvat the official Hindu calendar.
+  Fact 0.1: The Rana rulers made Vikram Samvat the official Hindu calendar in 1901 CE.
+  Fact 0.2: Vikram Samvat started as Samvat 1958.
+  Fact 0.3: In Nepal the new year begins on the first day of the month of Baishakh.
+  Fact 0.4: Baishakh usually falls within April to May in the Gregorian calendar.
+  Fact 0.5: The first day of the new year is passionately celebrated in a historical carnival called Bisket Jatra.
+  Fact 0.6: The Bisket Jatra carnival takes place every year in Bhaktapur.
+  Fact 0.7: As before, from 2007 AD, Nepal Sambat is recognized as the national calendar.
+Sentence 1: Vikram Samvat ( Hindi : विक्रम सम्वत् , Nepali : विक्रम सम्वत् ) ( abbreviated as V.S. ( or VS ) or B.S. ( or BS ) ) ; Listen ( help info ) ) is the historical Hindu calendar of India and Nepal . It uses lunar months and solar sidereal year ( see : Vedic time keeping ) . It is used as the official calendar in Nepal .
+  Fact 1.0: Vikram Samvat is written in Hindi as विक्रम सम्वत्.
+  Fact 1.1: Vikram Samvat is written in Nepali as विक्रम सम्वत्.
+  Fact 1.2: Vikram Samvat is abbreviated as V.S. or VS.
+  Fact 1.3: Vikram Samvat is abbreviated as B.S. or BS.
+  Fact 1.4: Vikram Samvat is the historical Hindu calendar of India and Nepal.
+  Fact 1.5: Vikram Samvat uses lunar months.
+  Fact 1.6: Vikram Samvat uses the solar sidereal year.
+  Fact 1.7: Vikram Samvat is used as the official calendar in Nepal.
+
+Retrieved items:
+<item 1>
+Vikram Samvat
+In India , the reformulated Saka Calendar is officially used ( although not for computing the dates of the traditional festivals ) , although in the Hindi
+version of the Preamble of the Constitution of India , the date of adoption of the constitution , 26 November 1949 , is presented in Vikram Samvat ( Margsheersh
+Shukla Saptami Samvat 2006 ) . There have been calls for the Vikram Samvat to replace Saka as India 's official calendar . Contents ( hide ) 1 Divisions of a
+year 1.1 Lunar metrics 2 History 2.1 Vikramaditya legends 2.2 Historicity of the legends 3 Culture 4 Converting Vikram Samvat to CE 5 See also 6 References 7
+Further reading Divisions of a year ( edit ) The classical Vikram Samvat uses lunar months and solar sidereal years . Because 12 months do not match a sidereal
+year exactly , correctional months ( adhika māsa ) are added , or occasionally subtracted ( kshaya masa ) .
+</item 1>
+
+<item 2>
+Vikram Samvat
+Converting Vikram Samvat to CE ( edit ) While an approximate conversion can be made by subtracting 56 or 57 , a precise computation requires identification of
+the version of Vikam Samvat that was used : Year expired ( default ) or current Kartikadi ( older or western India ) or Chaitradi ( modern Northern India ) .
+Kartikadi starts 7 months later in Kartika . Until 12th century Kartikadi year was common even in North India . Months Amanta ( south ) or Purminata ( North ) .
+Amanta Chaitra Krishna Paksha is Purminata Vaishakh Krishna Paksha . For the Shukla Paksh , the month is the same . Software named Pancanga is available to make
+the calculations . Thus the date Vikram 1208 ( Kartikadi , expired ) , Vaishakh Krishna 5 ( Purnimanta ) , Thursday , is equivalent to Vikram 1209 ( Chaitradi ,
+expired ) , Chaitra Krishna 5 ( Amanta ) , and to Thursday March 27 , 1152 .
+</item 2>
+
+<item 3>
+Vikram Samvat
+BRILL . p. 103 . ISBN 90 - 04 - 18566 - 6 . Jump up ^ Falk and Bennett ( 2009 ) , pp. 197 - 215 . Jump up ^ `` Gujarat CM to exchange Diwali - New Year
+greetings with people '' . 19 October 2014 . Retrieved 24 October 2014 . Jump up ^ Pancanga ( version 3.14 ) Jump up ^ On a Jain Statue in the Horniman Museum ,
+F. Kielhorn , Journal of the Royal Asiatic Society of Great Britain and Ireland , 1898 , p. 101 - 102 Further reading ( edit ) Wikisource has the text of the
+1911 Encyclopædia Britannica article Vikramaditya . Harry Falk and Chris Bennett ( 2009 ) . `` Macedonian Intercalary Months and the Era of Azes . '' Acta
+Orientalia 70 , pp. 197 -- 215 . `` The Dynastic Art of the Kushan '' , John Rosenfield . `` Samvat '' . New International Encyclopedia . 1905 . ( hide )
+Calendars Systems
+</item 3>
+
+<item 4>
+Vikram Samvat
+See also ( edit ) Bikrami calendar Hindu calendars Vira Nirvana Samvat References ( edit ) Jump up ^ Richard Salomon ( 1398 ) . Indian Epigraphy : A Guide to
+the Study of Inscriptions in Sanskrit , Prakrit , and the other Indo - Aryan Languages . Oxford University Press . pp. 181 -- 183 . ISBN 978 - 0 - 19 - 535666 -
+3 . ^ Jump up to : Ashvini Agrawal ( 1989 ) . Rise and Fall of the Imperial Guptas . Motilal Banarsidass Publ . pp. 174 -- 175 . ISBN 978 - 81 - 208 - 0592 - 7
+. Jump up ^ Encyclopedia of New Year 's Holidays Worldwide , William D. Crump , Publisher McFarland , 2014 p. 38 Jump up ^ `` Vikram Samvat should be declared
+national calendar '' . The Free Press Journal . 15 February 2012 . Archived from the original on 26 April 2014 . Retrieved 28 March 2012 .
+</item 4>
+
+<item 5>
+Vikram Samvat
+The Shukla Paksha in both systems coincides , most festivals occur in the Shukla Paksha . The era is named after King Vikramaditya of India . The lunisolar
+Vikram Samvat calendar is 56.7 years ahead ( in count ) of the solar Gregorian calendar . For example , the year 2074 VS began in 2017 CE and will end in 2018
+CE . The Rana rulers of Nepal made Vikram Samvat the official Hindu calendar in 1901 CE , which started as Samvat 1958 . In Nepal , the new year begins with the
+first day of the month of Baishakh , which usually falls within the months of April -- May in the Gregorian calendar . The first day of the new year is
+passionately celebrated in a historical carnival that takes place every year in Bhaktapur , called Bisket Jatra.As before , from 2007 AD Nepal Sambat is
+recognized as the national calender .
+</item 5>
+
+<item 6>
+Vikram Samvat
+Vikram Samvat - Wikipedia Vikram Samvat Jump to : navigation , search It has been requested that the title of this article be changed to Bikram Sambat . Please
+see the relevant discussion on the discussion page . Do not move the page until the discussion has reached consensus for the change and is closed . It has been
+suggested that Bikrami calendar be merged into this article . ( Discuss ) Proposed since October 2017 . Vikram Samvat ( Hindi : विक्रम सम्वत् , Nepali : विक्रम
+सम्वत् ) ( abbreviated as V.S. ( or VS ) or B.S. ( or BS ) ) ; Listen ( help info ) ) is the historical Hindu calendar of India and Nepal . It uses lunar months
+and solar sidereal year ( see : Vedic time keeping ) . It is used as the official calendar in Nepal . The Vikram Samvat has two alternative systems . It started
+in 56 BCE in southern ( purnimanta ) and 57 -- 56 BCE in northern ( amanta ) systems of Hindu calendar .
+</item 6>
+
+<item 7>
+Vikram Samvat
+According to Rudolf Hoernlé , the king responsible for this change was Yashodharman : Hoernlé also believed that he conquered Kashmir , and is same person as
+the `` Harsha Vikramaditya '' mentioned in Kalhana 's Rajatarangini . Earlier , some scholars believed that the Vikrama Samavat corresponded to the Azes era of
+the Indo - Scythian ( Śaka ) king King Azes . However , this was disputed by Robert Bracey following discovery of an inscription of Vijayamitra , which is dated
+in two eras . The theory seems to be now thoroughly discredited by Falk and Bennett , who place the inception of the Azes era in 47 -- 46 BCE . Culture ( edit )
+The traditional New Year of Vikram Samvat is one of the many festivals of Nepal , marked by parties , family gatherings , the exchange of good wishes , and
+participation in rituals to ensure good fortune in the coming year .
+</item 7>
+
+<item 8>
+Vikram Samvat
+Republican Germanic Greek Hindu Inca Macedonian Maya Haab ' Tzolk'in Muisca Pentecontad Pisan Rapa Nui Roman calendar Rumi Soviet Swedish Turkmen By specialty
+Holocene ( anthropological ) Proleptic Gregorian / Proleptic Julian ( historiographical ) Darian ( Martian ) Dreamspell ( New Age ) Discordian / Pataphysical (
+surreal ) Proposals Calendar reform Hanke -- Henry Permanent International Fixed Pax Positivist Symmetry454 Tranquility World New Earth Time Fictional Discworld
+Greyhawk Middle - earth Stardate Star Wars ( Galactic Standard Calendar ) Displays and applications Electronic Perpetual Wall Year naming and numbering
+Terminology Era Epoch Regnal name Regnal year Year zero Systems Ab urbe condita Anno Domini / Common Era Anno Mundi Assyrian Before Present Chinese Imperial
+Chinese Minguo Human Era Japanese Korean Seleucid Spanish Yugas Satya Treta Dvapara Kali Vietnamese List of calendars Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Vikram_Samvat&oldid=822253746 '' Categories : Specific calendars Nepali calendar Hindu calendar Memorials to
+Vikramaditya Calendar eras
+</item 8>
+
+<item 9>
+Vikram Samvat
+New International Encyclopedia . 1905 . ( hide ) Calendars Systems Lunar Lunisolar Solar In wide use Astronomical Bengali Chinese Ethiopian Gregorian Hebrew
+Hindu Iranian Islamic ISO Unix time In more limited use Akan Armenian Assyrian Bahá'í ( Badí ' ) Balinese pawukon Balinese saka Berber Buddhist Burmese Chinese
+Coptic Gaelic Germanic Heathen Georgian Hebrew Hindu or Indian Vikram Samvat Saka Igbo Iranian Jalali ( medieval ) Hijri ( modern ) Zoroastrian Islamic Fasli
+Tabular Jain Japanese Javanese Korean Juche Kurdish Lithuanian Malayalam Mongolian Melanau Nanakshahi Nepal Sambat Nisg̱a'a Oromo Romanian Somali Sesotho Slavic
+Slavic Native Faith Tamil Thai lunar solar Tibetan Vietnamese Xhosa Yoruba Types Runic Mesoamerican Long Count Calendar round Christian variants Julian Revised
+Liturgical year Eastern Orthodox Saints Historical Attic Aztec Tonalpohualli Xiuhpohualli Babylonian Bulgar Byzantine Celtic Cham Culāsakaraj Egyptian
+Florentine French Republican Germanic Greek Hindu Inca Macedonian Maya Haab ' Tzolk'in Muisca
+</item 9>
+
+<item 10>
+Vikram Samvat
+It occurs in mid-April each year , and coincides with the traditional new year in Assam , Bengal , Burma , Cambodia , Kerala , Kashmir , Manipur , Odisha ,
+Punjab , Sri Lanka , Tamil Nadu and Thailand . In addition to Nepal , the Vikram Samvat calendar is also recognized in North and East India , and in Gujarat
+among Hindus . In Buddhist communities , the month of Baishakh is associated with Vesak or Buddha 's Birthday . It commemorates the birth , Enlightenment and
+passing of Gautama Buddha on the first full moon day in May , except in a leap year when the festival is held in June . Although this festival is not held on
+the same day as Pahela Baishakh , the holidays typically fall in the same month ( Baishakh ) of the Bengali , Hindu , and Theravada Buddhist calendars , and are
+related historically through the spread of Hinduism and Buddhism in South Asia . In Gujarat , the second day of Diwali is celebrated as the first day of the
+Vikram Samvat calendar which is the first day of the month Kartik .
+</item 10>
+=== END ITEM id=fa037e12dddea776 ===

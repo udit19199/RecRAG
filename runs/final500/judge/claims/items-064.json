@@ -1,0 +1,80 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5ac3d667554299076e296ca5",
+   "sentences": [
+    "The Appenzeller Sennenhund is a medium-size breed of dog, one of the four regional breeds of Sennenhund-type dogs from the Swiss Alps.",
+    " The name Sennenhund refers to people called \"Senn\", herders in the Appenzell region of Switzerland.",
+    "The Drentsche Patrijshond is a versatile spaniel-type hunting dog from the Dutch province of Drenthe."
+   ]
+  },
+  {
+   "id": "5a84a7f95542992a431d1a85",
+   "sentences": [
+    "Julia Compton Moore (February 10, 1929April 18, 2004) was the wife of Lieutenant General (Ret.)",
+    " Hal Moore, a United States Army officer.",
+    "Harold Gregory \"Hal\" Moore, Jr. (February 13, 1922 – February 10, 2017) was a United States Army lieutenant general and author.",
+    " He was a recipient of the Distinguished Service Cross, which is the U.S. military's second highest decoration for valor, and was the first of his West Point class (1945) to be promoted to brigadier general, major general, and lieutenant general."
+   ]
+  },
+  {
+   "id": "5ac325495542995ef918c12e",
+   "sentences": [
+    " Akrofuom is located in the Obuasi Municipal district of the Ashanti Region of Ghana.",
+    "The Obuasi Municipality District is one of the twenty-seven (27) districts of the Ashanti Region of Ghana."
+   ]
+  },
+  {
+   "id": "6334254940258112455",
+   "sentences": [
+    "In most of the world speed limit signs display the limitation within a red circle . This design follows the style set out by the Vienna Convention on Road Signs and Signals , with the exception of United States and Canada . All countries globally worldwide ( except the United Kingdom and United States ) use metric speed limits in kilometres per hour . Metric signs are optional in the United States though less commonly seen , while Samoa uses both units . In Ontario , Canada , the type , location , and frequency of speed limit signs is covered by regulation 615 of the Ontario Highway Traffic Act ."
+   ]
+  },
+  {
+   "id": "multihop-rag-637",
+   "sentences": [
+    "\"And if the Braves let this be the story of their series, that's on them.",
+    "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."
+   ]
+  },
+  {
+   "id": "-1640714294501064196",
+   "sentences": [
+    "Dragon Ball Z ( ドラゴンボール ゼット , Doragon Bōru Zetto , commonly abbreviated as DBZ ) is the long - running anime sequel to the Dragon Ball TV series , adapted from the final twenty - six volumes of the Dragon Ball manga written by Akira Toriyama . The manga portion of the series debuted in Weekly Shōnen Jump in October 4 , 1988 and lasted until 1995 ; the anime adaptation premiered in Japan on Fuji Television on April 26 , 1989 , taking over its predecessor 's time slot , and ran until its end on January 31 , 1996 , lasting 291 episodes in Japan , and 276 episodes in the United States originally , although all 291 episodes were later broadcast when content from the first 67 episodes was restored ."
+   ]
+  },
+  {
+   "id": "5a7af1a955429931da12c98f",
+   "sentences": [
+    "Disteghil Sar or Distaghil Sar (Urdu: ‎ ) is the highest mountain in the Hispar Muztagh, a subrange of the Karakoram mountain range, in Gilgit-Baltistan.",
+    " The mountain has an about 3 km long top ridge above 7400m with three distinct summits: (north)west 7885m, central 7760 m, and (south)east 7696m or 7535m ().",
+    " Its summit has an elevation of 7295 m and it is the highest peak in the Yengisogat subrange of the Karakoram."
+   ]
+  },
+  {
+   "id": "5ae234385542992decbdcc59",
+   "sentences": [
+    " All matches were played at HC Davos's home arena, Eisstadion Davos.",
+    "Hockey Club Davos is a professional Swiss ice hockey club based in Davos, Switzerland."
+   ]
+  },
+  {
+   "id": "multihop-rag-1110",
+   "sentences": [
+    "“She’s got the Eras Tour booked all through next year, and she’d rather die than cancel a show.",
+    "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City.",
+    "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before.",
+    "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."
+   ]
+  },
+  {
+   "id": "5a7283355542991f9a20c4b1",
+   "sentences": [
+    "The Karlsschrein (English: Shrine of Charlemagne ) in Aachen Cathedral was made in Aachen at the command of Frederick II, Holy Roman Emperor and completed in 1215, after Frederick II's grandfather, Frederick Barbarossa had exhumed Charlemagne's bones from their resting place in the Palatine Chapel, Aachen in 1165.",
+    "Frederick I (German: \"Friedrich I\" , Italian: \"Federico I\" ; 1122 – 10 June 1190), also known as Frederick Barbarossa (Italian: \"Federico Barbarossa\" ), was the Holy Roman Emperor from 1155 until his death."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,64 @@
+[
+  {
+    "id": "226c5e357dde4865",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "“I’m here until the end,” she said in her press conference on Friday."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "d93a82e6a5372f08",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Ellison, the former CEO of Alameda"}, {"item": 10, "quote": "Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda"}]},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []},
+      {"fact": "1.4", "status": "missing", "evidence": []},
+      {"fact": "1.5", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "6b41e8143872e116",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "We identify with his struggles and his little glimmers of connection and triumph"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "We identify with his struggles and his little glimmers of connection and triumph"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "which makes him the perfect superhero for Thanksgiving"}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "While it’s often viewed as a day for Americans to express what they’re grateful for"}, {"item": 3, "quote": "it’s a day filled with food and family"}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "While it’s often viewed as a day for Americans to express what they’re grateful for"}, {"item": 2, "quote": "The activity typically consists of a celebration with close pals"}, {"item": 3, "quote": "it’s a day filled with food and family"}]}
+    ]
+  },
+  {
+    "id": "470e2e687b071244",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "62053bbae449fc2b",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "by the age of 16, she is public property"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "by the age of 16, she is public property"}, {"item": 9, "quote": "incapable of going outside without being mobbed"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "her love of singing and dancing now a lucrative resource"}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []}
+    ]
+  }
+]

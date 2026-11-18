@@ -1,0 +1,546 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "8525244ae5233f40",
+   "kind": "answer",
+   "question": "Considering the features discussed in a New York Times article and the performance benchmarks mentioned in a review by The Verge, which component of the latest iPad Pro, represented by a single letter, has seen the most significant upgrade in terms of speed and efficiency?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "The M4 chip"
+  },
+  {
+   "id": "f1e511f804fdb93f",
+   "kind": "answer",
+   "question": "Considering the information from an article by The Verge about the iPad Air's new processor and another article by CNET discussing the device's compatibility with a specific accessory, which generation of iPad Air, represented by a single numeral, is the first to incorporate the mentioned processor and also supports the accessory discussed in the CNET article?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "6"
+  },
+  {
+   "id": "53c6983faebc01b5",
+   "kind": "answer",
+   "question": "Between the report by Business Today | Latest Stock Market And Economy News India on Israel's intelligence situation published on October 7, 2023, and the report by Fortune on the humanitarian conditions in Gaza published on October 13, 2023, was there a change in the portrayal of Israel's security and humanitarian actions?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from Israel’s intelligence failure to the humanitarian impact of its actions in Gaza."
+  },
+  {
+   "id": "efd4e07dbfcaa9dc",
+   "kind": "answer",
+   "question": "Considering the recent developments reported by The Guardian regarding the new transportation policy in Berlin and the economic forecast for the city's tech industry from Bloomberg, which single letter represents both the initial of the minister responsible for introducing the transportation policy and the CEO of the tech startup predicted to be the most successful in Berlin's growing tech sector this year?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "V"
+  },
+  {
+   "id": "48359be1094198a0",
+   "kind": "answer",
+   "question": "Was there inconsistency in the portrayal of Sam Bankman-Fried's actions related to the allegations of fraud between the report from Fortune published on October 4, 2023, and the report from TechCrunch?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "0842d30d423462f4",
+   "kind": "answer",
+   "question": "Which national rugby team, highlighted in articles from 'The Independent - Sports' and 'The Roar | Sports Writers Blog', suffered defeats in their home country as well as in Sydney and Christchurch, against opponents including Ireland, South Africa, and Argentina?",
+   "gold_answers": [
+    "New Zealand All Blacks"
+   ],
+   "model_answer": "New Zealand’s All Blacks"
+  },
+  {
+   "id": "8323b52df478a0fe",
+   "kind": "answer",
+   "question": "Considering the information from a New York Times article discussing Meta Platforms' financial performance and a Wall Street Journal report on the company's strategic shifts, which single letter represents both the beginning of the CEO's first name and the first letter of the product that Meta is heavily investing in as part of its future growth strategy?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "M"
+  },
+  {
+   "id": "28a268a71da48d35",
+   "kind": "answer",
+   "question": "Considering the economic reforms discussed in a BBC article and the diplomatic strategies outlined in a piece from The Guardian, which leader of Soviet Russia, represented by a single initial, is credited with introducing policies that led to the end of the Cold War?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "M."
+  },
+  {
+   "id": "f0d2734a5ad100c7",
+   "kind": "answer",
+   "question": "Was the narrative regarding the team's focus and playing intentions unchanged between the report from The Roar | Sports Writers Blog on the All Blacks' performance published on October 18, 2023, and the report from The Roar | Sports Writers Blog on the All Blacks' mindset published on October 26, 2023?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "14caef3b9748ea4b",
+   "kind": "answer",
+   "question": "Does the TechCrunch article claim that Google's Gemini has superior architecture and capabilities in comparison to other AI models, while the other TechCrunch article accuses Google of anticompetitive behavior towards news publishers, and does The Verge article also depict Google negatively by portraying it as the antagonist in the Epic v. Google trial?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "5c6249dc1eaf34f0",
+   "kind": "answer",
+   "question": "Considering the information from a New York Times article discussing Goodyear's latest tire technology advancements and a Wall Street Journal report on Goodyear's strategic partnerships in the automotive industry, which letter represents both the first character of the European city where Goodyear's new research facility is inaugurated and the last character of the name of the company that Goodyear has recently partnered with to enhance tire performance data analytics?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "C"
+  },
+  {
+   "id": "09a8f56b2097bfbd",
+   "kind": "answer",
+   "question": "What is the name of the company that Jay Brown, as reported by The Wall Street Journal, recently joined as a board member and, according to Forbes, is also planning to invest in?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "Professional Fighters League (PFL)"
+  },
+  {
+   "id": "ffe611ee7665e563",
+   "kind": "answer",
+   "question": "Who is the individual accused of instructing Caroline Ellison to use $14 billion of customer funds to repay debts, claimed to have struggled with managing two major companies due to significant growth, and is alleged by the prosecution to have committed fraud for personal gains, as reported by both TechCrunch and The Verge?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "650c8f10371e9700",
+   "kind": "answer",
+   "question": "Considering the information from an article in The Times of India and another from The Hindustan Times on Agastya Nanda, which upcoming film, as per The Times of India, marks his acting debut, and who, according to The Hindustan Times, is his legendary grandfather with whom he shares his surname?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "The Archies; Amitabh Bachchan."
+  },
+  {
+   "id": "a75de12342727c1a",
+   "kind": "answer",
+   "question": "What is the first letter of the startup, featured in both The Economic Times and YourStory, that received significant funding from a major venture capital firm and is also collaborating with a well-known tech giant on a project to enhance urban mobility solutions?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "C"
+  },
+  {
+   "id": "da9c9b3788a7e05d",
+   "kind": "answer",
+   "question": "Considering the information from an article by The Verge and another by Wired on Mike Schoofs, which company's product, known for its innovative technology in one article, did Schoofs join as the managing editor according to the other article, and is represented by the first letter of its name?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "Engadget"
+  },
+  {
+   "id": "ca3c3bcfa23c9830",
+   "kind": "answer",
+   "question": "Does the TechCrunch article that discusses the expected debut of DeepMind's next-generation chatbot Gemini by the end of the year align with the TechCrunch article mentioning Google's release of only the \"lite\" version known as Gemini Pro, or do they refer to different stages or versions of the Gemini project?",
+   "gold_answers": [
+    "Different stages or versions"
+   ],
+   "model_answer": "No."
+  },
+  {
+   "id": "cf0546e61d7ebe1e",
+   "kind": "answer",
+   "question": "What team, which has players like Steve Smith and Aaron Finch contributing to a score of 328 for 7 wickets in a 2015 World Cup semi-final and also won a match against India by just one run, recently experienced their first four-day game loss since January 2014 during a tour of India, as reported by 'The Roar | Sports Writers Blog' and 'Zee Business'?",
+   "gold_answers": [
+    "Australia's cricket team"
+   ],
+   "model_answer": "Australia’s cricket team"
+  },
+  {
+   "id": "b55468f546c0028b",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Both present the All Blacks as facing gameplay challenges."
+  },
+  {
+   "id": "dbc5e7330ca9e0f7",
+   "kind": "answer",
+   "question": "Did the article from Fortune reporting on the lawsuit's impact on Rogers Communications Inc. indicate an increase in the company's stock price, and did the article from The Sydney Morning Herald discussing the antitrust lawsuit against Amazon indicate a decrease in Amazon's stock price?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "70c5acf6bd45a973",
+   "kind": "answer",
+   "question": "Considering the information from a Forbes article detailing the philanthropic efforts of the PayPal Mafia and a Bloomberg piece discussing the business ventures of the same group post-PayPal, which member of the PayPal Mafia, known for his investments in space exploration according to Forbes, also founded a financial services company that Bloomberg credits with revolutionizing online payments?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "Elon Musk"
+  },
+  {
+   "id": "182de41aa3f2a2f1",
+   "kind": "answer",
+   "question": "Does the article from The Verge discussing the Microsoft Elite Series 2 “Core” version mention an increase in features compared to the standard model, and does the article from The Verge on MacBook Pros indicate a reduction in prices for the new models?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No. No."
+  },
+  {
+   "id": "4acfd6b9b6ae3e21",
+   "kind": "answer",
+   "question": "Does the TechCrunch article claim that Google's anticompetitive behavior benefits the app distribution and payment processing markets, while the other TechCrunch article and the article from The Age focus on Google's impact on news publishers and general search fairness, respectively?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "5441e34bb13cf4fa",
+   "kind": "answer",
+   "question": "Does the Wired article suggest that Sony headphones do not offer the best value in their class during the Cyber Monday sale, while the Fortune article indicates that market participants need to act irresponsibly to maintain a reasonable market, despite the current low rates?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "c96f2e939bbfc58c",
+   "kind": "answer",
+   "question": "Does the article from The Verge suggest that Google has the capability to address issues with Android app distribution and in-app payment systems, while the TechCrunch articles imply that Google's practices in both app distribution and news content distribution are anticompetitive?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "0e34efa01fca23a8",
+   "kind": "answer",
+   "question": "Who is the individual whose alleged fraudulent path to success, including the creation of a thriving crypto exchange, is under judicial scrutiny, with testimonies from legal representatives revealing contrasting narratives and an admission of awareness of financial discrepancies? This person is also implicated by the prosecution in seeking wealth, power, and influence through deceitful means, as reported by sources such as Fortune, The Verge, and TechCrunch.",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "c6ee78163b05a39b",
+   "kind": "answer",
+   "question": "Considering the financial performance insights from a Bloomberg article and the strategic partnership developments from a Reuters report on Safaricom, which single letter represents the start of the name of the CEO who has overseen these recent company advancements?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "P"
+  },
+  {
+   "id": "159761b0433c339e",
+   "kind": "answer",
+   "question": "Considering the information from two separate articles on Retail Fuse, which company, known for its significant discounts during Black Friday events, also announced a strategic partnership with a tech firm to enhance its e-commerce platform?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "The Very Group"
+  },
+  {
+   "id": "195fc024eb3f0727",
+   "kind": "answer",
+   "question": "Does the 'Fortune' article suggest that Israel's actions are defensive by mentioning a warning to Gaza residents to relocate due to a potential ground invasion, while the 'Business Today | Latest Stock Market And Economy News India' article implies that Israel was caught off-guard by a Hamas attack, indicating a lack of intelligence support?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "eda88cb85d5da648",
+   "kind": "answer",
+   "question": "Between the report by The Verge on November 7, 2023, portraying Google as the antagonist in the Epic v. Google trial, and the report by TechCrunch on December 9, 2023, regarding Google's release of only a \"lite\" version of their AI model, was there a change in the portrayal of Google's actions from the perspective of these news sources? \n\nBetween the report by TechCrunch on December 9, 2023, about Google releasing only a \"lite\" version of their AI model, and the report by TechCrunch on December 15, 2023, filing a class action antitrust suit against Google, was the consistency in reporting Google's competitive practices by TechCrunch maintained?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes. Yes."
+  },
+  {
+   "id": "ffe8e33831217cb5",
+   "kind": "answer",
+   "question": "Considering the information provided by TechCrunch regarding Meta's alleged GDPR non-compliance, its proposal to shift teen app oversight to parents, the accusation of neglecting children's online privacy, and the reported suppression of Palestinian voices, which company is implicated in multiple controversies related to user privacy, content moderation, and the responsibility of safeguarding young users' online activities?",
+   "gold_answers": [
+    "Meta"
+   ],
+   "model_answer": "Meta (formerly Facebook)"
+  },
+  {
+   "id": "ec391272b313c1af",
+   "kind": "answer",
+   "question": "Considering the information from an article in The Economic Times and another in YourStory about Prashanth Prakash, which city does the venture capitalist, who is known for his investments in early-stage startups and has recently been appointed to a government advisory panel, primarily operate from?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "Bengaluru"
+  },
+  {
+   "id": "d380925947d33faa",
+   "kind": "answer",
+   "question": "Did Mashable report on the Echelon Connect Sport being on sale for less than $400 off during Black Friday before Fortune mentioned that Delta SkyMiles® Gold Business American Express Card cardholders receive a 20% statement credit on eligible in-flight purchases with Delta?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "92143206b5138080",
+   "kind": "answer",
+   "question": "Considering the information from an article by The Times of India and another by The Hindu on Shreyanka Patil, which team did she play for in her most recent professional match, and what was the outcome of that match as reported by both sources?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "Royal Challengers Bangalore; they beat Delhi Capitals by 8 wickets."
+  },
+  {
+   "id": "30d0dd7f1181ca0a",
+   "kind": "answer",
+   "question": "Considering an article from The New York Times detailing Patrick Queen's early career achievements and a report from ESPN highlighting his recent selection to the Pro Bowl, which NFL team, represented by the single character abbreviation, does Patrick Queen play for that has seen him rise from a promising rookie to a Pro Bowl linebacker?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "Pittsburgh Steelers (P)"
+  },
+  {
+   "id": "3f47cde3e681466d",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Both portray gameplay challenges, but in different situations."
+  },
+  {
+   "id": "6df0b0de0decbe60",
+   "kind": "answer",
+   "question": "Considering the information from an article in The New York Times about David Sutter's philanthropic efforts and a piece from The Guardian discussing his recent investments in technology startups, which city, beginning with the letter 'S', is both the location of the charity event he sponsored and the headquarters of the startup he invested in that is pioneering artificial intelligence research?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "San Francisco"
+  },
+  {
+   "id": "64c5c6d026ce5a35",
+   "kind": "answer",
+   "question": "Does the TalkSport article suggest a bleak future for Manchester United with Jim Ratcliffe's vision, while the Sporting News article indicates a setback for Manchester United in European competitions?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "34d810ff506836aa",
+   "kind": "answer",
+   "question": "Does the TechCrunch article that discusses the expected debut of DeepMind's next-generation chatbot Gemini by the end of the year align with the TechCrunch article mentioning Google's release of only the \"lite\" version known as Gemini Pro, or do they refer to different stages or versions of the Gemini project?",
+   "gold_answers": [
+    "Different stages or versions"
+   ],
+   "model_answer": "They refer to different versions and stages: Gemini Pro rolled out first, while Gemini Ultra was expected later."
+  },
+  {
+   "id": "13a18647db8de1d5",
+   "kind": "answer",
+   "question": "Does 'The Roar | Sports Writers Blog' suggest that 'The All Blacks' motivation for playing is the same as the Springboks' as per the first article, while also indicating that 'The All Blacks' handling was compromised by external factors in the second article, and does it confirm 'The All Blacks' losses to Argentina as stated in the third article?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "7d7637fae4aa527c",
+   "kind": "answer",
+   "question": "Considering the information from two separate articles on Retail Fuse, which company, known for its significant discounts during Black Friday events, also announced a strategic partnership with a tech firm to enhance its e-commerce platform?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "Currys"
+  },
+  {
+   "id": "40c66191ee604164",
+   "kind": "answer",
+   "question": "Does the TechCrunch article suggest that Sam Bankman-Fried's actions were motivated by altruism, while The Verge article focuses on the specific use of FTX customer funds by Sam Bankman-Fried?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "431cc064bdc18106",
+   "kind": "answer",
+   "question": "Who is the individual accused of fraud and conspiracy, as reported by TechCrunch, who also sought to establish a board with experts for a company according to Cnbc | World Business News Leader, and made a billion-dollar decision involving customer funds as per The Verge?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "db4c879bb74c8b07",
+   "kind": "answer",
+   "question": "Considering the information from a Bloomberg article detailing Microsoft's latest cloud computing advancements and a Wall Street Journal report on Microsoft's strategic acquisitions, which division within Microsoft, represented by a single letter, is responsible for integrating the new cloud technologies and also played a key role in the recent acquisition of a major gaming company?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "X"
+  },
+  {
+   "id": "b7e65b56ad4d9c10",
+   "kind": "answer",
+   "question": "Does the article from The Verge discussing the Microsoft Elite Series 2 “Core” version mention an increase in features compared to the standard model, and does the article from The Verge on MacBook Pros indicate a reduction in prices for the new models?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No; yes."
+  },
+  {
+   "id": "229d72f83d8a99fa",
+   "kind": "answer",
+   "question": "According to Fortune, has the perspective on 'Housing affordability' in the housing market changed between the article published on October 6, 2023, which mentioned that affordability would improve as inflation fades and the Federal Reserve cuts interest rates, and the article published on October 20, 2023, which reported that housing affordability is worse now than during the Great Financial Crisis?",
+   "gold_answers": [
+    "No"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "431bfcad0007e7e6",
+   "kind": "answer",
+   "question": "Considering the updates on Azure's AI capabilities from a Bloomberg article and the expansion of Azure's data center regions as reported by Reuters, which single letter of the alphabet is the starting character for both the new AI feature announced and the name of the latest country to have an Azure data center announced?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "M"
+  },
+  {
+   "id": "d63cefbd91d7ee9a",
+   "kind": "answer",
+   "question": "Who is the individual who has pleaded not-guilty to charges of fraud and conspiracy, claimed to have struggled with managing a rapidly growing cryptocurrency exchange and a trading firm, and is accused by the prosecution of committing fraud to gain wealth, power, and influence, as reported by both TechCrunch and The Verge?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "af229c514dcb5222",
+   "kind": "answer",
+   "question": "Which NFL team, featured in articles by Sporting News and CBSSports.com, experienced a dominating defense from their opponent, altered their passing strategy for the first time in the season, and had limited options to change the outcome of a game due to timeouts, while also seeing a backup quarterback producing similar offensive results as their starter?",
+   "gold_answers": [
+    "Minnesota Vikings"
+   ],
+   "model_answer": "New England Patriots"
+  },
+  {
+   "id": "5bf7589f94606ae3",
+   "kind": "answer",
+   "question": "Considering the information from a Wall Street Journal article and a New York Times piece on Andrew Beaton, which NFL team, known for its distinct helmet design, was the subject of Beaton's analysis regarding their strategic decisions in the off-season as reported by the Wall Street Journal, and also mentioned in the New York Times for their unexpected player trade move?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "Dallas Cowboys"
+  },
+  {
+   "id": "5277288e4896df33",
+   "kind": "answer",
+   "question": "Based on the information from a New York Times article detailing the latest advancements in artificial intelligence and a BBC report on the ethical implications of AI in the workplace, which company, recognized for its pioneering AI research, has also faced scrutiny for potentially automating jobs that could lead to a significant number of layoffs?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "Google"
+  },
+  {
+   "id": "4a378361f206ff7e",
+   "kind": "answer",
+   "question": "Considering the information from an article by The Times of India about Agastya's recent scientific discovery and another article by The Hindu discussing Agastya's involvement in a major environmental project, which element on the periodic table, symbolized by a single character, is both central to Agastya's discovery and a critical component of the environmental initiative?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "Carbon (C)"
+  },
+  {
+   "id": "c4e838e7a142116b",
+   "kind": "answer",
+   "question": "Has the approach to content moderation by social media companies, as reported by TechCrunch, changed from the time when the Supreme Court was set to hear cases on state laws restricting moderation (published at '2023-10-04T20:07:42+00:00') to the period when Twitter (now called X) under Elon Musk's leadership implemented a crowdsourced moderation system (published at '2023-11-03T17:43:00+00:00')?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—X increasingly used crowdsourced Community Notes, while moderation was generally described as algorithmic."
+  },
+  {
+   "id": "4b3d2c8a7797c28f",
+   "kind": "answer",
+   "question": "Does the TechCrunch article that discusses the expected debut of DeepMind's next-generation chatbot Gemini by the end of the year align with the TechCrunch article mentioning Google's release of only the \"lite\" version known as Gemini Pro, or do they refer to different stages or versions of the Gemini project?",
+   "gold_answers": [
+    "Different stages or versions"
+   ],
+   "model_answer": "They refer to different stages or versions."
+  },
+  {
+   "id": "229bd91615a1ea14",
+   "kind": "answer",
+   "question": "Does the Queensland Rugby Union's stance on maintaining control over their high-performance model, as reported by The Roar | Sports Writers Blog, align with Rugby Australia's efforts to centralize high-performance programs across Super Rugby teams, or are their approaches different?",
+   "gold_answers": [
+    "Different"
+   ],
+   "model_answer": "Their approaches are different."
+  },
+  {
+   "id": "92064c9dfcb02c03",
+   "kind": "answer",
+   "question": "Considering the information from a New York Times article discussing the recent geological activity in Yellowstone and a BBC report on the wildlife migration patterns within the same region, which species, known for its antlers, has been observed to alter its migratory routes in response to the changes in geothermal features?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "Elk"
+  },
+  {
+   "id": "e78dca8b703982cd",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Both present the All Blacks as having faced challenges in their gameplay."
+  },
+  {
+   "id": "f9acf3a27d69d375",
+   "kind": "answer",
+   "question": "Considering the information from a BBC article detailing Indrani Roy's philanthropic efforts and a Forbes article discussing Indrani Roy's investments in technology startups, which sector, represented by a single letter, has Indrani Roy shown a significant interest in according to both sources?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "T (technology)"
+  },
+  {
+   "id": "6c6dc86e8caaf7ec",
+   "kind": "answer",
+   "question": "Considering the information from a New York Times article detailing Salehe Bembury's collaboration with a major sneaker brand and a Forbes article discussing his influence on sneaker culture and recent award for his design innovation, which sneaker brand, represented by a single letter, has Bembury notably collaborated with?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "New Balance"
+  },
+  {
+   "id": "0b6d62ed63dddbbb",
+   "kind": "answer",
+   "question": "Does the Sporting News article suggest that Terry McLaurin, Puka Nacua, Tutu Atwell, Drake London, Tyler Lockett, and Jaxon Smith-Njigba may underperform in their upcoming games, in contrast to the CBSSports.com article which discusses Najee Harris's past performance in a specific game rather than predictions for future games?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  }
+ ],
+ "evidence": []
+}

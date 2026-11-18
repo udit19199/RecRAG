@@ -1,0 +1,46 @@
+[
+ {"id": "5a8f876e5542997ba9cb32a1", "sentences": [
+   ["Marc Rosset was born on 7 November 1970.", "Marc Rosset is a former professional tennis player.", "Marc Rosset is from Switzerland.", "Marc Rosset is best remembered for winning the men's singles gold medal at the 1992 Olympic Games."],
+   ["Maksim Mirnyi, also known as Max Mirnyi, was born on 6 July 1977 in Minsk.", "Maksim Mirnyi's Belarusian name is Максім Мікалаевіч Мірны.", "Maksim Mirnyi's Russian name is Максим Николаевич Мирный.", "Maksim Mirnyi is a Belarusian professional tennis player."]
+ ]},
+ {"id": "multihop-rag-283", "sentences": [
+   ["The speaker was the richest person in the world under 30.", "The speaker was going to spend his wealth to save humanity from extinction.", "The speaker said this."],
+   ["FTX had grown so much.", "Because FTX had grown so much, the speaker could no longer run both companies.", "The speaker said this."],
+   ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud.", "The prosecution said Bankman-Fried knowingly committed fraud to achieve great wealth, power and influence.", "The defense argued that the FTX founder acted in good faith.", "The defense argued that the FTX founder never meant to commit fraud or steal.", "The defense argued that the FTX founder basically got in over his head."]
+ ]},
+ {"id": "6594701918829323034", "sentences": [
+   ["Costs are associated with particular goods using one of several formulas.", "The formulas include specific identification.", "The formulas include first-in first-out (FIFO).", "The formulas include average cost.", "Costs include all costs of purchase.", "Costs include all costs of conversion.", "Costs include other costs that are incurred in bringing the inventories to their present location and condition.", "Costs of goods made by businesses include material.", "Costs of goods made by businesses include labor.", "Costs of goods made by businesses include allocated overhead.", "Costs of goods which are not yet sold are deferred as costs of inventory.", "Costs of goods which are not yet sold are deferred until the inventory is sold.", "Costs of goods which are not yet sold are deferred until the inventory is written down in value."]
+ ]},
+ {"id": "5ac308135542990b17b154f4", "sentences": [
+   ["The person in this sentence succeeded his brothers Eric IV Plovpenning and Abel of Denmark on the throne."],
+   ["Eric IV is also known as Eric Ploughpenny.", "Eric IV is also known as Eric Plowpenny.", "Eric IV's Danish name is Erik Plovpenning.", "Eric IV's dates are 1216 to 10 August 1250.", "Eric IV was king of Denmark from 1241.", "Eric IV was king of Denmark until his death in 1250."]
+ ]},
+ {"id": "5abd0097554299700f9d7956", "sentences": [
+   ["Ionolyce is a small genus of butterflies.", "Ionolyce is in the family Lycaenidae."],
+   ["I. helicon is widespread in the Indoaustralasian region.", "I. helicon is widespread from India to the Malay Archipelago."],
+   ["India lies on the Indian Plate.", "The Indian Plate is the northern portion of the Indo-Australian Plate.", "The continental crust of the Indian Plate forms the Indian subcontinent."],
+   ["India is the seventh-largest country in the world.", "India has a total area of 3287263 km2."]
+ ]},
+ {"id": "multihop-rag-376", "sentences": [
+   ["Beware of Terry McLaurin this week, versus the Dolphins.", "Beware of Puka Nacua this week, versus the Browns.", "Beware of Tutu Atwell this week, versus the Browns.", "Beware of Drake London this week, playing at the Jets.", "Beware of Tyler Lockett this week, playing at the Cowboys.", "Beware of Jaxon Smith-Njigba this week, playing at the Cowboys."],
+   ["Harris had over 120 total yards in a Week 17 win in Baltimore last year.", "Harris had a touchdown in a Week 17 win in Baltimore last year."]
+ ]},
+ {"id": "-5345751650770708960", "sentences": [
+   ["'Sacrifice' is a ballad performed by musician Elton John.", "The lyrics of 'Sacrifice' are by Bernie Taupin.", "The music of 'Sacrifice' is by Elton John.", "'Sacrifice' appears on the 1989 album Sleeping with the Past.", "'Sacrifice' was first released in October 1989.", "'Sacrifice' was released in 1990.", "'Sacrifice' was the second single from the album Sleeping with the Past.", "'Sacrifice' achieved success, particularly in France and the UK.", "'Sacrifice' became Elton John's first solo chart-topper in France and the UK.", "'Sacrifice' spent five weeks at the top of the chart."]
+ ]},
+ {"id": "multihop-rag-2262", "sentences": [
+   ["The 12th over is timestamped 13 Dec 2023 00.58 GMT.", "At the end of the 12th over, West Indies were 102-4.", "At the end of the 12th over, Hope had 26 runs.", "At the end of the 12th over, Hetmyer had 1 run.", "The 12th over had just a single and a wicket.", "Shai Hope could not break the legspin shackles in the 12th over."],
+   ["The 16th over is timestamped 6d ago, 22.54 GMT.", "At the end of the 16th over, West Indies were 112-4.", "At the end of the 16th over, Hope had 29 runs.", "At the end of the 16th over, Powell had 8 runs.", "Hope is playing an exemplary innings.", "Hope opens the face to steer Rehan for Hope's first boundary."]
+ ]},
+ {"id": "5a710a915542994082a3e504", "sentences": [
+   ["Scott Treleaven is a Canadian artist.", "Scott Treleaven's work employs a variety of media.", "The media employed in Scott Treleaven's work include collage, film, video, drawing, photography and installation."],
+   ["Edmund Mortimer's dates are 21 August 1874 to 21 May 1944.", "Edmund Mortimer was an American actor.", "Edmund Mortimer was an American film director."]
+ ]},
+ {"id": "5ae16d9655429920d52343ce", "sentences": [
+   ["'Collateral Damage' is the eleventh episode of the third season of the crime-thriller television series 'Millennium'.", "'Millennium' is a crime-thriller television series.", "'Collateral Damage' is in the third season of 'Millennium'."],
+   ["'Collateral Damage' featured a guest appearance by O'Quinn.", "'Collateral Damage' featured a guest appearance by Jacinda Barrett.", "'Collateral Damage' featured a guest appearance by James Marsters.", "'Collateral Damage' featured a guest appearance by radio host Art Bell.", "Art Bell appeared as himself in 'Collateral Damage'."],
+   ["Art Bell's radio show 'Coast to Coast AM' was among Perry's inspirations for the script."],
+   ["Coast to Coast AM is an American late-night radio talk show.", "Coast to Coast AM deals with a variety of topics."],
+   ["Coast to Coast AM now airs seven nights a week.", "Coast to Coast AM airs from 1:00 a.m. to 5:00 a.m. Eastern Time Zone."]
+ ]}
+]

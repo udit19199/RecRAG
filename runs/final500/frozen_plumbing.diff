@@ -1,0 +1,511 @@
+diff --git a/benchmark.py b/benchmark.py
+index 82ace6a..8c4b120 100644
+--- a/benchmark.py
++++ b/benchmark.py
+@@ -14,7 +14,7 @@ from hashlib import sha256
+ from pathlib import Path
+ from statistics import fmean
+ from time import perf_counter
+-from typing import Literal
++from typing import Any, Literal
+ 
+ import tiktoken
+ from dotenv import load_dotenv
+@@ -28,7 +28,14 @@ from cost import (
+     metering_builds,
+     unmetered,
+ )
+-from dataset import DATASET_SOURCES, SourcePage, get_source, load_hotpotqa_corpus
++from dataset import (
++    DATASET_SOURCES,
++    SourcePage,
++    get_source,
++    load_hotpotqa_corpus,
++    load_natural_questions_corpus,
++    natural_questions_corpus_rows,
++)
+ from evals.qa_metrics import (
+     benchmark_prompt,
+     hotpotqa_f1,
+@@ -117,6 +124,10 @@ class RetrievedContext(BaseModel):
+     scores: list[float]
+     construction_seconds: float
+     retrieval_seconds: float
++    # Agentic GraphRAG only: each kept item as its tool returned it (passages
++    # holds what the answer model reads), and every tool call the agent made.
++    evidence: list[str] = Field(default_factory=list)
++    trace: list[dict[str, Any]] = Field(default_factory=list)
+ 
+ 
+ class LLMSettings(BaseModel):
+@@ -148,6 +159,9 @@ class Settings(BaseModel):
+     llm: LLMSettings
+     embedding: EmbeddingSettings
+     hipporag: HippoSettings | None = None
++    # The [graphrag] section of config.toml as written, so each run records
++    # the agent and Cypher settings it used.
++    graphrag: dict[str, Any] | None = None
+     pricing: Pricing = Field(default_factory=Pricing)
+     retrieval: RetrievalOptions = Field(default_factory=RetrievalOptions)
+     input_source: str = "official"
+@@ -446,8 +460,17 @@ def run(
+         for index in (record_indices or range(start, start + records))
+     ]
+     shared_documents: list[str] = []
+-    if dataset == "hotpotqa":
+-        corpus_pages = load_hotpotqa_corpus()
++    corpus_pages: Sequence[SourcePage] = []
++    nq_rows = (
++        natural_questions_corpus_rows() if dataset == "natural_questions" else None
++    )
++    shared = dataset == "hotpotqa" or nq_rows is not None
++    if shared:
++        corpus_pages = (
++            load_natural_questions_corpus(nq_rows)
++            if nq_rows is not None
++            else load_hotpotqa_corpus()
++        )
+         shared_documents = split_pages(corpus_pages)
+         corpus_key = sha256("\n\n".join(shared_documents).encode()).hexdigest()
+         (run_dir / "corpus.json").write_text(
+@@ -473,7 +496,7 @@ def run(
+     consecutive_failures = 0
+     with pipelines, metering_builds(settings.pricing) as build_cost:
+         for record in selected_records:
+-            if dataset == "hotpotqa":
++            if shared:
+                 documents = shared_documents
+             elif record.pages is not cached_pages:
+                 documents = split_pages(record.pages)
+@@ -497,7 +520,7 @@ def run(
+                 method=method,
+                 pipeline=pipeline,
+                 documents=documents,
+-                pages=corpus_pages if dataset == "hotpotqa" else record.pages,
++                pages=corpus_pages if shared else record.pages,
+                 corpus_key=corpus_key,
+                 indexed_corpora=indexed_corpora,
+                 index_dir=index_dir,
+diff --git a/cost.py b/cost.py
+index 5f01043..c394f81 100644
+--- a/cost.py
++++ b/cost.py
+@@ -7,7 +7,10 @@ counted, because a timed-out request can still be billed and always costs time."
+ 
+ from __future__ import annotations
+ 
++import asyncio
+ import json
++import os
++import time
+ from contextlib import contextmanager
+ from contextvars import ContextVar
+ from time import perf_counter
+@@ -117,12 +120,27 @@ def metering_builds(pricing: Pricing):
+         _build_meter.reset(token)
+ 
+ 
++# The build meter of the index build running in this process, for calls made
++# from worker threads, which do not inherit context variables (HippoRAG runs
++# its OpenIE calls in a ThreadPoolExecutor, so its build calls went unmetered).
++_active_build: Meter | None = None
++
++
++def _current() -> Meter | None:
++    return _meter.get() or _active_build
++
++
+ @contextmanager
+ def indexing():
+-    token = _meter.set(_build_meter.get())
++    global _active_build
++    meter = _build_meter.get()
++    token = _meter.set(meter)
++    outer = _active_build
++    _active_build = meter
+     try:
+         yield
+     finally:
++        _active_build = outer
+         _meter.reset(token)
+ 
+ 
+@@ -141,7 +159,7 @@ def _kind(request) -> str:
+ 
+ 
+ def record_failure(request, status: int | None, error: str, seconds: float) -> None:
+-    meter = _meter.get()
++    meter = _current()
+     if meter is None or _kind(request) not in {"responses", "embeddings"}:
+         return
+     meter.cost.failed_calls.append(
+@@ -152,7 +170,7 @@ def record_failure(request, status: int | None, error: str, seconds: float) -> N
+ 
+ 
+ def record_response(response, seconds: float = 0.0) -> None:
+-    meter = _meter.get()
++    meter = _current()
+     if meter is None:
+         return
+     if not response.is_success:
+@@ -239,29 +257,99 @@ def record_response(response, seconds: float = 0.0) -> None:
+         meter.cost.missing_usage_calls += 1
+ 
+ 
++# Index builds can ask OpenAI for a cheaper service tier (13 Nov 2026, final
++# 500-question study). RECRAG_BUILD_SERVICE_TIER=flex adds service_tier to each
++# build's Responses request body and nothing else: same prompt, model,
++# reasoning effort and settings, so the build's caches and index keys are
++# unchanged. Flex is billed at the Batch API rate but answers synchronously,
++# so the build code runs as before. Question-time calls are never changed.
++# A flex request the API cannot serve right now (429) was not processed; it is
++# retried with backoff, then sent once at the default tier.
++FLEX_ATTEMPTS = 5
++
++
++def _build_tier(request) -> str | None:
++    tier = os.environ.get("RECRAG_BUILD_SERVICE_TIER")
++    meter = _current()
++    if (
++        not tier
++        or meter is None
++        or meter is not (_build_meter.get() or _active_build)
++        or request.method != "POST"
++        or _kind(request) != "responses"
++    ):
++        return None
++    return tier
++
++
++def _with_tier(request, tier: str | None):
++    if tier is None:
++        return request
++    body = json.loads(request.content)
++    body["service_tier"] = tier
++    content = json.dumps(body).encode()
++    headers = request.headers.copy()
++    headers["content-length"] = str(len(content))
++    # The same request class as the caller's: HippoRAG's environment sends
++    # through a fork of httpx whose client rejects httpx.Request.
++    return type(request)(
++        request.method,
++        request.url,
++        headers=headers,
++        content=content,
++        extensions=request.extensions,
++    )
++
++
++def _tier_plan(request) -> list[str | None]:
++    tier = _build_tier(request)
++    if tier is None:
++        return [None]
++    plan: list[str | None] = [tier] * FLEX_ATTEMPTS
++    return [*plan, "default"]
++
++
+ class MeteredClient(DefaultHttpxClient):
+     def send(self, request, **kwargs):
+-        started = perf_counter()
+-        try:
+-            response = super().send(request, **kwargs)
+-            if _meter.get() is not None:
+-                response.read()
+-        except Exception as exc:
+-            record_failure(request, None, repr(exc), perf_counter() - started)
+-            raise
+-        record_response(response, perf_counter() - started)
+-        return response
++        plan = _tier_plan(request)
++        for attempt, tier in enumerate(plan):
++            started = perf_counter()
++            sent = _with_tier(request, tier)
++            try:
++                response = super().send(sent, **kwargs)
++                if _current() is not None:
++                    response.read()
++            except Exception as exc:
++                record_failure(sent, None, repr(exc), perf_counter() - started)
++                raise
++            if response.status_code == 429 and attempt + 1 < len(plan):
++                record_failure(sent, 429, response.text, perf_counter() - started)
++                response.close()
++                time.sleep(2 ** (attempt + 1))
++                continue
++            record_response(response, perf_counter() - started)
++            return response
++        raise RuntimeError("unreachable")
+ 
+ 
+ class MeteredAsyncClient(DefaultAsyncHttpxClient):
+     async def send(self, request, **kwargs):
+-        started = perf_counter()
+-        try:
+-            response = await super().send(request, **kwargs)
+-            if _meter.get() is not None:
+-                await response.aread()
+-        except Exception as exc:
+-            record_failure(request, None, repr(exc), perf_counter() - started)
+-            raise
+-        record_response(response, perf_counter() - started)
+-        return response
++        plan = _tier_plan(request)
++        for attempt, tier in enumerate(plan):
++            started = perf_counter()
++            sent = _with_tier(request, tier)
++            try:
++                response = await super().send(sent, **kwargs)
++                if _current() is not None:
++                    await response.aread()
++            except Exception as exc:
++                record_failure(sent, None, repr(exc), perf_counter() - started)
++                raise
++            if response.status_code == 429 and attempt + 1 < len(plan):
++                record_failure(sent, 429, response.text, perf_counter() - started)
++                await response.aclose()
++                await asyncio.sleep(2 ** (attempt + 1))
++                continue
++            record_response(response, perf_counter() - started)
++            return response
++        raise RuntimeError("unreachable")
+diff --git a/dataset.py b/dataset.py
+index f42b6c6..ecc99fe 100644
+--- a/dataset.py
++++ b/dataset.py
+@@ -7,6 +7,7 @@ shapes without scattering the active dataset interface across modules.
+ from __future__ import annotations
+ 
+ import json
++import os
+ from collections.abc import Callable, Sequence
+ from dataclasses import dataclass
+ from functools import cache
+@@ -85,6 +86,11 @@ def load_hotpotqa_corpus() -> list[SourcePage]:
+ 
+ @cache
+ def _hotpot_table():
++    # A study can fix its own question file (rows as saved from the Hugging
++    # Face distractor validation split); its paragraphs are the shared corpus.
++    chosen = os.environ.get("RECRAG_HOTPOTQA_ROWS")
++    if chosen:
++        return json.loads(Path(chosen).read_text(encoding="utf-8"))
+     dataset_dir = Path(__file__).parent / "datasets/hotpotqa"
+     for filename in (
+         "hotpotqa_distractor_validation_hard_bridge_1000_seed_42.json",
+@@ -330,16 +336,83 @@ def _novelqa_page(book_id: str) -> SourcePage:
+ 
+ 
+ def load_natural_questions_record(index: int) -> NaturalQuestionsRecord:
++    saved = os.environ.get("RECRAG_NQ_RECORDS")
++    if saved:
++        return _saved_natural_questions(saved)[index]
+     return _natural_questions_record(_natural_questions_table()[index])
+ 
+ 
++@cache
++def _saved_natural_questions(path: str) -> list[NaturalQuestionsRecord]:
++    """Records saved once by _natural_questions_record, read without pyarrow.
++
++    HippoRAG's separate environment cannot import the datasets package, so a
++    study saves the processed records once and every method reads that file.
++    """
++    rows = json.loads(Path(path).read_text(encoding="utf-8"))
++    return [
++        NaturalQuestionsRecord(
++            id=row["id"],
++            question=row["question"],
++            pages=[SourcePage(**page) for page in row["pages"]],
++            answer=row["answer"],
++            aliases=row["aliases"],
++            evidence=row["evidence"],
++        )
++        for row in rows
++    ]
++
++
++def natural_questions_corpus_rows() -> range | None:
++    """Rows whose pages form one shared corpus, from RECRAG_NQ_CORPUS_ROWS.
++
++    "0-499" means rows 0 to 499. Unset keeps one corpus per question, as in
++    the NQ 100 pilot.
++    """
++    value = os.environ.get("RECRAG_NQ_CORPUS_ROWS")
++    if not value:
++        return None
++    first, last = (int(part) for part in value.split("-", 1))
++    return range(first, last + 1)
++
++
++@cache
++def load_natural_questions_corpus(rows: range) -> list[SourcePage]:
++    """Each distinct Wikipedia page of the given rows, once, in row order."""
++    pages: list[SourcePage] = []
++    seen: set[str] = set()
++    for index in rows:
++        for page in load_natural_questions_record(index).pages:
++            key = sha256(
++                (page.title + "\n" + "\n".join(page.passages)).encode()
++            ).hexdigest()
++            if key not in seen:
++                pages.append(page)
++                seen.add(key)
++    return pages
++
++
+ @cache
+ def _natural_questions_table():
++    from huggingface_hub import snapshot_download
++
+     from datasets import load_dataset
+ 
+-    return load_dataset(
+-        "google-research-datasets/natural_questions", "default", split="validation"
++    # Fetch only the validation files (about 2.7 GB). load_dataset on the repo
++    # downloads the whole train split first (about 40 GB).
++    root = Path(
++        snapshot_download(
++            repo_id="google-research-datasets/natural_questions",
++            repo_type="dataset",
++            allow_patterns=["default/validation-*.parquet"],
++        )
+     )
++    files = sorted(
++        str(path) for path in (root / "default").glob("validation-*.parquet")
++    )
++    if not files:
++        raise FileNotFoundError("Natural Questions validation files did not download.")
++    return load_dataset("parquet", data_files={"validation": files}, split="validation")
+ 
+ 
+ def _natural_questions_record(row) -> NaturalQuestionsRecord:
+diff --git a/evals/retrieval_judge.py b/evals/retrieval_judge.py
+index ba80e4f..7c19b54 100644
+--- a/evals/retrieval_judge.py
++++ b/evals/retrieval_judge.py
+@@ -30,7 +30,7 @@ import threading
+ import tomllib
+ from collections.abc import Callable, Sequence
+ from concurrent.futures import Future, ThreadPoolExecutor, as_completed
+-from dataclasses import dataclass
++from dataclasses import dataclass, field
+ from datetime import UTC, datetime
+ from hashlib import sha256
+ from pathlib import Path
+@@ -242,6 +242,8 @@ class Judge:
+     model_name: str
+     pricing: Pricing
+     cache: Cache
++    # Cache keys this run asked for, so the report's cost covers this run only.
++    used: set[str] = field(default_factory=set)
+ 
+     @classmethod
+     def from_config(cls, cache: Cache) -> Judge:
+@@ -275,6 +277,7 @@ class Judge:
+         key = sha256(
+             "\x00".join([PROMPT_VERSION, self.model_name, kind, system, user]).encode()
+         ).hexdigest()
++        self.used.add(key)
+         cached = self.cache.get(key)
+         if cached is not None:
+             response = schema.model_validate_json(cached.response)
+@@ -397,6 +400,12 @@ class JudgeItem:
+ 
+ 
+ def render_graphrag(passage: str) -> str:
++    try:
++        json.loads(passage)
++    except ValueError:
++        # Runs from 9 Nov 2026 save a vector_search passage as the plain text
++        # the answer model reads, so the judge sees exactly that.
++        return passage
+     current = parse_vector_evidence(passage)
+     if current:
+         lines = [current.text]
+@@ -1219,7 +1228,12 @@ def main() -> None:
+         all_scores.extend(
+             score for run in runs for score in run.scores if score is not None
+         )
+-    costs = [entry.cost for entry in cache.entries]
++    # Latest entry per key: a re-asked call replaces the rejected reply's cost.
++    costs = [
++        entry.cost
++        for entry in {e.key: e for e in cache.entries}.values()
++        if entry.key in judge.used
++    ]
+     report = Report(
+         created_at=stamp,
+         prompt_version=PROMPT_VERSION,
+@@ -1265,7 +1279,7 @@ def main() -> None:
+     )
+     print_table(report)
+     if report.judge_cost_usd is not None:
+-        print(f"\nJudge cost so far (all cached calls): ${report.judge_cost_usd:.2f}")
++        print(f"\nJudge cost of the calls this run used: ${report.judge_cost_usd:.2f}")
+     print(f"Wrote {_relative(output)}")
+     if failures:
+         print(
+diff --git a/evals/retrieval_quality.py b/evals/retrieval_quality.py
+index de402f9..c8dab78 100644
+--- a/evals/retrieval_quality.py
++++ b/evals/retrieval_quality.py
+@@ -273,15 +273,24 @@ def graphrag_items(saved: SavedRetrieval, corpus: Corpus) -> list[Item]:
+     items: list[Item] = []
+     for rank, passage in enumerate(saved.retrieval.passages):
+         try:
+-            windows = [_GraphRAGEvidence.model_validate_json(passage).text]
++            json.loads(passage)
++        except ValueError:
++            # Runs from 9 Nov 2026 save a vector_search passage as plain text,
++            # the way the answer model reads it.
++            windows = [passage]
+             graph_row = False
+-        except ValidationError:
++        else:
++            try:
++                windows = [_GraphRAGEvidence.model_validate_json(passage).text]
++                graph_row = False
++            except ValidationError:
++                windows, graph_row = [], True
++        if graph_row:
+             # A cypher_search row has whatever columns the generated query
+             # returned. Long text columns are usually a source chunk, so they
+             # are located like a window; the rest of the row has no offsets
+             # and is left to the subagent judge (evals.subagent_judge).
+             windows = _row_texts(passage)
+-            graph_row = True
+         for window in windows:
+             if window in seen:
+                 continue
+diff --git a/evals/subagent_judge.py b/evals/subagent_judge.py
+index 5d15b53..d3110d4 100644
+--- a/evals/subagent_judge.py
++++ b/evals/subagent_judge.py
+@@ -150,10 +150,13 @@ def unlocated_evidence(
+ 
+         items = graphrag_items(saved, corpus)
+         # Graph-query rows: whatever columns the generated query returned.
++        # From 9 Nov 2026 a vector_search passage is saved as plain text, so
++        # a row is JSON that is not vector_search evidence.
+         texts = [
+             passage
+             for passage in saved.retrieval.passages
+-            if parse_vector_evidence(passage) is None
++            if passage.lstrip().startswith(("{", "["))
++            and parse_vector_evidence(passage) is None
+         ]
+     else:
+         items = ranked_items(saved, corpus)
+diff --git a/hipporag_retrieval.py b/hipporag_retrieval.py
+index 2f051bf..91946be 100644
+--- a/hipporag_retrieval.py
++++ b/hipporag_retrieval.py
+@@ -211,6 +211,9 @@ def setup(settings: Settings, index_dir: Path, dataset: str):
+         retrieval_top_k=10,
+         qa_top_k=10,
+         response_format=ResponseFormatJSONObject(type="json_object").model_dump(),
++        # Concurrent OpenIE requests (upstream default 8). Each chunk's calls
++        # are independent, so this changes build time only, not the requests.
++        openie_max_workers=int(os.environ.get("RECRAG_HIPPORAG_OPENIE_WORKERS", "8")),
+     )
+     extraction_model = settings.hipporag.construction_model or settings.llm.model
+     with (

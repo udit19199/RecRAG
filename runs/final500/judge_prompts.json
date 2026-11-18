@@ -1,0 +1,75 @@
+{
+ "rules": "Answered right: exact match after lowercasing and removing punctuation and a, an, the; otherwise a fresh Claude Haiku answer judge (prompt below) for every answer that is not an abstention; nothing reused from earlier runs. Gold facts found: Claude Haiku splits each question's gold sentences into facts once (claims prompt), frozen and shared by every method and repeat (1,233 questions, 22,109 facts; one Natural Questions paragraph returned as several lists is joined into one list). An earlier count said 22,190, which does not reproduce; see DECISIONS 35. Then Claude Haiku marks each fact stated, contradicted or missing with a quote; a fact counts as found only when it is stated and code finds the quote word for word in the retrieved text. The judge sees the text given to the answer model, items de-duplicated and shuffled, never the method; tasks are shuffled across methods. Identical retrieved text (checked by hash) is judged once. The 400 MultiHop-RAG retrievals reused from 2 Nov were judged again. One Haiku subagent per file; a file failing the format check is re-run once by a fresh subagent; no verdict is edited by hand.",
+ "prompts": [
+  [
+   "CLAUDE HAIKU GOLD-FACT JUDGE, STEP 1 (claims): the guide in every claims file, prompt version 2026-11-10.haiku.2",
+   "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence."
+  ],
+  [
+   "STEP 2 (judge): the guide at the top of every judge file",
+   "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item."
+  ],
+  [
+   "CLAUDE HAIKU ANSWER JUDGE: the guide in every answers file",
+   "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item."
+  ],
+  [
+   "Task prompt given to each claims subagent (N = file number)",
+   "Read the file /Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/judge/claims/items-N.json. Follow the instructions in its \"guide\" field exactly for every item in its \"items\" list. Write your answer to /Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/judge/claims/verdict-N.json as the guide describes. Do not modify any other file. Reply only with \"done\" and the number of items you wrote."
+  ],
+  [
+   "Task prompt given to each judge subagent",
+   "Read the file /Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/judge/judge/items-N.md completely (it can be long; read it in parts until the line \"=== END ITEM\" of its last item). It starts with your instructions and then has the items. Follow the instructions exactly for every item. Write your answer to /Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/judge/judge/verdict-N.json as a JSON array, as the instructions describe. Quotes must be copied character for character from the item text; a line break in the file counts as a space. Do not modify any other file. Reply only with \"done\" and the number of items you wrote."
+  ]
+ ],
+ "audit": {
+  "model": "Claude Opus (Claude Code Agent tool, model: opus), one subagent per file, no coordinator",
+  "prompt": "see judge/AGENT_PROMPTS.md, section audit; guide = JUDGE_GUIDE (2026-11-10.haiku.2)",
+  "sample": "scripts/audit_export.py: stratified by dataset x method x Haiku found, seed 20261113; 67 MultiHop-RAG + 67 HotpotQA + 66 Natural Questions",
+  "scoring": "scripts/audit_score.py, same in-code quote check as Haiku",
+  "status": "complete (14 Nov): 200 facts",
+  "overall": {
+   "n": 200,
+   "agree": 196,
+   "agreement": 0.98,
+   "kappa": 0.96,
+   "haiku_found_opus_found": 101,
+   "haiku_found_opus_not": 0,
+   "haiku_not_opus_found": 4,
+   "haiku_not_opus_not": 95
+  },
+  "by_dataset": {
+   "hotpotqa": {
+    "n": 67,
+    "agree": 66,
+    "agreement": 0.985,
+    "kappa": 0.97,
+    "haiku_found_opus_found": 34,
+    "haiku_found_opus_not": 0,
+    "haiku_not_opus_found": 1,
+    "haiku_not_opus_not": 32
+   },
+   "multihop_rag": {
+    "n": 67,
+    "agree": 67,
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "haiku_found_opus_found": 34,
+    "haiku_found_opus_not": 0,
+    "haiku_not_opus_found": 0,
+    "haiku_not_opus_not": 33
+   },
+   "natural_questions": {
+    "n": 66,
+    "agree": 63,
+    "agreement": 0.955,
+    "kappa": 0.909,
+    "haiku_found_opus_found": 33,
+    "haiku_found_opus_not": 0,
+    "haiku_not_opus_found": 3,
+    "haiku_not_opus_not": 30
+   }
+  },
+  "disagreements_note": "4 of 200, all one way: Haiku found nothing, Opus found the fact (Haiku is the stricter judge, so gold-fact counts are if anything low). (1) HotpotQA Normal RAG, 'Chowder was created by C. H. Greenblatt': both said stated with the same quote; Haiku cited item 10, the sentence is in item 7, so the code check rejected it. (2) NQ Normal RAG, 'Can't Get You Out of My Head is recorded by Australian singer Kylie Minogue': Opus quoted 'It also topped the charts of Minogue's native country Australia'. (3) NQ RAPTOR, 'Washington's drinking age was 21 from after Prohibition onward': Opus quoted a table row 'Washington Age of majority since 1877 21 21 21 21'. (4) NQ HippoRAG, 'Eaton sets a test lap': Opus quoted a lap from a different episode and itself called the call borderline. The scoring rule was left unchanged."
+ }
+}

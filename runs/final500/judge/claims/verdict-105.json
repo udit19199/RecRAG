@@ -1,0 +1,235 @@
+[
+  {
+    "id": "5ae0038655429925eb1afbe0",
+    "sentences": [
+      [
+        "Hänt Extra is a Swedish language magazine.",
+        "Hänt Extra is a weekly magazine.",
+        "Hänt Extra is a celebrity and youth magazine.",
+        "Hänt Extra is published by Aller Media.",
+        "Hänt Extra is published in Stockholm, Sweden."
+      ],
+      [
+        "Tea Moderna is a Macedonian woman's weekly magazine.",
+        "Tea Moderna's name in Macedonian is Теа Модерна.",
+        "Tea Moderna is a magazine for women."
+      ]
+    ]
+  },
+  {
+    "id": "7735703748660141931",
+    "sentences": [
+      [
+        "Bad Boys is a 1987 song.",
+        "Bad Boys is a song by the Jamaican reggae band Inner Circle.",
+        "Bad Boys obtained high popularity in the United States after its re-release in 1993.",
+        "Bad Boys peaked at number 8 on the Billboard Hot 100.",
+        "Bad Boys peaked at number 7 on the Top 40 Mainstream.",
+        "Bad Boys is well known as the opening theme to the U.S. TV show Cops."
+      ]
+    ]
+  },
+  {
+    "id": "-6639198685687295158",
+    "sentences": [
+      [
+        "The table has columns for Sport, Men, Women and Total.",
+        "The table lists Cross-country skiing as a sport.",
+        "The table lists a total of 0 for Cross-country skiing.",
+        "The table lists a grand total of 0."
+      ],
+      [
+        "Bermuda competed at the 2018 Winter Olympics.",
+        "The 2018 Winter Olympics were held in Pyeongchang, South Korea.",
+        "Bermuda competed from 9 to 25 February 2018.",
+        "Bermuda had one competitor at the 2018 Winter Olympics.",
+        "The 2018 Winter Olympics was Bermuda's sixth appearance in the Winter Olympics."
+      ]
+    ]
+  },
+  {
+    "id": "5ae0b8bb55429924de1b7145",
+    "sentences": [
+      [
+        "Samantha Marie Sprackling was born on 3 June 1968.",
+        "Samantha Marie Sprackling was born in Lagos, Nigeria.",
+        "Samantha Marie Sprackling is more commonly known as Saffron.",
+        "Samantha Marie Sprackling is a singer.",
+        "Samantha Marie Sprackling is a songwriter.",
+        "Samantha Marie Sprackling is an actress.",
+        "Samantha Marie Sprackling is the lead singer of the electronica band Republica."
+      ],
+      [
+        "Myles Richard Kennedy was born Myles Richard Bass.",
+        "Myles Richard Kennedy was born on November 27, 1969.",
+        "Myles Richard Kennedy is an American musician.",
+        "Myles Richard Kennedy is an American singer.",
+        "Myles Richard Kennedy is an American songwriter.",
+        "Myles Richard Kennedy is best known as the lead vocalist and rhythm guitarist of the rock band Alter Bridge.",
+        "Myles Richard Kennedy is the lead vocalist in guitarist Slash's backing band.",
+        "Slash's backing band is known as Myles Kennedy and the Conspirators."
+      ],
+      [
+        "Myles Richard Kennedy is a former guitar instructor.",
+        "Myles Richard Kennedy is from Spokane, Washington.",
+        "Myles Richard Kennedy has worked as a session musician.",
+        "Myles Richard Kennedy has worked as a songwriter.",
+        "Myles Richard Kennedy has made studio appearances with several artists.",
+        "Myles Richard Kennedy has made live appearances with several artists.",
+        "Myles Richard Kennedy has been involved with several projects throughout his career."
+      ]
+    ]
+  },
+  {
+    "id": "5125203672618500204",
+    "sentences": [
+      [
+        "Miss Hoolie is played by Julie Wilson Nimmo.",
+        "Miss Hoolie's job is nursery teacher.",
+        "Miss Hoolie's house is the Green house (Nursery).",
+        "Miss Hoolie's Nursery Song is Everybody everyone.",
+        "Miss Hoolie's Day off song is What do you want to do today (Series 1-2).",
+        "Miss Hoolie's Day off song is Strike up the band (Series 3-4).",
+        "Archie the Inventor is played by Miles Jupp.",
+        "Archie the Inventor's job is inventor.",
+        "Archie the Inventor's house is the Pink castle.",
+        "Archie the Inventor's song is I'm Archie the Inventor (Series 1-4).",
+        "Archie the Inventor's song is Great Inventions, Groovy Solutions (Series 3-4).",
+        "Josie Jump is played by Buki Akib in Series 1-2.",
+        "Josie Jump is played by Kasia Haddad in Series 3-4.",
+        "Josie Jump's job is fitness instructor.",
+        "Josie Jump's house is the Yellow house.",
+        "Josie Jump's song is Josie Jump is My Name (Jump a Little Higher) (Series 1-4).",
+        "Josie Jump's song is Cheer You Up (Series 3-4).",
+        "Edie McCredie is played by Juliet Cadzow.",
+        "Edie McCredie's job is bus driver.",
+        "Edie McCredie's house is the Blue garage / house.",
+        "Edie McCredie's song is When I Honk My Horn (Series 1-4).",
+        "Edie McCredie's song is Let Me Take You on a Journey (Series 3-4).",
+        "PC Plum is played by Andrew Agnew.",
+        "PC Plum's job is policeman.",
+        "PC Plum's house is the Black and white police station.",
+        "PC Plum's song is I'm PC Plum (Series 1-4).",
+        "PC Plum's song is Follow the Clue (Series 3-4).",
+        "Spencer the Painter is played by Rodd Christensen.",
+        "Spencer the Painter's job is painter and musician.",
+        "Spencer the Painter's house is the Orange house.",
+        "Spencer the Painter's song is Climbing Up My Musical Ladder (Series 1-4).",
+        "Spencer the Painter's song is If You Need a Little Rhythm (Series 3-4).",
+        "Suzie Sweet is played by Mary Riggans.",
+        "Suzie Sweet's job is shop and café worker.",
+        "Suzie Sweet's house is the Red shop.",
+        "Suzie Sweet's song is I'm Suzie Sweet, I'm Penny Pocket (Series 1-4).",
+        "Suzie Sweet's song is Suzie's Cooking (Series 3-4).",
+        "Penny Pocket is played by Kim Tserkezie.",
+        "Penny Pocket's song is I'm Suzie Sweet, I'm Penny Pocket (Series 1-4).",
+        "Penny Pocket's song is Sort It (Series 3-4)."
+      ]
+    ]
+  },
+  {
+    "id": "multihop-rag-2529",
+    "sentences": [
+      [
+        "The Justice Department is focused on the deals Google makes.",
+        "Google makes deals with Apple.",
+        "Google makes deals with Samsung.",
+        "Google makes deals with Mozilla.",
+        "Google makes deals with many others.",
+        "The deals are meant to ensure Google is the default search engine on practically every platform."
+      ],
+      [
+        "The trial will probably bring up the deals later on.",
+        "Epic chose to focus more on simply painting Google as the bad guy on day one."
+      ],
+      [
+        "The case was filed by Arkansas-based publisher Helena World Chronicle.",
+        "The case argues that Google 'siphons off' news publishers' content through anticompetitive means.",
+        "The case argues that Google 'siphons off' news publishers' readers through anticompetitive means.",
+        "The case argues that Google 'siphons off' news publishers' ad revenue through anticompetitive means."
+      ]
+    ]
+  },
+  {
+    "id": "2146143093796977535",
+    "sentences": [
+      [
+        "The Compromise of 1877 was an informal, unwritten deal.",
+        "The Compromise of 1877 settled the intensely disputed 1876 U.S. presidential election.",
+        "The Compromise resulted in the United States federal government pulling the last troops out of the South.",
+        "The Compromise formally ended the Reconstruction Era.",
+        "Through the Compromise, Republican Rutherford B. Hayes was awarded the White House over Democrat Samuel J. Tilden.",
+        "The White House was awarded to Hayes on the understanding that Hayes would remove the federal troops.",
+        "The federal troops' support was essential for the survival of Republican state governments in South Carolina, Florida and Louisiana.",
+        "The compromise involved Democrats who controlled the House of Representatives.",
+        "The compromise involved the Democrats allowing the decision of the Electoral Commission to take effect.",
+        "The outgoing president, Republican Ulysses S. Grant, removed the soldiers from Florida.",
+        "As president, Rutherford B. Hayes removed the remaining troops from South Carolina.",
+        "As president, Rutherford B. Hayes removed the remaining troops from Louisiana.",
+        "When the troops left, many white Republicans also left.",
+        "When the troops left, the 'Redeemer' Democrats took control.",
+        "The 'Redeemer' Democrats already dominated other state governments in the South.",
+        "What was exactly agreed in the Compromise of 1877 is somewhat contested.",
+        "The documentation of the Compromise of 1877 is insufficient."
+      ]
+    ]
+  },
+  {
+    "id": "multihop-rag-1970",
+    "sentences": [
+      [
+        "The All Blacks looked lost at times during this World Cup cycle.",
+        "It is still faintly remarkable that head coach Ian Foster survived last summer.",
+        "Ian Foster survived last summer as the home defeats piled up.",
+        "The home defeats were to Ireland.",
+        "The home defeats were to South Africa.",
+        "The home defeats were to Argentina."
+      ],
+      [
+        "Argentina knocked over the All Blacks last year in Christchurch.",
+        "The event in this sentence came despite Argentina knocking over the All Blacks last year in Christchurch.",
+        "There was a maiden defeat in 2020 in Sydney."
+      ]
+    ]
+  },
+  {
+    "id": "-7350738264545175214",
+    "sentences": [
+      [
+        "In 2012, Maryse was featured on the cover of Le Journal de Montréal.",
+        "In 2012, Maryse was featured on MDA Show of Strength with The Miz.",
+        "In 2012, Maryse was featured on MDA Show of Strength with other celebrities.",
+        "In 2015, Ouellet had a role in Sharknado 3: Oh Hell No!",
+        "In 2015, Ouellet had a role in Santa's Little Helper.",
+        "Santa's Little Helper starred Ouellet's husband, The Miz.",
+        "In 2015, Ouellet appeared on the E! reality television series WAGS.",
+        "In 2016, it was announced that Maryse would appear as a main cast member on the sixth season of Total Divas.",
+        "The 2016 announcement prompted Maryse's return to WWE.",
+        "In June 2017, Maryse and Miz were on the cover of DUB Magazine with a Jeep car.",
+        "In 2018, Maryse and The Miz will star in a reality television series titled Miz & Mrs."
+      ],
+      [
+        "In late 2011, Maryse announced plans for a clothing and jewelry line called House of Maryse.",
+        "Maryse later began working as a realtor.",
+        "In November 2016, Maryse began starring in the reality television series Total Divas on E! as part of the main cast.",
+        "Maryse and her husband The Miz will also star in their own reality show titled Miz & Mrs.",
+        "The reality show Miz & Mrs. will premiere in 2018."
+      ]
+    ]
+  },
+  {
+    "id": "5adcd9fe5542990d50227d46",
+    "sentences": [
+      [
+        "Dieffenbachia is a genus of flowering plants.",
+        "Dieffenbachia is a genus of tropical flowering plants.",
+        "Dieffenbachia is in the family Araceae."
+      ],
+      [
+        "Carlina is a genus of flowering plants.",
+        "Carlina is in the aster family.",
+        "Carlina is in the family Asteraceae."
+      ]
+    ]
+  }
+]

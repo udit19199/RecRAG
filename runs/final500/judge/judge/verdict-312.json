@@ -1,0 +1,43 @@
+[
+{"id": "3d854e4af91054fe", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "One of the major sources of Gen Z’s distress, of course, is climate change."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "1.6", "status": "missing", "evidence": []},
+{"fact": "1.7", "status": "missing", "evidence": []},
+{"fact": "1.8", "status": "missing", "evidence": []}
+]},
+{"id": "38e7aa6adbeb04f4", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies, creating a strong need for technologists and designers to be in the process together."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies, creating a strong need for technologists and designers to be in the process together."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "a38c811c088b8a25", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that."}]}
+]},
+{"id": "4bf22aa209431d22", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Research shows that even a small reduction in sleep has been shown to impact your immune system, however."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "This sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "This sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "This sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "This sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."}]}
+]},
+{"id": "f42a8fd0061a5477", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Last week, the Supreme Court decided that it would hear the pair of cases, which revolve around Republicans crafting state-specific laws that order platforms to keep their hands off of some social media posts."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Last week, the Supreme Court decided that it would hear the pair of cases, which revolve around Republicans crafting state-specific laws that order platforms to keep their hands off of some social media posts."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Last week, the Supreme Court decided that it would hear the pair of cases, which revolve around Republicans crafting state-specific laws that order platforms to keep their hands off of some social media posts."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Under Musk, Twitter — now called X — has prioritized “free speech” managed by crowdsourced-based moderation."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Under Musk, Twitter — now called X — has prioritized “free speech” managed by crowdsourced-based moderation."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Under Musk, Twitter — now called X — has prioritized “free speech” managed by crowdsourced-based moderation."}]}
+]}
+]

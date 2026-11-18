@@ -1,0 +1,692 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=b4d0eeed3cd5b6e6 ===
+Gold sentences and facts:
+Sentence 0: Donald Trump is the 45th and current president , inaugurated on January 20 , 2017 .
+  Fact 0.0: Donald Trump is the 45th president.
+  Fact 0.1: Donald Trump is the current president.
+  Fact 0.2: Donald Trump was inaugurated on January 20, 2017.
+Sentence 1: President of the United States of America Presidential Seal Presidential Standard Incumbent Donald Trump since January 20 , 2017 Executive Branch of the U.S. Government Executive Office of the President Style Mr. President ( informal ) The Honorable ( formal ) His Excellency ( international correspondence ) Status Head of State Head of Government Member of Cabinet Domestic Policy Council National Economic Council National Security Council Residence White House Seat Washington , D.C. Appointer Electoral College of the United States Term length Four years , renewable once ( Amendment XXII ) Constituting instrument United States Constitution Inaugural holder George Washington Formation March 4 , 1789 ( 229 years ago ) ( 1789 - 03 - 04 ) Salary $400,000 annually Website whitehouse.gov
+  Fact 1.0: The office of President of the United States of America is part of the Executive Branch of the U.S. Government.
+  Fact 1.1: The incumbent is Donald Trump, since January 20, 2017.
+  Fact 1.2: The office is part of the Executive Office of the President.
+  Fact 1.3: The style of address is 'Mr. President' (informal), 'The Honorable' (formal), and 'His Excellency' (international correspondence).
+  Fact 1.4: The office has the status of Head of State and Head of Government.
+  Fact 1.5: The office is a member of the Cabinet, the Domestic Policy Council, the National Economic Council, and the National Security Council.
+  Fact 1.6: The official residence is the White House.
+  Fact 1.7: The seat is Washington, D.C.
+  Fact 1.8: The appointer is the Electoral College of the United States.
+  Fact 1.9: The term length is four years, renewable once (Amendment XXII).
+  Fact 1.10: The constituting instrument is the United States Constitution.
+  Fact 1.11: The inaugural holder is George Washington.
+  Fact 1.12: The office was formed on March 4, 1789, which the page describes as 229 years ago.
+  Fact 1.13: The salary is $400,000 annually.
+  Fact 1.14: The official website is whitehouse.gov.
+
+Retrieved items:
+<item 1>
+President of the United States
+Kennedy ( 1961 -- 1963 ) Lyndon B. Johnson ( 1963 -- 1969 ) Richard Nixon ( 1969 -- 1974 ) Gerald Ford ( 1974 -- 1977 ) Jimmy Carter ( 1977 -- 1981 ) Ronald
+Reagan ( 1981 -- 1989 ) George H.W. Bush ( 1989 -- 1993 ) Bill Clinton ( 1993 -- 2001 ) George W. Bush ( 2001 -- 2009 ) Barack Obama ( 2009 -- 2017 ) Donald
+Trump ( 2017 -- present ) Presidency timelines Wilson Harding Coolidge Hoover F.D. Roosevelt Truman Eisenhower Kennedy L.B. Johnson Nixon Ford Carter Reagan
+G.H.W. Bush Clinton G.W. Bush Obama Trump Book Category Chief executives of the United States Federal President of the United States State governors ( current
+list ) Alabama Alaska Arizona Arkansas California list Colorado Connecticut Delaware Florida Georgia Hawaii list Idaho Illinois list Indiana list Iowa list
+Kansas Kentucky list Louisiana Maine list Maryland list Massachusetts Michigan list Minnesota list Mississippi Missouri Montana Nebraska list Nevada New
+Hampshire list New Jersey list New Mexico list New York list North Carolina list North Dakota list Ohio Oklahoma list Oregon
+</item 1>
+
+<item 2>
+Vice President of the United States
+Vice president of the United States - wikipedia Vice president of the United States Jump to : navigation , search For a list of office - holders , see List of
+Vice Presidents of the United States . Vice President of the United States of America Vice Presidential seal Vice Presidential standard Incumbent Mike Pence
+since January 20 , 2017 Executive branch of the U.S. government Office of the Vice President Style Mr. Vice President ( Informal ) The Honorable ( Formal ) Mr.
+President ( When presiding over Senate ) His Excellency ( In international correspondence ) Member of Cabinet National Security Council President of the U.S.
+Senate Residence Number One Observatory Circle Seat Washington , D.C. Appointer Electoral College Term length 4 years Constituting instrument U.S.
+</item 2>
+
+<item 3>
+President of the United States
+President of the United States - wikipedia President of the United States Jump to : navigation , search `` POTUS '' redirects here . For the political talk
+radio channel , see P.O.T.U.S. ( Sirius XM ) . For other uses , see President of the United States ( disambiguation ) . For a list , see List of Presidents of
+the United States . President of the United States of America Presidential Seal Presidential Standard Incumbent Donald Trump since January 20 , 2017 Executive
+Branch of the U.S. Government Executive Office of the President Style Mr. President ( informal ) The Honorable ( formal ) His Excellency ( international
+correspondence ) Status Head of State Head of Government Member of Cabinet Domestic Policy Council National Economic Council National Security Council Residence
+White House Seat Washington , D.C. Appointer Electoral College of the United States Term length Four years , renewable once ( Amendment XXII ) Constituting
+instrument United States Constitution Inaugural holder George Washington Formation March 4 , 1789 ( 229 years ago ) ( 1789 - 03 - 04 ) Salary $400,000 annually
+Website whitehouse.gov This article is part of a series on the Politics of the United
+</item 3>
+
+<item 4>
+President of the United States
+000 annually Website whitehouse.gov This article is part of a series on the Politics of the United States of America Federal Government ( show ) Constitution of
+the United States Law Taxation Legislature ( show ) United States Congress House of Representatives Speaker Paul Ryan ( R ) Majority Leader Kevin McCarthy ( R )
+Minority Leader Nancy Pelosi ( D ) Congressional districts United States Senate President Mike Pence ( R ) President Pro Tempore Orrin Hatch ( R ) President Pro
+Tempore Emeritus Patrick Leahy ( D ) Majority Leader Mitch McConnell ( R ) Minority Leader Chuck Schumer ( D ) Executive ( show ) President of the United States
+Donald Trump ( R ) Vice President of the United States Mike Pence ( R ) Cabinet Federal agencies Executive Office Judiciary ( show ) Supreme Court of the United
+States Chief Justice John Roberts Kennedy Thomas Ginsburg Breyer Alito Sotomayor Kagan Gorsuch Courts of Appeals District Courts ( list ) Other tribunals
+Elections ( show ) Presidential elections Midterm elections Off - year elections Political parties ( show ) Democratic Republican Third parties Federalism (
+show ) State Government Governors Legislatures ( List ) State courts Local government Other countries Atlas The President of the United States ( POTUS / ˈpoʊtəs
+/
+</item 4>
+
+<item 5>
+President of the United States
+= Air Force CG = Coast Guard United States articles History By event Timeline of U.S. history Pre-Columbian era Colonial era Thirteen Colonies military history
+Continental Congress American Revolution War American frontier Confederation Period Drafting and ratification of Constitution Federalist Era War of 1812
+Territorial acquisitions Territorial evolution Mexican -- American War Civil War Reconstruction Era Indian Wars Gilded Age Progressive Era African - American
+civil rights movement 1865 -- 1896 / 1896 -- 1954 / 1954 -- 1968 Spanish -- American War Imperialism World War I Roaring Twenties Great Depression World War II
+home front Nazism in the United States American Century Cold War Korean War Space Race Feminist Movement Vietnam War Post-Cold War ( 1991 -- 2008 ) War on
+Terror War in Afghanistan Iraq War Recent events ( 2008 -- present ) By topic Outline of U.S. history Demographic Discoveries Economic debt ceiling Inventions
+before 1890 1890 -- 1945 1946 -- 91 after 1991 Military Postal Technological and industrial Geography Territory counties federal district federal enclaves
+Indian reservations insular zones minor outlying islands populated places states Earthquakes
+</item 5>
+
+<item 6>
+President of the United States
+The President of the United States ( POTUS / ˈpoʊtəs / POH - təs ) is the head of state and head of government of the United States of America . The president
+directs the executive branch of the federal government and is the commander - in - chief of the United States Armed Forces . In contemporary times , the
+president is looked upon as the world 's most powerful political figure and as the leader of the only current global superpower . The role includes
+responsibility for the world 's most expensive military that has the second largest nuclear arsenal . The president also leads the nation with the largest
+economy by nominal GDP . The president possesses significant domestic and international hard and soft power . Article II of the Constitution establishes the
+executive branch of the federal government . It vests the executive power of the United States in the president . The power includes the execution and
+enforcement of federal law , alongside the responsibility of appointing federal executive , diplomatic , regulatory and judicial officers , and concluding
+treaties with foreign powers with the advice and consent of the Senate .
+</item 6>
+
+<item 7>
+President of the United States
+Images of documents written by U.S. presidents Presidents of the United States ( list ) George Washington ( 1789 -- 1797 ) John Adams ( 1797 -- 1801 ) Thomas
+Jefferson ( 1801 -- 1809 ) James Madison ( 1809 -- 1817 ) James Monroe ( 1817 -- 1825 ) John Quincy Adams ( 1825 -- 1829 ) Andrew Jackson ( 1829 -- 1837 )
+Martin Van Buren ( 1837 -- 1841 ) William Henry Harrison ( 1841 ) John Tyler ( 1841 -- 1845 ) James K. Polk ( 1845 -- 1849 ) Zachary Taylor ( 1849 -- 1850 )
+Millard Fillmore ( 1850 -- 1853 ) Franklin Pierce ( 1853 -- 1857 ) James Buchanan ( 1857 -- 1861 ) Abraham Lincoln ( 1861 -- 1865 ) Andrew Johnson ( 1865 --
+1869 ) Ulysses S. Grant ( 1869 -- 1877 ) Rutherford B. Hayes ( 1877 -- 1881 ) James A.
+</item 7>
+
+<item 8>
+President of the United States
+The president is further empowered to grant federal pardons and reprieves , and to convene and adjourn either or both houses of Congress under extraordinary
+circumstances . The president directs the foreign and domestic policies of the United States , and takes an active role in promoting his policy priorities to
+members of Congress . In addition , as part of the system of checks and balances , Article One of the United States Constitution gives the president the power
+to sign or veto federal legislation . Since the office of president was established in 1789 , its power has grown substantially , as has the power of the
+federal government as a whole . Through the Electoral College , the registered voters indirectly elect the president and vice president to a four - year term .
+This is the only federal election in the United States which is not decided by popular vote . Nine vice presidents became president by virtue of a president 's
+intra-term death or resignation . The Twenty - second Amendment precludes any United States citizen from being elected president for a third term .
+</item 8>
+
+<item 9>
+President of the United States
+Book Category Portal Heads of state and government of North America Heads of state Sovereign states Antigua and Barbuda Bahamas Barbados Belize Canada Costa
+Rica Cuba Dominica Dominican Republic El Salvador Grenada Guatemala Haiti Honduras Jamaica Mexico Nicaragua Panama Saint Kitts and Nevis Saint Lucia Saint
+Vincent and the Grenadines Trinidad and Tobago United States Heads of government Sovereign states Antigua and Barbuda Bahamas Barbados Belize Canada Costa Rica
+Cuba Dominica Dominican Republic El Salvador Grenada Guatemala Haiti Honduras Jamaica Mexico Nicaragua Panama Saint Kitts and Nevis Saint Lucia Saint Vincent
+and the Grenadines Trinidad and Tobago United States VIAF : 123879793 LCCN : n80001199 ISNI : 0000 0001 2106 1812 GND : 2033432 - 1 SUDOC : 026377519 BNF :
+cb11863688j ( data ) Retrieved from `` https://en.wikipedia.org/w/index.php?title=President_of_the_United_States&oldid=837764569 '' Categories : Presidents of
+the United States Presidency of the United States United States presidential history 1789 establishments in the United States Hidden categories : CS1 : Julian
+-- Gregorian uncertainty
+</item 9>
+
+<item 10>
+President of the United States
+It also prohibits a person from being elected to the presidency more than once if that person previously had served as president , or acting president , for
+more than two years of another person 's term as president . In all , 44 individuals have served 45 presidencies ( counting Grover Cleveland 's two
+non-consecutive terms separately ) spanning 57 full four - year terms . Donald Trump is the 45th and current president , inaugurated on January 20 , 2017 .
+Contents ( hide ) 1 Origin 2 Powers and duties 2.1 Article I legislative role 2.2 Article II executive powers 2.2. 1 War and foreign affairs powers 2.2. 2
+Administrative powers 2.2. 3 Juridical powers 2.2.
+</item 10>
+=== END ITEM id=b4d0eeed3cd5b6e6 ===
+
+=== ITEM id=8d234be1668a605e ===
+Gold sentences and facts:
+Sentence 0: People 's Postcode Lottery has a number of celebrity `` ambassadors '' . In March 2018 , these included David Attenborough , Clare Balding , Brian Blessed , Judi Dench , Shobna Gulati , Tim Healy , Stephen Jardine , Ellen MacArthur , Aggie MacKenzie , Carey Mulligan , John Stapleton and Emma Thompson . Fiona Phillips became an ambassador for People 's Postcode Lottery at the end of 2012 , leading the organisation 's DRTV campaigns .
+  Fact 0.0: People's Postcode Lottery has a number of celebrity 'ambassadors'.
+  Fact 0.1: In March 2018, the celebrity ambassadors of People's Postcode Lottery included David Attenborough.
+  Fact 0.2: In March 2018, the celebrity ambassadors of People's Postcode Lottery included Clare Balding.
+  Fact 0.3: In March 2018, the celebrity ambassadors of People's Postcode Lottery included Brian Blessed.
+  Fact 0.4: In March 2018, the celebrity ambassadors of People's Postcode Lottery included Judi Dench.
+  Fact 0.5: In March 2018, the celebrity ambassadors of People's Postcode Lottery included Shobna Gulati.
+  Fact 0.6: In March 2018, the celebrity ambassadors of People's Postcode Lottery included Tim Healy.
+  Fact 0.7: In March 2018, the celebrity ambassadors of People's Postcode Lottery included Stephen Jardine.
+  Fact 0.8: In March 2018, the celebrity ambassadors of People's Postcode Lottery included Ellen MacArthur.
+  Fact 0.9: In March 2018, the celebrity ambassadors of People's Postcode Lottery included Aggie MacKenzie.
+  Fact 0.10: In March 2018, the celebrity ambassadors of People's Postcode Lottery included Carey Mulligan.
+  Fact 0.11: In March 2018, the celebrity ambassadors of People's Postcode Lottery included John Stapleton.
+  Fact 0.12: In March 2018, the celebrity ambassadors of People's Postcode Lottery included Emma Thompson.
+  Fact 0.13: Fiona Phillips became an ambassador for People's Postcode Lottery at the end of 2012.
+  Fact 0.14: Fiona Phillips was leading People's Postcode Lottery's DRTV campaigns.
+
+Retrieved items:
+<item 1>
+People's Postcode Lottery
+In 2017 Novamedia BV threatened to sue the Free Postcode Lottery ( an alternative free service which raises money through advertising and offers daily prizes to
+registered users ) on the basis that they were `` passing themselves off '' as the People 's Postcode Lottery . This claim was made in spite of the fact that
+the free Postcode lottery was completely free while the Peoples Postcode lottery is a paid for subscription service . Process ( edit ) People 's Postcode
+Lottery is a subscription lottery . Players sign up to pay monthly in advance by direct debit or debit card . There are ten draws each month with prizes every
+day . A player 's tickets are based on their playing postcode , which is most commonly their home postcode . A given postcode in Britain will usually represent
+a group of houses . If more than one resident has tickets in a winning postcode , all playing neighbours collect prizes . In accordance with restrictions under
+the Gambling Act 2005 , the maximum amount which can be won by a single ticket is £ 400,000 or 10 % of the total draw proceeds .
+</item 1>
+
+<item 2>
+People's Postcode Lottery
+People 's Postcode Lottery - wikipedia People 's Postcode Lottery Jump to : navigation , search This article does not cite any sources . Please help improve
+this article by adding citations to reliable sources . Unsourced material may be challenged and removed . ( November 2017 ) ( Learn how and when to remove this
+template message ) This article contains content that is written like an advertisement . Please help improve it by removing promotional content and
+inappropriate external links , and by adding encyclopedic content written from a neutral point of view . ( January 2017 ) ( Learn how and when to remove this
+template message ) People 's Postcode Lottery is a subscription lottery in Great Britain , run by Postcode Lottery Limited ( Gambling Commission licence numbers
+000 - 000829 - N - 102511 and 000 - 000829 - R - 10251 ) .
+</item 2>
+
+<item 3>
+Dancing on Ice
+Design Award Best Costume Design Nominated 2011 National Television Awards Most Popular Talent Show Nominated RTS Craft & Design Award Best Costume Design
+Nominated 2012 National Television Awards Most Popular Talent Show Nominated 2013 National Television Awards Most Popular Talent Show Nominated 2014 National
+Television Awards Most Popular Talent Show Nominated TRIC Awards TRIC Special Award Won Guest singers Series 2 -- Week 6 : Take That with `` Shine '' and ``
+Patience '' Series 3 -- Week 3 : Westlife with `` World of Our Own '' and `` Us Against The World '' Series 3 -- Week 9 : Leona Lewis with `` Footprints in the
+Sand '' and `` Better in Time '' Series 4 -- Week 5 : Bette Midler with `` From a Distance '' Series 4 -- Week 7 : Will Young with `` Let It Go '' Series 4 --
+Week 10 : Girls Aloud with `` Untouchable '' Series 5 -- Week 2 : The Saturdays with `` Ego '' Series 5 -- Week 5 : Mumford & Sons with `` The Cave '' Series 5
+-- Week 5 : Pixie Lott with `` Use Somebody '' and `` Cry Me Out '' Series
+</item 3>
+
+<item 4>
+People's Postcode Lottery
+By using this site , you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit
+organization . About Wikipedia
+</item 4>
+
+<item 5>
+People's Postcode Lottery
+Beneficiaries ( edit ) A minimum of 32 % goes to various trusts , which in turn provide funding to charities and community projects across Great Britain and
+internationally . As an external lottery manager , People 's Postcode Lottery manages several society lotteries promoted by different charities . Over 4,000
+causes have received support . Ambassadors ( edit ) People 's Postcode Lottery has a number of celebrity `` ambassadors '' . In March 2018 , these included
+David Attenborough , Clare Balding , Brian Blessed , Judi Dench , Shobna Gulati , Tim Healy , Stephen Jardine , Ellen MacArthur , Aggie MacKenzie , Carey
+Mulligan , John Stapleton and Emma Thompson . Fiona Phillips became an ambassador for People 's Postcode Lottery at the end of 2012 , leading the organisation
+'s DRTV campaigns . Presenters Judie McCourt , Danyl Johnson , Jeff Brazier and Matt Johnson visit People 's Postcode Lottery winners to present them with their
+cheques , attend Postcode Million events and take part in People 's Postcode Lottery advertising campaigns .
+</item 5>
+
+<item 6>
+People's Postcode Lottery
+Postcode Challenge ( edit ) From 2008 to 2010 , People 's Postcode Lottery sponsored Postcode Challenge , a quiz show hosted by Angus Purden on STV .
+Sponsorship ( edit ) Novamedia has worked with a number of leading TV production companies and public and commercial broadcasters to support the promotion of
+its lotteries . Novamedia inspired and paid Endemol to produce TV game shows such as Deal or No Deal and 1 vs 100 .
+</item 6>
+
+<item 7>
+Celebrity Big Brother (U.S. TV series)
+Name Age Notoriety Residence Ariadna Gutiérrez 24 Miss Colombia 2014 , runner - up in Miss Universe 2015 Miami , Florida Brandi Glanville 45 Former The Real
+Housewives of Beverly Hills star Los Angeles , California Chuck Liddell 48 Mixed martial artist , UFC Hall of Famer Calabasas , California James Maslow 27 Big
+Time Rush singer and actor Venice , California Keshia Knight Pulliam 38 Former The Cosby Show actress Atlanta , Georgia Marissa Jaret Winokur 45 Broadway
+actress Toluca Lake , California Mark McGrath 49 Singer and television host Studio City , California Metta World Peace 38 Former NBA player Los Angeles ,
+California Omarosa Manigault 44 Reality television star and former White House political aide Jacksonville , Florida Ross Mathews 38 Television host Palm
+Springs , California Shannon Elizabeth 44 Actress Cape Town , South Africa Jump up ^ Brandi Glanville previously participated on the twentieth season of
+Celebrity Big Brother in the United Kingdom , where she finished in 11th place . Episodes No . overall No.
+</item 7>
+
+<item 8>
+People's Postcode Lottery
+References ( edit ) Jump up ^ Gambling Commission Account details Jump up ^ Novamedia Website , About Charity Lotteries section Jump up ^ People 's Postcode
+Lottery - Charities webpage Jump up ^ People 's Postcode Lottery - Ambassadors webpage External links ( edit ) Official website Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=People%27s_Postcode_Lottery&oldid=836422769 '' Categories : Lotteries in the United Kingdom 2005 establishments in
+the United Kingdom Hidden categories : All articles with unsourced statements Articles with unsourced statements from March 2018 Articles lacking sources from
+November 2017 All articles lacking sources Articles with a promotional tone from January 2017 All articles with a promotional tone Use dmy dates from September
+2014 Use British English from September 2014 Articles with unsourced statements from October 2012 Talk Contents About Wikipedia Add links This page was last
+edited on 14 April 2018 , at 18 : 44 . Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using
+this site , you agree to the Terms of Use and Privacy Policy .
+</item 8>
+
+<item 9>
+Dancing on Ice
+Jorgie Porter Stephanie Waring Brandee Malto N / A Antony Cotton Sergey Malyshev Tamara Beckwith N / A Aggie MacKenzie N / A Molly Moenkhoff N / A Bobby Davro N
+/ A Alex Murphy N / A Kem Cetinay Darya Nucci N / A Jeremy Edwards N / A Pam O'Connor David Seaman Neil Fox N / A Vicky Ogden N / A Andy Whyment Joe Pasquale
+Sam Attwater N / A Fred Palascak N / A Kay Burley Sarah Greene Melinda Messenger Emily Atack N / A Zaraah Abrahams Natalia Pestova N / A Phil Gayle N / A
+Frankie Poultney N / A Lee Sharpe Chris Fountain Ellery Hanley Danny Young Comedy Dave Mark Rhodes N / A David Seaman N / A Colin Ratushniak N / A Laura
+Hamilton N / A Sean Rice N / A Angela Rippon Chemmy Alcott N / A Łukasz Różycki N / A Elen Rivas Laila Morse N / A Beth Tweddle N / A Todd Sand Kelly Holmes N /
+A Alexandra Schauman N / A Dr.
+</item 9>
+
+<item 10>
+People's Postcode Lottery
+Contents ( hide ) 1 History 2 Process 3 Beneficiaries 4 Ambassadors 5 Postcode Challenge 6 Sponsorship 7 References 8 External links History ( edit ) The
+Postcode Lottery format was introduced by the Dutch company Novamedia BV , which launched its first postcode lottery in the Netherlands in 1989 . Novamedia now
+runs six lotteries using cause marketing : Nationale Postcode Loterij , Vrienden Loterij and BankGiro Loterij in the Netherlands , Svenska Postkod Lotteriet in
+Sweden , People 's Postcode Lottery in Great Britain and , since July 2016 , Deutsche Postcode Lotterie in Germany . Together , they claim to have contributed
+over € 7.9 billion to charitable organisations around the world . People 's Postcode Lottery was launched in the north of England in 2005 as a pilot scheme .
+After a successful launch , it expanded into Scotland in 2007 and Wales in July 2010 . The lottery uses cause marketing , claiming to have been established to
+raise money for charity and to increase awareness of the work of the various charities and causes supported by its players .
+</item 10>
+=== END ITEM id=8d234be1668a605e ===
+
+=== ITEM id=e24103646a79c389 ===
+Gold sentences and facts:
+Sentence 0: Draft lotteries were conducted again in 1970 ( for those born in 1951 ) and from 1971 to 1975 ( for 1952 to 1956 births ) . The draft numbers issued in 1972 were never used the next year to call for induction into service , because the last call was December 7 and authority to induct expired on June 30 , 1973 .
+  Fact 0.0: Draft lotteries were conducted again in 1970 for men born in 1951.
+  Fact 0.1: Draft lotteries were conducted from 1971 to 1975 for men born from 1952 to 1956.
+  Fact 0.2: The draft numbers issued in 1972 were never used the next year to call men for induction into service.
+  Fact 0.3: The last call for induction was on December 7.
+  Fact 0.4: Authority to induct expired on June 30, 1973.
+Sentence 1: On December 1 , 1969 , the Selective Service System of the United States conducted two lotteries to determine the order of call to military service in the Vietnam War for men born from 1944 to 1950 . These lotteries occurred during a period of conscription from just before World War II to 1973 . It was the first time a lottery system had been used to select men for military service since 1942 .
+  Fact 1.0: On December 1, 1969, the Selective Service System of the United States conducted two lotteries.
+  Fact 1.1: The 1969 lotteries determined the order of call to military service in the Vietnam War.
+  Fact 1.2: The 1969 lotteries were for men born from 1944 to 1950.
+  Fact 1.3: The 1969 lotteries occurred during a period of conscription from just before World War II to 1973.
+  Fact 1.4: The 1969 lotteries were the first time a lottery system had been used to select men for military service since 1942.
+
+Retrieved items:
+<item 1>
+Draft lottery (1969)
+Due to the heavy demand for military personnel , the United States required more than what the regular military could provide , causing the acceleration of the
+draft . Between 1965 and 1972 the draft provided 2,215,000 service members to the U.S. military . Previously in the United States , during the War of 1812 ,
+President Madison established a commission to recommend the best ways to raise military manpower ; to keep the draft or to institute a volunteer army . After
+much debate within the Nixon administration and Congress , it was decided that an all - volunteer force was affordable , feasible , and would enhance the nation
+'s security . President Richard Nixon issued an executive order prescribing regulations for random selection by the United States Selective Service on November
+26 , 1969 . In the 1960s anti-war movements started to occur in the U.S. , mainly among those on college campuses and in more leftist circles , especially those
+who embraced the `` hippie '' lifestyle . College students were entitled to a deferment ( 2 - S status ) but were subject to the draft if they dropped out or
+graduated . In 1967 , the number of U.S.
+</item 1>
+
+<item 2>
+Draft lottery (1969)
+The draft numbers issued in 1972 were never used the next year to call for induction into service , because the last call was December 7 and authority to induct
+expired on June 30 , 1973 . The 1972 to 1975 lottery numbers were used to call some men born 1953 to 1956 for physical exams . The highest number called for a
+physical was 215 ( for tables 1970 through 1976 ) . Origins and consequences ( edit ) The reason for the 1969 draft was to add personnel to a war to stop the
+spread of communism in Vietnam . After World War II , Japan left Vietnamese Emperor Bao Dai in command . Ho Chi Minh , another Vietnamese leader , saw this as
+an opportunity to strike and took over Hanoi . Ho Chi Minh then set up the Democratic Republic of Vietnam . Emperor Bo , in the South , set up the Vietnam State
+with Saigon as the capital . Ho Chi Minh was basing his political structure off of the communist states such as Russia while Emperor Bao Dai in the south wanted
+a Vietnam that was modeled after the west , like the United States .
+</item 2>
+
+<item 3>
+Draft lottery (1969)
+Draft lottery ( 1969 ) - wikipedia Draft lottery ( 1969 ) Jump to : navigation , search This article includes a list of references , but its sources remain
+unclear because it has insufficient inline citations . Please help to improve this article by introducing more precise citations . ( October 2017 ) ( Learn how
+and when to remove this template message ) Representative Alexander Pirnie ( R - NY ) drawing the first number . On December 1 , 1969 , the Selective Service
+System of the United States conducted two lotteries to determine the order of call to military service in the Vietnam War for men born from 1944 to 1950 . These
+lotteries occurred during a period of conscription from just before World War II to 1973 . It was the first time a lottery system had been used to select men
+for military service since 1942 . The lottery numbers assigned in December 1969 were used during calendar year 1970 both to call for induction and to call for
+physical examination , a preliminary call covering more men .
+</item 3>
+
+<item 4>
+Draft lottery (1969)
+Jump up ^ 91st U.S. Congress . `` AN ACT To amend the Military Selective Service Act of 1967 ... '' ( pdf ) . United States Government Printing Office . ( Pub.
+L. 91 -- 124 , 83 Stat. 220 , enacted November 26 , 1969 ) Jump up ^ Peters , Gerhard ; Woolley , John T. `` Richard Nixon : `` Executive Order 11497 - Amending
+the Selective Service Regulations to Prescribe Random Selection , '' November 26 , 1969 `` . The American Presidency Project . University of California - Santa
+Barbara . ^ Jump up to : `` Vietnam War Protests - Vietnam War - HISTORY.com '' . HISTORY.com . Retrieved 2017 - 12 - 05 . Jump up ^
+https://www.nytimes.com/1984/09/02/us/college-enrollment-linked-to-vietnam-war.html , https://timesmachine.nytimes.com/timesmachine/1967/03/19/107186611.pdf
+Jump up ^ Fisher , Anthony C. ( 1969 ) .
+</item 4>
+
+<item 5>
+Draft lottery (1969)
+The 1969 draft lottery only encouraged resentment of the Vietnam War and the draft . It strengthened the anti-war movement , and all over the United States ,
+people decried discrimination by the draft system `` against low - education , low - income , underprivileged members of society '' . The draft lottery had
+social and economic consequences because it generated resistance to military service and the resisters , draft evaders or `` draft dodgers '' , were generally
+young , well - educated , healthy men . The fear of military service in Vietnam influenced many young men born in the late 1940s to join the National Guard .
+These young men were aware that the National Guard would be unlikely to send its soldiers to Vietnam . Many men were unable to join the National Guard , even
+though they had passed their physicals , because many state National Guards had long waiting lists just to enlist . Still others chose legal sanctions such as
+imprisonment , either showing their disapproval by burning their draft cards or draft letters , or simply not presenting themselves for the military service
+test . Others left the country , commonly moving to Canada .
+</item 5>
+
+<item 6>
+Draft lottery (1969)
+In 1967 , the number of U.S. military personnel in Vietnam was around 500,000 . The war was costing the U.S. $25 billion a year , and many of the young men
+drafted were being sent to a war they wanted no part of . Martin Luther King Jr. also started to support the anti-war movement on the grounds of it being
+immoral and the amount of African Americans that were being killed . November 15 , 1969 marked the largest anti war movement in the history of the United States
+. This protest featured many anti-war political speakers and popular singers of the time . Many people at the time saw Richard Nixon as a liar ; when he took
+office , he claimed that he would begin troop withdrawals from Vietnam immediately . After ten months of being in office , the president had yet to start
+withdrawals , anyone and the people felt lied to . Later , president Nixon claimed to have been watching sports as the anti-war demonstration took place outside
+the White House . The 1970s were a time of turmoil in the United States , beginning with the civil rights movement which set the standards for practices by the
+anti-war movement .
+</item 6>
+
+<item 7>
+Draft lottery (1969)
+had only committed around 800 personnel to train and outfit the South Vietnamese . In 1961 , the John F. Kennedy administration started working under the ``
+Domino Theory , '' which stated that if South Vietnam was to fall to the North , then other places in southeast Asia were to become vulnerable to the communists
+as well . This caused President Kennedy to begin sending additional American soldiers to Vietnam . By 1962 , there were around 9,000 personnel in Vietnam . In
+1963 , a coup was organized by South Vietnamese generals which resulted in the death of Diem . President Lyndon B. Johnson increased U.S. personnel in Vietnam
+due to the political instability in the country . In August 1964 , two U.S. warships were attacked by North Vietnamese torpedo boats . Johnson issued an attack
+order against North Vietnam , and Congress passed a motion which gave him more authority over military decisions . In 1965 , President Johnson had sent 82,000
+troops to Vietnam , and his officials wanted another 175,000 .
+</item 7>
+
+<item 8>
+Draft lottery (1969)
+Last modified 2009 - 03 - 24 . Confirmed 2011 - 05 - 26 . -- contemporary news stories , images of Official Orders ( call to physical exam , call to report ) ,
+lottery results , Draft Board classifications , Vietnam troop levels , induction statistics 1917 -- 73 . David Lane ( 2003 ) . Introduction to Graphs : Clearing
+Up the Draft with Graphs . Connexions. 18 July 2003 . Confirmed 2011 - 05 - 26 . -- list of draft ranks , additional analysis . Selective Service System ( 2009
+) . The Vietnam Lotteries . SSS : History and Records . Last updated 2015 - 09 - 19 . Norton Starr ( 1997 ) . `` Nonrandom Risk : The 1970 Draft Lottery '' .
+Journal of Statistics Education 5.2 ( 1997 ) . Confirmed 2011 - 05 - 26 . -- The online edition includes instructions for getting the data online and a lesson
+plan for statistics class using the 1970 and 1971 draft lottery data .
+</item 8>
+
+<item 9>
+Draft lottery (1969)
+Others left the country , commonly moving to Canada . The number of American citizens who moved to Canada during the Vietnam war because of the draft is
+estimated to be around 125,000 ; it is believed that about half returned to the United States after the Nixon era ( when the war was also over ) ( 1975 ) .
+Modification ( edit ) Lottery procedure was improved the next year although public discontent continued to grow until `` authority to induct expired on June 30
+, 1973 '' . In 1970 , covering 1951 birthdates for use during 1971 ( sometimes called the 1971 draft ) , scientists at the National Bureau of Standards prepared
+78 random permutations of the numbers 1 to 366 using random numbers selected from published tables . From the 78 permutations , 25 were selected at random and
+transcribed to calendars using 1 = January 1 , 2 = January 2 , ... 365 = December 31 . Those calendars were sealed in envelopes. 25 more permutations were
+selected and sealed in 25 more envelopes without transcription to calendars . The two sets of 25 envelopes were furnished to the Selective Service System .
+</item 9>
+
+<item 10>
+Draft lottery (1969)
+( 1969 ) . `` The Cost of the Draft and the Cost of Ending the Draft '' . American Economic Review . 59 ( 3 ) . Jump up ^ Ifill , Gwen ( 13 February 1992 ) . ``
+THE 1992 CAMPAIGN : New Hampshire ; Clinton Thanked Colonel in ' 69 For ' Saving Me From the Draft ' '' -- via NYTimes.com . ^ Jump up to : Rosenblatt , J.R. ;
+Filliben , J.J. ( 1971 ) . `` Randomization and the Draft Lottery '' . Science . 171 : 306 -- 08 . doi : 10.1126 / science. 171.3968. 306 . Jump up ^ `` How the
+U.S. Draft Works '' . HowStuffWorks. 2001 - 10 - 18 . Retrieved 2017 - 12 - 05 . External links ( edit ) Landscaper.net ( 2009 ) . The Military Draft and 1969
+Draft Lottery for the Vietnam War . Last modified 2009 - 03 - 24 .
+</item 10>
+=== END ITEM id=e24103646a79c389 ===
+
+=== ITEM id=fc4eb7e74a9b082f ===
+Gold sentences and facts:
+Sentence 0: The Ring of Fire is a direct result of plate tectonics : the movement and collisions of lithospheric plates . The eastern section of the ring is the result of the Nazca Plate and the Cocos Plate being subducted beneath the westward - moving South American Plate . The Cocos Plate is being subducted beneath the Caribbean Plate , in Central America . A portion of the Pacific Plate and the small Juan de Fuca Plate are being subducted beneath the North American Plate . Along the northern portion , the northwestward - moving Pacific plate is being subducted beneath the Aleutian Islands arc . Farther west , the Pacific plate is being subducted along the Kamchatka Peninsula arcs on south past Japan . The southern portion is more complex , with a number of smaller tectonic plates in collision with the Pacific plate from the Mariana Islands , the Philippines , Bougainville , Tonga , and New Zealand ; this portion excludes Australia , since it lies in the center of its tectonic plate . Indonesia lies between the Ring of Fire along the northeastern islands adjacent to and including New Guinea and the Alpide belt along the south and west from Sumatra , Java , Bali , Flores , and Timor . The famous and very active San Andreas Fault zone of California is a transform fault which offsets a portion of the East Pacific Rise under southwestern United States and Mexico . The motion of the fault generates numerous small earthquakes , at multiple times a day , most of which are too small to be felt . The active Queen Charlotte Fault on the west coast of the Haida Gwaii , British Columbia , has generated three large earthquakes during the 20th century : a magnitude 7 event in 1929 ; a magnitude 8.1 in 1949 ( Canada 's largest recorded earthquake ) ; and a magnitude 7.4 in 1970 .
+  Fact 0.0: The Ring of Fire is a direct result of plate tectonics.
+  Fact 0.1: Plate tectonics involves the movement and collisions of lithospheric plates.
+  Fact 0.2: The eastern section of the Ring of Fire is the result of the Nazca Plate being subducted beneath the westward-moving South American Plate.
+  Fact 0.3: The eastern section of the Ring of Fire is the result of the Cocos Plate being subducted beneath the westward-moving South American Plate.
+  Fact 0.4: The Cocos Plate is being subducted beneath the Caribbean Plate in Central America.
+  Fact 0.5: A portion of the Pacific Plate is being subducted beneath the North American Plate.
+  Fact 0.6: The small Juan de Fuca Plate is being subducted beneath the North American Plate.
+  Fact 0.7: Along the northern portion, the northwestward-moving Pacific plate is being subducted beneath the Aleutian Islands arc.
+  Fact 0.8: Farther west, the Pacific plate is being subducted along the Kamchatka Peninsula arcs on south past Japan.
+  Fact 0.9: The southern portion of the Ring of Fire is more complex.
+  Fact 0.10: In the southern portion, a number of smaller tectonic plates are in collision with the Pacific plate from the Mariana Islands, the Philippines, Bougainville, Tonga, and New Zealand.
+  Fact 0.11: The southern portion of the Ring of Fire excludes Australia.
+  Fact 0.12: Australia is excluded from the southern portion since it lies in the center of its tectonic plate.
+  Fact 0.13: Indonesia lies between the Ring of Fire along the northeastern islands adjacent to and including New Guinea and the Alpide belt.
+  Fact 0.14: The Alpide belt runs along the south and west of Indonesia from Sumatra, Java, Bali, Flores, and Timor.
+  Fact 0.15: The San Andreas Fault zone of California is famous and very active.
+  Fact 0.16: The San Andreas Fault zone of California is a transform fault.
+  Fact 0.17: The San Andreas Fault offsets a portion of the East Pacific Rise under southwestern United States and Mexico.
+  Fact 0.18: The motion of the San Andreas Fault generates numerous small earthquakes, at multiple times a day.
+  Fact 0.19: Most of the small earthquakes generated by the San Andreas Fault are too small to be felt.
+  Fact 0.20: The Queen Charlotte Fault is active.
+  Fact 0.21: The Queen Charlotte Fault is on the west coast of the Haida Gwaii, British Columbia.
+  Fact 0.22: The Queen Charlotte Fault has generated three large earthquakes during the 20th century.
+  Fact 0.23: One of the large Queen Charlotte Fault earthquakes was a magnitude 7 event in 1929.
+  Fact 0.24: One of the large Queen Charlotte Fault earthquakes was a magnitude 8.1 event in 1949, which is Canada's largest recorded earthquake.
+  Fact 0.25: One of the large Queen Charlotte Fault earthquakes was a magnitude 7.4 event in 1970.
+
+Retrieved items:
+<item 1>
+Ring of Fire
+Cascade Volcanoes Merapi Momotombo Novarupta Parícutin Pico de Orizaba Pinatubo Popocatépetl Shasta Rainier Ruapehu Nevado del Ruiz Saint Helens Tambora
+Taranaki Tungurahua Usu Hoodoo Edziza Tseax The Volcano Meager Garibaldi Cayley Silverthrone Volcano Mountain Other Notable Geographic Features of the Pacific
+Ring of Fire Alaska Aleutian Islands American cordillera Andes Antarctica Bali Borneo Bougainville British Columbia California Cascade Range Challenger Deep
+Coast Mountains Fais Island Flores Guam Honshū Insular Mountains Java Kamchatka Kurile Islands Luzon Mariana Islands Melanesia Micronesia Mindanao New Guinea
+North Island ( NZL ) Northern Mariana Islands Oregon Pacific Coast Range Pacific Ocean Polynesia Rocky Mountains San Andreas Fault Queen Charlotte Fault Sierra
+Madre ( PHL ) Sierra Madre ( USA ) Sierra Madre del Sur Sierra Madre Occidental Sierra Madre Oriental South Island ( NZL ) Sulawesi Timor Washington Yap Yukon
+Territory Retrieved from `` https://en.wikipedia.org/w/index.
+</item 1>
+
+<item 2>
+Ring of Fire
+The southern portion is more complex , with a number of smaller tectonic plates in collision with the Pacific plate from the Mariana Islands , the Philippines ,
+Bougainville , Tonga , and New Zealand ; this portion excludes Australia , since it lies in the center of its tectonic plate . Indonesia lies between the Ring
+of Fire along the northeastern islands adjacent to and including New Guinea and the Alpide belt along the south and west from Sumatra , Java , Bali , Flores ,
+and Timor . The famous and very active San Andreas Fault zone of California is a transform fault which offsets a portion of the East Pacific Rise under
+southwestern United States and Mexico . The motion of the fault generates numerous small earthquakes , at multiple times a day , most of which are too small to
+be felt . The active Queen Charlotte Fault on the west coast of the Haida Gwaii , British Columbia , has generated three large earthquakes during the 20th
+century : a magnitude 7 event in 1929 ; a magnitude 8.1 in 1949 ( Canada 's largest recorded earthquake ) ; and a magnitude 7.4 in 1970 .
+</item 2>
+
+<item 3>
+Ring of Fire
+Sea Scotia Sea Somov Sea Weddell Sea Landlocked seas Aral Sea Caspian Sea Dead Sea Salton Sea Book Related subjects and articles Countries of the Pacific Ring
+of Fire Belize Bolivia Brazil Canada Colombia Chile Costa Rica Ecuador East Timor El Salvador Micronesia Fiji Guatemala Honduras Indonesia Japan Kiribati Mexico
+New Zealand Nicaragua Palau Papua New Guinea Panama Peru Philippines Russia Samoa Solomon Islands Tonga Tuvalu United States Oceanic Trenches of the Pacific
+Ring of Fire Aleutian Trench Bougainville Trench Kermadec Trench Izu Bonin Trench Japan Trench Kurile Trench Mariana Trench Middle America Trench Peru -- Chile
+Trench Philippine Trench Ryukyu Trench Tonga Trench Yap Trench Tectonic Plates of the Pacific Ring of Fire Antarctic Plate Australian Plate Caribbean Plate
+Cocos Plate Eurasian Plate Explorer Plate Gorda Plate Juan de Fuca Plate Nazca Plate North American Plate Pacific Plate Philippine Sea Plate Rivera Plate South
+American Plate Volcanoes of the Pacific Ring of Fire Baker Bulusan Cold Bay Concepción Fuego Fuji Galeras Hood Mount Erebus Krakatoa Mayon Cascade Volcanoes
+Merapi Momotombo Novarupta Parícutin Pico de
+</item 3>
+
+<item 4>
+Ring of Fire
+Ring of Fire - wikipedia Ring of Fire Jump to : navigation , search For other uses , see Ring of Fire ( disambiguation ) . The Pacific Ring of Fire Tectonic
+plates of the world Great ( magnitude 8.0 + ) earthquakes 1900 -- 2017 , with the majority positioned along the Ring of Fire The Ring of Fire is a major area in
+the basin of the Pacific Ocean where a large number of earthquakes and volcanic eruptions occur . In a 40,000 km ( 25,000 mi ) horseshoe shape , it is
+associated with a nearly continuous series of oceanic trenches , volcanic arcs , and volcanic belts and plate movements . It has 452 volcanoes ( more than 75 %
+of the world 's active and dormant volcanoes ) . The Ring of Fire is sometimes called the circum - Pacific belt . About 90 % of the world 's earthquakes and 81
+% of the world 's largest earthquakes occur along the Ring of Fire .
+</item 4>
+
+<item 5>
+Ring of Fire
+The next most seismically active region ( 5 -- 6 % of earthquakes and 17 % of the world 's largest earthquakes ) is the Alpide belt , which extends from Java to
+the northern Atlantic Ocean via the Himalayas and southern Europe . All but three of the world 's 25 largest volcanic eruptions of the last 11,700 years
+occurred at volcanoes in the Ring of Fire . The Ring of Fire is a direct result of plate tectonics : the movement and collisions of lithospheric plates . The
+eastern section of the ring is the result of the Nazca Plate and the Cocos Plate being subducted beneath the westward - moving South American Plate . The Cocos
+Plate is being subducted beneath the Caribbean Plate , in Central America . A portion of the Pacific Plate and the small Juan de Fuca Plate are being subducted
+beneath the North American Plate . Along the northern portion , the northwestward - moving Pacific plate is being subducted beneath the Aleutian Islands arc .
+Farther west , the Pacific plate is being subducted along the Kamchatka Peninsula arcs on south past Japan .
+</item 5>
+
+<item 6>
+Ring of Fire
+Islands Nauru Northern Mariana Islands Wake Island Polynesia Easter Island Hawaiian Islands Cook Islands French Polynesia Austral Islands Gambier Islands
+Marquesas Islands Society Islands Tuamotu Kermadec Islands Mangareva Islands Samoa Tokelau Tonga Tuvalu Ring of Fire Regions of South America East Amazon basin
+Atlantic Forest Caatinga Cerrado North Caribbean South America West Indies Los Llanos The Guianas Amazon basin Amazon rainforest Gulf of Paria Paria Peninsula
+Paraguaná Peninsula Orinoco Delta South Tierra del Fuego Patagonia Pampas Pantanal Gran Chaco Chiquitano dry forests Valdes Peninsula West Andes Tropical Andes
+Wet Andes Dry Andes Pariacaca mountain range Altiplano Atacama Desert Latin Hispanic American Cordillera Ring of Fire LAC Polar regions Antarctic Antarctic
+Peninsula East Antarctica West Antarctica Eklund Islands Ecozone Extreme points Islands Arctic Arctic Alaska British Arctic Territories Canadian Arctic
+Archipelago Finnmark Greenland Northern Canada Northwest Territories Nunavik Nunavut Russian Arctic Sakha Sápmi Yukon North American Arctic Earth 's oceans and
+seas Arctic Ocean Amundsen Gulf Barents Sea Beaufort Sea Chukchi Sea East
+</item 6>
+
+<item 7>
+Ring of Fire
+Retrieved 2006 - 10 - 23 . Jump up ^ New Zealand Department of Conservation . `` Central North Island Volcanoes '' . Retrieved 2006 - 10 - 23 . Jump up ^ ``
+Contingency Plan for the Auckland Volcanic Field '' ( PDF ) . Auckland Regional Council . Archived from the original ( PDF ) on 2006 - 01 - 16 . ^ Jump up to :
+Skiing the Pacific Ring of Fire and Beyong : Antarctica . Retrieved 2007 - 07 - 31 . Jump up ^ `` Mount Erebus Volcano Observatory '' . New Mexico Tech .
+Retrieved 2008 - 12 - 29 . External links ( edit ) Wikimedia Commons has media related to Maps of the Pacific Ring of Fire . Historic Earthquakes & Earthquake
+Statistics at the United States Geological Survey DESCRIPTION : `` Ring of Fire '' , Plate Tectonics , Sea - Floor Spreading , Subduction Zones , `` Hot Spots
+'' at the USGS Cascades Volcano Observatory , Vancouver , Washington Web site . Map of the Ring of Fire Ring of Fire ,
+</item 7>
+
+<item 8>
+Ring of Fire
+Map of the Ring of Fire Ring of Fire , tectonic activity The Ring of Fire at work Physical World Map 2004 - 04 - 01 CIA World Factbook ; Robinson Projection ;
+standard parallels 38 ° N and 38 ° S Regions of the world Regions of Africa Central Africa Guinea region Gulf of Guinea Cape Lopez Mayombe Igboland Mbaise
+Maputaland Pool Malebo Congo Basin Chad Basin Congolese rainforests Ouaddaï highlands Ennedi Plateau East Africa African Great Lakes Albertine Rift East African
+Rift Great Rift Valley Gregory Rift Rift Valley lakes Swahili coast Virunga Mountains Zanj Horn of Africa Afar Triangle Al - Habash Barbara Danakil Alps Danakil
+Desert Ethiopian Highlands Gulf of Aden Gulf of Tadjoura Indian Ocean islands Comoros Islands North Africa Maghreb Barbary Coast Bashmur Ancient Libya Atlas
+Mountains Nile Valley Cataracts of the Nile Darfur Gulf of Aqaba Lower Egypt Lower Nubia Middle Egypt Nile Delta Nuba Mountains Nubia The Sudans Upper Egypt
+Western Sahara West Africa Pepper Coast Gold Coast Slave Coast Ivory Coast Cape Palmas Cape Mesurado Guinea region Gulf of Guinea Niger Basin Guinean Forests of
+West
+</item 8>
+
+<item 9>
+Ring of Fire
+Trans - Mexican Volcanic Belt Central America Volcanic Arc Andes North Volcanic Zone Central Volcanic Zone South Volcanic Zone Austral Volcanic Zone Scotia Arc
+South Sandwich Islands Antarctica Antarctic Peninsula Victoria Land See also ( edit ) Earthquakes portal Volcanoes portal 2004 Indian Ocean earthquake and
+tsunami 2010 Chile earthquake 2011 Tōhoku earthquake and tsunami Andesite line Geology of the Pacific Northwest Katsuhiko Ishibashi Pacific Rim References (
+edit ) Jump up ^ `` Ring of Fire -- Pacific Ring of Fire '' . Geography.about.com. 2010 - 06 - 14 . Retrieved 2010 - 11 - 01 . Jump up ^ `` Ring of Fire '' .
+USGS. 2012 - 07 - 24 . Retrieved 2013 - 06 - 13 . Jump up ^ `` Where do earthquakes occur ? '' . USGS. 2013 - 05 - 13 . Archived from the original on 2014 - 08
+- 05 . Retrieved 2013 - 06 - 13 .
+</item 9>
+
+<item 10>
+Ring of Fire
+Land areas ( edit ) Papua New Guinea and tectonic plates : Pacific Plate , Australian Plate , Caroline Plate , Banda Sea Plate ( as `` Mer de Banda '' ) ,
+Woodlark Plate , Bird 's Head Plate , Maoke Plate , Solomon Sea Plate , North Bismarck Plate , South Bismarck Plate and Manus Plate ( in French ) Puysegur
+Trench and Macquarie Ridge Taupo Volcanic Zone Kermadec Islands Tonga Islands Fiji Islands Bougainville and Solomon Islands New Hebrides Arc Bismarck Volcanic
+Arc , junction Tanimbar and Kai Islands Lesser Sunda Islands Sunda Arc Andaman and Nicobar Islands Izu - Bonin - Mariana Arc Mariana Islands Bonin Islands Izu
+Islands Philippine Mobile Belt Taiwan Ryukyu Islands Japan , Boso Triple Junction Kuril Islands Kamchatka Peninsula American Cordillera North American
+Cordillera Aleutian Arc Aleutian Islands Aleutian Range Eastern Alaska , U.S. Northern Cordilleran Volcanic Province Cascade Volcanic Arc and Rio Grande rift
+Sierra Nevada ( U.S. )
+</item 10>
+=== END ITEM id=fc4eb7e74a9b082f ===
+
+=== ITEM id=a7659bfd18471a0d ===
+Gold sentences and facts:
+Sentence 0: Important production centres today are the Hallertau in Germany ( more hop - growing area than any other country as of 2006 ) , the Yakima ( Washington ) and Willamette ( Oregon ) valleys , and western Canyon County , Idaho ( including the communities of Parma , Wilder , Greenleaf , and Notus ) . The principal production centres in the UK are in Kent ( which produces Kent Goldings hops ) , Herefordshire , and Worcestershire . Essentially all of the harvested hops are used in beer making .
+  Fact 0.0: The Hallertau in Germany has more hop-growing area than any other country as of 2006.
+  Fact 0.1: The Hallertau in Germany is an important hop production centre today.
+  Fact 0.2: The Yakima valley in Washington is an important hop production centre today.
+  Fact 0.3: The Willamette valley in Oregon is an important hop production centre today.
+  Fact 0.4: Western Canyon County, Idaho is an important hop production centre today.
+  Fact 0.5: Western Canyon County, Idaho includes the communities of Parma, Wilder, Greenleaf, and Notus.
+  Fact 0.6: The principal hop production centres in the UK are in Kent.
+  Fact 0.7: Kent produces Kent Goldings hops.
+  Fact 0.8: The principal hop production centres in the UK are in Herefordshire.
+  Fact 0.9: The principal hop production centres in the UK are in Worcestershire.
+  Fact 0.10: Essentially all of the harvested hops are used in beer making.
+Sentence 1: Hops production is concentrated in moist temperate climates , with much of the world 's production occurring near the 48th parallel north . Hop plants prefer the same soils as potatoes and the leading potato - growing states in the United States are also major hops - producing areas ; however , not all potato - growing areas can produce good hops naturally : soils in the Maritime Provinces of Canada , for example , lack the boron that hops prefer . Historically , hops were not grown in Ireland , but were imported from England . In 1752 more than 500 tons of English hops were imported through Dublin alone .
+  Fact 1.0: Hops production is concentrated in moist temperate climates.
+  Fact 1.1: Much of the world's hops production occurs near the 48th parallel north.
+  Fact 1.2: Hop plants prefer the same soils as potatoes.
+  Fact 1.3: The leading potato-growing states in the United States are also major hops-producing areas.
+  Fact 1.4: Not all potato-growing areas can produce good hops naturally.
+  Fact 1.5: Soils in the Maritime Provinces of Canada lack the boron that hops prefer.
+  Fact 1.6: Historically, hops were not grown in Ireland.
+  Fact 1.7: Historically, hops were imported into Ireland from England.
+  Fact 1.8: In 1752 more than 500 tons of English hops were imported through Dublin alone.
+
+Retrieved items:
+<item 1>
+Hops
+Because pollinated seeds are undesirable for brewing beer , only female plants are grown in hop fields , thus preventing pollination . Female plants are
+propagated vegetatively , and male plants are culled if plants are grown from seeds . Hop plants are planted in rows about 2 to 2.5 metres ( 7 to 8 ft ) apart .
+Each spring , the roots send forth new bines that are started up strings from the ground to an overhead trellis . The cones grow high on the bine , and in the
+past , these cones were picked by hand . Harvesting of hops became much more efficient with the invention of the mechanical hops separator , patented by Emil
+Clemens Horst in 1909 . Harvest comes near the end of summer when the bines are pulled down and the flowers are taken to a hop house or oast house for drying .
+Hop houses are two - story buildings , of which the upper story has a slatted floor covered with burlap . Here the flowers are poured out and raked even . A
+heating unit on the lower floor is used to dry the hops .
+</item 1>
+
+<item 2>
+Hops
+Problems with powdery mildew and downy mildew devastated New York 's production by the 1920s , and California only produces hops on a small scale . Hop bars
+were used before modern machinery was invented to make the holes for the hop poles . World production ( edit ) Hops production is concentrated in moist
+temperate climates , with much of the world 's production occurring near the 48th parallel north . Hop plants prefer the same soils as potatoes and the leading
+potato - growing states in the United States are also major hops - producing areas ; however , not all potato - growing areas can produce good hops naturally :
+soils in the Maritime Provinces of Canada , for example , lack the boron that hops prefer . Historically , hops were not grown in Ireland , but were imported
+from England . In 1752 more than 500 tons of English hops were imported through Dublin alone .
+</item 2>
+
+<item 3>
+Hops
+Hops - wikipedia Hops Jump to : navigation , search For other uses , see hop ( disambiguation ) . Hop flower in a hop yard in the Hallertau , Germany
+Cross-section drawing of a hop Hops are the flowers ( also called seed cones or strobiles ) of the hop plant Humulus lupulus . They are used primarily as a
+flavouring and stability agent in beer , to which they impart bitter , zesty , or citric flavours ; though they are also used for various purposes in other
+beverages and herbal medicine . The hop plant is a vigorous , climbing , herbaceous perennial , usually trained to grow up strings in a field called a hopfield
+, hop garden ( nomenclature in the South of England ) , or hop yard ( in the West Country and U.S. ) when grown commercially . Many different varieties of hops
+are grown by farmers around the world , with different types used for particular styles of beer . The first documented use of hops in beer is from the 9th
+century , though Hildegard of Bingen , 300 years later , is often cited as the earliest documented source .
+</item 3>
+
+<item 4>
+Hops
+Essentially all of the harvested hops are used in beer making . Early season hop growth in a hop yard in the Yakima River Valley of Washington with Mount Adams
+in the distance Hop producing country 2012 hop output in tonnes ( t ) Germany 34,434 United States 27,782 China 11,000 Czech Republic 4,338 Poland 2,206 North
+Korea 2,000 Albania 1,650 United Kingdom 1,650 Slovenia 1,338 Cultivation and harvest ( edit ) A superstructure of overhead wires supports strings that in turn
+support bines Although hops are grown in most of the continental United States and Canada , cultivation of hops for commercial production requires a particular
+environment . As hops are a climbing plant , they are trained to grow up trellises made from strings or wires that support the plants and allow them
+significantly greater growth with the same sunlight profile . In this way , energy that would have been required to build structural cells is also freed for
+crop growth . The hop plant 's reproduction method is that male and female flowers develop on separate plants , although occasionally a fertile individual will
+develop which contains both male and female flowers .
+</item 4>
+
+<item 5>
+Hops
+Contents ( hide ) 1 History 2 World production 2.1 Cultivation and harvest 2.2 Migrant labor and social impact 3 Chemical composition 3.1 Alpha acids 3.2 Beta
+acids 3.3 Essential oils 3.4 Flavonoids 4 Brewing 5 Varieties 5.1 Breeding programs 5.2 Noble hops 6 Other uses 7 Toxicity 8 See also 9 References 10 External
+links History ( edit ) The first documented hop cultivation was in 736 , in the Hallertau region of present - day Germany , although the first mention of the
+use of hops in brewing in that country was 1079 . However , in a will of Pepin the Short , the father of Charlemagne , hop gardens were left to the Cloister of
+Saint - Denis in 768 . Not until the 13th century did hops begin to start threatening the use of gruit for flavouring . Gruit was used when taxes were levied by
+the nobility on hops . Whichever was taxed made the brewer then quickly switch to the other .
+</item 5>
+
+<item 6>
+Hops
+In 1752 more than 500 tons of English hops were imported through Dublin alone . Important production centres today are the Hallertau in Germany ( more hop -
+growing area than any other country as of 2006 ) , the Yakima ( Washington ) and Willamette ( Oregon ) valleys , and western Canyon County , Idaho ( including
+the communities of Parma , Wilder , Greenleaf , and Notus ) . The principal production centres in the UK are in Kent ( which produces Kent Goldings hops ) ,
+Herefordshire , and Worcestershire . Essentially all of the harvested hops are used in beer making .
+</item 6>
+
+<item 7>
+Hops
+A heating unit on the lower floor is used to dry the hops . When dry , the hops are moved to a press , a sturdy box with a plunger . Two long pieces of burlap
+are laid into the hop press at right angles , the hops are poured in and compressed into bales . Hop cones contain different oils , such as lupulin , a
+yellowish , waxy substance , an oleoresin , that imparts flavour and aroma to beer . Lupulin contains lupulone and humulone , which possess antibiotic
+properties , suppressing bacterial growth favoring brewer 's yeast to grow . After lupulin has been extracted in the brewing process the papery cones are
+discarded . Migrant labor and social impact ( edit ) Hops harvest in the Kingdom of Bohemia ( 1898 ) Hops harvest in Skåne , Sweden in 1937 The need for massed
+labor at harvest time meant hop - growing had a big social impact . Around the world , the labor - intensive harvesting work involved large numbers of migrant
+workers who would travel for the annual hop harvest .
+</item 7>
+
+<item 8>
+Hops
+private and public breeding programs are using their stock material . Particular hop varieties are associated with beer regions and styles , for example pale
+lagers are usually brewed with European ( often German , Polish or Czech ) noble hop varieties such as Saaz , Hallertau and Strissel Spalt . British ales use
+hop varieties such as Fuggles , Goldings and W.G.V. North American beers often use Cascade hops , Columbus hops , Centennial hops , Willamette , Amarillo hops
+and about forty more varieties as the U.S.A. have lately been the more significant breeders of new hop varieties , including dwarf hop varieties . Hops from New
+Zealand , such as Pacific Gem , Motueka and Nelson Sauvin , are used in a `` Pacific Pale Ale '' style of beer with increasing production in 2014 . Noble hops (
+edit ) Mature hops growing in a hop yard in Germany The term `` noble hops '' traditionally refers to varieties of hops which are low in bitterness and high in
+aroma . They are the European cultivars or races Hallertau , Tettnanger , Spalt , and Saaz .
+</item 8>
+
+<item 9>
+Hops
+Hops were then grown as far north as Aberdeen , near breweries for infrastructure convenience . According to Thomas Tusser 's 1557 Five Hundred Points of Good
+Husbandry : `` The hop for his profit I thus do exalt , It strengtheneth drink and it flavoureth malt ; And being well - brewed long kept it will last , And
+drawing abide , if ye draw not too fast . '' In England there were many complaints over the quality of imported hops , the sacks of which were often
+contaminated by stalks , sand or straw to increase their weight . As a result , in 1603 , King James I approved an Act of Parliament banning the practice by
+which `` the Subjects of this Realm have been of late years abused &c. to the Value of £ 20,000 yearly , besides the Danger of their Healths '' . Hop
+cultivation was begun in the present - day United States in 1629 by English and Dutch farmers . Before prohibition , cultivation was mainly centred around New
+York , California , Oregon , and Washington state .
+</item 9>
+
+<item 10>
+Hops
+Whole families would partake and live in hoppers ' huts , with even the smallest children helping in the fields . The final chapters of W. Somerset Maugham 's
+Of Human Bondage and a large part of George Orwell 's A Clergyman 's Daughter contain a vivid description of London families participating in this annual hops
+harvest . In England , many of those picking hops in Kent were from eastern areas of London . This provided a break from urban conditions that was spent in the
+countryside . People also came from Birmingham and other Midlands cities to pick hops in the Malvern area of Worcestershire . Some photographs have been
+preserved . Particularly in Kent , because of a shortage of small - denomination coin of the realm , many growers issued their own currency to those doing the
+labor . In some cases , the coins issued were adorned with fanciful hops images , making them quite beautiful . In the US , Prohibition had a major impact on
+hops productions , but remnants of this significant industry in West and Northwest US are still noticeable in the form of old hop kilns that survive throughout
+Sonoma County , among others .
+</item 10>
+=== END ITEM id=a7659bfd18471a0d ===

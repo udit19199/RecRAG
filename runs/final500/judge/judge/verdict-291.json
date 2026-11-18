@@ -1,0 +1,56 @@
+[
+  {
+    "id": "2a30e834f042c015",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "With inflation down from its peak two summers ago, Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates and could soon turn to cutting them."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "With inflation down from its peak two summers ago, Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates and could soon turn to cutting them."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "With inflation down from its peak two summers ago, Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates and could soon turn to cutting them."}]}
+    ]
+  },
+  {
+    "id": "cecab17d81ab96c0",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 6, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]}
+    ]
+  },
+  {
+    "id": "1e71344dd253f6a8",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla"}]},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]}
+    ]
+  },
+  {
+    "id": "7cc8fa0c13ac5c23",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "That allows sportsbooks to earn the profit built into the odds and lines without worrying about which side wins."}]}
+    ]
+  },
+  {
+    "id": "363e97a99b921f41",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []}
+    ]
+  }
+]

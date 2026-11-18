@@ -1,0 +1,415 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "7522bd50893184b2",
+   "gold": [
+    {
+     "sentence": "Andrew and Jeremy Get Married is a 2004 British documentary film written and directed by Don Boyd for the BBC.",
+     "facts": {
+      "0.0": "Andrew and Jeremy Get Married is a 2004 film.",
+      "0.1": "Andrew and Jeremy Get Married is a British documentary film.",
+      "0.2": "Andrew and Jeremy Get Married was written by Don Boyd.",
+      "0.3": "Andrew and Jeremy Get Married was directed by Don Boyd.",
+      "0.4": "Andrew and Jeremy Get Married was made for the BBC."
+     }
+    },
+    {
+     "sentence": "The Last Lions is a 2011 African nature documentary film by National Geographic Society, videotaped and directed by Dereck and Beverly Joubert.",
+     "facts": {
+      "1.0": "The Last Lions is a 2011 film.",
+      "1.1": "The Last Lions is an African nature documentary film.",
+      "1.2": "The Last Lions is by the National Geographic Society.",
+      "1.3": "The Last Lions was videotaped by Dereck and Beverly Joubert.",
+      "1.4": "The Last Lions was directed by Dereck and Beverly Joubert."
+     }
+    }
+   ],
+   "items": [
+    "The entries highlight acclaimed Israeli cinema: *The Band’s Visit* (2007), directed by Eran Kolirin, and *Hunting Elephants* (2013), Reshef Levi’s crime comedy starring Sasson Gabai, Moni Moshonov and Patrick Stewart. *Yana’s Friends* (1999) won 10 Ophir Awards and Karlovy Vary’s Crystal Globe. Joseph Cedar won Cannes’ 2011 screenplay prize for *Footnote",
+    "Get Married 3\nGet Married 3 is an Indonesian romantic comedy directed by Monty Tiwa and released in 2011.\n\n A sequel to Hanung Bramantyo's \"Get Married\" and \"Get Married 2\", it stars Nirina Zubir and Fedi Nuril as a married couple attempting to raise their triplets while under intense pressure from their family and friends.\n\n The film was a commercial success and received favourable reviews in \"The Jakarta Post\" and \"Suara Karya\".",
+    "Two Brides and a Baby\nTwo Brides and a Baby is a 2011 Nigerian romantic drama film directed by Teco Benson, starring Keira Hewatch, Kalu Ikeagwu, OC Ukeje, Chelsea Eze, Stella Damasus-Aboderin and Okey Uzoeshi.\n\n It premiered on November 17, 2011.\n\n It received awards and nominations at Africa Movie Academy Awards, Best of Nollywood Awards and Africa Magic Viewers Choice Awards.",
+    "The Last Lions\nThe Last Lions is a 2011 African nature documentary film by National Geographic Society, videotaped and directed by Dereck and Beverly Joubert.\n\n It was shot at the Okavango Delta in Botswana.\n\n The film premiered at the Palm Springs International Film Festival in January 2011 and was released in select theaters on February 18, 2011.\n\n The film follows in the tradition of other National Geographic big cat films, such as \"India: Land of the Tiger\" and \"Eye of the Leopard\".",
+    "The entries span film, art, and music: *Cool and the Crazy* (1994) is Ralph Bakshi’s first live-action feature, about an unfaithful 1950s couple; *No eres tú, soy yo* (2010) is a Mexican remake of an Argentine comedy; and *The Straight Story* (1999) follows Alvin Straight’s 240-mile tractor journey to visit his estranged, ill brother. Other films include *Lilly the Witch",
+    "The entries cover American and British films from 1917–1950, spanning silent adventures, Westerns, musicals, comedies, mysteries, dramas, and film noir. Notable works include *The Razor’s Edge*, *The Little Foxes*, *The Big House*, and *The Sea Beast*, a commercially successful *Moby-Dick* adaptation with a happy ending. Directors featured include Arthur Lubin, Millard Webb, Lowell Sherman, Alan Crosland, and Elmer Cl",
+    "The Lion (2010 novel)\nThe Lion is a 2010 novel by American author Nelson DeMille.\n\n It is the fifth of DeMille's novels to feature Detective John Corey, now working as a contractor for the fictional FBI Anti-Terrorist Task Force in New York City.\n\n The novel is the sequel to \"Wild Fire\".\n\n The Lion is followed by DeMille’s 2012 novel, \"The Panther\".",
+    "A broad film, television, documentary, and industry collection spans silent-era cinema through 2010, covering action, comedy, drama, horror, musicals, noir, and more. Highlights include *The Razor’s Edge*, *The Little Foxes*, *Die Hard*, *Unbreakable*, *Signs*, *The Straight Story*, *West Side Story*, and *Rogue One*. Documentaries address music, war, politics, disability, and culture. Profiles feature Bruce Willis, David",
+    "The entries cover diverse films and careers: crime drama *Deadfall* and its *Arsenal* follow-up; *Rogue One*’s rebels stealing Death Star plans; Mel Gibson, Nicolas Cage, James Garner and Tom Cruise filmographies; Everest disaster drama *Everest*; integration-themed sports films *Remember the Titans* and *McFarland, USA*; acclaimed *True Grit* and *The Hurt Locker*; espionage film *The Ipcress File*; Vietnam",
+    "Andrew and Jeremy Get Married\nAndrew and Jeremy Get Married is a 2004 British documentary film written and directed by Don Boyd for the BBC.\n\n It tells the story of two Englishmen, Andrew Thomas and Jeremy Trafford, as they plan for their commitment ceremony.\n\n Originally commissioned for the \"BBC Storyville\" series, the film premiered at the 2004 Toronto International Film Festival."
+   ]
+  },
+  {
+   "id": "3ef650db18a69600",
+   "gold": [
+    {
+     "sentence": "PC Magazine (shortened as PCMag) is an American computer magazine published by Ziff Davis.",
+     "facts": {
+      "0.0": "PC Magazine is shortened as PCMag.",
+      "0.1": "PC Magazine is an American computer magazine.",
+      "0.2": "PC Magazine is published by Ziff Davis."
+     }
+    },
+    {
+     "sentence": " The magazine focuses on sculpture, its collectors and enthusiasts, but painting and poetry are also frequently featured.",
+     "facts": {
+      "1.0": "The magazine focuses on sculpture.",
+      "1.1": "The magazine focuses on sculpture collectors.",
+      "1.2": "The magazine focuses on sculpture enthusiasts.",
+      "1.3": "Painting is also frequently featured in the magazine.",
+      "1.4": "Poetry is also frequently featured in the magazine."
+     }
+    }
+   ],
+   "items": [
+    "Windows: The Official Magazine\nWindows: The Official Magazine is a technology magazine produced by Future plc in association with Microsoft, and published worldwide.\n\n The title describes itself as \"A PC magazine for real life\", and contains news, features, guides and reviews designed to show readers how to make better use of their Windows PC.",
+    "Computer Press Association\nFounded in 1983, the Computer Press Association (CPA) was established to promote excellence in the field of computer journalism.\n\n The association was composed of working editors, writers, producers, and freelancers who covered issues related to computers and technology.\n\n The CPA conducted the annual Computer Press Awards, which was the preeminent editorial awards of the computer and technology media.\n\n The CPA Awards honored outstanding examples in print, broadcast and electronic media.\n\n Awards were given for print publications, such as PC Magazine; online news media, such as Newsbytes News Network (both were multiple winners); individual columns and features by well-known journalists such as Steven Levy (author of “”); broadcast awards such as “Best Radio Program”; as well as book awards in categories such as Best Product Specific Book.\n\n CPA President Jeff Yablon (1994-1996) developed an updated code of ethics for technology journalists that was adopted by many major trade show groups, most notably Bruno Blenheim.\n\n The Computer Press Association disbanded in 2000.",
+    "PC Magazine\nPC Magazine (shortened as PCMag) is an American computer magazine published by Ziff Davis.\n\n A print edition was published from 1982 to January 2009.\n\n Publication of online editions started in late 1994 and continues to this day.",
+    "Computer Magazine\n\"Computer Magazine\" is a free publication (in addition to their webcasts and other resources) sponsored by the nonprofit UTCP (United Technology and Computing Professionals) organization, and as such charges no fees for the publication nor is influenced by advertising, so their reviews are relied on in the industry and considered unbiased and thorough.\n\n \"Computer Magazine\" is one of the early large technology publications and resources available on the web still existent and thriving today and that has remained independent.\n\n ComputerMagazine.com is a tech news and resources consolidator that publishes part of the site in a semi-time line/blogging format that is popular among their wide following of subscriber and non-subscriber readers, allowing readers to respond and comment on various articles.\n\n Site contributors include many of the well known technology authors, experts and publication sources, content and articles are provided by major technology syndicators and by external expert technology sources (such as \"Computer World\", \"Information Week\", \"Network World\", \"Wired,\" \"Time\", etc.)",
+    "ST/Amiga Format\nST Amiga Format was a computer magazine that covered the Atari ST and Amiga computers.\n\n It was published by Future plc to cover the ever growing market for the, then-new, 16-bit home computers.\n\n Issues were equally balanced with coverage for both Commodore Amiga and Atari ST systems.\n\n Issue 1 included a main feature 'ST or Amiga?\n\n The Choice is Yours', where the pros and cons for each machine was examined.",
+    "Sculptural Pursuit\nSculptural Pursuit was a quarterly art/literary magazine published by Hammer & Pen Productions, a Denver, Colorado publishing company.\n\n The magazine focuses on sculpture, its collectors and enthusiasts, but painting and poetry are also frequently featured.",
+    "Computer Magazine\nas well as \"Computer Magazine\" staff writers, and is currently managed and edited by the industry veteran Christopher Swearingin an MCSE and former CIO and regarded author as well as contributor/reporter for \"Computer Magazine\" and other publications.",
+    "Popular Science\nPopular Science (also known as PopSci) is an American bi-monthly magazine carrying popular science content, which refers to articles for the general reader on science and technology subjects.\n\n \"Popular Science\" has won over 58 awards, including the American Society of Magazine Editors awards for its journalistic excellence in both 2003 (for General Excellence) and 2004 (for Best Magazine Section).\n\n With roots beginning in 1872, \"Popular Science\" has been translated into over 30 languages and is distributed to at least 45 countries.",
+    "Shape (magazine)\nShape is a monthly English language fitness magazine started by Weider Publications in 1981, founded by Christine MacIntyre (a pioneer in women's free weight fitness) and became the number one women's fitness magazine.\n\n At that time, Weider Enterprises consisted primarily of the bodybuilding magazine \"Muscle & Fitness\".\n\n Joe Weider and Christine MacIntyre had differing views of how to present \"Shape\", Weider endorsing a less journalistic and more commercial approach to articles, MacIntyre endorsing a more academic, doctor-based magazine.\n\n Weider also endorsed a sexier approach to editorial while MacIntyre endorsed a healthier look for women, eschewing sexiness in the models and the copy.\n\n MacIntyre largely won that battle, editing a magazine that required that every byline have an advanced medical degree, that cover models should look healthy rather than sexy, and that sexist language be avoided.\n\n Christine MacIntyre was the editor-in-chief until her death in 1988.\n\n Tara Kraft is the current editor-in-chief.\n\n \"Shape\" found a readership based on that formula.",
+    "Computer Magazine\nComputer Magazine (and their website www.ComputerMagazine.com) is a popular magazine and online news site on computing and technology, offering current news and reviews of popular and new business and consumer technologies, software, hardware, mobile computing, tablets, PCs, Macs, Windows, Linux, telecom, cellular, wireless, data, cloud and science news on digital technologies and everything in the \"tech-sphere and digi-verse\", especially focused on information technology, devices, software and services and related subjects, such as networking, servers, data centers and corporate data infrastructure technologies, and the Internet.\n\n Their online site, since 1997, is located at ComputerMagazine.com.\n\n \"Computer Magazine\" produces industry instructional and a popular ongoing webcast/podcast talk show and performs evaluations and reviews of IT industry technology products, hardware, software and services with objective reporting widely respected as independent and objective, and trusted in the industry."
+   ]
+  },
+  {
+   "id": "3a38f8720147eb09",
+   "gold": [
+    {
+     "sentence": " She was also a member of a secret society composed exclusively of Cheyenne women.",
+     "facts": {
+      "0.0": "The woman in question was also a member of a secret society.",
+      "0.1": "The secret society was composed exclusively of Cheyenne women."
+     }
+    },
+    {
+     "sentence": "Cheyenne military societies are one of the two central institutions of traditional Cheyenne Indian tribal governance, the other being the Council of Forty-four.",
+     "facts": {
+      "1.0": "Cheyenne military societies are one of the two central institutions of traditional Cheyenne Indian tribal governance.",
+      "1.1": "The other central institution of traditional Cheyenne Indian tribal governance is the Council of Forty-four."
+     }
+    }
+   ],
+   "items": [
+    "Cheyenne\nThe Cheyenne ( ) are one of the Indigenous peoples of the Great Plains and their language is of the Algonquian language family.\n\n The Cheyenne comprise two Native American tribes, the Só'taeo'o or Só'taétaneo'o (more commonly spelled as Suhtai or Sutaio) and the Tsétsêhéstâhese (also spelled Tsitsistas).\n\n These tribes merged in the early 19th century.\n\n Today, the Cheyenne people are split into two federally recognized Nations: the Southern Cheyenne, who are enrolled in the Cheyenne and Arapaho Tribes in Oklahoma, and the Northern Cheyenne, who are enrolled in the Northern Cheyenne Tribe of the Northern Cheyenne Indian Reservation in Montana.",
+    "Concho Indian Boarding School\nConcho Indian Boarding School (also known as the Cheyenne-Arapaho Boarding School at Concho or Concho Indian School and home to the Concho Demonstration School) was a boarding school for members of the Cheyenne and Arapaho Tribes and later opened to other Native American students.\n\n It existed from 1909 to 1983.\n\n It was located in central Oklahoma, approximately 1 mile south of Concho, Oklahoma and 4 miles north of El Reno, Oklahoma.\n\n The name of the town and school is the Spanish word for \"shell\" and was named for the Indian agent, Charles E. Shell.",
+    "Lean Bear\nLean Bear (Cheyenne name Awoninahku, 1813–1864), alternatively translated as Starving Bear, was a Cheyenne peace chief.\n\n He was a member of the Council of Forty-four, a tribal governance devoted to maintaining peace with encroaching United States settlers.\n\n Lean Bear's most notable peace deals include the Treaty of Fort Wise and a meeting with US President Abraham Lincoln.\n\n His work towards peace between his people and the American settlers in the Southern Plains were cut short when he was murdered by the 1st Colorado Cavalry Regiment and violent retaliations ensued.",
+    "Cheyenne military societies\nCheyenne military societies are one of the two central institutions of traditional Cheyenne Indian tribal governance, the other being the Council of Forty-four.\n\n While council chiefs are responsible for overall governance of individual bands and the tribe as a whole, the headmen of military societies are in charge of maintaining discipline within the tribe, overseeing tribal hunts and ceremonies, and providing military leadership.\n\n Historically, council chiefs selected which of the six military societies would assume these duties; after a period of time on-duty, the chiefs would select a different society to take up the duties.",
+    "Chief Dull Knife College\nChief Dull Knife College (originally Dull Knife Memorial College) is a small, open-admission, Native American tribal community college and land grant institution.\n\n Located on the Northern Cheyenne Indian Reservation, in the city of Lame Deer, it has a current enrollment of about 141 students.\n\n On average, more than half of its graduates move on to four-year colleges.",
+    "Lame Deer, Montana\nLame Deer (Meaveʼhoʼeno in Cheyenne) is a census-designated place (CDP) in Rosebud County, Montana.\n\n The community is named after Miniconjou Lakota chief Lame Deer, who was killed by the U.S. Army in 1877 under a flag of truce south of the town.\n\n It is the tribal and government agency headquarters of the Northern Cheyenne Indian Reservation.\n\n This is the location of the Chief Dull Knife College and the annual Northern Cheyenne Powwow.",
+    "Eugene Little Coyote\nEugene Little Coyote was the president of the Northern Cheyenne Indian Reservation from 2004 to 2007.\n\n He was elected in November 2004, defeating the incumbent president, Geri Small.\n\n However, after a conflict with reservation vice president Rick Wolfname that began in July 2007 escalated, the Northern Cheyenne tribal council declared that it would oust Little Coyote as the tribe's president.\n\n Little Coyote was forcibly removed from office and arrested for trespassing in the tribal office building on December 28, 2007.\n\n It is worth noting that the move by the tribal council to remove Little Coyote from office was deemed unconstitutional and void by the Northern Cheyenne Constitutional Court.\n\n The Constitutional Court was however overruled by Bureau of Indian Affairs' regional director Ed Parisian, and later the Assistant Secretary of Indian Affairs Carl J. Artman.\n\n Their involvement in this matter set a historical precedence of the BIA directly meddling with tribal governments.",
+    "Northern Cheyenne Indian Reservation\nThe Northern Cheyenne Indian Reservation (Tsėhéstáno in Cheyenne, formerly named the Tongue River Indian Reservation) is home of the federally recognized Northern Cheyenne Tribe.\n\n Located in southeastern Montana, the reservation is approximately 444,000 acres in size and home to approximately 5,000 Cheyenne people.\n\n The tribal and government headquarters are in Lame Deer, which is also the home of the annual Northern Cheyenne Pow wow.\n\n The reservation is bounded on the east by the Tongue River and on the west by the Crow Reservation.\n\n There are small parcels of non-contiguous off-reservation trust lands in Meade County, South Dakota, northeast of the city of Sturgis.\n\n Its timbered ridges that extend into northwestern South Dakota are part of Custer National Forest and it is approximately 40 mi east of the site of the 1876 Battle of the Greasy Grass (known to most Americans as the Battle of the Little Bighorn).",
+    "Ehyophsta\nEhyophsta (Cheyenne for \"Yellow-Haired Woman\") was a Cheyenne woman.\n\n She was the daughter of Stands-in-the-Timber who died in 1849, and she was the niece of Bad Faced Bull.\n\n She fought in the Battle of Beecher Island in 1868, and also fought the Shoshone that same year, where she counted coup against one enemy and killed another.\n\n She fought the Shoshone again in 1869.\n\n She was also a member of a secret society composed exclusively of Cheyenne women.\n\n She died in 1915.",
+    "Council of Forty-four\nThe Council of Forty-four was one of the two central institutions of traditional Cheyenne Indian tribal governance, the other being the military societies such as the Dog Soldiers.\n\n The influence of the Council of Forty-four waned in the face of internal conflict among the Cheyenne about Cheyenne policy toward encroaching white settlers on the Great Plains, and was dealt a severe blow by the Sand Creek Massacre."
+   ]
+  },
+  {
+   "id": "8bdbee5151363bef",
+   "gold": [
+    {
+     "sentence": "Albany International Airport (IATA: ALB, ICAO: KALB, FAA LID: ALB) is a public airport seven miles (11 km) northwest of Albany, in Albany County, New York, United States.",
+     "facts": {
+      "0.0": "Albany International Airport has the IATA code ALB.",
+      "0.1": "Albany International Airport has the ICAO code KALB.",
+      "0.2": "Albany International Airport has the FAA LID ALB.",
+      "0.3": "Albany International Airport is a public airport.",
+      "0.4": "Albany International Airport is seven miles (11 km) northwest of Albany.",
+      "0.5": "Albany International Airport is in Albany County, New York, United States."
+     }
+    },
+    {
+     "sentence": "Dane County Regional Airport (DCRA) (IATA: MSN, ICAO: KMSN, FAA LID: MSN) (Truax Field) is a civil-military airport located six miles northeast of downtown Madison, the capital of Wisconsin.",
+     "facts": {
+      "1.0": "Dane County Regional Airport (DCRA) has the IATA code MSN.",
+      "1.1": "Dane County Regional Airport (DCRA) has the ICAO code KMSN.",
+      "1.2": "Dane County Regional Airport (DCRA) has the FAA LID MSN.",
+      "1.3": "Dane County Regional Airport is also known as Truax Field.",
+      "1.4": "Dane County Regional Airport is a civil-military airport.",
+      "1.5": "Dane County Regional Airport is located six miles northeast of downtown Madison.",
+      "1.6": "Madison is the capital of Wisconsin."
+     }
+    }
+   ],
+   "items": [
+    "Air Wisconsin\nAir Wisconsin Airlines is a regional airline based at Appleton International Airport in the town of Greenville, Wisconsin, United States, near Appleton.\n\n Air Wisconsin is the largest privately held regional airline in the United States.\n\n It currently operates regional jet flights as American Eagle under contract to American Airlines via a code sharing agreement, serving cities in the U.S. and Canada with hubs at Boston Logan International Airport (BOS), Charlotte Douglas International Airport (CLT), Philadelphia International Airport (PHL) and Ronald Reagan Washington National Airport (DCA) .\n\n Air Wisconsin previously operated United Express service on behalf of United Airlines followed by US Airways Express service on behalf of US Airways prior to becoming an American Eagle regional air carrier.\n\n The company has announced it will once again partner with United Airlines as a United Express code sharing air carrier with primary hubs to be located at Chicago O'Hare International Airport (ORD) and Washington Dulles International Airport (IAD) beginning in September 2017 and will be \"exclusively operating\" as United Express by March 2018.",
+    "Dane County Regional Airport\nDane County Regional Airport (DCRA) (IATA: MSN, ICAO: KMSN, FAA LID: MSN) (Truax Field) is a civil-military airport located six miles northeast of downtown Madison, the capital of Wisconsin.\n\n In the Federal Aviation Administration (FAA) National Plan of Integrated Airport Systems for 2017–2021, it is categorized as a small-hub primary commercial service facility.",
+    "Albany International Airport\nAlbany International Airport (IATA: ALB, ICAO: KALB, FAA LID: ALB) is a public airport seven miles (11 km) northwest of Albany, in Albany County, New York, United States.\n\n It is owned by the Albany County Airport Authority.",
+    "Grand Forks Municipal Airport\nGrand Forks Municipal Airport is a former airport, located within current city limits approximately 3 mi west-northwest of central Grand Forks, North Dakota.\n\n It was closed shortly after World War II and is now redeveloped as part of the urban area of Grand Forks.",
+    "Salt Lake City International Airport\nSalt Lake City International Airport (IATA: SLC, ICAO: KSLC, FAA LID: SLC) is a civil-military airport located about 4 miles west of Downtown Salt Lake City, Utah in the United States.\n\n The airport is the closest commercial airport for more than 2.5 million people and is within a 30-minute drive of nearly 1.3 million jobs.",
+    "Lafayette Regional Airport\nLafayette Regional Airport (IATA: LFT, ICAO: KLFT, FAA LID: LFT) is a public airport two miles (4 km) southeast of Lafayette, in Lafayette Parish, Louisiana, United States.\n\n It is independently owned and operated.",
+    "Wilmington Airport (Delaware)\nWilmington Airport (IATA: ILG) (also known as Wilmington/Philadelphia Regional Airport, New Castle County Airport, or New Castle Airport) is an airport located in unincorporated New Castle County, Delaware near Wilmington, Delaware.\n\n Owned by the Delaware River and Bay Authority, it is five miles (8 km) south of Wilmington and about 30 miles (50 km) from Philadelphia.\n\n It is included in the Federal Aviation Administration (FAA) National Plan of Integrated Airport Systems for 2017–2021, in which it is categorized as a non-hub primary commercial service facility.",
+    "Brainerd Lakes Regional Airport\nBrainerd Lakes Regional Airport (IATA: BRD, ICAO: KBRD, FAA LID: BRD) is a public use airport located three nautical miles (6 km) northeast of the central business district of Brainerd, a city in Crow Wing County, Minnesota, United States.\n\n The airport is owned by the city and county.\n\n It is mostly used for general aviation but is also served by one commercial airline.",
+    "Truax Field Air National Guard Base\nTruax Field Air National Guard Base (IATA: MSN, ICAO: KMSN, FAA LID: MSN) , also known as Truax Field, is a military facility located at Dane County Regional Airport.\n\n It is located five miles (8 km) northeast of the center of Madison, a city in Dane County, Wisconsin, United States.",
+    "Grand Forks International Airport\nGrand Forks International Airport (IATA: GFK, ICAO: KGFK, FAA LID: GFK) is a public airport five miles (8 km) northwest of Grand Forks, in Grand Forks County, North Dakota.\n\n GFK has no scheduled passenger flights out of the country but has an \"international\" title (like many other airports) because it has customs service for arrivals from Canada and other countries."
+   ]
+  },
+  {
+   "id": "b7866a5c2dac8c4a",
+   "gold": [
+    {
+     "sentence": "The Cathedral Church of the Holy Spirit, Guildford is the Anglican cathedral at Guildford, Surrey, England.",
+     "facts": {
+      "0.0": "The Cathedral Church of the Holy Spirit, Guildford is an Anglican cathedral.",
+      "0.1": "The Cathedral Church of the Holy Spirit, Guildford is located at Guildford, Surrey, England."
+     }
+    },
+    {
+     "sentence": "St Paul's Cathedral, London, is an Anglican cathedral, the seat of the Bishop of London and the mother church of the Diocese of London.",
+     "facts": {
+      "1.0": "St Paul's Cathedral, London is an Anglican cathedral.",
+      "1.1": "St Paul's Cathedral, London is the seat of the Bishop of London.",
+      "1.2": "St Paul's Cathedral, London is the mother church of the Diocese of London."
+     }
+    }
+   ],
+   "items": [
+    "Lincoln Cathedral\nLincoln Cathedral or the Cathedral Church of the Blessed Virgin Mary of Lincoln, and sometimes St. Mary's Cathedral in Lincoln, England is the seat of the Anglican bishop.\n\n Building commenced in 1088 and continued in several phases throughout the medieval period.\n\n It was the tallest building in the world for 238 years (1311–1549), and the first building to hold that title after the Great Pyramid of Giza.\n\n The central spire collapsed in 1549 and was not rebuilt.\n\n The cathedral is the third largest in Britain (in floor area) after St Paul's and York Minster, being 484 by .\n\n It is highly regarded by architectural scholars; the eminent Victorian writer John Ruskin declared: \"I have always held... that the cathedral of Lincoln is out and out the most precious piece of architecture in the British Isles and roughly speaking worth any two other cathedrals we have.\"",
+    "Exterior sculpture of Guildford Cathedral\nThe Exterior sculpture of Guildford Cathedral provides many artistic features, including sculptures, engravings and more by some of England’s finest sculptors and craftsmen of the 1950s and 1960s.\n\n The people who worked on the cathedral include: Edward Maufe, Alan Collins, Vernon Hill, Eric Gill, John Hutton, Dennis Huntley and others.",
+    "Diocese of Salisbury\nThe Diocese of Salisbury is a Church of England diocese in the south of England, within the ecclesiastical Province of Canterbury.\n\n The diocese covers most of Dorset (excepting the deaneries of Bournemouth and Christchurch, which fall within the Diocese of Winchester), and most of Wiltshire (excepting a part in the north and Swindon).\n\n The diocese is led by the Bishop of Salisbury (Nick Holtam) and the diocesan synod.\n\n The bishop's seat is at Salisbury Cathedral.",
+    "St Philip's Cathedral, Birmingham\nThe Cathedral Church of Saint Philip is the Church of England cathedral and the seat of the Bishop of Birmingham.\n\n Built as a parish church and consecrated in 1715, St Philip's became the cathedral of the newly formed Diocese of Birmingham in 1905.\n\n St Philip's was built in the early 18th century in the Baroque style by Thomas Archer and is located on Colmore Row, Birmingham, England.\n\n The cathedral is a Grade I listed building.\n\n St Philip's is the third smallest cathedral in England after Derby and Chelmsford.",
+    "St Chad's Cathedral, Birmingham\nThe Metropolitan Cathedral Church and Basilica of Saint Chad is the mother church of the Archdiocese of Birmingham and province of the Catholic Church in Great Britain and is dedicated to Saint Chad of Mercia.\n\n Built by Augustus Welby Pugin and substantially complete by 1841, St Chad's is one of the first four Catholic churches that were constructed after the English Reformation and raised to cathedral status in 1852.\n\n It is one of only four minor basilicas in England (the others being Downside Abbey, the National Shrine of Our Lady at Walsingham and Corpus Christi Priory, this last now disused).\n\n St Chad's is a Grade II* listed building.\n\n The cathedral is located in a public greenspace near St Chad's Queensway, in central Birmingham.\n\n s of 2014 the Archbishop was Bernard Longley and the Dean Canon Gerry Breen.",
+    "St Paul's Cathedral, Rockhampton\nSt Paul's Anglican Cathedral is a heritage-listed cathedral at 89 William Street, Rockhampton, Rockhampton Region, Queensland, Australia.\n\n It was designed principally by Annersley Voysey and built from 1883 to 1953.\n\n It is also known as St Paul's Church of England and St Paul's Church of England Cathedral.\n\n It was added to the Queensland Heritage Register on 21 October 1992.\n\n The associated hall and offices were listed on the Queensland Heritage Register on 23 June 2000.",
+    "Chelmsford Cathedral\nChelmsford Cathedral in the city of Chelmsford, Essex, England, is dedicated to St Mary the Virgin, St Peter and St Cedd.\n\n It became a cathedral when the Anglican Diocese of Chelmsford was created in 1914 and is the seat of the Bishop of Chelmsford.",
+    "St Paul's Cathedral\nSt Paul's Cathedral, London, is an Anglican cathedral, the seat of the Bishop of London and the mother church of the Diocese of London.\n\n It sits on Ludgate Hill at the highest point of the City of London and is a Grade 1 listed building.\n\n Its dedication to Paul the Apostle dates back to the original church on this site, founded in AD 604.\n\n The present cathedral, dating from the late 17th century, was designed in the English Baroque style by Sir Christopher Wren.\n\n Its construction, completed in Wren's lifetime, was part of a major rebuilding programme in the City after the Great Fire of London.",
+    "Diocese of Guildford\nThe Diocese of Guildford is a Church of England diocese covering nine of the eleven districts in Surrey, much of north-east Hampshire and a parish in Greater London.\n\n The cathedral is Guildford Cathedral and the bishop is the Bishop of Guildford.\n\n Of the two provinces of the church it falls within the Province of Canterbury.",
+    "Guildford Cathedral\nThe Cathedral Church of the Holy Spirit, Guildford is the Anglican cathedral at Guildford, Surrey, England.\n\n The Lord Onslow donated the land on which the Cathedral was built with a covenant for this purpose.\n\n Designed by Sir Edward Maufe and built between 1936 and 1961, it is the seat of the Diocese of Guildford."
+   ]
+  },
+  {
+   "id": "1243eed74cf636c5",
+   "gold": [
+    {
+     "sentence": "The 1993 Tehran mid-air collision occurred just outside the Iranian capital city of Tehran on Monday, February 8, 1993, killing all 133 people on board both aircraft involved—an Iran Air Tours Tupolev Tu-154M, registered EP-ITD, and an Islamic Republic of Iran Air Force (IRIAF) Sukhoi Su-24 attack aircraft.",
+     "facts": {
+      "0.0": "The 1993 Tehran mid-air collision occurred just outside the Iranian capital city of Tehran.",
+      "0.1": "The collision occurred on Monday, February 8, 1993.",
+      "0.2": "The collision killed all 133 people on board both aircraft involved.",
+      "0.3": "One aircraft involved was an Iran Air Tours Tupolev Tu-154M, registered EP-ITD.",
+      "0.4": "The other aircraft involved was an Islamic Republic of Iran Air Force (IRIAF) Sukhoi Su-24 attack aircraft."
+     }
+    },
+    {
+     "sentence": "Iran Air Tours is an airline based in Tehran, Iran.",
+     "facts": {
+      "1.0": "Iran Air Tours is an airline.",
+      "1.1": "Iran Air Tours is based in Tehran, Iran."
+     }
+    }
+   ],
+   "items": [
+    "Atlantic Southeast Airlines Flight 2311\nAtlantic Southeast Airlines Flight 2311 was a regularly scheduled commuter flight from Hartsfield–Jackson Atlanta International Airport to Glynco Jetport (since renamed Brunswick Golden Isles Airport) in Brunswick, Georgia on April 5, 1991.\n\n The flight, operated using a twin-turboprop Embraer EMB 120 Brasilia, crashed just north of Brunswick while approaching the airport for landing.\n\n All 23 people aboard the plane were killed, including passengers Sonny Carter and John Tower.\n\n Four years later, another Embraer Brasilia of ASA crashed in the Georgia countryside in similar circumstances, with nine fatalities.",
+    "United Airlines Flight 736\nUnited Airlines Flight 736 was a daily U.S. transcontinental passenger flight operated by United Airlines that crashed on April21, 1958, following a mid-air collision.\n\n The aircraft assigned to Flight 736, a Douglas DC-7 airliner carrying 47 persons, was flying at cruise altitude above Clark County, Nevada, en route to a stopover at Denver, Colorado, when it was struck by a United States Air Force fighter jet crewed by two pilots.\n\n The collision occurred at 8:30 a.m. in clear weather within a major commercial airway; both aircraft fell out of control from 21000 ft and crashed into unpopulated desert terrain southwest of Las Vegas, Nevada.",
+    "1955 Cincinnati mid-air collision\nThe 1955 Cincinnati mid-air collision occurred on January 12, 1955, when a Trans World Airlines Martin 2-0-2 on takeoff from Boone County Airport (now the Cincinnati/Northern Kentucky International Airport) collided in mid-air with a privately owned Douglas DC-3 that had entered the airport's control space without proper clearance.\n\n There were no survivors.",
+    "Graph query row:\norganization: Iran Air Tours\ncity: Tehran",
+    "1993 Tehran mid-air collision\nThe 1993 Tehran mid-air collision occurred just outside the Iranian capital city of Tehran on Monday, February 8, 1993, killing all 133 people on board both aircraft involved—an Iran Air Tours Tupolev Tu-154M, registered EP-ITD, and an Islamic Republic of Iran Air Force (IRIAF) Sukhoi Su-24 attack aircraft.",
+    "Charkhi Dadri mid-air collision\nThe Charkhi Dadri mid-air collision occurred on 12 November 1996 over the village of Charkhi Dadri, to the west of New Delhi, India.\n\n The aircraft involved were a Saudi Arabian Airlines Boeing 747-100B en route from Delhi to Dhahran, Saudi Arabia, and a Kazakhstan Airlines Ilyushin Il-76 en route from Chimkent, Kazakhstan, to Delhi.\n\n The crash killed all 349 people on board both planes, making it the world's deadliest mid-air collision, the deadliest aviation accident to occur in India, and the third-deadliest aircraft accident in the history of aviation, behind only the Tenerife airport disaster and Japan Airlines Flight 123.",
+    "Iran Air Tours\nIran Air Tours is an airline based in Tehran, Iran.\n\n The airline mainly operates under the English name Iran Airtour (i.e. without the plural \"s\") as written in Persian (Persian: ایران ایر تور‎ ‎ ).\n\n This error is due to confusion between different pluralization rules in English and Persian.\n\n Iran Air Tours was established as a subsidiary of Iran Air and operates scheduled domestic services and international services in the Middle East as well as Eastern Europe, as well as charter services.",
+    "Bukovyna Airlines\nBukovyna Airlines, also known as Bukovyna Aviation Enterprise, is a charter airline based in Chernivtsi, Ukraine, operating chartered passenger flights out of Chernivtsi International Airport.\n\n The company was founded in 1999.\n\n In 2013 Bukovyna was one of two Ukrainian airlines that had sanctions imposed against them by the US government.\n\n Bukovyna Airlines was hit with sanctions because it was leasing its US-built McDonnell Douglas MD-80 series aircraft to Iranian airlines Mahan Air and Iran Air.\n\n The Iranian airlines were themselves under sanction by the US government.",
+    "1965 Carmel mid-air collision\nThe 1965 Carmel mid-air collision occurred on December 4, 1965, when Eastern Air Lines Flight 853 (N6218C), a Lockheed Super Constellation en route from Boston Logan International Airport to Newark International Airport, collided in mid-air with Trans World Airlines Flight 42 (N748TW), a Boeing 707-131B en route from San Francisco International Airport to John F. Kennedy International Airport, over Carmel, New York, United States.",
+    "1993 Auckland mid-air collision\nThe 1993 Auckland mid-air collision was an aircraft accident in New Zealand.\n\n It occurred on 26 November 1993, when two aircraft operated by Airwork, under contract to the New Zealand Police, collided and crashed in central Auckland.\n\n The mid-air collision of the Aérospatiale TwinStar helicopter and Piper Archer aeroplane resulted in the deaths of all four occupants – a civilian Airwork pilot on each aircraft and two New Zealand Police officers on the helicopter.\n\n The accident occurred in daylight with excellent visibility, in uncontrolled airspace (class G), with both aircraft flying under visual flight rules.\n\n Both the helicopter and aeroplane were operated by Airwork (NZ), and working under contract to the New Zealand Police at the time of the accident."
+   ]
+  },
+  {
+   "id": "8dfb43d9be3c617f",
+   "gold": [
+    {
+     "sentence": "Warrel Dane (born March 7, 1969) is the lead singer of the American power metal band Sanctuary.",
+     "facts": {
+      "0.0": "Warrel Dane was born on March 7, 1969.",
+      "0.1": "Warrel Dane is the lead singer of the band Sanctuary.",
+      "0.2": "Sanctuary is an American power metal band."
+     }
+    },
+    {
+     "sentence": "Roy Sætre Khantatat (born March 12, 1970), is a Norwegian singer-songwriter.",
+     "facts": {
+      "1.0": "Roy Sætre Khantatat was born on March 12, 1970.",
+      "1.1": "Roy Sætre Khantatat is a Norwegian singer-songwriter."
+     }
+    }
+   ],
+   "items": [
+    "Nevermore (album)\nNevermore is the eponymous debut studio album by American heavy metal band Nevermore, released on February 14, 1995 by Century Media Records.\n\n It was singer Warrel Dane and bassist Jim Sheppard's first release after departing from their previous band, Sanctuary, in 1994.\n\n Having recruited drummer Van Williams and former Sanctuary touring guitarist Jeff Loomis, they formed the band Nevermore and began anew.",
+    "Warrel Dane\nWarrel Dane (born March 7, 1969) is the lead singer of the American power metal band Sanctuary.\n\n He is also known as the former lead singer of currently inactive progressive metal band Nevermore.\n\n He is a natural baritone, though he was known for his high-pitched vocals with Serpent's Knight and on the first two Sanctuary albums.\n\n Later in his career, Dane became more notable for his distinctively deep, dramatic voice.",
+    "Scott Weiland\nScott Richard Weiland ( ; born Scott Richard Kline; October 27, 1967 – December 3, 2015) was an American musician, singer and songwriter.\n\n During a career spanning three decades, Weiland was best known as the lead singer of the band Stone Temple Pilots from 1989 to 2002 and 2008 to 2013.\n\n He was also a member of supergroup Velvet Revolver from 2003 to 2008 and recorded one album with another supergroup, Art of Anarchy.\n\n He established himself as a solo artist as well, releasing three studio albums, two cover albums, and collaborations with several other musicians throughout his career.",
+    "Peter Wichers\nPeter Wichers is best known as one of the founding members of Swedish melodic death metal band, Soilwork.\n\n From 1995 until late 2005, when he announced his departure from the band, he was known as the lead guitarist and also a songwriter, especially on their \"Stabbing the Drama\" album., He rejoined Soilwork in 2008 and played on 2010s The Panic Broadcast and in June 2012 he quit Soilwork for the second time.\n\n After leaving Soilwork, he filled in for Adam Dutkiewicz when he was injured on Killswitch Engage's European tour.\n\n More recently, he has collaborated with singers from across the melodic death metal genre including Anders Fridén, former band mate Björn \"Speed\" Strid and John Bush (vocalist of Anthrax) to make a CD much in the same style as \"Roadrunner United\", entitled \"Nuclear Blast All-Stars\".\n\n He also co-wrote Warrel Dane's solo record \"Praises to the War Machine\".",
+    "Nevermore\nNevermore is an American progressive metal band from Seattle, Washington, United States.\n\n Formed in 1991, they are known to incorporate elements from various styles such as power metal, modern hard rock, classic heavy metal and technical thrash metal.\n\n The band has been on hiatus since 2011, due to personal issues between the band members.\n\n In April 2015, lead singer Warrel Dane confirmed that Nevermore has not disbanded, and there is a possibility for them to continue in the next two years with another album.",
+    "Doug Grean\nDoug Grean is an American record producer, audio engineer, guitarist, based in Los Angeles.\n\n He has worked with artists Sheryl Crow, Ricki Lee Jones, Glen Campbell, Scott Weiland, Slash, Velvet Revolver, Stone Temple Pilots, The Crystal Method, Tim McGraw, Cyndi Lauper, Annabella Lwin (Bow Wow Wow), Corey Glover (Living Color), Camp Freddy, DJ Hurricane and John Taylor (Duran Duran).\n\n Grean was formerly the lead guitarist and touring musical director for Scott Weiland and the Wildabouts.\n\n Some of Grean's television appearances with Weiland include: VH1 Legends, Last Call with Carson Daly, The Tonight Show with Jay Leno, and the Grammy awards with Velvet Revolver as keyboardist, performing \"All Across the Universe\" with Stevie Wonder, Norah Jones, Bono, Steven Tyler, Brian Wilson, and Alison Krauss.",
+    "Sanctuary (band)\nSanctuary is an American heavy metal band founded in Seattle in 1985.\n\n They split up in 1992, but reformed 18 years later.\n\n The band consists of Warrel Dane (vocals), Lenny Rutledge (guitar), Nick Cordle (guitar), George Hernandez (bass), and Dave Budbill (drums).\n\n To date, they have released four studio albums and one live EP.",
+    "Profiles span musicians across jazz, rock, metal, electronic, gospel, and pop. Robert Glasper has three Grammys; Carlos Santana, ten Grammys and a landmark Latin-rock fusion career. Daron Malakian (System of a Down), Gaahl (Gorgoroth), Roy Khan (Kamelot), Toshi (X Japan), and Rivermaya’s former guitarist Perfecto de Castro are noted rock figures. Relient K’s Matt Thiessen, electronic artists Greg Davis and",
+    "Praises to the War Machine\nPraises to the War Machine is the debut and only solo release/album by heavy metal vocalist Warrel Dane from Nevermore, released on April 25, 2008.\n\n The album was produced by Peter Wichers, who was tapped by Dane to work on the album while Wichers was still a member of Soilwork.\n\n After leaving that band in 2007, Wichers co-wrote the album with Dane and played on eight of its tracks.\n\n Soilwork drummer Dirk Verbeuren and former Himsa guitarist Matt Wicklund also played on the album.\n\n Nevermore guitarist Jeff Loomis and the band's touring guitarist at the time Chris Broderick make guest appearances, along with James Murphy, who had performed on the Nevermore album \"This Godless Endeavor\".\n\n \"Praises to the War Machine\" includes two cover songs, The Sisters of Mercy's \"Lucretia My Reflection\" and \"Patterns\" by Paul Simon.\n\n Dane had previously covered a Simon song on Nevermore's album \"Dead Heart in a Dead World\".",
+    "Roy Khan\nRoy Sætre Khantatat (born March 12, 1970), is a Norwegian singer-songwriter.\n\n Commonly known as Roy Khan or simply Khan, he was the lead vocalist for the symphonic power metal band Kamelot from 1997 to his departure in 2011.\n\n He co-wrote most of Kamelot's songs with the band's guitarist and founder Thomas Youngblood during his tenure.\n\n Prior to joining Kamelot, Khan was lead singer for the Norwegian progressive metal band Conception from 1991 until 1997 when they disbanded."
+   ]
+  },
+  {
+   "id": "869ab6019837b3ff",
+   "gold": [
+    {
+     "sentence": "Javier Alberto Frana (born 25 December 1966) is a former tennis player from Argentina and current tennis commentator for ESPN Latin America.",
+     "facts": {
+      "0.0": "Javier Alberto Frana was born on 25 December 1966.",
+      "0.1": "Javier Alberto Frana is a former tennis player.",
+      "0.2": "Javier Alberto Frana is from Argentina.",
+      "0.3": "Javier Alberto Frana is a current tennis commentator.",
+      "0.4": "Javier Alberto Frana is a tennis commentator for ESPN Latin America."
+     }
+    },
+    {
+     "sentence": "Thomaz Koch (born May 11, 1945 in Porto Alegre), is a left-handed former tennis player from Brazil, who was a quarter-finalist at the French Open, Wimbledon and the U.S. National Championships.",
+     "facts": {
+      "1.0": "Thomaz Koch was born on May 11, 1945.",
+      "1.1": "Thomaz Koch was born in Porto Alegre.",
+      "1.2": "Thomaz Koch is a left-handed former tennis player.",
+      "1.3": "Thomaz Koch is from Brazil.",
+      "1.4": "Thomaz Koch was a quarter-finalist at the French Open.",
+      "1.5": "Thomaz Koch was a quarter-finalist at Wimbledon.",
+      "1.6": "Thomaz Koch was a quarter-finalist at the U.S. National Championships."
+     }
+    }
+   ],
+   "items": [
+    "1996 Abierto Mexicano de Tenis – Doubles\nJavier Frana and Leonardo Lavalle were the defending champions but lost in the first round to Luis Lobo and Javier Sánchez.",
+    "Graph query row:\nperson: Javier Alberto Frana\noccupation: ['former tennis player', 'current tennis commentator']\nrelationship: MEMBER_OF\nrelated_entity: ESPN Latin America",
+    "1996 Nottingham Open – Singles\nJavier Frana was the defending champion but lost in the first round to Marc-Kevin Goellner.",
+    "Graph query row:\nperson: Thomaz Koch\noccupation: former tennis player\nrelationship: BORN_IN\nrelated_entity: Porto Alegre",
+    "Franz Josef Och\nFranz Josef Och (November 2, 1971) is a German computer scientist.\n\n He is currently working at Grail (an Illumina company) as Head of Data Science.\n\n Prior to this he was Chief Data Scientist at Human Longevity Inc., and earlier worked for Google as a Distinguished Research Scientist and head of machine translation based at Google's Mountain View, California, headquarters south of San Francisco.",
+    "1995 Nottingham Open – Singles\nJavier Frana defeated Todd Woodbridge 7–6, 6–3 in the final to secure the title.",
+    "Thomaz Koch\nThomaz Koch (born May 11, 1945 in Porto Alegre), is a left-handed former tennis player from Brazil, who was a quarter-finalist at the French Open, Wimbledon and the U.S. National Championships.",
+    "Javier Frana\nJavier Alberto Frana (born 25 December 1966) is a former tennis player from Argentina and current tennis commentator for ESPN Latin America.",
+    "1993 ATP Buenos Aires – Doubles\nPablo Albano and Javier Frana were the defending champions, but lost in the quarterfinals this year.",
+    "1996 IPB Czech Indoor – Doubles\nJonas Björkman and Javier Frana was the defending champions but did not compete that year."
+   ]
+  },
+  {
+   "id": "66e80d2fd3d2adc3",
+   "gold": [
+    {
+     "sentence": "The Monastery of the Mother of God at the Spring (full name in Greek: , pr.",
+     "facts": {
+      "0.0": "The full Greek name of the Monastery of the Mother of God at the Spring is given, with the pronunciation abbreviation 'pr.'"
+     }
+    },
+    {
+     "sentence": " \"Moni tis Theotóku tis Pigis\"; Turkish name: \"Balıklı Meryem Ana Rum Manastiri\") or simply Zoödochos Pege (Greek: Ζωοδόχος Πηγή , \"Life-giving Spring\") is an Eastern Orthodox sanctuary in Istanbul, Turkey.",
+     "facts": {
+      "1.0": "The Monastery of the Mother of God at the Spring has the name 'Moni tis Theotóku tis Pigis'.",
+      "1.1": "The Monastery of the Mother of God at the Spring has the Turkish name 'Balıklı Meryem Ana Rum Manastiri'.",
+      "1.2": "The Monastery of the Mother of God at the Spring is simply called Zoödochos Pege.",
+      "1.3": "Zoödochos Pege is Greek for 'Life-giving Spring' (Ζωοδόχος Πηγή).",
+      "1.4": "The Monastery of the Mother of God at the Spring is an Eastern Orthodox sanctuary.",
+      "1.5": "The Monastery of the Mother of God at the Spring is located in Istanbul, Turkey."
+     }
+    },
+    {
+     "sentence": "Hagia Irene or Hagia Eirene (Ancient Greek: Ἁγία Εἰρήνη , Byzantine ] , \"Holy Peace\", Turkish: \"Aya İrini\" ), sometimes known also as Saint Irene, is a Greek Eastern Orthodox church located in the outer courtyard of Topkapı Palace in Istanbul, Turkey.",
+     "facts": {
+      "2.0": "Hagia Irene is also called Hagia Eirene.",
+      "2.1": "Hagia Irene has the Ancient Greek name Ἁγία Εἰρήνη.",
+      "2.2": "A Byzantine form of the name is given for Hagia Irene, but the text of that form is cut off in the source.",
+      "2.3": "Hagia Irene's name means 'Holy Peace'.",
+      "2.4": "Hagia Irene has the Turkish name 'Aya İrini'.",
+      "2.5": "Hagia Irene is sometimes known also as Saint Irene.",
+      "2.6": "Hagia Irene is a Greek Eastern Orthodox church.",
+      "2.7": "Hagia Irene is located in the outer courtyard of Topkapı Palace.",
+      "2.8": "Topkapı Palace is in Istanbul, Turkey."
+     }
+    }
+   ],
+   "items": [
+    "St. Mary's Episcopal Church (Washington, D.C.)\nSt. Mary's Episcopal Church, also known as St. Mary's, Foggy Bottom or St. Mary's Chapel, is a historic Episcopal church located at 730 23rd Street, N.W. in the Foggy Bottom neighborhood of Washington, D.C..\n\n On April 2, 1973, St. Mary's Episcopal Church was added to the National Register of Historic Places.",
+    "St Mary de Lode Church, Gloucester\nSt Mary de Lode Church, Archdeacon Street, Gloucester GL1 2QT, is a Church of England church immediately outside the grounds of Gloucester Cathedral.\n\n It is believed by some to be on the site of the first Christian church in Britain.\n\n The church is in the Diocese of Gloucester and Grade I listed by English Heritage.\n\n It has also been known as \"St. Mary Before the Gate of St. Peter\", \"St. Mary Broad Gate\" and \"St. Mary De Port\".",
+    "Old Church of St George, Hill Street Dublin\nThe Old Church of St. George, commonly called \"Little George's\" in Hill Street (formerly Temple Street Lower) Parish of St. Mary, Dublin was built in 1668 by the Eccles family for their workmen and also as a chapel-of-ease to the nearby St. Mary's Church.\n\n However, that St. Mary's Church was not St. Mary's Church, Dublin as its foundation stone was laid in 1700, and it was not St. Mary's Abbey, Dublin as it was dissolved in 1539.\n\n Therefore St George's church, Hill Street, may have been a Chapel-of-Ease to St. Michan's Church in Church Street.\n\n The main body of the church, with the exception of the tower, was demolished in 1894.",
+    "Graph query row:\nchurch: Monastery of the Mother of God at the Spring\nchurchLabels: ['__KGBuilder__', '__Entity__', 'Place']\nchurchKind: building\nchurchCountry: None\notherChurch: Hagia Irene\notherChurchLabels: ['__KGBuilder__', '__Entity__', 'Place']\notherChurchKind: Greek Eastern Orthodox church\notherChurchCountry: None\nsharedFact: Istanbul\nsharedFactLabels: ['__KGBuilder__', '__Entity__', 'Place']\nsharedFactKind: city\nsharedFactCountry: Turkey\nchurchConnection: LOCATED_IN\nchurchConnectionProperties: {}\notherChurchConnection: LOCATED_IN\notherChurchConnectionProperties: {}",
+    "St. Mary's Church and Rectory (Iowa City, Iowa)\nSt. Mary's Catholic Church, also known as St. Mary of the Visitation Church, is a parish church of the Diocese of Davenport which is located at 228 E. Jefferson St. in Iowa City, Iowa, United States.\n\n The church building and rectory are listed together on the National Register of Historic Places in 1980.\n\n They were both included as contributing properties in the Jefferson Street Historic District in 2004.\n\n The parish's first rectory, which is now a private home, is also listed on the National Register as St. Mary's Rectory.\n\n It is located a few blocks to the east of the present church location at 610 E. Jefferson St.",
+    "St. Mary's Church (Swormville, New York)\nSt. Mary's Catholic Church is a church located on the corner of Transit (New York State Route 78) and Stahley roads in Swormville, New York, in the United States.\n\n Originally known as St. Mary’s Church of the Assumption at Transit, the building was constructed of about 260,000 bricks.\n\n John Nepomucene Neumann (later to be named St. John Neumann) started to visit Swormville, celebrating mass in local homes, barns and fields.\n\n In 1839 he instructed that a small house would be made to hold mass.\n\n Bishop John Timon established the first catholic church (St. Mary's) of the town of Clarence, New York.\n\n In 1861, Father Michael Schinabeak made plans for a church to be constructed.\n\n Construction began in 1862 and finished in fall of 1865.\n\n The official opening of the Church was in January 1866.\n\n In 2010 a new Church was constructed behind the old St. Mary's.",
+    "St. Mary's High School (Manhasset, New York)\nSaint Mary's High School is a private Catholic high school in Manhasset, New York.\n\n St. Mary's parish is part of the Roman Catholic Diocese of Rockville Centre yet the High School serves families of the Roman Catholic Archdiocese of New York, the Diocese of Brooklyn and the Diocese of Rockville Centre.\n\n It is located off Northern Boulevard at 51 Clapham Avenue, Manhasset, near the Miracle Mile.\n\n St. Mary's Men's Varsity Ice Hockey is the all-time leader in State Championships.",
+    "Church of St. Mary of the Spring (Istanbul)\nThe Monastery of the Mother of God at the Spring (full name in Greek: , pr.\n\n \"Moni tis Theotóku tis Pigis\"; Turkish name: \"Balıklı Meryem Ana Rum Manastiri\") or simply Zoödochos Pege (Greek: Ζωοδόχος Πηγή , \"Life-giving Spring\") is an Eastern Orthodox sanctuary in Istanbul, Turkey.\n\n The present church, built in 1835, bears the same dedication as the shrine erected in this place between the end of the fifth and the beginning of the sixth century.\n\n After several renovations, this building was destroyed in the first half of the fifteenth century by the Ottomans.\n\n The complex got its name from a nearby holy spring, reputed to have healing properties.\n\n For almost fifteen hundred years, this sanctuary has been one of the most important pilgrimage sites of Greek Orthodoxy.",
+    "Hagia Irene\nHagia Irene or Hagia Eirene (Ancient Greek: Ἁγία Εἰρήνη , Byzantine ] , \"Holy Peace\", Turkish: \"Aya İrini\" ), sometimes known also as Saint Irene, is a Greek Eastern Orthodox church located in the outer courtyard of Topkapı Palace in Istanbul, Turkey.\n\n It is one of the few churches in Istanbul that has not been converted into a mosque.\n\n The Hagia Irene today operates as a museum and concert hall.",
+    "St. Mary's Church (Ballston Spa, New York)\nSt. Mary's Church is a Catholic parish located in Ballston Spa, New York.\n\n It is located within the Roman Catholic Diocese of Albany.\n\n Father Thomas J. Kelly is the current pastor.\n\n St. Mary's is the fourth oldest parish in the Diocese.\n\n St. Mary's of Ballston Spa is partnered with St. Mary's of Galway, after the pastor at St. Mary's of Galway died and no replacement was available."
+   ]
+  },
+  {
+   "id": "17229c95fe6f0228",
+   "gold": [
+    {
+     "sentence": "Georg Ferdinand Ludwig Philipp Cantor ( ; ] ; March 3 [O.S. February 19] 1845  – January 6, 1918) was a German mathematician.",
+     "facts": {
+      "0.0": "Georg Ferdinand Ludwig Philipp Cantor was born on March 3, 1845.",
+      "0.1": "The birth date of Georg Ferdinand Ludwig Philipp Cantor is also given as February 19, 1845 in the Old Style calendar.",
+      "0.2": "Georg Ferdinand Ludwig Philipp Cantor died on January 6, 1918.",
+      "0.3": "Georg Ferdinand Ludwig Philipp Cantor was a German mathematician."
+     }
+    },
+    {
+     "sentence": "Vladimir Igorevich Arnold (alternative spelling Arnol'd, Russian: Влади́мир И́горевич Арно́льд , 12 June 1937 – 3 June 2010) was a Soviet and Russian mathematician.",
+     "facts": {
+      "1.0": "Vladimir Igorevich Arnold is also spelled Arnol'd.",
+      "1.1": "Vladimir Igorevich Arnold's name in Russian is Влади́мир И́горевич Арно́льд.",
+      "1.2": "Vladimir Igorevich Arnold was born on 12 June 1937.",
+      "1.3": "Vladimir Igorevich Arnold died on 3 June 2010.",
+      "1.4": "Vladimir Igorevich Arnold was a Soviet mathematician.",
+      "1.5": "Vladimir Igorevich Arnold was a Russian mathematician."
+     }
+    }
+   ],
+   "items": [
+    "Cantor–Bernstein theorem\nIn set theory and order theory, the Cantor–Bernstein theorem states that the cardinality of the second type class, the class of countable order types, equals the cardinality of the continuum.\n\n It was used by Felix Hausdorff and named by him after Georg Cantor and Felix Bernstein.\n\n Cantor constructed a family of countable order types with the cardinality of the continuum, and in his 1901 inaugural dissertation Bernstein proved that such a family can have no higher cardinality.",
+    "Georg Cantor's first set theory article\nGeorg Cantor's first set theory article was published in 1874 and contains the first theorems of transfinite set theory, which studies infinite sets and their properties.\n\n One of these theorems is \"Cantor's revolutionary discovery\" that the set of all real numbers is uncountably, rather than countably, infinite.\n\n This theorem is proved using Cantor's first uncountability proof, which differs from the more familiar proof using his diagonal argument.\n\n The title of the article, \"On a Property of the Collection of All Real Algebraic Numbers\" (\"Ueber eine Eigenschaft des Inbegriffes aller reellen algebraischen Zahlen \"), refers to its first theorem: the set of real algebraic numbers is countable.",
+    "Vladimir Arnold\nVladimir Igorevich Arnold (alternative spelling Arnol'd, Russian: Влади́мир И́горевич Арно́льд , 12 June 1937 – 3 June 2010) was a Soviet and Russian mathematician.\n\n While he is best known for the Kolmogorov–Arnold–Moser theorem regarding the stability of integrable systems, he made important contributions in several areas including dynamical systems theory, catastrophe theory, topology, algebraic geometry, symplectic geometry, differential equations, classical mechanics, hydrodynamics and singularity theory, including posing the ADE classification problem, since his first main result—the solution of Hilbert's thirteenth problem in 1957 at the age of 19.",
+    "Buddy Baker (composer)\nNorman Dale \"Buddy\" Baker (January 4, 1918 – July 26, 2002) was an American composer who, together with Paul J. Smith, scored many Disney films, such as \"The Apple Dumpling Gang\" in 1975, \"The Apple Dumpling Gang Rides Again\" in 1979, \"The Shaggy D.A.\" in 1976, \"The Many Adventures of Winnie the Pooh\" in 1977, and \"The Fox and the Hound\" in 1981.",
+    "Anatoly Maltsev\nAnatoly Ivanovich Maltsev (also: Malcev, Mal'cev; Russian: Анато́лий Ива́нович Ма́льцев; 27 November N.S./14 November O.S. 1909, Moscow Governorate – 7 June 1967, Novosibirsk) was born in Misheronsky, near Moscow, and died in Novosibirsk, USSR.\n\n He was a mathematician noted for his work on the decidability of various algebraic groups. Malcev algebras (generalisations of Lie algebras) are named after him.",
+    "Hermann Brunn\nKarl Hermann Brunn (1 August 1862 – 20 September 1939) was a German mathematician, known for his work in convex geometry (see Brunn–Minkowski inequality) and in knot theory.\n\n Brunnian links are named after him, as his 1892 article \"Über Verkettung\" included examples of such links.",
+    "Jónsson–Tarski algebra\nIn mathematics, a Jónsson–Tarski algebra or Cantor algebra is an algebraic structure encoding a bijection from an infinite set \"X\" onto the product \"X\"×\"X\".\n\n They were introduced by .\n\n , named them after Georg Cantor because of Cantor's pairing function and Cantor's theorem that an infinite set \"X\" has the same number of elements as \"X\"×\"X\"; the term \"Cantor algebra\" is also occasionally used to mean the Boolean algebra of all clopen subsets of the Cantor set, or the Boolean algebra of Borel subsets of the reals modulo meager sets (sometimes called the Cohen algebra).",
+    "Georg Cantor\nGeorg Ferdinand Ludwig Philipp Cantor ( ; ] ; March 3 [O.S. February 19] 1845  – January 6, 1918) was a German mathematician.\n\n He invented set theory, which has become a fundamental theory in mathematics.\n\n Cantor established the importance of one-to-one correspondence between the members of two sets, defined infinite and well-ordered sets, and proved that the real numbers are more numerous than the natural numbers.\n\n In fact, Cantor's method of proof of this theorem implies the existence of an \"infinity of infinities\".\n\n He defined the cardinal and ordinal numbers and their arithmetic.\n\n Cantor's work is of great philosophical interest, a fact of which he was well aware.",
+    "Cantor space\nIn mathematics, a Cantor space, named for Georg Cantor, is a topological abstraction of the classical Cantor set: a topological space is a Cantor space if it is homeomorphic to the Cantor set.\n\n In set theory, the topological space 2 is called \"the\" Cantor space.\n\n Note that, commonly, 2 is referred to simply as the Cantor set, while the term Cantor space is reserved for the more general construction of \"D\" for a finite set \"D\" and a set \"S\" which might be finite, countable or possibly uncountable.",
+    "Alfred von Arneth\nAlfred Ritter von Arneth (10 July 181930 July 1897) was an Austrian historian.\n\n His principal scholarly work is a ten-volume biography of the Habsburg Empress Maria Theresa, first published in installments from 1863 to 1879 and still regarded as the standard work on the subject.\n\n Born at Vienna, he was the son of Joseph Calasanza von Arneth (1791–1863), a well-known historian and archaeologist, who wrote a history of the Austrian Empire (Vienna, 1827) and several works on numismatics and brother of Doctor Franz Hektor von Arneth (1818–1907)."
+   ]
+  },
+  {
+   "id": "f345645b501fc911",
+   "gold": [
+    {
+     "sentence": "Kenneth William \"Ken\" Kwapis (born August 17, 1957) is an American film and television director and screenwriter.",
+     "facts": {
+      "0.0": "Kenneth William Kwapis, also known as Ken Kwapis, was born on August 17, 1957.",
+      "0.1": "Ken Kwapis is an American film director.",
+      "0.2": "Ken Kwapis is an American television director.",
+      "0.3": "Ken Kwapis is an American screenwriter."
+     }
+    },
+    {
+     "sentence": " He specialized in the single-camera sitcom in the 1990s and 2000s and has directed feature films such as \"Sesame Street Presents Follow That Bird\" (1985), \"The Sisterhood of the Traveling Pants\" (2005), and \"He's Just Not That into You\" (2009).",
+     "facts": {
+      "1.0": "He specialized in the single-camera sitcom in the 1990s.",
+      "1.1": "He specialized in the single-camera sitcom in the 2000s.",
+      "1.2": "He has directed feature films.",
+      "1.3": "He directed Sesame Street Presents Follow That Bird, released in 1985.",
+      "1.4": "He directed The Sisterhood of the Traveling Pants, released in 2005.",
+      "1.5": "He directed He's Just Not That into You, released in 2009."
+     }
+    },
+    {
+     "sentence": " As a filmmaker, he has directed films such as Valle de Lágrimas (2006) and Peace Grows (2004).",
+     "facts": {
+      "2.0": "As a filmmaker, he has directed Valle de Lágrimas, released in 2006.",
+      "2.1": "As a filmmaker, he has directed Peace Grows, released in 2004."
+     }
+    }
+   ],
+   "items": [
+    "John Dunning (film producer)\nJohn Dunning (April 27, 1927–September 19, 2011) was a pioneering Canadian film producer from Montreal who co-founded the Canadian film production company Cinépix and produced early works by notable Canadian directors David Cronenberg and Ivan Reitman.\n\n Dunning launched Cinépix with partner André Link in Montreal in the early 1960s.\n\n Their biggest commercial success—and the first Canadian box office hit—came with Reitman’s \"Meatballs\" (1979).",
+    "Chris Gorak\nChris Gorak is an American film director who started as an art director and production designer.\n\n He directed the 2006 film \"Right at Your Door\" and the 2011 film \"The Darkest Hour\".\n\n Gorak began working in the film industry in the 1990s as an art director.\n\n In the 2000s, he worked on several films as production designer before becoming a film director.",
+    "Christopher Nolan\nChristopher Edward Nolan ( ; born 30 July 1970) is an English-American film director, producer, and screenwriter.\n\n He is one of the highest-grossing directors in history, and among the most successful and acclaimed filmmakers of the 21st century.",
+    "Kathryn Bigelow\nKathryn Ann Bigelow ( ; born November 27, 1951) is an American director, producer, and writer.\n\n Her films include the vampire Western horror film \"Near Dark\" (1987), the action crime film \"Point Break\" (1991), the science fiction action thriller \"Strange Days\" (1995), the mystery thriller \"The Weight of Water\" (2000), the submarine thriller \"\" (2002), the war film \"The Hurt Locker\" (2008), the action thriller war film \"Zero Dark Thirty\" (2012), the short film \"Last Days\" (2014), and the period crime drama \"Detroit\" (2017).\n\n \"The Hurt Locker\" won the 2009 Academy Award for Best Picture and the BAFTA Award for Best Film, and was nominated for the 2010 Golden Globe Award for Best Drama.\n\n She has also acted as producer and writer for many of her films.",
+    "Peter Jackson\nSir Peter Robert Jackson {'1': \", '2': \", '3': \", '4': \"} (born 31 October 1961) is a New Zealand film director, screenwriter and film producer.\n\n He is best known as the director, writer, and producer of \"The Lord of the Rings\" trilogy (2001–03) and \"The Hobbit\" trilogy (2012–14), both of which are adapted from the novels of the same name by J. R. R. Tolkien.\n\n Other notable films include the critically lauded drama \"Heavenly Creatures\" (1994), the mockumentary \"Forgotten Silver\" (1995), the horror comedy \"The Frighteners\" (1996), the epic monster remake film \"King Kong\" (2005), and the supernatural drama film \"The Lovely Bones\" (2009).\n\n He also produced \"District 9\" (2009), \"The Adventures of Tintin: The Secret of the Unicorn\" (2011), and the documentary \"West of Memphis\" (2012).",
+    "John Bailey (cinematographer)\nJohn Ira Bailey, A.S.C. (born August 10, 1942) is an American cinematographer and film director best known for his collaborations with directors Paul Schrader, Lawrence Kasdan, Michael Apted, and Ken Kwapis.\n\n In August 2017, Bailey was elected President of the Academy of Motion Picture Arts and Sciences for a four-year term.",
+    "The Private Eyes (1976 film)\nThe Private Eyes is a 1976 Hong Kong comedy film written, directed by and starring Michael Hui and co-starring his brothers, Samuel Hui and Ricky Hui, and also starring Shih Kien and Richard Ng in his second film role.\n\n John Woo was the production designer and also co-director though he was uncredited.\n\n Sammo Hung served as the film's action director and Jackie Chan was also a stuntman.\n\n This is the third film of the Hui Brothers and it is the first film that established the Hui Brothers' comedies internationally.",
+    "Ken Kwapis\nKenneth William \"Ken\" Kwapis (born August 17, 1957) is an American film and television director and screenwriter.\n\n He specialized in the single-camera sitcom in the 1990s and 2000s and has directed feature films such as \"Sesame Street Presents Follow That Bird\" (1985), \"The Sisterhood of the Traveling Pants\" (2005), and \"He's Just Not That into You\" (2009).",
+    "Takeshi Fukunaga\nTakeshi Fukunaga is a Japanese filmmaker based in New York.\n\n His first feature film, \"Out of My Hand\" (2015) premiered in the Panorama section at the 65th Berlin International Film Festival and won the Top Prize at the 2015 Los Angeles Film Festival.\n\n The film was later released worldwide through Ava DuVernay’s distribution company, ARRAY.\n\n Takeshi was nominated for the John Cassavetes Award at the 2016 Independent Spirit Awards.\n\n In 2017, he was selected for The Residence by Cannes Film Festival's Cinéfondation to develop his second feature film.",
+    "Jon Paul Puno\nJon Paul Puno (born 1985) is an American filmmaker and classical crossover singer.\n\n As a filmmaker, he has directed films such as Valle de Lágrimas (2006) and Peace Grows (2004).\n\n And also played a small role in the 2006 movie I Will Always Love You (film)."
+   ]
+  }
+ ]
+}

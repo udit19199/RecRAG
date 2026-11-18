@@ -1,0 +1,436 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "7a73d3a04919247f",
+   "gold": [
+    {
+     "sentence": "\"White People Renovating Houses\" is the first episode in the twenty-first season of the American animated television series \"South Park\".",
+     "facts": {
+      "0.0": "'White People Renovating Houses' is the first episode of the twenty-first season of the American animated television series South Park."
+     }
+    },
+    {
+     "sentence": " It is the 278th episode of the series overall, and first aired on Comedy Central in the United States on September 13, 2017.",
+     "facts": {
+      "1.0": "'White People Renovating Houses' is the 278th episode of South Park overall.",
+      "1.1": "'White People Renovating Houses' first aired on Comedy Central in the United States.",
+      "1.2": "'White People Renovating Houses' first aired on September 13, 2017."
+     }
+    },
+    {
+     "sentence": "The twenty-first season of the American animated sitcom \"South Park\" premiered on Comedy Central on September 13, 2017, and will contain ten episodes.",
+     "facts": {
+      "2.0": "The twenty-first season of South Park is an American animated sitcom.",
+      "2.1": "The twenty-first season of South Park premiered on Comedy Central on September 13, 2017.",
+      "2.2": "The twenty-first season of South Park will contain ten episodes."
+     }
+    }
+   ],
+   "items": [
+    "The Squirt and the Whale\n\"The Squirt and the Whale\" is the nineteenth episode of \"The Simpsons\" twenty-first season.\n\n The 460th episode of the series overall, it originally aired on the Fox network in the United States on April 25, 2010.\n\n In the episode, the Simpson family attempt to save a beached whale that washed up onshore, only for it to die.",
+    "The Return of Chef\n\"The Return of Chef\" is the first episode in the tenth season of the American animated television series \"South Park\".\n\n The 140th episode of the series overall, it first aired on Comedy Central in the United States on March 22, 2006.\n\n The episode was the first after the departure of actor Isaac Hayes, who voiced the character Chef.\n\n Hayes, a Scientologist, left after a falling-out with the creators over their treatment of Scientology in the previous season's episode \"Trapped in the Closet\".\n\n Scientology has been accused of using brainwashing techniques, and the episode portrays Chef as having been brainwashed.",
+    "White People Renovating Houses\n\"White People Renovating Houses\" is the first episode in the twenty-first season of the American animated television series \"South Park\".\n\n It is the 278th episode of the series overall, and first aired on Comedy Central in the United States on September 13, 2017.",
+    "Put It Down (South Park)\n\"Put It Down\" is the second episode in the twenty-first season of the American animated television series \"South Park\".\n\n The 279th episode of the series overall, it first aired on Comedy Central in the United States on September 20, 2017.",
+    "Something Wall-Mart This Way Comes\n\"Something Wall-Mart This Way Comes\" is the ninth episode of the eighth season of the American animated television series \"South Park\", and the 120th episode of the series overall.\n\n It originally aired on Comedy Central in the United States on November 3, 2004.\n\n In the episode, a Wall-Mart is built in South Park, and the people start to get addicted to shopping from it, due to its irresistibly attractive bargains, thus leading many businesses in South Park to close down.\n\n The four boys have to fight against Wall-Mart and to find a way to stop it from taking over the entire town.",
+    "Chickenlover\n\"Chickenlover\" is the fourth episode in the second season of the American animated television series \"South Park\".\n\n The 16th episode of the series overall, it originally aired on Comedy Central in the United States on May 27, 1998.\n\n The episode was written by series co-creators Trey Parker and Matt Stone, along with David R. Goodman, and directed by Parker.\n\n In the episode, Officer Barbrady resigns as South Park's only police officer because of his illiteracy.\n\n Anarchy ensues, just as chickens are mysteriously being molested across South Park.\n\n Barbrady enlists the help of the boys to learn to read and discover who is molesting the chickens.\n\n Cartman, meanwhile, masquerades as a police officer.",
+    "South Park (season 21)\nThe twenty-first season of the American animated sitcom \"South Park\" premiered on Comedy Central on September 13, 2017, and will contain ten episodes.",
+    "South Park (season 10)\nThe tenth season of \"South Park\", an American animated television series created by Trey Parker and Matt Stone, began airing on March 22, 2006.\n\n The tenth season concluded after 14 episodes on November 15, 2006.\n\n This is the first season in which Kenny does not die and the last season featuring Isaac Hayes (the voice of Chef) as Hayes quit the show following the backlash behind season nine's \"Trapped in the Closet\" episode.\n\n This season also had a minor controversy when the Halloween episode \"Hell on Earth 2006\" depicted \"The Crocodile Hunter's\" Steve Irwin with a stingray lodged in his chest getting thrown out of Satan's Halloween party for not being in costume.\n\n Episode 2 in this season is the last one with the Braniff Airlines logo.\n\n All the episodes in this season were written and directed by Trey Parker.",
+    "Holiday Special (South Park)\n\"Holiday Special\" is the third episode in the twenty-first season of the American animated television series \"South Park\".\n\n The 280th episode of the series overall, it first aired on Comedy Central in the United States on September 27, 2017.",
+    "Moho House\n\"Moho House\" is the twenty first episode of the twenty-eighth season of the animated television series \"The Simpsons\", and the 617th episode of the series overall.\n\n It aired in the United States on Fox on May 7, 2017."
+   ]
+  },
+  {
+   "id": "a9f05bb4d01de3f6",
+   "gold": [
+    {
+     "sentence": "Icehouse pieces, or Icehouse Pyramids, Treehouse pieces, Treehouse Pyramids and officially Looney Pyramids, are nestable and stackable pyramid-shaped gaming pieces and a game system.",
+     "facts": {
+      "0.0": "Icehouse pieces are also called Icehouse Pyramids.",
+      "0.1": "Treehouse pieces are also called Treehouse Pyramids.",
+      "0.2": "Icehouse pieces, Icehouse Pyramids, Treehouse pieces, and Treehouse Pyramids are officially called Looney Pyramids.",
+      "0.3": "Icehouse pieces, Icehouse Pyramids, Treehouse pieces, Treehouse Pyramids, and Looney Pyramids are nestable pyramid-shaped gaming pieces.",
+      "0.4": "Icehouse pieces, Icehouse Pyramids, Treehouse pieces, Treehouse Pyramids, and Looney Pyramids are stackable pyramid-shaped gaming pieces.",
+      "0.5": "Icehouse pieces, Icehouse Pyramids, Treehouse pieces, Treehouse Pyramids, and Looney Pyramids are a game system."
+     }
+    },
+    {
+     "sentence": " The game system was invented by Andrew Looney and John Cooper in 1987, originally for use in the game of Icehouse.",
+     "facts": {
+      "1.0": "The Looney Pyramids game system was invented by Andrew Looney.",
+      "1.1": "The Looney Pyramids game system was invented by John Cooper.",
+      "1.2": "The Looney Pyramids game system was invented in 1987.",
+      "1.3": "The Looney Pyramids game system was originally for use in the game of Icehouse."
+     }
+    },
+    {
+     "sentence": " In 1998, \"Kill Doctor Lucky\" won the Origins Award for \"Best Abstract Board Game of 1997\".",
+     "facts": {
+      "2.0": "\"Kill Doctor Lucky\" won the Origins Award in 1998.",
+      "2.1": "\"Kill Doctor Lucky\" won the Origins Award for \"Best Abstract Board Game of 1997\"."
+     }
+    }
+   ],
+   "items": [
+    "The Hunter (EP)\nThe Hunter is the first EP (and follow up to the 2010 solo album \"The Boxer\") by Kele Okereke (under the professional name Kele), lead singer and rhythm guitarist of the British rock band Bloc Party.\n\n It was released on 7 November 2011 by Wichita Recordings in the UK, set back a week from the original release date, and 3 days earlier on 4 November 2011 by Wichita Recordings and Liberator Music in Australia.\n\n The first single released from the EP was \"What Did I Do?\n\n\", which features guest vocals from Lucy Taylor.\n\n The music video was released on 13 September 2011, with the song released as a digital single in Japan 10 days later.",
+    "Icehouse (song)\n\"Icehouse\" is a song by the Australian rock band Flowers.\n\n It was released as a single in Europe in 1982 by Chrysalis Records from the band's first album, \"Icehouse\", after the band changed its name to Icehouse.\n\n In the United States, the song peaked at number 28 on the \"Billboard\" Top Tracks chart in 1981.",
+    "Fire and Ice (1983 film)\nFire and Ice is a 1983 American adult animated epic high fantasy adventure film directed by Ralph Bakshi.\n\n The film, a collaboration between Bakshi and Frank Frazetta, was distributed by 20th Century Fox, which also distributed Bakshi's 1977 release, \"Wizards\".\n\n The animated feature, based on characters Bakshi and Frazetta co-created, was made using the process of rotoscoping, in which scenes were shot in live action and then traced onto animation cels.",
+    "Love in Motion (song)\n\"Love in Motion\" is the first new material released by the Australian rock synthpop band Icehouse as a 7\" vinyl single-only in October 1981 on Regular Records for the Australian market.\n\n The band had been known as Flowers until 27 June 1981 after which they changed their name to Icehouse, they had signed to Chrysalis Records and most of Flowers' material was released under the new name into Europe, UK and US markets.\n\n \"Love in Motion\" peaked at #10 on the Australian singles charts.\n\n The B-side, \"Goodnight, Mr. Matthews\" was included on the 1982 album \"Primitive Man\" with \"Love in Motion\" included on the Chrysalis Records US / European versions of the album, the UK 1983 version of the album was re-titled \"Love in Motion\".",
+    "Icehouse pieces\nIcehouse pieces, or Icehouse Pyramids, Treehouse pieces, Treehouse Pyramids and officially Looney Pyramids, are nestable and stackable pyramid-shaped gaming pieces and a game system.\n\n The game system was invented by Andrew Looney and John Cooper in 1987, originally for use in the game of Icehouse.",
+    "We Can Get Together\n\"We Can Get Together\" is the second single released by the Australian rock band Flowers, later known as Icehouse.\n\n It was released in October 1980, on the independent label Regular Records from their first album, \"Icehouse\", two weeks before the album itself was released.\n\n It peaked at #16 on the Australian Kent Music Report Singles Charts.",
+    "Kill Doctor Lucky\nKill Doctor Lucky is a humorous board game designed by James Ernest and released in 1996 by Cheapass Games.\n\n In 1998, \"Kill Doctor Lucky\" won the Origins Award for \"Best Abstract Board Game of 1997\".",
+    "Boxes (Icehouse album)\nBoxes is a soundtrack album by Australian band Icehouse, released by Festival Records / Chrysalis Records in November 1985.\n\n The work was originally conceived by its composers, Iva Davies and Robert Kretschmer, in collaboration with choreographer Graeme Murphy of the Sydney Dance Company for performance as the ballet \"Boxes\".\n\n The first live performance of \"Boxes\" was given by the Sydney Dance Company together with Davies and Kretschmer of Icehouse and guest percussionist Masaki Tanazawa in the Opera Theatre of the Sydney Opera House on 7 November 1985.\n\n \"Boxes\" was released in the US under the name Sydney Dance Company.\n\n The single \"No Promises\" was released as a 12\" in November and a cassingle in December on Regular Records for Australian and New Zealand markets, it contained other tracks from \"Boxes\"; two tracks from \"Boxes\" were later released on their next studio album \"Measure for Measure\" in April 1986.",
+    "Can't Help Myself\n\"Can't Help Myself\" is the first single released by the Australian synthpop/rock band Flowers, later known as Icehouse.\n\n It was released in May 1980 as a 7\" vinyl single on independent label, Regular Records, five months ahead of debut album \"Icehouse\".\n\n A 10\" vinyl single was released in July and had a cover depicting individual images of band members diagonally across the band's name and the single's title (see infobox at right middle).\n\n It peaked at #10 on the Australian Singles Charts.",
+    "No Promises (Icehouse song)\n\"No Promises\" is the first single released by Australian band, Icehouse from the band's 1986 album, \"Measure for Measure\" and was released in November 1985 on Regular Records as 7\" Vinyl Single and 12\" Vinyl Single formats.\n\n It was also released in the UK and Europe by Chrysalis Records again on 7\" and 12\" formats but with different track listings.\n\n It was subsequently released in the US by Chrysalis on 7\" and 12\" formats, again with different track listings.\n\n It peaked at #30 on the Australian singles charts.\n\n A remix version by [love] tatto was released on the Icehouse album \"Meltdown\" in 2002."
+   ]
+  },
+  {
+   "id": "32e67c61de8b1474",
+   "gold": [
+    {
+     "sentence": "Suzanne N.J. 'Susie' Chun Oakland is a Democratic member of the Hawaii Senate, representing the 13th District since 1996.",
+     "facts": {
+      "0.0": "Suzanne N.J. 'Susie' Chun Oakland is a Democratic member of the Hawaii Senate.",
+      "0.1": "Suzanne N.J. 'Susie' Chun Oakland represents the 13th District.",
+      "0.2": "Suzanne N.J. 'Susie' Chun Oakland has represented the 13th District since 1996."
+     }
+    },
+    {
+     "sentence": " Previously she was a member of the Hawaii House of Representatives from 1990-96.",
+     "facts": {
+      "1.0": "Suzanne N.J. 'Susie' Chun Oakland was previously a member of the Hawaii House of Representatives.",
+      "1.1": "Suzanne N.J. 'Susie' Chun Oakland was a member of the Hawaii House of Representatives from 1990 to 1996."
+     }
+    },
+    {
+     "sentence": " The lower chamber of the legislature is the Hawaiʻi House of Representatives.",
+     "facts": {
+      "2.0": "The lower chamber of the Hawaii legislature is the Hawaiʻi House of Representatives."
+     }
+    }
+   ],
+   "items": [
+    "Aloha Dalire\nFabianne Pomaialoha Wong Dalire, known professionally as Aloha Dalire, (June 22, 1950 – August 6, 2014) was an American Hawaiian kumu hula, or master hula teacher.\n\n She won the first Miss Aloha Hula as Aloha Wong, in 1971, the same year that the Merrie Monarch Festival was established.\n\n The Miss Aloha Hula title is hula's top solo wahine (women's) honor.",
+    "Hawaii Senate\nThe Hawaiʻi State Senate is the upper chamber of the Hawaii State Legislature.\n\n The senate consists of twenty-five members elected from an equal number of constituent districts across the islands.\n\n The senate is led by the President of the Senate, elected from the membership of the body, currently Ron Kouchi.\n\n The forerunner of the Hawaii State Senate during the government of the Kingdom of Hawaiʻ i was the House of Nobles originated in 1840.\n\n In 1894 the Constitution of the Republic of Hawaii renamed the upper house the present senate.\n\n Senators are elected to four-year terms and are not subject to term limits.\n\n Like most state legislatures in the United States, the Hawaii State Senate is a part-time body and senators often have active careers outside government.\n\n The lower chamber of the legislature is the Hawaiʻi House of Representatives.\n\n The membership of the Senate also elects additional officers to include the Senate Vice President, Senate Chief Clerk, Assistant Chief Clerk, Senate Sergeant at Arms and Assistant Sergeant at Arms.",
+    "Suzanne Chun Oakland\nSuzanne N.J. 'Susie' Chun Oakland is a Democratic member of the Hawaii Senate, representing the 13th District since 1996.\n\n Previously she was a member of the Hawaii House of Representatives from 1990-96.\n\n She is generally considered to have liberal political views.",
+    "Maryland General Assembly\nThe Maryland General Assembly is the state legislature of the U.S. state of Maryland that convenes within the State House in Annapolis.\n\n It is a bicameral body: the upper chamber, the Maryland State Senate, has 47 representatives and the lower chamber, the Maryland House of Delegates, has 141 representatives.\n\n Members of both houses serve four-year terms.\n\n Each house elects its own officers, judges the qualifications and election of its own members, establishes rules for the conduct of its business, and may punish or expel its own members.",
+    "Charles Hastings Judd\nColonel Charles Hastings Judd (September 8, 1835 – April 18, 1890) was an American businessman, rancher, courtier and politician of the Kingdom of Hawaii.\n\n He served as Chamberlain and Colonel of the military staff of King Kalākaua and traveled with the monarch on his 1881 world tour.",
+    "Ophelia Ford\nOphelia Ford (born July 5, 1950) was a member of the Tennessee Senate.\n\n She is the younger sister of former state senator John Ford and former Congressman Harold Ford, Sr., and the aunt of former Congressman Harold Ford, Jr. She represented Senate District 29, which covers South Memphis and North Memphis.",
+    "Hawaii State Capitol\nThe Hawaii State Capitol is the official statehouse or capitol building of the U.S. state of Hawaii.\n\n From its chambers, the executive and legislative branches perform the duties involved in governing the state.\n\n The Hawaii State Legislature—composed of the twenty-five member Hawaii State Senate led by the President of the Senate and the fifty-one member Hawaii State House of Representatives led by the Speaker of the House—convenes in the building.\n\n Its principal tenants are the Governor of Hawaii and Lieutenant Governor of Hawaii, as well as all legislative offices and the Legislative Reference Bureau.",
+    "Hawaii State Legislature\nThe Hawaii State Legislature is the state legislature of the U.S. state of Hawaii.\n\n The state legislature is a bicameral body consisting of a lower house, the Hawaii State House of Representatives, with 51 representatives, and an upper house, the 25-member Hawaii State Senate.\n\n There are a total of 76 representatives in the legislature, each representing single member districts across the islands.\n\n The powers of the legislature are granted under Article III of the Constitution of Hawaii.",
+    "Alaska Legislature\nThe Alaska Legislature is the state legislature of the U.S. state of Alaska.\n\n It is a bicameral institution, consisting of the lower Alaska House of Representatives, with 40 members, and the upper house Alaska Senate, with 20 members.\n\n There are 40 House Districts (1-40) and 20 Senate Districts (A-T).\n\n With a total of 60 lawmakers, the Alaska Legislature is the smallest bicameral state legislature in the United States and the second-smallest of all state legislatures (only the 49-member unicameral Nebraska Legislature is smaller).\n\n There are no term limits for either chamber.",
+    "Oregon Territorial Legislature\nOregon’s Territorial Legislature was a bicameral legislative body created by the United States Congress in 1848 as the legislative branch of the government of the Oregon Territory.\n\n The upper chamber Council and lower chamber House of Representatives first met in July 1849; they served as the region's legislative body until Oregon became a state in February 1859, when they were replaced by the bicameral Oregon State Legislature."
+   ]
+  },
+  {
+   "id": "963fdf21c4fd9887",
+   "gold": [
+    {
+     "sentence": "Lake Louisvilla is a neighborhood partially located in Louisville, Kentucky.",
+     "facts": {
+      "0.0": "Lake Louisvilla is a neighborhood.",
+      "0.1": "Lake Louisvilla is partially located in Louisville, Kentucky."
+     }
+    },
+    {
+     "sentence": " It is located between Westport Road in Louisville and KY 22 in Oldham County.",
+     "facts": {
+      "1.0": "Lake Louisvilla is located between Westport Road in Louisville.",
+      "1.1": "Lake Louisvilla is located between KY 22 in Oldham County."
+     }
+    },
+    {
+     "sentence": "Oldham County is a county located in the commonwealth of Kentucky.",
+     "facts": {
+      "2.0": "Oldham County is a county.",
+      "2.1": "Oldham County is located in the commonwealth of Kentucky."
+     }
+    },
+    {
+     "sentence": " As of the 2010 census, the population was 60,316.",
+     "facts": {
+      "3.0": "As of the 2010 census, the population of Oldham County was 60,316."
+     }
+    },
+    {
+     "sentence": " Oldham County was a prohibition or completely dry county until January 2005 as the result of a 2004 'moist' vote, permitting sales of alcohol in restaurants that seat at least 100 patrons in which 70%+ of total revenue is derived from sales of food.",
+     "facts": {
+      "4.0": "Oldham County was a prohibition or completely dry county until January 2005.",
+      "4.1": "Oldham County stopped being completely dry in January 2005 as the result of a 2004 'moist' vote.",
+      "4.2": "The 2004 'moist' vote permitted sales of alcohol in restaurants that seat at least 100 patrons.",
+      "4.3": "The 2004 'moist' vote permitted alcohol sales only in restaurants where 70% or more of total revenue is derived from sales of food."
+     }
+    }
+   ],
+   "items": [
+    "Oldham County, Kentucky\nOldham County is a county located in the commonwealth of Kentucky.\n\n As of the 2010 census, the population was 60,316.\n\n Its county seat is La Grange.\n\n The county is named for Colonel William Oldham.\n\n Oldham County was a prohibition or completely dry county until January 2005 as the result of a 2004 'moist' vote, permitting sales of alcohol in restaurants that seat at least 100 patrons in which 70%+ of total revenue is derived from sales of food.\n\n After a vote in late 2015; Oldham county has become a completely wet county.",
+    "Henderson County, Kentucky\nHenderson County is a county located in the U.S. state of Kentucky.\n\n As of the 2010 census, the population was 46,250.\n\n The county seat is Henderson.\n\n The county was formed in 1798 and named for Colonel Richard Henderson who purchased 17,000,000 acre of land from the Cherokee Indians, part of which would eventually make up the county.",
+    "Lawrence, Nassau County, New York\nLawrence is a village in Nassau County, New York in the United States.\n\n As of the 2010 United States Census, the village population was 6,483.",
+    "Lake Worth, Florida\nLake Worth is a city in Palm Beach County, Florida, United States, which takes its name from the body of water along its eastern border, originally called \"Lake Worth\", and now generally known as the Lake Worth Lagoon.\n\n The lake itself was named for General William J. Worth, who led U.S. forces during the last part of the Second Seminole War.\n\n s of 2010 , the population estimated by the U.S. Census Bureau was 34,910.\n\n The city is included in the Miami-Fort Lauderdale-Pompano Beach Metropolitan Area, which is home to approximately 5,563,857 people.",
+    "Lake Louisvilla, Louisville\nLake Louisvilla is a neighborhood partially located in Louisville, Kentucky.\n\n It is located between Westport Road in Louisville and KY 22 in Oldham County.\n\n Lake Louisvilla was developed in the 1920s as a summer resort for people living in the city of Louisville.\n\n The state of Kentucky drained the lake in the late 1980s due to safety concerns regarding the stability of a dam.",
+    "Squire Creek Country Club\nThe Squire Creek Lodge features two floors offering a combined total of seven bedrooms.\n\n The Squire Creek Pool overlooks the golf course and is served by the Waterside Cafe.\n\n The Squire Creek Development offers six residential estates including the Squire Creek Estates, Timberland Estates, Fairway Estates, The Fairways, Fairway Villas, and The Park Homes.\n\n Squire Creek Country Club is the title sponsor of the Louisiana Peach Festival in Ruston.\n\n Squire Creek hosted the 2005 Western Athletic Conference Golf Championships.",
+    "Casey County, Kentucky\nCasey County is a county located in the U.S. Commonwealth of Kentucky.\n\n As of the 2010 census, the population was 15,955.\n\n Its county seat is Liberty.\n\n The county was formed in 1806 from the western part of Lincoln County and named for Colonel William Casey, a pioneer settler who moved his family to Kentucky in 1779.\n\n It is the only Kentucky county entirely in the Knobs region.\n\n Casey County is home to annual Casey County Apple Festival, and is a prohibition or dry county.\n\n It is considered part of the Appalachian region of Kentucky.",
+    "Garrard County, Kentucky\nGarrard County ( ;) is a county located in the U.S. state of Kentucky.\n\n As of the 2010 census, the population was 16,912.\n\n Its county seat is Lancaster.\n\n The county was formed in 1796 and was named for James Garrard, Governor of Kentucky from 1796 to 1804.\n\n It is a prohibition or dry county but Lancaster is wet.\n\n Lancaster was founded as a settlement of log cabins in 1776 at a springs that later provided a constant source of water to early pioneers.\n\n It is one of the oldest cities in the Commonwealth.\n\n Boonesborough, 25 miles to the east, was founded by Daniel Boone in 1775.\n\n Lexington, 28 miles to the north, was founded in 1775.\n\n Stanford, originally known as St. Asaph, is 10 miles south of Lancaster.\n\n It too was founded in 1775.\n\n The oldest permanent settlemenet in Kentucky, Harrodsburg, was founded in 1774 and is 18 miles to the west.\n\n The present day courthouse is one of the oldest courthouses in Kentucky in continuous use.",
+    "Kentucky County, Virginia\nKentucky County (then alternately spelled Kentucke County) was formed by the Commonwealth of Virginia by dividing Fincastle County into three new counties: Kentucky, Washington, and Montgomery, effective December 31, 1776.\n\n During the three and one-half years of Kentucky County's existence, its seat of government was Harrodstown (then also known as Oldtown, later renamed Harrodsburg).",
+    "Wheeling Island\nWheeling Island is the most populated island in the Ohio River.\n\n It lies within the city of Wheeling in Ohio County, West Virginia, in the United States.\n\n The 2000 census showed a resident population of 3,142 people on the island, which has a land area of 1.514 km² (374 acres).\n\n Neville Island, PA is larger (3.4 km²) but has fewer people (1,232)."
+   ]
+  },
+  {
+   "id": "8a9b5bed3689c61d",
+   "gold": [
+    {
+     "sentence": " Levitt & Sons developed the Monmouth Heights section from 1965-1969.",
+     "facts": {
+      "0.0": "Levitt & Sons developed the Monmouth Heights section from 1965 to 1969."
+     }
+    },
+    {
+     "sentence": " The company is most famous for having built the town of Levittown, New York.",
+     "facts": {
+      "1.0": "Levitt & Sons is most famous for having built the town of Levittown, New York."
+     }
+    }
+   ],
+   "items": [
+    "Monmouth Heights at Manalapan, New Jersey\nMonmouth Heights at Manalapan is an unincorporated community located within Manalapan Township in Monmouth County, New Jersey, United States.\n\n Levitt & Sons developed the Monmouth Heights section from 1965-1969.\n\n Residents of the 685 homes in the development are required to join the Monmouth Heights Community Association, which provides pools and other amenities.",
+    "HMS Monmouth\nSeven ships of the Royal Navy have been named HMS \"Monmouth\".\n\n Monmouth was the name of a castle and is now the name of a town in Wales; the name also recognises James Scott, 1st Duke of Monmouth, the \"Black Duke\".\n\n The first HMS \"Monmouth\" was named after the town but whilst the second one was being used the Monmouth Rebellion took place and this caused some concern to the crew.\n\n Since that time, all of \"Monmouth\"s have had their names painted in black and the name and the crest are covered because of the shame of the Duke of Monmouth's execution.\n\n Today the officers of the latest HMS \"Monmouth\" carry black handkerchiefs and the ship is known as the Black Duke.\n\n However the town of Monmouth still gives the freedom of the town to the ship's crew and talks of the \"enduring link\" between the town and the ship.",
+    "Riverton, New York\nRiverton, New York was a planned community built in 1973 in the town of Henrietta, New York, along the Genesee River.\n\n Riverton was seventh of the thirteen communities receiving Federal guarantee assistance from HUD as part of their New Communities Program created by the Urban Growth and New Community Development Act of 1970.\n\n $12 million was earmarked for the community.\n\n Riverton was supposed to encompass a 2335 acre land area bordered on the north by the New York State Thruway, on the west by the Genesee River, on the east by East River Rd., and on the south by the Rush-Henrietta town line, with some development continuing east along Erie Station Rd.\n\n Original plans called for construction to occur for a 16-year period and eventually house over 25,000 people, with the community including an 18-hole golf course, 12 swimming pools, 3 artificial lakes, a marina on the Genesee, and commercial and industrial centers.\n\n However, only a small portion of this was built along Scottsville-West Henrietta Rd.",
+    "Levitt &amp; Sons\nLevitt & Sons was a real estate development company founded by Abraham Levitt and later managed by his son William Levitt.\n\n The company is most famous for having built the town of Levittown, New York.\n\n The company's designs and building practices totally revolutionized the entire Home Building Industry and altered America's landscape with massive suburban communities.",
+    "Riverton, New York\nHowever, only a small portion of this was built along Scottsville-West Henrietta Rd.\n\n Created as part of the community were Riverton Knolls, a moderately priced townhouse subdivision, the Riverton Golf Club, a small 9-hole golf course, and the Riverton Park, which included a playground, baseball diamond, river front benches, walking trail, and a volleyball court.\n\n Also nestled in a bend in the Genesee was a 28 acre forested nature park.",
+    "Oakland Mills, New Jersey\nOakland Mills is an unincorporated community located within Manalapan Township in Monmouth County, New Jersey, United States.\n\n The area is named for Oakland Mill, a mill along the Manalapan Brook operated by the Boo family.\n\n Some areas within the Manalapan Brook valley and surround forestland are preserved while the remainder of the area surrounding Oakland Mills has since been developed into housing developments.",
+    "Monmouth Heights at Marlboro, New Jersey\nMonmouth Heights at Marlboro is an unincorporated community located within Marlboro Township in Monmouth County, New Jersey, United States.\n\n The housing development was created in the 1960s by Levitt & Sons though some protests occurred by long-time residents of Marlboro Township at the time of its creation.\n\n The community is located along New Jersey Route 79 across the highway from Marlboro High School.",
+    "Manhasset Stable\nThe Manhasset Stable was the \"nom de course\" for an American Thoroughbred horse racing stable established in the early 1930s by Joan Whitney Payson, founder of the New York Mets baseball team and a member of the prominent New York City Whitney family who have been major figures in the sport for more than one hundred years.\n\n Joan Payson named the stable for Manhasset, New York where she grew up.",
+    "Taylors Mills, New Jersey\nTaylors Mills is an unincorporated community located within Manalapan Township in Monmouth County, New Jersey, United States.\n\n The main road that runs through the area is named for the community, Taylors Mills Road.",
+    "Hanbys Corner, Delaware\nHanbys Corner is an unincorporated community in New Castle County, Delaware, United States.\n\n It is located at the intersection of Delaware Route 3 (Marsh Road) and Delaware Route 92 (Naamans Road), in Brandywine Hundred.\n\n The area is named for Richard G. Hanby, who first purchased the 125 acre parcel from the descendants of William Penn in 1753.\n\n His descendants included several notable figures in the local political scene including Samuel Winfield Hanby (1817-1892) who was elected as a State Representative in 1874, Jacob Klose Hanby (1839-1932) who was Samuel's son and was elected State Representative in 1904, Robert Johnson Hanby (1834-1898), who served in the 124th PA infantry during the Civil War and was elected State Senator in 1896, and Florence Wood Hanby (1870-1963), who was Robert's daughter-in-law and was the first woman elected to the Delaware House of Representatives in 1924.\n\n In addition Wayne Hanby and James Hanby have both served as Justices of the Peace for New Castle County."
+   ]
+  },
+  {
+   "id": "5ca2fb5811a778ac",
+   "gold": [
+    {
+     "sentence": "Janet Williams is an American soprano who has won international critical acclaim for performances at the Metropolitan Opera, Berlin Staatsoper, Paris Opera, Théâtre des Champs-Élysées, Opera de Lyon, Nice Opera, Théâtre Royal de la Monnaie, Opera Geneva, Frankfurt Opera, Cologne Opera, Leipzig Opera, San Francisco Opera, Washington Opera, Dallas Opera, and Michigan Opera Theatre as well as in concerts throughout Europe, North America, Canada, Israel and Japan with conductors including Vladimir Ashkenazy, Daniel Barenboim, Myung-whun Chung, Philippe Herreweghe, René Jacobs, Marek Janowski, Neeme Järvi, Raymond Leppard, Fabio Luisi, Sir Neville Marriner, Nicholas McGegan, Zubin Mehta, Kent Nagano, John Nelson, Donald Runnicles, Gerard Schwarz and Michael Tilson Thomas.",
+     "facts": {
+      "0.0": "Janet Williams is an American soprano.",
+      "0.1": "Janet Williams has won international critical acclaim for performances at the Metropolitan Opera, Berlin Staatsoper, Paris Opera, Theatre des Champs-Elysees, Opera de Lyon, Nice Opera, Theatre Royal de la Monnaie, Opera Geneva, Frankfurt Opera, Cologne Opera, Leipzig Opera, San Francisco Opera, Washington Opera, Dallas Opera, and Michigan Opera Theatre.",
+      "0.2": "Janet Williams has performed in concerts throughout Europe, North America, Canada, Israel and Japan.",
+      "0.3": "Janet Williams has performed with conductors including Vladimir Ashkenazy, Daniel Barenboim, Myung-whun Chung, Philippe Herreweghe, Rene Jacobs, Marek Janowski, Neeme Jarvi, Raymond Leppard, Fabio Luisi, Sir Neville Marriner, Nicholas McGegan, Zubin Mehta, Kent Nagano, John Nelson, Donald Runnicles, Gerard Schwarz and Michael Tilson Thomas."
+     }
+    },
+    {
+     "sentence": "Vladimir Davidovich Ashkenazy (Russian: Влади́мир Дави́дович Ашкена́зи , \"Vladimir Davidovich Ashkenazi\"; born 6 July 1937) is an internationally recognized solo pianist, chamber music performer, and conductor.",
+     "facts": {
+      "1.0": "Vladimir Davidovich Ashkenazy's Russian name is Vladimir Davidovich Ashkenazi.",
+      "1.1": "Vladimir Davidovich Ashkenazy was born on 6 July 1937.",
+      "1.2": "Vladimir Davidovich Ashkenazy is an internationally recognized solo pianist.",
+      "1.3": "Vladimir Davidovich Ashkenazy is an internationally recognized chamber music performer.",
+      "1.4": "Vladimir Davidovich Ashkenazy is an internationally recognized conductor."
+     }
+    },
+    {
+     "sentence": " His recordings have earned him five Grammy awards plus Iceland's Order of the Falcon.",
+     "facts": {
+      "2.0": "Vladimir Davidovich Ashkenazy's recordings have earned him five Grammy awards.",
+      "2.1": "Vladimir Davidovich Ashkenazy has received Iceland's Order of the Falcon."
+     }
+    }
+   ],
+   "items": [
+    "Elton John\nSir Elton Hercules John, (born Reginald Kenneth Dwight; 25 March 1947), is an English singer, pianist, and composer.\n\n He has worked with lyricist Bernie Taupin as his songwriting partner since 1967; they have collaborated on more than 30 albums to date.\n\n In his five-decade career Elton John has sold more than 300million records, making him one of the best-selling music artists in the world.\n\n He has more than fifty Top 40 hits, including seven consecutive No. 1 US albums, 58 \"Billboard\" Top 40 singles, 27 Top 10, four No. 2 and nine No. 1.\n\n For 31 consecutive years (1970–2000) he had at least one song in the \"Billboard\" Hot 100.\n\n His tribute single, re-penned in dedication to the late Princess Diana, \"Candle in the Wind 1997\" sold over 33million copies worldwide and is the best-selling single in the history of the UK and US singles charts.\n\n He has also composed music, produced records, and has occasionally acted in films.",
+    "Chico Hamilton Trio\nChico Hamilton Trio is an album by drummer and bandleader Chico Hamilton recorded at sessions in 1953, 1954 and 1956 released on the Pacific Jazz label.\n\n The album features Hamilton's first recordings for Pacific Jazz from 1953 and 1954, six tracks originally released on a 10-inch album, along with an additional four recordings from 1956.",
+    "David M. Arden\nDavid M. Arden (born September 6, 1949) is an American concert pianist whose performing and recording career has focused predominantly on contemporary and American classical repertoire, including premiere performances and first recordings of piano works by a number of notable contemporary composers, such as Henryk Górecki, Luciano Berio, Earle Brown, Carson Kievman and David Lang.\n\n The Russian composer Galina Ustvolskaya named Arden's recording of her 12 Preludes for Piano as her preferred recording of that work.",
+    "Fred Hersch\nFred Hersch (born October 21, 1955) is an American jazz pianist and educator.\n\n He has performed solo and led his own groups, including the Pocket Orchestra consisting of piano, trumpet, voice, and percussion.\n\n He was the first person to play weeklong engagements as a solo pianist at the Village Vanguard in New York City.\n\n He has recorded more than 70 of his jazz compositions.\n\n Hersch has been nominated for several Grammy Awards, and, as of December 2014, had been on the Jazz Studies faculty of the New England Conservatory since 1980 (with breaks).",
+    "Vladimir Ashkenazy\nVladimir Davidovich Ashkenazy (Russian: Влади́мир Дави́дович Ашкена́зи , \"Vladimir Davidovich Ashkenazi\"; born 6 July 1937) is an internationally recognized solo pianist, chamber music performer, and conductor.\n\n He is originally from Russia and has held Icelandic citizenship since 1972.\n\n He has lived in Switzerland since 1978.\n\n Ashkenazy has collaborated with well-known orchestras and soloists.\n\n In addition, he has recorded a large storehouse of classical and romantic works.\n\n His recordings have earned him five Grammy awards plus Iceland's Order of the Falcon.",
+    "Robert Glasper\nRobert Glasper (born April 6, 1978, in Houston, Texas) is an American pianist and record producer.\n\n He has been nominated for 6 Grammys, has won 3 Grammy Awards and is currently nominated for an Emmy Award.\n\n His 2012 album \"Black Radio\" won the Grammy Award for Best R&B Album at the 55th Grammy Awards.\n\n His 2014 album \"Black Radio 2\" won the Grammy Award for Best Traditional R&B Performance at the 56th Grammy Awards.\n\n The song \"These Walls\" from Kendrick Lamar's album \"To Pimp A Butterfly\" won Best Rap/Sung Collaboration at the 57th Grammy Awards, on which Glasper plays keys.\n\n The soundtrack for the film \"Miles Ahead\" won Best Soundtrack Compilation at the 58th Grammy Awards, for which Glasper was a producer.\n\n The song \"Letter To The Free\", written with Common, is nominated for an Emmy Award for Best Original Song in the Ava Duvernay documentary film \"13th\" (Netflix) at the 2017 Emmys.",
+    "Janet Williams (soprano)\nJanet Williams is an American soprano who has won international critical acclaim for performances at the Metropolitan Opera, Berlin Staatsoper, Paris Opera, Théâtre des Champs-Élysées, Opera de Lyon, Nice Opera, Théâtre Royal de la Monnaie, Opera Geneva, Frankfurt Opera, Cologne Opera, Leipzig Opera, San Francisco Opera, Washington Opera, Dallas Opera, and Michigan Opera Theatre as well as in concerts throughout Europe, North America, Canada, Israel and Japan with conductors including Vladimir Ashkenazy, Daniel Barenboim, Myung-whun Chung, Philippe Herreweghe, René Jacobs, Marek Janowski, Neeme Järvi, Raymond Leppard, Fabio Luisi, Sir Neville Marriner, Nicholas McGegan, Zubin Mehta, Kent Nagano, John Nelson, Donald Runnicles, Gerard Schwarz and Michael Tilson Thomas.",
+    "The Impeccable Mr. Wilson\nThe Impeccable Mr. Wilson is an album by American jazz pianist Teddy Wilson featuring performances recorded in 1956 for the Norgran label.",
+    "Marvin Hamlisch\nMarvin Frederick Hamlisch (June 2, 1944August 6, 2012) was an American composer and conductor.\n\n Hamlisch was one of only twelve people to win Emmy, Grammy, Oscar and Tony awards.\n\n This collection of all four is referred to as an \"EGOT\".\n\n He is one of only two people (along with Richard Rodgers) to have won those four prizes and a Pulitzer Prize.",
+    "Don Williams discography\nThis is a detailed discography for American country music artist Don Williams."
+   ]
+  },
+  {
+   "id": "3bc7771f7576316a",
+   "gold": [
+    {
+     "sentence": "Yucca is a genus of perennial shrubs and trees in the family Asparagaceae, subfamily Agavoideae.",
+     "facts": {
+      "0.0": "Yucca is a genus of perennial shrubs and trees.",
+      "0.1": "Yucca is in the family Asparagaceae.",
+      "0.2": "Yucca is in the subfamily Agavoideae."
+     }
+    },
+    {
+     "sentence": "Rodgersia is a genus of flowering plants in the Saxifragaceae family.",
+     "facts": {
+      "1.0": "Rodgersia is a genus of flowering plants.",
+      "1.1": "Rodgersia is in the Saxifragaceae family."
+     }
+    },
+    {
+     "sentence": " \"Rodgersia\" are herbaceous perennials originating from east Asia.",
+     "facts": {
+      "2.0": "Rodgersia are herbaceous perennials.",
+      "2.1": "Rodgersia originate from east Asia."
+     }
+    }
+   ],
+   "items": [
+    "Yucca aloifolia\nYucca aloifolia is the type species for the genus Yucca.\n\n Common names include aloe yucca, dagger plant, and Spanish bayonet.\n\n It grows in sandy soils, especially on sand dunes along the coast.\n\n \"Yucca aloifolia\" is native to the Atlantic and Gulf Coasts of the United States from southern Virginia south to Florida and west to the Texas Gulf Coast, to Mexico along the Yucatán coast, and to Bermuda, and parts of the Caribbean.\n\n Normally Yucca aloifolia is grown in USDA zones 8 through 11.\n\n Yucca aloifolia is a popular landscape plant in beach areas along the lower East Coast from Virginia to Florida.",
+    "Yucca × schottii\nYucca\" × \"schottii is a plant species in the genus \"Yucca\", native to southern Arizona, southwestern New Mexico, and the northern parts of Sonora and Chihuahua.\n\n.\n\n The common names are Schott's yucca, hoary yucca, and mountain yucca.\n\n The \"×\" in the name indicates that this is a nothospecies, regarded as being a natural hybrid between two other species.\n\n In this case, \"Yucca\" × \"schottii\" is believed to have originated as a hybrid between \"Y. baccata\" and \"Y. madrensis\".\n\n \"Yucca\" × \"schottii\" is firmly established and does reproduce freely in the wild.",
+    "Rodgersia\nRodgersia is a genus of flowering plants in the Saxifragaceae family.\n\n \"Rodgersia\" are herbaceous perennials originating from east Asia.",
+    "Hesperoyucca whipplei\nHesperoyucca whipplei (syn.\n\n \"Yucca whipplei\" ) (chaparral yucca, our Lord's candle, Spanish bayonet, Quixote yucca or foothill yucca is a species of flowering plant closely related to, and formerly usually included in, the genus \"Yucca\".\n\n It is native to southern California, United States and Baja California, Mexico, where it occurs mainly in chaparral, coastal sage scrub, and oak woodland plant communities at altitudes of 0–2500 m.",
+    "Yucca\nYucca is a genus of perennial shrubs and trees in the family Asparagaceae, subfamily Agavoideae.\n\n Its 40-50 species are notable for their rosettes of evergreen, tough, sword-shaped leaves and large terminal panicles of white or whitish flowers.\n\n They are native to the hot and dry (arid) parts of the Americas and the Caribbean.\n\n Early reports of the species were confused with the cassava (\"Manihot esculenta\").\n\n Consequently, Linnaeus mistakenly derived the generic name from the Taíno word for the latter, \"yuca\" (spelled with a single \"c\").\n\n It is commonly found growing in rural graveyards and when in bloom the cluster of (usually pale) flowers on a thin stalk appear as floating apparitions.",
+    "The entries describe two Mexican semi-desert succulents, Echeveria setosa and E. elegans, and the genus Yucca: 40–50 arid-American and Caribbean shrubs and trees with tough, sword-shaped leaves and flower panicles. Featured yuccas range from coastal U.S. and Caribbean habitats (Y. aloifolia) to California and Baja (Hesperoyucca whipplei), Texas and northeastern Mexico (Y. rupic",
+    "Yucca glauca\nYucca glauca (syn.\n\n \"Yucca angustifolia\") is a species of perennial evergreen plant, adapted to xeric (dry)growth conditions.\n\n It is also known as small soapweed, soapweed yucca, Spanish bayonet, Great Plains yucca and beargrass.",
+    "Yucca brevifolia\nYucca brevifolia is a plant species belonging to the genus \"Yucca\".\n\n It is tree-like in habit, which is reflected in its common names: Joshua tree, yucca palm, tree yucca, and palm tree yucca.",
+    "Yucca rupicola\nYucca rupicola is a plant in the family Asparagaceae, known as the twistleaf yucca, twisted-leaf yucca, Texas yucca or twisted-leaf Spanish-dagger.\n\n The species was described by George Heinrich Adolf Scheele in 1850.\n\n This is a small, acaulescent plant with distinctive twisted leaves.\n\n It is native to the Edwards Plateau region of Texas and also to northeastern Mexico (Coahuila, Nuevo León).",
+    "Yucca gloriosa var. tristis\nYucca gloriosa\" var.\n\n \"tristis (syn.\n\n Yucca recurvifolia, \"Yucca gloriosa\" var.\n\n \"recurvifolia\"), known as curve-leaf yucca, curved-leaved Spanish-dagger or pendulous yucca, is a variety of \"Yucca gloriosa\".\n\n It is often grown as an ornamental plant, but is native to the southeastern United States.\n\n In contrast to \"Y. gloriosa\" var.\n\n \"tristis\", the leaves of \"Y. gloriosa\" var.\n\n \"gloriosa\" are hard stiff, erect and narrower."
+   ]
+  },
+  {
+   "id": "354fe68dcfedde7c",
+   "gold": [
+    {
+     "sentence": "Gasland is a 2010 American documentary written and directed by Josh Fox.",
+     "facts": {
+      "0.0": "Gasland is a documentary.",
+      "0.1": "Gasland is from 2010.",
+      "0.2": "Gasland is American.",
+      "0.3": "Gasland was written by Josh Fox.",
+      "0.4": "Gasland was directed by Josh Fox."
+     }
+    },
+    {
+     "sentence": "To Shoot an Elephant is a 2009 documentary film about the 2008-2009 Gaza War directed by Alberto Arce and Mohammad Rujailahk.",
+     "facts": {
+      "1.0": "To Shoot an Elephant is a 2009 documentary film.",
+      "1.1": "To Shoot an Elephant is about the 2008-2009 Gaza War.",
+      "1.2": "To Shoot an Elephant was directed by Alberto Arce.",
+      "1.3": "To Shoot an Elephant was directed by Mohammad Rujailahk."
+     }
+    }
+   ],
+   "items": [
+    "List of accolades received by The Hurt Locker\n\"The Hurt Locker\" is a 2009 Iraq War film written by Mark Boal and directed by Kathryn Bigelow.\n\n The film premiered on September 4, 2008 at the 65th Venice International Film Festival, where it competed with \"The Wrestler\" for the Golden Lion award.\n\n It was released in Italy by Warner Bros.\n\n Pictures on October 10, 2008.\n\n Following a showing at the 33rd Toronto International Film Festival, Summit Entertainment picked the film up for distribution in the United States.\n\n \"The Hurt Locker\" was released in the United States on June 26, 2009, with a limited release at four theaters in Los Angeles and New York City.\n\n The film grossed over $145,000 on its opening weekend, averaging around $36,000 per theater.\n\n The following weekend, beginning July 3, the film grossed over $131,000 at nine theaters.\n\n It held the highest per-screen average of any movie playing theatrically in the United States for the first two weeks of its release, gradually moving into the top 20 chart.\n\n Summit Entertainment then released \"The Hurt Locker\" to more screens.",
+    "To Shoot an Elephant\nTo Shoot an Elephant is a 2009 documentary film about the 2008-2009 Gaza War directed by Alberto Arce and Mohammad Rujailahk.",
+    "First Kill\nFirst Kill is a 2001 Dutch documentary film that revolves around the psychology of war.\n\n Important turning points in the Vietnam War are used to illustrate the effect of war on body and mind.\n\n The documentary consists of interviews with Michael Herr and several Vietnam veterans.\n\n The depth of the interviews provides insight into the feelings that accompany violence, fear, hate, seduction and pleasure.",
+    "Olympia (1938 film)\nOlympia is a 1938 German documentary film written, directed and produced by Leni Riefenstahl, documenting the 1936 Summer Olympics, held in the Olympic Stadium in Berlin, Germany.\n\n The film was released in two parts: \"Olympia 1.\n\n Teil — Fest der Völker\" (Festival of Nations) and \"Olympia 2.\n\n Teil — Fest der Schönheit\" (Festival of Beauty).\n\n It was the first documentary feature film of the Olympic Games ever made.\n\n Many advanced motion picture techniques, which later became industry standards but which were groundbreaking at the time, were employed —including unusual camera angles, smash cuts, extreme close-ups, placing tracking shot rails within the bleachers, and the like.\n\n The techniques employed are almost universally admired, but the film is controversial due to its political context.\n\n Nevertheless, the film appears on many lists of the greatest films of all time, including \"Time\" magazine's \"All-Time 100 Movies.\"",
+    "Gasland\nGasland is a 2010 American documentary written and directed by Josh Fox.\n\n Nominated for an Academy Award for Best Documentary in 2011, the film focuses on communities in the United States affected by natural gas drilling and, specifically, a method of horizontal drilling into shale formations known as hydraulic fracturing.\n\n The film was a key mobilizer for the anti-fracking movement, and \"brought the term 'hydraulic fracturing' into the nation's living rooms\" according to \"The New York Times\".\n\n The film was nominated for the Academy Award for Best Documentary Feature.",
+    "South of the Border (2009 film)\nSouth of the Border is a 2009 American documentary film directed by Oliver Stone.\n\n The documentary premiered at the 2009 Venice Film Festival.\n\n Writer for the project Tariq Ali calls the documentary \"a political road movie\".\n\n Stone stated that he hopes the film will help people better understand a leader who is wrongly ridiculed \"as a strongman, as a buffoon, as a clown.\"",
+    "Rick Ray\nRick Ray is an American filmmaker best known for his 2006 documentary film 10 Questions for the Dalai Lama which he wrote, filmed and directed.\n\n His documentary \"Lynching Charlie Lynch\", about the trials of former medical marijuana dispensary owner Charles C. Lynch, premiered at the 2011 San Luis Obispo International Film Festival on March 9.",
+    "The Last Lions\nThe Last Lions is a 2011 African nature documentary film by National Geographic Society, videotaped and directed by Dereck and Beverly Joubert.\n\n It was shot at the Okavango Delta in Botswana.\n\n The film premiered at the Palm Springs International Film Festival in January 2011 and was released in select theaters on February 18, 2011.\n\n The film follows in the tradition of other National Geographic big cat films, such as \"India: Land of the Tiger\" and \"Eye of the Leopard\".",
+    "Hunting Elephants\nHunting Elephants (Hebrew: לצוד פילים‎ ‎ , \"Latzud Pilim\", \"lit.\"\n\n To Hunt Elephants) is a 2013 Israeli crime comedy film directed by Reshef Levi.\n\n It stars, among others, Sasson Gabai, Moni Moshonov and Patrick Stewart.\n\n It was released to theaters in Israel on July 4, 2013.",
+    "Baghdad ER\nBaghdad ER is a documentary released by HBO on May 21, 2006.\n\n It shows the Iraq war from the perspective of a military hospital in Baghdad.\n\n It has some relatively disturbing scenes in it (e.g. amputations), therefore the U.S. Army is officially warning that military personnel watching it could experience symptoms of post-traumatic stress disorder (PTSD)."
+   ]
+  },
+  {
+   "id": "dfd1ecaa60a77a9a",
+   "gold": [
+    {
+     "sentence": " They are most well known for being the team that includes former UFC light heavyweight champions 'Sugar' Rashad Evans and Vitor Belfort and former UFC lightweight champion Eddie Alvarez.",
+     "facts": {
+      "0.0": "This team is most well known for including Sugar Rashad Evans.",
+      "0.1": "Sugar Rashad Evans is a former UFC light heavyweight champion.",
+      "0.2": "This team is most well known for including Vitor Belfort.",
+      "0.3": "Vitor Belfort is a former UFC light heavyweight champion.",
+      "0.4": "This team is most well known for including Eddie Alvarez.",
+      "0.5": "Eddie Alvarez is a former UFC lightweight champion."
+     }
+    },
+    {
+     "sentence": "Vitor Vieira Belfort (] ; born April 1, 1977) is a Brazilian mixed martial artist currently competing in the Middleweight division of the Ultimate Fighting Championship.",
+     "facts": {
+      "1.0": "Vitor Vieira Belfort was born on April 1, 1977.",
+      "1.1": "Vitor Vieira Belfort is a Brazilian mixed martial artist.",
+      "1.2": "Vitor Vieira Belfort is currently competing in the Middleweight division of the Ultimate Fighting Championship."
+     }
+    }
+   ],
+   "items": [
+    "Graph query row:\nperson: Vitor Belfort\nconnected_to: Blackzilians\nrelationship: MEMBER_OF\ndivision: None\nstatus: None\nperiod: None",
+    "Sam Alvey\nSamuel Alvey (born May 6, 1986) is an American mixed martial artist currently competing in the Middleweight division of the Ultimate Fighting Championship.\n\n A professional MMA competitor since 2008, Alvey has also formerly competed for Bellator, King of the Cage, the MFC, and was a contestant on .\n\n As of March 2017, Alvey is #14 in the official UFC Middleweight Rankings.",
+    "David Branch (fighter)\nDavid Branch (born September 26, 1981) is an American mixed martial artist currently competing in the Middleweight division of the Ultimate Fighting Championship.\n\n A professional competitor since 2007, he has also formerly competed for the World Series of Fighting, Bellator, Shark Fights, and Titan FC.\n\n Branch was the inaugural World Series of Fighting Light Heavyweight and Middleweight Champion.\n\n He is currently ranked as the #9 Middleweight in the world according to Sherdog.",
+    "Jack Marshman\nJack \"Hammer\" Marshman (born December 19, 1989) is a Welsh mixed martial artist.\n\n He was the Middleweight Cage Warriors Fighting Championship (CWFC) champion and Lonsdale Middleweight Champion.\n\n He currently competes in Middleweight division in the Ultimate Fighting Championship(UFC).",
+    "Luke Zachrich\nLuke Zachrich (born October 1, 1981) is an American mixed martial artist and former professional boxer who formerly competed in the Middleweight division of the Ultimate Fighting Championship A professional mixed martial arts competitor since 2006, Zachrich was a member of Team Forrest on the seventh season of The Ultimate Fighter, and has also fought for King of the Cage, Xtreme Fighting Organization, Bellator, and Ultimate Victory Challenge, the latter of which he was the inaugural Middleweight Champion.",
+    "Kelvin Gastelum\nKelvin Gastelum (born October 24, 1991) is an American professional mixed martial artist who is currently signed to the Ultimate Fighting Championship (UFC).\n\n He was the winner of \"The Ultimate Fighter 17\".\n\n Gastelum is currently competing as a middleweight and is ranked #8 in the UFC official middleweight rankings.",
+    "Blackzilians\nThe Blackzilians is a defunct professional team of fighters in mixed martial arts, boxing, kickboxing, amateur wrestling and catch wrestling located in South Florida.\n\n They are most well known for being the team that includes former UFC light heavyweight champions 'Sugar' Rashad Evans and Vitor Belfort and former UFC lightweight champion Eddie Alvarez.",
+    "Rashad Evans\nRashad Anton Evans (born September 25, 1979) is an American mixed martial artist currently competing in the Middleweight division of the Ultimate Fighting Championship.\n\n A professional competitor since 2003, Evans was the Heavyweight winner of The Ultimate Fighter 2 and is also a former UFC Light Heavyweight Champion.",
+    "Paulo Borrachinha\nPaulo Henrique Costa (born April 21, 1991), better known as Paulo Borrachinha, is a Brazilian mixed martial artist currently competing in the Middleweight division of the Ultimate Fighting Championship.\n\n In the day August 3 of 2017, Borracinha and the Clube Atlético Mineiro officialized institutional partnership.\n\n The agreement did not create a bond between the club and the athlete.\n\n The agreement allows the use of the athletic shield of Atlético in the training uniforms of the fighter, within the possibilities of his contract with the UFC.",
+    "Vitor Belfort\nVitor Vieira Belfort (] ; born April 1, 1977) is a Brazilian mixed martial artist currently competing in the Middleweight division of the Ultimate Fighting Championship.\n\n He is the former UFC Light Heavyweight Champion, UFC 12 Heavyweight Tournament Champion, and the Cage Rage World Light Heavyweight Champion.\n\n As of June 16, 2017, he is the #11 contender in official UFC Middleweight rankings."
+   ]
+  },
+  {
+   "id": "1ad9f861d4c5f02c",
+   "gold": [
+    {
+     "sentence": "\"I'll Keep the Lovelight Burning\" is a popular song written in 1942 by Harry Tobias, Nick Kenny, and Harold Levey, popularized by Patti Page in 1949.",
+     "facts": {
+      "0.0": "\"I'll Keep the Lovelight Burning\" is a popular song.",
+      "0.1": "\"I'll Keep the Lovelight Burning\" was written in 1942.",
+      "0.2": "\"I'll Keep the Lovelight Burning\" was written by Harry Tobias.",
+      "0.3": "\"I'll Keep the Lovelight Burning\" was written by Nick Kenny.",
+      "0.4": "\"I'll Keep the Lovelight Burning\" was written by Harold Levey.",
+      "0.5": "\"I'll Keep the Lovelight Burning\" was popularized by Patti Page.",
+      "0.6": "Patti Page popularized \"I'll Keep the Lovelight Burning\" in 1949."
+     }
+    },
+    {
+     "sentence": "Clara Ann Fowler (November 8, 1927 – January 1, 2013), known by her professional name Patti Page, was an American singer of traditional pop music and country music.",
+     "facts": {
+      "1.0": "Clara Ann Fowler's date range is November 8, 1927 to January 1, 2013.",
+      "1.1": "Clara Ann Fowler is known by the professional name Patti Page.",
+      "1.2": "Patti Page was an American singer.",
+      "1.3": "Patti Page was a singer of traditional pop music.",
+      "1.4": "Patti Page was a singer of country music."
+     }
+    }
+   ],
+   "items": [
+    "Jimmy O'Neill (DJ)\nJames Franklin O'Neill (January 8, 1940 – January 11, 2013) was an American DJ and broadcaster who hosted the ABC television show \"Shindig!\n\n\" from 1964-1966.\n\n O'Neill was owner of Pandora's Box, an influential Sunset Strip music venue in West Hollywood, California that was the center of the 1966 Sunset Strip curfew riots.",
+    "Live in Old Smokey\nLive in Old Smokey is a live CD by English singer/songwriter Linda Lewis recorded at Ronnie Scott's in London and issued in 2006.",
+    "Elton John\nSir Elton Hercules John, (born Reginald Kenneth Dwight; 25 March 1947), is an English singer, pianist, and composer.\n\n He has worked with lyricist Bernie Taupin as his songwriting partner since 1967; they have collaborated on more than 30 albums to date.\n\n In his five-decade career Elton John has sold more than 300million records, making him one of the best-selling music artists in the world.\n\n He has more than fifty Top 40 hits, including seven consecutive No. 1 US albums, 58 \"Billboard\" Top 40 singles, 27 Top 10, four No. 2 and nine No. 1.\n\n For 31 consecutive years (1970–2000) he had at least one song in the \"Billboard\" Hot 100.\n\n His tribute single, re-penned in dedication to the late Princess Diana, \"Candle in the Wind 1997\" sold over 33million copies worldwide and is the best-selling single in the history of the UK and US singles charts.\n\n He has also composed music, produced records, and has occasionally acted in films.",
+    "Willie and the Hand Jive\n\"Willie and the Hand Jive\" is a song written by Johnny Otis and originally released as a single in 1958 by Johnny Otis Show, reaching #9 on the \"Billboard\" Hot 100 chart and #5 on the Billboard R&B chart.\n\n The song has a Bo Diddley beat and was partly inspired by the music sung by a chain gang Otis heard while he was touring.\n\n The lyrics are about a man who became famous for doing a dance with his hands, but the song has been accused of glorifying masturbation.\n\n It has since been covered by numerous artists, including The Strangeloves, Eric Clapton, Cliff Richard, Kim Carnes, George Thorogood and The Grateful Dead.\n\n Clapton's 1974 version was also released as a single and also reached the Billboard Top 40, peaking at #26.\n\n Thorogood's 1985 version reached #25 on the Hot Mainstream Rock Tracks chart.",
+    "Keep This Fire Burning\n\"Keep This Fire Burning\" is a song by Swedish pop singer Robyn, released as the first single from her third album \"Don't Stop the Music\".\n\n It was released in Sweden on September 21, 2002, where it became her highest charting single since 1995's \"Do You Really Want Me (Show Respect)\".\n\n The song was also released as a single in Australia under the name \"By Your Side\", due to the Australian bush fires which were happening at the time.\n\n In 2008, a re-recorded version of the song appeared on the special edition of Robyn's eponymous album.",
+    "George Thorogood\nGeorge Thorogood (born February 24, 1950) is an American musician, singer and songwriter from Wilmington, Delaware.\n\n His \"high-energy boogie-blues\" sound became a staple of 1980s rock radio, with hits like his original songs \"Bad to the Bone\" and \"I Drink Alone\".\n\n He has also helped popularize older songs by American icons, such as \"Move It on Over\", \"Who Do You Love?\n\n\", and \"House Rent Boogie/One Bourbon, One Scotch, One Beer\", which became staples of classic rock radio.",
+    "You Keep Me Hangin' On\n\"You Keep Me Hangin' On\" is a 1966 song written and composed by Holland–Dozier–Holland.\n\n It first became a popular \"Billboard\" Hot 100 number one hit for the American Motown group The Supremes in late 1966.\n\n The rock band Vanilla Fudge covered the song a year later and had a top ten hit with their version.\n\n British pop singer Kim Wilde covered \"You Keep Me Hangin' On\" in 1986, bumping it back to number one on the \"Billboard\" Hot 100 in June 1987.\n\n The single reached number one by two different musical acts in America.\n\n In the first 32 years of the \"Billboard\" Hot 100 rock era, “You Keep Me Hangin' On” became one of only six songs to achieve this feat.\n\n In 1996, country music singer Reba McEntire's version reached number 2 on the US \"Billboard\" Hot Dance Club Play chart.",
+    "I'll Keep the Lovelight Burning\n\"I'll Keep the Lovelight Burning\" is a popular song written in 1942 by Harry Tobias, Nick Kenny, and Harold Levey, popularized by Patti Page in 1949.\n\n Louis Armstrong also covered the song in 1949.",
+    "Patti Page\nClara Ann Fowler (November 8, 1927 – January 1, 2013), known by her professional name Patti Page, was an American singer of traditional pop music and country music.\n\n She was the top-charting female vocalist and best-selling female artist of the 1950s, selling over 100 million records during a six-decade long career.\n\n She was often introduced as \"the Singin' Rage, Miss Patti Page\".\n\n New York WNEW disc-jockey William B. Williams introduced her as \"A Page in my life called Patti\".",
+    "Tony Hiller\nAnthony Toby \"Tony\" Hiller (born 30 July 1927) is a British songwriter.\n\n He began his musical career as a member of the song and dance duo The Hiller Brothers, sharing the stage with his brother Irving.\n\n The Hiller Brothers appeared with many artists of the time including Alma Cogan, Tommy Cooper, Val Doonican, Matt Monro, The Shadows, Bernard Manning, Kathy Kirby, Roger Whittaker, Rip Taylor, Gene Vincent, Lance Percival, Tessie O'Shea, Frank Ifield, Deep River Boys, The Dallas Boys, Clark Brothers, Paul Melba and Ray Burns."
+   ]
+  },
+  {
+   "id": "4cae24c0e0d08997",
+   "gold": [
+    {
+     "sentence": " It has its offices in New Roc City in New Rochelle, New York.",
+     "facts": {
+      "0.0": "An entity has its offices in New Roc City in New Rochelle, New York."
+     }
+    },
+    {
+     "sentence": "New Roc City, also known as New Rochelle Center, is an entertainment, retail and residential complex in the Downtown section of the city of New Rochelle in Westchester County, New York.",
+     "facts": {
+      "1.0": "New Roc City is also known as New Rochelle Center.",
+      "1.1": "New Roc City is an entertainment complex.",
+      "1.2": "New Roc City is a retail complex.",
+      "1.3": "New Roc City is a residential complex.",
+      "1.4": "New Roc City is in the Downtown section of the city of New Rochelle.",
+      "1.5": "New Rochelle is in Westchester County, New York."
+     }
+    }
+   ],
+   "items": [
+    "New Rochelle Harbor (Long Island Sound)\nNew Rochelle Harbor is the name of a harbor located along Long Island Sound in the city of New Rochelle in Westchester County, New York.\n\n The Davenport Neck peninsula off the mainland divides New Rochelle's waterfront into two bays; the westerly referred to as New Rochelle Harbor and the easterly as Echo Bay.",
+    "New Rochelle Walk of Fame\nThe New Rochelle Walk of Fame was installed in 2011 in Ruby Dee Park at Library Green, located in the downtown section of the city of New Rochelle in Westchester County, New York.\n\n The \"walk\" is a tribute to some of New Rochelle's most notable residents from throughout its 325-year history.\n\n It was created and funded by former resident Roderick Kennedy, Jr., working in partnership with the City of New Rochelle and the New Rochelle Business Improvement District.",
+    "Graph query row:\nschool: Japanese Weekend School of New York\nconnected_entity: New Roc City\nconnection_path: ['Japanese Weekend School of New York', 'New Roc City']\nrelationships: ['LOCATED_IN']\nNew_Roc_City_section: Downtown\nsection_kind: section",
+    "Standard Star Building\nThe Standard Star Building is a historic commercial structure located in the Downtown section of New Rochelle, Westchester County, New York.\n\n The building, designed by architect Lawrence J. Barnard, was completed in 1924 and is an architecturally significant example of the Italian Renaissance style in New Rochelle.\n\n Although it has been altered, these changes occurred only on the Le Count Place façade and the interior of the building.\n\n The original Standard Star building exterior remains largely unchanged.\n\n It is further historically significant for its association with a long-published New Rochelle newspaper covering life in New Rochelle.",
+    "New Jersey Japanese School\nThe New Jersey Japanese School (ニュージャージー日本人学校 , \"Nyūjājī Nihonjin Gakkō\" , NJJS) is a Japanese school located in Oakland, New Jersey, United States in the New York City metropolitan area.\n\n It is one of the two Japanese day schools operated by the Japanese Educational Institute of New York (JEI; ニューヨーク日本人教育審議会 \"Nyūyōku Nihonjin Kyōiku Shingi Kai\"), a nonprofit organization which also operates two Japanese weekend school systems in the New York City area.",
+    "888 7th Avenue\n888 7th Avenue is a 628 ft (191m) tall modern-style office skyscraper in Midtown Manhattan which was completed in 1969 and has 46 floors.\n\n Emery Roth & Sons designed the building, which is tied with Central Park Place for the 65th tallest building in New York City.\n\n It currently carries the Vornado Realty Trust corporate headquarters.\n\n Previously known as the Arlen Building, its namesake being the company responsible for its construction, Arlen Realty & Development Corporation.\n\n The Red Eye Grill is located in the building at street level.",
+    "Ware's Department Store\nWare’s Department Store is a historic building located in the city of New Rochelle in Westchester County, New York and is significant for both architectural and commercial reasons.\n\n Ware's was Westchester’s first and, for many years, largest department store, and was prominently located on New Rochelle’s fashionable Main Street.\n\n The store operated from 1881 to the late 1930s, when the property was sold to the retailer Bloomingdale's to serve as their first suburban department store location.\n\n Not only was Ware's a key place in New Rochelle during its 20th-century boom years, its founder and owner, Howard R. Ware was a leading figure in the rapidly growing community as well.\n\n Ware first moved to New Rochelle from Massachusetts at the age of 13 and began to work as a clerk.\n\n In 1881 he became partner in the firm of Ware & Sheffield, which eventually became a stock company in 1913.\n\n renamed He was a director and vice president of the National City Bank of New Rochelle, a founder and first president of the local Y.M.C.A. from 1899 to 1916, and an active member of St.",
+    "New Roc City\nNew Roc City, also known as New Rochelle Center, is an entertainment, retail and residential complex in the Downtown section of the city of New Rochelle in Westchester County, New York.\n\n It is located at 33 LeCount Place, between Main Street North and Main Street South.\n\n The center was built on the site of the former New Rochelle Mall which closed in 1992.",
+    "Japanese Weekend School of New York\nThe Japanese Weekend School of New York (JWSNY; ニューヨーク \"Nyūyōku Hoshū Jugyō Kō\") is a Japanese supplementary school in the New York City metropolitan area.\n\n It has its offices in New Roc City in New Rochelle, New York.\n\n The Japanese Educational Institute of New York (JEI; ニューヨーク日本人教育審議会 \"Nyūyōku Nihonjin Kyōiku Shingi Kai\") manages the school system, and the JWSNY is one of its two weekend school systems.\n\n The JEI also operates two Japanese day schools in the New York area.",
+    "Montefiore New Rochelle Hospital\nMontefiore New Rochelle Hospital (formerly Sound Shore Medical Center) is a community-based, teaching hospital located at 16 Guion Place in the city of New Rochelle, in Westchester County, New York, and affiliated with the Albert Einstein College of Medicine.\n\n The hospital opened in 1892 as New Rochelle Hospital.\n\n On November 6, 2013, Sound Shore was acquired by the Bronx-based Montefiore Medical Center, the University Hospital for the Albert Einstein College of Medicine, was renamed Montefiore New Rochelle Hospital, and became part of the Montefiore Health System."
+   ]
+  }
+ ]
+}

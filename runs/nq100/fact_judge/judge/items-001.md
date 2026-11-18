@@ -1,0 +1,665 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=1d533ffc566c4189 ===
+Gold sentences and facts:
+Sentence 0: Subjects are all taken on the same level - there is no higher or standard grade as in the past . There are three pass levels , each with different pass requirements. First is a pass with Higher certificate , one must obtain 40 % in home language , 40 % in two other subjects and must obtain 30 % in three other subjects . A learner who passed matric with higher certificate level , can not enroll for a University Degree nor a Diploma at an institute of higher learning . The mean mark in any subject is usually about 55 . Only a small proportion of candidates score an ' A ' in any subject ( from as little as 2 % to a maximum of about 10 % in subjects taken by highly select groups . ) A further 8 -- 15 % are likely to gain a ' B ' and about 20 -- 25 % achieve a ' C ' grade . The National Senior Certificate is a group certificate and records an aggregate mark .
+  Fact 0.0: All subjects are taken on the same level.
+  Fact 0.1: There is no higher or standard grade as in the past.
+  Fact 0.2: There are three pass levels, each with different pass requirements.
+  Fact 0.3: The first pass level is a pass with Higher certificate.
+  Fact 0.4: To pass with Higher certificate, one must obtain 40% in home language.
+  Fact 0.5: To pass with Higher certificate, one must obtain 40% in two other subjects.
+  Fact 0.6: To pass with Higher certificate, one must obtain 30% in three other subjects.
+  Fact 0.7: A learner who passed matric with Higher certificate level cannot enroll for a University Degree.
+  Fact 0.8: A learner who passed matric with Higher certificate level cannot enroll for a Diploma at an institute of higher learning.
+  Fact 0.9: The mean mark in any subject is usually about 55.
+  Fact 0.10: Only a small proportion of candidates score an 'A' in any subject.
+  Fact 0.11: The proportion of candidates scoring an 'A' ranges from as little as 2% to a maximum of about 10%.
+  Fact 0.12: The maximum proportion of about 10% scoring an 'A' occurs in subjects taken by highly select groups.
+  Fact 0.13: A further 8 to 15% of candidates are likely to gain a 'B'.
+  Fact 0.14: About 20 to 25% of candidates achieve a 'C' grade.
+  Fact 0.15: The National Senior Certificate is a group certificate.
+  Fact 0.16: The National Senior Certificate records an aggregate mark.
+
+Retrieved items:
+<item 1>
+National Senior Certificate
+The IEB operates on a national level catering primarily for independent schools . Contents ( hide ) 1 Subject requirements 1.1 Group A : Fundamentals (
+Compulsory ) 1.2 Group B : Electives 2 Life Orientation 3 Assessment 4 Level system ( 1 to 7 ) 5 The 5 % language compensation 6 University entrance 7 See also
+8 References 9 External links Subject requirements. ( edit ) Learners study at least 7 subjects - 4 compulsory and at least 3 electives . All subjects are
+written on one grade only and are no longer written on Higher or Standard Grade . Not all schools offer the full range of Elective subjects listed here . Each
+school may offer subjects specific to its academic orientation . For example , Agriculture Schools offer the agriculture - orientated subjects whereas technical
+Schools offer the practical and mechanical - orientated subjects.
+</item 1>
+
+<item 2>
+National Senior Certificate
+V Group a : fundamentals ( compulsory ) ( edit ) Learners must study 4 compulsory subjects , Two official languages of South Africa must be studied : Afrikaans
+English Ndebele Northern Sotho Sesotho Siswati Tsonga Tswana Venda Xhosa Zulu Mathematics or Mathematical Literacy Life Orientation Group B : electives ( edit )
+At least 3 subjects from the following : Accounting Agricultural Management Practices Agricultural Sciences Agricultural Technology Business Studies Civil
+Technology Computer Applications Technology ( previously Computer Studies Standard Grade - Literacy ) Consumer Studies Dance Studies Design Dramatic Arts
+Economics Electrical Technology Engineering Graphics & Design Geography History Hospitality Studies ( previously Home Economics ) Information Technology (
+previously Computer Studies Higher Grade - Programming ) Life Sciences ( previously Biology ) Mechanical Technology Music Physical Science Religion Studies
+Second Additional Language Third Additional Language Tourism Visual Arts Life Orientation ( edit ) Life Orientation ( colloquially abbreviated as `` LO '' ) has
+been introduced into the senior high school phase as an examination subject . Life Orientation is a broad - learning subject that covers non-academic skills
+needed in everyday life .
+</item 2>
+
+<item 3>
+National Senior Certificate
+Life Orientation is a broad - learning subject that covers non-academic skills needed in everyday life . Life Orientation is examined , marked and moderated
+internally and comprises the following sections : World of Work , helping learners find guidance in their choice of career and prepare them for the working
+world Health Education , this sections includes sex education , HIV / Aids talks , pregnancy , etc . Physical Education , involves physical exercise and
+training , it is done on a separate basis but eventually forms part of the Life Orientation mark Religious Education , each South African school decides which
+religion to adhere to ( as according to the South African schools act ) , learners may be exempted from these classes . In practice this means that learners may
+be exempted from , example , the Bible Studies class , but are compelled to attend the Religious Studies class ( which deals with all religions as a study ) .
+Citizenship and Responsibility , this section teaches learners about their rights and their duties as citizens .
+</item 3>
+
+<item 4>
+National Senior Certificate
+To study for a bachelor 's degree at a South African university requires that the applicant has at least an NSC endorsed by Umalusi , with a pass of 30 % in the
+chosen university 's language of learning and teaching , as well as a level 4 or higher in the following list of designated , 19 - credit subjects : Accounting
+Agricultural Sciences Business Studies Dramatic Arts Economics Engineering Graphics and Design Geography History Consumer Studies Information Technology
+Languages ( one language of learning and teaching at a higher education institution and two other recognised language subjects ) Life Sciences Mathematics
+Mathematical Literacy Music Physical Sciences Religion Studies Visual Arts See also ( edit ) High school # South Africa Matriculation in South Africa
+Independent Examinations Board References ( edit ) Jump up ^ SOUTH AFRICAN NATIONAL ASSEMBLY : QUESTION 757 , DATE OF PUBLICATION OF INTERNAL QUESTION PAPER :
+11 / 03 / 2011 ( INTERNAL QUESTION PAPER : 06 / 2011 ) Jump up ^ SOUTH AFRICAN NATIONAL ASSEMBLY : WRITTEN REPLY TO QUESTION 469 , DATE OF PUBLICATION IN
+INTERNAL QUESTION PAPER : 26 - 03 - 2007 ( INTERNAL QUESTION PAPER NO.
+</item 4>
+
+<item 5>
+National Senior Certificate
+Matric results are usually out of 400 marks . Level system ( 1 to 7 ) ( edit ) Level 7 : 80 - 100 % ( Outstanding achievement ) Level 6 : 70 - 79 % (
+Meritorious achievement ) Level 5 : 60 - 69 % ( Substantial achievement ) Level 4 : 50 - 59 % ( Moderate achievement ) Level 3 : 40 - 49 % ( Adequate
+achievement ) Level 2 : 30 - 39 % ( Elementary achievement ) Level 1 : 0 - 29 % ( Not achieved - Fail ) The 5 % language compensation ( edit ) Language
+compensation is described by several sources : `` To the final mark is added the language compensation , which is 5 % of the mark attained by the candidate for
+all non-language subjects , for candidates whose mother tongue is not English or Afrikaans . The 5 % compensates learners for the disadvantage suffered by these
+candidates being instructed in a language that is not their mother tongue . ''
+</item 5>
+
+<item 6>
+National Senior Certificate
+There are three pass levels , each with different pass requirements. First is a pass with Higher certificate , one must obtain 40 % in home language , 40 % in
+two other subjects and must obtain 30 % in three other subjects . A learner who passed matric with higher certificate level , can not enroll for a University
+Degree nor a Diploma at an institute of higher learning . The mean mark in any subject is usually about 55 . Only a small proportion of candidates score an ' A
+' in any subject ( from as little as 2 % to a maximum of about 10 % in subjects taken by highly select groups . ) A further 8 -- 15 % are likely to gain a ' B '
+and about 20 -- 25 % achieve a ' C ' grade . The National Senior Certificate is a group certificate and records an aggregate mark . The Department of Basic
+Education has responsibility for general educational policy to be implemented by nine provincial education departments and private providers such as the
+Independent Examinations Board ( IEB ) . There are nine provincial examination boards and three independent boards , of which the IEB is the biggest . The IEB
+operates on a national level catering primarily for independent schools .
+</item 6>
+
+<item 7>
+National Senior Certificate
+Citizenship and Responsibility , this section teaches learners about their rights and their duties as citizens . Assessment ( edit ) There are three types of
+subjects : General Subjects An end - of - year examination : 75 % of the total mark Portfolio ( Continuous Assessment ) : 25 % of the total mark Practical
+Subjects An end - of - year examination : 50 % of the total mark Portfolio ( Continuous Assessment ) : 25 % of the total mark Practical component : 25 % of the
+total mark Language Subjects An end - of - year examination : 50 % of the total mark Portfolio ( Continuous Assessment ) : 25 % of the total mark Oral
+Examination : 25 % of the total mark Continuous Assessment ( CASS ) includes all the tests , examinations , tasks , activities , orals and projects done
+throughout the year . Matric results are usually out of 400 marks .
+</item 7>
+
+<item 8>
+National Senior Certificate
+For example a learner who obtains a mark of zero ( 0 ) out of 300 will obtain 5 % of zero ( which is zero ) for language compensation ; a learner who obtains 10
+out of 300 will receive 5 % of 10 , which is 0 , 5 marks , for language compensation ; a learner who obtains 100 out of 300 marks will obtain an additional 5
+marks for language compensation . '' This kind of compensation has some impact on pass rates , but does provide significant impact at the upper end of the scale
+, affecting those applying for admission to university . For example , a qualifying learner obtaining 95 % would receive 95 x 1.05 = 99.75 % ( which rounds to
+100 % ) . A learner obtaining 40 % would receive 40 x 1.05 = 42.0 % . University entrance ( edit ) In addition to minimum grades required in each subject ,
+universities either set their own entrance tests and / or use the National Benchmark Tests ( NBT ) .
+</item 8>
+
+<item 9>
+National Senior Certificate
+: 10 - 2007 ) Jump up ^ Politicsweb , 3 January 2011 , `` Umalusi explains matric mark adjustments '' , Dr Sizwe Mabizela , 03 January 2011 Jump up ^
+http://nbt.ac.za/ About NBT Retrieved 21 March 2011 Jump up ^ http://wced.pgwc.gov.za/circulars/circulars08/e33_08.html External links ( edit ) Department of
+Education official site IEB official site Retrieved from `` https://en.wikipedia.org/w/index.php?title=National_Senior_Certificate&oldid=837110357 '' Categories
+: Education in South Africa Secondary school qualifications Hidden categories : Articles needing additional references from April 2010 All articles needing
+additional references Talk Contents About Wikipedia Add links This page was last edited on 18 April 2018 , at 19 : 39 . About Wikipedia
+</item 9>
+
+<item 10>
+National Senior Certificate
+National Senior certificate - wikipedia National Senior certificate Jump to : navigation , search This article needs additional citations for verification .
+Please help improve this article by adding citations to reliable sources . Unsourced material may be challenged and removed . ( April 2010 ) ( Learn how and
+when to remove this template message ) The National Senior Certificate or NSC is a high school diploma and is the main school - leaving certificate in South
+Africa . This certificate is commonly known as the matriculation ( matric ) certificate , as grade 12 is the matriculation grade . The NSC , previously known as
+the Further Education and Training Certificate or FETC , replaced the Senior Certificate with effect from 2008 and was phased in starting with grade 10 in 2006
+. Pupils study at least seven subjects , including two compulsory official South African languages , either Mathematics or Mathematical Literacy , Life
+Orientation and three elective subjects . Subjects are all taken on the same level - there is no higher or standard grade as in the past . There are three pass
+levels , each with different pass requirements.
+</item 10>
+=== END ITEM id=1d533ffc566c4189 ===
+
+=== ITEM id=42a713bf3dfe8b27 ===
+Gold sentences and facts:
+Sentence 0: With the Intertropical Convergence Zone ( ITCZ ) swinging northward over West Africa from the Southern Hemisphere in April , heavy showers coming from pre-monsoonal convective clouds mainly in the form of squall lines also known as the north easterlies formed mainly as a result of the interactions of the two dominant airmasses in Nigeria known as the Maritime tropical ( south westerlies ) and the Continental tropical ( north easterlies ) , begins in central Nigeria while the Monsoons from the south atlantic ocean arrives in central Nigeria in July bringing with it high humidity , heavy cloud cover and heavy rainfall which can be daily occurrence lasting till September when the monsoons gradually begin retreating southward to the southern part of Nigeria. Rainfall totals in central Nigeria varies from 1,100 mm ( 43.3 in ) in the lowlands of the river Niger Benue trough to over 2,000 mm ( 78.7 in ) along the south western escarpment of the Jos Plateau .
+  Fact 0.0: The ITCZ swings northward over West Africa from the Southern Hemisphere in April.
+  Fact 0.1: Heavy showers from pre-monsoonal convective clouds, mainly in the form of squall lines also known as the north easterlies, begin in central Nigeria.
+  Fact 0.2: The heavy showers form mainly from the interaction of two dominant airmasses in Nigeria, the Maritime tropical (south westerlies) and the Continental tropical (north easterlies).
+  Fact 0.3: The monsoons from the South Atlantic Ocean arrive in central Nigeria in July.
+  Fact 0.4: The monsoons bring high humidity, heavy cloud cover, and heavy rainfall to central Nigeria.
+  Fact 0.5: The heavy rainfall can be a daily occurrence, lasting until September.
+  Fact 0.6: The monsoons gradually begin retreating southward to the southern part of Nigeria when September arrives.
+  Fact 0.7: Rainfall totals in central Nigeria vary from 1,100 mm (43.3 in) in the lowlands of the river Niger Benue trough.
+  Fact 0.8: Rainfall totals in central Nigeria exceed 2,000 mm (78.7 in) along the south western escarpment of the Jos Plateau.
+
+Retrieved items:
+<item 1>
+Geography of Nigeria
+Temperatures in the northern part of Nigeria can go as high as 48 ° C ( 118.4 ° F ) in cities like Maiduguri . The high temperatures coupled with an increase in
+insolation causes a region of low pressure to develop over west Africa and Nigeria ( between March to May ) . The Tropical continental airmass ( CT ) from the
+Sahara Desert in the northern part of West Africa , is weakened due to the overheating of the land surface in west Africa and Nigeria at this time . The
+Tropical continental airmass ( CT ) begins to retreat northwards to the Sahara Desert due to massive heating of the land which transfers heat in the form of
+convection into the Tropical continental airmass ( CT ) which constitutes the main layer of air above the land . This transfer of heat in the Tropical
+continental airmass ( CT ) in turn , causes the wind to expand and become lighter as this is the normal behaviour for winds moving above intensely heated
+grounds .
+</item 1>
+
+<item 2>
+Geography of Nigeria
+The northward retreat of the tropical continental airmass ( CT ) , is caused by the sun 's northward shift from the tropic of capricorn in the southern
+hemisphere to the tropic of cancer in the northern hemisphere . This shift begins from February and ends in June , when the sun is fully overhead , at the
+tropic of cancer in the northern hemisphere . During this northward migration of the sun as a result of the earth tilting along its axis , the sun crosses the
+equator ( around March ) , moving over west Africa at this time on its journey to the northern hemisphere . West Africa comes directly under the sun at this
+time . The sun is overhead throughout west Africa and over Nigeria during this period of the sun 's northward migration to the tropic of cancer in the northern
+hemisphere . The whole of West Africa is heated intensely as result of the increased insolation received from the sun being overhead over west Africa .
+Temperatures can climb as high as 35 ° C ( 95.0 ° F ) over west Africa during this time .
+</item 2>
+
+<item 3>
+Geography of Nigeria
+The Tropical continental airmass ( CT ) loses its strength as a major airmass in the region of west Africa and over Nigeria at this time ( around February in
+the southern part of Nigeria to June in northern Nigeria ) and begins to retreat coupled with the rising of air in form of convection within this airmass (
+Tropical continental airmass ( CT ) ) , further weakening the dominance of the wind over west Africa and Nigeria . The Tropical continental airmass ( CT )
+finally retreats from most part of Nigeria , and the West African atmosphere around April to May , leaving an empty atmosphere over Nigeria . The sun 's rays
+enters into the atmosphere of Nigeria more intense than it does during the presence of the Tropical continental airmass , which contained dust ( in form of haze
+) that reduced the intensity of the sun . The overheating of the west Africa land mass and Nigeria in particular creates a low pressure region over west Africa
+and Nigeria . This low pressure zone attracts the Tropical Maritime Airmass ( MT ) from the south Atlantic Ocean since areas of low pressures experiences inward
+blowing winds because winds are moving air blowing outwards from regions of high pressure to regions of low pressure .
+</item 3>
+
+<item 4>
+Geography of Nigeria
+Nigeria 's northern end is south of the 15 degrees line at about 14 degrees . Nigeria 's location in the wetter part of the easterly waves south of the 15
+degree line creates wetter climatic conditions for Nigeria especially during the monsoons . Tropical continental airmass ( edit ) The Tropical Continental
+Airmass ( CT ) locally known as the harmattan , is a wind originating from North Africa which crosses the Sahara Desert into west Africa to Nigeria . This
+airmass dominates Nigeria 's climate during the dry season from December to March . The Tropical continental airmass is dusty and creates a haze within the
+atmosphere of west Africa and Nigeria when it predominates . The haze is as a result of the dust within the airmass limiting visibility and blocking much of the
+sun 's rays from reaching the earth . Effects of the tropical continental airmass ( edit ) The mass has no ability of forming rain due to low humidity within
+the airmass , since it crosses the Sahara Desert , it picks up dust instead of water thereby creating little chances for rainfall .
+</item 4>
+
+<item 5>
+Geography of Nigeria
+This climate , the tropical savanna climate exhibits a well marked rainy season and a dry season with a single peak known as the summer maximum due to its
+distance from the equator . Temperatures are above 18 ° C ( 64 ° F ) throughout the year . Abuja , Nigeria 's capital city found in central Nigeria , has a
+temperature range of 18.45 ° C ( 65.21 ° F ) to 36.9 ° C ( 98.4 ° F ) , and an annual rainfall of about 1,500 mm ( 59.1 in ) with a single rainfall maxima in
+September . The single Dry season experienced in this climate , the tropical savanna climate in central Nigeria beginning from December to march , is hot and
+dry with the Harmattan wind , a continental tropical ( CT ) airmass laden with dust from the Sahara Desert prevailing throughout this period .
+</item 5>
+
+<item 6>
+Geography of Nigeria
+These are the dry season and the rainy season . The dry season is accompanied by a dust laden airmass from the Sahara Desert , locally known as Harmattan , or
+by its main name , The Tropical Continental ( CT ) airmass , while the rainy season is heavily influenced by an airmass originating from the south atlantic
+ocean , locally known as the south west wind , or by its main name , The Tropical Maritime ( MT ) airmass . These two major wind systems in Nigeria are known as
+the trade winds . Trade winds ( edit ) Tropical Maritime airmass ( edit ) The tropical maritime airmass ( MT ) is responsible for Nigeria 's rainy season . This
+wind ( the tropical maritime airmass ) invades the country from February in the southern part of Nigeria while it takes longer for the wind to fully cover the
+whole of the country , reaching the northern part of Nigeria in June . Its invasion is as a result of the northward retreat , of the tropical continental
+airmass ( CT ) known as the harmattan .
+</item 6>
+
+<item 7>
+Geography of Nigeria
+With the Intertropical Convergence Zone ( ITCZ ) swinging northward over West Africa from the Southern Hemisphere in April , heavy showers coming from
+pre-monsoonal convective clouds mainly in the form of squall lines also known as the north easterlies formed mainly as a result of the interactions of the two
+dominant airmasses in Nigeria known as the Maritime tropical ( south westerlies ) and the Continental tropical ( north easterlies ) , begins in central Nigeria
+while the Monsoons from the south atlantic ocean arrives in central Nigeria in July bringing with it high humidity , heavy cloud cover and heavy rainfall which
+can be daily occurrence lasting till September when the monsoons gradually begin retreating southward to the southern part of Nigeria. Rainfall totals in
+central Nigeria varies from 1,100 mm ( 43.3 in ) in the lowlands of the river Niger Benue trough to over 2,000 mm ( 78.7 in ) along the south western escarpment
+of the Jos Plateau . The Sahel climate or tropical dry climate , is the predominant climate type in the northern part of Nigeria . Annual rainfall totals are
+lower compared to the southern and central part of Nigeria .
+</item 7>
+
+<item 8>
+Geography of Nigeria
+The Tropical monsoon climate has a very small temperature range . Then temperature ranges are almost constant throughout the year , for example , Warri town in
+the southern part of Nigeria , records a maximum of 28 ° C ( 82.4 ° F ) for its hottest month while its lowest temperature is 26 ° C ( 78.8 ° F ) in its coldest
+month . The temperature difference of Warri town is not more than 2 ° C ( 5 ° F ) . The southern part of Nigeria experiences heavy and abundant rainfall . These
+storms are usually convectional in nature due to the regions proximity , to the equatorial belt . The annual rainfall received in this region is very high ,
+usually above the 2,000 mm ( 78.7 in ) rainfall totals giving for tropical rainforest climates worldwide . Over 4,000 mm ( 157.5 in ) of rainfall is received in
+the coastal region of Nigeria around the Niger delta area . Bonny town found in the coastal region of the Niger delta area in southern Nigeria receives well
+over 4,000 mm ( 157.5 in ) of rainfall annually .
+</item 8>
+
+<item 9>
+Geography of Nigeria
+In the rainy season it is damp , and the rainfalls are usually abundant . The dry season of Nigeria is a period of little cloud cover in the southern part of
+Nigeria to virtually no cloud cover in the northern part of Nigeria . The sun shines through the atmosphere with little obstructions from the clear skies making
+the dry season in Nigeria a period of warm weather conditions.In the middle of the dry season around December , a dusty wind from the Sahara Desert called the
+harmattan enters Nigeria from the northeastern part of the country blocking sun rays partially from shining and also creating haze in the atmosphere , this
+activities of the wind lowers temperatures considerably saving inhabitants for sometime , from the scorching heat that would have occurred as a result of
+clearer skies during the dry season . But with the withdrawal of this wind around March to April following the onset of the rainy season , temperatures can go
+as high as 44 ° C ( 111.2 ° F ) in some parts of Nigeria . Semi temperate weather conditions prevail on the highlands in central Nigeria above 1,200 metres (
+3,937 ft ) above sea level , namely the Jos Plateau .
+</item 9>
+
+<item 10>
+Geography of Nigeria
+The rest of the southeast receives between 2,000 and 3,000 mm ( 118.1 in ) of rain per year . The southern region of Nigeria experiences a double rainfall
+maxima characterised by two high rainfall peaks , with a short dry season and a longer dry season falling between and after each peaks . The first rainy season
+begins around March and last to the end of July with a peak in June , this rainy season is followed by a short dry break in August known as the August break
+which is a short dry season lasting for two to three weeks in August . This break is broken by the short rainy season starting around early September and
+lasting to Mid October with a peak period at the end of September . The ending of the short rainy season in October is followed by long dry season . This period
+starts from late October and lasts till early March with peak dry conditions between early December and late February . The tropical savanna climate or tropical
+wet and dry climate , is extensive in area and covers most of Western Nigeria to central Nigeria beginning from the Tropical rainforest climate boundary in
+southern Nigeria to the central part of Nigeria , where it exerts enormous influence on the region .
+</item 10>
+=== END ITEM id=42a713bf3dfe8b27 ===
+
+=== ITEM id=c5912e1a7213120c ===
+Gold sentences and facts:
+Sentence 0: Health or vitality is an attribute assigned to entities , such as the player character , enemies and objects within a role - playing or video game , that indicates its state in combat . Health is usually measured in hit points or health points , shortened to HP . When the HP of a player character reaches zero , the player may lose a life or their character might become incapacitated or die . When the HP of an enemy reaches zero , it may be defeated or die and the player is usually rewarded in some way .
+  Fact 0.0: Health or vitality is an attribute assigned to entities in role-playing or video games.
+  Fact 0.1: Entities with health include the player character, enemies, and objects.
+  Fact 0.2: Health indicates an entity's state in combat.
+  Fact 0.3: Health is usually measured in hit points or health points.
+  Fact 0.4: Hit points or health points are shortened to HP.
+  Fact 0.5: When a player character's HP reaches zero, the player may lose a life.
+  Fact 0.6: When a player character's HP reaches zero, the character might become incapacitated or die.
+  Fact 0.7: When an enemy's HP reaches zero, the enemy may be defeated or die.
+  Fact 0.8: When an enemy's HP reaches zero, the player is usually rewarded in some way.
+
+Retrieved items:
+<item 1>
+Health (gaming)
+2 . Archived from the original on 2014 - 12 - 28 . ^ Jump up to : Rogers , Scott ( 2010 - 09 - 29 ) . Level Up ! : The Guide to Great Video Game Design . John
+Wiley & Sons . pp. 276 -- 277 . ISBN 0470970928 . Retrieved 2014 - 11 - 21 . Jump up ^ Allen Rausch ( 2004 - 08 - 19 ) . `` Dave Arneson Interview '' . GameSpy
+. Retrieved 2014 - 01 - 09 . Jump up ^ American Calculations of Battleline Strength , 1941 - 2 , Alan D. Zimm , The Northern Mariner / le marin du nord , XIX
+No. 3 , ( July 2009 ) , 291 - 317 Jump up ^ `` Glass Joe Boxes Clever '' . Computer + Video Games . Future Publishing : 47 . August 1984 . Retrieved 2015 - 01 -
+02 .
+</item 1>
+
+<item 2>
+Health (gaming)
+`` Falcom : Legacy of Ys '' . Games ( 111 ) : 152 -- 159 ( 153 ) . ( cf . Szczepaniak , John ( July 8 , 2011 ) . `` History of Ys interviews '' . Hardcore
+Gaming 101 . Retrieved 6 September 2011. ) Jump up ^ Jon Martindale ( 2012 - 10 - 03 ) . `` Let 's Kill off Health Bars '' . Kit Guru Gaming . Archived from the
+original on May 28 , 2015 . Retrieved 2014 - 11 - 21 . Jump up ^ Novak , Jeannie ( 2013 - 04 - 11 ) . The Official GameSalad Guide to Game Development . Cengage
+Learning . p. 31 . ISBN 1133605648 . Retrieved 2014 - 11 - 21 . Jump up ^ Voorhees , Gerald A. ; Call , Joshua ; Whitlock , Katie ( 2012 - 11 - 02 ) .
+</item 2>
+
+<item 3>
+Health (gaming)
+US Navy used similar concept in their tactical war games already in 1920s and 1930s . In their simulation each ship had Life parameter . The unit of Life of the
+ship was a number of `` equivalent penetrative 14 - inch shell hits '' . The Navy considered ie. that Kongō - class battlecruiser had 12 Life points and Nagato
+- class battleship had 18.8 . A visual power meter representing stamina was used in Nintendo 's 1983 arcade game Punch - Out ! ! and Data East 's 1981 DECO
+Cassette System arcade game Flash Boy . Usage ( edit ) In action video games as well as in role - playing games , health points can usually be depleted by
+attacking the entity . A defense attribute might reduce the amount of HP that is lost when a character is damaged . It is common in role - playing games for a
+character 's maximum health and defense attributes to be gradually raised as the character levels up . In game design , it is deemed important that a player is
+aware of it when they are losing health , each hit playing a clear sound effect .
+</item 3>
+
+<item 4>
+Health (gaming)
+In video games , health can also be displayed graphically , such as with a bar that empties itself when an entity loses health ( a health bar , typically red )
+, icons that are `` chipped away '' , or in more novel ways . Contents ( hide ) 1 History 2 Usage 2.1 Regeneration 3 Display 4 References History ( edit )
+Dungeons & Dragons co-creator Dave Arneson described the origin of hit points in a 2002 interview . When Arneson was adapting the medieval wargame Chainmail (
+1971 ) to a fantasy setting , a process that with Gary Gygax would lead to Dungeons & Dragons , he saw that the emphasis of the gameplay was moving from large
+armies to small groups of heroes and eventually to the identification of one player and one character that is essential to role - playing as it was originally
+conceived . Players became attached to their heroes and did not want them to die every time they lost a die roll . Players were thus given multiple hit points
+which were incrementally decreased as they took damage . Arneson took the concept , along with armor class , from a set of a naval American Civil War game 's
+rules .
+</item 4>
+
+<item 5>
+Health (gaming)
+Author Scott Rogers states that `` health should deplete in an obvious manner , because with every hit , a player is closer to losing their life . '' The
+display of health also helps to dramatize the near - loss of a life . Regeneration ( edit ) Player characters can often restore their health points by consuming
+certain items , such as health potions , food or first - aid kits . Staying a night at an inn fully restores a character 's health in many role - playing video
+games . In general , the different methods of regenerating health has its uses in a particular genre . In action games , this method is very quick , whereas
+role - playing games feature slower paced methods to match the gameplay and realism . Some video games feature automatically regenerating health , where lost
+health points are regained over time . This can be useful to not `` cripple '' the player , making them still able to continue even after losing lots of health
+. However , automatically regenerating health may also cause a player to `` power through '' sections they might otherwise have had to approach cautiously ,
+simply because there are no lasting consequences to losing a large amount of health .
+</item 5>
+
+<item 6>
+Health (gaming)
+wikipedia.org/w/index.php?title=Health_(gaming)&oldid=819315199 '' Categories : Role - playing game terminology Video game terminology Hidden categories : All
+articles lacking reliable references Articles lacking reliable references from September 2016 Talk Contents About Wikipedia Deutsch Español فارسی Français 한국어
+Italiano עברית ქართული Nederlands 日本 語 Norsk Norsk nynorsk Polski Português Русский Suomi Svenska Українська 中文 Edit links This page was last edited on 8
+January 2018 , at 18 : 11 . Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site ,
+you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About
+Wikipedia
+</item 6>
+
+<item 7>
+Health (gaming)
+In these games , the fact that the enemies are being damaged is indicated by their behavior . On the other hand , many fighting games , such as the Street
+Fighter series , use easy - to - read health bars to clearly indicate the progress the player is making with each hit . It is common in first - person shooters
+to indicate low health of the player character by blood spatters or by a distorted red hue on the screen , attempting to mimic the effects of wounding and
+trauma . These visual effects fade as health regenerates . References ( edit ) ^ Jump up to : Moore , Michael ( 2011 - 03 - 23 ) . Basics of Game Design . CRC
+Press . pp. 151 , 194 . ISBN 1439867763 . Retrieved 2014 - 12 - 09 . Jump up ^ Chris Antista . `` The 10 most creative life bars '' . GamesRadar. 2010 - 08 - 17
+. p. 2 . Archived from the original on 2014 - 12 - 28 .
+</item 7>
+
+<item 8>
+Health (gaming)
+Health ( Gaming ) - wikipedia Health ( Gaming ) Jump to : navigation , search A health bar , a possible representation of the health of a character . Health or
+vitality is an attribute assigned to entities , such as the player character , enemies and objects within a role - playing or video game , that indicates its
+state in combat . Health is usually measured in hit points or health points , shortened to HP . When the HP of a player character reaches zero , the player may
+lose a life or their character might become incapacitated or die . When the HP of an enemy reaches zero , it may be defeated or die and the player is usually
+rewarded in some way . Any entity within a game could have a health value , including the player character , non-player characters and objects . Indestructible
+entities have no diminishable health value . Health might be displayed as a numeric value , such as `` 50 / 100 '' . Here , the first number indicates the
+current amount of HP an entity has and the second number indicates the entity 's maximum HP .
+</item 8>
+
+<item 9>
+Health (gaming)
+This mechanic initially appeared in action role - playing games , with early examples including the Hydlide series , the Ys series , and Woody Poco . In Woody
+Poco , the rate at which health recharges is based on food level . In Hydlide and Ys , the player character has to stand still for their health to automatically
+regenerate . This system was popularized in first - person shooters by Halo : Combat Evolved ( 2001 ) , though regenerating health in The Getaway ( 2002 ) has
+been cited to be more comparable to later use of the mechanic in first - person shooters . Display ( edit ) Heart - shaped icons can indicate the amount of
+health a player has left . The way health is displayed on the screen has an effect on the player . Many games only show the health of the player character ,
+while keeping the health of enemies hidden . This is done in the Legend of Zelda series , Minecraft and Monster Hunter series to keep the player 's progress in
+defeating their enemy unclear and therefore exciting . In these games , the fact that the enemies are being damaged is indicated by their behavior .
+</item 9>
+
+<item 10>
+Health (gaming)
+`` Disposable Bodies : Cyborg Regeneration and FPS Mechanics '' . Guns , Grenades , and Grunts : First - Person Shooter Games ( Google eBook ) . Bloomsbury
+Publishing USA . ISBN 1441191445 . Retrieved 2014 - 11 - 21 . ( hide ) Concepts of video games Glossary of video game terms Attributes Health Life Experience
+point Magic Mechanics Item Power - up HUD Warp Fog of war Invisible wall Cutscene Mini-map Paper doll Destructible environment Loading screen Replay value
+Scripted sequence Password Line of sight Critical hit Level Permadeath Status effect Hitbox Movement techniques Rocket jumping Strafe - jumping Strafing
+Trickjump Modes Player type Single - player Multiplayer Cooperative Competitive gameplay eSports Speedrun Gameplay type Capture the flag ( CTF ) Deathmatch Last
+man standing Retrieved from `` https://en.wikipedia.org/w/index.
+</item 10>
+=== END ITEM id=c5912e1a7213120c ===
+
+=== ITEM id=6bc53d60c4091729 ===
+Gold sentences and facts:
+Sentence 0: The Cylinder 's text has traditionally been seen by biblical scholars as corroborative evidence of Cyrus ' policy of the repatriation of the Jewish people following their Babylonian captivity ( an act that the Book of Ezra attributes to Cyrus ) , as the text refers to the restoration of cult sanctuaries and repatriation of deported peoples . This interpretation has been disputed , as the text identifies only Mesopotamian sanctuaries , and makes no mention of Jews , Jerusalem , or Judea . The Cylinder has also been referred to by Mohammad Reza Pahlavi , the last Shah of Iran as the first declaration of universal human rights , a view rejected by some historians as anachronistic and a misunderstanding of the Cylinder 's generic nature as a typical statement made by a new monarch at the beginning of his reign . Neil MacGregor , Director of the British Museum , has stated that the cylinder was `` the first attempt we know about running a society , a state with different nationalities and faiths -- a new kind of statecraft . '' It was adopted as a national symbol of Iran by the Imperial State which put it on display in Tehran in 1971 to commemorate 2,500 year celebration of the Persian Empire . On October 14 , the Mohammad Reza Shah 's sister , Princess Ashraf Pahlavi , presented the United Nations Secretary General U Thant with a replica of the Cylinder . The princess asserted that `` the heritage of Cyrus was the heritage of human understanding , tolerance , courage , compassion and , above all , human liberty '' .
+  Fact 0.0: Biblical scholars have traditionally seen the Cylinder's text as corroborative evidence of Cyrus' policy of repatriating the Jewish people after their Babylonian captivity.
+  Fact 0.1: The Book of Ezra attributes the repatriation of the Jewish people to Cyrus.
+  Fact 0.2: The Cylinder's text refers to the restoration of cult sanctuaries.
+  Fact 0.3: The Cylinder's text refers to the repatriation of deported peoples.
+  Fact 0.4: The interpretation that the Cylinder shows repatriation of Jews has been disputed.
+  Fact 0.5: The Cylinder's text identifies only Mesopotamian sanctuaries.
+  Fact 0.6: The Cylinder's text makes no mention of Jews, Jerusalem, or Judea.
+  Fact 0.7: Mohammad Reza Pahlavi, the last Shah of Iran, referred to the Cylinder as the first declaration of universal human rights.
+  Fact 0.8: Some historians reject the view of the Cylinder as the first declaration of universal human rights as anachronistic.
+  Fact 0.9: Some historians see that view as a misunderstanding of the Cylinder's generic nature as a typical statement made by a new monarch at the beginning of his reign.
+  Fact 0.10: Neil MacGregor, Director of the British Museum, has stated that the cylinder was the first attempt we know of at running a society, a state with different nationalities and faiths.
+  Fact 0.11: Neil MacGregor described the cylinder as a new kind of statecraft.
+  Fact 0.12: The Imperial State of Iran adopted the Cylinder as a national symbol.
+  Fact 0.13: The Imperial State put the Cylinder on display in Tehran in 1971.
+  Fact 0.14: The 1971 display commemorated the 2,500-year celebration of the Persian Empire.
+  Fact 0.15: On October 14, Princess Ashraf Pahlavi, sister of Mohammad Reza Shah, presented UN Secretary General U Thant with a replica of the Cylinder.
+  Fact 0.16: Princess Ashraf Pahlavi asserted that the heritage of Cyrus was the heritage of human understanding, tolerance, courage, compassion, and above all, human liberty.
+
+Retrieved items:
+<item 1>
+Cyrus Cylinder
+Tehran Times . 2010 - 04 - 18 . `` Iran demands $300,000 from British Museum over Cyrus Cylinder delay '' . The Times . London . 2010 - 04 - 20 . Iran is
+demanding that the British Museum pay $300,000 ( £ 197,000 ) after it refused to hand over the Cyrus Cylinder -- a cuneiform tablet regarded as the first
+declaration of human rights . `` Cyrus Cylinder , world 's oldest human rights charter , returns to Iran on loan '' . The Guardian . London . 2010 - 09 - 10 .
+Retrieved 2010 - 09 - 10 . `` موزه بريتانيا : تبادل اشياء تاريخي با موزه ملي ايران براي ما مهم است ( British Museum : Exchange of historical objects with the
+National Museum of Iran is important to us ) '' . IRNA. 2010 - 09 - 10 . Archived from the original on 2011 - 09 - 27 .
+</item 1>
+
+<item 2>
+Cyrus Cylinder
+D. Fairchild Ruggles and Helaine Silverman describe the Shah 's aim as being to legitimise the Iranian nation and his own regime , and to counter the growing
+influence of Islamic fundamentalism by creating an alternative narrative rooted in the ancient Persian past . Writing in the immediate aftermath of the Shah 's
+anniversary commemorations , the British Museum 's C.B.F. Walker comments that the `` essential character of the Cyrus Cylinder ( is not ) a general declaration
+of human rights or religious toleration but simply a building inscription , in the Babylonian and Assyrian tradition , commemorating Cyrus 's restoration of the
+city of Babylon and the worship of Marduk previously neglected by Nabonidus . '' Two professors specialising in the history of the ancient Near East , Bill T.
+Arnold and Piotr Michalowski , comment : `` Generically , it belongs with other foundation deposit inscriptions ; it is not an edict of any kind , nor does it
+provide any unusual human rights declaration as is sometimes claimed . '' Lloyd Llewellyn - Jones of the University of Edinburgh notes that `` there is nothing
+in the text '' that suggests the concept of human rights .
+</item 2>
+
+<item 3>
+Cyrus Cylinder
+It was also its longest - running exhibition inside the country . Ahmadinejad considers the Cyrus Cylinder as the incarnation of human values and a cultural
+heritage for all humanity , and called it the `` First Charter of Human Rights '' . The British Museum had loaned the Cyrus Cylinder to the National Museum of
+Iran for four months . The Cylinder reads that everyone is entitled to freedom of thought and choice and all individuals should pay respect to one another . The
+historical charter also underscores the necessity of fighting oppression , defending the oppressed , respecting human dignity , and recognizing human rights .
+The Cyrus Cylinder bears testimony to the fact that the Iranian nation has always been the flag - bearer of justice , devotion and human values throughout
+history . -- Mahmoud Ahmadinejad during Cyrus Cylinder exhibition at National Museum of Iran , Some Iranian extremists , Islamists and rightist politicians such
+as MP Ali Motahari criticized Ahmadinejad for bringing the Cyrus Cylinder to Iran , although Tehran daily Kayhan , viewed as an ultra-conservative newspaper ,
+had opined that the Islamic Republic should never have returned the Cyrus Cylinder to Britain : There is an important question : Does n't the cylinder belong to
+Iran ?
+</item 3>
+
+<item 4>
+Cyrus Cylinder
+Retrieved 19 June 2010 . ^ Jump up to : Dandamayev , ( 2010 - 01 - 26 ) ^ Jump up to : Kuhrt ( 2007 ) , p. 70 , 72 ^ Jump up to : British Museum : The Cyrus
+Cylinder Jump up ^ Free & Vos ( 1992 ) , p. 204 ^ Jump up to : Becking , p. 8 ^ Jump up to : Janzen , p. 157 ^ Jump up to : Daniel , p. 39 ^ Jump up to :
+Mitchell , p. 83 ^ Jump up to : Arnold , pp. 426 -- 430 Jump up ^ `` The Cyrus Cylinder travels to the US '' . British Museum . 2012 . Retrieved 21 September
+2013 . Jump up ^ Associated Press ( 10 September 2010 ) . `` Cyrus cylinder , world 's oldest human rights charter , returns to Iran on loan '' . The Guardian .
+Retrieved 21 September 2013 . Jump up ^ `` Oldest Known Charter of Human Rights Comes to San Francisco '' . 13 August 2013 .
+</item 4>
+
+<item 5>
+Cyrus Cylinder
+121 ( author unknown ) ; Jump up ^ Damien Kingsbury , Human Rights in Asia : A Reassessment of the Asian Values Debate ( Macmillan , 2008 ) page 21 ; Sabine C.
+Carey , The Politics of Human Rights : The Quest for Dignity ( 2010 ) p 19 ; Paul Gordon Lauren , The Evolution of International Human Rights ( 2003 ) Page 11 ;
+Willem Adriaan Veenhoven , Case Studies on Human Rights and Fundamental Freedoms : A World Survey : Volume 1 ( 1975 ) Page 244 Jump up ^ Decolonisation ,
+Globalisation : Language - in - Education Policy and Practice , Peter W. Martin , p. 99 Jump up ^ Talbott , W.J. Which Rights Should be Universal ? , p. 40 .
+Oxford University Press US , 2005 . ISBN 978 - 0 - 19 - 517347 - 5 Jump up ^ Abtahi , pp. 1 -- 38 . Jump up ^ Cited in Shabani , p.
+</item 5>
+
+<item 6>
+Cyrus Cylinder
+It was organised by the British Museum and the Prince of Wales Museum in partnership with Sir Dorabji Tata Trust , Sir Ratan Tata Trust and Navajbai Ratan Tata
+Trust , all set up by luminaries from the Parsi community , who are descendants of Persian Zoroastrians , who hold Cyrus in great regard , as many scholars
+consider him as a follower of Zoroastrianism . Freedom Sculpture ( edit ) Main article : Freedom Sculpture The freedom sculpture The Freedom Sculpture ( Persian
+: تندیس آزادی ‎ ) is a gold and silver statue located on Santa Monica Boulevard in the Beverly Hills , California . The design of the Freedom Sculpture was
+created by artist and architect Cecil Balmond . It is themed on the Cyrus Cylinder from 2,500 years ago , which is sometimes considered the first declaration of
+human rights . It commemorates the declaration of Cyrus the Great , King of ancient Iran , granting individual and religious freedoms to those within his empire
+. See also ( edit ) Behistun inscriptions Persepolis Fortification Archive Cyrus 's edict Notes ( edit ) ^ Jump up to : `` The Cyrus Cylinder ( British Museum
+database ) '' .
+</item 6>
+
+<item 7>
+Cyrus Cylinder
+Pahlavi Iranian government 's view ( edit ) Cyrus Cylinder at the center of the official emblem of 2,500 year celebration of the Persian Empire at Pahlavi
+Iranian imperial era The Cyrus Cylinder was dubbed the `` first declaration of human rights '' by the pre-Revolution Iranian government , a reading prominently
+advanced by Shah Mohammed Reza Pahlavi , in a 1967 book , The White Revolution of Iran . The Shah identified Cyrus as a key figure in government ideology and
+associated his government with the Achaemenids . He wrote that `` the history of our empire began with the famous declaration of Cyrus , which , for its
+advocacy of humane principles , justice and liberty , must be considered one of the most remarkable documents in the history of mankind . '' The Shah described
+Cyrus as the first ruler in history to give his subjects `` freedom of opinion and other basic rights '' . In 1968 , the Shah opened the first United Nations
+Conference on Human Rights in Tehran by saying that the Cyrus Cylinder was the precursor to the modern Universal Declaration of Human Rights .
+</item 7>
+
+<item 8>
+Cyrus Cylinder
+The Cylinder has also been referred to by Mohammad Reza Pahlavi , the last Shah of Iran as the first declaration of universal human rights , a view rejected by
+some historians as anachronistic and a misunderstanding of the Cylinder 's generic nature as a typical statement made by a new monarch at the beginning of his
+reign . Neil MacGregor , Director of the British Museum , has stated that the cylinder was `` the first attempt we know about running a society , a state with
+different nationalities and faiths -- a new kind of statecraft . '' It was adopted as a national symbol of Iran by the Imperial State which put it on display in
+Tehran in 1971 to commemorate 2,500 year celebration of the Persian Empire . On October 14 , the Mohammad Reza Shah 's sister , Princess Ashraf Pahlavi ,
+presented the United Nations Secretary General U Thant with a replica of the Cylinder . The princess asserted that `` the heritage of Cyrus was the heritage of
+human understanding , tolerance , courage , compassion and , above all , human liberty '' .
+</item 8>
+
+<item 9>
+Cyrus Cylinder
+The German scholar Josef Wiesehöfer summarizes the widely held traditional view by noting that `` Many scholars have read into ( ... ) sentences ( from the text
+of Cylinder ) a confirmation of the Old Testament passages about the steps taken by Cyrus towards the erection of the Jerusalem temple and the repatriation of
+the Judaeans '' and this interpretation was , according to Wiesehöfer , for some scholars a strict belief `` that the instructions to this effect were actually
+provided in these very formulations of the Cyrus Cylinder . '' Human rights ( edit ) The Cylinder gained new prominence in the late 1960s when the last Shah of
+Iran called it `` the world 's first charter of human rights '' . The cylinder was a key symbol of the Shah 's political ideology and is still regarded by some
+commentators as a charter of human rights , despite the disagreement of some historians and scholars .
+</item 9>
+
+<item 10>
+Cyrus Cylinder
+Neil MacGregor comments : Comparison by scholars in the British Museum with other similar texts , however , showed that rulers in ancient Iraq had been making
+comparable declarations upon succeeding to the ( Babylonian ) throne for two millennia before Cyrus ( ... ) it is one of the museum 's tasks to resist the
+narrowing of the object 's meaning and its appropriation to one political agenda . He cautions that while the Cylinder is `` clearly linked with the history of
+Iran , '' it is `` in no real sense an Iranian document : it is part of a much larger history of the ancient Near East , of Mesopotamian kingship , and of the
+Jewish diaspora . '' Some historians , as well as writers on human rights , have supported the interpretation of the Cyrus Cylinder as a human rights charter .
+W.J. Talbott , an American philosopher , believes the concept of human rights is a 20th - century concept but describes Cyrus as `` perhaps the earliest known
+advocate of religious tolerance '' and suggests that `` ideas that led to the development of human rights are not limited to one cultural tradition . ''
+</item 10>
+=== END ITEM id=6bc53d60c4091729 ===
+
+=== ITEM id=5553b56e5128d6e7 ===
+Gold sentences and facts:
+Sentence 0: India and Pakistan acquired independence in 1947 , but Governors - General continued to be appointed over each nation until republican constitutions were written . Louis Mountbatten , 1st Earl Mountbatten of Burma remained Governor - General of India for some time after independence , but the two nations were otherwise headed by native Governors - General . India became a secular republic in 1950 ; Pakistan became an Islamic one in 1956 .
+  Fact 0.0: India and Pakistan acquired independence in 1947.
+  Fact 0.1: Governors-General continued to be appointed over India and Pakistan until republican constitutions were written.
+  Fact 0.2: Louis Mountbatten, 1st Earl Mountbatten of Burma, remained Governor-General of India for some time after independence.
+  Fact 0.3: India and Pakistan were otherwise headed by native Governors-General.
+  Fact 0.4: India became a secular republic in 1950.
+  Fact 0.5: Pakistan became an Islamic republic in 1956.
+
+Retrieved items:
+<item 1>
+Governor-General of India
+Lord Mountbatten addressing the Chamber of Princes as Crown Representative in the 1940s The Governor - General originally had power only over the Presidency of
+Fort William in Bengal . The Regulating Act , however , granted them additional powers relating to foreign affairs and defence . The other Presidencies of the
+East India Company ( Madras , Bombay and Bencoolen ) were not allowed to declare war on or make peace with an Indian prince without receiving the prior approval
+of the Governor - General and Council of Fort William . The powers of the Governor - General , in respect of foreign affairs , were increased by the India Act
+1784 . The Act provided that the other Governors under the East India Company could not declare war , make peace or conclude a treaty with an Indian prince
+unless expressly directed to do so by the Governor - General or by the Company 's Court of Directors . While the Governor - General thus became the controller
+of foreign policy in India , he was not the explicit head of British India . That status came only with the Charter Act 1833 , which granted him ``
+superintendence , direction and control of the whole civil and military Government '' of all of British India .
+</item 1>
+
+<item 2>
+Governor-General of India
+The title of viceroy was abandoned when British India split into the two independent dominions of India and Pakistan , but the office of governor - general
+continued to exist in each country separately -- until they adopted republican constitutions in 1950 and 1956 , respectively . Until 1858 , the governor -
+general was selected by the Court of Directors of the East India Company , to whom he was responsible . Thereafter , he was appointed by the sovereign on the
+advice of the British government ; the Secretary of State for India , a member of the UK Cabinet , was responsible for instructing him on the exercise of his
+powers . After 1947 , the sovereign continued to appoint the governor - general , but did so on the advice of the Indian government . Governors - General served
+at the pleasure of the sovereign , though the practice was to have them serve five - year terms . Governors - General could have their commission rescinded ;
+and if one was removed , or left , a provisional governor - general was sometimes appointed until a new holder of the office could be chosen .
+</item 2>
+
+<item 3>
+Governor-General of India
+The Chamber of Princes was an institution established in 1920 by a Royal Proclamation of King - Emperor George V to provide a forum in which the princely rulers
+could voice their needs and aspirations to the government . The chamber usually met only once a year , with the Viceroy presiding , but it appointed a Standing
+Committee , which met more often . Upon independence in August 1947 , the title of Viceroy was abolished . The representative of the British Sovereign became
+known once again as the Governor - General . C. Rajagopalachari became the only Indian Governor - General . However , once India acquired independence , the
+Governor - General 's role became almost entirely ceremonial , with power being exercised on a day - to - day basis by the Indian cabinet . After the nation
+became a republic in 1950 , the President of India continued to perform the same functions .
+</item 3>
+
+<item 4>
+Governor-General of India
+Most Governors - General and Viceroys were peers . Frequently , a Viceroy who was already a peer would be granted a peerage of higher rank , as with the
+granting of a marquessate to Lord Reading and an earldom and later a marquessate to Freeman Freeman - Thomas . Of those Viceroys who were not peers , Sir John
+Shore was a baronet , and Lord William Bentinck was entitled to the courtesy title ' Lord ' because he was the son of a Duke . Only the first and last Governors
+- General -- Warren Hastings and Chakravarti Rajagopalachari -- as well as some provisional Governors - General , had no honorific titles at all . Flag ( edit )
+Flag of the Governor General of India ( 1947 -- 50 ) From around 1885 , the Viceroy of India was allowed to fly a Union Flag augmented in the centre with the '
+Star of India ' surmounted by a Crown . This flag was not the Viceroy 's personal flag ; it was also used by Governors , Lieutenant Governors , Chief
+Commissioners and other British officers in India .
+</item 4>
+
+<item 5>
+Governor-General of India
+The first Governor - General of British India was Warren Hastings , and the first Governor - General of independent India was Louis Mountbatten . Contents (
+hide ) 1 History 2 Functions 3 Council 4 Style and title 5 Flag 6 Residence 7 Insignia 8 See also 9 References 10 Further reading History ( edit ) Warren
+Hastings , the first Governor - General of Fort William from 1773 to 1785 . Many parts of the Indian subcontinent were governed by the East India Company ,
+which nominally acted as the agent of the Mughal Emperor . In 1773 , motivated by corruption in the Company , the British government assumed partial control
+over the governance of India with the passage of the Regulating Act of 1773 . A Governor - General and Supreme Council of Bengal were appointed to rule over the
+Presidency of Fort William in Bengal . The first Governor - General and Council were named in the Act . The Charter Act 1833 replaced the Governor - General and
+Council of Fort William with the Governor - General and Council of India .
+</item 5>
+
+<item 6>
+Governor-General of India
+The officer had direct control only over Fort William , but supervised other British East India Company officials in India . Complete authority over all of
+British India was granted in 1833 , and the official came to be known as the `` Governor - General of India '' . In 1858 , the territories of the East India
+Company came under the direct control of the British government ; see British Raj . The governor - general ( now also the viceroy ) headed the central
+government of India , which administered the provinces of British India , including the Punjab , Bengal , Bombay , Madras , the United Provinces , and others .
+However , much of India was not ruled directly by the British government ; outside the provinces of British India , there were hundreds of nominally sovereign
+princely states or `` native states '' , whose relationship was not with the British government , but directly with the monarch . To reflect the governor -
+general 's role as the representative of the monarch to the feudal rulers of the princely states , from 1858 the term Viceroy and Governor - General of India (
+known in short as the Viceroy of India ) was applied to him .
+</item 6>
+
+<item 7>
+Governor-General of India
+Governor - General of India - Wikipedia Governor - General of India Jump to : navigation , search This article is about the position of Governor - General of
+India . For individual Governor - Generals , see List of governors - general of India . Viceroy and Governor - General of India Standard of the Governor -
+General Louis Mountbatten , the last Viceroy of India & the first Governor - General during the dominion period Style His Excellency Residence Viceroy 's House
+Appointer East India Company ( to 1858 ) Monarch of India ( from 1858 ) Formation 20 October 1774 First holder Warren Hastings Final holder Chakravarthi
+Rajagopalachari Abolished 26 January 1950 The Governor - General of India ( or , from 1858 to 1947 , officially the Viceroy and Governor - General of India ,
+commonly shortened to Viceroy of India ) was originally the head of the British administration in India and , later , after Indian independence in 1947 , the
+representative of the Indian head of state . The office was created in 1773 , with the title of Governor - General of the Presidency of Fort William .
+</item 7>
+
+<item 8>
+Governor-General of India
+The power to elect the Governor - General was retained by the Court of Directors , but the choice became subject to the Sovereign 's approval . After the Indian
+Rebellion of 1857 , the East India Company 's territories in India were put under the direct control of the Sovereign . The Government of India Act 1858 vested
+the power to appoint the Governor - General in the Sovereign . The Governor - General , in turn , had the power to appoint all lieutenant governors in India ,
+subject to the Sovereign 's approval . India and Pakistan acquired independence in 1947 , but Governors - General continued to be appointed over each nation
+until republican constitutions were written . Louis Mountbatten , 1st Earl Mountbatten of Burma remained Governor - General of India for some time after
+independence , but the two nations were otherwise headed by native Governors - General . India became a secular republic in 1950 ; Pakistan became an Islamic
+one in 1956 . Functions ( edit ) Lord Curzon in his robes as Viceroy of India , a post he held from 1899 to 1905 .
+</item 8>
+
+<item 9>
+Governor-General of India
+Throughout the British administration , Governors - General retreated to the Viceregal Lodge ( Rashtrapati Niwas ) at Shimla each summer to escape the heat ,
+and the government of India moved with them . The Viceregal Lodge now houses the Indian Institute of Advanced Study . Insignia ( edit ) See also : Star of India
+( flag ) Badge of the Governor - General ( 1885 -- 1947 ) Standard of the Governor - General ( 1885 -- 1947 ) Standard of the Governor - General ( 1947 -- 50 )
+See also ( edit ) India portal Pakistan portal United Kingdom portal Politics portal List of governors - general of India Commander - in - Chief , India British
+Empire Emperor of India Indian independence movement Council of India British Raj Secretary of State for India India Office Indian Civil Service Partition of
+India History of Bangladesh History of India History of Pakistan References ( edit ) Jump up ^ The term British India is mistakenly used to mean the same as the
+British Indian Empire , which included both the provinces and the Native States . Jump up ^ `` Imperial Impressions '' . Hindustan Times . 20 July 2011 .
+</item 9>
+
+<item 10>
+Governor-General of India
+The Act also granted legislative powers to the Governor - General and Council . After 1858 , the Governor - General ( now usually known as the Viceroy )
+functioned as the chief administrator of India and as the Sovereign 's representative . India was divided into numerous provinces , each under the head of a
+Governor , Lieutenant Governor or Chief Commissioner or Administrator . Governors were appointed by the British Government , to whom they were directly
+responsible ; Lieutenant Governors , Chief Commissioners , and Administrators , however , were appointed by and were subordinate to the Viceroy . The Viceroy
+also oversaw the most powerful princely rulers : the Nizam of Hyderabad , the Maharaja of Mysore , the Maharaja ( Scindia ) of Gwalior , the Maharaja of Jammu
+and Kashmir and the Gaekwad ( Gaekwar ) Maharaja of Baroda . The remaining princely rulers were overseen either by the Rajputana Agency and Central India Agency
+, which were headed by representatives of the Viceroy , or by provincial authorities .
+</item 10>
+=== END ITEM id=5553b56e5128d6e7 ===

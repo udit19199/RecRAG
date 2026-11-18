@@ -1,0 +1,574 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "f9fa6aa3bc7162a7",
+   "kind": "answer",
+   "question": "what events occurred in the fighting at seas and near the great lakes",
+   "gold_answers": [
+    "The Battle of Lake Erie , sometimes called the Battle of Put - in - Bay , was fought on 10 September 1813 , in Lake Erie off the coast of Ohio during the War of 1812 . Nine vessels of the United States Navy defeated and captured six vessels of the British Royal Navy . This ensured American control of the lake for the rest of the war , which in turn allowed the Americans to recover Detroit and win the Battle of the Thames to break the Indian confederation of Tecumseh . It was one of the biggest naval battles of the War of 1812 ."
+   ],
+   "model_answer": "Naval battles, ship captures, and sinkings across the Atlantic, Great Lakes, Chesapeake Bay, Gulf Coast, Caribbean, and Pacific, including the Battle of Lake Erie."
+  },
+  {
+   "id": "6e466a2e9f32024c",
+   "kind": "answer",
+   "question": "what was the soviets response to the truman doctrine",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The Zhdanov Doctrine (the “Two Camps” policy)"
+  },
+  {
+   "id": "52c10e1e86e338d4",
+   "kind": "answer",
+   "question": "when are centrally acting skeletal muscle relaxants used",
+   "gold_answers": [
+    "to alleviate musculoskeletal pain and spasms and to reduce spasticity in a variety of neurological conditions",
+    "to alleviate musculoskeletal pain and spasms",
+    "to reduce spasticity in a variety of neurological conditions"
+   ],
+   "model_answer": "To relieve musculoskeletal spasms and pain, and reduce neurological spasticity."
+  },
+  {
+   "id": "3aae1ce810ed9052",
+   "kind": "answer",
+   "question": "when is the next episode of flash airing",
+   "gold_answers": [
+    "May 8, 2018"
+   ],
+   "model_answer": "No new episodes—the series ended May 24, 2023."
+  },
+  {
+   "id": "2aedc25f3d1fb226",
+   "kind": "answer",
+   "question": "who is the owner of reading football club",
+   "gold_answers": [
+    "Dai Yongge",
+    "Dai Xiuli",
+    "Dai Yongge and Dai Xiuli (majority)",
+    "Xiu Li Dai",
+    "Yongge Dai"
+   ],
+   "model_answer": "Rob Couhig (Redwood Holdings)"
+  },
+  {
+   "id": "2c7b177288e3fd91",
+   "kind": "answer",
+   "question": "akhada the authorized biography of mahavir singh phogat",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Mahavir Singh Phogat’s authorized biography by Saurabh Duggal."
+  },
+  {
+   "id": "e020cb3911ba9075",
+   "kind": "answer",
+   "question": "what was taking place before the industrial revolution",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Commercial agriculture and mercantilism were developing."
+  },
+  {
+   "id": "8c5080a7a80d6463",
+   "kind": "answer",
+   "question": "when does the new episode of criminal minds air",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Wednesday, April 18, 2018."
+  },
+  {
+   "id": "ea622ce92e5c8bd2",
+   "kind": "answer",
+   "question": "7 deadly sins signs of a holy war",
+   "gold_answers": [
+    "No . Title Original air date `` The Dark Dream Begins '' `` Kuroki Yume no Hajimari '' ( 黒き 夢 の はじまり ) August 28 , 2016 Elizabeth Liones goes to the Boar Hat , where all her friends are still asleep following the festival . After Elizabeth is greeted by Hawk outside , Meliodas introduces her to a meat pie made with vegetables that looks like Hawk , but it turns out to be unfit for human consumption . Meliodas has the idea of using pork as the main ingredient , which causes Hawk to make haste out of the bar . Meliodas comes up with a contest for his friends , in which he will obey any order for a day from whoever catches Hawk first . However , Hawk manages to outsmart them due to his small size . Hawk returns to the Boar Hat and eats food scraps made by Ban , who is declared the winner as a result . At night , Meliodas takes Elizabeth back to the palace while also assuring that his purpose in life is to protect her . Meliodas then goes to the catacombs to see the Horn of Cernunnos . When the goddess vessel taunts him for his reputation as a demon , Meliodas destroys the Horn of Cernunnos in retaliation . `` Our Fighting Festival '' `` Futari no Ken'ka Matsuri '' ( 二 人 の 喧嘩 祭り ) September 4 , 2016 Ban walks up to a mountaintop to finally settle matters with Meliodas , but the former is surprised to see Elizabeth and Hawk as well as the other members of the Seven Deadly Sins and the Holy Knights as part of an audience . Merlin casts a gigantic cubic barrier around Meliodas and Ban in order for the spectators to safely watch the fight . Meanwhile , King and Hauser have their own fight to win the attention of Diane . Ban initiates a brutal attack on Meliodas that somehow weakens most of the spectators . The fight ends in a stalemate after the two of them exchange rapid punches that cause the barrier to break . They remain friends and head back down to the Boar Hat for a drink . `` In Pursuit of First Love '' `` Hatsukoi o Oikakete '' ( 初恋 を 追いかけ て ) September 11 , 2016 King still hesitates to confess his feelings for Diane . Meanwhile , Diane leaves the Boar Hat and heads to a construction site in town , recalling the devastating collateral damage she caused due to her immense size . The construction workers there apologize to her and thank her for saving the kingdom . When King comes to see Diane , the two decide to play a game of tag across town . Outside a church , a wedding ceremony is interrupted by a demon , in which Diane and King combine their skills in defeating the demon . King asks Diane if she regained her memories , and she answers him with a kiss on his cheek . The moment is ruined when a brick suddenly falls on his head , and he later wakes up next to her , having forgotten what they did during the day . `` The Shape of Love '' `` Ai no Katachi '' ( 愛 の かたち ) September 18 , 2016 Merlin agrees to be a waitress at the Boar Hat , but first she wants Meliodas and Gowther to follow Gilthunder to find out if he is being stalked by someone . Meanwhile , Gilthunder , Hauser and Griamore are each hit with falling debris in the streets , unaware of the situation . Gowther is distracted by a boy named Pelliot , who asks him to retrieve a fat cat off a roof . Since Gowther reminds Pelliot of his mother , who recently passed away , Gowther transforms into Pelliot 's mother for a moment and disappears when Pelliot 's father finds Pelliot . Meliodas finds Gilthunder , Hauser and Griamore at a restaurant , where he purposely spills coffee to expose Vivian , revealed as the stalker . Merlin punishes Vivian by planting a cursed ring on her finger , which will bring pain to her each time the curse is activated , and Merlin explains that the Ten Commandments are the highest class in the demon race . At the Boar Hat , Merlin quits her job as a waitress , while Hawk and Gowther fill in for the position , much to the guys ' dismay ."
+   ],
+   "model_answer": "A 2016 Seven Deadly Sins series; its first episode aired August 28, 2016."
+  },
+  {
+   "id": "e9226f2f6a4b0dfa",
+   "kind": "answer",
+   "question": "when do the grand magic games start in fairy tail",
+   "gold_answers": [
+    "Crocus, the Flower-Blooming Capital"
+   ],
+   "model_answer": "Three months after their training begins."
+  },
+  {
+   "id": "1ffb467d57bdbeb4",
+   "kind": "answer",
+   "question": "where do car factories tend to be located and why",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Near urban centers and transport links, close to labor, materials, energy, and markets."
+  },
+  {
+   "id": "d3128c1087eee17c",
+   "kind": "answer",
+   "question": "who is the current director of the us mint",
+   "gold_answers": [
+    "David Motl",
+    "David J. Ryder"
+   ],
+   "model_answer": "Kristie McNally (acting director)"
+  },
+  {
+   "id": "27b6bc703ab69ff4",
+   "kind": "answer",
+   "question": "what was going on in 1954 in the us",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The U.S. was in the Cold War and McCarthy era, while the Supreme Court’s Brown v. Board ruling challenged school segregation."
+  },
+  {
+   "id": "8df965d87dd24f2d",
+   "kind": "answer",
+   "question": "how do you think south africa compared with singapore",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "They maintained friendly relations and substantial trade."
+  },
+  {
+   "id": "fbaf62bb9823dae7",
+   "kind": "answer",
+   "question": "describe the impact of the crisis at little rock on the american government",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "It prompted federal troops to enforce desegregation and the Supreme Court to reaffirm Brown v. Board of Education."
+  },
+  {
+   "id": "4221ad6802de3312",
+   "kind": "answer",
+   "question": "where is australia’s closest french speaking country",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "New Caledonia"
+  },
+  {
+   "id": "5de3e1fd7f295ebc",
+   "kind": "answer",
+   "question": "how do you think south africa compared with singapore",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Singapore’s investment in South Africa was much higher than South Africa’s investment in Singapore."
+  },
+  {
+   "id": "ae90801173cd1e6d",
+   "kind": "answer",
+   "question": "why does prince edward island have red sand",
+   "gold_answers": [
+    "sedimentary rock and other material with a high iron concentration which oxidizes upon exposure to the air"
+   ],
+   "model_answer": "Iron oxide in the soil and sandstone gives it a red color."
+  },
+  {
+   "id": "21252d6c18ecc497",
+   "kind": "answer",
+   "question": "when do you hear the lub and dub sounds of the heart",
+   "gold_answers": [
+    "the closing of the atrioventricular valves and semilunar valves, respectively"
+   ],
+   "model_answer": "Lub at the start of systole; dub at the start of diastole."
+  },
+  {
+   "id": "2107b1cec8487b25",
+   "kind": "answer",
+   "question": "what is the first step in the evolution of the eye",
+   "gold_answers": [
+    "photoreceptor proteins that sense light",
+    "eyespots",
+    "photoreceptor proteins that sense light, found even in unicellular organisms, called \"eyespots\""
+   ],
+   "model_answer": "A light-sensitive patch of photoreceptor cells (an eyespot)"
+  },
+  {
+   "id": "8822be19d0a5ef58",
+   "kind": "answer",
+   "question": "when do law students take the bar exam",
+   "gold_answers": [
+    "Each state controls where it administers its bar exam . Because the MBE ( below ) is a standardized test , it must be administered on the same day across the country . That day occurs twice a year as the last Wednesday in July and the last Wednesday in February . Two states , Delaware and North Dakota , may administer their bar exams only once , in July , if they do not have enough applicants to merit a second sitting . North Dakota requires ten applicants in order to administer the February exam . Most bar exams are administered on consecutive days . Louisiana is the exception , with the Louisiana Bar Exam being a three - day examination on Monday , Wednesday and Friday . Also , Louisiana 's examination is the longest in the country in terms of examination time , with seven hours on Monday and Wednesday and seven and one half hours on Friday for a total of 21.5 hours of testing . Montana 's bar examination also occurs over a three - day period , with a total of 18 hours of testing . The bar exams in Delaware , Nevada , Ohio , South Carolina , and Texas are also three days long . The California bar exam moved to a two - day format beginning with the July , 2017 exam .",
+    "To refresh their memory on `` black - letter rules '' tested on the bar , most students engage in a regimen of study ( called `` bar review '' ) between graduating from law school and sitting for the bar . For bar review , most students in the United States attend a private bar review course which is provided by a third - party company and not their law school ."
+   ],
+   "model_answer": "After graduating from law school, usually in July or February."
+  },
+  {
+   "id": "d991de009401f809",
+   "kind": "answer",
+   "question": "who may be affected by monetary penalties imposed by the irs",
+   "gold_answers": [
+    "Taxpayers in the United States"
+   ],
+   "model_answer": "Taxpayers and others responsible for tax-related failures, including businesses and tax advisers."
+  },
+  {
+   "id": "a5ece088d594ec61",
+   "kind": "answer",
+   "question": "who has won india's next super star",
+   "gold_answers": [
+    "Aman Gandotra",
+    "Natasha Bharadwaj"
+   ],
+   "model_answer": "Shruti Sharma and Ashish Mehrotra"
+  },
+  {
+   "id": "c38178271c004489",
+   "kind": "answer",
+   "question": "two examples where low voltage transformers are used",
+   "gold_answers": [
+    "toys",
+    "doorbell installations"
+   ],
+   "model_answer": "Doorbells and low-voltage landscape lighting."
+  },
+  {
+   "id": "c2acf7ddd6b283e6",
+   "kind": "answer",
+   "question": "what is earth's magnetic field responsible for",
+   "gold_answers": [
+    "deflect most of the solar wind, whose charged particles would otherwise strip away the ozone layer that protects the Earth from harmful ultraviolet radiation"
+   ],
+   "model_answer": "Deflecting charged particles and protecting Earth’s atmosphere."
+  },
+  {
+   "id": "f17e525c3cc9be1d",
+   "kind": "answer",
+   "question": "who played in the movie harper valley pta",
+   "gold_answers": [
+    "Barbara Eden as Stella Johnson , a widowed cosmetics salesperson with a young daughter , whose joie de vivre , her principles , and her individuality anger most of the powerful people in town and on the Parent Teachers Association board . She inevitably becomes PTA president after embarrassing Flora , the snobby former President and her equally snobby friends . Ronny Cox as Willis `` Will '' Newton , a wealthy member of the PTA who does n't agree with Flora and her snobby allies and is in love with Stella . He and Stella get married at the end of the movie . Nanette Fabray as Alice Finley , Stella 's best friend and co-conspirator against the snobs of Harper Valley . She owns and operates the La Moderne Beauty Shop . Louis Nye as Kirby Baker , a local real estate agent who is allied with Flora and her friends . Notorious for being a lecherous playboy and infamous for impregnating his secretaries , one of whom , Gladys Wilmot , left town to see an abortionist in Cincinnati . As part of a plan to discredit Stella , he tries to foreclose on Stella 's house , which infuriates her . He then gets arrested and jailed for attacking Myrna Wong , a friend of Stella 's , who rebuffs his advances , throwing him by use of martial arts and destroying the office . John Fiedler as Bobby Taylor , a man on the PTA who lusts after Stella . Overly dominated by his wife , Holly . Although open to allow Stella to speak , he is not above having a fellow PTA board member kidnapped to commit election fraud . He was arrested for indecent exposure after being set up by Stella . Ron Masak as Herbie Maddox , the head bartender at Kelly 's bar , and Stella 's ally against Flora and her friends . He has a crush on Stella , and is one of her friends . Clint Howard as Corley , a young delivery person , who works for the local florist shop , who brings Stella flowers from Will . Susan Swift as Dee Johnson , Stella 's 14 - year - old daughter , who is threatened with expulsion from school if her mother does n't conform to the way the PTA wants her to behave . She has a hand in assisting her mother and Alice with one of their revenge schemes . She loses her braces , gets a makeover , and ends up with a boyfriend , Carlyle . Pat Paulsen as Otis Harper , the descendant of the founding family of Harper Valley . A PTA member who is allied with Flora and her friends . Has a tendency to drink all the time , which annoys his wife , Bertha . He had a stampede of elephants , painted pink , stormed through his house , destroying it . Amzie Strickland as Shirley Thompson , a member of the PTA board who tends to drink a lot of gin . Though she is allied with Flora and her friends , she is one of four PTA members ( Will , Skeeter and Holly Taylor are the others ) who are spared any retribution from Stella . She was seen as the most sympathetic of the board , as she tended to be more manipulated as opposed to being manipulative . It was never revealed whether or not she retained her seat on the PTA , but it is presumed that she became more sympathetic towards Stella as she was seen waving goodbye at Olive as she was being arrested . Bob Hastings as Skeeter Duggan , a member of the PTA board , and the town 's Notary public who is sympathetic to Stella . He is kidnapped by Dutch and Tex at Flora Simpson Reilly 's orders . Audrey Christie as Flora Simpson - Reilly , The movie 's main antagonist . She is the pompous and extremely snobbish president of the PTA board who thoroughly despises Stella ( who defeats her for president at the end of the movie ) and all she stands for . So desperate is she to retain her power and prestige in the community that she has a fellow member of the PTA ( Skeeter Duggan ) kidnapped so she and her allies can commit election fraud . She is embarrassed when her permanent set is destroyed by a hair depilatory at the beauty salon . Molly Dodd as Olive Glover , the recording secretary of the PTA who is a gambling addict . Clearly the most corrupt and most vindictive member of the PTA board , she is eventually arrested for embezzlement after having a load of hay and horse manure dumped on top of her . She is the one who initially angers Stella by sending her the letter denouncing her , and tries to get Dee 's friend , Mavis , arrested for embezzlement . Fay DeWitt as Willamae Jones , a snide biology teacher at the junior high school who is also a member of the PTA . She makes no secret of the fact that she favors the Reilly twins , due to the connections between her and Flora . Notorious for being a nymphomaniac ( though she hides it under a prim - and - proper façade ) , she is caught in flagrante delicto with Barney Crunk , the town 's mailman , on film . DeVera Marcus as Holly Taylor , Bobby 's obviously overbearing wife , who tends to drink a lot when Bobby is out of town , and does n't approve of Bobby 's lusting , or of anything else he does ( this is different from the character in the song , who `` seems to use a lot of ice whenever ( her husband ) 's away '' , implying adultery with the iceman ) . However , despite her ties to Flora and her scheming friends , she , like Shirley Thompson , is spared any retribution from Stella , due to Stella refusing to date Bobby . Louise Foley as Mavis , Dee Johnson 's best friend , who is nearly framed for a crime she did not commit by the vindictive Olive Glover . Brian Cook as Carlyle , a popular track star who chooses Dee , after she gets a makeover , and angers Bettina Reilly in the process . Laura Teige as Bettina Reilly , One of Flora 's twin granddaughters , who wants to be with Carlyle , and is jealous when he chooses Dee over her . She tends to be as snotty as her grandmother . Jan Teige as Edwina Reilly , Bettina 's twin sister , who is just as snotty as her . Irene Yah - Ling Sun as Myrna Wong , a friend of Stella 's who is a judo expert ; she is assaulted by Kirby Baker ( after leading him on ; she destroys him and his office in retaliation ) and has him sent to jail for assault . Tobias Anderson as `` Cranky '' Barney Crunk , the town 's nosy mailman who had the bad habit of peeking in everyone 's mail . He is caught in flagrante delicto on film with Willamae Jones . Royce D. Applegate as Dutch , one of two kidnappers who abduct Skeeter Duggan at Flora Simpson - Reilly 's orders . J.J. Barry as Tex , the mastermind of the kidnap plot to get Skeeter Duggan out of the way so Flora Simpson - Reilly and her friends could commit election fraud . He and his accomplice Dutch are arrested and the two of them rat out Flora and her friends on their scheme . Pitt Herbert as Henry Reilly , Flora 's overly dominated husband and grandfather to Edwina and Bettina . Henry is wealthy , but is very weak - willed and is known for acquiescing to his wife 's schemes . Arlen Stuart as Bertha Harper , wife of Otis Harper , who gets annoyed by her husband 's continual drinking . She is terrified when her house is destroyed by pink - painted elephants ."
+   ],
+   "model_answer": "Barbara Eden, Ronny Cox, Nanette Fabray, and Susan Swift."
+  },
+  {
+   "id": "a06de6fdd67161a2",
+   "kind": "answer",
+   "question": "florence and the machine i am not a robot",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "“I’m Not a Robot” is by Marina and the Diamonds."
+  },
+  {
+   "id": "141946135fcd9a46",
+   "kind": "answer",
+   "question": "a best alternative to a negotiated agreement (batna)",
+   "gold_answers": [
+    "In negotiation theory , the best alternative to a negotiated agreement or BATNA is the most advantageous alternative course of action a party can take if negotiations fail and an agreement can not be reached . BATNA is the key focus and the driving force behind a successful negotiator . A party should generally not accept a worse resolution than its BATNA . Care should be taken , however , to ensure that deals are accurately valued , taking into account all considerations , such as relationship value , time value of money and the likelihood that the other party will live up to their side of the bargain . These other considerations are often difficult to value , since they are frequently based on uncertain or qualitative considerations , rather than easily measurable and quantifiable factors ."
+   ],
+   "model_answer": "Your best option if negotiations fail."
+  },
+  {
+   "id": "c6ddc975cd1f1f45",
+   "kind": "answer",
+   "question": "when is dancing on ice on the tv",
+   "gold_answers": [
+    "2019"
+   ],
+   "model_answer": "Sundays; the 2018 series began 7 January."
+  },
+  {
+   "id": "b8554583420db4c3",
+   "kind": "answer",
+   "question": "when is the fourth movie of the divergent series coming out",
+   "gold_answers": [
+    "never made"
+   ],
+   "model_answer": "It was canceled and will not be released."
+  },
+  {
+   "id": "00907cb1d60673fb",
+   "kind": "answer",
+   "question": "the object in the mirror are closer than it appears",
+   "gold_answers": [
+    "The phrase `` objects in ( the ) mirror are closer than they appear '' is a safety warning that is required to be engraved on passenger side mirrors of motor vehicles in the USA , Canada , Nepal , India and Saudi Arabia . It is present because while these mirrors ' convexity gives them a useful field of view , it also makes objects appear smaller . Since smaller - appearing objects seem farther away than they actually are , a driver might make a maneuver such as a lane change assuming an adjacent vehicle is a safe distance behind , when in fact it is quite a bit closer . The warning serves as a reminder to the driver of this potential problem ."
+   ],
+   "model_answer": "They appear smaller and farther away than they are."
+  },
+  {
+   "id": "e6daa0ba308e93b7",
+   "kind": "answer",
+   "question": "where does the nitrogen for this fertilizer come from",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The atmosphere (air)"
+  },
+  {
+   "id": "041c5417e17bffe0",
+   "kind": "answer",
+   "question": "what is the job of justice of the peace",
+   "gold_answers": [
+    "a judicial officer, of a lower or puisne court, elected or appointed by means of a commission (letters patent) to keep the peace.",
+    "dispense summary justice",
+    "deal with local administrative applications in common law jurisdictions"
+   ],
+   "model_answer": "Handle minor legal matters and perform related judicial duties."
+  },
+  {
+   "id": "cd57c4fc345756b0",
+   "kind": "answer",
+   "question": "where is the dead sea located in jordan",
+   "gold_answers": [
+    "The Dead Sea ( Hebrew : יָם הַמֶּלַח ‬ Yam ha - Melah lit . Sea of Salt ; Arabic : البحر الميت ‎ Al - Bahr al - Mayyit ) is a salt lake bordered by Jordan to the east and Israel and Palestine to the west . Its surface and shores are 430.5 metres ( 1,412 ft ) below sea level , Earth 's lowest elevation on land . The Dead Sea is 304 m ( 997 ft ) deep , the deepest hypersaline lake in the world . With a salinity of 342 g / kg , or 34.2 % , ( in 2011 ) , it is 9.6 times as salty as the ocean and one of the world 's saltiest bodies of water . This salinity makes for a harsh environment in which plants and animals can not flourish , hence its name . The Dead Sea is 50 kilometres ( 31 mi ) long and 15 kilometres ( 9 mi ) wide at its widest point . It lies in the Jordan Rift Valley , and its main tributary is the Jordan River ."
+   ],
+   "model_answer": "Western Jordan, along the border with Israel and the West Bank."
+  },
+  {
+   "id": "1e8f19b254d2ee0a",
+   "kind": "answer",
+   "question": "what was the relationship between japan’s emperors and military leaders",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Military leaders reported directly to the emperor and pledged him loyalty, while operating largely beyond civilian control."
+  },
+  {
+   "id": "15698c88ef71c6a8",
+   "kind": "answer",
+   "question": "when did the philadelphia eagles play in the super bowl last",
+   "gold_answers": [
+    "Super Bowl LII"
+   ],
+   "model_answer": "2017 (Super Bowl LII)"
+  },
+  {
+   "id": "5014fcc21ec946ed",
+   "kind": "answer",
+   "question": "who dies in season 6 of once upon a time",
+   "gold_answers": [
+    "Edmond Dantes, The Count of Monte Cristo",
+    "Jekyll",
+    "Hyde"
+   ],
+   "model_answer": "Dr. Jekyll, Hyde, and the Black Fairy."
+  },
+  {
+   "id": "a74ddfc46bacdc96",
+   "kind": "answer",
+   "question": "make a project report on agricultural crops grown in india",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Major crops: rice, wheat, pulses, cotton, sugarcane, oilseeds, fruits, and vegetables."
+  },
+  {
+   "id": "7d5deb286427f02e",
+   "kind": "answer",
+   "question": "what was the relationship between japan’s emperors and military leaders",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Emperors were often symbolic figureheads, while military leaders wielded practical power in their name."
+  },
+  {
+   "id": "ab2f1d0a5b88703e",
+   "kind": "answer",
+   "question": "how many books are in the diary of a whimpy kid series",
+   "gold_answers": [
+    "twelve Wimpy Kid books have been released, plus one do-it-yourself book and two movie diaries",
+    "12"
+   ],
+   "model_answer": "20 books"
+  },
+  {
+   "id": "08d7e2bc89067ae7",
+   "kind": "answer",
+   "question": "i-o psychologists study our behavior on the job by",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Using quantitative and qualitative research methods\n"
+  },
+  {
+   "id": "a96efee66fb55f9c",
+   "kind": "answer",
+   "question": "when was the minimum wage established in the united states",
+   "gold_answers": [
+    "1912",
+    "1938",
+    "1933"
+   ],
+   "model_answer": "1938 (federally)"
+  },
+  {
+   "id": "d57a2762f7f82dcd",
+   "kind": "answer",
+   "question": "where are the orcs made in lord of the rings",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "In Isengard."
+  },
+  {
+   "id": "e171a31cb60d768b",
+   "kind": "answer",
+   "question": "where do the royalties for winnie the pooh go",
+   "gold_answers": [
+    "Slesinger, Inc.",
+    "the Slesinger family"
+   ],
+   "model_answer": "Stephen Slesinger, Inc. receives the royalties."
+  },
+  {
+   "id": "d0dff4f4206d49dc",
+   "kind": "answer",
+   "question": "discuss the impact of devaluation on foreign exchange reserve",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Can help rebuild reserves by boosting exports and reducing imports."
+  },
+  {
+   "id": "4a1428a27cbde763",
+   "kind": "answer",
+   "question": "who has the rights to alice in wonderland",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Walt Disney Productions"
+  },
+  {
+   "id": "b2afeae9e97bcd5b",
+   "kind": "answer",
+   "question": "when was the minimum wage established in the united states",
+   "gold_answers": [
+    "1912",
+    "1938",
+    "1933"
+   ],
+   "model_answer": "1938 (federally; Massachusetts enacted the first state minimum wage law in 1912)"
+  },
+  {
+   "id": "5135c13e9a399f3c",
+   "kind": "answer",
+   "question": "the object in the mirror are closer than it appears",
+   "gold_answers": [
+    "The phrase `` objects in ( the ) mirror are closer than they appear '' is a safety warning that is required to be engraved on passenger side mirrors of motor vehicles in the USA , Canada , Nepal , India and Saudi Arabia . It is present because while these mirrors ' convexity gives them a useful field of view , it also makes objects appear smaller . Since smaller - appearing objects seem farther away than they actually are , a driver might make a maneuver such as a lane change assuming an adjacent vehicle is a safe distance behind , when in fact it is quite a bit closer . The warning serves as a reminder to the driver of this potential problem ."
+   ],
+   "model_answer": "Yes—objects are closer than they appear."
+  },
+  {
+   "id": "dc938758c67f2f4a",
+   "kind": "answer",
+   "question": "what is the use of adobe flash cs3 professional",
+   "gold_answers": [
+    "supported modern programming practices and enabled business applications to be developed with Flash"
+   ],
+   "model_answer": "Developing Flash content and business applications using ActionScript 3.0\n"
+  },
+  {
+   "id": "d18d050244ff8eb6",
+   "kind": "answer",
+   "question": "texas flip and move how does it work",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Renovators buy houses without land, move and renovate them, then auction them for profit."
+  },
+  {
+   "id": "883b6eb967ef0fc9",
+   "kind": "answer",
+   "question": "why does prince edward island have red sand",
+   "gold_answers": [
+    "sedimentary rock and other material with a high iron concentration which oxidizes upon exposure to the air"
+   ],
+   "model_answer": "Iron-rich sediment oxidizes when exposed to air."
+  },
+  {
+   "id": "49267fd7a3bf9445",
+   "kind": "answer",
+   "question": "pan-american highway the longest road in the world",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, though interrupted by the Darién Gap."
+  },
+  {
+   "id": "d5309cff9ae333e6",
+   "kind": "answer",
+   "question": "results of the large-scale women's health initiative released in 2002 revealed hormone therapy may",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Increase breast cancer risk"
+  },
+  {
+   "id": "a8c9273c1368311e",
+   "kind": "answer",
+   "question": "wizards of waverly place does max turn back into a boy",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes—at the end of “Back to Max.”"
+  },
+  {
+   "id": "339b69744e3e4de7",
+   "kind": "answer",
+   "question": "disease of the light sensitive innermost layer of the eyeball",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Retinitis pigmentosa"
+  },
+  {
+   "id": "f89a91bfa9e684a7",
+   "kind": "answer",
+   "question": "the seed of a gymnosperm seed is made in the",
+   "gold_answers": [
+    "either on the surface of scales or leaves",
+    "either on the surface of scales or leaves, which are often modified to form cones, or solitary",
+    "the surface of scales or leaves"
+   ],
+   "model_answer": "Ovule\n"
+  },
+  {
+   "id": "1eddd0465960d194",
+   "kind": "answer",
+   "question": "where does kylo ren's name come from",
+   "gold_answers": [
+    "the character, \"came to the name Kylo Ren when he joined a group called the Knights of Ren.\""
+   ],
+   "model_answer": "He took the name “Kylo Ren” when he joined the Knights of Ren."
+  },
+  {
+   "id": "67db76fe05243a17",
+   "kind": "answer",
+   "question": "where do the royalties for winnie the pooh go",
+   "gold_answers": [
+    "Slesinger, Inc.",
+    "the Slesinger family"
+   ],
+   "model_answer": "Stephen Slesinger, Inc. and the Slesinger family"
+  },
+  {
+   "id": "994d2c5de506ef8e",
+   "kind": "answer",
+   "question": "what is the moral of cat in the hat",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Have fun, but take responsibility for your actions."
+  },
+  {
+   "id": "81281bee9af5fda3",
+   "kind": "answer",
+   "question": "who is the speaker in shooting an elephant",
+   "gold_answers": [
+    "Orwell",
+    "Orwell, writing in the first person",
+    "possibly Orwell himself, called upon to shoot an aggressive elephant while working as a police officer in Burma",
+    "the English narrator, possibly Orwell himself"
+   ],
+   "model_answer": "George Orwell\n"
+  }
+ ],
+ "evidence": []
+}

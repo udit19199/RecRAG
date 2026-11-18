@@ -1,0 +1,75 @@
+[
+  {
+    "id": "multihop-rag-1566",
+    "sentences": [
+      ["Cue said there was not a valid alternative to Google at the time."],
+      ["The last roundup covered how Google spent $26.3 billion in 2021 making itself the default search engine across platforms.", "The last roundup covered how Google tried to have Chrome preinstalled on iPhones."],
+      ["Arkansas-based publisher Helena World Chronicle filed a case against Google.", "The case argues that Google 'siphons off' news publishers' content.", "The case argues that Google 'siphons off' news publishers' readers and ad revenue.", "The case argues that Google's 'siphoning off' happens through anticompetitive means."]
+    ]
+  },
+  {
+    "id": "-5192491797154084918",
+    "sentences": [
+      ["The table lists 17 episodes with first airing on September 13, 1969 and last airing on January 17, 1970.", "The table lists 8 episodes with first airing on September 12, 1970 and last airing on October 31, 1970.", "The table lists 16 episodes with first airing on September 9, 1978 and last airing on December 23, 1978."]
+    ]
+  },
+  {
+    "id": "multihop-rag-1526",
+    "sentences": [
+      ["At 9:47 p.m., the Bears answered right back.", "At 9:47 p.m., the Bears sacked Dobbs.", "Sweat and Brisker were in on the sack to take Dobbs down."],
+      ["The Ravens defense has allowed the fewest points per game this season, 16.1.", "The Ravens defense has allowed the second-fewest total yards this season, 4,030.", "San Francisco's defense ranks second in points, at 16.7.", "San Francisco's defense ranks 10th in yardage, at 310 yards per game."]
+    ]
+  },
+  {
+    "id": "5a8762205542996e4f3087b8",
+    "sentences": [
+      ["Giovanni 'Tinto' Brass was born on 26 March 1933.", "Giovanni 'Tinto' Brass is an Italian filmmaker."],
+      ["Baltasar Kormakur Samper was born on 27 February 1966.", "Baltasar Kormakur Samper is an Icelandic actor.", "Baltasar Kormakur Samper is an Icelandic theater director.", "Baltasar Kormakur Samper is an Icelandic film director.", "Baltasar Kormakur Samper is an Icelandic film producer."]
+    ]
+  },
+  {
+    "id": "5a8ad6db55429950cd6afba7",
+    "sentences": [
+      ["Related fields of study include Islamic philosophy.", "Related fields of study include Sufism."],
+      ["Sufism is also called Taṣawwuf.", "The Arabic name for Sufism is الْتَّصَوُّف [sect].", "The personal noun for a Sufi is صُوفِيّ, transliterated as 'ṣūfiyy' or 'ṣūfī'.", "The personal noun mutaṣawwūf is مُتَصَوّف.", "Sufism is often defined as 'Islamic mysticism'.", "Sufism is often defined as 'the inward dimension of Islam'.", "Sufism is often defined as 'the phenomenon of mysticism within Islam'.", "Sufism is a mystical trend in Islam.", "Sufism is characterized by particular values, ritual practices, doctrines and institutions.", "Sufism began very early on in Islamic history.", "Sufism represents the main manifestation of mystical practice in Islam.", "Sufism represents the most important and central crystallization of mystical practice in Islam."]
+    ]
+  },
+  {
+    "id": "multihop-rag-1530",
+    "sentences": [
+      ["The answer to the question ultimately lies with the jury.", "The jury was selected on Wednesday morning.", "The jury was selected before lawyers for the government.", "Bankman-Fried then swapped two very different stories.", "The two stories were about the former crypto mogul's sudden rise.", "The two stories were about the former crypto mogul's almost instantaneous fall."],
+      ["Bankman-Fried was compared to Warren Buffet.", "Many people called Bankman-Fried the white horse of crypto.", "TechCrunch never called Bankman-Fried the white horse of crypto."],
+      ["Judge Lewis Kaplan intervened.", "Judge Lewis Kaplan asked if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance.", "Bankman-Fried did not admit he had been told until Judge Lewis Kaplan intervened.", "Bankman-Fried admitted he had been told."],
+      ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.", "The defense countered that the FTX founder acted in good faith.", "The defense countered that the FTX founder never meant to commit fraud or steal.", "The defense countered that the FTX founder basically got in over his head."]
+    ]
+  },
+  {
+    "id": "5a74bdce55429929fddd84e1",
+    "sentences": [
+      ["Georg Ferdinand Ludwig Philipp Cantor was born on March 3, 1845.", "The birth date of Georg Ferdinand Ludwig Philipp Cantor is also given as February 19, 1845 in the Old Style calendar.", "Georg Ferdinand Ludwig Philipp Cantor died on January 6, 1918.", "Georg Ferdinand Ludwig Philipp Cantor was a German mathematician."],
+      ["Vladimir Igorevich Arnold is also spelled Arnol'd.", "Vladimir Igorevich Arnold's name in Russian is Влади́мир И́горевич Арно́льд.", "Vladimir Igorevich Arnold was born on 12 June 1937.", "Vladimir Igorevich Arnold died on 3 June 2010.", "Vladimir Igorevich Arnold was a Soviet mathematician.", "Vladimir Igorevich Arnold was a Russian mathematician."]
+    ]
+  },
+  {
+    "id": "5ae31bbd55429928c42395fc",
+    "sentences": [
+      ["The Cathedral Church of the Holy Spirit, Guildford is an Anglican cathedral.", "The Cathedral Church of the Holy Spirit, Guildford is located at Guildford, Surrey, England."],
+      ["St Paul's Cathedral, London is an Anglican cathedral.", "St Paul's Cathedral, London is the seat of the Bishop of London.", "St Paul's Cathedral, London is the mother church of the Diocese of London."]
+    ]
+  },
+  {
+    "id": "multihop-rag-747",
+    "sentences": [
+      ["Instead, Marshall will start freshman Cole Pennington.", "Cole Pennington is a freshman.", "Cole Pennington is the son of former Marshall star QB Chad Pennington.", "Chad Pennington is a former Marshall star QB."],
+      ["Geno Smith's night appears to be done.", "Drew Lock is back in for the Seahawks."]
+    ]
+  },
+  {
+    "id": "5a72f74a55429901807daf59",
+    "sentences": [
+      ["Sleepless in Seattle is a 1993 film.", "Sleepless in Seattle is an American film.", "Sleepless in Seattle is a romantic comedy-drama film.", "Sleepless in Seattle was directed by Nora Ephron.", "Sleepless in Seattle was co-written by Nora Ephron.", "Sleepless in Seattle is based on a story by Jeff Arch."],
+      ["Sleepless in Seattle stars Tom Hanks.", "Sleepless in Seattle stars Meg Ryan.", "Sleepless in Seattle has a supporting cast featuring Bill Pullman.", "Sleepless in Seattle has a supporting cast featuring Ross Malinger.", "Sleepless in Seattle has a supporting cast featuring Rob Reiner.", "Sleepless in Seattle has a supporting cast featuring Rosie O'Donnell.", "Sleepless in Seattle has a supporting cast featuring Gaby Hoffmann.", "Sleepless in Seattle has a supporting cast featuring Victor Garber.", "Sleepless in Seattle has a supporting cast featuring Rita Wilson."],
+      ["Roseann O'Donnell was born on March 21, 1962.", "Roseann O'Donnell is an American comedian.", "Roseann O'Donnell is an American actress.", "Roseann O'Donnell is an American author.", "Roseann O'Donnell is an American television personality."]
+    ]
+  }
+]

@@ -1,0 +1,66 @@
+[
+{"id": "d6c52ead23c28dd1", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Hotel barge Bed and breakfast Botel Boutique hotel Bunkhouse Capsule"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Hotel barge Bed and breakfast Botel Boutique hotel Bunkhouse Capsule"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Hotel barge Bed and breakfast Botel Boutique hotel Bunkhouse Capsule"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "Hotel barge Bed and breakfast Botel Boutique hotel Bunkhouse Capsule"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 9, "quote": "Hotel barge Bed and breakfast Botel Boutique hotel Bunkhouse Capsule"}]}
+]},
+{"id": "afeeee092b91e64e", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Ward Bond as Pat Wheeler"}]},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 6, "quote": "a young untried but self - assured gunfighter ( Colorado )"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 9, "quote": "Ricky Nelson as Colorado / Ryan"}]},
+{"fact": "0.6", "status": "missing", "evidence": []},
+{"fact": "0.7", "status": "missing", "evidence": []},
+{"fact": "0.8", "status": "stated", "evidence": [{"item": 9, "quote": "Walter Brennan as Stumpy"}]},
+{"fact": "0.9", "status": "missing", "evidence": []},
+{"fact": "0.10", "status": "missing", "evidence": []},
+{"fact": "0.11", "status": "missing", "evidence": []},
+{"fact": "0.12", "status": "missing", "evidence": []},
+{"fact": "0.13", "status": "missing", "evidence": []},
+{"fact": "0.14", "status": "missing", "evidence": []},
+{"fact": "0.15", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Walter Brennan as Stumpy"}]}
+]},
+{"id": "616f21a684878422", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "The Gift of the Magi '' is a short story , written by O. Henry ( a pen name for William Sydney Porter ) , about a young husband and wife"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "The Gift of the Magi '' is a short story , written by O. Henry ( a pen name for William Sydney Porter ) , about a young husband and wife"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "The Gift of the Magi '' is a short story , written by O. Henry ( a pen name for William Sydney Porter ) , about a young husband and wife"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "The Gift of the Magi '' is a short story , written by O. Henry ( a pen name for William Sydney Porter ) , about a young husband and wife"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "deal with the challenge of buying secret Christmas gifts for each other with very little money"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 2, "quote": "As a sentimental story with a moral lesson about gift - giving"}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 2, "quote": "it has been a popular one for adaptation"}]},
+{"fact": "0.7", "status": "stated", "evidence": [{"item": 2, "quote": "it has been a popular one for adaptation , especially for presentation at Christmas time"}]},
+{"fact": "0.8", "status": "stated", "evidence": [{"item": 2, "quote": "The plot and its twist ending are well - known"}]},
+{"fact": "0.9", "status": "stated", "evidence": [{"item": 2, "quote": "The plot and its twist ending are well - known"}]},
+{"fact": "0.10", "status": "stated", "evidence": [{"item": 2, "quote": "and the ending is generally considered an example of comic irony"}]},
+{"fact": "0.11", "status": "stated", "evidence": [{"item": 2, "quote": "It was allegedly written at Pete 's Tavern on Irving Place in New York City"}]}
+]},
+{"id": "afbfc1a7cccf8b46", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Other applications are short - circuit - proof extra-low voltage transformers for toys or doorbell installations"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Other applications are short - circuit - proof extra-low voltage transformers for toys or doorbell installations"}]}
+]},
+{"id": "10a797fdd72c8951", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Sahara The desert comprises much of North Africa"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "contradicted", "evidence": [{"item": 6, "quote": "It covers 9 million square kilometres ( 3,500,000 sq mi )"}]},
+{"fact": "0.5", "status": "missing", "evidence": []},
+{"fact": "0.6", "status": "missing", "evidence": []},
+{"fact": "0.7", "status": "missing", "evidence": []},
+{"fact": "0.8", "status": "missing", "evidence": []}
+]},
+{"id": "c1226ff097f9dff7", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "The film is based loosely on Eminem 's actual upbringing , and follows white rapper B - Rabbit ( Eminem ) and his attempt to launch a career in a genre dominated by African - Americans"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "The film is based loosely on Eminem 's actual upbringing , and follows white rapper B - Rabbit ( Eminem ) and his attempt to launch a career in a genre dominated by African - Americans"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "The film is based loosely on Eminem 's actual upbringing , and follows white rapper B - Rabbit ( Eminem ) and his attempt to launch a career in a genre dominated by African - Americans"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "The title is derived from 8 Mile Road , the highway between the predominantly black city of Detroit and Wayne County and the predominantly White Oakland County"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "The title is derived from 8 Mile Road , the highway between the predominantly black city of Detroit and Wayne County and the predominantly White Oakland County"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 2, "quote": "The title is derived from 8 Mile Road , the highway between the predominantly black city of Detroit and Wayne County and the predominantly White Oakland County and Macomb County suburbs"}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 2, "quote": "It was filmed mostly on location"}]}
+]}
+]

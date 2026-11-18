@@ -1,0 +1,57 @@
+[
+{"id": "d1d6154ffc87e025", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 8, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "the win assured the Swans of retaking eighth spot."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 6, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 6, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 6, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]}
+]},
+{"id": "55f05337cfb6d1a4", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "1.6", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "914d4df2487f4d1c", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]}
+]},
+{"id": "b9e0c7917d683a61", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep, but not all of them are effective and none are foolproof."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep, but not all of them are effective and none are foolproof."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep, but not all of them are effective and none are foolproof."}]}
+]},
+{"id": "1ed4011fb3919f66", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Hundreds of women have filed lawsuits against Uber claiming the company hasn’t done enough to prevent instances of sexual assault by drivers."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Hundreds of women have filed lawsuits against Uber claiming the company hasn’t done enough to prevent instances of sexual assault by drivers."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 10, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}, {"item": 9, "quote": "Uber reported net income of $221 million in the third quarter"}]}
+]}
+]

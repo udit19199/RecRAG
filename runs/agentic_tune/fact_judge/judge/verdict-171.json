@@ -1,0 +1,58 @@
+[
+{"id": "480a05496156dbf8", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "In other words, first, we need to improve our understanding of drivers of sea surface temperature patterns"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "drivers of sea surface temperature patterns—decadal coupled variability"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "the pace and spatial structure of ocean heat uptake"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "the pace and spatial structure of ocean heat uptake"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 2, "quote": "and forcing by aerosols, greenhouse gases, and volcanoes—as well as the relative timing of these drivers."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 2, "quote": "and forcing by aerosols, greenhouse gases, and volcanoes—as well as the relative timing of these drivers."}]},
+{"fact": "1.6", "status": "stated", "evidence": [{"item": 2, "quote": "and forcing by aerosols, greenhouse gases, and volcanoes—as well as the relative timing of these drivers."}]},
+{"fact": "1.7", "status": "stated", "evidence": [{"item": 2, "quote": "as well as the relative timing of these drivers."}]}
+]},
+{"id": "36b825212325af25", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "contradicted", "evidence": [{"item": 3, "quote": "Alameda Research’s former CEO Caroline Ellison"}]},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]}
+]},
+{"id": "10e071eb5d4b405e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "UPDATE: NFL Network's Ian Rapoport reported Sunday morning that Hockenson is expected to play against New Orleans."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "NFL Network's Ian Rapoport"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Ian Rapoport reported Sunday morning that Hockenson is expected to play against New Orleans."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Head coach Dennis Allen told reporters Friday"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "despite Olave being a full participant in Friday's practice"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "he is still in concussion protocol"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "though has a chance to play."}]}
+]},
+{"id": "bbb2fd66bc2b5dc9", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "That answer ultimately lies with the jury"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 4, "quote": "different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 4, "quote": "different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "A conscious criminal…"}, {"item": 10, "quote": "all of that, all of it, was built on lies,"}]},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "adcae8a695f78c15", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "He also believes that after everything on social media becomes so perfectly curated for us"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "our brains will start to crave things that are not."}]},
+{"fact": "1.0", "status": "missing", "evidence": []}
+]},
+{"id": "9a56087002d182ce", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "With inflation down from its peak two summers ago,"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates and could soon turn to cutting them."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates and could soon turn to cutting them."}]}
+]}
+]

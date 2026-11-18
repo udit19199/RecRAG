@@ -1,0 +1,575 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "c0973bd313a6b3cd",
+   "kind": "answer",
+   "question": "when do the walking dead comics come out",
+   "gold_answers": [
+    "October 2003 – present",
+    "2003"
+   ],
+   "model_answer": "The series ended on July 3, 2019."
+  },
+  {
+   "id": "0433ab4143b9b664",
+   "kind": "answer",
+   "question": "when do primary ossification centers appear in an embryo",
+   "gold_answers": [
+    "prenatal development"
+   ],
+   "model_answer": "Around the 7th week of embryonic development."
+  },
+  {
+   "id": "75d1c534492a58fd",
+   "kind": "answer",
+   "question": "turkish finnish and hungarian belong to which family of languages",
+   "gold_answers": [
+    "Uralic languages"
+   ],
+   "model_answer": "No single family: Finnish and Hungarian are Uralic; Turkish is Turkic."
+  },
+  {
+   "id": "86428ff2e17231f1",
+   "kind": "answer",
+   "question": "i hope that you don't fall in love with me",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "I don’t have feelings."
+  },
+  {
+   "id": "bc83a980f6d9fccc",
+   "kind": "answer",
+   "question": "what is the moral of cat in the hat",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Mischief is fun, but it’s important to clean up afterward."
+  },
+  {
+   "id": "d4b9d5e1c540f843",
+   "kind": "answer",
+   "question": "what was the purpose of a revival meeting during the second great awakening",
+   "gold_answers": [
+    "evangelizing"
+   ],
+   "model_answer": "To inspire religious conversions and renew faith."
+  },
+  {
+   "id": "266ca07a44fd3eee",
+   "kind": "answer",
+   "question": "what is the significance of the sahara desert",
+   "gold_answers": [
+    "the largest hot desert and the third largest desert in the world after Antarctica and the Arctic",
+    "the largest hot desert",
+    "the third largest desert in the world after Antarctica and the Arctic"
+   ],
+   "model_answer": "The world’s largest hot desert and a defining ecological region of North Africa."
+  },
+  {
+   "id": "91b8ac4a71d13758",
+   "kind": "answer",
+   "question": "the beatles sgt pepper's lonely hearts club band",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "1967 studio album by the Beatles."
+  },
+  {
+   "id": "b1c70d7ceec9172d",
+   "kind": "answer",
+   "question": "when will the next episode of my next guest needs no introduction",
+   "gold_answers": [
+    "May 31, 2018"
+   ],
+   "model_answer": "May 4, 2018 (Tina Fey)"
+  },
+  {
+   "id": "3c3d082c2c6badb2",
+   "kind": "answer",
+   "question": "what are the five pillars of islam in arabic",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Shahada, Salat, Zakat, Sawm, Hajj"
+  },
+  {
+   "id": "2feda3a3589e09fb",
+   "kind": "answer",
+   "question": "who are the faces of the postcode lottery",
+   "gold_answers": [
+    "People 's Postcode Lottery has a number of celebrity `` ambassadors '' . In March 2018 , these included David Attenborough , Clare Balding , Brian Blessed , Judi Dench , Shobna Gulati , Tim Healy , Stephen Jardine , Ellen MacArthur , Aggie MacKenzie , Carey Mulligan , John Stapleton and Emma Thompson . Fiona Phillips became an ambassador for People 's Postcode Lottery at the end of 2012 , leading the organisation 's DRTV campaigns ."
+   ],
+   "model_answer": "Judie McCourt and Matt Johnson"
+  },
+  {
+   "id": "a2ca159be7af0cc5",
+   "kind": "answer",
+   "question": "what is the point of a menstrual cup",
+   "gold_answers": [
+    "to collect menstrual flow",
+    "collect menstrual flow"
+   ],
+   "model_answer": "To collect menstrual flow inside the vagina."
+  },
+  {
+   "id": "3a27ba2fb177a12d",
+   "kind": "answer",
+   "question": "who was kat slater's sisters in eastenders",
+   "gold_answers": [
+    "Lynne",
+    "Little Mo",
+    "Zoe"
+   ],
+   "model_answer": "Lynne Slater and Little Mo Mitchell"
+  },
+  {
+   "id": "4d2f152c6aee9460",
+   "kind": "answer",
+   "question": "where do the greasers live in the outsiders",
+   "gold_answers": [
+    "Tulsa, Oklahoma"
+   ],
+   "model_answer": "The east side of Tulsa."
+  },
+  {
+   "id": "5b2a1e751ff1bda5",
+   "kind": "answer",
+   "question": "when was the last time the world series went less than 7 games",
+   "gold_answers": [
+    "Year Winning team Losing team Score Site Notes 1909 Pittsburgh Pirates Detroit Tigers 8 -- 0 Bennett Park , Detroit Rookie Babe Adams tosses a six hit shutout for his third win of the series . 1912 Boston Red Sox New York Giants 3 -- 2 F / 10 Fenway Park , Boston This decisive contest was actually game eight , as game two had ended in a tie . 1924 Washington Senators New York Giants 4 -- 3 F / 12 Griffith Stadium , Washington , D.C. Longest game seven in innings . In the 12th , Muddy Ruel doubled after a dropped foul popfly by Giants catcher Hank Gowdy . Ruel scored on a game - winning RBI double by Earl McNeely . 1925 Pittsburgh Pirates Washington Senators 9 -- 7 Forbes Field , Pittsburgh Pittsburgh became the first team in a best of seven to win the series when trailing three games to one . 1926 St. Louis Cardinals New York Yankees 3 -- 2 Yankee Stadium , the Bronx , New York City Grover Cleveland Alexander strikes out Tony Lazzeri with the bases loaded to end the seventh and preserve the Cardinals lead . Two innings later Babe Ruth is caught stealing to end the World Series . 1931 St. Louis Cardinals Philadelphia Athletics 4 -- 2 St. Louis , Missouri Last postseason game for the Athletics while based in Philadelphia . 1934 St. Louis Cardinals Detroit Tigers 11 -- 0 Navin Field , Detroit Dizzy Dean 's second win , a six - hit shutout on one day of rest , gives the Cardinals the title . 1940 Cincinnati Reds Detroit Tigers 2 -- 1 Crosley Field , Cincinnati This game was over in a snappy 1 : 47 while a sacrifice bunt and sacrifice fly scored the winning runs . 1945 Detroit Tigers Chicago Cubs 9 -- 3 Wrigley Field , Chicago Cubs last World Series appearance until 2016 . See also : Curse of the Billy Goat 1946 St. Louis Cardinals Boston Red Sox 4 -- 3 Sportsman 's Park III , St. Louis , Missouri Enos Slaughter 's famous mad dash scored the deciding run to win the game and the series . 1947 New York Yankees Brooklyn Dodgers 5 -- 2 Yankee Stadium , the Bronx , New York City This was the Series that featured Cookie Lavagetto 's pinch - hit that spoiled Bill Bevens ' no - hit bid and Al Gionfriddo 's catch to rob Joe DiMaggio of a home run . 1952 New York Yankees Brooklyn Dodgers 4 -- 2 Ebbets Field , Brooklyn , New York City Billy Martin 's game saving infield catch preserves the Yankees lead and helps win the game and the series . 1955 Brooklyn Dodgers New York Yankees 2 -- 0 Yankee Stadium , the Bronx , New York City Dodgers ' only championship in Brooklyn . The home team won all games of the series , except for game seven . 1956 New York Yankees Brooklyn Dodgers 9 -- 0 Ebbets Field , Brooklyn , New York City Jackie Robinson 's final Major League game . Last postseason game at Ebbets Field and Dodgers ' last postseason game before moving to Los Angeles . The home team won all games of the series , except for game seven . 1957 Milwaukee Braves New York Yankees 5 -- 0 Yankee Stadium , the Bronx , New York City The Braves ' only championship in Milwaukee . 1958 New York Yankees Milwaukee Braves 6 -- 2 County Stadium , Milwaukee The Yankees win their 18th World Series title after being down three games to one . This was the Braves ' last postseason game in Milwaukee . 1960 Pittsburgh Pirates New York Yankees 10 -- 9 Forbes Field , Pittsburgh Bill Mazeroski hit the walk - off home run to win the Pirates the championship . Last postseason game in Forbes Field . Last postseason game for Yankees ' manager Casey Stengel . Highest scoring game seven . 1962 New York Yankees San Francisco Giants 1 -- 0 Candlestick Park , San Francisco With runners on second and third and two outs , Willie McCovey 's line drive to Bobby Richardson ended the game . First game seven that ended with a 1 - 0 score . 1964 St. Louis Cardinals New York Yankees 7 -- 5 Busch Stadium I , St. Louis , Missouri The Yankees ' last World Series appearance until 1976 . Last postseason game at Busch Stadium I . 1965 Los Angeles Dodgers Minnesota Twins 2 -- 0 Metropolitan Stadium , Bloomington , Minnesota Pitching through immense pain and on two days rest , Sandy Koufax throws a 3 hit shutout to win the Series and World Series MVP . The home team won all games of the series , except for game seven . 1967 St. Louis Cardinals Boston Red Sox 7 -- 2 Fenway Park , Boston Bob Gibson wins his third game of the Series and also homers . 1968 Detroit Tigers St. Louis Cardinals 4 -- 1 Busch Stadium II , St. Louis , Missouri Mickey Lolich out - duels Bob Gibson . The Tigers rallied from a 3 - 1 deficit to win the series . First game seven loss by the Cardinals in the World Series . 1971 Pittsburgh Pirates Baltimore Orioles 2 -- 1 Memorial Stadium , Baltimore The home team won all games of the series , except for game seven . 1972 Oakland Athletics Cincinnati Reds 3 -- 2 Riverfront Stadium , Cincinnati The A 's first championship in Oakland . The A 's were the last American League team to win a World Series game seven on the road until 2017 . 1973 Oakland Athletics New York Mets 5 -- 2 Oakland -- Alameda County Coliseum , Oakland , California Bert Campaneris and Reggie Jackson hit the only Oakland home runs in this game to set the tone for victory and the series . Cincinnati Reds Boston Red Sox 4 -- 3 Fenway Park , Boston One night after Carlton Fisk 's famous home run , the Reds rebound to take the Series . 1979 Pittsburgh Pirates Baltimore Orioles 4 -- 1 Memorial Stadium , Baltimore The Pittsburgh Pirates , powered by NLCS and World Series MVP Willie Stargell , rally from a 3 - 1 deficit to win the series . The Pirates were the last team to win a road game seven until 2014 . 1982 St. Louis Cardinals Milwaukee Brewers 6 -- 3 Busch Stadium II , St. Louis , Missouri Joaquín Andújar earns his second win of the Series and Bruce Sutter his second save . 1985 Kansas City Royals St. Louis Cardinals 11 -- 0 Royals Stadium , Kansas City , Missouri Second World Series held entirely in the state of Missouri . The Royals also won the 1985 American League Championship Series in seven games . Royals became first team to win the World Series after losing the first two games at home . The Royals were the last team to come back from 3 -- 1 down to win a title , in any of the five major men 's professional sports leagues , until the Cleveland Cavaliers won the 2016 NBA Finals after trailing 3 -- 1 . The 1985 Royals were the last team to win a World Series after trailing 3 -- 1 until the Cubs did so in 2016 . 1986 New York Mets Boston Red Sox 8 -- 5 Shea Stadium , Flushing , Queens , New York Mets become the first team to be one strike away from elimination and come back to win the series . They also become the second team to win the series after losing the first two at home . Minnesota Twins St. Louis Cardinals 4 -- 2 Hubert H. Humphrey Metrodome , Minneapolis The home team won all seven games of the series for the first time in MLB history . 1991 Minnesota Twins Atlanta Braves 1 -- 0 F / 10 Hubert H. Humphrey Metrodome , Minneapolis Like in 1987 , the home team won all games of the series . The Twins won in the bottom of the 10th on a walk - off single by Gene Larkin scoring Dan Gladden after ​ 9 ⁄ scoreless innings of play . Jack Morris goes all ten innings for the Twins and is named the Series MVP . Twins Centerfielder Kirby Puckett hit a famous walk - off home run in the bottom of the eleventh inning of the previous night 's game to force this decisive game . 1997 Florida Marlins Cleveland Indians 3 -- 2 F / 11 Pro Player Stadium , Miami Gardens , Florida Florida becomes the first wild card team to win the World Series . The Marlins rallied for one run in the bottom of the ninth to tie and won in the eleventh on an Édgar Rentería RBI single off Charles Nagy . 2001 Arizona Diamondbacks New York Yankees 3 -- 2 Bank One Ballpark , Phoenix , Arizona Arizona becomes the fastest expansion team to win the World Series , rallying for two runs in the bottom of the ninth for a come - from - behind win , capped off by Luis Gonzalez hitting the winning RBI single off closer Mariano Rivera . The home team won every game of the series . 2002 Anaheim Angels San Francisco Giants 4 -- 1 Edison International Field , Anaheim , California Both World Series teams were wild card entrants into the playoffs . John Lackey became the second rookie pitcher to win a World Series game seven . 2011 St. Louis Cardinals Texas Rangers 6 -- 2 Busch Stadium , St. Louis , Missouri Cardinals became the second team to be one strike away from elimination and come back to win the series , which they did twice . Just like the 1991 series , a walk - off home run in the bottom of the eleventh inning of game six , forced this decisive game with David Freese providing the fire power . Most recent game seven won by the home team . 2014 San Francisco Giants Kansas City Royals 3 -- 2 Kauffman Stadium , Kansas City , Missouri Like in 2002 , both World Series teams were wild card entrants into the playoffs . The Giants became the first NL team to win a game seven on the road since 1979 . NLCS MVP and eventual World Series MVP Madison Bumgarner , normally a starter , pitched five scoreless innings of relief on two days rest to save the Giants ' third title in five years . 2016 Chicago Cubs Cleveland Indians 8 -- 7 F / 10 Progressive Field , Cleveland , Ohio Chicago Cubs ' first World Series win since 1908 . Game played between the two teams ( Cleveland Indians and Chicago Cubs ) with the longest active championship droughts . The Cubs are the first Major League Baseball team to come back to win the World Series from a 3 -- 1 series deficit since the 1985 Royals . Most recent World Series game seven to be decided in extra innings . First extra innings game seven to be won by the road team . 2017 Houston Astros Los Angeles Dodgers 5 -- 1 Dodger Stadium , Los Angeles First instance of back - to - back game sevens since 2001 -- 2002 . First World Series championship for the Astros , who became the first AL team to win a World Series game 7 on the road since 1972 . The Astros became the second team to win two winner - take - all game sevens in the same postseason since the Kansas City Royals in 1985 ."
+   ],
+   "model_answer": "2006"
+  },
+  {
+   "id": "dfe2f7f45215edfe",
+   "kind": "answer",
+   "question": "where does the saying like a boss come from",
+   "gold_answers": [
+    "`` Like a Boss '' is a song written and recorded by comedy hip hop troupe The Lonely Island for their debut studio album Incredibad . The song is a parody of the first official single from Slim Thug 's first album Already Platinum , also named `` Like a Boss '' . The song had multiple versions , including an audio - only that did not have the celebrity interviewer and a clean version that was produced in both audio and video . In 2011 it was also subject to a lawsuit from the producers of the song who claimed they never received proper compensation for their work ."
+   ],
+   "model_answer": "Slim Thug’s song “Like a Boss.”"
+  },
+  {
+   "id": "c1027b382c728181",
+   "kind": "answer",
+   "question": "who has given the theory of unbalanced economic growth",
+   "gold_answers": [
+    "Hirschman"
+   ],
+   "model_answer": "Albert O. Hirschman"
+  },
+  {
+   "id": "608bd7b5e79d96a4",
+   "kind": "answer",
+   "question": "jane the virgin recap season 4 episode 16",
+   "gold_answers": [
+    "Jane and Rafael start saving up to buy a one - bedroom apartment , but their plan falls apart when Mateo breaks an antique $4,000 clock . Rafael moves into the Villanueva house , but after Alba hits Mateo , the two get into a heated argument and Rafael moves back out . Xiomara starts chemotherapy , and makes a friend named Donna . The timeline moves forward nine weeks , and Donna dies of unforeseen consequences . Xiomara is shown not to be doing well due to the chemotherapy , Alba and Rafael are still in a fight and River and Rogelio are still arguing over the Passions of Santos adaptation . Alba breaks down to Jane , and she and Rafael make up . Xiomara bonds with River over telenovelas , after she accidentally eats a pot brownie , and she agrees to do the Passions of Steve and Brenda the Latin American way . Jane Ramos gets herself disbarred , and as a result gets the case against Petra thrown out .",
+    "No . overall No. in season Title Directed by Written by Original air date U.S. viewers ( millions ) 65 `` Chapter Sixty - Five '' Brad Silberling Jennie Snyder Urman & Paul Sciarrotta October 13 , 2017 ( 2017 - 10 - 13 ) 0.68 Picking up immediately after where Season 3 left off , Jane is reunited with her first love , Adam , who found the love letter that Michael wrote . She is surprised , but happy , to see him . However , both Xo and Alba are less thrilled that he is back . Meanwhile , Rafael loses ownership of the hotel to his sister and as a result , he finds himself living at Jane 's house , broke and homeless . Jane and Rafael learn that the missing Petra has been found after she got away from Anezka and they rush to her side , but Anezka is nowhere to be found . When Petra returns to the hotel , Luisa thinks that Petra is Anezka . Petra goes along with the game , until the real Anezka returns . Elsewhere , Xo and Rogelio 's married life is interrupted when they confront the realization that Darci is having Rogelio 's baby and she wants full custody . 66 `` Chapter Sixty - Six '' Gina Lamar Valentina Garza & Jessica O'Toole & Amy Rardin October 20 , 2017 ( 2017 - 10 - 20 ) 0.61 Jane 's relationship with Adam helps bring out her `` fun side '' and reminds her that she is n't just a mom . However , when Adam gets a job opportunity out of state , he asks for Jane 's opinion on if he should stay or go . Meanwhile , Rogelio continues to face issues with his co-star at work and things are about to get even worse . Xo is helping to take care of Darci to prove that Rogelio is committed to being a father to the baby . Also , Petra and Rafael begin working together to try and buy back the hotel from Luisa , but they are running into trouble involving Anezka , causing tension between them . 67 `` Chapter Sixty - Seven '' Fernando Sariñana Carolina Rivera & Micah Schraft October 27 , 2017 ( 2017 - 10 - 27 ) 0.60 Jane and Adam 's relationship seems to be moving on , and Jane thinks that it might be time for him to meet her son Mateo , but Rafael is not happy with this idea . Meanwhile , as the arrival of Darci 's baby approaches , Rogelio 's jealously of her new boyfriend increases as well . Trying to be supportive , Xo encourages Rogelio to step up and be the father he was meant to be . Elsewhere , Rafael is determined to get his hotel and life back from Luisa and will do whatever he has to do to make it happen , with or without Petra 's help . 68 `` Chapter Sixty - Eight '' Gina Lamar Deirdre Shaw & Chantelle M. Wells November 3 , 2017 ( 2017 - 11 - 03 ) 0.69 Jane becomes angry when she learns that Rafael introduced Mateo to his new girlfriend , Katherine , without her consent because she thinks Katherine is a negative influence on both Rafael and Mateo . Jane turns to Petra for help with the situation . Meanwhile , Rogelio and Darci struggle to choose a name for the baby . Elsewhere , Xo , who is focused on opening her own dance studio , decides to go into business with an unlikely foe . 69 5 `` Chapter Sixty - Nine '' Stuart Gillard Paul Sciarrotta November 10 , 2017 ( 2017 - 11 - 10 ) 0.65 After Adam reveals his dating past to Jane , she becomes so unsure and insecure that it puts a strain on their relationship . Meanwhile , Lina seeks Jane 's advice about whether she should get married or not . Petra hears some important information that could help Rafael get the hotel back . Also , Xo asks Rogelio to consider having a medical procedure ( vasectomy ) done , but he is very hesitant . 70 6 `` Chapter Seventy '' Melanie Mayron Carolina Rivera & Micah Schraft November 17 , 2017 ( 2017 - 11 - 17 ) 0.61 Jane 's book is finally being released but her plans to have a party at the local bookshop where she was inspired to be a writer hit a snag . Always wanting to help Jane , Rogelio devises a plan to save the day , but one of his arch - rivals threatens to ruin the day . Meanwhile , Rafael gets a new job , but it is not exactly what he was hoping for . Also , Petra has come up with an interesting strategy to get the Marbella Hotel back from Luisa , but Rafael wants nothing to do with the scheme . 71 7 `` Chapter Seventy - One '' Micah Schraft Valentina Garza & Deidre Shaw December 8 , 2017 ( 2017 - 12 - 08 ) 0.65 Anezka is revealed to have faked her death to see where her loyalties lie ; initially , she trusts Petra after believing she saw her cry , but after finding out she was n't crying because of her fake death , she threatens Petra . Later , Anezka falls from Petra 's apartment to her death ... for real . Meanwhile , Xiomara and Jane set off on Jane 's book tour , when Alba decides to tag along . After they get back , Jane and Rafael share a kiss . 72 8 `` Chapter Seventy - Two '' Melanie Mayron Carolina Rivera & Paul Sciarrotta January 26 , 2018 ( 2018 - 01 - 26 ) 0.68 Mateo starts kindergarten and invites a friend over to Xiomara and Rogelio 's house . Jane and Rafael try to cover up that they are pretending to live in their house so they do n't get kicked out . Jane and Rafael show mixed emotions following the kiss and try again , which Mateo notices . He then proclaims : `` Does this mean you 're going to get married ? '' After Xo convinces Rogelio to attend couples therapy , they both are surprised by their emotions . Meanwhile , Petra hires a lawyer named Jane Ramos ( Rosario Dawson ) , to ensure she gets no charges pending Anezka 's death . Also , Rafael moves out of Jane 's house into his new apartment . 73 9 `` Chapter Seventy - Three '' Eric Lea Valentina Garza & Chantelle M. Wells February 2 , 2018 ( 2018 - 02 - 02 ) 0.67 When Jane and Rafael finally realize that the uncertain state of their relationship ( or lack of it ) is stressing out Mateo , they decide that they need to make a decision . Meanwhile , Petra is on the outs with Jane and Rafael after the Luisa fiasco , so she tries to figure out a way to get back into their good graces . Elsewhere , Rogelio and Xo are both contemplating their career choices . 74 10 `` Chapter Seventy - Four '' Gina Rodriguez Micah Schraft & Paul Sciarrotta February 9 , 2018 ( 2018 - 02 - 09 ) 0.80 Jane and Rafael try to be friends , which works great until Jane goes on a date . Meanwhile , Petra and Jane 's new partnership is off to a rocky start , but they both know they have to find a way to work together somehow . Rogelio is convinced he has male post-partum depression , which puts him at odds with with celebrity Post-Partum Advocate River Fields ( guest star Brooke Shields ) on The Talk . Also , Alba finally confides in Jane why she turned down the marriage proposal , leaving Jane to help Alba in the romance department when Jane takes Alba to a sex store and buys her a vibrator . Elsewhere , Jane and Rafael agree to have sex , and Petra questions her own sexual identity when she starts to have sex dreams about Jane `` J.R. '' Ramos after the lawyer begins flirting with her . 75 11 `` Chapter Seventy - Five '' Gina Lamar Merigan Mulhern March 2 , 2018 ( 2018 - 03 - 02 ) 0.59 Jane is ready to move on from the Marbella Hotel issues and pursue writing full time , but an unexpected development forces her to consider returning to her teaching roots . Xiomara decides to go back to school where she listens in on an art history class , while Jane teaches a seminar about writing . Here , Jane finds out Jonathan Chavez , her former advisor , is taking advantage of another student of his . While trying to warn the student , Jane accidentally grabs her breasts to avoid falling over and , as a result , does n't get the teaching job she was applying for . Meanwhile , Petra gets arrested for Anezka 's murder due to the blackmailer planting the screws in her apartment , leading Jane Ramos to tell Petra that she was framing her because she was being threatened by an unknown blackmailer . Also , Rafael and Jane continue their affair . Elsewhere , Rogelio tries to get Eva Longoria to join his Passions of Santos reboot , but instead finds out the two are distant cousins . 76 12 `` Chapter Seventy - Six '' Melanie Mayron Leah Longoria March 9 , 2018 ( 2018 - 03 - 09 ) 0.58 Jane 's fixation on a negative review has left her with writer 's block , so Rogelio suggests she take a writing class to help . With the encouragement of Jane , Rafael is ready to dig into his past to find out who his real biological parents are . Meanwhile , Rogelio is trying to make things less about him and more about Xo , but he grows suspicious when he learns she is keeping a secret from him . But the secret Xo has been keeping is not what Rogelio suspected . Elsewhere , Petra tests the loyalty of her lawyer , Jane Ramos , by pretending to be romantically interested in her while trying to find out the identity of the blackmailer . After Petra confides in Jane R. of her feelings which are not fake , the two of them sleep together for the first time . 77 13 `` Chapter Seventy - Seven '' Gina Lamar Deirdre Shaw & Chantelle M. Wells March 16 , 2018 ( 2018 - 03 - 16 ) 0.59 When Jane , Rogelio and Alba learn what is going on with Xo who might have breast cancer , they all try to comfort her , but Xo insists they let her live her life . Meanwhile , Rogelio finally gets River Fields to agree to meet with him , but he learns that River has another plan in mind . Also , Rafael is on a mission to find his sister , who may have the information he has been looking for of his origins . Rafael visits Rose in prison to ask for her help , but he quickly turns her down when she makes a demand to know Luisa 's location . Also , Jane is upset with Petra after her twin girls spill a secret to Mateo about the Tooth Fairy being make believe . At the same time , Jane ' J.R. ' Ramos tells Petra after their romantic night together that she is not interested in a relationship due to the blackmailer paying a visit to Jane R. 's dementia - stricken mother in a rest home . At the end , the identity of Jane R 's blackmailer is finally revealed . 78 14 `` Chapter Seventy - Eight '' Justin Baldoni Valentina Garza & Micah Schraft March 23 , 2018 ( 2018 - 03 - 23 ) 0.65 Xo struggles to make an important decision on whether or not to get a full mastectomy and looks to Jane for guidance , leaving Rogelio feeling like an outsider . Alba is frustrated with Rogelio when it seems he is once again making his career a priority over Xo 's well being . Meanwhile , Petra turns to Rafael for advice on her love life after he finally learns about her new romance with J.R. 79 15 `` Chapter Seventy - Nine '' Gina Lamar Paul Sciarrotta April 6 , 2018 ( 2018 - 04 - 06 ) 0.53 80 16 `` Chapter Eighty '' Micah Schraft Micah Schraft April 13 , 2018 ( 2018 - 04 - 13 ) 0.57 Jane and Rafael start saving up to buy a one - bedroom apartment , but their plan falls apart when Mateo breaks an antique $4,000 clock . Rafael moves into the Villanueva house , but after Alba hits Mateo , the two get into a heated argument and Rafael moves back out . Xiomara starts chemotherapy , and makes a friend named Donna . The timeline moves forward nine weeks , and Donna dies of unforeseen consequences . Xiomara is shown not to be doing well due to the chemotherapy , Alba and Rafael are still in a fight and River and Rogelio are still arguing over the Passions of Santos adaptation . Alba breaks down to Jane , and she and Rafael make up . Xiomara bonds with River over telenovelas , after she accidentally eats a pot brownie , and she agrees to do the Passions of Steve and Brenda the Latin American way . Jane Ramos gets herself disbarred , and as a result gets the case against Petra thrown out . 81 17 `` Chapter Eighty - One '' Gina Lamar Jennie Snyder Urman & Paul Sciarrotta April 20 , 2018 ( 2018 - 04 - 20 ) 0.58 Rafael intends to propose to Jane , however Rose 's news unsettles him . Alba becomes a citizen and the Villanueva 's throw her a surprise party . Jane Ramos and Petra plan to move in together , until Jane finds out that Petra killed Anezka . As she walks out , Krishna tells her that her life is in danger . J.R. saves Petra 's life by shooting , and killing , the blackmailer . As Jane meets Rafael , Michael is revealed to be alive ."
+   ],
+   "model_answer": "Jane and Rafael commit to a future together as Xo faces a breast cancer diagnosis and Alba becomes a U.S. citizen."
+  },
+  {
+   "id": "9562dde3663253e7",
+   "kind": "answer",
+   "question": "differentiate between dot matrix printer and daisy wheel printer",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Dot matrix: dot-built, graphics-capable; daisy wheel: pre-formed characters, sharper text."
+  },
+  {
+   "id": "820a225717ac2c75",
+   "kind": "answer",
+   "question": "where is the tv show the curse of oak island filmed",
+   "gold_answers": [
+    "Oak Island"
+   ],
+   "model_answer": "Oak Island, Nova Scotia"
+  },
+  {
+   "id": "08867317080eea83",
+   "kind": "answer",
+   "question": "results of the large-scale women's health initiative released in 2002 revealed hormone therapy may",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Increase stroke and breast cancer risk without preventing coronary disease."
+  },
+  {
+   "id": "6d564bee54cf5a85",
+   "kind": "answer",
+   "question": "with which regions does australia have historical ties",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The United Kingdom and New Zealand"
+  },
+  {
+   "id": "b297145cd70fa0d9",
+   "kind": "answer",
+   "question": "spike jones and his city slickers two front teeth",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Recorded in 1947; a chart-topper in 1948 and 1949."
+  },
+  {
+   "id": "dc3b2b0f5d9bae08",
+   "kind": "answer",
+   "question": "what does the board of directors consist of",
+   "gold_answers": [
+    "a recognized group of people who jointly oversee the activities of an organization"
+   ],
+   "model_answer": "A group of elected or appointed directors who oversee an organization."
+  },
+  {
+   "id": "eba974017843302b",
+   "kind": "answer",
+   "question": "where is the stanley cup being held this year",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Pittsburgh and Nashville"
+  },
+  {
+   "id": "6f3626a9dc5abc4b",
+   "kind": "answer",
+   "question": "i-o psychologists study our behavior on the job by",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Applying psychological theories and principles to work behavior\n"
+  },
+  {
+   "id": "349df54616297e7f",
+   "kind": "answer",
+   "question": "who dies in season 6 of once upon a time",
+   "gold_answers": [
+    "Edmond Dantes, The Count of Monte Cristo",
+    "Jekyll",
+    "Hyde"
+   ],
+   "model_answer": "Mary, Jekyll, Hyde, Edmond, Robert, Fiona, and the Evil Queen."
+  },
+  {
+   "id": "2e0ac8ed779c5f1e",
+   "kind": "answer",
+   "question": "when did they replace lead with graphite in pencils",
+   "gold_answers": [
+    "never contained the element lead"
+   ],
+   "model_answer": "Pencils never contained lead; graphite pencils emerged in the 16th century."
+  },
+  {
+   "id": "e260cf66d847282b",
+   "kind": "answer",
+   "question": "can a ucc be filed on an individual",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, if the individual is a debtor in a secured transaction."
+  },
+  {
+   "id": "105bc5e6f495c202",
+   "kind": "answer",
+   "question": "texas flip and move how does it work",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Teams buy old houses, move them, renovate them, then sell them at auction."
+  },
+  {
+   "id": "e5c58721a5d42c9a",
+   "kind": "answer",
+   "question": "how much does.it cost to raise a child",
+   "gold_answers": [
+    "Dual - Parent Family - USDA Average Spending per Child ( not the basic cost of raising ) Age of Child Housing Food Transport . Clothing Health Child Care / Education Misc . Total Before - tax income : Less than $59,410 ( Average = $38,000 ) 0 to 2 2,990 1,160 1,170 640 630 2,040 420 9,050 3 to 5 2,990 1,260 1,230 500 590 1,910 620 9,100 6 to 8 2,990 1,710 1,350 570 660 1,290 630 8,760 9 to 11 2,990 1,970 1,350 580 710 1,910 630 9,520 12 to 14 2,990 2,130 1,480 690 1,090 1,110 700 9,960 15 to 17 2,990 2,120 1,630 730 1,010 1,290 580 9,970 Total 53,820 31,050 24,630 11,130 14,070 23,640 10,740 169,080 Before - tax income : $59,410 to $102,870 ( Average = $79,940 ) 0 to 2 3,920 1,405 1,690 760 850 2,860 890 12,370 3 to 5 3,920 1,490 1,740 610 800 2,740 1,090 12,390 6 to 8 3,920 2,100 1,860 680 940 1,680 1,110 12,290 9 to 11 3,920 2,400 1,870 710 1,000 2,110 1,100 13,110 12 to 14 3,920 2,580 1,990 840 1,410 1,910 1,170 13,820 15 to 17 3,920 2,570 2,150 900 1,330 2,400 1,050 14,320 Total 70,560 37,620 33,900 13,500 18,990 41,100 19,230 234,900 Before - tax income : More than $102,870 ( Average = $180,040 ) 0 to 2 7,100 1,900 2,550 1,050 980 5,090 1,790 20,460 3 to 5 7,100 2,000 2,610 880 930 4,970 1,990 20,480 6 to 8 7,100 2,630 2,730 970 1,080 3,910 2,000 20,420 9 to 11 7,100 2,980 2,730 1,010 1,150 4,350 2,000 21,320 12 to 14 7,100 3,190 2,860 1,170 1,610 4,700 2,070 22,700 15 to 17 7,100 3,180 3,020 1,280 1,520 6,460 1,950 24,510 Total 127,800 47,640 49,500 19,080 21,810 88,440 35,400 389,670"
+   ],
+   "model_answer": "About $234,900 in the U.S. through age 17."
+  },
+  {
+   "id": "02afbc83ddbd26c8",
+   "kind": "answer",
+   "question": "when was the worlds first laptop computer introduced in the market and by whom",
+   "gold_answers": [
+    "The portable micro computer the “Portal\" of the French company R2E Micral CCMC officially appeared in September 1980",
+    "September 1980",
+    "R2E Micral CCMC"
+   ],
+   "model_answer": "1983, by GRiD Systems Corporation."
+  },
+  {
+   "id": "ab9efda020109108",
+   "kind": "answer",
+   "question": "head over boots for you by jon pardi",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "“Head Over Boots” is a song by Jon Pardi."
+  },
+  {
+   "id": "e5d1a2eccbcbfd15",
+   "kind": "answer",
+   "question": "what purpose did seasonal monsoon winds have on trade",
+   "gold_answers": [
+    "enabled European empire expansion into the Americas and trade routes to become established across the Atlantic and Pacific oceans"
+   ],
+   "model_answer": "They enabled predictable sailing schedules for trade."
+  },
+  {
+   "id": "8a09e3b07072e2e7",
+   "kind": "answer",
+   "question": "where do the royalties for winnie the pooh go",
+   "gold_answers": [
+    "Slesinger, Inc.",
+    "the Slesinger family"
+   ],
+   "model_answer": "Primarily to Disney and the heirs of A. A. Milne and Stephen Slesinger."
+  },
+  {
+   "id": "fe4b79481bdb6492",
+   "kind": "answer",
+   "question": "when does the soul train music awards come on tv",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Usually in late November or early December."
+  },
+  {
+   "id": "ac3bb2317f579bca",
+   "kind": "answer",
+   "question": "where does the story the great gatsby take place",
+   "gold_answers": [
+    "the fictional town of West Egg on prosperous Long Island",
+    "Long Island of 1922"
+   ],
+   "model_answer": "West Egg on Long Island, in the summer of 1922."
+  },
+  {
+   "id": "0918571f408f47d0",
+   "kind": "answer",
+   "question": "what are the top five wine producing states",
+   "gold_answers": [
+    "California",
+    "Washington",
+    "New York",
+    "Pennsylvania",
+    "Oregon"
+   ],
+   "model_answer": "California, Washington, New York, Pennsylvania, Oregon"
+  },
+  {
+   "id": "d74019e0fc53fd49",
+   "kind": "answer",
+   "question": "what is the significance of the sahara desert",
+   "gold_answers": [
+    "the largest hot desert and the third largest desert in the world after Antarctica and the Arctic",
+    "the largest hot desert",
+    "the third largest desert in the world after Antarctica and the Arctic"
+   ],
+   "model_answer": "The world’s largest hot desert and third-largest desert."
+  },
+  {
+   "id": "1aaefe022bd4fa17",
+   "kind": "answer",
+   "question": "in opera buffa what key usually signifies peasants",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "F major"
+  },
+  {
+   "id": "c9c576d325f9c7b5",
+   "kind": "answer",
+   "question": "percy jackson and the olympians sea of monsters summary",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Percy and his friends rescue Grover and retrieve the Golden Fleece to save Camp Half-Blood."
+  },
+  {
+   "id": "b021164c6714a43e",
+   "kind": "answer",
+   "question": "who is the speaker in shooting an elephant",
+   "gold_answers": [
+    "Orwell",
+    "Orwell, writing in the first person",
+    "possibly Orwell himself, called upon to shoot an aggressive elephant while working as a police officer in Burma",
+    "the English narrator, possibly Orwell himself"
+   ],
+   "model_answer": "George Orwell (the narrator)"
+  },
+  {
+   "id": "7934ce627a9d6e0e",
+   "kind": "answer",
+   "question": "what part of the brain is in the middle cranial fossa",
+   "gold_answers": [
+    "the temporal lobes",
+    "temporal lobes",
+    "pituitary gland",
+    "the pituitary gland"
+   ],
+   "model_answer": "Temporal lobes and pituitary gland"
+  },
+  {
+   "id": "341be6f94e32bf86",
+   "kind": "answer",
+   "question": "meaning of joy to the world by three dog night",
+   "gold_answers": [
+    "When Hoyt Axton performed the song to the group , two of the three main vocalists -- Danny Hutton and Cory Wells -- rejected the song , but Chuck Negron felt that the band needed a `` silly song '' to help bring the band back together as a working unit . Negron also felt that the song `` was n't even close to our best record , but it might have been one of our most honest . ''",
+    "The song , which has been described by members of Three Dog Night as a `` kid 's song '' and a `` silly song '' , topped the main singles charts in North America , was certified gold by the RIAA , and has since been covered by multiple artists ."
+   ],
+   "model_answer": "A playful, nonsensical “kid’s song” with no specific deeper meaning stated."
+  },
+  {
+   "id": "d3256b4e01af231b",
+   "kind": "answer",
+   "question": "90 day fiance 1st season where are they now",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Alan/Kirlyam, Mike/Aziza, and Louis/Aya remain together; Chelsea/Yamir divorced; Russ/Paola have had an on-and-off relationship."
+  },
+  {
+   "id": "86a9a0bf0107ca35",
+   "kind": "answer",
+   "question": "90 day fiance 1st season where are they now",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "“Where Are They Now? Season 1 Couples” (October 19, 2014)"
+  },
+  {
+   "id": "a427fe63b88c3a99",
+   "kind": "answer",
+   "question": "how much does it cost for the olympics",
+   "gold_answers": [
+    "on average USD 5.2 billion and for the Winter Games USD 3.1 billion dollars"
+   ],
+   "model_answer": "Average sports-related costs: $5.2 billion for Summer and $3.1 billion for Winter Olympics."
+  },
+  {
+   "id": "652450b31c4e0942",
+   "kind": "answer",
+   "question": "who dies in season 6 of once upon a time",
+   "gold_answers": [
+    "Edmond Dantes, The Count of Monte Cristo",
+    "Jekyll",
+    "Hyde"
+   ],
+   "model_answer": "Robert, the Evil Queen, and Fiona (the Black Fairy)."
+  },
+  {
+   "id": "b225fd76886caba5",
+   "kind": "answer",
+   "question": "lynyrd skynyrd last of a dying breed album",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Lynyrd Skynyrd’s 14th studio album, released in 2012."
+  },
+  {
+   "id": "62eac10dcd56ed27",
+   "kind": "answer",
+   "question": "where is deforestation occurring in the united states",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Across U.S. forests, particularly in the eastern forests and areas affected by logging, development, and wildfires."
+  },
+  {
+   "id": "a08c3a12d2eeb992",
+   "kind": "answer",
+   "question": "where are located the acetabulum and the glenoid cavities",
+   "gold_answers": [
+    "Compared to the acetabulum ( at the hip - joint ) the glenoid cavity is relatively shallow . This makes the shoulder joint prone to dislocation ( luxation ) . Strong glenohumeral ligaments and muscles prevents dislocation in most cases ."
+   ],
+   "model_answer": "Acetabulum: hip; glenoid cavity: lateral scapula at the shoulder."
+  },
+  {
+   "id": "62677321730c5706",
+   "kind": "answer",
+   "question": "my girl don't lie to me american gods",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "“Don’t Lie to Me” by Albert King."
+  },
+  {
+   "id": "00c5835d23fddbcb",
+   "kind": "answer",
+   "question": "explain how an operating system talks to hardware",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Through device drivers and the kernel."
+  },
+  {
+   "id": "fc183082a8a4c47d",
+   "kind": "answer",
+   "question": "where in the constitution is the concept of federalism established",
+   "gold_answers": [
+    "Because the states were preexisting political entities , the U.S. Constitution did not need to define or explain federalism in any one section but it often mentions the rights and responsibilities of state governments and state officials in relation to the federal government . The federal government has certain express powers ( also called enumerated powers ) which are powers spelled out in the Constitution , including the right to levy taxes , declare war , and regulate interstate and foreign commerce . In addition , the Necessary and Proper Clause gives the federal government the implied power to pass any law `` necessary and proper '' for the execution of its express powers . Other powers -- the reserved powers -- are reserved to the people or the states . The power delegated to the federal government was significantly expanded by the Supreme Court decision in McCulloch v. Maryland ( 1819 ) , amendments to the Constitution following the Civil War , and by some later amendments -- as well as the overall claim of the Civil War , that the states were legally subject to the final dictates of the federal government ."
+   ],
+   "model_answer": "It is not established in any one section."
+  },
+  {
+   "id": "695d5b10503c51c4",
+   "kind": "answer",
+   "question": "when do law students take the bar exam",
+   "gold_answers": [
+    "Each state controls where it administers its bar exam . Because the MBE ( below ) is a standardized test , it must be administered on the same day across the country . That day occurs twice a year as the last Wednesday in July and the last Wednesday in February . Two states , Delaware and North Dakota , may administer their bar exams only once , in July , if they do not have enough applicants to merit a second sitting . North Dakota requires ten applicants in order to administer the February exam . Most bar exams are administered on consecutive days . Louisiana is the exception , with the Louisiana Bar Exam being a three - day examination on Monday , Wednesday and Friday . Also , Louisiana 's examination is the longest in the country in terms of examination time , with seven hours on Monday and Wednesday and seven and one half hours on Friday for a total of 21.5 hours of testing . Montana 's bar examination also occurs over a three - day period , with a total of 18 hours of testing . The bar exams in Delaware , Nevada , Ohio , South Carolina , and Texas are also three days long . The California bar exam moved to a two - day format beginning with the July , 2017 exam .",
+    "To refresh their memory on `` black - letter rules '' tested on the bar , most students engage in a regimen of study ( called `` bar review '' ) between graduating from law school and sitting for the bar . For bar review , most students in the United States attend a private bar review course which is provided by a third - party company and not their law school ."
+   ],
+   "model_answer": "After law school graduation; in the U.S., typically in February or July."
+  },
+  {
+   "id": "ad115760b2c9e9a6",
+   "kind": "answer",
+   "question": "are there many copies of sir gawain and the green knight",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No—only one surviving manuscript."
+  },
+  {
+   "id": "217508aee444ca40",
+   "kind": "answer",
+   "question": "fitting of rim on a locomotive wheel is done by",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Heating the steel tire to expand it, then slipping it over the wheel."
+  },
+  {
+   "id": "0878b29d0e24483c",
+   "kind": "answer",
+   "question": "what was going on in 1954 in the us",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Civil rights rulings, McCarthy hearings, polio vaccinations, and Cold War interventions."
+  },
+  {
+   "id": "c2b091c4268cb806",
+   "kind": "answer",
+   "question": "it took 130 years for the human population to double from 1 billion to 2 billion",
+   "gold_answers": [
+    "Starting at 500 million Population ( in billions ) 0.5 8 Year 1500 1804 1927 2024 Years elapsed 304 123 47 50"
+   ],
+   "model_answer": "No, it took 123 years."
+  },
+  {
+   "id": "8edea5bd51596227",
+   "kind": "answer",
+   "question": "when is the next tangled the series episode coming out",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "No new episode is planned; the series ended in 2020."
+  }
+ ],
+ "evidence": []
+}

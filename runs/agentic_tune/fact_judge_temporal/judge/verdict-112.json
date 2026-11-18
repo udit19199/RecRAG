@@ -1,0 +1,28 @@
+[
+{"id": "2e2576396d835cc2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "If the debt continues to rise more than the economy, risks will increase, and"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "the government may “crowd out” private investment as it competes with the private sector for funds to service its debt."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "the government may “crowd out” private investment"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}, {"item": 9, "quote": "told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 9, "quote": "told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."}]}
+]},
+{"id": "ed8846e538a8842d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Entering Week 12, Tee Higgins (hamstring), Noah Brown (knee), Treylon Burks (concussion), and Kadarius Toney (ankle, hip) all failed to suit up due to nagging injuries."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Entering Week 12, Tee Higgins (hamstring), Noah Brown (knee), Treylon Burks (concussion), and Kadarius Toney (ankle, hip) all failed to suit up due to nagging injuries."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Entering Week 12, Tee Higgins (hamstring), Noah Brown (knee), Treylon Burks (concussion), and Kadarius Toney (ankle, hip) all failed to suit up due to nagging injuries."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "Entering Week 12, Tee Higgins (hamstring), Noah Brown (knee), Treylon Burks (concussion), and Kadarius Toney (ankle, hip) all failed to suit up due to nagging injuries."}]}
+]},
+{"id": "d64bb61b056c30a7", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]}
+]}
+]

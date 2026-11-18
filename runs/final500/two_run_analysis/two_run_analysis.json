@@ -1,0 +1,2497 @@
+{
+ "definition": "Previous = held-out 400 (runs/heldout400, 100 per type); latest = final500 MultiHop-RAG (runs/final500, 125 per type). Per question type only; no pooled MultiHop-RAG numbers. 'latest_on_previous_400' = latest run restricted to the previous run's questions.",
+ "notes": "Latest Normal RAG, RAPTOR and HippoRAG reuse the previous run's answers (same run folders) on the 400 and answered 25 new questions per type; only Agentic Hybrid RAG was re-run (new version) on all 500. Previous answered-right uses the previous Haiku answer verdicts, latest the fresh Haiku answer judge. judge/excluded_records.json lists only 2 Natural Questions ids, so no MultiHop-RAG question is left out.",
+ "data_sources": {
+  "previous": "runs/heldout400/runs/<method>/<timestamp>/results.jsonl, the r1-r3 folders listed in runs/heldout400/manifest.jsonl (r2 Agentic is the r2resume folders plus the 20261101T231404 resume folders). Latency pass: the 4 'latency' folders in the same manifest (40 questions per method, 10 per type, 1 worker).",
+  "latest": "the folders in runs/final500/run_registry.json['multihop_rag']: Normal RAG, RAPTOR and HippoRAG are the previous run's r1-r3 folders for the 400 plus 2 new folders per repeat (runs/<method>/20261113T0941*-0942*) for the 100 new questions; Agentic Hybrid RAG is 6 new folders per repeat (runs/graphrag/20261113T0948*-0949*). runs/final500/multihop_rag/<method>/r* hold no extra timing data. No one-worker latency pass exists for the latest run (searched runs/final500 jobs, logs, scripts, STATUS/DECISIONS).",
+  "fields": "Latency = retrieval_and_answer_seconds (wall clock from the start of retrieval to the end of the answer, per question); model_seconds = time inside API calls. Tokens = question_cost.calls[*].input_tokens / output_tokens (API usage per call; output includes reasoning). Query cost = list_question_cost_usd, re-derived from those tokens at settings.json pricing (gpt-6-luna $0.10/M input, $0.50/M output, no cached-input discount; text-embedding-3-small $0.02/M); identical pricing block in both runs."
+ },
+ "cost_rows_rechecked_from_tokens": {
+  "previous": 4800,
+  "latest": 6000
+ },
+ "sections": {
+  "1_significance": {
+   "definition": "Per question, right = right in >=2 of 3 repeats. Exact two-sided McNemar on Agentic-only vs baseline-only right counts. p_holm_12 = Holm over the 12 per-type tests of each run (3 baselines x 4 types). Wins/ties/losses compare the mean over 3 repeats per question.",
+   "notes": "The poster's Holm p used 15 tests (incl. a pooled 'all' row); with the pooled row dropped Holm is over 12, so previous Holm p differ from the poster (e.g. temporal vs Normal RAG 0.492 -> 0.422). Raw p, wins/ties/losses and discordant counts reproduce insights.json exactly. Agentic Hybrid RAG is a different version in each run; the baselines are the same answers on the 400.",
+   "previous": {
+    "comparison_query": [
+     {
+      "vs": "Normal RAG",
+      "questions": 100,
+      "agentic_right_2of3": 53,
+      "other_right_2of3": 53,
+      "agentic_only_right": 7,
+      "other_only_right": 7,
+      "p": 1.0,
+      "wins": 13,
+      "ties": 71,
+      "losses": 16,
+      "p_holm_12": 1.0
+     },
+     {
+      "vs": "RAPTOR",
+      "questions": 100,
+      "agentic_right_2of3": 53,
+      "other_right_2of3": 46,
+      "agentic_only_right": 15,
+      "other_only_right": 8,
+      "p": 0.21004,
+      "wins": 17,
+      "ties": 67,
+      "losses": 16,
+      "p_holm_12": 1.0
+     },
+     {
+      "vs": "HippoRAG",
+      "questions": 100,
+      "agentic_right_2of3": 53,
+      "other_right_2of3": 47,
+      "agentic_only_right": 12,
+      "other_only_right": 6,
+      "p": 0.237885,
+      "wins": 17,
+      "ties": 63,
+      "losses": 20,
+      "p_holm_12": 1.0
+     }
+    ],
+    "temporal_query": [
+     {
+      "vs": "Normal RAG",
+      "questions": 100,
+      "agentic_right_2of3": 56,
+      "other_right_2of3": 47,
+      "agentic_only_right": 12,
+      "other_only_right": 3,
+      "p": 0.035156,
+      "wins": 25,
+      "ties": 62,
+      "losses": 13,
+      "p_holm_12": 0.421872
+     },
+     {
+      "vs": "RAPTOR",
+      "questions": 100,
+      "agentic_right_2of3": 56,
+      "other_right_2of3": 49,
+      "agentic_only_right": 12,
+      "other_only_right": 5,
+      "p": 0.143463,
+      "wins": 23,
+      "ties": 64,
+      "losses": 13,
+      "p_holm_12": 1.0
+     },
+     {
+      "vs": "HippoRAG",
+      "questions": 100,
+      "agentic_right_2of3": 56,
+      "other_right_2of3": 59,
+      "agentic_only_right": 9,
+      "other_only_right": 12,
+      "p": 0.663624,
+      "wins": 19,
+      "ties": 62,
+      "losses": 19,
+      "p_holm_12": 1.0
+     }
+    ],
+    "inference_query": [
+     {
+      "vs": "Normal RAG",
+      "questions": 100,
+      "agentic_right_2of3": 97,
+      "other_right_2of3": 96,
+      "agentic_only_right": 2,
+      "other_only_right": 1,
+      "p": 1.0,
+      "wins": 3,
+      "ties": 94,
+      "losses": 3,
+      "p_holm_12": 1.0
+     },
+     {
+      "vs": "RAPTOR",
+      "questions": 100,
+      "agentic_right_2of3": 97,
+      "other_right_2of3": 98,
+      "agentic_only_right": 1,
+      "other_only_right": 2,
+      "p": 1.0,
+      "wins": 1,
+      "ties": 95,
+      "losses": 4,
+      "p_holm_12": 1.0
+     },
+     {
+      "vs": "HippoRAG",
+      "questions": 100,
+      "agentic_right_2of3": 97,
+      "other_right_2of3": 97,
+      "agentic_only_right": 2,
+      "other_only_right": 2,
+      "p": 1.0,
+      "wins": 2,
+      "ties": 94,
+      "losses": 4,
+      "p_holm_12": 1.0
+     }
+    ],
+    "null_query": [
+     {
+      "vs": "Normal RAG",
+      "questions": 100,
+      "agentic_right_2of3": 98,
+      "other_right_2of3": 94,
+      "agentic_only_right": 4,
+      "other_only_right": 0,
+      "p": 0.125,
+      "wins": 5,
+      "ties": 92,
+      "losses": 3,
+      "p_holm_12": 1.0
+     },
+     {
+      "vs": "RAPTOR",
+      "questions": 100,
+      "agentic_right_2of3": 98,
+      "other_right_2of3": 96,
+      "agentic_only_right": 2,
+      "other_only_right": 0,
+      "p": 0.5,
+      "wins": 3,
+      "ties": 92,
+      "losses": 5,
+      "p_holm_12": 1.0
+     },
+     {
+      "vs": "HippoRAG",
+      "questions": 100,
+      "agentic_right_2of3": 98,
+      "other_right_2of3": 95,
+      "agentic_only_right": 3,
+      "other_only_right": 0,
+      "p": 0.25,
+      "wins": 6,
+      "ties": 93,
+      "losses": 1,
+      "p_holm_12": 1.0
+     }
+    ]
+   },
+   "latest": {
+    "comparison_query": [
+     {
+      "vs": "Normal RAG",
+      "questions": 125,
+      "agentic_right_2of3": 85,
+      "other_right_2of3": 66,
+      "agentic_only_right": 26,
+      "other_only_right": 7,
+      "p": 0.001319,
+      "wins": 46,
+      "ties": 68,
+      "losses": 11,
+      "p_holm_12": 0.009233
+     },
+     {
+      "vs": "RAPTOR",
+      "questions": 125,
+      "agentic_right_2of3": 85,
+      "other_right_2of3": 60,
+      "agentic_only_right": 33,
+      "other_only_right": 8,
+      "p": 0.000112,
+      "wins": 49,
+      "ties": 64,
+      "losses": 12,
+      "p_holm_12": 0.000896
+     },
+     {
+      "vs": "HippoRAG",
+      "questions": 125,
+      "agentic_right_2of3": 85,
+      "other_right_2of3": 61,
+      "agentic_only_right": 29,
+      "other_only_right": 5,
+      "p": 3.9e-05,
+      "wins": 48,
+      "ties": 69,
+      "losses": 8,
+      "p_holm_12": 0.000351
+     }
+    ],
+    "temporal_query": [
+     {
+      "vs": "Normal RAG",
+      "questions": 125,
+      "agentic_right_2of3": 97,
+      "other_right_2of3": 59,
+      "agentic_only_right": 41,
+      "other_only_right": 3,
+      "p": 0.0,
+      "wins": 49,
+      "ties": 69,
+      "losses": 7,
+      "p_holm_12": 0.0
+     },
+     {
+      "vs": "RAPTOR",
+      "questions": 125,
+      "agentic_right_2of3": 97,
+      "other_right_2of3": 60,
+      "agentic_only_right": 39,
+      "other_only_right": 2,
+      "p": 0.0,
+      "wins": 50,
+      "ties": 68,
+      "losses": 7,
+      "p_holm_12": 0.0
+     },
+     {
+      "vs": "HippoRAG",
+      "questions": 125,
+      "agentic_right_2of3": 97,
+      "other_right_2of3": 71,
+      "agentic_only_right": 31,
+      "other_only_right": 5,
+      "p": 1.3e-05,
+      "wins": 39,
+      "ties": 74,
+      "losses": 12,
+      "p_holm_12": 0.00013
+     }
+    ],
+    "inference_query": [
+     {
+      "vs": "Normal RAG",
+      "questions": 125,
+      "agentic_right_2of3": 123,
+      "other_right_2of3": 121,
+      "agentic_only_right": 2,
+      "other_only_right": 0,
+      "p": 0.5,
+      "wins": 4,
+      "ties": 121,
+      "losses": 0,
+      "p_holm_12": 1.0
+     },
+     {
+      "vs": "RAPTOR",
+      "questions": 125,
+      "agentic_right_2of3": 123,
+      "other_right_2of3": 122,
+      "agentic_only_right": 2,
+      "other_only_right": 1,
+      "p": 1.0,
+      "wins": 2,
+      "ties": 121,
+      "losses": 2,
+      "p_holm_12": 1.0
+     },
+     {
+      "vs": "HippoRAG",
+      "questions": 125,
+      "agentic_right_2of3": 123,
+      "other_right_2of3": 120,
+      "agentic_only_right": 4,
+      "other_only_right": 1,
+      "p": 0.375,
+      "wins": 4,
+      "ties": 119,
+      "losses": 2,
+      "p_holm_12": 1.0
+     }
+    ],
+    "null_query": [
+     {
+      "vs": "Normal RAG",
+      "questions": 125,
+      "agentic_right_2of3": 115,
+      "other_right_2of3": 116,
+      "agentic_only_right": 2,
+      "other_only_right": 3,
+      "p": 1.0,
+      "wins": 4,
+      "ties": 115,
+      "losses": 6,
+      "p_holm_12": 1.0
+     },
+     {
+      "vs": "RAPTOR",
+      "questions": 125,
+      "agentic_right_2of3": 115,
+      "other_right_2of3": 117,
+      "agentic_only_right": 1,
+      "other_only_right": 3,
+      "p": 0.625,
+      "wins": 4,
+      "ties": 115,
+      "losses": 6,
+      "p_holm_12": 1.0
+     },
+     {
+      "vs": "HippoRAG",
+      "questions": 125,
+      "agentic_right_2of3": 115,
+      "other_right_2of3": 116,
+      "agentic_only_right": 2,
+      "other_only_right": 3,
+      "p": 1.0,
+      "wins": 7,
+      "ties": 114,
+      "losses": 4,
+      "p_holm_12": 1.0
+     }
+    ]
+   },
+   "latest_on_previous_400": {
+    "comparison_query": [
+     {
+      "vs": "Normal RAG",
+      "questions": 100,
+      "agentic_right_2of3": 69,
+      "other_right_2of3": 54,
+      "agentic_only_right": 19,
+      "other_only_right": 4,
+      "p": 0.002599,
+      "wins": 36,
+      "ties": 57,
+      "losses": 7,
+      "p_holm_12": 0.018193
+     },
+     {
+      "vs": "RAPTOR",
+      "questions": 100,
+      "agentic_right_2of3": 69,
+      "other_right_2of3": 48,
+      "agentic_only_right": 26,
+      "other_only_right": 5,
+      "p": 0.000192,
+      "wins": 39,
+      "ties": 53,
+      "losses": 8,
+      "p_holm_12": 0.001536
+     },
+     {
+      "vs": "HippoRAG",
+      "questions": 100,
+      "agentic_right_2of3": 69,
+      "other_right_2of3": 48,
+      "agentic_only_right": 24,
+      "other_only_right": 3,
+      "p": 4.9e-05,
+      "wins": 37,
+      "ties": 57,
+      "losses": 6,
+      "p_holm_12": 0.00049
+     }
+    ],
+    "temporal_query": [
+     {
+      "vs": "Normal RAG",
+      "questions": 100,
+      "agentic_right_2of3": 80,
+      "other_right_2of3": 47,
+      "agentic_only_right": 35,
+      "other_only_right": 2,
+      "p": 0.0,
+      "wins": 39,
+      "ties": 55,
+      "losses": 6,
+      "p_holm_12": 0.0
+     },
+     {
+      "vs": "RAPTOR",
+      "questions": 100,
+      "agentic_right_2of3": 80,
+      "other_right_2of3": 49,
+      "agentic_only_right": 33,
+      "other_only_right": 2,
+      "p": 0.0,
+      "wins": 40,
+      "ties": 53,
+      "losses": 7,
+      "p_holm_12": 0.0
+     },
+     {
+      "vs": "HippoRAG",
+      "questions": 100,
+      "agentic_right_2of3": 80,
+      "other_right_2of3": 59,
+      "agentic_only_right": 24,
+      "other_only_right": 3,
+      "p": 4.9e-05,
+      "wins": 28,
+      "ties": 62,
+      "losses": 10,
+      "p_holm_12": 0.00049
+     }
+    ],
+    "inference_query": [
+     {
+      "vs": "Normal RAG",
+      "questions": 100,
+      "agentic_right_2of3": 98,
+      "other_right_2of3": 96,
+      "agentic_only_right": 2,
+      "other_only_right": 0,
+      "p": 0.5,
+      "wins": 3,
+      "ties": 97,
+      "losses": 0,
+      "p_holm_12": 1.0
+     },
+     {
+      "vs": "RAPTOR",
+      "questions": 100,
+      "agentic_right_2of3": 98,
+      "other_right_2of3": 98,
+      "agentic_only_right": 1,
+      "other_only_right": 1,
+      "p": 1.0,
+      "wins": 1,
+      "ties": 97,
+      "losses": 2,
+      "p_holm_12": 1.0
+     },
+     {
+      "vs": "HippoRAG",
+      "questions": 100,
+      "agentic_right_2of3": 98,
+      "other_right_2of3": 97,
+      "agentic_only_right": 2,
+      "other_only_right": 1,
+      "p": 1.0,
+      "wins": 2,
+      "ties": 96,
+      "losses": 2,
+      "p_holm_12": 1.0
+     }
+    ],
+    "null_query": [
+     {
+      "vs": "Normal RAG",
+      "questions": 100,
+      "agentic_right_2of3": 94,
+      "other_right_2of3": 94,
+      "agentic_only_right": 2,
+      "other_only_right": 2,
+      "p": 1.0,
+      "wins": 3,
+      "ties": 93,
+      "losses": 4,
+      "p_holm_12": 1.0
+     },
+     {
+      "vs": "RAPTOR",
+      "questions": 100,
+      "agentic_right_2of3": 94,
+      "other_right_2of3": 96,
+      "agentic_only_right": 1,
+      "other_only_right": 3,
+      "p": 0.625,
+      "wins": 2,
+      "ties": 92,
+      "losses": 6,
+      "p_holm_12": 1.0
+     },
+     {
+      "vs": "HippoRAG",
+      "questions": 100,
+      "agentic_right_2of3": 94,
+      "other_right_2of3": 95,
+      "agentic_only_right": 2,
+      "other_only_right": 3,
+      "p": 1.0,
+      "wins": 5,
+      "ties": 91,
+      "losses": 4,
+      "p_holm_12": 1.0
+     }
+    ]
+   }
+  },
+  "3b_null_yesno": {
+   "definition": "Answers = question x repeat. Null type: share of answers that are 'Insufficient Information'. Answerable types: share that abstain (false 'insufficient'). Yes/no questions (gold 'yes'/'no', comparison and temporal only): first word of the answer, refusals, accuracy by gold label.",
+   "notes": "Inference and null questions have no yes/no golds.",
+   "previous": {
+    "comparison_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 300,
+      "false_insufficient_rate": 32.0,
+      "false_insufficient": 96,
+      "yesno_answers": 288,
+      "gold_yes_share": 65.6,
+      "said_yes": 27.8,
+      "said_no": 37.8,
+      "refused": 33.3,
+      "accuracy_gold_yes": 40.7,
+      "accuracy_gold_no": 72.7
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 300,
+      "false_insufficient_rate": 41.0,
+      "false_insufficient": 123,
+      "yesno_answers": 288,
+      "gold_yes_share": 65.6,
+      "said_yes": 26.0,
+      "said_no": 30.6,
+      "refused": 42.7,
+      "accuracy_gold_yes": 38.1,
+      "accuracy_gold_no": 66.7
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 300,
+      "false_insufficient_rate": 32.3,
+      "false_insufficient": 97,
+      "yesno_answers": 288,
+      "gold_yes_share": 65.6,
+      "said_yes": 23.3,
+      "said_no": 42.4,
+      "refused": 33.7,
+      "accuracy_gold_yes": 34.9,
+      "accuracy_gold_no": 71.7
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 300,
+      "false_insufficient_rate": 24.0,
+      "false_insufficient": 72,
+      "yesno_answers": 288,
+      "gold_yes_share": 65.6,
+      "said_yes": 27.4,
+      "said_no": 46.5,
+      "refused": 25.0,
+      "accuracy_gold_yes": 40.2,
+      "accuracy_gold_no": 72.7
+     }
+    ],
+    "temporal_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 300,
+      "false_insufficient_rate": 45.7,
+      "false_insufficient": 137,
+      "yesno_answers": 267,
+      "gold_yes_share": 53.9,
+      "said_yes": 32.6,
+      "said_no": 21.7,
+      "refused": 44.2,
+      "accuracy_gold_yes": 53.5,
+      "accuracy_gold_no": 47.2
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 300,
+      "false_insufficient_rate": 43.0,
+      "false_insufficient": 129,
+      "yesno_answers": 267,
+      "gold_yes_share": 53.9,
+      "said_yes": 35.6,
+      "said_no": 21.0,
+      "refused": 43.1,
+      "accuracy_gold_yes": 54.9,
+      "accuracy_gold_no": 43.9
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 300,
+      "false_insufficient_rate": 32.7,
+      "false_insufficient": 98,
+      "yesno_answers": 267,
+      "gold_yes_share": 53.9,
+      "said_yes": 39.3,
+      "said_no": 29.6,
+      "refused": 31.1,
+      "accuracy_gold_yes": 64.6,
+      "accuracy_gold_no": 59.3
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 300,
+      "false_insufficient_rate": 37.0,
+      "false_insufficient": 111,
+      "yesno_answers": 267,
+      "gold_yes_share": 53.9,
+      "said_yes": 38.6,
+      "said_no": 25.5,
+      "refused": 35.2,
+      "accuracy_gold_yes": 60.4,
+      "accuracy_gold_no": 53.7
+     }
+    ],
+    "inference_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 300,
+      "false_insufficient_rate": 3.0,
+      "false_insufficient": 9
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 300,
+      "false_insufficient_rate": 1.0,
+      "false_insufficient": 3
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 300,
+      "false_insufficient_rate": 1.3,
+      "false_insufficient": 4
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 300,
+      "false_insufficient_rate": 2.0,
+      "false_insufficient": 6
+     }
+    ],
+    "null_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 300,
+      "null_abstain_rate": 94.7,
+      "null_answered_anyway": 16
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 300,
+      "null_abstain_rate": 95.7,
+      "null_answered_anyway": 13
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 300,
+      "null_abstain_rate": 93.7,
+      "null_answered_anyway": 19
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 300,
+      "null_abstain_rate": 96.3,
+      "null_answered_anyway": 11
+     }
+    ]
+   },
+   "latest": {
+    "comparison_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 375,
+      "false_insufficient_rate": 31.7,
+      "false_insufficient": 119,
+      "yesno_answers": 363,
+      "gold_yes_share": 64.5,
+      "said_yes": 24.0,
+      "said_no": 42.4,
+      "refused": 32.8,
+      "accuracy_gold_yes": 35.5,
+      "accuracy_gold_no": 79.1
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 375,
+      "false_insufficient_rate": 39.5,
+      "false_insufficient": 148,
+      "yesno_answers": 363,
+      "gold_yes_share": 64.5,
+      "said_yes": 22.6,
+      "said_no": 36.1,
+      "refused": 40.8,
+      "accuracy_gold_yes": 34.6,
+      "accuracy_gold_no": 72.9
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 375,
+      "false_insufficient_rate": 30.1,
+      "false_insufficient": 113,
+      "yesno_answers": 363,
+      "gold_yes_share": 64.5,
+      "said_yes": 22.0,
+      "said_no": 46.3,
+      "refused": 31.1,
+      "accuracy_gold_yes": 33.3,
+      "accuracy_gold_no": 72.9
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 375,
+      "false_insufficient_rate": 9.1,
+      "false_insufficient": 34,
+      "yesno_answers": 363,
+      "gold_yes_share": 64.5,
+      "said_yes": 43.5,
+      "said_no": 46.0,
+      "refused": 9.4,
+      "accuracy_gold_yes": 65.0,
+      "accuracy_gold_no": 80.6
+     }
+    ],
+    "temporal_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 375,
+      "false_insufficient_rate": 44.3,
+      "false_insufficient": 166,
+      "yesno_answers": 336,
+      "gold_yes_share": 53.6,
+      "said_yes": 34.5,
+      "said_no": 21.7,
+      "refused": 42.6,
+      "accuracy_gold_yes": 53.9,
+      "accuracy_gold_no": 44.9
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 375,
+      "false_insufficient_rate": 41.9,
+      "false_insufficient": 157,
+      "yesno_answers": 336,
+      "gold_yes_share": 53.6,
+      "said_yes": 36.0,
+      "said_no": 22.9,
+      "refused": 40.8,
+      "accuracy_gold_yes": 53.3,
+      "accuracy_gold_no": 44.2
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 375,
+      "false_insufficient_rate": 33.1,
+      "false_insufficient": 124,
+      "yesno_answers": 336,
+      "gold_yes_share": 53.6,
+      "said_yes": 41.1,
+      "said_no": 28.3,
+      "refused": 30.7,
+      "accuracy_gold_yes": 63.9,
+      "accuracy_gold_no": 55.1
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 375,
+      "false_insufficient_rate": 11.5,
+      "false_insufficient": 43,
+      "yesno_answers": 336,
+      "gold_yes_share": 53.6,
+      "said_yes": 53.9,
+      "said_no": 35.1,
+      "refused": 10.7,
+      "accuracy_gold_yes": 82.2,
+      "accuracy_gold_no": 71.2
+     }
+    ],
+    "inference_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 375,
+      "false_insufficient_rate": 2.7,
+      "false_insufficient": 10
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 375,
+      "false_insufficient_rate": 1.6,
+      "false_insufficient": 6
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 375,
+      "false_insufficient_rate": 2.4,
+      "false_insufficient": 9
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 375,
+      "false_insufficient_rate": 0.8,
+      "false_insufficient": 3
+     }
+    ],
+    "null_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 375,
+      "null_abstain_rate": 93.6,
+      "null_answered_anyway": 24
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 375,
+      "null_abstain_rate": 93.3,
+      "null_answered_anyway": 25
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 375,
+      "null_abstain_rate": 91.7,
+      "null_answered_anyway": 31
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 375,
+      "null_abstain_rate": 92.5,
+      "null_answered_anyway": 28
+     }
+    ]
+   },
+   "latest_on_previous_400": {
+    "comparison_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 300,
+      "false_insufficient_rate": 32.0,
+      "false_insufficient": 96,
+      "yesno_answers": 288,
+      "gold_yes_share": 65.6,
+      "said_yes": 27.8,
+      "said_no": 37.8,
+      "refused": 33.3,
+      "accuracy_gold_yes": 40.7,
+      "accuracy_gold_no": 72.7
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 300,
+      "false_insufficient_rate": 41.0,
+      "false_insufficient": 123,
+      "yesno_answers": 288,
+      "gold_yes_share": 65.6,
+      "said_yes": 26.0,
+      "said_no": 30.6,
+      "refused": 42.7,
+      "accuracy_gold_yes": 39.2,
+      "accuracy_gold_no": 66.7
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 300,
+      "false_insufficient_rate": 32.3,
+      "false_insufficient": 97,
+      "yesno_answers": 288,
+      "gold_yes_share": 65.6,
+      "said_yes": 23.3,
+      "said_no": 42.4,
+      "refused": 33.7,
+      "accuracy_gold_yes": 34.9,
+      "accuracy_gold_no": 71.7
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 300,
+      "false_insufficient_rate": 8.7,
+      "false_insufficient": 26,
+      "yesno_answers": 288,
+      "gold_yes_share": 65.6,
+      "said_yes": 44.1,
+      "said_no": 45.5,
+      "refused": 9.0,
+      "accuracy_gold_yes": 65.6,
+      "accuracy_gold_no": 81.8
+     }
+    ],
+    "temporal_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 300,
+      "false_insufficient_rate": 45.7,
+      "false_insufficient": 137,
+      "yesno_answers": 267,
+      "gold_yes_share": 53.9,
+      "said_yes": 32.6,
+      "said_no": 21.7,
+      "refused": 44.2,
+      "accuracy_gold_yes": 53.5,
+      "accuracy_gold_no": 47.2
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 300,
+      "false_insufficient_rate": 43.0,
+      "false_insufficient": 129,
+      "yesno_answers": 267,
+      "gold_yes_share": 53.9,
+      "said_yes": 35.6,
+      "said_no": 21.0,
+      "refused": 43.1,
+      "accuracy_gold_yes": 54.9,
+      "accuracy_gold_no": 43.9
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 300,
+      "false_insufficient_rate": 32.7,
+      "false_insufficient": 98,
+      "yesno_answers": 267,
+      "gold_yes_share": 53.9,
+      "said_yes": 39.3,
+      "said_no": 29.6,
+      "refused": 31.1,
+      "accuracy_gold_yes": 64.6,
+      "accuracy_gold_no": 59.3
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 300,
+      "false_insufficient_rate": 10.7,
+      "false_insufficient": 32,
+      "yesno_answers": 267,
+      "gold_yes_share": 53.9,
+      "said_yes": 54.7,
+      "said_no": 34.8,
+      "refused": 10.5,
+      "accuracy_gold_yes": 82.6,
+      "accuracy_gold_no": 73.2
+     }
+    ],
+    "inference_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 300,
+      "false_insufficient_rate": 3.0,
+      "false_insufficient": 9
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 300,
+      "false_insufficient_rate": 1.0,
+      "false_insufficient": 3
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 300,
+      "false_insufficient_rate": 1.3,
+      "false_insufficient": 4
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 300,
+      "false_insufficient_rate": 1.0,
+      "false_insufficient": 3
+     }
+    ],
+    "null_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 300,
+      "null_abstain_rate": 94.7,
+      "null_answered_anyway": 16
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 300,
+      "null_abstain_rate": 95.7,
+      "null_answered_anyway": 13
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 300,
+      "null_abstain_rate": 93.7,
+      "null_answered_anyway": 19
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 300,
+      "null_abstain_rate": 94.0,
+      "null_answered_anyway": 18
+     }
+    ]
+   }
+  },
+  "5b_latency": {
+   "definition": "retrieval_and_answer_seconds per answer over all 3 repeats of the main runs: median, p90, mean; model_share_of_time = sum(model_seconds)/sum(seconds). Previous also: its one-worker latency pass (what the poster showed), 10 questions per type.",
+   "notes": "Main-run timings are taken under load. threads_per_process is each folder's 'concurrency' field; parallel_processes gives how many run folders of that method ran at the same time (from started_at + seconds). The latest run has no one-worker pass, so the only like-for-like latency comparison is main-run vs main-run, and load differs (see parallel_processes).",
+   "parallel_processes": {
+    "previous Normal RAG": {
+     "run_folders": 12,
+     "max_folders_running_at_once": 4
+    },
+    "previous RAPTOR": {
+     "run_folders": 12,
+     "max_folders_running_at_once": 4
+    },
+    "previous HippoRAG": {
+     "run_folders": 12,
+     "max_folders_running_at_once": 4
+    },
+    "previous Agentic Hybrid RAG": {
+     "run_folders": 16,
+     "max_folders_running_at_once": 4
+    },
+    "latest Normal RAG": {
+     "run_folders": 18,
+     "max_folders_running_at_once": 6
+    },
+    "latest RAPTOR": {
+     "run_folders": 18,
+     "max_folders_running_at_once": 6
+    },
+    "latest HippoRAG": {
+     "run_folders": 18,
+     "max_folders_running_at_once": 6
+    },
+    "latest Agentic Hybrid RAG": {
+     "run_folders": 18,
+     "max_folders_running_at_once": 18
+    }
+   },
+   "sources": {
+    "previous": "runs/heldout400/runs/<method>/<timestamp>/results.jsonl, the r1-r3 folders listed in runs/heldout400/manifest.jsonl (r2 Agentic is the r2resume folders plus the 20261101T231404 resume folders). Latency pass: the 4 'latency' folders in the same manifest (40 questions per method, 10 per type, 1 worker).",
+    "latest": "the folders in runs/final500/run_registry.json['multihop_rag']: Normal RAG, RAPTOR and HippoRAG are the previous run's r1-r3 folders for the 400 plus 2 new folders per repeat (runs/<method>/20261113T0941*-0942*) for the 100 new questions; Agentic Hybrid RAG is 6 new folders per repeat (runs/graphrag/20261113T0948*-0949*). runs/final500/multihop_rag/<method>/r* hold no extra timing data. No one-worker latency pass exists for the latest run (searched runs/final500 jobs, logs, scripts, STATUS/DECISIONS).",
+    "fields": "Latency = retrieval_and_answer_seconds (wall clock from the start of retrieval to the end of the answer, per question); model_seconds = time inside API calls. Tokens = question_cost.calls[*].input_tokens / output_tokens (API usage per call; output includes reasoning). Query cost = list_question_cost_usd, re-derived from those tokens at settings.json pricing (gpt-6-luna $0.10/M input, $0.50/M output, no cached-input discount; text-embedding-3-small $0.02/M); identical pricing block in both runs."
+   },
+   "previous": {
+    "comparison_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 300,
+      "median_s": 2.48,
+      "p90_s": 3.88,
+      "mean_s": 2.83,
+      "model_share_of_time": 84.7,
+      "threads_per_process": [
+       4
+      ]
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 300,
+      "median_s": 2.68,
+      "p90_s": 3.82,
+      "mean_s": 2.94,
+      "model_share_of_time": 80.8,
+      "threads_per_process": [
+       4
+      ]
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 300,
+      "median_s": 2.89,
+      "p90_s": 5.68,
+      "mean_s": 3.51,
+      "model_share_of_time": 93.3,
+      "threads_per_process": [
+       4
+      ]
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 300,
+      "median_s": 30.78,
+      "p90_s": 42.55,
+      "mean_s": 31.44,
+      "model_share_of_time": 98.9,
+      "threads_per_process": [
+       4
+      ]
+     }
+    ],
+    "temporal_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 300,
+      "median_s": 2.44,
+      "p90_s": 3.89,
+      "mean_s": 2.71,
+      "model_share_of_time": 84.2,
+      "threads_per_process": [
+       4
+      ]
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 300,
+      "median_s": 2.7,
+      "p90_s": 4.59,
+      "mean_s": 3.02,
+      "model_share_of_time": 80.5,
+      "threads_per_process": [
+       4
+      ]
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 300,
+      "median_s": 2.97,
+      "p90_s": 5.6,
+      "mean_s": 3.5,
+      "model_share_of_time": 93.5,
+      "threads_per_process": [
+       4
+      ]
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 300,
+      "median_s": 31.65,
+      "p90_s": 43.89,
+      "mean_s": 33.2,
+      "model_share_of_time": 99.2,
+      "threads_per_process": [
+       4
+      ]
+     }
+    ],
+    "inference_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 300,
+      "median_s": 2.23,
+      "p90_s": 4.36,
+      "mean_s": 2.66,
+      "model_share_of_time": 84.1,
+      "threads_per_process": [
+       4
+      ]
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 300,
+      "median_s": 2.37,
+      "p90_s": 3.82,
+      "mean_s": 2.73,
+      "model_share_of_time": 79.8,
+      "threads_per_process": [
+       4
+      ]
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 300,
+      "median_s": 2.56,
+      "p90_s": 5.75,
+      "mean_s": 3.38,
+      "model_share_of_time": 92.9,
+      "threads_per_process": [
+       4
+      ]
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 300,
+      "median_s": 26.58,
+      "p90_s": 37.01,
+      "mean_s": 27.71,
+      "model_share_of_time": 100.1,
+      "threads_per_process": [
+       4
+      ]
+     }
+    ],
+    "null_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 300,
+      "median_s": 2.18,
+      "p90_s": 4.37,
+      "mean_s": 2.63,
+      "model_share_of_time": 83.3,
+      "threads_per_process": [
+       4
+      ]
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 300,
+      "median_s": 2.49,
+      "p90_s": 4.27,
+      "mean_s": 2.82,
+      "model_share_of_time": 79.3,
+      "threads_per_process": [
+       4
+      ]
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 300,
+      "median_s": 2.77,
+      "p90_s": 5.68,
+      "mean_s": 3.26,
+      "model_share_of_time": 94.9,
+      "threads_per_process": [
+       4
+      ]
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 300,
+      "median_s": 34.9,
+      "p90_s": 50.33,
+      "mean_s": 36.44,
+      "model_share_of_time": 99.4,
+      "threads_per_process": [
+       4
+      ]
+     }
+    ]
+   },
+   "latest": {
+    "comparison_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 375,
+      "median_s": 2.65,
+      "p90_s": 4.2,
+      "mean_s": 3.0,
+      "model_share_of_time": 81.9,
+      "threads_per_process": [
+       2,
+       4
+      ]
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 375,
+      "median_s": 2.82,
+      "p90_s": 4.69,
+      "mean_s": 3.16,
+      "model_share_of_time": 78.7,
+      "threads_per_process": [
+       2,
+       4
+      ]
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 375,
+      "median_s": 3.84,
+      "p90_s": 6.49,
+      "mean_s": 4.12,
+      "model_share_of_time": 83.5,
+      "threads_per_process": [
+       2,
+       4
+      ]
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 375,
+      "median_s": 32.21,
+      "p90_s": 44.03,
+      "mean_s": 33.45,
+      "model_share_of_time": 99.4,
+      "threads_per_process": [
+       6
+      ]
+     }
+    ],
+    "temporal_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 375,
+      "median_s": 2.56,
+      "p90_s": 4.38,
+      "mean_s": 2.95,
+      "model_share_of_time": 81.4,
+      "threads_per_process": [
+       2,
+       4
+      ]
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 375,
+      "median_s": 2.86,
+      "p90_s": 4.71,
+      "mean_s": 3.19,
+      "model_share_of_time": 78.7,
+      "threads_per_process": [
+       2,
+       4
+      ]
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 375,
+      "median_s": 3.72,
+      "p90_s": 6.46,
+      "mean_s": 4.12,
+      "model_share_of_time": 83.9,
+      "threads_per_process": [
+       2,
+       4
+      ]
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 375,
+      "median_s": 33.15,
+      "p90_s": 45.5,
+      "mean_s": 34.42,
+      "model_share_of_time": 99.6,
+      "threads_per_process": [
+       6
+      ]
+     }
+    ],
+    "inference_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 375,
+      "median_s": 2.36,
+      "p90_s": 4.38,
+      "mean_s": 2.8,
+      "model_share_of_time": 80.5,
+      "threads_per_process": [
+       2,
+       4
+      ]
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 375,
+      "median_s": 2.5,
+      "p90_s": 4.25,
+      "mean_s": 2.93,
+      "model_share_of_time": 76.9,
+      "threads_per_process": [
+       2,
+       4
+      ]
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 375,
+      "median_s": 3.77,
+      "p90_s": 6.67,
+      "mean_s": 3.99,
+      "model_share_of_time": 82.5,
+      "threads_per_process": [
+       2,
+       4
+      ]
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 375,
+      "median_s": 31.36,
+      "p90_s": 41.16,
+      "mean_s": 32.4,
+      "model_share_of_time": 99.5,
+      "threads_per_process": [
+       6
+      ]
+     }
+    ],
+    "null_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 375,
+      "median_s": 2.37,
+      "p90_s": 4.45,
+      "mean_s": 2.78,
+      "model_share_of_time": 80.1,
+      "threads_per_process": [
+       2,
+       4
+      ]
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 375,
+      "median_s": 2.66,
+      "p90_s": 4.55,
+      "mean_s": 3.05,
+      "model_share_of_time": 76.5,
+      "threads_per_process": [
+       2,
+       4
+      ]
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 375,
+      "median_s": 3.31,
+      "p90_s": 6.44,
+      "mean_s": 3.69,
+      "model_share_of_time": 85.6,
+      "threads_per_process": [
+       2,
+       4
+      ]
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 375,
+      "median_s": 33.06,
+      "p90_s": 44.6,
+      "mean_s": 34.79,
+      "model_share_of_time": 99.4,
+      "threads_per_process": [
+       6
+      ]
+     }
+    ]
+   },
+   "latest_on_previous_400": {
+    "comparison_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 300,
+      "median_s": 2.48,
+      "p90_s": 3.88,
+      "mean_s": 2.83,
+      "model_share_of_time": 84.7,
+      "threads_per_process": [
+       4
+      ]
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 300,
+      "median_s": 2.68,
+      "p90_s": 3.82,
+      "mean_s": 2.94,
+      "model_share_of_time": 80.8,
+      "threads_per_process": [
+       4
+      ]
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 300,
+      "median_s": 2.89,
+      "p90_s": 5.68,
+      "mean_s": 3.51,
+      "model_share_of_time": 93.3,
+      "threads_per_process": [
+       4
+      ]
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 300,
+      "median_s": 32.57,
+      "p90_s": 44.37,
+      "mean_s": 33.15,
+      "model_share_of_time": 99.4,
+      "threads_per_process": [
+       6
+      ]
+     }
+    ],
+    "temporal_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 300,
+      "median_s": 2.44,
+      "p90_s": 3.89,
+      "mean_s": 2.71,
+      "model_share_of_time": 84.2,
+      "threads_per_process": [
+       4
+      ]
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 300,
+      "median_s": 2.7,
+      "p90_s": 4.59,
+      "mean_s": 3.02,
+      "model_share_of_time": 80.5,
+      "threads_per_process": [
+       4
+      ]
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 300,
+      "median_s": 2.97,
+      "p90_s": 5.6,
+      "mean_s": 3.5,
+      "model_share_of_time": 93.5,
+      "threads_per_process": [
+       4
+      ]
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 300,
+      "median_s": 33.59,
+      "p90_s": 47.17,
+      "mean_s": 34.72,
+      "model_share_of_time": 99.6,
+      "threads_per_process": [
+       6
+      ]
+     }
+    ],
+    "inference_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 300,
+      "median_s": 2.23,
+      "p90_s": 4.36,
+      "mean_s": 2.66,
+      "model_share_of_time": 84.1,
+      "threads_per_process": [
+       4
+      ]
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 300,
+      "median_s": 2.37,
+      "p90_s": 3.82,
+      "mean_s": 2.73,
+      "model_share_of_time": 79.8,
+      "threads_per_process": [
+       4
+      ]
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 300,
+      "median_s": 2.56,
+      "p90_s": 5.75,
+      "mean_s": 3.38,
+      "model_share_of_time": 92.9,
+      "threads_per_process": [
+       4
+      ]
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 300,
+      "median_s": 31.56,
+      "p90_s": 42.27,
+      "mean_s": 33.06,
+      "model_share_of_time": 99.4,
+      "threads_per_process": [
+       6
+      ]
+     }
+    ],
+    "null_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 300,
+      "median_s": 2.18,
+      "p90_s": 4.37,
+      "mean_s": 2.63,
+      "model_share_of_time": 83.3,
+      "threads_per_process": [
+       4
+      ]
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 300,
+      "median_s": 2.49,
+      "p90_s": 4.27,
+      "mean_s": 2.82,
+      "model_share_of_time": 79.3,
+      "threads_per_process": [
+       4
+      ]
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 300,
+      "median_s": 2.77,
+      "p90_s": 5.68,
+      "mean_s": 3.26,
+      "model_share_of_time": 94.9,
+      "threads_per_process": [
+       4
+      ]
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 300,
+      "median_s": 34.1,
+      "p90_s": 44.75,
+      "mean_s": 35.32,
+      "model_share_of_time": 99.4,
+      "threads_per_process": [
+       6
+      ]
+     }
+    ]
+   },
+   "previous_latency_pass_1worker": {
+    "comparison_query": [
+     {
+      "method": "Normal RAG",
+      "questions": 10,
+      "median_s": 2.27,
+      "p90_s": 3.06
+     },
+     {
+      "method": "RAPTOR",
+      "questions": 10,
+      "median_s": 2.48,
+      "p90_s": 3.21
+     },
+     {
+      "method": "HippoRAG",
+      "questions": 10,
+      "median_s": 4.89,
+      "p90_s": 6.52
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "questions": 10,
+      "median_s": 31.84,
+      "p90_s": 39.58
+     }
+    ],
+    "temporal_query": [
+     {
+      "method": "Normal RAG",
+      "questions": 10,
+      "median_s": 2.48,
+      "p90_s": 4.01
+     },
+     {
+      "method": "RAPTOR",
+      "questions": 10,
+      "median_s": 2.36,
+      "p90_s": 4.52
+     },
+     {
+      "method": "HippoRAG",
+      "questions": 10,
+      "median_s": 5.32,
+      "p90_s": 7.19
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "questions": 10,
+      "median_s": 32.06,
+      "p90_s": 47.36
+     }
+    ],
+    "inference_query": [
+     {
+      "method": "Normal RAG",
+      "questions": 10,
+      "median_s": 1.94,
+      "p90_s": 2.55
+     },
+     {
+      "method": "RAPTOR",
+      "questions": 10,
+      "median_s": 1.91,
+      "p90_s": 2.54
+     },
+     {
+      "method": "HippoRAG",
+      "questions": 10,
+      "median_s": 4.8,
+      "p90_s": 7.21
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "questions": 10,
+      "median_s": 30.13,
+      "p90_s": 43.61
+     }
+    ],
+    "null_query": [
+     {
+      "method": "Normal RAG",
+      "questions": 10,
+      "median_s": 2.18,
+      "p90_s": 7.32
+     },
+     {
+      "method": "RAPTOR",
+      "questions": 10,
+      "median_s": 2.05,
+      "p90_s": 2.8
+     },
+     {
+      "method": "HippoRAG",
+      "questions": 10,
+      "median_s": 4.68,
+      "p90_s": 6.13
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "questions": 10,
+      "median_s": 35.58,
+      "p90_s": 54.92
+     }
+    ]
+   }
+  },
+  "5d_total_cost": {
+   "definition": "Query cost per question = mean list_question_cost_usd over the type's answers (3 repeats). Total = one-time build (whole corpus, list USD) + N x query cost per question, N = the type's questions once (100 / 125), all 3 repeats (300 / 375), or 10,000.",
+   "notes": "The build is one index for the whole MultiHop-RAG corpus and cannot be split by type; it is the same figure in both runs because the latest run reused the previous indexes (SPEC 'multihop_indexes: no rebuild'; only one index folder per method exists under runs/<method>/indexes; the latest Agentic run folders' build_cost.json are $0). Build figures were not metered during the build; their sources are in build_sources.",
+   "build_usd": {
+    "Normal RAG": 0.0448,
+    "RAPTOR": 0.3787,
+    "HippoRAG": 3.9632,
+    "Agentic Hybrid RAG": 8.0213
+   },
+   "build_sources": {
+    "Normal RAG": "embeddings only: 7,728 chunks x 290 tokens x $0.02/M (estimate)",
+    "RAPTOR": "build_calibration/raptor_build_calibration.json (1,462 summary calls, token counts measured) + embeddings of 9,190 nodes (estimate)",
+    "HippoRAG": "$3.896 hard-coded in heldout_analysis.py (no calibration file or metered log found for it) + 1.5x chunk embeddings (estimate)",
+    "Agentic Hybrid RAG": "build_calibration/graph_build_calibration.json (100 sampled chunks metered, scaled to 7,728) + chunk embeddings (estimate)"
+   },
+   "sources": {
+    "previous": "runs/heldout400/runs/<method>/<timestamp>/results.jsonl, the r1-r3 folders listed in runs/heldout400/manifest.jsonl (r2 Agentic is the r2resume folders plus the 20261101T231404 resume folders). Latency pass: the 4 'latency' folders in the same manifest (40 questions per method, 10 per type, 1 worker).",
+    "latest": "the folders in runs/final500/run_registry.json['multihop_rag']: Normal RAG, RAPTOR and HippoRAG are the previous run's r1-r3 folders for the 400 plus 2 new folders per repeat (runs/<method>/20261113T0941*-0942*) for the 100 new questions; Agentic Hybrid RAG is 6 new folders per repeat (runs/graphrag/20261113T0948*-0949*). runs/final500/multihop_rag/<method>/r* hold no extra timing data. No one-worker latency pass exists for the latest run (searched runs/final500 jobs, logs, scripts, STATUS/DECISIONS).",
+    "fields": "Latency = retrieval_and_answer_seconds (wall clock from the start of retrieval to the end of the answer, per question); model_seconds = time inside API calls. Tokens = question_cost.calls[*].input_tokens / output_tokens (API usage per call; output includes reasoning). Query cost = list_question_cost_usd, re-derived from those tokens at settings.json pricing (gpt-6-luna $0.10/M input, $0.50/M output, no cached-input discount; text-embedding-3-small $0.02/M); identical pricing block in both runs."
+   },
+   "previous": {
+    "comparison_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 300,
+      "query_usd_per_question": 0.00029,
+      "query_usd_per_1000_questions": 0.29,
+      "accuracy": 51.3,
+      "mean_input_tokens": 2461,
+      "mean_output_tokens": 85,
+      "mean_model_calls": 1,
+      "failed_calls": 0,
+      "build_usd_one_time": 0.045,
+      "build_plus_this_types_questions_once": 0.074,
+      "build_plus_this_types_questions_all_repeats": 0.132,
+      "build_plus_10000_questions_of_this_type": 2.94
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 300,
+      "query_usd_per_question": 0.000276,
+      "query_usd_per_1000_questions": 0.276,
+      "accuracy": 48.0,
+      "mean_input_tokens": 2322,
+      "mean_output_tokens": 86,
+      "mean_model_calls": 1,
+      "failed_calls": 0,
+      "build_usd_one_time": 0.379,
+      "build_plus_this_types_questions_once": 0.406,
+      "build_plus_this_types_questions_all_repeats": 0.462,
+      "build_plus_10000_questions_of_this_type": 3.14
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 300,
+      "query_usd_per_question": 0.000406,
+      "query_usd_per_1000_questions": 0.406,
+      "accuracy": 48.0,
+      "mean_input_tokens": 3355,
+      "mean_output_tokens": 139,
+      "mean_model_calls": 1.3,
+      "failed_calls": 0,
+      "build_usd_one_time": 3.963,
+      "build_plus_this_types_questions_once": 4.004,
+      "build_plus_this_types_questions_all_repeats": 4.085,
+      "build_plus_10000_questions_of_this_type": 8.02
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 300,
+      "query_usd_per_question": 0.004169,
+      "query_usd_per_1000_questions": 4.169,
+      "accuracy": 50.3,
+      "mean_input_tokens": 30315,
+      "mean_output_tokens": 2272,
+      "mean_model_calls": 5.58,
+      "failed_calls": 0,
+      "build_usd_one_time": 8.021,
+      "build_plus_this_types_questions_once": 8.438,
+      "build_plus_this_types_questions_all_repeats": 9.272,
+      "build_plus_10000_questions_of_this_type": 49.71
+     }
+    ],
+    "temporal_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 300,
+      "query_usd_per_question": 0.000291,
+      "query_usd_per_1000_questions": 0.291,
+      "accuracy": 48.3,
+      "mean_input_tokens": 2453,
+      "mean_output_tokens": 90,
+      "mean_model_calls": 1,
+      "failed_calls": 0,
+      "build_usd_one_time": 0.045,
+      "build_plus_this_types_questions_once": 0.074,
+      "build_plus_this_types_questions_all_repeats": 0.132,
+      "build_plus_10000_questions_of_this_type": 2.96
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 300,
+      "query_usd_per_question": 0.000283,
+      "query_usd_per_1000_questions": 0.283,
+      "accuracy": 49.0,
+      "mean_input_tokens": 2362,
+      "mean_output_tokens": 91,
+      "mean_model_calls": 1,
+      "failed_calls": 0,
+      "build_usd_one_time": 0.379,
+      "build_plus_this_types_questions_once": 0.407,
+      "build_plus_this_types_questions_all_repeats": 0.464,
+      "build_plus_10000_questions_of_this_type": 3.21
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 300,
+      "query_usd_per_question": 0.000408,
+      "query_usd_per_1000_questions": 0.408,
+      "accuracy": 59.3,
+      "mean_input_tokens": 3349,
+      "mean_output_tokens": 144,
+      "mean_model_calls": 1.3,
+      "failed_calls": 0,
+      "build_usd_one_time": 3.963,
+      "build_plus_this_types_questions_once": 4.004,
+      "build_plus_this_types_questions_all_repeats": 4.086,
+      "build_plus_10000_questions_of_this_type": 8.05
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 300,
+      "query_usd_per_question": 0.003964,
+      "query_usd_per_1000_questions": 3.964,
+      "accuracy": 56.0,
+      "mean_input_tokens": 27427,
+      "mean_output_tokens": 2440,
+      "mean_model_calls": 5.46,
+      "failed_calls": 0,
+      "build_usd_one_time": 8.021,
+      "build_plus_this_types_questions_once": 8.418,
+      "build_plus_this_types_questions_all_repeats": 9.211,
+      "build_plus_10000_questions_of_this_type": 47.66
+     }
+    ],
+    "inference_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 300,
+      "query_usd_per_question": 0.000288,
+      "query_usd_per_1000_questions": 0.288,
+      "accuracy": 96.0,
+      "mean_input_tokens": 2496,
+      "mean_output_tokens": 74,
+      "mean_model_calls": 1,
+      "failed_calls": 0,
+      "build_usd_one_time": 0.045,
+      "build_plus_this_types_questions_once": 0.074,
+      "build_plus_this_types_questions_all_repeats": 0.131,
+      "build_plus_10000_questions_of_this_type": 2.92
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 300,
+      "query_usd_per_question": 0.000267,
+      "query_usd_per_1000_questions": 0.267,
+      "accuracy": 98.0,
+      "mean_input_tokens": 2332,
+      "mean_output_tokens": 66,
+      "mean_model_calls": 1,
+      "failed_calls": 0,
+      "build_usd_one_time": 0.379,
+      "build_plus_this_types_questions_once": 0.405,
+      "build_plus_this_types_questions_all_repeats": 0.459,
+      "build_plus_10000_questions_of_this_type": 3.05
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 300,
+      "query_usd_per_question": 0.000405,
+      "query_usd_per_1000_questions": 0.405,
+      "accuracy": 97.3,
+      "mean_input_tokens": 3390,
+      "mean_output_tokens": 130,
+      "mean_model_calls": 1.3,
+      "failed_calls": 0,
+      "build_usd_one_time": 3.963,
+      "build_plus_this_types_questions_once": 4.004,
+      "build_plus_this_types_questions_all_repeats": 4.085,
+      "build_plus_10000_questions_of_this_type": 8.01
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 300,
+      "query_usd_per_question": 0.003196,
+      "query_usd_per_1000_questions": 3.196,
+      "accuracy": 96.3,
+      "mean_input_tokens": 22121,
+      "mean_output_tokens": 1967,
+      "mean_model_calls": 5.2,
+      "failed_calls": 1,
+      "build_usd_one_time": 8.021,
+      "build_plus_this_types_questions_once": 8.341,
+      "build_plus_this_types_questions_all_repeats": 8.98,
+      "build_plus_10000_questions_of_this_type": 39.98
+     }
+    ],
+    "null_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 300,
+      "query_usd_per_question": 0.000284,
+      "query_usd_per_1000_questions": 0.284,
+      "accuracy": 94.7,
+      "mean_input_tokens": 2460,
+      "mean_output_tokens": 74,
+      "mean_model_calls": 1,
+      "failed_calls": 0,
+      "build_usd_one_time": 0.045,
+      "build_plus_this_types_questions_once": 0.073,
+      "build_plus_this_types_questions_all_repeats": 0.13,
+      "build_plus_10000_questions_of_this_type": 2.89
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 300,
+      "query_usd_per_question": 0.00027,
+      "query_usd_per_1000_questions": 0.27,
+      "accuracy": 95.7,
+      "mean_input_tokens": 2335,
+      "mean_output_tokens": 71,
+      "mean_model_calls": 1,
+      "failed_calls": 0,
+      "build_usd_one_time": 0.379,
+      "build_plus_this_types_questions_once": 0.406,
+      "build_plus_this_types_questions_all_repeats": 0.46,
+      "build_plus_10000_questions_of_this_type": 3.08
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 300,
+      "query_usd_per_question": 0.000398,
+      "query_usd_per_1000_questions": 0.398,
+      "accuracy": 93.7,
+      "mean_input_tokens": 3347,
+      "mean_output_tokens": 125,
+      "mean_model_calls": 1.3,
+      "failed_calls": 0,
+      "build_usd_one_time": 3.963,
+      "build_plus_this_types_questions_once": 4.003,
+      "build_plus_this_types_questions_all_repeats": 4.083,
+      "build_plus_10000_questions_of_this_type": 7.95
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 300,
+      "query_usd_per_question": 0.004109,
+      "query_usd_per_1000_questions": 4.109,
+      "accuracy": 96.3,
+      "mean_input_tokens": 27841,
+      "mean_output_tokens": 2648,
+      "mean_model_calls": 6,
+      "failed_calls": 1,
+      "build_usd_one_time": 8.021,
+      "build_plus_this_types_questions_once": 8.432,
+      "build_plus_this_types_questions_all_repeats": 9.254,
+      "build_plus_10000_questions_of_this_type": 49.12
+     }
+    ]
+   },
+   "latest": {
+    "comparison_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 375,
+      "query_usd_per_question": 0.000291,
+      "query_usd_per_1000_questions": 0.291,
+      "accuracy": 51.7,
+      "mean_input_tokens": 2458,
+      "mean_output_tokens": 89,
+      "mean_model_calls": 1,
+      "failed_calls": 0,
+      "build_usd_one_time": 0.045,
+      "build_plus_this_types_questions_once": 0.081,
+      "build_plus_this_types_questions_all_repeats": 0.154,
+      "build_plus_10000_questions_of_this_type": 2.96
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 375,
+      "query_usd_per_question": 0.000278,
+      "query_usd_per_1000_questions": 0.278,
+      "accuracy": 49.1,
+      "mean_input_tokens": 2313,
+      "mean_output_tokens": 91,
+      "mean_model_calls": 1,
+      "failed_calls": 0,
+      "build_usd_one_time": 0.379,
+      "build_plus_this_types_questions_once": 0.413,
+      "build_plus_this_types_questions_all_repeats": 0.483,
+      "build_plus_10000_questions_of_this_type": 3.16
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 375,
+      "query_usd_per_question": 0.000412,
+      "query_usd_per_1000_questions": 0.412,
+      "accuracy": 48.3,
+      "mean_input_tokens": 3382,
+      "mean_output_tokens": 145,
+      "mean_model_calls": 1.31,
+      "failed_calls": 0,
+      "build_usd_one_time": 3.963,
+      "build_plus_this_types_questions_once": 4.015,
+      "build_plus_this_types_questions_all_repeats": 4.118,
+      "build_plus_10000_questions_of_this_type": 8.08
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 375,
+      "query_usd_per_question": 0.003886,
+      "query_usd_per_1000_questions": 3.886,
+      "accuracy": 70.4,
+      "mean_input_tokens": 27757,
+      "mean_output_tokens": 2217,
+      "mean_model_calls": 6.0,
+      "failed_calls": 0,
+      "build_usd_one_time": 8.021,
+      "build_plus_this_types_questions_once": 8.507,
+      "build_plus_this_types_questions_all_repeats": 9.478,
+      "build_plus_10000_questions_of_this_type": 46.88
+     }
+    ],
+    "temporal_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 375,
+      "query_usd_per_question": 0.000294,
+      "query_usd_per_1000_questions": 0.294,
+      "accuracy": 47.7,
+      "mean_input_tokens": 2449,
+      "mean_output_tokens": 95,
+      "mean_model_calls": 1,
+      "failed_calls": 0,
+      "build_usd_one_time": 0.045,
+      "build_plus_this_types_questions_once": 0.082,
+      "build_plus_this_types_questions_all_repeats": 0.155,
+      "build_plus_10000_questions_of_this_type": 2.98
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 375,
+      "query_usd_per_question": 0.000285,
+      "query_usd_per_1000_questions": 0.285,
+      "accuracy": 47.7,
+      "mean_input_tokens": 2363,
+      "mean_output_tokens": 95,
+      "mean_model_calls": 1,
+      "failed_calls": 0,
+      "build_usd_one_time": 0.379,
+      "build_plus_this_types_questions_once": 0.414,
+      "build_plus_this_types_questions_all_repeats": 0.486,
+      "build_plus_10000_questions_of_this_type": 3.23
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 375,
+      "query_usd_per_question": 0.000414,
+      "query_usd_per_1000_questions": 0.414,
+      "accuracy": 56.8,
+      "mean_input_tokens": 3359,
+      "mean_output_tokens": 154,
+      "mean_model_calls": 1.31,
+      "failed_calls": 0,
+      "build_usd_one_time": 3.963,
+      "build_plus_this_types_questions_once": 4.015,
+      "build_plus_this_types_questions_all_repeats": 4.119,
+      "build_plus_10000_questions_of_this_type": 8.11
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 375,
+      "query_usd_per_question": 0.003748,
+      "query_usd_per_1000_questions": 3.748,
+      "accuracy": 76.5,
+      "mean_input_tokens": 25854,
+      "mean_output_tokens": 2322,
+      "mean_model_calls": 5.91,
+      "failed_calls": 0,
+      "build_usd_one_time": 8.021,
+      "build_plus_this_types_questions_once": 8.49,
+      "build_plus_this_types_questions_all_repeats": 9.427,
+      "build_plus_10000_questions_of_this_type": 45.5
+     }
+    ],
+    "inference_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 375,
+      "query_usd_per_question": 0.000286,
+      "query_usd_per_1000_questions": 0.286,
+      "accuracy": 96.5,
+      "mean_input_tokens": 2495,
+      "mean_output_tokens": 71,
+      "mean_model_calls": 1,
+      "failed_calls": 0,
+      "build_usd_one_time": 0.045,
+      "build_plus_this_types_questions_once": 0.081,
+      "build_plus_this_types_questions_all_repeats": 0.152,
+      "build_plus_10000_questions_of_this_type": 2.91
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 375,
+      "query_usd_per_question": 0.000268,
+      "query_usd_per_1000_questions": 0.268,
+      "accuracy": 97.6,
+      "mean_input_tokens": 2331,
+      "mean_output_tokens": 67,
+      "mean_model_calls": 1,
+      "failed_calls": 0,
+      "build_usd_one_time": 0.379,
+      "build_plus_this_types_questions_once": 0.412,
+      "build_plus_this_types_questions_all_repeats": 0.479,
+      "build_plus_10000_questions_of_this_type": 3.06
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 375,
+      "query_usd_per_question": 0.000407,
+      "query_usd_per_1000_questions": 0.407,
+      "accuracy": 96.5,
+      "mean_input_tokens": 3403,
+      "mean_output_tokens": 131,
+      "mean_model_calls": 1.31,
+      "failed_calls": 0,
+      "build_usd_one_time": 3.963,
+      "build_plus_this_types_questions_once": 4.014,
+      "build_plus_this_types_questions_all_repeats": 4.116,
+      "build_plus_10000_questions_of_this_type": 8.03
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 375,
+      "query_usd_per_question": 0.00385,
+      "query_usd_per_1000_questions": 3.85,
+      "accuracy": 98.1,
+      "mean_input_tokens": 27985,
+      "mean_output_tokens": 2099,
+      "mean_model_calls": 6.02,
+      "failed_calls": 1,
+      "build_usd_one_time": 8.021,
+      "build_plus_this_types_questions_once": 8.502,
+      "build_plus_this_types_questions_all_repeats": 9.465,
+      "build_plus_10000_questions_of_this_type": 46.52
+     }
+    ],
+    "null_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 375,
+      "query_usd_per_question": 0.000282,
+      "query_usd_per_1000_questions": 0.282,
+      "accuracy": 93.6,
+      "mean_input_tokens": 2463,
+      "mean_output_tokens": 70,
+      "mean_model_calls": 1,
+      "failed_calls": 0,
+      "build_usd_one_time": 0.045,
+      "build_plus_this_types_questions_once": 0.08,
+      "build_plus_this_types_questions_all_repeats": 0.151,
+      "build_plus_10000_questions_of_this_type": 2.87
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 375,
+      "query_usd_per_question": 0.000269,
+      "query_usd_per_1000_questions": 0.269,
+      "accuracy": 93.3,
+      "mean_input_tokens": 2332,
+      "mean_output_tokens": 69,
+      "mean_model_calls": 1,
+      "failed_calls": 0,
+      "build_usd_one_time": 0.379,
+      "build_plus_this_types_questions_once": 0.412,
+      "build_plus_this_types_questions_all_repeats": 0.48,
+      "build_plus_10000_questions_of_this_type": 3.07
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 375,
+      "query_usd_per_question": 0.000399,
+      "query_usd_per_1000_questions": 0.399,
+      "accuracy": 91.7,
+      "mean_input_tokens": 3367,
+      "mean_output_tokens": 123,
+      "mean_model_calls": 1.31,
+      "failed_calls": 0,
+      "build_usd_one_time": 3.963,
+      "build_plus_this_types_questions_once": 4.013,
+      "build_plus_this_types_questions_all_repeats": 4.113,
+      "build_plus_10000_questions_of_this_type": 7.95
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 375,
+      "query_usd_per_question": 0.004013,
+      "query_usd_per_1000_questions": 4.013,
+      "accuracy": 92.5,
+      "mean_input_tokens": 28563,
+      "mean_output_tokens": 2311,
+      "mean_model_calls": 6.24,
+      "failed_calls": 0,
+      "build_usd_one_time": 8.021,
+      "build_plus_this_types_questions_once": 8.523,
+      "build_plus_this_types_questions_all_repeats": 9.526,
+      "build_plus_10000_questions_of_this_type": 48.15
+     }
+    ]
+   },
+   "latest_on_previous_400": {
+    "comparison_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 300,
+      "query_usd_per_question": 0.00029,
+      "query_usd_per_1000_questions": 0.29,
+      "accuracy": 52.7,
+      "mean_input_tokens": 2461,
+      "mean_output_tokens": 85,
+      "mean_model_calls": 1,
+      "failed_calls": 0,
+      "build_usd_one_time": 0.045,
+      "build_plus_this_types_questions_once": 0.074,
+      "build_plus_this_types_questions_all_repeats": 0.132,
+      "build_plus_10000_questions_of_this_type": 2.94
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 300,
+      "query_usd_per_question": 0.000276,
+      "query_usd_per_1000_questions": 0.276,
+      "accuracy": 49.7,
+      "mean_input_tokens": 2322,
+      "mean_output_tokens": 86,
+      "mean_model_calls": 1,
+      "failed_calls": 0,
+      "build_usd_one_time": 0.379,
+      "build_plus_this_types_questions_once": 0.406,
+      "build_plus_this_types_questions_all_repeats": 0.462,
+      "build_plus_10000_questions_of_this_type": 3.14
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 300,
+      "query_usd_per_question": 0.000406,
+      "query_usd_per_1000_questions": 0.406,
+      "accuracy": 48.7,
+      "mean_input_tokens": 3355,
+      "mean_output_tokens": 139,
+      "mean_model_calls": 1.3,
+      "failed_calls": 0,
+      "build_usd_one_time": 3.963,
+      "build_plus_this_types_questions_once": 4.004,
+      "build_plus_this_types_questions_all_repeats": 4.085,
+      "build_plus_10000_questions_of_this_type": 8.02
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 300,
+      "query_usd_per_question": 0.003827,
+      "query_usd_per_1000_questions": 3.827,
+      "accuracy": 71.0,
+      "mean_input_tokens": 27283,
+      "mean_output_tokens": 2195,
+      "mean_model_calls": 5.97,
+      "failed_calls": 0,
+      "build_usd_one_time": 8.021,
+      "build_plus_this_types_questions_once": 8.404,
+      "build_plus_this_types_questions_all_repeats": 9.169,
+      "build_plus_10000_questions_of_this_type": 46.3
+     }
+    ],
+    "temporal_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 300,
+      "query_usd_per_question": 0.000291,
+      "query_usd_per_1000_questions": 0.291,
+      "accuracy": 48.3,
+      "mean_input_tokens": 2453,
+      "mean_output_tokens": 90,
+      "mean_model_calls": 1,
+      "failed_calls": 0,
+      "build_usd_one_time": 0.045,
+      "build_plus_this_types_questions_once": 0.074,
+      "build_plus_this_types_questions_all_repeats": 0.132,
+      "build_plus_10000_questions_of_this_type": 2.96
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 300,
+      "query_usd_per_question": 0.000283,
+      "query_usd_per_1000_questions": 0.283,
+      "accuracy": 49.0,
+      "mean_input_tokens": 2362,
+      "mean_output_tokens": 91,
+      "mean_model_calls": 1,
+      "failed_calls": 0,
+      "build_usd_one_time": 0.379,
+      "build_plus_this_types_questions_once": 0.407,
+      "build_plus_this_types_questions_all_repeats": 0.464,
+      "build_plus_10000_questions_of_this_type": 3.21
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 300,
+      "query_usd_per_question": 0.000408,
+      "query_usd_per_1000_questions": 0.408,
+      "accuracy": 59.3,
+      "mean_input_tokens": 3349,
+      "mean_output_tokens": 144,
+      "mean_model_calls": 1.3,
+      "failed_calls": 0,
+      "build_usd_one_time": 3.963,
+      "build_plus_this_types_questions_once": 4.004,
+      "build_plus_this_types_questions_all_repeats": 4.086,
+      "build_plus_10000_questions_of_this_type": 8.05
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 300,
+      "query_usd_per_question": 0.003742,
+      "query_usd_per_1000_questions": 3.742,
+      "accuracy": 78.0,
+      "mean_input_tokens": 25773,
+      "mean_output_tokens": 2325,
+      "mean_model_calls": 5.92,
+      "failed_calls": 0,
+      "build_usd_one_time": 8.021,
+      "build_plus_this_types_questions_once": 8.395,
+      "build_plus_this_types_questions_all_repeats": 9.144,
+      "build_plus_10000_questions_of_this_type": 45.44
+     }
+    ],
+    "inference_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 300,
+      "query_usd_per_question": 0.000288,
+      "query_usd_per_1000_questions": 0.288,
+      "accuracy": 96.0,
+      "mean_input_tokens": 2496,
+      "mean_output_tokens": 74,
+      "mean_model_calls": 1,
+      "failed_calls": 0,
+      "build_usd_one_time": 0.045,
+      "build_plus_this_types_questions_once": 0.074,
+      "build_plus_this_types_questions_all_repeats": 0.131,
+      "build_plus_10000_questions_of_this_type": 2.92
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 300,
+      "query_usd_per_question": 0.000267,
+      "query_usd_per_1000_questions": 0.267,
+      "accuracy": 98.0,
+      "mean_input_tokens": 2332,
+      "mean_output_tokens": 66,
+      "mean_model_calls": 1,
+      "failed_calls": 0,
+      "build_usd_one_time": 0.379,
+      "build_plus_this_types_questions_once": 0.405,
+      "build_plus_this_types_questions_all_repeats": 0.459,
+      "build_plus_10000_questions_of_this_type": 3.05
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 300,
+      "query_usd_per_question": 0.000405,
+      "query_usd_per_1000_questions": 0.405,
+      "accuracy": 97.3,
+      "mean_input_tokens": 3390,
+      "mean_output_tokens": 130,
+      "mean_model_calls": 1.3,
+      "failed_calls": 0,
+      "build_usd_one_time": 3.963,
+      "build_plus_this_types_questions_once": 4.004,
+      "build_plus_this_types_questions_all_repeats": 4.085,
+      "build_plus_10000_questions_of_this_type": 8.01
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 300,
+      "query_usd_per_question": 0.003867,
+      "query_usd_per_1000_questions": 3.867,
+      "accuracy": 97.7,
+      "mean_input_tokens": 28132,
+      "mean_output_tokens": 2103,
+      "mean_model_calls": 6.02,
+      "failed_calls": 0,
+      "build_usd_one_time": 8.021,
+      "build_plus_this_types_questions_once": 8.408,
+      "build_plus_this_types_questions_all_repeats": 9.181,
+      "build_plus_10000_questions_of_this_type": 46.69
+     }
+    ],
+    "null_query": [
+     {
+      "method": "Normal RAG",
+      "answers": 300,
+      "query_usd_per_question": 0.000284,
+      "query_usd_per_1000_questions": 0.284,
+      "accuracy": 94.7,
+      "mean_input_tokens": 2460,
+      "mean_output_tokens": 74,
+      "mean_model_calls": 1,
+      "failed_calls": 0,
+      "build_usd_one_time": 0.045,
+      "build_plus_this_types_questions_once": 0.073,
+      "build_plus_this_types_questions_all_repeats": 0.13,
+      "build_plus_10000_questions_of_this_type": 2.89
+     },
+     {
+      "method": "RAPTOR",
+      "answers": 300,
+      "query_usd_per_question": 0.00027,
+      "query_usd_per_1000_questions": 0.27,
+      "accuracy": 95.7,
+      "mean_input_tokens": 2335,
+      "mean_output_tokens": 71,
+      "mean_model_calls": 1,
+      "failed_calls": 0,
+      "build_usd_one_time": 0.379,
+      "build_plus_this_types_questions_once": 0.406,
+      "build_plus_this_types_questions_all_repeats": 0.46,
+      "build_plus_10000_questions_of_this_type": 3.08
+     },
+     {
+      "method": "HippoRAG",
+      "answers": 300,
+      "query_usd_per_question": 0.000398,
+      "query_usd_per_1000_questions": 0.398,
+      "accuracy": 93.7,
+      "mean_input_tokens": 3347,
+      "mean_output_tokens": 125,
+      "mean_model_calls": 1.3,
+      "failed_calls": 0,
+      "build_usd_one_time": 3.963,
+      "build_plus_this_types_questions_once": 4.003,
+      "build_plus_this_types_questions_all_repeats": 4.083,
+      "build_plus_10000_questions_of_this_type": 7.95
+     },
+     {
+      "method": "Agentic Hybrid RAG",
+      "answers": 300,
+      "query_usd_per_question": 0.004016,
+      "query_usd_per_1000_questions": 4.016,
+      "accuracy": 94.0,
+      "mean_input_tokens": 28451,
+      "mean_output_tokens": 2339,
+      "mean_model_calls": 6.23,
+      "failed_calls": 0,
+      "build_usd_one_time": 8.021,
+      "build_plus_this_types_questions_once": 8.423,
+      "build_plus_this_types_questions_all_repeats": 9.226,
+      "build_plus_10000_questions_of_this_type": 48.18
+     }
+    ]
+   }
+  }
+ }
+}

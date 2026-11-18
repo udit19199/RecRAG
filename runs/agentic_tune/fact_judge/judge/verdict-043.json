@@ -1,0 +1,42 @@
+[
+{"id": "c7ae93f64124dbe1", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Hope played a gem of an innings there, calmly anchoring West Indies"}]},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "12721f48fecef259", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "b198bef6b87845f8", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "When FTX took a loss in the hundreds of million dollars because a trader had exploited its system, Wang moved that loss onto Alameda’s balance sheet."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Bankman-Fried directed him to have Alameda take it on instead, because FTX’s balance sheets were visible to investors and Alameda’s weren’t."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "Alameda could have negative balances and unlimited withdrawals."}, {"item": 4, "quote": "Alameda Research first had a negative balance in late 2019, Wang testified."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []}
+]},
+{"id": "5a58629a2f094b97", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Shares of Rogers extended losses on news of the lawsuit, closing down 2.2% to C$53.07 in Toronto."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Shares of Rogers extended losses on news of the lawsuit, closing down 2.2% to C$53.07 in Toronto."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "a sweeping antitrust lawsuit filed last week by the Federal Trade Commission against Amazon."}]},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]}
+]

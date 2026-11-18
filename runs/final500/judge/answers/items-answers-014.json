@@ -1,0 +1,546 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "0a265d3d1f6a53fb",
+   "kind": "answer",
+   "question": "Cherie Currie and Steve Augeri were both what?",
+   "gold_answers": [
+    "American musician"
+   ],
+   "model_answer": "Lead singers\n"
+  },
+  {
+   "id": "e0975b347c5cf652",
+   "kind": "answer",
+   "question": "Operalia, The World Opera Competition helped launch the career of an operatic soprano of what nationality?",
+   "gold_answers": [
+    "Bulgarian"
+   ],
+   "model_answer": "South African"
+  },
+  {
+   "id": "008d7ac0842b8bc7",
+   "kind": "answer",
+   "question": "Who is the American actress that stars in the movie \"Innocesnce\" and is best known for her role as Alexandra Cabot in a long-running NBC series?",
+   "gold_answers": [
+    "Stephanie Caroline March"
+   ],
+   "model_answer": "Stephanie March"
+  },
+  {
+   "id": "9b0293beaf0c3e97",
+   "kind": "answer",
+   "question": "What region has the indigenous language that includes the word Catuaba?",
+   "gold_answers": [
+    "South America"
+   ],
+   "model_answer": "Brazil, South America"
+  },
+  {
+   "id": "e56c50622d8289b0",
+   "kind": "answer",
+   "question": "What is the given name of the character depicted as Juliet Hulme in Heavenly Creatures?",
+   "gold_answers": [
+    "Anne Perry"
+   ],
+   "model_answer": "Juliet"
+  },
+  {
+   "id": "7ca797b21d1d1df1",
+   "kind": "answer",
+   "question": "Cherie Currie and Steve Augeri were both what?",
+   "gold_answers": [
+    "American musician"
+   ],
+   "model_answer": "American rock singers"
+  },
+  {
+   "id": "32d2c0dd99233f4a",
+   "kind": "answer",
+   "question": "Which magazine is focused more on the adult demographic, Jack and Jill or Paper?",
+   "gold_answers": [
+    "Paper"
+   ],
+   "model_answer": "Paper magazine"
+  },
+  {
+   "id": "db5d2a52a252ae0d",
+   "kind": "answer",
+   "question": "William James \"Count\" Basie has an album that is a collection of musical pieces from what movie series?",
+   "gold_answers": [
+    "James Bond"
+   ],
+   "model_answer": "James Bond films"
+  },
+  {
+   "id": "adf6b3dcd428bc99",
+   "kind": "answer",
+   "question": "Who was Chamberlain and Colonel of the military staff of The Merrie Monarch?",
+   "gold_answers": [
+    "Colonel Charles Hastings Judd"
+   ],
+   "model_answer": "Charles Hastings Judd"
+  },
+  {
+   "id": "37291ea8a5e38df5",
+   "kind": "answer",
+   "question": " Kenneth Anderson served under the General who was which President of the United States?",
+   "gold_answers": [
+    "34th"
+   ],
+   "model_answer": "Dwight D. Eisenhower"
+  },
+  {
+   "id": "3080cbd48cfe362e",
+   "kind": "answer",
+   "question": "What do Victor Salva and Emilio Fernández have in common?",
+   "gold_answers": [
+    "director and screenwriter."
+   ],
+   "model_answer": "Both are film directors and screenwriters."
+  },
+  {
+   "id": "c256d8bae0752543",
+   "kind": "answer",
+   "question": "Did John Updike and Tom Clancy both publish more than 15 bestselling novels?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "No."
+  },
+  {
+   "id": "aeb3e9e431a01107",
+   "kind": "answer",
+   "question": "Was Talking Heads and Man or Astro-man? formed further north?",
+   "gold_answers": [
+    "Talking Heads"
+   ],
+   "model_answer": "Yes—Talking Heads were formed farther north."
+  },
+  {
+   "id": "0bd3add6fd28191b",
+   "kind": "answer",
+   "question": "Which terrorist group was the cause of the battle in which Mark E. Michell won an award for his actions?",
+   "gold_answers": [
+    "al-Qaeda"
+   ],
+   "model_answer": "Taliban’s Islamic Emirate of Afghanistan"
+  },
+  {
+   "id": "d3b5d8d145b8916e",
+   "kind": "answer",
+   "question": "Pirates Plunge, at the Grace O'Malley-inspired Pirates Adventure Park in Westport, holds which notable record?",
+   "gold_answers": [
+    "first flume ride in Ireland"
+   ],
+   "model_answer": "Ireland’s tallest log flume ride."
+  },
+  {
+   "id": "2dc3fb62012a3fcc",
+   "kind": "answer",
+   "question": "Where is the county seat for people living in Henderson Point, Mississippi?",
+   "gold_answers": [
+    "Gulfport, Biloxi"
+   ],
+   "model_answer": "Biloxi and Gulfport, Mississippi"
+  },
+  {
+   "id": "0955c68715a76010",
+   "kind": "answer",
+   "question": "How many more singles titles did Kim Warwick win than Jorge Lozano?",
+   "gold_answers": [
+    "three singles titles"
+   ],
+   "model_answer": "2 more titles"
+  },
+  {
+   "id": "19684e112a9ec8c2",
+   "kind": "answer",
+   "question": "The Ronkonkama railroad station and the town of Islip, New York are near?",
+   "gold_answers": [
+    "Long Island"
+   ],
+   "model_answer": "Long Island, New York"
+  },
+  {
+   "id": "8e87c5bbed891ef8",
+   "kind": "answer",
+   "question": "Why is Minister Pool important to Black Country and the West Midlands in England?",
+   "gold_answers": [
+    "defence of the Cathedral"
+   ],
+   "model_answer": "It is a historic Lichfield reservoir that once powered a mill and helped defend the Cathedral Close."
+  },
+  {
+   "id": "7830aeb906d8216d",
+   "kind": "answer",
+   "question": "Where was the air-cooled version of a weapon system used on the HMAS \"Narani\" found?",
+   "gold_answers": [
+    "World War I fighter aircraft."
+   ],
+   "model_answer": "Papua New Guinea"
+  },
+  {
+   "id": "5612abd2f40aa59e",
+   "kind": "answer",
+   "question": "Who was the murderer sent to \"Old Smokey\" for allegedly commiting \"The Crime of the Century\"?",
+   "gold_answers": [
+    "Richard Hauptmann"
+   ],
+   "model_answer": "Bruno Hauptmann"
+  },
+  {
+   "id": "c01089c4424a5b81",
+   "kind": "answer",
+   "question": "In which city are the headquarters of the American research and scientific development company where Ravi Sethi worked as computer scientist located?",
+   "gold_answers": [
+    "Murray Hill"
+   ],
+   "model_answer": "Murray Hill, New Jersey"
+  },
+  {
+   "id": "4d123c380745cc28",
+   "kind": "answer",
+   "question": "What episode did Mona Penelope Simpson  on the animated show \"The Simpsons\"die?",
+   "gold_answers": [
+    "\"Mona Leaves-a\""
+   ],
+   "model_answer": "“Mona Leaves-a” (Season 19, Episode 19)"
+  },
+  {
+   "id": "25768231ae6501c4",
+   "kind": "answer",
+   "question": "Do singers Lee Donghae and Dappy have the same nationality?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No, Lee Donghae is South Korean, while Dappy is English."
+  },
+  {
+   "id": "bc4bab9c806671cf",
+   "kind": "answer",
+   "question": "Were both the Battle of Saipan and the Battle of Manila fought by American forces?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both were fought by American forces."
+  },
+  {
+   "id": "ad8d271cab8945d5",
+   "kind": "answer",
+   "question": " \"Collateral Damage\" is an episode of the television series \"Millennium\" and features the host of a late night talk show that airs how often?",
+   "gold_answers": [
+    "seven nights a week"
+   ],
+   "model_answer": "Once a week"
+  },
+  {
+   "id": "3f9daa3aa870f91b",
+   "kind": "answer",
+   "question": "Wangaratta Wahine, an album featuring the work of an Australian Living Treasure, was recorded by what band?",
+   "gold_answers": [
+    "The Captain Matchbox Whoopee Band"
+   ],
+   "model_answer": "The Don Burrows Quartet"
+  },
+  {
+   "id": "e5bb9297eb04e223",
+   "kind": "answer",
+   "question": "Dean Mills Reservoir is on the slopes of the hill located in what town?",
+   "gold_answers": [
+    "Rivington Moor"
+   ],
+   "model_answer": "Huddersfield"
+  },
+  {
+   "id": "6442c8a6c60618ed",
+   "kind": "answer",
+   "question": "Did Billy Corgan's band The Smashing Pumpkins or Greek Fire originate in a more southern location?",
+   "gold_answers": [
+    "Greek Fire"
+   ],
+   "model_answer": "Greek Fire, from St. Louis."
+  },
+  {
+   "id": "7cc150bae982ae40",
+   "kind": "answer",
+   "question": "What profession does H. L. Mencken and Albert Camus have in common?",
+   "gold_answers": [
+    "journalist"
+   ],
+   "model_answer": "Journalists"
+  },
+  {
+   "id": "d558a18034444260",
+   "kind": "answer",
+   "question": "What was the companion piece that Poe's brother published?",
+   "gold_answers": [
+    "\"The Whalestoe Letters\""
+   ],
+   "model_answer": "House of Leaves"
+  },
+  {
+   "id": "4c89e48877334d35",
+   "kind": "answer",
+   "question": "Who was born more recent.y,Gunnar Nelson or Florence Welch?",
+   "gold_answers": [
+    "Florence Leontine Mary Welch"
+   ],
+   "model_answer": "Florence Welch"
+  },
+  {
+   "id": "29b0c120dbd2d63f",
+   "kind": "answer",
+   "question": "William James \"Count\" Basie has an album that is a collection of musical pieces from what movie series?",
+   "gold_answers": [
+    "James Bond"
+   ],
+   "model_answer": "James Bond film series"
+  },
+  {
+   "id": "aa182f530b101a29",
+   "kind": "answer",
+   "question": "Both Mulled wine and Blue Lagoon are considered primarily alcoholic or non-alcoholic?",
+   "gold_answers": [
+    "alcoholic"
+   ],
+   "model_answer": "Both are primarily alcoholic."
+  },
+  {
+   "id": "c16dab8b8fd31baa",
+   "kind": "answer",
+   "question": "What Kentucky county has a population of 60,316 and features the Lake Louisvilla neighborhood?",
+   "gold_answers": [
+    "Oldham County"
+   ],
+   "model_answer": "Jefferson County"
+  },
+  {
+   "id": "b8b066e6e7ae5c66",
+   "kind": "answer",
+   "question": "Are the 1908 Ex parte Young and 1948 McCollum v. Board of Education United States Supreme Court cases related to each other in any way?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No; they address unrelated issues."
+  },
+  {
+   "id": "30b868ffa46fb02b",
+   "kind": "answer",
+   "question": "That Darn Cat and Honey, I Blew Up the Kid are both what?",
+   "gold_answers": [
+    "comedy"
+   ],
+   "model_answer": "Disney films"
+  },
+  {
+   "id": "c608a2e61afde6ae",
+   "kind": "answer",
+   "question": "What aspect of the board game Diplomacy is not found in the board game Uncle Wiggily?",
+   "gold_answers": [
+    "negotiation phases"
+   ],
+   "model_answer": "Negotiation and alliance-forming strategy"
+  },
+  {
+   "id": "4cf2debbe804916b",
+   "kind": "answer",
+   "question": "The music magazine launched by Rob Stone and Jon Cohen that interviewed CupcakKe about her album Audacious in September was the first print publication to be released where?",
+   "gold_answers": [
+    "on iTunes."
+   ],
+   "model_answer": "The iPad"
+  },
+  {
+   "id": "c08bc7cebb67834c",
+   "kind": "answer",
+   "question": "George Reed was, along with which Drake University player, one of the greatest running backs in CFL history?",
+   "gold_answers": [
+    "Johnny D. Bright"
+   ],
+   "model_answer": "Johnny Bright"
+  },
+  {
+   "id": "02a2ada00511c239",
+   "kind": "answer",
+   "question": "Which dialect spoken in the province of Scania calls Spettekaka, \"spiddekaga\"?",
+   "gold_answers": [
+    "Scanian dialects"
+   ],
+   "model_answer": "Scanian (Skånska)"
+  },
+  {
+   "id": "4f7dd5f4fb723f04",
+   "kind": "answer",
+   "question": "When did the party inspired by Cacareco begin in Canada?",
+   "gold_answers": [
+    "1960s"
+   ],
+   "model_answer": "1963"
+  },
+  {
+   "id": "7872ee7bb28d2c07",
+   "kind": "answer",
+   "question": "Javier Frana and Thomaz Koch both share what occupation?",
+   "gold_answers": [
+    "tennis player"
+   ],
+   "model_answer": "Professional tennis players"
+  },
+  {
+   "id": "a103f1bfcb9b0854",
+   "kind": "answer",
+   "question": "Are the 1908 Ex parte Young and 1948 McCollum v. Board of Education United States Supreme Court cases related to each other in any way?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Only in that both are U.S. Supreme Court cases."
+  },
+  {
+   "id": "3d9cb8b164b808f0",
+   "kind": "answer",
+   "question": "The university where Rolf Martin Theodor Dahlgren worked as a professor has how many employees?",
+   "gold_answers": [
+    "9,000"
+   ],
+   "model_answer": "Over 9,000 employees"
+  },
+  {
+   "id": "b017beb6ac42f841",
+   "kind": "answer",
+   "question": "Which occupations did Ralph Smart and Trey Parker have in common?",
+   "gold_answers": [
+    "producer, director, and writer"
+   ],
+   "model_answer": "Writer, producer, and director"
+  },
+  {
+   "id": "758cebf32a681fad",
+   "kind": "answer",
+   "question": "What do the Church of St. Mary of the Spring and Hagia Irene have in common?",
+   "gold_answers": [
+    "Greek Eastern Orthodox church"
+   ],
+   "model_answer": "Both are Byzantine churches in Istanbul."
+  },
+  {
+   "id": "5b01e0413a8f3fca",
+   "kind": "answer",
+   "question": "Suicide's 1977 released album features a song based on what brand's comic character?",
+   "gold_answers": [
+    "Marvel"
+   ],
+   "model_answer": "Marvel Comics character"
+  },
+  {
+   "id": "81bf46b92426db5f",
+   "kind": "answer",
+   "question": "In addition to the best known comic servant from Commedia dell'arte, who else is featured in La Surprise de l'amour?",
+   "gold_answers": [
+    "Columbine"
+   ],
+   "model_answer": "Lisette"
+  },
+  {
+   "id": "66070b33be7e42fb",
+   "kind": "answer",
+   "question": "Which terrorist group was the cause of the battle in which Mark E. Michell won an award for his actions?",
+   "gold_answers": [
+    "al-Qaeda"
+   ],
+   "model_answer": "Taliban fighters"
+  },
+  {
+   "id": "bcf82e4958a3903d",
+   "kind": "answer",
+   "question": "Cherie Currie and Steve Augeri were both what?",
+   "gold_answers": [
+    "American musician"
+   ],
+   "model_answer": "American musicians"
+  },
+  {
+   "id": "040df78e0843c0e0",
+   "kind": "answer",
+   "question": "What movies has Juno Temple starred in?",
+   "gold_answers": [
+    "She has appeared in films such as \" Black Mass\", \"The Other Boleyn Girl\", \"Wild Child\", \"Atonement\", \"Maleficent\", \"The Three Musketeers\" and \"The Dark Knight Rises\"."
+   ],
+   "model_answer": "*Black Mass*, *The Other Boleyn Girl*, *Wild Child*, *Atonement*, *Maleficent*, *The Three Musketeers*, *The Dark Knight Rises*, *Dirty Girl*, *Cracks*, and *Jack & Diane*."
+  },
+  {
+   "id": "87e3905948a7103b",
+   "kind": "answer",
+   "question": "What is another name, in Swedish, for a seductive forest creature found in Scandinavian folklore?",
+   "gold_answers": [
+    "Rå"
+   ],
+   "model_answer": "Skogsrået"
+  },
+  {
+   "id": "a483b297123327dd",
+   "kind": "answer",
+   "question": "How many more singles titles did Kim Warwick win than Jorge Lozano?",
+   "gold_answers": [
+    "three singles titles"
+   ],
+   "model_answer": "3 more titles"
+  },
+  {
+   "id": "12c9ad4af46c182a",
+   "kind": "answer",
+   "question": "Where are Teide National Park and Garajonay National Park located?",
+   "gold_answers": [
+    "Canary Islands, Spain"
+   ],
+   "model_answer": "The Canary Islands, Spain (Tenerife and La Gomera)."
+  },
+  {
+   "id": "c1f125619be29202",
+   "kind": "answer",
+   "question": "The Ronkonkama railroad station and the town of Islip, New York are near?",
+   "gold_answers": [
+    "Long Island"
+   ],
+   "model_answer": "Ronkonkoma, Long Island\n"
+  },
+  {
+   "id": "a5ca2d24982e94d0",
+   "kind": "answer",
+   "question": "What are some other areas that share a common deer species with the forests of Mara and Mondrem?",
+   "gold_answers": [
+    "New Zealand, Canada, the United States, the Falkland Islands, and Peru."
+   ],
+   "model_answer": "Europe, Australia, New Zealand, and North America"
+  },
+  {
+   "id": "fd347d4bc581834a",
+   "kind": "answer",
+   "question": "Are both The Straight Story and Frozen films of the same genre?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No, they are different genres."
+  },
+  {
+   "id": "f81057517e71132b",
+   "kind": "answer",
+   "question": "What are the professions of Tom Johnston and Daryl Palumbo?",
+   "gold_answers": [
+    "American musician"
+   ],
+   "model_answer": "Musicians"
+  },
+  {
+   "id": "8663a5ea4d1a9726",
+   "kind": "answer",
+   "question": "What is the name of the so-called reform opera for Vienna that came before the one first performed in Vienna in the presence of Empress Maria Theresa?",
+   "gold_answers": [
+    "\"Alceste\""
+   ],
+   "model_answer": "Orfeo ed Euridice"
+  }
+ ],
+ "evidence": []
+}

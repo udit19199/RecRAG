@@ -1,0 +1,427 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "51d2608edb9c295b",
+   "gold": [
+    {
+     "sentence": "The 1892 Auburn Tigers football team represented Auburn University in the 1892 college football season.",
+     "facts": {
+      "0.0": "The 1892 Auburn Tigers football team represented Auburn University.",
+      "0.1": "The 1892 Auburn Tigers football team played in the 1892 college football season."
+     }
+    },
+    {
+     "sentence": " It was the first college football team fielded by the Agricultural and Mechanical College of Alabama, now known as Auburn University.",
+     "facts": {
+      "1.0": "The 1892 Auburn Tigers football team was the first college football team fielded by the Agricultural and Mechanical College of Alabama.",
+      "1.1": "The Agricultural and Mechanical College of Alabama is now known as Auburn University."
+     }
+    },
+    {
+     "sentence": " With more than 22,000 undergraduate students and a total enrollment of more than 28,000 with 1,260 faculty members, Auburn is the second largest university in Alabama.",
+     "facts": {
+      "2.0": "Auburn University has more than 22,000 undergraduate students.",
+      "2.1": "Auburn University has a total enrollment of more than 28,000.",
+      "2.2": "Auburn University has 1,260 faculty members.",
+      "2.3": "Auburn University is the second largest university in Alabama."
+     }
+    }
+   ],
+   "items": [
+    "1983 Alabama Crimson Tide football team\nThe 1983 Alabama Crimson Tide football team (variously \"Alabama\", \"UA\", \"Bama\" or \"The Tide\") represented the University of Alabama in the 1983 NCAA Division I-A football season.\n\n It was the Crimson Tide's 91st overall and 50th season as a member of the Southeastern Conference (SEC).\n\n The team was led by head coach Ray Perkins, in his first year, and played their home games at both Bryant–Denny Stadium in Tuscaloosa and Legion Field in Birmingham, Alabama.\n\n They finished the season with a record of eight wins and four losses (8–4 overall, 4–2 in the SEC).\n\n Ray Perkins, who played as a wide receiver for Bear Bryant in the 1960s, was named as the new head coach at Alabama on December 14, 1982, to succeed Bryant after his 25-year tenure as Alabama's head coach.",
+    "Albanian University in Berat\nThe University of Berat is a private institution, independent and secular Higher Education, which operates the state fee.\n\n Licensed by the Council of Ministers, no. 697 dated 18.06.2009, he opened the doors in the academic year 2009- 2010, offering programs in two faculties: Faculty of Social Sciences Programs in Science Teaching Legal, Political Science and Psychology General Administration and the Faculty of Economics with Learning programs in Banking and Finance-Business Administration.\n\n During the first academic year, about 1,000 students attended studies.\n\n A year later, this new institution offering undergraduate degrees in study programs: Preschool Teacher Education, Primary Education Teacher, English Language, Nursing, Engineering Computer and Information Technology, thus finalizing the 2010-2011 academic year with the opening of two new faculties: Faculty of Medical Sciences and the Faculty of Architecture and Inxhinierive.\n\n Academic Year 2010-2011 finds the University Berat with about 2600 students in the first cycle of study.\n\n Since the first year of its inception, the institution pointed at the center of academic life, the promotion of intellectual product and melting learning and research.",
+    "1997 Alabama Crimson Tide football team\nThe 1997 Alabama Crimson Tide football team represented the University of Alabama in the college football season of 1997–98.\n\n The team's head coach was Mike DuBose, who was entering his first year at Alabama.\n\n They played their home games at both Bryant–Denny Stadium in Tuscaloosa and Legion Field in Birmingham, Alabama and competed in the West Division of the Southeastern Conference.\n\n Alabama would finish with a record of 4–7 record in suffering the program's first losing season since the 1984 season.\n\n The loss against Kentucky marked Alabama's first ever overtime game, as overtime rules for college football had gone into effect the previous season.",
+    "Auburn University\nAuburn University (AU or Auburn) is a public research university in Auburn, Alabama, United States.\n\n With more than 22,000 undergraduate students and a total enrollment of more than 28,000 with 1,260 faculty members, Auburn is the second largest university in Alabama.\n\n Auburn University is one of the state's two public flagship universities.",
+    "2012 Texas A&amp;M vs. Alabama football game\nThe 2012 Texas A&M vs. Alabama football game was a college football game between the Texas A&M Aggies and Alabama Crimson Tide at Bryant–Denny Stadium in Tuscaloosa, Alabama.\n\n This was the game where Texas A&M freshman quarterback and eventual Heisman Trophy winner Johnny Manziel completed 24 of 31 passes, had 253 passing yards, and two passing touchdowns with 92 rushing yards to help No. 15 Texas A&M upset No. 1 Alabama 29–24, which led him to being the first freshman to win the Heisman Trophy.",
+    "1906 Alabama Crimson White football team\nThe 1906 Alabama Crimson White football team (variously \"Alabama\", \"UA\" or \"Bama\") represented the University of Alabama in the 1906 Southern Intercollegiate Athletic Association football season.\n\n It was Alabama's 14th overall and 11th season as a member of the Southern Intercollegiate Athletic Association (SIAA).\n\n The team was led by head coach J. W. H. Pollard, in his first year, and played their home games at both the University of Alabama Quad in Tuscaloosa and the Birmingham Fairgrounds in Birmingham, Alabama.\n\n They finished the season with a record of five wins and one loss (5–1 overall, 3–1 in the SIAA).",
+    "1902 Connecticut Aggies football team\nThe 1902 Connecticut Aggies football team represented Connecticut Agricultural College, now the University of Connecticut, in the 1902 college football season.\n\n This was the seventh year that the school fielded a football team.\n\n The Aggies were led by first year head coach Edwin O. Smith, and completed the season with a record of 4–3.",
+    "West Alabama Tigers football\nThe West Alabama Tigers football program is the intercollegiate American football team for the University of West Alabama located in the U.S. state of Alabama.\n\n The team competes in the NCAA Division II and are members of the Gulf South Conference.\n\n West Alabama's first football team was fielded in 1938.\n\n The team plays its home games at the 7,000 seat Tiger Stadium in Livingston, Alabama.\n\n The Tigers are coached by Brett Gilliland.",
+    "1905 Alabama Crimson White football team\nThe 1905 Alabama Crimson White football team (variously \"Alabama\", \"UA\" or \"Bama\") represented the University of Alabama in the 1905 Southern Intercollegiate Athletic Association football season.\n\n It was Alabama's 13th overall and 10th season as a member of the Southern Intercollegiate Athletic Association (SIAA).\n\n The team was led by head coach Jack Leavenworth, in his first year, and played their home games at both the University of Alabama Quad in Tuscaloosa and the Birmingham Fairgrounds in Birmingham, Alabama.\n\n They finished the season with a record of six wins and four losses (6–4 overall, 4–4 in the SIAA).",
+    "1892 Auburn Tigers football team\nThe 1892 Auburn Tigers football team represented Auburn University in the 1892 college football season.\n\n It was the first college football team fielded by the Agricultural and Mechanical College of Alabama, now known as Auburn University.\n\n The squad was first coached by George Petrie.\n\n Auburn shut out Georgia Tech, 26–0, just two days after being shut out themselves by North Carolina, 64–0.\n\n The team finished the season with a record of 2–2."
+   ]
+  },
+  {
+   "id": "df6f88339f7c8db6",
+   "gold": [
+    {
+     "sentence": "The New York – New Jersey Line War (also known as the N.J. Line War) refers to a series of skirmishes and raids that took place for over half a century between 1701 and 1765 at the disputed border between two American colonies, the Province of New York and the Province of New Jersey.",
+     "facts": {
+      "0.0": "The New York – New Jersey Line War is also known as the N.J. Line War.",
+      "0.1": "The New York – New Jersey Line War refers to a series of skirmishes and raids.",
+      "0.2": "The skirmishes and raids took place for over half a century.",
+      "0.3": "The skirmishes and raids took place between 1701 and 1765.",
+      "0.4": "The skirmishes and raids took place at the disputed border between two American colonies.",
+      "0.5": "The two American colonies were the Province of New York and the Province of New Jersey."
+     }
+    },
+    {
+     "sentence": "The Province of New York (1664–1776) was a British proprietary colony and later royal colony on the northeast coast of North America.",
+     "facts": {
+      "1.0": "The Province of New York existed from 1664 to 1776.",
+      "1.1": "The Province of New York was a British proprietary colony.",
+      "1.2": "The Province of New York later became a royal colony.",
+      "1.3": "The Province of New York was on the northeast coast of North America."
+     }
+    }
+   ],
+   "items": [
+    "Battle of Germantown\nThe Battle of Germantown was a major engagement in the Philadelphia campaign of the American Revolutionary War.\n\n It was fought on October 4, 1777, at Germantown, Pennsylvania, between the British Army led by Sir William Howe, and the American Continental Army, with the 2nd Canadian Regiment, under George Washington.",
+    "Province of New York\nThe Province of New York (1664–1776) was a British proprietary colony and later royal colony on the northeast coast of North America.\n\n As one of the Thirteen Colonies, New York achieved independence and worked with the others to found the United States.",
+    "New York – New Jersey Line War\nThe New York – New Jersey Line War (also known as the N.J. Line War) refers to a series of skirmishes and raids that took place for over half a century between 1701 and 1765 at the disputed border between two American colonies, the Province of New York and the Province of New Jersey.",
+    "Proprietary colony\nA proprietary colony was a type of British colony mostly in North America and the Caribbean in the 17th century.\n\n In the British Empire, all land belonged to the ruler, and it was his prerogative to divide.\n\n Therefore, all colonial properties were partitioned by royal charter into one of four types: proprietary, royal, joint stock, or covenant.\n\n King Charles II used the proprietary solution to reward allies and focus his own attention on Britain itself.\n\n He offered his friends colonial charters which facilitated private investment and colonial self-government.\n\n The charters made the proprietor the effective ruler, albeit one ultimately responsible to English law and the king.\n\n Charles II gave New Netherland to his younger brother The Duke of York, who named it New York.\n\n He gave an area to William Penn who named it Pennsylvania.",
+    "Province of Pennsylvania\nThe Province of Pennsylvania, also known as the Pennsylvania Colony, was founded in English North America by William Penn on March 4, 1681 as dictated in a royal charter granted by King Charles II.\n\n The name Pennsylvania, which translates roughly as \"Penn's Woods\", was created by combining the Penn surname (in honor of William's father, Admiral Sir William Penn) with the Latin word \"sylvania\", meaning \"forest land.\"\n\n The Province of Pennsylvania was one of the two major Restoration colonies, the other being the Province of Carolina.\n\n The proprietary colony's charter remained in the hands of the Penn family until the American Revolution, when the Commonwealth of Pennsylvania was created and became one of the original thirteen states.",
+    "Charter colony\nCharter colony is one of three classes of colonial government established in the 17th century English colonies in North America, the other classes being proprietary colony and royal colony.\n\n The colonies of Rhode Island, Connecticut, and Massachusetts Bay were charter colonies.\n\n In a charter colony, Britain granted a charter to the colonial government establishing the rules under which the colony was to be governed.\n\n The charters of Rhode Island and Connecticut granted the colonists significantly more political liberty than other colonies.\n\n Rhode Island and Connecticut continued to use their colonial charters as their State constitutions after the American Revolution.",
+    "Stamp Act Congress\nThe Stamp Act Congress or First Congress of the American Colonies was a meeting held between October 7 and 25, 1765 in New York City, consisting of representatives from some of the British colonies in North America; it was the first gathering of elected representatives from several of the American colonies to devise a unified protest against new British taxation.\n\n Parliament had passed the Stamp Act, which required the use of specially stamped paper for legal documents, playing cards, calendars, newspapers and dice for virtually all business in the colonies, and was going into effect on November 1.",
+    "History of the New Jersey State Constitution\nOriginally, the state of New Jersey was a single British colony, the Province of New Jersey.\n\n After the English Civil War, Charles II assigned New Jersey as a proprietary colony to be held jointly by Sir George Carteret and John Berkeley, 1st Baron Berkeley of Stratton.\n\n Eventually, the collection of land fees, or quit-rents, from colonists proved inadequate for colonial profitability.\n\n Sir George Carteret sold his share of the colony to the Quakers in 1673.\n\n Following the sale, the land was divided into East and West Jersey.\n\n In 1681, West Jersey adopted a constitution.\n\n In 1683, East Jersey adopted one as well.\n\n In 1702, the colonies were united again under Anne, Queen of Great Britain, and adopted a constitution in 1776.",
+    "Canada under British rule\nCanada first came under British rule with the Treaty of Paris (1763) which ceded New France, of which Canada was a part, to the British Empire.\n\n Gradually, other territories, colonies, and provinces that were part of British North America would be added to Canada.\n\n The Royal Proclamation of 1763 enlarged the colony of Canada under the name of the Province of Quebec, which with the Constitutional Act 1791 became known as The Canadas.\n\n With the Act of Union 1840 Upper and Lower Canada were joined to become the United Province of Canada.\n\n Later, with Confederation in 1867, the British maritime colonies of New Brunswick and Nova Scotia were joined with the British colony of Canada to form the Dominion of Canada, which was subsequently divided into four provinces, Ontario, Quebec, New Brunswick, and Nova Scotia.\n\n A number of other British colonies, such as Newfoundland and British Columbia, and large territories such as Rupert's Land initially remained outside of the newly formed federation.\n\n Over time, the remaining colonies and territories within British North America came under the control of Canada until the current geographic extent of the country was reached when Newfoundland and Labrador joined Canada in 1949.",
+    "Province of New Jersey\nThe Province of New Jersey was one of the Middle Colonies of Colonial America and became the U.S. state of New Jersey in 1776.\n\n The province had originally been settled by Europeans as part of New Netherland, but came under English rule after the surrender of Fort Amsterdam in 1664, becoming a proprietary colony.\n\n The English then renamed the province after the Isle of Jersey in the English Channel.\n\n The Dutch Republic reasserted control for a brief period in 1673–1674.\n\n After that it consisted of two political divisions, East Jersey and West Jersey, until they were united as a royal colony in 1702.\n\n The original boundaries of the province were slightly larger than the current state, extending into a part of the present state of New York, until the border was finalized in 1773."
+   ]
+  },
+  {
+   "id": "0e32aecdac3d3898",
+   "gold": [
+    {
+     "sentence": " He has had a cameo acting role as a tailor in The Wolf of Wall Street, and The Good Shepherd.",
+     "facts": {
+      "0.0": "The person referred to as 'He' has had a cameo acting role as a tailor in The Wolf of Wall Street.",
+      "0.1": "The person referred to as 'He' has had a cameo acting role as a tailor in The Good Shepherd."
+     }
+    },
+    {
+     "sentence": "The Wolf of Wall Street is a 2013 American biographical black comedy crime film directed by Martin Scorsese and written by Terence Winter, based on the memoir of the same name by Jordan Belfort.",
+     "facts": {
+      "1.0": "The Wolf of Wall Street is a 2013 film.",
+      "1.1": "The Wolf of Wall Street is American.",
+      "1.2": "The Wolf of Wall Street is a biographical black comedy crime film.",
+      "1.3": "The Wolf of Wall Street was directed by Martin Scorsese.",
+      "1.4": "The Wolf of Wall Street was written by Terence Winter.",
+      "1.5": "The Wolf of Wall Street is based on the memoir of the same name by Jordan Belfort."
+     }
+    }
+   ],
+   "items": [
+    "Leonard Logsdail\nLeonard Logsdail (born September 11, 1950 in London, England) is a bespoke tailor, based in Manhattan, New York, specializing in men's suits.\n\n He is described as one of the finest bespoke tailors in the men’s suit business.\n\n All of Logsdail's suits are crafted and perfected on-site in his New York City location.\n\n He is credited for making Savile Row tailoring a local option in New York.\n\n Logsdail is known for creating high-end suits, including lining jackets with Hermes silk scarves.\n\n CNBC talk show host, economist and fashion icon Larry Kudlow has his suits made by Leonard Logsdail.\n\n Logsdail has created suits for award-winning films, and is recognized as one of cinema's most sought-after tailors.\n\n Logsdail has collaborated with esteemed film directors Steven Spielberg, Robert de Niro, Oliver Stone, Ridley Scott, and Martin Scorcese.\n\n He has had a cameo acting role as a tailor in The Wolf of Wall Street, and The Good Shepherd.",
+    "Million Dollar Arm\nMillion Dollar Arm is a 2014 American biographical sports drama film directed by Craig Gillespie and produced by Walt Disney Pictures from a screenplay written by Thomas McCarthy.\n\n The film is based on the true story of baseball pitchers Rinku Singh and Dinesh Patel who were discovered by sports agent J. B. Bernstein after winning a reality show competition.",
+    "Leonard Schrader\nLeonard Schrader (November 30, 1943 – November 2, 2006) was an American screenwriter and director, most notable for his ability to write Japanese language films and for his many collaborations with his brother, Paul Schrader.\n\n He earned an Academy Award Nomination for the screenplay he wrote for the film \"Kiss of the Spider Woman\".",
+    "The Life of Emile Zola\nThe Life of Emile Zola is a 1937 American biographical film about French author Émile Zola, played by Paul Muni and directed by William Dieterle.\n\n It has the distinction of being the second biographical film to win the Oscar for Best Picture.\n\n It premiered at the Los Angeles Carthay Circle Theatre to great success both critically and financially.\n\n Contemporary reviews cited it the best biographical film made up to that time.\n\n In 2000, it was selected for preservation in the United States National Film Registry by the Library of Congress as being \"culturally, historically, or aesthetically significant\".",
+    "A Walk in the Woods (film)\nA Walk in the Woods is a 2015 American biographical comedy-drama film directed by Ken Kwapis, based on the 1998 book/memoir of the same name by Bill Bryson.\n\n The film stars Robert Redford, Nick Nolte and Emma Thompson.\n\n The film was released on September 2, 2015, by Broad Green Pictures.",
+    "The Wolf of Wall Street (2013 film)\nThe film marks the director's fifth collaboration with DiCaprio, after \"Gangs of New York\" (2002), \"The Aviator\" (2004), \"The Departed\" (2006) and \"Shutter Island\" (2010), as well as his second collaboration with Winter after the television series \"Boardwalk Empire\" (2010–14).",
+    "The Man from Snowy River (1982 film)\nThe Man from Snowy River is a 1982 Australian drama film based on the Banjo Paterson poem \"The Man from Snowy River\".\n\n The film had a cast including Kirk Douglas in a dual role as the brothers Harrison (a character who appeared frequently in Paterson's poems) and Spur, Jack Thompson as Clancy, Tom Burlinson as Jim Craig, Sigrid Thornton as Harrison's daughter Jessica, Terence Donovan as Jim's father Henry Craig, and Chris Haywood as Curly.",
+    "Rick Ray\nRick Ray is an American filmmaker best known for his 2006 documentary film 10 Questions for the Dalai Lama which he wrote, filmed and directed.\n\n His documentary \"Lynching Charlie Lynch\", about the trials of former medical marijuana dispensary owner Charles C. Lynch, premiered at the 2011 San Luis Obispo International Film Festival on March 9.",
+    "Dash and Lilly\nDash and Lilly is a 1999 Emmy and Golden Globe Award-nominated biographical television film about writers Dashiell Hammett and Lillian Hellman.\n\n The film was directed by actress Kathy Bates and written by Jerrold L. Ludwig.\n\n It stars Sam Shepard and Judy Davis.",
+    "The Wolf of Wall Street (2013 film)\nThe Wolf of Wall Street is a 2013 American biographical black comedy crime film directed by Martin Scorsese and written by Terence Winter, based on the memoir of the same name by Jordan Belfort.\n\n It recounts Belfort's perspective on his career as a stockbroker in New York City and how his firm Stratton Oakmont engaged in rampant corruption and fraud on Wall Street that ultimately led to his downfall.\n\n Leonardo DiCaprio (who was also a producer) stars as Belfort, with Jonah Hill as his business partner and friend Donnie Azoff, Margot Robbie as his wife Naomi Lapaglia and Kyle Chandler as Patrick Denham, the FBI agent who tries to bring him down.\n\n Matthew McConaughey, Rob Reiner, Jon Favreau, Joanna Lumley and Jean Dujardin also star."
+   ]
+  },
+  {
+   "id": "2b9e102cefeb1356",
+   "gold": [
+    {
+     "sentence": " It plays during the opening sequence and was composed by Danny Elfman in 1989, after series creator Matt Groening approached him requesting a retro-style theme.",
+     "facts": {
+      "0.0": "The referenced piece plays during the opening sequence.",
+      "0.1": "Danny Elfman composed the piece in 1989.",
+      "0.2": "Danny Elfman composed the piece after Matt Groening approached him.",
+      "0.3": "Matt Groening is the series creator.",
+      "0.4": "Matt Groening requested a retro-style theme."
+     }
+    },
+    {
+     "sentence": " Clausen has scored or orchestrated music for more than 30 films and television shows, including \"Moonlighting\", \"The Naked Gun\", \"ALF\" and \"Ferris Bueller's Day Off\".",
+     "facts": {
+      "1.0": "Clausen has scored or orchestrated music for more than 30 films and television shows.",
+      "1.1": "Clausen has scored or orchestrated music for 'Moonlighting'.",
+      "1.2": "Clausen has scored or orchestrated music for 'The Naked Gun'.",
+      "1.3": "Clausen has scored or orchestrated music for 'ALF'.",
+      "1.4": "Clausen has scored or orchestrated music for 'Ferris Bueller's Day Off'."
+     }
+    }
+   ],
+   "items": [
+    "Disney's Adventures of the Gummi Bears\nThe show is well-remembered for its theme music, written by Michael and Patty Silversher and creation of \"gummiberry juice\" which was a type of magic potion, granting abilities, which allowed them to bounce away from their hunters.\n\n The theme song was performed by Joseph Williams, son of composer John Williams and one-time lead singer of Toto.",
+    "The Godfather Part II (soundtrack)\nThe Godfather Part II is the soundtrack from the movie of the same name, released in 1974 by ABC, and 1991 on compact disc by MCA.\n\n The original score was composed by Nino Rota and conducted by Carmine Coppola, who also provided source music for the film.\n\n Rota expands upon two of the three main themes from the first film: \"The Godfather Waltz\" and \"Michael's Theme\", while \"The Love Theme\" from the first film makes a brief appearance during a flashback sequence (\"Remember Vito Andolini\").\n\n There are several new themes, including one for Kay (Diane Keaton), and two for young Vito (Robert De Niro): \"The Immigrant Theme\" and \"The Tarantella\", introduced in \"A New Carpet\".",
+    "Romeo and Juliet (1968 film soundtrack)\nThe soundtrack for the 1968 film \"Romeo and Juliet\" was composed and conducted by Nino Rota.\n\n It was originally released as a vinyl record, containing nine entries, most notably the song \"What Is a Youth\", composed by Nino Rota, written by Eugene Walter and performed by Glen Weston.\n\n The music score won a Silver Ribbon award of the Italian National Syndicate of Film Journalists in 1968 and was nominated for two other awards (BAFTA Award for Best Film Music in 1968 and Golden Globe Award for Best Original Score in 1969).",
+    "Batman (score)\nBatman: Original Motion Picture Score is the score album for the 1989 film \"Batman\" by Danny Elfman.\n\n According to the \"Batman\" DVD Special Edition, Elfman said that producer Jon Peters was not sure about him as a composer until Tim Burton made him play the main titles.\n\n Elfman admitted he was stunned when Peters announced that the score would be released on its own album, as releasing a separate score album for a film was something that was rarely done in the 1980s.\n\n Elfman's \"The Batman Theme\" went on to become an iconic piece.\n\n It served as the basis for the theme music of \"\", which premiered in 1992, although this was later changed.\n\n Some parts of the Elfman score are also heard in \"\", \"\" and \"\".\n\n Parts are also played in the queue, and on the station platform of Batman the Ride at various Six Flags theme parks.",
+    "The Simpsons Theme\n\"The Simpsons\" Theme\", also referred to as \"The Simpsons\" Main Title Theme\" in album releases, is the theme music of the animated television series \"The Simpsons\".\n\n It plays during the opening sequence and was composed by Danny Elfman in 1989, after series creator Matt Groening approached him requesting a retro-style theme.\n\n The piece, which took 3 days, 2 hours, 48 minutes, and 19 seconds to create, has been noted by Elfman as the most popular of his career.\n\n The theme, as used for the opening sequence, was re-arranged during season 2, and the current arrangement by Alf Clausen was introduced at the beginning of the third season.",
+    "James Dooley (composer)\nJames Michael \"Jim\" Dooley (born August 22, 1976 in New York City, New York) is an American film score composer.\n\n Dooley studied music at New York University, majoring in music composition.\n\n After finishing the university he moved to Los Angeles, where he studied music with prolific film score composers Christopher Young, Elmer Bernstein and Leonard Rosenman.\n\n In 1999, he started working for Hans Zimmer as his chief technical assistant.\n\n He works in Santa Monica, in Hans Zimmer's film music studio Remote Control Productions (formerly \"Media Ventures\").\n\n He composed, arranged, and orchestrated music for films like \"\" and \"The Da Vinci Code\".\n\n He also composed music for \"inFAMOUS 2\", the Epic Mickey series and worked with Celldweller and Tarja Turunen.\n\n He released his debut album, \"Veiled Nation\", in 2013.",
+    "Alf Clausen\nAlf Heiberg Clausen (born March 28, 1941) is an American film and television composer.\n\n He is best known for his work scoring many episodes of \"The Simpsons\", of which he had been the sole composer between 1990 and 2017.\n\n Clausen has scored or orchestrated music for more than 30 films and television shows, including \"Moonlighting\", \"The Naked Gun\", \"ALF\" and \"Ferris Bueller's Day Off\".",
+    "Angelo Badalamenti\nAngelo Badalamenti (born March 22, 1937) is an American composer, best known for his work scoring films for director David Lynch, notably \"Blue Velvet\", the \"Twin Peaks\" saga (1990–1992, 2017), \"The Straight Story\" and \"Mulholland Drive\".\n\n Badalamenti received the 1990 Grammy Award for Best Pop Instrumental Performance for his \"\"Twin Peaks\" Theme\", and has received a Lifetime Achievement Award from the World Soundtrack Awards and the Henry Mancini Award from the American Society of Composers, Authors and Publishers.",
+    "List of Beelzebub episodes\nThe television series uses six pieces of theme music, three openings and three endings.\n\n The first opening theme used between episodes 1 to 10 is \"DaDaDa\" (だだだ ) by Group Tamashii, while the second opening theme, used from episode 11-23, is \"The First Goodbye\" (始まるのは, サヨナラ , Hajimaru no wa, Sayonara ) by On/Off.\n\n The third opening theme, \"Hey!!!\"\n\n by FLOW is used from episodes 24 onward.\n\n The fourth opening theme Baby U!\n\n by MBLAQ is used from episodes 36 to 48.\n\n The fifth opening theme is Only you -Kimi to no Kizuna- by Lc5 is used from episodes 49 onward.\n\n The first ending theme used for episodes 1-10 is \"Answer\" by no3b, while the second theme, used from episode 11-23 is \"Show of Courage\" (つよがり , Tsuyogari ) by Shoko Nakagawa.",
+    "Diwa de Leon\nDiwa de Leon is a composer, arranger and musician based in Manila, Philippines.\n\n He makes music mainly for television shows, films, and stage productions.\n\n His most notable work is his arrangement of GMA Network's \"Survivor Philippines\" theme music.\n\n His songs included in \"Emir\".\n\n He won the Cinema One Originals Best Musical Score award for his work on the film \"Kolorete\" and Best Music Score for \"Kamera Obskura\" at the 8th Cinemalaya Independent Film Festival.\n\n He is also a founding member of the world music group Makiling.\n\n His first mainstream film project is Mamarazzi produced by Regal Films."
+   ]
+  },
+  {
+   "id": "5bdcc5432bd9bb0d",
+   "gold": [
+    {
+     "sentence": " The documentary explores the history of the mile and a half long stretch of road through West Hollywood known as Sunset Strip.",
+     "facts": {
+      "0.0": "The documentary explores the history of Sunset Strip.",
+      "0.1": "Sunset Strip is a mile and a half long stretch of road.",
+      "0.2": "Sunset Strip runs through West Hollywood."
+     }
+    },
+    {
+     "sentence": " The film features some early pioneers of the hardcore punk music scene including Bad Brains, Black Flag, D.O.A., Minor Threat, Minutemen, SSD, and others.",
+     "facts": {
+      "1.0": "The film features some early pioneers of the hardcore punk music scene.",
+      "1.1": "Bad Brains is an early hardcore punk pioneer featured in the film.",
+      "1.2": "Black Flag is an early hardcore punk pioneer featured in the film.",
+      "1.3": "D.O.A. is an early hardcore punk pioneer featured in the film.",
+      "1.4": "Minor Threat is an early hardcore punk pioneer featured in the film.",
+      "1.5": "Minutemen is an early hardcore punk pioneer featured in the film.",
+      "1.6": "SSD is an early hardcore punk pioneer featured in the film.",
+      "1.7": "The film features other early hardcore punk pioneers besides those named."
+     }
+    }
+   ],
+   "items": [
+    "The entries span film, television, documentaries, and film distribution: Philippine series Sine Novela adapts Viva classics; The Doom Generation (1995) is Gregg Araki’s violent “Teenage Apocalypse” film; Naked Gun 33⅓ concludes its comedy trilogy, while Naked City (1958–63) is a semi-documentary police drama. Night Life is a zombie comedy; The Runaways portrays the band’s formation and Currie-Jett relationship. Consolidated Film Industries was",
+    "The entries cover documentaries on Boston hardcore (All Ages, 2012), punk (Punk’s Not Dead, 2007; American Hardcore, 2006), bipolar disorder, artistic aging, slavery, archaeology, bookstores, and Charles Bukowski; plus Barbara Hammer’s autobiographical Tender Fictions. Fiction films include Bakshi’s acclaimed X-rated Heavy Traffic, Heavyweights, several American Pie and Bring It On sequels, Schrader’s Hardcore, Blue Collar, and The",
+    "All Ages: The Boston Hardcore Film\nAll Ages: The Boston Hardcore Film, a Gallery East Production in association with Stone Films/NYC, is a documentary directed by Drew Stone, which had its world premier at the Independent Film Festival of Boston on April 27, 2012.\n\n The film features interviews, archival footage and the music of Boston’s early hardcore bands including Deep Wound, DYS, Gang Green, Impact Unit, Jerry's Kids, Negative FX, SS Decontrol, The Freeze and The F.U.'s.\n\n Also featured in the film are interviews with renowned author Michael Patrick MacDonald (\"Easter Rising\", \"All Souls\"), Actress Christine Elise McCarthy, Advertising Executive Jonathan Anastas, Thrasher Magazine Editor Jake Phelps, \"American Hardcore\" Director Paul Rachman, and Newbury Comics owner Michael Dreese.\n\n \"All Ages\" has been released on DVD with numerous extras and director's commentary.",
+    "Hardcore (1979 film)\nHardcore is a 1979 American crime drama film written and directed by Paul Schrader and starring George C. Scott, Peter Boyle and Season Hubley.\n\n The story concerns a father searching for his daughter, who has vanished only to appear in a pornographic film.\n\n Writer-director Schrader had previously written the screenplay for Martin Scorsese's \"Taxi Driver\", and both films share a theme of exploring an unseen subculture.",
+    "Punk's Not Dead (2007 film)\nPunk's Not Dead is a 2007 documentary film directed by Susan Dynner, an American hardcore punk fan.\n\n The film claims to infiltrate American clubs, malls, recording studios, etc. where it sets out to claim hardcore punk and pop punk music is \"thriving\" from an American perspective.\n\n Its content features performances largely from 1980s hardcore bands and MTV skate punk and pop punk/rock acts.\n\n It also includes various interviews and behind-the-scenes footage with the bands, labels and fans.",
+    "Sunset Strip (2012 film)\nSunset Strip is a 2012 documentary directed by Hans Fjellestad, and produced by Tommy Alastra.\n\n The documentary explores the history of the mile and a half long stretch of road through West Hollywood known as Sunset Strip.",
+    "Mayor of the Sunset Strip\nMayor of the Sunset Strip is a 2003 documentary film on the life of Rodney Bingenheimer directed by George Hickenlooper, and produced by Chris Carter.\n\n In 2011, Craig Hlavaty of the \"Houston Press\" named \"Mayor of the Sunset Strip\" at number eight on the paper's list of \"The 31 Best Music Documentaries of All Time\".\n\n The film won the Best Documentary Feature at the 2004 Santa Barbara International Film Festival.",
+    "American Hardcore (film)\nAmerican Hardcore: The History of American Punk Rock 1980-1986 is a documentary directed by Paul Rachman and written by Steven Blush.\n\n It is based on the book \"\" also written by Blush.\n\n It was released on September 22, 2006 on a limited basis.\n\n The film features some early pioneers of the hardcore punk music scene including Bad Brains, Black Flag, D.O.A., Minor Threat, Minutemen, SSD, and others.\n\n It was released on DVD by Sony Pictures Home Entertainment on February 20, 2007.",
+    "Sunset Strip\nSunset Strip is the mile-and-a-half (2.4 km) stretch of Sunset Boulevard that passes through West Hollywood, California.\n\n It extends from West Hollywood's eastern border with Hollywood at Crescent Heights Boulevard to its western border with Beverly Hills at Sierra Drive.\n\n Sunset Strip is probably the best-known portion of Sunset Boulevard, with boutiques, restaurants, rock clubs, and nightclubs.\n\n It is also known for its array of huge, colorful billboards.",
+    "Riot on Sunset Strip\nRiot on Sunset Strip is a 1967 counterculture-era exploitation movie, released by American International Pictures.\n\n It was filmed and released within four months of the late-1966 Sunset Strip curfew riots."
+   ]
+  },
+  {
+   "id": "30885c4576dbad9a",
+   "gold": [
+    {
+     "sentence": "Marc Predka (born April 21, 1975) better known by his stage name Tha Trademarc, is an American hip hop artist.",
+     "facts": {
+      "0.0": "Marc Predka was born April 21, 1975.",
+      "0.1": "Marc Predka is better known by his stage name Tha Trademarc.",
+      "0.2": "Marc Predka is an American hip hop artist."
+     }
+    },
+    {
+     "sentence": " He first came to prominence when he and his first cousin, WWE wrestler John Cena, collaborated on the 2005 album \"You Can't See Me\", including Cena's entrance theme \"The Time Is Now\".",
+     "facts": {
+      "1.0": "Marc Predka first came to prominence when he collaborated with his first cousin, John Cena.",
+      "1.1": "John Cena is a WWE wrestler.",
+      "1.2": "Marc Predka and John Cena collaborated on the 2005 album 'You Can't See Me'.",
+      "1.3": "The album 'You Can't See Me' includes Cena's entrance theme 'The Time Is Now'."
+     }
+    },
+    {
+     "sentence": "\"The Time Is Now\" is a song by professional wrestler, actor, and hip hop musician John Cena.",
+     "facts": {
+      "2.0": "'The Time Is Now' is a song by John Cena.",
+      "2.1": "John Cena is a professional wrestler.",
+      "2.2": "John Cena is an actor.",
+      "2.3": "John Cena is a hip hop musician."
+     }
+    }
+   ],
+   "items": [
+    "The Preytells\nThe Preytells were an Australian indie rock band from Perth, formed in 2004 by Jessica Bennett (a.k.a. Audrey Tell) on lead guitar and backing vocals, Simon Okely (a.k.a. Will Tell) on guitar and lead vocals, Jaclyn Pearson on drums and percussion and Cameron Stewart on bass guitar and backing vocals.\n\n Their sole album, \"Flood Songs/June Songs\", was issued in September 2009; before they disbanded later that year.\n\n Their single, \"Shout!\"\n\n ( May 2008), was nominated for WAM Song of the Year in the Pop category in 2008; while, \"Lord Hold My Hand\", was nominated for the same category in 2009.",
+    "Love Can't Wait (Nick Carter song)\n\"Love Can't Wait\" is a song by American singer-songwriter Nick Carter, released as the lead Canadian single from his second studio album, \"I'm Taking Off\".\n\n The single was released on June 21, 2011.\n\n The song only appears on the Canadian version of the album, and has not been released in any other territories.\n\n The music video for the song features Carter performing the song with the backdrop of a motorway system.\n\n The music video also featured Canadian pop star Shawn Desman, who co-wrote the song.\n\n The single peaked at #2 on the Canadian Singles Chart, based entirely on download sales.\n\n Carter ran a competition for amateur mixers to remix the track, with the winning remixer earning $1500 and their remix appearing on Carter's remix album, \"I'm Taking Off: Relaunched and Remixed\".",
+    "Greg Davis (musician)\nGreg Davis is an American electronic musician who has recorded albums drawing from a wide variety of sources, including guitar, field recording, various world/ethnic/traditional instruments, percussion, and voice, all processed through digital manipulation.\n\n After years of experience in hip-hop groups, jazz combos, free improvisation, and experimental composition, Davis moved toward computer-based music in 1997.\n\n At Depaul University in Chicago, he studied classical and jazz guitar alongside composition and jazz studies.\n\n In 1997, he started his own label, Autumn Records, to release his own music and the music of others.\n\n Davis moved to Boston in 1999 to pursue a master's degree in composition (which he received in June 2001) while independently immersing himself in the study of electronic music.\n\n Since 2001, he has played shows all around the world and released records on a number of different labels.\n\n He has collaborated with Keith Fullerton Whitman, Ben Vida, Sebastien Roux, Chris Weisman, Steven Hess, Jeph Jerman, Akron/Family, Toby Aronson (as Harmonizer), and Zach Wallace (as Sun Circle).",
+    "A Little Time\n\"A Little Time\" is a song by The Beautiful South, and is the band's only single to reach number 1 in the UK Singles Chart.\n\n It consists of a duet featuring vocalists Dave Hemingway and Briana Corrigan.",
+    "I Told You So (Karmin song)\n\"I Told You So\" is a song by American recording duo Karmin, taken from their debut EP \"Hello\".\n\n It was written by band members Amy Heidemann and Nick Noonan, as well as Elite and producer John \"Jon Jon Traxx\" Webb, Jr.\n\n The song features a primary hip hop influence, as well as elements of rock, electronica and ska.\n\n The song debuted live on \"Saturday Night Live\" on February 11, 2012.\n\n Heidemann and Noonan first performed a live acoustic snippet of the song on Elvis Duran and the Morning Show prior to their SNL appearance.\n\n \"I Told You So\" is said to pay homage to Chris Brown's \"Look at Me Now\", a song they covered on YouTube that brought them to fame.",
+    "Brand New Love Affair (song)\n\"Brand New Love Affair,\" sometimes alternatively listed as \"Brand New Love Affair (Parts I and II)\", is a song written by James Pankow for the group Chicago and recorded for their album Chicago VIII.\n\n The song peaked at #61 on the charts.\n\n Guitarist Terry Kath sings the first half while bassist Peter Cetera sings the second half.\n\n Keyboardist Robert Lamm played the distinctive Fender Rhodes electric piano on the song—the intro particularly showcases its lush vibrato bell-like sound.",
+    "Zach Crowell\nZach Crowell is a Grammy Award-winning songwriter and record producer, who was born and raised in Nashville, Tennessee.\n\n Crowell is involved in a joint publishing deal with Warner/Chappell Music, Combustion Music and Taperoom Music.",
+    "Rebuild (song)\n\"Rebuild\" is a song written by Jon Foreman of Switchfoot and Matt Thiessen of Relient K.\n\n The song was written in conjunction with the bands' 2007 Appetite for Construction Tour, featuring members from all three bands on tour, Switchfoot, Relient K, and Ruth.\n\n Thiessen sang second vocals, and Dustin Ruth of Ruth played harmonica.",
+    "Tha Trademarc\nMarc Predka (born April 21, 1975) better known by his stage name Tha Trademarc, is an American hip hop artist.\n\n He first came to prominence when he and his first cousin, WWE wrestler John Cena, collaborated on the 2005 album \"You Can't See Me\", including Cena's entrance theme \"The Time Is Now\".\n\n He also appeared in the music videos of the songs, \"Bad Bad Man\" and \"Right Now\" with Cena.\n\n Prior to the album, Trademarc appeared on Cena's first WWE DVD \"Word Life\".\n\n He now works as a classroom specialist for the Peace Corps of America.",
+    "The Time Is Now (John Cena song)\n\"The Time Is Now\" is a song by professional wrestler, actor, and hip hop musician John Cena.\n\n It is the current entrance theme Cena uses as he makes his entrance to the ring.\n\n Currently wrestling for WWE, Cena recorded the song in 2005 for his debut studio album, \"You Can't See Me\"."
+   ]
+  },
+  {
+   "id": "1c2fc0ae28ff5500",
+   "gold": [
+    {
+     "sentence": "The University of Arizona (also referred to as U of A, UA, or Arizona) is a public research university in Tucson, Arizona, United States.",
+     "facts": {
+      "0.0": "The University of Arizona is a public research university.",
+      "0.1": "The University of Arizona is in Tucson, Arizona, United States.",
+      "0.2": "The University of Arizona is also referred to as U of A.",
+      "0.3": "The University of Arizona is also referred to as UA.",
+      "0.4": "The University of Arizona is also referred to as Arizona."
+     }
+    },
+    {
+     "sentence": "The Presbyterian University College, Ghana is a partially private & public university located at Abetifi-Kwahu in the Eastern Region of Ghana.",
+     "facts": {
+      "1.0": "The Presbyterian University College, Ghana is a partially private and public university.",
+      "1.1": "The Presbyterian University College, Ghana is located at Abetifi-Kwahu.",
+      "1.2": "Abetifi-Kwahu is in the Eastern Region of Ghana."
+     }
+    },
+    {
+     "sentence": " It is one of the new universities in Ghana granted accreditation by the National Accreditation Board.",
+     "facts": {
+      "2.0": "The Presbyterian University College, Ghana is one of the new universities in Ghana.",
+      "2.1": "The Presbyterian University College, Ghana was granted accreditation by the National Accreditation Board."
+     }
+    }
+   ],
+   "items": [
+    "Lydia Patterson Institute\nLydia Patterson Institute is a Methodist Christian college-preparatory school located in El Paso, Texas, United States.\n\n Founded in 1913, it offers programs for Spanish-speaking children, primarily from Juarez, to attend high school in the United States and attend an American undergraduate university.\n\n All high school classes are taught in English, and the school is accredited by the Southern Association of Colleges and Schools.",
+    "Graph query row:\norganization: Presbyterian University College, Ghana\nfounded_on: 23 November 2003\nrelationship: LOCATED_IN\nconnected_entity: Abetifi-Kwahu",
+    "Syracuse Triad\nThe Syracuse Triad is the name given to the three women's sororities founded at Syracuse University.\n\n Alpha Phi was founded first in 1872 by 10 of the original 20 women admitted into Syracuse University.\n\n Gamma Phi Beta came along two years later in 1874 and with it came the term \"sorority,\" which was coined at the time of its founding.\n\n (Prior to that, women's Greek-letter organizations used the term \"women's fraternity,\" since no more appropriate term existed.)\n\n Alpha Gamma Delta completed the triad in 1904.",
+    "Evangelical Presbyterian University College\nThe Evangelical Presbyterian University College was established in 2008 by the Evangelical Presbyterian Church, Ghana.",
+    "University of Arizona\nThe University of Arizona (also referred to as U of A, UA, or Arizona) is a public research university in Tucson, Arizona, United States.\n\n Founded in 1885, the UA was the first university in the Arizona Territory.\n\n The university operates two medical schools (University of Arizona College of Medicine - Tucson and the University of Arizona College of Medicine - Phoenix) and is affiliated with the region's only academic medical centers (Banner - University Medical Center Tucson and Banner - University Medical Center Phoenix).\n\n The university is also home to the James E. Rogers College of Law and numerous other nationally ranked graduate and professional schools.\n\n During the 2016–2017 academic year, there was a total enrollment of 43,625 students, including 34,072 undergraduates The University of Arizona is governed by the Arizona Board of Regents.\n\n The University of Arizona is one of the elected members of the Association of American Universities (an organization of North America's premier research institutions) and is the only representative from the state of Arizona to this group.",
+    "Presbyterian University College\nThe Presbyterian University College, Ghana is a partially private & public university located at Abetifi-Kwahu in the Eastern Region of Ghana.\n\n It is one of the new universities in Ghana granted accreditation by the National Accreditation Board.\n\n It was established by the Presbyterian Church of Ghana on 23 November 2003 and inaugurated on 27 March 2004 by the president of Ghana, John Agyekum Kufuor.",
+    "Albanian University in Berat\nThe University of Berat is a private institution, independent and secular Higher Education, which operates the state fee.\n\n Licensed by the Council of Ministers, no. 697 dated 18.06.2009, he opened the doors in the academic year 2009- 2010, offering programs in two faculties: Faculty of Social Sciences Programs in Science Teaching Legal, Political Science and Psychology General Administration and the Faculty of Economics with Learning programs in Banking and Finance-Business Administration.\n\n During the first academic year, about 1,000 students attended studies.\n\n A year later, this new institution offering undergraduate degrees in study programs: Preschool Teacher Education, Primary Education Teacher, English Language, Nursing, Engineering Computer and Information Technology, thus finalizing the 2010-2011 academic year with the opening of two new faculties: Faculty of Medical Sciences and the Faculty of Architecture and Inxhinierive.\n\n Academic Year 2010-2011 finds the University Berat with about 2600 students in the first cycle of study.\n\n Since the first year of its inception, the institution pointed at the center of academic life, the promotion of intellectual product and melting learning and research.",
+    "Aaron McCreary\nAaron Monroe \"Mac\" McCreary (September 15, 1892 – ?)\n\n was an American football, basketball, and baseball player, coach, and college athletics administrator.\n\n He served as the head football coach at Tempe State Teachers College, known at Arizona State Teachers College by 1929 and now called Arizona State University, compiling a career college football record of 25–17–4.\n\n McCreary was also the head basketball coach at Tempe/Arizona State Teachers from 1923 to 1930 and at Arizona State Teacher's College of Flagstaff, now Northern Arizona University, amassing a career college basketball record of 140–149.\n\n In addition, he coached baseball at Tempe/Arizona State Teachers (1924–1926, 1928, 1930–1931) and at Arizona State Teacher's Flagstaff in 1959, tallying a career college baseball mark of 22–56–1.",
+    "Sanders–Brown Center on Aging\nThe Sanders–Brown Center on Aging at the University of Kentucky in Lexington, Kentucky, is responsible for research, education and service programs in aging.\n\n The program was founded in 1963 with the creation of the Council on Aging.\n\n In 1972, a grant from the Eleanor and John Y. Brown Jr., Foundation led to the construction of the current facility.\n\n The center was named for the Browns and his then-business partner, (Col.) Harlan Sanders.\n\n The four-story brick and concrete structure fronts South Limestone at the edge of the medical campus.\n\n The complex features 32 research laboratories that employs more than 150.",
+    "Graph query row:\norganization: The University of Arizona\nfounded_on: 1885\nrelationship: LOCATED_IN\nconnected_entity: Tucson"
+   ]
+  },
+  {
+   "id": "46da91c09ff0db85",
+   "gold": [
+    {
+     "sentence": "Kolejka ( ; Polish for \"queue\" or \"line (of people)\") is a board game designed by Karol Madaj and launched in February 2011 by Poland's Institute of National Remembrance.",
+     "facts": {
+      "0.0": "Kolejka is a board game.",
+      "0.1": "Kolejka is Polish for 'queue' or 'line (of people)'.",
+      "0.2": "Karol Madaj designed Kolejka.",
+      "0.3": "Kolejka was launched in February 2011.",
+      "0.4": "Kolejka was launched by Poland's Institute of National Remembrance."
+     }
+    },
+    {
+     "sentence": "Ghettopoly is a parody of \"Monopoly\" released in 2003.",
+     "facts": {
+      "1.0": "Ghettopoly is a parody of Monopoly.",
+      "1.1": "Ghettopoly was released in 2003."
+     }
+    }
+   ],
+   "items": [
+    "The White EP (Vib Gyor EP)\nThe \"White EP\" is a promo EP from the Leeds band Vib Gyor.\n\n It was first sold on their UK tour with American band Transfer and was released through their My Space page and official web-site on 13 November 2007.\n\n It is the follow-up to their The Secret EP.\n\n It was recorded in Rockfield studios in South Wales and produced by Ken Thomas.",
+    "Kick Over the Traces\nKick Over the Traces is a compilation album by the American punk rock band Pinhead Gunpowder.\n\n The album contains tracks from Pinhead Gunpowder releases since the band formed in 1990.\n\n The album was released through Recess Records on June 16, 2009.\n\n The Japanese edition features a second disc recorded live at 924 Gilman Street on February 10, 2008, and features different cover art.",
+    "Compulsive Disclosure\nCompulsive Disclosure is the second compilation album by the American punk rock band Pinhead Gunpowder.\n\n It was released on October 21, 2003, through Lookout!\n\n Records.\n\n The album features songs from the group's eponymously titled 2000 EP, the \"Dillinger Four / Pinhead Gunpowder\" split EP, the \"8 Chords, 328 Words\" EP and also features re-recorded versions of the songs \"2nd Street\" and \"At Your Funeral\" (originally from \"Dillinger Four / Pinhead Gunpowder\").\n\n \"Compulsive Disclosure\" was re-released on CD and vinyl through Recess Records on February 12, 2010, with two unreleased tracks, \"Salting Agents\" and \"El Lasso Grappo\".",
+    "Pinhead Gunpowder (2008 EP)\nPinhead Gunpowder (also known by fans as the West Side Highway EP) is the second eponymously titled extended play by the American punk rock band Pinhead Gunpowder.\n\n It was released on August 19, 2008, through Recess Records, the group's first release on Recess.\n\n \"Pinhead Gunpowder\" marked the band's first new release in over 5 years.\n\n The first pressings of the extended play were on green and blue vinyl.\n\n All of the tracks were rereleased on the 2009 compilation \"Kick Over the Traces\".",
+    "Kolejka (game)\nKolejka ( ; Polish for \"queue\" or \"line (of people)\") is a board game designed by Karol Madaj and launched in February 2011 by Poland's Institute of National Remembrance.\n\n It was designed to teach young generations about the hardships under communism (1945–1989), particularly the difficulty of acquiring consumer goods in the shortage economy.\n\n The game has been described as inspired by \"Monopoly\".",
+    "The First Collage\nThe First Collage is the debut and first EP by Yang Yo-seob, released on November 26, 2012.",
+    "OK Go (2000 EP)\nOK Go or The Brown EP (officially known as OKGoCD.001) is the first EP by American rock band OK Go.",
+    "The Hunter (EP)\nThe Hunter is the first EP (and follow up to the 2010 solo album \"The Boxer\") by Kele Okereke (under the professional name Kele), lead singer and rhythm guitarist of the British rock band Bloc Party.\n\n It was released on 7 November 2011 by Wichita Recordings in the UK, set back a week from the original release date, and 3 days earlier on 4 November 2011 by Wichita Recordings and Liberator Music in Australia.\n\n The first single released from the EP was \"What Did I Do?\n\n\", which features guest vocals from Lucy Taylor.\n\n The music video was released on 13 September 2011, with the song released as a digital single in Japan 10 days later.",
+    "OK Go (2001 EP)\nOK Go or The Pink EP (officially known as OKGoCD.002) is the second EP by American rock band OK Go.",
+    "Ghettopoly\nGhettopoly is a parody of \"Monopoly\" released in 2003.\n\n Invented by David Chang, it uses \"Monopoly\"-like mechanics in the atmosphere of a caricaturized United States ghetto."
+   ]
+  },
+  {
+   "id": "27eea1cf2f32c92d",
+   "gold": [
+    {
+     "sentence": "The Apple Dumpling Gang is a 1975 American comedy-western film produced by Walt Disney Productions about a slick gambler named Russell Donovan (Bill Bixby) who is duped into taking care of a group of orphans who eventually strike gold during the California Gold Rush.",
+     "facts": {
+      "0.0": "The Apple Dumpling Gang is a 1975 American comedy-western film.",
+      "0.1": "The Apple Dumpling Gang was produced by Walt Disney Productions.",
+      "0.2": "The Apple Dumpling Gang is about a slick gambler named Russell Donovan.",
+      "0.3": "Russell Donovan is played by Bill Bixby.",
+      "0.4": "Russell Donovan is duped into taking care of a group of orphans.",
+      "0.5": "The group of orphans eventually strikes gold during the California Gold Rush."
+     }
+    },
+    {
+     "sentence": "Heavyweights is a 1995 American comedy-drama film directed by Steven Brill and written by Brill with Judd Apatow.",
+     "facts": {
+      "1.0": "Heavyweights is a 1995 American comedy-drama film.",
+      "1.1": "Heavyweights was directed by Steven Brill.",
+      "1.2": "Heavyweights was written by Steven Brill with Judd Apatow."
+     }
+    }
+   ],
+   "items": [
+    "Freebie and the Bean\nFreebie and the Bean is a 1974 American action-comedy film about two off-beat police detectives who wreak havoc in San Francisco attempting to bring down a local organized crime boss.\n\n The picture, a precursor to the buddy cop film genre popularized a decade later, stars James Caan, Alan Arkin, Loretta Swit and Valerie Harper.\n\n Harper was nominated for the Golden Globe for New Star of the Year for playing the Hispanic wife of Alan Arkin.\n\n The film was directed by Richard Rush.\n\n An article in Rolling Stone magazine alleged that Stanley Kubrick called \"Freebie and the Bean\" the best film of 1974.\n\n Arkin and Caan would not appear in another movie together until the 2008 film adaptation of \"Get Smart\".",
+    "Heavyweights\nHeavyweights is a 1995 American comedy-drama film directed by Steven Brill and written by Brill with Judd Apatow.\n\n The film centers around a fat camp for kids that is taken over by a fitness guru named Tony Perkis (Ben Stiller).",
+    "American Hardcore (film)\nAmerican Hardcore: The History of American Punk Rock 1980-1986 is a documentary directed by Paul Rachman and written by Steven Blush.\n\n It is based on the book \"\" also written by Blush.\n\n It was released on September 22, 2006 on a limited basis.\n\n The film features some early pioneers of the hardcore punk music scene including Bad Brains, Black Flag, D.O.A., Minor Threat, Minutemen, SSD, and others.\n\n It was released on DVD by Sony Pictures Home Entertainment on February 20, 2007.",
+    "The Apple Dumpling Gang Rides Again\nThe Apple Dumpling Gang Rides Again is a 1979 American comedy-western film produced by Walt Disney Productions and a sequel to \"The Apple Dumpling Gang\" (1975), starring the comedy duo of Tim Conway and Don Knotts reprising their respective roles as Amos and Theodore.\n\n The film also stars Tim Matheson, Harry Morgan, and Kenneth Mars.\n\n Ruth Buzzi appears in a small cameo as a wild farsighted woman.\n\n Robert Totten, who directed installments of \"Gunsmoke\", also had a small part in the film.",
+    "The Sasquatch Gang\nThe Sasquatch Gang (also known as The Sasquatch Dumpling Gang) is a 2006 comedy film written and directed by Tim Skousen, the first assistant director on \"Napoleon Dynamite\".",
+    "Honey, I Blew Up the Kid\nHoney, I Blew Up the Kid is a 1992 American comedy science fiction film and the sequel to the 1989 film \"Honey, I Shrunk the Kids\".\n\n Directed by Randal Kleiser and released by Walt Disney Pictures, the film stars Rick Moranis, Marcia Strassman, Robert Oliveri and Amy O'Neill, who reprise their roles as Wayne, Diane, Nick, and Amy Szalinski respectively, as well as newcomer Keri Russell as Mandy Park, Nick's love interest and babysitter of Adam, the Szalinskis' new two-year-old son, whose accidental exposure to Wayne's new industrial-sized growth machine causes him to gradually grow to enormous size.\n\n Made only three years after \"Honey, I Shrunk the Kids\", this film is set five years after the events depicted in the previous film.\n\n It was filmed in 1991.",
+    "The Apple Dumpling Gang\nThe Apple Dumpling Gang is a 1971 novel by Jack Bickham, about a group of orphaned children during the California gold rush.\n\n They encounter a gambler who reluctantly helps them, as well as a pair of hapless robbers who are after the gold the children have found.",
+    "Buddy Baker (composer)\nNorman Dale \"Buddy\" Baker (January 4, 1918 – July 26, 2002) was an American composer who, together with Paul J. Smith, scored many Disney films, such as \"The Apple Dumpling Gang\" in 1975, \"The Apple Dumpling Gang Rides Again\" in 1979, \"The Shaggy D.A.\" in 1976, \"The Many Adventures of Winnie the Pooh\" in 1977, and \"The Fox and the Hound\" in 1981.",
+    "The Apple Dumpling Gang (film)\nThe Apple Dumpling Gang is a 1975 American comedy-western film produced by Walt Disney Productions about a slick gambler named Russell Donovan (Bill Bixby) who is duped into taking care of a group of orphans who eventually strike gold during the California Gold Rush.",
+    "All Ages: The Boston Hardcore Film\nAll Ages: The Boston Hardcore Film, a Gallery East Production in association with Stone Films/NYC, is a documentary directed by Drew Stone, which had its world premier at the Independent Film Festival of Boston on April 27, 2012.\n\n The film features interviews, archival footage and the music of Boston’s early hardcore bands including Deep Wound, DYS, Gang Green, Impact Unit, Jerry's Kids, Negative FX, SS Decontrol, The Freeze and The F.U.'s.\n\n Also featured in the film are interviews with renowned author Michael Patrick MacDonald (\"Easter Rising\", \"All Souls\"), Actress Christine Elise McCarthy, Advertising Executive Jonathan Anastas, Thrasher Magazine Editor Jake Phelps, \"American Hardcore\" Director Paul Rachman, and Newbury Comics owner Michael Dreese.\n\n \"All Ages\" has been released on DVD with numerous extras and director's commentary."
+   ]
+  },
+  {
+   "id": "0f7a9f020810a71f",
+   "gold": [
+    {
+     "sentence": " He appeared in 57 films between 1919 and 1932.",
+     "facts": {
+      "0.0": "The person described appeared in 57 films.",
+      "0.1": "The person described appeared in 57 films between 1919 and 1932."
+     }
+    },
+    {
+     "sentence": " He also directed 54 films between 1920 and 1933, including one Harry Langdon short, two of the Tay Garnett- penned comedies Stan Laurel made for Joe Rock, and fifteen of the earliest entries in the Edgar Kennedy \"Average Man\" series.",
+     "facts": {
+      "1.0": "The person described directed 54 films.",
+      "1.1": "The person described directed these films between 1920 and 1933.",
+      "1.2": "The person's directed films include one Harry Langdon short.",
+      "1.3": "The person's directed films include two of the Tay Garnett-penned comedies Stan Laurel made for Joe Rock.",
+      "1.4": "The person's directed films include fifteen of the earliest entries in the Edgar Kennedy \"Average Man\" series."
+     }
+    },
+    {
+     "sentence": "John Scott Biddle (1925–2008) was a foremost yachting cinematographer and lecturer, establishing a film-making career that spanned more than forty years.",
+     "facts": {
+      "2.0": "John Scott Biddle lived from 1925 to 2008.",
+      "2.1": "John Scott Biddle was a foremost yachting cinematographer.",
+      "2.2": "John Scott Biddle was a lecturer.",
+      "2.3": "John Scott Biddle established a film-making career.",
+      "2.4": "John Scott Biddle's film-making career spanned more than forty years."
+     }
+    }
+   ],
+   "items": [
+    "Millard Webb\nMillard Webb (6 December 1893 – 21 April 1935), was an American screenwriter and director.\n\n He directed 20 films between 1920 and 1933.\n\n His best-known film is the 1926 silent John Barrymore adventure \"The Sea Beast\" costarring Dolores Costello.\n\n Webb also directed the early sound Florenz Ziegfeld produced talkie \"Glorifying the American Girl\" released by Paramount in 1929.\n\n His active years were from 1916 to 1933.",
+    "John Biddle (yachting cinematographer)\nJohn Scott Biddle (1925–2008) was a foremost yachting cinematographer and lecturer, establishing a film-making career that spanned more than forty years.\n\n His films captured not only the technical aspects of sailing but also the human story in events as tranquil as a Nova Scotia cruise and as grand as the America's Cup Races.",
+    "Harry Sweet\nHarry Sweet (October 2, 1901 – June 18, 1933) was an American actor, director and screenwriter.\n\n He appeared in 57 films between 1919 and 1932.\n\n He also directed 54 films between 1920 and 1933, including one Harry Langdon short, two of the Tay Garnett- penned comedies Stan Laurel made for Joe Rock, and fifteen of the earliest entries in the Edgar Kennedy \"Average Man\" series.",
+    "Charles John Biddle\nCharles John Biddle (April 30, 1819 – September 28, 1873) was an American soldier, lawyer, congressman, and newspaper editor.",
+    "John Biddle (United States Army general)\nJohn Biddle (February 2, 1859 – January 18, 1936) was career United States Army officer who became superintendent of the United States Military Academy.",
+    "Jack Bickham\nJack Miles Bickham (September 2, 1930 – July 25, 1997) was an American author who wrote 75 published novels, of which two were made into movies, \"The Apple Dumpling Gang\" and \"Baker's Hawk\".",
+    "Charles J. Biddle (aviator)\nMajor Charles John Biddle (13 May 1890 – 22 March 1972) was an American aviator, attorney, and author.\n\n He was a flying ace during World War I.\n\n Postwar, he launched a career in law and wrote his memoirs.",
+    "Biddle family\nThe American Biddle family of Philadelphia began when William Biddle (1630–1712) and Sarah Kempe (1634–1709), Quakers, emigrated from England to America in 1681, in part, to avoid religious persecution.\n\n Having acquired extensive rights to over 43000 acre of lands in Quaker West Jersey, they settled first at Burlington.\n\n Two third generation brothers, William Biddle, 3rd (1698–1756), and John Biddle (1707–1789), moved from Mount Hope (1684) near Bordentown to Philadelphia in the 1720s and 1730s and constituted the first generation of the Philadelphia Biddle family.",
+    "Kevin Brownlow\nKevin Brownlow (born 2 June 1938) is a British film historian, television documentary-maker, filmmaker, author, and film editor.\n\n Brownlow is best known for his work documenting the history of the silent era.\n\n Brownlow became interested in silent film at the age of eleven.\n\n This interest grew into a career spent documenting and restoring film.\n\n He has rescued many silent films and their history.\n\n His initiative in interviewing many largely forgotten, elderly film pioneers in the 1960s and 1970s preserved a legacy of early mass-entertainment cinema.\n\n Brownlow received an Academy Honorary Award at the 2nd Annual Governors Awards given by the Academy of Motion Picture Arts and Sciences on 13 November 2010.\n\n This was the first occasion on which an Academy Honorary Award was given to a film preservationist.",
+    "John Biddle (Michigan politician)\nJohn Biddle (March 2, 1792 – August 25, 1859) was a delegate to the United States Congress from the Michigan Territory."
+   ]
+  },
+  {
+   "id": "8d3a6fd13132b24d",
+   "gold": [
+    {
+     "sentence": " It flows in a west to east direction from the western part of the state in the Everglades past the Miami International Airport to a salinity control center near the Miami River.",
+     "facts": {
+      "0.0": "It flows in a west to east direction.",
+      "0.1": "It flows from the western part of the state in the Everglades.",
+      "0.2": "It flows past the Miami International Airport.",
+      "0.3": "It flows to a salinity control center near the Miami River."
+     }
+    },
+    {
+     "sentence": "The Genesee River is a tributary of Lake Ontario flowing northward through the Twin Tiers of Pennsylvania and New York in the United States.",
+     "facts": {
+      "1.0": "The Genesee River is a tributary of Lake Ontario.",
+      "1.1": "The Genesee River flows northward.",
+      "1.2": "The Genesee River flows through the Twin Tiers of Pennsylvania.",
+      "1.3": "The Genesee River flows through the Twin Tiers of New York in the United States."
+     }
+    }
+   ],
+   "items": [
+    "Seneca River Crossing Canals Historic District\nSeneca River Crossing Canals Historic District is a national historic district located at Montezuma and Tyre in Cayuga and Seneca Counties, New York.\n\n The district includes more than a mile of the Enlarged Erie Canal prism (built here between 1849 and 1857); towpath and heelpath; a drydock; the remains of the Richmond (Montezuma) Aqueduct crossing the Seneca River; remnants of the original Erie Canal, built between 1817 and 1825 and including Lock #62 and piers of the original mule bridge from that era; and a culvert that carries a stream beneath the Enlarged Erie Canal.",
+    "The entries cover historic U.S. canals, waterways, water systems, and sites. Transport canals include Beaver–Erie (136 miles), Delaware (60), Whitewater (76), and Susquehanna–Tidewater (43), plus interstate and regional routes; many declined with railroad competition. The Dismal Swamp Canal, opened in 1805 and closed in 2016, served the Intracoastal Waterway; nearby park and refuge protect the swamp.",
+    "Genesee River\nThe Genesee River is a tributary of Lake Ontario flowing northward through the Twin Tiers of Pennsylvania and New York in the United States.",
+    "New York’s Erie Canal heritage includes Lock 52 (1849–53), canal buildings and archaeological sites; the 1836–42 Broad Street Aqueduct later became a road and subway route. The 1905 song “Low Bridge” recalls mule-powered canal traffic. The 525-mile state canal system includes the Erie, Oswego, Cayuga–Seneca and Champlain canals. The Genesee River and tributaries Black Creek and Oatka Creek drain western New",
+    "Genesee Valley Park\nGenesee Valley Park is located in the south side of Rochester, New York along the shores of the Genesee River.\n\n The New York State Barge Canal (the currently in-use portion of the Erie Canal) crosses the Genesee River within the park.\n\n The University of Rochester is located near the park's north entrance.",
+    "Tamiami Canal\nThe Tamiami Canal or C-4 Canal, is a canal located in southern Florida in the United States.\n\n It flows in a west to east direction from the western part of the state in the Everglades past the Miami International Airport to a salinity control center near the Miami River.\n\n It averages 8 ft in depth and is over 100 ft wide in some areas.",
+    "Black Creek (Genesee River)\nBlack Creek is a tributary of the Genesee River that runs for 46 mi in western New York, United States.\n\n The creek begins in Middlebury in Wyoming County and runs north for roughly the first half of its course and east for the other half, eventually joining the Genesee River in Chili, Monroe County.\n\n Its drainage area spans around 202 mi2 , which is largely rural and agricultural.\n\n As of 2000, 40,000 residents lived in the creek's drainage area.",
+    "New York State Canal System\nThe New York State Canal System (formerly known as the New York State Barge Canal) is a successor to the Erie Canal and other canals within New York.\n\n Currently, the 525 mi system is composed of the Erie Canal, the Oswego Canal, the Cayuga–Seneca Canal, and the Champlain Canal.\n\n In 2014 the system was listed as a national historic district on the National Register of Historic Places in its entirety, and in 2016 it was designated a National Historic Landmark.",
+    "New York State Canal Corporation\nThe New York State Canal Corporation is responsible for the oversight, administration and maintenance of the New York State Canal System, which consists of the Erie Canal, Cayuga–Seneca Canal, Oswego Canal and Champlain Canal.\n\n It is also involved with the development and maintenance of the New York State Canalway Trail and with the general development and promotion of the Erie Canal Corridor as both a tourist attraction and a working waterway.",
+    "Cayuga–Seneca Canal\nThe Cayuga–Seneca Canal is a canal in New York, United States.\n\n It is now part of the New York State Canal System."
+   ]
+  }
+ ]
+}

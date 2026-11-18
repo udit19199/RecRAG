@@ -1,0 +1,80 @@
+[
+  {
+    "id": "fdf971db855bfece",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more."}]},
+      {"fact": "1.4", "status": "stated", "evidence": [{"item": 7, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more."}]},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "3.0", "status": "stated", "evidence": [{"item": 9, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+      {"fact": "3.1", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "3.2", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "3.3", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "3.4", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+    ]
+  },
+  {
+    "id": "738f1b7917bb3f73",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "a06c63158ce65aaf",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The survivors in the joined lawsuit also allege that Uber’s “fast and shallow background checks” are substandard and designed to make it as easy as possible for drivers to sign up quickly."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The survivors in the joined lawsuit also allege that Uber’s “fast and shallow background checks” are substandard and designed to make it as easy as possible for drivers to sign up quickly."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "Uber has attempted to address sexual assaults by drivers — which the lawsuits claim Uber has known about since 2014 — through new safety features in its app, like a 911 button and the ability to share location with a friend."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "Uber has attempted to address sexual assaults by drivers — which the lawsuits claim Uber has known about since 2014 — through new safety features in its app, like a 911 button and the ability to share location with a friend."}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "Uber has attempted to address sexual assaults by drivers — which the lawsuits claim Uber has known about since 2014 — through new safety features in its app, like a 911 button and the ability to share location with a friend."}]},
+      {"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "Uber has attempted to address sexual assaults by drivers — which the lawsuits claim Uber has known about since 2014 — through new safety features in its app, like a 911 button and the ability to share location with a friend."}]},
+      {"fact": "3.0", "status": "stated", "evidence": [{"item": 6, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+      {"fact": "3.1", "status": "stated", "evidence": [{"item": 6, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]}
+    ]
+  },
+  {
+    "id": "cf9de3764d5faefb",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse."}]}
+    ]
+  },
+  {
+    "id": "1351cc41c77902d0",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Google has had its deal with Apple in place since 2003."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports."}]},
+      {"fact": "1.4", "status": "stated", "evidence": [{"item": 6, "quote": "Google also has revenue share agreements (RSAs) with smartphone makers and wireless carriers (like Verizon) that require them to set Google search and Chrome web browser as defaults."}, {"item": 5, "quote": "he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports."}]},
+      {"fact": "1.5", "status": "stated", "evidence": [{"item": 2, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}, {"item": 5, "quote": "Google paid $26 billion in 2021 to be everyone’s default search engine"}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "2.3", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "2.4", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+    ]
+  }
+]

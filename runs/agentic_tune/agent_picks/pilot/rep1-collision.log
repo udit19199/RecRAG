@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/agentic_tune/agent_picks/run.py", line 22, in <module>
+    path = benchmark.run("graphrag", "multihop_rag", 0, len(indices), record_indices=indices)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/uditagarwal19199/Workspace/HPE/RecRAG/benchmark.py", line 448, in run
+    run_dir.mkdir(parents=True)
+  File "/Users/uditagarwal19199/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: '/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/agentic_tune/graphrag/20261112T192751724240Z'

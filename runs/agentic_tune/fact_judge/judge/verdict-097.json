@@ -1,0 +1,40 @@
+[
+  {
+    "id": "28eda52725e45903",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "It could, though, mean some sort of progress, if the Manchester born Ratcliffe follows through with his vision to revolutionise the club."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "It could, though, mean some sort of progress, if the Manchester born Ratcliffe follows through with his vision to revolutionise the club."}]},
+      {"fact": "0.2", "status": "contradicted", "evidence": [{"item": 4, "quote": "a straight shootout between Oldham-born Ratcliffe"}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "follows through with his vision to revolutionise the club."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "758846aaf1977ead",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "But they've also seen the fourth-lowest ADOT from tight ends (5.0 yards per target)"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "But they've also seen the fourth-lowest ADOT from tight ends (5.0 yards per target)"}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "almost as if teams know they won't be able to succeed on downfield shots against them"}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "zero completions of 20-plus yards from tight ends"}]}
+    ]
+  },
+  {
+    "id": "6e29bad2021ed7b5",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "And if the Braves let this be the story of their series, that's on them."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "And if the Braves let this be the story of their series, that's on them."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]},
+      {"fact": "1.4", "status": "stated", "evidence": [{"item": 2, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]},
+      {"fact": "1.5", "status": "stated", "evidence": [{"item": 2, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]}
+    ]
+  }
+]

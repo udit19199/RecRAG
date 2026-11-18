@@ -1,0 +1,233 @@
+{
+ "multihop_rag": {
+  "rag": {
+   "1": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/rag/20261113T094116893335Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/rag/20261113T094119800235Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/rag/20261101T212051060313Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/rag/20261101T212051092824Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/rag/20261101T212051057621Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/rag/20261101T212051102856Z"
+   ],
+   "2": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/rag/20261113T094122765865Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/rag/20261113T094125730399Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/rag/20261101T222337367310Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/rag/20261101T222337340282Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/rag/20261101T222337355375Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/rag/20261101T222337350421Z"
+   ],
+   "3": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/rag/20261113T094128757201Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/rag/20261113T094132126518Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/rag/20261102T063736979954Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/rag/20261102T063737042321Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/rag/20261102T063736997989Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/rag/20261102T063737006824Z"
+   ]
+  },
+  "raptor": {
+   "1": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/raptor/20261113T094134852057Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/raptor/20261113T094137839560Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/raptor/20261101T212051086768Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/raptor/20261101T212051050741Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/raptor/20261101T212051048634Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/raptor/20261101T212051046525Z"
+   ],
+   "2": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/raptor/20261113T094141777314Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/raptor/20261113T094144741321Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/raptor/20261101T222337349924Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/raptor/20261101T222337384067Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/raptor/20261101T222337360447Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/raptor/20261101T222337372556Z"
+   ],
+   "3": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/raptor/20261113T094147523234Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/raptor/20261113T094152185942Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/raptor/20261102T063736976791Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/raptor/20261102T063736999561Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/raptor/20261102T063736975661Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/raptor/20261102T063736977456Z"
+   ]
+  },
+  "hipporag": {
+   "1": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/hipporag/20261113T094156888845Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/hipporag/20261113T094159026984Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/hipporag/20261101T212051086810Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/hipporag/20261101T212051084919Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/hipporag/20261101T212051068538Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/hipporag/20261101T212051090439Z"
+   ],
+   "2": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/hipporag/20261113T094201901180Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/hipporag/20261113T094205422032Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/hipporag/20261101T222337386617Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/hipporag/20261101T222337385884Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/hipporag/20261101T222337373538Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/hipporag/20261101T222337377259Z"
+   ],
+   "3": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/hipporag/20261113T094209307653Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/hipporag/20261113T094212473054Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/hipporag/20261102T063736978399Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/hipporag/20261102T063736977839Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/hipporag/20261102T063737006868Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/heldout400/runs/hipporag/20261102T063736978873Z"
+   ]
+  },
+  "graphrag": {
+   "1": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/graphrag/20261113T094852740292Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/graphrag/20261113T094855491302Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/graphrag/20261113T094858522677Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/graphrag/20261113T094901516022Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/graphrag/20261113T094904500044Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/graphrag/20261113T094907505335Z"
+   ],
+   "2": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/graphrag/20261113T094910564287Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/graphrag/20261113T094913547656Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/graphrag/20261113T094916572947Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/graphrag/20261113T094919629161Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/graphrag/20261113T094922563638Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/graphrag/20261113T094925628449Z"
+   ],
+   "3": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/graphrag/20261113T094928694338Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/graphrag/20261113T094931679526Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/graphrag/20261113T094934701797Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/graphrag/20261113T094937685436Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/graphrag/20261113T094940700205Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/graphrag/20261113T094943714875Z"
+   ]
+  }
+ },
+ "hotpotqa": {
+  "rag": {
+   "1": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/rag/20261113T123625526305Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/rag/20261113T123628248634Z"
+   ],
+   "2": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/rag/20261113T123631383188Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/rag/20261113T123634300843Z"
+   ],
+   "3": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/rag/20261113T123637283076Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/rag/20261113T123641170692Z"
+   ]
+  },
+  "raptor": {
+   "1": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/raptor/20261113T123643731235Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/raptor/20261113T123646544395Z"
+   ],
+   "2": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/raptor/20261113T123649598649Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/raptor/20261113T123652582183Z"
+   ],
+   "3": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/raptor/20261113T123655797834Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/raptor/20261113T123658850061Z"
+   ]
+  },
+  "hipporag": {
+   "1": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/hipporag/20261113T131149005078Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/hipporag/20261113T131151780752Z"
+   ],
+   "2": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/hipporag/20261113T131155199235Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/hipporag/20261113T131158155067Z"
+   ],
+   "3": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/hipporag/20261113T131201330141Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/hipporag/20261113T131204818074Z"
+   ]
+  },
+  "graphrag": {
+   "1": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/graphrag/20261113T123630869365Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/graphrag/20261113T123633787944Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/graphrag/20261113T123636647167Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/graphrag/20261113T123640164832Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/graphrag/20261113T123643123703Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/graphrag/20261113T123646463837Z"
+   ],
+   "2": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/graphrag/20261113T123648883575Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/graphrag/20261113T123651927103Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/graphrag/20261113T123655245703Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/graphrag/20261113T123658100488Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/graphrag/20261113T123702965828Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/graphrag/20261113T123706354979Z"
+   ],
+   "3": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/graphrag/20261113T123708972521Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/graphrag/20261113T123711530749Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/graphrag/20261113T123713014022Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/graphrag/20261113T123716066496Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/graphrag/20261113T123719808760Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/graphrag/20261113T123722664468Z"
+   ]
+  }
+ },
+ "natural_questions": {
+  "rag": {
+   "1": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/natural_questions/rag/20261114T011326828091Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/natural_questions/rag/20261114T011327037796Z"
+   ],
+   "2": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/natural_questions/rag/20261114T012731681659Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/natural_questions/rag/20261114T012732168874Z"
+   ],
+   "3": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/natural_questions/rag/20261114T014138761431Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/natural_questions/rag/20261114T014138944803Z"
+   ]
+  },
+  "raptor": {
+   "1": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/natural_questions/raptor/20261114T024221837298Z"
+   ],
+   "2": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/natural_questions/raptor/20261114T031021738049Z"
+   ],
+   "3": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/natural_questions/raptor/20261114T033828960902Z"
+   ]
+  },
+  "hipporag": {
+   "1": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/natural_questions/hipporag/20261114T064900543482Z"
+   ],
+   "2": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/natural_questions/hipporag/20261114T073309037892Z"
+   ],
+   "3": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/natural_questions/hipporag/20261114T075719579969Z"
+   ]
+  },
+  "graphrag": {
+   "1": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/natural_questions/graphrag/20261114T040435747348Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/natural_questions/graphrag/20261114T040435747384Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/natural_questions/graphrag/20261114T040438262174Z"
+   ],
+   "2": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/natural_questions/graphrag/20261114T050017972888Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/natural_questions/graphrag/20261114T050021116150Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/natural_questions/graphrag/20261114T050024233997Z"
+   ],
+   "3": [
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/natural_questions/graphrag/20261114T055642062733Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/natural_questions/graphrag/20261114T055642062935Z",
+    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/natural_questions/graphrag/20261114T055642865008Z"
+   ]
+  }
+ }
+}

@@ -1,0 +1,46 @@
+[
+{"id": "099468fbcb305c9c", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 7, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 7, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]}
+]},
+{"id": "47390aa7a4637cb5", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 7, "quote": "Uber reported net income of $221 million in the third quarter"}, {"item": 5, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]}
+]},
+{"id": "8a2ac9d29a15b181", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Harbaugh reportedly watched the game from the team hotel"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "and although Michigan had hoped to block the suspension"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 5, "quote": "the Wolverines will be without their coach on the sidelines in Happy Valley."}]}
+]},
+{"id": "369ddb6d61c5a09f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Valve has announced a new Steam Deck"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Surprise! Valve has announced a new Steam Deck"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Valve has announced a new Steam Deck and — double surprise — we’ve already reviewed it."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets."}]},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []}
+]},
+{"id": "064362853fba0832", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "In the long term, scientists also point to a number of recent developments"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and effectively."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and effectively."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]}
+]}
+]

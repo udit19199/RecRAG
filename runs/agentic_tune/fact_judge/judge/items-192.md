@@ -1,0 +1,385 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 1 items.
+
+=== ITEM id=da09f19c42609b59 ===
+Gold sentences and facts:
+Sentence 0: It could, though, mean some sort of progress, if the Manchester born Ratcliffe follows through with his vision to revolutionise the club.
+  Fact 0.0: It could mean some sort of progress.
+  Fact 0.1: It could mean progress if Ratcliffe follows through with his vision to revolutionise the club.
+  Fact 0.2: Ratcliffe was born in Manchester.
+  Fact 0.3: Ratcliffe has a vision to revolutionise the club.
+Sentence 1: Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side.
+  Fact 1.0: Manchester United are out of Europe altogether.
+  Fact 1.1: Manchester United put in a limp display against Bayern at Old Trafford.
+  Fact 1.2: Kingsley Coman sealed a 1-0 win at Old Trafford.
+  Fact 1.3: Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side.
+
+Retrieved items:
+<item 1>
+Graph query row:
+article: Paul Mitchell signed Tottenham and Chelsea superstars, fell out with Daniel Levy and has tailor-made plan for Manchester United
+publisher: talkSPORT
+connections: [{'relationship': 'PUBLISHED_BY', 'entity': 'talkSPORT'}, {'relationship': 'MENTIONS', 'entity': 'Champions League'}, {'relationship': 'MENTIONS',
+'entity': 'Premier League'}, {'relationship': 'MENTIONS', 'entity': 'Southampton'}, {'relationship': 'MENTIONS', 'entity': 'Chelsea'}, {'relationship':
+'MENTIONS', 'entity': 'Manchester United'}, {'relationship': 'MENTIONS', 'entity': 'England'}, {'relationship': 'MENTIONS', 'entity': 'Manchester'},
+{'relationship': 'MENTIONS', 'entity': 'Daniel Levy'}, {'relationship': 'MENTIONS', 'entity': 'Jim Ratcliffe'}, {'relationship': 'MENTIONS', 'entity': 'Glazer
+family'}, {'relationship': 'MENTIONS', 'entity': 'Monaco'}, {'relationship': 'MENTIONS', 'entity': 'footballing matters'}, {'relationship': 'MENTIONS',
+'entity': "Jim Ratcliffe's move to Monaco"}, {'relationship': 'MENTIONS', 'entity': 'Paul Mitchell'}, {'relationship': 'MENTIONS', 'entity': 'Dele Alli'},
+{'relationship': 'MENTIONS', 'entity': 'OGC Nice'}, {'relationship': 'MENTIONS', 'entity': 'Leipzig'}, {'relationship': 'MENTIONS', 'entity': 'MK Dons'},
+{'relationship': 'MENTIONS', 'entity': 'Wigan'}, {'relationship': 'MENTIONS', 'entity': 'French Riviera'}, {'relationship': 'MENTIONS', 'entity': 'Sadio Mane'},
+{'relationship': 'MENTIONS', 'entity': 'Dusan Tadic'}, {'relationship': 'MENTIONS', 'entity': 'Dejan Lovren'}, {'relationship': 'MENTIONS', 'entity': 'Victor
+Wanyama'}, {'relationship': 'MENTIONS', 'entity': 'Gareth Bale'}, {'relationship': 'MENTIONS', 'entity': 'Sonny'}, {'relationship': 'MENTIONS', 'entity':
+'Leverkusen'}, {'relationship': 'MENTIONS', 'entity': 'Rangnick'}, {'relationship': 'MENTIONS', 'entity': 'youth team game'}, {'relationship': 'MENTIONS',
+'entity': 'Real Madrid'}, {'relationship': 'MENTIONS', 'entity': 'Ratcliffe'}, {'relationship': 'MENTIONS', 'entity': 'Sir Alex Ferguson'}, {'relationship':
+'MENTIONS', 'entity': 'Hamburg'}, {'relationship': 'MENTIONS', 'entity': 'Sheikh Jassim'}, {'relationship': 'MENTIONS', 'entity': 'Graziano Pelle'},
+{'relationship': 'MENTIONS', 'entity': 'Liverpool'}, {'relationship': 'MENTIONS', 'entity': 'Tottenham'}, {'relationship': 'MENTIONS', 'entity': 'Son'},
+{'relationship': 'MENTIONS', 'entity': 'Greater Manchester'}]
+passages: [{'passage': 'Paul Mitchell signed Tottenham and Chelsea superstars, fell out with Daniel Levy and has tailor-made plan for Manchester United
+(TalkSport, 2023-10-16T21:00:00+00:00)\nJim Ratcliffe’s move to Monaco in 2020 may have been bad news for the British taxpayer, but not for Manchester United
+fans.\n\nThe chemical billionaire looks set to buy a 25 per cent stake in the Premier League giants after fellow bidder, Sheikh Jassim, withdrew his offer.\n\n6
+Ratcliffe could still have a big say at United Credit: getty\n\n6 His wisest move could be to land his old neighbour Mitchell\n\nThat news hasn’t been too
+warmly welcomed by United supporters, who would still have to put up with the hugely unpopular Glazer family in control of the club.\n\nIt could, though, mean
+some sort of progress, if the Manchester born Ratcliffe follows through with his vision to revolutionise the club.\n\nShould Ratcliffe come in, talkSPORT
+understands that he would take charge of footballing matters, something the Glazers have been accused of having little to no interest in.', 'page': 'Paul
+Mitchell signed Tottenham and Chelsea superstars, fell out with Daniel Levy and has tailor-made plan for Manchester United (TalkSport,
+2023-10-16T21:00:00+00:00)'}, {'passage': 'Paul Mitchell signed Tottenham and Chelsea superstars, fell out with Daniel Levy and has tailor-made plan for
+Manchester United (TalkSport, 2023-10-16T21:00:00+00:00)\nAlready a top tier European owner of OGC Nice, there has been some success, but nothing compared to
+their French riviera neighbours, where Ratcliffe appears set to look for inspiration.\n\nPaul Mitchell recently left the principality of Monaco, but he could
+well be back there in meetings with Ratcliffe who is planning to appoint a sporting director.\n\nMitchell fulfilled that role at Monaco after previous stints at
+Leipzig, Tottenham, Southampton and MK Dons, becoming one of football’s most respected executives.\n\nA former player in England’s lower leagues, Mitchell was
+previously linked with Chelsea and Liverpool, and much like Ratcliffe, he’s also from Greater Manchester.\n\nStarring mainly for Wigan and MK Dons, it was with
+the latter where Mitchell was moved upstairs, and made his first big move by spotting future England regular Dele Alli after being named their head of
+recruitment in 2010.', 'page': 'Paul Mitchell signed Tottenham and Chelsea superstars, fell out with Daniel Levy and has tailor-made plan for Manchester United
+(TalkSport, 2023-10-16T21:00:00+00:00)'}, {'passage': "Paul Mitchell signed Tottenham and Chelsea superstars, fell out with Daniel Levy and has tailor-made plan
+for Manchester United (TalkSport, 2023-10-16T21:00:00+00:00)\nTwo years later he joined Southampton in the same role, and that’s where he really began to show
+off, landing the Saints a number of players who would not only go on to become Champions League regulars, but make the club a fortune and ensure a Premier
+League best finish.\n\nShowcasing his skills in casting his scouting net far and wide, Sadio Mane, Dusan Tadic, Graziano Pelle, Dejan Lovren and Victor Wanyama
+all went on to secure Southampton a bright future, and Mitchell a promotion to Tottenham in 2014.\n\n6 Mane was one of Mitchell's early successes\n\n6 But
+there's been many more Credit: Getty\n\nThe north London side had just unsuccessfully splurged their world record £85million from Real Madrid for Gareth Bale,
+and it looked like Mitchell couldn’t have picked a worse time.", 'page': 'Paul Mitchell signed Tottenham and Chelsea superstars, fell out with Daniel Levy and
+has tailor-made plan for Manchester United (TalkSport, 2023-10-16T21:00:00+00:00)'}, {'passage': 'Paul Mitchell signed Tottenham and Chelsea superstars, fell
+out with Daniel Levy and has tailor-made plan for Manchester United (TalkSport, 2023-10-16T21:00:00+00:00)\nOnly leaving the side to reach the pinnacle of his
+job, finally stepping up from a head of recruitment to become sporting director at Monaco, Mitchell showed just how big picture he is with an interview in
+2021.\n\n“I want to continue to drive standards in each and every department,” he said. “Psychology, sports science, nutrition, medicine, the way we travel, the
+way we refuel.\n\n“Everything, every element I think we need to keep pushing to its maximum to try and be the best we possibly can.”\n\nHaving worked in
+football management for over a decade, Mitchell’s career has always been about the long term for his club’s, with the young signings he’s made often only paying
+off after he’s left.\n\nOne in particular was 2022/23 Premier League top scorer Son, who perfectly sums up his philosophy.\n\n“I took quite a lot of criticism
+in my first year at Tottenham for some of the decisions and Sonny was kind of at the centre of that,” he explained.', 'page': 'Paul Mitchell signed Tottenham
+and Chelsea superstars, fell out with Daniel Levy and has tailor-made plan for Manchester United (TalkSport, 2023-10-16T21:00:00+00:00)'}, {'passage': 'Paul
+Mitchell signed Tottenham and Chelsea superstars, fell out with Daniel Levy and has tailor-made plan for Manchester United (TalkSport,
+2023-10-16T21:00:00+00:00)\n“Sometimes players need time, they’re human beings, they need to settle, Sonny had a great track record at Hamburg and Leverkusen
+but there was this narrative that started to grow internally and externally that he wasn’t a good finisher.\n\n6 Mitchell is becoming an increasingly
+recognisable face\n\n“I remember telling a coach ‘you’re wrong, his history shows in two different clubs he’s a very astute finisher off both
+sides’.”\n\nMitchell remains good friends with Rangnick from their time together at Leipzig, and last season made headlines when he was spotted at a youth team
+game while the German was interim coach at Man United.\n\nSo astute is Mitchell in his observations, he even laid out a blueprint for United\'s success while at
+Monaco.\n\n“I think context is important to measure what Manchester United\'s current situation is, but I think they do need to get to the point of really
+putting down what Manchester United needs to be in the modern game,” he explained.\n\n"We are a long time from the Sir Alex Ferguson era.', 'page': 'Paul
+Mitchell signed Tottenham and Chelsea superstars, fell out with Daniel Levy and has tailor-made plan for Manchester United (TalkSport,
+2023-10-16T21:00:00+00:00)'}]
+</item 1>
+
+<item 2>
+Inside the Man United takeover and it’s anything but smooth sailing for Sir Jim Ratcliffe as he seeks board vote (TalkSport, 2023-10-18T21:30:00+00:00)
+As and when it does get as far as a vote, Ratcliffe can be confident it will be ratified seeing as half of the 12-strong board are members of the Glazer family
+and in the event of a split vote, Joel and Avram as co-chairmen will have the deciding say.
+
+Even once the final deal is agreed, it is likely to take at least a couple of months for Ratcliffe to pass the Premier League’s owners and directors test, which
+has been made more stringent since Portsmouth became the first top-flight side to go into administration in 2010.
+
+5 Ratcliffe, one of Britain's wealthiest men, previously tried to buy Chelsea
+
+WHAT DOES THE FUTURE LOOK LIKE UNDER RATCLIFFE’S INEOS GROUP?
+
+Ratcliffe is demanding an executive role and overall control of day-to-day football matters and plans to appoint his own sporting director, with former
+Tottenham and Southampton transfer guru Paul Mitchell one of the main names in the frame.
+</item 2>
+
+<item 3>
+Inside the Man United takeover and it’s anything but smooth sailing for Sir Jim Ratcliffe as he seeks board vote (TalkSport, 2023-10-18T21:30:00+00:00)
+In November, it will have been a year since the deeply unpopular Glazer family left Manchester United fans rejoicing by announcing they were open to offers for
+England’s most iconic football club.
+
+Eleven months on and the saga that, at times has resembled an X-Factor style judges houses audition, may finally be coming to an end as British petrochemicals
+billionaire Sir Jim Ratcliffe closes in on a partial takeover.
+
+5 Sir Jim Ratcliffe has an offer on the table for 25 per cent stake of Manchester United Credit: AFP
+
+Ratcliffe’s £1.3billion offer for a 25 per stake in the club he has supported since childhood will be high on the agenda when United’s board of directors meet
+on Thursday, but how did we get to this point, what happens next and what could the future look like at Old Trafford?
+</item 3>
+
+<item 4>
+Inside the Man United takeover and it’s anything but smooth sailing for Sir Jim Ratcliffe as he seeks board vote (TalkSport, 2023-10-18T21:30:00+00:00)
+This was a move mainly influenced by the fact Raine had managed to broker a deal with Todd Boehly to commit to invest £4.5bn to take control of Chelsea, giving
+the Glazers grand ideas they could rake in as much as DOUBLE for a global sporting institution like United.
+
+After several rounds of bidding, it quickly became clear the race for United was a straight shootout between Oldham-born Ratcliffe, who had previously offered
+£4bn to buy Chelsea, and Qatari Sheikh Jassim bin Al Thani, who also professed to being a lifelong Red Devils fan and set up the ’92 Foundation’ in tribute to
+the famous class of ’92 of David Beckham and company.
+</item 4>
+
+<item 5>
+Graph query row:
+article: Champions League permutations, scenarios: What teams need to qualify from groups for 2023/24 Round of 16 stage
+publisher: Sporting News
+connections: [{'relationship': 'PUBLISHED_BY', 'entity': 'Sporting News'}, {'relationship': 'MENTIONS', 'entity': 'Galatasaray'}, {'relationship': 'MENTIONS',
+'entity': 'Champions League'}, {'relationship': 'MENTIONS', 'entity': 'Jude Bellingham'}, {'relationship': 'MENTIONS', 'entity': 'Quarterfinals'},
+{'relationship': 'MENTIONS', 'entity': 'Nottingham Forest'}, {'relationship': 'MENTIONS', 'entity': 'Manchester City'}, {'relationship': 'MENTIONS', 'entity':
+'Manchester United'}, {'relationship': 'MENTIONS', 'entity': 'Pep Guardiola'}, {'relationship': 'MENTIONS', 'entity': 'Europa League'}, {'relationship':
+'MENTIONS', 'entity': 'UEFA Champions League'}, {'relationship': 'MENTIONS', 'entity': 'group stage'}, {'relationship': 'MENTIONS', 'entity': 'Round of 16'},
+{'relationship': 'MENTIONS', 'entity': 'Group B'}, {'relationship': 'MENTIONS', 'entity': 'Ligue 1'}, {'relationship': 'MENTIONS', 'entity': 'LaLiga'},
+{'relationship': 'MENTIONS', 'entity': 'Galatasaray 3-3 Manchester United'}, {'relationship': 'MENTIONS', 'entity': 'Bayern Munich 0-0 FC Copenhagen'},
+{'relationship': 'MENTIONS', 'entity': 'FC Copenhagen 1-0 Galatasaray'}, {'relationship': 'MENTIONS', 'entity': 'Manchester United 0-1 Bayern Munich'},
+{'relationship': 'MENTIONS', 'entity': 'Arsenal 6-0 Lens'}, {'relationship': 'MENTIONS', 'entity': 'PSV win over Sevilla'}, {'relationship': 'MENTIONS',
+'entity': 'Lens 2-1 Sevilla'}, {'relationship': 'MENTIONS', 'entity': 'PSV 1-1 Arsenal'}, {'relationship': 'MENTIONS', 'entity': '2023/24 Round of 16 stage'},
+{'relationship': 'MENTIONS', 'entity': 'Sevilla'}, {'relationship': 'MENTIONS', 'entity': 'Lens'}, {'relationship': 'MENTIONS', 'entity': 'PSV'},
+{'relationship': 'MENTIONS', 'entity': 'Sevilla 1-1 Lens'}, {'relationship': 'MENTIONS', 'entity': 'Arsenal 4-0 PSV'}, {'relationship': 'MENTIONS', 'entity':
+'Lens 2-1 Arsenal'}, {'relationship': 'MENTIONS', 'entity': 'PSV 2-2 Sevilla'}, {'relationship': 'MENTIONS', 'entity': 'Sevilla 1-2 Arsenal'}, {'relationship':
+'MENTIONS', 'entity': 'Lens 1-1 PSV'}, {'relationship': 'MENTIONS', 'entity': 'Arsenal 2-0 Sevilla'}, {'relationship': 'MENTIONS', 'entity': 'PSV 1-0 Lens'},
+{'relationship': 'MENTIONS', 'entity': 'Sevilla 2-3 PSV'}, {'relationship': 'MENTIONS', 'entity': 'Group C'}, {'relationship': 'MENTIONS', 'entity': 'Diego
+Armando Maradona'}, {'relationship': 'MENTIONS', 'entity': 'Real Madrid 3-2 win away to Union Berlin'}, {'relationship': 'MENTIONS', 'entity': 'Napoli 2-0 win
+over Braga'}, {'relationship': 'MENTIONS', 'entity': 'Round of 16 stage'}, {'relationship': 'MENTIONS', 'entity': 'Real Madrid'}, {'relationship': 'MENTIONS',
+'entity': 'Union Berlin'}, {'relationship': 'MENTIONS', 'entity': 'Braga'}, {'relationship': 'MENTIONS', 'entity': 'Napoli'}, {'relationship': 'MENTIONS',
+'entity': 'Group D'}, {'relationship': 'MENTIONS', 'entity': 'Real Madrid 1-0 Union Berlin'}, {'relationship': 'MENTIONS', 'entity': 'Braga 1-2 Napoli'},
+{'relationship': 'MENTIONS', 'entity': 'Union Berlin 2-3 Braga'}, {'relationship': 'MENTIONS', 'entity': 'Napoli 2-3 Real Madrid'}, {'relationship': 'MENTIONS',
+'entity': 'Braga 1-2 Real Madrid'}, {'relationship': 'MENTIONS', 'entity': 'Union Berlin 0-1 Napoli'}, {'relationship': 'MENTIONS', 'entity': 'Napoli 1-1 Union
+Berlin'}, {'relationship': 'MENTIONS', 'entity': 'Real Madrid 3-0 Braga'}, {'relationship': 'MENTIONS', 'entity': 'Real Madrid 4-2 Napoli'}, {'relationship':
+'MENTIONS', 'entity': 'Braga 1-1 Union Berlin'}, {'relationship': 'MENTIONS', 'entity': 'Napoli 2-0 Braga'}, {'relationship': 'MENTIONS', 'entity': 'Union
+Berlin 2-3 Real Madrid'}, {'relationship': 'MENTIONS', 'entity': 'Benfica'}, {'relationship': 'MENTIONS', 'entity': 'RB Salzburg'}, {'relationship': 'MENTIONS',
+'entity': 'Real Sociedad'}, {'relationship': 'MENTIONS', 'entity': 'Inter Milan'}, {'relationship': 'MENTIONS', 'entity': 'Angel Di Maria'}, {'relationship':
+'MENTIONS', 'entity': 'Roger Schmidt'}, {'relationship': 'MENTIONS', 'entity': 'Arthur Cabral'}, {'relationship': 'MENTIONS', 'entity': 'San Siro'},
+{'relationship': 'MENTIONS', 'entity': 'Austria'}, {'relationship': 'MENTIONS', 'entity': 'Europea League'}, {'relationship': 'MENTIONS', 'entity': 'Real
+Sociedad 0-0 Inter Milan'}, {'relationship': 'MENTIONS', 'entity': 'Benfica 3-1 RB Salzburg'}, {'relationship': 'MENTIONS', 'entity': 'Real Sociedad 1-1 Inter
+Milan'}, {'relationship': 'MENTIONS', 'entity': 'Benfica 0-2 RB Salzburg'}, {'relationship': 'MENTIONS', 'entity': 'RB Salzburg 0-2 Real Sociedad'},
+{'relationship': 'MENTIONS', 'entity': 'Inter Milan 1-0 Benfica'}, {'relationship': 'MENTIONS', 'entity': 'Feyenoord'}, {'relationship': 'MENTIONS', 'entity':
+'Celtic'}, {'relationship': 'MENTIONS', 'entity': 'Atletico Madrid'}, {'relationship': 'MENTIONS', 'entity': 'Lazio'}, {'relationship': 'MENTIONS', 'entity':
+'Group E'}, {'relationship': 'MENTIONS', 'entity': 'Atletico Madrid-Lazio showdown'}, {'relationship': 'MENTIONS', 'entity': 'Feyenoord-Celtic match'},
+{'relationship': 'MENTIONS', 'entity': 'Lazio-Atletico match'}, {'relationship': 'MENTIONS', 'entity': 'Atletico-Feyenoord match'}, {'relationship': 'MENTIONS',
+'entity': 'Celtic-Lazio match'}, {'relationship': 'MENTIONS', 'entity': 'Feyenoord-Lazio match'}, {'relationship': 'MENTIONS', 'entity': 'Celtic-Atletico
+match'}, {'relationship': 'MENTIONS', 'entity': 'Atletico-Celtic match'}, {'relationship': 'MENTIONS', 'entity': 'Atletico'}, {'relationship': 'MENTIONS',
+'entity': 'Paris Saint-Germain'}, {'relationship': 'MENTIONS', 'entity': 'Dortmund'}, {'relationship': 'MENTIONS', 'entity': 'AC Milan'}, {'relationship':
+'MENTIONS', 'entity': 'Signal Iduna Park'}, {'relationship': 'MENTIONS', 'entity': '1-1 draw between Paris Saint-Germain and Dortmund at Signal Iduna Park'},
+{'relationship': 'MENTIONS', 'entity': 'Milan 0-0 Newcastle'}, {'relationship': 'MENTIONS', 'entity': 'PSG 2-0 Dortmund'}, {'relationship': 'MENTIONS',
+'entity': 'Dortmund 0-0 Milan'}, {'relationship': 'MENTIONS', 'entity': 'Newcastle 4-1 PSG'}, {'relationship': 'MENTIONS', 'entity': 'PSG 3-0 Milan'},
+{'relationship': 'MENTIONS', 'entity': 'Newcastle 0-1 Dortmund'}, {'relationship': 'MENTIONS', 'entity': 'Dortmund 2-0 Newcastle'}, {'relationship': 'MENTIONS',
+'entity': 'Milan 2-1 PSG'}, {'relationship': 'MENTIONS', 'entity': 'PSG 1-1 Newcastle'}, {'relationship': 'MENTIONS', 'entity': 'Milan 1-3 Dortmund'},
+{'relationship': 'MENTIONS', 'entity': 'Group G'}, {'relationship': 'MENTIONS', 'entity': 'PSG'}, {'relationship': 'MENTIONS', 'entity': 'Bundesliga'},
+{'relationship': 'MENTIONS', 'entity': 'Dortmund 1-1 PSG'}, {'relationship': 'MENTIONS', 'entity': 'Newcastle 1-2 Milan'}, {'relationship': 'MENTIONS',
+'entity': 'Manchester City 3-2 RB Leipzig comeback win'}, {'relationship': 'MENTIONS', 'entity': 'Young Boys 1-3 RB Leipzig'}, {'relationship': 'MENTIONS',
+'entity': 'Group H'}, {'relationship': 'MENTIONS', 'entity': 'Young Boys'}, {'relationship': 'MENTIONS', 'entity': 'RB Leipzig'}, {'relationship': 'MENTIONS',
+'entity': 'Man City'}, {'relationship': 'MENTIONS', 'entity': 'Red Star Belgrade'}, {'relationship': 'MENTIONS', 'entity': 'Man City 3-1 Red Star Belgrade'},
+{'relationship': 'MENTIONS', 'entity': 'RB Leipzig 1-3 Man City'}, {'relationship': 'MENTIONS', 'entity': 'Red Star Belgrade 2-2 Young Boys'}, {'relationship':
+'MENTIONS', 'entity': 'RB Leipzig 3-1 Red Star Belgrade'}, {'relationship': 'MENTIONS', 'entity': 'Young Boys 1-3 Man City'}, {'relationship': 'MENTIONS',
+'entity': 'Man City 3-0 Young Boys'}, {'relationship': 'MENTIONS', 'entity': 'Red Star Belgrade 1-2 RB Leipzig'}, {'relationship': 'MENTIONS', 'entity': 'Man
+City 3-2 RB Leipzig'}, {'relationship': 'MENTIONS', 'entity': 'Young Boys 2-0 Red Star Belgrade'}, {'relationship': 'MENTIONS', 'entity': 'RB Leipzig 2-1 Young
+Boys'}, {'relationship': 'MENTIONS', 'entity': 'Red Star Belgrade 2-3 Man City'}, {'relationship': 'MENTIONS', 'entity': 'Barcelona'}, {'relationship':
+'MENTIONS', 'entity': 'Porto'}, {'relationship': 'MENTIONS', 'entity': 'Shakhtar Donetsk'}, {'relationship': 'MENTIONS', 'entity': 'Antwerp'}, {'relationship':
+'MENTIONS', 'entity': 'Barcelona 5-0 Antwerp'}, {'relationship': 'MENTIONS', 'entity': 'Shakhtar Donetsk 1-3 Porto'}, {'relationship': 'MENTIONS', 'entity':
+'Antwerp 2-3 Shakhtar Donetsk'}, {'relationship': 'MENTIONS', 'entity': 'Porto 0-1 Barcelona'}, {'relationship': 'MENTIONS', 'entity': 'Barcelona 2-1 Shakhtar
+Donetsk'}, {'relationship': 'MENTIONS', 'entity': 'Antwerp 1-4 Porto'}, {'relationship': 'MENTIONS', 'entity': 'Shakhtar Donetsk 1-0 Barcelona'},
+{'relationship': 'MENTIONS', 'entity': 'Barcelona 2-1 Porto'}, {'relationship': 'MENTIONS', 'entity': 'Porto beat Shakhtar Donetsk 5-3'}, {'relationship':
+'MENTIONS', 'entity': 'Champions League Round of 16'}, {'relationship': 'MENTIONS', 'entity': 'Champions League Round of 16 draw'}, {'relationship': 'MENTIONS',
+'entity': 'Nyon'}, {'relationship': 'MENTIONS', 'entity': 'Switzerland'}, {'relationship': 'MENTIONS', 'entity': 'UEFA'}, {'relationship': 'MENTIONS', 'entity':
+'Europa League playoff round'}, {'relationship': 'MENTIONS', 'entity': 'FC Copenhagen'}, {'relationship': 'MENTIONS', 'entity': 'Copenhagen'}, {'relationship':
+'MENTIONS', 'entity': 'Newcastle United'}, {'relationship': 'MENTIONS', 'entity': 'Newcastle'}, {'relationship': 'MENTIONS', 'entity': 'Milan'},
+{'relationship': 'MENTIONS', 'entity': 'Arsenal'}, {'relationship': 'MENTIONS', 'entity': 'Borussia Dortmund'}, {'relationship': 'MENTIONS', 'entity': 'Bayern
+Munich'}]
+passages: [{'passage': "Champions League permutations, scenarios: What teams need to qualify from groups for 2023/24 Round of 16 stage (Sporting News,
+2023-12-12T21:28:00+00:00)\nThe UEFA Champions League has reached the end of its group stage, with 16 precious places in the first knockout round now
+claimed.\n\nManchester City are looking to go back-to-back after their triumph in last season's Champions League, potentially becoming the first English club
+since Nottingham Forest in 1980 to successfully defend the trophy.\n\nThe likes of Bayern Munich, Real Madrid and Barcelona have also enjoyed strong group-stage
+campaigns and will surely be in the mix towards the sharp end of the competition. Atletico Madrid and Real Sociedad will complete the Spanish contingent in the
+next round.\n\nManchester United and Newcastle United will play no further part in Europe, though, having been eliminated by finishing bottom of their groups.
+Paris Saint-Germain will be in the Round of 16, though.\n\nThe Sporting News reviews the group stage ahead of its final match night and examines what teams from
+each group need to qualify for the Round of 16.", 'page': 'Champions League permutations, scenarios: What teams need to qualify from groups for 2023/24 Round of
+16 stage (Sporting News, 2023-12-12T21:28:00+00:00)'}, {'passage': 'Champions League permutations, scenarios: What teams need to qualify from groups for 2023/24
+Round of 16 stage (Sporting News, 2023-12-12T21:28:00+00:00)\nMORE: Champions League Round of 16 schedule, draw & qualified teams\n\nChampions League
+permutations, scenarios: What teams needed to qualify\n\nGroup A\n\nTeam GP W D L GD P Bayern Munich (Q) 6 5 0 0 +6 16 Copenhagen (Q) 6 2 2 2 0 8 Galatasaray 6
+1 2 3 -3 5 Manchester United 6 1 1 4 -3 4\n\nBayern Munich coasted into the knockout rounds but Copenhagen, Galatasaray and Manchester United all entered the
+final matchweek with a chance of joining the Bundesliga giants.', 'page': 'Champions League permutations, scenarios: What teams need to qualify from groups for
+2023/24 Round of 16 stage (Sporting News, 2023-12-12T21:28:00+00:00)'}, {'passage': "Champions League permutations, scenarios: What teams need to qualify from
+groups for 2023/24 Round of 16 stage (Sporting News, 2023-12-12T21:28:00+00:00)\n29 Galatasaray 3-3 Manchester United Nov. 29 Bayern Munich 0-0 FC Copenhagen
+Dec. 12 FC Copenhagen 1-0 Galatasaray Dec. 12 Manchester United 0-1 Bayern Munich\n\nGroup B\n\nTeam GP W D L GD P Arsenal (Q) 6 4 1 1 +12 13 PSV (Q) 6 2 3 1 -2
+9 Lens 6 2 2 2 -5 8 Sevilla 6 0 2 4 -5 2\n\nArsenal finished top of the pile and their 6-0 thrashing of Lens on matchday five confirmed them as winners of Group
+B.\n\nPSV's comeback win over Sevilla meant have also qualified thanks to Lens' defeat. The Ligue 1 side beat their LaLiga opponents 2-1 to make sure of a
+Europa League berth as PSV and Arsenal played out an entertaining 1-1 draw.", 'page': 'Champions League permutations, scenarios: What teams need to qualify from
+groups for 2023/24 Round of 16 stage (Sporting News, 2023-12-12T21:28:00+00:00)'}, {'passage': 'Champions League permutations, scenarios: What teams need to
+qualify from groups for 2023/24 Round of 16 stage (Sporting News, 2023-12-12T21:28:00+00:00)\nResults\n\nDate Fixture/Result Sept. 20 Sevilla 1-1 Lens Sept. 20
+Arsenal 4-0 PSV Oct. 3 Lens 2-1 Arsenal Oct. 3 PSV 2-2 Sevilla Oct. 24 Sevilla 1-2 Arsenal Oct. 24 Lens 1-1 PSV Nov. 8 Arsenal 2-0 Sevilla Nov. 8 PSV 1-0 Lens
+Nov. 29 Sevilla 2-3 PSV Nov. 29 Arsenal 6-0 Lens Dec. 12 Lens 2-1 Sevilla Dec.', 'page': 'Champions League permutations, scenarios: What teams need to qualify
+from groups for 2023/24 Round of 16 stage (Sporting News, 2023-12-12T21:28:00+00:00)'}, {'passage': "Champions League permutations, scenarios: What teams need
+to qualify from groups for 2023/24 Round of 16 stage (Sporting News, 2023-12-12T21:28:00+00:00)\n29 Arsenal 6-0 Lens Dec. 12 Lens 2-1 Sevilla Dec. 12 PSV 1-1
+Arsenal\n\nGroup C\n\nTeam GP W D L GD P Real Madrid (Q) 6 6 0 0 +9 18 Napoli (Q) 6 3 1 2 1 10 Braga 6 1 1 4 -6 4 Union Berlin 6 0 2 4 -4 2\n\nReal Madrid, the
+14-time European champions, completed six-wins out of six with a topsy-turvy 3-2 win away to Union Berlin\n\nMORE: Jude Bellingham's incredible stats for Real
+Madrid this season\n\nThat result ruled the Bundesliga side out of the Europa League, a spot Braga claim as consolation after Napoli snuffed out their slim
+hopes of second place with a 2-0 win at the Diego Armando Maradona.\n\nResults\n\nDate Fixture/Result Sept.", 'page': 'Champions League permutations, scenarios:
+What teams need to qualify from groups for 2023/24 Round of 16 stage (Sporting News, 2023-12-12T21:28:00+00:00)'}, {'passage': 'Champions League permutations,
+scenarios: What teams need to qualify from groups for 2023/24 Round of 16 stage (Sporting News, 2023-12-12T21:28:00+00:00)\nResults\n\nDate Fixture/Result Sept.
+20 Real Madrid 1-0 Union Berlin Sept. 20 Braga 1-2 Napoli Oct. 3 Union Berlin 2-3 Braga Oct. 3 Napoli 2-3 Real Madrid Oct. 24 Braga 1-2 Real Madrid Oct. 24
+Union Berlin 0-1 Napoli Nov. 8 Napoli 1-1 Union Berlin Nov. 8 Real Madrid 3-0 Braga Nov. 29 Real Madrid 4-2 Napoli Nov. 29 Braga 1-1 Union Berlin Dec. 12 Napoli
+2-0 Braga Dec. 12 Union Berlin 2-3 Real Madrid\n\nGroup D\n\nTeam GP W D L GD P 1. Real Sociedad (Q) 6 3 3 0 +5 12 2. Inter Milan (Q) 6 3 3 0 +3 12 3.', 'page':
+'Champions League permutations, scenarios: What teams need to qualify from groups for 2023/24 Round of 16 stage (Sporting News, 2023-12-12T21:28:00+00:00)'},
+{'passage': "Champions League permutations, scenarios: What teams need to qualify from groups for 2023/24 Round of 16 stage (Sporting News,
+2023-12-12T21:28:00+00:00)\nBenfica 6 1 1 4 -4 4 4. RB Salzburg 6 1 1 4 -4 4\n\nReal Sociedad and Inter Milan dominated Group D and could not be separated as
+they shared a 0-0 draw at San Siro. That left the Basque side top of the pile on goal difference.\n\nSalzburg had their Europea League destiny in their own
+hands but crashed out as an Angel Di Maria-inspired Benfica ran out 3-1 winners in Austria. Roger Schmidt's side progressed on goals scored, with Arthur
+Cabral's stoppage-time strike proving decisive\n\nResults\n\nDate Fixture/Result Sept. 20 Real Sociedad 1-1 Inter Milan Sept. 20 Benfica 0-2 RB Salzburg Oct. 3
+RB Salzburg 0-2 Real Sociedad Oct. 3 Inter Milan 1-0 Benfica Oct.", 'page': 'Champions League permutations, scenarios: What teams need to qualify from groups
+for 2023/24 Round of 16 stage (Sporting News, 2023-12-12T21:28:00+00:00)'}, {'passage': 'Champions League permutations, scenarios: What teams need to qualify
+from groups for 2023/24 Round of 16 stage (Sporting News, 2023-12-12T21:28:00+00:00)\nFeyenoord 6 2 0 4 -1 6 4. Celtic 6 1 1 4 -10 4\n\nAtletico Madrid and
+Lazio confirmed themselves as the two qualifiers for the Round of 16 before the final matchday. Top spot in Group E was decided by their showdown in the Spanish
+capital on December 13, with Atleti winning 2-0. Feyenoord finish third and drop into the Europa League.\n\nResults\n\nDate Fixture/Result Sept. 19 Feyenoord
+2-0 Celtic Sept. 19 Lazio 1-1 Atletico Oct. 4 Atletico 3-2 Feyenoord Oct. 4 Celtic 1-2 Lazio Oct. 25 Feyenoord 3-1 Lazio Oct. 25 Celtic 2-2 Atletico Nov. 7
+Atletico 6-0 Celtic Nov.', 'page': 'Champions League permutations, scenarios: What teams need to qualify from groups for 2023/24 Round of 16 stage (Sporting
+News, 2023-12-12T21:28:00+00:00)'}, {'passage': 'Champions League permutations, scenarios: What teams need to qualify from groups for 2023/24 Round of 16 stage
+(Sporting News, 2023-12-12T21:28:00+00:00)\n7 Atletico 6-0 Celtic Nov. 7 Lazio 1-0 Feyenoord Nov. 28 Lazio 2-0 Celtic Nov. 28 Feyenoord 1-3 Atletico Dec. 13
+Atletico 2-0 Lazio Dec. 13 Celtic 2-1 Feyenoord\n\nGroup F\n\nTeam GP W D L GD P 1. Bor. Dortmund (Q) 6 3 2 1 +3 11 2. PSG (Q) 6 2 2 2 +1 8 3. AC Milan 6 2 2 2
+-3 8 4. Newcastle 6 1 2 3 -1 5\n\nGroup F confirmed one qualifier ahead of the final round of matches with the impressive Borussia Dortmund sealing their place
+in the Round of 16.', 'page': 'Champions League permutations, scenarios: What teams need to qualify from groups for 2023/24 Round of 16 stage (Sporting News,
+2023-12-12T21:28:00+00:00)'}, {'passage': 'Champions League permutations, scenarios: What teams need to qualify from groups for 2023/24 Round of 16 stage
+(Sporting News, 2023-12-12T21:28:00+00:00)\nParis Saint-Germain join them in the knockouts after a 1-1 draw between the teams at Signal Iduna Park — a result
+that also confirmed Dortmund as group winners.\n\nNewcastle were briefly in second spot during the final matchday before letting their lead slip to AC Milan,
+who snatched the Europa League spot in the process.\n\nThe Rossoneri finished level on points with PSG but behind them based on their head-to-head
+tiebreaker.\n\nResults\n\nDate Fixture/Result Sept. 19 Milan 0-0 Newcastle Sept. 19 PSG 2-0 Dortmund Oct. 4 Dortmund 0-0 Milan Oct. 4 Newcastle 4-1 PSG Oct. 25
+PSG 3-0 Milan Oct. 25 Newcastle 0-1 Dortmund Nov. 7 Dortmund 2-0 Newcastle Nov. 7 Milan 2-1 PSG Nov. 28 PSG 1-1 Newcastle Nov. 28 Milan 1-3 Dortmund Dec.',
+'page': 'Champions League permutations, scenarios: What teams need to qualify from groups for 2023/24 Round of 16 stage (Sporting News,
+2023-12-12T21:28:00+00:00)'}, {'passage': "Champions League permutations, scenarios: What teams need to qualify from groups for 2023/24 Round of 16 stage
+(Sporting News, 2023-12-12T21:28:00+00:00)\n28 PSG 1-1 Newcastle Nov. 28 Milan 1-3 Dortmund Dec. 13 Dortmund 1-1 PSG Dec. 13 Newcastle 1-2 Milan\n\nGroup
+G\n\nTeam GP W D L GD P 1. Man City (Q) 6 6 0 0 +11 18 2. RB Leipzig (Q) 6 4 0 2 +3 12 3. Young Boys 6 1 1 4 -6 4 4. Red Star Belgrade 6 0 1 5 -8
+1\n\nManchester City and RB Leipzig confirmed their knockout places after four games played and City's 3-2 comeback win over the Bundesliga team on November 28
+clinched top spot in Group G for Pep Guardiola. Young Boys drop into the Europa League.\n\nResults\n\nDate Fixture/Result Sept. 19 Young Boys 1-3 RB Leipzig
+Sept.", 'page': 'Champions League permutations, scenarios: What teams need to qualify from groups for 2023/24 Round of 16 stage (Sporting News,
+2023-12-12T21:28:00+00:00)'}, {'passage': 'Champions League permutations, scenarios: What teams need to qualify from groups for 2023/24 Round of 16 stage
+(Sporting News, 2023-12-12T21:28:00+00:00)\n19 Young Boys 1-3 RB Leipzig Sept. 19 Man City 3-1 Red Star Belgrade Oct. 4 RB Leipzig 1-3 Man City Oct. 4 Red Star
+Belgrade 2-2 Young Boys Oct. 25 RB Leipzig 3-1 Red Star Belgrade Oct. 25 Young Boys 1-3 Man City Nov. 7 Man City 3-0 Young Boys Nov. 7 Red Star Belgrade 1-2 RB
+Leipzig Nov. 28 Man City 3-2 RB Leipzig Nov. 28 Young Boys 2-0 Red Star Belgrade Dec. 13 RB Leipzig 2-1 Young Boys Dec. 13 Red Star Belgrade 2-3 Man
+City\n\nGroup H\n\nTeam GP W D L GD P 1. Barcelona (Q) 6 4 0 2 +6 12 2.', 'page': 'Champions League permutations, scenarios: What teams need to qualify from
+groups for 2023/24 Round of 16 stage (Sporting News, 2023-12-12T21:28:00+00:00)'}, {'passage': "Champions League permutations, scenarios: What teams need to
+qualify from groups for 2023/24 Round of 16 stage (Sporting News, 2023-12-12T21:28:00+00:00)\nPorto (Q) 6 3 0 2 +7 12 3. Shakhtar Donetsk 6 3 0 3 -2 9 4.
+Antwerp 6 1 0 5 -11 3\n\nBarcelona's 2-1 home win over Porto sealed their place in the Round of 16 from Group H. They are joined by the Portuguese side, who
+beat Shakhtar Donetsk 5-3 in a matchday-six thriller. Shakhtar take the Europa League spot.\n\nResults\n\nDate Fixture/Result Sept. 19 Barcelona 5-0 Antwerp
+Sept. 19 Shakhtar Donetsk 1-3 Porto Oct. 4 Antwerp 2-3 Shakhtar Donetsk Oct. 4 Porto 0-1 Barcelona Oct. 25 Barcelona 2-1 Shakhtar Donetsk Oct. 25 Antwerp 1-4
+Porto Nov. 7 Shakhtar Donetsk 1-0 Barcelona Nov.", 'page': 'Champions League permutations, scenarios: What teams need to qualify from groups for 2023/24 Round
+of 16 stage (Sporting News, 2023-12-12T21:28:00+00:00)'}, {'passage': "Champions League permutations, scenarios: What teams need to qualify from groups for
+2023/24 Round of 16 stage (Sporting News, 2023-12-12T21:28:00+00:00)\n7 Shakhtar Donetsk 1-0 Barcelona Nov. 7 Porto 2-0 Antwerp Nov. 28 Shakhtar Donetsk 1-0
+Antwerp Nov. 28 Barcelona 2-1 Porto Dec. 13 Antwerp 3-2 Barcelona Dec. 13 Porto 5-3 Shakhtar Donetsk\n\nChampions League Round of 16 lineup: Which teams have
+qualified?\n\nThe following teams are qualified for the Champions League Round of 16:\n\nBayern Munich, Real Madrid, Real Sociedad, Inter Milan, Manchester
+City, RB Leipzig, Atletico Madrid, Lazio, Borussia Dortmund, Barcelona, Arsenal, PSV, PSG, Porto, Copenhagen, Napoli\n\nWhen is the Champions League Round of 16
+draw?\n\nThe draw for the Round of 16 will be made in Nyon, Switzerland at UEFA's headquarters on Monday, December 18, 2023 at 12 noon CET (6 a.m. ET).",
+'page': 'Champions League permutations, scenarios: What teams need to qualify from groups for 2023/24 Round of 16 stage (Sporting News,
+2023-12-12T21:28:00+00:00)'}, {'passage': 'Champions League permutations, scenarios: What teams need to qualify from groups for 2023/24 Round of 16 stage
+(Sporting News, 2023-12-12T21:28:00+00:00)\nET).\n\nThe teams will be divided into group winners and second-place finishers, with each runner-up drawn against a
+group winner. No team can be drawn against anyone from the same country until at least the quarterfinals. Third-place finishers in each group will drop into the
+Europa League playoff round.', 'page': 'Champions League permutations, scenarios: What teams need to qualify from groups for 2023/24 Round of 16 stage (Sporting
+News, 2023-12-12T21:28:00+00:00)'}]
+</item 5>
+
+<item 6>
+Inside the Man United takeover and it’s anything but smooth sailing for Sir Jim Ratcliffe as he seeks board vote (TalkSport, 2023-10-18T21:30:00+00:00)
+5 Joel and Avram Glazer put the Red Devils up for sale in November 2022 Credit: AFP
+
+5 United supporters are desperate to see the Glazers depart Old Trafford Credit: Twitter
+
+The fact the Glazers will remain in situ has not gone down well with supporters, but this is seen as the first step to Ratcliffe eventually removing the
+Americans and taking overall control.
+
+The exact timescale as to when that happens remains vague and how much it will cost Ratcliffe overall could depend on United’s sporting and commercial success
+in the coming seasons.
+
+Thursday’s board meeting was pre-arranged and while it is expected that Ratcliffe’s proposal will discussed in detail, sources close to United have indicated to
+talkSPORT that it is far from guaranteed it will be put to a vote with several details still to be thrashed out.
+</item 6>
+
+<item 7>
+Inside the Man United takeover and it’s anything but smooth sailing for Sir Jim Ratcliffe as he seeks board vote (TalkSport, 2023-10-18T21:30:00+00:00)
+That raises doubts over the future of current sporting director John Murtough and chief executive Richard Arnold, although manager Erik ten Hag is believed to
+be on a solid footing despite United’s poor start to the season.
+
+Expect Sir Dave Brailsford, the mastermind behind Team GB’s cycling success at the London 2012 Olympics and director of sport for Ratcliffe’s company INEOS, to
+have a prominent role in any reshuffle.
+
+Ratcliffe also has ambitious plans to upgrade Old Trafford and turn it into a 90,000-seat stadium.
+
+He wants the deal ratified in time for the January transfer window, however due to FFP concerns, there is no guarantees United will be able to spend big.
+
+Despite the fact he turns 71 a day before the board meeting, it appears Ratcliffe’s plans centre around long-term stability and success rather than a short-term
+turnaround in United’s fortunes.
+</item 7>
+
+<item 8>
+Inside the Man United takeover and it’s anything but smooth sailing for Sir Jim Ratcliffe as he seeks board vote (TalkSport, 2023-10-18T21:30:00+00:00)
+5 Ratcliffe already owns Nice in France and Lausanne in Switzerland Credit: AFP
+
+Initially it was hoped the bidding process would be concluded in time for the summer transfer window, but the longer it dragged on, prompting several
+large-scale protests from United fans, the more apparent it became that Joel and Avram were reluctant sellers, as revealed by talkSPORT in March.
+
+Sheikh Jassim’s public statement promising to restore United ‘to former glories’ was also seen as thinly-veiled swipe at the Glazers, which did not help his
+negotiating hand.
+
+The Qatari banker’s patience finally snapped and his withdrawal from the bidding process at the end of last week has left the pathway clear for Ratcliffe to
+complete what he has always viewed as his dream purchase.
+
+WHAT ARE THE NEXT STEPS FOR RATCLIFFE?
+
+talkSPORT understands Ratcliffe, having originally wanted a much larger up-front stake, has an agreement in principle to buy a 25 per cent share in United.
+</item 8>
+
+<item 9>
+From Ten Hag’s future to a leaking roof: Ratcliffe’s Manchester United in-tray (The Guardian, 2023-12-25T10:00:20+00:00)
+No family member has given a press conference or interview during their 18-year tenure. Ratcliffe has arrived on a ticket of, partly, being the local lad made
+good (Failsworth, where he was born, is next to Newton Heath, United’s birthplace) so if he proves as silent as the Americans then this will be: a) poor PR; and
+b) just plain poor. Football fans can be classed as the most loyal citizens of any society but even the faith of United enthusiasts has been stretched by the
+cold relationship created by the Glazers’ stance regarding communication. A tap-in, then, for Ratcliffe is to remedy this by opening and maintaining a regular
+line into supporters.
+
+The Glazer family have little relationship with the Manchester United fans – something Ratcliffe would do well to avoid.
+</item 9>
+
+<item 10>
+From Ten Hag’s future to a leaking roof: Ratcliffe’s Manchester United in-tray (The Guardian, 2023-12-25T10:00:20+00:00)
+The manager’s future
+
+Erik ten Hag’s team are treading water at precisely the wrong moment: as Sir Jim Ratcliffe takes charge of Manchester United’s sporting department before making
+sweeping changes in the posts that will directly affect the manager. Richard Arnold has left despite officially staying until the end of the year and into his
+role may come Jean-Claude Blanc, the CEO of Ratcliffe’s Ineos Sport, as the man Ten Hag reports to. Ten Hag’s line manager may change too, as Ratcliffe
+considers whether a new football director is required, a position held by John Murtough. Ten Hag may have a first clue of his status in Ratcliffe’s new empire
+if he is sounded out for his view of a prime factor in his ability to coach and manage the side to success: United’s transfer policy. This leads us to Murtough
+…
+
+Will Murtough survive?
+
+The football director has no plans to depart but whether he remains in situ may be a matter for Ratcliffe.
+</item 10>
+=== END ITEM id=da09f19c42609b59 ===

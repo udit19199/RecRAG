@@ -1,0 +1,63 @@
+[
+  {
+    "id": "multihop-rag-2327",
+    "sentences": [
+      [
+        "Harbaugh reportedly watched the game from the team hotel.",
+        "The leading piece of drama returns."
+      ],
+      [
+        "The Big Ten suspended coach Jim Harbaugh for three games.",
+        "The Big Ten suspended Jim Harbaugh on Friday.",
+        "The team was on a plane en route to Penn State when the suspension happened.",
+        "Michigan had hoped to block the suspension.",
+        "The Wolverines (Michigan) will be without their coach on the sidelines in Happy Valley."
+      ]
+    ]
+  },
+  {
+    "id": "multihop-rag-542",
+    "sentences": [
+      [
+        "Caesars has a competitive welcome bonus for new players.",
+        "Caesars runs NBA betting promos for existing players."
+      ],
+      [
+        "New customers can get up to $1000 in bonus bets.",
+        "New customers can get bonus bets if they lose their first bet."
+      ],
+      [
+        "Caesars has a wide range of bets for the PGA Tour.",
+        "Caesars has a wide range of bets for other major events.",
+        "The bets include winning margin bets.",
+        "The bets include top finish bets.",
+        "The bets include live betting props."
+      ],
+      [
+        "The writer expects Caesars to offer in VT the same offer it has elsewhere.",
+        "New sign-ups are eligible to receive up to a $1,000 Bonus Bet.",
+        "New sign-ups are eligible if their first bet loses."
+      ]
+    ]
+  },
+  {
+    "id": "multihop-rag-2362",
+    "sentences": [
+      [
+        "The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud.",
+        "The prosecution said Bankman-Fried committed fraud to achieve great wealth, power and influence.",
+        "The defense argued that the FTX founder acted in good faith.",
+        "The defense argued that the FTX founder never meant to commit fraud or steal.",
+        "The defense argued that the FTX founder basically got in over his head."
+      ],
+      [
+        "The second week of the trial's standout testimony came from Caroline Ellison.",
+        "Caroline Ellison is Alameda Research's former CEO.",
+        "Caroline Ellison claimed she took $14 billion from customers.",
+        "Caroline Ellison claimed she took the $14 billion to repay debts to lenders.",
+        "Caroline Ellison claimed she used customers as a line of credit.",
+        "Caroline Ellison claimed she did this under the instruction of SBF."
+      ]
+    ]
+  }
+]

@@ -1,0 +1,461 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "0090fe6fac725141",
+   "gold": [
+    {
+     "sentence": "In September, The Fader published an interview with CupcakKe, which she discussed her new album that would address \"rape, and everything else\".",
+     "facts": {
+      "0.0": "The Fader published an interview with CupcakKe in September.",
+      "0.1": "In the interview, CupcakKe discussed her new album.",
+      "0.2": "CupcakKe's new album would address \"rape, and everything else\"."
+     }
+    },
+    {
+     "sentence": "The Fader (stylized as The FADER) is a New York City-based music magazine launched in 1999 by Rob Stone and Jon Cohen, covering music, style and culture.",
+     "facts": {
+      "1.0": "The Fader, stylized as The FADER, is a New York City-based music magazine.",
+      "1.1": "The Fader was launched in 1999.",
+      "1.2": "The Fader was launched by Rob Stone and Jon Cohen.",
+      "1.3": "The Fader covers music, style and culture."
+     }
+    },
+    {
+     "sentence": " It was the first print publication to be released on iTunes.",
+     "facts": {
+      "2.0": "The Fader was the first print publication to be released on iTunes."
+     }
+    }
+   ],
+   "items": [
+    "Paper (magazine)\nPaper, stylized as PAPER, is a New York City-based independent magazine focusing on fashion, popular culture, nightlife, music, art and film.\n\n Past cover models include Kim Kardashian, Demi Lovato, Katy Perry, Miley Cyrus, Prince, CL, and Jennifer Lopez.",
+    "Audacious (CupcakKe album)\nIn September, The Fader published an interview with CupcakKe, which she discussed her new album that would address \"rape, and everything else\".",
+    "Sculptural Pursuit\nSculptural Pursuit was a quarterly art/literary magazine published by Hammer & Pen Productions, a Denver, Colorado publishing company.\n\n The magazine focuses on sculpture, its collectors and enthusiasts, but painting and poetry are also frequently featured.",
+    "Exclaim!\nExclaim!\n\n is a monthly Canadian music magazine that features in-depth coverage of new music across all genres with a special focus on Canadian and cutting-edge artists.\n\n Content is based on the monthly print publication, which publishes 9 issues per year, distributing over 103,000 copies to over 2,600 locations across Canada.\n\n The magazine has an average of 361,200 monthly readers.\n\n Their website, exclaim.ca, has an average of 675,000 unique visitors a month.",
+    "SexIs\nSexIs Magazine is a quarterly print publication and daily webzine devoted to sex and sexual culture, founded in 2008 by Web Merchants, parent company of sex toy e-tailer EdenFantasys.com.\n\n The first print issue debuted in November 2009, distributed nationwide as an insert in \"BUST magazine\".\n\n The website publishes articles, columns, video presentations and news items daily.",
+    "State (magazine)\nState.ie (formerly State Magazine) is an Irish website and formerly a monthly music magazine, which launched in April 2008 and ceased to print in January 2009 having published a total of ten issues.\n\n The magazine continues online and was voted Best Music Site in 2008 and Best Web Publication in 2010 in the Irish Web Awards.\n\n Originally the concept of the magazine involved a hard copy of which there was a charge to purchase, however after six issues it was decided to make the magazine's content free both online and in print.\n\n The first issue, April 2008, appeared on Irish shelves on 6 March 2008 and featured Michael Stipe of R.E.M. on the cover.\n\n This immediately garnered comparisons between the new magazine's similarities with \"Hot Press\" who featured Stipe on their cover at the same time, a move widely thought to be an attempt by Hot Press to stifle State's status as a serious 'alternative' to the more established local magazine.\n\n At a price of €5.50, \"State\" charged €2 more than \"Hot Press\".",
+    "Guitar World\nGuitar World is a monthly music magazine devoted to guitarists, published since July 1980.\n\n It contains original interviews, album and gear reviews, and guitar and bass tablature of approximately five songs each month.\n\n The magazine is published 13 times per year (12 monthly issues and a holiday issue).\n\n Formerly owned by Harris Publications, Future US bought the magazine in 2003.\n\n In 2012, NewBay Media bought the Music division of Future US.\n\n The latter company also published a spin-off title, Guitar Legends, each issue of which typically combined past articles from \"Guitar World\" under a specific theme.",
+    "The Fader\nThe Fader (stylized as The FADER) is a New York City-based music magazine launched in 1999 by Rob Stone and Jon Cohen, covering music, style and culture.\n\n It was the first print publication to be released on iTunes.",
+    "Rap-Up\nRap-Up is a magazine launched in 2001 by founder Devin Lazerine.\n\n The publication was originally a website devoted to hip hop, until Lazerine decided to pitch the possibility of a magazine to several publishers.\n\n The magazine is focused on the hip hop and R&B aspect of the music industry, and predominantly features interviews with artists, actors and other entertainers.\n\n Issued quarterly, the magazine's target audience was the 14 to 28 demographic, although the demographic has become older over time.",
+    "VIVmag\nVIVmag is one of the earliest exclusively digital, interactive women's lifestyle magazines.\n\n Launched in 2006 and backed by Canadian industrialist David Harrison Gilmour (the founder of FIJI Water LLC), the bimonthly magazine is distributed by Zinio Systems, Inc.\n\n The first issue appeared in January-February 2007.\n\n There is no print version.\n\n The paperless title can be viewed in most browsers or downloaded to your computer and read via the Zinio Reader.\n\n The magazine is based in Thousand Oaks, California."
+   ]
+  },
+  {
+   "id": "711854eb5a866453",
+   "gold": [
+    {
+     "sentence": "Bernard Malamud (April 26, 1914 – March 18, 1986) was an American novelist and short story writer.",
+     "facts": {
+      "0.0": "Bernard Malamud was born on April 26, 1914.",
+      "0.1": "Bernard Malamud died on March 18, 1986.",
+      "0.2": "Bernard Malamud was an American novelist.",
+      "0.3": "Bernard Malamud was an American short story writer."
+     }
+    },
+    {
+     "sentence": "Lois McMaster Bujold ( ; born November 2, 1949) is an American speculative fiction writer.",
+     "facts": {
+      "1.0": "Lois McMaster Bujold was born on November 2, 1949.",
+      "1.1": "Lois McMaster Bujold is an American speculative fiction writer."
+     }
+    }
+   ],
+   "items": [
+    "Gentleman Jole and the Red Queen\nGentleman Jole and the Red Queen is a science fiction novel by Lois McMaster Bujold.\n\n It is an installment in Bujold's Vorkosigan Saga.\n\n Bujold has described it as \"not a war story.\n\n It is about grownups.\"",
+    "Brothers in Arms (Bujold novel)\nBrothers in Arms is a science fiction novel by American writer Lois McMaster Bujold, part of the Vorkosigan Saga.\n\n It was the fifth book published in the series, and is the twelfth story, including novellas, in the internal chronology of the series.\n\n \"Brothers in Arms\" was first published by Baen Books in January 1989, and is included in the 2002 omnibus \"Miles Errant\".",
+    "Passage (Bujold novel)\nPassage is a novel by American writer Lois McMaster Bujold, published in 2008.\n\n It is the third in the tetralogy \"The Sharing Knife\".",
+    "Shards of Honor\nShards of Honor is an English language science fiction novel by Lois McMaster Bujold, first published in June 1986.\n\n It is a part of the Vorkosigan Saga, and is the first full-length novel in publication order.\n\n \"Shards of Honor\" is paired with Bujold's 1991 \"Barrayar\" in the omnibus \"Cordelia's Honor\" (1996).",
+    "Ethan of Athos\nEthan of Athos is a 1986 science fiction novel by American author Lois McMaster Bujold.\n\n The title character is Dr. Ethan Urquhart, Chief of Biology at the Severin District Reproduction Centre on the planet Athos, who is sent to find out what happened to a shipment of vital ovarian tissue cultures.\n\n Set in the fictional universe of Bujold's Vorkosigan Saga, the novel mentions but does not feature her usual protagonist Miles Vorkosigan.\n\n To date, Bujold has never revisited the settings of Athos or Kline Station in her many subsequent novels, but the events of \"Ethan of Athos\" are later referred to indirectly in the novels \"Borders of Infinity\" (1989) and \"Cetaganda\" (1995).",
+    "Bernard Malamud\nBernard Malamud (April 26, 1914 – March 18, 1986) was an American novelist and short story writer.\n\n Along with Saul Bellow and Philip Roth, he was one of the best known American Jewish authors of the 20th century.\n\n His baseball novel, \"The Natural\", was adapted into a 1984 film starring Robert Redford.\n\n His 1966 novel \"The Fixer\" (also filmed), about antisemitism in Tsarist Russia, won both the National Book Award and the Pulitzer Prize.",
+    "Lois McMaster Bujold\nLois McMaster Bujold ( ; born November 2, 1949) is an American speculative fiction writer.\n\n She is one of the most acclaimed writers in her field, having won the Hugo Award for best novel four times, matching Robert A. Heinlein's record, not counting his Retro Hugo.\n\n Her novella \"The Mountains of Mourning\" won both the Hugo Award and Nebula Award.\n\n In the fantasy genre, \"The Curse of Chalion\" won the Mythopoeic Award for Adult Literature and was nominated for the 2002 World Fantasy Award for best novel, and both her fourth Hugo Award and second Nebula Award were for \"Paladin of Souls\".\n\n In 2011 she was awarded the Skylark Award.\n\n In 2013 she was awarded the Forry Award.\n\n In 2017 she won a Hugo Award for Best Series, for the Vorkosigan Saga.",
+    "Cryoburn\nCryoburn is a science fiction novel by Lois McMaster Bujold, first published in October 2010.\n\n Part of the Vorkosigan Saga, it was nominated for the Hugo Award for Best Novel in 2011, as Bujold's ninth Best Novel nomination.\n\n Also in 2011, it was one of the top five finishers in the poll for the Locus Award for Best Science Fiction Novel.",
+    "Horizon (novel)\nHorizon is a fantasy novel by American writer Lois McMaster Bujold.\n\n It is the fourth in the tetralogy \"The Sharing Knife\".",
+    "Barrayar\nBarrayar is a science fiction novel by Lois McMaster Bujold.\n\n It was first published as four installments in \"Analog\" in July–October 1991, and then published in book form by Baen Books in October 1991.\n\n \"Barrayar\" won both the Hugo Award for Best Novel and the Locus Award for Best Science Fiction Novel in 1992.\n\n It is a part of the Vorkosigan Saga, and is the seventh full-length novel of the series, in publication order.\n\n \"Barrayar\" is a direct sequel to Bujold's first novel, \"Shards of Honor\" (1986), and the two are paired in the 1996 omnibus \"Cordelia's Honor\"."
+   ]
+  },
+  {
+   "id": "fedec97754a024c2",
+   "gold": [
+    {
+     "sentence": " Upon Victoria's death, the British throne passed to her eldest son Edward VII, a member of the House of Saxe-Coburg and Gotha through his father.",
+     "facts": {
+      "0.0": "Victoria died.",
+      "0.1": "The British throne passed to Victoria's eldest son Edward VII upon her death.",
+      "0.2": "Edward VII was a member of the House of Saxe-Coburg and Gotha through his father."
+     }
+    },
+    {
+     "sentence": "The House of Saxe-Coburg and Gotha ( ; German: \"\") is a German dynasty that ruled the duchy of Saxe-Coburg and Gotha, which was one of the Ernestine duchies.",
+     "facts": {
+      "1.0": "The House of Saxe-Coburg and Gotha is a German dynasty.",
+      "1.1": "The House of Saxe-Coburg and Gotha ruled the duchy of Saxe-Coburg and Gotha.",
+      "1.2": "The duchy of Saxe-Coburg and Gotha was one of the Ernestine duchies."
+     }
+    }
+   ],
+   "items": [
+    "Canada under British rule\nAlthough confederation in 1867 led to an enlarged Dominion with increased autonomy over domestic affairs, Canada still remained a colony within the British Empire and was thus subordinate to the British Parliament until the enactment of the Statute of Westminster in 1931.\n\n This statute recognized Canada as an independent peer coequal with the United Kingdom, and thus provided the Parliament of Canada with legislative sovereignty over all federal matters except the power to change the constitutional laws of Canada which remained under the purview of the Parliament of the United Kingdom.\n\n Canada's final vestige of legal dependence on the United Kingdom was terminated in 1982 with the enactment of the Canada Act, subsequently providing Canada with full legal sovereignty completely independent of the United Kingdom.",
+    "Ernest Augustus, King of Hanover\nErnest Augustus (5 June 1771 – 18 November 1851) was King of Hanover from 20 June 1837 until his death.\n\n He was the fifth son and eighth child of King George III of the United Kingdom and Hanover.\n\n As a fifth son, Ernest seemed unlikely to become a monarch, but none of his four elder brothers had a legitimate son who survived infancy.\n\n The Salic Law, which barred succession to or through a female, prevailed in Hanover; therefore, when his elder brother King William IV died in 1837, Ernest succeeded him as King of Hanover.\n\n In the United Kingdom the succession to the monarchy was determined by primogeniture and his niece Victoria succeeded to the throne, thus ending the personal union between the British Isles and Hanover that had existed since 1714.",
+    "Duke of Bedford\nDuke of Bedford (named after Bedford, England) is a title that has been created six times (for five distinct people) in the Peerage of England.\n\n The first and second creations came in 1414 in favour of Henry IV's third son, John, who later served as regent of France.\n\n He was made Earl of Kendal at the same time and was made Earl of Richmond later the same year.\n\n The titles became extinct on his death in 1435.\n\n The third creation came in 1470 in favour of George Neville, nephew of Warwick the Kingmaker.\n\n He was deprived of the title by Act of Parliament in 1478.\n\n The fourth creation came 1478 in favour of George, the third son of Edward IV.\n\n He died the following year at the age of two.\n\n The fifth creation came in 1485 in favour of Jasper Tudor, half-brother of Henry VI and uncle of Henry VII.\n\n He had already been created Earl of Pembroke in 1452.\n\n However, as he was a Lancastrian, his title was forfeited between 1461 and 1485 during the predominance of the House of York.",
+    "House of Saxe-Coburg and Gotha\nThe House of Saxe-Coburg and Gotha ( ; German: \"\") is a German dynasty that ruled the duchy of Saxe-Coburg and Gotha, which was one of the Ernestine duchies.\n\n It is a cadet branch of the Saxon House of Wettin.",
+    "Succession to the British throne\nSuccession to the British throne is determined by descent, gender (for people born before October 2011), legitimacy, and religion.\n\n Under common law, the Crown is inherited by a sovereign's children or by a childless sovereign's nearest collateral line.\n\n The Bill of Rights 1689 and the Act of Settlement 1701, restrict succession to the throne to the legitimate Protestant descendants of Sophia of Hanover that are in \"communion with the Church of England\".\n\n Spouses of Roman Catholics were disqualified from 1689 until the law was amended in 2015.\n\n Protestant descendants of those excluded for being Roman Catholics are eligible.",
+    "House of Oldenburg\nThe House of Oldenburg is a European dynasty of North German origin.\n\n It is one of Europe's most influential royal houses, with branches that rule or have ruled in Denmark, Iceland, Greece, Norway, Russia, Sweden, Schleswig, Holstein, and Oldenburg.\n\n The current Queen of Denmark and King of Norway, the former King of Greece, the consorts of Greece and the United Kingdom, as well as the first twelve names in the line of succession to the British throne, are all patrilineal members of the Glücksburg branch of this house.",
+    "Principality of Calenberg\nThe Principality of Calenberg was a dynastic division of the Welf duchy of Brunswick-Lüneburg established in 1432.\n\n Calenberg was ruled by the House of Hanover from 1635 onwards; the princes received the ninth electoral dignity of the Holy Roman Empire in 1692.\n\n Their territory became the nucleus of the Electorate of Hanover, ruled in personal union with the Kingdom of Great Britain from 1714 onwards.\n\n The principality received its name from Calenberg Castle, a residence of the Brunswick dukes.",
+    "Prince Christian of Hanover (born 1985)\nPrince Christian of Hanover (Christian Heinrich Clemens Paul Frank Peter Welf Wilhelm-Ernst Friedrich Franz Prince of Hanover, Duke of Brunswick and Lüneburg; born 1 June 1985) is the younger son of Ernst August, Prince of Hanover, and his first wife Chantal Hochuli.\n\n He is the second in the line of succession to the former Hanoverian throne, after his elder brother Prince Ernst August.\n\n As a descendant of George III of the United Kingdom, Christian is also in the line of succession to the British throne.",
+    "House of Hanover\nThe House of Hanover (or the Hanoverians ; German: \"Haus Hannover\" ) is a German royal dynasty that ruled the Electorate and then the Kingdom of Hanover, and that also provided monarchs of Great Britain and Ireland from 1714 and ruled the United Kingdom until the death of Queen Victoria in 1901.\n\n Upon Victoria's death, the British throne passed to her eldest son Edward VII, a member of the House of Saxe-Coburg and Gotha through his father.",
+    "Duke of Bedford\nHe regained the earldom in 1485 when his nephew Henry VII came to the throne and was elevated to the dukedom the same year.\n\n He had no legitimate children and the titles became extinct on his death in 1495."
+   ]
+  },
+  {
+   "id": "5879c9c67b107b90",
+   "gold": [
+    {
+     "sentence": " He received an excellent education in both Arabic and Greek, having studied Arabic grammar with the famous poet Abul ʿAla Al-Maʿarri.",
+     "facts": {
+      "0.0": "He received an excellent education in Arabic.",
+      "0.1": "He received an excellent education in Greek.",
+      "0.2": "He studied Arabic grammar with the famous poet Abul ʿAla Al-Maʿarri."
+     }
+    },
+    {
+     "sentence": "Abul ʿAla Al-Maʿarri (Arabic أبو العلاء المعري \"Abū al-ʿAlāʾ al-Maʿarrī \", full name أبو العلاء أحمد بن عبد الله بن سليمان التنوخي المعري \"Abū al-ʿAlāʾ Aḥmad ibn ʿAbd Allāh ibn Sulaimān al-Tanūẖī al-Maʿarrī \"; December 973 – May 1057) was a blind Arab philosopher, poet, and writer.",
+     "facts": {
+      "1.0": "Abul ʿAla Al-Maʿarri's Arabic name is أبو العلاء المعري (Abū al-ʿAlāʾ al-Maʿarrī).",
+      "1.1": "Abul ʿAla Al-Maʿarri's full name is أبو العلاء أحمد بن عبد الله بن سليمان التنوخي المعري (Abū al-ʿAlāʾ Aḥmad ibn ʿAbd Allāh ibn Sulaimān al-Tanūẖī al-Maʿarrī).",
+      "1.2": "Abul ʿAla Al-Maʿarri was born in December 973.",
+      "1.3": "Abul ʿAla Al-Maʿarri died in May 1057.",
+      "1.4": "Abul ʿAla Al-Maʿarri was blind.",
+      "1.5": "Abul ʿAla Al-Maʿarri was an Arab philosopher.",
+      "1.6": "Abul ʿAla Al-Maʿarri was an Arab poet.",
+      "1.7": "Abul ʿAla Al-Maʿarri was an Arab writer."
+     }
+    }
+   ],
+   "items": [
+    "Ibn al-Khatib\nLisan ad-Din ibn al-Khatib (Born 16 November 1313, Loja– died 1374, Fes, Morocco) (Full name Muhammad ibn Abd Allah ibn Said ibn Ali ibn Ahmad al-Salmani) was a Moroccan Arab polymath poet, writer, historian, philosopher, physician and politician from Emirate of Granada.\n\n Some of his poems decorate the walls of the Alhambra in Granada.",
+    "Eenasul Fateh (Aladin, b. 1959) is a Bangladeshi-British magician and cultural practitioner. “Abdāl” denotes saintly figures in Islamic mysticism. Dawud Tai (d. 777–782) was a Sufi scholar; Muhammad ibn Thaleb a 15th-century Persian physician. Ibn al-Khatib (1313–1374) was a Granada-born Moroccan polymath. Da’ud Abu",
+    "Al-Mutanabbi\nAl-Mutanabbi had a great pride in himself through his poetry.\n\n Among the topics he discussed were courage, the philosophy of life, and the description of battles.\n\n Many of his poems were and still are widely spread in today's Arab world and are considered to be proverbial.",
+    "Abdal\nAbdāl (\"lit\": substitutes, but which can also mean \"generous\" [\"karīm\"] and \"noble\" [\"sharīf\"]) is a term used in Islamic metaphysics and Islamic mysticism, both Sunni and Shiite, to refer to a particularly important group of God's saints.\n\n In the tradition of Sunni Islam in particular, the concept attained an especially important position in the writings of the Sunni mystics and theologians, whence it appears in the works of Sunni authorities as diverse as Abu Talib al-Makki (d. 956), Ali Hujwiri (d. 1072), Ibn Asakir (d. 1076), Khwaja Abdullah Ansari (d. 1088), and Ibn Khaldun (d. 1406).",
+    "Shaykh Muhammad ibn Thaleb\nMuhammad ibn Thalib ibn Abd Allah ibn Ni`mat Allah ibn Sadr ad-Din ibn Shaykh Baha' ad-Din ash-Shirazi (Arabic: محمد ابن طالب عبدالله ابن نعمات الله ابن صدر الدين ابن شيخ بهاءالدين الشيرازي‎ ‎ ) was a 15th-century Persian physician from Shiraz, Iran.",
+    "The entries cover major Arab cultural figures and works: Egyptian actor Ahmed Zaki and director Salah Abu Seif, known for intense performances and Egyptian neorealism; and writer Naguib Mahfouz, Nobel laureate whose novels include *The Cairo Trilogy*, *The Beginning and the End*, *Thebes at War* and *Arabian Nights and Days*. Abu Seif’s 1960 *Bidaya wa Nihaya* adapted Mahfouz. Other topics include Tayeb",
+    "Abd Allah ibn Abbas\nAbd Allah ibn Abbas (Arabic: عبد الله ابن عباس‎ ‎ ) or ′Abd Allah ibn al-′Abbas otherwise called (Ibn Abbas; Al-Habr; Al-Bahr; The Doctor; The Sea) was born c. 619 CE.\n\n He was the son of Al-‘Abbas ibn ‘Abd al-Muttalib, an uncle of the Islamic prophet Muhammad, and a nephew of the Maymunah bint al-Harith, who later became Muhammad's wife.\n\n He was one of Muhammad's cousins and one of the early Qur'an scholars.",
+    "Da'ud Abu al-Fadl\nDa'ud Abu al-Fadl (1161–1242) was a Karaite Jewish physician who lived in the Ayyubid Egypt in the twelfth century CE.\n\n He born in Cairo in 1161 and died there about 1242.\n\n Having studied medicine under the Jewish physician Hibat Allah ibn Jami, and under Abu al-Fafa'il ibn Naqid, he became the court physician of the sultan al-Malik al-'Adil Abu Bakr ibn Ayyub, the brother and successor of Saladin.\n\n He was also chief professor at the al-Nasiri Hospital at Cairo, where he had a great many pupils, among them being the historian ibn Abi Usaibiyyah.\n\n The latter declared that Abu al-Fadl was the most skillful physician of the time and that his success in curing the sick was miraculous.\n\n Abu al-Fadl was the author of an Arabic pharmacopoeia in twelve chapters, entitled \"Aḳrabadhin\", and treating chiefly of antidotes.",
+    "Al-Maʿarri\nAbul ʿAla Al-Maʿarri (Arabic أبو العلاء المعري \"Abū al-ʿAlāʾ al-Maʿarrī \", full name أبو العلاء أحمد بن عبد الله بن سليمان التنوخي المعري \"Abū al-ʿAlāʾ Aḥmad ibn ʿAbd Allāh ibn Sulaimān al-Tanūẖī al-Maʿarrī \"; December 973 – May 1057) was a blind Arab philosopher, poet, and writer.\n\n Al-Maʿarri held and expressed an irreligious world view which was met with controversy, but in spite of it, he is regarded as one of the greatest classical Arabic poets.",
+    "Abd Allah ibn al-Fadl\nLittle is known of his life, apart from what can be gleaned from manuscripts of his texts.\n\n He was a deacon and the grandson of a bishop.\n\n He received an excellent education in both Arabic and Greek, having studied Arabic grammar with the famous poet Abul ʿAla Al-Maʿarri.\n\n Several of his works and translations were commissioned by notables from Antioch and neighbouring cities in Muslim territory."
+   ]
+  },
+  {
+   "id": "64b95b61a90bc2d9",
+   "gold": [
+    {
+     "sentence": " Dan Hurley is the son of Hall of Fame high school coach Bob Hurley and younger brother of former Duke and Sacramento Kings guard Bobby Hurley.",
+     "facts": {
+      "0.0": "Dan Hurley is the son of Bob Hurley.",
+      "0.1": "Bob Hurley is a Hall of Fame high school coach.",
+      "0.2": "Dan Hurley is the younger brother of Bobby Hurley.",
+      "0.3": "Bobby Hurley is a former Duke guard.",
+      "0.4": "Bobby Hurley is a former Sacramento Kings guard."
+     }
+    },
+    {
+     "sentence": "Robert Matthew Hurley (born June 28, 1971) is an American basketball coach, and former college and professional player.",
+     "facts": {
+      "1.0": "Robert Matthew Hurley was born on June 28, 1971.",
+      "1.1": "Robert Matthew Hurley is an American basketball coach.",
+      "1.2": "Robert Matthew Hurley is a former college player.",
+      "1.3": "Robert Matthew Hurley is a former professional player."
+     }
+    },
+    {
+     "sentence": " Hurley is currently the head coach of the Arizona State men's team.",
+     "facts": {
+      "2.0": "Hurley is currently the head coach of the Arizona State men's team."
+     }
+    }
+   ],
+   "items": [
+    "2011–12 Wagner Seahawks men's basketball team\nThe 2011–12 Wagner Seahawks men's basketball team represented Wagner College during the 2011–12 NCAA Division I men's basketball season.\n\n The Seahawks, led by second year head coach Dan Hurley, played their home games at Spiro Sports Center and are members of the Northeast Conference.\n\n They finished the season 25–6, 15–3 in NEC play to finish in second place.\n\n They lost in the semifinals of the NEC Basketball Tournament to Robert Morris.\n\n Despite having 25 wins, the Seahawks did not accept an invitation to a post season tournament.",
+    "David Hobbs (basketball)\nDavid A. Hobbs (born April 25, 1949) is an American basketball coach.\n\n Hobbs currently serves as a special assistant to Iowa State's head coach Steve Prohm.\n\n He was the men's head coach at the University of Alabama from 1992 to 1998 and also was an assistant coach at Alabama, the University of Kentucky and Virginia Commonwealth University.",
+    "Tim Esmay\nTim Esmay is an American baseball coach.\n\n He is the former head coach of the Arizona State Sun Devils baseball team.\n\n He was the head coach of the Arizona State Sun Devils baseball team from prior to the 2010 season until the end of the 2014 season, when he announced his resignation.\n\n Esmay is an Arizona State alumnus, and he played baseball there from 1986–1987.\n\n After graduating from Arizona State in 1987, Esmay served as an assistant at Arizona State, Grand Canyon, and Utah.\n\n He was Utah's head coach from 1997–2004, before he was hired as an assistant at Arizona State prior to the 2005 season.",
+    "Rhode Island Rams men's basketball\nThe Rhode Island Rams men's basketball team is a college basketball program that competes in NCAA Division I and the Atlantic 10 Conference representing the University of Rhode Island.\n\n The team is under the direction of head coach Dan Hurley, who was hired on March 20, 2012.\n\n The Rams play their home games at the Ryan Center (capacity 7,657).",
+    "Rudy Lavik\nRudolph H. \"Rudy\" Lavik (April 30, 1892 – September 29, 1979) was an American football and basketball coach and college athletics administrator.\n\n He served as the head football coach at Concordia College in Moorhead, Minnesota from 1920 to 1921, at Arizona State Teacher's College of Flagstaff—now Northern Arizona University—from 1928 to 1932, and at Arizona State Teachers College at Tempe—now Arizona State University—from 1933 to 1937, compiling a career college football record of 37–42–7.\n\n Lavik was also the head basketball coach at Arizona State Flagstaff (1927–1931) and Arizona State Tempe (1933–1935, 1939–1948), tallying a career college basketball mark of 146–137.\n\n In addition he served as the athletic director at Arizona State from 1933 to 1949.\n\n He was a graduate of Springfield College in Springfield, Massachusetts.",
+    "Bob Hurley\nRobert Emmet Hurley, Sr. (born July 31, 1947) is a basketball coach at St. Anthony High School in Jersey City, New Jersey.\n\n Hurley has amassed 28 state championships and more than 1000 wins in 39 years as a coach.\n\n On February 2, 2011, Hurley became the tenth coach in high school history to win 1000 games.\n\n He is featured in the documentary \"The Street Stops Here\".\n\n Five of his teams have gone undefeated.\n\n On April 5, 2010, he was announced as the only coach to be inducted into the Naismith Memorial Basketball Hall of Fame that year and only the third high school coach in history to be so honored; he was formally inducted on August 13 of that year.\n\n Hurley is the father of Bobby Hurley, a former All-American point guard at Duke and the head basketball coach at Arizona State, and Dan Hurley, who was hired in February 2012 to coach the University of Rhode Island after two years of coaching at Wagner College and nine years coaching at Newark's Saint Benedict's Preparatory School, also one of the top high school programs in the nation.",
+    "Nate Oats\nNathanael \"Nate\" Oats (born October 13, 1974) is an American basketball coach.\n\n He is currently the head basketball coach at the State University of New York at Buffalo, following two seasons as an assistant coach under Bobby Hurley.\n\n Oats was named head coach on April 11, 2015 after Hurley was hired by Arizona State as head coach.\n\n In only his first season as head coach, he took the Buffalo Bulls to their second straight NCAA Tournament bid after winning the Mid-American Conference Championship.",
+    "Bobby Hurley\nRobert Matthew Hurley (born June 28, 1971) is an American basketball coach, and former college and professional player.\n\n Hurley is currently the head coach of the Arizona State men's team.\n\n He was previously the head coach at Buffalo.\n\n Before becoming a head coach he was an assistant coach for Wagner and an associate head coach for Rhode Island on the staffs of his younger brother Dan.",
+    "2012–13 Wagner Seahawks men's basketball team\nThe 2012–13 Wagner Seahawks men's basketball team represented Wagner College during the 2012–13 NCAA Division I men's basketball season.\n\n The Seahawks were led by the youngest men's head coach in NCAA Division I, Bashir Mason, who was 28 when he was elevated from an assistant position in March 2012 following the departure of Dan Hurley for Rhode Island.\n\n The Seahawks played their home games at Spiro Sports Center and were members of the Northeast Conference.\n\n They finished the season 19–12, 12–6 in NEC play to finish in a three way tie for second place.\n\n They advanced to the semifinals of the Northeast Tournament where they lost to Long Island.\n\n For the second consecutive year, despite a winning record, Wagner choose not to participate in a post season tournament.",
+    "Dan Hurley\nDaniel S. Hurley (born January 16, 1973) is currently the head basketball coach at the University of Rhode Island.\n\n He was named head coach on March 20, 2012 after a two-year stint at Wagner College.\n\n Prior to Wagner, Hurley had a standout career as head coach of Saint Benedict's Preparatory School, where he built the New Jersey school into one of the top high school basketball programs in America.\n\n Dan Hurley is the son of Hall of Fame high school coach Bob Hurley and younger brother of former Duke and Sacramento Kings guard Bobby Hurley."
+   ]
+  },
+  {
+   "id": "f803f756a5c873c0",
+   "gold": [
+    {
+     "sentence": " It covers an area of 1,383 sqkm south east of Melbourne, stretching from outer suburban Pakenham through rural areas to the coast at Inverloch and Phillip Island.",
+     "facts": {
+      "0.0": "The area covers 1,383 sqkm.",
+      "0.1": "The area is south east of Melbourne.",
+      "0.2": "The area stretches from outer suburban Pakenham through rural areas.",
+      "0.3": "The area stretches to the coast at Inverloch and Phillip Island."
+     }
+    },
+    {
+     "sentence": " It includes the towns of Bass, Cape Patterson, Corinella, Cowes, Grantville, Inverloch, Kilcunda, Koo Wee Rup, Lang Lang, Rhyll, San Remo, Ventnor, Wonthaggi, and part of suburban Pakenham.",
+     "facts": {
+      "1.0": "The area includes the town of Bass.",
+      "1.1": "The area includes the town of Cape Patterson.",
+      "1.2": "The area includes the town of Corinella.",
+      "1.3": "The area includes the town of Cowes.",
+      "1.4": "The area includes the town of Grantville.",
+      "1.5": "The area includes the town of Inverloch.",
+      "1.6": "The area includes the town of Kilcunda.",
+      "1.7": "The area includes the town of Koo Wee Rup.",
+      "1.8": "The area includes the town of Lang Lang.",
+      "1.9": "The area includes the town of Rhyll.",
+      "1.10": "The area includes the town of San Remo.",
+      "1.11": "The area includes the town of Ventnor.",
+      "1.12": "The area includes the town of Wonthaggi.",
+      "1.13": "The area includes part of suburban Pakenham."
+     }
+    },
+    {
+     "sentence": "Pakenham is a satellite suburb of Melbourne on the edge of the West Gippsland region of Victoria, Australia, 56 km south-east of Melbourne's Central Business District, located within the Shire of Cardinia local government area.",
+     "facts": {
+      "2.0": "Pakenham is a satellite suburb of Melbourne.",
+      "2.1": "Pakenham is on the edge of the West Gippsland region of Victoria, Australia.",
+      "2.2": "Pakenham is 56 km south-east of Melbourne's Central Business District.",
+      "2.3": "Pakenham is located within the Shire of Cardinia local government area."
+     }
+    }
+   ],
+   "items": [
+    "Electoral district of North Eastern Boroughs\nNorth Eastern Boroughs was an electoral district of the Legislative Assembly in the Australian state of New South Wales from 1856 to 1859 that included the towns of Newcastle, Stockton and Raymond Terrace.\n\n It was partly replaced by the electoral district of Newcastle and the electoral district of Hunter.",
+    "Electoral district of Bass\nThe Electoral district of Bass is an electoral district of the Victorian Legislative Assembly.\n\n It covers an area of 1,383 sqkm south east of Melbourne, stretching from outer suburban Pakenham through rural areas to the coast at Inverloch and Phillip Island.\n\n It includes the towns of Bass, Cape Patterson, Corinella, Cowes, Grantville, Inverloch, Kilcunda, Koo Wee Rup, Lang Lang, Rhyll, San Remo, Ventnor, Wonthaggi, and part of suburban Pakenham.\n\n It lies within the Eastern Victoria Region of the upper house, the Legislative Council.",
+    "Officer, Victoria\nOfficer is a satellite suburb of Melbourne, Victoria, Australia, 54 km south-east of Melbourne's Central Business District, located within the Shire of Cardinia local government area.\n\n Officer recorded a population of 7,133 at the 2016 Census.",
+    "Pakenham, Victoria\nPakenham is a satellite suburb of Melbourne on the edge of the West Gippsland region of Victoria, Australia, 56 km south-east of Melbourne's Central Business District, located within the Shire of Cardinia local government area.\n\n Pakenham recorded a population of 46,421 at the 2016 Census.",
+    "Electoral district of Tullamarine\nElectoral district of Tullamarine was an electoral district of the Legislative Assembly in the Australian state of Victoria.\n\n The district centred on the suburb of Tullamarine, about 17km north-west of Melbourne.",
+    "Electoral district of Broken Hill\nBroken Hill was an electoral district of the Legislative Assembly in the Australian state of New South Wales.\n\n From 1894 to 1913, the Broken Hill district was covered by the electoral districts of \"Broken Hill\", Willyama and Sturt.\n\n In the 1912 redistribution, the electoral district of \"Broken Hill\" was abolished and absorbed into \"Willyama\" and \"Sturt\".\n\n In 1920, \"Willyama\", \"Sturt\" and the electoral district of Cobar were combined to create a three-member \"Sturt\".\n\n In 1927, single-member electorates were recreated and the city of Broken Hill was split between \"Sturt\" and Murray.\n\n From 1932, the city of Broken Hill was split between \"Sturt\" and Cobar.\n\n In 1968 \"Sturt\" was renamed Broken Hill and included all of the city of Broken Hill.\n\n In 1999, it was merged with part of \"Murray\" and renamed the electoral district of Murray-Darling.",
+    "Electoral district of Emerald Hill\nEmerald Hill was an electoral district of the Victorian Legislative Assembly, Australia.\n\n It covered part of the inner-city suburb South Melbourne and consisted part of the previous Electoral district of South Melbourne which was abolished in 1859.\n\n (The other part of the South Melbourne electorate became the Electoral district of Sandridge).",
+    "Electoral district of Nunawading\nThe electoral district of Nunawading was an electoral district of the Legislative Assembly in the Australian state of Victoria, located in the eastern Melbourne suburb of Nunawading.\n\n A notable former member was future Prime Minister, Robert Menzies.",
+    "Electoral district of Braidwood\nBraidwood was an electoral district of the Legislative Assembly in the Australian state of New South Wales between 1859 and 1904, which included the town of Braidwood.\n\n It replaced parts of the electoral district of United Counties of Murray and St Vincent and the electoral district of Southern Boroughs.\n\n In 1904 it was largely absorbed into the electoral district of Queanbeyan.",
+    "Beaconsfield, Victoria\nBeaconsfield is a satellite suburb of Melbourne, Victoria, Australia, 46 km south-east of Melbourne's Central Business District, located within the Shire of Cardinia local government area.\n\n Beaconsfield recorded a population of 6,714 at the 2016 Census."
+   ]
+  },
+  {
+   "id": "b075141ba5729be1",
+   "gold": [
+    {
+     "sentence": "Wangaratta Wahine is an album by Australian band The Captain Matchbox Whoopee Band, released in 1974 and was their second album.",
+     "facts": {
+      "0.0": "Wangaratta Wahine is an album by the Australian band The Captain Matchbox Whoopee Band.",
+      "0.1": "Wangaratta Wahine was released in 1974.",
+      "0.2": "Wangaratta Wahine was the second album of The Captain Matchbox Whoopee Band."
+     }
+    },
+    {
+     "sentence": " He was declared an Australian Living Treasure by the National Trust of Australia in 1999.",
+     "facts": {
+      "1.0": "The subject of this sentence was declared an Australian Living Treasure by the National Trust of Australia.",
+      "1.1": "The subject of this sentence received this declaration in 1999."
+     }
+    }
+   ],
+   "items": [
+    "Leah Flanagan\nLeah Flanagan is a singer-songwriter from Sydney, NSW.\n\n Leah has appeared on Australian TV shows Spicks & Specks and RockQuiz, has released 2 albums and toured extensively through Australia with her music and part of festival ensembles.\n\n Leah’s status as an Indigenous musician is one of pride and respect; she has helped make history with such recent essential albums as Archie Roach’s 25th anniversary reissue of Charcoal Lane and Buried Country 1.5, The Story of Aboriginal Country Music.\n\n Her latest album Saudades was recorded at the studio of Midnight Oil's Jim Moginie and mixed by Paul McKercher (You Am I, Augie March)",
+    "Winwood (album)\nWinwood is the first compilation album of music featuring Steve Winwood.\n\n This two-record set was issued in 1971 by United Artists Records and features music which Winwood performed with The Spencer Davis Group, Powerhouse, Traffic and Blind Faith.\n\n UA Records issued this album after Winwood's band Traffic left UA when their home label Island Records set up their own American operation.\n\n Issued without Winwood's authorization as catalogue number UAS-9950, it was taken off the market after legal action by Winwood and Island Records.\n\n It was then reissued with minor changes as catalogue number UAS-9964.\n\n Currently out of print, it was issued on CD by Universal Music of Japan for the Japanese market.",
+    "Live at Winterland 1978 (Avengers album)\nLive at Winterland 1978 is a live album by the Avengers.\n\n It was released through online music stores on February 16, 2010.\n\n The album features a recording of their set on January 14, 1978 at the Winterland Ballroom in San Francisco, CA, when they opened for the Sex Pistols on what would become the Sex Pistols final show, before reuniting years later.\n\n The Sex Pistols' set has been released on an album of the same name.\n\n Songs from this album were previously released on a couple 7\" bootlegs titled \"Penelope\" and \"Summer of Hate\".",
+    "RPA &amp; The United Nations of Sound\nThe band played in Australia also during the Splendour in the Grass Festival in late July.\n\n The band's debut album as Richard's backing lineup, entitled \"United Nations of Sound\", was released on 19 July 2010.\n\n \"Born Again\", the first proper single, was officially released the same day of the album as a digital download.",
+    "Beasts of Bourbon\nBeasts of Bourbon are an Australian alternative rock, blues rock band formed in August 1983, with James Baker on drums (ex-Hoodoo Gurus), Spencer P. Jones on guitar (The Johnnys), Tex Perkins on vocals (Dum Dums), Kim Salmon on guitar and Boris Sujdovic on bass guitar (both ex-The Scientists).\n\n Except for mainstays, Jones and Perkins, the line-up has changed as the group splintered and reformed several times.\n\n Their debut album, \"The Axeman's Jazz\" (July 1984), was the best selling Australian alternative rock album for 1984.\n\n Their debut single, \"Psycho\", is a cover version of the Leon Payne original, and was the best selling Australian alternative rock single for that year.\n\n However the group disbanded by mid-1985 and each member pursued other musical projects.\n\n They reformed in 1987 and issued a second album, \"Sour Mash\", in December 1988 on Red Eye Records.\n\n According to rock music historian, Ian McFarlane, it \"virtually redefined the parameters of guitar-based rock'n'roll.",
+    "Graph query row:\nentities: ['Wangaratta Wahine', 'The Captain Matchbox Whoopee Band']\nrelationships: ['CREATED_BY']",
+    "Wangaratta Wahine\nWangaratta Wahine is an album by Australian band The Captain Matchbox Whoopee Band, released in 1974 and was their second album.\n\n It was recorded at top recording studio Armstrong Studios in Melbourne and the cover art was by famed Australian artist Michael Leunig.",
+    "He Will Have His Way\nHe Will Have His Way is a compilation album featuring male Australian and New Zealand musicians performing songs written by Neil Finn and Tim Finn (The Finn Brothers), who are best known as members of Split Enz and Crowded House.\n\n It was released on 12 November 2010 and is a sequel to \"She Will Have Her Way\", a 2005 album featuring female Australian and New Zealand musicians.\n\n The two albums were later released together with extra tracks as the double CD \"They Will Have Their Way\".",
+    "Waltzing Matilda\n\"Waltzing Matilda\" is Australia's best-known bush ballad, and has been described as the country's \"unofficial national anthem\".",
+    "Praises to the War Machine\nPraises to the War Machine is the debut and only solo release/album by heavy metal vocalist Warrel Dane from Nevermore, released on April 25, 2008.\n\n The album was produced by Peter Wichers, who was tapped by Dane to work on the album while Wichers was still a member of Soilwork.\n\n After leaving that band in 2007, Wichers co-wrote the album with Dane and played on eight of its tracks.\n\n Soilwork drummer Dirk Verbeuren and former Himsa guitarist Matt Wicklund also played on the album.\n\n Nevermore guitarist Jeff Loomis and the band's touring guitarist at the time Chris Broderick make guest appearances, along with James Murphy, who had performed on the Nevermore album \"This Godless Endeavor\".\n\n \"Praises to the War Machine\" includes two cover songs, The Sisters of Mercy's \"Lucretia My Reflection\" and \"Patterns\" by Paul Simon.\n\n Dane had previously covered a Simon song on Nevermore's album \"Dead Heart in a Dead World\"."
+   ]
+  },
+  {
+   "id": "efbfdb33c10dd858",
+   "gold": [
+    {
+     "sentence": " In return, William made Copsi earl of Northumbria and sent him back to York.",
+     "facts": {
+      "0.0": "William made Copsi earl of Northumbria in return.",
+      "0.1": "William sent Copsi back to York."
+     }
+    },
+    {
+     "sentence": "York ( ) is a historic walled city at the confluence of the rivers Ouse and Foss in North Yorkshire, England.",
+     "facts": {
+      "1.0": "York is a historic walled city.",
+      "1.1": "York is at the confluence of the rivers Ouse and Foss.",
+      "1.2": "York is in North Yorkshire, England."
+     }
+    }
+   ],
+   "items": [
+    "York\nYork ( ) is a historic walled city at the confluence of the rivers Ouse and Foss in North Yorkshire, England.\n\n The municipality is the traditional county town of the historic county of Yorkshire to which it gives its name.\n\n The city has a rich heritage and has provided the backdrop to major political events in England throughout much of its two millennia of existence.\n\n The city offers a wealth of historic attractions, of which York Minster is the most prominent, and a variety of cultural and sporting activities making it a popular tourist destination for millions.",
+    "York Minster Police\nYork Minster Police is a small, specialised cathedral constabulary responsible for policing York Minster in York, United Kingdom.",
+    "Tripartite Indenture\nThe Tripartite Indenture was an agreement made in February 1405 between Owain Glyndŵr, Edmund Mortimer, and Henry Percy, 1st Earl of Northumberland, agreeing to divide England and Wales up between them at the expense of Henry IV.\n\n Glyndŵr was to be given Wales, and a substantial part of the west of England, including the English portions of the Welsh Marches.\n\n Northumberland was to have received the north, as well as Northamptonshire, Norfolk, Warwickshire, and Leicestershire.\n\n The Mortimers were to have received the rest of southern England.",
+    "Earl of Norbury\nEarl of Norbury, in the County of Tipperary, is a title in the Peerage of Ireland.\n\n It was created in 1827, along with the title Viscount Glandine, of Glandine in the King's County, for the Irish politician and judge John Toler, 1st Baron Norbury, upon his retirement as Chief Justice of the Common Pleas in Ireland.\n\n The titles were created with special remainder to his second son, Hector, as his eldest son, Daniel, was then considered mentally unwell.\n\n Lord Norbury had already been created Baron Norbury, of Ballycrenode in the County of Tipperary, in the Peerage of Ireland in 1800, with remainder to the heirs male of his body.\n\n Moreover, his wife, Grace Toler (née Graham), had been created Baroness Norwood, of Knockalton in the County of Tipperary, in the Peerage of Ireland in 1797, with remainder to the heirs male of her body.\n\n By the time Lord Norbury was raised to the Earldom, his wife had died and their eldest son had succeeded her as 2nd Baron Norwood.",
+    "Old Palace (York)\nThe Old Palace in the city of York, North Yorkshire, England, is also known as the Minster Library and is in Dean's Park.\n\n It houses York Minster’s library and archives as well as the Collections Department and conservation studio.\n\n Its name is a new one and renders homage to the part of the building that used to be the chapel of the Archbishop of York, which was built in the 13th century.\n\n It was refurbished in 1810 and shortly thereafter became the home of the Minster library.\n\n Notable items held in the collection include cathedral records dating to back to 1150 and a copy of the 1631 Wicked Bible.\n\n It is a Grade I listed building.\n\n An extension was added in 1998.",
+    "Copsi\nCopsi (or Copsig; Old English: \"Cōpsige\" ) [died 1067] was a Northumbrian magnate in late Anglo-Saxon England.\n\n He was a supporter of Tostig, and was exiled along with him in 1065.\n\n Copsi soon fled to Orkney (then a part of Norway).\n\n The next year (1066), he joined Tostig at Sandwich, in Kent, with 17 ships.\n\n Copsi survived Tostig's defeat at Stamford Bridge, and when William the Conqueror prevailed at Hastings he travelled, in March 1067, to pay William homage at Barking (where William was staying while his tower was being constructed in London).\n\n In return, William made Copsi earl of Northumbria and sent him back to York.\n\n Copsi's rule lasted a mere five weeks, at which time he was murdered by Osulf, son of Eadulf III of the ancient Bernician family which had historically governed the area from Bamburgh, at Newburn-upon-Tyne.",
+    "Earl Cowper\nHe represented Hertford in Parliament.\n\n He was succeeded by his eldest son, the aforementioned William Cowper, the third Baronet, who was elevated to the peerage as Baron Cowper in 1706 and made Earl Cowper in 1718.\n\n In 1706 Lord Cowper married as his second wife Mary Clavering, daughter of John Clavering, of Chopwell, County Durham.",
+    "Earl Cowper\nEarl Cowper (pronounced \"Cooper\") was a title in the Peerage of Great Britain.\n\n It was created in 1718 by George I for William Cowper, 1st Baron Cowper, his first Lord Chancellor, with remainder in default of male issue of his own to his younger brother, Spencer Cowper.\n\n Cowper had already been created Baron Cowper of Wingham in the County of Kent, in the Peerage of England on 14 December 1706, with normal remainder to the heirs male of his body, and was made Viscount Fordwich, in the County of Kent, at the same time as he was given the earldom, also Peerage of Great Britain and with similar remainder.\n\n He was the great-grandson of William Cowper, who was created a Baronet, of Ratling Court in the County of Kent, in the Baronetage of England on 4 March 1642.\n\n The latter was succeeded by his grandson, the second Baronet.\n\n He represented Hertford in Parliament.",
+    "Copsi\nOsulf, however, only ruled as earl until that autumn, when he was killed by an outlaw he was tracking.",
+    "York Minster\nThe Cathedral and Metropolitical Church of Saint Peter in York, commonly known as York Minster, is the cathedral of York, England, and is one of the largest of its kind in Northern Europe.\n\n The minster is the seat of the Archbishop of York, the second-highest office of the Church of England, and is the mother church for the Diocese of York and the Province of York.\n\n It is run by a dean and chapter, under the Dean of York.\n\n The title \"minster\" is attributed to churches established in the Anglo-Saxon period as missionary teaching churches, and serves now as an honorific title.\n\n Services in the minster are sometimes regarded as on the High Church or Anglo-Catholic end of the Anglican continuum."
+   ]
+  },
+  {
+   "id": "c2bf4b75f00092e2",
+   "gold": [
+    {
+     "sentence": "Giuseppe Fortunino Francesco Verdi (] ; 9 or 10 October 1813 – 27 January 1901) was an Italian opera composer.",
+     "facts": {
+      "0.0": "Giuseppe Fortunino Francesco Verdi was born on 9 or 10 October 1813.",
+      "0.1": "Giuseppe Fortunino Francesco Verdi died on 27 January 1901.",
+      "0.2": "Giuseppe Fortunino Francesco Verdi was an Italian opera composer."
+     }
+    },
+    {
+     "sentence": "Charles Louis Ambroise Thomas (5 August 1811 – 12 February 1896) was a French composer, best known for his operas \"Mignon\" (1866) and \"Hamlet\" (1868, after Shakespeare) and as Director of the Conservatoire de Paris from 1871 till his death.",
+     "facts": {
+      "1.0": "Charles Louis Ambroise Thomas was born on 5 August 1811.",
+      "1.1": "Charles Louis Ambroise Thomas died on 12 February 1896.",
+      "1.2": "Charles Louis Ambroise Thomas was a French composer.",
+      "1.3": "Charles Louis Ambroise Thomas is best known for his opera 'Mignon' (1866).",
+      "1.4": "Charles Louis Ambroise Thomas is best known for his opera 'Hamlet' (1868).",
+      "1.5": "The opera 'Hamlet' (1868) is after Shakespeare.",
+      "1.6": "Charles Louis Ambroise Thomas is best known as Director of the Conservatoire de Paris.",
+      "1.7": "Charles Louis Ambroise Thomas was Director of the Conservatoire de Paris from 1871 till his death."
+     }
+    }
+   ],
+   "items": [
+    "Claudio Monteverdi\nClaudio Giovanni Antonio Monteverdi (] ; 15 May 1567 (baptized) – 29 November 1643) was an Italian composer, string player and choirmaster.\n\n A composer of both secular and sacred music, and a pioneer in the development of opera, he is considered a crucial transitional figure between the Renaissance and the Baroque periods of music history.",
+    "List of major opera composers\nThis list provides a guide to opera composers, as determined by their presence on a majority of compiled lists of significant opera composers.\n\n (See the \"Lists Consulted\" section for full details.)\n\n The composers run from Jacopo Peri, who wrote the first ever opera in late 16th century Italy, to John Adams, one of the leading figures in the contemporary operatic world.\n\n The brief accompanying notes offer an explanation as to why each composer has been considered major.\n\n Also included is a section about major women opera composers, compiled from the same lists.\n\n For an introduction to operatic history, see opera.\n\n The organisation of the list is by birthdate.",
+    "Giuseppe Verdi (film)\nGiuseppe Verdi is a 1938 Italian biographical film directed by Carmine Gallone and starring Fosco Giachetti, Gaby Morlay and Germana Paolieri.\n\n The film portrays the life of the composer Giuseppe Verdi (1813-1901).\n\n The casting of Giachetti as Verdi was intended to emphasise the composer's patriotism, as he had recently played patriotic roles in films such as \"The White Squadron\".\n\n The film was made at the Cinecittà Studios in Rome.\n\n The film is also known by the alternative title The Life of Giuseppe Verdi.",
+    "Teatro Giuseppe Verdi\nTeatro Giuseppe Verdi (the Giuseppe Verdi Theatre) is a small opera house located in a wing of the Rocca dei Marchesi Pallavicino on the Piazza Giuseppe Verdi in Busseto, Italy, a town closely associated with the life of the opera composer, Giuseppe Verdi.\n\n From the 13th century, the “rocca” or “fortress” was the family’s palace; it is now the city hall after being acquired by the municipality in 1856.\n\n The theatre opened on 15 August 1868 and seats 300.",
+    "Ferdinando Provesi\nFerdinando Angelo Maria Provesi (1770 – 1833) was a native of Parma, Italy.\n\n He was regarded as one of the greatest Italian opera composers of the era .\n\n Provesi is best known as being an early tutor of Giuseppe Verdi when he was the \"Maestro di cappella\" (master of music) at the St. Bartolomeo cathedral in Busseto (the town very close to Le Roncole, the village where Verdi was born.)\n\n Provesi was also director of the municipal music school and local Philharmonic Society.\n\n He began teaching Verdi in 1824 when the future composer was 11 years old.",
+    "The material surveys Italian opera history and related figures. Verdi’s Busseto theatre opened in 1868, seats 300, and occupies the former Pallavicino fortress. Verdi studied under Ferdinando Provesi from age 11; French composer Ambroise Thomas wrote *Mignon* and *Hamlet*, whose 1868 premiere featured bass Armand Castelmary, later famed for dying onstage in New York. Monteverdi, a Renaissance-to-Baroque pioneer,",
+    "Giuseppe Verdi\nGiuseppe Fortunino Francesco Verdi (] ; 9 or 10 October 1813 – 27 January 1901) was an Italian opera composer.",
+    "Bernhard Bötel’s roles ranged from Mozart’s Belmonte to Verdi’s Duke of Mantua. The entries survey operas across eras: Gluck’s reform works *Orfeo ed Euridice* (1762) and *Paride ed Elena* (1770); Hasse’s *Romolo ed Ersilia* (1765); Rossini’s *Mosè in Egitto* (1818); and later works by Donizetti, Bernstein,",
+    "The entries span opera, music, theatre, literature and Renaissance history. Bernhard Bötel sang roles from Mozart to Verdi; operas range from Gluck and Hasse to Rossini and later composers. Commedia dell’arte’s masked stock characters, improvisation and lazzi are described. Musical highlights include Tchaikovsky’s Second Piano Concerto, Debussy’s *Masques* and Bartók’s quartets. Other topics include Verdi’s Busseto theatre,",
+    "Ambroise Thomas\nCharles Louis Ambroise Thomas (5 August 1811 – 12 February 1896) was a French composer, best known for his operas \"Mignon\" (1866) and \"Hamlet\" (1868, after Shakespeare) and as Director of the Conservatoire de Paris from 1871 till his death."
+   ]
+  },
+  {
+   "id": "62cbbdbae99429d3",
+   "gold": [
+    {
+     "sentence": " The breed is used for hunting in packs and descends from the old Hound of Saintonge type of large hunting dog.",
+     "facts": {
+      "0.0": "The breed is used for hunting in packs.",
+      "0.1": "The breed descends from the old Hound of Saintonge type of large hunting dog."
+     }
+    },
+    {
+     "sentence": "The Kritikos Lagonikos (Cretan Hound) (Greek:Kρητικός Λαγωνικός) is a hunting breed of dog from the island of Crete, in Greece.",
+     "facts": {
+      "1.0": "The Kritikos Lagonikos, also called the Cretan Hound, is a hunting breed of dog.",
+      "1.1": "The Kritikos Lagonikos has the Greek name Κρητικός Λαγωνικός.",
+      "1.2": "The Kritikos Lagonikos is from the island of Crete, in Greece."
+     }
+    }
+   ],
+   "items": [
+    "Grand Anglo-Français Blanc et Orange\nThe Grand Anglo-Français Blanc et Orange (FCI No.324) translated into English as the Great Anglo-French White and Orange Hound, is a breed of dog used in hunting as a scenthound, usually in packs.\n\n It is one of the Anglo-French hound breeds which were created by crossing French scenthounds with English (Anglo) foxhounds.",
+    "Chien Français Blanc et Orange\nThe Chien Français Blanc et Orange (FCI No.316) is a breed of dog of the scenthound type, originating in France.\n\n The breed is used for hunting in packs and descends from the old Hound of Saintonge type of large hunting dog.",
+    "Petit Bleu de Gascogne\nThe Petit Bleu de Gascogne (FCI No.31) Is a breed of dog of the scenthound type, originating in France and used for hunting in packs.\n\n Today's breed is the descendant of a very old type of large hunting dog.\n\n The Petit Bleu de Gascogne is not a small (petite) dog, the name comes from its use on small game.",
+    "Braque Francais\nThe Braques français are hunting dogs, from a very old type of gun dog used for pointing the location of game birds for a hunter.\n\n There are two breeds of Braque français, both from the south of France, the Braque français, type Gascogne (French Pointing Dog - Gascogne type, larger size) and the Braque français, type Pyrénées (French Pointing Dog - Pyrenean type, smaller size) They are popular hunting dogs in France, but are seldom seen elsewhere.",
+    "Griffon Bleu de Gascogne\nThe Griffon Bleu de Gascogne (FCI No.32) Is a breed of dog of the scenthound type, originating in France, and is a versatile hunting dog, used on small and large game, in packs or individually.\n\n The Griffon Bleu de Gascogne has a speckled, rough coat.",
+    "Chien Français Tricolore\nThe Chien Français Tricolore (FCI No.219) translated into English as the French Tricolour Hound, is a breed of dog of the scenthound type, originating in France.\n\n The breed is used for hunting in packs.",
+    "Grand Bleu de Gascogne\nThe Grand Bleu de Gascogne (FCI No.22) is a breed of dog of the scenthound type, originating in France and used for hunting in packs.\n\n Today's breed is the descendant of a very old type of large hunting dog, and is an important breed in the ancestry of many other hounds.",
+    "The entries cover French hounds and regional wines. Gascony scenthounds—including Griffon, Petit and Grand Bleu, Basset Bleu, Ariegeois, and French and Anglo-French breeds—are chiefly pack hunters; the Ariegeois is sociable, while “Petit” refers to small-game use, not size. Braque Français are southern French pointing dogs in larger Gascogne and smaller Pyrénées types. Côtes de Gascogne is a",
+    "Chien Français Blanc et Noir\nThe Chien Français Blanc et Noir (FCI No.220) translated into English as the French White and Black Hound, is a breed of dog of the scenthound type, originating in France.\n\n The breed is used for hunting in packs and descends from the old Hound of Saintonge type of large hunting dog.",
+    "Grand Anglo-Français Blanc et Noir\nThe Grand Anglo-Français Blanc et Noir (FCI No.323) translated into English as the Great Anglo-French White and Black Hound, is a breed of dog used in hunting as a scenthound, usually in packs.\n\n It is one of the Anglo-French hound breeds which were created by crossing French scenthounds with English (Anglo) Foxhounds."
+   ]
+  },
+  {
+   "id": "15aa796f4399d920",
+   "gold": [
+    {
+     "sentence": "\"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011).",
+     "facts": {
+      "0.0": "What the Water Gave Me is a song",
+      "0.1": "What the Water Gave Me is by English indie rock band Florence and the Machine",
+      "0.2": "What the Water Gave Me is from the band's second studio album Ceremonials",
+      "0.3": "The album Ceremonials is dated 2011"
+     }
+    },
+    {
+     "sentence": " The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth.",
+     "facts": {
+      "1.0": "Lead singer Florence Welch wrote the song What the Water Gave Me",
+      "1.1": "Francis Eg White wrote the song What the Water Gave Me",
+      "1.2": "Paul Epworth produced the song What the Water Gave Me"
+     }
+    },
+    {
+     "sentence": "What the Water Gave Me (\"Lo que el agua me dio\" in Spanish) is an oil painting by Frida Kahlo that was completed in 1938.",
+     "facts": {
+      "2.0": "What the Water Gave Me is an oil painting by Frida Kahlo",
+      "2.1": "The painting is titled Lo que el agua me dio in Spanish",
+      "2.2": "Frida Kahlo completed the painting in 1938"
+     }
+    }
+   ],
+   "items": [
+    "Spectrum (Say My Name)\n\"Spectrum\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011).\n\n It was written by lead singer Florence Welch and Paul Epworth with production being handled by Epworth.\n\n The band premiered the song during a concert at Brooklyn's Creators Project on 15 October 2011, prior to the release of the album.\n\n The album version of \"Spectrum\" is a downtempo orchestral pop, R&B, krautrock and disco song.\n\n The accompanying music video for the song premiered on 30 May 2012.\n\n It was directed by David LaChapelle and John Byrne.",
+    "Florence and the Machine\nFlorence and the Machine (stylised as Florence + the Machine) are an English indie rock band that formed in London in 2007, consisting of lead singer Florence Welch, keyboardist Isabella Summers, and a collaboration of other artists.\n\n The band's music received praise across the media, especially from the BBC, which played a large part in their rise to prominence by promoting Florence and the Machine as part of \"BBC Introducing\".\n\n At the 2009 Brit Awards they received the Brit Awards \"Critics' Choice\" award.\n\n The band's music is renowned for its dramatic and eccentric production and also Welch's powerful vocal performances.",
+    "Lover to Lover\n\"Lover to Lover\" is a song by English indie rock band Florence and the Machine.\n\n The song was released on 30 November 2012, as a digital download on iTunes as the fifth and final single from their second studio album \"Ceremonials\" (2011).\n\n The song was written by Florence Welch and Francis \"Eg\" White and produced by Paul Epworth.\n\n The Ceremonials Tour version of \"Lover to Lover\" is an edited version of the original with further production by Chris Hayden.\n\n The song became the band's first single to miss the top 200 in the UK Singles Chart.",
+    "Lungs (album)\nLungs is the debut studio album by English indie rock band Florence and the Machine, released on 3 July 2009 on Island Records.\n\n Frontwoman Florence Welch experimented with and honed the album's sound with bandmate Isabella Summers, while also collaborating with five record producers including James Ford, Paul Epworth, Steve Mackey.\n\n The music on \"Lungs\" established Florence and the Machine as an internationally successful rock act, and also featured the group's successful mix of string arrangements centered around Welch's vocal prowess.",
+    "Wish That You Were Here\n\"Wish That You Were Here\" is a song by the English indie rock band Florence and the Machine, written by Florence Welch, Andrew Wyatt, and Emilie Haynie, and was released on Island Records on 26 August 2016.\n\n The song was made available via digital download, and is featured on the soundtrack of the film \"Miss Peregrine's Home for Peculiar Children\" which was directed by Tim Burton.\n\n Welch — a long-time fan of Burton's work — had expressed interest in collaborating with him long before the recording of \"Wish That You Were Here\" as they shared similar artistic themes.\n\n Upon release, the composition was positively received by music critics and reached number 128 on the UK Singles Chart.",
+    "What the Water Gave Me (painting)\nWhat the Water Gave Me (\"Lo que el agua me dio\" in Spanish) is an oil painting by Frida Kahlo that was completed in 1938.\n\n It is sometimes referred to as \"What I Saw in the Water\".",
+    "Shake It Out\n\"Shake It Out\" is a song by English indie rock band Florence and the Machine, released as the first official single from their second studio album, \"Ceremonials\" (2011).\n\n It was written by Florence Welch and Paul Epworth, while production was handled by Epworth.\n\n The song was digitally released in Australia on 14 September 2011, and it was available in the United States on 19 October.\n\n It had its radio debut on XFM on 14 September 2011 in the United Kingdom.\n\n Welch revealed that the song was written within an hour and according to her it talked about shaking the regrets and the things that were haunting her.",
+    "What the Water Gave Me (song)\n\"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011).\n\n The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth.\n\n It was released on 23 August 2011 as the first promotional single from \"Ceremonials\".\n\n After the band performed the song in Berkeley, California on 12 June 2011, the studio version premiered on Florence and the Machine's official website.\n\n Welch decided to name the song \"What the Water Gave Me\" after seeing a Frida Kahlo painting of the same name.\n\n During an interview, she confirmed that the song was inspired by English writer Virginia Woolf.",
+    "Florence Welch\nFlorence Leontine Mary Welch (born 28 August 1986) is an English musician, singer and songwriter, best known as the vocalist of indie rock band Florence and the Machine.",
+    "Never Let Me Go (Florence and the Machine song)\n\"Never Let Me Go\" is a song by English indie rock band Florence and the Machine from their second studio album, \"Ceremonials\" (2011).\n\n The song was written by Florence Welch and Paul Epworth while production was handled by Epworth.\n\n Island Records released the song as the third single from the album on 30 March 2012.\n\n The band first premiered the song during one of their concerts before the release of the album on 15 October 2011.\n\n A Clams Casino remix of the song was placed on the 12\" white vinyl single which was available for pre-order on 22 March 2012."
+   ]
+  },
+  {
+   "id": "6bd635779a50da47",
+   "gold": [
+    {
+     "sentence": "Yucca is a genus of perennial shrubs and trees in the family Asparagaceae, subfamily Agavoideae.",
+     "facts": {
+      "0.0": "Yucca is a genus of perennial shrubs and trees.",
+      "0.1": "Yucca is in the family Asparagaceae.",
+      "0.2": "Yucca is in the subfamily Agavoideae."
+     }
+    },
+    {
+     "sentence": "Rodgersia is a genus of flowering plants in the Saxifragaceae family.",
+     "facts": {
+      "1.0": "Rodgersia is a genus of flowering plants.",
+      "1.1": "Rodgersia is in the Saxifragaceae family."
+     }
+    },
+    {
+     "sentence": " \"Rodgersia\" are herbaceous perennials originating from east Asia.",
+     "facts": {
+      "2.0": "Rodgersia are herbaceous perennials.",
+      "2.1": "Rodgersia originate from east Asia."
+     }
+    }
+   ],
+   "items": [
+    "Rodgersia\nRodgersia is a genus of flowering plants in the Saxifragaceae family.\n\n \"Rodgersia\" are herbaceous perennials originating from east Asia.",
+    "Yucca aloifolia\nYucca aloifolia is the type species for the genus Yucca.\n\n Common names include aloe yucca, dagger plant, and Spanish bayonet.\n\n It grows in sandy soils, especially on sand dunes along the coast.\n\n \"Yucca aloifolia\" is native to the Atlantic and Gulf Coasts of the United States from southern Virginia south to Florida and west to the Texas Gulf Coast, to Mexico along the Yucatán coast, and to Bermuda, and parts of the Caribbean.\n\n Normally Yucca aloifolia is grown in USDA zones 8 through 11.\n\n Yucca aloifolia is a popular landscape plant in beach areas along the lower East Coast from Virginia to Florida.",
+    "Yucca glauca\nYucca glauca (syn.\n\n \"Yucca angustifolia\") is a species of perennial evergreen plant, adapted to xeric (dry)growth conditions.\n\n It is also known as small soapweed, soapweed yucca, Spanish bayonet, Great Plains yucca and beargrass.",
+    "Hesperoyucca whipplei\nHesperoyucca whipplei (syn.\n\n \"Yucca whipplei\" ) (chaparral yucca, our Lord's candle, Spanish bayonet, Quixote yucca or foothill yucca is a species of flowering plant closely related to, and formerly usually included in, the genus \"Yucca\".\n\n It is native to southern California, United States and Baja California, Mexico, where it occurs mainly in chaparral, coastal sage scrub, and oak woodland plant communities at altitudes of 0–2500 m.",
+    "Yucca gloriosa var. tristis\nYucca gloriosa\" var.\n\n \"tristis (syn.\n\n Yucca recurvifolia, \"Yucca gloriosa\" var.\n\n \"recurvifolia\"), known as curve-leaf yucca, curved-leaved Spanish-dagger or pendulous yucca, is a variety of \"Yucca gloriosa\".\n\n It is often grown as an ornamental plant, but is native to the southeastern United States.\n\n In contrast to \"Y. gloriosa\" var.\n\n \"tristis\", the leaves of \"Y. gloriosa\" var.\n\n \"gloriosa\" are hard stiff, erect and narrower.",
+    "Yucca × schottii\nYucca\" × \"schottii is a plant species in the genus \"Yucca\", native to southern Arizona, southwestern New Mexico, and the northern parts of Sonora and Chihuahua.\n\n.\n\n The common names are Schott's yucca, hoary yucca, and mountain yucca.\n\n The \"×\" in the name indicates that this is a nothospecies, regarded as being a natural hybrid between two other species.\n\n In this case, \"Yucca\" × \"schottii\" is believed to have originated as a hybrid between \"Y. baccata\" and \"Y. madrensis\".\n\n \"Yucca\" × \"schottii\" is firmly established and does reproduce freely in the wild.",
+    "Yucca brevifolia\nYucca brevifolia is a plant species belonging to the genus \"Yucca\".\n\n It is tree-like in habit, which is reflected in its common names: Joshua tree, yucca palm, tree yucca, and palm tree yucca.",
+    "Yucca\nYucca is a genus of perennial shrubs and trees in the family Asparagaceae, subfamily Agavoideae.\n\n Its 40-50 species are notable for their rosettes of evergreen, tough, sword-shaped leaves and large terminal panicles of white or whitish flowers.\n\n They are native to the hot and dry (arid) parts of the Americas and the Caribbean.\n\n Early reports of the species were confused with the cassava (\"Manihot esculenta\").\n\n Consequently, Linnaeus mistakenly derived the generic name from the Taíno word for the latter, \"yuca\" (spelled with a single \"c\").\n\n It is commonly found growing in rural graveyards and when in bloom the cluster of (usually pale) flowers on a thin stalk appear as floating apparitions.",
+    "Yucca rupicola\nYucca rupicola is a plant in the family Asparagaceae, known as the twistleaf yucca, twisted-leaf yucca, Texas yucca or twisted-leaf Spanish-dagger.\n\n The species was described by George Heinrich Adolf Scheele in 1850.\n\n This is a small, acaulescent plant with distinctive twisted leaves.\n\n It is native to the Edwards Plateau region of Texas and also to northeastern Mexico (Coahuila, Nuevo León).",
+    "Yucca jaliscensis\nYucca jaliscensis is a \"Yucca\" species native to the highlands of southwestern Mexico.\n\n Common names for this species include Jalisco Yucca, Jalisco Soapwort, Izote Yucca.\n\n It is native to mountainous areas at about 5000 feet in the States of Jalisco, Colima and Guanajuato."
+   ]
+  }
+ ]
+}

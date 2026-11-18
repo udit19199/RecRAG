@@ -1,0 +1,50 @@
+[
+{"id": "16b556348264fc74", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "After successful clinical trials , the FDA approved the drug in 2019 as a medication for treatment-resistant depression."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "e712377922ebb5db", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "In the wake of the Wallabies’ World Cup flop"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "the Queensland Rugby Union have reaffirmed their position"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "they are committed to moving to a centralised high-performance model"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "won’t follow the NSW Waratahs by handing over the keys to Rugby Australia"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "He will also be tasked with “integrating” the programs"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "RA trying to centralise all of the Super Rugby’s high-performance programs"}]}
+]},
+{"id": "49fb21941e423a29", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "In the long term, scientists also point to a number of recent developments"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "have raised hopes that it may be possible to tackle dementia more directly and effectively."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "have raised hopes that it may be possible to tackle dementia more directly and effectively."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]}
+]},
+{"id": "12bf3262c2c4a97a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "the generation of players and leaders that will call time on their international careers at week’s end."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "a maiden defeat in 2020 in Sydney"}]}
+]},
+{"id": "7a2a3eba5add416f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "things like faster charging, improved antennas and smoother haptics are welcome bonuses"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "The updated display is the highlight of the device, while things like faster charging, improved antennas and smoother haptics are welcome bonuses."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Because while Valve hasn’t upped the horsepower, it has improved practically everything else."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+]},
+{"id": "f901fda6885e18a4", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that."}]}
+]}
+]

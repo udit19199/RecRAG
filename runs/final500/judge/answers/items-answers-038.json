@@ -1,0 +1,585 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "c24c48bc04c9b305",
+   "kind": "answer",
+   "question": "what is the sentencing reform act of 1984",
+   "gold_answers": [
+    "U.S. federal statute intended to increase consistency in United States federal sentencing",
+    "a U.S. federal statute intended to increase consistency in United States federal sentencing"
+   ],
+   "model_answer": "A U.S. federal law intended to make sentencing more consistent."
+  },
+  {
+   "id": "e47bfb9e721d4d51",
+   "kind": "answer",
+   "question": "when are two events said to be independent",
+   "gold_answers": [
+    "if the occurrence of one does not affect the probability of occurrence of the other",
+    "if the occurrence of one does not affect the probability of occurrence of the other."
+   ],
+   "model_answer": "\\(P(A\\cap B)=P(A)P(B)\\)"
+  },
+  {
+   "id": "e7d9d95e5ee039cb",
+   "kind": "answer",
+   "question": "where is most vascular tissue found in plants",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "In the stems."
+  },
+  {
+   "id": "e077436ec0b2dbb0",
+   "kind": "answer",
+   "question": "how much does it cost for the olympics",
+   "gold_answers": [
+    "on average USD 5.2 billion and for the Winter Games USD 3.1 billion dollars"
+   ],
+   "model_answer": "About $5.2 billion for Summer Olympics and $3.1 billion for Winter Olympics."
+  },
+  {
+   "id": "7db9fc4d0131cbb2",
+   "kind": "answer",
+   "question": "dean koontz dark rivers of the heart summary",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Spencer Grant searches for Valerie Keene while evading a secret government agency."
+  },
+  {
+   "id": "e7370246b85dfa0a",
+   "kind": "answer",
+   "question": "where have you been all my life arthur alexander",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "A 1962 Arthur Alexander song, released as the B-side of “Soldier of Love.”"
+  },
+  {
+   "id": "91619c96eaa1dd3b",
+   "kind": "answer",
+   "question": "where is the stanley cup being held this year",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Edmonton and Sunrise, Florida."
+  },
+  {
+   "id": "8789cd52f5446749",
+   "kind": "answer",
+   "question": "how common is the word in the english language",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Which word?"
+  },
+  {
+   "id": "c3d04cc5c512a160",
+   "kind": "answer",
+   "question": "who sang go tell it on the mountain",
+   "gold_answers": [
+    "`` Go Tell It on the Mountain '' is an African - American spiritual song , compiled by John Wesley Work , Jr. , dating back to at least 1865 , that has been sung and recorded by many gospel and secular performers . It is considered a Christmas carol because its original lyrics celebrate the Nativity of Jesus :"
+   ],
+   "model_answer": "Many artists, including Mahalia Jackson and Peter, Paul and Mary."
+  },
+  {
+   "id": "39dd49a104923b4d",
+   "kind": "answer",
+   "question": "who lives who dies who tells your atory lyrics",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "“Who lives, who dies, who tells your story?”"
+  },
+  {
+   "id": "a689a62473682034",
+   "kind": "answer",
+   "question": "percy jackson and the olympians sea of monsters summary",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Percy, Annabeth, and Tyson journey to rescue Grover and retrieve the Golden Fleece, which can heal Thalia’s poisoned tree and protect Camp Half-Blood from Kronos’s forces."
+  },
+  {
+   "id": "8a30eaf345957f14",
+   "kind": "answer",
+   "question": "what platform is sandringham line at flinders st",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Platforms 2 and 3."
+  },
+  {
+   "id": "7128d349917dd3c2",
+   "kind": "answer",
+   "question": "who were the church fathers and what did they do in the catholic church",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Ancient Christian theologians, teachers, and bishops who shaped the Church’s teachings and foundations."
+  },
+  {
+   "id": "cd9cd416b209b9c1",
+   "kind": "answer",
+   "question": "subcommittee on antitrust competition policy and consumer rights",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Senate Judiciary Subcommittee on Antitrust, Competition Policy, and Consumer Rights"
+  },
+  {
+   "id": "d69f5374b13cb78f",
+   "kind": "answer",
+   "question": "how tall is the actor who plays hagrid in harry potter",
+   "gold_answers": [
+    "6ft 1in"
+   ],
+   "model_answer": "6 feet 1 inch (185 cm)"
+  },
+  {
+   "id": "f204d026f335daa9",
+   "kind": "answer",
+   "question": "what is earth's magnetic field responsible for",
+   "gold_answers": [
+    "deflect most of the solar wind, whose charged particles would otherwise strip away the ozone layer that protects the Earth from harmful ultraviolet radiation"
+   ],
+   "model_answer": "Protecting Earth’s atmosphere from charged particles in the solar wind and cosmic rays"
+  },
+  {
+   "id": "a5bced4d277cb319",
+   "kind": "answer",
+   "question": "who do the characters represent in 8 mile",
+   "gold_answers": [
+    "loosely on Eminem"
+   ],
+   "model_answer": "Jimmy “B-Rabbit” Smith Jr. represents Eminem."
+  },
+  {
+   "id": "66c71612112ec6b7",
+   "kind": "answer",
+   "question": "how common is the word in the english language",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "“The” is the most common word in written English."
+  },
+  {
+   "id": "9ffa5c217f22578a",
+   "kind": "answer",
+   "question": "what is the significance of the sahara desert",
+   "gold_answers": [
+    "the largest hot desert and the third largest desert in the world after Antarctica and the Arctic",
+    "the largest hot desert",
+    "the third largest desert in the world after Antarctica and the Arctic"
+   ],
+   "model_answer": "The world’s largest hot desert and third-largest desert overall."
+  },
+  {
+   "id": "de286cf01d1f2605",
+   "kind": "answer",
+   "question": "where was the bill of rights written at",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "New York City, New York"
+  },
+  {
+   "id": "ca38de4e8db2d212",
+   "kind": "answer",
+   "question": "why does prince edward island have red sand",
+   "gold_answers": [
+    "sedimentary rock and other material with a high iron concentration which oxidizes upon exposure to the air"
+   ],
+   "model_answer": "Iron oxide in the island’s sandstone gives the sand its red color."
+  },
+  {
+   "id": "2d4ac2fa815e653f",
+   "kind": "answer",
+   "question": "how do you think south africa compared with singapore",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Singapore is wealthier and more developed; South Africa is larger and more resource-rich."
+  },
+  {
+   "id": "22d863428696aeba",
+   "kind": "answer",
+   "question": "what is the sentencing reform act of 1984",
+   "gold_answers": [
+    "U.S. federal statute intended to increase consistency in United States federal sentencing",
+    "a U.S. federal statute intended to increase consistency in United States federal sentencing"
+   ],
+   "model_answer": "A U.S. federal law intended to make sentencing more consistent; it established the U.S. Sentencing Commission and abolished most federal parole."
+  },
+  {
+   "id": "a44e1f7f36ff4fea",
+   "kind": "answer",
+   "question": "when calls the heart season 3 episode 12",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Season 3 has 8 episodes; there is no episode 12."
+  },
+  {
+   "id": "7d04806d688d6d75",
+   "kind": "answer",
+   "question": "when do primary ossification centers appear in an embryo",
+   "gold_answers": [
+    "prenatal development"
+   ],
+   "model_answer": "During prenatal development, usually before birth."
+  },
+  {
+   "id": "b63e7bc312369b11",
+   "kind": "answer",
+   "question": "what was going on in 1954 in the us",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Brown v. Board outlawed school segregation, while McCarthy’s Army hearings, polio vaccinations, and Cold War tensions made headlines."
+  },
+  {
+   "id": "579ce4b8d4e8309c",
+   "kind": "answer",
+   "question": "when is dancing on ice on the tv",
+   "gold_answers": [
+    "2019"
+   ],
+   "model_answer": "Usually Sundays at 6:30 pm on ITV."
+  },
+  {
+   "id": "059471c3c718113d",
+   "kind": "answer",
+   "question": "what causes cracked skin at the corners of your mouth",
+   "gold_answers": [
+    "infection",
+    "irritation",
+    "allergies"
+   ],
+   "model_answer": "Angular cheilitis, often caused by saliva irritation, dryness, or infection."
+  },
+  {
+   "id": "cf2ae1fb6bdb0368",
+   "kind": "answer",
+   "question": "what is windows defender and what does it do",
+   "gold_answers": [
+    "Windows Defender , officially called Windows Defender Antivirus in Windows 10 Creators Update , is an anti-malware component of Microsoft Windows.It was first released as a free antispyware program download for Windows XP , shipped with Windows Vista and Windows 7 and made into a full antivirus program replacing Microsoft Security Essentials as part of Windows 8 and later versions ."
+   ],
+   "model_answer": "Windows’ built-in security software that helps protect against viruses, malware, and other threats."
+  },
+  {
+   "id": "a7cda2e89a9dd634",
+   "kind": "answer",
+   "question": "who has the rights to alice in wonderland",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Disney had the rights to Sir John Tenniel’s illustrations."
+  },
+  {
+   "id": "ffe74fad9976f961",
+   "kind": "answer",
+   "question": "who lives who dies who tells your atory lyrics",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Eliza reflects on Hamilton’s legacy and her efforts to preserve his story."
+  },
+  {
+   "id": "2e8e6821e6f90b70",
+   "kind": "answer",
+   "question": "where is gall bladder situated in human body",
+   "gold_answers": [
+    "beneath the liver"
+   ],
+   "model_answer": "Beneath the liver, in the upper-right abdomen."
+  },
+  {
+   "id": "e8abd74197639079",
+   "kind": "answer",
+   "question": "what type of car is a jeep considered",
+   "gold_answers": [
+    "light utility vehicles",
+    "sport utility vehicles",
+    "off-road vehicles"
+   ],
+   "model_answer": "SUV"
+  },
+  {
+   "id": "029984a20f5a469e",
+   "kind": "answer",
+   "question": "when did hawaii become a state and why",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "August 21, 1959, after residents campaigned for full representation in Congress and the Electoral College."
+  },
+  {
+   "id": "f8e14560c7f37c69",
+   "kind": "answer",
+   "question": "where is kruger national park in south africa",
+   "gold_answers": [
+    "in the north-east of South Africa,[9] in the eastern parts of Limpopo and Mpumalanga provinces",
+    "the provinces of Limpopo and Mpumalanga in northeastern South Africa",
+    "Limpopo and Mpumalanga provinces, South Africa",
+    "in the provinces of Limpopo and Mpumalanga"
+   ],
+   "model_answer": "In Limpopo and Mpumalanga provinces in northeastern South Africa."
+  },
+  {
+   "id": "d56cc5cdc82de290",
+   "kind": "answer",
+   "question": "which apostle spoke at the council of jerusalem",
+   "gold_answers": [
+    "James",
+    "Simon Peter",
+    "Barnabas",
+    "Paul"
+   ],
+   "model_answer": "Peter the Apostle"
+  },
+  {
+   "id": "56b848f6591193ac",
+   "kind": "answer",
+   "question": "with which regions does australia have historical ties",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The British Isles and Europe"
+  },
+  {
+   "id": "92b14588ff1024da",
+   "kind": "answer",
+   "question": "what awards did the harry potter movies win",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "BAFTA, Saturn, Phoenix Film Critics Society, Broadcast Film Critics, ITV National Movie, Empire, BMI, AFI, and Britannia Awards."
+  },
+  {
+   "id": "a4149051777e1c4b",
+   "kind": "answer",
+   "question": "polar moment of inertia vs area moment of inertia",
+   "gold_answers": [
+    "Polar moment of inertia is a quantity used to predict an object 's ability to resist torsion , in objects ( or segments of objects ) with an invariant circular cross section and no significant warping or out - of - plane deformation . It is used to calculate the angular displacement of an object subjected to a torque . It is analogous to the area moment of inertia , which characterizes an object 's ability to resist bending and is required to calculate displacement ."
+   ],
+   "model_answer": "Polar moment: resistance to torsion; area moment: resistance to bending."
+  },
+  {
+   "id": "a6162785cdb07bba",
+   "kind": "answer",
+   "question": "what awards did the harry potter movies win",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Saturn Award for Best Costume Design; Broadcast Film Critics and Phoenix Film Critics awards for Best Live Action Family Film; BAFTA Audience Award and Best Feature Film; BMI Film Music Award; BAFTA awards for Best Production Design and Best Special Visual Effects; ITV National Movie Awards; Empire Awards for Best Director and Best Fantasy Film; and National Movie Awards for Best Family Movie."
+  },
+  {
+   "id": "54d0c418a231ba82",
+   "kind": "answer",
+   "question": "lynyrd skynyrd last of a dying breed album",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Lynyrd Skynyrd’s 14th studio album, released August 21, 2012."
+  },
+  {
+   "id": "5c131063281c6fd8",
+   "kind": "answer",
+   "question": "meaning of joy to the world by three dog night",
+   "gold_answers": [
+    "When Hoyt Axton performed the song to the group , two of the three main vocalists -- Danny Hutton and Cory Wells -- rejected the song , but Chuck Negron felt that the band needed a `` silly song '' to help bring the band back together as a working unit . Negron also felt that the song `` was n't even close to our best record , but it might have been one of our most honest . ''",
+    "The song , which has been described by members of Three Dog Night as a `` kid 's song '' and a `` silly song '' , topped the main singles charts in North America , was certified gold by the RIAA , and has since been covered by multiple artists ."
+   ],
+   "model_answer": "A playful, nonsensical celebration of joy and love for the world."
+  },
+  {
+   "id": "84105b6ae1ca3590",
+   "kind": "answer",
+   "question": "when do primary ossification centers appear in an embryo",
+   "gold_answers": [
+    "prenatal development"
+   ],
+   "model_answer": "Before birth"
+  },
+  {
+   "id": "69175295c3355ef4",
+   "kind": "answer",
+   "question": "when was the defensive 3 second rule implemented",
+   "gold_answers": [
+    "in the 2001–2002 season",
+    "2001–2002 season",
+    "the 2001–2002 season"
+   ],
+   "model_answer": "2001–02 NBA season"
+  },
+  {
+   "id": "6b558a8afc8343e8",
+   "kind": "answer",
+   "question": "when does the soul train music awards come on tv",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Usually in November."
+  },
+  {
+   "id": "f4d7e29907f18275",
+   "kind": "answer",
+   "question": "who sings too much time on my hands lyrics",
+   "gold_answers": [
+    "Tommy Shaw"
+   ],
+   "model_answer": "Styx (lead vocals by Tommy Shaw)"
+  },
+  {
+   "id": "f685a5a1d008cbd9",
+   "kind": "answer",
+   "question": "where does the autobahn have no speed limit",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "On certain sections of Germany’s Autobahn."
+  },
+  {
+   "id": "7074e147254dfce1",
+   "kind": "answer",
+   "question": "did anyone die from ebola in the us",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes—Thomas Eric Duncan died in the U.S."
+  },
+  {
+   "id": "c6c192ce2e160ddb",
+   "kind": "answer",
+   "question": "which apostle spoke at the council of jerusalem",
+   "gold_answers": [
+    "James",
+    "Simon Peter",
+    "Barnabas",
+    "Paul"
+   ],
+   "model_answer": "James the Apostle"
+  },
+  {
+   "id": "0fae405c57bca93c",
+   "kind": "answer",
+   "question": "cast of hawaii five o season 8 episode 9",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Alex O’Loughlin, Scott Caan, Meaghan Rath, Jorge Garcia, Taylor Wily, Dennis Chun, Kimee Balmilero, Chi McBride, and Beulah Koale"
+  },
+  {
+   "id": "b23dbb09d7e0cd6e",
+   "kind": "answer",
+   "question": "when does the new episode of criminal minds air",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Thursdays on Paramount+."
+  },
+  {
+   "id": "33dc07b2eec1749b",
+   "kind": "answer",
+   "question": "did the bush family own a baseball team",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, George W. Bush co-owned the Texas Rangers."
+  },
+  {
+   "id": "e1aee1d01e5f1023",
+   "kind": "answer",
+   "question": "where is the national championship for college football played",
+   "gold_answers": [
+    "Mercedes-Benz Stadium in Atlanta, Georgia on January 8, 2018",
+    "Mercedes-Benz Stadium in Atlanta, Georgia"
+   ],
+   "model_answer": "Mercedes-Benz Stadium, Atlanta, Georgia\n"
+  },
+  {
+   "id": "25d23daac7e7e606",
+   "kind": "answer",
+   "question": "when does bloom find out who she is",
+   "gold_answers": [
+    "Addio Magix!\"  / \"The Font of Dragon Fire"
+   ],
+   "model_answer": "March 8, 2004 (October 16, 2004 in the U.S.)"
+  },
+  {
+   "id": "19c4c1c9252fae57",
+   "kind": "answer",
+   "question": "when is the rock n roll hall of fame",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Annually, at the induction ceremony."
+  },
+  {
+   "id": "dbf85144f3897ca0",
+   "kind": "answer",
+   "question": "cast of law & order special victim unit",
+   "gold_answers": [
+    "Christopher Meloni",
+    "Mariska Hargitay",
+    "Richard Belzer",
+    "Dann Florek",
+    "Michelle Hurd",
+    "Stephanie March",
+    "Ice-T",
+    "Tamara Tunie",
+    "B. D. Wong",
+    "Diane Neal",
+    "Adam Beach",
+    "Michaela McManus",
+    "Danny Pino",
+    "Kelli Giddish",
+    "Raúl Esparza",
+    "Peter Scanavino"
+   ],
+   "model_answer": "Mariska Hargitay, Christopher Meloni, Richard Belzer, Dann Florek, Michelle Hurd, Stephanie March, Ice-T, B.D. Wong, Diane Neal, Tamara Tunie, Adam Beach, Michaela McManus, Danny Pino, Kelli Giddish, Raúl Esparza, and Peter Scanavino."
+  },
+  {
+   "id": "00e44f8e24f3676f",
+   "kind": "answer",
+   "question": "meaning of lyrics to wade in the water",
+   "gold_answers": [
+    "The song relates to both the Old and New Testaments . The verses reflect the Israelites ' escape out of Egypt as found in Exodus 14 . The chorus refers to healing : see John 5 : 4 , `` For an angel went down at a certain season into the pool , and troubled the water : whosoever then first after the troubling of the water stepped in was made whole of whatsoever disease he had . ''"
+   ],
+   "model_answer": "The verses recount the Israelites’ escape from Egypt, while the chorus refers to healing through troubled waters."
+  },
+  {
+   "id": "a5bd9395cbc5e64f",
+   "kind": "answer",
+   "question": "who's playing in the world series and when is it",
+   "gold_answers": [
+    "Houston Astros",
+    "Los Angeles Dodgers",
+    "October 24 – November 1"
+   ],
+   "model_answer": "Los Angeles Dodgers vs. Houston Astros, October 24–November 1, 2017."
+  },
+  {
+   "id": "07aa0a7940c48f31",
+   "kind": "answer",
+   "question": "alison krauss now that i've found you album",
+   "gold_answers": [
+    "`` Baby , Now That I 've Found You '' ( Tony Macaulay , John MacLeod ) -- 3 : 49 ( Previously Unreleased ) `` Oh , Atlanta '' ( Mick Ralphs ) -- 4 : 41 ( Previously Unreleased ) `` Broadway '' ( Sidney & Suzanne Cox ) -- 3 : 57 ( Previously Unreleased ) `` Every Time You Say Goodbye '' ( John Pennell ) -- 3 : 13 ( From the Album `` Every Time You Say Goodbye '' by Alison Krauss & Union Station ) `` Tonight I 'll Be Lonely Too '' ( Sidney Cox ) -- 3 : 25 ( From the Album `` I 've Got That Old Feeling '' by Alison Krauss ) `` Teardrops Will Kiss the Morning Dew '' ( Paul Craft ) -- 3 : 38 ( From the Album `` Two Highways '' by Alison Krauss & Union Station ) `` Sleep On '' ( Nelson Mandrell ) -- 2 : 23 ( From the Album `` Too Late to Cry '' by Alison Krauss ) `` When God Dips His Pen of Love in My Heart '' ( Cleavant Derricks ) -- 2 : 26 ( From the Album `` Everybody 's Reaching Out for Someone '' by The Cox Family ) `` I Will '' ( John Lennon , Paul McCartney ) -- 4 : 04 ( From the Album `` Within Reach '' by Tony Furtado ) `` I Do n't Believe You 've Met My Baby '' ( Autry Inman ) -- 3 : 10 ( From the Album `` Slide Rule '' by Jerry Douglas ) `` In the Palm of Your Hand '' ( Ron Block ) -- 3 : 24 ( From the Album `` I Know Who Holds Tomorrow '' by Alison Krauss & The Cox Family ) `` When You Say Nothing at All '' ( Paul Overstreet , Don Schlitz ) -- 4 : 21 ( From the Album `` Keith Whitley : A Tribute Album '' performed by Alison Krauss & Union Station )"
+   ],
+   "model_answer": "A 1995 Alison Krauss compilation album."
+  },
+  {
+   "id": "5fa222152364bca1",
+   "kind": "answer",
+   "question": "the settlers were attracted to oregon for all of the following reasons except",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The discovery of gold\n"
+  }
+ ],
+ "evidence": []
+}

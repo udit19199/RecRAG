@@ -1,0 +1,569 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "979ec941874ea7f9",
+   "kind": "answer",
+   "question": "who lives who dies who tells your atory lyrics",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The song reflects on legacy and Eliza preserving Hamilton’s story."
+  },
+  {
+   "id": "31760416d95bf79d",
+   "kind": "answer",
+   "question": "where did the term spirits for alcohol come from",
+   "gold_answers": [
+    "Middle Eastern alchemy"
+   ],
+   "model_answer": "From Latin *spiritus*, meaning “breath” or “vapor.”"
+  },
+  {
+   "id": "e7d3e9b7f66750e3",
+   "kind": "answer",
+   "question": "where do we draw the line between painting and drawing",
+   "gold_answers": [
+    "Drawing is one of the major forms of expression within the visual arts . It is generally concerned with the marking of lines and areas of tone onto paper / other material , where the accurate representation of the visual world is expressed upon a plane surface . Traditional drawings were monochrome , or at least had little colour , while modern colored - pencil drawings may approach or cross a boundary between drawing and painting . In Western terminology , drawing is distinct from painting , even though similar media often are employed in both tasks . Dry media , normally associated with drawing , such as chalk , may be used in pastel paintings . Drawing may be done with a liquid medium , applied with brushes or pens . Similar supports likewise can serve both : painting generally involves the application of liquid paint onto prepared canvas or panels , but sometimes an underdrawing is drawn first on that same support ."
+   ],
+   "model_answer": "There is no clear line; the distinction is often blurred."
+  },
+  {
+   "id": "98ad6be2cf77727c",
+   "kind": "answer",
+   "question": "which of the following statistical quantities are measures of central tendency",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Arithmetic mean, median, and mode"
+  },
+  {
+   "id": "8f51121f34234a04",
+   "kind": "answer",
+   "question": "where did the easter eggs and bunny come from",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Germany (among German Lutherans)"
+  },
+  {
+   "id": "6ca600aa262e60f3",
+   "kind": "answer",
+   "question": "what does the board of directors consist of",
+   "gold_answers": [
+    "a recognized group of people who jointly oversee the activities of an organization"
+   ],
+   "model_answer": "A group of directors who oversee the company."
+  },
+  {
+   "id": "3540e4e86f9daa11",
+   "kind": "answer",
+   "question": "what did the american flag look like in 1896",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "45 stars and 13 stripes."
+  },
+  {
+   "id": "2c4a25e32d5b43af",
+   "kind": "answer",
+   "question": "who died in the first episode of stranger things",
+   "gold_answers": [
+    "Benny"
+   ],
+   "model_answer": "Benny Hammond"
+  },
+  {
+   "id": "6462b0aa599c9d98",
+   "kind": "answer",
+   "question": "positive and negative impacts of internal migration in china",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Positive: jobs, income, skills, and greater freedom; negative: hukou-based exclusion, low wages, and reduced labor productivity."
+  },
+  {
+   "id": "8176f480534b81e4",
+   "kind": "answer",
+   "question": "what is the legislature of the united states called",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "United States Congress"
+  },
+  {
+   "id": "49994327f1c8a28d",
+   "kind": "answer",
+   "question": "how often does a speed limit sign need to be posted",
+   "gold_answers": [
+    "In most of the world speed limit signs display the limitation within a red circle . This design follows the style set out by the Vienna Convention on Road Signs and Signals , with the exception of United States and Canada . All countries globally worldwide ( except the United Kingdom and United States ) use metric speed limits in kilometres per hour . Metric signs are optional in the United States though less commonly seen , while Samoa uses both units . In Ontario , Canada , the type , location , and frequency of speed limit signs is covered by regulation 615 of the Ontario Highway Traffic Act ."
+   ],
+   "model_answer": "No fixed interval is specified; repeaters may appear 200–500 m after the first sign."
+  },
+  {
+   "id": "f033b080709ec453",
+   "kind": "answer",
+   "question": "when do you hear the lub and dub sounds of the heart",
+   "gold_answers": [
+    "the closing of the atrioventricular valves and semilunar valves, respectively"
+   ],
+   "model_answer": "Lub at the start of systole; dub at the end of systole."
+  },
+  {
+   "id": "e97bc6fcc16c9307",
+   "kind": "answer",
+   "question": "superhero names that start with the letter b",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Bantam, Beast, Bishop, Battlestar, and Batwing"
+  },
+  {
+   "id": "90e6a61c124f633c",
+   "kind": "answer",
+   "question": "where do car factories tend to be located and why",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Near transport links, labor, materials, energy, and markets."
+  },
+  {
+   "id": "b59b0b800a6b1e07",
+   "kind": "answer",
+   "question": "what is the string of 882 islands extending southwest from the southern tip of florida known as",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The Florida Keys"
+  },
+  {
+   "id": "b547b9168875ace3",
+   "kind": "answer",
+   "question": "who is rose in the fall season 2",
+   "gold_answers": [
+    "a woman who had a sexual relationship with Paul whilst at university",
+    "Valene Kane"
+   ],
+   "model_answer": "Rose Stagg, played by Valene Kane."
+  },
+  {
+   "id": "ed50a9703afa0d01",
+   "kind": "answer",
+   "question": "horatio spafford story it is well with my soul",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "After his four daughters died in the 1873 sinking of the Ville du Havre, Horatio Spafford wrote “It Is Well with My Soul” while sailing to England."
+  },
+  {
+   "id": "37849e33e96df32f",
+   "kind": "answer",
+   "question": "where is deforestation occurring in the united states",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Across the United States, especially in forests affected by logging, wildfires, and urban development."
+  },
+  {
+   "id": "8ea90460a4b7f973",
+   "kind": "answer",
+   "question": "who are the faces of the postcode lottery",
+   "gold_answers": [
+    "People 's Postcode Lottery has a number of celebrity `` ambassadors '' . In March 2018 , these included David Attenborough , Clare Balding , Brian Blessed , Judi Dench , Shobna Gulati , Tim Healy , Stephen Jardine , Ellen MacArthur , Aggie MacKenzie , Carey Mulligan , John Stapleton and Emma Thompson . Fiona Phillips became an ambassador for People 's Postcode Lottery at the end of 2012 , leading the organisation 's DRTV campaigns ."
+   ],
+   "model_answer": "David Attenborough, Judi Dench, Emma Thompson, and other celebrity ambassadors."
+  },
+  {
+   "id": "320013a271467174",
+   "kind": "answer",
+   "question": "my girl don't lie to me american gods",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "“Where Did You Sleep Last Night”"
+  },
+  {
+   "id": "a1ddcb22ecb94737",
+   "kind": "answer",
+   "question": "what is the meaning of the name sinead",
+   "gold_answers": [
+    "God forgave/God gratified"
+   ],
+   "model_answer": "“God forgave” or “God gratified”"
+  },
+  {
+   "id": "eb0de4d35c1e6688",
+   "kind": "answer",
+   "question": "all i want for christmas is you mariah carey tour",
+   "gold_answers": [
+    "All I Want for Christmas Is You , a Night of Joy and Festivity is the first concert residency by American singer Mariah Carey . Performed annually at the Beacon Theatre in Manhattan , New York , the residency began on December 15 , 2014 , and will conclude on December 22 , 2017 , after completing six legs and thirty - four shows . Billboard revealed that the six dates had sold out with a total of 16,196 tickets while grossing $1.5 million during the first leg of the residency . The main set list for the show encompassed songs from Merry Christmas and Merry Christmas II You , with additional non-holiday tracks . The show also included `` a cast of forty , including a gospel choir , a clutch of carolers , several acrobats and a hyperactive round of kid singer / dancers . ''"
+   ],
+   "model_answer": "A Christmas concert residency (2014–2017)"
+  },
+  {
+   "id": "46473bd173912a9a",
+   "kind": "answer",
+   "question": "texas flip and move how does it work",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Renovators buy older houses without the land, move and renovate them, then auction them to buyers who relocate them onto their property."
+  },
+  {
+   "id": "f14fde34f0c4486f",
+   "kind": "answer",
+   "question": "why did alex and ellen break up on family ties",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Ellen moved to New York to pursue her dancing career."
+  },
+  {
+   "id": "3b01d8754582b574",
+   "kind": "answer",
+   "question": "who played in the movie harper valley pta",
+   "gold_answers": [
+    "Barbara Eden as Stella Johnson , a widowed cosmetics salesperson with a young daughter , whose joie de vivre , her principles , and her individuality anger most of the powerful people in town and on the Parent Teachers Association board . She inevitably becomes PTA president after embarrassing Flora , the snobby former President and her equally snobby friends . Ronny Cox as Willis `` Will '' Newton , a wealthy member of the PTA who does n't agree with Flora and her snobby allies and is in love with Stella . He and Stella get married at the end of the movie . Nanette Fabray as Alice Finley , Stella 's best friend and co-conspirator against the snobs of Harper Valley . She owns and operates the La Moderne Beauty Shop . Louis Nye as Kirby Baker , a local real estate agent who is allied with Flora and her friends . Notorious for being a lecherous playboy and infamous for impregnating his secretaries , one of whom , Gladys Wilmot , left town to see an abortionist in Cincinnati . As part of a plan to discredit Stella , he tries to foreclose on Stella 's house , which infuriates her . He then gets arrested and jailed for attacking Myrna Wong , a friend of Stella 's , who rebuffs his advances , throwing him by use of martial arts and destroying the office . John Fiedler as Bobby Taylor , a man on the PTA who lusts after Stella . Overly dominated by his wife , Holly . Although open to allow Stella to speak , he is not above having a fellow PTA board member kidnapped to commit election fraud . He was arrested for indecent exposure after being set up by Stella . Ron Masak as Herbie Maddox , the head bartender at Kelly 's bar , and Stella 's ally against Flora and her friends . He has a crush on Stella , and is one of her friends . Clint Howard as Corley , a young delivery person , who works for the local florist shop , who brings Stella flowers from Will . Susan Swift as Dee Johnson , Stella 's 14 - year - old daughter , who is threatened with expulsion from school if her mother does n't conform to the way the PTA wants her to behave . She has a hand in assisting her mother and Alice with one of their revenge schemes . She loses her braces , gets a makeover , and ends up with a boyfriend , Carlyle . Pat Paulsen as Otis Harper , the descendant of the founding family of Harper Valley . A PTA member who is allied with Flora and her friends . Has a tendency to drink all the time , which annoys his wife , Bertha . He had a stampede of elephants , painted pink , stormed through his house , destroying it . Amzie Strickland as Shirley Thompson , a member of the PTA board who tends to drink a lot of gin . Though she is allied with Flora and her friends , she is one of four PTA members ( Will , Skeeter and Holly Taylor are the others ) who are spared any retribution from Stella . She was seen as the most sympathetic of the board , as she tended to be more manipulated as opposed to being manipulative . It was never revealed whether or not she retained her seat on the PTA , but it is presumed that she became more sympathetic towards Stella as she was seen waving goodbye at Olive as she was being arrested . Bob Hastings as Skeeter Duggan , a member of the PTA board , and the town 's Notary public who is sympathetic to Stella . He is kidnapped by Dutch and Tex at Flora Simpson Reilly 's orders . Audrey Christie as Flora Simpson - Reilly , The movie 's main antagonist . She is the pompous and extremely snobbish president of the PTA board who thoroughly despises Stella ( who defeats her for president at the end of the movie ) and all she stands for . So desperate is she to retain her power and prestige in the community that she has a fellow member of the PTA ( Skeeter Duggan ) kidnapped so she and her allies can commit election fraud . She is embarrassed when her permanent set is destroyed by a hair depilatory at the beauty salon . Molly Dodd as Olive Glover , the recording secretary of the PTA who is a gambling addict . Clearly the most corrupt and most vindictive member of the PTA board , she is eventually arrested for embezzlement after having a load of hay and horse manure dumped on top of her . She is the one who initially angers Stella by sending her the letter denouncing her , and tries to get Dee 's friend , Mavis , arrested for embezzlement . Fay DeWitt as Willamae Jones , a snide biology teacher at the junior high school who is also a member of the PTA . She makes no secret of the fact that she favors the Reilly twins , due to the connections between her and Flora . Notorious for being a nymphomaniac ( though she hides it under a prim - and - proper façade ) , she is caught in flagrante delicto with Barney Crunk , the town 's mailman , on film . DeVera Marcus as Holly Taylor , Bobby 's obviously overbearing wife , who tends to drink a lot when Bobby is out of town , and does n't approve of Bobby 's lusting , or of anything else he does ( this is different from the character in the song , who `` seems to use a lot of ice whenever ( her husband ) 's away '' , implying adultery with the iceman ) . However , despite her ties to Flora and her scheming friends , she , like Shirley Thompson , is spared any retribution from Stella , due to Stella refusing to date Bobby . Louise Foley as Mavis , Dee Johnson 's best friend , who is nearly framed for a crime she did not commit by the vindictive Olive Glover . Brian Cook as Carlyle , a popular track star who chooses Dee , after she gets a makeover , and angers Bettina Reilly in the process . Laura Teige as Bettina Reilly , One of Flora 's twin granddaughters , who wants to be with Carlyle , and is jealous when he chooses Dee over her . She tends to be as snotty as her grandmother . Jan Teige as Edwina Reilly , Bettina 's twin sister , who is just as snotty as her . Irene Yah - Ling Sun as Myrna Wong , a friend of Stella 's who is a judo expert ; she is assaulted by Kirby Baker ( after leading him on ; she destroys him and his office in retaliation ) and has him sent to jail for assault . Tobias Anderson as `` Cranky '' Barney Crunk , the town 's nosy mailman who had the bad habit of peeking in everyone 's mail . He is caught in flagrante delicto on film with Willamae Jones . Royce D. Applegate as Dutch , one of two kidnappers who abduct Skeeter Duggan at Flora Simpson - Reilly 's orders . J.J. Barry as Tex , the mastermind of the kidnap plot to get Skeeter Duggan out of the way so Flora Simpson - Reilly and her friends could commit election fraud . He and his accomplice Dutch are arrested and the two of them rat out Flora and her friends on their scheme . Pitt Herbert as Henry Reilly , Flora 's overly dominated husband and grandfather to Edwina and Bettina . Henry is wealthy , but is very weak - willed and is known for acquiescing to his wife 's schemes . Arlen Stuart as Bertha Harper , wife of Otis Harper , who gets annoyed by her husband 's continual drinking . She is terrified when her house is destroyed by pink - painted elephants ."
+   ],
+   "model_answer": "Barbara Eden, Ronny Cox, and Nanette Fabray"
+  },
+  {
+   "id": "d24d142a7241ebda",
+   "kind": "answer",
+   "question": "suzanne's story orange is the new black",
+   "gold_answers": [
+    "In episode 3 , `` Hugs Can Be Deceiving '' , Suzanne 's backstory is revealed via a flashback . She was adopted by white parents and raised in the suburbs , but her mental instability alienated her classmates and their parents alike . Her adoptive mother pushed her to excel at everything she did to prove that she was as good as everyone else ; ironically , the constant pressure only made Suzanne 's psychological problems worse . In the same episode , it is revealed that Suzanne had run outside and knocked Chapman unconscious after Chapman had beaten Tiffany `` Pennsatucky '' Doggett ( Taryn Manning ) unconscious at the end of season 1 ."
+   ],
+   "model_answer": "Suzanne “Crazy Eyes” Warren is an intelligent but socially struggling inmate serving time for the accidental death of a child she befriended."
+  },
+  {
+   "id": "b30f819e4016aac5",
+   "kind": "answer",
+   "question": "when did united states enter world war i",
+   "gold_answers": [
+    "April 1917"
+   ],
+   "model_answer": "April 6, 1917"
+  },
+  {
+   "id": "31a4c05b8e943ac7",
+   "kind": "answer",
+   "question": "what is the share of agriculture in indian economy",
+   "gold_answers": [
+    "17.32%",
+    "23%"
+   ],
+   "model_answer": "About 18% of GDP"
+  },
+  {
+   "id": "39eaa8dd348fd34a",
+   "kind": "answer",
+   "question": "the first european town in the present-day united states was new orleans",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No, Caparra."
+  },
+  {
+   "id": "19d816e1185d14ad",
+   "kind": "answer",
+   "question": "did anyone die from ebola in the us",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes—Thomas Eric Duncan and Martin Salia died in the United States."
+  },
+  {
+   "id": "0a669b11300afd20",
+   "kind": "answer",
+   "question": "where have the good guys gone to hideaway",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "To Hideaway."
+  },
+  {
+   "id": "10d3f2f040cb3541",
+   "kind": "answer",
+   "question": "who played in the movie harper valley pta",
+   "gold_answers": [
+    "Barbara Eden as Stella Johnson , a widowed cosmetics salesperson with a young daughter , whose joie de vivre , her principles , and her individuality anger most of the powerful people in town and on the Parent Teachers Association board . She inevitably becomes PTA president after embarrassing Flora , the snobby former President and her equally snobby friends . Ronny Cox as Willis `` Will '' Newton , a wealthy member of the PTA who does n't agree with Flora and her snobby allies and is in love with Stella . He and Stella get married at the end of the movie . Nanette Fabray as Alice Finley , Stella 's best friend and co-conspirator against the snobs of Harper Valley . She owns and operates the La Moderne Beauty Shop . Louis Nye as Kirby Baker , a local real estate agent who is allied with Flora and her friends . Notorious for being a lecherous playboy and infamous for impregnating his secretaries , one of whom , Gladys Wilmot , left town to see an abortionist in Cincinnati . As part of a plan to discredit Stella , he tries to foreclose on Stella 's house , which infuriates her . He then gets arrested and jailed for attacking Myrna Wong , a friend of Stella 's , who rebuffs his advances , throwing him by use of martial arts and destroying the office . John Fiedler as Bobby Taylor , a man on the PTA who lusts after Stella . Overly dominated by his wife , Holly . Although open to allow Stella to speak , he is not above having a fellow PTA board member kidnapped to commit election fraud . He was arrested for indecent exposure after being set up by Stella . Ron Masak as Herbie Maddox , the head bartender at Kelly 's bar , and Stella 's ally against Flora and her friends . He has a crush on Stella , and is one of her friends . Clint Howard as Corley , a young delivery person , who works for the local florist shop , who brings Stella flowers from Will . Susan Swift as Dee Johnson , Stella 's 14 - year - old daughter , who is threatened with expulsion from school if her mother does n't conform to the way the PTA wants her to behave . She has a hand in assisting her mother and Alice with one of their revenge schemes . She loses her braces , gets a makeover , and ends up with a boyfriend , Carlyle . Pat Paulsen as Otis Harper , the descendant of the founding family of Harper Valley . A PTA member who is allied with Flora and her friends . Has a tendency to drink all the time , which annoys his wife , Bertha . He had a stampede of elephants , painted pink , stormed through his house , destroying it . Amzie Strickland as Shirley Thompson , a member of the PTA board who tends to drink a lot of gin . Though she is allied with Flora and her friends , she is one of four PTA members ( Will , Skeeter and Holly Taylor are the others ) who are spared any retribution from Stella . She was seen as the most sympathetic of the board , as she tended to be more manipulated as opposed to being manipulative . It was never revealed whether or not she retained her seat on the PTA , but it is presumed that she became more sympathetic towards Stella as she was seen waving goodbye at Olive as she was being arrested . Bob Hastings as Skeeter Duggan , a member of the PTA board , and the town 's Notary public who is sympathetic to Stella . He is kidnapped by Dutch and Tex at Flora Simpson Reilly 's orders . Audrey Christie as Flora Simpson - Reilly , The movie 's main antagonist . She is the pompous and extremely snobbish president of the PTA board who thoroughly despises Stella ( who defeats her for president at the end of the movie ) and all she stands for . So desperate is she to retain her power and prestige in the community that she has a fellow member of the PTA ( Skeeter Duggan ) kidnapped so she and her allies can commit election fraud . She is embarrassed when her permanent set is destroyed by a hair depilatory at the beauty salon . Molly Dodd as Olive Glover , the recording secretary of the PTA who is a gambling addict . Clearly the most corrupt and most vindictive member of the PTA board , she is eventually arrested for embezzlement after having a load of hay and horse manure dumped on top of her . She is the one who initially angers Stella by sending her the letter denouncing her , and tries to get Dee 's friend , Mavis , arrested for embezzlement . Fay DeWitt as Willamae Jones , a snide biology teacher at the junior high school who is also a member of the PTA . She makes no secret of the fact that she favors the Reilly twins , due to the connections between her and Flora . Notorious for being a nymphomaniac ( though she hides it under a prim - and - proper façade ) , she is caught in flagrante delicto with Barney Crunk , the town 's mailman , on film . DeVera Marcus as Holly Taylor , Bobby 's obviously overbearing wife , who tends to drink a lot when Bobby is out of town , and does n't approve of Bobby 's lusting , or of anything else he does ( this is different from the character in the song , who `` seems to use a lot of ice whenever ( her husband ) 's away '' , implying adultery with the iceman ) . However , despite her ties to Flora and her scheming friends , she , like Shirley Thompson , is spared any retribution from Stella , due to Stella refusing to date Bobby . Louise Foley as Mavis , Dee Johnson 's best friend , who is nearly framed for a crime she did not commit by the vindictive Olive Glover . Brian Cook as Carlyle , a popular track star who chooses Dee , after she gets a makeover , and angers Bettina Reilly in the process . Laura Teige as Bettina Reilly , One of Flora 's twin granddaughters , who wants to be with Carlyle , and is jealous when he chooses Dee over her . She tends to be as snotty as her grandmother . Jan Teige as Edwina Reilly , Bettina 's twin sister , who is just as snotty as her . Irene Yah - Ling Sun as Myrna Wong , a friend of Stella 's who is a judo expert ; she is assaulted by Kirby Baker ( after leading him on ; she destroys him and his office in retaliation ) and has him sent to jail for assault . Tobias Anderson as `` Cranky '' Barney Crunk , the town 's nosy mailman who had the bad habit of peeking in everyone 's mail . He is caught in flagrante delicto on film with Willamae Jones . Royce D. Applegate as Dutch , one of two kidnappers who abduct Skeeter Duggan at Flora Simpson - Reilly 's orders . J.J. Barry as Tex , the mastermind of the kidnap plot to get Skeeter Duggan out of the way so Flora Simpson - Reilly and her friends could commit election fraud . He and his accomplice Dutch are arrested and the two of them rat out Flora and her friends on their scheme . Pitt Herbert as Henry Reilly , Flora 's overly dominated husband and grandfather to Edwina and Bettina . Henry is wealthy , but is very weak - willed and is known for acquiescing to his wife 's schemes . Arlen Stuart as Bertha Harper , wife of Otis Harper , who gets annoyed by her husband 's continual drinking . She is terrified when her house is destroyed by pink - painted elephants ."
+   ],
+   "model_answer": "Barbara Eden, Nanette Fabray, Ronny Cox, Louis Nye, Susan Swift, and Pat Paulsen."
+  },
+  {
+   "id": "bb1e545b0605d0f6",
+   "kind": "answer",
+   "question": "when is the solar eclipse passing through kentucky",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "April 8, 2024"
+  },
+  {
+   "id": "796a8150fbb0fa3f",
+   "kind": "answer",
+   "question": "whats the difference between ram 1500 and 2500",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The 1500 is lighter-duty; the 2500 offers greater towing and payload capacity."
+  },
+  {
+   "id": "32add9765d645c4a",
+   "kind": "answer",
+   "question": "who has hosted the most fifa world cups",
+   "gold_answers": [
+    "Mexico, Italy, France, Germany (West Germany until shortly after the 1990 World Cup) and Brazil have hosted the event on two occasions",
+    "Mexico",
+    "Italy",
+    "France",
+    "Germany",
+    "Brazil"
+   ],
+   "model_answer": "Mexico, Italy, France, Germany, and Brazil (two each)."
+  },
+  {
+   "id": "63cdb2b4e63b9009",
+   "kind": "answer",
+   "question": "ye mera dil pyar ka deewana old song free download",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "YouTube Music ya Spotify par legally suno/download karo."
+  },
+  {
+   "id": "f3dc04c8c5840e6a",
+   "kind": "answer",
+   "question": "2. describing write about two instances where the colonists did not submit to the british",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Patriots besieged the British in Boston and expelled royal officials from the colonies."
+  },
+  {
+   "id": "f09350d571e1b8fe",
+   "kind": "answer",
+   "question": "what are the kinds of dance and its definition",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Theatrical dance—performed for an audience; participatory dance—performed mainly for social interaction or exercise."
+  },
+  {
+   "id": "128a418bb4ebf943",
+   "kind": "answer",
+   "question": "jane the virgin recap season 4 episode 16",
+   "gold_answers": [
+    "Jane and Rafael start saving up to buy a one - bedroom apartment , but their plan falls apart when Mateo breaks an antique $4,000 clock . Rafael moves into the Villanueva house , but after Alba hits Mateo , the two get into a heated argument and Rafael moves back out . Xiomara starts chemotherapy , and makes a friend named Donna . The timeline moves forward nine weeks , and Donna dies of unforeseen consequences . Xiomara is shown not to be doing well due to the chemotherapy , Alba and Rafael are still in a fight and River and Rogelio are still arguing over the Passions of Santos adaptation . Alba breaks down to Jane , and she and Rafael make up . Xiomara bonds with River over telenovelas , after she accidentally eats a pot brownie , and she agrees to do the Passions of Steve and Brenda the Latin American way . Jane Ramos gets herself disbarred , and as a result gets the case against Petra thrown out .",
+    "No . overall No. in season Title Directed by Written by Original air date U.S. viewers ( millions ) 65 `` Chapter Sixty - Five '' Brad Silberling Jennie Snyder Urman & Paul Sciarrotta October 13 , 2017 ( 2017 - 10 - 13 ) 0.68 Picking up immediately after where Season 3 left off , Jane is reunited with her first love , Adam , who found the love letter that Michael wrote . She is surprised , but happy , to see him . However , both Xo and Alba are less thrilled that he is back . Meanwhile , Rafael loses ownership of the hotel to his sister and as a result , he finds himself living at Jane 's house , broke and homeless . Jane and Rafael learn that the missing Petra has been found after she got away from Anezka and they rush to her side , but Anezka is nowhere to be found . When Petra returns to the hotel , Luisa thinks that Petra is Anezka . Petra goes along with the game , until the real Anezka returns . Elsewhere , Xo and Rogelio 's married life is interrupted when they confront the realization that Darci is having Rogelio 's baby and she wants full custody . 66 `` Chapter Sixty - Six '' Gina Lamar Valentina Garza & Jessica O'Toole & Amy Rardin October 20 , 2017 ( 2017 - 10 - 20 ) 0.61 Jane 's relationship with Adam helps bring out her `` fun side '' and reminds her that she is n't just a mom . However , when Adam gets a job opportunity out of state , he asks for Jane 's opinion on if he should stay or go . Meanwhile , Rogelio continues to face issues with his co-star at work and things are about to get even worse . Xo is helping to take care of Darci to prove that Rogelio is committed to being a father to the baby . Also , Petra and Rafael begin working together to try and buy back the hotel from Luisa , but they are running into trouble involving Anezka , causing tension between them . 67 `` Chapter Sixty - Seven '' Fernando Sariñana Carolina Rivera & Micah Schraft October 27 , 2017 ( 2017 - 10 - 27 ) 0.60 Jane and Adam 's relationship seems to be moving on , and Jane thinks that it might be time for him to meet her son Mateo , but Rafael is not happy with this idea . Meanwhile , as the arrival of Darci 's baby approaches , Rogelio 's jealously of her new boyfriend increases as well . Trying to be supportive , Xo encourages Rogelio to step up and be the father he was meant to be . Elsewhere , Rafael is determined to get his hotel and life back from Luisa and will do whatever he has to do to make it happen , with or without Petra 's help . 68 `` Chapter Sixty - Eight '' Gina Lamar Deirdre Shaw & Chantelle M. Wells November 3 , 2017 ( 2017 - 11 - 03 ) 0.69 Jane becomes angry when she learns that Rafael introduced Mateo to his new girlfriend , Katherine , without her consent because she thinks Katherine is a negative influence on both Rafael and Mateo . Jane turns to Petra for help with the situation . Meanwhile , Rogelio and Darci struggle to choose a name for the baby . Elsewhere , Xo , who is focused on opening her own dance studio , decides to go into business with an unlikely foe . 69 5 `` Chapter Sixty - Nine '' Stuart Gillard Paul Sciarrotta November 10 , 2017 ( 2017 - 11 - 10 ) 0.65 After Adam reveals his dating past to Jane , she becomes so unsure and insecure that it puts a strain on their relationship . Meanwhile , Lina seeks Jane 's advice about whether she should get married or not . Petra hears some important information that could help Rafael get the hotel back . Also , Xo asks Rogelio to consider having a medical procedure ( vasectomy ) done , but he is very hesitant . 70 6 `` Chapter Seventy '' Melanie Mayron Carolina Rivera & Micah Schraft November 17 , 2017 ( 2017 - 11 - 17 ) 0.61 Jane 's book is finally being released but her plans to have a party at the local bookshop where she was inspired to be a writer hit a snag . Always wanting to help Jane , Rogelio devises a plan to save the day , but one of his arch - rivals threatens to ruin the day . Meanwhile , Rafael gets a new job , but it is not exactly what he was hoping for . Also , Petra has come up with an interesting strategy to get the Marbella Hotel back from Luisa , but Rafael wants nothing to do with the scheme . 71 7 `` Chapter Seventy - One '' Micah Schraft Valentina Garza & Deidre Shaw December 8 , 2017 ( 2017 - 12 - 08 ) 0.65 Anezka is revealed to have faked her death to see where her loyalties lie ; initially , she trusts Petra after believing she saw her cry , but after finding out she was n't crying because of her fake death , she threatens Petra . Later , Anezka falls from Petra 's apartment to her death ... for real . Meanwhile , Xiomara and Jane set off on Jane 's book tour , when Alba decides to tag along . After they get back , Jane and Rafael share a kiss . 72 8 `` Chapter Seventy - Two '' Melanie Mayron Carolina Rivera & Paul Sciarrotta January 26 , 2018 ( 2018 - 01 - 26 ) 0.68 Mateo starts kindergarten and invites a friend over to Xiomara and Rogelio 's house . Jane and Rafael try to cover up that they are pretending to live in their house so they do n't get kicked out . Jane and Rafael show mixed emotions following the kiss and try again , which Mateo notices . He then proclaims : `` Does this mean you 're going to get married ? '' After Xo convinces Rogelio to attend couples therapy , they both are surprised by their emotions . Meanwhile , Petra hires a lawyer named Jane Ramos ( Rosario Dawson ) , to ensure she gets no charges pending Anezka 's death . Also , Rafael moves out of Jane 's house into his new apartment . 73 9 `` Chapter Seventy - Three '' Eric Lea Valentina Garza & Chantelle M. Wells February 2 , 2018 ( 2018 - 02 - 02 ) 0.67 When Jane and Rafael finally realize that the uncertain state of their relationship ( or lack of it ) is stressing out Mateo , they decide that they need to make a decision . Meanwhile , Petra is on the outs with Jane and Rafael after the Luisa fiasco , so she tries to figure out a way to get back into their good graces . Elsewhere , Rogelio and Xo are both contemplating their career choices . 74 10 `` Chapter Seventy - Four '' Gina Rodriguez Micah Schraft & Paul Sciarrotta February 9 , 2018 ( 2018 - 02 - 09 ) 0.80 Jane and Rafael try to be friends , which works great until Jane goes on a date . Meanwhile , Petra and Jane 's new partnership is off to a rocky start , but they both know they have to find a way to work together somehow . Rogelio is convinced he has male post-partum depression , which puts him at odds with with celebrity Post-Partum Advocate River Fields ( guest star Brooke Shields ) on The Talk . Also , Alba finally confides in Jane why she turned down the marriage proposal , leaving Jane to help Alba in the romance department when Jane takes Alba to a sex store and buys her a vibrator . Elsewhere , Jane and Rafael agree to have sex , and Petra questions her own sexual identity when she starts to have sex dreams about Jane `` J.R. '' Ramos after the lawyer begins flirting with her . 75 11 `` Chapter Seventy - Five '' Gina Lamar Merigan Mulhern March 2 , 2018 ( 2018 - 03 - 02 ) 0.59 Jane is ready to move on from the Marbella Hotel issues and pursue writing full time , but an unexpected development forces her to consider returning to her teaching roots . Xiomara decides to go back to school where she listens in on an art history class , while Jane teaches a seminar about writing . Here , Jane finds out Jonathan Chavez , her former advisor , is taking advantage of another student of his . While trying to warn the student , Jane accidentally grabs her breasts to avoid falling over and , as a result , does n't get the teaching job she was applying for . Meanwhile , Petra gets arrested for Anezka 's murder due to the blackmailer planting the screws in her apartment , leading Jane Ramos to tell Petra that she was framing her because she was being threatened by an unknown blackmailer . Also , Rafael and Jane continue their affair . Elsewhere , Rogelio tries to get Eva Longoria to join his Passions of Santos reboot , but instead finds out the two are distant cousins . 76 12 `` Chapter Seventy - Six '' Melanie Mayron Leah Longoria March 9 , 2018 ( 2018 - 03 - 09 ) 0.58 Jane 's fixation on a negative review has left her with writer 's block , so Rogelio suggests she take a writing class to help . With the encouragement of Jane , Rafael is ready to dig into his past to find out who his real biological parents are . Meanwhile , Rogelio is trying to make things less about him and more about Xo , but he grows suspicious when he learns she is keeping a secret from him . But the secret Xo has been keeping is not what Rogelio suspected . Elsewhere , Petra tests the loyalty of her lawyer , Jane Ramos , by pretending to be romantically interested in her while trying to find out the identity of the blackmailer . After Petra confides in Jane R. of her feelings which are not fake , the two of them sleep together for the first time . 77 13 `` Chapter Seventy - Seven '' Gina Lamar Deirdre Shaw & Chantelle M. Wells March 16 , 2018 ( 2018 - 03 - 16 ) 0.59 When Jane , Rogelio and Alba learn what is going on with Xo who might have breast cancer , they all try to comfort her , but Xo insists they let her live her life . Meanwhile , Rogelio finally gets River Fields to agree to meet with him , but he learns that River has another plan in mind . Also , Rafael is on a mission to find his sister , who may have the information he has been looking for of his origins . Rafael visits Rose in prison to ask for her help , but he quickly turns her down when she makes a demand to know Luisa 's location . Also , Jane is upset with Petra after her twin girls spill a secret to Mateo about the Tooth Fairy being make believe . At the same time , Jane ' J.R. ' Ramos tells Petra after their romantic night together that she is not interested in a relationship due to the blackmailer paying a visit to Jane R. 's dementia - stricken mother in a rest home . At the end , the identity of Jane R 's blackmailer is finally revealed . 78 14 `` Chapter Seventy - Eight '' Justin Baldoni Valentina Garza & Micah Schraft March 23 , 2018 ( 2018 - 03 - 23 ) 0.65 Xo struggles to make an important decision on whether or not to get a full mastectomy and looks to Jane for guidance , leaving Rogelio feeling like an outsider . Alba is frustrated with Rogelio when it seems he is once again making his career a priority over Xo 's well being . Meanwhile , Petra turns to Rafael for advice on her love life after he finally learns about her new romance with J.R. 79 15 `` Chapter Seventy - Nine '' Gina Lamar Paul Sciarrotta April 6 , 2018 ( 2018 - 04 - 06 ) 0.53 80 16 `` Chapter Eighty '' Micah Schraft Micah Schraft April 13 , 2018 ( 2018 - 04 - 13 ) 0.57 Jane and Rafael start saving up to buy a one - bedroom apartment , but their plan falls apart when Mateo breaks an antique $4,000 clock . Rafael moves into the Villanueva house , but after Alba hits Mateo , the two get into a heated argument and Rafael moves back out . Xiomara starts chemotherapy , and makes a friend named Donna . The timeline moves forward nine weeks , and Donna dies of unforeseen consequences . Xiomara is shown not to be doing well due to the chemotherapy , Alba and Rafael are still in a fight and River and Rogelio are still arguing over the Passions of Santos adaptation . Alba breaks down to Jane , and she and Rafael make up . Xiomara bonds with River over telenovelas , after she accidentally eats a pot brownie , and she agrees to do the Passions of Steve and Brenda the Latin American way . Jane Ramos gets herself disbarred , and as a result gets the case against Petra thrown out . 81 17 `` Chapter Eighty - One '' Gina Lamar Jennie Snyder Urman & Paul Sciarrotta April 20 , 2018 ( 2018 - 04 - 20 ) 0.58 Rafael intends to propose to Jane , however Rose 's news unsettles him . Alba becomes a citizen and the Villanueva 's throw her a surprise party . Jane Ramos and Petra plan to move in together , until Jane finds out that Petra killed Anezka . As she walks out , Krishna tells her that her life is in danger . J.R. saves Petra 's life by shooting , and killing , the blackmailer . As Jane meets Rafael , Michael is revealed to be alive ."
+   ],
+   "model_answer": "Jane and Rafael’s apartment plans collapse after Mateo breaks a $4,000 clock. Rafael moves out after arguing with Alba, while Xiomara starts chemotherapy and befriends Donna, who later dies."
+  },
+  {
+   "id": "872ef4ff7a5f7156",
+   "kind": "answer",
+   "question": "when is the next tangled the series episode coming out",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "No new episodes are scheduled."
+  },
+  {
+   "id": "bc8395492b50c93e",
+   "kind": "answer",
+   "question": "positive and negative impacts of internal migration in china",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Benefits: higher incomes, remittances, skills, and opportunities; costs: hukou-based exclusion, labor exploitation, high expenses, and family separation."
+  },
+  {
+   "id": "d1e421487ce91bb9",
+   "kind": "answer",
+   "question": "what is the only fruit that does not have seeds",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Banana"
+  },
+  {
+   "id": "65ad9b444622dfc7",
+   "kind": "answer",
+   "question": "what does hp mean in war and order",
+   "gold_answers": [
+    "hit points or health points"
+   ],
+   "model_answer": "Hit points (health points)"
+  },
+  {
+   "id": "e396ad745132e044",
+   "kind": "answer",
+   "question": "what is the meaning of the name sinead",
+   "gold_answers": [
+    "God forgave/God gratified"
+   ],
+   "model_answer": "God forgave (or “God gratified”)"
+  },
+  {
+   "id": "b4764e515ee01507",
+   "kind": "answer",
+   "question": "differentiate between dot matrix printer and daisy wheel printer",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Dot matrix uses pins; daisy wheel uses a character-embossed wheel."
+  },
+  {
+   "id": "bf9789f08ba5cd20",
+   "kind": "answer",
+   "question": "what is the point of a menstrual cup",
+   "gold_answers": [
+    "to collect menstrual flow",
+    "collect menstrual flow"
+   ],
+   "model_answer": "To collect menstrual flow as a reusable alternative to pads or tampons."
+  },
+  {
+   "id": "e35180d1fd63670b",
+   "kind": "answer",
+   "question": "which of the following was not a major battle of world war i",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Please provide the options."
+  },
+  {
+   "id": "957d65ef488d9798",
+   "kind": "answer",
+   "question": "lynyrd skynyrd last of a dying breed album",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "*Last of a Dyin’ Breed* (2012)"
+  },
+  {
+   "id": "eb98389ee3093db2",
+   "kind": "answer",
+   "question": "where was the original flight of the phoenix filmed",
+   "gold_answers": [
+    "20th Century-Fox Studios",
+    "20th Century-Fox Ranch, California",
+    "Buttercup Valley, Arizona",
+    "Pilot Knob Mesa, California",
+    "the 20th Century-Fox Studios",
+    "Pilot Knob Mesa near Winterhaven, located in California's Imperial Valley, on the western fringes of Yuma, Arizona",
+    "at the 20th Century-Fox Studios and 20th Century-Fox Ranch, California",
+    "Winterhaven, located in California's Imperial Valley, on the western fringes of Yuma, Arizona"
+   ],
+   "model_answer": "California’s 20th Century Fox Studios and Ranch, Buttercup Valley, Arizona, and Pilot Knob Mesa, California."
+  },
+  {
+   "id": "a6da8deebd682b8a",
+   "kind": "answer",
+   "question": "positive and negative impacts of internal migration in china",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Positive: higher incomes, remittances, skills, and opportunities; negative: hukou-based inequality, low wages, restricted services, and productivity losses."
+  },
+  {
+   "id": "97fac07285e0cef5",
+   "kind": "answer",
+   "question": "where did the term spirits for alcohol come from",
+   "gold_answers": [
+    "Middle Eastern alchemy"
+   ],
+   "model_answer": "From the Latin *spiritus*, meaning “breath” or “spirit.”"
+  },
+  {
+   "id": "99e14c8b3150d5cd",
+   "kind": "answer",
+   "question": "who is rose in the fall season 2",
+   "gold_answers": [
+    "a woman who had a sexual relationship with Paul whilst at university",
+    "Valene Kane"
+   ],
+   "model_answer": "Rose Stagg, a woman who had a past sexual relationship with Paul Spector."
+  },
+  {
+   "id": "6731e4bc5e641b7a",
+   "kind": "answer",
+   "question": "where do the royalties for winnie the pooh go",
+   "gold_answers": [
+    "Slesinger, Inc.",
+    "the Slesinger family"
+   ],
+   "model_answer": "Stephen Slesinger, Inc. receives royalties from Disney."
+  },
+  {
+   "id": "9faa2927c3ea7c99",
+   "kind": "answer",
+   "question": "how often does a speed limit sign need to be posted",
+   "gold_answers": [
+    "In most of the world speed limit signs display the limitation within a red circle . This design follows the style set out by the Vienna Convention on Road Signs and Signals , with the exception of United States and Canada . All countries globally worldwide ( except the United Kingdom and United States ) use metric speed limits in kilometres per hour . Metric signs are optional in the United States though less commonly seen , while Samoa uses both units . In Ontario , Canada , the type , location , and frequency of speed limit signs is covered by regulation 615 of the Ontario Highway Traffic Act ."
+   ],
+   "model_answer": "200 to 500 meters after the first sign"
+  },
+  {
+   "id": "441a693f0baa3a1e",
+   "kind": "answer",
+   "question": "meaning of joy to the world by three dog night",
+   "gold_answers": [
+    "When Hoyt Axton performed the song to the group , two of the three main vocalists -- Danny Hutton and Cory Wells -- rejected the song , but Chuck Negron felt that the band needed a `` silly song '' to help bring the band back together as a working unit . Negron also felt that the song `` was n't even close to our best record , but it might have been one of our most honest . ''",
+    "The song , which has been described by members of Three Dog Night as a `` kid 's song '' and a `` silly song '' , topped the main singles charts in North America , was certified gold by the RIAA , and has since been covered by multiple artists ."
+   ],
+   "model_answer": "A playful, nonsensical song celebrating joy and love for the world."
+  },
+  {
+   "id": "4ebd3eb8bd27a458",
+   "kind": "answer",
+   "question": "where did the easter eggs and bunny come from",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The Easter Bunny originated in German folklore; Easter eggs grew from customs of preserving and decorating eggs during Lent."
+  },
+  {
+   "id": "7977757d94b4f51c",
+   "kind": "answer",
+   "question": "how many languages do they speak in africa",
+   "gold_answers": [
+    "The total number of languages natively spoken in Africa is variously estimated ( depending on the delineation of language vs. dialect ) at between 1,250 to 2,100 , and by some counts at `` over 3,000 '' , Nigeria alone has over 500 languages ( according to the count of SIL Ethnologue ) , one of the greatest concentrations of linguistic diversity in the world ."
+   ],
+   "model_answer": "About 1,250–2,100 native languages, with some estimates exceeding 3,000."
+  },
+  {
+   "id": "a0514264ac780251",
+   "kind": "answer",
+   "question": "meaning of lyrics to wade in the water",
+   "gold_answers": [
+    "The song relates to both the Old and New Testaments . The verses reflect the Israelites ' escape out of Egypt as found in Exodus 14 . The chorus refers to healing : see John 5 : 4 , `` For an angel went down at a certain season into the pool , and troubled the water : whosoever then first after the troubling of the water stepped in was made whole of whatsoever disease he had . ''"
+   ],
+   "model_answer": "The verses evoke the Israelites’ escape from Egypt, and the refrain refers to healing waters in John 5."
+  },
+  {
+   "id": "f28d3ef393cad3ae",
+   "kind": "answer",
+   "question": "where are the winter olympics and when do they start",
+   "gold_answers": [
+    "Pyeongchang County, South Korea",
+    "9 to 25 February 2018",
+    "Pyeongchang, South Korea",
+    "9 February",
+    "from 9 to 25 February 2018 in Pyeongchang County, South Korea"
+   ],
+   "model_answer": "Pyeongchang, South Korea — February 9, 2018\n"
+  },
+  {
+   "id": "8e225a129d9e3876",
+   "kind": "answer",
+   "question": "which of the following was a result of the connecticut compromise",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Equal representation for each state in the Senate and proportional representation in the House of Representatives."
+  }
+ ],
+ "evidence": []
+}

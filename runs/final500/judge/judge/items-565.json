@@ -1,0 +1,487 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "914b7dfb6484b1a5",
+   "gold": [
+    {
+     "sentence": " He was awarded with the highest national military decoration: the Argentine Nation to the Heroic Valour in Combat Cross, the Argentine Congressional Medal, and the Highest Distinction of the Argentine Air Force.",
+     "facts": {
+      "0.0": "He was awarded the highest national military decoration, the Argentine Nation to the Heroic Valour in Combat Cross.",
+      "0.1": "He was awarded the Argentine Congressional Medal.",
+      "0.2": "He was awarded the Highest Distinction of the Argentine Air Force."
+     }
+    },
+    {
+     "sentence": " In 2010 it had 14,600 military personnel and 6,900 civilian personnel.",
+     "facts": {
+      "1.0": "In 2010, the entity referred to here had 14,600 military personnel.",
+      "1.1": "In 2010, the entity referred to here had 6,900 civilian personnel."
+     }
+    }
+   ],
+   "items": [
+    "Teodoro Waldner\nTeodoro Guillermo Waldner (born 1927) is a retired Argentine Air Force commander who served as Air Force Chief of the General Staff from 1983 to 1985.",
+    "Argentine Air Force Mobile Field Hospital\nThe Argentine Air Force Mobile Field Hospital (Spanish: \"Hospital Reubicable de la Fuerza Aérea\" ) is a field hospital operated by the Argentine Air Force.\n\n It is one of three health centers of its kind worldwide.",
+    "Hector Fautario\nHector Luis Fautario was a retired Argentine Air Force general.\n\n He was the General Commander of the Argentine Air Force from 1973 to 1975.\n\n Shortly prior to the 1976 Argentine coup d'état, he was the government's only remaining loyal officer.\n\n He had drawn harsh criticism towards himself from the Army and Navy due to his vehement opposition to their repressive plans, and for his refusal to mobilize the Air Force against the guerrillas' strongholds in the north.\n\n He was General Jorge Rafael Videla's last obstacle on the way to power.",
+    "Argentine Air Force\nThe Argentine Air Force (Spanish: Fuerza Aérea Argentina , or simply FAA) is the national aviation branch of the Armed Forces of the Argentine Republic.\n\n In 2010 it had 14,600 military personnel and 6,900 civilian personnel.",
+    "South America air forces maneuvers\nThe South American air forces performs several joint aerial combat training exercises.\n\n Among the more important are Cruzex ( Portuguese: \"Exercício Cruzeiro do Sul\" ) which is hosted by the Brazilian Air Force, Salitre ( English: Saltpeter ) hosted by the Chilean Air Force and Ceibo ( English: Erythrina crista-galli flower ) hosted by the Argentine Air Force.\n\n The goal is to train together in order to respond to a crisis or integrate into United Nations peacekeeping operations as a unified team; the United States Air Force and the Royal Canadian Air Force have also participated in some of these exercises in recent years.",
+    "Cuerpo de Fuerzas Especiales\nThe Mexican Cuerpo de Fuerzas Especiales (Special Forces Corps) is a special forces unit of the Mexican Army.\n\n Formerly the \"GAFE\" (Grupo Aeromóvil de Fuerzas Especiales | Special-Forces Airmobile Group), the SF Corps has six battalions; one is the \"Fuerza especial de reaccion\", a quick-response unit, and one is assigned to the Paratroopers Rifle Brigade; the motto of the SF Corps is \"Todo por México\" (Everything for Mexico).\n\n Within the SF Corps, there are regular, intermediate, and veteran -service troops.\n\n The regular-service soldiers usually operate as light infantry.\n\n The intermediate-service soldiers (lieutenants and captains) usually are instructors.\n\n The veteran-service soldiers of the Grupo Aeromóvil de Fuerzas Especiales del Alto Mando (GAFE High Command) handle Black-Ops missions.\n\n Also known as the COIFE, the Special Forces Corps of the Mexican Army is equivalent to the U.S. Army Special Forces.",
+    "Servicio de Inteligencia de la Fuerza Aérea\nServicio de Inteligencia de la Fuerza Aérea (\"Air Force Intelligence Service\", SIFA) is the intelligence agency of the Argentine Air Force.\n\n It is part of J-2.\n\n Its director is Commodore García.",
+    "Pablo Carballo\nCommodore Pablo Marcos Rafael Carballo (b. 11 December 1947 Buenos Aires) is a retired member of the Argentine Air Force - the \"Fuerza Aérea Argentina\" (FAA) - who fought in the 1982 Falklands War ( Spanish: \"Guerra de las Malvinas\" ) where he participated in actions that led to the sinking of three Royal Navy ships.\n\n He was awarded with the highest national military decoration: the Argentine Nation to the Heroic Valour in Combat Cross, the Argentine Congressional Medal, and the Highest Distinction of the Argentine Air Force.",
+    "Filiberto Ojeda Ríos\nFiliberto Ojeda Ríos (April 26, 1933 – September 23, 2005) was the commander-in-chief (\"Responsable General\") of the Boricua Popular Army (\"Ejército Popular Boricua, a.k.a., Los Macheteros\").\n\n According to an unsigned article in the \"Los Angeles Times\", Los Macheteros was “a terrorist group seeking Puerto Rico's independence.”\n\n The group campaigned for, and supported, the independence of Puerto Rico from the United States.\n\n In 2001, FBI Director Louis J. Freeh claimed the group was linked to acts of terrorism, but Ronald Fernandez, scholar of Puerto Rican history, suggests such labeling was an act of political convenience by the United States Government, intended to \"shift the blame for any attacks on U.S. policy or personnel from us to them\".\n\n Ríos was also a founder of the FALN.\n\n In a 1983 New York Times article, Robert McFadden described the FALN as a Puerto Rican terrorist organization responsible for bombings during the 1970s and early 1980s \"in the name of Puerto Rican independence\".",
+    "Cicaré CK.1\nThe Cicaré CK.1 (originally, the CH.III Colibrí) was a light helicopter developed in Argentina in the 1970s.\n\n It was a small, single-rotor aircraft of pod-and-boom configuration with a fully enclosed bubble canopy that could seat three people side-by-side.\n\n Cicaré's previous helicopter designs had attracted the attention of the Argentine Air Force, which in 1974 contracted him to develop a light helicopter for training and also marketed for agricultural use.\n\n A prototype, registered \"LV-X62\" flew in September 1976, and the Air Force placed an order for five pre-production machines.\n\n However, development was terminated at this point."
+   ]
+  },
+  {
+   "id": "e4719ddea60acbc6",
+   "gold": [
+    {
+     "sentence": "Baghdad ER is a documentary released by HBO on May 21, 2006.",
+     "facts": {
+      "0.0": "Baghdad ER is a documentary.",
+      "0.1": "Baghdad ER was released by HBO.",
+      "0.2": "Baghdad ER was released on May 21, 2006."
+     }
+    },
+    {
+     "sentence": "Olympia is a 1938 German documentary film written, directed and produced by Leni Riefenstahl, documenting the 1936 Summer Olympics, held in the Olympic Stadium in Berlin, Germany.",
+     "facts": {
+      "1.0": "Olympia is a documentary film.",
+      "1.1": "Olympia was released in 1938.",
+      "1.2": "Olympia is a German film.",
+      "1.3": "Olympia was written by Leni Riefenstahl.",
+      "1.4": "Olympia was directed by Leni Riefenstahl.",
+      "1.5": "Olympia was produced by Leni Riefenstahl.",
+      "1.6": "Olympia documents the 1936 Summer Olympics.",
+      "1.7": "The 1936 Summer Olympics were held in the Olympic Stadium in Berlin, Germany."
+     }
+    }
+   ],
+   "items": [
+    "Olympia (1938 film)\nOlympia is a 1938 German documentary film written, directed and produced by Leni Riefenstahl, documenting the 1936 Summer Olympics, held in the Olympic Stadium in Berlin, Germany.\n\n The film was released in two parts: \"Olympia 1.\n\n Teil — Fest der Völker\" (Festival of Nations) and \"Olympia 2.\n\n Teil — Fest der Schönheit\" (Festival of Beauty).\n\n It was the first documentary feature film of the Olympic Games ever made.\n\n Many advanced motion picture techniques, which later became industry standards but which were groundbreaking at the time, were employed —including unusual camera angles, smash cuts, extreme close-ups, placing tracking shot rails within the bleachers, and the like.\n\n The techniques employed are almost universally admired, but the film is controversial due to its political context.\n\n Nevertheless, the film appears on many lists of the greatest films of all time, including \"Time\" magazine's \"All-Time 100 Movies.\"",
+    "Baghdad Jewish Arabic\nBaghdad Jewish Arabic is the Arabic dialect spoken by the Jews of Baghdad and other towns of Southern Iraq.\n\n This dialect differs from the dialect spoken by the Jews in Northern Iraq, such as Mosul and 'Ana.\n\n The Baghdadi and Northern dialects may be regarded as subvarieties of Judeo-Iraqi Arabic.\n\n As with most Judeo-Arab communities, there are likely to be few, if any, speakers of the Judeo-Iraqi Arabic dialects who still reside within Iraq.\n\n Rather these dialects have been maintained or are facing critical endangerment within respective Judeo-Iraqi diasporas, namely those of Israel and the United States.\n\n In 2014, the film \"Farewell Baghdad\" (Arabic: مطير الحمام; Hebrew: מפריח היונים, lit.\n\n \"The Dove Flyer\"), which is performed mostly in Jewish Baghdadi Arabic dialect, became the first film to be almost completely performed in Judeo-Iraqi Arabic.",
+    "The entries survey international cinema from silent films to the 1960s, including biographies of composers Giuseppe Verdi and author Émile Zola; several films about Lucrezia Borgia; and works by Jacques Feyder and Max Ophüls. Ophüls’s films span romantic, historical, and psychological drama, while his son Marcel made the documentary *The Sorrow and the Pity* about French collaboration during World War II. Other highlights include *The Earrings of",
+    "List of accolades received by The Hurt Locker\n\"The Hurt Locker\" is a 2009 Iraq War film written by Mark Boal and directed by Kathryn Bigelow.\n\n The film premiered on September 4, 2008 at the 65th Venice International Film Festival, where it competed with \"The Wrestler\" for the Golden Lion award.\n\n It was released in Italy by Warner Bros.\n\n Pictures on October 10, 2008.\n\n Following a showing at the 33rd Toronto International Film Festival, Summit Entertainment picked the film up for distribution in the United States.\n\n \"The Hurt Locker\" was released in the United States on June 26, 2009, with a limited release at four theaters in Los Angeles and New York City.\n\n The film grossed over $145,000 on its opening weekend, averaging around $36,000 per theater.\n\n The following weekend, beginning July 3, the film grossed over $131,000 at nine theaters.\n\n It held the highest per-screen average of any movie playing theatrically in the United States for the first two weeks of its release, gradually moving into the top 20 chart.\n\n Summit Entertainment then released \"The Hurt Locker\" to more screens.",
+    "The entries cover international cinema from silent films through the 1960s, including works about Verdi, Zola and Lucrezia Borgia, and films by Jacques Feyder, Max Ophüls and Mauritz Stiller. Later highlights include John Steiner’s Italian genre films; Ruggero Deodato’s disputed role directing *Hercules, Prisoner of Evil* and controversial *Cannibal Holocaust*; Stefan Ruzowitzky’s Oscar-winning *The Counterfeit",
+    "Matthew O'Neill (filmmaker)\nMatthew O'Neill is a documentary filmmaker best known for his work on the HBO film \"Baghdad ER\", for which he and co-creator Jon Alpert won three Emmy Awards.",
+    "The entries survey documentaries, films, TV, and film-related concepts: Los Angeles hip-hop, Aboriginal country music, Latin American politics, oceans, nerd culture, Iraqi life and war, Bougainville, education, disability, poetry, surfing, and family relationships. Featured works include *Gasland*, *Baghdad ER*, *War/Dance*, *First Life*, and *The Coconut Revolution*. Several received major awards or nominations. The material also profiles filmmaker Wayne Coles-Janess and defines",
+    "Baghdad ER\nBaghdad ER is a documentary released by HBO on May 21, 2006.\n\n It shows the Iraq war from the perspective of a military hospital in Baghdad.\n\n It has some relatively disturbing scenes in it (e.g. amputations), therefore the U.S. Army is officially warning that military personnel watching it could experience symptoms of post-traumatic stress disorder (PTSD).",
+    "In the Shadow of the Palms\nIn the Shadow of the Palms (2005) is a documentary produced and directed by the Australian filmmaker Wayne Coles-Janess.\n\n He filmed it in Iraq prior to, during and after the fall of Saddam Hussein after the United States invasion of 2003.\n\n An Arab-language film, it documents the changes in Iraqi society and the lives of ordinary Iraqis by focusing on a cross-section of individuals.",
+    "The entries cover diverse films and careers: crime drama *Deadfall* and its *Arsenal* follow-up; *Rogue One*’s rebels stealing Death Star plans; Mel Gibson, Nicolas Cage, James Garner and Tom Cruise filmographies; Everest disaster drama *Everest*; integration-themed sports films *Remember the Titans* and *McFarland, USA*; acclaimed *True Grit* and *The Hurt Locker*; espionage film *The Ipcress File*; Vietnam"
+   ]
+  },
+  {
+   "id": "645f8a11733434c5",
+   "gold": [
+    {
+     "sentence": "Cassiope is a genus of 9-12 small shrubby species in the family Ericaceae.",
+     "facts": {
+      "0.0": "Cassiope is a genus of 9 to 12 small shrubby species.",
+      "0.1": "Cassiope is in the family Ericaceae."
+     }
+    },
+    {
+     "sentence": "Deutzia ( or ) is a genus of about 60 species of flowering plants in the family Hydrangeaceae, native to eastern and central Asia (from the Himalayas east to Japan and the Philippines), and Central America and also Europe.",
+     "facts": {
+      "1.0": "Deutzia is a genus of about 60 species of flowering plants.",
+      "1.1": "Deutzia is in the family Hydrangeaceae.",
+      "1.2": "Deutzia is native to eastern Asia.",
+      "1.3": "Deutzia is native to central Asia.",
+      "1.4": "Deutzia is native from the Himalayas east to Japan and the Philippines.",
+      "1.5": "Deutzia is native to Central America.",
+      "1.6": "Deutzia is also native to Europe."
+     }
+    }
+   ],
+   "items": [
+    "Cassiope mertensiana\nCassiope mertensiana is a species of flowering plant known by the common names western moss heather and white mountain heather.",
+    "Cassytha\nCassytha is a genus of some two dozen species of obligately parasitic vines in the family Lauraceae.\n\n Superficially, and in some aspects of their ecology, they closely resemble plants in the unrelated genus \"Cuscuta\", the dodders.\n\n When fruit and flowers are absent in the field, the physical resemblance is so close that few people without technical training can tell them apart.\n\n In this respect and in their ecology the two genera present a spectacular example of convergent evolution.\n\n In its divergence from habits typical of the Lauraceae, \"Cassytha\" also presents examples of mosaic evolution",
+    "Cassiope lycopodioides\nCassiope lycopodioides, Haida Gwaii mountain-heather or clubmoss mountain heather, is a plant species native to southern Alaska, British Columbia, and the US State of Washington.\n\n It is found on rocky slopes in arctic and alpine tundra at elevations up to 2000 m.\n\n In Washington, it is reported only from King County.\n\n The specific epithet \"\"lycopodioides\"\" refers to the plant's superficial resemblance to some species of clubmoss \"(Lycopodium\" sensu lato).",
+    "Deutzia ningpoensis\nDeutzia ningpoensis is a shrub in the family Hydrangeaceae.\n\n The species is endemic to China.\n\n It grows to between 1 and 2.5 metres high and produces panicles of white flowers from May to July in its native range.",
+    "Butea\nButea is a genus of flowering plants belonging to the pea family, Fabaceae.\n\n It is sometimes considered to have only two species, \"B. monosperma\" and \"B. superba\", or is expanded to include four or five species.",
+    "Aizoaceae\nAizoaceae (the fig-marigold family) is a large family of dicotyledonous flowering plants containing 135 genera and about 1900 species.\n\n They are commonly known as stone plants or carpet weeds.\n\n They are often called vygies in South Africa and New Zealand.\n\n Species that resemble stones or pebbles are sometimes called mesembs.\n\n Several species are known as ice plants because of the glistening globular bladder cells covering their stems, fruit and leaves, \"... they sparkle like ice crystals.\"",
+    "Cassiope\nCassiope is a genus of 9-12 small shrubby species in the family Ericaceae.\n\n They are native to the Arctic and north temperate montane regions.\n\n The genus is named after Cassiopeia of Greek mythology.\n\n Common names, shared with several other similar related genera, include heather and heath.\n\n They have scale-like leaves lying against the stems, and produce solitary bell-shaped flowers in late spring.\n\n Though hardy, flowers can be damaged by late frosts.",
+    "Deutzia silvestrii\nDeutzia silvestrii is a plant species in the family Hydrangeaceae.",
+    "Deutzia\nDeutzia ( or ) is a genus of about 60 species of flowering plants in the family Hydrangeaceae, native to eastern and central Asia (from the Himalayas east to Japan and the Philippines), and Central America and also Europe.\n\n By far the highest species diversity is in China, where 50 species occur.",
+    "Dieffenbachia\nDieffenbachia is a genus of tropical flowering plants in the family Araceae.\n\n It is native to the New World Tropics from Mexico and the West Indies south to Argentina.\n\n Some species are widely cultivated as ornamental plants, especially as houseplants, and have become naturalized on a few tropical islands."
+   ]
+  },
+  {
+   "id": "2ad512c93f655afb",
+   "gold": [
+    {
+     "sentence": "MiMA, which stands for \"Middle of Manhattan\", is a mixed-use building located at 450 West 42nd Street between Dyer and 10th Avenues in the Hell's Kitchen neighborhood of Manhattan, New York City.",
+     "facts": {
+      "0.0": "MiMA stands for 'Middle of Manhattan'.",
+      "0.1": "MiMA is a mixed-use building.",
+      "0.2": "MiMA is located at 450 West 42nd Street.",
+      "0.3": "MiMA is located between Dyer and 10th Avenues.",
+      "0.4": "MiMA is located in the Hell's Kitchen neighborhood of Manhattan, New York City."
+     }
+    },
+    {
+     "sentence": " Ground was broken in 2007 and topping out occurred in early August 2010.",
+     "facts": {
+      "1.0": "Ground was broken on MiMA in 2007.",
+      "1.1": "Topping out of MiMA occurred in early August 2010."
+     }
+    },
+    {
+     "sentence": " It was designed by the Miami-based architecture firm of Arquitectonica, and has 43 floors of luxury rentals on floors 7 to 50, twelve floors of condominiums on floors 51 to 63, and a Yotel hotel on the lower levels.",
+     "facts": {
+      "2.0": "MiMA was designed by the Miami-based architecture firm of Arquitectonica.",
+      "2.1": "MiMA has 43 floors of luxury rentals on floors 7 to 50.",
+      "2.2": "MiMA has twelve floors of condominiums on floors 51 to 63.",
+      "2.3": "MiMA has a Yotel hotel on the lower levels."
+     }
+    },
+    {
+     "sentence": " The building's height is 204 meters (670 feet).",
+     "facts": {
+      "3.0": "The height of MiMA is 204 meters (670 feet)."
+     }
+    },
+    {
+     "sentence": "270 Park Avenue (also known as the JPMorgan Chase Tower and formerly the Union Carbide Building) is a high-rise office building located in Midtown Manhattan, New York City.",
+     "facts": {
+      "4.0": "270 Park Avenue is also known as the JPMorgan Chase Tower.",
+      "4.1": "270 Park Avenue was formerly known as the Union Carbide Building.",
+      "4.2": "270 Park Avenue is a high-rise office building.",
+      "4.3": "270 Park Avenue is located in Midtown Manhattan, New York City."
+     }
+    }
+   ],
+   "items": [
+    "1 New York Plaza\n1 New York Plaza is an office building in New York City's Financial District, built in 1969 at the intersection of South and Whitehall Streets.\n\n It is the southernmost of all Manhattan skyscrapers.",
+    "Random House Tower\nThe Random House Tower, also known as the Park Imperial Apartments, is a 52-story mixed-use tower in New York City, United States, that is used as the headquarters of book publisher Random House and a luxury apartment complex.\n\n The book publisher entrance is on Broadway and goes up to 27 floors, while the apartment complex entrance is on West 56th Street.",
+    "200 West Street\n200 West Street is the global headquarters of the Goldman Sachs investment banking firm.\n\n The building is a 749 ft , 44-story building located on West Street, between Vesey and Murray Streets in Lower Manhattan.\n\n It is adjacent to the World Financial Center and the Conrad Hotel, the Verizon Building to the east across West Street, and diagonally opposite the World Trade Center.\n\n It is the only office building in Battery Park City north of the World Financial Center.",
+    "MiMA (building)\nMiMA, which stands for \"Middle of Manhattan\", is a mixed-use building located at 450 West 42nd Street between Dyer and 10th Avenues in the Hell's Kitchen neighborhood of Manhattan, New York City.\n\n Ground was broken in 2007 and topping out occurred in early August 2010.\n\n It was designed by the Miami-based architecture firm of Arquitectonica, and has 43 floors of luxury rentals on floors 7 to 50, twelve floors of condominiums on floors 51 to 63, and a Yotel hotel on the lower levels.\n\n The building's height is 204 meters (670 feet).",
+    "Park Avenue House\nThe Park Avenue House is a high rise residential building located at 2305 Park Avenue in the Park Avenue Historic District in Downtown Detroit, Michigan.\n\n It was listed on the National Register of Historic Places in 1996.\n\n It should not be confused with the nearby Park Avenue Hotel, which was demolished in 2015.",
+    "888 7th Avenue\n888 7th Avenue is a 628 ft (191m) tall modern-style office skyscraper in Midtown Manhattan which was completed in 1969 and has 46 floors.\n\n Emery Roth & Sons designed the building, which is tied with Central Park Place for the 65th tallest building in New York City.\n\n It currently carries the Vornado Realty Trust corporate headquarters.\n\n Previously known as the Arlen Building, its namesake being the company responsible for its construction, Arlen Realty & Development Corporation.\n\n The Red Eye Grill is located in the building at street level.",
+    "245 Park Avenue\n245 Park Avenue (formerly American Tobacco Company Building, American Brands Building and Bear Stearns Building) is a 648-ft (198 m) tall skyscraper in New York City, New York.\n\n It was completed in 1967 and has 48 floors (1.7 million square feet).\n\n Shreve, Lamb and Harmon designed the building.\n\n The Building Owners and Managers Association awarded the 2000/2001 Pinnacle Award to 245 Park Avenue.\n\n The site used to be occupied by the second Grand Central Palace exhibition hall, which was demolished in 1964 to make way for 245 Park Avenue.",
+    "270 Park Avenue\n270 Park Avenue (also known as the JPMorgan Chase Tower and formerly the Union Carbide Building) is a high-rise office building located in Midtown Manhattan, New York City.\n\n It was designed by Natalie de Blois for Skidmore, Owings & Merrill.",
+    "383 Madison Avenue\n383 Madison Avenue is an office building owned and occupied by JP Morgan Chase in New York City on a full block bound by Madison Avenue and Vanderbilt Avenue between East 46th and 47th Streets.\n\n Formerly known as the Bear Stearns Building, it housed the world headquarters of the now-defunct Bear Stearns from the building's completion until Bear's collapse and sale to JPMorgan Chase in 2008.\n\n The building now houses the New York offices for J.P. Morgan's investment banking division, which formerly occupied 277 Park Avenue.\n\n Both 383 Madison and 277 Park are adjacent to JPMorgan Chase's world headquarters at 270 Park Avenue.",
+    "Transportation Building\nThe Transportation Building is a 44-story office building located at 225 Broadway on the corner of Barclay Street in the Civic Center neighborhood of Lower Manhattan in New York City.\n\n It also carries the address 2-4 Barclay Street.\n\n It was built in 1927 and was designed by the architecture firm of York & Sawyer, in the Renaissance Revival style, using setbacks common to skyscrapers built after the adoption of the 1916 Zoning Resolution.\n\n It sits across Barclay Street from the Woolworth Building."
+   ]
+  },
+  {
+   "id": "0d5da4df09034084",
+   "gold": [
+    {
+     "sentence": " It is most known through the 1989 single by Kathy Mattea, released in conjunction with her album \"Willow in the Wind\", though the song was first recorded and released on the 1987 Don Williams album \"Traces\" and also released in 1988 by Clark's husband on his album \"Old Friends\".",
+     "facts": {
+      "0.0": "This song is most known through the 1989 single by Kathy Mattea.",
+      "0.1": "The 1989 single by Kathy Mattea was released in conjunction with her album Willow in the Wind.",
+      "0.2": "This song was first recorded and released on the 1987 Don Williams album Traces.",
+      "0.3": "This song was also released in 1988 by Clark's husband on his album Old Friends."
+     }
+    },
+    {
+     "sentence": "This is a detailed discography for American country music artist Don Williams.",
+     "facts": {
+      "1.0": "The discography is detailed.",
+      "1.1": "The discography is for American country music artist Don Williams."
+     }
+    }
+   ],
+   "items": [
+    "Every Beat of My Heart (song)\n\"Every Beat of My Heart\" is a rhythm and blues song by Johnny Otis.\n\n It was first recorded in 1954 by his group, The Royals (later to be known as The Midnighters).\n\n In 1961 Gladys Knight & the Pips recorded the song for their debut single on the Vee-Jay label.\n\n Credited to The Pips, it was the first of eleven releases by the group to make it to number one on the R&B/soul chart.\n\n It was also the group's first top ten on the \"Billboard\" Hot 100.\n\n \"Every Beat of My Heart\" was first recorded for the Huntom label, who later sold the master to Vee-Jay.\n\n At the time of the song's release, The Pips were on the Fury label where they re-recorded the song without piano.\n\n In an unusual occurrence, the Fury recording of the song also made the top twenty on the R&B Sides chart and also made the Hot 100.",
+    "Hjärtats trakt\nHjärtats trakt was released on 20 April 1993 and is a compilation album from Swedish pop artist Per Gessle.\n\n The album includes songs taken from Gessle's solo albums \"Per Gessle\" and \"Scener\".\n\n It was also released under license by the British record company Pickwick and it is the only Gessle album released by another label than EMI.\n\n In 1998 the album was re-released by the Dutch record company Disky Communications B.V. which is a subsidiary of EMI.",
+    "Streets of Heaven (song)\n\"Streets of Heaven\" is a song co-written and recorded by Australian country music artist Sherrié Austin.\n\n It was released in June 2003 as the first single and title track from her album \"Streets of Heaven\".\n\n Austin wrote the song with Paul Duncan and Al Kasha.",
+    "Danny Shirley\nDanny Shirley (born August 12, 1956) is an American country music singer.\n\n He is best known as the lead singer of the country rock band Confederate Railroad, a role he has held since its formation in 1987.",
+    "Leave Them Boys Alone\n\"Leave Them Boys Alone\" is a song recorded by American country music artist Hank Williams Jr. with Waylon Jennings and Ernest Tubb.\n\n It was released in May 1983 as the second single from Williams' album \"Strong Stuff\".\n\n The song reached number 6 on the \"Billboard\" Hot Country Singles chart.\n\n It was written by Williams, Dean Dillon, Gary Stewart and Tanya Tucker.\n\n The song is notable for its combination of two singers associated with the outlaw movement with a country legend from the honky tonk days and golden age of the Grand Ole Opry.\n\n Outlaw singers like Williams and Jennings saw themselves as taking country music back to its raw, honky tonk roots, and recording an up tempo song with Tubb (who would never have received radio airplay in the late 1970s and early 80's) and reaching #6 was a slap in the face to the proponents of the country pop sound.\n\n The lyrics of the song, much like Williams' \"Family Tradition\" echo the sentiment that the outlaw singers and their current escapades were predated by the hard living honky tonkers of the 1950s such as Hank Williams, Sr.",
+    "Come from the Heart\n\"Come from the Heart\" is a country music song written by Richard Leigh and Susanna Clark and published in 1987.\n\n It is most known through the 1989 single by Kathy Mattea, released in conjunction with her album \"Willow in the Wind\", though the song was first recorded and released on the 1987 Don Williams album \"Traces\" and also released in 1988 by Clark's husband on his album \"Old Friends\".",
+    "Don Williams discography\nThis is a detailed discography for American country music artist Don Williams.",
+    "Hate to See Your Heart Break\n\"Hate to See Your Heart Break\" is a song by American rock band Paramore, recorded for their 2013 self-titled fourth album \"Paramore\".\n\n It was re-recorded to feature vocals by Joy Williams (formerly of The Civil Wars) for the 2014 deluxe edition of the album, the first time Paramore has collaborated with another artist or group on a studio recording.",
+    "Diamond Rio\nDiamond Rio is an American country and Christian country music band.\n\n The band was founded in 1982 as an attraction for the Opryland USA theme park in Nashville, Tennessee, and was originally known as the Grizzly River Boys, then the Tennessee River Boys.\n\n It was founded by Matt Davenport, Danny Gregg, and Ty Herndon, the last of whom became a solo artist in the mid-1990s.\n\n After undergoing several membership changes in its initial years, the band has consisted of the same six members since 1989: Marty Roe (lead vocals, rhythm guitar), Gene Johnson (mandolin, guitar, fiddle, tenor vocals), Jimmy Olander (lead guitar, Dobro, banjo), Brian Prout (drums), Dan Truman (keyboards, organ, synthesizer), and Dana Williams (bass guitar, baritone vocals).",
+    "Night Is Fallin' in My Heart\n\"Night Is Fallin' in My Heart\" is a song written by Dennis Linde.\n\n The song was first recorded by Country music artist J.P. Pennington for his 1991 album, \"Whatever It Takes\".\n\n It was later recorded and released as a single in October 1994 by American country music group Diamond Rio.\n\n It was the second single released from their third album, \"Love a Little Stronger\".\n\n It peaked at number 9 in the United States, and number 6 in Canada."
+   ]
+  },
+  {
+   "id": "4aceed1e3f696e15",
+   "gold": [
+    {
+     "sentence": "Janet Williams is an American soprano who has won international critical acclaim for performances at the Metropolitan Opera, Berlin Staatsoper, Paris Opera, Théâtre des Champs-Élysées, Opera de Lyon, Nice Opera, Théâtre Royal de la Monnaie, Opera Geneva, Frankfurt Opera, Cologne Opera, Leipzig Opera, San Francisco Opera, Washington Opera, Dallas Opera, and Michigan Opera Theatre as well as in concerts throughout Europe, North America, Canada, Israel and Japan with conductors including Vladimir Ashkenazy, Daniel Barenboim, Myung-whun Chung, Philippe Herreweghe, René Jacobs, Marek Janowski, Neeme Järvi, Raymond Leppard, Fabio Luisi, Sir Neville Marriner, Nicholas McGegan, Zubin Mehta, Kent Nagano, John Nelson, Donald Runnicles, Gerard Schwarz and Michael Tilson Thomas.",
+     "facts": {
+      "0.0": "Janet Williams is an American soprano.",
+      "0.1": "Janet Williams has won international critical acclaim for performances at the Metropolitan Opera, Berlin Staatsoper, Paris Opera, Theatre des Champs-Elysees, Opera de Lyon, Nice Opera, Theatre Royal de la Monnaie, Opera Geneva, Frankfurt Opera, Cologne Opera, Leipzig Opera, San Francisco Opera, Washington Opera, Dallas Opera, and Michigan Opera Theatre.",
+      "0.2": "Janet Williams has performed in concerts throughout Europe, North America, Canada, Israel and Japan.",
+      "0.3": "Janet Williams has performed with conductors including Vladimir Ashkenazy, Daniel Barenboim, Myung-whun Chung, Philippe Herreweghe, Rene Jacobs, Marek Janowski, Neeme Jarvi, Raymond Leppard, Fabio Luisi, Sir Neville Marriner, Nicholas McGegan, Zubin Mehta, Kent Nagano, John Nelson, Donald Runnicles, Gerard Schwarz and Michael Tilson Thomas."
+     }
+    },
+    {
+     "sentence": "Vladimir Davidovich Ashkenazy (Russian: Влади́мир Дави́дович Ашкена́зи , \"Vladimir Davidovich Ashkenazi\"; born 6 July 1937) is an internationally recognized solo pianist, chamber music performer, and conductor.",
+     "facts": {
+      "1.0": "Vladimir Davidovich Ashkenazy's Russian name is Vladimir Davidovich Ashkenazi.",
+      "1.1": "Vladimir Davidovich Ashkenazy was born on 6 July 1937.",
+      "1.2": "Vladimir Davidovich Ashkenazy is an internationally recognized solo pianist.",
+      "1.3": "Vladimir Davidovich Ashkenazy is an internationally recognized chamber music performer.",
+      "1.4": "Vladimir Davidovich Ashkenazy is an internationally recognized conductor."
+     }
+    },
+    {
+     "sentence": " His recordings have earned him five Grammy awards plus Iceland's Order of the Falcon.",
+     "facts": {
+      "2.0": "Vladimir Davidovich Ashkenazy's recordings have earned him five Grammy awards.",
+      "2.1": "Vladimir Davidovich Ashkenazy has received Iceland's Order of the Falcon."
+     }
+    }
+   ],
+   "items": [
+    "Elton John\nSir Elton Hercules John, (born Reginald Kenneth Dwight; 25 March 1947), is an English singer, pianist, and composer.\n\n He has worked with lyricist Bernie Taupin as his songwriting partner since 1967; they have collaborated on more than 30 albums to date.\n\n In his five-decade career Elton John has sold more than 300million records, making him one of the best-selling music artists in the world.\n\n He has more than fifty Top 40 hits, including seven consecutive No. 1 US albums, 58 \"Billboard\" Top 40 singles, 27 Top 10, four No. 2 and nine No. 1.\n\n For 31 consecutive years (1970–2000) he had at least one song in the \"Billboard\" Hot 100.\n\n His tribute single, re-penned in dedication to the late Princess Diana, \"Candle in the Wind 1997\" sold over 33million copies worldwide and is the best-selling single in the history of the UK and US singles charts.\n\n He has also composed music, produced records, and has occasionally acted in films.",
+    "The collection surveys music albums, artists, songs, and genres across rock, pop, metal, and electronic music. Highlights include Patty Griffin’s 2004 album *Impossible Dream*; Edward Sharpe and the Magnetic Zeros’ 2013 album and 2010 single; the White Stripes’ rise, breakup, acclaimed *Elephant* (2003), and Grammy-winning “Seven Nation Army”; and biographies of Meg White and Jack White. Other entries cover releases by Steve Winwood",
+    "Fred Hersch\nFred Hersch (born October 21, 1955) is an American jazz pianist and educator.\n\n He has performed solo and led his own groups, including the Pocket Orchestra consisting of piano, trumpet, voice, and percussion.\n\n He was the first person to play weeklong engagements as a solo pianist at the Village Vanguard in New York City.\n\n He has recorded more than 70 of his jazz compositions.\n\n Hersch has been nominated for several Grammy Awards, and, as of December 2014, had been on the Jazz Studies faculty of the New England Conservatory since 1980 (with breaks).",
+    "Janet Williams (soprano)\nJanet Williams is an American soprano who has won international critical acclaim for performances at the Metropolitan Opera, Berlin Staatsoper, Paris Opera, Théâtre des Champs-Élysées, Opera de Lyon, Nice Opera, Théâtre Royal de la Monnaie, Opera Geneva, Frankfurt Opera, Cologne Opera, Leipzig Opera, San Francisco Opera, Washington Opera, Dallas Opera, and Michigan Opera Theatre as well as in concerts throughout Europe, North America, Canada, Israel and Japan with conductors including Vladimir Ashkenazy, Daniel Barenboim, Myung-whun Chung, Philippe Herreweghe, René Jacobs, Marek Janowski, Neeme Järvi, Raymond Leppard, Fabio Luisi, Sir Neville Marriner, Nicholas McGegan, Zubin Mehta, Kent Nagano, John Nelson, Donald Runnicles, Gerard Schwarz and Michael Tilson Thomas.",
+    "Robert Glasper\nRobert Glasper (born April 6, 1978, in Houston, Texas) is an American pianist and record producer.\n\n He has been nominated for 6 Grammys, has won 3 Grammy Awards and is currently nominated for an Emmy Award.\n\n His 2012 album \"Black Radio\" won the Grammy Award for Best R&B Album at the 55th Grammy Awards.\n\n His 2014 album \"Black Radio 2\" won the Grammy Award for Best Traditional R&B Performance at the 56th Grammy Awards.\n\n The song \"These Walls\" from Kendrick Lamar's album \"To Pimp A Butterfly\" won Best Rap/Sung Collaboration at the 57th Grammy Awards, on which Glasper plays keys.\n\n The soundtrack for the film \"Miles Ahead\" won Best Soundtrack Compilation at the 58th Grammy Awards, for which Glasper was a producer.\n\n The song \"Letter To The Free\", written with Common, is nominated for an Emmy Award for Best Original Song in the Ava Duvernay documentary film \"13th\" (Netflix) at the 2017 Emmys.",
+    "Premio Lo Nuestro 2003 marked the awards’ 15th anniversary, hosted by Marco Antonio Regil and Adal Ramones. Juanes and Celia Cruz each won four awards; Pilar Montenegro won three. Highlights included a 15-year Latin-hits medley and Fania All-Stars’ tribute to Cruz. The remaining entries cover Madonna songs and videos; Gloria Trevi’s career and albums; Luis Miguel’s *Todos Los Romances*; chart histories and",
+    "Profiles span musicians across jazz, rock, metal, electronic, gospel, and pop. Robert Glasper has three Grammys; Carlos Santana, ten Grammys and a landmark Latin-rock fusion career. Daron Malakian (System of a Down), Gaahl (Gorgoroth), Roy Khan (Kamelot), Toshi (X Japan), and Rivermaya’s former guitarist Perfecto de Castro are noted rock figures. Relient K’s Matt Thiessen, electronic artists Greg Davis and",
+    "The Impeccable Mr. Wilson\nThe Impeccable Mr. Wilson is an album by American jazz pianist Teddy Wilson featuring performances recorded in 1956 for the Norgran label.",
+    "David M. Arden\nDavid M. Arden (born September 6, 1949) is an American concert pianist whose performing and recording career has focused predominantly on contemporary and American classical repertoire, including premiere performances and first recordings of piano works by a number of notable contemporary composers, such as Henryk Górecki, Luciano Berio, Earle Brown, Carson Kievman and David Lang.\n\n The Russian composer Galina Ustvolskaya named Arden's recording of her 12 Preludes for Piano as her preferred recording of that work.",
+    "The entries cover diverse music milestones: Marc Ribot’s 2005 Albert Ayler tribute, *Spiritual Unity*; comic duo Collins & Harlan, whose 1916 recording helped introduce “jas,” precursor to “jazz”; and reggae singer Cedric Myton, a Royal Rasses and Congos member whose voice features on *Humanity* and *Heart of the Congos*. They also describe early Dean Martin, Chico Hamilton, Shelly Manne, and Maynard"
+   ]
+  },
+  {
+   "id": "4c497d924623570e",
+   "gold": [
+    {
+     "sentence": "Liu Ailing (; born June 2, 1967) is a Chinese former footballer who played for the China national team at the 1991, 1995 and 1999 editions of the FIFA Women's World Cup.",
+     "facts": {
+      "0.0": "Liu Ailing was born on June 2, 1967.",
+      "0.1": "Liu Ailing is a Chinese former footballer.",
+      "0.2": "Liu Ailing played for the China national team at the 1991 FIFA Women's World Cup.",
+      "0.3": "Liu Ailing played for the China national team at the 1995 FIFA Women's World Cup.",
+      "0.4": "Liu Ailing played for the China national team at the 1999 FIFA Women's World Cup."
+     }
+    },
+    {
+     "sentence": "The FIFA Women's World Cup is an international football competition contested by the senior women's national teams of the members of \"Fédération Internationale de Football Association\" (FIFA), the sport's global governing body.",
+     "facts": {
+      "1.0": "The FIFA Women's World Cup is an international football competition.",
+      "1.1": "The FIFA Women's World Cup is contested by the senior women's national teams of the members of FIFA.",
+      "1.2": "FIFA stands for Fédération Internationale de Football Association.",
+      "1.3": "FIFA is the sport's global governing body."
+     }
+    }
+   ],
+   "items": [
+    "FIFA Women's World Cup\nThe FIFA Women's World Cup is an international football competition contested by the senior women's national teams of the members of \"Fédération Internationale de Football Association\" (FIFA), the sport's global governing body.\n\n The competition has been held every four years since 1991, when the inaugural tournament, then called the Women's World Championship, was held in China.",
+    "Luan Zhili\nLuan Zhili (born 6 January 1973) is a female discus thrower from PR China.\n\n She finished ninth at the 1997 World Championships and won the 1998 Asian Games, the latter in a personal best throw of 63.43 metres.\n\n The Chinese, and Asian, record is currently held by Xiao Yanling with 71.68 metres.",
+    "EAFF E-1 Football Championship\nEAFF E-1 Football Championship, known as the East Asian Football Championship from 2003 to 2010, and the EAFF East Asian Cup for the 2013 and 2015 editions, is a men's international football competition in East Asia for member nations of the East Asian Football Federation (EAFF).\n\n Before the EAFF was founded in 2002, the Dynasty Cup was held between the East Asian top four teams, and was regarded as the unofficial East Asian Championship.\n\n There is a separate competition for both men (first held in 2003) and women (first held in 2005).\n\n There was also a combined points competition in 2005, where the results of the men's and women's teams are added together (not including qualifiers).",
+    "Liu Ailing\nLiu Ailing (; born June 2, 1967) is a Chinese former footballer who played for the China national team at the 1991, 1995 and 1999 editions of the FIFA Women's World Cup.\n\n She won a silver medal at the 1996 Atlanta Olympics and participated at the 2000 Sydney Olympics.\n\n A playmaking midfielder, she played professional club football in Japan and the United States.",
+    "Gambia women's national football team\nThe Gambia women's national football team represents the Gambia in international football competition.\n\n The team, however, has not competed in a match recognised by FIFA, the sport's international governing body, despite that organised women's football has been played in the country since 1998.\n\n The Gambia has two youth teams, an under-17 side that has competed in FIFA U-17 Women's World Cup qualifiers, and an under-19 side that withdrew from regional qualifiers for an under-19 World Cup.\n\n The development of a national team faces challenges similar to those across Africa, although the national football association has four staff members focusing on women's football.",
+    "Women's football at the 2015 Pacific Games\nThe 2015 Pacific Games women's football tournament was the 4th edition of the Pacific Games women's football tournament.\n\n The women's football tournament was held in Port Moresby, Papua New Guinea between 6–16 July 2015 as part of the 2015 Pacific Games.\n\n The tournament was open to full women's national teams (unlike the men's tournament, which was age-restricted).",
+    "EAFF E-1 Football Championship (women)\nEAFF E-1 Football Championship is an international football competition in East Asia for national teams of the East Asian Football Federation (EAFF).\n\n The competition between women's national teams is held alongside men's competition.",
+    "Australia women's national soccer team\nThe Australian women's national soccer team represents Australia in international women's soccer at the senior level.\n\n The team is overseen by the governing body for soccer in Australia, Football Federation Australia (FFA), which is currently a member of the Asian Football Confederation (AFC) and the regional ASEAN Football Federation (AFF) since leaving the Oceania Football Confederation (OFC) in 2006.\n\n The team's official nickname is the Matildas (from the Australian folk song \"Waltzing Matilda\"), having been known as the Female Socceroos before 1995.\n\n The current team manager is Alen Stajcic.",
+    "Women's Nordic Football Championship\nWomen's Nordic Football Championship was an international football competition contested by the women's national football teams of the Nordic countries.\n\n The tournament was held annually between 1974 and 1982.\n\n Finland, Denmark and Sweden competed from the start, Norway joined the tournament in 1978.\n\n Iceland and Faroe Islands did not take part at the competition.",
+    "The collection surveys football cups, national teams, clubs and collegiate leagues, plus surfing and baseball events and the European Environment Agency. Highlights include the 92-club English EFL Cup; Trinidad and Tobago’s First Citizens Cup; East Asian men’s and women’s championships; the FIFA Women’s World Cup; and histories of women’s teams from Gambia, Togo and Australia. It also covers Nordic women’s championships, the 1929–30 Home Championship, Real Sociedad and its "
+   ]
+  },
+  {
+   "id": "722f20e7f0952126",
+   "gold": [
+    {
+     "sentence": "Julia Compton Moore (February 10, 1929April 18, 2004) was the wife of Lieutenant General (Ret.)",
+     "facts": {
+      "0.0": "Julia Compton Moore's dates are February 10, 1929 to April 18, 2004.",
+      "0.1": "Julia Compton Moore was the wife of Lieutenant General (Ret.)."
+     }
+    },
+    {
+     "sentence": " Hal Moore, a United States Army officer.",
+     "facts": {
+      "1.0": "Hal Moore is a United States Army officer."
+     }
+    },
+    {
+     "sentence": "Harold Gregory \"Hal\" Moore, Jr. (February 13, 1922 – February 10, 2017) was a United States Army lieutenant general and author.",
+     "facts": {
+      "2.0": "Harold Gregory \"Hal\" Moore, Jr. lived from February 13, 1922 to February 10, 2017.",
+      "2.1": "Harold Gregory \"Hal\" Moore, Jr. was a United States Army lieutenant general.",
+      "2.2": "Harold Gregory \"Hal\" Moore, Jr. was an author."
+     }
+    },
+    {
+     "sentence": " He was a recipient of the Distinguished Service Cross, which is the U.S. military's second highest decoration for valor, and was the first of his West Point class (1945) to be promoted to brigadier general, major general, and lieutenant general.",
+     "facts": {
+      "3.0": "Hal Moore was a recipient of the Distinguished Service Cross.",
+      "3.1": "The Distinguished Service Cross is the U.S. military's second highest decoration for valor.",
+      "3.2": "Hal Moore was the first of his West Point class (1945) to be promoted to brigadier general.",
+      "3.3": "Hal Moore was the first of his West Point class (1945) to be promoted to major general.",
+      "3.4": "Hal Moore was the first of his West Point class (1945) to be promoted to lieutenant general."
+     }
+    }
+   ],
+   "items": [
+    "Wayne W. Lambert\nWayne W. Lambert (born 1936) was an Air force Brigadier General (United States).\n\n He attended the United States Military Academy at West Point, New York, after already having served a year in the US Army.\n\n Lambert graduated from the Academy in 1959 and was commissioned a 2nd Lieutenant in the USAF that same year.\n\n He trained as a bomber pilot, receiving his Aviator badge in 1960.\n\n He has logged over 5,800 flying hours with the US Air Force.\n\n A seasoned combat veteran, Lambert flew over 225 combat missions in South East Asia as a B-52 crew member.\n\n He was awarded the Distinguished Flying Cross (United States) and received 10 awards of the Air Medal for his service during the Vietnamese War.\n\n After serving in a succession of lesser command positions, Lambert was promoted to the rank of Brigadier General in 1983, assuming command of the former Strategic Air Command’s 7th Air Division, headquartered then at Ramstein Air Base in West Germany, and overseeing SAC operations throughout the European theater.\n\n The Brigadier General retired from the US Air Force in 1989.",
+    "Benedict Arnold\nBenedict Arnold (January 14, 1741 [O.S. January 3, 1740] June 14, 1801) was a general during the American Revolutionary War, who fought for the American Continental Army, and later defected to the British Army.\n\n While a general on the American side, he obtained command of the fortifications at West Point, New York (which after 1802 would become the site of the U.S. Military Academy), overlooking the cliffs at the Hudson River (upriver from British-occupied New York City), and planned to surrender them to British forces.\n\n This plan was exposed in September 1780.\n\n He was commissioned into the British Army as a brigadier general.",
+    "Nadja West\nNadja Y. West (born 1961) is a United States Army lieutenant general and the 44th U.S. Army Surgeon General and Commanding General of the U.S. Army Medical Command.\n\n West is the first black Army Surgeon General, and was the first black female, active-duty, major general and the first black female major general in Army Medicine.\n\n West is also the first Army black female lieutenant general.\n\n She is the highest ranking female to have graduated from the United States Military Academy.\n\n She received the Army Distinguished Service Medal, the Defense Superior Service Medal, the Legion of Merit, and others.",
+    "Distinguished Service Cross (United States)\nThe Distinguished Service Cross is the second highest military award that can be given to a member of the United States Army (and previously, the United States Army Air Forces and the United States Air Force), for extreme gallantry and risk of life in actual combat with an armed enemy force.\n\n Actions that merit the Distinguished Service Cross must be of such a high degree that they are above those required for all other U.S. combat decorations but do not meet the criteria for the Medal of Honor.\n\n The Distinguished Service Cross is equivalent to the Navy Cross (Navy and Marine Corps), the Air Force Cross (Air Force), and the Coast Guard Cross (Coast Guard).",
+    "Richard E. Cavazos\nRichard Edward Cavazos (born January 31, 1929), a Korean War recipient of the Distinguished Service Cross as a first lieutenant, who advanced in rank to become the United States Army's first Hispanic four-star general.\n\n During the Vietnam War, as a lieutenant colonel, Cavazos was awarded a second Distinguished Service Cross.\n\n In 1976, Cavazos became the first Mexican American to reach the rank of brigadier general in the U.S. Army.\n\n Cavazos served with great distinction for thirty-three years, with his final command as head of the U.S. Army Forces Command.",
+    "Julia Compton Moore\nJulia Compton Moore (February 10, 1929April 18, 2004) was the wife of Lieutenant General (Ret.)\n\n Hal Moore, a United States Army officer.\n\n Her efforts and complaints in the aftermath of the Battle of Ia Drang prompted the U.S. Army to set up survivor support networks and casualty notification teams consisting of uniformed officers, which are still in use.",
+    "Charles Pede\nLieutenant General Charles N. Pede is a military lawyer who currently serves as the 40th Judge Advocate General of the United States Army.\n\n General Pede was promoted from the rank of Brigadier General to the rank of Lieutenant General, bypassing the rank of Major General on July 26, 2017.",
+    "Hal Moore\nHarold Gregory \"Hal\" Moore, Jr. (February 13, 1922 – February 10, 2017) was a United States Army lieutenant general and author.\n\n He was a recipient of the Distinguished Service Cross, which is the U.S. military's second highest decoration for valor, and was the first of his West Point class (1945) to be promoted to brigadier general, major general, and lieutenant general.",
+    "Myron F. Diduryk\nMyron F. Diduryk (July 15, 1938 to April 24, 1970) was a Ukrainian-American United States Army Major, who played a key role as an infantry company commander in the Battle of Ia Drang, the first major battle of the Vietnam War.\n\n His exploits in that battle were described by Hal Moore in, \"We Were Soldiers Once and Young\".\n\n Moore said that Diduryk was, “… the finest battlefield company commander I had ever seen, bar none.”\n\n Diduryk was killed in action on his second tour in Vietnam.",
+    "Major general (United States)\nIn the United States Army, United States Marine Corps, and United States Air Force, major general is a two-star general-officer rank, with the pay grade of O-8.\n\n Major general ranks above brigadier general and below lieutenant general.\n\n A major general typically commands division-sized units of 10,000 to 15,000 soldiers.\n\n Major general is equivalent to the two-star rank of rear admiral in the United States Navy and United States Coast Guard and is the highest permanent rank during peacetime in the uniformed services.\n\n (The higher ranks are temporary ranks linked to specific positions, although virtually all officers who have been promoted to those ranks are approved to retire at their highest earned rank.)"
+   ]
+  },
+  {
+   "id": "103c2497f98fab17",
+   "gold": [
+    {
+     "sentence": " Editors are based in Silver Spring, Maryland and Seoul, Korea.",
+     "facts": {
+      "0.0": "Editors are based in Silver Spring, Maryland.",
+      "0.1": "Editors are based in Seoul, Korea."
+     }
+    },
+    {
+     "sentence": " The magazine is headquartered in Baltimore, Maryland.",
+     "facts": {
+      "1.0": "The magazine is headquartered in Baltimore, Maryland."
+     }
+    }
+   ],
+   "items": [
+    "Adventist World\nAdventist World is a monthly international magazine of the Seventh-day Adventist Church published by the Review and Herald Publishing Association.\n\n Editors are based in Silver Spring, Maryland and Seoul, Korea.",
+    "The entries cover diverse schools, hospitals, and community institutions. They include Jesuit and other schools in the U.S., Sweden, India, Nepal, Belize, and Japan-related programs in the U.S.; several Indian schools are fully residential, while Japanese supplementary schools serve expatriate children. U.S. district profiles describe grade structures and administrators. Health organizations include historic and regional hospitals, Adventist HealthCare, and Common Hope’s support for Guatemalan children. Other sites include St. John Cemetery",
+    "Adventist HealthCare\nAdventist HealthCare is a not-for-profit health services organization based in Gaithersburg, Maryland that employs more than 6,200 people and provides healthcare for more than 400,000 individuals in the community each year.\n\n The primary service area for Adventist HealthCare is the Washington, D.C. metropolitan area.\n\n Despite similar names, it is not a part of the California-based Adventist Health, or the Florida-based Adventist Health System.",
+    "Adventist Review\nThe Adventist Review is the official newsmagazine of the Seventh-day Adventist Church.\n\n Commonly known as the Review, it is published weekly by the Review and Herald Publishing Association.\n\n The Review and Herald also publishes a sister magazine, \"Adventist World\".\n\n The magazine is headquartered in Silver Spring, Maryland.\n\n The current editor of the \"Adventist Review\" is Bill Knott.\n\n The magazine currently has nearly 30,000 paying subscribers.\n\n Its library reference number is OCLC 9572173  .",
+    "Diva (magazine)\nDIVA is a leading lesbian magazine in the United Kingdom, published monthly.\n\n It was launched in March 1994 by Millivres Ltd, under the editorship of Frances Williams and is now published by Twin Media Group, which is owned by Silke Bader and Linda Riley.\n\n Silke Bader is also the publisher of Curve magazine in the USA and LOTL in Australia, and Linda Riley runs the European Diversity Awards and is the former publisher of g3 magazine in the UK.",
+    "Hänt Bild (Swedish weekly, 2003–, Aller); Hänt Extra (Swedish celebrity/youth weekly); Girlfriends (lesbian culture, 1993–2006); Rap-Up (hip-hop/R&B quarterly, 2001–); Sculptural Pursuit (quarterly art); DIVA (UK lesbian monthly, 1994–); Elle (global fashion/lifestyle, founded 1945); Girls’ Life (US teen, 1994–",
+    "The entries cover magazines, journalists, writers, and the meaning of “review.” Children’s titles include bimonthly Jack and Jill and National Wildlife Federation nature magazines Ranger Rick, Ranger Rick Jr., and Ranger Rick Cub. Women’s magazines include Macedonian Tea Moderna and Danish ALT for Damerne. Other publications range from Adventist Review and conservative National Review to the Human Life Review, Henry James Review, and defunct American Mercury and Insurgent49. Profiles include Rosie O’Donnell",
+    "Seventh-day Adventist education\nThe Seventh-day Adventist educational system is part of the Seventh-day Adventist Church and overseen by the General Conference of Seventh-day Adventist located in Silver Spring, Maryland.The educational system is the second-largest Christian school-system in the world, after the Roman Catholic system.",
+    "Girls' Life (magazine)\nGirls' Life is an American teen magazine.\n\n It was launched in 1994 by Monarch Services.\n\n The magazine is headquartered in Baltimore, Maryland.",
+    "Girlfriends (magazine)\nGirlfriends was a women's magazine that provided critical coverage of culture, entertainment and world events from a lesbian perspective.\n\n It was founded by Jacob Anderson-Minshall, Diane Anderson-Minshall and Heather Findlay.\n\n It also offered relationship, health and travel advice.\n\n Published monthly from San Francisco since 1993, it was distributed nationwide by Disticor.\n\n It had the same publisher as lesbian erotica magazine \"On Our Backs\", but distanced itself from its pornographic counterpart by refusing to carry sexual ads.\n\n \"Girlfriends\" magazine ceased publication in 2006."
+   ]
+  },
+  {
+   "id": "72fcd5967b7ddd28",
+   "gold": [
+    {
+     "sentence": "While studying at the University of Michigan, he played with visiting musicians such as Dizzy Gillespie, Miles Davis, Thad Jones and Billy Mitchell, before going on to play with Sonny Stitt, Count Basie and Al McKibbon, Cannonball Adderley, Percy Heath, Philly Joe Jones, Lou Donaldson, Donald Byrd, Kenny Dorham and Zoot Sims.",
+     "facts": {
+      "0.0": "The musician studied at the University of Michigan.",
+      "0.1": "While studying at the University of Michigan, the musician played with visiting musician Dizzy Gillespie.",
+      "0.2": "While studying at the University of Michigan, the musician played with visiting musician Miles Davis.",
+      "0.3": "While studying at the University of Michigan, the musician played with visiting musician Thad Jones.",
+      "0.4": "While studying at the University of Michigan, the musician played with visiting musician Billy Mitchell.",
+      "0.5": "After that, the musician played with Sonny Stitt, Count Basie and Al McKibbon.",
+      "0.6": "After that, the musician played with Cannonball Adderley, Percy Heath, Philly Joe Jones and Lou Donaldson.",
+      "0.7": "After that, the musician played with Donald Byrd, Kenny Dorham and Zoot Sims."
+     }
+    },
+    {
+     "sentence": "Miles Dewey Davis III (May 26, 1926September 28, 1991) was an American jazz trumpeter, bandleader, and composer.",
+     "facts": {
+      "1.0": "Miles Dewey Davis III was born on May 26, 1926.",
+      "1.1": "Miles Dewey Davis III died on September 28, 1991.",
+      "1.2": "Miles Dewey Davis III was an American jazz trumpeter.",
+      "1.3": "Miles Dewey Davis III was an American jazz bandleader.",
+      "1.4": "Miles Dewey Davis III was an American jazz composer."
+     }
+    }
+   ],
+   "items": [
+    "Don Ellis\nDonald Johnson Ellis (July 25, 1934 – December 17, 1978) was an American jazz trumpeter, drummer, composer, and bandleader.\n\n He is best known for his extensive musical experimentation, particularly in the area of time signatures. Later in his life he worked as a film composer, contributing a score to 1971's \"The French Connection\" and 1973's \"The Seven-Ups\".",
+    "Louis Smith (musician)\nWhile studying at the University of Michigan, he played with visiting musicians such as Dizzy Gillespie, Miles Davis, Thad Jones and Billy Mitchell, before going on to play with Sonny Stitt, Count Basie and Al McKibbon, Cannonball Adderley, Percy Heath, Philly Joe Jones, Lou Donaldson, Donald Byrd, Kenny Dorham and Zoot Sims.",
+    "Paul Smith (defensive end)\nPaul Edward Smith (August 13, 1945 – March 14, 2000) was a collegiate and professional American football defensive end.\n\n Smith was selected in the 1968 Common Draft by the American Football League's Denver Broncos and played in the National Football League for the Broncos and Washington Redskins.",
+    "Thad Jones\nThaddeus Joseph Jones (March 28, 1923 – August 20, 1986) was an American jazz trumpeter, composer, and bandleader who has been called \"one of the all-time greatest jazz trumpet soloists.\"",
+    "George Albert Smith\nGeorge Albert Smith Sr. (April 4, 1870 – April 4, 1951) was an American religious leader who served as the eighth president of The Church of Jesus Christ of Latter-day Saints (LDS Church).",
+    "Here Comes Louis Smith\nHere Comes Louis Smith is the debut album by American trumpeter Louis Smith recorded in 1958 and released on the Blue Note label.\n\n Originally recorded for the Transition label, the company went out of business shortly afterwards and before the recording could be released.\n\n The album masters were acquired by Blue Note's Alfred Lion.",
+    "Count Basie\nWilliam James \"Count\" Basie (August 21, 1904 – April 26, 1984) was an American jazz pianist, organist, bandleader, and composer.\n\n His mother taught him to play the piano and he started performing in his teens.\n\n Dropping out of school, he learned to operate lights for vaudeville and to improvise accompaniment for silent films at a local movie theater in his home town of Red Bank, New Jersey.\n\n By age 16, he increasingly played jazz piano at parties, resorts and other venues.\n\n In 1924, he went to Harlem, where his performing career expanded; he toured with groups to the major jazz cities of Chicago, St. Louis and Kansas City.\n\n In 1929 he joined Bennie Moten's band in Kansas City, and played with them until Moten's death in 1935.",
+    "Miles Davis\nMiles Dewey Davis III (May 26, 1926September 28, 1991) was an American jazz trumpeter, bandleader, and composer.\n\n He is among the most influential and acclaimed figures in the history of jazz and 20th century music.\n\n Davis adopted a variety of musical directions in his five-decade career which kept him at the forefront of a number of major stylistic developments in jazz.",
+    "Marty Marsala\nMarty Marsala (2 April 1909 – 27 April 1975) was an American jazz trumpeter born in Chicago, perhaps best known for working from 1926-1946 with his brother Joe Marsala in a big band in New York City and Chicago.\n\n He had also toured with various artists, such as Chico Marx and Miff Mole, to name a few.\n\n During the 1940s Marsala was a celebrated West Coast jazz trumpeter, commuting back and forth from Chicago to San Francisco frequently.\n\n In various club settings Marsala shared stages with Earl Hines and Sidney Bechet.",
+    "Louis Smith (gymnast)\nLouis Antoine Smith, MBE (born 22 April 1989) is a British artistic gymnast.\n\n He received a bronze medal and a silver medal on the pommel horse at the 2008 Beijing Olympics and the 2012 London Olympics respectively, with the former marking the first time a British gymnast had placed in an Olympic event since 1928.\n\n He followed this up with a second consecutive silver medal on the pommel horse at the 2016 Rio Olympics, finishing behind teammate Max Whitlock.\n\n Smith was part of the Great Britain team that took the bronze in the men's artistic team all-around at the 2012 London Olympics.\n\n He is the only British gymnast to win Olympic medals in three separate Games.\n\n In 2015 he became the European champion on Pommel Horse."
+   ]
+  },
+  {
+   "id": "8a06881e876e1589",
+   "gold": [
+    {
+     "sentence": "Rosario Castellanos Figueroa (] ; 25 May 1925 – 7 August 1974) was a Mexican poet and author.",
+     "facts": {
+      "0.0": "Rosario Castellanos Figueroa was born on 25 May 1925.",
+      "0.1": "Rosario Castellanos Figueroa died on 7 August 1974.",
+      "0.2": "Rosario Castellanos Figueroa was a Mexican poet.",
+      "0.3": "Rosario Castellanos Figueroa was a Mexican author."
+     }
+    },
+    {
+     "sentence": "Lucy Maud Montgomery {'1': \", '2': \", '3': \", '4': \"} (November 30, 1874 – April 24, 1942) published as L.M. Montgomery, was a Canadian author best known for a series of novels beginning in 1908 with \"Anne of Green Gables\".",
+     "facts": {
+      "1.0": "Lucy Maud Montgomery was born on November 30, 1874.",
+      "1.1": "Lucy Maud Montgomery died on April 24, 1942.",
+      "1.2": "Lucy Maud Montgomery published as L.M. Montgomery.",
+      "1.3": "Lucy Maud Montgomery was a Canadian author.",
+      "1.4": "Lucy Maud Montgomery is best known for a series of novels.",
+      "1.5": "The series of novels began in 1908 with Anne of Green Gables."
+     }
+    }
+   ],
+   "items": [
+    "Rosario Castellanos\nRosario Castellanos Figueroa (] ; 25 May 1925 – 7 August 1974) was a Mexican poet and author.\n\n Along with the other members of the Generation of 1950 (the poets who wrote following the Second World War, influenced by César Vallejo and others), she was one of Mexico's most important literary voices in the last century.\n\n Throughout her life, she wrote eloquently about issues of cultural and gender oppression, and her work has influenced feminist theory and cultural studies.\n\n Though she died young, she opened the door of Mexican literature to women, and left a legacy that still resonates today.",
+    "The entries profile women in literature, theatre, music, visual art, business, and activism. Highlights include Pearson CEO Marjorie Scardino, the first woman to lead a FTSE 100 company; Nobel-winning short-story writer Alice Munro; actress Elizabeth Taylor; pioneering Restoration writer Aphra Behn; and Aboriginal activist Mum Shirl. They also cover Lucy Maud Montgomery’s Anne novels, Jean Webster’s *When Patty Went to College*, Margaret Landon’s *Anna and the King",
+    "Rea Wilmshurst\nRea Wilmshurst (August 10, 1941 – March 22, 1996) graduated from the University of Toronto with a degree in English in 1970.\n\n She went on to edit eight volumes of Lucy Maud Montgomery's previously unknown short stories and publish them through McClelland & Stewart.\n\n In 1985, she published a bibliography of Montgomery's short stories, poems, and articles.\n\n Wilmshurst was also an editorial assistant for the projects that compiled the Collected Works of John Stuart Mill and the Collected Works of Samuel Taylor Coleridge.",
+    "L.M. Montgomery's Anne of Green Gables\nL.M. Montgomery's Anne of Green Gables is a Canadian television film based on Lucy Maud Montgomery's novel of the same name.\n\n It first aired on YTV on February 15, 2016 and starred Ella Ballentine, Martin Sheen and Sara Botsford.\n\n Montgomery's granddaughter, Kate Macdonald Butler, was one of the film's executive producers.\n\n The film's world premiere was held February 2, 2016 at the Canadian Museum of History.",
+    "Lucy Maud Montgomery\nLucy Maud Montgomery {'1': \", '2': \", '3': \", '4': \"} (November 30, 1874 – April 24, 1942) published as L.M. Montgomery, was a Canadian author best known for a series of novels beginning in 1908 with \"Anne of Green Gables\".\n\n The book was an immediate success.\n\n The central character, Anne Shirley, an orphaned girl, made Montgomery famous in her lifetime and gave her an international following.",
+    "Anne of Ingleside\nAnne of Ingleside is a children's novel by Canadian author Lucy Maud Montgomery.\n\n It was first published in July 1939 by McClelland and Stewart (Toronto) and the Frederick A. Stokes Company (New York).\n\n It is the tenth of eleven books that feature the character of Anne Shirley, and Montgomery's final published novel.\n\n (Two novels that occur later in the \"Anne\" chronology were actually published years earlier.\n\n As well, the short story collection \"The Blythes Are Quoted\", written in 1941/42, but not published until 2009, concludes the Anne chronology.)",
+    "Alice Munro\nAlice Ann Munro ( , \"née\" Laidlaw ; born 10 July 1931) is a Canadian short story writer and Nobel Prize winner.\n\n Munro's work has been described as having revolutionized the architecture of short stories, especially in its tendency to move forward and backward in time.\n\n Her stories have been said to \"embed more than announce, reveal more than parade.\"",
+    "Emily's Quest\nEmily's Quest is a novel and the last of the \"Emily\" trilogy by Lucy Maud Montgomery.\n\n After finishing \"Emily Climbs\", Montgomery suspended writing \"Emily's Quest\" and published \"The Blue Castle\"; she resumed writing and published in 1927.",
+    "Anne of Green Gables\nAnne of Green Gables is a 1908 novel by Canadian author Lucy Maud Montgomery (published as L. M. Montgomery).\n\n Written for all ages, it has been considered a children's novel since the mid-twentieth century.\n\n It recounts the adventures of Anne Shirley, an 11-year-old orphan girl who is mistakenly sent to Matthew and Marilla Cuthbert, a middle-aged brother and sister who had intended to adopt a boy to help them on their farm in the fictional town of Avonlea on Prince Edward Island.\n\n The novel recounts how Anne makes her way with the Cuthberts, in school, and within the town.",
+    "Anne Shirley\nAnne Shirley is a fictional character introduced in the 1908 novel \"Anne of Green Gables\" by Lucy Maud Montgomery.\n\n Montgomery wrote in her journal that the idea for Anne's story came from relatives who, planning to adopt an orphaned boy, received a girl instead.\n\n Anne Shirley's appearance was inspired by a photograph which Montgomery clipped from the Metropolitan Magazine and kept, unaware of the model's identity as the 1900s Gibson Girl Evelyn Nesbit."
+   ]
+  },
+  {
+   "id": "f00846acd0abf3c7",
+   "gold": [
+    {
+     "sentence": " It is known for producing the long-running series \"Tom Goes to the Mayor\", \"Nathan For You\", \"Tim and Eric Awesome Show, Great Job!",
+     "facts": {
+      "0.0": "The entity referred to as 'It' is known for producing the long-running series 'Tom Goes to the Mayor'.",
+      "0.1": "The entity referred to as 'It' is known for producing the long-running series 'Nathan For You'.",
+      "0.2": "The entity referred to as 'It' is known for producing the long-running series 'Tim and Eric Awesome Show, Great Job!'."
+     }
+    },
+    {
+     "sentence": "\" and \"Check It Out!",
+     "facts": {
+      "1.0": "'Check It Out!' is a series title."
+     }
+    },
+    {
+     "sentence": " with Dr. Steve Brule\".",
+     "facts": {
+      "2.0": "The series title is 'Check It Out! with Dr. Steve Brule'."
+     }
+    },
+    {
+     "sentence": "Check It Out!",
+     "facts": {
+      "3.0": "Check It Out! is a title."
+     }
+    },
+    {
+     "sentence": " with Dr. Steve Brule is an American sketch comedy television series that is a spin-off of \"Tim and Eric Awesome Show, Great Job!",
+     "facts": {
+      "4.0": "Check It Out! with Dr. Steve Brule is an American sketch comedy television series.",
+      "4.1": "Check It Out! with Dr. Steve Brule is a spin-off of 'Tim and Eric Awesome Show, Great Job!'."
+     }
+    }
+   ],
+   "items": [
+    "Bagboy (TV special)\nBagboy is a 2015 American television special produced for Adult Swim, and aired on February 21, 2015, to positive critical reception.\n\n Written and directed by Tim Heidecker and Eric Wareheim for Abso Lutely Productions and John C. Reilly, the special is a fictional sitcom pilot in the universe of \"Tim and Eric Awesome Show, Great Job!\n\n\", written by and starring Reilly's recurring \"Tim and Eric\" character Dr. Steve Brule.\n\n This is the second \"Tim and Eric\" spin-off to feature the Dr. Steve Brule character after \"Check it Out!\n\n with Dr. Steve Brule\".",
+    "Upright Citizens Brigade (TV series)\nUpright Citizens Brigade is an American sketch comedy television series that premiered on August 19, 1998 on Comedy Central.\n\n The show aired for three seasons with each season consisting of ten episodes.\n\n The series featured four members of Upright Citizens Brigade, an improvisational sketch comedy group.\n\n The cast included Matt Besser, Amy Poehler, Ian Roberts, and Matt Walsh.\n\n The cast would later reunite for another series of a similar format that premiered in 2016 on Seeso.",
+    "Abso Lutely Productions\nAbso Lutely Productions is a film and television production company owned by actor and producers Tim Heidecker, Eric Wareheim and producer Dave Kneebone.\n\n It is known for producing the long-running series \"Tom Goes to the Mayor\", \"Nathan For You\", \"Tim and Eric Awesome Show, Great Job!\n\n\" and \"Check It Out!\n\n with Dr. Steve Brule\".",
+    "Check It Out! with Dr. Steve Brule\nCheck It Out!\n\n with Dr. Steve Brule is an American sketch comedy television series that is a spin-off of \"Tim and Eric Awesome Show, Great Job!\n\n\" starring John C. Reilly as Dr. Steve Brule.\n\n The series premiered on Cartoon Network's late night programming block, Adult Swim, on May 16, 2010.\n\n The program follows Brule as he examines different facets of living.\n\n His severe naivete and social awkwardness generally land him in embarrassing situations, though he largely remains ignorant of any embarrassment he's causing himself.\n\n As the series progresses, he reveals shocking and sometimes horrifying details about his past and personal life.",
+    "David Jablin\nDavid Jablin is an award winning comedy producer and director and one of the pioneers of original television programming for Pay Television.\n\n In 1981 he created and produced the innovative comedy anthology series \"Likely Stories\" for HBO/Cinemax, which featured the directing debuts of Rob Reiner, Danny DeVito, Christopher Guest, and Billy Crystal.",
+    "And There's More\nAnd There's More is a comedy sketch show starring Jimmy Cricket produced by Central Independent Television for ITV from 1985 till 1988.",
+    "Graph query row:\nseries: Check It Out! with Dr. Steve Brule\nrelationship: CREATED_BY\nconnected_entity: Abso Lutely Productions\nstars_john_c_reilly: False",
+    "In Living Color\nIn Living Color is an American sketch comedy television series that originally ran on Fox from April 15, 1990, to May 19, 1994.\n\n Brothers Keenen and Damon Wayans created, wrote and starred in the program.\n\n The show was produced by Ivory Way Productions in association with 20th Century Fox Television and was taped at stage 7 at the Fox Television Center on Sunset Boulevard in Hollywood, California.\n\n The title of the series was inspired by the NBC announcement of broadcasts being presented \"in living color\" during the 1960s, prior to mainstream color television.\n\n It also refers to the fact that most of the show's cast were black, unlike other sketch comedy shows such as \"Saturday Night Live\" whose casts are mostly white.\n\n It was controversial due to the Wayans' decision to portray African-American humor from the ghetto in a time when mainstream American tastes regarding black comedy had been set by more upscale shows such as \"The Cosby Show\", causing an eventual feud for control between Fox executives and the Wayans.",
+    "Friends of the People\nFriends of the People is an American sketch comedy television series.\n\n It was slated to premiere on TruTV in summer 2014, but was pushed to October 28, 2014, as part of the network's shift in their programming direction.\n\n Many of the cast members (Jennifer Bartels, Jermaine Fowler, and Lil Rel Howery) were originally reported to be cast members of a planned revival of In Living Color which never materialized.\n\n The show's first season consists of 10 episodes.\n\n This makes it the network's first sketch comedy show.\n\n The series holds a TV-14 rating, though select episodes are rated TV-MA--also a first for the truTV network.",
+    "Dave Kneebone\nDave Kneebone is an American producer.\n\n Along with Eric Wareheim and Tim Heidecker he runs Abso Lutely Productions which produces a variety of television and films.\n\n His role has been described as the business chief and \"straight man\" at Abso Lutely.\n\n Kneebone has worked as a producer on a variety of television shows including \"Comedy Bang!\n\n Bang!\n\n\", \"Nathan for You\", and \"Tim and Eric Awesome Show, Great Job!\n\n\".\n\n He is also listed a producer on the feature film \"Tim and Eric's Billion Dollar Movie\"."
+   ]
+  }
+ ]
+}

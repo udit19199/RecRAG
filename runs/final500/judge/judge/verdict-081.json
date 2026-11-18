@@ -1,0 +1,56 @@
+[
+{"id": "6d6fc6155f2262db", "facts": [
+ {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "The pastor went on to explain that Jesus brought more positivity than anyone"}]},
+ {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "which is why it's important to keep faith aligned with that practice of positive thinking."}]},
+ {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 8, "quote": "Roumie said that building a habit of prayer"}, {"item": 8, "quote": "As you consistently tap into that habit, you find your relationship with Jesus growing deeper and deeper, just automatically."}]},
+ {"fact": "1.1", "status": "contradicted", "evidence": [{"item": 8, "quote": "Roumie said that building a habit of prayer"}, {"item": 8, "quote": "As you consistently tap into that habit, you find your relationship with Jesus growing deeper and deeper, just automatically."}]}
+]},
+{"id": "f06f421dbe03852f", "facts": [
+ {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+ {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+ {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep"}]},
+ {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "but not all of them are effective and none are"}]},
+ {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "but not all of them are effective and none are foolproof."}]}
+]},
+{"id": "f385cb55757caa4a", "facts": [
+ {"fact": "0.0", "status": "missing", "evidence": []},
+ {"fact": "0.1", "status": "missing", "evidence": []},
+ {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+ {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+ {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]}
+]},
+{"id": "59edd19e8200fa06", "facts": [
+ {"fact": "0.0", "status": "missing", "evidence": []},
+ {"fact": "0.1", "status": "missing", "evidence": []},
+ {"fact": "1.0", "status": "missing", "evidence": []},
+ {"fact": "1.1", "status": "missing", "evidence": []},
+ {"fact": "2.0", "status": "missing", "evidence": []},
+ {"fact": "2.1", "status": "missing", "evidence": []},
+ {"fact": "2.2", "status": "missing", "evidence": []},
+ {"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "7c22cbd75990f447", "facts": [
+ {"fact": "0.0", "status": "missing", "evidence": []},
+ {"fact": "0.1", "status": "missing", "evidence": []},
+ {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Alameda Research — the crypto trading company ostensibly helmed by Caroline Ellison"}]},
+ {"fact": "0.3", "status": "missing", "evidence": []},
+ {"fact": "1.0", "status": "missing", "evidence": []},
+ {"fact": "1.1", "status": "missing", "evidence": []},
+ {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "an industry that was already roiled by bankruptcies and scandals."}]},
+ {"fact": "2.0", "status": "missing", "evidence": []},
+ {"fact": "2.1", "status": "missing", "evidence": []},
+ {"fact": "2.2", "status": "missing", "evidence": []},
+ {"fact": "3.0", "status": "missing", "evidence": []},
+ {"fact": "3.1", "status": "missing", "evidence": []},
+ {"fact": "3.2", "status": "missing", "evidence": []},
+ {"fact": "3.3", "status": "missing", "evidence": []}
+]},
+{"id": "969410fee7e02cde", "facts": [
+ {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+ {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+ {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+ {"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+ {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 4, "quote": "Smith did return, however, for the final drive of the game in the losing effort."}]},
+ {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "backup Drew Lock took over under center with 18 seconds left in the third quarter."}]}
+]}
+]

@@ -1,0 +1,10 @@
+{
+ "dataset": "natural_questions",
+ "rep": "3",
+ "model": "gpt-6-luna",
+ "reasoning_effort": "medium",
+ "count": 500,
+ "failed": 0,
+ "exact_match": 0.164,
+ "total_cost_usd": 0.0281699
+}

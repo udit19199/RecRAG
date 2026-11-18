@@ -1,0 +1,75 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5ae33fa95542990afbd1e0f2",
+   "sentences": [
+    "Minersville School District v. Gobitis, 310 U.S. 586 (1940) , was a decision by the Supreme Court of the United States involving the religious rights of public school students under the First Amendment to the United States Constitution.",
+    "Gravel v. United States, 408 U.S. 606 (1972), was a case regarding the protections offered by the Speech or Debate Clause of the United States Constitution."
+   ]
+  },
+  {
+   "id": "5a8ec02e5542995a26add501",
+   "sentences": [
+    " It is known for producing the long-running series \"Tom Goes to the Mayor\", \"Nathan For You\", \"Tim and Eric Awesome Show, Great Job!",
+    "\" and \"Check It Out!",
+    " with Dr. Steve Brule\".",
+    "Check It Out!",
+    " with Dr. Steve Brule is an American sketch comedy television series that is a spin-off of \"Tim and Eric Awesome Show, Great Job!"
+   ]
+  },
+  {
+   "id": "-7837083251458003906",
+   "sentences": [
+    "Angular cheilitis can be caused by infection , irritation , or allergies . Infections include by fungi such as Candida albicans and bacteria such as Staph . aureus . Irritants include poorly fitting dentures , licking the lips or drooling , mouth breathing resulting in a dry mouth , sun exposure , overclosure of the mouth , smoking , and minor trauma . Allergies may include substances like toothpaste , makeup , and food . Often a number of factors are involved . Other factors may include poor nutrition or poor immune function . Diagnosis may be helped by testing for infections and patch testing for allergies ."
+   ]
+  },
+  {
+   "id": "5a7a2dac5542990198eaf0b6",
+   "sentences": [
+    "Keisuke Kuwata (桑田 佳祐 , Kuwata Keisuke , born February 26, 1956) is a Japanese multi-instrumentalist, singer-songwriter, and frontman for the Southern All Stars, as well of his own solo band, the Kuwata band.",
+    "Moya Brennan, born Máire Ní Bhraonáin (] ), also known as Máire Brennan (born 4 August 1952), is an Irish folk singer, songwriter, harpist, and philanthropist."
+   ]
+  },
+  {
+   "id": "5ae0ba1155429924de1b7156",
+   "sentences": [
+    " He has had a cameo acting role as a tailor in The Wolf of Wall Street, and The Good Shepherd.",
+    "The Wolf of Wall Street is a 2013 American biographical black comedy crime film directed by Martin Scorsese and written by Terence Winter, based on the memoir of the same name by Jordan Belfort."
+   ]
+  },
+  {
+   "id": "-5408466178683031721",
+   "sentences": [
+    "Mumbai ( Marathi : मुंबई ) , from Bombay , renamed in 1995"
+   ]
+  },
+  {
+   "id": "-1573340396671826912",
+   "sentences": [
+    "The story in the book takes place in Tulsa , Oklahoma , in 1965 , but this is never explicitly stated in the book ."
+   ]
+  },
+  {
+   "id": "8597450084953159302",
+   "sentences": [
+    "In 1980 , The Shining became the basis for a film adaptation directed by Stanley Kubrick . Kubrick 's vision for the movie differed from King 's significantly in many ways , including the portrayal of the Overlook Hotel . The exteriors of Kubrick 's Overlook were supplied by the Timberline Lodge on the slopes of Mt . Hood in Oregon . Inspiration for the interior sets ( erected at Elstree Studios in England ) came from the 1927 Ahwahnee Hotel in Yosemite National Park . The management of the Timberline Lodge , fearful that guests would refuse to stay in their Room 217 if it were featured in a horror movie , insisted that Kubrick change the haunted room in the film to Room 237 ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1275",
+   "sentences": [
+    "Last week, the Supreme Court decided that it would hear the pair of cases, which revolve around Republicans crafting state-specific laws that order platforms to keep their hands off of some social media posts.",
+    "Under Musk, Twitter — now called X — has prioritized “free speech” managed by crowdsourced-based moderation."
+   ]
+  },
+  {
+   "id": "5ab5487b554299494045ef68",
+   "sentences": [
+    "During World War II, Operation Cold Comfort was a failed SAS raid that began with a parachute drop north of Verona on February 17, 1945.",
+    " The SAS was founded in 1941 as a regiment, and later reconstituted as a corps in 1950."
+   ]
+  }
+ ]
+}

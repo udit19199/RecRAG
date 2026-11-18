@@ -1,0 +1,767 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=ec6ace3589c362ab ===
+Gold sentences and facts:
+Sentence 0: Donald Trump is the 45th and current president , inaugurated on January 20 , 2017 .
+  Fact 0.0: Donald Trump is the 45th president.
+  Fact 0.1: Donald Trump is the current president.
+  Fact 0.2: Donald Trump was inaugurated on January 20, 2017.
+Sentence 1: President of the United States of America Presidential Seal Presidential Standard Incumbent Donald Trump since January 20 , 2017 Executive Branch of the U.S. Government Executive Office of the President Style Mr. President ( informal ) The Honorable ( formal ) His Excellency ( international correspondence ) Status Head of State Head of Government Member of Cabinet Domestic Policy Council National Economic Council National Security Council Residence White House Seat Washington , D.C. Appointer Electoral College of the United States Term length Four years , renewable once ( Amendment XXII ) Constituting instrument United States Constitution Inaugural holder George Washington Formation March 4 , 1789 ( 229 years ago ) ( 1789 - 03 - 04 ) Salary $400,000 annually Website whitehouse.gov
+  Fact 1.0: The office of President of the United States of America is part of the Executive Branch of the U.S. Government.
+  Fact 1.1: The incumbent is Donald Trump, since January 20, 2017.
+  Fact 1.2: The office is part of the Executive Office of the President.
+  Fact 1.3: The style of address is 'Mr. President' (informal), 'The Honorable' (formal), and 'His Excellency' (international correspondence).
+  Fact 1.4: The office has the status of Head of State and Head of Government.
+  Fact 1.5: The office is a member of the Cabinet, the Domestic Policy Council, the National Economic Council, and the National Security Council.
+  Fact 1.6: The official residence is the White House.
+  Fact 1.7: The seat is Washington, D.C.
+  Fact 1.8: The appointer is the Electoral College of the United States.
+  Fact 1.9: The term length is four years, renewable once (Amendment XXII).
+  Fact 1.10: The constituting instrument is the United States Constitution.
+  Fact 1.11: The inaugural holder is George Washington.
+  Fact 1.12: The office was formed on March 4, 1789, which the page describes as 229 years ago.
+  Fact 1.13: The salary is $400,000 annually.
+  Fact 1.14: The official website is whitehouse.gov.
+
+Retrieved items:
+<item 1>
+President of the United States
+President of the United States - wikipedia President of the United States Jump to : navigation , search `` POTUS '' redirects here . For the political talk
+radio channel , see P.O.T.U.S. ( Sirius XM ) . For other uses , see President of the United States ( disambiguation ) . For a list , see List of Presidents of
+the United States . President of the United States of America Presidential Seal Presidential Standard Incumbent Donald Trump since January 20 , 2017 Executive
+Branch of the U.S. Government Executive Office of the President Style Mr. President ( informal ) The Honorable ( formal ) His Excellency ( international
+correspondence ) Status Head of State Head of Government Member of Cabinet Domestic Policy Council National Economic Council National Security Council Residence
+White House Seat Washington , D.C. Appointer Electoral College of the United States Term length Four years , renewable once ( Amendment XXII ) Constituting
+instrument United States Constitution Inaugural holder George Washington Formation March 4 , 1789 ( 229 years ago ) ( 1789 - 03 - 04 ) Salary $400,000 annually
+Website whitehouse.gov This article is part of a series on the Politics of the United
+</item 1>
+
+<item 2>
+President of the United States
+The President of the United States ( POTUS / ˈpoʊtəs / POH - təs ) is the head of state and head of government of the United States of America . The president
+directs the executive branch of the federal government and is the commander - in - chief of the United States Armed Forces . In contemporary times , the
+president is looked upon as the world 's most powerful political figure and as the leader of the only current global superpower . The role includes
+responsibility for the world 's most expensive military that has the second largest nuclear arsenal . The president also leads the nation with the largest
+economy by nominal GDP . The president possesses significant domestic and international hard and soft power . Article II of the Constitution establishes the
+executive branch of the federal government . It vests the executive power of the United States in the president . The power includes the execution and
+enforcement of federal law , alongside the responsibility of appointing federal executive , diplomatic , regulatory and judicial officers , and concluding
+treaties with foreign powers with the advice and consent of the Senate .
+</item 2>
+
+<item 3>
+President of the United States
+Administrative powers Suffice it to say that the President is made the sole repository of the executive powers of the United States , and the powers entrusted
+to him as well as the duties imposed upon him are awesome indeed . William Rehnquist , Nixon v. General Services Administration , 433 U.S. 425 ( 1977 ) (
+dissenting opinion ) The president is the head of the executive branch of the federal government and is constitutionally obligated to `` take care that the laws
+be faithfully executed '' . The executive branch has over four million employees , including members of the military . Presidents make numerous executive branch
+appointments : an incoming president may make up to 6,000 before taking office and 8,000 more while serving . Ambassadors , members of the Cabinet , and other
+federal officers , are all appointed by a president with the `` advice and consent '' of a majority of the Senate . When the Senate is in recess for at least
+ten days , the president may make recess appointments . Recess appointments are temporary and expire at the end of the next session of the Senate . The power of
+a president to fire executive officials has long been a contentious political issue .
+</item 3>
+
+<item 4>
+President of the United States
+It also prohibits a person from being elected to the presidency more than once if that person previously had served as president , or acting president , for
+more than two years of another person 's term as president . In all , 44 individuals have served 45 presidencies ( counting Grover Cleveland 's two
+non-consecutive terms separately ) spanning 57 full four - year terms . Donald Trump is the 45th and current president , inaugurated on January 20 , 2017 .
+Contents ( hide ) 1 Origin 2 Powers and duties 2.1 Article I legislative role 2.2 Article II executive powers 2.2. 1 War and foreign affairs powers 2.2. 2
+Administrative powers 2.2. 3 Juridical powers 2.2.
+</item 4>
+
+<item 5>
+Vice President of the United States
+Vice president of the United States - wikipedia Vice president of the United States Jump to : navigation , search For a list of office - holders , see List of
+Vice Presidents of the United States . Vice President of the United States of America Vice Presidential seal Vice Presidential standard Incumbent Mike Pence
+since January 20 , 2017 Executive branch of the U.S. government Office of the Vice President Style Mr. Vice President ( Informal ) The Honorable ( Formal ) Mr.
+President ( When presiding over Senate ) His Excellency ( In international correspondence ) Member of Cabinet National Security Council President of the U.S.
+Senate Residence Number One Observatory Circle Seat Washington , D.C. Appointer Electoral College Term length 4 years Constituting instrument U.S.
+</item 5>
+
+<item 6>
+President of the United States
+The president is further empowered to grant federal pardons and reprieves , and to convene and adjourn either or both houses of Congress under extraordinary
+circumstances . The president directs the foreign and domestic policies of the United States , and takes an active role in promoting his policy priorities to
+members of Congress . In addition , as part of the system of checks and balances , Article One of the United States Constitution gives the president the power
+to sign or veto federal legislation . Since the office of president was established in 1789 , its power has grown substantially , as has the power of the
+federal government as a whole . Through the Electoral College , the registered voters indirectly elect the president and vice president to a four - year term .
+This is the only federal election in the United States which is not decided by popular vote . Nine vice presidents became president by virtue of a president 's
+intra-term death or resignation . The Twenty - second Amendment precludes any United States citizen from being elected president for a third term .
+</item 6>
+
+<item 7>
+President of the United States
+Kennedy ( 1961 -- 1963 ) Lyndon B. Johnson ( 1963 -- 1969 ) Richard Nixon ( 1969 -- 1974 ) Gerald Ford ( 1974 -- 1977 ) Jimmy Carter ( 1977 -- 1981 ) Ronald
+Reagan ( 1981 -- 1989 ) George H.W. Bush ( 1989 -- 1993 ) Bill Clinton ( 1993 -- 2001 ) George W. Bush ( 2001 -- 2009 ) Barack Obama ( 2009 -- 2017 ) Donald
+Trump ( 2017 -- present ) Presidency timelines Wilson Harding Coolidge Hoover F.D. Roosevelt Truman Eisenhower Kennedy L.B. Johnson Nixon Ford Carter Reagan
+G.H.W. Bush Clinton G.W. Bush Obama Trump Book Category Chief executives of the United States Federal President of the United States State governors ( current
+list ) Alabama Alaska Arizona Arkansas California list Colorado Connecticut Delaware Florida Georgia Hawaii list Idaho Illinois list Indiana list Iowa list
+Kansas Kentucky list Louisiana Maine list Maryland list Massachusetts Michigan list Minnesota list Mississippi Missouri Montana Nebraska list Nevada New
+Hampshire list New Jersey list New Mexico list New York list North Carolina list North Dakota list Ohio Oklahoma list Oregon
+</item 7>
+
+<item 8>
+The U.S. president is both head of state and head of government, leads the executive branch, and lives at the White House in Washington, D.C. The Electoral
+College elects the president to a four-year term, renewable once under the 22nd Amendment. The office was established by the Constitution in 1789; George
+Washington was its first holder. The excerpt identifies Donald Trump as president from January 20, 2017, and lists an annual salary of $400,000.
+</item 8>
+
+<item 9>
+President of the United States
+000 annually Website whitehouse.gov This article is part of a series on the Politics of the United States of America Federal Government ( show ) Constitution of
+the United States Law Taxation Legislature ( show ) United States Congress House of Representatives Speaker Paul Ryan ( R ) Majority Leader Kevin McCarthy ( R )
+Minority Leader Nancy Pelosi ( D ) Congressional districts United States Senate President Mike Pence ( R ) President Pro Tempore Orrin Hatch ( R ) President Pro
+Tempore Emeritus Patrick Leahy ( D ) Majority Leader Mitch McConnell ( R ) Minority Leader Chuck Schumer ( D ) Executive ( show ) President of the United States
+Donald Trump ( R ) Vice President of the United States Mike Pence ( R ) Cabinet Federal agencies Executive Office Judiciary ( show ) Supreme Court of the United
+States Chief Justice John Roberts Kennedy Thomas Ginsburg Breyer Alito Sotomayor Kagan Gorsuch Courts of Appeals District Courts ( list ) Other tribunals
+Elections ( show ) Presidential elections Midterm elections Off - year elections Political parties ( show ) Democratic Republican Third parties Federalism (
+show ) State Government Governors Legislatures ( List ) State courts Local government Other countries Atlas The President of the United States ( POTUS / ˈpoʊtəs
+/
+</item 9>
+
+<item 10>
+The U.S. president is head of state and government, leads the executive branch, and commands the armed forces. Article II grants powers to enforce federal laws,
+appoint officials, negotiate treaties with Senate consent, issue pardons, and convene Congress. The president shapes domestic and foreign policy and may sign or
+veto legislation; Congress can override vetoes by a two-thirds vote. Elected indirectly through the Electoral College, presidents serve four-year terms and may
+not be elected more than twice. The office,
+</item 10>
+=== END ITEM id=ec6ace3589c362ab ===
+
+=== ITEM id=ac54a97849ce0ae6 ===
+Gold sentences and facts:
+Sentence 0: A. planci has a very wide Indo - Pacific distribution . It is perhaps most common in Australia , but can occur at tropical and subtropical latitudes from the Red Sea and the east African coast across the Indian Ocean , and across the Pacific Ocean to the west coast of Central America . It occurs where coral reefs or hard coral communities occur in this region .
+  Fact 0.0: A. planci has a very wide Indo-Pacific distribution.
+  Fact 0.1: A. planci is perhaps most common in Australia.
+  Fact 0.2: A. planci can occur at tropical and subtropical latitudes from the Red Sea.
+  Fact 0.3: A. planci can occur at tropical and subtropical latitudes from the east African coast.
+  Fact 0.4: A. planci can occur across the Indian Ocean.
+  Fact 0.5: A. planci can occur across the Pacific Ocean to the west coast of Central America.
+  Fact 0.6: A. planci occurs where coral reefs or hard coral communities occur in this region.
+
+Retrieved items:
+<item 1>
+Crown-of-thorns starfish
+ARKive : acanthaster - planci BioLib : 422188 EoL : 598484 Fossilworks : 100993 GBIF : 2271208 iNaturalist : 50915 ITIS : 157194 NCBI : 133434 WoRMS : 213289
+NDL : 01030270 Retrieved from `` https://en.wikipedia.org/w/index.php?title=Crown-of-thorns_starfish&oldid=814983736 '' Categories : Acanthasteridae Fauna of
+Western Australia Animals described in 1758 Invasive echinoderm species Hidden categories : All articles with dead external links Articles with dead external
+links from September 2010 CS1 maint : Multiple names : authors list CS1 errors : external links Articles needing more detailed references Articles with '
+species ' microformats All articles with unsourced statements Articles with unsourced statements from March 2016 Wikipedia external links cleanup from March
+2016 Wikipedia spam cleanup from March 2016 Talk Contents About Wikipedia Wikispecies Afrikaans Azərbaycanca Български Cebuano Čeština Deutsch Español Français
+한국어
+</item 1>
+
+<item 2>
+Crown-of-thorns starfish
+on Indo - Pacific Marine Biology , Agana ( Guam ) . pp. Abstract . Jump up ^ Babcock ; Mundy and Whitehead ( 1994 ) . `` Sperm diffusion models and in situ
+confirmation of long - distance fertilization in the free - spawning asteroid Acanthaster planci '' . Biological Bulletin . 186 : 17 -- 28 . doi : 10.2307 /
+1542033 . JSTOR 1542033 . Jump up ^ Beach , DH ; Hanscomb , NJ ; Ormond , RFG. ( 1975 ) . `` Spawning pheromone in crown - of - thorns starfish '' . Nature .
+254 ( 5496 ) : 135 -- 136 . Bibcode : 1975Natur. 254 ... 135B . doi : 10.1038 / 254135a0 . PMID 1117997 . Jump up ^ Sweatman , HPA. ( 1995 ) . `` A field study
+of fish predation on juvenile crown - of - thorns starfish '' .
+</item 2>
+
+<item 3>
+Crown-of-thorns starfish
+A. planci has a very wide Indo - Pacific distribution . It is perhaps most common in Australia , but can occur at tropical and subtropical latitudes from the
+Red Sea and the east African coast across the Indian Ocean , and across the Pacific Ocean to the west coast of Central America . It occurs where coral reefs or
+hard coral communities occur in this region .
+</item 3>
+
+<item 4>
+Crown-of-thorns starfish
+1365 - 2486.2006. 01252. x . Jump up ^ Wilson , SK ; Dolman , AM ; Cheal , AJ ; Emslie , MJ Pratchett ; et al. ( 2009 ) . `` Maintenance of fish diversity on
+disturbed coral reefs '' . Coral reefs. 28 ( 1 ) : 3 -- 14 . Bibcode : 2009CorRe ... 28 ... 3W . doi : 10.1007 / s00338 - 008 - 0431 - 2 . Jump up ^ Birkeland
+and Lucas ( 1990 ) . Acanthaster planci : Major Management Problem of Coral Reefs . CRC Press . pp. 36 -- 40 . ISBN 0 - 8493 - 6599 - 6 . ^ Jump up to : Moran ,
+PJ ( 1986 ) . `` The Acanthaster phenomenon '' . Oceanogr . Mar. Biol. Annu. Rev. 24 : 379 -- 480 .
+</item 4>
+
+<item 5>
+Crown-of-thorns starfish
+This article 's use of external links may not follow Wikipedia 's policies or guidelines . Please improve this article by removing excessive or inappropriate
+external links , and converting useful links where appropriate into footnote references . ( March 2016 ) ( Learn how and when to remove this template message )
+An overview of the crown - of - thorns starfish as observed on the Great Barrier Reef Current status of crown - of - thorns starfish on Australia 's Great
+Barrier Reef History of outbreaks of crown - of - thorns starfish on Australia 's Great Barrier Reef since 1986 ( Animation ) Recent information on crown - of -
+thorns starfish on Australia 's Great Barrier Reef Controlling crown - of - thorns starfish Crown - of - thorn outbreak simulation Microdocs : Crown - of -
+thorns Acanthaster planci expedition 1969 to Eastern Caroline Islands An infographic relating to the crown - of - thorns starfish in the Great Barrier Reef
+Crown of Thorns starfish 1971 Fathom magazine ( Australia ) Taxon identifiers Wd : Q26634 ADW : Acanthaster_planci ARKive : acanthaster - planci BioLib :
+</item 5>
+
+<item 6>
+Crown-of-thorns starfish
+Biol. Annu. Rev. 24 : 379 -- 480 . ^ Jump up to : Birkeland and Lucas ( 1990 ) . Acanthaster planci : Major Management Problem of Coral Reefs . CRC Press . p.
+38 . ISBN 0 - 8493 - 6599 - 6 . Jump up ^ Endean , R ( 1974 ) . Publication title Proceedings of the Second International Symposium on Coral Reefs . Vol. 1 .
+The Great Barrier Reef Committee , Brisbane ( Australia ) . ISBN 0 - 909377 - 00 - 6 . Jump up ^ Endean , R ; Stablum , W ( 1973 ) . `` A study of some aspects
+of the crown - of - thorns starfish ( Acanthaster planci ) infestation of reefs of Australia is Great Barrier Reef '' . Atoll Research Bulletin . 167 : 60 (
+Abstract ) . doi : 10.5479 / si. 00775630.167. 1 .
+</item 6>
+
+<item 7>
+Crown-of-thorns starfish
+Its prehensile ability arises from the two rows of numerous tube feet that extend to the tip of each arm . In being multiple - armed , it has lost the five-fold
+symmetry ( pentamerism ) typical of starfish , although it begins its life cycle with this symmetry . Adult crown - of - thorns starfish normally range in size
+from 25 to 35 cm ( 9.8 to 13.8 in ) . They have up to 21 arms . Although the body of the crown of thorns has a stiff appearance , it is able to bend and twist
+to fit around the contours of the corals on which it feeds . The underside of each arm has a series of closely fitting plates which form a groove and extend in
+rows to the mouth . They are usually of subdued colours , pale brown to grey - green , but they may be garish with bright warning colours in some parts of their
+wide range . The long , sharp spines on the sides of the starfish 's arms and upper ( aboral ) surface resemble thorns and create a crown - like shape , giving
+the creature its name .
+</item 7>
+
+<item 8>
+Crown-of-thorns starfish
+00775630.167. 1 . Jump up ^ Kenchington , R ( 1978 ) . `` The crown - of - thorns crisis in Australia : A retrospective analysis '' . Environmental
+Conservation. 5 ( 1 ) : 11 -- 20 . doi : 10.1017 / s0376892900005191 . Jump up ^ James , Peter ( 1976 ) . Requiem for the Reef . Brisbane : Foundation Press .
+ISBN 0 - 9597383 - 0 - 4 . Jump up ^ Brown , and Willey ( 1972 ) . Crown of Thorns : The Death of the Great Barrier Reef ? . Angus and Robertson . ISBN 0 - 207
+- 12390 - X . Jump up ^ Reichelt , RE ; Bradbury , RH ; Moran , P J. ( 1990 ) . `` The crown - of - thorns starfish , Acanthaster planci , on the Great Barrier
+Reef '' . Mathematical and Computer Modelling.
+</item 8>
+
+<item 9>
+Crown-of-thorns starfish
+It occurs where coral reefs or hard coral communities occur in this region . Contents ( hide ) 1 Description 2 Taxonomy 2.1 Family 2.2 Genus and species 2.3
+Genetic studies 3 Biology 3.1 Toxins 3.2 Behaviour 3.3 Predators 4 Life - cycle 4.1 Gametes and embryos 4.2 Larval stages 4.3 Metamorphosis , development and
+growth 4.4 Field observations of life - cycle 5 Ecology 5.1 Ecological impact on reefs 5.2 Population outbreaks 5.3 Causes of population outbreaks 6 Population
+control 7 References 8 External links Description ( edit ) Unusual brightly coloured crown - of - thorns starfish , Thailand The body form of the crown - of -
+thorns starfish is fundamentally the same as that of a typical starfish , with a central disk and radiating arms . Its special traits , however , include being
+disc - shaped , multiple - armed , flexible , prehensile , and heavily spined , and having a large ratio of stomach surface to body mass .
+</item 9>
+
+<item 10>
+Crown-of-thorns starfish
+Crown - of - thorns starfish - wikipedia Crown - of - thorns starfish Jump to : navigation , search Crown - of - thorns starfish Scientific classification
+Kingdom : Animalia Phylum : Echinodermata Class : Asteroidea Order : Valvatida Family : Acanthasteridae Genus : Acanthaster Species : Acanthaster planci
+Binomial name Acanthaster planci ( Linnaeus , 1758 ) The crown - of - thorns starfish , Acanthaster planci , is a large , multiple - armed starfish that usually
+preys upon hard , or stony , coral polyps ( Scleractinia ) . The crown - of - thorns starfish receives its name from venomous thorn - like spines that cover its
+upper surface , resembling the biblical crown of thorns . It is one of the largest starfish in the world . A. planci has a very wide Indo - Pacific distribution
+.
+</item 10>
+=== END ITEM id=ac54a97849ce0ae6 ===
+
+=== ITEM id=282744e66fd83ff7 ===
+Gold sentences and facts:
+Sentence 0: After their plane crashes in the woods , Dr. Meredith Grey ( Ellen Pompeo ) , Dr. Lexie Grey ( Chyler Leigh ) , Dr. Cristina Yang ( Sandra Oh ) , Dr. Arizona Robbins ( Jessica Capshaw ) , Dr. Derek Shepherd ( Patrick Dempsey ) , and Dr. Mark Sloan ( Eric Dane ) desperately fight to stay alive . Meredith is relatively unscathed , while the rest have serious injuries : the pilot , Jerry ( James LeGros ) , has a major spine injury , and Yang dislocates her arm . Robbins ' femur is broken and sticking through the skin , Sloan has serious internal injuries ; though initially adrenaline keeps him on his feet . Shepherd is sucked out the side of the plane and awakens alone in the wood ; his mangled hand having been pushed through the door of the plane . However , none are in as bad shape as Lexie , who is crushed under a piece of the plane . While Meredith searches for Shepherd , Yang and Sloan try to move the debris off Lexie . Eventually , the two realize that they can not save her , so Sloan holds her hand while she dies , telling her that he loves her . As Sloan tells her of the life the two were meant to have together , Lexie dies with a smile on her face just as Meredith and Yang are approaching .
+  Fact 0.0: After their plane crashes in the woods, six doctors desperately fight to stay alive.
+  Fact 0.1: Dr. Meredith Grey is played by Ellen Pompeo.
+  Fact 0.2: Dr. Lexie Grey is played by Chyler Leigh.
+  Fact 0.3: Dr. Cristina Yang is played by Sandra Oh.
+  Fact 0.4: Dr. Arizona Robbins is played by Jessica Capshaw.
+  Fact 0.5: Dr. Derek Shepherd is played by Patrick Dempsey.
+  Fact 0.6: Dr. Mark Sloan is played by Eric Dane.
+  Fact 0.7: Meredith is relatively unscathed.
+  Fact 0.8: The other doctors have serious injuries.
+  Fact 0.9: The pilot, Jerry (played by James LeGros), has a major spine injury.
+  Fact 0.10: Yang dislocates her arm.
+  Fact 0.11: Robbins' femur is broken and sticking through the skin.
+  Fact 0.12: Sloan has serious internal injuries.
+  Fact 0.13: Initially, adrenaline keeps Sloan on his feet.
+  Fact 0.14: Shepherd is sucked out the side of the plane and awakens alone in the woods.
+  Fact 0.15: Shepherd's mangled hand was pushed through the door of the plane.
+  Fact 0.16: No one is in as bad shape as Lexie.
+  Fact 0.17: Lexie is crushed under a piece of the plane.
+  Fact 0.18: While Meredith searches for Shepherd, Yang and Sloan try to move the debris off Lexie.
+  Fact 0.19: Eventually, Yang and Sloan realize they cannot save Lexie.
+  Fact 0.20: Sloan holds Lexie's hand while she dies.
+  Fact 0.21: Sloan tells Lexie that he loves her.
+  Fact 0.22: Sloan tells Lexie about the life the two were meant to have together.
+  Fact 0.23: Lexie dies with a smile on her face.
+  Fact 0.24: Meredith and Yang are approaching just as Lexie dies.
+Sentence 1: `` Flight '' is the twenty - fourth and final episode of the eighth season of the American television medical drama Grey 's Anatomy , and the show 's 172nd episode overall . It was written by series creator Shonda Rhimes , and directed by Rob Corn . The episode was originally broadcast on the American Broadcasting Company ( ABC ) in the United States on May 17 , 2012 . In the episode , six doctors from Seattle Grace Mercy West Hospital who are victims of an aviation accident fight to stay alive , but Dr. Lexie Grey ( Chyler Leigh ) ultimately dies . Other storylines occur in Seattle where Dr. Richard Webber ( James Pickens , Jr . ) plans his annual dinner for the departing residents , Dr. Owen Hunt ( Kevin McKidd ) fires Dr. Teddy Altman ( Kim Raver ) , and Dr. Miranda Bailey ( Chandra Wilson ) gets engaged .
+  Fact 1.0: 'Flight' is the twenty-fourth and final episode of the eighth season of the American television medical drama Grey's Anatomy.
+  Fact 1.1: 'Flight' is the show's 172nd episode overall.
+  Fact 1.2: 'Flight' was written by series creator Shonda Rhimes.
+  Fact 1.3: 'Flight' was directed by Rob Corn.
+  Fact 1.4: 'Flight' was originally broadcast on the American Broadcasting Company (ABC) in the United States on May 17, 2012.
+  Fact 1.5: In the episode, six doctors from Seattle Grace Mercy West Hospital who are victims of an aviation accident fight to stay alive.
+  Fact 1.6: In the episode, Dr. Lexie Grey (played by Chyler Leigh) ultimately dies.
+  Fact 1.7: Other storylines occur in Seattle.
+  Fact 1.8: Dr. Richard Webber (played by James Pickens, Jr.) plans his annual dinner for the departing residents.
+  Fact 1.9: Dr. Owen Hunt (played by Kevin McKidd) fires Dr. Teddy Altman (played by Kim Raver).
+  Fact 1.10: Dr. Miranda Bailey (played by Chandra Wilson) gets engaged.
+
+Retrieved items:
+<item 1>
+Flight (Grey's Anatomy)
+Lexie 's death devastates Meredith , who is still desperately trying to find her husband . Eventually , she and Shepherd reunite and they fix his hand as best
+as they can . Meanwhile , back at Seattle Grace Mercy West Hospital , no one is aware of what has happened to the other doctors . Dr. Richard Webber ( James
+Pickens , Jr . ) prepares the annual dinner for the departing residents , which Dr. Alex Karev ( Justin Chambers ) , Dr. Jackson Avery ( Jesse Williams ) , and
+Dr. April Kepner ( Sarah Drew ) are dreading . Avery makes the choice to take a job offer at Tulane Medical Center , and he and Kepner share a moment . Dr. Ben
+Warren ( Jason George ) and Dr. Miranda Bailey ( Chandra Wilson ) decide to get married , even though Warren is going to start his surgical internship in Los
+Angeles . After realizing Dr. Teddy Altman ( Kim Raver ) was offered a chief position at United States Army Medical Command ( MEDCOM ) and is refusing to leave
+Seattle out of loyalty , Dr.
+</item 1>
+
+<item 2>
+Flight (Grey's Anatomy)
+Everybody was very accommodating -- the crew , cast . And I opted to stay underneath ( the wreckage ) for the most part over two days rather than trying to get
+in and out . '' In regard to the episode , Rhimes commented before it originally aired that it was difficult to write , largely because of the death of a main
+character . She compared it to writing the season six finale , by explaining that the former was `` more painful '' to write . After the episode aired , Rhimes
+repeated in a tweet that it was hard for her to write the finale , adding : `` I did not enjoy it . It made me sick and it made me sad . '' Rhimes also
+explained the departure of Leigh , whose character died after the plane crash , by saying that the two came to an agreement on the decision to kill Lexie ,
+after extensive discussion . Speaking of Raver 's departure whose character left Seattle Grace for MEDCOM , Rhimes elaborated that Raver was offered a contract
+renewal , but declined . Reception ( edit ) Chyler Leigh 's performance was deemed `` phenomenal '' .
+</item 2>
+
+<item 3>
+Flight (Grey's Anatomy)
+In the episode , six doctors from Seattle Grace Mercy West Hospital who are victims of an aviation accident fight to stay alive , but Dr. Lexie Grey ( Chyler
+Leigh ) ultimately dies . Other storylines occur in Seattle where Dr. Richard Webber ( James Pickens , Jr . ) plans his annual dinner for the departing
+residents , Dr. Owen Hunt ( Kevin McKidd ) fires Dr. Teddy Altman ( Kim Raver ) , and Dr. Miranda Bailey ( Chandra Wilson ) gets engaged . The episode marked
+Leigh 's and Raver 's final appearance to the series . Exterior filming of the accident took place at Big Bear Lake , California . Jason George reprised his
+role as a guest star , whereas James LeGros made his first appearance . The episode opened to mixed reviews from television critics , with some criticizing the
+death of Lexie , but praising Leigh 's performance , in addition to Ellen Pompeo ( Dr. Meredith Grey ) 's and Eric Dane ( Dr. Mark Sloan ) 's .
+</item 3>
+
+<item 4>
+Flight (Grey's Anatomy)
+Mark Sloan ( Eric Dane ) desperately fight to stay alive . Meredith is relatively unscathed , while the rest have serious injuries : the pilot , Jerry ( James
+LeGros ) , has a major spine injury , and Yang dislocates her arm . Robbins ' femur is broken and sticking through the skin , Sloan has serious internal
+injuries ; though initially adrenaline keeps him on his feet . Shepherd is sucked out the side of the plane and awakens alone in the wood ; his mangled hand
+having been pushed through the door of the plane . However , none are in as bad shape as Lexie , who is crushed under a piece of the plane . While Meredith
+searches for Shepherd , Yang and Sloan try to move the debris off Lexie . Eventually , the two realize that they can not save her , so Sloan holds her hand
+while she dies , telling her that he loves her . As Sloan tells her of the life the two were meant to have together , Lexie dies with a smile on her face just
+as Meredith and Yang are approaching . Lexie 's death devastates Meredith , who is still desperately trying to find her husband .
+</item 4>
+
+<item 5>
+Flight (Grey's Anatomy)
+`` ' Grey 's Anatomy ' recap : Major death in season finale ' Flight ' '' . Digital Spy . Nat Mags . Retrieved May 22 , 2012 . Jump up ^ Stransky , Tanner ( May
+18 , 2012 ) . `` ' Grey 's Anatomy ' season finale recap : A Grey Goes Down '' . Entertainment Weekly . Time Inc . Retrieved May 22 , 2012 . Jump up ^ Bierly ,
+Mandi ( May 29 , 2012 ) . `` Grey 's Anatomy , Chyler Leigh , ... TV Season Finale Awards : YOUR 2012 Winners ! Photo 9 of 20 '' . Entertainment Weekly . Time
+Inc . Retrieved June 17 , 2012 . Jump up ^ Bierly , Mandi ( May 29 , 2012 ) . `` Grey 's Anatomy , Ellen Pompeo TV Season Finales TV Season Finale Awards : YOUR
+2012 Winners ! Photo 12 of 20 '' . Entertainment Weekly . Time Inc . Retrieved June 18 , 2012 .
+</item 5>
+
+<item 6>
+Flight (Grey's Anatomy)
+Grey 's Anatomy has once again managed to shock with its season finale . '' While she appreciated the `` realism and authenticity that Grey 's is known for '' ,
+she found the episode was `` almost too much '' as it was `` extremely gory and difficult to watch , initially because of the grisly wounds '' but later because
+of the `` heavy and emotional things that transpired '' . She thought Pompeo gave one of her best performances when her character learned that her sister was
+dead . Digital Spy 's Ben Lee found Leigh 's and Dane 's performances `` phenomenal '' and added that he had probably never seen a better performance from Dane
+. He described the moment the two actors shared as `` truly poignant '' . To him , Lexie 's death felt like a finale , which was thus too early . As for what
+was happening in Seattle Grace , he thought it was `` a bit pointless '' and `` uninteresting '' except Altman 's departure , which he deemed `` the most
+significant moment at the hospital '' . Entertainment Weekly 's Tanner Stransky commented of Lexie 's death : `` It was an intense death .
+</item 6>
+
+<item 7>
+Flight (Grey's Anatomy)
+I mean , how awful was it to watch one of Grey 's longest - running characters pass away so quickly -- and rather unceremoniously ? I get that Ms. Rhimes had to
+do what she had to do -- and every show needs to be shaken up once in a while -- but I do n't love that Lexie was the one to die . Could it have been someone
+less important somehow ? I guess it would have been too obvious to do Kepner . And you probably just do n't kill off a hottie like Mark Sloan , right ? ''
+Stransky also complained about Robbins ' screams at the beginning of the episode , but enjoyed Bailey 's story . In an Entertainment Weekly poll that judged all
+the television season finales of the year , Lexie 's death was voted the `` Top Tissue Moment '' , while Robbins ' injured leg and Shepherd 's mangled hand were
+voted the `` Most Disturbing Image '' . The ending of the episode was also considered as the `` Best Ending to an Otherwise So - So Season '' .
+</item 7>
+
+<item 8>
+Flight (Grey's Anatomy)
+Lexie 's death was also nominated under the `` Best ( Presumed ) Death '' category , while the plane crash 's aftermath was nominated as the `` Best
+Non-romantic Cliffhanger '' , and the episode in entirety was nominated for the special award for `` Biggest Regret That I Did n't See It , I Just Heard or Read
+About It '' . Entertainment Weekly later named the scene where Meredith is crying one of the best crying scenes of 2012 . In TVLine 's review of 2012 , Lexie 's
+death was runner - up for `` Biggest Tearjerker '' . The episode is nominated at the NAACP Image Awards under the Outstanding Writing in a Dramatic Series
+category for Rhimes . References ( edit ) Jump up ^ Goldberg , Lesley ( June 25 , 2012 ) . `` Emmys 2012 : ' Grey 's Anatomy 's ' Sandra Oh on Cristina 's
+Emotional Season '' . The Hollywood Reporter . Prometheus Global Media . Retrieved July 21 , 2012 . Jump up ^ Writer : Rhimes , Shonda .
+</item 8>
+
+<item 9>
+Flight (Grey's Anatomy)
+Mark Sloan ) 's . `` Flight '' earned Rhimes an NAACP Image Award nomination and it was also nominated under several categories of Entertainment Weekly 's
+finale awards . Upon its initial airing , the episode was viewed in the United States by 11.44 million people , garnered a 4.1 / 11 Nielsen rating / share in
+the 18 -- 49 demographic , ranking fourth for the night in terms of viewership , and registering as Thursday 's highest - rated drama . Contents ( hide ) 1 Plot
+2 Production 3 Reception 4 References 5 External links Plot ( edit ) After their plane crashes in the woods , Dr. Meredith Grey ( Ellen Pompeo ) , Dr. Lexie
+Grey ( Chyler Leigh ) , Dr. Cristina Yang ( Sandra Oh ) , Dr. Arizona Robbins ( Jessica Capshaw ) , Dr. Derek Shepherd ( Patrick Dempsey ) , and Dr. Mark Sloan
+( Eric Dane ) desperately fight to stay alive .
+</item 9>
+
+<item 10>
+Flight (Grey's Anatomy)
+Jump up ^ Writer : Rhimes , Shonda . Director : Corn , Rob ( May 17 , 2012 ) . `` Flight '' . Grey 's Anatomy . Season 8 . American Broadcasting Company . Jump
+up ^ `` Season 8 , Episode : 24 `` Flight '' Music `` . TV Fanatic . SheKnows Entertainment . Retrieved July 22 , 2012 . Jump up ^ Dos Santos , Kristin ( May 1
+, 2012 ) . `` Spoiler Chat Daily : American Horror Story Season Two Scoop ! Plus , Grey 's , True Blood and More ! '' . E ! Online . NBCUniversal . Retrieved
+July 21 , 2012 . Jump up ^ Hilton , Perez ( June 24 , 2010 ) . `` Chyler Leigh Describes Filming Deets Behind Grey 's Anatomy Death ! '' . PerezHilton.com .
+Retrieved July 21 , 2012 . Jump up ^ Goldberg , Lesley ( April 26 , 2012 ) .
+</item 10>
+=== END ITEM id=282744e66fd83ff7 ===
+
+=== ITEM id=1a8b3073b94b374b ===
+Gold sentences and facts:
+Sentence 0: The National Legal Aid & Defender Association ( NLADA ) is the oldest and largest national , nonprofit membership organization devoted to advocating equal justice for all Americans and was established in 1911 .
+  Fact 0.0: The National Legal Aid & Defender Association (NLADA) is the oldest national membership organization.
+  Fact 0.1: The National Legal Aid & Defender Association (NLADA) is the largest national membership organization.
+  Fact 0.2: The National Legal Aid & Defender Association (NLADA) is nonprofit.
+  Fact 0.3: The National Legal Aid & Defender Association (NLADA) is devoted to advocating equal justice for all Americans.
+  Fact 0.4: The National Legal Aid & Defender Association (NLADA) was established in 1911.
+
+Retrieved items:
+<item 1>
+National Legal Aid & Defender Association
+NLADA is the only national membership organization devoted exclusively to ensuring legal representation for individuals who can not afford an attorney . NLADA
+serves the equal justice community in two major ways : providing products and services and as a national voice in public policy and legislative debates on the
+many issues affecting the equal justice community . NLADA also serves as a resource for those seeking more information on equal justice in the United States .
+In recent years , the NLADA has honored individuals and organizations with a variety of awards at its annual conferences . Awards range from the Mary Ellen
+Hamilton award , which recognizes a client of a legal aid or defender organization , to the Clara Shortridge Foltz Award , which honors organizations that have
+pioneered important innovations in the field . Notable recipients of NLADA awards include former Attorney General Janet Reno , Bronx Defenders attorney David
+Feige , and Hillary Clinton . Paul D. Borman was Chief Federal Defender , Legal Aid & Defender Association of Detroit , from 1979 to 1994 . He was the first
+federal defender to be appointed to the federal bench , in 1994 .
+</item 1>
+
+<item 2>
+National Legal Aid & Defender Association
+National legal aid & Defender Association - wikipedia National legal aid & Defender Association Jump to : navigation , search The National Legal Aid & Defender
+Association ( NLADA ) is the oldest and largest national , nonprofit membership organization devoted to advocating equal justice for all Americans and was
+established in 1911 . Contents ( hide ) 1 History 2 See also 3 References 4 External links History ( edit ) The Fourteenth Amendment to the United States
+Constitution and its Equal Protection Clause provides Equal justice under law . Beginning in the late 1800s and throughout the early years of the 20th century ,
+the American legal profession expressed its commitment to the concept of free legal assistance for poor people in the form of legal aid societies and bar
+association legal aid committees . The first legal aid society , The German Society of New York , was founded in 1876 to protect German immigrants from
+exploitation . Subsequently , the agency 's protection was extended to others and in 1890 it became the Legal Aid Society of New York . In 1888 , the Ethical
+Culture Society of Chicago established by the Bureau of Justice was the first agency to offer legal assistance to individuals regardless of nationality , race
+or gender .
+</item 2>
+
+<item 3>
+American Bar Association Model Rules of Professional Conduct
+In contrast to most Commonwealth countries , where transactional lawyers and litigators are separately licensed as `` solicitors '' and `` barristers , ''
+respectively ; all American attorneys are licensed to practice as both solicitors and barristers ( therefore these terms are almost never used ) . Likewise ,
+whereas solicitors in England and Wales are professionally self - regulated by the private - sector Law Society of England and Wales while barristers are self -
+regulated by the private - sector General Council of the Bar , attorneys in all states except California , all territories and the District of Columbia are
+generally regulated by the public sector judicial branch of state , district or territorial government , as officers of the court . The legal profession in
+California is regulated jointly by the California Supreme Court , mostly through its agency the State Bar of California and by the California Legislature ,
+which exercises legislative control over all professions . Within the public sector regulatory agencies , boards and organisations , officers are invariably
+licensed members of the pertinent profession while key managerial and general staff typically are not . The Executive Director and Deputy Executive Director of
+the State Bar of California , for example , are active members of the State Bar .
+</item 3>
+
+<item 4>
+American Bar Association Model Rules of Professional Conduct
+American Bar Association Model Rules of professional conduct - wikipedia American Bar Association Model Rules of professional conduct Jump to : navigation ,
+search Professional responsibility Duties to the client Confidentiality Avoiding conflict of interest Due diligence and Competence ( law ) Avoid commingling
+Avoid self - dealing Effective assistance Avoid fee splitting Withdrawal from representation Duties to the court Disclosure of perjury Disclosure of adverse
+authority Duties to the profession Limitations on legal advertising Report misconduct Sources of law ABA Model Rules Penalties for misconduct Disbarment
+Judicial misconduct The ABA Model Rules of Professional Conduct , created by the American Bar Association ( ABA ) , are a set of rules that prescribe baseline
+standards of legal ethics and professional responsibility for lawyers in the United States . They were promulgated by the ABA House of Delegates upon the
+recommendation of the Kutak Commission in 1983 . The rules are merely recommendations , or models , ( hence the name `` Model Rules '' ) and are not themselves
+binding . However , having a common set of Model Rules facilitates a common discourse on legal ethics , and simplifies professional responsibility training as
+well as the day - to - day application of such rules .
+</item 4>
+
+<item 5>
+American Bar Association Model Rules of Professional Conduct
+While either of their secretaries could be a member of the State Bar , they most likely are not . Similarly , the Board of Trustees that oversee the business
+operations of the State Bar of California under supervision of the California Supreme Court is legally required to be a mix of attorneys licensed to practice in
+California and `` public members '' who may not be licensed attorneys . So , while American attorneys are regulated by public sector agencies instead of private
+sector law societies , most of the people who develop the regulatory policies are practising attorneys and sitting judges , so there is a degree of self -
+regulation but not nearly to the same degree that solicitors and barristers in England and Wales , and other Commonwealth jurisdictions are self - regulated by
+private sector associations . See also ( edit ) American Bar Association Model Code of Professional Responsibility American Bar Association References ( edit )
+Jump up ^ Press Release : New Attorney Rules of Professional Conduct Announced , Communications Office of the New York Courts , 17 December 2008 .
+</item 5>
+
+<item 6>
+National Legal Aid & Defender Association
+Other municipalities followed suit , and in the first decades of the 20th century most major cities had opened legal aid societies . In 1911 , legal aid
+societies joined together to form the National Alliance of Legal Aid Societies . Arthur von Briesen of the Legal Aid Society of New York was the first president
+of the organization that became the National Legal Aid & Defender Association ( NLADA ) in 1949 . The concept of free legal assistance for the poor was promoted
+by the publication of Reginald Heber Smith 's Justice and the Poor in 1919 . Smith challenged the legal profession to consider it an obligation to see that
+access to justice was available to all , without regard to ability to pay . `` Without equal access to the law , '' he wrote , `` the system not only robs the
+poor of their only protection , but places in the hands of their oppressors the most powerful and ruthless weapon ever invented . As a result of Smith 's book ,
+the American Bar Association created the Special Committee on Legal Aid Work . By the middle of the 20th century , virtually every major metropolitan area had
+some kind of legal aid program .
+</item 6>
+
+<item 7>
+American Bar Association Model Rules of Professional Conduct
+In 2001 , the Commission for the Revision of the Rules of Professional Conduct of the State Bar of California began a comprehensive revision of the California
+rules that would , among other things , convert them into a localized version of the ABA Model Rules . However , the Commission 's progress had been extremely
+slow , simply because there are so many substantive and structural differences between the California rules and the ABA models . In October 2010 , the State Bar
+of California formally adopted the Commission 's report , recommending adoption of 67 proposed changes to harmonise the California Rules of Professional Conduct
+with the ABA Model Rules of Professional Responsibility . On September 19 , 2014 , however , for reasons that were not fully explained , the Supreme Court of
+California rejected all of the proposed revisions and returned them to the State Bar . The Court 's letter directed the State Bar to start the process all over
+again with a new Commission , and to submit a new set of revised rules by March 31 , 2017 . Professional regulation ( edit ) Except for the Patent Bar , there
+is no national legal profession in the United States but there are 56 separate legal professions .
+</item 7>
+
+<item 8>
+American Bar Association Model Rules of Professional Conduct
+Jump up ^ http://www.mebaroverseers.org/attorney_regulation/maine_conduct_rules.html Jump up ^
+http://www.maine.gov/tools/whatsnew/index.php?topic=mebar_overseers_bar_rules&id=88185&v=article Jump up ^ http://www.cnmilaw.org/pdf/court_rules/R07.pdf
+Northern Mariana Islands Rules of Attorney Discipline and Procedure . ^ Jump up to : Rogers , Joan C. ( 2 October 2014 ) . `` California Justices Tell State Bar
+to Redo Proposals for Updating Lawyer Conduct Rules '' . ABA / BNA Lawyers ' Manual on Professional Conduct . Bloomberg BNA . Retrieved 15 October 2014 . ^ Jump
+up to : Zitrin , Richard ( 10 October 2014 ) . `` Viewpoint : State Supreme Court Resets Ethics Rewrite '' . The Recorder . ALM Media Properties , LLC .
+Retrieved 15 October 2014 . Jump up ^ http://www.calbar.ca.gov/AboutUs/BoardofTrustees.aspx Board of Trustees , State Bar of California .
+</item 8>
+
+<item 9>
+American Bar Association Model Rules of Professional Conduct
+Another important factor is that the legal profession is regulated very differently in California than it is in the rest of the United States . Outside of
+California , the profession is regulated solely by the judicial branch of state government . Within California , the State Bar of California operates as a state
+government agency under the supervision of the California Supreme Court ; but the State Bar was created by the California Legislature , and the Legislature has
+full power to regulate the legal profession , if it so wishes . In particular , the State Bar can not collect annual member dues unless and until the California
+Legislature passes an annual State Bar Dues Bill , which the governor must sign into law . When Governor Pete Wilson vetoed the dues bill in 1997 , the State
+Bar effectively shut down operations except for self - funded activities like the California Bar Exam . In 2010 , Governor Arnold Schwarzenegger vetoed the dues
+bill but a crisis was averted on that occasion . But the most important reason the California Bar is reluctant to adopt the ABA Model Rules is that most members
+believe the ABA Model Rules would not sufficiently protect the California public from harm .
+</item 9>
+
+<item 10>
+Founded in 1911 as the National Alliance of Legal Aid Societies, NLADA became the National Legal Aid & Defender Association in 1949. It is the oldest and
+largest national nonprofit membership organization focused exclusively on equal justice and legal representation for people unable to afford attorneys. It
+supports the legal-aid community through services, resources, and advocacy. The movement grew from late-19th-century legal aid societies; federal funding began
+with the 1964 Economic Opportunity Act, followed by the 197
+</item 10>
+=== END ITEM id=1a8b3073b94b374b ===
+
+=== ITEM id=9fbd19e97728f9bd ===
+Gold sentences and facts:
+Sentence 0: The Astros played in the NL from 1962 to 2012 . They played in the West Division from 1969 to 1993 , and the Central Division from 1994 to 2012 . While a member of the NL , the Astros played in one World Series , in 2005 , against the Chicago White Sox , in which they were swept in four games . In 2017 , they became the first franchise in MLB history to have won a pennant in both the NL and the AL , when they defeated the New York Yankees in the ALCS . They subsequently won the 2017 World Series against the Los Angeles Dodgers , winning four games to three , earning the team , and Texas , its first World Series title .
+  Fact 0.0: The Astros played in the NL from 1962 to 2012.
+  Fact 0.1: The Astros played in the West Division from 1969 to 1993.
+  Fact 0.2: The Astros played in the Central Division from 1994 to 2012.
+  Fact 0.3: While a member of the NL, the Astros played in one World Series, in 2005.
+  Fact 0.4: The Astros played the 2005 World Series against the Chicago White Sox.
+  Fact 0.5: The Astros were swept in four games in the 2005 World Series.
+  Fact 0.6: In 2017, the Astros became the first franchise in MLB history to have won a pennant in both the NL and the AL.
+  Fact 0.7: In 2017, the Astros defeated the New York Yankees in the ALCS.
+  Fact 0.8: The Astros subsequently won the 2017 World Series against the Los Angeles Dodgers.
+  Fact 0.9: The Astros won the 2017 World Series by winning four games to three.
+  Fact 0.10: The 2017 World Series title was the first World Series title for the team.
+  Fact 0.11: The 2017 World Series title was the first World Series title for Texas.
+
+Retrieved items:
+<item 1>
+2017 World Series
+Houston Astros ( edit ) Main article : 2017 Houston Astros season The Astros wore a patch during the 2017 World Series in support of Hurricane Harvey victims in
+Houston With a 101 -- 61 regular season record , the team won its first American League West title since moving from the National League Central starting in its
+2013 season , and their first division title since 2001 . In the American League Division Series , they defeated the Boston Red Sox in four games and then
+defeated the New York Yankees in the American League Championship Series ( ALCS ) in seven games . This was their second World Series appearance and first since
+2005 , when they were swept in four games by the Chicago White Sox . They became the first team in history to make it to the World Series as members of both the
+National League and the American League . The city of Houston in August 2017 suffered record flooding from Hurricane Harvey . The team began to wear patches
+which had the logo of the team with the word `` Strong '' on the bottom of the patch , as well as promoting the hashtag Houston Strong . Manager A.J.
+</item 1>
+
+<item 2>
+Houston Astros
+Though he had asserted a desire to remain with the Astros , Beltrán signed a long - term contract with the New York Mets on January 9 , 2005 . 2005 : first
+World Series in Texas ( edit ) Main article : 2005 Houston Astros season In 2005 , the Astros started poorly and found themselves with a 15 - 30 record in late
+May . The Houston Chronicle had written them off with a tombstone emblazoned with `` RIP 2005 Astros '' . However , from that low point until the end of July ,
+Houston went 42 -- 17 and found themselves in the lead for an NL wild card spot . July saw the best single month record in the club 's history at 22 - 7 .
+Offensive production had increased greatly after a slow start in the first two months . The Astros had also developed an excellent pitching staff , anchored by
+Roy Oswalt ( 20 -- 12 , 2.94 ) , Andy Pettitte ( 17 -- 9 , 2.39 ) , and Roger Clemens ( 13 -- 8 with a league - low ERA of only 1.87 ) .
+</item 2>
+
+<item 3>
+Houston Astros
+The contributions of the other starters -- Brandon Backe ( 10 -- 8 , 4.76 ) and rookie starters Ezequiel Astacio ( 3 -- 6 , 5.67 ) and Wandy Rodríguez ( 10 --
+10 , 5.53 ) -- were less remarkable , but enough to push the Astros into position for a playoff run . The Astros won a wild card berth on the final day of the
+regular season , becoming the first team since the world champion 1914 Boston Braves to qualify for the postseason after being 15 games under . 500 . The Astros
+won the National League Division Series against the Atlanta Braves , 3 - 1 , with a game four that set postseason records for most innings ( 18 ) , most players
+used by a single team ( 23 ) , and longest game time ( 5 hours and 50 minutes ) . Trailing by a score of 6 - 1 , Lance Berkman hit an eighth inning grand slam
+to narrow the score to 6 -- 5 . In the bottom of the ninth , catcher Brad Ausmus , hit a game tying home run that allowed the game to continue in extra innings
+.
+</item 3>
+
+<item 4>
+2005 World Series
+With the Astros on the verge of clinching their first ever National League pennant in Game 5 , Albert Pujols hit a mammoth three - run home run off Brad Lidge
+in the top of the ninth inning to take the lead , and subsequently stave off elimination . However , behind NLCS MVP Roy Oswalt , the Astros were able to defeat
+the Cards 5 -- 1 in Game 6 and earned a trip to the World Series . This was the Astros ' first World Series appearance in franchise history . Matchups ( edit )
+Game 1 ( edit ) Saturday , October 22 , 2005 7 : 05 pm ( CDT ) at U.S.
+</item 4>
+
+<item 5>
+2017 World Series
+With the Astros and Dodgers having waited a combined 84 years for a championship ( the Dodgers last won the World Series in 1988 , and the Astros had never won
+since their 1962 formation ) , this was the third straight year in which the World Series teams had waited a combined 50 years or more to win a World Series ,
+following 2015 at 59 years and 2016 at 176 years . Both teams had not lost at home this postseason leading to the World Series . The two teams did not meet in
+interleague play during the regular season . Los Angeles Dodgers ( edit ) Main article : 2017 Los Angeles Dodgers season The Dodgers held a 91 -- 36 record
+through August 25 . However , a late season slump , in which the team lost 20 of 25 games ( highlighted by 11 straight losses ) , led to questions about whether
+the Dodgers would succeed in the postseason . Despite the slump , the team recovered to win eight of its final ten regular season games , securing their fifth
+consecutive National League West title and home field advantage throughout the playoffs .
+</item 5>
+
+<item 6>
+Houston Astros
+Cellular Field in Chicago and the final two in Houston . Game 3 marked the first World Series game held in the state of Texas , and was the longest game in
+World Series history , lasting 5 hours and 41 minutes . This World Series was marked by a controversy involving the Minute Maid Park roof . MLB & Commissioner
+Bud Selig insisted that the Astros must play with the roof open which mitigated the intensity and enthusiasm of the cheering Astros fans . 2006 -- 2010 : the
+decline ( edit ) In the 2006 offseason , the team signed Preston Wilson and moved Berkman to first base , ending the long tenure of Jeff Bagwell . The Astros
+renewed the contract with Clemens and traded two minor league prospects to the Tampa Bay Devil Rays for left - handed hitter Aubrey Huff . By August , Preston
+Wilson complained about his playing time after the return of Luke Scott from AAA Round Rock . The Astros released Wilson and he was signed by St. Louis . A
+dramatic season end included wins in 10 of their last 12 games , but the Astros missed a playoff appearance when they lost the final game of the season to the
+Atlanta Braves .
+</item 6>
+
+<item 7>
+2005 World Series
+The Astros were attempting to become the fourth consecutive wild card team to win the Series , following the Anaheim Angels ( 2002 ) , Florida Marlins ( 2003 )
+and Boston Red Sox ( 2004 ) . Both teams were attempting to overcome decades of disappointment , with a combined 132 years between the two teams without a title
+. The Astros were making their first Series appearance in 44 years of play , while the White Sox had waited exactly twice as long for a title , having last won
+the Series in 1917 , and had not been in the Series since 1959 , three years before the Astros ' inaugural season . Like the 1982 World Series between the St.
+Louis Cardinals and the Milwaukee Brewers , the 2005 World Series is one of only two World Series in the modern era ( 1903 -- present ) with no possibility for
+a rematch between the two opponents , because the Astros moved to the American League in 2013 . However , the Brewers did meet the Cardinals in the 2011
+National League Championship Series .
+</item 7>
+
+<item 8>
+Houston Astros
+In 2017 , they became the first franchise in MLB history to have won a pennant in both the NL and the AL , when they defeated the New York Yankees in the ALCS .
+They subsequently won the 2017 World Series against the Los Angeles Dodgers , winning four games to three , earning the team , and Texas , its first World
+Series title . Contents ( hide ) 1 Franchise history 1.1 Major League Baseball comes to Texas 1.2 1962 -- 1964 : The Colt . 45s 1.3 1965 -- 1970 : The Great
+Indoors 1.4 1971 -- 1974 : The boys in orange 1.4.
+</item 8>
+
+<item 9>
+Houston Astros
+45s ( 1962 -- 1964 ) Other nicknames ' Stros Ballpark Minute Maid Park ( 2000 -- present ) Astrodome ( 1965 -- 1999 ) Colt Stadium ( 1962 -- 1964 ) Major league
+titles World Series titles ( 1 ) 2017 AL Pennants ( 1 ) 2017 NL Pennants ( 1 ) 2005 AL West Division titles ( 1 ) 2017 NL West / Central Division titles ( 6 )
+1980 1986 1997 1998 1999 2001 Wild card berths ( 3 ) 2005 2015 The Astros also qualified for the postseason in the strike - split 1981 season , losing to the
+Los Angeles Dodgers in the NLDS . Front office Owner ( s ) Jim Crane Manager A.J. Hinch General Manager Jeff Luhnow President of Baseball Operations Reid Ryan
+The Houston Astros are an American professional baseball team based in Houston , Texas .
+</item 9>
+
+<item 10>
+2005 World Series
+People really cheering me . I had tears in my eyes . To really know the fans cared that much about me -- it was a great feeling . One of my proudest moments in
+the game . '' Houston Astros ( edit ) Main article : 2005 Houston Astros season The Houston Astros won the Wild Card for the second straight year , once again
+clinching it on the final day of the season . The Astros embarked on a memorable Division Series rematch against the Atlanta Braves . With the Astros in the
+lead two games to one , the teams played an eighteen - inning marathon in Game 4 , which was the longest ( in both time and innings played ) postseason game in
+history . In this game , Roger Clemens made only the second relief appearance of his career , and the first in postseason play . Chris Burke 's walk - off home
+run ended the game in the bottom of the eighteenth . For the second straight year , the Astros played the St. Louis Cardinals in the League Championship Series
+. Like the White Sox , the Astros dropped Game 1 , but were able to regroup and win Games 2 -- 4 .
+</item 10>
+=== END ITEM id=9fbd19e97728f9bd ===
+
+=== ITEM id=ac1df6f4c991b2a9 ===
+Gold sentences and facts:
+Sentence 0: `` Knightfall '' is a 1993 - 1994 Batman story arc published by DC Comics . It consists of a trilogy of storylines that ran from 1993 to 1994 , consisting of `` Knightfall '' , `` Knightquest '' , and `` KnightsEnd '' . The story takes place over approximately six months . Bruce Wayne ( Batman ) suffers burnout and is systematically assaulted and crippled by a `` super steroid '' - enhanced genius named Bane . Wayne is replaced as Batman by an apprentice named Jean - Paul Valley ( a.k.a. Azrael ) , who becomes increasingly violent and unstable , tarnishing Batman 's reputation . Eventually , Wayne is healed through paranormal means , and reclaims his role as Batman .
+  Fact 0.0: 'Knightfall' is a 1993-1994 Batman story arc published by DC Comics.
+  Fact 0.1: Knightfall consists of a trilogy of storylines that ran from 1993 to 1994.
+  Fact 0.2: The trilogy consists of 'Knightfall', 'Knightquest', and 'KnightsEnd'.
+  Fact 0.3: The story takes place over approximately six months.
+  Fact 0.4: Bruce Wayne (Batman) suffers burnout.
+  Fact 0.5: Bruce Wayne (Batman) is systematically assaulted and crippled by a 'super steroid'-enhanced genius named Bane.
+  Fact 0.6: Wayne is replaced as Batman by an apprentice named Jean-Paul Valley (a.k.a. Azrael).
+  Fact 0.7: Jean-Paul Valley becomes increasingly violent and unstable.
+  Fact 0.8: Jean-Paul Valley tarnishes Batman's reputation.
+  Fact 0.9: Eventually, Wayne is healed through paranormal means.
+  Fact 0.10: Eventually, Wayne reclaims his role as Batman.
+
+Retrieved items:
+<item 1>
+Batman: Knightfall
+After his defeat , Bruce Wayne enlists the aid of Dr. Shondra Kinsolving to rehabilitate him and asks Jean - Paul Valley to take up the mantle of Batman so that
+Gotham has a protector . Tim Drake argues with Bruce to allow Dick Grayson ( the former Robin and then - current Nightwing ) to become Batman , as he is more
+experienced and mentally competent . Bruce replies that Grayson has his own responsibilities and would only take up the mantle of the Bat reluctantly ( Dick
+later expressed resentment at not being asked to stand in as Batman ) . Bruce 's rationale for this decision is revealed in later issues - secretly , he does
+not want Dick to have to face Bane , as he knows Dick 's character will compel him to try . Indeed , Bruce gives Jean - Paul strict orders never to engage Bane
+in combat -- and when Jean - Paul does face Bane , only his modified gloves save Jean - Paul from being thrown to his death .
+</item 1>
+
+<item 2>
+Batman: Knightfall
+During the breakout at Arkham Asylum , Batman and Robin both wear a black arm band with the S - shield engraved on it . The two stories involved DC Comics 's
+most prominent characters . Similar stories followed for Green Lantern , Wonder Woman , Aquaman , and Green Arrow , with Green Lantern Hal Jordan being driven
+insane and replaced with Kyle Rayner , a new Wonder Woman being appointed by Hippolyta , Aquaman losing his hand , and Green Arrow dying in a plane crash as his
+long - lost son took over the role . In the opening of the novelisation , KnightFall , Dennis O'Neil stated that part of the reason `` Knightfall '' was written
+was due to the recent popularity of more `` ruthless '' heroes such as the Terminator and James Bond in films , as editors were starting to wonder if readers
+would prefer a Batman who was willing to kill his opponents . During DC vs. Marvel , Bane attempts to break Captain America 's back in a fight in a similar
+maneuver , but is caught off - guard when Captain America 's shield returns to its owner to strike Bane in the back of the head and knock him out .
+</item 2>
+
+<item 3>
+Batman: Knightfall
+After this encounter , Bane 's men assault Batman before he himself makes his move and attacks him at Wayne Manor , his home as his alter - ego -- by this time
+; Bane had deduced the secret identity of Batman . The fight between Bruce Wayne and Bane is detailed in Batman # 497 . By this time , Batman is so exhausted
+from the exertion of catching the escaped criminals that he can not even defend himself ; Bane beats him mercilessly before breaking Wayne 's back over his knee
+inside the Batcave below the manor , symbolically `` breaking '' Batman . Bane takes the grievously - wounded Wayne ( still costumed in the Batman outfit )
+downtown to Gotham Square and throws him from a rooftop to demonstrate his superiority to the populace . Quick action by Robin and Alfred spares Batman 's life
+, but at great cost - he is left a paraplegic . With Batman incapacitated , Bane assumes control of Gotham City 's underworld and takes over several illegal
+operations within it . After his defeat , Bruce Wayne enlists the aid of Dr.
+</item 3>
+
+<item 4>
+Despite worsening exhaustion, Batman continues fighting Gotham’s criminals while Bane studies his limits and secretly deduces his identity. After Batman is worn
+down, Bane attacks him at Wayne Manor, breaks his back in the Batcave, and displays his injured body publicly. Robin and Alfred save Bruce, who is left
+paraplegic; Bane takes control of Gotham’s underworld. IGN praised the story’s portrayal of Batman’s spirit breaking before his body. Knightfall also inspired
+references and adaptations in *
+</item 4>
+
+<item 5>
+In *Batman: Knightfall* (art by Mike Gustovich), Bruce renews his partnership with Tim after the Arkham prison break and gives Dick Grayson the Batman mantle
+while reassessing his lost aura of invincibility. This launches the *Prodigal* storyline, reflecting Dick’s role as Bruce’s adopted son. Commissioner Gordon
+remains wary: he recognizes Dick is not the original Batman and, after Jean-Paul’s willingness to kill, trusts the person—not merely the costume.
+</item 5>
+
+<item 6>
+Batman: Knightfall
+Art by Mike Gustovich . Bruce reaffirms his partnership with Tim , resolving the tension caused by Bruce 's unwillingness to accept help during the Arkham
+prison break . Bruce passes the mantle of Batman to Grayson so he can re-evaluate what it will take to restore his aura of invincibility . This begins the
+Prodigal storyline , a reference to Dick Grayson essentially being Bruce 's prodigal son ; Bruce had adopted Dick after his parents were murdered . Because of
+the events of the entire arc , considerable time passes before Commissioner Gordon restores his trust in the idea of a Batman working for good . Gordon can tell
+that he is not looking at the original Batman ( based on Jean - Paul 's costume and Dick 's height , and the fact that Jean - Paul was more than ready to kill
+people ) , and he refuses to place blind trust in a costume after spending so long learning to trust the man .
+</item 6>
+
+<item 7>
+Batman: Knightfall
+Returning to Gotham , Bruce meets with Tim . Even though Jean - Paul disobeyed Bruce 's order to refrain from attacking Bane , Bruce is sufficiently impressed
+with Jean - Paul 's results . Bruce decides to retire and allow Jean - Paul to continue as Batman . But when Robin tells Bruce of the circumstances surrounding
+Abattoir 's death , Bruce sneaks into the Batcave and demands that Jean - Paul step down . Jean - Paul refuses and tells Bruce to leave the cave and never come
+back . To rehabilitate his skills due to his lost reflexes after so long out of action , Bruce asks the famed assassin Lady Shiva to retrain him ( using a mask
+to conceal his identity and arguing that she will do it for the same reason that she does anything ; it might be interesting ) . Instead , Shiva pits Bruce
+against several vengeful expert martial artists , having killed their master while wearing a distinctive tengu mask that carries a motif of a bat that she
+subsequently gives to Batman . Shiva 's caveat is that these attacks will continue indefinitely until Bruce Wayne breaks his vow to never kill .
+</item 7>
+
+<item 8>
+Batman: Knightfall
+In the climax to Year One of Injustice : Gods Among Us , Superman confronts Batman in the Batcave as Batman is downloading the formula to a pill that can grant
+the user superhuman strength and durability , stolen from the Fortress of Solitude . While Superman does not want to kill Batman , he chooses to paralyze him by
+breaking his back in a similar fashion to Bane ( albeit by standing on Batman 's back instead of slamming him over his knee as Bane did ) . This puts Batman out
+of commission for much of Year Two as he heals . Reception ( edit ) IGN Comics # 15 ranked Batman : Knightfall Part One - Broken Bat on a list of the 25
+greatest Batman graphic novels , saying : `` What makes ' Knightfall , Part One ' so memorable is not the actually snapping of Batman 's back . It 's the quick
+fall into despair that proves most shocking . The ending is a foregone conclusion as Batman is worn down both physically and mentally . The Batman 's spirit is
+broken before his vertebrae and that 's a feat you 'll never see accomplished anywhere else . ''
+</item 8>
+
+<item 9>
+Bruce defeats Jean-Paul by exposing his helmet’s night lenses to sunlight through the childhood fall-site hatch. Jean-Paul concedes Bruce is the true Batman and
+leaves Gotham homeless; Bruce comforts him and accepts responsibility for his breakdown rather than involving police. “KnightsEnd” was later collected and
+retitled *Knightfall* Vol. 3. In “Prodigal,” Dick Grayson briefly becomes Batman. The saga falls around Batman’s tenth or eleventh career year, shortly after
+Tim Drake
+</item 9>
+
+<item 10>
+The 1993–94 *Knightfall* saga has Bane exhaust Bruce Wayne by unleashing Arkham’s inmates, then break his back and seize control of Gotham. Bruce appoints
+Jean-Paul Valley (Azrael) as Batman; increasingly governed by assassin conditioning, Jean-Paul becomes violent, lets Abattoir’s captive die, and loses Robin and
+Commissioner Gordon’s trust. After recovering and training with Lady Shiva, Bruce defeats Jean-Paul, who leaves Gotham. In *Prod
+</item 10>
+=== END ITEM id=ac1df6f4c991b2a9 ===

@@ -1,0 +1,103 @@
+[
+{"id": "43bf9a6ab06fd870", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Andrew and Jeremy Get Married is a 2004 British documentary film written and directed by Don Boyd for the BBC."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Andrew and Jeremy Get Married is a 2004 British documentary film written and directed by Don Boyd for the BBC."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Andrew and Jeremy Get Married is a 2004 British documentary film written and directed by Don Boyd for the BBC."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "Andrew and Jeremy Get Married is a 2004 British documentary film written and directed by Don Boyd for the BBC."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "Andrew and Jeremy Get Married is a 2004 British documentary film written and directed by Don Boyd for the BBC."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "The Last Lions is a 2011 African nature documentary film by National Geographic Society, videotaped and directed by Dereck and Beverly Joubert."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "The Last Lions is a 2011 African nature documentary film by National Geographic Society, videotaped and directed by Dereck and Beverly Joubert."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "The Last Lions is a 2011 African nature documentary film by National Geographic Society, videotaped and directed by Dereck and Beverly Joubert."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "The Last Lions is a 2011 African nature documentary film by National Geographic Society, videotaped and directed by Dereck and Beverly Joubert."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 7, "quote": "The Last Lions is a 2011 African nature documentary film by National Geographic Society, videotaped and directed by Dereck and Beverly Joubert."}]}
+]},
+{"id": "42a0e17fafa737e8", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "It consists of a duet featuring vocalists Dave Hemingway and Briana Corrigan."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "It consists of a duet featuring vocalists Dave Hemingway and Briana Corrigan."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "It consists of a duet featuring vocalists Dave Hemingway and Briana Corrigan."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Briana Corrigan (born 30 May 1965) is a Northern Irish singer."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Briana Corrigan (born 30 May 1965) is a Northern Irish singer."}]}
+]},
+{"id": "70b365374c9c7dac", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "The Nassau Herald is a weekly newspaper serving the Five Towns communities of Nassau County – Lawrence, Woodmere, Hewlett, Cedarhurst, Inwood and Atlantic Beach."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "The Nassau Herald is a weekly newspaper serving the Five Towns communities of Nassau County – Lawrence, Woodmere, Hewlett, Cedarhurst, Inwood and Atlantic Beach."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "The Nassau Herald is a weekly newspaper serving the Five Towns communities of Nassau County – Lawrence, Woodmere, Hewlett, Cedarhurst, Inwood and Atlantic Beach."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Lawrence is a village in Nassau County, New York in the United States."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Lawrence is a village in Nassau County, New York in the United States."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "Lawrence is a village in Nassau County, New York in the United States."}, {"item": 8, "quote": "As of the 2010 United States Census, the village population was 6,483."}]}
+]},
+{"id": "57949396a8b4c009", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "It is most known through the 1989 single by Kathy Mattea, released in conjunction with her album \"Willow in the Wind\""}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "It is most known through the 1989 single by Kathy Mattea, released in conjunction with her album \"Willow in the Wind\""}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "though the song was first recorded and released on the 1987 Don Williams album \"Traces\" and also released in 1988 by Clark's husband on his album \"Old Friends\"."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "though the song was first recorded and released on the 1987 Don Williams album \"Traces\" and also released in 1988 by Clark's husband on his album \"Old Friends\"."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "734b54915bd17eed", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "A Summer in the Cage is a 2007 documentary film about a man's experiences with bipolar disorder."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "A Summer in the Cage is a 2007 documentary film about a man's experiences with bipolar disorder."}, {"item": 8, "quote": "The documentary debuted on the Sundance Channel in 2007."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "A Summer in the Cage is a 2007 documentary film about a man's experiences with bipolar disorder."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "American Hardcore: The History of American Punk Rock 1980-1986 is a documentary directed by Paul Rachman and written by Steven Blush."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "American Hardcore: The History of American Punk Rock 1980-1986 is a documentary directed by Paul Rachman and written by Steven Blush."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "American Hardcore: The History of American Punk Rock 1980-1986 is a documentary directed by Paul Rachman and written by Steven Blush."}]}
+]},
+{"id": "b41e495b5a9c3900", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "He played college football at Hampton University and attended Riverdale High School in Riverdale, Georgia."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "He played college football at Hampton University and attended Riverdale High School in Riverdale, Georgia."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "He played college football at Hampton University and attended Riverdale High School in Riverdale, Georgia."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Riverdale is a city in Clayton County, Georgia, United States."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Riverdale is a city in Clayton County, Georgia, United States."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Riverdale is a city in Clayton County, Georgia, United States."}]}
+]},
+{"id": "02fa4d8341fb8c2d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "The Appenzeller Sennenhund is a medium-size breed of dog, one of the four regional breeds of Sennenhund-type dogs from the Swiss Alps."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "The Appenzeller Sennenhund is a medium-size breed of dog, one of the four regional breeds of Sennenhund-type dogs from the Swiss Alps."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "The Appenzeller Sennenhund is a medium-size breed of dog, one of the four regional breeds of Sennenhund-type dogs from the Swiss Alps."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "The name Sennenhund refers to people called \"Senn\", herders in the Appenzell region of Switzerland."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "The name Sennenhund refers to people called \"Senn\", herders in the Appenzell region of Switzerland."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "The Drentsche Patrijshond is a versatile spaniel-type hunting dog from the Dutch province of Drenthe."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "The Drentsche Patrijshond is a versatile spaniel-type hunting dog from the Dutch province of Drenthe."}]}
+]},
+{"id": "f1639adfb13b65e7", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "The Long–Allen Bridge is a truss bridge in Shreveport, Louisiana, named for Louisiana governors Huey Long and Oscar K. Allen."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "The Long–Allen Bridge is a truss bridge in Shreveport, Louisiana, named for Louisiana governors Huey Long and Oscar K. Allen."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "The Long–Allen Bridge is a truss bridge in Shreveport, Louisiana, named for Louisiana governors Huey Long and Oscar K. Allen."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "The Long–Allen Bridge is a truss bridge in Shreveport, Louisiana, named for Louisiana governors Huey Long and Oscar K. Allen."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Opened in 1933, it carries U.S. Route 80 across the Red River."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Opened in 1933, it carries U.S. Route 80 across the Red River."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "U.S. Route 80 (US 80) is an east–west United States Numbered Highway, much of which was once part of the early auto trail known as the Dixie Overland Highway."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "U.S. Route 80 (US 80) is an east–west United States Numbered Highway, much of which was once part of the early auto trail known as the Dixie Overland Highway."}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 3, "quote": "The highway's eastern terminus is in Tybee Island, Georgia, at the intersection of Butler Avenue, Inlet Avenue, and Tybrisa Street, near the Atlantic Ocean."}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 3, "quote": "The highway's eastern terminus is in Tybee Island, Georgia, at the intersection of Butler Avenue, Inlet Avenue, and Tybrisa Street, near the Atlantic Ocean."}]},
+{"fact": "3.2", "status": "stated", "evidence": [{"item": 3, "quote": "The highway's eastern terminus is in Tybee Island, Georgia, at the intersection of Butler Avenue, Inlet Avenue, and Tybrisa Street, near the Atlantic Ocean."}]}
+]},
+{"id": "9f4d1fb667b23b6e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The Shins are an American indie rock band from Albuquerque, New Mexico, formed in 1996."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "The Shins are an American indie rock band from Albuquerque, New Mexico, formed in 1996."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "The Shins are an American indie rock band from Albuquerque, New Mexico, formed in 1996."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Paramore is an American rock band from Franklin, Tennessee, formed in 2004."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Paramore is an American rock band from Franklin, Tennessee, formed in 2004."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Paramore is an American rock band from Franklin, Tennessee, formed in 2004."}]}
+]},
+{"id": "b6beaca87ec369a2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Terri Kathleen Nunn (born June 26, 1961), is an American singer and actress."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Terri Kathleen Nunn (born June 26, 1961), is an American singer and actress."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "Terri Kathleen Nunn (born June 26, 1961), is an American singer and actress."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Sonya Scarlet (born 2 April 1980) is the singer and lyricist of the Italian extreme gothic metal band Theatres des Vampires."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Sonya Scarlet (born 2 April 1980) is the singer and lyricist of the Italian extreme gothic metal band Theatres des Vampires."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Sonya Scarlet (born 2 April 1980) is the singer and lyricist of the Italian extreme gothic metal band Theatres des Vampires."}]}
+]},
+{"id": "bd74ffc993c05278", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "The New York – New Jersey Line War (also known as the N.J. Line War) refers to a series of skirmishes and raids that took place for over half a century between 1701 and 1765 at the disputed border between two American colonies, the Province of New York and the Province of New Jersey."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "The New York – New Jersey Line War (also known as the N.J. Line War) refers to a series of skirmishes and raids that took place for over half a century between 1701 and 1765 at the disputed border between two American colonies, the Province of New York and the Province of New Jersey."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "The New York – New Jersey Line War (also known as the N.J. Line War) refers to a series of skirmishes and raids that took place for over half a century between 1701 and 1765 at the disputed border between two American colonies, the Province of New York and the Province of New Jersey."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "The New York – New Jersey Line War (also known as the N.J. Line War) refers to a series of skirmishes and raids that took place for over half a century between 1701 and 1765 at the disputed border between two American colonies, the Province of New York and the Province of New Jersey."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "The New York – New Jersey Line War (also known as the N.J. Line War) refers to a series of skirmishes and raids that took place for over half a century between 1701 and 1765 at the disputed border between two American colonies, the Province of New York and the Province of New Jersey."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 2, "quote": "The New York – New Jersey Line War (also known as the N.J. Line War) refers to a series of skirmishes and raids that took place for over half a century between 1701 and 1765 at the disputed border between two American colonies, the Province of New York and the Province of New Jersey."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "The Province of New York (1664–1776) was a British proprietary colony and later royal colony on the northeast coast of North America."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "The Province of New York (1664–1776) was a British proprietary colony and later royal colony on the northeast coast of North America."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "The Province of New York (1664–1776) was a British proprietary colony and later royal colony on the northeast coast of North America."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "The Province of New York (1664–1776) was a British proprietary colony and later royal colony on the northeast coast of North America."}]}
+]}
+]

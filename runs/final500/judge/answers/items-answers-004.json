@@ -1,0 +1,546 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "f34372f6c67ccadb",
+   "kind": "answer",
+   "question": "Between the TechCrunch report on Sam Bankman-Fried's legal situation published after October 2, 2023, and The Verge's coverage of Sam Bankman-Fried's testimony, was there a change in the narrative regarding his ability to manage FTX and Alameda Research?",
+   "gold_answers": [
+    "No"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "327dc43b51aee6fe",
+   "kind": "answer",
+   "question": "Who is the individual associated with the cryptocurrency industry who, before the collapse of FTX, portrayed himself as a reliable figure, planned to establish a board with experts for the company without investor directors, was accused of using customer funds to buy out a competitor, and is alleged by the prosecution to have committed fraud for personal gain, with these events being reported by The Verge, CNBC, and TechCrunch?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "5a580bd028aece4c",
+   "kind": "answer",
+   "question": "Considering the information from an article in The Times of India and another in The Economic Times about Simran Bahadur, which team, mentioned as her favorite in The Times of India, also has a player that was highlighted for their performance in The Economic Times article?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "Royal Challengers Bangalore (RCB)"
+  },
+  {
+   "id": "c7ffb97130367cf1",
+   "kind": "answer",
+   "question": "Which national rugby team, highlighted in articles from 'The Independent - Sports' and 'The Roar | Sports Writers Blog', suffered defeats in their home country as well as in Sydney and Christchurch, against opponents including Ireland, South Africa, and Argentina?",
+   "gold_answers": [
+    "New Zealand All Blacks"
+   ],
+   "model_answer": "Australia (the Wallabies)"
+  },
+  {
+   "id": "8e2f0012900489d3",
+   "kind": "answer",
+   "question": "What entities, as reported by Sporting News, are known to modify their point spread, moneyline, and NBA Rookie of the Year betting lines in response to news, betting patterns, liability, and events such as injuries or roster changes?",
+   "gold_answers": [
+    "Sportsbooks"
+   ],
+   "model_answer": "Sportsbooks (including oddsmakers)."
+  },
+  {
+   "id": "b0d0c257416aa648",
+   "kind": "answer",
+   "question": "Considering the information from a New York Times article on the philanthropic efforts of the Overture Foundation and a Forbes report on their financial strategies, which board member, known for their innovative investment approach as per Forbes, also spearheaded a major educational initiative mentioned in the New York Times?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "John Overdeck"
+  },
+  {
+   "id": "18d7c7e4bad27ec4",
+   "kind": "answer",
+   "question": "Considering the information from an article in The Guardian about Heather Knight's performance in the recent series and an ESPN article discussing her career milestones, which team did Heather Knight score a century against in the series that also happens to be the same team she made her international debut against?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "Australia"
+  },
+  {
+   "id": "dae2492cde169623",
+   "kind": "answer",
+   "question": "Was there inconsistency in the portrayal of Sam Bankman-Fried's legal challenges between the TechCrunch report published on October 1, 2023, and the TechCrunch report on October 7, 2023, and was there disagreement between the TechCrunch report on October 1, 2023, and the report by Cnbc | World Business News Leader on Sam Bankman-Fried's approach to the board composition for FTX?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes to both."
+  },
+  {
+   "id": "321af3c8b1c596df",
+   "kind": "answer",
+   "question": "Do the articles from CBSSports.com and both articles from Sporting News agree on the amount of the welcome bonus offered by Caesars Sportsbook to new sign-ups, with all mentioning up to $1000?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No."
+  },
+  {
+   "id": "1fc42e6d7b17cb4a",
+   "kind": "answer",
+   "question": "Does the TechCrunch article discussing Google's spending to become the default search engine on various platforms report the same amount of $26.3 billion in 2021 as the claim made in another TechCrunch article covering the US v Google trial, or do they report different amounts?",
+   "gold_answers": [
+    "Same"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "f00aab450d2c309f",
+   "kind": "answer",
+   "question": "Which two public figures, linked by rumors of a romance covered by 'CBSSports.com' and 'The Independent - Life and Style', have been seen enjoying time together and showing affection, with one being spotted wearing a themed bracelet and the other cheering enthusiastically from box seats at a sporting event?",
+   "gold_answers": [
+    "Taylor Swift and Travis Kelce"
+   ],
+   "model_answer": "Travis Kelce and Taylor Swift"
+  },
+  {
+   "id": "475aa9645b2beeac",
+   "kind": "answer",
+   "question": "Considering the information from an article by The Verge and another by Wired on Mike Schoofs, which company's product, known for its innovative technology in one article, did Schoofs join as the managing editor according to the other article, and is represented by the first letter of its name?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "Gizmodo"
+  },
+  {
+   "id": "1167ec70e8f78adc",
+   "kind": "answer",
+   "question": "Does the 'FOX News - Health' article suggest that 'Time-restricted eating' has a negative impact on sleep quality and brain recovery, while 'The Independent - Life and Style' article implies that 'Internet sleep tips and tricks' are not reliably effective for improving sleep?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "6f951a83294cd6bb",
+   "kind": "answer",
+   "question": "Considering the economic strategies discussed in a Bloomberg article and the defense policies outlined in a Reuters report, which country, aiming to strengthen its regional influence in Asia, has both increased its GDP growth forecast and announced a significant military exercise for the upcoming year?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "India"
+  },
+  {
+   "id": "e5df971e58d06cd0",
+   "kind": "answer",
+   "question": "Which company, covered by both The Verge and Fortune, had a negative balance exceeding the revenue of a related entity, proposed an alert system to prevent its own liquidation, and was claimed to have acted legally in its business practices with a customer, payment processor, and market maker?",
+   "gold_answers": [
+    "Alameda Research"
+   ],
+   "model_answer": "FTX"
+  },
+  {
+   "id": "844f811a2784e9a3",
+   "kind": "answer",
+   "question": "Was there a discrepancy in the reporting of Google's anticompetitive practices between the TechCrunch report on the Google antitrust case published on October 31, 2023, and the TechCrunch report on the class action antitrust suit against Google published on December 15, 2023?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "33e3def900aa911e",
+   "kind": "answer",
+   "question": "Which NFL team, featured in articles by Sporting News and CBSSports.com, experienced a dominating defense from their opponent, altered their passing strategy for the first time in the season, and had limited options to change the outcome of a game due to timeouts, while also seeing a backup quarterback producing similar offensive results as their starter?",
+   "gold_answers": [
+    "Minnesota Vikings"
+   ],
+   "model_answer": "Dallas Cowboys"
+  },
+  {
+   "id": "ac9e59eb266a46bc",
+   "kind": "answer",
+   "question": "Who is the individual implicated in instructing Caroline Ellison to use $14 billion of customer funds to repay debts, as reported by TechCrunch, and is also alleged by the prosecution to have committed fraud for personal gain, according to another article from TechCrunch?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "81a3cfd577f819cc",
+   "kind": "answer",
+   "question": "What entities, as reported by Sporting News, are known to modify their point spread, moneyline, and NBA Rookie of the Year betting lines in response to news, betting patterns, liability, and events such as injuries or roster changes?",
+   "gold_answers": [
+    "Sportsbooks"
+   ],
+   "model_answer": "Sportsbooks (bookmakers)"
+  },
+  {
+   "id": "31b0976edb8bb31f",
+   "kind": "answer",
+   "question": "Does the article from The Verge suggest that Alameda Research was not involved in manipulating FTX's balance sheet, while the article from Cnbc | World Business News Leader indicates Sam Bankman-Fried's intentions regarding the composition of FTX's board, and are these claims about different aspects of FTX's corporate governance?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "71b05ee756ca081e",
+   "kind": "answer",
+   "question": "Considering an article from The Times of India detailing Boney Kapoor's upcoming film projects and another from The Hindu discussing his collaboration with a specific actor, which actor is mentioned in both articles as working with Boney Kapoor on a new film venture?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "Ajith Kumar"
+  },
+  {
+   "id": "b48a9ad74afa7d3b",
+   "kind": "answer",
+   "question": "Considering the information from an article by The Guardian and another by Forbes about Denis Coleman, which single letter represents both the first initial of the European city where he was reported to have attended a major financial conference last year and the first initial of the last name of the individual he was seen having a significant meeting with during the same event?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "D"
+  },
+  {
+   "id": "930b4045d88f79b5",
+   "kind": "answer",
+   "question": "Did the article from Fortune reporting on the lawsuit's impact on Rogers Communications Inc. indicate an increase in the company's stock price, and did the article from The Sydney Morning Herald discussing the antitrust lawsuit against Amazon indicate a decrease in Amazon's stock price?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes to both."
+  },
+  {
+   "id": "45b6db9bd79f470f",
+   "kind": "answer",
+   "question": "Who is the individual facing a criminal trial on seven counts of fraud and conspiracy, previously likened to a financial icon but not by TechCrunch, and is accused by the prosecution of committing fraud for wealth, power, and influence?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "47079bb2b6f90eee",
+   "kind": "answer",
+   "question": "Does the article from The Verge suggest that Sam Bankman-Fried set withdrawal permissions based on FTX's trading revenue, while the Cnbc | World Business News Leader article discusses his intentions for FTX's board composition, and the TechCrunch article alleges that Sam Bankman-Fried committed fraud for personal gain, indicating different aspects of his professional conduct?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "9a4b136954b3b0be",
+   "kind": "answer",
+   "question": "Does the Fortune article suggest that Sam Bankman-Fried was responsible for the alleged deceit behind FTX's success, while the TechCrunch article focuses on Gary Wang and Caroline Ellison's admission of guilt to federal criminal charges in relation to the FTX collapse?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "b287caad4dd5bf10",
+   "kind": "answer",
+   "question": "Considering the information from an article in The New York Times detailing Serban Ionescu's latest architectural project in Manhattan and another from The Guardian discussing his collaboration with a renowned environmental organization, what is the first letter of the city where Ionescu's project is located and that also hosted the headquarters of the environmental group he partnered with?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "N"
+  },
+  {
+   "id": "04dc868eb25c6b16",
+   "kind": "answer",
+   "question": "Considering the information from an article in The New York Times about Anthony Melone's strategic business decisions and a report by The Wall Street Journal on his philanthropic efforts, which university's board of trustees, known for its business school where Melone made a significant donation, did he also join according to both sources?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "The University of Scranton"
+  },
+  {
+   "id": "20e2d5db78c48332",
+   "kind": "answer",
+   "question": "Considering the information from an ESPN article detailing the performance of a cricket team at the DY Patil Sports Academy and a Cricbuzz report on the same team's historical achievements, which team, known for its blue jersey, won a significant match at the DY Patil Sports Academy and also secured a championship title in an ICC event held in 2011?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "India (men’s cricket team)"
+  },
+  {
+   "id": "89c56d9cd4c4fb4b",
+   "kind": "answer",
+   "question": "After the report by Cnbc | World Business News Leader on October 6, 2023, stating that businesses selling on Amazon might opt to set non-competitive prices, did The Verge report a change or consistency in eBay's approach to pricing competitiveness in their article on October 25, 2023?",
+   "gold_answers": [
+    "Consistency"
+   ],
+   "model_answer": "The Verge reported that eBay was continuing to prioritize competitive pricing."
+  },
+  {
+   "id": "fb5c47c3598e06ba",
+   "kind": "answer",
+   "question": "Does the 'Business World' article suggesting that the 'Philippines government' could hinder private investment due to rising national debt align with the concern over the 'Philippines' debt-to-GDP ratio' expressed in another 'Business World' article, or do they present differing implications for the country's economy?",
+   "gold_answers": [
+    "Align"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "9194ca13393b5d03",
+   "kind": "answer",
+   "question": "Considering the information from an article by The New York Times and another by The Guardian on the film \"Dance The Night,\" which character, portrayed by an actor who has previously won an Academy Award, is central to the plot twist revealed in the third act of the movie as per The New York Times, and is also noted for their exceptional dance performance in a pivotal scene highlighted by The Guardian?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "Bella Baxter"
+  },
+  {
+   "id": "250d2e63d779b987",
+   "kind": "answer",
+   "question": "Who is the individual associated with the crypto exchange FTX, whose purported success was questioned in a Fortune article, who admitted to being informed of financial discrepancies as reported by The Verge, and is alleged by the prosecution to have committed fraud for personal gain according to TechCrunch?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "ac9f41141f559a1d",
+   "kind": "answer",
+   "question": "Considering the economic analysis from Bloomberg and the recent health initiatives reported by The Guardian, which minister, responsible for both finance and health portfolios in Harare, has been recognized for their dual efforts in budget reform and combating the spread of malaria?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "No single minister holds both portfolios in Zimbabwe; finance and health are separate ministries."
+  },
+  {
+   "id": "a2d53b838ee89ae3",
+   "kind": "answer",
+   "question": "Considering the economic development plans discussed in the New York Times article and the impact of local businesses on community growth highlighted by the Washington Post, which single letter represents the first initial of the mayor of Main Street who has been instrumental in both initiating the new policies and supporting small businesses?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "I can’t determine that without the articles or the mayor’s name."
+  },
+  {
+   "id": "df105f7f2534ee41",
+   "kind": "answer",
+   "question": "Considering the information from an ESPN article and a BBC Sports report on Georgia Wareham, which single character represents the cricket format she was playing when she sustained an injury according to ESPN, and is also the format of the tournament where BBC Sports highlighted her potential return?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "T"
+  },
+  {
+   "id": "cbf193ca8eb7b8f5",
+   "kind": "answer",
+   "question": "Which country, according to a Peace Studies scholar, faces a starvation risk in a region under its blockade, has previously reached understandings to cease hostilities and return life to normal, and is considered to have experienced a massive intelligence failure due to a surprise attack, as reported by sources including 'Fortune', 'Globes English | Israel Business Arena', and 'Business Today | Latest Stock Market And Economy News India'?",
+   "gold_answers": [
+    "Gaza"
+   ],
+   "model_answer": "Israel"
+  },
+  {
+   "id": "ae5de320f0e3727f",
+   "kind": "answer",
+   "question": "Between the Sporting News report on NBA Rookie of the Year odds published on October 4, 2023, and the Sporting News report on line shopping in sports betting published on November 6, 2023, has the approach of Sportsbooks in adjusting lines and odds remained unchanged?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "4c0a08217849b3d5",
+   "kind": "answer",
+   "question": "Does the TechCrunch article discussing Google's spending to become the default search engine on various platforms report the same amount of $26.3 billion in 2021 as the claim made in another TechCrunch article covering the US v Google trial, or do they report different amounts?",
+   "gold_answers": [
+    "Same"
+   ],
+   "model_answer": "They report the same amount: $26.3 billion."
+  },
+  {
+   "id": "867b211ada908931",
+   "kind": "answer",
+   "question": "Considering the legislative focus discussed in a New York Times article and the budgetary concerns highlighted by a Washington Post report, which single letter represents the initial of a US Senator who has been vocal in both pieces about the need for fiscal responsibility in upcoming bills?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "C"
+  },
+  {
+   "id": "330dfa2bf562e2a1",
+   "kind": "answer",
+   "question": "Considering the information from a CNBC article discussing the latest trends in the credit services industry and a Bloomberg report on the financial performance of major credit service companies, which CEO, mentioned in both articles, has led their company to outperform market expectations in the last quarter and also announced a strategic partnership with a fintech startup focused on blockchain technology?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "Al Kelly"
+  },
+  {
+   "id": "5404828cc1d4bec1",
+   "kind": "answer",
+   "question": "Does the Sporting News article suggest that T.J. Hockenson's participation in Week 10 is expected under similar circumstances as Dalton Kincaid's anticipated play in the Saturday game, with both being less than fully fit but still likely to play?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "03551458ce505138",
+   "kind": "answer",
+   "question": "Considering the information from an article in the New York Times and another in the Wall Street Journal about Pets Best, which company, known for its insurance products and mentioned in both articles, has a CEO with the initial 'M'?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "MetLife"
+  },
+  {
+   "id": "cd0c8484b7601505",
+   "kind": "answer",
+   "question": "Between the TechCrunch report on Meta's moderation issues published on October 19, 2023, and the TechCrunch report on Meta's legislative proposal regarding teen app downloads published on November 15, 2023, was there a change in the type of challenges Meta is addressing in the public sphere, moderation bias or parental control over app downloads?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from moderation bias to parental control over teen app downloads."
+  },
+  {
+   "id": "be2d4e7820f86f7b",
+   "kind": "answer",
+   "question": "Did the report by Fortune on October 4, 2023, regarding Sam Bankman-Fried's alleged use of Caroline Ellison as a front at Alameda Research, and the subsequent report by TechCrunch involving Sam Bankman-Fried's alleged motives for committing fraud, portray Sam Bankman-Fried's actions inconsistently?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "5ac84b5132d669e7",
+   "kind": "answer",
+   "question": "Between the report from The Verge on Google's impact on the internet's appearance published on November 1, 2023, and the report from TechCrunch on a class action antitrust suit against Google published later, was there a change in the portrayal of Google's influence on the digital ecosystem?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from shaping users’ search experience to allegedly harming publishers and diverting traffic through its content and AI systems."
+  },
+  {
+   "id": "475f2bbf25322fc6",
+   "kind": "answer",
+   "question": "Who is the individual facing legal scrutiny, where contrasting narratives of his circumstances are being presented in court, who also claimed the rapid expansion of his cryptocurrency exchange made it difficult to manage alongside a research firm, and is accused by the prosecution of committing fraud for personal gains, as reported by Fortune, The Verge, and TechCrunch?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "8ec11b2ec136db39",
+   "kind": "answer",
+   "question": "Considering the information from an article by The New York Times and another by The Guardian on Middle Seat Terminal, which airline, known for its innovative approach to passenger comfort as per The New York Times, also faced scrutiny for a data breach incident reported by The Guardian, and uses the letter 'A' as the first character in its name?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "Air New Zealand"
+  },
+  {
+   "id": "1116c3a92258d5b2",
+   "kind": "answer",
+   "question": "Between the report by The Verge on November 7, 2023, portraying Google as the antagonist in the Epic v. Google trial, and the report by TechCrunch on December 9, 2023, regarding Google's release of only a \"lite\" version of their AI model, was there a change in the portrayal of Google's actions from the perspective of these news sources? \n\nBetween the report by TechCrunch on December 9, 2023, about Google releasing only a \"lite\" version of their AI model, and the report by TechCrunch on December 15, 2023, filing a class action antitrust suit against Google, was the consistency in reporting Google's competitive practices by TechCrunch maintained?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—the portrayal shifted from alleged antitrust misconduct to an underwhelming AI release. Yes—TechCrunch maintained a critical framing of Google’s competitive practices."
+  },
+  {
+   "id": "085fa816f7cd324d",
+   "kind": "answer",
+   "question": "Does the CBSSports.com article suggest that the Tampa Bay Buccaneers could have success with a Michigan quarterback similar to past achievements, while the Sporting News article indicates that The Big Ten is currently engaged in a review process concerning Michigan and Jim Harbaugh, without implying any success with a quarterback?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "b6112fcc75f715b9",
+   "kind": "answer",
+   "question": "Considering the economic analysis from Bloomberg and the recent health initiatives reported by The Guardian, which minister, responsible for both finance and health portfolios in Harare, has been recognized for their dual efforts in budget reform and combating the spread of malaria?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "No single minister—Mthuli Ncube holds the finance portfolio, and Douglas Mombeshora holds the health portfolio."
+  },
+  {
+   "id": "fc768760475b6760",
+   "kind": "answer",
+   "question": "Based on a New York Times article discussing Sacha Baron Cohen's advocacy for stricter regulations on social media platforms and a Variety piece highlighting his casting in a new historical drama series, which character, portrayed by Cohen in a film that was referenced in both articles, is known for his flamboyant fashion and controversial interviews?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "Bruno"
+  },
+  {
+   "id": "5e49d0175de2f827",
+   "kind": "answer",
+   "question": "Does the Sporting News article attribute the Minnesota Vikings' improved performance after a 1-4 start to Danielle Hunter's high-level performance, while the CBSSports.com article credits the Vikings' defense, specifically their ability to limit downfield shots against tight ends, for the team's success?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "e4764d3a06a002d4",
+   "kind": "answer",
+   "question": "Considering the information from an ESPN article detailing the Gujarat Giants' performance in the recent tournament and a Times of India report on the team's strategic changes, which player, identified by their jersey number, was highlighted for their exceptional performance in the former and is also noted for adapting well to the new strategies mentioned in the latter?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "Parteek Dahiya (#7)"
+  },
+  {
+   "id": "339fbb55e5dda4d3",
+   "kind": "answer",
+   "question": "Who is the individual that, according to claims from Fortune, TechCrunch, and The Verge, used another person as a front for illicit access to funds, has entered a not-guilty plea to multiple charges of fraud and conspiracy, and was made aware of a significant financial discrepancy after judicial intervention?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "e9c207411967ffc8",
+   "kind": "answer",
+   "question": "Considering the information from an ESPN article detailing Ellyse Perry's performance in a recent international match and a BBC Sport article discussing her contributions to her domestic team's championship win, which jersey number, associated with Perry's achievements mentioned in both articles, does she wear while playing for her national team?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "8"
+  },
+  {
+   "id": "9ba771a5f52a611c",
+   "kind": "answer",
+   "question": "Considering the information from an article in The New York Times and another in The Wall Street Journal about Stephen G. Wozniak, what single letter represents the first initial of the university that Wozniak attended, which was also mentioned as the place where he delivered a keynote speech on innovation and technology in the second article?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "C"
+  },
+  {
+   "id": "7976021456b3f3bd",
+   "kind": "answer",
+   "question": "Between the TechCrunch report on Meta's moderation issues published on October 19, 2023, and the TechCrunch report on Meta's legislative proposal regarding teen app downloads published on November 15, 2023, was there a change in the type of challenges Meta is addressing in the public sphere, moderation bias or parental control over app downloads?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from moderation bias to parental control over app downloads."
+  },
+  {
+   "id": "444572d2907d3b0b",
+   "kind": "answer",
+   "question": "Considering the legislative focus discussed in a New York Times article and the budgetary concerns highlighted by a Washington Post report, which single letter represents the initial of a US Senator who has been vocal in both pieces about the need for fiscal responsibility in upcoming bills?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "M"
+  },
+  {
+   "id": "616e64ee7e33148f",
+   "kind": "answer",
+   "question": "Did the 'Sporting News' report on the Michigan sign-stealing scandal involving the Wolverines indicate a consistent or inconsistent portrayal of the situation compared to the earlier report by 'The New York Times' on the reactions of college football coaches to the alleged espionage?",
+   "gold_answers": [
+    "Consistent"
+   ],
+   "model_answer": "Inconsistent."
+  }
+ ],
+ "evidence": []
+}

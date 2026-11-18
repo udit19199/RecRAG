@@ -1,0 +1,100 @@
+98d97
+< CYPHER_ROW_CHARS = 2000
+412,420c411,413
+<     # One passage is at most about 1,400 characters; a longer row is a bulk
+<     # dump (collect() of many passages) and is cut so it cannot flood the
+<     # agent's context (10 Nov 2026: 14 of 301 Cypher results were over 100,000).
+<     content = json.dumps(record.data(), ensure_ascii=False, default=str)
+<     if len(content) > CYPHER_ROW_CHARS:
+<         content = (
+<             content[:CYPHER_ROW_CHARS] + f" [row cut at {CYPHER_ROW_CHARS} characters]"
+<         )
+<     return RetrieverResultItem(content=content)
+---
+>     return RetrieverResultItem(
+>         content=json.dumps(record.data(), ensure_ascii=False, default=str)
+>     )
+453,466d445
+< def _repeats_passage(row: str, passed: set[str]) -> bool:
+<     """True when a cypher_search row returns a passage already being passed."""
+<     try:
+<         values = json.loads(row)
+<     except ValueError:
+<         return False  # a row cut at CYPHER_ROW_CHARS is no longer valid JSON
+<     if not isinstance(values, dict):
+<         return False
+<     return any(
+<         isinstance(value, str) and " ".join(value.lower().split()) in passed
+<         for value in values.values()
+<     )
+< 
+< 
+495,497d473
+< - Write every string in double quotes. Names are stored with both ' and ’ apostrophes, so match words that contain no apostrophe: for Ja'Marr Chase, "marr" and "chase".
+< - To find a headline or long title, match two or three distinctive lowercase words from it, each with its own CONTAINS; never the whole title.
+< - Put each WHERE directly after the MATCH it filters. A WHERE after OPTIONAL MATCH filters only that OPTIONAL MATCH.
+499d474
+< - Return at most one passage per row; never collect() passage text.
+518,519c493,494
+<         f'(toLower({variable}.name) CONTAINS "{name}" OR any(alias IN '
+<         f'coalesce({variable}.aliases, []) WHERE toLower(alias) CONTAINS "{name}"))'
+---
+>         f"(toLower({variable}.name) CONTAINS '{name}' OR any(alias IN "
+>         f"coalesce({variable}.aliases, []) WHERE toLower(alias) CONTAINS '{name}'))"
+537,560d511
+< ]
+< 
+< # The news graph (MultiHop-RAG): articles, publishers and the people in them.
+< # Checked against the built graph on 10 Nov 2026: each returns rows.
+< NEWS_CYPHER_EXAMPLES = [
+<     (
+<         "USER INPUT: 'What does the TechCrunch article on the Google antitrust suit say?' "
+<         "QUERY: MATCH (a:Article)-[:PUBLISHED_BY]->(p:Publisher) "
+<         'WHERE toLower(p.name) CONTAINS "techcrunch" AND toLower(a.name) CONTAINS "google" '
+<         'AND toLower(a.name) CONTAINS "antitrust" '
+<         "MATCH (a)-[:FROM_CHUNK]->(c:Chunk) "
+<         "RETURN a.name AS article, p.name AS publisher, c.text AS passage LIMIT 10"
+<     ),
+<     (
+<         "USER INPUT: 'What is Ja'Marr Chase connected to?' QUERY: "
+<         "MATCH (n:__Entity__)-[r]-(m:__Entity__) "
+<         'WHERE toLower(n.name) CONTAINS "marr" AND toLower(n.name) CONTAINS "chase" '
+<         "RETURN n.name AS entity, type(r) AS relationship, m.name AS related LIMIT 10"
+<     ),
+<     "USER INPUT: 'Which passages mention Sam Altman?' QUERY: "
+<     "MATCH (n:Person)-[:FROM_CHUNK]->(c:Chunk)-[:FROM_DOCUMENT]->(d:Document) "
+<     "WHERE "
+<     + _name_matches("n", "sam altman")
+<     + " RETURN n.name AS person, d.title AS page, c.text AS passage LIMIT 10",
+562,566d512
+< 
+< 
+< def cypher_examples(ontology: GraphSchema) -> list[str]:
+<     labels = {node.label for node in ontology.node_types}
+<     return NEWS_CYPHER_EXAMPLES if "Article" in labels else CYPHER_EXAMPLES
+608d553
+<         examples: list[str],
+614c559
+<             examples=examples,
+---
+>             examples=CYPHER_EXAMPLES,
+769c714
+<         follow, in the order they arrived (see the comment below). The
+---
+>         fill only the slots left after that, in the order they arrived. The
+820,830c765
+<         # cypher_search rows go to the answer model too (decided 11 Nov 2026),
+<         # after the passages: at most CYPHER_ROW_LIMIT rows, each already cut
+<         # at CYPHER_ROW_CHARS, and a row is dropped when a passage it returns
+<         # is already among the kept passages. Before, rows only filled empty
+<         # slots, which never happened, so graph results never reached the answer.
+<         passed = {_evidence_key(str(record["content"])) for record in kept}
+<         kept += [
+<             record
+<             for record in rows
+<             if not _repeats_passage(str(record["content"]), passed)
+<         ][:CYPHER_ROW_LIMIT]
+---
+>         kept += rows[: top_k - len(kept)]
+962d896
+<         examples=cypher_examples(ontology),

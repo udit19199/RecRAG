@@ -1,0 +1,501 @@
+[
+ {
+  "id": "091a14430632a832",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "95076fffb4b8e628",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"
+     },
+     {
+      "item": 2,
+      "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."
+     }
+    ]
+   },
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."
+     }
+    ]
+   },
+   {
+    "fact": "1.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."
+     }
+    ]
+   },
+   {
+    "fact": "2.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "He defrauded sophisticated investors and lenders, and he"
+     },
+     {
+      "item": 7,
+      "quote": "He bought himself wealth, power and influence."
+     },
+     {
+      "item": 10,
+      "quote": "A conscious criminal…"
+     }
+    ]
+   },
+   {
+    "fact": "2.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."
+     }
+    ]
+   },
+   {
+    "fact": "2.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "2be82ec5e4e4a967",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "When such information becomes public, sportsbooks may adjust the odds accordingly."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "If a significant majority of bettors are placing their money on one team to cover the spread"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "the top sports betting apps will adjust the point spread to make the other side more appealing, thereby balancing"
+     }
+    ]
+   },
+   {
+    "fact": "2.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like"
+     }
+    ]
+   },
+   {
+    "fact": "2.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like"
+     },
+     {
+      "item": 9,
+      "quote": "an injury or roster move."
+     }
+    ]
+   },
+   {
+    "fact": "3.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."
+     }
+    ]
+   },
+   {
+    "fact": "3.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "00894a9b0f81b60e",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "The Steam Deck OLED will be available to order on November 16th at 1PM ET."
+     }
+    ]
+   },
+   {
+    "fact": "2.1",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "dcc2c3ac309f976b",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "But “all of that, all of it, was built on lies,” Rehn declared to the jury."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.5",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."
+     }
+    ]
+   },
+   {
+    "fact": "2.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."
+     }
+    ]
+   },
+   {
+    "fact": "3.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and"
+     },
+     {
+      "item": 1,
+      "quote": "“The defendant lied to the world,” Rehn alleged."
+     }
+    ]
+   },
+   {
+    "fact": "3.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "3.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "3.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "3.4",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "e64be96ed2e45f0d",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "All of that was built on lies."
+     },
+     {
+      "item": 6,
+      "quote": "said the assistant US attorney, Thane Rehn,"
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.5",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.6",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.3",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ }
+]

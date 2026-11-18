@@ -1,0 +1,68 @@
+[
+  {"id": "e93deafba42e3c73", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "he tried and failed to give her a friendship bracelet with his phone number on it"}]},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "he tried and failed to give her a friendship bracelet"}]},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]}
+  ]},
+  {"id": "fa5ea355d057dd2f", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Wang testified that he heard Bankman-Fried tell another trader"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue"}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "acf10c880c766134", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "This not only allows the collection of data from complex equipment"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "enables operators to track equipment performance and predict maintenance and downtimes"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "enables operators to track equipment performance and predict maintenance and downtimes"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "enables operators to track equipment performance and predict maintenance and downtimes"}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "6c3efe4994a746a9", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 4, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal"}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 4, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]}
+  ]},
+  {"id": "2153a5432ccb6958", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Gary Wang, the co-founder of FTX and Alameda Research and another college roommate. He took the stand after Yedidia and sang like a canary about the secret"}]},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "d6dc5f4b27912e7e", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "Cohen had blamed Ellison for not taking out a hedge on some of the risks Alameda was trading."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "Ellison’s tenure as CEO of Alameda Research"}]},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]}
+]

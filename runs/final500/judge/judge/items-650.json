@@ -1,0 +1,59 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "f29de2fab6dd8106",
+   "gold": [
+    {
+     "sentence": " The album features a pair of duets with Waylon Jennings, one of which was the \"There Ain't No Good Chain Gang\" single; it was one of Cash's first collaborations with Jennings, and the two recorded songs together throughout the 1980s, including a separate album entitled \"Heroes\".",
+     "facts": {
+      "0.0": "The album features a pair of duets with Waylon Jennings.",
+      "0.1": "One of the duets with Waylon Jennings was the \"There Ain't No Good Chain Gang\" single.",
+      "0.2": "The duet \"There Ain't No Good Chain Gang\" was one of Johnny Cash's first collaborations with Waylon Jennings.",
+      "0.3": "Johnny Cash and Waylon Jennings recorded songs together throughout the 1980s.",
+      "0.4": "Johnny Cash and Waylon Jennings recorded a separate album entitled \"Heroes\"."
+     }
+    },
+    {
+     "sentence": " Cash and Jennings would also work together as The Highwaymen with Willie Nelson and Kris Kristofferson.",
+     "facts": {
+      "1.0": "Johnny Cash and Waylon Jennings would also work together as The Highwaymen.",
+      "1.1": "The Highwaymen included Willie Nelson.",
+      "1.2": "The Highwaymen included Kris Kristofferson."
+     }
+    },
+    {
+     "sentence": "The Highwaymen was a country music supergroup composed of four of the genre's biggest artists well known for their pioneering influence on the outlaw country subgenre: Johnny Cash, Waylon Jennings, Willie Nelson, and Kris Kristofferson.",
+     "facts": {
+      "2.0": "The Highwaymen was a country music supergroup.",
+      "2.1": "The Highwaymen was composed of four of the country music genre's biggest artists.",
+      "2.2": "The four artists were well known for their pioneering influence on the outlaw country subgenre.",
+      "2.3": "The Highwaymen members were Johnny Cash, Waylon Jennings, Willie Nelson, and Kris Kristofferson."
+     }
+    },
+    {
+     "sentence": " Active as a group between 1985 and 1995, these four artists recorded three major label albums as The Highwaymen: two on Columbia Records and one for Liberty Records.",
+     "facts": {
+      "3.0": "The Highwaymen was active as a group between 1985 and 1995.",
+      "3.1": "The Highwaymen recorded three major label albums.",
+      "3.2": "Two of The Highwaymen's major label albums were on Columbia Records.",
+      "3.3": "One of The Highwaymen's major label albums was for Liberty Records."
+     }
+    }
+   ],
+   "items": [
+    "I Would Like to See You Again\nI Would Like to See You Again is the 57th album by American country singer Johnny Cash, released on Columbia Records in 1978.\n\n The title track peaked at #12 on the singles chart, while \"There Ain't No Good Chain Gang\" reached #2; the album itself peaked at #23.\n\n The album features a pair of duets with Waylon Jennings, one of which was the \"There Ain't No Good Chain Gang\" single; it was one of Cash's first collaborations with Jennings, and the two recorded songs together throughout the 1980s, including a separate album entitled \"Heroes\".\n\n Cash and Jennings would also work together as The Highwaymen with Willie Nelson and Kris Kristofferson.",
+    "The material covers country, country-rock, folk-rock and bluegrass artists and releases. Oak Ridge Boys’ 2009 *The Boys Are Back* marked a return to secular country, led by a White Stripes cover. Richie Furay helped form Buffalo Springfield and Poco, later joining the Souther–Hillman–Furay Band; Poco’s debut featured his “Pickin’ Up the Pieces.” Other subjects include Buffalo Springfield’s final album, the Lonesome Pine F",
+    "There Ain't No Good Chain Gang\n\"There Ain't No Good Chain Gang\" is a song written by Hal Bynum and Dave Kirby, and recorded by American country music artists Johnny Cash and Waylon Jennings.\n\n It was released in May 1978 as the second single from the album \"I Would Like to See You Again\".\n\n The song reached #2 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+    "Confederate Railroad\nConfederate Railroad is an American country rock–Southern rock band founded in 1987 in Marietta, Georgia, by Danny Shirley (lead vocals, rhythm guitar), Michael Lamb (lead guitar), Mark Dufresne (drums), Chris McDaniel (keyboards), Warren \"Gates\" Nichols (steel guitar) and Wayne Secrest (bass guitar).\n\n After serving as a backing band for outlaw country acts David Allan Coe and Johnny Paycheck, the band signed to a recording contract with Atlantic Records, releasing their self-titled debut album that year.\n\n In the 1990s, they released four more albums for Atlantic.",
+    "Burn Your Playhouse Down – The Unreleased Duets\nBurn Your Playhouse Down – The Unreleased Duets is the 60th and final studio album by American country music singer George Jones released on August 19, 2008 on the Bandit Records label.\n\n It features duets never before released, including some that were cut from his 1994 duets album \"The Bradley Barn Sessions\".\n\n The only new recording in the collection is \"You And Me And Time\", a song Jones recorded with his daughter by Tammy Wynette, Georgette.\n\n A music video accompanied the song.\n\n The album features several duets with artist from outside the country music pantheon, including Mark Knopfler, Leon Russell, and Keith Richards.\n\n The album peaked at number 15 on the Billboard country albums chart.\n\n Of the album's title track, Andrew Meuller of \"Uncut\" opined in July 2013, \"The segue from Richards trying to sing like Jones to Jones actually singing like Jones is hilarious.\"",
+    "Lonesome Pine Fiddlers\nThis most talented family of musicians were the best, surpassed by none.\n\n Finally, on October 1, 2009, The Lonesome Pine Fiddlers got their due when they were inducted into the International Bluegrass Hall of Fame at the Ryman Theater (the original home of the Grand Ole Opry).\n\n Bobby Osborne, Melvin Goins and Paul Williams were there to receive the bands award.\n\n In the crowd of a sold out theater was the son of Ezra Cline, Scotty Ireland Cline, who recalled being in that same theater as a child sitting on stage and watching the Fiddlers play.\n\n (At the time, the Opry had bleachers for family just off stage).\n\n The final act of the evening at the IBMA Awards was the playing of \"Pain in my Heart\" by Osborne, Goins and Williams along with a Song from the Dillards, who were also inducted the same evening.",
+    "The Closer You Get...\nThe Closer You Get... is the seventh studio album by country music band Alabama, released in 1983.\n\n All three singles from this album — \"The Closer You Get\", \"Lady Down on Love\" and \"Dixieland Delight\" — reached Number One on the Hot Country Songs charts in 1983.\n\n \"She Put the Sad in All His Songs\" was also recorded by Ronnie Dunn (who formed the duo Brooks & Dunn with Kix Brooks in 1991) and was released by him as a single in 1983.",
+    "Lonesome Pine Fiddlers\nIn 1954, Charlie did a session, playing lead guitar, with the Stanley Brothers and also another one on RCA with the Fiddlers, although he was not otherwise working with them at the time.\n\n He also worked briefly as a sideman with the Osborne Brothers, although he did not record with them.\n\n By 1958, Charlie (electric lead guitar) and his wife, Lee (electric bass), had rejoined Ezra and Curly Ray in the Lonesome Pine Fiddlers, who were experimenting with a more modern sound and working a TV show in Huntington, West Virginia, in addition to daily radio in Pikeville.\n\n In his later years, Charlie was with the Stanley Brothers.\n\n Curly Ray also played with the Stanley Brothers at a different time as their fiddler.\n\n Curly Ray was one of the best fiddlers in Bluegrass.\n\n This most talented family of musicians were the best, surpassed by none.",
+    "Diamond Rio\nDiamond Rio is an American country and Christian country music band.\n\n The band was founded in 1982 as an attraction for the Opryland USA theme park in Nashville, Tennessee, and was originally known as the Grizzly River Boys, then the Tennessee River Boys.\n\n It was founded by Matt Davenport, Danny Gregg, and Ty Herndon, the last of whom became a solo artist in the mid-1990s.\n\n After undergoing several membership changes in its initial years, the band has consisted of the same six members since 1989: Marty Roe (lead vocals, rhythm guitar), Gene Johnson (mandolin, guitar, fiddle, tenor vocals), Jimmy Olander (lead guitar, Dobro, banjo), Brian Prout (drums), Dan Truman (keyboards, organ, synthesizer), and Dana Williams (bass guitar, baritone vocals).",
+    "The Highwaymen (country supergroup)\nThe Highwaymen was a country music supergroup composed of four of the genre's biggest artists well known for their pioneering influence on the outlaw country subgenre: Johnny Cash, Waylon Jennings, Willie Nelson, and Kris Kristofferson.\n\n Active as a group between 1985 and 1995, these four artists recorded three major label albums as The Highwaymen: two on Columbia Records and one for Liberty Records.\n\n Their Columbia works produced three chart singles, including the number one \"Highwayman\" in 1985."
+   ]
+  }
+ ]
+}

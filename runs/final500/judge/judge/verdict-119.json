@@ -1,0 +1,69 @@
+[
+{"id": "c5b169729bbaf969", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Last week, Wang testified that Alameda got access to a special credit line"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "91dacbc40fa1e6ca", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Johnny Cardoso had to pull out of the September camp due to an ankle injury, but he has returned to action with Brazilian club Internacional, indicating a return to fitness, and has been included on the squad."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Johnny Cardoso had to pull out of the September camp due to an ankle injury, but he has returned to action with Brazilian club Internacional, indicating a return to fitness, and has been included on the squad."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Johnny Cardoso had to pull out of the September camp due to an ankle injury, but he has returned to action with Brazilian club Internacional, indicating a return to fitness, and has been included on the squad."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Johnny Cardoso had to pull out of the September camp due to an ankle injury, but he has returned to action with Brazilian club Internacional, indicating a return to fitness, and has been included on the squad."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "He and his fresh legs are back just in time as rookie sensation De'Von Achane hit Injured Reserve this week with a knee injury."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "He and his fresh legs are back just in time as rookie sensation De'Von Achane hit Injured Reserve this week with a knee injury."}]}
+]},
+{"id": "3bee6e5a936aa29e", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 10, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley."}]}
+]},
+{"id": "cf141a4f3d740ea4", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "But it was ChatGPT’s explosion into public consciousness that thrust Altman into the spotlight as a face of generative AI — technology that can produce novel imagery, passages of text and other media."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "But it was ChatGPT’s explosion into public consciousness that thrust Altman into the spotlight as a face of generative AI — technology that can produce novel imagery, passages of text and other media."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "In the year since Altman catapulted ChatGPT to global fame, he has become Silicon Valley’s sought-after voice on the promise and potential dangers of artificial intelligence and his sudden and mostly unexplained exit brought uncertainty to the industry’s future."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "In the year since Altman catapulted ChatGPT to global fame, he has become Silicon Valley’s sought-after voice on the promise and potential dangers of artificial intelligence and his sudden and mostly unexplained exit brought uncertainty to the industry’s future."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "In the year since Altman catapulted ChatGPT to global fame, he has become Silicon Valley’s sought-after voice on the promise and potential dangers of artificial intelligence and his sudden and mostly unexplained exit brought uncertainty to the industry’s future."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know."}]},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []},
+{"fact": "3.2", "status": "missing", "evidence": []}
+]},
+{"id": "2133466e8b0a655a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)"}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 10, "quote": "Second-last of ten on the table after a fourth abject loss in barely three weeks"}, {"item": 10, "quote": "including an upcoming date with table-toppers and tournament favourites India"}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 10, "quote": "England’s hopes of defending their World Cup crown are in tatters"}, {"item": 10, "quote": "Second-last of ten on the table after a fourth abject loss in barely three weeks"}]},
+{"fact": "1.2", "status": "contradicted", "evidence": [{"item": 10, "quote": "England’s hopes of defending their World Cup crown are in tatters"}, {"item": 10, "quote": "this time by eight wickets and nearly 25 overs to spare against Sri Lanka"}]},
+{"fact": "1.3", "status": "contradicted", "evidence": [{"item": 10, "quote": "England’s hopes of defending their World Cup crown are in tatters"}, {"item": 10, "quote": "this time by eight wickets and nearly 25 overs to spare against Sri Lanka"}]},
+{"fact": "1.4", "status": "contradicted", "evidence": [{"item": 10, "quote": "England’s hopes of defending their World Cup crown are in tatters"}, {"item": 10, "quote": "this time by eight wickets and nearly 25 overs to spare against Sri Lanka"}]},
+{"fact": "1.5", "status": "contradicted", "evidence": [{"item": 10, "quote": "England’s hopes of defending their World Cup crown are in tatters"}, {"item": 10, "quote": "having been bowled out for a miserable 156 in Bengaluru"}]},
+{"fact": "1.6", "status": "contradicted", "evidence": [{"item": 10, "quote": "England’s hopes of defending their World Cup crown are in tatters"}, {"item": 10, "quote": "the 2019 champions are now only mathematically a chance of scraping through to the semi-finals"}]}
+]},
+{"id": "c158046b7d11890a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 8, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "3.0", "status": "missing", "evidence": []}
+]}
+]

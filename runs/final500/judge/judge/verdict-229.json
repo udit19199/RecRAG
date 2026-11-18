@@ -1,0 +1,73 @@
+[
+  {"id": "2a1a4394fc501499", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "ChatGPT’s explosion into public consciousness that thrust Altman into the spotlight as a face of generative AI"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "generative AI — technology that can produce novel imagery, passages of text and other media"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "In the year since Altman catapulted ChatGPT to global fame"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "he has become Silicon Valley’s sought-after voice on the promise and potential dangers of artificial intelligence"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "his sudden and mostly unexplained exit brought uncertainty to the industry’s future"}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "3.0", "status": "missing", "evidence": []},
+    {"fact": "3.1", "status": "missing", "evidence": []},
+    {"fact": "3.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "63da28a17f332523", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "A shutdown would drag on the US economy, raising the risk of a recession"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "A shutdown would drag on the US economy, raising the risk of a recession"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "financial markets have held up relatively well through past shutdowns"}]}
+  ]},
+  {"id": "4925f917a679a3c2", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "That answer ultimately lies with the jury"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth)"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth)"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth)"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts"}]},
+    {"fact": "3.0", "status": "stated", "evidence": [{"item": 7, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+    {"fact": "3.1", "status": "stated", "evidence": [{"item": 7, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]},
+    {"fact": "3.2", "status": "stated", "evidence": [{"item": 7, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]},
+    {"fact": "3.3", "status": "stated", "evidence": [{"item": 7, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]}
+  ]},
+  {"id": "f165268176263f59", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Sorcerer builds for season 2"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Sorcerer builds for season 2"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Sorcerer builds for season 2"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Barbarian builds for season 2"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Barbarian builds for season 2"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Barbarian builds for season 2"}]}
+  ]},
+  {"id": "b5e4e42787335c51", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Certainly there wasn’t a valid alternative to Google at the time,” Cue said"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones"}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "b58689116aef1f41", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts"}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 8, "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told"}]},
+    {"fact": "3.0", "status": "missing", "evidence": []},
+    {"fact": "3.1", "status": "missing", "evidence": []},
+    {"fact": "3.2", "status": "missing", "evidence": []},
+    {"fact": "3.3", "status": "missing", "evidence": []}
+  ]}
+]

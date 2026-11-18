@@ -1,0 +1,76 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5ab66e1355429954757d32b2",
+   "sentences": [
+    " The documentary explores the history of the mile and a half long stretch of road through West Hollywood known as Sunset Strip.",
+    " The film features some early pioneers of the hardcore punk music scene including Bad Brains, Black Flag, D.O.A., Minor Threat, Minutemen, SSD, and others."
+   ]
+  },
+  {
+   "id": "5a84b6ed5542994c784dda18",
+   "sentences": [
+    "Awolnation is an American alternative rock band, formed and fronted by Aaron Bruno, formerly of Under the Influence of Giants, Home Town Hero, and Insurgence.",
+    "This Mortal Coil was a music collective led by Ivo Watts-Russell, founder of the British record label 4AD."
+   ]
+  },
+  {
+   "id": "5a74fd6d5542993748c8977d",
+   "sentences": [
+    " He is owner and chef of \"Dear.",
+    " It airs on JTBC on Mondays at 21:30 (KST) beginning November 17, 2014."
+   ]
+  },
+  {
+   "id": "5a82bc7455429940e5e1a926",
+   "sentences": [
+    " During his early career, Cage starred in a variety of films such as \"Valley Girl\" (1983), \"Racing with the Moon\" (1984), \"Birdy\" (1984), \"Peggy Sue Got Married\" (1986), \"Raising Arizona\" (1987), \"Moonstruck\" (1987), \"Vampire's Kiss\" (1989), \"Wild at Heart\" (1990), \"Fire Birds\" (1990), \"Honeymoon in Vegas\" (1992), and \"Red Rock West\" (1993).",
+    " It is about a widowed 37-year-old Italian-American woman (Cher) who falls in love with her fiancé's (Danny Aiello) estranged, hot-tempered younger brother (Nicolas Cage)."
+   ]
+  },
+  {
+   "id": "5a8b036d55429971feec45fe",
+   "sentences": [
+    " Պողոսյան , born July 15, 1990) is an American professional ice hockey defenseman currently playing for the Buffalo Sabres.",
+    "Daron Vartan Malakian (Armenian: Տարօն/Տարոն Վարդան Մալաքեան, born July 18, 1975) is an Armenian–American singer-songwriter, multi-instrumentalist, and record producer."
+   ]
+  },
+  {
+   "id": "5adf9b415542995ec70e904c",
+   "sentences": [
+    "The International Grenfell Association (IGA) is an organization founded by Sir Wilfred Grenfell to provide health care, education, religious services, and rehabilitation and other social activities to the fisherman and coastal communities in northern Newfoundland and the coast of Labrador.",
+    "Sir Wilfred Thomason Grenfell, KCMG (28 February 1865 – 9 October 1940) was a medical missionary to Newfoundland and Labrador."
+   ]
+  },
+  {
+   "id": "-2112691997365137136",
+   "sentences": [
+    "Sanitary napkins ( also called sanitary towels or pads ) -- Rectangular pieces of material worn attached to the underwear to absorb menstrual flow , often with an adhesive backing to hold the pad in place . Disposable pads may contain wood pulp or gel products , usually with a plastic lining and bleached . Tampons -- Disposable cylinders of treated rayon / cotton blends or all - cotton fleece , usually bleached , that are inserted into the vagina to absorb menstrual flow . Disposable menstrual cups made of soft plastic -- A firm , flexible cup - shaped device worn inside the vagina to collect menstrual flow .",
+    "Disposable menstrual cups made of soft plastic -- A firm , flexible cup - shaped device worn inside the vagina to collect menstrual flow .",
+    "Menstrual cups -- A firm , flexible bell - shaped device worn inside the vagina to collect menstrual flow . Menstrual cups are usually made of silicone and can last 5 years or longer ."
+   ]
+  },
+  {
+   "id": "5301072772616910848",
+   "sentences": [
+    "The film is based loosely on Eminem 's actual upbringing , and follows white rapper B - Rabbit ( Eminem ) and his attempt to launch a career in a genre dominated by African - Americans . The title is derived from 8 Mile Road , the highway between the predominantly black city of Detroit and Wayne County and the predominantly White Oakland County and Macomb County suburbs . It was filmed mostly on location ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1279",
+   "sentences": [
+    "Al Saadi said that her frustration with Meta is common among Palestinians, both in occupied territories and across the diaspora.",
+    "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."
+   ]
+  },
+  {
+   "id": "5a7f40de5542992e7d278cc8",
+   "sentences": [
+    "The 'Burbs is a 1989 American comedy thriller film directed by Joe Dante starring Tom Hanks, Bruce Dern, Carrie Fisher, Rick Ducommun, Corey Feldman, Wendy Schaal and Henry Gibson.",
+    "Richard \"Rick\" Ducommun (July 3, 1952 – June 12, 2015) was a Canadian actor, comedian and writer who appeared in films and television."
+   ]
+  }
+ ]
+}

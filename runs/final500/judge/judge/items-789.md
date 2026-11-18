@@ -1,0 +1,796 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=96f6512e776d4d93 ===
+Gold sentences and facts:
+Sentence 0: Subjects are all taken on the same level - there is no higher or standard grade as in the past . There are three pass levels , each with different pass requirements. First is a pass with Higher certificate , one must obtain 40 % in home language , 40 % in two other subjects and must obtain 30 % in three other subjects . A learner who passed matric with higher certificate level , can not enroll for a University Degree nor a Diploma at an institute of higher learning . The mean mark in any subject is usually about 55 . Only a small proportion of candidates score an ' A ' in any subject ( from as little as 2 % to a maximum of about 10 % in subjects taken by highly select groups . ) A further 8 -- 15 % are likely to gain a ' B ' and about 20 -- 25 % achieve a ' C ' grade . The National Senior Certificate is a group certificate and records an aggregate mark .
+  Fact 0.0: All subjects are taken on the same level, and there is no higher or standard grade as in the past.
+  Fact 0.1: There are three pass levels, each with different pass requirements.
+  Fact 0.2: The first pass level is a pass with Higher certificate.
+  Fact 0.3: To pass with Higher certificate, a learner must obtain 40% in home language, 40% in two other subjects, and 30% in three other subjects.
+  Fact 0.4: A learner who passed matric with Higher certificate level cannot enroll for a University Degree.
+  Fact 0.5: A learner who passed matric with Higher certificate level cannot enroll for a Diploma at an institute of higher learning.
+  Fact 0.6: The mean mark in any subject is usually about 55.
+  Fact 0.7: Only a small proportion of candidates score an 'A' in any subject, from as little as 2% to a maximum of about 10% in subjects taken by highly select groups.
+  Fact 0.8: A further 8 to 15% of candidates are likely to gain a 'B' in a subject.
+  Fact 0.9: About 20 to 25% of candidates achieve a 'C' grade.
+  Fact 0.10: The National Senior Certificate is a group certificate.
+  Fact 0.11: The National Senior Certificate records an aggregate mark.
+
+Retrieved items:
+<item 1>
+National Senior Certificate
+There are three pass levels , each with different pass requirements. First is a pass with Higher certificate , one must obtain 40 % in home language , 40 % in
+two other subjects and must obtain 30 % in three other subjects . A learner who passed matric with higher certificate level , can not enroll for a University
+Degree nor a Diploma at an institute of higher learning . The mean mark in any subject is usually about 55 . Only a small proportion of candidates score an ' A
+' in any subject ( from as little as 2 % to a maximum of about 10 % in subjects taken by highly select groups . ) A further 8 -- 15 % are likely to gain a ' B '
+and about 20 -- 25 % achieve a ' C ' grade . The National Senior Certificate is a group certificate and records an aggregate mark . The Department of Basic
+Education has responsibility for general educational policy to be implemented by nine provincial education departments and private providers such as the
+Independent Examinations Board ( IEB ) . There are nine provincial examination boards and three independent boards , of which the IEB is the biggest . The IEB
+operates on a national level catering primarily for independent schools .
+</item 1>
+
+<item 2>
+National Senior Certificate
+For example a learner who obtains a mark of zero ( 0 ) out of 300 will obtain 5 % of zero ( which is zero ) for language compensation ; a learner who obtains 10
+out of 300 will receive 5 % of 10 , which is 0 , 5 marks , for language compensation ; a learner who obtains 100 out of 300 marks will obtain an additional 5
+marks for language compensation . '' This kind of compensation has some impact on pass rates , but does provide significant impact at the upper end of the scale
+, affecting those applying for admission to university . For example , a qualifying learner obtaining 95 % would receive 95 x 1.05 = 99.75 % ( which rounds to
+100 % ) . A learner obtaining 40 % would receive 40 x 1.05 = 42.0 % . University entrance ( edit ) In addition to minimum grades required in each subject ,
+universities either set their own entrance tests and / or use the National Benchmark Tests ( NBT ) .
+</item 2>
+
+<item 3>
+National Senior Certificate
+Citizenship and Responsibility , this section teaches learners about their rights and their duties as citizens . Assessment ( edit ) There are three types of
+subjects : General Subjects An end - of - year examination : 75 % of the total mark Portfolio ( Continuous Assessment ) : 25 % of the total mark Practical
+Subjects An end - of - year examination : 50 % of the total mark Portfolio ( Continuous Assessment ) : 25 % of the total mark Practical component : 25 % of the
+total mark Language Subjects An end - of - year examination : 50 % of the total mark Portfolio ( Continuous Assessment ) : 25 % of the total mark Oral
+Examination : 25 % of the total mark Continuous Assessment ( CASS ) includes all the tests , examinations , tasks , activities , orals and projects done
+throughout the year . Matric results are usually out of 400 marks .
+</item 3>
+
+<item 4>
+National Senior Certificate
+Matric results are usually out of 400 marks . Level system ( 1 to 7 ) ( edit ) Level 7 : 80 - 100 % ( Outstanding achievement ) Level 6 : 70 - 79 % (
+Meritorious achievement ) Level 5 : 60 - 69 % ( Substantial achievement ) Level 4 : 50 - 59 % ( Moderate achievement ) Level 3 : 40 - 49 % ( Adequate
+achievement ) Level 2 : 30 - 39 % ( Elementary achievement ) Level 1 : 0 - 29 % ( Not achieved - Fail ) The 5 % language compensation ( edit ) Language
+compensation is described by several sources : `` To the final mark is added the language compensation , which is 5 % of the mark attained by the candidate for
+all non-language subjects , for candidates whose mother tongue is not English or Afrikaans . The 5 % compensates learners for the disadvantage suffered by these
+candidates being instructed in a language that is not their mother tongue . ''
+</item 4>
+
+<item 5>
+South Africa’s National Senior Certificate (NSC), commonly called matric, is the main high-school leaving qualification. It replaced the Further Education and
+Training Certificate from 2008. Learners take at least seven subjects: four compulsory (two official languages, Mathematics or Mathematical Literacy, and Life
+Orientation) plus at least three electives. Assessment combines exams with continuous assessment, and practical or language subjects include additional
+components. Results use seven achievement levels, from 0–29% (fail) to
+</item 5>
+
+<item 6>
+National Senior Certificate
+V Group a : fundamentals ( compulsory ) ( edit ) Learners must study 4 compulsory subjects , Two official languages of South Africa must be studied : Afrikaans
+English Ndebele Northern Sotho Sesotho Siswati Tsonga Tswana Venda Xhosa Zulu Mathematics or Mathematical Literacy Life Orientation Group B : electives ( edit )
+At least 3 subjects from the following : Accounting Agricultural Management Practices Agricultural Sciences Agricultural Technology Business Studies Civil
+Technology Computer Applications Technology ( previously Computer Studies Standard Grade - Literacy ) Consumer Studies Dance Studies Design Dramatic Arts
+Economics Electrical Technology Engineering Graphics & Design Geography History Hospitality Studies ( previously Home Economics ) Information Technology (
+previously Computer Studies Higher Grade - Programming ) Life Sciences ( previously Biology ) Mechanical Technology Music Physical Science Religion Studies
+Second Additional Language Third Additional Language Tourism Visual Arts Life Orientation ( edit ) Life Orientation ( colloquially abbreviated as `` LO '' ) has
+been introduced into the senior high school phase as an examination subject . Life Orientation is a broad - learning subject that covers non-academic skills
+needed in everyday life .
+</item 6>
+
+<item 7>
+National Senior Certificate
+: 10 - 2007 ) Jump up ^ Politicsweb , 3 January 2011 , `` Umalusi explains matric mark adjustments '' , Dr Sizwe Mabizela , 03 January 2011 Jump up ^
+http://nbt.ac.za/ About NBT Retrieved 21 March 2011 Jump up ^ http://wced.pgwc.gov.za/circulars/circulars08/e33_08.html External links ( edit ) Department of
+Education official site IEB official site Retrieved from `` https://en.wikipedia.org/w/index.php?title=National_Senior_Certificate&oldid=837110357 '' Categories
+: Education in South Africa Secondary school qualifications Hidden categories : Articles needing additional references from April 2010 All articles needing
+additional references Talk Contents About Wikipedia Add links This page was last edited on 18 April 2018 , at 19 : 39 . About Wikipedia
+</item 7>
+
+<item 8>
+National Senior Certificate
+The IEB operates on a national level catering primarily for independent schools . Contents ( hide ) 1 Subject requirements 1.1 Group A : Fundamentals (
+Compulsory ) 1.2 Group B : Electives 2 Life Orientation 3 Assessment 4 Level system ( 1 to 7 ) 5 The 5 % language compensation 6 University entrance 7 See also
+8 References 9 External links Subject requirements. ( edit ) Learners study at least 7 subjects - 4 compulsory and at least 3 electives . All subjects are
+written on one grade only and are no longer written on Higher or Standard Grade . Not all schools offer the full range of Elective subjects listed here . Each
+school may offer subjects specific to its academic orientation . For example , Agriculture Schools offer the agriculture - orientated subjects whereas technical
+Schools offer the practical and mechanical - orientated subjects.
+</item 8>
+
+<item 9>
+National Senior Certificate
+National Senior certificate - wikipedia National Senior certificate Jump to : navigation , search This article needs additional citations for verification .
+Please help improve this article by adding citations to reliable sources . Unsourced material may be challenged and removed . ( April 2010 ) ( Learn how and
+when to remove this template message ) The National Senior Certificate or NSC is a high school diploma and is the main school - leaving certificate in South
+Africa . This certificate is commonly known as the matriculation ( matric ) certificate , as grade 12 is the matriculation grade . The NSC , previously known as
+the Further Education and Training Certificate or FETC , replaced the Senior Certificate with effect from 2008 and was phased in starting with grade 10 in 2006
+. Pupils study at least seven subjects , including two compulsory official South African languages , either Mathematics or Mathematical Literacy , Life
+Orientation and three elective subjects . Subjects are all taken on the same level - there is no higher or standard grade as in the past . There are three pass
+levels , each with different pass requirements.
+</item 9>
+
+<item 10>
+National Senior Certificate
+To study for a bachelor 's degree at a South African university requires that the applicant has at least an NSC endorsed by Umalusi , with a pass of 30 % in the
+chosen university 's language of learning and teaching , as well as a level 4 or higher in the following list of designated , 19 - credit subjects : Accounting
+Agricultural Sciences Business Studies Dramatic Arts Economics Engineering Graphics and Design Geography History Consumer Studies Information Technology
+Languages ( one language of learning and teaching at a higher education institution and two other recognised language subjects ) Life Sciences Mathematics
+Mathematical Literacy Music Physical Sciences Religion Studies Visual Arts See also ( edit ) High school # South Africa Matriculation in South Africa
+Independent Examinations Board References ( edit ) Jump up ^ SOUTH AFRICAN NATIONAL ASSEMBLY : QUESTION 757 , DATE OF PUBLICATION OF INTERNAL QUESTION PAPER :
+11 / 03 / 2011 ( INTERNAL QUESTION PAPER : 06 / 2011 ) Jump up ^ SOUTH AFRICAN NATIONAL ASSEMBLY : WRITTEN REPLY TO QUESTION 469 , DATE OF PUBLICATION IN
+INTERNAL QUESTION PAPER : 26 - 03 - 2007 ( INTERNAL QUESTION PAPER NO.
+</item 10>
+=== END ITEM id=96f6512e776d4d93 ===
+
+=== ITEM id=787150bb95371dd5 ===
+Gold sentences and facts:
+Sentence 0: The ability to compare ammunition is a direct result of the invention of rifling around the turn of the 16th century . By forcing the bullet to spin as it travels down the barrel of the weapon the bullet 's accuracy greatly increases . At the same time , the rifling leaves marks on the bullet that are indicative of that particular barrel . Prior to mass production of firearms , each barrel and bullet mold was hand made by gunsmiths making them unique . The first successful documented case of forensic firearm examination occurred in 1835 when a member of the Bow Street Runners in London matched a recovered bullet from a murder victim to a specific mold in a suspect 's home confirming that he made the bullet . Further evidence that the bullet maker was the perpetrator was found in his home and he was convicted . As manufacturing and automation replaced hand tools , the ability to compare bullets became impossible due to the standardization of molds within a specific company . However , experts in the field postulated that there were microscopic differences on each barrel left during the manufacturing process . These differences were a result of wear on the machines and since each new weapon caused a tiny amount of wear , each barrel would be slightly different from every other barrel produced by that company . Also , each bullet fired from a specific barrel would be printed with the same marks , allowing investigators to identify the weapon that fired a specific bullet .
+  Fact 0.0: The ability to compare ammunition is a direct result of the invention of rifling.
+  Fact 0.1: Rifling was invented around the turn of the 16th century.
+  Fact 0.2: Rifling forces the bullet to spin as it travels down the barrel of the weapon.
+  Fact 0.3: Rifling greatly increases the bullet's accuracy.
+  Fact 0.4: At the same time, rifling leaves marks on the bullet that are indicative of that particular barrel.
+  Fact 0.5: Before mass production of firearms, each barrel and bullet mold was hand made by gunsmiths, making each one unique.
+  Fact 0.6: The first successful documented case of forensic firearm examination occurred in 1835.
+  Fact 0.7: In that 1835 case, a member of the Bow Street Runners in London matched a recovered bullet from a murder victim to a specific mold in a suspect's home.
+  Fact 0.8: In that 1835 case, the match confirmed that the suspect made the bullet.
+  Fact 0.9: Further evidence that the bullet maker was the perpetrator was found in his home.
+  Fact 0.10: The bullet maker was convicted.
+  Fact 0.11: As manufacturing and automation replaced hand tools, the ability to compare bullets became impossible.
+  Fact 0.12: The ability to compare bullets became impossible due to the standardization of molds within a specific company.
+  Fact 0.13: Experts in the field postulated that there were microscopic differences on each barrel left during the manufacturing process.
+  Fact 0.14: These differences resulted from wear on the machines.
+  Fact 0.15: Since each new weapon caused a tiny amount of wear, each barrel would be slightly different from every other barrel produced by that company.
+  Fact 0.16: Each bullet fired from a specific barrel would be printed with the same marks.
+  Fact 0.17: The same marks allow investigators to identify the weapon that fired a specific bullet.
+
+Retrieved items:
+<item 1>
+Stone Age
+It is dated 1.53 -- 1.27 mya . The date of the tools therefore probably does not exceed 1.5 mya ; 1.4 is often given as a date . This chronology , which is
+definitely later than in Kenya , supports the `` out of Africa '' hypothesis for Acheulean , if not for the Hominans . A Biface ( trihedral ) from Amar Merdeg
+at Zagros foothill , Ilam , National Museum of Iran From Southwest Asia , as the Levant is now called , the Acheulean extended itself more slowly eastward ,
+arriving at Isampur , India , about 1.2 mya . It does not appear in China and Korea until after 1mya and not at all in Indonesia . There is a discernible
+boundary marking the furthest extent of the Acheulean eastward before 1 mya , called the Movius Line , after its proposer , Hallam L. Movius . On the east side
+of the line the small flake tradition continues , but the tools are additionally worked Mode 1 , with flaking down the sides .
+</item 1>
+
+<item 2>
+Stone Age
+Some Oldowan tools are more carefully prepared to form a more regular edge . One distinguishing criterion is the size of the flakes . In contrast to the Oldowan
+`` small flake '' tradition , Acheulean is `` large flake : '' `` The primary technological distinction remaining between Oldowan and the Acheulean is the
+preference for large flakes ( > 10 cm ) as blanks for making large cutting tools ( handaxes and cleavers ) in the Acheulean . '' `` Large Cutting Tool ( LCT )
+'' has become part of the standard terminology as well . In North Africa , the presence of Mode 2 remains a mystery , as the oldest finds are from Thomas Quarry
+in Morocco at 0.9 mya . Archaeological attention , however , shifts to the Jordan Rift Valley , an extension of the East African Rift Valley ( the east bank of
+the Jordan is slowly sliding northward as East Africa is thrust away from Africa ) . Evidence of use of the Nile Valley is in deficit , but Hominans could
+easily have reached the palaeo - Jordan river from Ethiopia along the shores of the Red Sea , one side or the other .
+</item 2>
+
+<item 3>
+Stone Age
+Starting in the grasslands of the rift , Homo erectus , the predecessor of modern humans , found an ecological niche as a tool - maker and developed a
+dependence on it , becoming a `` tool equipped savanna dweller . '' Stone Age in archaeology Beginning of the Stone Age Obsidian projectile point The oldest
+indirect evidence found of stone tool use is fossilised animal bones with tool marks ; these are 3.4 million years old and were found in the Lower Awash Valley
+in Ethiopia . Archaeological discoveries in Kenya in 2015 , identifying possibly the oldest known evidence of hominin use of tools to date , have indicated that
+Kenyanthropus platyops ( a 3.2 to 3.5 - million - year - old Pliocene hominin fossil discovered in Lake Turkana , Kenya in 1999 ) may have been the earliest
+tool - users known . The oldest stone tools were excavated from the site of Lomekwi 3 in West Turkana , northwestern Kenya , and date to 3.3 million years old .
+</item 3>
+
+<item 4>
+Stone Age
+This is a Mode 1 , or Oldowan , stone tool from the western Sahara . Oldowan in Africa Main article : Oldowan The earliest documented stone tools have been
+found in eastern Africa , manufacturers unknown , at the 3.3 million year old site of Lomekwi 3 in Kenya . Better known are the later tools belonging to an
+industry known as Oldowan , after the type site of Olduvai Gorge in Tanzania . The tools were formed by knocking pieces off a river pebble , or stones like it ,
+with a hammerstone to obtain large and small pieces with one or more sharp edges . The original stone is called a core ; the resultant pieces , flakes .
+Typically , but not necessarily , small pieces are detached from a larger piece , in which case the larger piece may be called the core and the smaller pieces
+the flakes . The prevalent usage , however , is to call all the results flakes , which can be confusing . A split in half is called bipolar flaking .
+Consequently , the method is often called `` core - and - flake '' .
+</item 4>
+
+<item 5>
+Stone Age
+106 Jump up ^ Barham & Mitchell 2008 , p. 147 Jump up ^ BBC News , 21 / 05 / 2015 : Oldest stone tools pre-date earliest humans ^ Jump up to : Harmand , Sonia ;
+et al. ( 21 May 2015 ) . `` 3.3 - million - year - old stone tools from Lomekwi 3 , West Turkana , Kenya '' . Nature . 521 : 310 -- 315 . PMID 25993961 . doi :
+10.1038 / nature14464 . Jump up ^ Rogers & Semaw 2009 , pp. 162 -- 163 Jump up ^ Rogers & Semaw 2009 , p. 155 Jump up ^ As to whether aethiopicus is the genus
+Australopithecus or the genus Paranthropus , broken out to include the more robust forms , anthropological opinion is divided and both usages occur in the
+professional sources . Jump up ^ Rogers & Semaw 2009 , p. 164 Jump up ^ `` Neolithic Vinca was a metallurgical culture '' . Archaeo News . Reuters.
+</item 5>
+
+<item 6>
+Stone Age
+About 700,000 years ago , a new Lower Paleolithic tool , the hand ax , appeared . The earliest European hand axes are assigned to the Abbevillian industry ,
+which developed in northern France in the valley of the Somme River ; a later , more refined hand - ax tradition is seen in the Acheulian industry , evidence of
+which has been found in Europe , Africa , the Middle East , and Asia . Some of the earliest known hand axes were found at Olduvai Gorge ( Tanzania ) in
+association with remains of H. erectus . Alongside the hand - axe tradition there developed a distinct and very different stone - tool industry , based on
+flakes of stone : special tools were made from worked ( carefully shaped ) flakes of flint . In Europe , the Clactonian industry is one example of a flake
+tradition . The early flake industries probably contributed to the development of the Middle Paleolithic flake tools of the Mousterian industry , which is
+associated with the remains of Neanderthal man . This is a Mode 1 , or Oldowan , stone tool from the western Sahara .
+</item 6>
+
+<item 7>
+Stone Age
+Similarly there is no evidence that the Mediterranean was passable at Gibraltar or anywhere else to H. erectus or earlier hominans . They might have reached
+Italy and Spain along the coasts . In northern Europe pebble tools are found earliest at Happisburgh , United Kingdom , from 0.8 mya . The last traces are from
+Kent 's Cavern , dated 0.5 mya . By that time H. erectus is regarded as having been extinct ; however , a more modern version apparently had evolved , Homo
+heidelbergensis , who must have inherited the tools . He also explains the last of the Acheulean in Germany at 0.4 mya . In the late 19th and early 20th
+centuries archaeologists worked on the assumptions that a succession of Hominans and cultures prevailed , that one replaced another .
+</item 7>
+
+<item 8>
+Stone Age
+Prior to the discovery of these `` Lomekwian '' tools , the oldest known stone tools had been found at several sites at Gona , Ethiopia , on the sediments of
+the paleo - Awash River , which serve to date them . All the tools come from the Busidama Formation , which lies above a disconformity , or missing layer ,
+which would have been from 2.9 to 2.7 mya . The oldest sites containing tools are dated to 2.6 -- 2.55 mya . One of the most striking circumstances about these
+sites is that they are from the Late Pliocene , where previous to their discovery tools were thought to have evolved only in the Pleistocene . Excavators at the
+locality point out that : `` ... the earliest stone tool makers were skilled flintknappers ... The possible reasons behind this seeming abrupt transition from
+the absence of stone tools to the presence thereof include ... gaps in the geological record . '' The species who made the Pliocene tools remains unknown .
+</item 8>
+
+<item 9>
+Stone Age
+Today the presence of multiple hominans living contemporaneously near each other for long periods is accepted as proved true ; moreover , by the time the
+previously assumed `` earliest '' culture arrived in northern Europe , the rest of Africa and Eurasia had progressed to the Middle and Upper Palaeolithic , so
+that across the earth all three were for a time contemporaneous . In any given region there was a progression from Oldowan to Acheulean , Lower to Upper , no
+doubt . Acheulean in Africa Main article : Acheulean An Acheulean tool , not worked over the entire surface The end of Oldowan in Africa was brought on by the
+appearance of Acheulean , or Mode 2 , stone tools . The earliest known instances are in the 1.7 -- 1.6 mya layer at Kokiselei , West Turkana , Kenya . At
+Sterkfontein , South Africa , they are in Member 5 West , 1.7 -- 1.4 mya . The 1.7 is a fairly certain , fairly standard date . Mode 2 is often found in
+association with H. erectus .
+</item 9>
+
+<item 10>
+Stone Age
+There is additional evidence that Oldowan , or Mode 1 , tools were utilized in `` percussion technology '' ; that is , they were designed to be gripped at the
+blunt end and strike something with the edge , from which use they were given the name of choppers . Modern science has been able to detect mammalian blood
+cells on Mode 1 tools at Sterkfontein , Member 5 East , in South Africa . As the blood must have come from a fresh kill , the tool users are likely to have done
+the killing and used the tools for butchering . Plant residues bonded to the silicon of some tools confirm the use to chop plants . Although the exact species
+authoring the tools remains unknown , Mode 1 tools in Africa were manufactured and used predominantly by Homo habilis . They can not be said to have developed
+these tools or to have contributed the tradition to technology . They continued a tradition of yet unknown origin . As chimpanzees sometimes naturally use
+percussion to extract or prepare food in the wild , and may use either unmodified stones or stones that they have split , creating an Oldowan tool , the
+tradition may well be far older than its current record .
+</item 10>
+=== END ITEM id=787150bb95371dd5 ===
+
+=== ITEM id=8b637f0c08bd0b46 ===
+Gold sentences and facts:
+Sentence 0: 2016 production of still wine State Production ( gal ) Production ( % ) Alabama 34,966 0.004 % Arizona 190,008 0.024 % Arkansas 246,363 0.031 % California 680,272,512 84.354 % Colorado 556,994 0.069 % Connecticut 134,517 0.017 % Florida 1,634,103 0.203 % Georgia 276,144 0.034 % Idaho 497,007 0.062 % Illinois 391,805 0.049 % Indiana 1,411,540 0.175 % Iowa 335,522 0.042 % Kansas 104,129 0.013 % Kentucky 2,176,059 0.270 % Louisiana 38,232 0.005 % Maine 48,222 0.006 % Maryland 436,185 0.054 % Massachusetts 792,884 0.098 % Michigan 2,576,238 0.319 % Minnesota 331,946 0.041 % Missouri 993,831 0.123 % Montana 33,445 0.004 % Nebraska 120,366 0.015 % New Hampshire 159,316 0.020 % New Jersey 1,832,325 0.227 % New Mexico 749,818 0.093 % New York 27,969,308 3.468 % North Carolina 1,903,060 0.236 % Ohio 5,938,738 0.736 % Oklahoma 70,204 0.009 % Oregon 11,822,972 1.466 % Pennsylvania 12,405,181 1.538 % South Carolina 77,842 0.010 % South Dakota 139,738 0.017 % Tennessee 1,279,752 0.159 % Texas 1,907,299 0.237 % Vermont 2,172,526 0.269 % Virginia 2,157,395 0.268 % Washington 40,747,190 5.053 % West Virginia 40,733 0.005 % Wisconsin 1,129,405 0.140 % Others 312,051 0.039 % Sum 806,447,891 100 %
+  Fact 0.0: The table reports the 2016 production of still wine.
+  Fact 0.1: Alabama produced 34,966 gallons of still wine in 2016, which is 0.004 percent of production.
+  Fact 0.2: Arizona produced 190,008 gallons of still wine in 2016, which is 0.024 percent of production.
+  Fact 0.3: Arkansas produced 246,363 gallons of still wine in 2016, which is 0.031 percent of production.
+  Fact 0.4: California produced 680,272,512 gallons of still wine in 2016, which is 84.354 percent of production.
+  Fact 0.5: Colorado produced 556,994 gallons of still wine in 2016, which is 0.069 percent of production.
+  Fact 0.6: Connecticut produced 134,517 gallons of still wine in 2016, which is 0.017 percent of production.
+  Fact 0.7: Florida produced 1,634,103 gallons of still wine in 2016, which is 0.203 percent of production.
+  Fact 0.8: Georgia produced 276,144 gallons of still wine in 2016, which is 0.034 percent of production.
+  Fact 0.9: Idaho produced 497,007 gallons of still wine in 2016, which is 0.062 percent of production.
+  Fact 0.10: Illinois produced 391,805 gallons of still wine in 2016, which is 0.049 percent of production.
+  Fact 0.11: Indiana produced 1,411,540 gallons of still wine in 2016, which is 0.175 percent of production.
+  Fact 0.12: Iowa produced 335,522 gallons of still wine in 2016, which is 0.042 percent of production.
+  Fact 0.13: Kansas produced 104,129 gallons of still wine in 2016, which is 0.013 percent of production.
+  Fact 0.14: Kentucky produced 2,176,059 gallons of still wine in 2016, which is 0.270 percent of production.
+  Fact 0.15: Louisiana produced 38,232 gallons of still wine in 2016, which is 0.005 percent of production.
+  Fact 0.16: Maine produced 48,222 gallons of still wine in 2016, which is 0.006 percent of production.
+  Fact 0.17: Maryland produced 436,185 gallons of still wine in 2016, which is 0.054 percent of production.
+  Fact 0.18: Massachusetts produced 792,884 gallons of still wine in 2016, which is 0.098 percent of production.
+  Fact 0.19: Michigan produced 2,576,238 gallons of still wine in 2016, which is 0.319 percent of production.
+  Fact 0.20: Minnesota produced 331,946 gallons of still wine in 2016, which is 0.041 percent of production.
+  Fact 0.21: Missouri produced 993,831 gallons of still wine in 2016, which is 0.123 percent of production.
+  Fact 0.22: Montana produced 33,445 gallons of still wine in 2016, which is 0.004 percent of production.
+  Fact 0.23: Nebraska produced 120,366 gallons of still wine in 2016, which is 0.015 percent of production.
+  Fact 0.24: New Hampshire produced 159,316 gallons of still wine in 2016, which is 0.020 percent of production.
+  Fact 0.25: New Jersey produced 1,832,325 gallons of still wine in 2016, which is 0.227 percent of production.
+  Fact 0.26: New Mexico produced 749,818 gallons of still wine in 2016, which is 0.093 percent of production.
+  Fact 0.27: New York produced 27,969,308 gallons of still wine in 2016, which is 3.468 percent of production.
+  Fact 0.28: North Carolina produced 1,903,060 gallons of still wine in 2016, which is 0.236 percent of production.
+  Fact 0.29: Ohio produced 5,938,738 gallons of still wine in 2016, which is 0.736 percent of production.
+  Fact 0.30: Oklahoma produced 70,204 gallons of still wine in 2016, which is 0.009 percent of production.
+  Fact 0.31: Oregon produced 11,822,972 gallons of still wine in 2016, which is 1.466 percent of production.
+  Fact 0.32: Pennsylvania produced 12,405,181 gallons of still wine in 2016, which is 1.538 percent of production.
+  Fact 0.33: South Carolina produced 77,842 gallons of still wine in 2016, which is 0.010 percent of production.
+  Fact 0.34: South Dakota produced 139,738 gallons of still wine in 2016, which is 0.017 percent of production.
+  Fact 0.35: Tennessee produced 1,279,752 gallons of still wine in 2016, which is 0.159 percent of production.
+  Fact 0.36: Texas produced 1,907,299 gallons of still wine in 2016, which is 0.237 percent of production.
+  Fact 0.37: Vermont produced 2,172,526 gallons of still wine in 2016, which is 0.269 percent of production.
+  Fact 0.38: Virginia produced 2,157,395 gallons of still wine in 2016, which is 0.268 percent of production.
+  Fact 0.39: Washington produced 40,747,190 gallons of still wine in 2016, which is 5.053 percent of production.
+  Fact 0.40: West Virginia produced 40,733 gallons of still wine in 2016, which is 0.005 percent of production.
+  Fact 0.41: Wisconsin produced 1,129,405 gallons of still wine in 2016, which is 0.140 percent of production.
+  Fact 0.42: Other states produced 312,051 gallons of still wine in 2016, which is 0.039 percent of production.
+  Fact 0.43: The total 2016 production of still wine was 806,447,891 gallons, which is 100 percent.
+
+Retrieved items:
+<item 1>
+American wine
+wine region and AVA portal All American Wineries U.S. winery and vineyard guide Free the Grapes : State wine shipment laws Doubtless as Good : Thomas Jefferson
+'s Dream for American Wine Fulfilled An online exhibition from the National Museum of American History , Smithsonian Institution American wine States Alabama
+Alaska Arizona Arkansas California Colorado Connecticut Delaware Florida Georgia Hawaii Idaho Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland
+Massachusetts Michigan Minnesota Mississippi Missouri Montana Nebraska Nevada New Hampshire New Jersey New Mexico New York North Carolina North Dakota Ohio
+Oklahoma Oregon Pennsylvania Rhode Island South Carolina South Dakota Tennessee Texas Utah Vermont Virginia Washington West Virginia Wisconsin Wyoming Wine by
+country Africa Algeria Egypt Ethiopia Morocco Namibia South Africa Tanzania Tunisia Asia Armenia Azerbaijan Bhutan China Georgia India Iran Israel Japan Jordan
+Kazakhstan Lebanon Nepal Palestine Philippines Vietnam Europe Albania Austria Belgium Bulgaria Croatia Cyprus Czech Republic Denmark France Germany Greece
+Hungary Ireland Italy Latvia Liechtenstein Luxembourg Macedonia Malta Moldova Montenegro Netherlands Poland Portugal Romania Russia San Marino Serbia Slovakia
+Slovenia Spain Sweden Switzerland Turkey Ukraine United Kingdom North America Canada Mexico United States Oceania Australia New Zealand South America Argentina
+Bolivia Brazil Chile Paraguay Peru Uruguay Agriculture in the United States History History African - American history Industries Almond Apple Banana Blueberry
+Cherry Christmas tree Citrus Corn Cotton Maple syrup Onion Pepper Rice Spinach Strawberry
+</item 1>
+
+<item 2>
+American wine
+Although a Vitis vinifera variety , it is a grape of `` very modest '' quality . Jean - Louis Vignes was one of the early settlers to use a higher quality
+vinifera in his vineyard near Los Angeles . The first winery in the United States to become commercially successful was founded in Cincinnati , Ohio in the
+mid-1830s by Nicholas Longworth . He made a sparkling wine from Catawba grapes . By 1855 Ohio had 1500 acres in vineyards , according to travel writer Frederick
+Law Olmsted , who said it was more than in Missouri and Illinois , which each had 1100 acres in wine . German immigrants from the late 1840s had been
+instrumental in building the wine industry in those states . In the 1860s , vineyards in the Ohio River Valley were attacked by Black rot . This prompted
+several winemakers to move north to the Finger Lakes region of western New York . During this time , the Missouri wine industry , centered on the German colony
+in Hermann , was expanding rapidly along both shores of the Missouri River west of St. Louis .
+</item 2>
+
+<item 3>
+American wine
+During the Great Depression , consumers demanded cheap `` jug wine '' ( so - called dago red ) and sweet , fortified ( high alcohol ) wine . Before Prohibition
+dry table wines outsold sweet wines by three to one , but afterward , the ratio of demand changed dramatically . As a result , by 1935 , 81 % of California 's
+production was sweet wines . For decades , wine production was low and limited . Leading the way to new methods of wine production was research conducted at the
+University of California , Davis and some of the state universities in New York . Faculty at the universities published reports on which varieties of grapes
+grew best in which regions , held seminars on winemaking techniques , consulted with grape growers and winemakers , offered academic degrees in viticulture ,
+and promoted the production of quality wines . In the 1970s and 1980s , success by Californian winemakers in the northern part of the state helped to secure
+foreign investment from other winemaking regions , most notably the Champenois of France . Winemakers also cultivated vineyards in Oregon and Washington , on
+Long Island in New York , and numerous other new locales .
+</item 3>
+
+<item 4>
+American wine
+Prior to the early 1970s , all grapes had to be from the vintage year . All labels must list the alcohol content based on percentage by volume . For bottles
+labeled as varietals at least 75 % of the grape must be of the variety . In Oregon , the requirement is 90 % . American wine labels are also required to list if
+they contain sulfites and carry the Surgeon General 's warning about alcohol consumption . Three - tier distribution ( edit ) Following the repeal of
+Prohibition , the United States federal government allowed each state to regulate its own production and sale of alcohol . For the majority of states this led
+to the development of a three - tier distribution system between the producer , wholesaler and consumer . Depending on the state there are some exceptions ,
+with wineries allowed to sell directly to consumers on site at the winery or to ship wine across state lines . Some states allow interstate sales through
+e-commerce . In the 2005 case of Granholm v. Heald , the Supreme Court of the United States struck down state laws banning interstate shipments but allowing in
+- state sales .
+</item 4>
+
+<item 5>
+American wine
+Rocky Mountain Region -- Notably Idaho and Colorado Southwestern United States -- Notably Texas and New Mexico Midwestern United States -- Notably Missouri and
+Illinois Great Lakes region -- Notably Michigan , northern New York and Ohio East Coast of the United States -- Notably western New York State and eastern Long
+Island , New Jersey , Pennsylvania , Virginia , North Carolina and Florida . Production by state ( edit ) Production of still wine per state in 2016 was as
+follows : 2016 production of still wine State Production ( gal ) Production ( % ) Alabama 34,966 0.004 % Arizona 190,008 0.024 % Arkansas 246,363 0.031 %
+California 680,272,512 84.354 % Colorado 556,994 0.069 % Connecticut 134,517 0.017 % Florida 1,634,103 0.203 % Georgia 276,144 0.034 % Idaho 497,007 0.062 %
+Illinois 391,805 0.049 % Indiana 1,411,540 0.175 % Iowa 335,522 0.042 % Kansas 104,129 0.013 % Kentucky 2,
+</item 5>
+
+<item 6>
+American wine
+522 0.042 % Kansas 104,129 0.013 % Kentucky 2,176,059 0.270 % Louisiana 38,232 0.005 % Maine 48,222 0.006 % Maryland 436,185 0.054 % Massachusetts 792,884 0.098
+% Michigan 2,576,238 0.319 % Minnesota 331,946 0.041 % Missouri 993,831 0.123 % Montana 33,445 0.004 % Nebraska 120,366 0.015 % New Hampshire 159,316 0.020 %
+New Jersey 1,832,325 0.227 % New Mexico 749,818 0.093 % New York 27,969,308 3.468 % North Carolina 1,903,060 0.236 % Ohio 5,938,738 0.736 % Oklahoma 70,204
+0.009 % Oregon 11,822,972 1.466 % Pennsylvania 12,405,181 1.538 % South Carolina 77,842 0.010 % South Dakota 139,738 0.
+</item 6>
+
+<item 7>
+American wine
+wine sales and is the second largest producer in the world . Constellation Brands - With foreign wine holdings Constellation is the largest producer in the
+world and includes Robert Mondavi Winery and Columbia Winery in its portfolio The Wine Group - San Francisco - based business which owns the Franzia box wine
+label , Concannon Vineyard and Mogen David kosher wine . Bronco Wine Company - Owners of the Charles Shaw wine `` Two Buck Chuck '' line which accounts for
+nearly 5 million of Bronco 's annual average 9 million cases per year . Diageo - UK based company with American holdings in Sterling Vineyards , Beaulieu
+Vineyard and Chalone Vineyard Brown - Forman Corporation - Owners of the Korbel Champagne Cellars brand Beringer Blass - Australian based wine division of
+Foster 's Group and owner of the Beringer wine and Stags ' Leap Winery brands Jackson Wine Estates - Owners of the Kendall - Jackson brand See also ( edit )
+Wine portal American Viticultural Area Globalization of wine Judgment of Paris References ( edit ) Jump up ^ United States Department of Agriculture `` Global
+Wine Report August 2006 Archived April 8 , 2008 , at the Wayback Machine.
+</item 7>
+
+<item 8>
+American wine
+American wine - wikipedia American wine Jump to : navigation , search American wine has been produced for over 300 years . Today , wine production is undertaken
+in all fifty states , with California producing 89 percent of all US wine . The United States is the fourth - largest wine producing country in the world after
+France , Italy , and Spain . The North American continent is home to several native species of grape , including Vitis labrusca , Vitis riparia , Vitis
+rotundifolia , and Vitis vulpina . But the wine making industry is based on the cultivation of the European Vitis vinifera , which was introduced by European
+settlers . With more than 1,100,000 acres ( 4,500 km ) under vine , the United States is the sixth-most planted country in the world after France , Italy ,
+Spain , China and Turkey . Contents ( hide ) 1 History 2 Wine regions 2.1 Production by state 3 Appellation system 3.1 Appellation labeling laws 3.2
+Semi-generic wines 3.3 Fighting varietals 4 Other U.S.
+</item 8>
+
+<item 9>
+American wine
+Americans became more educated about wines and increased their demand for high - quality wine . All 50 states now have some acreage in vineyard cultivation . By
+2004 , 668 million gallons ( 25.3 million hectoliters ) of wine were consumed in the United States . Today , the U.S. produces over 800 million gallons of wine
+a year , of which California produces more than 84 % , followed by Washington , New York , Pennsylvania , and Oregon . In the second decade of the 21st century
+, the US wine industry faces the growing challenges of competition from international exports and managing domestic regulations on interstate sales and shipment
+of wine . Wine regions ( edit ) The Pacific Northwest includes in the winemaking regions of Washington State where varieties like Cabernet Sauvignon are grown .
+There are nearly 3,000 commercial vineyards in the United States , and at least one winery in each of the 50 states . West Coast -- More than 90 % of the total
+American wine production occurs in the states of California , Washington and Oregon .
+</item 9>
+
+<item 10>
+American wine
+labeling laws 5 Three - tier distribution 6 Largest producers 7 See also 8 References 9 Further reading 10 External links History ( edit ) Main article :
+History of American wine Sparkling wine made from a second label of Pleasant Valley Wine Company in New York which was the first bonded winery in the United
+States . The first Europeans to explore North America , a Viking expedition from Greenland , called it Vinland because of the profusion of grape vines they
+found . The earliest wine made in what is now the United States was produced between 1562 and 1564 by French Huguenot settlers from Scuppernong grapes at a
+settlement near Jacksonville , Florida . In the early American colonies of Virginia and the Carolinas , wine making was an official goal laid out in the
+founding charters . However , settlers discovered that the wine made from the various native grapes had flavors which were unfamiliar and which they did not
+like . This led to repeated efforts to grow the familiar European Vitis vinifera varieties , beginning with the Virginia Company exporting French vinifera vines
+with French vignerons to Virginia in 1619 .
+</item 10>
+=== END ITEM id=8b637f0c08bd0b46 ===
+
+=== ITEM id=d899b442da1396e4 ===
+Gold sentences and facts:
+Sentence 0: Published Serialized in The National Era for ten months , beginning with the June 5 , 1851 issue . Published as a book in two volumes on March 20 , 1852 , John P. Jewett and Company .
+  Fact 0.0: Uncle Tom's Cabin was serialized in The National Era for ten months.
+  Fact 0.1: The serialization of Uncle Tom's Cabin in The National Era began with the June 5, 1851 issue.
+  Fact 0.2: Uncle Tom's Cabin was published as a book in two volumes on March 20, 1852.
+  Fact 0.3: The book edition of Uncle Tom's Cabin was published by John P. Jewett and Company.
+Sentence 1: Uncle Tom 's Cabin first appeared as a 40 - week serial in The National Era , an abolitionist periodical , starting with the June 5 , 1851 , issue . It was originally intended as a shorter narrative that would run for only a few weeks . Stowe expanded the story significantly , however , and it was instantly popular , such that several protests were sent to the Era office when she missed an issue . Because of the story 's popularity , the publisher John P. Jewett contacted Stowe about turning the serial into a book . While Stowe questioned if anyone would read Uncle Tom 's Cabin in book form , she eventually consented to the request .
+  Fact 1.0: Uncle Tom's Cabin first appeared as a 40-week serial in The National Era.
+  Fact 1.1: The National Era was an abolitionist periodical.
+  Fact 1.2: The serial started with the June 5, 1851 issue.
+  Fact 1.3: Uncle Tom's Cabin was originally intended as a shorter narrative that would run for only a few weeks.
+  Fact 1.4: Harriet Beecher Stowe expanded the story significantly.
+  Fact 1.5: The expanded story was instantly popular.
+  Fact 1.6: Several protests were sent to the National Era office when Stowe missed an issue.
+  Fact 1.7: The publisher John P. Jewett contacted Stowe about turning the serial into a book because of the story's popularity.
+  Fact 1.8: Stowe questioned whether anyone would read Uncle Tom's Cabin in book form.
+  Fact 1.9: Stowe eventually consented to the request to publish the story as a book.
+Sentence 2: Uncle Tom 's Cabin Uncle Tom 's Cabin , Boston edition Author Harriet Beecher Stowe Original title Uncle Tom 's Cabin ; or , Life Among the Lowly Illustrator Hammatt Billings ( 1st edition ) Country United States Language English Genre Novel Published Serialized in The National Era for ten months , beginning with the June 5 , 1851 issue . Published as a book in two volumes on March 20 , 1852 , John P. Jewett and Company . Followed by A Key to Uncle Tom 's Cabin ( 1853 )
+  Fact 2.0: The infobox author of Uncle Tom's Cabin is Harriet Beecher Stowe.
+  Fact 2.1: The original title of Uncle Tom's Cabin is Uncle Tom's Cabin; or, Life Among the Lowly.
+  Fact 2.2: The illustrator of the 1st edition of Uncle Tom's Cabin is Hammatt Billings.
+  Fact 2.3: Uncle Tom's Cabin is from the United States.
+  Fact 2.4: Uncle Tom's Cabin is written in English.
+  Fact 2.5: Uncle Tom's Cabin is a novel.
+  Fact 2.6: Uncle Tom's Cabin was serialized in The National Era for ten months, beginning with the June 5, 1851 issue.
+  Fact 2.7: Uncle Tom's Cabin was published as a book in two volumes on March 20, 1852, by John P. Jewett and Company.
+  Fact 2.8: Uncle Tom's Cabin is followed by A Key to Uncle Tom's Cabin (1853).
+  Fact 2.9: The infobox includes an image of the Boston edition of Uncle Tom's Cabin.
+
+Retrieved items:
+<item 1>
+Uncle Tom's Cabin
+or , A Leap for Freedom ( 1858 ) The Octoroon ( 1859 ) Related African - American literature Caribbean literature Films featuring slavery Songs of the
+Underground Railroad Book of Negroes ( 1783 ) Cotton Plantation Record and Account Book ( 1847 ) Slave Songs of the United States ( 1867 ) Amazing Grace : An
+Anthology of Poems about Slavery ( 2002 ) The Hemingses of Monticello ( 2008 ) Documentaries Unchained Memories ( 2003 ) Frederick Douglass and the White Negro
+( 2008 ) VIAF : 184680467 LCCN : n96072966 GND : 4305373 - 7 SUDOC : 028195744 BNF : cb120080111 ( data ) Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Uncle_Tom%27s_Cabin&oldid=837606604 '' Categories : 1852 American novels Uncle Tom 's Cabin Cultural history of the
+American Civil War Novels by Harriet Beecher Stowe Novels about American slavery Novels first published in serial form Sentimental novels Southern United States
+in fiction Works originally published
+</item 1>
+
+<item 2>
+Uncle Tom's Cabin
+the Planter 's Home Ellen ; or , The Fanatic 's Daughter The Ebony Idol Frank Freeman 's Barber Shop The North and the South ; or , Slavery and Its Contrasts
+Mr. Frank , the Underground Mail - Agent The Cabin and Parlor ; or , Slaves and Masters The Black Gauntlet White Acre vs. Black Acre Antifanaticism : A Tale of
+the South The Lofty and the Lowly , or Good in All and None All Good Related Josiah Henson 1849 autobiography Uncle Tom 's Cabin Historic Site The Birth of a
+Nation Dimples Tit for Tat Uncle Tom syndrome Underground Railroad The National Era Onkel Toms Hütte ( Berlin U-Bahn ) Harriet Beecher Stowe Works `` Let Every
+Man Mind His Own Business '' ( 1839 ) Uncle Tom 's Cabin ( 1852 ) A Key to Uncle Tom 's Cabin ( 1853 ) Dred ,
+</item 2>
+
+<item 3>
+Uncle Tom's Cabin
+The book was translated into all major languages , and in the United States it became the second best - selling book after the Bible . A number of the early
+editions carried an introduction by Rev James Sherman , a Congregational minister in London noted for his abolitionist views . Uncle Tom 's Cabin sold equally
+well in Britain , with the first London edition appearing in May 1852 and selling 200,000 copies . In a few years over 1.5 million copies of the book were in
+circulation in Britain , although most of these were infringing copies ( a similar situation occurred in the United States ) . Plot Eliza escapes with her son ,
+Tom sold `` down the River '' Full - page illustration by Hammatt Billings for Uncle Tom 's Cabin depicts Eliza telling Uncle Tom that he has been sold and she
+is running away to save her child ( first edition : Boston : John P. Jewett and Company , 1852 ) . The book opens with a Kentucky farmer named Arthur Shelby
+facing the loss of his farm because of debts .
+</item 3>
+
+<item 4>
+Uncle Tom's Cabin
+Later , it was translated into almost every major language , including Chinese ( with translator Lin Shu creating the first Chinese translation of an American
+novel in 1901 ) and Amharic ( with the 1930 translation created in support of Ethiopian efforts to end the suffering of blacks in that nation ) . The book was
+so widely read that Sigmund Freud reported a number of patients with sado - masochistic tendencies who he believed had been influenced by reading about the
+whipping of slaves in Uncle Tom 's Cabin . A short article which was published in the oficial newspaper of the Salvadoran government in July 22 , 1853 praised
+Harriet Beecher Stowe and her book 's success . Literary significance and criticism As the first widely read political novel in the United States , Uncle Tom 's
+Cabin greatly influenced development of not only American literature but also protest literature in general . Later books which owe a large debt to Uncle Tom 's
+Cabin include The Jungle by Upton Sinclair and Silent Spring by Rachel Carson . Eliza crosses the Ohio on the cover of Pictures and Stories from Uncle Tom 's
+Cabin , Boston : John P. Jewett & Co. , 1853 .
+</item 4>
+
+<item 5>
+Uncle Tom's Cabin
+In the decade between the publication of Uncle Tom 's Cabin and the start of the American Civil War , between twenty and thirty anti-Tom books were published .
+Among these novels are two books titled Uncle Tom 's Cabin As It Is ( one by W.L. Smith and the other by C.H. Wiley ) and a book by John Pendleton Kennedy .
+More than half of these anti-Tom books were written by white women , with Simms commenting at one point about the `` Seemingly poetic justice of having the
+Northern woman ( Stowe ) answered by a Southern woman . '' Dramatic adaptations George Aiken 's original manuscript for his stage adaptation of Uncle Tom 's
+Cabin , 1852 . From the George C. Howard and Family Collection at the Harry Ransom Center . Tom shows Main article : Tom show Even though Uncle Tom 's Cabin was
+the best - selling novel of the 19th century , far more Americans of that time saw the story as a stage play or musical than read the book .
+</item 5>
+
+<item 6>
+Uncle Tom's Cabin
+Uncle Tom 's Cabin - wikipedia Uncle Tom 's Cabin Jump to : navigation , search This article is about the mid-19th century novel . For other uses , see Uncle
+Tom 's Cabin ( disambiguation ) . Uncle Tom 's Cabin Uncle Tom 's Cabin , Boston edition Author Harriet Beecher Stowe Original title Uncle Tom 's Cabin ; or ,
+Life Among the Lowly Illustrator Hammatt Billings ( 1st edition ) Country United States Language English Genre Novel Published Serialized in The National Era
+for ten months , beginning with the June 5 , 1851 issue . Published as a book in two volumes on March 20 , 1852 , John P. Jewett and Company .
+</item 6>
+
+<item 7>
+Uncle Tom's Cabin
+Convinced the book would be popular , Jewett made the unusual decision ( for the time ) to have six full - page illustrations by Hammatt Billings engraved for
+the first printing . Published in book form on March 20 , 1852 , the novel sold 3,000 copies on that day alone , and soon sold out its complete print run . A
+number of other editions were soon printed ( including a deluxe edition in 1853 , featuring 117 illustrations by Billings ) . In the first year of publication ,
+300,000 copies of Uncle Tom 's Cabin were sold . At that point , however , `` demand came to an unexpected halt ... No more copies were produced for many years
+, and if , as is claimed , Abraham Lincoln greeted Stowe in 1862 as ' the little woman who wrote the book that made this great war , ' the work had effectively
+been out of print for many years . '' Jewett went out of business , and it was not until Ticknor and Fields put the work back in print in November 1862 that
+demand began again to increase .
+</item 7>
+
+<item 8>
+Uncle Tom's Cabin
+Historians are undecided if Lincoln actually said this line , and in a letter that Stowe wrote to her husband a few hours after meeting with Lincoln no mention
+of this comment was made . Since then , many writers have credited this novel with focusing Northern anger at the injustices of slavery and the Fugitive Slave
+Law and helping to fuel the abolitionist movement . Union general and politician James Baird Weaver said that the book convinced him to become active in the
+abolitionist movement . Uncle Tom 's Cabin also created great interest in the United Kingdom . The first London edition appeared in May 1852 and sold 200,000
+copies . Some of this interest was because of British antipathy to America . As one prominent writer explained , `` The evil passions which Uncle Tom gratified
+in England were not hatred or vengeance ( of slavery ) , but national jealousy and national vanity . We have long been smarting under the conceit of America --
+we are tired of hearing her boast that she is the freest and the most enlightened country that the world has ever seen .
+</item 8>
+
+<item 9>
+Uncle Tom's Cabin
+Eva 's father Augustine St. Clare buys Tom from the slave trader and takes him with the family to their home in New Orleans . Tom and Eva begin to relate to one
+another because of the deep Christian faith they both share . Eliza 's family hunted , Tom 's Life with St. Clare Illustration of Tom and Eva by Hammatt
+Billings for the 1853 deluxe edition of Uncle Tom 's Cabin . During Eliza 's escape , she meets up with her husband George Harris , who had run away previously
+. They decide to attempt to reach Canada . However , they are tracked by a slave hunter named Tom Loker . Eventually Loker and his men trap Eliza and her family
+, causing George to shoot him in the side . Worried that Loker may die , Eliza convinces George to bring the slave hunter to a nearby Quaker settlement for
+medical treatment . Back in New Orleans , St. Clare debates slavery with his Northern cousin Ophelia who , while opposing slavery , is prejudiced against black
+people . St. Clare , however , believes he is not biased , even though he is a slave owner .
+</item 9>
+
+<item 10>
+Uncle Tom's Cabin
+The quote is apocryphal ; it did not appear in print until 1896 , and it has been argued that `` The long - term durability of Lincoln 's greeting as an
+anecdote in literary studies and Stowe scholarship can perhaps be explained in part by the desire among many contemporary intellectuals ... to affirm the role
+of literature as an agent of social change . '' The book and the plays it inspired helped popularize a number of stereotypes about black people . These include
+the affectionate , dark - skinned `` mammy '' ; the `` pickaninny '' stereotype of black children ; and the `` Uncle Tom '' , or dutiful , long - suffering
+servant faithful to his white master or mistress . In recent years , the negative associations with Uncle Tom 's Cabin have , to an extent , overshadowed the
+historical impact of the book as a `` vital antislavery tool . '' Contents ( hide ) 1 Sources 2 Publication 3 Plot 3.1 Eliza escapes with her son , Tom sold ``
+down the river '' 3.2 Eliza 's family hunted , Tom 's life with St.
+</item 10>
+=== END ITEM id=d899b442da1396e4 ===
+
+=== ITEM id=5ffbe3ceb37152ef ===
+Gold sentences and facts:
+Sentence 0: The gymnosperms are a group of seed - producing plants that includes conifers , cycads , Ginkgo , and gnetophytes . The term `` gymnosperm '' comes from the Greek composite word γυμνόσπερμος ( γυμνός gymnos , `` naked '' and σπέρμα sperma , `` seed '' ) , meaning `` naked seeds '' . The name is based on the unenclosed condition of their seeds ( called ovules in their unfertilized state ) . The non-encased condition of their seeds stands in contrast to the seeds and ovules of flowering plants ( angiosperms ) , which are enclosed within an ovary . Gymnosperm seeds develop either on the surface of scales or leaves , which are often modified to form cones , or solitary as in Yew , Torreya , Ginkgo .
+  Fact 0.0: The gymnosperms are a group of seed-producing plants.
+  Fact 0.1: Gymnosperms include conifers, cycads, Ginkgo, and gnetophytes.
+  Fact 0.2: The term gymnosperm comes from the Greek composite word γυμνόσπερμος.
+  Fact 0.3: The Greek word γυμνός (gymnos) means naked.
+  Fact 0.4: The Greek word σπέρμα (sperma) means seed.
+  Fact 0.5: The term gymnosperm means naked seeds.
+  Fact 0.6: The name gymnosperm is based on the unenclosed condition of gymnosperm seeds.
+  Fact 0.7: Gymnosperm ovules are called ovules in their unfertilized state.
+  Fact 0.8: Gymnosperm seeds are not encased.
+  Fact 0.9: The seeds and ovules of flowering plants (angiosperms) are enclosed within an ovary.
+  Fact 0.10: Gymnosperm seeds develop either on the surface of scales or leaves.
+  Fact 0.11: The scales or leaves on which gymnosperm seeds develop are often modified to form cones.
+  Fact 0.12: Gymnosperm seeds can also be solitary, as in Yew, Torreya, and Ginkgo.
+
+Retrieved items:
+<item 1>
+Gymnosperms produce microspores in pollen cones and megaspores in ovulate cones; their gametophytes develop within spore walls. Pollen reaches ovules, usually
+by wind or insects, entering through the micropyle. Cycads and Ginkgo use motile sperm; conifers and gnetophytes deliver nonmotile sperm through pollen tubes.
+After fertilization, embryos form; seeds contain an embryo, nutrient-rich female gametophyte remains,
+</item 1>
+
+<item 2>
+Gymnosperms comprise over 1,000 living species across 88 genera and 14 families. They likely arose in the late Carboniferous, possibly following a genome
+duplication about 319 million years ago; seed-plant traits appear in older Devonian fossils. Conifers are diverse, alongside cycads (about 338 species),
+Gnetales (95–100), and a single ginkgo species. Many cycads are tropical. Gymnosperms provide timber, paper, resin,
+</item 2>
+
+<item 3>
+Gymnosperm
+Gymnosperm - wikipedia Gymnosperm Jump to : navigation , search Gymnosperms Temporal range : 370 -- 0 Ma PreЄ Є Pg Devonian - Present Various gymnosperms .
+Scientific classification Kingdom : Plantae Subkingdom : Embryophyta ( unranked ) : Gymnospermae ( paraphyletic ) Divisions Pinophyta ( or Coniferophyta ) -
+Conifers Ginkgophyta - Ginkgo Cycadophyta - Cycads Gnetophyta - Gnetum , Ephedra , Welwitschia Encephalartos sclavoi cone , about 30 cm long The gymnosperms are
+a group of seed - producing plants that includes conifers , cycads , Ginkgo , and gnetophytes . The term `` gymnosperm '' comes from the Greek composite word
+γυμνόσπερμος ( γυμνός gymnos , `` naked '' and σπέρμα sperma , `` seed '' ) , meaning `` naked seeds '' .
+</item 3>
+
+<item 4>
+Gymnosperms are seed-producing plants whose seeds are “naked,” not enclosed in fruit; the name comes from Greek for “naked seed.” The group includes conifers,
+cycads, ginkgo, and gnetophytes (Gnetum, Ephedra, and Welwitschia). They have existed from the Devonian period to the present.
+</item 4>
+
+<item 5>
+Gymnosperms are seed plants whose unfertilized ovules and seeds are unenclosed, unlike those of flowering plants, which develop inside ovaries. Their seeds grow
+on cone scales or leaves, or singly in groups such as yews, Torreya, and Ginkgo. Together with angiosperms, they form the spermatophytes. Six gymnosperm phyla
+are recognized: four living—Cycadophyta, Ginkgophyta,
+</item 5>
+
+<item 6>
+Gymnosperm
+After syngamy ( joining of the sperm and egg cell ) , the zygote develops into an embryo ( young sporophyte ) . More than one embryo is usually initiated in
+each gymnosperm seed . The mature seed comprises the embryo and the remains of the female gametophyte , which serves as a food supply , and the seed coat .
+Genetics ( edit ) The first published sequenced genome for any gymnosperm was the genome of Picea abies in 2013 . References ( edit ) ^ Jump up to : ``
+Gymnosperms on The Plant List '' . Theplantlist.org . Retrieved 2013 - 07 - 24 . ^ Jump up to : Raven , P.H. ( 2013 ) . Biology of Plants . New York : W.H.
+Freeman and Co . Jump up ^ Jeffrey D. Palmer ; Douglas E. Soltis ; Mark W. Chase ( 2004 ) . `` The plant tree of life : an overview and some points of view '' .
+American Journal of Botany. 91 ( 10 ) : 1437 -- 1445 .
+</item 6>
+
+<item 7>
+Gymnosperm
+Diselma , Fitzroya , Callitris ( incl . Actinostrobus and Neocallitropsis ) , Thujopsis , Thuja , Fokienia , Chamaecyparis , Callitropsis , Cupressus ,
+Juniperus , Xanthocyparis , Calocedrus , Tetraclinis , Platycladus , Microbiota Family Taxaceae : Austrotaxus , Pseudotaxus , Taxus , Cephalotaxus , Amentotaxus
+, Torreya Diversity and origin ( edit ) There are more than 1000 extant or currently living species of gymnosperms in 88 plant genera belonging to 14 plant
+families . It is widely accepted that the gymnosperms originated in the late Carboniferous period , replacing the lycopsid rainforests of the tropical region .
+This appears to have been the result of a whole genome duplication event around 319 million years ago . Early characteristics of seed plants were evident in
+fossil progymnosperms of the late Devonian period around 383 million years ago .
+</item 7>
+
+<item 8>
+Gymnosperm
+The name is based on the unenclosed condition of their seeds ( called ovules in their unfertilized state ) . The non-encased condition of their seeds stands in
+contrast to the seeds and ovules of flowering plants ( angiosperms ) , which are enclosed within an ovary . Gymnosperm seeds develop either on the surface of
+scales or leaves , which are often modified to form cones , or solitary as in Yew , Torreya , Ginkgo . The gymnosperms and angiosperms together compose the
+spermatophytes or seed plants . The gymnosperms are divided into six phyla . Organisms that belong to the Cycadophyta , Ginkgophyta , Gnetophyta , and Pinophyta
+( also known as Coniferophyta ) phyla are still in existence while those in the Pteridospermales and Cordaitales phyla are now extinct .
+</item 8>
+
+<item 9>
+Gymnosperms are ancient seed plants with unenclosed ovules and seeds, including conifers, cycads, ginkgo, and gnetophytes. Their living diversity is estimated
+at roughly 1,000–1,080 species across 12–14 families; whether living gymnosperms form a clade is debated, and fossils suggest flowering plants arose within a
+broader gymnosperm lineage. Pollen usually travels by wind or insects; fertilization mechanisms vary. Conifers
+</item 9>
+
+<item 10>
+Gymnosperm
+Two spore types , microspores and megaspores , are typically produced in pollen cones or ovulate cones , respectively . Gametophytes , as with all heterosporous
+plants , develop within the spore wall . Pollen grains ( microgametophytes ) mature from microspores , and ultimately produce sperm cells . Megagametophytes
+develop from megaspores and are retained within the ovule . Gymnosperms produce multiple archegonia , which produce the female gamete . During pollination ,
+pollen grains are physically transferred between plants from the pollen cone to the ovule . Pollen is usually moved by wind or insects . Whole grains enter each
+ovule through a microscopic gap in the ovule coat ( integument ) called the micropyle . The pollen grains mature further inside the ovule and produce sperm
+cells . Two main modes of fertilization are found in gymnosperms . Cycads and Ginkgo have motile sperm that swim directly to the egg inside the ovule , whereas
+conifers and gnetophytes have sperm with no flagella that are moved along a pollen tube to the egg .
+</item 10>
+=== END ITEM id=5ffbe3ceb37152ef ===
+
+=== ITEM id=70fd834c1859e24c ===
+Gold sentences and facts:
+Sentence 0: Celebrity Notability ( known for ) Professional partner Status Trista Sutter Reality television star Louis Van Amstel Eliminated 1st on June 8 , 2005 Evander Holyfield Professional boxer Edyta Sliwinska Eliminated 2nd on June 15 , 2005 Rachel Hunter Supermodel & actress Jonathan Roberts Eliminated 3rd on June 22 , 2005 Joey McIntyre New Kids on the Block singer Ashly DelGrosso Third place on June 29 , 2005 John O'Hurley Actor & game show host Charlotte Jorgensen Runner - up on July 6 , 2005 Kelly Monaco Actress Alec Mazo Winner on July 6 , 2005
+  Fact 0.0: Trista Sutter is known for being a reality television star.
+  Fact 0.1: Trista Sutter's professional partner is Louis Van Amstel.
+  Fact 0.2: Trista Sutter was eliminated 1st on June 8, 2005.
+  Fact 0.3: Evander Holyfield is a professional boxer.
+  Fact 0.4: Evander Holyfield's professional partner is Edyta Sliwinska.
+  Fact 0.5: Evander Holyfield was eliminated 2nd on June 15, 2005.
+  Fact 0.6: Rachel Hunter is a supermodel and actress.
+  Fact 0.7: Rachel Hunter's professional partner is Jonathan Roberts.
+  Fact 0.8: Rachel Hunter was eliminated 3rd on June 22, 2005.
+  Fact 0.9: Joey McIntyre is a New Kids on the Block singer.
+  Fact 0.10: Joey McIntyre's professional partner is Ashly DelGrosso.
+  Fact 0.11: Joey McIntyre finished in third place on June 29, 2005.
+  Fact 0.12: John O'Hurley is an actor and game show host.
+  Fact 0.13: John O'Hurley's professional partner is Charlotte Jorgensen.
+  Fact 0.14: John O'Hurley finished as runner-up on July 6, 2005.
+  Fact 0.15: Kelly Monaco is an actress.
+  Fact 0.16: Kelly Monaco's professional partner is Alec Mazo.
+  Fact 0.17: Kelly Monaco was the winner on July 6, 2005.
+
+Retrieved items:
+<item 1>
+Dancing with the Stars (U.S. season 1)
+Jump up ^ Maynard , John ( 2005 - 07 - 13 ) . `` ABC Cuts In : ' Dancing ' Racks Up No. 1 Summer Ratings '' . The Washington Post . Retrieved 2009 - 05 - 06 .
+Jump up ^ https://web.archive.org/web/20050521021850/http://abc.go.com/primetime/dancing/bios/cast.html Jump up ^ `` Dancing with the Stars : Episode 101 '' .
+TV.com . Retrieved 2009 - 05 - 06 . Jump up ^ `` Dancing with the Stars : Episode 102 '' . TV.com . Retrieved 2009 - 05 - 06 . Jump up ^ `` Dancing with the
+Stars : Episode 103 '' . TV.com . Retrieved 2009 - 05 - 06 . Jump up ^ `` Dancing with the Stars : Episode 104 '' . TV.com . Retrieved 2009 - 05 - 06 . Jump up
+^ `` Dancing with the Stars : Episode 105 '' . TV.com .
+</item 1>
+
+<item 2>
+Dancing with the Stars (U.S. season 1)
+9 , 9 ) Foxtrot `` Let There Be Love '' -- Nat King Cole Safe 27 ( 9 , 9 , 9 ) Paso doble `` España cañí '' -- Mexicana Aleque la - Band Kelly & Alec 22 ( 8 , 7
+, 7 ) Foxtrot `` Do n't Know Why '' -- Norah Jones Bottom two 25 ( 9 , 8 , 8 ) Paso doble `` Bamboleo '' -- Gipsy Kings Joey & Ashly 20 ( 8 , 6 , 6 ) Foxtrot ``
+Big Spender '' -- Shirley Bassey from Sweet Charity Third place 25 ( 9 , 8 , 8 ) Paso doble `` Eye of the Tiger '' -- Survivor Week 6 : Finale ( edit ) Running
+order Couple Score Dance Music Result John & Charlotte 27 ( 9 , 9 , 9 ) Quickstep `` Let 's Face The Music and Dance '' -- Irving Berlin Runner - up 27 ( 9 , 9
+,
+</item 2>
+
+<item 3>
+Dancing with the Stars (U.S. season 1)
+Dancing with the Stars ( U.S. season 1 ) - wikipedia Dancing with the Stars ( U.S. season 1 ) Jump to : navigation , search Dancing with the Stars ( season 1 )
+Country of origin United States No. of episodes 8 Release Original network ABC Original release June 1 -- July 6 , 2005 Additional information Celebrity winner
+Kelly Monaco Professional winner Alec Mazo Season chronology Next → Season 2 The first season of Dancing with the Stars ( U.S. ) debuted on ABC on June 1 , 2005
+. Six celebrities were paired with six professional ballroom dancers . Tom Bergeron and Lisa Canning were the hosts for this season . The judges were Carrie Ann
+Inaba , Len Goodman , and Bruno Tonioli . The premiere drew over 13 million viewers , the second biggest summer debut ever for an American reality series after
+Survivor . The second week climbed to 15 million viewers , and the show climbed to No. 1 in the summer 2005 TV season ratings , where it remained for the
+remainder of the season . The season finale aired July 6 , 2005 .
+</item 3>
+
+<item 4>
+Dancing with the Stars (U.S. season 1)
+Unsourced material may be challenged and removed . ( August 2015 ) ( Learn how and when to remove this template message ) The six professionals and celebrities
+that competed were : Celebrity Notability ( known for ) Professional partner Status Trista Sutter Reality television star Louis Van Amstel Eliminated 1st on
+June 8 , 2005 Evander Holyfield Professional boxer Edyta Sliwinska Eliminated 2nd on June 15 , 2005 Rachel Hunter Supermodel & actress Jonathan Roberts
+Eliminated 3rd on June 22 , 2005 Joey McIntyre New Kids on the Block singer Ashly DelGrosso Third place on June 29 , 2005 John O'Hurley Actor & game show host
+Charlotte Jorgensen Runner - up on July 6 , 2005 Kelly Monaco Actress Alec Mazo Winner on July 6 , 2005 † Kelly Monaco returned for the All - Stars season ,
+where this time she was paired with Valentin Chmerkovskiy . They finished third .
+</item 4>
+
+<item 5>
+Dancing with the Stars (U.S. season 1)
+Martinez Donald Driver Melissa Rycroft Kellie Pickler Amber Riley Meryl Davis Alfonso Ribeiro Rumer Willis Bindi Irwin Nyle DiMarco Laurie Hernandez Rashad
+Jennings Jordan Fisher Professional Alec Mazo Cheryl Burke Julianne Hough Mark Ballas Derek Hough Kym Johnson Karina Smirnoff Peta Murgatroyd Tony Dovolani
+Maksim Chmerkovskiy Witney Carson Valentin Chmerkovskiy Emma Slater Lindsay Arnold Spin - off Dancing with the Stars Junior Games Dancing with the Stars We
+Dance ! Retrieved from `` https://en.wikipedia.org/w/index.php?title=Dancing_with_the_Stars_(U.S._season_1)&oldid=809378398 '' Categories : Dancing with the
+Stars ( U.S. TV series ) 2005 American television seasons Hidden categories : Television season articles that use custom fields Infobox television season
+articles that use the season name parameter Articles needing additional references from August 2015 All articles needing additional references Talk Contents
+About Wikipedia Español Français Edit links This page was last edited on 8 November 2017 , at 18 : 55 .
+</item 5>
+
+<item 6>
+Dancing with the Stars (U.S. season 1)
+Jump up ^ `` Dancing with the Stars : Episode 105 '' . TV.com . Retrieved 2009 - 05 - 06 . Jump up ^ `` Dancing with the Stars : Episode 106 '' . TV.com .
+Retrieved 2009 - 05 - 06 . External links ( edit ) Official website ( hide ) Dancing with the Stars ( U.S. TV series ) Seasons 5 6 7 8 9 10 11 12 13 14 15 16 17
+18 19 20 21 22 23 24 25 Participants List of competitors Winners Celebrity Kelly Monaco Drew Lachey Emmitt Smith Apolo Anton Ohno Hélio Castroneves Kristi
+Yamaguchi Brooke Burke Shawn Johnson Donny Osmond Nicole Scherzinger Jennifer Grey Hines Ward J.R.
+</item 6>
+
+<item 7>
+Dancing with the Stars (U.S. season 1)
+Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use
+and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 7>
+
+<item 8>
+Dancing with the Stars (U.S. season 1)
+The season finale aired July 6 , 2005 . Contents ( hide ) 1 Couples 2 Scoring chart 2.1 Average chart 2.2 Pro 's average chart 3 Highest and lowest scoring
+performances 4 Couples ' highest and lowest scoring performances 5 Weekly scores and songs 5.1 Week 1 5.2 Week 2 5.3 Week 3 5.4 Week 4 5.5 Week 5 5.6 Week 6 :
+Finale 5.7 Dance off 6 Dance chart 7 References 8 External links Couples ( edit ) This section does not cite any sources . Please help improve this section by
+adding citations to reliable sources . Unsourced material may be challenged and removed .
+</item 8>
+
+<item 9>
+Dancing with the Stars (U.S. season 1)
+Rank by average Place Couple Total Number of dances Average John & Charlotte 199 8 24.9 Rachel & Jonathan 95 23.8 Kelly & Alec 179 8 22.4 Joey & Ashly 128 6
+21.3 5 6 Trista & Louis 37 18.5 6 5 Evander & Edyta 45 15.0 Pro 's average chart ( edit ) Rank by average Place Couple Average Charlotte Jorgensen 24.9 6 Louis
+van Amstel 21.8 Alec Mazo 20.6 Jonathan Roberts 19.4 5 5 Edyta Sliwinska 19.1 6 Ashly DelGrosso 16.
+</item 9>
+
+<item 10>
+Dancing with the Stars (U.S. season 1)
+Couples Highest Scoring Dances Lowest Scoring Dances Kelly & Alec Freestyle ( 30 ) Waltz ( 13 ) John & Charlotte Foxtrot , Paso doble , Quickstep & Freestyle (
+27 ) Cha - cha - cha ( 20 ) Joey & Ashly Paso doble ( 25 ) Cha - cha - cha , Samba and Foxtrot ( 20 ) Rachel & Jonathan Tango ( 26 ) Waltz ( 20 ) Evander &
+Edyta Cha - cha - cha ( 18 ) Jive ( 13 ) Trista & Louis Rumba ( 19 ) Waltz ( 18 ) Weekly scores and songs ( edit ) Unless indicated otherwise , individual
+judges scores given in the charts below ( given in parentheses ) are listed in this order from left to right : Carrie Ann Inaba , Len Goodman , Bruno Tonioli .
+Week 1 ( edit ) Running order Couple Score Dance Music Joey & Ashly 20 ( 7 , 7 , 6 ) Cha - cha - cha `` Crazy in Love '' -- Beyoncé Rachel & Jonathan 20 ( 7 , 6
+,
+</item 10>
+=== END ITEM id=70fd834c1859e24c ===

@@ -1,0 +1,1084 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=a2e691e1702a35d7 ===
+Gold sentences and facts:
+Sentence 0: Natural Born Killers Theatrical release poster Directed by Oliver Stone Produced by Jane Hamsher Don Murphy Clayton Townsend Screenplay by Richard Rutowski Oliver Stone David Veloz Story by Quentin Tarantino Starring Woody Harrelson Juliette Lewis Robert Downey , Jr . Tommy Lee Jones Tom Sizemore Cinematography Robert Richardson Edited by Hank Corwin Brian Berdan Production company Regency Enterprises Distributed by Warner Bros . Release date August 26 , 1994 ( 1994 - 08 - 26 ) Running time 119 minutes Country United States Language English Japanese Navajo Budget $34 million Box office $50.3 million
+  Fact 0.0: Natural Born Killers has a theatrical release poster.
+  Fact 0.1: Natural Born Killers was directed by Oliver Stone.
+  Fact 0.2: Natural Born Killers was produced by Jane Hamsher.
+  Fact 0.3: Natural Born Killers was produced by Don Murphy.
+  Fact 0.4: Natural Born Killers was produced by Clayton Townsend.
+  Fact 0.5: Natural Born Killers has a screenplay by Richard Rutowski.
+  Fact 0.6: Natural Born Killers has a screenplay by Oliver Stone.
+  Fact 0.7: Natural Born Killers has a screenplay by David Veloz.
+  Fact 0.8: Natural Born Killers has a story by Quentin Tarantino.
+  Fact 0.9: Natural Born Killers stars Woody Harrelson.
+  Fact 0.10: Natural Born Killers stars Juliette Lewis.
+  Fact 0.11: Natural Born Killers stars Robert Downey, Jr.
+  Fact 0.12: Natural Born Killers stars Tommy Lee Jones.
+  Fact 0.13: Natural Born Killers stars Tom Sizemore.
+  Fact 0.14: Natural Born Killers has cinematography by Robert Richardson.
+  Fact 0.15: Natural Born Killers was edited by Hank Corwin.
+  Fact 0.16: Natural Born Killers was edited by Brian Berdan.
+  Fact 0.17: Natural Born Killers was produced by Regency Enterprises.
+  Fact 0.18: Natural Born Killers was distributed by Warner Bros.
+  Fact 0.19: Natural Born Killers has a release date of August 26, 1994.
+  Fact 0.20: Natural Born Killers has a running time of 119 minutes.
+  Fact 0.21: Natural Born Killers is from the United States.
+  Fact 0.22: Natural Born Killers has English, Japanese and Navajo languages.
+  Fact 0.23: Natural Born Killers had a budget of $34 million.
+  Fact 0.24: Natural Born Killers had a box office of $50.3 million.
+Sentence 1: Natural Born Killers is a 1994 American satirical black comedy crime film directed by Oliver Stone and starring Woody Harrelson , Juliette Lewis , Robert Downey Jr. , Tom Sizemore , and Tommy Lee Jones . The film was released in the United States on August 26 , 1994 . The film tells the story of two victims of traumatic childhoods who became lovers and mass murderers , and are irresponsibly glorified by the mass media .
+  Fact 1.0: Natural Born Killers is a 1994 American satirical black comedy crime film.
+  Fact 1.1: Natural Born Killers was directed by Oliver Stone.
+  Fact 1.2: Natural Born Killers stars Woody Harrelson.
+  Fact 1.3: Natural Born Killers stars Juliette Lewis.
+  Fact 1.4: Natural Born Killers stars Robert Downey Jr.
+  Fact 1.5: Natural Born Killers stars Tom Sizemore.
+  Fact 1.6: Natural Born Killers stars Tommy Lee Jones.
+  Fact 1.7: Natural Born Killers was released in the United States on August 26, 1994.
+  Fact 1.8: The film tells the story of two victims of traumatic childhoods.
+  Fact 1.9: The two victims became lovers.
+  Fact 1.10: The two victims became mass murderers.
+  Fact 1.11: The two victims are irresponsibly glorified by the mass media.
+
+Retrieved items:
+<item 1>
+Natural Born Killers
+The Guardian . London . May 16 , 2001 . Jump up ^ 25 Most Controversial Movies Ever , Entertainment Weekly ( archived at Internet Archive ) , 2010 - 01 - 06 ,
+Archived from the original on January 6 , 2010 , retrieved 2016 - 06 - 10 CS1 maint : Unfit url ( link ) Further reading Hamsher , Jane ( 1998 ) . Killer
+Instinct . Broadway . Hanley , Jason . ( 2001 ) `` Natural Born Killers : Music and Image in Postmodern Film , '' in Postmodern Music / Postmodern Thought ,
+Routledge . ed . Joseph Auner and Judy Lochhead , pp. 335 -- 359 . External links Wikiquote has quotations related to : Natural Born Killers Natural Born
+Killers on IMDb Natural Born Killers at Box Office Mojo Natural Born Killers at Rotten Tomatoes Natural Born Killers at Metacritic `` Natural Born Killers :
+Beyond Good and Evil '' , by Heidi Nelson Hochenedel , Ph. D .
+</item 1>
+
+<item 2>
+Natural Born Killers
+McClusky and his guards are then quickly massacred by hordes of inmates . Mickey and Mallory steal a van and kill the last guard ; Owen 's fate is unknown .
+Escaping to a rural location , they give a final interview to Gale , whose ear they have seemingly removed ( implied , but as a camera track reveals ) , before
+they tell him he must die also . He attempts various arguments to change their minds , finally appealing to their trademark practice of leaving one survivor ;
+Mickey informs him they are leaving a witness to tell the tale , his camera . Gale accepts his fate and extends his arms as if on a cross as they shoot him dead
+while his unattended camera continues to roll . The couple is shown several years later , in an RV , with Mickey driving and a pregnant Mallory watching their
+two children play . Cast Main article : List of Natural Born Killers characters Woody Harrelson as Mickey Knox Juliette Lewis as Mallory Wilson Knox Robert
+Downey , Jr. as Wayne Gale Tom Sizemore as Detective Jack Scagnetti Tommy Lee Jones as Warden Dwight McClusky Rodney Dangerfield as Ed Wilson Edie McClurg as
+Mrs.
+</item 2>
+
+<item 3>
+Natural Born Killers
+Dre `` Born Bad '' -- Juliette Lewis `` Fall of the Rebel Angels '' ( Edit ) -- Sergio Cervetti `` Forkboy '' -- Lard `` Batonga in Batongaville '' ( Edit ) --
+`` A Warm Place '' ( Edit ) -- Nine Inch Nails `` Allah , Mohammad , Char , Yaar '' -- Nusrat Fateh Ali Khan `` The Future '' ( Edit ) -- Leonard Cohen `` What
+Would U Do ? '' -- Tha Dogg Pound Tracks 10 , 13 , 18 , 20 , 23 , and 25 are assembled from various recordings and dialogue from the film . See also Film in the
+United States portal 1990s portal Charles Starkweather References Jump up ^ `` NATURAL BORN KILLERS ( 18 ) '' . British Board of Film Classification . December
+20 , 1994 . Retrieved September 25 , 2014 . ^ Jump up to : `` Natural Born Killers ( 1994 ) '' . Box Office Mojo. 1994 - 10 - 18 . Retrieved 2016 - 01 - 06 .
+</item 3>
+
+<item 4>
+Natural Born Killers
+Style Natural Born Killers is shot and edited in a frenzied and psychedelic style consisting of black and white , animation , and other unusual color schemes ,
+and employing a wide range of camera angles , filters , film stocks , lenses , and special effects . Much of the film is told via parodies of television shows ,
+including a scene ( I Love Mallory ) presented in the style of a sitcom about a dysfunctional family . Commercials which were commonly on the air at the time of
+the film 's release make brief , intermittent appearances . In his DVD director 's commentary , Stone goes into great detail about the look of the film ,
+explaining scene by scene why a particular look was chosen for a particular scene . According to Hollywood.com , Natural Born Killers is a satirical crime film
+, while Foster Hirsch deemed it `` the crime film as would - be social and cultural satire '' . Stone considered it his road film , specifically naming Bonnie
+and Clyde as a source of inspiration .
+</item 4>
+
+<item 5>
+Natural Born Killers
+Natural Born Killers - Wikipedia Natural Born Killers Jump to : navigation , search Not to be confused with Natural Born Killaz . Natural Born Killers
+Theatrical release poster Directed by Oliver Stone Produced by Jane Hamsher Don Murphy Clayton Townsend Screenplay by Richard Rutowski Oliver Stone David Veloz
+Story by Quentin Tarantino Starring Woody Harrelson Juliette Lewis Robert Downey , Jr . Tommy Lee Jones Tom Sizemore Cinematography Robert Richardson Edited by
+Hank Corwin Brian Berdan Production company Regency Enterprises Distributed by Warner Bros . Release date August 26 , 1994 ( 1994 - 08 - 26 ) Running time 119
+minutes Country United States Language English Japanese Navajo Budget $34 million Box office $50.3 million Natural Born Killers is a 1994 American satirical
+black comedy crime film directed by Oliver Stone and starring Woody Harrelson , Juliette Lewis , Robert Downey Jr. , Tom Sizemore , and Tommy Lee Jones . The
+film was released in the United States on August 26 , 1994 .
+</item 5>
+
+<item 6>
+Natural Born Killers
+Nytimes.com ( 1996 - 04 - 14 ) . Retrieved on 2014 - 05 - 22 . Jump up ^ Natural Born Killers ( Unrated Director 's Cut ) ( Blu - ray ) : Woody Harrelson ,
+Juliette Lewis , Tom Sizemore , Oliver Stone : Movies & TV . Amazon.com . Retrieved on 2014 - 05 - 22 . Jump up ^ `` ' Natural Born Killers ' Is Banned in
+Ireland '' . NY Times . Retrieved 2013 - 05 - 26 . Jump up ^ `` Irish Film Institute - Natural Born Killers '' . Irish Film Institute . Retrieved 2013 - 05 - 26
+. Jump up ^ ( 1 ) Archived March 19 , 2015 , at the Wayback Machine . Jump up ^ `` Natural Born Killers given video release '' . The Guardian . London . May 16
+, 2001 .
+</item 6>
+
+<item 7>
+Natural Born Killers
+( 2017 ) Retrieved from `` https://en.wikipedia.org/w/index.php?title=Natural_Born_Killers&oldid=819366442 '' Categories : 1994 films 1990s crime films 1990s
+drama films American films American black comedy films American crime drama films American independent films American satirical films English - language films
+Film duos Films about psychopaths Films directed by Oliver Stone Films set in the 1990s Films set in Arizona Films set in Illinois Films set in Indiana Films
+set in New Mexico Films shot in multiple formats Films with live action and animation Incest in film Matricide in fiction Obscenity controversies in film
+Patricide in fiction Regency Enterprises films Road movies Screenplays by Oliver Stone Screenplays by Quentin Tarantino Serial killer films Venice Grand Special
+Jury Prize winners Warner Bros.
+</item 7>
+
+<item 8>
+Natural Born Killers
+The film was released in the United States on August 26 , 1994 . The film tells the story of two victims of traumatic childhoods who became lovers and mass
+murderers , and are irresponsibly glorified by the mass media . The film is based on an original screenplay by Quentin Tarantino that was heavily revised by
+writer David Veloz , associate producer Richard Rutowski , and director Stone ; Tarantino received story credit . Jane Hamsher , Don Murphy , and Clayton
+Townsend produced the film , with Arnon Milchan , Thom Mount , and Stone as executive producers . The film was released theatrically on August 26 , 1994 in the
+United States , February 24 , 1995 and premiered on Venice Film Festival on August 29 , 1994 . The film was a box office success , grossing over $50 million
+against a production budget of $34 million , and received generally mixed to positive reviews from critics , who praised the cast 's performances , the movie 's
+humor , plot , and combination of action and romance , but found the film much too violent and graphic .
+</item 8>
+
+<item 9>
+Natural Born Killers
+As Stone himself says , `` In its own way , Natural Born Killers is ultimately a very optimistic film about the future . It 's about freedom , and the ability
+of every human being to get it . '' Release Box Office This section needs expansion . You can help by adding to it . ( November 2014 ) In its opening weekend ,
+Natural Born Killers grossed a total of $11,166,687 in 1,510 theaters . As of January 12 , 2007 , the film had grossed a total of $50,282,766 domestically ,
+compared to its $34 million budget . Critical response The film received a mixed critical response . As of December 1 , 2017 , the review aggregator Rotten
+Tomatoes records an average response of 46 % , based on 37 reviews . However , Metacritic records a score of 74 out of 100 based on 20 reviews . Roger Ebert of
+the Chicago Sun - Times gave the film four stars out of four and wrote , `` Seeing this movie once is not enough . The first time is for the visceral experience
+, the second time is for the meaning . ''
+</item 9>
+
+<item 10>
+Natural Born Killers
+Emil Reingold Pruitt Taylor Vince as Deputy Warden Kavanaugh Joe Grifasi as Deputy Sheriff Duncan Homolka Everett Quinton as Deputy Wurlitzer Marshall Bell as
+Deputy Peter Crombie as Intense cop Grand L. Bush as Prison inmate Louis Lombardi as Deputy `` Sparky '' Dale Dye as Dale Wrigley Corey Everson as Mallory Knox
+in TV reconstruction O - Lan Jones as Mabel James Gammon ( uncredited ) as Redneck buddy Mark Harmon ( uncredited ) as Mickey Knox in TV reconstruction Adrien
+Brody and David Pasquesi ( uncredited ) as Gale 's cameramen Arliss Howard ( uncredited ) as Owen Traft , Mickey and Mallory 's Guardian angel / The Demon
+Deleted scenes Ashley Judd as Grace Mulberry Rachel Ticotin as Prosecutor Wanda Bisbing Peter and David Paul as Simon and Norman Hun Denis Leary and Bret Hart
+as Prison inmates Production Natural Born Killers was based upon a screenplay written by Quentin Tarantino , in which a married couple suddenly decide to go on
+a killing spree .
+</item 10>
+=== END ITEM id=a2e691e1702a35d7 ===
+
+=== ITEM id=0bee757f6d93d612 ===
+Gold sentences and facts:
+Sentence 0: No . overall No. in season Italian Title / RAI English Title 4Kids English title Italian air date American air date `` Una Fata a Gardenia '' / `` An Unexpected Event '' `` It Feels Like Magic '' 28 January 2004 ( 2004 - 01 - 28 ) 19 June 2004 While on summer vacation , Bloom , an ordinary 16 - year - old high school girl living on Earth , encounters a battle between a 17 - year - old fairy named Stella and an ogre named Knut . As Stella 's magic scepter is stolen , Bloom intervenes , discovering that she has magical powers and manages to turn the tide . Stella invites Bloom to attend Alfea , a school for fairies , to fully master her new powers . Knut returns with more ghouls and a troll , launching a surprise attack at Bloom 's home . Stella and Bloom call in the Specialists , a group of boys from Magix at Red Fountain , a school for boys , who capture the troll and defeat Knut . Sky , Brandon , Timmy , and Riven . The next morning , Bloom has agreed to go to Alfea . `` Benvenuti a Magix ! '' / `` Welcome to Magix ! '' `` More Than High School '' 30 January 2004 ( 2004 - 01 - 30 ) 26 June 2004 Bloom arrives at Alfea , under the name Princess Varanda of Callisto , a student who had declined her admission . She is introduced to her apartment mates , Musa , Tecna , and Flora . The girls then go for a day out in Magix City . While calling her parents , she spots Knut spying on her friends , and follows him . She learns that Knut is working for the Trix : three witches from the school of Cloud Tower named Icy , Darcy , and Stormy . After pitifully trying to defend herself , Bloom is captured by the Trix , but the other girls rescue her . Bloom reveals her real name . When the girls are caught sneaking back into school , Bloom confesses her real name to Headmistress Faragonda and discipline head Griselda , but Faragonda forgives her transgression and lets her attend the school . The girls agree on Bloom 's name for their group : The Winx . `` L'anello di Stella '' / `` Alfea College for Fairies '' `` Save the First Dance '' 2 February 2004 ( 2004 - 02 - 02 ) 3 July 2004 Alfea and the neighboring boys school , Red Fountain , prepare for a ball to begin the school year . However , Headmistress Griffon of Cloudtower plans to spoil the ball as revenge for being excluded . She picks The Trix 's suggestion of replacing the magic egg gifts with snake - rat eggs . While Bloom prepares her dress for the ball , she spots the Trix casting a spell on the eggs , so she tells her friends , and they reverse the spell in time for the ball . Later Bloom spots the Trix trying to steal Stella 's ring , and tries to fight them off , transforming in a fairy for the first time . Although the Trix are able to escape , the other Winx girls inform Bloom that Stella 's ring is safe and that they swapped the contents of the case with a baby duck ( Pepe ) that bonds with Icy . `` La palude di Melmamora '' / `` The Black - Mud Swamp '' `` The Voice of Nature '' 4 February 2004 ( 2004 - 02 - 04 ) 10 July 2004 As part of Professor Palladium 's field trip , the class must navigate the Black - Mud Swamp to reach a clearing in the Gloomy - Wood Forest by listening to nature and without using any magic . The boys from Red Fountain are transporting a troll prisoner but the Trix cause their aircraft to crash land , and the troll is freed . The Winx and the Red Fountain boys end up meeting in the swamp , and must work together , despite their differences , to find their way out . They encounter the troll who is harassing some other Alfea fairies , and chase him off , however , the Trix find the troll and send him away . Although the Red Fountain boys failed to deliver the troll , they remark they are starting to feel like a team . The Winx girls , although they finished last in their assignment , are commended by their teachers for their helping others . 5 5 `` Appuntamento al buio '' / `` Date with Disaster '' `` Date with Disaster '' 6 February 2004 ( 2004 - 02 - 06 ) 17 July 2004 While the Winx are on kitchen duty , Stella is invited on a date with Prince Sky ( Brandon ) at the brand - new Black Lagoon restaurant and also asks for help on picking out an outfit . While selecting her attire , Stella decides not to wear the ring of Solaria and gives it to Bloom for safekeeping ( believing she wo n't need her magic powers ) . The next morning , Stella starts acting completely different , becoming irritable and refusing to say antything about last night . During classes , Bloom notices that Stella is absent and goes back to their dorm to check , only to find Stella has torn the room apart ! An enraged Stella begins asks Bloom where her ring is , and eventually blasts her when she does n't say . Stella then suddenly vanishes , leaving the other four to find Prince Sky at Redfountain for information . To their shock , Sky says he worked out all night and he never wrote the invitation . The Winx then decide to find the Black Lagoon , only it does n't show up on Tecna 's map , and no one in the city seems to know where it is . Just as Musa is ready to quit , a strange man gives them the exact location . The girls find a beautiful restaurant on the edge of town , though Flora finds it strange how the gorgeous tree feels dead . She quickly reveals that an illusion has been cast ; revealing a run - down shack . The Winx venture inside and find Stella who begins attacking them ! The girls transform , and quickly learn that the entire date was a plot by the Trix . They sent the fake invitation and kidnapped her to get her ring of Solaria ! However , when she did n't wear it , they sent Darcy disguised as Stella back to Alfea to find it . The Trix also reveal the real Stella trapped in magic energy rings and force Bloom into an ultimatum ; hand over the ring or Icy will kill Stella . In the end , Bloom decides Stella is more important , transforms out of fairy form and gives them the ring , while also beginning her role as the unofficial leader . 6 6 `` Missione a Torrenuvola '' / `` Mission at Cloudtower '' `` Secret Guardian '' 9 February 2004 ( 2004 - 02 - 09 ) 24 July 2004 After returning to Alfea , Bloom researches the Ring of Solaria , hoping to find out what made the Trix go to such lengths to get it . Meanwhile , the Trix use a spell on the ring , hoping to access an extremely powerful magic known as the Dragon Flame , only to have their spell blow up in their faces as the ring proves negative ! An infuriated Icy throws the ring away and plans to begin the search all over again . Back at Alfea , Bloom learns more on the ring of Solaria , but also learns about the Dragon Flame . Bloom then turns to Faragonda for answers , who tells her that the Dragon Flame was the energy of the Great Dragon , who created the magical universe and later rested on the planet Domino . That night , the Winx plan to infiltrate Cloud Tower to retrieve Stella 's ring ( since she ca n't transform without it ) . Using the same secret tunnel the Trix used earlier , the girls sneak into Cloudtower without a hitch while the Trix are out . After searching their room , Stella finds her ring , but the tunnel does n't reopen and the Winx are forced to find the main exit without getting caught . While exploring , the Winx stumble upon Cloudtower 's archive which contains history on every person in the Magic dimension . A curious Bloom spots a book with her name on it and tries to read more on her past , but quickly regrets it when it turns into a trap that alerts Headmistress Griffin ! The Winx try to make a hasty escape , but Griffin sends Bako monsters to scare them out ! After using their magic to fight the monsters , the Winx are led to a dead end . In a panic to destroy the last monster , Stella accidentally sets the room on fire ! As the Winx begin to suffocate , a mysterious voice guides Bloom to an exit , allowing them to leave Cloudtower . Though the ring was recovered , the Winx are busted since Griffin already called Faragonda hours ago . As punishment , Faragonda temporarily extracts all their powers . 7 7 `` A che servono gli amici ? '' / `` Friends in Need '' `` Grounded '' 11 February 2004 ( 2004 - 02 - 11 ) 31 July 2004 The Winx have lost all their magic as punishment for sneaking into Cloudtower , but to make matters worse , Griselda tasks them with cleaning the entire school without their magic ( or technology , much to Tecna 's dismay ) while the rest of the students and faculty go to a concert . Problems continue as Tecna struggles with no gadgets to help her , causing her to wear a bucket on her head and attempt to use a broom , while Musa , Stella and Bloom have a water fight , wasting their time , energy and supplies . In order to make the punishment lighter , the girls secretly invite the boys from Redfountain over after everyone has left , claiming to be throwing an all - night party . Meanwhile , the Trix use the opportunity to sneak into a near - empty Alfea to find the real source of the Dragon Flame . The boys arrive and instead learn they 'll be working as janitors , though they still play music as they work . Soon after , the Trix teleport to Alfea and summon the vacuums to guide them towards the Dragon Flame , while distracting the gang by summoning a monster . The Winx and specialists quickly meet their distraction , and while the boys try to fight with their weapons , their quickly knocked aside . The Winx , despite having no magic , manage to outsmart the beast by using floor cleaner . Unable to find the Dragon Flame , the Trix depart to Cloudtower , unseen by anyone while the Specialists head back to Redfountain . The next morning , Faragonda sees the damage and hears the story from the Winx and as a reward for defeating an adversary using only wits and resourcefulness , the Winx 's powers are returned to them . 8 8 `` La festa della rosa '' / `` A Friendship Sundered '' `` The Day of the Rose '' 13 February 2004 ( 2004 - 02 - 13 ) 7 August 2004 During the Rose Festival , both Bloom and Riven unwittingly fall into a trap by the Trix to divide the close relationship between the Specialists and the Winx . In the end , Riven thinks that Darcy has saved him in a racing crash and he blames Bloom for what happened then gets mad at his friends for believing Bloom over him and transfers out of the squad of Specialists along with Darcy . 9 9 `` Il tradimento di Riven '' / `` Betrayed ! '' `` Spelled '' 16 February 2004 ( 2004 - 02 - 16 ) 14 August 2004 There are hostilities between the Winx due to Stella 's behavior , and Musa 's feelings for Riven are strained . In a fight with the Trix , the possessor of the Dragon 's Flame is revealed to be Bloom . 10 10 `` La fiamma del drago '' / `` Bloom Tested '' `` Magical Reality Check '' 18 February 2004 ( 2004 - 02 - 18 ) 21 August 2004 It 's time for Bloom 's magical midterm test in a virtual reality machine . The Trix mess with the computer so they can enter it and test her to be sure of Bloom is indeed the one who possesses the Dragon Flame . 11 11 `` Il regno delle ninfe '' / `` The Monster and The Willow '' `` Junior League '' 20 February 2004 ( 2004 - 02 - 20 ) 28 August 2004 Flora experiments with her plants to study for her test . Stella ( who had her clothes torn apart by a plant ) and Tecna ( who was attacked by a plant ) tell Flora to move the plants . She moves them to Black - Mud Swamp . Flora seeks help from the Water Nymphs in finding a special plant . The Water Nymphs tell the Winx about a monster which has been terrorizing them and the Winx decide to fight it . 12 12 `` Miss Magix '' 23 February 2004 ( 2004 - 02 - 23 ) 4 September 2004 On the day before a big test , Stella enters a beauty contest . Lucy from Cloud Tower does too , with help from the Trix , who want to play a bad prank on Lucy by first making her pretty , sabotaging the performances of the other contestants , and then breaking the spell in front of everyone once she has earned the Miss Magix prize . In the end , Stella wins and kept her promise to Bloom , which was to study all night for the test the next morning . Although Stella makes a few mistakes but because she studied after the pageant , she passes . 13 13 `` La figlia del fuoco '' / `` A Great Secret Revealed '' `` Meant to Be '' 25 February 2004 ( 2004 - 02 - 25 ) 11 September 2004 Bloom returns to Earth during spring break . She discovers she can read people 's auras , and she casts her doubts on a pending business deal regarding her mother 's flower shop . A vision was unlocked while putting out a fire in her mother 's flower shop . She also discovers that Mike found her as a baby while tackling a fire , meaning Bloom 's not Mike and Vanessa 's biological daughter . 14 14 `` Il segreto di Bloom '' / `` Bloom 's Dark Secret '' `` Witch Trap '' 27 February 2004 ( 2004 - 02 - 27 ) 18 September 2004 Bloom 's curiosity about her past and magical powers begin to interfere with her confidence and she arranges to go to Cloud Tower with Brandon to seek answers . Bloom meets a kind witch named Mirta . 15 15 `` Voci dal passato '' / `` Honor Above All '' `` Pushing the Envelope '' 1 March 2004 ( 2004 - 03 - 01 ) 25 September 2004 A pending test by Professor Wizgiz worries the Winx Club . Bloom accidentally finds the answers to the test . 16 16 `` Il nemico nell'ombra '' / `` Cold Spell '' `` The Nightmare Monster '' 3 March 2004 ( 2004 - 03 - 03 ) 2 October 2004 In another attempt to harness the power of the Dragon 's Flame , the Trix send a nightmare monster to terrorise the dreams of the Winx . 17 17 `` Il segreto di Brandon '' / `` Secrets Within Secrets '' `` Royal Heartbreak '' 5 March 2004 ( 2004 - 03 - 05 ) 9 October 2004 During festivities at Redfountain , Bloom encounters Princess Diaspro , who claims she is betrothed to Brandon , whom she keeps calling Sky . Bloom finds out that Sky and Brandon switched identities , because `` Sky '' wanted to live a normal life for once . 18 18 `` Addio Magix ! '' / `` The Font of Dragon Fire '' `` Senior Witches Go to Earth '' 8 March 2004 ( 2004 - 03 - 08 ) 16 October 2004 Upset about the events at Redfountain , Bloom returns to Earth . The Trix take advantage of the situation and attack her on Earth . The witches reveal to Bloom that she is the surviving heir to planet Domino ( Sparks ) , and they steal the Dragon Fire from her . 19 19 `` Attacco ad Alfea '' / `` The Fall of Magix '' `` The Army of Decay '' 10 March 2004 ( 2004 - 03 - 10 ) 23 October 2004 Bloom returns to Alfea following the events on Earth . The Trix take control of Cloud Tower and summon the Army of Decay to take control of Magix . 20 20 `` La scomparsa di Bloom '' / `` Mission to Domino '' `` Sparks of Hope '' 12 March 2004 ( 2004 - 03 - 12 ) 30 October 2004 To counter the powerful magic possessed by the Trix , the Winx Club go to planet Domino hoping to find the Dragon 's Flame . Redfountain is attacked by the Army of Decay . 21 21 `` Trappola di ghiaccio '' / `` The Crown of Dreams '' `` The Frozen Palace '' 15 March 2004 ( 2004 - 03 - 15 ) 6 November 2004 In the ruins of Domino ( Sparks ) , the Winx are attacked during their exploration . In Magix , Redfountain is destroyed by the Trix . 22 22 `` Il ritorno di Riven '' / `` Storming Cloudtower '' `` Mission to Cloud Tower '' 17 March 2004 ( 2004 - 03 - 17 ) 13 November 2004 The Army of Decay forces the retreat of the population to Alfea . The Winx go to Cloud Tower in attempt to retrieve the power of the Dragon 's Flame from the Trix . Riven rejoins the Specialists . 23 23 `` Fuga da Torrenuvola '' / `` Power Play '' `` The Search for the Flame '' 19 March 2004 ( 2004 - 03 - 19 ) 20 November 2004 The Trix torment the Winx for being unable to find the power of the Dragon 's Flame on Domino ( Sparks ) . The cadre and staff of Cloud Tower escape to Alfea . 24 24 `` Il mistero del lago '' / `` The Witches ' Siege '' `` Battle for Alfea '' 22 March 2004 ( 2004 - 03 - 22 ) 27 November 2004 The Army of Darkness launches an attack on Alfea . Bloom is guided to Lake Fortress of Light / Roccaluce by a mysterious voice . 25 25 `` Il sonno di Magix '' / `` The Ultimate Challenge '' `` The Great Witch Invasion '' 24 March 2004 ( 2004 - 03 - 24 ) 4 December 2004 The first attack on Alfea fails . Bloom follows the spirit of her older - sister Daphne and regains her Dragon Fire powers . The Trix lead the Army of Decay in a final attack on Alfea . 26 26 `` Battaglia finale '' / `` The Witches ' Downfall '' `` Fire and Ice '' 26 March 2004 ( 2004 - 03 - 26 ) 11 December 2004 As the Army of Darkness approaching Alfea and the Trix seeking to take complete control of the Magix Dimension , the Winx , except Bloom and including Alfea 's students and teachers take action to fend off the Trix from completely destroying algae to the ground before the Trix use the powers of the Dragon . RC1 RC1 `` Attack of the Senior Witches '' N / A 22 May 2004 A clip show episode made by 4Kids Entertainment featuring scenes from episodes 18 , 19 and 20 where the Trix attack Alfea , serving as a sneak preview to the first season .
+  Fact 0.0: The table lists episodes with columns for the overall number, the season number, the Italian title / RAI English title, the 4Kids English title, the Italian air date and the American air date.
+  Fact 0.1: Episode 5, 'Appuntamento al buio', has the RAI English title and the 4Kids English title 'Date with Disaster'.
+  Fact 0.2: Episode 5 aired in Italy on 6 February 2004 and in America on 17 July 2004.
+  Fact 0.3: While the Winx are on kitchen duty, Stella is invited on a date with Prince Sky (Brandon) at the brand-new Black Lagoon restaurant.
+  Fact 0.4: Stella also asks for help picking out an outfit.
+  Fact 0.5: While selecting her attire, Stella decides not to wear the ring of Solaria and gives it to Bloom for safekeeping, believing she won't need her magic powers.
+  Fact 0.6: The next morning, Stella starts acting completely differently, becoming irritable and refusing to say anything about the previous night.
+  Fact 0.7: During classes, Bloom notices that Stella is absent and goes back to their dorm to check.
+  Fact 0.8: Bloom finds that Stella has torn the room apart.
+  Fact 0.9: An enraged Stella asks Bloom where her ring is, and eventually blasts her when she does not say.
+  Fact 0.10: Stella then suddenly vanishes, leaving the other four to find Prince Sky at Redfountain for information.
+  Fact 0.11: Prince Sky says he worked out all night and never wrote the invitation.
+  Fact 0.12: The Winx decide to find the Black Lagoon.
+  Fact 0.13: The Black Lagoon does not show up on Tecna's map.
+  Fact 0.14: No one in the city seems to know where the Black Lagoon is.
+  Fact 0.15: Just as Musa is ready to quit, a strange man gives the girls the exact location of the Black Lagoon.
+  Fact 0.16: The girls find a beautiful restaurant on the edge of town.
+  Fact 0.17: Flora finds it strange how the gorgeous tree feels dead.
+  Fact 0.18: An illusion has been cast, revealing a run-down shack.
+  Fact 0.19: The Winx find Stella inside the shack, and she begins attacking them.
+  Fact 0.20: The girls transform and learn that the entire date was a plot by the Trix.
+  Fact 0.21: The Trix sent the fake invitation and kidnapped Stella to get her ring of Solaria.
+  Fact 0.22: Because Stella did not wear the ring, the Trix sent Darcy disguised as Stella back to Alfea to find it.
+  Fact 0.23: The Trix reveal the real Stella trapped in magic energy rings.
+  Fact 0.24: The Trix force Bloom into an ultimatum: hand over the ring or Icy will kill Stella.
+  Fact 0.25: Bloom decides Stella is more important, transforms out of fairy form and gives the Trix the ring.
+  Fact 0.26: Bloom begins her role as the unofficial leader.
+  Fact 0.27: Episode 6, 'Missione a Torrenuvola', has the RAI English title 'Mission at Cloudtower' and the 4Kids English title 'Secret Guardian'.
+  Fact 0.28: Episode 6 aired in Italy on 9 February 2004 and in America on 24 July 2004.
+  Fact 0.29: After returning to Alfea, Bloom researches the Ring of Solaria, hoping to find out what made the Trix go to such lengths to get it.
+  Fact 0.30: The Trix use a spell on the ring, hoping to access an extremely powerful magic known as the Dragon Flame.
+  Fact 0.31: The Trix's spell blows up in their faces as the ring proves negative.
+  Fact 0.32: An infuriated Icy throws the ring away and plans to begin the search all over again.
+  Fact 0.33: Bloom learns more about the Ring of Solaria at Alfea.
+  Fact 0.34: Bloom learns about the Dragon Flame at Alfea.
+  Fact 0.35: Bloom turns to Faragonda for answers.
+  Fact 0.36: Faragonda tells Bloom that the Dragon Flame was the energy of the Great Dragon.
+  Fact 0.37: The Great Dragon created the magical universe.
+  Fact 0.38: The Great Dragon later rested on the planet Domino.
+  Fact 0.39: That night, the Winx plan to infiltrate Cloud Tower to retrieve Stella's ring, since she cannot transform without it.
+  Fact 0.40: The Winx use the same secret tunnel the Trix used earlier.
+  Fact 0.41: The Winx sneak into Cloudtower without a hitch while the Trix are out.
+  Fact 0.42: After searching their room, Stella finds her ring.
+  Fact 0.43: The tunnel does not reopen, so the Winx must find the main exit without getting caught.
+  Fact 0.44: The Winx stumble upon Cloudtower's archive, which contains history on every person in the Magic dimension.
+  Fact 0.45: Bloom spots a book with her name on it and tries to read more about her past.
+  Fact 0.46: The book turns into a trap that alerts Headmistress Griffin.
+  Fact 0.47: Griffin sends Bako monsters to scare the Winx out.
+  Fact 0.48: After using their magic to fight the monsters, the Winx are led to a dead end.
+  Fact 0.49: In a panic to destroy the last monster, Stella accidentally sets the room on fire.
+  Fact 0.50: As the Winx begin to suffocate, a mysterious voice guides Bloom to an exit, allowing the Winx to leave Cloudtower.
+  Fact 0.51: The Winx's ring was recovered.
+  Fact 0.52: The Winx are busted since Griffin already called Faragonda hours ago.
+  Fact 0.53: As punishment, Faragonda temporarily extracts all the Winx's powers.
+  Fact 0.54: Episode 7, 'A che servono gli amici?', has the RAI English title 'Friends in Need' and the 4Kids English title 'Grounded'.
+  Fact 0.55: Episode 7 aired in Italy on 11 February 2004 and in America on 31 July 2004.
+  Fact 0.56: The Winx have lost all their magic as punishment for sneaking into Cloudtower.
+  Fact 0.57: Griselda tasks the Winx with cleaning the entire school without their magic or technology.
+  Fact 0.58: The rest of the students and faculty go to a concert while the Winx clean.
+  Fact 0.59: Tecna struggles with no gadgets to help her, causing her to wear a bucket on her head and attempt to use a broom.
+  Fact 0.60: Musa, Stella and Bloom have a water fight, wasting their time, energy and supplies.
+  Fact 0.61: To make the punishment lighter, the girls secretly invite the boys from Redfountain over after everyone has left.
+  Fact 0.62: The girls claim they are throwing an all-night party.
+  Fact 0.63: The Trix use the opportunity to sneak into a near-empty Alfea to find the real source of the Dragon Flame.
+  Fact 0.64: The boys arrive and learn they will be working as janitors.
+  Fact 0.65: The boys still play music as they work.
+  Fact 0.66: The Trix teleport to Alfea and summon the vacuums to guide them towards the Dragon Flame.
+  Fact 0.67: The Trix distract the gang by summoning a monster.
+  Fact 0.68: The Winx and the Specialists meet the distraction.
+  Fact 0.69: The boys try to fight with their weapons but are quickly knocked aside.
+  Fact 0.70: The Winx, despite having no magic, outsmart the beast by using floor cleaner.
+  Fact 0.71: The Trix are unable to find the Dragon Flame and depart to Cloudtower, unseen by anyone.
+  Fact 0.72: The Specialists head back to Redfountain.
+  Fact 0.73: The next morning, Faragonda sees the damage and hears the story from the Winx.
+  Fact 0.74: As a reward for defeating an adversary using only wits and resourcefulness, the Winx's powers are returned to them.
+  Fact 0.75: Episode 8, 'La festa della rosa', has the RAI English title 'A Friendship Sundered' and the 4Kids English title 'The Day of the Rose'.
+  Fact 0.76: Episode 8 aired in Italy on 13 February 2004 and in America on 7 August 2004.
+  Fact 0.77: During the Rose Festival, Bloom and Riven unwittingly fall into a trap by the Trix.
+  Fact 0.78: The Trix's trap is meant to divide the close relationship between the Specialists and the Winx.
+  Fact 0.79: Riven thinks Darcy saved him in a racing crash.
+  Fact 0.80: Riven blames Bloom for what happened in the racing crash.
+  Fact 0.81: Riven gets mad at his friends for believing Bloom over him.
+  Fact 0.82: Riven transfers out of the squad of Specialists along with Darcy.
+  Fact 0.83: Episode 9, 'Il tradimento di Riven', has the RAI English title 'Betrayed!' and the 4Kids English title 'Spelled'.
+  Fact 0.84: Episode 9 aired in Italy on 16 February 2004 and in America on 14 August 2004.
+  Fact 0.85: There are hostilities between the Winx due to Stella's behavior.
+  Fact 0.86: Musa's feelings for Riven are strained.
+  Fact 0.87: In a fight with the Trix, the possessor of the Dragon's Flame is revealed to be Bloom.
+  Fact 0.88: Episode 10, 'La fiamma del drago', has the RAI English title 'Bloom Tested' and the 4Kids English title 'Magical Reality Check'.
+  Fact 0.89: Episode 10 aired in Italy on 18 February 2004 and in America on 21 August 2004.
+  Fact 0.90: It is time for Bloom's magical midterm test in a virtual reality machine.
+  Fact 0.91: The Trix mess with the computer so they can enter it.
+  Fact 0.92: The Trix test Bloom to be sure she is indeed the one who possesses the Dragon Flame.
+  Fact 0.93: Episode 11, 'Il regno delle ninfe', has the RAI English title 'The Monster and The Willow' and the 4Kids English title 'Junior League'.
+  Fact 0.94: Episode 11 aired in Italy on 20 February 2004 and in America on 28 August 2004.
+  Fact 0.95: Flora experiments with her plants to study for her test.
+  Fact 0.96: Stella, whose clothes were torn apart by a plant, tells Flora to move the plants.
+  Fact 0.97: Tecna, who was attacked by a plant, tells Flora to move the plants.
+  Fact 0.98: Flora moves the plants to Black-Mud Swamp.
+  Fact 0.99: Flora seeks help from the Water Nymphs in finding a special plant.
+  Fact 0.100: The Water Nymphs tell the Winx about a monster that has been terrorizing them.
+  Fact 0.101: The Winx decide to fight the monster.
+  Fact 0.102: Episode 12, 'Miss Magix', aired in Italy on 23 February 2004 and in America on 4 September 2004.
+  Fact 0.103: On the day before a big test, Stella enters a beauty contest.
+  Fact 0.104: Lucy from Cloud Tower enters the beauty contest too, with help from the Trix.
+  Fact 0.105: The Trix want to play a bad prank on Lucy by first making her pretty.
+  Fact 0.106: The Trix plan to sabotage the performances of the other contestants.
+  Fact 0.107: The Trix plan to break the spell on Lucy in front of everyone once she has earned the Miss Magix prize.
+  Fact 0.108: In the end, Stella wins and keeps her promise to Bloom to study all night for the test the next morning.
+  Fact 0.109: Stella makes a few mistakes on the test.
+  Fact 0.110: Because Stella studied after the pageant, she passes the test.
+  Fact 0.111: Episode 13, 'La figlia del fuoco', has the RAI English title 'A Great Secret Revealed' and the 4Kids English title 'Meant to Be'.
+  Fact 0.112: Episode 13 aired in Italy on 25 February 2004 and in America on 11 September 2004.
+  Fact 0.113: Bloom returns to Earth during spring break.
+  Fact 0.114: Bloom discovers she can read people's auras.
+  Fact 0.115: Bloom casts doubts on a pending business deal regarding her mother's flower shop.
+  Fact 0.116: A vision was unlocked while Bloom was putting out a fire in her mother's flower shop.
+  Fact 0.117: Bloom discovers that Mike found her as a baby while tackling a fire.
+  Fact 0.118: Bloom is not Mike and Vanessa's biological daughter.
+  Fact 0.119: Episode 14, 'Il segreto di Bloom', has the RAI English title 'Bloom's Dark Secret' and the 4Kids English title 'Witch Trap'.
+  Fact 0.120: Episode 14 aired in Italy on 27 February 2004 and in America on 18 September 2004.
+  Fact 0.121: Bloom's curiosity about her past and magical powers begins to interfere with her confidence.
+  Fact 0.122: Bloom arranges to go to Cloud Tower with Brandon to seek answers.
+  Fact 0.123: Bloom meets a kind witch named Mirta.
+  Fact 0.124: Episode 15, 'Voci dal passato', has the RAI English title 'Honor Above All' and the 4Kids English title 'Pushing the Envelope'.
+  Fact 0.125: Episode 15 aired in Italy on 1 March 2004 and in America on 25 September 2004.
+  Fact 0.126: A pending test by Professor Wizgiz worries the Winx Club.
+  Fact 0.127: Bloom accidentally finds the answers to the test.
+  Fact 0.128: Episode 16, 'Il nemico nell'ombra', has the RAI English title 'Cold Spell' and the 4Kids English title 'The Nightmare Monster'.
+  Fact 0.129: Episode 16 aired in Italy on 3 March 2004 and in America on 2 October 2004.
+  Fact 0.130: In another attempt to harness the power of the Dragon's Flame, the Trix send a nightmare monster.
+  Fact 0.131: The nightmare monster terrorizes the dreams of the Winx.
+  Fact 0.132: Episode 17, 'Il segreto di Brandon', has the RAI English title 'Secrets Within Secrets' and the 4Kids English title 'Royal Heartbreak'.
+  Fact 0.133: Episode 17 aired in Italy on 5 March 2004 and in America on 9 October 2004.
+  Fact 0.134: During festivities at Redfountain, Bloom encounters Princess Diaspro.
+  Fact 0.135: Princess Diaspro claims she is betrothed to Brandon, whom she keeps calling Sky.
+  Fact 0.136: Bloom finds out that Sky and Brandon switched identities.
+  Fact 0.137: Sky and Brandon switched identities because 'Sky' wanted to live a normal life for once.
+  Fact 0.138: Episode 18, 'Addio Magix!', has the RAI English title 'The Font of Dragon Fire' and the 4Kids English title 'Senior Witches Go to Earth'.
+  Fact 0.139: Episode 18 aired in Italy on 8 March 2004 and in America on 16 October 2004.
+  Fact 0.140: Upset about the events at Redfountain, Bloom returns to Earth.
+  Fact 0.141: The Trix take advantage of the situation and attack Bloom on Earth.
+  Fact 0.142: The witches reveal to Bloom that she is the surviving heir to planet Domino (Sparks).
+  Fact 0.143: The witches steal the Dragon Fire from Bloom.
+  Fact 0.144: Episode 19, 'Attacco ad Alfea', has the RAI English title 'The Fall of Magix' and the 4Kids English title 'The Army of Decay'.
+  Fact 0.145: Episode 19 aired in Italy on 10 March 2004 and in America on 23 October 2004.
+  Fact 0.146: Bloom returns to Alfea following the events on Earth.
+  Fact 0.147: The Trix take control of Cloud Tower.
+  Fact 0.148: The Trix summon the Army of Decay to take control of Magix.
+  Fact 0.149: Episode 20, 'La scomparsa di Bloom', has the RAI English title 'Mission to Domino' and the 4Kids English title 'Sparks of Hope'.
+  Fact 0.150: Episode 20 aired in Italy on 12 March 2004 and in America on 30 October 2004.
+  Fact 0.151: To counter the powerful magic possessed by the Trix, the Winx Club go to planet Domino.
+  Fact 0.152: The Winx Club hope to find the Dragon's Flame on planet Domino.
+  Fact 0.153: Redfountain is attacked by the Army of Decay.
+  Fact 0.154: Episode 21, 'Trappola di ghiaccio', has the RAI English title 'The Crown of Dreams' and the 4Kids English title 'The Frozen Palace'.
+  Fact 0.155: Episode 21 aired in Italy on 15 March 2004 and in America on 6 November 2004.
+  Fact 0.156: In the ruins of Domino (Sparks), the Winx are attacked during their exploration.
+  Fact 0.157: In Magix, the Trix destroy Redfountain.
+  Fact 0.158: Episode 22, 'Il ritorno di Riven', has the RAI English title 'Storming Cloudtower' and the 4Kids English title 'Mission to Cloud Tower'.
+  Fact 0.159: Episode 22 aired in Italy on 17 March 2004 and in America on 13 November 2004.
+  Fact 0.160: The Army of Decay forces the retreat of the population to Alfea.
+  Fact 0.161: The Winx go to Cloud Tower to retrieve the power of the Dragon's Flame from the Trix.
+  Fact 0.162: Riven rejoins the Specialists.
+  Fact 0.163: Episode 23, 'Fuga da Torrenuvola', has the RAI English title 'Power Play' and the 4Kids English title 'The Search for the Flame'.
+  Fact 0.164: Episode 23 aired in Italy on 19 March 2004 and in America on 20 November 2004.
+  Fact 0.165: The Trix torment the Winx for being unable to find the power of the Dragon's Flame on Domino (Sparks).
+  Fact 0.166: The cadre and staff of Cloud Tower escape to Alfea.
+  Fact 0.167: Episode 24, 'Il mistero del lago', has the RAI English title 'The Witches' Siege' and the 4Kids English title 'Battle for Alfea'.
+  Fact 0.168: Episode 24 aired in Italy on 22 March 2004 and in America on 27 November 2004.
+  Fact 0.169: The Army of Darkness launches an attack on Alfea.
+  Fact 0.170: Bloom is guided to Lake Fortress of Light / Roccaluce by a mysterious voice.
+  Fact 0.171: Episode 25, 'Il sonno di Magix', has the RAI English title 'The Ultimate Challenge' and the 4Kids English title 'The Great Witch Invasion'.
+  Fact 0.172: Episode 25 aired in Italy on 24 March 2004 and in America on 4 December 2004.
+  Fact 0.173: The first attack on Alfea fails.
+  Fact 0.174: Bloom follows the spirit of her older sister Daphne.
+  Fact 0.175: Bloom regains her Dragon Fire powers.
+  Fact 0.176: The Trix lead the Army of Decay in a final attack on Alfea.
+  Fact 0.177: Episode 26, 'Battaglia finale', has the RAI English title 'The Witches' Downfall' and the 4Kids English title 'Fire and Ice'.
+  Fact 0.178: Episode 26 aired in Italy on 26 March 2004 and in America on 11 December 2004.
+  Fact 0.179: The Army of Darkness approaches Alfea.
+  Fact 0.180: The Trix seek to take complete control of the Magix Dimension.
+  Fact 0.181: The Winx, except Bloom, take action to fend off the Trix.
+  Fact 0.182: Alfea's students and teachers take action to fend off the Trix.
+  Fact 0.183: They fend off the Trix to keep the Trix from completely destroying algae to the ground before the Trix use the powers of the Dragon.
+  Fact 0.184: RC1 is the Italian title and the RAI English title of the next episode.
+  Fact 0.185: The 4Kids English title of RC1 is 'Attack of the Senior Witches'.
+  Fact 0.186: RC1 has no Italian air date.
+  Fact 0.187: RC1 aired in America on 22 May 2004.
+  Fact 0.188: RC1 is a clip show episode made by 4Kids Entertainment.
+  Fact 0.189: RC1 features scenes from episodes 18, 19 and 20.
+  Fact 0.190: The scenes in RC1 show the Trix attacking Alfea.
+  Fact 0.191: RC1 serves as a sneak preview to the first season.
+
+Retrieved items:
+<item 1>
+Winx Club (season 1)
+A vision was unlocked while putting out a fire in her mother 's flower shop . She also discovers that Mike found her as a baby while tackling a fire , meaning
+Bloom 's not Mike and Vanessa 's biological daughter . 14 14 `` Il segreto di Bloom '' / `` Bloom 's Dark Secret '' `` Witch Trap '' 27 February 2004 ( 2004 -
+02 - 27 ) 18 September 2004 Bloom 's curiosity about her past and magical powers begin to interfere with her confidence and she arranges to go to Cloud Tower
+with Brandon to seek answers . Bloom meets a kind witch named Mirta . 15 15 `` Voci dal passato '' / `` Honor Above All '' `` Pushing the Envelope '' 1 March
+2004 ( 2004 - 03 - 01 ) 25 September 2004 A pending test by Professor Wizgiz worries the Winx Club . Bloom accidentally finds the answers to the test .
+</item 1>
+
+<item 2>
+Winx Club (season 1)
+Bloom reveals her real name . When the girls are caught sneaking back into school , Bloom confesses her real name to Headmistress Faragonda and discipline head
+Griselda , but Faragonda forgives her transgression and lets her attend the school . The girls agree on Bloom 's name for their group : The Winx . `` L'anello
+di Stella '' / `` Alfea College for Fairies '' `` Save the First Dance '' 2 February 2004 ( 2004 - 02 - 02 ) 3 July 2004 Alfea and the neighboring boys school ,
+Red Fountain , prepare for a ball to begin the school year . However , Headmistress Griffon of Cloudtower plans to spoil the ball as revenge for being excluded
+. She picks The Trix 's suggestion of replacing the magic egg gifts with snake - rat eggs . While Bloom prepares her dress for the ball , she spots the Trix
+casting a spell on the eggs , so she tells her friends , and they reverse the spell in time for the ball .
+</item 2>
+
+<item 3>
+Winx Club (season 1)
+The girls transform , and quickly learn that the entire date was a plot by the Trix . They sent the fake invitation and kidnapped her to get her ring of Solaria
+! However , when she did n't wear it , they sent Darcy disguised as Stella back to Alfea to find it . The Trix also reveal the real Stella trapped in magic
+energy rings and force Bloom into an ultimatum ; hand over the ring or Icy will kill Stella . In the end , Bloom decides Stella is more important , transforms
+out of fairy form and gives them the ring , while also beginning her role as the unofficial leader . 6 6 `` Missione a Torrenuvola '' / `` Mission at Cloudtower
+'' `` Secret Guardian '' 9 February 2004 ( 2004 - 02 - 09 ) 24 July 2004 After returning to Alfea , Bloom researches the Ring of Solaria , hoping to find out
+what made the Trix go to such lengths to get it .
+</item 3>
+
+<item 4>
+Winx Club (season 1)
+12 12 `` Miss Magix '' 23 February 2004 ( 2004 - 02 - 23 ) 4 September 2004 On the day before a big test , Stella enters a beauty contest . Lucy from Cloud
+Tower does too , with help from the Trix , who want to play a bad prank on Lucy by first making her pretty , sabotaging the performances of the other
+contestants , and then breaking the spell in front of everyone once she has earned the Miss Magix prize . In the end , Stella wins and kept her promise to Bloom
+, which was to study all night for the test the next morning . Although Stella makes a few mistakes but because she studied after the pageant , she passes . 13
+13 `` La figlia del fuoco '' / `` A Great Secret Revealed '' `` Meant to Be '' 25 February 2004 ( 2004 - 02 - 25 ) 11 September 2004 Bloom returns to Earth
+during spring break . She discovers she can read people 's auras , and she casts her doubts on a pending business deal regarding her mother 's flower shop .
+</item 4>
+
+<item 5>
+Winx Club (season 1)
+Stella and Bloom call in the Specialists , a group of boys from Magix at Red Fountain , a school for boys , who capture the troll and defeat Knut . Sky ,
+Brandon , Timmy , and Riven . The next morning , Bloom has agreed to go to Alfea . `` Benvenuti a Magix ! '' / `` Welcome to Magix ! '' `` More Than High School
+'' 30 January 2004 ( 2004 - 01 - 30 ) 26 June 2004 Bloom arrives at Alfea , under the name Princess Varanda of Callisto , a student who had declined her
+admission . She is introduced to her apartment mates , Musa , Tecna , and Flora . The girls then go for a day out in Magix City . While calling her parents ,
+she spots Knut spying on her friends , and follows him . She learns that Knut is working for the Trix : three witches from the school of Cloud Tower named Icy ,
+Darcy , and Stormy . After pitifully trying to defend herself , Bloom is captured by the Trix , but the other girls rescue her .
+</item 5>
+
+<item 6>
+Winx Club (season 1)
+10 10 `` La fiamma del drago '' / `` Bloom Tested '' `` Magical Reality Check '' 18 February 2004 ( 2004 - 02 - 18 ) 21 August 2004 It 's time for Bloom 's
+magical midterm test in a virtual reality machine . The Trix mess with the computer so they can enter it and test her to be sure of Bloom is indeed the one who
+possesses the Dragon Flame . 11 11 `` Il regno delle ninfe '' / `` The Monster and The Willow '' `` Junior League '' 20 February 2004 ( 2004 - 02 - 20 ) 28
+August 2004 Flora experiments with her plants to study for her test . Stella ( who had her clothes torn apart by a plant ) and Tecna ( who was attacked by a
+plant ) tell Flora to move the plants . She moves them to Black - Mud Swamp . Flora seeks help from the Water Nymphs in finding a special plant . The Water
+Nymphs tell the Winx about a monster which has been terrorizing them and the Winx decide to fight it .
+</item 6>
+
+<item 7>
+List of Marvel Comics characters: B
+It is unknown how long she remained in that state , and whether she retained or lost her mutant abilities after the M - Day . Bloom 's legacy however , was to
+leave a lasting impression upon Emma that baseline humans ( and even non-telepathic mutants ) were little more than `` soulless meat puppets '' , who existed
+for the sole purpose of the amusement of those capable of controlling them . The Emma Frost comic series ends with an ambulance carrying the comatose Astrid
+into the distance ; with Emma staring on , while casually listening to the background thoughts of others in attendance , and thinking that Astrid was right
+about all non-telepaths after all . Had the series continued , it was this event that would have eventually set in motion the events that would see Emma rise to
+power as both the head of Frost Industries , and as White Queen of the Hellfire club . Astrid Bloom is a mutant with various telepathic abilities . She can read
+minds and project her thoughts into the minds of others .
+</item 7>
+
+<item 8>
+Winx Club (season 1)
+Bloom is guided to Lake Fortress of Light / Roccaluce by a mysterious voice . 25 25 `` Il sonno di Magix '' / `` The Ultimate Challenge '' `` The Great Witch
+Invasion '' 24 March 2004 ( 2004 - 03 - 24 ) 4 December 2004 The first attack on Alfea fails . Bloom follows the spirit of her older - sister Daphne and regains
+her Dragon Fire powers . The Trix lead the Army of Decay in a final attack on Alfea . 26 26 `` Battaglia finale '' / `` The Witches ' Downfall '' `` Fire and
+Ice '' 26 March 2004 ( 2004 - 03 - 26 ) 11 December 2004 As the Army of Darkness approaching Alfea and the Trix seeking to take complete control of the Magix
+Dimension , the Winx , except Bloom and including Alfea 's students and teachers take action to fend off the Trix from completely destroying algae to the ground
+before the Trix use the powers of the Dragon .
+</item 8>
+
+<item 9>
+Winx Club (season 1)
+Bloom accidentally finds the answers to the test . 16 16 `` Il nemico nell'ombra '' / `` Cold Spell '' `` The Nightmare Monster '' 3 March 2004 ( 2004 - 03 - 03
+) 2 October 2004 In another attempt to harness the power of the Dragon 's Flame , the Trix send a nightmare monster to terrorise the dreams of the Winx . 17 17
+`` Il segreto di Brandon '' / `` Secrets Within Secrets '' `` Royal Heartbreak '' 5 March 2004 ( 2004 - 03 - 05 ) 9 October 2004 During festivities at
+Redfountain , Bloom encounters Princess Diaspro , who claims she is betrothed to Brandon , whom she keeps calling Sky . Bloom finds out that Sky and Brandon
+switched identities , because `` Sky '' wanted to live a normal life for once . 18 18 `` Addio Magix ! ''
+</item 9>
+
+<item 10>
+Winx Club (season 1)
+During classes , Bloom notices that Stella is absent and goes back to their dorm to check , only to find Stella has torn the room apart ! An enraged Stella
+begins asks Bloom where her ring is , and eventually blasts her when she does n't say . Stella then suddenly vanishes , leaving the other four to find Prince
+Sky at Redfountain for information . To their shock , Sky says he worked out all night and he never wrote the invitation . The Winx then decide to find the
+Black Lagoon , only it does n't show up on Tecna 's map , and no one in the city seems to know where it is . Just as Musa is ready to quit , a strange man gives
+them the exact location . The girls find a beautiful restaurant on the edge of town , though Flora finds it strange how the gorgeous tree feels dead . She
+quickly reveals that an illusion has been cast ; revealing a run - down shack . The Winx venture inside and find Stella who begins attacking them ! The girls
+transform , and quickly learn that the entire date was a plot by the Trix .
+</item 10>
+=== END ITEM id=0bee757f6d93d612 ===
+
+=== ITEM id=69d34b7899937abc ===
+Gold sentences and facts:
+Sentence 0: Draft lotteries were conducted again in 1970 ( for those born in 1951 ) and from 1971 to 1975 ( for 1952 to 1956 births ) . The draft numbers issued in 1972 were never used the next year to call for induction into service , because the last call was December 7 and authority to induct expired on June 30 , 1973 .
+  Fact 0.0: Draft lotteries were conducted again in 1970 for men born in 1951.
+  Fact 0.1: Draft lotteries were conducted from 1971 to 1975 for men born from 1952 to 1956.
+  Fact 0.2: The draft numbers issued in 1972 were never used the next year to call men for induction into service.
+  Fact 0.3: The last call for induction was on December 7.
+  Fact 0.4: Authority to induct expired on June 30, 1973.
+Sentence 1: On December 1 , 1969 , the Selective Service System of the United States conducted two lotteries to determine the order of call to military service in the Vietnam War for men born from 1944 to 1950 . These lotteries occurred during a period of conscription from just before World War II to 1973 . It was the first time a lottery system had been used to select men for military service since 1942 .
+  Fact 1.0: On December 1, 1969, the Selective Service System of the United States conducted two lotteries.
+  Fact 1.1: The 1969 lotteries determined the order of call to military service in the Vietnam War.
+  Fact 1.2: The 1969 lotteries were for men born from 1944 to 1950.
+  Fact 1.3: The 1969 lotteries occurred during a period of conscription from just before World War II to 1973.
+  Fact 1.4: The 1969 lotteries were the first time a lottery system had been used to select men for military service since 1942.
+
+Retrieved items:
+<item 1>
+Draft lottery (1969)
+( 1969 ) . `` The Cost of the Draft and the Cost of Ending the Draft '' . American Economic Review . 59 ( 3 ) . Jump up ^ Ifill , Gwen ( 13 February 1992 ) . ``
+THE 1992 CAMPAIGN : New Hampshire ; Clinton Thanked Colonel in ' 69 For ' Saving Me From the Draft ' '' -- via NYTimes.com . ^ Jump up to : Rosenblatt , J.R. ;
+Filliben , J.J. ( 1971 ) . `` Randomization and the Draft Lottery '' . Science . 171 : 306 -- 08 . doi : 10.1126 / science. 171.3968. 306 . Jump up ^ `` How the
+U.S. Draft Works '' . HowStuffWorks. 2001 - 10 - 18 . Retrieved 2017 - 12 - 05 . External links ( edit ) Landscaper.net ( 2009 ) . The Military Draft and 1969
+Draft Lottery for the Vietnam War . Last modified 2009 - 03 - 24 .
+</item 1>
+
+<item 2>
+Draft lottery (1969)
+The draft numbers issued in 1972 were never used the next year to call for induction into service , because the last call was December 7 and authority to induct
+expired on June 30 , 1973 . The 1972 to 1975 lottery numbers were used to call some men born 1953 to 1956 for physical exams . The highest number called for a
+physical was 215 ( for tables 1970 through 1976 ) . Origins and consequences ( edit ) The reason for the 1969 draft was to add personnel to a war to stop the
+spread of communism in Vietnam . After World War II , Japan left Vietnamese Emperor Bao Dai in command . Ho Chi Minh , another Vietnamese leader , saw this as
+an opportunity to strike and took over Hanoi . Ho Chi Minh then set up the Democratic Republic of Vietnam . Emperor Bo , in the South , set up the Vietnam State
+with Saigon as the capital . Ho Chi Minh was basing his political structure off of the communist states such as Russia while Emperor Bao Dai in the south wanted
+a Vietnam that was modeled after the west , like the United States .
+</item 2>
+
+<item 3>
+Draft lottery (1969)
+Draft lottery ( 1969 ) - wikipedia Draft lottery ( 1969 ) Jump to : navigation , search This article includes a list of references , but its sources remain
+unclear because it has insufficient inline citations . Please help to improve this article by introducing more precise citations . ( October 2017 ) ( Learn how
+and when to remove this template message ) Representative Alexander Pirnie ( R - NY ) drawing the first number . On December 1 , 1969 , the Selective Service
+System of the United States conducted two lotteries to determine the order of call to military service in the Vietnam War for men born from 1944 to 1950 . These
+lotteries occurred during a period of conscription from just before World War II to 1973 . It was the first time a lottery system had been used to select men
+for military service since 1942 . The lottery numbers assigned in December 1969 were used during calendar year 1970 both to call for induction and to call for
+physical examination , a preliminary call covering more men .
+</item 3>
+
+<item 4>
+Draft lottery (1969)
+The 1969 draft lottery only encouraged resentment of the Vietnam War and the draft . It strengthened the anti-war movement , and all over the United States ,
+people decried discrimination by the draft system `` against low - education , low - income , underprivileged members of society '' . The draft lottery had
+social and economic consequences because it generated resistance to military service and the resisters , draft evaders or `` draft dodgers '' , were generally
+young , well - educated , healthy men . The fear of military service in Vietnam influenced many young men born in the late 1940s to join the National Guard .
+These young men were aware that the National Guard would be unlikely to send its soldiers to Vietnam . Many men were unable to join the National Guard , even
+though they had passed their physicals , because many state National Guards had long waiting lists just to enlist . Still others chose legal sanctions such as
+imprisonment , either showing their disapproval by burning their draft cards or draft letters , or simply not presenting themselves for the military service
+test . Others left the country , commonly moving to Canada .
+</item 4>
+
+<item 5>
+Draft lottery (1969)
+Others left the country , commonly moving to Canada . The number of American citizens who moved to Canada during the Vietnam war because of the draft is
+estimated to be around 125,000 ; it is believed that about half returned to the United States after the Nixon era ( when the war was also over ) ( 1975 ) .
+Modification ( edit ) Lottery procedure was improved the next year although public discontent continued to grow until `` authority to induct expired on June 30
+, 1973 '' . In 1970 , covering 1951 birthdates for use during 1971 ( sometimes called the 1971 draft ) , scientists at the National Bureau of Standards prepared
+78 random permutations of the numbers 1 to 366 using random numbers selected from published tables . From the 78 permutations , 25 were selected at random and
+transcribed to calendars using 1 = January 1 , 2 = January 2 , ... 365 = December 31 . Those calendars were sealed in envelopes. 25 more permutations were
+selected and sealed in 25 more envelopes without transcription to calendars . The two sets of 25 envelopes were furnished to the Selective Service System .
+</item 5>
+
+<item 6>
+Draft lottery (1969)
+Last modified 2009 - 03 - 24 . Confirmed 2011 - 05 - 26 . -- contemporary news stories , images of Official Orders ( call to physical exam , call to report ) ,
+lottery results , Draft Board classifications , Vietnam troop levels , induction statistics 1917 -- 73 . David Lane ( 2003 ) . Introduction to Graphs : Clearing
+Up the Draft with Graphs . Connexions. 18 July 2003 . Confirmed 2011 - 05 - 26 . -- list of draft ranks , additional analysis . Selective Service System ( 2009
+) . The Vietnam Lotteries . SSS : History and Records . Last updated 2015 - 09 - 19 . Norton Starr ( 1997 ) . `` Nonrandom Risk : The 1970 Draft Lottery '' .
+Journal of Statistics Education 5.2 ( 1997 ) . Confirmed 2011 - 05 - 26 . -- The online edition includes instructions for getting the data online and a lesson
+plan for statistics class using the 1970 and 1971 draft lottery data .
+</item 6>
+
+<item 7>
+Draft lottery (1969)
+Due to the heavy demand for military personnel , the United States required more than what the regular military could provide , causing the acceleration of the
+draft . Between 1965 and 1972 the draft provided 2,215,000 service members to the U.S. military . Previously in the United States , during the War of 1812 ,
+President Madison established a commission to recommend the best ways to raise military manpower ; to keep the draft or to institute a volunteer army . After
+much debate within the Nixon administration and Congress , it was decided that an all - volunteer force was affordable , feasible , and would enhance the nation
+'s security . President Richard Nixon issued an executive order prescribing regulations for random selection by the United States Selective Service on November
+26 , 1969 . In the 1960s anti-war movements started to occur in the U.S. , mainly among those on college campuses and in more leftist circles , especially those
+who embraced the `` hippie '' lifestyle . College students were entitled to a deferment ( 2 - S status ) but were subject to the draft if they dropped out or
+graduated . In 1967 , the number of U.S.
+</item 7>
+
+<item 8>
+Draft lottery (1969)
+Jump up ^ 91st U.S. Congress . `` AN ACT To amend the Military Selective Service Act of 1967 ... '' ( pdf ) . United States Government Printing Office . ( Pub.
+L. 91 -- 124 , 83 Stat. 220 , enacted November 26 , 1969 ) Jump up ^ Peters , Gerhard ; Woolley , John T. `` Richard Nixon : `` Executive Order 11497 - Amending
+the Selective Service Regulations to Prescribe Random Selection , '' November 26 , 1969 `` . The American Presidency Project . University of California - Santa
+Barbara . ^ Jump up to : `` Vietnam War Protests - Vietnam War - HISTORY.com '' . HISTORY.com . Retrieved 2017 - 12 - 05 . Jump up ^
+https://www.nytimes.com/1984/09/02/us/college-enrollment-linked-to-vietnam-war.html , https://timesmachine.nytimes.com/timesmachine/1967/03/19/107186611.pdf
+Jump up ^ Fisher , Anthony C. ( 1969 ) .
+</item 8>
+
+<item 9>
+Draft lottery (1969)
+In 1967 , the number of U.S. military personnel in Vietnam was around 500,000 . The war was costing the U.S. $25 billion a year , and many of the young men
+drafted were being sent to a war they wanted no part of . Martin Luther King Jr. also started to support the anti-war movement on the grounds of it being
+immoral and the amount of African Americans that were being killed . November 15 , 1969 marked the largest anti war movement in the history of the United States
+. This protest featured many anti-war political speakers and popular singers of the time . Many people at the time saw Richard Nixon as a liar ; when he took
+office , he claimed that he would begin troop withdrawals from Vietnam immediately . After ten months of being in office , the president had yet to start
+withdrawals , anyone and the people felt lied to . Later , president Nixon claimed to have been watching sports as the anti-war demonstration took place outside
+the White House . The 1970s were a time of turmoil in the United States , beginning with the civil rights movement which set the standards for practices by the
+anti-war movement .
+</item 9>
+
+<item 10>
+Gerald Ford
+President Thieu resigned on April 21 , 1975 , publicly blaming the lack of support from the United States for the fall of his country . Two days later , on
+April 23 , Ford gave a speech at Tulane University . In that speech , he announced that the Vietnam War was over `` ... as far as America is concerned '' . The
+announcement was met with thunderous applause . South Vietnamese refugees arrive on a U.S. Navy vessel during Operation Frequent Wind 1,373 U.S. citizens and
+5,595 Vietnamese and third country nationals were evacuated from the South Vietnamese capital of Saigon during Operation Frequent Wind . In that operation ,
+military and Air America helicopters took evacuees to U.S. Navy ships off - shore during an approximately 24 - hour period on April 29 to 30 , 1975 ,
+immediately preceding the fall of Saigon . During the operation , so many South Vietnamese helicopters landed on the vessels taking the evacuees that some were
+pushed overboard to make room for more people .
+</item 10>
+=== END ITEM id=69d34b7899937abc ===
+
+=== ITEM id=62eff14089232314 ===
+Gold sentences and facts:
+Sentence 0: Sports - related costs for the Summer Games since 1960 is on average USD 5.2 billion and for the Winter Games USD 3.1 billion dollars . Severe cost overruns made the 2014 Winter Olympics the most expensive Olympics in history ; with Russian politician Boris Nemtsov citing allegations of corruption among government officials , and Allison Stewart of the Saïd Business School at Oxford citing tight relationships between the government and construction firms . While originally budgeted at US $12 billion , the budget expanded to US $51 billion , surpassing the estimated $44 billion cost of the 2008 Summer Olympics in Beijing , making Sochi the most expensive Olympics in history .
+  Fact 0.0: Sports-related costs for the Summer Games since 1960 are on average USD 5.2 billion.
+  Fact 0.1: Sports-related costs for the Winter Games are on average USD 3.1 billion.
+Sentence 1: Host City Year Final Operating Budget Total Costs Taxpayer Contribution Profit / Loss Year Debt Paid Off Notes Athens Summer Olympics 1896 3,740,000 ₯ Donations by George Averoff of 1,000,000 ₯ covered potential losses London Summer Olympics 1908 US $394,000 est . £ 6,377 Chamonix Winter Olympics 1924 3,500,000 ₣ 2,000,000 ₣ Paris Summer Olympics 1924 5,496,610 ₣ Amsterdam Summer Olympics 1928 $1,183,000 $18,000 St. Moritz Winter Olympics 1928 CHF 706,000 CHF104 , 800 Los Angeles Summer Olympics 1932 $1,000,000 Berlin Summer Olympics 1936 $30,000,000 London Summer Olympics 1948 £ 761,688 £ 29,000 Helsinki Summer Olympics 1952 1,580,000,000 mk 49,000,000 mk Melbourne Summer Olympics 1956 A £ 5,400,000 A £ 300,000 Tokyo Summer Olympics 1964 US $ 72,000,000 Mexico City Summer Olympics 1968 US $ 176,000,000 Munich Summer Olympics 1972 1,972,000,000 DM Montreal Summer Olympics 1976 CDN $ 207,000,000 CDN $ 1,410,000,000 CDN $ 990,000,000 2006 A special tobacco tax was introduced in May 1976 to fund the loss Lake Placid Winter Olympics 1980 US $ 49,000,000 US $ 169,000,000 Moscow Summer Olympics 1980 US $ 231,000,000 US $ 1,350,000,000 USD $1,190,000,000 deficit This was the year that The United States and 64 other Nations boycotted due to the Soviet invasion of Afghanistan . Sarajevo Winter Olympics 1984 US $ 55,400,000 US $ 110,900,000 US $10,000,000 The first Olympics since 1948 to make a profit Los Angeles Summer Olympics 1984 US $ 320,000,000 US $ 413,000,000 $75,000,000 US $250,000,000 1984 The first Summer Olympics since 1932 to make a profit Calgary Winter Olympics 1988 CDN $ 438,000,000 CDN $ 899,000,000 CDN $ 425,000,000 CDN $ 32,000,000 1988 Seoul Summer Olympics 1988 USD $4,000,000,000 US $300,000,000 1988 A record profit for a government - run Olympiad Barcelona Summer Olympics 1992 US $ 850,000,000 US $ 9,300,000,000 US $10,000,000 1992 Operating costs were put at 9.1 % of the total cost . The vast majority of spending was to improve infrastructure . Albertville Winter Olympics 1992 USD $1,200,000,000 on infrastructure USD $67,000,000 Lillehammer Winter Olympics US $ 1,100,000,000 US $ 250,000,000 Atlanta Summer Olympics US $ 1,800,000,000 US $ 609,000,000 US $ 19,000,000 Despite the profit , Atlanta 's heavy reliance on corporate sponsorship drew criticism of commercialization Nagano Winter Olympics 1998 ~ US $ 10,000,000,000 in new infrastructure Net loss Estimated 2015 The full cost of the Nagano Olympics is unknown , due to Nagano Olympic Bid Committee vice-secretary general Sumikazu Yamaguchi ordering accounting documents burned Sydney Summer Olympics 2000 A $ 6,600,000,000 A $ 3,000,000,000 ( A $ 363 , 5000 , 000 borne by the public ) A $ 2,050,000,000 USD $2,100,000,000 loss 2000 Salt Lake City Winter Olympics 2002 US $ 2,000,000,000 US $ 1,200,000,000 US $ 600,000,000 US $ 101,000,000 2002 Additional security costs were incurred in the wake of the September 11 attacks Athens Summer Olympics US $ 15,000,000,000 US $ 9,000,000,000 US $ 6,200,000,000 US $ 14,500,000,000 The cost of the 2004 Athens Summer Games has been cited as a contributor to the Greek government - debt crisis . Many of the venues lie vacant and rotting ; the Independent newspaper reports as many as 21 out of 22 are unused . Turin Winter Olympics 2006 US $ 700,000,000 USD $3,200,000 The Italian government created a lottery game to cover its financial losses . Beijing Summer Olympics 2008 US $ 44,000,000,000 CNY 1,000,000,000 ( US $ 146,000,000 ) 2008 Vancouver Winter Olympics CDN $ 1,700,000,000 ( US $ 1,260,000,000 ) US $ 6,400,000,000 US $ 2,300,000,000 CDN $ 1,900,000 Included in the total US $ 6,400,000,000 cost are the $1,000,000,000 for security , $2,500,000,000 for transportation extensions and upgrades , and $900,000,000 for the new Vancouver Convention Centre ( An additional $554,000,000 was spent by the city including a portion on the Olympic Village ) . London Summer Olympics 2012 US $ 10,400,000,000 US $ 14,600,000,000 US $ 4,400,000,000 GBP £ nil 2012 Additional costs include $90 million for converting the Olympic Stadium ( London ) to a football venue Sochi Winter Olympics 2014 US $ 51,000,000,000 US $ 53,150,000 The most expensive Olympic Games in history , surpassing the previous record set by the 2008 Beijing Summer Olympic Games . Rio de Janeiro Summer Olympics 2016 US $ 13,100,000,000 US $ 11.6 billion Pyeongchang Winter Olympics 2018 US $ 12,900,000,000 Tokyo Summer Olympics 2020 Beijing Winter Olympics 2022 Paris Summer Olympics 2024 TBA 2026 Winter Olympics 2026 Los Angeles Summer Olympics 2028 TBA 2032
+  Fact 1.0: The Athens Summer Olympics of 1896 had a final figure of 3,740,000 ₯.
+  Fact 1.1: Donations by George Averoff of 1,000,000 ₯ covered potential losses at the Athens Summer Olympics of 1896.
+  Fact 1.2: The London Summer Olympics of 1908 had an estimated figure of US $394,000.
+  Fact 1.3: The London Summer Olympics of 1908 had a figure of £ 6,377.
+  Fact 1.4: The Chamonix Winter Olympics of 1924 had a figure of 3,500,000 ₣.
+  Fact 1.5: The Chamonix Winter Olympics of 1924 had a figure of 2,000,000 ₣.
+  Fact 1.6: The Paris Summer Olympics of 1924 had a figure of 5,496,610 ₣.
+  Fact 1.7: The Amsterdam Summer Olympics of 1928 had figures of $1,183,000 and $18,000.
+  Fact 1.8: The St. Moritz Winter Olympics of 1928 had figures of CHF 706,000 and CHF 104,800.
+  Fact 1.9: The Los Angeles Summer Olympics of 1932 had a figure of $1,000,000.
+  Fact 1.10: The Berlin Summer Olympics of 1936 had a figure of $30,000,000.
+  Fact 1.11: The London Summer Olympics of 1948 had figures of £ 761,688 and £ 29,000.
+  Fact 1.12: The Helsinki Summer Olympics of 1952 had figures of 1,580,000,000 mk and 49,000,000 mk.
+  Fact 1.13: The Melbourne Summer Olympics of 1956 had figures of A £ 5,400,000 and A £ 300,000.
+  Fact 1.14: The Tokyo Summer Olympics of 1964 had a figure of US $ 72,000,000.
+  Fact 1.15: The Mexico City Summer Olympics of 1968 had a figure of US $ 176,000,000.
+  Fact 1.16: The Munich Summer Olympics of 1972 had a figure of 1,972,000,000 DM.
+  Fact 1.17: The Montreal Summer Olympics of 1976 had figures of CDN $ 207,000,000, CDN $ 1,410,000,000 and CDN $ 990,000,000.
+  Fact 1.18: The Montreal Summer Olympics had its debt paid off in 2006.
+  Fact 1.19: A special tobacco tax was introduced in May 1976 to fund the Montreal Olympics loss.
+  Fact 1.20: The Lake Placid Winter Olympics of 1980 had figures of US $ 49,000,000 and US $ 169,000,000.
+  Fact 1.21: The Moscow Summer Olympics of 1980 had figures of US $ 231,000,000 and US $ 1,350,000,000.
+  Fact 1.22: The Moscow Summer Olympics of 1980 had a USD $1,190,000,000 deficit.
+  Fact 1.23: The year 1980 was the year the United States and 64 other nations boycotted the Moscow Olympics due to the Soviet invasion of Afghanistan.
+  Fact 1.24: The Sarajevo Winter Olympics of 1984 had figures of US $ 55,400,000, US $ 110,900,000 and US $10,000,000.
+  Fact 1.25: The Sarajevo Winter Olympics of 1984 was the first Olympics since 1948 to make a profit.
+  Fact 1.26: The Los Angeles Summer Olympics of 1984 had figures of US $ 320,000,000, US $ 413,000,000, $75,000,000 and US $250,000,000.
+  Fact 1.27: The Los Angeles Summer Olympics of 1984 was the first Summer Olympics since 1932 to make a profit.
+  Fact 1.28: The Calgary Winter Olympics of 1988 had figures of CDN $ 438,000,000, CDN $ 899,000,000, CDN $ 425,000,000 and CDN $ 32,000,000.
+  Fact 1.29: The Calgary Winter Olympics had its debt paid off in 1988.
+  Fact 1.30: The Seoul Summer Olympics of 1988 had figures of USD $4,000,000,000 and US $300,000,000.
+  Fact 1.31: The Seoul Summer Olympics of 1988 was a record profit for a government-run Olympiad.
+  Fact 1.32: The Barcelona Summer Olympics of 1992 had figures of US $ 850,000,000, US $ 9,300,000,000 and US $10,000,000.
+  Fact 1.33: The Barcelona Summer Olympics had its debt paid off in 1992.
+  Fact 1.34: Operating costs at the Barcelona Summer Olympics were 9.1 % of the total cost.
+  Fact 1.35: The vast majority of Barcelona Summer Olympics spending was to improve infrastructure.
+  Fact 1.36: The Albertville Winter Olympics of 1992 had a figure of USD $1,200,000,000 on infrastructure.
+  Fact 1.37: The Albertville Winter Olympics of 1992 had a figure of USD $67,000,000.
+  Fact 1.38: The Lillehammer Winter Olympics had figures of US $ 1,100,000,000 and US $ 250,000,000.
+  Fact 1.39: The Atlanta Summer Olympics had figures of US $ 1,800,000,000, US $ 609,000,000 and US $ 19,000,000.
+  Fact 1.40: Despite the profit, Atlanta's heavy reliance on corporate sponsorship drew criticism of commercialization.
+  Fact 1.41: The Nagano Winter Olympics of 1998 had about US $ 10,000,000,000 spent on new infrastructure.
+  Fact 1.42: The Nagano Winter Olympics had a net loss, with its debt paid off estimated for 2015.
+  Fact 1.43: The full cost of the Nagano Olympics is unknown.
+  Fact 1.44: The full cost of the Nagano Olympics is unknown because Nagano Olympic Bid Committee vice-secretary general Sumikazu Yamaguchi ordered accounting documents burned.
+  Fact 1.45: The Sydney Summer Olympics of 2000 had figures of A $ 6,600,000,000, A $ 3,000,000,000, A $ 363,5000,000 borne by the public, and A $ 2,050,000,000.
+  Fact 1.46: The Sydney Summer Olympics of 2000 had a USD $2,100,000,000 loss.
+  Fact 1.47: The Sydney Summer Olympics had its debt paid off in 2000.
+  Fact 1.48: The Salt Lake City Winter Olympics of 2002 had figures of US $ 2,000,000,000, US $ 1,200,000,000, US $ 600,000,000 and US $ 101,000,000.
+  Fact 1.49: The Salt Lake City Winter Olympics had its debt paid off in 2002.
+  Fact 1.50: Additional security costs were incurred for the Salt Lake City Winter Olympics in the wake of the September 11 attacks.
+  Fact 1.51: The Athens Summer Olympics of 2004 had figures of US $ 15,000,000,000, US $ 9,000,000,000, US $ 6,200,000,000 and US $ 14,500,000,000.
+  Fact 1.52: The cost of the 2004 Athens Summer Games has been cited as a contributor to the Greek government debt crisis.
+  Fact 1.53: Many of the Athens 2004 venues lie vacant and rotting.
+  Fact 1.54: The Independent newspaper reports as many as 21 out of 22 Athens 2004 venues are unused.
+  Fact 1.55: The Turin Winter Olympics of 2006 had figures of US $ 700,000,000 and USD $3,200,000.
+  Fact 1.56: The Italian government created a lottery game to cover its financial losses from the Turin Winter Olympics.
+  Fact 1.57: The Beijing Summer Olympics of 2008 had figures of US $ 44,000,000,000 and CNY 1,000,000,000 (US $ 146,000,000).
+  Fact 1.58: The Beijing Summer Olympics had its debt paid off in 2008.
+  Fact 1.59: The Vancouver Winter Olympics had figures of CDN $ 1,700,000,000 (US $ 1,260,000,000), US $ 6,400,000,000 and US $ 2,300,000,000.
+  Fact 1.60: The Vancouver Winter Olympics row includes the figure CDN $ 1,900,000.
+  Fact 1.61: The total US $ 6,400,000,000 cost of the Vancouver Winter Olympics includes $1,000,000,000 for security.
+  Fact 1.62: The total US $ 6,400,000,000 cost of the Vancouver Winter Olympics includes $2,500,000,000 for transportation extensions and upgrades.
+  Fact 1.63: The total US $ 6,400,000,000 cost of the Vancouver Winter Olympics includes $900,000,000 for the new Vancouver Convention Centre.
+  Fact 1.64: An additional $554,000,000 was spent by the city of Vancouver, including a portion on the Olympic Village.
+  Fact 1.65: The London Summer Olympics of 2012 had figures of US $ 10,400,000,000, US $ 14,600,000,000 and US $ 4,400,000,000.
+  Fact 1.66: The London Summer Olympics of 2012 had GBP £ nil listed.
+  Fact 1.67: Additional costs of the London 2012 Olympics include $90 million for converting the Olympic Stadium (London) to a football venue.
+  Fact 1.68: The Sochi Winter Olympics of 2014 had figures of US $ 51,000,000,000 and US $ 53,150,000.
+  Fact 1.69: The Sochi Winter Olympics of 2014 were the most expensive Olympic Games in history.
+  Fact 1.70: The Sochi Winter Olympics of 2014 surpassed the previous record set by the 2008 Beijing Summer Olympic Games.
+  Fact 1.71: The Rio de Janeiro Summer Olympics of 2016 had figures of US $ 13,100,000,000 and US $ 11.6 billion.
+  Fact 1.72: The Pyeongchang Winter Olympics of 2018 had a figure of US $ 12,900,000,000.
+  Fact 1.73: The table lists the Tokyo Summer Olympics of 2020, the Beijing Winter Olympics of 2022, the Paris Summer Olympics of 2024 and the 2026 Winter Olympics.
+  Fact 1.74: The table contains TBA entries alongside the 2020 to 2032 Games.
+  Fact 1.75: The table lists the Los Angeles Summer Olympics of 2028 and the 2032 Olympics.
+
+Retrieved items:
+<item 1>
+Cost of the Olympic Games
+Beijing Summer Olympics 2008 US $ 44,000,000,000 CNY 1,000,000,000 ( US $ 146,000,000 ) 2008 Vancouver Winter Olympics CDN $ 1,700,000,000 ( US $ 1,260,000,000
+) US $ 6,400,000,000 US $ 2,300,000,000 CDN $ 1,900,000 Included in the total US $ 6,400,000,000 cost are the $1,000,000,000 for security , $2,500,000,000 for
+transportation extensions and upgrades , and $900,000,000 for the new Vancouver Convention Centre ( An additional $554,000,000 was spent by the city including a
+portion on the Olympic Village ) .
+</item 1>
+
+<item 2>
+Cost of the Olympic Games
+International Olympic Committee . Retrieved 2014 - 02 - 13 . ^ Jump up to : `` Official Report of the XXII Olympiad Moscow 1980 '' ( PDF ) . International
+Olympic Committee . 1981 . Retrieved 2014 - 02 - 13 . ^ Jump up to : `` FINAL REPORT published by the Organising Committee of the XlVth Winter Olympic Games
+1984 at Sarajevo '' ( PDF ) . ^ Jump up to : `` Official Report of the Games of the XXIIIrd Olympiad Los Angeles , 1984 '' ( PDF ) . International Olympic
+Committee . 1985 . Retrieved 2014 - 02 - 13 . ^ Jump up to : Julia Campbell . `` Cost to Host Olympic Games Skyrockets '' . ABC News . Retrieved August 6 , 2013
+. ^ Jump up to : `` Olympic Cities : Booms and Busts '' . Cnbc.com. 2012 - 01 - 19 . Retrieved 2014 - 02 - 07 .
+</item 2>
+
+<item 3>
+Cost of the Olympic Games
+London Summer Olympics 2012 US $ 10,400,000,000 US $ 14,600,000,000 US $ 4,400,000,000 GBP £ nil 2012 Additional costs include $90 million for converting the
+Olympic Stadium ( London ) to a football venue Sochi Winter Olympics 2014 US $ 51,000,000,000 US $ 53,150,000 The most expensive Olympic Games in history ,
+surpassing the previous record set by the 2008 Beijing Summer Olympic Games . Rio de Janeiro Summer Olympics 2016 US $ 13,100,000,000 US $ 11.6 billion
+Pyeongchang Winter Olympics 2018 US $ 12,900,000,000 Tokyo Summer Olympics 2020 Beijing Winter Olympics 2022 Paris Summer Olympics 2024 TBA 2026 Winter Olympics
+2026 Los Angeles Summer Olympics 2028 TBA 2032 See also ( edit ) List of megaprojects References ( edit ) Jump up ^ Bennetts , Marc ( 19 January 2014 ) .
+</item 3>
+
+<item 4>
+Cost of the Olympic Games
+The table below is listing the not so hard costs of the Games . Due to the multitude of reporting methods , the table contains both the operating costs and
+total final costs ( which include various infrastructure upgrades and security costs ) , known and not estimated . Net loss or gain are measured against the
+operating budgets . Intangible costs ( such as to the environment and society ) and not so total benefits ( through tourism ) are not included here . Contents (
+hide ) 1 Table 2 See also 3 References 4 External links Table ( edit ) Host City Year Final Operating Budget Total Costs Taxpayer Contribution Profit / Loss
+Year Debt Paid Off Notes Athens Summer Olympics 1896 3,740,000 ₯ Donations by George Averoff of 1,000,000 ₯ covered potential losses London Summer Olympics 1908
+US $394,000 est . £ 6,377 Chamonix Winter Olympics 1924 3,500,000 ₣ 2,000,000 ₣ Paris Summer Olympics 1924 5,496,610 ₣ Amsterdam Summer Olympics 1928 $1,183,000
+$18,000 St.
+</item 4>
+
+<item 5>
+Cost of the Olympic Games
+Cost of the Olympic Games - wikipedia Cost of the Olympic Games Jump to : navigation , search This article possibly contains original research . Please improve
+it by verifying the claims made and adding inline citations . Statements consisting only of original research should be removed . ( February 2018 ) ( Learn how
+and when to remove this template message ) Sports - related costs for the Summer Games since 1960 is on average USD 5.2 billion and for the Winter Games USD 3.1
+billion dollars . Severe cost overruns made the 2014 Winter Olympics the most expensive Olympics in history ; with Russian politician Boris Nemtsov citing
+allegations of corruption among government officials , and Allison Stewart of the Saïd Business School at Oxford citing tight relationships between the
+government and construction firms . While originally budgeted at US $12 billion , the budget expanded to US $51 billion , surpassing the estimated $44 billion
+cost of the 2008 Summer Olympics in Beijing , making Sochi the most expensive Olympics in history . The table below is listing the not so hard costs of the
+Games .
+</item 5>
+
+<item 6>
+Cost of the Olympic Games
+2002 - 09 - 18 . Retrieved 2010 - 02 - 13 . Jump up ^ `` As Olympic glow fades , Athens Questions $15,000,000,000 Cost - 2008 - 07 - 21 - The Christian Science
+Monitor '' . Retrieved 2010 - 02 - 13 . Jump up ^ `` How the 2004 Olympics Triggered Greece 's Decline - 2012 - 08 - 02 - Bloomberg Business '' . Retrieved 2014
+- 02 - 12 . Jump up ^ `` Olympics ' may cost Greece dear ' - 2004 - 06 - 02 - BBC NEWS '' . BBC News . 2004 - 06 - 02 . Retrieved 2014 - 02 - 12 . Jump up ^
+Schlotterbeck , Bianca ( 19 January 2012 ) . `` Athens , Greece ( Summer , 2004 ) '' . Olympic Cities : Booms and Busts . CNBC . Retrieved 13 February 2013 .
+Jump up ^ `` Olympic Cities : Booms and Busts '' .
+</item 6>
+
+<item 7>
+Cost of the Olympic Games
+Retrieved 2014 - 02 - 07 . ^ Jump up to : `` Beijing Olympiad : Profit or Loss ? '' . China Internet Information Center . Retrieved 2008 - 08 - 17 . ^ Jump up
+to : `` XV Olympic Winter Games : Official Report '' ( PDF ) . International Olympic Committee . 1988 . Retrieved 2014 - 02 - 13 . Jump up ^ Flyvbjerg , Bent ;
+Allison Stewart ( 2012 ) . `` Olympic Proportions : Cost and Cost Overrun at the Olympics 1960 - 2012 '' . Working Paper . Saïd Business School , University of
+Oxford . Jump up ^ Brunet , Ferran ( 1995 ) . An economic analysis of the Barcelona'92 Olympic Games : resources , financing and impacts `` . Working Paper .
+Universitat Autònoma de Barcelona ^ Jump up to : `` Olympic Cities : Booms and Busts '' . Cnbc.com. 2012 - 01 - 19 . Retrieved 2014 - 02 - 07 .
+</item 7>
+
+<item 8>
+Cost of the Olympic Games
+000,000,000 US $ 1,200,000,000 US $ 600,000,000 US $ 101,000,000 2002 Additional security costs were incurred in the wake of the September 11 attacks Athens
+Summer Olympics US $ 15,000,000,000 US $ 9,000,000,000 US $ 6,200,000,000 US $ 14,500,000,000 The cost of the 2004 Athens Summer Games has been cited as a
+contributor to the Greek government - debt crisis . Many of the venues lie vacant and rotting ; the Independent newspaper reports as many as 21 out of 22 are
+unused . Turin Winter Olympics 2006 US $ 700,000,000 USD $3,200,000 The Italian government created a lottery game to cover its financial losses .
+</item 8>
+
+<item 9>
+Cost of the Olympic Games
+Moritz Winter Olympics 1928 CHF 706,000 CHF104 , 800 Los Angeles Summer Olympics 1932 $1,000,000 Berlin Summer Olympics 1936 $30,000,000 London Summer Olympics
+1948 £ 761,688 £ 29,000 Helsinki Summer Olympics 1952 1,580,000,000 mk 49,000,000 mk Melbourne Summer Olympics 1956 A £ 5,400,000 A £ 300,000 Tokyo Summer
+Olympics 1964 US $ 72,000,000 Mexico City Summer Olympics 1968 US $ 176,000,000 Munich Summer Olympics 1972 1,972,000,000 DM Montreal Summer Olympics 1976 CDN $
+207,000,000 CDN $ 1,410,000,000 CDN $ 990,000,000 2006 A special tobacco tax was introduced in May 1976 to fund the loss Lake Placid Winter Olympics 1980 US $
+49,000,000 US $ 169,000,000 Moscow Summer Olympics 1980 US $ 231,000,000 US $ 1,350,000,000 USD $1,
+</item 9>
+
+<item 10>
+Cost of the Olympic Games
+Retrieved 2014 - 02 - 07 . ^ Jump up to : Nina Berglund . `` Lillehammer marks OL anniversary '' . News In English . Retrieved February 7 , 2014 . compared to
+the NOK 8,500,000,000 spent on Lillehammer ^ Jump up to : `` Exchange rate , US dollar ( USD ) '' . Norges Bank . Retrieved February 7 , 2014 . January 1994
+7.5109 ^ Jump up to : Schlotterbeck , Bianca ( 19 January 2012 ) . `` Nagano , Japan ( Winter 1998 ) '' . Olympic Cities : Booms and Busts . CNBC . Retrieved 13
+February 2013 . Jump up ^ Craig , David ( 2009 ) . Squandered . Constable & Robinson Limited . p. 300 . ISBN 9781849011617 . Jump up ^ `` Olympic glory at any
+price ? - John Madden & James Giesecke - 26 Jul 2012 , Business Spectator '' .
+</item 10>
+=== END ITEM id=62eff14089232314 ===
+
+=== ITEM id=659c5607d04d9678 ===
+Gold sentences and facts:
+Sentence 0: No . overall No. in season Title Directed by Written by Original air date Prod . code U.S. viewers ( millions ) 70 `` The Flash Reborn '' Glen Winter Story by : Andrew Kreisberg Teleplay by : Todd Helbing & Eric Wallace October 10 , 2017 ( 2017 - 10 - 10 ) T27. 13401 2.84 71 `` Mixed Signals '' Alexandra La Roche Jonathan Butler & Gabriel Garza October 17 , 2017 ( 2017 - 10 - 17 ) T27. 13402 2.54 72 `` Luck Be a Lady '' Armen V. Kevorkian Sam Chalsen & Judalina Neira October 24 , 2017 ( 2017 - 10 - 24 ) T27. 13403 2.62 73 `` Elongated Journey Into Night '' Tom Cavanagh Sterling Gates & Thomas Pound October 31 , 2017 ( 2017 - 10 - 31 ) T27. 13404 1.99 74 5 `` Girls Night Out '' Laura Belsey Lauren Certo & Kristen Kim November 7 , 2017 ( 2017 - 11 - 07 ) T27. 13405 2.38 75 6 `` When Harry Met Harry ... '' Brent Crowell Jonathan Butler & Gabriel Garza November 14 , 2017 ( 2017 - 11 - 14 ) T27. 13406 2.46 76 7 `` Therefore I Am '' David McWhirter Eric Wallace & Thomas Pound November 21 , 2017 ( 2017 - 11 - 21 ) T27. 13407 2.20 77 8 `` Crisis on Earth - X , Part 3 '' Dermott Downs Story by : Andrew Kreisberg & Marc Guggenheim Teleplay by : Todd Helbing November 28 , 2017 ( 2017 - 11 - 28 ) T27. 13408 2.82 78 9 `` Do n't Run '' Stefan Pleszczynski Sam Chalsen & Judalina Neira December 5 , 2017 ( 2017 - 12 - 05 ) T27. 13409 2.22 79 10 `` The Trial of The Flash '' Philip Chipera Lauren Certo & Kristen Kim January 16 , 2018 ( 2018 - 01 - 16 ) T27. 13410 2.51 80 11 `` The Elongated Knight Rises '' Alexandra La Roche Sterling Gates & Thomas Pound January 23 , 2018 ( 2018 - 01 - 23 ) T27. 13411 2.12 81 12 `` Honey , I Shrunk Team Flash '' Chris Peppe Sam Chalsen & Judalina Neira January 30 , 2018 ( 2018 - 01 - 30 ) T27. 13412 2.60 82 13 `` True Colors '' Tara Nicole Weyr Jonathan Butler & Gabriel Garza February 6 , 2018 ( 2018 - 02 - 06 ) T27. 13413 2.28 83 14 `` Subject 9 '' Ralph Hemecker Mike Alber & Gabe Snyder February 27 , 2018 ( 2018 - 02 - 27 ) T27. 13414 2.12 84 15 `` Enter Flashtime '' Gregory Smith Todd Helbing & Sterling Gates March 6 , 2018 ( 2018 - 03 - 06 ) T27. 13415 2.04 85 16 `` Run , Iris , Run '' Harry Jierjian Eric Wallace March 13 , 2018 ( 2018 - 03 - 13 ) T27. 13416 2.09 86 17 `` Null and Annoyed '' Kevin Smith Lauren Certo & Kristen Kim April 10 , 2018 ( 2018 - 04 - 10 ) T27. 13417 1.82 87 18 `` Lose Yourself '' Hanelle Culpepper Jonathan Butler & Gabriel Garza April 17 , 2018 ( 2018 - 04 - 17 ) T27. 13418 1.88 88 19 `` Fury Rogue '' Rachel Talalay Joshua V. Gilbert & Jeff Hersh April 24 , 2018 ( 2018 - 04 - 24 ) TBA 1.90 89 20 `` Therefore She Is '' Rob J. Greenlea Sterling Gates & Thomas Pound May 1 , 2018 ( 2018 - 05 - 01 ) TBA TBD 90 21 `` Harry and the Harrisons '' Kevin Mock Judalina Neira & Lauren Certo May 8 , 2018 ( 2018 - 05 - 08 ) TBA TBD 91 22 `` Think Fast '' Viet Nguyen Sam Chalsen & Kristen Kim May 15 , 2018 ( 2018 - 05 - 15 ) TBA TBD 92 23 `` We Are the Flash '' TBA TBA May 22 , 2018 ( 2018 - 05 - 22 ) TBA TBD
+  Fact 0.0: Episode 70 overall is titled The Flash Reborn.
+  Fact 0.1: The Flash Reborn was directed by Glen Winter.
+  Fact 0.2: The Flash Reborn had story by Andrew Kreisberg and teleplay by Todd Helbing and Eric Wallace.
+  Fact 0.3: The Flash Reborn aired October 10, 2017, with production code T27.13401 and 2.84 million U.S. viewers.
+  Fact 0.4: Episode 71 overall is titled Mixed Signals.
+  Fact 0.5: Mixed Signals was directed by Alexandra La Roche.
+  Fact 0.6: Mixed Signals was written by Jonathan Butler and Gabriel Garza.
+  Fact 0.7: Mixed Signals aired October 17, 2017, with production code T27.13402 and 2.54 million U.S. viewers.
+  Fact 0.8: Episode 72 overall is titled Luck Be a Lady.
+  Fact 0.9: Luck Be a Lady was directed by Armen V. Kevorkian.
+  Fact 0.10: Luck Be a Lady was written by Sam Chalsen and Judalina Neira.
+  Fact 0.11: Luck Be a Lady aired October 24, 2017, with production code T27.13403 and 2.62 million U.S. viewers.
+  Fact 0.12: Episode 73 overall is titled Elongated Journey Into Night.
+  Fact 0.13: Elongated Journey Into Night was directed by Tom Cavanagh.
+  Fact 0.14: Elongated Journey Into Night was written by Sterling Gates and Thomas Pound.
+  Fact 0.15: Elongated Journey Into Night aired October 31, 2017, with production code T27.13404 and 1.99 million U.S. viewers.
+  Fact 0.16: Episode 74 overall is episode 5 of its season and is titled Girls Night Out.
+  Fact 0.17: Girls Night Out was directed by Laura Belsey.
+  Fact 0.18: Girls Night Out was written by Lauren Certo and Kristen Kim.
+  Fact 0.19: Girls Night Out aired November 7, 2017, with production code T27.13405 and 2.38 million U.S. viewers.
+  Fact 0.20: Episode 75 overall is episode 6 of its season and is titled When Harry Met Harry ...
+  Fact 0.21: When Harry Met Harry ... was directed by Brent Crowell.
+  Fact 0.22: When Harry Met Harry ... was written by Jonathan Butler and Gabriel Garza.
+  Fact 0.23: When Harry Met Harry ... aired November 14, 2017, with production code T27.13406 and 2.46 million U.S. viewers.
+  Fact 0.24: Episode 76 overall is episode 7 of its season and is titled Therefore I Am.
+  Fact 0.25: Therefore I Am was directed by David McWhirter.
+  Fact 0.26: Therefore I Am was written by Eric Wallace and Thomas Pound.
+  Fact 0.27: Therefore I Am aired November 21, 2017, with production code T27.13407 and 2.20 million U.S. viewers.
+  Fact 0.28: Episode 77 overall is episode 8 of its season and is titled Crisis on Earth - X, Part 3.
+  Fact 0.29: Crisis on Earth - X, Part 3 was directed by Dermott Downs.
+  Fact 0.30: Crisis on Earth - X, Part 3 had story by Andrew Kreisberg and Marc Guggenheim and teleplay by Todd Helbing.
+  Fact 0.31: Crisis on Earth - X, Part 3 aired November 28, 2017, with production code T27.13408 and 2.82 million U.S. viewers.
+  Fact 0.32: Episode 78 overall is episode 9 of its season and is titled Don't Run.
+  Fact 0.33: Don't Run was directed by Stefan Pleszczynski.
+  Fact 0.34: Don't Run was written by Sam Chalsen and Judalina Neira.
+  Fact 0.35: Don't Run aired December 5, 2017, with production code T27.13409 and 2.22 million U.S. viewers.
+  Fact 0.36: Episode 79 overall is episode 10 of its season and is titled The Trial of The Flash.
+  Fact 0.37: The Trial of The Flash was directed by Philip Chipera.
+  Fact 0.38: The Trial of The Flash was written by Lauren Certo and Kristen Kim.
+  Fact 0.39: The Trial of The Flash aired January 16, 2018, with production code T27.13410 and 2.51 million U.S. viewers.
+  Fact 0.40: Episode 80 overall is episode 11 of its season and is titled The Elongated Knight Rises.
+  Fact 0.41: The Elongated Knight Rises was directed by Alexandra La Roche.
+  Fact 0.42: The Elongated Knight Rises was written by Sterling Gates and Thomas Pound.
+  Fact 0.43: The Elongated Knight Rises aired January 23, 2018, with production code T27.13411 and 2.12 million U.S. viewers.
+  Fact 0.44: Episode 81 overall is episode 12 of its season and is titled Honey, I Shrunk Team Flash.
+  Fact 0.45: Honey, I Shrunk Team Flash was directed by Chris Peppe.
+  Fact 0.46: Honey, I Shrunk Team Flash was written by Sam Chalsen and Judalina Neira.
+  Fact 0.47: Honey, I Shrunk Team Flash aired January 30, 2018, with production code T27.13412 and 2.60 million U.S. viewers.
+  Fact 0.48: Episode 82 overall is episode 13 of its season and is titled True Colors.
+  Fact 0.49: True Colors was directed by Tara Nicole Weyr.
+  Fact 0.50: True Colors was written by Jonathan Butler and Gabriel Garza.
+  Fact 0.51: True Colors aired February 6, 2018, with production code T27.13413 and 2.28 million U.S. viewers.
+  Fact 0.52: Episode 83 overall is episode 14 of its season and is titled Subject 9.
+  Fact 0.53: Subject 9 was directed by Ralph Hemecker.
+  Fact 0.54: Subject 9 was written by Mike Alber and Gabe Snyder.
+  Fact 0.55: Subject 9 aired February 27, 2018, with production code T27.13414 and 2.12 million U.S. viewers.
+  Fact 0.56: Episode 84 overall is episode 15 of its season and is titled Enter Flashtime.
+  Fact 0.57: Enter Flashtime was directed by Gregory Smith.
+  Fact 0.58: Enter Flashtime was written by Todd Helbing and Sterling Gates.
+  Fact 0.59: Enter Flashtime aired March 6, 2018, with production code T27.13415 and 2.04 million U.S. viewers.
+  Fact 0.60: Episode 85 overall is episode 16 of its season and is titled Run, Iris, Run.
+  Fact 0.61: Run, Iris, Run was directed by Harry Jierjian.
+  Fact 0.62: Run, Iris, Run was written by Eric Wallace.
+  Fact 0.63: Run, Iris, Run aired March 13, 2018, with production code T27.13416 and 2.09 million U.S. viewers.
+  Fact 0.64: Episode 86 overall is episode 17 of its season and is titled Null and Annoyed.
+  Fact 0.65: Null and Annoyed was directed by Kevin Smith.
+  Fact 0.66: Null and Annoyed was written by Lauren Certo and Kristen Kim.
+  Fact 0.67: Null and Annoyed aired April 10, 2018, with production code T27.13417 and 1.82 million U.S. viewers.
+  Fact 0.68: Episode 87 overall is episode 18 of its season and is titled Lose Yourself.
+  Fact 0.69: Lose Yourself was directed by Hanelle Culpepper.
+  Fact 0.70: Lose Yourself was written by Jonathan Butler and Gabriel Garza.
+  Fact 0.71: Lose Yourself aired April 17, 2018, with production code T27.13418 and 1.88 million U.S. viewers.
+  Fact 0.72: Episode 88 overall is episode 19 of its season and is titled Fury Rogue.
+  Fact 0.73: Fury Rogue was directed by Rachel Talalay.
+  Fact 0.74: Fury Rogue was written by Joshua V. Gilbert and Jeff Hersh.
+  Fact 0.75: Fury Rogue aired April 24, 2018, with production code TBA and 1.90 million U.S. viewers.
+  Fact 0.76: Episode 89 overall is episode 20 of its season and is titled Therefore She Is.
+  Fact 0.77: Therefore She Is was directed by Rob J. Greenlea.
+  Fact 0.78: Therefore She Is was written by Sterling Gates and Thomas Pound.
+  Fact 0.79: Therefore She Is aired May 1, 2018, with production code TBA and viewer count TBD.
+  Fact 0.80: Episode 90 overall is episode 21 of its season and is titled Harry and the Harrisons.
+  Fact 0.81: Harry and the Harrisons was directed by Kevin Mock.
+  Fact 0.82: Harry and the Harrisons was written by Judalina Neira and Lauren Certo.
+  Fact 0.83: Harry and the Harrisons aired May 8, 2018, with production code TBA and viewer count TBD.
+  Fact 0.84: Episode 91 overall is episode 22 of its season and is titled Think Fast.
+  Fact 0.85: Think Fast was directed by Viet Nguyen.
+  Fact 0.86: Think Fast was written by Sam Chalsen and Kristen Kim.
+  Fact 0.87: Think Fast aired May 15, 2018, with production code TBA and viewer count TBD.
+  Fact 0.88: Episode 92 overall is episode 23 of its season and is titled We Are the Flash.
+  Fact 0.89: The director and writers of We Are the Flash are listed as TBA.
+  Fact 0.90: We Are the Flash aired May 22, 2018, with production code TBA and viewer count TBD.
+
+Retrieved items:
+<item 1>
+List of The Flash episodes
+96 2.0 4.96 17 `` Flash Back '' March 29 , 2016 1.3 / 5 3.39 0.9 1.92 2.2 5.31 18 `` Versus Zoom '' April 19 , 2016 1.2 / 4 3.03 0.8 2.03 2.0 5.07 19 `` Back to
+Normal '' April 26 , 2016 1.3 / 5 3.39 0.8 1.86 2.1 5.26 20 `` Rupture '' May 3 , 2016 1.3 / 5 3.34 0.8 1.92 2.1 5.25 21 `` The Runaway Dinosaur '' May 10 ,
+2016 1.3 / 5 3.52 0.8 1.82 2.1 5.34 22 `` Invincible '' May 17 , 2016 1.3 / 5 3.37 0.9 2.
+</item 1>
+
+<item 2>
+List of The Flash episodes
+25 23 October 4 , 2016 ( 2016 - 10 - 04 ) May 23 , 2017 ( 2017 - 05 - 23 ) 120 3.50 23 October 10 , 2017 ( 2017 - 10 - 10 ) May 22 , 2018 ( 2018 - 05 - 22 ) TBA
+TBA Episodes ( edit ) Season 1 ( 2014 -- 15 ) ( edit ) No . overall No. in season Title Directed by Written by Original air date Prod . code U.S. viewers (
+millions ) `` Pilot '' David Nutter Story by : Greg Berlanti & Andrew Kreisberg & Geoff Johns Teleplay by : Andrew Kreisberg & Geoff Johns October 7 , 2014 (
+2014 - 10 - 07 ) 296648 4.83 Barry Allen , a forensic crime scene assistant for Central City Police Department , is struck by lightning during a storm that is
+created after a particle accelerator from S.T.A.R. Labs explodes . In a coma for nine months , Barry awakens in S.T.A.R.
+</item 2>
+
+<item 3>
+List of The Flash episodes
+13415 2.04 85 16 `` Run , Iris , Run '' Harry Jierjian Eric Wallace March 13 , 2018 ( 2018 - 03 - 13 ) T27. 13416 2.09 86 17 `` Null and Annoyed '' Kevin Smith
+Lauren Certo & Kristen Kim April 10 , 2018 ( 2018 - 04 - 10 ) T27. 13417 1.82 87 18 `` Lose Yourself '' Hanelle Culpepper Jonathan Butler & Gabriel Garza April
+17 , 2018 ( 2018 - 04 - 17 ) T27.
+</item 3>
+
+<item 4>
+List of The Flash episodes
+13406 2.46 76 7 `` Therefore I Am '' David McWhirter Eric Wallace & Thomas Pound November 21 , 2017 ( 2017 - 11 - 21 ) T27. 13407 2.20 77 8 `` Crisis on Earth -
+X , Part 3 '' Dermott Downs Story by : Andrew Kreisberg & Marc Guggenheim Teleplay by : Todd Helbing November 28 , 2017 ( 2017 - 11 - 28 ) T27. 13408 2.82 78 9
+`` Do n't Run '' Stefan Pleszczynski Sam Chalsen & Judalina Neira December 5 , 2017 ( 2017 - 12 - 05 ) T27. 13409 2.22 79 10 `` The Trial of The Flash '' Philip
+Chipera Lauren Certo & Kristen Kim January 16 , 2018 ( 2018 - 01 - 16 ) T27.
+</item 4>
+
+<item 5>
+List of The Flash episodes
+8 8 `` Flash vs. Arrow '' Glen Winter Story by : Greg Berlanti & Andrew Kreisberg Teleplay by : Ben Sokolowski & Brooke Eikmeier December 2 , 2014 ( 2014 - 12 -
+02 ) 3J5358 4.34 Eddie proposes a task force to hunt down the Flash . A new metahuman , Roy Bivolo , shows up with the ability to send people into an
+uncontrollable rage , and uses his ability to rob a bank . Oliver Queen informs Barry that he and his team are tracking a killer who uses lethal boomerangs .
+Barry and Oliver agree to team - up and catch each other 's targets . Barry decides to go after Bivolo by himself . Bivolo uses his abilities on Barry ; but
+because of Barry 's powers it makes the effects last longer . Oliver tries to stop Barry , and the two engage in a fight until Wells and Joe use colored strobe
+light to reset Barry 's emotional state . Afterward , Barry and Oliver capture Bivolo and place him in the prison at S.T.A.R. Labs .
+</item 5>
+
+<item 6>
+List of The Flash episodes
+Eiling is freed . Iris reveals her feelings for Barry , but states her choice to be with Eddie . Grodd is revealed to be safe and roaming the streets .
+Meanwhile , Thawne works on a device that will allow him to return to his own time . He reveals to Eddie , Iris and Barry 's marriage in the future . Later
+Thawne completes the device and is revealed to be hiding in a secret chamber inside S.T.A.R. Labs . 22 22 `` Rogue Air '' Doug Aarniokoski Aaron Helbing & Todd
+Helbing May 12 , 2015 ( 2015 - 05 - 12 ) 3J5372 3.65 Cisco discovers that Eobard has been supercharging his speed through his wheelchair , which is why he is so
+much faster than Barry . The particle accelerator is activated by Eobard , who has managed to repair it . The team is able to find and rescue Eddie , who ends
+his relationship with Iris .
+</item 6>
+
+<item 7>
+List of The Flash episodes
+2014 1.4 / 4 3.73 0.9 N / A 2.3 N / A 7 `` Power Outage '' November 25 , 2014 1.4 / 4 3.47 0.9 2.41 2.3 5.88 8 `` Flash vs. Arrow '' December 2 , 2014 1.6 / 5
+4.34 1.0 2.31 2.6 6.65 9 `` The Man in the Yellow Suit '' December 9 , 2014 1.5 / 5 4.66 0.9 2.06 2.4 6.72 10 `` Revenge of the Rogues '' January 20 , 2015 1.4
+/ 5 3.87 1.0 2.41 2.4 6.27 11 `` The Sound and the Fury '' January 27 , 2015 1.3 / 4 4.08 1.0 2.20 2.3 6.
+</item 7>
+
+<item 8>
+List of The Flash episodes
+2 / 4 3.14 0.8 1.80 2.0 4.94 10 `` Borrowing Problems From the Future '' January 24 , 2017 1.0 / 3 2.72 0.8 1.92 1.8 4.64 11 `` Dead or Alive '' January 31 ,
+2017 1.1 / 4 3.06 0.7 1.64 1.8 4.71 12 `` Untouchable '' February 7 , 2017 1.1 / 4 2.91 0.7 1.68 1.8 4.59 13 `` Attack on Gorilla City '' February 21 , 2017 1.0
+/ 4 2.78 0.9 1.96 1.9 4.75 14 `` Attack on Central City '' February 28 , 2017 1.1 / 4 2.87 0.8 1.81 1.9 4.68 15 `` The Wrath of Savitar '' March 7 ,
+</item 8>
+
+<item 9>
+List of The Flash episodes
+13401 2.84 71 `` Mixed Signals '' Alexandra La Roche Jonathan Butler & Gabriel Garza October 17 , 2017 ( 2017 - 10 - 17 ) T27. 13402 2.54 72 `` Luck Be a Lady
+'' Armen V. Kevorkian Sam Chalsen & Judalina Neira October 24 , 2017 ( 2017 - 10 - 24 ) T27. 13403 2.62 73 `` Elongated Journey Into Night '' Tom Cavanagh
+Sterling Gates & Thomas Pound October 31 , 2017 ( 2017 - 10 - 31 ) T27. 13404 1.99 74 5 `` Girls Night Out '' Laura Belsey Lauren Certo & Kristen Kim November 7
+, 2017 ( 2017 - 11 - 07 ) T27. 13405 2.38 75 6 `` When Harry Met Harry ... '' Brent Crowell Jonathan Butler & Gabriel Garza November 14 , 2017 ( 2017 - 11 - 14
+) T27.
+</item 9>
+
+<item 10>
+List of The Flash episodes
+13410 2.51 80 11 `` The Elongated Knight Rises '' Alexandra La Roche Sterling Gates & Thomas Pound January 23 , 2018 ( 2018 - 01 - 23 ) T27. 13411 2.12 81 12 ``
+Honey , I Shrunk Team Flash '' Chris Peppe Sam Chalsen & Judalina Neira January 30 , 2018 ( 2018 - 01 - 30 ) T27. 13412 2.60 82 13 `` True Colors '' Tara Nicole
+Weyr Jonathan Butler & Gabriel Garza February 6 , 2018 ( 2018 - 02 - 06 ) T27. 13413 2.28 83 14 `` Subject 9 '' Ralph Hemecker Mike Alber & Gabe Snyder February
+27 , 2018 ( 2018 - 02 - 27 ) T27. 13414 2.12 84 15 `` Enter Flashtime '' Gregory Smith Todd Helbing & Sterling Gates March 6 , 2018 ( 2018 - 03 - 06 ) T27.
+</item 10>
+=== END ITEM id=659c5607d04d9678 ===
+
+=== ITEM id=f18fe64000e25ffa ===
+Gold sentences and facts:
+Sentence 0: John Ernest Crawford ( born March 26 , 1946 ) is an American character actor , singer , and musician . At age 12 , Crawford rose to fame for playing Mark McCain , the son of Lucas McCain ( played by Chuck Connors ) , in the popular ABC Western series , The Rifleman , which originally aired from 1958 to 1963 . Crawford first performed before a national audience as a Mouseketeer .
+  Fact 0.0: John Ernest Crawford was born March 26, 1946.
+  Fact 0.1: John Ernest Crawford is an American character actor.
+  Fact 0.2: John Ernest Crawford is an American singer.
+  Fact 0.3: John Ernest Crawford is an American musician.
+  Fact 0.4: At age 12, John Ernest Crawford rose to fame for playing Mark McCain.
+  Fact 0.5: Mark McCain is the son of Lucas McCain.
+  Fact 0.6: Lucas McCain was played by Chuck Connors.
+  Fact 0.7: Crawford played Mark McCain in the popular ABC Western series The Rifleman.
+  Fact 0.8: The Rifleman originally aired from 1958 to 1963.
+  Fact 0.9: John Ernest Crawford first performed before a national audience as a Mouseketeer.
+
+Retrieved items:
+<item 1>
+Johnny Crawford (born 1946 in Los Angeles) is an American actor, singer, and musician who began as an original Disney Mouseketeer. He became famous as Mark
+McCain, son of Chuck Connors’s character in ABC’s *The Rifleman* (1958–1963), earning an Emmy nomination at 13. His acting credits include *El Dorado*, *Hawaii
+Five-O*, and *Little House on the Prairie*. As a singer, he scored four Billboard Top
+</item 1>
+
+<item 2>
+Johnny Crawford
+The third pilot , which was made as an episode of Dick Powell 's Zane Grey Theater , was picked up by ABC and the first season of The Rifleman began filming in
+July 1958 . Crawford was nominated for an Emmy Award , at age 13 , for his role as Mark McCain , the son of Lucas McCain , played by Chuck Connors , in the Four
+Star Television series The Rifleman , which originally aired from 1958 to 1963 . Throughout The Rifleman 's five seasons , a remarkable on - screen chemistry
+existed between Connors and Crawford in the depiction of their father - son relationship . They were still close friends when Connors died on November 10 , 1992
+, and Crawford gave a eulogy at Connors ' memorial service . During the late 1950s and early 1960s , Crawford had wide popularity with American teenagers and a
+recording career that generated four Billboard Top 40 hits , including the single , `` Cindy 's Birthday '' , which peaked at number 8 , in 1962 .
+</item 2>
+
+<item 3>
+Johnny Crawford
+Johnny Crawford - wikipedia Johnny Crawford Jump to : navigation , search For the Canadian ice hockey player and coach , see Johnny Crawford ( ice hockey ) .
+Johnny Crawford Johnny Crawford in The Rifleman ( 1961 ) John Ernest Crawford ( 1946 - 03 - 26 ) March 26 , 1946 ( age 72 ) Los Angeles , California , U.S.
+Occupation Actor , singer , musician , band leader Years active 1954 -- 96 Spouse ( s ) Charlotte Crawford ( 1995 -- present ) ( separated ) Relatives Robert L.
+Crawford , Jr. ( brother ) Website Johnny Crawford fansite Johnny Crawford and Chuck Connors in The Rifleman ( 1960 ) John Ernest Crawford ( born March 26 ,
+1946 ) is an American character actor , singer , and musician . At age 12 , Crawford rose to fame for playing Mark McCain , the son of Lucas McCain ( played by
+Chuck Connors ) , in the popular ABC Western series , The Rifleman , which originally aired from 1958 to 1963 . Crawford first performed before a national
+audience as a Mouseketeer .
+</item 3>
+
+<item 4>
+Rio Bravo (film)
+In this film , Robert Mitchum played the Dean Martin role , Arthur Hunnicutt the Walter Brennan character , and James Caan the Ricky Nelson role . Hawks again
+named the Nelson / Caan character after a state ( in this case , Mississippi ) and in a wry , humorous twist on the original film , Hawks made him inept with
+firearms , but skilled with a knife . The second remake , Rio Lobo , was made in 1970 with a plot much further off the original mold , starting with the absence
+of a lawman - turned - drunkard character . This began with a Confederate train robbery of a Union gold shipment during the American Civil War , then moved to a
+postwar Texas county thoroughly controlled by a rich , arrogant rancher . The heroes , with the exception of an old man similar to Brennan and Hunnicutt 's
+characters in the previous pictures ( Jack Elam here ) , were complete outsiders . Along with Wayne and Elam , this movie starred Mexican film star Jorge Rivero
+( as Frenchie ) , Christopher Mitchum ( Robert Mitchum 's son ) , and Jennifer O'Neill .
+</item 4>
+
+<item 5>
+Rio Bravo (film)
+After a pair of sheer tights comes floating from a window to the street , a delighted Stumpy retrieves it , but Dude cautions him to mind his own business .
+Cast ( edit ) John Wayne and Angie Dickinson in Rio Bravo John Wayne as John T. Chance Dean Martin as Dude Ricky Nelson as Colorado / Ryan Angie Dickinson as
+Feathers Walter Brennan as Stumpy Ward Bond as Pat Wheeler John Russell as Nathan Burdette Pedro Gonzalez Gonzalez as Carlos Robante Estelita Rodriguez as
+Consuela Robante Claude Akins as Joe Burdette Joseph Shimada as Burt Malcolm Atterbury and Harry Carey Jr. also receive a screen credit in the film 's opening ,
+but their scenes were deleted from the final film . Production ( edit ) Ricky Nelson performing the song `` Get Along Home , Cindy '' in Rio Bravo Exteriors for
+the film were shot at Old Tucson Studios , just outside Tucson . Filming took place in the summer of 1958 , and the movie 's credits gave 1958 as the year of
+production , although the film was not released until 1959 .
+</item 5>
+
+<item 6>
+Rio Bravo (film)
+Both remember how good with a gun Dude used to be . Chance 's friend Pat Wheeler ( Ward Bond ) and his wagon train of supplies stop in town , with a young
+gunslinger , Colorado Ryan ( Ricky Nelson ) , riding guard . Inside the jail , Stumpy ( Walter Brennan ) , Chance 's game - legged deputy , keeps watch over the
+jail and Joe , who knows that Stumpy holds an old grudge against Joe 's wealthy and powerful brother . Joe warns his jailers that Nathan Burdette will not like
+how his brother is being treated . A mysterious woman nicknamed Feathers ( Angie Dickinson ) is in the saloon , playing poker . In the meantime , Dude and
+Chance patrol the town . Hotel owner Carlos ( Pedro Gonzalez - Gonzalez ) stops the sheriff , saying Wheeler has been talking too much about Chance needing help
+. In the saloon , Chance implores Wheeler to stop , as it will draw attention from the wrong people . Wheeler suggests that Colorado could be of assistance ,
+but Colorado politely declines , saying he wants to `` mind my own business '' . Colorado also promises not to start any trouble without telling the sheriff
+first .
+</item 6>
+
+<item 7>
+Rio Bravo (film)
+McCampbell , the film is about the sheriff of the town of Rio Bravo , Texas , who arrests the brother of a powerful local rancher to help his drunken deputy /
+friend . With the help of a cripple and a young gunfighter , they hold off the rancher 's gang . Rio Bravo was filmed on location at Old Tucson Studios outside
+Tucson , Arizona , in Technicolor . In 2014 , Rio Bravo was deemed `` culturally , historically , or aesthetically significant '' by the Library of Congress and
+selected for preservation in the National Film Registry . Contents ( hide ) 1 Plot 2 Cast 3 Production 4 High Noon debate 5 Reception 6 Remakes and inspirations
+6.1 Remakes 6.2 Inspirations 7 Music 8 Comic book adaption 9 See also 10 References 11 Further reading 12 External links Plot ( edit ) In the town of Rio Bravo
+, Texas , sheriff 's deputy Dude ( Dean Martin ) , who has acquired the contemptuous nickname Borrachón ( pronounced ( bo.
+</item 7>
+
+<item 8>
+Johnny Crawford
+His first important break as an actor followed with the title role in a Lux Video Theatre production of `` Little Boy Lost '' , a live NBC broadcast on March 15
+, 1956 . He also appeared in the popular Western series The Lone Ranger , in 1956 , in one of the few color episodes of that series . Following that performance
+, the young actor worked steadily with many seasoned actors and directors . Freelancing for 2 1 / 2 years , he accumulated almost 60 television credits ,
+including featured roles in three episodes of NBC 's The Loretta Young Show and an appearance as Manuel in , `` I Am an American '' , an episode of the
+syndicated crime drama Sheriff of Cochise . By the spring of 1958 , he had also performed 14 demanding roles in live teleplays for NBC 's Matinee Theatre ,
+appeared on CBS 's sitcom , Mr. Adams and Eve , in the Wagon Train episode `` The Sally Potter Story '' ( in which Martin Milner also appeared ) and on the
+syndicated series , Crossroads , Sheriff of Cochise , and Whirlybirds , and made three pilots of TV series .
+</item 8>
+
+<item 9>
+Johnny Crawford
+He played a young deputy Billy Norris , in The Big Valley episode `` The Other Face Of Justice '' in 1969 . While enlisted in the United States Army for two
+years , Crawford worked on training films as a production coordinator , assistant director , script supervisor , and occasional actor . His rank was sergeant at
+the time of his honorable discharge in December 1967 . In 1968 , Crawford played a soldier wanted for murder in `` By the Numbers '' , an episode of the popular
+TV series Hawaii Five - O . The Resurrection of Broncho Billy was a USC student film Crawford agreed to do as a favor to his close friend , producer John
+Longenecker . It won the 1970 Academy Award for Best Live Action Short Subject . The Naked Ape was a partially animated 1973 feature film starring Crawford and
+Victoria Principal , produced by Hugh Hefner . In 1976 , Johnny Crawford co-starred as Ben Shelby in the tenth episode of season three of Little House on the
+Prairie , `` The Hunters '' . In 1985 , Crawford appeared as Noah Paisley , sheriff 's deputy , in an episode of Murder , She Wrote .
+</item 9>
+
+<item 10>
+Rio Bravo (film)
+Because the film starred a crooner , Martin , and a teen idol , Nelson , Hawks included three songs in the soundtrack . Before the big showdown , in the jail
+house , Martin sings `` My Rifle , My Pony , and Me '' ( which contained new lyrics to a Tiomkin tune that appeared in Red River ) accompanied by Nelson , after
+which Nelson sings a brief version of `` Get Along Home , Cindy '' , accompanied by Martin and Brennan . Over the closing credits , Martin , backed by the
+Nelson Riddle Orchestra , sings a specially composed song , `` Rio Bravo '' , written by Tiomkin with lyrics by Paul Francis Webster . Nelson later paid homage
+to both the film and his character , Colorado , by including the song `` Restless Kid '' on his 1959 LP , Ricky Sings Again . Members of the Western Writers of
+America chose `` My Rifle , My Pony , and Me '' as one of the Top 100 Western songs of all time . A brief clip from Rio Bravo was among the archive footage
+later incorporated into the opening sequence of Wayne 's last film , The Shootist , to illustrate the backstory of Wayne 's character .
+</item 10>
+=== END ITEM id=f18fe64000e25ffa ===

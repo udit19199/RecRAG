@@ -1,0 +1,66 @@
+[
+{"id": "5cf56a7b81a7c861", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "They promised “invest[ment] in the AI-powered technology” that, amongst other things,"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "that, amongst other things,"}, {"item": 5, "quote": "would help YouTube “protect our community of viewers, creators, artists and songwriters"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "would help YouTube “protect our community of viewers, creators, artists and songwriters… [from] trademark and copyright abuse”"}]}
+]},
+{"id": "d4eeb37709a3899a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "That answer ultimately lies with the jury"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "then Bankman-Fried swapped two very"}, {"item": 6, "quote": "different stories of the former crypto mogul’s sudden rise and almost instantaneous fall"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 6, "quote": "then Bankman-Fried swapped two very"}, {"item": 6, "quote": "different stories of the former crypto mogul’s sudden rise and almost instantaneous fall"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 6, "quote": "different stories of the former crypto mogul’s sudden rise and almost instantaneous fall"}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 6, "quote": "different stories of the former crypto mogul’s sudden rise and almost instantaneous fall"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "A conscious criminal"}, {"item": 6, "quote": "The prosecution’s account of the alleged crimes by Bankman-Fried"}, {"item": 2, "quote": "Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents"}]},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "00448f2962833a0d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "But it was ChatGPT’s explosion into public consciousness that thrust Altman into the"}, {"item": 8, "quote": "spotlight as a face of generative AI"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "generative AI — technology that can produce novel imagery, passages of text and other media"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "In the year since Altman catapulted ChatGPT to global fame"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "he has become Silicon Valley’s sought-after voice on the promise and potential dangers of artificial"}, {"item": 6, "quote": "intelligence and his sudden and mostly unexplained exit"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "his sudden and mostly unexplained exit brought uncertainty to the industry’s future."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []},
+{"fact": "3.2", "status": "missing", "evidence": []}
+]},
+{"id": "cf246290ca2a9b82", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "but Google will counter this as"}, {"item": 3, "quote": "saying it has provided the court with thousands of chat logs and millions of documents"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "saying it has provided the court with thousands of chat logs and millions of documents"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "bda2a1176f64d1f3", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "The second week of the trial’s standout testimony"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "who claimed she took $14 billion from customers to"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "who claimed she took $14 billion from customers to"}, {"item": 5, "quote": "repay debts to lenders, using them as a line of credit under the instruction of SBF"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "who claimed she took $14 billion from customers to"}, {"item": 5, "quote": "using them as a line of credit"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 5, "quote": "under the instruction of SBF"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "SBF arrested"}, {"item": 4, "quote": "Bankman-Fried was arrested in December 2022 in the Bahamas"}]},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]}
+]

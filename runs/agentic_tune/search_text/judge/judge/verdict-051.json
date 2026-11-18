@@ -1,0 +1,72 @@
+[
+  {
+    "id": "dbdc927c76deedd5",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "contradicted", "evidence": [{"item": 9, "quote": "In reality, the drug has been used for depression, post-traumatic stress disorder and pain for more than 10 years"}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "If it worked with the fish, they might then be able to figure out how the diet effects behavior"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "and improve the effectiveness of the treatment for humans."}]}
+    ]
+  },
+  {
+    "id": "ade266edb00ac2de",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Hope played a gem of an innings there"}]},
+      {"fact": "1.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "d4bdc0ac03d97afb",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "e0eaacd2137798d2",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State"}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State"}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "although Michigan had hoped to block the suspension"}]},
+      {"fact": "1.4", "status": "stated", "evidence": [{"item": 8, "quote": "the Wolverines will be without their coach on the sidelines in Happy Valley."}]}
+    ]
+  },
+  {
+    "id": "355246129abdce43",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "One of the hardest things is resentment can build up if you feel like you need to buy gifts for your family and you can barely make your student loan payments, so bring things up,” Alev said."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "One of the hardest things is resentment can build up if you feel like you need to buy gifts for your family and you can barely make your student loan payments, so bring things up,” Alev said."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "One of the hardest things is resentment can build up if you feel like you need to buy gifts for your family and you can barely make your student loan payments, so bring things up,” Alev said."}]}
+    ]
+  },
+  {
+    "id": "e736d3c9173788bf",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+      {"fact": "2.3", "status": "stated", "evidence": [{"item": 7, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+    ]
+  }
+]

@@ -1,0 +1,77 @@
+[
+{"id": "4062b6eb18bdacf7", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Sam Altman is among the backers of an AI startup, founded by two teenagers"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "This week was Google’s annual hardware event"}]},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "a31dd7ab335b1a8c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "That answer ultimately lies with the jury"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 4, "quote": "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda"}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 4, "quote": "he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "“This man stole billions of dollars from thousands of people,” prosecutor Thane Rehn told the court. “He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence.”"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads"}]}
+]},
+{"id": "9fe6a48f1556e65f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "His career has only blossomed in the years since he took that trip"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "some artists might feel trepidation at the attainment of so much success from such an early age"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Mitchell is clear-eyed"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Since then he’s been linked to club jobs in Europe"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Since then he’s been linked to club jobs in Europe but opted to stick around with the national team"}]}
+]},
+{"id": "9ceb75cd1a4fbfb1", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now"}]}
+]},
+{"id": "34c21bac1ed98ce7", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "0.5", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 10, "quote": "14th over: West Indies 112-4 (Hope 27, Powell 10)"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "West Indies 112-4"}]},
+{"fact": "1.3", "status": "contradicted", "evidence": [{"item": 10, "quote": "West Indies 112-4 (Hope 27, Powell 10)"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 8, "quote": "Hope played a gem of an innings there, calmly anchoring West Indies in an increasingly nervous chase"}]},
+{"fact": "1.5", "status": "missing", "evidence": []}
+]},
+{"id": "01374bec556f92a3", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "he continued to play through the ailment in Week 9"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "he continued to play through the ailment in Week 9 as a big part of the offense"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]}
+]

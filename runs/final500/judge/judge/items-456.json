@@ -1,0 +1,407 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "9a0b13efbc61fa37",
+   "gold": [
+    {
+     "sentence": "Broughtonia is a genus of orchids (family Orchidaceae) native to the Bahamas and the Greater Antilles.",
+     "facts": {
+      "0.0": "Broughtonia is a genus of orchids.",
+      "0.1": "Broughtonia belongs to the family Orchidaceae.",
+      "0.2": "Broughtonia is native to the Bahamas.",
+      "0.3": "Broughtonia is native to the Greater Antilles."
+     }
+    },
+    {
+     "sentence": "Perilla is a genus consisting of one major Asiatic crop species \"P. frutescens\" and a few recognized wild species in nature, belonging to the mint family, Lamiaceae.",
+     "facts": {
+      "1.0": "Perilla is a genus.",
+      "1.1": "Perilla consists of one major Asiatic crop species, P. frutescens.",
+      "1.2": "Perilla includes a few recognized wild species in nature.",
+      "1.3": "Perilla belongs to the mint family, Lamiaceae."
+     }
+    }
+   ],
+   "items": [
+    "Butea\nButea is a genus of flowering plants belonging to the pea family, Fabaceae.\n\n It is sometimes considered to have only two species, \"B. monosperma\" and \"B. superba\", or is expanded to include four or five species.",
+    "Perilla frutescens\nPerilla frutescens, commonly called perilla or Korean perilla, is a species of \"Perilla\" in the mint family Lamiaceae.\n\n It is an annual plant native to Southeast Asia and Indian highlands, and grown in the Korean peninsula, Southern China and India.\n\n Known as \"deulkkae\" (들깨 ) in Korean, the plant was introduced into Korea before the Unified Silla era, when it started to be widely cultivated.",
+    "Perilla ketone\nPerilla ketone is a natural terpenoid that consists of a furan ring with a six-carbon side chain containing a ketone functional group.\n\n It is a colorless oil that is sensitive to oxygen, becoming colored upon standing.\n\n The ketone was identified in 1943 by Sebe as the main component of the essential oil of Perilla frutescens.\n\n Perilla ketone is present in the leaves and seeds of purple mint (\"Perilla frutescens\"), which is toxic to some animals.\n\n When cattle and horses consume purple mint when grazing in fields in which it grows, the perilla ketone causes pulmonary edema leading to a condition sometimes called perilla mint toxicosis.",
+    "Monardella lanceolata\nMonardella lanceolata is a species of flowering plant in the mint family known by the common names mustang mint and mustang monardella.\n\n It is native to the mountains of California and Baja California, where it grows in chaparral, woodland, rocky slopes, and often disturbed habitat types.",
+    "Broussaisia\nBroussaisia arguta, the kanawao, is a species of perennial flowering plant in the \"Hydrangea\" family, Hydrangeaceae, that is endemic to Hawaiʻ i.\n\n It is the only species in the monotypic genus Broussaisia.",
+    "Perilla\nPerilla is a genus consisting of one major Asiatic crop species \"P. frutescens\" and a few recognized wild species in nature, belonging to the mint family, Lamiaceae.\n\n It encompasses several distinct varieties of Asian herb, seed, and vegetable crop, including \"P. frutescens\" (deulkkae) and \"P. frutescens\" var.\n\n \"crispa\" (shiso).\n\n The genus name \"Perilla\" is also a frequently employed common name (\"perilla\"), applicable to all varieties.\n\n Perilla varieties are cross-fertile and intra-specific hybridization occurs naturally.\n\n Some varieties are considered invasive.",
+    "Myrsine\nMyrsine is a genus of flowering plants in the family Primulaceae.\n\n It was formerly placed in the family Myrsinaceae before this was merged into the Primulaceae.\n\n It is found nearly worldwide, primarily in tropical and subtropical areas.\n\n It contains about 200 species, including several notable radiations, such as the matipo of New Zealand and the kōlea of Hawaiʻ i (the New Zealand \"black matipo\", \"Pittosporum tenuifolium\", is not related to \"Myrsine\").\n\n In the United States, members of this genus are known as colicwood.\n\n Some species, especially \"M. africana\", are grown as ornamental shrubs.",
+    "Shiso\nPerilla frutescens var.\n\n \"crispa\", also called shiso ( , from Japanese シソ ) is a variety of species \"Perilla frutescens\" of the genus \"Perilla\", belonging to the mint family, Lamiaceae.\n\n The plant occurs in red (purple-leaved) or green-leaved forms.\n\n Shiso is a perennial plant that may be cultivated as an annual in temperate climates, and occurs in both red- (or purple-) leaved and green forms.\n\n There are also frilly, ruffled-leaved forms called \"chirimen-jiso\" and forms that are red only on top, called \"katamen-jiso\".",
+    "Broughtonia\nBroughtonia is a genus of orchids (family Orchidaceae) native to the Bahamas and the Greater Antilles.\n\n The genus is abbreviated Bro in trade journals.",
+    "Lamiaceae\nor Labiatae is a family of flowering plants commonly known as the mint or deadnettle family.\n\n Many of the plants are aromatic in all parts and include widely used culinary herbs, such as basil, mint, rosemary, sage, savory, marjoram, oregano, hyssop, thyme, lavender, and perilla.\n\n Some species are shrubs, trees (such as teak), or, rarely, vines.\n\n Many members of the family are widely cultivated, not only for their aromatic qualities but also their ease of cultivation, since they are readily propagated by stem cuttings.\n\n Besides those grown for their edible leaves, some are grown for decorative foliage, such as \"Coleus\".\n\n Others are grown for seed, such as \"Salvia hispanica\" (chia), or for their edible tubers, such as \"Plectranthus edulis\", \"Plectranthus esculentus\", \"Plectranthus rotundifolius\", and \"Stachys affinis\" (Chinese artichoke)."
+   ]
+  },
+  {
+   "id": "8984268ff98765d8",
+   "gold": [
+    {
+     "sentence": "Akademisches Kunstmuseum (English:Academic Art Museum) is an art museum in Bonn, Germany.",
+     "facts": {
+      "0.0": "Akademisches Kunstmuseum is also known in English as the Academic Art Museum.",
+      "0.1": "Akademisches Kunstmuseum is an art museum.",
+      "0.2": "Akademisches Kunstmuseum is located in Bonn, Germany."
+     }
+    },
+    {
+     "sentence": "The Federal City of Bonn (] ) is a city on the banks of the Rhine in the German state of North Rhine-Westphalia, with a population of over 300,000.",
+     "facts": {
+      "1.0": "The Federal City of Bonn is a city.",
+      "1.1": "The Federal City of Bonn is on the banks of the Rhine.",
+      "1.2": "The Federal City of Bonn is in the German state of North Rhine-Westphalia.",
+      "1.3": "The Federal City of Bonn has a population of over 300,000."
+     }
+    }
+   ],
+   "items": [
+    "Imperial War Museum (disambiguation)\nThe Imperial War Museum is a British national museum organisation with branches at five locations in England.",
+    "Akademisches Kunstmuseum\nAkademisches Kunstmuseum (English:Academic Art Museum) is an art museum in Bonn, Germany.\n\n It is the oldest museum in Bonn and houses the antique collection of the University of Bonn with more than 500 antique statues and reliefs, and over 2,000 originals.\n\n It is located in a neoclassical building at the southern end of the Hofgarten, near the Electoral Palace.",
+    "National Museum, Kraków\nThe National Museum in Kraków (Polish: \"Muzeum Narodowe w Krakowie\" ), popularly abbreviated as MNK, established in 1879, is the main branch of Poland's National Museum, which has several independent branches with permanent collections around the country.\n\n The Museum consists of 21 departments which are divided by art period; 11 galleries, 2 libraries, and 12 conservation workshops.\n\n It holds some 780,000 art objects, spanning from classical archeology to modern art, with special focus on Polish painting.\n\n<ref name=\"culture.pl/muzea\"> </ref><ref name=\"muzeum/Zbiory\"> </ref>",
+    "Alutiiq Museum\nThis cultural center features a gallery, storage for more than 190,000 local artifacts, including faunal materials, ethnobotanical samples, sediment samples, field notes, photographs, and maps and a research laboratory.\n\n The Alutiiq Museum is a small repository, but we care for a very large collection with nearly 250,000 items.\n\n As a newly founded institution, the Alutiiq Museum sought to develop its policies and practices in professional ways.\n\n The Alutiiq Museum also uses its collections for community-building among the Alutiiq.\n\n The Alutiiq Museum is supported and governed by the Alutiiq Heritage Foundation and is dedicated to preserving and sharing Alutiiq heritage.",
+    "Bonn\nThe Federal City of Bonn (] ) is a city on the banks of the Rhine in the German state of North Rhine-Westphalia, with a population of over 300,000.\n\n About 24 km south-southeast of Cologne, Bonn is in the southernmost part of the Rhine-Ruhr region, Germany's largest metropolitan area, with over 11 million inhabitants.",
+    "Harris Museum\nThe Harris Museum, Art Gallery & Preston Free Public Library is a Grade I listed museum building in Preston.",
+    "Croatian Natural History Museum\nThe Croatian Natural History Museum (Croatian: \"Hrvatski prirodoslovni muzej\" ) is the oldest and biggest natural history museum and the main body for natural history research, preservation and collection in Croatia.\n\n Located on Dimitrije Demeter Street in Gornji Grad, one of the oldest neighbourhoods of the Croatian capital Zagreb, it owns one of the biggest museum collections in Croatia, with over 2 million artefacts, including over 1.1 million animal specimens.\n\n It was founded in 1846 as the \"National Museum\".\n\n The National Museum was later split up into five museums, three of which were in 1986 merged as departments of the newly named Croatian Natural History Museum.\n\n The museum contains a large scientific library open to the public, and publishes the first Croatian natural history scientific journal, \"Natura Croatica\".",
+    "University of Copenhagen\nThe University of Copenhagen (UCPH) (Danish: \"Københavns Universitet\" ) is the oldest university and research institution in Denmark.\n\n Founded in 1479 as a studium generale, it is the second oldest institution for higher education in Scandinavia after Uppsala University (1477).\n\n The university has 23,473 undergraduate students, 17,398 postgraduate students, 2,968 doctoral students and over 9,000 employees.\n\n The university has four campuses located in and around Copenhagen, with the headquarters located in central Copenhagen.\n\n Most courses are taught in Danish; however, many courses are also offered in English and a few in German.\n\n The university has several thousands of foreign students, about half of whom come from Nordic countries.",
+    "National Museum of Poland\n\"National Museum of Poland\" is the common name for several of the country's largest and most notable museums. Poland's National Museum comprises several independent branches, each operating a number of smaller museums.\n\n The main branch is the National Museum in Kraków (Polish: \"Muzeum Narodowe w Krakowie\" ), established in 1879 with permanent collections consisting of several hundred thousand items – kept in big part at the Main Building (along the 3 Maja St.), but also in the eight of its divisions around the city.",
+    "Palace of Music (Miskolc)\nThe Palace of Music (\"Zenepalota\") is a building in Bartók square, Miskolc, Hungary.\n\n It is the building of the Béla Bartók Secondary School and the Béla Bartók Music Institute (a faculty of the University of Miskolc.)\n\n The Palace was designed by Gyula Waelder in Neo-baroque style and was built between 1926 and 1927.\n\n The construction was financed from USA loans, just like that of the Hotel Palace in Lillafüred and the Market Hall on Búza tér."
+   ]
+  },
+  {
+   "id": "dfce2dde73248bc6",
+   "gold": [
+    {
+     "sentence": "Ferdi Taygan (born December 5, 1956), is a former professional tennis player from the United States.",
+     "facts": {
+      "0.0": "Ferdi Taygan was born on December 5, 1956",
+      "0.1": "Ferdi Taygan is a former professional tennis player",
+      "0.2": "Ferdi Taygan is from the United States"
+     }
+    },
+    {
+     "sentence": "Mahesh Shrinivas Bhupathi (born 7 June 1974) is a retired Indian professional tennis player.",
+     "facts": {
+      "1.0": "Mahesh Shrinivas Bhupathi was born on 7 June 1974",
+      "1.1": "Mahesh Shrinivas Bhupathi is a retired Indian professional tennis player"
+     }
+    }
+   ],
+   "items": [
+    "Ferdi Taygan\nFerdi Taygan (born December 5, 1956), is a former professional tennis player from the United States.\n\n He is of Turkish descent.",
+    "Mahesh Bhupathi Tennis Academy\nMahesh Bhupathi Tennis Academy is a tennis training facility started by Indian tennis player Mahesh Bhupathi.\n\n The Academy has facilities across 9 states in India as well as in the UAE.",
+    "Mahesh Bhupathi\nMahesh Shrinivas Bhupathi (born 7 June 1974) is a retired Indian professional tennis player.\n\n In 1997, he became the first Indian to win a Grand Slam tournament (with Rika Hiraki).\n\n With his win at the Australian Open mixed doubles in 2006, he joined the elite group of eight tennis players who have achieved a career Grand Slam in mixed doubles.\n\n He is also the founder of International Premier Tennis League.\n\n In December 2016, Bhupathi was appointed as India's next non-playing Davis Cup captain and took over the reins from Anand Amritraj in February 2017.",
+    "1982 French Open – Men's Doubles\nThe Men's Doubles tournament at the 1982 French Open was held from 24 May until 6 June 1982 on the outdoor clay courts at the Stade Roland Garros in Paris, France.\n\n Sherwood Stewart and Ferdi Taygan won the title, defeating Hans Gildemeister and Belus Prajoux in the final.",
+    "1983 Donnay Indoor Championships – Doubles\nPavel Složil and Sherwood Stewart were the defending champions, but Složil did not participate this year.\n\n Stewart partnered Ferdi Taygan, losing in the first round.",
+    "1982 Volvo Masters – Doubles\nPeter Fleming and John McEnroe won in the final 6–4, 6–3 against Sherwood Stewart and Ferdi Taygan.",
+    "Gerald Melzer\nGerald Melzer (born 13 July 1990) is a professional Austrian tennis player.\n\n As a qualifier, he reached the semifinals of Münich in 2015.\n\n He achieved a career-high singles ranking of world No. 68 in November 2016.",
+    "Marat Safin\nMarat Mubinovich Safin (Russian: Мара́т Муби́нович Са́фин ; ] , Tatar: Марат Мөбин улы Сафин \"Marat Möbin uğlı Safin\" ; born 27 January 1980) is a Russian politician and retired professional tennis player.\n\n He achieved the Association of Tennis Professionals (ATP) world No. 1 singles ranking on November 20, 2000.\n\n Nobody taller than Safin has ever reached his world number-one ranking.\n\n Safin is the older brother of former world No. 1 WTA player, Dinara Safina.\n\n They are the first and only brother–sister tandem in tennis history who have both achieved No. 1 rankings.\n\n On court, Safin was famous for his emotional outbursts and sometimes fiery temper.",
+    "2004 Canada Masters – Doubles\nThe 2004 Canada Masters – Doubles was the men's singles event of the one hundred and fifteenth edition of the Canada Masters; a WTA Tier I tournament and the most prestigious men's tennis tournament held in Canada.\n\n Mahesh Bhupathi and Max Mirnyi were the defending champions.\n\n They were both present but did not compete together.\n\n Mirnyi partnered with Jonas Björkman, but Bhupathi and partner Leander Paes defeated them 6–4, 6–2, in the final.",
+    "Jürgen Melzer\nJürgen Melzer (born 22 May 1981 in Vienna) is an Austrian tennis player.\n\n He reached a career-high singles ranking of world No. 8 in April 2011, and a doubles ranking of world No. 6 in September 2010.\n\n He is a left-handed tennis player, but is right-handed in everyday life.\n\n He has a younger brother, Gerald Melzer, with whom he has played doubles in several tournaments."
+   ]
+  },
+  {
+   "id": "c567c37c3e6c1013",
+   "gold": [
+    {
+     "sentence": "Cantarella was a poison allegedly used by the Borgias during the papacy of Pope Alexander VI.",
+     "facts": {
+      "0.0": "Cantarella was a poison",
+      "0.1": "Cantarella was allegedly used by the Borgias",
+      "0.2": "The alleged use of Cantarella by the Borgias occurred during the papacy of Pope Alexander VI"
+     }
+    },
+    {
+     "sentence": " The use of this poison is not well documented in any of the papal records and it was most likely conceived after 1503 as part of Pope Julius II's effort to remove his name from the records.",
+     "facts": {
+      "1.0": "The use of Cantarella is not well documented in any of the papal records",
+      "1.1": "Cantarella was most likely conceived after 1503",
+      "1.2": "Cantarella was most likely conceived as part of Pope Julius II's effort to remove his name from the records"
+     }
+    },
+    {
+     "sentence": "Damnatio memoriae is a modern Latin phrase literally meaning \"condemnation of memory\", meaning that a person must not be remembered.",
+     "facts": {
+      "2.0": "Damnatio memoriae is a modern Latin phrase",
+      "2.1": "Damnatio memoriae literally means condemnation of memory",
+      "2.2": "Damnatio memoriae means that a person must not be remembered"
+     }
+    }
+   ],
+   "items": [
+    "Sicut Dudum\nSicut Dudum (English: \"Just As Long Ago\" ) is a papal bull promulgated by Pope Eugene IV in Florence on January 13, 1435, which forbade the enslavement of local natives in the Canary Islands who had converted or were converting to Christianity.\n\n \"Sicut Dudum\" was meant to reinforce \"Creator Omnium\", issued the previous year, condemning Portuguese slave raids in the Canary Islands.\n\n Over forty years after \"Creator Omnium\" and \"Sicut Dudum, Pope Sixtus IV found it necessary repeat the prohibition in his papal bull \"Regimini Gregis\" which threatened the excommunication of all captains or pirates who enslaved Christians.",
+    "Giovanni Borgia (Infans Romanus)\nGiovanni Borgia (March 1498 – 1548), known as the Infans Romanus (\"the Roman child\"), was born into the House of Borgia in secret and is of unclear parentage.\n\n Speculations of the child's parentage involve either Lucrezia Borgia with her alleged lover, Perotto Calderon or Cesare Borgia, or Pope Alexander VI as his father.\n\n Cesare Borgia's biographer Rafael Sabatini says that the truth is fairly clear: Alexander fathered the child with an unknown Roman woman.",
+    "Damnatio memoriae\nDamnatio memoriae is a modern Latin phrase literally meaning \"condemnation of memory\", meaning that a person must not be remembered.",
+    "Pedro Luis de Borja Lanzol de Romaní\nPedro Luis de Borja Lanzol de Romaní, O.S.Io.Hieros.\n\n (1472–1511) was a Roman Catholic cardinal and cardinal-nephew and papal military leader.\n\n He received a wide variety of sinecures during the papacy of his great-uncle, Pope Alexander VI, but was exiled to Naples on the election of Borja rival Pope Julius II.\n\n Borja also fought with the Knights Hospitaller in Jerusalem and Rhodes.",
+    "Papal conclave, September 1503\nThe papal conclave of September 1503 elected Pope Pius III to succeed Pope Alexander VI.\n\n Due to the Italian Wars, the College of Cardinals was surrounded by three potentially hostile armies, loyal to Louis XII of France, Ferdinand II of Aragon, and Cesare Borgia (the cardinal-nephew of Alexander VI).",
+    "Dum Diversas\nDum Diversas (English: \"Until different\") is a papal bull issued on 18 June 1452 by Pope Nicholas V.\n\n It authorized Afonso V of Portugal to conquer Saracens and pagans and consign them to \"perpetual servitude\".\n\n Pope Calixtus III reiterated the bull in 1456 with \"Inter Caetera\" (not to be confused with Alexander VI's), renewed by Pope Sixtus IV in 1481 and Pope Leo X in 1514 with \"Precelse denotionis\".\n\n The concept of the consignment of exclusive spheres of influence to certain nation states was extended to the Americas in 1493 by Pope Alexander VI with \"Inter caetera\".",
+    "Portrait of Pope Julius II\nPortrait of Pope Julius II is an oil painting of 1511–12 by the Italian High Renaissance painter Raphael.\n\n The portrait of Pope Julius II was unusual for its time and would carry a long influence on papal portraiture.\n\n From early in its life, it was specially hung at the pillars of the church of Santa Maria del Popolo, on the main route from the north into Rome, on feast and high holy days.\n\n Giorgio Vasari, writing long after Julius' death, said that \"it was so lifelike and true it frightened everyone who saw it, as if it were the living man himself\".",
+    "Cantarella\nCantarella was a poison allegedly used by the Borgias during the papacy of Pope Alexander VI.\n\n It was probably a variation of arsenic or cantharidin powder (made from blister beetles) .\n\n The use of this poison is not well documented in any of the papal records and it was most likely conceived after 1503 as part of Pope Julius II's effort to remove his name from the records.",
+    "Dictatus papae\nDictatus papae is a compilation of 27 statements of powers arrogated to the Pope that was included in Pope Gregory VII's register under the year 1075.\n\n Some historians argue that it was written (or dictated) by Gregory VII himself; others argue that it has been inserted in the register at a later date, and that it had a different origin.\n\n In 1087 Cardinal Deusdedit published a collection of decretals, dedicated to Pope Victor III, that embodied the law of the Church – Canon law – which he had compiled from many sources, both legitimate and false (see Pseudo-Isidore).\n\n The \"Dictatus papae\" agrees so clearly and closely with this collection that some have argued the \"Dictatus\" must have been based on it; and so must be of a later date of compilation and insertion in the papal register than 1087.",
+    "Pope Julius II\nPope Julius II (Italian: \"Papa Giulio II\" ; Latin: \"Iulius II\" ) (5 December 1443 – 21 February 1513), born Giuliano della Rovere, and nicknamed \"The Fearsome Pope\" and \"The Warrior Pope\", was Pope from 1 November 1503 to his death in 1513.\n\n His papacy was marked by an active foreign policy, ambitious building projects, and patronage of the arts—he commissioned the destruction and rebuilding of St. Peter's Basilica, and Michelangelo's decoration of the ceiling of the Sistine Chapel.\n\n In addition to an active military policy, he personally led troops into battle on at least two occasions, the first to expel Giovanni Bentivoglio from Bologna (17 August 1506–23 March 1507), and the second in an attempt to recover Ferrara for the Papal States (1 September 1510–29 June 1512)."
+   ]
+  },
+  {
+   "id": "c6c9e6f2d96951f0",
+   "gold": [
+    {
+     "sentence": "\"For the sedan variant of the car, see Volvo S40.\"",
+     "facts": {
+      "0.0": "The sedan variant of the car is described under Volvo S40."
+     }
+    },
+    {
+     "sentence": "The Volvo S40 is a compact luxury car marketed and produced by the Swedish manufacturer Volvo Cars from 1995 to 2012 across two generations.",
+     "facts": {
+      "1.0": "The Volvo S40 is a compact luxury car.",
+      "1.1": "The Volvo S40 is marketed by Volvo Cars.",
+      "1.2": "The Volvo S40 is produced by Volvo Cars.",
+      "1.3": "Volvo Cars is a Swedish manufacturer.",
+      "1.4": "The Volvo S40 was marketed and produced from 1995 to 2012.",
+      "1.5": "The Volvo S40 spanned two generations."
+     }
+    }
+   ],
+   "items": [
+    "Volvo 850\nThe Volvo 850 is a compact executive car that was produced by the Swedish manufacturer Volvo Cars from 1991 to 1996.\n\n Designed by Jan Wilsgaard it was available in saloon and estate body styles.\n\n The 850 was the first front-wheel drive vehicle from Volvo to be sold in North America and also the first all-wheel drive Volvo.\n\n The range was replaced for 1997 by the Volvo S70 and Volvo V70.",
+    "Volvo S90\nThe Volvo S90 is an executive sedan manufactured and marketed by Swedish automaker Volvo Cars since 2016.\n\n Its estate variant is called the Volvo V90.",
+    "Volvo S40\nThe Volvo S40 is a compact luxury car marketed and produced by the Swedish manufacturer Volvo Cars from 1995 to 2012 across two generations.",
+    "Volvo S70\nThe Volvo S70 was a compact executive car produced by Volvo Cars from 1996 to 2000.\n\n The S70 was essentially a facelifted 850 saloon.\n\n The S70 was replaced with the Volvo S60.",
+    "Volvo C30\nThe Volvo C30 is a near-luxury compact hatchback, manufactured and marketed by Volvo Cars for model years 2006-2013, available across its single generation as a three-door hatchback.\n\n Powered by inline-four and straight-five engines, the C30 is variant of the Volvo S40/V50/C70 range, sharing the same Ford C1/Volvo P1 platform.\n\n Volvo marketed the C30 as a premium hatchback / sports coupe.",
+    "Volvo 440/460\nThe Volvo 440 and 460 are versions of a small family car produced by the Swedish manufacturer Volvo between 1987 and 1996.\n\n The 440 was introduced in 1987, whilst the 460 followed in 1989.\n\n They were built at the NedCar factory in Born, The Netherlands.\n\n The 440 was a five door front wheel drive hatchback and the 460 a saloon.\n\n They shared many components with the already successful Volvo 480, including floorpan, front and rear suspension, engines, transmission and braking systems.",
+    "Volvo 300 Series\nThe Volvo 300 Series is a rear wheel drive small family car sold as both a hatchback and (later) a conventional saloon from 1976 to 1991.\n\n It was launched in the Netherlands shortly after Volvo acquired a major stake in the passenger car division of DAF in 1973.\n\n The series consisted of the Volvo 340 (previously 343/345) and the later Volvo 360.",
+    "Volvo P80 platform\nThe Volvo P80 platform was a Swedish mid-size unibody automobile platform developed and produced by Volvo Cars.\n\n It was in use from 1991 to 2005.\n\n It is designed for different wheelbases in front-wheel drive configurations and was adapted to all wheel drive.\n\n It debuted with the 1991 Volvo 850 and again in autumn 1996 with the Volvo 850 AWD.\n\n Although heavily modified by TWR, the same basic chassis was used as the underpinnings for the C70.\n\n After the model year 2000 most P80 models were replaced by their P2 successors, with the exception of the C70 convertible which remained in production until 2005.\n\n A total of 1,360,522 cars based on this platform were built.",
+    "Volvo 480\nThe Volvo 480 is a compact car that was produced in Born, Netherlands, by Volvo from 1986 to 1995.\n\n It was the first front-wheel drive car made by the automaker.\n\n The 480 was available in only one body style on a automobile platform related to the Volvo 440/460 five door hatchback and four door sedan models.",
+    "Volvo V50\n\"For the sedan variant of the car, see Volvo S40.\""
+   ]
+  },
+  {
+   "id": "28747af2880726f6",
+   "gold": [
+    {
+     "sentence": "Paul Clyne was the District Attorney of Albany County, New York from January 2001 through December 2004.",
+     "facts": {
+      "0.0": "Paul Clyne was the District Attorney of Albany County, New York.",
+      "0.1": "Paul Clyne held this office from January 2001.",
+      "0.2": "Paul Clyne held this office through December 2004."
+     }
+    },
+    {
+     "sentence": "P. David Soares (born October 26, 1969, Brava, Cape Verde) is the Albany County, N.Y. District Attorney.",
+     "facts": {
+      "1.0": "P. David Soares was born on October 26, 1969.",
+      "1.1": "P. David Soares was born in Brava, Cape Verde.",
+      "1.2": "P. David Soares is the District Attorney of Albany County, New York."
+     }
+    }
+   ],
+   "items": [
+    "Paul Clyne\nPaul Clyne was the District Attorney of Albany County, New York from January 2001 through December 2004.\n\n A graduate of Albany Law School, he spent about 14 years as an assistant district attorney, before he was tapped by local politicians to replace the retiring District Attorney, Sol Greenberg.\n\n He was defeated for re-election by David Soares, first in the Democratic Party primary election in September 2004, and then in the general election in November 2004, in which he ran on an independent line.\n\n After a stint teaching at the New York Prosecutors Institute, he went into private practice as a criminal defense attorney in 2007, with an office in Albany, New York.",
+    "City Cruises\nCity Cruises is a public limited company that operates scheduled public sightseeing cruises on the River Thames in London, serving Westminster, London Eye, Tower and Greenwich piers every day throughout the year.\n\n It operates the services mainly using purpose-built wheelchair-accessible 'RiverLiner' vessels, which have a large open top deck and enclosed lower saloon with panoramic windows and bars, backed up by some ex-Paris single-deck conservatory-style sightseeing boats.\n\n The company also owns a number of other boats with which it provides a variety of private charter and waterage services on the River Thames.\n\n City Cruises owns the London Showboat brand, under which it operates an evening dinner, cabaret and dance cruise from Westminster Pier throughout the year, and also owns and operates the Restaurant Ship Hispaniola, which is permanently moored alongside Victoria Embankment close to Embankment Underground station in central London.",
+    "Paul Soniat\nPaul Soniat is the Director of the New Orleans City Park Botanical Gardens.\n\n He was born at the old Touro Hospital in New Orleans.\n\n His family has been in New Orleans since 1727 and he grew up and later lived on the street bearing his family name.\n\n Paul is a self-taught piano player, and has released two CDs, absorbing the sights, sounds, and flavor of New Orleans.\n\n His first CD, titled \"Born in New Orleans\", was released in April 2005.\n\n His second CD was released after Hurricane Katrina hit the Gulf coast and the New Orleans' levees failed.\n\n This second CD is appropriately titled \"Below the Water Line\".",
+    "Skip Bolen\nSkip Bolen is a Southern photographer of musicians, architecture, lifestyle and the culture of New Orleans.\n\n Born in Lafayette, Louisiana, he moved to New Orleans where he began his publishing career as a designer and art director.\n\n After moving to New York City, he began working at \"House & Garden,\" renamed \"HG,\" as Senior Designer in January 1988 with Anna Wintour and Alexander Liberman at Condé Nast Publications.\n\n Spending evenings in jazz clubs, he began photographing jazz musicians in New York City and often when he regularly returned to New Orleans.\n\n After three years at Condé Nast Publications in New York City, he returned to New Orleans to pursue his jazz photography full-time.\n\n In 1998, he moved to Los Angeles where he became art director of House of Blues for seven years while photographing at night and weekends.\n\n He continued photographing jazz musicians and had his first major solo exhibition at the Jazz Bakery in Los Angeles on August 9, 2002.\n\n On July 4, 2006, he returned to New Orleans to pursue photography full-time documenting the recovery and rebuilding of New Orleans since Hurricane Katrina, documenting the jazz scene, night-time photography and other photographic projects.",
+    "Kinetic Records\nKinetic Records was a New York City-based record label founded by Steve Lau (founding member of Sire Records act the Ocean Blue), that launched the careers of artists and DJs such as Paul Oakenfold, BT, Ray Munns, Deepsky, Kosheen, Tilt, Timo Maas, Grace, Sandra Collins, Billy Thermal, Binary Finary, and Shpongle.\n\n Other successful artists on the label included Ash, Sasha and John Digweed, South, Faithless, DJ DAN, LTJ Bukem, Dario G, Luomo, Infected Mushroom, Max Graham, Dave Ralph Music Instructor, and Hybrid.\n\n It was also well known for its Tranceport series, of which Paul Oakenfold's first installment is considered to be the breakthrough record for the trance genre with the highest sales of any mix compilation.\n\n The release of Sasha's Airdrawndagger and Sasha and Digweed's mix compilation \"Communicate\" were also big releases for the label.\n\n Kinetic was the exclusive distributor of the Perfecto label in the US as well as the Another Late Night compilation series, which featured Howie B., Fila Brazillia, and Rae and Christian.",
+    "Clinton Walker\nClinton Walker (born 1957) is an Australian writer, best known for his works on popular music but with a broader interest in social and cultural history and theory.\n\n Sydney's \"Sun-Herald\" has called him \"our best chronicler of Australian grass-roots culture.\"\n\n He has always been ahead of the curve.\n\n As \"Rhythms\" magazine said in 2015, \"Like many of Walker’s projects, \"Buried Country\" was at least a decade ahead of its time,\" and as such he is remarkable as a critic who has exerted a pro-active impact on Australian music and its development; groundbreaking books like \"Inner City Sound\" (1981) and \"Buried Country\" (2000) especially have informed and inspired successive generations of musicians.\n\n Similarly, while he found best-selling success as Bon Scott's biographer, Walker's non-music books like \"Football Life\" (1998) and \"Golden Miles\" (2005) have innovatively offered an appreciation of subjects hitherto hardly deemed worthy of serious consideration.",
+    "Doug Clifford\nDouglas \"Cosmo\" Clifford (born April 24, 1945 in Palo Alto, California) is an American drummer, best known as a founding member of Creedence Clearwater Revival.\n\n After the group dissolved in the early 1970s, Clifford released a solo album and later joined CCR bassist Stu Cook in the Don Harrison Band.\n\n In 1995, Clifford and Cook formed the band Creedence Clearwater Revisited, performing live versions of Creedence Clearwater Revival songs.",
+    "Richard Pleasance\nRichard Arnold Pleasance is an Australian rock musician and producer.\n\n He was a founding member of Boom Crash Opera on guitar, bass guitar, vocals and as a songwriter in 1985; they released three albums before Pleasance left in 1992.\n\n Their hit Australian Recording Industry Association (ARIA) singles, \"Great Wall\" (No. 5, 1986) and \"Onion Skin\" (No. 11, 1989) were co-written by Pleasance, who also co-produced their second album, \"These Here Are Crazy Times\" (No. 10, 1989).\n\n His debut solo release, \"Galleon\" received four nominations at the ARIA Music Awards for 1992.\n\n Pleasance composed the theme music for Australian television series, \"SeaChange\" (1998–2001), for 2006 feature film \"Kenny\" and more recently he composed the theme music for the prison drama series \"Wentworth\".\n\n Pleasance is married to Michelle and, as from May 2009, he was living in Hepburn Springs, Victoria where he has a recording studio.",
+    "David Soares\nP. David Soares (born October 26, 1969, Brava, Cape Verde) is the Albany County, N.Y. District Attorney.\n\n He is a Democrat.",
+    "Laurent Manrique\nLaurent Manrique (born March 30, 1966) is a French restaurateur and Michelin-starred chef.\n\n Currently overseeing projects in New York and San Francisco, Laurent has extensive professional experience in both locales.\n\n He was the Corporate Executive Chef of Aqua, an upscale seafood restaurant in San Francisco, where he earned 2 Michelin stars in 2006, the first time Michelin came to the San Francisco Bay Area, and again in 2007 and 2008.\n\n Upon his departure in 2009, the restaurant lost its Michelin status.\n\n For several years, he has overseen the Cafe de la Presse, located on the corner of Bush Street and Grant Avenue, as well as two wine bars: Blanc et Rouge and Rouge and Blanc.\n\n In New York, he recently opened Millesime, a seafood brasserie in the Carlton Hotel."
+   ]
+  },
+  {
+   "id": "10971cd6e547db35",
+   "gold": [
+    {
+     "sentence": "Darby O'Gill and the Little People is a 1959 Walt Disney Productions feature film starring Albert Sharpe, Janet Munro, Sean Connery and Jimmy O'Dea, in a tale about a wily Irishman and his battle of wits with leprechauns.",
+     "facts": {
+      "0.0": "Darby O'Gill and the Little People is a feature film.",
+      "0.1": "Darby O'Gill and the Little People was made by Walt Disney Productions.",
+      "0.2": "Darby O'Gill and the Little People was released in 1959.",
+      "0.3": "Darby O'Gill and the Little People stars Albert Sharpe.",
+      "0.4": "Darby O'Gill and the Little People stars Janet Munro.",
+      "0.5": "Darby O'Gill and the Little People stars Sean Connery.",
+      "0.6": "Darby O'Gill and the Little People stars Jimmy O'Dea.",
+      "0.7": "Darby O'Gill and the Little People tells a tale about a wily Irishman.",
+      "0.8": "The Irishman in Darby O'Gill and the Little People has a battle of wits with leprechauns."
+     }
+    },
+    {
+     "sentence": " Produced by Walt Disney Pictures, Aamir Khan Productions and UTV Motion Pictures, it stars Aamir Khan as the father.",
+     "facts": {
+      "1.0": "The film named in this sentence was produced by Walt Disney Pictures.",
+      "1.1": "The film named in this sentence was produced by Aamir Khan Productions.",
+      "1.2": "The film named in this sentence was produced by UTV Motion Pictures.",
+      "1.3": "Aamir Khan stars as the father in the film named in this sentence."
+     }
+    }
+   ],
+   "items": [
+    "Dangal (film)\nDangal (English: \"Wrestling competition\" ) is a 2016 Indian Hindi-language biographical sports drama film loosely based on the story of Mahavir Singh Phogat, an amateur wrestler, who trains his daughters Geeta Phogat and Babita Kumari to be world-class wrestlers.\n\n It was directed by Nitesh Tiwari.\n\n Produced by Walt Disney Pictures, Aamir Khan Productions and UTV Motion Pictures, it stars Aamir Khan as the father.\n\n Both daughters go on to win medals at the 2010 Commonwealth Games.\n\n Babita won a silver medal at the Games, in the 51 kg class and gold at the 2014 Glasgow Games in the 55 kg class.\n\n In 2012, Geeta became the first Indian female wrestler to qualify for the Olympics.\n\n Mahavir's efforts inspired dozens of Indian women to take to wrestling.\n\n Fatima Sana Shaikh and Sanya Malhotra play the older selves of the sisters while Sakshi Tanwar plays their mother and Aparshakti Khurana, their cousin.",
+    "List of Walt Disney Pictures films\nThis is a list of films released theatrically under the Walt Disney Pictures banner (known as that since 1983, with \"Never Cry Wolf\" as its first release) and films released before that under the former name of the parent company, Walt Disney Productions (1929–1983).\n\n Most films listed here were distributed in the United States by the company's distribution division, Walt Disney Studios Motion Pictures (formerly known as Buena Vista Distribution Company [1953–1987] and Buena Vista Pictures Distribution [1987–2007]).\n\n The Disney features produced before \"Peter Pan\" (1953) were originally distributed by RKO Radio Pictures, and are now distributed by Walt Disney Studios Motion Pictures.",
+    "Frankie Darro\nFrankie Darro (born Frank Johnson, Jr.\n\n December 22, 1917 – December 25, 1976) was an American actor and later in his career a stuntman.\n\n He began his career as a child actor in silent films, progressed to lead roles and co-starring roles in adventure, western, dramatic, and comedy films, and later became a character actor and voice-over artist.\n\n He is known for his role as Lampwick, the unlucky boy turned into a donkey in Walt Disney's 2nd animated feature, \"Pinocchio\", which was originally released in February 1940.",
+    "Toy Story\nToy Story is a 1995 American computer-animated buddy comedy adventure film produced by Pixar Animation Studios for Walt Disney Pictures.\n\n The directorial debut of John Lasseter, \"Toy Story\" was the first feature-length computer-animated film and the first feature film produced by Pixar.\n\n Taking place in a world where anthropomorphic toys pretend to be lifeless whenever humans are present, the film's plot focuses on the relationship between Woody, an old-fashioned pullstring cowboy doll (voiced by Tom Hanks), and Buzz Lightyear, an astronaut action figure (voiced by Tim Allen), as they evolve from rivals competing for the affections of Andy, their owner, to friends who work together to be reunited with Andy as his family prepares to move to a new home.\n\n The screenplay was written by Joss Whedon, Andrew Stanton, Joel Cohen and Alec Sokolow, based on a story by Lasseter, Pete Docter, Stanton and Joe Ranft.\n\n The film features music by Randy Newman, and was executive-produced by Steve Jobs and Edwin Catmull.",
+    "Walt Disney's Treasury of Classic Tales\nWalt Disney's Treasury of Classic Tales is an American Sunday comic strip, which ran in newspapers from 13 July 1952 until 15 February 1987.\n\n Each story adapted a different Disney film, such as Darby O'Gill and the Little People, Peter Pan, or Davy Crockett.\n\n It was run in relatively few papers with 58 in 1957 and 55 in 1966 and was principally a vehicle for promoting new and re-released Disney films.",
+    "Pinocchio (1940 film)\nPinocchio is a 1940 American animated musical fantasy film produced by Walt Disney Productions and based on the Italian children's novel \"The Adventures of Pinocchio\" by Carlo Collodi.\n\n It was the second animated feature film produced by Disney, made after the success of \"Snow White and the Seven Dwarfs\" (1937).",
+    "Darby O'Gill and the Little People\nDarby O'Gill and the Little People is a 1959 Walt Disney Productions feature film starring Albert Sharpe, Janet Munro, Sean Connery and Jimmy O'Dea, in a tale about a wily Irishman and his battle of wits with leprechauns.\n\n The film was directed by Robert Stevenson and its screenplay written by Lawrence Edward Watkin after the books of Herminie Templeton Kavanagh.",
+    "Walt Disney Studios Motion Pictures\nWalt Disney Studios Motion Pictures (formerly Buena Vista Pictures Distribution and Buena Vista Film Distribution Company) is an American film distributor owned by The Walt Disney Company.\n\n Established in 1953 as Buena Vista Film Distribution Company, the company handles theatrical distribution, marketing and promotion for films produced and released by the Walt Disney Studios, including Walt Disney Pictures, Walt Disney Animation Studios, Pixar Animation Studios, DisneyToon Studios, Marvel Studios, Lucasfilm, Disneynature, and Touchstone Pictures.\n\n The division took on its current name in late 2007, which before that had been Buena Vista Pictures Distribution since 1987.",
+    "Disney Renaissance\nIn the history of The Walt Disney Company, the Disney Renaissance refers to the era from 1989 to 1999 during which Walt Disney Feature Animation (renamed Walt Disney Animation Studios in 2006) experienced a creative resurgence in producing successful animated films based on well-known stories, which restored public and critical interest in The Walt Disney Company as a whole.\n\n During this era, the studio produced and released ten animated films: \"The Little Mermaid\" (1989), \"The Rescuers Down Under\" (1990), \"Beauty and the Beast\" (1991), \"Aladdin\" (1992), \"The Lion King\" (1994), \"Pocahontas\" (1995), \"The Hunchback of Notre Dame\" (1996), \"Hercules\" (1997), \"Mulan\" (1998) and \"Tarzan\" (1999).",
+    "Walt Disney Pictures\nWalt Disney Pictures, Inc. is an American film production company and a subsidiary of Walt Disney Studios, owned by The Walt Disney Company.\n\n The division is based at the Walt Disney Studios in Burbank, California, and is the main producer of live-action feature films within the Walt Disney Studios unit.\n\n It took on its current name in 1983.\n\n Today, in conjunction with the other units of Walt Disney Studios, Walt Disney Pictures is classified as one of Hollywood's \"Big Six\" film studios.\n\n Films produced by Walt Disney Animation Studios and Pixar Animation Studios are also released under this brand."
+   ]
+  },
+  {
+   "id": "76194aa7427ca59f",
+   "gold": [
+    {
+     "sentence": "Edward Sharpe and the Magnetic Zeros is an American folk rock band formed in Los Angeles, California in 2007.",
+     "facts": {
+      "0.0": "Edward Sharpe and the Magnetic Zeros is an American folk rock band.",
+      "0.1": "Edward Sharpe and the Magnetic Zeros was formed in Los Angeles, California.",
+      "0.2": "Edward Sharpe and the Magnetic Zeros was formed in 2007."
+     }
+    },
+    {
+     "sentence": "Louis XIV is an American rock band from San Diego, California.",
+     "facts": {
+      "1.0": "Louis XIV is an American rock band.",
+      "1.1": "Louis XIV is from San Diego, California."
+     }
+    },
+    {
+     "sentence": " The band has released four EPs between 2003 and 2007, and three albums between 2003 and 2008, the latter two of which were distributed by Atlantic Records.",
+     "facts": {
+      "2.0": "The band released four EPs between 2003 and 2007.",
+      "2.1": "The band released three albums between 2003 and 2008.",
+      "2.2": "Two of the band's three albums, the latter two, were distributed by Atlantic Records."
+     }
+    }
+   ],
+   "items": [
+    "Edward Sharpe and the Magnetic Zeros\nEdward Sharpe and the Magnetic Zeros is an American folk rock band formed in Los Angeles, California in 2007.\n\n The group is led by lead singer Alex Ebert.\n\n The band's name is based on a story Ebert wrote in his youth, about a messianic figure named Edward Sharpe.\n\n Drawing from roots rock, folk, gospel, and psychedelic music, the band's image and sound evoke the hippie movement of the 1960s and 1970s.\n\n The group's first show was played July 18, 2007 at The Troubadour in West Hollywood, California.\n\n Their first studio album, \"Up from Below\", was released on July 7, 2009 on Community Records and featured the popular single \"Home\".\n\n The group released their second full-length album, \"Here\", on May 29, 2012, and third album, \"Edward Sharpe and the Magnetic Zeros\", on July 23, 2013.\n\n Their fourth studio album, \"PersonA\", was released in April 2016.",
+    "Alexander (Alex Ebert album)\nAlexander is the first solo album by American musician Alex Ebert, lead singer of Edward Sharpe and the Magnetic Zeros and Ima Robot.\n\n It was released on March 1, 2011 under the Community Records label.\n\n The song \"Truth\" was featured in the season 4 premiere of AMC's \"Breaking Bad\" titled \"Box Cutter\".",
+    "Edward Sharpe and the Magnetic Zeros (album)\nEdward Sharpe and the Magnetic Zeros is the third album by Edward Sharpe and the Magnetic Zeros.\n\n It was released on July 23, 2013 in North America and was released on July 29, 2013 around the world through Vagrant Records, Rough Trade Records and Communion Records.\n\n Frontman Alex Ebert stated that \"These songs mean everything to me - It's the rawest, most liberated, most rambunctious stuff we've done.\"",
+    "PersonA\nPersonA (pronounced \"Persona\") is the fourth studio album by the band Edward Sharpe and the Magnetic Zeros.\n\n It was released on April 15, 2016.",
+    "Orpheo McCord\nOrpheo McCord (born 1979) is an American drummer and percussionist.\n\n He is an original member of Edward Sharpe and the Magnetic Zeros, and a former member of The Fall, Fool's Gold and Cass McCombs.",
+    "The Halo Method\nThe Halo Method Is an American rock supergroup, formed in 2012 in Hollywood, California.\n\n It consisted of guitarist Ben Moody (We Are the Fallen, ex-Evanescence), drummer Miles McPherson, vocalist Lukas Rossi (ex-Rock Star Supernova, ex-Daylight Division) and bassist Josh Newell (ex-In This Moment).",
+    "Let Rock Rule Tour\nThe Let Rock Rule Tour was a concert tour by American hard rock band Aerosmith that featured Slash (with Myles Kennedy and the Conspirators) as the opening act.\n\n The tour sent both acts to various locations across North America from July to September 2014 and included two festival concerts and eighteen regular concerts.\n\n In addition, Aerosmith performed a private show in the middle of the tour.\n\n Slash with Myles Kennedy & the Conspirators did not perform at Rock Fest in Wisconsin or at the private show, but performed at all of the other concerts.",
+    "Sanctuary (band)\nSanctuary is an American heavy metal band founded in Seattle in 1985.\n\n They split up in 1992, but reformed 18 years later.\n\n The band consists of Warrel Dane (vocals), Lenny Rutledge (guitar), Nick Cordle (guitar), George Hernandez (bass), and Dave Budbill (drums).\n\n To date, they have released four studio albums and one live EP.",
+    "Louis XIV (band)\nLouis XIV is an American rock band from San Diego, California.\n\n The band has released four EPs between 2003 and 2007, and three albums between 2003 and 2008, the latter two of which were distributed by Atlantic Records.\n\n The band broke up in 2009, but in 2013, in an interview with The Reno Dispatch, Jason Hill confirmed that the band had decided to reunite.",
+    "American Hi-Fi\nAmerican Hi-Fi is an American rock band formed in Boston in 1998.\n\n The band consists of lead vocalist/rhythm guitarist Stacy Jones, lead guitarist Jamie Arentzen, bassist/backing vocalist Drew Parsons, and drummer Brian Nolan.\n\n Prior to the group's formation, Stacy Jones was well known for being a drummer in the successful alternative rock bands Veruca Salt and Letters to Cleo.\n\n American Hi-Fi has a close relationship with Miley Cyrus, whose band shares two members with American Hi-Fi.\n\n The group has a mixed musical style that includes influences from pop punk, alternative rock, and power pop."
+   ]
+  },
+  {
+   "id": "e0f6641a521f8f3f",
+   "gold": [
+    {
+     "sentence": "Enrico Cocozza (6 November 1921 – 27 December 1997), was a Scottish filmmaker who won many film awards during the 1940s and 1950s.",
+     "facts": {
+      "0.0": "Enrico Cocozza was born on 6 November 1921.",
+      "0.1": "Enrico Cocozza died on 27 December 1997.",
+      "0.2": "Enrico Cocozza was a Scottish filmmaker.",
+      "0.3": "Enrico Cocozza won many film awards during the 1940s and 1950s."
+     }
+    },
+    {
+     "sentence": "\", which was nominated for the Academy Award for Best Foreign Language Film.",
+     "facts": {
+      "1.0": "A film was nominated for the Academy Award for Best Foreign Language Film.",
+      "1.1": "The film whose title is quoted in this fragment was nominated for the Academy Award for Best Foreign Language Film."
+     }
+    }
+   ],
+   "items": [
+    "A broad reference collection profiles international actors, opera singers, filmmakers, musicians, broadcasters, chefs, comedians, and other media figures, alongside films, TV programs, awards, and radio formats. Highlights include Ava DuVernay’s Sundance win and Oscar-nominated *Selma* and *13th*; Hou Hsiao-hsien’s major Cannes and Venice honors; acclaimed Israeli cinema; Mira Nair’s award-winning films; and competition-honored opera singers. It",
+    "Ava DuVernay (born 1972) became the first African-American woman to win Sundance’s directing prize for Middle of Nowhere (2012). Selma (2014) brought historic Golden Globe and Best Picture Oscar nominations; 13th (2016), examining race and mass incarceration, earned Oscar documentary nominations for DuVernay, editor-producer Spencer Averick and producer Howard Barish. The entries also cover filmmakers Kathryn Bigelow and Steve McQueen, The",
+    "Illusions &amp; Mirrors\nIllusions & Mirrors is a 2013 short film directed by Iranian-born American artist and filmmaker Shirin Neshat.\n\n The film, shot in black-and-white, stars Tarek Aylouch, Michael Markiewicz, and the Israeli-born American actress Natalie Portman.\n\n The film was commissioned by Dior, for which Portman is a spokesmodel, for the Miss Dior Expo at the Grand Palais, Paris.\n\n Shirin Neshat said that the film is a tribute to the black-and-white silent films made by such surrealist filmmakers as Man Ray, Jean Cocteau, Luis Buñuel, and Maya Deren.",
+    "Salaam Bombay!\nSalaam Bombay!\n\n is a 1988 Hindi film directed by Mira Nair, and screenwritten by her longtime creative collaborator, Sooni Taraporevala.\n\n The film chronicles the day-to-day life of children living on the streets of Bombay, India's biggest city.\n\n It won the National Film Award for Best Feature Film in Hindi, the National Board of Review Award for Top Foreign Film, the Golden Camera and Audience Awards at the Cannes Film Festival, and three awards at the Montréal World Film Festival.\n\n The film was India's second film submission to be nominated for the Academy Award for Best Foreign Language Film.\n\n The film was among the list of \"The Best 1,000 Movies Ever Made\" by \"The New York Times\".",
+    "Enrico Cocozza\nEnrico Cocozza (6 November 1921 – 27 December 1997), was a Scottish filmmaker who won many film awards during the 1940s and 1950s.\n\n His often surreal films were mainly filmed in and around the town of Wishaw in Scotland, where his family owned the popular Belhaven Cafe.\n\n These include \"Chick's Day\" (1950), a prize winner at the 1951 Scottish Amateur Film Festival, \"The Living Ghost\" (1957), and \"Glasgow's Docklands\" (1959).\n\n Illness later forced him to give up making films and he spent most of his working life teaching at the University of Strathclyde in Glasgow.\n\n In 2001 he was the subject of the Channel 4 documentary \"Artery: the Story of Enrico Cocozza\".",
+    "Mira Nair\nMira Nair (born 15 October 1957) is an Indian American filmmaker based in New York City.\n\n Her production company, Mirabai Films, specializes in films for international audiences on Indian society, whether in the economic, social or cultural spheres.\n\n Among her best known films are \"Mississippi Masala\", \"The Namesake\", the Golden Lion-winning \"Monsoon Wedding\" and \"Salaam Bombay!\n\n\", which was nominated for the Academy Award for Best Foreign Language Film.",
+    "The entries profile filmmakers Pamela B. Green, Ava DuVernay, Howard Barish, Dana Brown, Matthew O’Neill, and the Maya Deren Award; actors Emayatzy Corinealdi and Issa Rae; musicians Emel Mathlouthi, Siti binti Saad, and Angélique Kidjo; fitness figures Ingrid Romero and Anais Zanotti; and YouTubers Lilly Singh, Wayne Goss, and Wengie. They",
+    "Takeshi Fukunaga\nTakeshi Fukunaga is a Japanese filmmaker based in New York.\n\n His first feature film, \"Out of My Hand\" (2015) premiered in the Panorama section at the 65th Berlin International Film Festival and won the Top Prize at the 2015 Los Angeles Film Festival.\n\n The film was later released worldwide through Ava DuVernay’s distribution company, ARRAY.\n\n Takeshi was nominated for the John Cassavetes Award at the 2016 Independent Spirit Awards.\n\n In 2017, he was selected for The Residence by Cannes Film Festival's Cinéfondation to develop his second feature film.",
+    "Loveleen Tandan\nLoveleen Tandan is an Indian film director and casting director.\n\n She is the \"Co-Director: India\" of the four time Golden Globe, seven time BAFTA Award and eight Academy Award winning (including best picture) \"Slumdog Millionaire\" (2008), for which she shared a New York Film Critics Online Award, Rotterdam International Film Festival Award and Amanda Awards, Norway, of \"Best Director\" with Danny Boyle.\n\n She has also been the Casting Director for several other films, including the Golden Lion winning and Golden Globe nominated \"Monsoon Wedding\" (2001) and the BAFTA Award nominated \"Brick Lane\" (2007).\n\n She has been a Casting Consultant for the Gotham Award and Independent Spirit Award nominated film \"The Namesake\" (2007).",
+    "The entries cover filmmakers, artists and films. Takeshi Fukunaga’s debut, *Out of My Hand* (2015), won the LA Film Festival’s top prize and earned an Independent Spirit nomination. Hou Hsiao-hsien, a Taiwan New Wave auteur, won Venice’s Golden Lion and Cannes’ Best Director award; his films include *The Assassin*, *Dust in the Wind* and *The Time to Live and the Time to Die*. Cinematographer Mark Lee"
+   ]
+  },
+  {
+   "id": "91f0b877158f1922",
+   "gold": [
+    {
+     "sentence": "Pinocchio is a 1940 American animated musical fantasy film produced by Walt Disney Productions and based on the Italian children's novel \"The Adventures of Pinocchio\" by Carlo Collodi.",
+     "facts": {
+      "0.0": "Pinocchio is a 1940 American film.",
+      "0.1": "Pinocchio is an animated musical fantasy film.",
+      "0.2": "Pinocchio was produced by Walt Disney Productions.",
+      "0.3": "Pinocchio is based on the Italian children's novel 'The Adventures of Pinocchio'.",
+      "0.4": "The novel 'The Adventures of Pinocchio' was written by Carlo Collodi."
+     }
+    },
+    {
+     "sentence": " It was the second animated feature film produced by Disney, made after the success of \"Snow White and the Seven Dwarfs\" (1937).",
+     "facts": {
+      "1.0": "Pinocchio was the second animated feature film produced by Disney.",
+      "1.1": "Pinocchio was made after the success of 'Snow White and the Seven Dwarfs'.",
+      "1.2": "Snow White and the Seven Dwarfs is from 1937."
+     }
+    },
+    {
+     "sentence": "Home on the Range is a 2004 American animated musical western comedy film produced by Walt Disney Feature Animation and released by Walt Disney Pictures.",
+     "facts": {
+      "2.0": "Home on the Range is a 2004 American film.",
+      "2.1": "Home on the Range is an animated musical western comedy film.",
+      "2.2": "Home on the Range was produced by Walt Disney Feature Animation.",
+      "2.3": "Home on the Range was released by Walt Disney Pictures."
+     }
+    }
+   ],
+   "items": [
+    "Walt Disney Pictures, founded under that name in 1983, produces live-action films; Walt Disney Studios Motion Pictures distributes Disney studio releases, succeeding Buena Vista (1953–2007). Disney highlights include *Bambi* (1942), *Pinocchio* (1940), and the 1989–99 Renaissance, spanning ten animated films from *The Little Mermaid* to *Tarzan*. Buddy Baker scored several Disney films. Other entries cover Mickey and Donald, the",
+    "Home on the Range (2004 film)\nHome on the Range is a 2004 American animated musical western comedy film produced by Walt Disney Feature Animation and released by Walt Disney Pictures.\n\n The 45th Disney animated feature film, it was the last 2D animated Disney film released until \"The Princess and the Frog\" in 2009.\n\n Named after the popular country song of the same name, \"Home on the Range\" features the voices of Roseanne Barr, Judi Dench, Jennifer Tilly, Cuba Gooding Jr., Randy Quaid, and Steve Buscemi.\n\n The film is set in the Old West, and centers on a mismatched trio of dairy cows—brash, adventurous Maggie; prim, proper Mrs. Caloway; and ditzy, happy-go-lucky Grace.\n\n The three cows must capture an infamous cattle rustler named Alameda Slim for his bounty in order to save their idyllic farm from foreclosure.\n\n Aiding them in their quest is Lucky Jack, a feisty, peg-legged rabbit, but a selfish horse named Buck, eagerly working in the service of Rico, a famous bounty hunter, seeks the glory for himself.",
+    "Get a Horse!\nGet a Horse!\n\n is a 2013 American 3D animated slapstick comedy short film, produced by Walt Disney Animation Studios.\n\n Combining black-and-white hand-drawn animation and color CGI animation, the short features the characters of the late 1920s \"Mickey Mouse\" cartoons, and features archival recordings of Walt Disney in his posthumous role as Mickey Mouse.\n\n It is the first original Mickey Mouse theatrical animated short since \"Runaway Brain\" (1995), and the first appearance of Oswald the Lucky Rabbit in a Disney animated production in 85 years.",
+    "Pinocchio (1957 TV-musical)\nPinocchio, a 1957 television production of \"Pinocchio\", is a live (and live-action) musical version starring Mickey Rooney in the title role of the puppet who wishes to become a real boy.\n\n Based on the novel by Carlo Collodi which also inspired the classic Walt Disney animated film, this version featured a now-forgotten new score by Alec Wilder and William Engvick.\n\n It was telecast once on NBC as a television special, and, as far as is known, never rebroadcast by NBC, or even restaged with a different cast as was Rodgers and Hammerstein's \"Cinderella\".\n\n Nor has it ever been issued on VHS or DVD.\n\n Other notable actors who appeared in the special included Walter Slezak (as Geppetto), Fran Allison (as the Blue Fairy), Martyn Green (as the Fox), Jerry Colonna (as a Ringmaster), and Stubby Kaye as a Town Crier, a role he repeated in Wilder and Engvick's 1958 television musical, \"Hansel and Gretel\".\n\n \"Pinocchio\" was directed by noted Broadway choreographer Hanya Holm.",
+    "Off His Rockers\nOff His Rockers is an animated short film produced by Walt Disney Feature Animation and released in 1992.\n\n It was released theatrically accompanying the film \"Honey, I Blew Up the Kid\".\n\n The film started as a side project of director Barry Cook, who, at the time, was working at Walt Disney Feature Animation Florida.\n\n Starting with a core of six people, the project ended up involving most of the Florida studio's staff of 73 (and some in California), all of whom \"donated\" their time to the project beyond their official duties.",
+    "Pinocchio (1940 film)\nPinocchio is a 1940 American animated musical fantasy film produced by Walt Disney Productions and based on the Italian children's novel \"The Adventures of Pinocchio\" by Carlo Collodi.\n\n It was the second animated feature film produced by Disney, made after the success of \"Snow White and the Seven Dwarfs\" (1937).",
+    "Bambi\nBambi is a 1942 American animated film directed by David Hand (supervising a team of sequence directors), produced by Walt Disney and based on the book \"Bambi, a Life in the Woods\" by Austrian author Felix Salten.\n\n The film was released by RKO Radio Pictures on August 13, 1942, and is the fifth Disney animated feature film.",
+    "Return to Never Land\nReturn to Never Land (also known as Peter Pan 2 or Peter Pan In: Return to Never Land) is a 2002 American animated musical fantasy-adventure film produced by Walt Disney Television Animation, and released by Walt Disney Pictures and distributed by Walt Disney Studios Motion Pictures.\n\n The film is a sequel to Walt Disney Feature Animation 1953 film \"Peter Pan\", It is based on J. M. Barrie's novel \"Peter and Wendy\", and had a worldwide gross of $109 million.",
+    "The Rescuers Down Under\nThe Rescuers Down Under is a 1990 American animated comedy-drama adventure film produced by Walt Disney Feature Animation and released by Walt Disney Pictures on November 16, 1990.\n\n The 29th Disney animated feature film, the film is the sequel to the 1977 animated film \"The Rescuers\", which was based on the novels of Margery Sharp.\n\n Set in the Australian Outback, the film centers on Bernard and Bianca traveling to Australia to save a boy named Cody from a villainous poacher in pursuit of an endangered bird of prey.",
+    "Mickey's Christmas Carol\nMickey's Christmas Carol is a 1983 American animated featurette produced by Walt Disney Productions and released by Buena Vista Distribution.\n\n It was directed and produced by Burny Mattinson.\n\n The cartoon is an adaptation of Charles Dickens' \"A Christmas Carol\", starring Scrooge McDuck as Ebenezer Scrooge.\n\n Many other Disney characters, primarily from the Mickey Mouse universe, \"Robin Hood\", and \"The Adventures of Ichabod and Mr. Toad\", were cast throughout the film."
+   ]
+  },
+  {
+   "id": "dff07a23b72b21ed",
+   "gold": [
+    {
+     "sentence": " He played three seasons for the Philadelphia Eagles (1940) and the Pittsburgh Steelers (1941–1942).",
+     "facts": {
+      "0.0": "The player played three seasons for the Philadelphia Eagles.",
+      "0.1": "The player's Philadelphia Eagles seasons are listed as 1940.",
+      "0.2": "The player played for the Pittsburgh Steelers.",
+      "0.3": "The player's Pittsburgh Steelers seasons are listed as 1941-1942."
+     }
+    },
+    {
+     "sentence": " He was drafted by the Philadelphia Eagles in the second round of the 2008 NFL Draft, and played for the Washington Redskins for three seasons after his departure from the Eagles.",
+     "facts": {
+      "1.0": "The player was drafted by the Philadelphia Eagles.",
+      "1.1": "The player was drafted in the second round of the 2008 NFL Draft.",
+      "1.2": "The player played for the Washington Redskins for three seasons.",
+      "1.3": "The player played for the Washington Redskins after leaving the Eagles."
+     }
+    }
+   ],
+   "items": [
+    "Graph query row:\nperson: Don Looney\nrelationship: MEMBER_OF\nteam: Philadelphia Eagles\notherPerson: DeSean Jackson\notherRelationship: MEMBER_OF",
+    "1986 Tampa Bay Buccaneers season\nThe 1986 Tampa Bay Buccaneers season began with the team trying to improve on an 2–14 season.\n\n This was one of the worst seasons in franchise history.\n\n There is some sentiment that the 1986 team was even worse than the winless team of 1976, and the 473 points conceded was not beaten by any NFL team until the 2001 Indianapolis Colts gave up 486.\n\n The Buccaneers selected Bo Jackson with the top pick in the draft, but were unable to convince him to join the team.\n\n Three weeks after the draft, Jackson signed a three-year baseball contract with the Kansas City Royals.\n\n Despite holding four of the first forty selections in the draft, and the presence of a great influx of fresh talent from defunct USFL teams, the Buccaneers were unable to find any impact players in either the draft or free agency.\n\n They entered the season with a roster nearly identical to the previous season's 2–14 team.",
+    "Dallas Texans (NFL)\nThe Dallas Texans played in the National Football League (NFL) for one season, 1952, with a record of 1–11.\n\n The team is considered one of the worst teams in NFL history, both on (lowest franchise winning percentage) and off the field.\n\n The team was based first in Dallas, then Hershey, Pennsylvania, and Akron, Ohio, during its only season.\n\n The Texans were the last NFL team to fold.\n\n Many players on the 1952 roster went to the new Baltimore Colts franchise in 1953.\n\n The American Football League (AFL) had a 1960 charter member named the Dallas Texans (who later became the Kansas City Chiefs), but the AFL Texans have no relationship with the earlier NFL team.",
+    "Brooklyn Dodgers (NFL)\nThe Brooklyn Dodgers were an American football team that played in the National Football League from 1930 to 1943, and in 1944 as the Brooklyn Tigers.\n\n The team played its home games at Ebbets Field of the baseball National League's team, the Brooklyn Dodgers.\n\n In 1945, because of financial difficulties and the increasing scarcity of major league-level players because of the war-time defense requirements at the height of World War II, the team was merged with the Boston Yanks and were known as the Yanks for that season.\n\n This old NFL franchise was not related to the earlier (second incarnation) American Football League II with a franchise that played as the Brooklyn Tigers for the first half of the 1936 season before moving to Rochester, New York and playing as the Rochester Tigers.\n\n Another NFL team that played in the Brooklyn borough was the Brooklyn Lions (which became the Brooklyn Horsemen after merging with a team from an earlier first incarnation AFL of the same name) in 1926.",
+    "Jim O'Brien (American football)\nJim O'Brien (born February 2, 1947) is a former American football placekicker in the National Football League.\n\n He played for the Baltimore Colts from 1970 to 1972 and the Detroit Lions in 1973.\n\n He also played wide receiver, catching the bulk of his career passes during the 1972 season while still performing his kicking duties.\n\n His short career was less than stellar, posting a 55.6 percentage making 60 of 108 field goal attempts.\n\n His shining moment came in the closing moments of Super Bowl V in January 1971, where he kicked a 32-yard field goal with only five seconds remaining in the game to break a tie and give the Colts the victory over the Dallas Cowboys 16–13.\n\n Before kicking the field goal, teammates saw that O'Brien was so nervous, he tried to take some of the artificial turf off the field to figure out the wind, thinking the field was regular grass.\n\n Because of his singular moment kicking the Super Bowl-winning field goal, NFL Films named him the #9 \"One-Hit Wonder\" of all time.",
+    "Wilbert Montgomery\nWilbert Montgomery (born September 16, 1954) is a former American football player in the National Football League for nine years with the Philadelphia Eagles and Detroit Lions.\n\n In the past, Montgomery has been the running backs and tight ends coach for St. Louis Rams (1997–2005), the running backs coach for the Detroit Lions (2006-2007), the running backs coach for the Baltimore Ravens (2008–2013), and the running backs coach for the Cleveland Browns (2014–2015).",
+    "Brooklyn Dodgers (NFL)\nLater co-owner and partner Dan Topping (1912–1974), pulled the Tigers team out of the old NFL in 1946 and placed it in the newly established rival professional league – the All-America Football Conference, which shortly lasted until 1949 until several stronger teams from the AAFC merged with and entered a reorganized NFL in 1950.\n\n It lasted until 1970 with the NFL-AFL (third) merger following the establishment of the first \"Super Bowl\" inter-league national championship game three years before with the old NFL champions playing the victors of the latest rival fourth incarnation of the American Football League IV, formed in 1960 (now the American Football Conference (AFC).",
+    "Don Looney\nJohn Don Looney (September 2, 1916 – April 5, 2015) was a professional American football end in the National Football League.\n\n He was born in Sulphur Springs, Texas.\n\n He played three seasons for the Philadelphia Eagles (1940) and the Pittsburgh Steelers (1941–1942).\n\n He was the first receiver in NFL history to have over 100 yards receiving in each of his first two games, a feat which was not equaled until the 2008 NFL season by another Eagles wide receiver, DeSean Jackson.\n\n At the time of his death, Looney was the second oldest living former NFL player.\n\n He was the father of NFL running back Joe Don Looney, who later died in a one-person motorcycle accident after his NFL career ended.",
+    "Verlon Biggs\nVerlon Marion Biggs (March 16, 1943 – June 7, 1994) was an American football defensive end in the American Football League and National Football League.\n\n He played for the New York Jets (AFL) in Super Bowl III, but felt he didn't receive enough credit for the Jets' playoff win against the Oakland Raiders in the AFL Championship Game that launched them into the Super Bowl.\n\n He played well but sulked until 1970, demanded more money, and wound up signing with Vince Lombardi's Washington Redskins of the NFL.\n\n Always a dominating defensive end, Verlon solidified George Allen's defense (Allen replaced Lombardi upon his death in July 1970) and led the Redskins into Super Bowl VII.\n\n His nickname with the Redskins was \"dirty Biggs\" because of his extremely physical style of play.",
+    "DeSean Jackson\nDeSean William Jackson (born December 1, 1986) is an American football wide receiver for the Tampa Bay Buccaneers of the National Football League (NFL).\n\n He played college football for the University of California, Berkeley, where he was recognized as a consensus All-American.\n\n He was drafted by the Philadelphia Eagles in the second round of the 2008 NFL Draft, and played for the Washington Redskins for three seasons after his departure from the Eagles.\n\n Jackson has been selected to the Pro Bowl three times, and was the first player selected to the Pro Bowl at two different positions in the same year when he was named to the 2010 Pro Bowl as a wide receiver and return specialist."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,870 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=03c4c39edc79b0ca ===
+Gold sentences and facts:
+Sentence 0: Yadava ( Golla )
+  Fact 0.0: The text lists Golla in parentheses after Yadava.
+
+Retrieved items:
+<item 1>
+List of Telugu castes
+Mutrasi Tenugollu Munnurukapu ( Telangana ) Nagavasam ( Nagavamsa ) Neeli ( Nelli ) Pollinativelama ( of Srikakulam & Visakhapatnam Districts ) Poosala Passi
+Rangarez or Bhavasara Kshatriya Sadhuchetty Satani ( Chattadasrivaishnava , Chatadi ) Tammali Turupu Kapu and Gajula Kapu of Srikakulam , Vizianagram &
+Visakhapatnam Districts who are subject to social customs of divorce & remarriages among their women Uppara or Sagara Vanjara ( Vanjari ) Yadava ( Golla ) Pala
+- Ekari Ayyaraka Nagaralu Pondara Lodh , Lodha , Lodhi Kurakula Kasi kapadi Gajula Balija ( who are traditionally associated with selling of Bangles ) Vannia
+Vanniar Vannikula - Kshatriya Sarollu Atirasa ( of Polavaram , Gopalapuram , Koyyalagudem , Buttayagudem ,
+</item 1>
+
+<item 2>
+Andhra Pradesh Legislative Assembly election, 2014
+Kodali Sri Venkateswara Rao YSRCP 192 Kaikalur Kamineni Srinivasa Rao BJP 193 Pedana Kagitha Venkat Rao TDP 194 Machilipatnam Kollu Ravindra 195 Avanigadda
+Mandali Buddha Prasad 196 Pamarru ( SC ) Uppuleti Kalpana YSRCP 197 Penamaluru Bodepudi Prasad TDP 198 Vijayawada West Jallel Khan TDP 199 Vijayawada Central
+Bonda Umamaheswara Rao TDP 200 Vijayawada East Gadde Ramamohan 201 Mylavaram Devineni Uma Maheswara Rao 202 Nandigama ( SC ) Thangirala Sowmya 203 Jaggayyapeta
+Sreeram Rajagopal ( Tataiah ) Guntur 204 Pedakurapadu Sridhar 205 Tadikonda ( SC ) Tenali Sravana Kumar 206 Mangalagiri Aalla Ramakrishna Reddy YSRCP 207
+Ponnuru Dhulipalla Narendra Kumar
+</item 2>
+
+<item 3>
+List of Telugu castes
+Gopalapuram , Koyyalagudem , Buttayagudem , Chagallu Mandals of West Godavari Distt. and Devipattanam , Korukonda and Gokavaram Mandals of East Godavari
+District ) Patra Sikligar Siddula Gudia / Gudiya ( confined to Srikakulam , Vizianagaram and Visakhapatnam Districts only ) Kurmi ( confined to Telangana Region
+and also Krishna District only ) Budubunjala / Bhunjwa / Bhadbhunja ( confined to Hyderabad and Ranga Reddy Districts only ) Lakkamari Kapu ( confined to
+Telangana Region only ) See also Scheduled Castes and Scheduled Tribes List of Scheduled Tribes in India # Andhra Pradesh References Jump up ^ Srinivasulu , K.
+`` Caste , Class and Social Articulation in Andhra Pradesh : Mapping Differential Regional Trajectories '' ( PDF ) . Overseas Development Institute . p. 12 .
+</item 3>
+
+<item 4>
+Andhra Pradesh Legislative Assembly election, 2014
+( SC ) P David raju 222 Darsi Shiddha Raghava Rao TDP 223 Parchur Y SAMBHA SIVA 224 Addanki G Ravi Kumar YSRCP 225 Chirala A Krishnamohan NP 226
+Santhanuthalapadu ( SC ) Adimulapau Suresh YSRCP 227 Ongole Damacharla Janardhana Rao TDP 228 Kandukur Pothula Ramarao YSRCP 229 Kondapi ( SC ) DBV Swamy TDP
+230 Markapuram Janke Venkata Reddy YSRCP 231 Giddalur Muttumula Ashok Reddy 232 Kanigiri Kadiri Babu rao TDP Nellore 233 Kavali PRATHAP KUMAR REDDY YSRCP 234
+Atmakur Mekapati Gautam Reddy 235 Kovur Polamreddy srinivasulu reddy TDP 236 Nellore City P Anil Kumar Yadav YSRCP 237 Nellore Rural K Srihar Reddy 238
+Sarvepalli Kakani
+</item 4>
+
+<item 5>
+List of Telugu castes
+Bahurupi Bandara Budabukkala Rajaka , Chakali , Vannar Dasari ( formerly engaged in Bhikshatana ) Dommara Gangiredlavaru Jangam whose traditional occupation is
+begging Jogi Katipapala Korcha , Koracha Medari or Mahendra Mondivaru Mondibanda Banda Nayi - Brahmin ( Mangali , Mangala , Bhajanthri ) Vamsha Raj Pamula
+Pardhi ( Mirshikari , Nirshikari ) Pambala Peddammavandlu , Devaravandlu , Yellammavandlu , Mutyalammavandlu Veeramushti ( Neetikotala ) , Veerabhadreeya
+Valmiki Boya ( Boya Bedar , Kirataka Nishadi , Yellappi , Yellapu / Yellapondlu , Pedda Boya ) Talayari , Chunduvallu Gudala Kanjara - Bhatta Kinthala Kalinga ,
+Buragana Kalinga , Buragam Kalinga , Pandiri Kalinga ,
+</item 5>
+
+<item 6>
+List of Telugu castes
+Overseas Development Institute . p. 12 . Jump up ^ Vaugier - Chatterjee , Anne ( 2012 ) , `` Two Dominant Castes : The Socio - political System in Andhra
+Pradesh '' , in Jaffrelot , Christophe ; Kumar , Sanjay , Rise of the Plebeians ? : The Changing Face of the Indian Legislative Assemblies , Routledge , p. 280
+, ISBN 978 - 1 - 136 - 51662 - 7 Jump up ^ `` Central List Of Other Backward Classes '' . Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=List_of_Telugu_castes&oldid=825334364 '' Categories : Indian castes Telugu society Social groups of Andhra Pradesh
+Social groups of Telangana Hidden categories : Wikipedia indefinitely semi-protected pages Talk View source Contents About Wikipedia తెలుగు Edit links This page
+was last edited on 12 February 2018 , at 20 : 29 . About Wikipedia
+</item 6>
+
+<item 7>
+Andhra Pradesh Legislative Assembly election, 2014
+V. Mohan Reddy 257 Panyam Gowru Charitha Reddy 258 Nandyal Bhooma Brahma Nanda Reddy TDP 259 Banaganapalle BC Janardhan Reddy 260 Dhone Buggana RajaReddy YSRCP
+261 Pattikonda Kambalapadu Ediga Krishna Murthy TDP 262 Kodumur Mani Gandhi YSRCP 263 Yemmiganur Jayanageswar Reddy TDP 264 Mantralayam Y . Balanagi Reddy YSRCP
+265 Adoni Y . Sai Prasad Reddy 266 Alur Gummanuri Jayaramulu Anantapur 267 Rayadurg K. Srinivasulu TDP 268 Uravakonda Vishweshwar Reddy YSRCP 269 Guntakal
+Jitendra Goud TDP 270 Tadpatri JC Prabhakar Reddy 271 Singanamala Yamini Bala 272 Anantapur Urban V.
+</item 7>
+
+<item 8>
+List of Telugu castes
+List of telugu castes - wikipedia List of telugu castes Jump to : navigation , search Telugu society is nowadays officially classified into a number of groups ,
+some of which align with the concept of caste . Contents ( hide ) 1 Forward Classes 2 Backward Classes 3 See also 4 References Forward Classes Forward castes do
+not qualify for government reservations . Those present in Andhra Pradesh are : Brahmin Kamma Kapu Komati Kshatriya Reddy Velama Some communities within these
+groups are instead classified under other categories , as noted below . Backward Classes Some communities are classified as Other Backward Classes due to social
+, financial , educational , and / or political discrimination . Agnikulakshatriya Palli Vadabalija Bestha Jalari Gangavar Gangaputra Goondla Vanyakulakshtriya
+Vannekapu Vannereddi Pallikapu Pallireddi Nayyala Pattapu Balasanthu , Bahurupi Bandara Budabukkala Rajaka , Chakali ,
+</item 8>
+
+<item 9>
+List of Telugu castes
+Puragiri Kshatriya ) Nessi or Kurni Padmasali ( Sali , Saliyan , Pattusali , Senapathulu , Thogata Sali ) Srisayana ( Segidi ) Swakulasali Thogata , Thogati or
+Thogata Veerakshatriya Viswabrahmin or Viswakarma ( Ausula or Kamsali , Kammari , Kanchari , Vadla or Vadra or Vadrangi and Silpi ) Scheduled Castes converts to
+Christianity and their progeny Agaru Arekatika , Katika , Quresh ( Muslim Butchers ) Atagara Bhataraju Chippolu ( Mera ) Gavara Godaba Hatkar Jakkala Jingar
+Kandra Koshti Kachi Surya Balija ( Kalavanthula ) , Ganika Krishnabhalija ( Dasari , Bukka , Bukka Ayavar ) Koppulavelama Mathura Mali ( where they are not
+Scheduled Tribe ) Mudiraj ,
+</item 9>
+
+<item 10>
+List of Telugu castes
+Buragana Kalinga , Buragam Kalinga , Pandiri Kalinga , Kalinga Kepmare or Reddika Mondepatta Mondipatta Nokkar Pariki Muggula Yata Chopemari Kaikadi
+Joshinandiwala Odde Oddilu Vaddi Vaddelu Mandula Mehtar ( Muslim ) Kunapuli Achukatlavandlu Aryakshatriya , Chittari , Giniyar , Chitrakara , Nakhas Devanga
+Ediga Gowda ( Gamalla , Kalalee ) Goundla Settibalija ( of Visakhapatnam , East Godavari , West Godavari and Krishna District ) Dudekula , Laddaf , Pinjari or
+Noorbash Gandla , Telikula , Devathilakula Jandra Kummara or Kulala or Salivahana Karikalabhakthulu Kaikolan or Kaikola ( Sengundam or Sengunther )
+Karnabhakthulu Kuruba or Kuruma Nagavaddilu Neelakanthi Patkar ( Khatri ) Perika ( Perike Balija ,
+</item 10>
+=== END ITEM id=03c4c39edc79b0ca ===
+
+=== ITEM id=4280c1e96755f830 ===
+Gold sentences and facts:
+Sentence 0: The Burzahom site is a prehistoric settlement in the village of the same name in the Srinagar District . It is 16 kilometres ( 9.9 mi ) to the northeast of Srinagar on the Naseem - Shalimar road . The elevation of the site is 1,800 metres ( 5,900 ft ) above sea - level . It is the northernmost excavated Neolithic site of India . The site is on an ancient Pleistocene lake bed . The location is in a high terrace which is part of the floodplain of the Jhelum river and has Karewa soil ( clay ) formation . The site has a commanding view of the Dal lake which is about 2 kilometres ( 1.2 mi ) away . In the Kashmiri language ' Burzahom ' means `` birch '' , a tree species ( that generally grows in the elevation range of 3,000 to 4,200 metres ( 9,800 to 13,800 ft ) in the Himalayas ) , which is found in the excavated housing area in the form of roofing material , and thus confirming the existence of the tree even in the pre-historic Neolithic times .
+  Fact 0.0: The Burzahom site is a prehistoric settlement.
+  Fact 0.1: The Burzahom site is in the village of the same name, in the Srinagar District.
+  Fact 0.2: The Burzahom site is 16 kilometres (9.9 mi) northeast of Srinagar.
+  Fact 0.3: The Burzahom site is on the Naseem-Shalimar road.
+  Fact 0.4: The elevation of the Burzahom site is 1,800 metres (5,900 ft) above sea level.
+  Fact 0.5: The Burzahom site is the northernmost excavated Neolithic site of India.
+  Fact 0.6: The Burzahom site is on an ancient Pleistocene lake bed.
+  Fact 0.7: The Burzahom site's location is in a high terrace.
+  Fact 0.8: The high terrace is part of the floodplain of the Jhelum river.
+  Fact 0.9: The location has Karewa soil (clay) formation.
+  Fact 0.10: The Burzahom site has a commanding view of the Dal lake.
+  Fact 0.11: The Dal lake is about 2 kilometres (1.2 mi) away from the site.
+  Fact 0.12: In the Kashmiri language, 'Burzahom' means 'birch'.
+  Fact 0.13: Birch is a tree species that generally grows in the elevation range of 3,000 to 4,200 metres (9,800 to 13,800 ft) in the Himalayas.
+  Fact 0.14: Birch is found in the excavated housing area of the Burzahom site in the form of roofing material.
+  Fact 0.15: The presence of birch roofing material confirms the existence of the tree even in pre-historic Neolithic times.
+
+Retrieved items:
+<item 1>
+The text is mostly Wikipedia footer material associated with the Burzahom archaeological site page. It lists language links and says the page was last edited on
+17 April 2018. Text is under the Creative Commons Attribution-ShareAlike License; site use is subject to its Terms of Use and Privacy Policy. Wikipedia is a
+Wikimedia Foundation registered trademark.
+</item 1>
+
+<item 2>
+Burzahom archaeological site
+The burial practices and type of tools recovered from the site were inferred as having close resemblance to those found in the North Chinese Neolithic culture .
+Period I ( edit ) The remarkable find during this period was of pits which were inferred as dwelling units ; these were in circular or oval shape dug in compact
+natural Karewa soil formation . Some of the deep pits had steps and ladder access to the bottom level . In some of the pits the stratification revealed ash and
+charcoal layers , which denoted human occupancy . Post holes on the sides of pits at the surface level denoted the presence of superstructures covered with
+thatch made of birch . Shallow pits of circular shape of 60 -- 91 centimetres ( 24 -- 36 in ) diameter adjoining the housing pits were found to contain bones of
+animals and also tools made of bones ( of antlers used for making tools ) and stones ( harpoons , needles with or without eyes , awls ) . Carbon dating
+established that the Neolithic culture of this site was traceable to the 3rd millennium BC , the earliest occupation at the site was dated to before 2,357 BC .
+</item 2>
+
+<item 3>
+Burzahom archaeological site
+The unearthed Antiquities ( of art , architecture , customs and rituals ) indicate that the prehistoric people of the Burzahom established contact with Central
+Asia and South West Asia and also had links to the Gangetic plains and peninsular India . The interaction of local and foreign influences is demonstrated by the
+art , architecture , customs , rituals and language demonstrated by some engravings on pottery and other artifacts . Some historians have stated that the Vedic
+Aryan culture extended into Kashmir , but archaeological investigation at Burzahom does not support the theory . Contents ( hide ) 1 Location 2 History 3
+Discovery 3.1 Period I 3.2 Period II 3.3 Period III 3.4 Period IV 4 Preservation 5 See also 6 References 7 Bibliography Location ( edit ) The Burzahom site is a
+prehistoric settlement in the village of the same name in the Srinagar District . It is 16 kilometres ( 9.9 mi ) to the northeast of Srinagar on the Naseem -
+Shalimar road .
+</item 3>
+
+<item 4>
+Burzahom archaeological site
+Khazanchi and his team of ASI from 1960 and 1971 The Burzahom archaeological site is located in the Kashmir Valley of the Indian state of Jammu and Kashmir .
+Archaeological excavations have revealed four phases of cultural significance between 3000 BC and 1000 BC . Periods I and II represent the Neolithic era ;
+Period IlI the Megalithic era ( of massive stone menhirs and wheel turned red pottery ) ; and Period IV relates to the early Historical Period ( Post-megalithic
+period ) . The findings , recorded in stratified cultural deposits representing prehistoric human activity in Kashmir , are based on detailed investigations
+that cover all aspects of the physical evidence of the site , including the ancient flora and fauna . The Burzahom site revealed the transition from the
+subterranean and ground level housing features of the Neolithic people to the mudbrick structures of the Megalithic people . The large cache of tools and
+implements made of bone and stone found at the site shows that the inhabitants were hunting and farming .
+</item 4>
+
+<item 5>
+Burzahom archaeological site
+An interesting find of this period is of two standalone finished flat stone slabs . The carving on one is not distinct . The other stone slab is 48 -- 27
+centimetres ( 19 -- 11 in ) which depicts , on one polished side , sketches of hunting scenes such as a hunter spearing ( with a Ker ) an antlered deer and
+another hunter in the process of releasing an arrow , and a sketch of the movement of the Sun , at two levels . The carved figures are distinctly visible .
+Agricultural practices were noted during the Periods I and II and crops grown were inferred as wheat , barley and lentil ; finding lentils established a link of
+the Neolithic people with Central Asia , crossing over the Himalayas . The people who resided here were characterized as `` long headed dolichocranic '' . Two
+female skulls , different from the male skulls , were also reported . The finds did not indicate of any external ethnic intrusions during the entire Neolithic
+period but showed more affinity to the Harappan people . Burzahom represents the southernmost extent of what is known as Northern Neolithic culture of Asia .
+</item 5>
+
+<item 6>
+Burzahom archaeological site
+Burzahom Archaeological site - wikipedia Burzahom Archaeological site Jump to : navigation , search Burzahom archaeological site برزۂہوم A pot excavated from
+Burzahom Shown within India Location Srinagar , Jammu and Kashmir Coordinates 34 ° 10 ′ N 73 ° 54 ′ E ﻿ / ﻿ 34.167 ° N 73.900 ° E ﻿ / 34.167 ; 73.900
+Coordinates : 34 ° 10 ′ N 73 ° 54 ′ E ﻿ / ﻿ 34.167 ° N 73.900 ° E ﻿ / 34.167 ; 73.900 Type Pre-historic Settlement History Periods Neolithic , Megalithic and
+early Historic period . Site notes Excavation dates 1939 and from 1960 to 1971 Archaeologists de Terra and Patersonof Yale - Cambridge Expedition in 1939 and
+T.N.
+</item 6>
+
+<item 7>
+Burzahom archaeological site
+The pottery found at the site were in an early stage of hand crafting , of the coarse variety , in steel - grey , dull red , brown , and buff colours with mat
+prints at the bottom ; they were in the shape of bowl , vase and stem . The antiquities did not reveal any signs of burials sites . Late Kot - Diji type pots
+were found belonging to Period Ib . Period II ( edit ) In the Period II , the finds excavated revealed that people had moved out from pit dwelling to structures
+built at the ground level . However , the pits and its associated chambers formed the base floor of the superstructure , which was made up by filling the pits
+and covering it with mud plaster , and occasionally painted in red ochre . Post-holes around the pits revealed that the superstructures were made of wood built
+over compacted Karewa soil floors . This period also brought out , for the first time , the burial customs of the Neolithic people . Both human and animal
+skeletons were found in deep oval shaped pits , located either below the floors of the dwelling units or in its precincts . These pits were filled with ash ,
+stones and potsherds .
+</item 7>
+
+<item 8>
+Burzahom archaeological site
+Period III ( edit ) Some Megalithic Period Menhirs are next to Neolithic pits , suggesting a gradual transition between the two phases . The Menhirs , boulders
+formed due the varying temperatures , were brought down from the hills with great effort by the people and installed to mark notable events of the community .
+These are rough in shape , huge and of considerable weight and height , and are `` free - standing '' . Craftsmanship was superior during this period with finds
+of wheel made durable hard red ware , copper objects , and tools made of bone and stone . Structures made of rubble were also found . Finds of a few copper
+arrowheads indicated knowledge of metallurgy . Period IV ( edit ) Period IV ( dated to the 3rd -- 4th century AD ) , the last phase of human occupation at
+Burzahom , was related to the early Historical Period . The structures built were superior compared to the earlier period , and were made from mud - bricks .
+Pottery was also superior , of red ware type with slips and wheel turned . Some iron antiquaries were also found .
+</item 8>
+
+<item 9>
+Burzahom archaeological site
+These are : Periods I and II of the Neolithic ( Period I is called aceramic and Period II is called ceramic ) origin , particularly characterized by dwelling
+pits ( the largest measuring 2.74 metres ( 9 ft 0 in ) at the top to 4.75 metres ( 15.6 ft ) at the base at a depth of 3.95 metres ( 13.0 ft ) ) ; Period III of
+the Megalithic sequence noted by the free standing large stone Menhirs installed at the site by shifting boulders manually from the hills ; and Period IV of the
+early Modern Period . The skeletal remains of the Neolithic humans found at Burzahom are similar to those found in Harappa of the Indus Valley Civilization .
+Burzahom 's ceramic industry was mostly of hunting based culture and is different from the Chinese Neolithic pottery . The economy of the people was found to be
+based on hunting and gathering with a nascent stage of cultivation practices . Pottery made in Burzahom showed close affinity to those found in the Swat valley
+in Pakistan , particularly in respect of its shapes and decorations of the black ware pottery .
+</item 9>
+
+<item 10>
+Burzahom archaeological site
+These pits were filled with ash , stones and potsherds . Some of the human skulls found here had trepanning ( bored hole ) marks . In many pits , bones of dogs
+and antlered deer were found along with human skeletons . The skeletons of humans were found in the burial pits in a sitting position along with bones of
+animals . Pottery finds showed better finish compared to the earlier Period I . The pots were of polished black ware , mostly handmade , in the form of a dish
+with stand , a high - necked jar , and so forth . Also found was a wheel turned red ware pot which contained 950 beads made from carnelian and agate ( inferred
+as items for sale ) , which was thought to belong to the later part of this period . A very impressive painted pottery ware recovered from this period was a
+globular red ware pot made on a turntable ; the painting on the pot was of a wild goat of black colour with long horns and hanging ears . Another pottery item
+which is of interest is a polished black ware in globular shape jar with a long neck and flaring mouth .
+</item 10>
+=== END ITEM id=4280c1e96755f830 ===
+
+=== ITEM id=2fc3a89905ecb115 ===
+Gold sentences and facts:
+Sentence 0: DJ Lance Rock -- ( Portrayed by Lance Robertson U.S. , voice dubbed by Ortis Deley in the UK ) A DJ who is the narrator and friend of the other characters and the series ' host . Muno -- ( Voiced by Adam Deibert U.S. , Bob Golding UK ) A friendly red cyclops boy . He 's the tallest , is somewhat clumsy and has a close bond with Foofa ( though she also bonds with Brobee in the same way ) . He is also the band 's guitarist . In the episodes `` Family '' , `` Circus '' , and `` Baby '' , his family makes an appearance . During Super Bowl XLIV , he appeared in a commercial for the Kia Sorento . His realm resembles the moon , another planet , or a desert and he has a pet horse . He has three stomachs as seen in the X-ray in the Season 1 episode `` Halloween '' ( # 13 ) . However another X-ray in the Season 1 episode `` Imagine '' ( # 20 ) shows him with one stomach , a normal heart and lungs . His catchphrase is `` Razzle Dazzle '' . Foofa -- ( Voiced by Emma Jacobs - Briggs U.S. , Teresa Gallagher UK ) A female flower bubble character who 's `` pink and happy . '' She likes flowers , rainbows and unicorns . Her instrument is the tambourine . Her realm is a spring or summer meadow . Brobee -- ( Voiced by Amos Watene U.S. , Simon Feilder UK ) A small , green monster boy and the baby of the gabbas . He is the drummer for the Gabba band . He is the one of the characters whose facial expression changes depending on the situation ; his normal face turning into a frown , and vice versa . He is often subjected to trying new foods . His realm is a vast autumn forest . It is mentioned that he is four years old . Toodee -- ( Voiced by Erin Pearce U.S. , Jonell Elliot UK ) A blue arctic female cat - dragon who loves to have fun . She has a close bond with Plex and is the bassist for the Gabba band . She resides in a winter arctic realm , with icicles . Plex -- ( Voiced by Christian Jacobs U.S. , Simon Feilder UK ) A magic yellow robot boy and the oldest of the gabbas and he is Toodee 's love instest . He is portrayed as being smart and as the leader of Gabba Land . Plex usually teaches lessons to his friends and is a father figure to the gang . He can also use his special ray to bring things into existence . His instrument is the keytar . He has no realm in particular , though he seems to have a `` docking station '' between Foofa and Brobee 's realms . In `` Gabbaland Begins '' , Plex is the last in DJ Lance 's original creations after he goes through Muno , Foofa , Brobee , and Toodee , although , Brobee is supposedly a four - year - old in the series . Gooble - ( Voiced by Joel Fox U.S. ) A ghost who is always so sad and crying . He resides in a haunted house located in a non-gabba land - place named `` Gooble Land '' .
+  Fact 0.0: DJ Lance Rock is portrayed by Lance Robertson in the U.S.
+  Fact 0.1: DJ Lance Rock's voice is dubbed by Ortis Deley in the UK.
+  Fact 0.2: DJ Lance Rock is a DJ.
+  Fact 0.3: DJ Lance Rock is the narrator of the series.
+  Fact 0.4: DJ Lance Rock is a friend of the other characters.
+  Fact 0.5: DJ Lance Rock is the host of the series.
+  Fact 0.6: Muno is voiced by Adam Deibert in the U.S.
+  Fact 0.7: Muno is voiced by Bob Golding in the UK.
+  Fact 0.8: Muno is a friendly red cyclops boy.
+  Fact 0.9: Muno is the tallest.
+  Fact 0.10: Muno is somewhat clumsy.
+  Fact 0.11: Muno has a close bond with Foofa.
+  Fact 0.12: Foofa also bonds with Brobee in the same way.
+  Fact 0.13: Muno is also the band's guitarist.
+  Fact 0.14: Muno's family makes an appearance in the episodes 'Family', 'Circus', and 'Baby'.
+  Fact 0.15: Muno appeared in a commercial for the Kia Sorento during Super Bowl XLIV.
+  Fact 0.16: Muno's realm resembles the moon, another planet, or a desert.
+  Fact 0.17: Muno has a pet horse.
+  Fact 0.18: Muno has three stomachs as seen in the X-ray in the Season 1 episode 'Halloween' (#13).
+  Fact 0.19: Another X-ray in the Season 1 episode 'Imagine' (#20) shows Muno with one stomach.
+  Fact 0.20: Another X-ray in the Season 1 episode 'Imagine' (#20) shows Muno with a normal heart.
+  Fact 0.21: Another X-ray in the Season 1 episode 'Imagine' (#20) shows Muno with normal lungs.
+  Fact 0.22: Muno's catchphrase is 'Razzle Dazzle'.
+  Fact 0.23: Foofa is voiced by Emma Jacobs-Briggs in the U.S.
+  Fact 0.24: Foofa is voiced by Teresa Gallagher in the UK.
+  Fact 0.25: Foofa is a female flower bubble character.
+  Fact 0.26: Foofa is pink and happy.
+  Fact 0.27: Foofa likes flowers, rainbows and unicorns.
+  Fact 0.28: Foofa's instrument is the tambourine.
+  Fact 0.29: Foofa's realm is a spring or summer meadow.
+  Fact 0.30: Brobee is voiced by Amos Watene in the U.S.
+  Fact 0.31: Brobee is voiced by Simon Feilder in the UK.
+  Fact 0.32: Brobee is a small, green monster boy.
+  Fact 0.33: Brobee is the baby of the gabbas.
+  Fact 0.34: Brobee is the drummer for the Gabba band.
+  Fact 0.35: Brobee is one of the characters whose facial expression changes depending on the situation.
+  Fact 0.36: Brobee's normal face turns into a frown, and vice versa.
+  Fact 0.37: Brobee is often subjected to trying new foods.
+  Fact 0.38: Brobee's realm is a vast autumn forest.
+  Fact 0.39: It is mentioned that Brobee is four years old.
+  Fact 0.40: Toodee is voiced by Erin Pearce in the U.S.
+  Fact 0.41: Toodee is voiced by Jonell Elliot in the UK.
+  Fact 0.42: Toodee is a blue arctic female cat-dragon.
+  Fact 0.43: Toodee loves to have fun.
+  Fact 0.44: Toodee has a close bond with Plex.
+  Fact 0.45: Toodee is the bassist for the Gabba band.
+  Fact 0.46: Toodee resides in a winter arctic realm with icicles.
+  Fact 0.47: Plex is voiced by Christian Jacobs in the U.S.
+  Fact 0.48: Plex is voiced by Simon Feilder in the UK.
+  Fact 0.49: Plex is a magic yellow robot boy.
+  Fact 0.50: Plex is the oldest of the gabbas.
+  Fact 0.51: Plex is Toodee's love interest.
+  Fact 0.52: Plex is portrayed as smart.
+  Fact 0.53: Plex is portrayed as the leader of Gabba Land.
+  Fact 0.54: Plex usually teaches lessons to his friends.
+  Fact 0.55: Plex is a father figure to the gang.
+  Fact 0.56: Plex can use his special ray to bring things into existence.
+  Fact 0.57: Plex's instrument is the keytar.
+  Fact 0.58: Plex has no realm in particular.
+  Fact 0.59: Plex seems to have a 'docking station' between Foofa's and Brobee's realms.
+  Fact 0.60: In 'Gabbaland Begins', Plex is the last of DJ Lance's original creations.
+  Fact 0.61: In 'Gabbaland Begins', Plex comes after Muno, Foofa, Brobee, and Toodee in DJ Lance's original creations.
+  Fact 0.62: Brobee is supposedly a four-year-old in the series.
+  Fact 0.63: Gooble is voiced by Joel Fox in the U.S.
+  Fact 0.64: Gooble is a ghost.
+  Fact 0.65: Gooble is always so sad and crying.
+  Fact 0.66: Gooble resides in a haunted house.
+  Fact 0.67: The haunted house is located in a non-Gabba land place named 'Gooble Land'.
+Sentence 1: Hosted by a character named DJ Lance Rock , the series featured a mix of live - action segments featuring cartoonish costumed characters -- Muno ( the red cyclops ) , Foofa ( the pink flower bubble ) , Brobee ( a little hairy green monster ) , Toodee ( the blue cat - dragon ) and Plex ( the magic yellow robot ) -- and many short animated sketches and musical numbers .
+  Fact 1.0: The series was hosted by a character named DJ Lance Rock.
+  Fact 1.1: The series featured a mix of live-action segments.
+  Fact 1.2: The live-action segments featured cartoonish costumed characters.
+  Fact 1.3: The series featured many short animated sketches.
+  Fact 1.4: The series featured many musical numbers.
+  Fact 1.5: Muno is the red cyclops.
+  Fact 1.6: Foofa is the pink flower bubble.
+  Fact 1.7: Brobee is a little hairy green monster.
+  Fact 1.8: Toodee is the blue cat-dragon.
+  Fact 1.9: Plex is the magic yellow robot.
+
+Retrieved items:
+<item 1>
+Yo Gabba Gabba!
+Music is ... Awesome ! ( 2009 ) Music is ... Awesome ! Volume 2 ( 2010 ) Music is ... Awesome ! Volume 3 ( 2011 ) Music is ... Awesome ! Volume 4 ( 2012 ) Hey !
+( 2017 ) Fantastic Voyages ( 2017 ) ABC for Kids released a CD in 2010 titled Yo Gabba Gabba ! Party In My Tummy . Stage shows ( edit ) The world premiere live
+concert tour of Yo Gabba Gabba ! took place in Australia in May 2009 . DJ Lance Rock , Muno , Foofa , Brobee , Toodee and Plex performed in Wollongong ,
+Melbourne , Brisbane and Sydney with an indie house - band and secret special guests at each show . Additional tours in the United States and other countries
+have been performed throughout 2013 . Shows have been toured including three presented by Kia Motors and a special Christmas one presented by Citi , Just Dance
+Kids & Toys for Tots . `` Yo Gabba Gabba ! LIVE ! : There 's a Party in My City ! ''
+</item 1>
+
+<item 2>
+Yo Gabba Gabba!
+Episode structure ( edit ) All episodes follow a similar format . In the opening scene , DJ Lance Rock is shown walking on a plain white background while
+holding a gray radio with colorful buttons . He then gets to a table scenery that involves four different colored lands and a gray cloth underneath it . He then
+places down the radio , and then he shouts `` YOOOO Gabba Gabba ! '' and opens the radio , and inside it are 5 toy figures : Toodee , Muno , Foofa , Plex , and
+Brobee . He places down the figures one - by - one , and then they become alive . The episode features four main segments ( it was shortened to three after the
+first season ) that are connected to each other as a plot . They involve DJ Lance and the gabbas doing an activity . After each main segment , a short clip is
+shown that shows a kid dancing around . The kid says his or her name , followed by `` I like to dance ! '' . Between the main segments , there is another
+segment called `` The Super Music Friends Show '' , which features a performance by a band about the episode 's topic .
+</item 2>
+
+<item 3>
+Yo Gabba Gabba!
+His instrument is the keytar . He has no realm in particular , though he seems to have a `` docking station '' between Foofa and Brobee 's realms . In ``
+Gabbaland Begins '' , Plex is the last in DJ Lance 's original creations after he goes through Muno , Foofa , Brobee , and Toodee , although , Brobee is
+supposedly a four - year - old in the series . Gooble - ( Voiced by Joel Fox U.S. ) A ghost who is always so sad and crying . He resides in a haunted house
+located in a non-gabba land - place named `` Gooble Land '' . Regular segments ( edit ) Jingles , each episode has animated music videos featuring music by a
+guest musician and animation by guest artists , designers , and animators . They often happen after the first segment in an episode . ( One episode does not
+have the segment . ) Mark 's Magic Pictures , featuring Mark Mothersbaugh , drawing simple pictures that often come alive at the end of the segment . Biz 's
+Beat of the Day , starring Biz Markie , demonstrating new beatboxing beats .
+</item 3>
+
+<item 4>
+Yo Gabba Gabba!
+Yo Gabba Gabba ! - Wikipedia Yo Gabba Gabba ! Jump to : navigation , search Yo Gabba Gabba ! Yo Gabba Gabba ! title card Genre Educational Created by Christian
+Jacobs Scott Schultz Developed by Kay Wilson Stallings Directed by Christian Jacobs Scott Schultz Matt Fackrell Matt Chapman Presented by Lance Robertson Voices
+of Adam Delbert Christian Jacobs Amos `` Mossi '' Watene Erin Pearce Emma Jacobs - Briggs Country of origin United States Original language ( s ) English No. of
+seasons No. of episodes 66 ( list of episodes ) Production Executive producer ( s ) Michael Polis Jon Berrett Producer ( s ) Justin Lyon Ritamarie Peruggi
+Running time 25 minutes Production company ( s ) The Magic Store W ! ldbrain Entertainment Nickelodeon Productions Distributor DHX Media Release Original
+network Nickelodeon Nick Jr . Original release August 20 , 2007 ( 2007 - 08 - 20 ) -- November 12 , 2015 ( 2015 - 11 - 12 ) External links Website Yo Gabba
+Gabba !
+</item 4>
+
+<item 5>
+Yo Gabba Gabba!
+The toy models of the characters that appeared at the beginning and end of each show were made by Kidrobot . History ( edit ) Yo Gabba Gabba ! was developed by
+two Southern California fathers , Christian Jacobs and Scott Schultz , who first started working together as teenagers , producing and directing skateboarding
+videos . Their goal was to design a kids ' show that was entertaining while featuring real artists and real performers . Both had no previous experience writing
+for television , let alone children 's broadcasting or education . In developing the show they took inspiration from a number of sources including Sesame Street
+, The Electric Company , Pee - wee 's Playhouse , as well as Sid and Marty Krofft puppet shows Banana Splits and H.R. Pufnstuf . In 1999 , after becoming
+parents , Jacobs and Schultz started playing around with ideas for children 's television and produced a pilot independently financed by small loans from
+friends and family . Yo Gabba Gabba ! did not get much attention until it started circulating on the Internet .
+</item 5>
+
+<item 6>
+Yo Gabba Gabba!
+Other small segments include `` Mark 's Magic Pictures '' and `` Biz 's Beat of the Day '' . Near the end of each episode , DJ Lance and the gabbas do a mix -
+like song about what had occurred during the main segments . After it is finished , DJ Lance shouts `` YOOOO Gabba Gabba ! '' once again , and then Brobee ,
+Muno , Toodee , Foofa , and Plex turn back into toys . One - by - one , DJ Lance puts them back in the radio , closes the radio , and then walks off carrying it
+. The credits then roll . The stars ( edit ) DJ Lance Rock -- ( Portrayed by Lance Robertson U.S. , voice dubbed by Ortis Deley in the UK ) A DJ who is the
+narrator and friend of the other characters and the series ' host . Muno -- ( Voiced by Adam Deibert U.S. , Bob Golding UK ) A friendly red cyclops boy . He 's
+the tallest , is somewhat clumsy and has a close bond with Foofa ( though she also bonds with Brobee in the same way ) .
+</item 6>
+
+<item 7>
+Yo Gabba Gabba!
+Trademarks relating to Yo Gabba Gabba ! and its characters are held by GabbaCaDabra , LLC. in partnership with The Magic Store and WildBrain . Contents ( hide )
+1 Overview 2 History 3 Production 4 Episode structure 5 The Stars 6 Regular segments 7 Episodes 8 Video releases 9 Soundtrack releases 10 Stage shows 11 Mobile
+streaming 12 Critical reception 13 In other media 14 References 15 External links Overview ( edit ) Hosted by a character named DJ Lance Rock , the series
+featured a mix of live - action segments featuring cartoonish costumed characters -- Muno ( the red cyclops ) , Foofa ( the pink flower bubble ) , Brobee ( a
+little hairy green monster ) , Toodee ( the blue cat - dragon ) and Plex ( the magic yellow robot ) -- and many short animated sketches and musical numbers .
+</item 7>
+
+<item 8>
+Yo Gabba Gabba!
+Yo Gabba Gabba ! won for the year 2009 and 2010 . In February 2013 , Yo Gabba Gabba ! won two Kidscreen Awards for `` Best Non-Animated or Mixed Series 2013 ''
+and `` Best Music 2013 '' In other Media ( edit ) In 2009 , the cast was featured in their own float in the Macy 's Thanksgiving Day Parade . Muno was featured
+in a commercial for the Kia Sorento that aired during the 2010 Super Bowl and a subsequent Kia commercials in 2011 , also the character Brobee appeared in a
+2011 advertisement for Wonderful Pistachios . The cast appeared in the Big Time Rush episodes `` Big Time Audition '' , `` Big Time Halloween '' and `` Big Time
+Cameos . '' Yo Gabba Gabba ! appeared in True Jackson VP in the episode `` Trapped in Paris . '' Garry Lyon , of The Footy Show , an Australian Football League
+panel show , performed an interpretive cycle ( Yo Gabba Gazza ! ) based on the Yo Gabba Gabba ! dancing style after losing a humorous bet .
+</item 8>
+
+<item 9>
+Yo Gabba Gabba!
+He is the drummer for the Gabba band . He is the one of the characters whose facial expression changes depending on the situation ; his normal face turning into
+a frown , and vice versa . He is often subjected to trying new foods . His realm is a vast autumn forest . It is mentioned that he is four years old . Toodee --
+( Voiced by Erin Pearce U.S. , Jonell Elliot UK ) A blue arctic female cat - dragon who loves to have fun . She has a close bond with Plex and is the bassist
+for the Gabba band . She resides in a winter arctic realm , with icicles . Plex -- ( Voiced by Christian Jacobs U.S. , Simon Feilder UK ) A magic yellow robot
+boy and the oldest of the gabbas and he is Toodee 's love instest . He is portrayed as being smart and as the leader of Gabba Land . Plex usually teaches
+lessons to his friends and is a father figure to the gang . He can also use his special ray to bring things into existence . His instrument is the keytar .
+</item 9>
+
+<item 10>
+Yo Gabba Gabba!
+is an American live action / puppet educational children 's television show starring five costumed toys come to life and their friend DJ Lance Rock . The series
+premiered on Nick Jr . August 20 , 2007 and ended on November 12 , 2015 . There is a single topic in each episode , e.g. `` Adventure '' , `` Friends '' , and
+`` Dance '' , through songs and short storylines in the half - hour program . Additionally , the show teaches children life and social skills , such as sharing
+and trying new foods . It also encourages viewers to move along with and dance with the characters in the program . The show is noted for its indie - culture
+guest stars and bands , and for drawing visual inspiration from 8 - bit video games and H.R. Pufnstuf , among other television shows . Created by Christian
+Jacobs ( lead singer of the Aquabats ) and Scott Schultz , the show is written to appeal to children and their parents . The television program has spawned a
+touring live stage show , various toys and branded clothing . Trademarks relating to Yo Gabba Gabba !
+</item 10>
+=== END ITEM id=2fc3a89905ecb115 ===
+
+=== ITEM id=ee92c857bda4b44e ===
+Gold sentences and facts:
+Sentence 0: Sheila Carter is a fictional character from The Young and the Restless and The Bold and the Beautiful , American soap operas on the CBS network . Created by William J. Bell , the role was introduced in 1990 -- by Edward J. Scott -- under the portrayal of Kimberlin Brown , who portrayed the role for many intervals on both soaps until 2006 . That same year , Michelle Stafford took over the role , after Sheila had plastic surgery to look like Phyllis Summers . Brown returned to the role of Sheila on The Bold and the Beautiful , beginning on June 9 , 2017 .
+  Fact 0.0: Sheila Carter is a fictional character from The Young and the Restless.
+  Fact 0.1: Sheila Carter is a fictional character from The Bold and the Beautiful.
+  Fact 0.2: The Young and the Restless and The Bold and the Beautiful are American soap operas on the CBS network.
+  Fact 0.3: The character Sheila Carter was created by William J. Bell.
+  Fact 0.4: The role of Sheila Carter was introduced in 1990.
+  Fact 0.5: The role of Sheila Carter was introduced by Edward J. Scott.
+  Fact 0.6: The role of Sheila Carter was introduced under the portrayal of Kimberlin Brown.
+  Fact 0.7: Kimberlin Brown portrayed the role of Sheila Carter for many intervals on both soaps until 2006.
+  Fact 0.8: In 2006, Michelle Stafford took over the role of Sheila Carter.
+  Fact 0.9: Michelle Stafford took over the role after Sheila had plastic surgery to look like Phyllis Summers.
+  Fact 0.10: Kimberlin Brown returned to the role of Sheila Carter on The Bold and the Beautiful.
+  Fact 0.11: Kimberlin Brown's return to the role of Sheila Carter on The Bold and the Beautiful began on June 9, 2017.
+Sentence 1: The role was portrayed by Kimberlin Brown for a total of 16 years . Her first run was on The Young and the Restless from May 1990 to May 20 , 1992 , when the character crossed over to The Bold and the Beautiful from May 21 , 1992 , to October 2 , 1998 , again from May 24 to November 5 , 2002 , and again finally from September 26 to October 10 , 2003 . Despite being a regular cast member on The Bold and the Beautiful , Brown returned to The Young and the Restless for several guest appearances beginning on October 27 , 1992 . Brown departed on November 5 , 1992 , and reappeared for one episode on December 23 , 1992 . She continued making appearance from January 7 to 14 , 1993 , February 19 , 1993 , to March 2 , 1993 , October 11 , 1993 , October 19 to 27 , 1993 , January 12 , 1994 , and February 28 , 1995 , until March 2 , 1995 .
+  Fact 1.0: Kimberlin Brown portrayed Sheila Carter for a total of 16 years.
+  Fact 1.1: Brown's first run as Sheila Carter was on The Young and the Restless from May 1990 to May 20, 1992.
+  Fact 1.2: The character Sheila Carter crossed over to The Bold and the Beautiful from May 21, 1992, to October 2, 1998.
+  Fact 1.3: The character Sheila Carter appeared on The Bold and the Beautiful again from May 24 to November 5, 2002.
+  Fact 1.4: The character Sheila Carter appeared on The Bold and the Beautiful again finally from September 26 to October 10, 2003.
+  Fact 1.5: Brown was a regular cast member on The Bold and the Beautiful.
+  Fact 1.6: Despite being a regular cast member on The Bold and the Beautiful, Brown returned to The Young and the Restless for several guest appearances beginning on October 27, 1992.
+  Fact 1.7: Brown departed from The Young and the Restless on November 5, 1992.
+  Fact 1.8: Brown reappeared on The Young and the Restless for one episode on December 23, 1992.
+  Fact 1.9: Brown continued making appearances from January 7 to 14, 1993.
+  Fact 1.10: Brown made an appearance on February 19, 1993.
+  Fact 1.11: Brown made appearances from February 19, 1993, to March 2, 1993.
+  Fact 1.12: Brown made an appearance on October 11, 1993.
+  Fact 1.13: Brown made appearances from October 19 to 27, 1993.
+  Fact 1.14: Brown made an appearance on January 12, 1994.
+  Fact 1.15: Brown made an appearance on February 28, 1995, until March 2, 1995.
+Sentence 2: Sheila Carter Kimberlin Brown as Sheila Carter The Young and the Restless character Portrayed by Kimberlin Brown ( 1990 -- ) Michelle Stafford ( 2006 -- 07 ) Duration 1990 -- 98 2002 -- 03 2005 -- 07 2017 -- First appearance May 1990 Created by William J. Bell Introduced by Edward J. Scott ( 1990 , 1992 -- 95 ) Lee Phillip Bell ( 1992 ) Bradley Bell ( 2002 -- 03 ) John F. Smith ( 2005 ) Lynn Marie Latham and Josh Griffith ( 2006 ) Bradley Bell and Michael Minnis ( 2017 ) Crossover appearances The Bold and the Beautiful Classification Present ; regular Profile Other names Sheila Grainger Sheila Forrester Sheila Warwick Sybil Weller Sheila Lovejoy Brenda Harris Jennifer Mitchell Phyllis Newman Betsy Occupation Waitress Executive assistant Nurse Residence Los Angeles , California Michelle Stafford as Sheila Carter ( show ) Family Family Carter Mother Molly Carter Sisters Sarah Smythe Husband Scott Grainger , Sr. ( 1991 -- 92 ) Eric Forrester ( 1993 -- 95 ) James Warwick ( 1997 -- 98 ) Sons Ryder Callahan Daughters Mary Carter Warwick Diana Carter Daisy Carter Granddaughters Lucy Romalotti
+  Fact 2.0: Sheila Carter is a character portrayed by Kimberlin Brown from 1990 onward.
+  Fact 2.1: Sheila Carter is a character portrayed by Michelle Stafford from 2006 to 2007.
+  Fact 2.2: The character Sheila Carter's duration on the soaps covers 1990-98, 2002-03, 2005-07 and 2017 onward.
+  Fact 2.3: The character Sheila Carter first appeared in May 1990.
+  Fact 2.4: The character Sheila Carter was created by William J. Bell.
+  Fact 2.5: The character Sheila Carter was introduced by Edward J. Scott in 1990 and 1992-95.
+  Fact 2.6: The character Sheila Carter was introduced by Lee Phillip Bell in 1992.
+  Fact 2.7: The character Sheila Carter was introduced by Bradley Bell in 2002-03.
+  Fact 2.8: The character Sheila Carter was introduced by John F. Smith in 2005.
+  Fact 2.9: The character Sheila Carter was introduced by Lynn Marie Latham and Josh Griffith in 2006.
+  Fact 2.10: The character Sheila Carter was introduced by Bradley Bell and Michael Minnis in 2017.
+  Fact 2.11: The character Sheila Carter has crossover appearances on The Bold and the Beautiful.
+  Fact 2.12: The character Sheila Carter is classified as present and regular.
+  Fact 2.13: Sheila Carter's other names include Sheila Grainger, Sheila Forrester, Sheila Warwick, Sybil Weller, Sheila Lovejoy, Brenda Harris, Jennifer Mitchell, Phyllis Newman and Betsy.
+  Fact 2.14: Sheila Carter's occupations include waitress, executive assistant and nurse.
+  Fact 2.15: Sheila Carter's residence is Los Angeles, California.
+  Fact 2.16: Sheila Carter's family is the Carter family.
+  Fact 2.17: Sheila Carter's mother is Molly Carter.
+  Fact 2.18: Sheila Carter's sister is Sarah Smythe.
+  Fact 2.19: Sheila Carter's husband was Scott Grainger, Sr. from 1991 to 1992.
+  Fact 2.20: Sheila Carter's husband was Eric Forrester from 1993 to 1995.
+  Fact 2.21: Sheila Carter's husband was James Warwick from 1997 to 1998.
+  Fact 2.22: Sheila Carter's son is Ryder Callahan.
+  Fact 2.23: Sheila Carter's daughters are Mary Carter Warwick, Diana Carter and Daisy Carter.
+  Fact 2.24: Sheila Carter's granddaughter is Lucy Romalotti.
+  Fact 2.25: Michelle Stafford portrayed Sheila Carter on the show.
+
+Retrieved items:
+<item 1>
+Sheila Carter
+Sheila continues to insinuate herself into Eric 's life , faking a concussion after a catfight with Quinn to manipulate Eric into letting her stay in the
+Forrester mansion . Sheila blackmails her ex-husband , James Warwick , into lying about the severity of her condition . Critical reception ( edit ) Sheila is
+often considered to be one of the most popular villains in daytime . Kimberlin Brown was nominated for a Daytime Emmy in the role as Outstanding Supporting
+Actress in 1993 . With the global success of The Bold and the Beautiful , Sheila is arguably the most recognisable soap opera villain in the world . References
+( edit ) ^ Jump up to : `` About Y&R : Who 's Who in Los Angeles - Sheila Carter '' . SoapCental . Retrieved 16 September 2012 . ^ Jump up to : Kroll , Dan J. (
+9 July 2005 ) . `` Y&R confirms the return of Kimberlin Brown '' . SoapCentral . Retrieved 16 September 2012 . Jump up ^ `` The Young and the Restless : Friday
+, 5th August 2005 '' . CBS.com .
+</item 1>
+
+<item 2>
+Sheila Carter
+( 1991 -- 92 ) Eric Forrester ( 1993 -- 95 ) James Warwick ( 1997 -- 98 ) Sons Ryder Callahan Daughters Mary Carter Warwick Diana Carter Daisy Carter
+Granddaughters Lucy Romalotti Sheila Carter is a fictional character from The Young and the Restless and The Bold and the Beautiful , American soap operas on
+the CBS network . Created by William J. Bell , the role was introduced in 1990 -- by Edward J. Scott -- under the portrayal of Kimberlin Brown , who portrayed
+the role for many intervals on both soaps until 2006 . That same year , Michelle Stafford took over the role , after Sheila had plastic surgery to look like
+Phyllis Summers . Brown returned to the role of Sheila on The Bold and the Beautiful , beginning on June 9 , 2017 . Sheila is known as a villain . A significant
+portion of Sheila 's history on both soaps revolves around her long - running conflict with Lauren Fenmore , whom she has attempted to kill on multiple
+occasions .
+</item 2>
+
+<item 3>
+Sheila Carter
+CBS.com . Retrieved 16 September 2012 . Jump up ^ `` The Young and the Restless : Wednesday , 11th January 2006 '' . CBS.com . Retrieved 16 September 2012 .
+Jump up ^ `` The Young and the Restless : Thursday , 28th December 2006 '' . CBS.com . Retrieved 16 September 2012 . Jump up ^ `` Michelle Stafford Playing
+Sheila Carter on The Young and the Restless '' . She Knows Soaps . Retrieved 16 September 2012 . Jump up ^ Kimberlin Brown ( 2007 ) . KB Interview Nov 2007 .
+KOUS News . Retrieved 16 September 2012 . Jump up ^ `` The Young and the Restless : Friday , 9th February 2007 '' . CBS.com . Retrieved 16 September 2012 . Jump
+up ^ Kerr , Luke ( 28 August 2009 ) . `` Could Kimberlin Brown Return to B&B ? '' . Daytime Confidential . Retrieved 16 September 2012 .
+</item 3>
+
+<item 4>
+Sheila Carter
+Despite being a regular cast member on The Bold and the Beautiful , Brown returned to The Young and the Restless for several guest appearances beginning on
+October 27 , 1992 . Brown departed on November 5 , 1992 , and reappeared for one episode on December 23 , 1992 . She continued making appearance from January 7
+to 14 , 1993 , February 19 , 1993 , to March 2 , 1993 , October 11 , 1993 , October 19 to 27 , 1993 , January 12 , 1994 , and February 28 , 1995 , until March 2
+, 1995 . In July 2005 , after a 10 - year absence from The Young and the Restless , it was announced that Brown was to reprise the role . At the time , Brown
+had been appearing on ABC 's One Life to Live as Paige Miller , and Brown reportedly opted to leave the role when ABC was unable to match the financial terms of
+a contract offered to her by CBS . She returned on August 5 , 2005 , and her run ended on January 11 , 2006 .
+</item 4>
+
+<item 5>
+Sheila Carter
+When asked where her alter - ego may be `` hiding out '' , Brown said : `` I am still getting healthy from my car accident . Right now , Sheila is hiding out in
+North Carolina -- playing golf . But do n't worry : Sheila always comes back ! '' In June 2017 , Kimberlin Brown reprised her role as Sheila on The Bold and the
+Beautiful . Executive producer Brad Bell announced Brown had been signed to a one - year deal with the serial . Development ( edit ) `` She seduced another
+woman 's husband and stole their child ... but if you think that 's bold , hold on tight ... because the hand that rocked The Young and the Restless is now
+rocking The Bold and the Beautiful . Sheila lives ... -- CBS promoting Kimberlin Brown 's crossover as Sheila On the topic of Sheila and Lauren 's `` cat fights
+'' , Brown said : `` People like cat fights because we can get away with what you ca n't get away with in everyday life . You 're living vicariously through me
+.
+</item 5>
+
+<item 6>
+Sheila Carter
+Sheila Carter - Wikipedia Sheila Carter Jump to : navigation , search Sheila Carter Kimberlin Brown as Sheila Carter The Young and the Restless character
+Portrayed by Kimberlin Brown ( 1990 -- ) Michelle Stafford ( 2006 -- 07 ) Duration 1990 -- 98 2002 -- 03 2005 -- 07 2017 -- First appearance May 1990 Created by
+William J. Bell Introduced by Edward J. Scott ( 1990 , 1992 -- 95 ) Lee Phillip Bell ( 1992 ) Bradley Bell ( 2002 -- 03 ) John F. Smith ( 2005 ) Lynn Marie
+Latham and Josh Griffith ( 2006 ) Bradley Bell and Michael Minnis ( 2017 ) Crossover appearances The Bold and the Beautiful Classification Present ; regular
+Profile Other names Sheila Grainger Sheila Forrester Sheila Warwick Sybil Weller Sheila Lovejoy Brenda Harris Jennifer Mitchell Phyllis Newman Betsy Occupation
+Waitress Executive assistant Nurse Residence Los Angeles , California Michelle Stafford as Sheila Carter ( show ) Family Family Carter Mother Molly Carter
+Sisters Sarah Smythe Husband Scott Grainger , Sr.
+</item 6>
+
+<item 7>
+Sheila Carter
+. Daytime Confidential . Retrieved 16 September 2012 . ^ Jump up to : Kroll , Dan J. ( 30 November 2009 ) . `` Is Kimberlin Brown returning to The Young and the
+Restless ? '' . SoapCentral . Retrieved 16 September 2012 . Jump up ^ Logan , Michael ( June 9 , 2017 ) . `` Kimberlin Brown Returns to The Bold and the
+Beautiful as Supervillain Sheila Carter '' . TV Insider . United States : CBS Interactive . Retrieved June 10 , 2017 . Jump up ^ Logan , Michael ( June 19 ,
+2017 ) . `` The Bold and the Beautiful : EP Bradley Bell Answers Our Burning Sheila Carter Questions '' . TV Insider . United States : TVGM Holdings LLC .
+Retrieved June 19 , 2017 . Jump up ^ Kimberlin Brown ( 1992 ) . The Bold and the Beautiful May 1992 Promo Sheila . CBS Daytime . Retrieved 7 November 2012 .
+Jump up ^ Kimberlin Brown ( 2008 ) .
+</item 7>
+
+<item 8>
+Sheila Carter
+Jump up ^ Kimberlin Brown ( 2008 ) . Planet Soap - Sheila & Lauren on Catfights . TV Tropolis . Retrieved 16 September 2012 . ^ Jump up to : Kimberlin Brown (
+2008 ) . Planet Soap - Soap Villains Part 1 . TV Tropolis . Retrieved 16 September 2012 . Jump up ^ `` Top 10 Soap Opera Villains of All Time '' .
+soaps.about.com . Retrieved 25 August 2014 . Jump up ^ `` Soap opera slimeballs : The best villains '' . www.hlntv.com . Retrieved 25 August 2014 . External
+links ( edit ) Sheila Carter biography at SoapCentral The Young and the Restless Cast Present cast members Past cast members Crew William J. Bell Lee Phillip
+Bell Mal Young Families Newman Abbott Chancellor Barber / Winters Related articles Genoa City Storylines The Bold and the Beautiful Victor and Nikki Nick and
+Sharon J.T.
+</item 8>
+
+<item 9>
+Sheila Carter
+However , that December , the character returned , though not portrayed by Brown , but by Michelle Stafford , who in addition portrayed Phyllis Summers . For
+the reason of Brown not returning to the role , the actress said : `` I had a bad accident last year , and when they wanted me back in November , I really could
+n't go at that time , and that 's why I came back looking like somebody else . '' Stafford only portrayed the role for two months until February 9 , 2007 , when
+Sheila was shot by her longtime enemy Lauren Fenmore and presumed dead . In 2009 , reports speculated that Brown would reprise the role again on The Bold and
+the Beautiful , which was followed by more rumors speculating a return to The Young and the Restless . `` I actually got a call from ( B&B head writer and
+executive producer ) Brad Bell a while back asking if I 'd be interested in coming back , and I said , ' Sure ! ' The thing with daytime is that the storylines
+are ( written ) so far in advance , you just never know when ( you might be needed ) , '' Brown said at the time .
+</item 9>
+
+<item 10>
+Sheila Carter
+She has also had conflicts with Stephanie Forrester , Maggie Forrester , Amber Moore , Taylor Hayes , Brooke Logan , Phyllis Summers and Quinn Fuller . Contents
+( hide ) 1 Casting and creation 2 Development 3 Storylines 3.1 1990 -- 92 3.2 1992 -- 98 3.3 2002 -- 03 3.4 2005 -- 07 3.5 2010 , 2012 3.6 2017 -- 4 Critical
+reception 5 References 6 External links Casting and creation ( edit ) The role was portrayed by Kimberlin Brown for a total of 16 years . Her first run was on
+The Young and the Restless from May 1990 to May 20 , 1992 , when the character crossed over to The Bold and the Beautiful from May 21 , 1992 , to October 2 ,
+1998 , again from May 24 to November 5 , 2002 , and again finally from September 26 to October 10 , 2003 .
+</item 10>
+=== END ITEM id=ee92c857bda4b44e ===
+
+=== ITEM id=d1306858ca6aaec5 ===
+Gold sentences and facts:
+Sentence 0: `` Knightfall '' is a 1993 - 1994 Batman story arc published by DC Comics . It consists of a trilogy of storylines that ran from 1993 to 1994 , consisting of `` Knightfall '' , `` Knightquest '' , and `` KnightsEnd '' . The story takes place over approximately six months . Bruce Wayne ( Batman ) suffers burnout and is systematically assaulted and crippled by a `` super steroid '' - enhanced genius named Bane . Wayne is replaced as Batman by an apprentice named Jean - Paul Valley ( a.k.a. Azrael ) , who becomes increasingly violent and unstable , tarnishing Batman 's reputation . Eventually , Wayne is healed through paranormal means , and reclaims his role as Batman .
+  Fact 0.0: 'Knightfall' is a 1993-1994 Batman story arc published by DC Comics.
+  Fact 0.1: Knightfall consists of a trilogy of storylines that ran from 1993 to 1994.
+  Fact 0.2: The trilogy consists of 'Knightfall', 'Knightquest', and 'KnightsEnd'.
+  Fact 0.3: The story takes place over approximately six months.
+  Fact 0.4: Bruce Wayne (Batman) suffers burnout.
+  Fact 0.5: Bruce Wayne (Batman) is systematically assaulted and crippled by a 'super steroid'-enhanced genius named Bane.
+  Fact 0.6: Wayne is replaced as Batman by an apprentice named Jean-Paul Valley (a.k.a. Azrael).
+  Fact 0.7: Jean-Paul Valley becomes increasingly violent and unstable.
+  Fact 0.8: Jean-Paul Valley tarnishes Batman's reputation.
+  Fact 0.9: Eventually, Wayne is healed through paranormal means.
+  Fact 0.10: Eventually, Wayne reclaims his role as Batman.
+
+Retrieved items:
+<item 1>
+Batman: Knightfall
+After this encounter , Bane 's men assault Batman before he himself makes his move and attacks him at Wayne Manor , his home as his alter - ego -- by this time
+; Bane had deduced the secret identity of Batman . The fight between Bruce Wayne and Bane is detailed in Batman # 497 . By this time , Batman is so exhausted
+from the exertion of catching the escaped criminals that he can not even defend himself ; Bane beats him mercilessly before breaking Wayne 's back over his knee
+inside the Batcave below the manor , symbolically `` breaking '' Batman . Bane takes the grievously - wounded Wayne ( still costumed in the Batman outfit )
+downtown to Gotham Square and throws him from a rooftop to demonstrate his superiority to the populace . Quick action by Robin and Alfred spares Batman 's life
+, but at great cost - he is left a paraplegic . With Batman incapacitated , Bane assumes control of Gotham City 's underworld and takes over several illegal
+operations within it . After his defeat , Bruce Wayne enlists the aid of Dr.
+</item 1>
+
+<item 2>
+Batman: Knightfall
+Zsasz , Cornelius Stirk , Abattoir , and Amygdala . The scenario creates a rift in the relationship between Robin and Batman , as Batman irrationally seeks to
+face the outbreak alone -- in later issues , Robin asks Batman if he is even needed as his sidekick anymore . A later flashback to this time period ( Showcase '
+93 # 7 - 8 ) shows Batman pursuing Two - Face alone , being trapped and kidnapped to stand a mock trial ; he is saved only by a rescue attempt from Robin . Bane
+breaks Batman 's back in a splash page from Batman # 497 ( July 1993 ) . Art by Jim Aparo . Over the next few issues , Batman becomes weaker and weaker as each
+criminal is put away . The rescue of Mayor Krol from the teaming of the Joker and Scarecrow pushes Batman to his mental and physical limits : a dose of
+Scarecrow 's fear gas makes him relive the murder of Jason Todd , which he considers to be his greatest failure .
+</item 2>
+
+<item 3>
+Batman: Knightfall
+After his defeat , Bruce Wayne enlists the aid of Dr. Shondra Kinsolving to rehabilitate him and asks Jean - Paul Valley to take up the mantle of Batman so that
+Gotham has a protector . Tim Drake argues with Bruce to allow Dick Grayson ( the former Robin and then - current Nightwing ) to become Batman , as he is more
+experienced and mentally competent . Bruce replies that Grayson has his own responsibilities and would only take up the mantle of the Bat reluctantly ( Dick
+later expressed resentment at not being asked to stand in as Batman ) . Bruce 's rationale for this decision is revealed in later issues - secretly , he does
+not want Dick to have to face Bane , as he knows Dick 's character will compel him to try . Indeed , Bruce gives Jean - Paul strict orders never to engage Bane
+in combat -- and when Jean - Paul does face Bane , only his modified gloves save Jean - Paul from being thrown to his death .
+</item 3>
+
+<item 4>
+Batman: Knightfall
+Its performers are : Bob Sessions as Batman Michael Gough as Alfred Pennyworth Daniel Marinker as Robin Peter Marinker as Bane , Jack Drake Kerry Shale as Jean
+Paul Valley , The Joker , The Cavalier , Thomas Wayne William Roberts as Commissioner James Gordon , Amygdala , Carlton LeHa , Tough Tony Lorelei King as Renee
+Montoya , Leslie Thompkins , Lady Shiva , Young Bruce , Martha Wayne , Sarah Essen Eric Meyers as Harvey Bullock , Colonel Vega , Batcave Computer , Joe Chill ,
+Bird , Jeremiah Arkham , Firefly , Nomoz Michael Roberts as The Ventriloquist , Film Freak , Simpson Flanders , Benedict Asp , Hood Alibe Parsons as Shondra
+Kinsolving James Goode as Nightwing , The Scarecrow Stuart Milligan as Riddler , Maxie Zeus Chris Emmett as Mad Hatter Vincent Marzello as Armand Krol ,
+Abattoir , Mr. Zsasz Action figures ( edit ) In 1994 , Kenner released the Legends of Batman action figure collection .
+</item 4>
+
+<item 5>
+Batman: Knightfall
+Art by Mike Gustovich . Bruce reaffirms his partnership with Tim , resolving the tension caused by Bruce 's unwillingness to accept help during the Arkham
+prison break . Bruce passes the mantle of Batman to Grayson so he can re-evaluate what it will take to restore his aura of invincibility . This begins the
+Prodigal storyline , a reference to Dick Grayson essentially being Bruce 's prodigal son ; Bruce had adopted Dick after his parents were murdered . Because of
+the events of the entire arc , considerable time passes before Commissioner Gordon restores his trust in the idea of a Batman working for good . Gordon can tell
+that he is not looking at the original Batman ( based on Jean - Paul 's costume and Dick 's height , and the fact that Jean - Paul was more than ready to kill
+people ) , and he refuses to place blind trust in a costume after spending so long learning to trust the man .
+</item 5>
+
+<item 6>
+Batman: Knightfall
+During the breakout at Arkham Asylum , Batman and Robin both wear a black arm band with the S - shield engraved on it . The two stories involved DC Comics 's
+most prominent characters . Similar stories followed for Green Lantern , Wonder Woman , Aquaman , and Green Arrow , with Green Lantern Hal Jordan being driven
+insane and replaced with Kyle Rayner , a new Wonder Woman being appointed by Hippolyta , Aquaman losing his hand , and Green Arrow dying in a plane crash as his
+long - lost son took over the role . In the opening of the novelisation , KnightFall , Dennis O'Neil stated that part of the reason `` Knightfall '' was written
+was due to the recent popularity of more `` ruthless '' heroes such as the Terminator and James Bond in films , as editors were starting to wonder if readers
+would prefer a Batman who was willing to kill his opponents . During DC vs. Marvel , Bane attempts to break Captain America 's back in a fight in a similar
+maneuver , but is caught off - guard when Captain America 's shield returns to its owner to strike Bane in the back of the head and knock him out .
+</item 6>
+
+<item 7>
+Batman: Knightfall
+Returning to Gotham , Bruce meets with Tim . Even though Jean - Paul disobeyed Bruce 's order to refrain from attacking Bane , Bruce is sufficiently impressed
+with Jean - Paul 's results . Bruce decides to retire and allow Jean - Paul to continue as Batman . But when Robin tells Bruce of the circumstances surrounding
+Abattoir 's death , Bruce sneaks into the Batcave and demands that Jean - Paul step down . Jean - Paul refuses and tells Bruce to leave the cave and never come
+back . To rehabilitate his skills due to his lost reflexes after so long out of action , Bruce asks the famed assassin Lady Shiva to retrain him ( using a mask
+to conceal his identity and arguing that she will do it for the same reason that she does anything ; it might be interesting ) . Instead , Shiva pits Bruce
+against several vengeful expert martial artists , having killed their master while wearing a distinctive tengu mask that carries a motif of a bat that she
+subsequently gives to Batman . Shiva 's caveat is that these attacks will continue indefinitely until Bruce Wayne breaks his vow to never kill .
+</item 7>
+
+<item 8>
+Batman: Knightfall
+When Bruce finally returns for good , he wears a sturdier , all - black Batsuit made of Kevlar ( inspired by the costume of the Tim Burton Batman films ) , and
+drives a new , state - of - the - art Batmobile . He fights former Soviet agents Colonel Vega ( who teamed with Asp in `` Knightquest : The Search '' ) ,
+KGBeast , and Dark Rider , in order to foil a plot to nuke Gotham City with a device the size and shape of a baseball . ( Troika is the Russian word for `` trio
+'' . ) The saga also shows how Batman makes changes to his life as Bruce Wayne , his relationships with his `` family '' , plans to live without Alfred , and
+copes with the decision of making Jean - Paul his replacement . Nightwing : Alfred 's return ( edit ) A one - shot that features the return of Alfred after his
+resignation during `` KnightQuest : The Search '' . It has Nightwing going to England in order to track Alfred down . Azrael ( edit ) Main article : Azrael (
+comic book ) A new series following Jean - Paul Valley was begun in April 1995 , titled Azrael .
+</item 8>
+
+<item 9>
+Batman: Knightfall
+`` Whatever Happened to the Caped Crusader ? '' `` Batwoman : Elegy '' `` Bruce Wayne : The Road Home '' `` Night of the Owls '' `` Death of the Family '' ``
+Zero Year '' `` Endgame '' `` Robin War '' Inter-company crossovers Batman / Aliens Batman / Hellboy / Starman Batman / Daredevil : King of New York Batman /
+Judge Dredd : Judgment on Gotham Batman & Spider - Man : New Age Dawning Batman / Tarzan : Claws of the Cat - woman Batman / Teenage Mutant Ninja Turtles Batman
+/ The Spirit Batman versus Predator Daredevil / Batman : Eye for an Eye Spawn / Batman Batman - Spawn : War Devil Superman and Batman versus Aliens and Predator
+Spider - Man and Batman : Disordered Minds Incomplete All Star Batman & Robin , the Boy Wonder Batman : The Dark Prince Charming Batman : White Knight Related
+topics Batman : Anarky Batman : Child of Dreams Batman : Haunted Knight The Batman Chronicles Batman Legends Elseworlds Publications are listed alphabetically
+by published titles . Storylines are listed in publication order . Compiled without respect for canon or `` current '' continuity .
+</item 9>
+
+<item 10>
+Batman: Knightfall
+In the climax to Year One of Injustice : Gods Among Us , Superman confronts Batman in the Batcave as Batman is downloading the formula to a pill that can grant
+the user superhuman strength and durability , stolen from the Fortress of Solitude . While Superman does not want to kill Batman , he chooses to paralyze him by
+breaking his back in a similar fashion to Bane ( albeit by standing on Batman 's back instead of slamming him over his knee as Bane did ) . This puts Batman out
+of commission for much of Year Two as he heals . Reception ( edit ) IGN Comics # 15 ranked Batman : Knightfall Part One - Broken Bat on a list of the 25
+greatest Batman graphic novels , saying : `` What makes ' Knightfall , Part One ' so memorable is not the actually snapping of Batman 's back . It 's the quick
+fall into despair that proves most shocking . The ending is a foregone conclusion as Batman is worn down both physically and mentally . The Batman 's spirit is
+broken before his vertebrae and that 's a feat you 'll never see accomplished anywhere else . ''
+</item 10>
+=== END ITEM id=d1306858ca6aaec5 ===
+
+=== ITEM id=5814b6e81a74477e ===
+Gold sentences and facts:
+Sentence 0: Mount Baker - Snoqualmie National Forest and Nooksack Falls in the North Cascades range of , Washington , deer hunting scenes .
+  Fact 0.0: Mount Baker-Snoqualmie National Forest is in the North Cascades range of Washington
+  Fact 0.1: Nooksack Falls is in the North Cascades range of Washington
+  Fact 0.2: Deer hunting scenes are associated with Mount Baker-Snoqualmie National Forest
+  Fact 0.3: Deer hunting scenes are associated with Nooksack Falls
+Sentence 1: St. Theodosius Russian Orthodox Cathedral , in the Tremont neighborhood of Cleveland , Ohio . The name plaque is clearly visible in one scene . Lemko Hall , Cleveland , Ohio . Also located in Tremont , the wedding banquet was filmed here . The name is clearly visible in one scene . U.S. Steel Central Furnaces in Cleveland , Ohio . Opening sequence steel mill scenes . Patpong , Bangkok , Thailand , the area used to represent Saigon 's red light district . Sai Yok , Kanchanaburi Province , Thailand Mount Baker - Snoqualmie National Forest and Nooksack Falls in the North Cascades range of , Washington , deer hunting scenes . Steubenville , Ohio , for some mill and neighborhood shots . Struthers , Ohio , for external house and long - range road shots . Also including , the town 's bowling alley is the Bowladrome Lanes , located at 56 State Street , Struthers , Ohio . Weirton , West Virginia , for mill and trailer shots . River Kwai , Thailand , Prison camp and initial Russian roulette scene .
+  Fact 1.0: St. Theodosius Russian Orthodox Cathedral is in the Tremont neighborhood of Cleveland, Ohio
+  Fact 1.1: The name plaque of St. Theodosius Russian Orthodox Cathedral is clearly visible in one scene
+  Fact 1.2: Lemko Hall is in Cleveland, Ohio
+  Fact 1.3: Lemko Hall is also located in Tremont
+  Fact 1.4: The wedding banquet was filmed at Lemko Hall
+  Fact 1.5: The name of Lemko Hall is clearly visible in one scene
+  Fact 1.6: U.S. Steel Central Furnaces are in Cleveland, Ohio
+  Fact 1.7: Opening sequence steel mill scenes are at U.S. Steel Central Furnaces
+  Fact 1.8: Patpong, Bangkok, Thailand is the area used to represent Saigon's red light district
+  Fact 1.9: Sai Yok is a location in Kanchanaburi Province, Thailand
+  Fact 1.10: Mount Baker-Snoqualmie National Forest is in the North Cascades range of Washington
+  Fact 1.11: Nooksack Falls is in the North Cascades range of Washington
+  Fact 1.12: Deer hunting scenes are associated with Mount Baker-Snoqualmie National Forest
+  Fact 1.13: Deer hunting scenes are associated with Nooksack Falls
+  Fact 1.14: Steubenville, Ohio is a location used for some mill and neighborhood shots
+  Fact 1.15: Struthers, Ohio is a location used for external house and long-range road shots
+  Fact 1.16: The town's bowling alley is the Bowladrome Lanes
+  Fact 1.17: The Bowladrome Lanes are located at 56 State Street, Struthers, Ohio
+  Fact 1.18: Weirton, West Virginia is a location used for mill and trailer shots
+  Fact 1.19: River Kwai, Thailand is the location of the prison camp and initial Russian roulette scene
+
+Retrieved items:
+<item 1>
+The Deer Hunter
+2 Washburn 's claim 3.2. 3 Deeley 's reaction to the revised script 4 Filming 4.1 The wedding scenes 4.2 The bar and the steel mill 4.3 Hunting the deer 4.4
+Vietnam and the Russian roulette scenes 4.5 Filming locations 5 Post-production 5.1 Sound design 5.2 Previews 6 Soundtrack 6.1 Selected tracks 7 Release 8
+Analysis 8.1 Controversy over Russian roulette 8.1. 1 Critics ' response 8.1.
+</item 1>
+
+<item 2>
+The Deer Hunter
+The cast and crew viewed large amounts of news footage from the war to ensure authenticity . The film was shot over a period of six months . The Clairton scenes
+comprise footage shot in eight different towns in four states : West Virginia , Pennsylvania , Washington , and Ohio . The initial budget of the film was $8.5
+million . Meryl Streep accepted the role of the `` vague , stock girlfriend '' , in order to remain for the duration of filming with John Cazale , who had been
+diagnosed with lung cancer . De Niro had spotted Streep in her stage production of The Cherry Orchard and had suggested that she play his girlfriend Linda .
+Before the beginning of principal photography , Deeley had a meeting with the film 's appointed line producer Robert Relyea . Deeley hired Relyea after meeting
+him on the set of Bullitt ( 1968 ) and was impressed with his experience . However , Relyea declined the job , refusing to disclose his reason why . Deeley
+suspected that Relyea sensed in director Cimino something that would have made production difficult .
+</item 2>
+
+<item 3>
+The Deer Hunter
+( Television Production ) . Chicago , IL : WTTW . ^ Jump up to : The Deer Hunter ( 1978 ) -- Filming locations Jump up ^ `` Lemko Hall '' . The Encyclopedia of
+Cleveland History . May 24 , 2002 . Jump up ^ `` 7 Movie Locations in Bangkok - Bangkok.com Magazine '' . Bangkok.com . Retrieved 2016 - 10 - 17 . Jump up ^ Nam
+, Suzanne ( 2012 ) . Moon Thailand . Avalon Travel . p. 320 . ISBN 9781598809695 . Jump up ^ Krause , Mariella ( 2013 ) . Lonely Planet Pacific Northwest 's
+Best Trips . Lonely Planet . p. 118 . ISBN 1741798159 . Jump up ^ `` The Deer Hunter film locations ( 1978 ) '' . Movie-locations.com . Retrieved 2016 - 10 - 17
+. Jump up ^ Randy Fox Writer and photographer ( 2012 - 05 - 05 ) .
+</item 3>
+
+<item 4>
+The Deer Hunter
+His direction to his actors : `` You put the gun to your head , Chris , you shoot , you fall over and Bobby cradles your head . '' Filming locations ( edit )
+Lemko Hall St. Theodosius Russian Orthodox Cathedral , in the Tremont neighborhood of Cleveland , Ohio . The name plaque is clearly visible in one scene . Lemko
+Hall , Cleveland , Ohio . Also located in Tremont , the wedding banquet was filmed here . The name is clearly visible in one scene . U.S. Steel Central Furnaces
+in Cleveland , Ohio . Opening sequence steel mill scenes . Patpong , Bangkok , Thailand , the area used to represent Saigon 's red light district . Sai Yok ,
+Kanchanaburi Province , Thailand Mount Baker - Snoqualmie National Forest and Nooksack Falls in the North Cascades range of , Washington , deer hunting scenes .
+Steubenville , Ohio , for some mill and neighborhood shots . Struthers , Ohio , for external house and long - range road shots .
+</item 4>
+
+<item 5>
+The Deer Hunter
+Struthers , Ohio , for external house and long - range road shots . Also including , the town 's bowling alley is the Bowladrome Lanes , located at 56 State
+Street , Struthers , Ohio . Weirton , West Virginia , for mill and trailer shots . River Kwai , Thailand , Prison camp and initial Russian roulette scene .
+Post-production ( edit ) By this point , The Deer Hunter had cost $13 million and the film still had to go through an arduous post-production . Film editor
+Peter Zinner was given 600,000 feet of printed film to edit , a monumental task at the time . Producers Spikings and Deeley were pleased with the first cut ,
+which ran for three and a half hours . `` We were thrilled by what we saw , '' wrote Deeley , `` and knew that within the three and a half hours we watched
+there was a riveting film . '' Executives from Universal , including Lew Wasserman and Sid Sheinberg , were not very enthusiastic . `` I think they were shocked
+, '' recalled Spikings . `` What really upset them was ' God Bless America ' .
+</item 5>
+
+<item 6>
+The Deer Hunter
+1 Critics ' response 8.1. 2 Cast and crew response 8.2 Director Cimino 's autobiographical intent 8.3 Homosocial bonding 8.4 Coda of `` God Bless America '' 9
+Reception 9.1 Top - ten lists 9.2 Revisionism following Heaven 's Gate 10 Awards 10.1 Lead - up to awards season 10.2 51st Academy Awards 10.3 Golden Globes
+10.4 Complete list of awards 11 Legacy 11.1 Honors and recognition 12 Home media 13 See also 14 References 14.1 Annotations 14.2 Notes 14.3 Bibliography 14.4
+Further reading 15 External links Plot ( edit ) In the small working class town of Clairton , Pennsylvania , in late 1967 , steel workers Mike Vronsky , Steven
+Pushkov , and Nick Chevotarevich , with the support of their friends and co-workers Stan and Peter `` Axel '' Axelrod and local bar owner and friend John Welsh
+, prepare for two rites of passage : marriage and military service .
+</item 6>
+
+<item 7>
+The Deer Hunter
+The reception scene was filmed at nearby Lemko Hall . The amateur extras lined up for the crowded wedding - dance sequences drank real liquor and beer . The
+scenes were filmed in the summer , but were set in the fall . To accomplish a look of fall , individual leaves were removed from deciduous trees . Zsigmond also
+had to desaturate the colors of the exterior shots , partly in camera and in the laboratory processing . The production manager asked each of the Russian
+immigrant extras to bring to the location a gift - wrapped box to double for wedding presents . The manager figured if the extras did this , not only would the
+production save time and money , but the gifts would also look more authentic . Once the unit wrapped and the extras disappeared , the crew discovered to their
+amusement that the boxes were n't empty but filled with real presents , from china to silverware . `` Who got to keep all these wonderful offerings , '' wrote
+Deeley `` is a mystery I never quite fathomed . '' Cimino originally claimed that the wedding scene would take up 21 minutes of screen time . In the end , it
+took 51 minutes .
+</item 7>
+
+<item 8>
+The Deer Hunter
+In the end , it took 51 minutes . Deeley believes that Cimino always planned to make this prologue last for an hour , and `` the plan was to be advanced by
+stealth rather than straight dealing . '' At this point in the production , nearly halfway through principal photography , Cimino was already over budget , and
+producer Spikings could tell from the script that shooting the extended scene could sink the project . The bar and the steel mill ( edit ) The bar was specially
+constructed in an empty storefront in Mingo Junction , Ohio for $25,000 ; it later became an actual saloon for local steel mill workers . U.S. Steel allowed
+filming inside its Cleveland mill , including placing the actors around the furnace floor , only after securing a $5 million insurance policy . Other filming
+took place in Pittsburgh . Hunting the Deer ( edit ) The first deer to be shot was depicted in a `` gruesome close - up '' , although he was hit with a
+tranquilizer dart . The stag that Michael allows to get away later was the same one used on TV commercials for the Connecticut Life Insurance Company .
+</item 8>
+
+<item 9>
+The Deer Hunter
+Additionally , director Cimino instructed the props department to fashion complete Pennsylvania IDs for each of them , including driver 's licenses , medical
+cards , and various other pieces of paraphernalia , in order to enhance each actor 's sense of his character . Pre-production ( edit ) There has been
+considerable debate , controversy , and conflicting stories about how The Deer Hunter was initially developed and written . Director and co-writer Michael
+Cimino , writer Deric Washburn , and producers Barry Spikings and Michael Deeley all have different versions of how the film came to be . Development ( edit )
+In 1968 , the record company EMI formed a new company called EMI Films , headed by producers Barry Spikings and Michael Deeley . Deeley purchased the first
+draft of a spec script called The Man Who Came to Play , written by Louis Garfinkle and Quinn K. Redeker , for $19,000 . The spec script was about people who go
+to Las Vegas to play Russian roulette . `` The screenplay had struck me as brilliant , '' wrote Deeley , `` but it was n't complete .
+</item 9>
+
+<item 10>
+The Deer Hunter
+I 'd been working 20 hours a day for a month . I got on the plane the next day , and I went back to Manhattan and my carpenter job . '' Deeley 's reaction to
+the revised script ( edit ) Deeley felt the revised script , now called The Deer Hunter , broke fresh ground for the project . The protagonist in the Redeker /
+Garfinkle script , Merle , was an individual who sustained a bad injury in active service and was damaged psychologically by his violent experiences , but was
+nevertheless a tough character with strong nerves and guts . Cimino and Washburn 's revised script distilled the three aspects of Merle 's personality and
+separated them out into three distinct characters . They became three old friends who grew up in the same small industrial town and worked in the same steel
+mill , and in due course were drafted together to Vietnam . In the original script , the roles of Merle ( later renamed Mike ) and Nick were reversed in the
+last half of the film . Nick returns home to Linda , while Mike remains in Vietnam , sends money home to help Steven , and meets his tragic fate at the Russian
+roulette table .
+</item 10>
+=== END ITEM id=5814b6e81a74477e ===

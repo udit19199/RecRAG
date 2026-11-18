@@ -1,0 +1,133 @@
+[
+{"id": "c5775ead7f46d946", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Wangaratta Wahine is an album by Australian band The Captain Matchbox Whoopee Band, released in 1974 and was their second album."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Wangaratta Wahine is an album by Australian band The Captain Matchbox Whoopee Band, released in 1974 and was their second album."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "Wangaratta Wahine is an album by Australian band The Captain Matchbox Whoopee Band, released in 1974 and was their second album."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "02e0f5498dc646e1", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "\"Love Incredible\" is a song by Norwegian DJ and record producer Cashmere Cat, featuring vocals by Cuban-American singer Camila Cabello."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "\"Love Incredible\" is a song by Norwegian DJ and record producer Cashmere Cat, featuring vocals by Cuban-American singer Camila Cabello."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "It was released on 17 February 2017 through Interscope and Mad Love as the third single from his debut album, \"9\"."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "It was released on 17 February 2017 through Interscope and Mad Love as the third single from his debut album, \"9\"."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "\"Love Incredible\" is a song by Norwegian DJ and record producer Cashmere Cat"}, {"item": 10, "quote": "It was released on 17 February 2017 through Interscope and Mad Love as the third single from his debut album, \"9\"."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "An imprint of Interscope Geffen A&M Records, its parent company is Universal Music Group, a subsidiary of Vivendi S.A."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "An imprint of Interscope Geffen A&M Records, its parent company is Universal Music Group, a subsidiary of Vivendi S.A."}]}
+]},
+{"id": "46aa679a0c519da3", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Mosè in Egitto"}, {"item": 8, "quote": "is a three-act opera written by Gioachino Rossini"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "is a three-act opera written by Gioachino Rossini"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "written by Gioachino Rossini to an Italian libretto by Andrea Leone Tottola"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "which was based on a 1760 play by Francesco Ringhieri"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "1760 play by Francesco Ringhieri, \"L'Osiride\"."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Lucrezia Borgia is a melodramatic opera in a prologue and two acts by Gaetano Donizetti."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Lucrezia Borgia is a melodramatic opera in a prologue and two acts by Gaetano Donizetti."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "Lucrezia Borgia is a melodramatic opera in a prologue and two acts by Gaetano Donizetti."}]}
+]},
+{"id": "0abb5ddd46b49d1d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Disteghil Sar or Distaghil Sar"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Disteghil Sar or Distaghil Sar"}, {"item": 2, "quote": "is the highest mountain in the Hispar Muztagh, a subrange of the Karakoram mountain range, in Gilgit-Baltistan."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Hispar Muztagh is a sub-range of the Karakoram mountain range."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "Disteghil Sar or Distaghil Sar"}, {"item": 2, "quote": "is the highest mountain in the Hispar Muztagh, a subrange of the Karakoram mountain range, in Gilgit-Baltistan."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "The mountain has an about 3 km long top ridge above 7400m with three distinct summits"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "The mountain has an about 3 km long top ridge above 7400m with three distinct summits"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "The mountain has an about 3 km long top ridge above 7400m with three distinct summits"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "(north)west 7885m, central 7760 m, and (south)east 7696m or 7535m"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 2, "quote": "(north)west 7885m, central 7760 m, and (south)east 7696m or 7535m"}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 2, "quote": "(north)west 7885m, central 7760 m, and (south)east 7696m or 7535m"}]},
+{"fact": "2.0", "status": "contradicted", "evidence": [{"item": 8, "quote": "The highest mountain in the range is Distaghil Sar (7,885m/25,869 ft)."}]},
+{"fact": "2.1", "status": "contradicted", "evidence": [{"item": 6, "quote": "The highest peak is Huangguan Shan, or Crown Peak"}]}
+]},
+{"id": "fa2465efefbbdab7", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Ronkonkoma is a major railroad station and transportation hub along the Main Line of the Long Island Rail Road in Ronkonkoma, New York."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Ronkonkoma is a major railroad station and transportation hub along the Main Line of the Long Island Rail Road in Ronkonkoma, New York."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Ronkonkoma is a major railroad station and transportation hub along the Main Line of the Long Island Rail Road in Ronkonkoma, New York."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "Ronkonkoma is a major railroad station and transportation hub along the Main Line of the Long Island Rail Road in Ronkonkoma, New York."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Ronkonkoma, New York"}, {"item": 7, "quote": "is a hamlet and census-designated place (CDP) on Long Island in the Town of Islip, New York, United States."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Ronkonkoma, New York"}, {"item": 7, "quote": "is a hamlet and census-designated place (CDP) on Long Island in the Town of Islip, New York, United States."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Ronkonkoma, New York"}, {"item": 7, "quote": "is a hamlet and census-designated place (CDP) on Long Island in the Town of Islip, New York, United States."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "Ronkonkoma, New York"}, {"item": 7, "quote": "is a hamlet and census-designated place (CDP) on Long Island in the Town of Islip, New York, United States."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 7, "quote": "is a hamlet and census-designated place (CDP) on Long Island in the Town of Islip, New York, United States."}]}
+]},
+{"id": "5b659feb094959b0", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Dan Hurley is the son of Hall of Fame high school coach Bob Hurley and younger brother of former Duke and Sacramento Kings guard Bobby Hurley."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Dan Hurley is the son of Hall of Fame high school coach Bob Hurley and younger brother of former Duke and Sacramento Kings guard Bobby Hurley."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Dan Hurley is the son of Hall of Fame high school coach Bob Hurley and younger brother of former Duke and Sacramento Kings guard Bobby Hurley."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "Bobby Hurley, a former All-American point guard at Duke"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "Dan Hurley is the son of Hall of Fame high school coach Bob Hurley and younger brother of former Duke and Sacramento Kings guard Bobby Hurley."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Robert Matthew Hurley (born June 28, 1971) is an American basketball coach, and former college and professional player."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Robert Matthew Hurley (born June 28, 1971) is an American basketball coach, and former college and professional player."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Robert Matthew Hurley (born June 28, 1971) is an American basketball coach, and former college and professional player."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "Robert Matthew Hurley (born June 28, 1971) is an American basketball coach, and former college and professional player."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "Hurley is currently the head coach of the Arizona State men's team."}]}
+]},
+{"id": "11875c9559fa24a0", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Related fields of study include Islamic philosophy and Sufism."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Related fields of study include Islamic philosophy and Sufism."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Sufism or Taṣawwuf"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Arabic: الْتَّصَوُّف [sect]"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "personal noun: صُوفِيّ - \"ṣūfiyy\"/ \"ṣūfī\""}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "مُتَصَوّف - \"mutaṣawwūf\""}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 3, "quote": "which is often defined as \"Islamic mysticism\""}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 3, "quote": "\"the inward dimension of Islam\""}]},
+{"fact": "1.6", "status": "stated", "evidence": [{"item": 3, "quote": "\"the phenomenon of mysticism within Islam\""}]},
+{"fact": "1.7", "status": "stated", "evidence": [{"item": 3, "quote": "is a mystical trend in Islam"}]},
+{"fact": "1.8", "status": "stated", "evidence": [{"item": 3, "quote": "\"characterized ... [by particular] values, ritual practices, doctrines and institutions\""}]},
+{"fact": "1.9", "status": "stated", "evidence": [{"item": 3, "quote": "which began very early on in Islamic history"}]},
+{"fact": "1.10", "status": "stated", "evidence": [{"item": 3, "quote": "represents \"the main manifestation and the most important and central crystallization of\" mystical practice in Islam"}]},
+{"fact": "1.11", "status": "stated", "evidence": [{"item": 3, "quote": "represents \"the main manifestation and the most important and central crystallization of\" mystical practice in Islam"}]}
+]},
+{"id": "3e43aa87c2825e08", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Hänt Extra is a Swedish language weekly celebrity and youth magazine published by Aller Media in Stockholm, Sweden."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Hänt Extra is a Swedish language weekly celebrity and youth magazine published by Aller Media in Stockholm, Sweden."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Hänt Extra is a Swedish language weekly celebrity and youth magazine published by Aller Media in Stockholm, Sweden."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "Hänt Extra is a Swedish language weekly celebrity and youth magazine published by Aller Media in Stockholm, Sweden."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "Hänt Extra is a Swedish language weekly celebrity and youth magazine published by Aller Media in Stockholm, Sweden."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Tea Moderna (magazine)"}, {"item": 8, "quote": "is a Macedonian woman's weekly magazine women."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Tea Moderna (Macedonian: Теа Модерна )"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "is a Macedonian woman's weekly magazine women."}]}
+]},
+{"id": "473d37b3cb869d0d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Miltoniopsis, abbreviated Mltnps in horticultural trade, is a genus of orchids native to Costa Rica, Panama, Venezuela, Colombia, Ecuador, and Peru."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Miltoniopsis, abbreviated Mltnps in horticultural trade, is a genus of orchids native to Costa Rica, Panama, Venezuela, Colombia, Ecuador, and Peru."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "Miltoniopsis, abbreviated Mltnps in horticultural trade, is a genus of orchids native to Costa Rica, Panama, Venezuela, Colombia, Ecuador, and Peru."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Strobilanthes is a genus of about 350 species of flowering plants in the family Acanthaceae"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Strobilanthes is a genus of about 350 species of flowering plants in the family Acanthaceae"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "mostly native to tropical Asia and Madagascar"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "with a few species extending north into temperate regions of Asia."}]}
+]},
+{"id": "bdd37407bd672a18", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "The Rescuers is a 1977 American animated comedy-drama adventure film"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "The Rescuers is a 1977 American animated comedy-drama adventure film"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "The Rescuers is a 1977 American animated comedy-drama adventure film"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "produced by Walt Disney Productions and first released on June 22, 1977, by Buena Vista"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "produced by Walt Disney Productions and first released on June 22, 1977, by Buena Vista"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 8, "quote": "first released on June 22, 1977, by Buena Vista Distribution."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The Muppets is a 2011 American musical comedy film and the seventh theatrical film featuring the Muppets."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "The Muppets is a 2011 American musical comedy film and the seventh theatrical film featuring the Muppets."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "The Muppets is a 2011 American musical comedy film and the seventh theatrical film featuring the Muppets."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "The Muppets is a 2011 American musical comedy film and the seventh theatrical film featuring the Muppets."}]}
+]},
+{"id": "79b6a08b4fc97ca0", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Edward Benjamin Britten, Baron Britten"}, {"item": 9, "quote": "(22 November 1913 – 4 December 1976) was an English composer, conductor and pianist."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "(22 November 1913 – 4 December 1976) was an English composer, conductor and pianist."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "(22 November 1913 – 4 December 1976) was an English composer, conductor and pianist."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "(22 November 1913 – 4 December 1976) was an English composer, conductor and pianist."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Béla Viktor János Bartók"}, {"item": 4, "quote": "25 March 1881 – 26 September 1945) was a Hungarian composer, pianist and an ethnomusicologist."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "25 March 1881 – 26 September 1945) was a Hungarian composer, pianist and an ethnomusicologist."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "25 March 1881 – 26 September 1945) was a Hungarian composer, pianist and an ethnomusicologist."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "25 March 1881 – 26 September 1945) was a Hungarian composer, pianist and an ethnomusicologist."}]}
+]},
+{"id": "6510bdb3d917f249", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "original title: \"Het zwijgen van Loe de Jong [The Silence of Loe de Jong]\""}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "is a 2011 Dutch documentary film by Simonka de Jong, shown as"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "is a 2011 Dutch documentary film by Simonka de Jong, shown as"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "part of the January 2012 New York Jewish Film Festival, presented in partnership with Jewish Museum and Film Society of Lincoln Center."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 9, "quote": "part of the January 2012 New York Jewish Film Festival, presented in partnership with Jewish Museum and Film Society of Lincoln Center."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 9, "quote": "part of the January 2012 New York Jewish Film Festival, presented in partnership with Jewish Museum and Film Society of Lincoln Center."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "The Betrayal — Nerakhoon is a 2008 documentary film directed by Ellen Kuras and Thavisouk Phrasavath."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "The Betrayal — Nerakhoon is a 2008 documentary film directed by Ellen Kuras and Thavisouk Phrasavath."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "The Betrayal — Nerakhoon is a 2008 documentary film directed by Ellen Kuras and Thavisouk Phrasavath."}]}
+]}
+]

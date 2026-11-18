@@ -1,0 +1,63 @@
+[
+  {"id": "55232bfd34efc59e", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Last week, Wang testified that Alameda got access to a special credit line"}]},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "394550aee602ae16", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "9d319a62ebba1205", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 4, "quote": "Jeff Passan reports Ohtani has agreed to a colossal 10-year, $700 million contract"}]},
+    {"fact": "1.1", "status": "contradicted", "evidence": [{"item": 4, "quote": "Jeff Passan reports Ohtani has agreed to a colossal 10-year, $700 million contract"}]},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "1fe439e696645951", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "795fa068d1430dad", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]}
+  ]},
+  {"id": "5904c911bf98038e", "facts": [
+    {"fact": "0.0", "status": "contradicted", "evidence": [{"item": 6, "quote": "The Argentina star had looked like being part of a tour of China, although that's no longer the case"}]},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]}
+  ]}
+]

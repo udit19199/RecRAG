@@ -1,0 +1,256 @@
+[
+ {
+  "id": "a014-9f73f9af99e99051",
+  "facts": [
+   {
+    "fact": "1.4",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a094-fb1aabfa279d0448",
+  "facts": [
+   {
+    "fact": "1.2",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a052-aa90f788c1badb90",
+  "facts": [
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Doe's story was adapted into the 1971 book \"The Exorcist\" by William Peter Blatty, which was then made into the 1973 movie starring Ellen Burstyn and Linda Blair."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a045-cbadfe95337c4f7e",
+  "facts": [
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a034-f24814d19e752012",
+  "facts": [
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a123-4b3277bb1a2d9b18",
+  "facts": [
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Tracing its roots back to 1891 as an independent teachers' college"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a001-05c5d7c571d28064",
+  "facts": [
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a042-7d2e11ef4d0cd59c",
+  "facts": [
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a095-ce32ea058e6f5774",
+  "facts": [
+   {
+    "fact": "2.0",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a089-ed2a29ec953bfc4c",
+  "facts": [
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Frederick King Keller (born 1954 in Buffalo, New York)"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a091-1cf8c24f8e9b0d54",
+  "facts": [
+   {
+    "fact": "2.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Nelson Richard DeMille (born August 23, 1943) is an American author"
+     },
+     {
+      "item": 7,
+      "quote": "DeMille has also written under the pen names Jack Cannon, Kurt Ladner, Ellen Kay and Brad Matthews."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a096-b93ab64120c15112",
+  "facts": [
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a062-1ac6308430f5cebf",
+  "facts": [
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a041-13c5ea97fd751376",
+  "facts": [
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Because FTX had grown so much, he could no longer run both companies, he said."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a029-82becf261efceaaa",
+  "facts": [
+   {
+    "fact": "2.2",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a044-bf4c4d34ff43a5e1",
+  "facts": [
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a022-d419324dfcbe1012",
+  "facts": [
+   {
+    "fact": "2.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a119-fbf43eaaea2e7efa",
+  "facts": [
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Ex parte Young, 209 U.S. 123 (1908) , is a United States Supreme Court case that allows suits in federal courts against officials acting on behalf of states of the union"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a020-9d9a2bd7e6b0ecb3",
+  "facts": [
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a061-7871588008861533",
+  "facts": [
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ }
+]

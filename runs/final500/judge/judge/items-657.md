@@ -1,0 +1,980 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=80c3b74a72f91857 ===
+Gold sentences and facts:
+Sentence 0: Spain : 430 France : 128 Italy : 104 Russia : 100 Portugal : 87 Germany : 77 United Kingdom : 64 Poland : 47 Greece : 46 Turkey : 41 Belgium : 31 Netherlands : 28 Romania : 24 Switzerland : 20 Austria : 14 Sweden : 12 Croatia : 10 Ireland : 9 Ukraine : 9 Hungary : 8 Bulgaria : 6 Cyprus : 6 Czech Republic : 6 Finland : 5 Lithuania : 5 Norway : 5 Serbia : 5 Slovenia : 5 Denmark : 4 Latvia : 4 Estonia : 3 Azerbaijan : 3 Bosnia and Herzegovina : 3 Georgia : 3 Luxembourg : 3 Slovakia : 3 Armenia : 2 Albania : 1 Andorra : 1 Belarus : 1 Iceland : 1 Macedonia : 1 Malta : 1 Monaco : 1 Montenegro : 1
+  Fact 0.0: Spain is listed with the value 430.
+  Fact 0.1: France is listed with the value 128.
+  Fact 0.2: Italy is listed with the value 104.
+  Fact 0.3: Russia is listed with the value 100.
+  Fact 0.4: Portugal is listed with the value 87.
+  Fact 0.5: Germany is listed with the value 77.
+  Fact 0.6: United Kingdom is listed with the value 64.
+  Fact 0.7: Poland is listed with the value 47.
+  Fact 0.8: Greece is listed with the value 46.
+  Fact 0.9: Turkey is listed with the value 41.
+  Fact 0.10: Belgium is listed with the value 31.
+  Fact 0.11: Netherlands is listed with the value 28.
+  Fact 0.12: Romania is listed with the value 24.
+  Fact 0.13: Switzerland is listed with the value 20.
+  Fact 0.14: Austria is listed with the value 14.
+  Fact 0.15: Sweden is listed with the value 12.
+  Fact 0.16: Croatia is listed with the value 10.
+  Fact 0.17: Ireland is listed with the value 9.
+  Fact 0.18: Ukraine is listed with the value 9.
+  Fact 0.19: Hungary is listed with the value 8.
+  Fact 0.20: Bulgaria is listed with the value 6.
+  Fact 0.21: Cyprus is listed with the value 6.
+  Fact 0.22: Czech Republic is listed with the value 6.
+  Fact 0.23: Finland is listed with the value 5.
+  Fact 0.24: Lithuania is listed with the value 5.
+  Fact 0.25: Norway is listed with the value 5.
+  Fact 0.26: Serbia is listed with the value 5.
+  Fact 0.27: Slovenia is listed with the value 5.
+  Fact 0.28: Denmark is listed with the value 4.
+  Fact 0.29: Latvia is listed with the value 4.
+  Fact 0.30: Estonia is listed with the value 3.
+  Fact 0.31: Azerbaijan is listed with the value 3.
+  Fact 0.32: Bosnia and Herzegovina is listed with the value 3.
+  Fact 0.33: Georgia is listed with the value 3.
+  Fact 0.34: Luxembourg is listed with the value 3.
+  Fact 0.35: Slovakia is listed with the value 3.
+  Fact 0.36: Armenia is listed with the value 2.
+  Fact 0.37: Albania is listed with the value 1.
+  Fact 0.38: Andorra is listed with the value 1.
+  Fact 0.39: Belarus is listed with the value 1.
+  Fact 0.40: Iceland is listed with the value 1.
+  Fact 0.41: Macedonia is listed with the value 1.
+  Fact 0.42: Malta is listed with the value 1.
+  Fact 0.43: Monaco is listed with the value 1.
+  Fact 0.44: Montenegro is listed with the value 1.
+Sentence 1: United Kingdom : 64
+  Fact 1.0: United Kingdom is listed with the value 64.
+Sentence 2: Africa South Africa : 9 Egypt : 5 Morocco : 4 Tunisia : 3 Algeria : 1 Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3 Guatemala : 3 Panama : 3 Costa Rica : 2 Ecuador : 2 El Salvador : 2 Honduras : 2 Uruguay : 2 Aruba : 1 Nicaragua : 1 Paraguay : 1 Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9 Philippines : 8 Lebanon : 7 Kazakhstan : 5 Kuwait : 5 Qatar : 5 Jordan : 3 Bahrain : 2 Macau : 2 Oman : 1 Vietnam : 1 Europe Spain : 430 France : 128 Italy : 104 Russia : 100 Portugal : 87 Germany : 77 United Kingdom : 64 Poland : 47 Greece : 46 Turkey : 41 Belgium : 31 Netherlands : 28 Romania : 24 Switzerland : 20 Austria : 14 Sweden : 12 Croatia : 10 Ireland : 9 Ukraine : 9 Hungary : 8 Bulgaria : 6 Cyprus : 6 Czech Republic : 6 Finland : 5 Lithuania : 5 Norway : 5 Serbia : 5 Slovenia : 5 Denmark : 4 Latvia : 4 Estonia : 3 Azerbaijan : 3 Bosnia and Herzegovina : 3 Georgia : 3 Luxembourg : 3 Slovakia : 3 Armenia : 2 Albania : 1 Andorra : 1 Belarus : 1 Iceland : 1 Macedonia : 1 Malta : 1 Monaco : 1 Montenegro : 1 Oceania Australia : 19 New Zealand : 1
+  Fact 2.0: South Africa is listed under Africa with the value 9.
+  Fact 2.1: Egypt is listed under Africa with the value 5.
+  Fact 2.2: Morocco is listed under Africa with the value 4.
+  Fact 2.3: Tunisia is listed under Africa with the value 3.
+  Fact 2.4: Algeria is listed under Africa with the value 1.
+  Fact 2.5: United States is listed under Americas with the value 85.
+  Fact 2.6: Mexico is listed under Americas with the value 84.
+  Fact 2.7: Brazil is listed under Americas with the value 56.
+  Fact 2.8: Canada is listed under Americas with the value 32.
+  Fact 2.9: Colombia is listed under Americas with the value 14.
+  Fact 2.10: Argentina is listed under Americas with the value 10.
+  Fact 2.11: Chile is listed under Americas with the value 9.
+  Fact 2.12: Venezuela is listed under Americas with the value 8.
+  Fact 2.13: Peru is listed under Americas with the value 4.
+  Fact 2.14: Puerto Rico is listed under Americas with the value 4.
+  Fact 2.15: Dominican Republic is listed under Americas with the value 3.
+  Fact 2.16: Guatemala is listed under Americas with the value 3.
+  Fact 2.17: Panama is listed under Americas with the value 3.
+  Fact 2.18: Costa Rica is listed under Americas with the value 2.
+  Fact 2.19: Ecuador is listed under Americas with the value 2.
+  Fact 2.20: El Salvador is listed under Americas with the value 2.
+  Fact 2.21: Honduras is listed under Americas with the value 2.
+  Fact 2.22: Uruguay is listed under Americas with the value 2.
+  Fact 2.23: Aruba is listed under Americas with the value 1.
+  Fact 2.24: Nicaragua is listed under Americas with the value 1.
+  Fact 2.25: Paraguay is listed under Americas with the value 1.
+  Fact 2.26: China is listed under Asia with the value 200.
+  Fact 2.27: Japan is listed under Asia with the value 99.
+  Fact 2.28: South Korea is listed under Asia with the value 43.
+  Fact 2.29: Saudi Arabia is listed under Asia with the value 39.
+  Fact 2.30: Israel is listed under Asia with the value 24.
+  Fact 2.31: India is listed under Asia with the value 20.
+  Fact 2.32: Indonesia is listed under Asia with the value 17.
+  Fact 2.33: Hong Kong is listed under Asia with the value 14.
+  Fact 2.34: Thailand is listed under Asia with the value 11.
+  Fact 2.35: United Arab Emirates is listed under Asia with the value 11.
+  Fact 2.36: Malaysia is listed under Asia with the value 10.
+  Fact 2.37: Singapore is listed under Asia with the value 9.
+  Fact 2.38: Taiwan is listed under Asia with the value 9.
+  Fact 2.39: Philippines is listed under Asia with the value 8.
+  Fact 2.40: Lebanon is listed under Asia with the value 7.
+  Fact 2.41: Kazakhstan is listed under Asia with the value 5.
+  Fact 2.42: Kuwait is listed under Asia with the value 5.
+  Fact 2.43: Qatar is listed under Asia with the value 5.
+  Fact 2.44: Jordan is listed under Asia with the value 3.
+  Fact 2.45: Bahrain is listed under Asia with the value 2.
+  Fact 2.46: Macau is listed under Asia with the value 2.
+  Fact 2.47: Oman is listed under Asia with the value 1.
+  Fact 2.48: Vietnam is listed under Asia with the value 1.
+  Fact 2.49: Spain is listed under Europe with the value 430.
+  Fact 2.50: France is listed under Europe with the value 128.
+  Fact 2.51: Italy is listed under Europe with the value 104.
+  Fact 2.52: Russia is listed under Europe with the value 100.
+  Fact 2.53: Portugal is listed under Europe with the value 87.
+  Fact 2.54: Germany is listed under Europe with the value 77.
+  Fact 2.55: United Kingdom is listed under Europe with the value 64.
+  Fact 2.56: Poland is listed under Europe with the value 47.
+  Fact 2.57: Greece is listed under Europe with the value 46.
+  Fact 2.58: Turkey is listed under Europe with the value 41.
+  Fact 2.59: Belgium is listed under Europe with the value 31.
+  Fact 2.60: Netherlands is listed under Europe with the value 28.
+  Fact 2.61: Romania is listed under Europe with the value 24.
+  Fact 2.62: Switzerland is listed under Europe with the value 20.
+  Fact 2.63: Austria is listed under Europe with the value 14.
+  Fact 2.64: Sweden is listed under Europe with the value 12.
+  Fact 2.65: Croatia is listed under Europe with the value 10.
+  Fact 2.66: Ireland is listed under Europe with the value 9.
+  Fact 2.67: Ukraine is listed under Europe with the value 9.
+  Fact 2.68: Hungary is listed under Europe with the value 8.
+  Fact 2.69: Bulgaria is listed under Europe with the value 6.
+  Fact 2.70: Cyprus is listed under Europe with the value 6.
+  Fact 2.71: Czech Republic is listed under Europe with the value 6.
+  Fact 2.72: Finland is listed under Europe with the value 5.
+  Fact 2.73: Lithuania is listed under Europe with the value 5.
+  Fact 2.74: Norway is listed under Europe with the value 5.
+  Fact 2.75: Serbia is listed under Europe with the value 5.
+  Fact 2.76: Slovenia is listed under Europe with the value 5.
+  Fact 2.77: Denmark is listed under Europe with the value 4.
+  Fact 2.78: Latvia is listed under Europe with the value 4.
+  Fact 2.79: Estonia is listed under Europe with the value 3.
+  Fact 2.80: Azerbaijan is listed under Europe with the value 3.
+  Fact 2.81: Bosnia and Herzegovina is listed under Europe with the value 3.
+  Fact 2.82: Georgia is listed under Europe with the value 3.
+  Fact 2.83: Luxembourg is listed under Europe with the value 3.
+  Fact 2.84: Slovakia is listed under Europe with the value 3.
+  Fact 2.85: Armenia is listed under Europe with the value 2.
+  Fact 2.86: Albania is listed under Europe with the value 1.
+  Fact 2.87: Andorra is listed under Europe with the value 1.
+  Fact 2.88: Belarus is listed under Europe with the value 1.
+  Fact 2.89: Iceland is listed under Europe with the value 1.
+  Fact 2.90: Macedonia is listed under Europe with the value 1.
+  Fact 2.91: Malta is listed under Europe with the value 1.
+  Fact 2.92: Monaco is listed under Europe with the value 1.
+  Fact 2.93: Montenegro is listed under Europe with the value 1.
+  Fact 2.94: Australia is listed under Oceania with the value 19.
+  Fact 2.95: New Zealand is listed under Oceania with the value 1.
+
+Retrieved items:
+<item 1>
+Zara (retailer)
+as of 31 November 2017 : Africa South Africa : 9 Egypt : 5 Morocco : 4 Tunisia : 3 Algeria : 1 Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32
+Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3 Guatemala : 3 Panama : 3 Costa Rica : 2 Ecuador : 2 El
+Salvador : 2 Honduras : 2 Uruguay : 2 Aruba : 1 Nicaragua : 1 Paraguay : 1 Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20
+Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9 Philippines : 8 Lebanon : 7 Kazakhstan : 5 Kuwait :
+5 Qatar : 5 Jordan : 3 Bahrain : 2 Macau : 2 Oman : 1 Vietnam : 1 Europe Spain : 430 France : 128 Italy : 104 Russia : 100 Portugal : 87 Germany : 77 United
+</item 1>
+
+<item 2>
+Zara (retailer)
+Zara ( retailer ) - Wikipedia Zara ( retailer ) Jump to : navigation , search Zara España , S.A. Type Sociedad Anónima Industry Retail Founded Arteixo , Galicia
+( 24 May 1974 ; 43 years ago ( 1974 - 05 - 24 ) ) Founder Amancio Ortega Headquarters Arteixo , Galicia Number of locations 2266 stores Area served Worldwide
+Products Clothing Revenue US $ 15.9 billion ( 2016 ) Parent Inditex Website zara.com Zara ( Spanish : ( ˈθaɾa ) ) is a Galician fast fashion ( clothing and
+accessories ) retailer based in Arteixo , Galicia . The company was founded in 1975 by Amancio Ortega and Rosalía Mera . It is the main brand of the Inditex
+group , the world 's largest apparel retailer . The fashion group also owns brands such as Massimo Dutti , Pull&Bear , Bershka , Stradivarius , Oysho , Zara
+Home , and Uterqüe .
+</item 2>
+
+<item 3>
+Zara (retailer)
+Zara as of 2017 manages up to 20 clothing collections a year . Contents ( hide ) 1 History 1.1 Early history 1.2 Expansion 2 Products 3 Manufacturing and
+distribution 3.1 Non-toxic clothing 4 Controversy 5 Stores 6 See also 7 References 8 External links History ( edit ) Early history ( edit ) Amancio Ortega
+opened the first Zara store in 1975 in downtown A Coruña , Galicia , Spain . Ortega initially named the store Zorba after the classic film Zorba the Greek , but
+after learning there was a bar with the same name two blocks away , they rearranged the letters molded for the sign to ' Zara . ' It is believed the extra ' a '
+came from an additional set of letters that had been made for the company . The first store featured low - priced lookalike products of popular , higher - end
+clothing fashions . Ortega opened additional stores throughout Spain .
+</item 3>
+
+<item 4>
+Zara (retailer)
+The company can design a new product and have finished goods in its stores in four to five weeks ; it can modify existing items in as little as two weeks .
+Shortening the product life cycle means greater success in meeting consumer preferences . If a design does not sell well within a week , it is withdrawn from
+shops , further orders are canceled and a new design is pursued . Zara monitors customers ' fashion changes . Zara has a range of basic designs that are carried
+over from year to year , but some fashion forward designs can stay on the shelves less than four weeks , which encourages Zara fans to make repeat visits . An
+average high - street store in Spain expects customers to visit three times a year . That goes up to 17 times for Zara . Non-toxic clothing ( edit ) In 2011 ,
+Greenpeace started a dialog with Zara to ban harmful toxins from the clothing production . Greenpeace published its `` Toxic threads : the big fashion stitch -
+up '' report in November 2012 as part of its Detox Campaign identifying companies that use harmful toxins in their manufacturing processes .
+</item 4>
+
+<item 5>
+Zara (retailer)
+Zara has a policy of zero advertising ; the company preferred to invest a percentage of revenues in opening new stores instead . Zara set up its own factory in
+La Coruña ( a city known for its textile industry ) in 1980 , and upgraded to reverse milk - run - type production and distribution facilities in 1990 . This
+approach , designed by Toyota Motor Corp. , was called the just - in - time ( JIT ) system . It enabled the company to establish a business model that allows
+self - containment throughout the stages of materials , manufacture , product completion and distribution to stores worldwide within just a few days . Most of
+the products Zara sells are manufactured in proximity countries like Spain , Portugal , Turkey and Morocco . While some competitors outsource all production to
+Asia , Zara manufactures its most fashionable items -- half of all its merchandise -- at a dozen company - owned factories in Spain and Portugal and Turkey ,
+particularly in Galicia and northern Portugal and Turkey . Clothes with a longer shelf life , such as basic T - shirts , are outsourced to low - cost suppliers
+, mainly in Asia .
+</item 5>
+
+<item 6>
+Zara (retailer)
+On September 2010 , Zara launched its online boutique . The website began in Spain , the UK , Portugal , Italy , Germany and France . In November that same year
+, Zara Online extended the service to five more countries : Austria , Ireland , the Netherlands , Belgium and Luxembourg . Online stores began operating in the
+United States in 2011 , Russia and Canada in 2013 , and Mexico , Romania , and South Korea in 2014 . . India In 4 october 2017 . Zara introduced the use of RFID
+technology in its stores in 2014 . The RFID chips are located in the security tags which are removed from clothing when it is purchased and can be reused . The
+chip allows the company to quickly take inventory by detecting radio signals from the RFID tags . When an item is sold , the stockroom is immediately notified
+so that the item can be replaced . An item that is not on the shelf can easily be found with the RFID tag . In 2015 , Zara was ranked 30 on Interbrand 's list
+of best global brands .
+</item 6>
+
+<item 7>
+Zara (retailer)
+Products ( edit ) Zara stores have men 's and women 's clothing , as well as children 's clothing ( Zara Kids ) . Zara 's products are supplied based on
+consumer trends . Its highly responsive supply chain ships new products to stores twice a week . After products are designed , they take ten to fifteen days to
+reach the stores . All of the clothing is processed through the distribution center in Spain . New items are inspected , sorted , tagged , and loaded into
+trucks . In most cases , the clothing is delivered within 48 hours . Zara produces over 450 million items per year . Manufacturing and distribution ( edit )
+Zara Almere - Heren The men 's department of a typical Zara store . Almere , Netherlands Zara clothing made in Portugal Zara store in New York City . Zara store
+in Brisbane Zara store in Palma de Mallorca ( Spain ) . Zara store in Brussels ( Belgium ) . Reportedly , Zara needs just one week to develop a new product and
+get it to stores , compared to the six - month industry average , and launches around 12,000 new designs each year .
+</item 7>
+
+<item 8>
+Zara (retailer)
+: 128 Italy : 104 Russia : 100 Portugal : 87 Germany : 77 United Kingdom : 64 Poland : 47 Greece : 46 Turkey : 41 Belgium : 31 Netherlands : 28 Romania : 24
+Switzerland : 20 Austria : 14 Sweden : 12 Croatia : 10 Ireland : 9 Ukraine : 9 Hungary : 8 Bulgaria : 6 Cyprus : 6 Czech Republic : 6 Finland : 5 Lithuania : 5
+Norway : 5 Serbia : 5 Slovenia : 5 Denmark : 4 Latvia : 4 Estonia : 3 Azerbaijan : 3 Bosnia and Herzegovina : 3 Georgia : 3 Luxembourg : 3 Slovakia : 3 Armenia
+: 2 Albania : 1 Andorra : 1 Belarus : 1 Iceland : 1 Macedonia : 1 Malta : 1 Monaco : 1 Montenegro : 1 Oceania Australia : 19 New Zealand : 1 See also ( edit )
+Spain portal Companies portal Fashion portal Bonds ( clothing ) Gap Inc . H&M List of companies of Spain European Retail Round Table References ( edit ) Jump up
+^ `` Zara '' . inditex.com .
+</item 8>
+
+<item 9>
+Zara (retailer)
+Ortega opened additional stores throughout Spain . During the 1980s , Ortega changed the design , manufacturing , and distribution process to reduce lead times
+and react to new trends in a quicker way , which he called `` instant fashions '' . The improvements included the use of information technologies and using
+groups of designers instead of individuals . Zara 's previous logo Expansion ( edit ) In 1988 , the company started its international expansion through Porto ,
+Portugal . In 1989 , it entered the United States , and then France in 1990 . During the 1990s , Zara expanded to Mexico ( 1992 ) , Greece , Belgium and Sweden
+( 1993 ) . In the early 2000s , Zara opened its first stores in Japan and Singapore ( 2002 ) , Russia and Malaysia ( 2003 ) , China , Morocco , Estonia ,
+Hungary and Romania ( 2004 ) , the Philippines , Costa Rica and Indonesia ( 2005 ) , South Korea ( 2008 ) , India ( 2010 ) , and South Africa and Australia (
+2011 ) .
+</item 9>
+
+<item 10>
+Zara (retailer)
+When the news was eventually picked up by media outlets , and Inditex , Zara 's owning company , was asked to comment on the issue , Inditex replied that the
+items in question have been suspended from sale , and that they are in contact with Bassen 's lawyer to clarify and address the issue . In November 2017 ,
+customers shopping at Zara stores in Istanbul , Turkey found handwritten notes purportedly from Turkish workers in the pockets of in - store garments asking
+shoppers to pressure Zara into paying them the wages they claim they are owed . Stores ( edit ) There are over 2,100 Zara stores located across 88 countries .
+Zara usually selects the best located and most expensive real estate locations in the world to open its flagship stores . Zara 's flagship stores : Fifth Avenue
+, New York Oxford Street , London Calle Serrano , Madrid Via del Corso , Rome Champs - Élysées , Paris Oscar Freire Street , Sao Paulo Corso Vittorio Emanuele ,
+Milan Nevsky Prospect , Saint Petersburg Shibuya and Ginza , Tokyo Myeongdong in Seoul Flora Fountain in Mumbai The number of Zara stores in each country ,
+</item 10>
+=== END ITEM id=80c3b74a72f91857 ===
+
+=== ITEM id=9fb00b15a6ef6391 ===
+Gold sentences and facts:
+Sentence 0: 2016 production of still wine State Production ( gal ) Production ( % ) Alabama 34,966 0.004 % Arizona 190,008 0.024 % Arkansas 246,363 0.031 % California 680,272,512 84.354 % Colorado 556,994 0.069 % Connecticut 134,517 0.017 % Florida 1,634,103 0.203 % Georgia 276,144 0.034 % Idaho 497,007 0.062 % Illinois 391,805 0.049 % Indiana 1,411,540 0.175 % Iowa 335,522 0.042 % Kansas 104,129 0.013 % Kentucky 2,176,059 0.270 % Louisiana 38,232 0.005 % Maine 48,222 0.006 % Maryland 436,185 0.054 % Massachusetts 792,884 0.098 % Michigan 2,576,238 0.319 % Minnesota 331,946 0.041 % Missouri 993,831 0.123 % Montana 33,445 0.004 % Nebraska 120,366 0.015 % New Hampshire 159,316 0.020 % New Jersey 1,832,325 0.227 % New Mexico 749,818 0.093 % New York 27,969,308 3.468 % North Carolina 1,903,060 0.236 % Ohio 5,938,738 0.736 % Oklahoma 70,204 0.009 % Oregon 11,822,972 1.466 % Pennsylvania 12,405,181 1.538 % South Carolina 77,842 0.010 % South Dakota 139,738 0.017 % Tennessee 1,279,752 0.159 % Texas 1,907,299 0.237 % Vermont 2,172,526 0.269 % Virginia 2,157,395 0.268 % Washington 40,747,190 5.053 % West Virginia 40,733 0.005 % Wisconsin 1,129,405 0.140 % Others 312,051 0.039 % Sum 806,447,891 100 %
+  Fact 0.0: The table reports the 2016 production of still wine.
+  Fact 0.1: Alabama produced 34,966 gallons of still wine in 2016, which is 0.004 percent of production.
+  Fact 0.2: Arizona produced 190,008 gallons of still wine in 2016, which is 0.024 percent of production.
+  Fact 0.3: Arkansas produced 246,363 gallons of still wine in 2016, which is 0.031 percent of production.
+  Fact 0.4: California produced 680,272,512 gallons of still wine in 2016, which is 84.354 percent of production.
+  Fact 0.5: Colorado produced 556,994 gallons of still wine in 2016, which is 0.069 percent of production.
+  Fact 0.6: Connecticut produced 134,517 gallons of still wine in 2016, which is 0.017 percent of production.
+  Fact 0.7: Florida produced 1,634,103 gallons of still wine in 2016, which is 0.203 percent of production.
+  Fact 0.8: Georgia produced 276,144 gallons of still wine in 2016, which is 0.034 percent of production.
+  Fact 0.9: Idaho produced 497,007 gallons of still wine in 2016, which is 0.062 percent of production.
+  Fact 0.10: Illinois produced 391,805 gallons of still wine in 2016, which is 0.049 percent of production.
+  Fact 0.11: Indiana produced 1,411,540 gallons of still wine in 2016, which is 0.175 percent of production.
+  Fact 0.12: Iowa produced 335,522 gallons of still wine in 2016, which is 0.042 percent of production.
+  Fact 0.13: Kansas produced 104,129 gallons of still wine in 2016, which is 0.013 percent of production.
+  Fact 0.14: Kentucky produced 2,176,059 gallons of still wine in 2016, which is 0.270 percent of production.
+  Fact 0.15: Louisiana produced 38,232 gallons of still wine in 2016, which is 0.005 percent of production.
+  Fact 0.16: Maine produced 48,222 gallons of still wine in 2016, which is 0.006 percent of production.
+  Fact 0.17: Maryland produced 436,185 gallons of still wine in 2016, which is 0.054 percent of production.
+  Fact 0.18: Massachusetts produced 792,884 gallons of still wine in 2016, which is 0.098 percent of production.
+  Fact 0.19: Michigan produced 2,576,238 gallons of still wine in 2016, which is 0.319 percent of production.
+  Fact 0.20: Minnesota produced 331,946 gallons of still wine in 2016, which is 0.041 percent of production.
+  Fact 0.21: Missouri produced 993,831 gallons of still wine in 2016, which is 0.123 percent of production.
+  Fact 0.22: Montana produced 33,445 gallons of still wine in 2016, which is 0.004 percent of production.
+  Fact 0.23: Nebraska produced 120,366 gallons of still wine in 2016, which is 0.015 percent of production.
+  Fact 0.24: New Hampshire produced 159,316 gallons of still wine in 2016, which is 0.020 percent of production.
+  Fact 0.25: New Jersey produced 1,832,325 gallons of still wine in 2016, which is 0.227 percent of production.
+  Fact 0.26: New Mexico produced 749,818 gallons of still wine in 2016, which is 0.093 percent of production.
+  Fact 0.27: New York produced 27,969,308 gallons of still wine in 2016, which is 3.468 percent of production.
+  Fact 0.28: North Carolina produced 1,903,060 gallons of still wine in 2016, which is 0.236 percent of production.
+  Fact 0.29: Ohio produced 5,938,738 gallons of still wine in 2016, which is 0.736 percent of production.
+  Fact 0.30: Oklahoma produced 70,204 gallons of still wine in 2016, which is 0.009 percent of production.
+  Fact 0.31: Oregon produced 11,822,972 gallons of still wine in 2016, which is 1.466 percent of production.
+  Fact 0.32: Pennsylvania produced 12,405,181 gallons of still wine in 2016, which is 1.538 percent of production.
+  Fact 0.33: South Carolina produced 77,842 gallons of still wine in 2016, which is 0.010 percent of production.
+  Fact 0.34: South Dakota produced 139,738 gallons of still wine in 2016, which is 0.017 percent of production.
+  Fact 0.35: Tennessee produced 1,279,752 gallons of still wine in 2016, which is 0.159 percent of production.
+  Fact 0.36: Texas produced 1,907,299 gallons of still wine in 2016, which is 0.237 percent of production.
+  Fact 0.37: Vermont produced 2,172,526 gallons of still wine in 2016, which is 0.269 percent of production.
+  Fact 0.38: Virginia produced 2,157,395 gallons of still wine in 2016, which is 0.268 percent of production.
+  Fact 0.39: Washington produced 40,747,190 gallons of still wine in 2016, which is 5.053 percent of production.
+  Fact 0.40: West Virginia produced 40,733 gallons of still wine in 2016, which is 0.005 percent of production.
+  Fact 0.41: Wisconsin produced 1,129,405 gallons of still wine in 2016, which is 0.140 percent of production.
+  Fact 0.42: Other states produced 312,051 gallons of still wine in 2016, which is 0.039 percent of production.
+  Fact 0.43: The total 2016 production of still wine was 806,447,891 gallons, which is 100 percent.
+
+Retrieved items:
+<item 1>
+American wine
+522 0.042 % Kansas 104,129 0.013 % Kentucky 2,176,059 0.270 % Louisiana 38,232 0.005 % Maine 48,222 0.006 % Maryland 436,185 0.054 % Massachusetts 792,884 0.098
+% Michigan 2,576,238 0.319 % Minnesota 331,946 0.041 % Missouri 993,831 0.123 % Montana 33,445 0.004 % Nebraska 120,366 0.015 % New Hampshire 159,316 0.020 %
+New Jersey 1,832,325 0.227 % New Mexico 749,818 0.093 % New York 27,969,308 3.468 % North Carolina 1,903,060 0.236 % Ohio 5,938,738 0.736 % Oklahoma 70,204
+0.009 % Oregon 11,822,972 1.466 % Pennsylvania 12,405,181 1.538 % South Carolina 77,842 0.010 % South Dakota 139,738 0.
+</item 1>
+
+<item 2>
+American wine
+American wine - wikipedia American wine Jump to : navigation , search American wine has been produced for over 300 years . Today , wine production is undertaken
+in all fifty states , with California producing 89 percent of all US wine . The United States is the fourth - largest wine producing country in the world after
+France , Italy , and Spain . The North American continent is home to several native species of grape , including Vitis labrusca , Vitis riparia , Vitis
+rotundifolia , and Vitis vulpina . But the wine making industry is based on the cultivation of the European Vitis vinifera , which was introduced by European
+settlers . With more than 1,100,000 acres ( 4,500 km ) under vine , the United States is the sixth-most planted country in the world after France , Italy ,
+Spain , China and Turkey . Contents ( hide ) 1 History 2 Wine regions 2.1 Production by state 3 Appellation system 3.1 Appellation labeling laws 3.2
+Semi-generic wines 3.3 Fighting varietals 4 Other U.S.
+</item 2>
+
+<item 3>
+American wine
+During the Great Depression , consumers demanded cheap `` jug wine '' ( so - called dago red ) and sweet , fortified ( high alcohol ) wine . Before Prohibition
+dry table wines outsold sweet wines by three to one , but afterward , the ratio of demand changed dramatically . As a result , by 1935 , 81 % of California 's
+production was sweet wines . For decades , wine production was low and limited . Leading the way to new methods of wine production was research conducted at the
+University of California , Davis and some of the state universities in New York . Faculty at the universities published reports on which varieties of grapes
+grew best in which regions , held seminars on winemaking techniques , consulted with grape growers and winemakers , offered academic degrees in viticulture ,
+and promoted the production of quality wines . In the 1970s and 1980s , success by Californian winemakers in the northern part of the state helped to secure
+foreign investment from other winemaking regions , most notably the Champenois of France . Winemakers also cultivated vineyards in Oregon and Washington , on
+Long Island in New York , and numerous other new locales .
+</item 3>
+
+<item 4>
+American wine
+labeling laws 5 Three - tier distribution 6 Largest producers 7 See also 8 References 9 Further reading 10 External links History ( edit ) Main article :
+History of American wine Sparkling wine made from a second label of Pleasant Valley Wine Company in New York which was the first bonded winery in the United
+States . The first Europeans to explore North America , a Viking expedition from Greenland , called it Vinland because of the profusion of grape vines they
+found . The earliest wine made in what is now the United States was produced between 1562 and 1564 by French Huguenot settlers from Scuppernong grapes at a
+settlement near Jacksonville , Florida . In the early American colonies of Virginia and the Carolinas , wine making was an official goal laid out in the
+founding charters . However , settlers discovered that the wine made from the various native grapes had flavors which were unfamiliar and which they did not
+like . This led to repeated efforts to grow the familiar European Vitis vinifera varieties , beginning with the Virginia Company exporting French vinifera vines
+with French vignerons to Virginia in 1619 .
+</item 4>
+
+<item 5>
+American wine
+This Supreme Court decision meant that states could decide to allow both out - of - state wine sales and in - state sales , or ban both together . Convenience
+stores and retail stores are large distributors of wine , with over 175,000 outlets that sell wine across the United States . In addition , there are around
+332,000 other locations ( bars , restaurants , etc . ) that sell wine , contributing to the $30 + billion in annual sales over the past three years . In 2010 ,
+the average monthly per - store sales of wine jumped to nearly $12,000 from $9,084 in 2009 . The average gross margin dollars from wine increased to $3,324 from
+$2,616 in the year prior , with gross margin percentages up to an average 28.2 percent in 2010 , versus 27 percent in 2009 . Largest producers ( edit ) As of
+2005 The largest producers of American wine . E & J Gallo Winery - Accounts for more than a quarter of all U.S. wine sales and is the second largest producer in
+the world .
+</item 5>
+
+<item 6>
+American wine
+Americans became more educated about wines and increased their demand for high - quality wine . All 50 states now have some acreage in vineyard cultivation . By
+2004 , 668 million gallons ( 25.3 million hectoliters ) of wine were consumed in the United States . Today , the U.S. produces over 800 million gallons of wine
+a year , of which California produces more than 84 % , followed by Washington , New York , Pennsylvania , and Oregon . In the second decade of the 21st century
+, the US wine industry faces the growing challenges of competition from international exports and managing domestic regulations on interstate sales and shipment
+of wine . Wine regions ( edit ) The Pacific Northwest includes in the winemaking regions of Washington State where varieties like Cabernet Sauvignon are grown .
+There are nearly 3,000 commercial vineyards in the United States , and at least one winery in each of the 50 states . West Coast -- More than 90 % of the total
+American wine production occurs in the states of California , Washington and Oregon .
+</item 6>
+
+<item 7>
+American wine
+Prior to the early 1970s , all grapes had to be from the vintage year . All labels must list the alcohol content based on percentage by volume . For bottles
+labeled as varietals at least 75 % of the grape must be of the variety . In Oregon , the requirement is 90 % . American wine labels are also required to list if
+they contain sulfites and carry the Surgeon General 's warning about alcohol consumption . Three - tier distribution ( edit ) Following the repeal of
+Prohibition , the United States federal government allowed each state to regulate its own production and sale of alcohol . For the majority of states this led
+to the development of a three - tier distribution system between the producer , wholesaler and consumer . Depending on the state there are some exceptions ,
+with wineries allowed to sell directly to consumers on site at the winery or to ship wine across state lines . Some states allow interstate sales through
+e-commerce . In the 2005 case of Granholm v. Heald , the Supreme Court of the United States struck down state laws banning interstate shipments but allowing in
+- state sales .
+</item 7>
+
+<item 8>
+American wine
+wine sales and is the second largest producer in the world . Constellation Brands - With foreign wine holdings Constellation is the largest producer in the
+world and includes Robert Mondavi Winery and Columbia Winery in its portfolio The Wine Group - San Francisco - based business which owns the Franzia box wine
+label , Concannon Vineyard and Mogen David kosher wine . Bronco Wine Company - Owners of the Charles Shaw wine `` Two Buck Chuck '' line which accounts for
+nearly 5 million of Bronco 's annual average 9 million cases per year . Diageo - UK based company with American holdings in Sterling Vineyards , Beaulieu
+Vineyard and Chalone Vineyard Brown - Forman Corporation - Owners of the Korbel Champagne Cellars brand Beringer Blass - Australian based wine division of
+Foster 's Group and owner of the Beringer wine and Stags ' Leap Winery brands Jackson Wine Estates - Owners of the Kendall - Jackson brand See also ( edit )
+Wine portal American Viticultural Area Globalization of wine Judgment of Paris References ( edit ) Jump up ^ United States Department of Agriculture `` Global
+Wine Report August 2006 Archived April 8 , 2008 , at the Wayback Machine.
+</item 8>
+
+<item 9>
+American wine
+Although a Vitis vinifera variety , it is a grape of `` very modest '' quality . Jean - Louis Vignes was one of the early settlers to use a higher quality
+vinifera in his vineyard near Los Angeles . The first winery in the United States to become commercially successful was founded in Cincinnati , Ohio in the
+mid-1830s by Nicholas Longworth . He made a sparkling wine from Catawba grapes . By 1855 Ohio had 1500 acres in vineyards , according to travel writer Frederick
+Law Olmsted , who said it was more than in Missouri and Illinois , which each had 1100 acres in wine . German immigrants from the late 1840s had been
+instrumental in building the wine industry in those states . In the 1860s , vineyards in the Ohio River Valley were attacked by Black rot . This prompted
+several winemakers to move north to the Finger Lakes region of western New York . During this time , the Missouri wine industry , centered on the German colony
+in Hermann , was expanding rapidly along both shores of the Missouri River west of St. Louis .
+</item 9>
+
+<item 10>
+American wine
+Rocky Mountain Region -- Notably Idaho and Colorado Southwestern United States -- Notably Texas and New Mexico Midwestern United States -- Notably Missouri and
+Illinois Great Lakes region -- Notably Michigan , northern New York and Ohio East Coast of the United States -- Notably western New York State and eastern Long
+Island , New Jersey , Pennsylvania , Virginia , North Carolina and Florida . Production by state ( edit ) Production of still wine per state in 2016 was as
+follows : 2016 production of still wine State Production ( gal ) Production ( % ) Alabama 34,966 0.004 % Arizona 190,008 0.024 % Arkansas 246,363 0.031 %
+California 680,272,512 84.354 % Colorado 556,994 0.069 % Connecticut 134,517 0.017 % Florida 1,634,103 0.203 % Georgia 276,144 0.034 % Idaho 497,007 0.062 %
+Illinois 391,805 0.049 % Indiana 1,411,540 0.175 % Iowa 335,522 0.042 % Kansas 104,129 0.013 % Kentucky 2,
+</item 10>
+=== END ITEM id=9fb00b15a6ef6391 ===
+
+=== ITEM id=32e267ea5049cd74 ===
+Gold sentences and facts:
+Sentence 0: 2017 World Series Team ( Wins ) Manager ( s ) Season Houston Astros ( 4 ) A.J. Hinch 101 -- 61 (. 623 ) Los Angeles Dodgers ( 3 ) Dave Roberts 104 -- 58 (. 642 ) Dates October 24 -- November 1 MVP George Springer ( Houston ) Umpires Phil Cuzzi ( Games 1 -- 2 ) , Gerry Davis ( crew chief ) , Laz Díaz , Dan Iassogna , Bill Miller , Paul Nauert , Mark Wegner ( Games 3 -- 7 ) ALCS Houston Astros defeated New York Yankees , 4 -- 3 NLCS Los Angeles Dodgers defeated Chicago Cubs , 4 -- 1 Broadcast Television Fox Fox Deportes MLB International TV announcers Joe Buck , John Smoltz , Ken Rosenthal , and Tom Verducci ( Fox ) Rolando Nichols , Carlos Álvarez , Edgar Gonzalez , and Jaime Motta ( Fox Deportes ) Matt Vasgersian and Buck Martinez ( MLB International ) Radio ESPN Radio ESPN Deportes Radio Sportstalk 790 ( HOU -- English ) FM 94.1 HD3 ( HOU -- Spanish ) AM 570 LA Sports ( LAD -- English ) Univision America 1020 ( LAD -- Spanish ) Radio Korea 1540 ( LAD -- Korean ) Radio announcers Dan Shulman and Aaron Boone ( ESPN ) Eduardo Ortega , Renato Bermúdez , José Francisco Rivera , and Orlando Hernández ( ESPN Deportes ) Robert Ford and Steve Sparks ( HOU -- English ) Alex Treviño and Francisco Romero ( HOU -- Spanish ) Charley Steiner and Rick Monday ( LAD -- English ) Jaime Jarrín and Jorge Jarrín ( LAD -- Spanish ) Richard Choi and Chong Ho Yim ( LAD -- Korean ) World Series Program ← 2016 World Series
+  Fact 0.0: The 2017 World Series table lists the Houston Astros as the team with 4 wins.
+  Fact 0.1: The 2017 World Series table lists the Los Angeles Dodgers as the team with 3 wins.
+  Fact 0.2: A.J. Hinch managed the Houston Astros in the 2017 season, with a record of 101 wins and 61 losses (.623).
+  Fact 0.3: Dave Roberts managed the Los Angeles Dodgers in the 2017 season, with a record of 104 wins and 58 losses (.642).
+  Fact 0.4: The 2017 World Series was played from October 24 to November 1.
+  Fact 0.5: George Springer of the Houston Astros was the MVP of the 2017 World Series.
+  Fact 0.6: Phil Cuzzi was an umpire for Games 1 and 2 of the 2017 World Series.
+  Fact 0.7: Gerry Davis was the crew chief umpire of the 2017 World Series.
+  Fact 0.8: Laz Diaz was an umpire of the 2017 World Series.
+  Fact 0.9: Dan Iassogna was an umpire of the 2017 World Series.
+  Fact 0.10: Bill Miller was an umpire of the 2017 World Series.
+  Fact 0.11: Paul Nauert was an umpire of the 2017 World Series.
+  Fact 0.12: Mark Wegner was an umpire for Games 3 to 7 of the 2017 World Series.
+  Fact 0.13: The Houston Astros defeated the New York Yankees 4 to 3 in the 2017 ALCS.
+  Fact 0.14: The Los Angeles Dodgers defeated the Chicago Cubs 4 to 1 in the 2017 NLCS.
+  Fact 0.15: The 2017 World Series was broadcast on Fox television.
+  Fact 0.16: The 2017 World Series was broadcast on Fox Deportes.
+  Fact 0.17: The 2017 World Series was broadcast on MLB International TV.
+  Fact 0.18: Joe Buck, John Smoltz, Ken Rosenthal and Tom Verducci were TV announcers on Fox.
+  Fact 0.19: Rolando Nichols, Carlos Alvarez, Edgar Gonzalez and Jaime Motta were TV announcers on Fox Deportes.
+  Fact 0.20: Matt Vasgersian and Buck Martinez were TV announcers on MLB International.
+  Fact 0.21: The 2017 World Series was broadcast on ESPN Radio.
+  Fact 0.22: The 2017 World Series was broadcast on ESPN Deportes Radio.
+  Fact 0.23: Sportstalk 790 carried the Houston Astros English radio broadcast.
+  Fact 0.24: FM 94.1 HD3 carried the Houston Astros Spanish radio broadcast.
+  Fact 0.25: AM 570 LA Sports carried the Los Angeles Dodgers English radio broadcast.
+  Fact 0.26: Univision America 1020 carried the Los Angeles Dodgers Spanish radio broadcast.
+  Fact 0.27: Radio Korea 1540 carried the Los Angeles Dodgers Korean radio broadcast.
+  Fact 0.28: Dan Shulman and Aaron Boone were radio announcers on ESPN.
+  Fact 0.29: Eduardo Ortega, Renato Bermudez, Jose Francisco Rivera and Orlando Hernandez were radio announcers on ESPN Deportes.
+  Fact 0.30: Robert Ford and Steve Sparks were English radio announcers for the Houston Astros.
+  Fact 0.31: Alex Trevino and Francisco Romero were Spanish radio announcers for the Houston Astros.
+  Fact 0.32: Charley Steiner and Rick Monday were English radio announcers for the Los Angeles Dodgers.
+  Fact 0.33: Jaime Jarrin and Jorge Jarrin were Spanish radio announcers for the Los Angeles Dodgers.
+  Fact 0.34: Richard Choi and Chong Ho Yim were Korean radio announcers for the Los Angeles Dodgers.
+  Fact 0.35: The 2017 World Series followed the 2016 World Series.
+Sentence 1: The 2017 World Series was the championship series of Major League Baseball 's ( MLB ) 2017 season . The 113th edition of the World Series , it was played between October 24 and November 1 . The series was a best - of - seven playoff between the National League ( NL ) champion Los Angeles Dodgers and the American League ( AL ) champion Houston Astros . It was sponsored by the internet television service YouTube TV and officially known as the World Series presented by YouTube TV .
+  Fact 1.0: The 2017 World Series was the championship series of Major League Baseball's 2017 season.
+  Fact 1.1: The 2017 World Series was the 113th edition of the World Series.
+  Fact 1.2: The 2017 World Series was played between October 24 and November 1.
+  Fact 1.3: The 2017 World Series was a best-of-seven playoff.
+  Fact 1.4: The 2017 World Series was played between the National League champion Los Angeles Dodgers.
+  Fact 1.5: The 2017 World Series was played between the American League champion Houston Astros.
+  Fact 1.6: The 2017 World Series was sponsored by the internet television service YouTube TV.
+  Fact 1.7: The 2017 World Series was officially known as the World Series presented by YouTube TV.
+
+Retrieved items:
+<item 1>
+2005 World Series
+J. Pierzynski Harold Reynolds Frank Robinson Ken Singleton John Smoltz Jeff Torborg Tom Verducci Guest commentators Bret Boone David Cone Terry Francona Luis
+Gonzalez Ozzie Guillén Al Leiter David Ortiz A.J. Pierzynski Lou Piniella Jimmy Rollins Nick Swisher Field reporters Erin Andrews Curt Menefee Chris Myers Ken
+Rosenthal Studio hosts Greg Amsinger Kevin Burkhardt Chip Caray Brian Kenny Keith Olbermann Patrick O'Neal Chris Rose Rob Stone Jeanne Zelasko Studio analysts
+Eric Byrnes Keith Hernandez Raúl Ibañez Gabe Kapler Kevin Kennedy Kevin Millar C.J. Nitkowski Dan Plesac Billy Ripken Pete Rose Mark Sweeney Frank Thomas Mitch
+Williams Dontrelle Willis Dave Winfield Lore The Flip Play ( 2001 ) Steve Bartman ( 2003 ) Yankees -- Red Sox rivalry The 53 - Minute 7th Inning ( 2015 )
+Regular season 1998 Major League Baseball home run record chase Philip Humber 's perfect game ( 2012 ) World Series games The Last Night of the Yankee Dynasty (
+2001 ) Game 6 of the 2011 World Series Walk -
+</item 1>
+
+<item 2>
+2017 World Series
+Seattle Texas NL East Atlanta Miami NY Mets Philadelphia Washington NL Central Chi Cubs Cincinnati Milwaukee Pittsburgh St. Louis NL West Arizona Colorado LA
+Dodgers San Diego San Francisco 2017 MLB draft 2017 All - Star Game 2017 MLB Little League Classic Players Weekend 2017 World Series Houston Astros 2017 World
+Series champions 1 Carlos Correa 2 Alex Bregman 3 Cameron Maybin 4 George Springer ( World Series MVP ) 9 Marwin González 10 Yuli Gurriel 11 Evan Gattis 15
+Carlos Beltrán 16 Brian McCann 21 Derek Fisher 22 Josh Reddick 27 José Altuve ( AL MVP ) 30 Juan Centeno 31 Collin McHugh 35 Justin Verlander ( ALCS MVP ) 36
+Will Harris 41 Brad Peacock 43 Lance McCullers Jr . 44 Luke Gregerson 46 Francisco Liriano 47 Chris Devenski 50 Charlie Morton 53 Ken Giles 59 Joe Musgrove 60
+Dallas Keuchel Manager 14 A.J.
+</item 2>
+
+<item 3>
+2017 World Series
+2017 World Series - wikipedia 2017 World Series Jump to : navigation , search 2017 World Series Team ( Wins ) Manager ( s ) Season Houston Astros ( 4 ) A.J.
+Hinch 101 -- 61 (. 623 ) Los Angeles Dodgers ( 3 ) Dave Roberts 104 -- 58 (. 642 ) Dates October 24 -- November 1 MVP George Springer ( Houston ) Umpires Phil
+Cuzzi ( Games 1 -- 2 ) , Gerry Davis ( crew chief ) , Laz Díaz , Dan Iassogna , Bill Miller , Paul Nauert , Mark Wegner ( Games 3 -- 7 ) ALCS Houston Astros
+defeated New York Yankees , 4 -- 3 NLCS Los Angeles Dodgers defeated Chicago Cubs , 4 -- 1 Broadcast Television Fox Fox Deportes MLB International TV announcers
+Joe Buck , John Smoltz , Ken Rosenthal , and Tom Verducci ( Fox ) Rolando Nichols , Carlos Álvarez , Edgar Gonzalez ,
+</item 3>
+
+<item 4>
+2017 World Series
+1997 1998 1999 2000s -- 2010s 2000 2001 2002 2003 2005 2006 2007 2008 2009 2011 2012 2013 2014 2015 2016 2017 See also Pre-World Series champions World Series
+champions Most Valuable Players Starting pitchers Babe Ruth Award Commissioner 's Trophy World Series ring Appearances Streaks Droughts Series ( by franchise )
+Broadcasters TV ratings ALCS NLCS ALDS NLDS ALWC NLWC Game 7 1989 Loma Prieta earthquake Dauvray Cup Temple Cup Chronicle - Telegraph Cup Book : World Series
+Category : World Series Fox Major League Baseball Related programs The Cheap Seats ( 2010 -- 2011 ) MLB Whiparound Major League Baseball Game of the Week
+Thursday Night Baseball ( 1997 -- 2001 ) This Week in Baseball ( 2000 -- 2011 ) Related articles DirecTV N3D FoxBox FoxTrax Scooter Television contracts ( cable
+) MLB Network World Series television ratings National coverage Fox ( 1996 -- present ) FS1 ( 2014 -- present
+</item 4>
+
+<item 5>
+2017 World Series
+Sports Business Journal . Retrieved October 4 , 2017 . External links ( edit ) 2017 World Series at Baseball Reference 2017 Major League Baseball postseason
+Part of the 2017 Major League Baseball season World Series American League Championship Series National League Championship Series American League Division
+Series National League Division Series American League Wild Card Game National League Wild Card Game American League teams Boston Red Sox Cleveland Indians
+Houston Astros Minnesota Twins New York Yankees National League teams Arizona Diamondbacks Chicago Cubs Colorado Rockies Los Angeles Dodgers Washington
+Nationals World Series No World Series was held in 1904 because the NL champions refused to participate ; no World Series was held in 1994 due to a players '
+strike . 1900s -- 1910s 1900 1901 1902 1903 1904 1905 1906 1907 1908 1909 1910 1911 1912 1913 1914 1915 1916 1917 1918 1919 1920s -- 1930s 1920 1921 1922 1923
+1924 1925 1926 1927 1928 1929
+</item 5>
+
+<item 6>
+2005 World Series
+1977 1978 1979 1980s -- 1990s 1980 1981 1982 1984 1985 1986 1988 1989 1990 1991 1992 1993 1994 1995 1997 1998 1999 2000s -- 2010s 2000 2001 2002 2003 2005 2006
+2007 2008 2009 2011 2012 2013 2014 2015 2016 2017 See also Pre-World Series champions World Series champions Most Valuable Players Starting pitchers Babe Ruth
+Award Commissioner 's Trophy World Series ring Appearances Streaks Droughts Series ( by franchise ) Broadcasters TV ratings ALCS NLCS ALDS NLDS ALWC NLWC Game 7
+1989 Loma Prieta earthquake Dauvray Cup Temple Cup Chronicle - Telegraph Cup Book : World Series Category : World Series Chicago White Sox Based in Chicago ,
+</item 6>
+
+<item 7>
+2017 World Series
+and Tom Verducci ( Fox ) Rolando Nichols , Carlos Álvarez , Edgar Gonzalez , and Jaime Motta ( Fox Deportes ) Matt Vasgersian and Buck Martinez ( MLB
+International ) Radio ESPN Radio ESPN Deportes Radio Sportstalk 790 ( HOU -- English ) FM 94.1 HD3 ( HOU -- Spanish ) AM 570 LA Sports ( LAD -- English )
+Univision America 1020 ( LAD -- Spanish ) Radio Korea 1540 ( LAD -- Korean ) Radio announcers Dan Shulman and Aaron Boone ( ESPN ) Eduardo Ortega , Renato
+Bermúdez , José Francisco Rivera , and Orlando Hernández ( ESPN Deportes ) Robert Ford and Steve Sparks ( HOU -- English ) Alex Treviño and Francisco Romero (
+HOU -- Spanish ) Charley Steiner and Rick Monday ( LAD -- English ) Jaime Jarrín and Jorge Jarrín ( LAD -- Spanish ) Richard Choi and Chong Ho Yim ( LAD --
+Korean ) World Series Program ← 2016 World Series The 2017 World Series was the championship series of Major League Baseball 's ( MLB ) 2017 season .
+</item 7>
+
+<item 8>
+2017 World Series
+J. Pierzynski Harold Reynolds Frank Robinson Ken Singleton John Smoltz Jeff Torborg Tom Verducci Guest commentators Bret Boone David Cone Terry Francona Luis
+Gonzalez Ozzie Guillén Al Leiter David Ortiz A.J. Pierzynski Lou Piniella Jimmy Rollins Nick Swisher Field reporters Erin Andrews Curt Menefee Chris Myers Ken
+Rosenthal Studio hosts Greg Amsinger Kevin Burkhardt Chip Caray Brian Kenny Keith Olbermann Patrick O'Neal Chris Rose Rob Stone Jeanne Zelasko Studio analysts
+Eric Byrnes Keith Hernandez Raúl Ibañez Gabe Kapler Kevin Kennedy Kevin Millar C.J. Nitkowski Dan Plesac Billy Ripken Pete Rose Mark Sweeney Frank Thomas Mitch
+Williams Dontrelle Willis Dave Winfield Lore The Flip Play ( 2001 ) Steve Bartman ( 2003 ) Yankees -- Red Sox rivalry The 53 - Minute 7th Inning ( 2015 )
+Regular season 1998 Major League Baseball home run record chase Philip Humber 's perfect game ( 2012 ) World Series games The Last Night of the Yankee Dynasty (
+2001 ) Game 6 of the 2011 World Series Walk -
+</item 8>
+
+<item 9>
+Game seven
+1966 1967 1968 1969 1970 1971 1972 1973 1976 1977 1978 1979 1980s -- 1990s 1980 1981 1982 1984 1985 1986 1988 1989 1990 1991 1992 1993 1994 1995 1997 1998 1999
+2000s -- 2010s 2000 2001 2002 2003 2005 2006 2007 2008 2009 2011 2012 2013 2014 2015 2016 2017 See also Pre-World Series champions World Series champions Most
+Valuable Players Starting pitchers Babe Ruth Award Commissioner 's Trophy World Series ring Appearances Streaks Droughts Series ( by franchise ) Broadcasters TV
+ratings ALCS NLCS ALDS NLDS ALWC NLWC Game 7 1989 Loma Prieta earthquake Dauvray Cup Temple Cup Chronicle - Telegraph Cup Book : World Series Category : World
+Series Stanley Cup Finals Stanley Cup awarded on challenge basis 1893 --
+</item 9>
+
+<item 10>
+2017 World Series
+`` Overview of World Series home - field advantage '' . Major League Baseball . Retrieved November 2 , 2017 . We are just a week away from the World Series
+presented by YouTube TV Jump up ^ `` Astros , Dodgers complete record - setting World Series '' . ESPN . November 2 , 2017 . Retrieved November 2 , 2017 . ^
+Jump up to : Castrovince , Anthony ( November 1 , 2017 ) . `` Springer swats his way to MVP honors '' . Major League Baseball . Retrieved November 2 , 2017 .
+Jump up ^ Schoenfield , David ( November 2 , 2017 ) . `` George Springer wins World Series MVP , ties record with five homers '' . ESPN . Retrieved November 2 ,
+2017 . Jump up ^ Whicker , Mark ( October 22 , 2017 ) . `` Whicker : Dodgers , Houston Astros try to rekindle their 80s rivalry '' . Orange County Register .
+Retrieved October 25 , 2017 .
+</item 10>
+=== END ITEM id=32e267ea5049cd74 ===
+
+=== ITEM id=89ebde19a5bc1f30 ===
+Gold sentences and facts:
+Sentence 0: A. planci has a very wide Indo - Pacific distribution . It is perhaps most common in Australia , but can occur at tropical and subtropical latitudes from the Red Sea and the east African coast across the Indian Ocean , and across the Pacific Ocean to the west coast of Central America . It occurs where coral reefs or hard coral communities occur in this region .
+  Fact 0.0: A. planci has a very wide Indo-Pacific distribution.
+  Fact 0.1: A. planci is perhaps most common in Australia.
+  Fact 0.2: A. planci can occur at tropical and subtropical latitudes from the Red Sea.
+  Fact 0.3: A. planci can occur at tropical and subtropical latitudes from the east African coast.
+  Fact 0.4: A. planci can occur across the Indian Ocean.
+  Fact 0.5: A. planci can occur across the Pacific Ocean to the west coast of Central America.
+  Fact 0.6: A. planci occurs where coral reefs or hard coral communities occur in this region.
+
+Retrieved items:
+<item 1>
+Crown-of-thorns starfish
+An appraisal of the evidence '' . Marine Pollution Bulletin . 51 ( 1 -- 4 ) : 266 -- 78 . doi : 10.1016 / j. marpolbul. 2004.10. 035 . PMID 15757727 . Jump up ^
+Fabricius , K.E. ; Okaji , K. ; De'Ath , G. ( 2010 ) . `` Three lines of evidence to link outbreaks of the crown - of - thorns seastar Acanthaster planci to the
+release of larval food limitation '' . Coral Reefs. 29 ( 3 ) : 593 -- 605 . Bibcode : 2010CorRe ... 29 ... 593F . doi : 10.1007 / s00338 - 010 - 0628 - z . Jump
+up ^ Kaufman , MG ; Goodfriend , W ; Kohler - Garrigan , A ; Walker , ED ; Klug , MJ ( 2002 ) .
+</item 1>
+
+<item 2>
+Crown-of-thorns starfish
+Crown - of - thorns starfish - wikipedia Crown - of - thorns starfish Jump to : navigation , search Crown - of - thorns starfish Scientific classification
+Kingdom : Animalia Phylum : Echinodermata Class : Asteroidea Order : Valvatida Family : Acanthasteridae Genus : Acanthaster Species : Acanthaster planci
+Binomial name Acanthaster planci ( Linnaeus , 1758 ) The crown - of - thorns starfish , Acanthaster planci , is a large , multiple - armed starfish that usually
+preys upon hard , or stony , coral polyps ( Scleractinia ) . The crown - of - thorns starfish receives its name from venomous thorn - like spines that cover its
+upper surface , resembling the biblical crown of thorns . It is one of the largest starfish in the world . A. planci has a very wide Indo - Pacific distribution
+.
+</item 2>
+
+<item 3>
+Crown-of-thorns starfish
+A. planci has a very wide Indo - Pacific distribution . It is perhaps most common in Australia , but can occur at tropical and subtropical latitudes from the
+Red Sea and the east African coast across the Indian Ocean , and across the Pacific Ocean to the west coast of Central America . It occurs where coral reefs or
+hard coral communities occur in this region .
+</item 3>
+
+<item 4>
+Crown-of-thorns starfish
+1365 - 2486.2006. 01252. x . Jump up ^ Wilson , SK ; Dolman , AM ; Cheal , AJ ; Emslie , MJ Pratchett ; et al. ( 2009 ) . `` Maintenance of fish diversity on
+disturbed coral reefs '' . Coral reefs. 28 ( 1 ) : 3 -- 14 . Bibcode : 2009CorRe ... 28 ... 3W . doi : 10.1007 / s00338 - 008 - 0431 - 2 . Jump up ^ Birkeland
+and Lucas ( 1990 ) . Acanthaster planci : Major Management Problem of Coral Reefs . CRC Press . pp. 36 -- 40 . ISBN 0 - 8493 - 6599 - 6 . ^ Jump up to : Moran ,
+PJ ( 1986 ) . `` The Acanthaster phenomenon '' . Oceanogr . Mar. Biol. Annu. Rev. 24 : 379 -- 480 .
+</item 4>
+
+<item 5>
+Crown-of-thorns starfish
+00775630.167. 1 . Jump up ^ Kenchington , R ( 1978 ) . `` The crown - of - thorns crisis in Australia : A retrospective analysis '' . Environmental
+Conservation. 5 ( 1 ) : 11 -- 20 . doi : 10.1017 / s0376892900005191 . Jump up ^ James , Peter ( 1976 ) . Requiem for the Reef . Brisbane : Foundation Press .
+ISBN 0 - 9597383 - 0 - 4 . Jump up ^ Brown , and Willey ( 1972 ) . Crown of Thorns : The Death of the Great Barrier Reef ? . Angus and Robertson . ISBN 0 - 207
+- 12390 - X . Jump up ^ Reichelt , RE ; Bradbury , RH ; Moran , P J. ( 1990 ) . `` The crown - of - thorns starfish , Acanthaster planci , on the Great Barrier
+Reef '' . Mathematical and Computer Modelling.
+</item 5>
+
+<item 6>
+Crown-of-thorns starfish
+on Indo - Pacific Marine Biology , Agana ( Guam ) . pp. Abstract . Jump up ^ Babcock ; Mundy and Whitehead ( 1994 ) . `` Sperm diffusion models and in situ
+confirmation of long - distance fertilization in the free - spawning asteroid Acanthaster planci '' . Biological Bulletin . 186 : 17 -- 28 . doi : 10.2307 /
+1542033 . JSTOR 1542033 . Jump up ^ Beach , DH ; Hanscomb , NJ ; Ormond , RFG. ( 1975 ) . `` Spawning pheromone in crown - of - thorns starfish '' . Nature .
+254 ( 5496 ) : 135 -- 136 . Bibcode : 1975Natur. 254 ... 135B . doi : 10.1038 / 254135a0 . PMID 1117997 . Jump up ^ Sweatman , HPA. ( 1995 ) . `` A field study
+of fish predation on juvenile crown - of - thorns starfish '' .
+</item 6>
+
+<item 7>
+Crown-of-thorns starfish
+Its prehensile ability arises from the two rows of numerous tube feet that extend to the tip of each arm . In being multiple - armed , it has lost the five-fold
+symmetry ( pentamerism ) typical of starfish , although it begins its life cycle with this symmetry . Adult crown - of - thorns starfish normally range in size
+from 25 to 35 cm ( 9.8 to 13.8 in ) . They have up to 21 arms . Although the body of the crown of thorns has a stiff appearance , it is able to bend and twist
+to fit around the contours of the corals on which it feeds . The underside of each arm has a series of closely fitting plates which form a groove and extend in
+rows to the mouth . They are usually of subdued colours , pale brown to grey - green , but they may be garish with bright warning colours in some parts of their
+wide range . The long , sharp spines on the sides of the starfish 's arms and upper ( aboral ) surface resemble thorns and create a crown - like shape , giving
+the creature its name .
+</item 7>
+
+<item 8>
+Crown-of-thorns starfish
+This article 's use of external links may not follow Wikipedia 's policies or guidelines . Please improve this article by removing excessive or inappropriate
+external links , and converting useful links where appropriate into footnote references . ( March 2016 ) ( Learn how and when to remove this template message )
+An overview of the crown - of - thorns starfish as observed on the Great Barrier Reef Current status of crown - of - thorns starfish on Australia 's Great
+Barrier Reef History of outbreaks of crown - of - thorns starfish on Australia 's Great Barrier Reef since 1986 ( Animation ) Recent information on crown - of -
+thorns starfish on Australia 's Great Barrier Reef Controlling crown - of - thorns starfish Crown - of - thorn outbreak simulation Microdocs : Crown - of -
+thorns Acanthaster planci expedition 1969 to Eastern Caroline Islands An infographic relating to the crown - of - thorns starfish in the Great Barrier Reef
+Crown of Thorns starfish 1971 Fathom magazine ( Australia ) Taxon identifiers Wd : Q26634 ADW : Acanthaster_planci ARKive : acanthaster - planci BioLib :
+</item 8>
+
+<item 9>
+Crown-of-thorns starfish
+It occurs where coral reefs or hard coral communities occur in this region . Contents ( hide ) 1 Description 2 Taxonomy 2.1 Family 2.2 Genus and species 2.3
+Genetic studies 3 Biology 3.1 Toxins 3.2 Behaviour 3.3 Predators 4 Life - cycle 4.1 Gametes and embryos 4.2 Larval stages 4.3 Metamorphosis , development and
+growth 4.4 Field observations of life - cycle 5 Ecology 5.1 Ecological impact on reefs 5.2 Population outbreaks 5.3 Causes of population outbreaks 6 Population
+control 7 References 8 External links Description ( edit ) Unusual brightly coloured crown - of - thorns starfish , Thailand The body form of the crown - of -
+thorns starfish is fundamentally the same as that of a typical starfish , with a central disk and radiating arms . Its special traits , however , include being
+disc - shaped , multiple - armed , flexible , prehensile , and heavily spined , and having a large ratio of stomach surface to body mass .
+</item 9>
+
+<item 10>
+Crown-of-thorns starfish
+ISBN 978 - 0 - 412 - 03541 - 8 . Jump up ^ Caso , M.J. ( 1974 ) . `` External morphology of Acanthaster planci ( Linnaeus ) '' . Journal of the Marine
+Biological Associataion of India . 16 ( 1 ) : 83 -- 93 . Jump up ^ `` Crown of Thorns Starfish ( Acanthaster Planci ) . '' Crown of Thorns Starfish Videos ,
+Photos and Facts . Web . 5 November 2014 . < http://www.arkive.org/crown-of-thorns-starfish/acanthaster-planci/ > . Jump up ^ Shedd , John G. ( 2006 ) . ``
+Crown of Thorns Sea Star '' . Shedd Aquarium . Archived from the original on 2014 - 02 - 22 . Retrieved 2013 - 06 - 29 . ^ Jump up to : Lucas , J.S. ; Jones ,
+M.M. ( 1976 ) .
+</item 10>
+=== END ITEM id=89ebde19a5bc1f30 ===
+
+=== ITEM id=891140c4eba07e0c ===
+Gold sentences and facts:
+Sentence 0: During the 1995 -- 96 season , Alan Shearer became the first player to score 100 Premier League goals , and holds the record for the fewest games taken to reach 100 , doing so in 124 appearances . He also holds the record for most goals scored in the Premier League . After Shearer , Harry Kane is the second - fastest to 100 goals , doing so in 141 games .
+  Fact 0.0: During the 1995-96 season, Alan Shearer became the first player to score 100 Premier League goals.
+  Fact 0.1: Alan Shearer holds the record for the fewest games taken to reach 100 goals.
+  Fact 0.2: Alan Shearer reached 100 goals in 124 appearances.
+  Fact 0.3: Alan Shearer holds the record for most goals scored in the Premier League.
+  Fact 0.4: Harry Kane is the second-fastest player to reach 100 goals.
+  Fact 0.5: Harry Kane reached 100 goals in 141 games.
+Sentence 1: List of Premier League players with 100 or more goals Rank Player Position Premier League club ( s ) Goals Played Ratio Shearer , Alan Alan Shearer Blackburn Rovers , Newcastle United 260 441 0.59 Rooney , Wayne Wayne Rooney Everton , Manchester United 208 484 0.43 Cole , Andy Andy Cole Newcastle United , Manchester United , Blackburn Rovers , Fulham , Manchester City , Portsmouth 187 414 0.45 Lampard , Frank Frank Lampard MF West Ham United , Chelsea , Manchester City 177 609 0.29 Henry , Thierry Thierry Henry Arsenal 175 258 0.68 6 Fowler , Robbie Robbie Fowler Liverpool , Leeds United , Manchester City 163 379 0.43 7 Defoe , Jermain Jermain Defoe West Ham United , Portsmouth , Tottenham Hotspur , Sunderland , Bournemouth 162 485 0.33 8 Owen , Michael Michael Owen Liverpool , Newcastle United , Manchester United , Stoke City 150 326 0.46 9 Ferdinand , Les Les Ferdinand Queens Park Rangers , Newcastle United , Tottenham Hotspur , West Ham United , Leicester City , Bolton Wanderers 149 351 0.42 10 Sheringham , Teddy Teddy Sheringham Nottingham Forest , Tottenham Hotspur , Manchester United , Portsmouth , West Ham United 146 418 0.35 11 van Persie , Robin Robin van Persie Arsenal , Manchester United 144 280 0.51 12 Agüero , Sergio Sergio Agüero Manchester City 143 204 0.70 13 Hasselbaink , Jimmy Floyd Jimmy Floyd Hasselbaink Leeds United , Chelsea , Middlesbrough , Charlton Athletic 127 288 0.44 14 Keane , Robbie Robbie Keane Coventry City , Leeds United , Tottenham Hotspur , Liverpool , West Ham United , Aston Villa 126 349 0.36 15 Anelka , Nicolas Nicolas Anelka Arsenal , Liverpool , Manchester City , Bolton Wanderers , Chelsea , West Bromwich Albion 125 364 0.34 16 Yorke , Dwight Dwight Yorke Aston Villa , Manchester United , Blackburn Rovers , Birmingham City , Sunderland 123 375 0.33 17 Gerrard , Steven Steven Gerrard MF Liverpool 120 504 0.24 18 Wright , Ian Ian Wright Arsenal , West Ham United 113 213 0.53 19 Dublin , Dion Dion Dublin Manchester United , Coventry City , Aston Villa 111 312 0.36 20 Heskey , Emile Emile Heskey Leicester City , Liverpool , Birmingham City , Wigan Athletic , Aston Villa 110 516 0.21 21 Giggs , Ryan Ryan Giggs MF Manchester United 109 632 0.17 22 Crouch , Peter Peter Crouch Aston Villa , Southampton , Liverpool , Portsmouth , Tottenham Hotspur , Stoke City 107 454 0.23 22 Scholes , Paul Paul Scholes MF Manchester United 107 499 0.21 24 Bent , Darren Darren Bent Ipswich Town , Charlton Athletic , Tottenham Hotspur , Sunderland , Aston Villa , Fulham 106 276 0.38 25 Kane , Harry Harry Kane Tottenham Hotspur , Norwich City 104 149 0.70 26 Drogba , Didier Didier Drogba Chelsea 104 254 0.41 27 Lukaku , Romelu Romelu Lukaku West Bromwich Albion , Everton , Manchester United 101 216 0.47 28 Le Tissier , Matt Matt Le Tissier MF Southampton 100 270 0.37 Italics show players still playing professional football ; Bold shows players still playing in the Premier League .
+  Fact 1.0: The list is of Premier League players with 100 or more goals.
+  Fact 1.1: The table columns are rank, player, position, Premier League club(s), goals, games played, and ratio.
+  Fact 1.2: Alan Shearer played for Blackburn Rovers and Newcastle United, scoring 260 goals in 441 games (ratio 0.59).
+  Fact 1.3: Wayne Rooney played for Everton and Manchester United, scoring 208 goals in 484 games (ratio 0.43).
+  Fact 1.4: Andy Cole played for Newcastle United, Manchester United, Blackburn Rovers, Fulham, Manchester City and Portsmouth, scoring 187 goals in 414 games (ratio 0.45).
+  Fact 1.5: Frank Lampard (position MF) played for West Ham United, Chelsea and Manchester City, scoring 177 goals in 609 games (ratio 0.29).
+  Fact 1.6: Thierry Henry played for Arsenal, scoring 175 goals in 258 games (ratio 0.68).
+  Fact 1.7: Rank 6: Robbie Fowler played for Liverpool, Leeds United and Manchester City, scoring 163 goals in 379 games (ratio 0.43).
+  Fact 1.8: Rank 7: Jermain Defoe played for West Ham United, Portsmouth, Tottenham Hotspur, Sunderland and Bournemouth, scoring 162 goals in 485 games (ratio 0.33).
+  Fact 1.9: Rank 8: Michael Owen played for Liverpool, Newcastle United, Manchester United and Stoke City, scoring 150 goals in 326 games (ratio 0.46).
+  Fact 1.10: Rank 9: Les Ferdinand played for Queens Park Rangers, Newcastle United, Tottenham Hotspur, West Ham United, Leicester City and Bolton Wanderers, scoring 149 goals in 351 games (ratio 0.42).
+  Fact 1.11: Rank 10: Teddy Sheringham played for Nottingham Forest, Tottenham Hotspur, Manchester United, Portsmouth and West Ham United, scoring 146 goals in 418 games (ratio 0.35).
+  Fact 1.12: Rank 11: Robin van Persie played for Arsenal and Manchester United, scoring 144 goals in 280 games (ratio 0.51).
+  Fact 1.13: Rank 12: Sergio Aguero played for Manchester City, scoring 143 goals in 204 games (ratio 0.70).
+  Fact 1.14: Rank 13: Jimmy Floyd Hasselbaink played for Leeds United, Chelsea, Middlesbrough and Charlton Athletic, scoring 127 goals in 288 games (ratio 0.44).
+  Fact 1.15: Rank 14: Robbie Keane played for Coventry City, Leeds United, Tottenham Hotspur, Liverpool, West Ham United and Aston Villa, scoring 126 goals in 349 games (ratio 0.36).
+  Fact 1.16: Rank 15: Nicolas Anelka played for Arsenal, Liverpool, Manchester City, Bolton Wanderers, Chelsea and West Bromwich Albion, scoring 125 goals in 364 games (ratio 0.34).
+  Fact 1.17: Rank 16: Dwight Yorke played for Aston Villa, Manchester United, Blackburn Rovers, Birmingham City and Sunderland, scoring 123 goals in 375 games (ratio 0.33).
+  Fact 1.18: Rank 17: Steven Gerrard (position MF) played for Liverpool, scoring 120 goals in 504 games (ratio 0.24).
+  Fact 1.19: Rank 18: Ian Wright played for Arsenal and West Ham United, scoring 113 goals in 213 games (ratio 0.53).
+  Fact 1.20: Rank 19: Dion Dublin played for Manchester United, Coventry City and Aston Villa, scoring 111 goals in 312 games (ratio 0.36).
+  Fact 1.21: Rank 20: Emile Heskey played for Leicester City, Liverpool, Birmingham City, Wigan Athletic and Aston Villa, scoring 110 goals in 516 games (ratio 0.21).
+  Fact 1.22: Rank 21: Ryan Giggs (position MF) played for Manchester United, scoring 109 goals in 632 games (ratio 0.17).
+  Fact 1.23: Rank 22: Peter Crouch played for Aston Villa, Southampton, Liverpool, Portsmouth, Tottenham Hotspur and Stoke City, scoring 107 goals in 454 games (ratio 0.23).
+  Fact 1.24: Rank 22: Paul Scholes (position MF) played for Manchester United, scoring 107 goals in 499 games (ratio 0.21).
+  Fact 1.25: Rank 24: Darren Bent played for Ipswich Town, Charlton Athletic, Tottenham Hotspur, Sunderland, Aston Villa and Fulham, scoring 106 goals in 276 games (ratio 0.38).
+  Fact 1.26: Rank 25: Harry Kane played for Tottenham Hotspur and Norwich City, scoring 104 goals in 149 games (ratio 0.70).
+  Fact 1.27: Rank 26: Didier Drogba played for Chelsea, scoring 104 goals in 254 games (ratio 0.41).
+  Fact 1.28: Rank 27: Romelu Lukaku played for West Bromwich Albion, Everton and Manchester United, scoring 101 goals in 216 games (ratio 0.47).
+  Fact 1.29: Rank 28: Matt Le Tissier (position MF) played for Southampton, scoring 100 goals in 270 games (ratio 0.37).
+  Fact 1.30: Italics mark players still playing professional football.
+  Fact 1.31: Bold marks players still playing in the Premier League.
+
+Retrieved items:
+<item 1>
+List of Premier League players with 100 or more goals
+Bold shows players still playing in the Premier League . See also ( edit ) English football first tier top scorers List of top Premier League goal scorers by
+season List of Premier League players with 500 or more appearances References ( edit ) Jump up ^ `` Bent poised to join 100 club '' . PremierLeague.com .
+Premier League . 30 January 2012 . Archived from the original on 20 October 2013 . Retrieved 2 February 2012 . Jump up ^ `` Bent delighted to join 100 goals
+club '' . PremierLeague.com . Premier League . 2 February 2012 . Retrieved 2 February 2012 . Jump up ^ Dan Kilpatrick ( 4 February 2018 ) . `` Tottenham striker
+Harry Kane scores 100th Premier League goal '' . ESPN . ^ Jump up to : `` Premier League Player Stats : Goals '' . PremierLeague.com . Premier League .
+Retrieved 10 December 2017 . Jump up ^ `` Premier League Players -- Overview and Stats '' . PremierLeague.com . Premier League .
+</item 1>
+
+<item 2>
+List of Premier League players with 100 or more goals
+gulf Associated competitions Asia Trophy FA Community Shield FA Cup EFL Cup UEFA Champions League UEFA Europa League Premier League 2 U18 Premier League Premier
+League International Cup Retrieved from `` https://en.wikipedia.org/w/index.php?title=List_of_Premier_League_players_with_100_or_more_goals&oldid=837185393 ''
+Categories : Lists of Premier League players Association football records and statistics Hidden categories : Wikipedia pending changes protected pages Use dmy
+dates from March 2012 Articles with hCards Talk About Wikipedia Bosanski Dansk Español Italiano Shqip Українська Edit links This page was last edited on 19
+April 2018 , at 07 : 24 . About Wikipedia
+</item 2>
+
+<item 3>
+List of Premier League players with 100 or more goals
+During the 1995 -- 96 season , Alan Shearer became the first player to score 100 Premier League goals , and holds the record for the fewest games taken to reach
+100 , doing so in 124 appearances . He also holds the record for most goals scored in the Premier League . After Shearer , Harry Kane is the second - fastest to
+100 goals , doing so in 141 games . Players ( edit ) As of 18 April 2018 . Sources : List of Premier League players with 100 or more goals Rank Player Position
+Premier League club ( s ) Goals Played Ratio Shearer , Alan Alan Shearer Blackburn Rovers , Newcastle United 260 441 0.59 Rooney , Wayne Wayne Rooney Everton ,
+Manchester United 208 484 0.43 Cole , Andy Andy Cole Newcastle United , Manchester United , Blackburn Rovers , Fulham , Manchester City , Portsmouth 187 414
+0.45 Lampard , Frank Frank Lampard MF West Ham United , Chelsea , Manchester City 177 609 0.29 Henry , Thierry Thierry Henry Arsenal 175 258 0.68 6 Fowler ,
+Robbie Robbie Fowler Liverpool ,
+</item 3>
+
+<item 4>
+List of Premier League players with 100 or more goals
+Charlton Athletic 127 288 0.44 14 Keane , Robbie Robbie Keane Coventry City , Leeds United , Tottenham Hotspur , Liverpool , West Ham United , Aston Villa 126
+349 0.36 15 Anelka , Nicolas Nicolas Anelka Arsenal , Liverpool , Manchester City , Bolton Wanderers , Chelsea , West Bromwich Albion 125 364 0.34 16 Yorke ,
+Dwight Dwight Yorke Aston Villa , Manchester United , Blackburn Rovers , Birmingham City , Sunderland 123 375 0.33 17 Gerrard , Steven Steven Gerrard MF
+Liverpool 120 504 0.24 18 Wright , Ian Ian Wright Arsenal , West Ham United 113 213 0.53 19 Dublin , Dion Dion Dublin Manchester United , Coventry City , Aston
+Villa 111 312 0.36 20 Heskey , Emile Emile Heskey Leicester City , Liverpool , Birmingham City , Wigan Athletic , Aston Villa 110 516 0.21 21 Giggs , Ryan Ryan
+Giggs MF Manchester United 109 632 0.17 22 Crouch ,
+</item 4>
+
+<item 5>
+List of Premier League players with 100 or more goals
+PremierLeague.com . Premier League . Retrieved 10 December 2017 . Premier League Seasons 1992 -- 93 1993 -- 94 1994 -- 95 1995 -- 96 1996 -- 97 1997 -- 98 1998
+-- 99 1999 -- 2000 2000 -- 01 2001 -- 02 2002 -- 03 2003 -- 04 2004 -- 05 2005 -- 06 2006 -- 07 2007 -- 08 2008 -- 09 2009 -- 10 2010 -- 11 2011 -- 12 2012 --
+13 2013 -- 14 2014 -- 15 2015 -- 16 2016 -- 17 2017 -- 18 2018 -- 19 Clubs 2017 -- 18 AFC Bournemouth Arsenal Brighton & Hove Albion Burnley Chelsea Crystal
+Palace Everton Huddersfield Town Leicester City Liverpool Manchester City Manchester United Newcastle United Southampton Stoke City Swansea City Tottenham
+Hotspur Watford West Bromwich Albion West Ham
+</item 5>
+
+<item 6>
+List of Premier League players with 100 or more goals
+68 6 Fowler , Robbie Robbie Fowler Liverpool , Leeds United , Manchester City 163 379 0.43 7 Defoe , Jermain Jermain Defoe West Ham United , Portsmouth ,
+Tottenham Hotspur , Sunderland , Bournemouth 162 485 0.33 8 Owen , Michael Michael Owen Liverpool , Newcastle United , Manchester United , Stoke City 150 326
+0.46 9 Ferdinand , Les Les Ferdinand Queens Park Rangers , Newcastle United , Tottenham Hotspur , West Ham United , Leicester City , Bolton Wanderers 149 351
+0.42 10 Sheringham , Teddy Teddy Sheringham Nottingham Forest , Tottenham Hotspur , Manchester United , Portsmouth , West Ham United 146 418 0.35 11 van Persie
+, Robin Robin van Persie Arsenal , Manchester United 144 280 0.51 12 Agüero , Sergio Sergio Agüero Manchester City 143 204 0.70 13 Hasselbaink , Jimmy Floyd
+Jimmy Floyd Hasselbaink Leeds United , Chelsea , Middlesbrough , Charlton Athletic 127 288 0.44 14 Keane ,
+</item 6>
+
+<item 7>
+List of Premier League players with 100 or more goals
+List of Premier League players with 100 or more goals - wikipedia List of Premier League players with 100 or more goals This is the latest accepted revision ,
+reviewed on 19 April 2018 . Jump to : navigation , search See also : List of footballers in England and Scotland by number of league goals Alan Shearer was the
+first player to score 200 Premier League goals , and only player to score 100 goals for two clubs . Wayne Rooney is the second Premier League player to score
+200 goals or more , behind only Shearer and the only active player as of 2018 to do so . Frank Lampard is the Premier League 's highest scoring midfielder of
+all time . Thierry Henry scored 175 Premier League goals , the most by a foreign player . Ryan Giggs is the only player to have scored in each of the first 21
+Premier League seasons . Didier Drogba is the only African player to score 100 Premier League goals . Since the Premier League 's formation at the start of the
+1992 -- 93 season , 28 players have managed to accrue 100 or more goals in the competition .
+</item 7>
+
+<item 8>
+List of Premier League players with 100 or more goals
+Newcastle United Southampton Stoke City Swansea City Tottenham Hotspur Watford West Bromwich Albion West Ham United Former Aston Villa Barnsley Birmingham City
+Blackburn Rovers Blackpool Bolton Wanderers Bradford City Cardiff City Charlton Athletic Coventry City Derby County Fulham Hull City Ipswich Town Leeds United
+Middlesbrough Norwich City Nottingham Forest Oldham Athletic Portsmouth Queens Park Rangers Reading Sheffield United Sheffield Wednesday Sunderland Swindon Town
+Wigan Athletic Wimbledon ( defunct ) Wolverhampton Wanderers ( returning in 2018 - 19 ) Competition Teams winners Players foreign foreign scorers winners
+Managers Stadia Founding Broadcasting foundation Broadcasters Referees Statistics and awards Records All - time table Hat - tricks Highest scores Golden Boot
+Golden Glove Manager of the Season Player of the Season Manager of the Month Player of the Month Goal of the Month Players with 500 + appearances Players with
+100 + goals Top scorers by season Goalkeepers with 100 + clean sheets 10 Seasons Awards 20 Seasons Awards Finances Richest clubs : Deloitte list Forbes ' list
+Team owners Transfer records Game 39 Premier League -- Football League gulf Associated competitions Asia Trophy FA Community Shield FA Cup EFL Cup UEFA
+Champions League UEFA Europa League
+</item 8>
+
+<item 9>
+List of Premier League players with 100 or more goals
+Ryan Ryan Giggs MF Manchester United 109 632 0.17 22 Crouch , Peter Peter Crouch Aston Villa , Southampton , Liverpool , Portsmouth , Tottenham Hotspur , Stoke
+City 107 454 0.23 22 Scholes , Paul Paul Scholes MF Manchester United 107 499 0.21 24 Bent , Darren Darren Bent Ipswich Town , Charlton Athletic , Tottenham
+Hotspur , Sunderland , Aston Villa , Fulham 106 276 0.38 25 Kane , Harry Harry Kane Tottenham Hotspur , Norwich City 104 149 0.70 26 Drogba , Didier Didier
+Drogba Chelsea 104 254 0.41 27 Lukaku , Romelu Romelu Lukaku West Bromwich Albion , Everton , Manchester United 101 216 0.47 28 Le Tissier , Matt Matt Le
+Tissier MF Southampton 100 270 0.37 Italics show players still playing professional football ; Bold shows players still playing in the Premier League .
+</item 9>
+
+<item 10>
+As of April 2018, 28 players had scored at least 100 Premier League goals. Alan Shearer led with 260, reached 100 fastest (124 games), and was the only player
+to score 100 for two clubs. Wayne Rooney ranked second (208); Harry Kane was second-fastest to 100 (141 games). Sergio Agüero had the best scoring rate among
+listed players (0.70 goals per game). Other distinctions: Frank Lampard was the highest-scoring
+</item 10>
+=== END ITEM id=891140c4eba07e0c ===
+
+=== ITEM id=65506486c3e37469 ===
+Gold sentences and facts:
+Sentence 0: The ability to compare ammunition is a direct result of the invention of rifling around the turn of the 16th century . By forcing the bullet to spin as it travels down the barrel of the weapon the bullet 's accuracy greatly increases . At the same time , the rifling leaves marks on the bullet that are indicative of that particular barrel . Prior to mass production of firearms , each barrel and bullet mold was hand made by gunsmiths making them unique . The first successful documented case of forensic firearm examination occurred in 1835 when a member of the Bow Street Runners in London matched a recovered bullet from a murder victim to a specific mold in a suspect 's home confirming that he made the bullet . Further evidence that the bullet maker was the perpetrator was found in his home and he was convicted . As manufacturing and automation replaced hand tools , the ability to compare bullets became impossible due to the standardization of molds within a specific company . However , experts in the field postulated that there were microscopic differences on each barrel left during the manufacturing process . These differences were a result of wear on the machines and since each new weapon caused a tiny amount of wear , each barrel would be slightly different from every other barrel produced by that company . Also , each bullet fired from a specific barrel would be printed with the same marks , allowing investigators to identify the weapon that fired a specific bullet .
+  Fact 0.0: The ability to compare ammunition is a direct result of the invention of rifling.
+  Fact 0.1: Rifling was invented around the turn of the 16th century.
+  Fact 0.2: Rifling forces the bullet to spin as it travels down the barrel of the weapon.
+  Fact 0.3: Rifling greatly increases the bullet's accuracy.
+  Fact 0.4: At the same time, rifling leaves marks on the bullet that are indicative of that particular barrel.
+  Fact 0.5: Before mass production of firearms, each barrel and bullet mold was hand made by gunsmiths, making each one unique.
+  Fact 0.6: The first successful documented case of forensic firearm examination occurred in 1835.
+  Fact 0.7: In that 1835 case, a member of the Bow Street Runners in London matched a recovered bullet from a murder victim to a specific mold in a suspect's home.
+  Fact 0.8: In that 1835 case, the match confirmed that the suspect made the bullet.
+  Fact 0.9: Further evidence that the bullet maker was the perpetrator was found in his home.
+  Fact 0.10: The bullet maker was convicted.
+  Fact 0.11: As manufacturing and automation replaced hand tools, the ability to compare bullets became impossible.
+  Fact 0.12: The ability to compare bullets became impossible due to the standardization of molds within a specific company.
+  Fact 0.13: Experts in the field postulated that there were microscopic differences on each barrel left during the manufacturing process.
+  Fact 0.14: These differences resulted from wear on the machines.
+  Fact 0.15: Since each new weapon caused a tiny amount of wear, each barrel would be slightly different from every other barrel produced by that company.
+  Fact 0.16: Each bullet fired from a specific barrel would be printed with the same marks.
+  Fact 0.17: The same marks allow investigators to identify the weapon that fired a specific bullet.
+
+Retrieved items:
+<item 1>
+Forensic firearm examination
+Another report issued in 2016 by the United States President 's Council of Advisors on Science and Technology confirmed the NAS 's findings , finding only one
+appropriately designed study that examined the rate of false positives and reliability amongst firearm examiners . See also ( edit ) Ballistics Crime
+reconstruction References ( edit ) ^ Jump up to : Hamby , James ( Summer 1999 ) . `` The History of Firearm and Toolmark Identification '' . Association of
+Firearm and Tool Mark Examiners Journal . 31 ( 3 ) . Retrieved January 16 , 2016 . ^ Jump up to : Steele , Lisa ( 2008 ) . `` Ballistics '' ( PDF ) . Science
+for Lawyers . American Bar Association . Retrieved January 19 , 2016 . Jump up ^ Thompson , Robert ( 2010 ) . `` Firearm Identification in the Forensic Science
+Laboratory '' ( PDF ) . National District Attorneys Association . Retrieved January 19 , 2016 . Jump up ^ Borchard , Edwin ( 1932 ) . `` Stielow and Green '' (
+PDF ) .
+</item 1>
+
+<item 2>
+DNA
+However , identification can be complicated if the scene is contaminated with DNA from several people . DNA profiling was developed in 1984 by British
+geneticist Sir Alec Jeffreys , and first used in forensic science to convict Colin Pitchfork in the 1988 Enderby murders case . The development of forensic
+science and the ability to now obtain genetic matching on minute samples of blood , skin , saliva , or hair has led to re-examining many cases . Evidence can
+now be uncovered that was scientifically impossible at the time of the original examination . Combined with the removal of the double jeopardy law in some
+places , this can allow cases to be reopened where prior trials have failed to produce sufficient evidence to convince a jury . People charged with serious
+crimes may be required to provide a sample of DNA for matching purposes . The most obvious defense to DNA matches obtained forensically is to claim that
+cross-contamination of evidence has occurred . This has resulted in meticulous strict handling procedures with new cases of serious crime . DNA profiling is
+also used successfully to positively identify victims of mass casualty incidents , bodies or body parts in serious accidents , and individual victims in mass
+war graves , via matching to family members .
+</item 2>
+
+<item 3>
+Forensic firearm examination
+1471 of 2007 . Retrieved on June 18 , 2016 . Jump up ^ Mather , Kate ( January 23 , 2014 ) . `` Smith & Wesson says it wo n't follow California ' microstamping
+' law '' . Los Angeles Times . Retrieved June 18 , 2016 . ^ Jump up to : DiMaio , Vincent J.M. ( 2016 ) . Gunshot Wounds : Practical Aspects of Firearms ,
+Ballistics , and Forensic Techniques ( 3rd ed . ) . CRC Press . Retrieved June 4 , 2016 . ^ Jump up to : `` Firearms & Tool Mark '' . North Carolina Department
+of Justice . Retrieved June 4 , 2016 . ^ Jump up to : `` Firearms and Toolmarks in the FBI Laboratory '' . Forensic Science Communications . 2 ( 2 ) . April
+2000 . Archived from the original on September 20 , 2015 . Retrieved June 5 , 2016 . Jump up ^ Fisher , Barry A.J.
+</item 3>
+
+<item 4>
+Stone Age
+There is additional evidence that Oldowan , or Mode 1 , tools were utilized in `` percussion technology '' ; that is , they were designed to be gripped at the
+blunt end and strike something with the edge , from which use they were given the name of choppers . Modern science has been able to detect mammalian blood
+cells on Mode 1 tools at Sterkfontein , Member 5 East , in South Africa . As the blood must have come from a fresh kill , the tool users are likely to have done
+the killing and used the tools for butchering . Plant residues bonded to the silicon of some tools confirm the use to chop plants . Although the exact species
+authoring the tools remains unknown , Mode 1 tools in Africa were manufactured and used predominantly by Homo habilis . They can not be said to have developed
+these tools or to have contributed the tradition to technology . They continued a tradition of yet unknown origin . As chimpanzees sometimes naturally use
+percussion to extract or prepare food in the wild , and may use either unmodified stones or stones that they have split , creating an Oldowan tool , the
+tradition may well be far older than its current record .
+</item 4>
+
+<item 5>
+Stone Age
+Prior to the discovery of these `` Lomekwian '' tools , the oldest known stone tools had been found at several sites at Gona , Ethiopia , on the sediments of
+the paleo - Awash River , which serve to date them . All the tools come from the Busidama Formation , which lies above a disconformity , or missing layer ,
+which would have been from 2.9 to 2.7 mya . The oldest sites containing tools are dated to 2.6 -- 2.55 mya . One of the most striking circumstances about these
+sites is that they are from the Late Pliocene , where previous to their discovery tools were thought to have evolved only in the Pleistocene . Excavators at the
+locality point out that : `` ... the earliest stone tool makers were skilled flintknappers ... The possible reasons behind this seeming abrupt transition from
+the absence of stone tools to the presence thereof include ... gaps in the geological record . '' The species who made the Pliocene tools remains unknown .
+</item 5>
+
+<item 6>
+Forensic firearm examination
+Jump up ^ `` NCIC Files '' . Federal Bureau of Investigation . Archived from the original on February 20 , 2016 . Retrieved January 12 , 2016 . ^ Jump up to :
+Utrata , Dave ; Johnson , Marcus ( October 2003 ) . `` Magnetic Particle Recovery of Serial Numbers '' . Midwest Forensics Resource Center . Retrieved July 4 ,
+2016 . Jump up ^ `` Iowa Division of Criminal Investigation Criminalistics Laboratory Firearm & Toolmark Section Restoration of Obliterated Serial Numbers '' .
+Iowa Division of Criminal Investigation . Retrieved July 2 , 2016 . ^ Jump up to : `` Serial Number Restoration '' . Minnesota Bureau of Criminal Apprehension .
+Retrieved July 2 , 2016 . Jump up ^ `` FEU08 -- SOP for Serial Number Restoration of Obliterated Stampings in Various Metal Surfaces '' ( PDF ) . District of
+Columbia Department of Forensic Sciences . November 26 , 2013 . p. 2 . Retrieved December 17 , 2016 .
+</item 6>
+
+<item 7>
+Forensic firearm examination
+p. 2 . Retrieved December 17 , 2016 . ^ Jump up to : National Research Council ( 2009 ) . Strengthening Forensic Science in the United States : A Path Forward (
+PDF ) . National Academies Press . ISBN 0 - 309 - 13131 - 6 . Retrieved June 12 , 2016 . Jump up ^ Randerson , James ( June 3 , 2008 ) . `` Forensics :
+Fingerprints can be recovered from fired bullet casings '' . The Guardian . Retrieved June 18 , 2016 . ^ Jump up to : Cracking the Case : The Crime - Solving
+Promise of Ballistic Identification ( PDF ) ( Report ) . The Education Fund to Stop Gun Violence . June 2004 . Archived from the original ( PDF ) on April 14 ,
+2008 . Retrieved June 18 , 2016 . Jump up ^ Crime Gun Identification , Bill No. 1471 of 2007 . Retrieved on June 18 , 2016 .
+</item 7>
+
+<item 8>
+Forensic firearm examination
+Further evidence that the bullet maker was the perpetrator was found in his home and he was convicted . As manufacturing and automation replaced hand tools ,
+the ability to compare bullets became impossible due to the standardization of molds within a specific company . However , experts in the field postulated that
+there were microscopic differences on each barrel left during the manufacturing process . These differences were a result of wear on the machines and since each
+new weapon caused a tiny amount of wear , each barrel would be slightly different from every other barrel produced by that company . Also , each bullet fired
+from a specific barrel would be printed with the same marks , allowing investigators to identify the weapon that fired a specific bullet . One of the first uses
+of this knowledge was in 1915 to exonerate Charles Stielow of the murder of his neighbors . Stielow was sentenced to death and appealed to Charles S. Whitman ,
+the Governor of New York , who was not convinced by the evidence used to convict Stielow . Whitman halted the execution until an inquiry could be conducted and
+after further examination it was shown that Stielow 's firearm could not have fired the bullets recovered from the victims .
+</item 8>
+
+<item 9>
+Forensic firearm examination
+1 Magnetic particle inspection 2.2. 2 Chemical restoration 3 Examination of cartridges 4 Examination of bullets 4.1 Class characteristics 4.2 Individual
+characteristics 5 Striation databasing 6 Criticisms 7 See also 8 References History ( edit ) The ability to compare ammunition is a direct result of the
+invention of rifling around the turn of the 16th century . By forcing the bullet to spin as it travels down the barrel of the weapon the bullet 's accuracy
+greatly increases . At the same time , the rifling leaves marks on the bullet that are indicative of that particular barrel . Prior to mass production of
+firearms , each barrel and bullet mold was hand made by gunsmiths making them unique . The first successful documented case of forensic firearm examination
+occurred in 1835 when a member of the Bow Street Runners in London matched a recovered bullet from a murder victim to a specific mold in a suspect 's home
+confirming that he made the bullet . Further evidence that the bullet maker was the perpetrator was found in his home and he was convicted .
+</item 9>
+
+<item 10>
+Stone Age
+This is a Mode 1 , or Oldowan , stone tool from the western Sahara . Oldowan in Africa Main article : Oldowan The earliest documented stone tools have been
+found in eastern Africa , manufacturers unknown , at the 3.3 million year old site of Lomekwi 3 in Kenya . Better known are the later tools belonging to an
+industry known as Oldowan , after the type site of Olduvai Gorge in Tanzania . The tools were formed by knocking pieces off a river pebble , or stones like it ,
+with a hammerstone to obtain large and small pieces with one or more sharp edges . The original stone is called a core ; the resultant pieces , flakes .
+Typically , but not necessarily , small pieces are detached from a larger piece , in which case the larger piece may be called the core and the smaller pieces
+the flakes . The prevalent usage , however , is to call all the results flakes , which can be confusing . A split in half is called bipolar flaking .
+Consequently , the method is often called `` core - and - flake '' .
+</item 10>
+=== END ITEM id=65506486c3e37469 ===

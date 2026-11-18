@@ -1,0 +1,33 @@
+[
+{"id": "af1da1a424912413", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "c49bee259f122087", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Erik ten Hag is a top coach from Ajax but they need a top blueprint not only for now but for the next five years"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Erik ten Hag is a top coach from Ajax but they need a top blueprint not only for now but for the next five years"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "they need a top blueprint not only for now but for the next five years, and work towards that,"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "and sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right things."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right things"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "The latest slip saw the Red Devils crash out of Europe as they fell 1-0 to Bayern Munich on the final day of Champions League group-stage play, finishing bottom of their four-team group to leave them eliminated from Europe"}]},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "f8242c99b3a4bd59", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]}
+]

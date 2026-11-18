@@ -1,0 +1,506 @@
+[
+ {
+  "id": "f943ed2e3747ef37",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "We ultimately took about $14 billion"
+     },
+     {
+      "item": 1,
+      "quote": "Ellison did indeed confess to stealing customer funds"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval"
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.3",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "37b7911ba79e7bbe",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "and is reportedly preparing for a ground invasion"
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible"
+     }
+    ]
+   },
+   {
+    "fact": "2.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "7ab6684bedcf2378",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.3",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "ded494ca6bb7b7e9",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "3.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The new man on the Vikings, Josh Dobbs, keeps producing the same results"
+     }
+    ]
+   },
+   {
+    "fact": "3.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "keeps producing the same results they were enjoying offensively with Kirk Cousins"
+     }
+    ]
+   },
+   {
+    "fact": "3.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "thanks to more help from the running game for Kevin O'Connell"
+     }
+    ]
+   },
+   {
+    "fact": "3.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "thanks to more help from the running game for Kevin O'Connell and the defense overall under Brian Flores"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "abfee4275bd60953",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a3f2263dfbf3a460",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Under American Todd Boehly’s co-ownership"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Under American Todd Boehly’s co-ownership, expanding Chelsea’s profile and reach in the U.S."
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Under American Todd Boehly’s co-ownership, expanding Chelsea’s profile and reach in the U.S. would make sense"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "especially with USWNT internationals Catarina Macario and Mia Fishel playing their club football there"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "especially with USWNT internationals Catarina Macario and Mia Fishel playing their club football there"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Under American Todd Boehly’s co-ownership, expanding Chelsea’s profile and reach in the U.S. would make sense, especially with USWNT internationals Catarina Macario and Mia Fishel playing their club football there"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Under American Todd Boehly’s co-ownership, expanding Chelsea’s profile and reach in the U.S. would make sense, especially with USWNT internationals Catarina Macario and Mia Fishel playing their club football there"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "and CBS Sports holding WSL rights"
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "It was 24 September"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "It was 24 September, Chelsea’s second home Premier League defeat"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "It was 24 September, Chelsea’s second home Premier League defeat on the spin"
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "It was 24 September, Chelsea’s second home Premier League defeat on the spin after the one against Nottingham Forest"
+     }
+    ]
+   },
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "It was 24 September, Chelsea’s second home Premier League defeat on the spin after the one against Nottingham Forest and they were booed off again"
+     }
+    ]
+   },
+   {
+    "fact": "2.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Late checks will be made on the fitness of Reece James, Axel Disasi and Nicolas Jackson"
+     }
+    ]
+   },
+   {
+    "fact": "2.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Late checks will be made on the fitness of Reece James, Axel Disasi and Nicolas Jackson"
+     }
+    ]
+   },
+   {
+    "fact": "2.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Late checks will be made on the fitness of Reece James, Axel Disasi and Nicolas Jackson"
+     }
+    ]
+   },
+   {
+    "fact": "2.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Benoit Badiashile could return from a long-term injury"
+     }
+    ]
+   }
+  ]
+ }
+]

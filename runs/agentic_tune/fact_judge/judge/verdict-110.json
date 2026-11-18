@@ -1,0 +1,23 @@
+[
+{"id": "89e0c441908b7d47", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Kooker added later in the speech: “Music is a tremendous driver for AI technology, and AI technology presents a tremendous opportunity for the creative"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Kooker added later in the speech: “Music is a tremendous driver for AI technology"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "AI technology presents a tremendous opportunity for the creative development of music."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Warner Music Group CEO Robert Kyncl has been keeping a close eye on AI"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "came to the music biz from ‘Big Tech’, namely YouTube, where he was Chief Business Officer."}]},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "b4921df713686c57", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "“It’s not the NHL that he was playing in the last few years,” Davidson said"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "but the level of performance and how he could control a game and dominate a game in junior"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "in junior — it indicated he was going to be able to do that at some point in the NHL."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "1.6", "status": "missing", "evidence": []},
+{"fact": "1.7", "status": "missing", "evidence": []}
+]}
+]

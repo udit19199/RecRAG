@@ -1,0 +1,35 @@
+[
+{"id": "3e7b503eb0411f63", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Hope played a gem of an innings there"}]},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "a22e71e052d42ac8", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 2, "quote": "No player in Premier League history has made more of an impact following their arrival than Haaland, who broke the goal record for a single season with 36"}, {"item": 2, "quote": "He has already been firing in many top-flight goals this term - as well as being the joint-leading scorer from the Champions League group stages."}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 2, "quote": "No player in Premier League history has made more of an impact following their arrival than Haaland, who broke the goal record for a single season with 36"}, {"item": 2, "quote": "He has already been firing in many top-flight goals this term - as well as being the joint-leading scorer from the Champions League group stages."}]}
+]},
+{"id": "d0a4508cf680dee8", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}, {"item": 8, "quote": "Wang moved that loss onto Alameda’s balance sheet."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}, {"item": 1, "quote": "Bankman-Fried directed him to have Alameda take it on"}, {"item": 1, "quote": "instead, because FTX’s balance sheets were visible to investors and Alameda’s weren’t."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "No other customer trading on FTX had “allow_negative” privileges — only Alameda."}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "Alameda could have negative balances and unlimited withdrawals."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []}
+]}
+]

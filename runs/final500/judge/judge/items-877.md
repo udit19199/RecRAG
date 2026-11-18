@@ -1,0 +1,874 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=20dfb62744432950 ===
+Gold sentences and facts:
+Sentence 0: In 1918 , Firestone Tire and Rubber Company of Canada was incorporated in Hamilton , Ontario and in 1922 , the first Canadian - made tire rolled off the line on September 15 . During the 1920s , Firestone produced the Oldfield tire , named for racing driver Barney Oldfield .
+  Fact 0.0: Firestone Tire and Rubber Company of Canada was incorporated in 1918.
+  Fact 0.1: Firestone Tire and Rubber Company of Canada was incorporated in Hamilton, Ontario.
+  Fact 0.2: In 1922, the first Canadian-made tire rolled off the line on September 15.
+  Fact 0.3: During the 1920s, Firestone produced the Oldfield tire.
+  Fact 0.4: The Oldfield tire was named for racing driver Barney Oldfield.
+Sentence 1: Bridgestone / Firestone also produces tires under the Fuzion brand name . Fuzion is a tire manufactured in China for Bridgestone / Firestone as a budget replacement tire .
+  Fact 1.0: Bridgestone / Firestone also produces tires under the Fuzion brand name.
+  Fact 1.1: Fuzion is a tire manufactured in China for Bridgestone / Firestone.
+  Fact 1.2: Fuzion is a budget replacement tire.
+
+Retrieved items:
+<item 1>
+Firestone Tire and Rubber Company
+Founded on August 3 , 1900 , the company initiated operations with 12 employees . Together , Firestone and Goodyear were the largest suppliers of automotive
+tires in North America for over 75 years . In 1906 Henry Ford chose Firestone for Model T original equipment tires . In 1918 , Firestone Tire and Rubber Company
+of Canada was incorporated in Hamilton , Ontario and in 1922 , the first Canadian - made tire rolled off the line on September 15 . During the 1920s , Firestone
+produced the Oldfield tire , named for racing driver Barney Oldfield . In 1926 , the company opened one of the world 's biggest rubber plantations in Liberia ,
+West Africa , spanning more than 1 million acres . 1926 was also the year that the company opened its first Firestone Complete Auto Care store ( Firestone
+Complete Auto Care is a division of Firestone that offers automotive maintenance and repair ) . In 1927 , Henry Ford and tire maven Harvey Firestone took a trip
+to Los Angeles to select locations for their new factories .
+</item 1>
+
+<item 2>
+Firestone Tire and Rubber Company
+ISBN 978 - 0 - 15 - 692620 - 1 . Jump up ^ `` A Global Dream '' . Bridgestone Americas . Retrieved 3 August 2013 . Jump up ^ `` History of Bridgestone /
+Firestone '' . Bridgestone / Firestone Canada . 2009 . Archived from the original on 10 May 2010 . Jump up ^ Firestone 8000 Tire Order by Ford Ford Chooses
+Firestone for Model T Jump up ^ Canada manufactures first Firestone tire Archived 2010 - 05 - 10 at the Wayback Machine . Firestone Canada Incorporated Jump up
+^ Chris Nichols ( 2013 - 03 - 01 ) . `` DispL. A. Case # 52 : L.A. 's First Firestone Tire - Los Angeles Magazine '' . Lamag.com . Retrieved 2015 - 12 - 17 .
+Jump up ^ Lost Memphis Firestone Tire & Rubber Company Jump up ^ Firestone Closings Jump up ^ Peck , Merton J.
+</item 2>
+
+<item 3>
+Firestone Tire and Rubber Company
+Friends say Ford wanted to be near the ocean and picked Long Beach and suggested Firestone go to South Gate , California . The tiny community southeast of
+Downtown was mostly agriculture at the time and Firestone found 40 acres of beanfield to house his new manufacturing plant . Architects Curlett and Beelman
+created a spectacular four - storey Italianate complex , with its own power plant and gorgeous polychrome murals by Gladding McBean depicting the tire and
+rubber - making process . A year after the plant opened in 1928 it doubled in size . By 1954 , when they added the Corporal guided missile to their offerings ,
+the plant was nearly a million square feet . The town grew around Firestone , they named the main boulevard through town after Harvey , and Los Angeles became
+the number one tire market in the country . By the mid-1970s Ford and GM had massive layoffs as Firestone and other manufacturers opened new plants in non-union
+locales like Wilson , North Carolina . After much downsizing the end came in 1980 when 1,300 workers were laid off and the plant closed .
+</item 3>
+
+<item 4>
+Firestone Tire and Rubber Company
+Firestone tire and Rubber company - wikipedia Firestone tire and Rubber company Jump to : navigation , search Firestone Tire and Rubber Company Type Subsidiary
+Industry Manufacturing Founded Akron , Ohio , United States ( August 3 , 1900 ; 117 years ago ( 1900 - 08 - 03 ) ) Founder Harvey Firestone Headquarters 200 4th
+Ave S , Nashville , Tennessee , United States Area served Worldwide Key people Gordon Knapp ( CEO and President ) Bill Thompson ( COO ) Products Tires Revenue
+US $ 2.09 billion ( 2004 ) Number of employees 40,000 Parent Bridgestone ( 1988 -- present ) Website firestone.com The Firestone Tire and Rubber Company is an
+American tire company founded by Harvey Samuel Firestone in 1900 to supply pneumatic tires for wagons , buggies , and other forms of wheeled transportation
+common in the era . Firestone soon saw the huge potential for marketing tires for automobiles . The company was a pioneer in the mass production of tires .
+Harvey Firestone had a friendship with Henry Ford .
+</item 4>
+
+<item 5>
+Firestone Tire and Rubber Company
+The manufacturer returned in 1995 to the CART series with technical assistance from Bridgestone . Goodyear retired after 1999 , thereby leaving Firestone as the
+single supplier of the IndyCar Series as of 2017 . Corporate troubles ( edit ) A service manager explains periodic recommended engine part replacements . Great
+American streetcar scandal ( edit ) In 1950 , Firestone along with General Motors and Standard Oil were charged and convicted of criminal conspiracy for their
+part in the Great American streetcar scandal . The scandal included purchasing streetcar systems throughout the United States and dismantling and replacing them
+with buses . Firestone 500 tread separation problem ( edit ) Radial tires were introduced to the U.S. market by rivals Goodrich and Michelin in the late 1960s ,
+and Firestone lacked their own radial tire . The first radial tire developed and produced by Firestone was the ill - fated Firestone 500 Radial . Manufacturing
+of the new tire was performed on equipment designed to manufacture bias - ply tires . During the 1970s , Firestone experienced major problems with the Firestone
+500 radial .
+</item 5>
+
+<item 6>
+Firestone Tire and Rubber Company
+East Los Angeles College has proposed a new satellite campus at the site . In 1928 the company built a factory in Brentford , England , a longtime Art Deco
+landmark on a major route into the city . This closed in 1979 . In 1936 the company opened a plant in Memphis , Tennessee . With a work force exceeding 3,000
+employees , the Memphis plant was the largest tire manufacturer in the company 's worldwide operation . On July 1 , 1963 , the company celebrated the production
+of 100 million tires in Memphis . The plant was closed in 1982 . During World War II the company was called on by the U.S. Government to make artillery shells ,
+aluminum kegs for food transport and rubberized military products . Firestone ranked 55th among United States corporations in the value of World War II military
+production contracts . In the 1940s , Firestone was given a defense contract to produce plastic helmet liners . While outproduced by Westinghouse Electric they
+still made a fair amount for the M1 Helmet .
+</item 6>
+
+<item 7>
+Firestone Tire and Rubber Company
+This included both general price and foreign exchange controls . When the 10 - year period came to an end in 1979 , Firestone retaliated by increasing
+production , making entry less attractive . Headquarters eventually canceled expansion and failed negotiations lead to no further investments . In motorsport (
+edit ) The 1911 Indianapolis 500 auto race was won by a car running Firestone tires . Firestone - shod cars won all editions of the race from 1920 to 1966 . The
+company also provided tires to Formula One from 1950 to 1974 . Citing rising costs as the cause , Firestone announced its withdrawal from professional
+motorsport in August 1974 with the exception of Formula 5000 and Formula One . The change was forecast to reduce Firestone 's annual race testing budget from
+between $6 and $8 million dollars to around $500,000 . Shortly afterwards , Firestone extended this to a complete withdrawal by the end of the 1974 season . The
+manufacturer returned in 1995 to the CART series with technical assistance from Bridgestone .
+</item 7>
+
+<item 8>
+Firestone Tire and Rubber Company
+The combined Bridgestone / Firestone North American operations are now based in Nashville , Tennessee . In 2008 , the companies celebrated a 20 - year
+anniversary of the merger , and changed the tire division name to Bridgestone Americas Tire Operations , LLC . In 2012 , Bridgestone Americas opened a $100
+million technical center in Akron . Firestone tires used for the Indianapolis 500 race . Apart from tires , several companies and divisions operate with the
+Firestone brand in its name . These companies include Firestone Building Products , LLC , Firestone Industrial Products , LLC , Firestone Complete Auto Care ,
+Firestone Natural Rubber Company and Firestone Specialty Products . Firestone Building Products and Firestone Industrial Products are headquartered in
+Indianapolis , Indiana and operate in 23 U.S. states and ten countries , with 11,000 employees worldwide . The company reports annual sales of more than $2.5
+billion . In 1972 , Firestone received a ten - year import `` concession '' by the Kenyan government to secure Firestone 's investment in a domestic tire plant
+, which gave it a virtual monopoly . This included both general price and foreign exchange controls .
+</item 8>
+
+<item 9>
+Firestone Tire and Rubber Company
+External links ( edit ) Wikimedia Commons has media related to Firestone Tire and Rubber Company . Official website Century of Progress from the Summit Memory
+Project Bridgestone Corporation Subsidiaries Firestone Diversified Products Firestone Tire and Rubber Company Firestone - Apsley Rubber Company Products
+Bridgestone Picnica Helmz Facilities Firestone Tyre Factory People Harvey Samuel Firestone Related Akron Firestone Non-Skids Bridgestone Arena Bridgestone
+Museum of Art Bridgestone Open Firestone and Ford tire controversy Firestone Country Club International Labor Rights Forum v Firestone Tire and Rubber Co The
+Voice of Firestone WGC - Bridgestone Invitational Automotive industry in the United States Automotive industry Economy of the United States Transportation in
+the United States American vehicle manufacturers ( list ) AGCO Challenger Tractor Massey Ferguson AM General American Expedition Vehicles American Growler Amp
+Electric Vehicles Anteros Coachworks Arcimoto Armour Group , Inc .
+</item 9>
+
+<item 10>
+Firestone Tire and Rubber Company
+Harvey Firestone had a friendship with Henry Ford . Firestone used this relationship to become the original equipment supplier of Ford Motor Company automobiles
+, and was also active in the replacement market . In 1988 , the company was sold to the Japanese Bridgestone Corporation . Contents ( hide ) 1 History 1.1 Early
+- to - mid-20th century 1.2 Restructuring and sale to Bridgestone 2 In motorsport 3 Corporate troubles 3.1 Great American streetcar scandal 3.2 Firestone 500
+tread separation problem 3.3 Liberian rubber plantation 3.4 Ford Explorer rollover problem 4 Television advertisement jingle 5 Other brands 6 See also 7
+References 8 External links History ( edit ) Early - to - mid-20th century ( edit ) The First Firestone store Firestone newspaper ad from 1919 , explaining the
+benefits of their cord tire . Firestone was originally based in Akron , Ohio , also the hometown of its archrival , Goodyear Tire and Rubber Company , and
+another two mid-sized competitors , General Tire and Rubber and BF Goodrich .
+</item 10>
+=== END ITEM id=20dfb62744432950 ===
+
+=== ITEM id=04b5d9703ce935f2 ===
+Gold sentences and facts:
+Sentence 0: The Raiders had a great chance to score a touchdown early in the game after cornerback Charles Woodson intercepted Buccaneers quarterback Brad Johnson 's pass on the third play of the game and returned it 12 yards to the Tampa Bay 36 - yard line . However , six plays later , Tampa Bay defensive end Simeon Rice sacked Raiders quarterback Rich Gannon on third down , forcing Oakland to settle for kicker Sebastian Janikowski 's 40 - yard field goal to give them a 3 -- 0 lead .
+  Fact 0.0: Cornerback Charles Woodson intercepted a pass thrown by Buccaneers quarterback Brad Johnson.
+  Fact 0.1: The interception happened on the third play of the game.
+  Fact 0.2: Charles Woodson returned the interception 12 yards to the Tampa Bay 36-yard line.
+  Fact 0.3: The Raiders had a great chance to score a touchdown early in the game after the interception.
+  Fact 0.4: Six plays after the interception, Tampa Bay defensive end Simeon Rice sacked Raiders quarterback Rich Gannon on third down.
+  Fact 0.5: The sack forced Oakland to settle for a field goal.
+  Fact 0.6: Kicker Sebastian Janikowski kicked a 40-yard field goal for Oakland.
+  Fact 0.7: The field goal gave Oakland a 3-0 lead.
+Sentence 1: Still , even Gruden had trouble getting the offense in sync during his first year as Tampa Bay 's head coach . In 2002 , the Buccaneers ranked 25th in the league in total yards gained ( 5,222 ) . Quarterback Brad Johnson made the Pro Bowl , completing 281 out of 451 passes for 3,049 yards , 22 touchdowns , and only 6 interceptions . Running back Michael Pittman led the team in rushing with 718 yards and one touchdown , and caught 59 passes for 477 yards . Pro Bowl fullback Mike Alstott had 548 rushing yards and 5 touchdowns , and also had 35 receptions for 242 yards and 2 touchdowns . Wide receiver Keyshawn Johnson led the team with 76 receptions for 1,088 yards and 5 touchdowns , while wide receiver Keenan McCardell had 61 receptions for 670 yards and 6 touchdowns .
+  Fact 1.0: Even Gruden had trouble getting the offense in sync during his first year as Tampa Bay's head coach.
+  Fact 1.1: In 2002, the Buccaneers ranked 25th in the league in total yards gained.
+  Fact 1.2: The Buccaneers gained 5,222 total yards in 2002.
+  Fact 1.3: Quarterback Brad Johnson made the Pro Bowl.
+  Fact 1.4: Brad Johnson completed 281 of 451 passes for 3,049 yards.
+  Fact 1.5: Brad Johnson threw 22 touchdowns.
+  Fact 1.6: Brad Johnson threw only 6 interceptions.
+  Fact 1.7: Running back Michael Pittman led the Buccaneers in rushing with 718 yards and one touchdown.
+  Fact 1.8: Michael Pittman caught 59 passes for 477 yards.
+  Fact 1.9: Pro Bowl fullback Mike Alstott had 548 rushing yards and 5 touchdowns.
+  Fact 1.10: Mike Alstott had 35 receptions for 242 yards and 2 touchdowns.
+  Fact 1.11: Wide receiver Keyshawn Johnson led the team with 76 receptions for 1,088 yards and 5 touchdowns.
+  Fact 1.12: Wide receiver Keenan McCardell had 61 receptions for 670 yards and 6 touchdowns.
+
+Retrieved items:
+<item 1>
+Super Bowl XXXVII
+Tampa Bay responded by moving the ball to the Oakland 9 - yard line on their ensuing drive , featuring a 24 - yard run by Pittman , but they came up empty after
+Tupa fumbled the snap on a field goal attempt . A few plays later , Gannon threw a 48 - yard touchdown pass to wide receiver Jerry Rice with 6 : 06 left in the
+game , cutting the Raiders deficit to 34 -- 21 . The two - point conversion failed when Jerry Porter caught the ball but landed out of bounds . Though there was
+contact with a defender , the officials deemed the contact incidental rather than a force - out , and therefore that part of the play was non-reviewable . In an
+attempt to prevent a Raiders comeback , the Buccaneers managed to run the clock down to 2 : 44 on their ensuing drive before being forced to punt .
+</item 1>
+
+<item 2>
+Super Bowl XXXVII
+Gurley 91 Chuck Darby 92 Anthony McFarland 93 DeVone Claybrooks 94 Greg Spires 95 Ron Warner 96 Ellis Wyms 97 Simeon Rice 98 Corey Smith 99 Warren Sapp -- Onome
+Ojo -- T.T. Toliver Head coach : Jon Gruden Coaches : Joe Barry Jeremy Bates Richard Bisaccia Michael Christianson Jay Gruden Monte Kiffin Richard Mann Rod
+Marinelli Raheem Morris Bill Muir Johnny Parker Stan Parrish Mike Tomlin Art Valero Kirby Wilson Tampa Bay Buccaneers Founded in 1976 Based and headquartered in
+Tampa , Florida Franchise Franchise Seasons History Coaches Players Expansion draft First - round draft picks Draft history Starting quarterbacks Broadcasters
+Stadiums Tampa Stadium Raymond James Stadium Culture and lore Hugh Culverhouse Malcolm Glazer Tampa 2 Captain Fear Cheerleaders Snow Bowl A Triumph of the Heart
+: The Ricky Bell Story Rivalries Carolina Panthers New Orleans Saints Miami Dolphins Playoff appearances ( 10 ) 1979 1981 1982 1997 1999 2000 2001 2002 2005
+2007 Division championships ( 6 ) 1979 1981 1999
+</item 2>
+
+<item 3>
+Super Bowl XXXVII
+But that changed when the team hired Tony Dungy as head coach in 1996 . Dungy , along with his defensive coordinator Monte Kiffin , rebuilt the defense around a
+core group of players , such as defensive lineman Warren Sapp , linebacker Derrick Brooks , and defensive backs Ronde Barber and John Lynch . By 1997 , Tampa
+Bay ranked 3rd in the league in total yards allowed , 2nd in 1998 , and 3rd in 2000 . With one of the best defenses in the league , Dungy helped guide the
+Buccaneers to four playoff appearances in his six years as the team 's head coach . But the team always had one of the worst offenses in the league , and this
+was a major factor in their playoff losses . Thus , Dungy was fired and replaced by Gruden . Still , even Gruden had trouble getting the offense in sync during
+his first year as Tampa Bay 's head coach . In 2002 , the Buccaneers ranked 25th in the league in total yards gained ( 5,222 ) .
+</item 3>
+
+<item 4>
+Super Bowl XXXVII
+Aided with Pittman 's gains of 6 and 19 yards , the Buccaneers scored their first touchdown on a 2 - yard run from fullback Mike Alstott , increasing their lead
+to 13 -- 3 . Then with 3 : 45 left in the half , Tampa Bay drove 77 yards , assisted by a pair of catches by Alstott for 28 total yards . Johnson finished the
+drive with a 5 - yard touchdown pass to wide receiver Keenan McCardell to give the Buccaneers a 20 -- 3 halftime lead . Third quarter ( edit ) Tampa Bay
+continued to dominate the game for most of the third quarter . The Buccaneers forced the Raiders to punt on the opening drive of the second half . Next , Tampa
+Bay marched 89 yards on a 14 - play drive that took 7 : 52 off the clock , and ended with Johnson 's 8 - yard touchdown pass to McCardell to increase their lead
+to 27 -- 3 .
+</item 4>
+
+<item 5>
+Super Bowl XXXVII
+Defensive back Tory James was also a big contributor with 4 interceptions . Playoffs ( edit ) Further information : 2002 -- 03 NFL playoffs The second - seeded
+Buccaneers defeated the fourth - seeded San Francisco 49ers , 31 -- 6 , and the top - seeded Philadelphia Eagles on the road , 27 -- 10 , in the playoffs , to
+make the Super Bowl for the first time in franchise history . Meanwhile , the top - seeded Raiders were victorious against the fourth - seeded New York Jets ,
+30 -- 10 , and the second - seeded Tennessee Titans , 41 -- 24 . The Raiders won against the Titans through Gannon 's pass - oriented offense . Super Bowl
+pre-game News ( edit ) The Raiders entered the game favored to win in their first Super Bowl in 19 years . They were also the first franchise to appear in the
+Super Bowl in four different decades ( 1960s , 1970s , 1980s , 2000s ; the 1990s was the only decade that they did n't appear in the Super Bowl ) . However ,
+much of the media hype surrounded the Gruden trade prior to the season .
+</item 5>
+
+<item 6>
+Super Bowl XXXVII
+The Raiders came into the game as four - point favorites . However , the Tampa Bay defense dominated the contest . Oakland quarterback Rich Gannon threw a Super
+Bowl record five interceptions , three of which were returned for touchdowns . The Buccaneers also sacked Gannon five times , and scored 34 consecutive points
+to build a 34 -- 3 lead late in the third quarter . Tampa Bay safety Dexter Jackson , who had two of those interceptions and returned them for 34 yards , was
+named Super Bowl MVP. Jackson became only the second safety and third defensive back named Super Bowl MVP .
+</item 6>
+
+<item 7>
+Super Bowl XXXVII
+January 15 , 2003 . Retrieved August 27 , 2012 . Jump up ^ Mitchell , Fred ( January 27 , 2003 ) . `` In their fashion , Bucs fans laugh '' . Chicago Tribune .
+Retrieved August 27 , 2012 . Jump up ^ Vivinetto , Gina ( January 27 , 2003 ) . `` Super Bowl XXXVII : Superstars belt out favorites , or lip synch them '' .
+St. Petersburg Times . ^ Jump up to : George , Thomas ( January 27 , 2003 ) . `` Bucs steal the treasure '' . The New York Times . Retrieved August 27 , 2012 .
+^ Jump up to : `` Tampa Bay Buccaneers 48 vs. Oakland Raiders 21 '' . pro-football - reference . Retrieved August 27 , 2012 . Jump up ^ Cunningham , Michael ;
+Skolnick , Ethan J. ( January 27 , 2003 ) . `` Treu Gets The Call In Robbins ' Absence '' . South Florida Sun - Sentinel .
+</item 7>
+
+<item 8>
+Super Bowl XXXVII
+Then on third and 18 from the Oakland 29 - yard line , Tampa Bay linebacker Derrick Brooks intercepted a pass from Gannon and returned it 44 yards for a
+touchdown , giving the Buccaneers a 41 -- 21 lead with only 1 : 18 left , and leading Buccaneers radio announcer Gene Deckerhoff to make his famous call of ``
+The dagger 's in , we 're gon na win the Super Bowl ! '' . A few plays later , with the Raiders now playing for pride , Dwight Smith intercepted a tipped pass
+and returned it 50 yards for a touchdown with only two seconds remaining . Gramatica kicked the extra point , and the Buccaneers were up 48 -- 21 . Raiders
+defensive tackle Chris Cooper returned Gramatica 's kickoff 6 yards before being tackled by Jack Golden , ending the game . The Buccaneers won their first -
+ever Super Bowl with a 48 - 21 victory . Gannon said after the game that his performance was `` nightmarish '' .
+</item 8>
+
+<item 9>
+Super Bowl XXXVII
+Quarterback Brad Johnson made the Pro Bowl , completing 281 out of 451 passes for 3,049 yards , 22 touchdowns , and only 6 interceptions . Running back Michael
+Pittman led the team in rushing with 718 yards and one touchdown , and caught 59 passes for 477 yards . Pro Bowl fullback Mike Alstott had 548 rushing yards and
+5 touchdowns , and also had 35 receptions for 242 yards and 2 touchdowns . Wide receiver Keyshawn Johnson led the team with 76 receptions for 1,088 yards and 5
+touchdowns , while wide receiver Keenan McCardell had 61 receptions for 670 yards and 6 touchdowns . However , the Buccaneers ' defense was still the strength
+of the team , leading the NFL in total defense ( 252.8 yards per game ) , pass defense ( 155.6 yards per game ) , points allowed ( 12.3 points per game ) ,
+passing touchdowns allowed ( 10 ) , interceptions ( 31 ) , and opponent passer rating ( 48.4 ) . Brooks , Lynch , Sapp , and defensive end Simeon Rice all had
+Pro Bowl years .
+</item 9>
+
+<item 10>
+Graph query row:
+person: Brad Johnson
+team_relationship: MEMBER_OF
+organization: Tampa Bay Buccaneers
+event_relationship: PARTICIPATED_IN
+event: Super Bowl XXXVII
+quarterback: Brad Johnson
+occupation: Quarterback
+outcome: None
+result: None
+</item 10>
+=== END ITEM id=04b5d9703ce935f2 ===
+
+=== ITEM id=ab805de73017bbcc ===
+Gold sentences and facts:
+Sentence 0: The theory is generally associated with Hirschman . He presented a complete theoretical formulation of the strategy . Underdeveloped countries display common characteristics : low levels of GNI per capita and slow GNI per capita growth , large income inequalities and widespread poverty , low levels of productivity , great dependence on agriculture , a backward industrial structure , a high proportion of consumption and low savings , high rates of population growth and dependency burdens , high unemployment and underemployment , technological backwardness and dualism ( existence of both traditional and modern sectors ) . In a less - developed country , these characteristics lead to scarce resources or inadequate infrastructure to exploit these resources . With a lack of investors and entrepreneurs , cash flows can not be directed into various sectors that influence balanced economic growth .
+  Fact 0.0: The theory is generally associated with Hirschman.
+  Fact 0.1: Hirschman presented a complete theoretical formulation of the strategy.
+  Fact 0.2: Underdeveloped countries display common characteristics.
+  Fact 0.3: Underdeveloped countries have low levels of GNI per capita.
+  Fact 0.4: Underdeveloped countries have slow GNI per capita growth.
+  Fact 0.5: Underdeveloped countries have large income inequalities.
+  Fact 0.6: Underdeveloped countries have widespread poverty.
+  Fact 0.7: Underdeveloped countries have low levels of productivity.
+  Fact 0.8: Underdeveloped countries have great dependence on agriculture.
+  Fact 0.9: Underdeveloped countries have a backward industrial structure.
+  Fact 0.10: Underdeveloped countries have a high proportion of consumption and low savings.
+  Fact 0.11: Underdeveloped countries have high rates of population growth and dependency burdens.
+  Fact 0.12: Underdeveloped countries have high unemployment and underemployment.
+  Fact 0.13: Underdeveloped countries have technological backwardness.
+  Fact 0.14: Underdeveloped countries have dualism, meaning both traditional and modern sectors exist.
+  Fact 0.15: In a less-developed country, these characteristics lead to scarce resources or inadequate infrastructure to exploit these resources.
+  Fact 0.16: In a less-developed country, a lack of investors and entrepreneurs means cash flows cannot be directed into various sectors that influence balanced economic growth.
+
+Retrieved items:
+<item 1>
+Strategy of unbalanced growth
+Therefore , growth need not take place in a balanced way . Supporters of the unbalanced growth doctrine include Albert O. Hirschman , Hans Singer , Paul
+Streeten , Marcus Fleming , Prof. Rostov and J. Sheehan . Contents ( hide ) 1 Introduction 2 Complementarity 3 Induced investment 4 External economies 5 Social
+Overhead Capital 6 Development via capital imbalances 7 Backward and forward linkages 8 Linkages and last industries 8.1 Disadvantages 9 Further reading 10
+Notes 11 References Introduction ( edit ) The theory is generally associated with Hirschman . He presented a complete theoretical formulation of the strategy .
+Underdeveloped countries display common characteristics : low levels of GNI per capita and slow GNI per capita growth , large income inequalities and widespread
+poverty , low levels of productivity , great dependence on agriculture , a backward industrial structure , a high proportion of consumption and low savings ,
+high rates of population growth and dependency burdens , high unemployment and underemployment , technological backwardness and dualism ( existence of both
+traditional and modern sectors ) .
+</item 1>
+
+<item 2>
+Strategy of unbalanced growth
+( hide ) Development Economics : Partial Theories of Development Dual - sector model Big push model Critical minimum effort theory Ragnar Nurkse 's balanced
+growth theory Strategy of unbalanced growth Social dualism Technological dualism Fei -- Ranis model of economic growth Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Strategy_of_unbalanced_growth&oldid=838124154 '' Categories : Economic growth Hidden categories : Wikipedia articles
+that are incomprehensible from August 2016 All Wikipedia articles that are incomprehensible Articles lacking in - text citations from January 2012 All articles
+lacking in - text citations All articles with unsourced statements Articles with unsourced statements from February 2013 Wikipedia articles needing
+clarification from February 2013 Articles with unsourced statements from March 2012 All articles with specifically marked weasel - worded phrases Articles with
+specifically marked weasel - worded phrases from February 2013 Talk Contents About Wikipedia Deutsch Français 中文 Edit links This page was last edited on 25
+April 2018 , at 02 : 21 . Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply .
+</item 2>
+
+<item 3>
+Strategy of unbalanced growth
+11 , No. 2 ( Jun. , 1959 ) , pp. 167 -- 190 Notes ( edit ) References ( edit ) Hirschman , Albert O . `` The Strategy of Economic Development , '' in Agarwal ,
+A.N. and Singh , S.P. ( eds ) , Accelerating Investment in Developing Economies ( London Oxford Press , 1969 ) Thirwall , A.P. Growth and Development : With
+special reference to developing economies ( London : Macmillian Press ltd ... , sixth edition . 1999 ) , pp237 -- 242 . Scitovsky , Tibor . Papers on welfare
+and Growth ( London George Allen and Unwin ltd ... 1965 ) Refer to 5th paper entitled `` Growth -- Balanced and Unbalanced '' . Nath , S.K. , `` Balanced Growth
+. '' in Livingstone ( ed ) , Economic Policy for Development ( Harmodworth , Middlesex : Penguin Books ltd. 1971 ) Han Singer , `` The Concept of Balanced
+Growth and Economic Development ; Theory and Facts , '' University of Texas Conference on Economic Development , April 1958 .
+</item 3>
+
+<item 4>
+Strategy of unbalanced growth
+In a less - developed country , these characteristics lead to scarce resources or inadequate infrastructure to exploit these resources . With a lack of
+investors and entrepreneurs , cash flows can not be directed into various sectors that influence balanced economic growth . Hirschman contends that deliberate
+unbalancing of the economy according to the strategy is the best method of development and if the economy is to be kept moving ahead , the task of development
+policy is to maintain tension , disproportions and disequilibrium . Balanced growth should not be the goal but rather the maintenance of existing imbalances ,
+which can be seen from profit and losses . Therefore , the sequence that leads away from equilibrium is precisely an ideal pattern for development . Unequal
+development of various sectors often generates conditions for rapid development . More - developed industries provide undeveloped industries an incentive to
+grow . Hence , development of underdeveloped countries should be based on this strategy . The path of unbalanced growth is described by three phases :
+Complementary Induced investment External economies Singer believed that desirable investment programs always exist within a country that represent unbalanced
+investment to complement the existing imbalance . These investments create a new imbalance , requiring another balancing investment .
+</item 4>
+
+<item 5>
+Strategy of unbalanced growth
+Paul Streeten , `` Unbalanced Growth . '' Economic Integration , Sythoff , Leiden ( Netherlands ) , 1961 . Reprinted in A.N. Agarwala and S.P. Singh , ( eds . )
+, Accelerating Investment in Developing Economies ( London : Oxford University Press , 1969 ) .
+</item 5>
+
+<item 6>
+Economy of India
+Jump up ^ Datt & Sundharam 2009 , pp. 185 -- 187 Jump up ^ Cameron , John ; Ndhlovu , P Tidings ( September 2001 ) . `` Cultural Influences on Economic Thought
+in India : Resistance to diffusion of neo-classical economics and the principles of Hinduism '' ( PDF ) . Economic Issues . 6 ( 2 ) . Archived from the original
+( PDF ) on 23 August 2006 . Retrieved 17 January 2011 . Jump up ^ Roy , Subroto ( 22 September 1998 ) . `` Milton Friedman on the Nehru / Mahalanobis Plan '' .
+India Policy Institute . Retrieved 16 July 2005 . Jump up ^ Panagariya 2008 , pp. 6 -- 7 Jump up ^ Tripathi , Salil ( 13 June 2006 ) . `` Escaping the ' Hindu
+rate of growth ' '' . The Guardian . London . Retrieved 25 November 2010 . Jump up ^ Datt & Sundharam 2009 , pp.
+</item 6>
+
+<item 7>
+Economy of India
+83 -- 85 . Jump up ^ Paul Bairoch ( 1995 ) . Economics and World History : Myths and Paradoxes . University of Chicago Press . pp. 95 -- 104 . Jump up ^ Chris
+Jochnick , Fraser A. Preston ( 2006 ) , Sovereign Debt at the Crossroads : Challenges and Proposals for Resolving the Third World Debt Crisis , pages 86 - 87 ,
+Oxford University Press ^ Jump up to : Parthasarathi , Prasannan ( 2011 ) , Why Europe Grew Rich and Asia Did Not : Global Economic Divergence , 1600 -- 1850 ,
+Cambridge University Press , pp. 38 -- 45 , ISBN 978 - 1 - 139 - 49889 - 0 Jump up ^ Kumar 2005 , p. 422 Jump up ^ Maddison , Angus ( 2003 ) : Development
+Centre Studies The World Economy Historical Statistics : Historical Statistics , OECD Publishing , ISBN 9264104143 , page 261 Jump up ^ James Cypher ( 2014 ) .
+The Process of Economic Development . Routledge .
+</item 7>
+
+<item 8>
+Strategy of unbalanced growth
+Strategy of unbalanced growth - Wikipedia Strategy of unbalanced growth Jump to : navigation , search This article may be incomprehensible or very hard to
+understand . In particular , it uses both very general statements which are not further clarified or contextualized , and technical jargon that is not explained
+. Please help by rewording it if the intended meaning can be determined . The talk page may have details . ( August 2016 ) ( Learn how and when to remove this
+template message ) This article includes a list of references , related reading or external links , but its sources remain unclear because it lacks inline
+citations . Please help to improve this article by introducing more precise citations . ( January 2012 ) ( Learn how and when to remove this template message )
+Unbalanced growth is a natural path of economic development . Situations that countries are in at any one point in time reflect their previous investment
+decisions and development . Accordingly , at any point in time desirable investment programs that are not balanced investment packages may still advance welfare
+. Unbalanced investment can complement or correct existing imbalances . Once such an investment is made , a new imbalance is likely to appear , requiring
+further compensating investments .
+</item 8>
+
+<item 9>
+Strategy of unbalanced growth
+These investments create a new imbalance , requiring another balancing investment . One sector will always grow faster than another , so the need for unbalanced
+growth will continue as investments must complement existing imbalance . Hirschman states `` If the economy is to be kept moving ahead , the task of development
+policy is to maintain tensions , disproportions and disequilibrium '' . This situation exists for all societies , developed or underdeveloped . Complementarity
+( edit ) Complementarity is a situation where increased production of one good or service builds up demand for the second good or service . When the second
+product is privately produced , this demand will lead to imports or higher domestic production of the second product , as it will be in the interests of the
+producers to do so . Otherwise , the increased demand takes the form of political pressure . This is the case for such public services such as law and order ,
+education , water and electricity that can not reasonably be imported . Induced investment ( edit ) Complementarity allows investment in one industry or sector
+to encourage investment in others . This concept of induced investment is like a multiplier , because each investment triggers a series of subsequent events .
+</item 9>
+
+<item 10>
+Strategy of unbalanced growth
+The services provided should be subject to public control . The services can not be imported . The investment needed to provide services should be characterized
+by some unevenness as well as by high capital output ratio . Development via capital imbalances ( edit ) The strategy of unbalanced growth has been discussed
+within the frameworks of development through shortage of SOC and development through excess of SOC . In the first case , the country invests in direct
+productive activities ( DPA ) . Direct productive activity increases demand for SOC , inducing investment . In the second case , SOC expands , which reduces the
+cost of services , inducing investment in DPA . The cost of producing any unit of output of DPA is inversely proportional to SOC . The economy 's major
+objective is to attain increasing output of DPA . One of the paradoxes of development is that poor countries can not afford to be economical . According to
+Hirschman , resources are not scarce per se , but the ability to employ those resources may be lacking . To explain unbalanced growth , Hirschman assumes that
+the country invests in either DPA or SOC .
+</item 10>
+=== END ITEM id=ab805de73017bbcc ===
+
+=== ITEM id=728712eff07a7981 ===
+Gold sentences and facts:
+Sentence 0: The first installment , Divergent ( 2014 ) , grossed over $288 million worldwide , while the second installment , The Divergent Series : Insurgent ( 2015 ) , grossed over $297 million worldwide . Insurgent was also the first Divergent film to be released in IMAX 3D . The third installment , The Divergent Series : Allegiant ( 2016 ) , grossed $179 million . Thus , the first three films of the series have grossed over $765 million worldwide . A fourth film , The Divergent Series : Ascendant was never made , due to Allegiant 's poor showing at the box office .
+  Fact 0.0: Divergent (2014) is the first installment of the Divergent series.
+  Fact 0.1: Divergent grossed over $288 million worldwide.
+  Fact 0.2: The Divergent Series: Insurgent (2015) is the second installment of the Divergent series.
+  Fact 0.3: The Divergent Series: Insurgent grossed over $297 million worldwide.
+  Fact 0.4: The Divergent Series: Insurgent was the first Divergent film released in IMAX 3D.
+  Fact 0.5: The Divergent Series: Allegiant (2016) is the third installment of the Divergent series.
+  Fact 0.6: The Divergent Series: Allegiant grossed $179 million.
+  Fact 0.7: The first three films of the Divergent series have grossed over $765 million worldwide in total.
+  Fact 0.8: The Divergent Series: Ascendant is a fourth film that was never made.
+  Fact 0.9: The Divergent Series: Ascendant was never made due to The Divergent Series: Allegiant's poor showing at the box office.
+
+Retrieved items:
+<item 1>
+The Divergent Series
+I 'm thrilled ! '' The producers said about his casting : `` We took our time to find the right actor to fill the role of Four , and Theo is definitely the
+perfect fit . Veronica has crafted a truly iconic character in Four and we can not wait to begin production and bring him and this story to life for millions of
+fans around the world . '' Production ( edit ) Filming for the franchise began on April 16 , 2013 . Film Producers Director Screenwriters Novel by Veronica Roth
+Divergent Fisher , Lucy Lucy Fisher Douglas Wick Pouya Shabazian Burger , Neil Neil Burger Evan Daugherty Vanessa Taylor Divergent The Divergent Series :
+Insurgent Schwentke , Robert Robert Schwentke Akiva Goldsman Brian Duffield Insurgent The Divergent Series : Allegiant Noah Oppenheim Adam Cooper Bill Collage
+Allegiant The Divergent Series : Ascendant Lee Toland Krieger Lucy Fisher , Douglas Wick , and Pouya Shabazian have been producers for all four films in the
+series . Veronica Roth and Neil Burger have acted as executive producers on the first two films .
+</item 1>
+
+<item 2>
+The Divergent Series
+by Veronica Roth Composer Junkie XL Joseph Trapanese N / A Cinematographer Alwin H. Küchler Florian Ballhaus Editor ( s ) Richard Francis - Bruce Nancy
+Richardson Nancy Richardson Stuart Levy Stuart Levy N / A Production companies Red Wagon Entertainment Summit Entertainment Red Wagon Entertainment Summit
+Entertainment Mandeville Films Red Wagon Entertainment Mandeville Films N / A Distributor Lionsgate Summit Entertainment N / A Running time 139 minutes 119
+minutes 121 minutes TBA Release date March 21 , 2014 March 20 , 2015 March 18 , 2016 TBA Reception ( edit ) Further information on the reception of each film :
+Divergent ( film ) § Reception , The Divergent Series : Insurgent § Reception , and The Divergent Series : Allegiant § Reception Though the first two films were
+commercially successful , the series as a whole has not been well received by critics . Each successive film release has been rated lower than the previous
+release on review aggregator websites . Negative reviews of the third novel Allegiant and the studios ' decision to split it into two films have been blamed for
+the third film 's lackluster performance at the box office .
+</item 2>
+
+<item 3>
+The Divergent Series
+For the mathematical use , see Divergent series . The Divergent Series Produced by Lucy Fisher Douglas Wick Pouya Shabazian Based on The Divergent trilogy by
+Veronica Roth Starring Shailene Woodley Theo James Zoë Kravitz Miles Teller Ansel Elgort Production company Red Wagon Entertainment Summit Entertainment
+Distributed by Summit Entertainment Lionsgate Release date 1 : March 21 , 2014 ( 2014 - 03 - 21 ) 2 : 000000002015 - 03 - 20 - 0000 March 20 , 2015 3 :
+000000002016 - 03 - 18 - 0000 March 18 , 2016 4 : Cancelled Running time 379 minutes ( 3 films ) Country United States Language English Budget Total ( 3 films )
+: $305 million Box office Total ( 3 films ) : $765,409,015 The Divergent Series is a feature film trilogy based on the Divergent novels by the American author
+Veronica Roth . Distributed by Summit Entertainment and Lionsgate Films , the series consists of three science fiction films set in a dystopian society .
+</item 3>
+
+<item 4>
+The Divergent Series
+The Divergent Series : Allegiant ( 2016 ) ( edit ) Main article : The Divergent Series : Allegiant On December 16 , 2013 , Summit Entertainment announced that
+the film adaptation of Allegiant would be released on March 18 , 2016 . On April 11 , 2014 , Lionsgate announced that the film adaptation would be split into
+two films with the first part titled , The Divergent Series : Allegiant -- Part 1 . The film was then re-titled as The Divergent Series : Allegiant . Tris must
+escape with Four and go beyond the wall enclosing Chicago . For the first time ever , they will leave the only city and family they have ever known in order to
+find a peaceful solution for their embroiled city . Once outside , old discoveries are quickly rendered meaningless with the revelation of shocking new truths .
+Tris must quickly decide who she can trust as a ruthless battle ignites beyond the walls of Chicago . In order to survive , Tris will be forced to make
+impossible choices about courage , allegiance , sacrifice and love .
+</item 4>
+
+<item 5>
+The Divergent Series
+The first installment , Divergent ( 2014 ) , grossed over $288 million worldwide , while the second installment , The Divergent Series : Insurgent ( 2015 ) ,
+grossed over $297 million worldwide . Insurgent was also the first Divergent film to be released in IMAX 3D . The third installment , The Divergent Series :
+Allegiant ( 2016 ) , grossed $179 million . Thus , the first three films of the series have grossed over $765 million worldwide . A fourth film , The Divergent
+Series : Ascendant was never made , due to Allegiant 's poor showing at the box office .
+</item 5>
+
+<item 6>
+The Divergent Series
+Cancelled film ( edit ) A Third sequel to the film was initially planned , with a March 2017 release , based on the latter half of the Allegiant book . The
+timing was changed to a June 2017 release , with Lee Toland Krieger then attached as the movie 's director . Ascendant ( TV Series ) ( edit ) In July 2016 ,
+after the poor performance of the third film at the box office , the producers considered creating the fourth as a television film , which would add new
+characters to the story who could continue in a spinoff television series , moving beyond the books . In September 2016 , Shailene Woodley stated on Today that
+the film versus television decision was not finalized , and that it was `` a limbo waiting game '' . In the same interview Woodley spoke despairingly of the
+chances of her returning to the project in a television format , although noting she would be open to returning to it as a theatrical film . In February 2017 ,
+with the producers having confirmed that it would be a television project , it was announced that Woodley had backed out of her starring role .
+</item 6>
+
+<item 7>
+The Divergent Series
+Neil Burger was announced as the director on August 23 , 2012 . Evan Daugherty , who co-wrote the screenplay with Vanessa Taylor , said , `` I get hung up on
+the toughness of the movie but of equal importance is the love story between Tris and Four . It 's inherently and inextricably linked to Tris ' character
+journey . There will be plenty of sexual tension and chemistry , but it 's important that all of that stuff does n't just feel like it 's thrown in , but that
+it all helps Tris grow as a character . '' Daugherty further added , `` It 's tricky because the book is a very packed read with a lot of big ideas . So ,
+distilling that into a cool , faithful two - hour movie is challenging . Not only do you have to establish five factions , but you have to acknowledge that
+there 's a sixth entity , which is the divergent , and you also have the factionless . So there 's a world that really has to be built out for the big screen
+... the movie is going to do it a little more efficiently . ''
+</item 7>
+
+<item 8>
+The Divergent Series
+On December 16 , 2013 , it was announced that Neil Burger , director of Divergent , would not return to direct Insurgent as he was still working on the first
+film . On February 13 , 2014 , it was announced that Robert Schwentke was offered the director position for the film and that Akiva Goldsman had been hired to
+re-write Duffield 's script . Also in December 2013 , Summit Entertainment announced that the film adaptation of Allegiant , the third and final novel in the
+Divergent trilogy , would be released in March 2016 , serving as the finale of the series , which at the time was planned as a trilogy , but on April 11 , 2014
+, the studio decided to split the novel into a two - part film , much the like the Harry Potter , Twilight , and Hunger Games franchises did with the finales of
+their series .
+</item 8>
+
+<item 9>
+The Divergent Series
+Variety . Jump up ^ `` ' Divergent ' Threequel ' Allegiant ' Taps ' Maze Runner ' Writer ( Exclusive ) '' . Jump up ^ `` ' Insurgent ' Director Robert Schwentke
+Returning for ' Allegiant Part 1 ′ ( EXCLUSIVE ) '' . Variety . ^ Jump up to : Mia Galuppo ( September 10 , 2015 ) . `` Final Two ' Divergent ' Films Get New
+Titles , Logos '' . The Hollywood Reporter . ( Prometheus Global Media ) . Retrieved September 11 , 2015 . Jump up ^ `` Shailene Woodley Talks ' Divergent '
+Movie Casting '' . Retrieved June 8 , 2013 . Jump up ^ `` Who Has ' Divergent ' Chemistry With Shailene Woodley ? '' . Retrieved June 8 , 2013 . Jump up ^ Kit ,
+Borys . `` Jack Reynor Lands Starring Role in ' Transformers 4 ' '' . The Hollywood Reporter . Retrieved June 8 , 2013 .
+</item 9>
+
+<item 10>
+The Divergent Series
+They have been produced by Lucy Fisher , Pouya Shabazian , and Douglas Wick . The series star Shailene Woodley and Theo James as lead characters Beatrice Prior
+( Tris ) and Tobias Eaton ( Four ) , respectively . The supporting cast includes Ansel Elgort , Zoë Kravitz , and Miles Teller . Kate Winslet played the main
+antagonist in the first two films . The first film in the series was directed by Neil Burger , while the second and third films were directed by Robert
+Schwentke . The Veronica Roth novels consist primarily of the trilogy ( ' Divergent ' , ' Insurgent ' , ' Allegiant ' ) . Development began in 2011 following
+Summit 's acquisition of the film rights to the Divergent novel in partnership with production company Red Wagon Entertainment . The studios announced
+production on the sequel following the first film 's strong performance in Thursday late - night screenings , where it grossed $4.9 million . They acquired film
+rights to the Allegiant novel in December 2013 , deciding in April 2014 to split the third novel into a two - part film adaptation .
+</item 10>
+=== END ITEM id=728712eff07a7981 ===
+
+=== ITEM id=4737df8730d8e526 ===
+Gold sentences and facts:
+Sentence 0: The Quebec Winter Carnival or the Carnaval de Québec is a pre-Lenten festival held in Quebec City . After being held intermittently since 1894 , the Carnaval de Québec has been celebrated annually since 1955 . That year Bonhomme Carnaval , the mascot of the festival , made his first appearance . Up to one million people attended the Carnaval de Québec in 2006 making it the largest winter festival in the world .
+  Fact 0.0: The Quebec Winter Carnival (Carnaval de Québec) is a pre-Lenten festival.
+  Fact 0.1: The Carnaval de Québec is held in Quebec City.
+  Fact 0.2: The Carnaval de Québec was held intermittently after 1894.
+  Fact 0.3: The Carnaval de Québec has been celebrated annually since 1955.
+  Fact 0.4: In 1955, Bonhomme Carnaval, the mascot of the festival, made his first appearance.
+  Fact 0.5: Up to one million people attended the Carnaval de Québec in 2006.
+  Fact 0.6: In 2006, the Carnaval de Québec was the largest winter festival in the world.
+
+Retrieved items:
+<item 1>
+God Save the Queen
+Ottawa : Queen 's Printer for Canada . p. 2 . ISBN 978 - 1 - 100 - 12739 - 2 . Retrieved 16 January 2011 . Jump up ^ Alberta Police and Peace Officers '
+Memorial Day 2009 Order of Service , Queen 's Printer for Alberta , 27 September 2009 access - date = requires url = ( help ) Jump up ^ Department of Canadian
+Heritage . `` Ceremonial and Canadian Symbols Promotion > The National Flag of Canada '' . Queen 's Printer for Canada . Retrieved 5 July 2010 . Jump up ^ Royal
+Canadian Legion Dominion Command ( 4 November 2009 ) . `` National Remembrance Day Ceremony '' . Royal Canadian Legion . Archived from the original on 12 March
+2010 . Retrieved 5 July 2010 . Jump up ^ Department of Veterans Affairs . `` Canada Remembers > Partnering Opportunities > Community Engagement Partnership Fund
+> Nova Scotia > Community Engagement Partnership Fund : Nova Scotia '' . Queen 's Printer for Canada . Retrieved 5 July 2010 .
+</item 1>
+
+<item 2>
+Quebec Winter Carnival
+An Ice canoe race on the St. Lawrence river . The Québec International Pee - Wee Hockey Tournament ( not officially part of the carnival program since 1977 ) .
+The Snowboard World Cup in Quebec City ( not part of the carnival official program ) . Also not part of the official program but worth a visit or a stay , the
+Quebec City Ice Hotel is open every year from early January to late March with its bar , nightclub , exhibition galleries and ceremonial chapel . Gallery ( edit
+) Ice sculpture ( 2005 ) Family venue ( 2006 ) Ice Palace ( 2009 ) Parade in Montreal ( 2011 ) Canoe race ( 2011 ) Ice Palace ( 2011 ) Toboggan at Terrasse
+Dufferin References ( edit ) Jump up ^ Daniel Shafto ( 1 January 2009 ) . Carnival . Infobase Publishing . p. 80 . ISBN 978 - 1 - 4381 - 2660 - 9 . Jump up ^
+Hilary Davidson ; Paul Karr ; Herbert Bailey Livesey ; Bill McRae ; Donald Olson ( 14 August 2006 ) .
+</item 2>
+
+<item 3>
+Quebec Winter Carnival
+Frommer 's Canada : With the best hiking & outdoor adventures . John Wiley & Sons . p. 300 . ISBN 978 - 0 - 470 - 04457 - 5 . Jump up ^
+https://www.theglobeandmail.com/life/travel/activities-and-interests/the-snowman-behind-the-legend-get-to-know-quebecs-beloved-bonhomme/article37716316/ Quebec
+Winter Carnaval virtual tour in panoramic photography Tornoipee-wee.qc.ca Fissnowboard.com Icehotel-canada.com Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Quebec_Winter_Carnival&oldid=822352977 '' Categories : Tourist attractions in Quebec City Festivals in Quebec City
+Winter festivals in Canada Mardi Gras 1894 establishments in Quebec Hidden categories : Articles needing additional references from January 2018 All articles
+needing additional references Quebec articles missing geocoordinate data All articles needing coordinates Talk Contents About Wikipedia Deutsch Español Français
+한국어 日本 語 Português Svenska Edit links This page was last edited on 25 January 2018 , at 21 : 54 .
+</item 3>
+
+<item 4>
+Quebec Winter Carnival
+Contents ( hide ) 1 Activities and attractions 2 Feasts and restaurants 3 Races and tournaments 4 Gallery 5 References Activities and attractions ( edit ) The
+most famous attractions of this winter festival are the night - time and daytime parades led by mascot Bonhomme Carnaval . The parades wind through the upper
+city , decorated for the occasion with lights and ice sculptures . Numerous public and private parties , shows and balls are held across the city , some of them
+outside in the bitter cold , testimony to the Québécois ' fabled joie de vivre . Other major events include : A masquerade ball with up to 400 participants at
+the grand ballroom of the Château Frontenac . The opening and closing ceremonies taking place at the Ice Palace before thousands of participants , Bonhomme and
+the mayor of Quebec . Outdoor sport events ( snowboarding , ice canoe , snowshoes , hockey , dog - sledding , etc. , some of them part of World Championship
+tournaments ) inside and outside the city . Free outdoor public banquets ( brunch , breakfast , etc . ) . .
+</item 4>
+
+<item 5>
+Quebec Winter Carnival
+Quebec winter carnival - wikipedia Quebec winter carnival Jump to : navigation , search This article needs additional citations for verification . Please help
+improve this article by adding citations to reliable sources . Unsourced material may be challenged and removed . ( January 2018 ) ( Learn how and when to
+remove this template message ) Quebec Winter Carnival Carnaval de Québec Bonhomme Carnaval in 2011 Genre Festival Begins End of January Ends Mid February
+Frequency Annually Location ( s ) Quebec City Country Canada Website Carnaval de Québec The Quebec Winter Carnival or the Carnaval de Québec is a pre-Lenten
+festival held in Quebec City . After being held intermittently since 1894 , the Carnaval de Québec has been celebrated annually since 1955 . That year Bonhomme
+Carnaval , the mascot of the festival , made his first appearance . Up to one million people attended the Carnaval de Québec in 2006 making it the largest
+winter festival in the world .
+</item 5>
+
+<item 6>
+Quebec Winter Carnival
+Bonhomme is described as a seven - foot - tall , four - hundred pound snowman sporting a red cap , black buttons and a ceinture fléchée . It is traditional to
+drink Caribou , a hot alcoholic beverage , to keep warm . The public auction is a fundraising event in aid of the carnival . This auction features many goods
+and services donated for silent auction and live auction . Feasts and restaurants ( edit ) The Business Leaders ' Luncheon , organized by the Québec City
+Chamber of Commerce . The Calgary Stampede Flap Jack Breakfast . In 2008 , carnival - goers were served by Prime Minister Stephen Harper . The ' Restaurant
+Partners ' Campaign is a 179 - day promotion during which Québec City restaurants offer customers a special menu for a fixed price throughout the carnival (
+including appetizer , soup , or salad , a main course , and a dessert ) . Races and tournaments ( edit ) A sleigh race in which drivers and their horses take
+part in a single - and double - harness race on the Plains of Abraham . An Ice canoe race on the St. Lawrence river .
+</item 6>
+
+<item 7>
+God Save the Queen
+Queen 's Printer for Canada . Retrieved 5 July 2010 . Jump up ^ Remembrance Day ( PDF ) , Vancouver Board of Parks and Recreation , 11 November 2009 , archived
+from the original ( PDF ) on 7 July 2011 , retrieved 5 July 2010 Jump up ^ `` Honours and Salutes '' . Queen 's Printer for Canada . Retrieved 4 March 2017 . ^
+Jump up to : Bélanger , Claude . `` The Quebec History Encyclopedia '' . In Marianopolis College . National Anthem of Canada . Montreal : Marianopolis College .
+Retrieved 5 July 2010 . ^ Jump up to : Department of Canadian Heritage . `` National Anthem : O Canada > Parliamentary Action '' . Queen 's Printer for Canada .
+Retrieved 29 June 2010 . ^ Jump up to : Department of National Defence ( 1 April 1999 ) , The Honours , Flags and Heritage Structure of the Canadian Forces (
+PDF ) , Ottawa : Queen 's Printer for Canada , p.
+</item 7>
+
+<item 8>
+Graph query row:
+carnival: Quebec Winter Carnival
+symbol: Bonhomme Carnaval
+relationship: RELATED_TO
+</item 8>
+
+<item 9>
+Quebec Winter Carnival
+About Wikipedia
+</item 9>
+
+<item 10>
+Quebec Winter Carnival
+Free outdoor public banquets ( brunch , breakfast , etc . ) . . The Canadian , Québécois , International and Student artist snow sculpture contests on the
+Plains of Abraham , the main setting of the carnival . The Plains are a public city park and stay open for leisure activities , including snowshoeing and
+cross-country skiing trails , during carnival time . Part of the Plains around the Citadel is transformed into an outdoor winter amusement park with various
+family - themed activities , including the display of the three main snow - sculpting contests ( Canada 's provinces , Quebec 's regions , International ) and
+the traditional bikini snow bath event ( bain de neige ) Outdoor dance parties are held at the Ice Palaces . Kiosks and other outlets in the city sell the
+Bonhomme effigy tag that grants admission into most of the events , although some are free outside the main site . Most commercial main streets are decorated
+and some bars and restaurants set up a winter patio in front of their establishments . Bonhomme -- short for bonhomme de neige ( `` snowman '' ) is the official
+ambassador of the festivities , the castle lord of the Ice Palace .
+</item 10>
+=== END ITEM id=4737df8730d8e526 ===
+
+=== ITEM id=17a8b02438ce5c83 ===
+Gold sentences and facts:
+Sentence 0: Economy of India Mumbai , Maharashtra the financial center of India Currency Indian rupee ( INR ) ₹ 1 = 100 Paise Fiscal year 1 April -- 31 March Trade organisations WTO , WCO , WFTU , G - 20 and others Statistics GDP $2.848 trillion ( nominal ; 2018 est ) $10.385 trillion ( PPP ; 2018 est ) GDP rank 6th ( nominal ) 3rd ( PPP ) GDP growth 7.2 % ( Q3 , 2017 - 18 ) ( MOSPI ) GDP per capita $2,134 ( nominal ; 2018 est ) $7,783 ( PPP ; 2018 est ) GDP per capita rank 141st ( nominal ) 123rd ( PPP ) GDP by sector Agriculture : 17.32 % Industry : 29.02 % Services : 53.66 % ( 2016 est . ) Inflation ( CPI ) 4.28 % ( March 2018 ) Base borrowing rate 6.25 % ( as on 16 Mar. 2018 ) Population below poverty line 21.2 % 58 % live less than $3.10 / day ( 2011 ; World bank estimate ) Gini coefficient 33.9 ( 2013 ) Human Development Index 0.624 ( 2015 ) medium ( 131st ) Labour force 520.2 million ( 2017 ) Labour force by occupation Agriculture : 47 % Industry : 22 % Services : 31 % ( FY 2014 est . ) Unemployment 8.8 % ( 2017 ) Average net salary ₹ 82,269 / $1,284 annually ( 2016 - 17 ) Main industries Textiles chemicals food processing steel cement mining petroleum machinery software pharmaceuticals transportation equipment Ease - of - doing - business rank 100 ( 2017 ) External Exports $275.8 billion ( 2017 ) Export goods Agricultural products 13.2 % Fuels and mining products 15.7 % Manufacturers 68.4 % Others 2.7 % Main export partners European Union 17.6 % United States 16.1 % United Arab Emirates 11.5 % Hong Kong 5.1 % China 3.4 % Other 46.3 % Imports $384.3 billion ( 2017 ) Import goods Agricultural products 7.1 % Fuels and mining products 33.1 % Manufacturers 47.8 % Other 12 % Main import partners China 17 % European Union 11.3 % United States 5.7 % United Arab Emirates 5.4 % Saudi Arabia 5.2 % Other 55.5 % FDI stock Inward : $318.50 billion Outward : $144.13 billion ( 2016 ) Current account 0.7 % of GDP ( 2016 -- 17 ) Gross external debt $471.9 billion ( 31 March 2017 ) Net international investment position - $404.8 billion ( Sept. 2017 ) Public finances Public debt 67.7 % of GDP ( 2017 ) Revenues ₹ 35.41 trillion ( US $540 billion ) ( 2017 ) Expenses ₹ 46.25 trillion ( US $710 billion ) ( 2017 ) Economic aid $2.68 billion ( 2016 ) Credit rating Standard & Poor 's : BBB − ( Domestic ) BBB − ( Foreign ) BBB+ ( T&C Assessment ) Outlook : Stable Moody 's : Baa2 Outlook : Stable Fitch : BBB − Outlook : Stable Foreign reserves $426.082 billion ( 13 April 2018 ) ( 8th ) Main data source : CIA World Fact Book All values , unless otherwise stated , are in US dollars .
+  Fact 0.0: Mumbai, Maharashtra is the financial center of India.
+  Fact 0.1: The currency of India is the Indian rupee (INR).
+  Fact 0.2: 1 rupee equals 100 paise.
+  Fact 0.3: India's fiscal year runs from 1 April to 31 March.
+  Fact 0.4: India's trade organisations include WTO, WCO, WFTU, G-20 and others.
+  Fact 0.5: India's nominal GDP is $2.848 trillion (2018 estimate).
+  Fact 0.6: India's PPP GDP is $10.385 trillion (2018 estimate).
+  Fact 0.7: India's nominal GDP rank is 6th.
+  Fact 0.8: India's PPP GDP rank is 3rd.
+  Fact 0.9: India's GDP growth is 7.2% (Q3, 2017-18), per MOSPI.
+  Fact 0.10: India's nominal GDP per capita is $2,134 (2018 estimate).
+  Fact 0.11: India's PPP GDP per capita is $7,783 (2018 estimate).
+  Fact 0.12: India's nominal GDP per capita rank is 141st.
+  Fact 0.13: India's PPP GDP per capita rank is 123rd.
+  Fact 0.14: Agriculture makes up 17.32% of India's GDP by sector (2016 estimate).
+  Fact 0.15: Industry makes up 29.02% of India's GDP by sector (2016 estimate).
+  Fact 0.16: Services make up 53.66% of India's GDP by sector (2016 estimate).
+  Fact 0.17: India's CPI inflation is 4.28% (March 2018).
+  Fact 0.18: India's base borrowing rate is 6.25% (as on 16 March 2018).
+  Fact 0.19: 21.2% of India's population is below the poverty line.
+  Fact 0.20: 58% of India's population lives on less than $3.10 per day (2011, World Bank estimate).
+  Fact 0.21: India's Gini coefficient is 33.9 (2013).
+  Fact 0.22: India's Human Development Index is 0.624 (2015), rated medium and ranked 131st.
+  Fact 0.23: India's labour force is 520.2 million (2017).
+  Fact 0.24: Agriculture accounts for 47% of India's labour force by occupation (FY 2014 estimate).
+  Fact 0.25: Industry accounts for 22% of India's labour force by occupation (FY 2014 estimate).
+  Fact 0.26: Services account for 31% of India's labour force by occupation (FY 2014 estimate).
+  Fact 0.27: India's unemployment rate is 8.8% (2017).
+  Fact 0.28: India's average net salary is ₹82,269 or $1,284 annually (2016-17).
+  Fact 0.29: Main industries in India include textiles, chemicals, food processing, steel, cement, mining, petroleum, machinery, software, pharmaceuticals and transportation equipment.
+  Fact 0.30: India's ease-of-doing-business rank is 100 (2017).
+  Fact 0.31: India's exports are $275.8 billion (2017).
+  Fact 0.32: Agricultural products make up 13.2% of India's export goods.
+  Fact 0.33: Fuels and mining products make up 15.7% of India's export goods.
+  Fact 0.34: Manufacturers make up 68.4% of India's export goods.
+  Fact 0.35: Other export goods make up 2.7% of India's exports.
+  Fact 0.36: The European Union is 17.6% of India's main export partners.
+  Fact 0.37: The United States is 16.1% of India's main export partners.
+  Fact 0.38: The United Arab Emirates is 11.5% of India's main export partners.
+  Fact 0.39: Hong Kong is 5.1% of India's main export partners.
+  Fact 0.40: China is 3.4% of India's main export partners.
+  Fact 0.41: Other export partners make up 46.3% of India's exports.
+  Fact 0.42: India's imports are $384.3 billion (2017).
+  Fact 0.43: Agricultural products make up 7.1% of India's import goods.
+  Fact 0.44: Fuels and mining products make up 33.1% of India's import goods.
+  Fact 0.45: Manufacturers make up 47.8% of India's import goods.
+  Fact 0.46: Other import goods make up 12% of India's imports.
+  Fact 0.47: China is 17% of India's main import partners.
+  Fact 0.48: The European Union is 11.3% of India's main import partners.
+  Fact 0.49: The United States is 5.7% of India's main import partners.
+  Fact 0.50: The United Arab Emirates is 5.4% of India's main import partners.
+  Fact 0.51: Saudi Arabia is 5.2% of India's main import partners.
+  Fact 0.52: Other import partners make up 55.5% of India's imports.
+  Fact 0.53: India's inward FDI stock is $318.50 billion (2016).
+  Fact 0.54: India's outward FDI stock is $144.13 billion (2016).
+  Fact 0.55: India's current account is 0.7% of GDP (2016-17).
+  Fact 0.56: India's gross external debt is $471.9 billion (31 March 2017).
+  Fact 0.57: India's net international investment position is -$404.8 billion (Sept. 2017).
+  Fact 0.58: India's public debt is 67.7% of GDP (2017).
+  Fact 0.59: India's public revenues are ₹35.41 trillion, or US$540 billion (2017).
+  Fact 0.60: India's public expenses are ₹46.25 trillion, or US$710 billion (2017).
+  Fact 0.61: India's economic aid is $2.68 billion (2016).
+  Fact 0.62: Standard & Poor's gives India a BBB- domestic credit rating.
+  Fact 0.63: Standard & Poor's gives India a BBB- foreign credit rating.
+  Fact 0.64: Standard & Poor's gives India a BBB+ T&C assessment.
+  Fact 0.65: Standard & Poor's outlook for India is stable.
+  Fact 0.66: Moody's gives India a Baa2 rating with a stable outlook.
+  Fact 0.67: Fitch gives India a BBB- rating with a stable outlook.
+  Fact 0.68: India's foreign reserves are $426.082 billion (13 April 2018), ranked 8th.
+  Fact 0.69: The main data source for these figures is the CIA World Fact Book.
+  Fact 0.70: All values, unless otherwise stated, are in US dollars.
+Sentence 1: India has one of the fastest growing service sectors in the world with an annual growth rate above 9 % since 2001 , which contributed to 57 % of GDP in 2012 -- 13 . India has become a major exporter of IT services , Business Process Outsourcing ( BPO ) services , and software services with $154 billion revenue in FY 2017 . This is the fastest - growing part of the economy . The IT industry continues to be the largest private - sector employer in India . India is the third - largest start - up hub in the world with over 3,100 technology start - ups in 2014 -- 15 The agricultural sector is the largest employer in India 's economy but contributes to a declining share of its GDP ( 17 % in 2013 -- 14 ) . India ranks second worldwide in farm output . The industry ( manufacturing ) sector has held a steady share of its economic contribution ( 26 % of GDP in 2013 -- 14 ) . The Indian automobile industry is one of the largest in the world with an annual production of 21.48 million vehicles ( mostly two and three - wheelers ) in 2013 -- 14 . India had $600 billion worth of retail market in 2015 and one of world 's fastest growing e-commerce markets .
+  Fact 1.0: India has one of the fastest growing service sectors in the world.
+  Fact 1.1: India's service sector has grown at an annual rate above 9% since 2001.
+  Fact 1.2: India's service sector contributed 57% of GDP in 2012-13.
+  Fact 1.3: India has become a major exporter of IT services, Business Process Outsourcing (BPO) services and software services.
+  Fact 1.4: India's IT, BPO and software services exports had $154 billion in revenue in FY 2017.
+  Fact 1.5: The IT and services export part of the economy is the fastest-growing part of the economy.
+  Fact 1.6: The IT industry is the largest private-sector employer in India.
+  Fact 1.7: India is the third-largest start-up hub in the world.
+  Fact 1.8: India had over 3,100 technology start-ups in 2014-15.
+  Fact 1.9: The agricultural sector is the largest employer in India's economy.
+  Fact 1.10: Agriculture's share of India's GDP is declining, at 17% in 2013-14.
+  Fact 1.11: India ranks second worldwide in farm output.
+  Fact 1.12: The industry (manufacturing) sector has held a steady share of India's economic contribution, at 26% of GDP in 2013-14.
+  Fact 1.13: The Indian automobile industry is one of the largest in the world.
+  Fact 1.14: The Indian automobile industry produced 21.48 million vehicles in 2013-14, mostly two- and three-wheelers.
+  Fact 1.15: India had a $600 billion retail market in 2015.
+  Fact 1.16: India has one of the world's fastest growing e-commerce markets.
+Sentence 2: India ranks second worldwide in farm output . Agriculture and allied sectors like forestry , logging and fishing accounted for 17 % of the GDP and employed 49 % of its total workforce in 2014 . Agriculture accounted for 23 % of GDP , and employed 59 % of the country 's total workforce in 2016 . As the Indian economy has diversified and grown , agriculture 's contribution to GDP has steadily declined from 1951 to 2011 , yet it is still the country 's largest employment source and a significant piece of its overall socio - economic development . Crop - yield - per - unit - area of all crops has grown since 1950 , due to the special emphasis placed on agriculture in the five - year plans and steady improvements in irrigation , technology , application of modern agricultural practices and provision of agricultural credit and subsidies since the Green Revolution in India . However , international comparisons reveal the average yield in India is generally 30 % to 50 % of the highest average yield in the world . The states of Uttar Pradesh , Punjab , Haryana , Madhya Pradesh , Andhra Pradesh , Telangana , Bihar , West Bengal , Gujarat and Maharashtra are key contributors to Indian agriculture .
+  Fact 2.0: India ranks second worldwide in farm output.
+  Fact 2.1: Agriculture and allied sectors, such as forestry, logging and fishing, accounted for 17% of India's GDP in 2014.
+  Fact 2.2: Agriculture and allied sectors employed 49% of India's total workforce in 2014.
+  Fact 2.3: Agriculture accounted for 23% of India's GDP in 2016.
+  Fact 2.4: Agriculture employed 59% of India's total workforce in 2016.
+  Fact 2.5: Agriculture's contribution to India's GDP has steadily declined from 1951 to 2011.
+  Fact 2.6: Agriculture is still the country's largest employment source.
+  Fact 2.7: Agriculture is a significant piece of India's overall socio-economic development.
+  Fact 2.8: Crop yield per unit area of all crops in India has grown since 1950.
+  Fact 2.9: Crop yield growth in India is due to the special emphasis on agriculture in the five-year plans.
+  Fact 2.10: Crop yield growth in India is due to steady improvements in irrigation and technology.
+  Fact 2.11: Crop yield growth in India is due to application of modern agricultural practices.
+  Fact 2.12: Crop yield growth in India is due to provision of agricultural credit and subsidies since the Green Revolution.
+  Fact 2.13: International comparisons reveal that the average yield in India is generally 30% to 50% of the highest average yield in the world.
+  Fact 2.14: Uttar Pradesh, Punjab, Haryana, Madhya Pradesh, Andhra Pradesh, Telangana, Bihar, West Bengal, Gujarat and Maharashtra are key contributors to Indian agriculture.
+
+Retrieved items:
+<item 1>
+Economy of India
+Agriculture and allied sectors like forestry , logging and fishing accounted for 17 % of the GDP and employed 49 % of its total workforce in 2014 . Agriculture
+accounted for 23 % of GDP , and employed 59 % of the country 's total workforce in 2016 . As the Indian economy has diversified and grown , agriculture 's
+contribution to GDP has steadily declined from 1951 to 2011 , yet it is still the country 's largest employment source and a significant piece of its overall
+socio - economic development . Crop - yield - per - unit - area of all crops has grown since 1950 , due to the special emphasis placed on agriculture in the
+five - year plans and steady improvements in irrigation , technology , application of modern agricultural practices and provision of agricultural credit and
+subsidies since the Green Revolution in India . However , international comparisons reveal the average yield in India is generally 30 % to 50 % of the highest
+average yield in the world . The states of Uttar Pradesh , Punjab , Haryana , Madhya Pradesh , Andhra Pradesh , Telangana , Bihar , West Bengal , Gujarat and
+Maharashtra are key contributors to Indian agriculture .
+</item 1>
+
+<item 2>
+Agriculture in India
+India 's integration into the global economy has been accompanied by impressive economic growth that has brought significant economic and social benefits to the
+country . Nevertheless , disparities in income and human development are on the rise . Preliminary estimates suggest that in 2009 - 10 the combined all India
+poverty rate was 32 % compared to 37 % in 2004 - 05 . Going forward , it will be essential for India to build a productive , competitive , and diversified
+agricultural sector and facilitate rural , non-farm entrepreneurship and employment . Encouraging policies that promote competition in agricultural marketing
+will ensure that farmers receive better prices . '' -- World Bank : `` India Country Overview 2011 '' A 2003 analysis of India 's agricultural growth from 1970
+to 2001 by the Food and Agriculture Organisation identified systemic problems in Indian agriculture .
+</item 2>
+
+<item 3>
+Economy of India
+As the painstaking statistical work of the Cambridge historian Angus Maddison has shown , India 's share of world income collapsed from 22.6 % in 1700 , almost
+equal to Europe 's share of 23.3 % at that time , to as low as 3.8 % in 1952 . Indeed , at the beginning of the 20th century , `` the brightest jewel in the
+British Crown '' was the poorest country in the world in terms of per capita income . -- Manmohan Singh The global contribution to world 's GDP by major
+economies from 1 CE to 2003 CE according to Angus Maddison 's estimates . Up until the 18th century , China and India were the two largest economies by GDP
+output . From the beginning of the 19th century , the British East India Company 's gradual expansion and consolidation of power brought a major change in
+taxation and agricultural policies , which tended to promote commercialisation of agriculture with a focus on trade , resulting in decreased production of food
+crops , mass impoverishment and destitution of farmers , and in the short term , led to numerous famines .
+</item 3>
+
+<item 4>
+Agriculture in India
+Amul : an integrated dairy with milk processing plant in Gujarat state . India has some of the world 's best agricultural yields in its tea plantations . A tea
+estate in Kerala state . As of 2011 , India had a large and diverse agricultural sector , accounting , on average , for about 16 % of GDP and 10 % of export
+earnings . India 's arable land area of 159.7 million hectares ( 394.6 million acres ) is the second largest in the world , after the United States . Its gross
+irrigated crop area of 82.6 million hectares ( 215.6 million acres ) is the largest in the world . India is among the top three global producers of many crops ,
+including wheat , rice , pulses , cotton , peanuts , fruits and vegetables . Worldwide , as of 2011 , India had the largest herds of buffalo and cattle , is the
+largest producer of milk and has one of the largest and fastest growing poultry industries . Major crops and yields ( edit ) The following table presents the 20
+most important agricultural products in India , by economic value , in 2009 .
+</item 4>
+
+<item 5>
+Agriculture in India
+The economic contribution of agriculture to India 's GDP is steadily declining with the country 's broad - based economic growth . Still , agriculture is
+demographically the broadest economic sector and plays a significant role in the overall socio - economic fabric of India . India exported $38 billion worth of
+agricultural products in 2013 , making it the seventh largest agricultural exporter worldwide and the sixth largest net exporter . Most of its agriculture
+exports serve developing and least developed nations . Indian agricultural / horticultural and processed foods are exported to more than 120 countries ,
+primarily in the Middle East , Southeast Asia , SAARC countries , the EU and the United States .
+</item 5>
+
+<item 6>
+Economy of India
+India will soon have the largest and youngest workforce the world has ever seen . At the same time , the country is in the midst of a massive wave of
+urbanization as some 10 million people move to towns and cities each year in search of jobs and opportunity . It is the largest rural - urban migration of this
+century . Massive investments will be needed to create the jobs , housing , and infrastructure to meet soaring aspirations and make towns and cities more
+livable and green . -- World Bank : India Country Overview 2013 Agriculture Main article : Agriculture in India Agriculture is an important part of the Indian
+economy . At around 1,530,000 square kilometres ( 590,000 sq mi ) , India has the second - largest amount of arable land , after the US , with 52 % of total
+land under cultivation . Although the total land area of the country is only slightly more than one third of China or the US , India 's arable land is
+marginally smaller than that of the US , and marginally larger than that of China . However , agricultural output lags far behind its potential . The low
+productivity in India is a result of several factors .
+</item 6>
+
+<item 7>
+Agriculture in India
+India 's agricultural economy is undergoing structural changes . Between 1970 and 2011 , the GDP share of agriculture has fallen from 43 % to 16 % . This is n't
+because of reduced importance of agriculture or a consequence of agricultural policy . This is largely because of the rapid economic growth in services ,
+industrial output , and non-agricultural sectors in India between 2000 and 2010 . Agricultural scientist MS Swaminathan has played a vital role in the green
+revolution . In 2013 NDTV awarded him as 25 living legend of India for outstanding contribution to agriculture and making India a food sovereign country . An
+irrigation canal in Gujarat . Irrigation contributes significantly to agriculture in India . Two states , Sikkim and Kerala have planned to shift fully to
+organic farming by 2015 and 2016 respectively . Irrigation ( edit ) Main article : Irrigation in India Indian irrigation infrastructure includes a network of
+major and minor canals from rivers , groundwater well - based systems , tanks , and other rainwater harvesting projects for agricultural activities . Of these ,
+the groundwater system is the largest .
+</item 7>
+
+<item 8>
+Economy of India
+The strong efforts taken by the Department of Industrial Policy and Promotion ( DIPP ) to boost ease of doing business rankings at the state level is said to
+impact the overall rankings of India . Sectors Percent labour employment in India by economic sectors ( 2010 ) . Contribution to GDP of India by economic
+sectors of Indian economy have evolved between 1951 and 2013 , as its economy has diversified and developed . Historically , India has classified and tracked
+its economy and GDP in three sectors : agriculture , industry and services . Agriculture includes crops , horticulture , milk and animal husbandry , aquaculture
+, fishing , sericulture , aviculture , forestry and related activities . Industry includes various manufacturing sub-sectors . India 's definition of services
+sector includes its construction , retail , software , IT , communications , hospitality , infrastructure operations , education , health care , banking and
+insurance , and many other economic activities . Agriculture Rice fields near Puri , Odisha on India 's east coast Main articles : Agriculture in India ,
+Forestry in India , Animal husbandry in India , Fishing in India , and Natural resources in India India ranks second worldwide in farm output .
+</item 8>
+
+<item 9>
+Agriculture in India
+Bihar Peasant Life . Bengal Secretariat Press , Calcutta . References ( edit ) Jump up ^ https://books.google.com/books?id=pU6dCgAAQBAJ&pg=PA96 Jump up ^
+Agriculture 's share in GDP declines to 13.7 % in 2012 - 13 Jump up ^ `` CIA Factbook : India '' . CIA Factbook . Central Intelligence Agency . Archived from
+the original on 11 June 2008 . Retrieved 2008 - 06 - 10 . Jump up ^ Staff , India Brand Equity Foundation Agriculture and Food in India Accessed 7 May 2013 ^
+Jump up to : India 's Agricultural Exports Climb to Record High , United States Department of Agriculture ( 2014 ) Jump up ^
+http://www.ibef.org/exports/agriculture-and-food-industry-india.aspx Jump up ^ http://www.agriexam.com/?m=1 ^ Jump up to : `` FAOSTAT , 2010 data '' .
+Faostat.fao.org . Retrieved 2011 - 09 - 17 .
+</item 9>
+
+<item 10>
+Economy of India
+India exports several agriculture products , such as Basmati rice , wheat , cereals , spices , fresh fruits , dry fruits , buffalo beef meat , cotton , tea ,
+coffee and other cash crops particularly to the Middle East , Southeast and East Asian countries . About 10 percent of its export earnings come from this trade
+. Industry Industry accounts for 26 % of GDP and employs 22 % of the total workforce . According to the World Bank , India 's industrial manufacturing GDP
+output in 2015 was 6th largest in the world on current US dollar basis ( $559 billion ) , and 9th largest on inflation - adjusted constant 2005 US dollar basis
+( $197.1 billion ) . The industrial sector underwent significant changes due to the 1991 economic reforms , which removed import restrictions , brought in
+foreign competition , led to the privatisation of certain government - owned public - sector industries , liberalised the foreign direct investment ( FDI )
+regime , improved infrastructure and led to an expansion in the production of fast - moving consumer goods . Post-liberalisation , the Indian private sector was
+faced with increasing domestic and foreign competition , including the threat of cheaper Chinese imports .
+</item 10>
+=== END ITEM id=17a8b02438ce5c83 ===

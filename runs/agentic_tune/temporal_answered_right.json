@@ -1,0 +1,137 @@
+{
+ "agentic_10nov|r1": {
+  "right": 60,
+  "cells": [
+   40,
+   20,
+   7,
+   33
+  ]
+ },
+ "agentic_10nov|r2": {
+  "right": 65,
+  "cells": [
+   45,
+   20,
+   6,
+   29
+  ]
+ },
+ "agentic_10nov|r3": {
+  "right": 60,
+  "cells": [
+   37,
+   23,
+   10,
+   30
+  ]
+ },
+ "graphrag|r1": {
+  "right": 56,
+  "cells": [
+   40,
+   16,
+   7,
+   37
+  ]
+ },
+ "graphrag|r2": {
+  "right": 54,
+  "cells": [
+   41,
+   13,
+   10,
+   36
+  ]
+ },
+ "graphrag|r3": {
+  "right": 58,
+  "cells": [
+   43,
+   15,
+   4,
+   38
+  ]
+ },
+ "hipporag|r1": {
+  "right": 59,
+  "cells": [
+   42,
+   17,
+   5,
+   36
+  ]
+ },
+ "hipporag|r2": {
+  "right": 60,
+  "cells": [
+   45,
+   15,
+   6,
+   34
+  ]
+ },
+ "hipporag|r3": {
+  "right": 59,
+  "cells": [
+   43,
+   16,
+   4,
+   37
+  ]
+ },
+ "rag|r1": {
+  "right": 47,
+  "cells": [
+   47,
+   0,
+   0,
+   53
+  ]
+ },
+ "rag|r2": {
+  "right": 51,
+  "cells": [
+   51,
+   0,
+   0,
+   49
+  ]
+ },
+ "rag|r3": {
+  "right": 47,
+  "cells": [
+   47,
+   0,
+   0,
+   53
+  ]
+ },
+ "raptor|r1": {
+  "right": 48,
+  "cells": [
+   41,
+   7,
+   6,
+   46
+  ]
+ },
+ "raptor|r2": {
+  "right": 50,
+  "cells": [
+   44,
+   6,
+   7,
+   43
+  ]
+ },
+ "raptor|r3": {
+  "right": 49,
+  "cells": [
+   43,
+   6,
+   4,
+   47
+  ]
+ }
+}

@@ -1,0 +1,73 @@
+[
+{"id": "f83cc71d88bba4e5", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "This not only allows the collection of data from complex equipment"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "enables operators to track equipment performance and predict maintenance and downtimes"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "enables operators to track equipment performance and predict maintenance and downtimes"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "enables operators to track equipment performance and predict maintenance and downtimes"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "9e6630d3f2b92183", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "That answer ultimately lies with the jury"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 1, "quote": "Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 1, "quote": "Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+]},
+{"id": "5865c9bf2f13857e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 8, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []},
+{"fact": "3.2", "status": "missing", "evidence": []},
+{"fact": "3.3", "status": "missing", "evidence": []}
+]},
+{"id": "d400a15aa45f2ebb", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "1.6", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []},
+{"fact": "2.6", "status": "missing", "evidence": []},
+{"fact": "2.7", "status": "missing", "evidence": []}
+]},
+{"id": "7f210a0bd704e7ec", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "In the wake of the Wallabies’ World Cup flop, the Queensland Rugby Union have reaffirmed their position that they are committed to moving to a centralised high-performance model but won’t follow the NSW Waratahs by handing over the keys to Rugby Australia."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "In the wake of the Wallabies’ World Cup flop, the Queensland Rugby Union have reaffirmed their position that they are committed to moving to a centralised high-performance model but won’t follow the NSW Waratahs by handing over the keys to Rugby Australia."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "In the wake of the Wallabies’ World Cup flop, the Queensland Rugby Union have reaffirmed their position that they are committed to moving to a centralised high-performance model but won’t follow the NSW Waratahs by handing over the keys to Rugby Australia."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "In the wake of the Wallabies’ World Cup flop, the Queensland Rugby Union have reaffirmed their position that they are committed to moving to a centralised high-performance model but won’t follow the NSW Waratahs by handing over the keys to Rugby Australia."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "He will also be tasked with “integrating” the programs, with RA trying to centralise all of the Super Rugby’s high-performance programs."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "He will also be tasked with “integrating” the programs, with RA trying to centralise all of the Super Rugby’s high-performance programs."}]}
+]},
+{"id": "27ef42a92a8a8a2b", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "One of the hardest things is resentment can build up if you feel like you need to buy gifts for your family and you can barely make your student loan payments, so bring things up,” Alev said."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "so bring things up,” Alev said."}]}
+]}
+]

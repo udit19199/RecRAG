@@ -1,0 +1,48 @@
+[
+  {"id": "393408f6cc8841c7", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "5573556c6382c79a", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 1, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]}
+  ]},
+  {"id": "6d1ea3b1895007a6", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+    {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 8, "quote": "Smith did return, however, for the final drive of the game in the losing effort."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "backup Drew Lock took over under center with 18 seconds left in the third quarter."}]}
+  ]},
+  {"id": "ea435642677db5b1", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+    {"fact": "0.1", "status": "contradicted", "evidence": [{"item": 7, "quote": "Turning to profitability, Uber reported net income of $221 million in the third quarter, or 10 cents per share"}, {"item": 8, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]}
+  ]},
+  {"id": "a06e993d992eb355", "facts": [
+    {"fact": "0.0", "status": "contradicted", "evidence": [{"item": 4, "quote": "10:59 p.m.: Another toss play outside to Mixon goes for a loss of three, but Burrow finds Smith, who picks up eight yards to the Bills' 2 before he steps out of bounds. Third-and-goal at the 2, with the Bengals knocking on the door."}]},
+    {"fact": "0.1", "status": "contradicted", "evidence": [{"item": 4, "quote": "10:59 p.m.: Another toss play outside to Mixon goes for a loss of three, but Burrow finds Smith, who picks up eight yards to the Bills' 2 before he steps out of bounds. Third-and-goal at the 2, with the Bengals knocking on the door."}]},
+    {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 4, "quote": "10:59 p.m.: Another toss play outside to Mixon goes for a loss of three, but Burrow finds Smith, who picks up eight yards to the Bills' 2 before he steps out of bounds. Third-and-goal at the 2, with the Bengals knocking on the door."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Bengals keep leaning on the running game with Mixon picking up two"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Burrow starts the game with a quick checkdown pass to Joe Mixon, who takes it up the field eight yards. He then catches another short pass and takes it up 15 yards to the Bengals' 47."}]}
+  ]},
+  {"id": "ff3839612e6cdb40", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Dallas' defense lost top cornerback Trevon Diggs and they're still red hot."}]}
+  ]}
+]

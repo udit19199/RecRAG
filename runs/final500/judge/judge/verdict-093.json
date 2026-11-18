@@ -1,0 +1,65 @@
+[
+{"id": "d6b7480e74c77939", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "During Prime Day this past summer, Amazon introduced invite-only deals—a system to help make it easier for Prime members to access deals that are expected to sell out quickly—and the company brought it back for Prime Big Deal Days."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "a system to help make it easier for Prime members to access deals that are expected to sell out quickly"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "a system to help make it easier for Prime members to access deals that are expected to sell out quickly"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "During Prime Day this past summer, Amazon introduced invite-only deals—a system to help make it easier for Prime members to access deals that are expected to sell out quickly—and the company brought it back for Prime Big Deal Days."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "f58eaca2a5c3718e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "If a track isn’t used or taken care of for an extended period of time, it will start to wear out and eventually become completely unsuitable for any kind of racing unless it is taken apart and rebuilt."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "it will start to wear out and eventually become completely unsuitable for any kind of racing"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "eventually become completely unsuitable for any kind of racing unless it is taken apart and rebuilt"}]}
+]},
+{"id": "7cddf50ee231de94", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "7:06 p.m. – Anthony Hankerson gets two first downs for the Buffs"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "7:06 p.m. – Anthony Hankerson gets two first downs for the Buffs on a four-yard run and a 12-yard run."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "7:06 p.m. – Anthony Hankerson gets two first downs for the Buffs on a four-yard run and a 12-yard run."}]}
+]},
+{"id": "214dfe8fa0af2013", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "If the debt continues to rise more than the economy, risks will increase"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "the government may “crowd out” private investment as it competes with the private sector for funds to service its debt."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "the government may “crowd out” private investment as it competes with the private sector for funds to service its debt."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "And yet, “We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "And yet, “We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "And yet, “We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "And yet, “We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}, {"item": 5, "quote": "told members of the US-ASEAN Business Council who visited Malacañang"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 5, "quote": "told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."}]}
+]},
+{"id": "04158c4e7aac9cd9", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 1, "quote": "where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]}
+]},
+{"id": "692bd2fbbd315a59", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "Google compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "Google compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 5, "quote": "Google compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old."}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "3.2", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "3.3", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]}
+]

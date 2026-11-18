@@ -1,0 +1,490 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "2a7437e92bf3b83a",
+   "gold": [
+    {
+     "sentence": "Dangal (English: \"Wrestling competition\" ) is a 2016 Indian Hindi-language biographical sports drama film loosely based on the story of Mahavir Singh Phogat, an amateur wrestler, who trains his daughters Geeta Phogat and Babita Kumari to be world-class wrestlers.",
+     "facts": {
+      "0.0": "Dangal's English title is \"Wrestling competition\".",
+      "0.1": "Dangal is a 2016 film.",
+      "0.2": "Dangal is an Indian film.",
+      "0.3": "Dangal is a Hindi-language film.",
+      "0.4": "Dangal is a biographical sports drama film.",
+      "0.5": "Dangal is loosely based on the story of Mahavir Singh Phogat.",
+      "0.6": "Mahavir Singh Phogat is an amateur wrestler.",
+      "0.7": "Mahavir Singh Phogat trains his daughters Geeta Phogat and Babita Kumari.",
+      "0.8": "Mahavir Singh Phogat trains his daughters to be world-class wrestlers."
+     }
+    },
+    {
+     "sentence": "The Man from Snowy River II is a 1988 Australian drama film, the sequel to the 1982 film \"The Man from Snowy River\".",
+     "facts": {
+      "1.0": "The Man from Snowy River II is a 1988 film.",
+      "1.1": "The Man from Snowy River II is an Australian drama film.",
+      "1.2": "The Man from Snowy River II is the sequel to the 1982 film \"The Man from Snowy River\"."
+     }
+    }
+   ],
+   "items": [
+    "Return to Snowy River\nReturn to Snowy River is the original motion picture soundtrack from the 1988 film \"The Man from Snowy River II\".\n\n The soundtrack album is named after the American title for the film.",
+    "Dangal (film)\nDangal (English: \"Wrestling competition\" ) is a 2016 Indian Hindi-language biographical sports drama film loosely based on the story of Mahavir Singh Phogat, an amateur wrestler, who trains his daughters Geeta Phogat and Babita Kumari to be world-class wrestlers.\n\n It was directed by Nitesh Tiwari.\n\n Produced by Walt Disney Pictures, Aamir Khan Productions and UTV Motion Pictures, it stars Aamir Khan as the father.\n\n Both daughters go on to win medals at the 2010 Commonwealth Games.\n\n Babita won a silver medal at the Games, in the 51 kg class and gold at the 2014 Glasgow Games in the 55 kg class.\n\n In 2012, Geeta became the first Indian female wrestler to qualify for the Olympics.\n\n Mahavir's efforts inspired dozens of Indian women to take to wrestling.\n\n Fatima Sana Shaikh and Sanya Malhotra play the older selves of the sisters while Sakshi Tanwar plays their mother and Aparshakti Khurana, their cousin.",
+    "The Man from Snowy River (poem)\n\"The Man from Snowy River\" is a poem by Australian bush poet Banjo Paterson.\n\n It was first published in \"The Bulletin\", an Australian news magazine, on 26 April 1890, and was published by Angus & Robertson in October 1895, with other poems by Paterson, in \"The Man from Snowy River and Other Verses\".",
+    "The Man from Snowy River (TV series)\nThe Man from Snowy River is an Australian adventure drama television series based on Banjo Paterson's poem \"The Man from Snowy River\".\n\n Released in Australia as \"Banjo Paterson's The Man from Snowy River\", the series was subsequently released in both the United States and the United Kingdom as \"Snowy River: The McGregor Saga\".",
+    "The Man from Snowy River (1982 film)\nThe Man from Snowy River is a 1982 Australian drama film based on the Banjo Paterson poem \"The Man from Snowy River\".\n\n The film had a cast including Kirk Douglas in a dual role as the brothers Harrison (a character who appeared frequently in Paterson's poems) and Spur, Jack Thompson as Clancy, Tom Burlinson as Jim Craig, Sigrid Thornton as Harrison's daughter Jessica, Terence Donovan as Jim's father Henry Craig, and Chris Haywood as Curly.",
+    "The Man from Snowy River II\nThe Man from Snowy River II is a 1988 Australian drama film, the sequel to the 1982 film \"The Man from Snowy River\".",
+    "Graph query row:\nfilm1: Dangal\nyear1: 2016\nfilm2: The Man from Snowy River II\nyear2: 1988\ncame_first: The Man from Snowy River II",
+    "The Man from Snowy River (soundtrack)\n\"The Man from Snowy River is the original motion picture soundtrack from the 1982 film \"The Man from Snowy River\".",
+    "Frozen (2013 film)\nFrozen is a 2013 American 3D computer-animated musical fantasy film produced by Walt Disney Animation Studios and released by Walt Disney Pictures.\n\n It is the 53rd Disney animated feature film.\n\n Inspired by Hans Christian Andersen's fairy tale \"The Snow Queen\", the film tells the story of a fearless princess who sets off on a journey alongside a rugged iceman, his loyal pet reindeer, and a naïve snowman to find her estranged sister, whose icy powers have inadvertently trapped the kingdom in eternal winter.",
+    "Bruce Rowland\nBruce Rowland (born May 9, 1942 in Melbourne) is a well-known Australian composer.\n\n He composed the soundtrack for the 1982 movie \"The Man from Snowy River\", as well as the soundtrack for its 1988 sequel \"The Man from Snowy River II\" (which has the United States title of \"Return to Snowy River\", and the United Kingdom title of \"The Untamed\").\n\n Both films were based on Banjo Paterson's poem The Man from Snowy River.\n\n His other film scores include \"Now and Forever\" (1983), \"Phar Lap\" (1983), \"Bushfire Moon\" (1987), \"Cheetah\" (1989), \"Weekend with Kate\" (1990), \"Gross Misconduct\" (1993), \"Andre\" (1994), \"Lightning Jack\" (1994), \"Zeus and Roxanne\" (1997) and the TV movie \"\" (1997)."
+   ]
+  },
+  {
+   "id": "00babc289f569c5c",
+   "gold": [
+    {
+     "sentence": " The S70 was essentially a facelifted 850 saloon.",
+     "facts": {
+      "0.0": "The S70 was essentially a facelifted 850 saloon."
+     }
+    },
+    {
+     "sentence": "The Volvo 850 is a compact executive car that was produced by the Swedish manufacturer Volvo Cars from 1991 to 1996.",
+     "facts": {
+      "1.0": "The Volvo 850 is a compact executive car.",
+      "1.1": "The Volvo 850 was produced by the Swedish manufacturer Volvo Cars.",
+      "1.2": "The Volvo 850 was produced from 1991 to 1996."
+     }
+    },
+    {
+     "sentence": " The 850 was the first front-wheel drive vehicle from Volvo to be sold in North America and also the first all-wheel drive Volvo.",
+     "facts": {
+      "2.0": "The Volvo 850 was the first front-wheel drive vehicle from Volvo to be sold in North America.",
+      "2.1": "The Volvo 850 was the first all-wheel drive Volvo."
+     }
+    }
+   ],
+   "items": [
+    "Volvo P2 platform\nThe Volvo P2 platform is a global full-size unibody automobile platform developed and produced by Volvo.\n\n It is designed for single wheelbases and is adaptable to front- or all wheel drive configurations.\n\n It was developed by the automaker before its 1999 acquisition by Ford Motor Company, and debuted with the 1998 Volvo S80.",
+    "Volvo SI6 engine\nVolvo designed the SI6 (\"short inline 6\") straight-6 automobile engine for use in 2007 models.\n\n An evolution of the company's long-used straight-5 Volvo Modular engine, which itself is an evolution of the Volvo B6304 straight six engine, the SI6 can be mounted transversely for front wheel drive or all wheel drive applications.\n\n Despite the added cylinder and displacement, the engine remains compact, and is in fact 1 mm shorter than the previous straight-5.\n\n The engine was initially offered in two displacements — a 3.0 L turbocharged version and a 3.2 L naturally aspirated version.\n\n Both offered variable cam timing, though only the turbo version varies both the intake and exhaust valves.\n\n On top of the variable cam timing used on the intake cam of the naturally aspirated engine it also had variable valve lift by using Cam Profile Switching (CPS).",
+    "Volvo S90\nThe Volvo S90 is an executive sedan manufactured and marketed by Swedish automaker Volvo Cars since 2016.\n\n Its estate variant is called the Volvo V90.",
+    "Volvo S40\nThe Volvo S40 is a compact luxury car marketed and produced by the Swedish manufacturer Volvo Cars from 1995 to 2012 across two generations.",
+    "Volvo 164\nThe Volvo 164 is a 4-door, 6-cylinder luxury sedan unveiled by Volvo at the Paris Motor Show early in October 1968 and first sold as a 1969 model.\n\n 46,008 164s were built before the car was superseded by the 264 in 1975.\n\n The 164 was Volvo's first venture into the luxury segment since the end of PV 60 production in 1950, and was the first six-cylinder Volvo since the PV800 last produced in 1958.",
+    "Volvo S70\nThe Volvo S70 was a compact executive car produced by Volvo Cars from 1996 to 2000.\n\n The S70 was essentially a facelifted 850 saloon.\n\n The S70 was replaced with the Volvo S60.",
+    "Volvo 440/460\nThe Volvo 440 and 460 are versions of a small family car produced by the Swedish manufacturer Volvo between 1987 and 1996.\n\n The 440 was introduced in 1987, whilst the 460 followed in 1989.\n\n They were built at the NedCar factory in Born, The Netherlands.\n\n The 440 was a five door front wheel drive hatchback and the 460 a saloon.\n\n They shared many components with the already successful Volvo 480, including floorpan, front and rear suspension, engines, transmission and braking systems.",
+    "Volvo 300 Series\nThe Volvo 300 Series is a rear wheel drive small family car sold as both a hatchback and (later) a conventional saloon from 1976 to 1991.\n\n It was launched in the Netherlands shortly after Volvo acquired a major stake in the passenger car division of DAF in 1973.\n\n The series consisted of the Volvo 340 (previously 343/345) and the later Volvo 360.",
+    "Volvo P80 platform\nThe Volvo P80 platform was a Swedish mid-size unibody automobile platform developed and produced by Volvo Cars.\n\n It was in use from 1991 to 2005.\n\n It is designed for different wheelbases in front-wheel drive configurations and was adapted to all wheel drive.\n\n It debuted with the 1991 Volvo 850 and again in autumn 1996 with the Volvo 850 AWD.\n\n Although heavily modified by TWR, the same basic chassis was used as the underpinnings for the C70.\n\n After the model year 2000 most P80 models were replaced by their P2 successors, with the exception of the C70 convertible which remained in production until 2005.\n\n A total of 1,360,522 cars based on this platform were built.",
+    "Volvo 850\nThe Volvo 850 is a compact executive car that was produced by the Swedish manufacturer Volvo Cars from 1991 to 1996.\n\n Designed by Jan Wilsgaard it was available in saloon and estate body styles.\n\n The 850 was the first front-wheel drive vehicle from Volvo to be sold in North America and also the first all-wheel drive Volvo.\n\n The range was replaced for 1997 by the Volvo S70 and Volvo V70."
+   ]
+  },
+  {
+   "id": "0c162bbb50564b6d",
+   "gold": [
+    {
+     "sentence": "The 1993 Tehran mid-air collision occurred just outside the Iranian capital city of Tehran on Monday, February 8, 1993, killing all 133 people on board both aircraft involved—an Iran Air Tours Tupolev Tu-154M, registered EP-ITD, and an Islamic Republic of Iran Air Force (IRIAF) Sukhoi Su-24 attack aircraft.",
+     "facts": {
+      "0.0": "The 1993 Tehran mid-air collision occurred just outside the Iranian capital city of Tehran.",
+      "0.1": "The collision occurred on Monday, February 8, 1993.",
+      "0.2": "The collision killed all 133 people on board both aircraft involved.",
+      "0.3": "One aircraft involved was an Iran Air Tours Tupolev Tu-154M, registered EP-ITD.",
+      "0.4": "The other aircraft involved was an Islamic Republic of Iran Air Force (IRIAF) Sukhoi Su-24 attack aircraft."
+     }
+    },
+    {
+     "sentence": "Iran Air Tours is an airline based in Tehran, Iran.",
+     "facts": {
+      "1.0": "Iran Air Tours is an airline.",
+      "1.1": "Iran Air Tours is based in Tehran, Iran."
+     }
+    }
+   ],
+   "items": [
+    "The entries cover major aviation accidents, airlines, airports, and safety topics. Notable crashes include Flight 2311 (23 dead), Pan Am 806 (97), the 1948 Northwood collision (39), Tehran 1993 (133), Charkhi Dadri 1996 (349), and United 736 (49); Flight 1549 and the 1963 Neva ditching had no fatalities. TCAS warns of collision threats, while bird strikes can cause crashes,",
+    "Traffic collision avoidance system\nA traffic collision avoidance system or traffic alert and collision avoidance system (both abbreviated as TCAS, and pronounced tee-kas) is an aircraft collision avoidance system designed to reduce the incidence of mid-air collisions between aircraft.\n\n It monitors the airspace around an aircraft for other aircraft equipped with a corresponding active transponder, independent of air traffic control, and warns pilots of the presence of other transponder-equipped aircraft which may present a threat of mid-air collision (MAC).\n\n It is a type of airborne collision avoidance system mandated by the International Civil Aviation Organization to be fitted to all aircraft with a maximum take-off mass (MTOM) of over 5700 kg or authorized to carry more than 19 passengers.\n\n CFR 14, Ch I, part 135 requires that TCAS I is installed for aircraft with 10-30 passengers and TCAS II for aircraft with more than 30 passengers.",
+    "1993 Tehran mid-air collision\nThe 1993 Tehran mid-air collision occurred just outside the Iranian capital city of Tehran on Monday, February 8, 1993, killing all 133 people on board both aircraft involved—an Iran Air Tours Tupolev Tu-154M, registered EP-ITD, and an Islamic Republic of Iran Air Force (IRIAF) Sukhoi Su-24 attack aircraft.",
+    "1948 Northwood mid-air collision\nThe 1948 Northwood mid-air collision took place on 4 July at 15:03 when a Douglas DC-6 of Scandinavian Airlines System (SAS) and an Avro York C.1 of the Royal Air Force (RAF) collided in mid-air over Northwood in London, UK.\n\n All thirty-nine people aboard both aircraft were killed.\n\n It was SAS's first fatal aviation accident and was at the time the deadliest civilian aviation accident in the UK.\n\n It is still the deadliest mid-air collision in British history.",
+    "1965 Carmel mid-air collision\nThe 1965 Carmel mid-air collision occurred on December 4, 1965, when Eastern Air Lines Flight 853 (N6218C), a Lockheed Super Constellation en route from Boston Logan International Airport to Newark International Airport, collided in mid-air with Trans World Airlines Flight 42 (N748TW), a Boeing 707-131B en route from San Francisco International Airport to John F. Kennedy International Airport, over Carmel, New York, United States.",
+    "Iran Air Tours\nIran Air Tours is an airline based in Tehran, Iran.\n\n The airline mainly operates under the English name Iran Airtour (i.e. without the plural \"s\") as written in Persian (Persian: ایران ایر تور‎ ‎ ).\n\n This error is due to confusion between different pluralization rules in English and Persian.\n\n Iran Air Tours was established as a subsidiary of Iran Air and operates scheduled domestic services and international services in the Middle East as well as Eastern Europe, as well as charter services.",
+    "1993 Auckland mid-air collision\nThe 1993 Auckland mid-air collision was an aircraft accident in New Zealand.\n\n It occurred on 26 November 1993, when two aircraft operated by Airwork, under contract to the New Zealand Police, collided and crashed in central Auckland.\n\n The mid-air collision of the Aérospatiale TwinStar helicopter and Piper Archer aeroplane resulted in the deaths of all four occupants – a civilian Airwork pilot on each aircraft and two New Zealand Police officers on the helicopter.\n\n The accident occurred in daylight with excellent visibility, in uncontrolled airspace (class G), with both aircraft flying under visual flight rules.\n\n Both the helicopter and aeroplane were operated by Airwork (NZ), and working under contract to the New Zealand Police at the time of the accident.",
+    "Charkhi Dadri mid-air collision\nThe Charkhi Dadri mid-air collision occurred on 12 November 1996 over the village of Charkhi Dadri, to the west of New Delhi, India.\n\n The aircraft involved were a Saudi Arabian Airlines Boeing 747-100B en route from Delhi to Dhahran, Saudi Arabia, and a Kazakhstan Airlines Ilyushin Il-76 en route from Chimkent, Kazakhstan, to Delhi.\n\n The crash killed all 349 people on board both planes, making it the world's deadliest mid-air collision, the deadliest aviation accident to occur in India, and the third-deadliest aircraft accident in the history of aviation, behind only the Tenerife airport disaster and Japan Airlines Flight 123.",
+    "1955 Cincinnati mid-air collision\nThe 1955 Cincinnati mid-air collision occurred on January 12, 1955, when a Trans World Airlines Martin 2-0-2 on takeoff from Boone County Airport (now the Cincinnati/Northern Kentucky International Airport) collided in mid-air with a privately owned Douglas DC-3 that had entered the airport's control space without proper clearance.\n\n There were no survivors.",
+    "1963 Aeroflot Tupolev Tu-124 Neva river ditching\nThe 1963 Aeroflot Tupolev Tu-124 Neva river ditching was a water landing by a Tupolev Tu-124 of the Soviet state airline \"Aeroflot\" (Moscow division).\n\n The aircraft took off from Tallinn-Ülemiste Airport (TLL) at 08:55 on 21 August with 45 passengers and 7 crew on board.\n\n The aircraft (registration number SSSR-45021) was built in 1962 and was scheduled to fly to Moscow–Vnukovo (VKO) under the command of 27-year-old captain Victor Mostovoy.\n\n After takeoff the nose gear did not retract.\n\n Ground control diverted the flight to Leningrad (LED) – because of fog at Tallinn."
+   ]
+  },
+  {
+   "id": "5248ef1ada77368e",
+   "gold": [
+    {
+     "sentence": "Aliens of the Deep is a 2005 documentary film, directed in part by James Cameron alongside fellow cameraman and friend Steven Quale, who would go on to direct \"Final Destination 5\" six years later, and filmed in the IMAX 3D format.",
+     "facts": {
+      "0.0": "Aliens of the Deep is a 2005 documentary film.",
+      "0.1": "Aliens of the Deep was directed in part by James Cameron.",
+      "0.2": "James Cameron directed Aliens of the Deep alongside fellow cameraman and friend Steven Quale.",
+      "0.3": "Steven Quale would go on to direct Final Destination 5 six years later.",
+      "0.4": "Aliens of the Deep was filmed in the IMAX 3D format."
+     }
+    },
+    {
+     "sentence": " Cameron teams with NASA scientists to explore the Mid-Ocean Ridges, submerged chains of mountains in the Atlantic and Pacific oceans that are home to some of the planet's more unusual forms of life.",
+     "facts": {
+      "1.0": "James Cameron teams with NASA scientists to explore the Mid-Ocean Ridges.",
+      "1.1": "The Mid-Ocean Ridges are submerged chains of mountains.",
+      "1.2": "The Mid-Ocean Ridges are in the Atlantic and Pacific oceans.",
+      "1.3": "The Mid-Ocean Ridges are home to some of the planet's more unusual forms of life."
+     }
+    },
+    {
+     "sentence": "Poetry in Motion is a 1982 Canadian documentary film directed by Ron Mann featuring contemporary North American poetry and music.",
+     "facts": {
+      "2.0": "Poetry in Motion is a 1982 Canadian documentary film.",
+      "2.1": "Poetry in Motion was directed by Ron Mann.",
+      "2.2": "Poetry in Motion features contemporary North American poetry.",
+      "2.3": "Poetry in Motion features contemporary North American music."
+     }
+    },
+    {
+     "sentence": " Featured are some of the Black Mountain poets, Beats, minimalist poets, and avant-garde poets.",
+     "facts": {
+      "3.0": "Poetry in Motion features some Black Mountain poets.",
+      "3.1": "Poetry in Motion features some Beat poets.",
+      "3.2": "Poetry in Motion features some minimalist poets.",
+      "3.3": "Poetry in Motion features some avant-garde poets."
+     }
+    },
+    {
+     "sentence": " It was released in theaters, later being distributed on VHS, LaserDisc, and DVD.",
+     "facts": {
+      "4.0": "Poetry in Motion was released in theaters.",
+      "4.1": "Poetry in Motion was later distributed on VHS.",
+      "4.2": "Poetry in Motion was later distributed on LaserDisc.",
+      "4.3": "Poetry in Motion was later distributed on DVD."
+     }
+    },
+    {
+     "sentence": " An extended CD-ROM version was also released.",
+     "facts": {
+      "5.0": "An extended CD-ROM version of Poetry in Motion was also released."
+     }
+    }
+   ],
+   "items": [
+    "Aliens of the Deep\nAliens of the Deep is a 2005 documentary film, directed in part by James Cameron alongside fellow cameraman and friend Steven Quale, who would go on to direct \"Final Destination 5\" six years later, and filmed in the IMAX 3D format.\n\n It was produced by Walden Media and Walt Disney Pictures.\n\n Cameron teams with NASA scientists to explore the Mid-Ocean Ridges, submerged chains of mountains in the Atlantic and Pacific oceans that are home to some of the planet's more unusual forms of life.",
+    "Poetry in Motion (film)\nPoetry in Motion is a 1982 Canadian documentary film directed by Ron Mann featuring contemporary North American poetry and music.\n\n Featured are some of the Black Mountain poets, Beats, minimalist poets, and avant-garde poets.\n\n It was released in theaters, later being distributed on VHS, LaserDisc, and DVD.\n\n An extended CD-ROM version was also released.",
+    "Rick Carter\nRick Carter (born 1950) is an American production designer and art director.\n\n He is known for his work in the film \"Forrest Gump\", which earned him an Oscar nomination, as well as numerous nominations of other awards for his work in \"Amistad\" and \"A.I. Artificial Intelligence\".\n\n Other films include \"Cast Away\", \"War of the Worlds\", \"What Lies Beneath\", \"Jurassic Park\", \"Avatar\", and \"Back to the Future Part II\" and \"Part III\".\n\n Many of the films that he has worked on are directed by Steven Spielberg or Robert Zemeckis.\n\n For his part in the Art Direction of \"Avatar\", he was awarded the Academy Award for Best Production Design alongside Robert Stromberg and Kim Sinclair.\n\n In 2013, Carter won his second Academy Award, for production design on Steven Spielberg's biopic, \"Lincoln\".",
+    "Oceans (film)\nOceans (French: Océans ) is a 2009 French nature documentary film directed, produced, co-written, and narrated by Jacques Perrin, with Jacques Cluzaud as co-director.\n\n The film explores the marine species of Earth's five oceans and reflects on the negative aspects of human activity on the environment, with Perrin (Pierce Brosnan in English) providing narration.",
+    "The Polar Bears\nThe Polar Bears is a 2012 3D computer animated short film presented by The Coca-Cola Company, produced by Ridley Scott, written by David Reynolds, and directed by John Stevenson.\n\n The film features the voices of Lin-Manuel Miranda, Armie Hammer, Jonathan Adams, and Megyn Price.\n\n The film is based on Coca-Cola's iconic polar bears and was released on the company's website and YouTube channel on December 31, 2012.",
+    "Kathryn Bigelow\nKathryn Ann Bigelow ( ; born November 27, 1951) is an American director, producer, and writer.\n\n Her films include the vampire Western horror film \"Near Dark\" (1987), the action crime film \"Point Break\" (1991), the science fiction action thriller \"Strange Days\" (1995), the mystery thriller \"The Weight of Water\" (2000), the submarine thriller \"\" (2002), the war film \"The Hurt Locker\" (2008), the action thriller war film \"Zero Dark Thirty\" (2012), the short film \"Last Days\" (2014), and the period crime drama \"Detroit\" (2017).\n\n \"The Hurt Locker\" won the 2009 Academy Award for Best Picture and the BAFTA Award for Best Film, and was nominated for the 2010 Golden Globe Award for Best Drama.\n\n She has also acted as producer and writer for many of her films.",
+    "Titan A.E.\nTitan A.E. is a 2000 American animated science fiction film directed by Don Bluth and Gary Goldman.\n\n Its title refers to the spacecraft central to the plot, with \"A.E.\" meaning \"After Earth\".\n\n It stars Matt Damon, Bill Pullman, John Leguizamo, Nathan Lane, Janeane Garofalo and Drew Barrymore.\n\n The film's animation technique combines traditional hand-drawn animation and extensive use of computer generated imagery.\n\n Its working title was \"Planet Ice\".\n\n It was theatrically released on June 16, 2000, by 20th Century Fox and was the final film for Fox Animation Studios.\n\n The film grossed $36.8 million on a $75–$90 million budget, making a $100-million loss for the studio.",
+    "The Black Hole\nThe Black Hole is a 1979 American science fiction film directed by Gary Nelson and produced by Walt Disney Productions.\n\n The film stars Maximilian Schell, Robert Forster, Joseph Bottoms, Yvette Mimieux, Anthony Perkins, and Ernest Borgnine, while the voices of the main robot characters are provided by Roddy McDowall and Slim Pickens (both unbilled).\n\n The music for the film was composed by John Barry.\n\n It was the first film from Walt Disney Productions to receive a PG rating.\n\n The film was released on December 18, 1979 in the United Kingdom and on December 21, 1979 in the United States.",
+    "We Are Poets\nWe Are Poets is a documentary film directed by Daniel Lucchesi and Alex Ramseyer-Bache.\n\n It follows six young poets from Leeds Young Authors performance poetry group in Leeds on their visit to the international Poetry Slam Competition in Washington D.C, United States.\n\n It premièred at Europe's largest Documentary Film festival - Doc/Fest in Sheffield's Showroom Cinema on 11 June 2011, where it won the coveted Sheffield Youth Jury Award.",
+    "From the Sea to the Land Beyond\nFrom The Sea to the Land Beyond: Britain's Coast on Film is a documentary feature film directed by Penny Woolcock, with an original soundtrack by British indie-rock band British Sea Power.\n\n The project was originally produced by Crossover and Sheffield Doc/Fest as part of The Space project from the BBC and the Arts Council England.\n\n The film was edited by Alex Fry."
+   ]
+  },
+  {
+   "id": "a46833e371c6c298",
+   "gold": [
+    {
+     "sentence": " She was also a member of a secret society composed exclusively of Cheyenne women.",
+     "facts": {
+      "0.0": "The woman in question was also a member of a secret society.",
+      "0.1": "The secret society was composed exclusively of Cheyenne women."
+     }
+    },
+    {
+     "sentence": "Cheyenne military societies are one of the two central institutions of traditional Cheyenne Indian tribal governance, the other being the Council of Forty-four.",
+     "facts": {
+      "1.0": "Cheyenne military societies are one of the two central institutions of traditional Cheyenne Indian tribal governance.",
+      "1.1": "The other central institution of traditional Cheyenne Indian tribal governance is the Council of Forty-four."
+     }
+    }
+   ],
+   "items": [
+    "Chief Dull Knife College\nChief Dull Knife College (originally Dull Knife Memorial College) is a small, open-admission, Native American tribal community college and land grant institution.\n\n Located on the Northern Cheyenne Indian Reservation, in the city of Lame Deer, it has a current enrollment of about 141 students.\n\n On average, more than half of its graduates move on to four-year colleges.",
+    "Council of Forty-four\nThe Council of Forty-four was one of the two central institutions of traditional Cheyenne Indian tribal governance, the other being the military societies such as the Dog Soldiers.\n\n The influence of the Council of Forty-four waned in the face of internal conflict among the Cheyenne about Cheyenne policy toward encroaching white settlers on the Great Plains, and was dealt a severe blow by the Sand Creek Massacre.",
+    "Ehyophsta\nEhyophsta (Cheyenne for \"Yellow-Haired Woman\") was a Cheyenne woman.\n\n She was the daughter of Stands-in-the-Timber who died in 1849, and she was the niece of Bad Faced Bull.\n\n She fought in the Battle of Beecher Island in 1868, and also fought the Shoshone that same year, where she counted coup against one enemy and killed another.\n\n She fought the Shoshone again in 1869.\n\n She was also a member of a secret society composed exclusively of Cheyenne women.\n\n She died in 1915.",
+    "Northern Cheyenne Indian Reservation\nThe Northern Cheyenne Indian Reservation (Tsėhéstáno in Cheyenne, formerly named the Tongue River Indian Reservation) is home of the federally recognized Northern Cheyenne Tribe.\n\n Located in southeastern Montana, the reservation is approximately 444,000 acres in size and home to approximately 5,000 Cheyenne people.\n\n The tribal and government headquarters are in Lame Deer, which is also the home of the annual Northern Cheyenne Pow wow.\n\n The reservation is bounded on the east by the Tongue River and on the west by the Crow Reservation.\n\n There are small parcels of non-contiguous off-reservation trust lands in Meade County, South Dakota, northeast of the city of Sturgis.\n\n Its timbered ridges that extend into northwestern South Dakota are part of Custer National Forest and it is approximately 40 mi east of the site of the 1876 Battle of the Greasy Grass (known to most Americans as the Battle of the Little Bighorn).",
+    "Eugene Little Coyote\nEugene Little Coyote was the president of the Northern Cheyenne Indian Reservation from 2004 to 2007.\n\n He was elected in November 2004, defeating the incumbent president, Geri Small.\n\n However, after a conflict with reservation vice president Rick Wolfname that began in July 2007 escalated, the Northern Cheyenne tribal council declared that it would oust Little Coyote as the tribe's president.\n\n Little Coyote was forcibly removed from office and arrested for trespassing in the tribal office building on December 28, 2007.\n\n It is worth noting that the move by the tribal council to remove Little Coyote from office was deemed unconstitutional and void by the Northern Cheyenne Constitutional Court.\n\n The Constitutional Court was however overruled by Bureau of Indian Affairs' regional director Ed Parisian, and later the Assistant Secretary of Indian Affairs Carl J. Artman.\n\n Their involvement in this matter set a historical precedence of the BIA directly meddling with tribal governments.",
+    "Lean Bear\nLean Bear (Cheyenne name Awoninahku, 1813–1864), alternatively translated as Starving Bear, was a Cheyenne peace chief.\n\n He was a member of the Council of Forty-four, a tribal governance devoted to maintaining peace with encroaching United States settlers.\n\n Lean Bear's most notable peace deals include the Treaty of Fort Wise and a meeting with US President Abraham Lincoln.\n\n His work towards peace between his people and the American settlers in the Southern Plains were cut short when he was murdered by the 1st Colorado Cavalry Regiment and violent retaliations ensued.",
+    "Cheyenne\nThe Cheyenne ( ) are one of the Indigenous peoples of the Great Plains and their language is of the Algonquian language family.\n\n The Cheyenne comprise two Native American tribes, the Só'taeo'o or Só'taétaneo'o (more commonly spelled as Suhtai or Sutaio) and the Tsétsêhéstâhese (also spelled Tsitsistas).\n\n These tribes merged in the early 19th century.\n\n Today, the Cheyenne people are split into two federally recognized Nations: the Southern Cheyenne, who are enrolled in the Cheyenne and Arapaho Tribes in Oklahoma, and the Northern Cheyenne, who are enrolled in the Northern Cheyenne Tribe of the Northern Cheyenne Indian Reservation in Montana.",
+    "Lame Deer, Montana\nLame Deer (Meaveʼhoʼeno in Cheyenne) is a census-designated place (CDP) in Rosebud County, Montana.\n\n The community is named after Miniconjou Lakota chief Lame Deer, who was killed by the U.S. Army in 1877 under a flag of truce south of the town.\n\n It is the tribal and government agency headquarters of the Northern Cheyenne Indian Reservation.\n\n This is the location of the Chief Dull Knife College and the annual Northern Cheyenne Powwow.",
+    "Cheyenne military societies\nCheyenne military societies are one of the two central institutions of traditional Cheyenne Indian tribal governance, the other being the Council of Forty-four.\n\n While council chiefs are responsible for overall governance of individual bands and the tribe as a whole, the headmen of military societies are in charge of maintaining discipline within the tribe, overseeing tribal hunts and ceremonies, and providing military leadership.\n\n Historically, council chiefs selected which of the six military societies would assume these duties; after a period of time on-duty, the chiefs would select a different society to take up the duties.",
+    "Concho Indian Boarding School\nConcho Indian Boarding School (also known as the Cheyenne-Arapaho Boarding School at Concho or Concho Indian School and home to the Concho Demonstration School) was a boarding school for members of the Cheyenne and Arapaho Tribes and later opened to other Native American students.\n\n It existed from 1909 to 1983.\n\n It was located in central Oklahoma, approximately 1 mile south of Concho, Oklahoma and 4 miles north of El Reno, Oklahoma.\n\n The name of the town and school is the Spanish word for \"shell\" and was named for the Indian agent, Charles E. Shell."
+   ]
+  },
+  {
+   "id": "6db2477c31bc27f0",
+   "gold": [
+    {
+     "sentence": "Electronic Attack Squadron 138 (VAQ-138), also known as the \"Yellow Jackets\", is an expeditionary EA-18G Growler squadron of the United States Navy based at Naval Air Station Whidbey Island, Washington.",
+     "facts": {
+      "0.0": "Electronic Attack Squadron 138 (VAQ-138) is also known as the \"Yellow Jackets\".",
+      "0.1": "Electronic Attack Squadron 138 is an expeditionary EA-18G Growler squadron of the United States Navy.",
+      "0.2": "Electronic Attack Squadron 138 is based at Naval Air Station Whidbey Island, Washington."
+     }
+    },
+    {
+     "sentence": "The Boeing EA-18G Growler is an American carrier-based electronic warfare aircraft, a specialized version of the two-seat F/A-18F Super Hornet.",
+     "facts": {
+      "1.0": "The Boeing EA-18G Growler is an American carrier-based electronic warfare aircraft.",
+      "1.1": "The Boeing EA-18G Growler is a specialized version of the two-seat F/A-18F Super Hornet."
+     }
+    }
+   ],
+   "items": [
+    "Boeing EA-18G Growler\nThe Boeing EA-18G Growler is an American carrier-based electronic warfare aircraft, a specialized version of the two-seat F/A-18F Super Hornet.\n\n The EA-18G replaced the Northrop Grumman EA-6B Prowlers in service with the United States Navy.\n\n The Growler's electronic warfare capability is primarily provided by Northrop Grumman.\n\n The EA-18G began production in 2007 and entered operational service with the US Navy in late 2009.\n\n Australia has also purchased twelve EA-18Gs, which entered service with the Royal Australian Air Force in 2017.",
+    "Boeing F/A-18E/F Super Hornet\nThe Boeing F/A-18E and F/A-18F Super Hornet are twin-engine carrier-capable multirole fighter aircraft variants based on the McDonnell Douglas F/A-18 Hornet.\n\n The F/A-18E single-seat and F/A-18F tandem-seat variants are larger and more advanced derivatives of the F/A-18C and D Hornet.\n\n The Super Hornet has an internal 20 mm M61 rotary cannon and can carry air-to-air missiles and air-to-surface weapons.\n\n Additional fuel can be carried in up to five external fuel tanks and the aircraft can be configured as an airborne tanker by adding an external air refueling system.",
+    "VAQ-209\nElectronic Attack Squadron 209 (VAQ-209) is a United States Navy Reserve electronic attack squadron.\n\n Known as the \"Star Warriors\", the squadron flies the EA-18G Growler carrier-based electronic warfare jet aircraft.\n\n Based at Naval Air Station Whidbey Island, WA, it is assigned to the Tactical Support Wing.",
+    "VFA-154\nStrike Fighter Squadron 154 (VFA-154), also known as the \"Black Knights\", is a United States Navy strike fighter squadron stationed at Naval Air Station Lemoore.\n\n The Black Knights are an operational fleet squadron flying the F/A-18F Super Hornet.\n\n They are currently attached to Carrier Air Wing Eleven and deployed aboard the aircraft carrier USS \"Nimitz\" .\n\n Their tailcode is NH and their callsign is \"Knight\".",
+    "VAQ-135\nElectronic Attack Squadron 135 (VAQ-135), known as the \"Black Ravens\", is a United States Navy electronic attack squadron that currently operates the EA-18G Growler carrier-based electronic warfare jet aircraft.\n\n The squadron is permanently stationed at Naval Air Station Whidbey Island with a radio callsign of \"\"Thunder\"\".",
+    "No. 1 Squadron RAAF\nNo. 1 Squadron is a Royal Australian Air Force (RAAF) squadron headquartered at RAAF Base Amberley, Queensland.\n\n Controlled by No. 82 Wing, it is equipped with Boeing F/A-18F Super Hornet multi-role fighters.\n\n The squadron was formed under the Australian Flying Corps in 1916 and saw action in the Sinai and Palestine Campaigns during World War I.\n\n It flew obsolete Royal Aircraft Factory B.E.2s, B.E.12s, Martinsyde G.100s and G.102s, as well as Airco DH.6s, Bristol Scouts and Nieuport 17s, before re-equipping with the R.E.8 in October 1917 and finally the Bristol Fighter in December.\n\n Its commanding officer in 1917–18 was Major Richard Williams, later known as the \"Father of the RAAF\".\n\n Disbanded in 1919, No. 1 Squadron was re-formed on paper as part of the RAAF in 1922, and re-established as an operational unit three years later.",
+    "No. 82 Wing RAAF\nNo. 82 Wing is the strike and reconnaissance wing of the Royal Australian Air Force (RAAF).\n\n It is headquartered at RAAF Base Amberley, Queensland.\n\n Coming under the control of Air Combat Group, the wing operates F/A-18F Super Hornet multirole fighters and Pilatus PC-9 forward air control aircraft.\n\n Its units include Nos. 1 and 6 Squadrons, operating the Super Hornet, and No. 4 Squadron, operating the PC-9.",
+    "VAQ-138\nElectronic Attack Squadron 138 (VAQ-138), also known as the \"Yellow Jackets\", is an expeditionary EA-18G Growler squadron of the United States Navy based at Naval Air Station Whidbey Island, Washington.\n\n Their radio callsign is \"RAMPAGE\".",
+    "Type 002 aircraft carrier\nThe Type 002 aircraft carrier is a second generation Chinese aircraft carrier design.\n\n The ship will be the first Chinese aircraft carrier to be equipped with a catapult.\n\n According to the latest report, the construction of this carrier has been rescheduled for a decision on the catapults, where the latest competition results suggested that steam catapults will be used in the Type 002 aircraft carrier.\n\n The addition of aircraft catapult will give China the ability to launch various fixed wing support aircraft like airborne early warning (AEW) and carrier onboard delivery aircraft.\n\n Fighters can also be launched at full combat load and reach its full potential unlike current Type 001 aircraft carriers operated by Chinese navy.",
+    "VFA-2\nStrike Fighter Squadron 2 (VFA-2) also known as the \"Bounty Hunters\" is a United States Navy F/A-18F Super Hornet strike fighter squadron based at Naval Air Station Lemoore, California.\n\n Their tail code is NE and their callsign is \"Bullet\".\n\n They are attached to Carrier Air Wing 2 (CVW-2), a composite unit made up of a wide array of aircraft performing a variety of combat and support missions that deploy aboard the \"Carl Vinson\" ."
+   ]
+  },
+  {
+   "id": "31b17127ebd5ca5c",
+   "gold": [
+    {
+     "sentence": "John H. Garabedian is an American radio personality and disc jockey born on December 20, 1941 (age 75).",
+     "facts": {
+      "0.0": "John H. Garabedian is an American radio personality.",
+      "0.1": "John H. Garabedian is an American disc jockey.",
+      "0.2": "John H. Garabedian was born on December 20, 1941.",
+      "0.3": "John H. Garabedian is age 75."
+     }
+    },
+    {
+     "sentence": "Charles A. Agemian (July 22, 1909 – March 30, 1996) was an American banker who took early retirement from Chase Manhattan Bank, where he was executive vice president of operations, to become chairman and chief executive officer of the Hackensack Trust Co., which later was renamed Garden State National Bank.",
+     "facts": {
+      "1.0": "Charles A. Agemian was born July 22, 1909.",
+      "1.1": "Charles A. Agemian's life ended March 30, 1996.",
+      "1.2": "Charles A. Agemian was an American banker.",
+      "1.3": "Charles A. Agemian took early retirement from Chase Manhattan Bank.",
+      "1.4": "Charles A. Agemian was executive vice president of operations at Chase Manhattan Bank.",
+      "1.5": "Charles A. Agemian became chairman of the Hackensack Trust Co.",
+      "1.6": "Charles A. Agemian became chief executive officer of the Hackensack Trust Co.",
+      "1.7": "The Hackensack Trust Co. was later renamed Garden State National Bank."
+     }
+    }
+   ],
+   "items": [
+    "Jerry Garcia\nJerome John Garcia (August 1, 1942 – August 9, 1995) was an American singer-songwriter and guitarist, best known for his work as the lead guitarist and as a vocalist with the band the Grateful Dead, which came to prominence during the counterculture era in the 1960s.\n\n Although he disavowed the role, Garcia was viewed by many as the leader or \"spokesman\" of the group.",
+    "Don Sherwood (DJ)\nDon Sherwood (September 7, 1925 – November 6, 1983) was an American radio personality.\n\n He was a San Francisco, California, disc jockey during the 1950s and 1960s.\n\n Billed as \"The World's Greatest Disc Jockey,\" Sherwood spent most of his career hosting a 6-9 a.m. weekday program on KSFO in San Francisco (560 kHz, 5000 watts), which was then owned by the singing cowboy actor Gene Autry.",
+    "Roger Garis\nRoger (Carroll) Garis, ((1901--) 10, 1901 – (1967--) 30, 1967 ) was an American author known as a writer for magazines and the author of \"The Outboard Boys\" series of books.\n\n Roger also wrote several books under pseudonyms for the Stratemeyer Syndicate, as his parents did (see My Father Was Uncle Wiggily for further details).",
+    "John Garabedian\nJohn H. Garabedian is an American radio personality and disc jockey born on December 20, 1941 (age 75).\n\n He is best known as the creator and former long-time host of \"Open House Party\".\n\n He has been involved in Massachusetts radio and television stations for over fifty years.\n\n Garabedian currently owns three homes, all in New England: one in Southborough, Massachusetts, another on Cape Cod, and a cabin-like home in Cabot, Vermont.",
+    "Howard R. Garis\nHoward Roger Garis ((1873--) 25, 1873 – (1962--) 6, 1962 ) was an American author, best known for a series of books, published under his own name, that featured the character of Uncle Wiggily Longears, an engaging elderly rabbit.\n\n Garis and his wife were possibly the most prolific children's authors of the early 20th century.\n\n Many of his books were illustrated by Lansing Campbell.",
+    "Radio personality\nA radio personality (American English) or radio presenter (British English), commonly referred to as a \"disc jockey\" or \"DJ\" for short, is a person who has an on-air position in radio broadcasting.\n\n A radio personality that hosts a radio show is also known as a radio host, and in India and Pakistan as a radio jockey.\n\n Radio personalities who introduce and play individual selections of recorded music are known as disc jockeys.\n\n The term has evolved to also describe a person who mixes a continuous flow of recorded music in real time.\n\n Broadcast radio personalities may include talk radio hosts, AM/FM radio show hosts, and satellite radio program hosts.\n\n Notable radio personalities include pop music radio hosts Martin Block, Alan Freed, Dick Clark, Delilah Luke, Ameen Sayani, Wolfman Jack, and Casey Kasem, shock jocks such as Don Imus and Howard Stern, as well as sports talk hosts such as Mike Francesa and political talk hosts such as Rush Limbaugh.",
+    "Charles A. Agemian\nCharles A. Agemian (July 22, 1909 – March 30, 1996) was an American banker who took early retirement from Chase Manhattan Bank, where he was executive vice president of operations, to become chairman and chief executive officer of the Hackensack Trust Co., which later was renamed Garden State National Bank.",
+    "M. G. Kelly\nGary Sinclair (born 1952 in Ada, Oklahoma), known professionally as Michael Gary “M.G.” Kelly and Machine Gun Kelly, is an American actor, disc jockey and radio personality.\n\n In addition to hosting several radio programs over the years, Kelly has held several acting roles as a disc jockey; also, he has served as an offstage announcer on two game shows.",
+    "David Gold (talk radio host)\nDavid Gold is an American conservative talk radio host.\n\n Gold, who has been a talk radio host since the mid-1970s, one of the first U.S. conservative talk radio hosts.\n\n His philosophy has been characterized as in the conservative/libertarian vein.",
+    "Big Wilson\nBig Wilson (born Malcolm John Wilson, Jr.; October 3, 1924 – October 5, 1989) was an American radio personality.\n\n He worked as a disc jockey at WNBC AM in New York City from the early 1960s until 1974 and moved to Miami in 1975 where he worked for WIOD and WCIX-TV.\n\n He was one of the last two hosts of the NBC network program Monitor.\n\n Prior to moving to NYC, Wilson and his wife Jody lived in a riverfront home in Rocky River, Ohio.\n\n He commuted to Cleveland where he was the leading radio personality for some years.\n\n Tim Conway and other well-known persons visited their home."
+   ]
+  },
+  {
+   "id": "8646e48abc927563",
+   "gold": [
+    {
+     "sentence": "Bluebeard's Castle (Hungarian: A kékszakállú herceg vára ; literally: \"The Blue-Bearded Duke's Castle\") is a one-act opera by Hungarian composer Béla Bartók.",
+     "facts": {
+      "0.0": "Bluebeard's Castle is a one-act opera.",
+      "0.1": "Bluebeard's Castle is by Hungarian composer Béla Bartók.",
+      "0.2": "The Hungarian title of Bluebeard's Castle is A kékszakállú herceg vára.",
+      "0.3": "Literally, the Hungarian title means The Blue-Bearded Duke's Castle."
+     }
+    },
+    {
+     "sentence": "Agrippina (HWV 6) is an \"opera seria\" in three acts by George Frideric Handel with a libretto by Cardinal Vincenzo Grimani.",
+     "facts": {
+      "1.0": "Agrippina (HWV 6) is an opera seria.",
+      "1.1": "Agrippina (HWV 6) has three acts.",
+      "1.2": "Agrippina (HWV 6) is by George Frideric Handel.",
+      "1.3": "Agrippina (HWV 6) has a libretto by Cardinal Vincenzo Grimani."
+     }
+    }
+   ],
+   "items": [
+    "Arlecchino (opera)\nArlecchino, \"oder Die Fenster\" (\"Harlequin, or The Windows\", is a one-act opera with spoken dialog by Ferruccio Busoni, with a libretto in German, composed in 1913.\n\n He completed the music for the opera while living in Zurich in 1916.\n\n It is a number opera written in neo-classical style and includes ironic allusions to operatic conventions and situations typical of the late 18th and early 19th centuries.\n\n It even includes a parody of a duel.",
+    "Senza sangue\nSenza sangue (Without blood) an opera in one act by Péter Eötvös with a libretto by Mari Mezei.\n\n It is based on the second part of the novel of the same name by Alessandro Baricco and is intended to be performed jointly with Béla Bartók's one-act \"Bluebeard's Castle\".\n\n The concert première was given by the Cologne Philharmonic Orchestra on 1 May 2015.\n\n It was premièred in full on 15 May 2016 at the Festival d'Avignon.\n\n It is his tenth opera.\n\n Anne Sofie von Otter, who gave the New York première with the New York Philharmonic, said: \"“The piece is not at all easy for the two singers... [It’s] hard to find the pitch; you have to work it into the voice, unless of course you happen to have perfect pitch, which I don’t.\"",
+    "Daphne (opera)\nDaphne, Op.\n\n82, is an opera in one act by Richard Strauss, subtitled \"Bucolic Tragedy in One Act\".\n\n The German libretto was by Joseph Gregor.\n\n The opera is based loosely on the mythological figure Daphne from Ovid's \"Metamorphoses\" and includes elements taken from \"The Bacchae\" by Euripides.\n\n The opera premiered at the Semperoper in Dresden on 15 October 1938, originally intended as a double bill with Strauss' \"Friedenstag\", but as the scale of \"Daphne\" grew, that idea was abandoned.\n\n The conductor of the first performance was Karl Böhm, to whom the opera was dedicated.",
+    "Agrippina (opera)\nAgrippina (HWV 6) is an \"opera seria\" in three acts by George Frideric Handel with a libretto by Cardinal Vincenzo Grimani.\n\n Composed for the 1709–10 Venice \"Carnevale\" season, the opera tells the story of Agrippina, the mother of Nero, as she plots the downfall of the Roman Emperor Claudius and the installation of her son as emperor.\n\n Grimani's libretto, considered one of the best that Handel set, is an \"anti-heroic satirical comedy\", full of topical political allusions.\n\n Some analysts believe that it reflects Grimani's political and diplomatic rivalry with Pope Clement XI.",
+    "Bluebeard's Castle\nBluebeard's Castle (Hungarian: A kékszakállú herceg vára ; literally: \"The Blue-Bearded Duke's Castle\") is a one-act opera by Hungarian composer Béla Bartók.\n\n The libretto was written by Béla Balázs, a poet and friend of the composer, and is written in Hungarian, based on the French literary tale \"La Barbe bleue\" by Charles Perrault.\n\n The opera lasts only a little over an hour and there are only two singing characters onstage: Bluebeard (\"Kékszakállú \"), and his new wife Judith (\"Judit \" ); the two have just eloped and Judith is coming home to Bluebeard's castle for the first time.",
+    "At the Boar's Head\nAt the Boar's Head is an opera in one act by the English composer Gustav Holst, his op. 42.\n\n Holst himself described the work as \"A Musical Interlude in One Act\".\n\n The libretto, by the composer himself, is based on Shakespeare's \"Henry IV, Part 1\" and \"Henry IV, Part 2\".",
+    "The Padlock\nThe Padlock is a two-act 'afterpiece' opera by Charles Dibdin.\n\n The text was by Isaac Bickerstaffe.\n\n It debuted in 1768 at the Drury Lane Theatre in London as a companion piece to \"The Earl of Warwick\".\n\n It partnered other plays before a run of six performances in tandem with \"The Fatal Discovery\" by John Home.\n\n \"The Padlock\" was a success, largely due to Dibdin's portrayal of Mungo, a blackface caricature of a black servant from the West Indies.\n\n The company took the production to the United States the next year, where a portrayal by Lewis Hallam, Jr. as Mungo met with even greater accolades.\n\n The libretto was first published in London in 1768 (?)\n\n and in Dublin in 1775.\n\n The play remained in regular circulation in the U.S. as late as 1843.\n\n It was revived by the Old Vic Company in London and on tour in the UK in 1979 in a new orchestration by Don Fraser and played in a double-bill with Garrick's \"Miss In Her Teens\".",
+    "Orfeo ed Euridice\nOrfeo ed Euridice (French version: Orphée et Eurydice ; English: \"Orpheus and Eurydice\") is an opera composed by Christoph Willibald Gluck based on the myth of Orpheus, set to a libretto by Ranieri de' Calzabigi.\n\n It belongs to the genre of the \"azione teatrale\", meaning an opera on a mythological subject with choruses and dancing.\n\n The piece was first performed at the Burgtheater in Vienna on 5 October 1762 in the presence of Empress Maria Theresa.\n\n \"Orfeo ed Euridice\" is the first of Gluck's \"reform\" operas, in which he attempted to replace the abstruse plots and overly complex music of \"opera seria\" with a \"noble simplicity\" in both the music and the drama.",
+    "Bernhard Bötel\nHis stage repertoire included Belmonte in Wolfgang Amadeus Mozart's \"Die Entführung aus dem Serail\", Chapelou in Adolphe Adam's \"Le postillon de Lonjumeau\", Count Almaviva in Gioachino Rossini's \"The Barber of Seville\", Daniel in Franz Lehár's \"The Merry Widow\", the Duke of Mantua in Giuseppe Verdi's \"Rigoletto\", Gabriel von Eisenstein in Johann Strauss II's \"Die Fledermaus\", Indigo in Strauss' \"Indigo und die vierzig Räuber\", Jeník in Bedřich Smetana's \"The Bartered Bride\", Paolino in Domenico Cimarosa's \"Il matrimonio segreto\", Pâris in Jacques Offenbach's \"La belle Hélène\", Pietro in Franz von Suppé's \"Boccaccio\", and Wilhelm Meister in Ambroise Thomas' \"Mignon\".",
+    "The Carp (opera)\nThe Carp is a one-act comic opera (styled \"a whimsicality\") with a libretto by Frank Desprez and music by Alfred Cellier.\n\n It was first produced at the Savoy Theatre from 13 February 1886 to 19 January 1887, as a companion piece to \"The Mikado\".\n\n It was then revived as companion to \"Ruddigore\" from 21 February 1887 to 5 November 1887.\n\n The piece also toured throughout 1888."
+   ]
+  },
+  {
+   "id": "e30b93434a644b5d",
+   "gold": [
+    {
+     "sentence": "Heavenly Creatures is a 1994 New Zealand psychological drama directed by Peter Jackson, from a screenplay he co-wrote with his partner, Fran Walsh, about the notorious 1954 Parker–Hulme murder case in Christchurch, New Zealand.",
+     "facts": {
+      "0.0": "Heavenly Creatures is a 1994 New Zealand psychological drama.",
+      "0.1": "Heavenly Creatures was directed by Peter Jackson.",
+      "0.2": "Peter Jackson co-wrote the screenplay with his partner, Fran Walsh.",
+      "0.3": "Heavenly Creatures is about the notorious 1954 Parker-Hulme murder case.",
+      "0.4": "The Parker-Hulme murder case took place in Christchurch, New Zealand."
+     }
+    },
+    {
+     "sentence": " The main premise deals with the relationship between two teenage girls, Pauline Parker and Juliet Hulme, who murder Parker's mother.",
+     "facts": {
+      "1.0": "The main premise of Heavenly Creatures deals with the relationship between two teenage girls, Pauline Parker and Juliet Hulme.",
+      "1.1": "Pauline Parker and Juliet Hulme murder Pauline Parker's mother."
+     }
+    },
+    {
+     "sentence": "Anne Perry (born 28 October 1938 as Juliet Marion Hulme) is an English author of historical detective fiction, best known for her Thomas Pitt and William Monk series.",
+     "facts": {
+      "2.0": "Anne Perry was born on 28 October 1938 as Juliet Marion Hulme.",
+      "2.1": "Anne Perry is an English author of historical detective fiction.",
+      "2.2": "Anne Perry is best known for her Thomas Pitt and William Monk series."
+     }
+    }
+   ],
+   "items": [
+    "Hulder\nA hulder is a seductive forest creature found in Scandinavian folklore.\n\n (Her name derives from a root meaning \"covered\" or \"secret\".)\n\n In Norwegian folklore, she is known as huldra (\"the [archetypal] hulder\", though folklore presupposes that there is an entire Hulder race and not just a single individual).\n\n She is known as the skogsrå \"forest spirit\" or Tallemaja \"pine tree Mary\" in Swedish folklore, and ulda in Sámi folklore.\n\n Her name suggests that she is originally the same being as the völva divine figure Huld and the German Holda.",
+    "Kate Winslet filmography\nKate Winslet is a British actress and singer who has appeared in numerous films and television series.\n\n Her film debut was as Juliet Hulme in the 1994 film \"Heavenly Creatures\".\n\n She went on to appear in the later 1990s films \"Sense and Sensibility\" as Marianne Dashwood (1995), which earned her a nomination for the Academy Award for Best Supporting Actress, \"Jude\" as Sue Bridehead (1996), \"Hamlet\" as Ophelia (1996) and \"Titanic\" as Rose DeWitt Bukater (1997).\n\n For her role in \"Titanic\", it earned her Best Actress nominations for an Academy Award, Golden Globe and Screen Actors Guild Award.",
+    "Keri Hulme\nKeri Hulme (born 9 March 1947) is a New Zealand writer.\n\n Her only novel, \"The Bone People\", won the Booker Prize in 1985.",
+    "The Bone People\nThe Bone People (styled by the writer and in some editions as the bone people) is a Booker Prize-winning 1984 novel by New Zealand writer Keri Hulme.",
+    "Juno Temple\nJuno Temple (born 21 July 1989) is an English actress.\n\n She has appeared in films such as \" Black Mass\", \"The Other Boleyn Girl\", \"Wild Child\", \"Atonement\", \"Maleficent\", \"The Three Musketeers\" and \"The Dark Knight Rises\".\n\n She also had a starring role in the HBO period drama series \"Vinyl\".",
+    "Julia (1977 film)\nJulia is a 1977 American drama film directed by Fred Zinnemann, from a screenplay by Alvin Sargent.\n\n It is based on a chapter from Lillian Hellman's book \"Pentimento\" about the author's relationship with a lifelong friend, \"Julia,\" who fought against the Nazis in the years prior to World War II.\n\n Hellman said the story was true, but critics have challenged its accuracy.\n\n The film in DeLuxe Color was produced by Richard Roth, with Julien Derode as executive producer and Tom Pevsner as associate producer.",
+    "Peter Elliott (actor)\nPeter Elliott is a leading New Zealand actor.\n\n He has appeared in numerous television shows including \"Shortland Street\", \"Gloss\" and .\n\n He has also appeared in several movies including \"Heavenly Creatures\".\n\n Peter has a daughter Lucy Elliott who is an actress, playing character Dayna Jenkins on \"Shortland Street\" in 2013.",
+    "Heavenly Creatures\nHeavenly Creatures is a 1994 New Zealand psychological drama directed by Peter Jackson, from a screenplay he co-wrote with his partner, Fran Walsh, about the notorious 1954 Parker–Hulme murder case in Christchurch, New Zealand.\n\n The film features Melanie Lynskey and Kate Winslet in their screen debuts with supporting roles by Sarah Peirse, Diana Kent, Clive Merrison, and Simon O'Connor.\n\n The main premise deals with the relationship between two teenage girls, Pauline Parker and Juliet Hulme, who murder Parker's mother.\n\n The events of the film cover the period from their meeting in 1952 to the murder in 1954.",
+    "Juliet Weber\nJuliet Weber is a producer, director, writer, and an editor for the film industry.\n\n She co-produced films such as Fastpitch (2000) and Unchained Memories (2003).",
+    "Parker–Hulme murder case\nThe Parker–Hulme murder case began in the city of Christchurch, New Zealand, on 22 June 1954, when Honora Rieper (also known as Honora Parker, her legal name) was killed by her teenaged daughter, Pauline Parker, and Pauline's close friend Juliet Hulme (later known as Anne Perry).\n\n Parker was 16 at the time, while Hulme was 15."
+   ]
+  },
+  {
+   "id": "4364aaf4a7bec2e3",
+   "gold": [
+    {
+     "sentence": "Saddle Rock Elementary School or simply \"Saddle Rock\" is an elementary school, comprising grades Kindergarten through 5.",
+     "facts": {
+      "0.0": "Saddle Rock Elementary School is also called Saddle Rock.",
+      "0.1": "Saddle Rock Elementary School is an elementary school.",
+      "0.2": "Saddle Rock Elementary School comprises grades Kindergarten through 5."
+     }
+    },
+    {
+     "sentence": " It is a public school located in Great Neck, New York, USA as part of the Great Neck School District.",
+     "facts": {
+      "1.0": "Saddle Rock Elementary School is a public school.",
+      "1.1": "Saddle Rock Elementary School is located in Great Neck, New York, USA.",
+      "1.2": "Saddle Rock Elementary School is part of the Great Neck School District."
+     }
+    },
+    {
+     "sentence": "The Great Neck School District is a comprehensive community public school district primarily serving students in Great Neck, New York.",
+     "facts": {
+      "2.0": "The Great Neck School District is a comprehensive community public school district.",
+      "2.1": "The Great Neck School District primarily serves students in Great Neck, New York."
+     }
+    },
+    {
+     "sentence": " It is Union Free School District Number 7 in the Town of North Hempstead, Nassau County, New York, United States, on Long Island.",
+     "facts": {
+      "3.0": "The Great Neck School District is Union Free School District Number 7.",
+      "3.1": "The Great Neck School District is in the Town of North Hempstead.",
+      "3.2": "The Great Neck School District is in Nassau County, New York, United States.",
+      "3.3": "The Great Neck School District is on Long Island."
+     }
+    }
+   ],
+   "items": [
+    "New York State Route 108\nNew York State Route 108 (NY 108) is a 1.72 mi north–south state highway located on the Suffolk County side of the Suffolk–Nassau county line on Long Island, New York, in the United States.\n\n It is a spur route connecting NY 25A in Cold Spring Harbor to the Cold Spring Harbor station on the Long Island Rail Road's Port Jefferson Branch via Harbor Road.\n\n Harbor Road terminates at an intersection with Woodbury Road, on the Nassau County line, which carries County Route 11 to the east and unsigned County Route 12 to the west.\n\n NY 108, assigned in the early 1930s, is the shortest state highway on Long Island.",
+    "Great Neck, New York\nGreat Neck is a region on Long Island, New York, that covers a peninsula on the North Shore of Long Island, which includes the villages of Great Neck, Great Neck Estates, Great Neck Plaza, and others, as well as an area south of the peninsula near Lake Success and the border territory of Queens.\n\n The incorporated village of Great Neck had a population of 9,989 at the 2010 census, while the larger Great Neck area comprises a residential community of some 40,000 people in nine villages and hamlets in the town of North Hempstead, of which Great Neck is the northwestern quadrant.\n\n Great Neck has five ZIP Codes (11020–11024), and one school district.",
+    "Old Country Road\nOld Country Road is a major east–west thoroughfare through central Nassau County and extending into western Suffolk County on Long Island, New York.\n\n It serves many of the major shopping centers in central Nassau County including Roosevelt Field Mall.\n\n The road also forms part of the border between the towns of Hempstead and North Hempstead.\n\n In Nassau County, Old Country Road is county-maintained as the unsigned County Route 25 (CR 25) west of Round Swamp Road.",
+    "Saddle Rock Elementary School\nSaddle Rock Elementary School or simply \"Saddle Rock\" is an elementary school, comprising grades Kindergarten through 5.\n\n It is a public school located in Great Neck, New York, USA as part of the Great Neck School District.\n\n The school has been recognized by the Blue Ribbon Schools Program.",
+    "East Lyme High School\nEast Lyme High School is a high school located in the Flanders Village region of East Lyme, Connecticut.\n\n It is operated by East Lyme Public Schools.\n\n The mascot is Sven the Viking.\n\n Students from the town of Salem, Connecticut in grades 9 through 12 attend high school in East Lyme (as they have no high school of their own); this will be the case until at least 2016 when the current co-op agreement between the two towns expires.",
+    "Ridgefield Park station\nRidgefield Park Station, also known as West Shore Station, was railroad station in Ridgefield Park, New Jersey at the foot of Mount Vernon Street served by the New York, Susquehanna and Western Railroad (NYSW) and the West Shore Railroad, a division of New York Central (NYCRR) The New York, Ontario and Western Railway (NYO&W) had running rights along the West Shore and sometimes stopped at Ridgefield Park.\n\n First opened in 1883 it was one of three passenger stations in the village, the others being the Little Ferry Station to the south and Westview Station to the north.\n\n The station house, built at a cost $100,000 opened in 1927.\n\n Southbound service crossed Overpeck Creek and continued to terminals on the Hudson River waterfront where there was connecting ferry service across the Hudson River to Manhattan.\n\n Northbound near Bogota the parallel NYSW and West Shore lines diverge and continue into northern New Jersey, Pennsylviania, and upstate New York.\n\n Passenger service ended in 1966.",
+    "Great Neck School District\nThe Great Neck School District is a comprehensive community public school district primarily serving students in Great Neck, New York.\n\n It also serves students in some parts of Manhasset and New Hyde Park.\n\n It is Union Free School District Number 7 in the Town of North Hempstead, Nassau County, New York, United States, on Long Island.",
+    "Village School (Great Neck, New York)\nVillage School (also known as VS) is an American long-established public alternative school.\n\n It is a member of Coalition of Essential Schools and is located in the village of Great Neck, New York, serving students in grades 8 through 12.\n\n Village School is one of three high schools in the Great Neck School District, which includes Great Neck North High School and Great Neck South High School.\n\n Village School offers its 39 students an outdoor education program, college preparatory program, and inclusion of students with disabilities.",
+    "New Jersey Japanese School\nThe New Jersey Japanese School (ニュージャージー日本人学校 , \"Nyūjājī Nihonjin Gakkō\" , NJJS) is a Japanese school located in Oakland, New Jersey, United States in the New York City metropolitan area.\n\n It is one of the two Japanese day schools operated by the Japanese Educational Institute of New York (JEI; ニューヨーク日本人教育審議会 \"Nyūyōku Nihonjin Kyōiku Shingi Kai\"), a nonprofit organization which also operates two Japanese weekend school systems in the New York City area.",
+    "Monmouth Heights at Marlboro, New Jersey\nMonmouth Heights at Marlboro is an unincorporated community located within Marlboro Township in Monmouth County, New Jersey, United States.\n\n The housing development was created in the 1960s by Levitt & Sons though some protests occurred by long-time residents of Marlboro Township at the time of its creation.\n\n The community is located along New Jersey Route 79 across the highway from Marlboro High School."
+   ]
+  },
+  {
+   "id": "e35cdf2251637644",
+   "gold": [
+    {
+     "sentence": "David Michael Draiman (born March 13, 1973) is an American songwriter and the vocalist for the band Disturbed as well as for the band Device.",
+     "facts": {
+      "0.0": "David Michael Draiman was born on March 13, 1973.",
+      "0.1": "David Michael Draiman is an American songwriter.",
+      "0.2": "David Michael Draiman is the vocalist for the band Disturbed.",
+      "0.3": "David Michael Draiman is the vocalist for the band Device."
+     }
+    },
+    {
+     "sentence": "Terry Alan Kath (January 31, 1946 – January 23, 1978) was an American musician and songwriter, best known as the original guitarist, one of the lead singers and founding members of the rock band Chicago.",
+     "facts": {
+      "1.0": "Terry Alan Kath lived January 31, 1946 to January 23, 1978.",
+      "1.1": "Terry Alan Kath was an American musician.",
+      "1.2": "Terry Alan Kath was an American songwriter.",
+      "1.3": "Terry Alan Kath was best known as the original guitarist of the rock band Chicago.",
+      "1.4": "Terry Alan Kath was one of the lead singers of the rock band Chicago.",
+      "1.5": "Terry Alan Kath was a founding member of the rock band Chicago."
+     }
+    }
+   ],
+   "items": [
+    "Ted Kooshian\nTed Kooshian (born October 8, 1961) is an American jazz pianist, keyboardist, and composer, who has performed with Aretha Franklin, Chuck Berry, Marvin Hamlisch, Sarah Brightman, Il Divo, and Blood, Sweat, and Tears.\n\n Kooshian has played in many Broadway pit orchestras, and has been a member of the Ed Palermo Big Band since 1994.\n\n Originally from San Jose, California, Kooshian has been performing since the 1980s.",
+    "Peter Wichers\nPeter Wichers is best known as one of the founding members of Swedish melodic death metal band, Soilwork.\n\n From 1995 until late 2005, when he announced his departure from the band, he was known as the lead guitarist and also a songwriter, especially on their \"Stabbing the Drama\" album., He rejoined Soilwork in 2008 and played on 2010s The Panic Broadcast and in June 2012 he quit Soilwork for the second time.\n\n After leaving Soilwork, he filled in for Adam Dutkiewicz when he was injured on Killswitch Engage's European tour.\n\n More recently, he has collaborated with singers from across the melodic death metal genre including Anders Fridén, former band mate Björn \"Speed\" Strid and John Bush (vocalist of Anthrax) to make a CD much in the same style as \"Roadrunner United\", entitled \"Nuclear Blast All-Stars\".\n\n He also co-wrote Warrel Dane's solo record \"Praises to the War Machine\".",
+    "Steve Alvord\nSteven Lee Alvord (born October 2, 1964 in Bellingham, Washington) is a former professional American football defensive tackle and defensive end in the National Football League and World League of American Football.\n\n In his four-year pro career he played for the St. Louis/Phoenix Cardinals of the NFL, and the Barcelona Dragons of the WLAF.\n\n Alvord played college football at Washington.\n\nHe has a cool daughter, happy birthday Katie.",
+    "Terry Glaze\nTerrence Lee Glaze (born November 29, 1964, Columbus), known as Terry Lee, is a Texas-raised singer and guitarist who is most known for his work in American heavy metal bands Lord Tracy and Pantera.",
+    "Karlfried Graf Dürckheim\nKarl Friedrich Alfred Heinrich Ferdinand Maria Graf Eckbrecht von Dürckheim-Montmartin (24 October 1896 – 28 December 1988) was a German diplomat, psychotherapist and Zen Master.\n\n A veteran of World War I, he was introduced to Zen Buddhism early in life.\n\n After obtaining a doctorate in psychology, he became an avid supporter of the Nazi Party.\n\n Following World War II he was imprisoned in Japan which transformed him spiritually.\n\n Upon returning to Germany he became a leading proponent of the Western esoteric spiritual tradition, synthesizing teachings from Christian Mysticism, Depth Psychology and Zen Buddhism.",
+    "Katherine Dienes\nKatherine Dienes (born 1970) is a New Zealand-born organist, conductor and composer.\n\n She is currently Organist and Master of the Choristers at Guildford Cathedral and is the first woman to hold the most senior musical post in a Church of England cathedral.\n\n Her husband is Patrick Williams - librarian of the Royal Phillharmonic Orchestra, and they have a daughter, Hannah, who is currently a chorister at Guildford Cathedral",
+    "Terry Kath\nTerry Alan Kath (January 31, 1946 – January 23, 1978) was an American musician and songwriter, best known as the original guitarist, one of the lead singers and founding members of the rock band Chicago.\n\n He has been praised by the band for his guitar skills and Ray Charles-influenced vocal style.",
+    "David Draiman\nDavid Michael Draiman (born March 13, 1973) is an American songwriter and the vocalist for the band Disturbed as well as for the band Device.\n\n Draiman is known for his distorted voice and percussive singing style.\n\n In November 2006, Draiman was voted number 42 on the \"Hit Parader\"’s \"\"Top 100 Metal Vocalists of All Time\"\".\n\n Draiman has written some of Disturbed's most successful singles, such as \"Stupify\", \"Down with the Sickness\", \"Indestructible\", and \"Inside the Fire\".",
+    "Device (metal band)\nDevice was an industrial metal band started by David Draiman, frontman of the heavy metal group Disturbed.\n\n Draiman was approached by Geno Lenardo, former guitarist of Filter, and together they started to work on new material.\n\n The two started work on a debut album in June 2012.\n\n The result of those sessions, \"Device\", was released on April 9, 2013.\n\n The first single and third track, \"Vilify\" was released to radio ahead of the album on February 19, 2013, alongside its first music video, directed by P. R. Brown.\n\n The second single and the introductory track, \"You Think You Know\", was released on June 11, 2013, alongside its music video, directed once again by Brown.",
+    "Warrel Dane\nWarrel Dane (born March 7, 1969) is the lead singer of the American power metal band Sanctuary.\n\n He is also known as the former lead singer of currently inactive progressive metal band Nevermore.\n\n He is a natural baritone, though he was known for his high-pitched vocals with Serpent's Knight and on the first two Sanctuary albums.\n\n Later in his career, Dane became more notable for his distinctively deep, dramatic voice."
+   ]
+  },
+  {
+   "id": "0599ab07298a90a1",
+   "gold": [
+    {
+     "sentence": " \"Pinus\" is the sole genus in the subfamily Pinoideae.",
+     "facts": {
+      "0.0": "Pinus is the sole genus in the subfamily Pinoideae."
+     }
+    },
+    {
+     "sentence": " The Plant List compiled by the Royal Botanic Gardens, Kew and Missouri Botanical Garden accepts 126 species names of pines as current, together with 35 unresolved species and many more synonyms.",
+     "facts": {
+      "1.0": "The Plant List was compiled by the Royal Botanic Gardens, Kew and the Missouri Botanical Garden.",
+      "1.1": "The Plant List accepts 126 species names of pines as current.",
+      "1.2": "The Plant List includes 35 unresolved species of pines.",
+      "1.3": "The Plant List includes many more synonyms."
+     }
+    },
+    {
+     "sentence": " It is sometimes considered to have only two species, \"B. monosperma\" and \"B. superba\", or is expanded to include four or five species.",
+     "facts": {
+      "2.0": "The genus is sometimes considered to have only two species, B. monosperma and B. superba.",
+      "2.1": "The genus is sometimes expanded to include four or five species."
+     }
+    }
+   ],
+   "items": [
+    "Butea\nButea is a genus of flowering plants belonging to the pea family, Fabaceae.\n\n It is sometimes considered to have only two species, \"B. monosperma\" and \"B. superba\", or is expanded to include four or five species.",
+    "An encyclopedia-style collection spans plant biology, ecology, wildlife, food, and culture. It covers herbicides (imazapyr and HPPD inhibitors), plant defenses and diversity, Huernia’s fly-attracting flowers, Oenanthe javanica, and Nepenthes pitcher plants, especially in Southeast Asia. Wildlife entries include butterflies, birds, ticks, and deer, from large Sri Lankan sambar to threatened Asian species. Other topics include global and regional restaurants, hot sauces",
+    "The text covers several flowering plants. Pterostyrax is a four-species East Asian genus of deciduous shrubs and small trees; P. hispidus grows to 15 m and bears fragrant white summer flowers. Styrax comprises about 130 shrubs and trees, mostly from Asia; its resin, benzoin, is used in perfume, incense, flavoring, and medicine. Listed Styrax species are native to Malaysia, Singapore, Vietnam, and Peru;",
+    "Hydrangea\nHydrangea ( ; common names hydrangea or hortensia) is a genus of 70–75 species of flowering plants native to southern and eastern Asia (China, Japan, Korea, the Himalayas, and Indonesia) and the Americas.\n\n By far the greatest species diversity is in eastern Asia, notably China, Japan, and Korea.\n\n Most are shrubs 1 to 3 meters tall, but some are small trees, and others lianas reaching up to 30 m by climbing up trees.\n\n They can be either deciduous or evergreen, though the widely cultivated temperate species are all deciduous.",
+    "An encyclopedia-style collection covers deer and other wildlife, noting habitats, ranges, traits, and conservation status: Sri Lankan sambar are exceptionally large; moose are solitary northern browsers; several Asian deer are threatened, while Indian muntjac is least concern. It also mentions the Calypso fish-identification database, wild boar, and black bull. Other entries describe the Umba River and Babati; Ovambo, Oku, and Ewe peoples; Hawaiian muumuus",
+    "Deutzia\nDeutzia ( or ) is a genus of about 60 species of flowering plants in the family Hydrangeaceae, native to eastern and central Asia (from the Himalayas east to Japan and the Philippines), and Central America and also Europe.\n\n By far the highest species diversity is in China, where 50 species occur.",
+    "Lithocarpus\nLithocarpus is a genus in the beech family Fagaceae, differing from \"Quercus\" in the erect spikes of insect-pollinated male flowers and the short styles with punctate stigmas on the female flowers.\n\n The World Checklist (see link below) accepts 334 species, though some other texts suggest as few as 100 species.\n\n About 100 Asian species of the genus were formerly treated in the genus \"Pasania\".\n\n All are native to east and southeast Asia.\n\n These Asian species do not have a well-known English vernacular name, though the generic term stone oak has been proposed.",
+    "Nepenthes is a genus of roughly 150 Old World tropical pitcher-plant species, richest in Borneo, Sumatra, and the Philippines; monkeys sometimes drink rainwater from its pitchers. Bornean N. boschiana (with N. borneensis a synonym) is allied to N. faizaliana; N. chaniana has long white hairs and pale cylindrical pitchers. N. × kinabaluensis, a cross of N. rajah and N. vil",
+    "Pine\nA pine is any conifer in the genus Pinus, , of the family Pinaceae.\n\n \"Pinus\" is the sole genus in the subfamily Pinoideae.\n\n The Plant List compiled by the Royal Botanic Gardens, Kew and Missouri Botanical Garden accepts 126 species names of pines as current, together with 35 unresolved species and many more synonyms.",
+    "A botanical survey covers African Huernia, whose carrion-scented flowers attract flies; Asian water vegetable Oenanthe javanica; and many plant genera, families, and species, with California botanist Samuel Parish commemorated in plant names. Nepenthes comprises about 150 Old World tropical pitcher plants, especially diverse in Borneo, Sumatra, and the Philippines; monkeys drink pitcher rainwater, and several Bornean species and hybrids are noted. Other highlights include a"
+   ]
+  }
+ ]
+}

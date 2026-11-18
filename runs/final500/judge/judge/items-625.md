@@ -1,0 +1,1477 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 11 items.
+
+=== ITEM id=9272d22725750c28 ===
+Gold sentences and facts:
+Sentence 0: Muppet Treasure Island is a 1996 American musical adventure comedy film based on Robert Louis Stevenson's "Treasure Island".
+  Fact 0.0: Muppet Treasure Island is a 1996 American musical adventure comedy film
+  Fact 0.1: Muppet Treasure Island is based on Robert Louis Stevenson's Treasure Island
+Sentence 1: Million Dollar Arm is a 2014 American biographical sports drama film directed by Craig Gillespie and produced by Walt Disney Pictures from a screenplay written by Thomas McCarthy.
+  Fact 1.0: Million Dollar Arm is a 2014 American biographical sports drama film
+  Fact 1.1: Million Dollar Arm was directed by Craig Gillespie
+  Fact 1.2: Million Dollar Arm was produced by Walt Disney Pictures
+  Fact 1.3: Million Dollar Arm was made from a screenplay written by Thomas McCarthy
+
+Retrieved items:
+<item 1>
+List of The Muppets productions
+This is a list of productions based on The Muppets characters and franchise, including films, television series and specials, and other media.
+
+ The franchise's main work is "The Muppet Show", a syndicated television series which ran from 1976 to 1981.
+
+ The franchise includes eight feature films; "The Muppet Movie", "The Great Muppet Caper", "The Muppets Take Manhattan", "The Muppet Christmas Carol", "Muppet
+Treasure Island", "Muppets from Space", "The Muppets", and "Muppets Most Wanted".
+
+ The franchise also includes other series such as "Muppets Tonight" and "The Muppets".
+</item 1>
+
+<item 2>
+Sam Eagle
+Sam Eagle is a Muppet character originating from the television show "The Muppet Show", where he was performed by Frank Oz.
+
+ Sam has appeared in every Muppet film; as himself in "The Muppet Movie", "The Great Muppet Caper", "The Muppets Take Manhattan", "Muppets from Space", and "The
+Muppets", as well as the Head Schoolmaster in "The Muppet Christmas Carol," Samuel Arrow in "Muppet Treasure Island" and a CIA agent in "Muppets Most Wanted."
+
+ He also appears in the television series, "The Muppets."
+</item 2>
+
+<item 3>
+Reaching for the Moon (1917 film)
+Reaching for the Moon is a 1917 American silent adventure film directed by John Emerson and written by John Emerson, Joseph Henabery, and Anita Loos.
+
+ The film stars Douglas Fairbanks, Eileen Percy, Richard Henry Cummings, Millard Webb, Eugene Ormonde, and Frank Campeau.
+
+ The film was released on November 17, 1917, by Paramount Pictures.
+
+ It has been released on DVD.
+</item 3>
+
+<item 4>
+The Muppets (film)
+The Muppets is a 2011 American musical comedy film and the seventh theatrical film featuring the Muppets.
+
+ The film is directed by James Bobin, written by Jason Segel and Nicholas Stoller, produced by David Hoberman and Todd Lieberman, and stars Segel, Amy Adams,
+Chris Cooper and Rashida Jones, as well as Muppet performers Steve Whitmire, Eric Jacobson, Dave Goelz, Bill Barretta, David Rudman, Matt Vogel, and Peter Linz.
+
+ Bret McKenzie served as music supervisor, writing four of the film's five original songs, and Christophe Beck composed the film's score.
+
+ In "The Muppets", devoted fan Walter, his brother Gary, and Gary's girlfriend Mary help Kermit the Frog reunite the disbanded Muppets, as they must raise $10
+million to save the Muppet Theater from Tex Richman, a businessman who plans to demolish the studio to drill for oil.
+</item 4>
+
+<item 5>
+Managed Money
+Managed Money is a 1934 short comedy film directed by Charles Lamont.
+
+ The film stars Frank Coghlan Jr. and Shirley Temple.
+
+ It was also known as "Frolics of Youth" and "Measured Money".
+
+ This was the second film in which Temple starred as Mary Lou.
+
+ The film tells the story of Sonny and Sid prospecting for gold to pay for their military academy education.
+
+ Sonny's sister, Mary Lou stows away in the back of their car.
+
+ Eventually, they meet an inventor who helps them financially.
+</item 5>
+
+<item 6>
+Muppet Treasure Island
+Muppet Treasure Island is a 1996 American musical adventure comedy film based on Robert Louis Stevenson's "Treasure Island".
+
+ It is the fifth feature film to star The Muppets, and was directed by Brian Henson.
+</item 6>
+
+<item 7>
+Bill Barretta
+William Paul "Bill" Barretta (born June 19, 1964) is an American puppeteer and producer who has been performing with The Muppets since 1991, when he puppeteered
+the body of Sinclair family patriarch, Earl Sinclair on "Dinosaurs".
+
+ He later developed several new characters on "Muppets Tonight", including Pepe the King Prawn, Johnny Fiama, Big Mean Carl and Bobo the Bear.
+
+ Along with having his own Muppet characters, Barretta has taken over several of Jim Henson's roles, such as Dr. Teeth, Rowlf the Dog, Mahna Mahna and Swedish
+Chef, and briefly took over Jerry Nelson's role of Lew Zealand.
+
+ His film debut as a principal puppeteer was in 1996's "Muppet Treasure Island" as Clueless Morgan.
+
+ In addition, Barretta has produced two of the Muppets' television films, "It's a Very Merry Muppet Christmas Movie" (2002) and "The Muppets' Wizard of Oz"
+(2005).
+
+ Barretta also provides additional voices on "Kim Possible".
+</item 7>
+
+<item 8>
+Million Dollar Arm
+Million Dollar Arm is a 2014 American biographical sports drama film directed by Craig Gillespie and produced by Walt Disney Pictures from a screenplay written
+by Thomas McCarthy.
+
+ The film is based on the true story of baseball pitchers Rinku Singh and Dinesh Patel who were discovered by sports agent J. B. Bernstein after winning a
+reality show competition.
+</item 8>
+
+<item 9>
+The Muppets (soundtrack)
+The Muppets: An Original Walt Disney Records Soundtrack is a soundtrack album released by Walt Disney Records on November 22, 2011 for the musical comedy film
+"The Muppets".
+
+ The soundtrack features five original songs, four re-recordings and remasterings of popular Muppet songs ("The Muppet Show Theme", "Rainbow Connection", and
+"Mah Nà Mah Nà"), two cover versions of existing songs (Cee Lo Green's "Forget You" and Nirvana's "Smells Like Teen Spirit"), two standalone songs (Paul Simon's
+"Me and Julio Down by the Schoolyard" and Starship's "We Built This City"), and fifteen dialogue tracks.
+
+ It also features the song "Man or Muppet", which won the Academy Award for Best Original Song.
+
+ The soundtrack was also nominated for Best Compilation Soundtrack for Visual Media at the 55th Grammy Awards.
+</item 9>
+
+<item 10>
+Muppets Most Wanted (soundtrack)
+Muppets Most Wanted: An Original Walt Disney Records Soundtrack is a soundtrack album released by Walt Disney Records on March 18, 2014 for the musical comedy
+film "Muppets Most Wanted".
+
+ The soundtrack features six original songs, two re-recordings of popular Muppet songs ("The Muppet Show Theme" and "Together Again"), three cover versions of
+existing songs (Allen Toussaint's "Working in the Coal Mine", Maroon 5's "Moves Like Jagger", and Los del Río's "Macarena (Bayside Boys Mix)"), an orchestral
+suite by Christophe Beck, five demos by Bret McKenzie, and eight dialogue tracks.
+</item 10>
+=== END ITEM id=9272d22725750c28 ===
+
+=== ITEM id=11a03eaf48b0c5d4 ===
+Gold sentences and facts:
+Sentence 0: Rosyth Dockyard is a large naval dockyard on the Firth of Forth at Rosyth, Fife, Scotland, owned by Babcock Marine, which formerly undertook refitting of Royal Navy surface vessels and submarines.
+  Fact 0.0: Rosyth Dockyard is a large naval dockyard
+  Fact 0.1: Rosyth Dockyard is on the Firth of Forth
+  Fact 0.2: Rosyth Dockyard is at Rosyth, Fife, Scotland
+  Fact 0.3: Rosyth Dockyard is owned by Babcock Marine
+  Fact 0.4: Rosyth Dockyard formerly undertook refitting of Royal Navy surface vessels
+  Fact 0.5: Rosyth Dockyard formerly undertook refitting of Royal Navy submarines
+Sentence 1: The "Queen Elizabeth" class is a class of two aircraft carriers of the United Kingdom's Royal Navy.
+  Fact 1.0: The Queen Elizabeth class is a class of two aircraft carriers
+  Fact 1.1: The Queen Elizabeth class aircraft carriers belong to the United Kingdom's Royal Navy
+
+Retrieved items:
+<item 1>
+Rosyth railway station
+Rosyth railway station serves the town of Rosyth in Fife, Scotland.
+
+ The station is managed by Abellio ScotRail and lies on the Fife Circle Line, 23.6 km north of Edinburgh Waverley .
+
+ It was opened in 1917 by the North British Railway (as "Rosyth Halt") to serve the nearby naval dockyard.
+</item 1>
+
+<item 2>
+Rosyth Dockyard
+Rosyth Dockyard is a large naval dockyard on the Firth of Forth at Rosyth, Fife, Scotland, owned by Babcock Marine, which formerly undertook refitting of Royal
+Navy surface vessels and submarines.
+
+ Before its privatisation in the 1990s it was formally the Royal Naval Dockyard Rosyth.
+
+ Its primary role is now as integration site for the Royal Navy's newest aircraft carriers - the "Queen Elizabeth"-class.
+</item 2>
+
+<item 3>
+HMS Diomede served between the wars and captured German blockade runner Idarwald in WWII before conversion to a Rosyth training ship and scrapping in 1946.
+Rosyth is now a Queen Elizabeth-class carrier integration site; its Goliath crane lifts 1,000 tonnes. A 2012 Royal Marines march commemorated the carrier class,
+whose two ships were planned for service from 2017/2020. The text also covers carrier development and losses, China’s catapult-equipped
+</item 3>
+
+<item 4>
+HMS Illustrious (87)
+HMS "Illustrious" was the lead ship of her class of aircraft carriers built for the Royal Navy before World War II.
+
+ Her first assignment after completion and working up was with the Mediterranean Fleet, in which her aircraft's most notable achievement was sinking one Italian
+battleship and badly damaging two others during the Battle of Taranto in late 1940.
+
+ Two months later the carrier was crippled by German dive bombers and was repaired in the United States.
+
+ After sustaining damage on the voyage home in late 1941 by a collision with her sister ship "Formidable" , "Illustrious" was sent to the Indian Ocean in early
+1942 to support the invasion of Vichy French Madagascar (Operation Ironclad).
+
+ After returning home in early 1943, the ship was given a lengthy refit and briefly assigned to the Home Fleet.
+
+ She was transferred to Force H for the Battle of Salerno in mid-1943 and then rejoined the Eastern Fleet in the Indian Ocean at the beginning of 1944.
+</item 4>
+
+<item 5>
+HMS Diomede (D92)
+HMS "Diomede" was a "Danae"-class cruiser of the Royal Navy.
+
+ Constructed at Vickers Armstrong, Barrow, she was constructed too late to take part in World War I and was consequently completed at the Royal Dockyard,
+Portsmouth.
+
+ Between the wars, she served on the China Station, Pacific waters, East Indies Waters and from 1936 onwards, in reserve.
+
+ In World War II she performed four years of arduous war duty, during which time she captured the German blockade runner "Idarwald" .
+
+ Between 22 July 1942 and 24 September 1943 she was converted to a training ship at Rosyth Dockyard.
+
+ In 1945 she was placed in reserve and scrapped a year later.
+</item 5>
+
+<item 6>
+Goliath (Rosyth)
+Goliath is a crane in Rosyth Dockyard, Scotland, with a lift capacity of 1000 t , the largest in Britain.
+</item 6>
+
+<item 7>
+Queen Elizabeth-class aircraft carrier
+The "Queen Elizabeth" class is a class of two aircraft carriers of the United Kingdom's Royal Navy.
+
+ The first,  , was named on 4 July 2014, with her ship commissioning planned for 2017, and an initial operating capability expected in 2018.
+
+ The second, HMS "Prince of Wales" , is scheduled to be launched around Summer 2017, followed by commissioning in 2020 and service thereafter.
+
+ On 5 September 2014, at the NATO 2014 Wales summit, the Prime Minister David Cameron announced that the second carrier would be brought into service, ending
+years of uncertainty surrounding its future.
+
+ This was confirmed by the November 2015 Government Strategic Defence Review, with both carriers entering service, one being available at any time.
+</item 7>
+
+<item 8>
+Rosyth station, opened in 1917 as Rosyth Halt, serves Fife’s naval dockyard on the Fife Circle Line. British Class 159 trains, converted from Class 158s at
+Rosyth Dockyard, served Waterloo–Exeter express routes. Shaver (founded 1880, Portland) and Marquette (Paducah) are marine freight firms; Merchants (1905–29)
+and Kitsap County (founded 1898) operated
+</item 8>
+
+<item 9>
+HMS Prince of Wales (R09)
+HMS "Prince of Wales" is the second "Queen Elizabeth"-class aircraft carrier under construction for the Royal Navy, with plans for active service from 2020.
+
+ She is the seventh Royal Navy ship to have the name HMS "Prince of Wales".
+
+ Construction of the ship began in 2011 at Rosyth Dockyard and in April 2016, was said to be around 80% structurally complete.
+</item 9>
+
+<item 10>
+HMS Queen Elizabeth March
+"HMS Queen Elizabeth March", composed by WO2 bandmaster John Morrish RM, was the winning composition for the 2012 Royal Marines Band Service March Competition,
+sponsored by the Aircraft Carrier Alliance.
+
+ The march was written for the first of the new generation, of Royal Navy Queen Elizabeth-class aircraft carriers.
+</item 10>
+=== END ITEM id=11a03eaf48b0c5d4 ===
+
+=== ITEM id=193c91156abc7f9c ===
+Gold sentences and facts:
+Sentence 0: Swingin' Down Yonder is the first full-length, 12-inch album recorded by Dean Martin for Capitol Records during three sessions in September and October 1954 and February 1955.
+  Fact 0.0: Swingin' Down Yonder is the first full-length, 12-inch album recorded by Dean Martin for Capitol Records.
+  Fact 0.1: Dean Martin recorded Swingin' Down Yonder during three sessions.
+  Fact 0.2: The sessions for Swingin' Down Yonder took place in September 1954, October 1954 and February 1955.
+Sentence 1:  One of the most popular and enduring American entertainers of the mid-20th century, Martin was nicknamed the "King of Cool" for his seemingly effortless charisma and self-assurance.
+  Fact 1.0: Dean Martin was one of the most popular and enduring American entertainers of the mid-20th century.
+  Fact 1.1: Dean Martin was nicknamed the 'King of Cool'.
+  Fact 1.2: Dean Martin's nickname 'King of Cool' reflected his seemingly effortless charisma.
+  Fact 1.3: Dean Martin's nickname 'King of Cool' reflected his seemingly effortless self-assurance.
+
+Retrieved items:
+<item 1>
+Jack Johnson (album)
+Jack Johnson, later reissued as A Tribute to Jack Johnson, is a 1971 studio album and soundtrack by American jazz trumpeter, composer, and bandleader Miles
+Davis.
+
+ In 1970, Davis was asked by Bill Cayton to record music for his documentary of the same name on the life of boxer Jack Johnson.
+
+ Johnson's saga resonated personally with Davis, who wrote in the album's liner notes of Johnson's mastery as a boxer, his affinity for fast cars, jazz,
+clothes, and beautiful women, his unreconstructed blackness, and his threatening image to white men.
+
+ This was the second film score he had composed, after "Ascenseur pour l'échafaud" in 1957.
+</item 1>
+
+<item 2>
+Bigtop Records
+Bigtop Records was an American record label started by music executive Johnny Bienstock and the major music publisher Hill & Range Music and was co-owned along
+with Big Top Record Distributors (sic).
+
+ Hit artists included Del Shannon, Johnny and the Hurricanes, Lou Johnson, Sammy Turner, Don and Juan, and Toni Fisher.
+
+ Big Top Record Distributors also distributed Paul Case's Dunes Records label in the early 60's, which had hits from Ray Peterson ("Corrina, Corrina") and
+Curtis Lee ("Pretty Little Angel Eyes"), both records produced by Phil Spector.
+
+ Bell Records briefly distributed Bigtop prior to the label closing, around 1965.
+
+ "Bigtop" also released two Mad Magazine music parody themed albums; "Mad Twists Rock 'N' Roll" and "Fink Along With Mad" in 1963.
+</item 2>
+
+<item 3>
+Basie Jazz
+Basie Jazz is an album by pianist/bandleader Count Basie recorded in 1952 and released on the Clef label in 1954.
+
+ Selections from this album were also released on the 1956 Clef LPs "The Swinging Count!
+
+" and "Basie Rides Again!
+
+".
+</item 3>
+
+<item 4>
+One O'Clock Jump
+"One O'Clock Jump" is a jazz standard, a 12-bar blues instrumental, written by Count Basie in 1937.
+
+ The melody derived from band members' riffs--Basie rarely wrote down musical ideas, so Eddie Durham and Buster Smith helped him crystallize his ideas.
+
+ The original 1937 recording of the tune by Basie and his band is noted for the saxophone work of Herschel Evans and Lester Young, trumpet by Buck Clayton,
+Walter Page on bass and Basie himself on piano.
+</item 4>
+
+<item 5>
+Swingin' Down Yonder
+Swingin' Down Yonder is the first full-length, 12-inch album recorded by Dean Martin for Capitol Records during three sessions in September and October 1954 and
+February 1955.
+
+ According to the original sleeve notes, all the songs have a "common geographical root: the American South."
+
+ In 1963, Capitol Records re-released "Swingin' Down Yonder" under the titled "Southern Style".
+</item 5>
+
+<item 6>
+Cecil Gant
+Cecil Gant (April 4, 1913 – February 4, 1951) was an American blues singer, songwriter and pianist, whose recordings of both ballads and "fiery piano rockers"
+were successful in the mid- and late 1940s, and influenced the early development of rock and roll.
+
+ His biggest hit was the 1944 ballad, "I Wonder".
+</item 6>
+
+<item 7>
+Collins &amp; Harlan
+Collins & Harlan, the team of Arthur Collins and Byron G. Harlan formed a popular comic duet between 1903 and 1926.
+
+ They sang ragtime standards as well as what were known as "Coon songs" – music sung by white performers in a black dialect.
+
+ Their material also employed many other stereotypes of the time including Irishmen and farmers.
+
+ Fellow recording artist Billy Murray nicknamed them "The Half-Ton Duo" as both men were rather overweight.
+
+ Collins and Harlan produced many number one hits with recordings of minstrel songs such as "My Gal Irene", "I Know Dat I'll be Happy Til I Die", "Who Do You
+Love?"
+
+ and "Down Among the Sugarcane".
+
+ Their song "That Funny Jas Band from Dixieland", recorded November 8, 1916, is among the first recorded uses of the word "jas" which eventually evolved to
+"jass", and to the current spelling "jazz".
+</item 7>
+
+<item 8>
+Willie and the Hand Jive
+"Willie and the Hand Jive" is a song written by Johnny Otis and originally released as a single in 1958 by Johnny Otis Show, reaching #9 on the "Billboard" Hot
+100 chart and #5 on the Billboard R&B chart.
+
+ The song has a Bo Diddley beat and was partly inspired by the music sung by a chain gang Otis heard while he was touring.
+
+ The lyrics are about a man who became famous for doing a dance with his hands, but the song has been accused of glorifying masturbation.
+
+ It has since been covered by numerous artists, including The Strangeloves, Eric Clapton, Cliff Richard, Kim Carnes, George Thorogood and The Grateful Dead.
+
+ Clapton's 1974 version was also released as a single and also reached the Billboard Top 40, peaking at #26.
+
+ Thorogood's 1985 version reached #25 on the Hot Mainstream Rock Tracks chart.
+</item 8>
+
+<item 9>
+The entries cover diverse music milestones: Marc Ribot’s 2005 Albert Ayler tribute, *Spiritual Unity*; comic duo Collins & Harlan, whose 1916 recording helped
+introduce “jas,” precursor to “jazz”; and reggae singer Cedric Myton, a Royal Rasses and Congos member whose voice features on *Humanity* and *Heart of the
+Congos*. They also describe early Dean Martin, Chico Hamilton, Shelly Manne, and Maynard
+</item 9>
+
+<item 10>
+The entries cover songs and recordings spanning R&B, rock, pop, and folk. Highlights include Johnny Otis’s 1958 “Willie and the Hand Jive” (US #9), later
+covered by Eric Clapton (#26) and George Thorogood; Van Halen’s “Finish What Ya Started,” co-written overnight by Eddie Van Halen and Sammy Hagar; and Johnny
+Otis’s “Every Beat of My Heart,” later a major hit for the Pips.
+</item 10>
+=== END ITEM id=193c91156abc7f9c ===
+
+=== ITEM id=39a423c8a50863f4 ===
+Gold sentences and facts:
+Sentence 0:  Formed by Corgan and guitarist James Iha in Chicago, Illinois, in 1988, the band quickly gained steam with the addition of bassist D'arcy Wretzky and drummer Jimmy Chamberlin.
+  Fact 0.0: The band was formed by Corgan and guitarist James Iha.
+  Fact 0.1: The band was formed in Chicago, Illinois, in 1988.
+  Fact 0.2: The band quickly gained steam with the addition of bassist D'arcy Wretzky.
+  Fact 0.3: The band quickly gained steam with the addition of drummer Jimmy Chamberlin.
+Sentence 1: Greek Fire is an American rock band from St. Louis, Missouri.
+  Fact 1.0: Greek Fire is an American rock band.
+  Fact 1.1: Greek Fire is from St. Louis, Missouri.
+
+Retrieved items:
+<item 1>
+1979 (song)
+"1979" is a song by American alternative rock band the Smashing Pumpkins.
+
+ Released in 1996 as the second single from their third studio album, "Mellon Collie and the Infinite Sadness", "1979" was written by frontman Billy Corgan, and
+features loops and samples that were uncharacteristic of previous Smashing Pumpkins songs.
+
+ The song was written as a coming of age story by Corgan.
+
+ In the year 1979, Corgan was 12 and this is what he considered his transition into adolescence.
+
+ The song was popular with critics and fans; Allmusic's Amy Hanson called it a "somewhat surprising hit".
+
+ The song was nominated for the Record of the Year and Best Rock Performance by a Duo or Group with Vocal at the 39th Annual Grammy Awards, and won an MTV Video
+Music Award for Best Alternative Video.
+
+ In 2012, it was voted the second-best Smashing Pumpkins song by Rolling Stone magazine readers.
+</item 1>
+
+<item 2>
+Jimmy Chamberlin
+James Joseph Chamberlin (born June 10, 1964) is an American drummer and record producer.
+
+ He is best known as the drummer for the alternative rock band The Smashing Pumpkins.
+
+ Following the 2000 breakup of the band, Chamberlin joined Pumpkins frontman Billy Corgan in the supergroup Zwan and also formed his own group, the Jimmy
+Chamberlin Complex.
+
+ In 2005, Chamberlin joined Corgan in reforming The Smashing Pumpkins; he eventually left the group in March 2009, though he returned again in 2015 for a summer
+tour.
+
+ He performed in the group Skysaw until 2012.
+
+ He is currently active under the Jimmy Chamberlin Complex name.
+
+ In addition to his current work as CEO, Chamberlin has joined Chicago jazz saxophonist Frank Catalano for a string of 2013–15 performances in the Chicago area.
+
+ An EP by Catalano and Chamberlin "Love Supreme Collective - EP" was released on the 29th of July 2014.
+</item 2>
+
+<item 3>
+Pinhead Gunpowder
+Pinhead Gunpowder is an American punk rock band that formed in East Bay, California, in 1990.
+
+ The band currently consists of Aaron Cometbus (drums, lyrics), Bill Schneider (bass), Billie Joe Armstrong (guitar, vocals) and Jason White (guitar, vocals).
+
+ The band's name comes from a brand of "high octane" green tea served at the Arcata co-op and discovered by Aaron Cometbus during one of his many dumpster
+diving adventures.
+</item 3>
+
+<item 4>
+Muzzle (song)
+"Muzzle" is a song by American alternative rock band The Smashing Pumpkins from their third album, "Mellon Collie and the Infinite Sadness".
+
+ It was one of the last songs written by Billy Corgan for "Mellon Collie", with the song's lyrics referring to what Corgan thought the public's perception was
+of him at the time.
+
+ It was rumored to be the Smashing Pumpkins fifth and final single from this album, as is evidenced by the fact that a promotional single for the song was
+issued to radio stations worldwide.
+
+ However, the song "Thirty-Three" was released as the fifth and final single instead.
+</item 4>
+
+<item 5>
+List of the Smashing Pumpkins band members
+The Smashing Pumpkins are an alternative rock band formed in Chicago, Illinois in 1988.
+
+ The band was formed by guitarist/vocalist Billy Corgan and guitarist James Iha after the demise of Corgan's first band, The Marked.
+
+ Since its inception, The Smashing Pumpkins has gone through multiple line-up changes, with Corgan the only consistent member.
+</item 5>
+
+<item 6>
+Billy Corgan
+William Patrick "Billy" Corgan Jr. (born March 17, 1967) is an American musician, songwriter, producer, poet, and entrepreneur.
+
+ He is best known as the lead singer, primary songwriter, guitarist, and sole permanent member of The Smashing Pumpkins.
+
+ Formed by Corgan and guitarist James Iha in Chicago, Illinois, in 1988, the band quickly gained steam with the addition of bassist D'arcy Wretzky and drummer
+Jimmy Chamberlin.
+
+ Strong album sales and large-scale tours propelled the band's increasing fame in the 1990s until their break-up in 2000.
+
+ Corgan started a new band called Zwan, and after their quick demise, he released a solo album ("TheFutureEmbrace") and a collection of poetry ("Blinking with
+Fists") before setting his sights on reforming Smashing Pumpkins.
+</item 6>
+
+<item 7>
+Greek Fire (band)
+Greek Fire is an American rock band from St. Louis, Missouri.
+
+ The band was formed in 2008 by members of Story of the Year and Maybe Today.
+
+ Since formation, Greek Fire has released a self-titled EP, a single titled "Doesn't Matter Anyway", on August 16, 2011, they released their debut, full-length
+album, "Deus Ex Machina", and have recently announced a new addition to the "Lost/Found" EPs titled "Broken" set to be released before "Found".
+</item 7>
+
+<item 8>
+Zeitgeist (The Smashing Pumpkins album)
+Zeitgeist is the seventh album by American alternative rock band The Smashing Pumpkins, released on July 10, 2007 in the United States and Canada.
+
+ It was the first album The Smashing Pumpkins released after their 2000 disbandment and 2005 reunion.
+
+ The album was produced by Roy Thomas Baker, Billy Corgan, Jimmy Chamberlin, and Terry Date.
+
+ The album would be Chamberlin's last with the band before his departure in 2009.
+
+ The album debuted strongly, but sales soon decreased, and critical reception was mixed.
+
+ It was certified Gold in the United States on February 1, 2008.
+</item 8>
+
+<item 9>
+The Aeroplane Flies High
+The Aeroplane Flies High is a five-disc box set released by American alternative rock band The Smashing Pumpkins in 1996.
+
+ It contains expanded versions of the five singles from their album "Mellon Collie and the Infinite Sadness" and also included a 44-page booklet with pictures
+and writings by the band's lead singer Billy Corgan, as well as lyrics.
+
+ A limited edition release, the box reached number 42 on the "Billboard" charts, and sold 300,000 units (1.5 million discs in all), generating a platinum disc
+for the band.
+
+ Originally intended to be limited to 200,000 copies, Virgin Records produced more after the original run sold out due to overwhelming and unexpected demand.
+
+ The album was remastered in 2013 under the supervision of frontman Billy Corgan and reissued on vinyl and as a CD/DVD box set.
+</item 9>
+
+<item 10>
+Mike Byrne (musician)
+Michael William Byrne (born February 6, 1990) is a drummer who was a member of the band The Smashing Pumpkins.
+
+ When Pumpkins frontman Billy Corgan called for rehearsals to replace Jimmy Chamberlin, Byrne auditioned and was chosen out of thousands of applicants.
+
+ He played drums in Sky Saxon tribute band Spirits in the Sky for 6 shows in August 2009, along with Corgan, Kerry Brown, Kevin Dippold, Mark Tulin, Linda
+Strawberry, Ysanne Spevack, Mark Weitz, and Dave Navarro, and also performs drums on the ongoing Pumpkins 44-song project, "Teargarden by Kaleidyscope".
+
+ As a part of "Teargarden", Mike contributed drumming duties on "Oceania", the Pumpkins' eighth full-length album.
+
+ On April 17, 2010, Byrne played his first show under the Smashing Pumpkins moniker in celebration of Record Store Day.
+</item 10>
+=== END ITEM id=39a423c8a50863f4 ===
+
+=== ITEM id=93ea7d8a139e6724 ===
+Gold sentences and facts:
+Sentence 0:  The 381-ton vessel was armed with a 12-pounder 12cwt QF gun, a 20mm Oerlikon cannon, a .303-inch Vickers machine gun, and four Type D depth charges, and was commissioned into the RAN on 11 June 1941.
+  Fact 0.0: The vessel weighed 381 tons.
+  Fact 0.1: The vessel was armed with a 12-pounder 12cwt QF gun.
+  Fact 0.2: The vessel was armed with a 20mm Oerlikon cannon.
+  Fact 0.3: The vessel was armed with a .303-inch Vickers machine gun.
+  Fact 0.4: The vessel was armed with four Type D depth charges.
+  Fact 0.5: The vessel was commissioned into the RAN on 11 June 1941.
+Sentence 1:  It was in service from before the First World War until the 1960s, with air-cooled versions of it on many Allied World War I fighter aircraft.
+  Fact 1.0: This item was in service from before the First World War until the 1960s.
+  Fact 1.1: Air-cooled versions of this item were on many Allied World War I fighter aircraft.
+
+Retrieved items:
+<item 1>
+HMS Illustrious (87)
+HMS "Illustrious" was the lead ship of her class of aircraft carriers built for the Royal Navy before World War II.
+
+ Her first assignment after completion and working up was with the Mediterranean Fleet, in which her aircraft's most notable achievement was sinking one Italian
+battleship and badly damaging two others during the Battle of Taranto in late 1940.
+
+ Two months later the carrier was crippled by German dive bombers and was repaired in the United States.
+
+ After sustaining damage on the voyage home in late 1941 by a collision with her sister ship "Formidable" , "Illustrious" was sent to the Indian Ocean in early
+1942 to support the invasion of Vichy French Madagascar (Operation Ironclad).
+
+ After returning home in early 1943, the ship was given a lengthy refit and briefly assigned to the Home Fleet.
+
+ She was transferred to Force H for the Battle of Salerno in mid-1943 and then rejoined the Eastern Fleet in the Indian Ocean at the beginning of 1944.
+</item 1>
+
+<item 2>
+Vickers machine gun
+The Vickers machine gun or Vickers gun is a name primarily used to refer to the water-cooled .303 British (7.7 mm) machine gun produced by Vickers Limited,
+originally for the British Army.
+
+ The machine gun typically required a six to eight-man team to operate: one fired, one fed the ammunition, the rest helped to carry the weapon, its ammunition,
+and spare parts.
+
+ It was in service from before the First World War until the 1960s, with air-cooled versions of it on many Allied World War I fighter aircraft.
+</item 2>
+
+<item 3>
+Pershing II
+The Pershing II Weapon System was a solid-fueled two-stage ballistic missile designed and built by Martin Marietta to replace the Pershing 1a Field Artillery
+Missile System as the United States Army's primary nuclear-capable theater-level weapon.
+
+ The U.S. Army replaced the Pershing 1a with the Pershing II Weapon System in 1983 while the German Air Force retained Pershing 1a until all Pershings were
+eliminated in 1991.
+
+ The U.S. Army Missile Command (MICOM) managed the development and improvements while the Field Artillery Branch deployed the systems and developed tactical
+doctrine.
+</item 3>
+
+<item 4>
+HMAS Narani
+HMAS "Narani" was an auxiliary minesweeper operated by the Royal Australian Navy (RAN) during World War II.
+
+ "Narani" was requisitioned from the Illawarra & South Coast Steam Navigation Company as auxiliaries.
+
+ The 381-ton vessel was armed with a 12-pounder 12cwt QF gun, a 20mm Oerlikon cannon, a .303-inch Vickers machine gun, and four Type D depth charges, and was
+commissioned into the RAN on 11 June 1941.
+</item 4>
+
+<item 5>
+SWARM
+The SWARM Remote Weapon System (Stabilised Weapon And Reconnaissance Mount) is a fully armored remote weapon system designed and built by the Thales Group in
+Glasgow, Scotland.
+
+ The SWARM system consists of two main assemblies: the Gun Processing and Interface Unit (GPIU), which is operated inside the vehicle, and the external Weapon
+and Sensor Platform (WASP).
+
+ It can fire a variety of weapons, and utilize multiple sensors.
+
+ On the US Marine Corps' Gladiator Tactical Unmanned Ground Vehicle (TUGV), it is equipped with a 7.62 mm M240 and day/night sensors.
+</item 5>
+
+<item 6>
+AK-630
+The AK-630 is a Soviet and Russian fully automatic naval close-in weapon system based on a six-barreled 30 mm rotary cannon.
+
+ In "630", "6" means 6 barrels and "30" means 30 mm.
+
+ It is mounted in an enclosed automatic turret and directed by radar and television detection and tracking.
+
+ The system's primary purpose is defense against anti-ship missiles and other precision guided weapons.
+
+ However it can also be employed against fixed or rotary wing aircraft, ships and other small craft, coastal targets, and floating mines.
+
+ Once operational, this weapon system was rapidly adopted, with up to 8 units installed in every new Soviet warship (from mine-hunters to aircraft carriers),
+and hundreds produced in total.
+</item 6>
+
+<item 7>
+HMS Illustrious (87)
+Her aircraft attacked several targets in the Japanese-occupied Dutch East Indies over the following year before "Illustrious" was transferred to the newly
+formed British Pacific Fleet (BPF).
+
+ The carrier participated in the early stages of the Battle of Okinawa until mechanical defects arising from accumulated battle damage became so severe that she
+was ordered home early for repairs in May 1945.
+</item 7>
+
+<item 8>
+Weapon system
+Weapon System is a United States military term that designated, along with a weapon system number (e.g., WS-110), military experimental (MX) weapons prior to
+official naming (e.g., under a military aircraft designation system.
+
+ Preceded by the first Skunk Works program (MX-813 for the Convair XF-92 in 1946), the earliest "WS" designation was the 1954 WS-117L.
+
+ Circa February 1950, an Air Research and Development Command ""study prepared by Maj Gen Gordon P. Saville ... recommended that a 'systems approach' to new
+weapons be adopted "[whereby]" development of a weapon "system" required development of support equipment as well as the actual hardware itself.""
+</item 8>
+
+<item 9>
+List of sunken aircraft carriers
+With the advent of heavier-than-air flight, the aircraft carrier has become a decisive weapon at sea.
+
+ In 1911 aircraft began to be successfully launched and landed on ships with the successful flight of a Curtiss Pusher aboard the USS "Pennsylvania".
+
+ The British Royal Navy pioneered the first aircraft carrier as floatplanes, as flying boats under performed compared to traditional land based aircraft.
+
+ The first true aircraft carrier was the HMS "Argus" , launched in late 1917 with a complement of 20 aircraft, a flight deck of 550 ft and 68 ft wide.
+
+ The last aircraft carrier sunk in wartime was the Japanese carrier "Amagi", in Kure Harbour in July 1945.
+
+ The greatest loss of life was the 2,046 killed on the "Akitsu Maru"—a converted passenger liner with a small flight deck, carrying the Imperial Japanese Army's
+64th Infantry Regiment.
+</item 9>
+
+<item 10>
+HMS Diomede (D92)
+HMS "Diomede" was a "Danae"-class cruiser of the Royal Navy.
+
+ Constructed at Vickers Armstrong, Barrow, she was constructed too late to take part in World War I and was consequently completed at the Royal Dockyard,
+Portsmouth.
+
+ Between the wars, she served on the China Station, Pacific waters, East Indies Waters and from 1936 onwards, in reserve.
+
+ In World War II she performed four years of arduous war duty, during which time she captured the German blockade runner "Idarwald" .
+
+ Between 22 July 1942 and 24 September 1943 she was converted to a training ship at Rosyth Dockyard.
+
+ In 1945 she was placed in reserve and scrapped a year later.
+</item 10>
+=== END ITEM id=93ea7d8a139e6724 ===
+
+=== ITEM id=4cc9dec27e6d56f2 ===
+Gold sentences and facts:
+Sentence 0: Wenling (Wenling dialect: Uen-lin Zy ] ; ) is a coastal county-level city in the municipal region of Taizhou, in southeastern Zhejiang province, China.
+  Fact 0.0: Wenling is a coastal county-level city.
+  Fact 0.1: Wenling is in the municipal region of Taizhou.
+  Fact 0.2: Taizhou is in southeastern Zhejiang province.
+  Fact 0.3: Wenling is in China.
+  Fact 0.4: In the Wenling dialect, Wenling is called Uen-lin Zy.
+Sentence 1: Ruili (; Burmese: ရွှေလီ ; Thai: เมืองมาว ) is a county-level city of Dehong Prefecture, in the west of Yunnan province, People's Republic of China.
+  Fact 1.0: Ruili is a county-level city of Dehong Prefecture.
+  Fact 1.1: Ruili is in the west of Yunnan province.
+  Fact 1.2: Yunnan province is in the People's Republic of China.
+  Fact 1.3: Ruili's Burmese name is ရွှေလီ.
+  Fact 1.4: Ruili's Thai name is เมืองมาว.
+
+Retrieved items:
+<item 1>
+Dali–Ruili Railway
+The Dali–Ruili Railway or Darui Railway (), is a single-track electrified railroad under construction in Yunnan Province of Southwest China.
+
+ The line is slated to run 336.39 km from Dali in central Yunnan to Ruili in southwestern Yunnan on the border with Myanmar.
+
+ The line traverses rugged terrain, and bridges and tunnels will account for 75% of the total track length, including a 36-km tunnel through the Gaoligong
+Mountains.
+
+ Construction began in May 2011 and is scheduled to take six years.
+
+ Cities and towns along route include Dali, Yangbi Yi Autonomous County, Yongping County, Baoshan, Mang City (also known as Mangshi or Dehong) and Ruili.
+</item 1>
+
+<item 2>
+Wanding Border Economic Cooperation Zone
+Wanding Border Economic Cooperation Zone (WTBECZ) is a Chinese State Council-approved Industrial Park based in Wanding Town, Ruili City, Dehong Prefecture,
+Yunnan, China, founded in 1992 and was established to promote trade between China and Myanmar.
+
+ The zone spans 6 km sq. and is focuses on developing trading, processing, agriculture resources and tourism.
+</item 2>
+
+<item 3>
+Dongtai
+Dongtai () is a coastal county-level city under the administration of Yancheng, Jiangsu province, China.
+
+ It has a population of roughly 1,170,000 estimated for 2007.
+
+ Out of the total population, about 260,000 live in the Dongtai urban core, others are distributed in the 23 suburban towns and rural regions (Some famous towns
+include Touzao, Anfeng, Qingdong, Sancang, Qianggang, Fu'an, Tangyang, etc.).
+
+ With some Yellow Sea coast, it borders the prefecture-level cities of Nantong to the south and Taizhou to the west, and is the southernmost county-level
+division of Yancheng.
+</item 3>
+
+<item 4>
+Ruili Border Economic Cooperation Zone
+Ruili Border Economic Cooperation Zone (RLBECZ) is a Chinese State Council-approved Industrial Park based in Ruili City, Dehong Prefecture, Yunnan, China,
+founded in 1992 and was established to promote trade between China and Myanmar.
+
+ The zone connects Ruili with Man-wing City.
+</item 4>
+
+<item 5>
+Wenling
+Wenling (Wenling dialect: Uen-lin Zy ] ; ) is a coastal county-level city in the municipal region of Taizhou, in southeastern Zhejiang province, China.
+
+ It borders Luqiao and Huangyan to the north, Yuhuan to the south, Yueqing to the west, looks out to the East China Sea to the east.
+
+ Wenling locates on 28°22'N, 121°21'E, approximately 300 km south of Shanghai.
+</item 5>
+
+<item 6>
+Ruili
+Ruili (; Burmese: ရွှေလီ ; Thai: เมืองมาว ) is a county-level city of Dehong Prefecture, in the west of Yunnan province, People's Republic of China.
+
+ It is a major border crossing between China and Myanmar, with the town of Muse located across the border.
+</item 6>
+
+<item 7>
+Dafeng District
+Dafeng () is a coastal district under the administration of Yancheng, Jiangsu province, China.
+
+ Located on the Jiangsu North Plain with a coastline of 112 km , Dafeng was historically one of the largest salt-making areas in China and now is famed for its
+well preserved eco-system and numerous national conservation parks.
+
+ The district has the largest national nature reserve for a rare deer species, Père David's Deer or Milu (麋鹿 ) in Chinese.
+
+ It borders the prefecture-level city of Taizhou to the southwest.
+</item 7>
+
+<item 8>
+Xingcheng
+Xingcheng (), former name Ningyuan (宁远), is a county-level city of southwest Liaoning province, China, with a population of approximately 140,000 urban
+inhabitants, and is located on the Liaodong Bay, i.e. the northern coast of the Bohai Sea.
+
+ Currently under the administration of Huludao City, the area is steeped in history, and contains one of the best preserved Ming Dynasty towns in China, as well
+as functioning as a laidback summer resort.
+</item 8>
+
+<item 9>
+G56 Hangzhou–Ruili Expressway
+The Hangzhou–Ruili Expressway (), commonly referred to as the "Hangrui Expressway" () is an expressway in China that connects the cities of Hangzhou, Zhejiang,
+and Ruili, Yunnan, a city on the border with Burma.
+
+ When complete, it will be 2935 km in length.
+</item 9>
+
+<item 10>
+Yandang Mountains
+Yandang Mountains or Yandangshan (Chinese:  雁蕩山 ,  雁荡山 ,  "Yàndàng Shān",  "Wild Goose Pond Mountain(s)") refers, in the broad sense, to a coastal mountain
+range in southeastern Zhejiang province in eastern China, covering much of the prefecture-level city of Wenzhou (from Pingyang County in the south to Yueqing
+County in the northeast) and extending to the county-level city of Wenling in Taizhou prefecture.
+
+ The mountain range is divided in two by the Oujiang River, the two parts being the North Yandang and South Yandang.
+
+ More narrowly, Yandangshan is also used more narrowly to refer to Mount Yandang , a specific part of the North Yandang around an ancient caldera near a small
+town of the same name (雁荡镇 , "Yàndàng Zhèn").
+
+ The highest peaks of North Yandang are located here, and this is also the main tourist spot.
+</item 10>
+=== END ITEM id=4cc9dec27e6d56f2 ===
+
+=== ITEM id=7c95c324154d3b5b ===
+Gold sentences and facts:
+Sentence 0: Pietro Alessandro Gaspare Scarlatti (2 May 1660 – 22 October 1725) was an Italian Baroque composer, especially famous for his operas and chamber cantatas.
+  Fact 0.0: Pietro Alessandro Gaspare Scarlatti was born on 2 May 1660.
+  Fact 0.1: Pietro Alessandro Gaspare Scarlatti died on 22 October 1725.
+  Fact 0.2: Pietro Alessandro Gaspare Scarlatti was an Italian Baroque composer.
+  Fact 0.3: Pietro Alessandro Gaspare Scarlatti was especially famous for his operas.
+  Fact 0.4: Pietro Alessandro Gaspare Scarlatti was especially famous for his chamber cantatas.
+Sentence 1: Pyotr Ilyich Tchaikovsky ( ; Russian: Пётр Ильи́ч Чайко́вский ; 25 April/7 May 1840 – 25 October/6 November 1893), often anglicized as Peter Ilich Tchaikovsky, was a Russian composer of the romantic period, some of whose works are among the most popular music in the classical repertoire.
+  Fact 1.0: The Russian name of Pyotr Ilyich Tchaikovsky is Пётр Ильи́ч Чайко́вский.
+  Fact 1.1: Pyotr Ilyich Tchaikovsky was born on 25 April/7 May 1840.
+  Fact 1.2: Pyotr Ilyich Tchaikovsky died on 25 October/6 November 1893.
+  Fact 1.3: Pyotr Ilyich Tchaikovsky is often anglicized as Peter Ilich Tchaikovsky.
+  Fact 1.4: Pyotr Ilyich Tchaikovsky was a Russian composer of the romantic period.
+  Fact 1.5: Some works by Pyotr Ilyich Tchaikovsky are among the most popular music in the classical repertoire.
+Sentence 2:  He was the first Russian composer whose music made a lasting impression internationally, bolstered by his appearances as a guest conductor in Europe and the United States.
+  Fact 2.0: Tchaikovsky was the first Russian composer whose music made a lasting impression internationally.
+  Fact 2.1: The international impression of Tchaikovsky's music was bolstered by his appearances as a guest conductor.
+  Fact 2.2: Tchaikovsky appeared as a guest conductor in Europe.
+  Fact 2.3: Tchaikovsky appeared as a guest conductor in the United States.
+
+Retrieved items:
+<item 1>
+International Tchaikovsky Competition
+The International Tchaikovsky Competition is a classical-music competition held every four years in Moscow, Russia, for pianists, violinists, and cellists
+between 16 and 32 years of age, and singers between 19 and 32 years of age.
+
+ The competition is named after Russian composer Pyotr Ilyich Tchaikovsky and is an active member of the World Federation of International Music Competitions.
+</item 1>
+
+<item 2>
+Kamarinskaya
+Kamarinskaya (Russian: камаринская ) is a Russian traditional folk dance, which is mostly known today as the Russian composer Mikhail Glinka's composition of
+the same name.
+
+ Glinka's "Kamarinskaya", written in 1848, was the first orchestral work based entirely on Russian folk song and to use the compositional principles of that
+genre to dictate the form of the music.
+
+ It became a touchstone for the following generation of Russian composers ranging from the Western-oriented Pyotr Ilyich Tchaikovsky to the group of
+nationalists known collectively as The Five and was also lauded abroad, most notably by French composer Hector Berlioz.
+</item 2>
+
+<item 3>
+Piano Sonata in C-sharp minor (Tchaikovsky)
+The Piano Sonata in C-sharp minor, Op.
+
+ posth.
+
+ 80, was written by Russian composer Pyotr Ilyich Tchaikovsky in 1865, his last year as a student at the St Petersburg Conservatory.
+
+ The sonata in its original form was not published in Tchaikovsky's lifetime; it was published in 1900 by P. Jurgenson, and given the posthumous opus number 80.
+</item 3>
+
+<item 4>
+Piano Concerto No. 2 (Tchaikovsky)
+Pyotr Ilyich Tchaikovsky's Piano Concerto No. 2 in G major, Op.
+
+ 44, was written in 1879–1880.
+
+ It was dedicated to Nikolai Rubinstein, who had insisted he be allowed to perform it at the premiere as a way of making up for his harsh criticism of
+Tchaikovsky's First Piano Concerto.
+
+ Rubinstein was destined never to play it, however, as he died in March 1881.
+
+ The premiere performance took place in New York City, on 12 November 1881.
+
+ The soloist was Madeline Schiller, and Theodore Thomas conducted the New York Philharmonic orchestra.
+
+ The first Russian performance was in Moscow in May 1882, conducted by Anton Rubinstein with Tchaikovsky's pupil, Sergei Taneyev, at the piano.
+</item 4>
+
+<item 5>
+Alessandro Scarlatti
+Pietro Alessandro Gaspare Scarlatti (2 May 1660 – 22 October 1725) was an Italian Baroque composer, especially famous for his operas and chamber cantatas.
+
+ He is considered the founder of the Neapolitan school of opera.
+
+ He was the father of two other composers, Domenico Scarlatti and Pietro Filippo Scarlatti.
+</item 5>
+
+<item 6>
+Pyotr Ilyich Tchaikovsky
+Pyotr Ilyich Tchaikovsky ( ; Russian: Пётр Ильи́ч Чайко́вский ; 25 April/7 May 1840 – 25 October/6 November 1893), often anglicized as Peter Ilich Tchaikovsky,
+was a Russian composer of the romantic period, some of whose works are among the most popular music in the classical repertoire.
+
+ He was the first Russian composer whose music made a lasting impression internationally, bolstered by his appearances as a guest conductor in Europe and the
+United States.
+
+ Tchaikovsky was honored in 1884, by Emperor Alexander III, and awarded a lifetime pension.
+</item 6>
+
+<item 7>
+Chaikovskij (crater)
+Chaikovskij (sometimes Tchaikovsky) is a crater on Mercury.
+
+ It has a diameter of 165 kilometers.
+
+ Its name was adopted by the International Astronomical Union in 1976.
+
+ Chaikovskij is named for the Russian composer Pyotr Ilyich Tchaikovsky, who lived from 1840 to 1893.
+</item 7>
+
+<item 8>
+Tchaikovsky (film)
+Tchaikovsky (Russian: Чайковский ) is a 1970 Soviet biopic film directed by Igor Talankin.
+
+ It featured Innokenty Smoktunovsky in the role of the famous Russian composer Pyotr Ilyich Tchaikovsky.
+
+ It was nominated for the 1971 Academy Award for Best Foreign Language Film as well as the Academy Award for Original Song Score and Adaptation.
+</item 8>
+
+<item 9>
+Tchaikovsky’s Piano Concerto No. 2 (1879–80), dedicated to Nikolai Rubinstein, premiered in New York in 1881 with Madeline Schiller; Rubinstein died before
+performing it. Tchaikovsky was an internationally celebrated Russian Romantic composer. Glinka’s 1848 “Kamarinskaya” pioneered orchestral writing based on
+Russian folk music. Tchaikovsky’s student-era C-sharp-minor Sonata appeared posthumously. Swan
+</item 9>
+
+<item 10>
+Aleksandr Ivanovsky
+Aleksandr Ivanovsky (1881–1968) was a Russian screenwriter and film director who worked during the Soviet era.
+
+ Ivanovsky was awarded the Stalin Prize in 1941, for his work on the 1940 film "Musical Story".
+
+ His 1944 operetta film "Silva" was one of the most popular releases in the Soviet Union that year.
+</item 10>
+=== END ITEM id=7c95c324154d3b5b ===
+
+=== ITEM id=e9b640655c91bd31 ===
+Gold sentences and facts:
+Sentence 0: Mediastan is a 2013 documentary film about the 2010 United States diplomatic cables leak, directed by Johannes Wahlström and produced by Julian Assange, Rebecca O'Brien and Lauren Dark.
+  Fact 0.0: Mediastan is a documentary film.
+  Fact 0.1: Mediastan was released in 2013.
+  Fact 0.2: Mediastan is about the 2010 United States diplomatic cables leak.
+  Fact 0.3: Mediastan was directed by Johannes Wahlström.
+  Fact 0.4: Mediastan was produced by Julian Assange.
+  Fact 0.5: Mediastan was produced by Rebecca O'Brien.
+  Fact 0.6: Mediastan was produced by Lauren Dark.
+Sentence 1: Julian Paul Assange ( ; born Julian Paul Hawkins, 3 July 1971) is an Australian computer programmer and the founder of WikiLeaks, an organisation which he founded in 2006.
+  Fact 1.0: Julian Paul Assange was born Julian Paul Hawkins.
+  Fact 1.1: Julian Paul Assange was born on 3 July 1971.
+  Fact 1.2: Julian Paul Assange is Australian.
+  Fact 1.3: Julian Paul Assange is a computer programmer.
+  Fact 1.4: Julian Paul Assange is the founder of WikiLeaks.
+  Fact 1.5: WikiLeaks is an organisation.
+  Fact 1.6: Julian Paul Assange founded WikiLeaks in 2006.
+
+Retrieved items:
+<item 1>
+Low Transit Industries
+Low Transit Industries was an independent record label founded in Melbourne, Australia in 1999 by Darren Smallman (BATTLE WORLDWIDE) and Simon Baird.
+
+ The label toured and released bands across the world until 2010 when the partners closed operations due to Darren Smallman moving to the UK where he now runs
+BATTLE WORLDWIDE which is a record label, book publisher, music publisher and PR services company.
+</item 1>
+
+<item 2>
+Mediastan
+Mediastan is a 2013 documentary film about the 2010 United States diplomatic cables leak, directed by Johannes Wahlström and produced by Julian Assange, Rebecca
+O'Brien and Lauren Dark.
+</item 2>
+
+<item 3>
+Micom Film and TV Productions
+It was a family based company with long tradition in show and entertainment business.
+
+ Micom produced around 30.000 minutes of program for National TV Slovenia and other media.
+
+ In 2002 company stopped producing because of the tragedy in the family.
+
+ Both sons went separate way and build their own Film and TV production house.
+</item 3>
+
+<item 4>
+Shamal Sabri
+Shamal Sabri (Kurdish: شه‌مال سه‌بری), (born 9 November 1985), is an independent Kurdish award-winning film producer and Duhok International Film Festival
+Artistic Director, graduated from Duhok University with BA in English Literature.
+
+.
+
+ He was born in the city of Duhok (Kurdish: دهوك) in Iraqi Kurdistan.
+
+ Apart from being one of the co-founders of Duhok IFF in 2009, he has worked in many other fields of video productions, produced many commercials and music
+videos in NV Production and Vin TV.
+
+ Throughout his film carrier, he has contributed in many award-winning films as an assistant director, production manager, assistant producer and line producer.
+
+ His latest contributions were in many films such as "Before Snowfall" by Hisham Zaman, "The Swallow" by Mano Khalil, "Memories on Stone" by Shawkat Amin Korki
+and Michael by Kurdo Duski.
+</item 4>
+
+<item 5>
+Admir Čavalić
+Admir Čavalić is the Director of Association "Multi", a non-profit organization dedicated to promoting libertarian ideals in Bosnia and Herzegovina.
+
+ "Multi" is the first non-profit organization registered in Bosnia and Herzegovina that advocates libertarian ideas.
+
+ Čavalić is the director of OPEN Fest, biggest libertarian festival in Europe.
+
+ Čavalić also works at Faculty of Economics University of Tuzla, as an assistant teacher.
+
+ Čavalić with Dženan Smajić wrote "Islam and Free Market" in 2014.
+
+ The book, that was published in Bosnian, provides arguments for Islam's connection with the ideas of economic liberalism.
+
+ Čavalić made first bosnian documentary about economics, titled "Economy".
+</item 5>
+
+<item 6>
+Music West Records
+Music West Records was an independent record company founded by Allan Kaplan on December 1985 in San Rafael, California.
+
+ The company was initially formed to promote Ray Lynch.
+
+ During its run, artists released under the record company included Jim Chappell, Kenneth Nash, Chris Spheeris, and Øystein Sevåg.
+
+ According to Gary Chappell, the manufacturer for Music West, the artists originated independently, claiming that the company's idea "has a statement that comes
+directly from the
+</item 6>
+
+<item 7>
+Pharma Medica
+Pharma Medica Research Inc. is an American research and development company that works with pharmaceutical companies and performs clinical trials in the
+pharmaceutical and biotechnology industry.
+
+ The company is based in Toronto, Canada with headquarters in Mississauga, Ontario.
+
+ Pharma Medica has locations in Scarborough, Ontario and St. Charles, Missouri.
+</item 7>
+
+<item 8>
+Scott Free Productions
+Scott Free Productions is a British film and television production company founded by filmmakers and brothers Ridley Scott and Tony Scott.
+
+ They formed the feature film development company Percy Main Productions in 1980, naming the company after the English village Percy Main, where their father
+grew up.
+
+ The company was renamed to Scott Free Productions in 1995.
+
+ Scott Free has produced films ranging from the 2000 Hollywood blockbuster "Gladiator" (2000) to "smaller pictures" like "Cracks" (2009).
+
+ Between productions of "White Squall" (1996) and "G.I. Jane" (1997), Ridley Scott reorganized the company.
+</item 8>
+
+<item 9>
+Matthew O'Neill (filmmaker)
+Matthew O'Neill is a documentary filmmaker best known for his work on the HBO film "Baghdad ER", for which he and co-creator Jon Alpert won three Emmy Awards.
+</item 9>
+
+<item 10>
+Micom Film and TV Productions
+MICOM Film and TV Productions was established in 1989 by Sreco Mihelcic in a Former Yugoslavian republic Slovenia.
+
+ In the early 90' company joined two sons, Matjaz Mihelcic - Program director, Producer and Vasja Mihelcic - technical director and Executive Producer.
+
+ MICOM was in 1990s the leading Slovenian creative house, producing TV shows for youth, popular entertainment TV shows and discovered many new TV concepts.
+
+ Micom discovered many talents, different creative people and gave them possibility to express themselves.
+
+ The most popular TV shows were: Lahkih nog naokrog (educational youth TV series), Cari zacimb (entertaining cooking TV series), Razpoke v casu (fantasy TV
+series).
+
+ They also produced documentary movies.
+
+ One of them got in 1996 internationally release - Fight for the river and it's distributed by International Historic Films.
+
+.
+
+ In the beginning of 2000 company joined Marjana Mihelcic.
+
+ It was a family based company with long tradition in show and entertainment business.
+</item 10>
+=== END ITEM id=e9b640655c91bd31 ===
+
+=== ITEM id=b7aacbf9010054a4 ===
+Gold sentences and facts:
+Sentence 0: Brunswick Golden Isles Airport (IATA: BQK, ICAO: KBQK, FAA LID: BQK) , previously known as Glynco Jetport, is a county-owned public-use airport located five nautical miles (9 km) north of the central business district of Brunswick, a city in Glynn County, Georgia, United States.
+  Fact 0.0: Brunswick Golden Isles Airport has IATA code BQK.
+  Fact 0.1: Brunswick Golden Isles Airport has ICAO code KBQK.
+  Fact 0.2: Brunswick Golden Isles Airport has FAA LID BQK.
+  Fact 0.3: Brunswick Golden Isles Airport was previously known as Glynco Jetport.
+  Fact 0.4: Brunswick Golden Isles Airport is a county-owned public-use airport.
+  Fact 0.5: Brunswick Golden Isles Airport is located five nautical miles (9 km) north of the central business district of Brunswick.
+  Fact 0.6: Brunswick is a city in Glynn County, Georgia, United States.
+Sentence 1: Lafayette Regional Airport (IATA: LFT, ICAO: KLFT, FAA LID: LFT) is a public airport two miles (4 km) southeast of Lafayette, in Lafayette Parish, Louisiana, United States.
+  Fact 1.0: Lafayette Regional Airport has IATA code LFT.
+  Fact 1.1: Lafayette Regional Airport has ICAO code KLFT.
+  Fact 1.2: Lafayette Regional Airport has FAA LID LFT.
+  Fact 1.3: Lafayette Regional Airport is a public airport.
+  Fact 1.4: Lafayette Regional Airport is two miles (4 km) southeast of Lafayette.
+  Fact 1.5: Lafayette Regional Airport is in Lafayette Parish, Louisiana, United States.
+
+Retrieved items:
+<item 1>
+Golden Isles of Georgia
+The Golden Isles of Georgia are a group of four barrier islands and the mainland port city of Brunswick on the 100-mile-long coast of the U.S. state of Georgia
+on the Atlantic Ocean.
+
+ They include St. Simons Island, Sea Island, Jekyll Island, Little St. Simons Island, and Historic Brunswick.
+</item 1>
+
+<item 2>
+Brunswick Golden Isles Airport
+Brunswick Golden Isles Airport (IATA: BQK, ICAO: KBQK, FAA LID: BQK) , previously known as Glynco Jetport, is a county-owned public-use airport located five
+nautical miles (9 km) north of the central business district of Brunswick, a city in Glynn County, Georgia, United States.
+
+ It is mostly used for general aviation, but is also served by one commercial airline.
+</item 2>
+
+<item 3>
+Jekyll Island Airport
+Jekyll Island Airport is a small general aviation airport located in Jekyll Island, GA.
+
+ It is around 2 miles away from central Jekyll Island, GA.
+
+ Due to its small runway size and the nearby Brunswick Golden Isles Airport, no commercial airlines fly there, but scenic tours of the island fly from there.
+
+ The airport has 3 based aircraft, and around 74 aircraft operations a day.
+</item 3>
+
+<item 4>
+Colonel's Island Railroad
+In the late 1960s, the State of Georgia started an improvement project for the port at Brunswick, Georgia.
+
+ In this project, the Colonel's Island Railroad (reporting mark CISD) was created as a part of the Georgia Ports Authority.
+
+ The CISD operated 33 miles of track in and around the Brunswick area.
+
+ In 1998, the railroad sold most of its assets and the Golden Isles Terminal Railroad began operating on the line.
+
+ The Ports Authority retained ownership of the track, but the CISD was disbanded.
+</item 4>
+
+<item 5>
+Brunswick Old Town Historic District
+Brunswick Old Town Historic District is a historic district in Brunswick, Georgia.
+
+ It was added to the National Register of Historic Places on April 26, 1979 and includes an area bounded by 1st Street, Bay Street, New Bay Street, H Street,
+and Cochran Street (4th Ave. and G St., according to one source).
+
+ Brunswick is one of Georgia's two deep-water ports and is the mainland city associated with the Golden Isles of Georgia, at the junction of I-95 and US 82.
+</item 5>
+
+<item 6>
+Lafayette Regional Airport
+Lafayette Regional Airport (IATA: LFT, ICAO: KLFT, FAA LID: LFT) is a public airport two miles (4 km) southeast of Lafayette, in Lafayette Parish, Louisiana,
+United States.
+
+ It is independently owned and operated.
+</item 6>
+
+<item 7>
+Atlanta South Regional Airport
+Henry County Airport (FAA LID: KHMP) , is a public-use county airport located three nautical miles (6 km) west of the central business district of Hampton, a
+city in Henry County, Georgia, United States.
+
+ It was known as Clayton County Airport – Tara Field, which was the name still used by the Federal Aviation Administration (FAA) and the Georgia Department of
+Transportation (GDOT) until approval of the Atlanta South Regional Airport name.
+
+ The airport was renamed Atlanta South Regional Airport, which was approved by the airport board of commissioners in December 2011, and was approved by the GDOT
+and the FAA before it went into effect.
+</item 7>
+
+<item 8>
+College of Coastal Georgia
+The College of Coastal Georgia (also known as CCGA) is a public college located at historical Brunswick, Georgia, United States and the surrounding historical
+Golden Isles.
+
+ The College was established in 1961 and opened in 1964, making it one of Georgia's newest state colleges.
+
+ The college transitioned from a two-year community college into a four-year comprehensive institution and conferred its first baccalaureate degrees on May 7,
+2011.
+</item 8>
+
+<item 9>
+Atlantic Southeast Airlines Flight 2311
+Atlantic Southeast Airlines Flight 2311 was a regularly scheduled commuter flight from Hartsfield–Jackson Atlanta International Airport to Glynco Jetport (since
+renamed Brunswick Golden Isles Airport) in Brunswick, Georgia on April 5, 1991.
+
+ The flight, operated using a twin-turboprop Embraer EMB 120 Brasilia, crashed just north of Brunswick while approaching the airport for landing.
+
+ All 23 people aboard the plane were killed, including passengers Sonny Carter and John Tower.
+
+ Four years later, another Embraer Brasilia of ASA crashed in the Georgia countryside in similar circumstances, with nine fatalities.
+</item 9>
+
+<item 10>
+Albany International Airport
+Albany International Airport (IATA: ALB, ICAO: KALB, FAA LID: ALB) is a public airport seven miles (11 km) northwest of Albany, in Albany County, New York,
+United States.
+
+ It is owned by the Albany County Airport Authority.
+</item 10>
+=== END ITEM id=b7aacbf9010054a4 ===
+
+=== ITEM id=cf7d48fb1002562b ===
+Gold sentences and facts:
+Sentence 0: The Consul is an opera in three acts with music and libretto by Gian Carlo Menotti, his first full-length opera.
+  Fact 0.0: The Consul is an opera.
+  Fact 0.1: The Consul is an opera in three acts.
+  Fact 0.2: The Consul has music by Gian Carlo Menotti.
+  Fact 0.3: The Consul has a libretto by Gian Carlo Menotti.
+  Fact 0.4: The Consul is Gian Carlo Menotti's first full-length opera.
+Sentence 1:  He completed the music for the opera while living in Zurich in 1916.
+  Fact 1.0: Gian Carlo Menotti completed the music for The Consul.
+  Fact 1.1: Gian Carlo Menotti completed the music for The Consul in 1916.
+  Fact 1.2: Gian Carlo Menotti was living in Zurich in 1916.
+  Fact 1.3: Gian Carlo Menotti completed the music for The Consul while living in Zurich.
+
+Retrieved items:
+<item 1>
+The Carp (opera)
+The Carp is a one-act comic opera (styled "a whimsicality") with a libretto by Frank Desprez and music by Alfred Cellier.
+
+ It was first produced at the Savoy Theatre from 13 February 1886 to 19 January 1887, as a companion piece to "The Mikado".
+
+ It was then revived as companion to "Ruddigore" from 21 February 1887 to 5 November 1887.
+
+ The piece also toured throughout 1888.
+</item 1>
+
+<item 2>
+Niccolò Barbieri
+Niccolò (or Nicolò) Barbieri (Vercelli, 1586 - 1641) was an Italian writer and actor of the commedia dell'arte theatrical genre.
+
+ He was also known as Beltrame di Milano ("Beltrame of Milan") in reference to one of his most popular characters, Beltrame; this was the main character of one
+of Barbieri's best known plays, "L'inavertito", which is known to have inspired Moliere's "L'Étourdi ou Les Contretemps" ("The Blunderer").
+
+ Besides popularizing Beltrame, Barbieri is also credited with creating another "commedia dell'arte" mask, Scapino.
+</item 2>
+
+<item 3>
+La Surprise de l'amour
+Like many of Marivaux's , "La Surprise de l'amour" makes use of stock characters from the Commedia dell'arte.
+
+ In this play, Arlequin and Columbine are featured.
+</item 3>
+
+<item 4>
+Columbina
+Columbina (in Italian Colombina, meaning "little dove"; in French and English Colombine) is a stock character in the "Commedia dell'Arte".
+
+ She is Harlequin's mistress, a comic servant playing the tricky slave type, and wife of Pierrot.
+
+ Rudlin and Crick use the Italian spelling Colombina in "Commedia dell'arte: A Handbook for Troupes".
+</item 4>
+
+<item 5>
+Arlecchino (opera)
+Arlecchino, "oder Die Fenster" ("Harlequin, or The Windows", is a one-act opera with spoken dialog by Ferruccio Busoni, with a libretto in German, composed in
+1913.
+
+ He completed the music for the opera while living in Zurich in 1916.
+
+ It is a number opera written in neo-classical style and includes ironic allusions to operatic conventions and situations typical of the late 18th and early
+19th centuries.
+
+ It even includes a parody of a duel.
+</item 5>
+
+<item 6>
+The Consul
+The Consul is an opera in three acts with music and libretto by Gian Carlo Menotti, his first full-length opera.
+</item 6>
+
+<item 7>
+Harlequin
+Harlequin ( ; Italian: "Arlecchino" ] , French: "Arlequin" ] , Old French "Harlequin") is the best-known of the "zanni" or comic servant characters from the
+Italian "Commedia dell'arte".
+
+ The role is traditionally believed to have been introduced by Zan Ganassa in the late 16th century, and was definitively popularized by the Italian actor
+Tristano Martinelli in Paris in 1584–1585 and became a stock character after Martinelli's death in 1630.
+</item 7>
+
+<item 8>
+Pedrolino
+Pedrolino is a "primo zanni", or comic servant, of the "Commedia dell'Arte"; the name is a hypocorism of "Pedro" (Peter), via the suffix "-lino".
+
+ The character made its first appearance in the last quarter of the 16th century, apparently as the invention of the actor with whom the role was to be long
+identified, Giovanni Pellesini.
+
+ Contemporary illustrations suggest that his white blouse and trousers constituted "a variant of the typical "zanni" suit", and his Bergamasque dialect marked
+him as a member of the "low" rustic class.
+
+ But if his costume and social station were without distinction, his dramatic role was certainly not: as a multifaceted "first" "zanni", his character was—and
+still is—rich in comic incongruities.
+</item 8>
+
+<item 9>
+Commedia dell'arte
+Commedia dell'arte (] , comedy of the profession) was an early form of professional theatre, originating from Italy, that was popular in Europe from the 16th
+through the 18th century.
+
+ "Commedia dell'arte" also is known as "commedia alla maschera", "commedia improvviso", and "commedia dell'arte all'improvviso".
+
+ "Commedia" is a form of theatre characterized by masked "types" which began in Italy in the 16th century and was responsible for the advent of actresses
+(Isabella Andreini) and improvised performances based on sketches or scenarios.
+
+ A "commedia", such as "The Tooth Puller", is both scripted and improvised.
+
+ Characters' entrances and exits are scripted.
+
+ A special characteristic of "commedia dell'arte" are the "lazzi".
+
+ A "lazzo" is a joke or "something foolish" or "witty".
+
+ Another characteristic of "commedia dell'arte" is pantomime, which is mostly used by the character Arlecchino (Harlequin).
+</item 9>
+
+<item 10>
+Tartaglia (commedia dell'arte)
+Tartaglia is a dainty character in the Commedia dell'arte.
+
+ He is farsighted and with a minor stutter (hence his name; cf. Spanish tartamudear), he is usually classed as one of the group of old characters (vecchio) who
+appears in many scenarios as one of the lovers (innamorati).
+
+ His social status varies; he is sometimes a bailiff, lawyer, notary or chemist.
+
+ Dramatist Carlo Gozzi turned him into a statesman, and so he remained thereafter.
+
+ Tartaglia wears a large felt hat, an enormous cloak, oversized boots, a long sword, a giant moustache and a cardboard nose.
+
+ He usually represents the lower working class but at times the middle or upper class in the commedia dell'arte.
+
+ In the opera "Le maschere" by Mascagni, one of the characters is Tartaglia, a stuttering servant.
+</item 10>
+=== END ITEM id=cf7d48fb1002562b ===
+
+=== ITEM id=2f67c6df398714bd ===
+Gold sentences and facts:
+Sentence 0: Doris May Lessing, CH ("née" Tayler; 22 October 1919  – 17 November 2013) was a British novelist, poet, playwright, librettist, biographer and short story writer.
+  Fact 0.0: Doris May Lessing, CH, was born Doris May Tayler (née Tayler).
+  Fact 0.1: Doris May Lessing was born on 22 October 1919.
+  Fact 0.2: Doris May Lessing died on 17 November 2013.
+  Fact 0.3: Doris May Lessing was a British novelist.
+  Fact 0.4: Doris May Lessing was a British poet.
+  Fact 0.5: Doris May Lessing was a British playwright.
+  Fact 0.6: Doris May Lessing was a British librettist.
+  Fact 0.7: Doris May Lessing was a British biographer.
+  Fact 0.8: Doris May Lessing was a British short story writer.
+Sentence 1: Philip Kindred Dick (December 16, 1928 – March 2, 1982) was an American writer notable for publishing works of science fiction.
+  Fact 1.0: Philip Kindred Dick was born on December 16, 1928.
+  Fact 1.1: Philip Kindred Dick died on March 2, 1982.
+  Fact 1.2: Philip Kindred Dick was an American writer.
+  Fact 1.3: Philip Kindred Dick is notable for publishing works of science fiction.
+
+Retrieved items:
+<item 1>
+Adjustment Team
+"Adjustment Team" is a science fiction short story by American writer Philip K. Dick.
+
+ It was first published in "Orbit Science Fiction" (September–October 1954, No. 4) with illustration by Faragasso.
+
+ It was later reprinted in "The Sands of Mars and Other Stories" (Australian) in 1958, "The Book of Philip K. Dick" in 1973, "The Turning Wheel and Other
+Stories" (United Kingdom) in 1977, "The Collected Stories of Philip K. Dick" in 1987 (Underwood–Miller), 1988 (Gollancz, United Kingdom), 1990 (Citadel
+Twilight, United States), "Selected Stories of Philip K. Dick" in 2002 and in "The Early Work of Philip K. Dick, Volume One: The Variable Man & Other Stories"
+in 2009.
+</item 1>
+
+<item 2>
+Penelope Fitzgerald
+Penelope Fitzgerald (17 December 1916 – 28 April 2000) was an English Booker Prize-winning novelist, poet, essayist and biographer.
+
+ In 2008, "The Times" included her in a list of "the 50 greatest British writers since 1945".
+
+ In 2012, "The Observer" named her final novel, "The Blue Flower" one of "the ten best historical novels".
+</item 2>
+
+<item 3>
+Doris Lessing
+Doris May Lessing, CH ("née" Tayler; 22 October 1919  – 17 November 2013) was a British novelist, poet, playwright, librettist, biographer and short story
+writer.
+
+ Her novels include "The Grass Is Singing" (1950), the sequence of five novels collectively called "Children of Violence" (1952–69), "The Golden Notebook"
+(1962), "The Good Terrorist" (1985), and five novels collectively known as "Canopus in Argos: Archives" (1979–1983).
+</item 3>
+
+<item 4>
+Philip K. Dick
+Philip Kindred Dick (December 16, 1928 – March 2, 1982) was an American writer notable for publishing works of science fiction.
+</item 4>
+
+<item 5>
+Philip K. Dick Award
+The Philip K. Dick Award is a science fiction award given annually at Norwescon sponsored by the Philadelphia Science Fiction Society and (since 2005) supported
+by the Philip K. Dick Trust, and named after science fiction and fantasy writer Philip K. Dick.
+
+ It has been awarded since 1983, the year after Dick's death.
+
+ Works that have received the award are identified on their covers as "Best Original SF Paperback".
+
+ They are awarded to the best original paperback published each year in the US.
+</item 5>
+
+<item 6>
+The Philip K. Dick Reader
+The Philip K. Dick Reader is a collection of science fiction stories by American writer Philip K. Dick.
+
+ It was first published by Citadel Twilight in 1997.
+
+ Many of the stories had originally appeared in the magazines "If", "Science Fiction Adventures", "Science Fiction Stories", "Orbit", "Fantasy and Science
+Fiction", "Imagination", "Future", "Galaxy Science Fiction", "Beyond Fantasy Fiction", "Satellite", "Imaginative Tales", "Fantastic Universe" and "Space Science
+Fiction".
+
+ It is identical in content and order to the edition of volume 3 of the Collected Stories of Philip K. Dick produced by the same publisher apart from the
+substitution of three stories in positions 21-23 of 24 and the omission of the end notes in the Collected Stories edition.
+
+ At press time, stories 21 and 24 had already been made into successful movie adaptations and stories 22 and 23 had been optioned.
+</item 6>
+
+<item 7>
+The Good Terrorist
+The Good Terrorist is a 1985 political novel written by the British novelist Doris Lessing.
+
+ It was first published in September that year by Jonathan Cape in the United Kingdom and by Alfred A. Knopf in the United States.
+
+ The book's protagonist is the naïve drifter Alice, who squats with a group of radicals in London and is drawn into their terrorist activities.
+</item 7>
+
+<item 8>
+Jenny Diski
+Jenny Diski FRSL (née Simmonds; 8 July 1947 – 28 April 2016) was an English writer.
+
+ She had a troubled childhood, but was rescued by the older novelist Doris Lessing; she lived in Lessing's house for four years.
+
+ Diski was educated at University College London, and worked as a teacher during the 1970s and early 1980s.
+</item 8>
+
+<item 9>
+The Days of Perky Pat (collection)
+The Days of Perky Pat is a collection of science fiction stories by American writer Philip K. Dick.
+
+ It was first published by Gollancz in 1990 and reprints Volume IV of "The Collected Stories of Philip K. Dick".
+
+ It had not previously been published as a stand-alone volume.
+
+ The stories had originally appeared in the magazines "Galaxy Science Fiction", "Science Fiction Stories", "If", "Fantastic Universe", "Fantasy and Science
+Fiction", "Fantastic", "Worlds of Tomorrow", "Escapade" and "Amazing Stories".
+</item 9>
+
+<item 10>
+Roger Lancelyn Green
+Roger (Gilbert) Lancelyn Green (2 November 1918 – 8 October 1987) was a British biographer and children's writer.
+
+ He was an Oxford academic who formed part of the Inklings literary discussion group along with C. S. Lewis and J. R. R. Tolkien.
+</item 10>
+=== END ITEM id=2f67c6df398714bd ===

@@ -1,0 +1,13 @@
+[
+  {
+    "id": "1d938ff0c88a3ba0",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []}
+    ]
+  }
+]

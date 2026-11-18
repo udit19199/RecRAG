@@ -1,0 +1,622 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 2 items.
+
+=== ITEM id=966777c20abc7256 ===
+Gold sentences and facts:
+Sentence 0: Even so, Kelce's 81.3 average receiving yards per game against the Raiders since 2019 suggests the All-Pro tight end is in line for a productive outing and could potentially snap his four-game scoring drought.
+  Fact 0.0: Kelce averages 81.3 receiving yards per game against the Raiders since 2019.
+  Fact 0.1: Kelce is an All-Pro tight end.
+  Fact 0.2: Kelce's average suggests he is in line for a productive outing.
+  Fact 0.3: Kelce could potentially snap his four-game scoring drought.
+Sentence 1: The first link between Swift and Kelce was established in 2016, when Kelce – who helped bring his team to Super Bowl victory in both 2020 and 2023 – played the classic game “Kiss, Marry, Kill”.
+  Fact 1.0: The first link between Swift and Kelce was established in 2016.
+  Fact 1.1: The first link between Swift and Kelce came when Kelce played the classic game 'Kiss, Marry, Kill' in 2016.
+  Fact 1.2: Kelce helped bring his team to a Super Bowl victory in 2020.
+  Fact 1.3: Kelce helped bring his team to a Super Bowl victory in 2023.
+
+Retrieved items:
+<item 1>
+Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek (Yardbarker, 2023-12-24T23:34:39+00:00)
+Can Raiders QB Aidan O’Connell earn next season’s starting job?: After leading the offense on seven touchdown scoring drives in last week's 63-21 win over the
+Chargers, the rookie fourth-rounder aims to further establish himself as a serious contender for Las Vegas' starting job next season. Despite the encouraging
+performance, O'Connell has been inconsistent across six games as the full-time starter, throwing for 1,300 yards, seven touchdowns, and five interceptions.
+
+However, a stellar showing against the NFL's fifth-ranked pass defense (202.5 yards per game allowed) would benefit his bid to be the starter in 2024.
+
+Chiefs TE Travis Kelce: Yes, his girlfriend will be in town for the holiday. Kelce is averaging 89.6 yards per game with global popstar Taylor Swift in
+attendance this season but is coming off his worst outing in her presence, catching five passes for 28 yards.
+
+Graph facts:
+- Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek -MENTIONS-> New York Giants
+- Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek -MENTIONS-> Philadelphia Eagles
+- Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek -MENTIONS-> Las Vegas Raiders at Kansas City Chiefs
+- Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek -MENTIONS-> 49ers, Ravens square off in potential Super Bowl sneak peek
+- Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek -MENTIONS-> New York Giants at Philadelphia Eagles
+
+Entities: Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek, Aidan O’Connell, 63-21 win over the Chargers, pass defense,
+Raiders, NFL, Taylor Swift, Travis Kelce, Super Bowl, Ravens, Chiefs, Christmas Day, Chargers, 49ers, Yardbarker
+</item 1>
+
+<item 2>
+Travis Kelce faces backlash after comments about ‘finding a breeder’ resurface amid Taylor Swift romance (The Independent - Life and Style,
+2023-10-30T20:56:51+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Travis Kelce’s previous comments about having children have sparked controversy amid his ongoing romance with Taylor Swift.
+
+The Kansas City Chiefs player, 34, first made the remarks about starting his own family during a February 2023 episode of his and his brother Jason Kelce’s
+podcast, New Heights. The episode resurfaced after a source claimed to Yahoo Entertainment that Swift and Travis Kelce “have talked about kids” within the next
+year.
+
+Graph facts:
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> Jason Kelce
+- Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE -MENTIONS-> Jason Kelce
+- Travis Kelce says he tried to delete his ‘nonsense’ tweets before they went viral -MENTIONS-> Jason Kelce
+- Bears vs. Panthers live score, updates, highlights from NFL 'Thursday Night Football' game -MENTIONS-> Jason Kelce
+- Travis Kelce admits the NFL is overdoing it with their Taylor Swift coverage -MENTIONS-> Jason Kelce
+
+Entities: Jason Kelce, Taylor Swift, Travis Kelce, New Heights, February 2023 episode of New Heights, Yahoo Entertainment, Travis Kelce faces backlash after
+comments about ‘finding a breeder’ resurface amid Taylor Swift romance, The Independent, Kansas City Chiefs
+</item 2>
+
+<item 3>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+"'Taylor wants a guy that's into his career, does his own thing, but is also supportive and understands her,' the source added, "and Travis fits those
+qualities.'"
+
+Sept. 25: Kelce jersey sales skyrocket
+
+Call it what you want; I'll call it the Taylor Swift effect. Since Swift attended the Chiefs game, there was a 400% increase in Kelce jersey sales, his podcast
+is No. 1 overall on Apple, he gained over 380,000 Instagram followers, and 24.3 million people watched the game, making it the No. 1 game last week, according
+to Front Office Sports.
+
+There has also been triple the "Chiefs" searches on web and triple the Chiefs ticket sales on Stubhub.
+
+Sept. 25: Belichick weighs in on the matter
+
+
+
+New England Patriots head coach does not always comment on situations that take place in the game, but he was fully ready with a sound bite on the Kelce-Swift
+situation.
+
+Graph facts:
+- Taylor Swift -MENTIONS-> jersey sales
+- Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek -MENTIONS-> Taylor Swift
+- Country music couples Tim McGraw, Faith Hill and Garth Brooks, Trisha Yearwood share tips to lasting marriages -MENTIONS-> Taylor Swift
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> Taylor Swift
+- Chiefs vs. Packers live score, updates, highlights from NFL 'Sunday Night Football' game -MENTIONS-> Taylor Swift
+
+Entities: Taylor Swift, rumored romance, Travis Kelce, Belichick, Front Office Sports, Apple, Stubhub, Taylor Swift-Travis Kelce timeline: Everything to know
+about rumored romance between pop star, Chiefs TE, Chiefs game, CBSSports.com, Chiefs, Instagram, New England Patriots
+</item 3>
+
+<item 4>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+$28 billion. And just like that, their target will be met.
+
+USA Today via Reuters NFL, American Football – Taylor Swift reacts while sitting next to Donna Kelce watching the Kansas City Chiefs vs Chicago Bears game
+during the first half at GEHA Field at Arrowhead Stadium, Kansas City, Missouri, USA | Image Credits: Denny Medley-USA TODAY Sports/Reuters
+
+And while analysts like Stephen A. Smith may go around telling people they should be embarrassed of themselves for getting so invested in someone else’s
+relationship, it is good business for the NFL. TMZ reported that #87’s jersey sales skyrocketed 400% and his Instagram followers by 276%. Yahoo Finance reported
+a 53% rise in viewership among teen girls. Who would have thought in their wildest dreams that the NFL would manage to rope in this part of the population? The
+October 1 matchup between the Chiefs and the Jets drew 27 million viewers.
+
+Graph facts:
+- Brock Purdy -MENTIONS-> NFL
+- Raiders vs. Lions live score, updates, highlights from NFL 'Monday Night Football' game -MENTIONS-> NFL
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> NFL
+- Chiefs vs. Packers live score, updates, highlights from NFL 'Sunday Night Football' game -MENTIONS-> NFL
+- Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek -MENTIONS-> NFL
+
+Entities: NFL, Kansas City, Missouri, Chicago Bears, Taylor Swift, Travis Kelce, New York Jets, Reuters, Essentially Sports, Stephen A. Smith, TMZ, Yahoo
+Finance, Denny Medley, Chiefs and Jets matchup, Kansas City Chiefs vs Chicago Bears game
+</item 4>
+
+<item 5>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+From Colin Kaepernick taking a knee during the national anthem to protest against racism, to domestic violence by players, to the Deflategate and Bountygate
+scandals. But there have been bigger crises as well. The Union of Concerned Scientists accused the NFL of trying to intimidate scientists studying the link
+between CTE and pro football. The NFL is already way past other leagues in terms of revenue, and now with the pivotal shift in its strategy, “America’s favorite
+pastime” is on its way to world domination.
+
+ADVERTISEMENT Article continues below this ad
+
+Editorial Disclaimer: The views expressed are those of the author and do not necessarily reflect the views of EssentiallySports.
+
+Watch This Story: Will Patrick Mahomes Eclipse Tom Brady as the NFL Goat? Travis Kelce Responds
+
+Graph facts:
+- Brock Purdy -MENTIONS-> NFL
+- Raiders vs. Lions live score, updates, highlights from NFL 'Monday Night Football' game -MENTIONS-> NFL
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> NFL
+- Chiefs vs. Packers live score, updates, highlights from NFL 'Sunday Night Football' game -MENTIONS-> NFL
+- Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek -MENTIONS-> NFL
+
+Entities: NFL, Taylor Swift, Travis Kelce, Patrick Mahomes, Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in
+NFL’s Century-Old Game Plan Towards Global Recognition?, Global recognition, EssentiallySports, Colin Kaepernick, Union of Concerned Scientists, racism,
+domestic violence by players, Deflategate, Bountygate, CTE, pro football
+</item 5>
+
+<item 6>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+The October 1 matchup between the Chiefs and the Jets drew 27 million viewers. And became the most-watched Sunday TV show since the last Super Bowl! And the
+last Super Bowl had an actual concert by Rihanna.
+
+Revealed: The Dark Side Of Pat McAfee & Why Rob Gronkowski Is In The Firing Line
+
+Kaepernick, who? Deflategate, what? In the media frenzy surrounding the two lovebirds, other issues get thrown out of the window. How can fans forget that the
+NFL is also organizing games outside the American borders with a view to garnering international appeal? The NFL has scheduled 5 games abroad this season. It is
+also addressing the concussion controversies. It recently added both new concussion rules and a new $100 million initiative called “Play Smart, Play Safe,” to
+make the sport safer for players. And all the effort is showing.
+
+Graph facts:
+- Brock Purdy -MENTIONS-> NFL
+- Raiders vs. Lions live score, updates, highlights from NFL 'Monday Night Football' game -MENTIONS-> NFL
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> NFL
+- Chiefs vs. Packers live score, updates, highlights from NFL 'Sunday Night Football' game -MENTIONS-> NFL
+- Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek -MENTIONS-> NFL
+
+Entities: NFL, Pat McAfee, Taylor Swift, Travis Kelce, Jets, Chiefs, Essentially Sports, October 1 matchup, last Super Bowl, Rihanna, concert at the last Super
+Bowl, Rob Gronkowski, Kaepernick, Deflategate, concussion controversies
+</item 6>
+
+<item 7>
+Graph query row:
+Yardbarker_article: Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek
+Yardbarker_date: 2023-12-24T23:34:39+00:00
+Yardbarker_publisher: Yardbarker
+Yardbarker_mentioned_entities: ['Las Vegas Raiders at Kansas City Chiefs', 'Aidan O’Connell', '63-21 win over the Chargers', 'pass defense', '49ers, Ravens
+square off in potential Super Bowl sneak peek', 'New York Giants', 'Philadelphia Eagles', 'New York Giants at Philadelphia Eagles', 'Matt Patricia', 'Tommy
+DeVito', 'Cedar Grove', 'tush push', 'DeVito', 'Baltimore Ravens at San Francisco 49ers', 'Brock Purdy', 'Lamar Jackson', 'oddschecker', '2022 NFL Draft',
+'Super Bowl LVIII', 'MVP Award', 'QBR', 'Todd Monken', '2019 MVP campaign', 'Isaiah Likely', 'Mark Andrews', 'Las Vegas Raiders', 'Maxx Crosby', 'Raiders',
+'NFL', 'Kelce', 'Taylor Swift', 'Travis Kelce', 'Patrick Mahomes', 'Baltimore Ravens', 'Eagles', 'Lincoln Financial Field', 'Philadelphia', 'Jalen Hurts',
+'Super Bowl', 'Ravens', 'Week 11', 'Chiefs', 'Christmas Day', 'McCaffrey', 'Purdy', 'Offensive Player of the Year award', 'Chargers', 'Giants', 'NBA', 'New
+Jersey', 'Jackson', 'Christian McCaffrey', '49ers', 'San Francisco 49ers', 'Kansas City Chiefs', 'Las Vegas', 'Baltimore']
+Yardbarker_passages: ["Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek (Yardbarker, 2023-12-24T23:34:39+00:00)\nChristmas Day
+isn't just for the NBA, as the NFL is set to air an exciting triple-header featuring fierce division clashes and a highly anticipated matchup we could see again
+on Super Bowl Sunday. Here are the top players and storylines to monitor for Monday's slate.\n\nLas Vegas Raiders (6-8) at Kansas City Chiefs (9-5) | 1 p.m.
+ET\n\nNew chapter in Patrick Mahomes-Maxx Crosby rivalry: This hasn't been as much of a rivalry between the teams as of late, with Kansas City holding a 10-1
+record over the Raiders since Mahomes became its starting quarterback. Yet it has sparked an exciting feud between the two-time Super Bowl MVP and the two-time
+Pro Bowler Crosby, who has five sacks in nine career games against the Chiefs.\n\nMahomes and Crosby might not like facing one another, though it's clear
+there's mutual respect between the two, which only makes their rivalry more intriguing to watch.\n\nCan Raiders QB Aidan O’Connell earn next season’s starting
+job?", "Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek (Yardbarker, 2023-12-24T23:34:39+00:00)\nCan Raiders QB Aidan
+O’Connell earn next season’s starting job?: After leading the offense on seven touchdown scoring drives in last week's 63-21 win over the Chargers, the rookie
+fourth-rounder aims to further establish himself as a serious contender for Las Vegas' starting job next season. Despite the encouraging performance, O'Connell
+has been inconsistent across six games as the full-time starter, throwing for 1,300 yards, seven touchdowns, and five interceptions.\n\nHowever, a stellar
+showing against the NFL's fifth-ranked pass defense (202.5 yards per game allowed) would benefit his bid to be the starter in 2024.\n\nChiefs TE Travis Kelce:
+Yes, his girlfriend will be in town for the holiday. Kelce is averaging 89.6 yards per game with global popstar Taylor Swift in attendance this season but is
+coming off his worst outing in her presence, catching five passes for 28 yards.", "Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak
+peek (Yardbarker, 2023-12-24T23:34:39+00:00)\nEven so, Kelce's 81.3 average receiving yards per game against the Raiders since 2019 suggests the All-Pro tight
+end is in line for a productive outing and could potentially snap his four-game scoring drought.\n\nNew York Giants (5-9) at Philadelphia Eagles (10-4) | 4:30
+p.m. ET\n\nWill the Eagles defense shake off the rust?: Appointing Matt Patricia as defensive play-caller didn't change much for the Eagles, whose defense has
+given up the third-most points in the NFL over their current three-game losing streak (95). Although the unit has reached its lowest point, there are reasons to
+be optimistic about Monday's matchup.\n\nNew York ranks 31st among teams in points and yards per game this season and has surrendered a staggering 76 sacks, the
+third-most in a single season in NFL history. Not to mention, the annual trip to Philadelphia has essentially been a scheduled loss for the Giants, with their
+last win at Lincoln Financial Field coming in 2013.", 'Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek (Yardbarker,
+2023-12-24T23:34:39+00:00)\nCan QB Jalen Hurts and the Eagles offense finally bounce back?: Philadelphia\'s defense isn\'t the only unit that needs to rebound,
+as the offense has struggled mightily over the last three games, with Hurts\' ineffectiveness playing a significant role. After averaging the third-most points
+in the NFL over the first 11 games (28.2), the Eagles have scored four offensive touchdowns during their current skid, three of which came via the "tush
+push."\n\nThe Eagles may have difficulty throwing against a solid Giants pass defense, though they could alleviate some of their offensive woes by running the
+ball efficiently. New York gives up 131.6 rushing yards per game, the fourth-most in the league.\n\nDoes Giants QB Tommy DeVito have any magic left?: The Giants
+may have a terrible offense, but this unit has operated at its best under DeVito, an undrafted rookie and native of Cedar Grove, New Jersey.', "Christmas Day
+preview: 49ers, Ravens square off in potential Super Bowl sneak peek (Yardbarker, 2023-12-24T23:34:39+00:00)\nDeVito has thrown for 858 yards, seven touchdowns,
+and one interception in five games since being named New York's starting quarterback, posting the 13th-highest passer rating in the NFL during that stretch
+(97.3).\n\nBaltimore Ravens (11-3) at San Francisco 49ers (11-3) | 8:15 p.m. ET\n\nPotential Super Bowl sneak peek and MVP implications: Easily the most hyped
+game of the week, with the top seed in each respective conference squaring off in what could be a potential Super Bowl LVIII preview as well as the decisive
+clash for the MVP Award.\n\nAccording to oddschecker, 49ers QB Brock Purdy is listed as the heavy favorite to be named league MVP (-230), while Baltimore
+signal-caller Lamar Jackson holds the second-shortest odds (+525).\n\nPurdy, the final pick of the 2022 NFL Draft, has seen his career unfold as if it were a
+fairy tale that just keeps getting more remarkable.", "Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek (Yardbarker,
+2023-12-24T23:34:39+00:00)\nThe 23-year-old ranks first in the NFL in QBR (76) and touchdown passes (29) while ranking third in passing yards (3,795), all of
+which are especially impressive considering he's coming off offseason elbow surgery.\n\nJackson might not be posting the ridiculous numbers he did during his
+2019 MVP campaign, but the adjustment in his play style in his first season under OC Todd Monken has led to sustainable, winning football. Nevertheless,
+Baltimore needs an upset win for Jackson to capture another MVP Award, as he has thrown for 3,105 yards and 17 touchdowns while adding 741 yards on the ground
+with five scores this season.\n\n49ers RB Christian McCaffrey: If Purdy wasn't playing at such a high level — and the MVP wasn't a quarterback-driven award —
+it'd be difficult to argue against McCaffrey taking home the honors.", "Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek
+(Yardbarker, 2023-12-24T23:34:39+00:00)\nMcCaffrey, who seems poised to win the Offensive Player of the Year Award, leads the NFL in rushing (1,292 yards) and
+total yards per game (128.6) this season and is tied for first in touchdowns (20).\n\nRavens TE Isaiah Likely thriving in the starting role: The Ravens offense
+hasn't lost a step since losing one of the team's top weapons in tight end Mark Andrews (ankle) in Week 11, largely due to Likely's emergence.\n\nThe
+second-year tight end has averaged 64.3 yards over his last three games, which is particularly noteworthy since Andrews averaged 54.4 yards per game before
+sustaining his injury.\n\nShould we expect a defensive battle?: While both teams boast offenses that rank in the top five in yardage and scoring, this may not
+turn into a shootout.", "Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek (Yardbarker, 2023-12-24T23:34:39+00:00)\nThe Ravens
+defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030), while San Francisco's unit ranks second in points
+(16.7) and 10th in yardage (310 per game).\n\nThe 49ers defense might be slightly inferior statistically, but it could have more of an impact in this matchup.
+San Francisco has racked up an NFL-leading 25 turnovers and has given up the second-fewest rushing yards (1,252), which should help slow down the team with the
+league's most effective running game."]
+The_Age_article: When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover
+The_Age_date: 2023-09-26T05:26:05+00:00
+The_Age_publisher: The Age
+The_Age_mentioned_entities: ['NFL', 'Arrowhead Stadium', 'Kansas City', 'Eras Tour concert', 'Jaguars', 'Kelce', 'Super Bowl victory', 'Kiss, Marry, Kill',
+'AfterBuzz TV', 'friendship bracelet', 'Andy Reid', 'Vulture', 'New York City', 'visit to New York City', 're-recording 1989 tracks', 'quietly hanging out',
+'CBS', 'Ian Eagle', 'Blank Space', 'NFL Network', 'Rich Eisen', 'Pat McAfee', 'The Pat McAfee Show', 'game at Arrowhead Stadium', 'Gold Rush', 'Kanye West',
+'Taylor Swift', 'Travis Kelce', 'Getaway Car', 'Eagles', 'New Heights', 'Kim Kardashian', 'Chiefs', '1989', 'Swifties', 'sport', 'Instagram', 'Pennsylvania',
+'Katy Perry', 'pop culture', 'Ariana Grande', 'football']
+The_Age_passages: ['When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)\nThe first link between
+Swift and Kelce was established in 2016, when Kelce – who helped bring his team to Super Bowl victory in both 2020 and 2023 – played the classic game “Kiss,
+Marry, Kill”. Speaking with AfterBuzz TV, Kelce was given the options of Swift, Katy Perry and Ariana Grande. He said he’d ultimately kill Grande, marry Perry
+and kiss Swift. That was about six years ago, but it has more recently set tongues wagging as fans wondered how long the plan for them to meet has been in the
+works. Cruel Summer Fast-forward seven years, and things started to heat up. In July, speaking on the podcast he shares with his brother, New Heights, Kelce
+said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City. Unfortunately, the bracelet never made
+it to her wrist or his digits to her phone.', 'When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age,
+2023-09-26T05:26:05+00:00)\nSwift’s name began popping up everywhere on the podcast, including during conversations about... facial hair?\n\nIn August, the
+brothers discussed Kelce’s moustache, which he grows every year in honour of the Chief’s head coach, Andy Reid. When asked if he knew what Swift thought of the
+’stache, he remained cheekily confident. “We’re not going to bring up Taylor Swift in this episode,” he says, “But something tells me she’s going to like it.”
+There was a clear suggestion Kelce had made contact with Swift, and was even going to meet her. Shortly after that remark, Kelce took a week off training to
+visit New York City, according to Vulture. Coincidentally, this happened to be while Swift was re-recording her 1989 tracks in the city. Welcome to New
+York\n\nThe suspicion the two were actually spending time together in New York was seemingly confirmed in September when it was reported they had been “quietly
+hanging out” for months.', 'When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)\nThis was the
+first, albeit tentative, confirmation from the media rather than from amateur Swiftie sleuths on social media. So, it was only a matter of time before it
+entered the cultural zeitgeist. Blank Space Which it did, very quickly. On September 17, Kelce scored a touchdown against the Jaguars, triggering CBS announcer
+Ian Eagle to reference Swift’s 2014 hit, Blank Space.\n\n“Kelce finds a blank space for the score,” Eagle said, poking fun at Kelce’s newfound Swiftie status.
+And Eagle wasn’t the only one, with NFL Network’s Rich Eisen including a slew of lyric references during a preshow, including “shake it off”, “anti-hero” and
+“all too well”. Kelce even acknowledged the tongue-in-cheek banter, commenting on a montage video of the preshow that Eisen posted to Instagram. “Well played
+Rich … Well played,” he wrote. Suddenly, football fans and Swifties were living through this surprising collision.', 'When pop culture and sport collide: A
+timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)\nSuddenly, football fans and Swifties were living through this surprising
+collision. Swift lyrics were infiltrating NFL game commentary, and her fans were furiously becoming football experts. All that needed to happen was for Swift
+herself to infiltrate a game, determining once and for all whether there was anything to these rumours or not. This Is Me Trying\n\nOn September 21, Kelce
+announced on The Pat McAfee Show he had invited Swift to watch one of his games. “I told her, ‘I’ve seen you rock the stage in Arrowhead, you might have to come
+see me rock a stage at Arrowhead and we can see which one’s a little more lit,’” he said. “We’ll see what happens in the near future.” Were they finally about
+to hard-launch their friendship/potential romance to the world, laying all speculation to rest? Love Story This finally brings us to the fated sighting of Swift
+at Arrowhead Stadium on Monday, cheering on No. 87 with gusto.', 'When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age,
+2023-09-26T05:26:05+00:00)\n87 with gusto.\n\nThe 12-time Grammy winner appeared to shout “let’s f—ing go” after Kelce scored a touchdown before chest-bumping
+other Chiefs fans. Considering Swift is known for being an Eagles fan – she’s originally from Pennsylvania and even references the team in Gold Rush – her
+outward support for the Kelce’s team seemed extra telling. Swifties were immediately on high alert, with some capturing Swift and Kelce leaving the stadium
+together. If that wasn’t enough, extra observant fans were able to note that Kelce’s blue and white post-game outfit was supposedly labelled the “1989 bedroom
+painting set”, perhaps an intentional reference to Swift’s 2014 album, which she will be re-releasing in October. Swift’s penchant for Easter eggs must be
+rubbing off on the tight end player. As if this weren’t enough subtle references already, they were also spotted in a “getaway car” together outside the stadium
+– potentially a nod towards her 2017 track.', 'When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age,
+2023-09-26T05:26:05+00:00)\nCould they have been driving off into the sunset? Of course, none of this actually confirms Swift and Kelce are actually dating. But
+regardless of whether it’s a friendship or a romantic relationship, it has sent shockwaves through two massive cultural franchises, expanding the NFL’s audience
+into uncharted territory. It’s a cultural pairing on par with – and perhaps even bigger than – Kim Kardashian and Kanye West.']
+shared_entities: ['NFL', 'Kelce', 'Taylor Swift', 'Travis Kelce', 'Eagles', 'Chiefs']
+</item 7>
+
+<item 8>
+Travis Kelce admits the NFL is overdoing it with their Taylor Swift coverage (The Independent - Life and Style, 2023-10-04T19:58:00+00:00)
+“The Taylor Swift and Travis Kelce news has been a pop cultural moment we’ve leaned into in real time, as it’s an intersection of sport and entertainment, and
+we’ve seen an incredible amount of positivity around the sport.”
+
+“The vast majority of our content has remained focused on the game, our players and variety of other initiatives, including our Toy Story Funday Football
+alt-cast, the international games and more,” they continued.
+
+Graph facts:
+- Brock Purdy -MENTIONS-> NFL
+- Raiders vs. Lions live score, updates, highlights from NFL 'Monday Night Football' game -MENTIONS-> NFL
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> NFL
+- Chiefs vs. Packers live score, updates, highlights from NFL 'Sunday Night Football' game -MENTIONS-> NFL
+- Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek -MENTIONS-> NFL
+
+Entities: NFL, Taylor Swift, Travis Kelce, The Independent, Travis Kelce admits the NFL is overdoing it with their Taylor Swift coverage, Toy Story Funday
+Football
+</item 8>
+
+<item 9>
+Travis Kelce admits the NFL is overdoing it with their Taylor Swift coverage (The Independent - Life and Style, 2023-10-04T19:58:00+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Travis Kelce believes the National Football League’s coverage of his rumoured girlfriend Taylor Swift is a bit too much.
+
+Following his game against the New York Jets on 1 October, the 33-year-old Kansas City Chiefs tight end opened up about the NFL broadcast on the most recent
+episode of his podcast, New Heights with Jason and Travis Kelce.
+
+Graph facts:
+- Travis Kelce says he tried to delete his ‘nonsense’ tweets before they went viral -MENTIONS-> Jason Kelce
+- Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE -MENTIONS-> Jason Kelce
+- Travis Kelce faces backlash after comments about ‘finding a breeder’ resurface amid Taylor Swift romance -MENTIONS-> Jason Kelce
+- Bears vs. Panthers live score, updates, highlights from NFL 'Thursday Night Football' game -MENTIONS-> Jason Kelce
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> Jason Kelce
+
+Entities: Jason Kelce, Taylor Swift, Travis Kelce, New York Jets, The Independent, Kansas City Chiefs, National Football League, game against the New York Jets,
+New Heights with Jason and Travis Kelce, Travis Kelce admits the NFL is overdoing it with their Taylor Swift coverage
+</item 9>
+
+<item 10>
+FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4 (Sporting News, 2023-09-28T21:41:00+00:00)
+In your wildest dreams this bet might hit, and it might happen in reality too. Kelce could be schmoozing in the suite when the second half begins rather than
+throwing blocks and catching footballs on the field. But if the Jets keep it close, they are prone to being exploited by players like Kelce. With receivers
+lacking on the Chiefs sideline, the tight end might put on a show that is typically only found in show business. Considering he hosted “Saturday Night Live”
+back in March, Kelce is familiar with how to tell a story. We have him scoring once, so what’s another two times to cash a monster long shot? Don't count on it,
+but don't rule it out either. And please, have fun and bet responsibly.
+
+Graph facts:
+- Taylor Swift -MENTIONS-> Instagram
+- Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek -MENTIONS-> Taylor Swift
+- Country music couples Tim McGraw, Faith Hill and Garth Brooks, Trisha Yearwood share tips to lasting marriages -MENTIONS-> Taylor Swift
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> Taylor Swift
+- Taylor Swift -MENTIONS-> jersey sales
+
+Entities: Taylor Swift, Travis Kelce, Jets, Chiefs, Sporting News, FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for
+Chiefs-Jets Week 4, Prop Stars, Chiefs-Jets Week 4, Saturday Night Live, FanDuel
+</item 10>
+=== END ITEM id=966777c20abc7256 ===
+
+=== ITEM id=f869f1ba96b82508 ===
+Gold sentences and facts:
+Sentence 0: Depending on which one you get, it might come with USB ports so you can charge multiple devices in one outlet.
+  Fact 0.0: Depending on which one a reader gets, it might come with USB ports.
+  Fact 0.1: The USB ports let multiple devices be charged in one outlet.
+Sentence 1: With a 10,000-mAh capacity, WIRED contributor Simon Hill says it charged his iPhone 14 Pro once and then delivered an additional 64 percent the second time before tapping out.
+  Fact 1.0: The device has a 10,000-mAh capacity.
+  Fact 1.1: WIRED contributor Simon Hill says the device charged his iPhone 14 Pro once.
+  Fact 1.2: Simon Hill says the device delivered an additional 64 percent the second time before tapping out.
+
+Retrieved items:
+<item 1>
+54 Best Apple Black Friday Deals (2023): iPad, Apple Watch, AirPods (Wired, 2023-11-25T00:00:29+00:00)
+Flip over to the back, and you'll find two USB-A ports, two USB-C ports, and three AC outlets. It's a compact and tidy charger, and our unit has been going
+strong for more than two years. It fluctuates in price very often, and it's hit as low as $60 in the past, but we still think this is a good deal.
+
+This power bank is one of our favorites if you're looking for an upgrade. It has an absolutely gargantuan 24,000-mAh capacity, and it can be charged up in an
+hour. It can output up to 140W, making it powerful enough to charge laptops and tablets, as well as charging your phone super quick.
+
+This is a great charger if you travel often with an iPhone and Apple Watch. Instead of packing two separate chargers, the Duo offers the luxury of both all
+within a compact, foldable form factor.
+
+Graph facts:
+- The best Apple Cyber Monday deals of 2023: Save on AirPods, iPads, Apple Watches and more -MENTIONS-> AirPods
+- The best Apple Black Friday deals on iPads, AirPods, Apple Watches and more -MENTIONS-> AirPods
+- The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more -MENTIONS-> AirPods
+- Here are over 40 last-minute gifts you can still nab before Christmas -MENTIONS-> AirPods
+- 200+ of the best deals from Amazon's Cyber Monday sale -MENTIONS-> AirPods
+
+Entities: AirPods, iPad, Black Friday deals, Apple Watch, WIRED, phone, power bank, tablets, laptops, iPhone, Duo, 54 Best Apple Black Friday Deals (2023):
+iPad, Apple Watch, AirPods, charger
+</item 1>
+
+<item 2>
+Some of our favorite devices are on sale for Black Friday. (The Verge, 2023-11-24T15:42:21+00:00)
+A car-friendly charger
+
+Sean Hollister, senior editor
+
+Maybe someday Apple will realize that it wasn’t the brightest idea to artificially limit the reach of its MagSafe charging ecosystem and you’ll be able to plop
+your phone on a magical minimalist disc that charges it at high speeds. In the meanwhile, a standard Qi charger is about the best you’ll get — and the bulky but
+practical iOttie Easy One Touch Qi does it with the satisfying snap of springs. When you push your phone into its waiting jaws, it depresses a button that
+causes those jaws to firmly snap closed on either side of your device. When you want to remove it, you pinch a pair of levers with your finger and thumb to
+release as you grab your slab. It’s wide enough to fit practically anything on the market, save an opened Samsung Z Fold. I’ve used one for years with Android
+and Apple phones alike, including newer MagSafe handsets.
+
+Graph facts:
+- What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today -MENTIONS-> Android
+- ChatGPT’s mobile app hits record $4.58M in revenue in September -MENTIONS-> Android
+- ChatGPT: Everything you need to know about the AI-powered chatbot -MENTIONS-> Android
+- The best Black Friday deals you can get for under $25 -MENTIONS-> Android
+- More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo -MENTIONS-> Android
+
+Entities: Android, Apple, Samsung, Black Friday, Some of our favorite devices are on sale for Black Friday., Sean Hollister, MagSafe charging ecosystem,
+standard Qi charger, iOttie Easy One Touch Qi, Samsung Z Fold, The Verge
+</item 2>
+
+<item 3>
+Some of our favorite devices are on sale for Black Friday. (The Verge, 2023-11-24T15:42:21+00:00)
+But that’s just life while traveling with a dog anyway.
+
+An extension cord for awkward situations
+
+Sarah Jeong, deputy features editor
+
+Anker 321 Power Strip $ 15 $ 26 42 % off $ 15 $ 15 $ 26 42 % off This all-in-one 20W USB-C power cube boasts three AC outlets, two USB-A ports, and one USB-C
+port. $15 at Amazon
+
+Nobody wants to carry a power strip or an extension cord with them on their vacation. It’s probably unnecessary if you’re staying in relatively modern buildings
+and definitely unnecessary if you’re camping. But sometimes you want to stay in a charming historical hotel or a lovely cabin in the woods, and it’s only when
+you go to charge your devices at night that you realize that the only electrical socket in the bedroom is in the corner farthest away from the bed and there’s
+already two lamps plugged into it.
+
+Graph facts:
+- The best Black Friday deals you can get for under $25 -MENTIONS-> Black Friday
+- The best Apple Cyber Monday deals of 2023: Save on AirPods, iPads, Apple Watches and more -MENTIONS-> Black Friday
+- The best Apple Black Friday deals on iPads, AirPods, Apple Watches and more -MENTIONS-> Black Friday
+- The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more -MENTIONS-> Black Friday
+- 200+ of the best deals from Amazon's Cyber Monday sale -MENTIONS-> Black Friday
+
+Entities: Black Friday, Amazon, Some of our favorite devices are on sale for Black Friday., Sarah Jeong, Anker 321 Power Strip, The Verge
+</item 3>
+
+<item 4>
+Some of our favorite devices are on sale for Black Friday. (The Verge, 2023-11-24T15:42:21+00:00)
+Older buildings especially suffer from what I can only describe as loose socket syndrome, where those very convenient modern boxy socket extenders with five
+different USB and USB-C charging ports simply cannot stay in place and fall right out of the wall because they’re too heavy. After one (totally pleasant)
+vacation where I had to charge my phone, watch, AirPods, and laptop in a weird corner of my room with the plug-in charging hub propped up on a strategically
+balanced mountain of books and sham pillows, I bought this Anker combination extension cord / power strip. It’s not a full power strip — just a cube with a few
+sockets along with USB and USB-C charging ports at the end of a five-foot cable. I’ve brought it on a few trips since then. It takes up extra space in my
+suitcase but each time has left me feeling vindicated about the purchase.
+
+The three prongs at the end of the cable are static, rather than folding flat for easy packing.
+
+Graph facts:
+- The best Apple Cyber Monday deals of 2023: Save on AirPods, iPads, Apple Watches and more -MENTIONS-> AirPods
+- The best Apple Black Friday deals on iPads, AirPods, Apple Watches and more -MENTIONS-> AirPods
+- The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more -MENTIONS-> AirPods
+- Here are over 40 last-minute gifts you can still nab before Christmas -MENTIONS-> AirPods
+- 200+ of the best deals from Amazon's Cyber Monday sale -MENTIONS-> AirPods
+
+Entities: AirPods, Anker, Black Friday, Some of our favorite devices are on sale for Black Friday., Anker combination extension cord / power strip, The Verge
+</item 4>
+
+<item 5>
+Some of our favorite devices are on sale for Black Friday. (The Verge, 2023-11-24T15:42:21+00:00)
+Black Friday and Cyber Monday may be in the past, but some sales are still hanging around (although maybe not for long). For more leftover deals we recommend
+across all categories, be sure to check out the rest of the Cyber Monday still available here.
+
+Every month or so, we like to ask our staff about their favorite stuff — whether it’s pet toys, travel aids, kitchen gadgets, or straightforward tech. And the
+results are usually very different, very interesting, and a lot of fun.
+
+In celebration of the annual post-Thanksgiving sales, we looked through some of our recent “favorites” articles and found deals on a lot of the tech, kitchen
+tools, travel aids, and pet toys we like. We thought we’d list a few in case you’ve read about them in the past and thought, “Well, that sort of sounds good,
+but it’s a bit pricey.”
+
+Graph facts:
+- Check Point sees 'fantastic' year ahead even as rival report disappointing billings -MENTIONS-> tech
+- Tesla ‘digs its own grave with the Cybertruck,’ Convoy collapses and Rivian scores a win at Rebelle -MENTIONS-> tech
+- Shop 200+ Walmart doorbuster deals for Black Friday -MENTIONS-> tech
+- Spill toasts one year with a 2.7M seed extension, Kerry Washington and champagne -MENTIONS-> tech
+- Earnings week ahead: DocuSign, NIO, Broadcom, GameStop and more -MENTIONS-> tech
+
+Entities: tech, Black Friday, Cyber Monday, kitchen tools, travel aids, pet toys, Some of our favorite devices are on sale for Black Friday., The Verge
+</item 5>
+
+<item 6>
+78 Absolute Best October Prime Day Deals (2023) (Wired, 2023-10-10T14:23:00+00:00)
+There's even a built-in display to monitor stats like temperature and remaining battery percentage.
+
+This heavy metal brick is a good option for charging laptops and smaller gadgets. It packs 20,000 mAh and supports a wide variety of fast charging standards.
+There is one USB-C PD port rated at 65 watts, two USB-A QC ports at 30 watts apiece, and a micro-USB input (though you are best using the USB-C to recharge it).
+We haven't seen it go on sale very often.
+
+This travel kit from ESR works well if you want something that can prop your iPhone in portrait or landscape orientation. It can also display your Apple Watch
+in Nightstand mode, so you can peek and see how long before you must get out of bed. The main body folds open with a MagSafe charging pad for your iPhone and a
+slot behind for your AirPods. We have seen this dip a little lower, but this is still a solid deal.
+
+Graph facts:
+- The best Apple Cyber Monday deals of 2023: Save on AirPods, iPads, Apple Watches and more -MENTIONS-> AirPods
+- The best Apple Black Friday deals on iPads, AirPods, Apple Watches and more -MENTIONS-> AirPods
+- The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more -MENTIONS-> AirPods
+- Here are over 40 last-minute gifts you can still nab before Christmas -MENTIONS-> AirPods
+- 200+ of the best deals from Amazon's Cyber Monday sale -MENTIONS-> AirPods
+
+Entities: AirPods, Apple Watch, WIRED, October Prime Day, iPhone, heavy metal brick, MagSafe charging pad, 78 Absolute Best October Prime Day Deals (2023), ESR,
+travel kit
+</item 6>
+
+<item 7>
+Some of our favorite devices are on sale for Black Friday. (The Verge, 2023-11-24T15:42:21+00:00)
+Granted, it’s bulkier than buying one or two specialized adapter plugs, but if you’ve got a multi-continent itinerary, it’s a game-changer. What I like about
+this one from Epicka is that it comes with a spare fuse in case things go sideways with voltage.
+
+The only caveat is that, although it says “universal,” it’s technically only the four most common types of plugs. That’ll get you by in most countries, but it’s
+not a guarantee in places like Brazil, South Africa, or India. Even so, I’ll take this over price gouging at airport electronics shops or having to take time
+out of my schedule to visit a local hardware store.
+
+Lovely lights
+
+Brandon Widder, senior commerce editor
+
+I’m a big fan of ambient lighting, even when I’m 50 miles from the nearest outlet.
+
+Graph facts:
+- ChatGPT: Everything you need to know about the AI-powered chatbot -MENTIONS-> Brazil
+- Here’s how Rainforest, a budding Stripe rival, aims to win over software companies -MENTIONS-> Brazil
+- Watch Argentina vs Paraguay live stream, TV channel, lineups, betting odds for World Cup qualifying match -MENTIONS-> Brazil
+- If your startup doesn’t seem impossible at first, it’s not hard enough -MENTIONS-> Brazil
+- Taylor Swift is Time’s Person of the Year -MENTIONS-> Brazil
+
+Entities: Brazil, India, South Africa, Black Friday, Some of our favorite devices are on sale for Black Friday., Brandon Widder, Epicka, ambient lighting, The
+Verge
+</item 7>
+
+<item 8>
+41 Best Prime Day Apple Deals (2023) (Wired, 2023-10-10T22:58:00+00:00)
+It fluctuates in price very often, but it's still a good deal.
+
+Satechi's fold-up wireless charging stand has a 10,000-mAh capacity (complete with LEDs to show you how much juice you have left) and can wirelessly charge both
+your phone and a wireless earbuds case (as long as it's Qi-certified). There's also a USB-C port to power up a third device. The only gripe we have is that it's
+slow—delivering 10 watts of wireless charging power for phones (7.5 watts for iPhones), 5 watts for earbuds, and 10 watts via the USB-C port.
+
+Apple 35-Watt Dual USB-C Port Compact Power Adapter Photograph: Apple
+
+Apple's dual USB-C port power adapter is an essential accessory if you have a tendency to forget to pack chargers for your devices on the go. With two USB-C
+ports, you can use it to recharge both your iPhone and MacBook simultaneously.
+
+Graph facts:
+- 200+ of the best deals from Amazon's Cyber Monday sale -MENTIONS-> Apple
+- ASX set to drop as Wall Street’s September slump deepens -MENTIONS-> Apple
+- Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ -MENTIONS-> Apple
+- More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo -MENTIONS-> Apple
+- Apple -MENTIONS-> Apple's policy for third-party apps on its devices
+
+Entities: Apple, WIRED, MacBook, iPhone, Satechi, 41 Best Prime Day Apple Deals (2023), fold-up wireless charging stand, Apple 35-Watt Dual USB-C Port Compact
+Power Adapter, wireless earbuds case
+</item 8>
+
+<item 9>
+Some of our favorite devices are on sale for Black Friday. (The Verge, 2023-11-24T15:42:21+00:00)
+Universal travel adapter
+
+Victoria Song, senior reviewer
+
+Epicka universal travel adapter $ 20 $ 25 20 % off $ 20 $ 20 $ 25 20 % off Epicka’s universal travel adapter is an all-in-one adapter that includes four
+different plugs that cover over 150 countries. $20 at Amazon
+
+In my youth, I forgot to pack plug adapters for international trips one too many times. Buying them once you’ve landed in another country isn’t always easy,
+either. And if you’re like me, your relatives in rural Korea don’t always have more than one plug for your American devices — in which case, you’ll have to
+share with your six other cousins. Nope. Absolutely not. Which is why I never leave this country without a universal travel adapter.
+
+Basically, it’s six plug adaptors in one. Depending on which one you get, it might come with USB ports so you can charge multiple devices in one outlet.
+
+Graph facts:
+- The best Black Friday deals you can get for under $25 -MENTIONS-> Epicka universal travel adapter
+- ChatGPT: Everything you need to know about the AI-powered chatbot -MENTIONS-> Korea
+- 9 great movies to watch on Tubi for free right now -MENTIONS-> Korea
+- 10 scorching-hot discoveries made about the sun in 2023 -MENTIONS-> Korea
+- MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings -MENTIONS-> Korea
+
+Entities: Epicka universal travel adapter, Korea, Black Friday, Amazon, Victoria Song, Some of our favorite devices are on sale for Black Friday., The Verge
+</item 9>
+
+<item 10>
+78 Absolute Best October Prime Day Deals (2023) (Wired, 2023-10-10T14:23:00+00:00)
+The performance is fast, the recharging is fast. It even looks fast. It has a bright, 120-Hz AMOLED screen, great speakers, and surprisingly good battery life
+for all that. Our main gripe is the IP64 water- and dust-resistance rating, which is not nearly as good as other flagship phones.
+
+Ugreen's charger is, as the name suggests, a 145-watt charger with a 25,000-mAh battery. It's surprisingly compact for the power it provides, although at 1.1
+pounds, it's definitely not ultralight. There are two USB-C ports and one USB-A port. What sets the Ugreen apart is that you can actually draw 145 watts while
+charging. That works out to one USB-C port at 100W and the other at 45W. Very few other batteries we've tested are capable of that feat.
+
+Photograph: Anker
+
+The Anker Nano is one of our favorite portable power banks, particularly for phones.
+
+Graph facts:
+- The Israel-Hamas War Is Drowning X in Disinformation -PUBLISHED_BY-> WIRED
+- These Are Our Favorite Walmart Cyber Monday Deals -PUBLISHED_BY-> WIRED
+- Wired opinion article -PUBLISHED_BY-> WIRED
+- 14 Best Deals: TVs, Keyboards, Mice, Chargers, and Earbuds -PUBLISHED_BY-> WIRED
+- 54 Best Apple Black Friday Deals (2023): iPad, Apple Watch, AirPods -PUBLISHED_BY-> WIRED
+
+Entities: WIRED, Ugreen, Ugreen charger, Anker Nano, 78 Absolute Best October Prime Day Deals (2023), Anker
+</item 10>
+=== END ITEM id=f869f1ba96b82508 ===

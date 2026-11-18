@@ -1,0 +1,2750 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 7 items.
+
+=== ITEM id=db798ab094066a4d ===
+Gold sentences and facts:
+Sentence 0: No . Cloverway inc . title Original Japanese and Viz Media titles Episode director ( s ) Writer ( s ) Art director ( s ) Animation director ( s ) Original airdate English airdate ( United States ) 90 `` Star Struck , Bad Luck '' `` Premonition of the Apocalypse : The Mysterious New Guardians Appear '' `` Chikyū hōkai no yokan ? Nazo no shin Senshi shutsugen '' ( 地球 崩壊 の 予感 ? 謎 の 新 戦士 出現 ) Junichi Sato Sukehiro Tomita Kenichi Tajiri Masahiro Andō March 19 , 1994 June 12 , 2000 After experiencing apocalyptic visions , Rei is attacked by a powerful monster called a Daimon that Sailor Moon is unable to fight after it disables her brooch , reversing her transformation . The Daimon is defeated by a pair of mysterious new warriors , leaving the girls to despondently realize that a new conflict has begun . 91 `` Crystal Clear Again '' `` The Rod of Love Is Born : Usagi 's New Transformation '' `` Ai no roddo tanjō ! Usagi no shin henshin '' ( 愛 の ロッド 誕生 ! うさぎ の 新 変身 ) Yūji Endō Shigeru Yanagawa Yoshiyuki Shikano Katsumi Tamegai March 26 , 1994 June 13 , 2000 While Mamoru strives to cheer Usagi up after her failure in the previous battle , a young girl is the latest target of the Death Busters . Due to Usagi 's inability to transform , the under - powered Sailor Team struggles to fight off the Daimon and are once again forced to rely on the mysterious two warriors . Once they determine the girl 's pure heart is not a talisman , they leave the Sailor Team to fend for themselves . Meanwhile , Tuxedo Mask and Usagi hold hands after the latter 's refusal to escape , and through the power of their love , Usagi 's disabled Crystal Star brooch transforms into the Cosmic Heart Compact , and she gains the Spiral Heart Moon Rod and , along with it , the ability to transform and defeat the new enemy . 92 `` Driving Dangerously '' `` A Handsome Boy ? Haruka Tenoh 's Secret '' `` Suteki na bishōnen ? Ten'ō Haruka no himitsu '' ( 素敵 な 美少年 ? 天王 はるか の 秘密 ) Kunihiko Ikuhara Katsuyuki Sumisawa Kazuhisa Asai Hisashi Kagawa April 16 , 1994 June 14 , 2000 Avoiding their study group , Usagi and Minako meet Haruka Tenou , an attractive and supposedly male student of a prestigious local school , with whom they both become infatuated . After Minako is defeated in a racing game , Michiru arrives to pick up Haruka , and the two depart with Usagi and Minako soon following behind them . Once Michiru and Haruka separate at a mechanic 's shop , Usagi and Minako take this as their chance , and Haruka tells them about `` him '' - self until a Daimon arrives to attack Kameda , the shop mechanic . The Daimon starts to escape when Usagi and Minako transform into their Guardian forms to chase it down , when Uranus and Neptune arrive to investigate Kameda 's pure heart crystal . When it turns out not to be a talisman they retreat and Sailor Moon defeats the Daimon . Later , the rest of the girls are at Crown Game Center with Usagi and Minako in hopes of seeing the cute boy they 'd told them about ; Michiru arrives with a blonde girl , whom Usagi and Minako initially fail to realize is Haruka ; once they do , Minako falls to the ground in anguish , and Haruka notes that she 'd never said she was male . 93 `` Bad Harmony '' `` Usagi 's Idol : The Graceful Genius Michiru '' `` Usagi no akogare ! Yūbi no tensai Michiru '' ( うさぎ の 憧れ ! 優美 な 天才 みちる ) Hiroki Shibata Megumi Sugihara Kazuyuki Hashimoto Taichi Nakamura April 23 , 1994 June 15 , 2000 When Usagi is concerned that she is not smart enough to be with Mamoru after being scolded by the other girls , she seeks advice from Michiru Kaioh , who suggests that Usagi and Mamoru go to a violin recital . 94 `` Swept Off Her Feet '' `` Protect the Pure Heart : The Three - Way Battle '' `` Pyua na kokoro wo mamore ! Teki mikata mittsu tomoe ransen '' ( 純 な 心 を 守れ ! 敵 味方 三つ巴 乱戦 ) Noriyo Sasaki Sukehiro Tomita Kenichi Tajiri Ikuko Itō April 30 , 1994 June 16 , 2000 Usagi 's friend , Unazuki , is attacked by a Daimon and has her pure heart crystal stolen . But when Sailor Moon tries to take the crystal back to Unazuki , Uranus and Neptune attempt to steal it in order to claim the Talisman . 95 `` Blinded By Love 's Light '' `` Let Moon Help With Your Love Problems '' `` Koi no otasuke wa Mūn ni omakase '' ( 恋 の おたすけ は ムーン に おまかせ ) Harume Kosaka Shigeru Yanagawa Yoshiyuki Shikano Mari Tominaga May 7 , 1994 June 19 , 2000 Naru and Umino enter an affection contest in order to prove their strong mutual romantic love for each other , but find themselves targeted by a Daimon . 96 `` Lita Borrows Trouble '' `` Coldhearted Uranus : Makoto in Danger '' `` Reikoku na Uranusu ? Makoto no pinchi '' ( 冷酷 な ウラヌス ? まこと の ピンチ ) Kōnosuke Uda Yoji Enokido Kazuhisa Asai Masahiro Andō May 14 , 1994 June 20 , 2000 Makoto is targeted by a Daimon , but manages to temporarily evade it . Keen to analyze her pure heart crystal , Haruka befriends Makoto in order to get close to her . 97 `` Damp Spirits '' `` The Labyrinth of Water : Ami Targeted '' `` Mizu no rabarinsu ! Nerawareta Ami '' ( 水 の ラビリンス ! ねら われ た 亜美 ) Junichi Sato Megumi Sugihara Kazuyuki Hashimoto Katsumi Tamegai May 21 , 1994 June 21 , 2000 Ami 's desire to avoid competition leads her to offending Michiru inadvertently in a swimming race , as well as Usagi accidentally hurting Ami 's feelings . Meanwhile , a Daimon selects Ami as a target . 98 `` Friendly Foes '' `` To Save Our Friends : Moon and Uranus Join Forces '' `` Tomodachi wo sukue ! Mūn Uranusu rengō '' ( 友達 を 救え ! ムーン ウラヌス 連合 ) Yūji Endō Sukehiro Tomita Kenichi Tajiri Taichi Nakamura May 28 , 1994 June 22 , 2000 After Sailor Neptune is captured and possibly killed by Kaolinite , Sailor Moon and Sailor Uranus find themselves shackled together and forced to reassess their less - than - friendly attitudes toward each other in order to save Sailor Neptune from further harm . 99 `` Mixed Emotions '' `` A Man 's Kindness : Yuichiro Heartbroken by Rei '' `` Otoko no yasashisa ! Yūichirō Rei ni shitsuren ? '' ( 男 の 優し さ ! 雄一郎 レイ に 失恋 ? ) Harume Kosaka Megumi Sugihara Yoshiyuki Shikano Shinya Hasegawa June 18 , 1994 June 23 , 2000 Worried by Rei 's intensive meditation , Yuuichirou becomes concerned that she has fallen deeply head - over-heels in love for another man . When he sees her with Haruka and mistakes her for a man , Yuuichirou is convinced that `` he '' is Rei 's new romantic suitor . 100 `` Individual Happiness '' `` I Want to Quit Being a Sailor Guardian : Minako 's Dilemma '' `` Sērā Senshi wo yametai ! ? Minako no nayami '' ( S 戦士 を 辞め たい ! ? 美奈子 の 悩み ) Hiroki Shibata Yoji Enokido Kazuhisa Asai Mari Tominaga June 25 , 1994 June 26 , 2000 Minako is despondent about her double life of being a Sailor Guardian and a normal girl . Meanwhile , an old friend of hers , who she once fell in love with , is attacked by a Daimon , and Minako , as Sailor Venus , must use her skills of volleyball to save him . 101 `` Birthday Blues , Part 1 '' `` Usagi in Tears : a Glass Slipper for My Birthday '' `` Usagi namida ! Tanjōbi ni garasu no kutsu wo '' ( うさぎ 涙 ! 誕生 日 に ガラス の 靴 を ) Yūji Endō Katsuyuki Sumisawa Kazuyuki Hashimoto Masahiro Andō July 2 , 1994 June 27 , 2000 Usagi is furious when Mamoru forgets her 15th birthday . When Mamoru buys her an expensive pair of glass slippers to make up for it , he fails to realize that Kaolinite sabotaged the shoes with a Daimon egg to steal her pure heart crystal . To make matters worse , Kaolinite steals Usagi 's Cosmic Heart Compact leaving her unable to transform , and Tuxedo Mask gets captured . 102 `` Birthday Blues , Part Two '' `` The Stolen Pure Heart : Usagi 's Crisis '' `` Ubawareta pyua na kokoro ! Usagi zettai zetsumei '' ( 奪 われ た 純 な 心 ! うさぎ 絶 体 絶命 ) Noriyo Sasaki Katsuyuki Sumisawa Kenichi Tajiri Taichi Nakamura July 16 , 1994 June 28 , 2000 With the Cosmic Heart Compact stolen and Tuxedo Mask kidnapped , Usagi and the four other Sailor Guardians , along with Sailors Uranus and Neptune , go to retake the compact so Usagi can become Sailor Moon again , rescue Tuxedo Mask and face Kaolinite in a final showdown at Tokyo Tower . 103 `` Hello , Sailor Mini Moon '' `` The Arrival of a Tiny Pretty Guardian '' `` Yatte kita chiccha na Bishōjo Senshi '' ( やって来 た ちっちゃな 美 少女 戦士 ) Kunihiko Ikuhara Shigeru Yanagawa Yoshiyuki Shikano Kazuya Kuroda August 6 , 1994 June 29 , 2000 Eudial , and the Witches 5 are tasked to take over from Kaolinite 's position , in which they target a genius drummer recruited to play at a festival for Rei . The Sailor Guardians can not defeat the Daimon who attacks her , but Chibiusa arrives as the Guardians ' newest ally , Sailor Chibi - Moon . 104 `` Tainted Tea Party '' `` Making New Friends : Chibi Moon 's Adventure '' `` Tomodachi wo motomete ! Chibi Mūn no katsuyaku '' ( 友達 を 求め て ! ちび ムーン の 活躍 ) Junichi Sato Megumi Sugihara Kazuhisa Asai Ikuko Itō August 20 , 1994 June 30 , 2000 Chibiusa , who has returned from Crystal Tokyo for further training , attempts to adapt to her new home by making friends her age . She tries to befriend a master who does tea ceremonies , only to become the Death Busters ' latest target . 105 `` People Who Need People '' `` I Want Power : Mako Lost in Doubt '' `` Pawā ga hoshī ! Mako - chan no mayoi michi '' ( 力 が 欲しい ! まこ ちゃん の 迷い 道 ) Hiroki Shibata Shigeru Yanagawa Yoshiyuki Shikano Mari Tominaga August 27 , 1994 July 3 , 2000 Makoto is training in the mountains , trying to become much stronger after being easily defeated by a Daimon before . Her trainer is attacked , and tells her that nobody can live alone . She attacks the Daimon , fails , and realizes she needs her best friends in order to win . 106 `` Related By Destiny '' `` The Bond of Destiny : Uranus 's Distant Past '' `` Unmei no kizuna ! Uranusu no tōi hi '' ( 運命 の きずな ! ウラヌス の 遠い 日 ) Takuya Igarashi Yoji Enokido Kenichi Tajiri Katsumi Tamegai September 3 , 1994 July 4 , 2000 Haruka remembers the past when she first met Michiru , who told her that she was destined to become Sailor Uranus . Haruka initially refused that destiny , for she loved her life too much and was afraid of change . Haruka was attacked , and Sailor Neptune was injured while defending her . In her anguish , Haruka took the transformation pen and accepted her destiny as Sailor Uranus , the Sailor Guardian of the Sky . 107 `` Art Appreciation '' `` Art Is an Explosion of Love : Chibiusa 's First Love '' `` Geijutsu wa ai no bakuhatsu ! Chibiusa no hatsukoi '' ( 芸術 は 愛 の 爆発 ! ちびうさ の 初恋 ) Yūji Endō Katsuyuki Sumisawa Minoru Ōkōchi Taichi Nakamura September 10 , 1994 July 5 , 2000 Chibiusa meets a boy named Masanori at her art class and develops a crush on him . Unfortunately , he already has a crush on Michiru , who is taking a class at that school as well . When a Daimon attacks Masanori , Chibiusa must take a stand to protect him . 108 `` Everything 's Coming Up Rosey '' `` Usagi Dancing to the Waltz '' `` Usagi no dansu wa warutsu ni notte '' ( うさぎ の ダンス は ワルツ に 乗っ て ) Harume Kosaka Megumi Sugihara Kazuhisa Asai Masahiro Andō September 17 , 1994 July 6 , 2000 An English gentleman named Edwards invites Mamoru and the girls to a fancy party , where Usagi accidentally becomes drunk and the team is forced to confront a fashionable Eudial and her latest Daimon . 109 `` No Turning Back '' `` The Shocking Moment : Everyone 's Identities Revealed '' `` Shōgeki no toki ! Akasareta tagai no shōtai '' ( 衝撃 の 刻 ! 明か され た 互い の 正体 ) Junichi Sato Sukehiro Tomita Yoshiyuki Shikano Kazuya Kuroda September 24 , 1994 July 7 , 2000 Minako becomes jealous that a Daimon has not yet attacked her , and she fears that she does not have a pure heart . After doing as many `` pure '' things as she can , she is attacked , and her pure heart is taken from her . When Eudial nearly gets away , Usagi is forced to reveal her identity to Haruka & Michiru , who in turn , reveal their identities as Sailors Uranus and Neptune to Sailor Moon . 110 `` Destiny 's Arrival '' `` The Death of Uranus and Neptune : The Talisman Appear '' `` Uranusu - tachi no shi ? Tarisuman shutsugen '' ( ウラヌス 達 の 死 ? タリスマン 出現 ) Kunihiko Ikuhara Yoji Enokido Kenichi Tajiri Mari Tominaga October 15 , 1994 July 10 , 2000 Faced with losing her position at Witches 5 , Eudial creates a computer program to find the true owners of the three Talismans , and learns that Haruka and Michiru are the ones who hold two of the Talismans within their own hearts ! They take away Usagi 's brooch , and follow Eudial onto a lonely island . However , the invitation turns out to be a trick , and Michiru 's pure heart is taken , which turns into the mystical Deep Aqua Mirror . Haruka , in order to release her own talisman , shoots herself with Eudial 's gun . Her pure heart transforms into the mystical Space Sword . 111 `` The Purity Chalice '' `` The Holy Grail 's Mystical Power : Moon 's Double Transformation '' `` Seihai no shinpi na chikara ! Mūn nidan henshin '' ( 聖杯 の 神秘 な 力 ! ムーン 二 段 変身 ) Hiroki Shibata Sukehiro Tomita Kazuyuki Hashimoto Ikuko Itō October 22 , 1994 July 11 , 2000 Sailor Pluto appears and reawakens Sailors Uranus and Neptune , and the three talismans resonate with each other ( the third and last being Sailor Pluto 's Garnet Orb ) . The Holy Grail appears , and Sailor Moon grabs it and evolves into Super Sailor Moon , who drives Eudial out . Mimete then kills Eudial by sabotaging her car with snails . 112 `` Show Stoppers '' `` Who is the True Messiah ? Chaos of Light and Darkness '' `` Shin no kyūseishu wa dare ? Hikari to kage no kaosu '' ( 真 の 救世主 は 誰 ? 光 と 影 の カオス ) Noriyo Sasaki Shigeru Yanagawa Minoru Ōkōchi Shinya Hasegawa November 5 , 1994 July 12 , 2000 The girls end up watching the filming of a movie , where Chibiusa encounters Hotaru , whom she quickly befriends . But in the end , she is revealed to be the 12 - year - old daughter of Professor Souichi Tomoe , the possessed leader of the Death Busters . Super Sailor Moon uses her new `` Rainbow Moon Heartache '' attack to defeat the Daimon of the day . 113 `` Rini 's Risky Friendship '' `` A House Filled With Evil Presence : The Beautiful Hotaru 's Secret '' `` Yōki tadayou ie ! Bishōjo Hotaru no himitsu '' ( 妖気 漂う 家 ! 美 少女 ほたる の 秘密 ) Kōnosuke Uda Megumi Sugihara Kenichi Tajiri Taichi Nakamura November 12 , 1994 July 13 , 2000 The three Outer Guardians appear to Tuxedo Mask , and tell him why they can not fight alongside Sailor Moon and the other four Sailor Guardians . Usagi and Chibiusa visit Hotaru , and see a woman who looks like Kaolinite . The Messiah of Silence appears demanding pure hearts . 114 `` Mimet 's Mess '' `` I Love Idols : Mimete 's Dilemma '' `` Aidoru daisuki ! Nayameru Mimetto '' ( アイドル 大好き ! 悩め る ミメット ) Harume Kosaka Yoji Enokido Yoshiyuki Shikano Masahiro Andō November 19 , 1994 July 14 , 2000 Minako and Mimete enter a beauty contest at the same time , with Mimete willing to risk it all to obtain victory . Both fall short of the needed votes to win the idol position , and Mimete decides to just go back to her evil ways . 115 `` The Shadow of Silence '' `` Shadow of Silence : The Pale Glimmer of a Firefly '' `` Chinmoku no kage ! ? Awaki Hotaru hi no yurameki '' ( 沈黙 の 影 ! ? あ わき 蛍火 の ゆらめき ) Takuya Igarashi Yoji Enokido Kenichi Tajiri Katsumi Tamegai November 26 , 1994 July 17 , 2000 Hotaru overexerts herself , and is hospitalized , during which her past without friends is shown , and the reasons for it . Meanwhile , Mimete targets a soap opera actor , during which the attacking Daimon runs near Hotaru , who glows and completely freezes the Daimon . 116 `` Thorny Weather '' `` Sunny Skies After a Storm : A Friendship Dedicated to Hotaru '' `` Arashi nochi hare ! Hotaru ni sasageru yūjō '' ( 嵐 のち 晴れ ! ほたる に 捧げる 友情 ) Yūji Endō Megumi Sugihara Kazuhisa Asai Jouji Yanase December 3 , 1994 July 18 , 2000 Mamoru takes Usagi , Chibiusa and Hotaru to a botanical garden that is tended by Yoshiki Kurebayashi , an old classmate of his . While there , Mimete targets Yoshiki 's pure heart and causes a storm that puts the plants at risk . Sailor Moon defeats the accompanying Daimon , U-Bara . 117 `` Heightened Hazard '' `` Higher and Stronger : A Cheer from Usagi '' `` Yori takaku yori tsuyoku ! Usagi no ōen '' ( より 高く より 強く ! うさぎ の 応援 ) Kunihiko Ikuhara Shigeru Yanagawa Minoru Ōkōchi Taichi Nakamura December 10 , 1994 July 19 , 2000 Hotaru wishes to give a letter to Shun Hayase , a famous athlete . He becomes targeted when she goes to give it to him , and she possessively blasts the enemy with a hugely strong amount of energy . She talks to Shun about being frail and weak , and he thanks her for talking to him . 118 `` It 's In The Cards '' `` The Battle Inside the Demonic Space : The Sailor Guardians ' Gamble '' `` Makū no tatakai ! Sērā Senshi no kake '' ( 魔 空 の 戦い ! セーラー 戦士 の 賭け ) Noriyo Sasaki Katsuyuki Sumisawa Kenichi Tajiri Masahide Yanagisawa December 17 , 1994 July 20 , 2000 Mimete attempts to create a Daimon by herself , throwing the entire Tomoe house into another dimension . The Guardians enter the dimension and are defeated by a game - master Daimon named U-Ikasaman . Hotaru manages to assist in her defeat by the use of a bluff . 119 `` Goodness Eclipsed '' `` The Messiah of Silence Awakens ? Stars of Destiny '' `` Chinmoku no Meshia kakusei ? Unmei no hoshiboshi '' ( 沈黙 の メシア の 覚せい ? 運命 の 星々 ) Harume Kosaka Yoji Enokido Kazuhisa Asai Shinya Hasegawa December 24 , 1994 September 13 , 2000 The Sailor Guardians visit a planetarium , where a man is attacked by a Daimon . The symbol of Saturn appears on Hotaru 's forehead , and she attacks the Daimon . However , Sailor Uranus , Neptune , and Pluto attack Hotaru , since she is both Sailor Saturn , the Sailor Guardian of Silence , Ruin and Birth , and also possessed by the Messiah of Silence . Super Sailor Moon takes the blow to protect Hotaru . 120 `` Next In Line '' `` An Invasion from an Another Dimension : Mystery of Infinity Academy '' `` Ijigen kara no shinryaku ! Mugen Gakuen no nazo '' ( 異 次元 から の 侵略 ! 無限 学園 の 謎 ) Kōnosuke Uda Megumi Sugihara Minoru Ōkōchi Katsumi Tamegai January 7 , 1995 July 21 , 2000 Chibiusa goes to Hotaru 's house to find that Hotaru has disappeared , and is devastated about it . At the same time , the Sailor Guardians investigate Infinity Academy , where Mimete tries one final time to defeat them before Tellu literally pulls the plug on her operation . 121 `` Fiendish Ferns '' `` A Bewitching Flower That Steals Hearts : Tellu , the Third Witch '' `` Kokoro wo ubau yōka ! Daisan no majō Teruru '' ( 心 を 奪う 妖花 ! 第 三 の 魔女 テルル ) Takuya Igarashi Shigeru Yanagawa Kazuyuki Hashimoto Taichi Nakamura January 14 , 1995 July 24 , 2000 Tellu develops a new plan to steal pure hearts , using a plant bred for that purpose . Setsuna realizes it is an alien plant made to steal pure hearts , and warns the Sailor Guardians . Tuxedo Mask causes a mutated plant to destroy Tellu , leading to them tracing her back to the mysterious Infinity Academy . 122 `` The Science Of Love '' `` Believe in Love : Ami , the Kindhearted Guardian '' `` Ai wo shinjite ! Ami , kokoro yasashiki Senshi '' ( 愛 を 信じ て ! 亜美 心 優しき 戦士 ) Yūji Endō Sukehiro Tomita Kenichi Tajiri Hideyuki Motohashi January 21 , 1995 July 25 , 2000 Ami investigates the Infinity Academy , where she meets Viluy , the fourth of the Witches 5 . Viluy attempts to use her nanorobots to steal pure hearts from entrance exam takers . But after her battle , her own microscopic robots turn against her , destroying her in the process . 123 `` Wake Up Call '' `` Shadows of Destruction : the Messiah of Silence Awakens '' `` Hametsu no kage ! Chinmoku no Meshia no mezame '' ( 破滅 の 影 ! 沈黙 の メシア の 目覚め ) Harume Kosaka Megumi Sugihara Minoru Ōkōchi Mari Tominaga January 28 , 1995 July 26 , 2000 The last of the Witches 5 , Cyprine steals pure hearts from Infinity Academy students , and the Sailor Guardians engage Cyprine , and her alter - ego , Ptilol , in a showdown . Meanwhile , Chibiusa is abducted by the recently resurrected Kaolinite , and her pure heart is stolen by Mistress 9 , having taken over Hotaru 's body , which allows her to awaken as the Messiah of Silence . 124 `` Who 's Really Who ? '' `` The Coming Terror of Darkness : Struggle of the Eight Guardians '' `` Semari kuru yami no kyōfu ! Kusen no Hassenshi '' ( 迫り 来る 闇 の 恐怖 ! 苦戦 の 8 戦士 ) Takuya Igarashi Yoji Enokido Kazuyuki Hashimoto Ikuko Itō February 4 , 1995 July 28 , 2000 Mistress 9 uses all remaining Daimon eggs to create a powerful energized shield of evil minions around Infinity Academy . Sailor Moon is abducted , as she is the holder of the Holy Grail . After witnessing Sailor Pluto ultimately sacrificing herself to save them by using her forbidden ability to stop time , Sailor Uranus and Sailor Neptune destroy Germatoid , the Daimon possessing Professor Souichi Tomoe with their talismans , the Deep Aqua Mirror and the Space Sword . 125 `` Darkness , My Old Friend '' `` The Shining Shooting Star : Saturn and the Messiah '' `` Kagayaku ryūsei ! Satān soshite kyūseishu '' ( 輝く 流星 ! サターン そして 救世主 ) Kōnosuke Uda Yoji Enokido Kenichi Tajiri Ikuko Itō February 11 , 1995 July 29 , 2000 Sailor Moon is tricked into giving Mistress 9 the Holy Grail , which she uses to summon Pharaoh 90 to Earth . Hotaru regains consciousness with the assistance of Sailor Moon and her father , destroying Mistress 9 and fully awakening the spirit of Sailor Saturn within herself at last . Sailor Saturn herself returns Chibiusa 's pure heart crystal , and then appears before Sailor Moon to ultimately sacrifice herself and destroy Pharaoh 90 once and for all with her destructive powers , but Sailor Moon gains the help of the other six Sailor Guardians to become Super Sailor Moon once more , and save both Hotaru and Sailor Saturn , who is reborn as a baby immediately afterward . 126 `` Second Chance '' `` A New Life : Parting of the Stars of Destiny '' `` Atarashiki seimei ! Unmei no hoshiboshi betsuri no toki '' ( 新しき 生命 ! 運命 の 星々 別離 の 時 ) Yūji Endō Megumi Sugihara Kazuhisa Asai Taichi Nakamura February 18 , 1995 July 30 , 2000 Haruka and Michiru give the newly reborn infant Hotaru to a still - healing Professor Souichi Tomoe , who is finally free of the Death Busters . However , they viciously attack Sailor Moon , for she protected Hotaru 's body and Sailor Saturn , and risked the whole entire world for one mere life . The Silver Crystal throws them back , and they kneel to her as their leader and leave the city . 127 `` Tough Kindness '' `` A Guardian 's Realization : Strength Lies Within a Pure Heart '' `` Senshi no Jikaku ! Tsuyosa wa Pyua na Kokoro no Naka ni '' ( 戦士 の 自覚 ! 強 さ は 純 な 心 の 中 に ) Harume Kosaka Sukehiro Tomita February 25 , 1995 August 1 , 2000 Chibiusa returns to the future after receiving a letter from her mother , Neo-Queen Serenity . Meanwhile , a final Daimon emerges from the rubble of Infinity Academy , and Chibiusa returns just in time to help defeat it .
+  Fact 0.0: The table columns are No., Cloverway Inc. title, original Japanese and Viz Media titles, episode director(s), writer(s), art director(s), animation director(s), original airdate, and English airdate in the United States.
+  Fact 0.1: Episode 90 has the Cloverway Inc. title 'Star Struck, Bad Luck', the Viz Media title 'Premonition of the Apocalypse: The Mysterious New Guardians Appear', and the original Japanese title romanized as 'Chikyū hōkai no yokan? Nazo no shin Senshi shutsugen'.
+  Fact 0.2: Episode 90 was directed by Junichi Sato, written by Sukehiro Tomita, art directed by Kenichi Tajiri, and animation directed by Masahiro Andō. It originally aired on March 19, 1994 and aired in English in the United States on June 12, 2000.
+  Fact 0.3: After experiencing apocalyptic visions, Rei is attacked by a powerful monster called a Daimon.
+  Fact 0.4: Sailor Moon is unable to fight the Daimon after it disables her brooch, which reverses her transformation.
+  Fact 0.5: The Daimon is defeated by a pair of mysterious new warriors.
+  Fact 0.6: The girls despondently realize that a new conflict has begun.
+  Fact 0.7: Episode 91 has the Cloverway Inc. title 'Crystal Clear Again', the Viz Media title 'The Rod of Love Is Born: Usagi's New Transformation', and the original Japanese title romanized as 'Ai no roddo tanjō! Usagi no shin henshin'.
+  Fact 0.8: Episode 91 was directed by Yūji Endō, written by Shigeru Yanagawa, art directed by Yoshiyuki Shikano, and animation directed by Katsumi Tamegai. It originally aired on March 26, 1994 and aired in English in the United States on June 13, 2000.
+  Fact 0.9: While Mamoru strives to cheer Usagi up after her failure in the previous battle, a young girl is the latest target of the Death Busters.
+  Fact 0.10: Due to Usagi's inability to transform, the under-powered Sailor Team struggles to fight off the Daimon and is once again forced to rely on the mysterious two warriors.
+  Fact 0.11: Once the Sailor Team determines the girl's pure heart is not a talisman, they leave the Sailor Team to fend for themselves.
+  Fact 0.12: Tuxedo Mask and Usagi hold hands after the latter's refusal to escape.
+  Fact 0.13: Through the power of their love, Usagi's disabled Crystal Star brooch transforms into the Cosmic Heart Compact.
+  Fact 0.14: Usagi gains the Spiral Heart Moon Rod and, along with it, the ability to transform and defeat the new enemy.
+  Fact 0.15: Episode 92 has the Cloverway Inc. title 'Driving Dangerously', the Viz Media title 'A Handsome Boy? Haruka Tenoh's Secret', and the original Japanese title romanized as 'Suteki na bishōnen? Ten'ō Haruka no himitsu'.
+  Fact 0.16: Episode 92 was directed by Kunihiko Ikuhara, written by Katsuyuki Sumisawa, art directed by Kazuhisa Asai, and animation directed by Hisashi Kagawa. It originally aired on April 16, 1994 and aired in English in the United States on June 14, 2000.
+  Fact 0.17: Avoiding their study group, Usagi and Minako meet Haruka Tenou, an attractive and supposedly male student of a prestigious local school.
+  Fact 0.18: Usagi and Minako both become infatuated with Haruka.
+  Fact 0.19: After Minako is defeated in a racing game, Michiru arrives to pick up Haruka.
+  Fact 0.20: Michiru and Haruka depart, with Usagi and Minako following behind them soon after.
+  Fact 0.21: Once Michiru and Haruka separate at a mechanic's shop, Usagi and Minako take this as their chance.
+  Fact 0.22: Haruka tells Usagi and Minako about 'him'-self until a Daimon arrives to attack Kameda, the shop mechanic.
+  Fact 0.23: The Daimon starts to escape when Usagi and Minako transform into their Guardian forms to chase it down.
+  Fact 0.24: Uranus and Neptune arrive to investigate Kameda's pure heart crystal.
+  Fact 0.25: When the crystal turns out not to be a talisman, Uranus and Neptune retreat.
+  Fact 0.26: Sailor Moon defeats the Daimon.
+  Fact 0.27: Later, the rest of the girls are at Crown Game Center with Usagi and Minako in hopes of seeing the cute boy they had told them about.
+  Fact 0.28: Michiru arrives with a blonde girl, whom Usagi and Minako initially fail to realize is Haruka.
+  Fact 0.29: Once Usagi and Minako realize the blonde girl is Haruka, Minako falls to the ground in anguish.
+  Fact 0.30: Haruka notes that she had never said she was male.
+  Fact 0.31: Episode 93 has the Cloverway Inc. title 'Bad Harmony', the Viz Media title 'Usagi's Idol: The Graceful Genius Michiru', and the original Japanese title romanized as 'Usagi no akogare! Yūbi no tensai Michiru'.
+  Fact 0.32: Episode 93 was directed by Hiroki Shibata, written by Megumi Sugihara, art directed by Kazuyuki Hashimoto, and animation directed by Taichi Nakamura. It originally aired on April 23, 1994 and aired in English in the United States on June 15, 2000.
+  Fact 0.33: When Usagi is concerned that she is not smart enough to be with Mamoru after being scolded by the other girls, she seeks advice from Michiru Kaioh.
+  Fact 0.34: Michiru Kaioh suggests that Usagi and Mamoru go to a violin recital.
+  Fact 0.35: Episode 94 has the Cloverway Inc. title 'Swept Off Her Feet', the Viz Media title 'Protect the Pure Heart: The Three-Way Battle', and the original Japanese title romanized as 'Pyua na kokoro wo mamore! Teki mikata mittsu tomoe ransen'.
+  Fact 0.36: Episode 94 was directed by Noriyo Sasaki, written by Sukehiro Tomita, art directed by Kenichi Tajiri, and animation directed by Ikuko Itō. It originally aired on April 30, 1994 and aired in English in the United States on June 16, 2000.
+  Fact 0.37: Usagi's friend, Unazuki, is attacked by a Daimon and has her pure heart crystal stolen.
+  Fact 0.38: When Sailor Moon tries to take the crystal back to Unazuki, Uranus and Neptune attempt to steal it in order to claim the Talisman.
+  Fact 0.39: Episode 95 has the Cloverway Inc. title 'Blinded By Love's Light', the Viz Media title 'Let Moon Help With Your Love Problems', and the original Japanese title romanized as 'Koi no otasuke wa Mūn ni omakase'.
+  Fact 0.40: Episode 95 was directed by Harume Kosaka, written by Shigeru Yanagawa, art directed by Yoshiyuki Shikano, and animation directed by Mari Tominaga. It originally aired on May 7, 1994 and aired in English in the United States on June 19, 2000.
+  Fact 0.41: Naru and Umino enter an affection contest in order to prove their strong mutual romantic love for each other.
+  Fact 0.42: Naru and Umino find themselves targeted by a Daimon.
+  Fact 0.43: Episode 96 has the Cloverway Inc. title 'Lita Borrows Trouble', the Viz Media title 'Coldhearted Uranus: Makoto in Danger', and the original Japanese title romanized as 'Reikoku na Uranusu? Makoto no pinchi'.
+  Fact 0.44: Episode 96 was directed by Kōnosuke Uda, written by Yoji Enokido, art directed by Kazuhisa Asai, and animation directed by Masahiro Andō. It originally aired on May 14, 1994 and aired in English in the United States on June 20, 2000.
+  Fact 0.45: Makoto is targeted by a Daimon, but manages to temporarily evade it.
+  Fact 0.46: Haruka wants to analyze Makoto's pure heart crystal, and befriends Makoto in order to get close to her.
+  Fact 0.47: Episode 97 has the Cloverway Inc. title 'Damp Spirits', the Viz Media title 'The Labyrinth of Water: Ami Targeted', and the original Japanese title romanized as 'Mizu no rabarinsu! Nerawareta Ami'.
+  Fact 0.48: Episode 97 was directed by Junichi Sato, written by Megumi Sugihara, art directed by Kazuyuki Hashimoto, and animation directed by Katsumi Tamegai. It originally aired on May 21, 1994 and aired in English in the United States on June 21, 2000.
+  Fact 0.49: Ami's desire to avoid competition leads her to inadvertently offend Michiru in a swimming race.
+  Fact 0.50: Usagi accidentally hurts Ami's feelings.
+  Fact 0.51: Meanwhile, a Daimon selects Ami as a target.
+  Fact 0.52: Episode 98 has the Cloverway Inc. title 'Friendly Foes', the Viz Media title 'To Save Our Friends: Moon and Uranus Join Forces', and the original Japanese title romanized as 'Tomodachi wo sukue! Mūn Uranusu rengō'.
+  Fact 0.53: Episode 98 was directed by Yūji Endō, written by Sukehiro Tomita, art directed by Kenichi Tajiri, and animation directed by Taichi Nakamura. It originally aired on May 28, 1994 and aired in English in the United States on June 22, 2000.
+  Fact 0.54: After Sailor Neptune is captured and possibly killed by Kaolinite, Sailor Moon and Sailor Uranus find themselves shackled together.
+  Fact 0.55: Sailor Moon and Sailor Uranus are forced to reassess their less-than-friendly attitudes toward each other in order to save Sailor Neptune from further harm.
+  Fact 0.56: Episode 99 has the Cloverway Inc. title 'Mixed Emotions', the Viz Media title 'A Man's Kindness: Yuichiro Heartbroken by Rei', and the original Japanese title romanized as 'Otoko no yasashisa! Yūichirō Rei ni shitsuren?'.
+  Fact 0.57: Episode 99 was directed by Harume Kosaka, written by Megumi Sugihara, art directed by Yoshiyuki Shikano, and animation directed by Shinya Hasegawa. It originally aired on June 18, 1994 and aired in English in the United States on June 23, 2000.
+  Fact 0.58: Worried by Rei's intensive meditation, Yuuichirou becomes concerned that she has fallen deeply head-over-heels in love for another man.
+  Fact 0.59: When Yuuichirou sees Rei with Haruka and mistakes Haruka for a man, he is convinced that 'he' is Rei's new romantic suitor.
+  Fact 0.60: Episode 100 has the Cloverway Inc. title 'Individual Happiness', the Viz Media title 'I Want to Quit Being a Sailor Guardian: Minako's Dilemma', and the original Japanese title romanized as 'Sērā Senshi wo yametai!? Minako no nayami'.
+  Fact 0.61: Episode 100 was directed by Hiroki Shibata, written by Yoji Enokido, art directed by Kazuhisa Asai, and animation directed by Mari Tominaga. It originally aired on June 25, 1994 and aired in English in the United States on June 26, 2000.
+  Fact 0.62: Minako is despondent about her double life of being a Sailor Guardian and a normal girl.
+  Fact 0.63: Meanwhile, an old friend of Minako's, who she once fell in love with, is attacked by a Daimon.
+  Fact 0.64: Minako, as Sailor Venus, must use her skills of volleyball to save the old friend.
+  Fact 0.65: Episode 101 has the Cloverway Inc. title 'Birthday Blues, Part 1', the Viz Media title 'Usagi in Tears: a Glass Slipper for My Birthday', and the original Japanese title romanized as 'Usagi namida! Tanjōbi ni garasu no kutsu wo'.
+  Fact 0.66: Episode 101 was directed by Yūji Endō, written by Katsuyuki Sumisawa, art directed by Kazuyuki Hashimoto, and animation directed by Masahiro Andō. It originally aired on July 2, 1994 and aired in English in the United States on June 27, 2000.
+  Fact 0.67: Usagi is furious when Mamoru forgets her 15th birthday.
+  Fact 0.68: When Mamoru buys her an expensive pair of glass slippers to make up for it, he fails to realize that Kaolinite sabotaged the shoes with a Daimon egg to steal her pure heart crystal.
+  Fact 0.69: Kaolinite steals Usagi's Cosmic Heart Compact, leaving her unable to transform.
+  Fact 0.70: Tuxedo Mask gets captured.
+  Fact 0.71: Episode 102 has the Cloverway Inc. title 'Birthday Blues, Part Two', the Viz Media title 'The Stolen Pure Heart: Usagi's Crisis', and the original Japanese title romanized as 'Ubawareta pyua na kokoro! Usagi zettai zetsumei'.
+  Fact 0.72: Episode 102 was directed by Noriyo Sasaki, written by Katsuyuki Sumisawa, art directed by Kenichi Tajiri, and animation directed by Taichi Nakamura. It originally aired on July 16, 1994 and aired in English in the United States on June 28, 2000.
+  Fact 0.73: With the Cosmic Heart Compact stolen and Tuxedo Mask kidnapped, Usagi and the four other Sailor Guardians, along with Sailors Uranus and Neptune, go to retake the compact.
+  Fact 0.74: They go to retake the compact so Usagi can become Sailor Moon again and rescue Tuxedo Mask.
+  Fact 0.75: They face Kaolinite in a final showdown at Tokyo Tower.
+  Fact 0.76: Episode 103 has the Cloverway Inc. title 'Hello, Sailor Mini Moon', the Viz Media title 'The Arrival of a Tiny Pretty Guardian', and the original Japanese title romanized as 'Yatte kita chiccha na Bishōjo Senshi'.
+  Fact 0.77: Episode 103 was directed by Kunihiko Ikuhara, written by Shigeru Yanagawa, art directed by Yoshiyuki Shikano, and animation directed by Kazuya Kuroda. It originally aired on August 6, 1994 and aired in English in the United States on June 29, 2000.
+  Fact 0.78: Eudial and the Witches 5 are tasked to take over from Kaolinite's position.
+  Fact 0.79: The Witches 5 target a genius drummer recruited to play at a festival for Rei.
+  Fact 0.80: The Sailor Guardians cannot defeat the Daimon who attacks the drummer.
+  Fact 0.81: Chibiusa arrives as the Guardians' newest ally, Sailor Chibi-Moon.
+  Fact 0.82: Episode 104 has the Cloverway Inc. title 'Tainted Tea Party', the Viz Media title 'Making New Friends: Chibi Moon's Adventure', and the original Japanese title romanized as 'Tomodachi wo motomete! Chibi Mūn no katsuyaku'.
+  Fact 0.83: Episode 104 was directed by Junichi Sato, written by Megumi Sugihara, art directed by Kazuhisa Asai, and animation directed by Ikuko Itō. It originally aired on August 20, 1994 and aired in English in the United States on June 30, 2000.
+  Fact 0.84: Chibiusa has returned from Crystal Tokyo for further training.
+  Fact 0.85: Chibiusa attempts to adapt to her new home by making friends her age.
+  Fact 0.86: Chibiusa tries to befriend a master who does tea ceremonies, only to become the Death Busters' latest target.
+  Fact 0.87: Episode 105 has the Cloverway Inc. title 'People Who Need People', the Viz Media title 'I Want Power: Mako Lost in Doubt', and the original Japanese title romanized as 'Pawā ga hoshī! Mako-chan no mayoi michi'.
+  Fact 0.88: Episode 105 was directed by Hiroki Shibata, written by Shigeru Yanagawa, art directed by Yoshiyuki Shikano, and animation directed by Mari Tominaga. It originally aired on August 27, 1994 and aired in English in the United States on July 3, 2000.
+  Fact 0.89: Makoto is training in the mountains, trying to become much stronger after being easily defeated by a Daimon before.
+  Fact 0.90: Makoto's trainer is attacked, and tells her that nobody can live alone.
+  Fact 0.91: Makoto attacks the Daimon and fails, and realizes she needs her best friends in order to win.
+  Fact 0.92: Episode 106 has the Cloverway Inc. title 'Related By Destiny', the Viz Media title 'The Bond of Destiny: Uranus's Distant Past', and the original Japanese title romanized as 'Unmei no kizuna! Uranusu no tōi hi'.
+  Fact 0.93: Episode 106 was directed by Takuya Igarashi, written by Yoji Enokido, art directed by Kenichi Tajiri, and animation directed by Katsumi Tamegai. It originally aired on September 3, 1994 and aired in English in the United States on July 4, 2000.
+  Fact 0.94: Haruka remembers the past when she first met Michiru, who told her that she was destined to become Sailor Uranus.
+  Fact 0.95: Haruka initially refused that destiny, for she loved her life too much and was afraid of change.
+  Fact 0.96: Haruka was attacked, and Sailor Neptune was injured while defending her.
+  Fact 0.97: In her anguish, Haruka took the transformation pen and accepted her destiny as Sailor Uranus, the Sailor Guardian of the Sky.
+  Fact 0.98: Episode 107 has the Cloverway Inc. title 'Art Appreciation', the Viz Media title 'Art Is an Explosion of Love: Chibiusa's First Love', and the original Japanese title romanized as 'Geijutsu wa ai no bakuhatsu! Chibiusa no hatsukoi'.
+  Fact 0.99: Episode 107 was directed by Yūji Endō, written by Katsuyuki Sumisawa, art directed by Minoru Ōkōchi, and animation directed by Taichi Nakamura. It originally aired on September 10, 1994 and aired in English in the United States on July 5, 2000.
+  Fact 0.100: Chibiusa meets a boy named Masanori at her art class and develops a crush on him.
+  Fact 0.101: Masanori already has a crush on Michiru, who is taking a class at that school as well.
+  Fact 0.102: When a Daimon attacks Masanori, Chibiusa must take a stand to protect him.
+  Fact 0.103: Episode 108 has the Cloverway Inc. title 'Everything's Coming Up Rosey', the Viz Media title 'Usagi Dancing to the Waltz', and the original Japanese title romanized as 'Usagi no dansu wa warutsu ni notte'.
+  Fact 0.104: Episode 108 was directed by Harume Kosaka, written by Megumi Sugihara, art directed by Kazuhisa Asai, and animation directed by Masahiro Andō. It originally aired on September 17, 1994 and aired in English in the United States on July 6, 2000.
+  Fact 0.105: An English gentleman named Edwards invites Mamoru and the girls to a fancy party.
+  Fact 0.106: At the party, Usagi accidentally becomes drunk.
+  Fact 0.107: At the party, the team is forced to confront a fashionable Eudial and her latest Daimon.
+  Fact 0.108: Episode 109 has the Cloverway Inc. title 'No Turning Back', the Viz Media title 'The Shocking Moment: Everyone's Identities Revealed', and the original Japanese title romanized as 'Shōgeki no toki! Akasareta tagai no shōtai'.
+  Fact 0.109: Episode 109 was directed by Junichi Sato, written by Sukehiro Tomita, art directed by Yoshiyuki Shikano, and animation directed by Kazuya Kuroda. It originally aired on September 24, 1994 and aired in English in the United States on July 7, 2000.
+  Fact 0.110: Minako becomes jealous that a Daimon has not yet attacked her, and she fears that she does not have a pure heart.
+  Fact 0.111: After doing as many 'pure' things as she can, Minako is attacked, and her pure heart is taken from her.
+  Fact 0.112: When Eudial nearly gets away, Usagi is forced to reveal her identity to Haruka and Michiru.
+  Fact 0.113: Haruka and Michiru reveal their identities as Sailors Uranus and Neptune to Sailor Moon.
+  Fact 0.114: Episode 110 has the Cloverway Inc. title 'Destiny's Arrival', the Viz Media title 'The Death of Uranus and Neptune: The Talisman Appear', and the original Japanese title romanized as 'Uranusu-tachi no shi? Tarisuman shutsugen'.
+  Fact 0.115: Episode 110 was directed by Kunihiko Ikuhara, written by Yoji Enokido, art directed by Kenichi Tajiri, and animation directed by Mari Tominaga. It originally aired on October 15, 1994 and aired in English in the United States on July 10, 2000.
+  Fact 0.116: Faced with losing her position at Witches 5, Eudial creates a computer program to find the true owners of the three Talismans.
+  Fact 0.117: Eudial learns that Haruka and Michiru are the ones who hold two of the Talismans within their own hearts.
+  Fact 0.118: Eudial and her companions take away Usagi's brooch, and follow Eudial onto a lonely island.
+  Fact 0.119: The invitation turns out to be a trick, and Michiru's pure heart is taken, which turns into the mystical Deep Aqua Mirror.
+  Fact 0.120: Haruka, in order to release her own talisman, shoots herself with Eudial's gun.
+  Fact 0.121: Haruka's pure heart transforms into the mystical Space Sword.
+  Fact 0.122: Episode 111 has the Cloverway Inc. title 'The Purity Chalice', the Viz Media title 'The Holy Grail's Mystical Power: Moon's Double Transformation', and the original Japanese title romanized as 'Seihai no shinpi na chikara! Mūn nidan henshin'.
+  Fact 0.123: Episode 111 was directed by Hiroki Shibata, written by Sukehiro Tomita, art directed by Kazuyuki Hashimoto, and animation directed by Ikuko Itō. It originally aired on October 22, 1994 and aired in English in the United States on July 11, 2000.
+  Fact 0.124: Sailor Pluto appears and reawakens Sailors Uranus and Neptune.
+  Fact 0.125: The three talismans resonate with each other, the third and last being Sailor Pluto's Garnet Orb.
+  Fact 0.126: The Holy Grail appears, and Sailor Moon grabs it and evolves into Super Sailor Moon.
+  Fact 0.127: Super Sailor Moon drives Eudial out.
+  Fact 0.128: Mimete kills Eudial by sabotaging her car with snails.
+  Fact 0.129: Episode 112 has the Cloverway Inc. title 'Show Stoppers', the Viz Media title 'Who is the True Messiah? Chaos of Light and Darkness', and the original Japanese title romanized as 'Shin no kyūseishu wa dare? Hikari to kage no kaosu'.
+  Fact 0.130: Episode 112 was directed by Noriyo Sasaki, written by Shigeru Yanagawa, art directed by Minoru Ōkōchi, and animation directed by Shinya Hasegawa. It originally aired on November 5, 1994 and aired in English in the United States on July 12, 2000.
+  Fact 0.131: The girls end up watching the filming of a movie, where Chibiusa encounters Hotaru, whom she quickly befriends.
+  Fact 0.132: In the end, Chibiusa is revealed to be the 12-year-old daughter of Professor Souichi Tomoe, the possessed leader of the Death Busters.
+  Fact 0.133: Super Sailor Moon uses her new 'Rainbow Moon Heartache' attack to defeat the Daimon of the day.
+  Fact 0.134: Episode 113 has the Cloverway Inc. title 'Rini's Risky Friendship', the Viz Media title 'A House Filled With Evil Presence: The Beautiful Hotaru's Secret', and the original Japanese title romanized as 'Yōki tadayou ie! Bishōjo Hotaru no himitsu'.
+  Fact 0.135: Episode 113 was directed by Kōnosuke Uda, written by Megumi Sugihara, art directed by Kenichi Tajiri, and animation directed by Taichi Nakamura. It originally aired on November 12, 1994 and aired in English in the United States on July 13, 2000.
+  Fact 0.136: The three Outer Guardians appear to Tuxedo Mask, and tell him why they cannot fight alongside Sailor Moon and the other four Sailor Guardians.
+  Fact 0.137: Usagi and Chibiusa visit Hotaru, and see a woman who looks like Kaolinite.
+  Fact 0.138: The Messiah of Silence appears demanding pure hearts.
+  Fact 0.139: Episode 114 has the Cloverway Inc. title 'Mimet's Mess', the Viz Media title 'I Love Idols: Mimete's Dilemma', and the original Japanese title romanized as 'Aidoru daisuki! Nayameru Mimetto'.
+  Fact 0.140: Episode 114 was directed by Harume Kosaka, written by Yoji Enokido, art directed by Yoshiyuki Shikano, and animation directed by Masahiro Andō. It originally aired on November 19, 1994 and aired in English in the United States on July 14, 2000.
+  Fact 0.141: Minako and Mimete enter a beauty contest at the same time, with Mimete willing to risk it all to obtain victory.
+  Fact 0.142: Both Minako and Mimete fall short of the needed votes to win the idol position.
+  Fact 0.143: Mimete decides to go back to her evil ways.
+  Fact 0.144: Episode 115 has the Cloverway Inc. title 'The Shadow of Silence', the Viz Media title 'Shadow of Silence: The Pale Glimmer of a Firefly', and the original Japanese title romanized as 'Chinmoku no kage!? Awaki Hotaru hi no yurameki'.
+  Fact 0.145: Episode 115 was directed by Takuya Igarashi, written by Yoji Enokido, art directed by Kenichi Tajiri, and animation directed by Katsumi Tamegai. It originally aired on November 26, 1994 and aired in English in the United States on July 17, 2000.
+  Fact 0.146: Hotaru overexerts herself and is hospitalized, during which her past without friends is shown, and the reasons for it.
+  Fact 0.147: Meanwhile, Mimete targets a soap opera actor.
+  Fact 0.148: During the attack on the actor, the attacking Daimon runs near Hotaru, who glows and completely freezes the Daimon.
+  Fact 0.149: Episode 116 has the Cloverway Inc. title 'Thorny Weather', the Viz Media title 'Sunny Skies After a Storm: A Friendship Dedicated to Hotaru', and the original Japanese title romanized as 'Arashi nochi hare! Hotaru ni sasageru yūjō'.
+  Fact 0.150: Episode 116 was directed by Yūji Endō, written by Megumi Sugihara, art directed by Kazuhisa Asai, and animation directed by Jouji Yanase. It originally aired on December 3, 1994 and aired in English in the United States on July 18, 2000.
+  Fact 0.151: Mamoru takes Usagi, Chibiusa and Hotaru to a botanical garden that is tended by Yoshiki Kurebayashi, an old classmate of Mamoru's.
+  Fact 0.152: While there, Mimete targets Yoshiki's pure heart and causes a storm that puts the plants at risk.
+  Fact 0.153: Sailor Moon defeats the accompanying Daimon, U-Bara.
+  Fact 0.154: Episode 117 has the Cloverway Inc. title 'Heightened Hazard', the Viz Media title 'Higher and Stronger: A Cheer from Usagi', and the original Japanese title romanized as 'Yori takaku yori tsuyoku! Usagi no ōen'.
+  Fact 0.155: Episode 117 was directed by Kunihiko Ikuhara, written by Shigeru Yanagawa, art directed by Minoru Ōkōchi, and animation directed by Taichi Nakamura. It originally aired on December 10, 1994 and aired in English in the United States on July 19, 2000.
+  Fact 0.156: Hotaru wishes to give a letter to Shun Hayase, a famous athlete.
+  Fact 0.157: Shun Hayase becomes targeted when Hotaru goes to give the letter to him.
+  Fact 0.158: Hotaru possessively blasts the enemy with a hugely strong amount of energy.
+  Fact 0.159: Hotaru talks to Shun about being frail and weak, and he thanks her for talking to him.
+  Fact 0.160: Episode 118 has the Cloverway Inc. title 'It's In The Cards', the Viz Media title 'The Battle Inside the Demonic Space: The Sailor Guardians' Gamble', and the original Japanese title romanized as 'Makū no tatakai! Sērā Senshi no kake'.
+  Fact 0.161: Episode 118 was directed by Noriyo Sasaki, written by Katsuyuki Sumisawa, art directed by Kenichi Tajiri, and animation directed by Masahide Yanagisawa. It originally aired on December 17, 1994 and aired in English in the United States on July 20, 2000.
+  Fact 0.162: Mimete attempts to create a Daimon by herself, throwing the entire Tomoe house into another dimension.
+  Fact 0.163: The Guardians enter the dimension and are defeated by a game-master Daimon named U-Ikasaman.
+  Fact 0.164: Hotaru manages to assist in U-Ikasaman's defeat by the use of a bluff.
+  Fact 0.165: Episode 119 has the Cloverway Inc. title 'Goodness Eclipsed', the Viz Media title 'The Messiah of Silence Awakens? Stars of Destiny', and the original Japanese title romanized as 'Chinmoku no Meshia kakusei? Unmei no hoshiboshi'.
+  Fact 0.166: Episode 119 was directed by Harume Kosaka, written by Yoji Enokido, art directed by Kazuhisa Asai, and animation directed by Shinya Hasegawa. It originally aired on December 24, 1994 and aired in English in the United States on September 13, 2000.
+  Fact 0.167: The Sailor Guardians visit a planetarium, where a man is attacked by a Daimon.
+  Fact 0.168: The symbol of Saturn appears on Hotaru's forehead, and she attacks the Daimon.
+  Fact 0.169: Sailor Uranus, Neptune, and Pluto attack Hotaru, since she is both Sailor Saturn, the Sailor Guardian of Silence, Ruin and Birth, and also possessed by the Messiah of Silence.
+  Fact 0.170: Super Sailor Moon takes the blow to protect Hotaru.
+  Fact 0.171: Episode 120 has the Cloverway Inc. title 'Next In Line', the Viz Media title 'An Invasion from an Another Dimension: Mystery of Infinity Academy', and the original Japanese title romanized as 'Ijigen kara no shinryaku! Mugen Gakuen no nazo'.
+  Fact 0.172: Episode 120 was directed by Kōnosuke Uda, written by Megumi Sugihara, art directed by Minoru Ōkōchi, and animation directed by Katsumi Tamegai. It originally aired on January 7, 1995 and aired in English in the United States on July 21, 2000.
+  Fact 0.173: Chibiusa goes to Hotaru's house to find that Hotaru has disappeared, and is devastated about it.
+  Fact 0.174: At the same time, the Sailor Guardians investigate Infinity Academy.
+  Fact 0.175: Mimete tries one final time to defeat the Sailor Guardians before Tellu literally pulls the plug on her operation.
+  Fact 0.176: Episode 121 has the Cloverway Inc. title 'Fiendish Ferns', the Viz Media title 'A Bewitching Flower That Steals Hearts: Tellu, the Third Witch', and the original Japanese title romanized as 'Kokoro wo ubau yōka! Daisan no majō Teruru'.
+  Fact 0.177: Episode 121 was directed by Takuya Igarashi, written by Shigeru Yanagawa, art directed by Kazuyuki Hashimoto, and animation directed by Taichi Nakamura. It originally aired on January 14, 1995 and aired in English in the United States on July 24, 2000.
+  Fact 0.178: Tellu develops a new plan to steal pure hearts, using a plant bred for that purpose.
+  Fact 0.179: Setsuna realizes the plant is an alien plant made to steal pure hearts, and warns the Sailor Guardians.
+  Fact 0.180: Tuxedo Mask causes a mutated plant to destroy Tellu.
+  Fact 0.181: This leads the Sailor Guardians to trace Tellu back to the mysterious Infinity Academy.
+  Fact 0.182: Episode 122 has the Cloverway Inc. title 'The Science Of Love', the Viz Media title 'Believe in Love: Ami, the Kindhearted Guardian', and the original Japanese title romanized as 'Ai wo shinjite! Ami, kokoro yasashiki Senshi'.
+  Fact 0.183: Episode 122 was directed by Yūji Endō, written by Sukehiro Tomita, art directed by Kenichi Tajiri, and animation directed by Hideyuki Motohashi. It originally aired on January 21, 1995 and aired in English in the United States on July 25, 2000.
+  Fact 0.184: Ami investigates the Infinity Academy, where she meets Viluy, the fourth of the Witches 5.
+  Fact 0.185: Viluy attempts to use her nanorobots to steal pure hearts from entrance exam takers.
+  Fact 0.186: After Viluy's battle, her own microscopic robots turn against her, destroying her in the process.
+  Fact 0.187: Episode 123 has the Cloverway Inc. title 'Wake Up Call', the Viz Media title 'Shadows of Destruction: the Messiah of Silence Awakens', and the original Japanese title romanized as 'Hametsu no kage! Chinmoku no Meshia no mezame'.
+  Fact 0.188: Episode 123 was directed by Harume Kosaka, written by Megumi Sugihara, art directed by Minoru Ōkōchi, and animation directed by Mari Tominaga. It originally aired on January 28, 1995 and aired in English in the United States on July 26, 2000.
+  Fact 0.189: Cyprine is the last of the Witches 5.
+  Fact 0.190: Cyprine steals pure hearts from Infinity Academy students.
+  Fact 0.191: The Sailor Guardians engage Cyprine, and her alter-ego, Ptilol, in a showdown.
+  Fact 0.192: Chibiusa is abducted by the recently resurrected Kaolinite.
+  Fact 0.193: Chibiusa's pure heart is stolen by Mistress 9, who has taken over Hotaru's body, which allows her to awaken as the Messiah of Silence.
+  Fact 0.194: Episode 124 has the Cloverway Inc. title 'Who's Really Who?', the Viz Media title 'The Coming Terror of Darkness: Struggle of the Eight Guardians', and the original Japanese title romanized as 'Semari kuru yami no kyōfu! Kusen no Hassenshi'.
+  Fact 0.195: Episode 124 was directed by Takuya Igarashi, written by Yoji Enokido, art directed by Kazuyuki Hashimoto, and animation directed by Ikuko Itō. It originally aired on February 4, 1995 and aired in English in the United States on July 28, 2000.
+  Fact 0.196: Mistress 9 uses all remaining Daimon eggs to create a powerful energized shield of evil minions around Infinity Academy.
+  Fact 0.197: Sailor Moon is abducted, as she is the holder of the Holy Grail.
+  Fact 0.198: After witnessing Sailor Pluto ultimately sacrificing herself to save them by using her forbidden ability to stop time, Sailor Uranus and Sailor Neptune destroy Germatoid.
+  Fact 0.199: Germatoid is the Daimon possessing Professor Souichi Tomoe.
+  Fact 0.200: Sailor Uranus and Sailor Neptune destroy Germatoid with their talismans, the Deep Aqua Mirror and the Space Sword.
+  Fact 0.201: Episode 125 has the Cloverway Inc. title 'Darkness, My Old Friend', the Viz Media title 'The Shining Shooting Star: Saturn and the Messiah', and the original Japanese title romanized as 'Kagayaku ryūsei! Satān soshite kyūseishu'.
+  Fact 0.202: Episode 125 was directed by Kōnosuke Uda, written by Yoji Enokido, art directed by Kenichi Tajiri, and animation directed by Ikuko Itō. It originally aired on February 11, 1995 and aired in English in the United States on July 29, 2000.
+  Fact 0.203: Sailor Moon is tricked into giving Mistress 9 the Holy Grail, which she uses to summon Pharaoh 90 to Earth.
+  Fact 0.204: Hotaru regains consciousness with the assistance of Sailor Moon and her father, destroying Mistress 9.
+  Fact 0.205: Hotaru fully awakens the spirit of Sailor Saturn within herself at last.
+  Fact 0.206: Sailor Saturn returns Chibiusa's pure heart crystal.
+  Fact 0.207: Sailor Saturn appears before Sailor Moon to ultimately sacrifice herself and destroy Pharaoh 90 once and for all with her destructive powers.
+  Fact 0.208: Sailor Moon gains the help of the other six Sailor Guardians to become Super Sailor Moon once more.
+  Fact 0.209: Super Sailor Moon saves both Hotaru and Sailor Saturn.
+  Fact 0.210: Sailor Saturn is reborn as a baby immediately afterward.
+  Fact 0.211: Episode 126 has the Cloverway Inc. title 'Second Chance', the Viz Media title 'A New Life: Parting of the Stars of Destiny', and the original Japanese title romanized as 'Atarashiki seimei! Unmei no hoshiboshi betsuri no toki'.
+  Fact 0.212: Episode 126 was directed by Yūji Endō, written by Megumi Sugihara, art directed by Kazuhisa Asai, and animation directed by Taichi Nakamura. It originally aired on February 18, 1995 and aired in English in the United States on July 30, 2000.
+  Fact 0.213: Haruka and Michiru give the newly reborn infant Hotaru to a still-healing Professor Souichi Tomoe, who is finally free of the Death Busters.
+  Fact 0.214: Haruka and Michiru viciously attack Sailor Moon, for she protected Hotaru's body and Sailor Saturn, and risked the whole entire world for one mere life.
+  Fact 0.215: The Silver Crystal throws Haruka and Michiru back.
+  Fact 0.216: Haruka and Michiru kneel to Sailor Moon as their leader and leave the city.
+  Fact 0.217: Episode 127 has the Cloverway Inc. title 'Tough Kindness', the Viz Media title 'A Guardian's Realization: Strength Lies Within a Pure Heart', and the original Japanese title romanized as 'Senshi no Jikaku! Tsuyosa wa Pyua na Kokoro no Naka ni'.
+  Fact 0.218: Episode 127 was directed by Harume Kosaka and written by Sukehiro Tomita. It originally aired on February 25, 1995 and aired in English in the United States on August 1, 2000.
+  Fact 0.219: Chibiusa returns to the future after receiving a letter from her mother, Neo-Queen Serenity.
+  Fact 0.220: Meanwhile, a final Daimon emerges from the rubble of Infinity Academy.
+  Fact 0.221: Chibiusa returns just in time to help defeat the final Daimon.
+
+Retrieved items:
+<item 1>
+List of Sailor Moon S episodes
+Takeuchi has openly admitted they are a romantic couple , and their voice actresses were instructed to play the characters `` as if they are a married romantic
+couple . '' However , because of differing cultural standards , most countries outside Japan , excluding Greece , Germany , Sweden , Spain and Mexico , have
+censored the relationship . Alternatively , in the Cloverway / Optimum English - dubbed version , this subtext was made more taboo by way of portraying Neptune
+and Uranus as biological cousins who were involved in a romantic relationship with each other . The Studiopolis / Viz Media English - language ReDub preserves
+the subtext of the original material . In the 1995 favorite episode polls for Animage , `` Death of Uranus and Neptune ! ? Talismans Appear '' came in first
+place , `` The Bond of Destiny ! The Distant Days of Uranus '' came in eighth place , and `` The Labyrinth of Water ! Ami the Targeted '' came in ninth place .
+The following year , `` A Bright Shooting Star ! Saturn , and the Messiah '' came in fifteenth place .
+</item 1>
+
+<item 2>
+List of Sailor Moon S episodes
+Satān soshite kyūseishu '' ( 輝く 流星 ! サターン そして 救世主 ) Kōnosuke Uda Yoji Enokido Kenichi Tajiri Ikuko Itō February 11 , 1995 July 29 , 2000 Sailor Moon is tricked
+into giving Mistress 9 the Holy Grail , which she uses to summon Pharaoh 90 to Earth . Hotaru regains consciousness with the assistance of Sailor Moon and her
+father , destroying Mistress 9 and fully awakening the spirit of Sailor Saturn within herself at last . Sailor Saturn herself returns Chibiusa 's pure heart
+crystal , and then appears before Sailor Moon to ultimately sacrifice herself and destroy Pharaoh 90 once and for all with her destructive powers , but Sailor
+Moon gains the help of the other six Sailor Guardians to become Super Sailor Moon once more , and save both Hotaru and Sailor Saturn , who is reborn as a baby
+immediately afterward . 126 `` Second Chance '' `` A New Life : Parting of the Stars of Destiny '' `` Atarashiki seimei !
+</item 2>
+
+<item 3>
+List of Sailor Moon S episodes
+敵 味方 三つ巴 乱戦 ) Noriyo Sasaki Sukehiro Tomita Kenichi Tajiri Ikuko Itō April 30 , 1994 June 16 , 2000 Usagi 's friend , Unazuki , is attacked by a Daimon and has
+her pure heart crystal stolen . But when Sailor Moon tries to take the crystal back to Unazuki , Uranus and Neptune attempt to steal it in order to claim the
+Talisman . 95 `` Blinded By Love 's Light '' `` Let Moon Help With Your Love Problems '' `` Koi no otasuke wa Mūn ni omakase '' ( 恋 の おたすけ は ムーン に おまかせ ) Harume
+Kosaka Shigeru Yanagawa Yoshiyuki Shikano Mari Tominaga May 7 , 1994 June 19 , 2000 Naru and Umino enter an affection contest in order to prove their strong
+mutual romantic love for each other , but find themselves targeted by a Daimon .
+</item 3>
+
+<item 4>
+List of Sailor Moon S episodes
+Mūn nidan henshin '' ( 聖杯 の 神秘 な 力 ! ムーン 二 段 変身 ) Hiroki Shibata Sukehiro Tomita Kazuyuki Hashimoto Ikuko Itō October 22 , 1994 July 11 , 2000 Sailor Pluto
+appears and reawakens Sailors Uranus and Neptune , and the three talismans resonate with each other ( the third and last being Sailor Pluto 's Garnet Orb ) .
+The Holy Grail appears , and Sailor Moon grabs it and evolves into Super Sailor Moon , who drives Eudial out . Mimete then kills Eudial by sabotaging her car
+with snails . 112 `` Show Stoppers '' `` Who is the True Messiah ? Chaos of Light and Darkness '' `` Shin no kyūseishu wa dare ? Hikari to kage no kaosu '' ( 真
+の 救世主 は 誰 ?
+</item 4>
+
+<item 5>
+List of Sailor Moon S episodes
+124 `` Who 's Really Who ? '' `` The Coming Terror of Darkness : Struggle of the Eight Guardians '' `` Semari kuru yami no kyōfu ! Kusen no Hassenshi '' ( 迫り 来る
+闇 の 恐怖 ! 苦戦 の 8 戦士 ) Takuya Igarashi Yoji Enokido Kazuyuki Hashimoto Ikuko Itō February 4 , 1995 July 28 , 2000 Mistress 9 uses all remaining Daimon eggs to
+create a powerful energized shield of evil minions around Infinity Academy . Sailor Moon is abducted , as she is the holder of the Holy Grail . After witnessing
+Sailor Pluto ultimately sacrificing herself to save them by using her forbidden ability to stop time , Sailor Uranus and Sailor Neptune destroy Germatoid , the
+Daimon possessing Professor Souichi Tomoe with their talismans , the Deep Aqua Mirror and the Space Sword . 125 `` Darkness , My Old Friend '' `` The Shining
+Shooting Star : Saturn and the Messiah '' `` Kagayaku ryūsei !
+</item 5>
+
+<item 6>
+List of Sailor Moon S episodes
+タリスマン 出現 ) Kunihiko Ikuhara Yoji Enokido Kenichi Tajiri Mari Tominaga October 15 , 1994 July 10 , 2000 Faced with losing her position at Witches 5 , Eudial
+creates a computer program to find the true owners of the three Talismans , and learns that Haruka and Michiru are the ones who hold two of the Talismans within
+their own hearts ! They take away Usagi 's brooch , and follow Eudial onto a lonely island . However , the invitation turns out to be a trick , and Michiru 's
+pure heart is taken , which turns into the mystical Deep Aqua Mirror . Haruka , in order to release her own talisman , shoots herself with Eudial 's gun . Her
+pure heart transforms into the mystical Space Sword . 111 `` The Purity Chalice '' `` The Holy Grail 's Mystical Power : Moon 's Double Transformation '' ``
+Seihai no shinpi na chikara !
+</item 6>
+
+<item 7>
+List of Sailor Moon S episodes
+明か され た 互い の 正体 ) Junichi Sato Sukehiro Tomita Yoshiyuki Shikano Kazuya Kuroda September 24 , 1994 July 7 , 2000 Minako becomes jealous that a Daimon has not
+yet attacked her , and she fears that she does not have a pure heart . After doing as many `` pure '' things as she can , she is attacked , and her pure heart
+is taken from her . When Eudial nearly gets away , Usagi is forced to reveal her identity to Haruka & Michiru , who in turn , reveal their identities as Sailors
+Uranus and Neptune to Sailor Moon . 110 `` Destiny 's Arrival '' `` The Death of Uranus and Neptune : The Talisman Appear '' `` Uranusu - tachi no shi ?
+Tarisuman shutsugen '' ( ウラヌス 達 の 死 ?
+</item 7>
+
+<item 8>
+List of Sailor Moon S episodes
+He becomes targeted when she goes to give it to him , and she possessively blasts the enemy with a hugely strong amount of energy . She talks to Shun about
+being frail and weak , and he thanks her for talking to him . 118 `` It 's In The Cards '' `` The Battle Inside the Demonic Space : The Sailor Guardians '
+Gamble '' `` Makū no tatakai ! Sērā Senshi no kake '' ( 魔 空 の 戦い ! セーラー 戦士 の 賭け ) Noriyo Sasaki Katsuyuki Sumisawa Kenichi Tajiri Masahide Yanagisawa December
+17 , 1994 July 20 , 2000 Mimete attempts to create a Daimon by herself , throwing the entire Tomoe house into another dimension . The Guardians enter the
+dimension and are defeated by a game - master Daimon named U-Ikasaman . Hotaru manages to assist in her defeat by the use of a bluff . 119 `` Goodness Eclipsed
+'' `` The Messiah of Silence Awakens ?
+</item 8>
+
+<item 9>
+List of Sailor Moon S episodes
+美 少女 ほたる の 秘密 ) Kōnosuke Uda Megumi Sugihara Kenichi Tajiri Taichi Nakamura November 12 , 1994 July 13 , 2000 The three Outer Guardians appear to Tuxedo Mask ,
+and tell him why they can not fight alongside Sailor Moon and the other four Sailor Guardians . Usagi and Chibiusa visit Hotaru , and see a woman who looks like
+Kaolinite . The Messiah of Silence appears demanding pure hearts . 114 `` Mimet 's Mess '' `` I Love Idols : Mimete 's Dilemma '' `` Aidoru daisuki ! Nayameru
+Mimetto '' ( アイドル 大好き ! 悩め る ミメット ) Harume Kosaka Yoji Enokido Yoshiyuki Shikano Masahiro Andō November 19 , 1994 July 14 , 2000 Minako and Mimete enter a
+beauty contest at the same time , with Mimete willing to risk it all to obtain victory .
+</item 9>
+
+<item 10>
+List of Sailor Moon S episodes
+Meanwhile , Tuxedo Mask and Usagi hold hands after the latter 's refusal to escape , and through the power of their love , Usagi 's disabled Crystal Star brooch
+transforms into the Cosmic Heart Compact , and she gains the Spiral Heart Moon Rod and , along with it , the ability to transform and defeat the new enemy . 92
+`` Driving Dangerously '' `` A Handsome Boy ? Haruka Tenoh 's Secret '' `` Suteki na bishōnen ? Ten'ō Haruka no himitsu '' ( 素敵 な 美少年 ? 天王 はるか の 秘密 ) Kunihiko
+Ikuhara Katsuyuki Sumisawa Kazuhisa Asai Hisashi Kagawa April 16 , 1994 June 14 , 2000 Avoiding their study group , Usagi and Minako meet Haruka Tenou , an
+attractive and supposedly male student of a prestigious local school , with whom they both become infatuated .
+</item 10>
+=== END ITEM id=db798ab094066a4d ===
+
+=== ITEM id=841497cb5e2cadae ===
+Gold sentences and facts:
+Sentence 0: No . overall No. in series Title Vehicles tested Special guests Original air date 14 `` Past , Present , or Future '' Lamborghini Aventador S , Honda NSX , Rimac Concept One David Hasselhoff , Ricky Wilson 8 December 2017 ( 2017 - 12 - 08 ) The tent is now in the Cotswolds and will remain there for the duration of the series . To determine whether the past , present , or future of motoring is best , the presenters visit Switzerland with Clarkson in a petrol powered Lamborghini Aventador S representing the past , May in a hybrid powered Honda NSX representing the present , and Hammond in an all - electric Rimac Concept One representing the future . After starting at the top of the Gotthard Pass , Hammond brings the trio to a stay at the Park Weggis ( de ) health retreat and visit the Swiss Museum of Transport and other museums in Lucerne close to a charging station for the Rimac car . May and Clarkson reject this and go to a hill climbing race at Hemberg instead . As Clarkson can not fit into the Aventador whilst wearing a mandatory racing helmet , Clarkson sends a Lamborghini test driver in his place , thus setting the fastest time of all three . Hammond crashes after completing the course , destroying the Rimac in a fire . Footage taken from YouTube shows the wreckage being extinguished and Hammond being airlifted by the Swiss Air - Rescue ( REGA ) to hospital . The presenters discuss some inapropriate new features within cars on Conversation Street . Celebrity Brain Crash is replaced by Celebrity Face Off , in which Ricky Wilson beats David Hasselhoff to determine who the `` fastest former talent show host '' is . 15 `` The Falls Guys '' Ford GT , Mercedes AMG GT R Kevin Pietersen , Brian Wilson 15 December 2017 ( 2017 - 12 - 15 ) The presenters race from Central Park in Manhattan , New York City , to an observation tower overlooking the Niagara Falls . Clarkson drives the new Ford GT whilst May and Hammond ( on crutches ) use public transport , taking the New York City Subway , AirTrain JFK , a JetBlue Embraer E190 flight , plus two Niagara Frontier Transportation Authority buses . Despite Hammond and May 's flight arriving 15 minutes early , Clarkson narrowly wins the race . For Conversation Street the presenters discuss sponsorship ideas . Clarkson reviews the Mercedes AMG GT R , after which new test driver , Abbie Eaton , takes it for a timed lap around the Eboladrome . In `` Celebrity Face Off '' , Kevin Pietersen of South Africa beats Brian Wilson of the U.S. as the `` fastest person who makes a living throwing and hitting and catching small balls '' . 16 `` Bah Humbug - atti '' Kia Stinger GT , Bugatti Chiron Hugh Bonneville , Casey Anderson 22 December 2017 ( 2017 - 12 - 22 ) The presenters begin with Christmas tree lights made from vehicle parts and , Starting with Scalextric , they exchange humorous and inappropriate Christmas gifts in Conversation Street . May travels to Majorca to race a Kia Stinger GT against a pair of longboard riders along a mountain road , with May winning the race despite him racing uphill and the riders downhill . Hammond and May attempt to relieve lunchtime boredom by inventing `` lunchtime office car park racing '' at Houghton Hall business park in the Luton / Dunstable Urban Area . After brief interviews in which both share their own ownership of a Tesla Model S , Hugh Bonneville , representing the UK , and Casey Anderson , representing the United States , compete during `` Celebrity Face Off '' as the `` fastest person who lives with a bear '' , with Anderson winning by setting the faster lap time . Clarkson experiments with the jet set lifestyle , starting in the morning from the Da Vinci super-yacht moored in Saint - Tropez and then driving a Bugatti Chiron to L'Alpe De Venosc France for skiing at lunchtime , stopping briefly for a drag race against a BMW M4 at Gap -- Tallard Airport to give viewers a perspective on how fast the Chiron is . After leaving the Alps , Clarkson then pays an homage to the 1976 film C'était un rendez - vous , by speeding across Turin and reaching the Piazza Carignano ( it ) in 9 minutes . 17 `` Unscripted '' McLaren 720S , Audi TT RS , Ariel Nomad Michael Ball , Alfie Boe , Silvija Jurin 29 December 2017 ( 2017 - 12 - 29 ) The presenters begin by having a year - ending awards ceremony in Conversation Street . Hammond heads to the Eboladrome to test the McLaren 720S after which Eaton sets a lap time . Since The Grand Tour has been criticised for being too `` scripted '' , the presenters head to Zadar county and the island of Pag in Croatia to make a completely `` unscripted '' film . This results in Clarkson turning up in the Audi TT RS , Hammond turning up in the not at all comparable Ariel Nomad , and May turning up in an old Lada Riva which he turns into a fire engine . They go their separate ways though Clarkson and Hammond end up comparing their cars in a drag race , a rally stage ( both of which are won by Clarkson ) , visiting Maslenica , the Plitvice Lakes National Park , and following the D106 road until running out of road at Žigljen ferry port . Due to a lack of fires , May has to setup his own ones until Clarkson and Hammond setup one that proves too difficult for May , which the real fire brigade manage to put out with a firefighting aircraft , destroying May 's Lada fire engine in the process . Michael Ball and Alfie Boe compete in `` Celebrity Face Off '' with Ball setting the faster time and becoming the `` fastest classical singer with some kind of interesting connection to the British motor industry '' . 18 5 `` Up , Down and Round the Farm '' Ripsaw EV2 , Volkswagen Up ! GTI Bill Bailey , Dominic Cooper , Mark Higgins 5 January 2018 ( 2018 - 01 - 05 ) The presenters introduce some of the new cars for 2018 in Conversation Street . Hammond heads to Dubai to test a Sandrail dune buggy in the desert , followed by the Ripsaw `` high - end luxury tank '' , visiting the Dubai Mall . May reviews the Volkswagen Up ! GTI at the Eboladrome and in thick fog Eaton records a record slow time . Guests Bill Bailey and Dominic Cooper discuss their shared ownership of old French cars before racing each other in greasy / wet conditions with Cooper becoming the `` fastest person who has a failed former career in a band '' . Clarkson creates a Ken Block - style `` Farmkhana '' film using an old Subaru Impreza WRX STi around Hare Farm , near Rye , with bullet time photography . Hammond and May show the audience that Clarkson 's driving was mostly fake by sharing a `` making - of '' consisting of outtakes and behind - the - scenes footage featuring rally driver Mark Higgins , producer Phil Churchward , plus camera operator Ben Joiner breaking the fourth wall . Clarkson suggests that the whole thing is like sawing a woman in half during a magic show , and that really the audience do n't want to know . 19 6 `` Jaaaaaaaags '' None Luke Evans , Kiefer Sutherland 12 January 2018 ( 2018 - 01 - 12 ) The presenters head to the area around Grand Junction , Colorado , staying at the Gateway Canyons Resort & Spa , and eventually travelling to Telluride , Colorado with a variety of old Jaguar cars to establish the manufacturer 's reputation for reliability with Clarkson buying an XJR , May taking an XK8 convertible and Hammond bringing a Mark X . During the course of the trip the cars are driven around a dirt track ( where Hammond 's car is badly damaged , and is replaced by an XJ6 ) , along the runway at Telluride Regional Airport , ( where May 's car is destroyed , and is replaced by an XJS ) and down the slopes of the Telluride Ski Resort . At Hanging Flume overlook , Clarkson experiences a traffic stop by a Mesa County police officer and reads the `` Her Britannic Majesty '' text from his British passport . Despite Clarkson 's car being the best , May admitting his car had poor brakes deemed the challenge pointless . The presenters discuss the annoyance of Firemen cutting the roofs of cars in Conversation Street . Kiefer Sutherland beats Luke Evans to become `` the fastest actor with a middle name of George '' . 20 7 `` It 's a Gas , Gas , Gas '' Lamborghini Huracán Performante Anthony Joshua , Bill Goldberg 19 January 2018 ( 2018 - 01 - 19 ) The presenters discuss some new supercars and how handbrake turns impress women within the Conversation Street Segment . Hammond tests the Lamborghini Huracán Performante at the Eboladrome beating May 's Ferrari 458 Speciale in a drag race before Eaton takes it round the track setting a fast time . May and Hammond then look at ingenious ways of filling up with fuel instead of stopping at a fuel station . Anthony Joshua becomes `` the fastest man who makes a living out of punching or strangling someone '' beating Bill Goldberg , with both previously owning cars from General Motors . Clarkson then talks about the Rivalry in rallying between Audi with the Quattro and Lancia with the 037 . They conclude with a `` terrible disappointment '' that Lancia is no longer around . 21 8 `` Blasts from the Past '' Jaguar XK SS , Aston Martin DB4 GT , Honda Civic Type R , Ford GT Stewart Copeland , Nick Mason 26 January 2018 ( 2018 - 01 - 26 ) The presenters head to the City of Pau , Pyrénées - Atlantiques , France , and home of the Pau Grand Prix on the Circuit de Pau - Ville ( fr ) street course . At Palais Beaumont ( fr ) Hammond arrives with a Jagaur XK SS and Clarkson in an Aston Martin DB4 GT ; both being modern builds of older designs from the 1950s `` back - catalogues '' of Jaguar and Aston Martin . They both race around the Streets of Pau before May turns up in a modern Honda Civic Type R to prove that new cars are better . All three depart to drive south over the Pyrenees mountain range , with Clarkson and Hammond experiencing difficulties in dense fog . Clarkson recants a previous incident from 2013 -- when Clarkson and Hammond 's driving licences were confiscated whilst filming The Perfect Road Trip in France -- and tries to goad May into speeding on the Autopista AP - 2 . At Barcelona the presenters race around the abandoned Autódromo de Sitges - Terramar and the extreme banking on its corners , with May winning , and Hammond abstaining following his history of crashes . During Conversation Street the presenters discuss names for gritters . At the Eboladrome , Clarkson retests the Ford GT following the Niagara Falls race , with Eaton setting a test lap . Nick Mason goes on to record a faster lap than Stewart Copeland to become `` the fastest drummer for a band beginning with the letter p '' . 22 9 `` Breaking , Badly '' Jaguar XJ220 , Bugatti EB 110 Super Sport Dynamo , Penn & Teller 2 February 2018 ( 2018 - 02 - 02 ) The presenters discuss new sport cars by various companies , jumpers and the speed of pigeons vs blackbirds during Conversation Street . Clarkson unsuccessfully sets out to prove that mankind has not significantly improved over the last 25 years by testing the Jaguar XJ220 and the Bugatti EB 110 Super Sport , the fastest supercars from the early 90s , both of which set slow times at the Eboladrome when driven by Eaton . The trio tries to break the UK speed record for amphibious vehicles by building one of their own . Clarkson oversees his idea of combining a Rolls - Royce Spey turbofan engine from a Nimrod jet and a speedboat with a Suzuki Jimny . However on a nearby lake , Clarkson and May have to abort their run after achieving only 3 mph ( 5 km / h ) and nearly sinking . Hammond and May then go on to build a vehicle of their own by combining a Bond Bug with the engine of a personal water craft nicknaming it the `` Pond Bug '' . Competing on Coniston Water during Coniston Power Boat Records Week , Clarkson , being the only one with a speedboat licence , operates the `` Pond Bug '' and achieves an average of 47.81 mph ( 76.94 km / h ) , setting a new UK record . After performing a series of magic tricks , Dynamo and Penn & Teller compete to become `` the fastest magician in the world '' , with Penn & Teller prevailing on a snowy track . 23 10 `` Oh , Canada '' Alfa Romeo Stelvio Quadrifoglio , Range Rover Velar P380 , Porsche Macan Turbo Performance Pack , Tesla Model X , Ford F150 Raptor Rory McIlroy , Paris Hilton 9 February 2018 ( 2018 - 02 - 09 ) The presenters head to Canada to prove that small SUV 's are useless with Clarkson picking an Alfa Romeo Stelvio Quadrifoglio , May choosing a Range Rover Velar P380 and Hammond taking a Porsche Macan Turbo Performance Pack . They are shown to be slower round the Area 27 circuit than a BMW M3 , not practical enough to carry Canadian Newfoundland dogs , and slower round a barrel course than a horse : concluding that SUVs are pointless . Despite this , executive producer Andy Wilman informs via text that they will race their SUVs whilst each towing a boat up a mountain . May abandons his Velar for his boat , which sinks , causing him to lose the race . Because Clarkson 's Stelvio has no tow bar he cheats and exchanges it for a Ford F150 Raptor , ultimately arriving first with the presenters concluding that the Raptor was better than all the SUVs being tested . On Conversation Street the presenters talk about new SUVs and vans . Clarkson reviews the Tesla Model X at the Eboladrome and on the road , accompanied by some lawyers , ostensibly to avoid Tesla pursuing any legal action , following the previous Tesla v. Top Gear court cases . Rory McIlroy and Paris Hilton discuss their car collections before McIlroy beats Hilton to become the `` World 's Fastest Golfing Enthusiast '' . 24 11 `` Feed the World '' None None 16 February 2018 ( 2018 - 02 - 16 ) The presenters head to Mozambique on a mission to feed the people of Bingo , an isolated town in the west of the country , with fish from the country 's capital of Maputo , covering a distance of approximately 200 miles . To do this , each of them attempt to find the best transport solution : May buys a Mercedes - Benz Estate and modifies it by fitting a Perspex tank filled with sea water in which to keep the fish alive ; Clarkson buys a Nissan Hardbody truck which he fits with a generator and an ice machine in an attempt to keep the fish frozen and Hammond buys a TVS Star motorcycle and devises a rack which he fits to the bike 's rear , inspired by a local method of drying and salting the fish to preserve them . After unsuccessfully trying to catch fish using local methods , they buy fish at a local market . Early in the journey , Clarkson 's truck crashes into May 's car upon rescuing it , damaging its radiator grille . Deeper into rural Mozambique , May constantly soaks himself with sea water from his ill - fitted tank and , due to his damaged radiator grille , suffers multiple breakdowns due to water intrusion . Hammond loses a large number of his fish on the bumpy roads , constantly gets stuck in thick mud and endlessly falls from his motorbike . Clarkson suffers very few issues except when his ice machine breaks , causing him to make small adjustments to his truck in order to smoke the fish with his exhaust . Upon May 's car breaking down in the middle of a lake , despite Hammond and Clarkson crossing successfully , Clarkson cuts off the front end of the Mercedes and tows what remains of the rear portion using his truck - much to May 's dismay and annoyance . Eventually , the three reach Bingo with May 's fish dead , Clarkson 's fish ruined and Hammond having almost no fish left . As a result , they sell no fish and leave Bingo in a helicopter `` like all charitable celebrities '' .
+  Fact 0.0: Episode 14 is titled Past, Present, or Future.
+  Fact 0.1: Episode 14 is numbered 14 overall and 14 in the series.
+  Fact 0.2: Episode 14 tests the Lamborghini Aventador S, Honda NSX, and Rimac Concept One.
+  Fact 0.3: Episode 14 has special guests David Hasselhoff and Ricky Wilson.
+  Fact 0.4: Episode 14 originally aired on 8 December 2017.
+  Fact 0.5: The tent is now in the Cotswolds and will remain there for the duration of the series.
+  Fact 0.6: The presenters want to determine whether the past, present, or future of motoring is best.
+  Fact 0.7: The presenters visit Switzerland with Clarkson in a petrol powered Lamborghini Aventador S representing the past.
+  Fact 0.8: May drives a hybrid powered Honda NSX representing the present.
+  Fact 0.9: Hammond drives an all-electric Rimac Concept One representing the future.
+  Fact 0.10: After starting at the top of the Gotthard Pass, Hammond brings the trio to a stay at the Park Weggis (de) health retreat.
+  Fact 0.11: Hammond visits the Swiss Museum of Transport and other museums in Lucerne.
+  Fact 0.12: The Park Weggis stay is close to a charging station for the Rimac car.
+  Fact 0.13: May and Clarkson reject the plan and go to a hill climbing race at Hemberg instead.
+  Fact 0.14: Clarkson cannot fit into the Aventador whilst wearing a mandatory racing helmet.
+  Fact 0.15: Clarkson sends a Lamborghini test driver in his place.
+  Fact 0.16: The Lamborghini test driver sets the fastest time of all three.
+  Fact 0.17: Hammond crashes after completing the course, destroying the Rimac in a fire.
+  Fact 0.18: Footage taken from YouTube shows the wreckage being extinguished.
+  Fact 0.19: Footage taken from YouTube shows Hammond being airlifted by the Swiss Air-Rescue (REGA) to hospital.
+  Fact 0.20: The presenters discuss some inappropriate new features within cars on Conversation Street.
+  Fact 0.21: Celebrity Brain Crash is replaced by Celebrity Face Off.
+  Fact 0.22: In Celebrity Face Off, Ricky Wilson beats David Hasselhoff to determine who the fastest former talent show host is.
+  Fact 0.23: Episode 15 is titled The Falls Guys.
+  Fact 0.24: Episode 15 is numbered 15 overall and 15 in the series.
+  Fact 0.25: Episode 15 tests the Ford GT and Mercedes AMG GT R.
+  Fact 0.26: Episode 15 has special guests Kevin Pietersen and Brian Wilson.
+  Fact 0.27: Episode 15 originally aired on 15 December 2017.
+  Fact 0.28: The presenters race from Central Park in Manhattan, New York City, to an observation tower overlooking the Niagara Falls.
+  Fact 0.29: Clarkson drives the new Ford GT.
+  Fact 0.30: May and Hammond use public transport, with Hammond on crutches.
+  Fact 0.31: May and Hammond take the New York City Subway, AirTrain JFK, a JetBlue Embraer E190 flight, and two Niagara Frontier Transportation Authority buses.
+  Fact 0.32: Hammond and May's flight arrives 15 minutes early.
+  Fact 0.33: Clarkson narrowly wins the race.
+  Fact 0.34: For Conversation Street the presenters discuss sponsorship ideas.
+  Fact 0.35: Clarkson reviews the Mercedes AMG GT R.
+  Fact 0.36: After the review, new test driver Abbie Eaton takes the Mercedes AMG GT R for a timed lap around the Eboladrome.
+  Fact 0.37: In Celebrity Face Off, Kevin Pietersen of South Africa beats Brian Wilson of the U.S. as the fastest person who makes a living throwing and hitting and catching small balls.
+  Fact 0.38: Episode 16 is titled Bah Humbug - atti.
+  Fact 0.39: Episode 16 is numbered 16 overall and 16 in the series.
+  Fact 0.40: Episode 16 tests the Kia Stinger GT and Bugatti Chiron.
+  Fact 0.41: Episode 16 has special guests Hugh Bonneville and Casey Anderson.
+  Fact 0.42: Episode 16 originally aired on 22 December 2017.
+  Fact 0.43: The presenters begin with Christmas tree lights made from vehicle parts.
+  Fact 0.44: Starting with Scalextric, the presenters exchange humorous and inappropriate Christmas gifts in Conversation Street.
+  Fact 0.45: May travels to Majorca to race a Kia Stinger GT against a pair of longboard riders along a mountain road.
+  Fact 0.46: May wins the race despite him racing uphill and the riders downhill.
+  Fact 0.47: Hammond and May attempt to relieve lunchtime boredom by inventing lunchtime office car park racing at Houghton Hall business park in the Luton / Dunstable Urban Area.
+  Fact 0.48: After brief interviews, Hugh Bonneville and Casey Anderson each share their own ownership of a Tesla Model S.
+  Fact 0.49: Hugh Bonneville represents the UK, and Casey Anderson represents the United States.
+  Fact 0.50: Hugh Bonneville and Casey Anderson compete during Celebrity Face Off as the fastest person who lives with a bear.
+  Fact 0.51: Casey Anderson wins by setting the faster lap time.
+  Fact 0.52: Clarkson experiments with the jet set lifestyle.
+  Fact 0.53: Clarkson starts the morning from the Da Vinci super-yacht moored in Saint-Tropez.
+  Fact 0.54: Clarkson then drives a Bugatti Chiron to L'Alpe De Venosc France for skiing at lunchtime.
+  Fact 0.55: Clarkson stops briefly for a drag race against a BMW M4 at Gap -- Tallard Airport to give viewers a perspective on how fast the Chiron is.
+  Fact 0.56: After leaving the Alps, Clarkson pays an homage to the 1976 film C'etait un rendez-vous.
+  Fact 0.57: Clarkson speeds across Turin and reaches the Piazza Carignano (it) in 9 minutes.
+  Fact 0.58: Episode 17 is titled Unscripted.
+  Fact 0.59: Episode 17 is numbered 17 overall and 17 in the series.
+  Fact 0.60: Episode 17 tests the McLaren 720S, Audi TT RS, and Ariel Nomad.
+  Fact 0.61: Episode 17 has special guests Michael Ball, Alfie Boe, and Silvija Jurin.
+  Fact 0.62: Episode 17 originally aired on 29 December 2017.
+  Fact 0.63: The presenters begin by having a year-ending awards ceremony in Conversation Street.
+  Fact 0.64: Hammond heads to the Eboladrome to test the McLaren 720S.
+  Fact 0.65: Eaton sets a lap time after Hammond tests the McLaren 720S.
+  Fact 0.66: The Grand Tour has been criticised for being too scripted.
+  Fact 0.67: The presenters head to Zadar county and the island of Pag in Croatia to make a completely unscripted film.
+  Fact 0.68: Clarkson turns up in the Audi TT RS.
+  Fact 0.69: Hammond turns up in the not at all comparable Ariel Nomad.
+  Fact 0.70: May turns up in an old Lada Riva which he turns into a fire engine.
+  Fact 0.71: The presenters go their separate ways.
+  Fact 0.72: Clarkson and Hammond end up comparing their cars in a drag race and a rally stage, both of which are won by Clarkson.
+  Fact 0.73: Clarkson and Hammond visit Maslenica, the Plitvice Lakes National Park, and follow the D106 road until running out of road at Zigljen ferry port.
+  Fact 0.74: Due to a lack of fires, May has to set up his own ones.
+  Fact 0.75: Clarkson and Hammond set up a fire that proves too difficult for May.
+  Fact 0.76: The real fire brigade puts out the fire with a firefighting aircraft.
+  Fact 0.77: The firefighting aircraft destroys May's Lada fire engine in the process.
+  Fact 0.78: In Celebrity Face Off, Michael Ball sets the faster time against Alfie Boe.
+  Fact 0.79: Michael Ball becomes the fastest classical singer with some kind of interesting connection to the British motor industry.
+  Fact 0.80: Episode 18 is numbered 5 in the series and is titled Up, Down and Round the Farm.
+  Fact 0.81: Episode 18 tests the Ripsaw EV2 and Volkswagen Up! GTI.
+  Fact 0.82: Episode 18 has special guests Bill Bailey, Dominic Cooper, and Mark Higgins.
+  Fact 0.83: Episode 18 originally aired on 5 January 2018.
+  Fact 0.84: The presenters introduce some of the new cars for 2018 in Conversation Street.
+  Fact 0.85: Hammond heads to Dubai to test a Sandrail dune buggy in the desert.
+  Fact 0.86: Hammond then tests the Ripsaw high-end luxury tank.
+  Fact 0.87: The presenters visit the Dubai Mall.
+  Fact 0.88: May reviews the Volkswagen Up! GTI at the Eboladrome.
+  Fact 0.89: In thick fog, Eaton records a record slow time.
+  Fact 0.90: Guests Bill Bailey and Dominic Cooper discuss their shared ownership of old French cars.
+  Fact 0.91: Bill Bailey and Dominic Cooper race each other in greasy and wet conditions.
+  Fact 0.92: Dominic Cooper becomes the fastest person who has a failed former career in a band.
+  Fact 0.93: Clarkson creates a Ken Block-style Farmkhana film using an old Subaru Impreza WRX STi around Hare Farm, near Rye.
+  Fact 0.94: The Farmkhana film uses bullet time photography.
+  Fact 0.95: Hammond and May show the audience that Clarkson's driving was mostly fake.
+  Fact 0.96: They share a making-of consisting of outtakes and behind-the-scenes footage.
+  Fact 0.97: The making-of features rally driver Mark Higgins, producer Phil Churchward, and camera operator Ben Joiner breaking the fourth wall.
+  Fact 0.98: Clarkson suggests that the whole thing is like sawing a woman in half during a magic show.
+  Fact 0.99: Clarkson suggests the audience do not really want to know.
+  Fact 0.100: Episode 19 is numbered 6 in the series and is titled Jaaaaaaaags.
+  Fact 0.101: Episode 19 has no vehicles tested.
+  Fact 0.102: Episode 19 has special guests Luke Evans and Kiefer Sutherland.
+  Fact 0.103: Episode 19 originally aired on 12 January 2018.
+  Fact 0.104: The presenters head to the area around Grand Junction, Colorado, staying at the Gateway Canyons Resort & Spa.
+  Fact 0.105: The presenters travel to Telluride, Colorado with a variety of old Jaguar cars.
+  Fact 0.106: The trip establishes the manufacturer's reputation for reliability.
+  Fact 0.107: Clarkson buys an XJR, May takes an XK8 convertible, and Hammond brings a Mark X.
+  Fact 0.108: The cars are driven around a dirt track, where Hammond's car is badly damaged and is replaced by an XJ6.
+  Fact 0.109: The cars are driven along the runway at Telluride Regional Airport, where May's car is destroyed and is replaced by an XJS.
+  Fact 0.110: The cars are driven down the slopes of the Telluride Ski Resort.
+  Fact 0.111: At Hanging Flume overlook, Clarkson experiences a traffic stop by a Mesa County police officer.
+  Fact 0.112: Clarkson reads the Her Britannic Majesty text from his British passport.
+  Fact 0.113: Despite Clarkson's car being the best, May admits his car had poor brakes.
+  Fact 0.114: The presenters deem the challenge pointless.
+  Fact 0.115: The presenters discuss the annoyance of Firemen cutting the roofs of cars in Conversation Street.
+  Fact 0.116: Kiefer Sutherland beats Luke Evans to become the fastest actor with a middle name of George.
+  Fact 0.117: Episode 20 is numbered 7 in the series and is titled It's a Gas, Gas, Gas.
+  Fact 0.118: Episode 20 tests the Lamborghini Huracan Performante.
+  Fact 0.119: Episode 20 has special guests Anthony Joshua and Bill Goldberg.
+  Fact 0.120: Episode 20 originally aired on 19 January 2018.
+  Fact 0.121: The presenters discuss new supercars and how handbrake turns impress women within the Conversation Street segment.
+  Fact 0.122: Hammond tests the Lamborghini Huracan Performante at the Eboladrome.
+  Fact 0.123: Hammond beats May's Ferrari 458 Speciale in a drag race.
+  Fact 0.124: Eaton takes the Lamborghini Huracan Performante round the track and sets a fast time.
+  Fact 0.125: May and Hammond look at ingenious ways of filling up with fuel instead of stopping at a fuel station.
+  Fact 0.126: Anthony Joshua becomes the fastest man who makes a living out of punching or strangling someone.
+  Fact 0.127: Anthony Joshua beats Bill Goldberg.
+  Fact 0.128: Anthony Joshua and Bill Goldberg both previously owned cars from General Motors.
+  Fact 0.129: Clarkson talks about the rivalry in rallying between Audi with the Quattro and Lancia with the 037.
+  Fact 0.130: The presenters conclude with a terrible disappointment that Lancia is no longer around.
+  Fact 0.131: Episode 21 is numbered 8 in the series and is titled Blasts from the Past.
+  Fact 0.132: Episode 21 tests the Jaguar XK SS, Aston Martin DB4 GT, Honda Civic Type R, and Ford GT.
+  Fact 0.133: Episode 21 has special guests Stewart Copeland and Nick Mason.
+  Fact 0.134: Episode 21 originally aired on 26 January 2018.
+  Fact 0.135: The presenters head to the City of Pau, Pyrenees-Atlantiques, France, home of the Pau Grand Prix on the Circuit de Pau-Ville (fr) street course.
+  Fact 0.136: At Palais Beaumont (fr), Hammond arrives with a Jaguar XK SS.
+  Fact 0.137: Clarkson arrives at Palais Beaumont (fr) in an Aston Martin DB4 GT.
+  Fact 0.138: Both cars are modern builds of older designs from the 1950s back-catalogues of Jaguar and Aston Martin.
+  Fact 0.139: Hammond and Clarkson race around the Streets of Pau.
+  Fact 0.140: May turns up in a modern Honda Civic Type R to prove that new cars are better.
+  Fact 0.141: All three drive south over the Pyrenees mountain range.
+  Fact 0.142: Clarkson and Hammond experience difficulties in dense fog.
+  Fact 0.143: Clarkson recounts a 2013 incident in which Clarkson and Hammond's driving licences were confiscated whilst filming The Perfect Road Trip in France.
+  Fact 0.144: Clarkson tries to goad May into speeding on the Autopista AP-2.
+  Fact 0.145: At Barcelona, the presenters race around the abandoned Autodromo de Sitges-Terramar and its extreme banking on its corners.
+  Fact 0.146: May wins the race at Autodromo de Sitges-Terramar.
+  Fact 0.147: Hammond abstains from the race following his history of crashes.
+  Fact 0.148: During Conversation Street the presenters discuss names for gritters.
+  Fact 0.149: At the Eboladrome, Clarkson retests the Ford GT following the Niagara Falls race.
+  Fact 0.150: Eaton sets a test lap.
+  Fact 0.151: Nick Mason records a faster lap than Stewart Copeland.
+  Fact 0.152: Nick Mason becomes the fastest drummer for a band beginning with the letter P.
+  Fact 0.153: Episode 22 is numbered 9 in the series and is titled Breaking, Badly.
+  Fact 0.154: Episode 22 tests the Jaguar XJ220 and Bugatti EB 110 Super Sport.
+  Fact 0.155: Episode 22 has special guests Dynamo and Penn & Teller.
+  Fact 0.156: Episode 22 originally aired on 2 February 2018.
+  Fact 0.157: The presenters discuss new sport cars by various companies, jumpers, and the speed of pigeons vs blackbirds during Conversation Street.
+  Fact 0.158: Clarkson unsuccessfully sets out to prove that mankind has not significantly improved over the last 25 years.
+  Fact 0.159: The Jaguar XJ220 and Bugatti EB 110 Super Sport are the fastest supercars from the early 90s.
+  Fact 0.160: Both the Jaguar XJ220 and Bugatti EB 110 Super Sport set slow times at the Eboladrome when driven by Eaton.
+  Fact 0.161: The trio tries to break the UK speed record for amphibious vehicles by building one of their own.
+  Fact 0.162: Clarkson oversees his idea of combining a Rolls-Royce Spey turbofan engine from a Nimrod jet and a speedboat with a Suzuki Jimny.
+  Fact 0.163: On a nearby lake, Clarkson and May have to abort their run after achieving only 3 mph (5 km/h) and nearly sinking.
+  Fact 0.164: Hammond and May build a vehicle by combining a Bond Bug with the engine of a personal water craft.
+  Fact 0.165: They nickname the vehicle the Pond Bug.
+  Fact 0.166: Competing on Coniston Water during Coniston Power Boat Records Week, Clarkson operates the Pond Bug.
+  Fact 0.167: Clarkson is the only one with a speedboat licence.
+  Fact 0.168: Clarkson achieves an average of 47.81 mph (76.94 km/h), setting a new UK record.
+  Fact 0.169: After performing a series of magic tricks, Dynamo and Penn & Teller compete to become the fastest magician in the world.
+  Fact 0.170: Penn & Teller prevail on a snowy track.
+  Fact 0.171: Episode 23 is numbered 10 in the series and is titled Oh, Canada.
+  Fact 0.172: Episode 23 tests the Alfa Romeo Stelvio Quadrifoglio, Range Rover Velar P380, Porsche Macan Turbo Performance Pack, Tesla Model X, and Ford F150 Raptor.
+  Fact 0.173: Episode 23 has special guests Rory McIlroy and Paris Hilton.
+  Fact 0.174: Episode 23 originally aired on 9 February 2018.
+  Fact 0.175: The presenters head to Canada to prove that small SUVs are useless.
+  Fact 0.176: Clarkson picks an Alfa Romeo Stelvio Quadrifoglio.
+  Fact 0.177: May chooses a Range Rover Velar P380.
+  Fact 0.178: Hammond takes a Porsche Macan Turbo Performance Pack.
+  Fact 0.179: The SUVs are shown to be slower round the Area 27 circuit than a BMW M3.
+  Fact 0.180: The SUVs are not practical enough to carry Canadian Newfoundland dogs.
+  Fact 0.181: The SUVs are slower round a barrel course than a horse.
+  Fact 0.182: The presenters conclude that SUVs are pointless.
+  Fact 0.183: Executive producer Andy Wilman informs via text that they will race their SUVs whilst each towing a boat up a mountain.
+  Fact 0.184: May abandons his Velar for his boat, which sinks, causing him to lose the race.
+  Fact 0.185: Clarkson's Stelvio has no tow bar, so he cheats and exchanges it for a Ford F150 Raptor.
+  Fact 0.186: Clarkson arrives first in the Ford F150 Raptor.
+  Fact 0.187: The presenters conclude that the Raptor was better than all the SUVs being tested.
+  Fact 0.188: On Conversation Street the presenters talk about new SUVs and vans.
+  Fact 0.189: Clarkson reviews the Tesla Model X at the Eboladrome and on the road.
+  Fact 0.190: Clarkson is accompanied by some lawyers to avoid Tesla pursuing any legal action.
+  Fact 0.191: The lawyers follow the previous Tesla v. Top Gear court cases.
+  Fact 0.192: Rory McIlroy and Paris Hilton discuss their car collections.
+  Fact 0.193: McIlroy beats Hilton to become the World's Fastest Golfing Enthusiast.
+  Fact 0.194: Episode 24 is numbered 11 in the series and is titled Feed the World.
+  Fact 0.195: Episode 24 has no vehicles tested and no special guests.
+  Fact 0.196: Episode 24 originally aired on 16 February 2018.
+  Fact 0.197: The presenters head to Mozambique on a mission to feed the people of Bingo, an isolated town in the west of the country.
+  Fact 0.198: The fish come from the country's capital of Maputo.
+  Fact 0.199: The fish are carried a distance of approximately 200 miles.
+  Fact 0.200: May buys a Mercedes-Benz Estate and fits a Perspex tank filled with sea water in which to keep the fish alive.
+  Fact 0.201: Clarkson buys a Nissan Hardbody truck which he fits with a generator and an ice machine to keep the fish frozen.
+  Fact 0.202: Hammond buys a TVS Star motorcycle and devises a rack which he fits to the bike's rear.
+  Fact 0.203: The rack is inspired by a local method of drying and salting the fish to preserve them.
+  Fact 0.204: After unsuccessfully trying to catch fish using local methods, they buy fish at a local market.
+  Fact 0.205: Early in the journey, Clarkson's truck crashes into May's car upon rescuing it, damaging its radiator grille.
+  Fact 0.206: Deeper into rural Mozambique, May constantly soaks himself with sea water from his ill-fitted tank.
+  Fact 0.207: Due to his damaged radiator grille, May suffers multiple breakdowns due to water intrusion.
+  Fact 0.208: Hammond loses a large number of his fish on the bumpy roads.
+  Fact 0.209: Hammond constantly gets stuck in thick mud and endlessly falls from his motorbike.
+  Fact 0.210: Clarkson suffers very few issues except when his ice machine breaks.
+  Fact 0.211: Clarkson makes small adjustments to his truck in order to smoke the fish with his exhaust.
+  Fact 0.212: When May's car breaks down in the middle of a lake, Hammond and Clarkson cross successfully.
+  Fact 0.213: Clarkson cuts off the front end of the Mercedes and tows what remains of the rear portion using his truck, much to May's dismay and annoyance.
+  Fact 0.214: The three reach Bingo with May's fish dead.
+  Fact 0.215: Clarkson's fish are ruined.
+  Fact 0.216: Hammond has almost no fish left.
+  Fact 0.217: As a result, they sell no fish.
+  Fact 0.218: They leave Bingo in a helicopter like all charitable celebrities.
+
+Retrieved items:
+<item 1>
+The Grand Tour (TV series)
+The other two are so intoxicated by their own debate they do n't notice . 2.10 It 's time to step in a dog turd of chat , on Conversation Street . The stools
+have disappeared . Clarkson with a sledge hammer in his hands , Hammond with a shovel are standing above a third person ( May ? ) They are swinging their tools
+at the prone body which cries out in pain when it is hit . ( this is the only time in two series that we hear any one of the three make a noise in an otherwise
+silent introduction ) Running gags ( edit ) The first series included several running gags . During the opening titles of each episode , a camera drone was
+destroyed . From episode three onward , one of the presenters ' names is always seen misspelt during the opening . For `` Celebrity Brain Crash '' , celebrity
+guests are humorously `` killed '' in an accident while making their way to the tent . After each `` death '' , May asks `` Does that mean he / she 's not
+coming on then ? ''
+</item 1>
+
+<item 2>
+The Grand Tour (TV series)
+Studio audience segments for the first series were filmed in the travelling tent between 17 July and 11 December 2016 in various countries , while for the
+second series the tent was stationed permanently in the Cotswolds . Series one was filmed over the course of mid - to late 2016 and premiered on 18 November
+2016 . Series two was filmed over the same time period the following year ; however , filming was set back due to various illnesses and injuries suffered by the
+presenters . Due to this , it premiered on 8 December 2017 . In the days following the launch , `` The Holy Trinity '' became Amazon Video 's most watched
+premiere episode . Overall , the show has received positive reviews from critics . Contents ( hide ) 1 Format 1.1 Films 1.2 Test tracks 1.2. 1 Eboladrome 1.2. 2
+Enstone 1.3 Celebrity Face Off 1.4 Conversation Street 1.5 Running gags 1.6 Awards 2 Episodes 2.1 Series overview 2.2 Series 1 ( 2016 -- 17 ) 2.2.
+</item 2>
+
+<item 3>
+Graph query row:
+episode: The Falls Guys
+participant: Kevin Pietersen
+relationships: ['RELATED_TO']
+</item 3>
+
+<item 4>
+The Grand Tour (TV series)
+ASIN B0731ZQ3R7. 1 . Past , present or future Missing or empty url = ( help ) ; access - date = requires url = ( help ) ^ Jump up to : Starkey , Adam ( 13
+December 2017 ) . `` The Grand Tour season 2 : Richard Hammond is on crutches in episode 2 after horrifying crash '' . Metro . London . Retrieved 13 December
+2017 . second episode titled The Falls Guys , Clarkson drives ... Ford GT from New York City to Niagara Falls , with James May making the same journey via
+public transport with Hammond ... Celebrity Face Off ... cricketer Kevin Pietersen and baseball 's Brian Wilson Jump up ^ `` The Grand Tour Season 2 Episode 3
+'' . 16 December 2017 . Retrieved 16 December 2017 . ^ Jump up to : `` Zadarska manekenka Silvija oduševila u ' The Grand Touru ' '' ( Zadar model Silvija
+delights in The Grand Tour ) . 24sata ( in Croatian ) . 3 January 2018 .
+</item 4>
+
+<item 5>
+The Grand Tour (TV series)
+The Daily Telegraph , while not as positive , still approved of the episode , stating `` The writing is still rather ropey . Clarkson 's suggestion of a new
+nickname for May -- `` Dingleberry Handpump '' -- failed to raise a titter even among the super-fans gathered for the London premiere '' but also said that ``
+for each wobble , there are just as many moments when The Grand Tour manages the clever trick Top Gear could pull off at its best : raising a chuckle while
+sneaking in a bit of serious journalism at the same time . '' and ultimately gave the episode 3 out of 5 stars . Jeremy Clarkson himself believed that they had
+`` hit the ground running with series 2 of the Grand Tour '' . Radio Times has criticised the gender balance of guests on the `` Celebrity Face Off '' segment .
+There was only 1 woman guest in the episode `` Oh Canada '' ; Paris Hilton . Hothouse Flowers playing for the opening sequence of `` The Holy Trinity '' episode
+in the Lucerne Valley , California Broadcast ( edit ) Australian free - to - air network Seven Network started broadcasting the first series of The Grand Tour
+in mid-October 2017 .
+</item 5>
+
+<item 6>
+The Grand Tour (TV series)
+The Sun . Retrieved 23 December 2017 . ^ Jump up to : Daly , Emma ( 26 November 2016 ) . `` Jeremy Clarkson forced to ' kill off ' celebs on The Grand Tour
+after BBC ' bans Top Gear rip - off star interviews ' '' . The Sun . Retrieved 26 November 2016 . Jump up ^ Lee , Kristen ( 16 November 2017 ) . `` ' Celebrity
+Brain Crash ' Axed on the Grand Tour Season 2 '' . jalopnik.com . Retrieved 17 November 2017 . Jump up ^ McCreesh , Louise ( 27 November 2017 ) . `` The Grand
+Tour season 2 confirms celebrity guests including The Hoff , Jack Bauer and Luke Evans '' . Digital Spy . Retrieved 28 November 2017 . Jump up ^ Hsieh , Tony (
+20 November 2016 ) . `` The Grand Tour : 3 Mustangs from the Opening Sequence of the Premiere Episode '' . Grand Tour Nation . Retrieved 24 November 2016 . ^
+Jump up to : `` Amazon Instant Video '' .
+</item 6>
+
+<item 7>
+The Grand Tour (TV series)
+The Sunday Times : Driving . Retrieved 14 December 2017 . The show has a new test track in Enstone , ... there planning problems when ( Clarkson ) tried once
+before to use the Enstone track , back in Top Gear days ... The noisier testing of fast cars will continue to be done in Wiltshire at RAF Wroughton ...
+nicknamed `` the Eboladrome '' Jump up ^ Reed , Jason ( 24 January 2018 ) . `` The Secret Story Behind The Grand Tour 's Celebrity Braincrash '' . Shifting
+Lanes . Retrieved 26 January 2018 . ^ Jump up to : McCreesh , Louise ( 27 November 2017 ) . `` The Grand Tour season 2 confirms celebrity guests including
+Kiefer Sutherland and David Hasselhoff '' . Retrieved 19 December 2017 . The celebrity guests this series include Luke Evans , Kiefer Sutherland , Hugh
+Bonneville , Kevin Pietersen and Dominic Cooper ( ... ) Dynamo , Rory Mcllroy , Michael Ball and Alfie Boe will also appear in season two .
+</item 7>
+
+<item 8>
+Graph query row:
+episode: The Falls Guys
+participant: Brian Wilson
+relationships: ['RELATED_TO']
+</item 8>
+
+<item 9>
+The Grand Tour (TV series)
+1 Notes 2.3 Series 2 ( 2017 -- 18 ) 2.3. 1 Notes 2.4 Series 3 3 Production 3.1 History 3.2 Legal issues 3.3 Filming 3.4 Promotion 3.5 Sponsorship 3.6 Technical
+Issues 4 Reception 5 Broadcast 6 See also 7 References 8 External links Format ( edit ) The Grand Tour is presented as a mix of pre-recorded television films
+and live - audience segments presented in a large tent to an audience of about 300 members . The show and its segments are hosted by Jeremy Clarkson , Richard
+Hammond , and James May . The show is presented from a pair of large tents on a Grand Tour around the world . The presenters sit around a trestle table , with
+the studio audience seated in front of them . Films ( edit ) Each show is generally bookended by two television films , or two parts of the same film , produced
+by one or more of the hosts .
+</item 9>
+
+<item 10>
+The Grand Tour (TV series)
+Rotten Tomatoes . Retrieved 17 July 2017 . Jump up ^ `` The Grand Tour season 2 episode 1 review : We 're in safe hands as Clarkson , Hammond and May return ''
+. Digital Spy . Retrieved 8 December 2017 . Jump up ^ `` Television review : The Grand Tour on Amazon Prime '' . The Times . Retrieved 8 December 2017 . Jump up
+^ `` The Grand Tour season 2 , episode 1 review : Has Jeremy Clarkson finally found his groove ? '' . The Daily Telegraph . Retrieved 8 December 2017 . Jump up
+^ Clarkson , Jeremy ( 8 December 2017 ) . `` Jeremy Clarkson on Twitter '' . twitter.com . Retrieved 15 December 2017 . Jump up ^ Ling , Thomas ( 27 November
+2017 ) . `` The Grand Tour 's first celebrity guests for series 2 have been revealed -- and there 's not a single woman '' . Retrieved 20 December 2017 . Jump
+up ^ Long , Trevor .
+</item 10>
+=== END ITEM id=841497cb5e2cadae ===
+
+=== ITEM id=e7c454a18c63c067 ===
+Gold sentences and facts:
+Sentence 0: Manchester United Football Club is a professional football club based in Old Trafford , Greater Manchester , England , that competes in the Premier League , the top flight of English football . Nicknamed `` the Red Devils '' , the club was founded as Newton Heath LYR Football Club in 1878 , changed its name to Manchester United in 1902 and moved to its current stadium , Old Trafford , in 1910 .
+  Fact 0.0: Manchester United Football Club is a professional football club.
+  Fact 0.1: Manchester United Football Club is based in Old Trafford, Greater Manchester, England.
+  Fact 0.2: Manchester United Football Club competes in the Premier League, the top flight of English football.
+  Fact 0.3: Manchester United Football Club is nicknamed "the Red Devils".
+  Fact 0.4: Manchester United Football Club was founded as Newton Heath LYR Football Club in 1878.
+  Fact 0.5: Manchester United Football Club changed its name to Manchester United in 1902.
+  Fact 0.6: Manchester United Football Club moved to its current stadium, Old Trafford, in 1910.
+
+Retrieved items:
+<item 1>
+Manchester United F.C.
+Kit evolution 1879 -- 1880 , 1896 -- 1902 1880 -- 1887 1887 -- 1893 1893 -- 1894 1894 -- 1896 1902 -- 1920 , 1921 -- 1922 , 1927 -- 1934 , 1934 -- 1960 , 1971
+-- present 1920 -- 1921 , 1963 -- 1971 1922 -- 1927 1934 1960 -- 1963 ( 1997 -- present ) Notes ^ Since 1997 this combination is primarily used in domestic
+competitions and friendlies . ^ Since 1997 this combination is primarily used in European and international competitions . Grounds Old Trafford after its
+expansion completed in 2006 Newton Heath initially played on a field on North Road , close to the railway yard ; the original capacity was about 12,000 , but
+club officials deemed the facilities inadequate for a club hoping to join The Football League .
+</item 1>
+
+<item 2>
+Manchester United F.C.
+Within four years , the stadium had cover on all four sides , as well as the ability to hold approximately 50,000 spectators , some of whom could watch from the
+viewing gallery atop the Main Stand . However , following Manchester United 's first league title in 1908 and the FA Cup a year later , it was decided that Bank
+Street was too restrictive for Davies ' ambition ; in February 1909 , six weeks before the club 's first FA Cup title , Old Trafford was named as the home of
+Manchester United , following the purchase of land for around £ 60,000 . Architect Archibald Leitch was given a budget of £ 30,000 for construction ; original
+plans called for seating capacity of 100,000 , though budget constraints forced a revision to 77,000 . The building was constructed by Messrs Brameld and Smith
+of Manchester . The stadium 's record attendance was registered on 25 March 1939 , when an FA Cup semi-final between Wolverhampton Wanderers and Grimsby Town
+drew 76,962 spectators .
+</item 2>
+
+<item 3>
+Manchester United F.C.
+These were dismantled in 1987 and replaced by a lighting system embedded in the roof of each stand , which remains in use today . The Taylor Report 's
+requirement for an all - seater stadium lowered capacity at Old Trafford to around 44,000 by 1993 . In 1995 , the North Stand was redeveloped into three tiers ,
+restoring capacity to approximately 55,000 . At the end of the 1998 -- 99 season , second tiers were added to the East and West Stands , raising capacity to
+around 67,000 , and between July 2005 and May 2006 , 8,000 more seats were added via second tiers in the north - west and north - east quadrants . Part of the
+new seating was used for the first time on 26 March 2006 , when an attendance of 69,070 became a new Premier League record .
+</item 3>
+
+<item 4>
+Manchester United F.C.
+The record was pushed steadily upwards before reaching its peak on 31 March 2007 , when 76,098 spectators saw Manchester United beat Blackburn Rovers 4 -- 1 ,
+with just 114 seats ( 0.15 per cent of the total capacity of 76,212 ) unoccupied . In 2009 , reorganisation of the seating resulted in a reduction of capacity
+by 255 to 75,957 . Manchester United has the second highest average attendance of European football clubs only behind Borussia Dortmund . Support Manchester
+United is one of the most popular football clubs in the world , with one of the highest average home attendance in Europe . The club states that its worldwide
+fan base includes more than 200 officially recognised branches of the Manchester United Supporters Club ( MUSC ) , in at least 24 countries . The club takes
+advantage of this support through its worldwide summer tours . Accountancy firm and sports industry consultants Deloitte estimate that Manchester United has 75
+million fans worldwide , while other estimates put this figure closer to 333 million .
+</item 4>
+
+<item 5>
+Manchester United F.C.
+on BBC Sport : Club news -- Recent results and fixtures Manchester United at Sky Sports Manchester United at Premier League Manchester United Football Club
+Players Managers Reserves & Academy Records & statistics Current season History 1878 -- 1945 1945 -- 1969 1969 -- 1986 1986 -- 2013 Seasons Europe Munich air
+disaster Munich air disaster Busby Babes United Home stadium North Road ( 1878 -- 1893 ) Bank Street ( 1893 -- 1910 ) Old Trafford ( 1910 -- present ) Stretford
+End Sir Matt Busby Way Training ground The Cliff Trafford Training Centre Players 100 + appearances 25 -- 99 appearances 1 -- 24 appearances Sir Matt Busby
+Player of the Year Rivalries League record by opponent Manchester derby Liverpool rivalry Leeds United rivalry Arsenal rivalry Supporters Independent Manchester
+United Supporters Association Manchester United Supporters ' Trust Red Army Media MUTV MU Radio Inside United Red Issue Red News Related articles Fergie 's
+Fledglings United Trinity F.C. United of Manchester Glazer ownership Mascots 1915 British football betting scandal Railway station The Class of ' 92 Book :
+Manchester United F.C. Category : Manchester United F.C. Portal
+</item 5>
+
+<item 6>
+Manchester United F.C.
+Manchester United F.C. - Wikipedia Manchester United F.C. Jump to : navigation , search `` MUFC '' and `` Manchester United '' redirect here . For other uses ,
+see MUFC ( disambiguation ) . For the basketball team , see Manchester Eagles . Not to be confused with F.C. United of Manchester . Manchester United Full name
+Manchester United Football Club Nickname ( s ) The Red Devils Short name MUFC Founded 1878 ; 140 years ago ( 1878 ) , as Newton Heath LYR F.C. 1902 ; 116 years
+ago ( 1902 ) , as Manchester United F.C. Ground Old Trafford Ground Capacity 74,994 Owner Manchester United plc ( NYSE : MANU ) Co-chairmen Joel and Avram
+Glazer Manager José Mourinho League Premier League 2016 -- 17 Premier League , 6th of 20 Website Club website Home colours Away colours Third colours Current
+season Manchester United Football Club is a professional football club based in Old Trafford , Greater Manchester , England , that competes in the Premier
+League , the top flight of English football .
+</item 6>
+
+<item 7>
+Manchester United F.C.
+Non-League ( tiers 5 -- 11 ) 5 None 6 Curzon Ashton F.C. United of Manchester Salford City Stockport County 7 Altrincham Ashton United Stalybridge Celtic 8
+Atherton Collieries Droylsden Hyde United Mossley Radcliffe Borough Ramsbottom United Trafford 9 Abbey Hey Ashton Athletic Irlam Maine Road West Didsbury &
+Chorlton 10 Atherton Laburnum Rovers Chadderton Cheadle Town Daisy Hill Prestwich Heys Stockport Town 11 Ashton Town Eagley Wythenshawe Amateurs Competitions
+Manchester Premier Cup Manchester Senior Cup Venues Boundary Park Bower Fold Broadhurst Park Butcher 's Arms Ground City of Manchester Stadium DW Stadium
+Edgeley Park Ewen Fields Gigg Lane Macron Stadium Moss Lane Old Trafford Spotland Stadium Other topics Manchester derby Laureus World Sports Award for Team of
+the Year winners 2000 : Manchester United F.C.
+</item 7>
+
+<item 8>
+Manchester United F.C.
+Some expansion took place in 1887 , and in 1891 , Newton Heath used its minimal financial reserves to purchase two grandstands , each able to hold 1,000
+spectators . Although attendances were not recorded for many of the earliest matches at North Road , the highest documented attendance was approximately 15,000
+for a First Division match against Sunderland on 4 March 1893 . A similar attendance was also recorded for a friendly match against Gorton Villa on 5 September
+1889 . In June 1893 , after the club was evicted from North Road by its owners , Manchester Deans and Canons , who felt it was inappropriate for the club to
+charge an entry fee to the ground , secretary A.H. Albut procured the use of the Bank Street ground in Clayton . It initially had no stands , by the start of
+the 1893 -- 94 season , two had been built ; one spanning the full length of the pitch on one side and the other behind the goal at the `` Bradford end '' . At
+the opposite end , the `` Clayton end '' , the ground had been `` built up , thousands thus being provided for '' .
+</item 8>
+
+<item 9>
+Manchester United F.C.
+Nicknamed `` the Red Devils '' , the club was founded as Newton Heath LYR Football Club in 1878 , changed its name to Manchester United in 1902 and moved to its
+current stadium , Old Trafford , in 1910 . Manchester United have won a record 20 League titles , 12 FA Cups , 5 League Cups and a record 21 FA Community
+Shields . The club has also won three UEFA Champions Leagues , one UEFA Europa League , one UEFA Cup Winners ' Cup , one UEFA Super Cup , one Intercontinental
+Cup and one FIFA Club World Cup . In 1998 -- 99 , the club became the first in the history of English football to achieve the treble of the Premier League , the
+FA Cup and the UEFA Champions League . In 2016 -- 17 , by winning the UEFA Europa League , they became one of five clubs to have won all three main UEFA club
+competitions . In addition , they became the only professional English club to have won every ongoing honour available to the first team that is organised by a
+national or international governing body . The 1958 Munich air disaster claimed the lives of eight players .
+</item 9>
+
+<item 10>
+Manchester United F.C.
+Bombing in the Second World War destroyed much of the stadium ; the central tunnel in the South Stand was all that remained of that quarter . After the war ,
+the club received compensation from the War Damage Commission in the amount of £ 22,278 . While reconstruction took place , the team played its `` home '' games
+at Manchester City 's Maine Road ground ; Manchester United was charged £ 5,000 per year , plus a nominal percentage of gate receipts . Later improvements
+included the addition of roofs , first to the Stretford End and then to the North and East Stands . The roofs were supported by pillars that obstructed many
+fans ' views , and they were eventually replaced with a cantilevered structure . The Stretford End was the last stand to receive a cantilevered roof , completed
+in time for the 1993 -- 94 season . First used on 25 March 1957 and costing £ 40,000 , four 180 - foot ( 55 m ) pylons were erected , each housing 54 individual
+floodlights .
+</item 10>
+=== END ITEM id=e7c454a18c63c067 ===
+
+=== ITEM id=b47779d8a2c34fa3 ===
+Gold sentences and facts:
+Sentence 0: Bruce Willis as John McClane Jai Courtney as John `` Jack '' McClane , Jr . Sebastian Koch as Yuri Komarov Yuliya Snigir as Irina Komarova Sergei Kolesnikov as Viktor Chagarin Radivoje Bukvić as Alik Mary Elizabeth Winstead as Lucy McClane
+  Fact 0.0: Bruce Willis plays John McClane.
+  Fact 0.1: Jai Courtney plays John 'Jack' McClane, Jr.
+  Fact 0.2: Sebastian Koch plays Yuri Komarov.
+  Fact 0.3: Yuliya Snigir plays Irina Komarova.
+  Fact 0.4: Sergei Kolesnikov plays Viktor Chagarin.
+  Fact 0.5: Radivoje Bukvić plays Alik.
+  Fact 0.6: Mary Elizabeth Winstead plays Lucy McClane.
+
+Retrieved items:
+<item 1>
+A Good Day to Die Hard
+Retrieved 2012 - 02 - 22 . Jump up ^ `` Mary Elizabeth Winstead to Return as John McClane 's Daughter in A Good Day To Die Hard '' . Collider.com. 2012 - 08 -
+07 . Retrieved 2012 - 08 - 07 . Jump up ^ http://www.movie-censorship.com/report.php?ID=175700 ^ Jump up to : `` A Good Day to Die Hard ' Finds a Couple of Male
+and Female Villains '' . firstshowing.net. 2012 - 04 - 04 . Retrieved 2012 - 04 - 04 . Jump up ^ `` Cole Hauser Joins Bruce Willis In A Good Day To Die Hard ''
+. deadline.com. 2012 - 05 - 08 . Retrieved 2012 - 05 - 08 . ^ Jump up to : Sneider , Jeff ( 2012 - 05 - 14 ) . `` Latest in ' Die Hard ' series adds two '' .
+Variety . Retrieved 2012 - 05 - 31 .
+</item 1>
+
+<item 2>
+A Good Day to Die Hard
+Casting ( edit ) Bruce Willis returned as John McClane , and has expressed a desire to shoot A Good Day to Die Hard and a sixth installment in the series before
+retiring the character . When casting the role of Jack McClane , the studios considered several actors , including Liam Hemsworth and James Badge Dale , before
+ultimately settling on Australian actor Jai Courtney . Mary Elizabeth Winstead also appeared in the film , reprising her role as McClane 's daughter Lucy .
+However all her scenes were cut from the Extended release . Sebastian Koch played the film 's primary antagonist , Yuri Komarov , while Yuliya Snigir and Cole
+Hauser featured as secondary characters Irina and Collins . The cast was completed by actors Amaury Nolasco as a friend of McClane , Pasha D. Lychnikoff as a
+taxi driver , and Megalyn Echikunwoke , Anne Vyalitsyna , and Ivan Kamaras in smaller roles . Filming ( edit ) Production began in Hungary in April 2012 , with
+the capital Budapest standing in for Moscow .
+</item 2>
+
+<item 3>
+A Good Day to Die Hard
+Roman Luknár makes an apperance as Anton , a business associate of Chagarin . Ganxsta Zolee makes a brief cameo as a MRAP driver . Production ( edit )
+Pre-production ( edit ) Production was formally announced in 2010 , with X-Men Origins : Wolverine and The A-Team writer Skip Woods confirmed as the film 's
+screenwriter . Noam Murro was originally attached to direct the film but left production to direct the 300 prequel , 300 : Rise of an Empire . John Moore was
+subsequently drafted in to replace him . The film was originally titled `` Die Hard 24 / 7 '' . The media speculated that the film would be a crossover between
+the Die Hard and 24 series , with Kiefer Sutherland to reprise his role as Jack Bauer alongside John McClane . This was never confirmed by the studio , and the
+film 's title was later revealed to be A Good Day to Die Hard -- with no further mention of any involvement from the 24 series -- with a release date of
+February 14 , 2013 .
+</item 3>
+
+<item 4>
+A Good Day to Die Hard
+March 21 , 2013 . External links ( edit ) Official website A Good Day to Die Hard on IMDb A Good Day to Die Hard at Box Office Mojo A Good Day to Die Hard at
+Rotten Tomatoes A Good Day to Die Hard at Metacritic Die Hard Films Die Hard Die Hard 2 Die Hard with a Vengeance Live Free or Die Hard A Good Day to Die Hard
+Characters John McClane Video games Die Hard Die Hard Arcade Die Hard Trilogy Die Hard Trilogy 2 : Viva Las Vegas Die Hard : Nakatomi Plaza Die Hard : Vendetta
+Other Die Hard : Year One The Detective novel film Nothing Lasts Forever 58 Minutes Dynamite Cop Val Verde Roderick Thorp Films directed by John Moore Behind
+Enemy Lines ( 2001 ) Flight of the Phoenix ( 2004 ) The Omen ( 2006 ) Max Payne ( 2008 ) A Good Day to Die Hard ( 2013 ) I.T.
+</item 4>
+
+<item 5>
+A Good Day to Die Hard
+Rick Groen of The Globe and Mail criticized the action scenes as being `` messy '' , but concluded his review saying that the film `` continues the franchise
+without undue embarrassment . '' Peter Howell of The Toronto Star remarked that Willis and Courtney made a strong estranged family duo and that the film had a
+nice drinking game routine going for it with how many times McClane exclaims `` I 'm on vacation ! '' during the running time . Box Office ( edit ) A Good Day
+to Die Hard grossed $67,349,198 in North America and $237,304,984 in other territories for a worldwide total of $304,654,182 , collecting more than three times
+its $92 million budget . In North America , A Good Day to Die Hard grossed an estimated $840,000 from its night showings at 2,328 locations on Wednesday ,
+February 13 , 2013 . The next day , at an additional 1,225 locations , the film managed to accumulate $8,239,116 , opening at # 2 behind Safe Haven .
+</item 5>
+
+<item 6>
+A Good Day to Die Hard
+Komarov remarks that Jack will get to watch his father die , prompting Jack to hurl him off the rooftop into the path of the spinning helicopter rotors ,
+killing him . As Jack and John reunite inside the building , Irina tries to avenge her father by ramming the helicopter , now out of ammunition , into the
+building in a suicide attack . Father and son survive by leaping off the building into a large pool of water , as the helicopter crashes and explodes , killing
+Irina . In the end , the McClanes return home and reunite with Lucy on the tarmac . Cast ( edit ) Bruce Willis as John McClane Jai Courtney as John `` Jack ''
+McClane , Jr . Sebastian Koch as Yuri Komarov Yuliya Snigir as Irina Komarova Sergei Kolesnikov as Viktor Chagarin Radivoje Bukvić as Alik Mary Elizabeth
+Winstead as Lucy McClane Additional cast members include CIA operatives : Aldis Hodge as Lt. Foxy and Cole Hauser as Mike Collins . Amaury Nolasco appears as
+Murphy , an NYPD detective and McClane 's friend .
+</item 6>
+
+<item 7>
+Bruce Willis reprises John McClane in *A Good Day to Die Hard* and planned to make it and a sixth film before retiring the character. Jai Courtney was cast as
+his son, Jack, after Liam Hemsworth and James Badge Dale were considered; Mary Elizabeth Winstead returned as Lucy, though her scenes were cut from the extended
+edition. Sebastian Koch, Yuliya Snigir, and Cole Hauser played key supporting characters, alongside Amaury Nolasco and others. Fil
+</item 7>
+
+<item 8>
+*A Good Day to Die Hard* is a 2013 action thriller, the fifth *Die Hard* film, directed by John Moore and written by Skip Woods. Bruce Willis stars as John
+McClane, who travels to Moscow to help his estranged son Jack (Jai Courtney), an undercover CIA agent, and becomes entangled in a terrorist plot. Filmed mainly
+in Budapest, it grossed $304.7 million on a $92 million budget but received overwhelmingly negative reviews, despite praise for
+</item 8>
+
+<item 9>
+A Good Day to Die Hard
+The main plot finds McClane travelling to Russia to get his estranged son , Jack , an undercover CIA agent , out of prison . He is soon caught in the crossfire
+of a global terrorist plot . Alongside Willis , the film also stars Jai Courtney , Cole Hauser , Yuliya Snigir and Sebastian Koch as the film 's villain . Talks
+of a fifth Die Hard film began before the release of the fourth installment , Live Free or Die Hard , with Willis affirming that the latter would not be the
+last in the series , but pre-production did not start until September 2011 , when John Moore was officially announced as the director . Filming began in April
+2012 , primarily in Budapest , Hungary . A Good Day to Die Hard premiered in Los Angeles on January 31 , 2013 , coinciding with the unveiling of a Die Hard
+mural at the Fox Lot , and was released in certain East and Southeast Asian countries on February 7 and in the United States and Canada on February 13 . It is
+the first Die Hard film to use Dolby Atmos Surround Mixing and the first to also be released in IMAX theaters .
+</item 9>
+
+<item 10>
+A Good Day to Die Hard
+A Good Day to Die Hard was a box office success but received overwhelmingly negative reviews for its implausible action sequences , cinematography , weak plot ,
+cliched script , and lack of characterization , although the special effects were praised . It is the first film produced by TSG Entertainment , since
+distributor 20th Century Fox 's departure from Dune Entertainment upon the completion of their distribution contract at the end of 2012 . Contents ( hide ) 1
+Plot 2 Cast 3 Production 3.1 Pre-production 3.2 Casting 3.3 Filming 3.4 Post-production 4 Soundtrack 5 Release 6 Reception 6.1 Box office 6.2 Home media 7
+References 8 External links Plot ( edit ) In Moscow , Viktor Chagarin , a high - ranking , but corrupt , Russian official plans to incriminate former
+billionaire and government whistleblower Yuri Komarov in an imminent rigged trial unless Komarov hands over a secret file believed to contain evidence
+incriminating Chagarin . Separately , Jack McClane , who has been arrested after an assassination attempt , negotiates for a shorter sentence by offering to
+testify against Komarov .
+</item 10>
+=== END ITEM id=b47779d8a2c34fa3 ===
+
+=== ITEM id=55475e82d874a023 ===
+Gold sentences and facts:
+Sentence 0: The total number of languages natively spoken in Africa is variously estimated ( depending on the delineation of language vs. dialect ) at between 1,250 to 2,100 , and by some counts at `` over 3,000 '' , Nigeria alone has over 500 languages ( according to the count of SIL Ethnologue ) , one of the greatest concentrations of linguistic diversity in the world .
+  Fact 0.0: The total number of languages natively spoken in Africa is variously estimated at between 1,250 and 2,100, depending on the delineation of language vs. dialect.
+  Fact 0.1: Some counts put the number of languages natively spoken in Africa at 'over 3,000'.
+  Fact 0.2: Nigeria alone has over 500 languages, according to the count of SIL Ethnologue.
+  Fact 0.3: Nigeria is one of the greatest concentrations of linguistic diversity in the world.
+
+Retrieved items:
+<item 1>
+Africa has over 3,000 indigenous languages, alongside many creoles, pidgins, and lingua francas. The excerpt lists several Niger–Congo languages: Tswana (5.8
+million speakers), Umbundu (6 million), Xhosa (7.6 million), Yoruba (28 million), and Zulu (10.4 million). Tswana is spoken in South Africa and Botswana;
+Umbundu is recognized in Angola; Xhosa is spoken
+</item 1>
+
+<item 2>
+Languages of Africa
+000,000 Eritrea Tshiluba Niger -- Congo 6,300,000 ( 1991 ) national language of Democratic Republic of the Congo Tswana Niger -- Congo 5,800,000 South Africa ,
+Botswana Umbundu Niger -- Congo 6,000,000 recognised national language of Angola Xhosa Niger -- Congo 7,600,000 South Africa , Zimbabwe Yoruba Niger -- Congo
+28,000,000 Zulu Niger -- Congo 10,400,000 South Africa See also ( edit ) Africa portal Language portal General ( edit ) Languages of the African Union Writing
+systems of Africa Journal of West African Languages Works ( edit ) Polyglotta Africana The Languages of Africa Classifiers ( edit ) Karl Lepsius Wilhelm Bleek
+Carl Meinhof Diedrich Westermann Joseph Greenberg Notes ( edit ) Jump up ^ Heine , Bernd ; Heine , Bernd , eds. ( 2000 ) . African Languages : an Introduction .
+Cambridge University Press . Jump up ^ Epstein , Edmund L. ; Kole , Robert , eds. ( 1998 ) . The Language of African Literature . Africa World Press .
+</item 2>
+
+<item 3>
+Languages of Africa
+135,000 native language of Mauritius Mossi Niger -- Congo 7,600,000 Recognised regional language in Burkina Faso Ndebele Niger -- Congo 1,090,000 Statuatory
+national language in South Africa Northern Sotho Niger -- Congo 4,600,000 South Africa Oromo Afroasiatic 26,000,000 Ethiopia Portuguese Indo - European
+13,700,000 ( estimated ) Angola , Cape Verde , Guinea - Bissau , Equatorial Guinea , Mozambique , São Tomé and Príncipe Sesotho Niger -- Congo 5,600,000 Lesotho
+, South Africa , Zimbabwe Shona Niger -- Congo 14,200,000 incl . Manyika , Ndau ( 2000 -- 2006 ) Zimbabwe Somali Afroasiatic 16,600,000 Somalia Spanish Indo -
+European 2,700,000 Equatorial Guinea Swahili Niger -- Congo 15,000,000 official in Tanzania , Kenya , Uganda , Rwanda national language of Democratic Republic
+of Congo Tigrinya Afroasiatic 7,000,000 Eritrea Tshiluba Niger -- Congo 6,300,
+</item 3>
+
+<item 4>
+Languages of Africa
+Case , tense and other categories may be distinguished only by tone . Semantic ( edit ) Quite often , only one term is used for both animal and meat ; the word
+nama or nyama for animal / meat is particularly widespread in otherwise widely divergent African languages . Number of speakers ( edit ) The following is a
+table displaying the number of speakers of given languages within Africa : Language Family Native speakers ( L1 ) Official status per country Afrikaans Indo -
+European 7,200,000 South Africa Akan Niger -- Congo 11,000,000 None . Government sponsored language of Ghana Amharic Afroasiatic 21,800,000 Ethiopia Arabic
+Afroasiatic 150,000,000 but with separate mutually unintelligible varieties Algeria , Chad , Comoros , Djibouti , Egypt , Eritrea , Libya , Mauritania , Morocco
+, Somalia , Sudan , Tunisia Berber Afroasiatic 56,000,000 ( estimated ) ( including separate unintelligible varieties ) Morocco , Algeria Chewa Niger -- Congo
+9,700,000 Malawi , Zimbabwe English Indo - European 6,500,
+</item 4>
+
+<item 5>
+Languages of Africa
+There are several other small families and language isolates , as well as languages that have yet to be classified . In addition , Africa has a wide variety of
+sign languages , many of which are language isolates ( see below ) . The total number of languages natively spoken in Africa is variously estimated ( depending
+on the delineation of language vs. dialect ) at between 1,250 to 2,100 , and by some counts at `` over 3,000 '' , Nigeria alone has over 500 languages (
+according to the count of SIL Ethnologue ) , one of the greatest concentrations of linguistic diversity in the world . Around a hundred languages are widely
+used for inter-ethnic communication . Arabic , Somali , Berber , Amharic , Oromo , Igbo , Swahili , Hausa , Manding , Fulani and Yoruba are spoken by tens of
+millions of people . Twelve dialect clusters ( which may group up to a hundred linguistic varieties ) are spoken by 75 percent , and fifteen by 85 percent , of
+Africans as a first or additional language .
+</item 5>
+
+<item 6>
+Languages of Africa
+5 Unclassified languages 1.4. 6 Sign languages 2 Language in Africa 2.1 Official Languages 2.2 Cross-border languages 2.3 Language change and planning 2.4
+Demographics 3 Linguistic features 3.1 Phonological 3.2 Syntactic 3.3 Semantic 4 Number of speakers 5 See also 5.1 General 5.2 Works 5.3 Classifiers 6 Notes 7
+References 8 External links Language groups ( edit ) Clickable map showing the traditional language families , subfamilies and major languages spoken in Africa
+Most languages spoken in Africa belong to one of three large language families : Afroasiatic , Nilo - Saharan and Niger -- Congo . Another hundred belong to
+small families such as Ubangian ( sometimes grouped within Niger - Congo ) and the various families called Khoisan , or the Indo - European and Austronesian
+language families mainly spoken outside Africa ; the presence of the latter two dates to 2,600 and 1,500 years ago , respectively . In addition , the languages
+of Africa languages include several unclassified languages and sign languages .
+</item 6>
+
+<item 7>
+Africa has roughly 1,250–2,100 indigenous languages, with estimates exceeding 3,000; Nigeria alone has over 500. Major families include Niger–Congo (especially
+Bantu), Afroasiatic, Nilo-Saharan and Khoisan, alongside Malagasy, Indo-European languages, creoles, isolates and sign languages. Arabic, Swahili, Hausa and
+others serve as regional lingua francas; colonial languages remain widely used in government and education. Cross
+</item 7>
+
+<item 8>
+Languages of Africa
+In addition to the ( likely modest ) impact of borders , there are also cases of dialect levelling ( such as in Igbo and probably many others ) , koinés ( such
+as N'Ko and possibly Runyakitara ) and emergence of new dialects ( such as Sheng ) . In some countries , there are official efforts to develop standardized
+language versions . There are also many less widely spoken languages that may be considered endangered languages . Demographics ( edit ) Further information :
+Demographics of Africa Of the 1 billion Africans ( in 2009 ) , about 17 percent speak an Arabic dialect . About 10 percent speak Swahili , the lingua franca of
+Southeast Africa ; about 5 percent speak a Berber dialect ; and about 5 percent speak Hausa , which serves as a lingua franca in much of the Sahel . Other
+important West African languages are Yoruba , Igbo and Fula . Major Horn of Africa languages are Amharic , Oromo and Somali . Important South African languages
+are Zulu , Xhosa and Afrikaans . English , French and Portuguese are important languages in Africa .
+</item 8>
+
+<item 9>
+Sub-Saharan Africa has more than 1,000 languages—about one-sixth of the world’s total. Most belong to the Afroasiatic, Nilo-Saharan, or Niger-Congo families;
+others include Khoisan and Ubangian groups, plus Indo-European and Austronesian languages introduced roughly 2,600 and 1,500 years ago. The region also has
+unclassified and sign languages. The source lists indicators including life expectancy, literacy, transparency, HDI, business
+</item 9>
+
+<item 10>
+Africa has an estimated 1,250–2,100 native languages, with some counts exceeding 3,000; Nigeria alone has over 500. The continent also has small language
+families, isolates, unclassified languages, and diverse sign languages. About 100 languages serve widely for inter-ethnic communication. Twelve dialect clusters
+are spoken by 75% of Africans, and fifteen by 85%, as first or additional languages. Examples include Arabic, Swahili, Hausa, Somali,
+</item 10>
+=== END ITEM id=55475e82d874a023 ===
+
+=== ITEM id=5f1b53b6843af43d ===
+Gold sentences and facts:
+Sentence 0: Name Age Hometown Boarded Destination Lifeboat Body Allen , Miss Elizabeth Walton 29 St. Louis , Missouri , US Southampton St. Louis , Missouri , US Allison , Mr. Hudson Joshua Creighton 30 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada 135 and chauffeur , Mr. George Swane , 19 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada 294 and cook , Miss Amelia Mary `` Mildred '' Brown 18 London , England , UK Southampton Montreal , Quebec , Canada 11 Allison , Mrs. Bessie Waldo ( née Daniels ) 25 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada and maid , Miss Sarah Daniels 33 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada 8 Allison , Miss Helen Loraine Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada Allison , Master Hudson Trevor 0.11 ! 11 mo . Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada 11 and nurse , Miss Alice Catherine Cleaver 22 London , England , UK Southampton Montreal , Quebec , Canada 11 Anderson , Mr. Harry 47 New York City , New York , US Southampton New York City , New York , US Andrews , Miss Kornelia Theodosia 62 Hudson , New York , US Cherbourg Hudson , New York , US 10 Andrews , Mr. Thomas 39 Belfast , Ireland , UK Belfast New York City Appleton , Mrs. Charlotte Lane ( née Lamson ) 53 New York City Southampton New York City Artagaveytia , Mr. Ramon 71 Buenos Aires , Argentina Cherbourg New York City 22 Astor , Colonel John Jacob IV 47 New York City Cherbourg New York City 124 Astor , Mrs. Madeleine Talmage ( née Force ) 18 New York City Cherbourg New York City and maid , Miss Rosalie Bidois 46 New York City Cherbourg New York City and nurse , Miss Caroline Louise Endres 39 New York City Cherbourg New York City Aubart , Mrs. Léontine Pauline 24 Paris , France Cherbourg New York City 9 and maid , Miss Emma Sägesser 24 Paris , France Cherbourg New York City 9 Barkworth , Mr. Algernon Henry Wilson 47 Hessle , East Yorkshire , England , UK Southampton New York City Baumann , Mr. John D . 60 New York City Cherbourg New York City Baxter , Mrs. Hélène ( née de Lanaudière - Chaput ) 50 Montreal , Quebec , Canada Cherbourg Montreal , Quebec , Canada 6 Baxter , Mr. Quigg Edmond 24 Montreal , Quebec , Canada Cherbourg Montreal , Quebec , Canada Beattie , Mr. Thomson 36 Fergus , Ontario , Canada Southampton Fergus , Ontario , Canada 331 Beckwith , Mr. Richard Leonard 37 New York City Southampton New York City 5 Beckwith , Mrs. Sallie ( née Monypeny ) 46 New York City Southampton New York City 5 Behr , Mr. Karl Howell 26 New York City Cherbourg New York City 5 Birnbaum , Mr. Jakob 24 Antwerp , Belgium Cherbourg San Francisco , California , US 148 Bishop , Mr. Dickinson H. `` Dick '' 25 Dowagiac , Michigan , US Cherbourg Dowagiac , Michigan , US 7 Bishop , Mrs. Helen ( née Walton ) 19 Dowagiac , Michigan , US Cherbourg Dowagiac , Michigan , US 7 Björnström - Steffanson , Mr. Mauritz Håkan 28 Stockholm , Sweden Southampton Washington , D.C. , US Blackwell , Mr. Stephen Weart 45 Trenton , New Jersey , US Southampton Trenton , New Jersey , US Blank , Mr. Henry 39 Glen Ridge , New Jersey , US Cherbourg Glen Ridge , New Jersey , US 7 Bonnell , Miss Elizabeth 61 Youngstown , Ohio , US Southampton Youngstown , Ohio , US 8 Bonnell , Miss Caroline 30 Youngstown , Ohio , US Southampton Youngstown , Ohio , US 8 Borebank , Mr. John James 42 London , England , UK Southampton Toronto , Ontario , Canada Bowerman , Miss Elsie Edith 22 St. Leonards - on - Sea , East Sussex , England , UK Southampton New York City 6 Brady , Mr. John Bertram 41 Pomeroy , Washington , US Southampton Pomeroy , Washington , US Brandeis , Mr. Emil 48 Omaha , Nebraska , US Cherbourg Omaha , Nebraska , US 208 Brereton , Mr. George Andrew ( alias George A. Brayton ) 37 Los Angeles , US Southampton Los Angeles , California , US 9 Brewe , Dr. Arthur Jackson 45 Philadelphia , Pennsylvania , US Cherbourg Philadelphia , Pennsylvania , US Brown , Mrs. Caroline Lane ( née Lamson ) 59 Belmont , Massachusetts , US Southampton Belmont , Massachusetts , US Brown , Mrs. Margaret ( née Tobin ) 44 Denver , Colorado , US Cherbourg Denver , Colorado , US 6 Bucknell , Mrs. Emma Eliza ( née Ward ) 59 Philadelphia , Pennsylvania , US Cherbourg Philadelphia , Pennsylvania , US 8 and maid , Miss Albina Bazzani 36 Philadelphia , Pennsylvania , US Cherbourg Philadelphia , Pennsylvania , US 8 Butt , Major Archibald Willingham 46 Washington , D.C. , US Southampton Washington , D.C. , US Calderhead , Mr. Edward Pennington 42 New York City Southampton New York City 5 Candee , Mrs. Helen Churchill ( née Hungerford ) 53 Washington , D.C. , US Cherbourg Washington , D.C. , US 6 Cardeza , Mrs. Charlotte Wardle ( née Drake ) 58 Germantown , Pennsylvania , US Cherbourg Germantown , Pennsylvania , US and maid , Miss Annie Moore Ward 38 Germantown , Pennsylvania , US Cherbourg Germantown , Pennsylvania , US Cardeza , Mr. Thomas Drake Martinez 36 Germantown , Pennsylvania , US Cherbourg Germantown , Pennsylvania , US and valet , Mr. Gustave J. Lesueur 35 Germantown , Pennsylvania , US Cherbourg Germantown , Pennsylvania , US Carlsson , Mr. Frans Olof 33 New York City Southampton New York City Carrau , Mr. Francisco M . 31 Montevideo , Uruguay Southampton Montevideo , Uruguay Carrau , Mr. José Pedro 17 Montevideo , Uruguay Southampton Montevideo , Uruguay Carter , Mr. William Ernest 36 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US and valet , Mr. Alexander Cairns 28 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US and chauffeur , Mr. Charles Augustus Aldworth 30 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US Carter , Mrs. Lucile ( née Polk ) 36 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US and maid , Miss Auguste Serreplan 30 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US Carter , Miss Lucile Polk 13 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US Carter , Master William Thornton II 11 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US Case , Mr. Howard Brown 49 Ascot , Berkshire , England , UK Southampton Rochester , New York , US Cassebeer , Mrs. Eleanor Genevieve ( née Fosdick ) 36 New York City Cherbourg New York City 5 Cavendish , Mr. Tyrell William 36 London , England , UK Southampton New York City 172 Cavendish , Mrs. Julia Florence ( née Siegel ) 25 London , England , UK Southampton New York City 6 and maid , Miss Ellen `` Nellie '' Barber 26 London , England , UK Southampton New York City 6 Chaffee , Mr. Hubert Fuller 46 Amenia , North Dakota , US Southampton Amenia , North Dakota , US Chaffee , Mrs. Carrie Constance ( née Toogood ) 47 Amenia , North Dakota , US Southampton Amenia , North Dakota , US Chambers , Mr. Norman Campbell 27 New York City Southampton New York City 5 Chambers , Mrs. Bertha ( née Griggs ) 32 New York City Southampton New York City 5 Cherry , Miss Gladys 30 London , England , UK Southampton Vancouver , British Columbia , Canada 8 Chevré , Mr. Paul Romaine Marie Léonce 45 Paris , France Cherbourg Ottawa , Ontario , Canada 7 Chibnall , Mrs. Edith Martha Bowerman ( née Barber ) 48 St. Leonards - on - Sea , East Sussex , England , UK Southampton New York City 6 Chisholm , Mr. Roderick Robert Crispin 40 Belfast , Ireland , UK Belfast New York City Clark , Mr. Walter Miller 27 Los Angeles , California , US Cherbourg Los Angeles , California , US Clark , Mrs. Virginia Estelle ( née McDowell ) 26 Los Angeles , California , US Cherbourg Los Angeles , California , US Clifford , Mr. George Quincy 40 Stoughton , Massachusetts , US Southampton Stoughton , Massachusetts Colley , Mr. Edward Pomeroy 37 Dublin , Ireland , UK Southampton Vancouver , British Columbia , Canada Compton , Mrs. Mary Eliza ( née Ingersoll ) 64 Lakewood , New Jersey , US Cherbourg Lakewood , New Jersey , US 14 Compton , Miss Sara Rebecca 39 Lakewood , New Jersey , US Cherbourg Lakewood , New Jersey , US 14 Compton , Mr. Alexander Taylor Jr . 37 Lakewood , New Jersey , US Cherbourg Lakewood , New Jersey , US Cornell , Mrs. Malvina Helen ( née Lamson ) 55 New York City Southampton New York City Crafton , Mr. John Bertram 59 Roachdale , Indiana , US Southampton Roachdale , Indiana , US Crosby , Captain Edward 70 Milwaukee , Wisconsin , US Southampton Milwaukee , Wisconsin , US 269 Crosby , Mrs. Catherine Elizabeth ( née Halstead ) 64 Milwaukee , Wisconsin , US Southampton Milwaukee , Wisconsin , US 7 Crosby , Miss Harriette Rebecca 39 Milwaukee , Wisconsin , US Southampton Milwaukee , Wisconsin , US 7 Cumings , Mr. John Bradley 39 New York City Cherbourg New York City Cumings , Mrs. Florence Briggs ( née Thayer ) 35 New York City Cherbourg New York , US Daly , Mr. Peter Dennis 51 Lima , Peru Southampton Lima , Peru Daniel , Mr. Robert Williams 27 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US Davidson , Mr. Thornton 31 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada Davidson , Mrs. Orian ( née Hays ) 27 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada Dick , Mr. Albert Adrian 31 Calgary , Alberta , Canada Southampton Calgary , Alberta , Canada Dick , Mrs. Vera ( née Gillespie ) 17 Calgary , Alberta , Canada Southampton Calgary , Alberta , Canada Dineston , Mrs. Nancy May Bowles 28 London , England , UK Southampton New York City , USA Dineston , George Samuel 30 London , England , UK Southampton New York City , USA Dodge , Dr. Washington 52 San Francisco , California , US Southampton San Francisco , California , US 13 Dodge , Mrs. Ruth ( née Vidaver ) 34 San Francisco , California , US Southampton San Francisco , California , US 5 Dodge , Master Washington , Jr . San Francisco , California , US Southampton San Francisco , California , US 5 Douglas , Mr. Walter Donald 50 Minneapolis , Minnesota , US Cherbourg Minneapolis , Minnesota , US 62 Douglas , Mrs. Mahala ( née Dutton ) 48 Minneapolis , Minnesota , US Cherbourg Minneapolis , Minnesota , US and maid , Miss Berthe Leroy 27 Minneapolis , Minnesota , US Cherbourg Minneapolis , Minnesota , US Douglas , Mrs. Mary Hélène ( née Baxter ) 27 Montreal , Quebec , Canada Cherbourg Montreal , Quebec , Canada 6 Duff Gordon , Sir Cosmo Edmund 49 London , England , UK Cherbourg New York City Duff Gordon , Lucy Christiana , Lady ( née Sutherland ) 48 London , England , UK Cherbourg New York City and secretary , Miss Laura Mabel Francatelli 31 London , England , UK Cherbourg New York City Dulles , Mr. William Crothers 39 Philadelphia , Pennsylvania , US Cherbourg Philadelphia , Pennsylvania , US 133 Eustis , Miss Elizabeth Mussey 54 Brookline , Massachusetts , US Cherbourg Brookline , Massachusetts , US Evans , Miss Edith Corse 36 New York City Cherbourg New York City Flegenheim , Mrs. Antoinette ( née Wendt ) 48 New York City Cherbourg New York City 7 Flynn , Mr. John Irwin 36 Brooklyn , New York , US Southampton Brooklyn , New York , US 5 Foreman , Mr. Benjamin Laventall 30 New York City Southampton New York City Fortune , Mr. Mark 64 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada Fortune , Mrs. Mary ( née McDougald ) 60 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada 10 Fortune , Miss Ethel Flora 28 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada 10 Fortune , Miss Alice Elizabeth 24 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada 10 Fortune , Miss Mabel Helen 23 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada 10 Fortune , Mr. Charles Alexander 19 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada Franklin , Mr. Thomas Parnham 37 London , England , UK Southampton New York City Frauenthal , Dr. Henry William 49 London , England , UK Southampton New York City 5 Frauenthal , Mrs. Clara ( née Heinsheimer ) 42 London , England , UK Southampton New York City 5 Frauenthal , Mr. Isaac Gerald 43 London , England , UK Southampton New York City 5 Frölicher , Mr. Maximilian Josef 60 Zürich , Switzerland Cherbourg New York City 5 Frölicher , Mrs. Margaretha Emerentia ( née Stehli ) 48 Zürich , Switzerland Cherbourg New York City 5 Frölicher - Stehli , Miss Hedwig Margaritha 22 Zürich , Switzerland Cherbourg New York City 5 Futrelle , Mr. Jacques Heath 37 Scituate , Massachusetts , US Southampton Scituate , Massachusetts , US Futrelle , Mrs. Lily May ( née Peel ) 35 Scituate , Massachusetts , US Southampton Scituate , Massachusetts , US Gee , Mr. Arthur H . 47 St. Annes - on - Sea , Lancashire , England , UK Southampton Mexico City , Mexico 275 Gibson , Mrs. Pauline Caroline ( née Boeson ) 44 New York City Cherbourg New York City 7 Gibson , Miss Dorothy Winifred 22 New York City Cherbourg New York City 7 Goldenberg , Mr. Samuel L . 47 Paris , France Cherbourg New York City 5 Goldenberg , Mrs. Nella ( née Wiggins ) 40 Paris , France Cherbourg New York City 5 Goldschmidt , Mr. George B . 71 New York City Cherbourg New York City Gracie IV , Colonel Archibald 53 Washington , D.C. , US Southampton Washington , D.C. , US Graham , Mr. George Edward 38 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada 147 Graham , Mrs. Edith Ware ( née Junkins ) 59 Greenwich , Connecticut , US Southampton Greenwich , Connecticut , US Graham , Miss Margaret Edith 19 Greenwich , Connecticut , US Southampton Greenwich , Connecticut , US and governess , Miss Elizabeth Weed Shutes 40 Greenwich , Connecticut , US Southampton Greenwich , Connecticut , US Greenfield , Mrs. Blanche ( née Strouse ) 45 New York City Cherbourg New York City 7 Greenfield , Mr. William Bertram 23 New York City Cherbourg New York City 7 Guggenheim , Mr. Benjamin 46 Paris , France Cherbourg New York City and valet , Mr. Victor Giglio 24 Paris , France Cherbourg New York City and chauffeur , Mr. René Pernot 39 Paris , France Cherbourg New York City Harder , Mr. George Achilles 25 New York City Cherbourg New York City 5 Harder , Mrs. Dorothy ( née Annan ) 21 New York City Cherbourg New York City 5 Harper , Mr. Henry Sleeper 48 New York City Cherbourg New York City and dragoman , Mr. Hammad Hassab 27 Cairo , Egypt Cherbourg New York City Harper , Mrs. Myna ( née Haxtun ) 49 New York City Cherbourg New York City Harris , Mr. Henry Birkhardt 45 New York City Southampton New York City Harris , Mrs. Irene ( née Wallach ) 35 New York City Southampton New York City Hawksford , Mr. Walter James 45 Kingston , Surrey , England , UK Southampton New York City Hays , Mr. Charles Melville 55 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada 307 and clerk , Mr. Vivian Ponsonby Payne 22 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada Hays , Mrs. Clara Jennings ( née Grigg ) 52 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada and maid , Miss Mary Anne Perreault 33 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada Hays , Miss Margaret Bechstein 24 New York City Cherbourg New York City 7 Head , Mr. Christopher 42 Chelsea , London , England , UK Southampton New York City Hilliard , Mr. Herbert Henry 44 Brighton , Massachusetts , US Southampton Brighton , Massachusetts , US Hipkins , Mr. William Edward 55 Birmingham , West Midlands , England , UK Southampton New York City Hippach , Mrs. Ida Sophia ( née Fischer ) 44 Chicago , Illinois , US Cherbourg Chicago , Illinois , US Hippach , Miss Jean Gertrude 17 Chicago , Illinois , US Cherbourg Chicago , Illinois , US Hogeboom , Mrs. Anna Louisa ( née Andrews ) 51 Hudson , New York , US Cherbourg Hudson , New York , US 10 Holverson , Mr. Alexander Oskar 42 New York City Southampton New York City 38 Holverson , Mrs. Mary Aline ( née Towner ) 35 New York City Southampton New York City 8 Homer , Mr. Harry ( alias E. Haven ) 40 Indianapolis , Indiana , US Southampton Indianapolis , Indiana , US 15 Hoyt , Mr. Frederick Maxfield 35 New York City Southampton Stamford , Connecticut , US Hoyt , Mrs. Jane Anne ( née Forby ) 31 New York City Southampton Stamford , Connecticut , US Hoyt , Mr. William Fisher 42 New York City Cherbourg New York City 14 Isham , Miss Ann Elizabeth 50 Chicago , Illinois , US Cherbourg Chicago , Illinois , US Ismay , Mr. Joseph Bruce 49 Liverpool , Merseyside , England , UK Southampton New York City and valet , Mr. John Richard Fry 39 Liverpool , Merseyside , England , UK Southampton New York City and secretary , Mr. William Henry Harrison 45 Wallasey , Merseyside , England , UK Southampton New York City 110 Johnson , Mrs. Madeline Eliza ( née Austin ) 40 London , England , UK Southampton New York , New York , US 6 Johnson ( later changed to Langston ) , Mr. Samuel James 10 London , England , UK Southampton New York , New York , US Jones , Mr. Charles Cresson 46 Bennington , Vermont , US Southampton Bennington , Vermont , US 80 Julian , Mr. Henry Forbes 50 Torquay , Devon , England , UK Southampton San Francisco , US Kent , Mr. Edward Austin 58 Buffalo , New York , US Cherbourg Buffalo , New York , US 258 Kenyon , Mr. Frederick R . 41 Pittsburgh , Pennsylvania , US Southampton Pittsburgh , Pennsylvania , US Kenyon , Mrs. Marion ( née Stauffer ) 31 Pittsburgh , Pennsylvania , US Southampton Pittsburgh , Pennsylvania , US 8 Kimball , Mr. Edwin Nelson Jr . 42 Boston , Massachusetts , US Southampton Boston , Massachusetts , US 5 Kimball , Mrs. Gertrude ( née Parsons ) 45 Boston , Massachusetts , US Southampton Boston , Massachusetts , US 5 Klaber , Mr. Herman 45 Portland , Oregon , US Southampton Portland , Oregon , US Langston , Ms. Maxine Jane 25 Duncansville , Pennsylvania , US Southampton Duncansivlle , Pennsylvania , US Lambert - Williams , Mr. Fletcher Fellows 43 London , England , UK Southampton Newark , New Jersey , US Leader , Dr. Alice ( née Farnham ) 49 New York City Southampton New York City 8 Leslie , Lucy Noël Martha , Countess of Rothes ( née Dyer - Edwardes ) 27 Vancouver , British Columbia , Canada Southampton Vancouver , British Columbia , Canada 8 and maid , Miss Roberta Elizabeth Mary `` Cissy '' Maioni 20 Vancouver , British Columbia , Canada Southampton Vancouver , British Columbia , Canada 8 Lewy , Mr. Ervin G . 31 Chicago , Illinois , US Cherbourg Chicago , Illinois , US Lindeberg - Lind , Mr. Erik Gustav ( alias Edward Lingrey ) 42 Jordanstorp , Södermanland , Sweden Southampton New York City Lindström , Mrs. Sigrid ( née Posse ) 55 Stockholm , Sweden Cherbourg New York City 6 Lines , Mrs. Elizabeth Lindsey ( née James ) 50 Paris , France Cherbourg Hanover , New Hampshire , US 9 Lines , Miss Mary Conover 16 Paris , France Cherbourg Hanover , New Hampshire , US 9 Long , Mr. Milton Clyde 29 Springfield , Massachusetts , US Southampton Springfield , Massachusetts , US 126 Longley , Miss Gretchen Fiske 21 Hudson , New York , US Cherbourg Hudson , New York , US 10 Loring , Mr. Joseph Holland 30 London , England , UK Southampton New York City Madill , Miss Georgette Alexandra 16 St. Louis , Missouri , US Southampton St. Louis , Missouri , US Maguire , Mr. John Edward 30 Brockton , Massachusetts , US Southampton Brockton , Massachusetts , US Maréchal , Mr. Pierre , Sr . 28 Paris , France Cherbourg New York City 7 Marvin , Mr. Daniel Warner 18 New York City Southampton New York City Marvin , Mrs. Mary Graham Carmichael ( née Farquarson ) 18 New York City Southampton New York City 10 Mayné , Miss Bertha Antonine 24 Brussels , Belgium Cherbourg Montreal , Quebec , Canada 6 McCaffry , Mr. Thomas Francis 46 Vancouver , British Columbia , Canada Southampton Vancouver , British Columbia , Canada 292 McCarthy , Mr. Timothy J . 54 Dorchester , Massachusetts , US Southampton Dorchester , Massachusetts , US 175 McGough , Mr. James Robert 35 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US 7 Meyer , Mr. Edgar Joseph 28 New York City Cherbourg New York City Meyer , Mrs. Leila ( née Saks ) 25 New York City Cherbourg New York City 6 Millet , Mr. Francis Davis 65 East Bridgewater , Massachusetts , US Cherbourg East Bridgewater , Massachusetts , US 249 Minahan , Dr. William Edward 44 Fond du Lac , Wisconsin , US Southampton Fond du Lac , Wisconsin , US 230 Minahan , Mrs. Lillian E. ( née Thorpe ) 37 Fond du Lac , Wisconsin , US Southampton Fond du Lac , Wisconsin , US 14 Minahan , Miss Daisy E . 33 Fond du Lac , Wisconsin , US Southampton Fond du Lac , Wisconsin , US 14 Mock , Mr. Philipp Edmund 30 New York City Cherbourg New York City 11 Molson , Mr. Harry Markland 55 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada Moore , Mr. Clarence Bloomfield 47 Washington , D.C. , US Southampton Washington , D.C. , US and valet , Mr. Charles Henry Harrington 37 Washington , D.C. , US Southampton Washington , D.C. , US Natsch , Mr. Charles 36 Brooklyn , New York , US Cherbourg Brooklyn , New York , US Newell , Mr. Arthur Webster 58 Lexington , Massachusetts , US Cherbourg Lexington , Massachusetts , US 122 Newell , Miss Madeleine 31 Lexington , Massachusetts , US Cherbourg Lexington , Massachusetts , US 6 Newell , Miss Marjorie Anne 23 Lexington , Massachusetts , US Cherbourg Lexington , Massachusetts , US 6 Newsom , Miss Helen Monypeny 19 New York City Southampton New York City 5 Nicholson , Mr. Arthur Ernest 64 Shanklin , Isle of Wight , England , UK Southampton New York City 263 Nourney , Mr. Alfred 20 Cologne , German Empire Cherbourg New York City 7 Omont , Mr. Alfred Fernand 29 Le Havre , France Cherbourg New York City 7 Ostby , Mr. Engelhart Cornelius 64 Providence , Rhode Island , US Southampton Providence , Rhode Island , US 234 Ostby , Miss Helene Ragnhild 22 Providence , Rhode Island , US Southampton Providence , Rhode Island , US 5 Ovies y Rodriguez , Mr. Servando José Florentino 36 Havana , Cuba Cherbourg Havana , Cuba 189 Parr , Mr. William Henry Marsh 29 Belfast , Ireland , UK Belfast New York City Partner , Mr. Austin 40 Tolworth , London , England , UK Southampton Toronto , Ontario , Canada 166 Pears , Mr. Thomas Clinton 29 Isleworth , London , England , UK Southampton New York City Pears , Mrs. Edith ( née Wearne ) 22 Isleworth , London , England , UK Southampton New York City 8 Peñasco y Castellana , Mr. Victor 24 Madrid , Spain Cherbourg New York City Peñasco y Castellana , Mrs. Maria Josefa ( née Perez de Soto y Vallejo ) 22 Madrid , Spain Cherbourg New York City 8 and maid , Doña Fermina Oliva y Ocana 39 Madrid , Spain Cherbourg New York City 8 Peuchen , Major Arthur Godfrey 52 Toronto , Ontario , Canada Southampton Toronto , Ontario , Canada 6 Porter , Mr. Walter Chamberlain 46 Worcester , Massachusetts , US Southampton Worcester , Massachusetts , US 207 Potter , Mrs. Lily Alexenia ( née Wilson ) 56 Philadelphia , Pennsylvania , US Cherbourg Philadelphia , Pennsylvania , US 7 Reuchlin , The Honourable Mr. Johan George 38 Rotterdam , The Netherlands Southampton New York City Rheims , Mr. George Alexander Lucien 36 Paris , France Southampton New York City Robert , Mrs. Elisabeth Walton ( née McMillan ) 43 St. Louis , Missouri , US Southampton St. Louis , Missouri , US and maid , Miss Emilie Kreuchen 29 St. Louis , Missouri , US Southampton St. Louis , Missouri , US Roebling , Mr. Washington Augustus II 31 Trenton , New Jersey , US Southampton Trenton , New Jersey , US Romaine , Mr. Charles Hallance ( alias C. Rolmane ) 45 New York City Southampton New York City 9 Rood , Mr. Hugh Roscoe 38 Seattle , Washington , US Southampton Seattle , Washington , US Rosenbaum , Miss Edith Louise 34 Paris , France Cherbourg Cincinnati , Ohio , US 11 Rosenshine , Mr. George ( alias George Thorne ) 46 New York City Cherbourg New York City 16 Ross , Mr. John Hugo 36 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada Rothschild , Mr. Martin 46 New York City Cherbourg New York City Rothschild , Mrs. Elizabeth Jane Anne ( née Barrett ) 54 New York City Cherbourg New York City 6 Rowe , Mr. Alfred G . 59 Liverpool , Merseyside , England , UK Southampton New York City 109 Ryerson , Mr. Arthur Larned 61 Cooperstown , New York , US Cherbourg Cooperstown , New York , US Ryerson , Mrs. Emily Maria ( née Borie ) 48 Cooperstown , New York , US Cherbourg Cooperstown , New York , US and maid , Miss Victorine Chaudanson 36 Cooperstown , New York , US Cherbourg Cooperstown , New York , US Ryerson , Miss Susan Parker `` Suzette '' 21 Cooperstown , New York , US Cherbourg Cooperstown , New York , US Ryerson , Miss Emily Borie 18 Cooperstown , New York , US Cherbourg Cooperstown , New York , US Ryerson , Master John Borie `` Jack '' 13 Cooperstown , New York , US Cherbourg Cooperstown , New York , US and governess , Miss Grace Scott Bowen 45 Cooperstown , New York , US Cherbourg Cooperstown , New York , US Saalfeld , Mr. Adolphe 47 Manchester , England , UK Southampton New York City Salomon , Mr. Abraham Lincoln 43 New York City Cherbourg New York City Schabert , Mrs. Emma ( née Mock ) 35 Hamburg , German Empire Southampton New York City 11 Seward , Mr. Frederic Kimber 34 New York City Southampton New York City 7 Silverthorne , Mr. Spencer Victor 35 St. Louis , Missouri , US Southampton St. Louis , Missouri , US 5 Silvey , Mr. William Baird 50 Duluth , Minnesota , US Cherbourg Duluth , Minnesota , US Silvey , Mrs. Alice ( née Munger ) 39 Duluth , Minnesota , US Cherbourg Duluth , Minnesota , US 11 Simonius - Blumer , Colonel Alfons 56 Basel , Switzerland Southampton New York City Sloper , Mr. William Thompson 28 New Britain , Connecticut , US Southampton New Britain , Connecticut , US 7 Smart , Mr. John Montgomery 56 Kildale , North Yorkshire , England , UK Southampton New York City Smith , Mr. James Clinch 56 Paris , France Cherbourg Long Island , New York , US Smith , Mr. Lucien Philip 24 Huntington , West Virginia , US Cherbourg Huntington , West Virginia , US Smith , Mrs. Mary Eloise ( née Hughes ) 18 Huntington , West Virginia , US Cherbourg Huntington , West Virginia , US 6 Smith , Mr. Richard William 57 Streatham , London , England , UK Southampton New York City Snyder , Mr. John Pillsbury 24 Minneapolis , Minnesota , US Southampton Minneapolis , Minnesota , US 7 Snyder , Mrs. Nellie ( née Stevenson ) 23 Minneapolis , Minnesota , US Southampton Minneapolis , Minnesota , US 7 Spedden , Mr. Frederic Oakley 45 Tuxedo Park , New York , US Cherbourg Tuxedo Park , New York , US Spedden , Mrs. Margaretta Corning ( née Stone ) 39 Tuxedo Park , New York , US Cherbourg Tuxedo Park , New York , US and maid , Miss Helen Alice Wilson 31 Tuxedo Park , New York , US Cherbourg Tuxedo Park , New York , US Spedden , Master Robert Douglas 6 Tuxedo Park , New York , US Cherbourg Tuxedo Park , New York , US and nurse , Miss Elizabeth Margaret Burns 41 Tuxedo Park , New York , US Cherbourg Tuxedo Park , New York , US Spencer , Mr. William Augustus 57 New York City Cherbourg New York City Spencer , Mrs. Marie Eugénie ( née Demougeot ) 45 New York City Cherbourg New York City 6 and maid , Miss Eugenie Elise Lurette 59 New York City Cherbourg New York City 6 Stähelin - Maeglin , Dr. Max 32 Basel , Switzerland Southampton New York City Stead , Mr. William Thomas 62 London , England , UK Southampton New York City Stengel , Mr. Charles Emil Henry 54 Newark , New Jersey , US Cherbourg Newark , New Jersey , US Stengel , Mrs. Annie May ( née Morris ) 44 Newark , New Jersey , US Cherbourg Newark , New Jersey , US 5 Stephenson , Mrs. Martha ( née Eustis ) 52 Paris , France Cherbourg Haverford , Pennsylvania , US Stewart , Mr. Albert A . 54 Cincinnati , Ohio , US Cherbourg Gallipolis , Ohio , US Stone , Mrs. Martha Evelyn ( née Stevens ) 62 New York City Southampton New York City 6 and maid , Miss Amelie `` Amelia '' Icard 38 New York City Southampton New York City 6 Straus , Mr. Isidor 67 New York City Southampton New York City 96 and valet , Mr. John Farthing 57 New York City Southampton New York City Straus , Mrs. Rosalie Ida ( née Blun ) 63 New York City Southampton New York City and maid , Miss Ellen Bird 31 New York City Southampton New York City 8 Sutton , Mr. Frederick 61 Haddonfield , New Jersey , US Southampton Haddonfield , New Jersey , US 46 Swift , Mrs. Margaret Welles ( née Barron ) 46 New York City Southampton New York City 8 Taussig , Mr. Emil 52 New York City Southampton New York City Taussig , Mrs. Tillie ( née Mandelbaum ) 39 New York City Southampton New York City 8 Taussig , Miss Ruth 18 New York City Southampton New York City 8 Taylor , Mr. Elmer Zebley 48 London , England , UK Southampton East Orange , New Jersey , US 5 Taylor , Mrs. Juliet Cummins ( née Wright ) 48 London , England , UK Southampton East Orange , New Jersey , US 5 Thayer , Mr. John Borland II 49 Haverford , Pennsylvania , US Cherbourg Haverford , Pennsylvania , US Thayer , Mrs. Marian Longsteth ( née Morris ) 39 Haverford , Pennsylvania , US Cherbourg Haverford , Pennsylvania , US and maid , Miss Margaret Fleming 42 Haverford , Pennsylvania , US Cherbourg Haverford , Pennsylvania , US Thayer , Mr. John Borland `` Jack '' III 17 Haverford , Pennsylvania , US Cherbourg Haverford , Pennsylvania , US Thorne , Mrs. Gertrude Maybelle ( née McMinn ) 37 New York City , New York , US Cherbourg New York City , New York , US Tucker , Mr. Gilbert Milligan Jr . 31 Albany , New York , US Cherbourg Albany , New York , US 7 Uruchurtu , Don Manuel E . 40 Mexico City , Mexico Cherbourg Mexico City , Mexico Van der Hoef , Mr. Wyckoff 61 Brooklyn , New York , US Belfast Brooklyn , New York , US 245 Walker , Mr. William Anderson 48 East Orange , New Jersey , US Southampton East Orange , New Jersey , US Warren , Mr. Frank Manley 63 Portland , Oregon , US Cherbourg Portland , Oregon , US Warren , Mrs. Anna Sophia ( née Atkinson ) 60 Portland , Oregon , US Cherbourg Portland , Oregon , US 5 Weir , Colonel John 59 New York City Southampton New York City White , Mr. Percival Wayland 54 Brunswick , Maine , US Southampton Brunswick , Maine , US White , Mr. Richard Frasar 21 Brunswick , Maine , US Southampton Brunswick , Maine , US 169 White , Mrs. Ella ( née Holmes ) 55 New York City Cherbourg New York City 8 and maid , Miss Amelia Mayo `` Nellie '' Bessette 39 New York City Cherbourg New York City 8 and manservant , Mr. Sante Righini 22 New York City Cherbourg New York City 232 Wick , Colonel George Dennick 58 Youngstown , Ohio , US Southampton Youngstown , Ohio , US Wick , Mrs. Mary ( née Hitchcock ) 45 Youngstown , Ohio , US Southampton Youngstown , Ohio , US 8 Wick , Miss Mary Natalie 31 Youngstown , Ohio , US Southampton Youngstown , Ohio , US 8 Widener , Mr. George Dunton 50 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US and valet , Mr. Edwin Herbert Keeping 33 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US 45 Widener , Mrs. Eleanor ( née Elkins ) 50 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US and maid , Miss Amalie Henriette `` Emily '' Gieger 35 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US Widener , Mr. Harry Elkins 27 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US Willard , Miss Constance 21 Duluth , Minnesota , US Southampton Duluth , Minnesota , US 8 Williams , Mr. Charles Duane 51 Geneva , Switzerland Cherbourg Radnor , Pennsylvania , US Williams , Mr. Richard Norris II 21 Geneva , Switzerland Cherbourg Radnor , Pennsylvania , US Woolner , Mr. Hugh 45 London , England , UK Southampton New York City Wright , Mr. George 62 Halifax , Nova Scotia , Canada Southampton Halifax , Nova Scotia , Canada Young , Miss Marie Grice 36 New York City Cherbourg New York City 8
+  Fact 0.0: Allen, Miss Elizabeth Walton was 29 years old.
+  Fact 0.1: Allen, Miss Elizabeth Walton is from St. Louis, Missouri, US.
+  Fact 0.2: Allen, Miss Elizabeth Walton boarded at Southampton.
+  Fact 0.3: Allen, Miss Elizabeth Walton's destination is St. Louis, Missouri, US.
+  Fact 0.4: Allison, Mr. Hudson Joshua Creighton was 30 years old.
+  Fact 0.5: Allison, Mr. Hudson Joshua Creighton is from Montreal, Quebec, Canada.
+  Fact 0.6: Allison, Mr. Hudson Joshua Creighton boarded at Southampton.
+  Fact 0.7: Allison, Mr. Hudson Joshua Creighton's destination is Montreal, Quebec, Canada.
+  Fact 0.8: Allison, Mr. Hudson Joshua Creighton has 135 in the lifeboat or body column.
+  Fact 0.9: Mr. George Swane was 19 years old.
+  Fact 0.10: Mr. George Swane is listed as the chauffeur.
+  Fact 0.11: Mr. George Swane is from Montreal, Quebec, Canada.
+  Fact 0.12: Mr. George Swane boarded at Southampton.
+  Fact 0.13: Mr. George Swane's destination is Montreal, Quebec, Canada.
+  Fact 0.14: Mr. George Swane has 294 in the lifeboat or body column.
+  Fact 0.15: Miss Amelia Mary "Mildred" Brown was 18 years old.
+  Fact 0.16: Miss Amelia Mary "Mildred" Brown is listed as the cook.
+  Fact 0.17: Miss Amelia Mary "Mildred" Brown is from London, England, UK.
+  Fact 0.18: Miss Amelia Mary "Mildred" Brown boarded at Southampton.
+  Fact 0.19: Miss Amelia Mary "Mildred" Brown's destination is Montreal, Quebec, Canada.
+  Fact 0.20: Miss Amelia Mary "Mildred" Brown has 11 in the lifeboat or body column.
+  Fact 0.21: Allison, Mrs. Bessie Waldo (née Daniels) was 25 years old.
+  Fact 0.22: Allison, Mrs. Bessie Waldo (née Daniels) is from Montreal, Quebec, Canada.
+  Fact 0.23: Allison, Mrs. Bessie Waldo (née Daniels) boarded at Southampton.
+  Fact 0.24: Allison, Mrs. Bessie Waldo (née Daniels)'s destination is Montreal, Quebec, Canada.
+  Fact 0.25: Miss Sarah Daniels was 33 years old.
+  Fact 0.26: Miss Sarah Daniels is listed as the maid.
+  Fact 0.27: Miss Sarah Daniels is from Montreal, Quebec, Canada.
+  Fact 0.28: Miss Sarah Daniels boarded at Southampton.
+  Fact 0.29: Miss Sarah Daniels's destination is Montreal, Quebec, Canada.
+  Fact 0.30: Miss Sarah Daniels has 8 in the lifeboat or body column.
+  Fact 0.31: Allison, Miss Helen Loraine is from Montreal, Quebec, Canada.
+  Fact 0.32: Allison, Miss Helen Loraine boarded at Southampton.
+  Fact 0.33: Allison, Miss Helen Loraine's destination is Montreal, Quebec, Canada.
+  Fact 0.34: Allison, Master Hudson Trevor is listed as age 0.11 and as 11 months.
+  Fact 0.35: Allison, Master Hudson Trevor is from Montreal, Quebec, Canada.
+  Fact 0.36: Allison, Master Hudson Trevor boarded at Southampton.
+  Fact 0.37: Allison, Master Hudson Trevor's destination is Montreal, Quebec, Canada.
+  Fact 0.38: Allison, Master Hudson Trevor has 11 in the lifeboat or body column.
+  Fact 0.39: Miss Alice Catherine Cleaver was 22 years old.
+  Fact 0.40: Miss Alice Catherine Cleaver is listed as the nurse.
+  Fact 0.41: Miss Alice Catherine Cleaver is from London, England, UK.
+  Fact 0.42: Miss Alice Catherine Cleaver boarded at Southampton.
+  Fact 0.43: Miss Alice Catherine Cleaver's destination is Montreal, Quebec, Canada.
+  Fact 0.44: Miss Alice Catherine Cleaver has 11 in the lifeboat or body column.
+  Fact 0.45: Anderson, Mr. Harry was 47 years old.
+  Fact 0.46: Anderson, Mr. Harry is from New York City, New York, US.
+  Fact 0.47: Anderson, Mr. Harry boarded at Southampton.
+  Fact 0.48: Anderson, Mr. Harry's destination is New York City, New York, US.
+  Fact 0.49: Andrews, Miss Kornelia Theodosia was 62 years old.
+  Fact 0.50: Andrews, Miss Kornelia Theodosia is from Hudson, New York, US.
+  Fact 0.51: Andrews, Miss Kornelia Theodosia boarded at Cherbourg.
+  Fact 0.52: Andrews, Miss Kornelia Theodosia's destination is Hudson, New York, US.
+  Fact 0.53: Andrews, Miss Kornelia Theodosia has 10 in the lifeboat or body column.
+  Fact 0.54: Andrews, Mr. Thomas was 39 years old.
+  Fact 0.55: Andrews, Mr. Thomas is from Belfast, Ireland, UK.
+  Fact 0.56: Andrews, Mr. Thomas boarded at Belfast.
+  Fact 0.57: Andrews, Mr. Thomas's destination is New York City.
+  Fact 0.58: Appleton, Mrs. Charlotte Lane (née Lamson) was 53 years old.
+  Fact 0.59: Appleton, Mrs. Charlotte Lane (née Lamson) is from New York City.
+  Fact 0.60: Appleton, Mrs. Charlotte Lane (née Lamson) boarded at Southampton.
+  Fact 0.61: Appleton, Mrs. Charlotte Lane (née Lamson)'s destination is New York City.
+  Fact 0.62: Artagaveytia, Mr. Ramon was 71 years old.
+  Fact 0.63: Artagaveytia, Mr. Ramon is from Buenos Aires, Argentina.
+  Fact 0.64: Artagaveytia, Mr. Ramon boarded at Cherbourg.
+  Fact 0.65: Artagaveytia, Mr. Ramon's destination is New York City.
+  Fact 0.66: Artagaveytia, Mr. Ramon has 22 in the lifeboat or body column.
+  Fact 0.67: Astor, Colonel John Jacob IV was 47 years old.
+  Fact 0.68: Astor, Colonel John Jacob IV is from New York City.
+  Fact 0.69: Astor, Colonel John Jacob IV boarded at Cherbourg.
+  Fact 0.70: Astor, Colonel John Jacob IV's destination is New York City.
+  Fact 0.71: Astor, Colonel John Jacob IV has 124 in the lifeboat or body column.
+  Fact 0.72: Astor, Mrs. Madeleine Talmage (née Force) was 18 years old.
+  Fact 0.73: Astor, Mrs. Madeleine Talmage (née Force) is from New York City.
+  Fact 0.74: Astor, Mrs. Madeleine Talmage (née Force) boarded at Cherbourg.
+  Fact 0.75: Astor, Mrs. Madeleine Talmage (née Force)'s destination is New York City.
+  Fact 0.76: Miss Rosalie Bidois was 46 years old.
+  Fact 0.77: Miss Rosalie Bidois is listed as the maid.
+  Fact 0.78: Miss Rosalie Bidois is from New York City.
+  Fact 0.79: Miss Rosalie Bidois boarded at Cherbourg.
+  Fact 0.80: Miss Rosalie Bidois's destination is New York City.
+  Fact 0.81: Miss Caroline Louise Endres was 39 years old.
+  Fact 0.82: Miss Caroline Louise Endres is listed as the nurse.
+  Fact 0.83: Miss Caroline Louise Endres is from New York City.
+  Fact 0.84: Miss Caroline Louise Endres boarded at Cherbourg.
+  Fact 0.85: Miss Caroline Louise Endres's destination is New York City.
+  Fact 0.86: Aubart, Mrs. Léontine Pauline was 24 years old.
+  Fact 0.87: Aubart, Mrs. Léontine Pauline is from Paris, France.
+  Fact 0.88: Aubart, Mrs. Léontine Pauline boarded at Cherbourg.
+  Fact 0.89: Aubart, Mrs. Léontine Pauline's destination is New York City.
+  Fact 0.90: Aubart, Mrs. Léontine Pauline has 9 in the lifeboat or body column.
+  Fact 0.91: Miss Emma Sägesser was 24 years old.
+  Fact 0.92: Miss Emma Sägesser is listed as the maid.
+  Fact 0.93: Miss Emma Sägesser is from Paris, France.
+  Fact 0.94: Miss Emma Sägesser boarded at Cherbourg.
+  Fact 0.95: Miss Emma Sägesser's destination is New York City.
+  Fact 0.96: Miss Emma Sägesser has 9 in the lifeboat or body column.
+  Fact 0.97: Barkworth, Mr. Algernon Henry Wilson was 47 years old.
+  Fact 0.98: Barkworth, Mr. Algernon Henry Wilson is from Hessle, East Yorkshire, England, UK.
+  Fact 0.99: Barkworth, Mr. Algernon Henry Wilson boarded at Southampton.
+  Fact 0.100: Barkworth, Mr. Algernon Henry Wilson's destination is New York City.
+  Fact 0.101: Baumann, Mr. John D. was 60 years old.
+  Fact 0.102: Baumann, Mr. John D. is from New York City.
+  Fact 0.103: Baumann, Mr. John D. boarded at Cherbourg.
+  Fact 0.104: Baumann, Mr. John D.'s destination is New York City.
+  Fact 0.105: Baxter, Mrs. Hélène (née de Lanaudière-Chaput) was 50 years old.
+  Fact 0.106: Baxter, Mrs. Hélène (née de Lanaudière-Chaput) is from Montreal, Quebec, Canada.
+  Fact 0.107: Baxter, Mrs. Hélène (née de Lanaudière-Chaput) boarded at Cherbourg.
+  Fact 0.108: Baxter, Mrs. Hélène (née de Lanaudière-Chaput)'s destination is Montreal, Quebec, Canada.
+  Fact 0.109: Baxter, Mrs. Hélène (née de Lanaudière-Chaput) has 6 in the lifeboat or body column.
+  Fact 0.110: Baxter, Mr. Quigg Edmond was 24 years old.
+  Fact 0.111: Baxter, Mr. Quigg Edmond is from Montreal, Quebec, Canada.
+  Fact 0.112: Baxter, Mr. Quigg Edmond boarded at Cherbourg.
+  Fact 0.113: Baxter, Mr. Quigg Edmond's destination is Montreal, Quebec, Canada.
+  Fact 0.114: Beattie, Mr. Thomson was 36 years old.
+  Fact 0.115: Beattie, Mr. Thomson is from Fergus, Ontario, Canada.
+  Fact 0.116: Beattie, Mr. Thomson boarded at Southampton.
+  Fact 0.117: Beattie, Mr. Thomson's destination is Fergus, Ontario, Canada.
+  Fact 0.118: Beattie, Mr. Thomson has 331 in the lifeboat or body column.
+  Fact 0.119: Beckwith, Mr. Richard Leonard was 37 years old.
+  Fact 0.120: Beckwith, Mr. Richard Leonard is from New York City.
+  Fact 0.121: Beckwith, Mr. Richard Leonard boarded at Southampton.
+  Fact 0.122: Beckwith, Mr. Richard Leonard's destination is New York City.
+  Fact 0.123: Beckwith, Mr. Richard Leonard has 5 in the lifeboat or body column.
+  Fact 0.124: Beckwith, Mrs. Sallie (née Monypeny) was 46 years old.
+  Fact 0.125: Beckwith, Mrs. Sallie (née Monypeny) is from New York City.
+  Fact 0.126: Beckwith, Mrs. Sallie (née Monypeny) boarded at Southampton.
+  Fact 0.127: Beckwith, Mrs. Sallie (née Monypeny)'s destination is New York City.
+  Fact 0.128: Beckwith, Mrs. Sallie (née Monypeny) has 5 in the lifeboat or body column.
+  Fact 0.129: Behr, Mr. Karl Howell was 26 years old.
+  Fact 0.130: Behr, Mr. Karl Howell is from New York City.
+  Fact 0.131: Behr, Mr. Karl Howell boarded at Cherbourg.
+  Fact 0.132: Behr, Mr. Karl Howell's destination is New York City.
+  Fact 0.133: Behr, Mr. Karl Howell has 5 in the lifeboat or body column.
+  Fact 0.134: Birnbaum, Mr. Jakob was 24 years old.
+  Fact 0.135: Birnbaum, Mr. Jakob is from Antwerp, Belgium.
+  Fact 0.136: Birnbaum, Mr. Jakob boarded at Cherbourg.
+  Fact 0.137: Birnbaum, Mr. Jakob's destination is San Francisco, California, US.
+  Fact 0.138: Birnbaum, Mr. Jakob has 148 in the lifeboat or body column.
+  Fact 0.139: Bishop, Mr. Dickinson H. "Dick" was 25 years old.
+  Fact 0.140: Bishop, Mr. Dickinson H. "Dick" is from Dowagiac, Michigan, US.
+  Fact 0.141: Bishop, Mr. Dickinson H. "Dick" boarded at Cherbourg.
+  Fact 0.142: Bishop, Mr. Dickinson H. "Dick"'s destination is Dowagiac, Michigan, US.
+  Fact 0.143: Bishop, Mr. Dickinson H. "Dick" has 7 in the lifeboat or body column.
+  Fact 0.144: Bishop, Mrs. Helen (née Walton) was 19 years old.
+  Fact 0.145: Bishop, Mrs. Helen (née Walton) is from Dowagiac, Michigan, US.
+  Fact 0.146: Bishop, Mrs. Helen (née Walton) boarded at Cherbourg.
+  Fact 0.147: Bishop, Mrs. Helen (née Walton)'s destination is Dowagiac, Michigan, US.
+  Fact 0.148: Bishop, Mrs. Helen (née Walton) has 7 in the lifeboat or body column.
+  Fact 0.149: Björnström-Steffanson, Mr. Mauritz Håkan was 28 years old.
+  Fact 0.150: Björnström-Steffanson, Mr. Mauritz Håkan is from Stockholm, Sweden.
+  Fact 0.151: Björnström-Steffanson, Mr. Mauritz Håkan boarded at Southampton.
+  Fact 0.152: Björnström-Steffanson, Mr. Mauritz Håkan's destination is Washington, D.C., US.
+  Fact 0.153: Blackwell, Mr. Stephen Weart was 45 years old.
+  Fact 0.154: Blackwell, Mr. Stephen Weart is from Trenton, New Jersey, US.
+  Fact 0.155: Blackwell, Mr. Stephen Weart boarded at Southampton.
+  Fact 0.156: Blackwell, Mr. Stephen Weart's destination is Trenton, New Jersey, US.
+  Fact 0.157: Blank, Mr. Henry was 39 years old.
+  Fact 0.158: Blank, Mr. Henry is from Glen Ridge, New Jersey, US.
+  Fact 0.159: Blank, Mr. Henry boarded at Cherbourg.
+  Fact 0.160: Blank, Mr. Henry's destination is Glen Ridge, New Jersey, US.
+  Fact 0.161: Blank, Mr. Henry has 7 in the lifeboat or body column.
+  Fact 0.162: Bonnell, Miss Elizabeth was 61 years old.
+  Fact 0.163: Bonnell, Miss Elizabeth is from Youngstown, Ohio, US.
+  Fact 0.164: Bonnell, Miss Elizabeth boarded at Southampton.
+  Fact 0.165: Bonnell, Miss Elizabeth's destination is Youngstown, Ohio, US.
+  Fact 0.166: Bonnell, Miss Elizabeth has 8 in the lifeboat or body column.
+  Fact 0.167: Bonnell, Miss Caroline was 30 years old.
+  Fact 0.168: Bonnell, Miss Caroline is from Youngstown, Ohio, US.
+  Fact 0.169: Bonnell, Miss Caroline boarded at Southampton.
+  Fact 0.170: Bonnell, Miss Caroline's destination is Youngstown, Ohio, US.
+  Fact 0.171: Bonnell, Miss Caroline has 8 in the lifeboat or body column.
+  Fact 0.172: Borebank, Mr. John James was 42 years old.
+  Fact 0.173: Borebank, Mr. John James is from London, England, UK.
+  Fact 0.174: Borebank, Mr. John James boarded at Southampton.
+  Fact 0.175: Borebank, Mr. John James's destination is Toronto, Ontario, Canada.
+  Fact 0.176: Bowerman, Miss Elsie Edith was 22 years old.
+  Fact 0.177: Bowerman, Miss Elsie Edith is from St. Leonards-on-Sea, East Sussex, England, UK.
+  Fact 0.178: Bowerman, Miss Elsie Edith boarded at Southampton.
+  Fact 0.179: Bowerman, Miss Elsie Edith's destination is New York City.
+  Fact 0.180: Bowerman, Miss Elsie Edith has 6 in the lifeboat or body column.
+  Fact 0.181: Brady, Mr. John Bertram was 41 years old.
+  Fact 0.182: Brady, Mr. John Bertram is from Pomeroy, Washington, US.
+  Fact 0.183: Brady, Mr. John Bertram boarded at Southampton.
+  Fact 0.184: Brady, Mr. John Bertram's destination is Pomeroy, Washington, US.
+  Fact 0.185: Brandeis, Mr. Emil was 48 years old.
+  Fact 0.186: Brandeis, Mr. Emil is from Omaha, Nebraska, US.
+  Fact 0.187: Brandeis, Mr. Emil boarded at Cherbourg.
+  Fact 0.188: Brandeis, Mr. Emil's destination is Omaha, Nebraska, US.
+  Fact 0.189: Brandeis, Mr. Emil has 208 in the lifeboat or body column.
+  Fact 0.190: Brereton, Mr. George Andrew (alias George A. Brayton) was 37 years old.
+  Fact 0.191: Brereton, Mr. George Andrew (alias George A. Brayton) is from Los Angeles, US.
+  Fact 0.192: Brereton, Mr. George Andrew (alias George A. Brayton) boarded at Southampton.
+  Fact 0.193: Brereton, Mr. George Andrew (alias George A. Brayton)'s destination is Los Angeles, California, US.
+  Fact 0.194: Brereton, Mr. George Andrew (alias George A. Brayton) has 9 in the lifeboat or body column.
+  Fact 0.195: Brewe, Dr. Arthur Jackson was 45 years old.
+  Fact 0.196: Brewe, Dr. Arthur Jackson is from Philadelphia, Pennsylvania, US.
+  Fact 0.197: Brewe, Dr. Arthur Jackson boarded at Cherbourg.
+  Fact 0.198: Brewe, Dr. Arthur Jackson's destination is Philadelphia, Pennsylvania, US.
+  Fact 0.199: Brown, Mrs. Caroline Lane (née Lamson) was 59 years old.
+  Fact 0.200: Brown, Mrs. Caroline Lane (née Lamson) is from Belmont, Massachusetts, US.
+  Fact 0.201: Brown, Mrs. Caroline Lane (née Lamson) boarded at Southampton.
+  Fact 0.202: Brown, Mrs. Caroline Lane (née Lamson)'s destination is Belmont, Massachusetts, US.
+  Fact 0.203: Brown, Mrs. Margaret (née Tobin) was 44 years old.
+  Fact 0.204: Brown, Mrs. Margaret (née Tobin) is from Denver, Colorado, US.
+  Fact 0.205: Brown, Mrs. Margaret (née Tobin) boarded at Cherbourg.
+  Fact 0.206: Brown, Mrs. Margaret (née Tobin)'s destination is Denver, Colorado, US.
+  Fact 0.207: Brown, Mrs. Margaret (née Tobin) has 6 in the lifeboat or body column.
+  Fact 0.208: Bucknell, Mrs. Emma Eliza (née Ward) was 59 years old.
+  Fact 0.209: Bucknell, Mrs. Emma Eliza (née Ward) is from Philadelphia, Pennsylvania, US.
+  Fact 0.210: Bucknell, Mrs. Emma Eliza (née Ward) boarded at Cherbourg.
+  Fact 0.211: Bucknell, Mrs. Emma Eliza (née Ward)'s destination is Philadelphia, Pennsylvania, US.
+  Fact 0.212: Bucknell, Mrs. Emma Eliza (née Ward) has 8 in the lifeboat or body column.
+  Fact 0.213: Miss Albina Bazzani was 36 years old.
+  Fact 0.214: Miss Albina Bazzani is listed as the maid.
+  Fact 0.215: Miss Albina Bazzani is from Philadelphia, Pennsylvania, US.
+  Fact 0.216: Miss Albina Bazzani boarded at Cherbourg.
+  Fact 0.217: Miss Albina Bazzani's destination is Philadelphia, Pennsylvania, US.
+  Fact 0.218: Miss Albina Bazzani has 8 in the lifeboat or body column.
+  Fact 0.219: Butt, Major Archibald Willingham was 46 years old.
+  Fact 0.220: Butt, Major Archibald Willingham is from Washington, D.C., US.
+  Fact 0.221: Butt, Major Archibald Willingham boarded at Southampton.
+  Fact 0.222: Butt, Major Archibald Willingham's destination is Washington, D.C., US.
+  Fact 0.223: Calderhead, Mr. Edward Pennington was 42 years old.
+  Fact 0.224: Calderhead, Mr. Edward Pennington is from New York City.
+  Fact 0.225: Calderhead, Mr. Edward Pennington boarded at Southampton.
+  Fact 0.226: Calderhead, Mr. Edward Pennington's destination is New York City.
+  Fact 0.227: Calderhead, Mr. Edward Pennington has 5 in the lifeboat or body column.
+  Fact 0.228: Candee, Mrs. Helen Churchill (née Hungerford) was 53 years old.
+  Fact 0.229: Candee, Mrs. Helen Churchill (née Hungerford) is from Washington, D.C., US.
+  Fact 0.230: Candee, Mrs. Helen Churchill (née Hungerford) boarded at Cherbourg.
+  Fact 0.231: Candee, Mrs. Helen Churchill (née Hungerford)'s destination is Washington, D.C., US.
+  Fact 0.232: Candee, Mrs. Helen Churchill (née Hungerford) has 6 in the lifeboat or body column.
+  Fact 0.233: Cardeza, Mrs. Charlotte Wardle (née Drake) was 58 years old.
+  Fact 0.234: Cardeza, Mrs. Charlotte Wardle (née Drake) is from Germantown, Pennsylvania, US.
+  Fact 0.235: Cardeza, Mrs. Charlotte Wardle (née Drake) boarded at Cherbourg.
+  Fact 0.236: Cardeza, Mrs. Charlotte Wardle (née Drake)'s destination is Germantown, Pennsylvania, US.
+  Fact 0.237: Miss Annie Moore Ward was 38 years old.
+  Fact 0.238: Miss Annie Moore Ward is listed as the maid.
+  Fact 0.239: Miss Annie Moore Ward is from Germantown, Pennsylvania, US.
+  Fact 0.240: Miss Annie Moore Ward boarded at Cherbourg.
+  Fact 0.241: Miss Annie Moore Ward's destination is Germantown, Pennsylvania, US.
+  Fact 0.242: Cardeza, Mr. Thomas Drake Martinez was 36 years old.
+  Fact 0.243: Cardeza, Mr. Thomas Drake Martinez is from Germantown, Pennsylvania, US.
+  Fact 0.244: Cardeza, Mr. Thomas Drake Martinez boarded at Cherbourg.
+  Fact 0.245: Cardeza, Mr. Thomas Drake Martinez's destination is Germantown, Pennsylvania, US.
+  Fact 0.246: Mr. Gustave J. Lesueur was 35 years old.
+  Fact 0.247: Mr. Gustave J. Lesueur is listed as the valet.
+  Fact 0.248: Mr. Gustave J. Lesueur is from Germantown, Pennsylvania, US.
+  Fact 0.249: Mr. Gustave J. Lesueur boarded at Cherbourg.
+  Fact 0.250: Mr. Gustave J. Lesueur's destination is Germantown, Pennsylvania, US.
+  Fact 0.251: Carlsson, Mr. Frans Olof was 33 years old.
+  Fact 0.252: Carlsson, Mr. Frans Olof is from New York City.
+  Fact 0.253: Carlsson, Mr. Frans Olof boarded at Southampton.
+  Fact 0.254: Carlsson, Mr. Frans Olof's destination is New York City.
+  Fact 0.255: Carrau, Mr. Francisco M. was 31 years old.
+  Fact 0.256: Carrau, Mr. Francisco M. is from Montevideo, Uruguay.
+  Fact 0.257: Carrau, Mr. Francisco M. boarded at Southampton.
+  Fact 0.258: Carrau, Mr. Francisco M.'s destination is Montevideo, Uruguay.
+  Fact 0.259: Carrau, Mr. José Pedro was 17 years old.
+  Fact 0.260: Carrau, Mr. José Pedro is from Montevideo, Uruguay.
+  Fact 0.261: Carrau, Mr. José Pedro boarded at Southampton.
+  Fact 0.262: Carrau, Mr. José Pedro's destination is Montevideo, Uruguay.
+  Fact 0.263: Carter, Mr. William Ernest was 36 years old.
+  Fact 0.264: Carter, Mr. William Ernest is from Bryn Mawr, Pennsylvania, US.
+  Fact 0.265: Carter, Mr. William Ernest boarded at Southampton.
+  Fact 0.266: Carter, Mr. William Ernest's destination is Bryn Mawr, Pennsylvania, US.
+  Fact 0.267: Mr. Alexander Cairns was 28 years old.
+  Fact 0.268: Mr. Alexander Cairns is listed as the valet.
+  Fact 0.269: Mr. Alexander Cairns is from Bryn Mawr, Pennsylvania, US.
+  Fact 0.270: Mr. Alexander Cairns boarded at Southampton.
+  Fact 0.271: Mr. Alexander Cairns's destination is Bryn Mawr, Pennsylvania, US.
+  Fact 0.272: Mr. Charles Augustus Aldworth was 30 years old.
+  Fact 0.273: Mr. Charles Augustus Aldworth is listed as the chauffeur.
+  Fact 0.274: Mr. Charles Augustus Aldworth is from Bryn Mawr, Pennsylvania, US.
+  Fact 0.275: Mr. Charles Augustus Aldworth boarded at Southampton.
+  Fact 0.276: Mr. Charles Augustus Aldworth's destination is Bryn Mawr, Pennsylvania, US.
+  Fact 0.277: Carter, Mrs. Lucile (née Polk) was 36 years old.
+  Fact 0.278: Carter, Mrs. Lucile (née Polk) is from Bryn Mawr, Pennsylvania, US.
+  Fact 0.279: Carter, Mrs. Lucile (née Polk) boarded at Southampton.
+  Fact 0.280: Carter, Mrs. Lucile (née Polk)'s destination is Bryn Mawr, Pennsylvania, US.
+  Fact 0.281: Miss Auguste Serreplan was 30 years old.
+  Fact 0.282: Miss Auguste Serreplan is listed as the maid.
+  Fact 0.283: Miss Auguste Serreplan is from Bryn Mawr, Pennsylvania, US.
+  Fact 0.284: Miss Auguste Serreplan boarded at Southampton.
+  Fact 0.285: Miss Auguste Serreplan's destination is Bryn Mawr, Pennsylvania, US.
+  Fact 0.286: Carter, Miss Lucile Polk was 13 years old.
+  Fact 0.287: Carter, Miss Lucile Polk is from Bryn Mawr, Pennsylvania, US.
+  Fact 0.288: Carter, Miss Lucile Polk boarded at Southampton.
+  Fact 0.289: Carter, Miss Lucile Polk's destination is Bryn Mawr, Pennsylvania, US.
+  Fact 0.290: Carter, Master William Thornton II was 11 years old.
+  Fact 0.291: Carter, Master William Thornton II is from Bryn Mawr, Pennsylvania, US.
+  Fact 0.292: Carter, Master William Thornton II boarded at Southampton.
+  Fact 0.293: Carter, Master William Thornton II's destination is Bryn Mawr, Pennsylvania, US.
+  Fact 0.294: Case, Mr. Howard Brown was 49 years old.
+  Fact 0.295: Case, Mr. Howard Brown is from Ascot, Berkshire, England, UK.
+  Fact 0.296: Case, Mr. Howard Brown boarded at Southampton.
+  Fact 0.297: Case, Mr. Howard Brown's destination is Rochester, New York, US.
+  Fact 0.298: Cassebeer, Mrs. Eleanor Genevieve (née Fosdick) was 36 years old.
+  Fact 0.299: Cassebeer, Mrs. Eleanor Genevieve (née Fosdick) is from New York City.
+  Fact 0.300: Cassebeer, Mrs. Eleanor Genevieve (née Fosdick) boarded at Cherbourg.
+  Fact 0.301: Cassebeer, Mrs. Eleanor Genevieve (née Fosdick)'s destination is New York City.
+  Fact 0.302: Cassebeer, Mrs. Eleanor Genevieve (née Fosdick) has 5 in the lifeboat or body column.
+  Fact 0.303: Cavendish, Mr. Tyrell William was 36 years old.
+  Fact 0.304: Cavendish, Mr. Tyrell William is from London, England, UK.
+  Fact 0.305: Cavendish, Mr. Tyrell William boarded at Southampton.
+  Fact 0.306: Cavendish, Mr. Tyrell William's destination is New York City.
+  Fact 0.307: Cavendish, Mr. Tyrell William has 172 in the lifeboat or body column.
+  Fact 0.308: Cavendish, Mrs. Julia Florence (née Siegel) was 25 years old.
+  Fact 0.309: Cavendish, Mrs. Julia Florence (née Siegel) is from London, England, UK.
+  Fact 0.310: Cavendish, Mrs. Julia Florence (née Siegel) boarded at Southampton.
+  Fact 0.311: Cavendish, Mrs. Julia Florence (née Siegel)'s destination is New York City.
+  Fact 0.312: Cavendish, Mrs. Julia Florence (née Siegel) has 6 in the lifeboat or body column.
+  Fact 0.313: Miss Ellen "Nellie" Barber was 26 years old.
+  Fact 0.314: Miss Ellen "Nellie" Barber is listed as the maid.
+  Fact 0.315: Miss Ellen "Nellie" Barber is from London, England, UK.
+  Fact 0.316: Miss Ellen "Nellie" Barber boarded at Southampton.
+  Fact 0.317: Miss Ellen "Nellie" Barber's destination is New York City.
+  Fact 0.318: Miss Ellen "Nellie" Barber has 6 in the lifeboat or body column.
+  Fact 0.319: Chaffee, Mr. Hubert Fuller was 46 years old.
+  Fact 0.320: Chaffee, Mr. Hubert Fuller is from Amenia, North Dakota, US.
+  Fact 0.321: Chaffee, Mr. Hubert Fuller boarded at Southampton.
+  Fact 0.322: Chaffee, Mr. Hubert Fuller's destination is Amenia, North Dakota, US.
+  Fact 0.323: Chaffee, Mrs. Carrie Constance (née Toogood) was 47 years old.
+  Fact 0.324: Chaffee, Mrs. Carrie Constance (née Toogood) is from Amenia, North Dakota, US.
+  Fact 0.325: Chaffee, Mrs. Carrie Constance (née Toogood) boarded at Southampton.
+  Fact 0.326: Chaffee, Mrs. Carrie Constance (née Toogood)'s destination is Amenia, North Dakota, US.
+  Fact 0.327: Chambers, Mr. Norman Campbell was 27 years old.
+  Fact 0.328: Chambers, Mr. Norman Campbell is from New York City.
+  Fact 0.329: Chambers, Mr. Norman Campbell boarded at Southampton.
+  Fact 0.330: Chambers, Mr. Norman Campbell's destination is New York City.
+  Fact 0.331: Chambers, Mr. Norman Campbell has 5 in the lifeboat or body column.
+  Fact 0.332: Chambers, Mrs. Bertha (née Griggs) was 32 years old.
+  Fact 0.333: Chambers, Mrs. Bertha (née Griggs) is from New York City.
+  Fact 0.334: Chambers, Mrs. Bertha (née Griggs) boarded at Southampton.
+  Fact 0.335: Chambers, Mrs. Bertha (née Griggs)'s destination is New York City.
+  Fact 0.336: Chambers, Mrs. Bertha (née Griggs) has 5 in the lifeboat or body column.
+  Fact 0.337: Cherry, Miss Gladys was 30 years old.
+  Fact 0.338: Cherry, Miss Gladys is from London, England, UK.
+  Fact 0.339: Cherry, Miss Gladys boarded at Southampton.
+  Fact 0.340: Cherry, Miss Gladys's destination is Vancouver, British Columbia, Canada.
+  Fact 0.341: Cherry, Miss Gladys has 8 in the lifeboat or body column.
+  Fact 0.342: Chevré, Mr. Paul Romaine Marie Léonce was 45 years old.
+  Fact 0.343: Chevré, Mr. Paul Romaine Marie Léonce is from Paris, France.
+  Fact 0.344: Chevré, Mr. Paul Romaine Marie Léonce boarded at Cherbourg.
+  Fact 0.345: Chevré, Mr. Paul Romaine Marie Léonce's destination is Ottawa, Ontario, Canada.
+  Fact 0.346: Chevré, Mr. Paul Romaine Marie Léonce has 7 in the lifeboat or body column.
+  Fact 0.347: Chibnall, Mrs. Edith Martha Bowerman (née Barber) was 48 years old.
+  Fact 0.348: Chibnall, Mrs. Edith Martha Bowerman (née Barber) is from St. Leonards-on-Sea, East Sussex, England, UK.
+  Fact 0.349: Chibnall, Mrs. Edith Martha Bowerman (née Barber) boarded at Southampton.
+  Fact 0.350: Chibnall, Mrs. Edith Martha Bowerman (née Barber)'s destination is New York City.
+  Fact 0.351: Chibnall, Mrs. Edith Martha Bowerman (née Barber) has 6 in the lifeboat or body column.
+  Fact 0.352: Chisholm, Mr. Roderick Robert Crispin was 40 years old.
+  Fact 0.353: Chisholm, Mr. Roderick Robert Crispin is from Belfast, Ireland, UK.
+  Fact 0.354: Chisholm, Mr. Roderick Robert Crispin boarded at Belfast.
+  Fact 0.355: Chisholm, Mr. Roderick Robert Crispin's destination is New York City.
+  Fact 0.356: Clark, Mr. Walter Miller was 27 years old.
+  Fact 0.357: Clark, Mr. Walter Miller is from Los Angeles, California, US.
+  Fact 0.358: Clark, Mr. Walter Miller boarded at Cherbourg.
+  Fact 0.359: Clark, Mr. Walter Miller's destination is Los Angeles, California, US.
+  Fact 0.360: Clark, Mrs. Virginia Estelle (née McDowell) was 26 years old.
+  Fact 0.361: Clark, Mrs. Virginia Estelle (née McDowell) is from Los Angeles, California, US.
+  Fact 0.362: Clark, Mrs. Virginia Estelle (née McDowell) boarded at Cherbourg.
+  Fact 0.363: Clark, Mrs. Virginia Estelle (née McDowell)'s destination is Los Angeles, California, US.
+  Fact 0.364: Clifford, Mr. George Quincy was 40 years old.
+  Fact 0.365: Clifford, Mr. George Quincy is from Stoughton, Massachusetts, US.
+  Fact 0.366: Clifford, Mr. George Quincy boarded at Southampton.
+  Fact 0.367: Clifford, Mr. George Quincy's destination is Stoughton, Massachusetts.
+  Fact 0.368: Colley, Mr. Edward Pomeroy was 37 years old.
+  Fact 0.369: Colley, Mr. Edward Pomeroy is from Dublin, Ireland, UK.
+  Fact 0.370: Colley, Mr. Edward Pomeroy boarded at Southampton.
+  Fact 0.371: Colley, Mr. Edward Pomeroy's destination is Vancouver, British Columbia, Canada.
+  Fact 0.372: Compton, Mrs. Mary Eliza (née Ingersoll) was 64 years old.
+  Fact 0.373: Compton, Mrs. Mary Eliza (née Ingersoll) is from Lakewood, New Jersey, US.
+  Fact 0.374: Compton, Mrs. Mary Eliza (née Ingersoll) boarded at Cherbourg.
+  Fact 0.375: Compton, Mrs. Mary Eliza (née Ingersoll)'s destination is Lakewood, New Jersey, US.
+  Fact 0.376: Compton, Mrs. Mary Eliza (née Ingersoll) has 14 in the lifeboat or body column.
+  Fact 0.377: Compton, Miss Sara Rebecca was 39 years old.
+  Fact 0.378: Compton, Miss Sara Rebecca is from Lakewood, New Jersey, US.
+  Fact 0.379: Compton, Miss Sara Rebecca boarded at Cherbourg.
+  Fact 0.380: Compton, Miss Sara Rebecca's destination is Lakewood, New Jersey, US.
+  Fact 0.381: Compton, Miss Sara Rebecca has 14 in the lifeboat or body column.
+  Fact 0.382: Compton, Mr. Alexander Taylor Jr. was 37 years old.
+  Fact 0.383: Compton, Mr. Alexander Taylor Jr. is from Lakewood, New Jersey, US.
+  Fact 0.384: Compton, Mr. Alexander Taylor Jr. boarded at Cherbourg.
+  Fact 0.385: Compton, Mr. Alexander Taylor Jr.'s destination is Lakewood, New Jersey, US.
+  Fact 0.386: Cornell, Mrs. Malvina Helen (née Lamson) was 55 years old.
+  Fact 0.387: Cornell, Mrs. Malvina Helen (née Lamson) is from New York City.
+  Fact 0.388: Cornell, Mrs. Malvina Helen (née Lamson) boarded at Southampton.
+  Fact 0.389: Cornell, Mrs. Malvina Helen (née Lamson)'s destination is New York City.
+  Fact 0.390: Crafton, Mr. John Bertram was 59 years old.
+  Fact 0.391: Crafton, Mr. John Bertram is from Roachdale, Indiana, US.
+  Fact 0.392: Crafton, Mr. John Bertram boarded at Southampton.
+  Fact 0.393: Crafton, Mr. John Bertram's destination is Roachdale, Indiana, US.
+  Fact 0.394: Crosby, Captain Edward was 70 years old.
+  Fact 0.395: Crosby, Captain Edward is from Milwaukee, Wisconsin, US.
+  Fact 0.396: Crosby, Captain Edward boarded at Southampton.
+  Fact 0.397: Crosby, Captain Edward's destination is Milwaukee, Wisconsin, US.
+  Fact 0.398: Crosby, Captain Edward has 269 in the lifeboat or body column.
+  Fact 0.399: Crosby, Mrs. Catherine Elizabeth (née Halstead) was 64 years old.
+  Fact 0.400: Crosby, Mrs. Catherine Elizabeth (née Halstead) is from Milwaukee, Wisconsin, US.
+  Fact 0.401: Crosby, Mrs. Catherine Elizabeth (née Halstead) boarded at Southampton.
+  Fact 0.402: Crosby, Mrs. Catherine Elizabeth (née Halstead)'s destination is Milwaukee, Wisconsin, US.
+  Fact 0.403: Crosby, Mrs. Catherine Elizabeth (née Halstead) has 7 in the lifeboat or body column.
+  Fact 0.404: Crosby, Miss Harriette Rebecca was 39 years old.
+  Fact 0.405: Crosby, Miss Harriette Rebecca is from Milwaukee, Wisconsin, US.
+  Fact 0.406: Crosby, Miss Harriette Rebecca boarded at Southampton.
+  Fact 0.407: Crosby, Miss Harriette Rebecca's destination is Milwaukee, Wisconsin, US.
+  Fact 0.408: Crosby, Miss Harriette Rebecca has 7 in the lifeboat or body column.
+  Fact 0.409: Cumings, Mr. John Bradley was 39 years old.
+  Fact 0.410: Cumings, Mr. John Bradley is from New York City.
+  Fact 0.411: Cumings, Mr. John Bradley boarded at Cherbourg.
+  Fact 0.412: Cumings, Mr. John Bradley's destination is New York City.
+  Fact 0.413: Cumings, Mrs. Florence Briggs (née Thayer) was 35 years old.
+  Fact 0.414: Cumings, Mrs. Florence Briggs (née Thayer) is from New York City.
+  Fact 0.415: Cumings, Mrs. Florence Briggs (née Thayer) boarded at Cherbourg.
+  Fact 0.416: Cumings, Mrs. Florence Briggs (née Thayer)'s destination is New York, US.
+  Fact 0.417: Daly, Mr. Peter Dennis was 51 years old.
+  Fact 0.418: Daly, Mr. Peter Dennis is from Lima, Peru.
+  Fact 0.419: Daly, Mr. Peter Dennis boarded at Southampton.
+  Fact 0.420: Daly, Mr. Peter Dennis's destination is Lima, Peru.
+  Fact 0.421: Daniel, Mr. Robert Williams was 27 years old.
+  Fact 0.422: Daniel, Mr. Robert Williams is from Philadelphia, Pennsylvania, US.
+  Fact 0.423: Daniel, Mr. Robert Williams boarded at Southampton.
+  Fact 0.424: Daniel, Mr. Robert Williams's destination is Philadelphia, Pennsylvania, US.
+  Fact 0.425: Davidson, Mr. Thornton was 31 years old.
+  Fact 0.426: Davidson, Mr. Thornton is from Montreal, Quebec, Canada.
+  Fact 0.427: Davidson, Mr. Thornton boarded at Southampton.
+  Fact 0.428: Davidson, Mr. Thornton's destination is Montreal, Quebec, Canada.
+  Fact 0.429: Davidson, Mrs. Orian (née Hays) was 27 years old.
+  Fact 0.430: Davidson, Mrs. Orian (née Hays) is from Montreal, Quebec, Canada.
+  Fact 0.431: Davidson, Mrs. Orian (née Hays) boarded at Southampton.
+  Fact 0.432: Davidson, Mrs. Orian (née Hays)'s destination is Montreal, Quebec, Canada.
+  Fact 0.433: Dick, Mr. Albert Adrian was 31 years old.
+  Fact 0.434: Dick, Mr. Albert Adrian is from Calgary, Alberta, Canada.
+  Fact 0.435: Dick, Mr. Albert Adrian boarded at Southampton.
+  Fact 0.436: Dick, Mr. Albert Adrian's destination is Calgary, Alberta, Canada.
+  Fact 0.437: Dick, Mrs. Vera (née Gillespie) was 17 years old.
+  Fact 0.438: Dick, Mrs. Vera (née Gillespie) is from Calgary, Alberta, Canada.
+  Fact 0.439: Dick, Mrs. Vera (née Gillespie) boarded at Southampton.
+  Fact 0.440: Dick, Mrs. Vera (née Gillespie)'s destination is Calgary, Alberta, Canada.
+  Fact 0.441: Dineston, Mrs. Nancy May Bowles was 28 years old.
+  Fact 0.442: Dineston, Mrs. Nancy May Bowles is from London, England, UK.
+  Fact 0.443: Dineston, Mrs. Nancy May Bowles boarded at Southampton.
+  Fact 0.444: Dineston, Mrs. Nancy May Bowles's destination is New York City, USA.
+  Fact 0.445: Dineston, George Samuel was 30 years old.
+  Fact 0.446: Dineston, George Samuel is from London, England, UK.
+  Fact 0.447: Dineston, George Samuel boarded at Southampton.
+  Fact 0.448: Dineston, George Samuel's destination is New York City, USA.
+  Fact 0.449: Dodge, Dr. Washington was 52 years old.
+  Fact 0.450: Dodge, Dr. Washington is from San Francisco, California, US.
+  Fact 0.451: Dodge, Dr. Washington boarded at Southampton.
+  Fact 0.452: Dodge, Dr. Washington's destination is San Francisco, California, US.
+  Fact 0.453: Dodge, Dr. Washington has 13 in the lifeboat or body column.
+  Fact 0.454: Dodge, Mrs. Ruth (née Vidaver) was 34 years old.
+  Fact 0.455: Dodge, Mrs. Ruth (née Vidaver) is from San Francisco, California, US.
+  Fact 0.456: Dodge, Mrs. Ruth (née Vidaver) boarded at Southampton.
+  Fact 0.457: Dodge, Mrs. Ruth (née Vidaver)'s destination is San Francisco, California, US.
+  Fact 0.458: Dodge, Mrs. Ruth (née Vidaver) has 5 in the lifeboat or body column.
+  Fact 0.459: Dodge, Master Washington, Jr. is from San Francisco, California, US.
+  Fact 0.460: Dodge, Master Washington, Jr. boarded at Southampton.
+  Fact 0.461: Dodge, Master Washington, Jr.'s destination is San Francisco, California, US.
+  Fact 0.462: Dodge, Master Washington, Jr. has 5 in the lifeboat or body column.
+  Fact 0.463: Douglas, Mr. Walter Donald was 50 years old.
+  Fact 0.464: Douglas, Mr. Walter Donald is from Minneapolis, Minnesota, US.
+  Fact 0.465: Douglas, Mr. Walter Donald boarded at Cherbourg.
+  Fact 0.466: Douglas, Mr. Walter Donald's destination is Minneapolis, Minnesota, US.
+  Fact 0.467: Douglas, Mr. Walter Donald has 62 in the lifeboat or body column.
+  Fact 0.468: Douglas, Mrs. Mahala (née Dutton) was 48 years old.
+  Fact 0.469: Douglas, Mrs. Mahala (née Dutton) is from Minneapolis, Minnesota, US.
+  Fact 0.470: Douglas, Mrs. Mahala (née Dutton) boarded at Cherbourg.
+  Fact 0.471: Douglas, Mrs. Mahala (née Dutton)'s destination is Minneapolis, Minnesota, US.
+  Fact 0.472: Miss Berthe Leroy was 27 years old.
+  Fact 0.473: Miss Berthe Leroy is listed as the maid.
+  Fact 0.474: Miss Berthe Leroy is from Minneapolis, Minnesota, US.
+  Fact 0.475: Miss Berthe Leroy boarded at Cherbourg.
+  Fact 0.476: Miss Berthe Leroy's destination is Minneapolis, Minnesota, US.
+  Fact 0.477: Douglas, Mrs. Mary Hélène (née Baxter) was 27 years old.
+  Fact 0.478: Douglas, Mrs. Mary Hélène (née Baxter) is from Montreal, Quebec, Canada.
+  Fact 0.479: Douglas, Mrs. Mary Hélène (née Baxter) boarded at Cherbourg.
+  Fact 0.480: Douglas, Mrs. Mary Hélène (née Baxter)'s destination is Montreal, Quebec, Canada.
+  Fact 0.481: Douglas, Mrs. Mary Hélène (née Baxter) has 6 in the lifeboat or body column.
+  Fact 0.482: Duff Gordon, Sir Cosmo Edmund was 49 years old.
+  Fact 0.483: Duff Gordon, Sir Cosmo Edmund is from London, England, UK.
+  Fact 0.484: Duff Gordon, Sir Cosmo Edmund boarded at Cherbourg.
+  Fact 0.485: Duff Gordon, Sir Cosmo Edmund's destination is New York City.
+  Fact 0.486: Duff Gordon, Lucy Christiana, Lady (née Sutherland) was 48 years old.
+  Fact 0.487: Duff Gordon, Lucy Christiana, Lady (née Sutherland) is from London, England, UK.
+  Fact 0.488: Duff Gordon, Lucy Christiana, Lady (née Sutherland) boarded at Cherbourg.
+  Fact 0.489: Duff Gordon, Lucy Christiana, Lady (née Sutherland)'s destination is New York City.
+  Fact 0.490: Miss Laura Mabel Francatelli was 31 years old.
+  Fact 0.491: Miss Laura Mabel Francatelli is listed as the secretary.
+  Fact 0.492: Miss Laura Mabel Francatelli is from London, England, UK.
+  Fact 0.493: Miss Laura Mabel Francatelli boarded at Cherbourg.
+  Fact 0.494: Miss Laura Mabel Francatelli's destination is New York City.
+  Fact 0.495: Dulles, Mr. William Crothers was 39 years old.
+  Fact 0.496: Dulles, Mr. William Crothers is from Philadelphia, Pennsylvania, US.
+  Fact 0.497: Dulles, Mr. William Crothers boarded at Cherbourg.
+  Fact 0.498: Dulles, Mr. William Crothers's destination is Philadelphia, Pennsylvania, US.
+  Fact 0.499: Dulles, Mr. William Crothers has 133 in the lifeboat or body column.
+  Fact 0.500: Eustis, Miss Elizabeth Mussey was 54 years old.
+  Fact 0.501: Eustis, Miss Elizabeth Mussey is from Brookline, Massachusetts, US.
+  Fact 0.502: Eustis, Miss Elizabeth Mussey boarded at Cherbourg.
+  Fact 0.503: Eustis, Miss Elizabeth Mussey's destination is Brookline, Massachusetts, US.
+  Fact 0.504: Evans, Miss Edith Corse was 36 years old.
+  Fact 0.505: Evans, Miss Edith Corse is from New York City.
+  Fact 0.506: Evans, Miss Edith Corse boarded at Cherbourg.
+  Fact 0.507: Evans, Miss Edith Corse's destination is New York City.
+  Fact 0.508: Flegenheim, Mrs. Antoinette (née Wendt) was 48 years old.
+  Fact 0.509: Flegenheim, Mrs. Antoinette (née Wendt) is from New York City.
+  Fact 0.510: Flegenheim, Mrs. Antoinette (née Wendt) boarded at Cherbourg.
+  Fact 0.511: Flegenheim, Mrs. Antoinette (née Wendt)'s destination is New York City.
+  Fact 0.512: Flegenheim, Mrs. Antoinette (née Wendt) has 7 in the lifeboat or body column.
+  Fact 0.513: Flynn, Mr. John Irwin was 36 years old.
+  Fact 0.514: Flynn, Mr. John Irwin is from Brooklyn, New York, US.
+  Fact 0.515: Flynn, Mr. John Irwin boarded at Southampton.
+  Fact 0.516: Flynn, Mr. John Irwin's destination is Brooklyn, New York, US.
+  Fact 0.517: Flynn, Mr. John Irwin has 5 in the lifeboat or body column.
+  Fact 0.518: Foreman, Mr. Benjamin Laventall was 30 years old.
+  Fact 0.519: Foreman, Mr. Benjamin Laventall is from New York City.
+  Fact 0.520: Foreman, Mr. Benjamin Laventall boarded at Southampton.
+  Fact 0.521: Foreman, Mr. Benjamin Laventall's destination is New York City.
+  Fact 0.522: Fortune, Mr. Mark was 64 years old.
+  Fact 0.523: Fortune, Mr. Mark is from Winnipeg, Manitoba, Canada.
+  Fact 0.524: Fortune, Mr. Mark boarded at Southampton.
+  Fact 0.525: Fortune, Mr. Mark's destination is Winnipeg, Manitoba, Canada.
+  Fact 0.526: Fortune, Mrs. Mary (née McDougald) was 60 years old.
+  Fact 0.527: Fortune, Mrs. Mary (née McDougald) is from Winnipeg, Manitoba, Canada.
+  Fact 0.528: Fortune, Mrs. Mary (née McDougald) boarded at Southampton.
+  Fact 0.529: Fortune, Mrs. Mary (née McDougald)'s destination is Winnipeg, Manitoba, Canada.
+  Fact 0.530: Fortune, Mrs. Mary (née McDougald) has 10 in the lifeboat or body column.
+  Fact 0.531: Fortune, Miss Ethel Flora was 28 years old.
+  Fact 0.532: Fortune, Miss Ethel Flora is from Winnipeg, Manitoba, Canada.
+  Fact 0.533: Fortune, Miss Ethel Flora boarded at Southampton.
+  Fact 0.534: Fortune, Miss Ethel Flora's destination is Winnipeg, Manitoba, Canada.
+  Fact 0.535: Fortune, Miss Ethel Flora has 10 in the lifeboat or body column.
+  Fact 0.536: Fortune, Miss Alice Elizabeth was 24 years old.
+  Fact 0.537: Fortune, Miss Alice Elizabeth is from Winnipeg, Manitoba, Canada.
+  Fact 0.538: Fortune, Miss Alice Elizabeth boarded at Southampton.
+  Fact 0.539: Fortune, Miss Alice Elizabeth's destination is Winnipeg, Manitoba, Canada.
+  Fact 0.540: Fortune, Miss Alice Elizabeth has 10 in the lifeboat or body column.
+  Fact 0.541: Fortune, Miss Mabel Helen was 23 years old.
+  Fact 0.542: Fortune, Miss Mabel Helen is from Winnipeg, Manitoba, Canada.
+  Fact 0.543: Fortune, Miss Mabel Helen boarded at Southampton.
+  Fact 0.544: Fortune, Miss Mabel Helen's destination is Winnipeg, Manitoba, Canada.
+  Fact 0.545: Fortune, Miss Mabel Helen has 10 in the lifeboat or body column.
+  Fact 0.546: Fortune, Mr. Charles Alexander was 19 years old.
+  Fact 0.547: Fortune, Mr. Charles Alexander is from Winnipeg, Manitoba, Canada.
+  Fact 0.548: Fortune, Mr. Charles Alexander boarded at Southampton.
+  Fact 0.549: Fortune, Mr. Charles Alexander's destination is Winnipeg, Manitoba, Canada.
+  Fact 0.550: Franklin, Mr. Thomas Parnham was 37 years old.
+  Fact 0.551: Franklin, Mr. Thomas Parnham is from London, England, UK.
+  Fact 0.552: Franklin, Mr. Thomas Parnham boarded at Southampton.
+  Fact 0.553: Franklin, Mr. Thomas Parnham's destination is New York City.
+  Fact 0.554: Frauenthal, Dr. Henry William was 49 years old.
+  Fact 0.555: Frauenthal, Dr. Henry William is from London, England, UK.
+  Fact 0.556: Frauenthal, Dr. Henry William boarded at Southampton.
+  Fact 0.557: Frauenthal, Dr. Henry William's destination is New York City.
+  Fact 0.558: Frauenthal, Dr. Henry William has 5 in the lifeboat or body column.
+  Fact 0.559: Frauenthal, Mrs. Clara (née Heinsheimer) was 42 years old.
+  Fact 0.560: Frauenthal, Mrs. Clara (née Heinsheimer) is from London, England, UK.
+  Fact 0.561: Frauenthal, Mrs. Clara (née Heinsheimer) boarded at Southampton.
+  Fact 0.562: Frauenthal, Mrs. Clara (née Heinsheimer)'s destination is New York City.
+  Fact 0.563: Frauenthal, Mrs. Clara (née Heinsheimer) has 5 in the lifeboat or body column.
+  Fact 0.564: Frauenthal, Mr. Isaac Gerald was 43 years old.
+  Fact 0.565: Frauenthal, Mr. Isaac Gerald is from London, England, UK.
+  Fact 0.566: Frauenthal, Mr. Isaac Gerald boarded at Southampton.
+  Fact 0.567: Frauenthal, Mr. Isaac Gerald's destination is New York City.
+  Fact 0.568: Frauenthal, Mr. Isaac Gerald has 5 in the lifeboat or body column.
+  Fact 0.569: Frölicher, Mr. Maximilian Josef was 60 years old.
+  Fact 0.570: Frölicher, Mr. Maximilian Josef is from Zürich, Switzerland.
+  Fact 0.571: Frölicher, Mr. Maximilian Josef boarded at Cherbourg.
+  Fact 0.572: Frölicher, Mr. Maximilian Josef's destination is New York City.
+  Fact 0.573: Frölicher, Mr. Maximilian Josef has 5 in the lifeboat or body column.
+  Fact 0.574: Frölicher, Mrs. Margaretha Emerentia (née Stehli) was 48 years old.
+  Fact 0.575: Frölicher, Mrs. Margaretha Emerentia (née Stehli) is from Zürich, Switzerland.
+  Fact 0.576: Frölicher, Mrs. Margaretha Emerentia (née Stehli) boarded at Cherbourg.
+  Fact 0.577: Frölicher, Mrs. Margaretha Emerentia (née Stehli)'s destination is New York City.
+  Fact 0.578: Frölicher, Mrs. Margaretha Emerentia (née Stehli) has 5 in the lifeboat or body column.
+  Fact 0.579: Frölicher-Stehli, Miss Hedwig Margaritha was 22 years old.
+  Fact 0.580: Frölicher-Stehli, Miss Hedwig Margaritha is from Zürich, Switzerland.
+  Fact 0.581: Frölicher-Stehli, Miss Hedwig Margaritha boarded at Cherbourg.
+  Fact 0.582: Frölicher-Stehli, Miss Hedwig Margaritha's destination is New York City.
+  Fact 0.583: Frölicher-Stehli, Miss Hedwig Margaritha has 5 in the lifeboat or body column.
+  Fact 0.584: Futrelle, Mr. Jacques Heath was 37 years old.
+  Fact 0.585: Futrelle, Mr. Jacques Heath is from Scituate, Massachusetts, US.
+  Fact 0.586: Futrelle, Mr. Jacques Heath boarded at Southampton.
+  Fact 0.587: Futrelle, Mr. Jacques Heath's destination is Scituate, Massachusetts, US.
+  Fact 0.588: Futrelle, Mrs. Lily May (née Peel) was 35 years old.
+  Fact 0.589: Futrelle, Mrs. Lily May (née Peel) is from Scituate, Massachusetts, US.
+  Fact 0.590: Futrelle, Mrs. Lily May (née Peel) boarded at Southampton.
+  Fact 0.591: Futrelle, Mrs. Lily May (née Peel)'s destination is Scituate, Massachusetts, US.
+  Fact 0.592: Gee, Mr. Arthur H. was 47 years old.
+  Fact 0.593: Gee, Mr. Arthur H. is from St. Annes-on-Sea, Lancashire, England, UK.
+  Fact 0.594: Gee, Mr. Arthur H. boarded at Southampton.
+  Fact 0.595: Gee, Mr. Arthur H.'s destination is Mexico City, Mexico.
+  Fact 0.596: Gee, Mr. Arthur H. has 275 in the lifeboat or body column.
+  Fact 0.597: Gibson, Mrs. Pauline Caroline (née Boeson) was 44 years old.
+  Fact 0.598: Gibson, Mrs. Pauline Caroline (née Boeson) is from New York City.
+  Fact 0.599: Gibson, Mrs. Pauline Caroline (née Boeson) boarded at Cherbourg.
+  Fact 0.600: Gibson, Mrs. Pauline Caroline (née Boeson)'s destination is New York City.
+  Fact 0.601: Gibson, Mrs. Pauline Caroline (née Boeson) has 7 in the lifeboat or body column.
+  Fact 0.602: Gibson, Miss Dorothy Winifred was 22 years old.
+  Fact 0.603: Gibson, Miss Dorothy Winifred is from New York City.
+  Fact 0.604: Gibson, Miss Dorothy Winifred boarded at Cherbourg.
+  Fact 0.605: Gibson, Miss Dorothy Winifred's destination is New York City.
+  Fact 0.606: Gibson, Miss Dorothy Winifred has 7 in the lifeboat or body column.
+  Fact 0.607: Goldenberg, Mr. Samuel L. was 47 years old.
+  Fact 0.608: Goldenberg, Mr. Samuel L. is from Paris, France.
+  Fact 0.609: Goldenberg, Mr. Samuel L. boarded at Cherbourg.
+  Fact 0.610: Goldenberg, Mr. Samuel L.'s destination is New York City.
+  Fact 0.611: Goldenberg, Mr. Samuel L. has 5 in the lifeboat or body column.
+  Fact 0.612: Goldenberg, Mrs. Nella (née Wiggins) was 40 years old.
+  Fact 0.613: Goldenberg, Mrs. Nella (née Wiggins) is from Paris, France.
+  Fact 0.614: Goldenberg, Mrs. Nella (née Wiggins) boarded at Cherbourg.
+  Fact 0.615: Goldenberg, Mrs. Nella (née Wiggins)'s destination is New York City.
+  Fact 0.616: Goldenberg, Mrs. Nella (née Wiggins) has 5 in the lifeboat or body column.
+  Fact 0.617: Goldschmidt, Mr. George B. was 71 years old.
+  Fact 0.618: Goldschmidt, Mr. George B. is from New York City.
+  Fact 0.619: Goldschmidt, Mr. George B. boarded at Cherbourg.
+  Fact 0.620: Goldschmidt, Mr. George B.'s destination is New York City.
+  Fact 0.621: Gracie IV, Colonel Archibald was 53 years old.
+  Fact 0.622: Gracie IV, Colonel Archibald is from Washington, D.C., US.
+  Fact 0.623: Gracie IV, Colonel Archibald boarded at Southampton.
+  Fact 0.624: Gracie IV, Colonel Archibald's destination is Washington, D.C., US.
+  Fact 0.625: Graham, Mr. George Edward was 38 years old.
+  Fact 0.626: Graham, Mr. George Edward is from Winnipeg, Manitoba, Canada.
+  Fact 0.627: Graham, Mr. George Edward boarded at Southampton.
+  Fact 0.628: Graham, Mr. George Edward's destination is Winnipeg, Manitoba, Canada.
+  Fact 0.629: Graham, Mr. George Edward has 147 in the lifeboat or body column.
+  Fact 0.630: Graham, Mrs. Edith Ware (née Junkins) was 59 years old.
+  Fact 0.631: Graham, Mrs. Edith Ware (née Junkins) is from Greenwich, Connecticut, US.
+  Fact 0.632: Graham, Mrs. Edith Ware (née Junkins) boarded at Southampton.
+  Fact 0.633: Graham, Mrs. Edith Ware (née Junkins)'s destination is Greenwich, Connecticut, US.
+  Fact 0.634: Graham, Miss Margaret Edith was 19 years old.
+  Fact 0.635: Graham, Miss Margaret Edith is from Greenwich, Connecticut, US.
+  Fact 0.636: Graham, Miss Margaret Edith boarded at Southampton.
+  Fact 0.637: Graham, Miss Margaret Edith's destination is Greenwich, Connecticut, US.
+  Fact 0.638: Miss Elizabeth Weed Shutes was 40 years old.
+  Fact 0.639: Miss Elizabeth Weed Shutes is listed as the governess.
+  Fact 0.640: Miss Elizabeth Weed Shutes is from Greenwich, Connecticut, US.
+  Fact 0.641: Miss Elizabeth Weed Shutes boarded at Southampton.
+  Fact 0.642: Miss Elizabeth Weed Shutes's destination is Greenwich, Connecticut, US.
+  Fact 0.643: Greenfield, Mrs. Blanche (née Strouse) was 45 years old.
+  Fact 0.644: Greenfield, Mrs. Blanche (née Strouse) is from New York City.
+  Fact 0.645: Greenfield, Mrs. Blanche (née Strouse) boarded at Cherbourg.
+  Fact 0.646: Greenfield, Mrs. Blanche (née Strouse)'s destination is New York City.
+  Fact 0.647: Greenfield, Mrs. Blanche (née Strouse) has 7 in the lifeboat or body column.
+  Fact 0.648: Greenfield, Mr. William Bertram was 23 years old.
+  Fact 0.649: Greenfield, Mr. William Bertram is from New York City.
+  Fact 0.650: Greenfield, Mr. William Bertram boarded at Cherbourg.
+  Fact 0.651: Greenfield, Mr. William Bertram's destination is New York City.
+  Fact 0.652: Greenfield, Mr. William Bertram has 7 in the lifeboat or body column.
+  Fact 0.653: Guggenheim, Mr. Benjamin was 46 years old.
+  Fact 0.654: Guggenheim, Mr. Benjamin is from Paris, France.
+  Fact 0.655: Guggenheim, Mr. Benjamin boarded at Cherbourg.
+  Fact 0.656: Guggenheim, Mr. Benjamin's destination is New York City.
+  Fact 0.657: Mr. Victor Giglio was 24 years old.
+  Fact 0.658: Mr. Victor Giglio is listed as the valet.
+  Fact 0.659: Mr. Victor Giglio is from Paris, France.
+  Fact 0.660: Mr. Victor Giglio boarded at Cherbourg.
+  Fact 0.661: Mr. Victor Giglio's destination is New York City.
+  Fact 0.662: Mr. René Pernot was 39 years old.
+  Fact 0.663: Mr. René Pernot is listed as the chauffeur.
+  Fact 0.664: Mr. René Pernot is from Paris, France.
+  Fact 0.665: Mr. René Pernot boarded at Cherbourg.
+  Fact 0.666: Mr. René Pernot's destination is New York City.
+  Fact 0.667: Harder, Mr. George Achilles was 25 years old.
+  Fact 0.668: Harder, Mr. George Achilles is from New York City.
+  Fact 0.669: Harder, Mr. George Achilles boarded at Cherbourg.
+  Fact 0.670: Harder, Mr. George Achilles's destination is New York City.
+  Fact 0.671: Harder, Mr. George Achilles has 5 in the lifeboat or body column.
+  Fact 0.672: Harder, Mrs. Dorothy (née Annan) was 21 years old.
+  Fact 0.673: Harder, Mrs. Dorothy (née Annan) is from New York City.
+  Fact 0.674: Harder, Mrs. Dorothy (née Annan) boarded at Cherbourg.
+  Fact 0.675: Harder, Mrs. Dorothy (née Annan)'s destination is New York City.
+  Fact 0.676: Harder, Mrs. Dorothy (née Annan) has 5 in the lifeboat or body column.
+  Fact 0.677: Harper, Mr. Henry Sleeper was 48 years old.
+  Fact 0.678: Harper, Mr. Henry Sleeper is from New York City.
+  Fact 0.679: Harper, Mr. Henry Sleeper boarded at Cherbourg.
+  Fact 0.680: Harper, Mr. Henry Sleeper's destination is New York City.
+  Fact 0.681: Mr. Hammad Hassab was 27 years old.
+  Fact 0.682: Mr. Hammad Hassab is listed as the dragoman.
+  Fact 0.683: Mr. Hammad Hassab is from Cairo, Egypt.
+  Fact 0.684: Mr. Hammad Hassab boarded at Cherbourg.
+  Fact 0.685: Mr. Hammad Hassab's destination is New York City.
+  Fact 0.686: Harper, Mrs. Myna (née Haxtun) was 49 years old.
+  Fact 0.687: Harper, Mrs. Myna (née Haxtun) is from New York City.
+  Fact 0.688: Harper, Mrs. Myna (née Haxtun) boarded at Cherbourg.
+  Fact 0.689: Harper, Mrs. Myna (née Haxtun)'s destination is New York City.
+  Fact 0.690: Harris, Mr. Henry Birkhardt was 45 years old.
+  Fact 0.691: Harris, Mr. Henry Birkhardt is from New York City.
+  Fact 0.692: Harris, Mr. Henry Birkhardt boarded at Southampton.
+  Fact 0.693: Harris, Mr. Henry Birkhardt's destination is New York City.
+  Fact 0.694: Harris, Mrs. Irene (née Wallach) was 35 years old.
+  Fact 0.695: Harris, Mrs. Irene (née Wallach) is from New York City.
+  Fact 0.696: Harris, Mrs. Irene (née Wallach) boarded at Southampton.
+  Fact 0.697: Harris, Mrs. Irene (née Wallach)'s destination is New York City.
+  Fact 0.698: Hawksford, Mr. Walter James was 45 years old.
+  Fact 0.699: Hawksford, Mr. Walter James is from Kingston, Surrey, England, UK.
+  Fact 0.700: Hawksford, Mr. Walter James boarded at Southampton.
+  Fact 0.701: Hawksford, Mr. Walter James's destination is New York City.
+  Fact 0.702: Hays, Mr. Charles Melville was 55 years old.
+  Fact 0.703: Hays, Mr. Charles Melville is from Montreal, Quebec, Canada.
+  Fact 0.704: Hays, Mr. Charles Melville boarded at Southampton.
+  Fact 0.705: Hays, Mr. Charles Melville's destination is Montreal, Quebec, Canada.
+  Fact 0.706: Hays, Mr. Charles Melville has 307 in the lifeboat or body column.
+  Fact 0.707: Mr. Vivian Ponsonby Payne was 22 years old.
+  Fact 0.708: Mr. Vivian Ponsonby Payne is listed as the clerk.
+  Fact 0.709: Mr. Vivian Ponsonby Payne is from Montreal, Quebec, Canada.
+  Fact 0.710: Mr. Vivian Ponsonby Payne boarded at Southampton.
+  Fact 0.711: Mr. Vivian Ponsonby Payne's destination is Montreal, Quebec, Canada.
+  Fact 0.712: Hays, Mrs. Clara Jennings (née Grigg) was 52 years old.
+  Fact 0.713: Hays, Mrs. Clara Jennings (née Grigg) is from Montreal, Quebec, Canada.
+  Fact 0.714: Hays, Mrs. Clara Jennings (née Grigg) boarded at Southampton.
+  Fact 0.715: Hays, Mrs. Clara Jennings (née Grigg)'s destination is Montreal, Quebec, Canada.
+  Fact 0.716: Miss Mary Anne Perreault was 33 years old.
+  Fact 0.717: Miss Mary Anne Perreault is listed as the maid.
+  Fact 0.718: Miss Mary Anne Perreault is from Montreal, Quebec, Canada.
+  Fact 0.719: Miss Mary Anne Perreault boarded at Southampton.
+  Fact 0.720: Miss Mary Anne Perreault's destination is Montreal, Quebec, Canada.
+  Fact 0.721: Hays, Miss Margaret Bechstein was 24 years old.
+  Fact 0.722: Hays, Miss Margaret Bechstein is from New York City.
+  Fact 0.723: Hays, Miss Margaret Bechstein boarded at Cherbourg.
+  Fact 0.724: Hays, Miss Margaret Bechstein's destination is New York City.
+  Fact 0.725: Hays, Miss Margaret Bechstein has 7 in the lifeboat or body column.
+  Fact 0.726: Head, Mr. Christopher was 42 years old.
+  Fact 0.727: Head, Mr. Christopher is from Chelsea, London, England, UK.
+  Fact 0.728: Head, Mr. Christopher boarded at Southampton.
+  Fact 0.729: Head, Mr. Christopher's destination is New York City.
+  Fact 0.730: Hilliard, Mr. Herbert Henry was 44 years old.
+  Fact 0.731: Hilliard, Mr. Herbert Henry is from Brighton, Massachusetts, US.
+  Fact 0.732: Hilliard, Mr. Herbert Henry boarded at Southampton.
+  Fact 0.733: Hilliard, Mr. Herbert Henry's destination is Brighton, Massachusetts, US.
+  Fact 0.734: Hipkins, Mr. William Edward was 55 years old.
+  Fact 0.735: Hipkins, Mr. William Edward is from Birmingham, West Midlands, England, UK.
+  Fact 0.736: Hipkins, Mr. William Edward boarded at Southampton.
+  Fact 0.737: Hipkins, Mr. William Edward's destination is New York City.
+  Fact 0.738: Hippach, Mrs. Ida Sophia (née Fischer) was 44 years old.
+  Fact 0.739: Hippach, Mrs. Ida Sophia (née Fischer) is from Chicago, Illinois, US.
+  Fact 0.740: Hippach, Mrs. Ida Sophia (née Fischer) boarded at Cherbourg.
+  Fact 0.741: Hippach, Mrs. Ida Sophia (née Fischer)'s destination is Chicago, Illinois, US.
+  Fact 0.742: Hippach, Miss Jean Gertrude was 17 years old.
+  Fact 0.743: Hippach, Miss Jean Gertrude is from Chicago, Illinois, US.
+  Fact 0.744: Hippach, Miss Jean Gertrude boarded at Cherbourg.
+  Fact 0.745: Hippach, Miss Jean Gertrude's destination is Chicago, Illinois, US.
+  Fact 0.746: Hogeboom, Mrs. Anna Louisa (née Andrews) was 51 years old.
+  Fact 0.747: Hogeboom, Mrs. Anna Louisa (née Andrews) is from Hudson, New York, US.
+  Fact 0.748: Hogeboom, Mrs. Anna Louisa (née Andrews) boarded at Cherbourg.
+  Fact 0.749: Hogeboom, Mrs. Anna Louisa (née Andrews)'s destination is Hudson, New York, US.
+  Fact 0.750: Hogeboom, Mrs. Anna Louisa (née Andrews) has 10 in the lifeboat or body column.
+  Fact 0.751: Holverson, Mr. Alexander Oskar was 42 years old.
+  Fact 0.752: Holverson, Mr. Alexander Oskar is from New York City.
+  Fact 0.753: Holverson, Mr. Alexander Oskar boarded at Southampton.
+  Fact 0.754: Holverson, Mr. Alexander Oskar's destination is New York City.
+  Fact 0.755: Holverson, Mr. Alexander Oskar has 38 in the lifeboat or body column.
+  Fact 0.756: Holverson, Mrs. Mary Aline (née Towner) was 35 years old.
+  Fact 0.757: Holverson, Mrs. Mary Aline (née Towner) is from New York City.
+  Fact 0.758: Holverson, Mrs. Mary Aline (née Towner) boarded at Southampton.
+  Fact 0.759: Holverson, Mrs. Mary Aline (née Towner)'s destination is New York City.
+  Fact 0.760: Holverson, Mrs. Mary Aline (née Towner) has 8 in the lifeboat or body column.
+  Fact 0.761: Homer, Mr. Harry (alias E. Haven) was 40 years old.
+  Fact 0.762: Homer, Mr. Harry (alias E. Haven) is from Indianapolis, Indiana, US.
+  Fact 0.763: Homer, Mr. Harry (alias E. Haven) boarded at Southampton.
+  Fact 0.764: Homer, Mr. Harry (alias E. Haven)'s destination is Indianapolis, Indiana, US.
+  Fact 0.765: Homer, Mr. Harry (alias E. Haven) has 15 in the lifeboat or body column.
+  Fact 0.766: Hoyt, Mr. Frederick Maxfield was 35 years old.
+  Fact 0.767: Hoyt, Mr. Frederick Maxfield is from New York City.
+  Fact 0.768: Hoyt, Mr. Frederick Maxfield boarded at Southampton.
+  Fact 0.769: Hoyt, Mr. Frederick Maxfield's destination is Stamford, Connecticut, US.
+  Fact 0.770: Hoyt, Mrs. Jane Anne (née Forby) was 31 years old.
+  Fact 0.771: Hoyt, Mrs. Jane Anne (née Forby) is from New York City.
+  Fact 0.772: Hoyt, Mrs. Jane Anne (née Forby) boarded at Southampton.
+  Fact 0.773: Hoyt, Mrs. Jane Anne (née Forby)'s destination is Stamford, Connecticut, US.
+  Fact 0.774: Hoyt, Mr. William Fisher was 42 years old.
+  Fact 0.775: Hoyt, Mr. William Fisher is from New York City.
+  Fact 0.776: Hoyt, Mr. William Fisher boarded at Cherbourg.
+  Fact 0.777: Hoyt, Mr. William Fisher's destination is New York City.
+  Fact 0.778: Hoyt, Mr. William Fisher has 14 in the lifeboat or body column.
+  Fact 0.779: Isham, Miss Ann Elizabeth was 50 years old.
+  Fact 0.780: Isham, Miss Ann Elizabeth is from Chicago, Illinois, US.
+  Fact 0.781: Isham, Miss Ann Elizabeth boarded at Cherbourg.
+  Fact 0.782: Isham, Miss Ann Elizabeth's destination is Chicago, Illinois, US.
+  Fact 0.783: Ismay, Mr. Joseph Bruce was 49 years old.
+  Fact 0.784: Ismay, Mr. Joseph Bruce is from Liverpool, Merseyside, England, UK.
+  Fact 0.785: Ismay, Mr. Joseph Bruce boarded at Southampton.
+  Fact 0.786: Ismay, Mr. Joseph Bruce's destination is New York City.
+  Fact 0.787: Mr. John Richard Fry was 39 years old.
+  Fact 0.788: Mr. John Richard Fry is listed as the valet.
+  Fact 0.789: Mr. John Richard Fry is from Liverpool, Merseyside, England, UK.
+  Fact 0.790: Mr. John Richard Fry boarded at Southampton.
+  Fact 0.791: Mr. John Richard Fry's destination is New York City.
+  Fact 0.792: Mr. William Henry Harrison was 45 years old.
+  Fact 0.793: Mr. William Henry Harrison is listed as the secretary.
+  Fact 0.794: Mr. William Henry Harrison is from Wallasey, Merseyside, England, UK.
+  Fact 0.795: Mr. William Henry Harrison boarded at Southampton.
+  Fact 0.796: Mr. William Henry Harrison's destination is New York City.
+  Fact 0.797: Mr. William Henry Harrison has 110 in the lifeboat or body column.
+  Fact 0.798: Johnson, Mrs. Madeline Eliza (née Austin) was 40 years old.
+  Fact 0.799: Johnson, Mrs. Madeline Eliza (née Austin) is from London, England, UK.
+  Fact 0.800: Johnson, Mrs. Madeline Eliza (née Austin) boarded at Southampton.
+  Fact 0.801: Johnson, Mrs. Madeline Eliza (née Austin)'s destination is New York, New York, US.
+  Fact 0.802: Johnson, Mrs. Madeline Eliza (née Austin) has 6 in the lifeboat or body column.
+  Fact 0.803: Johnson (later changed to Langston), Mr. Samuel James was 10 years old.
+  Fact 0.804: Johnson (later changed to Langston), Mr. Samuel James is from London, England, UK.
+  Fact 0.805: Johnson (later changed to Langston), Mr. Samuel James boarded at Southampton.
+  Fact 0.806: Johnson (later changed to Langston), Mr. Samuel James's destination is New York, New York, US.
+  Fact 0.807: Jones, Mr. Charles Cresson was 46 years old.
+  Fact 0.808: Jones, Mr. Charles Cresson is from Bennington, Vermont, US.
+  Fact 0.809: Jones, Mr. Charles Cresson boarded at Southampton.
+  Fact 0.810: Jones, Mr. Charles Cresson's destination is Bennington, Vermont, US.
+  Fact 0.811: Jones, Mr. Charles Cresson has 80 in the lifeboat or body column.
+  Fact 0.812: Julian, Mr. Henry Forbes was 50 years old.
+  Fact 0.813: Julian, Mr. Henry Forbes is from Torquay, Devon, England, UK.
+  Fact 0.814: Julian, Mr. Henry Forbes boarded at Southampton.
+  Fact 0.815: Julian, Mr. Henry Forbes's destination is San Francisco, US.
+  Fact 0.816: Kent, Mr. Edward Austin was 58 years old.
+  Fact 0.817: Kent, Mr. Edward Austin is from Buffalo, New York, US.
+  Fact 0.818: Kent, Mr. Edward Austin boarded at Cherbourg.
+  Fact 0.819: Kent, Mr. Edward Austin's destination is Buffalo, New York, US.
+  Fact 0.820: Kent, Mr. Edward Austin has 258 in the lifeboat or body column.
+  Fact 0.821: Kenyon, Mr. Frederick R. was 41 years old.
+  Fact 0.822: Kenyon, Mr. Frederick R. is from Pittsburgh, Pennsylvania, US.
+  Fact 0.823: Kenyon, Mr. Frederick R. boarded at Southampton.
+  Fact 0.824: Kenyon, Mr. Frederick R.'s destination is Pittsburgh, Pennsylvania, US.
+  Fact 0.825: Kenyon, Mrs. Marion (née Stauffer) was 31 years old.
+  Fact 0.826: Kenyon, Mrs. Marion (née Stauffer) is from Pittsburgh, Pennsylvania, US.
+  Fact 0.827: Kenyon, Mrs. Marion (née Stauffer) boarded at Southampton.
+  Fact 0.828: Kenyon, Mrs. Marion (née Stauffer)'s destination is Pittsburgh, Pennsylvania, US.
+  Fact 0.829: Kenyon, Mrs. Marion (née Stauffer) has 8 in the lifeboat or body column.
+  Fact 0.830: Kimball, Mr. Edwin Nelson Jr. was 42 years old.
+  Fact 0.831: Kimball, Mr. Edwin Nelson Jr. is from Boston, Massachusetts, US.
+  Fact 0.832: Kimball, Mr. Edwin Nelson Jr. boarded at Southampton.
+  Fact 0.833: Kimball, Mr. Edwin Nelson Jr.'s destination is Boston, Massachusetts, US.
+  Fact 0.834: Kimball, Mr. Edwin Nelson Jr. has 5 in the lifeboat or body column.
+  Fact 0.835: Kimball, Mrs. Gertrude (née Parsons) was 45 years old.
+  Fact 0.836: Kimball, Mrs. Gertrude (née Parsons) is from Boston, Massachusetts, US.
+  Fact 0.837: Kimball, Mrs. Gertrude (née Parsons) boarded at Southampton.
+  Fact 0.838: Kimball, Mrs. Gertrude (née Parsons)'s destination is Boston, Massachusetts, US.
+  Fact 0.839: Kimball, Mrs. Gertrude (née Parsons) has 5 in the lifeboat or body column.
+  Fact 0.840: Klaber, Mr. Herman was 45 years old.
+  Fact 0.841: Klaber, Mr. Herman is from Portland, Oregon, US.
+  Fact 0.842: Klaber, Mr. Herman boarded at Southampton.
+  Fact 0.843: Klaber, Mr. Herman's destination is Portland, Oregon, US.
+  Fact 0.844: Langston, Ms. Maxine Jane was 25 years old.
+  Fact 0.845: Langston, Ms. Maxine Jane is from Duncansville, Pennsylvania, US.
+  Fact 0.846: Langston, Ms. Maxine Jane boarded at Southampton.
+  Fact 0.847: Langston, Ms. Maxine Jane's destination is Duncansivlle, Pennsylvania, US.
+  Fact 0.848: Lambert-Williams, Mr. Fletcher Fellows was 43 years old.
+  Fact 0.849: Lambert-Williams, Mr. Fletcher Fellows is from London, England, UK.
+  Fact 0.850: Lambert-Williams, Mr. Fletcher Fellows boarded at Southampton.
+  Fact 0.851: Lambert-Williams, Mr. Fletcher Fellows's destination is Newark, New Jersey, US.
+  Fact 0.852: Leader, Dr. Alice (née Farnham) was 49 years old.
+  Fact 0.853: Leader, Dr. Alice (née Farnham) is from New York City.
+  Fact 0.854: Leader, Dr. Alice (née Farnham) boarded at Southampton.
+  Fact 0.855: Leader, Dr. Alice (née Farnham)'s destination is New York City.
+  Fact 0.856: Leader, Dr. Alice (née Farnham) has 8 in the lifeboat or body column.
+  Fact 0.857: Leslie, Lucy Noël Martha, Countess of Rothes (née Dyer-Edwardes) was 27 years old.
+  Fact 0.858: Leslie, Lucy Noël Martha, Countess of Rothes (née Dyer-Edwardes) is from Vancouver, British Columbia, Canada.
+  Fact 0.859: Leslie, Lucy Noël Martha, Countess of Rothes (née Dyer-Edwardes) boarded at Southampton.
+  Fact 0.860: Leslie, Lucy Noël Martha, Countess of Rothes (née Dyer-Edwardes)'s destination is Vancouver, British Columbia, Canada.
+  Fact 0.861: Leslie, Lucy Noël Martha, Countess of Rothes (née Dyer-Edwardes) has 8 in the lifeboat or body column.
+  Fact 0.862: Miss Roberta Elizabeth Mary "Cissy" Maioni was 20 years old.
+  Fact 0.863: Miss Roberta Elizabeth Mary "Cissy" Maioni is listed as the maid.
+  Fact 0.864: Miss Roberta Elizabeth Mary "Cissy" Maioni is from Vancouver, British Columbia, Canada.
+  Fact 0.865: Miss Roberta Elizabeth Mary "Cissy" Maioni boarded at Southampton.
+  Fact 0.866: Miss Roberta Elizabeth Mary "Cissy" Maioni's destination is Vancouver, British Columbia, Canada.
+  Fact 0.867: Miss Roberta Elizabeth Mary "Cissy" Maioni has 8 in the lifeboat or body column.
+  Fact 0.868: Lewy, Mr. Ervin G. was 31 years old.
+  Fact 0.869: Lewy, Mr. Ervin G. is from Chicago, Illinois, US.
+  Fact 0.870: Lewy, Mr. Ervin G. boarded at Cherbourg.
+  Fact 0.871: Lewy, Mr. Ervin G.'s destination is Chicago, Illinois, US.
+  Fact 0.872: Lindeberg-Lind, Mr. Erik Gustav (alias Edward Lingrey) was 42 years old.
+  Fact 0.873: Lindeberg-Lind, Mr. Erik Gustav (alias Edward Lingrey) is from Jordanstorp, Södermanland, Sweden.
+  Fact 0.874: Lindeberg-Lind, Mr. Erik Gustav (alias Edward Lingrey) boarded at Southampton.
+  Fact 0.875: Lindeberg-Lind, Mr. Erik Gustav (alias Edward Lingrey)'s destination is New York City.
+  Fact 0.876: Lindström, Mrs. Sigrid (née Posse) was 55 years old.
+  Fact 0.877: Lindström, Mrs. Sigrid (née Posse) is from Stockholm, Sweden.
+  Fact 0.878: Lindström, Mrs. Sigrid (née Posse) boarded at Cherbourg.
+  Fact 0.879: Lindström, Mrs. Sigrid (née Posse)'s destination is New York City.
+  Fact 0.880: Lindström, Mrs. Sigrid (née Posse) has 6 in the lifeboat or body column.
+  Fact 0.881: Lines, Mrs. Elizabeth Lindsey (née James) was 50 years old.
+  Fact 0.882: Lines, Mrs. Elizabeth Lindsey (née James) is from Paris, France.
+  Fact 0.883: Lines, Mrs. Elizabeth Lindsey (née James) boarded at Cherbourg.
+  Fact 0.884: Lines, Mrs. Elizabeth Lindsey (née James)'s destination is Hanover, New Hampshire, US.
+  Fact 0.885: Lines, Mrs. Elizabeth Lindsey (née James) has 9 in the lifeboat or body column.
+  Fact 0.886: Lines, Miss Mary Conover was 16 years old.
+  Fact 0.887: Lines, Miss Mary Conover is from Paris, France.
+  Fact 0.888: Lines, Miss Mary Conover boarded at Cherbourg.
+  Fact 0.889: Lines, Miss Mary Conover's destination is Hanover, New Hampshire, US.
+  Fact 0.890: Lines, Miss Mary Conover has 9 in the lifeboat or body column.
+  Fact 0.891: Long, Mr. Milton Clyde was 29 years old.
+  Fact 0.892: Long, Mr. Milton Clyde is from Springfield, Massachusetts, US.
+  Fact 0.893: Long, Mr. Milton Clyde boarded at Southampton.
+  Fact 0.894: Long, Mr. Milton Clyde's destination is Springfield, Massachusetts, US.
+  Fact 0.895: Long, Mr. Milton Clyde has 126 in the lifeboat or body column.
+  Fact 0.896: Longley, Miss Gretchen Fiske was 21 years old.
+  Fact 0.897: Longley, Miss Gretchen Fiske is from Hudson, New York, US.
+  Fact 0.898: Longley, Miss Gretchen Fiske boarded at Cherbourg.
+  Fact 0.899: Longley, Miss Gretchen Fiske's destination is Hudson, New York, US.
+  Fact 0.900: Longley, Miss Gretchen Fiske has 10 in the lifeboat or body column.
+  Fact 0.901: Loring, Mr. Joseph Holland was 30 years old.
+  Fact 0.902: Loring, Mr. Joseph Holland is from London, England, UK.
+  Fact 0.903: Loring, Mr. Joseph Holland boarded at Southampton.
+  Fact 0.904: Loring, Mr. Joseph Holland's destination is New York City.
+  Fact 0.905: Madill, Miss Georgette Alexandra was 16 years old.
+  Fact 0.906: Madill, Miss Georgette Alexandra is from St. Louis, Missouri, US.
+  Fact 0.907: Madill, Miss Georgette Alexandra boarded at Southampton.
+  Fact 0.908: Madill, Miss Georgette Alexandra's destination is St. Louis, Missouri, US.
+  Fact 0.909: Maguire, Mr. John Edward was 30 years old.
+  Fact 0.910: Maguire, Mr. John Edward is from Brockton, Massachusetts, US.
+  Fact 0.911: Maguire, Mr. John Edward boarded at Southampton.
+  Fact 0.912: Maguire, Mr. John Edward's destination is Brockton, Massachusetts, US.
+  Fact 0.913: Maréchal, Mr. Pierre, Sr. was 28 years old.
+  Fact 0.914: Maréchal, Mr. Pierre, Sr. is from Paris, France.
+  Fact 0.915: Maréchal, Mr. Pierre, Sr. boarded at Cherbourg.
+  Fact 0.916: Maréchal, Mr. Pierre, Sr.'s destination is New York City.
+  Fact 0.917: Maréchal, Mr. Pierre, Sr. has 7 in the lifeboat or body column.
+  Fact 0.918: Marvin, Mr. Daniel Warner was 18 years old.
+  Fact 0.919: Marvin, Mr. Daniel Warner is from New York City.
+  Fact 0.920: Marvin, Mr. Daniel Warner boarded at Southampton.
+  Fact 0.921: Marvin, Mr. Daniel Warner's destination is New York City.
+  Fact 0.922: Marvin, Mrs. Mary Graham Carmichael (née Farquarson) was 18 years old.
+  Fact 0.923: Marvin, Mrs. Mary Graham Carmichael (née Farquarson) is from New York City.
+  Fact 0.924: Marvin, Mrs. Mary Graham Carmichael (née Farquarson) boarded at Southampton.
+  Fact 0.925: Marvin, Mrs. Mary Graham Carmichael (née Farquarson)'s destination is New York City.
+  Fact 0.926: Marvin, Mrs. Mary Graham Carmichael (née Farquarson) has 10 in the lifeboat or body column.
+  Fact 0.927: Mayné, Miss Bertha Antonine was 24 years old.
+  Fact 0.928: Mayné, Miss Bertha Antonine is from Brussels, Belgium.
+  Fact 0.929: Mayné, Miss Bertha Antonine boarded at Cherbourg.
+  Fact 0.930: Mayné, Miss Bertha Antonine's destination is Montreal, Quebec, Canada.
+  Fact 0.931: Mayné, Miss Bertha Antonine has 6 in the lifeboat or body column.
+  Fact 0.932: McCaffry, Mr. Thomas Francis was 46 years old.
+  Fact 0.933: McCaffry, Mr. Thomas Francis is from Vancouver, British Columbia, Canada.
+  Fact 0.934: McCaffry, Mr. Thomas Francis boarded at Southampton.
+  Fact 0.935: McCaffry, Mr. Thomas Francis's destination is Vancouver, British Columbia, Canada.
+  Fact 0.936: McCaffry, Mr. Thomas Francis has 292 in the lifeboat or body column.
+  Fact 0.937: McCarthy, Mr. Timothy J. was 54 years old.
+  Fact 0.938: McCarthy, Mr. Timothy J. is from Dorchester, Massachusetts, US.
+  Fact 0.939: McCarthy, Mr. Timothy J. boarded at Southampton.
+  Fact 0.940: McCarthy, Mr. Timothy J.'s destination is Dorchester, Massachusetts, US.
+  Fact 0.941: McCarthy, Mr. Timothy J. has 175 in the lifeboat or body column.
+  Fact 0.942: McGough, Mr. James Robert was 35 years old.
+  Fact 0.943: McGough, Mr. James Robert is from Philadelphia, Pennsylvania, US.
+  Fact 0.944: McGough, Mr. James Robert boarded at Southampton.
+  Fact 0.945: McGough, Mr. James Robert's destination is Philadelphia, Pennsylvania, US.
+  Fact 0.946: McGough, Mr. James Robert has 7 in the lifeboat or body column.
+  Fact 0.947: Meyer, Mr. Edgar Joseph was 28 years old.
+  Fact 0.948: Meyer, Mr. Edgar Joseph is from New York City.
+  Fact 0.949: Meyer, Mr. Edgar Joseph boarded at Cherbourg.
+  Fact 0.950: Meyer, Mr. Edgar Joseph's destination is New York City.
+  Fact 0.951: Meyer, Mrs. Leila (née Saks) was 25 years old.
+  Fact 0.952: Meyer, Mrs. Leila (née Saks) is from New York City.
+  Fact 0.953: Meyer, Mrs. Leila (née Saks) boarded at Cherbourg.
+  Fact 0.954: Meyer, Mrs. Leila (née Saks)'s destination is New York City.
+  Fact 0.955: Meyer, Mrs. Leila (née Saks) has 6 in the lifeboat or body column.
+  Fact 0.956: Millet, Mr. Francis Davis was 65 years old.
+  Fact 0.957: Millet, Mr. Francis Davis is from East Bridgewater, Massachusetts, US.
+  Fact 0.958: Millet, Mr. Francis Davis boarded at Cherbourg.
+  Fact 0.959: Millet, Mr. Francis Davis's destination is East Bridgewater, Massachusetts, US.
+  Fact 0.960: Millet, Mr. Francis Davis has 249 in the lifeboat or body column.
+  Fact 0.961: Minahan, Dr. William Edward was 44 years old.
+  Fact 0.962: Minahan, Dr. William Edward is from Fond du Lac, Wisconsin, US.
+  Fact 0.963: Minahan, Dr. William Edward boarded at Southampton.
+  Fact 0.964: Minahan, Dr. William Edward's destination is Fond du Lac, Wisconsin, US.
+  Fact 0.965: Minahan, Dr. William Edward has 230 in the lifeboat or body column.
+  Fact 0.966: Minahan, Mrs. Lillian E. (née Thorpe) was 37 years old.
+  Fact 0.967: Minahan, Mrs. Lillian E. (née Thorpe) is from Fond du Lac, Wisconsin, US.
+  Fact 0.968: Minahan, Mrs. Lillian E. (née Thorpe) boarded at Southampton.
+  Fact 0.969: Minahan, Mrs. Lillian E. (née Thorpe)'s destination is Fond du Lac, Wisconsin, US.
+  Fact 0.970: Minahan, Mrs. Lillian E. (née Thorpe) has 14 in the lifeboat or body column.
+  Fact 0.971: Minahan, Miss Daisy E. was 33 years old.
+  Fact 0.972: Minahan, Miss Daisy E. is from Fond du Lac, Wisconsin, US.
+  Fact 0.973: Minahan, Miss Daisy E. boarded at Southampton.
+  Fact 0.974: Minahan, Miss Daisy E.'s destination is Fond du Lac, Wisconsin, US.
+  Fact 0.975: Minahan, Miss Daisy E. has 14 in the lifeboat or body column.
+  Fact 0.976: Mock, Mr. Philipp Edmund was 30 years old.
+  Fact 0.977: Mock, Mr. Philipp Edmund is from New York City.
+  Fact 0.978: Mock, Mr. Philipp Edmund boarded at Cherbourg.
+  Fact 0.979: Mock, Mr. Philipp Edmund's destination is New York City.
+  Fact 0.980: Mock, Mr. Philipp Edmund has 11 in the lifeboat or body column.
+  Fact 0.981: Molson, Mr. Harry Markland was 55 years old.
+  Fact 0.982: Molson, Mr. Harry Markland is from Montreal, Quebec, Canada.
+  Fact 0.983: Molson, Mr. Harry Markland boarded at Southampton.
+  Fact 0.984: Molson, Mr. Harry Markland's destination is Montreal, Quebec, Canada.
+  Fact 0.985: Moore, Mr. Clarence Bloomfield was 47 years old.
+  Fact 0.986: Moore, Mr. Clarence Bloomfield is from Washington, D.C., US.
+  Fact 0.987: Moore, Mr. Clarence Bloomfield boarded at Southampton.
+  Fact 0.988: Moore, Mr. Clarence Bloomfield's destination is Washington, D.C., US.
+  Fact 0.989: Mr. Charles Henry Harrington was 37 years old.
+  Fact 0.990: Mr. Charles Henry Harrington is listed as the valet.
+  Fact 0.991: Mr. Charles Henry Harrington is from Washington, D.C., US.
+  Fact 0.992: Mr. Charles Henry Harrington boarded at Southampton.
+  Fact 0.993: Mr. Charles Henry Harrington's destination is Washington, D.C., US.
+  Fact 0.994: Natsch, Mr. Charles was 36 years old.
+  Fact 0.995: Natsch, Mr. Charles is from Brooklyn, New York, US.
+  Fact 0.996: Natsch, Mr. Charles boarded at Cherbourg.
+  Fact 0.997: Natsch, Mr. Charles's destination is Brooklyn, New York, US.
+  Fact 0.998: Newell, Mr. Arthur Webster was 58 years old.
+  Fact 0.999: Newell, Mr. Arthur Webster is from Lexington, Massachusetts, US.
+  Fact 0.1000: Newell, Mr. Arthur Webster boarded at Cherbourg.
+  Fact 0.1001: Newell, Mr. Arthur Webster's destination is Lexington, Massachusetts, US.
+  Fact 0.1002: Newell, Mr. Arthur Webster has 122 in the lifeboat or body column.
+  Fact 0.1003: Newell, Miss Madeleine was 31 years old.
+  Fact 0.1004: Newell, Miss Madeleine is from Lexington, Massachusetts, US.
+  Fact 0.1005: Newell, Miss Madeleine boarded at Cherbourg.
+  Fact 0.1006: Newell, Miss Madeleine's destination is Lexington, Massachusetts, US.
+  Fact 0.1007: Newell, Miss Madeleine has 6 in the lifeboat or body column.
+  Fact 0.1008: Newell, Miss Marjorie Anne was 23 years old.
+  Fact 0.1009: Newell, Miss Marjorie Anne is from Lexington, Massachusetts, US.
+  Fact 0.1010: Newell, Miss Marjorie Anne boarded at Cherbourg.
+  Fact 0.1011: Newell, Miss Marjorie Anne's destination is Lexington, Massachusetts, US.
+  Fact 0.1012: Newell, Miss Marjorie Anne has 6 in the lifeboat or body column.
+  Fact 0.1013: Newsom, Miss Helen Monypeny was 19 years old.
+  Fact 0.1014: Newsom, Miss Helen Monypeny is from New York City.
+  Fact 0.1015: Newsom, Miss Helen Monypeny boarded at Southampton.
+  Fact 0.1016: Newsom, Miss Helen Monypeny's destination is New York City.
+  Fact 0.1017: Newsom, Miss Helen Monypeny has 5 in the lifeboat or body column.
+  Fact 0.1018: Nicholson, Mr. Arthur Ernest was 64 years old.
+  Fact 0.1019: Nicholson, Mr. Arthur Ernest is from Shanklin, Isle of Wight, England, UK.
+  Fact 0.1020: Nicholson, Mr. Arthur Ernest boarded at Southampton.
+  Fact 0.1021: Nicholson, Mr. Arthur Ernest's destination is New York City.
+  Fact 0.1022: Nicholson, Mr. Arthur Ernest has 263 in the lifeboat or body column.
+  Fact 0.1023: Nourney, Mr. Alfred was 20 years old.
+  Fact 0.1024: Nourney, Mr. Alfred is from Cologne, German Empire.
+  Fact 0.1025: Nourney, Mr. Alfred boarded at Cherbourg.
+  Fact 0.1026: Nourney, Mr. Alfred's destination is New York City.
+  Fact 0.1027: Nourney, Mr. Alfred has 7 in the lifeboat or body column.
+  Fact 0.1028: Omont, Mr. Alfred Fernand was 29 years old.
+  Fact 0.1029: Omont, Mr. Alfred Fernand is from Le Havre, France.
+  Fact 0.1030: Omont, Mr. Alfred Fernand boarded at Cherbourg.
+  Fact 0.1031: Omont, Mr. Alfred Fernand's destination is New York City.
+  Fact 0.1032: Omont, Mr. Alfred Fernand has 7 in the lifeboat or body column.
+  Fact 0.1033: Ostby, Mr. Engelhart Cornelius was 64 years old.
+  Fact 0.1034: Ostby, Mr. Engelhart Cornelius is from Providence, Rhode Island, US.
+  Fact 0.1035: Ostby, Mr. Engelhart Cornelius boarded at Southampton.
+  Fact 0.1036: Ostby, Mr. Engelhart Cornelius's destination is Providence, Rhode Island, US.
+  Fact 0.1037: Ostby, Mr. Engelhart Cornelius has 234 in the lifeboat or body column.
+  Fact 0.1038: Ostby, Miss Helene Ragnhild was 22 years old.
+  Fact 0.1039: Ostby, Miss Helene Ragnhild is from Providence, Rhode Island, US.
+  Fact 0.1040: Ostby, Miss Helene Ragnhild boarded at Southampton.
+  Fact 0.1041: Ostby, Miss Helene Ragnhild's destination is Providence, Rhode Island, US.
+  Fact 0.1042: Ostby, Miss Helene Ragnhild has 5 in the lifeboat or body column.
+  Fact 0.1043: Ovies y Rodriguez, Mr. Servando José Florentino was 36 years old.
+  Fact 0.1044: Ovies y Rodriguez, Mr. Servando José Florentino is from Havana, Cuba.
+  Fact 0.1045: Ovies y Rodriguez, Mr. Servando José Florentino boarded at Cherbourg.
+  Fact 0.1046: Ovies y Rodriguez, Mr. Servando José Florentino's destination is Havana, Cuba.
+  Fact 0.1047: Ovies y Rodriguez, Mr. Servando José Florentino has 189 in the lifeboat or body column.
+  Fact 0.1048: Parr, Mr. William Henry Marsh was 29 years old.
+  Fact 0.1049: Parr, Mr. William Henry Marsh is from Belfast, Ireland, UK.
+  Fact 0.1050: Parr, Mr. William Henry Marsh boarded at Belfast.
+  Fact 0.1051: Parr, Mr. William Henry Marsh's destination is New York City.
+  Fact 0.1052: Partner, Mr. Austin was 40 years old.
+  Fact 0.1053: Partner, Mr. Austin is from Tolworth, London, England, UK.
+  Fact 0.1054: Partner, Mr. Austin boarded at Southampton.
+  Fact 0.1055: Partner, Mr. Austin's destination is Toronto, Ontario, Canada.
+  Fact 0.1056: Partner, Mr. Austin has 166 in the lifeboat or body column.
+  Fact 0.1057: Pears, Mr. Thomas Clinton was 29 years old.
+  Fact 0.1058: Pears, Mr. Thomas Clinton is from Isleworth, London, England, UK.
+  Fact 0.1059: Pears, Mr. Thomas Clinton boarded at Southampton.
+  Fact 0.1060: Pears, Mr. Thomas Clinton's destination is New York City.
+  Fact 0.1061: Pears, Mrs. Edith (née Wearne) was 22 years old.
+  Fact 0.1062: Pears, Mrs. Edith (née Wearne) is from Isleworth, London, England, UK.
+  Fact 0.1063: Pears, Mrs. Edith (née Wearne) boarded at Southampton.
+  Fact 0.1064: Pears, Mrs. Edith (née Wearne)'s destination is New York City.
+  Fact 0.1065: Pears, Mrs. Edith (née Wearne) has 8 in the lifeboat or body column.
+  Fact 0.1066: Peñasco y Castellana, Mr. Victor was 24 years old.
+  Fact 0.1067: Peñasco y Castellana, Mr. Victor is from Madrid, Spain.
+  Fact 0.1068: Peñasco y Castellana, Mr. Victor boarded at Cherbourg.
+  Fact 0.1069: Peñasco y Castellana, Mr. Victor's destination is New York City.
+  Fact 0.1070: Peñasco y Castellana, Mrs. Maria Josefa (née Perez de Soto y Vallejo) was 22 years old.
+  Fact 0.1071: Peñasco y Castellana, Mrs. Maria Josefa (née Perez de Soto y Vallejo) is from Madrid, Spain.
+  Fact 0.1072: Peñasco y Castellana, Mrs. Maria Josefa (née Perez de Soto y Vallejo) boarded at Cherbourg.
+  Fact 0.1073: Peñasco y Castellana, Mrs. Maria Josefa (née Perez de Soto y Vallejo)'s destination is New York City.
+  Fact 0.1074: Peñasco y Castellana, Mrs. Maria Josefa (née Perez de Soto y Vallejo) has 8 in the lifeboat or body column.
+  Fact 0.1075: Doña Fermina Oliva y Ocana was 39 years old.
+  Fact 0.1076: Doña Fermina Oliva y Ocana is listed as the maid.
+  Fact 0.1077: Doña Fermina Oliva y Ocana is from Madrid, Spain.
+  Fact 0.1078: Doña Fermina Oliva y Ocana boarded at Cherbourg.
+  Fact 0.1079: Doña Fermina Oliva y Ocana's destination is New York City.
+  Fact 0.1080: Doña Fermina Oliva y Ocana has 8 in the lifeboat or body column.
+  Fact 0.1081: Peuchen, Major Arthur Godfrey was 52 years old.
+  Fact 0.1082: Peuchen, Major Arthur Godfrey is from Toronto, Ontario, Canada.
+  Fact 0.1083: Peuchen, Major Arthur Godfrey boarded at Southampton.
+  Fact 0.1084: Peuchen, Major Arthur Godfrey's destination is Toronto, Ontario, Canada.
+  Fact 0.1085: Peuchen, Major Arthur Godfrey has 6 in the lifeboat or body column.
+  Fact 0.1086: Porter, Mr. Walter Chamberlain was 46 years old.
+  Fact 0.1087: Porter, Mr. Walter Chamberlain is from Worcester, Massachusetts, US.
+  Fact 0.1088: Porter, Mr. Walter Chamberlain boarded at Southampton.
+  Fact 0.1089: Porter, Mr. Walter Chamberlain's destination is Worcester, Massachusetts, US.
+  Fact 0.1090: Porter, Mr. Walter Chamberlain has 207 in the lifeboat or body column.
+  Fact 0.1091: Potter, Mrs. Lily Alexenia (née Wilson) was 56 years old.
+  Fact 0.1092: Potter, Mrs. Lily Alexenia (née Wilson) is from Philadelphia, Pennsylvania, US.
+  Fact 0.1093: Potter, Mrs. Lily Alexenia (née Wilson) boarded at Cherbourg.
+  Fact 0.1094: Potter, Mrs. Lily Alexenia (née Wilson)'s destination is Philadelphia, Pennsylvania, US.
+  Fact 0.1095: Potter, Mrs. Lily Alexenia (née Wilson) has 7 in the lifeboat or body column.
+  Fact 0.1096: Reuchlin, The Honourable Mr. Johan George was 38 years old.
+  Fact 0.1097: Reuchlin, The Honourable Mr. Johan George is from Rotterdam, The Netherlands.
+  Fact 0.1098: Reuchlin, The Honourable Mr. Johan George boarded at Southampton.
+  Fact 0.1099: Reuchlin, The Honourable Mr. Johan George's destination is New York City.
+  Fact 0.1100: Rheims, Mr. George Alexander Lucien was 36 years old.
+  Fact 0.1101: Rheims, Mr. George Alexander Lucien is from Paris, France.
+  Fact 0.1102: Rheims, Mr. George Alexander Lucien boarded at Southampton.
+  Fact 0.1103: Rheims, Mr. George Alexander Lucien's destination is New York City.
+  Fact 0.1104: Robert, Mrs. Elisabeth Walton (née McMillan) was 43 years old.
+  Fact 0.1105: Robert, Mrs. Elisabeth Walton (née McMillan) is from St. Louis, Missouri, US.
+  Fact 0.1106: Robert, Mrs. Elisabeth Walton (née McMillan) boarded at Southampton.
+  Fact 0.1107: Robert, Mrs. Elisabeth Walton (née McMillan)'s destination is St. Louis, Missouri, US.
+  Fact 0.1108: Miss Emilie Kreuchen was 29 years old.
+  Fact 0.1109: Miss Emilie Kreuchen is listed as the maid.
+  Fact 0.1110: Miss Emilie Kreuchen is from St. Louis, Missouri, US.
+  Fact 0.1111: Miss Emilie Kreuchen boarded at Southampton.
+  Fact 0.1112: Miss Emilie Kreuchen's destination is St. Louis, Missouri, US.
+  Fact 0.1113: Roebling, Mr. Washington Augustus II was 31 years old.
+  Fact 0.1114: Roebling, Mr. Washington Augustus II is from Trenton, New Jersey, US.
+  Fact 0.1115: Roebling, Mr. Washington Augustus II boarded at Southampton.
+  Fact 0.1116: Roebling, Mr. Washington Augustus II's destination is Trenton, New Jersey, US.
+  Fact 0.1117: Romaine, Mr. Charles Hallance (alias C. Rolmane) was 45 years old.
+  Fact 0.1118: Romaine, Mr. Charles Hallance (alias C. Rolmane) is from New York City.
+  Fact 0.1119: Romaine, Mr. Charles Hallance (alias C. Rolmane) boarded at Southampton.
+  Fact 0.1120: Romaine, Mr. Charles Hallance (alias C. Rolmane)'s destination is New York City.
+  Fact 0.1121: Romaine, Mr. Charles Hallance (alias C. Rolmane) has 9 in the lifeboat or body column.
+  Fact 0.1122: Rood, Mr. Hugh Roscoe was 38 years old.
+  Fact 0.1123: Rood, Mr. Hugh Roscoe is from Seattle, Washington, US.
+  Fact 0.1124: Rood, Mr. Hugh Roscoe boarded at Southampton.
+  Fact 0.1125: Rood, Mr. Hugh Roscoe's destination is Seattle, Washington, US.
+  Fact 0.1126: Rosenbaum, Miss Edith Louise was 34 years old.
+  Fact 0.1127: Rosenbaum, Miss Edith Louise is from Paris, France.
+  Fact 0.1128: Rosenbaum, Miss Edith Louise boarded at Cherbourg.
+  Fact 0.1129: Rosenbaum, Miss Edith Louise's destination is Cincinnati, Ohio, US.
+  Fact 0.1130: Rosenbaum, Miss Edith Louise has 11 in the lifeboat or body column.
+  Fact 0.1131: Rosenshine, Mr. George (alias George Thorne) was 46 years old.
+  Fact 0.1132: Rosenshine, Mr. George (alias George Thorne) is from New York City.
+  Fact 0.1133: Rosenshine, Mr. George (alias George Thorne) boarded at Cherbourg.
+  Fact 0.1134: Rosenshine, Mr. George (alias George Thorne)'s destination is New York City.
+  Fact 0.1135: Rosenshine, Mr. George (alias George Thorne) has 16 in the lifeboat or body column.
+  Fact 0.1136: Ross, Mr. John Hugo was 36 years old.
+  Fact 0.1137: Ross, Mr. John Hugo is from Winnipeg, Manitoba, Canada.
+  Fact 0.1138: Ross, Mr. John Hugo boarded at Southampton.
+  Fact 0.1139: Ross, Mr. John Hugo's destination is Winnipeg, Manitoba, Canada.
+  Fact 0.1140: Rothschild, Mr. Martin was 46 years old.
+  Fact 0.1141: Rothschild, Mr. Martin is from New York City.
+  Fact 0.1142: Rothschild, Mr. Martin boarded at Cherbourg.
+  Fact 0.1143: Rothschild, Mr. Martin's destination is New York City.
+  Fact 0.1144: Rothschild, Mrs. Elizabeth Jane Anne (née Barrett) was 54 years old.
+  Fact 0.1145: Rothschild, Mrs. Elizabeth Jane Anne (née Barrett) is from New York City.
+  Fact 0.1146: Rothschild, Mrs. Elizabeth Jane Anne (née Barrett) boarded at Cherbourg.
+  Fact 0.1147: Rothschild, Mrs. Elizabeth Jane Anne (née Barrett)'s destination is New York City.
+  Fact 0.1148: Rothschild, Mrs. Elizabeth Jane Anne (née Barrett) has 6 in the lifeboat or body column.
+  Fact 0.1149: Rowe, Mr. Alfred G. was 59 years old.
+  Fact 0.1150: Rowe, Mr. Alfred G. is from Liverpool, Merseyside, England, UK.
+  Fact 0.1151: Rowe, Mr. Alfred G. boarded at Southampton.
+  Fact 0.1152: Rowe, Mr. Alfred G.'s destination is New York City.
+  Fact 0.1153: Rowe, Mr. Alfred G. has 109 in the lifeboat or body column.
+  Fact 0.1154: Ryerson, Mr. Arthur Larned was 61 years old.
+  Fact 0.1155: Ryerson, Mr. Arthur Larned is from Cooperstown, New York, US.
+  Fact 0.1156: Ryerson, Mr. Arthur Larned boarded at Cherbourg.
+  Fact 0.1157: Ryerson, Mr. Arthur Larned's destination is Cooperstown, New York, US.
+  Fact 0.1158: Ryerson, Mrs. Emily Maria (née Borie) was 48 years old.
+  Fact 0.1159: Ryerson, Mrs. Emily Maria (née Borie) is from Cooperstown, New York, US.
+  Fact 0.1160: Ryerson, Mrs. Emily Maria (née Borie) boarded at Cherbourg.
+  Fact 0.1161: Ryerson, Mrs. Emily Maria (née Borie)'s destination is Cooperstown, New York, US.
+  Fact 0.1162: Miss Victorine Chaudanson was 36 years old.
+  Fact 0.1163: Miss Victorine Chaudanson is listed as the maid.
+  Fact 0.1164: Miss Victorine Chaudanson is from Cooperstown, New York, US.
+  Fact 0.1165: Miss Victorine Chaudanson boarded at Cherbourg.
+  Fact 0.1166: Miss Victorine Chaudanson's destination is Cooperstown, New York, US.
+  Fact 0.1167: Ryerson, Miss Susan Parker "Suzette" was 21 years old.
+  Fact 0.1168: Ryerson, Miss Susan Parker "Suzette" is from Cooperstown, New York, US.
+  Fact 0.1169: Ryerson, Miss Susan Parker "Suzette" boarded at Cherbourg.
+  Fact 0.1170: Ryerson, Miss Susan Parker "Suzette"'s destination is Cooperstown, New York, US.
+  Fact 0.1171: Ryerson, Miss Emily Borie was 18 years old.
+  Fact 0.1172: Ryerson, Miss Emily Borie is from Cooperstown, New York, US.
+  Fact 0.1173: Ryerson, Miss Emily Borie boarded at Cherbourg.
+  Fact 0.1174: Ryerson, Miss Emily Borie's destination is Cooperstown, New York, US.
+  Fact 0.1175: Ryerson, Master John Borie "Jack" was 13 years old.
+  Fact 0.1176: Ryerson, Master John Borie "Jack" is from Cooperstown, New York, US.
+  Fact 0.1177: Ryerson, Master John Borie "Jack" boarded at Cherbourg.
+  Fact 0.1178: Ryerson, Master John Borie "Jack"'s destination is Cooperstown, New York, US.
+  Fact 0.1179: Miss Grace Scott Bowen was 45 years old.
+  Fact 0.1180: Miss Grace Scott Bowen is listed as the governess.
+  Fact 0.1181: Miss Grace Scott Bowen is from Cooperstown, New York, US.
+  Fact 0.1182: Miss Grace Scott Bowen boarded at Cherbourg.
+  Fact 0.1183: Miss Grace Scott Bowen's destination is Cooperstown, New York, US.
+  Fact 0.1184: Saalfeld, Mr. Adolphe was 47 years old.
+  Fact 0.1185: Saalfeld, Mr. Adolphe is from Manchester, England, UK.
+  Fact 0.1186: Saalfeld, Mr. Adolphe boarded at Southampton.
+  Fact 0.1187: Saalfeld, Mr. Adolphe's destination is New York City.
+  Fact 0.1188: Salomon, Mr. Abraham Lincoln was 43 years old.
+  Fact 0.1189: Salomon, Mr. Abraham Lincoln is from New York City.
+  Fact 0.1190: Salomon, Mr. Abraham Lincoln boarded at Cherbourg.
+  Fact 0.1191: Salomon, Mr. Abraham Lincoln's destination is New York City.
+  Fact 0.1192: Schabert, Mrs. Emma (née Mock) was 35 years old.
+  Fact 0.1193: Schabert, Mrs. Emma (née Mock) is from Hamburg, German Empire.
+  Fact 0.1194: Schabert, Mrs. Emma (née Mock) boarded at Southampton.
+  Fact 0.1195: Schabert, Mrs. Emma (née Mock)'s destination is New York City.
+  Fact 0.1196: Schabert, Mrs. Emma (née Mock) has 11 in the lifeboat or body column.
+  Fact 0.1197: Seward, Mr. Frederic Kimber was 34 years old.
+  Fact 0.1198: Seward, Mr. Frederic Kimber is from New York City.
+  Fact 0.1199: Seward, Mr. Frederic Kimber boarded at Southampton.
+  Fact 0.1200: Seward, Mr. Frederic Kimber's destination is New York City.
+  Fact 0.1201: Seward, Mr. Frederic Kimber has 7 in the lifeboat or body column.
+  Fact 0.1202: Silverthorne, Mr. Spencer Victor was 35 years old.
+  Fact 0.1203: Silverthorne, Mr. Spencer Victor is from St. Louis, Missouri, US.
+  Fact 0.1204: Silverthorne, Mr. Spencer Victor boarded at Southampton.
+  Fact 0.1205: Silverthorne, Mr. Spencer Victor's destination is St. Louis, Missouri, US.
+  Fact 0.1206: Silverthorne, Mr. Spencer Victor has 5 in the lifeboat or body column.
+  Fact 0.1207: Silvey, Mr. William Baird was 50 years old.
+  Fact 0.1208: Silvey, Mr. William Baird is from Duluth, Minnesota, US.
+  Fact 0.1209: Silvey, Mr. William Baird boarded at Cherbourg.
+  Fact 0.1210: Silvey, Mr. William Baird's destination is Duluth, Minnesota, US.
+  Fact 0.1211: Silvey, Mrs. Alice (née Munger) was 39 years old.
+  Fact 0.1212: Silvey, Mrs. Alice (née Munger) is from Duluth, Minnesota, US.
+  Fact 0.1213: Silvey, Mrs. Alice (née Munger) boarded at Cherbourg.
+  Fact 0.1214: Silvey, Mrs. Alice (née Munger)'s destination is Duluth, Minnesota, US.
+  Fact 0.1215: Silvey, Mrs. Alice (née Munger) has 11 in the lifeboat or body column.
+  Fact 0.1216: Simonius-Blumer, Colonel Alfons was 56 years old.
+  Fact 0.1217: Simonius-Blumer, Colonel Alfons is from Basel, Switzerland.
+  Fact 0.1218: Simonius-Blumer, Colonel Alfons boarded at Southampton.
+  Fact 0.1219: Simonius-Blumer, Colonel Alfons's destination is New York City.
+  Fact 0.1220: Sloper, Mr. William Thompson was 28 years old.
+  Fact 0.1221: Sloper, Mr. William Thompson is from New Britain, Connecticut, US.
+  Fact 0.1222: Sloper, Mr. William Thompson boarded at Southampton.
+  Fact 0.1223: Sloper, Mr. William Thompson's destination is New Britain, Connecticut, US.
+  Fact 0.1224: Sloper, Mr. William Thompson has 7 in the lifeboat or body column.
+  Fact 0.1225: Smart, Mr. John Montgomery was 56 years old.
+  Fact 0.1226: Smart, Mr. John Montgomery is from Kildale, North Yorkshire, England, UK.
+  Fact 0.1227: Smart, Mr. John Montgomery boarded at Southampton.
+  Fact 0.1228: Smart, Mr. John Montgomery's destination is New York City.
+  Fact 0.1229: Smith, Mr. James Clinch was 56 years old.
+  Fact 0.1230: Smith, Mr. James Clinch is from Paris, France.
+  Fact 0.1231: Smith, Mr. James Clinch boarded at Cherbourg.
+  Fact 0.1232: Smith, Mr. James Clinch's destination is Long Island, New York, US.
+  Fact 0.1233: Smith, Mr. Lucien Philip was 24 years old.
+  Fact 0.1234: Smith, Mr. Lucien Philip is from Huntington, West Virginia, US.
+  Fact 0.1235: Smith, Mr. Lucien Philip boarded at Cherbourg.
+  Fact 0.1236: Smith, Mr. Lucien Philip's destination is Huntington, West Virginia, US.
+  Fact 0.1237: Smith, Mrs. Mary Eloise (née Hughes) was 18 years old.
+  Fact 0.1238: Smith, Mrs. Mary Eloise (née Hughes) is from Huntington, West Virginia, US.
+  Fact 0.1239: Smith, Mrs. Mary Eloise (née Hughes) boarded at Cherbourg.
+  Fact 0.1240: Smith, Mrs. Mary Eloise (née Hughes)'s destination is Huntington, West Virginia, US.
+  Fact 0.1241: Smith, Mrs. Mary Eloise (née Hughes) has 6 in the lifeboat or body column.
+  Fact 0.1242: Smith, Mr. Richard William was 57 years old.
+  Fact 0.1243: Smith, Mr. Richard William is from Streatham, London, England, UK.
+  Fact 0.1244: Smith, Mr. Richard William boarded at Southampton.
+  Fact 0.1245: Smith, Mr. Richard William's destination is New York City.
+  Fact 0.1246: Snyder, Mr. John Pillsbury was 24 years old.
+  Fact 0.1247: Snyder, Mr. John Pillsbury is from Minneapolis, Minnesota, US.
+  Fact 0.1248: Snyder, Mr. John Pillsbury boarded at Southampton.
+  Fact 0.1249: Snyder, Mr. John Pillsbury's destination is Minneapolis, Minnesota, US.
+  Fact 0.1250: Snyder, Mr. John Pillsbury has 7 in the lifeboat or body column.
+  Fact 0.1251: Snyder, Mrs. Nellie (née Stevenson) was 23 years old.
+  Fact 0.1252: Snyder, Mrs. Nellie (née Stevenson) is from Minneapolis, Minnesota, US.
+  Fact 0.1253: Snyder, Mrs. Nellie (née Stevenson) boarded at Southampton.
+  Fact 0.1254: Snyder, Mrs. Nellie (née Stevenson)'s destination is Minneapolis, Minnesota, US.
+  Fact 0.1255: Snyder, Mrs. Nellie (née Stevenson) has 7 in the lifeboat or body column.
+  Fact 0.1256: Spedden, Mr. Frederic Oakley was 45 years old.
+  Fact 0.1257: Spedden, Mr. Frederic Oakley is from Tuxedo Park, New York, US.
+  Fact 0.1258: Spedden, Mr. Frederic Oakley boarded at Cherbourg.
+  Fact 0.1259: Spedden, Mr. Frederic Oakley's destination is Tuxedo Park, New York, US.
+  Fact 0.1260: Spedden, Mrs. Margaretta Corning (née Stone) was 39 years old.
+  Fact 0.1261: Spedden, Mrs. Margaretta Corning (née Stone) is from Tuxedo Park, New York, US.
+  Fact 0.1262: Spedden, Mrs. Margaretta Corning (née Stone) boarded at Cherbourg.
+  Fact 0.1263: Spedden, Mrs. Margaretta Corning (née Stone)'s destination is Tuxedo Park, New York, US.
+  Fact 0.1264: Miss Helen Alice Wilson was 31 years old.
+  Fact 0.1265: Miss Helen Alice Wilson is listed as the maid.
+  Fact 0.1266: Miss Helen Alice Wilson is from Tuxedo Park, New York, US.
+  Fact 0.1267: Miss Helen Alice Wilson boarded at Cherbourg.
+  Fact 0.1268: Miss Helen Alice Wilson's destination is Tuxedo Park, New York, US.
+  Fact 0.1269: Spedden, Master Robert Douglas was 6 years old.
+  Fact 0.1270: Spedden, Master Robert Douglas is from Tuxedo Park, New York, US.
+  Fact 0.1271: Spedden, Master Robert Douglas boarded at Cherbourg.
+  Fact 0.1272: Spedden, Master Robert Douglas's destination is Tuxedo Park, New York, US.
+  Fact 0.1273: Miss Elizabeth Margaret Burns was 41 years old.
+  Fact 0.1274: Miss Elizabeth Margaret Burns is listed as the nurse.
+  Fact 0.1275: Miss Elizabeth Margaret Burns is from Tuxedo Park, New York, US.
+  Fact 0.1276: Miss Elizabeth Margaret Burns boarded at Cherbourg.
+  Fact 0.1277: Miss Elizabeth Margaret Burns's destination is Tuxedo Park, New York, US.
+  Fact 0.1278: Spencer, Mr. William Augustus was 57 years old.
+  Fact 0.1279: Spencer, Mr. William Augustus is from New York City.
+  Fact 0.1280: Spencer, Mr. William Augustus boarded at Cherbourg.
+  Fact 0.1281: Spencer, Mr. William Augustus's destination is New York City.
+  Fact 0.1282: Spencer, Mrs. Marie Eugénie (née Demougeot) was 45 years old.
+  Fact 0.1283: Spencer, Mrs. Marie Eugénie (née Demougeot) is from New York City.
+  Fact 0.1284: Spencer, Mrs. Marie Eugénie (née Demougeot) boarded at Cherbourg.
+  Fact 0.1285: Spencer, Mrs. Marie Eugénie (née Demougeot)'s destination is New York City.
+  Fact 0.1286: Spencer, Mrs. Marie Eugénie (née Demougeot) has 6 in the lifeboat or body column.
+  Fact 0.1287: Miss Eugenie Elise Lurette was 59 years old.
+  Fact 0.1288: Miss Eugenie Elise Lurette is listed as the maid.
+  Fact 0.1289: Miss Eugenie Elise Lurette is from New York City.
+  Fact 0.1290: Miss Eugenie Elise Lurette boarded at Cherbourg.
+  Fact 0.1291: Miss Eugenie Elise Lurette's destination is New York City.
+  Fact 0.1292: Miss Eugenie Elise Lurette has 6 in the lifeboat or body column.
+  Fact 0.1293: Stähelin-Maeglin, Dr. Max was 32 years old.
+  Fact 0.1294: Stähelin-Maeglin, Dr. Max is from Basel, Switzerland.
+  Fact 0.1295: Stähelin-Maeglin, Dr. Max boarded at Southampton.
+  Fact 0.1296: Stähelin-Maeglin, Dr. Max's destination is New York City.
+  Fact 0.1297: Stead, Mr. William Thomas was 62 years old.
+  Fact 0.1298: Stead, Mr. William Thomas is from London, England, UK.
+  Fact 0.1299: Stead, Mr. William Thomas boarded at Southampton.
+  Fact 0.1300: Stead, Mr. William Thomas's destination is New York City.
+  Fact 0.1301: Stengel, Mr. Charles Emil Henry was 54 years old.
+  Fact 0.1302: Stengel, Mr. Charles Emil Henry is from Newark, New Jersey, US.
+  Fact 0.1303: Stengel, Mr. Charles Emil Henry boarded at Cherbourg.
+  Fact 0.1304: Stengel, Mr. Charles Emil Henry's destination is Newark, New Jersey, US.
+  Fact 0.1305: Stengel, Mrs. Annie May (née Morris) was 44 years old.
+  Fact 0.1306: Stengel, Mrs. Annie May (née Morris) is from Newark, New Jersey, US.
+  Fact 0.1307: Stengel, Mrs. Annie May (née Morris) boarded at Cherbourg.
+  Fact 0.1308: Stengel, Mrs. Annie May (née Morris)'s destination is Newark, New Jersey, US.
+  Fact 0.1309: Stengel, Mrs. Annie May (née Morris) has 5 in the lifeboat or body column.
+  Fact 0.1310: Stephenson, Mrs. Martha (née Eustis) was 52 years old.
+  Fact 0.1311: Stephenson, Mrs. Martha (née Eustis) is from Paris, France.
+  Fact 0.1312: Stephenson, Mrs. Martha (née Eustis) boarded at Cherbourg.
+  Fact 0.1313: Stephenson, Mrs. Martha (née Eustis)'s destination is Haverford, Pennsylvania, US.
+  Fact 0.1314: Stewart, Mr. Albert A. was 54 years old.
+  Fact 0.1315: Stewart, Mr. Albert A. is from Cincinnati, Ohio, US.
+  Fact 0.1316: Stewart, Mr. Albert A. boarded at Cherbourg.
+  Fact 0.1317: Stewart, Mr. Albert A.'s destination is Gallipolis, Ohio, US.
+  Fact 0.1318: Stone, Mrs. Martha Evelyn (née Stevens) was 62 years old.
+  Fact 0.1319: Stone, Mrs. Martha Evelyn (née Stevens) is from New York City.
+  Fact 0.1320: Stone, Mrs. Martha Evelyn (née Stevens) boarded at Southampton.
+  Fact 0.1321: Stone, Mrs. Martha Evelyn (née Stevens)'s destination is New York City.
+  Fact 0.1322: Stone, Mrs. Martha Evelyn (née Stevens) has 6 in the lifeboat or body column.
+  Fact 0.1323: Miss Amelie "Amelia" Icard was 38 years old.
+  Fact 0.1324: Miss Amelie "Amelia" Icard is listed as the maid.
+  Fact 0.1325: Miss Amelie "Amelia" Icard is from New York City.
+  Fact 0.1326: Miss Amelie "Amelia" Icard boarded at Southampton.
+  Fact 0.1327: Miss Amelie "Amelia" Icard's destination is New York City.
+  Fact 0.1328: Miss Amelie "Amelia" Icard has 6 in the lifeboat or body column.
+  Fact 0.1329: Straus, Mr. Isidor was 67 years old.
+  Fact 0.1330: Straus, Mr. Isidor is from New York City.
+  Fact 0.1331: Straus, Mr. Isidor boarded at Southampton.
+  Fact 0.1332: Straus, Mr. Isidor's destination is New York City.
+  Fact 0.1333: Straus, Mr. Isidor has 96 in the lifeboat or body column.
+  Fact 0.1334: Mr. John Farthing was 57 years old.
+  Fact 0.1335: Mr. John Farthing is listed as the valet.
+  Fact 0.1336: Mr. John Farthing is from New York City.
+  Fact 0.1337: Mr. John Farthing boarded at Southampton.
+  Fact 0.1338: Mr. John Farthing's destination is New York City.
+  Fact 0.1339: Straus, Mrs. Rosalie Ida (née Blun) was 63 years old.
+  Fact 0.1340: Straus, Mrs. Rosalie Ida (née Blun) is from New York City.
+  Fact 0.1341: Straus, Mrs. Rosalie Ida (née Blun) boarded at Southampton.
+  Fact 0.1342: Straus, Mrs. Rosalie Ida (née Blun)'s destination is New York City.
+  Fact 0.1343: Miss Ellen Bird was 31 years old.
+  Fact 0.1344: Miss Ellen Bird is listed as the maid.
+  Fact 0.1345: Miss Ellen Bird is from New York City.
+  Fact 0.1346: Miss Ellen Bird boarded at Southampton.
+  Fact 0.1347: Miss Ellen Bird's destination is New York City.
+  Fact 0.1348: Miss Ellen Bird has 8 in the lifeboat or body column.
+  Fact 0.1349: Sutton, Mr. Frederick was 61 years old.
+  Fact 0.1350: Sutton, Mr. Frederick is from Haddonfield, New Jersey, US.
+  Fact 0.1351: Sutton, Mr. Frederick boarded at Southampton.
+  Fact 0.1352: Sutton, Mr. Frederick's destination is Haddonfield, New Jersey, US.
+  Fact 0.1353: Sutton, Mr. Frederick has 46 in the lifeboat or body column.
+  Fact 0.1354: Swift, Mrs. Margaret Welles (née Barron) was 46 years old.
+  Fact 0.1355: Swift, Mrs. Margaret Welles (née Barron) is from New York City.
+  Fact 0.1356: Swift, Mrs. Margaret Welles (née Barron) boarded at Southampton.
+  Fact 0.1357: Swift, Mrs. Margaret Welles (née Barron)'s destination is New York City.
+  Fact 0.1358: Swift, Mrs. Margaret Welles (née Barron) has 8 in the lifeboat or body column.
+  Fact 0.1359: Taussig, Mr. Emil was 52 years old.
+  Fact 0.1360: Taussig, Mr. Emil is from New York City.
+  Fact 0.1361: Taussig, Mr. Emil boarded at Southampton.
+  Fact 0.1362: Taussig, Mr. Emil's destination is New York City.
+  Fact 0.1363: Taussig, Mrs. Tillie (née Mandelbaum) was 39 years old.
+  Fact 0.1364: Taussig, Mrs. Tillie (née Mandelbaum) is from New York City.
+  Fact 0.1365: Taussig, Mrs. Tillie (née Mandelbaum) boarded at Southampton.
+  Fact 0.1366: Taussig, Mrs. Tillie (née Mandelbaum)'s destination is New York City.
+  Fact 0.1367: Taussig, Mrs. Tillie (née Mandelbaum) has 8 in the lifeboat or body column.
+  Fact 0.1368: Taussig, Miss Ruth was 18 years old.
+  Fact 0.1369: Taussig, Miss Ruth is from New York City.
+  Fact 0.1370: Taussig, Miss Ruth boarded at Southampton.
+  Fact 0.1371: Taussig, Miss Ruth's destination is New York City.
+  Fact 0.1372: Taussig, Miss Ruth has 8 in the lifeboat or body column.
+  Fact 0.1373: Taylor, Mr. Elmer Zebley was 48 years old.
+  Fact 0.1374: Taylor, Mr. Elmer Zebley is from London, England, UK.
+  Fact 0.1375: Taylor, Mr. Elmer Zebley boarded at Southampton.
+  Fact 0.1376: Taylor, Mr. Elmer Zebley's destination is East Orange, New Jersey, US.
+  Fact 0.1377: Taylor, Mr. Elmer Zebley has 5 in the lifeboat or body column.
+  Fact 0.1378: Taylor, Mrs. Juliet Cummins (née Wright) was 48 years old.
+  Fact 0.1379: Taylor, Mrs. Juliet Cummins (née Wright) is from London, England, UK.
+  Fact 0.1380: Taylor, Mrs. Juliet Cummins (née Wright) boarded at Southampton.
+  Fact 0.1381: Taylor, Mrs. Juliet Cummins (née Wright)'s destination is East Orange, New Jersey, US.
+  Fact 0.1382: Taylor, Mrs. Juliet Cummins (née Wright) has 5 in the lifeboat or body column.
+  Fact 0.1383: Thayer, Mr. John Borland II was 49 years old.
+  Fact 0.1384: Thayer, Mr. John Borland II is from Haverford, Pennsylvania, US.
+  Fact 0.1385: Thayer, Mr. John Borland II boarded at Cherbourg.
+  Fact 0.1386: Thayer, Mr. John Borland II's destination is Haverford, Pennsylvania, US.
+  Fact 0.1387: Thayer, Mrs. Marian Longsteth (née Morris) was 39 years old.
+  Fact 0.1388: Thayer, Mrs. Marian Longsteth (née Morris) is from Haverford, Pennsylvania, US.
+  Fact 0.1389: Thayer, Mrs. Marian Longsteth (née Morris) boarded at Cherbourg.
+  Fact 0.1390: Thayer, Mrs. Marian Longsteth (née Morris)'s destination is Haverford, Pennsylvania, US.
+  Fact 0.1391: Miss Margaret Fleming was 42 years old.
+  Fact 0.1392: Miss Margaret Fleming is listed as the maid.
+  Fact 0.1393: Miss Margaret Fleming is from Haverford, Pennsylvania, US.
+  Fact 0.1394: Miss Margaret Fleming boarded at Cherbourg.
+  Fact 0.1395: Miss Margaret Fleming's destination is Haverford, Pennsylvania, US.
+  Fact 0.1396: Thayer, Mr. John Borland "Jack" III was 17 years old.
+  Fact 0.1397: Thayer, Mr. John Borland "Jack" III is from Haverford, Pennsylvania, US.
+  Fact 0.1398: Thayer, Mr. John Borland "Jack" III boarded at Cherbourg.
+  Fact 0.1399: Thayer, Mr. John Borland "Jack" III's destination is Haverford, Pennsylvania, US.
+  Fact 0.1400: Thorne, Mrs. Gertrude Maybelle (née McMinn) was 37 years old.
+  Fact 0.1401: Thorne, Mrs. Gertrude Maybelle (née McMinn) is from New York City, New York, US.
+  Fact 0.1402: Thorne, Mrs. Gertrude Maybelle (née McMinn) boarded at Cherbourg.
+  Fact 0.1403: Thorne, Mrs. Gertrude Maybelle (née McMinn)'s destination is New York City, New York, US.
+  Fact 0.1404: Tucker, Mr. Gilbert Milligan Jr. was 31 years old.
+  Fact 0.1405: Tucker, Mr. Gilbert Milligan Jr. is from Albany, New York, US.
+  Fact 0.1406: Tucker, Mr. Gilbert Milligan Jr. boarded at Cherbourg.
+  Fact 0.1407: Tucker, Mr. Gilbert Milligan Jr.'s destination is Albany, New York, US.
+  Fact 0.1408: Tucker, Mr. Gilbert Milligan Jr. has 7 in the lifeboat or body column.
+  Fact 0.1409: Uruchurtu, Don Manuel E. was 40 years old.
+  Fact 0.1410: Uruchurtu, Don Manuel E. is from Mexico City, Mexico.
+  Fact 0.1411: Uruchurtu, Don Manuel E. boarded at Cherbourg.
+  Fact 0.1412: Uruchurtu, Don Manuel E.'s destination is Mexico City, Mexico.
+  Fact 0.1413: Van der Hoef, Mr. Wyckoff was 61 years old.
+  Fact 0.1414: Van der Hoef, Mr. Wyckoff is from Brooklyn, New York, US.
+  Fact 0.1415: Van der Hoef, Mr. Wyckoff boarded at Belfast.
+  Fact 0.1416: Van der Hoef, Mr. Wyckoff's destination is Brooklyn, New York, US.
+  Fact 0.1417: Van der Hoef, Mr. Wyckoff has 245 in the lifeboat or body column.
+  Fact 0.1418: Walker, Mr. William Anderson was 48 years old.
+  Fact 0.1419: Walker, Mr. William Anderson is from East Orange, New Jersey, US.
+  Fact 0.1420: Walker, Mr. William Anderson boarded at Southampton.
+  Fact 0.1421: Walker, Mr. William Anderson's destination is East Orange, New Jersey, US.
+  Fact 0.1422: Warren, Mr. Frank Manley was 63 years old.
+  Fact 0.1423: Warren, Mr. Frank Manley is from Portland, Oregon, US.
+  Fact 0.1424: Warren, Mr. Frank Manley boarded at Cherbourg.
+  Fact 0.1425: Warren, Mr. Frank Manley's destination is Portland, Oregon, US.
+  Fact 0.1426: Warren, Mrs. Anna Sophia (née Atkinson) was 60 years old.
+  Fact 0.1427: Warren, Mrs. Anna Sophia (née Atkinson) is from Portland, Oregon, US.
+  Fact 0.1428: Warren, Mrs. Anna Sophia (née Atkinson) boarded at Cherbourg.
+  Fact 0.1429: Warren, Mrs. Anna Sophia (née Atkinson)'s destination is Portland, Oregon, US.
+  Fact 0.1430: Warren, Mrs. Anna Sophia (née Atkinson) has 5 in the lifeboat or body column.
+  Fact 0.1431: Weir, Colonel John was 59 years old.
+  Fact 0.1432: Weir, Colonel John is from New York City.
+  Fact 0.1433: Weir, Colonel John boarded at Southampton.
+  Fact 0.1434: Weir, Colonel John's destination is New York City.
+  Fact 0.1435: White, Mr. Percival Wayland was 54 years old.
+  Fact 0.1436: White, Mr. Percival Wayland is from Brunswick, Maine, US.
+  Fact 0.1437: White, Mr. Percival Wayland boarded at Southampton.
+  Fact 0.1438: White, Mr. Percival Wayland's destination is Brunswick, Maine, US.
+  Fact 0.1439: White, Mr. Richard Frasar was 21 years old.
+  Fact 0.1440: White, Mr. Richard Frasar is from Brunswick, Maine, US.
+  Fact 0.1441: White, Mr. Richard Frasar boarded at Southampton.
+  Fact 0.1442: White, Mr. Richard Frasar's destination is Brunswick, Maine, US.
+  Fact 0.1443: White, Mr. Richard Frasar has 169 in the lifeboat or body column.
+  Fact 0.1444: White, Mrs. Ella (née Holmes) was 55 years old.
+  Fact 0.1445: White, Mrs. Ella (née Holmes) is from New York City.
+  Fact 0.1446: White, Mrs. Ella (née Holmes) boarded at Cherbourg.
+  Fact 0.1447: White, Mrs. Ella (née Holmes)'s destination is New York City.
+  Fact 0.1448: White, Mrs. Ella (née Holmes) has 8 in the lifeboat or body column.
+  Fact 0.1449: Miss Amelia Mayo "Nellie" Bessette was 39 years old.
+  Fact 0.1450: Miss Amelia Mayo "Nellie" Bessette is listed as the maid.
+  Fact 0.1451: Miss Amelia Mayo "Nellie" Bessette is from New York City.
+  Fact 0.1452: Miss Amelia Mayo "Nellie" Bessette boarded at Cherbourg.
+  Fact 0.1453: Miss Amelia Mayo "Nellie" Bessette's destination is New York City.
+  Fact 0.1454: Miss Amelia Mayo "Nellie" Bessette has 8 in the lifeboat or body column.
+  Fact 0.1455: Mr. Sante Righini was 22 years old.
+  Fact 0.1456: Mr. Sante Righini is listed as the manservant.
+  Fact 0.1457: Mr. Sante Righini is from New York City.
+  Fact 0.1458: Mr. Sante Righini boarded at Cherbourg.
+  Fact 0.1459: Mr. Sante Righini's destination is New York City.
+  Fact 0.1460: Mr. Sante Righini has 232 in the lifeboat or body column.
+  Fact 0.1461: Wick, Colonel George Dennick was 58 years old.
+  Fact 0.1462: Wick, Colonel George Dennick is from Youngstown, Ohio, US.
+  Fact 0.1463: Wick, Colonel George Dennick boarded at Southampton.
+  Fact 0.1464: Wick, Colonel George Dennick's destination is Youngstown, Ohio, US.
+  Fact 0.1465: Wick, Colonel George Dennick has 8 in the lifeboat or body column.
+  Fact 0.1466: Wick, Mrs. Mary (née Hitchcock) was 45 years old.
+  Fact 0.1467: Wick, Mrs. Mary (née Hitchcock) is from Youngstown, Ohio, US.
+  Fact 0.1468: Wick, Mrs. Mary (née Hitchcock) boarded at Southampton.
+  Fact 0.1469: Wick, Mrs. Mary (née Hitchcock)'s destination is Youngstown, Ohio, US.
+  Fact 0.1470: Wick, Mrs. Mary (née Hitchcock) has 8 in the lifeboat or body column.
+  Fact 0.1471: Wick, Miss Mary Natalie was 31 years old.
+  Fact 0.1472: Wick, Miss Mary Natalie is from Youngstown, Ohio, US.
+  Fact 0.1473: Wick, Miss Mary Natalie boarded at Southampton.
+  Fact 0.1474: Wick, Miss Mary Natalie's destination is Youngstown, Ohio, US.
+  Fact 0.1475: Wick, Miss Mary Natalie has 8 in the lifeboat or body column.
+  Fact 0.1476: Widener, Mr. George Dunton was 50 years old.
+  Fact 0.1477: Widener, Mr. George Dunton is from Philadelphia, Pennsylvania, US.
+  Fact 0.1478: Widener, Mr. George Dunton boarded at Southampton.
+  Fact 0.1479: Widener, Mr. George Dunton's destination is Philadelphia, Pennsylvania, US.
+  Fact 0.1480: Mr. Edwin Herbert Keeping was 33 years old.
+  Fact 0.1481: Mr. Edwin Herbert Keeping is listed as the valet.
+  Fact 0.1482: Mr. Edwin Herbert Keeping is from Philadelphia, Pennsylvania, US.
+  Fact 0.1483: Mr. Edwin Herbert Keeping boarded at Southampton.
+  Fact 0.1484: Mr. Edwin Herbert Keeping's destination is Philadelphia, Pennsylvania, US.
+  Fact 0.1485: Mr. Edwin Herbert Keeping has 45 in the lifeboat or body column.
+  Fact 0.1486: Widener, Mrs. Eleanor (née Elkins) was 50 years old.
+  Fact 0.1487: Widener, Mrs. Eleanor (née Elkins) is from Philadelphia, Pennsylvania, US.
+  Fact 0.1488: Widener, Mrs. Eleanor (née Elkins) boarded at Southampton.
+  Fact 0.1489: Widener, Mrs. Eleanor (née Elkins)'s destination is Philadelphia, Pennsylvania, US.
+  Fact 0.1490: Miss Amalie Henriette "Emily" Gieger was 35 years old.
+  Fact 0.1491: Miss Amalie Henriette "Emily" Gieger is listed as the maid.
+  Fact 0.1492: Miss Amalie Henriette "Emily" Gieger is from Philadelphia, Pennsylvania, US.
+  Fact 0.1493: Miss Amalie Henriette "Emily" Gieger boarded at Southampton.
+  Fact 0.1494: Miss Amalie Henriette "Emily" Gieger's destination is Philadelphia, Pennsylvania, US.
+  Fact 0.1495: Widener, Mr. Harry Elkins was 27 years old.
+  Fact 0.1496: Widener, Mr. Harry Elkins is from Philadelphia, Pennsylvania, US.
+  Fact 0.1497: Widener, Mr. Harry Elkins boarded at Southampton.
+  Fact 0.1498: Widener, Mr. Harry Elkins's destination is Philadelphia, Pennsylvania, US.
+  Fact 0.1499: Willard, Miss Constance was 21 years old.
+  Fact 0.1500: Willard, Miss Constance is from Duluth, Minnesota, US.
+  Fact 0.1501: Willard, Miss Constance boarded at Southampton.
+  Fact 0.1502: Willard, Miss Constance's destination is Duluth, Minnesota, US.
+  Fact 0.1503: Willard, Miss Constance has 8 in the lifeboat or body column.
+  Fact 0.1504: Williams, Mr. Charles Duane was 51 years old.
+  Fact 0.1505: Williams, Mr. Charles Duane is from Geneva, Switzerland.
+  Fact 0.1506: Williams, Mr. Charles Duane boarded at Cherbourg.
+  Fact 0.1507: Williams, Mr. Charles Duane's destination is Radnor, Pennsylvania, US.
+  Fact 0.1508: Williams, Mr. Richard Norris II was 21 years old.
+  Fact 0.1509: Williams, Mr. Richard Norris II is from Geneva, Switzerland.
+  Fact 0.1510: Williams, Mr. Richard Norris II boarded at Cherbourg.
+  Fact 0.1511: Williams, Mr. Richard Norris II's destination is Radnor, Pennsylvania, US.
+  Fact 0.1512: Woolner, Mr. Hugh was 45 years old.
+  Fact 0.1513: Woolner, Mr. Hugh is from London, England, UK.
+  Fact 0.1514: Woolner, Mr. Hugh boarded at Southampton.
+  Fact 0.1515: Woolner, Mr. Hugh's destination is New York City.
+  Fact 0.1516: Wright, Mr. George was 62 years old.
+  Fact 0.1517: Wright, Mr. George is from Halifax, Nova Scotia, Canada.
+  Fact 0.1518: Wright, Mr. George boarded at Southampton.
+  Fact 0.1519: Wright, Mr. George's destination is Halifax, Nova Scotia, Canada.
+  Fact 0.1520: Young, Miss Marie Grice was 36 years old.
+  Fact 0.1521: Young, Miss Marie Grice is from New York City.
+  Fact 0.1522: Young, Miss Marie Grice boarded at Cherbourg.
+  Fact 0.1523: Young, Miss Marie Grice's destination is New York City.
+  Fact 0.1524: Young, Miss Marie Grice has 8 in the lifeboat or body column.
+
+Retrieved items:
+<item 1>
+Passengers of the RMS Titanic
+( Halifax ) Related Ships RMS Olympic RMS Carpathia HMHS Britannic CS Mackay - Bennett SS Californian Replica Titanic Titanic II Others White Star Line Titanic
+Historical Society Encyclopedia Titanica Halomonas titanicae Women and children first SOS Robert Ballard Last remaining survivors of the RMS Titanic disaster
+2000 -- 2009 Millvina Dean ( 1912 -- 2009 ) Barbara West ( 1911 -- 2007 ) Lillian Asplund ( 1906 -- 2006 ) Winnifred Quick ( 1904 -- 2002 ) Michel Navratil (
+1908 -- 2001 ) 1995 -- 1999 Eleanor Johnson ( 1910 -- 1998 ) Louise Laroche ( 1910 -- 1998 ) Edith Brown ( 1896 -- 1997 ) Eva Hart ( 1905 -- 1996 ) Beatrice
+Sandström ( 1910 -- 1995 ) 1990 -- 1994 Robertha `` Bertha '' Watt ( 1899 -- 1993 ) Ellen Shine ( 1891 -- 1993 ) Marjorie Newell ( 1889 -- 1992 ) Louise
+</item 1>
+
+<item 2>
+Passengers of the RMS Titanic
+ISBN 978 - 0 - 14 - 004757 - 8 . Jump up ^ `` Passenger List and Survivors of Steamship Titanic '' . United States Senate Inquiry. 30 July 1912 . Retrieved 15
+July 2011 . Jump up ^ Hall , Wayne ( 1986 ) . `` Social Class and Survival on the SS Titanic '' ( PDF ) . Social Science & Medicine . 22 ( 6 ) : 687 -- 690 .
+Jump up ^ Barratt , Nick ( 2009 ) . Lost Voices From the Titanic : The Definitive Oral History . London : Random House . p. 93 . ISBN 978 - 1 - 84809 - 151 - 1
+. Jump up ^ Howells , Richard ( 1999 ) . The Myth of the Titanic . United Kingdom : MacMillan Press . p. 18 . ISBN 978 - 0 - 333 - 72597 - 9 .
+</item 2>
+
+<item 3>
+Titanic passengers included British aristocrats such as the Countess of Rothes and the Duff-Gordons, ship officials J. Bruce Ismay and Thomas Andrews, and
+prominent Americans including John Jacob Astor IV, Benjamin Guggenheim, Isidor and Ida Straus, Margaret Brown, and Dorothy Gibson. Colonel Archibald Gracie
+survived and wrote an early account, but died months later from sinking-related illness. Survivors lived for decades: Millvina Dean, the youngest passenger
+</item 3>
+
+<item 4>
+Passengers of the RMS Titanic
+Although several people managed to reach this lifeboat , three died during the night . When Fifth Officer Harold Lowe and six crewmen returned to the wreck site
+after the sinking with an empty lifeboat to pick up survivors , they rescued surviving passengers from Collapsible A , but left the three dead bodies in the
+boat : Thomson Beattie , a first - class passenger , and two crew members , a fireman and a seaman . After their retrieval from Collapsible A by Oceanic , the
+bodies were buried at sea . Passenger list ( edit ) Breakdown of casualties according to the British Board of Trade report ( click for detail ) The following is
+a full list of known passengers who sailed on the maiden voyage of the RMS Titanic . Included in this list are the nine - member Guarantee Group and the eight
+members of the ship 's band , listed as both passengers and crew . They are also included in the list of crew members on board RMS Titanic . Passengers are
+colour - coded , indicating whether they were saved or perished . The passenger did not survive The passenger survived Survivors are listed with the lifeboat
+from which they were known to be rescued .
+</item 4>
+
+<item 5>
+Passengers of the RMS Titanic
+1 British inquiry US inquiry Wreck of Titanic Maritime Memorial Act Deck officers Edward J. Smith ( Captain ) Henry Tingle Wilde ( Chief Officer ) William
+McMaster Murdoch ( First Officer ) Charles H. Lightoller ( Second Officer ) Herbert Pitman ( Third Officer ) Joseph G. Boxhall ( Fourth Officer ) Harold G. Lowe
+( Fifth Officer ) James Paul Moody ( Sixth Officer ) Joseph Bell ( Machine Room Manager ) Crew members Frederick Barrett Harold Bride William Denton Cox Sid
+Daniels Alfred Frank Evans Frederick Fleet Luigi Gatti Robert Hichens Violet Jessop Charles Joughin Reginald Lee Evelyn Marsden William Mintram Jack Phillips
+George Symons Passengers Fatalities Allison family Thomas Andrews John Jacob Astor IV David John Bowen Archibald Butt Thomas Byles Walter Donald Douglas Edith
+Corse Evans Annie Funk Jacques Futrelle Sidney Leslie Goodwin Benjamin Guggenheim John Harper Wallace Hartley Charles Melville Hays Edward Austin Kent Joseph
+Philippe Lemercier Laroche Francis Davis Millet Harry Markland Molson Michel Navratil Eino Viljami Panula W.T. Stead Ida Straus Isidor Straus John Borland
+Thayer Jr . Frank M. Warren , Sr .
+</item 5>
+
+<item 6>
+Passengers of the RMS Titanic
+Victims whose remains were recovered after the sinking are listed with a superscript next to the body number , indicating the recovery vessel : MB -- CS Mackay
+- Bennett ( bodies 1 -- 306 ) M -- CS Minia ( bodies 307 -- 323 ) MM -- CGS Montmagny ( bodies 326 -- 329 ) A -- SS Algerine ( body 330 ) O -- RMS Oceanic (
+bodies 331 -- 333 ) I -- SS Ilford ( body 334 ) OT -- SS Ottawa ( body 335 ) Numbers 324 and 325 were unused , and the six bodies buried at sea by the Carpathia
+also went unnumbered . First class ( edit ) Name Age Hometown Boarded Destination Lifeboat Body Allen , Miss Elizabeth Walton 29 St. Louis , Missouri , US
+Southampton St. Louis , Missouri , US Allison , Mr. Hudson Joshua Creighton 30 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada 135 and
+chauffeur , Mr.
+</item 6>
+
+<item 7>
+Passengers of the RMS Titanic
+Of the 711 passengers and crew rescued by the Carpathia , six , including first class passenger William F. Hoyt , either died in a lifeboat during the night or
+on board the Carpathia the next morning , and were buried at sea . In the days following the sinking , several ships sailed to the disaster area to recover
+victims ' bodies . The White Star Line chartered the cable ship Mackay - Bennett from Halifax , Nova Scotia to retrieve bodies . Three other ships followed in
+the search : the cable ship Minia , the lighthouse supply ship Montmagny and the sealing vessel Algerine . Each ship left with embalming supplies , undertakers
+, and clergy . Upon recovery , each body retrieved by the Mackay - Bennett was numbered and given as detailed a description as possible to help aid in
+identification . The physical appearance of each body -- height , weight , age , hair and eye colour , visible birthmarks , scars or tattoos , was catalogued
+and any personal effects on the bodies were gathered and placed in small canvas bags corresponding to their number .
+</item 7>
+
+<item 8>
+Passengers of the RMS Titanic
+Frank M. Warren , Sr . George Dennick Wick George Dunton Widener Harry Elkins Widener Duane Williams George Henry Wright Roderick Chisholm Survivors ( last
+living ) Rhoda Abbott Trevor Allison Lillian Asplund Madeleine Astor Ruth Becker Lawrence Beesley Karl Behr Dickinson Bishop Mauritz Håkan Björnström -
+Steffansson Elsie Bowerman Francis Browne Margaret `` Molly '' Brown Daniel Buckley Alden Caldwell Helen Churchill Candee Charlotte Drake Cardeza Lucile Carter
+Gladys Cherry Millvina Dean Margaret Devaney Sir Cosmo Duff - Gordon Lucy , Lady Duff - Gordon Ethel Flora Fortune Dorothy Gibson Archibald Gracie IV Frank John
+William Goldsmith Edith Haisman Henry S. Harper Eva Hart Margaret Bechstein Hays Masabumi Hosono J. Bruce Ismay Eleanor Ileen Johnson Louise Laroche Louise Kink
+Margaret Mannion Michel Marcel Navratil Alfred Nourney Arthur Godfrey Peuchen Winnifred Quick Marjorie Newell Robb Edith Rosenbaum Noël Leslie ,
+</item 8>
+
+<item 9>
+After the Titanic sank, three people aboard Collapsible A died overnight. Fifth Officer Harold Lowe and six crewmen returned and rescued survivors, leaving the
+bodies of first-class passenger Thomson Beattie, a fireman, and a seaman; Oceanic later recovered and buried them at sea. The passage outlines passenger and
+crew lists, survival status and rescue lifeboats, names notable victims and survivors, and lists Titanic memorials in Australia, Britain, and the United States.
+</item 9>
+
+<item 10>
+A bibliography on RMS Titanic passengers and survivors, covering passenger lists, demographics, social class and survival, survivor accounts, and notable
+passengers—including six Chinese survivors, religious figures, and the ship’s band. Sources include U.S. and British inquiries, scholarly studies, books,
+archives, museums, and Titanic research sites. References also document lifeboat reports, recovered bodies and their disposition, victims’ burial sites in
+Halifax, and accommodations for servants accompanying first-class employers.
+</item 10>
+=== END ITEM id=5f1b53b6843af43d ===
+
+=== ITEM id=83b29bc2419b0597 ===
+Gold sentences and facts:
+Sentence 0: `` The Joker '' Cover of the 1973 single Single by Steve Miller Band from the album The Joker B - side `` ' see track listings ' '' Released October 1973 Format 7 '' Single , 12 '' single , Cassette single ( Original Releases ) , CD single and Digital download ( Post Releases ) . Genre Rock , blues rock , southern rock Length 4 : 26 ( Album version ) ; 3 : 35 ( 7 '' version / Radio edit ) and 6 : 20 ( Extended version ) Label Capitol Records ; EMI - Odeon ; London Records , Parlophone Records , EMI Bovema , Odeon Records . Songwriter ( s ) Eddie Curtis , Ahmet Ertegün , Steve Miller Producer ( s ) Steve Miller Steve Miller Band singles chronology `` Fandango '' ( 1972 ) `` The Joker '' ( 1973 ) `` Your Cash Ai n't Nothin ' But Trash '' ( 1974 ) `` Fandango '' ( 1972 ) `` The Joker '' ( 1973 ) `` Your Cash Ai n't Nothin ' But Trash '' ( 1974 ) `` Take the Money and Run '' / `` The Joker '' ( 1983 , double A-side , live ) Cover of the 1983 live single Steve Miller Band singles chronology `` Living in the U.S.A. '' ( live ) ( 1983 ) String Module Error : Match not found1983 `` Take the Money and Run '' ( live ) / `` The Joker '' ( live ) ( 1983 ) String Module Error : Match not found1983 `` Shangri - La '' ( 1984 ) Shangri - La1984 `` The Joker '' ( 1990 , reissue ) Cover of the 1990 reissue Steve Miller Band singles chronology `` Ya Ya '' ( 1988 ) Ya Ya1988 `` The Joker '' ( 1990 ) The Joker1990 `` Wide River '' ( 1993 ) Wide River1993
+  Fact 0.0: The Joker's 1973 single was released in October 1973 by Steve Miller Band.
+  Fact 0.1: The 1973 single 'The Joker' is from the album The Joker.
+  Fact 0.2: The Joker single was released in 7-inch single, 12-inch single, and cassette single formats (original releases).
+  Fact 0.3: The Joker single was released as a CD single and digital download (later releases).
+  Fact 0.4: The Joker single's genres are rock, blues rock, and southern rock.
+  Fact 0.5: The Joker single's album version is 4:26 long.
+  Fact 0.6: The Joker single's 7-inch version / radio edit is 3:35 long.
+  Fact 0.7: The Joker single's extended version is 6:20 long.
+  Fact 0.8: The Joker single's label is Capitol Records.
+  Fact 0.9: The Joker single was also issued on EMI-Odeon, London Records, Parlophone Records, EMI Bovema, and Odeon Records labels.
+  Fact 0.10: The Joker single's songwriters are Eddie Curtis, Ahmet Ertegün, and Steve Miller.
+  Fact 0.11: The Joker single's producer is Steve Miller.
+  Fact 0.12: The Joker single is a cover of a 1973 single.
+  Fact 0.13: Steve Miller Band singles chronology includes 'Fandango' (1972), 'The Joker' (1973), and 'Your Cash Ain't Nothin' But Trash' (1974).
+  Fact 0.14: 'Take the Money and Run' / 'The Joker' (1983) was a double A-side live single by Steve Miller Band.
+  Fact 0.15: 'The Joker' (1983) live single is a cover of the 1983 live single.
+  Fact 0.16: Steve Miller Band singles chronology includes 'Living in the U.S.A.' (live) (1983).
+  Fact 0.17: Steve Miller Band singles chronology includes 'Take the Money and Run' (live) / 'The Joker' (live) (1983).
+  Fact 0.18: Steve Miller Band singles chronology includes 'Shangri-La' (1984).
+  Fact 0.19: Steve Miller Band singles chronology includes 'The Joker' (1990, reissue), a cover of the 1990 reissue.
+  Fact 0.20: Steve Miller Band singles chronology includes 'Ya Ya' (1988).
+  Fact 0.21: Steve Miller Band singles chronology includes 'The Joker' (1990).
+  Fact 0.22: Steve Miller Band singles chronology includes 'Wide River' (1993).
+Sentence 1: `` The Joker '' is a song by the Steve Miller Band from their 1973 album The Joker . It is one of two Steve Miller Band songs that feature the nonce word `` pompatus '' . The song topped the US Billboard Hot 100 in early 1974 .
+  Fact 1.0: 'The Joker' is a song by the Steve Miller Band.
+  Fact 1.1: 'The Joker' is from the Steve Miller Band's 1973 album The Joker.
+  Fact 1.2: 'The Joker' is one of two Steve Miller Band songs that feature the nonce word 'pompatus'.
+  Fact 1.3: 'The Joker' topped the US Billboard Hot 100 in early 1974.
+
+Retrieved items:
+<item 1>
+The Joker (Steve Miller Band song)
+Songwriter ( s ) Eddie Curtis , Ahmet Ertegün , Steve Miller Producer ( s ) Steve Miller Steve Miller Band singles chronology `` Fandango '' ( 1972 ) `` The
+Joker '' ( 1973 ) `` Your Cash Ai n't Nothin ' But Trash '' ( 1974 ) `` Fandango '' ( 1972 ) `` The Joker '' ( 1973 ) `` Your Cash Ai n't Nothin ' But Trash ''
+( 1974 ) `` Take the Money and Run '' / `` The Joker '' ( 1983 , double A-side , live ) Cover of the 1983 live single Steve Miller Band singles chronology ``
+Living in the U.S.A. ''
+</item 1>
+
+<item 2>
+The Joker (Steve Miller Band song)
+Retrieved October 6 , 2009 . Jump up ^ `` The Irish Charts - search result '' . Retrieved May 16 , 2016 . Jump up ^ `` norwegiancharts.com - Steve Miller Band -
+The Joker '' . Retrieved October 6 , 2009 . Jump up ^ `` swedishcharts.com - Steve Miller Band - The Joker '' . Retrieved October 6 , 2009 . Jump up ^ `` Steve
+Miller Band - The Joker - hitparade.ch '' ( in German ) . Retrieved October 6 , 2009 . Jump up ^ `` End of Year Charts 1991 '' . Recorded Music NZ . Retrieved
+December 3 , 2017 . Jump up ^ `` Chart Stats - Fatboy Slim - The Joker '' . Retrieved October 13 , 2009 . Jump up ^ `` Smashing Pumpkins dot com '' . Retrieved
+September 28 , 2009 . Jump up ^ `` The Howard Stern Radio Show '' . New York . 17 Apr 2013 . Sirius XM Satellite Radio . Howard 100 .
+</item 2>
+
+<item 3>
+The Joker (Steve Miller Band song)
+The song topped the US Billboard Hot 100 in early 1974 . More than 16 years later , in September 1990 , it reached number one in the UK Singles Chart for two
+weeks after being used in `` Great Deal '' , a Hugh Johnson - directed television advertisement for Levi 's , thus holding the record for the longest gap
+between transatlantic chart - toppers . This reissue of `` The Joker '' also topped the Irish Singles Chart , the New Zealand RIANZ Singles Chart , the Dutch
+Nationale Top 100 and the Dutch Top 40 . The first line of the lyrics is a reference to the song `` Space Cowboy '' from Miller 's Brave New World album .
+Following lines refer to two other songs : `` Gangster of Love '' from Sailor and `` Enter Maurice '' from Recall the Beginning ... A Journey from Eden .
+</item 3>
+
+<item 4>
+“The Joker” is a Steve Miller Band rock song from the 1973 album of the same name, written by Miller, Eddie Curtis, and Ahmet Ertegun. It topped the US
+Billboard Hot 100 in 1974 and, after appearing in a Levi’s TV ad, reached number one in the UK and several other countries in 1990—over 16 years later. Its
+lyrics reference Miller’s earlier songs and The Clovers’ “Lovey Dovey.” Miller coined “
+</item 4>
+
+<item 5>
+The Joker (Steve Miller Band song)
+1990 ( two weeks ) Succeeded by `` Show Me Heaven '' by Maria McKee Preceded by `` Trippin ' '' by Push Push New Zealand RIANZ number - one single May 10 , 1991
+( one week ) Succeeded by `` Trippin ' '' by Push Push Cover versions ( edit ) `` The Joker '' Single by k.d. lang from the album Drag Released Length 4 : 44
+Label Warner Bros . Songwriter ( s ) Eddie Curtis , Ahmet Ertegün , Steve Miller Producer ( s ) k.d. lang , Craig Street k.d.
+</item 5>
+
+<item 6>
+The Joker (Steve Miller Band song)
+Formats and track listings ( edit ) 7 '' single ( 1973 ) `` The Joker '' -- 3 : 36 `` Something to Believe In '' -- 4 : 40 7 '' single ( 1983 - live version )
+`` The Joker '' ( live ) -- 2 : 55 `` Take the Money and Run '' ( live ) -- 3 : 49 7 '' single ( 1990 ) `` The Joker '' ( single version ) -- 3 : 34 `` Do n't
+Let Nobody Turn You Around '' -- 2 : 27 12 '' maxi ( 1990 ) `` The Joker '' ( LP version ) -- 4 : 22 `` Do n't Let Nobody Turn You Around '' -- 2 : 27 `` Shu Ba
+Da Du Ma Ma Ma '' -- 5 : 39 CD maxi ( 1990 ) `` The Joker '' ( single version ) -- 3 : 34 `` Do n't Let Nobody Turn You Around '' -- 2 : 27 `` Shu Ba Da Du Ma
+Ma Ma Ma '' -- 3 : 33 `` Living in the U.S.A. ''
+</item 6>
+
+<item 7>
+The Joker (Steve Miller Band song)
+Luke Bryan often performs the song near the end of his concerts . Sampling ( edit ) `` The Joker '' was sampled in the song `` Summer and Lightning '' by
+Electric Light Orchestra from their 1977 album , Out of the Blue . `` The Joker '' serves as the outline of the song `` So Cal Loco ( Party Like a Rockstar ) ''
+by Sprung Monkey which appeared in the film Dude , Where 's My Car ? . It was also sampled on the original Def American Records release of the Geto Boys ' song
+`` Gangster of Love '' from their 1989 album , Grip It ! On That Other Level . The sample , presumably unauthorized , was replaced with Lynyrd Skynyrd 's ``
+Sweet Home Alabama '' on later pressings of the album . The song `` Hudson Dragonfly '' by Jackie - O Motherfucker , from the album , America Mystica ( 2006 ) ,
+contains a sample of `` The Joker '' . The song `` Angel '' by Shaggy , from the album Hot Shot ( 2000 ) , samples the bass line of `` The Joker '' .
+</item 7>
+
+<item 8>
+The Joker (Steve Miller Band song)
+The Joker ( Steve Miller Band song ) - wikipedia The Joker ( Steve Miller Band song ) Jump to : navigation , search `` The Joker ( song ) '' redirects here .
+For other songs with the same title , see Joker ( disambiguation ) . `` The Joker '' Cover of the 1973 single Single by Steve Miller Band from the album The
+Joker B - side `` ' see track listings ' '' Released October 1973 Format 7 '' Single , 12 '' single , Cassette single ( Original Releases ) , CD single and
+Digital download ( Post Releases ) . Genre Rock , blues rock , southern rock Length 4 : 26 ( Album version ) ; 3 : 35 ( 7 '' version / Radio edit ) and 6 : 20 (
+Extended version ) Label Capitol Records ; EMI - Odeon ; London Records , Parlophone Records , EMI Bovema , Odeon Records .
+</item 8>
+
+<item 9>
+The Joker (Steve Miller Band song)
+Steve Miller recorded an unreleased demo of this song 's music with the lyrics of his other song , Take the Money and Run . The 2012 song Diese Tage with German
+and English lyrics by KRIS feat Dante Thomas uses the chorus of `` The Joker '' . Country rapper Colt Ford sampled this song for his song `` Gangsta of Love ''
+. `` Wow Wow '' by Neil Cicierega from the album `` Mouth Moods '' mixes `` The Joker '' with Will Smith 's `` Wild Wild West '' , `` All Star '' by Smash Mouth
+and `` Cowboy '' by Kid Rock . In popular culture ( edit ) In 1996 , `` The Joker '' inspired a comedy film , The Pompatus of Love . References and footnotes (
+edit ) ^ Jump up to : `` Steve Miller Band > Charts & Awards > Billboard Singles '' . allmusic . Retrieved October 5 , 2009 . ^ Jump up to : `` Chart Stats -
+The Steve Miller Band - The Joker '' . Retrieved October 5 , 2009 . Jump up ^ `` irishcharts.ie search results '' .
+</item 9>
+
+<item 10>
+The Joker (Steve Miller Band song)
+-- 3 : 59 Personnel ( edit ) Steve Miller -- guitar , lead vocals Gerald Johnson -- bass , backing vocals Dick Thompson -- organ John King -- drums
+Certifications ( edit ) Country Certification Date Sales certified Sweden Gold February 6 , 1991 25,000 United Kingdom Silver October 1 , 1990 200,000 United
+States Gold January 11 , 1974 1,000,000 Charts ( edit ) Weekly charts ( edit ) Chart ( 1973 / 1974 ) Peak position US Billboard Hot 100 Canadian RPM Top Singles
+Dutch Daverende 30 18 Dutch Top 40 18 Australia Kent Music Report 8 Chart ( 1990 / 1991 ) Peak position Austrian Singles Chart 5 Dutch Nationale Top 100 Dutch
+Top 40 French SNEP Singles Chart 33 Irish Singles Chart New Zealand RIANZ Singles Chart Norwegian Singles Chart Swedish Singles Chart Swiss Singles Chart 5 UK
+Singles Chart Year - end charts ( edit ) Chart ( 1991 ) Position New Zealand ( Recorded Music NZ ) 20 Preceded by `` Time in a Bottle '' by Jim Croce Billboard
+Hot 100 number one single January 12 ,
+</item 10>
+=== END ITEM id=83b29bc2419b0597 ===

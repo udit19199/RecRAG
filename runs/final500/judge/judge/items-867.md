@@ -1,0 +1,921 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=e4280058e434d1fc ===
+Gold sentences and facts:
+Sentence 0: The Osborne 1 is considered the first true mobile computer by most historians . Adam Osborne founded Osborne Computer and formed the Osborne 1 in 1981 . The Osborne 1 had a five - inch screen , incorporating a modem port , two 5 1 / 4 floppy drives , a big collection of bundled software applications , and a battery pack . The computer company was a failure and did not last for very long . Although it was large and heavy compared to today 's laptops , with a tiny 5 '' CRT monitor , it had a near - revolutionary impact on business , as professionals were able to take their computer and data with them for the first time . This and other `` luggables '' were inspired by what was probably the first portable computer , the Xerox NoteTaker . The Osborne was about the size of a portable sewing machine , and could be carried on commercial aircraft . The Osborne 1 weighed close to 11 kg and was priced at $1795 .
+  Fact 0.0: The Osborne 1 is considered the first true mobile computer by most historians.
+  Fact 0.1: Adam Osborne founded Osborne Computer.
+  Fact 0.2: Adam Osborne formed the Osborne 1 in 1981.
+  Fact 0.3: The Osborne 1 had a five-inch screen.
+  Fact 0.4: The Osborne 1 incorporated a modem port.
+  Fact 0.5: The Osborne 1 had two 5 1/4 floppy drives.
+  Fact 0.6: The Osborne 1 came with a big collection of bundled software applications.
+  Fact 0.7: The Osborne 1 had a battery pack.
+  Fact 0.8: The Osborne Computer company was a failure.
+  Fact 0.9: The Osborne Computer company did not last for very long.
+  Fact 0.10: Compared to today's laptops, the Osborne 1 was large and heavy.
+  Fact 0.11: The Osborne 1 had a tiny 5-inch CRT monitor.
+  Fact 0.12: The Osborne 1 had a near-revolutionary impact on business.
+  Fact 0.13: Professionals were able to take their computer and data with them for the first time because of the Osborne 1.
+  Fact 0.14: Other 'luggables' were inspired by the Osborne 1.
+  Fact 0.15: The Osborne 1 was inspired by what was probably the first portable computer, the Xerox NoteTaker.
+  Fact 0.16: The Osborne was about the size of a portable sewing machine.
+  Fact 0.17: The Osborne could be carried on commercial aircraft.
+  Fact 0.18: The Osborne 1 weighed close to 11 kg.
+  Fact 0.19: The Osborne 1 was priced at $1795.
+Sentence 1: The portable micro computer the `` Portal '' of the French company R2E Micral CCMC officially appeared in September 1980 at the Sicob show in Paris . The Portal was a portable microcomputer designed and marketed by the studies and developments department of the French firm R2E Micral in 1980 at the request of the company CCMC specializing in payroll and accounting . It was based on an Intel 8085 processor , 8 - bit , clocked at 2 MHz . It was equipped with a central 64K byte Ram , a keyboard with 58 alpha numeric keys and 11 numeric keys ( separate blocks ) , a 32 - character screen , a floppy disk : capacity = 140 000 characters , of a thermal printer : speed = 28 characters / second , an asynchronous channel , a synchronous channel , a 220V power supply . Designed for an operating temperature of 15 ° C to 35 ° C , it weighed 12 kg and its dimensions were 45cm x 45cm x 15cm . It provided total mobility . Its operating system was Prologue .
+  Fact 1.0: The portable micro computer the 'Portal' of the French company R2E Micral CCMC officially appeared in September 1980 at the Sicob show in Paris.
+  Fact 1.1: The Portal was a portable microcomputer designed and marketed by the studies and developments department of the French firm R2E Micral in 1980.
+  Fact 1.2: The Portal was designed at the request of the company CCMC, which specializes in payroll and accounting.
+  Fact 1.3: The Portal was based on an Intel 8085 processor.
+  Fact 1.4: The Portal's Intel 8085 processor was 8-bit and clocked at 2 MHz.
+  Fact 1.5: The Portal was equipped with a central 64K byte RAM.
+  Fact 1.6: The Portal had a keyboard with 58 alphanumeric keys and 11 numeric keys in separate blocks.
+  Fact 1.7: The Portal had a 32-character screen.
+  Fact 1.8: The Portal had a floppy disk with a capacity of 140 000 characters.
+  Fact 1.9: The Portal had a thermal printer with a speed of 28 characters per second.
+  Fact 1.10: The Portal had an asynchronous channel and a synchronous channel.
+  Fact 1.11: The Portal required a 220V power supply.
+  Fact 1.12: The Portal was designed for an operating temperature of 15 °C to 35 °C.
+  Fact 1.13: The Portal weighed 12 kg.
+  Fact 1.14: The Portal's dimensions were 45cm x 45cm x 15cm.
+  Fact 1.15: The Portal provided total mobility.
+  Fact 1.16: The Portal's operating system was Prologue.
+Sentence 2: The first laptop in the modern form was the Grid Compass 1101 , designed by Bill Moggridge in 1979 -- 80 , and released in 1983 . Enclosed in a magnesium case , it introduced the now familiar clamshell design , in which the flat display folded shut against the keyboard . The computer could be run from batteries , and was equipped with a 320 × 200 - pixel electroluminescent display and 384 kilobyte bubble memory . It was not IBM - compatible , and its high price ( US $ 8,000 -- 10,000 ) limited it to specialized applications . However , it was used heavily by the U.S. military , and by NASA on the Space Shuttle during the 1980s . The GRiD 's manufacturer subsequently earned significant returns on its patent rights as its innovations became commonplace . GRiD Systems Corp. was later bought by the Tandy ( now RadioShack ) Corporation .
+  Fact 2.0: The first laptop in the modern form was the Grid Compass 1101.
+  Fact 2.1: The Grid Compass 1101 was designed by Bill Moggridge in 1979-80.
+  Fact 2.2: The Grid Compass 1101 was released in 1983.
+  Fact 2.3: The Grid Compass 1101 was enclosed in a magnesium case.
+  Fact 2.4: The Grid Compass 1101 introduced the now familiar clamshell design, in which the flat display folded shut against the keyboard.
+  Fact 2.5: The Grid Compass 1101 could be run from batteries.
+  Fact 2.6: The Grid Compass 1101 had a 320 × 200-pixel electroluminescent display.
+  Fact 2.7: The Grid Compass 1101 had 384 kilobyte bubble memory.
+  Fact 2.8: The Grid Compass 1101 was not IBM-compatible.
+  Fact 2.9: The Grid Compass 1101 had a high price of US $8,000-10,000, which limited it to specialized applications.
+  Fact 2.10: The Grid Compass 1101 was used heavily by the U.S. military.
+  Fact 2.11: The Grid Compass 1101 was used by NASA on the Space Shuttle during the 1980s.
+  Fact 2.12: The GRiD manufacturer subsequently earned significant returns on its patent rights as its innovations became commonplace.
+  Fact 2.13: GRiD Systems Corp. was later bought by the Tandy (now RadioShack) Corporation.
+
+Retrieved items:
+<item 1>
+History of laptops
+IBM PC Convertible ( edit ) Also among the first commercial IBM - compatible laptops was the IBM PC Convertible , introduced in 1986 . It had a CGA - compatible
+LCD and 2 floppy drives . It weighed 13 pounds ( 5.9 kg ) . Toshiba T1100 , T1000 , and T1200 ( edit ) Toshiba launched the Toshiba T1100 in 1985 , and has
+subsequently described it as `` the world 's first mass - market laptop computer '' . It did not have a hard drive , and ran entirely from floppy disks . The
+CPU was a 4.77 MHz Intel 80C88 , a variation of the popular Intel 8088 , and the display was a monochrome , text - only 640x200 LCD . It was followed in 1987 by
+the T1000 and T1200 . Although limited floppy - based DOS machines , with the operating system stored in ROM , the Toshiba models were small and light enough to
+be carried in a backpack , and could be run from lead - acid batteries .
+</item 1>
+
+<item 2>
+History of laptops
+Later models featured an Intel 80286 processor and a 20 MB hard disk drive . On the strength of this deal , ZDS became the world 's largest laptop supplier in
+1987 and 1988 . ZDS partnered with Tottori Sanyo in the design and manufacturing of these laptops . This relationship is notable because it was the first deal
+between a major brand and an Asian original equipment manufacturer . Hewlett - packard Vectra portable CS ( edit ) In 1987 , HP released a portable version of
+their Vectra CS computer . It had the classic laptop configuration ( keyboard and monitor closes up clam - shell style in order to carry ) , however , it was
+very heavy and fairly large . It had a full - size keyboard ( with separate numeric keypad ) and a large amber LCD screen . While it was offered with dual 3.5 -
+inch floppy disk drives , the most common configuration was a 20 MB hard drive and a single floppy drive . It was one of the first machines with a 1.44 MB
+density 3.5 - inch disk drive .
+</item 2>
+
+<item 3>
+Graph query row:
+subject: Toshiba T1100
+relationship: CREATED
+related: Toshiba
+related_date: None
+related_kind: company
+role: None
+relationship_detail: None
+fact: None
+</item 3>
+
+<item 4>
+History of laptops
+Cambridge Z88 ( edit ) Another notable computer was the Cambridge Z88 , designed by Clive Sinclair , introduced in 1988 . About the size of an A4 sheet of paper
+as well , it ran on standard batteries , and contained basic spreadsheet , word processing , and communications programs . It anticipated the future
+miniaturization of the portable computer , and as a ROM - based machine with a small display , can -- like the TRS - 80 Model 100 -- also be seen as a
+forerunner of the personal digital assistant . Compaq SLT / 286 ( edit ) By the end of the 1980s , laptop computers were becoming popular among business people
+. The COMPAQ SLT / 286 debuted in October 1988 , being the first battery - powered laptop to support an internal hard disk drive and a VGA compatible LCD screen
+. It weighed 14 lbs . NEC Ultralite ( edit ) Main article : NEC UltraLite The NEC UltraLite , released in mid-1989 , was perhaps the first `` notebook ''
+computer , weighing just 2 kg ( 4.4 lbs ) .
+</item 4>
+
+<item 5>
+History of laptops
+They also introduced the now - standard `` resume '' feature to DOS - based machines : the computer could be paused between sessions without having to be
+restarted each time . U.S. Air Force ( edit ) The first laptops successful on a large scale came in large part due to a Request For Proposal ( RFP ) by the U.S.
+Air Force in 1987 . This contract would eventually lead to the purchase of over 200,000 laptops . Competition to supply this contract was fiercely contested and
+the major PC companies of the time ; IBM Corporation , To shins , Compaq , NEC , and Zenith Data Systems ( ZDS ) , rushed to develop laptops in an attempt to
+win this deal . ZDS , which had earlier won a landmark deal with the IRS for its Z - 171 , was awarded this contract for its SupersPort series . The SupersPort
+series was originally launched with an Intel 8086 processor , dual floppy disk drives , a backlit , blue and white STN LCD screen , and a NiCd battery pack .
+Later models featured an Intel 80286 processor and a 20 MB hard disk drive .
+</item 5>
+
+<item 6>
+History of laptops
+Commodore SX - 64 ( edit ) The Commodore SX - 64 , also known as the Executive 64 , or VIC - 64 in Europe , was a portable , briefcase or suitcase - size ``
+luggable '' version of the popular Commodore 64 home computer , and was the first full - color portable computer . The SX - 64 featured a built - in five - inch
+composite monitor and a built - in 1541 floppy drive . It weighed 20 pounds . The machine was carried by its sturdy handle , which doubled as an adjustable
+stand . It was announced in January 1983 and released a year later , at $995 USD . Kaypro 2000 ( edit ) Possibly the first commercial IBM - compatible laptop
+was the Kaypro 2000 , introduced in 1985 . With its brushed aluminum clamshell case , it was remarkably similar in design to modern laptops . It featured a 25
+line by 80 character LCD , a detachable keyboard , and a pop - up 90 mm ( 3.5 - inch ) floppy drive .
+</item 6>
+
+<item 7>
+History of laptops
+Before laptop / notebook computers were technically feasible , similar ideas had been proposed , most notably Alan Kay 's Dynabook concept , developed at Xerox
+PARC in the early 1970 s . One of the first reasonably portable computers was the Xerox NoteTaker , again developed at Xerox PARC , in 1976 . However , only 10
+prototypes were built . Contents ( hide ) 1 Portal R2E CCMC 2 Osborne 1 3 Bondwell 2 4 Compaq Portable 5 Epson HX - 20 6 Grid Compass 7 Dulmont Magnum /
+Kookaburra 8 Ampere 9 Tandy Model 100 10 Sharp and Gavilan 11 Kyotronic 85 12 Commodore SX - 64 13 Kaypro 2000 14 IBM PC Convertible 15 Toshiba T1100 , T1000 ,
+and T1200 16 US Air Force 17 Hewlett - Packard Vectra Portable CS 18 Cambridge Z88 19 Compaq SLT / 286 20 NEC UltraLite 21 Apple 21.1 Macintosh Portable 21.
+</item 7>
+
+<item 8>
+History of laptops
+Another significant machine announced in 1981 , although first sold widely in 1983 , was the Epson HX - 20 . A simple handheld computer , it featured a full -
+transit 68 - key keyboard , rechargeable nickel - cadmium batteries , a small ( 120 × 32 - pixel ) dot - matrix LCD with 4 lines of text , 20 characters per
+line text mode , a 24 column dot matrix printer , a Microsoft BASIC interpreter , and 16 KB of RAM ( expandable to 32 KB ) . Through at least the late 1980s
+Epson continued to release laptops such as the L3s . GRiD Compass ( edit ) Main article : Grid Compass The first laptop in the modern form was the Grid Compass
+1101 , designed by Bill Moggridge in 1979 -- 80 , and released in 1983 . Enclosed in a magnesium case , it introduced the now familiar clamshell design , in
+which the flat display folded shut against the keyboard . The computer could be run from batteries , and was equipped with a 320 × 200 - pixel
+electroluminescent display and 384 kilobyte bubble memory .
+</item 8>
+
+<item 9>
+History of laptops
+Retrieved 11 August 2015 . Jump up ^ See TRS - 80 Model 100 / 102 at old-computers.com Jump up ^ `` Commodore SX - 64 Portable '' . Retrieved 11 August 2015 .
+Jump up ^ `` Commodore SX - 64 portable computer '' . Retrieved 11 August 2015 . Jump up ^ `` World 's First Laptop PC '' . Toshiba Science Museum . Retrieved
+21 May 2017 . Jump up ^ `` Business Desktops / Calcs '' . HP Computer Museum . Retrieved 7 April 2014 . Jump up ^ Lewis , Peter H. ( 23 October 1988 ) . `` THE
+EXECUTIVE COMPUTER ; Compaq Finally Makes a Laptop '' . The New York Times . Jump up ^ Somerson , Paul ( July 1986 ) . `` Is It On Yet ? '' . PC . pp. 122 --
+123 . Retrieved 9 January 2015 . Jump up ^ `` IBM Power Systems archived white papers '' . Retrieved 11 August 2015 .
+</item 9>
+
+<item 10>
+History of laptops
+It was not IBM - compatible , and its high price ( US $ 8,000 -- 10,000 ) limited it to specialized applications . However , it was used heavily by the U.S.
+military , and by NASA on the Space Shuttle during the 1980s . The GRiD 's manufacturer subsequently earned significant returns on its patent rights as its
+innovations became commonplace . GRiD Systems Corp. was later bought by the Tandy ( now RadioShack ) Corporation . Dulmont Magnum / Kookaburra ( edit ) Main
+article : Dulmont Magnum Another contender for the first true laptop was the Dulmont Magnum , designed Barry Wilkinson and Terry Crews Engineering Manager at
+Dulmison in 1982 and released in Australia in 1983 It included an 80 × 8 display in a lid that closed against the keyboard . It was based on the MS - DOS
+operating system and applications stored in ROM ( A :) and also supported removable modules in expansion slots ( B : and C :) that could be custom programmed
+EPROM or standard word processing and spreadsheet applications .
+</item 10>
+=== END ITEM id=e4280058e434d1fc ===
+
+=== ITEM id=8e009a7087d743f2 ===
+Gold sentences and facts:
+Sentence 0: Somatic motor neurons originate in the central nervous system , project their axons to skeletal muscles ( such as the muscles of the limbs , abdominal , and intercostal muscles ) , which are involved in locomotion . The three types of these neurons are the alpha efferent neurons , beta efferent neurons , and gamma efferent neurons . They are called efferent to indicate the flow of information from the central nervous system ( CNS ) to the periphery .
+  Fact 0.0: Somatic motor neurons originate in the central nervous system.
+  Fact 0.1: Somatic motor neurons project their axons to skeletal muscles.
+  Fact 0.2: Examples of those skeletal muscles are the muscles of the limbs, abdominal muscles, and intercostal muscles.
+  Fact 0.3: The skeletal muscles that somatic motor neurons project to are involved in locomotion.
+  Fact 0.4: There are three types of somatic motor neurons.
+  Fact 0.5: The three types are alpha efferent neurons, beta efferent neurons, and gamma efferent neurons.
+  Fact 0.6: Somatic motor neurons are called efferent.
+  Fact 0.7: The name efferent indicates the flow of information from the central nervous system (CNS) to the periphery.
+Sentence 1: The term ' motor neuron ' is usually restricted to the lower motor neurons , the efferent nerves that directly innervate muscles .
+  Fact 1.0: The term 'motor neuron' is usually restricted to the lower motor neurons.
+  Fact 1.1: Lower motor neurons are the efferent nerves that directly innervate muscles.
+
+Retrieved items:
+<item 1>
+A motor neuron is a projection neuron with its cell body in the motor cortex, brainstem, or spinal cord. Its axon acts within or beyond the spinal cord to
+control effectors, mainly muscles and glands. Upper motor neurons connect to lower motor neurons, typically using glutamate; lower motor neurons activate
+muscles at neuromuscular junctions using acetylcholine.
+</item 1>
+
+<item 2>
+Motor neuron
+There are two types of motor neuron -- upper motor neurons and lower motor neurons . Axons from upper motor neurons synapse onto interneurons in the spinal cord
+and occasionally directly onto lower motor neurons . The axons from the lower motor neurons are efferent nerve fibers that carry signals from the spinal cord to
+the effectors . Types of lower motor neurons are alpha motor neurons , beta motor neurons , and gamma motor neurons . The term ' motor neuron ' is usually
+restricted to the lower motor neurons , the efferent nerves that directly innervate muscles . A single motor neuron may innervate many muscle fibres and a
+muscle fibre can undergo many action potentials in the time taken for a single muscle twitch . As a result , if an action potential arrives before a twitch has
+completed , the twitches can superimpose on one another , either through summation or a tetanic contraction . In summation , the muscle is stimulated
+repetitively such that additional action potentials coming from the somatic nervous system arrive before the end of the twitch . The twitches thus superimpose
+on one another , leading to a force greater than that of a single twitch .
+</item 2>
+
+<item 3>
+Visceral muscle control is disynaptic: CNS general visceral motor neurons synapse with PNS ganglionic neurons, which then synapse with muscle. All vertebrate
+motor neurons release acetylcholine; parasympathetic ganglionic neurons do too, while most sympathetic ganglionic neurons release noradrenaline. Human lower
+motor neurons can be generated in vitro from embryonic stem cells and induced pluripotent stem cells.
+</item 3>
+
+<item 4>
+Motor neuron
+Branch of NS Position Neurotransmitter Somatic n / a Acetylcholine Parasympathetic Preganglionic Acetylcholine Parasympathetic Ganglionic Acetylcholine
+Sympathetic Preganglionic Acetylcholine Sympathetic Ganglionic Norepinephrine * * Except fibers to sweat glands and certain blood vessels Motor neuron
+neurotransmitters General visceral motor neurons ( edit ) These motor neurons indirectly innervate cardiac muscle and smooth muscles of the viscera ( the
+muscles of the arteries ) : they synapse onto neurons located in ganglia of the autonomic nervous system ( sympathetic and parasympathetic ) , located in the
+peripheral nervous system ( PNS ) , which themselves directly innervate visceral muscles ( and also some gland cells ) . In consequence : the motor command of
+skeletal and branchial muscles is monosynaptic ( involving only one motor neuron , respectively , somatic and branchial , which synapses onto the muscle ) .
+</item 4>
+
+<item 5>
+Motor neuron
+the command of visceral muscles is disynaptic ( involving two neurons : the general visceral motor neuron located in the CNS , which synapses onto a ganglionic
+neuron , located in the PNS , which synapses onto the muscle ) . All vertebrate motor neurons are cholinergic , that is , they release the neurotransmitter
+acetylcholine . Parasympathetic ganglionic neurons are also cholinergic , whereas most sympathetic ganglionic neurons are noradrenergic , that is , they release
+the neurotransmitter noradrenaline . ( see Table ) Motor neurons in Regenerative medicine ( edit ) Human lower motor neurons can be generated in vitro from
+embryonic stem cells and induced pluripotent stem cells . See also ( edit ) Betz cell Central chromatolysis Motor dysfunction Nerve References ( edit ) Jump up
+^ Tortora , Gerard ; Derrickson , Bryan ( 2014 ) . Principles of Anatomy & Physiology ( 14th ed . ) . New Jersey : John Wiley & Sons , Inc . pp. 406 , 502 , 541
+. ISBN 978 - 1 - 118 - 34500 - 9 .
+</item 5>
+
+<item 6>
+Motor neuron
+There are three primary categories lower motor neurons , which can be further divided in sub-categories . According to their targets , motor neurons are
+classified into three broad categories : Somatic motor neurons Special visceral motor neurons General visceral motor neurons Somatic motor neurons ( edit )
+Somatic motor neurons originate in the central nervous system , project their axons to skeletal muscles ( such as the muscles of the limbs , abdominal , and
+intercostal muscles ) , which are involved in locomotion . The three types of these neurons are the alpha efferent neurons , beta efferent neurons , and gamma
+efferent neurons . They are called efferent to indicate the flow of information from the central nervous system ( CNS ) to the periphery . Alpha motor neurons
+innervate extrafusal muscle fibers , which are the main force - generating component of a muscle . Their cell bodies are in the ventral horn of the spinal cord
+and they are sometimes called ventral horn cells . A single motor neuron may synapse with 150 muscle fibers on average . The motor neuron and all of the muscle
+fibers to which it connects is a motor unit .
+</item 6>
+
+<item 7>
+Motor neurons use oxidative and glycolytic metabolism. Alpha neurons drive voluntary skeletal contraction and muscle tone: spindle sensory neurons detect
+stretch, prompting spinal alpha neurons to contract extrafusal fibers in the stretch reflex. Beta neurons innervate intrafusal and extrafusal fibers;
+slow-contracting types target extrafusal fibers, fast-contracting types intrafusal fibers. Gamma neurons adjust spindle sensitivity: dynamic types target Bag1
+fibers, static types Bag2 fibers. Lower motor-neuron activity
+</item 7>
+
+<item 8>
+Motor neuron
+These use both oxidative and glycolytic means to gain energy . In addition to voluntary skeletal muscle contraction , alpha motor neurons also contribute to
+muscle tone , the continuous force generated by noncontracting muscle to oppose stretching . When a muscle is stretched , sensory neurons within the muscle
+spindle detect the degree of stretch and send a signal to the CNS . The CNS activates alpha motor neurons in the spinal cord , which cause extrafusal muscle
+fibers to contract and thereby resist further stretching . This process is also called the stretch reflex . Beta motor neurons innervate intrafusal muscle
+fibers of muscle spindles , with collaterals to extrafusal fibres . There are two types of beta motor neurons : Slow Contracting - These innervate extrafusal
+fibers . Fast Contracting - These innervate intrafusal fibers . Gamma motor neurons innervate intrafusal muscle fibers found within the muscle spindle . They
+regulate the sensitivity of the spindle to muscle stretching . With activation of gamma neurons , intrafusal muscle fibers contract so that only a small stretch
+is required to activate spindle sensory neurons and the stretch reflex .
+</item 8>
+
+<item 9>
+Upper motor neurons synapse mainly on spinal interneurons, sometimes directly on lower motor neurons. Lower motor neurons carry signals from the spinal cord to
+effectors and include somatic, special visceral, and general visceral types. Somatic alpha, beta, and gamma neurons innervate skeletal muscle; alpha neurons,
+whose cell bodies lie in the spinal ventral horn, activate force-generating extrafusal fibers. One neuron may connect to many fibers; together they form a motor
+unit. Repeated signals
+</item 9>
+
+<item 10>
+Motor neuron
+Muscle relaxation and inhibition of muscle contraction in vertebrates is obtained only by inhibition of the motor neuron itself . Muscle innervation may
+eventually play a role in the maturation of motor activity . This is how muscle relaxants work by acting on the motor neurons that innervate muscles ( by
+decreasing their electrophysiological activity ) or on cholinergic neuromuscular junctions , rather than on the muscles themselves . Special visceral motor
+neurons ( edit ) These are also known as branchial motor neurons , which are involved in facial expression , mastication , phonation , and swallowing .
+Associated cranial nerves are the oculomotor , abducens , trochlear , and hypoglossal nerves .
+</item 10>
+=== END ITEM id=8e009a7087d743f2 ===
+
+=== ITEM id=afe7a81a5c1c5f87 ===
+Gold sentences and facts:
+Sentence 0: Windows Defender , officially called Windows Defender Antivirus in Windows 10 Creators Update , is an anti-malware component of Microsoft Windows.It was first released as a free antispyware program download for Windows XP , shipped with Windows Vista and Windows 7 and made into a full antivirus program replacing Microsoft Security Essentials as part of Windows 8 and later versions .
+  Fact 0.0: Windows Defender is an anti-malware component of Microsoft Windows.
+  Fact 0.1: Windows Defender is officially called Windows Defender Antivirus in Windows 10 Creators Update.
+  Fact 0.2: Windows Defender was first released as a free antispyware program download for Windows XP.
+  Fact 0.3: Windows Defender shipped with Windows Vista.
+  Fact 0.4: Windows Defender shipped with Windows 7.
+  Fact 0.5: Windows Defender was made into a full antivirus program as part of Windows 8 and later versions.
+  Fact 0.6: Windows Defender replaced Microsoft Security Essentials as part of Windows 8 and later versions.
+
+Retrieved items:
+<item 1>
+Windows Defender
+Since Windows 10 Anniversary Update , offline functionality is integrated into the regular Windows Defender program . Mitigated Security vulnerability ( edit )
+On 5 May 2017 , Tavis Ormandy , a vulnerability researcher for Google , discovered a security vulnerability in the JavaScript analysis module ( NScript ) of
+Microsoft Antimalware Engine ( MsMpEngine ) that impacted Windows Defender , Microsoft Security Essentials and System Center Endpoint Protection . By 8 May 2017
+, Microsoft had released a patch to all affected systems . Ars Technica commended Microsoft for its unprecedented patching speed and said that the disaster had
+been averted . See also ( edit ) Security and safety features new to Windows Vista References ( edit ) Jump up ^ `` Windows Defender '' . Download Center .
+Microsoft . 23 May 2007 . Archived from the original on 29 April 2012 . ^ Jump up to : `` What is Windows Defender ? '' . Computer Hope . Retrieved 31 December
+2017 . Jump up ^ Shultz , Greg . `` Windows Defender : Past , present , and future '' . Retrieved 13 June 2017 .
+</item 1>
+
+<item 2>
+Windows Defender
+The same update introduced a new flat logo . History ( edit ) Beta ( edit ) Microsoft AntiSpyware Beta 1 ( Version 1.0. 701 ) Windows Defender is based on GIANT
+AntiSpyware , which was originally developed by GIANT Company Software , Inc . The company 's acquisition was announced by Microsoft on December 16 , 2004 .
+While the original GIANT AntiSpyware supported older Windows versions , support for the Windows 9x line of operating systems was later dropped . The first beta
+version of Microsoft AntiSpyware was released on January 6 , 2005 and was basically a repackaged GIANT AntiSpyware . More builds were released in 2005 , with
+the last Beta 1 refresh released on November 21 , 2005 . At the 2005 RSA Security conference , Chief Software Architect and co-founder of Microsoft , Bill Gates
+, announced that Windows Defender ( which was known as Microsoft AntiSpyware prior to November 4 , 2005 ) would be made available free of charge to all validly
+licensed Windows 2000 , Windows XP , and Windows Server 2003 users to help secure their systems against the increasing malware threat .
+</item 2>
+
+<item 3>
+Windows Defender
+Initially , its `` Settings '' dialog box was replaced by dedicated page in the Settings app . In Windows 10 Creators Update , Windows Defender is renamed
+Windows Defender Antivirus to distinguish it from Windows Defender Security Center . The latter has become the default avenue to interface with Windows Defender
+. While there is no shortcut on the Start menu for Windows Defender 's native client , it can still run . Advanced features ( edit ) Windows Defender
+successfully blocks the EICAR test file Real - time protection In the Windows Defender options , the user can configure real - time protection options . Browser
+integration Integration with Internet Explorer and Microsoft Edge enables files to be scanned as they are downloaded to detect malicious software inadvertently
+downloaded . Although it does not integrate with non-Microsoft web browsers , Windows Defender scans for malicious downloaded files as part of its real - time
+protection . Windows 10 's Anniversary Update introduced Limited Periodic Scanning , which optionally allows Windows Defender to scan a system periodically if
+another antivirus app is installed . It also introduced Block at First Sight , which uses machine learning to predict whether a file is malicious . Windows
+Vista - specific functionality ( edit ) Windows Defender had additional functionality in Windows Vista which was removed in subsequent versions of Windows .
+</item 3>
+
+<item 4>
+Windows Defender
+Windows Defender ( Beta 2 ) was released on February 13 , 2006 . It featured the program 's new name and a significant user interface redesign . The core engine
+was rewritten in C++ , unlike the original GIANT - developed one , which was written in Visual Basic . This improved the application 's performance . Also ,
+since beta 2 , the program works as a Windows service , unlike earlier releases , which enables the application to protect the computer even when a user is not
+logged on . Beta 2 also requires Windows Genuine Advantage validation . However , Windows Defender ( Beta 2 ) did not contain some of the tools found in
+Microsoft AntiSpyware ( Beta 1 ) ; Microsoft removed the System Inoculation , Secure Shredder and System Explorer tools found in MSAS ( Beta 1 ) as well as the
+Tracks Eraser tool , which allowed users to easily delete many different types of temporary files related to Internet Explorer 6 , including HTTP cookies , web
+cache , and Windows Media Player playback history . Microsoft later released German and Japanese versions of Windows Defender ( Beta 2 ) . General availability
+( edit ) On October 24 , 2006 , Microsoft released Windows Defender .
+</item 4>
+
+<item 5>
+Windows Defender
+Jump up ^ Hau , Kevin ( 23 June 2009 ) . `` Windows Defender and Microsoft Security Essentials '' . Microsoft Answers . Microsoft Corporation . Retrieved 8 May
+2011 . Jump up ^ Marius , Marius Oiaga ( 30 August 2010 ) . `` Microsoft Security Essentials 1.0 and 2.0 Disable Windows Defender '' . Softpedia . SoftNews NET
+SRL . Retrieved 8 May 2011 . Jump up ^ Windows 8 Consumer Preview : Set Up Windows 8 with the Web Installer Jump up ^ `` Protect your PC '' . Support ( 12 ed .
+) . Microsoft . 8 September 2016 . Retrieved 14 December 2016 . Jump up ^ Lich , Brian ( 18 May 2017 ) . `` Windows Defender Antivirus in the Windows Defender
+Security Center app '' . docs.microsoft.com . Microsoft . Jump up ^ Popa , Bogdan ( 24 August 2017 ) . `` Quick Tip : Use the Old Windows Defender in Windows 10
+Creators Update '' . Softpedia . SoftNews .
+</item 5>
+
+<item 6>
+Windows Defender
+Contents ( hide ) 1 Basic features 2 History 2.1 Beta 2.2 General availability 2.3 Conversion to antivirus 3 Advanced features 4 Windows Vista - specific
+functionality 5 Windows Defender Offline 6 Mitigated security vulnerability 7 See also 8 References 9 External links Basic features ( edit ) Before Windows 8 ,
+Windows Defender protected against spyware . It included a number of real - time security agents that monitored several common areas of Windows for changes
+which might have been caused by spyware . It also included the ability to easily remove installed ActiveX software. Windows Defender featured integrated support
+for Microsoft SpyNet that allows users to report to Microsoft what they consider to be spyware , and what applications and device drivers they allow to be
+installed on their system . Protection against viruses was added in Windows 8 ; Windows Defender in Windows 8 resembles Microsoft Security Essentials ( MSE )
+and uses the same virus definitions . In Windows 10 , Windows Defender settings are controlled by the Settings app , and the Settings button opens the Settings
+app . In the Windows 10 Anniversary Update , toast notifications appear to announce the results of a scan , even if no viruses are found .
+</item 6>
+
+<item 7>
+Windows Defender
+Windows Defender - wikipedia Windows Defender Jump to : navigation , search Not to be confused with Windows Defender Security Center . This article needs
+additional citations for verification . Please help improve this article by adding citations to reliable sources . Unsourced material may be challenged and
+removed . ( July 2009 ) ( Learn how and when to remove this template message ) Windows Defender A component of Microsoft Windows Windows Defender Antivirus , as
+appears in the Windows 10 Creators Update Details Type Antivirus software on Windows 8 and later ; formerly spyware removal software Included with Windows Vista
+and later , Windows Server 2016 Also available for Windows XP and Windows Server 2003 Support status Same as the version of Windows with which it is integrated
+Related components Microsoft Security Essentials Windows Defender Security Center Windows Defender , officially called Windows Defender Antivirus in Windows 10
+Creators Update , is an anti-malware component of Microsoft Windows.It was first released as a free antispyware program download for Windows XP , shipped with
+Windows Vista and Windows 7 and made into a full antivirus program replacing Microsoft Security Essentials as part of Windows 8 and later versions .
+</item 7>
+
+<item 8>
+Windows Defender
+General availability ( edit ) On October 24 , 2006 , Microsoft released Windows Defender . It supports Windows XP and Windows Server 2003 ; however , unlike the
+betas , it does not run on Windows 2000 . Conversion to antivirus ( edit ) Windows Defender was released with Windows Vista and Windows 7 , serving as their
+built - in antispyware component . In Windows Vista and Windows 7 , Windows Defender was superseded by Microsoft Security Essentials , an antivirus product from
+Microsoft which provided protection against a wider range of malware . Upon installation , Microsoft Security Essentials disabled and replaced Windows Defender
+. In Windows 8 , Microsoft upgraded Windows Defender into an antivirus program very similar to Microsoft Security Essentials for Windows 7 and using the same
+virus definition updates . MSE itself does not run on Windows versions beyond 7 . In Windows 8 and Windows 10 , Windows Defender is on by default . It switches
+itself off upon installation of a third party anti-virus package . Starting with Windows 10 , Microsoft began to transfer the control of Windows Defender out of
+its native client . Initially , its `` Settings '' dialog box was replaced by dedicated page in the Settings app .
+</item 8>
+
+<item 9>
+Windows Defender
+Security agents Security agents monitor the computer for malicious activities . Auto Start -- Monitors lists of programs that are allowed to automatically run
+when the user starts the computer System Configuration ( settings ) -- Monitors security - related settings in Windows Internet Explorer Add - ons -- Monitors
+programs that automatically run when the user starts Internet Explorer Internet Explorer Configurations ( settings ) -- Monitors browser security settings
+Internet Explorer Downloads -- Monitors files and programs that are designed to work with Internet Explorer Services and Drivers -- Monitors services and
+drivers as they interact with Windows and programs Application Execution -- Monitors when programs start and any operations they perform while running
+Application Registration -- Monitors tools and files in the operating system where programs can register to run at any time Windows Add - ons -- Monitors add -
+on programs for Windows Software Explorer The Advanced Tools section allows users to discover potential vulnerabilities with a series of Software Explorers .
+They provide views of startup programs , currently running software , network connected applications , and Winsock providers ( Winsock LSPs ) . In each Explorer
+, every element is rated as either `` Known '' , `` Unknown '' or `` Potentially Unwanted '' .
+</item 9>
+
+<item 10>
+Windows Defender
+The first and last categories carry a link to learn more about the particular item , and the second category invites users to submit the program to Microsoft
+SpyNet for analysis by community members . The Software Explorer feature has been removed from Windows Defender in Windows 7 . Notification of startup programs
+that run as an administrator Windows Defender in Windows Vista automatically blocks all startup items that require administrator privileges to run ( this is
+considered suspicious behavior for a startup item ) . This automatic blocking is related to the User Account Control functionality in Windows Vista , and
+requires users to manually run each of these startup items each time they log in if they desire the item to run at startup . User interface In Windows Vista ,
+it is possible to close the window and have the program run in the system tray while a scan is running . However , in Windows 7 , this functionality was removed
+and the window must remain open while a scan is running . Windows Defender offline ( edit ) Windows Defender Offline ( formerly known as Standalone System
+Sweeper Beta ) is a bootable standalone antimalware program that runs from a bootable disk and is designed to scan infected systems while their operating
+systems are offline .
+</item 10>
+=== END ITEM id=afe7a81a5c1c5f87 ===
+
+=== ITEM id=640602631a0b7ab9 ===
+Gold sentences and facts:
+Sentence 0: The park lies in the north - east of South Africa , in the eastern parts of Limpopo and Mpumalanga provinces . Phalaborwa , Limpopo is the only town in South Africa that borders the Kruger National Park . It is one of the largest national parks in the world , with an area of 19,485 square kilometres ( 7,523 sq mi ) . The park is approximately 360 kilometres ( 220 mi ) long , and has an average width of 65 kilometres ( 40 mi ) . At its widest point , the park is 90 kilometres ( 56 mi ) wide from east to west .
+  Fact 0.0: The Kruger National Park lies in the north-east of South Africa.
+  Fact 0.1: The Kruger National Park lies in the eastern parts of Limpopo and Mpumalanga provinces.
+  Fact 0.2: Phalaborwa, Limpopo is the only town in South Africa that borders the Kruger National Park.
+  Fact 0.3: The Kruger National Park is one of the largest national parks in the world.
+  Fact 0.4: The Kruger National Park has an area of 19,485 square kilometres (7,523 sq mi).
+  Fact 0.5: The Kruger National Park is approximately 360 kilometres (220 mi) long.
+  Fact 0.6: The Kruger National Park has an average width of 65 kilometres (40 mi).
+  Fact 0.7: At its widest point, the Kruger National Park is 90 kilometres (56 mi) wide from east to west.
+Sentence 1: Kruger National Park is one of the largest game reserves in Africa . It covers an area of 19,485 square kilometres ( 7,523 sq mi ) in the provinces of Limpopo and Mpumalanga in northeastern South Africa , and extends 360 kilometres ( 220 mi ) from north to south and 65 kilometres ( 40 mi ) from east to west . The administrative headquarters are in Skukuza . Areas of the park were first protected by the government of the South African Republic in 1898 , and it became South Africa 's first national park in 1926 .
+  Fact 1.0: Kruger National Park is one of the largest game reserves in Africa.
+  Fact 1.1: Kruger National Park covers an area of 19,485 square kilometres (7,523 sq mi).
+  Fact 1.2: Kruger National Park is in the provinces of Limpopo and Mpumalanga.
+  Fact 1.3: Kruger National Park is in northeastern South Africa.
+  Fact 1.4: Kruger National Park extends 360 kilometres (220 mi) from north to south.
+  Fact 1.5: Kruger National Park extends 65 kilometres (40 mi) from east to west.
+  Fact 1.6: The administrative headquarters of Kruger National Park are in Skukuza.
+  Fact 1.7: Areas of Kruger National Park were first protected by the government of the South African Republic in 1898.
+  Fact 1.8: Kruger National Park became South Africa's first national park in 1926.
+Sentence 2: Kruger National reserve IUCN category II ( national park ) Burchell 's zebra in a Kruger landscape Location of the park ( red area ) in South Africa Location Limpopo and Mpumalanga provinces , South Africa Nearest city Nelspruit ( southern ) Phalaborwa ( central ) Coordinates 24 ° 0 ′ 41 '' S 31 ° 29 ′ 7 '' E ﻿ / ﻿ 24.01139 ° S 31.48528 ° E ﻿ / - 24.01139 ; 31.48528 Coordinates : 24 ° 0 ′ 41 '' S 31 ° 29 ′ 7 '' E ﻿ / ﻿ 24.01139 ° S 31.48528 ° E ﻿ / - 24.01139 ; 31.48528 Area 19,485 km ( 7,523 sq mi ) Established 31 May 1926 ( 1898 ) Visitors 1,336,981 ( in 2004 ) Governing body South African National Parks www.sanparks.org/parks/kruger/
+  Fact 2.0: Kruger National Reserve is IUCN category II (national park).
+  Fact 2.1: Kruger National Reserve is located in Limpopo and Mpumalanga provinces, South Africa.
+  Fact 2.2: The nearest city to Kruger National Reserve is Nelspruit (southern).
+  Fact 2.3: The nearest city to Kruger National Reserve is Phalaborwa (central).
+  Fact 2.4: Kruger National Reserve has coordinates 24°0′41''S 31°29′7''E / 24.01139°S 31.48528°E.
+  Fact 2.5: Kruger National Reserve has an area of 19,485 km (7,523 sq mi).
+  Fact 2.6: The infobox lists Kruger National Reserve as established on 31 May 1926, with 1898 given in parentheses.
+  Fact 2.7: Kruger National Reserve had 1,336,981 visitors in 2004.
+  Fact 2.8: Kruger National Reserve is governed by South African National Parks.
+  Fact 2.9: The website for Kruger National Reserve is www.sanparks.org/parks/kruger/.
+
+Retrieved items:
+<item 1>
+Kruger National Park
+It is one of the largest national parks in the world , with an area of 19,485 square kilometres ( 7,523 sq mi ) . The park is approximately 360 kilometres ( 220
+mi ) long , and has an average width of 65 kilometres ( 40 mi ) . At its widest point , the park is 90 kilometres ( 56 mi ) wide from east to west . To the
+north and south of the park two rivers , the Limpopo and the Crocodile respectively , act as its natural boundaries . To the east the Lebombo Mountains separate
+it from Mozambique . Its western boundary runs parallel with this range , roughly 65 kilometres ( 40 mi ) distant . The park varies in altitude between 200
+metres ( 660 ft ) in the east and 840 metres ( 2,760 ft ) in the south - west near Berg - en - Dal . The highest point in the park is here , a hill called
+Khandzalive . Several rivers run through the park from west to east , including the Sabie , Olifants , Crocodile , Letaba , Luvuvhu and Limpopo Rivers .
+</item 1>
+
+<item 2>
+Kruger National Park, governed by South African National Parks, covers 19,485 km² in northeastern South Africa’s Limpopo and Mpumalanga provinces, stretching
+360 km north–south and 65 km east–west. Headquartered at Skukuza, it was first protected in 1898 and became South Africa’s first national park in 1926. It
+borders Zimbabwe and Mozambique and forms part of the Great Limpopo Transfrontier Park. Nearby reserve fences
+</item 2>
+
+<item 3>
+Kruger National Park, managed by SANParks in Limpopo and Mpumalanga, covers 19,485 km² along Mozambique and Zimbabwe. Protected from 1898 and established in
+1926, it features varied ecosystems, 147 large-mammal species, 517 bird species and the Big Five. Hot, rainy summers contrast with dry winters that favor
+wildlife viewing. Nine gates serve camps, lodges and wilderness trails. The park’s history includes forced Makuleke
+</item 3>
+
+<item 4>
+Kruger National Park
+981 ( in 2004 ) Governing body South African National Parks www.sanparks.org/parks/kruger/ Kruger National Park is one of the largest game reserves in Africa .
+It covers an area of 19,485 square kilometres ( 7,523 sq mi ) in the provinces of Limpopo and Mpumalanga in northeastern South Africa , and extends 360
+kilometres ( 220 mi ) from north to south and 65 kilometres ( 40 mi ) from east to west . The administrative headquarters are in Skukuza . Areas of the park
+were first protected by the government of the South African Republic in 1898 , and it became South Africa 's first national park in 1926 . To the west and south
+of the Kruger National Park are the two South African provinces of Limpopo and Mpumalanga . In the north is Zimbabwe , and to the east is Mozambique . It is now
+part of the Great Limpopo Transfrontier Park , a peace park that links Kruger National Park with the Gonarezhou National Park in Zimbabwe , and with the Limpopo
+National Park in Mozambique .
+</item 4>
+
+<item 5>
+Kruger National Park, in South Africa’s Limpopo and Mpumalanga provinces, covers 19,485 km² and is managed by South African National Parks. Proclaimed a
+wildlife sanctuary by President Paul Kruger in 1898 in an area inhabited by Tsonga people, it became a national park in 1926. The park protects diverse
+wildlife, including mammals, birds, reptiles, amphibians and fish. It recorded about 1.34 million visitors in 2004
+</item 5>
+
+<item 6>
+Kruger National Park is a South African national park and IUCN Category II protected area, established in 1926. It spans Limpopo and Mpumalanga and is
+associated with Paul Kruger. The page also includes categories and metadata concerning border barriers, coordinates, external links, language editions, and
+authority identifiers.
+</item 6>
+
+<item 7>
+Kruger National Park
+The land was given back to the Makuleke people , however , they chose not to resettle on the land but to engage with the private sector to invest in tourism ,
+thus resulting in the building of several game lodges . In the late 1990s , the fences between the Kruger Park and Klaserie Game Reserve , Olifants Game Reserve
+and Balule Game Reserve were dropped and incorporated into the Greater Kruger Park with 40 000 hectares added to the Reserve . In 2002 , Kruger National Park ,
+Gonarezhou National Park in Zimbabwe , and Limpopo National Park in Mozambique were incorporated into a peace park , the Great Limpopo Transfrontier Park .
+Location and geography ( edit ) Geography of the Kruger National Park Olifants River Luvuvhu and Limpopo rivers at Crookes Corner in Pafuri triangle The park
+lies in the north - east of South Africa , in the eastern parts of Limpopo and Mpumalanga provinces . Phalaborwa , Limpopo is the only town in South Africa that
+borders the Kruger National Park .
+</item 7>
+
+<item 8>
+Kruger National Park
+Kruger National Park - Wikipedia Kruger National Park Jump to : navigation , search Kruger National reserve IUCN category II ( national park ) Burchell 's zebra
+in a Kruger landscape Location of the park ( red area ) in South Africa Location Limpopo and Mpumalanga provinces , South Africa Nearest city Nelspruit (
+southern ) Phalaborwa ( central ) Coordinates 24 ° 0 ′ 41 '' S 31 ° 29 ′ 7 '' E ﻿ / ﻿ 24.01139 ° S 31.48528 ° E ﻿ / - 24.01139 ; 31.48528 Coordinates : 24 ° 0 ′
+41 '' S 31 ° 29 ′ 7 '' E ﻿ / ﻿ 24.01139 ° S 31.48528 ° E ﻿ / - 24.01139 ; 31.48528 Area 19,485 km ( 7,523 sq mi ) Established 31 May 1926 ( 1898 ) Visitors
+1,336,981 ( in 2004 ) Governing body South African National Parks www.sanparks.
+</item 8>
+
+<item 9>
+The fragment lists references on Kruger National Park camping, rest areas, accommodation, and changing eateries, plus links to official information, webcams,
+maps, and related South African parks. It identifies Kruger as an IUCN Category II national park and a protected area established in 1926.
+</item 9>
+
+<item 10>
+Kruger National Park covers 19,485 km² and stretches about 360 km north–south, averaging 65 km wide and reaching 90 km at its widest. The Limpopo and Crocodile
+Rivers form its northern and southern boundaries; the Lebombo Mountains mark the eastern edge beside Mozambique. Elevation ranges from 200 m in the east to 840
+m near Berg-en-Dal, where Khandzalive is the park’s highest point. Major west-to-east rivers
+</item 10>
+=== END ITEM id=640602631a0b7ab9 ===
+
+=== ITEM id=9cefd38ae8b124f1 ===
+Gold sentences and facts:
+Sentence 0: Year Film Nominees 2001 ( 74th ) Shrek Aron Warner Jimmy Neutron : Boy Genius Steve Oedekerk and John A. Davis Monsters , Inc . Pete Docter and John Lasseter 2002 ( 75th ) Spirited Away Hayao Miyazaki Ice Age Chris Wedge Lilo & Stitch Chris Sanders Spirit : Stallion of the Cimarron Jeffrey Katzenberg Treasure Planet Ron Clements 2003 ( 76th ) Finding Nemo Andrew Stanton Brother Bear Aaron Blaise and Robert Walker The Triplets of Belleville Sylvain Chomet ( 77th ) The Incredibles Brad Bird Shark Tale Bill Damaschke Shrek 2 Andrew Adamson 2005 ( 78th ) Wallace & Gromit : The Curse of the Were - Rabbit Nick Park and Steve Box Howl 's Moving Castle Hayao Miyazaki Corpse Bride Mike Johnson and Tim Burton 2006 ( 79th ) Happy Feet George Miller Cars John Lasseter Monster House Gil Kenan 2007 ( 80th ) Ratatouille Brad Bird Persepolis Marjane Satrapi and Vincent Paronnaud Surf 's Up Ash Brannon and Chris Buck 2008 ( 81st ) WALL - E Andrew Stanton Bolt Chris Williams and Byron Howard Kung Fu Panda John Stevenson and Mark Osborne 2009 ( 82nd ) Up Pete Docter Coraline Henry Selick Fantastic Mr. Fox Wes Anderson The Princess and the Frog John Musker and Ron Clements The Secret of Kells Tomm Moore
+  Fact 0.0: At the 2001 (74th) list, Shrek was nominated with Aron Warner as nominee.
+  Fact 0.1: At the 2001 (74th) list, Jimmy Neutron: Boy Genius was nominated with Steve Oedekerk and John A. Davis as nominees.
+  Fact 0.2: At the 2001 (74th) list, Monsters, Inc. was nominated with Pete Docter and John Lasseter as nominees.
+  Fact 0.3: At the 2002 (75th) list, Spirited Away was nominated with Hayao Miyazaki as nominee.
+  Fact 0.4: At the 2002 (75th) list, Ice Age was nominated with Chris Wedge as nominee.
+  Fact 0.5: At the 2002 (75th) list, Lilo & Stitch was nominated with Chris Sanders as nominee.
+  Fact 0.6: At the 2002 (75th) list, Spirit: Stallion of the Cimarron was nominated with Jeffrey Katzenberg as nominee.
+  Fact 0.7: At the 2002 (75th) list, Treasure Planet was nominated with Ron Clements as nominee.
+  Fact 0.8: At the 2003 (76th) list, Finding Nemo was nominated with Andrew Stanton as nominee.
+  Fact 0.9: At the 2003 (76th) list, Brother Bear was nominated with Aaron Blaise and Robert Walker as nominees.
+  Fact 0.10: At the 2003 (76th) list, The Triplets of Belleville was nominated with Sylvain Chomet as nominee.
+  Fact 0.11: At the (77th) list, The Incredibles was nominated with Brad Bird as nominee.
+  Fact 0.12: At the (77th) list, Shark Tale was nominated with Bill Damaschke as nominee.
+  Fact 0.13: At the (77th) list, Shrek 2 was nominated with Andrew Adamson as nominee.
+  Fact 0.14: At the 2005 (78th) list, Wallace & Gromit: The Curse of the Were-Rabbit was nominated with Nick Park and Steve Box as nominees.
+  Fact 0.15: At the 2005 (78th) list, Howl's Moving Castle was nominated with Hayao Miyazaki as nominee.
+  Fact 0.16: At the 2005 (78th) list, Corpse Bride was nominated with Mike Johnson and Tim Burton as nominees.
+  Fact 0.17: At the 2006 (79th) list, Happy Feet was nominated with George Miller as nominee.
+  Fact 0.18: At the 2006 (79th) list, Cars was nominated with John Lasseter as nominee.
+  Fact 0.19: At the 2006 (79th) list, Monster House was nominated with Gil Kenan as nominee.
+  Fact 0.20: At the 2007 (80th) list, Ratatouille was nominated with Brad Bird as nominee.
+  Fact 0.21: At the 2007 (80th) list, Persepolis was nominated with Marjane Satrapi and Vincent Paronnaud as nominees.
+  Fact 0.22: At the 2007 (80th) list, Surf's Up was nominated with Ash Brannon and Chris Buck as nominees.
+  Fact 0.23: At the 2008 (81st) list, WALL-E was nominated with Andrew Stanton as nominee.
+  Fact 0.24: At the 2008 (81st) list, Bolt was nominated with Chris Williams and Byron Howard as nominees.
+  Fact 0.25: At the 2008 (81st) list, Kung Fu Panda was nominated with John Stevenson and Mark Osborne as nominees.
+  Fact 0.26: At the 2009 (82nd) list, Up was nominated with Pete Docter as nominee.
+  Fact 0.27: At the 2009 (82nd) list, Coraline was nominated with Henry Selick as nominee.
+  Fact 0.28: At the 2009 (82nd) list, Fantastic Mr. Fox was nominated with Wes Anderson as nominee.
+  Fact 0.29: At the 2009 (82nd) list, The Princess and the Frog was nominated with John Musker and Ron Clements as nominees.
+  Fact 0.30: At the 2009 (82nd) list, The Secret of Kells was nominated with Tomm Moore as nominee.
+
+Retrieved items:
+<item 1>
+Academy Award for Best Animated Feature
+Ron Clements , and Osnat Shurer My Life as a Zucchini Claude Barras and Max Karli The Red Turtle Michaël Dudok de Wit and Toshio Suzuki 2017 ( 90th ) The Boss
+Baby Tom McGrath and Ramsey Ann Naito The Breadwinner Nora Twomey and Anthony Leo Coco Lee Unkrich and Darla K. Anderson Ferdinand Carlos Saldanha Loving
+Vincent Dorota Kobiela , Hugh Welchman , and Ivan Mactaggart Multiple wins ( edit ) 2 wins Brad Bird Pete Docter Andrew Stanton 1 win Chris Buck Byron Howard
+Hayao Miyazaki Rich Moore Lee Unkrich Chris Williams Multiple nominations ( edit ) 3 nominations Ron Clements Pete Docter Hayao Miyazaki Chris Sanders 2
+nominations Brad Bird Chris Buck Tim Burton Sylvain Chomet Dean DeBlois Byron Howard Travis Knight John Lasseter Rich Moore Tomm Moore John Musker Yoshiaki
+Nishimura Andrew Stanton Toshio Suzuki Lee Unkrich Chris Williams Studio breakdown ( edit ) Studio Wins Nominations Films Pixar 8 11 Monsters , Inc.
+</item 1>
+
+<item 2>
+Academy Award for Best Animated Feature
+The Academy Award for Best Animated Feature was first awarded in 2002 for films made in 2001 . The entire AMPAS membership has been eligible to choose the
+winner since the award 's inception . If there are sixteen or more films submitted for the category , the winner is voted from a shortlist of five films , which
+has happened eight times , otherwise there will only be three films on the shortlist . Additionally , eight eligible animated features must have been
+theatrically released in Los Angeles County within the calendar year for this category to be activated . Animated films can be nominated for other categories ,
+but have rarely been so ; Beauty and the Beast ( 1991 ) was the first animated film ever nominated for Best Picture . Up ( 2009 ) and Toy Story 3 ( 2010 ) also
+received Best Picture nominations after the Academy expanded the number of nominees from five to ten . Waltz with Bashir ( 2008 ) is the only animated film ever
+nominated for Best Foreign Language Film ( though it did not receive a nomination for Best Animated Feature ) .
+</item 2>
+
+<item 3>
+Academy Award for Best Animated Feature
+This could be the producer , the director , or both . For the 76th Academy Awards in 2004 , only the director ( s ) of the film received the nomination . For
+the 86th Academy Awards ten years later , this was amended to include one producer and up to two directors . Winners and nominations ( edit ) 2000s ( edit )
+Year Film Nominees 2001 ( 74th ) Shrek Aron Warner Jimmy Neutron : Boy Genius Steve Oedekerk and John A. Davis Monsters , Inc . Pete Docter and John Lasseter
+2002 ( 75th ) Spirited Away Hayao Miyazaki Ice Age Chris Wedge Lilo & Stitch Chris Sanders Spirit : Stallion of the Cimarron Jeffrey Katzenberg Treasure Planet
+Ron Clements 2003 ( 76th ) Finding Nemo Andrew Stanton Brother Bear Aaron Blaise and Robert Walker The Triplets of Belleville Sylvain Chomet ( 77th ) The
+Incredibles Brad Bird Shark Tale Bill Damaschke Shrek 2 Andrew Adamson 2005 ( 78th ) Wallace & Gromit : The Curse of the Were -
+</item 3>
+
+<item 4>
+Academy Award for Best Animated Feature
+Book Portal Academy Award for Best Animated Feature Shrek -- Aron Warner ( 2001 ) Spirited Away -- Hayao Miyazaki ( 2002 ) Finding Nemo -- Andrew Stanton ( 2003
+) The Incredibles -- Brad Bird ( 2004 ) Wallace & Gromit : The Curse of the Were - Rabbit -- Nick Park and Steve Box ( 2005 ) Happy Feet -- George Miller ( 2006
+) Ratatouille -- Brad Bird ( 2007 ) WALL - E -- Andrew Stanton ( 2008 ) Up -- Pete Docter ( 2009 ) Toy Story 3 -- Lee Unkrich ( 2010 ) Rango -- Gore Verbinski (
+2011 ) Brave -- Mark Andrews and Brenda Chapman ( 2012 ) Frozen -- Chris Buck , Jennifer Lee , and Peter Del Vecho ( 2013 ) Big Hero 6 -- Don Hall , Chris
+Williams , and Roy Conli ( 2014 ) Inside Out -- Pete Docter and Jonas Rivera ( 2015 ) Zootopia -- Byron Howard , Rich Moore , and Clark Spencer ( 2016 )
+Retrieved from `` https://en.wikipedia.org/w/index.
+</item 4>
+
+<item 5>
+Academy Award for Best Animated Feature
+The Academy Award for Best Animated Feature was first given out at the 74th Academy Awards , held on March 24 , 2002 . The Academy included a rule that stated
+that the award would not be presented in a year in which fewer than eight eligible films opened in theaters . People in the animation industry and fans
+expressed hope that the prestige from this award and the resulting boost to the box office would encourage the increased production of animated features . Some
+members and fans have criticized the award , however , saying it is only intended to prevent animated films from having a chance of winning Best Picture .
+DreamWorks had advertised heavily during the holiday 2001 season for Shrek , but was disappointed when the rumored Best Picture nomination did not materialize ,
+though it was nominated for and ended up winning the inaugural Best Animated Feature award. . the Shrek franchise to date is most succsfull franchise with one
+win and three nomtied .
+</item 5>
+
+<item 6>
+Academy Award for Best Animated Feature
+In 2009 , when the nominee slots for Best Picture were doubled to ten , Up was nominated for both Best Animated Feature and Best Picture at the 82nd Academy
+Awards , the first film to do so since the creation of the Animated Feature category . This feat was repeated the following year by Toy Story 3 . Since 2010
+onward , with the increasing competitiveness of the Animated Feature category , Pixar ( a perennial nominee ) did not receive nominations for several recent
+films considering the studio has released films of more mixed critical reaction and box office earnings , while Pixar 's sister studio Disney Animation won
+their first three awards . In 2010 , the Academy enacted a new rule regarding the performance capture technique employed in films such as Disney 's A Christmas
+Carol from Robert Zemeckis and The Adventures of Tintin from Steven Spielberg , and how they might not be eligible in this category in the future . This rule
+was possibly made to prevent nominations of live - action films that rely heavily on motion capture , such as James Cameron 's Avatar . When the category was
+first instated , the nomination went to the person ( s ) most involved in creating the winning film .
+</item 6>
+
+<item 7>
+Academy Award for Best Animated Feature
+Inc. , Finding Nemo , The Incredibles , Cars , Ratatouille , WALL - E , Up , Toy Story 3 , Brave , Inside Out , Coco Disney 10 Lilo & Stitch , Treasure Planet ,
+Brother Bear , Bolt , The Princess and the Frog , Wreck - It Ralph , Frozen , Big Hero 6 , Zootopia , Moana DreamWorks Animation 12 Shrek , Spirit : Stallion of
+the Cimarron , Shrek 2 , Shark Tale , Wallace & Gromit : The Curse of the Were - Rabbit , Kung Fu Panda , How to Train Your Dragon , Kung Fu Panda 2 , Puss in
+Boots , The Croods , How to Train Your Dragon 2 , The Boss Baby Studio Ghibli 6 Spirited Away , Howl 's Moving Castle , The Wind Rises , The Tale of the
+Princess Kaguya , When Marnie Was There , The Red Turtle Aardman Wallace & Gromit : The Curse of the Were - Rabbit , The Pirates !
+</item 7>
+
+<item 8>
+Academy Award for Best Animated Feature
+Band of Misfits , Shaun the Sheep Movie Nickelodeon Jimmy Neutron : Boy Genius , Rango Laika 0 5 Corpse Bride , Coraline , ParaNorman , The Boxtrolls , Kubo and
+the Two Strings Les Armateurs The Triplets of Belleville , The Secret of Kells , Ernest & Celestine Fox Ice Age , Fantastic Mr. Fox , Ferdinand Cartoon Saloon
+The Secret of Kells , Song of the Sea , The Breadwinner Sony Surf 's Up , The Pirates ! Band of Misfits Blue Sky Ice Age , Ferdinand Tim Burton Corpse Bride ,
+Frankenweenie Computer - animated nominees ( edit ) Pixar ( edit ) Monsters , Inc .
+</item 8>
+
+<item 9>
+Academy Award for Best Animated Feature
+( 82nd ) Up Pete Docter Coraline Henry Selick Fantastic Mr. Fox Wes Anderson The Princess and the Frog John Musker and Ron Clements The Secret of Kells Tomm
+Moore 2010s ( edit ) Year Film Nominees ( 83rd ) Toy Story 3 Lee Unkrich How to Train Your Dragon Chris Sanders and Dean DeBlois The Illusionist Sylvain Chomet
+2011 ( 84th ) Rango Gore Verbinski A Cat in Paris Alain Gagnol and Jean - Loup Felicioli Chico & Rita Fernando Trueba and Javier Mariscal Kung Fu Panda 2
+Jennifer Yuh Nelson Puss in Boots Chris Miller 2012 ( 85th ) Brave Mark Andrews and Brenda Chapman Frankenweenie Tim Burton ParaNorman Sam Fell and Chris Butler
+The Pirates ! Band of Misfits Peter Lord Wreck - It Ralph Rich Moore 2013 ( 86th ) Frozen Chris Buck , Jennifer Lee , and Peter Del Vecho The Croods Chris
+Sanders , Kirk DeMicco , and Kristine Belson Despicable Me 2 Pierre Coffin , Chris Renaud ,
+</item 9>
+
+<item 10>
+Academy Award for Best Animated Feature
+2005 ( 78th ) Wallace & Gromit : The Curse of the Were - Rabbit Nick Park and Steve Box Howl 's Moving Castle Hayao Miyazaki Corpse Bride Mike Johnson and Tim
+Burton 2006 ( 79th ) Happy Feet George Miller Cars John Lasseter Monster House Gil Kenan 2007 ( 80th ) Ratatouille Brad Bird Persepolis Marjane Satrapi and
+Vincent Paronnaud Surf 's Up Ash Brannon and Chris Buck 2008 ( 81st ) WALL - E Andrew Stanton Bolt Chris Williams and Byron Howard Kung Fu Panda John Stevenson
+and Mark Osborne 2009 ( 82nd ) Up Pete Docter Coraline Henry Selick Fantastic Mr.
+</item 10>
+=== END ITEM id=9cefd38ae8b124f1 ===
+
+=== ITEM id=910a692c18ddcfca ===
+Gold sentences and facts:
+Sentence 0: No . overall No. in season Title Directed by Written by Original release date `` Chapter One : The Vanishing of Will Byers '' The Duffer Brothers The Duffer Brothers July 15 , 2016 ( 2016 - 07 - 15 ) On November 6 , 1983 , in a U.S. Department of Energy laboratory in the town of Hawkins , Indiana , a scientist is attacked by an unseen creature . While bicycling home from a Dungeons & Dragons session with his friends , 12 - year - old Will Byers encounters the creature and vanishes . The next day , a buzz - cut young girl wearing a hospital gown steals food from a local diner . The owner , Benny , takes pity on her and feeds her before calling social services . From a tattoo on her arm , he learns that her name is Eleven . A woman posing as a social worker arrives and murders Benny . Armed men search the diner for Eleven , but she escapes . Will 's mother Joyce believes she hears Will 's voice on a distorted phone call , but her phone short circuits . Will 's friends Mike , Dustin , and Lucas search for Will in the woods and find Eleven . `` Chapter Two : The Weirdo on Maple Street '' The Duffer Brothers The Duffer Brothers July 15 , 2016 ( 2016 - 07 - 15 ) The boys bring Eleven to Mike 's house , where she sleeps in the basement . The next day , Mike nicknames her `` El '' . She says that `` bad people '' are looking for her and refuses to meet Mike 's parents . Scientists from the laboratory find a substance oozing from the walls of Joyce 's home . At Mike 's home , Eleven recognizes and points out Will in a photo . Dustin and Lucas want to inform Mike 's parents about Eleven , but she uses psychokinesis to stop them . While searching for Will , Mr. Clarke , the boys ' science teacher , discovers a scrap of a hospital gown outside the laboratory grounds . Nancy goes with her friend Barb to a party at her boyfriend Steve 's house . Will 's brother Jonathan investigates the woods where Will went missing . Hearing screaming , he runs to help but finds only Steve , Nancy , and their friends roughhousing around Steve 's swimming pool . He secretly photographs them . Barb , left alone by the poolside , vanishes . Joyce receives another call from Will , hears music from his room , and sees something coming through the wall . `` Chapter Three : Holly , Jolly '' Shawn Levy Jessica Mecklenburg July 15 , 2016 ( 2016 - 07 - 15 ) Barb wakes up in an empty and decaying pool . She screams for Nancy and attempts to climb out but is dragged down by something unseen . Joyce strings Christmas lights around her home to talk to Will , who can turn them on and off . Hawkins Lab director Dr. Martin Brenner allows Hopper to view the lab 's security camera footage . Hopper realizes it is fake . He and his deputies research Hawkins Lab , Brenner , and a woman named Terry Ives who claimed her daughter was taken by Brenner . Eleven has a flashback in which Brenner , whom she calls `` Papa , '' has her put in solitary confinement for refusing to telekinetically harm a cat . Nancy worries about Barb , who is missing . Steve and his friends discover Jonathan 's photographs . They destroy them and his camera . Nancy recovers a photo of Barb by the poolside and returns to Steve 's house to search for her . Nancy finds Barb 's car and sees the creature in the woods . Joyce establishes a code with Will using the lights , which he uses to tell her that he is alive but unsafe . He tells Joyce to run as a creature begins to climb through her wall . Will 's apparent body is discovered in the water at a quarry . `` Chapter Four : The Body '' Shawn Levy Justin Doble July 15 , 2016 ( 2016 - 07 - 15 ) Eleven proves to the boys that Will is still alive by making contact through Mike 's walkie - talkie . Joyce goes to the morgue to view the body and refuses to believe it is Will . The boys give Eleven a makeover so they can sneak her into school . Joyce hears Will in her living room wall . Tearing away the wallpaper , she sees him behind a membrane . At school , Eleven uses Mr. Clarke 's ham radio to channel Will talking to his mother . Joyce demolishes the wall with an axe but reveals only her front porch . Nancy discovers a figure behind Barb in Jonathan 's photo . Jonathan realizes that the figure matches his mother 's description of the creature : a humanoid figure with long arms and no face . Nancy tells the police about her missing friend and subsequently admits to her mother that she slept with Steve . When she tells Steve about the police , she is irritated that he cares only about not getting in trouble with his father . Hopper confronts the state trooper who found Will 's body and beats him until he admits he was ordered to lie . Hopper goes to the morgue and finds that Will 's supposed body is a dummy . He breaks into Hawkins laboratory . 5 5 `` Chapter Five : The Flea and the Acrobat '' The Duffer Brothers Alison Tatlock July 15 , 2016 ( 2016 - 07 - 15 ) Will 's father Lonnie assures Joyce her experiences are hallucinations . Hopper discovers a portal in the basement of the lab but is knocked out by the lab 's guards . He wakes at home and discovers a hidden microphone . Sheriff 's deputies inform Hopper that Barb 's car was found , but Hopper finds the state 's involvement suspicious . The boys determine Will is trapped in an alternate dimension Eleven calls the `` Upside Down , '' and he is being pursued by a monster similar to a Demogorgon . After Will 's funeral , science teacher Mr. Clarke tells the boys that a high - energy spacetime tear could create a passage between dimensions . Using their compasses , they search for a disruption in the Earth 's electromagnetic field . Eleven remembers encountering the creature during a lab experiment , and afraid , she redirects the compasses . Lucas notices and confronts her . Mike defends her , he and Lucas fight , and Eleven telekinetically flings Lucas off Mike . While Dustin and Mike tend to the unconscious Lucas , Eleven disappears . In the woods , Nancy and Jonathan find a wounded deer . The creature drags the deer away , and Nancy follows the trail of blood to a portal to the Upside Down . She crawls through and discovers the creature feasting upon the deer . She snaps a twig and draws the creature 's attention . 6 6 `` Chapter Six : The Monster '' The Duffer Brothers Jessie Nickson - Lopez July 15 , 2016 ( 2016 - 07 - 15 ) Jonathan pulls Nancy back through the portal and saves her from the monster . Later , Steve sees them together through her bedroom window and assumes they are dating . Nancy and Jonathan resolve to kill the monster and purchase supplies from an army surplus store . During a fist fight with Steve , Jonathan inadvertently assaults a police officer and is arrested . Joyce and Hopper track down Terry Ives , who is catatonic and tended by her sister Becky . Becky explains that Terry underwent Project MKUltra testing while unknowingly pregnant ; she believed her daughter Jane was kidnapped by Brenner at birth . Joyce and Hopper conclude Eleven is likely Jane . Eleven shoplifts Eggo waffles . She recalls being asked to contact the monster and accidentally opening the portal to the Upside Down in the laboratory basement . While searching for Eleven , Mike and Dustin are ambushed by school bullies Troy and James . Troy holds Dustin at knifepoint and demands Mike make a suicidal jump into the lake where Will 's body was discovered . Mike jumps but is levitated to safety by Eleven , who scares away the bullies . Lucas realizes agents from the laboratory are heading to Mike 's house . 7 7 `` Chapter Seven : The Bathtub '' The Duffer Brothers Justin Doble July 15 , 2016 ( 2016 - 07 - 15 ) Lucas warns Mike via walkie - talkie that government agents are en route . Mike , Dustin , and Eleven flee . Eleven telekinetically flips a van that blocks their path , and the kids escape . Lucas reconciles with Mike and Eleven . Joyce and Hopper are called to the police station because of Jonathan 's assault . Jonathan and Nancy reveal their knowledge of the monster to Joyce and Hopper . The group contacts Mike and his friends and they rendezvous . They ask Eleven to search for Will and Barb , but her earlier feats have left her too weak to find them . To amplify Eleven 's powers , they break into the middle school and build a sensory - deprivation tank . Eleven finds Barb 's corpse with a slug - like creature crawling out of her mouth . With Joyce 's help , she finds Will alive , hiding in the Upside Down `` Castle Byers , '' his backyard fort . Hopper and Joyce break into Hawkins Laboratory but are apprehended by security guards . Nancy and Jonathan resolve to kill the monster and steal their hunting gear back from the police station . In the Upside Down , the monster breaks into the fort where Will is hiding . 8 8 `` Chapter Eight : The Upside Down '' The Duffer Brothers Story by : Paul Dichter Teleplay by : The Duffer Brothers July 15 , 2016 ( 2016 - 07 - 15 ) Hopper gives up Eleven 's location so that he and Joyce can enter the Upside Down . They find Will unconscious in the Upside - Down town library . They pull a tendril out of his throat , perform CPR , and revive him . Nancy and Jonathan booby - trap the Byers ' home , then cut their hands to attract the monster with their blood . Steve arrives , intending to apologize to Jonathan about their fight , but the monster attacks . The monster springs the trap but escapes back to the Upside Down . Eleven and the boys hide in the middle school . Mike asks Eleven to a school dance , the Snow Ball , and kisses her . The military storms the school to re-capture Eleven , but she kills them and collapses . As Brenner cradles her , the monster attacks , apparently killing him . The boys hide Eleven in a classroom . The monster corners them , but Eleven pins it against a wall . She says goodbye to Mike , disintegrates the monster , and vanishes . Will is hospitalized and reunited with his mother , brother , and friends . Hopper is reluctantly picked up by a black car . One month later , Nancy and Steve are back together , and both are friends with Jonathan . Hopper leaves Eggo waffles and other food in a box in the woods . Will coughs up a slug - like creature and has a vision of the world as the Upside Down , but he hides this from his family .
+  Fact 0.0: The table lists, for each episode, its overall number, its number in the season, its title, its director, its writers, and its original release date.
+  Fact 0.1: Chapter One: The Vanishing of Will Byers was directed by The Duffer Brothers and written by The Duffer Brothers.
+  Fact 0.2: Chapter One: The Vanishing of Will Byers was released on July 15, 2016.
+  Fact 0.3: On November 6, 1983, in a U.S. Department of Energy laboratory in the town of Hawkins, Indiana, a scientist is attacked by an unseen creature.
+  Fact 0.4: While bicycling home from a Dungeons & Dragons session with his friends, 12-year-old Will Byers encounters the creature and vanishes.
+  Fact 0.5: The next day, a buzz-cut young girl wearing a hospital gown steals food from a local diner.
+  Fact 0.6: The diner's owner, Benny, takes pity on the girl and feeds her before calling social services.
+  Fact 0.7: From a tattoo on her arm, Benny learns that the girl's name is Eleven.
+  Fact 0.8: A woman posing as a social worker arrives and murders Benny.
+  Fact 0.9: Armed men search the diner for Eleven, but she escapes.
+  Fact 0.10: Will's mother Joyce believes she hears Will's voice on a distorted phone call, but her phone short circuits.
+  Fact 0.11: Will's friends Mike, Dustin, and Lucas search for Will in the woods and find Eleven.
+  Fact 0.12: Chapter Two: The Weirdo on Maple Street was directed by The Duffer Brothers and written by The Duffer Brothers.
+  Fact 0.13: Chapter Two: The Weirdo on Maple Street was released on July 15, 2016.
+  Fact 0.14: The boys bring Eleven to Mike's house, where she sleeps in the basement.
+  Fact 0.15: The next day, Mike nicknames her "El".
+  Fact 0.16: Eleven says that "bad people" are looking for her and refuses to meet Mike's parents.
+  Fact 0.17: Scientists from the laboratory find a substance oozing from the walls of Joyce's home.
+  Fact 0.18: At Mike's home, Eleven recognizes and points out Will in a photo.
+  Fact 0.19: Dustin and Lucas want to inform Mike's parents about Eleven, but she uses psychokinesis to stop them.
+  Fact 0.20: While searching for Will, Mr. Clarke, the boys' science teacher, discovers a scrap of a hospital gown outside the laboratory grounds.
+  Fact 0.21: Nancy goes with her friend Barb to a party at her boyfriend Steve's house.
+  Fact 0.22: Will's brother Jonathan investigates the woods where Will went missing.
+  Fact 0.23: Hearing screaming, Jonathan runs to help but finds only Steve, Nancy, and their friends roughhousing around Steve's swimming pool.
+  Fact 0.24: Jonathan secretly photographs Steve, Nancy, and their friends.
+  Fact 0.25: Barb, left alone by the poolside, vanishes.
+  Fact 0.26: Joyce receives another call from Will, hears music from his room, and sees something coming through the wall.
+  Fact 0.27: Chapter Three: Holly, Jolly was directed by Shawn Levy and written by Jessica Mecklenburg.
+  Fact 0.28: Chapter Three: Holly, Jolly was released on July 15, 2016.
+  Fact 0.29: Barb wakes up in an empty and decaying pool.
+  Fact 0.30: Barb screams for Nancy and attempts to climb out but is dragged down by something unseen.
+  Fact 0.31: Joyce strings Christmas lights around her home to talk to Will, who can turn them on and off.
+  Fact 0.32: Hawkins Lab director Dr. Martin Brenner allows Hopper to view the lab's security camera footage.
+  Fact 0.33: Hopper realizes the footage is fake.
+  Fact 0.34: Hopper and his deputies research Hawkins Lab, Brenner, and a woman named Terry Ives, who claimed her daughter was taken by Brenner.
+  Fact 0.35: Eleven has a flashback in which Brenner, whom she calls "Papa," has her put in solitary confinement for refusing to telekinetically harm a cat.
+  Fact 0.36: Nancy worries about Barb, who is missing.
+  Fact 0.37: Steve and his friends discover Jonathan's photographs.
+  Fact 0.38: Steve and his friends destroy Jonathan's photographs and his camera.
+  Fact 0.39: Nancy recovers a photo of Barb by the poolside and returns to Steve's house to search for her.
+  Fact 0.40: Nancy finds Barb's car and sees the creature in the woods.
+  Fact 0.41: Joyce establishes a code with Will using the lights, which he uses to tell her that he is alive but unsafe.
+  Fact 0.42: Will tells Joyce to run as a creature begins to climb through her wall.
+  Fact 0.43: Will's apparent body is discovered in the water at a quarry.
+  Fact 0.44: Chapter Four: The Body was directed by Shawn Levy and written by Justin Doble.
+  Fact 0.45: Chapter Four: The Body was released on July 15, 2016.
+  Fact 0.46: Eleven proves to the boys that Will is still alive by making contact through Mike's walkie-talkie.
+  Fact 0.47: Joyce goes to the morgue to view the body and refuses to believe it is Will.
+  Fact 0.48: The boys give Eleven a makeover so they can sneak her into school.
+  Fact 0.49: Joyce hears Will in her living room wall.
+  Fact 0.50: Tearing away the wallpaper, Joyce sees Will behind a membrane.
+  Fact 0.51: At school, Eleven uses Mr. Clarke's ham radio to channel Will talking to his mother.
+  Fact 0.52: Joyce demolishes the wall with an axe but reveals only her front porch.
+  Fact 0.53: Nancy discovers a figure behind Barb in Jonathan's photo.
+  Fact 0.54: Jonathan realizes the figure matches his mother's description of the creature: a humanoid figure with long arms and no face.
+  Fact 0.55: Nancy tells the police about her missing friend.
+  Fact 0.56: Nancy subsequently admits to her mother that she slept with Steve.
+  Fact 0.57: When Nancy tells Steve about the police, she is irritated that he cares only about not getting in trouble with his father.
+  Fact 0.58: Hopper confronts the state trooper who found Will's body and beats him until he admits he was ordered to lie.
+  Fact 0.59: Hopper goes to the morgue and finds that Will's supposed body is a dummy.
+  Fact 0.60: Hopper breaks into Hawkins laboratory.
+  Fact 0.61: Chapter Five: The Flea and the Acrobat was directed by The Duffer Brothers and written by Alison Tatlock.
+  Fact 0.62: Chapter Five: The Flea and the Acrobat was released on July 15, 2016.
+  Fact 0.63: Will's father Lonnie assures Joyce her experiences are hallucinations.
+  Fact 0.64: Hopper discovers a portal in the basement of the lab but is knocked out by the lab's guards.
+  Fact 0.65: Hopper wakes at home and discovers a hidden microphone.
+  Fact 0.66: Sheriff's deputies inform Hopper that Barb's car was found.
+  Fact 0.67: Hopper finds the state's involvement suspicious.
+  Fact 0.68: The boys determine Will is trapped in an alternate dimension that Eleven calls the "Upside Down."
+  Fact 0.69: The boys determine Will is being pursued by a monster similar to a Demogorgon.
+  Fact 0.70: After Will's funeral, science teacher Mr. Clarke tells the boys that a high-energy spacetime tear could create a passage between dimensions.
+  Fact 0.71: Using their compasses, the boys search for a disruption in the Earth's electromagnetic field.
+  Fact 0.72: Eleven remembers encountering the creature during a lab experiment.
+  Fact 0.73: Afraid, Eleven redirects the compasses.
+  Fact 0.74: Lucas notices and confronts Eleven.
+  Fact 0.75: Mike defends Eleven, and he and Lucas fight.
+  Fact 0.76: Eleven telekinetically flings Lucas off Mike.
+  Fact 0.77: While Dustin and Mike tend to the unconscious Lucas, Eleven disappears.
+  Fact 0.78: In the woods, Nancy and Jonathan find a wounded deer.
+  Fact 0.79: The creature drags the deer away, and Nancy follows the trail of blood to a portal to the Upside Down.
+  Fact 0.80: Nancy crawls through the portal and discovers the creature feasting upon the deer.
+  Fact 0.81: Nancy snaps a twig and draws the creature's attention.
+  Fact 0.82: Chapter Six: The Monster was directed by The Duffer Brothers and written by Jessie Nickson-Lopez.
+  Fact 0.83: Chapter Six: The Monster was released on July 15, 2016.
+  Fact 0.84: Jonathan pulls Nancy back through the portal and saves her from the monster.
+  Fact 0.85: Later, Steve sees Nancy and Jonathan together through her bedroom window and assumes they are dating.
+  Fact 0.86: Nancy and Jonathan resolve to kill the monster and purchase supplies from an army surplus store.
+  Fact 0.87: During a fist fight with Steve, Jonathan inadvertently assaults a police officer and is arrested.
+  Fact 0.88: Joyce and Hopper track down Terry Ives, who is catatonic and tended by her sister Becky.
+  Fact 0.89: Becky explains that Terry underwent Project MKUltra testing while unknowingly pregnant.
+  Fact 0.90: Becky explains that Terry believed her daughter Jane was kidnapped by Brenner at birth.
+  Fact 0.91: Joyce and Hopper conclude Eleven is likely Jane.
+  Fact 0.92: Eleven shoplifts Eggo waffles.
+  Fact 0.93: Eleven recalls being asked to contact the monster and accidentally opening the portal to the Upside Down in the laboratory basement.
+  Fact 0.94: While searching for Eleven, Mike and Dustin are ambushed by school bullies Troy and James.
+  Fact 0.95: Troy holds Dustin at knifepoint and demands Mike make a suicidal jump into the lake where Will's body was discovered.
+  Fact 0.96: Mike jumps but is levitated to safety by Eleven, who scares away the bullies.
+  Fact 0.97: Lucas realizes agents from the laboratory are heading to Mike's house.
+  Fact 0.98: Chapter Seven: The Bathtub was directed by The Duffer Brothers and written by Justin Doble.
+  Fact 0.99: Chapter Seven: The Bathtub was released on July 15, 2016.
+  Fact 0.100: Lucas warns Mike via walkie-talkie that government agents are en route.
+  Fact 0.101: Mike, Dustin, and Eleven flee.
+  Fact 0.102: Eleven telekinetically flips a van that blocks their path, and the kids escape.
+  Fact 0.103: Lucas reconciles with Mike and Eleven.
+  Fact 0.104: Joyce and Hopper are called to the police station because of Jonathan's assault.
+  Fact 0.105: Jonathan and Nancy reveal their knowledge of the monster to Joyce and Hopper.
+  Fact 0.106: The group contacts Mike and his friends, and they rendezvous.
+  Fact 0.107: The group asks Eleven to search for Will and Barb, but her earlier feats have left her too weak to find them.
+  Fact 0.108: To amplify Eleven's powers, the group breaks into the middle school and builds a sensory-deprivation tank.
+  Fact 0.109: Eleven finds Barb's corpse with a slug-like creature crawling out of her mouth.
+  Fact 0.110: With Joyce's help, Eleven finds Will alive, hiding in the Upside Down "Castle Byers," his backyard fort.
+  Fact 0.111: Hopper and Joyce break into Hawkins Laboratory but are apprehended by security guards.
+  Fact 0.112: Nancy and Jonathan resolve to kill the monster and steal their hunting gear back from the police station.
+  Fact 0.113: In the Upside Down, the monster breaks into the fort where Will is hiding.
+  Fact 0.114: Chapter Eight: The Upside Down was directed by The Duffer Brothers, with story by Paul Dichter and teleplay by The Duffer Brothers.
+  Fact 0.115: Chapter Eight: The Upside Down was released on July 15, 2016.
+  Fact 0.116: Hopper gives up Eleven's location so that he and Joyce can enter the Upside Down.
+  Fact 0.117: Hopper and Joyce find Will unconscious in the Upside-Down town library.
+  Fact 0.118: Hopper and Joyce pull a tendril out of Will's throat, perform CPR, and revive him.
+  Fact 0.119: Nancy and Jonathan booby-trap the Byers' home, then cut their hands to attract the monster with their blood.
+  Fact 0.120: Steve arrives, intending to apologize to Jonathan about their fight, but the monster attacks.
+  Fact 0.121: The monster springs the trap but escapes back to the Upside Down.
+  Fact 0.122: Eleven and the boys hide in the middle school.
+  Fact 0.123: Mike asks Eleven to a school dance, the Snow Ball, and kisses her.
+  Fact 0.124: The military storms the school to re-capture Eleven, but she kills them and collapses.
+  Fact 0.125: As Brenner cradles Eleven, the monster attacks, apparently killing him.
+  Fact 0.126: The boys hide Eleven in a classroom.
+  Fact 0.127: The monster corners the boys and Eleven, but Eleven pins it against a wall.
+  Fact 0.128: Eleven says goodbye to Mike, disintegrates the monster, and vanishes.
+  Fact 0.129: Will is hospitalized and reunited with his mother, brother, and friends.
+  Fact 0.130: Hopper is reluctantly picked up by a black car.
+  Fact 0.131: One month later, Nancy and Steve are back together, and both are friends with Jonathan.
+  Fact 0.132: Hopper leaves Eggo waffles and other food in a box in the woods.
+  Fact 0.133: Will coughs up a slug-like creature and has a vision of the world as the Upside Down, but he hides this from his family.
+
+Retrieved items:
+<item 1>
+Stranger Things
+1 Introduced in season one 2.3. 2 Introduced in season two 3 Episodes 3.1 Season 1 ( 2016 ) 3.2 Season 2 ( 2017 ) 3.3 Season 3 4 Production 4.1 Development 4.2
+Writing 4.3 Casting 4.4 Filming 4.5 Visual effects 4.6 Music 4.6. 1 Soundtracks 5 Release 5.1 Home media 6 Reception 6.1 Audience viewership 6.2 Critical
+reception 6.2. 1 Season 1 6.2. 2 Season 2 6.3 Commentary 6.4 Awards and nominations 7 Other media 7.1 Beyond Stranger Things 7.2 Mobile video game 7.3
+PlayStation VR game 7.4 Others 8 References 9 External links Premise Stranger Things is set in the fictional rural town of Hawkins , Indiana , during the early
+1980s . The nearby Hawkins National Laboratory ostensibly performs scientific research for the United States Department of Energy , but secretly does
+experiments into the paranormal and supernatural , including those that involve human test subjects .
+</item 1>
+
+<item 2>
+Stranger Things
+Birth. Movies. Death . Retrieved October 12 , 2017 . Jump up ^ Squires , John ( October 12 , 2017 ) . `` '' Stranger Things '' Season 1 Getting VHS - Style Blu
+- ray Release at Target `` . Bloody Disgusting . Retrieved October 12 , 2017 . Jump up ^ Holloway , Daniel ( August 25 , 2016 ) . `` ' Stranger Things ' Ratings
+: Where Series Ranks Among Netflix 's Most Watched '' . Variety . Retrieved August 26 , 2016 . Jump up ^ Butler , Bethoine ( September 23 , 2016 ) . `` '
+Stranger Things ' won over most viewers in just two episodes , according to Netflix '' . Washington Post . Retrieved February 6 , 2017 . Jump up ^ Spangler ,
+Todd ( August 18 , 2017 ) . `` Netflix 's ' Marvel 's The Defenders ' Poised for Binge - Viewing Pop , Data Indicates '' . Variety . Archived from the original
+on August 20 , 2017 .
+</item 2>
+
+<item 3>
+Stranger Things
+As Brenner cradles her , the monster attacks , apparently killing him . The boys hide Eleven in a classroom . The monster corners them , but Eleven pins it
+against a wall . She says goodbye to Mike , disintegrates the monster , and vanishes . Will is hospitalized and reunited with his mother , brother , and friends
+. Hopper is reluctantly picked up by a black car . One month later , Nancy and Steve are back together , and both are friends with Jonathan . Hopper leaves Eggo
+waffles and other food in a box in the woods . Will coughs up a slug - like creature and has a vision of the world as the Upside Down , but he hides this from
+his family . Season 2 ( 2017 ) No . overall No. in season Title Directed by Written by Original release date 9 `` Chapter One : MADMAX '' The Duffer Brothers
+The Duffer Brothers October 27 , 2017 ( 2017 - 10 - 27 ) On October 28 , 1984 , Kali and her gang use her psychic powers to escape the police . Her wrist tattoo
+marks her as `` 008 . ''
+</item 3>
+
+<item 4>
+*Stranger Things* is a Netflix science-fiction, horror, supernatural, and period drama created by the Duffer Brothers and set in 1980s Indiana. Its ensemble
+cast includes Winona Ryder, David Harbour, Finn Wolfhard, Millie Bobby Brown, and Gaten Matarazzo; Kyle Dixon and Michael Stein composed the music. The series
+earned major award nominations. Symphony Technology Group estimated its first season averaged 14.07 million U.S. adults aged 18–49 during its
+</item 4>
+
+<item 5>
+Stranger Things
+Episodes Season 1 ( 2016 ) No . overall No. in season Title Directed by Written by Original release date `` Chapter One : The Vanishing of Will Byers '' The
+Duffer Brothers The Duffer Brothers July 15 , 2016 ( 2016 - 07 - 15 ) On November 6 , 1983 , in a U.S. Department of Energy laboratory in the town of Hawkins ,
+Indiana , a scientist is attacked by an unseen creature . While bicycling home from a Dungeons & Dragons session with his friends , 12 - year - old Will Byers
+encounters the creature and vanishes . The next day , a buzz - cut young girl wearing a hospital gown steals food from a local diner . The owner , Benny , takes
+pity on her and feeds her before calling social services . From a tattoo on her arm , he learns that her name is Eleven . A woman posing as a social worker
+arrives and murders Benny . Armed men search the diner for Eleven , but she escapes . Will 's mother Joyce believes she hears Will 's voice on a distorted phone
+call , but her phone short circuits .
+</item 5>
+
+<item 6>
+Stranger Things
+The first season was released on Netflix on July 15 , 2016 . It received critical acclaim for its characterization , pacing , atmosphere , acting , soundtrack ,
+directing , writing , and homages to 1980s genre films . The series has received several industry nominations and awards , including winning the Screen Actors
+Guild Award for Outstanding Performance by an Ensemble in a Drama Series in 2016 , and receiving eighteen nominations for the 69th Primetime Emmy Awards ,
+including Outstanding Drama Series . On August 31 , 2016 , Netflix renewed the series for a second season of nine episodes , which was released on October 27 ,
+2017 . In December 2017 , Netflix ordered a third season . The Duffer Brothers have said that Stranger Things is likely to end after its fourth or fifth season
+. Contents ( hide ) 1 Premise 2 Cast and characters 2.1 Main 2.2 Recurring 2.2. 1 Introduced in season one 2.2. 2 Introduced in season two 2.3 Guest 2.3. 1
+Introduced in season one 2.3.
+</item 6>
+
+<item 7>
+Created by the Duffer Brothers, Netflix’s *Stranger Things* is an ’80s-set sci-fi horror series about supernatural events in Hawkins, Indiana, and a missing
+boy. It premiered July 15, 2016, starring Winona Ryder, David Harbour, and a young ensemble including Millie Bobby Brown. Filmed around Atlanta, it blends
+Spielberg, Carpenter, and Stephen King influences, retro visuals, synth music by Kyle Dixon and Michael Stein, and practical and digital effects. Ac
+</item 7>
+
+<item 8>
+Additional Stranger Things cast members include Joe Davison as a Hawkins Lab technician and Priah Ferguson as Erica Sinclair, Lucas’s younger sister. Season-one
+guests include Ross Partridge as Lonnie Byers, Joyce’s selfish ex-husband and Jonathan and Will’s father; Chris Sullivan as Benny Hammond, burger-shop owner and
+Hopper’s friend; Andrew Benator as a Hawkins Lab scientist; Glennellen Anderson as Nancy, Steve, and Jonathan’s classmate Nicole; Pete Burris as Lab security
+chief;
+</item 8>
+
+<item 9>
+Stranger Things
+For the second season , Schnapp and Keery were promoted to series regulars , along with the additions of Sadie Sink , Dacre Montgomery , Sean Astin and Paul
+Reiser . Set in the fictional town of Hawkins , Indiana , in the 1980s , the first season focuses on the investigation into the disappearance of a young boy
+amid supernatural events occurring around the town including the appearance of a girl with psychokinetic abilities who helps the missing boy 's friends in their
+own search . The second season , titled Stranger Things 2 , is set a year after the first , and deals with attempts of the characters to return to normal and
+consequences that linger from the first season . The Duffer Brothers developed the series as a mix of investigative drama alongside supernatural elements with
+childlike sensibilities , establishing its time frame in the 1980s and creating a homage to pop culture of that decade . Several themes and directorial aspects
+were inspired and aesthetically informed by the works of Steven Spielberg , John Carpenter , and Stephen King , among others , including several films , anime
+and video games . The first season was released on Netflix on July 15 , 2016 .
+</item 9>
+
+<item 10>
+Stranger Things
+of seasons No. of episodes 17 ( list of episodes ) Production Executive producer ( s ) Karl Gajdusek Cindy Holland Brian Wright Matt Thunell Shawn Levy Dan
+Cohen The Duffer Brothers Iain Paterson Shannon Tsang Location ( s ) Jackson , Georgia Cinematography Tim Ives Tod Campbell Running time 42 -- 62 minutes
+Production company ( s ) 21 Laps Entertainment Monkey Massacre Distributor Netflix Release Original network Netflix Picture format 4K ( Ultra HD ) High dynamic
+range Audio format Dolby Digital 5.1 Original release July 15 , 2016 ( 2016 - 07 - 15 ) -- present External links Website Stranger Things is an American science
+fiction - horror web television series created , written , directed and co-executive produced by The Duffer Brothers , as well as co-executive produced by Shawn
+Levy and Dan Cohen . The first season , released in July 2016 , stars Winona Ryder , David Harbour , Finn Wolfhard , Millie Bobby Brown , Gaten Matarazzo ,
+Caleb McLaughlin , Natalia Dyer , Charlie Heaton , Cara Buono and Matthew Modine , with Noah Schnapp and Joe Keery in recurring roles .
+</item 10>
+=== END ITEM id=910a692c18ddcfca ===

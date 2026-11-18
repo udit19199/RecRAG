@@ -1,0 +1,683 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=8158c2f8c6cae5d9 ===
+Gold sentences and facts:
+Sentence 0: The military convention between Bulgaria and the Central Powers laid down the general plan for its campaign against the Kingdom of Serbia . It severely limited the control of the Bulgarian High Command over the Bulgarian 1st Army , which was designated part of a combined German , Bulgarian and Austro - Hungarian force commanded by Field Marshal August von Mackensen . He had recently led the German and Austro - Hungarian armies in the highly successful and victorious Gorlice -- Tarnów Offensive of the Central Powers against the Russian army on the Eastern Front . His army group was created specifically to wage war against the Serbian army in the pre-1913 borders of the country ( `` Old Serbia '' ) , to defeat it wherever it found it and to open the land route between Hungary and Bulgaria . As commander , Mackensen acted independently and received his directives only from the German High Command . However , the field marshal 's orders to his Bulgarian forces had to be relayed to the commander of the 1st Army by the Bulgarian General Staff , which left room for the latter to intervene when needed . According to the convention , the Bulgarian commander - in - chief retained full and direct control over the Bulgarian 2nd Army and its operations in Vardar Macedonia .
+  Fact 0.0: The military convention between Bulgaria and the Central Powers laid down the general plan for Bulgaria's campaign against the Kingdom of Serbia.
+  Fact 0.1: The military convention severely limited the control of the Bulgarian High Command over the Bulgarian 1st Army.
+  Fact 0.2: The Bulgarian 1st Army was designated part of a combined German, Bulgarian and Austro-Hungarian force.
+  Fact 0.3: The combined force was commanded by Field Marshal August von Mackensen.
+  Fact 0.4: Mackensen had recently led the German and Austro-Hungarian armies in the highly successful and victorious Gorlice-Tarnów Offensive of the Central Powers against the Russian army on the Eastern Front.
+  Fact 0.5: Mackensen's army group was created specifically to wage war against the Serbian army in the pre-1913 borders of the country ('Old Serbia').
+  Fact 0.6: Mackensen's army group was created to defeat the Serbian army wherever it found it.
+  Fact 0.7: Mackensen's army group was created to open the land route between Hungary and Bulgaria.
+  Fact 0.8: As commander, Mackensen acted independently.
+  Fact 0.9: Mackensen received his directives only from the German High Command.
+  Fact 0.10: The field marshal's orders to his Bulgarian forces had to be relayed to the commander of the 1st Army by the Bulgarian General Staff.
+  Fact 0.11: The relay of orders through the Bulgarian General Staff left room for the Bulgarian General Staff to intervene when needed.
+  Fact 0.12: According to the convention, the Bulgarian commander-in-chief retained full and direct control over the Bulgarian 2nd Army.
+  Fact 0.13: According to the convention, the Bulgarian commander-in-chief retained full and direct control over the 2nd Army's operations in Vardar Macedonia.
+
+Retrieved items:
+<item 1>
+Bulgaria during World War I
+The end of neutrality ( edit ) As 1914 came to an end , Bulgaria remained on the sidelines of World War I. Popular opinion lacked enthusiasm for entering the
+conflict and supported the country 's stance of neutrality . At this point , Prime Minister Radoslavov adopted a `` wait and see '' policy while at the same
+time he successfully probed the abilities of the warring alliances to satisfy Bulgarian territorial ambitions . A final commitment could be made only when one
+of the sides had gained a decisive military advantage and had firmly guaranteed the fulfillment of Bulgarian national ideals . On the battlefields far from
+Bulgaria , the war had entered a long period of stalemate with no side appearing to gain the upper hand . On the Western Front in February 1915 , the French
+failed to break the German lines at the First Battle of Champagne , while further attempts at the Second Battle of Artois during May also came to an
+unsuccessful conclusion . The Germans had decided to focus their efforts on the Eastern Front , where they had considerable success against the Russians in the
+Second Battle of the Masurian Lakes in February 1915 , but their gains were largely negated at the Siege of Przemyśl in March .
+</item 1>
+
+<item 2>
+Bulgaria during World War I
+Strategic geographic location and a strong military establishment made the country a desired ally for both warring coalitions , but Bulgaria 's regional
+aspirations were difficult to satisfy because they included territorial claims against four Balkan countries . As the war progressed , the Central Powers of
+Austria - Hungary and the German Empire found themselves in a better position to fulfil Bulgarian demands and persuaded the country to join their cause in
+September 1915 . Though the smallest member of the Central Powers in area and in population , Bulgaria made vital contributions to their common war effort . Its
+entry to the war heralded the defeat of Serbia , thwarted the foreign - policy goals of Romania , and ensured the continuation of the Ottoman war effort by
+providing a geographical conduit for material assistance from Germany to Istanbul . Though the Balkan theatre of the war saw successful campaigns of rapid
+movement in 1915 and 1916 , the conflict degraded into a state of attritional trench warfare on both the Northern and the Southern Bulgarian Fronts after most
+Bulgarian territorial aspirations had been satisfied . This period of the war substantially weakened the Bulgarian economy , created various supply problems and
+reduced the health and morale of Bulgarian troops on the front lines .
+</item 2>
+
+<item 3>
+Bulgaria during World War I
+The Germans and Austrians then undertook new counterattacks to restore their positions . Finally , in May 1915 , Italy entered the war on the side of the
+Entente . Under these circumstances , the military and political value of the neutral Balkan countries increased significantly . The military successes of each
+warring side were often a major asset in their diplomatic courtship of Bulgaria . Thus when Przemyśl fell and the Anglo - French landed in the Dardanelles ,
+Radoslavov expressed greater interest in negotiations with the Entente . The leading role of Britain in the Gallipoli Campaign of 1915 made it a natural driving
+force behind the revival of Entente attempts to acquire Bulgaria as an ally . The British realized that the key to winning Bulgaria was in Vardar Macedonia ,
+and they suggested to Sazonov that Serbia should be prepared to cede the uncontested zone in exchange for Austrian territory . The Russian foreign minister
+decided to stand behind this proposition , even though he found it rather vague , as long as it could turn Bulgaria against the Ottoman Empire .
+</item 3>
+
+<item 4>
+Bulgaria during World War I
+In November , while the decisive Serbian defeat unfolded , the French attempted to exert pressure on the Bulgarian 2nd Army , but were soon forced to halt their
+attempts to drive north . The forces of General Maurice Sarrail that consisted of three French and one British division dug in along an 80 - kilometer front
+from the river Cherna to Lake Doiran . With the fall of Pristina , Generail Sarrail realized that the Allies could no longer help the Serbians and decided to
+begin pulling back his forces to Salonika . The Bulgarian High Command shifted its focus to the Allies in Macedonia and decided that the time was right to go on
+the offensive . Several days were lost , however , in scouting , and it was only on 3 December that the 2nd army commenced a general advance . Nonetheless , the
+French were able to retreat in good order towards Salonika . They were soon followed by the British , who were defeated at the Battle of Kosturino . On 11
+December , the Bulgarian divisions reached the Greek border , where they were ordered to halt and warned repeatedly not to cross .
+</item 4>
+
+<item 5>
+Bulgaria during World War I
+Allied representatives met with the leaders of the Bulgarian opposition parties and also provided generous financial support for opposition newspapers ; they
+even attempted to bribe high - ranking government officials . Germany and Austria - Hungary were not willing to remain on the sidelines and dispatched to
+Bulgaria Duke John Albert of Mecklenburg , the former ambassador to the Ottoman Empire Hans Freiherr von Wangenheim and Prince Hohenlohe , who openly declared
+that after the defeat of Serbia , Bulgaria would assume hegemony of the Balkans . What seized Bulgarian interest the most was indeed the balance of military
+power . The situation on the major European fronts was at that time developing markedly in favor of the Central Powers , and while the Allied operation in
+Gallipoli turned into a costly stalemate , the Russians were being driven out of Galicia and Poland . Under these circumstances . the Central Powers were hoping
+to secure Bulgaria at last . Still , it took Entente diplomacy more than a month to give an answer to Radoslavov 's questions and the reply proved far from
+satisfactory . In reality , it hardly differed from the offer the Allies presented in May .
+</item 5>
+
+<item 6>
+League of Nations
+Race to the Sea First Battle of Ypres 1915 Second Battle of the Masurian Lakes Second Battle of Ypres Battle of Gallipoli Second Battle of Artois Battles of the
+Isonzo Gorlice -- Tarnów Offensive Great Retreat Second Battle of Champagne Kosovo Offensive Siege of Kut Battle of Loos 1916 Erzurum Offensive Battle of Verdun
+Lake Naroch Offensive Battle of Asiago Battle of Jutland Battle of the Somme first day Brusilov Offensive Baranovichi Offensive Battle of Romani Monastir
+Offensive Battle of Transylvania 1917 Capture of Baghdad First Battle of Gaza Zimmermann Telegram Second Battle of Arras Second Battle of the Aisne Kerensky
+Offensive Third Battle of Ypres ( Passchendaele ) Battle of Mărășești Battle of Caporetto Southern Palestine Offensive Battle of Cambrai Armistice of Erzincan
+1918 Operation Faustschlag Treaty of Brest - Litovsk Spring Offensive Second Battle of the Marne Battle of Baku Hundred Days Offensive Vardar Offensive Battle
+of Megiddo Third Transjordan attack Meuse - Argonne Offensive Battle of Vittorio Veneto Battle of Aleppo
+</item 6>
+
+<item 7>
+Bulgaria during World War I
+By the middle of December , the entire Kingdom of Serbia was occupied by the armies of the Central Powers and the Allies were pushed back to Salonika by the
+Bulgarians . Within two months of its entry into the war Bulgaria , achieved its main war goal : the conquest of Vardar Macedonia . For the duration of military
+operations against Serbia and the Entente in 1915 , the Bulgarian Army committed a total of around 424,375 men , while its casualties were held to around 37,000
+men . By the end of 1915 , the Central Powers had established firm and unbroken control over a vast territory that stretched from the North Sea to Mesopotamia .
+They also drew great political and military dividends from the defeat and occupation of Serbia . Bulgaria conquered almost all the territory it desired ,
+Germany gained unrestricted access to the natural resources of Ottoman Asia , the Ottomans received much needed German matériel assistance and Austria - Hungary
+secured its southern flank and could completely focus its attention on the Russian and Italian fronts .
+</item 7>
+
+<item 8>
+Bulgaria during World War I
+In addition , Germany and Austria - Hungary guaranteed the Bulgarian government a war loan of 200,000,000 francs and in case the war lasted longer than four
+months , they guaranteed an additional supplementary loan . The third documented was concluded at the German Eastern military headquarters in Pless by the Chief
+of the German General Staff Erich von Falkenhayn , the Chief of the Austro - Hungarian General Staff Count Franz Conrad von Hötzendorf and the delegate of the
+Bulgarian government , Colonel Peter Ganchev . It was a military convention detailing the plan for the final defeat and conquest of Serbia . Germany and Austria
+- Hungary were obliged to act against Serbia within thirty days of the signing of the convention , while Bulgaria had to do the same within 35 days of that date
+. Germany and Austria - Hungary were to field at least six infantry divisions for the attack , and Bulgaria at least four infantry divisions according to their
+established tables and organization . All these forces were to be placed under the command of Generalfeldmarschall August von Mackensen , whose task was `` to
+fight the Serbian Army wherever he finds it and to open and insure as soon as possible a land connection between Hungary and Bulgaria '' .
+</item 8>
+
+<item 9>
+Bulgaria during World War I
+The build - up of Serbian forces along the Bulgarian border peaked by the first week of October 1915 , when 145 battalions , 25 squadrons and 316 guns were
+concentrated and prepared for operations against Bulgaria . These forces represented half the entire Serbian Army of 288 battalions , 40 squadrons and 678 guns
+. The plan relied heavily on the support of the Allies , from whom the Serbians expected to draw another 150,000 men for the defense of Vardar Macedonia . The
+Serbian government pressed this issue before the governments of the major Entente powers , but was not able to negotiate any commitment on their part . France ,
+Britain and Russia were unable and unwilling to dispatch large numbers of troops , and instead felt that Greece , which had a defensive treaty with Serbia ,
+should act in case of a Bulgarian attack . Allied inactivity allowed the Central Powers to continue their preparations for the offensive undisturbed . By early
+October , however , the Austro - Hungarians were unable to furnish the required minimum of 6 divisions for the attack , so the Germans had to step in with
+additional forces .
+</item 9>
+
+<item 10>
+Bulgaria during World War I
+The failure of Russian diplomacy , and the Entente Cordiale among Russia , France , and Great Britain that stood behind it , was a victory for Austria - Hungary
+, which sought to undermine the unity between the Balkan countries . In June , the new Bulgarian government was asked by the Bulgarian General Staff to either
+take aggressive action or order demobilization within 10 days . The senior Bulgarian commanders were concerned by the new alliance between Serbia and Greece and
+the growing restlessness in the army , which had been in the field since September 1912 . Danev was preparing to leave for Russia where a new attempt to solve
+the problem was made by Tsar Ferdinand and General Mihail Savov , who decided to make a demonstration to Serbia , Greece and the Entente by ordering two of the
+Bulgarian armies to attack and consolidate their positions in Macedonia on 16 June . Mote than a day later , Danev ordered Savov to stop the fighting and the
+latter obeyed , despite orders for the continuation of the attack given to him by the tsar . The Serbians and Greeks , however , were not willing to let this
+opportunity pass and declared war on Bulgaria .
+</item 10>
+=== END ITEM id=8158c2f8c6cae5d9 ===
+
+=== ITEM id=095c2df74ccf97b9 ===
+Gold sentences and facts:
+Sentence 0: When Hoyt Axton performed the song to the group , two of the three main vocalists -- Danny Hutton and Cory Wells -- rejected the song , but Chuck Negron felt that the band needed a `` silly song '' to help bring the band back together as a working unit . Negron also felt that the song `` was n't even close to our best record , but it might have been one of our most honest . ''
+  Fact 0.0: Hoyt Axton performed the song to the group.
+  Fact 0.1: Two of the three main vocalists, Danny Hutton and Cory Wells, rejected the song.
+  Fact 0.2: Chuck Negron felt that the band needed a 'silly song' to help bring the band back together as a working unit.
+  Fact 0.3: Chuck Negron also felt that the song was not even close to the band's best record.
+  Fact 0.4: Chuck Negron also felt that the song might have been one of the band's most honest.
+Sentence 1: The song , which has been described by members of Three Dog Night as a `` kid 's song '' and a `` silly song '' , topped the main singles charts in North America , was certified gold by the RIAA , and has since been covered by multiple artists .
+  Fact 1.0: Members of Three Dog Night have described the song as a 'kid's song'.
+  Fact 1.1: Members of Three Dog Night have described the song as a 'silly song'.
+  Fact 1.2: The song topped the main singles charts in North America.
+  Fact 1.3: The song was certified gold by the RIAA.
+  Fact 1.4: The song has since been covered by multiple artists.
+
+Retrieved items:
+<item 1>
+Joy to the World (Three Dog Night song)
+Genre Rock Length 3 : 50 ( album ) 3 : 17 ( single ) Label Dunhill Songwriter ( s ) Hoyt Axton Producer ( s ) Richard Podolor Three Dog Night singles chronology
+`` One Man Band '' ( 1970 ) `` Joy to the World '' ( 1971 ) `` Liar '' ( 1971 ) `` One Man Band '' ( 1970 ) `` Joy to the World '' ( 1971 ) `` Liar '' ( 1971 )
+`` Joy to the World '' is a song written by Hoyt Axton , and made famous by the band Three Dog Night . The song is also popularly known by its opening lyric ,
+`` Jeremiah was a bullfrog '' . Three Dog Night originally released the song on their fourth studio album , Naturally in November 1970 and subsequently released
+an edited version of the song as a single in February 1971 .
+</item 1>
+
+<item 2>
+Joy to the World (Three Dog Night song)
+The song , which has been described by members of Three Dog Night as a `` kid 's song '' and a `` silly song '' , topped the main singles charts in North
+America , was certified gold by the RIAA , and has since been covered by multiple artists . The song is featured prominently in the film The Big Chill . It is
+sung by a child character at the beginning and the Three Dog Night recording is played over the end credits . It is also played at the end of every Denver
+Broncos home victory . Notable playings of this song after Broncos victories included then - Chicago Bears head coach Abe Gibron 's singing along with the song
+in 1973 ; and at the end of Super Bowl XXXII , played at Qualcomm Stadium in San Diego . It was also played at the end of Super Bowl XXXIII at Pro Player ( now
+Hard Rock ) Stadium in Miami Gardens , Florida and Super Bowl 50 in Santa Clara , California . Contents ( hide ) 1 Background and recording 2 Charts and awards
+3 In popular culture 4 References 5 External links Background and Recording ( edit ) Some of the words are nonsensical .
+</item 2>
+
+<item 3>
+Joy to the World (Three Dog Night song)
+The single went on to sell 5 million copies worldwide , making it one of the best - selling singles of all time . In popular culture ( edit ) Singer -
+songwriter Daniel Johnston likes this song , which inspired his own character Jeremiah the bullfrog , whom he often draws in his artwork and advertisements .
+The frog is also featured on the cover of his album Hi , How Are You ( 1983 ) and has become an official music mascot for Johnston . It is sung by the son of
+one of the main characters at the start of the film The Big Chill ( 1983 ) and is featured on the soundtrack . In The X-Files TV series ( Detour - S05E04 ) ,
+Scully sings this song while she 's lost in a forest with Mulder to show him she is awake and he can rest . It is played during the end credits of the R - rated
+animated film , Sausage Party ( 2016 ) , and later in the end credits of the PG - 13 - rated animated film A Very Spooky Night . It appears in 2017 and 2018 TV
+commercials for Big Lots .
+</item 3>
+
+<item 4>
+Joy to the World (Three Dog Night song)
+ispot.tv . Retrieved December 24 , 2017 . External links ( edit ) Lyrics of this song at MetroLyrics Three Dog Night Danny Hutton Michael Allsup Paul Kingery
+Pat Bautz Eddie Reasoner David Morgan Cory Wells Chuck Negron Jimmy Greenspoon Floyd Sneed Joe Schermie Skip Konte Al Ciner Gary Moon Richard Campbell Studio
+albums Three Dog Night ( 1968 ) Suitable for Framing ( 1969 ) It Ai n't Easy ( 1970 ) Naturally ( 1970 ) Harmony ( 1971 ) Seven Separate Fools ( 1972 ) Cyan (
+1973 ) Hard Labor ( 1974 ) Coming Down Your Way ( 1975 ) American Pastime ( 1976 ) It 's a Jungle ( 1983 ) Live albums Captured Live at the Forum ( 1969 )
+Around the World with Three Dog Night ( 1973 ) Compilations Golden Bisquits ( 1971 ) Joy to the World : Their Greatest Hits ( 1975 ) The Best of 3 Dog Night (
+1982 ) Celebrate : The Three Dog Night Story , 1965 -- 1975 (
+</item 4>
+
+<item 5>
+Joy to the World (Three Dog Night song)
+It appears in 2017 and 2018 TV commercials for Big Lots . Preceded by `` Just My Imagination ( Running Away with Me ) '' by The Temptations Billboard Hot 100
+number - one single April 17 , 1971 ( six weeks ) Succeeded by `` Brown Sugar '' by The Rolling Stones References ( edit ) ^ Jump up to : Celebrate : The Three
+Dog Night Story , 1965 -- 1975 ( CD liner ) . Three Dog Night . United States : MCA Records . 1993 . pp. 27 , 30 , 31 . MCAD2 - 10956 . ^ Jump up to : Leaf ,
+David ( 1993 ) . Celebrate : The Three Dog Night Story , 1965 -- 1975 ( CD liner ) . Three Dog Night . United States : MCA Records . p. 20 . MCAD2 - 10956 .
+Jump up ^ `` Three Dog Night Headlines the Fair Tonight '' . Bainbridge Island Review . Entertainment section . August 20 , 2008 .
+</item 5>
+
+<item 6>
+Joy to the World (Three Dog Night song)
+1965 -- 1975 ( 1993 ) 20th Century Masters -- The Millennium Collection : The Best of Three Dog Night ( 1999 ) Singles `` Nobody '' `` Try a Little Tenderness
+'' `` One '' `` Easy to Be Hard '' `` Eli 's Coming '' `` Celebrate '' `` Mama Told Me ( Not to Come ) '' `` Out in the Country '' `` One Man Band '' `` Joy to
+the World '' `` Liar '' `` An Old Fashioned Love Song '' `` Never Been to Spain '' `` The Family of Man '' `` Black & White '' `` Pieces of April '' `` Shambala
+'' `` Let Me Serenade You '' `` The Show Must Go On '' `` Sure As I 'm Sittin ' Here '' `` Play Something Sweet ( Brickyard Blues ) '' `` Til the World Ends ''
+`` Everybody Is a Masterpiece '' `` It 's a Jungle Out There '' Discography Book Billboard Year - End number one singles ( 1960 -- 1979 ) 1960 : `` Theme from A
+Summer Place '' -- Percy Faith 1961 : `` Tossin ' and Turnin ' '' -- Bobby Lewis 1962 : ``
+</item 6>
+
+<item 7>
+Joy to the World (Three Dog Night song)
+wikipedia.org/w/index.php?title=Joy_to_the_World_(Three_Dog_Night_song)&oldid=835489072 '' Categories : 1971 singles Billboard Hot 100 number - one singles
+Three Dog Night songs Dunhill Records singles Songs written by Hoyt Axton Songs about animals Novelty songs RPM Top Singles number - one singles 1970 songs
+Hidden categories : Articles needing additional references from June 2008 All articles needing additional references Articles with hAudio microformats
+Singlechart usages for German Singlechart usages for Dutch100 Singlechart usages for UK Singlechart usages for Billboardhot100 Singlechart called without song
+Talk Contents About Wikipedia 日本 語 Edit links This page was last edited on 9 April 2018 , at 00 : 34 . Text is available under the Creative Commons Attribution
+- ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered
+trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 7>
+
+<item 8>
+Joy to the World (Three Dog Night song)
+Axton wanted to persuade his record producers to record a new melody he had written and the producers asked him to sing any words to the tune . A member of
+Three Dog Night said that the original lyrics to the song were `` Jeremiah was a prophet '' but `` no one liked that '' . When Hoyt Axton performed the song to
+the group , two of the three main vocalists -- Danny Hutton and Cory Wells -- rejected the song , but Chuck Negron felt that the band needed a `` silly song ''
+to help bring the band back together as a working unit . Negron also felt that the song `` was n't even close to our best record , but it might have been one of
+our most honest . '' The song was recorded by Three Dog Night at American Recording Company , produced by Richard Podolor , and engineered by Bill Cooper .
+Unlike most Three Dog Night songs recorded at that point , instead of having just the three main vocalists singing harmony , the song was recorded with all
+seven members of the band singing . Drummer Floyd Sneed sings the deep lyric `` I wan na tell you '' towards the end of the song .
+</item 8>
+
+<item 9>
+Joy to the World (Three Dog Night song)
+Entertainment section . August 20 , 2008 . ISSN 1053 - 2889 . Retrieved April 5 , 2011 . Jump up ^ `` Jackson v. Axton '' . Law.justia.com . Retrieved 2016 - 10
+- 04 . Jump up ^ `` Forum - 1970 ( ARIA Charts : Special Occasion Charts ) '' . Australian-charts.com . Archived from the original on 2016 - 10 - 20 . Retrieved
+2017 - 05 - 07 . Jump up ^ `` 100 Singles '' ( PHP ) . RPM. 15 ( 15 ) . May 29 , 1971 . Retrieved April 5 , 2011 . Jump up ^ `` Musicline.de -- Three Dog Night
+Single - Chartverfolgung '' ( in German ) . Media Control Charts . PhonoNet GmbH . Jump up ^ `` Dutchcharts.nl -- Three Dog Night -- Joy To The World '' ( in
+Dutch ) . Single Top 100 .
+</item 9>
+
+<item 10>
+Joy to the World (Three Dog Night song)
+Joy to the World ( Three Dog Night song ) - wikipedia Joy to the World ( Three Dog Night song ) Jump to : navigation , search This article needs additional
+citations for verification . Please help improve this article by adding citations to reliable sources . Unsourced material may be challenged and removed . (
+June 2008 ) ( Learn how and when to remove this template message ) `` Joy to the World '' 1971 French release Single by Three Dog Night from the album Naturally
+B - side `` I Can Hear You Calling '' Released February 1971 ( 1971 - 02 ) Format 7 '' 45 RPM Recorded 1970 at American Recording Co .
+</item 10>
+=== END ITEM id=095c2df74ccf97b9 ===
+
+=== ITEM id=62316adeefe20022 ===
+Gold sentences and facts:
+Sentence 0: Central London Property Trust Ltd v High Trees House Ltd ( 1947 ) KB 130 ( or the High Trees case ) is an English contract law decision in the High Court . It reaffirmed and extended the doctrine of promissory estoppel in contract law in England and Wales . However , the most significant part of the judgment is obiter dicta as it relates to hypothetical facts ; that is , the landlord did not seek repayment of the full wartime rent .
+  Fact 0.0: Central London Property Trust Ltd v High Trees House Ltd is cited as (1947) KB 130.
+  Fact 0.1: Central London Property Trust Ltd v High Trees House Ltd is also called the High Trees case.
+  Fact 0.2: Central London Property Trust Ltd v High Trees House Ltd is an English contract law decision in the High Court.
+  Fact 0.3: The decision reaffirmed the doctrine of promissory estoppel in contract law in England and Wales.
+  Fact 0.4: The decision extended the doctrine of promissory estoppel in contract law in England and Wales.
+  Fact 0.5: The most significant part of the judgment is obiter dicta.
+  Fact 0.6: The obiter dicta relates to hypothetical facts.
+  Fact 0.7: In the hypothetical facts, the landlord did not seek repayment of the full wartime rent.
+
+Retrieved items:
+<item 1>
+Central London Property Trust Ltd v High Trees House Ltd
+Central London Property Trust Ltd v. High Trees House Ltd - wikipedia Central London Property Trust Ltd v. High Trees House Ltd Jump to : navigation , search
+High Trees case Court King 's Bench Division Decided 18 July 1946 Citation ( s ) ( 1947 ) KB 130 ; ( 1956 ) 1 All ER 256 ; 62 TLR 557 ; ( 1947 ) LJR 77 ; 175 LT
+333 Court membership Judge ( s ) sitting Denning J Keywords Promissory estoppel Central London Property Trust Ltd v High Trees House Ltd ( 1947 ) KB 130 ( or
+the High Trees case ) is an English contract law decision in the High Court . It reaffirmed and extended the doctrine of promissory estoppel in contract law in
+England and Wales . However , the most significant part of the judgment is obiter dicta as it relates to hypothetical facts ; that is , the landlord did not
+seek repayment of the full wartime rent .
+</item 1>
+
+<item 2>
+Central London Property Trust Ltd v High Trees House Ltd
+Retrieved from `` https://en.wikipedia.org/w/index.php?title=Central_London_Property_Trust_Ltd_v_High_Trees_House_Ltd&oldid=837737647 '' Categories : English
+contract case law Lord Denning cases English enforceability case law English estoppel case law 1946 in British law High Court of Justice cases 1946 in case law
+Hidden categories : Use British English from August 2015 Use dmy dates from February 2012 Talk Contents About Wikipedia Add links This page was last edited on
+22 April 2018 , at 18 : 40 . Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site ,
+you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About
+Wikipedia
+</item 2>
+
+<item 3>
+Central London Property Trust Ltd v High Trees House Ltd
+It was a representation , in effect , as to the future , namely , that payment of the rent would not be enforced at the full rate but only at the reduced rate .
+Such a representation would not give rise to an estoppel , because , as was said in Jorden v. Money ( 1854 ) 5 H.L.C. 185 , a representation as to the future
+must be embodied as a contract or be nothing . But what is the position in view of developments in the law in recent years ? The law has not been standing still
+since Jorden v. Money ( 1854 ) 5 H.L.C. 185 . There has been a series of decisions over the last fifty years which , although they are said to be cases of
+estoppel are not really such . They are cases in which a promise was made which was intended to create legal relations and which , to the knowledge of the
+person making the promise , was going to be acted on by the person to whom it was made and which was in fact so acted on . In such cases the courts have said
+that the promise must be honoured .
+</item 3>
+
+<item 4>
+Central London Property Trust Ltd v High Trees House Ltd
+for last two quarters of 1945 ) . Judgment ( edit ) Based on previous judgments as Hughes v Metropolitan Railway Co , Denning J held that the full rent was
+payable from the time that the flats became fully occupied in mid-1945 . However , he continued in an obiter statement that if Central London had tried to claim
+for the full rent from 1940 onwards , they would not have been able to . This was reasoned on the basis that if a party leads another party to believe that he
+will not enforce his strict legal rights , then the Courts will prevent him from doing so at a later stage . Being obiter dicta and in a court of first instance
+this was doubly not a binding precedent , yet it essentially created the doctrine of promissory estoppel .
+</item 4>
+
+<item 5>
+Central London Property Trust Ltd v High Trees House Ltd
+If I were to consider this matter without regard to recent developments in the law , there is no doubt that had the plaintiffs claimed it , they would have been
+entitled to recover ground rent at the rate of £ 2,500 a year from the beginning of the term , since the lease under which it was payable was a lease under seal
+which , according to the old common law , could not be varied by an agreement by parol ( whether in writing or not ) , but only by deed . Equity , however
+stepped in , and said that if there has been a variation of a deed by a simple contract ( which in the case of a lease required to be in writing would have to
+be evidenced by writing ) , the courts may give effect to it as is shown in Berry v. Berry ( 1929 ) 2 K.B. 316 . That equitable doctrine , however , could
+hardly apply in the present case because the variation here might be said to have been made without consideration . With regard to estoppel , the representation
+made in relation to reducing the rent was not a representation of an existing fact .
+</item 5>
+
+<item 6>
+Central London Property Trust Ltd v High Trees House Ltd
+In Amalgamated Investment Co v Texas Bank it was decided that proprietory estoppel can act as a sword and not merely as a shield ( that is , it can be used as a
+cause of action rather than merely providing a defence to an action ) . See also ( edit ) English contract law Estoppel Promise References ( edit ) Jump up ^
+Collier v P & MJ Wright ( Holdings ) Ltd ( 2007 ) EWCA Civ 1329 Jump up ^ Amalgamated Investment Co v Texas Bank , ( 1982 ) EWHC 84 ( QB ) .
+</item 6>
+
+<item 7>
+Central London Property Trust Ltd v High Trees House Ltd
+Here it was binding as covering the period down to the early part of 1945 , and as from that time full rent is payable . I therefore give judgment for the
+plaintiff company for the amount claimed . Significance ( edit ) Advances have been made in promissory estoppel since its inception in High Trees to create a
+new inroad into the rule in Pinnel 's case that an agreement to accept part payment of a debt in full satisfaction of it is unenforceable for want of
+consideration . Denning commented that such an agreement should now be enforceable under the doctrine of promissory estoppel , and indeed the plaintiff did not
+seek the full debt on the basis of what was fair and , perhaps , thought was the law . However , the courts were at first reluctant to overrule or distinguish
+cases like Pinnel 's case and Foakes v Beer having formed part of the common law for so long . Lady Justice Arden in Collier v P & MJ Wright ( Holdings ) Ltd (
+2007 ) accepted in principle that High Trees could be used to extinguish a creditor 's right to full payment of a debt in such circumstances .
+</item 7>
+
+<item 8>
+Central London Property Trust Ltd v High Trees House Ltd
+Denning J held estoppel to be applicable if ... ... a promise was made which was intended to create legal relations and which , to the knowledge of the person
+making the promise , was going to be acted on by the person to whom it was made and which was in fact so acted on . Contents ( hide ) 1 Facts 2 Judgment 3
+Significance 4 See also 5 References Facts ( edit ) In 1937 , High Trees House Ltd leased a block of flats in Clapham , London , for a rate £ 2500 / year from
+Central London Property Trust Ltd . Due to the conditions during the beginning of World War II occupancy rates were drastically lower than normal . In January
+1940 , to ameliorate the situation , the parties made an agreement in writing to reduce rent by half . However , neither party stipulated the period for which
+this reduced rental was to apply . Over the next five years , High Trees paid the reduced rate while the flats began to fill , and by 1945 , the flats were back
+at full occupancy . Central London sued for payment of the full rental costs from June 1945 onwards ( i.e.
+</item 8>
+
+<item 9>
+Central London Property Trust Ltd v High Trees House Ltd
+I am satisfied that a promise such as that to which I have referred is binding and the only question remaining for my consideration is the scope of the promise
+in the present case . I am satisfied on all the evidence that the promise here was that the ground rent should be reduced to £ 1,250 a year as a temporary
+expedient while the block of flats was not fully , or substantially fully let , owing to the conditions prevailing . That means that the reduction in the rent
+applied throughout the years down to the end of 1944 , but early in 1945 it is plain that the flats were fully let , and , indeed the rents received from them (
+many of them not being affected by the Rent Restrictions Acts ) , were increased beyond the figure at which it was originally contemplated that they would be
+let . At all events the rent from them must have been very considerable . I find that the conditions prevailing at the time when the reduction in rent was made
+, had completely passed away by the early months of 1945 .
+</item 9>
+
+<item 10>
+Central London Property Trust Ltd v High Trees House Ltd
+I am satisfied that the promise was understood by all parties only to apply under the conditions prevailing at the time when it was made , namely , when the
+flats were only partially let , and that it did not extend any further than that . When the flats became fully let , early in 1945 , the reduction ceased to
+apply . In those circumstances , under the law as I hold it , it seems to me that rent is payable at the full rate for the quarters ending September 29 and
+December 25 , 1945 . If the case had been one of estoppel , it might be said that in any event the estoppel would cease when the conditions to which the
+representation applied came to an end , or it also might be said that it would only come to an end on notice . In either case it is only a way of ascertaining
+what is the scope of the representation . I prefer to apply the principle that a promise intended to be binding , intended to be acted on and in fact acted on ,
+is binding so far as its terms properly apply .
+</item 10>
+=== END ITEM id=62316adeefe20022 ===
+
+=== ITEM id=c7704b4cc65f3a14 ===
+Gold sentences and facts:
+Sentence 0: Late in the 20th century , lithium became an important component of battery electrolytes and electrodes , because of its high electrode potential . Because of its low atomic mass , it has a high charge - and power - to - weight ratio . A typical lithium - ion battery can generate approximately 3 volts per cell , compared with 2.1 volts for lead - acid or 1.5 volts for zinc - carbon cells . Lithium - ion batteries , which are rechargeable and have a high energy density , should not be confused with lithium batteries , which are disposable ( primary ) batteries with lithium or its compounds as the anode . Other rechargeable batteries that use lithium include the lithium - ion polymer battery , lithium iron phosphate battery , and the nanowire battery .
+  Fact 0.0: Late in the 20th century, lithium became an important component of battery electrolytes.
+  Fact 0.1: Late in the 20th century, lithium became an important component of battery electrodes.
+  Fact 0.2: Lithium became an important battery component because of its high electrode potential.
+  Fact 0.3: Lithium has a low atomic mass.
+  Fact 0.4: Because of its low atomic mass, lithium has a high charge-to-weight ratio.
+  Fact 0.5: Because of its low atomic mass, lithium has a high power-to-weight ratio.
+  Fact 0.6: A typical lithium-ion battery can generate approximately 3 volts per cell.
+  Fact 0.7: Lead-acid batteries generate 2.1 volts.
+  Fact 0.8: Zinc-carbon cells generate 1.5 volts.
+  Fact 0.9: Lithium-ion batteries are rechargeable.
+  Fact 0.10: Lithium-ion batteries have a high energy density.
+  Fact 0.11: Lithium-ion batteries should not be confused with lithium batteries.
+  Fact 0.12: Lithium batteries are disposable (primary) batteries.
+  Fact 0.13: Lithium batteries have lithium or its compounds as the anode.
+  Fact 0.14: Other rechargeable batteries that use lithium include the lithium-ion polymer battery.
+  Fact 0.15: Other rechargeable batteries that use lithium include the lithium iron phosphate battery.
+  Fact 0.16: Other rechargeable batteries that use lithium include the nanowire battery.
+Sentence 1: Lithium and its compounds have several industrial applications , including heat - resistant glass and ceramics , lithium grease lubricants , flux additives for iron , steel and aluminium production , lithium batteries , and lithium - ion batteries . These uses consume more than three quarters of lithium production .
+  Fact 1.0: Lithium and its compounds have several industrial applications.
+  Fact 1.1: Lithium and its compounds are used in heat-resistant glass and ceramics.
+  Fact 1.2: Lithium and its compounds are used in lithium grease lubricants.
+  Fact 1.3: Lithium and its compounds are used as flux additives for iron, steel and aluminium production.
+  Fact 1.4: Lithium and its compounds are used in lithium batteries.
+  Fact 1.5: Lithium and its compounds are used in lithium-ion batteries.
+  Fact 1.6: These uses consume more than three quarters of lithium production.
+
+Retrieved items:
+<item 1>
+Lithium
+Each batch takes from 18 to 24 months . In 1998 , the price of lithium was about 95 USD / kg ( or 43 USD / lb ) . Reserves ( edit ) Worldwide identified
+reserves in 2008 were estimated by the US Geological Survey ( USGS ) to be 13 million tonnes , though an accurate estimate of world lithium reserves is
+difficult . One reason for this is that most lithium classification schemes are developed for solid ore deposits , whereas brine is a fluid that is problematic
+to treat with the same classification scheme due to varying concentrations and pumping effects . The world has been estimated to contain about 15 million tonnes
+of lithium reserves , while 65 million tonnes of known resources are reasonable . A total of 75 % of everything can typically be found in the ten largest
+deposits of the world . Another study noted that 83 % of the geological resources of lithium are located in six brine , two pegmatite , and two sedimentary
+deposits . Deposits are found in South America throughout the Andes mountain chain . Chile is the leading producer , followed by Argentina . Both countries
+recover lithium from brine pools .
+</item 1>
+
+<item 2>
+Lithium
+The stockpiled lithium was depleted in lithium - 6 by 75 % , which was enough to affect the measured atomic weight of lithium in many standardized chemicals ,
+and even the atomic weight of lithium in some `` natural sources '' of lithium ion which had been `` contaminated '' by lithium salts discharged from isotope
+separation facilities , which had found its way into ground water . Lithium was used to decrease the melting temperature of glass and to improve the melting
+behavior of aluminium oxide when using the Hall - Héroult process . These two uses dominated the market until the middle of the 1990s . After the end of the
+nuclear arms race , the demand for lithium decreased and the sale of Department of Energy stockpiles on the open market further reduced prices . In the mid
+1990s , several companies started to extract lithium from brine which proved to be a less expensive than underground or open - pit mining . Most of the mines
+closed or shifted their focus to other materials because only the ore from zoned pegmatites could be mined for a competitive price . For example , the US mines
+near Kings Mountain , North Carolina closed before the beginning of the 21st century .
+</item 2>
+
+<item 3>
+Lithium
+Worldwide , this is one of the largest use for lithium compounds . Glazes containing lithium oxides are used for ovenware . Lithium carbonate ( Li CO ) is
+generally used in this application because it converts to the oxide upon heating . Electrical and electronics ( edit ) Late in the 20th century , lithium became
+an important component of battery electrolytes and electrodes , because of its high electrode potential . Because of its low atomic mass , it has a high charge
+- and power - to - weight ratio . A typical lithium - ion battery can generate approximately 3 volts per cell , compared with 2.1 volts for lead - acid or 1.5
+volts for zinc - carbon cells . Lithium - ion batteries , which are rechargeable and have a high energy density , should not be confused with lithium batteries
+, which are disposable ( primary ) batteries with lithium or its compounds as the anode . Other rechargeable batteries that use lithium include the lithium -
+ion polymer battery , lithium iron phosphate battery , and the nanowire battery . Lubricating greases ( edit ) Main article : Lithium grease The third most
+common use of lithium is in greases .
+</item 3>
+
+<item 4>
+Lithium
+Extraction ( edit ) Lithium salts are extracted from water in mineral springs , brine pools , and brine deposits . Lithium is present in seawater , but
+commercially viable methods of extraction have yet to be developed . Another potential source of lithium is the leachates of geothermal wells , which are
+carried to the surface . Recovery of lithium has been demonstrated in the field ; the lithium is separated by simple filtration . The process and environmental
+costs are primarily those of the already - operating well ; net environmental impacts may thus be positive . Uses ( edit ) Estimates of global lithium uses in
+2015 Ceramics and glass ( 32 % ) Batteries ( 35 % ) Lubricating greases ( 9 % ) Continuous casting ( 5 % ) Air treatment ( 5 % ) Polymers ( 4 % ) Primary
+aluminum production ( 1 % ) Pharmaceuticals ( < 1 % ) Other ( 9 % ) Ceramics and glass ( edit ) Lithium oxide is widely used as a flux for processing silica ,
+reducing the melting point and viscosity of the material and leading to glazes with improved physical properties including low coefficients of thermal expansion
+.
+</item 4>
+
+<item 5>
+Lithium
+We are not aware of any discoveries of lithium , ' he said . '' Lithia ( `` lithium brine '' ) is associated with tin mining areas in Cornwall , England and an
+evaluation project from 400 - metre deep test boreholes is under consideration . If successful the hot brines will also provide geothermal energy to power the
+lithium extraction and refining process . Biological ( edit ) Lithium is found in trace amount in numerous plants , plankton , and invertebrates , at
+concentrations of 69 to 5,760 parts per billion ( ppb ) . In vertebrates the concentration is slightly lower , and nearly all vertebrate tissue and body fluids
+contain lithium ranging from 21 to 763 ppb . Marine organisms tend to bioaccumulate lithium more than terrestrial organisms . Whether lithium has a
+physiological role in any of these organisms is unknown . History ( edit ) Johan August Arfwedson is credited with the discovery of lithium in 1817 Petalite (
+LiAlSi O ) was discovered in 1800 by the Brazilian chemist and statesman José Bonifácio de Andrada e Silva in a mine on the island of Utö , Sweden .
+</item 5>
+
+<item 6>
+Lithium
+000,000 Portugal 200 60,000 N / A Russia - - 1,000,000 Serbia - - 1,000,000 United States 38,000 6,900,000 Zimbabwe 900 23,000 100,000 + World total 32,500
+14,000,000 46,900,000 See also : Lithium minerals Although lithium is widely distributed on Earth , it does not naturally occur in elemental form due to its
+high reactivity . The total lithium content of seawater is very large and is estimated as 230 billion tonnes , where the element exists at a relatively constant
+concentration of 0.14 to 0.25 parts per million ( ppm ) , or 25 micromolar ; higher concentrations approaching 7 ppm are found near hydrothermal vents .
+Estimates for the Earth 's crustal content range from 20 to 70 ppm by weight . In keeping with its name , lithium forms a minor part of igneous rocks , with the
+largest concentrations in granites . Granitic pegmatites also provide the greatest abundance of lithium - containing minerals , with spodumene and petalite
+being the most commercially viable sources .
+</item 6>
+
+<item 7>
+Lithium
+Another significant mineral of lithium is lepidolite . A newer source for lithium is hectorite clay , the only active development of which is through the
+Western Lithium Corporation in the United States . At 20 mg lithium per kg of Earth 's crust , lithium is the 25th most abundant element . According to the
+Handbook of Lithium and Natural Calcium , `` Lithium is a comparatively rare element , although it is found in many rocks and some brines , but always in very
+low concentrations . There are a fairly large number of both lithium mineral and brine deposits but only comparatively few of them are of actual or potential
+commercial value . Many are very small , others are too low in grade . '' The US Geological Survey estimates that in 2010 , Chile had the largest reserves by
+far ( 7.5 million tonnes ) and the highest annual production ( 8,800 tonnes ) . One of the largest reserve bases of lithium is in the Salar de Uyuni area of
+Bolivia , which has 5.4 million tonnes . Other major suppliers include Australia , Argentina and China .
+</item 7>
+
+<item 8>
+Lithium
+Lithium hydroxide is a strong base and , when heated with a fat , produces a soap made of lithium stearate . Lithium soap has the ability to thicken oils , and
+it is used to manufacture all - purpose , high - temperature lubricating greases . Metallurgy ( edit ) Lithium ( e.g. as lithium carbonate ) is used as an
+additive to continuous casting mould flux slags where it increases fluidity , a use which accounts for 5 % of global lithium use ( 2011 ) . Lithium compounds
+are also used as additives ( fluxes ) to foundry sand for iron casting to reduce veining . Lithium ( as lithium fluoride ) is used as an additive to aluminium
+smelters ( Hall -- Héroult process ) , reducing melting temperature and increasing electrical resistance , a use which accounts for 3 % of production ( 2011 ) .
+When used as a flux for welding or soldering , metallic lithium promotes the fusing of metals during the process and eliminates the forming of oxides by
+absorbing impurities .
+</item 8>
+
+<item 9>
+Lithium
+When cut open , it exhibits a metallic luster , but moist air corrodes it quickly to a dull silvery gray , then black tarnish . It never occurs freely in nature
+, but only in ( usually ionic ) compounds , such as pegmatitic minerals which were once the main source of lithium . Due to its solubility as an ion , it is
+present in ocean water and is commonly obtained from brines . Lithium metal is isolated electrolytically from a mixture of lithium chloride and potassium
+chloride . The nucleus of the lithium atom verges on instability , since the two stable lithium isotopes found in nature have among the lowest binding energies
+per nucleon of all stable nuclides . Because of its relative nuclear instability , lithium is less common in the solar system than 25 of the first 32 chemical
+elements even though its nuclei are very light : it is an exception to the trend that heavier nuclei are less common . For related reasons , lithium has
+important uses in nuclear physics . The transmutation of lithium atoms to helium in 1932 was the first fully man - made nuclear reaction , and lithium deuteride
+serves as a fusion fuel in staged thermonuclear weapons .
+</item 9>
+
+<item 10>
+Lithium
+Lithium - wikipedia Lithium Jump to : navigation , search This article is about the chemical element . For the use of lithium as a medication , see Lithium (
+medication ) . For other uses , see Lithium ( disambiguation ) . It has been suggested that Lithium as an investment be merged into this article . ( Discuss )
+Proposed since June 2017 . Lithium , Li Lithium floating in oil General properties Pronunciation / ˈlɪθiəm / ​ ( LI - thee - əm ) Appearance silvery - white
+Standard atomic weight ( A ) ( 7000693800000000000 ♠ 6.938 , 7000699700000000000 ♠ 6.997 ) conventional : 7000694000000000000 ♠ 6.94 Lithium in the periodic
+table Hydrogen Helium Lithium Beryllium Boron Carbon Nitrogen Oxygen Fluorine Neon Sodium Magnesium Aluminium Silicon Phosphorus Sulfur Chlorine Argon Potassium
+Calcium Scandium Titanium Vanadium Chromium Manganese Iron Cobalt Nickel Copper Zinc Gallium Germanium Arsenic Selenium Bromine Krypton Rubidium
+</item 10>
+=== END ITEM id=c7704b4cc65f3a14 ===
+
+=== ITEM id=7507811825fd9390 ===
+Gold sentences and facts:
+Sentence 0: In the 12th century , luxury increased and bedsteads were made of wood much decorated with inlaid , carved , and painted ornamentation . They also used folding beds , which served as couches by day and had cushions covered with silk laid upon leather . At night a linen sheet was spread and pillows placed , while silk - covered skins served as coverlets . The Carolingian manuscripts show metal bedsteads much higher at the head than at the feet , and this shape continued in use until the 13th century in France , many cushions being added to raise the body to a sloping position . In 12th - century manuscripts , the bedsteads appear much richer , with inlays , carving , and painting , and with embroidered coverlets and mattresses in harmony . Curtains were hung above the bed and a small hanging lamp is often shown .
+  Fact 0.0: In the 12th century, luxury increased.
+  Fact 0.1: In the 12th century, bedsteads were made of wood.
+  Fact 0.2: The wooden bedsteads were much decorated with inlaid, carved, and painted ornamentation.
+  Fact 0.3: Folding beds were used.
+  Fact 0.4: The folding beds served as couches by day.
+  Fact 0.5: The folding beds had cushions covered with silk laid upon leather.
+  Fact 0.6: At night a linen sheet was spread on the bed.
+  Fact 0.7: At night pillows were placed on the bed.
+  Fact 0.8: At night silk-covered skins served as coverlets.
+  Fact 0.9: Carolingian manuscripts show metal bedsteads much higher at the head than at the feet.
+  Fact 0.10: The shape of the metal bedsteads with a higher head continued in use until the 13th century in France.
+  Fact 0.11: Many cushions were added to raise the body to a sloping position.
+  Fact 0.12: In 12th-century manuscripts, bedsteads appear much richer.
+  Fact 0.13: The richer 12th-century bedsteads have inlays, carving, and painting.
+  Fact 0.14: The richer 12th-century bedsteads have embroidered coverlets and mattresses in harmony.
+  Fact 0.15: Curtains were hung above the bed.
+  Fact 0.16: A small hanging lamp is often shown.
+
+Retrieved items:
+<item 1>
+Bed
+Silk , velvet , and even cloth of gold were frequently used . Inventories from the beginning of the 14th century give details of these hangings lined with fur
+and richly embroidered . It was then that the Four poster bed ( also known as a tester bed ) made its first appearance , the bed being slung from the ceiling or
+fastened to the walls , a form which developed later into a room within a room , shut in by double curtains , sometimes even to exclude all drafts . The space
+between bed and wall was called the ruelle , and very intimate friends were received there . The 14th century is also the time when feather beds became highly
+prized possessions . In the 15th century beds became very large , reaching 7 to 8 feet ( 2.1 to 2.4 m ) by 6 to 7 feet ( 1.8 to 2.1 m ) . The mattresses were
+often filled with pea - shucks , straw , or feathers .
+</item 1>
+
+<item 2>
+Bed
+Bed - wikipedia Bed This is the latest accepted revision , reviewed on 10 January 2018 . Jump to : navigation , search For other uses , see Bed ( disambiguation
+) . Bedroom on the Detmold Open - air Museum premises A bed is a piece of furniture which is used as a place to sleep or relax . Most modern beds consist of a
+soft , cushioned mattress on a bed frame , the mattress resting either on a solid base , often wood slats , or a sprung base . Many beds include a box spring
+inner - sprung base , which is a large mattress - sized box containing wood and springs that provide additional support and suspension for the mattress . Beds
+are available in many sizes , ranging from infant - sized bassinets and cribs , to small beds for a single person or adult , to large queen and king - size beds
+designed for two people . While most beds are single mattresses on a fixed frame , there are other varieties , such as the murphy bed , which folds into a wall
+, the sofa bed , which folds out of a sofa , and the bunk bed , which provides two mattresses on two tiers .
+</item 2>
+
+<item 3>
+Bed
+During the 17th century this curious custom became general , perhaps to avoid the tiresome details of etiquette . Portable beds were used in high society in
+France till the end of the Ancien Régime . The earliest of which mention has been found belonged to Charles the Bold . They had curtains over a light framework
+, and were in their way as fine as the stationary beds . Iron beds appear in the 18th century ; the advertisements declare them as free from the insects which
+sometimes infested wooden bedsteads . Elsewhere , there was also the closed bed with sliding or folding shutters , and in England -- where beds were commonly
+quite simple in form -- the four poster was the usual citizen 's bed until the middle of the 19th century . Bed sizes Main article : Bed size Bed sizes vary
+considerably around the world , with most countries having their own standards and terminology . While the `` double '' size appears to be standard among
+English speaking countries , based on the imperial measurement of 4 ft 6 in by 6 ft 3 in ( 137 cm x 190 cm ) , the sizes for other bed types tend to vary .
+</item 3>
+
+<item 4>
+Bed
+So much gold was used that the velvet scarcely showed . Napoleon I 's bed In the 18th century feather pillows were first used as coverings in Germany , which in
+the fashions of the bed and the curious etiquette connected with the bedchamber followed France for the most part . The beds were a la duchesse , but in France
+itself there was great variety both of name and shape . The custom of the `` bed of justice '' upon which the king of France reclined when he was present in
+parliament , the princes being seated , the great officials standing , and the lesser officials kneeling , was held to denote the royal power even more than the
+throne . Louis XI is credited with its first use and the custom lasted till the end of the monarchy . In the chambre de parade , where the ceremonial bed was
+placed , certain persons , such as ambassadors or great lords , whom it was desired to honour , were received in a more intimate fashion than the crowd of
+courtiers . At Versailles women received their friends in their beds , both before and after childbirth , during periods of mourning , and even directly after
+marriage -- in fact in any circumstances which were thought deserving of congratulation or condolence .
+</item 4>
+
+<item 5>
+Bed
+Most often , the difference is 2 - 5 inches . Notable examples The Great Bed of Ware , one of the largest beds in the world One of the largest beds in the world
+is the Great Bed of Ware , made in about 1580 . It is 3.26 metres ( 10.7 ft ) wide , 3.38 metres ( 11.1 ft ) long . The bed is mentioned by Shakespeare in
+Twelfth Night . It is now in the Victoria and Albert Museum ( V&A ) in London . Another bed in the V&A is the Golden Bed created by William Burges in 1879 . In
+1882 , an Indian Maharajah had a bed made of solid silver . At each corner of the bed there was a life - sized statue of a naked woman holding a fan . When the
+Maharajah lay on the bed , his weight started a mechanism that made the women wave their fans . In 1865 , a convertible bed in the form of an upright piano was
+available , which could provide home entertainment while saving space . Types This section does not cite any sources . Please help improve this section by
+adding citations to reliable sources .
+</item 5>
+
+<item 6>
+Bed
+Southampton Medieval Merchant 's House bedroom In the 12th century , luxury increased and bedsteads were made of wood much decorated with inlaid , carved , and
+painted ornamentation . They also used folding beds , which served as couches by day and had cushions covered with silk laid upon leather . At night a linen
+sheet was spread and pillows placed , while silk - covered skins served as coverlets . The Carolingian manuscripts show metal bedsteads much higher at the head
+than at the feet , and this shape continued in use until the 13th century in France , many cushions being added to raise the body to a sloping position . In
+12th - century manuscripts , the bedsteads appear much richer , with inlays , carving , and painting , and with embroidered coverlets and mattresses in harmony
+. Curtains were hung above the bed and a small hanging lamp is often shown . In the 14th century the woodwork became of less importance , generally being
+entirely covered by hangings of rich materials . Silk , velvet , and even cloth of gold were frequently used .
+</item 6>
+
+<item 7>
+Bed
+The mattresses were often filled with pea - shucks , straw , or feathers . At this time great personages were in the habit of carrying most of their property
+about with them , including beds and bed - hangings , and for this reason the bedsteads were for the most part mere frameworks to be covered up ; but about the
+beginning of the 16th century bedsteads were made lighter and more decorative , since the lords remained in the same place for longer periods . Renaissance and
+modern Europe In the 17th century , which has been called `` the century of magnificent beds '' , the style a la duchesse , with tester and curtains only at the
+head , replaced the more enclosed beds in France , though they lasted much longer in England . Louis XIV had an enormous number of sumptuous beds , as many as
+413 being described in the inventories of his palaces . Some of them had embroideries enriched with pearls , and figures on a silver or golden ground . The
+great bed at Versailles had crimson velvet curtains on which `` The Triumph of Venus '' was embroidered . So much gold was used that the velvet scarcely showed
+.
+</item 7>
+
+<item 8>
+Bed
+Please help improve this section by adding citations to reliable sources . Unsourced material may be challenged and removed . ( April 2015 ) ( Learn how and
+when to remove this template message ) See also : Category : Beds Lit à la Polonaise ( Polish style bed ) , Royal Castle in Warsaw , 18th century . Patent #
+322,177 , on 14 July 1885 issued to Sarah E. Goode for a cabinet bed Drawing of a candle - lit mourning bed ( Trauergerüst ) for abbess Franziska Christine von
+Pfalz - Sulzbach , 1776 Chinese style beds There are many varieties of beds : An adjustable bed is a bed that can be adjusted to a number of different positions
+. Most hospital beds are adjustable , so that a patient can have different parts of her body elevated for medical reasons . Some people have adjustable beds in
+private homes . Some adjustable beds are designed for couples ; they use two separate mattresses and adjustment mechanisms . This permits one partner to be
+lying flat to sleep while the other has the head and shoulders elevated to watch television or read .
+</item 8>
+
+<item 9>
+Bed
+Contents ( hide ) 1 History 1.1 Ancient world 1.2 Medieval Europe 1.3 Renaissance and modern Europe 2 Bed sizes 3 Notable examples 4 Types 5 Frames 6 See also 7
+References 8 External links History Ancient world Tutankhamun 's gilded bed from the 14th century BC Early beds were little more than piles of straw or some
+other natural material ( e.g. a heap of palm leaves , animal skins , or dried bracken ) . An important change was raising them off the ground , to avoid drafts
+, dirt , and pests . Bedding dated around to 3600 BC was discovered in Sibudu Cave , South Africa . The bedding consists of sedge and other monocotyledons
+topped with the leaves of Cryptocarya woodii Engl . Beds found in a preserved northern Scottish village , which were raised boxes made of stone and likely
+topped with comfortable fillers , were dated to between 3200 BC and 2200 BC . The Egyptians had high bedsteads which were ascended by steps , with bolsters or
+pillows , and curtains to hang around .
+</item 9>
+
+<item 10>
+Bed
+Ancient Romans had various kinds of beds for repose . These included : lectus cubicularis , or chamber bed , for normal sleeping lectus genialis , the marriage
+bed , it was much decorated , and was placed in the atrium opposite the door lectus discubitorius , or table bed , on which they ate -- for they ate while lying
+on their left sides -- there usually being three people to one bed , with the middle place accounted the most honorable position lectus lucubratorius , for
+studying and a lectus funebris , or emortualis , on which the dead were carried to the pyre Medieval Europe The ancient Germans lay on the floor on beds of
+leaves covered with skins , or in a kind of shallow chest filled with leaves and moss . In the early Middle Ages they laid carpets on the floor or on a bench
+against the wall , placed upon them mattresses stuffed with feathers , wool , or hair , and used skins as a covering . Curtains were hung from the ceiling or
+from an iron arm projecting from the wall . They appear to have generally lain naked in bed , wrapping themselves in large linen sheets which were stretched
+over the cushions .
+</item 10>
+=== END ITEM id=7507811825fd9390 ===

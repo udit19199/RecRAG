@@ -1,0 +1,27 @@
+[
+  {"id": "f7e54b9108b0ca8f", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "With this sale, they offer some of the best value in their class from one of the top names in the business."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "With this sale, they offer some of the best value in their class from one of the top names in the business."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "f61b446a3140cdee", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "80b2004b7818cdb2", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]}
+]

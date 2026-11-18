@@ -1,0 +1,861 @@
+[
+ {
+  "id": "dc4f39cd4f4c5891",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The right-most label conveys the top - level domain"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "the domain name www.example.com belongs to the top - level domain com"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The hierarchy of domains descends from the right to the left label in the name"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "each label to the left specifies a subdivision , or subdomain of the domain to the right"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "the label example specifies a node example.com as a subdomain of the com domain"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "www is a label to create www.example.com , a subdomain of example.com"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Each label may contain from 1 to 63 octets"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The empty label is reserved for the root node"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "when fully qualified is expressed as the empty label terminated by a dot"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The full domain name may not exceed a total length of 253 ASCII characters in its textual representation"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Thus , when using a single character per label , the limit is 127 levels"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "127 characters plus 126 dots have a total length of 253"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "In practice , some domain registries may have shorter limits"
+     }
+    ]
+   },
+   {
+    "fact": "0.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "A hostname is a domain name that has at least one associated IP address"
+     }
+    ]
+   },
+   {
+    "fact": "0.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "the domain names www.example.com and example.com are also hostnames"
+     }
+    ]
+   },
+   {
+    "fact": "0.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "also hostnames , whereas the com domain is not"
+     }
+    ]
+   },
+   {
+    "fact": "0.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "However , other top - level domains , particularly country code top - level domains , may indeed have an IP address"
+     }
+    ]
+   },
+   {
+    "fact": "0.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "address , and if so , they are also hostnames"
+     }
+    ]
+   },
+   {
+    "fact": "0.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Hostnames impose restrictions on the characters allowed in the corresponding domain name"
+     }
+    ]
+   },
+   {
+    "fact": "0.19",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "A valid hostname is also a valid domain name"
+     }
+    ]
+   },
+   {
+    "fact": "0.20",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "a valid domain name may not necessarily be valid as a hostname"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "4f918ccb1ad0167a",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Season Episodes Originally aired First aired Last aired 17 September 13 , 1969 ( 1969 - 09 - 13 ) January 17 , 1970 ( 1970 - 01 - 17 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "8 September 12 , 1970 ( 1970 - 09 - 12 ) October 31 , 1970 ( 1970 - 10 - 31 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "( 1970 - 10 - 31 ) 16 September 9 , 1978 December 23 , 1978"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "18dd6c546b7ba381",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Beijing ( / beɪˈdʒɪŋ / ; Mandarin : ( pèi."
+     },
+     {
+      "item": 2,
+      "quote": "Capital of the People 's Republic of China 1949 -- present"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "An older English spelling , Peking , is the postal romanization of the same two characters"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.5",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.6",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.7",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.8",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.9",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "The name Beijing , which means `` Northern Capital ''"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "from the Chinese characters 北 for north and 京 for capital"
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "was applied to the city in 1403 during the Ming dynasty"
+     }
+    ]
+   },
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "to distinguish the city from Nanjing ( the `` Southern Capital '' )"
+     }
+    ]
+   },
+   {
+    "fact": "1.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "The English spelling is based on the pinyin romanization of the two characters as they are pronounced in Standard Mandarin"
+     }
+    ]
+   },
+   {
+    "fact": "1.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "An older English spelling , Peking , is the postal romanization of the same two characters as they are pronounced in Chinese dialects spoken in the southern port towns"
+     }
+    ]
+   },
+   {
+    "fact": "1.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "the southern port towns first visited by European traders and missionaries"
+     }
+    ]
+   },
+   {
+    "fact": "1.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Those dialects preserve the Middle Chinese pronunciation of 京 as kjaeng"
+     }
+    ]
+   },
+   {
+    "fact": "1.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "pronunciation of 京 as kjaeng , prior to a phonetic shift in the northern dialects to the modern pronunciation"
+     }
+    ]
+   },
+   {
+    "fact": "1.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Although Peking is no longer the common name for the city"
+     }
+    ]
+   },
+   {
+    "fact": "1.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "some of the city 's older locations and facilities , such as Beijing Capital International Airport , with IATA Code PEK , and Peking University , still use the former romanization"
+     }
+    ]
+   },
+   {
+    "fact": "1.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Beijing Capital International Airport , with IATA Code PEK , and Peking University , still use the former romanization"
+     }
+    ]
+   },
+   {
+    "fact": "1.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "and Peking University , still use the former romanization"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "9bd159f1312738c0",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Mumbai ( Marathi : मुंबई ) , from Bombay , renamed in 1995"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Mumbai ( Marathi : मुंबई ) , from Bombay , renamed in 1995"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Mumbai ( Marathi : मुंबई ) , from Bombay , renamed in 1995"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ad000ff0b36c4c12",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "William Alan `` Will '' Friedle ( born August 11 , 1976 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "William Alan `` Will '' Friedle ( born August 11 , 1976 ) is an American actor and voice actor"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "William Alan `` Will '' Friedle ( born August 11 , 1976 ) is an American actor and voice actor"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "He is best known for his comedic roles"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "most notably the underachieving elder brother Eric Matthews on the long - running TV sitcom Boy Meets World from 1993 to 2000"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Friedle was cast as Cory Matthews ' likeable but underachieving elder brother Eric on the long - running TV sitcom Boy Meets World from 1993 to 2000"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "More recently , he has voiced a number of animated characters"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "he has voiced a number of animated characters such as Terry McGinnis / Batman , the title character of Batman Beyond"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "he has voiced a number of animated characters such as Terry McGinnis / Batman , the title character of Batman Beyond , and Ron Stoppable of Kim Possible"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "He voices Deadpool in Ultimate Spider - Man"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Star - Lord in the animated version of Guardians of the Galaxy"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Star - Lord in the animated version of Guardians of the Galaxy , replacing Chris Cox"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "He also performed the voices of Doyle in The Secret Saturdays"
+     }
+    ]
+   },
+   {
+    "fact": "0.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Lion - O in the rebooted ThunderCats series"
+     }
+    ]
+   },
+   {
+    "fact": "0.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "and Blue Beetle on Batman : The Brave and the Bold"
+     }
+    ]
+   },
+   {
+    "fact": "0.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "One of his most recent roles has been the speaking voice of Bumblebee in the final episode of Transformers : Prime"
+     }
+    ]
+   },
+   {
+    "fact": "0.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "the speaking voice of Bumblebee in the final episode of Transformers : Prime and the movie Transformers Prime Beast Hunters : Predacons Rising"
+     }
+    ]
+   },
+   {
+    "fact": "0.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "and in the sequel series Transformers : Robots in Disguise"
+     }
+    ]
+   },
+   {
+    "fact": "0.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "as well as in Transformers : Rescue Bots"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "f7bcd740219069f8",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "The theory is generally associated with Hirschman"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "The theory is generally associated with Hirschman . He presented a complete theoretical formulation of the strategy"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Underdeveloped countries display common characteristics"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Underdeveloped countries display common characteristics : low levels of GNI per capita"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "low levels of GNI per capita and slow GNI per capita growth"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "large income inequalities and widespread poverty"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "large income inequalities and widespread poverty"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "low levels of productivity , great dependence on agriculture"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "low levels of productivity , great dependence on agriculture"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "a backward industrial structure , a high proportion of consumption and low savings"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "a backward industrial structure , a high proportion of consumption and low savings"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "high rates of population growth and dependency burdens , high unemployment and underemployment"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "high rates of population growth and dependency burdens , high unemployment and underemployment"
+     }
+    ]
+   },
+   {
+    "fact": "0.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "technological backwardness and dualism"
+     }
+    ]
+   },
+   {
+    "fact": "0.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "technological backwardness and dualism ( existence of both traditional and modern sectors )"
+     }
+    ]
+   },
+   {
+    "fact": "0.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "In a less - developed country , these characteristics lead to scarce resources or inadequate infrastructure to exploit these resources"
+     }
+    ]
+   },
+   {
+    "fact": "0.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "With a lack of investors and entrepreneurs , cash flows can not be directed into various sectors that influence balanced economic growth"
+     }
+    ]
+   }
+  ]
+ }
+]

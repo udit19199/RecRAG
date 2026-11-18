@@ -1,0 +1,525 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "63e78ddebeb1cc20",
+   "gold": [
+    {
+     "sentence": "Scott Richard Weiland ( ; born Scott Richard Kline; October 27, 1967 – December 3, 2015) was an American musician, singer and songwriter.",
+     "facts": {
+      "0.0": "Scott Richard Weiland was born Scott Richard Kline.",
+      "0.1": "Scott Richard Weiland was born on October 27, 1967.",
+      "0.2": "Scott Richard Weiland's date range ends on December 3, 2015.",
+      "0.3": "Scott Richard Weiland was an American musician.",
+      "0.4": "Scott Richard Weiland was an American singer.",
+      "0.5": "Scott Richard Weiland was an American songwriter."
+     }
+    },
+    {
+     "sentence": "Richard Willis Hawley (born 17 January 1967) is an English guitarist, singer-songwriter and producer.",
+     "facts": {
+      "1.0": "Richard Willis Hawley was born on 17 January 1967.",
+      "1.1": "Richard Willis Hawley is English.",
+      "1.2": "Richard Willis Hawley is a guitarist.",
+      "1.3": "Richard Willis Hawley is a singer-songwriter.",
+      "1.4": "Richard Willis Hawley is a producer."
+     }
+    }
+   ],
+   "items": [
+    "Scott Weiland and the Wildabouts\nScott Weiland and the Wildabouts (sometimes billed simply as The Wildabouts) were a rock and roll band formed sometime around 2012 by former Stone Temple Pilots and Velvet Revolver lead singer Scott Weiland, along with bassist Tommy Baker, guitarist Jeremy Brown, and multi-instrumentalist Doug Grean.\n\n The Wildabouts were marred with several roster changes (including the death of guitarist Jeremy Brown) and ultimately disbanded after Weiland's sudden death on a tour bus in late 2015.",
+    "Standing at the Sky's Edge\nStanding at the Sky's Edge is the seventh studio album from English musician Richard Hawley, released in the UK on 7 May 2012 and in the US on 28 August 2012.\n\n The album is markedly different from Hawley's previous efforts, often relinquishing softer instrumentation in favour of squalling guitars.\n\n As with all of Hawley's previous albums, the title obliquely refers to a location in his native city of Sheffield, in this case Skye Edge, a hillside area with views over the city centre and formerly known for its crime-ridden estates but largely redeveloped in the mid-2000s.",
+    "Scott Weiland\nScott Richard Weiland ( ; born Scott Richard Kline; October 27, 1967 – December 3, 2015) was an American musician, singer and songwriter.\n\n During a career spanning three decades, Weiland was best known as the lead singer of the band Stone Temple Pilots from 1989 to 2002 and 2008 to 2013.\n\n He was also a member of supergroup Velvet Revolver from 2003 to 2008 and recorded one album with another supergroup, Art of Anarchy.\n\n He established himself as a solo artist as well, releasing three studio albums, two cover albums, and collaborations with several other musicians throughout his career.",
+    "Doug Grean\nDoug Grean is an American record producer, audio engineer, guitarist, based in Los Angeles.\n\n He has worked with artists Sheryl Crow, Ricki Lee Jones, Glen Campbell, Scott Weiland, Slash, Velvet Revolver, Stone Temple Pilots, The Crystal Method, Tim McGraw, Cyndi Lauper, Annabella Lwin (Bow Wow Wow), Corey Glover (Living Color), Camp Freddy, DJ Hurricane and John Taylor (Duran Duran).\n\n Grean was formerly the lead guitarist and touring musical director for Scott Weiland and the Wildabouts.\n\n Some of Grean's television appearances with Weiland include: VH1 Legends, Last Call with Carson Daly, The Tonight Show with Jay Leno, and the Grammy awards with Velvet Revolver as keyboardist, performing \"All Across the Universe\" with Stevie Wonder, Norah Jones, Bono, Steven Tyler, Brian Wilson, and Alison Krauss.",
+    "A Compilation of Scott Weiland Cover Songs\nA Compilation of Scott Weiland Cover Songs is a compilation album and third solo studio album by Stone Temple Pilots frontman Scott Weiland, released on August 30, 2011.\n\n The album consists entirely of cover songs, featuring an array of covers of artists that inspired Weiland, such as David Bowie, The Beatles, The Rolling Stones, and The Smiths.\n\n The album was originally set to be released together with Weiland's memoir \"Not Dead & Not for Sale\" but Weiland decided later to release the album by itself exclusively in digital format.",
+    "Hugh Whitaker\nHugh Whitaker (born 18 May 1961) is an English musician and the former drummer for the British indie rock band The Housemartins.\n\n He replaced original drummer Chris Lang and drummed for the band's first album, \"London 0 Hull 4\", and its attendant single releases.\n\n He left the band before the recording of their second album, \"The People Who Grinned Themselves to Death\".\n\n Whitaker left the band on amicable terms and even participated in the promotional video for the band's first single without him, \"Five Get Over Excited\", wherein he was kidnapped by his replacement, Dave Hemingway, and locked in a hessian sack.",
+    "John Scott Whiteley\nJohn Scott Whiteley (born 1950) is an English organist and composer.\n\n He has performed extensively around the world and since 1985 has undertaken an annual tour of the USA.\n\n He has performed in most major UK Cathedrals and concert halls, and was Assistant Organist and later Organist and Director of the Girls' choir at York Minster between 1975 and 2010.\n\n He is currently Organist Emeritus of York Minster.",
+    "&quot;Happy&quot; in Galoshes\n\"Happy\" in Galoshes is the second solo album by American rock singer Scott Weiland.\n\n Weiland, known for his roles as the lead singer in Stone Temple Pilots and Velvet Revolver, released his first album, \"12 Bar Blues\" in 1998.\n\n Ten years later, \"\"Happy\" in Galoshes\" served as the official follow-up.\n\n Two versions have been released, a single disc and double disc deluxe version—the deluxe edition offers a second disc of 10 extra tracks.\n\n The album was released November 25, 2008 on Weiland's own Softdrive Records.\n\n Produced by Doug Grean and Scott Weiland, with select tracks recorded by Steve Albini, the album features guest appearances by Paul Oakenfold and No Doubt members Adrian Young, Tony Kanal, and Tom Dumont.\n\n Oakenfold appears on a cover of David Bowie's \"Fame.\"\n\n Weiland has cited Bowie as one of his main influences.",
+    "Richard Hawley\nRichard Willis Hawley (born 17 January 1967) is an English guitarist, singer-songwriter and producer.\n\n After his first band Treebound Story (formed while he was still at school) broke up, Hawley found success as a member of Britpop band Longpigs in the 1990s.\n\n After that group broke up in 2000, he later joined the band Pulp, led by his friend Jarvis Cocker, for a short time.\n\n As a solo musician, Hawley has released seven studio albums.\n\n He has been nominated for a Mercury prize twice and once for a Brit Award.\n\n He has collaborated with Lisa Marie Presley, Arctic Monkeys, Manic Street Preachers and Paul Weller.",
+    "Bill Scott (author)\nWilliam Neville \"Bill\" Scott OAM (4 October 1923 – 22 December 2005) was an Australian author, folklorist, songwriter, poet and a collector of bush ballads and Australian folk history.\n\n He has published anthologies of Australian bush songs, including the best selling book \"The Complete Book of Australian Folklore\" published in 1976.\n\n He was awarded the Order of Australia in 1992 for his contributions to folklore, folk music and Australian literature.\n\n He was considered a living treasure and his anthologies of songs and his donated collections continue his legacy."
+   ]
+  },
+  {
+   "id": "d3792a7f5589499c",
+   "gold": [
+    {
+     "sentence": "Claudio Giovanni Antonio Monteverdi (] ; 15 May 1567 (baptized) – 29 November 1643) was an Italian composer, string player and choirmaster.",
+     "facts": {
+      "0.0": "Claudio Giovanni Antonio Monteverdi was baptized on 15 May 1567.",
+      "0.1": "Claudio Giovanni Antonio Monteverdi died on 29 November 1643.",
+      "0.2": "Claudio Giovanni Antonio Monteverdi was an Italian composer.",
+      "0.3": "Claudio Giovanni Antonio Monteverdi was an Italian string player.",
+      "0.4": "Claudio Giovanni Antonio Monteverdi was an Italian choirmaster."
+     }
+    },
+    {
+     "sentence": " A composer of both secular and sacred music, and a pioneer in the development of opera, he is considered a crucial transitional figure between the Renaissance and the Baroque periods of music history.",
+     "facts": {
+      "1.0": "Monteverdi composed both secular and sacred music.",
+      "1.1": "Monteverdi was a pioneer in the development of opera.",
+      "1.2": "Monteverdi is considered a crucial transitional figure between the Renaissance and the Baroque periods of music history."
+     }
+    },
+    {
+     "sentence": "Georges Bizet (] ; 25 October 18383 June 1875), registered at birth as Alexandre César Léopold Bizet, was a French composer of the romantic era.",
+     "facts": {
+      "2.0": "Georges Bizet was born on 25 October 1838.",
+      "2.1": "Georges Bizet died on 3 June 1875.",
+      "2.2": "Georges Bizet was registered at birth as Alexandre César Léopold Bizet.",
+      "2.3": "Georges Bizet was a French composer.",
+      "2.4": "Georges Bizet was a composer of the romantic era."
+     }
+    },
+    {
+     "sentence": " Best known for his operas in a career cut short by his early death, Bizet achieved few successes before his final work, \"Carmen\", which has become one of the most popular and frequently performed works in the entire opera repertoire.",
+     "facts": {
+      "3.0": "Georges Bizet is best known for his operas.",
+      "3.1": "Bizet's career was cut short by his early death.",
+      "3.2": "Bizet achieved few successes before his final work.",
+      "3.3": "Bizet's final work is 'Carmen'.",
+      "3.4": "Carmen has become one of the most popular works in the entire opera repertoire.",
+      "3.5": "Carmen is one of the most frequently performed works in the entire opera repertoire."
+     }
+    }
+   ],
+   "items": [
+    "Béla Bartók\nBéla Viktor János Bartók ( ; ] ; 25 March 1881 – 26 September 1945) was a Hungarian composer, pianist and an ethnomusicologist.\n\n He is considered one of the most important composers of the 20th century; he and Liszt are regarded as Hungary's greatest composers .\n\n Through his collection and analytical study of folk music, he was one of the founders of comparative musicology, which later became ethnomusicology.",
+    "Georges Bizet\nGeorges Bizet (] ; 25 October 18383 June 1875), registered at birth as Alexandre César Léopold Bizet, was a French composer of the romantic era.\n\n Best known for his operas in a career cut short by his early death, Bizet achieved few successes before his final work, \"Carmen\", which has become one of the most popular and frequently performed works in the entire opera repertoire.",
+    "Claudio Monteverdi\nClaudio Giovanni Antonio Monteverdi (] ; 15 May 1567 (baptized) – 29 November 1643) was an Italian composer, string player and choirmaster.\n\n A composer of both secular and sacred music, and a pioneer in the development of opera, he is considered a crucial transitional figure between the Renaissance and the Baroque periods of music history.",
+    "John Whenham\nJohn Whenham is an English musicologist and academic who specializes in early Italian baroque music.\n\n He earned both a Bachelor of Music and a Master of Music from the University of Nottingham, and a Doctor of Philosophy from the University of Oxford.\n\n He is a leading expert on the life and works of Claudio Monteverdi, and is the author of the books \"Duet and Dialogue in the Age of Monteverdi\" (Ann Arbor, Michigan: University Microfilms International, 1982) \"Monteverdi, 'Orfeo' \" (London: Cambridge University Press, 1986), \"Monteverdi, Vespers (1610)\" (Cambridge University Press, 1997), and \"The Cambridge Companion to Monteverdi\" (with Richard Wistreich, Cambridge University Press, 2007).\n\n For five years he was co-editor of the journal \"Music & Letters\".\n\n He currently serves on the board of the Birmingham Early Music Festival and is head of the music history department at the University of Birmingham.",
+    "Symphony in C (Bizet)\nThe Symphony in C is an early work by the French composer Georges Bizet.\n\n According to \"Grove's Dictionary\", the symphony \"reveals an extraordinarily accomplished talent for a 17-year-old student, in melodic invention, thematic handling and orchestration.\"\n\n Bizet started work on the symphony in C major on 29 October 1855, four days after turning 17, and finished it roughly a month later.\n\n It was written while he was studying at the Paris Conservatoire under the composer Charles Gounod, and was evidently a student assignment.\n\n Bizet showed no apparent interest in having it performed or published, and the piece was never played in his lifetime.\n\n He used certain material from the symphony in later works, however.\n\n There is no mention of the work in Bizet's letters, and it was unknown to his earlier biographers.\n\n His widow, Geneviève Halévy (1849–1926), gave the manuscript to Reynaldo Hahn, who left it along with other papers to the archives of the conservatory library, where it was found in 1933 by Jean Chantavoine.",
+    "L'Arlésienne (Bizet)\nGeorges Bizet composed L'Arlésienne as incidental music to Alphonse Daudet's play of the same name, usually translated as \"The Girl from Arles\".\n\n It was first performed on 1 October 1872 at the Vaudeville Theatre (now a cinema known as the Gaumont Opéra).\n\n Bizet's music consists of 27 numbers (some only a few bars) for voice, chorus, and small orchestra, ranging from short solos to longer entr'actes. Bizet himself played the harmonium backstage at the premiere performance.",
+    "Roma Symphony (Bizet)\nThe Symphony in C \"Roma\" is the second of Georges Bizet's symphonies.\n\n Unlike his first symphony, also in C major, which was written quickly at the age of 17, \"Roma\" was written over an eleven-year span, between the ages of 22 and 33 (he died at age 36).\n\n Bizet was never fully satisfied with it, subjecting it to a number of revisions, but died before finishing his definitive version.\n\n All four movements were performed in his lifetime, but never all on the same occasion.\n\n The full symphony in its latest revision was premiered in 1875, after his death.\n\n It is perhaps because of Bizet's dissatisfaction that the work is often said to be \"unfinished\".\n\n However, in the form in which it exists today, it is a complete work and is fully scored.\n\n It has been recorded a number of times but is not often heard on the concert platform.",
+    "L'Orfeo discography\nThese lists show the audio and visual recordings of the opera \"L'Orfeo\" by Claudio Monteverdi.\n\n The opera was first performed in Mantua in 1607, at the court of Duke Vincenzo Gonzaga, and is one of the earliest of all operas.\n\n The first recording of \"L'Orfeo\" was issued in 1939, a freely adapted version of Monteverdi's music edited by Giacomo Benvenuti, given by the orchestra of La Scala Milan conducted by Ferrucio Calusio.\n\n In 1949 the Berlin Radio Orchestra under Helmut Koch recorded the complete opera, on long-playing records (LPs).\n\n The advent of LP recordings was, as Harold Schonberg later wrote, an important factor in the postwar revival of interest in Renaissance and Baroque music, and from the mid-1950s recordings of \"L'Orfeo\" have been issued on many labels.\n\n Koch's landmark version was reissued in 1962, when it was compared unfavourably with others that had by then been issued.",
+    "Symphony in C (Bizet)\nSoon thereafter, Bizet's first British biographer Douglas Charles Parker (1885–1970) showed the manuscript to the conductor Felix Weingartner, who led the first performance in Basel, Switzerland, on 26 February 1935.",
+    "Giuseppe Verdi\nGiuseppe Fortunino Francesco Verdi (] ; 9 or 10 October 1813 – 27 January 1901) was an Italian opera composer."
+   ]
+  },
+  {
+   "id": "77aaf4a65b9c4769",
+   "gold": [
+    {
+     "sentence": "While studying at the University of Michigan, he played with visiting musicians such as Dizzy Gillespie, Miles Davis, Thad Jones and Billy Mitchell, before going on to play with Sonny Stitt, Count Basie and Al McKibbon, Cannonball Adderley, Percy Heath, Philly Joe Jones, Lou Donaldson, Donald Byrd, Kenny Dorham and Zoot Sims.",
+     "facts": {
+      "0.0": "The musician studied at the University of Michigan.",
+      "0.1": "While studying at the University of Michigan, the musician played with visiting musician Dizzy Gillespie.",
+      "0.2": "While studying at the University of Michigan, the musician played with visiting musician Miles Davis.",
+      "0.3": "While studying at the University of Michigan, the musician played with visiting musician Thad Jones.",
+      "0.4": "While studying at the University of Michigan, the musician played with visiting musician Billy Mitchell.",
+      "0.5": "After that, the musician played with Sonny Stitt, Count Basie and Al McKibbon.",
+      "0.6": "After that, the musician played with Cannonball Adderley, Percy Heath, Philly Joe Jones and Lou Donaldson.",
+      "0.7": "After that, the musician played with Donald Byrd, Kenny Dorham and Zoot Sims."
+     }
+    },
+    {
+     "sentence": "Miles Dewey Davis III (May 26, 1926September 28, 1991) was an American jazz trumpeter, bandleader, and composer.",
+     "facts": {
+      "1.0": "Miles Dewey Davis III was born on May 26, 1926.",
+      "1.1": "Miles Dewey Davis III died on September 28, 1991.",
+      "1.2": "Miles Dewey Davis III was an American jazz trumpeter.",
+      "1.3": "Miles Dewey Davis III was an American jazz bandleader.",
+      "1.4": "Miles Dewey Davis III was an American jazz composer."
+     }
+    }
+   ],
+   "items": [
+    "Marty Marsala\nMarty Marsala (2 April 1909 – 27 April 1975) was an American jazz trumpeter born in Chicago, perhaps best known for working from 1926-1946 with his brother Joe Marsala in a big band in New York City and Chicago.\n\n He had also toured with various artists, such as Chico Marx and Miff Mole, to name a few.\n\n During the 1940s Marsala was a celebrated West Coast jazz trumpeter, commuting back and forth from Chicago to San Francisco frequently.\n\n In various club settings Marsala shared stages with Earl Hines and Sidney Bechet.",
+    "George Albert Smith\nGeorge Albert Smith Sr. (April 4, 1870 – April 4, 1951) was an American religious leader who served as the eighth president of The Church of Jesus Christ of Latter-day Saints (LDS Church).",
+    "Don Ellis\nDonald Johnson Ellis (July 25, 1934 – December 17, 1978) was an American jazz trumpeter, drummer, composer, and bandleader.\n\n He is best known for his extensive musical experimentation, particularly in the area of time signatures. Later in his life he worked as a film composer, contributing a score to 1971's \"The French Connection\" and 1973's \"The Seven-Ups\".",
+    "Here Comes Louis Smith\nHere Comes Louis Smith is the debut album by American trumpeter Louis Smith recorded in 1958 and released on the Blue Note label.\n\n Originally recorded for the Transition label, the company went out of business shortly afterwards and before the recording could be released.\n\n The album masters were acquired by Blue Note's Alfred Lion.",
+    "Miles Davis\nMiles Dewey Davis III (May 26, 1926September 28, 1991) was an American jazz trumpeter, bandleader, and composer.\n\n He is among the most influential and acclaimed figures in the history of jazz and 20th century music.\n\n Davis adopted a variety of musical directions in his five-decade career which kept him at the forefront of a number of major stylistic developments in jazz.",
+    "Thad Jones\nThaddeus Joseph Jones (March 28, 1923 – August 20, 1986) was an American jazz trumpeter, composer, and bandleader who has been called \"one of the all-time greatest jazz trumpet soloists.\"",
+    "Jack Johnson (album)\nJack Johnson, later reissued as A Tribute to Jack Johnson, is a 1971 studio album and soundtrack by American jazz trumpeter, composer, and bandleader Miles Davis.\n\n In 1970, Davis was asked by Bill Cayton to record music for his documentary of the same name on the life of boxer Jack Johnson.\n\n Johnson's saga resonated personally with Davis, who wrote in the album's liner notes of Johnson's mastery as a boxer, his affinity for fast cars, jazz, clothes, and beautiful women, his unreconstructed blackness, and his threatening image to white men.\n\n This was the second film score he had composed, after \"Ascenseur pour l'échafaud\" in 1957.",
+    "Louis Smith (gymnast)\nLouis Antoine Smith, MBE (born 22 April 1989) is a British artistic gymnast.\n\n He received a bronze medal and a silver medal on the pommel horse at the 2008 Beijing Olympics and the 2012 London Olympics respectively, with the former marking the first time a British gymnast had placed in an Olympic event since 1928.\n\n He followed this up with a second consecutive silver medal on the pommel horse at the 2016 Rio Olympics, finishing behind teammate Max Whitlock.\n\n Smith was part of the Great Britain team that took the bronze in the men's artistic team all-around at the 2012 London Olympics.\n\n He is the only British gymnast to win Olympic medals in three separate Games.\n\n In 2015 he became the European champion on Pommel Horse.",
+    "Paul Smith (defensive end)\nPaul Edward Smith (August 13, 1945 – March 14, 2000) was a collegiate and professional American football defensive end.\n\n Smith was selected in the 1968 Common Draft by the American Football League's Denver Broncos and played in the National Football League for the Broncos and Washington Redskins.",
+    "Louis Smith (musician)\nWhile studying at the University of Michigan, he played with visiting musicians such as Dizzy Gillespie, Miles Davis, Thad Jones and Billy Mitchell, before going on to play with Sonny Stitt, Count Basie and Al McKibbon, Cannonball Adderley, Percy Heath, Philly Joe Jones, Lou Donaldson, Donald Byrd, Kenny Dorham and Zoot Sims."
+   ]
+  },
+  {
+   "id": "7a975d90492f7a6b",
+   "gold": [
+    {
+     "sentence": " It consists of three shots, two Sourz Apple and one Cherry Brandy.",
+     "facts": {
+      "0.0": "The described drink consists of three shots.",
+      "0.1": "The described drink has two shots of Sourz Apple.",
+      "0.2": "The described drink has one shot of Cherry Brandy."
+     }
+    },
+    {
+     "sentence": " Each shot is taken from an average shot glass which is around 1.5 ounces (roughly 45 ml).",
+     "facts": {
+      "1.0": "Each shot is taken from an average shot glass.",
+      "1.1": "An average shot glass holds around 1.5 ounces (roughly 45 ml)."
+     }
+    },
+    {
+     "sentence": "The flaming volcano is a large tropical group cocktail made of rum, brandy, pineapple juice, orange juice, almond syrup, and sometimes other ingredients.",
+     "facts": {
+      "2.0": "The flaming volcano is a large tropical group cocktail.",
+      "2.1": "The flaming volcano is made of rum, brandy, pineapple juice, orange juice and almond syrup.",
+      "2.2": "The flaming volcano is sometimes made with other ingredients."
+     }
+    },
+    {
+     "sentence": " It is usually a multi-user drink, served to a group in a special, ritual vessel known as a volcano bowl, which is a decorative ceramic bowl (typically of about 32 USoz capacity) designed with a rising central hub feature usually resembling a crude volcano cone.",
+     "facts": {
+      "3.0": "The flaming volcano is usually a multi-user drink.",
+      "3.1": "The flaming volcano is served to a group in a special ritual vessel known as a volcano bowl.",
+      "3.2": "A volcano bowl is a decorative ceramic bowl.",
+      "3.3": "A volcano bowl typically has a capacity of about 32 USoz.",
+      "3.4": "A volcano bowl is designed with a rising central hub feature.",
+      "3.5": "The rising central hub feature of a volcano bowl usually resembles a crude volcano cone."
+     }
+    }
+   ],
+   "items": [
+    "Flaming beverage\nFlaming beverages include cocktails and other mixed drinks that contain flammable, high-proof alcohol, which is ignited prior to consumption.\n\n The alcohol may be an integral part of the drink, or it may be floated as a thin layer across the top of the drink.\n\n The flames are mostly for dramatic flair.\n\n However, in combination with certain ingredients, the flavor of the drink is altered.\n\n Some flavors are enhanced, and it may impart a toasted flavor to some drinks.",
+    "Feuerzangenbowle\nFeuerzangenbowle (] ) is a traditional German alcoholic drink for which a rum-soaked sugarloaf is set on fire and drips into mulled wine.\n\n It is often part of a Christmas or New Year's Eve tradition.\n\n The name translates literally to \"fire-tongs punch\".",
+    "Volcano bowl\nVolcano bowls are ceramic drinkware originally associated with mid-20th century American tiki bars and tropical-themed restaurants.\n\n Drinks served in volcano bowls are typically rum-based, mixed with tropical fruit juices and other liquors such as brandy, vodka, and triple sec, and garnished with fruit.\n\n The Flaming Volcano cocktail is especially associated with this drinkware.",
+    "Flaming volcano\nThe flaming volcano is a large tropical group cocktail made of rum, brandy, pineapple juice, orange juice, almond syrup, and sometimes other ingredients.\n\n It is usually a multi-user drink, served to a group in a special, ritual vessel known as a volcano bowl, which is a decorative ceramic bowl (typically of about 32 USoz capacity) designed with a rising central hub feature usually resembling a crude volcano cone.\n\n The cone includes a second, much smaller central pit or \"crater\" which is partially filled with rum or other flammable high-alcohol liquor.\n\n The \"crater\" liquor is then ignited, creating a mild volcanic ambience with its central blue flame.",
+    "Flaming Moe's\n\"Flaming Moe's\" is the tenth episode of \"The Simpsons\"' third season.\n\n It first aired on the Fox network in the United States on November 21, 1991.\n\n In the episode, Homer tells Moe Szyslak of a secret alcoholic cocktail that includes cough medicine and fire that he calls \"Flaming Homer\".\n\n Moe steals the recipe from Homer, renames the drink the \"Flaming Moe\" and begins selling it at his tavern.\n\n The drink is a success and boosts business and patronage, but Homer is angry at Moe for his betrayal, and seeks revenge.",
+    "Flaming Doctor Pepper\nA Flaming Doctor Pepper is a flaming cocktail said to taste like the soft drink Dr Pepper, although Dr Pepper is not one of its ingredients.",
+    "Tweed Volcano\nTweed Volcano is a partially eroded Early Miocene shield volcano located in northeastern New South Wales, which formed when this region of Australia passed over the East Australia hotspot around 23 million years ago.\n\n Mount Warning, Lamington Plateau and the Border Ranges between New South Wales and Queensland are among the remnants of this volcano that was originally over 100 km in diameter and nearly twice the height of Mount Warning today, at 1156 m .\n\n Despite its size, Tweed Volcano was not a supervolcano; other shield volcanoes - such as on Hawaii - are much larger.\n\n In the 23 million years since the volcano was active, erosion has been extensive, forming a large erosion caldera around the volcanic plug of Mount Warning.\n\n Its erosion caldera is the largest in the Southern Hemisphere.",
+    "Hotlum Glacier\nThe Hotlum Glacier is a glacier situated on the northeast flank of Mount Shasta, in the US state of California.\n\n It is the largest and most voluminous glacier in California, although not as thick or long as the nearby Whitney Glacier.\n\n The Hotlum Glacier flows from a large cirque on the northeast side of Mount Shasta's main summit below the Hotlum Headwall at roughly 13600 ft .\n\n It flows northeastward down the steep slope, forming three lobes which terminate near 10400 ft .",
+    "Apple-Kneel\nThe Apple-Kneel is a cocktail.\n\n It consists of three shots, two Sourz Apple and one Cherry Brandy.\n\n Each shot is taken from an average shot glass which is around 1.5 ounces (roughly 45 ml).\n\n Firstly, you put two shots of Sourz Apple into a glass and then put in one shot of Cherry Brandy in and mix.\n\n It is customary to sip this cocktail.\n\n It can be served 'neat' or 'on the rocks'.",
+    "Volcanic bomb\nA volcanic bomb is a mass of molten rock (tephra) larger than 64 mm (2.5 inches) in diameter, formed when a volcano ejects viscous fragments of lava during an eruption.\n\n They cool into solid fragments before they reach the ground.\n\n Because volcanic bombs cool after they leave the volcano, they are extrusive igneous rocks.\n\n Volcanic bombs can be thrown many kilometres from an erupting vent, and often acquire aerodynamic shapes during their flight.\n\n Bombs can be extremely large; the 1935 eruption of Mount Asama in Japan expelled bombs measuring 5–6 m in diameter up to 600 m from the vent.\n\n Volcanic bombs are a significant volcanic hazard, and can cause severe injuries and death to people in an eruption zone.\n\n One such incident occurred at Galeras volcano in Colombia in 1993; six people near the summit were killed and several seriously injured by lava bombs when the volcano erupted unexpectedly."
+   ]
+  },
+  {
+   "id": "f462d0178e891b84",
+   "gold": [
+    {
+     "sentence": "Edward Benjamin Britten, Baron Britten {'1': \", '2': \", '3': \", '4': \"} (22 November 1913 – 4 December 1976) was an English composer, conductor and pianist.",
+     "facts": {
+      "0.0": "Edward Benjamin Britten, Baron Britten, lived from 22 November 1913 to 4 December 1976.",
+      "0.1": "Edward Benjamin Britten, Baron Britten, was an English composer.",
+      "0.2": "Edward Benjamin Britten, Baron Britten, was an English conductor.",
+      "0.3": "Edward Benjamin Britten, Baron Britten, was an English pianist."
+     }
+    },
+    {
+     "sentence": "Béla Viktor János Bartók ( ; ] ; 25 March 1881 – 26 September 1945) was a Hungarian composer, pianist and an ethnomusicologist.",
+     "facts": {
+      "1.0": "Béla Viktor János Bartók lived from 25 March 1881 to 26 September 1945.",
+      "1.1": "Béla Viktor János Bartók was a Hungarian composer.",
+      "1.2": "Béla Viktor János Bartók was a Hungarian pianist.",
+      "1.3": "Béla Viktor János Bartók was a Hungarian ethnomusicologist."
+     }
+    }
+   ],
+   "items": [
+    "Benjamin Britten\nEdward Benjamin Britten, Baron Britten {'1': \", '2': \", '3': \", '4': \"} (22 November 1913 – 4 December 1976) was an English composer, conductor and pianist.\n\n He was a central figure of 20th-century British classical music, with a range of works including opera, other vocal music, orchestral and chamber pieces.\n\n His best-known works include the opera \"Peter Grimes\" (1945), the \"War Requiem\" (1962) and the orchestral showpiece \"The Young Person's Guide to the Orchestra\" (1945).",
+    "Graph query row:\nperson: Benjamin Britten\nnationality: English\nassociated_country: None\ncountry: None",
+    "List of string quartets by Béla Bartók\n1 and 28 both owe a great deal to Bartók's quartets (; ), György Ligeti, whose two string quartets both owe a great deal to Bartók’s quartets (; ), Bruno Maderna , George Perle, who credits the Bartók Fourth and Fifth Quartets as precedents for his use of arrays of chords related to one another by different types of symmetry , Walter Piston (; ), Kim Dzmitrïyevich Tsesakow , Wilfried Westerlinck , Stefan Wolpe, who explained in a public lecture how he had derived ideas from Bartók’s Fourth Quartet , and Xu Yongsan .",
+    "Graph query row:\nperson: Béla Bartók\nnationality: Hungarian\nassociated_country: Hungary\ncountry: None",
+    "String Quartet No. 6 (Bartók)\nThe String Quartet No. 6, Sz.\n\n 114, BB 119, was the final string quartet that Béla Bartók wrote before his death.\n\n It was begun in August 1939 in Saanen, Switzerland, where Bartók was a guest of his patron, the conductor Paul Sacher.\n\n Shortly after he completed the Divertimento for String Orchestra on the 17th, he started on a commission for his friend, the violinist Zoltán Székely.\n\n Székely was acting as intermediary for the \"New Hungarian Quartet\", who had given the Budapest premiere of the String Quartet No. 5.\n\n With the outbreak of World War II and his mother's illness, Bartók returned to Budapest, where the quartet was finished in November.\n\n After his mother's death, Bartók decided to leave with his family for the United States.",
+    "Béla Bartók\nBéla Viktor János Bartók ( ; ] ; 25 March 1881 – 26 September 1945) was a Hungarian composer, pianist and an ethnomusicologist.\n\n He is considered one of the most important composers of the 20th century; he and Liszt are regarded as Hungary's greatest composers .\n\n Through his collection and analytical study of folk music, he was one of the founders of comparative musicology, which later became ethnomusicology.",
+    "String Quartet No. 6 (Bartók)\nDue to the difficulties of the war, communication between Bartók and Székely was difficult, and the quartet was not premiered until 20 January 1941, when the Kolisch Quartet, to whom the work is dedicated, gave its premiere at the Town Hall in New York City.",
+    "List of compositions by Béla Bartók\nThis aspires to be a complete list of compositions by Béla Bartók.\n\n The catalogue numbering by András Szőllősy (Sz.)\n\n, László Somfai (BB.)\n\n and Denijs Dille (DD.)\n\n are provided, as well as Bartók's own opus numbers.\n\n Note that Bartók started three times anew with opus numbers, here indicated with \"(list 1)\", \"(list 2)\" and \"(list 3)\" respectively.\n\n The pieces from the third listing are by far best known; opus lists 1 and 2 are early works.\n\n The year of composition and instrumentation (including voice) are included.\n\n See the main article on Béla Bartók for more details.",
+    "Suite, Op. 14 (Bartók)\nThe Suite, Op. 14, Sz.\n\n 62, BB 70 is a piece for solo piano written by Béla Bartók.\n\n It was written in February 1916, published in 1918, and debuted by the composer on April 21, 1919, in Budapest.\n\n The Suite is one of Bartók's most significant works for piano, only comparable with his 1926 Piano Sonata.\n\n Though much of Bartók's work makes frequent use of Eastern European folk music, this suite is one of the few pieces without melodies of folk origin.\n\n However, Romanian, Arabic, and North African rhythmic influences can still be found in some movements.\n\n Originally intending the suite to be a five-movement work, Bartók later decided against the idea and discarded the second movement, the \"Andante\", which was published only posthumously in the October 1955 issue of \"Új Zenei Szemle\" (New Musical Review).",
+    "List of string quartets by Béla Bartók\nThe Hungarian composer Béla Bartók wrote six string quartets, each for the usual forces of two violins, viola and cello.\n\n Notable composers who have been influenced by them include Benjamin Britten, particularly in the Sonata in C for Cello and Piano (; ), Elliott Carter, who refers in the opening of his own First String Quartet to Bartók’s Sixth Quartet , Chen Yi , Edison Denisov, whose Second Quartet is closely related to Bartók’s Fifth Quartet , Franco Donatoni, who was deeply impressed when he heard a broadcast of Bartók's Fourth Quartet , Robert Fripp, who mentions them as an influence upon King Crimson , Miloslav Ištvan , György Kurtág, whose Opp."
+   ]
+  },
+  {
+   "id": "99f6d2f701165816",
+   "gold": [
+    {
+     "sentence": "Disteghil Sar or Distaghil Sar (Urdu: ‎ ) is the highest mountain in the Hispar Muztagh, a subrange of the Karakoram mountain range, in Gilgit-Baltistan.",
+     "facts": {
+      "0.0": "Disteghil Sar is also called Distaghil Sar.",
+      "0.1": "Disteghil Sar is the highest mountain in the Hispar Muztagh.",
+      "0.2": "The Hispar Muztagh is a subrange of the Karakoram mountain range.",
+      "0.3": "Disteghil Sar is in Gilgit-Baltistan."
+     }
+    },
+    {
+     "sentence": " The mountain has an about 3 km long top ridge above 7400m with three distinct summits: (north)west 7885m, central 7760 m, and (south)east 7696m or 7535m ().",
+     "facts": {
+      "1.0": "Disteghil Sar has a top ridge about 3 km long.",
+      "1.1": "The top ridge of Disteghil Sar is above 7400 m.",
+      "1.2": "Disteghil Sar has three distinct summits.",
+      "1.3": "The (north)west summit of Disteghil Sar is 7885 m high.",
+      "1.4": "The central summit of Disteghil Sar is 7760 m high.",
+      "1.5": "The (south)east summit of Disteghil Sar is 7696 m or 7535 m high."
+     }
+    },
+    {
+     "sentence": " Its summit has an elevation of 7295 m and it is the highest peak in the Yengisogat subrange of the Karakoram.",
+     "facts": {
+      "2.0": "The summit of Disteghil Sar has an elevation of 7295 m.",
+      "2.1": "Disteghil Sar is the highest peak in the Yengisogat subrange of the Karakoram."
+     }
+    }
+   ],
+   "items": [
+    "Yengisogat\nThe Yengisogat range (音苏盖提 ), also known as the Wesm Mountains, is a Chinese subrange of the Karakoram mountain range.\n\n It lies north of the Baltoro Muztagh, home of the eight-thousanders of the Karakoram.\n\n The highest peak is Huangguan Shan, or Crown Peak, 7,265 m (23,835 ft) (also sometimes given as 7,295 m/23,934 ft).",
+    "Kezhen Peak\nKezhen Peak, also known as Karpogo Sar, is a mountain in the Karakoram mountain range.\n\n It is located in the Xinjiang Autonomous Region of China.",
+    "Passu Sar\nPassu Sar (Urdu: ‎ ; or Passu Sar, Passu I) is a mountain peak in the Batura Muztagh, a sub-range of the Karakoram mountain range, located in the Gilgit District of Gilgit-Baltistan, Pakistan, west of the Hunza Valley.\n\n It is the high point of the Passu massif, which also includes Passu Diar (or \"Passu East\", \"Pasu II\").\n\n The peak lies on the main ridge of the Batura Muztagh, about 7 km (4 mi) east of Batura Sar.",
+    "The Crown (mountain)\nThe Crown, also known as Huang Guan Shan and sometimes Crown Peak, is a mountain in the Karakoram mountain range in China.\n\n It is located in the Xinjiang Uyghur Autonomous Region of China.\n\n Its summit has an elevation of 7295 m and it is the highest peak in the Yengisogat subrange of the Karakoram.",
+    "Yutmaru Sar\nYutmaru Sar is a mountain in the Hispar mountain range, a subrange of the Karakoram.\n\n At an elevation of 7283 m it is the 88th highest mountain in the world.\n\n Yutmaru Sar is located in Gilgit-Baltistan, Pakistan.\n\n It was first climbed in 1980.",
+    "Distaghil Sar\nDisteghil Sar or Distaghil Sar (Urdu: ‎ ) is the highest mountain in the Hispar Muztagh, a subrange of the Karakoram mountain range, in Gilgit-Baltistan.\n\n It is the 19th highest mountain on earth and the 7th highest peak in Pakistan.\n\n Destghil sar is a Wakhi language word, that means \"above the inner ranch.\"\n\n The mountain has an about 3 km long top ridge above 7400m with three distinct summits: (north)west 7885m, central 7760 m, and (south)east 7696m or 7535m ().",
+    "Kanjut Sar\nKanjut Sar (Urdu: کنجت سر‎ ) or Kunjudh Sar as pronounced in \"Wakhi\" is a mountain located in the Hispar Muztagh, a subrange of the Karakoram mountain range.\n\n Kunjudh Sar in wakhi language mean that which overlooks Kunjudh, or above Kunjudh, while Khujudh is the wakhi name for Lower Hunza.\n\n It is the 26th highest mountain on Earth and the 11th highest in Pakistan.",
+    "Momhil Sar\nMomhil Sar, or Mumhail Sar as pronounced in Wakhi is at 7343 m above sea level, is the 64th highest mountain peak in the world.\n\n Mumhail Sar in Wakhi means the mountain that overlooks or is above Grandmother's cattle pen or paddock.\n\n It is situated in the Hispar Muztagh subrange of the Karakoram range, a few kilometres to the north-west of its parent peak Trivor.",
+    "Hispar Muztagh\nHispar Muztagh is a sub-range of the Karakoram mountain range.\n\n It is located in the Gojal region of Gilgit-Baltistan, Pakistan, north of Hispar Glacier, south of Shimshal Valley, and east of the Hunza Valley.\n\n It is the second highest sub-range of the Karakoram, the highest being the Baltoro Muztagh.\n\n The highest mountain in the range is Distaghil Sar (7,885m/25,869 ft).",
+    "Mingli Sar\nMingli Sar is a mountain located in the Shimshal valley in Gilgit-Baltistan, Pakistan.\n\n The mountain, located in the Karakoram mountain range, is 6050 meters high and located at the southernmost part of the Pamir mountain range.\n\n It was first climbed in 1988 by the famous Pakistani climber Nazir Sabir.\n\n Shimshal lake sits at the base of the mountain.\n\n China is located to the north, while to the left is the Hindukush mountain range.\n\n K2 is located on the south eastern side of the valley."
+   ]
+  },
+  {
+   "id": "179065148f89596d",
+   "gold": [
+    {
+     "sentence": "The Shins are an American indie rock band from Albuquerque, New Mexico, formed in 1996.",
+     "facts": {
+      "0.0": "The Shins are an American indie rock band.",
+      "0.1": "The Shins are from Albuquerque, New Mexico.",
+      "0.2": "The Shins were formed in 1996."
+     }
+    },
+    {
+     "sentence": "Paramore is an American rock band from Franklin, Tennessee, formed in 2004.",
+     "facts": {
+      "1.0": "Paramore is an American rock band.",
+      "1.1": "Paramore is from Franklin, Tennessee.",
+      "1.2": "Paramore was formed in 2004."
+     }
+    }
+   ],
+   "items": [
+    "Graph query row:\nband: The Shins\nformation_date: 1996",
+    "Hayley Williams\nHayley Nichole Williams (born December 27, 1988) is an American singer, songwriter and musician.\n\n She serves as the lead vocalist, primary songwriter and occasional keyboardist of the rock band Paramore.\n\n The band was formed in 2004 by Josh Farro, Zac Farro, Jeremy Davis and Williams.\n\n The band consists of Hayley Williams, Zac Farro and Taylor York.\n\n The band has five studio albums: \"All We Know Is Falling\" (2005), \"Riot!\n\n\" (2007), \"Brand New Eyes\" (2009), \"Paramore\" (2013) and \"After Laughter\" (2017).",
+    "Graph query row:\nband: Paramore\nformation_date: 2004",
+    "Paramore\nParamore is an American rock band from Franklin, Tennessee, formed in 2004.\n\n The band currently consists of lead vocalist Hayley Williams, guitarist Taylor York and drummer Zac Farro.",
+    "Singles Club (EP)\nSingles Club is an EP released by American rock band Paramore.\n\n The songs were released as promotional singles between October and December 2011, culminating in the release of a box set containing the three constituent songs plus \"Monster\", which was recorded during the same sessions.\n\n The EP and box set were released on December 14, 2011 on Paramore's website.\n\n The EP is the first release of new material by Paramore not to include band members Josh and Zac Farro.",
+    "Paramore (album)\nParamore is the self-titled fourth studio album by American rock band Paramore.\n\n It was released on April 5, 2013, through Fueled by Ramen as a follow-up to \"Brand New Eyes\" (2009).\n\n It is their first full-length album released after the departure of co-founders Josh and Zac Farro in 2010.\n\n Recorded between April and November 1, 2012, the album was described by the band as being a \"statement\" and a reintroduction of the band to the world and to themselves.\n\n It is the only album without Zac Farro on drums, and the final album recorded with bassist Jeremy Davis before he left the band in 2015.",
+    "The Shins\nThe Shins are an American indie rock band from Albuquerque, New Mexico, formed in 1996.\n\n The band's current lineup consists of James Mercer (vocals, guitar, songwriter), Jon Sortland (drums), Mark Watrous (guitar), Casey Foubert (guitar), Yuuki Matthews (bass), and Patti King (keyboards).\n\n The band is based in Portland, Oregon.",
+    "Zac Farro\nZachary Wayne \"Zac\" Farro (born June 4, 1990) is an American musician and drummer of the rock band Paramore.\n\n He is also the younger brother of Josh Farro, who is Paramore's former lead guitarist and backing vocalist.\n\n After he and his brother exited Paramore in 2010, Josh formed a band named Novel American, which Zac was also a part of.\n\n Zac is currently the sole member of the band HalfNoise.\n\n Farro rejoined Paramore on February 2, 2017.",
+    "List of songs recorded by Paramore\nAmerican rock band Paramore have recorded songs for five studio albums, a box set, an extended play and two soundtrack albums.\n\n In 2002, at age 13, vocalist Hayley Williams moved to Franklin, Tennessee, where she met brothers Josh Farro and Zac Farro.\n\n The band was officially formed by Josh Farro (lead guitar and backing vocals), Zac Farro (drums), Jeremy Davis (bass guitar) and Williams (lead vocals) in 2004, with the later addition of Williams' neighbor Jason Bynum (rhythm guitar).\n\n In 2005, Paramore signed with the New York City-based Fueled by Ramen and released their debut album entitled \"All We Know Is Falling\" that year.\n\n Three singles were released to promote the album.",
+    "Paramore discography\nThe American rock band Paramore has released five studio albums, three extended plays, two live albums, eighteen singles, one video album, and nineteen music videos.\n\n The band was formed in Franklin, Tennessee, in 2004 by lead vocalist Hayley Williams with guitarists Josh Farro and Taylor York, bassist Jeremy Davis, and drummer Zac Farro.\n\n In 2005, Paramore signed with the New York City-based Fueled by Ramen and released their debut album entitled \"All We Know Is Falling\".\n\n Three singles were released from the album, but none of them charted.\n\n The album did not chart in the \"Billboard\" 200 either, although it peaked at number thirty in the \"Billboard\" Top Heatseekers.\n\n \"All We Know Is Falling\" received Gold certification in the United Kingdom and in July 2014 the RIAA certified the album Gold in the United States."
+   ]
+  },
+  {
+   "id": "091c8ef3ca9238e9",
+   "gold": [
+    {
+     "sentence": "The City Heiress is a play by Aphra Behn produced in 1682.",
+     "facts": {
+      "0.0": "The City Heiress is a play by Aphra Behn.",
+      "0.1": "The City Heiress was produced in 1682."
+     }
+    },
+    {
+     "sentence": "Aphra Behn ( ; 14 December 1640?",
+     "facts": {
+      "1.0": "Aphra Behn's birth date is listed as 14 December 1640, marked with a question mark as uncertain."
+     }
+    },
+    {
+     "sentence": " (baptismal date)–16 April 1689) was a British playwright, poet, translator and fiction writer from the Restoration era.",
+     "facts": {
+      "2.0": "The 14 December 1640 date for Aphra Behn is a baptismal date.",
+      "2.1": "Aphra Behn died on 16 April 1689.",
+      "2.2": "Aphra Behn was a British playwright.",
+      "2.3": "Aphra Behn was a poet.",
+      "2.4": "Aphra Behn was a translator.",
+      "2.5": "Aphra Behn was a fiction writer.",
+      "2.6": "Aphra Behn was from the Restoration era."
+     }
+    }
+   ],
+   "items": [
+    "The Autumn Garden\nThe Autumn Garden is a 1951 play by Lillian Hellman.\n\n The play is set in September, 1949 in a summer home in a resort on the Gulf of Mexico, about 100 miles from New Orleans.\n\n The play is a study of the defeats, disappointments and diminished expectations of people reaching middle age.\n\n For inspiration, Hellman drew on her memories of her time in her aunts' boardinghouse.\n\n Dashiell Hammett, who had been Hellman's lover for 20 years, helped her write the play and received 15 percent of the royalties.\n\n Of all Hellman's plays it was her favorite.",
+    "Lillian Hellman\nLillian Florence Hellman (June 20, 1905 – June 30, 1984) was an American dramatist and screenwriter known for her success as a playwright on Broadway, as well as her left-wing sympathies and political activism.\n\n She was blacklisted after her appearance before the House Committee on Un-American Activities (HUAC) at the height of the anti-communist campaigns of 1947–52.\n\n Although she continued to work on Broadway in the 1950s, her blacklisting by the American film industry caused a drop in her income.\n\n Many praised Hellman for refusing to answer questions by HUAC, but others believed, despite her denial, that she had belonged to the Communist Party.",
+    "Marisha Chamberlin\nMarisha Anne Chamberlain (born January 6, 1952) is an American writer.\n\n Her most recent work, the libretto for \"Mortals & Angels\", a collaboration with American composer Carol Barnett, premiered at Carnegie Hall in 2016, a companion piece to their widely produced collaborative piece, \"The World Beloved: A Bluegrass Mass\".\n\n Her stage plays, both original works and adaptations are widely produced.\n\n Her debut novel, \"The Rose Variations\", was published by Soho Press in 2009.\n\n Her play, \"Scheherazade\", won the Dramatists Guild/CBS National Award, and in her screenplay version, played on public television across the country, and was screened at the British Film Institute Festival in the category of Best of American Public Television.",
+    "Marc Blitzstein\nMarcus Samuel Blitzstein (March 2, 1905January 22, 1964), was an American composer, lyricist, and librettist.\n\n He won national attention in 1937 when his pro-union musical \"The Cradle Will Rock\", directed by Orson Welles, was shut down by the Works Progress Administration.\n\n He is known for \"The Cradle Will Rock\" and for his Off-Broadway translation/adaptation of \"The Threepenny Opera\" by Bertolt Brecht and Kurt Weill.\n\n His works also include the opera \"Regina\", an adaptation of Lillian Hellman's play \"The Little Foxes\"; the Broadway musical \"Juno\", based on Seán O'Casey's play \"Juno and the Paycock\"; and \"No for an Answer\".\n\n He completed translation/adaptations of Brecht's and Weill's musical play \"Rise and Fall of the City of Mahagonny\" and of Brecht's play \"Mother Courage and Her Children\" with music by Paul Dessau.",
+    "Betty Ann Davies\nBetty Ann Davies (24 December 1910 – 14 May 1955) was a British stage and film actress active from the 1920s to the 1950s.\n\n She died young in 1955 aged 44 following an operation.\n\n Miss Davies made her first stage appearance at the Palladium in a revue in 1924.\n\n The following year she joined Cochran's Young Ladies in revues such as \"One Dam Thing After Another\" and \"This Year of Grace\".\n\n Betty Ann Davies enjoyed a long and distinguished West End career which included \"The Good Companions\" 1934, \"Morning Star\" 1942, and \"Blithe Spirit\" 1943.\n\n Her outstanding stage triumph was in the role of Blanche du Bois, which she took over from Vivien Leigh, in the original West End production of \" A Streetcar Named Desire\".\n\n Miss Davis appeared in 38 films, and was active in TV at the time of her death.\n\n She left one son Brook Blackford.",
+    "Aphra Behn\nAphra Behn ( ; 14 December 1640?\n\n (baptismal date)–16 April 1689) was a British playwright, poet, translator and fiction writer from the Restoration era.\n\n As one of the first English women to earn her living by her writing, she broke cultural barriers and served as a literary role model for later generations of women authors.\n\n Rising from obscurity, she came to the notice of Charles II, who employed her as a spy in Antwerp.\n\n Upon her return to London and a probable",
+    "Lillian Hellman: An Imperious Life\nLillian Hellman: An Imperious Life is a 2014 book by Dorothy Gallagher.\n\n It is a critical biography of the American playwright and writer Lillian Hellman.",
+    "The Heiress (1786 play)\nThe Heiress is a comedy play by the British playwright and soldier John Burgoyne.\n\n The play debuted at the Drury Lane Theatre on 14 January 1786.\n\n It concerns the engagement of Lord Gayville to Miss Alscrip, a fashionable woman he believes to be an heiress.\n\n Gayville later discovers that the woman who really stands to inherit the fortune is his true love Miss Clifford.\n\n The play was an enormous success, running for 31 performances in its initial season and being revived again the following year.\n\n The play was initially anonymous, but Burgoyne was soon widely reported to be the author and he acknowledged this after the play's debut.",
+    "Sheila Levine Is Dead and Living in New York\nSheila Levine Is Dead and Living in New York is a 1975 film directed by Sidney J. Furie, about a shy young woman who moves to New York City and falls in love with the boyfriend of her extroverted roommate.\n\n The film was co-written by Kenny Solms and Gail Parent, and based on her novel.\n\n The film was shot on location in New York City.",
+    "The City Heiress\nThe City Heiress is a play by Aphra Behn produced in 1682.\n\n The play conforms to the general rules of Restoration comedy, but it also keeps Behn's own highly Royalist political point of view."
+   ]
+  },
+  {
+   "id": "d5e0cd8ebb26c6bb",
+   "gold": [
+    {
+     "sentence": "Sleepless in Seattle is a 1993 American romantic comedy-drama film directed and co-written by Nora Ephron, based on a story by Jeff Arch.",
+     "facts": {
+      "0.0": "Sleepless in Seattle is a 1993 film.",
+      "0.1": "Sleepless in Seattle is an American film.",
+      "0.2": "Sleepless in Seattle is a romantic comedy-drama film.",
+      "0.3": "Sleepless in Seattle was directed by Nora Ephron.",
+      "0.4": "Sleepless in Seattle was co-written by Nora Ephron.",
+      "0.5": "Sleepless in Seattle is based on a story by Jeff Arch."
+     }
+    },
+    {
+     "sentence": " It stars Tom Hanks and Meg Ryan, alongside a supporting cast featuring Bill Pullman, Ross Malinger, Rob Reiner, Rosie O'Donnell, Gaby Hoffmann, Victor Garber, and Rita Wilson.",
+     "facts": {
+      "1.0": "Sleepless in Seattle stars Tom Hanks.",
+      "1.1": "Sleepless in Seattle stars Meg Ryan.",
+      "1.2": "Sleepless in Seattle has a supporting cast featuring Bill Pullman.",
+      "1.3": "Sleepless in Seattle has a supporting cast featuring Ross Malinger.",
+      "1.4": "Sleepless in Seattle has a supporting cast featuring Rob Reiner.",
+      "1.5": "Sleepless in Seattle has a supporting cast featuring Rosie O'Donnell.",
+      "1.6": "Sleepless in Seattle has a supporting cast featuring Gaby Hoffmann.",
+      "1.7": "Sleepless in Seattle has a supporting cast featuring Victor Garber.",
+      "1.8": "Sleepless in Seattle has a supporting cast featuring Rita Wilson."
+     }
+    },
+    {
+     "sentence": "Roseann O'Donnell (born March 21, 1962) is an American comedian, actress, author, and television personality.",
+     "facts": {
+      "2.0": "Roseann O'Donnell was born on March 21, 1962.",
+      "2.1": "Roseann O'Donnell is an American comedian.",
+      "2.2": "Roseann O'Donnell is an American actress.",
+      "2.3": "Roseann O'Donnell is an American author.",
+      "2.4": "Roseann O'Donnell is an American television personality."
+     }
+    }
+   ],
+   "items": [
+    "Kate O'Beirne\nKate Walsh O'Beirne (September 23, 1949 – April 23, 2017) was the President of National Review Institute.\n\n She was the Washington editor of \"National Review\".\n\n Her column, \"Bread and Circuses,\" covered Congress, politics, and U.S. domestic policy.",
+    "Zooey Deschanel filmography\nAmerican actress Zooey Deschanel made her film debut in the 1999 comedy feature \"Mumford\".\n\n She went on to gained public attention by co-starred in the comedy-drama \"Almost Famous\" (2000), the independent drama \"Manic\" (2001), opposite Joseph Gordon-Levitt, and the comedy-drama \"The Good Girl\" (2002).\n\n She landed her first major role as a 18-year-old virgin in the romantic drama \"All the Real Girls\" (2003), for which she was nominated for an Independent Spirit Award for Best Female Lead.\n\n Deschanel's biggest commercial success, as of 2017, came with the Christmas-fantasy film \"Elf\" (also in 2003), which grossed over $220 million worldwide.",
+    "Sleepless in Seattle\nSleepless in Seattle is a 1993 American romantic comedy-drama film directed and co-written by Nora Ephron, based on a story by Jeff Arch.\n\n It stars Tom Hanks and Meg Ryan, alongside a supporting cast featuring Bill Pullman, Ross Malinger, Rob Reiner, Rosie O'Donnell, Gaby Hoffmann, Victor Garber, and Rita Wilson.\n\n The film was a critical and commercial success, grossing over $220 million worldwide.",
+    "Barry Sandler\nBarry Sandler (born February 23, 1947 in Buffalo, New York) is an American screenwriter and film producer.\n\n His career has spanned several decades, with the 1980s being his most prolific.\n\n The openly gay Sandler is perhaps best known for writing the 1982 film \"Making Love\", the first mainstream Hollywood film to deal seriously with issues of homosexuality and coming out.\n\n Sandler discussed \"Making Love\" in the 1995 documentary film \"The Celluloid Closet\".",
+    "Amy O'Neill\nAmy O'Neill (born July 8, 1971) is an American performer and former actress.\n\n After appearing in several sitcoms and starring as Molly Stark on \"The Young and the Restless\" in 1986, she was cast in her notable role as Amy Szalinski in the 1989 Disney film, \"Honey, I Shrunk the Kids\", for which she was nominated for a Young Artist Award.\n\n She reprised her role as Amy Szalinski in the 1992 sequel, \"Honey, I Blew Up the Kid\" and appeared as Lisa Barnes in \"Where's Rodney?\n\n\".",
+    "Matthew Perry\nMatthew Langford Perry (born August 19, 1969) is a Canadian-American actor, best known for his role as Chandler Bing on the long-running NBC television sitcom \"Friends\", as well as his portrayal of Ron Clark in the 2006 television movie \"The Ron Clark Story\".",
+    "Marty Belafsky\nMarty Belafsky (born September 19, 1975) is an American actor/comedian born in Los Angeles, California.\n\n He began acting professionally at age 13 and was soon cast as Louis Plumb on the short-lived NBC series \"Hull High\".\n\n Shortly thereafter, Belafsky landed the role of Crutchy in the Disney musical film, \"Newsies\".\n\n He continued acting through his teens, making appearances in such television shows as \"The Wonder Years\", \"Great Scott\" and \"Step By Step\" and the film \"Wrestling Ernest Hemingway\".\n\n Belafsky also voiced Kent Swanson in the video game series \"Dead Rising\" released in 2006.",
+    "Rosie O'Donnell\nRoseann O'Donnell (born March 21, 1962) is an American comedian, actress, author, and television personality.\n\n She has been a magazine editor and continues to be a celebrity blogger, a lesbian rights activist, a television producer, and a collaborative partner in the LGBT family vacation company, R Family Vacations.",
+    "Carrie Fisher\nCarrie Frances Fisher (October 21, 1956 – December 27, 2016) was an American actress, writer, and humorist.\n\n Fisher was known for playing Princess Leia in the \"Star Wars\" films; a role for which she was nominated for three Saturn Awards.\n\n Her other film roles included \"Shampoo\" (1975), \"The Blues Brothers\" (1980), \"Hannah and Her Sisters\" (1986), \"The 'Burbs\" (1989), \"When Harry Met Sally...\" (1989), \"Soapdish\" (1991) and \"The Women\" (2008 film).\n\n She was nominated twice for the Primetime Emmy Award for Outstanding Guest Actress in a Comedy Series for her performances on the television series \"30 Rock\" and \"Catastrophe\".\n\n She was posthumously made a Disney Legend in 2017.",
+    "Reese Witherspoon\nLaura Jeanne Reese Witherspoon ( ; born March 22, 1976) is an American actress, producer, and entrepreneur.\n\n Born in New Orleans and raised in Tennessee, she began her career as a child actress, making her professional screen debut in \"The Man in the Moon\" (1991), for which she was nominated for a Young Artist Award.\n\n Following breakout roles in \"\" (1992) and \"Jack the Bear\" (1993), she starred in the comedy-drama \"Pleasantville\" (1998), for which she won the Young Hollywood Award for Breakthrough Performance.\n\n Her leading role of Tracy Flick in \"Election\" (1999) was nominated for a Golden Globe Award."
+   ]
+  },
+  {
+   "id": "7b441106f7339f47",
+   "gold": [
+    {
+     "sentence": "Alan Crosland (August 10, 1894 – July 16, 1936) was an American stage actor and film director.",
+     "facts": {
+      "0.0": "Alan Crosland was born on August 10, 1894.",
+      "0.1": "Alan Crosland died on July 16, 1936.",
+      "0.2": "Alan Crosland was an American stage actor.",
+      "0.3": "Alan Crosland was an American film director."
+     }
+    },
+    {
+     "sentence": "Kurt Voss (born Kurt Christopher Peter Wössner) is an American film director, screenwriter and musician-songwriter.",
+     "facts": {
+      "1.0": "Kurt Voss was born Kurt Christopher Peter Wössner.",
+      "1.1": "Kurt Voss is an American film director.",
+      "1.2": "Kurt Voss is an American screenwriter.",
+      "1.3": "Kurt Voss is an American musician-songwriter."
+     }
+    }
+   ],
+   "items": [
+    "Midnight Alibi\nMidnight Alibi is a 1934 sound film directed by Alan Crosland, produced by First National Pictures, distributed by [[Warner Bros].]\n\n and starring [[Richard Barthelmess]].\n\n Midnight Alibi is an adaptation of [[Damon Runyon]]'s 1933 short story \"The Old Doll's House\".",
+    "Oswalt Kolle\nOswalt Kolle (2 October 1928, Kiel – 24 September 2010, Amsterdam) was a German sex educator, who became famous during the late 1960s and early 1970s for his numerous pioneering books and films on human sexuality.\n\n His work was translated into all major languages, while his films found an audience of 140 million worldwide.\n\n In his 1997 book \"Open to Both Sides\" he came out as bisexual.\n\n He was awarded the Magnus Hirschfeld Medal in 2000.",
+    "Araby Lockhart\nAraby Lockhart (born December 4, 1926) is a Canadian stage and television actress, best known for her performances in the films \"Capote\" and \"Police Academy\" and her stage performances as a member of Hart House Theatre and the Straw Hat Players.\n\n Lockhart has also served as President of the Actors' Fund of Canada.",
+    "Kurt Voss\nKurt Voss (born Kurt Christopher Peter Wössner) is an American film director, screenwriter and musician-songwriter.\n\n Voss's credits include Will Smith's debut \"Where The Day Takes You\"; the Justin Theroux, Alyssa Milano and Ice T action film \"Below Utopia\"; actress Jaime Pressly's debut feature \"\", and rock and roll related films including \"Down and Out with the Dolls\" and \"Ghost on The Highway: A Portrait of Jeffrey Lee Pierce and The Gun Club\".",
+    "Alan Young\nAlan Young (born Angus Young; November 19, 1919 – May 19, 2016) was a British-born Canadian-American actor, voice actor, comedian and radio and television host/personality who \"TV Guide\" called \"The Charlie Chaplin of Television\".\n\n He was best known for his role as naive Wilbur Post in the television comedy series \"Mister Ed\" (1961–1966).\n\n Young was also the voice of Disney's Scrooge McDuck for over thirty years, first in the Academy Award-nominated short film \"Mickey's Christmas Carol\" (1983) and in various other films, TV series and video games until his death.\n\n During the 1940s and 1950s, he starred in his own variety/comedy sketch shows \"The Alan Young Show\" on radio and television, the latter gaining him two Emmy Awards in 1951.\n\n He also appeared in a number of feature films, starting from 1946, including the 1960 film \"The Time Machine\" and from the 1980s gaining a new generation of viewers appearing in numerous Walt Disney Productions films as both an actor and voice actor.",
+    "Allen Klein\nAllen Klein (December 18, 1931 July 4, 2009) was an American businessman, music publisher, writers' representative, filmmaker and record label executive, most noted for his tough persona and aggressive, innovative negotiation tactics, many of which established higher industry standards for compensating recording artists.\n\n He founded ABKCO Music & Records Incorporated.\n\n Klein revolutionized the income potential of recording artists, who previously had been routinely victimized by onerous record company contracts.\n\n He first scored massive monetary and contractual windfalls for Buddy Knox and Jimmy Bowen, one-hit rockabillies of the late 1950s, then parlayed his early successes into a position managing Sam Cooke, and eventually managed the Beatles and the Rolling Stones simultaneously, along with many other artists, becoming one of the most powerful individuals in the music industry during his era.",
+    "General Crack\nGeneral Crack is a 1930 American Pre-Code part-talkie historical costume melodrama with Technicolor sequences which was directed by Alan Crosland and produced and distributed by Warner Bros. It was filmed and premiered in 1929, and released early in 1930.\n\n It stars John Barrymore in his first full-length all-talking feature.\n\n The film would prove to be Crosland and Barrymore's last historical epic together.",
+    "Lady Tubbs\nLady Tubbs is a 1935 American comedy film directed by Alan Crosland and written by Barry Trivers.\n\n The film stars Alice Brady, Douglass Montgomery, Anita Louise, Alan Mowbray, June Clayworth and Hedda Hopper.\n\n The film was released on July 2, 1935, by Universal Pictures.",
+    "Alan Crosland\nAlan Crosland (August 10, 1894 – July 16, 1936) was an American stage actor and film director.",
+    "Contraband (1925 film)\nContraband is a lost 1925 silent film produced by Famous Players-Lasky and distributed by Paramount Pictures.\n\n Alan Crosland directed and Lois Wilson stars.\n\n The film is taken from a novel, \"Contraband\", by Charles Buddington Kelland.\n\n The last film directed by Alan Crosland the cooperation with distributor Paramount Pictures."
+   ]
+  },
+  {
+   "id": "8aec0d6c9271434b",
+   "gold": [
+    {
+     "sentence": "The Dundee Canal was an industrial canal in Clifton and Passaic in Passaic County, New Jersey.",
+     "facts": {
+      "0.0": "The Dundee Canal was an industrial canal.",
+      "0.1": "The Dundee Canal was in Clifton and Passaic.",
+      "0.2": "Clifton and Passaic are in Passaic County, New Jersey."
+     }
+    },
+    {
+     "sentence": " It was built between 1858 and 1861 and ran parallel to the Passaic River.",
+     "facts": {
+      "1.0": "The Dundee Canal was built between 1858 and 1861.",
+      "1.1": "The Dundee Canal ran parallel to the Passaic River."
+     }
+    },
+    {
+     "sentence": " It runs parallel to the coast, and is separated from the Atlantic Ocean by barrier beaches, including Palm Beach Island.",
+     "facts": {
+      "2.0": "It runs parallel to the coast.",
+      "2.1": "It is separated from the Atlantic Ocean by barrier beaches.",
+      "2.2": "The barrier beaches include Palm Beach Island."
+     }
+    },
+    {
+     "sentence": " The lagoon is connected to the Atlantic Ocean by two permanent, man-made inlets.",
+     "facts": {
+      "3.0": "The lagoon is connected to the Atlantic Ocean.",
+      "3.1": "The lagoon is connected to the Atlantic Ocean by two inlets.",
+      "3.2": "The two inlets are permanent.",
+      "3.3": "The two inlets are man-made."
+     }
+    }
+   ],
+   "items": [
+    "Lake Osborne\nLake Osborne, Florida, USA is a 378-acre (152.9 hectares) lake that is part of a system of once natural freshwater lakes lying along the western slope of the coastal ridge in Palm Beach County just west of the Florida Intracoastal Waterway and Atlantic Ocean.\n\n It is located within the C-16 drainage basin which occupies approximately 40,031 acres of land (16,200 hectares).\n\n Five drainage canals discharge directly to Lake Osborne, and Lake Osborne discharges via the E-4 canal to the C16 and C51 canals to the Lake Worth Lagoon.\n\n The lake is bordered on the west by John Prince Memorial Park, and on the east be the City of Lake Worth.",
+    "South Lake Worth Inlet\nThe South Lake Worth Inlet, also known as the Boynton Inlet, is an artificial cut through a barrier beach connecting the south end of the Lake Worth Lagoon in Palm Beach County, Florida with the Atlantic Ocean.\n\n The inlet is 130 ft wide and 6 ft and 12 ft deep.",
+    "Raritan Water Power Canal\nThe Raritan Water Power Canal in Raritan, New Jersey was a three-mile long water power canal built during the early 1840s to power industries.\n\n The canal has been determined to be eligible for the National Register.\n\n The canal is included in Duke Island Park, as part of the Somerset County Park System.",
+    "Lake Worth Lagoon\nThe Lake Worth Lagoon is a lagoon located in Palm Beach County, Florida.\n\n It runs parallel to the coast, and is separated from the Atlantic Ocean by barrier beaches, including Palm Beach Island.\n\n The lagoon is connected to the Atlantic Ocean by two permanent, man-made inlets.",
+    "Dismal Swamp Canal\nThe Dismal Swamp Canal is located along the eastern edge of the Great Dismal Swamp in Virginia and North Carolina in the United States.\n\n It is the oldest continually operating man-made canal in the United States, opened in 1805, and closed in October 2016.\n\n It is part of the Intracoastal Waterway, an inland route, which parallels the east coast and offers boaters shelter from the Atlantic Ocean from Manasquan Inlet, New Jersey, to Brownsville, Texas.\n\n The route runs through bays, lakes, rivers, streams, and canals, and includes the Intracoastal Waterway running from Norfolk, Virginia, to the Florida Keys.",
+    "Lake Worth, Florida\nLake Worth is a city in Palm Beach County, Florida, United States, which takes its name from the body of water along its eastern border, originally called \"Lake Worth\", and now generally known as the Lake Worth Lagoon.\n\n The lake itself was named for General William J. Worth, who led U.S. forces during the last part of the Second Seminole War.\n\n s of 2010 , the population estimated by the U.S. Census Bureau was 34,910.\n\n The city is included in the Miami-Fort Lauderdale-Pompano Beach Metropolitan Area, which is home to approximately 5,563,857 people.",
+    "The entries cover historic U.S. canals, waterways, water systems, and sites. Transport canals include Beaver–Erie (136 miles), Delaware (60), Whitewater (76), and Susquehanna–Tidewater (43), plus interstate and regional routes; many declined with railroad competition. The Dismal Swamp Canal, opened in 1805 and closed in 2016, served the Intracoastal Waterway; nearby park and refuge protect the swamp.",
+    "Brunswick–Altamaha canal\nThe Brunswick–Altamaha Canal was a 12-mile-long canal built to connect the Altamaha River to the city of Brunswick, Georgia at the Turtle River to transport goods from Brunswick's port to areas farther north and inland.\n\n It included locks on both ends of the canal.\n\n The canal was originally proposed in 1798 and after two failed charters (1826 and 1830), construction was started in 1836 by Thomas Butler King.\n\n The project was estimated to cost $450,000.\n\n The canal was finished and opened in 1854; however, by that time the canal was obsolete because of new railroads.\n\n The canal was closed by 1860.\n\n The Columbian mammoth was discovered during the construction of the canal.",
+    "Dundee Canal\nThe Dundee Canal was an industrial canal in Clifton and Passaic in Passaic County, New Jersey.\n\n It was built between 1858 and 1861 and ran parallel to the Passaic River.\n\n It supplied hydropower and water for manufacturing.\n\n There was interest by some members of the business community to modify the canal to support navigational uses, but the canal was never used for that purpose.",
+    "Lake Worth Inlet\nThe Palm Beach Inlet, also known as the Lake Worth Inlet is an artificial cut through a barrier island connecting the northern part of the Lake Worth Lagoon in Palm Beach County, Florida with the Atlantic Ocean.\n\n It is bordered by the town of Palm Beach on the south, and by the town of Palm Beach Shores to the north.\n\n The inlet is also the entrance channel for the Port of Palm Beach.\n\n Its coordinates are ."
+   ]
+  },
+  {
+   "id": "c62238fa5477219f",
+   "gold": [
+    {
+     "sentence": "Homer Jay Simpson is a fictional character and the main protagonist of the American animated television series \"The Simpsons\" as the patriarch of the eponymous family.",
+     "facts": {
+      "0.0": "Homer Jay Simpson is a fictional character.",
+      "0.1": "Homer Jay Simpson is the main protagonist of the American animated television series 'The Simpsons'.",
+      "0.2": "Homer Jay Simpson is the patriarch of the Simpson family, the family the show is named after."
+     }
+    },
+    {
+     "sentence": " He is voiced by Dan Castellaneta and first appeared on television, along with the rest of his family, in \"The Tracey Ullman Show\" short \"Good Night\" on April 19, 1987.",
+     "facts": {
+      "1.0": "Homer Simpson is voiced by Dan Castellaneta.",
+      "1.1": "Homer Simpson first appeared on television along with the rest of his family.",
+      "1.2": "Homer Simpson's first television appearance was in the short 'Good Night' from 'The Tracey Ullman Show'.",
+      "1.3": "Homer Simpson's first television appearance was on April 19, 1987."
+     }
+    },
+    {
+     "sentence": "Daniel Louis Castellaneta ( ; born October 29, 1957) is an American actor, voice actor, comedian and screenwriter.",
+     "facts": {
+      "2.0": "Daniel Louis Castellaneta was born October 29, 1957.",
+      "2.1": "Daniel Louis Castellaneta is an American actor.",
+      "2.2": "Daniel Louis Castellaneta is a voice actor.",
+      "2.3": "Daniel Louis Castellaneta is a comedian.",
+      "2.4": "Daniel Louis Castellaneta is a screenwriter."
+     }
+    }
+   ],
+   "items": [
+    "Mona Simpson (The Simpsons)\nMona Penelope Simpson (née Olsen) is a recurring fictional character in the animated television series \"The Simpsons\".\n\n She has been voiced by several actresses, including Maggie Roswell, Tress MacNeille, Pamela Hayden, and most prominently, Glenn Close.\n\n Glenn Close's performances as Mona have been well received by critics and she was named one of the top 25 guest stars on the show by IGN.",
+    "Moe Szyslak\nMorris \"Moe\" Szyslak is a fictional character from the American animated television series \"The Simpsons\".\n\n He is voiced by Hank Azaria and first appeared in the series premiere episode \"Simpsons Roasting on an Open Fire\".\n\n Moe is the proprietor and bartender of Moe's Tavern, a Springfield bar frequented by Homer Simpson, Barney Gumble, Carl Carlson, Lenny Leonard, Sam, Larry, and others.",
+    "Ned Flanders\nNedward \"Ned\" Flanders, Jr. is a recurring fictional character in the animated television series \"The Simpsons\".\n\n He is voiced by Harry Shearer, and first appeared in the series premiere episode \"Simpsons Roasting on an Open Fire\".\n\n He is the good-natured, cheery next-door neighbor to the Simpson family and is generally loathed by Homer Simpson.\n\n A devout Evangelical Christian with an annoyingly perfect family, he is among the friendliest and most compassionate of Springfield's residents and is generally considered a pillar of the Springfield community.",
+    "Grampa Simpson\nAbraham Jedediah Simpson II, often known as Grampa, is a fictional character in the animated television series \"The Simpsons\".\n\n He made his first appearance in the episode entitled \"Grampa and the Kids\", a Simpsons short on \"The Tracey Ullman Show\".\n\n Voiced by Dan Castellaneta, he is the father of Homer Simpson and the grandfather of Bart, Lisa and Maggie Simpson.\n\n In the 1000th issue of \"Entertainment Weekly\", Grampa was selected as the Grandpa for \"The Perfect TV Family\".",
+    "Homer Simpson\nHomer Jay Simpson is a fictional character and the main protagonist of the American animated television series \"The Simpsons\" as the patriarch of the eponymous family.\n\n He is voiced by Dan Castellaneta and first appeared on television, along with the rest of his family, in \"The Tracey Ullman Show\" short \"Good Night\" on April 19, 1987.\n\n Homer was created and designed by cartoonist Matt Groening while he was waiting in the lobby of James L. Brooks' office.\n\n Groening had been called to pitch a series of shorts based on his comic strip \"Life in Hell\" but instead decided to create a new set of characters.\n\n He named the character after his father, Homer Groening.\n\n After appearing for three seasons on \"The Tracey Ullman Show\", the Simpson family got their own series on Fox that debuted December 17, 1989.",
+    "Citizen Joe\n\"Citizen Joe\" is the fifteenth episode for season eight of the Canadian-American military science fiction television series \"Stargate SG-1\".\n\n The episode features known voice actor Dan Castellaneta, who voices Homer Simpson in \"The Simpsons\".\n\n The episode was written by executive producer Robert C. Cooper, the episode was directed by Andy Mikita.\n\n The episode received a below average Nielsen household rating and received no syndication rating to compare.\n\n The episode got strong reviews from major media publishers worldwide.",
+    "Homer Simpson, This Is Your Wife\n\"Homer Simpson, This Is Your Wife\" is the fifteenth episode of the seventeenth season of the American animated television sitcom \"The Simpsons\".\n\n It originally aired on the Fox network in the United States on March 26, 2006, and was watched by around ten million people during that broadcast.\n\n In the episode, Homer signs the Simpson family up for a reality show in which the mothers of two families switch places.\n\n Marge gets to live with a friendly man named Charles and his perfect son, while Homer, Bart, and Lisa must spend time with Charles' strict wife Verity.",
+    "The Itchy &amp; Scratchy Show\n(voiced by Alex Rocco, and, later, Hank Azaria), who runs the studio and produces the show.",
+    "Homer to the Max\n\"Homer to the Max\" is the thirteenth episode of \"The Simpsons\"<nowiki>'</nowiki> tenth season.\n\n It originally aired on the Fox network in the United States on February 7, 1999.\n\n In the episode, Homer discovers that a new television show, \"Police Cops\", has a hero also named Homer Simpson.\n\n He is delighted with the positive attention he receives because of his name, but when the television character is rewritten from a hero to a bumbling idiot, he is mocked and taunted, so he changes his name to \"Max Power\" to rid himself of the negative attention.\n\n Max gains new friends, and is forced into a protest to prevent a forest from being knocked down.\n\n In the end, he changes his name back to Homer Simpson.",
+    "Dan Castellaneta\nDaniel Louis Castellaneta ( ; born October 29, 1957) is an American actor, voice actor, comedian and screenwriter.\n\n Noted for his long-running role as Homer Simpson on the animated television series \"The Simpsons\", he also voices many other characters for the show, including Abraham \"Grampa\" Simpson, Barney Gumble, Krusty the Clown, Sideshow Mel, Groundskeeper Willie, Mayor Quimby and Hans Moleman."
+   ]
+  }
+ ]
+}

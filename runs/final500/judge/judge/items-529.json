@@ -1,0 +1,449 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "a595f0dd151bd2db",
+   "gold": [
+    {
+     "sentence": "Underdog is a 2007 American family superhero comedy film based on the 1960s cartoon series of the same name.",
+     "facts": {
+      "0.0": "Underdog is a 2007 American film.",
+      "0.1": "Underdog is a family superhero comedy film.",
+      "0.2": "Underdog is based on the 1960s cartoon series of the same name."
+     }
+    },
+    {
+     "sentence": "Bambi is a 1942 American animated film directed by David Hand (supervising a team of sequence directors), produced by Walt Disney and based on the book \"Bambi, a Life in the Woods\" by Austrian author Felix Salten.",
+     "facts": {
+      "1.0": "Bambi is a 1942 American animated film.",
+      "1.1": "Bambi was directed by David Hand.",
+      "1.2": "David Hand supervised a team of sequence directors on Bambi.",
+      "1.3": "Bambi was produced by Walt Disney.",
+      "1.4": "Bambi is based on the book 'Bambi, a Life in the Woods'.",
+      "1.5": "The book 'Bambi, a Life in the Woods' was written by Austrian author Felix Salten."
+     }
+    }
+   ],
+   "items": [
+    "The Rescuers Down Under\nThe Rescuers Down Under is a 1990 American animated comedy-drama adventure film produced by Walt Disney Feature Animation and released by Walt Disney Pictures on November 16, 1990.\n\n The 29th Disney animated feature film, the film is the sequel to the 1977 animated film \"The Rescuers\", which was based on the novels of Margery Sharp.\n\n Set in the Australian Outback, the film centers on Bernard and Bianca traveling to Australia to save a boy named Cody from a villainous poacher in pursuit of an endangered bird of prey.",
+    "The Rescuers\nThe Rescuers is a 1977 American animated comedy-drama adventure film produced by Walt Disney Productions and first released on June 22, 1977, by Buena Vista Distribution.\n\n The 23rd Disney animated feature film, the film is about the Rescue Aid Society, an international mouse organization headquartered in New York City and shadowing the United Nations, dedicated to helping abduction victims around the world at large.\n\n Two of these mice, jittery janitor Bernard (Bob Newhart) and his co-agent, the elegant Miss Bianca (Eva Gabor), set out to rescue Penny (Michelle Stacy), an orphan girl being held prisoner in the Devil's Bayou by treasure huntress Madame Medusa (Geraldine Page).",
+    "List of Walt Disney Pictures films\nThis is a list of films released theatrically under the Walt Disney Pictures banner (known as that since 1983, with \"Never Cry Wolf\" as its first release) and films released before that under the former name of the parent company, Walt Disney Productions (1929–1983).\n\n Most films listed here were distributed in the United States by the company's distribution division, Walt Disney Studios Motion Pictures (formerly known as Buena Vista Distribution Company [1953–1987] and Buena Vista Pictures Distribution [1987–2007]).\n\n The Disney features produced before \"Peter Pan\" (1953) were originally distributed by RKO Radio Pictures, and are now distributed by Walt Disney Studios Motion Pictures.",
+    "Pete (Disney)\nPete (also called Peg-Leg Pete, Pistol Pete and Black Pete, among other names) is an anthropomorphic cartoon character created in 1925 by Walt Disney and Ub Iwerks.\n\n He is a character of The Walt Disney Company and often appears as a nemesis and the main antagonist in Mickey Mouse universe stories.\n\n He was originally an anthropomorphic bear but with the advent of Mickey Mouse in 1928, he was defined as a cat.\n\n Pete is the oldest continuing Disney character, having debuted three years before Mickey Mouse in the cartoon \"Alice Solves the Puzzle\" (1925).",
+    "Underdog (film)\nUnderdog is a 2007 American family superhero comedy film based on the 1960s cartoon series of the same name.\n\n Directed by Frederik Du Chau and written by Joe Piscatella, Adam Rifkin, and Craig A. Williams, the film stars Jim Belushi, Peter Dinklage, John Slattery, and Patrick Warburton with the voice talents of Jason Lee, Amy Adams, and Brad Garrett.\n\n Unlike the TV series, the Underdog character is portrayed as a regular dog rather than an anthropomorphic one.\n\n Underdog, voiced by Jason Lee, was played by a lemon beagle named Leo sporting a red sweater and a blue cape.\n\n The film grossed $65.3 million worldwide.",
+    "Bosko the Musketeer\nBosko the Musketeer is an American animated short film.\n\n It is a \"Looney Tunes\" cartoon, featuring Bosko, the first star of the series.\n\n It was released on August 12, 1933, although some sources note September 16 as a date; this is problematic, as that would imply that the last films featuring Bosko as the star of Warner Bros. cartoons were released after the first film featuring Buddy, the second star of the series.\n\n It was, like most \"Looney Tunes\" of the time, directed by Hugh Harman; Frank Marsales was the musical director.",
+    "Bambi\nBambi is a 1942 American animated film directed by David Hand (supervising a team of sequence directors), produced by Walt Disney and based on the book \"Bambi, a Life in the Woods\" by Austrian author Felix Salten.\n\n The film was released by RKO Radio Pictures on August 13, 1942, and is the fifth Disney animated feature film.",
+    "Get a Horse!\nGet a Horse!\n\n is a 2013 American 3D animated slapstick comedy short film, produced by Walt Disney Animation Studios.\n\n Combining black-and-white hand-drawn animation and color CGI animation, the short features the characters of the late 1920s \"Mickey Mouse\" cartoons, and features archival recordings of Walt Disney in his posthumous role as Mickey Mouse.\n\n It is the first original Mickey Mouse theatrical animated short since \"Runaway Brain\" (1995), and the first appearance of Oswald the Lucky Rabbit in a Disney animated production in 85 years.",
+    "Walt Disney Pictures, founded under that name in 1983, produces live-action films; Walt Disney Studios Motion Pictures distributes Disney studio releases, succeeding Buena Vista (1953–2007). Disney highlights include *Bambi* (1942), *Pinocchio* (1940), and the 1989–99 Renaissance, spanning ten animated films from *The Little Mermaid* to *Tarzan*. Buddy Baker scored several Disney films. Other entries cover Mickey and Donald, the",
+    "Toy Story\nToy Story is a 1995 American computer-animated buddy comedy adventure film produced by Pixar Animation Studios for Walt Disney Pictures.\n\n The directorial debut of John Lasseter, \"Toy Story\" was the first feature-length computer-animated film and the first feature film produced by Pixar.\n\n Taking place in a world where anthropomorphic toys pretend to be lifeless whenever humans are present, the film's plot focuses on the relationship between Woody, an old-fashioned pullstring cowboy doll (voiced by Tom Hanks), and Buzz Lightyear, an astronaut action figure (voiced by Tim Allen), as they evolve from rivals competing for the affections of Andy, their owner, to friends who work together to be reunited with Andy as his family prepares to move to a new home.\n\n The screenplay was written by Joss Whedon, Andrew Stanton, Joel Cohen and Alec Sokolow, based on a story by Lasseter, Pete Docter, Stanton and Joe Ranft.\n\n The film features music by Randy Newman, and was executive-produced by Steve Jobs and Edwin Catmull."
+   ]
+  },
+  {
+   "id": "435061ee14b00e1e",
+   "gold": [
+    {
+     "sentence": " The name comes from the City of Starachowice, where the factory is located.",
+     "facts": {
+      "0.0": "The name comes from the City of Starachowice.",
+      "0.1": "The factory is located in the City of Starachowice."
+     }
+    },
+    {
+     "sentence": " It was sold in various countries for many years (not only in the Eastern Bloc; for example it was used by the Yemen Army).",
+     "facts": {
+      "1.0": "The item was sold in various countries for many years.",
+      "1.1": "The item was sold in countries beyond the Eastern Bloc.",
+      "1.2": "The item was used by the Yemen Army."
+     }
+    },
+    {
+     "sentence": "The Eastern Bloc was the group of socialist states of Central and Eastern Europe, generally the Soviet Union and the countries of the Warsaw Pact.",
+     "facts": {
+      "2.0": "The Eastern Bloc was the group of socialist states of Central and Eastern Europe.",
+      "2.1": "The Eastern Bloc generally included the Soviet Union.",
+      "2.2": "The Eastern Bloc generally included the countries of the Warsaw Pact."
+     }
+    }
+   ],
+   "items": [
+    "Kolejka (game)\nKolejka ( ; Polish for \"queue\" or \"line (of people)\") is a board game designed by Karol Madaj and launched in February 2011 by Poland's Institute of National Remembrance.\n\n It was designed to teach young generations about the hardships under communism (1945–1989), particularly the difficulty of acquiring consumer goods in the shortage economy.\n\n The game has been described as inspired by \"Monopoly\".",
+    "FSC Star\nFabryka Samochodów Ciężarowych \"Star\" was a Polish truck manufacturer.\n\n The name comes from the City of Starachowice, where the factory is located.\n\n Their first vehicle was the \"Star 20\" in 1948.\n\n The most popular product was the \"Star 266\".\n\n The 266 model offered very good quality and powerful engines for a low price.\n\n It was sold in various countries for many years (not only in the Eastern Bloc; for example it was used by the Yemen Army).\n\n For many years FSC Star was a state-owned company.\n\n Star is now owned by MAN AG who eliminated the brand in January 2009.",
+    "Leader Trucks\nLeader found their niche in the heavy transport market and built as a rigid 4x4 and 6x6 configuration for tray, tipper and agitator applications, they offered reliable machines in the industries of earth-moving and off-road construction.\n\n Leader was notable for being the first manufacturer to fit Caterpillar engines to trucks, to fit automatic transmissions to diesel trucks in assembly, and the first truck manufacturer in Australia to offer disc brakes.\n\n Leader boasted its components to be 80 percent Australian built with only the engine, transmission and steering box imported.\n\n By 1980, Leader had sold its 1000th truck in Australia and had also sold trucks to New Zealand, South Africa, Hong Kong, China and Indonesia.",
+    "Kross SA\nKross is a Polish company within the sports industry that makes bicycles and bicycle frames.\n\n The company is currently the largest in Poland manufacturing bicycles sold in the Polish market.\n\n In 2005 the company sold almost 800,000 products, half of which were exported to 35 countries, 30 of which are in Europe.",
+    "E-Z Polish Factory\nThe E-Z Polish Factory is a building designed by Frank Lloyd Wright and is located in Chicago, Illinois, United States.\n\n Built in 1905, the E-Z Polish Company made polish for shoes and stoves.\n\n It now serves as practice space for local bands and artists.",
+    "Volvo FH\nThe Volvo FH is a heavy truck range produced by Swedish truck manufacturer Volvo Trucks.\n\n Introduced in late 1993 as FH12 and FH16, production still continues with the now the second generation of FH range model lineup.\n\n FH stands for Forward control High entry where numbers denominate engine capacity in litres.\n\n The FH range is one of the most successful truck series ever having sold more than 400,000 units worldwide.",
+    "Shaanxi Automobile Group\nShaanxi Automobile Group Co., Ltd. is a Chinese bus and truck manufacturer headquartered in Xi'an, Shaanxi.\n\n It employs around 23,000 employees.\n\n It manufactures heavy duty truck, buses (chassis), medium-size heavy truck and heavy duty axles for trucks.\n\n It utilizes Magna Steyr and MAN SE technologies.\n\n Its bus chassis are sold under the Eurostar Bus brand.",
+    "Daimler AG\nDaimler AG (] ) is a German multinational automotive corporation.\n\n Daimler AG is headquartered in Stuttgart, Baden-Württemberg, Germany.\n\n As of 2014, Daimler owns or has shares in a number of car, bus, truck and motorcycle brands including Mercedes-Benz, Mercedes-AMG, Smart Automobile, Detroit Diesel, Freightliner, Western Star, Thomas Built Buses, Setra, BharatBenz, Mitsubishi Fuso, MV Agusta as well as shares in Denza, KAMAZ, Beijing Automotive Group.\n\n The luxury Maybach brand was terminated at the end of 2012, but revived in April 2015 as \"Mercedes-Maybach\" versions of the Mercedes-Benz S-Class and G-Class.\n\n In 2016 Daimler sold 3.0 million vehicles.\n\n By unit sales, Daimler is the thirteenth-largest car manufacturer and is the largest truck manufacturer in the world.\n\n In addition to automobiles, Daimler manufactures buses and provides financial services through its Daimler Financial Services arm.\n\n The company is a component of the Euro Stoxx 50 stock market index.",
+    "J. A. Baczewski\nJ. A. Baczewski was a Polish company most well known for its fine spirits such as vodka and gin.\n\n The factory, dating back to the late 18th century, was based in Lwów (Lviv) and until 1939 was one of two most popular Polish export goods.",
+    "Optimus S.A.\nOptimus S.A. was a Polish company specializing in assembly of PCs, fiscal systems, and providing complex IT solutions for companies.In the 1990s Optimus was one of the leaders of the Polish computer market."
+   ]
+  },
+  {
+   "id": "9baab296d9bcb1c7",
+   "gold": [
+    {
+     "sentence": "Neon City (also known as Anno 2053 in Italy, Neonski Grad in Serbia) is a 1991 Canadian post-apocalyptic science fiction film directed by Monte Markham and written by Jeff Begun and Ann Lewis Hamilton, under the pseudonym Buck Finch.",
+     "facts": {
+      "0.0": "Neon City is also known as Anno 2053 in Italy.",
+      "0.1": "Neon City is also known as Neonski Grad in Serbia.",
+      "0.2": "Neon City is a 1991 Canadian film.",
+      "0.3": "Neon City is a post-apocalyptic science fiction film.",
+      "0.4": "Neon City was directed by Monte Markham.",
+      "0.5": "Neon City was written by Jeff Begun.",
+      "0.6": "Neon City was written by Ann Lewis Hamilton.",
+      "0.7": "Neon City's writing was credited under the pseudonym Buck Finch."
+     }
+    },
+    {
+     "sentence": " The cast includes Michael Ironside, Vanity, Lyle Alzado, Valerie Wildman, Nick Klar, Juliet Landau, Richard Sanders and Markham.",
+     "facts": {
+      "1.0": "Michael Ironside is in the cast of Neon City.",
+      "1.1": "Vanity is in the cast of Neon City.",
+      "1.2": "Lyle Alzado is in the cast of Neon City.",
+      "1.3": "Valerie Wildman is in the cast of Neon City.",
+      "1.4": "Nick Klar is in the cast of Neon City.",
+      "1.5": "Juliet Landau is in the cast of Neon City.",
+      "1.6": "Richard Sanders is in the cast of Neon City.",
+      "1.7": "Monte Markham is in the cast of Neon City."
+     }
+    },
+    {
+     "sentence": "Lyle Martin Alzado (April 3, 1949 – May 14, 1992) was a professional American football defensive end of the National Football League famous for his intense and intimidating style of play.",
+     "facts": {
+      "2.0": "Lyle Martin Alzado was born on April 3, 1949.",
+      "2.1": "Lyle Martin Alzado died on May 14, 1992.",
+      "2.2": "Lyle Martin Alzado was a professional American football defensive end.",
+      "2.3": "Lyle Martin Alzado played in the National Football League.",
+      "2.4": "Lyle Martin Alzado was famous for his intense and intimidating style of play."
+     }
+    }
+   ],
+   "items": [
+    "Contraband (2012 film)\nContraband is a 2012 American crime thriller film directed by Baltasar Kormákur, starring Mark Wahlberg, Kate Beckinsale, Ben Foster, Caleb Landry Jones, Giovanni Ribisi, Lukas Haas, Diego Luna and J. K. Simmons.\n\n The film is a remake of the 2008 Icelandic film \"Reykjavík-Rotterdam\" which Baltasar Kormákur starred in.\n\n It was released on January 13, 2012 in the United States by Universal Pictures.",
+    "The Bears and I\nThe Bears and I is a 1974 American drama film directed by Bernard McEveety and written by John Whedon.\n\n The film stars Patrick Wayne, Chief Dan George, Andrew Duggan, Michael Ansara and Robert Pine.\n\n The film was released on July 31, 1974, by Buena Vista Distribution.",
+    "McFarland, USA\nMcFarland, USA (also known as McFarland) is a 2015 American sports drama film directed by Niki Caro, produced by Mark Ciardi and Gordon Gray, written by Christopher Cleveland, Bettina Gilois and Grant Thompson with music composed by Antônio Pinto.\n\n The film was co-produced by Walt Disney Pictures and Mayhem Pictures.\n\n Based on the true story of a 1987 cross country team from a mainly Latino high school in McFarland, California, the film stars Kevin Costner as Jim White, the school's coach, who leads the team to win a state championship.\n\n The film also stars Maria Bello and Morgan Saylor.",
+    "Deadfall (2012 film)\nDeadfall is a 2012 American crime drama film directed by Stefan Ruzowitzky, written by Zach Dean and starring Eric Bana, Olivia Wilde, and Charlie Hunnam.",
+    "Deadfall (1993 film)\nDeadfall is a 1993 crime drama film directed by Christopher Coppola.\n\n Coppola co-wrote the script with Nick Vallelonga.\n\n The film stars Michael Biehn, Nicolas Cage, Charlie Sheen, James Coburn, and Peter Fonda.\n\n It is also the prime influence on the song 'Deadfall', written by the American hardcore punk band Snot.\n\n A prequel/sequel, \"Arsenal\", starring Nicolas Cage as his character Eddie King, was released in 2017.",
+    "Million Dollar Arm\nMillion Dollar Arm is a 2014 American biographical sports drama film directed by Craig Gillespie and produced by Walt Disney Pictures from a screenplay written by Thomas McCarthy.\n\n The film is based on the true story of baseball pitchers Rinku Singh and Dinesh Patel who were discovered by sports agent J. B. Bernstein after winning a reality show competition.",
+    "Neon City\nNeon City (also known as Anno 2053 in Italy, Neonski Grad in Serbia) is a 1991 Canadian post-apocalyptic science fiction film directed by Monte Markham and written by Jeff Begun and Ann Lewis Hamilton, under the pseudonym Buck Finch.\n\n The cast includes Michael Ironside, Vanity, Lyle Alzado, Valerie Wildman, Nick Klar, Juliet Landau, Richard Sanders and Markham.",
+    "Hercules, Prisoner of Evil\nHercules, Prisoner of Evil (Italian: \"Ursus il terrore dei Kirghisi\" , 'Ursus, Terror of the Kirghiz' ) is a 1964 Italian \"peplum\" film directed by Antonio Margheriti and an uncredited Ruggero Deodato.\n\n Deodato, the official assistant director, replaced Margheriti as he was busy with the completion of the film \"The Fall of Rome\".\n\n Deodato actually directed most of the film in actuality but Margheriti was credited as the director.\n\n The film is filled with a variety of horrific themes and elements, featuring a killer werewolf, and is as much a horror film as it is a peplum.",
+    "Milan (2004 film)\nMilan is a 2004 romantic drama film released under Star Cinema, ABS-CBN Film Productions, Inc. in the Philippines.\n\n It stars Claudine Barretto and Piolo Pascual.\n\n It is a love story written by Raymond Lee, and under Olivia Lamasan's direction.\n\n The movie made more than P100 million in the box office.",
+    "The Whole Nine Yards (film)\nThe Whole Nine Yards is a 2000 American-Canadian crime comedy film directed by Jonathan Lynn and starring Bruce Willis, Matthew Perry, Amanda Peet, Michael Clarke Duncan and Natasha Henstridge.\n\n The title derives from a popular expression of uncertain origin.\n\n A sequel, \"The Whole Ten Yards\", was released in 2004."
+   ]
+  },
+  {
+   "id": "c14e95e8659b9ff9",
+   "gold": [
+    {
+     "sentence": "Gunnar Eric Nelson (born September 20, 1967) is an American musician, singer, and songwriter and international multi-platinum recording artist.",
+     "facts": {
+      "0.0": "Gunnar Eric Nelson was born on September 20, 1967.",
+      "0.1": "Gunnar Eric Nelson is an American musician.",
+      "0.2": "Gunnar Eric Nelson is an American singer.",
+      "0.3": "Gunnar Eric Nelson is an American songwriter.",
+      "0.4": "Gunnar Eric Nelson is an international multi-platinum recording artist."
+     }
+    },
+    {
+     "sentence": "Florence Leontine Mary Welch (born 28 August 1986) is an English musician, singer and songwriter, best known as the vocalist of indie rock band Florence and the Machine.",
+     "facts": {
+      "1.0": "Florence Leontine Mary Welch was born on 28 August 1986.",
+      "1.1": "Florence Leontine Mary Welch is an English musician.",
+      "1.2": "Florence Leontine Mary Welch is an English singer.",
+      "1.3": "Florence Leontine Mary Welch is an English songwriter.",
+      "1.4": "Florence Leontine Mary Welch is best known as the vocalist of the indie rock band Florence and the Machine."
+     }
+    }
+   ],
+   "items": [
+    "Grant Nicholas\nGrantley Jonathan \"Grant\" Nicholas (born 12 November 1967) is a Welsh musician, best known as the lead singer and lead guitarist of the rock band Feeder.",
+    "Gwendolyn Elaine Armstrong\nGwendolyn Elaine Armstrong was a black Mississippi pioneer in the Civil Rights Movement.\n\n In September, 1965, she and Raylawni Branch, both local natives, integrated the University of Southern Mississippi at Hattiesburg.\n\n They thus completed the process of breaking the segregation barriers at Mississippi’s universities which had been begun by Clyde Kennard at (then) Mississippi Southern College (1956–61) and carried forward by James Meredith at the University of Mississippi (September, 1962) and Richard Holmes at Mississippi State University (July, 1965).",
+    "Nelson (band)\nNelson is an American rock band founded by singer/songwriters Matthew and Gunnar Nelson (twin sons of Ricky Nelson and Kristin Nelson).\n\n The band achieved success during the early 1990s with their double platinum debut album \"After the Rain\", which featured the number-one hit \"(Can't Live Without Your) Love and Affection\".",
+    "Gunnar Nelson (musician)\nGunnar Eric Nelson (born September 20, 1967) is an American musician, singer, and songwriter and international multi-platinum recording artist.",
+    "What the Water Gave Me (song)\n\"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011).\n\n The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth.\n\n It was released on 23 August 2011 as the first promotional single from \"Ceremonials\".\n\n After the band performed the song in Berkeley, California on 12 June 2011, the studio version premiered on Florence and the Machine's official website.\n\n Welch decided to name the song \"What the Water Gave Me\" after seeing a Frida Kahlo painting of the same name.\n\n During an interview, she confirmed that the song was inspired by English writer Virginia Woolf.",
+    "Sweet Nothing\n\"Sweet Nothing\" is a song by Scottish recording artist and record producer Calvin Harris from his third studio album, \"18 Months\" (2012).\n\n It features vocals from Florence and the Machine singer Florence Welch.\n\n Harris previously worked with the band in a remix of their single, \"Spectrum\" (2012).\n\n While recording \"18 Months\", Harris expressed interest in working with Welch.\n\n He mentioned that it was not easy and he had to chase her, due to schedule conflicts.\n\n Welch accepted his invitation and the two recorded \"Sweet Nothing\".\n\n The track premiered on \"The Chris Moyles Show\" on BBC Radio 1 on 28 August 2012 and was later released as the fifth single from the album on 12 October 2012.",
+    "Lungs (album)\nLungs is the debut studio album by English indie rock band Florence and the Machine, released on 3 July 2009 on Island Records.\n\n Frontwoman Florence Welch experimented with and honed the album's sound with bandmate Isabella Summers, while also collaborating with five record producers including James Ford, Paul Epworth, Steve Mackey.\n\n The music on \"Lungs\" established Florence and the Machine as an internationally successful rock act, and also featured the group's successful mix of string arrangements centered around Welch's vocal prowess.",
+    "Florence and the Machine\nFlorence and the Machine (stylised as Florence + the Machine) are an English indie rock band that formed in London in 2007, consisting of lead singer Florence Welch, keyboardist Isabella Summers, and a collaboration of other artists.\n\n The band's music received praise across the media, especially from the BBC, which played a large part in their rise to prominence by promoting Florence and the Machine as part of \"BBC Introducing\".\n\n At the 2009 Brit Awards they received the Brit Awards \"Critics' Choice\" award.\n\n The band's music is renowned for its dramatic and eccentric production and also Welch's powerful vocal performances.",
+    "Florence Welch\nFlorence Leontine Mary Welch (born 28 August 1986) is an English musician, singer and songwriter, best known as the vocalist of indie rock band Florence and the Machine.",
+    "Ceremonials Tour\nThe Ceremonials Tour was the second concert tour by English indie rock band Florence and the Machine.\n\n The tour included performances at Music festivals because it is lead singer Florence Welch's favourite way to perform live.\n\n Welch had originally planned to spend over one year touring for \"Ceremonials\" (their previous tour lasted almost three and a half years) before announcing that the December 2012 dates would be the final performances of the tour.\n\n On 25 February 2013 it was announced that Florence and the Machine would be playing at the Coke Live Music Festival in Poland on 10 August 2013, and on 26 March 2013 it was announced that the band would be playing at Chime for Change's \"The Sound of Change Live\" concert at London's Twickenham Stadium alongside Beyoncé, Ellie Goulding and Haim, amongst others."
+   ]
+  },
+  {
+   "id": "7ca8f0b138dc46b0",
+   "gold": [
+    {
+     "sentence": "Cars 2 is a 2011 American computer-animated action comedy spy film produced by Pixar Animation Studios for Walt Disney Pictures.",
+     "facts": {
+      "0.0": "Cars 2 is a film.",
+      "0.1": "Cars 2 was released in 2011.",
+      "0.2": "Cars 2 is American.",
+      "0.3": "Cars 2 is computer-animated.",
+      "0.4": "Cars 2 is an action comedy spy film.",
+      "0.5": "Cars 2 was produced by Pixar Animation Studios.",
+      "0.6": "Cars 2 was produced for Walt Disney Pictures."
+     }
+    },
+    {
+     "sentence": "Lin-Manuel Miranda ( ; born January 16, 1980) is an American composer, lyricist, playwright, and actor best known for creating and starring in the Broadway musicals \"Hamilton\" and \"In the Heights\".",
+     "facts": {
+      "1.0": "Lin-Manuel Miranda was born January 16, 1980.",
+      "1.1": "Lin-Manuel Miranda is American.",
+      "1.2": "Lin-Manuel Miranda is a composer, lyricist, playwright, and actor.",
+      "1.3": "Lin-Manuel Miranda is best known for creating and starring in the Broadway musical Hamilton.",
+      "1.4": "Lin-Manuel Miranda is best known for creating and starring in the Broadway musical In the Heights."
+     }
+    },
+    {
+     "sentence": " He co-wrote the songs for Disney's \"Moana\" soundtrack (2016) and is set to star in their upcoming film \"Mary Poppins Returns\".",
+     "facts": {
+      "2.0": "Lin-Manuel Miranda co-wrote the songs for Disney's Moana soundtrack.",
+      "2.1": "The Moana soundtrack is from 2016.",
+      "2.2": "Lin-Manuel Miranda is set to star in Disney's upcoming film Mary Poppins Returns."
+     }
+    }
+   ],
+   "items": [
+    "Hamilton (album)\nHamilton is the cast album to the 2015 musical \"Hamilton\".\n\n The musical is based on the 2004 biography of Alexander Hamilton written by Ron Chernow, with music, lyrics, and book by Lin-Manuel Miranda.\n\n The recording stars Lin-Manuel Miranda, Leslie Odom Jr., Phillipa Soo, Renée Elise Goldsberry, Christopher Jackson, Daveed Diggs, Anthony Ramos, Okieriete Onaodowan, Jasmine Cephas Jones, and Jonathan Groff.\n\n It also features Jon Rua, Thayne Jasperson, Sydney James Harcourt, Ariana DeBose, and Sasha Hutchings.\n\n It achieved the largest first week sales for a digital cast album and is the highest-charting cast album since 1963.\n\n It was the highest-selling Broadway cast album of 2015 and peaked at number one on the Rap Album chart, the first cast album to ever do so.",
+    "Lin-Manuel Miranda\nLin-Manuel Miranda ( ; born January 16, 1980) is an American composer, lyricist, playwright, and actor best known for creating and starring in the Broadway musicals \"Hamilton\" and \"In the Heights\".\n\n He co-wrote the songs for Disney's \"Moana\" soundtrack (2016) and is set to star in their upcoming film \"Mary Poppins Returns\".\n\n Miranda's awards include a Pulitzer Prize, two Grammy Awards, an Emmy Award, a MacArthur Fellowship, and three Tony Awards.",
+    "Muppets Most Wanted (soundtrack)\nMuppets Most Wanted: An Original Walt Disney Records Soundtrack is a soundtrack album released by Walt Disney Records on March 18, 2014 for the musical comedy film \"Muppets Most Wanted\".\n\n The soundtrack features six original songs, two re-recordings of popular Muppet songs (\"The Muppet Show Theme\" and \"Together Again\"), three cover versions of existing songs (Allen Toussaint's \"Working in the Coal Mine\", Maroon 5's \"Moves Like Jagger\", and Los del Río's \"Macarena (Bayside Boys Mix)\"), an orchestral suite by Christophe Beck, five demos by Bret McKenzie, and eight dialogue tracks.",
+    "Cars 2\nCars 2 is a 2011 American computer-animated action comedy spy film produced by Pixar Animation Studios for Walt Disney Pictures.\n\n It is the sequel to 2006's \"Cars\", and features the voices of Owen Wilson, Larry the Cable Guy, Michael Caine, Emily Mortimer, John Turturro, and Eddie Izzard.\n\n In the film, race car Lightning McQueen and tow truck Mater head to Japan and Europe to compete in the World Grand Prix, but Mater becomes sidetracked with international espionage.\n\n The film was directed by John Lasseter, written by Ben Queen, and produced by Denise Ream.",
+    "Cabinet Battle\n\"Cabinet Battle #1\", \"Cabinet Battle #2\", and \"Cabinet Battle #3\" are songs written for Act II of the musical \"Hamilton\", based on the life of Alexander Hamilton, which premiered on Broadway in 2015.\n\n Lin-Manuel Miranda wrote both the music and lyrics to the song.",
+    "Your Obedient Servant (song)\n\"Your Obedient Servant\" is the twentieth song from Act 2 of the musical \"Hamilton\", based on the life of Alexander Hamilton, which premiered on Broadway in 2015.\n\n Lin-Manuel Miranda wrote both the music and lyrics to the song.\n\n The song is sung by the characters of Hamilton and Aaron Burr, originally performed by Miranda and Leslie Odom Jr., respectively.",
+    "Toy Story 3\nToy Story 3 is a 2010 American 3D computer-animated comedy-drama film produced by Pixar Animation Studios for Walt Disney Pictures.\n\n It is the third installment in Pixar's \"Toy Story\" series, and the sequel to 1999's \"Toy Story 2\".\n\n It was directed by Lee Unkrich, the editor of the first two films and the co-director of \"Toy Story 2\", written by Michael Arndt, while Unkrich wrote the story along with John Lasseter and Andrew Stanton, respectively director and co-writer of the first two films.\n\n The plot focuses on the toys Woody, Buzz Lightyear, and their friends dealing with an uncertain future as their owner, Andy, prepares to leave for college.",
+    "Cars 2 (video game)\nCars 2 (also known as Cars 2: The Video Game) is a racing game developed by Avalanche Software.\n\n It is based on the film \"Cars 2\", the sequel to the 2006 film \"Cars\".\n\n Originally announced at E3 2011, the game was released by Disney Interactive on major platforms in North America on June 21, 2011, and in Australia 2 days later.\n\n The game was released in Europe on July 22, 2011.\n\n The PlayStation 3 version of the game was reported to feature stereoscopic 3D gameplay.\n\n A Nintendo 3DS version was released on November 1, 2011 (the same day the film was released on DVD and Blu-ray).\n\n A PlayStation Portable version was released in North America on November 8, 2011.\n\n It was also released in Europe on November 4, 2011.\n\n It was the last Pixar game to be released for the PlayStation Portable.",
+    "Moana (soundtrack)\nMoana: Original Motion Picture Soundtrack is the soundtrack to the 2016 Disney animated film \"Moana\".\n\n The soundtrack was released by Walt Disney Records on November 19, 2016.\n\n It features songs written by Lin-Manuel Miranda, Mark Mancina and Opetaia Foa'i, with lyrics in English, Samoan, Tokelauan, and Tuvalu.\n\n The two-disc deluxe edition includes the score, which was composed by Mancina, as well as demos, outtakes and instrumental karaoke tracks.",
+    "The Godfather Part II (soundtrack)\nThe Godfather Part II is the soundtrack from the movie of the same name, released in 1974 by ABC, and 1991 on compact disc by MCA.\n\n The original score was composed by Nino Rota and conducted by Carmine Coppola, who also provided source music for the film.\n\n Rota expands upon two of the three main themes from the first film: \"The Godfather Waltz\" and \"Michael's Theme\", while \"The Love Theme\" from the first film makes a brief appearance during a flashback sequence (\"Remember Vito Andolini\").\n\n There are several new themes, including one for Kay (Diane Keaton), and two for young Vito (Robert De Niro): \"The Immigrant Theme\" and \"The Tarantella\", introduced in \"A New Carpet\"."
+   ]
+  },
+  {
+   "id": "f05d45f28c4527b0",
+   "gold": [
+    {
+     "sentence": " Born in Des Moines, Iowa, Watkins rose to fame in the early 1990s as a member of the girl-group TLC.",
+     "facts": {
+      "0.0": "Watkins was born in Des Moines, Iowa.",
+      "0.1": "Watkins rose to fame in the early 1990s.",
+      "0.2": "Watkins rose to fame as a member of the girl-group TLC."
+     }
+    },
+    {
+     "sentence": " She is best known as the former main vocalist and member of South Korean girl group T-ara.",
+     "facts": {
+      "1.0": "Watkins is best known as the former main vocalist of the South Korean girl group T-ara.",
+      "1.1": "Watkins is best known as the former member of the South Korean girl group T-ara."
+     }
+    }
+   ],
+   "items": [
+    "TLC (group)\nTLC is an American girl group whose original line-up consisted of Tionne \"T-Boz\" Watkins, Lisa \"Left Eye\" Lopes and Rozonda \"Chilli\" Thomas.\n\n Formed in Atlanta, Georgia in 1990, the group was very successful during the 1990s despite numerous spats with the law, each other, and the group's record label and management.\n\n They scored nine top-ten hits on the \"Billboard\" Hot 100, including four number-one singles \"Creep\", \"Waterfalls\", \"No Scrubs\", and \"Unpretty\".\n\n The group also recorded four multi-platinum albums, including \"CrazySexyCool\" (1994) which still remains the only album by a female group to receive a diamond certification from the Recording Industry Association of America (RIAA).\n\n TLC also became the first R&B group in history to receive Million certification from the Recording Industry Association of Japan (RIAJ) for \"FanMail\" (1999).",
+    "Tionne Watkins\nTionne Tenese Watkins (born April 26, 1970), better known by her stage name T-Boz, is an American singer, songwriter, actress, author, and executive producer.\n\n Born in Des Moines, Iowa, Watkins rose to fame in the early 1990s as a member of the girl-group TLC.\n\n She has won four Grammy Awards for her work with TLC.",
+    "Park So-yeon (singer)\nPark So-yeon (born October 5, 1987), better known mononymously as Soyeon, is a South Korean singer and actress.\n\n She is best known as the former main vocalist and member of South Korean girl group T-ara.",
+    "Kim Tae-yeon discography\nKim Tae-yeon, better known by the mononym Taeyeon, is a South Korean singer.\n\n Her discography consists of one studio album, two extended plays (EPs), twenty singles (including four as featured artist), and three promotional singles.\n\n She debuted as a member of South Korean girl group Girls' Generation in August 2007 and initially gained some popularity as a singer upon recording soundtrack songs \"If\" for \"Hong Gil Dong\" and \"Can You Hear Me\" for \"Beethoven Virus\" (2008).\n\n She subsequently established herself as one of the most renowned vocalist on the South Korean music scene with further soundtrack recordings, notably \"I Love You\" for \"\" (2010), \"Missing You like Crazy\" for \"The King 2 Hearts\", \"Closer\" for \"To the Beautiful You\" (2012), and \"And One\" for \"That Winter, the Wind Blows\" (2013), all of which managed to enter the top ten of South Korea's Gaon Digital Chart.",
+    "R U the Girl\nR U the Girl (also known as R U the Girl with T-Boz and Chilli) is an American reality series that aired on UPN in 2005.\n\n The series featured Tionne \"T-Boz\" Watkins and Rozonda \"Chilli\" Thomas, the remaining members of the all-girl R&B group TLC whose former member, Lisa \"Left Eye\" Lopes, died in a car crash in Honduras on April 25, 2002.\n\n Initially promoted as a contest to permanently replace Lopes 3 years after her death by TLC themselves, both Watkins and Thomas admitted that the winner of the contest would not be joining TLC full-time and would not be a full-time replacement member; the winner would only provide guest vocals on a new single by the duo.",
+    "Kim Tae-yeon discography\nApart from soundtrack recordings, Taeyeon has also recorded duets with other artists, most notably \"Like a Star\" with The One and \"Different\" with Kim Bum-soo, which peaked at numbers one and two on the Gaon Digital Chart, respectively.",
+    "Kim Tae-yeon (actress)\nKim Tae-yeon (born January 3, 1976) is a South Korean actress.\n\n She began her entertainment career as a model, winning Model Line's 40th Fashion Model contest in 1996 and the Pantene Model contest sponsored by Ford Models in 2000.\n\n Kim made her film debut in the highly controversial film \"Lies\" in 1999.",
+    "As One (musical duo)\nAs One () is a South Korean R&B duo consisting of Korean-American singers Lee Min-young (known as Lee Min) and Chae Da-hee (known as Crystal).\n\n They are signed to record label Brand New Music.",
+    "Kim Tae-yeon\nKim Tae-yeon (born March 9, 1989), referred to as Taeyeon, is a South Korean singer.\n\n She had been a trainee at S.M. Entertainment's Starlight Academy during her middle school years before debuting as a member of the agency's girl group, Girls' Generation, in 2007.\n\n Since then, she has risen to prominence due to the group's success on the Asian music scene and further participated in the agency's projects Girls' Generation-TTS and SM the Ballad.\n\n Aside from group activities, she has also recorded songs for various television dramas and movies.",
+    "Rain (Taeyeon song)\n\"Rain\" is a song by South Korean singer Kim Tae-yeon, a member of the South Korean girl group Girls' Generation.\n\n It was released digitally by S.M. Entertainment on February 3, 2016."
+   ]
+  },
+  {
+   "id": "4436a604c598879c",
+   "gold": [
+    {
+     "sentence": "\"For the sedan variant of the car, see Volvo S40.\"",
+     "facts": {
+      "0.0": "The sedan variant of the car is described under Volvo S40."
+     }
+    },
+    {
+     "sentence": "The Volvo S40 is a compact luxury car marketed and produced by the Swedish manufacturer Volvo Cars from 1995 to 2012 across two generations.",
+     "facts": {
+      "1.0": "The Volvo S40 is a compact luxury car.",
+      "1.1": "The Volvo S40 is marketed by Volvo Cars.",
+      "1.2": "The Volvo S40 is produced by Volvo Cars.",
+      "1.3": "Volvo Cars is a Swedish manufacturer.",
+      "1.4": "The Volvo S40 was marketed and produced from 1995 to 2012.",
+      "1.5": "The Volvo S40 spanned two generations."
+     }
+    }
+   ],
+   "items": [
+    "Volvo S90\nThe Volvo S90 is an executive sedan manufactured and marketed by Swedish automaker Volvo Cars since 2016.\n\n Its estate variant is called the Volvo V90.",
+    "Volvo S70\nThe Volvo S70 was a compact executive car produced by Volvo Cars from 1996 to 2000.\n\n The S70 was essentially a facelifted 850 saloon.\n\n The S70 was replaced with the Volvo S60.",
+    "Volvo V50\n\"For the sedan variant of the car, see Volvo S40.\"",
+    "Volvo 850\nThe Volvo 850 is a compact executive car that was produced by the Swedish manufacturer Volvo Cars from 1991 to 1996.\n\n Designed by Jan Wilsgaard it was available in saloon and estate body styles.\n\n The 850 was the first front-wheel drive vehicle from Volvo to be sold in North America and also the first all-wheel drive Volvo.\n\n The range was replaced for 1997 by the Volvo S70 and Volvo V70.",
+    "Volvo 440/460\nThe Volvo 440 and 460 are versions of a small family car produced by the Swedish manufacturer Volvo between 1987 and 1996.\n\n The 440 was introduced in 1987, whilst the 460 followed in 1989.\n\n They were built at the NedCar factory in Born, The Netherlands.\n\n The 440 was a five door front wheel drive hatchback and the 460 a saloon.\n\n They shared many components with the already successful Volvo 480, including floorpan, front and rear suspension, engines, transmission and braking systems.",
+    "Volvo 300 Series\nThe Volvo 300 Series is a rear wheel drive small family car sold as both a hatchback and (later) a conventional saloon from 1976 to 1991.\n\n It was launched in the Netherlands shortly after Volvo acquired a major stake in the passenger car division of DAF in 1973.\n\n The series consisted of the Volvo 340 (previously 343/345) and the later Volvo 360.",
+    "Volvo P80 platform\nThe Volvo P80 platform was a Swedish mid-size unibody automobile platform developed and produced by Volvo Cars.\n\n It was in use from 1991 to 2005.\n\n It is designed for different wheelbases in front-wheel drive configurations and was adapted to all wheel drive.\n\n It debuted with the 1991 Volvo 850 and again in autumn 1996 with the Volvo 850 AWD.\n\n Although heavily modified by TWR, the same basic chassis was used as the underpinnings for the C70.\n\n After the model year 2000 most P80 models were replaced by their P2 successors, with the exception of the C70 convertible which remained in production until 2005.\n\n A total of 1,360,522 cars based on this platform were built.",
+    "Volvo C30\nThe Volvo C30 is a near-luxury compact hatchback, manufactured and marketed by Volvo Cars for model years 2006-2013, available across its single generation as a three-door hatchback.\n\n Powered by inline-four and straight-five engines, the C30 is variant of the Volvo S40/V50/C70 range, sharing the same Ford C1/Volvo P1 platform.\n\n Volvo marketed the C30 as a premium hatchback / sports coupe.",
+    "Volvo 480\nThe Volvo 480 is a compact car that was produced in Born, Netherlands, by Volvo from 1986 to 1995.\n\n It was the first front-wheel drive car made by the automaker.\n\n The 480 was available in only one body style on a automobile platform related to the Volvo 440/460 five door hatchback and four door sedan models.",
+    "Volvo S40\nThe Volvo S40 is a compact luxury car marketed and produced by the Swedish manufacturer Volvo Cars from 1995 to 2012 across two generations."
+   ]
+  },
+  {
+   "id": "f515795edb56bcb6",
+   "gold": [
+    {
+     "sentence": "\"Empty Orchestra\" is the fourth episode of the third series of the British dark comedy anthology television programme \"Inside No. 9\".",
+     "facts": {
+      "0.0": "'Empty Orchestra' is the fourth episode of the third series of Inside No. 9.",
+      "0.1": "Inside No. 9 is a British dark comedy anthology television programme."
+     }
+    },
+    {
+     "sentence": " Written by Steve Pemberton and Reece Shearsmith and directed by Guillem Morales, the episode first aired on 7 March 2017, on BBC 2.",
+     "facts": {
+      "1.0": "'Empty Orchestra' was written by Steve Pemberton.",
+      "1.1": "'Empty Orchestra' was written by Reece Shearsmith.",
+      "1.2": "'Empty Orchestra' was directed by Guillem Morales.",
+      "1.3": "'Empty Orchestra' first aired on 7 March 2017.",
+      "1.4": "'Empty Orchestra' first aired on BBC 2."
+     }
+    },
+    {
+     "sentence": " The episode is set in a karaoke booth, and follows a group of work colleagues—Greg (Shearsmith), Fran (Sarah Hadland), Connie (Tamzin Outhwaite), Janet (Emily Howlett) and Duane (Javone Prince)—celebrating the promotion of Roger (Pemberton).",
+     "facts": {
+      "2.0": "The episode 'Empty Orchestra' is set in a karaoke booth.",
+      "2.1": "The episode 'Empty Orchestra' follows a group of work colleagues.",
+      "2.2": "The work colleague Greg is shown as Shearsmith.",
+      "2.3": "The work colleague Fran is shown as Sarah Hadland.",
+      "2.4": "The work colleague Connie is shown as Tamzin Outhwaite.",
+      "2.5": "The work colleague Janet is shown as Emily Howlett.",
+      "2.6": "The work colleague Duane is shown as Javone Prince.",
+      "2.7": "The colleagues are celebrating the promotion of Roger.",
+      "2.8": "Roger is shown as Pemberton."
+     }
+    },
+    {
+     "sentence": " Since coming to national notice playing Melanie Owen in the BBC One soap opera \"EastEnders\" from 1998 until 2002, she has since starred in both theatre and television productions, including army series \"Red Cap\" and crime drama \"New Tricks\".",
+     "facts": {
+      "3.0": "The performer described in this sentence came to national notice playing Melanie Owen in the BBC One soap opera EastEnders from 1998 until 2002.",
+      "3.1": "The performer has since starred in theatre productions.",
+      "3.2": "The performer has since starred in television productions.",
+      "3.3": "The performer has starred in the army series Red Cap.",
+      "3.4": "The performer has starred in the crime drama New Tricks."
+     }
+    }
+   ],
+   "items": [
+    "Vital Signs (TV series)\nVital Signs is a British television drama series airing on ITV from 2006.\n\n It stars Tamzin Outhwaite as a supermarket check-out operator who decides to become a doctor.\n\n The series co-stars William Beck, Fraser Ayres, Eve Best, Claudie Blakley, Lucinda Dryzek, Beth Goddard, Alfie Hunter, Brooke Kinsella, Harry Lloyd, Peter Rnic and Steven Waddington.\n\n The filming of the show is based in numerous London hospitals and medical schools; predominantly the show has been shot in St George's Hospital and Medical School.",
+    "Kathryn Drysdale\nKathryn Drysdale (born December 1981) is an English actress known for her role as Grace Shelley in The West End show \"The Ruling Class\" opposite James Mcavoy, as Taylor in the movie \"St Trinian's\", Rhoda Swartz in Mira Nair's Vanity Fair, and Louise Brooks in the BBC comedy series \"Two Pints of Lager and a Packet of Crisps\" from 2001 until her departure from the show in 2009.\n\n She has also starred in the fourth series of the ITV sitcom \"Benidorm\" and as Brownwell in William Boyd's award-winning \"Any Human Heart\" opposite Jim Broadbent.\n\n She previously worked with Broadbent on Mira Nair's feature adaptation of William Thackery's \"Vanity Fair\" starring Reese Witherspoon.\n\n She played the role of mixed-race heiress Rhoda Swartz.\n\n She is also known for her role as Lizzie in the drama series \"Tripping Over\" by Mike Bullen.\n\n She appeared in \"Doctor Who\" as Bliss in the episode \"Love & Monsters\".\n\n She currently plays Meghan Markle in season 2 of \"The Windsors\".",
+    "Paradox (TV series)\nParadox is a 2009 British science fiction police drama, starring Tamzin Outhwaite as Detective Inspector Rebecca Flint.\n\n Written by Lizzie Mickery and produced by Clerkenwell Films for the BBC, it was filmed and set in Manchester, England.",
+    "Out of Control (2002 film)\nOut of Control is a 2002 British television film written and directed for BBC by Dominic Savage.\n\n It stars Tamzin Outhwaite as Shelley Richards, an impoverished single mother whose son, Dean (Danny Young), is involved in a string of crimes that lead to his incarceration in a young offenders institute (YOI).\n\n David Morrissey plays prison warden Mike, who tries to keep Dean out of trouble but has difficultly watching him all the time.\n\n After continuous bullying at the YOI, Dean is no longer able to cope and makes a fatal decision.\n\n It is the third in a loose trilogy of films by Savage about social deprivation, following \"Nice Girl\" (2000) and \"When I Was Twelve\" (2001).",
+    "Cold Comfort (Inside No. 9)\n\"Cold Comfort\" is the fourth episode of the second series of the British dark comedy anthology television programme \"Inside No. 9\".\n\n The episode, which was written and directed by Steve Pemberton and Reece Shearsmith, was first broadcast on 16 April 2015 on BBC Two.\n\n Most of \"Cold Comfort\" is composed of a stream from a fixed camera on the desk of Andy, the protagonist, with smaller pictures on the side of the screen, in the style of a CCTV feed.\n\n \"Cold Comfort\" was filmed over two and a half days in Twickenham, and was, like \"A Quiet Night In\" from \"Inside No. 9\"'s first series, highly experimental.\n\n It was Pemberton and Shearsmith's directorial debut.",
+    "Radio Cape Cod\nRadio Cape Cod is a 2008 film directed and produced by Andrew Silver.\n\n It stars Tamzin Outhwaite as a radio interviewer coming to terms with the loss of her husband and a new love entering her life.\n\n She also must cope with her teenage daughter, played by Tamzin Merchant, who is experiencing her first love.\n\n The film also stars O. T. Fagbenle.\n\n The film won several festival awards.",
+    "Tamzin Outhwaite\nTamzin Maria Outhwaite ( ; born 5 November 1970) is a British actress from London.\n\n Since coming to national notice playing Melanie Owen in the BBC One soap opera \"EastEnders\" from 1998 until 2002, she has since starred in both theatre and television productions, including army series \"Red Cap\" and crime drama \"New Tricks\".",
+    "John Altman (actor)\nJohn Clarkson Stewart (born 2 March 1952), known as John Altman, is an English actor and singer, perhaps best known for playing \"Nasty\" Nick Cotton in the popular BBC soap opera \"EastEnders\".\n\n He was among the show's original cast members appearing in the very first episode in February 1985 and appeared on the show on and off as a recurring character.\n\n His character was killed off in the 30th anniversary episode of the show which aired in February 2015.\n\n Altman has also appeared in several other television series and appeared in many stage productions.\n\n In 2010 he became the new frontman of the band Heavy Metal Kids following the death of former frontman Gary Holton in 1985.",
+    "Melanie Owen\nMelanie Jane \"Mel\" Owen (also Healy and Beale) is a fictional character from the BBC soap opera \"EastEnders\", played by Tamzin Outhwaite.\n\n She appeared from 19 October 1998 to 12 April 2002 when Outhwaite opted to leave the role.\n\n Mel was introduced by executive producer Matthew Robinson and became a prominent character during her tenure in the soap.",
+    "Empty Orchestra\n\"Empty Orchestra\" is the fourth episode of the third series of the British dark comedy anthology television programme \"Inside No. 9\".\n\n Written by Steve Pemberton and Reece Shearsmith and directed by Guillem Morales, the episode first aired on 7 March 2017, on BBC 2.\n\n The episode is set in a karaoke booth, and follows a group of work colleagues—Greg (Shearsmith), Fran (Sarah Hadland), Connie (Tamzin Outhwaite), Janet (Emily Howlett) and Duane (Javone Prince)—celebrating the promotion of Roger (Pemberton).\n\n Rebekah Hinds also stars."
+   ]
+  },
+  {
+   "id": "c4483ace7cc16eeb",
+   "gold": [
+    {
+     "sentence": " He succeeded his brothers Eric IV Plovpenning and Abel of Denmark on the throne.",
+     "facts": {
+      "0.0": "The person in this sentence succeeded his brothers Eric IV Plovpenning and Abel of Denmark on the throne."
+     }
+    },
+    {
+     "sentence": "Eric IV, also known as Eric Ploughpenny or Eric Plowpenny (Danish: \"Erik Plovpenning\" ), (  1216 – 10 August 1250) was king of Denmark from 1241 until his death in 1250.",
+     "facts": {
+      "1.0": "Eric IV is also known as Eric Ploughpenny.",
+      "1.1": "Eric IV is also known as Eric Plowpenny.",
+      "1.2": "Eric IV's Danish name is Erik Plovpenning.",
+      "1.3": "Eric IV's dates are 1216 to 10 August 1250.",
+      "1.4": "Eric IV was king of Denmark from 1241.",
+      "1.5": "Eric IV was king of Denmark until his death in 1250."
+     }
+    }
+   ],
+   "items": [
+    "King Kang of Chu\nKing Kang of Chu (, died 545 BC) was from 559 to 545 BC the king of Chu, a major power during the Spring and Autumn period of ancient China.\n\n Born Xiong Zhao (), he succeeded his father King Gong of Chu.\n\n His reign was marked by constant wars with Jin, Chu's traditional enemy, and Wu, its new enemy.\n\n He ruled for 15 years and was succeeded by his son, Jia'ao, who would four years later be murdered by King Kang's younger brother King Ling of Chu.",
+    "Prince Christian of Hanover (born 1985)\nPrince Christian of Hanover (Christian Heinrich Clemens Paul Frank Peter Welf Wilhelm-Ernst Friedrich Franz Prince of Hanover, Duke of Brunswick and Lüneburg; born 1 June 1985) is the younger son of Ernst August, Prince of Hanover, and his first wife Chantal Hochuli.\n\n He is the second in the line of succession to the former Hanoverian throne, after his elder brother Prince Ernst August.\n\n As a descendant of George III of the United Kingdom, Christian is also in the line of succession to the British throne.",
+    "Eric IV of Denmark\nEric IV, also known as Eric Ploughpenny or Eric Plowpenny (Danish: \"Erik Plovpenning\" ), (  1216 – 10 August 1250) was king of Denmark from 1241 until his death in 1250.\n\n He was the son of King Valdemar II by his wife, Berengaria of Portugal, and brother of King Abel and King Christopher I.",
+    "Eric III of Denmark\nEric III Lamb (Danish: \"Erik III Lam\" ) (  1120 – 27 August 1146) was the King of Denmark from 1137 until 1146.\n\n He was the grandson of Eric I of Denmark and the nephew of Eric II of Denmark, whom he succeeded on the throne.\n\n He abdicated in 1146, as the first and only Danish monarch to do so.\n\n His succession led to a period of civil war between Sweyn III, Canute V, and Valdemar I.",
+    "Harald II of Denmark\nHarald II of Denmark (died 1018) was King of Denmark from 1014 until his death in 1018.\n\n He was the youngest son of Sweyn Forkbeard and Gunhild of Wenden, and was regent while his father was fighting Ethelred the Unready in England.\n\n He inherited the Danish throne in 1014, and held it while his brother, the later king Cnut the Great conquered England.\n\n After his death in 1018, he was succeeded by Cnut the Great.\n\n Little detail is known about Harald II.",
+    "Harald II ruled Denmark (1014–18), succeeding father Sweyn Forkbeard while brother Cnut conquered England; Cnut succeeded him. Christopher I (1252–59), son of Valdemar II, succeeded Abel. Epirus’s Ptolemy briefly ruled after Pyrrhus II, dying on campaign (or assassinated); niece Deidamia followed. Chu’s King Kang (559–545 BC) fought Jin and Wu; son Jia’ao succeeded",
+    "John Christiansen\nJohn “Chris” Christiansen (May 1, 1923 － September 12, 1998) was the chief military test pilot for Lockheed California Company for over 30 years.\n\n He might be most known for having performed Lockheed S-3 Viking's maiden flight on January 21, 1972.\n\n His assignments also included the initial test flights of Lockheed P-3 Orion.\n\n Christiansen was born in Oslo, Norway in 1923 and became an American citizen in 1939.\n\n He later served in the U.S. Navy during World War II and the Korean Conflict.\n\n He began experimental flying for Lockheed Martin in 1953, and worked there until his retirement in 1984.\n\n He was a fellow at Society of Experimental Test Pilots.",
+    "Christopher I of Denmark\nChristopher I (Danish: \"Christoffer I\" ) (1219 – 29 May 1259) was King of Denmark between 1252 and 1259.\n\n He was the son of Valdemar II of Denmark by his wife, Infanta Berengária of Portugal.\n\n He succeeded his brothers Eric IV Plovpenning and Abel of Denmark on the throne.\n\n Christopher was elected King upon the death of his older brother Abel in the summer of 1252.\n\n He was crowned at Lund Cathedral on Christmas Day 1252.",
+    "Eric II of Denmark\nEric II the Memorable (Danish: \"Erik II Emune\" ) (  1090 – 18 September 1137) was king of Denmark between 1134 and 1137.\n\n Eric was an illegitimate son of Eric I of Denmark, who ruled Denmark from 1095 to 1103.\n\n Eric the Memorable rebelled against his uncle Niels of Denmark, and was declared king in 1134.\n\n He punished his adversaries severely, and rewarded his supporters handsomely.\n\n He was killed by a subject in 1137 and was promptly succeeded by his nephew Eric III of Denmark.",
+    "House of Oldenburg\nThe House of Oldenburg is a European dynasty of North German origin.\n\n It is one of Europe's most influential royal houses, with branches that rule or have ruled in Denmark, Iceland, Greece, Norway, Russia, Sweden, Schleswig, Holstein, and Oldenburg.\n\n The current Queen of Denmark and King of Norway, the former King of Greece, the consorts of Greece and the United Kingdom, as well as the first twelve names in the line of succession to the British throne, are all patrilineal members of the Glücksburg branch of this house."
+   ]
+  },
+  {
+   "id": "169ecc2df2533458",
+   "gold": [
+    {
+     "sentence": "Todos Me Miran (\"\"Everyone looks at me\"\") is a single from the Mexican artist Gloria Trevi reaching number 32 on Latin charts, and becoming a club anthem that confirmed Trevi's status as a gay icon.",
+     "facts": {
+      "0.0": "Todos Me Miran ('Everyone looks at me') is a single from the Mexican artist Gloria Trevi.",
+      "0.1": "Todos Me Miran reached number 32 on Latin charts.",
+      "0.2": "Todos Me Miran became a club anthem.",
+      "0.3": "Todos Me Miran confirmed Trevi's status as a gay icon."
+     }
+    },
+    {
+     "sentence": "Gloria Trevi (] ; born Gloria de los Ángeles Treviño Ruiz on February 15, 1968) is a Mexican singer and songwriter.",
+     "facts": {
+      "1.0": "Gloria Trevi was born Gloria de los Angeles Trevino Ruiz.",
+      "1.1": "Gloria Trevi was born on February 15, 1968.",
+      "1.2": "Gloria Trevi is a Mexican singer.",
+      "1.3": "Gloria Trevi is a Mexican songwriter."
+     }
+    }
+   ],
+   "items": [
+    "Gloria Trevi\nGloria Trevi (] ; born Gloria de los Ángeles Treviño Ruiz on February 15, 1968) is a Mexican singer and songwriter.",
+    "A Cambio de Que\n\"A Cambio de Que\" (In Exchange for What) is a song written by Xavier Santos Córtes and first performed by Mexican singer Marisela from her studio album \"Completamente Tuya\".\n\n The song has been covered by several artists which have ranked on the music charts.\n\n Latin pop band Corvo covered the song in 1999 which reached #18 on the Hot Latin Songs chart in the United States.\n\n Mexican band Palomo's cover peaked at #31 on the Regional Mexican Airplay chart.\n\n American singer Huey Dunbar recorded \"A Cambio de Que\" on his debut studio album \"Yo Si Me Enamore\" (2001).\n\n This version peaked at #16 on the Tropical Songs chart.\n\n Mexican duranguense band Alacranes Musical covered the song on the album of the same name in 2004 which reached #25 on the Regional Mexican Airplay chart.",
+    "Tu Ángel de la Guarda\nTu Ángel de la Guarda (\"Your guardian angel\") is Gloria Trevi's second album, and it contained one of her signature songs and her most widely known hit, \"Pelo Suelto\".\n\n It also contained other hit songs such as \"Tu angel de la guarda\", \"Ya no\", \"Virgen de las virgenes\", and \"Hoy me ire de casa\".\n\n This album was very controversial different from other artists' albums such as Lucero.\n\n \"Virgen de las virgenes\" mocked girls who said they were virgins but had actually lost their virginity, and \"¡Ya no!\"\n\n went against the machismo movement of México.\n\n Following the release of the album, Gloria was working hard in promoting radio, television and print media.\n\n Trevi first traveled abroad visiting American Union countries, Puerto Rico, Argentina, Colombia, Guatemala, Venezuela, Costa Rica, and received a Gold and Platinum for high sales achieved.",
+    "La Trayectoria (Gloria Trevi album)\nLa Trayectoria (In English: The Trajectory) is a 2006 double live CD and multimedia DVD release by the Mexican singer Gloria Trevi.\n\n The DVD includes scenes from parts of the tour from the Palacio de los Deportes of the Mexico City and The Arena Monterrey and the CD includes four new songs like: \"Todos Me Miran\" (They All Look At Me) is the first single compilation study of Mexican singer \"Gloria Trevi\", this is an unreleased song from the album.",
+    "Todos Los Romances\nTodos Los Romances (English: \"All the Romances\" ) is a three-disc compilation album by Mexican singer Luis Miguel.\n\n Released on 11 August 1998 by WEA Latina, the record features the three previously released \"Romance\"-themed albums in which Miguel covered classic boleros in each of them: \"Romance\" (1991), \"Segundo Romance\" (1994), and \"Romances\" (1997).\n\n An editor for AllMusic rated the album four of five stars.\n\n Commercially, \"Todos Los Romances\" peaked at number four in Spain and was certified double Platinum in the country.\n\n It also achieved Gold status in Argentina and peaked at number 12 on the \"Billboard\"'s Top Latin Albums in the United States.",
+    "Premio Lo Nuestro 2003\nIn the Regional Mexican, Pilar Montenegro took three awards for Regional Mexican Song of the Year, Pop Song of the Year (\"Quitame Ese Hombre\"), and for Best Regional Mexican Female Artist.\n\n In the tropical genre, Celia Cruz took home with four great awards of the night for Best Salsa Performance, Best Tropical Female Artist, Best Tropical Song of the year and Tropical Album of the Year.\n\n At the night, the greatest performance was a medley of top Latin hits from the last 15 years, performed by the artists that made them famous, including Vikki Carr, Son by Four, Los Ilegales, La Mafia, Luis Enrique, Wilfrido Vargas and Olga Tañón.\n\n There was a great tribute to Celia Cruz by the world-famous salsa group \"Fania All-Stars\", of which Cruz was a member during the 1970s, reunited for an exclusive performance that rocked the house.",
+    "No eres tú, soy yo\nNo eres tú, soy yo (English: It's not you, it's me ) is a 2010 Mexican romantic comedy directed by Alejandro Springall starring Eugenio Derbez, Alejandra Barros and Martina García and based on the Argentinean film \"No sos vos, soy yo\" (2004), written by Juan Taratuto.\n\n It was produced by Matthias Eherenberg and filmed in Mexico City.",
+    "De Contrabando\n\"De Contrabando\" (\"Smuggled\") is a song written by Joan Sebastian.\n\n It was first performed by Mexican singer Imelda, and included on her album \"Aparentemente\", released in 1991.\n\n Six years later, was performed by fellow Mexican singer Zayda Y Los Culpables and released by Musart Records as the second single from her self-titled album in 1997.\n\n Mexican-American singer Jenni Rivera recorded a cover version for her studio album \"Parrandera, Rebelde y Atrevida\".\n\n \"De Contrabando\" was released as the second single from the album in 2006.\n\n In the United States, the song peaked at number fourteen on the \"Billboard\" Hot Latin Songs chart and number one on the \"Billboard\" Regional Mexican Songs chart.\n\n The song was nominated for a Lo Nuestro Award for Regional Mexican Song of the Year at the 2007 Lo Nuestro Awards.\n\n Rivera was also recognized for Regional Mexican Female Artist of the Year.\n\n Rivera was also awarded Regional Mexican Airplay Song of the Year for at the 2007 Latin \"Billboard\" Music Awards.",
+    "Mexico Espanol Airplay\nMexico Espanol Airplay is a record chart published weekly by \"Billboard\" magazine for Spanish language singles released in Mexico.\n\n According to \"Billboard\"' s electronic database, the first chart was published on October 1, 2011, with the track \"Amor Clandestino\" by Mexican band Maná at number one; in the same year, fellow Mexican duo Jesse & Joy reached the top of the chart with their single \"¡Corre!\n\n\", the first of their six number-one singles in the chart, the most for any act. \"\n\n¡Corre!\"\n\n also won the Latin Grammy Awards for Record of the Year and Song of the Year in 2012.\n\n Starting on December 1, 2012, Mexican singer Thalía spent 10 non-consecutive weeks at number-one with \"Manías\", the first single from the album \"Habítame Siempre\", which won the Lo Nuestro Award for Pop Album of the Year. \"\n\nHoy Tengo Ganas de Ti\" by Mexican artist Alejandro Fernández and American singer Christina Aguilera reached number-one in 2013, and also peaked at number four in Spain.",
+    "Todos Me Miran\nTodos Me Miran (\"\"Everyone looks at me\"\") is a single from the Mexican artist Gloria Trevi reaching number 32 on Latin charts, and becoming a club anthem that confirmed Trevi's status as a gay icon.\n\n The song, as interpreted in the music video, is about a young man who dares to crossdress in spite of society's opinions."
+   ]
+  },
+  {
+   "id": "06549fbf4735adb4",
+   "gold": [
+    {
+     "sentence": "David Michael Draiman (born March 13, 1973) is an American songwriter and the vocalist for the band Disturbed as well as for the band Device.",
+     "facts": {
+      "0.0": "David Michael Draiman was born on March 13, 1973.",
+      "0.1": "David Michael Draiman is an American songwriter.",
+      "0.2": "David Michael Draiman is the vocalist for the band Disturbed.",
+      "0.3": "David Michael Draiman is the vocalist for the band Device."
+     }
+    },
+    {
+     "sentence": "Terry Alan Kath (January 31, 1946 – January 23, 1978) was an American musician and songwriter, best known as the original guitarist, one of the lead singers and founding members of the rock band Chicago.",
+     "facts": {
+      "1.0": "Terry Alan Kath lived January 31, 1946 to January 23, 1978.",
+      "1.1": "Terry Alan Kath was an American musician.",
+      "1.2": "Terry Alan Kath was an American songwriter.",
+      "1.3": "Terry Alan Kath was best known as the original guitarist of the rock band Chicago.",
+      "1.4": "Terry Alan Kath was one of the lead singers of the rock band Chicago.",
+      "1.5": "Terry Alan Kath was a founding member of the rock band Chicago."
+     }
+    }
+   ],
+   "items": [
+    "Terry Glaze\nTerrence Lee Glaze (born November 29, 1964, Columbus), known as Terry Lee, is a Texas-raised singer and guitarist who is most known for his work in American heavy metal bands Lord Tracy and Pantera.",
+    "Warrel Dane\nWarrel Dane (born March 7, 1969) is the lead singer of the American power metal band Sanctuary.\n\n He is also known as the former lead singer of currently inactive progressive metal band Nevermore.\n\n He is a natural baritone, though he was known for his high-pitched vocals with Serpent's Knight and on the first two Sanctuary albums.\n\n Later in his career, Dane became more notable for his distinctively deep, dramatic voice.",
+    "Katherine Dienes\nKatherine Dienes (born 1970) is a New Zealand-born organist, conductor and composer.\n\n She is currently Organist and Master of the Choristers at Guildford Cathedral and is the first woman to hold the most senior musical post in a Church of England cathedral.\n\n Her husband is Patrick Williams - librarian of the Royal Phillharmonic Orchestra, and they have a daughter, Hannah, who is currently a chorister at Guildford Cathedral",
+    "David Draiman\nDavid Michael Draiman (born March 13, 1973) is an American songwriter and the vocalist for the band Disturbed as well as for the band Device.\n\n Draiman is known for his distorted voice and percussive singing style.\n\n In November 2006, Draiman was voted number 42 on the \"Hit Parader\"’s \"\"Top 100 Metal Vocalists of All Time\"\".\n\n Draiman has written some of Disturbed's most successful singles, such as \"Stupify\", \"Down with the Sickness\", \"Indestructible\", and \"Inside the Fire\".",
+    "Device (metal band)\nDevice was an industrial metal band started by David Draiman, frontman of the heavy metal group Disturbed.\n\n Draiman was approached by Geno Lenardo, former guitarist of Filter, and together they started to work on new material.\n\n The two started work on a debut album in June 2012.\n\n The result of those sessions, \"Device\", was released on April 9, 2013.\n\n The first single and third track, \"Vilify\" was released to radio ahead of the album on February 19, 2013, alongside its first music video, directed by P. R. Brown.\n\n The second single and the introductory track, \"You Think You Know\", was released on June 11, 2013, alongside its music video, directed once again by Brown.",
+    "Daron Malakian\nDaron Vartan Malakian (Armenian: Տարօն/Տարոն Վարդան Մալաքեան, born July 18, 1975) is an Armenian–American singer-songwriter, multi-instrumentalist, and record producer.\n\n He is best known as the guitarist, songwriter and second vocalist of the rock band System of a Down and as the lead vocalist, lead guitarist and songwriter of the band Scars on Broadway.\n\n Like the rest of the Hollywood-based band System of a Down, he is of Armenian ancestry, but he is the only member to have been born in the United States.\n\n Daron Malakian is known for his distinctive playing and is ranked 40th in Loudwire's list of \"Top 50 Hard Rock + Metal Guitarists Of All Time\" and #11 in MusicRadar's poll, \"The 20 Greatest Metal Guitarists Ever\".\n\n He is placed 30th in Guitar World's List of The 100 Greatest Heavy Metal Guitarists of All Time.",
+    "Peter Wichers\nPeter Wichers is best known as one of the founding members of Swedish melodic death metal band, Soilwork.\n\n From 1995 until late 2005, when he announced his departure from the band, he was known as the lead guitarist and also a songwriter, especially on their \"Stabbing the Drama\" album., He rejoined Soilwork in 2008 and played on 2010s The Panic Broadcast and in June 2012 he quit Soilwork for the second time.\n\n After leaving Soilwork, he filled in for Adam Dutkiewicz when he was injured on Killswitch Engage's European tour.\n\n More recently, he has collaborated with singers from across the melodic death metal genre including Anders Fridén, former band mate Björn \"Speed\" Strid and John Bush (vocalist of Anthrax) to make a CD much in the same style as \"Roadrunner United\", entitled \"Nuclear Blast All-Stars\".\n\n He also co-wrote Warrel Dane's solo record \"Praises to the War Machine\".",
+    "Pantera\nPantera was an American heavy metal band from Arlington, Texas.\n\n The group was formed in 1981 by the Abbott brothers – drummer Vinnie Paul and guitarist Dimebag Darrell – along with lead vocalist Terry Glaze.\n\n Bassist Rex Brown joined the band the following year, replacing Tommy D. Bradford, who was the unofficial original.\n\n Having started as a glam metal band, Pantera released four albums during the 1980s.\n\n Looking for a new and heavier sound, Pantera replaced Glaze with Phil Anselmo in late 1986 and released \"Power Metal\" in 1988.\n\n With its fifth album, 1990's \"Cowboys from Hell\", Pantera introduced a groove metal sound.\n\n Pantera's sixth album, 1992's \"Vulgar Display of Power\", exhibited an even heavier sound. \"\n\nFar Beyond Driven\" (1994) debuted at number one on the \"Billboard\" 200.",
+    "Tom Johnston (musician)\nCharles Thomas \"Tom\" Johnston (born August 15, 1948) is an American musician.\n\n He is a guitarist and vocalist, known principally as a founder, guitarist, lead vocalist and songwriter for the rock group The Doobie Brothers, as well as for his own solo career.\n\n His off-and-on career with The Doobie Brothers spans more than 40 years, during which time the band exhibited numerous successful styles.",
+    "Terry Kath\nTerry Alan Kath (January 31, 1946 – January 23, 1978) was an American musician and songwriter, best known as the original guitarist, one of the lead singers and founding members of the rock band Chicago.\n\n He has been praised by the band for his guitar skills and Ray Charles-influenced vocal style."
+   ]
+  }
+ ]
+}

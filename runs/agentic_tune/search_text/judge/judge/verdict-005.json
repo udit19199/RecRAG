@@ -1,0 +1,74 @@
+[
+  {
+    "id": "af5aff173d6eb05e",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+    ]
+  },
+  {
+    "id": "8ad9eedeeccddd8d",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights — Los Pumas are also in the semi-finals — and England have beaten all of them."}]},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights — Los Pumas are also in the semi-finals — and England have beaten all of them."}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights — Los Pumas are also in the semi-finals — and England have beaten all of them."}]},
+      {"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights — Los Pumas are also in the semi-finals — and England have beaten all of them."}]},
+      {"fact": "0.5", "status": "stated", "evidence": [{"item": 5, "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights — Los Pumas are also in the semi-finals — and England have beaten all of them."}, {"item": 5, "quote": "the narrow wins over both Samoa and Fiji in their last two games showed that England are certainly gettable."}]},
+      {"fact": "0.6", "status": "stated", "evidence": [{"item": 5, "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights — Los Pumas are also in the semi-finals — and England have beaten all of them."}, {"item": 5, "quote": "the narrow wins over both Samoa and Fiji in their last two games showed that England are certainly gettable."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "c1b660ae9e63b160",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go, especially since he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go, especially since he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go, especially since he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center."}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go, especially since he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center."}]},
+      {"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go, especially since he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "df9c37e463d529f6",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team will score in the game."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team will score in the game."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team will score in the game."}]}
+    ]
+  },
+  {
+    "id": "ced9535558f51d29",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "As such, they’re never going to replace the need for reducing emissions of CO 2 and other greenhouse gases."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "As such, they’re never going to replace the need for reducing emissions of CO 2 and other greenhouse gases."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []},
+      {"fact": "1.4", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "7d992ea31362e5c6",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []}
+    ]
+  }
+]

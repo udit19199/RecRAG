@@ -1,0 +1,25 @@
+[
+{"id": "597f7f82bad15d2f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen,\" he told Fox News Digital."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen,\" he told Fox News Digital."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen,\" he told Fox News Digital."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house."}]}
+]},
+{"id": "286781115cbcb9ee", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "But while this will probably come up later in the trial"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "3ef7c675fe7e9387", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "In the long term, scientists also point to a number of recent developments"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "which have raised hopes that it may be possible to tackle dementia more directly and effectively."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]}
+]}
+]

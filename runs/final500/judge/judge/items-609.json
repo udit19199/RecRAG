@@ -1,0 +1,428 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "9ceb0cc80761e918",
+   "gold": [
+    {
+     "sentence": "Montague (Monty) Banks (15 July 1897 [registered on 18 July 1897] – 7 January 1950 born Mario Bianchi) was an Italian comedian and film director who achieved success in the United States and in England.",
+     "facts": {
+      "0.0": "Montague (Monty) Banks was born Mario Bianchi.",
+      "0.1": "Montague (Monty) Banks was born 15 July 1897.",
+      "0.2": "Montague (Monty) Banks' birth was registered on 18 July 1897.",
+      "0.3": "Montague (Monty) Banks died on 7 January 1950.",
+      "0.4": "Montague (Monty) Banks was an Italian comedian.",
+      "0.5": "Montague (Monty) Banks was an Italian film director.",
+      "0.6": "Montague (Monty) Banks achieved success in the United States.",
+      "0.7": "Montague (Monty) Banks achieved success in England."
+     }
+    },
+    {
+     "sentence": "George Seaton (April 17, 1911 – July 28, 1979) was an American screenwriter, playwright, film director and producer, and theatre director.",
+     "facts": {
+      "1.0": "George Seaton was born April 17, 1911.",
+      "1.1": "George Seaton died July 28, 1979.",
+      "1.2": "George Seaton was an American screenwriter.",
+      "1.3": "George Seaton was an American playwright.",
+      "1.4": "George Seaton was an American film director.",
+      "1.5": "George Seaton was an American film producer.",
+      "1.6": "George Seaton was an American theatre director."
+     }
+    }
+   ],
+   "items": [
+    "Stanley Bing\nStanley Bing is the pen name of Gil Schwartz (born May 20, 1951 in New York, NY), a business humorist and novelist.\n\n He has written a column for \"Fortune\" magazine for more than twenty years, after having spent a decade at \"Esquire\".\n\n He is the author of thirteen books including \"What Would Machiavelli Do?\"\n\n and \"The Curriculum\", a satirical textbook for a business school that also offers lessons on the Web.\n\n Schwartz is the senior executive vice president of corporate communications and Chief Communications Officer for CBS.",
+    "The Black Hand Gang\nThe Black Hand Gang is a 1930 British comedy film directed by Monty Banks and starring Wee Georgie Wood, Viola Compton and Alfred Wood.\n\n It was made by British International Pictures and based on a play by \"Black Hand George\" by Bert Lee and R.P. Weston.",
+    "Ken Barrie\nLeslie Hulme (9 January 1933 – 29 July 2016), known professionally as Ken Barrie, was an English voice actor and singer best known for narrating, and singing the theme tune of the BBC television programmes \"Postman Pat\" and \"Charlie Chalk\".\n\n He was also responsible for providing the voices of several of the series' characters.",
+    "Mark Benton\nMark Benton (born 16 November 1965) is an English actor, known for his roles as Eddie in \"Early Doors\", Howard in \"Northern Lights\" and Martin Pond in \"Barbara\".\n\n Benton has also starred in BBC One drama, \"Waterloo Road\" as maths teacher, Daniel Chalk from 2011 to 2013 and again in 2014.",
+    "Keep Your Seats, Please\nKeep Your Seats, Please is a 1936 British comedy film directed by Monty Banks and starring George Formby, Florence Desmond and Alastair Sim.\n\n It marked the film debut of the child star Binkie Stuart.\n\n The film was made by Associated Talking Pictures.",
+    "The Church Mouse\nThe Church Mouse is a 1934 British comedy film directed by Monty Banks and starring Laura La Plante, Ian Hunter and Edward Chapman.\n\n It was made by the British subsidiary of Warner Brothers at the company's Teddington Studios.\n\n It was made as a more expensive production than much of the studio's low-budget quota quickie output.",
+    "George Seaton\nGeorge Seaton (April 17, 1911 – July 28, 1979) was an American screenwriter, playwright, film director and producer, and theatre director.",
+    "Joey Bishop\nJoseph Abraham Gottlieb (February 3, 1918 – October 17, 2007), known professionally as Joey Bishop, was an American entertainer who appeared on television as early as 1948 and eventually starred in his own weekly comedy series playing a talk show host, then later hosted a late night talk show.\n\n He later became a member of the \"Rat Pack\" with Frank Sinatra, Peter Lawford, Sammy Davis, Jr., and Dean Martin.",
+    "Monty Banks\nMontague (Monty) Banks (15 July 1897 [registered on 18 July 1897] – 7 January 1950 born Mario Bianchi) was an Italian comedian and film director who achieved success in the United States and in England.",
+    "Everett Greenbaum\nEverett Greenbaum (December 20, 1919 – July 11, 1999) was an American television and film writer and actor who contributed to such shows as \"The Andy Griffith Show\" (24 Episodes), \"M*A*S*H\" (35 Episodes), \"Love American Style\", \"The Real McCoys\" (32 Episodes), \"Sanford and Son\", and \"The George Gobel Show\".\n\n Greenbaum was a co-creator with Jim Fritzell of \"Mister Peepers\" an important early television show which starred Wally Cox.\n\n He wrote the Hollywood feature film \"Good Neighbor Sam\", as well as a series of films starring Don Knotts that included \"The Shakiest Gun in the West\", \"The Reluctant Astronaut\", and \"The Ghost and Mr. Chicken\"."
+   ]
+  },
+  {
+   "id": "2b7958307b09c29a",
+   "gold": [
+    {
+     "sentence": " In 1972, a grant from the Eleanor and John Y. Brown Jr., Foundation led to the construction of the current facility.",
+     "facts": {
+      "0.0": "The Eleanor and John Y. Brown Jr. Foundation gave a grant in 1972.",
+      "0.1": "The 1972 grant from the Eleanor and John Y. Brown Jr. Foundation led to the construction of the current facility."
+     }
+    },
+    {
+     "sentence": " He served as the 55th governor of Kentucky from 1979 to 1983, although he may be best known for building Kentucky Fried Chicken (KFC) into a multimillion-dollar restaurant chain.",
+     "facts": {
+      "1.0": "The 55th governor of Kentucky served from 1979 to 1983.",
+      "1.1": "The 55th governor of Kentucky may be best known for building Kentucky Fried Chicken (KFC) into a multimillion-dollar restaurant chain."
+     }
+    }
+   ],
+   "items": [
+    "Rochelle Buffenstein\nRochelle (Shelley) Buffenstein is a staff scientist at Calico, an Alphabet, Inc. funded research outfit investigating aging.\n\n Previously, she had been a professor of Physiology at theBarshop Institute for Longevity and Aging Studies at the University of Texas Health Science Center at San Antonio.\n\n Her research focuses on comparative vertebrate physiology, energetics, cancer biology, and aging.\n\n She has worked with marsupials, mole-rats, tenrecs, bats, subterranean mammals, and primates.\n\n Her best known work involves exceptional aging -- specifically, why naked mole-rats live for so much longer than other rodents.\n\n Her lab has investigated theories of aging including oxidative damage theory, the advanced glycation end product theory, and the telomere theory.",
+    "Rubin Schron\nRubin Schron, who goes by Ruby, is a New York City real estate investor, landlord and the founder of Cammeby's International Group.\n\n He has a personal net worth of well over $10 billion, according to data company Real Capital Analytics.\n\n The portfolio of Cammeby's, which Schron founded in 1967, includes office buildings, market-rate and government-subsidized apartment complexes, nursing homes, the 16-building complex in Sunset Park now known as Industry City, a stake in the bottom half of Woolworth Building and industrial properties scattered across Long Island.\n\n In 2013, Schron made an unsolicited and unsuccessful offer to buy the Empire State Building for $2 billion, but he has not had problems closing many other deals throughout his long career.\n\n In 2003, an investment group led by Schron paid $600 million for a portfolio of about 6,000 outer-borough apartments from Donald Trump.",
+    "Panera Bread\nPanera Bread Company is an American chain of bakery-café fast casual restaurants in the United States and Canada.\n\n Its headquarters are in Sunset Hills, Missouri, a suburb of St. Louis, and operates as Saint Louis Bread Company in the St. Louis metropolitan area.\n\n Offerings include soups, salads, pasta, sandwiches, specialty drinks, and bakery items.",
+    "Rubin Schron\nOther buildings he owns include the Monterey, a 521-unit rental multifamily building on Manhattan's Upper East Side; over the decades, Schron has also amassed a portfolio of Mitchell-Lama apartment buildings whose values have been skyrocketing to record values, after reverting to market rates when government subsidies expired.\n\n In 2007, he sold nearly 4,000 units of former Mitchell-Lama properties in five complexes in Harlem and on Roosevelt Island for $940 million.\n\n Schron, who practices Orthodox Judaism, has eight children and 50 grandchildren.\n\n He and his family have lived in the same single-family home in Brooklyn for many decades.",
+    "Sanders–Brown Center on Aging\nThe Sanders–Brown Center on Aging at the University of Kentucky in Lexington, Kentucky, is responsible for research, education and service programs in aging.\n\n The program was founded in 1963 with the creation of the Council on Aging.\n\n In 1972, a grant from the Eleanor and John Y. Brown Jr., Foundation led to the construction of the current facility.\n\n The center was named for the Browns and his then-business partner, (Col.) Harlan Sanders.\n\n The four-story brick and concrete structure fronts South Limestone at the edge of the medical campus.\n\n The complex features 32 research laboratories that employs more than 150.",
+    "John Y. Brown Jr.\nJohn Young Brown Jr. (born December 28, 1933) is an American politician, entrepreneur, and businessman from the U.S. state of Kentucky.\n\n He served as the 55th governor of Kentucky from 1979 to 1983, although he may be best known for building Kentucky Fried Chicken (KFC) into a multimillion-dollar restaurant chain.",
+    "McAlister's Deli\nMcAlister's Deli is an American chain of fast casual restaurants founded in 1989 in Oxford, Mississippi by retired dentist Dr. Don Newcomb.\n\n There are currently over 400 locations in 26 states, ranging from Virginia in the East to Florida in the South to Arizona in West to Michigan in the North.\n\n The menu includes deli sandwiches, \"Texas-size\" spuds (baked potatoes), soups, salads, and desserts, as well as catering items such as sandwich trays and boxed lunches.\n\n The chain is also known for its McAlister's Famous Sweet Tea, which is available by the glass or by the gallon.",
+    "VIP's\nVIP's, alternatively written Vip's, is a defunct restaurant chain in the Western United States that operated from 1968 until the late 1980s, based in Salem, Oregon.\n\n With more than 50 locations, it was once the largest restaurant chain based in Oregon.\n\n It was a Denny's-style restaurant, a type that was commonly known at that time as a \"coffee shop\" but is now more commonly known as a casual dining restaurant.\n\n Most restaurants were located near freeways and were open 24 hours.\n\n At its peak, the chain had locations in five states: Oregon, Washington, Idaho, Nevada and northern California.",
+    "Benjamin A. Rogge\nRogge served for many years as a Liberty Fund trustee.\n\n Thomas Sowell gives Rogge credit for encouraging him to write a book on economics and race.\n\n Rogge also was a frequent presenter at the seminars of the Foundation for Economic Education (FEE).\n\n FEE's founder, Leonard Read, thought of Rogge as Read's eventual successor, an outcome prevented by Read outliving Rogge.\n\n An extended (but somewhat grainy) video clip of a Rogge FEE lecture on \"Competition and Monopoly\" on YouTube illustrates the dry wit that made him a popular speaker.\n\n Rogge attended 13 meetings of the influential international Mont Pelerin Society.\n\n Rogge helped produce, and narrated, a documentary on Adam Smith that was funded by Liberty Fund.\n\n Rogge wrote the introduction to a collection of quotations from Adam Smith.\n\n A collection of Rogge's speeches, often on topics in economics or education, was published under the title \"Can Capitalism Survive?\"\n\n Wabash College, where he taught for many years, established a speaker series in his honor.",
+    "Benjamin A. Rogge\nBenjamin A. Rogge (June 18, 1920 – November 17, 1980) was an American economist, college administrator, and libertarian writer, speaker and foundation advisor.\n\n Rogge received an A.B. degree from Hastings College and an M.A. from the University of Nebraska Lincoln.\n\n Rogge received his PhD in economics from Northwestern.\n\n At Wabash College, Rogge taught in the summer Institute for Professional Development, in addition to his usual teaching in economics.\n\n Rogge co-authored an economics principles textbook with John Van Sickle.\n\n One strength of the text is the account that it gives of Joseph Schumpeter's process of creative destruction.\n\n Rogge helped organize a series of lectures by Milton Friedman at Wabash that were eventually developed into Friedman's \"Capitalism and Freedom\" book.\n\n Much later, Rogge participated in a brainstorming session for Friedman's Free to Choose television series.\n\n Liberty Fund was founded with money from Pierre Goodrich, who sought advice from Rogge during the Fund's early years.\n\n Rogge served for many years as a Liberty Fund trustee."
+   ]
+  },
+  {
+   "id": "5cc329cf697d47fc",
+   "gold": [
+    {
+     "sentence": "Edmund Robert Harris (c. 1804 – 27 May 1877) was an English lawyer from Preston, Lancashire, UK who was the principal benefactor of the Harris Museum, Harris Institute or Art School, Harris Technical School and the Harris Orphanage.",
+     "facts": {
+      "0.0": "Edmund Robert Harris lived c. 1804 to 27 May 1877.",
+      "0.1": "Edmund Robert Harris was an English lawyer.",
+      "0.2": "Edmund Robert Harris was from Preston, Lancashire, UK.",
+      "0.3": "Edmund Robert Harris was the principal benefactor of the Harris Museum.",
+      "0.4": "Edmund Robert Harris was the principal benefactor of the Harris Institute or Art School.",
+      "0.5": "Edmund Robert Harris was the principal benefactor of the Harris Technical School.",
+      "0.6": "Edmund Robert Harris was the principal benefactor of the Harris Orphanage."
+     }
+    },
+    {
+     "sentence": "The Harris Museum, Art Gallery & Preston Free Public Library is a Grade I listed museum building in Preston.",
+     "facts": {
+      "1.0": "The Harris Museum, Art Gallery & Preston Free Public Library is a museum building in Preston.",
+      "1.1": "The Harris Museum, Art Gallery & Preston Free Public Library is a Grade I listed building."
+     }
+    }
+   ],
+   "items": [
+    "Rice Northwest Museum of Rocks and Minerals\nThe Rice Northwest Museum of Rocks and Minerals is a non-profit museum in Hillsboro, Oregon, United States.\n\n Located just north of the Sunset Highway on the northern edge of Hillsboro, the earth science museum is in the Portland metropolitan area.\n\n Opened in 1997, the museum’s collections date to the 1930s with the museum housed in a home built to display the rock and mineral collections of the museum founders.\n\n The ranch style home is listed on the National Register of Historic Places, the first of its kind listed in Oregon.\n\n In 2015 the museum became a Smithsonian Affiliate museum.",
+    "Harris Museum\nThe Harris Museum, Art Gallery & Preston Free Public Library is a Grade I listed museum building in Preston.",
+    "David Hildebrand Wilson\nDavid Hildebrand Wilson is the co-founder, along with his wife, Diana Wilson, of the enigmatic Museum of Jurassic Technology in Los Angeles, California.\n\n After high school, Wilson enrolled at Kalamazoo College where he majored in urban entomology with a minor in art.\n\n He received an MFA in Experimental Animation from the California Institute of the Arts in 1976.\n\n He was awarded the MacArthur Fellowship and the Creative Capital Moving Image Award in 2001.\n\n He and his museum are the subject of the book, \"Mr. Wilson's Cabinet of Wonder\", published in 1995.",
+    "Edmund Robert Harris\nEdmund Robert Harris (c. 1804 – 27 May 1877) was an English lawyer from Preston, Lancashire, UK who was the principal benefactor of the Harris Museum, Harris Institute or Art School, Harris Technical School and the Harris Orphanage.",
+    "Edmund de Unger\nEdmund Robert Anthony de Unger (Hungarian: \"Odon Antal Robert de Unger\" , b 6 August 1918, Budapest - d 25 January 2011, Ham, Surrey) was a Hungarian-born property developer and art collector.\n\n In London he built up the Keir Collection, one of the greatest post-war collections of Islamic art, bequeathed in 2008 to the Pergamon Museum of Islamic Art in Berlin.\n\n The arrangement for the museum to curate the collection came to an end in July 2012.\n\n The collection is now hosted by the Dallas Museum of Art as of May 2014 for a 15-year renewable loan.",
+    "Hanbys Corner, Delaware\nThe last Hanby to occupy the property, Albert T. Hanby (1881-1947), another son of Samuel, attended West Chester State College before getting his law degree from Penn Law School.\n\n Albert became a Philadelphia lawyer and left his farm at Hanby's Corner to be used for the good of \"all the children in Delaware\".\n\n He and his wife created a foundation in 1945 to protect the property from further development.\n\n Today the YMCA operates their Hanby Camp there, and the trust provide scholarships for kids who might not otherwise be able to attend.\n\n In 2007 that support was over $70,000.",
+    "Museum of Jurassic Technology\nThe Museum of Jurassic Technology is a museum located at 9341 Venice Boulevard in the Palms district of Los Angeles, California.\n\n It was founded by David Hildebrand Wilson and Diana Drake Wilson (husband and wife) in 1988.",
+    "J. Robert Donnelly Husky Heritage Sports Museum\nThe J. Robert Donnelly Husky Heritage Sports Museum is a public museum located on the University of Connecticut's main campus at Storrs, Connecticut.\n\n The museum documents and celebrates UConn's intercollegiate athletics.\n\n Opening its doors on January 19, 2002, the 2,700-square-foot museum was named in honor of benefactor and 1940 Connecticut basketball and football captain J. Robert (Bob) Donnelly (1971-2005).\n\n Exhibits include national and regional championship trophies, trading cards, photographs, and various sports memorabilia, as well as a six-screen video wall replaying moments of triumph for the UConn Huskies.\n\n A life-size fiberglass sculpture of Jonathan the Husky, UConn's mascot, greets visitors at the museum entrance.\n\n The Connecticut Basketball Rotunda, featuring NCAA championship trophies and life-size cutouts of Ray Allen and Rebecca Lobo, is among the museum's permanent exhibits.",
+    "Imperial War Museum\nImperial War Museums (IWM) is a British national museum organisation with branches at five locations in England, three of which are in London.\n\n Founded as the Imperial War Museum in 1917, the museum was intended to record the civil and military war effort and sacrifice of Britain and its Empire during the First World War.\n\n The museum's remit has since expanded to include all conflicts in which British or Commonwealth forces have been involved since 1914.\n\n As of 2012, the museum aims \"to provide for, and to encourage, the study and understanding of the history of modern war and 'wartime experience'\".",
+    "Imperial War Museum (disambiguation)\nThe Imperial War Museum is a British national museum organisation with branches at five locations in England."
+   ]
+  },
+  {
+   "id": "3860912022338754",
+   "gold": [
+    {
+     "sentence": "Ravi Sethi (born 1947) is an Indian computer scientist retired from Bell Labs and president of Avaya Labs Research.",
+     "facts": {
+      "0.0": "Ravi Sethi was born in 1947.",
+      "0.1": "Ravi Sethi is an Indian computer scientist.",
+      "0.2": "Ravi Sethi retired from Bell Labs.",
+      "0.3": "Ravi Sethi is president of Avaya Labs Research."
+     }
+    },
+    {
+     "sentence": "Nokia Bell Labs (formerly named AT&T Bell Laboratories, Bell Telephone Laboratories and Bell Labs) is an American research and scientific development company, owned by Finnish company Nokia.",
+     "facts": {
+      "1.0": "Nokia Bell Labs was formerly named AT&T Bell Laboratories.",
+      "1.1": "Nokia Bell Labs was formerly named Bell Telephone Laboratories.",
+      "1.2": "Nokia Bell Labs was formerly named Bell Labs.",
+      "1.3": "Nokia Bell Labs is an American research and scientific development company.",
+      "1.4": "Nokia Bell Labs is owned by the Finnish company Nokia."
+     }
+    },
+    {
+     "sentence": " Its headquarters are located in Murray Hill, New Jersey, in addition to other laboratories around the rest of the United States and in other countries.",
+     "facts": {
+      "2.0": "The headquarters of Nokia Bell Labs are located in Murray Hill, New Jersey.",
+      "2.1": "Nokia Bell Labs has other laboratories around the rest of the United States.",
+      "2.2": "Nokia Bell Labs has laboratories in other countries."
+     }
+    }
+   ],
+   "items": [
+    "Genpact\nGenpact is a global business process management and services and IT corporation with key offices in New York City, United States.\n\n It’s listed on the New York Stock Exchange under the symbol G.In 2016, the company reported net revenues of US$2.57 billion with more than 77,000 employees in 20 countries.\n\n Genpact provides consulting services to hundreds of clients, including approximately one-fifth of the Fortune Global 500.",
+    "Umesh Varshney\nUmesh Varshney (born 1957) is an Indian molecular biologist, academician and the head of the \"Prof.Umesh Varshney's Lab\" at the Indian Institute of Science, Bengaluru.\n\n He is a J. C. Bose National Fellow of the Department of Science and Technology and is known for his studies on protein synthesis and DNA repair in \"Escherichia coli\" and Mycobacterium tuberculosis.\n\n An elected fellow of the Indian Academy of Sciences, Indian National Science Academy and the National Academy of Sciences (India), he is also a recipient of the National Bioscience Award for Career Development of the Government of India.\n\n The Council of Scientific and Industrial Research, the apex agency of the Government of India for scientific research, awarded him the Shanti Swarup Bhatnagar Prize for Science and Technology, one of the highest Indian science awards, in 2001, and then in 2014 with the G. N. Ramachandran Gold Medal for Excellence in Biological Sciences & Technology for his contributions to biological sciences.",
+    "Ravi Sethi\nRavi Sethi (born 1947) is an Indian computer scientist retired from Bell Labs and president of Avaya Labs Research.\n\n He also serves as a member of the National Science Foundation's Computer and Information Science and Engineering (CISE) Advisory Committee.\n\n He is best known as one of three authors of the classic computer science textbook \"\", also known as the \"Dragon Book\".",
+    "Richard Yoo\nRichard Yoo is an American entrepreneur, the co-founder and former CEO of the web hosting company Rackspace, and the founder and former CEO of web hosting company ServerBeach.",
+    "Pharma Medica\nPharma Medica Research Inc. is an American research and development company that works with pharmaceutical companies and performs clinical trials in the pharmaceutical and biotechnology industry.\n\n The company is based in Toronto, Canada with headquarters in Mississauga, Ontario.\n\n Pharma Medica has locations in Scarborough, Ontario and St. Charles, Missouri.",
+    "Bell Labs\nNokia Bell Labs (formerly named AT&T Bell Laboratories, Bell Telephone Laboratories and Bell Labs) is an American research and scientific development company, owned by Finnish company Nokia.\n\n Its headquarters are located in Murray Hill, New Jersey, in addition to other laboratories around the rest of the United States and in other countries.",
+    "Sethi–Ullman algorithm\nIn computer science, the Sethi–Ullman algorithm is an algorithm named after Ravi Sethi and Jeffrey D. Ullman, its inventors, for translating abstract syntax trees into machine code that uses as few registers as possible.",
+    "Von Braun Center for Science &amp; Innovation\nThe Von Braun Center for Science & Innovation (VCSI ) is a non-profit research and development organization based in Huntsville, Alabama and is named for pioneering aerospace engineer Wernher von Braun.\n\n VCSI is affiliated with NASA, Department of Defense and other federal government agencies.",
+    "Center for Climate Systems Research (CCSR)\nThe Center for Climate Systems Research is a key Earth Institute center with over 25 scientists and staff researching issues involving the interplay between Earth's climate and society.\n\n The center's motto is \"Columbia's Gateway to NASA and Beyond\", as it has a special relationship with the NASA Goddard Institute for Space Studies (GISS).\n\n It is a \"Gateway to NASA\", because the center is co-located with GISS in Columbia University's Armstrong Hall above Tom's Restaurant in New York City.\n\n In this historic location, Columbia and NASA scientists work together closely to understand the Earth's climate and how changes can impact society both in the United States and around the world.\n\n Importantly, CCSR scientists also work with many other partners – governmental, private sector, and non-governmental organizations – to answer these challenging scientific and socioeconomic questions (i.e., \"and Beyond\").\n\n The director of CCSR is Dr. Michael J. Puma.",
+    "David H. Bailey\nDavid Harold Bailey (born 1948) is a mathematician and computer scientist.\n\n He received his B.S. in mathematics from Brigham Young University in 1972 and his Ph.D. in mathematics from Stanford University in 1976.\n\n He worked for 14 years as a computer scientist at NASA Ames Research Center, but since 1998 has been at the Lawrence Berkeley National Laboratory.\n\n He is now officially retired, but continues as an active researcher.\n\n He is also a Research Associate at the University of California, Davis, Department of Computer Science."
+   ]
+  },
+  {
+   "id": "db4373cf78f7d41e",
+   "gold": [
+    {
+     "sentence": "Teide National Park (Spanish: \"Parque nacional del Teide\" , ] ) is a national park located in Tenerife (Canary Islands, Spain).",
+     "facts": {
+      "0.0": "The Spanish name of Teide National Park is 'Parque nacional del Teide'.",
+      "0.1": "Teide National Park is a national park.",
+      "0.2": "Teide National Park is located in Tenerife.",
+      "0.3": "Tenerife is in the Canary Islands, Spain."
+     }
+    },
+    {
+     "sentence": "Garajonay National Park (Spanish: \"Parque nacional de Garajonay\" , ] ) is located in the center and north of the island of La Gomera, one of the Canary Islands (Spain).",
+     "facts": {
+      "1.0": "The Spanish name of Garajonay National Park is 'Parque nacional de Garajonay'.",
+      "1.1": "Garajonay National Park is located in the center of the island of La Gomera.",
+      "1.2": "Garajonay National Park is located in the north of the island of La Gomera.",
+      "1.3": "La Gomera is one of the Canary Islands in Spain."
+     }
+    }
+   ],
+   "items": [
+    "Komodo National Park\nKomodo National Park is a national park in Indonesia located within the Lesser Sunda Islands in the border region between the provinces of East Nusa Tenggara and West Nusa Tenggara.\n\n The park includes the three larger islands Komodo, Padar and Rinca, and 26 smaller ones, with a total area of 1,733 km (603 km of it land).\n\n The national park was founded in 1980 to protect the Komodo dragon, the world's largest lizard.\n\n Later it was dedicated to protecting other species, including marine species.\n\n In 1991 the national park was declared a UNESCO World Heritage Site.",
+    "Tenerife\nTenerife ( ; ] ) is the largest and most populated island of the seven Canary Islands.\n\n It is also the most populated island of Spain, with a land area of 2034.38 km2 and 898,680 inhabitants, 43 percent of the total population of the Canary Islands.\n\n Tenerife is the largest and most populous island of Macaronesia.",
+    "Guadarrama National Park\nSierra de Guadarrama National Park (in Spanish: \"Parque Nacional de la Sierra de Guadarrama\") is a national park in Spain, covering nearly 34,000 hectares, the fifth largest in Spain's national parks system.\n\n The Guadarrama mountain range (\"Sistema Central\") contains some ecologically valuable areas, located in the Community of Madrid and Castile and León (provinces of Segovia and Ávila).\n\n The law that regulates the recently approved national park was published in the BOE in  26, 2013 (2013--) .",
+    "Garajonay National Park\nGarajonay National Park (Spanish: \"Parque nacional de Garajonay\" , ] ) is located in the center and north of the island of La Gomera, one of the Canary Islands (Spain).\n\n It was declared a national park in 1981 and a World Heritage Site by UNESCO in 1986.\n\n It occupies 40 km (15 sq mi) and it extends into each of the six municipalities on the island.",
+    "Badiar National Park\nBadiar National Park (French: \"Parc National du Badiar\" ) is a national park in Guinea, on the border with Senegal and contiguous with Senegal's much larger Niokolo-Koba National Park.\n\n It was established on 30 May 1985 (by ordonnance N°124/PRG/85), partly in response to Senegal's concern about poaching in Niokolo-Koba National Park.\n\n Badiar is an International Union for Conservation of Nature Category II park.",
+    "Roque Cinchado\nThe Roque Cinchado is a rock formation, regarded as emblematic of the island of Tenerife (Canary Islands, Spain).\n\n It lies within the Teide National Park (a World Heritage Site) in the municipality of La Orotava, near the volcano of the same name, in the heart of the island.\n\n The Roque Cinchado is one of the largest in the world by altitude, for the entire park totals more than 2000 metres.",
+    "North Cascades National Park\nNorth Cascades National Park is a U.S. National Park located in the state of Washington.\n\n The park is the largest of the three National Park Service units that comprise the North Cascades National Park Service Complex.\n\n Several national wilderness areas and British Columbia parkland adjoin the National Park.\n\n The park features rugged mountain peaks and protects portions of the North Cascades range.",
+    "Hermigua\nHermigua is a town and a municipality in the northeastern part of La Gomera in the province of Santa Cruz de Tenerife of the Canary Islands, Spain.\n\n It is located 12 km northwest of the island's capital, San Sebastián de la Gomera.\n\n The Garajonay National Park covers the southern part of the municipality.",
+    "Teide National Park\nTeide National Park (Spanish: \"Parque nacional del Teide\" , ] ) is a national park located in Tenerife (Canary Islands, Spain).",
+    "Landes de Gascogne Regional Natural Park\nLandes de Gascogne Regional Natural Park (French: \"Parc naturel régional des Landes de Gascogne\") is a protected area of pine forest, wetland and oceanic coastline located in the Aquitaine region of southwestern France."
+   ]
+  },
+  {
+   "id": "fd7af6a3f33896e5",
+   "gold": [
+    {
+     "sentence": " The group included: Alexander Bogdanov, Maxim Gorky, Anatoly Lunacharsky, Mikhail Pokrovsky, Grigory Aleksinsky, Stanislav Volski, and Martyn Liadov.",
+     "facts": {
+      "0.0": "The group included Alexander Bogdanov.",
+      "0.1": "The group included Maxim Gorky.",
+      "0.2": "The group included Anatoly Lunacharsky.",
+      "0.3": "The group included Mikhail Pokrovsky.",
+      "0.4": "The group included Grigory Aleksinsky.",
+      "0.5": "The group included Stanislav Volski.",
+      "0.6": "The group included Martyn Liadov."
+     }
+    },
+    {
+     "sentence": "Anatoly Vasilyevich Lunacharsky (Russian: Анато́лий Васи́льевич Лунача́рский , , 23 November [O.S. 11 November] 1875 – 26 December 1933) was a Russian Marxist revolutionary and the first Soviet People's Commissar of Education responsible for culture and education.",
+     "facts": {
+      "1.0": "Anatoly Vasilyevich Lunacharsky's Russian name is Анато́лий Васи́льевич Лунача́рский.",
+      "1.1": "Anatoly Vasilyevich Lunacharsky was born on 23 November 1875 (Old Style 11 November 1875).",
+      "1.2": "Anatoly Vasilyevich Lunacharsky died on 26 December 1933.",
+      "1.3": "Anatoly Vasilyevich Lunacharsky was a Russian Marxist revolutionary.",
+      "1.4": "Anatoly Vasilyevich Lunacharsky was the first Soviet People's Commissar of Education.",
+      "1.5": "Anatoly Vasilyevich Lunacharsky was responsible for culture and education as People's Commissar of Education."
+     }
+    }
+   ],
+   "items": [
+    "Anatoly Lunacharsky\nAnatoly Vasilyevich Lunacharsky (Russian: Анато́лий Васи́льевич Лунача́рский , , 23 November [O.S. 11 November] 1875 – 26 December 1933) was a Russian Marxist revolutionary and the first Soviet People's Commissar of Education responsible for culture and education.\n\n He was active as an art critic and journalist throughout his career.",
+    "Vladimir Danilevich\nVladimir Petrovich Danilevich (Russian: Владимир Петрович Данилевич ; 4 September 1924 — 9 October 2001) was well-known Soviet and Russian Animator: who successfully worked as the film director, the screenwriter, the art director and the animator.",
+    "Graph query row:\nperson: Anatoly Lunacharsky\nrelationship: MEMBER_OF\nconnected_to: Vpered\nbirth_date: 23 November [O.S. 11 November] 1875\ndeath_date: 26 December 1933\nbirthplace: None",
+    "Matvey Skobelev\nMatvey Ivanovich Skobelev (Russian: Матве́й Ива́нович Ско́белев ; November 9, 1885, Baku – July 29, 1938, Moscow) was a Russian Marxist revolutionary and politician.",
+    "Martemyan Ryutin\nMartemyan Nikitich Ryutin (Russian: Мартемья́н Ники́тич Рю́тин ) (1890–1937) was a Russian Marxist revolutionary, and a political functionary of the Russian Communist Party.\n\n Ryutin is best remembered as the leader of a pro-peasant political faction organized against Soviet leader Joseph Stalin in the early 1930s and as the primary author of a 200-page oppositional platform.\n\n Ryutin was arrested by the Soviet secret police, along with his co-thinkers, in what has come to be known as the Ryutin Affair.\n\n He was executed in January 1937 as part of the Yezhovshchina (Great Purge) conducted against political oppositionists and suspected economic \"wreckers\" and spies.",
+    "Nikolay Speshnev\nNikolay Alexandrovich Speshnev (Russian: Николай Александрович Спе́шнев; 1821, Kursk - 1882, St. Petersburg) was a 19th-century Russian aristocrat and political activist, best known for his involvement with the pro-socialist literary discussion group the Petrashevsky Circle.\n\n He formed a secret revolutionary society from among the members of the circle, which included the young Fyodor Dostoevsky.\n\n After the government of Tsar Nicholas I arrested the members of the Petrashevsky Circle in 1849, Speshnev was interrogated, threatened with torture, and eventually sentenced, along with Dostoevsky, Petrashevsky and others, to execution by firing squad.\n\n The sentence was commuted to hard labour in Siberia, but the prisoners were only informed of this after enduring a mock execution.",
+    "Aleksandra Sokolovskaya\nAleksandra Lvovna Sokolovskaya (Russian: Александра Львовна Соколовская ; 1872 – c. 1938) was a Russian Marxist revolutionary and Leon Trotsky's first wife.\n\n She perished in the Great Purges no earlier than 1938.",
+    "Vladimir Bazarov\nVladimir Alexandrovich Bazarov ( Влади́мир Алекса́ндрович База́ров; 1874–1939) was a Russian Marxist revolutionary, journalist, philosopher, and economist, born Vladimir Alexandrovich Rudnev.\n\n Bazarov is best remembered as a pioneer in the development of economic planning in the Soviet Union.",
+    "Vpered\nVpered (\"Forward\" or \"Hasten\") (1909 - 1912) was an organization emanating from within the Russian Social Democratic Labour Party (Russian Social Democracy or RSDLP).\n\n The faction was gathered by Alexander Bogdanov (1873 - 1928) in December 1909.\n\n The group included: Alexander Bogdanov, Maxim Gorky, Anatoly Lunacharsky, Mikhail Pokrovsky, Grigory Aleksinsky, Stanislav Volski, and Martyn Liadov.\n\n Although Vpered emerged from the Bolshevik wing of Russian Social Democracy, the group was critical of Lenin.",
+    "Petrashevsky Circle\nThe Petrashevsky Circle was a Russian literary discussion group of progressive-minded commoner-intellectuals in St. Petersburg in the 1840s.\n\n It was organized by Mikhail Petrashevsky, a follower of the French utopian socialist Charles Fourier.\n\n Among the members were writers, teachers, students, minor government officials, and army officers.\n\n While differing in political views, most of them were opponents of the tsarist autocracy and Russian serfdom.\n\n Like that of the Lyubomudry group founded earlier in the century, the purpose of the circle was to discuss Western philosophy and literature that was officially banned by the Imperial government of Tsar Nicholas I."
+   ]
+  },
+  {
+   "id": "d5cf87d13bc58b2b",
+   "gold": [
+    {
+     "sentence": "John Alexander (born 5 October 1955) is an English former footballer who holds the post of club secretary at Manchester United.",
+     "facts": {
+      "0.0": "John Alexander was born on 5 October 1955.",
+      "0.1": "John Alexander is English.",
+      "0.2": "John Alexander is a former footballer.",
+      "0.3": "John Alexander holds the post of club secretary at Manchester United."
+     }
+    },
+    {
+     "sentence": " Born in Liverpool, Alexander began his football career with a club called Ulysses, before being picked up by Millwall, for whom he made his league debut in 1976.",
+     "facts": {
+      "1.0": "John Alexander was born in Liverpool.",
+      "1.1": "John Alexander began his football career with a club called Ulysses.",
+      "1.2": "John Alexander was later picked up by Millwall.",
+      "1.3": "John Alexander made his league debut for Millwall in 1976."
+     }
+    },
+    {
+     "sentence": " He is the uncle of Liverpool player Trent Alexander-Arnold.",
+     "facts": {
+      "2.0": "John Alexander is the uncle of Liverpool player Trent Alexander-Arnold."
+     }
+    },
+    {
+     "sentence": "Trent John Alexander-Arnold (born 7 October 1998) is an English professional footballer who plays as a right-back for Premier League club Liverpool.",
+     "facts": {
+      "3.0": "Trent John Alexander-Arnold was born on 7 October 1998.",
+      "3.1": "Trent John Alexander-Arnold is English.",
+      "3.2": "Trent John Alexander-Arnold is a professional footballer.",
+      "3.3": "Trent John Alexander-Arnold plays as a right-back.",
+      "3.4": "Trent John Alexander-Arnold plays for Premier League club Liverpool."
+     }
+    }
+   ],
+   "items": [
+    "Billy Morgan (footballer, born 1891)\nWilliam Albert L. Morgan (3 November 1891 – after 1927) was an English professional footballer born in Old Hill, Cradley Heath, Staffordshire, who played either at outside left or inside left.\n\n He played for Birmingham, Coventry City and Crystal Palace in the Football League, and was capped once for a Football League representative side.",
+    "William McCourty\nWilliam McCourty (1884 – 10 December 1917) was an English professional footballer born in Morpeth, Northumberland, who played in the Football League for Birmingham.\n\n McCourty, a former coal miner who played at left half, joined Birmingham in May 1909.\n\n He made his debut in the Second Division on 13 September 1909, deputising for the injured Tommy Daykin in a home game against Glossop which finished as a 2–2 draw, and was never picked again, returning to non-league football the following year.",
+    "Nick Powell\nNicholas Edward \"Nick\" Powell (born 23 March 1994) is an English professional footballer who plays for Wigan Athletic as a midfielder.\n\n He began his career at Crewe Alexandra, initially as a forward, making his debut at the age of 16.\n\n After impressing for Crewe Alexandra during the 2011–12 season, including scoring in their 2–0 victory in the League Two play-off Final, he moved to Manchester United in July 2012.\n\n Unable to break into the Manchester United first team, however, he went on loan to Wigan Athletic, Leicester City and Hull City before being released in June 2016.\n\n He joined Wigan Athletic in July 2016.\n\n He has represented England at under-16, under-17, under-18, under-19 and under-21 levels.",
+    "John Logan (footballer, born 1912)\nJohn William Logan (16 August 1912 – October 1980) was an English professional footballer born in Horden, near Peterlee, County Durham who played in the Football League for Darlington, Barnsley and Sheffield Wednesday.\n\n He played as a wing half.",
+    "Jack Charlton\nJohn Charlton, OBE, DL (born 8 May 1935) is an English former footballer and manager who played as a defender.\n\n He was part of the England team that won the 1966 World Cup.\n\n He is the elder brother of former Manchester United forward Bobby Charlton, who was also a teammate in England's World Cup final victory.\n\n He spent his entire club career with Leeds United from 1950 to 1973, helping the club to the Second Division title (1963–64), First Division title (1968–69), FA Cup (1972), League Cup (1968), Charity Shield (1969), Inter-Cities Fairs Cup (1968 and 1971), as well as one other promotion from the Second Division (1955–56) and five second-place finishes in the First Division, two FA Cup final defeats and one Inter-Cities Fairs Cup final defeat.\n\n His 629 league and 762 total competitive appearances are club records.\n\n In 2006, Leeds United supporters voted Charlton into the club's greatest ever XI.",
+    "Trent Alexander-Arnold\nTrent John Alexander-Arnold (born 7 October 1998) is an English professional footballer who plays as a right-back for Premier League club Liverpool.\n\n He is an academy graduate of Liverpool and made his senior debut for the club in 2016, aged 18.\n\n The following year, he won the club's Young Player of the Season award.\n\n He has also represented England at all youth levels from under-16 through to under-19.\n\n Due to the length of his name, his surname is shortened to Alexander for Premier League fixtures.",
+    "Charlie Leatherbarrow\nCharles Leatherbarrow (born Letherbarrow) (16 January 1870 – 26 December 1940) was an English professional footballer born in Banbury who played in the Football League for Rotherham Town, Walsall Town Swifts and Small Heath.\n\n He played at inside right or centre forward.",
+    "Clare Taylor\nClare Elizabeth Taylor MBE (born 22 May 1965) is an English sportswoman, the first woman to have played on a World Cup team in both cricket and football.\n\n She represented England at both cricket, as a member of the winning World Cup cricket team in 1993, and football (World Cup 1995).\n\n She was awarded the MBE in the Queen's Birthday Honours in 2000 for her services to women’s sport.\n\n Taylor attended Moor End High School and still has her name on the athletics records board.",
+    "John Alexander (footballer, born 1955)\nJohn Alexander (born 5 October 1955) is an English former footballer who holds the post of club secretary at Manchester United.\n\n Born in Liverpool, Alexander began his football career with a club called Ulysses, before being picked up by Millwall, for whom he made his league debut in 1976.\n\n After scoring twice in 15 appearances over the course of two years with Millwall, he moved to Reading; he enjoyed greater success with Reading, scoring nine goals in 25 games.\n\n In 1981, he joined Northampton Town, but spent just one season with them before retiring from football at the age of 26 in 1982.\n\n Upon retiring from football, Alexander got a job with the BBC, but he later returned to football as club secretary at Watford.\n\n In 2000, he took up the same post at Tottenham Hotspur, spending 10 years there before applying for the same job at Manchester United, where he would replace the retiring Ken Ramsden.\n\n He took over at Manchester United on 1 July 2010.\n\n He is the uncle of Liverpool player Trent Alexander-Arnold.",
+    "Tommy Bell (footballer, born 1906)\nThomas Bell (9 November 1906 – 1983) was an English professional footballer born in Seaham Harbour.\n\n He could play at inside right, centre forward and right half and was a regular goalscorer throughout his professional career."
+   ]
+  },
+  {
+   "id": "40680578890c1d17",
+   "gold": [
+    {
+     "sentence": " Her personal best throw is 58.87 metres, achieved at the 2002 Asian Games in Busan.",
+     "facts": {
+      "0.0": "Her personal best throw is 58.87 metres.",
+      "0.1": "She achieved her personal best throw at the 2002 Asian Games.",
+      "0.2": "The 2002 Asian Games were held in Busan."
+     }
+    },
+    {
+     "sentence": " A total of 460 athletes (comprising 281 men and 179 women) from 39 nations took part in the competition.",
+     "facts": {
+      "1.0": "A total of 460 athletes took part in the competition.",
+      "1.1": "The athletes comprised 281 men and 179 women.",
+      "1.2": "The athletes came from 39 nations."
+     }
+    }
+   ],
+   "items": [
+    "Caster Semenya\nMokgadi Caster Semenya Bronze OIB (born 7 January 1991) is a South African middle-distance runner and 2016 Olympic gold medallist.\n\n Semenya won gold in the women's 800 metres at the 2009 World Championships with a time of 1:55.45 and at the 2017 World Championships in her new personal best, 1:55.16.\n\n Semenya also won silver medals at the 2011 World Championships and the 2012 Summer Olympics, both in the 800 metres.\n\n She was the winner of the gold medal in the 800 metre event at the 2016 Summer Olympics.",
+    "Zhao Qinggang\nZhao Qinggang (; born 24 July 1985) is a Chinese track and field athlete who competes in the javelin throw.\n\n His 89.15 m personal best throw, set in 2014, is the Chinese record.\n\n It was also the Asian record until surpassed in 2017.\n\n He represented his country at the 2013 World Championships in Athletics.\n\n He is the 2014 Asian Games champion.\n\n At the East Asian Games he was the runner-up in 2009 and winner in 2013.\n\n He is a two-time Chinese champion (2012 and 2013) and was the winner of the 2013 National Games of China.",
+    "Liu Ailing\nLiu Ailing (; born June 2, 1967) is a Chinese former footballer who played for the China national team at the 1991, 1995 and 1999 editions of the FIFA Women's World Cup.\n\n She won a silver medal at the 1996 Atlanta Olympics and participated at the 2000 Sydney Olympics.\n\n A playmaking midfielder, she played professional club football in Japan and the United States.",
+    "Masayoshi Yamamoto\nMasayoshi Yamamoto (Japanese: 山本 雅賢) is a Japanese male artistic gymnast, representing his nation at international competitions.\n\n He won the gold medal in the Pommel horse event at the 2014 Asian Games in Incheon, South Korea.",
+    "Elaine Schreiber\nElaine Annette Schreiber (4 June 1939 – 11 June 2017) was an Australian Paralympic table tennis player and athlete.\n\n She contracted poliomyelitis as a child.\n\n At the 1964 Tokyo Games, she won a gold medal in the women's club throw A event, a silver medal in the women's javelin A event, and a bronze medal in the women's singles B event.\n\n At the 1968 Tel Aviv Games, she won a silver medal in the women's doubles C event with Marion O'Brien; she also competed but did not win any medals in athletic events at the 1968 games.\n\n She participated without winning medals in athletics events at both the 1972 Heidelberg and 1976 Toronto Games, and also participated in table tennis at the latter games.",
+    "Lee Young-sun\nLee Young-Sun (born 21 February 1974) is a retired female javelin thrower from South Korea.\n\n Her personal best throw is 58.87 metres, achieved at the 2002 Asian Games in Busan.",
+    "John Lindsay (Paralympian)\nThat year, he had a Victorian Institute of Sport scholarship.\n\n He was also working as a fitness instructor in 1992, held world records in the 100 m and 200 m events, and was ranked 6th in the world in the 400 m.\n\n He won a gold medal in the men's athletics 100 m T52 event at the 1996 Summer Paralympics with a time of 15.22, a silver medal in the 200 m T52 event with a time of 27.38, and a bronze medal in the 400 m T52 event with a time of 52.93.\n\n At the 2000 Sydney Games, he won a gold medal in the Men's 100 m T53 event, a silver medal as part of the Men's 4x100 m Relay T54 team, and a bronze medal in the Men's 200 m T53 event; he was also part of the Men's 4x400 m Relay T54 team, which was the only one to qualify in its heat, but it did not make it to the finals.",
+    "Luan Zhili\nLuan Zhili (born 6 January 1973) is a female discus thrower from PR China.\n\n She finished ninth at the 1997 World Championships and won the 1998 Asian Games, the latter in a personal best throw of 63.43 metres.\n\n The Chinese, and Asian, record is currently held by Xiao Yanling with 71.68 metres.",
+    "Athletics at the 2002 Asian Games\nAthletics was contested from October 7 to October 14 at the 2002 Asian Games in Busan Asiad Main Stadium, Busan, South Korea.\n\n A total of 460 athletes (comprising 281 men and 179 women) from 39 nations took part in the competition.\n\n Afghanistan, Bhutan, Brunei, Laos and Maldives were the only nations without a representative in the events.",
+    "John Lindsay (Paralympian)\nAt the 2004 Athens Games, he came seventh in the first round of the Men's 100 m T53 event and sixth in the third round of the Men's 200 m T53 event.\n\n He was an Australian Institute of Sport scholarship holder in 1995 and 2000."
+   ]
+  },
+  {
+   "id": "363831e96314cf42",
+   "gold": [
+    {
+     "sentence": " It contains about 200 species, including several notable radiations, such as the matipo of New Zealand and the kōlea of Hawaiʻ i (the New Zealand \"black matipo\", \"Pittosporum tenuifolium\", is not related to \"Myrsine\").",
+     "facts": {
+      "0.0": "Myrsine contains about 200 species.",
+      "0.1": "Myrsine includes several notable radiations.",
+      "0.2": "The matipo of New Zealand is one of the notable radiations within Myrsine.",
+      "0.3": "The kōlea of Hawaiʻi is one of the notable radiations within Myrsine.",
+      "0.4": "The New Zealand 'black matipo', Pittosporum tenuifolium, is not related to Myrsine."
+     }
+    },
+    {
+     "sentence": "Storax or snowbell is the common names of Styrax, a genus of about 130 species of large shrubs or small trees in the family Styracaceae, mostly native to warm temperate to tropical regions of the Northern Hemisphere, with the majority in eastern and southeastern Asia, but also crossing the equator in South America.",
+     "facts": {
+      "1.0": "Storax or snowbell are the common names of Styrax.",
+      "1.1": "Styrax is a genus of about 130 species.",
+      "1.2": "Styrax species are large shrubs or small trees.",
+      "1.3": "Styrax belongs to the family Styracaceae.",
+      "1.4": "Styrax is mostly native to warm temperate to tropical regions of the Northern Hemisphere.",
+      "1.5": "The majority of Styrax species are in eastern and southeastern Asia.",
+      "1.6": "Styrax also crosses the equator in South America."
+     }
+    }
+   ],
+   "items": [
+    "Pterostyrax hispidus\nPterostyrax hispidus, the epaulette tree or fragrant epaulette tree, is a species of flowering plant in the family Styracaceae, native to China and Japan.\n\n Growing to 15 m tall by 12 m broad, it is a substantial, spreading, deciduous shrub with oval leaves up to 20 cm long, and clusters of pure white, fragrant, pendent flowers in summer.",
+    "Myrsine\nMyrsine is a genus of flowering plants in the family Primulaceae.\n\n It was formerly placed in the family Myrsinaceae before this was merged into the Primulaceae.\n\n It is found nearly worldwide, primarily in tropical and subtropical areas.\n\n It contains about 200 species, including several notable radiations, such as the matipo of New Zealand and the kōlea of Hawaiʻ i (the New Zealand \"black matipo\", \"Pittosporum tenuifolium\", is not related to \"Myrsine\").\n\n In the United States, members of this genus are known as colicwood.\n\n Some species, especially \"M. africana\", are grown as ornamental shrubs.",
+    "Styrax fraserensis\nStyrax fraserensis is a species of flowering plant in the genus \"Styrax\" and family Styracaceae.\n\n It is a tree endemic to Peninsular Malaysia.\n\n It is threatened by habitat loss.",
+    "Rapanea\nRapanea is a genus of plant in family Primulaceae.\n\n It has often been placed in synonymy with \"Myrsine\", and many species have been moved to \"Myrsine\".",
+    "Styrax vilcabambae\nStyrax vilcabambae (syn.\n\n \"Pamphilia vilcabambae\" D.R.Simpson) is a species of flowering plant in the genus \"Styrax\" and the family Styracaceae.\n\n It is endemic to Peru.",
+    "Styrax\nStorax or snowbell is the common names of Styrax, a genus of about 130 species of large shrubs or small trees in the family Styracaceae, mostly native to warm temperate to tropical regions of the Northern Hemisphere, with the majority in eastern and southeastern Asia, but also crossing the equator in South America.\n\n The resin obtained from the tree is called storax or benzoin (not to be confused with the \"Liquidambar\" storax balsam).",
+    "Pterostyrax\nPterostyrax, the epaulette tree, is a small genus of four species of deciduous large shrubs or small trees in the family Styracaceae, native to eastern Asia in China and Japan.\n\n They grow 4 - tall, with alternate, simple ovate leaves 6 - long and 4 - broad.\n\n The flowers are white, produced in dense panicles 8 - long.\n\n The fruit is an oblong dry drupe, with longitudinal ribs or narrow wings (the wings are absent in the related genus \"Styrax\", whence the name \"Pterostyrax\", \"winged styrax\").",
+    "Aizoaceae\nAizoaceae (the fig-marigold family) is a large family of dicotyledonous flowering plants containing 135 genera and about 1900 species.\n\n They are commonly known as stone plants or carpet weeds.\n\n They are often called vygies in South Africa and New Zealand.\n\n Species that resemble stones or pebbles are sometimes called mesembs.\n\n Several species are known as ice plants because of the glistening globular bladder cells covering their stems, fruit and leaves, \"... they sparkle like ice crystals.\"",
+    "Styrax litseoides\nStyrax litseoides is a species of flowering plant in the genus \"Styrax\" and family Styracaceae.\n\n It is endemic to Vietnam.",
+    "Styrax crotonoides\nStyrax crotonoides is a species of plant in the genus \"Styrax\" and family Styracaceae.\n\n It is found in Peninsular Malaysia and Singapore."
+   ]
+  },
+  {
+   "id": "46824e8bedd844fa",
+   "gold": [
+    {
+     "sentence": " In 1972, a grant from the Eleanor and John Y. Brown Jr., Foundation led to the construction of the current facility.",
+     "facts": {
+      "0.0": "The Eleanor and John Y. Brown Jr. Foundation gave a grant in 1972.",
+      "0.1": "The 1972 grant from the Eleanor and John Y. Brown Jr. Foundation led to the construction of the current facility."
+     }
+    },
+    {
+     "sentence": " He served as the 55th governor of Kentucky from 1979 to 1983, although he may be best known for building Kentucky Fried Chicken (KFC) into a multimillion-dollar restaurant chain.",
+     "facts": {
+      "1.0": "The 55th governor of Kentucky served from 1979 to 1983.",
+      "1.1": "The 55th governor of Kentucky may be best known for building Kentucky Fried Chicken (KFC) into a multimillion-dollar restaurant chain."
+     }
+    }
+   ],
+   "items": [
+    "McAlister's Deli\nMcAlister's Deli is an American chain of fast casual restaurants founded in 1989 in Oxford, Mississippi by retired dentist Dr. Don Newcomb.\n\n There are currently over 400 locations in 26 states, ranging from Virginia in the East to Florida in the South to Arizona in West to Michigan in the North.\n\n The menu includes deli sandwiches, \"Texas-size\" spuds (baked potatoes), soups, salads, and desserts, as well as catering items such as sandwich trays and boxed lunches.\n\n The chain is also known for its McAlister's Famous Sweet Tea, which is available by the glass or by the gallon.",
+    "VIP's\nVIP's, alternatively written Vip's, is a defunct restaurant chain in the Western United States that operated from 1968 until the late 1980s, based in Salem, Oregon.\n\n With more than 50 locations, it was once the largest restaurant chain based in Oregon.\n\n It was a Denny's-style restaurant, a type that was commonly known at that time as a \"coffee shop\" but is now more commonly known as a casual dining restaurant.\n\n Most restaurants were located near freeways and were open 24 hours.\n\n At its peak, the chain had locations in five states: Oregon, Washington, Idaho, Nevada and northern California.",
+    "Panera Bread\nPanera Bread Company is an American chain of bakery-café fast casual restaurants in the United States and Canada.\n\n Its headquarters are in Sunset Hills, Missouri, a suburb of St. Louis, and operates as Saint Louis Bread Company in the St. Louis metropolitan area.\n\n Offerings include soups, salads, pasta, sandwiches, specialty drinks, and bakery items.",
+    "Sanders–Brown Center on Aging\nThe Sanders–Brown Center on Aging at the University of Kentucky in Lexington, Kentucky, is responsible for research, education and service programs in aging.\n\n The program was founded in 1963 with the creation of the Council on Aging.\n\n In 1972, a grant from the Eleanor and John Y. Brown Jr., Foundation led to the construction of the current facility.\n\n The center was named for the Browns and his then-business partner, (Col.) Harlan Sanders.\n\n The four-story brick and concrete structure fronts South Limestone at the edge of the medical campus.\n\n The complex features 32 research laboratories that employs more than 150.",
+    "Rubin Schron\nRubin Schron, who goes by Ruby, is a New York City real estate investor, landlord and the founder of Cammeby's International Group.\n\n He has a personal net worth of well over $10 billion, according to data company Real Capital Analytics.\n\n The portfolio of Cammeby's, which Schron founded in 1967, includes office buildings, market-rate and government-subsidized apartment complexes, nursing homes, the 16-building complex in Sunset Park now known as Industry City, a stake in the bottom half of Woolworth Building and industrial properties scattered across Long Island.\n\n In 2013, Schron made an unsolicited and unsuccessful offer to buy the Empire State Building for $2 billion, but he has not had problems closing many other deals throughout his long career.\n\n In 2003, an investment group led by Schron paid $600 million for a portfolio of about 6,000 outer-borough apartments from Donald Trump.",
+    "John Y. Brown Jr.\nJohn Young Brown Jr. (born December 28, 1933) is an American politician, entrepreneur, and businessman from the U.S. state of Kentucky.\n\n He served as the 55th governor of Kentucky from 1979 to 1983, although he may be best known for building Kentucky Fried Chicken (KFC) into a multimillion-dollar restaurant chain.",
+    "Aladdin's Eatery\nAladdin's Eatery is a chain of franchised restaurants in the American Midwest and South-East, specializing in Lebanese cuisine.\n\n Adapted to American tastes, the sites are fast casual restaurants that also offer take out.",
+    "Benjamin A. Rogge\nBenjamin A. Rogge (June 18, 1920 – November 17, 1980) was an American economist, college administrator, and libertarian writer, speaker and foundation advisor.\n\n Rogge received an A.B. degree from Hastings College and an M.A. from the University of Nebraska Lincoln.\n\n Rogge received his PhD in economics from Northwestern.\n\n At Wabash College, Rogge taught in the summer Institute for Professional Development, in addition to his usual teaching in economics.\n\n Rogge co-authored an economics principles textbook with John Van Sickle.\n\n One strength of the text is the account that it gives of Joseph Schumpeter's process of creative destruction.\n\n Rogge helped organize a series of lectures by Milton Friedman at Wabash that were eventually developed into Friedman's \"Capitalism and Freedom\" book.\n\n Much later, Rogge participated in a brainstorming session for Friedman's Free to Choose television series.\n\n Liberty Fund was founded with money from Pierre Goodrich, who sought advice from Rogge during the Fund's early years.\n\n Rogge served for many years as a Liberty Fund trustee.",
+    "Rubin Schron\nOther buildings he owns include the Monterey, a 521-unit rental multifamily building on Manhattan's Upper East Side; over the decades, Schron has also amassed a portfolio of Mitchell-Lama apartment buildings whose values have been skyrocketing to record values, after reverting to market rates when government subsidies expired.\n\n In 2007, he sold nearly 4,000 units of former Mitchell-Lama properties in five complexes in Harlem and on Roosevelt Island for $940 million.\n\n Schron, who practices Orthodox Judaism, has eight children and 50 grandchildren.\n\n He and his family have lived in the same single-family home in Brooklyn for many decades.",
+    "Rochelle Buffenstein\nRochelle (Shelley) Buffenstein is a staff scientist at Calico, an Alphabet, Inc. funded research outfit investigating aging.\n\n Previously, she had been a professor of Physiology at theBarshop Institute for Longevity and Aging Studies at the University of Texas Health Science Center at San Antonio.\n\n Her research focuses on comparative vertebrate physiology, energetics, cancer biology, and aging.\n\n She has worked with marsupials, mole-rats, tenrecs, bats, subterranean mammals, and primates.\n\n Her best known work involves exceptional aging -- specifically, why naked mole-rats live for so much longer than other rodents.\n\n Her lab has investigated theories of aging including oxidative damage theory, the advanced glycation end product theory, and the telomere theory."
+   ]
+  },
+  {
+   "id": "e357c4777e6d7def",
+   "gold": [
+    {
+     "sentence": "Darby O'Gill and the Little People is a 1959 Walt Disney Productions feature film starring Albert Sharpe, Janet Munro, Sean Connery and Jimmy O'Dea, in a tale about a wily Irishman and his battle of wits with leprechauns.",
+     "facts": {
+      "0.0": "Darby O'Gill and the Little People is a feature film.",
+      "0.1": "Darby O'Gill and the Little People was made by Walt Disney Productions.",
+      "0.2": "Darby O'Gill and the Little People was released in 1959.",
+      "0.3": "Darby O'Gill and the Little People stars Albert Sharpe.",
+      "0.4": "Darby O'Gill and the Little People stars Janet Munro.",
+      "0.5": "Darby O'Gill and the Little People stars Sean Connery.",
+      "0.6": "Darby O'Gill and the Little People stars Jimmy O'Dea.",
+      "0.7": "Darby O'Gill and the Little People tells a tale about a wily Irishman.",
+      "0.8": "The Irishman in Darby O'Gill and the Little People has a battle of wits with leprechauns."
+     }
+    },
+    {
+     "sentence": " Produced by Walt Disney Pictures, Aamir Khan Productions and UTV Motion Pictures, it stars Aamir Khan as the father.",
+     "facts": {
+      "1.0": "The film named in this sentence was produced by Walt Disney Pictures.",
+      "1.1": "The film named in this sentence was produced by Aamir Khan Productions.",
+      "1.2": "The film named in this sentence was produced by UTV Motion Pictures.",
+      "1.3": "Aamir Khan stars as the father in the film named in this sentence."
+     }
+    }
+   ],
+   "items": [
+    "Frankie Darro\nFrankie Darro (born Frank Johnson, Jr.\n\n December 22, 1917 – December 25, 1976) was an American actor and later in his career a stuntman.\n\n He began his career as a child actor in silent films, progressed to lead roles and co-starring roles in adventure, western, dramatic, and comedy films, and later became a character actor and voice-over artist.\n\n He is known for his role as Lampwick, the unlucky boy turned into a donkey in Walt Disney's 2nd animated feature, \"Pinocchio\", which was originally released in February 1940.",
+    "Darby O'Gill and the Little People\nDarby O'Gill and the Little People is a 1959 Walt Disney Productions feature film starring Albert Sharpe, Janet Munro, Sean Connery and Jimmy O'Dea, in a tale about a wily Irishman and his battle of wits with leprechauns.\n\n The film was directed by Robert Stevenson and its screenplay written by Lawrence Edward Watkin after the books of Herminie Templeton Kavanagh.",
+    "Walt Disney Studios Motion Pictures\nWalt Disney Studios Motion Pictures (formerly Buena Vista Pictures Distribution and Buena Vista Film Distribution Company) is an American film distributor owned by The Walt Disney Company.\n\n Established in 1953 as Buena Vista Film Distribution Company, the company handles theatrical distribution, marketing and promotion for films produced and released by the Walt Disney Studios, including Walt Disney Pictures, Walt Disney Animation Studios, Pixar Animation Studios, DisneyToon Studios, Marvel Studios, Lucasfilm, Disneynature, and Touchstone Pictures.\n\n The division took on its current name in late 2007, which before that had been Buena Vista Pictures Distribution since 1987.",
+    "Disney Renaissance\nIn the history of The Walt Disney Company, the Disney Renaissance refers to the era from 1989 to 1999 during which Walt Disney Feature Animation (renamed Walt Disney Animation Studios in 2006) experienced a creative resurgence in producing successful animated films based on well-known stories, which restored public and critical interest in The Walt Disney Company as a whole.\n\n During this era, the studio produced and released ten animated films: \"The Little Mermaid\" (1989), \"The Rescuers Down Under\" (1990), \"Beauty and the Beast\" (1991), \"Aladdin\" (1992), \"The Lion King\" (1994), \"Pocahontas\" (1995), \"The Hunchback of Notre Dame\" (1996), \"Hercules\" (1997), \"Mulan\" (1998) and \"Tarzan\" (1999).",
+    "Walt Disney Pictures\nWalt Disney Pictures, Inc. is an American film production company and a subsidiary of Walt Disney Studios, owned by The Walt Disney Company.\n\n The division is based at the Walt Disney Studios in Burbank, California, and is the main producer of live-action feature films within the Walt Disney Studios unit.\n\n It took on its current name in 1983.\n\n Today, in conjunction with the other units of Walt Disney Studios, Walt Disney Pictures is classified as one of Hollywood's \"Big Six\" film studios.\n\n Films produced by Walt Disney Animation Studios and Pixar Animation Studios are also released under this brand.",
+    "List of Walt Disney Pictures films\nThis is a list of films released theatrically under the Walt Disney Pictures banner (known as that since 1983, with \"Never Cry Wolf\" as its first release) and films released before that under the former name of the parent company, Walt Disney Productions (1929–1983).\n\n Most films listed here were distributed in the United States by the company's distribution division, Walt Disney Studios Motion Pictures (formerly known as Buena Vista Distribution Company [1953–1987] and Buena Vista Pictures Distribution [1987–2007]).\n\n The Disney features produced before \"Peter Pan\" (1953) were originally distributed by RKO Radio Pictures, and are now distributed by Walt Disney Studios Motion Pictures.",
+    "Pinocchio (1940 film)\nPinocchio is a 1940 American animated musical fantasy film produced by Walt Disney Productions and based on the Italian children's novel \"The Adventures of Pinocchio\" by Carlo Collodi.\n\n It was the second animated feature film produced by Disney, made after the success of \"Snow White and the Seven Dwarfs\" (1937).",
+    "Dangal (film)\nDangal (English: \"Wrestling competition\" ) is a 2016 Indian Hindi-language biographical sports drama film loosely based on the story of Mahavir Singh Phogat, an amateur wrestler, who trains his daughters Geeta Phogat and Babita Kumari to be world-class wrestlers.\n\n It was directed by Nitesh Tiwari.\n\n Produced by Walt Disney Pictures, Aamir Khan Productions and UTV Motion Pictures, it stars Aamir Khan as the father.\n\n Both daughters go on to win medals at the 2010 Commonwealth Games.\n\n Babita won a silver medal at the Games, in the 51 kg class and gold at the 2014 Glasgow Games in the 55 kg class.\n\n In 2012, Geeta became the first Indian female wrestler to qualify for the Olympics.\n\n Mahavir's efforts inspired dozens of Indian women to take to wrestling.\n\n Fatima Sana Shaikh and Sanya Malhotra play the older selves of the sisters while Sakshi Tanwar plays their mother and Aparshakti Khurana, their cousin.",
+    "Walt Disney's Treasury of Classic Tales\nWalt Disney's Treasury of Classic Tales is an American Sunday comic strip, which ran in newspapers from 13 July 1952 until 15 February 1987.\n\n Each story adapted a different Disney film, such as Darby O'Gill and the Little People, Peter Pan, or Davy Crockett.\n\n It was run in relatively few papers with 58 in 1957 and 55 in 1966 and was principally a vehicle for promoting new and re-released Disney films.",
+    "Mickey's Christmas Carol\nMickey's Christmas Carol is a 1983 American animated featurette produced by Walt Disney Productions and released by Buena Vista Distribution.\n\n It was directed and produced by Burny Mattinson.\n\n The cartoon is an adaptation of Charles Dickens' \"A Christmas Carol\", starring Scrooge McDuck as Ebenezer Scrooge.\n\n Many other Disney characters, primarily from the Mickey Mouse universe, \"Robin Hood\", and \"The Adventures of Ichabod and Mr. Toad\", were cast throughout the film."
+   ]
+  }
+ ]
+}

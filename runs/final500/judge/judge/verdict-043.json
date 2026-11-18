@@ -1,0 +1,62 @@
+[
+  {"id": "3b5c2c18cd54d103", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "United have also conceded 14 goals in the Champions League group stages"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "United have also conceded 14 goals in the Champions League group stages, a new and unwanted record for the club"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "that could get worse when they face Bayern in the final match."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Manchester United are out of Europe altogether"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]}
+  ]},
+  {"id": "9b57e1254f075eb6", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "This not only allows the collection of data from complex equipment"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "also enables operators to track equipment performance"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "If a track isn’t used or taken care of for an extended period of time, it will start to wear out"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "it will start to wear out and eventually become completely unsuitable for any kind of racing"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "completely unsuitable for any kind of racing unless it is taken apart and rebuilt."}]}
+  ]},
+  {"id": "6dc29c025d8fdce5", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Around 2019 or 2020, Wang checked the database"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Wang checked the database and discovered that Alameda was negative by about $200 million"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Alameda was negative by about $200 million, which was more than the $150 million FTX made in revenue."}]},
+    {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 8, "quote": "As a result, at one point the risk engine got stuck in a catastrophic feedback loop"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Because of that experience, Bankman-Fried suggested an “alert” or “delay” that would keep Alameda from being liquidated by a bug."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []},
+    {"fact": "2.5", "status": "missing", "evidence": []}
+  ]},
+  {"id": "3a378a05a2a7c9f3", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "the documentation obtained by the attorneys general of 42 states is quite specific"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "In one respect at least, however, the documentation obtained by the attorneys general of 42 states is quite specific"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "“and it is damning,” as AG Rob Bonta of California put it."}]},
+    {"fact": "3.0", "status": "missing", "evidence": []},
+    {"fact": "3.1", "status": "missing", "evidence": []},
+    {"fact": "3.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "6877ed9921c839d1", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "as he was the CEO of FTX."}, {"item": 3, "quote": "Sam Bankman-Fried fraud trial over the collapse of FTX, the bankrupt cryptocurrency exchange"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "Bankman-Fried faces seven federal charges, including wire fraud, securities fraud and money laundering"}, {"item": 5, "quote": "Bankman-Fried pleaded not guilty to all counts, which include wire fraud, conspiracy to commit money laundering"}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+    {"fact": "3.0", "status": "missing", "evidence": []},
+    {"fact": "3.1", "status": "missing", "evidence": []},
+    {"fact": "3.2", "status": "missing", "evidence": []},
+    {"fact": "3.3", "status": "missing", "evidence": []}
+  ]}
+]

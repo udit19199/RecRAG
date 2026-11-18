@@ -1,0 +1,436 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "093a220fc6abdd4b",
+   "gold": [
+    {
+     "sentence": "Alice Malsenior Walker (born February 9, 1944) is an American novelist, short story writer, poet, and activist.",
+     "facts": {
+      "0.0": "Alice Malsenior Walker was born on February 9, 1944.",
+      "0.1": "Alice Malsenior Walker is an American novelist.",
+      "0.2": "Alice Malsenior Walker is an American short story writer.",
+      "0.3": "Alice Malsenior Walker is an American poet.",
+      "0.4": "Alice Malsenior Walker is an American activist."
+     }
+    },
+    {
+     "sentence": "Michael David Herr (April 13, 1940 – June 23, 2016) was an American writer and war correspondent, known as the author of \"Dispatches\" (1977), a memoir of his time as a correspondent for \"Esquire magazine\" (1967–1969) during the Vietnam War.",
+     "facts": {
+      "1.0": "Michael David Herr was born on April 13, 1940.",
+      "1.1": "Michael David Herr died on June 23, 2016.",
+      "1.2": "Michael David Herr was an American writer.",
+      "1.3": "Michael David Herr was an American war correspondent.",
+      "1.4": "Michael David Herr is known as the author of the memoir 'Dispatches', published in 1977.",
+      "1.5": "'Dispatches' is a memoir of Michael David Herr's time as a correspondent for 'Esquire magazine' from 1967 to 1969.",
+      "1.6": "Michael David Herr was a correspondent during the Vietnam War."
+     }
+    }
+   ],
+   "items": [
+    "Graph query row:\nfull_name: Michael David Herr\nmiddle_name: David",
+    "Alice R. Ballard\nAlice R. Ballard.\n\n (born June 16, 1945, Florence, South Carolina) is an American ceramicist based in Greenville, South Carolina.\n\n Much of her work is characterized by the organic earthenware forms of closed containers, pinch pots, platters, pods, teapots, totems, small work, vessels and a series she refers to as her white work.\n\n Much of her work is finished with terra sigillata.\n\n Alice considers her art to be “a reflection of [her] relationship with natural forms.\n\n It is often the metamorphosis of Nature's forms, as they change from season to season, that attracts her to that universal world in which differing life forms share similar qualities.\"\n\n Her aesthetic heavily references the mother/child/germination metaphor and also explores the more evocative realm of wonder and awe.",
+    "Graph query row:\nfull_name: Alice Malsenior Walker\nmiddle_name: Malsenior",
+    "Alice Walker\nAlice Malsenior Walker (born February 9, 1944) is an American novelist, short story writer, poet, and activist.\n\n She wrote the critically acclaimed novel \"The Color Purple\" (1982) for which she won the National Book Award and the Pulitzer Prize for Fiction.\n\n She also wrote the novels \"Meridian\" (1976) and \"The Third Life of Grange Copeland\" (1970), among other works.",
+    "Haniel Long\nHaniel Clark Long (March 9, 1888 – October 17, 1956) was an American poet, novelist, publisher and academic.\n\n He is best known for his novella, \"Interlinear to Cabeza de Vaca\" (1936), a fictionalized account of the true story of a Spanish conquistador in 16th century North America.",
+    "Tobe Levin\nAlice Walker expressed appreciation for the text that shows worldwide solidarity with the novelist's literary abolition efforts in the early nineties.\n\n Levin has also teamed up with Maria Kiminta and photographer Britta Radike to publish a memoir and sourcebook, \"Kiminta.\n\n A Maasai's Fight against Female Genital Mutilation.\"",
+    "Warrior Marks\nWarrior Marks: Female Genital Mutilation and the Sexual Blinding of Women is a 1993 book by Alice Walker with Pratibha Parmar, who made an award-winning documentary of the same name.\n\n Following on from her 1992 novel \"Possessing the Secret of Joy\", Walker undertakes a journey to parts of Africa where clitoridectomy is still practised.\n\n \"Warrior Marks\" is a harrowing work as Walker interviews women who have had the operation done and finally interviews a woman—circumcised herself—who performs the operation.",
+    "Alice Walker: Beauty in Truth\nAlice Walker: Beauty in Truth is a documentary film directed by Pratibha Parmar, made by Kali Films production company.\n\n The film follows the life of the Pulitzer Prize-winning author, poet and activist Alice Walker.\n\n Shooting began in May 2011.\n\n It was aired on the BBC on Monday July 8, 2013, and on PBS on February 7, 2014.",
+    "Michael Herr\nMichael David Herr (April 13, 1940 – June 23, 2016) was an American writer and war correspondent, known as the author of \"Dispatches\" (1977), a memoir of his time as a correspondent for \"Esquire magazine\" (1967–1969) during the Vietnam War.\n\n The book was called the best \"to have been written about the Vietnam War\" by \"The New York Times Book Review\"; novelist John le Carré called it \"the best book I have ever read on men and war in our time.\"\n\n Herr later was credited with pioneering the literary genre of the nonfiction novel, along with authors such as Truman Capote, Norman Mailer, and Tom Wolfe.",
+    "Alice Munro\nAlice Ann Munro ( , \"née\" Laidlaw ; born 10 July 1931) is a Canadian short story writer and Nobel Prize winner.\n\n Munro's work has been described as having revolutionized the architecture of short stories, especially in its tendency to move forward and backward in time.\n\n Her stories have been said to \"embed more than announce, reveal more than parade.\""
+   ]
+  },
+  {
+   "id": "fd627e2afcd5dd13",
+   "gold": [
+    {
+     "sentence": "Gasland is a 2010 American documentary written and directed by Josh Fox.",
+     "facts": {
+      "0.0": "Gasland is a documentary.",
+      "0.1": "Gasland is from 2010.",
+      "0.2": "Gasland is American.",
+      "0.3": "Gasland was written by Josh Fox.",
+      "0.4": "Gasland was directed by Josh Fox."
+     }
+    },
+    {
+     "sentence": "To Shoot an Elephant is a 2009 documentary film about the 2008-2009 Gaza War directed by Alberto Arce and Mohammad Rujailahk.",
+     "facts": {
+      "1.0": "To Shoot an Elephant is a 2009 documentary film.",
+      "1.1": "To Shoot an Elephant is about the 2008-2009 Gaza War.",
+      "1.2": "To Shoot an Elephant was directed by Alberto Arce.",
+      "1.3": "To Shoot an Elephant was directed by Mohammad Rujailahk."
+     }
+    }
+   ],
+   "items": [
+    "The Last Lions\nThe Last Lions is a 2011 African nature documentary film by National Geographic Society, videotaped and directed by Dereck and Beverly Joubert.\n\n It was shot at the Okavango Delta in Botswana.\n\n The film premiered at the Palm Springs International Film Festival in January 2011 and was released in select theaters on February 18, 2011.\n\n The film follows in the tradition of other National Geographic big cat films, such as \"India: Land of the Tiger\" and \"Eye of the Leopard\".",
+    "Elephant (album)\nElephant is the fourth album by the American alternative rock duo The White Stripes.\n\n Released on April 1, 2003 on V2 Records, its release garnered near unanimous critical acclaim and commercial success, garnering a nomination for Album of the Year and a win for Best Alternative Music Album at the 46th Grammy Awards in 2004, peaking at No. 6 in the US \"Billboard\" charts and topping the UK album charts.",
+    "List of accolades received by The Hurt Locker\n\"The Hurt Locker\" is a 2009 Iraq War film written by Mark Boal and directed by Kathryn Bigelow.\n\n The film premiered on September 4, 2008 at the 65th Venice International Film Festival, where it competed with \"The Wrestler\" for the Golden Lion award.\n\n It was released in Italy by Warner Bros.\n\n Pictures on October 10, 2008.\n\n Following a showing at the 33rd Toronto International Film Festival, Summit Entertainment picked the film up for distribution in the United States.\n\n \"The Hurt Locker\" was released in the United States on June 26, 2009, with a limited release at four theaters in Los Angeles and New York City.\n\n The film grossed over $145,000 on its opening weekend, averaging around $36,000 per theater.\n\n The following weekend, beginning July 3, the film grossed over $131,000 at nine theaters.\n\n It held the highest per-screen average of any movie playing theatrically in the United States for the first two weeks of its release, gradually moving into the top 20 chart.\n\n Summit Entertainment then released \"The Hurt Locker\" to more screens.",
+    "Gasland\nGasland is a 2010 American documentary written and directed by Josh Fox.\n\n Nominated for an Academy Award for Best Documentary in 2011, the film focuses on communities in the United States affected by natural gas drilling and, specifically, a method of horizontal drilling into shale formations known as hydraulic fracturing.\n\n The film was a key mobilizer for the anti-fracking movement, and \"brought the term 'hydraulic fracturing' into the nation's living rooms\" according to \"The New York Times\".\n\n The film was nominated for the Academy Award for Best Documentary Feature.",
+    "First Kill\nFirst Kill is a 2001 Dutch documentary film that revolves around the psychology of war.\n\n Important turning points in the Vietnam War are used to illustrate the effect of war on body and mind.\n\n The documentary consists of interviews with Michael Herr and several Vietnam veterans.\n\n The depth of the interviews provides insight into the feelings that accompany violence, fear, hate, seduction and pleasure.",
+    "To Shoot an Elephant\nTo Shoot an Elephant is a 2009 documentary film about the 2008-2009 Gaza War directed by Alberto Arce and Mohammad Rujailahk.",
+    "Aliens of the Deep\nAliens of the Deep is a 2005 documentary film, directed in part by James Cameron alongside fellow cameraman and friend Steven Quale, who would go on to direct \"Final Destination 5\" six years later, and filmed in the IMAX 3D format.\n\n It was produced by Walden Media and Walt Disney Pictures.\n\n Cameron teams with NASA scientists to explore the Mid-Ocean Ridges, submerged chains of mountains in the Atlantic and Pacific oceans that are home to some of the planet's more unusual forms of life.",
+    "Hunting Elephants\nHunting Elephants (Hebrew: לצוד פילים‎ ‎ , \"Latzud Pilim\", \"lit.\"\n\n To Hunt Elephants) is a 2013 Israeli crime comedy film directed by Reshef Levi.\n\n It stars, among others, Sasson Gabai, Moni Moshonov and Patrick Stewart.\n\n It was released to theaters in Israel on July 4, 2013.",
+    "Olympia (1938 film)\nOlympia is a 1938 German documentary film written, directed and produced by Leni Riefenstahl, documenting the 1936 Summer Olympics, held in the Olympic Stadium in Berlin, Germany.\n\n The film was released in two parts: \"Olympia 1.\n\n Teil — Fest der Völker\" (Festival of Nations) and \"Olympia 2.\n\n Teil — Fest der Schönheit\" (Festival of Beauty).\n\n It was the first documentary feature film of the Olympic Games ever made.\n\n Many advanced motion picture techniques, which later became industry standards but which were groundbreaking at the time, were employed —including unusual camera angles, smash cuts, extreme close-ups, placing tracking shot rails within the bleachers, and the like.\n\n The techniques employed are almost universally admired, but the film is controversial due to its political context.\n\n Nevertheless, the film appears on many lists of the greatest films of all time, including \"Time\" magazine's \"All-Time 100 Movies.\"",
+    "South of the Border (2009 film)\nSouth of the Border is a 2009 American documentary film directed by Oliver Stone.\n\n The documentary premiered at the 2009 Venice Film Festival.\n\n Writer for the project Tariq Ali calls the documentary \"a political road movie\".\n\n Stone stated that he hopes the film will help people better understand a leader who is wrongly ridiculed \"as a strongman, as a buffoon, as a clown.\""
+   ]
+  },
+  {
+   "id": "348c5ab2ec5b93b2",
+   "gold": [
+    {
+     "sentence": "Robert Harry Philibosian (born 1940) is an American politician.",
+     "facts": {
+      "0.0": "Robert Harry Philibosian was born in 1940.",
+      "0.1": "Robert Harry Philibosian is an American politician."
+     }
+    },
+    {
+     "sentence": "David R. Ignatius (May 26, 1950), is an American journalist and novelist.",
+     "facts": {
+      "1.0": "David R. Ignatius was born on May 26, 1950.",
+      "1.1": "David R. Ignatius is an American journalist.",
+      "1.2": "David R. Ignatius is an American novelist."
+     }
+    }
+   ],
+   "items": [
+    "Philip K. Dick\nPhilip Kindred Dick (December 16, 1928 – March 2, 1982) was an American writer notable for publishing works of science fiction.",
+    "David I. Walsh\nDavid Ignatius Walsh (November 11, 1872June 11, 1947) was a United States politician from Massachusetts.\n\n A member of the Democratic Party, he served as the 46th Governor of Massachusetts before serving several terms in the United States Senate.",
+    "David Ignatius\nDavid R. Ignatius (May 26, 1950), is an American journalist and novelist.\n\n He is an associate editor and columnist for \"The Washington Post\".\n\n He also co-hosts PostGlobal, an online discussion of international issues at Washingtonpost.com, with Fareed Zakaria.\n\n He has written nine novels, including \"Body of Lies\", which director Ridley Scott adapted into a film.\n\n He is a former Adjunct Lecturer at the Kennedy School of Government at Harvard University and currently Senior Fellow to the Future of Diplomacy Program.\n\n He has received numerous honors, including the Legion of Honor from the French Republic, the Urbino World Press Award from the Italian Republic, and a lifetime achievement award from the International Committee for Foreign Journalism.",
+    "Mark Krikorian\nMark Krikorian has been the executive director of the Center for Immigration Studies, a think-tank in Washington, D. C., since 1995.\n\n The Center describes itself as an \"independent, non-partisan research organization\" in Washington, D. C., that examines and critiques the impact of immigration on the United States.\n\n Animated by a \"pro-immigrant, low-immigration vision which seeks fewer immigrants, but a warmer welcome for those admitted\", the Center was established in 1985 to provide immigration research.\n\n Krikorian is a regular contributor to the conservative publication \"National Review\", and is a regular participant at \"National Review Online's\" \"The Corner.\"",
+    "Robert Philibosian\nRobert Harry Philibosian (born 1940) is an American politician.\n\n He served as Los Angeles County District Attorney from 1982 to 1984.\n\n He received his B.A. in history from Stanford University and his law degree from Southwestern Law School, and was admitted to the California State Bar in 1968.\n\n He is now Of counsel at the law firm of Sheppard, Mullin, Richter & Hampton.",
+    "Jim Geraghty\nJim Geraghty is a conservative blogger and regular contributor to \"National Review Online\" and \"National Review\".\n\n In addition to writing columns for \"National Review\", Geraghty also blogs for National Review Online and is a former reporter for States News Service.",
+    "Richard Ziser\nRichard Ziser is a Nevada Real Estate Investor, Socially Conservative Political activist and U.S. Republican Politician.\n\n He was born June 7, 1953, in Pomona, CA., and has resided in Las Vegas Nevada since 1991.\n\n He graduated from California State Polytechnic University, Pomona (Cal Poly Pomona) with a BS in Industrial Engineering, 1976; then subsequently from Simon Greenleaf University in Santa Ana, Ca.\n\n (now a campus of Trinity International University, with an MA in Christian Apologetics in 1989.",
+    "David Smick\nDavid M. Smick is a macroeconomic adviser to a select group of prominent global investment funds and a non-fiction author.\n\n He is the chairman and CEO of Johnson Smick International, a financial advisory firm in Washington, D.C. where he is in partnership with former Federal Reserve Vice Chairman Manuel H. Johnson.\n\n Smick wrote an acclaimed book \"The World Is Curved\" on the financial perils of globalization, in response to \"The World Is Flat\" bestseller by Thomas Friedman.\n\n The book received positive reviews by the \"USA Today\" and \"Forbes\", was called \"astonishingly prescient\" by David Brooks and \"clairvoyant\" by David Ignatius.",
+    "Andrew Benjamin\nAndrew Benjamin (born 1952, Australia) is an Australian philosopher.\n\n Currently he holds two academic posts: Distinguished Professor of Philosophy and the Humanities at Kingston University, London and Professor of Philosophy and Jewish Thought in the Department of Philosophy and the Australian Centre for Jewish Civilization at Monash University, Melbourne, Australia.\n\n Benjamin first came to critical attention with his writings in continental philosophy, writing articles and editing books on the thinking of Martin Heidegger, Theodor Adorno, Walter Benjamin, Julia Kristeva and Jean-François Lyotard.\n\n Benjamin has become involved in the field of architecture, to the extent that he has also taught in various schools of architecture in UK, US and Australia.",
+    "Phil Driscoll\nPhil Driscoll (born November 9, 1947) is a trumpeter, singer, composer, and producer.\n\n He performs in varying music genres and styles which include rock and roll, rhythm and blues, and patriotic music, and is best known for his work in Christian music and his longterm Christian ministry.\n\n In 1985, Driscoll won the Grammy Award for Best Gospel Performance – Duo/Group for a duet with Debby Boone on \"Keep the Flame Burning\", and he has been nominated for three additional Grammys, two for Best Gospel Performance – Male and one for Best Gospel/Pop Album.\n\n He has also won three Dove Awards for his music, and the 1999 Christian Country Music Association Award for Best Musician.\n\n In 2006, Driscoll was found guilty on 2 counts of tax evasion and one count of conspiracy, and was sentenced to serve one year in Federal prison, beginning on March 14, 2007."
+   ]
+  },
+  {
+   "id": "04c3ac7fe200e2cc",
+   "gold": [
+    {
+     "sentence": "Pagliacci (] ; literal translation, \"Clowns\") is an Italian opera in a prologue and two acts, with music and libretto by Ruggero Leoncavallo.",
+     "facts": {
+      "0.0": "Pagliacci is an Italian opera.",
+      "0.1": "Pagliacci has a prologue and two acts.",
+      "0.2": "Pagliacci has music and libretto by Ruggero Leoncavallo.",
+      "0.3": "The literal translation of Pagliacci is 'Clowns'."
+     }
+    },
+    {
+     "sentence": "Suor Angelica (Sister Angelica) is an opera in one act by Giacomo Puccini to an original Italian libretto by Giovacchino Forzano.",
+     "facts": {
+      "1.0": "Suor Angelica (Sister Angelica) is an opera.",
+      "1.1": "Suor Angelica is in one act.",
+      "1.2": "Suor Angelica is by Giacomo Puccini.",
+      "1.3": "Suor Angelica has an original Italian libretto by Giovacchino Forzano."
+     }
+    }
+   ],
+   "items": [
+    "Bernhard Bötel\nHis stage repertoire included Belmonte in Wolfgang Amadeus Mozart's \"Die Entführung aus dem Serail\", Chapelou in Adolphe Adam's \"Le postillon de Lonjumeau\", Count Almaviva in Gioachino Rossini's \"The Barber of Seville\", Daniel in Franz Lehár's \"The Merry Widow\", the Duke of Mantua in Giuseppe Verdi's \"Rigoletto\", Gabriel von Eisenstein in Johann Strauss II's \"Die Fledermaus\", Indigo in Strauss' \"Indigo und die vierzig Räuber\", Jeník in Bedřich Smetana's \"The Bartered Bride\", Paolino in Domenico Cimarosa's \"Il matrimonio segreto\", Pâris in Jacques Offenbach's \"La belle Hélène\", Pietro in Franz von Suppé's \"Boccaccio\", and Wilhelm Meister in Ambroise Thomas' \"Mignon\".",
+    "Stiffelio\nStiffelio is an opera in three acts by Giuseppe Verdi, from an Italian libretto by Francesco Maria Piave.\n\n The origin of this was the novel “Le pasteur d’hommes”, by Émile Souvestre, which was published in 1838.\n\n This was adapted into the French play \"Le pasteur, ou L'évangile et le foyer\" by Émile Souvestre and Eugène Bourgeois.\n\n That was in turn translated into Italian by Gaetano Vestri as \"Stifellius\"; this formed the basis of Piave's libretto.",
+    "Pagliacci\nPagliacci (] ; literal translation, \"Clowns\") is an Italian opera in a prologue and two acts, with music and libretto by Ruggero Leoncavallo.\n\n It is the only Leoncavallo opera that is still widely performed.\n\n Opera companies have frequently staged \"Pagliacci\" with \"Cavalleria rusticana\" by Mascagni, a double bill known colloquially as 'Cav and Pag'.",
+    "Barbara Frittoli\nBarbara Frittoli (born 19 April 1967) is an Italian operatic soprano who has sung leading roles in opera houses throughout Europe and in the United States.\n\n She was born in Milan and graduated from the Milan Conservatory.\n\n She made her Metropolitan Opera debut in 1995 as Micaela in \"Carmen\" and has gone on to sing in over 80 performances there including Donna Elvira in \"Don Giovanni\", Fiordiligi in \"Così fan tutte\", Angelica in \"Suor Angelica\", Desdemona in \"Otello\", the title role in \"Luisa Miller\", Amelia in \"Simon Boccanegra\", Vitellia in \"La clemenza di Tito\" and Alicia Ford in \"Falstaff\".",
+    "Operalia, The World Opera Competition\nOperalia, The World Opera Competition is an annual international competition for young opera singers.\n\n Founded in 1993 by Plácido Domingo, the competition has helped launch the careers of several important artists, such as Joseph Calleja, Giuseppe Filianoti, Rolando Villazón, José Cura, Joyce DiDonato, Elizabeth Futral, Inva Mula, Ana María Martínez and Sonya Yoncheva.",
+    "Senza sangue\nSenza sangue (Without blood) an opera in one act by Péter Eötvös with a libretto by Mari Mezei.\n\n It is based on the second part of the novel of the same name by Alessandro Baricco and is intended to be performed jointly with Béla Bartók's one-act \"Bluebeard's Castle\".\n\n The concert première was given by the Cologne Philharmonic Orchestra on 1 May 2015.\n\n It was premièred in full on 15 May 2016 at the Festival d'Avignon.\n\n It is his tenth opera.\n\n Anne Sofie von Otter, who gave the New York première with the New York Philharmonic, said: \"“The piece is not at all easy for the two singers... [It’s] hard to find the pitch; you have to work it into the voice, unless of course you happen to have perfect pitch, which I don’t.\"",
+    "Suor Angelica\nSuor Angelica (Sister Angelica) is an opera in one act by Giacomo Puccini to an original Italian libretto by Giovacchino Forzano.\n\n It is the second opera of the trio of operas known as \"Il trittico\" (\"Triptych\").\n\n It received its world premiere at the Metropolitan Opera on December 14, 1918.",
+    "Lucrezia Borgia (opera)\nLucrezia Borgia is a melodramatic opera in a prologue and two acts by Gaetano Donizetti.\n\n Felice Romani wrote the Italian libretto after the play \"Lucrezia Borgia\" by Victor Hugo, in its turn after the legend of Lucrezia Borgia.\n\n \"Lucrezia Borgia\" was first performed on 26 December 1833 at La Scala, Milan.",
+    "Il trittico\nIl trittico (\"The Triptych\") is the title of a collection of three one-act operas, \"Il tabarro\", \"Suor Angelica\", and \"Gianni Schicchi\", by Giacomo Puccini.\n\n The work received its world premiere at the Metropolitan Opera on 14 December 1918.",
+    "Rita Fornia\nRita Fornia (17 July 1878 – 27 October 1922) was an American opera singer.\n\n She began her career in Europe at the beginning of the 20th century singing coloratura soprano roles.\n\n Early on in her career her voice darkened and dropped slightly causing her to focus more within the mezzo-soprano repertoire while still singing some soprano roles.\n\n She joined the Metropolitan Opera company in 1907 where she performed regularly in mostly supporting roles until her retirement in 1922.\n\n She is best remembered today for portraying the role of the Abbess in the original production of Puccini's \"Suor Angelica\" in 1918."
+   ]
+  },
+  {
+   "id": "b736cab3fc16f05b",
+   "gold": [
+    {
+     "sentence": " It was created by Jay Lender and Micah Wright, former writers for \"The Angry Beavers\", \"SpongeBob SquarePants\", and \"Phineas and Ferb\".",
+     "facts": {
+      "0.0": "The series was created by Jay Lender.",
+      "0.1": "The series was created by Micah Wright.",
+      "0.2": "Jay Lender was a former writer for The Angry Beavers.",
+      "0.3": "Jay Lender was a former writer for SpongeBob SquarePants.",
+      "0.4": "Jay Lender was a former writer for Phineas and Ferb.",
+      "0.5": "Micah Wright was a former writer for The Angry Beavers.",
+      "0.6": "Micah Wright was a former writer for SpongeBob SquarePants.",
+      "0.7": "Micah Wright was a former writer for Phineas and Ferb."
+     }
+    },
+    {
+     "sentence": " The series chronicles the adventures and endeavors of the title character and his various friends in the fictional underwater city of Bikini Bottom.",
+     "facts": {
+      "1.0": "The series chronicles the adventures and endeavors of the title character and his various friends.",
+      "1.1": "The series is set in the fictional underwater city of Bikini Bottom."
+     }
+    }
+   ],
+   "items": [
+    "List of SpongeBob SquarePants episodes\n\"SpongeBob SquarePants\" is an American animated television series created by marine biologist and animator Stephen Hillenburg for Nickelodeon.\n\n The series is set in the fictional underwater city of Bikini Bottom, and centers on the adventures and endeavors of SpongeBob SquarePants, an over-optimistic sea sponge that annoys other characters.\n\n Many of the ideas for the show originated in an unpublished, educational comic book titled \"The Intertidal Zone\", which Hillenburg created in the mid-1980s.\n\n He began developing \"SpongeBob SquarePants\" into a television series in 1996 after the cancellation of \"Rocko's Modern Life\", another Nickelodeon television series which Hillenburg previously directed.",
+    "Robocalypse\nRobocalypse is a real-time strategy video game developed and published by Vogster Entertainment for the Nintendo DS handheld video game console.\n\n It has only been released in North America.\n\n It was created by Jay Lender and Micah Wright, former writers for \"The Angry Beavers\", \"SpongeBob SquarePants\", and \"Phineas and Ferb\".",
+    "Right Now Kapow\nRight Now Kapow is an American animated sketch comedy television series produced by Warner Bros.\n\n Animation for Disney XD.\n\n It is the first collaboration between Warner Bros.\n\n Animation and Disney.\n\n The series premiered on September 19, 2016 and ended on May 31, 2017.\n\n The series was created by Justin Becker and Marly Halpern-Graser, who previously worked on the Cartoon Network series \"Mad\".\n\n Becker also worked on Adult Swim infomercials, and Halpern-Graser also worked on Cartoon Network's \"DC Nation\".\n\n The series follows Dog, Candy, Ice Cream, Diamond, Plant, and Moon going on new adventures everyday...and find themselves in mischief.\n\n Every episode of the series has 3 main parts in every 11-minute segment and other random shorts.\n\n The series has a style of humor similar to Cartoon Network's previous series, \"Mad\".",
+    "Rock Bottom (SpongeBob SquarePants)\n\"Rock Bottom\" is the 34th episode of the first season of the American animated television series \"SpongeBob SquarePants\".\n\n It originally was produced in 1999 and aired on Nickelodeon in the United States on March 15, 2000.\n\n The series follows the adventures of the title character in the underwater city of Bikini Bottom.\n\n In the episode, SpongeBob becomes stranded in a abyssopelagic zone called Rock Bottom.",
+    "SpongeBob SquarePants (season 3)\nThe third season of the American animated television series \"SpongeBob SquarePants\", created by Stephen Hillenburg, aired on Nickelodeon from October 5, 2001 to October 11, 2004, and consists of 20 episodes.\n\n The series chronicles the exploits and adventures of the title character and his various friends in the fictional underwater city of Bikini Bottom.\n\n The season was executive produced by series creator Hillenburg, who also acted as the showrunner.\n\n Hillenburg halted production on the show to work on the 2004 film adaptation of the series, \"The SpongeBob SquarePants Movie\".\n\n After production on the film, Hillenburg resigned from the show as its showrunner, and appointed staff writer Paul Tibbitt to overtake the position.\n\n Season 3 was originally set to end the series after the release of the film, but the success prevented the series from ending, leading to a fourth season.",
+    "Band Geeks\n\"Band Geeks\" is the second part of the 15th episode of the second season, and the second half of the 35th episode overall, of the American animated television program \"SpongeBob SquarePants\".\n\n It originally aired on Nickelodeon in the United States on September 7, 2001.\n\n It was written by C. H. Greenblatt, Aaron Springer, and Merriwether Williams, and the animation was directed by Frank Weiss.\n\n Springer served as storyboard director, and Greenblatt served as storyboard artist.\n\n The song \"Sweet Victory\" by David Glen Eisley was featured in the episode and was later released on the album \"\" in 2005.",
+    "SpongeBob SquarePants: Battle for Bikini Bottom\nSpongeBob SquarePants: Battle for Bikini Bottom is a 2003 video game based on the animated series of the same name, developed by Heavy Iron Studios, AWE Games, and Vicarious Visions, and published by THQ.\n\n The game was released for the PlayStation 2, Game Boy Advance (GBA), Xbox, and Nintendo GameCube consoles as well as a port for Microsoft Windows.\n\n The Microsoft Windows version of the game is a point-and-click adventure game, whereas the 6th generation platforms received a 3D platformer.\n\n The Game Boy Advance version received a 2D platformer.\n\n All versions of the game feature an original storyline, in which the player attempts to defend Bikini Bottom from an invasion of robots created by Plankton with a machine called the Duplicatotron 3000, playing as SpongeBob in all versions, as well as Patrick and Sandy in the console versions.\n\n The game was released on October 31, 2003, in North America and in Europe on November 28, 2003.",
+    "SpongeBob SquarePants (season 4)\nThe fourth season of the American animated television series \"SpongeBob SquarePants\", created by former marine biologist and animator Stephen Hillenburg, aired on Nickelodeon from May 6, 2005 to July 24, 2007, and contained 20 episodes, beginning with the episodes \"Fear of a Krabby Patty\" and \"Shell of a Man\".\n\n The series chronicles the exploits and adventures of the title character and his various friends in the fictional underwater city of Bikini Bottom.\n\n The season was executive produced by series creator Hillenburg, while writer Paul Tibbitt acted as the supervising/co-executive producer and showrunner.\n\n The show underwent a hiatus on television as Hillenburg halted the production in 2002 to work on the film adaptation of the series, \"The SpongeBob SquarePants Movie\".\n\n Once the film was finalized and the previous season had completed broadcast on television, Hillenburg wanted to end the show, but the success of the series led to more episodes, so Tibbitt took over Hillenburg's position as showrunner and began working on a fourth season for broadcast in 2005.",
+    "SpongeBob SquarePants\nSpongeBob SquarePants is an American animated television series created by marine biologist and animator Stephen Hillenburg for Nickelodeon.\n\n The series chronicles the adventures and endeavors of the title character and his various friends in the fictional underwater city of Bikini Bottom.\n\n The series' popularity has made it a media franchise, as well as the highest rated series to ever air on Nickelodeon, and the most distributed property of MTV Networks.\n\n As of 2015, the media franchise has generated $12 billion in merchandising revenue for Nickelodeon.",
+    "Legends of Bikini Bottom\nLegends of Bikini Bottom is an anthology series of six episodes in the American animated television series \"SpongeBob SquarePants\", as part of its seventh season.\n\n As the name suggests, the episodes have plots involving things like monsters, magic and mythical creatures.\n\n The first episode called \"Trenchbillies\" first premiered on the online social networking service Facebook on January 27, 2011 before airing on Nickelodeon on January 29, 2011.\n\n The four other episodes titled \"Sponge-Cano!\"\n\n, \"The Main Drain\", \"The Monster Who Came to Bikini Bottom\" and \"Welcome to the Bikini Bottom Triangle\" premiered on Nickelodeon as part of an hour-long special on January 28, 2011.\n\n The decision to air the series online was aimed at attracting \"the young and the restless hooked to the internet and the social media.\""
+   ]
+  },
+  {
+   "id": "266c467dfddc5a27",
+   "gold": [
+    {
+     "sentence": " It was launched in March 1994 by Millivres Ltd, under the editorship of Frances Williams and is now published by Twin Media Group, which is owned by Silke Bader and Linda Riley.",
+     "facts": {
+      "0.0": "The publication was launched in March 1994.",
+      "0.1": "The publication was launched by Millivres Ltd.",
+      "0.2": "The publication was launched under the editorship of Frances Williams.",
+      "0.3": "The publication is now published by Twin Media Group.",
+      "0.4": "Twin Media Group is owned by Silke Bader.",
+      "0.5": "Twin Media Group is owned by Linda Riley."
+     }
+    },
+    {
+     "sentence": "Elle is a worldwide lifestyle magazine of French origin that focuses on fashion, beauty, health, and entertainment.",
+     "facts": {
+      "1.0": "Elle is a worldwide lifestyle magazine.",
+      "1.1": "Elle is of French origin.",
+      "1.2": "Elle focuses on fashion.",
+      "1.3": "Elle focuses on beauty.",
+      "1.4": "Elle focuses on health.",
+      "1.5": "Elle focuses on entertainment."
+     }
+    },
+    {
+     "sentence": " \"Elle\" is also the world's best-selling fashion magazine.",
+     "facts": {
+      "2.0": "Elle is also the world's best-selling fashion magazine."
+     }
+    },
+    {
+     "sentence": " It was founded by Pierre Lazareff and his wife Hélène Gordon in 1945.",
+     "facts": {
+      "3.0": "Elle was founded by Pierre Lazareff.",
+      "3.1": "Elle was founded by Hélène Gordon, the wife of Pierre Lazareff.",
+      "3.2": "Elle was founded in 1945."
+     }
+    }
+   ],
+   "items": [
+    "Girls' Life (magazine)\nGirls' Life is an American teen magazine.\n\n It was launched in 1994 by Monarch Services.\n\n The magazine is headquartered in Baltimore, Maryland.",
+    "The Fader\nThe Fader (stylized as The FADER) is a New York City-based music magazine launched in 1999 by Rob Stone and Jon Cohen, covering music, style and culture.\n\n It was the first print publication to be released on iTunes.",
+    "La Belle Assemblée\nLa Belle Assemblée (in full La Belle Assemblée or, Bell's Court and Fashionable Magazine Addressed Particularly to the Ladies) was a British women's magazine published from 1806 to 1837, founded by John Bell (1745–1831).",
+    "Elle (magazine)\nElle is a worldwide lifestyle magazine of French origin that focuses on fashion, beauty, health, and entertainment.\n\n \"Elle\" is also the world's best-selling fashion magazine.\n\n It was founded by Pierre Lazareff and his wife Hélène Gordon in 1945.\n\n The title, in French, means \"she\" or \"her\".",
+    "Essence (magazine)\nEssence is a monthly magazine for African American women between the ages of 18 and 49.\n\n It is the only magazine that focuses on reaching an audience of black women, revolves around the black woman experience, and has remained for a long period of time.\n\n The magazine covers fashion, lifestyle and beauty, with an intimate girlfriend-to-girlfriend tone, and its slogan \"Fierce, Fun, and Fabulous\" suggests the magazine's goal of empowering African-American women.\n\n The topics the magazine discusses range from celebrities, to fashion, to point-of-view pieces addressing current issues in the African-American community.\n\n A number of its readers engage closely and personally with the publication, and it claims to be the magazine \"for and about Black women\".",
+    "Shape (magazine)\nShape is a monthly English language fitness magazine started by Weider Publications in 1981, founded by Christine MacIntyre (a pioneer in women's free weight fitness) and became the number one women's fitness magazine.\n\n At that time, Weider Enterprises consisted primarily of the bodybuilding magazine \"Muscle & Fitness\".\n\n Joe Weider and Christine MacIntyre had differing views of how to present \"Shape\", Weider endorsing a less journalistic and more commercial approach to articles, MacIntyre endorsing a more academic, doctor-based magazine.\n\n Weider also endorsed a sexier approach to editorial while MacIntyre endorsed a healthier look for women, eschewing sexiness in the models and the copy.\n\n MacIntyre largely won that battle, editing a magazine that required that every byline have an advanced medical degree, that cover models should look healthy rather than sexy, and that sexist language be avoided.\n\n Christine MacIntyre was the editor-in-chief until her death in 1988.\n\n Tara Kraft is the current editor-in-chief.\n\n \"Shape\" found a readership based on that formula.",
+    "Golf Digest\nGolf Digest is a monthly golf magazine published by Condé Nast Publications in the United States.\n\n It is a generalist golf publication covering recreational golf and men's and women's competitive golf.\n\n Condé Nast Publications also publishes the more specialized \"Golf for Women\", \"Golf World\" and \"Golf World Business\".\n\n The magazine started in 1950, and was sold to The New York Times Company in 1969.\n\n The Times company sold their magazine division to Condé Nast in 2001.\n\n The headquarters of \"Golf Digest\" is in Des Moines, Iowa.",
+    "VIVmag\nVIVmag is one of the earliest exclusively digital, interactive women's lifestyle magazines.\n\n Launched in 2006 and backed by Canadian industrialist David Harrison Gilmour (the founder of FIJI Water LLC), the bimonthly magazine is distributed by Zinio Systems, Inc.\n\n The first issue appeared in January-February 2007.\n\n There is no print version.\n\n The paperless title can be viewed in most browsers or downloaded to your computer and read via the Zinio Reader.\n\n The magazine is based in Thousand Oaks, California.",
+    "Esquire (magazine)\nEsquire is an American men's magazine, published by the Hearst Corporation in the United States.\n\n Founded in 1933, it flourished during the Great Depression under the guidance of founders Arnold Gingrich, David A. Smart and Henry L. Jackson.",
+    "Diva (magazine)\nDIVA is a leading lesbian magazine in the United Kingdom, published monthly.\n\n It was launched in March 1994 by Millivres Ltd, under the editorship of Frances Williams and is now published by Twin Media Group, which is owned by Silke Bader and Linda Riley.\n\n Silke Bader is also the publisher of Curve magazine in the USA and LOTL in Australia, and Linda Riley runs the European Diversity Awards and is the former publisher of g3 magazine in the UK."
+   ]
+  },
+  {
+   "id": "15b66cb907af53af",
+   "gold": [
+    {
+     "sentence": " The documentary explores the history of the mile and a half long stretch of road through West Hollywood known as Sunset Strip.",
+     "facts": {
+      "0.0": "The documentary explores the history of Sunset Strip.",
+      "0.1": "Sunset Strip is a mile and a half long stretch of road.",
+      "0.2": "Sunset Strip runs through West Hollywood."
+     }
+    },
+    {
+     "sentence": " The film features some early pioneers of the hardcore punk music scene including Bad Brains, Black Flag, D.O.A., Minor Threat, Minutemen, SSD, and others.",
+     "facts": {
+      "1.0": "The film features some early pioneers of the hardcore punk music scene.",
+      "1.1": "Bad Brains is an early hardcore punk pioneer featured in the film.",
+      "1.2": "Black Flag is an early hardcore punk pioneer featured in the film.",
+      "1.3": "D.O.A. is an early hardcore punk pioneer featured in the film.",
+      "1.4": "Minor Threat is an early hardcore punk pioneer featured in the film.",
+      "1.5": "Minutemen is an early hardcore punk pioneer featured in the film.",
+      "1.6": "SSD is an early hardcore punk pioneer featured in the film.",
+      "1.7": "The film features other early hardcore punk pioneers besides those named."
+     }
+    }
+   ],
+   "items": [
+    "Sunset Strip curfew riots\nThe Sunset Strip curfew riots, also known as the \"hippie riots\", were a series of early counterculture-era clashes that took place between police and young people on the Sunset Strip in Hollywood, California, beginning in the mid-1966 and continuing on and off through the early 1970s.",
+    "Sunset Strip (2012 film)\nSunset Strip is a 2012 documentary directed by Hans Fjellestad, and produced by Tommy Alastra.\n\n The documentary explores the history of the mile and a half long stretch of road through West Hollywood known as Sunset Strip.",
+    "Mayor of the Sunset Strip\nMayor of the Sunset Strip is a 2003 documentary film on the life of Rodney Bingenheimer directed by George Hickenlooper, and produced by Chris Carter.\n\n In 2011, Craig Hlavaty of the \"Houston Press\" named \"Mayor of the Sunset Strip\" at number eight on the paper's list of \"The 31 Best Music Documentaries of All Time\".\n\n The film won the Best Documentary Feature at the 2004 Santa Barbara International Film Festival.",
+    "I Against I\nI Against I is the third studio album by the American hardcore punk band Bad Brains.\n\n It was released in November 1986 through SST Records with the catalog number SST 065.\n\n The best-selling album in the band's catalog, \"I Against I\" is a critically acclaimed album that mixes American hardcore punk with funk, soul, reggae and heavy metal.\n\n It is also included in the book \"1001 Albums You Must Hear Before You Die\".\n\n The album featured an MTV video for the title track directed by Paul Rachman who later went on to direct the documentary feature film \"American Hardcore\".",
+    "Sunset Strip\nSunset Strip is the mile-and-a-half (2.4 km) stretch of Sunset Boulevard that passes through West Hollywood, California.\n\n It extends from West Hollywood's eastern border with Hollywood at Crescent Heights Boulevard to its western border with Beverly Hills at Sierra Drive.\n\n Sunset Strip is probably the best-known portion of Sunset Boulevard, with boutiques, restaurants, rock clubs, and nightclubs.\n\n It is also known for its array of huge, colorful billboards.",
+    "Punk's Not Dead (2007 film)\nPunk's Not Dead is a 2007 documentary film directed by Susan Dynner, an American hardcore punk fan.\n\n The film claims to infiltrate American clubs, malls, recording studios, etc. where it sets out to claim hardcore punk and pop punk music is \"thriving\" from an American perspective.\n\n Its content features performances largely from 1980s hardcore bands and MTV skate punk and pop punk/rock acts.\n\n It also includes various interviews and behind-the-scenes footage with the bands, labels and fans.",
+    "Riot on Sunset Strip\nRiot on Sunset Strip is a 1967 counterculture-era exploitation movie, released by American International Pictures.\n\n It was filmed and released within four months of the late-1966 Sunset Strip curfew riots.",
+    "Vito (film)\nVito is a 2011 documentary produced and directed by Jeffrey Schwarz of the Los Angeles-based production company Automat Pictures.\n\n The film documents the life of Vito Russo, gay activist, film scholar, and author of \"The Celluloid Closet\".",
+    "American Hardcore (film)\nAmerican Hardcore: The History of American Punk Rock 1980-1986 is a documentary directed by Paul Rachman and written by Steven Blush.\n\n It is based on the book \"\" also written by Blush.\n\n It was released on September 22, 2006 on a limited basis.\n\n The film features some early pioneers of the hardcore punk music scene including Bad Brains, Black Flag, D.O.A., Minor Threat, Minutemen, SSD, and others.\n\n It was released on DVD by Sony Pictures Home Entertainment on February 20, 2007.",
+    "All Ages: The Boston Hardcore Film\nAll Ages: The Boston Hardcore Film, a Gallery East Production in association with Stone Films/NYC, is a documentary directed by Drew Stone, which had its world premier at the Independent Film Festival of Boston on April 27, 2012.\n\n The film features interviews, archival footage and the music of Boston’s early hardcore bands including Deep Wound, DYS, Gang Green, Impact Unit, Jerry's Kids, Negative FX, SS Decontrol, The Freeze and The F.U.'s.\n\n Also featured in the film are interviews with renowned author Michael Patrick MacDonald (\"Easter Rising\", \"All Souls\"), Actress Christine Elise McCarthy, Advertising Executive Jonathan Anastas, Thrasher Magazine Editor Jake Phelps, \"American Hardcore\" Director Paul Rachman, and Newbury Comics owner Michael Dreese.\n\n \"All Ages\" has been released on DVD with numerous extras and director's commentary."
+   ]
+  },
+  {
+   "id": "20bd8c7bc53909c7",
+   "gold": [
+    {
+     "sentence": "The Constitution of Alberta describes the fundamental rules under which the Canadian province of Alberta is governed.",
+     "facts": {
+      "0.0": "The Constitution of Alberta describes the fundamental rules under which the Canadian province of Alberta is governed.",
+      "0.1": "Alberta is a Canadian province.",
+      "0.2": "Alberta is governed under fundamental rules described in the Constitution of Alberta."
+     }
+    },
+    {
+     "sentence": " As is typical of all Canadian provinces, and Westminster systems more generally, Alberta's is an unwritten constitution.",
+     "facts": {
+      "1.0": "Alberta's constitution is an unwritten constitution.",
+      "1.1": "It is typical of all Canadian provinces for their constitutions to be unwritten.",
+      "1.2": "It is typical of Westminster systems more generally for their constitutions to be unwritten."
+     }
+    },
+    {
+     "sentence": "The Westminster system is a parliamentary system of government modelled after that which developed in the United Kingdom.",
+     "facts": {
+      "2.0": "The Westminster system is a parliamentary system of government.",
+      "2.1": "The Westminster system is modelled after the system of government that developed in the United Kingdom."
+     }
+    }
+   ],
+   "items": [
+    "Canada under British rule\nAlthough confederation in 1867 led to an enlarged Dominion with increased autonomy over domestic affairs, Canada still remained a colony within the British Empire and was thus subordinate to the British Parliament until the enactment of the Statute of Westminster in 1931.\n\n This statute recognized Canada as an independent peer coequal with the United Kingdom, and thus provided the Parliament of Canada with legislative sovereignty over all federal matters except the power to change the constitutional laws of Canada which remained under the purview of the Parliament of the United Kingdom.\n\n Canada's final vestige of legal dependence on the United Kingdom was terminated in 1982 with the enactment of the Canada Act, subsequently providing Canada with full legal sovereignty completely independent of the United Kingdom.",
+    "Quebec Legislature\nThe Quebec Legislature (officially Parliament of Quebec, French: \"Parlement du Québec\" ) is the legislature of the province of Quebec, Canada, since Confederation in 1867.\n\n Today, the legislature is made of two elements: the monarch of Canada, represented by the Lieutenant Governor of Quebec, and the unicameral assembly called the National Assembly of Quebec.\n\n The legislature has existed since 1867 when Quebec, then called Canada East, became one of the founding colonies of Canadian Confederation.\n\n From 1867 until 1968 the legislature was bicameral, containing a lower chamber called the Legislative Assembly of Quebec and an upper chamber called the Legislative Council of Quebec.",
+    "The New Canada\nThe New Canada is a Canadian political literature book written by Reform Party of Canada founder and leader Preston Manning and published by Macmillan Canada.\n\n The book explains the personal, religious, and political life of Preston Manning and explains the roots and beliefs of the Reform Party.\n\n At the time of its publishing in 1992, Reform had become a popular populist conservative party in Western Canada after the mainstream Progressive Conservative Party of Canada was collapsing in support and in 1991 decided to expand eastward into Ontario and the Maritimes.\n\n One year later the PC party collapsed in the 1993 federal election, allowing the Reform Party to make political history in Canada, deplacing the PCs as the dominant conservative party in Canada.\n\n Reform, later renamed the Canadian Alliance, merged with the PC Party in 2003, to form a united right-wing alternative to the governing Liberal Party of Canada, named the Conservative Party of Canada which has dropped many of the populist themes that the Reform Party had.",
+    "Governance of England\nIn some cases, such as top-up university tuition fees and foundation hospitals, the votes of Scottish MPs have been crucial in helping pass legislation for England that the majority of English MPs have opposed.",
+    "Westminster system\nThe Westminster system is a parliamentary system of government modelled after that which developed in the United Kingdom.\n\n This term comes from the Palace of Westminster, the seat of the British parliament.",
+    "British North America Acts\nThe British North America Acts 1867–1975 are the original names of a series of Acts at the core of the constitution of Canada.\n\n They were enacted by the Parliament of the United Kingdom and the Parliament of Canada.\n\n In Canada, some of the Acts were amended or repealed by the Constitution Act, 1982.\n\n The rest were renamed in Canada as the \"Constitution Acts\".\n\n In the United Kingdom, those Acts that were passed by the British Parliament remain under their original names.\n\n The term \"British North America\" (BNA) refers to the British colonies in North America.",
+    "Governance of England\nThere has not been a government of England since 1707 when the Kingdom of England ceased to exist as a sovereign state, as it merged with the Kingdom of Scotland to form the Kingdom of Great Britain.\n\n Kingdom of Great Britain continued from 1707 until 1801 when it merged with the Kingdom of Ireland to form the United Kingdom of Great Britain and Ireland, which itself became the United Kingdom of Great Britain and Northern Ireland (UK) in 1922 (in reality; in name in 1927) upon independence for most of the island of Ireland.\n\n The UK since then has gone through significant change to its system of government, with devolved parliaments, assemblies and governments in Scotland, Wales and Northern Ireland.\n\n England, however, remains under the full jurisdiction, on all matters, of the Parliament of the United Kingdom of Great Britain and Northern Ireland and the UK government as no devolved administration has been created for England within the new structure.\n\n This situation has led to the anomaly, known as the West Lothian question, which is that Scottish Members of Parliament (MPs) are able to vote on legislation that affects only England whereas English MPs can not vote on certain Scottish matters due to devolution.",
+    "Constitution of Alberta\nThe Constitution of Alberta describes the fundamental rules under which the Canadian province of Alberta is governed.\n\n As is typical of all Canadian provinces, and Westminster systems more generally, Alberta's is an unwritten constitution.\n\n Alberta's constitution, like Britain's (on which it is modeled), includes any and all pieces of legislation, court decisions, proclamations, and conventions which together inform how the province operates.\n\n Many statutes are important to understanding the governance of the province, but nowhere are they consolidated into a single document or even a list.\n\n The office of Attorney-General at one time suggested 23 acts which might be included, but cautioned that this was not a \"definitive list\".\n\n However, since Alberta is a part of federation, its powers are clearly delineated in law, via the Constitution of Canada.",
+    "Canada under British rule\nCanada first came under British rule with the Treaty of Paris (1763) which ceded New France, of which Canada was a part, to the British Empire.\n\n Gradually, other territories, colonies, and provinces that were part of British North America would be added to Canada.\n\n The Royal Proclamation of 1763 enlarged the colony of Canada under the name of the Province of Quebec, which with the Constitutional Act 1791 became known as The Canadas.\n\n With the Act of Union 1840 Upper and Lower Canada were joined to become the United Province of Canada.\n\n Later, with Confederation in 1867, the British maritime colonies of New Brunswick and Nova Scotia were joined with the British colony of Canada to form the Dominion of Canada, which was subsequently divided into four provinces, Ontario, Quebec, New Brunswick, and Nova Scotia.\n\n A number of other British colonies, such as Newfoundland and British Columbia, and large territories such as Rupert's Land initially remained outside of the newly formed federation.\n\n Over time, the remaining colonies and territories within British North America came under the control of Canada until the current geographic extent of the country was reached when Newfoundland and Labrador joined Canada in 1949.",
+    "Politics of Canada\nThe politics of Canada function within a framework of parliamentary democracy and a federal system of parliamentary government with strong democratic traditions.\n\n Canada is a constitutional monarchy, in which the Monarch is head of state.\n\n The country has a multi-party system in which many of its legislative practices derive from the unwritten conventions of and precedents set by the United Kingdom's Westminster Parliament.\n\n However, Canada has evolved variations: party discipline in Canada is stronger than in the United Kingdom and more parliamentary votes are considered motions of confidence, which tends to diminish the role of non-Cabinet Members of Parliament, (MPs).\n\n Such members, in the government caucus, and junior or lower-profile members of opposition caucuses, are known as backbenchers. Backbenchers can, however, exert their influence by sitting in parliamentary committees, like the Public Accounts Committee or the National-Defence Committee."
+   ]
+  },
+  {
+   "id": "0d4acc6db00d4b93",
+   "gold": [
+    {
+     "sentence": " It is the third installment of the \"Naked\" series \"Naked Killer\" (1992) and \"Naked Weapon\" (2002).",
+     "facts": {
+      "0.0": "The work is the third installment of the 'Naked' series.",
+      "0.1": "'Naked Killer' is a work in the 'Naked' series released in 1992.",
+      "0.2": "'Naked Weapon' is a work in the 'Naked' series released in 2002."
+     }
+    },
+    {
+     "sentence": "Naked Weapon (赤裸特工) is a 2002 Hong Kong action-thriller film directed by action choreographer Tony Ching and starring Maggie Q, Anya Wu and Daniel Wu.",
+     "facts": {
+      "1.0": "Naked Weapon is also titled 赤裸特工.",
+      "1.1": "Naked Weapon is a 2002 film.",
+      "1.2": "Naked Weapon is a Hong Kong film.",
+      "1.3": "Naked Weapon is an action-thriller film.",
+      "1.4": "Naked Weapon was directed by action choreographer Tony Ching.",
+      "1.5": "Naked Weapon stars Maggie Q.",
+      "1.6": "Naked Weapon stars Anya Wu.",
+      "1.7": "Naked Weapon stars Daniel Wu."
+     }
+    }
+   ],
+   "items": [
+    "Naked Gun 33⅓: The Final Insult\nNaked Gun 33⅓: The Final Insult is a 1994 comedy film, and the third and final installment in \"The Naked Gun\" film series, which was based on the \"Police Squad!\n\n\" television series.",
+    "Naked City (TV series)\nNaked City is a police drama series from Screen Gems which was broadcast from 1958 to 1959 and from 1960 to 1963 on the ABC television network.\n\n It was inspired by the 1948 motion picture \"The Naked City\" and mimics its dramatic \"semi-documentary\" format.\n\n As in the film, each episode concluded with a narrator intoning the iconic line: \"There are eight million stories in the naked city.\n\n This has been one of them.\"",
+    "Mel Gibson filmography\nFive years later he played Martin Riggs in the buddy cop action comedy \"Lethal Weapon\" alongside Danny Glovera role he later reprised in its sequels \"Lethal Weapon 2\" (1989), \"Lethal Weapon 3\" (1992), and \"Lethal Weapon 4\" (1998).",
+    "The Human Centipede 2 (Full Sequence)\nThe Human Centipede 2 (Full Sequence) is a 2011 Dutch black and white exploitation-horror film written, directed, and co-produced by Dutch filmmaker Tom Six.\n\n The sequel to Six's 2009 film \"The Human Centipede (First Sequence)\", the film stars Laurence R. Harvey as a mentally impaired English man who watches and becomes obsessed with the first \"Human Centipede\" film, and decides to make his own \"centipede\" consisting of twelve people, including Ashlynn Yennie, an actress from the first film.",
+    "Anatomy 2\nAnatomy 2 (German: \"Anatomie 2\" ) is a 2003 German thriller film written and directed by Stefan Ruzowitzky.\n\n It's the sequel to the 2000 film \"Anatomy\", that starred Franka Potente.\n\n The story moves to Berlin for this film.",
+    "Naked Soldier\nNaked Soldier (絕色武器) is a 2012 Hong Kong action film directed by Marco Mak and starring Jennifer Tse.\n\n It is the third installment of the \"Naked\" series \"Naked Killer\" (1992) and \"Naked Weapon\" (2002).",
+    "American Pie Presents: The Naked Mile\nAmerican Pie Presents: The Naked Mile (also known as American Pie: The Naked Mile) is a 2006 American sex comedy film released by Universal Pictures.\n\n It is the second installment in the \"American Pie Presents\" series and the fifth installment in the \"American Pie\" franchise.\n\n The film begins a story arc that concludes with \"\" (2007).\n\n John White stars as Erik Stifler, a high school senior who is given a \"guilt free pass\" by his girlfriend, Tracy Sterling (Jessy Schram), and so visits the Beta House fraternity led by his cousin, Dwight Stifler (Steve Talley), to run a mile naked.\n\n Christopher McDonald co-stars as Erik's father, Harry, and Eugene Levy once again plays Jim's Dad, who turns out to be a family friend of both Erik's and Tracy's.\n\n Also, it is in this film that his name is revealed to be \"Noah Levenstein\".",
+    "The Naked Gun 2½: The Smell of Fear\nThe Naked Gun 2½: The Smell of Fear is a 1991 comedy film.\n\n It is the sequel to the 1988 film \"\" and the second installment in \"The Naked Gun\" film series.\n\n The film stars Leslie Nielsen as the comically bumbling Police Lt. Frank Drebin of \"Police Squad!\n\n\".\n\n Priscilla Presley plays the role of Jane, with O. J. Simpson as Nordberg and George Kennedy as police captain Ed Hocken.\n\n The film also features Robert Goulet (who previously made a \"special guest star\" appearance on \"Police Squad!\")\n\n as the villainous Quentin Hapsburg and Richard Griffiths as renewable fuel advocate Dr. Albert S. Meinheimer (as well as his evil double, Earl Hacker).\n\n Zsa Zsa Gabor, Mel Tormé and members of the Chicago Bears have cameo roles.",
+    "Naked Weapon\nNaked Weapon (赤裸特工) is a 2002 Hong Kong action-thriller film directed by action choreographer Tony Ching and starring Maggie Q, Anya Wu and Daniel Wu.",
+    "Die Hard with a Vengeance\nDie Hard with a Vengeance is a 1995 American action film and the third in the \"Die Hard\" film series.\n\n It was co-produced and directed by John McTiernan (who directed \"Die Hard\"), written by Jonathan Hensleigh, and stars Bruce Willis as New York City Police Department Lieutenant John McClane, Samuel L. Jackson as McClane's reluctant partner Zeus Carver, and Jeremy Irons as Simon Gruber.\n\n It was released on May 19, 1995, five years after \"Die Hard 2\", becoming the highest-grossing film at the worldwide box-office that year, but received mixed reviews.\n\n It was followed by \"Live Free or Die Hard\" and \"A Good Day to Die Hard\" in 2007 and 2013, respectively."
+   ]
+  },
+  {
+   "id": "37766f8824f472f8",
+   "gold": [
+    {
+     "sentence": "Lukas Rossi (born December 21, 1976) is a Canadian rock musician and was the winner of the CBS Television reality series \"\" - a televised audition contest to become lead singer of the hard rock supergroup \"Rock Star Supernova\".",
+     "facts": {
+      "0.0": "Lukas Rossi was born on December 21, 1976.",
+      "0.1": "Lukas Rossi is a Canadian rock musician.",
+      "0.2": "Lukas Rossi was the winner of a CBS Television reality series.",
+      "0.3": "That CBS Television reality series was a televised audition contest to become lead singer of the hard rock supergroup 'Rock Star Supernova'."
+     }
+    },
+    {
+     "sentence": "Terry Alan Kath (January 31, 1946 – January 23, 1978) was an American musician and songwriter, best known as the original guitarist, one of the lead singers and founding members of the rock band Chicago.",
+     "facts": {
+      "1.0": "Terry Alan Kath was born on January 31, 1946.",
+      "1.1": "Terry Alan Kath died on January 23, 1978.",
+      "1.2": "Terry Alan Kath was an American musician.",
+      "1.3": "Terry Alan Kath was an American songwriter.",
+      "1.4": "Terry Alan Kath was best known as the original guitarist of the rock band Chicago.",
+      "1.5": "Terry Alan Kath was one of the lead singers of the rock band Chicago.",
+      "1.6": "Terry Alan Kath was a founding member of the rock band Chicago."
+     }
+    }
+   ],
+   "items": [
+    "Roger Kitter\nRoger Kitter (20 October 1949 – 3 January 2015) was an English actor best known for playing Captain Alberto Bertorelli in series 7 of the British sitcom TV series \"'Allo 'Allo!\n\n\".\n\n He had previously appeared weekly with Lulu throughout the 10-week run of her 1973 BBC1 series \"It's Lulu\".\n\n With Kaplan Kaye he also recorded a song \"Chalk Dust – the Umpire Strikes Back\" using the moniker 'The Brat'.\n\n Released on the Hansa label, it entered the UK Singles Chart on 10 July 1982; it reached a peak of number 19, and remained in the chart for 8 weeks.\n\n The song was a Top 10 hit in the Netherlands, Belgium and South Africa, and lampooned John McEnroe complaining about line calls in tennis (\"The ball's in, everyone can see that the ball's in!\")\n\n.\n\n He was also an impressionist, who provided the voice of Tommy Cooper in the Lego 'Kipper' advertisement.",
+    "Terry Glaze\nTerrence Lee Glaze (born November 29, 1964, Columbus), known as Terry Lee, is a Texas-raised singer and guitarist who is most known for his work in American heavy metal bands Lord Tracy and Pantera.",
+    "Leonard Schrader\nLeonard Schrader (November 30, 1943 – November 2, 2006) was an American screenwriter and director, most notable for his ability to write Japanese language films and for his many collaborations with his brother, Paul Schrader.\n\n He earned an Academy Award Nomination for the screenplay he wrote for the film \"Kiss of the Spider Woman\".",
+    "Ted Kooshian\nTed Kooshian (born October 8, 1961) is an American jazz pianist, keyboardist, and composer, who has performed with Aretha Franklin, Chuck Berry, Marvin Hamlisch, Sarah Brightman, Il Divo, and Blood, Sweat, and Tears.\n\n Kooshian has played in many Broadway pit orchestras, and has been a member of the Ed Palermo Big Band since 1994.\n\n Originally from San Jose, California, Kooshian has been performing since the 1980s.",
+    "Lukas Rossi\nLukas Rossi (born December 21, 1976) is a Canadian rock musician and was the winner of the CBS Television reality series \"\" - a televised audition contest to become lead singer of the hard rock supergroup \"Rock Star Supernova\".",
+    "Luther Campbell\nLuther Roderick Campbell (born December 22, 1960), also known as Luke Skyywalker and simply Luke, is an American record label owner, rap performer, promoter, and actor.\n\n He is best known as a one-time member and leader of rap group 2 Live Crew, and star of his own short-lived show on VH1, \"Luke's Parental Advisory\".\n\n As a result of one of the group's songs, which used a parody of Roy Orbison's \"Oh, Pretty Woman\", Campbell was party to \"Campbell v. Acuff-Rose Music, Inc.\", which was argued in front of the U.S. Supreme Court.",
+    "Sandy Rothman\nSandy Rothman (born January 30, 1946, Miami, Florida) is a San Francisco Bay Area bluegrass multi-instrumentalist and record producer.\n\n He plays mandolin, dobro and banjo, and he also sings.\n\n Rothman was a friend and colleague of Grateful Dead bandleader Jerry Garcia, and a member of the Jerry Garcia Acoustic Band.\n\n He played bluegrass with Garcia and David Nelson as the Black Mountain Boys in 1964, and has played with Bill Monroe and his Blue Grass Boys, Earl Taylor, Red Allen, Jimmie Skinner, Larry Sparks, the Kentucky Colonels, Country Joe McDonald, Kathy Kallick and Clarence White, among other musicians.\n\n He has been described as \"one of the chief biscuits when and where bluegrass music is discussed, scribed, or performed in northern California.\"",
+    "Rock Star Supernova\nRock Star Supernova was a reality television-formed supergroup consisting of drummer Tommy Lee (Mötley Crüe), bassist Jason Newsted (ex-Metallica), guitarist Gilby Clarke (ex-Guns N' Roses) and singer Lukas Rossi.\n\n The band was formed during the second season of the Rock Star Reality TV series which was called .",
+    "Terry Kath\nTerry Alan Kath (January 31, 1946 – January 23, 1978) was an American musician and songwriter, best known as the original guitarist, one of the lead singers and founding members of the rock band Chicago.\n\n He has been praised by the band for his guitar skills and Ray Charles-influenced vocal style.",
+    "Terry Ray (actor)\nTerry Ray (born February 12, 1961) is an American actor, screenwriter, and producer.\n\n Some of his work includes \"Gaydar\" and \"Cost of Living\" (2009).\n\n Ray is the creator and writer of \"here!\n\n TV\"'s sitcom \"From Here on OUT\", the first original gay sitcom created by a gay network.\n\n Terry stars in the sitcom, along with Juliet Mills, Suzanne Whang and T.J. Hoban.\n\n<br><br>Terry Ray's 1987 appearance on Scrabble (game show) is noted as number 3 in the \"10 Great Gay Moments in Game Show History\", after Charles Nelson Reilly and Paul Lynde.\n\n In the same appearance, Terry was also named as one of the \"5 Weirdest Game Show Contestants Ever\", by Movieline.\n\n<br><br>Terry’s first professional writing job was the stage performance “Hollywood Goes Classical\" at the venerable Dorothy Chandler Pavilion starring Mickey Rooney, Michael York, Dean Jones, Rhonda Fleming and several other classic film stars."
+   ]
+  },
+  {
+   "id": "febe693faf920834",
+   "gold": [
+    {
+     "sentence": "The 'Burbs is a 1989 American comedy thriller film directed by Joe Dante starring Tom Hanks, Bruce Dern, Carrie Fisher, Rick Ducommun, Corey Feldman, Wendy Schaal and Henry Gibson.",
+     "facts": {
+      "0.0": "The 'Burbs is a 1989 American film.",
+      "0.1": "The 'Burbs is a comedy thriller film.",
+      "0.2": "The 'Burbs was directed by Joe Dante.",
+      "0.3": "The 'Burbs stars Tom Hanks.",
+      "0.4": "The 'Burbs stars Bruce Dern.",
+      "0.5": "The 'Burbs stars Carrie Fisher.",
+      "0.6": "The 'Burbs stars Rick Ducommun.",
+      "0.7": "The 'Burbs stars Corey Feldman.",
+      "0.8": "The 'Burbs stars Wendy Schaal.",
+      "0.9": "The 'Burbs stars Henry Gibson."
+     }
+    },
+    {
+     "sentence": "Richard \"Rick\" Ducommun (July 3, 1952 – June 12, 2015) was a Canadian actor, comedian and writer who appeared in films and television.",
+     "facts": {
+      "1.0": "Rick Ducommun was born on July 3, 1952.",
+      "1.1": "Rick Ducommun died on June 12, 2015.",
+      "1.2": "Rick Ducommun was a Canadian actor.",
+      "1.3": "Rick Ducommun was a Canadian comedian.",
+      "1.4": "Rick Ducommun was a Canadian writer.",
+      "1.5": "Rick Ducommun appeared in films.",
+      "1.6": "Rick Ducommun appeared in television."
+     }
+    }
+   ],
+   "items": [
+    "Night Life (film)\nNight Life is a 1989 American zombie comedy film directed by David Acomba and starring Scott Grimes, John Astin, and Cheryl Pollak.\n\n It centers around a high school nerd named Archie Melville who is harassed from beyond the grave by the zombie corpses of his former high school bullies (recently deceased) after they are brought back to life by a freak lightning storm.\n\n It is also known as Grave Misdemeanors.",
+    "Araby Lockhart\nAraby Lockhart (born December 4, 1926) is a Canadian stage and television actress, best known for her performances in the films \"Capote\" and \"Police Academy\" and her stage performances as a member of Hart House Theatre and the Straw Hat Players.\n\n Lockhart has also served as President of the Actors' Fund of Canada.",
+    "Pizza 73\nPizza 73 is a Canadian restaurant chain that offers a number of different styles of pizza, along with chicken wings.\n\n It has been operated by Pizza Pizza since 2007.\n\n Toronto-based Pizza Pizza had acquired the restaurant for a total of $CAN70.2 million.\n\n There are 89 locations throughout Western Canada, which include the provinces of British Columbia, Alberta, and Saskatchewan.\n\n The restaurant's name originates from its original phone number: 473–7373.\n\n Founded by David Tougas and Guy Goodwin in 1985, Pizza 73 is headquartered in Edmonton, Alberta, Canada.",
+    "Araby Lockhart (born 1926) is a Canadian stage and television actress known for *Capote*, *Police Academy*, Hart House Theatre and the Straw Hat Players; she also led the Actors’ Fund of Canada. American voice actress Rebecca Forstadt (born 1953), also known as Reba West, voiced young female characters in animated series. Her career included melodrama at Knott’s Berry Farm, television wardrobe work, Los Angeles theater, and film roles.",
+    "The 'Burbs\nThe 'Burbs is a 1989 American comedy thriller film directed by Joe Dante starring Tom Hanks, Bruce Dern, Carrie Fisher, Rick Ducommun, Corey Feldman, Wendy Schaal and Henry Gibson.\n\n The film was written by Dana Olsen, who also has a cameo in the movie.\n\n The film pokes fun at suburban environments and their eccentric dwellers.",
+    "Marty Belafsky\nMarty Belafsky (born September 19, 1975) is an American actor/comedian born in Los Angeles, California.\n\n He began acting professionally at age 13 and was soon cast as Louis Plumb on the short-lived NBC series \"Hull High\".\n\n Shortly thereafter, Belafsky landed the role of Crutchy in the Disney musical film, \"Newsies\".\n\n He continued acting through his teens, making appearances in such television shows as \"The Wonder Years\", \"Great Scott\" and \"Step By Step\" and the film \"Wrestling Ernest Hemingway\".\n\n Belafsky also voiced Kent Swanson in the video game series \"Dead Rising\" released in 2006.",
+    "Jebb Fink\nJebb Fink is an American-Canadian stand-up comedian and television personality.\n\n Best known as a reporter and host for \"the Big Breakfast\" on A-Channel, Calgary.\n\n He won a Gemini as co-creator of the CBC comedy \"An American in Canada\" and was a weather presenter on \"Your City\" for City TV Calgary, he also hosted the short-lived late night talk show \"Global Late Night\" for the Global Television Network in 2004.",
+    "Freebie and the Bean\nFreebie and the Bean is a 1974 American action-comedy film about two off-beat police detectives who wreak havoc in San Francisco attempting to bring down a local organized crime boss.\n\n The picture, a precursor to the buddy cop film genre popularized a decade later, stars James Caan, Alan Arkin, Loretta Swit and Valerie Harper.\n\n Harper was nominated for the Golden Globe for New Star of the Year for playing the Hispanic wife of Alan Arkin.\n\n The film was directed by Richard Rush.\n\n An article in Rolling Stone magazine alleged that Stanley Kubrick called \"Freebie and the Bean\" the best film of 1974.\n\n Arkin and Caan would not appear in another movie together until the 2008 film adaptation of \"Get Smart\".",
+    "Neon City\nNeon City (also known as Anno 2053 in Italy, Neonski Grad in Serbia) is a 1991 Canadian post-apocalyptic science fiction film directed by Monte Markham and written by Jeff Begun and Ann Lewis Hamilton, under the pseudonym Buck Finch.\n\n The cast includes Michael Ironside, Vanity, Lyle Alzado, Valerie Wildman, Nick Klar, Juliet Landau, Richard Sanders and Markham.",
+    "*Family Matters* was a sitcom about Chicago’s middle-class African American Winslow family. A *Perfect Strangers* spin-off, it aired on ABC (1989–97) and CBS (1997–98), spanning nine seasons and 215 episodes. Neighbor Steve Urkel (Jaleel White) became its breakout and eventual main character. Kellie Shanygne Williams (born March 22, 1976) played middle child Laura Winslow; her middle name is pronounced"
+   ]
+  }
+ ]
+}

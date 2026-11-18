@@ -1,0 +1,430 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "cb4e8f04b2c7c5da",
+   "gold": [
+    {
+     "sentence": "Karl Hermann Frank (24 January 1898 – 22 May 1946) was a prominent Sudeten German Nazi official in Czechoslovakia prior to and during World War II and an SS-\"Obergruppenführer\".",
+     "facts": {
+      "0.0": "Karl Hermann Frank's life dates are 24 January 1898 to 22 May 1946.",
+      "0.1": "Karl Hermann Frank was a prominent Sudeten German Nazi official in Czechoslovakia.",
+      "0.2": "Karl Hermann Frank was a Nazi official in Czechoslovakia prior to World War II.",
+      "0.3": "Karl Hermann Frank was a Nazi official in Czechoslovakia during World War II.",
+      "0.4": "Karl Hermann Frank was an SS-Obergruppenführer."
+     }
+    },
+    {
+     "sentence": " Until April 1942, it was the highest commissioned SS rank, inferior only to \"Reichsführer-SS\" (Heinrich Himmler or RFSS, which was the internal SS-abbreviation for Himmler) Translated as \"senior group leader\", the rank of \"Obergruppenführer\" was senior to \"Gruppenführer\".",
+     "facts": {
+      "1.0": "Until April 1942, the Obergruppenführer rank was the highest commissioned SS rank.",
+      "1.1": "Until April 1942, the Obergruppenführer rank was inferior only to Reichsführer-SS.",
+      "1.2": "Reichsführer-SS was the SS rank held by Heinrich Himmler.",
+      "1.3": "RFSS was the internal SS abbreviation for Himmler.",
+      "1.4": "Obergruppenführer translates as senior group leader.",
+      "1.5": "The rank of Obergruppenführer was senior to Gruppenführer."
+     }
+    }
+   ],
+   "items": [
+    "Field marshal\nField marshal (or field-marshal, abbreviated as FM) ( , ) is a very senior military rank, ordinarily senior to the general officer ranks.\n\n Usually it is the highest rank in an army, and when it is, few (if any) persons are appointed to it.\n\n It is considered as a five-star rank (OF-10) in modern-day armed forces in many countries.\n\n Promotion to the rank of field marshal in many countries historically required extraordinary military achievement by a general (a wartime victory).\n\n However, the rank has also been used as a divisional command rank and also as a brigade command rank.\n\n Examples of the different uses of the rank include Austria-Hungary, Prussia and Germany for an extraordinary achievement; Spain and Mexico for a divisional command (Spanish: \"mariscal de campo\" ); and France, Portugal and Brazil for a brigade command (French: \"maréchal de camp\" , Portuguese: \"marechal de campo\" ).",
+    "Herbert Büchs\nHerbert Büchs (20 November 1913 – 19 May 1996) was a Lieutenant General of the German Air Force and a former Luftwaffe staff officer in Nazi Germany's Oberkommando der Wehrmacht (OKW) during World War II.\n\n As second adjutant to General Alfred Jodl with the rank of Major he is notable for being present in the conference room when the 20 July plot bomb exploded in 1944.",
+    "Karl Hermann Frank\nKarl Hermann Frank (24 January 1898 – 22 May 1946) was a prominent Sudeten German Nazi official in Czechoslovakia prior to and during World War II and an SS-\"Obergruppenführer\".\n\n He was tried, convicted and executed after World War II for his role in organizing the massacres of the people of the Czech villages of Lidice and Ležáky.",
+    "List of Generalobersts\nGeneraloberst, in English Colonel General, was, in Germany and Austria-Hungary—the German \"Reichswehr\" and \"Wehrmacht\", the Austro-Hungarian Common Army, and the East German National People's Army, as well as the respective police services—the second highest general officer rank, ranking above full general but below general field marshal.\n\n It was equivalent to \"Generaladmiral\" in the \"Kriegsmarine\" until 1945, or to Flottenadmiral in the \"Volksmarine\" until 1990.\n\n The rank was the highest ordinary military rank and the highest military rank awarded in peacetime; the higher rank of general field marshal was only awarded in wartime by the head of state.\n\n In general, a Generaloberst had the same privileges as a general field marshal.",
+    "Frank A. Armstrong\nFrank Alton Armstrong Jr. (May 24, 1902 – August 20, 1969) was a lieutenant general of the United States Air Force.\n\n As a brigadier general in the United States Army Air Forces during World War II, he was the inspiration for the main character in the novel and subsequent film, \"Twelve O'Clock High.\"\n\n After the war, he held a variety of senior leadership positions prior to and following the establishment of the USAF as an independent service in 1947.\n\n Promoted to major general in 1950, he advanced to lieutenant general in 1956 and retired at that rank in 1962.",
+    "Ludwig Beck\nLudwig August Theodor Beck (29 June 1880 – 21 July 1944) was a German general and Chief of the German General Staff during the early years of the Nazi regime in Germany before World War II.\n\n Ludwig Beck was never a member of the Nazi Party, though in the early 1930s he supported Adolf Hitler's forceful denunciation of the Versailles Treaty and belief in the need for Germany to rearm.\n\n Beck had grave misgivings regarding the Nazi demand that all German officers swear an oath of fealty to the person of Hitler in 1934, though he believed that Germany needed strong government and that Hitler could successfully provide this so long as he was influenced by traditional elements within the military rather than the SA and SS.",
+    "Obergruppenführer\nObergruppenführer (] , \"senior group leader\") was a Nazi Party paramilitary rank that was first created in 1932 as a rank of the \"Sturmabteilung\" (SA), and adopted by the \"Schutzstaffel\" (SS) one year later.\n\n Until April 1942, it was the highest commissioned SS rank, inferior only to \"Reichsführer-SS\" (Heinrich Himmler or RFSS, which was the internal SS-abbreviation for Himmler) Translated as \"senior group leader\", the rank of \"Obergruppenführer\" was senior to \"Gruppenführer\".\n\n A similarly named rank of \"Untergruppenführer\" existed in the SA from 1929 to 1930 and as a title until 1933.\n\n In April 1942, the new rank of \"SS-Oberst-Gruppenführer\" was created which was above \"Obergruppenführer\" and below \"Reichsführer-SS\".",
+    "Franz Halder\nFranz Halder (30 June 1884 – 2 April 1972) was a German general and the chief of the \"Oberkommando des Heeres\" staff (OKH, Army High Command) from 1938 until September 1942, when he was dismissed after frequent disagreements with Adolf Hitler.\n\n Until December 1941 Halder's military position corresponded to the old Chief of the General Staff position, which during World War I had been the highest military office in the German Imperial Army.\n\n Halder's diary during his time as chief of OKH General Staff has been a source for authors that have written about such subjects as Hitler, World War II and the Nazi Party.\n\n In William Shirer's \"The Rise and Fall of the Third Reich\", Halder's diary is cited hundreds of times.",
+    "Friedrich Jeckeln\nFriedrich Jeckeln (2 February 1895 – 3 February 1946) was a high-ranking official in the SS of Nazi Germany who served as an SS and Police Leader in the occupied Soviet Union during World War II.\n\n Jeckeln was the commander of one of the largest collection of \"Einsatzgruppen\" and was personally responsible for ordering and organizing the deaths of over 100,000 Jews, Slavs, Romani, and other \"undesirables\".\n\n After the end of World War II, Jeckeln was convicted for his crimes by a Soviet military tribunal in Riga, Latvia and executed in 1946.",
+    "Alfred Jodl\nAlfred Josef Ferdinand Jodl (   ; 10 May 1890 – 16 October 1946) was a German general and war criminal during World War II, who served as the Chief of the Operations Staff of the Armed Forces High Command (Oberkommando der Wehrmacht)."
+   ]
+  },
+  {
+   "id": "861e6cf5df84f4cf",
+   "gold": [
+    {
+     "sentence": "Václav Havel (] ; 5 October 193618 December 2011) was a Czech writer and former dissident, who served as the 1st President of the Czech Republic from 1993 to 2003.",
+     "facts": {
+      "0.0": "Václav Havel was born on 5 October 1936.",
+      "0.1": "Václav Havel died on 18 December 2011.",
+      "0.2": "Václav Havel was a Czech writer.",
+      "0.3": "Václav Havel was a former dissident.",
+      "0.4": "Václav Havel served as the 1st President of the Czech Republic.",
+      "0.5": "Václav Havel served as President of the Czech Republic from 1993 to 2003."
+     }
+    },
+    {
+     "sentence": "Penelope Fitzgerald (17 December 1916 – 28 April 2000) was an English Booker Prize-winning novelist, poet, essayist and biographer.",
+     "facts": {
+      "1.0": "Penelope Fitzgerald was born on 17 December 1916.",
+      "1.1": "Penelope Fitzgerald died on 28 April 2000.",
+      "1.2": "Penelope Fitzgerald was English.",
+      "1.3": "Penelope Fitzgerald was a Booker Prize-winning novelist.",
+      "1.4": "Penelope Fitzgerald was a poet.",
+      "1.5": "Penelope Fitzgerald was an essayist.",
+      "1.6": "Penelope Fitzgerald was a biographer."
+     }
+    }
+   ],
+   "items": [
+    "Vaněk plays\nThe Vaněk plays are a set of plays to which the character Ferdinand Vaněk is central.\n\n Vaněk first appeared in the play \"Audience\" by Václav Havel.\n\n He subsequently appeared in three other plays by Havel (\"Protest\", \"Unveiling\", and \"Dozens of Cousins\"), as well as plays by his friends and colleagues, including Pavel Landovský and Tom Stoppard.",
+    "Václav Havel Tribute Concert\nTribute to Václav Havel (Czech: Pocta Václavu Havlovi) was an event held in memory of Václav Havel, the last Czechoslovak and the first Czech President, writer, playwright and human rights activist.\n\n The concert took place in Lucerna Music Bar in Prague on 23 December 2011.\n\n Václav Havel died on Sunday 18 December 2011 at 10:15 a.m.",
+    "Czech presidential election, 1993\nThe 1993 Czech presidential election was held on 26 January 1993 to elect the first President of independent Czech Republic.\n\n The first election was done indirectly by the members of the Czech Republic Parliament.\n\n Václav Havel was elected President.\n\n The election was complicated only by attacks of Republicans against Havel and by bomb threat to the Parliament.",
+    "Václav Havel Human Rights Prize\nThe Václav Havel Human Rights Prize is an annual €60,000 award established in 2013 by the Parliamentary Assembly of the Council of Europe, the Václav Havel Library and the Charta 77 Foundation, to honour \"outstanding\" civil society action in defence of human rights, in Europe and beyond.",
+    "Václav Havel\nVáclav Havel (] ; 5 October 193618 December 2011) was a Czech writer and former dissident, who served as the 1st President of the Czech Republic from 1993 to 2003.\n\n Prior to that he also served as the last president of Czechoslovakia from 1989 until its dissolution in 1992.\n\n As a writer of Czech literature, he is known for his plays, essays, and memoirs.",
+    "Edward Fitzgerald (barrister)\nEdward Hamilton Fitzgerald CBE QC is an English barrister who specialises in criminal law, public law, and international human rights law.\n\n His work against the death penalty has led him to represent despised criminals such as: Myra Hindley, a perpetrator in the Moors murders; Mary Bell, a child killer; Maxine Carr; Jon Venables, one of James Bulger's killers; various IRA prisoners; and Abu Hamza, the controversial Muslim cleric.\n\n Fitzgerald is currently the joint head of Doughty Street Chambers along with Geoffrey Robertson QC.\n\n Fitzgerald has been called to the Bar in a number of jurisdictions including Belize, Grenada and St Vincent, and has been granted rights of audience to appear in cases in Hong Kong, Trinidad and Tobago, St Lucia, Bahamas, and the British Virgin Islands.\n\n He is also a trustee and patron of a number of charities including The Death Penalty Project and The Longford Trust.",
+    "Letters to Olga\nLetters to Olga (\"Czech:Dopisy Olze\") is a book of compiled letters written by Czech playwright, dissident, and future president, Václav Havel to his wife Olga Havlová during his nearly four-year imprisonment from May 1979 to March 1983.\n\n (Havel was released when he came down with a high fever and received a medical discharge).\n\n Havel was imprisoned by the communist regime of then Czechoslovakia for being one of the leaders of The Committee for the Defense of the Unjustly Prosecuted (VONS) - most of whom had been signatories of the human rights document Charter 77.",
+    "Penelope Fitzgerald\nPenelope Fitzgerald (17 December 1916 – 28 April 2000) was an English Booker Prize-winning novelist, poet, essayist and biographer.\n\n In 2008, \"The Times\" included her in a list of \"the 50 greatest British writers since 1945\".\n\n In 2012, \"The Observer\" named her final novel, \"The Blue Flower\" one of \"the ten best historical novels\".",
+    "Theatre Organization of Cyprus (THOC), founded in 1970, promotes theatre and international artistic relations; it is governed by a presidentially appointed board. Copenhagen’s Tivoli Concert Hall, designed by Frits Schlegel and Hans Hansen, opened in 1956. Czech dissident, playwright and writer Václav Havel became Czechoslovakia’s last president (1989–92) and the Czech Republic’s first (1993–2003). A ",
+    "The Pig, or Václav Havel's Hunt for a Pig\nThe Pig, or Václav Havel's Hunt for a Pig is the final work by Václav Havel, co-authored by Vladimír Morávek.\n\n The English translation is by Edward Einhorn .\n\n Originally a short dialogue from 1987 (entitled simply \"The Pig\") and printed in a samizdat, the piece is a comic (and true) story of Václav Havel’s efforts to hold a pig roast for his friends."
+   ]
+  },
+  {
+   "id": "474046c6b2f33ad6",
+   "gold": [
+    {
+     "sentence": "The Data Universal Numbering System, abbreviated as DUNS or D-U-N-S, is a proprietary system developed and regulated by Dun & Bradstreet (D&B) that assigns a unique numeric identifier, referred to as a \"DUNS number\" to a single business entity.",
+     "facts": {
+      "0.0": "The Data Universal Numbering System is abbreviated as DUNS or D-U-N-S.",
+      "0.1": "The Data Universal Numbering System is a proprietary system.",
+      "0.2": "The Data Universal Numbering System is developed by Dun & Bradstreet (D&B).",
+      "0.3": "The Data Universal Numbering System is regulated by Dun & Bradstreet (D&B).",
+      "0.4": "The Data Universal Numbering System assigns a unique numeric identifier to a single business entity.",
+      "0.5": "The unique numeric identifier is referred to as a DUNS number."
+     }
+    },
+    {
+     "sentence": " Often referred to as D&B, the company’s database contains more than 265 million business records worldwide.",
+     "facts": {
+      "1.0": "Dun & Bradstreet is often referred to as D&B.",
+      "1.1": "The company's database contains more than 265 million business records.",
+      "1.2": "The company's database contains business records worldwide."
+     }
+    }
+   ],
+   "items": [
+    "Data Universal Numbering System\nThe Data Universal Numbering System, abbreviated as DUNS or D-U-N-S, is a proprietary system developed and regulated by Dun & Bradstreet (D&B) that assigns a unique numeric identifier, referred to as a \"DUNS number\" to a single business entity.\n\n It was introduced in 1963 to support D&B's credit reporting practice.\n\n It is standard worldwide.\n\n DUNS users include the European Commission, the United Nations, and the United States government.\n\n More than 50 global industry and trade associations recognize, recommend, or require DUNS.\n\n The DUNS database contains over 250 million entries for businesses throughout the world.",
+    "Graph query row:\nentity: Data Universal Numbering System\nrelationship: CREATED_BY\nrelated: Dun & Bradstreet",
+    "Dun &amp; Bradstreet\nDun & Bradstreet, Inc. () is a company that provides commercial data, analytics and insights for business, headquartered in Short Hills, a community in Millburn, New Jersey, US.\n\n It offers a wide range of products, and services for risk and finance, operations and supply, and sales and marketing professionals, as well as research and insights on global business issues, serving customers in government and industries such as communications, technology, strategic financial services, and retail/telecommunications/manufacturing markets.\n\n Often referred to as D&B, the company’s database contains more than 265 million business records worldwide.",
+    "Calypso Ichthyological Database\nThe Calypso Ichthyological Database numbering system is an open source free repository allowing the unique identification numbering of all fish species with a six-numeral fixed number.\n\n This number remains the same throughout any alterations or taxonomic changes to the species' accepted current scientific name and allows for recording of species data in 32 unique data fields including all previous names in 32 languages.\n\n It has been in use since 1994 and was pioneered by its inventor, Gerald H. Jennings, with the technical assistance of Terry Hall.\n\n It is accompanied by a vast photographic library of fish species and is free at the point of use to all researchers and academics.\n\n Much of the data is also available in published format and online.",
+    "University of Delaware\nThe University of Delaware (colloquially \"UD\") is the largest university in Delaware.\n\n The main campus is in Newark, with satellite campuses in Dover, Wilmington, Lewes, and Georgetown.\n\n It is considered a large institution with approximately 18,500 undergraduate and 4,500 graduate students. UD is a privately governed university which receives public funding for being a land-grant, sea-grant, space-grant and urban-grant state-supported research institution.",
+    "Universal Numbering System\nThe Universal Numbering System is a dental notation system for associating information to a specific tooth, and is commonly used in the United Kingdom.",
+    "Universal Pictures\nUniversal Pictures (also referred to as Universal Studios or simply Universal) is an American film studio owned by Comcast through the Universal Filmed Entertainment Group division of its wholly owned subsidiary NBCUniversal.\n\n The company was founded in 1912 by Carl Laemmle, Mark Dintenfass, Charles O. Baumann, Adam Kessel, Pat Powers, William Swanson, David Horsley, Robert H. Cochrane, and Jules Brulatour, and is the oldest surviving film studio in the United States, the world's fourth oldest after Gaumont, Pathé and Nordisk Film, and the oldest in terms of the overall film market .\n\n Its studios are located in Universal City, California, and its corporate offices are located in New York City.",
+    "United Nations (band)\nThe idea of the side project can be traced back to the early 2000s, but it was not until 2008 that United Nations took shape.\n\n Geoff Rickly has said the band started over tequila with Daryl Palumbo.\n\n At the start of the band, all members except for Rickly were under contracts with other record labels and were not legally permitted to work in projects released by another, making it difficult for the official lineup of the band to be well known.\n\n However some members from the band's original line-up have been revealed through interviews and social media posts, such as Daryl Palumbo, Jonah Bayer and Lukas Previn.\n\n Since Rickly was the only member whose primary band was not under contract, his name is the only one that could legally appear in press materials.\n\n Press photos of the band released in 2008 depict four people wearing Ronald Reagan masks.",
+    "Dunston Checks In\nDunston Checks In is a 1996 American family comedy film starring Eric Lloyd, Graham Sack, Jason Alexander, Faye Dunaway, Rupert Everett, Paul Reubens, Glenn Shadix, and introducing Sam the Orangutan as Dunston.\n\n It was written by John Hopkins and Bruce Graham and directed by Ken Kwapis.",
+    "Broward County Uniform Station Numbering\nThe Broward County Uniform Station Numbering system is a system by which all fire stations and fire apparatus in Broward County are numbered.\n\n The numbering system was developed by the Fire Chief's Association of Broward County in order to minimize confusion and create efficient radio communications at large fires or emergency scenes, where multiple departments were working together.\n\n The system went into effect on October 1, 1990 after a large fire at GLS Fiberglass in Port Everglades in 1988.\n\n Prior to 1990, each fire department had its own numbering system, usually starting at 1 and proceeding to number each station that department operated from.\n\n At this large fire in Port Everglades, Dania Beach Fire Department, Hollywood Fire Department, Port Everglades Public Safety, and Fort Lauderdale Fire Department all were on scene with their own Engine 1s.\n\n As a result, every time a person called for \"Engine 1\" on fireground radios, confusion would ensue."
+   ]
+  },
+  {
+   "id": "14a68e26c46eb4c8",
+   "gold": [
+    {
+     "sentence": "Jürgen Melzer (born 22 May 1981 in Vienna) is an Austrian tennis player.",
+     "facts": {
+      "0.0": "Jürgen Melzer was born on 22 May 1981.",
+      "0.1": "Jürgen Melzer was born in Vienna.",
+      "0.2": "Jürgen Melzer is an Austrian tennis player."
+     }
+    },
+    {
+     "sentence": "Tom Gullikson (born September 8, 1951) is a tennis coach and former professional tennis player from the United States.",
+     "facts": {
+      "1.0": "Tom Gullikson was born on September 8, 1951.",
+      "1.1": "Tom Gullikson is a tennis coach.",
+      "1.2": "Tom Gullikson is a former professional tennis player.",
+      "1.3": "Tom Gullikson is from the United States."
+     }
+    }
+   ],
+   "items": [
+    "Julian Knowle\nJulian Knowle (born 29 April 1974) is an Austrian male professional tennis player.\n\n Being a born left-hander, Knowle is now one of the few on the ATP Tour who plays his forehand, backhand, and even volleys double-handed.\n\n He was Austria's most successful doubles player in history by reaching world no. 6 in the ATP doubles rankings in January 2008, before being matched by Jürgen Melzer, who reached no. 6 in September 2010, and overtaken by Alexander Peya, who reached no. 3 in August 2013.",
+    "Tom Gullikson\nTom Gullikson (born September 8, 1951) is a tennis coach and former professional tennis player from the United States.",
+    "2010 Pilot Pen Tennis – Men's Doubles\nJulian Knowle and Jürgen Melzer were the defending champions, but Melzer chose not to participate this year.As a result, Knowle partnered with Andy Ram, but they lost to Robert Lindstedt and Horia Tecău in the semifinals.\n\n Lindstedt and Tecău went on to win the tournament, after defeating Rohan Bopanna and Aisam-ul-Haq Qureshi in the final 6–4, 7–5.",
+    "Ernests Gulbis\nErnests Gulbis (] , born 30 August 1988, and nicknamed \"The Gull\" or \"Ernie\") is a Latvian professional tennis player.\n\n In 2008, Gulbis won his first ATP Tour doubles title at the U.S. Men's Clay Court Championships, teaming with Rainer Schüttler, and in 2010 won his first ATP Tour singles title in the Delray Beach, defeating Ivo Karlović in the final.\n\n In total, Gulbis has 6 ATP titles to his name and has never lost a final.\n\n His best performance at a Grand Slam is reaching the semifinals of the 2014 French Open.\n\n He had previously reached the quarterfinals of the 2008 French Open.\n\n Gulbis' career-high singles ranking is world No. 10, making him the only Latvian tennis player ever to be ranked inside the top 10 in ATP Singles Ranking.\n\n He achieved this in June 2014.",
+    "Gerald Melzer\nGerald Melzer (born 13 July 1990) is a professional Austrian tennis player.\n\n As a qualifier, he reached the semifinals of Münich in 2015.\n\n He achieved a career-high singles ranking of world No. 68 in November 2016.",
+    "Graph query row:\nperson: Jürgen Melzer\nnationality: Austrian\nprofessional_status: tennis player",
+    "2012 US Open – Men's Doubles\nJürgen Melzer and Philipp Petzschner were the defending champions, but lost in the second round to Jamie Delgado and Ken Skupski.\n\n Melzer and Petzschner needed a wildcard to compete because they forgot to sign up.\n\n<br>",
+    "Graph query row:\nperson: Tom Gullikson\nnationality: None\nprofessional_status: ['tennis coach', 'former professional tennis player']",
+    "Jürgen Melzer\nJürgen Melzer (born 22 May 1981 in Vienna) is an Austrian tennis player.\n\n He reached a career-high singles ranking of world No. 8 in April 2011, and a doubles ranking of world No. 6 in September 2010.\n\n He is a left-handed tennis player, but is right-handed in everyday life.\n\n He has a younger brother, Gerald Melzer, with whom he has played doubles in several tournaments.",
+    "1983 Bristol Open – Doubles\nTim Gullikson and Tom Gullikson were the defending champions, but Tim Gullikson did not participate this year.\n\n Tom Gullikson partnered Johan Kriek, losing in the final."
+   ]
+  },
+  {
+   "id": "6bde2d39db55b4fd",
+   "gold": [
+    {
+     "sentence": "Dogo Cubano also known as the Cuban Mastiff, Cuban Dogo and Cuban Dogge is an extinct dog breed from Cuba.",
+     "facts": {
+      "0.0": "The Dogo Cubano is also known as the Cuban Mastiff.",
+      "0.1": "The Dogo Cubano is also known as the Cuban Dogo.",
+      "0.2": "The Dogo Cubano is also known as the Cuban Dogge.",
+      "0.3": "The Dogo Cubano is an extinct dog breed.",
+      "0.4": "The Dogo Cubano is a dog breed from Cuba."
+     }
+    },
+    {
+     "sentence": "The Dutch Shepherd is a herding dog of Dutch origin.",
+     "facts": {
+      "1.0": "The Dutch Shepherd is a herding dog.",
+      "1.1": "The Dutch Shepherd is a herding dog of Dutch origin."
+     }
+    }
+   ],
+   "items": [
+    "Swiss mountain dog\nSennenhund, called Swiss mountain dogs or Swiss cattle dogs in English, are a type of dog originating in the Swiss Alps.\n\n The Sennenhund are farm dogs of the general molosser type.\n\n There are four breeds of Sennenhund, all sporting a unique tricolor coat.\n\n While the two larger ones share a heavy build and a calm temperament, the two smaller ones are more agile.\n\n The breeds range from medium in size to very large.\n\n The name Sennenhund refers to people called \"Senn\" or Senner, Swiss alpine herdsmen and dairymen, and does not translate as \"mountain\" or \"cattle\".",
+    "Cuban Criollo\nThe Criollo Cubano originates from Spanish horses brought to Cuba by Diego Velázquez in 1751.\n\n There are four different breeds known as criollo: the Cubano de Paso, the Pinto Cubano, the Criollo de Trote and the Patibarcino.\n\n It is a small stout breed used by the Guajiro people.",
+    "Podenco Canario\nPodenco Canario (In English: \"Canary Islands Hound\", \"Canarian Warren Hound\") is a breed of dog originally from the Canary Islands.\n\n The Podenco Canario is still used in the Canary Islands today in packs as a hunting dog, primarily used for rabbit hunting.\n\n The word \"podenco\" is Spanish for \"hound\".\n\n \"Canario\" means \"Canarian\" or \"of the Canaries\".",
+    "Belgian Shepherd\nThe Belgian Shepherd (also known as the Belgian Sheepdog or Chien de Berger Belge) is a breed of medium-to-large-sized herding dog.\n\n It originated in Belgium and is similar to other sheep herding dogs from that region, including the Dutch Shepherd, the German Shepherd, the Briard, and others.\n\n Four types have been identified by various registries as separate breeds or varieties: Groenendael, Laekenois, Tervuren, and Malinois.",
+    "Drentse Patrijshond\nThe Drentsche Patrijshond is a versatile spaniel-type hunting dog from the Dutch province of Drenthe.\n\n Called the Dutch Partridge Dog (or \"Drent\" for Drenthe) in English, approximately 5,000 dogs are registered with the breed club in the Netherlands, and breed clubs operate in Belgium, Denmark, Scandinavia and North America.\n\n The Drentsche Patrijshond bears some resemblance to both spaniel and setter types of dog.\n\n An excellent pointer and retriever, this dog is often used to hunt fowl and adapts equally well to the field or marshes.",
+    "Romanian Raven Shepherd Dog\nThe Romanian Raven Shepherd Dog is a very large Romanian livestock guardian dog, taxonomized within the second group of dog breeds - Pinscher and Schanuzer - Molossoid Breeds - Swiss Mountain and Cattle Dogs, section 2.2: Molossoid Breeds - Mountain type.",
+    "Dogo Argentino\nThe Dogo Argentino, also known as the Argentine Mastiff, is a large, white, muscular dog that was developed in Argentina primarily for the purpose of big-game hunting, including wild boar; the breeder, Antonio Nores Martínez, also wanted a dog that would exhibit steadfast bravery and willingly protect its human companion.\n\n It was first bred in 1928, from the Cordoba Fighting Dog along with a wide array of other breeds including the Great Dane.",
+    "Guatemalan Dogo\nGuatemalan Dogo (\"Dogo Guatemalteco\"), formerly known as the Guatemalan Bull Terrier (\"Bullterrier Guatemalteco\"), and Guatemalan Mastiff, is a Molosser-type dog breed originating in Guatemala.\n\n It is neither recognized by the Fédération Cynologique Internationale (FCI) nor the American Kennel Club (AKC).\n\n However, it has the official national recognition of the Asociación Canofila Guatemalteca (ACANGUA) where it belongs to the Group 2.2.1 - Mastiffs.\n\n As the unique breed originating in Guatemala, it is also the national dog of the country.\n\n Nowadays it has spread to various other countries, such as the USA.",
+    "Dogo Cubano\nDogo Cubano also known as the Cuban Mastiff, Cuban Dogo and Cuban Dogge is an extinct dog breed from Cuba.\n\n It was of the Bull Mastiff type and was used for dog fighting.",
+    "Dutch Shepherd\nThe Dutch Shepherd is a herding dog of Dutch origin.\n\n They were used by shepherds and farmers who needed a versatile dog, with few demands, and a dog that was able to adapt to a harsh and meager existence."
+   ]
+  },
+  {
+   "id": "dfa810df58f9be9f",
+   "gold": [
+    {
+     "sentence": "Milium (vernacular name milletgrass) is a genus of Eurasian, North American, and North African plants in the grass family.",
+     "facts": {
+      "0.0": "Milium's vernacular name is milletgrass.",
+      "0.1": "Milium is a genus of plants in the grass family.",
+      "0.2": "Milium plants are Eurasian, North American, and North African."
+     }
+    },
+    {
+     "sentence": "Eucommia is a genus of small trees now native to China, with a fossil record that shows a much wider distribution.",
+     "facts": {
+      "1.0": "Eucommia is a genus of small trees.",
+      "1.1": "Eucommia trees are now native to China.",
+      "1.2": "The fossil record of Eucommia shows a much wider distribution."
+     }
+    },
+    {
+     "sentence": " The single living species, \"Eucommia ulmoides\", is near threatened in the wild, but is widely cultivated in China for its bark, and is highly valued in herbology such as traditional Chinese medicine.",
+     "facts": {
+      "2.0": "Eucommia has a single living species, Eucommia ulmoides.",
+      "2.1": "Eucommia ulmoides is near threatened in the wild.",
+      "2.2": "Eucommia ulmoides is widely cultivated in China for its bark.",
+      "2.3": "Eucommia ulmoides is highly valued in herbology, such as traditional Chinese medicine."
+     }
+    }
+   ],
+   "items": [
+    "Eucommia\nEucommia is a genus of small trees now native to China, with a fossil record that shows a much wider distribution.\n\n The single living species, \"Eucommia ulmoides\", is near threatened in the wild, but is widely cultivated in China for its bark, and is highly valued in herbology such as traditional Chinese medicine.",
+    "Ocimum\nOcimum is a genus of aromatic annual and perennial herbs and shrubs in the family Lamiaceae, native to the tropical and warm temperate regions of all 6 inhabited continents, with the greatest number of species in Africa.\n\n Its best known species are the cooking herb Cooking basil, \"O. basilicum\" and the medicinal herb Tulsi (holy basil), \"O. tenuiflorum\".",
+    "Eryngium\nEryngium is a genus of flowering plants in the family Apiaceae.\n\n There are about 250 species.\n\n The genus has a cosmopolitan distribution, with the center of diversity in South America.\n\n Common names include eryngo and amethyst sea holly (though the genus is not related to the true hollies, \"Ilex\").",
+    "Milium (plant)\nMilium (vernacular name milletgrass) is a genus of Eurasian, North American, and North African plants in the grass family.",
+    "Myrsine\nMyrsine is a genus of flowering plants in the family Primulaceae.\n\n It was formerly placed in the family Myrsinaceae before this was merged into the Primulaceae.\n\n It is found nearly worldwide, primarily in tropical and subtropical areas.\n\n It contains about 200 species, including several notable radiations, such as the matipo of New Zealand and the kōlea of Hawaiʻ i (the New Zealand \"black matipo\", \"Pittosporum tenuifolium\", is not related to \"Myrsine\").\n\n In the United States, members of this genus are known as colicwood.\n\n Some species, especially \"M. africana\", are grown as ornamental shrubs.",
+    "Genoplesium\nGenoplesium commonly known as midge orchids, is a genus of about 50 species of flowering plants in the orchid family, Orchidaceae and is found in Australia, New Zealand and New Caledonia.\n\n Midge orchids are terrestrial herbs with a single leaf at the base of the plant.\n\n They are similar to orchids in the genus \"Prasophyllum\" in that plants without flowers have a hollow, onion-like leaf.\n\n The flowers are small but often scented and attractive to their insect pollinators.\n\n There is disagreement about which species belong to this genus and some taxonomists suggest that most belong in the genus \"Corunastylis\".",
+    "Eucryphia\nEucryphia is a small genus of trees and large shrubs native to the south temperate regions of South America and coastal eastern Australia.\n\n Sometimes placed in a family of their own, the Eucryphiaceae, more recent classifications place them in the Cunoniaceae.\n\n There are seven species, two in South America and five in Australia, and several named hybrids.\n\n They are mostly evergreen though one species (\"E. glutinosa\") is usually deciduous.",
+    "Wild boar\nThe wild boar (\"Sus scrofa\"), also known as the wild swine or Eurasian wild pig, is a suid native to much of Eurasia, North Africa, and the Greater Sunda Islands.\n\n Human intervention has spread its distribution further, making the species one of the widest-ranging mammals in the world, as well as the most widely spread suiform.\n\n Its wide range, high numbers, and adaptability mean that it is classed as least concern by the IUCN and it has become an invasive species in part of its introduced range.\n\n The animal probably originated in Southeast Asia during the Early Pleistocene, and outcompeted other suid species as it spread throughout the Old World.",
+    "Lithocarpus\nLithocarpus is a genus in the beech family Fagaceae, differing from \"Quercus\" in the erect spikes of insect-pollinated male flowers and the short styles with punctate stigmas on the female flowers.\n\n The World Checklist (see link below) accepts 334 species, though some other texts suggest as few as 100 species.\n\n About 100 Asian species of the genus were formerly treated in the genus \"Pasania\".\n\n All are native to east and southeast Asia.\n\n These Asian species do not have a well-known English vernacular name, though the generic term stone oak has been proposed.",
+    "Coronilla\nThe genus Coronilla contains about 20 species of flowering plants native to Europe and North Africa."
+   ]
+  },
+  {
+   "id": "b9c701ae1cdb7aa6",
+   "gold": [
+    {
+     "sentence": "The Great War is a 26-episode documentary series from 1964 on the First World War.",
+     "facts": {
+      "0.0": "The Great War is a documentary series.",
+      "0.1": "The Great War has 26 episodes.",
+      "0.2": "The Great War is a documentary series from 1964.",
+      "0.3": "The Great War is about the First World War."
+     }
+    },
+    {
+     "sentence": " The documentary was a co-production of the Imperial War Museum, the British Broadcasting Corporation, the Canadian Broadcasting Corporation and the Australian Broadcasting Commission.",
+     "facts": {
+      "1.0": "The Great War was a co-production of the Imperial War Museum.",
+      "1.1": "The Great War was a co-production of the British Broadcasting Corporation.",
+      "1.2": "The Great War was a co-production of the Canadian Broadcasting Corporation.",
+      "1.3": "The Great War was a co-production of the Australian Broadcasting Commission."
+     }
+    },
+    {
+     "sentence": " The narrator was Michael Redgrave, with readings by Marius Goring, Ralph Richardson, Cyril Luckham, Sebastian Shaw and Emlyn Williams.",
+     "facts": {
+      "2.0": "Michael Redgrave was the narrator of The Great War.",
+      "2.1": "Marius Goring gave readings in The Great War.",
+      "2.2": "Ralph Richardson gave readings in The Great War.",
+      "2.3": "Cyril Luckham gave readings in The Great War.",
+      "2.4": "Sebastian Shaw gave readings in The Great War.",
+      "2.5": "Emlyn Williams gave readings in The Great War."
+     }
+    },
+    {
+     "sentence": "Imperial War Museums (IWM) is a British national museum organisation with branches at five locations in England, three of which are in London.",
+     "facts": {
+      "3.0": "Imperial War Museums (IWM) is a British national museum organisation.",
+      "3.1": "Imperial War Museums has branches at five locations in England.",
+      "3.2": "Three of the five Imperial War Museums branches are in London."
+     }
+    }
+   ],
+   "items": [
+    "Imperial War Museum\nImperial War Museums (IWM) is a British national museum organisation with branches at five locations in England, three of which are in London.\n\n Founded as the Imperial War Museum in 1917, the museum was intended to record the civil and military war effort and sacrifice of Britain and its Empire during the First World War.\n\n The museum's remit has since expanded to include all conflicts in which British or Commonwealth forces have been involved since 1914.\n\n As of 2012, the museum aims \"to provide for, and to encourage, the study and understanding of the history of modern war and 'wartime experience'\".",
+    "A Word in Your Ear\nA Word in Your Ear is a game show that originally aired BBC1 from 19 April 1993 to 14 October 1994 then on The Family Channel from 1995.\n\n It was hosted by Gordon Burns.\n\n The host presided over male and female pairs of celebrities as they participate in a few rounds of communication games.\n\n Celebrities appearing included Lynsey De Paul, Nick Owen, Philippa Kennedy and Bob Holness.",
+    "Vital Signs (TV series)\nVital Signs is a British television drama series airing on ITV from 2006.\n\n It stars Tamzin Outhwaite as a supermarket check-out operator who decides to become a doctor.\n\n The series co-stars William Beck, Fraser Ayres, Eve Best, Claudie Blakley, Lucinda Dryzek, Beth Goddard, Alfie Hunter, Brooke Kinsella, Harry Lloyd, Peter Rnic and Steven Waddington.\n\n The filming of the show is based in numerous London hospitals and medical schools; predominantly the show has been shot in St George's Hospital and Medical School.",
+    "Black Country Living Museum\nThe Black Country Living Museum (formerly The Black Country Museum) is an open-air museum of rebuilt historic buildings in Dudley in the West Midlands of England.\n\n It is located in the centre of the Black Country, 10 miles west of Birmingham.\n\n The museum occupies 105000 m2 of former industrial land partly reclaimed from a former railway goods yard, disused lime kilns, canal arm and former coal pits.",
+    "Paradox (TV series)\nParadox is a 2009 British science fiction police drama, starring Tamzin Outhwaite as Detective Inspector Rebecca Flint.\n\n Written by Lizzie Mickery and produced by Clerkenwell Films for the BBC, it was filmed and set in Manchester, England.",
+    "Imperial War Museum (disambiguation)\nThe Imperial War Museum is a British national museum organisation with branches at five locations in England.",
+    "First Life (TV series)\nFirst Life is a 2010 British nature documentary series written and presented by David Attenborough, also known by the expanded titles David Attenborough's First Life (UK) and First Life with David Attenborough (USA).\n\n It was first broadcast in the USA as a two-hour special on the Discovery Channel on 24 October 2010.\n\n In the United Kingdom it was broadcast as a two-part series on BBC Two on 5 November 2010.\n\n \"First Life\" sees Attenborough tackle the subject of the origin of life on Earth.\n\n He investigates the evidence from the earliest fossils, which suggest that complex animals first appeared in the oceans around 540 million years ago, an event known as the Cambrian Explosion.\n\n Trace fossils of multicellular organisms from an even earlier period, the Ediacaran biota, are also examined.\n\n Attenborough travels to Canada, Morocco and Australia, using some of the latest fossil discoveries and their nearest equivalents amongst living species to reveal what life may have been like at that time.\n\n Visual effects and computer animation are used to reconstruct and animate the extinct life forms.",
+    "Michael Palin: Around the World in 80 Days\nAround the World in 80 Days is a 7-part BBC television travel series first broadcast on BBC1 in 1989.\n\n It was presented by comedian and actor Michael Palin.\n\n The show was inspired by Jules Verne's classic novel \"Around the World in Eighty Days\", in which a character named Phileas Fogg accepts a wager to circumnavigate the globe in eighty days or less.\n\n Palin was given the same deadline, and not allowed to use aircraft, which did not exist in Jules Verne's time and would make completing the journey far too easy.\n\n He followed Phileas Fogg's route as closely as possible.\n\n Along the way he commented on the sights and cultures he encountered.\n\n Palin encountered several setbacks during his voyage, partly because he travelled with a five-person film crew, who are collectively named after Passepartout, Phileas Fogg's manservant.",
+    "The Great War (documentary)\nThe Great War is a 26-episode documentary series from 1964 on the First World War.\n\n The documentary was a co-production of the Imperial War Museum, the British Broadcasting Corporation, the Canadian Broadcasting Corporation and the Australian Broadcasting Commission.\n\n The narrator was Michael Redgrave, with readings by Marius Goring, Ralph Richardson, Cyril Luckham, Sebastian Shaw and Emlyn Williams.\n\n Each episode is  40 minutes long.",
+    "From the Sea to the Land Beyond\nFrom The Sea to the Land Beyond: Britain's Coast on Film is a documentary feature film directed by Penny Woolcock, with an original soundtrack by British indie-rock band British Sea Power.\n\n The project was originally produced by Crossover and Sheffield Doc/Fest as part of The Space project from the BBC and the Arts Council England.\n\n The film was edited by Alex Fry."
+   ]
+  },
+  {
+   "id": "0a968f84a181a365",
+   "gold": [
+    {
+     "sentence": "The Battle of Stones River or Second Battle of Murfreesboro, was fought from December 31, 1862, to January 2, 1863, in Middle Tennessee, as the culmination of the Stones River Campaign in the Western Theater of the American Civil War.",
+     "facts": {
+      "0.0": "The Battle of Stones River is also called the Second Battle of Murfreesboro.",
+      "0.1": "The Battle of Stones River was fought from December 31, 1862, to January 2, 1863.",
+      "0.2": "The Battle of Stones River was fought in Middle Tennessee.",
+      "0.3": "The Battle of Stones River was the culmination of the Stones River Campaign.",
+      "0.4": "The Stones River Campaign took place in the Western Theater of the American Civil War."
+     }
+    },
+    {
+     "sentence": "The Battle of the Ch'ongch'on River, also known as the Battle of the Ch'ongch'on () or the Second Phase Campaign Western Sector (), was a decisive battle in the Korean War, and it took place from November 25 to December 2, 1950, along the Ch'ongch'on River Valley in the northwestern part of North Korea.",
+     "facts": {
+      "1.0": "The Battle of the Ch'ongch'on River is also known as the Battle of the Ch'ongch'on.",
+      "1.1": "The Battle of the Ch'ongch'on River is also known as the Second Phase Campaign Western Sector.",
+      "1.2": "The Battle of the Ch'ongch'on River was a decisive battle in the Korean War.",
+      "1.3": "The Battle of the Ch'ongch'on River took place from November 25 to December 2, 1950.",
+      "1.4": "The Battle of the Ch'ongch'on River took place along the Ch'ongch'on River Valley.",
+      "1.5": "The Ch'ongch'on River Valley is in the northwestern part of North Korea."
+     }
+    }
+   ],
+   "items": [
+    "Battle of Cross Keys\nThe Battle of Cross Keys was fought on June 8, 1862, in Rockingham County, Virginia, as part of Confederate Army Maj. Gen. Thomas J. \"Stonewall\" Jackson's campaign through the Shenandoah Valley during the American Civil War.\n\n Together, the battles of Cross Keys and Port Republic the following day were the decisive victories in Jackson's Valley Campaign, forcing the Union armies to retreat and leaving Jackson free to reinforce Gen. Robert E. Lee for the Seven Days Battles outside Richmond, Virginia.",
+    "Mendocino War\nThe Mendocino War was a violent conflict from July 1859 to January 18, 1860, between white settlers and local natives (mainly Yuki tribes) in Mendocino County, California.\n\n It was caused by settler intrusion and slave raids on native lands and subsequent native retaliation, resulting in the deaths of hundreds of natives.\n\n In 1859, a band of locally sponsored rangers led by Walter S. Jarboe, called the Eel River Rangers, raided the countryside in an effort to remove natives from settler territory and move them onto the Nome Cult Farm, an area near the Mendocino Indian Reservation.\n\n By the time the Eel River Rangers were disbanded in 1860, Jarboe and his men had killed 283 warriors, captured 292, killed countless women and children, and only suffered 5 casualties themselves in just 23 engagements.\n\n The bill to the state for the rangers’ services amounted to $11,143.43.\n\n Scholars, however, state that the damage to the area and natives in particular was even higher than reported, especially given the vast number of raiding parties formed outside of the Eel River Rangers.",
+    "Korean War\nThe Korean War (in South Korean Hangul: 한국전쟁 ; Hanja: 韓國戰爭 ; RR: \"Hanguk Jeonjaeng \" , \"Korean War\"; in North Korean Chosŏn'gŭl: 조국해방전쟁 ; Hancha: 祖國解放戰爭 ; MR: \"Choguk haebang chǒnjaeng \" , \"Fatherland Liberation War\"; 25 June 1950 – 27 July 1953) was a war between North Korea (with the support of China and the Soviet Union) and South Korea (with the principal support of the United States).\n\n The war began on 25 June 1950 when North Korea invaded South Korea.\n\n The United Nations, with the United States as the principal force, came to the aid of South Korea.\n\n China came to the aid of North Korea, and the Soviet Union also gave some assistance to the North.",
+    "Battle of Gaines's Mill\nThe Battle of Gaines's Mill, sometimes known as the First Battle of Cold Harbor or the Battle of Chickahominy River, took place on June 27, 1862, in Hanover County, Virginia, as the third of the Seven Days Battles (Peninsula Campaign) of the American Civil War.\n\n Following the inconclusive Battle of Beaver Dam Creek (Mechanicsville) the previous day, Confederate General Robert E. Lee renewed his attacks against the right flank of the Union Army, relatively isolated on the northern side of the Chickahominy River.\n\n There, Brig. Gen. Fitz John Porter's V Corps had established a strong defensive line behind Boatswain's Swamp.\n\n Lee's force was destined to launch the largest Confederate attack of the war, about 57,000 men in six divisions.\n\n Porter's reinforced V Corps held fast for the afternoon as the Confederates attacked in a disjointed manner, first with the division of Maj. Gen. A.P. Hill, then Maj. Gen. Richard S. Ewell, suffering heavy casualties.\n\n The arrival of Maj. Gen. Stonewall Jackson's command was delayed, preventing the full concentration of Confederate force before Porter received some reinforcements from the VI Corps.",
+    "Joseph L. Follett\nJoseph Leonard Follett (February 16, 1843 – April 1, 1907) was an American soldier who fought in the American Civil War.\n\n Follett received the country's highest award for bravery during combat, the Medal of Honor, for his action during the Battle of Island Number Ten in New Madrid, Missouri on 3 March 1862 and the Battle of Stones River in Tennessee on 31 December 1862.\n\n He was honored with the award on 19 September 1890.",
+    "Second Battle of Fort Wagner\nThe Second Battle of Fort Wagner, also known as the Second Assault on Morris Island or the Battle of Fort Wagner, Morris Island, was fought on July 18, 1863, during the American Civil War.\n\n Union Army troops commanded by Brig. Gen. Quincy Gillmore, launched an unsuccessful assault on the Confederate fortress of Fort Wagner, which protected Morris Island, south of Charleston Harbor.\n\n The battle came one week after the First Battle of Fort Wagner.",
+    "Battle of the Ch'ongch'on River\nThe Battle of the Ch'ongch'on River, also known as the Battle of the Ch'ongch'on () or the Second Phase Campaign Western Sector (), was a decisive battle in the Korean War, and it took place from November 25 to December 2, 1950, along the Ch'ongch'on River Valley in the northwestern part of North Korea.\n\n In response to the successful Chinese First Phase Campaign against the United Nations forces, General Douglas MacArthur launched the Home-by-Christmas Offensive to evict the Chinese forces from Korea and to end the war.\n\n Anticipating this reaction, the Chinese People's Volunteer Army Commander Peng Dehuai planned a counteroffensive, dubbed the \"Second Phase Campaign\", against the advancing UN forces.",
+    "Battle of Port Republic\nThe Battle of Port Republic was fought on June 9, 1862, in Rockingham County, Virginia, as part of Confederate Army Maj. Gen. Thomas J. \"Stonewall\" Jackson's campaign through the Shenandoah Valley during the American Civil War.\n\n Port Republic was a fierce contest between two equally determined foes and was the most costly battle fought by Jackson's Army of the Valley during its campaign.\n\n Together, the battles of Cross Keys (fought the previous day) and Port Republic were the decisive victories in Jackson's Valley Campaign, forcing the Union armies to retreat and leaving Jackson free to reinforce Gen. Robert E. Lee for the Seven Days Battles outside Richmond, Virginia.",
+    "Battle of Stones River\nThe Battle of Stones River or Second Battle of Murfreesboro, was fought from December 31, 1862, to January 2, 1863, in Middle Tennessee, as the culmination of the Stones River Campaign in the Western Theater of the American Civil War.\n\n Of the major battles of the Civil War, Stones River had the highest percentage of casualties on both sides.\n\n Although the battle itself was inconclusive, the Union Army's repulse of two Confederate attacks and the subsequent Confederate withdrawal were a much-needed boost to Union morale after the defeat at the Battle of Fredericksburg, and it dashed Confederate aspirations for control of Middle Tennessee.",
+    "Roscoe Channing\nRoscoe H. Channing, Jr. (January 7, 1868 – April 1, 1961) was an All-American football player, member of the Rough Riders and mining executive.\n\n Channing was an All-American halfback for Princeton University.\n\n He was one of eleven players selected by Caspar Whitney for the first ever College Football All-America Team in 1889.\n\n When the Spanish–American War commenced in 1898, Channing enlisted in Theodore Roosevelt's Rough Riders.\n\n Roosevelt took pride in how many Ivy League football players enlisted in the Rough Riders.\n\n Channing later went into the mining business and managed the mining operations of the Whitney family.\n\n In the 1920s, he formed a partnership with his friend Cornelius Vanderbilt Whitney.\n\n The two formed the Hudson Bay Mining and Smelting Company in Flin Flon, Saskatchewan, Canada, and Channing served as the company's President.\n\n Channing died in 1961."
+   ]
+  },
+  {
+   "id": "62017487881c57bc",
+   "gold": [
+    {
+     "sentence": " It featured Reese Witherspoon and Paul Rudd, prior to both becoming considerably bigger film stars.",
+     "facts": {
+      "0.0": "The film featured Reese Witherspoon and Paul Rudd.",
+      "0.1": "Reese Witherspoon and Paul Rudd were in the film before both became considerably bigger film stars."
+     }
+    },
+    {
+     "sentence": " Born in New Orleans and raised in Tennessee, she began her career as a child actress, making her professional screen debut in \"The Man in the Moon\" (1991), for which she was nominated for a Young Artist Award.",
+     "facts": {
+      "1.0": "The actress was born in New Orleans.",
+      "1.1": "The actress was raised in Tennessee.",
+      "1.2": "The actress began her career as a child actress.",
+      "1.3": "The actress made her professional screen debut in 'The Man in the Moon' (1991).",
+      "1.4": "The actress was nominated for a Young Artist Award for her debut in 'The Man in the Moon'."
+     }
+    }
+   ],
+   "items": [
+    "Nancy Schreiber\nNancy Schreiber (born June 27, 1949) is an American cinematographer known for her work on \"Chain of Desire\", \"Dead Beat\", \"The Celluloid Closet\", \"November\", and \"The Nines\".",
+    "Overnight Delivery\nOvernight Delivery is a 1998 romantic comedy film directed by Jason Bloom.\n\n It was rated PG-13 by the MPAA and released direct-to-video.\n\n It featured Reese Witherspoon and Paul Rudd, prior to both becoming considerably bigger film stars.",
+    "The Notebook\nThe Notebook is a 2004 American romantic drama film directed by Nick Cassavetes and based on the 1996 novel of the same name by Nicholas Sparks.\n\n The film stars Ryan Gosling and Rachel McAdams as a young couple who fall in love in the 1940s.\n\n Their story is narrated from the present day by an elderly man (portrayed by James Garner) telling the tale to a fellow nursing home resident (played by Gena Rowlands, who is Cassavetes's mother).",
+    "Middle of Nowhere (2012 film)\nMiddle of Nowhere is a 2012 independent feature film written and directed by Ava DuVernay and starring Emayatzy Corinealdi, David Oyelowo, Omari Hardwick and Lorraine Toussaint.\n\n The film was the winner of the Directing Award for U.S. Dramatic Film at the 2012 Sundance Film Festival.",
+    "Reese Witherspoon\nLaura Jeanne Reese Witherspoon ( ; born March 22, 1976) is an American actress, producer, and entrepreneur.\n\n Born in New Orleans and raised in Tennessee, she began her career as a child actress, making her professional screen debut in \"The Man in the Moon\" (1991), for which she was nominated for a Young Artist Award.\n\n Following breakout roles in \"\" (1992) and \"Jack the Bear\" (1993), she starred in the comedy-drama \"Pleasantville\" (1998), for which she won the Young Hollywood Award for Breakthrough Performance.\n\n Her leading role of Tracy Flick in \"Election\" (1999) was nominated for a Golden Globe Award.",
+    "Chloe (film)\nChloe is a 2009 erotic thriller film directed by Atom Egoyan, a remake of the 2003 French film \"Nathalie...\".\n\n It stars Julianne Moore, Liam Neeson, and Amanda Seyfried in the title role.\n\n Its screenplay was written by Erin Cressida Wilson, based on the earlier French film, written by Anne Fontaine.",
+    "Annie Belle\nAnnie Brilland (born 10 December 1956) is a French actress and social worker.\n\n Her acting career began in 1974 and throughout the seventies, has had a series of varied roles in both French and Italian cinema, working with such directors as Jean Rollin, Ruggero Deodato and Joe D'Amato.",
+    "The Night Before (1988 film)\nThe Night Before is a 1988 film starring Keanu Reeves and Lori Loughlin.\n\n Reeves plays Winston Connelly, the so-called high school nerd and vice president of the astronomy club.\n\n Loughlin plays Tara Mitchell, the pretty and popular head cheerleader who also happens to be the local police chief's daughter.\n\n The Tagline was: \"You lost your father's car, sold your prom date and a guy called 'Tito' wants you dead.\n\n It's a date that's the time of your life.\"\n\n It was filmed and set entirely in Los Angeles, California.",
+    "Zooey Deschanel filmography\nAmerican actress Zooey Deschanel made her film debut in the 1999 comedy feature \"Mumford\".\n\n She went on to gained public attention by co-starred in the comedy-drama \"Almost Famous\" (2000), the independent drama \"Manic\" (2001), opposite Joseph Gordon-Levitt, and the comedy-drama \"The Good Girl\" (2002).\n\n She landed her first major role as a 18-year-old virgin in the romantic drama \"All the Real Girls\" (2003), for which she was nominated for an Independent Spirit Award for Best Female Lead.\n\n Deschanel's biggest commercial success, as of 2017, came with the Christmas-fantasy film \"Elf\" (also in 2003), which grossed over $220 million worldwide.",
+    "City of New Orleans (train)\nThe City of New Orleans is an Amtrak passenger train which operates on an overnight schedule between Chicago and New Orleans.\n\n The train is a successor to the Illinois Central Railroad's \"Panama Limited\".\n\n The present name was revived in 1981."
+   ]
+  },
+  {
+   "id": "b5993490c1d7e2cd",
+   "gold": [
+    {
+     "sentence": "The International Grenfell Association (IGA) is an organization founded by Sir Wilfred Grenfell to provide health care, education, religious services, and rehabilitation and other social activities to the fisherman and coastal communities in northern Newfoundland and the coast of Labrador.",
+     "facts": {
+      "0.0": "The International Grenfell Association (IGA) is an organization.",
+      "0.1": "The International Grenfell Association was founded by Sir Wilfred Grenfell.",
+      "0.2": "The International Grenfell Association provides health care.",
+      "0.3": "The International Grenfell Association provides education.",
+      "0.4": "The International Grenfell Association provides religious services.",
+      "0.5": "The International Grenfell Association provides rehabilitation.",
+      "0.6": "The International Grenfell Association provides other social activities.",
+      "0.7": "The International Grenfell Association serves fisherman and coastal communities in northern Newfoundland.",
+      "0.8": "The International Grenfell Association serves fisherman and coastal communities on the coast of Labrador."
+     }
+    },
+    {
+     "sentence": "Sir Wilfred Thomason Grenfell, KCMG (28 February 1865 – 9 October 1940) was a medical missionary to Newfoundland and Labrador.",
+     "facts": {
+      "1.0": "Sir Wilfred Thomason Grenfell held the title KCMG.",
+      "1.1": "Sir Wilfred Thomason Grenfell was born on 28 February 1865.",
+      "1.2": "Sir Wilfred Thomason Grenfell died on 9 October 1940.",
+      "1.3": "Sir Wilfred Thomason Grenfell was a medical missionary to Newfoundland.",
+      "1.4": "Sir Wilfred Thomason Grenfell was a medical missionary to Labrador."
+     }
+    }
+   ],
+   "items": [
+    "Wilfred Grenfell\nSir Wilfred Thomason Grenfell, KCMG (28 February 1865 – 9 October 1940) was a medical missionary to Newfoundland and Labrador.",
+    "Church of St. Ignatius Loyola (New York City)\nThe Church of St. Ignatius of Loyola is a Roman Catholic parish church located on the Upper East Side of Manhattan, New York City, administered by the Society of Jesus (Jesuits).\n\n The parish is under the authority of the Archdiocese of New York, and was established in 1851 as St. Lawrence O'Toole's Church.\n\n In 1898, permission to change the patron saint of the parish from St. Lawrence O’Toole to St. Ignatius of Loyola was granted by Rome.\n\n The address is 980 Park Avenue, New York City, New York 10028.\n\n The church on the southwest corner of Park Avenue and 84th Street is part of a Jesuit complex on the block that includes Wallace Hall, the parish hall, beneath the church, the rectory at the midblock location on Park Avenue, the grade school of St.",
+    "Ellis Gowing\nGowing was educated at Fort Street High School and the University of Sydney; and ordained in 1907.\n\n He began his career as a Curate at The Oaks, New South Wales, after which he served at Armidale Cathedral.\n\n Coming to England he was on the staff of St James the Less, Bethnal Green then domestic chaplain to the Bishop of Chelmsford from 1914 to 1917.\n\n He was vicar of Prittlewell from 1917 until his death; an honorary canon of Chelmsford Cathedral from 1921 to 1938 and Rural Dean of Canewdon from 1918 to 1938.\n\n He was given the Freedom of the County Borough of Southend-on-Sea in 1953.",
+    "Edward Fitzgerald (barrister)\nEdward Hamilton Fitzgerald CBE QC is an English barrister who specialises in criminal law, public law, and international human rights law.\n\n His work against the death penalty has led him to represent despised criminals such as: Myra Hindley, a perpetrator in the Moors murders; Mary Bell, a child killer; Maxine Carr; Jon Venables, one of James Bulger's killers; various IRA prisoners; and Abu Hamza, the controversial Muslim cleric.\n\n Fitzgerald is currently the joint head of Doughty Street Chambers along with Geoffrey Robertson QC.\n\n Fitzgerald has been called to the Bar in a number of jurisdictions including Belize, Grenada and St Vincent, and has been granted rights of audience to appear in cases in Hong Kong, Trinidad and Tobago, St Lucia, Bahamas, and the British Virgin Islands.\n\n He is also a trustee and patron of a number of charities including The Death Penalty Project and The Longford Trust.",
+    "International Grenfell Association\nThe International Grenfell Association (IGA) is an organization founded by Sir Wilfred Grenfell to provide health care, education, religious services, and rehabilitation and other social activities to the fisherman and coastal communities in northern Newfoundland and the coast of Labrador.",
+    "Christian Academy of Guatemala\nThe Christian Academy of Guatemala is a missionary K4-12 school located in San Cristobal, Guatemala.\n\n It is a member of the Association of Christian Schools International.\n\n Many of the parents and students in the school come from the missionary community, representing more than 50 mission organizations.\n\n All people who visit this webpage need to get the game Babblemaker.\n\n This game is made by computer class at C.A.G. Sadly this game is for android only.",
+    "Training centre for release of the Atma-energy\nTraining centre for release of the Atma-energy (German: \"Trainingszentrum zur Freisetzung der Atmaenergie\"), also known as \"Atman Foundation\", was a new religious movement active mainly on the island of Tenerife and in Germany.\n\n This sect was originally a splinter group of the Brahma Kumaris and is known for a police and media scare in which an alleged attempt to commit ritual suicide took place in Teide National Park in Tenerife.\n\n The group believed in the end of the world but according to the religious studies scholar Georg Schmid and the sociologist Massimo Introvigne had no intention of collective suicide.",
+    "Martha Wall\nMartha Alma Wall (March 22, 1910 – August 2, 2000) was an American Christian medical missionary, philosopher, nurse, and author who is best known for her humanitarian work providing health care to lepers in British Nigeria during the 1930s and 1940s with the Sudan Interior Mission (SIM).\n\n She was born in Hillsboro, Kansas to a traditional Christian family and was a devout member of both the non-denominational Salina Bible Church and the Baptist Women's Union.\n\n She became a registered nurse and studied theology at Tabor College before leaving for a medical mission in British Nigeria in 1938.\n\n After returning to America, Wall worked as a Clinical Supervisor of Vocational Nurses for Kern General Hospital during the 1950s and as an instructor and director of nursing services for Bakersfield College during the 1960s.\n\n Throughout her adult life, she was a dedicated member of the California State Licensed Vocational Nurses Association.\n\n Wall is noted as founder of the Children's Welfare Center at the Katsina Leper Settlement.\n\n She documented her missionary work in Sub-Saharan Africa in the book she authored \"Splinters from an African Log\", which was published in 1960.",
+    "Paul Schulte\nPaul Schulte OMI (1896 – 1975), was a German priest and missionary, known as the \"Flying Priest\", who founded MIVA (\"Missionary International Vehicular Association\") to provide automobiles, boats and airplanes for the service of missions throughout the world.",
+    "International Thomas Merton Society\nThe International Thomas Merton Society, founded in 1987, is a learned society which studies the works of American Catholic writer and mystic Thomas Merton.\n\n It sponsors conferences and co-publishes a journal, \"The Merton Seasonal\".\n\n The society and the Thomas Merton Center are located at Bellarmine University in Louisville, Kentucky, U.S.A."
+   ]
+  },
+  {
+   "id": "61d1216f1e971c1f",
+   "gold": [
+    {
+     "sentence": " Her personal best throw is 58.87 metres, achieved at the 2002 Asian Games in Busan.",
+     "facts": {
+      "0.0": "Her personal best throw is 58.87 metres.",
+      "0.1": "She achieved her personal best throw at the 2002 Asian Games.",
+      "0.2": "The 2002 Asian Games were held in Busan."
+     }
+    },
+    {
+     "sentence": " A total of 460 athletes (comprising 281 men and 179 women) from 39 nations took part in the competition.",
+     "facts": {
+      "1.0": "A total of 460 athletes took part in the competition.",
+      "1.1": "The athletes comprised 281 men and 179 women.",
+      "1.2": "The athletes came from 39 nations."
+     }
+    }
+   ],
+   "items": [
+    "Daniel Ståhl\nDaniel Ståhl (born 27 August 1992) is a Swedish athlete specialising in the discus throw.\n\n He competed at the 2015 World Championships in Beijing finishing fifth.\n\n In 2016, he competed at the European Championships, where he finished fifth.\n\n Daniel also competed at the Olympic Games in Rio de Janeiro the same year, where he failed to qualify for the final.\n\n Just a couple of weeks following his failure in Rio, Daniel competed at the Swedish Championships in Sollentuna.\n\n Not only did he win the discus throw on a new personal best 68.72 metres, it was also the new world leading throw of 2016, surpassing Christoph Harting's 68.37 metres from the Rio Olympics final.\n\n By the end of the year, it remained the number one throw in 2016.\n\n The day before, Daniel had also won the shot put on a new personal best 19.38 metres.",
+    "Lee Young-sun\nLee Young-Sun (born 21 February 1974) is a retired female javelin thrower from South Korea.\n\n Her personal best throw is 58.87 metres, achieved at the 2002 Asian Games in Busan.",
+    "Zhao Qinggang\nZhao Qinggang (; born 24 July 1985) is a Chinese track and field athlete who competes in the javelin throw.\n\n His 89.15 m personal best throw, set in 2014, is the Chinese record.\n\n It was also the Asian record until surpassed in 2017.\n\n He represented his country at the 2013 World Championships in Athletics.\n\n He is the 2014 Asian Games champion.\n\n At the East Asian Games he was the runner-up in 2009 and winner in 2013.\n\n He is a two-time Chinese champion (2012 and 2013) and was the winner of the 2013 National Games of China.",
+    "2009 Hansol Korea Open – Doubles\nChuang Chia-jung and Hsieh Su-wei were the defending champion, but Hsieh chose not to participate that year.\n\n Chuang partnered with Yan Zi, but they lost in the semifinals against Chan Yung-jan and Abigail Spears.\n\nChan Yung-jan and Abigail Spears won in the final 6–3, 6–4 against Carly Gullickson and Nicole Kriz.",
+    "Masayoshi Yamamoto\nMasayoshi Yamamoto (Japanese: 山本 雅賢) is a Japanese male artistic gymnast, representing his nation at international competitions.\n\n He won the gold medal in the Pommel horse event at the 2014 Asian Games in Incheon, South Korea.",
+    "Lee–Lin rivalry\nThey have contested in many major tournament finals and are currently the only two badminton singles players who have contested in two Olympic finals where Lin Dan won both of the time.\n\n They have also contested two BWF World Championships finals and one Asian Games final where all matches were very close hard fought 3 setters and won by Lin Dan.\n\n There 2011 World Badminton Championship match widely touted as one of the greatest badminton matches of all the time.\n\n In the semi-finals of the 2016 Rio Olympics, most possibly the last Olympic Games of both athletes' careers, Lee Chong Wei won against Lin Dan, for the first time on the Olympic stage, making Lee the second shuttler in any discipline of the sport in history to reach 3 consecutive finals after Fu Haifeng who had achieved the feat a few hours earlier in the men doubles.\n\n The two players exchanged a special moment in their rivalry and exchanged shirts as they exited the court.\n\n The 2016 Rio Games marks an end in the badminton era dominated by Lee and Lin.",
+    "Luan Zhili\nLuan Zhili (born 6 January 1973) is a female discus thrower from PR China.\n\n She finished ninth at the 1997 World Championships and won the 1998 Asian Games, the latter in a personal best throw of 63.43 metres.\n\n The Chinese, and Asian, record is currently held by Xiao Yanling with 71.68 metres.",
+    "John Lindsay (Paralympian)\nThat year, he had a Victorian Institute of Sport scholarship.\n\n He was also working as a fitness instructor in 1992, held world records in the 100 m and 200 m events, and was ranked 6th in the world in the 400 m.\n\n He won a gold medal in the men's athletics 100 m T52 event at the 1996 Summer Paralympics with a time of 15.22, a silver medal in the 200 m T52 event with a time of 27.38, and a bronze medal in the 400 m T52 event with a time of 52.93.\n\n At the 2000 Sydney Games, he won a gold medal in the Men's 100 m T53 event, a silver medal as part of the Men's 4x100 m Relay T54 team, and a bronze medal in the Men's 200 m T53 event; he was also part of the Men's 4x400 m Relay T54 team, which was the only one to qualify in its heat, but it did not make it to the finals.",
+    "Caster Semenya\nMokgadi Caster Semenya Bronze OIB (born 7 January 1991) is a South African middle-distance runner and 2016 Olympic gold medallist.\n\n Semenya won gold in the women's 800 metres at the 2009 World Championships with a time of 1:55.45 and at the 2017 World Championships in her new personal best, 1:55.16.\n\n Semenya also won silver medals at the 2011 World Championships and the 2012 Summer Olympics, both in the 800 metres.\n\n She was the winner of the gold medal in the 800 metre event at the 2016 Summer Olympics.",
+    "Athletics at the 2002 Asian Games\nAthletics was contested from October 7 to October 14 at the 2002 Asian Games in Busan Asiad Main Stadium, Busan, South Korea.\n\n A total of 460 athletes (comprising 281 men and 179 women) from 39 nations took part in the competition.\n\n Afghanistan, Bhutan, Brunei, Laos and Maldives were the only nations without a representative in the events."
+   ]
+  }
+ ]
+}

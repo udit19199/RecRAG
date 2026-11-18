@@ -1,0 +1,75 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "2620720975912644835",
+   "sentences": [
+    "Taxpayers in the United States may face various penalties for failures related to Federal , state , and local tax matters . The Internal Revenue Service ( IRS ) is primarily responsible for charging these penalties at the Federal level . The IRS can assert only those penalties specified imposed under Federal tax law . State and local rules vary widely , are administered by state and local authorities , and are not discussed herein ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1422",
+   "sentences": [
+    "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told.",
+    "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "5a904f6355429916514e746e",
+   "sentences": [
+    "Cantarella was a poison allegedly used by the Borgias during the papacy of Pope Alexander VI.",
+    " The use of this poison is not well documented in any of the papal records and it was most likely conceived after 1503 as part of Pope Julius II's effort to remove his name from the records.",
+    "Damnatio memoriae is a modern Latin phrase literally meaning \"condemnation of memory\", meaning that a person must not be remembered."
+   ]
+  },
+  {
+   "id": "5a8198565542995ce29dcc13",
+   "sentences": [
+    "Ranger Rick, originally Ranger Rick's Nature Magazine, is a children’s nature magazine that is published by the United States National Wildlife Federation.",
+    "TENNIS is an American sports magazine owned by the Sinclair Broadcast Group."
+   ]
+  },
+  {
+   "id": "4142183495658071394",
+   "sentences": [
+    "In graph theory , a loop ( also called a self - loop or a `` buckle '' ) is an edge that connects a vertex to itself . A simple graph contains no loops ."
+   ]
+  },
+  {
+   "id": "4399912168528695468",
+   "sentences": [
+    "Rigor mortis is very important in meat technology . The onset of rigor mortis and its resolution partially determine the tenderness of meat . If the post-slaughter meat is immediately chilled to 15 ° C ( 59 ° F ) , a phenomenon known as cold shortening occurs , whereby the muscle sarcomeres shrink to a third of their original length ."
+   ]
+  },
+  {
+   "id": "1706317595158666491",
+   "sentences": [
+    "Teri Garr as Mrs. Ramsay , Alec 's mother"
+   ]
+  },
+  {
+   "id": "5ab8494d55429916710eb016",
+   "sentences": [
+    "The University of California, Santa Barbara (commonly referred to as UC Santa Barbara or UCSB) is a public research university and one of the 10 campuses of the University of California system.",
+    " Tracing its roots back to 1891 as an independent teachers' college, UCSB joined the University of California system in 1944 and is the third-oldest general-education campus in the system.",
+    " It was founded in 1991 by the renowned philanthropist Hakim Said of the Hamdard Foundation."
+   ]
+  },
+  {
+   "id": "multihop-rag-2298",
+   "sentences": [
+    "For all the other benefits they get from Android, Google could solve this problem today if they wanted to.",
+    "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "6117400998512150504",
+   "sentences": [
+    "It is also known as an `` immediate hemolytic transfusion reaction '' . This is a medical emergency as it results from rapid destruction of the donor red blood cells by host antibodies ( IgG , IgM ) . It is usually related to ABO blood group incompatibility - the most severe of which often involves group A red cells being given to a patient with group O type blood . Properdin then binds to complement C3 in the donor blood , facilitating the reaction through the alternate pathway cascade . The donor cells also become coated with IgG and are subsequently removed by macrophages in the reticuloendothelial system ( RES ) . Jaundice and disseminated intravascular coagulation ( DIC ) may also occur . The most common cause is clerical error ( i.e. the wrong unit of blood being given to the patient ) ."
+   ]
+  }
+ ]
+}

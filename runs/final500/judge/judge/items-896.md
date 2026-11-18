@@ -1,0 +1,895 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=775d35ed2756befd ===
+Gold sentences and facts:
+Sentence 0: Symphony No. 40 in G minor , KV. 550 was written by Wolfgang Amadeus Mozart in 1788 . It is sometimes referred to as the `` Great G minor symphony '' , to distinguish it from the `` Little G minor symphony '' , No. 25 . The two are the only extant minor key symphonies Mozart wrote .
+  Fact 0.0: Symphony No. 40 in G minor, KV. 550 was written by Wolfgang Amadeus Mozart.
+  Fact 0.1: Symphony No. 40 in G minor, KV. 550 was written in 1788.
+  Fact 0.2: Symphony No. 40 in G minor, KV. 550 is sometimes referred to as the 'Great G minor symphony'.
+  Fact 0.3: The Great G minor symphony is distinguished from the 'Little G minor symphony', No. 25.
+  Fact 0.4: Symphony No. 40 and the Little G minor symphony, No. 25, are the only extant minor key symphonies Mozart wrote.
+
+Retrieved items:
+<item 1>
+Symphony No. 40 (Mozart)
+Nikolaus Harnoncourt conjectured that Mozart composed the three symphonies as a unified work , pointing , among other things , to the fact that the Symphony No.
+40 , as the middle work , has no introduction ( unlike No. 39 ) and does not have a finale of the scale of No. 41 's . The 40th symphony exists in two versions
+, differing primarily in that one includes parts for a pair of clarinets ( with suitable adjustments made in the other wind parts ) . Most likely , the clarinet
+parts were added in a revised version . The autograph scores of both versions were acquired in the 1860s by Johannes Brahms , who later donated the manuscripts
+to the Gesellschaft der Musikfreunde in Vienna , where they reside today . Premiere ( edit ) As Neal Zaslaw has pointed out , writers on Mozart have often
+suggested -- or even asserted -- that Mozart never heard his 40th Symphony performed . Some commentators go further , suggesting that Mozart wrote the symphony
+( and its companions , Nos.
+</item 1>
+
+<item 2>
+Symphony No. 40 (Mozart)
+Franz Schubert likewise copied down the music of Mozart 's minuet , and the minuet of his Fifth Symphony strongly evokes Mozart 's . Zaslaw has suggested that a
+passage late in Joseph Haydn 's oratorio The Seasons ( 1801 ) , a meditation on death , quotes the second movement of the 40th Symphony and was included by
+Haydn as a memorial to his long - dead friend . First recording ( edit ) The first known recording of the 40th Symphony is by the Victor Recording Company and
+issued in 1915 under the title `` Symphony in G Minor '' . The Victor Concert Orchestra performed under the direction of conductor Walter B. Rogers . Media (
+edit ) The following files contain a digital recording of a performance of the 40th Symphony by the Fulda Symphonic Orchestra . The performance took place on
+March 18 , 2001 in the Orangerie in Fulda , Germany . 1st movement Molto allegro 2nd movement Andante 3rd movement Menuetto , Allegretto - Trio 4th movement
+Allegro assai Problems playing these files ? See media help .
+</item 2>
+
+<item 3>
+Symphony No. 40 (Mozart)
+The work is in four movements , in the usual arrangement for a classical - style symphony ( fast movement , slow movement , minuet , fast movement ) : Molto
+allegro , Andante , Menuetto . Allegretto -- Trio , Finale . Allegro assai , The first movement begins darkly , not with its first theme but with accompaniment
+, played by the lower strings with divided violas . The technique of beginning a work with an accompaniment figure was later used by Mozart in his last piano
+concerto ( KV. 595 ) and later became a favourite of the Romantics ( examples include the openings of Mendelssohn 's Violin Concerto and Sergei Rachmaninoff 's
+Third Piano Concerto ) . The first theme is as follows . The second movement is a lyrical work in time . It is in the subdominant key of the relative major of G
+minor ( B ♭ major ) : E ♭ major .
+</item 3>
+
+<item 4>
+Symphony No. 40 (Mozart)
+Jump up ^ Milada Jonášová : `` Eine Aufführung der g - moll - Sinfonie KV 550 bei Baron van Swieten im Beisein Mozarts '' , in : Mozart Studien 20 , Tutzing
+2011 , pp. 253 -- 268 . An abridged English translation was published in the Newsletter of the Mozart Society of America 16.1 ( 2012 ) , currently available on
+line at ( 2 ) . The letter reads `` im Wien habe ich selbst es von verstorbenem Mozart gehört , als Er sie bei Baron Wanswiten ( sic ) hat produciren lassen ,
+das ( s ) er wärend der production aus dem Zimmer sich hat entfernen müssen , wie man Sie unrichtig aufgeführt hat '' , meaning `` and in Vienna I have heard
+myself from the departed Mozart , that when he had it performed in Baron Wanswiten 's rooms , he had to leave the room during the performance because it was
+being played so incorrectly '' . Jump up ^ List from Zaslaw 1983 .
+</item 4>
+
+<item 5>
+Symphony No. 40 (Mozart)
+Symphony No. 40 ( Mozart ) - wikipedia Symphony No. 40 ( Mozart ) Jump to : navigation , search Symphony No. 40 in G minor , KV. 550 was written by Wolfgang
+Amadeus Mozart in 1788 . It is sometimes referred to as the `` Great G minor symphony '' , to distinguish it from the `` Little G minor symphony '' , No. 25 .
+The two are the only extant minor key symphonies Mozart wrote . Contents ( hide ) 1 Composition 2 Premiere 3 The music 4 Reception 5 Influence 6 First recording
+7 Media 8 Notes 9 References 10 External links Composition ( edit ) The date of completion of this symphony is known exactly , since Mozart in his mature years
+kept a full catalog of his completed works ; he entered the 40th Symphony into it on 25 July 1788 . Work on the symphony occupied an exceptionally productive
+period of just a few weeks during which time he also completed the 39th and 41st symphonies ( 26 June and 10 August , respectively ) .
+</item 5>
+
+<item 6>
+Symphony No. 40 (Mozart)
+334 . Jump up ^ Hopkins 1981 . Jump up ^ Nottebohm 1887 , p. 531 . Jump up ^ Zaslaw and Cowdery 1990 , p. 210 . Jump up ^ See No. 38 , the aria `` Erblicke hier
+, bethörter Mensch '' . Source : Zaslaw and Cowdery 1990 , p. 210 ) . Jump up ^ `` Wolfgang Amadeus Mozart - Symphony in G Minor '' . Discography of American
+Historical Recordings . References ( edit ) Biba , Otto ( 2009 ) . `` Kommentar '' , Wolfgang Amadeus Mozart . Sinfonie g - moll , KV 550 . Autographe Partitur
+. Erste und zweite Fassung . Faksimile - Ausgabe . Gesellschaft der Musikfreunde in Wien , p. 8 . Deutsch , Otto Erich ( 1965 ) . Mozart : A Documentary
+Biography . Stanford , CA : Stanford University Press .
+</item 6>
+
+<item 7>
+Symphony No. 40 (Mozart)
+Zaslaw , Neal , and William Cowdery ( 1990 ) . The Compleat Mozart : A Guide to the Musical Works of Wolfgang Amadeus Mozart . New York : W.W. Norton & Company
+. Extracts cited are viewable online at Google Books : ( 6 ) . External links ( edit ) Wikimedia Commons has media related to Symphony No. 40 ( Mozart ) .
+Versions of the score : Sinfonie in g minor K. 550 ( 1st version ) : Score and critical report ( in German ) in the Neue Mozart - Ausgabe Sinfonie in g minor K.
+550 ( 2nd version ) : Score in the Neue Mozart - Ausgabe Symphony No. 40 : Scores at the International Music Score Library Project ( IMSLP ) Kalmus miniature
+editions , from the William and Gayle Cook Music Library at the Indiana University Jacobs School of Music A Public Domain version by the Columbia University
+Orchestra at TEOC Classical Music Radio : Symphony No.
+</item 7>
+
+<item 8>
+Symphony No. 40 (Mozart)
+504 , Prague ) No. 39 ( K. 543 ) No. 40 ( K. 550 ) No. 41 ( K. 551 , Jupiter ) Lost K. 19b K. 66c K. 66d K. 66e K. Anh. C 11.07 K. Anh. C 11.08 No. 2 now
+attributed to Leopold Mozart . No. 3 now attributed to Carl Friedrich Abel . No. 37 now attributed to Michael Haydn . List of symphonies by Wolfgang Amadeus
+Mozart List of spurious / doubtful Mozart symphonies LCCN : n81018421 GND : 300111150 BNF : cb13915276b ( data ) Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Symphony_No._40_(Mozart)&oldid=825476175 '' Categories : Symphonies by Wolfgang Amadeus Mozart 1788 compositions
+Compositions in G minor Hidden categories : All articles with specifically marked weasel - worded phrases Articles with specifically marked weasel - worded
+phrases from
+</item 8>
+
+<item 9>
+Symphony No. 40 (Mozart)
+Some commentators go further , suggesting that Mozart wrote the symphony ( and its companions , Nos. 39 and 41 ) without even intending it to be performed , but
+rather for posterity ; as ( to use Alfred Einstein 's words ) , an `` appeal to eternity '' . Modern scholarship suggests that these conjectures are not correct
+. First , in a recently discovered 10 July 1802 letter by the musician Johann Wenzel ( 1762 -- 1831 ) to the publisher Ambrosius Kühnel in Leipzig , Wenzel
+refers to a performance of the symphony at the home of Baron Gottfried van Swieten with Mozart present , but the execution was so poor that the composer had to
+leave the room . There is strong circumstantial evidence for other , probably better , performances . On several occasions between the composition of the
+symphony and the composer 's death , symphony concerts were given featuring Mozart 's music for which copies of the program have survived , announcing a
+symphony unidentified by date or key .
+</item 9>
+
+<item 10>
+Symphony No. 40 (Mozart)
+Passage quoted may be viewed on line at Google Books : ( 5 ) . Schoenberg , Arnold ( 1954 , rvs. 1969 ) . Structural Functions of Harmony . New York : W.W.
+Norton & Company . Analyzes the wide - ranging development sections of both outer movements at some length . Swafford , Jan ( 1997 ) . Johannes Brahms : A
+Biography . New York : Alfred A. Knopf . Zaslaw , Neal ( 1983 ) . Introductory notes to a recording of the 31st and 40th Symphonies made by Christopher Hogwood
+and the Academy of Ancient Music , Oiseau - Lyre 410 - 197 - 2 . Zaslaw , Neal ( 1994 ) . `` Mozart as Working Stiff '' . In James M. Morris , ed . On Mozart ,
+. Washington : Woodrow Wilson Center Press . Zaslaw , Neal , and William Cowdery ( 1990 ) .
+</item 10>
+=== END ITEM id=775d35ed2756befd ===
+
+=== ITEM id=e6690f1858a4a3d9 ===
+Gold sentences and facts:
+Sentence 0: The video takes place with the band and the album 's two protagonists Christian ( Josh Boswell ) and Gloria ( Lisa Stelly ) taking refuge in a white room after robbing a bank . The police arrive outside the room and open fire through the window , to the couple 's terror . As bullets rain through the room , the band continues playing . Gloria picks up the phone and throws it into a fish tank . As the bullets continue to fly and tear apart the room , Christian and Gloria become calm and walk toward each other , unharmed by the bullets . They embrace and kiss as the room goes dark , recreating the 21st Century Breakdown cover art . As the song ends , the room lights up again , and they are still uninjured . After the room lights up , there are various shots of destruction in the room , including a shot of some of the writing on the walls . The writing includes an excerpt of the lyrics to `` 21 Guns '' , as well as those of the song `` See The Light '' which also appears on `` 21st Century Breakdown '' . The video may represent the meaning of the song in the 21st Century Breakdown story .
+  Fact 0.0: The video features the band
+  Fact 0.1: The video features the album's two protagonists, Christian and Gloria
+  Fact 0.2: Christian is played by Josh Boswell
+  Fact 0.3: Gloria is played by Lisa Stelly
+  Fact 0.4: Christian and Gloria take refuge in a white room after robbing a bank
+  Fact 0.5: The police arrive outside the room and open fire through the window
+  Fact 0.6: The police fire to the couple's terror
+  Fact 0.7: As bullets rain through the room, the band continues playing
+  Fact 0.8: Gloria picks up the phone and throws it into a fish tank
+  Fact 0.9: As the bullets continue to fly and tear apart the room, Christian and Gloria become calm
+  Fact 0.10: Christian and Gloria walk toward each other, unharmed by the bullets
+  Fact 0.11: Christian and Gloria embrace and kiss as the room goes dark
+  Fact 0.12: The embrace and kiss recreate the 21st Century Breakdown cover art
+  Fact 0.13: As the song ends, the room lights up again
+  Fact 0.14: Christian and Gloria are still uninjured when the room lights up
+  Fact 0.15: After the room lights up, there are various shots of destruction in the room
+  Fact 0.16: The shots include a shot of some of the writing on the walls
+  Fact 0.17: The writing includes an excerpt of the lyrics to 21 Guns
+  Fact 0.18: The writing also includes lyrics of the song See The Light
+  Fact 0.19: The song See The Light also appears on 21st Century Breakdown
+  Fact 0.20: The video may represent the meaning of the song in the 21st Century Breakdown story
+
+Retrieved items:
+<item 1>
+21 Guns (song)
+It became available for download on the music video game series Rock Band on July 7 , 2009 , along with the songs `` East Jesus Nowhere '' and `` Know Your
+Enemy . The song was featured in episode 6 of The Vampire Diaries . The song is featured in the video game Green Day : Rock Band and is downloadable content for
+the Rock Band series . A live version was also released on 21 Guns Live EP in September 2009 . Music video A music video was directed by Marc Webb and filmed in
+Los Angeles on June 6 , 2009 . It premiered on MySpace on Monday , June 22 , 2009 at midnight EDT . A shorter version of the video also exists , which is set to
+the radio edit of the song . It is the third Green Day video to feature touring guitarist Jason White performing with the band , following `` Wake Me Up When
+September Ends '' and `` Working Class Hero '' . He is also seen briefly in the music videos for `` When I Come Around '' and `` Jesus of Suburbia '' but he is
+not performing with the band .
+</item 1>
+
+<item 2>
+21 Guns (song)
+Title Length 1 . `` 21 Guns '' 5 : 21 2 . `` Favorite Son '' ( Green Day 's contribution to the Rock Against Bush Vol. 2 compilation ) 2 : 13 3 . `` 21 Guns ''
+( Studio 880 version ) 5 : 17 CD single / 7 '' single No . Title Length 1 . `` 21 Guns '' 5 : 21 2 . `` Favorite Son '' ( From `` Rock Against Bush Vol. 2 '' )
+2 : 13 Promo CD No . Title Length 1 . `` 21 Guns '' ( Radio Edit ) 4 : 37 Musical cast version : Digital download / CD single No . Title Length 1 . `` 21 Guns
+'' ( Green Day with the cast of American Idiot version ) 4 : 41 21 Guns EP No . Title Length 1 . `` 21 Guns '' ( Green Day with the cast of American Idiot
+version ) 4 : 41 2 . `` 21 Guns '' ( Original version ) 5 : 21 3 .
+</item 2>
+
+<item 3>
+21 Guns (song)
+British Phonographic Industry . Enter 21 Guns in the search field and then press Enter . Jump up ^ `` American single certifications -- Green Day -- 21 Guns ''
+. Recording Industry Association of America . Retrieved October 13 , 2015 . If necessary , click Advanced , then click Format , then select Single , then click
+SEARCH External links Lyrics of this song at MetroLyrics ( hide ) Green Day Billie Joe Armstrong Mike Dirnt Tré Cool Jason White John Kiffmeyer Studio albums 39
+/ Smooth Kerplunk Dookie Insomniac Nimrod Warning American Idiot 21st Century Breakdown ¡ Uno ! ¡ Dos ! ¡ Tré ! Revolution Radio Live albums Live Tracks Tune In
+, Tokyo ... Bullet in a Bible Awesome as Fuck Compilation albums 1,039 / Smoothed Out Slappy Hours International Superhits ! Shenanigans Green Day Demolicious
+Greatest Hits : God 's Favorite Band EPs 1,000 Hours Slappy Sweet Children Last Night on Earth : Live in Tokyo Singles `` Longview '' `` Welcome to Paradise ''
+`` Basket Case '' `` When I Come Around '' `` She '' `` J.A.R. '' `` Geek
+</item 3>
+
+<item 4>
+21 Guns (song)
+`` Geek Stink Breath '' `` Stuck with Me '' `` Brain Stew / Jaded '' `` Walking Contradiction '' `` Hitchin ' a Ride '' `` Good Riddance ( Time of Your Life )
+'' `` Redundant '' `` Nice Guys Finish Last '' `` Minority '' `` Warning '' `` Waiting '' `` Macy 's Day Parade '' `` American Idiot '' `` Boulevard of Broken
+Dreams '' `` Holiday '' `` Wake Me Up When September Ends '' `` Jesus of Suburbia '' `` Know Your Enemy '' `` 21 Guns '' `` East Jesus Nowhere '' `` 21st
+Century Breakdown '' `` Last of the American Girls '' `` When It 's Time '' `` Oh Love '' `` Kill the DJ '' `` Let Yourself Go '' `` Stray Heart '' `` The
+Forgotten '' `` X-Kid '' `` Xmas Time of the Year '' `` Bang Bang '' `` Still Breathing '' `` Revolution Radio '' Tours Pop Disaster Tour American Idiot World
+Tour 21st Century Breakdown World Tour 99 Revolutions Tour Revolution Radio Tour Associated acts Foxboro Hot Tubs The Network Pinhead Gunpowder The Frustrators
+The Lookouts The Big Cats The Influents Related articles Discography List of songs
+</item 4>
+
+<item 5>
+21 Guns (song)
+Retrieved June 16 , 2012 . Jump up ^ `` Green Day -- 21 Guns ( CD ) at Discogs '' . Discogs . Retrieved June 16 , 2012 . Jump up ^ `` Transformers : Revenge of
+the Fallen Soundtrack '' . digiRAMA . Archived from the original on June 29 , 2009 . Retrieved July 12 , 2010 . Jump up ^ `` MTV Games , Harmonix & Warner Bros.
+/ Reprise Records Partner With Green Day to Bring Their Music Exclusively to Rock Band / / News / / Rock Band '' . Rockband.com . Retrieved August 21 , 2009 .
+Jump up ^ `` SkinnyLove21 's Journal -- The Vampire Diaries Soundtrack , Season 1 '' . last.fm. April 16 , 2010 . Archived from the original on August 18 , 2010
+. Retrieved July 12 , 2010 . Jump up ^ `` '' 21 Guns '' -- Green Day `` . rockband.com . Archived from the original on April 25 , 2010 .
+</item 5>
+
+<item 6>
+21 Guns (song)
+The video may represent the meaning of the song in the 21st Century Breakdown story . Musical cast version `` 21 Guns '' Single by Green Day and the cast of
+American Idiot from the album American Idiot : The Original Broadway Cast Recording B - side `` Like a Rolling Stone ( Bob Dylan Cover ) '' Released December 3
+, 2009 Format Digital download , CD single Recorded 2009 Genre Alternative rock Length 4 : 41 Label Reprise Songwriter ( s ) Billie Joe Armstrong , David Bowie
+, Mike Dirnt , and Tré Cool Producer ( s ) Green Day Green Day and the cast of American Idiot singles chronology `` 21 Guns '' ( 2009 ) `` When It 's Time '' (
+2010 ) `` 21 Guns ( Musical Cast Version ) '' ( 2010 ) `` When It 's Time '' ( 2010 ) Green Day has recorded two versions of `` 21 Guns '' with the cast of
+American Idiot . The recording was produced by Billie Joe Armstrong . The recording with Armstrong singing the male solo parts was released on December 3 to
+Spinner.com and also released for digital download on December 22 .
+</item 6>
+
+<item 7>
+21 Guns (song)
+rockband.com . Archived from the original on April 25 , 2010 . Retrieved July 12 , 2010 . Jump up ^ `` 21 Guns Live EP '' . GreenDay.com . September 20 , 2009 .
+Archived from the original on April 13 , 2010 . Retrieved July 12 , 2010 . Jump up ^ `` 21 Guns Video '' . Green Day.com . June 5 , 2009 . Archived from the
+original on June 8 , 2011 . Retrieved July 12 , 2010 . Jump up ^ `` 2009 MTV Video Music Awards Winners '' . MTV . Retrieved July 12 , 2010 . Jump up ^ `` Green
+Day -- making of 21 Guns video '' . MySpace Video . June 23 , 2009 . Archived from the original on July 2 , 2009 . Retrieved July 12 , 2010 . Jump up ^ `` Press
+Release '' . GreenDay.com . November 13 , 2009 .
+</item 7>
+
+<item 8>
+21 Guns (song)
+21 Guns ( song ) - wikipedia 21 Guns ( song ) Jump to : navigation , search `` 21 Guns '' Single by Green Day from the album 21st Century Breakdown Released May
+25 , 2009 ( digital download ) July 14 , 2009 ( CD single ) Format Digital download , CD single , vinyl Recorded 2008 Genre Alternative rock Length 5 : 21 Label
+Reprise Songwriter ( s ) Billie Joe Armstrong , David Bowie , Mike Dirnt , and Tré Cool Producer ( s ) Butch Vig and Green Day Green Day singles chronology ``
+Know Your Enemy '' ( 2009 ) `` 21 Guns '' ( 2009 ) `` East Jesus Nowhere '' ( 2009 ) `` Know Your Enemy '' ( 2009 ) `` 21 Guns '' ( 2009 ) `` East Jesus Nowhere
+'' ( 2009 ) Audio sample file help `` 21 Guns '' is a song by American punk rock band Green Day . It was released as the second single from their eighth album ,
+21st Century Breakdown .
+</item 8>
+
+<item 9>
+21 Guns (song)
+GreenDay.com . November 13 , 2009 . Archived from the original on April 13 , 2010 . Retrieved July 12 , 2010 . Jump up ^ `` Press Release '' . GreenDay.com .
+December 2 , 2009 . Archived from the original on June 8 , 2011 . Retrieved July 12 , 2010 . Jump up ^ Officially released video Green Day -- 21 Guns ( Cast
+Version ) on YouTube Jump up ^ `` Get The New 21 Guns EP In Itunes Now '' . GreenDay.com . February 2 , 2010 . Archived from the original on June 8 , 2011 .
+Retrieved July 12 , 2010 . Jump up ^ `` Australian-charts.com -- Green Day -- 21 Guns '' . ARIA Top 50 Singles . Retrieved October 27 , 2017 . Jump up ^ ``
+Austriancharts.at -- Green Day -- 21 Guns '' ( in German ) . Ö3 Austria Top 40 . Retrieved October 27 , 2017 .
+</item 9>
+
+<item 10>
+21 Guns (song)
+The video was released February 1 . The second version of the song with the cast of American Idiot features Stark Sands , John Gallagher Jr. , and Michael Esper
+singing their respective solos instead of Armstrong . It was performed with Armstrong singing lead male vocals at the 52nd Grammy Awards . Live EP 21 Guns Live
+EP EP by Green Day Released September 4 , 2009 Recorded July 25 , 2009 in Albany , New York ; July 28 , 2009 Madison Square Garden , New York Genre Pop punk ,
+punk rock , alternative rock Length 17 : 52 Label Reprise Producer Green Day Green Day released a live EP for the song including live performances of `` Welcome
+to Paradise '' , `` Brain Stew / Jaded '' and `` F.O.D. '' recorded live in Albany , New York and Madison Square Garden . This EP was released on the Australian
+iTunes store , Amazon UK , and Napster . Track listing Original version : Digital download / Maxi CD No . Title Length 1 . `` 21 Guns '' 5 : 21 2 .
+</item 10>
+=== END ITEM id=e6690f1858a4a3d9 ===
+
+=== ITEM id=c216f8a362e868d4 ===
+Gold sentences and facts:
+Sentence 0: No . overall No. in season Title Directed by Written by Original air date Prod . code U.S. viewers ( millions ) 107 `` Watch Me '' Jann Turner Shonda Rhimes October 5 , 2017 ( 2017 - 10 - 05 ) 701 5.52 108 `` Pressing the Flesh '' Tony Goldwyn Matt Byrne October 12 , 2017 ( 2017 - 10 - 12 ) 702 5.00 109 `` Day 101 '' Scott Foley Zahir McGhee October 19 , 2017 ( 2017 - 10 - 19 ) 703 4.70 110 `` Lost Girls '' Nicole Rubio Ameni Rozsa & Austin Guzman October 26 , 2017 ( 2017 - 10 - 26 ) 704 4.88 111 5 `` Adventures in Babysitting '' Oliver Bokelberg Serveriano Canales & Tia Napolitano November 2 , 2017 ( 2017 - 11 - 02 ) 705 4.89 112 6 `` Vampires and Bloodsuckers '' Jann Turner Chris Van Dusen & Tia Napolitano November 9 , 2017 ( 2017 - 11 - 09 ) 706 5.00 113 7 `` Something Borrowed '' Sharat Raju Mark Fish November 16 , 2017 ( 2017 - 11 - 16 ) 707 4.97 114 8 `` Robin '' Daryn Okada Juan Carlos Fernandez January 18 , 2018 ( 2018 - 01 - 18 ) 709 5.17 115 9 `` Good People '' Nzingha Stewart Shonda Rhimes , Jess Brownell & Nicholas Nardini January 25 , 2018 ( 2018 - 01 - 25 ) 708 TBD 116 10 `` The People v. Olivia Pope '' TBA TBA February 1 , 2018 ( 2018 - 02 - 01 ) 710 TBD 117 11 `` Army of One '' TBA TBA February 8 , 2018 ( 2018 - 02 - 08 ) 711 TBD 118 12 TBA TBA TBA March 1 , 2018 ( 2018 - 03 - 01 ) TBA TBD
+  Fact 0.0: Episode 107 overall is titled 'Watch Me'.
+  Fact 0.1: Episode 107 overall was directed by Jann Turner.
+  Fact 0.2: Episode 107 overall was written by Shonda Rhimes.
+  Fact 0.3: Episode 107 overall originally aired on October 5, 2017.
+  Fact 0.4: Episode 107 overall has production code 701.
+  Fact 0.5: Episode 107 overall had 5.52 million U.S. viewers.
+  Fact 0.6: Episode 108 overall is titled 'Pressing the Flesh'.
+  Fact 0.7: Episode 108 overall was directed by Tony Goldwyn.
+  Fact 0.8: Episode 108 overall was written by Matt Byrne.
+  Fact 0.9: Episode 108 overall originally aired on October 12, 2017.
+  Fact 0.10: Episode 108 overall has production code 702.
+  Fact 0.11: Episode 108 overall had 5.00 million U.S. viewers.
+  Fact 0.12: Episode 109 overall is titled 'Day 101'.
+  Fact 0.13: Episode 109 overall was directed by Scott Foley.
+  Fact 0.14: Episode 109 overall was written by Zahir McGhee.
+  Fact 0.15: Episode 109 overall originally aired on October 19, 2017.
+  Fact 0.16: Episode 109 overall has production code 703.
+  Fact 0.17: Episode 109 overall had 4.70 million U.S. viewers.
+  Fact 0.18: Episode 110 overall is titled 'Lost Girls'.
+  Fact 0.19: Episode 110 overall was directed by Nicole Rubio.
+  Fact 0.20: Episode 110 overall was written by Ameni Rozsa and Austin Guzman.
+  Fact 0.21: Episode 110 overall originally aired on October 26, 2017.
+  Fact 0.22: Episode 110 overall has production code 704.
+  Fact 0.23: Episode 110 overall had 4.88 million U.S. viewers.
+  Fact 0.24: Episode 111 overall is episode 5 of its season and is titled 'Adventures in Babysitting'.
+  Fact 0.25: Episode 111 overall was directed by Oliver Bokelberg.
+  Fact 0.26: Episode 111 overall was written by Serveriano Canales and Tia Napolitano.
+  Fact 0.27: Episode 111 overall originally aired on November 2, 2017.
+  Fact 0.28: Episode 111 overall has production code 705.
+  Fact 0.29: Episode 111 overall had 4.89 million U.S. viewers.
+  Fact 0.30: Episode 112 overall is episode 6 of its season and is titled 'Vampires and Bloodsuckers'.
+  Fact 0.31: Episode 112 overall was directed by Jann Turner.
+  Fact 0.32: Episode 112 overall was written by Chris Van Dusen and Tia Napolitano.
+  Fact 0.33: Episode 112 overall originally aired on November 9, 2017.
+  Fact 0.34: Episode 112 overall has production code 706.
+  Fact 0.35: Episode 112 overall had 5.00 million U.S. viewers.
+  Fact 0.36: Episode 113 overall is episode 7 of its season and is titled 'Something Borrowed'.
+  Fact 0.37: Episode 113 overall was directed by Sharat Raju.
+  Fact 0.38: Episode 113 overall was written by Mark Fish.
+  Fact 0.39: Episode 113 overall originally aired on November 16, 2017.
+  Fact 0.40: Episode 113 overall has production code 707.
+  Fact 0.41: Episode 113 overall had 4.97 million U.S. viewers.
+  Fact 0.42: Episode 114 overall is episode 8 of its season and is titled 'Robin'.
+  Fact 0.43: Episode 114 overall was directed by Daryn Okada.
+  Fact 0.44: Episode 114 overall was written by Juan Carlos Fernandez.
+  Fact 0.45: Episode 114 overall originally aired on January 18, 2018.
+  Fact 0.46: Episode 114 overall has production code 709.
+  Fact 0.47: Episode 114 overall had 5.17 million U.S. viewers.
+  Fact 0.48: Episode 115 overall is episode 9 of its season and is titled 'Good People'.
+  Fact 0.49: Episode 115 overall was directed by Nzingha Stewart.
+  Fact 0.50: Episode 115 overall was written by Shonda Rhimes, Jess Brownell and Nicholas Nardini.
+  Fact 0.51: Episode 115 overall originally aired on January 25, 2018.
+  Fact 0.52: Episode 115 overall has production code 708.
+  Fact 0.53: Episode 115 overall has U.S. viewership listed as TBD.
+  Fact 0.54: Episode 116 overall is episode 10 of its season and is titled 'The People v. Olivia Pope'.
+  Fact 0.55: Episode 116 overall has its director listed as TBA.
+  Fact 0.56: Episode 116 overall has its writer listed as TBA.
+  Fact 0.57: Episode 116 overall originally aired on February 1, 2018.
+  Fact 0.58: Episode 116 overall has production code 710.
+  Fact 0.59: Episode 116 overall has U.S. viewership listed as TBD.
+  Fact 0.60: Episode 117 overall is episode 11 of its season and is titled 'Army of One'.
+  Fact 0.61: Episode 117 overall has its director listed as TBA.
+  Fact 0.62: Episode 117 overall has its writer listed as TBA.
+  Fact 0.63: Episode 117 overall originally aired on February 8, 2018.
+  Fact 0.64: Episode 117 overall has production code 711.
+  Fact 0.65: Episode 117 overall has U.S. viewership listed as TBD.
+  Fact 0.66: Episode 118 overall is episode 12 of its season.
+  Fact 0.67: Episode 118 overall has its title, director, and writer listed as TBA.
+  Fact 0.68: Episode 118 overall originally aired on March 1, 2018.
+  Fact 0.69: Episode 118 overall has its production code listed as TBA.
+  Fact 0.70: Episode 118 overall has U.S. viewership listed as TBD.
+Sentence 1: 116 10 `` The People v. Olivia Pope '' TBA TBA February 1 , 2018 ( 2018 - 02 - 01 ) 710 TBD
+  Fact 1.0: Episode 116 overall is episode 10 of its season and is titled 'The People v. Olivia Pope'.
+  Fact 1.1: Episode 116 overall has its director listed as TBA.
+  Fact 1.2: Episode 116 overall has its writer listed as TBA.
+  Fact 1.3: Episode 116 overall originally aired on February 1, 2018.
+  Fact 1.4: Episode 116 overall has production code 710.
+  Fact 1.5: Episode 116 overall has U.S. viewership listed as TBD.
+
+Retrieved items:
+<item 1>
+List of Scandal episodes
+TV by the Numbers . Retrieved January 22 , 2018 . Jump up ^ `` ( # 708 ) `` Good People '' `` . The Futon Critic . Retrieved January 24 , 2018 . ^ Jump up to :
+`` Shows A-Z - scandal on abc '' . The Futon Critic . Retrieved January 24 , 2018 . Jump up ^ `` ' Scandal ' Sets Darby Stanchfield - Directed Web Series Ahead
+of Season 6 '' . The Hollywood Reporter . January 18 , 2017 . External links ( edit ) Official website List of Scandal episodes on IMDb ( hide ) Scandal
+Episodes Season 1 `` Sweet Baby '' Season 2 `` Nobody Likes Babies '' `` Whiskey Tango Foxtrot '' `` Boom Goes the Dynamite '' `` Top of the Hour '' `` Snake in
+the Garden '' `` Molly , You in Danger , Girl '' `` Seven Fifty - Two '' Season 3 `` It 's Handled '' `` Guess Who 's Coming to Dinner '' `` Mrs.
+</item 1>
+
+<item 2>
+List of Scandal episodes
+2014 ( 2014 - 04 - 17 ) 318 10.57 Season 4 ( 2014 -- 15 ) ( edit ) Main article : Scandal ( season 4 ) No . overall No. in season Title Directed by Written by
+Original air date Prod . code U.S. viewers ( millions ) 48 `` Randy , Red , Superfreak and Julia '' Tom Verica Shonda Rhimes September 25 , 2014 ( 2014 - 09 -
+25 ) 401 11.96 49 `` The State of the Union '' Allison Liddi - Brown Heather Mitchell October 2 , 2014 ( 2014 - 10 - 02 ) 402 10.34 50 `` Inside the Bubble ''
+Randy Zisk Matt Byrne October 9 , 2014 ( 2014 - 10 - 09 ) 403 9.52 51 `` Like Father , Like Daughter '' Paul McCrane Mark Fish October 16 , 2014 ( 2014 - 10 -
+16 ) 404A 9.
+</item 2>
+
+<item 3>
+List of Scandal episodes
+May 26 , 2016 . Retrieved May 27 , 2016 . Jump up ^ `` Final 2016 - 17 TV Rankings : ' Sunday Night Football ' Winning Streak Continues '' . Deadline Hollywood
+. May 26 , 2017 . Retrieved May 26 , 2017 . Jump up ^ Ausiello , Michael ( June 26 , 2017 ) . `` Scandal Farewell Update : Final Season Episode Count Revealed
+'' . TVLine . Retrieved July 28 , 2017 . Jump up ^ Gelman , Vlada ( January 8 , 2018 ) . `` Quantico Season 3 and Shondaland 's For the People Get ABC Premiere
+Dates '' . TVLine . Retrieved January 8 , 2018 . Jump up ^ Bibel , Sara ( April 6 , 2012 ) . `` Thursday Final Ratings : ' Big Bang Theory ' , ' American Idol '
+, ' Person of Interest ' , ' Missing ' , ' Up All Night ' Adjusted Up ; ' Scandal ' Adjusted Down '' . TV by the Numbers .
+</item 3>
+
+<item 4>
+List of Scandal episodes
+2012 ( 2012 - 05 - 17 ) 107 7.33 Season 2 ( 2012 -- 13 ) ( edit ) Main article : Scandal ( season 2 ) No . overall No. in season Title Directed by Written by
+Original air date Prod . code U.S. viewers ( millions ) 8 `` White Hat 's Off '' Tom Verica Jenna Bans September 27 , 2012 ( 2012 - 09 - 27 ) 201 6.74 9 `` The
+Other Woman '' Stephen Cragg Heather Mitchell October 4 , 2012 ( 2012 - 10 - 04 ) 202 6.56 10 `` Hunting Season '' Ron Underwood Matt Byrne October 18 , 2012 (
+2012 - 10 - 18 ) 203 6.17 11 `` Beltway Unbuckled '' Mark Tinker Mark Fish October 25 , 2012 ( 2012 - 10 - 25 ) 204 6.11 12 5 `` All Roads Lead to Fitz '' Steve
+Robin Raamla Mohamed November 8 ,
+</item 4>
+
+<item 5>
+List of Scandal episodes
+List of Scandal episodes - wikipedia List of Scandal episodes Jump to : navigation , search Scandal is an American political thriller television series created
+by Shonda Rhimes , which premiered on ABC on April 5 , 2012 . Kerry Washington stars as Olivia Pope , a former White House Communications Director who leaves to
+start her own crisis management firm , Pope and Associates , where she works to keep the secrets and protect the public images of the country 's most powerful
+and elite . On staff at the new firm are fresh - faced lawyer Quinn Perkins ( Katie Lowes ) ; smooth talking litigator Harrison Wright ( Columbus Short ) ;
+investigator Abby Whelan ( Darby Stanchfield ) ; and computer hacker with a CIA past Huck ( Guillermo Diaz ) . The show also focuses on President of the United
+States Fitzgerald Grant ( Tony Goldwyn ) ; First Lady Mellie Grant ( Bellamy Young ) ; White House Chief of Staff Cyrus Beene ( Jeff Perry ) ; Vice President
+and eventual presidential candidate Sally Langston ( Kate Burton ) ; U.S.
+</item 5>
+
+<item 6>
+List of Scandal episodes
+07 28 21 `` Any Questions ? '' Mark Tinker Matt Byrne May 9 , 2013 ( 2013 - 05 - 09 ) 221 8.87 29 22 `` White Hat 's Back On '' Tom Verica Shonda Rhimes May 16
+, 2013 ( 2013 - 05 - 16 ) 222 9.12 Season 3 ( 2013 -- 14 ) ( edit ) Main article : Scandal ( season 3 ) No . overall No. in season Title Directed by Written by
+Original air date Prod . code U.S. viewers ( millions ) 30 `` It 's Handled '' Tom Verica Shonda Rhimes October 3 , 2013 ( 2013 - 10 - 03 ) 301 10.52 31 ``
+Guess Who 's Coming to Dinner '' Allison Liddi - Brown Heather Mitchell October 10 , 2013 ( 2013 - 10 - 10 ) 302 9.01 32 `` Mrs. Smith Goes to Washington ''
+Jeannot Szwarc Matt Byrne October 17 ,
+</item 6>
+
+<item 7>
+List of Scandal episodes
+Attorney David Rosen ( Joshua Malina ) ; Head of NSA , Jake Ballard ( Scott Foley ) ; chairwoman Elizabeth North ( Portia de Rossi ) ; activist Marcus Walker (
+Cornelius Smith Jr . ) ; and head of B613 Eli Pope ( Joe Morton ) . As of January 18 , 2018 , 114 episodes of Scandal have aired , including one special . On
+February 10 , 2017 , the show was renewed for a seventh season consisting of 18 episodes . It was later announced it will be the final season . Contents ( hide
+) 1 Series overview 2 Episodes 2.1 Season 1 ( 2012 ) 2.2 Season 2 ( 2012 -- 13 ) 2.3 Season 3 ( 2013 -- 14 ) 2.4 Season 4 ( 2014 -- 15 ) 2.5 Season 5 ( 2015 --
+16 ) 2.6 Season 6 ( 2017 ) 2.7 Season 7 ( 2017 -- 18 ) 3 Specials 4 Webisodes 4.
+</item 7>
+
+<item 8>
+List of Scandal episodes
+Jess Brownell & Nicholas Nardini January 25 , 2018 ( 2018 - 01 - 25 ) 708 TBD 116 10 `` The People v. Olivia Pope '' TBA TBA February 1 , 2018 ( 2018 - 02 - 01
+) 710 TBD 117 11 `` Army of One '' TBA TBA February 8 , 2018 ( 2018 - 02 - 08 ) 711 TBD 118 12 TBA TBA TBA March 1 , 2018 ( 2018 - 03 - 01 ) TBA TBD Specials (
+edit ) No . Title Narrator Aired between Original air date U.S.
+</item 8>
+
+<item 9>
+List of Scandal episodes
+2015 ( 2015 - 09 - 24 ) May 12 , 2016 ( 2016 - 05 - 12 ) 16 10.68 6 16 January 26 , 2017 ( 2017 - 01 - 26 ) May 18 , 2017 ( 2017 - 05 - 18 ) 30 8.16 7 18
+October 5 , 2017 ( 2017 - 10 - 05 ) April 19 , 2018 ( 2018 - 04 - 19 ) N / A N / A Episodes ( edit ) Season 1 ( 2012 ) ( edit ) Main article : Scandal ( season
+1 ) No . overall No. in season Title Directed by Written by Original air date Prod . code U.S. viewers ( millions ) `` Sweet Baby '' Paul McGuigan Shonda Rhimes
+April 5 , 2012 ( 2012 - 04 - 05 ) 101 7.33 `` Dirty Little Secrets '' Roxann Dawson Heather Mitchell April 12 ,
+</item 9>
+
+<item 10>
+List of Scandal episodes
+2017 ( 2017 - 05 - 18 ) 616 5.23 Season 7 ( 2017 -- 18 ) ( edit ) Main article : Scandal ( season 7 ) No . overall No. in season Title Directed by Written by
+Original air date Prod . code U.S. viewers ( millions ) 107 `` Watch Me '' Jann Turner Shonda Rhimes October 5 , 2017 ( 2017 - 10 - 05 ) 701 5.52 108 ``
+Pressing the Flesh '' Tony Goldwyn Matt Byrne October 12 , 2017 ( 2017 - 10 - 12 ) 702 5.00 109 `` Day 101 '' Scott Foley Zahir McGhee October 19 , 2017 ( 2017
+- 10 - 19 ) 703 4.70 110 `` Lost Girls '' Nicole Rubio Ameni Rozsa & Austin Guzman October 26 , 2017 ( 2017 - 10 - 26 ) 704 4.
+</item 10>
+=== END ITEM id=c216f8a362e868d4 ===
+
+=== ITEM id=55a6b70244dbe5fa ===
+Gold sentences and facts:
+Sentence 0: Captain : Christopher Jones . About age 50 , of Harwich , a seaport in Essex , England , which was also the port of his ship Mayflower . He and his ship were veterans of the European cargo business , often carrying wine to England , but neither had ever crossed the Atlantic . By June 1620 , he and the Mayflower had been hired for the Pilgrims voyage by their business agents in London , Thomas Weston of the Merchant Adventurers and Robert Cushman . Historical marker in London honoring the Mayflower and Captain Jones .
+  Fact 0.0: Christopher Jones was the captain of the Mayflower.
+  Fact 0.1: Christopher Jones was about age 50.
+  Fact 0.2: Christopher Jones was from Harwich, a seaport in Essex, England.
+  Fact 0.3: Harwich was also the port of Christopher Jones's ship, the Mayflower.
+  Fact 0.4: Christopher Jones and the Mayflower were veterans of the European cargo business.
+  Fact 0.5: Christopher Jones and the Mayflower often carried wine to England.
+  Fact 0.6: Neither Christopher Jones nor the Mayflower had ever crossed the Atlantic.
+  Fact 0.7: By June 1620, Christopher Jones and the Mayflower had been hired for the Pilgrims' voyage by their business agents in London.
+  Fact 0.8: Thomas Weston of the Merchant Adventurers was one of the business agents in London who hired the Mayflower for the Pilgrims' voyage.
+  Fact 0.9: Robert Cushman was one of the business agents in London who hired the Mayflower for the Pilgrims' voyage.
+  Fact 0.10: There is a historical marker in London honoring the Mayflower.
+  Fact 0.11: There is a historical marker in London honoring Captain Jones.
+Sentence 1: Captain Jones became master of the Mayflower 11 years prior to the Pilgrims ' voyage , sailing the ship cross-Channel taking English woolens to France and bringing French wine to London . In addition , he had also transported hats , hemp , Spanish salt , hops , and vinegar to Norway , and may have taken the Mayflower whaling in the North Atlantic in the Greenland area . She had traveled to Mediterranean ports , being then owned by Christopher Nichols , Robert Child , Thomas Short , and Christopher Jones , the ship 's master . In 1620 , Jones and Robert Child still owned their quarter shares in the ship , and it was from them that Thomas Weston chartered her in the summer of 1620 to undertake the Pilgrim voyage . Weston had a significant role in the Mayflower voyage , due to his membership in the Company of Merchant Adventurers , and he eventually traveled to the Plymouth Colony himself .
+  Fact 1.0: Captain Jones became master of the Mayflower 11 years before the Pilgrims' voyage.
+  Fact 1.1: Captain Jones sailed the Mayflower cross-Channel taking English woolens to France.
+  Fact 1.2: Captain Jones sailed the Mayflower bringing French wine to London.
+  Fact 1.3: Captain Jones also transported hats, hemp, Spanish salt, hops, and vinegar to Norway.
+  Fact 1.4: Captain Jones may have taken the Mayflower whaling in the North Atlantic in the Greenland area.
+  Fact 1.5: The Mayflower had traveled to Mediterranean ports.
+  Fact 1.6: The Mayflower was owned by Christopher Nichols, Robert Child, Thomas Short, and Christopher Jones.
+  Fact 1.7: Christopher Jones was the ship's master.
+  Fact 1.8: In 1620, Christopher Jones still owned a quarter share in the Mayflower.
+  Fact 1.9: In 1620, Robert Child still owned a quarter share in the Mayflower.
+  Fact 1.10: Thomas Weston chartered the Mayflower from Jones and Child in the summer of 1620 to undertake the Pilgrim voyage.
+  Fact 1.11: Weston had a significant role in the Mayflower voyage due to his membership in the Company of Merchant Adventurers.
+  Fact 1.12: Thomas Weston eventually traveled to the Plymouth Colony himself.
+Sentence 2: Aft on the main deck in the stern was the cabin for Master Christopher Jones , measuring about ten by seven feet ( 3 m × 2.1 m ) . Forward of that was the steerage room , which housed a whipstaff ( tiller extension ) for sailing control ; not a wheel , as in later ships . Also here was the ship 's compass and probably also berths for the ship 's officers . Forward of the steerage room was the capstan , a vertical axle used to pull in ropes or cables . Far forward on the main deck , just aft of the bow , was the forecastle space where the ship 's cook prepared meals for the crew ; it may also have been where the ship 's sailors slept .
+  Fact 2.0: The cabin for Master Christopher Jones was aft on the main deck in the stern.
+  Fact 2.1: The cabin for Master Christopher Jones measured about ten by seven feet (3 m × 2.1 m).
+  Fact 2.2: The steerage room was forward of the cabin.
+  Fact 2.3: The steerage room housed a whipstaff (tiller extension) for sailing control.
+  Fact 2.4: The whipstaff was not a wheel, unlike in later ships.
+  Fact 2.5: The ship's compass was also in the same area as the steerage room.
+  Fact 2.6: The ship probably also had berths for the ship's officers in the steerage room area.
+  Fact 2.7: The capstan was forward of the steerage room.
+  Fact 2.8: The capstan was a vertical axle used to pull in ropes or cables.
+  Fact 2.9: The forecastle space was far forward on the main deck, just aft of the bow.
+  Fact 2.10: The ship's cook prepared meals for the crew in the forecastle space.
+  Fact 2.11: The ship's sailors may also have slept in the forecastle space.
+
+Retrieved items:
+<item 1>
+Mayflower
+In addition , he had also transported hats , hemp , Spanish salt , hops , and vinegar to Norway , and may have taken the Mayflower whaling in the North Atlantic
+in the Greenland area . She had traveled to Mediterranean ports , being then owned by Christopher Nichols , Robert Child , Thomas Short , and Christopher Jones
+, the ship 's master . In 1620 , Jones and Robert Child still owned their quarter shares in the ship , and it was from them that Thomas Weston chartered her in
+the summer of 1620 to undertake the Pilgrim voyage . Weston had a significant role in the Mayflower voyage , due to his membership in the Company of Merchant
+Adventurers , and he eventually traveled to the Plymouth Colony himself . There were 26 vessels bearing the same name as the Pilgrim ship in the Port Books of
+England in the reign of James I ( 1603 -- 1625 ) , and the reason for this popularity of the name has never been found . One particular Mayflower that has
+caused historical confusion is a Mayflower erroneously identified as one of the 1620 Pilgrims .
+</item 1>
+
+<item 2>
+Graph query row:
+entity: Christopher Jones
+relationship: PARTICIPATED_IN
+related: Pilgrims voyage
+</item 2>
+
+<item 3>
+Mayflower
+He was named in Mourt 's Relation , London 1622 , under a date of January 12 , 1621 as a leader of an expedition to rescue Pilgrims lost in the forest for
+several days while searching for housing - roof thatch . It is unknown in what capacity he came to the Mayflower and his given name is unknown . The title of ``
+Master '' indicates that he was a person of some authority and prominence in the company . He may have been a principal officer of the Mayflower . No more is
+known of him ; he may have returned to England on the Mayflower 's April 1621 voyage or died of the illnesses that affected so many that first winter . Later
+history Three of Mayflower 's owners applied to the Admiralty court for an appraisal of the ship on May 4 , 1624 , two years after Captain Jones ' death in 1622
+; one of these applicants was Jones ' widow Mrs. Josian ( Joan ) Jones . This appraisal probably was made to determine the valuation of the ship for the purpose
+of settling the estate of its late master .
+</item 3>
+
+<item 4>
+Mayflower
+Mayflower - wikipedia Mayflower Jump to : navigation , search For other ships , see Mayflower ( ship ) . For other uses , see Mayflower ( disambiguation ) .
+Mayflower in Plymouth Harbor by William Halsall ( 1882 ) Name : Mayflower Owner : Christopher Jones ( 1⁄4 of the ship ) Maiden voyage : Before 1609 Out of
+service : 1622 -- 1624 Fate : most likely taken apart by Rotherhithe shipbreaker c. 1624 . General characteristics Class and type : Dutch cargo fluyt Tonnage :
+180 tons + Length : c. 80 -- 90 ft ( 24 -- 27.5 m ) on deck , 100 -- 110 ft ( 30 -- 33.5 m ) overall . Decks : Around 4 Capacity : Unknown , but carried c. 135
+people during the historical voyage to what they would call Plymouth Colony The Mayflower was an English ship that famously transported the first English
+Puritans , known today as the Pilgrims , from Plymouth , England to the New World in 1620 .
+</item 4>
+
+<item 5>
+Mayflower
+Time was measured with the ancient method of an hourglass . Arrival in America On November 9 , 1620 , they sighted present - day Cape Cod . They spent several
+days trying to sail south to their planned destination of the Colony of Virginia , where they had obtained permission to settle from the Company of Merchant
+Adventurers . However , strong winter seas forced them to return to the harbor at Cape Cod hook , well north of the intended area , where they anchored on
+November 11 . The settlers wrote and signed the Mayflower Compact after the ship dropped anchor at Cape Cod , in what is now Provincetown Harbor , in order to
+establish legal order and to quell increasing strife within the ranks . On Monday , November 27 , an exploring expedition was launched under the direction of
+Capt . Christopher Jones to search for a suitable settlement site . As master of the Mayflower , Jones was not required to assist in the search , but he
+apparently thought it in his best interest to assist the search expedition . There were 34 persons in the open shallop : 24 passengers and 10 sailors .
+</item 5>
+
+<item 6>
+Mayflower
+Nathaniel Philbrick estimates between 20 and 30 sailors in her crew whose names are unknown . Nick Bunker states that Mayflower had a crew of at least 17 and
+possibly as many as 30 . Caleb Johnson states that the ship carried a crew of about 30 men , but the exact number is unknown . Officers and crew Captain :
+Christopher Jones . About age 50 , of Harwich , a seaport in Essex , England , which was also the port of his ship Mayflower . He and his ship were veterans of
+the European cargo business , often carrying wine to England , but neither had ever crossed the Atlantic . By June 1620 , he and the Mayflower had been hired
+for the Pilgrims voyage by their business agents in London , Thomas Weston of the Merchant Adventurers and Robert Cushman . Historical marker in London honoring
+the Mayflower and Captain Jones . Masters Mate : John Clark ( Clarke ) , Pilot . By age 45 in 1620 , Clark already had greater adventures than most other
+mariners of that dangerous era . His piloting career began in England about 1609 .
+</item 6>
+
+<item 7>
+Mayflower
+In 1624 , Thomas Russell supposedly added to part of a farmhouse already there with timbers from a ship , believed to be from the Pilgrim ship Mayflower ,
+bought from a shipbreaker 's yard in Rotherhithe . The well - preserved structure was a tourist attraction , receiving visitors each year from all over the
+world and particularly from America , but it is now privately owned and not open to the public . Second Mayflower Another ship called the Mayflower made a
+voyage from London to Plymouth Colony in 1629 carrying 35 passengers , many from the Pilgrim congregation in Leiden that organized the first voyage . This was
+not the same ship that made the original voyage with the first settlers . This voyage began in May and reached Plymouth in August . This ship also made the
+crossing from England to America in 1630 ( as part of the Winthrop Fleet ) , 1633 , 1634 , and 1639 . It attempted the trip again in 1641 , departing London in
+October of that year under master John Cole , with 140 passengers bound for Virginia . It never arrived . On October 18 , 1642 , a deposition was made in
+England regarding the loss .
+</item 7>
+
+<item 8>
+Mayflower
+Other items included most of their clothing and bedding . The hold also stored the passengers ' personal weapons and military equipment -- armor , muskets ,
+gunpowder , and shot , as well as swords and bandoliers . It also stored all the tools that the Pilgrims would need , as well as all the equipment and utensils
+needed to prepare meals in the New World . It is also known that some Pilgrims loaded trade goods on board , including Isaac Allerton , William Mullins , and
+possibly others ; these also most likely were stored in the cargo hold . Early history It is not known when and where the Mayflower was built , but it is likely
+that she was launched at Harwich in the county of Essex , England . She was designated as `` of Harwich '' in the Port Books of 1609 -- 11 , although later
+known as `` of London '' . Harwich was also the birthplace of Mayflower master Christopher Jones about 1570 . Captain Jones became master of the Mayflower 11
+years prior to the Pilgrims ' voyage , sailing the ship cross-Channel taking English woolens to France and bringing French wine to London .
+</item 8>
+
+<item 9>
+Mayflower
+Or some of the records of the period may have been lost . Voyage Speedwell and Mayflower Mayflower arrived in the `` Cape Cod fishhook '' , 11 November 1620 (
+satellite photo , 1997 ) Approximately 65 passengers embarked the Mayflower in the middle of July 1620 at its home port in the Rotherhithe district of London on
+the Thames river . The ship then proceeded down the Thames into the English Channel and then on to the south coast of England to anchor at Southampton Water .
+The Mayflower waited there for a rendezvous on July 22 with the Speedwell . Speedwell was coming from Holland with English separatist Puritans , members of the
+Leiden congregation who had been living in Holland to escape religious persecution in England . The two ships set sail for America around August 5 , but the
+Speedwell sprang a leak shortly after , and the two ships were brought into Dartmouth for repairs . They made a new start after the repairs , and they were more
+than 200 miles ( 320 km ) beyond Land 's End at the southwestern tip of England when Speedwell sprang another leak .
+</item 9>
+
+<item 10>
+Mayflower
+At his death , his estate consisted of extensive footwear and other items of clothing , and made his daughter Priscilla and her husband John Alden quite
+prosperous . No cattle or beasts of draft or burden were brought on the journey , but there were pigs , goats , and poultry . Some passengers brought family
+pets such as cats and birds . Peter Browne took his large bitch mastiff , and John Goodman brought along his spaniel . Mayflower officers , crew , and others
+According to author Charles Banks , the officers and crew of the Mayflower consisted of a captain , four mates , four quartermasters , surgeon , carpenter ,
+cooper , cooks , boatswains , gunners , and about 36 men before the mast , making a total of about 50 . The entire crew stayed with the Mayflower in Plymouth
+through the winter of 1620 -- 1621 , and about half of them died during that time . The remaining crewmen returned to England on the Mayflower , which sailed
+for London on April 5 , 1621 . Crew members per various sources Banks states that the crew totaled 36 men before the mast and 14 officers , making a total of 50
+.
+</item 10>
+=== END ITEM id=55a6b70244dbe5fa ===
+
+=== ITEM id=4b02fb339ed28780 ===
+Gold sentences and facts:
+Sentence 0: Arthur `` The President '' Flanders -- An inmate on death row , convicted of killing his father in an insurance - fraud scheme . His sentence is commuted to life imprisonment , but he is later murdered by an unknown inmate in the prison laundry . Arlen `` The Chief '' Bitterbuck -- A Washita Cherokee death - row inmate , convicted of killing a man in a drunken brawl over a pair of boots . His execution is the first of three mentioned in Paul 's story . Janice Edgecombe -- Paul Edgecombe 's wife . Dies in a bus accident on the way to her grandchild 's graduation in 1956 . Hal Moores -- The warden at Cold Mountain Penitentiary . Melinda Moores -- Warden Moores 's wife , who is dying of a brain tumor and is cured by John Coffey . She eventually dies of a heart attack ten years later . Curtis Anderson -- The assistant warden . Dean Stanton -- A guard on E Block who is strangled and nearly killed by William Wharton . A father of young children , he takes no part in the taking of John Coffey to Melinda Moores due to the risk of losing his job . He applies for relocation to C Block after John Coffey 's death , where he is murdered by an inmate 4 months later . Harry Terwilliger -- One of the main guards on E Block along with his friends Paul Edgecombe , Brutus Howell and Dean Stanton . He eventually dies of cancer , long after John Coffey 's execution . Bill Dodge -- A `` floater '' guard on E Block ( not permanently assigned there ) . Jack Van Hay -- A guard who is part of the execution team . He operates the switch room . Toot - Toot -- A trustee who stands in for the condemned during execution rehearsals and sells snacks to prisoners and guards . Burt Hammersmith -- A reporter who wrote on the Detterick twins ' murders and John Coffey 's trial . Despite believing himself to be an `` Enlightenment '' man , he displays prejudice in his stance on `` Negroes '' and tries to convince Paul of John Coffey 's guilt . Elaine Connelly -- A friend of Paul in the present - day nursing home where he tells his story . She is later revealed to be the grandmother of the Speaker of the Georgia House of Representatives , using this position to scare Brad Dolan from harassing Paul . Homer Cribus -- The Sheriff of Trapingus County , where the murders of the Detterick twins took place . Despite playing no part in apprehending John Coffey , he later shows up at the execution . An outspoken Baptist with strong racial prejudice and immensely overweight , he later succumbs to a heart attack while having sex with a 17 - year - old African American in his office . Rob McGee -- The Deputy Sheriff of Trapingus County , who led the search party which found John Coffey . While displaying strong doubt about Coffey 's guilt after being shown signs of innocence by Paul Edgecombe , he is still powerless to call for an appeal as he is subordinate to Sheriff Cribus , whom he allegedly hopes to succeed . Brad Dolan -- A malicious nursing home employee who harasses Paul Edgecombe . Paul strongly compares him to Percy Wetmore , and several times mistakes him for Percy , despite the latter dying in 1965 . Kathe and Cora Detterick -- The two young girls whom John Coffey was convicted of raping and murdering . Killed by William Wharton . Klaus and Marjorie Detterick -- The parents of Kathe and Cora .
+  Fact 0.0: Arthur 'The President' Flanders is an inmate on death row.
+  Fact 0.1: Arthur Flanders was convicted of killing his father in an insurance-fraud scheme.
+  Fact 0.2: Arthur Flanders's sentence was commuted to life imprisonment.
+  Fact 0.3: Arthur Flanders was later murdered by an unknown inmate.
+  Fact 0.4: Arthur Flanders was murdered in the prison laundry.
+  Fact 0.5: Arlen 'The Chief' Bitterbuck is a Washita Cherokee death-row inmate.
+  Fact 0.6: Arlen Bitterbuck was convicted of killing a man in a drunken brawl over a pair of boots.
+  Fact 0.7: Arlen Bitterbuck's execution is the first of three mentioned in Paul's story.
+  Fact 0.8: Janice Edgecombe is Paul Edgecombe's wife.
+  Fact 0.9: Janice Edgecombe dies in a bus accident on the way to her grandchild's graduation.
+  Fact 0.10: Janice Edgecombe's death occurred in 1956.
+  Fact 0.11: Hal Moores is the warden at Cold Mountain Penitentiary.
+  Fact 0.12: Melinda Moores is Warden Moores's wife.
+  Fact 0.13: Melinda Moores is dying of a brain tumor.
+  Fact 0.14: John Coffey cures Melinda Moores of the brain tumor.
+  Fact 0.15: Melinda Moores dies of a heart attack ten years later.
+  Fact 0.16: Curtis Anderson is the assistant warden.
+  Fact 0.17: Dean Stanton is a guard on E Block.
+  Fact 0.18: William Wharton strangles Dean Stanton and nearly kills him.
+  Fact 0.19: Dean Stanton is a father of young children.
+  Fact 0.20: Dean Stanton takes no part in taking John Coffey to Melinda Moores due to the risk of losing his job.
+  Fact 0.21: Dean Stanton applies for relocation to C Block after John Coffey's death.
+  Fact 0.22: Dean Stanton is murdered by an inmate on C Block 4 months later.
+  Fact 0.23: Harry Terwilliger is one of the main guards on E Block.
+  Fact 0.24: Harry Terwilliger is friends with Paul Edgecombe, Brutus Howell, and Dean Stanton.
+  Fact 0.25: Harry Terwilliger dies of cancer.
+  Fact 0.26: Harry Terwilliger's death came long after John Coffey's execution.
+  Fact 0.27: Bill Dodge is a 'floater' guard on E Block.
+  Fact 0.28: Bill Dodge is not permanently assigned to E Block.
+  Fact 0.29: Jack Van Hay is a guard who is part of the execution team.
+  Fact 0.30: Jack Van Hay operates the switch room.
+  Fact 0.31: Toot-Toot is a trustee.
+  Fact 0.32: Toot-Toot stands in for the condemned during execution rehearsals.
+  Fact 0.33: Toot-Toot sells snacks to prisoners and guards.
+  Fact 0.34: Burt Hammersmith is a reporter.
+  Fact 0.35: Burt Hammersmith wrote on the Detterick twins' murders.
+  Fact 0.36: Burt Hammersmith wrote on John Coffey's trial.
+  Fact 0.37: Burt Hammersmith believes himself to be an 'Enlightenment' man.
+  Fact 0.38: Burt Hammersmith displays prejudice in his stance on 'Negroes'.
+  Fact 0.39: Burt Hammersmith tries to convince Paul Edgecombe of John Coffey's guilt.
+  Fact 0.40: Elaine Connelly is a friend of Paul Edgecombe in the present-day nursing home where he tells his story.
+  Fact 0.41: Elaine Connelly is later revealed to be the grandmother of the Speaker of the Georgia House of Representatives.
+  Fact 0.42: Elaine Connelly uses this position to scare Brad Dolan from harassing Paul.
+  Fact 0.43: Homer Cribus is the Sheriff of Trapingus County.
+  Fact 0.44: The Detterick twins' murders took place in Trapingus County.
+  Fact 0.45: Homer Cribus played no part in apprehending John Coffey.
+  Fact 0.46: Homer Cribus later shows up at the execution.
+  Fact 0.47: Homer Cribus is an outspoken Baptist.
+  Fact 0.48: Homer Cribus has strong racial prejudice.
+  Fact 0.49: Homer Cribus is immensely overweight.
+  Fact 0.50: Homer Cribus later succumbs to a heart attack while having sex with a 17-year-old African American in his office.
+  Fact 0.51: Rob McGee is the Deputy Sheriff of Trapingus County.
+  Fact 0.52: Rob McGee led the search party which found John Coffey.
+  Fact 0.53: Rob McGee displays strong doubt about Coffey's guilt after being shown signs of innocence by Paul Edgecombe.
+  Fact 0.54: Rob McGee is powerless to call for an appeal.
+  Fact 0.55: Rob McGee is subordinate to Sheriff Cribus.
+  Fact 0.56: Rob McGee allegedly hopes to succeed Sheriff Cribus.
+  Fact 0.57: Brad Dolan is a malicious nursing home employee.
+  Fact 0.58: Brad Dolan harasses Paul Edgecombe.
+  Fact 0.59: Paul Edgecombe strongly compares Brad Dolan to Percy Wetmore.
+  Fact 0.60: Paul Edgecombe several times mistakes Brad Dolan for Percy Wetmore.
+  Fact 0.61: Percy Wetmore died in 1965.
+  Fact 0.62: Kathe Detterick and Cora Detterick are two young girls.
+  Fact 0.63: John Coffey was convicted of raping and murdering Kathe and Cora Detterick.
+  Fact 0.64: William Wharton killed Kathe and Cora Detterick.
+  Fact 0.65: Klaus Detterick and Marjorie Detterick are the parents of Kathe and Cora Detterick.
+Sentence 1: Toot - Toot -- A trustee who stands in for the condemned during execution rehearsals and sells snacks to prisoners and guards .
+  Fact 1.0: Toot-Toot is a trustee.
+  Fact 1.1: Toot-Toot stands in for the condemned during execution rehearsals.
+  Fact 1.2: Toot-Toot sells snacks to prisoners and guards.
+
+Retrieved items:
+<item 1>
+The Green Mile (novel)
+Curtis Anderson -- The assistant warden . Dean Stanton -- A guard on E Block who is strangled and nearly killed by William Wharton . A father of young children
+, he takes no part in the taking of John Coffey to Melinda Moores due to the risk of losing his job . He applies for relocation to C Block after John Coffey 's
+death , where he is murdered by an inmate 4 months later . Harry Terwilliger -- One of the main guards on E Block along with his friends Paul Edgecombe , Brutus
+Howell and Dean Stanton . He eventually dies of cancer , long after John Coffey 's execution . Bill Dodge -- A `` floater '' guard on E Block ( not permanently
+assigned there ) . Jack Van Hay -- A guard who is part of the execution team . He operates the switch room . Toot - Toot -- A trustee who stands in for the
+condemned during execution rehearsals and sells snacks to prisoners and guards . Burt Hammersmith -- A reporter who wrote on the Detterick twins ' murders and
+John Coffey 's trial .
+</item 1>
+
+<item 2>
+The Green Mile (novel)
+He is later attacked by `` Wild Bill '' Wharton , consequently wets himself , and is teased by Delacroix for it . In retaliation , Percy deliberately sabotages
+Delacroix 's execution . At the end of the story he is sent to the Briar Ridge mental institution , originally considered for a job but now as a patient , after
+Coffey transferred Melinda 's disease to him which caused him to kill William Wharton . He eventually lives through a hospital fire and dies in 1965 . William
+`` Wild Bill '' Wharton -- The antagonist of the story . He is on death row for various crimes . He does not like the nickname `` Wild Bill '' but prefers to be
+called `` Billy the Kid '' , a name which he has tattooed on his forearm . When he first arrives he manages to convince the guards that he is in a drugged
+stupor , only to attack and attempt to strangle to death Dean Stanton when they reach E Block . He continues to wreak havoc on the Mile and plays tricks such as
+urinating on the guards , amongst other things . He is punished by being placed in solitary confinement , but never seems to learn his lesson .
+</item 2>
+
+<item 3>
+The Green Mile (novel)
+He is punished by being placed in solitary confinement , but never seems to learn his lesson . As John Coffey is being smuggled to Hal Moores 's house , Wild
+Bill grabs his arm and Coffey sees that he actually committed the murders Coffey was accused of . Therefore , Coffey gives Percy the `` sickness '' he took from
+the warden 's wife , causing him to kill Wharton . Eduard `` Del '' Delacroix -- He is a Cajun prisoner with a fairly slow grasp of the English language . He is
+incarcerated for multiple deaths due to a fire he started while trying to cover up his rape and murder of a young girl . While on the Mile , Del befriends a
+mouse named Mr. Jingles , who becomes his best friend in his last days on death row . Percy , his enemy , sabotages his execution , causing Del to die in a slow
+, gruesome death in the electric chair . Mr. Jingles ( nicknamed `` Steamboat Willie '' ) -- An unusually intelligent mouse who enjoys eating peppermint sweets
+. He becomes a friend to Eduard Delacroix in the few days before the man is executed .
+</item 3>
+
+<item 4>
+The Green Mile (novel)
+He is resurrected by John Coffey after being stomped on by Percy Wetmore . This gives him increased longevity and he finally dies 64 years later . Other
+characters ( edit ) Arthur `` The President '' Flanders -- An inmate on death row , convicted of killing his father in an insurance - fraud scheme . His
+sentence is commuted to life imprisonment , but he is later murdered by an unknown inmate in the prison laundry . Arlen `` The Chief '' Bitterbuck -- A Washita
+Cherokee death - row inmate , convicted of killing a man in a drunken brawl over a pair of boots . His execution is the first of three mentioned in Paul 's
+story . Janice Edgecombe -- Paul Edgecombe 's wife . Dies in a bus accident on the way to her grandchild 's graduation in 1956 . Hal Moores -- The warden at
+Cold Mountain Penitentiary . Melinda Moores -- Warden Moores 's wife , who is dying of a brain tumor and is cured by John Coffey . She eventually dies of a
+heart attack ten years later . Curtis Anderson -- The assistant warden .
+</item 4>
+
+<item 5>
+The Green Mile (novel)
+Even at the end , during his execution , he asks Paul Edgecombe not to put on the traditional black silk mask used to block the view of the prisoner 's face
+because he fears the dark . Coffey is described as `` knowing his own name and not much else '' and lacks the capability to do so much as tie a simple knot .
+However , he is convicted of luring the girls away from their home , disposing of the watchdog , carefully planning and using abilities he would otherwise not
+be expected to have . He is the calmest and mildest prisoner the guards have ever seen , despite his hulking form . He turns out to be innocent of what he is
+accused of , but chooses to die anyway . Percy Wetmore -- He is a young and sadistic guard . He is disliked by Paul and the other guards because of his ways ,
+but they can not do anything about it because he is the nephew of the governor 's wife . He is very homophobic and attacks Eduard Delacroix for allegedly
+touching him , although it was an accident caused by Del stumbling out of the prison truck .
+</item 5>
+
+<item 6>
+The Green Mile (novel)
+Paul is unsure how to help John , but John tells him not to worry , as he is ready to die anyway , wanting to escape the cruelty of the world . John 's
+execution is the last one in which Paul participates . He introduces Mr. Jingles to Elaine just before the mouse dies , having lived 64 years past these events
+, and explains that those healed by John gained an unnaturally long lifespan . Elaine dies shortly after , never learning how Paul 's wife died in his arms
+immediately after they suffered a bus accident , and that he then saw John Coffey 's ghost watching him from an overpass . Paul seems to be all alone , now 104
+years old , and wondering how much longer he will live . Characters ( edit ) Paul Edgecombe -- The protagonist and narrator of the book and the death - row
+supervisor at Cold Mountain Penitentiary . He is 40 years old when the main bulk of the story takes place , in 1932 . He is a caring man and takes excellent
+care of the men on his block , avoiding conflict and keeping the peace whenever possible .
+</item 6>
+
+<item 7>
+The Green Mile (novel)
+Brad Dolan -- A malicious nursing home employee who harasses Paul Edgecombe . Paul strongly compares him to Percy Wetmore , and several times mistakes him for
+Percy , despite the latter dying in 1965 . Kathe and Cora Detterick -- The two young girls whom John Coffey was convicted of raping and murdering . Killed by
+William Wharton . Klaus and Marjorie Detterick -- The parents of Kathe and Cora . Reception ( edit ) The Green Mile won the Bram Stoker Award for Best Novel in
+1996 . In 1997 , The Green Mile was nominated as Best Novel for the British Fantasy Award and the Locus Award . In 2003 the book was listed on the BBC 's The
+Big Read poll of the UK 's `` best - loved novel . '' Film adaptation ( edit ) Main article : The Green Mile ( film ) Frank Darabont adapted the novel into a
+screenplay for a feature film of the same name . Released in 1999 , the film was directed by Darabont and starred Tom Hanks as Paul Edgecombe and Michael Clarke
+Duncan as John Coffey .
+</item 7>
+
+<item 8>
+The Green Mile (novel)
+This year marks the arrival of John Coffey , a 6 ft 8 in powerfully built black man who has been convicted of raping and murdering two small white girls .
+During his time on the Mile , John interacts with fellow prisoners Eduard `` Del '' Delacroix , a Cajun arsonist , rapist , and murderer , and William Wharton (
+`` Billy the Kid '' to himself , `` Wild Bill '' to the guards ) , a wild - acting and dangerous multiple murderer who is determined to make as much trouble as
+he can before he is executed . Other inhabitants include Arlen Bitterbuck , a Native American convicted of killing a man in a fight over a pair of boots ( also
+the first character to die in the electric chair ) ; Arthur Flanders , a real estate executive who killed his father to perpetrate insurance fraud , and whose
+sentence is eventually commuted to life imprisonment ( while serving his sentence , he is killed by another inmate in the laundry room ) ; and Mr. Jingles , a
+mouse , to whom Del teaches various tricks . Paul and the other guards are irritated throughout the book by Percy Wetmore , a sadistic guard who enjoys
+antagonizing the prisoners .
+</item 8>
+
+<item 9>
+The Green Mile (novel)
+He is the first character to discover John Coffey 's amazing abilities , when the prisoner cures his urinary tract infection . It is also his idea to take
+Coffey to try to cure Melinda , Warden Hal Moores ' wife , of her brain tumor . He transferred to Boy 's Correctional with Brutus Howell shortly after Coffey 's
+execution . Brutus `` Brutal '' Howell -- He is second in command on the Green Mile and Paul 's best friend . He is a tall , imposing man but not violent at all
+unless necessary . His nickname of `` Brutal '' is intended as irony . A former football tackle who had gone on to play at Louisiana State University ( LSU ) in
+his youth , he eventually suffers a fatal heart attack at home , in his fifties , about twenty - five years after Coffey 's execution . John Coffey -- He is a
+massive black man ( 6 ft 8 in tall ) , on death row for the alleged rape and murder of two young girls . He is very quiet and prefers to keep to himself , weeps
+almost constantly , and is afraid of the dark .
+</item 9>
+
+<item 10>
+The Green Mile (novel)
+Despite believing himself to be an `` Enlightenment '' man , he displays prejudice in his stance on `` Negroes '' and tries to convince Paul of John Coffey 's
+guilt . Elaine Connelly -- A friend of Paul in the present - day nursing home where he tells his story . She is later revealed to be the grandmother of the
+Speaker of the Georgia House of Representatives , using this position to scare Brad Dolan from harassing Paul . Homer Cribus -- The Sheriff of Trapingus County
+, where the murders of the Detterick twins took place . Despite playing no part in apprehending John Coffey , he later shows up at the execution . An outspoken
+Baptist with strong racial prejudice and immensely overweight , he later succumbs to a heart attack while having sex with a 17 - year - old African American in
+his office . Rob McGee -- The Deputy Sheriff of Trapingus County , who led the search party which found John Coffey . While displaying strong doubt about Coffey
+'s guilt after being shown signs of innocence by Paul Edgecombe , he is still powerless to call for an appeal as he is subordinate to Sheriff Cribus , whom he
+allegedly hopes to succeed .
+</item 10>
+=== END ITEM id=4b02fb339ed28780 ===
+
+=== ITEM id=7fc5dcafc6a92938 ===
+Gold sentences and facts:
+Sentence 0: Large denominations of United States currency greater than $100 were circulated by the United States Treasury until 1969 . Since then , U.S. dollar banknotes have only been issued in seven denominations : $1 , $2 , $5 , $10 , $20 , $50 , and $100 .
+  Fact 0.0: Large denominations of United States currency greater than $100 were circulated by the United States Treasury until 1969.
+  Fact 0.1: Since 1969, U.S. dollar banknotes have only been issued in seven denominations.
+  Fact 0.2: The seven denominations of U.S. dollar banknotes issued since 1969 are $1, $2, $5, $10, $20, $50, and $100.
+
+Retrieved items:
+<item 1>
+Large denominations of United States currency
+currency were issued in high - denomination notes across nearly 20 different series dates . The obverse of United States banknotes generally depict either
+historical figures , allegorical figures symbolizing significant concepts ( e.g. , liberty , justice ) , or a combination of both . The reverse designs range
+from abstract scroll - work with ornate denomination identifiers to reproductions of historical art works . Public versus institutional use ( edit ) Series 1934
+gold certificates ( $100 , $1,000 , $10,000 and $100,000 ) were issued after the gold standard was repealed and gold was compulsorily confiscated by order of
+President Franklin Roosevelt on March 9 , 1933 ( see United States Executive Order 6102 ) . Thus the series 1934 notes were used only for intragovernmental (
+i.e. , Federal Reserve Bank ) transactions and were not issued to the public . This series was discontinued in 1940 . The series 1928 gold certificate reverse
+was printed in black and green . See history of the United States dollar .
+</item 1>
+
+<item 2>
+Large denominations of United States currency
+( 1995 ) . United States Large Size National Bank Notes . Society of Paper Money Collectors , Inc . ISBN 0 - 9648774 - 1 - 4 . Newman , Eric P. ( 2008 ) . The
+Early Paper Money of America ( 5 ed . ) . Krause Publications . ISBN 0 - 89689 - 326 - X . Schwartz , John ; Lindquist , Scott ( 2011 ) . Standard Guide to
+Small - Size U.S. Paper Money -- 1928 to Date . Krause Publications . ISBN 978 - 1 - 4402 - 1703 - 6 . Retrieved 14 February 2014 . External links ( edit )
+Media related to Money of the United States by denomination at Wikimedia Commons Large Denominations from the Bureau of Engraving and Printing U.S. Department
+of the Treasury United States currency and coinage Topics Federal Reserve System Federal Reserve Note U.S. dollar U.S.
+</item 2>
+
+<item 3>
+Large denominations of United States currency
+This was especially true for gold certificates from 1865 to 1934 . However , for the most part , the introduction of an electronic money system has made large -
+scale cash transactions obsolete . When combined with concerns about counterfeiting and the use of cash in unlawful activities such as the illegal drug trade
+and money laundering , it is unlikely that the U.S. government will re-issue large denomination currency in the near future , despite the amount of inflation
+that has occurred since 1969 ( a $500 bill is now worth less , in real terms , than a $100 bill was worth in 1969 ) . According to the U.S. Department of
+Treasury website , `` The present denominations of our currency in production are $1 , $2 , $5 , $10 , $20 , $50 and $100 . The purpose of the United States
+currency system is to serve the needs of the public and these denominations meet that goal . Neither the Department of the Treasury nor the Federal Reserve
+System has any plans to change the denominations in use today . ''
+</item 3>
+
+<item 4>
+United States two-dollar bill
+dollar U.S. Mint Philadelphia San Francisco Denver West Point Bureau of Engraving and Printing Mutilated currency Current coinage Penny ( 1 ¢ ) Nickel ( 5 ¢ )
+Dime ( 10 ¢ ) Quarter ( 25 ¢ ) Half dollar ( 50 ¢ ) Dollar ( $1 ) Bullion coinage America the Beautiful Silver Bullion Coins American Buffalo American Gold
+Eagle American Platinum Eagle American Silver Eagle American Palladium Eagle Current paper money $1 $2 $5 $10 $20 $50 $100 See also Bicentennial coinage
+Commemoratives Early Commemoratives Modern Commemoratives Confederate dollar Large denominations Obsolete denominations Promotional fake denominations
+Counterfeit United States currency Mill Coin production In God We Trust E pluribus unum Annuit cœptis Nicknames Replacement banknote Sales tax token Retrieved
+from `` https://en.wikipedia.org/w/index.
+</item 4>
+
+<item 5>
+Large denominations of United States currency
+The display has since been dismantled and the bills sold to private collectors . Jump up ^ The following types of United States banknotes were not issued in
+high denominations and are not included in the list below : Demand notes , Federal Reserve bank notes ( large or small size ) , legal tender ( small size ) ,
+silver certificates ( small size ) , National Bank Notes ( small size ) The table sections are sorted by their appearance in the Friedberg reference book . Jump
+up ^ Large size notes represent the earlier types or series of U.S. banknotes . Their `` average '' dimension is ​ 7 ⁄ × ​ 3 ⁄ inches ( 187 × 79 mm ) . Small
+size notes ( described as such due to their size relative to the earlier large size notes ) are an `` average '' ​ 6 ⁄ × ​ 2 ⁄ ( 156 × 67 mm ) , the size of
+modern U.S. currency . `` Each measurement is ± 0.08 inches ( 2 mm ) to account for margins and cutting '' .
+</item 5>
+
+<item 6>
+Large denominations of United States currency
+1216a Lincoln - Abraham Abraham Lincoln ( Charles Burt ) 000500 $500 FRN 1928 -- 34 Fr. 2200g McKinley - William William McKinley ( John Eissler ) 000500 $500
+GC 1928 Fr. 2407 McKinley - William William McKinley ( John Eissler ) 001000 $1,000 LT 1862 -- 63 Fr. 186e Morris - Robert Robert Morris ( Charles Schlecht )
+Unique ( variety ) 5 known ( type ) 001000 $1,000 LT 1869 Fr. 186f Proof Clinton - DeWitt DeWitt Clinton 2 known 001000 $1,000 LT 1878 Fr. 187a Clinton - DeWitt
+DeWitt Clinton Columbus in his study ( Henry Gugler ) 001000 $1,000 LT 1880 Fr. 187k Clinton - DeWitt DeWitt Clinton Columbus in his study ( Henry Gugler ) 4
+known ( variety ) ~ 20 -- 25 known ( type ) 001000 $1,000 IBN 1863 Fr.
+</item 6>
+
+<item 7>
+Large denominations of United States currency
+dollar U.S. Mint Philadelphia San Francisco Denver West Point Bureau of Engraving and Printing Mutilated currency Current coinage Penny ( 1 ¢ ) Nickel ( 5 ¢ )
+Dime ( 10 ¢ ) Quarter ( 25 ¢ ) Half dollar ( 50 ¢ ) Dollar ( $1 ) Bullion coinage America the Beautiful Silver Bullion Coins American Buffalo American Gold
+Eagle American Platinum Eagle American Silver Eagle American Palladium Eagle Current paper money $1 $2 $5 $10 $20 $50 $100 See also Bicentennial coinage
+Commemoratives Early Commemoratives Modern Commemoratives Confederate dollar Large denominations Obsolete denominations Promotional fake denominations
+Counterfeit United States currency Mill Coin production In God We Trust E pluribus unum Annuit cœptis Nicknames Replacement banknote Sales tax token ( hide )
+Obsolete United States currency and coinage Topics United States coinage United States dollar History of the United States dollar Coins Half cent ( 1793 -- 1857
+) Fugio Cent ( 1787 ) Large cent ( 1793 -- 1857 ;
+</item 7>
+
+<item 8>
+Large denominations of United States currency
+See history of the United States dollar . Passive retirement ( edit ) Although they are still legal tender in the United States , high - denomination bills were
+last printed on December 27 , 1945 , and officially discontinued on July 14 , 1969 , by the Federal Reserve System , due to ' lack of use ' . The $5,000 and
+$10,000 effectively disappeared well before then . The Federal Reserve began taking high - denomination currency out of circulation ( destroying large bills
+received by banks ) in 1969 . As of May 30 , 2009 , only 336 $10,000 bills were known to exist ; 342 remaining $5,000 bills ; and 165,372 remaining $1,000 bills
+. Due to their rarity , collectors often pay considerably more than the face value of the bills to acquire them . Some are in museums in other parts of the
+world . For the most part , these bills were used by banks and the Federal government for large financial transactions . This was especially true for gold
+certificates from 1865 to 1934 .
+</item 8>
+
+<item 9>
+Large denominations of United States currency
+379c Meade - George George Meade ( Charles Burt ) 2 known ( variety ) 3 known ( type ) 001000 $1,000 NBN 1865 -- 75 Fr. 465 Proof zScott - Winfield - Washington
+- George Scott entering City of Mexico ( left ) ( Alfred Jones ) United States Capitol ( right ) ( James Smillie ) Washington resigning his commission ( rev ) (
+Frederick Girsch ) Unknown 001000 $1,000 FRN 1918 Fr. 1133d Hamilton - Alexander Alexander Hamilton ( G.F.C. Smillie ) Eagle ( rev ) ( Marcus W. Baldwin )
+001000 $1,000 GC 1863 Fr. 1166e Proof zEagle - shield - Justice - scales Eagle with shield or E Pluribus Unum ( Charles Skinner ) Justice with scales Unique
+001000 $1,000 GC 1870 -- 75 Fr. 1166o Proof Hamilton - Alexander Alexander Hamilton ( Charles Burt ) Unique 001000 $1,000 GC 1882 Fr. 1218g Hamilton - Alexander
+Alexander Hamilton ( G.F.C.
+</item 9>
+
+<item 10>
+Large denominations of United States currency
+2230b Chase - Salmon Salmon P. Chase 010000 $10,000 GC 1928 Fr. 2411 Chase - Salmon Salmon P. Chase 010000 $10,000 GC 1934 Fr. 2412 Chase - Salmon Salmon P.
+Chase 100000 $100,000 GC 1934 Fr. 2413 Wilson - Woodrow Woodrow Wilson ( G.F.C. Smillie ) Reverse ( Frederick Pauling ) See also ( edit ) Numismatics portal
+Currency of the United States Gold certificate Fake denominations Silver certificate ( United States ) Silver standard Treasury Note ( 1890 -- 91 ) References (
+edit ) Footnotes ( edit ) Jump up ^ One hundred $10,000 bills were on display for many years by Benny Binion at Binion 's Horseshoe casino in Las Vegas , Nevada
+, where they were encased in acrylic . The display has since been dismantled and the bills sold to private collectors .
+</item 10>
+=== END ITEM id=7fc5dcafc6a92938 ===

@@ -1,0 +1,30 @@
+[
+{"id": "f04eedf75ef13bc6", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Certainly there wasn’t a valid alternative to Google at the time,” Cue said."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "f1177d94877d8fe8", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "tying FTX CEO Sam Bankman-Fried to the conspiracy to take FTX customer funds."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022"}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "11d04393a398e38e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen,\" he told Fox News Digital."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen,\" he told Fox News Digital."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen,\" he told Fox News Digital."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house."}]}
+]}
+]

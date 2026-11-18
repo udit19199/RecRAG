@@ -1,0 +1,447 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "abba312d0b1c33cd",
+   "gold": [
+    {
+     "sentence": "The University of California, Santa Barbara (commonly referred to as UC Santa Barbara or UCSB) is a public research university and one of the 10 campuses of the University of California system.",
+     "facts": {
+      "0.0": "The University of California, Santa Barbara is commonly referred to as UC Santa Barbara or UCSB",
+      "0.1": "The University of California, Santa Barbara is a public research university",
+      "0.2": "The University of California, Santa Barbara is one of the 10 campuses of the University of California system"
+     }
+    },
+    {
+     "sentence": " Tracing its roots back to 1891 as an independent teachers' college, UCSB joined the University of California system in 1944 and is the third-oldest general-education campus in the system.",
+     "facts": {
+      "1.0": "UCSB traces its roots back to 1891",
+      "1.1": "UCSB's roots as an independent teachers' college date to 1891",
+      "1.2": "UCSB joined the University of California system in 1944",
+      "1.3": "UCSB is the third-oldest general-education campus in the University of California system"
+     }
+    },
+    {
+     "sentence": " It was founded in 1991 by the renowned philanthropist Hakim Said of the Hamdard Foundation.",
+     "facts": {
+      "2.0": "UCSB was founded in 1991",
+      "2.1": "UCSB was founded by the renowned philanthropist Hakim Said",
+      "2.2": "Hakim Said is a philanthropist of the Hamdard Foundation"
+     }
+    }
+   ],
+   "items": [
+    "Tunku Abdul Rahman University College\nTunku Abdul Rahman University College, abbreviated as TAR UC, is a non-profit, comprehensive, private university college in Malaysia.\n\n Named after the first Prime Minister of Malaysia, YTM Tunku Abdul Rahman Putra Al-Haj, the institution was founded in 1969 as Tunku Abdul Rahman College or TAR College then by the Malaysian Chinese Association (MCA).\n\n In 2013, the college was upgraded to a university college.\n\n TAR UC is one of the prestigious private university college in Malaysia, renowned for its accounting programme.",
+    "Santa Barbara City College\nSanta Barbara City College (SBCC) is a two-year community college that opened in 1909 and is located on a 74 acre campus in the city of Santa Barbara, California, USA.\n\n SBCC was named co-winner of the 2013 Aspen Institute Prize for Community College Excellence, earning it a #1 national ranking.\n\n The college was recognized for its quality and focus in four areas: facilitating underrepresented and minority student success, student learning outcomes, degree completion and transfer rates, and labor market success in securing good jobs after college.\n\n Santa Barbara City College was established by the Santa Barbara High School District in 1909, making it one of the oldest community colleges in California.\n\n The college was discontinued shortly after World War I, and its work largely taken over by the Santa Barbara State Normal School, which became the Santa Barbara State College, and later, the University of California, Santa Barbara.",
+    "Mission Santa Barbara\nMission Santa Barbara, also known as Santa Barbara Mission, is a Spanish mission founded by the Franciscan order near present-day Santa Barbara, California.\n\n It was founded by Padre Fermín Lasuén on December 4, 1786, the feast day of Saint Barbara, as the tenth mission for the religious conversion of the indigenous local Chumash-Barbareño tribe of Native American people.\n\n The mission is the namesake of the city of Santa Barbara as well as of Santa Barbara County.",
+    "University of California, Santa Barbara Library\nThe University of California, Santa Barbara Library is the university library system of the University of California, Santa Barbara in Santa Barbara, California.\n\n The Library includes four facilities: Two libraries (the Main Library and the Music Library) and two annexes (Annex I and Annex II).\n\n The library has some three million print volumes, 30,000 electronic journals, 34,450 e-books, 900,055 digitized items, five million cartographic items (including some 467,000 maps and 3.2 million satellite and aerial images), more than 3.7 million pieces of microform, 167,500 sound recordings, and 4,100 manuscripts.\n\n The Library states that it holds 3.2 mi of manuscript and archival collections.\n\n According to data collected by the American Library Association, as of July 2010 the UC Santa Barbara Library holds the 99th largest library collection in America, reporting 2,948,999 volumes.",
+    "Hamdard University\nHamdard University (Urdu: ) is a private research university with campuses in Karachi and Islamabad, Pakistan.\n\n It was founded in 1991 by the renowned philanthropist Hakim Said of the Hamdard Foundation.\n\n Hamdard is one of the first and the oldest private institutions of higher education in Pakistan.\n\n In Karachi, Hamdard University is the largest private research university with a campus area of over 350 acres.",
+    "University of Arizona\nThe University of Arizona (also referred to as U of A, UA, or Arizona) is a public research university in Tucson, Arizona, United States.\n\n Founded in 1885, the UA was the first university in the Arizona Territory.\n\n The university operates two medical schools (University of Arizona College of Medicine - Tucson and the University of Arizona College of Medicine - Phoenix) and is affiliated with the region's only academic medical centers (Banner - University Medical Center Tucson and Banner - University Medical Center Phoenix).\n\n The university is also home to the James E. Rogers College of Law and numerous other nationally ranked graduate and professional schools.\n\n During the 2016–2017 academic year, there was a total enrollment of 43,625 students, including 34,072 undergraduates The University of Arizona is governed by the Arizona Board of Regents.\n\n The University of Arizona is one of the elected members of the Association of American Universities (an organization of North America's premier research institutions) and is the only representative from the state of Arizona to this group.",
+    "University of Copenhagen\nThe University of Copenhagen (UCPH) (Danish: \"Københavns Universitet\" ) is the oldest university and research institution in Denmark.\n\n Founded in 1479 as a studium generale, it is the second oldest institution for higher education in Scandinavia after Uppsala University (1477).\n\n The university has 23,473 undergraduate students, 17,398 postgraduate students, 2,968 doctoral students and over 9,000 employees.\n\n The university has four campuses located in and around Copenhagen, with the headquarters located in central Copenhagen.\n\n Most courses are taught in Danish; however, many courses are also offered in English and a few in German.\n\n The university has several thousands of foreign students, about half of whom come from Nordic countries.",
+    "Santa Barbara High School\nSanta Barbara Senior High School, \"Home of the Dons,\" is situated on a 40 acre campus in Santa Barbara, California and is part of the Santa Barbara Unified School District.\n\n One of the oldest high schools in California, it was established in 1875, and moved to its current site in 1924.\n\n Until the creation of two rival high schools in 1959 and 1966, it was the sole public high school serving the city of Santa Barbara.\n\n In November 2005, its 18th-century Spanish influenced design was named an official California and City historic landmark.\n\n Today, Santa Barbara High School has an enrollment of roughly 2,200 pupils and certified staff numbering 108.",
+    "University of California, Santa Barbara\nThe University of California, Santa Barbara (commonly referred to as UC Santa Barbara or UCSB) is a public research university and one of the 10 campuses of the University of California system.\n\n The main campus is located on a 1022 acre site near Isla Vista, California, United States, 8 mi from Santa Barbara and 100 mi northwest of Los Angeles.\n\n Tracing its roots back to 1891 as an independent teachers' college, UCSB joined the University of California system in 1944 and is the third-oldest general-education campus in the system.",
+    "Dalhousie University\nDalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick.\n\n Dalhousie offers more than 4,000 courses and 180 degree programs in twelve undergraduate, graduate, and professional faculties.\n\n The university is a member of the U15, a group of research-intensive universities in Canada."
+   ]
+  },
+  {
+   "id": "244b03d3e44f95c0",
+   "gold": [
+    {
+     "sentence": "John H. Garabedian is an American radio personality and disc jockey born on December 20, 1941 (age 75).",
+     "facts": {
+      "0.0": "John H. Garabedian is an American radio personality.",
+      "0.1": "John H. Garabedian is an American disc jockey.",
+      "0.2": "John H. Garabedian was born on December 20, 1941.",
+      "0.3": "John H. Garabedian is age 75."
+     }
+    },
+    {
+     "sentence": "Charles A. Agemian (July 22, 1909 – March 30, 1996) was an American banker who took early retirement from Chase Manhattan Bank, where he was executive vice president of operations, to become chairman and chief executive officer of the Hackensack Trust Co., which later was renamed Garden State National Bank.",
+     "facts": {
+      "1.0": "Charles A. Agemian was born July 22, 1909.",
+      "1.1": "Charles A. Agemian's life ended March 30, 1996.",
+      "1.2": "Charles A. Agemian was an American banker.",
+      "1.3": "Charles A. Agemian took early retirement from Chase Manhattan Bank.",
+      "1.4": "Charles A. Agemian was executive vice president of operations at Chase Manhattan Bank.",
+      "1.5": "Charles A. Agemian became chairman of the Hackensack Trust Co.",
+      "1.6": "Charles A. Agemian became chief executive officer of the Hackensack Trust Co.",
+      "1.7": "The Hackensack Trust Co. was later renamed Garden State National Bank."
+     }
+    }
+   ],
+   "items": [
+    "Barry Ackerley headed Ackerley Group and owned the Seattle SuperSonics (1983–2001); he died after a stroke in 2011. Al Carter was an award-winning Texas/Oklahoma sportswriter. André Laguerre led Sports Illustrated (1960–74) and introduced its Swimsuit Issue. Dick “Scoop” Gordon was a longtime sports journalist. Cork fiddler John Murphy learned from his father. Galveston gang leader Johnny Jack N",
+    "John Garabedian\nJohn H. Garabedian is an American radio personality and disc jockey born on December 20, 1941 (age 75).\n\n He is best known as the creator and former long-time host of \"Open House Party\".\n\n He has been involved in Massachusetts radio and television stations for over fifty years.\n\n Garabedian currently owns three homes, all in New England: one in Southborough, Massachusetts, another on Cape Cod, and a cabin-like home in Cabot, Vermont.",
+    "Roger Garis\nRoger (Carroll) Garis, ((1901--) 10, 1901 – (1967--) 30, 1967 ) was an American author known as a writer for magazines and the author of \"The Outboard Boys\" series of books.\n\n Roger also wrote several books under pseudonyms for the Stratemeyer Syndicate, as his parents did (see My Father Was Uncle Wiggily for further details).",
+    "Jerry Garcia\nJerome John Garcia (August 1, 1942 – August 9, 1995) was an American singer-songwriter and guitarist, best known for his work as the lead guitarist and as a vocalist with the band the Grateful Dead, which came to prominence during the counterculture era in the 1960s.\n\n Although he disavowed the role, Garcia was viewed by many as the leader or \"spokesman\" of the group.",
+    "Big Wilson\nBig Wilson (born Malcolm John Wilson, Jr.; October 3, 1924 – October 5, 1989) was an American radio personality.\n\n He worked as a disc jockey at WNBC AM in New York City from the early 1960s until 1974 and moved to Miami in 1975 where he worked for WIOD and WCIX-TV.\n\n He was one of the last two hosts of the NBC network program Monitor.\n\n Prior to moving to NYC, Wilson and his wife Jody lived in a riverfront home in Rocky River, Ohio.\n\n He commuted to Cleveland where he was the leading radio personality for some years.\n\n Tim Conway and other well-known persons visited their home.",
+    "Dean Martin\nDean Martin (born Dino Paul Crocetti; June 7, 1917 – December 25, 1995) was an American singer, actor, comedian, and film producer.\n\n One of the most popular and enduring American entertainers of the mid-20th century, Martin was nicknamed the \"King of Cool\" for his seemingly effortless charisma and self-assurance.",
+    "Charles A. Agemian\nCharles A. Agemian (July 22, 1909 – March 30, 1996) was an American banker who took early retirement from Chase Manhattan Bank, where he was executive vice president of operations, to become chairman and chief executive officer of the Hackensack Trust Co., which later was renamed Garden State National Bank.",
+    "Howard R. Garis\nHoward Roger Garis ((1873--) 25, 1873 – (1962--) 6, 1962 ) was an American author, best known for a series of books, published under his own name, that featured the character of Uncle Wiggily Longears, an engaging elderly rabbit.\n\n Garis and his wife were possibly the most prolific children's authors of the early 20th century.\n\n Many of his books were illustrated by Lansing Campbell.",
+    "Don Sherwood (DJ)\nDon Sherwood (September 7, 1925 – November 6, 1983) was an American radio personality.\n\n He was a San Francisco, California, disc jockey during the 1950s and 1960s.\n\n Billed as \"The World's Greatest Disc Jockey,\" Sherwood spent most of his career hosting a 6-9 a.m. weekday program on KSFO in San Francisco (560 kHz, 5000 watts), which was then owned by the singing cowboy actor Gene Autry.",
+    "Radio personality\nA radio personality (American English) or radio presenter (British English), commonly referred to as a \"disc jockey\" or \"DJ\" for short, is a person who has an on-air position in radio broadcasting.\n\n A radio personality that hosts a radio show is also known as a radio host, and in India and Pakistan as a radio jockey.\n\n Radio personalities who introduce and play individual selections of recorded music are known as disc jockeys.\n\n The term has evolved to also describe a person who mixes a continuous flow of recorded music in real time.\n\n Broadcast radio personalities may include talk radio hosts, AM/FM radio show hosts, and satellite radio program hosts.\n\n Notable radio personalities include pop music radio hosts Martin Block, Alan Freed, Dick Clark, Delilah Luke, Ameen Sayani, Wolfman Jack, and Casey Kasem, shock jocks such as Don Imus and Howard Stern, as well as sports talk hosts such as Mike Francesa and political talk hosts such as Rush Limbaugh."
+   ]
+  },
+  {
+   "id": "60b3017a38213875",
+   "gold": [
+    {
+     "sentence": " He is the main vocalist of the boy group Highlight.",
+     "facts": {
+      "0.0": "The person described is the main vocalist of the boy group Highlight."
+     }
+    },
+    {
+     "sentence": " She had been a trainee at S.M. Entertainment's Starlight Academy during her middle school years before debuting as a member of the agency's girl group, Girls' Generation, in 2007.",
+     "facts": {
+      "1.0": "The person described was a trainee at S.M. Entertainment's Starlight Academy during her middle school years.",
+      "1.1": "The person described debuted as a member of Girls' Generation, the girl group of S.M. Entertainment, in 2007.",
+      "1.2": "The person described debuted in Girls' Generation after her trainee years."
+     }
+    }
+   ],
+   "items": [
+    "Kim Tae-yeon discography\nApart from soundtrack recordings, Taeyeon has also recorded duets with other artists, most notably \"Like a Star\" with The One and \"Different\" with Kim Bum-soo, which peaked at numbers one and two on the Gaon Digital Chart, respectively.",
+    "Yang Yo-seob discography\nThe discography of South Korean singer-songwriter, musical actor Yang Yo-seob consists of one extended play and two singles.",
+    "Super Junior\nSuper Junior (Korean: 슈퍼주니어 ; \"Syupeo Junieo\"), also known as simply SJ or SUJU, is a South Korean boy band.\n\n Formed in 2005 by producer Lee Soo-man of S.M. Entertainment, the group comprised a total of thirteen members at its peak.\n\n Super Junior originally debuted with twelve members, consisting of leader Leeteuk, Heechul, Hangeng, Yesung, Kangin, Shindong, Sungmin, Eunhyuk, Siwon, Donghae, Ryeowook and Kibum.\n\n Kyuhyun joined the group in 2006.",
+    "Kim Tae-yeon discography\nKim Tae-yeon, better known by the mononym Taeyeon, is a South Korean singer.\n\n Her discography consists of one studio album, two extended plays (EPs), twenty singles (including four as featured artist), and three promotional singles.\n\n She debuted as a member of South Korean girl group Girls' Generation in August 2007 and initially gained some popularity as a singer upon recording soundtrack songs \"If\" for \"Hong Gil Dong\" and \"Can You Hear Me\" for \"Beethoven Virus\" (2008).\n\n She subsequently established herself as one of the most renowned vocalist on the South Korean music scene with further soundtrack recordings, notably \"I Love You\" for \"\" (2010), \"Missing You like Crazy\" for \"The King 2 Hearts\", \"Closer\" for \"To the Beautiful You\" (2012), and \"And One\" for \"That Winter, the Wind Blows\" (2013), all of which managed to enter the top ten of South Korea's Gaon Digital Chart.",
+    "Park So-yeon (singer)\nPark So-yeon (born October 5, 1987), better known mononymously as Soyeon, is a South Korean singer and actress.\n\n She is best known as the former main vocalist and member of South Korean girl group T-ara.",
+    "The First Collage\nThe First Collage is the debut and first EP by Yang Yo-seob, released on November 26, 2012.",
+    "Graph query row:\nperson: Kim Tae-yeon\nmusic_group: Girls' Generation",
+    "Yang Yo-seob\nYang Yo-seob (born January 5, 1990), more commonly known as Yoseob, is a South Korean singer and musical actor.\n\n He is the main vocalist of the boy group Highlight.",
+    "Kim Tae-yeon\nKim Tae-yeon (born March 9, 1989), referred to as Taeyeon, is a South Korean singer.\n\n She had been a trainee at S.M. Entertainment's Starlight Academy during her middle school years before debuting as a member of the agency's girl group, Girls' Generation, in 2007.\n\n Since then, she has risen to prominence due to the group's success on the Asian music scene and further participated in the agency's projects Girls' Generation-TTS and SM the Ballad.\n\n Aside from group activities, she has also recorded songs for various television dramas and movies.",
+    "Graph query row:\nperson: Yang Yo-seob\nmusic_group: Highlight"
+   ]
+  },
+  {
+   "id": "1a9d4f08bea29514",
+   "gold": [
+    {
+     "sentence": "The 1997 European Athletics Junior Championships were held in Ljubljana, Slovenia on July 24–27.",
+     "facts": {
+      "0.0": "The 1997 European Athletics Junior Championships were held in Ljubljana, Slovenia.",
+      "0.1": "The 1997 European Athletics Junior Championships were held on July 24-27."
+     }
+    },
+    {
+     "sentence": "Ljubljana (] , ] ; also known by other, historical names) is the capital and largest city of Slovenia.",
+     "facts": {
+      "1.0": "Ljubljana is the capital of Slovenia.",
+      "1.1": "Ljubljana is the largest city of Slovenia.",
+      "1.2": "Ljubljana is also known by other, historical names."
+     }
+    }
+   ],
+   "items": [
+    "European Athletics U20 Championships\nThe European Athletics U20 Championships (formerly named the European Athletics Junior Championships up to 2015) are the European championships for athletes who are 19 years of age or under, which is the age range recognised by the IAAF as junior athletes.\n\n The event is currently organized by the European Athletic Association.",
+    "Athletics at the 2002 Asian Games\nAthletics was contested from October 7 to October 14 at the 2002 Asian Games in Busan Asiad Main Stadium, Busan, South Korea.\n\n A total of 460 athletes (comprising 281 men and 179 women) from 39 nations took part in the competition.\n\n Afghanistan, Bhutan, Brunei, Laos and Maldives were the only nations without a representative in the events.",
+    "2015 European Athletics Junior Championships\nThe 2015 European Athletics Junior Championships were the 23rd edition of the biennial European U20 athletics championships.\n\n They were held in Eskilstuna, Sweden from 16 July to 19 July.",
+    "1997 European Athletics Junior Championships\nThe 1997 European Athletics Junior Championships were held in Ljubljana, Slovenia on July 24–27.",
+    "Ljubljana\nLjubljana (] , ] ; also known by other, historical names) is the capital and largest city of Slovenia.\n\n It has been the cultural, educational, economic, political, and administrative center of independent Slovenia since 1991.\n\n Its central geographic location within Slovenia, transport connections, concentration of industry, scientific and research institutions, and cultural tradition are contributing factors to its leading position.",
+    "1968 European Junior Games\nThe 1968 European Junior Games was the third edition of the biennial athletics competition for European athletes aged under twenty.\n\n It was the final edition of the competition under that name and was succeeded by the European Athletics Junior Championships in 1970.\n\n The event was held in Leipzig, part of the German Democratic Republic at that time.\n\n The competition was mainly between Eastern European countries, with Belgium, Austria, Netherlands and Greece being present from the west.",
+    "Amela Terzić\nAmela Terzić (Serbian Cyrillic: Амела Терзић, born 2 January 1993 in Priboj, FR Yugoslavia) is a Serbian middle-distance runner.\n\n She won two gold medals at 2011 European Athletics Junior Championships in Tallinn and was the junior champion at the 2012 European Cross Country Championships.\n\n She has also been a medallist in the 1500 metres at the World Junior and World Youth Championships and a gold medalist at the 2013 European U23 Championship.",
+    "1996 IPB Czech Indoor – Doubles\nJonas Björkman and Javier Frana was the defending champions but did not compete that year.",
+    "European 10,000m Cup\nThe European 10,000m Cup is an annual 10,000 metres race for European athletes which was first held in 1997.\n\n The competition is organised by the European Athletics Association and first began as the European 10000 Metres Challenge after the event was removed from the European Cup programme.\n\n The competition has roots in the Iberian 10,000 metres Championships – a competition between Spanish and Portuguese athletes that was held between 1991 and 1996 – and the first five editions of the European 10000 Metres Challenge were held in the Iberian Peninsula.\n\n The event was first held under its current title in 2005.",
+    "1964 European Junior Games\nThe 1964 European Junior Games was the first edition of the biennial athletics competition for European athletes aged under twenty.\n\n It was an unofficial competition without sanction from the European Athletic Association.\n\n The event was held at the 10th-Anniversary Stadium in Warsaw, Poland.\n\n The competition eventually led to the creation of the European Athletics Junior Championships in 1970."
+   ]
+  },
+  {
+   "id": "3c3be440169ada0f",
+   "gold": [
+    {
+     "sentence": "Alan Crosland (August 10, 1894 – July 16, 1936) was an American stage actor and film director.",
+     "facts": {
+      "0.0": "Alan Crosland was born on August 10, 1894.",
+      "0.1": "Alan Crosland died on July 16, 1936.",
+      "0.2": "Alan Crosland was an American stage actor.",
+      "0.3": "Alan Crosland was an American film director."
+     }
+    },
+    {
+     "sentence": "Kurt Voss (born Kurt Christopher Peter Wössner) is an American film director, screenwriter and musician-songwriter.",
+     "facts": {
+      "1.0": "Kurt Voss was born Kurt Christopher Peter Wössner.",
+      "1.1": "Kurt Voss is an American film director.",
+      "1.2": "Kurt Voss is an American screenwriter.",
+      "1.3": "Kurt Voss is an American musician-songwriter."
+     }
+    }
+   ],
+   "items": [
+    "Kurt Voss\nKurt Voss (born Kurt Christopher Peter Wössner) is an American film director, screenwriter and musician-songwriter.\n\n Voss's credits include Will Smith's debut \"Where The Day Takes You\"; the Justin Theroux, Alyssa Milano and Ice T action film \"Below Utopia\"; actress Jaime Pressly's debut feature \"\", and rock and roll related films including \"Down and Out with the Dolls\" and \"Ghost on The Highway: A Portrait of Jeffrey Lee Pierce and The Gun Club\".",
+    "Alan Young\nAlan Young (born Angus Young; November 19, 1919 – May 19, 2016) was a British-born Canadian-American actor, voice actor, comedian and radio and television host/personality who \"TV Guide\" called \"The Charlie Chaplin of Television\".\n\n He was best known for his role as naive Wilbur Post in the television comedy series \"Mister Ed\" (1961–1966).\n\n Young was also the voice of Disney's Scrooge McDuck for over thirty years, first in the Academy Award-nominated short film \"Mickey's Christmas Carol\" (1983) and in various other films, TV series and video games until his death.\n\n During the 1940s and 1950s, he starred in his own variety/comedy sketch shows \"The Alan Young Show\" on radio and television, the latter gaining him two Emmy Awards in 1951.\n\n He also appeared in a number of feature films, starting from 1946, including the 1960 film \"The Time Machine\" and from the 1980s gaining a new generation of viewers appearing in numerous Walt Disney Productions films as both an actor and voice actor.",
+    "Allen Klein\nAllen Klein (December 18, 1931 July 4, 2009) was an American businessman, music publisher, writers' representative, filmmaker and record label executive, most noted for his tough persona and aggressive, innovative negotiation tactics, many of which established higher industry standards for compensating recording artists.\n\n He founded ABKCO Music & Records Incorporated.\n\n Klein revolutionized the income potential of recording artists, who previously had been routinely victimized by onerous record company contracts.\n\n He first scored massive monetary and contractual windfalls for Buddy Knox and Jimmy Bowen, one-hit rockabillies of the late 1950s, then parlayed his early successes into a position managing Sam Cooke, and eventually managed the Beatles and the Rolling Stones simultaneously, along with many other artists, becoming one of the most powerful individuals in the music industry during his era.",
+    "Arthur Tedder, 1st Baron Tedder\nAfter the war he served as Chief of the Air Staff, in which role he advocated increased recruiting in the face of many airmen leaving the service, doubled the size of RAF Fighter Command and implemented arrangements for the Berlin Airlift in 1948.\n\n After the war he held senior positions in business and academia.",
+    "Oswalt Kolle\nOswalt Kolle (2 October 1928, Kiel – 24 September 2010, Amsterdam) was a German sex educator, who became famous during the late 1960s and early 1970s for his numerous pioneering books and films on human sexuality.\n\n His work was translated into all major languages, while his films found an audience of 140 million worldwide.\n\n In his 1997 book \"Open to Both Sides\" he came out as bisexual.\n\n He was awarded the Magnus Hirschfeld Medal in 2000.",
+    "Richard W. Aldrich\nRichard Warren Aldrich is an American neuroscientist who is currently the Karl Folkers Chair of Interdisciplinary Medical Research and Professor of Neurobiology in the School of Biological Sciences at the University of Texas.\n\n Graduating from the University of Arizona with a BS in Biological Sciences (1975), Aldrich went on to earn a Ph. D. in Neuroscience from Stanford University (1980).\n\n After completing a post-doctoral fellowship in physiology at Yale University under the direction of W. Knox Chandler and Charles F. Stevens, Aldrich was hired to teach at Yale, instructing in the Department of Molecular Neurobiology.\n\n In 1985, Aldrich returned to Stanford to teach neurobiology and physiology, eventually serving as Chair of the Department of Molecular and Cellular Physiology from 2001 to 2004.\n\n He was an Investigator in the Howard Hughes Medical Institute from 1990 until 2006.\n\n Aldrich's research has focused on the \"molecular mechanisms of ion channel function and their role in electrical signaling.\"\n\n Aldrich has served as the President of the Society of General Physiologists and the Biophysical Society.",
+    "Kevin Brownlow\nKevin Brownlow (born 2 June 1938) is a British film historian, television documentary-maker, filmmaker, author, and film editor.\n\n Brownlow is best known for his work documenting the history of the silent era.\n\n Brownlow became interested in silent film at the age of eleven.\n\n This interest grew into a career spent documenting and restoring film.\n\n He has rescued many silent films and their history.\n\n His initiative in interviewing many largely forgotten, elderly film pioneers in the 1960s and 1970s preserved a legacy of early mass-entertainment cinema.\n\n Brownlow received an Academy Honorary Award at the 2nd Annual Governors Awards given by the Academy of Motion Picture Arts and Sciences on 13 November 2010.\n\n This was the first occasion on which an Academy Honorary Award was given to a film preservationist.",
+    "Alan Crosland\nAlan Crosland (August 10, 1894 – July 16, 1936) was an American stage actor and film director.",
+    "Walter Cunningham\nRonnie Walter Cunningham (born March 16, 1932), (Col, USMCR, Ret.)\n\n, better known as Walter Cunningham, is a retired American astronaut.\n\n In 1968, he was a Lunar Module Pilot on the Apollo 7 mission.\n\n He was NASA's third civilian astronaut (after Neil Armstrong and Elliot See), and has also been a fighter pilot, physicist, entrepreneur, venture capitalist, author of \"The All-American Boys\", lecturer, and host of the radio show \"Lift-off to Logic\".\n\n Walter Cunningham attended UCLA.",
+    "Al Ulmer\nAlfred C. Ulmer, Jr. was born in Jacksonville, Florida in August 1916.\n\n He was of Swiss extraction on his father's side, his father having been born in Zurich.\n\n Ulmer graduated from Princeton University in 1939 and joined the United States Navy prior to the start of World War II, ultimately becoming a major head of intelligence operations during World War II.\n\n He married Doris Gibson Bridges and had three sons (Alfred III, James and Nicolas) and a daughter (Marguerite).\n\n He received the Intelligence Medal of Merit when he retired from his position in 1962.\n\n Ulmer then went on to business and in the 1980s joined the Swiss banking firm Lombard Odier et Cie. in Geneva, later setting up Lombard Odier's operations in Bermuda.\n\n He died on June 22, 2000 in Virginia Beach, Virginia."
+   ]
+  },
+  {
+   "id": "cf01002df79a77db",
+   "gold": [
+    {
+     "sentence": " She was born in Guangzhou, China.",
+     "facts": {
+      "0.0": "The woman referred to as \"she\" was born in Guangzhou, China."
+     }
+    },
+    {
+     "sentence": " These videos are an overview and recap of each year's viral videos, events, memes, and music.",
+     "facts": {
+      "1.0": "The videos being described are an overview of each year's viral videos, events, memes, and music.",
+      "1.1": "The videos being described are a recap of each year's viral videos, events, memes, and music."
+     }
+    }
+   ],
+   "items": [
+    "Graph query row:\nperson: Wendy Ayche\nrelationship: BORN_IN\nrelated: Guangzhou",
+    "YouTube Rewind\nYouTube Rewind is a video series produced and created by YouTube and Portal A Interactive.\n\n These videos are an overview and recap of each year's viral videos, events, memes, and music.\n\n Each year, the number of YouTube celebrities featured in the video, as well as the presentation of the series, have increased.\n\n The latest episode of \"YouTube Rewind\" was released on December 8, 2016.",
+    "Wengie\nWendy Ayche (born January 9 1986) known professionally as Wengie, is an Australian YouTube personality and vlogger.\n\n She was born in Guangzhou, China.\n\n She got the nickname \"Wengie\" at a dance class when two people gave her a nickname inspired by her Chinese name, Wén Jié.\n\n Since starting her channel on February 11 2013, her videos have received over 281 million views, and her channel has accumulated over 11 followers In the January 2016 edition of \"ElleGirl Japan\", she was nominated as a channel to watch.\n\n In August 2016, she was ranked the 5th Fastest growing channel in the world.\n\n Ayche was featured in the annual YouTube Rewind in 2016 and was also singled out by Google as one of the top beauty creators in the Asia region.\n\n Ayche reached 5 million YouTube subscribers in January 2017, and her channel is currently in the 12th most subscribed How-To & Style Channel on YouTube.\n\n She is also currently a board member of the Internet Creators Guild, a non-profit focused on providing the protection, representation and guidance to online creators.",
+    "Lilly Singh\nLilly Singh (born 26 September 1988) is a Canadian YouTube personality, vlogger, comedian, writer, and actress.\n\n She is better known by her YouTube username IISuperwomanII.\n\n Since beginning her channel in October 2010, her videos have received over 2 billion views, and her channel has accumulated over 12 million subscribers.\n\n In 2016, she was ranked 3rd on the \"Forbes\" list of the world's highest paid YouTube stars (behind Roman Atwood and PewDiePie), earning a reported $7.5 million in 2016.\n\n Singh has featured in the annual YouTube Rewind every year since 2014.\n\n She ranked 1st on 2017 Forbes Top Influencers List in the entertainment category.",
+    "Wong Jing\nWong Jing ( born 3 May 1955) is a Hong Kong film director, producer, actor, presenter, and screenwriter.\n\n A prolific filmmaker with strong instincts for crowd-pleasing and publicity, Wong Jin has played a prominent role in the Hong Kong cinema of the last quarter-century.",
+    "Zhu (musician)\nSteven Zhu (born 1989), known professionally as Zhu ( or ), is a Chinese American electronic musician and singer who has been active since the beginning of 2014, signed to Mind of a Genius Records and Columbia Records.\n\n Until mid-2014, Zhu remained anonymous, asking to be judged by his music alone.\n\n His debut album, \"Generationwhy\", was released on 29 July 2016.",
+    "Wayne Goss (make-up artist)\nWayne Alan Goss (born 4 March 1978) is an English makeup artist, YouTube personality and entrepreneur.\n\n Best known for his \"Wayne Goss\" channel on YouTube, he is the creator and owner of the self-eponymous makeup brush line launched in September 2013.\n\n As of November 2016, Goss' main YouTube channel had over 2.7 million subscribers and had had 344 million views.",
+    "Kevin Nalty\nKevin 'Nalts' Nalty (born May 12, 1969) is a YouTube comedian and partner based in Doylestown, Pennsylvania better known under his YouTube username Nalts.\n\n Nalts began on YouTube as one of the top-20 most-viewed comedy channels, and collaborates with many of today's top YouTube personalities.\n\n He has more than 1,000 videos which, as of April 18, 2016, have been viewed more than 297 million times on YouTube alone.\n\n He has been ranked as one of YouTube's Most Subscribed users.\n\n He is the author of \"Beyond Viral: How to Attract Customers, Promote Your Brand, and Make Money with Online Video (Wiley & Sons, 2010).",
+    "Wengie\nHer YouTube channel also recently got awarded with \"Best Channel\" as well as \"Overall Winner\" for the Australian Online Video Awards.",
+    "CVX Live\nCVX Live (Creator Viewer Experience Live) is an event designed to bring online media creators and their fans together.\n\n It was held for the first time in Orem, Utah, on August 7 to 8, 2015 Originally created by the team behind the \"Bored Shorts TV\" YouTube channel, the convention is Utah's first YouTube event, gathering thousands of online YouTube creators and fans together in one place.\n\n One of the creators, Brett Robers, described it as “...a very unique opportunity to bring YouTube to life.”"
+   ]
+  },
+  {
+   "id": "405383f475b69a2c",
+   "gold": [
+    {
+     "sentence": "Pennsylvania Route 145 (PA 145) is a 20.89 mi long north–south state highway in the Lehigh Valley area of eastern Pennsylvania.",
+     "facts": {
+      "0.0": "Pennsylvania Route 145 (PA 145) is a state highway.",
+      "0.1": "Pennsylvania Route 145 is 20.89 miles long.",
+      "0.2": "Pennsylvania Route 145 runs north-south.",
+      "0.3": "Pennsylvania Route 145 is in the Lehigh Valley area of eastern Pennsylvania."
+     }
+    },
+    {
+     "sentence": " MacArthur Road is a divided highway; between U.S. Route 22 (US 22) and Eberhart Road, it is six lanes wide with a Jersey barrier and jughandles while the remainder of the road a four-lane divided highway.",
+     "facts": {
+      "1.0": "MacArthur Road is a divided highway.",
+      "1.1": "Between U.S. Route 22 (US 22) and Eberhart Road, MacArthur Road is six lanes wide.",
+      "1.2": "Between U.S. Route 22 and Eberhart Road, MacArthur Road has a Jersey barrier.",
+      "1.3": "Between U.S. Route 22 and Eberhart Road, MacArthur Road has jughandles.",
+      "1.4": "The remainder of MacArthur Road is a four-lane divided highway."
+     }
+    },
+    {
+     "sentence": " Plastic water-filled barriers of the same general shape are also now commonly called Jersey barriers.",
+     "facts": {
+      "2.0": "Plastic water-filled barriers of the same general shape are also now commonly called Jersey barriers."
+     }
+    }
+   ],
+   "items": [
+    "Pennsylvania Route 145\nMacArthur Road is the location of the main commercial center of the Lehigh Valley.\n\n North of Eagle Point, PA 145 becomes a two-lane undivided road that parallels the Lehigh River, crossing the river into Northampton County at Treichlers.\n\n The route continues along the east bank of the river and passes through Walnutport before reaching its northern terminus.\n\n PA 145 is dedicated as the Battle of the Bulge Veterans Memorial Highway in honor of the veterans who fought in the Battle of the Bulge.",
+    "Pennsylvania Canal (Delaware Division)\nas part of the solution to the United States' first energy crisis.\n\n The Commonwealth of Pennsylvania built the Delaware canal to feed anthracite stone coal to energy-hungry Philadelphia as part of its transportation infrastructure building plan known as the Main Line of Public Works—a legislative initiative creating a collection of self-reinforcing internal improvements to commercial transportation capabilities.",
+    "Pennsylvania and Ohio Canal\nThe Pennsylvania and Ohio Canal, also known as the P & O Canal, the Cross Cut Canal and the Mahoning Canal was a shipping canal which operated from 1840 until 1877 (though the canal was completely abandoned by 1872).\n\n It was unique in that it served to connect canals in two states (the Ohio and Erie Canal in Ohio and the Beaver and Erie Canal in Pennsylvania) and was funded by private interests.",
+    "Jersey barrier\nA Jersey barrier or Jersey wall is a modular concrete or plastic barrier employed to separate lanes of traffic.\n\n It is designed to minimize vehicle damage in cases of incidental contact while still preventing the crossover case of a head-on collision.\n\n Jersey barriers are also used to reroute traffic and protect pedestrians and workers during highway construction, as well as temporary and semi-permanent protections against landborne attack such as suicide vehicle bombs.\n\n A Jersey barrier is also known in the western United States as K-rail, or K-wall, a term borrowed from the California Department of Transportation specification for temporary concrete traffic barriers, or colloquially as a Jersey bump.\n\n Plastic water-filled barriers of the same general shape are also now commonly called Jersey barriers.",
+    "Pennsylvania Canal (Delaware Division)\nThe Delaware Division of the Pennsylvania Canal, more commonly called the Delaware Canal, runs for 60 mi parallel to the right bank of the Delaware River from the entry locks near the mouth of the Lehigh River and terminal end of the Lehigh Canal at Easton south to Bristol.\n\n At Easton, which today is the home of The National Canal Museum, the Delaware Canal also connected with the Morris Canal built to carry anthracite coal to energy starved New Jersey industries.\n\n Later, with a crossing-lock constructed at New Hope, the New Hope 'outlet lock' (1847) connected by Cable Ferry to a feeder navigation/canal at Bull's Island along the opposite shore from Lumberville, which ran over 22 mi south along the left bank through Trenton to Bordentown, the west end of the Delaware and Raritan Canal (1834) to New York City via New Brunswick.\n\n as part of the solution to the United States' first energy crisis.",
+    "Pennsylvania Route 145\nPennsylvania Route 145 (PA 145) is a 20.89 mi long north–south state highway in the Lehigh Valley area of eastern Pennsylvania.\n\n It connects Interstate 78 (I-78) and PA 309 in Lanark, Lehigh County to PA 248 in Weiders Crossing, Northampton County.\n\n PA 145 is the main north-south arterial into Allentown, the third-largest city in the state.\n\n The route enters the city on South 4th Street and follows multiple streets to downtown, where it follows the one-way pair of 6th Street northbound and 7th Street southbound.\n\n North of Allentown in Whitehall Township, a seven-mile (11.2 km) portion of PA 145 is known as MacArthur Road, named in honor of General Douglas MacArthur.\n\n MacArthur Road is a divided highway; between U.S. Route 22 (US 22) and Eberhart Road, it is six lanes wide with a Jersey barrier and jughandles while the remainder of the road a four-lane divided highway.\n\n MacArthur Road is the location of the main commercial center of the Lehigh Valley.",
+    "Susquehanna and Tidewater Canal\nThe Susquehanna and Tidewater Canal between Wrightsville, Pennsylvania, and Havre de Grace, Maryland, at the head of Chesapeake Bay, provided an interstate shipping alternative to 19th-century arks, rafts, and boats plying the difficult waters of the lower Susquehanna River.\n\n Built between 1836 and 1840, it ran 43 mi along the west bank of the river and rendered obsolete an older, shorter canal along the east bank.\n\n Of its total length, 30 mi were in Pennsylvania and 13 mi in Maryland.\n\n Though rivalry between Philadelphia, Pennsylvania, and Baltimore, Maryland, delayed its construction, the finished canal brought increased shipments of coal and other raw materials to both cities from Pennsylvania's interior.\n\n Competition from railroads was a large factor in the canal's decline after 1855.\n\n Canal remnants, including a lock keeper's house, have been preserved in Maryland, and locks 12 and 15 have been preserved in Pennsylvania.",
+    "Broad Street Bridge (Rochester, New York)\nErie Canal: Second Genesee Aqueduct, also known as the Broad Street Aqueduct or Broad Street Bridge, is a historic stone aqueduct located at Rochester in Monroe County, New York.\n\n It was constructed in 1836-1842 and originally carried the Erie Canal over the Genesee River.\n\n The overall length of the aqueduct including the wings and abutments is 800 ft .\n\n The aqueduct is 70 ft wide and has massive parapets on either side.\n\n It is one of four major aqueducts in the mid-19th century Erie Canal system.\n\n In 1927, a roadbed was added to carry automobile traffic and named Broad Street.\n\n It also carried a part of the Rochester Subway.",
+    "Outer barrier\nThe outer barrier, also known as the Long Island and New York City barrier islands, refers to the string of barrier islands that divide the lagoons south of Long Island, New York from the Atlantic Ocean.\n\n These islands include Coney Island, Long Beach Barrier Island, Island Park, Jones Beach Island, Fire Island and Westhampton Island.\n\n The outer barrier extends 75 mi along the South Shore of Long Island, from Rockaway Beach on the New York City/Nassau County border from Long Beach Barrier Islands' western edge, to Suffolk County's east end of Shinnecock Bay.",
+    "Ocean To Ocean Bridge\nThe Ocean To Ocean Bridge is a through truss bridge spanning the Colorado River in Yuma, Arizona.\n\n Built in 1915, it was the first highway crossing of the lower Colorado and is the earliest example of a through truss bridge in Arizona.\n\n It is also the only example of a Pennsylvania truss within Arizona.\n\n Originally the bridge carried the transcontinental Ocean-to-Ocean Highway and later carried its successor, US 80 until a new bridge was built to the west in 1956.\n\n Between 1988 and 2001, the bridge was closed to vehicular traffic and only traversable by pedestrians and bicyclists.\n\n After a major restoration, the bridge was rehabilitated and reopened to vehicular traffic in 2002, with a re-dedication by the Quechan nation and Yuma Crossing National Heritage Area."
+   ]
+  },
+  {
+   "id": "c16e9daff1477ed0",
+   "gold": [
+    {
+     "sentence": " The S70 was essentially a facelifted 850 saloon.",
+     "facts": {
+      "0.0": "The S70 was essentially a facelifted 850 saloon."
+     }
+    },
+    {
+     "sentence": "The Volvo 850 is a compact executive car that was produced by the Swedish manufacturer Volvo Cars from 1991 to 1996.",
+     "facts": {
+      "1.0": "The Volvo 850 is a compact executive car.",
+      "1.1": "The Volvo 850 was produced by the Swedish manufacturer Volvo Cars.",
+      "1.2": "The Volvo 850 was produced from 1991 to 1996."
+     }
+    },
+    {
+     "sentence": " The 850 was the first front-wheel drive vehicle from Volvo to be sold in North America and also the first all-wheel drive Volvo.",
+     "facts": {
+      "2.0": "The Volvo 850 was the first front-wheel drive vehicle from Volvo to be sold in North America.",
+      "2.1": "The Volvo 850 was the first all-wheel drive Volvo."
+     }
+    }
+   ],
+   "items": [
+    "Volvo 164\nThe Volvo 164 is a 4-door, 6-cylinder luxury sedan unveiled by Volvo at the Paris Motor Show early in October 1968 and first sold as a 1969 model.\n\n 46,008 164s were built before the car was superseded by the 264 in 1975.\n\n The 164 was Volvo's first venture into the luxury segment since the end of PV 60 production in 1950, and was the first six-cylinder Volvo since the PV800 last produced in 1958.",
+    "Volvo S90\nThe Volvo S90 is an executive sedan manufactured and marketed by Swedish automaker Volvo Cars since 2016.\n\n Its estate variant is called the Volvo V90.",
+    "Volvo SI6 engine\nVolvo designed the SI6 (\"short inline 6\") straight-6 automobile engine for use in 2007 models.\n\n An evolution of the company's long-used straight-5 Volvo Modular engine, which itself is an evolution of the Volvo B6304 straight six engine, the SI6 can be mounted transversely for front wheel drive or all wheel drive applications.\n\n Despite the added cylinder and displacement, the engine remains compact, and is in fact 1 mm shorter than the previous straight-5.\n\n The engine was initially offered in two displacements — a 3.0 L turbocharged version and a 3.2 L naturally aspirated version.\n\n Both offered variable cam timing, though only the turbo version varies both the intake and exhaust valves.\n\n On top of the variable cam timing used on the intake cam of the naturally aspirated engine it also had variable valve lift by using Cam Profile Switching (CPS).",
+    "Volvo S40\nThe Volvo S40 is a compact luxury car marketed and produced by the Swedish manufacturer Volvo Cars from 1995 to 2012 across two generations.",
+    "Volvo 850\nThe Volvo 850 is a compact executive car that was produced by the Swedish manufacturer Volvo Cars from 1991 to 1996.\n\n Designed by Jan Wilsgaard it was available in saloon and estate body styles.\n\n The 850 was the first front-wheel drive vehicle from Volvo to be sold in North America and also the first all-wheel drive Volvo.\n\n The range was replaced for 1997 by the Volvo S70 and Volvo V70.",
+    "Volvo 440/460\nThe Volvo 440 and 460 are versions of a small family car produced by the Swedish manufacturer Volvo between 1987 and 1996.\n\n The 440 was introduced in 1987, whilst the 460 followed in 1989.\n\n They were built at the NedCar factory in Born, The Netherlands.\n\n The 440 was a five door front wheel drive hatchback and the 460 a saloon.\n\n They shared many components with the already successful Volvo 480, including floorpan, front and rear suspension, engines, transmission and braking systems.",
+    "Volvo S70\nThe Volvo S70 was a compact executive car produced by Volvo Cars from 1996 to 2000.\n\n The S70 was essentially a facelifted 850 saloon.\n\n The S70 was replaced with the Volvo S60.",
+    "Volvo P80 platform\nThe Volvo P80 platform was a Swedish mid-size unibody automobile platform developed and produced by Volvo Cars.\n\n It was in use from 1991 to 2005.\n\n It is designed for different wheelbases in front-wheel drive configurations and was adapted to all wheel drive.\n\n It debuted with the 1991 Volvo 850 and again in autumn 1996 with the Volvo 850 AWD.\n\n Although heavily modified by TWR, the same basic chassis was used as the underpinnings for the C70.\n\n After the model year 2000 most P80 models were replaced by their P2 successors, with the exception of the C70 convertible which remained in production until 2005.\n\n A total of 1,360,522 cars based on this platform were built.",
+    "Volvo 300 Series\nThe Volvo 300 Series is a rear wheel drive small family car sold as both a hatchback and (later) a conventional saloon from 1976 to 1991.\n\n It was launched in the Netherlands shortly after Volvo acquired a major stake in the passenger car division of DAF in 1973.\n\n The series consisted of the Volvo 340 (previously 343/345) and the later Volvo 360.",
+    "Volvo P2 platform\nThe Volvo P2 platform is a global full-size unibody automobile platform developed and produced by Volvo.\n\n It is designed for single wheelbases and is adaptable to front- or all wheel drive configurations.\n\n It was developed by the automaker before its 1999 acquisition by Ford Motor Company, and debuted with the 1998 Volvo S80."
+   ]
+  },
+  {
+   "id": "cea0f91d025e8df7",
+   "gold": [
+    {
+     "sentence": "August or Auguste Brancart (21 July 1851 - 1894?)",
+     "facts": {
+      "0.0": "August Brancart is also known as Auguste Brancart.",
+      "0.1": "August Brancart was born on 21 July 1851.",
+      "0.2": "The end date given for August Brancart is 1894, with a question mark."
+     }
+    },
+    {
+     "sentence": " He also published work of the Decadent movement such as \"Monsieur Vénus\" by Rachilde.",
+     "facts": {
+      "1.0": "Brancart published work of the Decadent movement.",
+      "1.1": "Brancart published \"Monsieur Vénus\" by Rachilde.",
+      "1.2": "\"Monsieur Vénus\" by Rachilde is an example of Decadent movement work."
+     }
+    },
+    {
+     "sentence": "The Decadent Movement was a late 19th-century artistic and literary movement, centered in Western Europe, that followed an aesthetic ideology of excess and artificiality.",
+     "facts": {
+      "2.0": "The Decadent Movement was an artistic and literary movement.",
+      "2.1": "The Decadent Movement was a late 19th-century movement.",
+      "2.2": "The Decadent Movement was centered in Western Europe.",
+      "2.3": "The Decadent Movement followed an aesthetic ideology of excess.",
+      "2.4": "The Decadent Movement followed an aesthetic ideology of artificiality."
+     }
+    }
+   ],
+   "items": [
+    "Guillaume Morissette\nGuillaume Morissette (born 1984) is a Canadian fiction writer and poet based in Montreal, Quebec.\n\n His work has frequently been associated with the Alt Lit movement, with Dazed & Confused magazine describing him as \"Canada's Alt Lit poster boy.\"\n\n He has published stories, poems and essays online and in print, in venues such as \"Maisonneuve\", \"Little Brother\", \"Broken Pencil\", \"Shabby Doll House\" and \"Thought Catalog\", and was listed as one of CBC Books' \"Writers to Watch\" for 2014.",
+    "Auguste Brancart\nAugust or Auguste Brancart (21 July 1851 - 1894?)\n\n was a Belgian publisher of pornographic literature, credited with the first publication of \"My Secret Life\".\n\n He published translations of English pornography into French and vice versa for English publishers such as Edward Avery.\n\n He also published work of the Decadent movement such as \"Monsieur Vénus\" by Rachilde.",
+    "Herbert Lottman\nHerbert Lottman (August 16, 1927, Brooklyn - August 27, 2014, Paris) was an American author who specialized in writing biographies on French subjects.\n\n An influential biographer, he published 17 biographies, 15 of which were related to French culture, commerce, or politics; including works on Albert Camus, Colette, Gustave Flaubert, Henri Philippe Pétain, Jules Verne, and the Rothschild banking family of France.\n\n He wrote that, just before dying, Albert Camus was pledged to marry.\n\n Camus's estate tried to block his book, partly because of this controversial statement.",
+    "Albert Camus\nAlbert Camus (] ; 7 November 1913 – 4 January 1960) was a French philosopher, author, and journalist.\n\n His views contributed to the rise of the philosophy known as absurdism.\n\n He wrote in his essay \"The Rebel\" that his whole life was devoted to opposing the philosophy of nihilism while still delving deeply into individual freedom.\n\n He won the Nobel Prize in Literature in 1957.",
+    "Marcel J. Melançon\nMarcel J. Mélançon is a Canadian philosopher and scientist.\n\n He was born in Saint-Barnabé, Quebec, in 1938, and is mostly known for his book on the French philosopher Albert Camus \"Albert Camus, An Analysis of his thought\" (Albert Camus.\n\n Analyse de sa pensée).\n\n He has mostly worked together with the biologist Richard D. Lambert.",
+    "Christian de la Mazière\nChristian de la Mazière (August 22, 1922 in Tunis – February 15, 2006) was a journalist and member of the Charlemagne Division of the Waffen SS.\n\n He is known for discussing his role in the documentary \"The Sorrow and the Pity\" and also wrote a book titled \"The Captive Dreamer\".\n\n At the start of the war, he served in the French Army and was later retained in the military of Vichy France until 1942.\n\n After being discharged, he worked for the fascist newspaper \"Le Pays Libre\", joining the Charlemagne Division just before the Liberation of Paris in 1944.\n\n He was taken prisoner in Pomerania by Polish forces in the Red Army.",
+    "Decadent movement\nThe Decadent Movement was a late 19th-century artistic and literary movement, centered in Western Europe, that followed an aesthetic ideology of excess and artificiality.\n\n The visual artist Félicien Rops's body of work and Joris-Karl Huysmans's novel \"Against Nature\" (1884) are considered the prime examples of the decadent movement.\n\n It first flourished in France and then spread throughout Europe and to the United States.\n\n The movement was characterized by self-disgust, sickness at the world, general skepticism, delight in perversion and employment of crude humor and a belief in the superiority of human creativity over logic and the natural world.",
+    "Reminiscence of Marie A.\n\"Reminiscence of Marie A.\" or \"Memory of Marie A.\" (German: \"\"Erinnerung an die Marie A.\"\") is a 1920 poem by German poet and playwright Bertold Brecht (1889-1956) that was first published in his collection \"Die Hauspostille\" (1927).\n\n Brecht wrote the poem in his notebook on 21 February 1920 on a train to Berlin.\n\n The poem is a reminiscence of time spent with a former lover and a kiss beneath a plum tree remembered only because of the memory of a passing white cloud.",
+    "Hermann Brunn\nKarl Hermann Brunn (1 August 1862 – 20 September 1939) was a German mathematician, known for his work in convex geometry (see Brunn–Minkowski inequality) and in knot theory.\n\n Brunnian links are named after him, as his 1892 article \"Über Verkettung\" included examples of such links.",
+    "The Rebel (book)\nThe Rebel (French: \"L'Homme révolté\" ) is a 1951 book-length essay by Albert Camus, which treats both the metaphysical and the historical development of rebellion and revolution in societies, especially Western Europe.\n\n Camus relates writers and artists as diverse as Epicurus and Lucretius, Marquis de Sade, Georg Wilhelm Friedrich Hegel, Fyodor Dostoyevsky, Friedrich Nietzsche, Max Stirner, André Breton, and others in an integrated, historical portrait of man in revolt.\n\n Examining both rebellion and revolt, which may be seen as the same phenomenon in personal and social frames, Camus examines several 'countercultural' figures and movements from the history of Western thought and art, noting the importance of each in the overall development of revolutionary thought and philosophy."
+   ]
+  },
+  {
+   "id": "0797718c654bfe34",
+   "gold": [
+    {
+     "sentence": " \"Pinus\" is the sole genus in the subfamily Pinoideae.",
+     "facts": {
+      "0.0": "Pinus is the sole genus in the subfamily Pinoideae."
+     }
+    },
+    {
+     "sentence": " The Plant List compiled by the Royal Botanic Gardens, Kew and Missouri Botanical Garden accepts 126 species names of pines as current, together with 35 unresolved species and many more synonyms.",
+     "facts": {
+      "1.0": "The Plant List was compiled by the Royal Botanic Gardens, Kew and the Missouri Botanical Garden.",
+      "1.1": "The Plant List accepts 126 species names of pines as current.",
+      "1.2": "The Plant List includes 35 unresolved species of pines.",
+      "1.3": "The Plant List includes many more synonyms."
+     }
+    },
+    {
+     "sentence": " It is sometimes considered to have only two species, \"B. monosperma\" and \"B. superba\", or is expanded to include four or five species.",
+     "facts": {
+      "2.0": "The genus is sometimes considered to have only two species, B. monosperma and B. superba.",
+      "2.1": "The genus is sometimes expanded to include four or five species."
+     }
+    }
+   ],
+   "items": [
+    "Thonningia\nThonningia is a monotypic genus of flowering plants in the family Balanophoraceae containing the single species Thonningia sanguinea.\n\n It is distributed throughout much of southern and western Africa, particularly the tropical regions.\n\n Common names for the plant include ground pineapple.\n\n A familiar plant to humans, it has an extremely long list of common names in many African languages.\n\n Many names are inspired by the resemblance of the plant's inflorescence to a pineapple or palm tree.\n\n Some of the names can be translated as pineapple of the bush (from Anyi), duiker's kolanut (from Igala), and crown of the ground (from Yoruba).",
+    "Pterostyrax\nPterostyrax, the epaulette tree, is a small genus of four species of deciduous large shrubs or small trees in the family Styracaceae, native to eastern Asia in China and Japan.\n\n They grow 4 - tall, with alternate, simple ovate leaves 6 - long and 4 - broad.\n\n The flowers are white, produced in dense panicles 8 - long.\n\n The fruit is an oblong dry drupe, with longitudinal ribs or narrow wings (the wings are absent in the related genus \"Styrax\", whence the name \"Pterostyrax\", \"winged styrax\").",
+    "Deutzia\nDeutzia ( or ) is a genus of about 60 species of flowering plants in the family Hydrangeaceae, native to eastern and central Asia (from the Himalayas east to Japan and the Philippines), and Central America and also Europe.\n\n By far the highest species diversity is in China, where 50 species occur.",
+    "Hydrangea\nHydrangea ( ; common names hydrangea or hortensia) is a genus of 70–75 species of flowering plants native to southern and eastern Asia (China, Japan, Korea, the Himalayas, and Indonesia) and the Americas.\n\n By far the greatest species diversity is in eastern Asia, notably China, Japan, and Korea.\n\n Most are shrubs 1 to 3 meters tall, but some are small trees, and others lianas reaching up to 30 m by climbing up trees.\n\n They can be either deciduous or evergreen, though the widely cultivated temperate species are all deciduous.",
+    "Butea\nButea is a genus of flowering plants belonging to the pea family, Fabaceae.\n\n It is sometimes considered to have only two species, \"B. monosperma\" and \"B. superba\", or is expanded to include four or five species.",
+    "Pine\nA pine is any conifer in the genus Pinus, , of the family Pinaceae.\n\n \"Pinus\" is the sole genus in the subfamily Pinoideae.\n\n The Plant List compiled by the Royal Botanic Gardens, Kew and Missouri Botanical Garden accepts 126 species names of pines as current, together with 35 unresolved species and many more synonyms.",
+    "Oak\nAn oak is a tree or shrub in the genus Quercus ( ; Latin \"oak tree\") of the beech family, Fagaceae.\n\n There are approximately 600 extant species of oaks.\n\n The common name \"oak\" also appears in the names of species in related genera, notably \"Lithocarpus\" (stone oaks), as well as in those of unrelated species such as \"Grevillea robusta\" (silky oaks) and the Casuarinaceae (she-oaks).\n\n The genus \"Quercus\" is native to the Northern Hemisphere, and includes deciduous and evergreen species extending from cool temperate to tropical latitudes in the Americas, Asia, Europe, and North Africa.\n\n North America contains the largest number of oak species, with approximately 90 occurring in the United States, while Mexico has 160 species of which 109 are endemic.\n\n The second greatest center of oak diversity is China, which contains approximately 100 species.",
+    "Myrsine\nMyrsine is a genus of flowering plants in the family Primulaceae.\n\n It was formerly placed in the family Myrsinaceae before this was merged into the Primulaceae.\n\n It is found nearly worldwide, primarily in tropical and subtropical areas.\n\n It contains about 200 species, including several notable radiations, such as the matipo of New Zealand and the kōlea of Hawaiʻ i (the New Zealand \"black matipo\", \"Pittosporum tenuifolium\", is not related to \"Myrsine\").\n\n In the United States, members of this genus are known as colicwood.\n\n Some species, especially \"M. africana\", are grown as ornamental shrubs.",
+    "Yellow pine\nIn ecology and forestry, yellow pine refers to a number of pine species which tend to grow in similar plant communities and yield similar strong wood.\n\n In the Western United States, yellow pine refers to Jeffrey pine or ponderosa pine.\n\n In the Southern United States, yellow pine refers to longleaf pine, shortleaf pine, slash pine, or Loblolly pine.\n\n In the United Kingdom, yellow pine refers to Eastern white pine or Scots pine.",
+    "Lithocarpus\nLithocarpus is a genus in the beech family Fagaceae, differing from \"Quercus\" in the erect spikes of insect-pollinated male flowers and the short styles with punctate stigmas on the female flowers.\n\n The World Checklist (see link below) accepts 334 species, though some other texts suggest as few as 100 species.\n\n About 100 Asian species of the genus were formerly treated in the genus \"Pasania\".\n\n All are native to east and southeast Asia.\n\n These Asian species do not have a well-known English vernacular name, though the generic term stone oak has been proposed."
+   ]
+  },
+  {
+   "id": "af41f58a4c61d143",
+   "gold": [
+    {
+     "sentence": "Xingcheng (), former name Ningyuan (宁远), is a county-level city of southwest Liaoning province, China, with a population of approximately 140,000 urban inhabitants, and is located on the Liaodong Bay, i.e. the northern coast of the Bohai Sea.",
+     "facts": {
+      "0.0": "Xingcheng is a county-level city of southwest Liaoning province, China.",
+      "0.1": "Xingcheng's former name was Ningyuan (宁远).",
+      "0.2": "Xingcheng has a population of approximately 140,000 urban inhabitants.",
+      "0.3": "Xingcheng is located on Liaodong Bay, the northern coast of the Bohai Sea."
+     }
+    },
+    {
+     "sentence": " It covers an area of 2046 square kilometers and has a population of about one million.",
+     "facts": {
+      "1.0": "Xingcheng covers an area of 2046 square kilometers.",
+      "1.1": "Xingcheng has a population of about one million."
+     }
+    }
+   ],
+   "items": [
+    "Dongtai\nDongtai () is a coastal county-level city under the administration of Yancheng, Jiangsu province, China.\n\n It has a population of roughly 1,170,000 estimated for 2007.\n\n Out of the total population, about 260,000 live in the Dongtai urban core, others are distributed in the 23 suburban towns and rural regions (Some famous towns include Touzao, Anfeng, Qingdong, Sancang, Qianggang, Fu'an, Tangyang, etc.).\n\n With some Yellow Sea coast, it borders the prefecture-level cities of Nantong to the south and Taizhou to the west, and is the southernmost county-level division of Yancheng.",
+    "Ezhou\nEzhou () is a prefecture-level city in eastern Hubei Province, China.\n\n As of the 2010 census, the city had a population of 1,048,668, of which 668,727 lived in the core Echeng District.\n\n The Ezhou - Huanggang built-up (\"or metro\") area was home to 1,035,496 inhabitants from the Echeng and Huangzhou, Huanggang Districts.",
+    "Linzhou, Henan\nLinzhou (), formerly Lin County (林县), is a county-level city in Anyang, Henan, China.\n\n Adjacent to Shanxi Province and Hebei Province, it is located in the north of Henan Province and at the eastern foot of the Taihang Mountains.\n\n It covers an area of 2046 square kilometers and has a population of about one million.",
+    "Huan River\nThe Huan River (), or Anyang River (安阳河), is a river in Henan, China, and part of the Hai River basin.\n\n The river rises north of Linzhou in northwestern Henan, and joins the Wei River near Neihuang in the northeast of the province.",
+    "Xingcheng\nXingcheng (), former name Ningyuan (宁远), is a county-level city of southwest Liaoning province, China, with a population of approximately 140,000 urban inhabitants, and is located on the Liaodong Bay, i.e. the northern coast of the Bohai Sea.\n\n Currently under the administration of Huludao City, the area is steeped in history, and contains one of the best preserved Ming Dynasty towns in China, as well as functioning as a laidback summer resort.",
+    "Fuzhoucheng\nFuzhou, also Fuzhoucheng () is a town under the administration of Wafangdian City, in southern Liaoning province, China.\n\n It lies at the intersection of China National Highway 202 and Liaoning Provincial Highway 313, 57 km north by road from Pulandian.\n\n Dahe Reservoir is located several kilometres to the east.\n\n There is a 74,132 acres (30,000 hectares) bird reserve nearby with species such as Swan goose and Hooded crane about 15 km southwest of the town.\n\n , it has 2 residential communities (社区) and 14 villages under its administration.",
+    "Daying County\nDaying County () is a county of Sichuan province, China, under the administration of Suining City and in the central part of the Sichuan Basin.\n\n In 2002, it had a population of 520,000 residing in an area of 703 km2 .\n\n Daying is remarkable for being the home of the \"Chinese Dead Sea\", a tourist attraction that is based on a salt lake with 9 times the salinity of the ocean and which constitutes the largest indoor water park in China.\n\n The G42 Shanghai–Chengdu Expressway and Dazhou–Chengdu Railway (达成铁路) traverses east–west through the entire length of the county.",
+    "Suining\nSuining (; Sichuanese Pinyin: Xunin; Sichuanese pronunciation: ; ) is a prefecture-level city of eastern Sichuan province in Southwest China.\n\n In 2002, Suining had a population of 658,798.",
+    "Longkou\nLongkou (), formerly Huang County (), is a port city in northeastern Shandong province, China, facing the Bohai Sea to the north and the Laizhou Bay to the west.\n\n Longkou, a county-level city, is administered by the prefecture-level city of Yantai.\n\n The total population of Longkou is 620,000.",
+    "Wenling\nWenling (Wenling dialect: Uen-lin Zy ] ; ) is a coastal county-level city in the municipal region of Taizhou, in southeastern Zhejiang province, China.\n\n It borders Luqiao and Huangyan to the north, Yuhuan to the south, Yueqing to the west, looks out to the East China Sea to the east.\n\n Wenling locates on 28°22'N, 121°21'E, approximately 300 km south of Shanghai."
+   ]
+  },
+  {
+   "id": "4765ba2ebef18af0",
+   "gold": [
+    {
+     "sentence": "George Albert Smith Sr. (April 4, 1870 – April 4, 1951) was an American religious leader who served as the eighth president of The Church of Jesus Christ of Latter-day Saints (LDS Church).",
+     "facts": {
+      "0.0": "George Albert Smith Sr. was born on April 4, 1870.",
+      "0.1": "George Albert Smith Sr. died on April 4, 1951.",
+      "0.2": "George Albert Smith Sr. was an American religious leader.",
+      "0.3": "George Albert Smith Sr. served as the eighth president of The Church of Jesus Christ of Latter-day Saints (LDS Church)."
+     }
+    },
+    {
+     "sentence": "Wong Jing ( born 3 May 1955) is a Hong Kong film director, producer, actor, presenter, and screenwriter.",
+     "facts": {
+      "1.0": "Wong Jing was born on 3 May 1955.",
+      "1.1": "Wong Jing is a Hong Kong film director.",
+      "1.2": "Wong Jing is a Hong Kong film producer.",
+      "1.3": "Wong Jing is a Hong Kong actor.",
+      "1.4": "Wong Jing is a Hong Kong presenter.",
+      "1.5": "Wong Jing is a Hong Kong screenwriter."
+     }
+    }
+   ],
+   "items": [
+    "Angelino Apelar\nAngelino \"Andy\" Baldemor Apelar (June 16, 1927 - January 23, 2006) was an Evangelical Christian leader in the Filipino American community, and a founder of the Association of Filipino Churches (AFC) of the Christian and Missionary Alliance.\n\n He had served as a missionary/pastor and radio broadcaster in the Philippines before moving to the United States to start the AFC.\n\n He served as president for several terms.\n\n He graduated from the Far Eastern Bible Institute and Seminary, where he also met his future wife, Purita Palomar, a member of one of Capiz province's influential families.\n\n They have two children: Faith and Jemuel Apelar.",
+    "Mario Gaoa\nMario Gaoa (born 1971) is a New Zealand actor, writer and director, best known as a member of the Naked Samoans comedy group.\n\n He is of Samoan descent.\n\n As part of the group he has appeared in the film Sione's Wedding; provided the voices of Sione Tapili and God in the animated series Bro'Town, which he also co-writes; and acted in various Naked Samoans comedic theatre performances.\n\n He has also appeared in the film Nightmare Man and briefly in the television series .",
+    "The Conman\nThe Conman is a 1998 Hong Kong action comedy film directed by Wong Jing and starring Andy Lau, Athena Chu and Nick Cheung.\n\n Despite the Chinese title, which translates as \"Knight of Gamblers 1999\", Andy Lau does not reprise his role as the \"Knight of Gamblers\" from the \"God of Gamblers\" series, which was also directed by Wong Jing.\n\n The film was followed by a sequel \"The Conmen in Vegas\", which Lau and Cheung return with new cast members Natalis Chan, Kelly Lin, Meggie Yu and Alex Man.",
+    "Wong Jing\nWong Jing ( born 3 May 1955) is a Hong Kong film director, producer, actor, presenter, and screenwriter.\n\n A prolific filmmaker with strong instincts for crowd-pleasing and publicity, Wong Jin has played a prominent role in the Hong Kong cinema of the last quarter-century.",
+    "Feng Xingxi\nFeng Xingxi (馮行襲) (died July 31, 910), courtesy name Zhengchen (正臣), formally Prince Zhongjing of Changle (長樂忠敬王), was a warlord late in the Chinese dynasty Tang Dynasty who later became a subject of the succeeding Later Liang.\n\n He was tall and strong and known as \"Green Face Feng\" for his green birthmark on his face.",
+    "Ba-Jia-Jiang\nBa Jia Jiang (八家將) originated from the Chinese folk beliefs and myths, and usually generally refers to eight members of the godly realm.\n\n The general understanding of the origin of Ba Jia Jiang is that it is derived from the existence of eight generals who performed exorcism of evil spirits for the Wufu Emperor (五福大帝).\n\n These eight generals became revered as the gods of the underworld, and are represented as the bodyguards or attendants for the temples of the nether Gods such as the Dongyue Emperor (東獄大帝), Yama (King of Hell, 閻羅王) and Cheng Huang (the City Gods, 城隍).\n\n Gradually Ba Jia Jiang evolved to appear also as bodyguards to Wang Ye (Royal Lord, 王爺) and Matsu (媽祖), and at many other temples.\n\n Later on, believers at those temples dressed up as Ba Jia Jiang in order to defend the Gods.",
+    "George A. Smith\nGeorge Albert Smith (June 26, 1817 – September 1, 1875) (known throughout his life as George A. Smith) was an early leader in the Latter-day Saint movement.\n\n He served in the Quorum of the Twelve Apostles and as a member of the First Presidency of The Church of Jesus Christ of Latter-day Saints (LDS Church).",
+    "Joey Bishop\nJoseph Abraham Gottlieb (February 3, 1918 – October 17, 2007), known professionally as Joey Bishop, was an American entertainer who appeared on television as early as 1948 and eventually starred in his own weekly comedy series playing a talk show host, then later hosted a late night talk show.\n\n He later became a member of the \"Rat Pack\" with Frank Sinatra, Peter Lawford, Sammy Davis, Jr., and Dean Martin.",
+    "Chao-Li Chi\nChao-Li Chi (; April 5, 1927 – October 16, 2010) was a Shanxi-born actor and dancer who worked extensively in American television, including his best known role as Chao-Li, the faithful majordomo and chauffeur of Jane Wyman's character in \"Falcon Crest\".\n\n Additionally, his film credits include \"Big Trouble in Little China\", \"The Joy Luck Club\", \"The Nutty Professor\", \"Wedding Crashers\" and \"The Prestige\".\n\n He was featured in the short film by Maya Deren, \"Meditation on Violence\", in 1948.",
+    "George Albert Smith\nGeorge Albert Smith Sr. (April 4, 1870 – April 4, 1951) was an American religious leader who served as the eighth president of The Church of Jesus Christ of Latter-day Saints (LDS Church)."
+   ]
+  }
+ ]
+}

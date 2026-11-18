@@ -1,0 +1,59 @@
+[
+  {
+    "id": "5fceae5ba7f9ba64",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen,\" he told Fox News Digital."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen,\" he told Fox News Digital."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen,\" he told Fox News Digital."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house."}]}
+    ]
+  },
+  {
+    "id": "5d57ddc17c69a1b4",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as"}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "340bad06daa959f3",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "In the long term, scientists also point to a number of recent developments"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "recent developments which have raised hopes that it may be possible to tackle dementia more directly and effectively."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]}
+    ]
+  },
+  {
+    "id": "9e5ef181ef653571",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on."}]}
+    ]
+  },
+  {
+    "id": "c9e2eedb0e1590cf",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "0.4", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "after a limp display against Bayern at Old Trafford"}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win"}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]}
+    ]
+  }
+]

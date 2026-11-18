@@ -1,0 +1,74 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "7903911150166287814",
+   "sentences": [
+    "Douglas Irving Pederson ( born January 31 , 1968 ) is an American football coach who is currently the head coach of the Philadelphia Eagles of the National Football League ( NFL ) . He served as the offensive coordinator of the Kansas City Chiefs from 2013 -- 2015 . He spent most of his playing career as a member of the Green Bay Packers , serving as a backup quarterback to Brett Favre and holder on placekicks , and winning Super Bowl XXXI with the team over the New England Patriots . He was also a backup to Dan Marino as a member of the Miami Dolphins , and a starting quarterback for the Eagles and Cleveland Browns ."
+   ]
+  },
+  {
+   "id": "5ae38b115542990afbd1e183",
+   "sentences": [
+    "George Albert Smith Sr. (April 4, 1870 – April 4, 1951) was an American religious leader who served as the eighth president of The Church of Jesus Christ of Latter-day Saints (LDS Church).",
+    "Wong Jing ( born 3 May 1955) is a Hong Kong film director, producer, actor, presenter, and screenwriter."
+   ]
+  },
+  {
+   "id": "5a7bd25a554299294a54ab13",
+   "sentences": [
+    "Lowell J. Sherman (October 11, 1885 – December 28, 1934) was an American actor and film director.",
+    "Jonathan Kaplan (born November 25, 1947) is an American film producer and director."
+   ]
+  },
+  {
+   "id": "multihop-rag-2291",
+   "sentences": [
+    "Another user said that no one can carry out such a major attack against Israel without intelligence support.",
+    "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion."
+   ]
+  },
+  {
+   "id": "5ab8869155429916710eb081",
+   "sentences": [
+    "Electronic Attack Squadron 138 (VAQ-138), also known as the \"Yellow Jackets\", is an expeditionary EA-18G Growler squadron of the United States Navy based at Naval Air Station Whidbey Island, Washington.",
+    "The Boeing EA-18G Growler is an American carrier-based electronic warfare aircraft, a specialized version of the two-seat F/A-18F Super Hornet."
+   ]
+  },
+  {
+   "id": "5a8b7e9c5542995d1e6f13c1",
+   "sentences": [
+    "Psychopsis, abbreviated Psychp in horticultural trade, is a genus of 5 known species of orchids native to northern South America, Central America and Trinidad.",
+    "Aubrieta (commonly known as Aubretia) is a genus of about 12 species of flowering plants in the cabbage family Brassicaceae."
+   ]
+  },
+  {
+   "id": "7152569300818483186",
+   "sentences": [
+    "The first installment , Divergent ( 2014 ) , grossed over $288 million worldwide , while the second installment , The Divergent Series : Insurgent ( 2015 ) , grossed over $297 million worldwide . Insurgent was also the first Divergent film to be released in IMAX 3D . The third installment , The Divergent Series : Allegiant ( 2016 ) , grossed $179 million . Thus , the first three films of the series have grossed over $765 million worldwide . A fourth film , The Divergent Series : Ascendant was never made , due to Allegiant 's poor showing at the box office ."
+   ]
+  },
+  {
+   "id": "5a8b83bc55429949d91db5c0",
+   "sentences": [
+    " Built in 1988 by the TOGO company, it was the fastest roller coaster in the world when it was built (taking the record from American Eagle at Six Flags Great America).",
+    "TOGO (株式会社トーゴ , Kabushiki-gaisha Tōgo ) was a Japanese amusement ride company that built roller coasters, giant wheels, carousels, flumes, dark rides, sky cycles and other amusement rides."
+   ]
+  },
+  {
+   "id": "5a78daf855429970f5fffdae",
+   "sentences": [
+    "Icehouse pieces, or Icehouse Pyramids, Treehouse pieces, Treehouse Pyramids and officially Looney Pyramids, are nestable and stackable pyramid-shaped gaming pieces and a game system.",
+    " The game system was invented by Andrew Looney and John Cooper in 1987, originally for use in the game of Icehouse.",
+    " In 1998, \"Kill Doctor Lucky\" won the Origins Award for \"Best Abstract Board Game of 1997\"."
+   ]
+  },
+  {
+   "id": "-5985324559461021991",
+   "sentences": [
+    "The Battle of Lake Erie , sometimes called the Battle of Put - in - Bay , was fought on 10 September 1813 , in Lake Erie off the coast of Ohio during the War of 1812 . Nine vessels of the United States Navy defeated and captured six vessels of the British Royal Navy . This ensured American control of the lake for the rest of the war , which in turn allowed the Americans to recover Detroit and win the Battle of the Thames to break the Indian confederation of Tecumseh . It was one of the biggest naval battles of the War of 1812 ."
+   ]
+  }
+ ]
+}

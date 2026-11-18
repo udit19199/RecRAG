@@ -1,0 +1,80 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "3071184395682844971",
+   "sentences": [
+    "The poem survives in a single manuscript , the Cotton Nero A.x. , which also includes three religious narrative poems : Pearl , Purity and Patience . All are thought to have been written by the same unknown author , dubbed the `` Pearl Poet '' or `` Gawain Poet '' , since all four are written in a North West Midland dialect of Middle English ."
+   ]
+  },
+  {
+   "id": "5ade7fa3554299728e26c727",
+   "sentences": [
+    "Marcel Émile Verdet (13 March 1824 – 3 June 1866) was a French physicist.",
+    " Verdet did much to champion the early theory of the conservation of energy in France through his editorial supervision of the \"Annales de chimie et de physique\".",
+    "Annales de chimie et de physique (French for \"Annals of Chemistry and of Physics\") is a scientific journal that was founded in Paris, France, in 1789 under the title \"Annales de chimie\"."
+   ]
+  },
+  {
+   "id": "5a8f799d55429918e830d22d",
+   "sentences": [
+    " It contains about 200 species, including several notable radiations, such as the matipo of New Zealand and the kōlea of Hawaiʻ i (the New Zealand \"black matipo\", \"Pittosporum tenuifolium\", is not related to \"Myrsine\").",
+    "Storax or snowbell is the common names of Styrax, a genus of about 130 species of large shrubs or small trees in the family Styracaceae, mostly native to warm temperate to tropical regions of the Northern Hemisphere, with the majority in eastern and southeastern Asia, but also crossing the equator in South America."
+   ]
+  },
+  {
+   "id": "multihop-rag-1054",
+   "sentences": [
+    "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4.",
+    "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform.",
+    "“Certainly there wasn’t a valid alternative to Google at the time,” Cue said.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "multihop-rag-1179",
+   "sentences": [
+    "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response.",
+    "If a significant amount of money is being placed on one team or participant, sportsbooks might adjust the odds to balance their liability."
+   ]
+  },
+  {
+   "id": "-7900537827363346667",
+   "sentences": [
+    "A subcutaneous injection is administered as a bolus into the subcutis , the layer of skin directly below the dermis and epidermis , collectively referred to as the cutis . Subcutaneous injections are highly effective in administering vaccines and medications such as insulin , morphine , diacetylmorphine and goserelin . Subcutaneous , as opposed to intravenous , injection of recreational drugs is referred to as `` skin popping '' . Subcutaneous administration may be abbreviated as SC , SQ , sub-cu , sub-Q , SubQ , or subcut . Subcut is the preferred abbreviation for patient safety ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1212",
+   "sentences": [
+    "“Certainly there wasn’t a valid alternative to Google at the time,” Cue said.",
+    "Google compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "multihop-rag-1192",
+   "sentences": [
+    "Because FTX had grown so much, he could no longer run both companies, he said.",
+    "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX.",
+    "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "5a8a06455542992e4fca84db",
+   "sentences": [
+    "Lukas Rossi (born December 21, 1976) is a Canadian rock musician and was the winner of the CBS Television reality series \"\" - a televised audition contest to become lead singer of the hard rock supergroup \"Rock Star Supernova\".",
+    "Terry Alan Kath (January 31, 1946 – January 23, 1978) was an American musician and songwriter, best known as the original guitarist, one of the lead singers and founding members of the rock band Chicago."
+   ]
+  },
+  {
+   "id": "7306427910586845578",
+   "sentences": [
+    "On May 1 , 2017 , Slasher began filming a second season in Orangeville , Ontario , Canada . Shaftesbury Films confirmed that the series will not be returning to Super Channel or Chiller for a second season . However , Netflix acquired the rights to the second season . The second season was released via Netflix on October 17 , 2017 .",
+    "The first season , retroactively subtitled The Executioner , was produced in association with the Canadian network Super Channel , Slasher was the first original series by U.S. TV channel Chiller , which premiered the series on Friday , March 4 , 2016 , at 9 : 00 pm EST . Super Channel aired the show 's Canadian premiere on April 1 , 2016 . The series first season , which centered on a mysterious figure billed as `` The Executioner '' terrorizing the fictional town of Waterbury , Canada , was filmed between July and October 2015 in Sudbury , Parry Sound , and Sault Ste . Marie , Ontario ."
+   ]
+  }
+ ]
+}

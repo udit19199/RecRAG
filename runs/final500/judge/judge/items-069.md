@@ -1,0 +1,1043 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=7b526442146c0f05 ===
+Gold sentences and facts:
+Sentence 0: That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.
+  Fact 0.0: The answer ultimately lies with the jury.
+  Fact 0.1: The jury was selected on Wednesday morning.
+  Fact 0.2: The jury was selected before lawyers for the government and Bankman-Fried swapped two very different stories.
+  Fact 0.3: The two stories were about the former crypto mogul's sudden rise.
+  Fact 0.4: The two stories were about the former crypto mogul's almost instantaneous fall.
+Sentence 1: It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told.
+  Fact 1.0: Bankman-Fried did not admit being told until Judge Lewis Kaplan intervened.
+  Fact 1.1: Judge Lewis Kaplan intervened to ask whether Bankman-Fried had ever been told by Yedidia about that money.
+  Fact 1.2: Judge Lewis Kaplan asked whether Bankman-Fried was told in words or in substance.
+  Fact 1.3: Bankman-Fried admitted he had been told by Yedidia about that money.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud.
+  Fact 2.1: The prosecution said Bankman-Fried committed fraud to achieve great wealth, power and influence.
+  Fact 2.2: The defense argued that the FTX founder acted in good faith.
+  Fact 2.3: The defense argued that the FTX founder never meant to commit fraud or steal.
+  Fact 2.4: The defense argued that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+Sam Bankman-Fried didn’t ask where the $8 billion went (The Verge, 2023-10-31T19:52:07+00:00)
+I have come to believe that if you know the meaning of the word “epistemology,” you absolutely should not testify in your own defense
+
+“So it’s your testimony that your supervisees told you to stop asking questions?” Sassoon asked. She could have been filing her nails, her tone was so level.
+Had Bankman-Fried called anyone in to ask who spent $8 billion? “I wasn’t trying to build out blame for it,” he said. He was focused on solutions! Did he fire
+anyone? Nope!
+
+We also saw an Alameda balance sheet from June 13th, 2022, that included the money it was borrowing from FTX as “ftx borrows.” Bankman-Fried seemed pretty hazy
+on this, too.
+
+If you are wondering how Bankman-Fried’s parents reacted to this, I can’t tell you — they weren’t there. I couldn’t really blame them. I wouldn’t want to watch
+my child be vivisected, either.
+</item 1>
+
+<item 2>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX? Is he a liar and a fraud? Or did he act in good faith, and like many a startup founder, fly too
+close to the sun?
+
+That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very
+different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.
+
+Here’s what happened on the second day of the trial, which featured pointed allegations, a friend from MIT, and an audience replete with big names, including
+Bankman-Fried’s professorial parents and Damian Williams, U.S. attorney for the Southern District of New York.
+
+A conscious criminal…
+
+The prosecution’s account of the alleged crimes by Bankman-Fried, who spent most of his day in court staring into a laptop while seated between his two
+attorneys, featured a study in contrasts.
+</item 2>
+
+<item 3>
+Sam Bankman-Fried didn’t ask where the $8 billion went (The Verge, 2023-10-31T19:52:07+00:00)
+But telling your side of the story opens you to a great many questions you might not want to answer on cross-examination. I have watched a lot of crosses. This
+was the nastiest I think I’ve ever seen.
+
+The charges in this case hinge on conspiracy and intentional deceit. Just losing $8 billion is not a crime, though it is very embarrassing. (Even losing $900
+million is very embarrassing because people will make jokes about it forever!) But if Bankman-Fried lied to customers and lenders about what he was doing and
+how safe FTX was, that’s a crime.
+
+Establishing that would have been enough, but Sassoon also managed to get in some flourishes about Bankman-Fried’s relationships to Bahamian power. For
+instance, she asked him if he’d made comments about paying off the Bahamian national debt. (You will be shocked, shocked to discover he didn’t recall.)
+</item 3>
+
+<item 4>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Jacquelyn has been on the ground at the Southern District of New York courthouse, listening in to the trial in the same room as Bankman-Fried, so there was lots
+to talk about.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+Here are a few highlights from this week:
+
+Inside the SBF trial: Rebecca and Jacquelyn report on the second day of the SBF and FTX trial. The prosecution painted Bankman-Fried as someone who knowingly
+committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud
+or steal and basically got in over his head.
+</item 4>
+
+<item 5>
+Sam Bankman-Fried didn’t ask where the $8 billion went (The Verge, 2023-10-31T19:52:07+00:00)
+He did. But — I did hear these words uttered aloud in a court of law this morning, I am not creative enough to make this kind of thing up — his employees told
+him “they were busy and I should stop asking questions because it was distracting.”
+
+Yedidia — Bankman-Fried’s college friend, Bahamas roommate, and employee at FTX — had testified that he’d asked Bankman-Fried about the $8 billion hole on a
+padel tennis court in their luxury complex in June or July. Today, in testimony, Bankman-Fried seemed to be trying to deny that conversation had ever taken
+place. It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that
+Bankman-Fried admitted he’d been told.
+</item 5>
+
+<item 6>
+Sam Bankman-Fried didn’t ask where the $8 billion went (The Verge, 2023-10-31T19:52:07+00:00)
+Instead, Bankman-Fried directed alleged co-conspirator Caroline Ellison to repay third-party loans and went on making investments.
+
+Bankman-Fried said that he found out about the fiat@ftx account — that’s the one that tracked how much Alameda owed FTX — in June 2022 while his senior staff
+was focused on fixing the software bug. He did not, however, discover what the account was for until October. I know this sounds unbelievable, but this is his
+actual testimony.
+
+His employees told him “they were busy and I should stop asking questions because it was distracting.”
+
+Simple questions nailed Bankman-Fried to the wall. Had he given his employees at Alameda the direction not to spend FTX customer deposits? Had he put in any
+policies to prevent Alameda employees from spending FTX customer money? Did he put in place any measures at Alameda to protect the FTX customer money? No, no,
+and no. Oh, but he was testifying to Congress about keeping customer funds safe.
+</item 6>
+
+<item 7>
+Sam Bankman-Fried didn’t ask where the $8 billion went (The Verge, 2023-10-31T19:52:07+00:00)
+Let’s say I am the owner of a hedge fund, and one fine June day, my employees come to me and say, “Hey, Liz, we have an accounting problem. We are missing
+several billion dollars.” How would I react?
+
+I have been wondering this since Danielle Sassoon walked Sam Bankman-Fried through his reaction to the FTX software bug fixed by Adam Yedidia. In my case, there
+would probably be shouting? Like, a lot of shouting. I would also probably have my assistant figure out which law enforcement agency to call immediately.
+Misplacing $900 million is a five-alarm fire even for Citibank; misplacing several billion is kicking over a lantern in Chicago in 1871.
+
+Obviously, this is not how Bankman-Fried reacted to the software bug that overestimated the amount Alameda owed to FTX by about $8 billion. Nor is it how he
+reacted to finding out that even after fixing the bug, Alameda still owed FTX about $8 billion.
+</item 7>
+
+<item 8>
+Sam Bankman-Fried didn’t ask where the $8 billion went (The Verge, 2023-10-31T19:52:07+00:00)
+After a brief redirect examination by Bankman-Fried’s own lawyers, which was resplendent with word salad, Bankman-Fried stepped down, and the defense rested
+their case.
+</item 8>
+
+<item 9>
+Sam Bankman-Fried didn’t ask where the $8 billion went (The Verge, 2023-10-31T19:52:07+00:00)
+Oh, but he was testifying to Congress about keeping customer funds safe.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+
+Who was making decisions to spend $8 billion of customer funds? Bankman-Fried couldn’t recall knowing anything about it. Were there rules or requirements for
+how money borrowed from FTX would be returned? Were there rules for risk management? “I was concerned with overall risk management,” Bankman-Fried said.
+
+But it was the testimony about June 2022 that resonated the most to me. Didn’t Bankman-Fried ask what “fiat@ftx” was? He did.
+</item 9>
+
+<item 10>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Well, Bankman-Fried remembers it differently. See, Yedidia was just asking about Alameda’s risk profile, and Bankman-Fried wasn’t talking about insolvency at
+all.
+
+Also, when Singh and Bankman-Fried had the dramatic balcony conversation at their penthouse, it was just that Singh thought Alameda’s liabilities had gotten too
+high, and FTX was spending too much money on marketing. But Bankman-Fried still thought that Alameda had more assets than liabilities, so it was all fine, and
+besides, if Singh thought he was going to be better at marketing, he could take it over. It didn’t have anything to do with the money Alameda owed FTX at all.
+
+Of course not! Bankman-Fried didn’t learn about the $8 billion liability associated with Alameda until October 2022, he said. And he learned it all by himself,
+by looking at a computer database. When he found it, he was “very surprised!”
+</item 10>
+=== END ITEM id=7b526442146c0f05 ===
+
+=== ITEM id=dbf356c737dbdcb2 ===
+Gold sentences and facts:
+Sentence 0: Depending on which one you get, it might come with USB ports so you can charge multiple devices in one outlet.
+  Fact 0.0: Depending on which one you get, it might come with USB ports.
+  Fact 0.1: The USB ports let you charge multiple devices in one outlet.
+Sentence 1: With a 10,000-mAh capacity, WIRED contributor Simon Hill says it charged his iPhone 14 Pro once and then delivered an additional 64 percent the second time before tapping out.
+  Fact 1.0: The device has a 10,000-mAh capacity.
+  Fact 1.1: WIRED contributor Simon Hill says the device charged his iPhone 14 Pro once.
+  Fact 1.2: Simon Hill says the device then delivered an additional 64 percent to his iPhone 14 Pro the second time.
+  Fact 1.3: Simon Hill says the device tapped out before the second charge was finished.
+
+Retrieved items:
+<item 1>
+Some of our favorite devices are on sale for Black Friday. (The Verge, 2023-11-24T15:42:21+00:00)
+Older buildings especially suffer from what I can only describe as loose socket syndrome, where those very convenient modern boxy socket extenders with five
+different USB and USB-C charging ports simply cannot stay in place and fall right out of the wall because they’re too heavy. After one (totally pleasant)
+vacation where I had to charge my phone, watch, AirPods, and laptop in a weird corner of my room with the plug-in charging hub propped up on a strategically
+balanced mountain of books and sham pillows, I bought this Anker combination extension cord / power strip. It’s not a full power strip — just a cube with a few
+sockets along with USB and USB-C charging ports at the end of a five-foot cable. I’ve brought it on a few trips since then. It takes up extra space in my
+suitcase but each time has left me feeling vindicated about the purchase.
+
+The three prongs at the end of the cable are static, rather than folding flat for easy packing.
+</item 1>
+
+<item 2>
+41 Best Prime Day Apple Deals (2023) (Wired, 2023-10-10T22:58:00+00:00)
+It fluctuates in price very often, but it's still a good deal.
+
+Satechi's fold-up wireless charging stand has a 10,000-mAh capacity (complete with LEDs to show you how much juice you have left) and can wirelessly charge both
+your phone and a wireless earbuds case (as long as it's Qi-certified). There's also a USB-C port to power up a third device. The only gripe we have is that it's
+slow—delivering 10 watts of wireless charging power for phones (7.5 watts for iPhones), 5 watts for earbuds, and 10 watts via the USB-C port.
+
+Apple 35-Watt Dual USB-C Port Compact Power Adapter Photograph: Apple
+
+Apple's dual USB-C port power adapter is an essential accessory if you have a tendency to forget to pack chargers for your devices on the go. With two USB-C
+ports, you can use it to recharge both your iPhone and MacBook simultaneously.
+</item 2>
+
+<item 3>
+78 Absolute Best October Prime Day Deals (2023) (Wired, 2023-10-10T14:23:00+00:00)
+The performance is fast, the recharging is fast. It even looks fast. It has a bright, 120-Hz AMOLED screen, great speakers, and surprisingly good battery life
+for all that. Our main gripe is the IP64 water- and dust-resistance rating, which is not nearly as good as other flagship phones.
+
+Ugreen's charger is, as the name suggests, a 145-watt charger with a 25,000-mAh battery. It's surprisingly compact for the power it provides, although at 1.1
+pounds, it's definitely not ultralight. There are two USB-C ports and one USB-A port. What sets the Ugreen apart is that you can actually draw 145 watts while
+charging. That works out to one USB-C port at 100W and the other at 45W. Very few other batteries we've tested are capable of that feat.
+
+Photograph: Anker
+
+The Anker Nano is one of our favorite portable power banks, particularly for phones.
+</item 3>
+
+<item 4>
+Some of our favorite devices are on sale for Black Friday. (The Verge, 2023-11-24T15:42:21+00:00)
+Universal travel adapter
+
+Victoria Song, senior reviewer
+
+Epicka universal travel adapter $ 20 $ 25 20 % off $ 20 $ 20 $ 25 20 % off Epicka’s universal travel adapter is an all-in-one adapter that includes four
+different plugs that cover over 150 countries. $20 at Amazon
+
+In my youth, I forgot to pack plug adapters for international trips one too many times. Buying them once you’ve landed in another country isn’t always easy,
+either. And if you’re like me, your relatives in rural Korea don’t always have more than one plug for your American devices — in which case, you’ll have to
+share with your six other cousins. Nope. Absolutely not. Which is why I never leave this country without a universal travel adapter.
+
+Basically, it’s six plug adaptors in one. Depending on which one you get, it might come with USB ports so you can charge multiple devices in one outlet.
+</item 4>
+
+<item 5>
+Some of our favorite devices are on sale for Black Friday. (The Verge, 2023-11-24T15:42:21+00:00)
+The fact that it’ll keep something warm for days, meant I could crawl out of bed, scoop out some porridge, and crawl back into bed with minimal effort. When I’m
+feeling lazy, I throw eggs in there, and bam — some extra hard-boiled protein. Mine also comes with a little basket, so it’s super easy to throw in veggies or
+steam frozen dumplings.
+
+But what I like most is that rice cookers are more space-efficient than Instant Pots. In my kitchen, the one spot where I could fit an Instant Pot is instead
+occupied by a rice cooker, blender, and spoon rest. A multitasking kitchen gadget that doesn’t take over your entire counter? That’s a must if you live in a
+small space.
+
+Old-fashioned toaster oven
+
+Amelia Holowaty Krales, senior photo editor
+
+I love a toaster oven! It’s compact, works fast, and is perfect for reheating pizza, making nachos, and yes, even toast.
+</item 5>
+
+<item 6>
+Some of our favorite devices are on sale for Black Friday. (The Verge, 2023-11-24T15:42:21+00:00)
+Granted, it’s bulkier than buying one or two specialized adapter plugs, but if you’ve got a multi-continent itinerary, it’s a game-changer. What I like about
+this one from Epicka is that it comes with a spare fuse in case things go sideways with voltage.
+
+The only caveat is that, although it says “universal,” it’s technically only the four most common types of plugs. That’ll get you by in most countries, but it’s
+not a guarantee in places like Brazil, South Africa, or India. Even so, I’ll take this over price gouging at airport electronics shops or having to take time
+out of my schedule to visit a local hardware store.
+
+Lovely lights
+
+Brandon Widder, senior commerce editor
+
+I’m a big fan of ambient lighting, even when I’m 50 miles from the nearest outlet.
+</item 6>
+
+<item 7>
+Some of our favorite devices are on sale for Black Friday. (The Verge, 2023-11-24T15:42:21+00:00)
+Black Friday and Cyber Monday may be in the past, but some sales are still hanging around (although maybe not for long). For more leftover deals we recommend
+across all categories, be sure to check out the rest of the Cyber Monday still available here.
+
+Every month or so, we like to ask our staff about their favorite stuff — whether it’s pet toys, travel aids, kitchen gadgets, or straightforward tech. And the
+results are usually very different, very interesting, and a lot of fun.
+
+In celebration of the annual post-Thanksgiving sales, we looked through some of our recent “favorites” articles and found deals on a lot of the tech, kitchen
+tools, travel aids, and pet toys we like. We thought we’d list a few in case you’ve read about them in the past and thought, “Well, that sort of sounds good,
+but it’s a bit pricey.”
+</item 7>
+
+<item 8>
+Some of our favorite devices are on sale for Black Friday. (The Verge, 2023-11-24T15:42:21+00:00)
+And while I’ve long been a proponent of MPOWERD’s solar-powered Luci lanterns, I recently picked up the company’s like-minded string lights for car camping and
+overnight jaunts in the backcountry when I don’t mind toting a little extra weight with me.
+
+The 18-foot string is certainly not the brightest you can buy — it packs a series of 100-lumen LEDs, whereas your average headlamp might offer 400 — but it can
+swap between six different colors and features a 2,000mAh battery for when your phone needs some emergency juice. Best of all, you can charge the lights via USB
+or solar, meaning you can spend less time worrying about how to keep them going and more time taking in the vibes.
+
+Memory card holder and reader
+
+Becca Farsace, senior producer
+
+As a video person who is constantly on the move, there is nothing better than the consolidation of gear — especially when it pertains to dongles.
+</item 8>
+
+<item 9>
+Some of our favorite devices are on sale for Black Friday. (The Verge, 2023-11-24T15:42:21+00:00)
+A car-friendly charger
+
+Sean Hollister, senior editor
+
+Maybe someday Apple will realize that it wasn’t the brightest idea to artificially limit the reach of its MagSafe charging ecosystem and you’ll be able to plop
+your phone on a magical minimalist disc that charges it at high speeds. In the meanwhile, a standard Qi charger is about the best you’ll get — and the bulky but
+practical iOttie Easy One Touch Qi does it with the satisfying snap of springs. When you push your phone into its waiting jaws, it depresses a button that
+causes those jaws to firmly snap closed on either side of your device. When you want to remove it, you pinch a pair of levers with your finger and thumb to
+release as you grab your slab. It’s wide enough to fit practically anything on the market, save an opened Samsung Z Fold. I’ve used one for years with Android
+and Apple phones alike, including newer MagSafe handsets.
+</item 9>
+
+<item 10>
+Some of our favorite devices are on sale for Black Friday. (The Verge, 2023-11-24T15:42:21+00:00)
+But that’s just life while traveling with a dog anyway.
+
+An extension cord for awkward situations
+
+Sarah Jeong, deputy features editor
+
+Anker 321 Power Strip $ 15 $ 26 42 % off $ 15 $ 15 $ 26 42 % off This all-in-one 20W USB-C power cube boasts three AC outlets, two USB-A ports, and one USB-C
+port. $15 at Amazon
+
+Nobody wants to carry a power strip or an extension cord with them on their vacation. It’s probably unnecessary if you’re staying in relatively modern buildings
+and definitely unnecessary if you’re camping. But sometimes you want to stay in a charming historical hotel or a lovely cabin in the woods, and it’s only when
+you go to charge your devices at night that you realize that the only electrical socket in the bedroom is in the corner farthest away from the bed and there’s
+already two lamps plugged into it.
+</item 10>
+=== END ITEM id=dbf356c737dbdcb2 ===
+
+=== ITEM id=0d00f7e9c3ff82da ===
+Gold sentences and facts:
+Sentence 0: Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion.
+  Fact 0.0: Israel stopped allowing deliveries of food to Gaza's 2.3 million residents on October 10, 2023.
+  Fact 0.1: Israel stopped allowing deliveries of fuel to Gaza's 2.3 million residents on October 10, 2023.
+  Fact 0.2: Israel stopped allowing deliveries of other supplies to Gaza's 2.3 million residents on October 10, 2023.
+  Fact 0.3: Gaza has 2.3 million residents.
+  Fact 0.4: Israel is reportedly preparing for a ground invasion.
+Sentence 1: The understandings that Israel reached with Hamas in 2012 were made "to stop the fighting", Ortal says, and to get life back to normal as quickly as possible.
+  Fact 1.0: Israel reached understandings with Hamas in 2012.
+  Fact 1.1: The understandings Israel reached with Hamas in 2012 were made to stop the fighting, according to Ortal.
+  Fact 1.2: The understandings Israel reached with Hamas in 2012 were made to get life back to normal as quickly as possible.
+Sentence 2: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+  Fact 2.0: Another user said that no one can carry out a major attack against Israel without intelligence support.
+
+Retrieved items:
+<item 1>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Ortal points out that between Operation Pillar of Defense in 2012 and Operation Protective Edge in 2014, Israel significantly reduced targeted countermeasures
+against terrorist operatives, and none focused on Hamas operatives. According to his analysis, this was because, prior to the Iron Dome coming into use in 2011,
+the most dangerous threat posed by Gaza developed in the period preceding Operation Protective Edge. The understandings that Israel reached with Hamas in 2012
+were made "to stop the fighting", Ortal says, and to get life back to normal as quickly as possible. This, after air raid sirens sounded in Tel Aviv and
+Jerusalem for the first time since the Yom Kippur War, and the education system shut down for more than a week.
+
+Even after Iron Dome, Israel found it difficult to stand up against the significant disruption of daily life on the home front.
+</item 1>
+
+<item 2>
+Israel's blockade of Gaza means that a region the size of Philadelphia faces a real risk of starvation, says Peace Studies scholar (Fortune,
+2023-10-13T19:50:48+00:00)
+International aid groups are warning that they cannot deliver food and other basic services to people in the Gaza Strip and that a “dire” humanitarian crisis is
+set to worsen.
+
+International aid groups provide food and other means of support to about 63% of people in Gaza.
+
+Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground
+invasion.
+
+On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential
+ground invasion.
+
+I am a scholar of peace and conflict economics and a former World Bank consultant, including during the 2014 war between Hamas and Israel.
+</item 2>
+
+<item 3>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+He said the IDF lost an army base, a general was captured right out of his house. "Invincible "Merkava MK4 MBT's captured, and destroyed...what is wrong with
+the Israeli security and defence forces? And (what) MOSSAD did?"
+
+Dr Jaswant Gandhi, a professor of management, said that attack on Israel was a "great Mossad failure". He said India had to learn a lot and keep all
+intelligence agencies duly greased and internecine conflict-proof. "Israel_under_attack Great #Mossad failure. GoI has to learn a lot and keep all Intelligence
+Agencies duly greased and internecine conflict-proof. BHARAT is not immune to #terrorism and internal enemies," he wrote on X.
+
+#Israel_under_attack Great #Mossad failure. GoI has to learn a lot and keep all Intelligence Agencies duly greased and internecine conflict proof.
+</item 3>
+
+<item 4>
+Israel's blockade of Gaza means that a region the size of Philadelphia faces a real risk of starvation, says Peace Studies scholar (Fortune,
+2023-10-13T19:50:48+00:00)
+While Israel has granted permits to about 17,000 Gaza residents to enter and work in Israel, the food, fuel and medical supplies that people in Gaza use all
+first pass through Israel.
+
+Israel controls two physical checkpoints along Gaza, which monitor both the entry and exit of people and trucks. Israel limits the kind and quantity of
+materials that pass into Gaza. And the blockades generally prohibit Gazans who do not have work permits or special clearance – for medical purposes, for example
+– from entering Israel.
+
+Israel’s restrictions through the blockade intensified since Hamas’ surprise attack on 20 Israeli towns and several military bases on Oct. 7, with Israel then
+announcing a broad blockade of imports into Gaza. This stopped all food, fuel and medical supplies from entering the region.
+</item 4>
+
+<item 5>
+Israel's blockade of Gaza means that a region the size of Philadelphia faces a real risk of starvation, says Peace Studies scholar (Fortune,
+2023-10-13T19:50:48+00:00)
+Some Republican politicians have said that UNRWA has “cozied up” to Hamas. And an internal UNRWA ethics committee has accused top staff at the agency of “sexual
+misconduct, nepotism, retaliation … and other abuses of authority” that created a toxic work environment.
+
+Meanwhile, since the war between Israel and Hamas began on Oct. 8, more than 1,500 Gazans have been killed and more than 5,300 injured, while Hamas attacks have
+killed more than 1,300 people in Israel and injured about 3,200 others.
+
+International aid groups and European Union officials have called for a humanitarian corridor to be set up in Gaza – meaning a protected path specifically for
+civilians, aid workers and necessary basic items to pass through safely back and forth from Gaza to Israel and Egypt. So far, there are no clear plans for such
+a protected pathway.
+
+Topher L. McDougal is Professor of Economic Development & Peacebuilding, University of San Diego.
+</item 5>
+
+<item 6>
+Israel's blockade of Gaza means that a region the size of Philadelphia faces a real risk of starvation, says Peace Studies scholar (Fortune,
+2023-10-13T19:50:48+00:00)
+This article is republished from The Conversation under a Creative Commons license. Read the original article.
+</item 6>
+
+<item 7>
+Israel's blockade of Gaza means that a region the size of Philadelphia faces a real risk of starvation, says Peace Studies scholar (Fortune,
+2023-10-13T19:50:48+00:00)
+This stopped all food, fuel and medical supplies from entering the region.
+
+Gaza’s isolation
+
+The Palestinian enclaves of West Bank and Gaza – which are generally lumped together in economic analyses – both have small economies that run a massive deficit
+of US$6.6 billion in losses each year, as the value of the imports they receive greatly outweighs the value of the items they produce and sell elsewhere.
+
+More than 53% of Gaza residents were considered below the poverty line in 2020, and about 77% of Gazan households receive some form of aid from the United
+Nations and other groups, mostly in the form of cash or food.
+
+Gaza’s weak economy is caused by a number of complex factors, but the largest is the blockade and the economic and trade isolation it creates.
+
+For the average Gazan, the blockade has several practical effects, including people’s ability to get food.
+</item 7>
+
+<item 8>
+Israel's prince of public diplomacy (Globes English | Israel Business Arena, 2023-12-03T12:50:26+00:00)
+Do the explanations produce greater acceptance?
+
+"Yes. There is understanding that we must end this war by destroying the capabilities of Hamas, otherwise we will be in the same situation in another six
+months. This is something I explain a lot to the Irish, for example. The Irish have been pressing for a ceasefire for a long time and I explain to them that if
+we had taken their advice and stopped firing then little Emily Hand would still be in captivity, and if we take their advice now to agree to a ceasefire then
+Hamas will commit more atrocities, because it will feel empowered and it will come out of this war with a feeling that the world has its back.
+
+"We are being asked difficult questions about the dead on the other side and we must remind them that everyone who was killed in the Gaza Strip over the last
+month would be alive today if Hamas had not started the atrocities on October 7, and then decided to fight in populated areas, while preventing people from
+leaving despite all of Israel's efforts for over a month to evacuate civilians from the battle zones."
+</item 8>
+
+<item 9>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+A comprehensive study conducted on intelligence failures in the national arena, from the fall of the Iron Curtain in 1989 to 2010, showed no improvement in
+providing or thwarting warnings about strategic surprises, even if the means of gathering information had improved. Four years after signing the study, former
+US President Barack Obama admitted that US intelligence had not correctly assessed the severity of the threat of large parts of Iraq and Syria being occupied by
+ISIS.
+
+"No matter how technologically advanced your army or how effective your intelligence gathering system, identifying strategic surprises is a human process that
+depends on analyzing what is called, in the intelligence community, 'weak signals,'" Barnea says. "These are pieces of relevant information that have been
+conveyed to the organization, but because they are low-key, or because of the information overload around them, the organization fails to identify and interpret
+them correctly."
+</item 9>
+
+<item 10>
+Israel's blockade of Gaza means that a region the size of Philadelphia faces a real risk of starvation, says Peace Studies scholar (Fortune,
+2023-10-13T19:50:48+00:00)
+About 64% of people in Gaza are considered food insecure, meaning they do not have reliable access to sufficient amounts of food.
+
+Food as a percentage of Gaza’s total imports has skyrocketed by 50% since 2005, when Israel first imposed a temporary blockade. And the amount of food the West
+Bank and Gaza actually produce has tumbled by 30% since then.
+
+It is hard for Gaza to produce food within its own borders. One factor is that Israeli airstrikes hit Gaza’s only power generation plant and main sewage
+treatment plant in 2008 and again in 2018. These attacks resulted in the spread of sewage waste on land and in the water, destroying farmlands and food crops
+and threatening fish stocks in the ocean as well.
+
+The UN’s big role in Gaza
+
+Gaza’s weak economy and isolation because of the blockade mean that it relies heavily on international aid organizations to provide basic services to residents.
+</item 10>
+=== END ITEM id=0d00f7e9c3ff82da ===
+
+=== ITEM id=1bdb4a2eb2500008 ===
+Gold sentences and facts:
+Sentence 0: “The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment,” Goodyear SVP of global operations and CTO Chris Helsel says.
+  Fact 0.0: 6PPD-quinone was identified in late 2020
+  Fact 0.1: 6PPD-quinone requires more research to understand what impact, if any, it may have on aquatic life or the environment
+  Fact 0.2: Chris Helsel is Goodyear's SVP of global operations and CTO
+  Fact 0.3: Chris Helsel says the 6PPD-quinone statement
+Sentence 1: In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals.
+  Fact 1.0: The report contains a quote from a former VP at an industrial automation vendor
+  Fact 1.1: The former VP at an industrial automation vendor said digital solutions provide visibility, analysis, and insight
+  Fact 1.2: The digital solutions address the challenges inherent in sustainability goals
+
+Retrieved items:
+<item 1>
+Bringing aqueous rechargeable zinc iodine batteries to the mainstream energy market (Advanced Science News, 2023-09-26T11:50:40+00:00)
+This will include optimizing the production process of hydrogels as well as sourcing affordable raw materials and minimizing waste generated during the
+manufacturing of these materials.
+
+“Ensuring the safety and reliability of hydrogel-based batteries is also necessary,” Fan concluded. “Rigorous testing and evaluation of the potential
+environmental impact of hydrogel electrolytes, from raw material extraction to disposal, are vital to meeting sustainability goals and gaining public trust.”
+
+Reference: Peihua Yang, Hong Jin Fan, et al., Hetero-Polyionic Hydrogels Enable Dendrites-Free Aqueous Zn-I2 Batteries with Fast Kinetics, Advanced Materials,
+(2023). DOI: 10.1002/adma.202306531
+
+Feature image credit: danilo.alvesd on Unsplash
+</item 1>
+
+<item 2>
+Bringing aqueous rechargeable zinc iodine batteries to the mainstream energy market (Advanced Science News, 2023-09-26T11:50:40+00:00)
+One of the major drawbacks of these lithium-ion batteries is the inherent risk of burning or even explosion as the result of thermal runaway, with overheated
+lithium-ion batteries deemed responsible for a number of fires in the past.
+
+A possibility with zinc
+
+One potential substitute for lithium-ion batteries are rechargeable zinc iodine batteries , which have the advantage of being safer, costing less, and being
+more friendly to the environment than lithium alternatives.
+
+However, zinc iodine batteries are not perfect. Composed of an negative iodine electrode and a positive zinc electrode , these batteries suffer from issues like
+lower energy output compared to commercial non-aqueous lithium batteries and the growth of zinc dendrites on the anodes — projections of material that build on
+electrodes and short batteries when they cross from one electrode to another — as well as the corrosion of the zinc anode that result in reduced efficiency and
+even short-circuiting.
+</item 2>
+
+<item 3>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Digital twin market trends
+
+We will now look at four trends helping digital twin market growth.
+
+Trend 1: Digital twins deployed to meet sustainability goals
+
+Sustainability was discussed in approximately 21% of recent CEO earnings calls and has remained a consistent topic throughout 2023. This pairs with our report’s
+analysis that the pursuit of sustainability goals is a tailwind macro factor for the digital twin market.
+
+To achieve their sustainability goals, many companies are exploring digital twins. Due to their ability to simulate real-world conditions and deliver real-time
+information, organizations can optimize resource usage, reducing carbon emissions and improving supply and transportation networks.
+
+According to Capgemini Research Institute’s 2022 digital twins report, 57% of organizations agreed that one of the key drivers for their digital twin
+investments was improving their sustainability, and 51% agreed that digital twins would help achieve their organization’s environmental sustainability goals.
+
+In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the
+challenges inherent in sustainability goals.
+</item 3>
+
+<item 4>
+Tires are saving us — and killing us, too (The Verge, 2023-11-17T13:45:00+00:00)
+Truly sustainable tires are becoming a reality, but will it be enough?
+
+Renewable rubber
+
+Bridgestone’s “Wireless-In-Wheel” technology.
+
+If you watched any IndyCar road course race this year, basically any of the half-dozen events where the drivers had to turn right as well as left, you might
+have noticed some green flashes on those cars’ tires. It wasn’t just a visual flair to an otherwise visually dull part of the equation.
+
+Those tires contained guayule, part of an agrarian prototype effort from Bridgestone, the supplier of spec tires for that series. It’s a high-profile
+demonstration of a new domestically sourced, renewable source of rubber that augments other natural sources like that from the hevea tree and even the Russian
+dandelion.
+
+Truly sustainable tires are becoming a reality, but will it be enough?
+
+Bridgestone’s Bill Niaura, executive director of sustainable innovation and circular economy, says guayule is a drop-in replacement with many potential
+advantages. Chief among them?
+</item 4>
+
+<item 5>
+Tires are saving us — and killing us, too (The Verge, 2023-11-17T13:45:00+00:00)
+“What you don’t want is all these little wear particles full of all these nasty compounds settling in the environment and inside us and gradually leaching out
+their toxins,” says Nick Molden, CEO of Emissions Analytics, an independent group focused on testing and data about the overall environmental impacts of
+transportation.
+
+“What you don’t want is all these little wear particles full of all these nasty compounds settling in the environment and inside us and gradually leaching out
+their toxins.”
+
+One such toxin is 6PPD-quinone. A 2020 study from the University of Washington’s Center for Urban Waters found that a dramatic decline in coho salmon
+populations was the result of the toxin. The salmon have now been placed on some West Coast endangered lists.
+
+“Shortly after birth, they were essentially going mad and dying,” Molden says. “The researchers finally linked it to this compound in tires because it was
+happening after rainfall. The rainfall was washing all the accumulated tire material off the road into the harbors and into the shore.”
+</item 5>
+
+<item 6>
+Tires are saving us — and killing us, too (The Verge, 2023-11-17T13:45:00+00:00)
+“For the next five years, if you want to sell tires in California, you need to go through the process of either eliminating 6PPD, or at least properly
+researching the alternatives,” Molden says.
+
+“We are collaborating with researchers and other scientists to better understand this transformation product, fill knowledge gaps, and determine next steps,”
+says Helsel.
+
+Other initiatives are coming to limit overall tire emissions, including the upcoming Euro 7 regulations, which put caps on tire wear particles as well as other
+emissions.
+
+That seems like progress, but Emissions Analytics’ Molden isn’t so sure: “The reason I’m worried about that is I’m sure you can reduce that wear mass, but if
+you do that by making the compound more toxic, you could actually make the environmental impact worse.”
+
+“You could actually make the environmental impact worse.”
+
+That could be akin to increasing a car’s fuel efficiency by switching to leaded fuel.
+
+Molden believes that what’s needed is better understanding.
+</item 6>
+
+<item 7>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Considerations for digital twin vendors
+
+3 questions digital twin vendors should ask themselves based on research findings discussed in this article:
+
+1. Sustainability goals: Given the emphasis on sustainability and the role of digital twins in achieving it, is my company’s digital twin solution well-equipped
+to support sustainability objectives? Are there new features we need to develop?
+
+2. Interoperability: Is our digital twin solution currently designed to be interoperable with other systems and technologies, especially those from different
+vendors?
+
+3. Product development: How aligned is our product development roadmap with the emerging trends highlighted in the report, especially around end-user and
+technological advancements?
+
+Considerations for adopters
+
+3 questions adopters should ask themselves based on research findings discussed in this article:
+
+1. Infrastructure readiness: Do we have the necessary infrastructure and resources in place to support the deployment and effective use of digital twins? If
+not, what investments are required?
+
+2.
+</item 7>
+
+<item 8>
+Tires are saving us — and killing us, too (The Verge, 2023-11-17T13:45:00+00:00)
+That isn’t bad just for the salmon and the Pacific Northwest’s fishing industry. 6PPD-quinone is in us, too, and it only comes from tires. 6PPD helps tires
+resist environmental damage, thus lasting longer between replacements. When 6PPD reacts with ozone, it becomes 6PPD-quinone.
+
+“The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the
+environment,” Goodyear SVP of global operations and CTO Chris Helsel says. That’s hardly a mea culpa, but the tire industry genuinely has been an active partner
+in studying the problem.
+
+Goodyear and other members of the US Tire Manufacturers Association actually encouraged 6PPD-targeting regulation enacted by the California Environmental
+Protection Agency and have provided free tire compound samples to researchers.
+</item 8>
+
+<item 9>
+Bringing aqueous rechargeable zinc iodine batteries to the mainstream energy market (Advanced Science News, 2023-09-26T11:50:40+00:00)
+New research aims to improve the stability and safety of alternatives to rechargeable lithium-ion batteries using aqueous zinc and hydrogels.
+
+The demand for rechargeable batteries as a result of the growth of both the personal electronics and electric vehicle markets has grown steadily over the last
+decade. Lithium-ion batteries are one of the technologies that have emerged and matured due to this demand.
+
+In 2020, Statista estimated that lithium-ion batteries accounted for 185 gigawatts (GWh) of energy consumed, and this energy demand is projected to reach 2,035
+GWh by 2030. Most of this growth is accounted for by the increased desire for electric vehicles as people turn away from fossil fuels.
+
+While it is undeniable that lithium-ion batteries are more environmentally friendly than fossil fuels and while they are also relatively inexpensive, these
+batteries aren’t perfect.
+</item 9>
+
+<item 10>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Trend 4: Initiatives promoting interoperability of digital twins across systems from different vendors
+
+Agreement on integration standards among the various digital twin technology providers is crucial for building cross-system digital twins. With standards,
+manufacturers can offer services that can be applied to unique situations with other digital twin technology and software.
+
+Recognizing this, countries and industry organizations have taken several steps to address this need:
+
+Plattform Industrie 4.0 and CESMII
+
+Plattform Industrie 4.0 and the Clean Energy Smart Manufacturing Innovation Institute (CESMII) partnered to establish standards for manufacturers in Germany and
+the United States to better enable smart, sustainable competition. The partnership addressed similar challenges related to Industry 4.0 and Smart Manufacturing.
+</item 10>
+=== END ITEM id=1bdb4a2eb2500008 ===
+
+=== ITEM id=46a8e824b46dfc35 ===
+Gold sentences and facts:
+Sentence 0: The Buckeyes settled for a 52-yard field goal late in the first half, which Jayden Fielding missed wide left.
+  Fact 0.0: The Buckeyes settled for a 52-yard field goal late in the first half.
+  Fact 0.1: Jayden Fielding missed the Buckeyes' 52-yard field goal wide left.
+Sentence 1: His 31-yard field goal is good, and the Buffs take the first lead of the game on their first drive.
+  Fact 1.0: A 31-yard field goal is good.
+  Fact 1.1: The Buffs take the first lead of the game on their first drive.
+
+Retrieved items:
+<item 1>
+Colorado vs. Arizona State live score, updates, highlights from Week 6 college football game (Sporting News, 2023-10-07T21:21:03+00:00)
+Colorado fans, you're back. For now.
+
+A 43-yard pass from Shedeur Sanders on the Buffaloes' final drive helped set up Alejandro Mata for the game-winning 43-yard field goal with 12 seconds left,
+delivering Colorado the 27-24 win over Arizona State for their first Pac-12 win of the season. It snaps their eight-game conference losing streak.
+
+Sanders had a mediocre day by his lofty standards, but his 239 yards and a touchdown were enough in perhaps Colorado's most crucial game so far. It brought the
+team to 4-2, but had it lost, it would have been much harder for the Buffs to finish the season bowl eligible. A win gives them a leg up in a competitive
+conference, particularly facing four ranked teams down the stretch of the season.
+
+If Colorado wants to solidify a bowl game, it'll have to fix many things, one of them being the offensive line.
+</item 1>
+
+<item 2>
+Vikings vs. Broncos live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-11-19T23:00:04+00:00)
+COURTLAND SUTTON INCREDIBLE 4TH DOWN GRAB ‼️
+
+
+
+🎥: @NFL
+
+pic.twitter.com/T0Mrch9Tf9 — The Sporting News (@sportingnews) November 20, 2023
+
+Vikings 20, Broncos 15
+
+11:02 p.m.: FIELD GOAL — Greg Joseph knocks it in from 30 yards. The Vikings' offense was moving, and it did its job by chewing a lot of clock on a 14-play,
+seven-minute and 20-second drive. Minnesota stalled out on Denver's 12-yard line, settling for a field goal.
+
+Can the Vikings' defense keep the Broncos out of the end zone as it has all night? The drive of the game is coming up.
+
+10:57 p.m.: The spot on the field was overturned! Ty Chandler was ruled just short of the line to gain, setting up a 4th & inches.
+</item 2>
+
+<item 3>
+Colorado vs. UCLA live score, updates, highlights from Week 9 college football game (Sporting News, 2023-10-28T22:08:03+00:00)
+– UCLA misses the field goal! RJ Lopez's 24-yard attempt hits the left upright and is no good. The Bruins keep a one-point lead with a 1:37 left in the second
+quarter.
+
+9:03 p.m. PENALTY – Shilo Sanders is ejected for targeting after a hit on Carsen Ryan. He will be out for the remainder of the game.
+
+Shilo Sanders was disqualified for targeting after this hit pic.twitter.com/1EJ7IOdKKs — FOX College Football (@CFBONFOX) October 29, 2023
+
+8:58 p.m. – Colorado goes three-and-out, unable to score on any turnovers. For UCLA, Garbers is back, and he takes a 17-yard run to the UCLA 37 for a first
+down.
+
+8:51 p.m. INTERCEPTION – Third times a charm! Collin Schlee, who came in for Garbers, is interception by Hunter.
+</item 3>
+
+<item 4>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+You just might not have a better option than Fields.
+
+LAST WEEK: Posted his first-ever game with four passing touchdowns and over 300 yards against a Broncos defense that was devoid of a serious pass rush or pass
+coverage skills through the first three quarters. By the fourth quarter the Broncos were generating heavy pressure and Fields finished 5 of 11 for 50 yards and
+no touchdowns with two turnovers.
+
+FILM: For three quarters Fields looked terrific firing downfield from clean pockets with plenty of great reads and accurate throws along with a play or two
+where he manipulated defenders with the threat of him running only to throw over their heads, including on Kmet's short touchdown. His off-target rate was
+literally 0.0%. But by the fourth only some plays were fine -- on others he either was pressured, threw off his back foot, threw with too much velocity or
+wasn't on the same page as his target.
+</item 4>
+
+<item 5>
+Colorado vs. Arizona State live score, updates, highlights from Week 6 college football game (Sporting News, 2023-10-07T21:21:03+00:00)
+Colorado takes over on the ASU 25.
+
+SHEDEUR TO ANTONIO FOR A HUGE GAIN 🦬@CUBuffsFootball pic.twitter.com/tvfWjRWWAE — FOX College Football (@CFBONFOX) October 8, 2023
+
+Colorado 24, Arizona State 24
+
+10:11 p.m. TOUCHDOWN – Don't count the Sun Devils out yet! Bourguet finds Troy Omeire on a 15-yard pass to tie it up. Only 50 seconds remain.
+
+9:48 p.m. – It's blocked! Carter Stoutmire gets in front of the 52-yard field goal attempt from Longhetto to deny a Sun Devil score.
+
+9:38 p.m. FIELD GOAL – Alejandro Mata nails a 42-yard field goal to extend Colorado's lead to seven. Ten minutes are left in the game.
+
+9:35 p.m. – That's a huge run for the Buffaloes!
+</item 5>
+
+<item 6>
+Colorado vs. Arizona State live score, updates, highlights from Week 6 college football game (Sporting News, 2023-10-07T21:21:03+00:00)
+Colorado needed a bounce back win and got one. Meanwhile Arizona State kept on struggling, falling to 1-5.
+
+MORE: Watch Colorado vs. Arizona State live with Fubo (free trial)
+
+The Sporting News tracked updates and highlights from college football's Week 6 game between Colorado and Arizona State.
+
+Colorado vs. Arizona State score
+
+Q1 Q2 Q3 Q4 Final Colorado 7 7 0 13 27 Arizona State 7 10 0 7 24
+
+Colorado vs. Arizona State results, highlights from Week 6 game
+
+FINAL: Colorado 27, Arizona State 24
+
+Colorado 27, Arizona State 24
+
+10:17 p.m. FIELD GOAL – Absolutely clutch. Mata makes a 43-yard field goal look easy to give Colorado the lead with 12 seconds on the clock.
+
+10:14 p.m. – Bullseye! Sanders finds Antonio on a 43-yard pass. Colorado takes over on the ASU 25.
+</item 6>
+
+<item 7>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+Who do you want lining up the potential winning kick in a Super Bowl? It’s an interesting question in a season that has seen Moody and Saints rookie Blake Grupe
+miss game-winning tries, but the data could be on the 49ers’ side.
+
+FGA Dist Rookies Veterans <33 Yds 97% [31-32] 94% [330-351] 34-44 Yds 75% [21-28] 82% [230-279] 45-50 Yds 78% [7-9] 73% [121-165] 51-55 Yds 100% [8-8] 59%
+[33-56] 56+ Yds 0% [0-1] 55% [6-11] Totals 86% [67-78] 84% [720-862]
+
+The table above shows field-goal make rates in the postseason since 2000 for rookie kickers vs. veterans.
+</item 7>
+
+<item 8>
+Colorado vs. UCLA live score, updates, highlights from Week 9 college football game (Sporting News, 2023-10-28T22:08:03+00:00)
+Can the Buffaloes finally connect for a touchdown before its too late?
+
+UCLA adds on another 💪@UCLAFootball makes it 21-9 in the 4th quarter vs Colorado pic.twitter.com/6Eu9gn6kgn — FOX College Football (@CFBONFOX) October 29, 2023
+
+End of third quarter: Colorado 9, UCLA 14
+
+10:20 p.m. – What a catch for the Bruin! After review, Garbers pass to Loya is ruled complete.
+
+Colorado 9, UCLA 14
+
+10:06 p.m. FIELD GOAL – Mata nails a 34-yard field goal to lessen Colorado's deficit to five. Four minutes remain in the third quarter.
+
+10:03 p.m. – Sacked! Sanders is taken down by Laiatu Latu, who has multiple tonight. UCLA records its sixth sack of the night with the latest.
+</item 8>
+
+<item 9>
+Colorado vs. Arizona State live score, updates, highlights from Week 6 college football game (Sporting News, 2023-10-07T21:21:03+00:00)
+PENALTY – Sun Devils Ed Woods is ejected for targeting. He will miss the remainder of this game as well as the first half against Washington in two weeks.
+
+9:10 p.m. – That's the fourth sack allowed by the Colorado O-line. The Buffaloes now lead FBS with most sacks allowed this season at 30.
+
+8:52 p.m. – Skattebo is heating up under the sun. He's added 24 rushing yards from Arizona State's possession.
+
+End of second quarter: Colorado 14, Arizona Sate 17
+
+Colorado 14, Arizona State 17
+
+8:20 p.m. FIELD GOAL – Dario Longhetto nails a 33-yard field goal to end the half. The Sun Devils have a narrow lead over the Buffs at the halfway mark.
+
+Colorado 14, Arizona State 14
+
+8:14 p.m. TOUCHDOWN – Sanders ties it up! The QB keeps it for 16 yards and a touchdown.
+</item 9>
+
+<item 10>
+Colorado vs. UCLA live score, updates, highlights from Week 9 college football game (Sporting News, 2023-10-28T22:08:03+00:00)
+– Colorado settles for a field goal again, this time for a 39-yarder. It leads UCLA 6-0 with 7:44 remaining in the first quarter.
+
+7:59 p.m. INTERCEPTION – Welcome to Hollywood, Travis Hunter! The two-way star picks off Ethan Garbers at the Bruins' 36-yard line. After review, the
+interception stands, and it's Buffalo ball. Colorado defense with a statement play early on.
+
+WHAT A PICK BY TRAVIS HUNTER 🔥@CUBuffsFootball pic.twitter.com/3i9twSG1uq — FOX College Football (@CFBONFOX) October 29, 2023
+
+Colorado 3, UCLA 0
+
+7:54 p.m. FIELD GOAL – Sanders can't find the end zone, but Alejandro Mata finds space between the uprights. His 31-yard field goal is good, and the Buffs take
+the first lead of the game on their first drive.
+
+7:52 p.m.
+</item 10>
+=== END ITEM id=46a8e824b46dfc35 ===
+
+=== ITEM id=a6c65602e4768117 ===
+Gold sentences and facts:
+Sentence 0: Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence.
+  Fact 0.0: Google's public documentation says it uses three categories to rank results that are local to a searcher.
+  Fact 0.1: The three categories Google uses to rank local results are relevance, distance, and prominence.
+Sentence 1: Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more.
+  Fact 1.0: Monday's trial hearing revealed plenty of juicy tidbits.
+  Fact 1.1: The tidbits included the $26.3 billion Google spent in 2021 making itself the default search engine across platforms.
+  Fact 1.2: The tidbits included how Google tried to take it further and have Chrome preinstalled on iPhones.
+  Fact 1.3: The trial hearing revealed other tidbits beyond those listed.
+Sentence 2: The company did accomplish that goal, but in doing so, it inadvertently and profoundly changed how the internet looked.
+  Fact 2.0: Google accomplished its goal.
+  Fact 2.1: In accomplishing its goal, Google inadvertently and profoundly changed how the internet looked.
+Sentence 3: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 3.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 3.1: The case argues that Google 'siphons off' news publishers' content.
+  Fact 3.2: The case argues that Google siphons off news publishers' readers.
+  Fact 3.3: The case argues that Google siphons off news publishers' ad revenue.
+  Fact 3.4: The case argues that Google does this through anticompetitive means.
+
+Retrieved items:
+<item 1>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company. The executive defended Google’s business tactics,
+including its deal with Apple and other partners to make Google the default search engine.
+
+The lawsuit stems from a 2020 antitrust claim over Google’s dominance in the online search market. The claim is separate from one filed in January by the
+Department of Justice, along with eight states including New York, California and Colorado, that aims to “halt Google’s anticompetitive scheme, unwind Google’s
+monopolistic grip on the market and restore competition to digital advertising.”
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products.
+
+Google argues that it’s just doing business. Everybody wants Google as the default engine because it’s the best. That doesn’t make its actions illegal, the
+company says.
+</item 1>
+
+<item 2>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Enter Google. The company revolutionized search by evaluating websites based on links from other websites, seeing each link as a vote of relevance and
+trustworthiness. The founders pledged to be a neutral navigation system with no ads: just a clean white screen with a search box that would bring people off of
+the Google landing page and out to a helpful website as seamlessly as possible. Users quickly decided this link-based sorting methodology was superior to the
+existing search engines, and by the end of 1999, Google was handling the majority of online queries.
+
+“I was basically just spamming Facebook with cars and articles about cars and sending traffic to banner ads, and that turned into $120,000 a month.”
+
+Mapstead, like many of the early practitioners of SEO, figured out how to adapt. Almost as soon as Google took over, a secondary market emerged for links. For a
+few hundred bucks, a firm in India or the Philippines could provide thousands of links from blog networks built entirely for that purpose.
+</item 2>
+
+<item 3>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+On October 19, Expedia’s former chief operating officer, Jeff Hurst, told the court the company’s ad fees increased tenfold from $21 million in 2015 to $290
+million in 2019. And yet, Expedia’s traffic from Google did not increase. The implication was that this was due to direct competition from Google itself. Hurst
+pointed out that Google began sharing its own flight and hotel data in search results in that period, according to The Seattle Times.
+
+European antitrust fine spurs Google to beef up search engine quality
+
+The government argued on November 10 that Google only endeavored to enhance its search engine in the European Union after it was hit by a €5 billion antitrust
+fine in 2018, internal documents revealed, according to Bloomberg.
+
+The EU’s antitrust order forced Google to offer Android phone users a screen with five search engine options to choose from, according to the DOJ.
+</item 3>
+
+<item 4>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+“Maybe you ask a friend.”
+
+After hearing so much about what it was like to be an SEO, I decided it was time to better understand what’s been going on from the perspective of the search
+engine. Google was slow to allow someone to talk with me, possibly because of the giant PR clusterfuck that has been the company’s past year (accused by the
+federal government of being a monopoly; increasingly despised by the public; losing ground to Reddit, TikTok, and large language models), so I decided to start
+by meeting up with a chipper, charismatic man named Duane Forrester.
+
+Forrester was at Microsoft from 2007 until 2015, where he helped launch and manage Bing, the perpetual underdog to Google’s domination of online search. Before
+and after his time at Microsoft, Forrester worked as an SEO, so he sees the industry from both sides, like an aerospace engineer who spent a few years at the
+Department of Defense, left for the private sector, and now is much better at winning military contracts.
+</item 4>
+
+<item 5>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google pays big bucks to be everywhere so that it can take in all the data and be the best search engine across different companies’ devices, said Pichai,
+according to The Verge.
+
+Google understood the value of defaults very early on. U.S. Justice Department lawyer Meagan Bellshaw showed Pichai a 2007 email from a Google product strategy
+meeting containing data showing that when people changed their browser homepage to Google, they did 15% more Google searches. When they switched away, their
+Google searches dropped 27%.
+
+“Nitin argues that focusing on homepage market share is one of the most effective things we can do to make gains in search market share,” read an email that
+summarized the meeting and was sent to Pichai, as well as other Google leaders, according to The Verge.
+
+The amount that Google spent on homepage market share has been a fixing point in the trial.
+</item 5>
+
+<item 6>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+He said that the competition between Google and Apple is “as intense as it gets,” reports Bloomberg.
+
+Rosenberg explained how Google gets manufacturers to sign a mobile app distribution agreement (MADA) that requires Android smartphone makers (like Samsung or
+Oppo) to pre-load a bundle of 11 Google apps on the device, including Search, Chrome and Play. They don’t have to be the default choices, he said.
+
+Google also has revenue share agreements (RSAs) with smartphone makers and wireless carriers (like Verizon) that require them to set Google search and Chrome
+web browser as defaults. Rosenberg defended the move and said it was because Google apps [like Search] are “best in class.” The RSAs also motivate other
+companies to make or sell more Android devices, he said.
+</item 6>
+
+<item 7>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+That doesn’t make its actions illegal, the company says.
+
+Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in
+2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more.
+
+Google paid $26 billion in 2021 to be everyone’s default search engine
+
+When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple
+browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports.
+
+About $18 billion of that total amount went directly to Apple, according to a New York Times report published earlier this month. Google has had its deal with
+Apple in place since 2003.
+
+When questioned on the amount of money Google spends to get first pick of search engines, Pichai said that the decision was made with the consumer in mind.
+</item 7>
+
+<item 8>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+More from the US v Google trial: Vertical search, pre-installs and the case of Firefox/Yahoo
+
+We’re nearly two months into the Justice Department’s landmark antitrust case against Google — one of the biggest fights in tech antitrust since the U.S. took
+Microsoft to trial in the 1990s — and the revelations just keep getting juicier.
+
+In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have
+Chrome preinstalled on iPhones. Over the past couple of weeks, more of the inner workings of Google has come to light, including some of the search engine’s
+most lucrative search queries, what the revenue-share agreements between Google and Android OEMs look like and why Expedia has a bone to pick with Google.
+
+Before we go into some of these tidbits…
+
+Why the Google vs. U.S.
+</item 8>
+
+<item 9>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+Quick backstory: Yahoo inked a deal with Mozilla way back in 2014 to pay the browser maker $375 million annually to be the default search engine on Firefox. At
+the time, Google was offering $276 million, said Baker. Reader, that was a bad deal.
+
+“I felt strongly that Yahoo was not delivering the search experience we needed and had contracted for,” she said, according to Bloomberg. The executive said
+Yahoo had promised to reduce the number of ads and offer less user tracking, but ended up gradually serving users more ads anyway.
+
+“The number of users who stayed with Firefox declined noticeably during the years when Yahoo was the default,” said Baker.
+
+Baker, who was providing a recorded deposition for Google’s defense, noted that Mozilla’s users apparently wanted and expected Google.
+
+However, that is not the full story. Yahoo was already well behind Google in terms of search technology at that point.
+</item 9>
+
+<item 10>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+He said there still isn’t one.
+
+That question — whether Apple picked Google because it’s the most lucrative choice or the best product — was a key part of Cue’s testimony and, in fact, a key
+part of the DOJ’s entire case against Google. The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and
+many others — to ensure it is the default search engine on practically every platform.
+
+Bellshaw asked Cue a number of questions about the iPhone setup process. Those three screenshots showed the Appearance screen that shows up when you first boot
+up your iPhone so you can pick font sizes; the location-tracking prompt that appears when you open Maps; and the App Tracking Transparency pop-up that tells you
+when an app wants to collect your data. Cue objected to all these things being considered part of setup, but Bellshaw’s point was that Apple offers its users a
+choice about lots of things, big and small, and that search could be one of them.
+</item 10>
+=== END ITEM id=a6c65602e4768117 ===

@@ -1,0 +1,425 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "733fd7ffa3e092b8",
+   "gold": [
+    {
+     "sentence": " It featured Reese Witherspoon and Paul Rudd, prior to both becoming considerably bigger film stars.",
+     "facts": {
+      "0.0": "The film featured Reese Witherspoon and Paul Rudd.",
+      "0.1": "Reese Witherspoon and Paul Rudd were in the film before both became considerably bigger film stars."
+     }
+    },
+    {
+     "sentence": " Born in New Orleans and raised in Tennessee, she began her career as a child actress, making her professional screen debut in \"The Man in the Moon\" (1991), for which she was nominated for a Young Artist Award.",
+     "facts": {
+      "1.0": "The actress was born in New Orleans.",
+      "1.1": "The actress was raised in Tennessee.",
+      "1.2": "The actress began her career as a child actress.",
+      "1.3": "The actress made her professional screen debut in 'The Man in the Moon' (1991).",
+      "1.4": "The actress was nominated for a Young Artist Award for her debut in 'The Man in the Moon'."
+     }
+    }
+   ],
+   "items": [
+    "Rachelle Lefevre\nRachelle Lefevre ( ; born February 1, 1979) is a Canadian actress.\n\n She has starred in the television series \"Big Wolf on Campus\" and had recurring roles in \"What About Brian\", \"Boston Legal\", and \"Swingtown\".\n\n She played the vampire Victoria Sutherland in the first two films of the \"Twilight\" saga, before being replaced by Bryce Dallas Howard in the third installment, \"\", due to scheduling conflicts with her role in the film \"Barney's Version\".\n\n In 2011, she starred in the ABC medical drama \"Off the Map\", followed by the CBS series \"A Gifted Man\" (2011–2012) and \"Under the Dome\" (2013–2015).",
+    "Overnight Delivery\nOvernight Delivery is a 1998 romantic comedy film directed by Jason Bloom.\n\n It was rated PG-13 by the MPAA and released direct-to-video.\n\n It featured Reese Witherspoon and Paul Rudd, prior to both becoming considerably bigger film stars.",
+    "The Night Before (1988 film)\nThe Night Before is a 1988 film starring Keanu Reeves and Lori Loughlin.\n\n Reeves plays Winston Connelly, the so-called high school nerd and vice president of the astronomy club.\n\n Loughlin plays Tara Mitchell, the pretty and popular head cheerleader who also happens to be the local police chief's daughter.\n\n The Tagline was: \"You lost your father's car, sold your prom date and a guy called 'Tito' wants you dead.\n\n It's a date that's the time of your life.\"\n\n It was filmed and set entirely in Los Angeles, California.",
+    "Middle of Nowhere (2012 film)\nMiddle of Nowhere is a 2012 independent feature film written and directed by Ava DuVernay and starring Emayatzy Corinealdi, David Oyelowo, Omari Hardwick and Lorraine Toussaint.\n\n The film was the winner of the Directing Award for U.S. Dramatic Film at the 2012 Sundance Film Festival.",
+    "Reese Witherspoon\nLaura Jeanne Reese Witherspoon ( ; born March 22, 1976) is an American actress, producer, and entrepreneur.\n\n Born in New Orleans and raised in Tennessee, she began her career as a child actress, making her professional screen debut in \"The Man in the Moon\" (1991), for which she was nominated for a Young Artist Award.\n\n Following breakout roles in \"\" (1992) and \"Jack the Bear\" (1993), she starred in the comedy-drama \"Pleasantville\" (1998), for which she won the Young Hollywood Award for Breakthrough Performance.\n\n Her leading role of Tracy Flick in \"Election\" (1999) was nominated for a Golden Globe Award.",
+    "The Notebook\nThe Notebook is a 2004 American romantic drama film directed by Nick Cassavetes and based on the 1996 novel of the same name by Nicholas Sparks.\n\n The film stars Ryan Gosling and Rachel McAdams as a young couple who fall in love in the 1940s.\n\n Their story is narrated from the present day by an elderly man (portrayed by James Garner) telling the tale to a fellow nursing home resident (played by Gena Rowlands, who is Cassavetes's mother).",
+    "Zooey Deschanel filmography\nAmerican actress Zooey Deschanel made her film debut in the 1999 comedy feature \"Mumford\".\n\n She went on to gained public attention by co-starred in the comedy-drama \"Almost Famous\" (2000), the independent drama \"Manic\" (2001), opposite Joseph Gordon-Levitt, and the comedy-drama \"The Good Girl\" (2002).\n\n She landed her first major role as a 18-year-old virgin in the romantic drama \"All the Real Girls\" (2003), for which she was nominated for an Independent Spirit Award for Best Female Lead.\n\n Deschanel's biggest commercial success, as of 2017, came with the Christmas-fantasy film \"Elf\" (also in 2003), which grossed over $220 million worldwide.",
+    "Chloe (film)\nChloe is a 2009 erotic thriller film directed by Atom Egoyan, a remake of the 2003 French film \"Nathalie...\".\n\n It stars Julianne Moore, Liam Neeson, and Amanda Seyfried in the title role.\n\n Its screenplay was written by Erin Cressida Wilson, based on the earlier French film, written by Anne Fontaine.",
+    "Annie Belle\nAnnie Brilland (born 10 December 1956) is a French actress and social worker.\n\n Her acting career began in 1974 and throughout the seventies, has had a series of varied roles in both French and Italian cinema, working with such directors as Jean Rollin, Ruggero Deodato and Joe D'Amato.",
+    "City of New Orleans (train)\nThe City of New Orleans is an Amtrak passenger train which operates on an overnight schedule between Chicago and New Orleans.\n\n The train is a successor to the Illinois Central Railroad's \"Panama Limited\".\n\n The present name was revived in 1981."
+   ]
+  },
+  {
+   "id": "cd0f9879c3f19f6a",
+   "gold": [
+    {
+     "sentence": "The Livesey Hall War Memorial commemorates the fallen of World War I and World War II who had been employed by the South Suburban Gas Company of London.",
+     "facts": {
+      "0.0": "The Livesey Hall War Memorial commemorates the fallen of World War I.",
+      "0.1": "The Livesey Hall War Memorial commemorates the fallen of World War II.",
+      "0.2": "The commemorated fallen had been employed by the South Suburban Gas Company of London."
+     }
+    },
+    {
+     "sentence": " Over 60 million people were killed, which was about 3% of the 1940 world population (est. 2.3 billion).",
+     "facts": {
+      "1.0": "Over 60 million people were killed.",
+      "1.1": "The deaths were about 3% of the 1940 world population.",
+      "1.2": "The estimated 1940 world population was 2.3 billion."
+     }
+    }
+   ],
+   "items": [
+    "Freetown Memorial\nThe Freetown Memorial is a Commonwealth War Graves Commission war memorial located outside the Secretariate Building in Freetown, Sierra Leone.\n\n The memorial generally commemorates Soldiers from Sierra Leone who died whilst serving with the Royal West African Frontier Force in West Africa and whose graves are not known.\n\n The Freetown Memorial commemorates 1,109 First World War casualties and 247 from the Second World War.",
+    "Rainham War Memorial\nThe Rainham War Memorial commemorates soldiers killed in both World Wars as well as civilian casualties of World War II.",
+    "Vietnam War Memorial, Hanoi\nThe War Memorial in Hanoi is located across the Ba Dinh Square, across the Ho Chi Minh Mausoleum and close to Hanoi Citadel.\n\n Constructed in 1993 in a fusion of traditional Vietnamese and modernist architecture, the memorial commemorates men and women who sacrificed themselves during the Second Indochina War.\n\n The war is known by many names, e.g. as the American War in Vietnam.\n\n The memorial is a focal point for state functions, commemorating the war dead.",
+    "Tower Hill Memorial\nThe Tower Hill Memorial is a Commonwealth War Graves Commission war memorial on the south side of Trinity Square Gardens, in London, England.\n\n The memorial commemorates those from the Merchant Navy and fishing fleets who died during both world wars and have \"no grave but the sea\".\n\n The memorial was designed by Edwin Lutyens with sculpture work by William Reid Dick, the Second World War extension was designed by Edward Maufe with sculpture work by Charles Wheeler.",
+    "Livesey Hall War Memorial\nThe Livesey Hall War Memorial commemorates the fallen of World War I and World War II who had been employed by the South Suburban Gas Company of London.\n\n It is also a tribute to those employees who served in the wars.\n\n The monument was designed and executed by British sculptor Sydney March, of the March family of artists.",
+    "World War II casualties\nWorld War II was the deadliest military conflict in history in absolute terms of total casualties.\n\n Over 60 million people were killed, which was about 3% of the 1940 world population (est. 2.3 billion).\n\n The tables below give a detailed country-by-country count of human losses.\n\n World War II fatality statistics vary, with estimates of total deaths ranging from 50 million to more than 80 million.\n\n The higher figure of over 80 million includes deaths from war-related disease and famine.\n\n Civilians killed totalled 50 to 55 million, including 19 to 28 million from war-related disease and famine.\n\n Military deaths from all causes totalled 21 to 25 million, including deaths in captivity of about 5 million prisoners of war.",
+    "Portsmouth Naval Memorial\nThe Portsmouth Naval Memorial, sometimes known as Southsea Naval Memorial, is a war memorial in Portsmouth, Hampshire, England, on Southsea Common beside Clarence Esplanade, between Clarence Pier and Southsea Castle.\n\n The memorial commemorates approximately 25,000 British and Commonwealth sailors who were lost in the World Wars, around 10,000 sailors in the First World War and 15,000 in the Second World War.\n\n The memorial features a central obelisk, with names of the dead on bronze plaques arranged around the memorial according to the year of death.",
+    "Arras Flying Services Memorial\nThe Arras Flying Services Memorial Commonwealth War Graves Commission war memorial in the Faubourg d'Amiens Cemetery, Arras, France.\n\n The memorial commemorates nearly 1,000 airmen from forces of the Commonwealth who were killed on the Western Front during World War I and who have no known grave.\n\n The memorial was designed by Edwin Lutyens, sculpted by William Reid Dick and unveiled by Hugh Trenchard, 1st Viscount Trenchard, Marshal of the Royal Air Force on 31 July 1932.",
+    "Wood Green War Memorial\nThe Wood Green War Memorial is located on the High Road, Wood Green, in the London Borough of Haringey.\n\n It was erected in 1920 and paid for by public subscription of the people of Wood Green to remember the men of the area who died during the First World War.\n\n It was subsequently adapted to include the dead of the Second World War.\n\n It is grade II listed with Historic England.",
+    "Alamein Memorial\nThe Alamein Memorial is a Commonwealth War Graves Commission war memorial in the El Alamein War Cemetery, El Alamein, Egypt.\n\n The memorial commemorates 11,866 Commonwealth forces members who died during World War II.\n\n The memorial was designed by Hubert Worthington and unveiled by Viscount Montgomery of Alamein on 24 October 1954."
+   ]
+  },
+  {
+   "id": "8bc736dd659c689d",
+   "gold": [
+    {
+     "sentence": "The Night of the Arts (Finnish: \"Taiteiden yö\" , Swedish: \"Konstens natt\" ) is an annual event held in several major cities in Finland, in late August.",
+     "facts": {
+      "0.0": "The Night of the Arts is an annual event.",
+      "0.1": "The Night of the Arts is known in Finnish as 'Taiteiden yö'.",
+      "0.2": "The Night of the Arts is known in Swedish as 'Konstens natt'.",
+      "0.3": "The Night of the Arts is held in several major cities in Finland.",
+      "0.4": "The Night of the Arts is held in late August."
+     }
+    },
+    {
+     "sentence": " It is one of many White Night festivals held worldwide.",
+     "facts": {
+      "1.0": "The Night of the Arts is one of many White Night festivals.",
+      "1.1": "White Night festivals are held worldwide."
+     }
+    },
+    {
+     "sentence": "The White Nights are a kind of all-night arts festival held in many cities in the summer.",
+     "facts": {
+      "2.0": "The White Nights are a kind of all-night arts festival.",
+      "2.1": "The White Nights festival is held in many cities.",
+      "2.2": "The White Nights festival is held in the summer."
+     }
+    },
+    {
+     "sentence": " The \"white nights\" is the name given in areas of high latitude to the weeks around the summer solstice in June during which sunsets are late, sunrises are early and darkness is never complete.",
+     "facts": {
+      "3.0": "'White nights' is the name given in areas of high latitude to the weeks around the summer solstice in June.",
+      "3.1": "During white nights, sunsets are late.",
+      "3.2": "During white nights, sunrises are early.",
+      "3.3": "During white nights, darkness is never complete."
+     }
+    }
+   ],
+   "items": [
+    "Joulupöytä\nJoulupöytä (translated \"Yule table\") is the traditional assortment of foods served at Christmas in Finland, similar to the Swedish julbord.\n\n It contains many different dishes, most of them typical for the season.\n\n The main dish is usually a large Christmas ham, which is eaten with mustard or bread along with the other dishes.\n\n Fish is also served (often lutefisk and gravlax), and the ham is served with \"laatikko\"s, casseroles made with swede, potato and carrot, occasionally liver.\n\n The traditional Christmas beverage is either alcoholic or non-alcoholic mulled wine (\"glögi\" in Finnish).",
+    "Kerala School Kalolsavam\nSchool Arts Festival of Kerala (Malayalam: കേരള സ്കൂൾ കലോത്സവം) is an annual event conducted by the state government of Kerala, featuring several art competitions for high school and higher secondary school students of Kerala.\n\n The festival was started in 1956, and till 2008, it was called as \"Kerala State School Youth Festival\".\n\n The participants are students from classes 8th to 12th.\n\n Winners from different revenue districts for a particular event will be competing in state level competition.\n\n The event is usually conducted in December–January months of a year and is considered to be the biggest cultural event of Asia.\n\n 57th edition of Kerala School Kalolsavam 2017 is scheduled for January 16 to 22 at Kannur.",
+    "White Night festivals\nThe White Nights are a kind of all-night arts festival held in many cities in the summer.\n\n The original festival is the White Nights Festival held in Saint Petersburg, Russia.\n\n The \"white nights\" is the name given in areas of high latitude to the weeks around the summer solstice in June during which sunsets are late, sunrises are early and darkness is never complete.\n\n In Saint Petersburg, the Sun does not set until after 10 p.m., and the twilight lasts almost all night.",
+    "Artscape (festival)\nArtscape is an annual art festival held in the Mount Royal neighborhood of Baltimore, Maryland in July.\n\n Since its first annual event in 1982, it has become the largest free arts festival in America.\n\n It has boasted acts such as Ray Charles, Aretha Franklin, and Matisyahu in the past, attracting over 350,000 people from the city, and surrounding areas.\n\n Film programming during Artscape is provided by Maryland Film Festival.\n\n There are artists in a variety of visual and performing media.\n\n Events are free and open to the public.",
+    "Green Man Festival\nGreen Man is an independent music and arts festival held annually in mid-August in the Brecon Beacons, Wales since 2003.\n\n It has evolved into a 20,000 capacity 4-day event, showcasing predominantly live music (in particular alternative, indie, rock, folk, dance and americana), with additional events showcasing literature, film, comedy, theatre and poetry.\n\n 2015 saw 1,500 multi-arts acts perform across 17 stages.\n\n The festival site is divided into 10 areas, each offering a unique festival experience.\n\n Ceilidhs, all-night bonfires and secret gigs all add to the festival's unique identity.",
+    "Flip Animation Festival\nFLIP is an animation festival primarily hosted by the Light House Media Centre in Wolverhampton, UK.\n\n It is one of two festivals hosted by Light House, the other of which is Deaffest.\n\n Official literature for the festival says that FLIP occurs annually at the beginning of November and attracts submissions from more than 30 countries world wide.\n\n As well as screening the selected open submissions, FLIP also consists of special screenings, talks from professionals within the animation world, workshops, industry panels, portfolio reviews and competitions.\n\n The festival was set up, managed and programmed by Peter McLuskie between 2004 and 2011.\n\n It grew out of the 'Animation Forum', also based at Light House and which was later rebranded as Animation Forum West Midlands and found a home at Birmingham City University.\n\n In 2009 the festival was awarded a Black Country Tourism Award for Event of the Year.",
+    "Great Northern Arts Festival\nThe Great Northern Arts Festival is held each year in Inuvik, Northwest Territories.\n\n Lasting approximately ten days, it is an annual event held each summer.\n\n It was established in 1989 by Sharlene Alexander and Sue Rose.\n\n While the festival's mandate is to serve Northern artists and craftspeople, artists from around the world also attend.\n\n The festival is designed as a venue for artists to see each other's work and to experiment with new applications.\n\n It includes arts of all types, such as fiber art and Music of the Northwest Territories.\n\n Artists partake in demonstrations, masterclasses, seminars, and workshops.\n\n The festival's gallery offers pieces for sale.\n\n There are cultural presentations each evening which include concerts, dance, fashion, music, and storytelling.\n\n Media coverage brings festival highlights to viewing audiences.",
+    "Tanglewood Music and Arts Festival\nTanglewood Music and Arts Festival is an annual two-day music, comedy and arts event held within the grounds of Narrow Water Castle, County Down, Northern Ireland.\n\n The festival, founded in 2011, has attracted significant attention both within the local area and around Northern Ireland with buses coming from as far as Belfast to the event.\n\n For the 2011 and 2012 festivals Tanglewood was held on one day; however for 2013 it has expanded into a two-day camping festival.",
+    "Scandinavian folklore\nScandinavian folklore or Nordic folklore is the folklore of Norway, Sweden, Finland, Denmark, Iceland and the Faroe Islands.",
+    "Night of the Arts\nThe Night of the Arts (Finnish: \"Taiteiden yö\" , Swedish: \"Konstens natt\" ) is an annual event held in several major cities in Finland, in late August.\n\n It is one of many White Night festivals held worldwide."
+   ]
+  },
+  {
+   "id": "b87344e205f3f054",
+   "gold": [
+    {
+     "sentence": " Cacareco's candidacy inspired the Rhinoceros Party of Canada, nominally led by the rhinoceros Cornelius the First.",
+     "facts": {
+      "0.0": "Cacareco's candidacy inspired the Rhinoceros Party of Canada.",
+      "0.1": "The Rhinoceros Party of Canada was nominally led by the rhinoceros Cornelius the First."
+     }
+    },
+    {
+     "sentence": "The Rhinoceros Party (French: \"Parti Rhinocéros\") was a registered political party in Canada from the 1960s to the 1990s.",
+     "facts": {
+      "1.0": "The Rhinoceros Party's French name is 'Parti Rhinoceros'.",
+      "1.1": "The Rhinoceros Party was a registered political party in Canada.",
+      "1.2": "The Rhinoceros Party was a registered political party in Canada from the 1960s to the 1990s."
+     }
+    }
+   ],
+   "items": [
+    "National Advancement Party of Canada\nThe National Advancement Party of Canada (French: \"Parti de l'Essor National du Canada\" ) is a minor federal political party in Canada.\n\n The party describes itself as for \"advancement of the Canadian people and Canada\".\n\n The party was formed in 2014 and registered with Elections Canada in 2015, initially under the name Democratic Advancement Party of Canada.\n\n The party is headquartered in Calgary, Alberta and led by writer Stephen Garvey.",
+    "Canada grew from British North American colonies into a federation in 1867; Newfoundland and Labrador joined in 1949. The Statute of Westminster (1931) granted legislative sovereignty, completed by the Canada Act (1982). The Stamp Act taxed colonial printed materials, prompting the 1765 Stamp Act Congress. The West Indies Federation (1958–62) collapsed amid political disputes. Other topics include the Royal Mint, archaeological hoards, Canadian file sharing, Wood Green’s war memorial, Québec",
+    "Rhinoceros Party of Canada (1963–93)\nThe Rhinoceros Party (French: \"Parti Rhinocéros\") was a registered political party in Canada from the 1960s to the 1990s.\n\n Operating within the tradition of political satire, the Rhinoceros Party's basic credo, their so-called primal promise, was \"a promise to keep none of our promises\".\n\n They then promised outlandishly impossible schemes designed to amuse and entertain the voting public.",
+    "Aboriginal Peoples Party of Canada\nThe Aboriginal Peoples Party of Canada (APP) is a Canadian political party that was founded in 2005.\n\n The party was conceived by University of Lethbridge student Myron Wolf Child.\n\n It held its founding meeting on August 21, 2005, in St. Albert, Alberta.\n\n The APP was headed by interim leader Bill Montour, a former Chief of the Six Nations Reserve in Ontario.\n\n In October 2005, the party had 122 confirmed members, just less than half the number needed to register as an official party in Canada.\n\n In late October 2005, the APP sought to unite with the First Peoples National Party of Canada which also had fewer than the number of confirmed members needed to become a registered political party.\n\n The First Peoples National Party of Canada became an eligible political party on December 6, 2005.\n\n Whether or not this was accomplished through a merger with the APP is unclear.\n\n If this is the case, the APP no longer exists, but, as one of the stipulations of a possible merger was that a name for the new party would be determined at the party's first convention, it is possible that the name Aboriginal Peoples Party of Canada will come into usage again.",
+    "Revolutionary Communist Party of Canada\nThe Revolutionary Communist Party of Canada, or RCP Canada, is a revolutionary communist party oriented around Marxism-Leninism-Maoism.\n\n The creation of the organizational stage of the Party was adopted at what was called the \"Revolutionary Communist Conference\", which was held in Montreal, Quebec in November 2000 by activists and former members of the labour union movements and youth organizations of the 1960s, 1970s and 1980s, who felt that the revolutionary situation in Canada warranted the creation of a Party dedicated to a communist revolution.\n\n The party was initially called the Revolutionary Communist Party (Organizing Committees) (RCP(OC)).\n\n At this conference, participants adopted the Party's first Draft Programme.\n\n Because of the location of the conference, the majority of the founding members were French-speaking Quebecers, and the Party began an extensive effort to reach out to the rest of Canada, starting with the Canadian Revolutionary Congress held in November 2006 in Toronto.\n\n It is not recognized as a political party by Elections Canada, because the party rejects what it calls the \"bourgeois electoral system\" and doesn't seek recognition by the State.",
+    "Cacareco\nCacareco (1954-1962) was a female black rhinoceros exhibited in Brazilian zoos.\n\n She became famous as a candidate for the 1958 São Paulo city council elections with the intention of protesting against political corruption.\n\n Electoral officials did not accept Cacareco's candidacy, but she eventually won 100,000 votes, more than any other party in that same election (which was also marked by rampant absenteeism).\n\n Today, the term \"voto Cacareco\" (Cacareco vote) is commonly used to describe protest votes in Brazil.\n\n Cacareco's candidacy inspired the Rhinoceros Party of Canada, nominally led by the rhinoceros Cornelius the First.",
+    "Politics of Canada\nThe politics of Canada function within a framework of parliamentary democracy and a federal system of parliamentary government with strong democratic traditions.\n\n Canada is a constitutional monarchy, in which the Monarch is head of state.\n\n The country has a multi-party system in which many of its legislative practices derive from the unwritten conventions of and precedents set by the United Kingdom's Westminster Parliament.\n\n However, Canada has evolved variations: party discipline in Canada is stronger than in the United Kingdom and more parliamentary votes are considered motions of confidence, which tends to diminish the role of non-Cabinet Members of Parliament, (MPs).\n\n Such members, in the government caucus, and junior or lower-profile members of opposition caucuses, are known as backbenchers. Backbenchers can, however, exert their influence by sitting in parliamentary committees, like the Public Accounts Committee or the National-Defence Committee.",
+    "The New Canada\nThe New Canada is a Canadian political literature book written by Reform Party of Canada founder and leader Preston Manning and published by Macmillan Canada.\n\n The book explains the personal, religious, and political life of Preston Manning and explains the roots and beliefs of the Reform Party.\n\n At the time of its publishing in 1992, Reform had become a popular populist conservative party in Western Canada after the mainstream Progressive Conservative Party of Canada was collapsing in support and in 1991 decided to expand eastward into Ontario and the Maritimes.\n\n One year later the PC party collapsed in the 1993 federal election, allowing the Reform Party to make political history in Canada, deplacing the PCs as the dominant conservative party in Canada.\n\n Reform, later renamed the Canadian Alliance, merged with the PC Party in 2003, to form a united right-wing alternative to the governing Liberal Party of Canada, named the Conservative Party of Canada which has dropped many of the populist themes that the Reform Party had.",
+    "LPRadicals, founded in 2006, opposed Libertarian platform deletions and promotes four strategic principles; active at conventions through 2016. Hong Kong’s CHRF unites pan-democratic groups and organizes July 1 marches. The U.S. Republican Party arose in 1854 opposing the Kansas–Nebraska Act. Preston Manning’s 1992 book traces his life and Reform Party’s rise and later merger into today’s Conservatives. Canada’s Aboriginal Peoples Party (2005)",
+    "Cabécar language\nThe Cabécar language is an indigenous American language of the Chibchan language family which is spoken by the Cabécar people in Costa Rica.\n\n Specifically, it is spoken in the inland Turrialba Region of the Cartago Province.\n\n 80% of speakers are monolingual; as of 2007, it is the only indigenous language in Costa Rica with monolingual adults.\n\n The language is also known by its dialect names Chirripó, Estrella, Telire, and Ujarrás."
+   ]
+  },
+  {
+   "id": "9f9db680fe19fcae",
+   "gold": [
+    {
+     "sentence": "Scott Richard Weiland ( ; born Scott Richard Kline; October 27, 1967 – December 3, 2015) was an American musician, singer and songwriter.",
+     "facts": {
+      "0.0": "Scott Richard Weiland was born Scott Richard Kline.",
+      "0.1": "Scott Richard Weiland was born on October 27, 1967.",
+      "0.2": "Scott Richard Weiland's date range ends on December 3, 2015.",
+      "0.3": "Scott Richard Weiland was an American musician.",
+      "0.4": "Scott Richard Weiland was an American singer.",
+      "0.5": "Scott Richard Weiland was an American songwriter."
+     }
+    },
+    {
+     "sentence": "Richard Willis Hawley (born 17 January 1967) is an English guitarist, singer-songwriter and producer.",
+     "facts": {
+      "1.0": "Richard Willis Hawley was born on 17 January 1967.",
+      "1.1": "Richard Willis Hawley is English.",
+      "1.2": "Richard Willis Hawley is a guitarist.",
+      "1.3": "Richard Willis Hawley is a singer-songwriter.",
+      "1.4": "Richard Willis Hawley is a producer."
+     }
+    }
+   ],
+   "items": [
+    "Scott Weiland and the Wildabouts\nScott Weiland and the Wildabouts (sometimes billed simply as The Wildabouts) were a rock and roll band formed sometime around 2012 by former Stone Temple Pilots and Velvet Revolver lead singer Scott Weiland, along with bassist Tommy Baker, guitarist Jeremy Brown, and multi-instrumentalist Doug Grean.\n\n The Wildabouts were marred with several roster changes (including the death of guitarist Jeremy Brown) and ultimately disbanded after Weiland's sudden death on a tour bus in late 2015.",
+    "Doug Grean\nDoug Grean is an American record producer, audio engineer, guitarist, based in Los Angeles.\n\n He has worked with artists Sheryl Crow, Ricki Lee Jones, Glen Campbell, Scott Weiland, Slash, Velvet Revolver, Stone Temple Pilots, The Crystal Method, Tim McGraw, Cyndi Lauper, Annabella Lwin (Bow Wow Wow), Corey Glover (Living Color), Camp Freddy, DJ Hurricane and John Taylor (Duran Duran).\n\n Grean was formerly the lead guitarist and touring musical director for Scott Weiland and the Wildabouts.\n\n Some of Grean's television appearances with Weiland include: VH1 Legends, Last Call with Carson Daly, The Tonight Show with Jay Leno, and the Grammy awards with Velvet Revolver as keyboardist, performing \"All Across the Universe\" with Stevie Wonder, Norah Jones, Bono, Steven Tyler, Brian Wilson, and Alison Krauss.",
+    "Warrel Dane\nWarrel Dane (born March 7, 1969) is the lead singer of the American power metal band Sanctuary.\n\n He is also known as the former lead singer of currently inactive progressive metal band Nevermore.\n\n He is a natural baritone, though he was known for his high-pitched vocals with Serpent's Knight and on the first two Sanctuary albums.\n\n Later in his career, Dane became more notable for his distinctively deep, dramatic voice.",
+    "Standing at the Sky's Edge\nStanding at the Sky's Edge is the seventh studio album from English musician Richard Hawley, released in the UK on 7 May 2012 and in the US on 28 August 2012.\n\n The album is markedly different from Hawley's previous efforts, often relinquishing softer instrumentation in favour of squalling guitars.\n\n As with all of Hawley's previous albums, the title obliquely refers to a location in his native city of Sheffield, in this case Skye Edge, a hillside area with views over the city centre and formerly known for its crime-ridden estates but largely redeveloped in the mid-2000s.",
+    "&quot;Happy&quot; in Galoshes\n\"Happy\" in Galoshes is the second solo album by American rock singer Scott Weiland.\n\n Weiland, known for his roles as the lead singer in Stone Temple Pilots and Velvet Revolver, released his first album, \"12 Bar Blues\" in 1998.\n\n Ten years later, \"\"Happy\" in Galoshes\" served as the official follow-up.\n\n Two versions have been released, a single disc and double disc deluxe version—the deluxe edition offers a second disc of 10 extra tracks.\n\n The album was released November 25, 2008 on Weiland's own Softdrive Records.\n\n Produced by Doug Grean and Scott Weiland, with select tracks recorded by Steve Albini, the album features guest appearances by Paul Oakenfold and No Doubt members Adrian Young, Tony Kanal, and Tom Dumont.\n\n Oakenfold appears on a cover of David Bowie's \"Fame.\"\n\n Weiland has cited Bowie as one of his main influences.",
+    "Scott Weiland\nScott Richard Weiland ( ; born Scott Richard Kline; October 27, 1967 – December 3, 2015) was an American musician, singer and songwriter.\n\n During a career spanning three decades, Weiland was best known as the lead singer of the band Stone Temple Pilots from 1989 to 2002 and 2008 to 2013.\n\n He was also a member of supergroup Velvet Revolver from 2003 to 2008 and recorded one album with another supergroup, Art of Anarchy.\n\n He established himself as a solo artist as well, releasing three studio albums, two cover albums, and collaborations with several other musicians throughout his career.",
+    "A Compilation of Scott Weiland Cover Songs\nA Compilation of Scott Weiland Cover Songs is a compilation album and third solo studio album by Stone Temple Pilots frontman Scott Weiland, released on August 30, 2011.\n\n The album consists entirely of cover songs, featuring an array of covers of artists that inspired Weiland, such as David Bowie, The Beatles, The Rolling Stones, and The Smiths.\n\n The album was originally set to be released together with Weiland's memoir \"Not Dead & Not for Sale\" but Weiland decided later to release the album by itself exclusively in digital format.",
+    "Steve Winwood\nStephen Lawrence \"Steve\" Winwood (born 12 May 1948) is an English musician whose genres include rock, blue-eyed soul, rhythm and blues, blues rock, pop rock, and jazz.\n\n Though primarily a vocalist and keyboardist, Winwood also plays bass guitar, drums, acoustic and electric guitar, mandolin, violin, and other strings.",
+    "Richard Hawley\nRichard Willis Hawley (born 17 January 1967) is an English guitarist, singer-songwriter and producer.\n\n After his first band Treebound Story (formed while he was still at school) broke up, Hawley found success as a member of Britpop band Longpigs in the 1990s.\n\n After that group broke up in 2000, he later joined the band Pulp, led by his friend Jarvis Cocker, for a short time.\n\n As a solo musician, Hawley has released seven studio albums.\n\n He has been nominated for a Mercury prize twice and once for a Brit Award.\n\n He has collaborated with Lisa Marie Presley, Arctic Monkeys, Manic Street Preachers and Paul Weller.",
+    "Hugh Whitaker\nHugh Whitaker (born 18 May 1961) is an English musician and the former drummer for the British indie rock band The Housemartins.\n\n He replaced original drummer Chris Lang and drummed for the band's first album, \"London 0 Hull 4\", and its attendant single releases.\n\n He left the band before the recording of their second album, \"The People Who Grinned Themselves to Death\".\n\n Whitaker left the band on amicable terms and even participated in the promotional video for the band's first single without him, \"Five Get Over Excited\", wherein he was kidnapped by his replacement, Dave Hemingway, and locked in a hessian sack."
+   ]
+  },
+  {
+   "id": "9ce0ca89d16b8230",
+   "gold": [
+    {
+     "sentence": "Jürgen Melzer (born 22 May 1981 in Vienna) is an Austrian tennis player.",
+     "facts": {
+      "0.0": "Jürgen Melzer was born on 22 May 1981.",
+      "0.1": "Jürgen Melzer was born in Vienna.",
+      "0.2": "Jürgen Melzer is an Austrian tennis player."
+     }
+    },
+    {
+     "sentence": "Tom Gullikson (born September 8, 1951) is a tennis coach and former professional tennis player from the United States.",
+     "facts": {
+      "1.0": "Tom Gullikson was born on September 8, 1951.",
+      "1.1": "Tom Gullikson is a tennis coach.",
+      "1.2": "Tom Gullikson is a former professional tennis player.",
+      "1.3": "Tom Gullikson is from the United States."
+     }
+    }
+   ],
+   "items": [
+    "Julian Knowle\nJulian Knowle (born 29 April 1974) is an Austrian male professional tennis player.\n\n Being a born left-hander, Knowle is now one of the few on the ATP Tour who plays his forehand, backhand, and even volleys double-handed.\n\n He was Austria's most successful doubles player in history by reaching world no. 6 in the ATP doubles rankings in January 2008, before being matched by Jürgen Melzer, who reached no. 6 in September 2010, and overtaken by Alexander Peya, who reached no. 3 in August 2013.",
+    "1983 Bristol Open – Doubles\nTim Gullikson and Tom Gullikson were the defending champions, but Tim Gullikson did not participate this year.\n\n Tom Gullikson partnered Johan Kriek, losing in the final.",
+    "Iveta Benešová\nIveta Benešová (] ) (formerly Melzer, Czech: Melzerová ; born 1 February 1983) is a Czech former professional tennis player.\n\n She began playing tennis at age of 7 and turned professional in 1998 in Prague.\n\n She has won two WTA Tour events and one Grand Slam in mixed doubles partnering with Jürgen Melzer at the 2011 Wimbledon Championships.\n\n On 14 September 2012 she married Jürgen Melzer and adopted his family name.\n\n She announced her retirement from professional tennis via her Facebook page 13/08/2014.\n\n In 2015, she divorced Melzer and reverted to using her maiden name.",
+    "2012 US Open – Men's Doubles\nJürgen Melzer and Philipp Petzschner were the defending champions, but lost in the second round to Jamie Delgado and Ken Skupski.\n\n Melzer and Petzschner needed a wildcard to compete because they forgot to sign up.\n\n<br>",
+    "Tom Gullikson\nTom Gullikson (born September 8, 1951) is a tennis coach and former professional tennis player from the United States.",
+    "Jürgen Melzer\nJürgen Melzer (born 22 May 1981 in Vienna) is an Austrian tennis player.\n\n He reached a career-high singles ranking of world No. 8 in April 2011, and a doubles ranking of world No. 6 in September 2010.\n\n He is a left-handed tennis player, but is right-handed in everyday life.\n\n He has a younger brother, Gerald Melzer, with whom he has played doubles in several tournaments.",
+    "2010 Pilot Pen Tennis – Men's Doubles\nJulian Knowle and Jürgen Melzer were the defending champions, but Melzer chose not to participate this year.As a result, Knowle partnered with Andy Ram, but they lost to Robert Lindstedt and Horia Tecău in the semifinals.\n\n Lindstedt and Tecău went on to win the tournament, after defeating Rohan Bopanna and Aisam-ul-Haq Qureshi in the final 6–4, 7–5.",
+    "Gerald Melzer\nGerald Melzer (born 13 July 1990) is a professional Austrian tennis player.\n\n As a qualifier, he reached the semifinals of Münich in 2015.\n\n He achieved a career-high singles ranking of world No. 68 in November 2016.",
+    "1983 Wimbledon Championships – Men's Doubles\nThe Men's Doubles tournament at the 1983 Wimbledon Championships was held from August 30 to September 11, 1983, on the outdoor grass courts at the All England Lawn Tennis and Croquet Club in the Wimbledon district of London, England.\n\n Peter McNamara and Paul McNamee were the defending champions.\n\n Peter McNamara did not compete this year while McNamee partnered with Brian Gottfried, losing in the quarterfinals to Anders Jarryd and Hans Simonsson.\n\n Peter Fleming and John McEnroe won the title, defeating Tim Gullikson and Tom Gullikson in the final.",
+    "Pam Teeguarden\nTeeguarden was the first woman tennis player signed by Nike.\n\n She played on the victorious Los Angeles Strings Team Tennis team in 1981 and won the Team Tennis Mixed Doubles Division with Tom Gullikson in 1977; they were also runners-up in the league that year."
+   ]
+  },
+  {
+   "id": "2739ec9fe8ea8493",
+   "gold": [
+    {
+     "sentence": "Ruggero Deodato (born 7 May 1939) is an Italian film director, screenwriter, and actor.",
+     "facts": {
+      "0.0": "Ruggero Deodato was born on 7 May 1939.",
+      "0.1": "Ruggero Deodato is an Italian film director.",
+      "0.2": "Ruggero Deodato is an Italian screenwriter.",
+      "0.3": "Ruggero Deodato is an Italian actor."
+     }
+    },
+    {
+     "sentence": "Alejandro Springall is a Mexican film director and producer.",
+     "facts": {
+      "1.0": "Alejandro Springall is a Mexican film director.",
+      "1.1": "Alejandro Springall is a Mexican producer."
+     }
+    }
+   ],
+   "items": [
+    "Alejandro Springall\nAlejandro Springall is a Mexican film director and producer.",
+    "Victor Salva\nVictor Ronald Salva (born March 29, 1958) is an American film director and screenwriter.\n\n He directed the films \"Powder\" (1995) and \"Jeepers Creepers\" (2001).\n\n The latter of these has been expanded into a franchise with two sequels that he has also directed.",
+    "Antonio De Carlo\nAntonio De Carlo, born (1967--) 4, 1967 (age 50 ) in Tijuana, Baja California, Mexico, is a Mexican actor also known as Antonio in the late 1980s and early 1990s.\n\n He won an Emmy Award in 2005-2006.\n\n He is president and founder of the \"Fundación Cultura Sin Fronteras AC\".\n\n After twelve years out of show business, in 2012 he returned to the soap operas performing \"Magic Dragon\" one of the main characters for \"Miss XV\", a co-production from Televisa México and Nickelodeon directed and produced by Pedro Damian.\n\n He is also part of the cast of \"Muchacha Italiana Viene a Casarse\", directed by Pedro Damian (Televisa, México).",
+    "John Steiner\nHe found himself in demand in Italy and moved there, appearing in a great number of Italian exploitation and B-films including police actioners (\"Violent Rome\"), westerns (\"Mannaja\"), war films (\"The Last Hunter\"), nazisploitation (\"Deported Women of the SS Special Section\"), sci-fi adventure films (\"Yor, the Hunter from the Future\"), and horror films, such as Mario Bava's \"Shock\", Dario Argento's \"Tenebrae\", and Ruggero Deodato's \"Body Count\".\n\n He also became a favourite of famed Italian filmmaker Tinto Brass, featuring in \"Salon Kitty\", the infamous \"Caligula\", \"Action\", and \"Paprika\".",
+    "Ruggero Deodato\nRuggero Deodato (born 7 May 1939) is an Italian film director, screenwriter, and actor.",
+    "Cannibal Holocaust\nCannibal Holocaust is a 1980 Italian cannibal horror film directed by Ruggero Deodato from a screenplay by Gianfranco Clerici.\n\n It stars Carl Gabriel Yorke, Robert Kerman, Francesca Ciardi, Perry Pirkanen, and Luca Barbareschi.\n\n Influenced by the works of Mondo director Gualtiero Jacopetti, the film was inspired by Italian media reporting of Red Brigade terrorism.\n\n The coverage included news reports Deodato believed to be staged, an idea which became an integral aspect of the film's story.\n\n \"Cannibal Holocaust\" was filmed primarily in the Amazon rainforest of Colombia with indigenous tribes interacting with American and Italian actors.",
+    "Tinto Brass\nGiovanni \"Tinto\" Brass (born 26 March 1933) is an Italian filmmaker.\n\n In the 1960s and 1970s, he directed many critically acclaimed avant-garde films of various genres.\n\n Today, he is mainly known for his later work in the erotic genre, with films such as \"Caligula\", \"Così fan tutte\" (released under the English title \"All Ladies Do It\"), \"Paprika\", \"Monella\" (\"Frivolous Lola\") and \"Trasgredire\".",
+    "Graph query row:\nperson: Alejandro Springall\nnationality: None\noccupation: director\nis_film_director: True",
+    "Graph query row:\nperson: Ruggero Deodato\nnationality: Italian\noccupation: film director\nis_film_director: True",
+    "Hercules, Prisoner of Evil\nHercules, Prisoner of Evil (Italian: \"Ursus il terrore dei Kirghisi\" , 'Ursus, Terror of the Kirghiz' ) is a 1964 Italian \"peplum\" film directed by Antonio Margheriti and an uncredited Ruggero Deodato.\n\n Deodato, the official assistant director, replaced Margheriti as he was busy with the completion of the film \"The Fall of Rome\".\n\n Deodato actually directed most of the film in actuality but Margheriti was credited as the director.\n\n The film is filled with a variety of horrific themes and elements, featuring a killer werewolf, and is as much a horror film as it is a peplum."
+   ]
+  },
+  {
+   "id": "f951da310925102d",
+   "gold": [
+    {
+     "sentence": "Sigmund Werner Paul Jähn (born 13 February 1937) is a German cosmonaut and pilot, who in 1978 became the first East German (and German native) to fly in space as part of the Soviet Union's Interkosmos programme.",
+     "facts": {
+      "0.0": "Sigmund Werner Paul Jähn was born on 13 February 1937.",
+      "0.1": "Sigmund Werner Paul Jähn is a German cosmonaut.",
+      "0.2": "Sigmund Werner Paul Jähn is a pilot.",
+      "0.3": "In 1978 Sigmund Werner Paul Jähn became the first East German to fly in space.",
+      "0.4": "In 1978 Sigmund Werner Paul Jähn became the first German native to fly in space.",
+      "0.5": "The 1978 flight by Sigmund Werner Paul Jähn was part of the Soviet Union's Interkosmos programme."
+     }
+    },
+    {
+     "sentence": "Arne Christer Fuglesang (] ) (born March 18, 1957 in Stockholm) is a Swedish physicist and an ESA astronaut.",
+     "facts": {
+      "1.0": "Arne Christer Fuglesang was born on March 18, 1957.",
+      "1.1": "Arne Christer Fuglesang was born in Stockholm.",
+      "1.2": "Arne Christer Fuglesang is a Swedish physicist.",
+      "1.3": "Arne Christer Fuglesang is an ESA astronaut."
+     }
+    },
+    {
+     "sentence": " He was first launched aboard the STS-116 Space Shuttle mission on December 10, 2006, at 01:47 GMT, making him the first Swedish citizen in space.",
+     "facts": {
+      "2.0": "Arne Christer Fuglesang was first launched aboard the STS-116 Space Shuttle mission.",
+      "2.1": "That launch was on December 10, 2006, at 01:47 GMT.",
+      "2.2": "Arne Christer Fuglesang became the first Swedish citizen in space."
+     }
+    }
+   ],
+   "items": [
+    "Bertalan Farkas\nBertalan Farkas (born August 2, 1949) is the first Hungarian cosmonaut and the first Esperantist in space.\n\n He is currently the president of Airlines Service and Trade.\n\n With Charles Simonyi's travel, Farkas is no longer the only Hungarian who has been to space (he is still the only astronaut, as Simonyi flew as a space tourist).",
+    "The profiles cover NASA computer scientist Annie Easley and space espresso: ISSpresso’s first in-space coffee, brewed by Samantha Cristoforetti in 2015. They describe astrophysicist Jean-Loup Puget; missions Soyuz TM-7/T-6 and French astronaut Jean-Loup Chrétien; Patrick Baudry; Project Highwater; Apollo 7; SpaceShipOne’s first privately funded human spaceflight; the Soyuz rocket; Lockheed test pilot John Christiansen",
+    "Hans Schlegel\nHans Wilhelm Schlegel (Überlingen, 3 August 1951) is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions.",
+    "The entries cover German rocket scientist Magnus “Mac” von Braun, Wernher’s brother; Wernher von Braun’s Ferry Rocket shuttle concept and the 1937 failed Aggregate 3 launches (Operation Lighthouse); and Collier’s influential 1950s spaceflight series *Man Will Conquer Space Soon!*. They also profile German astronauts Hans Schlegel, Ernst Messerschmid, Ulrich Walter, Sigmund Jähn, Ulf Merbold, and Soyuz",
+    "Claude Nicollier\nClaude Nicollier (born 2 September 1944 in Vevey, Switzerland) is the first astronaut from Switzerland.\n\n He has flown on four Space Shuttle missions.\n\n His first spaceflight (STS-46) was in 1992, and his final spaceflight (STS-103) was in 1999.\n\n He took part in two servicing missions to the Hubble Space Telescope (called STS-61 and STS-103).\n\n During his final spaceflight he participated in a spacewalk, becoming the first European Space Agency astronaut to do so during a Space Shuttle mission (previous ESA astronauts conducted spacewalks aboard \"Mir\", see List of spacewalks and moonwalks 1965–1999).\n\n In 2000 he was assigned to the Astronaut Office Extravehicular Activity Branch, while maintaining a position as Lead ESA Astronaut in Houston.\n\n Nicollier retired from ESA in April 2007.",
+    "Christer Fuglesang\nArne Christer Fuglesang (] ) (born March 18, 1957 in Stockholm) is a Swedish physicist and an ESA astronaut.\n\n He was first launched aboard the STS-116 Space Shuttle mission on December 10, 2006, at 01:47 GMT, making him the first Swedish citizen in space.",
+    "Ulf Merbold\nDr. Ulf Dietrich Merbold (born June 20, 1941) is the first West German citizen and second German native (after Sigmund Jähn) to have flown in space.\n\n He is also the first member of the European Space Agency Astronaut Corps to participate in a spaceflight mission and the first non-US citizen to reach orbit in a US spacecraft.\n\n In 1983, he and Byron Lichtenberg became the first Payload Specialists to fly on the shuttle.",
+    "Sigmund Jähn\nSigmund Werner Paul Jähn (born 13 February 1937) is a German cosmonaut and pilot, who in 1978 became the first East German (and German native) to fly in space as part of the Soviet Union's Interkosmos programme.",
+    "John Christiansen\nJohn “Chris” Christiansen (May 1, 1923 － September 12, 1998) was the chief military test pilot for Lockheed California Company for over 30 years.\n\n He might be most known for having performed Lockheed S-3 Viking's maiden flight on January 21, 1972.\n\n His assignments also included the initial test flights of Lockheed P-3 Orion.\n\n Christiansen was born in Oslo, Norway in 1923 and became an American citizen in 1939.\n\n He later served in the U.S. Navy during World War II and the Korean Conflict.\n\n He began experimental flying for Lockheed Martin in 1953, and worked there until his retirement in 1984.\n\n He was a fellow at Society of Experimental Test Pilots.",
+    "Eberhard Köllner\nEberhard Köllner (born 29 September 1939 in Stassfurt, Germany) was selected for Soyuz 31 as the backup for Sigmund Jähn."
+   ]
+  },
+  {
+   "id": "40782df085ba4fc7",
+   "gold": [
+    {
+     "sentence": " It was created by Jay Lender and Micah Wright, former writers for \"The Angry Beavers\", \"SpongeBob SquarePants\", and \"Phineas and Ferb\".",
+     "facts": {
+      "0.0": "The series was created by Jay Lender.",
+      "0.1": "The series was created by Micah Wright.",
+      "0.2": "Jay Lender was a former writer for The Angry Beavers.",
+      "0.3": "Jay Lender was a former writer for SpongeBob SquarePants.",
+      "0.4": "Jay Lender was a former writer for Phineas and Ferb.",
+      "0.5": "Micah Wright was a former writer for The Angry Beavers.",
+      "0.6": "Micah Wright was a former writer for SpongeBob SquarePants.",
+      "0.7": "Micah Wright was a former writer for Phineas and Ferb."
+     }
+    },
+    {
+     "sentence": " The series chronicles the adventures and endeavors of the title character and his various friends in the fictional underwater city of Bikini Bottom.",
+     "facts": {
+      "1.0": "The series chronicles the adventures and endeavors of the title character and his various friends.",
+      "1.1": "The series is set in the fictional underwater city of Bikini Bottom."
+     }
+    }
+   ],
+   "items": [
+    "SpongeBob SquarePants: Battle for Bikini Bottom\nSpongeBob SquarePants: Battle for Bikini Bottom is a 2003 video game based on the animated series of the same name, developed by Heavy Iron Studios, AWE Games, and Vicarious Visions, and published by THQ.\n\n The game was released for the PlayStation 2, Game Boy Advance (GBA), Xbox, and Nintendo GameCube consoles as well as a port for Microsoft Windows.\n\n The Microsoft Windows version of the game is a point-and-click adventure game, whereas the 6th generation platforms received a 3D platformer.\n\n The Game Boy Advance version received a 2D platformer.\n\n All versions of the game feature an original storyline, in which the player attempts to defend Bikini Bottom from an invasion of robots created by Plankton with a machine called the Duplicatotron 3000, playing as SpongeBob in all versions, as well as Patrick and Sandy in the console versions.\n\n The game was released on October 31, 2003, in North America and in Europe on November 28, 2003.",
+    "Robocalypse\nRobocalypse is a real-time strategy video game developed and published by Vogster Entertainment for the Nintendo DS handheld video game console.\n\n It has only been released in North America.\n\n It was created by Jay Lender and Micah Wright, former writers for \"The Angry Beavers\", \"SpongeBob SquarePants\", and \"Phineas and Ferb\".",
+    "Adventure Time\nAdventure Time is an American animated television series created by Pendleton Ward for Cartoon Network.\n\n It follows the adventures of a boy named Finn (voiced by Jeremy Shada) and his best friend and adoptive brother Jake (John DiMaggio)— a dog with the magical power to change shape and size at will.\n\n Finn and Jake live in the post-apocalyptic Land of Ooo, where they interact with Princess Bubblegum (Hynden Walch), the Ice King (Tom Kenny), Marceline the Vampire Queen (Olivia Olson), BMO (Niki Yang), and others.\n\n The series is based on a 2007 short produced for Nicktoons and Frederator Studios' animation incubator series \"Random!\n\n Cartoons\".\n\n After the short became a viral hit on the Internet, Cartoon Network commissioned a full-length series, which previewed on March 11, 2010, and officially premiered on April 5, 2010.",
+    "Rock Bottom (SpongeBob SquarePants)\n\"Rock Bottom\" is the 34th episode of the first season of the American animated television series \"SpongeBob SquarePants\".\n\n It originally was produced in 1999 and aired on Nickelodeon in the United States on March 15, 2000.\n\n The series follows the adventures of the title character in the underwater city of Bikini Bottom.\n\n In the episode, SpongeBob becomes stranded in a abyssopelagic zone called Rock Bottom.",
+    "SpongeBob SquarePants (season 3)\nThe third season of the American animated television series \"SpongeBob SquarePants\", created by Stephen Hillenburg, aired on Nickelodeon from October 5, 2001 to October 11, 2004, and consists of 20 episodes.\n\n The series chronicles the exploits and adventures of the title character and his various friends in the fictional underwater city of Bikini Bottom.\n\n The season was executive produced by series creator Hillenburg, who also acted as the showrunner.\n\n Hillenburg halted production on the show to work on the 2004 film adaptation of the series, \"The SpongeBob SquarePants Movie\".\n\n After production on the film, Hillenburg resigned from the show as its showrunner, and appointed staff writer Paul Tibbitt to overtake the position.\n\n Season 3 was originally set to end the series after the release of the film, but the success prevented the series from ending, leading to a fourth season.",
+    "Band Geeks\n\"Band Geeks\" is the second part of the 15th episode of the second season, and the second half of the 35th episode overall, of the American animated television program \"SpongeBob SquarePants\".\n\n It originally aired on Nickelodeon in the United States on September 7, 2001.\n\n It was written by C. H. Greenblatt, Aaron Springer, and Merriwether Williams, and the animation was directed by Frank Weiss.\n\n Springer served as storyboard director, and Greenblatt served as storyboard artist.\n\n The song \"Sweet Victory\" by David Glen Eisley was featured in the episode and was later released on the album \"\" in 2005.",
+    "List of SpongeBob SquarePants episodes\n\"SpongeBob SquarePants\" is an American animated television series created by marine biologist and animator Stephen Hillenburg for Nickelodeon.\n\n The series is set in the fictional underwater city of Bikini Bottom, and centers on the adventures and endeavors of SpongeBob SquarePants, an over-optimistic sea sponge that annoys other characters.\n\n Many of the ideas for the show originated in an unpublished, educational comic book titled \"The Intertidal Zone\", which Hillenburg created in the mid-1980s.\n\n He began developing \"SpongeBob SquarePants\" into a television series in 1996 after the cancellation of \"Rocko's Modern Life\", another Nickelodeon television series which Hillenburg previously directed.",
+    "SpongeBob SquarePants (season 4)\nThe fourth season of the American animated television series \"SpongeBob SquarePants\", created by former marine biologist and animator Stephen Hillenburg, aired on Nickelodeon from May 6, 2005 to July 24, 2007, and contained 20 episodes, beginning with the episodes \"Fear of a Krabby Patty\" and \"Shell of a Man\".\n\n The series chronicles the exploits and adventures of the title character and his various friends in the fictional underwater city of Bikini Bottom.\n\n The season was executive produced by series creator Hillenburg, while writer Paul Tibbitt acted as the supervising/co-executive producer and showrunner.\n\n The show underwent a hiatus on television as Hillenburg halted the production in 2002 to work on the film adaptation of the series, \"The SpongeBob SquarePants Movie\".\n\n Once the film was finalized and the previous season had completed broadcast on television, Hillenburg wanted to end the show, but the success of the series led to more episodes, so Tibbitt took over Hillenburg's position as showrunner and began working on a fourth season for broadcast in 2005.",
+    "SpongeBob SquarePants\nSpongeBob SquarePants is an American animated television series created by marine biologist and animator Stephen Hillenburg for Nickelodeon.\n\n The series chronicles the adventures and endeavors of the title character and his various friends in the fictional underwater city of Bikini Bottom.\n\n The series' popularity has made it a media franchise, as well as the highest rated series to ever air on Nickelodeon, and the most distributed property of MTV Networks.\n\n As of 2015, the media franchise has generated $12 billion in merchandising revenue for Nickelodeon.",
+    "Legends of Bikini Bottom\nLegends of Bikini Bottom is an anthology series of six episodes in the American animated television series \"SpongeBob SquarePants\", as part of its seventh season.\n\n As the name suggests, the episodes have plots involving things like monsters, magic and mythical creatures.\n\n The first episode called \"Trenchbillies\" first premiered on the online social networking service Facebook on January 27, 2011 before airing on Nickelodeon on January 29, 2011.\n\n The four other episodes titled \"Sponge-Cano!\"\n\n, \"The Main Drain\", \"The Monster Who Came to Bikini Bottom\" and \"Welcome to the Bikini Bottom Triangle\" premiered on Nickelodeon as part of an hour-long special on January 28, 2011.\n\n The decision to air the series online was aimed at attracting \"the young and the restless hooked to the internet and the social media.\""
+   ]
+  },
+  {
+   "id": "4b9d8e9c6ce6d116",
+   "gold": [
+    {
+     "sentence": " They have produced two studio albums and an EP.",
+     "facts": {
+      "0.0": "They have produced two studio albums.",
+      "0.1": "They have produced an EP."
+     }
+    },
+    {
+     "sentence": "Motion City Soundtrack was an American rock band that formed in Minneapolis, Minnesota in 1997.",
+     "facts": {
+      "1.0": "Motion City Soundtrack was an American rock band.",
+      "1.1": "Motion City Soundtrack formed in Minneapolis, Minnesota.",
+      "1.2": "Motion City Soundtrack formed in 1997."
+     }
+    },
+    {
+     "sentence": " Over the course of their nearly twenty-year career, the group toured heavily and released six studio albums, the majority on independent label Epitaph Records.",
+     "facts": {
+      "2.0": "Motion City Soundtrack had a nearly twenty-year career.",
+      "2.1": "Motion City Soundtrack toured heavily over the course of its career.",
+      "2.2": "Motion City Soundtrack released six studio albums.",
+      "2.3": "The majority of Motion City Soundtrack's six studio albums were released on the independent label Epitaph Records."
+     }
+    }
+   ],
+   "items": [
+    "Panic Stations (album)\nPanic Stations is the sixth and final studio album by American rock band Motion City Soundtrack.\n\n Produced by John Agnello, the album was released on September 18, 2015 by Epitaph Records.\n\n Following an extended touring cycle in which the group performed several past albums in full, Motion City Soundtrack lost one of its longest-serving members: drummer Tony Thaxton, who resigned from the group in 2013.\n\n The band continued to tour with new drummer Claudio Rivera over the ensuing year while writing new material for a sixth album.",
+    "My Dinosaur Life\nMy Dinosaur Life is the fourth studio album by the American rock band Motion City Soundtrack.\n\n Produced by Mark Hoppus, the album was released on January 19, 2010 by Columbia Records.\n\n After many years on independent label Epitaph Records, Motion City Soundtrack signed to major label Columbia in 2006, prior to the release of their third album, \"Even If It Kills Me\" (2007).\n\n Blink-182 bassist Mark Hoppus returned to produce the album; he had previously worked with the band on their 2005 breakthrough \"Commit This to Memory\".",
+    "Motion City Soundtrack discography\nThe following is the discography of Motion City Soundtrack, an American rock band that formed in Minneapolis, Minnesota in 1997.\n\n The band's line-up consisted of vocalist and guitarist Justin Pierre, lead guitarist Joshua Cain, keyboardist Jesse Johnson, bassist Matthew Taylor, and drummer Tony Thaxton.\n\n Over the course of their nearly twenty-year career, the group toured heavily and released six studio albums, the majority on independent label Epitaph Records.\n\n The band's sound, at times described as pop punk or emo, made notable use of the Moog synthesizer.",
+    "Commit This to Memory\nCommit This to Memory is the second studio album by American rock band Motion City Soundtrack.\n\n Produced by Mark Hoppus, the album was released on June 7, 2005, in the United States by Epitaph Records.\n\n Motion City Soundtrack, formed in 1997, had first found success with their debut album, \"I Am the Movie\" (2002).\n\n The band toured in the interim years, creating positive word-of-mouth.\n\n In 2004, the band joined Blink-182 on the road for a string of shows, which led to their bassist, Mark Hoppus, joining the band in the studio for his first producing effort.",
+    "Even If It Kills Me\nEven if It Kills Me is the third studio album by American rock band Motion City Soundtrack.\n\n Produced by Ric Ocasek, Adam Schlesinger and Eli Janney, the album was released on September 18, 2007, in the United States by Epitaph Records.\n\n Motion City Soundtrack, based in Minneapolis, Minnesota, made a breakthrough with their second album, \"Commit This to Memory\", garnering praise and independent buzz upon its 2005 release.\n\n Following the release, the band toured relentlessly over the next two years, during which time frontman Justin Pierre struggled with alcohol and substance abuse.\n\n These addictions were infused into the writing process of \"Even If Kills Me\", which was recorded in early 2007 Stratosphere Studios in Chelsea and the legendary Electric Lady Studios in Greenwich Village.",
+    "Back to the Beat (EP)\nBack to the Beat was the first significant EP release by the Minneapolis based pop punk band Motion City Soundtrack.\n\n The EP was recorded in Sound In Motion Recordings and released by Modern Radio Records and includes tracks that were later re-released.\n\n \"Throw Down\", \"Back to the Beat\" and \"Capital H\" were re-released on a split EP with Schatzi.\n\n \"Capital H\" was re-released on Motion City Soundtrack's first album \"I Am the Movie\".\n\n At the time of recording, the band members differed from the Motion City Soundtrack line-up formed in 2002.\n\n They were Joshua Cain on guitar and vocals, Austin Lindstrom on bass guitar, Joel Habedank on drums and Justin Pierre on lead vocals, guitar and keyboard.",
+    "Motion City Soundtrack\nMotion City Soundtrack was an American rock band that formed in Minneapolis, Minnesota in 1997.\n\n The band's line-up consisted of vocalist and guitarist Justin Pierre, lead guitarist Joshua Cain, keyboardist Jesse Johnson, bassist Matthew Taylor, and drummer Tony Thaxton.\n\n Over the course of their nearly twenty-year career, the group toured heavily and released six studio albums, the majority on independent label Epitaph Records.\n\n The band's sound, at times described as pop punk or emo, made notable use of the Moog synthesizer.",
+    "Motion City Soundtrack, a Minneapolis rock band formed in 1997, released six studio albums over nearly 20 years, blending pop punk/emo with prominent Moog synthesizers. Justin Pierre wrote most of the band’s 107 recorded songs, including nine covers. Key releases include *Commit This to Memory* (2005), produced by Mark Hoppus; *Even If It Kills Me* (2007), shaped by Pierre’s struggles with addiction; *My Dinosaur Life* (",
+    "Candlelight Red\nCandlelight Red is a rock band from Williamsport, Pennsylvania.\n\n They have produced two studio albums and an EP.\n\n Their EP \"Demons\" and album \"Reclamation\" was produced by Morgan Rose of Sevendust.",
+    "List of songs recorded by Motion City Soundtrack\nAmerican rock band Motion City Soundtrack recorded songs for six studio albums, various soundtracks, compilations, and non-album singles.\n\n The majority of the group's original material was written by vocalist and guitarist Justin Pierre.\n\n The band also recorded cover versions of other artists' songs at various points throughout their career, including by the Beatles, Limbeck, the Police, R.E.M., the Rentals, Rilo Kiley, Trampled by Turtles, and the Weakerthans.\n\n In all, the group recorded 107 songs, nine of which were covers."
+   ]
+  },
+  {
+   "id": "66df349735c4316d",
+   "gold": [
+    {
+     "sentence": " His experimental works are well known and appropriately discussed in Malayalam Cinema industry and his debut movie Jalachhayam (2010) was well discussed according to its experimental approach.",
+     "facts": {
+      "0.0": "His experimental works are well known in the Malayalam Cinema industry.",
+      "0.1": "His experimental works are appropriately discussed in the Malayalam Cinema industry.",
+      "0.2": "His debut movie is Jalachhayam.",
+      "0.3": "Jalachhayam was released in 2010.",
+      "0.4": "Jalachhayam was well discussed according to its experimental approach."
+     }
+    },
+    {
+     "sentence": "Jacques Feyder (] ; 21 July 1885 – 24 May 1948) was a Belgian actor, screenwriter and film director who worked principally in France, but also in the USA, Britain and Germany.",
+     "facts": {
+      "1.0": "Jacques Feyder was born on 21 July 1885.",
+      "1.1": "Jacques Feyder died on 24 May 1948.",
+      "1.2": "Jacques Feyder was a Belgian actor.",
+      "1.3": "Jacques Feyder was a Belgian screenwriter.",
+      "1.4": "Jacques Feyder was a Belgian film director.",
+      "1.5": "Jacques Feyder worked principally in France.",
+      "1.6": "Jacques Feyder also worked in the USA.",
+      "1.7": "Jacques Feyder also worked in Britain.",
+      "1.8": "Jacques Feyder also worked in Germany."
+     }
+    }
+   ],
+   "items": [
+    "Michel Foucault\nPaul-Michel Foucault (15 October 1926 – 25 June 1984), generally known as Michel Foucault (] ), was a French philosopher, historian of ideas, social theorist, and literary critic.",
+    "Shafiq Syed\nShafiq Syed (born 1976) is a former Indian child actor turned auto rickshaw driver.\n\n At the age of twelve, he starred in a lead role in the Mira Nair's Academy Award-nominated film \"Salaam Bombay!\n\n\" (1988), for which he also received the 1989 National Film Award for Best Child Artist at the 36th National Film Awards.\n\n He drives an auto rickshaw in Bangalore and also works as an assistant in television production units.",
+    "Jacques Feyder\nJacques Feyder (] ; 21 July 1885 – 24 May 1948) was a Belgian actor, screenwriter and film director who worked principally in France, but also in the USA, Britain and Germany.\n\n He was a leading director of silent films during the 1920s, and in the 1930s he became associated with the style of poetic realism in French cinema.\n\n He adopted French nationality in 1928.",
+    "Jacques Natanson\nFrench writer Jacques Natanson (15 May 1901 – 19 May 1975) first became involved in the movies in 1929 when one of his plays was adapted for the screen.\n\n He enjoyed a fruitful collaboration with Max Ophüls, on such films as \"La Ronde\" (1951, earning an Academy Award nomination), \"Le Plaisir\" (1952) and \"Lola Montès\" (1955).",
+    "Patrick Baudry\nPatrick Pierre Roger Baudry (born March 6, 1946 in Cameroon), is a retired Lieutenant Colonel in the French Air Force and a former CNES astronaut.\n\n In 1985, he became the second French citizen in space, after Jean-Loup Chrétien, when he flew aboard NASA's Space Shuttle mission STS-51-G.",
+    "Sathish Kalathil\nSathish Kalathil (മലയാളം: ) is an Indian film and documentary Director and Producer in malayalam.\n\n He is also Story Writer, and Lyricist.\n\n His experimental works are well known and appropriately discussed in Malayalam Cinema industry and his debut movie Jalachhayam (2010) was well discussed according to its experimental approach.\n\n Actually, his first venture was in 2008 named Veena Vaadanam, a documentary film about Art (Painting) and that was his first experimental entry in movie.\n\n In 2012, he directed Laloorinu Parayanullathu, a social committed documentary film about Municipal solid waste.",
+    "Alain Jessua\nAlain Jessua (born 16 January 1932) is a French film director and screenwriter.\n\n He directed ten films between 1956 and 1997.\n\n He worked as assistant director for Jacques Becker on the set of \"Casque d'or\", with Max Ophüls for \"Madame de...\" and \"Lola Montès\" and with Marcel Carné on \"Wasteland\". \"\n\nLéon la lune\" his first short film won the influential Prix Jean Vigo in 1957.\n\n He directed first feature film in 1963 \"La vie à l'envers\" that won Best First Film at Venice Film Festival, in 1964.",
+    "Bertalan Farkas\nBertalan Farkas (born August 2, 1949) is the first Hungarian cosmonaut and the first Esperantist in space.\n\n He is currently the president of Airlines Service and Trade.\n\n With Charles Simonyi's travel, Farkas is no longer the only Hungarian who has been to space (he is still the only astronaut, as Simonyi flew as a space tourist).",
+    "Kevin Mayer\nKevin Mayer (] , ] or ] , born 10 February 1992) is a French athlete specializing in combined events.\n\n A native of Drôme in southeast France, Mayer excelled in combined events from a young age; highlights from his youth career include winning gold medals in the octathlon at the 2009 World Youth Championships and in the decathlon at the 2010 World Junior Championships and at the 2011 European Athletics Junior Championships, establishing a new national junior record at the latter.",
+    "Émile Verdet\nMarcel Émile Verdet (13 March 1824 – 3 June 1866) was a French physicist.\n\n He worked in magnetism and optics, editing the works of Augustin-Jean Fresnel.\n\n Verdet did much to champion the early theory of the conservation of energy in France through his editorial supervision of the \"Annales de chimie et de physique\"."
+   ]
+  }
+ ]
+}

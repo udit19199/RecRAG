@@ -1,0 +1,370 @@
+{
+ "prompt_version": "2026-11-10.haiku.1",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "multihop-rag-306",
+   "sentences": [
+    "We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving.",
+    "Apart from the food - arguably the main component of the day - the holiday is a beloved time of year when Americans come together to celebrate what they are thankful for, either with family or friends."
+   ]
+  },
+  {
+   "id": "multihop-rag-346",
+   "sentences": [
+    "“The company’s approach also raises concerns regarding the GDPR,” Pachl further noted.",
+    "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents.",
+    "Al Saadi said that her frustration with Meta is common among Palestinians, both in occupied territories and across the diaspora."
+   ]
+  },
+  {
+   "id": "multihop-rag-352",
+   "sentences": [
+    "But by the age of 16, she is public property – incapable of going outside without being mobbed, and her love of singing and dancing now a lucrative resource.",
+    "\"It was almost like this very strange, subtle clue to the media that they don't know everything that happened in that relationship, and I can have something really major and traumatic happen to me and they don't know about it,\" she told NPR."
+   ]
+  },
+  {
+   "id": "multihop-rag-410",
+   "sentences": [
+    "The winger came firing out of the gate, but the outlook has changed for the Devils in recent days after losing the superstar center Hughes to injury.",
+    "Having to depend much on his weaker arm, Hamlin stayed in contention for the championship four race until the final race in Martinsville."
+   ]
+  },
+  {
+   "id": "multihop-rag-434",
+   "sentences": [
+    "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.",
+    "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-447",
+   "sentences": [
+    "At the time, the music video for the song – which featured a woman with blonde hair - sparked rumours that he and Spears broke up because she allegedly cheated on him.",
+    "Also, another thing that hints towards their breakup is Danis’s first press conference for the Logan Paul fight."
+   ]
+  },
+  {
+   "id": "multihop-rag-457",
+   "sentences": [
+    "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4.",
+    "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "multihop-rag-470",
+   "sentences": [
+    "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion.",
+    "Another user said that no one can carry out such a major attack against Israel without intelligence support."
+   ]
+  },
+  {
+   "id": "multihop-rag-483",
+   "sentences": [
+    "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion.",
+    "Another user said that no one can carry out such a major attack against Israel without intelligence support."
+   ]
+  },
+  {
+   "id": "multihop-rag-526",
+   "sentences": [
+    "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro.",
+    "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "multihop-rag-532",
+   "sentences": [
+    "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better.",
+    "Today, the internet is littered with tips and tricks that promise a sound sleep, but not all of them are effective and none are foolproof."
+   ]
+  },
+  {
+   "id": "multihop-rag-547",
+   "sentences": [
+    "But “all of that, all of it, was built on lies,” Rehn declared to the jury.",
+    "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse."
+   ]
+  },
+  {
+   "id": "multihop-rag-549",
+   "sentences": [
+    "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more.",
+    "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "multihop-rag-563",
+   "sentences": [
+    "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.",
+    "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-570",
+   "sentences": [
+    "If the debt continues to rise more than the economy, risks will increase, and the government may “crowd out” private investment as it competes with the private sector for funds to service its debt.",
+    "And yet, “We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr. told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."
+   ]
+  },
+  {
+   "id": "multihop-rag-583",
+   "sentences": [
+    "It could, though, mean some sort of progress, if the Manchester born Ratcliffe follows through with his vision to revolutionise the club.",
+    "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."
+   ]
+  },
+  {
+   "id": "multihop-rag-628",
+   "sentences": [
+    "Not only has he produced at a high level, but his play has been instrumental in the Vikings turning things around after a 1-4 start.",
+    "But they've also seen the fourth-lowest ADOT from tight ends (5.0 yards per target), almost as if teams know they won't be able to succeed on downfield shots against them (zero completions of 20-plus yards from tight ends)."
+   ]
+  },
+  {
+   "id": "multihop-rag-637",
+   "sentences": [
+    "\"And if the Braves let this be the story of their series, that's on them.",
+    "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."
+   ]
+  },
+  {
+   "id": "multihop-rag-640",
+   "sentences": [
+    "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook.",
+    "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move.",
+    "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."
+   ]
+  },
+  {
+   "id": "multihop-rag-717",
+   "sentences": [
+    "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury.",
+    "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."
+   ]
+  },
+  {
+   "id": "multihop-rag-747",
+   "sentences": [
+    "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington.",
+    "Geno Smith's night appears to be done as Drew Lock is back in for the Seahawks."
+   ]
+  },
+  {
+   "id": "multihop-rag-791",
+   "sentences": [
+    "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income.",
+    "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."
+   ]
+  },
+  {
+   "id": "multihop-rag-792",
+   "sentences": [
+    "10:59 p.m. — The Cowboys are moving the ball now, when it's a bit too late.",
+    "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."
+   ]
+  },
+  {
+   "id": "multihop-rag-800",
+   "sentences": [
+    "“It was the millionaires of the Premier League against the youngsters of the Championship,” reflected the former Denmark forward.",
+    "The Commanders are coming off a dud last week against the Giants, while Dallas is flying high."
+   ]
+  },
+  {
+   "id": "multihop-rag-865",
+   "sentences": [
+    "Love Story This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No.",
+    "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before.",
+    "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."
+   ]
+  },
+  {
+   "id": "multihop-rag-887",
+   "sentences": [
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.",
+    "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-904",
+   "sentences": [
+    "Unfortunately, she did say that she had conversations with investors as part of their due diligence — and, of course, Alameda was taking on losses from FTX to keep FTX’s balance sheet pristine.",
+    "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."
+   ]
+  },
+  {
+   "id": "multihop-rag-912",
+   "sentences": [
+    "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration.",
+    "We look at Valve and we see a store that could be both, but they’ve decided to focus exclusively on games.",
+    "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."
+   ]
+  },
+  {
+   "id": "multihop-rag-960",
+   "sentences": [
+    "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights — Los Pumas are also in the semi-finals — and England have beaten all of them.",
+    "S﻿AINT-ETIENNE: The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com as their Rugby World Cup fate is decided by Fiji and Portugal in Toulouse."
+   ]
+  },
+  {
+   "id": "multihop-rag-976",
+   "sentences": [
+    "After turning in three limited practices this week, we'll trust that Hockenson is ready to go, especially since he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center.",
+    "Kincaid was a limited participant in practice on Wednesday due to a shoulder injury, but it’s been reported he’s likely to suit up on Saturday at less than 100%."
+   ]
+  },
+  {
+   "id": "multihop-rag-1065",
+   "sentences": [
+    "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform.",
+    "You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team will score in the game."
+   ]
+  },
+  {
+   "id": "multihop-rag-1077",
+   "sentences": [
+    "As such, they’re never going to replace the need for reducing emissions of CO 2 and other greenhouse gases.",
+    "He stopped flying, became a vegetarian and ditched gasoline-powered cars (he drives a Tesla), cutting his personal emissions by about 90%, according to his math."
+   ]
+  },
+  {
+   "id": "multihop-rag-1083",
+   "sentences": [
+    "But “all of that, all of it, was built on lies,” Rehn declared to the jury.",
+    "Binance has made headlines this past year for a range of reasons, including Zhao’s comments contributing to the collapse of FTX, which was once one of its top competitors."
+   ]
+  },
+  {
+   "id": "multihop-rag-1092",
+   "sentences": [
+    "His career has only blossomed in the years since he took that trip, and while some artists might feel trepidation at the attainment of so much success from such an early age, Mitchell is clear-eyed.",
+    "Since then he’s been linked to club jobs in Europe but opted to stick around with the national team."
+   ]
+  },
+  {
+   "id": "multihop-rag-1117",
+   "sentences": [
+    "The present Board of Trustees of the Fund which consists of the Secretary of Education as Chairman with the Director-General of the National Economic and Development Authority, the three Presidents of the Association of Christian Schools, Colleges and Universities (ACSCU), the Catholic Educational Association of the Philippines (CEAP) and the Philippine Association of Colleges and Universities (PACU) shall also constitute the proposed Board of Trustees of the PhilEd.",
+    "In addition, Andrew Wilkinson, 72, has informed the HSF board of his intention to retire as a board director, which will reduce the company’s board to five directors."
+   ]
+  },
+  {
+   "id": "multihop-rag-1120",
+   "sentences": [
+    "For all the other benefits they get from Android, Google could solve this problem today if they wanted to.",
+    "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats, but Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "multihop-rag-1154",
+   "sentences": [
+    "One of the major sources of Gen Z’s distress, of course, is climate change.",
+    "In other words, first, we need to improve our understanding of drivers of sea surface temperature patterns—decadal coupled variability; the pace and spatial structure of ocean heat uptake; and forcing by aerosols, greenhouse gases, and volcanoes—as well as the relative timing of these drivers."
+   ]
+  },
+  {
+   "id": "multihop-rag-1170",
+   "sentences": [
+    "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.",
+    "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."
+   ]
+  },
+  {
+   "id": "multihop-rag-1184",
+   "sentences": [
+    "UPDATE: NFL Network's Ian Rapoport reported Sunday morning that Hockenson is expected to play against New Orleans.",
+    "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."
+   ]
+  },
+  {
+   "id": "multihop-rag-1252",
+   "sentences": [
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.",
+    "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-1255",
+   "sentences": [
+    "He also believes that after everything on social media becomes so perfectly curated for us, our brains will start to crave things that are not.",
+    "What we have done since then, all the success and failures [matters in our preparation]."
+   ]
+  },
+  {
+   "id": "multihop-rag-1328",
+   "sentences": [
+    "Postponements of such reports could complicate things for the Fed, which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy.",
+    "With inflation down from its peak two summers ago, Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates and could soon turn to cutting them."
+   ]
+  },
+  {
+   "id": "multihop-rag-1349",
+   "sentences": [
+    "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year.",
+    "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."
+   ]
+  },
+  {
+   "id": "multihop-rag-1375",
+   "sentences": [
+    "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone – and the generation of players and leaders that will call time on their international careers at week’s end.",
+    "The All Blacks had their chances, but their usual safe handling, a feature throughout the World Cup after their first-up loss to France, evaded them against the Springboks’ blitz defence in the wet conditions.",
+    "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."
+   ]
+  },
+  {
+   "id": "multihop-rag-1430",
+   "sentences": [
+    "The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night, keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14.",
+    "Fueled by a stout defensive showing, a gritty run game and a bit of fairy dust from the likes of St. Brown, Sam LaPorta and Josh Reynolds, the Lions cruised to a 34-20 win over their hated NFC North rivals, Green Bay."
+   ]
+  },
+  {
+   "id": "multihop-rag-1526",
+   "sentences": [
+    "9:47 p.m. — The Bears answer right back and sack Dobbs, with Sweat and Brisker in there to take him down.",
+    "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030), while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)."
+   ]
+  },
+  {
+   "id": "multihop-rag-1539",
+   "sentences": [
+    "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years.",
+    "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said."
+   ]
+  },
+  {
+   "id": "multihop-rag-1561",
+   "sentences": [
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.",
+    "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-1573",
+   "sentences": [
+    "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie.",
+    "But then, there’s MJ as well who has made a comeback from the first installment."
+   ]
+  },
+  {
+   "id": "multihop-rag-1613",
+   "sentences": [
+    "“Hopefully we can go one better this year,” he added, recalling the 2-0 defeat by Canada in 2022.",
+    "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."
+   ]
+  }
+ ]
+}

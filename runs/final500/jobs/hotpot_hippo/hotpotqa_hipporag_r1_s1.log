@@ -1,0 +1,811 @@
+0it [00:00, ?it/s]1722it [00:00, 10948.15it/s]5122it [00:00, 24465.16it/s]
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:00<00:00, 21.45it/s]
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.82s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.82s/it]
+hipporag: saved retrieval for 5ab56e32554299637185c594
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.29s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.29s/it]
+hipporag: saved retrieval for 5ab29c24554299449642c932
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.35s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.35s/it]
+hipporag: saved retrieval for 5abd259d55429924427fcf1a
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.91s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.91s/it]
+hipporag: saved retrieval for 5a7759fc5542993569682d60
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.76s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.76s/it]
+Error parsing field fact_after_filter: 1 validation error for Fact
+  Input should be a valid dictionary or instance of Fact [type=model_type, input_value='{"fact":[["levni yilmaz"...}\n\n[[ ## completed ]]', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/model_type.
+
+		On attempting to parse the value
+```
+{"fact":[["levni yilmaz","also known as","lev yilmaz"],["levni yilmaz","occupation","independent filmmaker"],["pamela b green","known for","work in feature film titles and motion graphics"]]}
+
+[[ ## completed ]]
+```
+hipporag: saved retrieval for 5ac1b8ee5542994d76dccedc
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.30s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.30s/it]
+hipporag: saved retrieval for 5a7633ad5542992db9473741
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.39s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.39s/it]
+hipporag: saved retrieval for 5ab6369655429953192ad2a1
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.41s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.42s/it]
+hipporag: saved retrieval for 5a7d2afd5542995f4f402221
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.35s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.35s/it]
+hipporag: saved retrieval for 5a76387d554299109176e6ba
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.60s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.60s/it]
+hipporag: saved retrieval for 5a78daf855429970f5fffdae
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.24s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.24s/it]
+hipporag: saved retrieval for 5ab6f0c25542995eadef00ea
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.57s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.57s/it]
+hipporag: saved retrieval for 5ab72a025542992aa3b8c7b8
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.11s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.11s/it]
+hipporag: saved retrieval for 5ab25004554299722f9b4cd7
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.82s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.82s/it]
+hipporag: saved retrieval for 5ae4ec1e5542990ba0bbb19b
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.95s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.95s/it]
+hipporag: saved retrieval for 5ae0038655429925eb1afbe0
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.69s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.69s/it]
+hipporag: saved retrieval for 5a7a27ce5542996c55b2dd28
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.34s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.34s/it]
+hipporag: saved retrieval for 5ab9812d554299753720f821
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:00<00:00,  1.07it/s]Retrieving: 100%|██████████| 1/1 [00:00<00:00,  1.07it/s]
+hipporag: saved retrieval for 5ac2546a554299636651997b
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:06<00:00,  6.44s/it]Retrieving: 100%|██████████| 1/1 [00:06<00:00,  6.44s/it]
+Error parsing field fact_after_filter: 1 validation error for Fact
+  Input should be a valid dictionary or instance of Fact [type=model_type, input_value='{"fact":[["of montreal",...}\n\n[[ ## completed ]]', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/model_type.
+
+		On attempting to parse the value
+```
+{"fact":[["of montreal","is an","american experimental pop band"],["of montreal","is from","athens georgia"],["vib gyor","is a band from","leeds"]]}
+
+[[ ## completed ]]
+```
+hipporag: saved retrieval for 5a77c74155429967ab105291
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.55s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.55s/it]
+hipporag: saved retrieval for 5ae31bbd55429928c42395fc
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.73s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.73s/it]
+hipporag: saved retrieval for 5ae2120e5542997283cd23ad
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.81s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.81s/it]
+hipporag: saved retrieval for 5a7cdd6b55429909bec76858
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.79s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.79s/it]
+hipporag: saved retrieval for 5a726b0f5542997f827839be
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.79s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.79s/it]
+hipporag: saved retrieval for 5a84d80c5542992a431d1ab5
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.91s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.91s/it]
+hipporag: saved retrieval for 5a866c04554299211dda2b25
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.01s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.01s/it]
+hipporag: saved retrieval for 5ac176555542994d76dcce47
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.04s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.05s/it]
+hipporag: saved retrieval for 5a8ec7cc5542995a26add518
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.63s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.63s/it]
+hipporag: saved retrieval for 5a7cdcbf55429907fabef04f
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.37s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.37s/it]
+hipporag: saved retrieval for 5a8c90db554299653c1aa0bf
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.16s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.17s/it]
+hipporag: saved retrieval for 5a83041355429966c78a6ae8
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.09s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.09s/it]
+hipporag: saved retrieval for 5ac3d4b6554299204fd21e93
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.36s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.36s/it]
+hipporag: saved retrieval for 5a8a265b5542992d82986ecc
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.56s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.56s/it]
+hipporag: saved retrieval for 5a79d2fe5542994f819ef0c3
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.07s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.07s/it]
+hipporag: saved retrieval for 5ae383e15542992f92d822fb
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.60s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.60s/it]
+hipporag: saved retrieval for 5abe731255429965af743f0e
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.15s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.15s/it]
+hipporag: saved retrieval for 5a85a2845542997175ce1fe1
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.29s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.29s/it]
+hipporag: saved retrieval for 5a7af1a955429931da12c98f
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.65s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.65s/it]
+hipporag: saved retrieval for 5a734e6d5542994cef4bc528
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.63s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.63s/it]
+hipporag: saved retrieval for 5a7652435542992d0ec060a5
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.60s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.60s/it]
+hipporag: saved retrieval for 5a76a0005542993569682c64
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.20s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.20s/it]
+hipporag: saved retrieval for 5ac097b05542996f0d89cc18
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.32s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.32s/it]
+hipporag: saved retrieval for 5ac2f1d1554299218029dba4
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.24s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.24s/it]
+hipporag: saved retrieval for 5a8198565542995ce29dcc13
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.30s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.30s/it]
+hipporag: saved retrieval for 5abbdb195542993f40c73bf1
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.72s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.72s/it]
+hipporag: saved retrieval for 5a8b7e9c5542995d1e6f13c1
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.48s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.48s/it]
+hipporag: saved retrieval for 5a8b036d55429971feec45fe
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.96s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.96s/it]
+hipporag: saved retrieval for 5a72908f5542994cef4bc33b
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.81s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.81s/it]
+hipporag: saved retrieval for 5abaad5855429901930fa88f
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.50s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.50s/it]
+hipporag: saved retrieval for 5ac156d05542994ab5c67ce9
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.53s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.53s/it]
+hipporag: saved retrieval for 5a840e395542992ef85e239d
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.80s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.80s/it]
+hipporag: saved retrieval for 5a7b24fe55429931da12c9f7
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.73s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.73s/it]
+hipporag: saved retrieval for 5a8675b1554299211dda2b44
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.04s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.04s/it]
+hipporag: saved retrieval for 5a7643675542994ccc918747
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.30s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.30s/it]
+Error parsing field fact_after_filter: 1 validation error for Fact
+  Input should be a valid dictionary or instance of Fact [type=model_type, input_value='{"fact":[["giovanni tint...}\n\n[[ ## completed ]]', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/model_type.
+
+		On attempting to parse the value
+```
+{"fact":[["giovanni tinto brass","also known as","tinto brass"],["baltasar korm\u00e1kur","nationality","icelandic"]]}
+
+[[ ## completed ]]
+```
+hipporag: saved retrieval for 5a8762205542996e4f3087b8
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.10s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.10s/it]
+hipporag: saved retrieval for 5add95035542990dbb2f7e77
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.90s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.90s/it]
+hipporag: saved retrieval for 5adf099a5542992d7e9f927f
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.68s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.68s/it]
+hipporag: saved retrieval for 5ae33fa95542990afbd1e0f2
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.19s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.19s/it]
+hipporag: saved retrieval for 5a8d7edc55429941ae14dfdc
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.17s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.17s/it]
+hipporag: saved retrieval for 5a7aa0a55542990198eaf165
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.91s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.91s/it]
+hipporag: saved retrieval for 5ac23f5655429951e9e684d9
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.02s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.02s/it]
+hipporag: saved retrieval for 5adbe0df554299438c868cc0
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.16s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.16s/it]
+hipporag: saved retrieval for 5a8f799d55429918e830d22d
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.38s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.38s/it]
+hipporag: saved retrieval for 5a8501915542997175ce1f5a
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.57s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.57s/it]
+hipporag: saved retrieval for 5ae1412a55429920d523434c
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.56s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.56s/it]
+hipporag: saved retrieval for 5abb189e5542996cc5e49fa4
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.52s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.52s/it]
+hipporag: saved retrieval for 5a7652785542992db9473760
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.24s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.24s/it]
+hipporag: saved retrieval for 5a7e22ed5542995ed0d166a7
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.14s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.14s/it]
+hipporag: saved retrieval for 5adce3b95542990d50227d56
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.89s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.89s/it]
+hipporag: saved retrieval for 5a887898554299206df2b2a2
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.72s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.72s/it]
+hipporag: saved retrieval for 5a729fa15542994cef4bc397
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.14s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.15s/it]
+hipporag: saved retrieval for 5abd4f2e5542993062266c4b
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.19s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.19s/it]
+hipporag: saved retrieval for 5a8753d95542994846c1cd63
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.70s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.70s/it]
+hipporag: saved retrieval for 5a794f8155429970f5fffe95
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.94s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.94s/it]
+hipporag: saved retrieval for 5ae39fb85542990afbd1e197
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.52s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.52s/it]
+hipporag: saved retrieval for 5a762cf0554299109176e6a4
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.55s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.55s/it]
+hipporag: saved retrieval for 5a75f0bf5542994ccc91866b
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.75s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.75s/it]
+hipporag: saved retrieval for 5ac3d667554299076e296ca5
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.64s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.64s/it]
+hipporag: saved retrieval for 5a8b91d25542995d1e6f13fc
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.53s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.53s/it]
+hipporag: saved retrieval for 5a812cd555429926c1cdacfc
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.56s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.56s/it]
+hipporag: saved retrieval for 5ac4efa85542991943173a04
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.40s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.40s/it]
+hipporag: saved retrieval for 5a7b40cd5542995eb53be8d4
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.05s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.05s/it]
+hipporag: saved retrieval for 5ae34a225542992e3233c370
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.76s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.76s/it]
+hipporag: saved retrieval for 5ac2cb125542996773102626
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:07<00:00,  7.18s/it]Retrieving: 100%|██████████| 1/1 [00:07<00:00,  7.18s/it]
+hipporag: saved retrieval for 5a8230af554299676cceb227
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.37s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.37s/it]
+hipporag: saved retrieval for 5a79240955429974737f79a4
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.66s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.66s/it]
+hipporag: saved retrieval for 5ab66e1355429954757d32b2
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.60s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.60s/it]
+hipporag: saved retrieval for 5a8787915542996e4f30882e
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.78s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.78s/it]
+hipporag: saved retrieval for 5a8fa2955542992414482b11
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.88s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.88s/it]
+hipporag: saved retrieval for 5a728f745542991f9a20c4e6
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.51s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.51s/it]
+hipporag: saved retrieval for 5adc020a5542994650320c4c
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.45s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.45s/it]
+hipporag: saved retrieval for 5a7bd25a554299294a54ab13
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.57s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.57s/it]
+hipporag: saved retrieval for 5ae38b115542990afbd1e183
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.03s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.04s/it]
+hipporag: saved retrieval for 5a7e31c055429934daa2fbee
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.95s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.95s/it]
+hipporag: saved retrieval for 5ab510cb5542996a3a96a00f
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.57s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.57s/it]
+hipporag: saved retrieval for 5abd38285542993062266c19
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.91s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.91s/it]
+hipporag: saved retrieval for 5a761e855542994ccc9186e0
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.40s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.40s/it]
+hipporag: saved retrieval for 5ade17d255429939a52fe80e
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.35s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.36s/it]
+hipporag: saved retrieval for 5ae17a9b5542990adbacf7a2
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.56s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.56s/it]
+hipporag: saved retrieval for 5a710a915542994082a3e504
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.26s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.26s/it]
+hipporag: saved retrieval for 5a74ab6055429916b01641b9
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.14s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.14s/it]
+hipporag: saved retrieval for 5abf12f25542997719eab667
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.57s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.57s/it]
+hipporag: saved retrieval for 5ae074aa5542993d6555eb54
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.74s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.74s/it]
+hipporag: saved retrieval for 5adf82945542993344016ca4
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.28s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.28s/it]
+hipporag: saved retrieval for 5ae0d7bf5542990adbacf67b
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.93s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.93s/it]
+hipporag: saved retrieval for 5ab84c6955429916710eb021
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.02s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.02s/it]
+hipporag: saved retrieval for 5a738fb4554299623ed4abf9
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.65s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.65s/it]
+hipporag: saved retrieval for 5a7ab1b055429927d897bef4
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.54s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.54s/it]
+hipporag: saved retrieval for 5a8bc1b85542997f31a41db8
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.64s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.64s/it]
+hipporag: saved retrieval for 5a7c66d555429935c91b518f
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.19s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.23s/it]
+hipporag: saved retrieval for 5adfc77b554299603e4183ab
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.43s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.43s/it]
+hipporag: saved retrieval for 5a77720255429967ab10517f
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.96s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.96s/it]
+hipporag: saved retrieval for 5a85d4ad5542997175ce2050
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.41s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.41s/it]
+hipporag: saved retrieval for 5a831af855429954d2e2ec1e
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.31s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.31s/it]
+hipporag: saved retrieval for 5ae2e06d55429928c4239521
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.84s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.84s/it]
+hipporag: saved retrieval for 5a8e0cb85542995085b373b2
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.76s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.76s/it]
+hipporag: saved retrieval for 5ae022ab554299025d62a428
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.85s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.85s/it]
+hipporag: saved retrieval for 5a7c96765542990527d554d8
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.52s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.52s/it]
+hipporag: saved retrieval for 5ade286e5542997c77aded81
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.94s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.97s/it]
+hipporag: saved retrieval for 5adff4a555429925eb1afb91
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.83s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.83s/it]
+hipporag: saved retrieval for 5ab7fa4f5542993667794080
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.07s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.07s/it]
+hipporag: saved retrieval for 5a78d16455429974737f78bb
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.38s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.40s/it]
+hipporag: saved retrieval for 5a840e8a5542992ef85e239e
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.53s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.53s/it]
+hipporag: saved retrieval for 5abb61c0554299642a094a86
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.24s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.24s/it]
+hipporag: saved retrieval for 5a7dec305542995ed0d16679
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.82s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.82s/it]
+hipporag: saved retrieval for 5a8843a455429938390d3f0c
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.26s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.26s/it]
+hipporag: saved retrieval for 5a893fc855429951533612f0
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.98s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.99s/it]
+hipporag: saved retrieval for 5ade8ad95542992fa25da7b8
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.35s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.35s/it]
+hipporag: saved retrieval for 5adcd9fe5542990d50227d46
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.04s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.04s/it]
+hipporag: saved retrieval for 5a7a2dac5542990198eaf0b6
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.10s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.10s/it]
+hipporag: saved retrieval for 5a74bdce55429929fddd84e1
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.03s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.03s/it]
+hipporag: saved retrieval for 5abd81ff5542993062266cb3
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.97s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.99s/it]
+hipporag: saved retrieval for 5ac4f12d55429924173fb4f6
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.02s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.02s/it]
+hipporag: saved retrieval for 5a7542425542996c70cfaecc
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:05<00:00,  5.57s/it]Retrieving: 100%|██████████| 1/1 [00:05<00:00,  5.57s/it]
+hipporag: saved retrieval for 5adc2ae5554299438c868d64
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.73s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.73s/it]
+hipporag: saved retrieval for 5a74a62b55429916b01641a0
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.49s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.49s/it]
+hipporag: saved retrieval for 5a8340fd55429954d2e2ec6b
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.71s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.71s/it]
+hipporag: saved retrieval for 5adf53dc5542995534e8c791
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.45s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.45s/it]
+hipporag: saved retrieval for 5adc2f53554299438c868d6d
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.72s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.72s/it]
+hipporag: saved retrieval for 5ade1eda55429975fa854e71
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.05s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.06s/it]
+hipporag: saved retrieval for 5ae4d7fc5542990ba0bbb16f
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.44s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.44s/it]
+hipporag: saved retrieval for 5abd455c55429924427fcf5a
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.06s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.06s/it]
+hipporag: saved retrieval for 5ae1fced5542997283cd230e
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.41s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.41s/it]
+hipporag: saved retrieval for 5adc6c4c5542994650320ce0
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.97s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.97s/it]
+hipporag: saved retrieval for 5abd247e5542996e802b472f
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.57s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.57s/it]
+hipporag: saved retrieval for 5ab862f95542992aa3b8c8d4
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.95s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.95s/it]
+hipporag: saved retrieval for 5adcd4325542994d58a2f6ed
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.16s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.16s/it]
+hipporag: saved retrieval for 5ab29624554299545a2cf9b5
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.28s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.28s/it]
+hipporag: saved retrieval for 5ae3e84b5542996836b02bf0
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.94s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.94s/it]
+hipporag: saved retrieval for 5a7148d25542994082a3e766
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.45s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.45s/it]
+hipporag: saved retrieval for 5a8b2ccf55429971feec4665
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.93s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.93s/it]
+hipporag: saved retrieval for 5ae12bcc5542997b2ef7d11a
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.09s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.09s/it]
+hipporag: saved retrieval for 5a7a96555542990198eaf159
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.52s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.52s/it]
+hipporag: saved retrieval for 5a7145d55542994082a3e73c
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:05<00:00,  5.01s/it]Retrieving: 100%|██████████| 1/1 [00:05<00:00,  5.01s/it]
+hipporag: saved retrieval for 5a735c3a55429901807daff7
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:06<00:00,  6.66s/it]Retrieving: 100%|██████████| 1/1 [00:06<00:00,  6.66s/it]
+hipporag: saved retrieval for 5ae4ad3155429913cc2044cb
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:00<00:00,  8.97it/s]Retrieving: 100%|██████████| 1/1 [00:00<00:00,  8.94it/s]
+hipporag: saved retrieval for 5abdcad155429965af743e4d
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:00<00:00,  4.89it/s]Retrieving: 100%|██████████| 1/1 [00:00<00:00,  4.88it/s]
+hipporag: saved retrieval for 5ab9b4a555429970cfb8eb75
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.26s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.26s/it]
+hipporag: saved retrieval for 5a84b6e15542991dd0999daa
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.25s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.25s/it]
+hipporag: saved retrieval for 5ae4d0ff55429913cc204511
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.84s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.84s/it]
+hipporag: saved retrieval for 5ab5dcb95542992aa134a3b3
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.30s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.30s/it]
+hipporag: saved retrieval for 5ab96c93554299743d22eb63
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.61s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.61s/it]
+hipporag: saved retrieval for 5ae4bb1255429913cc2044e7
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.95s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.95s/it]
+hipporag: saved retrieval for 5a76404b5542994ccc91873d
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.89s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.90s/it]
+hipporag: saved retrieval for 5ac4f9db55429924173fb532
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.31s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.31s/it]
+hipporag: saved retrieval for 5a738b855542992d56e7e363
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.93s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.93s/it]
+hipporag: saved retrieval for 5a747a3755429974ef308c09
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.59s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.59s/it]
+hipporag: saved retrieval for 5abbee315542993f40c73c1d
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.29s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.29s/it]
+hipporag: saved retrieval for 5a8e341c5542995085b373d6
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.89s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.89s/it]
+hipporag: saved retrieval for 5adfec5f55429942ec259b8d
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.78s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.79s/it]
+hipporag: saved retrieval for 5a861ea85542994775f60700
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.82s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.82s/it]
+hipporag: saved retrieval for 5a835e215542992ef85e2296
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.13s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.13s/it]
+hipporag: saved retrieval for 5abdbf3755429933744ab818
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.70s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.70s/it]
+hipporag: saved retrieval for 5ac24ad7554299636651995a
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.25s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.25s/it]
+hipporag: saved retrieval for 5ac4a5de5542995c82c4ad6e
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.28s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.28s/it]
+hipporag: saved retrieval for 5a7f22005542993067513656
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.12s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.12s/it]
+hipporag: saved retrieval for 5ae0e183554299422ee9953f
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.23s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.23s/it]
+hipporag: saved retrieval for 5ae0159855429925eb1afc09
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.25s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.25s/it]
+hipporag: saved retrieval for 5a83ab355542990548d0b218
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.74s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.74s/it]
+hipporag: saved retrieval for 5a70f9335542994082a3e46a
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.10s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.10s/it]
+hipporag: saved retrieval for 5a89e95c5542992e4fca8474
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.62s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.62s/it]
+hipporag: saved retrieval for 5a8e5f1f5542995a26add4d6
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.51s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.52s/it]
+hipporag: saved retrieval for 5a8db42f5542994ba4e3dd11
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.69s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.70s/it]
+hipporag: saved retrieval for 5a7ce100554299683c1c63b5
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.16s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.16s/it]
+hipporag: saved retrieval for 5a79c1095542996c55b2dc62
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.85s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.85s/it]
+hipporag: saved retrieval for 5a8f876e5542997ba9cb32a1
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:05<00:00,  5.82s/it]Retrieving: 100%|██████████| 1/1 [00:05<00:00,  5.82s/it]
+hipporag: saved retrieval for 5a88b3b4554299206df2b336
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.15s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.15s/it]
+hipporag: saved retrieval for 5a77671255429966f1a36d21
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.65s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.65s/it]
+hipporag: saved retrieval for 5a884adb5542996e4f308938
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.08s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.08s/it]
+hipporag: saved retrieval for 5a7d70d45542990b8f50398a
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.85s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.85s/it]
+hipporag: saved retrieval for 5a7345ed5542992359bc32ce
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.76s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.76s/it]
+hipporag: saved retrieval for 5add60905542995b365fab1d
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.11s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.11s/it]
+hipporag: saved retrieval for 5ade5a645542997c77adee0d
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.89s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.89s/it]
+hipporag: saved retrieval for 5a888abc5542997e5c09a604
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.69s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.69s/it]
+hipporag: saved retrieval for 5a851b0d5542997175ce1f7f
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.19s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.19s/it]
+hipporag: saved retrieval for 5a7a1d305542990783324e66
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.03s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.03s/it]
+hipporag: saved retrieval for 5adbe27c55429947ff173854
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.18s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.18s/it]
+hipporag: saved retrieval for 5ab439f055429942dd415eef
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.34s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.34s/it]
+hipporag: saved retrieval for 5a7d119d5542995ed0d165d5
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.08s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.08s/it]
+hipporag: saved retrieval for 5a7a7dc15542994f819ef1f2
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.90s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.90s/it]
+hipporag: saved retrieval for 5a8a06455542992e4fca84db
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:05<00:00,  5.03s/it]Retrieving: 100%|██████████| 1/1 [00:05<00:00,  5.03s/it]
+hipporag: saved retrieval for 5a75447b55429974ef308cbf
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.33s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.33s/it]
+hipporag: saved retrieval for 5a7723fa55429966f1a36ca0
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.21s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.21s/it]
+hipporag: saved retrieval for 5a8460d5554299123d8c2229
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.02s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.02s/it]
+hipporag: saved retrieval for 5a8534305542997b5ce3ffc4
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.06s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.06s/it]
+hipporag: saved retrieval for 5abc7bc45542993a06baf8ef
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.28s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.28s/it]
+hipporag: saved retrieval for 5a76fda05542994aec3b71b0
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.89s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.89s/it]
+hipporag: saved retrieval for 5abff00c5542994516f45537
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.61s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.61s/it]
+hipporag: saved retrieval for 5a8511185542992a431d1aca
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.48s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.48s/it]
+hipporag: saved retrieval for 5a75fbe855429976ec32bcde
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:05<00:00,  5.45s/it]Retrieving: 100%|██████████| 1/1 [00:05<00:00,  5.45s/it]
+hipporag: saved retrieval for 5aba74ad55429955dce3ee35
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.60s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.60s/it]
+hipporag: saved retrieval for 5a7ced4355429909bec76895
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.58s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.58s/it]
+hipporag: saved retrieval for 5a77685e5542993569682d83
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.19s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.19s/it]
+hipporag: saved retrieval for 5a8a3dd55542995153361360
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.35s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.35s/it]
+hipporag: saved retrieval for 5a7a06525542990198eaf04f
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.16s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.16s/it]
+hipporag: saved retrieval for 5a7774e155429967ab10518d
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.62s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.62s/it]
+hipporag: saved retrieval for 5ac44b47554299194317396c
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.13s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.13s/it]
+hipporag: saved retrieval for 5ab28120554299449642c8cc
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.35s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.35s/it]
+hipporag: saved retrieval for 5ae4bcfc55429913cc2044eb
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.86s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.86s/it]
+hipporag: saved retrieval for 5ac24cc45542996366519963
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.43s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.43s/it]
+hipporag: saved retrieval for 5a81b92a5542995ce29dcc52
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.40s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.40s/it]
+hipporag: saved retrieval for 5ae0432a55429924de1b7081
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.39s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.40s/it]
+hipporag: saved retrieval for 5a7ca74c55429907fabeefe9
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.25s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.25s/it]
+hipporag: saved retrieval for 5ab57022554299637185c59e
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.10s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.10s/it]
+hipporag: saved retrieval for 5a70f4695542994082a3e435
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.96s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.96s/it]
+hipporag: saved retrieval for 5a8f55f9554299458435d5bd
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.82s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.82s/it]
+hipporag: saved retrieval for 5a87868c5542996e4f308828
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.42s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.42s/it]
+hipporag: saved retrieval for 5a900b575542995b44242099
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.99s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.99s/it]
+Error parsing field fact_after_filter: 1 validation error for Fact
+  Input should be a valid dictionary or instance of Fact [type=model_type, input_value='{"fact":[["joe orton","i...laywright and author"]}', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/model_type.
+
+		On attempting to parse the value
+```
+{"fact":[["joe orton","is associated with the adjective","ortonesque"],["ortonesque","describes work characterised by","dark yet farcical cynicism"],["joe orton","was an","english playwright and author"]}
+```
+hipporag: saved retrieval for 5a829fab55429954d2e2eb83
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.40s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.40s/it]
+hipporag: saved retrieval for 5a72ac8a5542992359bc3164
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:05<00:00,  5.53s/it]Retrieving: 100%|██████████| 1/1 [00:05<00:00,  5.53s/it]
+hipporag: saved retrieval for 5a7385c45542992d56e7e359
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.37s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.37s/it]
+hipporag: saved retrieval for 5a72aec45542994cef4bc3d7
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.14s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.14s/it]
+hipporag: saved retrieval for 5ae0b8bb55429924de1b7145
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.95s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.95s/it]
+hipporag: saved retrieval for 5adec53655429975fa854f87
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:11<00:00, 11.16s/it]Retrieving: 100%|██████████| 1/1 [00:11<00:00, 11.16s/it]
+hipporag: saved retrieval for 5adcfb5f5542990d50227d81
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.18s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.23s/it]
+hipporag: saved retrieval for 5ae0fe8855429945ae959495
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.10s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.10s/it]
+hipporag: saved retrieval for 5a83b1e75542990548d0b220
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  5.00s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  5.00s/it]
+hipporag: saved retrieval for 5ab9e477554299232ef4a25d
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:12<00:00, 12.13s/it]Retrieving: 100%|██████████| 1/1 [00:12<00:00, 12.13s/it]
+hipporag: saved retrieval for 5a8aed1755429950cd6afbf1
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.57s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.57s/it]
+hipporag: saved retrieval for 5a88651b55429938390d3f45
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.90s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.90s/it]
+hipporag: saved retrieval for 5a89ddf25542992e4fca83ff
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.13s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.13s/it]
+hipporag: saved retrieval for 5ac15f6c5542994d76dccdf3
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.35s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.35s/it]
+hipporag: saved retrieval for 5a84de255542991dd0999e06
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.45s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.45s/it]
+hipporag: saved retrieval for 5a7a70b355429941d65f2647
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.90s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.90s/it]
+hipporag: saved retrieval for 5a81028b55429938b614228a
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.59s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.59s/it]
+Error parsing field fact_after_filter: 1 validation error for Fact
+  Input should be a valid dictionary or instance of Fact [type=model_type, input_value='{"fact":[["hamdard unive...}\n\n[[ ## completed ]]', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/model_type.
+
+		On attempting to parse the value
+```
+{"fact":[["hamdard university","was founded in","1991"],["university of california santa barbara","is also known as","uc santa barbara"]]}
+
+[[ ## completed ]]
+```
+hipporag: saved retrieval for 5ab8494d55429916710eb016
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.64s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.64s/it]
+hipporag: saved retrieval for 5a84b6ed5542994c784dda18
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.85s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.85s/it]
+Error parsing field fact_after_filter: 1 validation error for Fact
+  Input should be a valid dictionary or instance of Fact [type=model_type, input_value='{"fact":[["harry sweet",...}\n\n[[ ## completed ]]', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/model_type.
+
+		On attempting to parse the value
+```
+{"fact":[["harry sweet","appeared in 57 films between","1919 and 1932"],["harry sweet","directed 54 films between","1920 and 1933"],["harry sweet","was an","american actor"],["john biddle","is also known as","john scott biddle"]]}
+
+[[ ## completed ]]
+```
+hipporag: saved retrieval for 5a81adfc55429903bc27b9a4
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.62s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.62s/it]
+hipporag: saved retrieval for 5a82a1ae55429954d2e2eb89
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.16s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.16s/it]
+hipporag: saved retrieval for 5a7458ff55429979e2882918
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.99s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.99s/it]
+hipporag: saved retrieval for 5abdf68c5542993f32c2a06b
+hipporag record 0: EM=0.00, F1=0.00
+hipporag record 1: EM=0.00, F1=0.00
+hipporag record 2: EM=1.00, F1=1.00
+hipporag record 3: EM=0.00, F1=0.43
+hipporag record 4: EM=0.00, F1=0.50
+hipporag record 5: EM=0.00, F1=0.00
+hipporag record 6: EM=1.00, F1=1.00
+hipporag record 7: EM=1.00, F1=1.00
+hipporag record 8: EM=1.00, F1=1.00
+hipporag record 9: EM=1.00, F1=1.00
+hipporag record 10: EM=1.00, F1=1.00
+hipporag record 11: EM=0.00, F1=0.67
+hipporag record 12: EM=1.00, F1=1.00
+hipporag record 13: EM=0.00, F1=0.00
+hipporag record 14: EM=1.00, F1=1.00
+hipporag record 15: EM=1.00, F1=1.00
+hipporag record 16: EM=1.00, F1=1.00
+hipporag record 17: EM=1.00, F1=1.00
+hipporag record 18: EM=0.00, F1=0.33
+hipporag record 19: EM=1.00, F1=1.00
+hipporag record 20: EM=1.00, F1=1.00
+hipporag record 21: EM=1.00, F1=1.00
+hipporag record 22: EM=0.00, F1=0.67
+hipporag record 23: EM=1.00, F1=1.00
+hipporag record 24: EM=1.00, F1=1.00
+hipporag record 25: EM=1.00, F1=1.00
+hipporag record 26: EM=0.00, F1=0.67
+hipporag record 27: EM=1.00, F1=1.00
+hipporag record 28: EM=1.00, F1=1.00
+hipporag record 29: EM=0.00, F1=0.50
+hipporag record 30: EM=1.00, F1=1.00
+hipporag record 31: EM=1.00, F1=1.00
+hipporag record 32: EM=1.00, F1=1.00
+hipporag record 33: EM=1.00, F1=1.00
+hipporag record 34: EM=0.00, F1=0.50
+hipporag record 35: EM=1.00, F1=1.00
+hipporag record 36: EM=1.00, F1=1.00
+hipporag record 37: EM=1.00, F1=1.00
+hipporag record 38: EM=1.00, F1=1.00
+hipporag record 39: EM=0.00, F1=0.80
+hipporag record 40: EM=1.00, F1=1.00
+hipporag record 41: EM=0.00, F1=0.00
+hipporag record 42: EM=1.00, F1=1.00
+hipporag record 43: EM=0.00, F1=0.75
+hipporag record 44: EM=1.00, F1=1.00
+hipporag record 45: EM=0.00, F1=0.80
+hipporag record 46: EM=0.00, F1=0.80
+hipporag record 47: EM=0.00, F1=0.40
+hipporag record 48: EM=0.00, F1=0.00
+hipporag record 49: EM=1.00, F1=1.00
+hipporag record 50: EM=1.00, F1=1.00
+hipporag record 51: EM=0.00, F1=0.00
+hipporag record 52: EM=0.00, F1=0.67
+hipporag record 53: EM=0.00, F1=0.00
+hipporag record 54: EM=0.00, F1=0.50
+hipporag record 55: EM=1.00, F1=1.00
+hipporag record 56: EM=1.00, F1=1.00
+hipporag record 57: EM=0.00, F1=0.00
+hipporag record 58: EM=0.00, F1=0.00
+hipporag record 59: EM=1.00, F1=1.00
+hipporag record 60: EM=1.00, F1=1.00
+hipporag record 61: EM=1.00, F1=1.00
+hipporag record 62: EM=1.00, F1=1.00
+hipporag record 63: EM=1.00, F1=1.00
+hipporag record 64: EM=1.00, F1=1.00
+hipporag record 65: EM=1.00, F1=1.00
+hipporag record 66: EM=1.00, F1=1.00
+hipporag record 67: EM=1.00, F1=1.00
+hipporag record 68: EM=1.00, F1=1.00
+hipporag record 69: EM=1.00, F1=1.00
+hipporag record 70: EM=1.00, F1=1.00
+hipporag record 71: EM=0.00, F1=0.00
+hipporag record 72: EM=1.00, F1=1.00
+hipporag record 73: EM=0.00, F1=0.00
+hipporag record 74: EM=1.00, F1=1.00
+hipporag record 75: EM=1.00, F1=1.00
+hipporag record 76: EM=1.00, F1=1.00
+hipporag record 77: EM=0.00, F1=0.67
+hipporag record 78: EM=1.00, F1=1.00
+hipporag record 79: EM=1.00, F1=1.00
+hipporag record 80: EM=1.00, F1=1.00
+hipporag record 81: EM=1.00, F1=1.00
+hipporag record 82: EM=1.00, F1=1.00
+hipporag record 83: EM=0.00, F1=0.00
+hipporag record 84: EM=1.00, F1=1.00
+hipporag record 85: EM=1.00, F1=1.00
+hipporag record 86: EM=1.00, F1=1.00
+hipporag record 87: EM=0.00, F1=0.29
+hipporag record 88: EM=1.00, F1=1.00
+hipporag record 89: EM=1.00, F1=1.00
+hipporag record 90: EM=0.00, F1=0.00
+hipporag record 91: EM=1.00, F1=1.00
+hipporag record 92: EM=1.00, F1=1.00
+hipporag record 93: EM=1.00, F1=1.00
+hipporag record 94: EM=1.00, F1=1.00
+hipporag record 95: EM=0.00, F1=0.20
+hipporag record 96: EM=1.00, F1=1.00
+hipporag record 97: EM=1.00, F1=1.00
+hipporag record 98: EM=1.00, F1=1.00
+hipporag record 99: EM=1.00, F1=1.00
+hipporag record 100: EM=1.00, F1=1.00
+hipporag record 101: EM=1.00, F1=1.00
+hipporag record 102: EM=0.00, F1=0.50
+hipporag record 103: EM=0.00, F1=0.00
+hipporag record 104: EM=0.00, F1=0.67
+hipporag record 105: EM=1.00, F1=1.00
+hipporag record 106: EM=1.00, F1=1.00
+hipporag record 107: EM=1.00, F1=1.00
+hipporag record 108: EM=1.00, F1=1.00
+hipporag record 109: EM=0.00, F1=0.00
+hipporag record 110: EM=0.00, F1=0.50
+hipporag record 111: EM=1.00, F1=1.00
+hipporag record 112: EM=0.00, F1=0.00
+hipporag record 113: EM=0.00, F1=0.67
+hipporag record 114: EM=1.00, F1=1.00
+hipporag record 115: EM=1.00, F1=1.00
+hipporag record 116: EM=0.00, F1=1.00
+hipporag record 117: EM=1.00, F1=1.00
+hipporag record 118: EM=1.00, F1=1.00
+hipporag record 119: EM=1.00, F1=1.00
+hipporag record 120: EM=0.00, F1=0.80
+hipporag record 121: EM=0.00, F1=0.00
+hipporag record 122: EM=1.00, F1=1.00
+hipporag record 123: EM=0.00, F1=0.67
+hipporag record 124: EM=1.00, F1=1.00
+hipporag record 125: EM=0.00, F1=0.00
+hipporag record 126: EM=0.00, F1=0.50
+hipporag record 127: EM=1.00, F1=1.00
+hipporag record 128: EM=1.00, F1=1.00
+hipporag record 129: EM=0.00, F1=0.80
+hipporag record 130: EM=0.00, F1=0.40
+hipporag record 131: EM=0.00, F1=0.00
+hipporag record 132: EM=1.00, F1=1.00
+hipporag record 133: EM=0.00, F1=0.00
+hipporag record 134: EM=0.00, F1=0.57
+hipporag record 135: EM=1.00, F1=1.00
+hipporag record 136: EM=1.00, F1=1.00
+hipporag record 137: EM=1.00, F1=1.00
+hipporag record 138: EM=1.00, F1=1.00
+hipporag record 139: EM=1.00, F1=1.00
+hipporag record 140: EM=0.00, F1=0.29
+hipporag record 141: EM=1.00, F1=1.00
+hipporag record 142: EM=1.00, F1=1.00
+hipporag record 143: EM=1.00, F1=1.00
+hipporag record 144: EM=0.00, F1=0.00
+hipporag record 145: EM=1.00, F1=1.00
+hipporag record 146: EM=0.00, F1=0.80
+hipporag record 147: EM=1.00, F1=1.00
+hipporag record 148: EM=1.00, F1=1.00
+hipporag record 149: EM=0.00, F1=0.00
+hipporag record 150: EM=1.00, F1=1.00
+hipporag record 151: EM=0.00, F1=0.67
+hipporag record 152: EM=1.00, F1=1.00
+hipporag record 153: EM=0.00, F1=0.00
+hipporag record 154: EM=0.00, F1=0.00
+hipporag record 155: EM=1.00, F1=1.00
+hipporag record 156: EM=1.00, F1=1.00
+hipporag record 157: EM=0.00, F1=0.67
+hipporag record 158: EM=0.00, F1=0.57
+hipporag record 159: EM=1.00, F1=1.00
+hipporag record 160: EM=1.00, F1=1.00
+hipporag record 161: EM=1.00, F1=1.00
+hipporag record 162: EM=1.00, F1=1.00
+hipporag record 163: EM=0.00, F1=0.00
+hipporag record 164: EM=1.00, F1=1.00
+hipporag record 165: EM=1.00, F1=1.00
+hipporag record 166: EM=1.00, F1=1.00
+hipporag record 167: EM=0.00, F1=0.00
+hipporag record 168: EM=1.00, F1=1.00
+hipporag record 169: EM=1.00, F1=1.00
+hipporag record 170: EM=0.00, F1=0.00
+hipporag record 171: EM=1.00, F1=1.00
+hipporag record 172: EM=1.00, F1=1.00
+hipporag record 173: EM=1.00, F1=1.00
+hipporag record 174: EM=1.00, F1=1.00
+hipporag record 175: EM=0.00, F1=0.25
+hipporag record 176: EM=1.00, F1=1.00
+hipporag record 177: EM=1.00, F1=1.00
+hipporag record 178: EM=1.00, F1=1.00
+hipporag record 179: EM=0.00, F1=0.50
+hipporag record 180: EM=1.00, F1=1.00
+hipporag record 181: EM=1.00, F1=1.00
+hipporag record 182: EM=1.00, F1=1.00
+hipporag record 183: EM=1.00, F1=1.00
+hipporag record 184: EM=0.00, F1=0.00
+hipporag record 185: EM=0.00, F1=0.00
+hipporag record 186: EM=0.00, F1=0.40
+hipporag record 187: EM=0.00, F1=0.00
+hipporag record 188: EM=1.00, F1=1.00
+hipporag record 189: EM=0.00, F1=0.00
+hipporag record 190: EM=0.00, F1=0.22
+hipporag record 191: EM=1.00, F1=1.00
+hipporag record 192: EM=1.00, F1=1.00
+hipporag record 193: EM=1.00, F1=1.00
+hipporag record 194: EM=0.00, F1=0.00
+hipporag record 195: EM=1.00, F1=1.00
+hipporag record 196: EM=0.00, F1=0.67
+hipporag record 197: EM=0.00, F1=0.67
+hipporag record 198: EM=0.00, F1=0.00
+hipporag record 199: EM=1.00, F1=1.00
+hipporag record 200: EM=1.00, F1=1.00
+hipporag record 201: EM=1.00, F1=1.00
+hipporag record 202: EM=0.00, F1=0.00
+hipporag record 203: EM=1.00, F1=1.00
+hipporag record 204: EM=1.00, F1=1.00
+hipporag record 205: EM=0.00, F1=0.00
+hipporag record 206: EM=0.00, F1=0.67
+hipporag record 207: EM=1.00, F1=1.00
+hipporag record 208: EM=1.00, F1=1.00
+hipporag record 209: EM=0.00, F1=0.00
+hipporag record 210: EM=1.00, F1=1.00
+hipporag record 211: EM=1.00, F1=1.00
+hipporag record 212: EM=0.00, F1=0.00
+hipporag record 213: EM=0.00, F1=0.00
+hipporag record 214: EM=1.00, F1=1.00
+hipporag record 215: EM=0.00, F1=0.17
+hipporag record 216: EM=0.00, F1=0.50
+hipporag record 217: EM=1.00, F1=1.00
+hipporag record 218: EM=0.00, F1=0.50
+hipporag record 219: EM=1.00, F1=1.00
+hipporag record 220: EM=0.00, F1=0.00
+hipporag record 221: EM=0.00, F1=0.80
+hipporag record 222: EM=0.00, F1=0.00
+hipporag record 223: EM=1.00, F1=1.00
+hipporag record 224: EM=0.00, F1=0.40
+hipporag record 225: EM=1.00, F1=1.00
+hipporag record 226: EM=1.00, F1=1.00
+hipporag record 227: EM=0.00, F1=0.67
+hipporag record 228: EM=0.00, F1=0.00
+hipporag record 229: EM=0.00, F1=0.80
+hipporag record 230: EM=1.00, F1=1.00
+hipporag record 231: EM=1.00, F1=1.00
+hipporag record 232: EM=0.00, F1=0.00
+hipporag record 233: EM=1.00, F1=1.00
+hipporag record 234: EM=1.00, F1=1.00
+hipporag record 235: EM=0.00, F1=0.00
+hipporag record 236: EM=1.00, F1=1.00
+hipporag record 237: EM=1.00, F1=1.00
+hipporag record 238: EM=0.00, F1=0.50
+hipporag record 239: EM=0.00, F1=0.00
+hipporag record 240: EM=1.00, F1=1.00
+hipporag record 241: EM=0.00, F1=0.80
+hipporag record 242: EM=1.00, F1=1.00
+hipporag record 243: EM=1.00, F1=1.00
+hipporag record 244: EM=1.00, F1=1.00
+hipporag record 245: EM=1.00, F1=1.00
+hipporag record 246: EM=0.00, F1=0.80
+hipporag record 247: EM=1.00, F1=1.00
+hipporag record 248: EM=0.00, F1=0.50
+hipporag record 249: EM=0.00, F1=0.67
+RESULTS /Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/hipporag/20261113T131151780752Z/results.jsonl

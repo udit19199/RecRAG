@@ -1,0 +1,806 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=8c09dcd5f5dda58c ===
+Gold sentences and facts:
+Sentence 0: Dollree Mapp was an employee in the illegal gambling rackets dominated by Cleveland rackets kingpin Shon Birns . On May 23 , 1957 , police officers in Cleveland , Ohio , received an anonymous tip by phone that Virgil Ogletree , a numbers operator who was wanted for questioning in the bombing of rival numbers racketeer and future boxing promoter Don King 's home three days earlier , might be found at Mapp 's house , as well as illegal betting slips and equipment employed in the `` California Gold '' numbers operation set up by Mapp 's boyfriend Edward Keeling . Three officers went to the home and asked for permission to enter , but Mapp , after consulting her lawyer by telephone , refused to admit them without a search warrant . Two officers left , and one remained , watching the house from across the street .
+  Fact 0.0: Dollree Mapp was an employee in the illegal gambling rackets.
+  Fact 0.1: The illegal gambling rackets were dominated by Cleveland rackets kingpin Shon Birns.
+  Fact 0.2: On May 23, 1957, police officers in Cleveland, Ohio, received an anonymous tip by phone.
+  Fact 0.3: The anonymous tip said Virgil Ogletree might be found at Dollree Mapp's house.
+  Fact 0.4: Virgil Ogletree was a numbers operator.
+  Fact 0.5: Virgil Ogletree was wanted for questioning in the bombing of Don King's home three days before the tip.
+  Fact 0.6: Don King was a rival numbers racketeer.
+  Fact 0.7: Don King was a future boxing promoter.
+  Fact 0.8: The anonymous tip said illegal betting slips might be found at Dollree Mapp's house.
+  Fact 0.9: The anonymous tip said equipment employed in the "California Gold" numbers operation might be found at Dollree Mapp's house.
+  Fact 0.10: The "California Gold" numbers operation was set up by Dollree Mapp's boyfriend Edward Keeling.
+  Fact 0.11: Edward Keeling was Dollree Mapp's boyfriend.
+  Fact 0.12: Three officers went to Dollree Mapp's home.
+  Fact 0.13: The three officers asked for permission to enter the home.
+  Fact 0.14: Dollree Mapp consulted her lawyer by telephone.
+  Fact 0.15: Dollree Mapp refused to admit the officers without a search warrant.
+  Fact 0.16: Two officers left.
+  Fact 0.17: One officer remained, watching the house from across the street.
+
+Retrieved items:
+<item 1>
+Mapp v. Ohio
+The Supreme Court accomplished this by use of a principle known as selective incorporation ; in Mapp this involved the incorporation of the provisions , as
+interpreted by the Court , of the Fourth Amendment which are applicable only to actions of the federal government into the Fourteenth Amendment due process
+clause which is applicable to actions of the states . Contents ( hide ) 1 Circumstances of the case 2 Decision 3 See also 4 References 5 Further reading 6
+External links Circumstances of the case ( edit ) This section needs additional citations for verification . Please help improve this article by adding
+citations to reliable sources . Unsourced material may be challenged and removed . ( October 2017 ) ( Learn how and when to remove this template message )
+Dollree Mapp was an employee in the illegal gambling rackets dominated by Cleveland rackets kingpin Shon Birns .
+</item 1>
+
+<item 2>
+Mapp v. Ohio
+ISBN 0 - 8204 - 7267 - 0 . External links ( edit ) Wikisource has original text related to this article : Mapp v. Ohio Archival source documents relating to the
+Mapp case at Cleveland Memory Dollree Mapp , Who Defied Police Search in Landmark Case , Is Dead - New York Times `` Supreme Court Landmark Case Mapp v. Ohio ''
+from C - SPAN 's Landmark Cases : 12 Historic Supreme Court Decisions ( hide ) United States 4th Amendment case law Scope of the Fourth Amendment What
+constitutes a search ? Ex parte Jackson ( 1878 ) Boyd v. United States ( 1886 ) Gouled v. United States ( 1921 ) Burdeau v. McDowell ( 1921 ) Hester v. United
+States ( 1924 ) United States v. Lee ( 1927 ) Olmstead v. United States ( 1928 ) Goldman v. United States ( 1942 ) On Lee v. United States ( 1952 ) Abel v.
+United States ( 1960 ) Silverman v. United States ( 1961 ) Lewis v.
+</item 2>
+
+<item 3>
+Mapp v. Ohio
+On May 23 , 1957 , police officers in Cleveland , Ohio , received an anonymous tip by phone that Virgil Ogletree , a numbers operator who was wanted for
+questioning in the bombing of rival numbers racketeer and future boxing promoter Don King 's home three days earlier , might be found at Mapp 's house , as well
+as illegal betting slips and equipment employed in the `` California Gold '' numbers operation set up by Mapp 's boyfriend Edward Keeling . Three officers went
+to the home and asked for permission to enter , but Mapp , after consulting her lawyer by telephone , refused to admit them without a search warrant . Two
+officers left , and one remained , watching the house from across the street . Thirteen hours later , four cars full of police arrived and knocked on the door .
+When she did n't answer , they forced the door . Mapp asked to see the alleged warrant and was shown a piece of paper which she snatched away from an officer ,
+putting it inside her dress . The officers struggled with Mapp and recovered the piece of paper which was not seen by her or her lawyers again , and was not
+introduced as evidence in any of the ensuing court proceedings .
+</item 3>
+
+<item 4>
+Mapp v. Ohio
+Mapp v. Ohio - wikipedia Mapp v. Ohio Jump to : navigation , search Mapp v. Ohio Supreme Court of the United States Argued March 29 , 1961 Decided June 19 ,
+1961 Full case name Dollree Mapp v. State of Ohio Citations 367 U.S. 643 ( more ) 81 S. Ct. 1684 ; 6 L. Ed . 2d 1081 ; 1961 U.S. LEXIS 812 ; 86 Ohio L. Abs. 513
+; 16 Ohio Op . 2d 384 ; 84 A.L.R. 2d 933 Prior history Defendant convicted , Cuyahoga County , Ohio Court of Common Pleas ; affirmed , Ohio Court of Appeals ;
+affirmed , Ohio Supreme Court 166 N.E. 2d 387 ( Ohio 1960 ) Subsequent history Rehearing denied , 368 U.S. 871 ( 1961 ) Holding The Fourth Amendment prohibition
+against unreasonable searches and seizures , as applied to the states through the Fourteenth , excludes unconstitutionally obtained evidence from use in
+criminal prosecutions . Ohio Supreme Court reversed .
+</item 4>
+
+<item 5>
+Mapp v. Ohio
+Mapp was arrested , charged , and cleared on a misdemeanor charge of possessing numbers paraphernalia ; but several months later , after she refused to testify
+against Shon Birns , Edward Keeling and their associates at their trial that October for the attempted shakedown of Don King , she was prosecuted for possession
+of the books , found guilty at a 1958 trial of `` knowingly having had in her possession and under her control certain lewd and lascivious books , pictures ,
+and photographs in violation of 2905.34 of Ohio 's Revised Code '' , and sentenced to one to seven years in prison . Mapp then appealed her case to the Supreme
+Court , on the grounds that the police had no probable cause to suspect her of having the books . She stated that the 4th Amendment should be incorporated to
+the state and local level . She argued that the police could n't use the books as evidence in trial because they were found without a warrant and therefore
+illegally recovered . Mapp is the first to call upon this law . Decision ( edit ) The U.S. Supreme Court voted 5 - 3 in favor of Mapp .
+</item 5>
+
+<item 6>
+Mapp v. Ohio
+23 , 1957 , p. 1 . Jump up ^ http://www.infoplease.com/us/supreme-court/cases/ar19.html Further reading ( edit ) Long , Carolyn ( 2006 ) . Mapp v. Ohio :
+Guarding Against Unreasonable Searches and Seizures . University Press of Kansas . ISBN 0 - 7006 - 1441 - 9 . Stewart , Potter ( 1983 ) . `` The Road to Mapp v.
+Ohio and beyond : The Origins , Development and Future of the Exclusionary Rule in Search - and - Seizure Cases '' . Columbia Law Review . 83 ( 6 ) : 1365 --
+1404 . doi : 10.2307 / 1122492 . JSTOR 1122492 . Zotti , Priscilla H. Machado ( 2005 ) . Injustice for All : Mapp vs. Ohio and the Fourth Amendment . New York :
+Peter Lang . ISBN 0 - 8204 - 7267 - 0 .
+</item 6>
+
+<item 7>
+Mapp v. Ohio
+§ 1983 Monroe v. Pape ( 1961 ) Malley v. Briggs ( 1986 ) ( hide ) Incorporation against States Unreasonable search and seizure Wolf v. Colorado ( 1949 ) Rochin
+v. California ( 1952 ) Irvine v. California ( 1954 ) Elkins v. United States ( 1960 ) Mapp v. Ohio ( 1961 ) Warrant requirements Ker v. California ( 1963 )
+Aguilar v. Texas ( 1964 ) Retrieved from `` https://en.wikipedia.org/w/index.php?title=Mapp_v._Ohio&oldid=819300745 '' Categories : United States Supreme Court
+decisions that overrule a prior Supreme Court decision Cuyahoga County , Ohio United States Supreme Court cases United States Fourth Amendment case law 20th
+century American trials 1961 in United States case law Incorporation case law American Civil Liberties Union litigation United States Supreme Court cases of the
+Warren Court Cleveland Division of Police Hidden categories : Articles needing additional references from October 2017 All articles needing additional
+references Talk Contents About Wikipedia Simple English Edit links This page was last edited on 8 January 2018 , at 16 : 31 .
+</item 7>
+
+<item 8>
+Mapp v. Ohio
+When asked about the warrant during oral argument at the Supreme Court , the Cleveland prosecutor arguing the case cautiously deflected the question , which the
+court did not press . As the search of Mapp 's second - floor , 2 - bedroom apartment began , police handcuffed her for being belligerent . The police searched
+the house thoroughly , and discovered Ogletree , who was subsequently cleared on the bombing charge , hiding in the apartment of the downstairs tenant , Minerva
+Tate . In the search of Mapp 's apartment and in a footlocker in the basement of the house police found a quantity of `` California Gold '' betting slips and
+paraphernalia . They also found a pistol and a small quantity of pornographic books and pictures which Mapp stated a previous tenant named Morris Jones had left
+behind .
+</item 8>
+
+<item 9>
+Mapp v. Ohio
+Supreme Court voted 5 - 3 in favor of Mapp . The Court overturned the conviction , and five justices found that the States were bound to exclude evidence seized
+in violation of the 4th Amendment . This ruling officially applied the exclusionary rule to the states . See also ( edit ) United States Bill of Rights Fruit of
+the poisonous tree Exclusionary rule References ( edit ) Jump up ^ Zotti , Priscilla . Injustice for All ( Peter Lang , 2005 ) . Jump up ^ Mapp v. Ohio , 367
+U.S. 643 ( U.S. 1961 ) . Jump up ^ Duignan , Brian ( 2012 - 05 - 25 ) . `` Mapp v. Ohio '' . Encyclopædia Britannica Online . Encyclopædia Britannica Inc .
+Retrieved March 19 , 2014 . Jump up ^ https://www.law.cornell.edu/supremecourt/text/367/643#writing - Jump up ^ Williams , Bob . `` Dolly Mapp Sheds Glamour Gal
+Role '' , Cleveland Call and Post , Nov.
+</item 9>
+
+<item 10>
+Mapp v. Ohio
+Ohio Supreme Court reversed . Court membership Chief Justice Earl Warren Associate Justices Hugo Black Felix Frankfurter William O. Douglas Tom C. Clark John M.
+Harlan II William J. Brennan , Jr . Charles E. Whittaker Potter Stewart Case opinions Majority Clark , joined by Warren , Black , Douglas , Brennan Concurrence
+Black Concurrence Douglas Concurrence Stewart Dissent Harlan , joined by Frankfurter , Whittaker Laws applied U.S. Const . amends. IV , XIV This case overturned
+a previous ruling or rulings Wolf v. Colorado ( 1949 ) Mapp v. Ohio , 367 U.S. 643 ( 1961 ) , was a landmark case in criminal procedure , in which the United
+States Supreme Court decided that evidence obtained in violation of the Fourth Amendment , which protects against `` unreasonable searches and seizures , '' may
+not be used in state law criminal prosecutions in state courts , as well as in federal criminal law prosecutions in federal courts as had previously been the
+law .
+</item 10>
+=== END ITEM id=8c09dcd5f5dda58c ===
+
+=== ITEM id=19a76d1d6271c010 ===
+Gold sentences and facts:
+Sentence 0: A board of directors is a recognized group of people who jointly oversee the activities of an organization , which can be either a for - profit business , nonprofit organization , or a government agency . Such a board 's powers , duties , and responsibilities are determined by government regulations ( including the jurisdiction 's corporations law ) and the organization 's own constitution and bylaws . These authorities may specify the number of members of the board , how they are to be chosen , and how often they are to meet .
+  Fact 0.0: A board of directors is a recognized group of people.
+  Fact 0.1: A board of directors jointly oversees the activities of an organization.
+  Fact 0.2: An organization overseen by a board of directors can be a for-profit business, a nonprofit organization, or a government agency.
+  Fact 0.3: A board's powers, duties, and responsibilities are determined by government regulations, including the jurisdiction's corporations law.
+  Fact 0.4: A board's powers, duties, and responsibilities are determined by the organization's own constitution and bylaws.
+  Fact 0.5: The authorities over a board may specify the number of members of the board.
+  Fact 0.6: The authorities over a board may specify how board members are chosen.
+  Fact 0.7: The authorities over a board may specify how often the board is to meet.
+
+Retrieved items:
+<item 1>
+Board of directors
+Most organizations have adopted Robert 's Rules of Order as its guide to supplement its own rules . In this book , the rules for conducting board meetings may
+be less formal if there is no more than about a dozen board members present . An example of the informality is that motions are not required if it 's clear what
+is being discussed . Size ( edit ) Historically , nonprofit boards have not uncommonly had large boards with up to twenty - four members , but a modern trend is
+to have smaller boards as small as six or seven people . Studies suggest that after seven people , each additional person reduces the effectiveness of group -
+decision - making . Non-corporate boards ( edit ) The role and responsibilities of a board of directors vary depending on the nature and type of business entity
+and the laws applying to the entity ( see types of business entity ) . For example , the nature of the business entity may be one that is traded on a public
+market ( public company ) , not traded on a public market ( a private , limited or closely held company ) , owned by family members ( a family business ) , or
+exempt from income taxes ( a non-profit , not for profit , or tax - exempt entity ) .
+</item 1>
+
+<item 2>
+Board of directors
+The board of directors appoints the chief executive officer of the corporation and sets out the overall strategic direction . In corporations with dispersed
+ownership , the identification and nomination of directors ( that shareholders vote for or against ) are often done by the board itself , leading to a high
+degree of self - perpetuation . In a non-stock corporation with no general voting membership , the board is the supreme governing body of the institution ; its
+members are sometimes chosen by the board itself . Contents ( hide ) 1 Terminology 2 Roles 3 Directors 3.1 Inside director 3.2 Outside director 3.3 Terminology
+4 Process and structure 4.1 Board meetings 4.2 Size 5 Non-corporate boards 5.1 Membership organizations 6 Corporations 6.1 Governance 6.2 Two - tier system 6.3
+History 6.4 Election and removal 6.5 Exercise of powers 6.6 Duties 6.6. 1 `` Proper purpose '' 6.6. 2 `` Unfettered discretion '' 6.6. 3 `` Conflict of duty and
+interest '' 6.6.
+</item 2>
+
+<item 3>
+Board of directors
+Process and structure ( edit ) The process for running a board , sometimes called the board process , includes the selection of board members , the setting of
+clear board objectives , the dissemination of documents or board package to the board members , the collaborative creation of an agenda for the meeting , the
+creation and follow - up of assigned action items , and the assessment of the board process through standardized assessments of board members , owners , and
+CEOs . The science of this process has been slow to develop due to the secretive nature of the way most companies run their boards , however some
+standardization is beginning to develop . Some who are pushing for this standardization in the USA are the National Association of Corporate Directors ,
+McKinsey Consulting and The Board Group . Board meetings ( edit ) A board of directors conducts its meetings according to the rules and procedures contained in
+its governing documents . These procedures may allow the board to conduct its business by conference call or other electronic means . They may also specify how
+a quorum is to be determined . Most organizations have adopted Robert 's Rules of Order as its guide to supplement its own rules .
+</item 3>
+
+<item 4>
+Board of directors
+Board of directors - wikipedia Board of directors Jump to : navigation , search `` Board Room '' and `` Board of Trustees '' redirect here . For other uses ,
+see Board Room ( disambiguation ) and Board of Trustees ( disambiguation ) . A meeting of a board of directors of the Leipzig -- Dresden Railway Company in 1852
+A board of directors is a recognized group of people who jointly oversee the activities of an organization , which can be either a for - profit business ,
+nonprofit organization , or a government agency . Such a board 's powers , duties , and responsibilities are determined by government regulations ( including
+the jurisdiction 's corporations law ) and the organization 's own constitution and bylaws . These authorities may specify the number of members of the board ,
+how they are to be chosen , and how often they are to meet . In an organization with voting members , the board is accountable to , and might be subordinate to
+, the organization 's full membership , which usually vote for the members of the board . In a stock corporation , non-executive directors are voted for by the
+shareholders and the board is the highest authority in the management of the corporation .
+</item 4>
+
+<item 5>
+Board of directors
+3 `` Conflict of duty and interest '' 6.6. 3.1 Transactions with the company 6.6. 3.2 Use of corporate property , opportunity , or information 6.6. 3.3
+Competing with the company 6.6. 4 Common law duties of care and skill 6.6. 5 Remedies for breach of duty 6.6. 6 Current trends 6.7 United States 6.7. 1 Sarbanes
+-- Oxley Act 6.7. 2 Size 6.7. 3 Committees 6.7. 4 Compensation 6.8 Criticism 7 See also 8 Notes 9 References 9.1 Citations 9.2 Sources 10 External links
+Terminology ( edit ) Other names include board of directors and advisors , board of governors , board of managers , board of regents , board of trustees , or
+board of visitors . It may also be called `` the executive board '' and is often simply referred to as `` the board '' . Roles ( edit ) Business administration
+Management of a business Accounting ( show ) Management accounting Financial accounting Financial audit Business entities ( show ) Cooperative Corporation
+</item 5>
+
+<item 6>
+Board of directors
+According to Investopedia , some analysts think the ideal size is seven . State law may specify a minimum number of directors , maximum number of directors ,
+and qualifications for directors ( e.g. whether board members must be individuals or may be business entities ) . Committees ( edit ) While a board may have
+several committees , two -- the compensation committee and audit committee -- are critical and must be made up of at least three independent directors and no
+inside directors . Other common committees in boards are nominating and governance . Compensation ( edit ) Directors of Fortune 500 companies received median
+pay of $234,000 in 2011 . Directorship is a part - time job . A recent National Association of Corporate Directors study found directors averaging just 4.3
+hours a week on board work . Surveys indicate that about 20 % of nonprofit foundations pay their board members , and 2 % of American nonprofit organizations do
+. 80 % of nonprofit organizations require board members to personally contribute to the organization , as BoardSource recommends . This percentage has increased
+in recent years .
+</item 6>
+
+<item 7>
+Board of directors
+( eds ) , Comparative Corporate Governance : The State of the Art and Emerging Research ( Clarendon 1998 ) KJ Hopt and PC Leyens , ' Board Models in Europe --
+Recent Developments of Internal Corporate Governance Structures in Germany , the United Kingdom , France , and Italy ' ( 2004 ) EGCI Working Paper Robert ,
+Henry M. ; et al. ( 2011 ) . Robert 's Rules of Order Newly Revised ( 11th ed . ) . Philadelphia , PA : Da Capo Press . ISBN 978 - 0 - 306 - 82020 - 5 .
+Archived from the original on 26 July 2017 . External links ( edit ) Web site of the Board of a large U.S. university , illustrating a typical board 's
+composition , duties , concerns , etc . Guidance on director 's duties ( Lemon & Co ) National Association of Corporate Directors European Directors and Board
+Members Association Corporate Governance Board Leadership Training , Global Corporate Governance Forum BoardofDirectors.com.
+</item 7>
+
+<item 8>
+Board of directors
+^ Jump up to : Robert 2011 , p. 481 - 483 . Jump up ^ McNamara , Carter . `` Overview of Roles and Responsibilities of Corporate Board of Directors '' . Free
+Management Library . Authenticity Consulting , LLC . Retrieved 2008 - 01 - 26 . Jump up ^ `` Basic Role of the Board '' . Governance Basics . Institute on
+Governance ( Canada ) . Archived from the original on 30 December 2007 . Retrieved 2008 - 01 - 27 . ^ Jump up to : Robert 2011 , p. 484 . Jump up ^ This section
+was developed from numerous definitions in USLegal.com , BusinessDictionary.com , Dictionary.com , The Free Dictionary by Farlex ( `` inside director '' ; ``
+executive director '' ; `` outside director '' ; `` nonexecutive director '' ) , Macmillan Dictionary , and Economics-dictionary.com . Jump up ^ `` Executive
+Director '' . Investopedia . Retrieved 24 May 2013 . Jump up ^ `` Outside Director '' . Investopedia . Retrieved 24 May 2013 .
+</item 8>
+
+<item 9>
+Board of directors
+There are numerous types of business entities available throughout the world such as a corporation , limited liability company , cooperative , business trust ,
+partnership , private limited company , and public limited company . Much of what has been written about boards of directors relates to boards of directors of
+business entities actively traded on public markets . More recently , however , material is becoming available for boards of private and closely held businesses
+including family businesses . A board - only organization is one whose board is self - appointed , rather than being accountable to a base of members through
+elections ; or in which the powers of the membership are extremely limited . Membership organizations ( edit ) In membership organizations , such as a society
+made up of members of a certain profession or one advocating a certain cause , a board of directors may have the responsibility of running the organization in
+between meetings of the membership , especially if the membership meets infrequently , such as only at an annual general meeting . The amount of powers and
+authority delegated to the board depend on the bylaws and rules of the particular organization . Some organizations place matters exclusively in the board 's
+control while in others , the general membership retains full power and the board can only make recommendations .
+</item 9>
+
+<item 10>
+Board of directors
+The setup of a board of directors vary widely across organizations and may include provisions that are applicable to corporations , in which the `` shareholders
+'' are the members of the organization . A difference may be that the membership elects the officers of the organization , such as the president and the
+secretary , and the officers become members of the board in addition to the directors and retain those duties on the board . The directors may also be
+classified as officers in this situation . There may also be ex-officio members of the board , or persons who are members due to another position that they hold
+. These ex-officio members have all the same rights as the other board members . Members of the board may be removed before their term is complete . Details on
+how they can be removed are usually provided in the bylaws . If the bylaws do not contain such details , the section on disciplinary procedures in Robert 's
+Rules of Order may be used . Corporations ( edit ) In a publicly held company , directors are elected to represent and are legally obligated as fiduciaries to
+represent owners of the company -- the shareholders / stockholders .
+</item 10>
+=== END ITEM id=19a76d1d6271c010 ===
+
+=== ITEM id=a6d34d3d73c7e5ee ===
+Gold sentences and facts:
+Sentence 0: Taron Egerton as Johnny , a teenage gorilla who wants to sing , though his father would rather have him follow his criminal footsteps .
+  Fact 0.0: Taron Egerton plays Johnny.
+  Fact 0.1: Johnny is a teenage gorilla.
+  Fact 0.2: Johnny wants to sing.
+  Fact 0.3: Johnny's father would rather have him follow his criminal footsteps.
+
+Retrieved items:
+<item 1>
+Sing (2016 American film)
+Universal now has `` Max '' and `` Lunch '' set up at Illumination MacGuff . Jump up ^ Kilday , Gregg ( December 9 , 2016 ) . `` Illumination 's Chris
+Meledandri Talks Success Secrets , Rumors He 'll Head DreamWorks '' . The Hollywood Reporter . Retrieved January 22 , 2017 . Jump up ^ Keslassy , Elsa ( 2
+December 2016 ) . `` Oscar 's French Animation Connection Draws on Deep Talent Pool '' . Jump up ^ Grobar , Matt ( December 5 , 2016 ) . `` ' Sing ' Director
+Garth Jennings On Working With `` Wizards , '' The Learning Curve Of His Feature Animation Debut `` . Deadline . Retrieved December 7 , 2016 . Jump up ^ Hammond
+, Pete ( August 23 , 2016 ) . `` Universal & Illumination To Launch ' Sing ' With Live Jennifer Hudson And Tori Kelly Performances At Toronto '' . Deadline .
+Retrieved September 11 , 2016 . Jump up ^ McClintock , Pamela ( January 15 , 2014 ) .
+</item 1>
+
+<item 2>
+Sing (2016 American film)
+The animation was created entirely in France by Illumination MacGuff . Soundtrack ( edit ) Main article : Sing : Original Motion Picture Soundtrack A soundtrack
+album for the film was released on December 21 , 2016 . Release ( edit ) The almost complete film was screened as a work in progress beginning September 11 ,
+2016 at the Toronto International Film Festival . Universal Studios released the film on December 21 , 2016 . Home Media ( edit ) Sing was released on Blu - ray
+, Blu - ray 3D , Ultra HD Blu - ray and DVD on March 21 , 2017 . It includes three short films : Gunter Babysits , Love at First Sight , and Eddie 's Life Coach
+. In Gunter Babysits , Gunter offers to watch over Rosita and Norman 's piglets while they are away as he works to prove himself to be a good babysitter . In
+Love at First Sight , Johnny sets Miss Crawly up with an online dating website where she manages to score a date with a lizard named Herman .
+</item 2>
+
+<item 3>
+Sing (2016 American film)
+It was directed and written by Garth Jennings , co-directed by Christophe Lourdelet and starring the voices of Matthew McConaughey , Reese Witherspoon , Seth
+MacFarlane , Scarlett Johansson , John C. Reilly , Taron Egerton , and Tori Kelly . The film is about a group of anthropomorphic animals that enter a singing
+competition , hosted by a koala hoping to save his theater . The film includes more than 60 songs from famous artists and also has an original song by Stevie
+Wonder and Ariana Grande called `` Faith , '' which was nominated for a Golden Globe . It screened on the Toronto International Film Festival on September 11 ,
+2016 , premiered at Microsoft Theater on December 3 , 2016 and was released in the United States on December 21 , 2016 , by Universal Pictures . The film
+received generally positive reviews and grossed $634 million worldwide . Along with The Secret Life of Pets , it marked the first time that Illumination
+Entertainment released two feature films in the same year . A sequel , entitled Sing 2 , has been announced for a release on December 25 , 2020 .
+</item 3>
+
+<item 4>
+Sing (2016 American film)
+Production ( edit ) In January 2014 , it was announced that Garth Jennings would write and direct an animated comedy film for Universal Pictures and
+Illumination Entertainment , about `` courage , competition and carrying a tune , '' which was originally titled Lunch , and then retitled as Sing . On January
+14 , 2015 , Matthew McConaughey was cast in the film 's lead voice role . Chris Meledandri and Janet Healy produced the film . On June 17 , 2015 , it was
+confirmed that McConaughey 's character is named Buster and that John C. Reilly would voice Eddie , a sheep and Buster 's best friend . In November 2015 , it
+was announced that Reese Witherspoon , Seth MacFarlane , Scarlett Johansson , Tori Kelly and Taron Egerton had joined the cast of the film . The film features
+65 pop songs , the rights to which cost 15 percent of the film 's $75 million budget . The animation was created entirely in France by Illumination MacGuff .
+</item 4>
+
+<item 5>
+Sing (2016 American film)
+References ( edit ) ^ Jump up to : Felperin , Leslie ( September 11 , 2016 ) . `` ' Sing ' : Film Review '' . The Hollywood Reporter . Retrieved September 12 ,
+2016 . ^ Jump up to : `` Sing ( 2016 ) '' . Box Office Mojo . Retrieved July 10 , 2017 . ^ Jump up to : Kit , Borys ( January 14 , 2015 ) . `` Matthew
+McConaughey to Star in Illumination Animated Film ( Exclusive ) '' . The Hollywood Reporter . Retrieved August 3 , 2015 . Jump up ^ Amidi , Amid ( September 9 ,
+2016 ) . `` A Complete List of Every Song in Illumination 's ' Sing ' '' . Cartoon Brew . Retrieved December 28 , 2016 . ^ Jump up to : Truitt , Brian (
+November 10 , 2015 ) . `` Sneak peek : A-list animals ' SING ' together '' . USA Today . Retrieved November 11 , 2015 .
+</item 5>
+
+<item 6>
+Graph query row:
+film: Sing
+johnny: Johnny
+johnny_type: ['__KGBuilder__', '__Entity__', 'Thing']
+film_relationship: RELATED_TO
+voice_actor: Taron Egerton
+actor_relationship: RELATED_TO
+role: None
+context: None
+fact: None
+</item 6>
+
+<item 7>
+Sing (2016 American film)
+USA Today . Retrieved November 11 , 2015 . ^ Jump up to : Hopewell , John ( June 17 , 2015 ) . `` Annecy : Chris Meledandri on Matthew McConaughey as a Koala
+Legit Theater Owner , ' The Grinch ' '' . Variety . Retrieved August 3 , 2015 . ^ Jump up to : Trumbore , Dave ( November 11 , 2015 ) . `` Meet the Animated
+Animals of Illumination Entertainment 's 2016 Musical Comedy , ' Sing ' '' . Collider . Retrieved November 12 , 2015 . Jump up ^ Buxton , Adam ( April 14 , 2016
+) . `` EP. 16 - Pub Walk With Garth Jennings '' . soundcloud.com . Retrieved April 17 , 2016 . Jump up ^ Yuen , Jenny ( September 11 , 2016 ) . `` TIFF 2016 :
+Matthew McConaughey optimistic about ' Sing ' '' . Toronto Sun . Retrieved September 12 , 2016 .
+</item 7>
+
+<item 8>
+Sing (2016 American film)
+Toronto Sun . Retrieved September 12 , 2016 . Jump up ^ `` Sing - Full Cast and Credits '' . Hollywood.com . Retrieved November 30 , 2016 . Jump up ^ Weintraub
+, Steve ' Frosty ' ( 2016 - 12 - 19 ) . `` Garth Jennings on Getting Edgar Wright and Wes Anderson to Provide Voices in ' Sing ' '' . Collider . Retrieved 2017
+- 11 - 09 . Jump up ^ `` ' Despicable Me 3 ′ Set For June 2017 Release ; ' Dr. Seuss ' How The Grinch Stole Christmas ' Arrives Five Months Later '' . Deadline
+. January 15 , 2014 . Retrieved January 16 , 2014 . Jump up ^ Hopewell , John ( January 8 , 2014 ) . `` France Fights Bidding War to Lure Hollywood Filmmakers
+'' . Variety . Retrieved January 9 , 2014 . Universal now has `` Max '' and `` Lunch '' set up at Illumination MacGuff .
+</item 8>
+
+<item 9>
+Sing (2016 American film)
+Sing ( 2016 American film ) - wikipedia Sing ( 2016 American film ) Jump to : navigation , search Sing Theatrical release poster Directed by Garth Jennings
+Produced by Chris Meledandri Janet Healy Written by Garth Jennings Starring Matthew McConaughey Reese Witherspoon Seth MacFarlane Scarlett Johansson John C.
+Reilly Taron Egerton Tori Kelly Music by Joby Talbot Edited by Gregory Perler Production company Illumination Entertainment Distributed by Universal Pictures
+Release date September 11 , 2016 ( 2016 - 09 - 11 ) ( TIFF ) December 21 , 2016 ( 2016 - 12 - 21 ) ( United States ) Running time 108 minutes Country United
+States Language English Budget $75 million Box office $634.1 million Sing is a 2016 American computer - animated musical comedy - drama film produced by
+Illumination Entertainment .
+</item 9>
+
+<item 10>
+Sing (2016 American film)
+Accolades ( edit ) List of awards and nominations Award Date of ceremony Recipient ( s ) Result Ref ( s ) AARP Annual Movies for Grownups Awards February 6 ,
+2017 Best Movie for Grownups who Refuse to Grow Up Sing Nominated Annie Awards February 4 , 2017 Outstanding Achievement , Music in an Animated Feature
+Production Joby Talbot Golden Globe Awards January 8 , 2017 Best Animated Feature Film Sing Best Original Song `` Faith '' -- Ryan Tedder , Stevie Wonder and
+Francis Farewell Starlite Hollywood Music in Media Awards November 17 , 2016 Best Song -- Animated Film Best Soundtrack Album Sing : Original Motion Picture
+Soundtrack Outstanding Music Supervision -- Film Jojo Villanueva Won Nickelodeon Kids ' Choice Awards March 11 , 2017 Favorite Animated Movie Sing Nominated
+Favorite Voice From an Animated Movie Reese Witherspoon Most Wanted Pet Favorite Soundtrack Sing Saturn Awards June 28 , 2017 Best Animated Film Nominated
+Sequel ( edit ) Universal and Illumination have announced plans for a sequel , tentatively titled Sing 2 , slated for December 25 , 2020 .
+</item 10>
+=== END ITEM id=a6d34d3d73c7e5ee ===
+
+=== ITEM id=b4a218c9f1224acc ===
+Gold sentences and facts:
+Sentence 0: The right-most label conveys the top - level domain ; for example , the domain name www.example.com belongs to the top - level domain com . The hierarchy of domains descends from the right to the left label in the name ; each label to the left specifies a subdivision , or subdomain of the domain to the right . For example : the label example specifies a node example.com as a subdomain of the com domain , and www is a label to create www.example.com , a subdomain of example.com . Each label may contain from 1 to 63 octets . The empty label is reserved for the root node and when fully qualified is expressed as the empty label terminated by a dot . The full domain name may not exceed a total length of 253 ASCII characters in its textual representation . Thus , when using a single character per label , the limit is 127 levels : 127 characters plus 126 dots have a total length of 253 . In practice , some domain registries may have shorter limits . A hostname is a domain name that has at least one associated IP address . For example , the domain names www.example.com and example.com are also hostnames , whereas the com domain is not . However , other top - level domains , particularly country code top - level domains , may indeed have an IP address , and if so , they are also hostnames . Hostnames impose restrictions on the characters allowed in the corresponding domain name . A valid hostname is also a valid domain name , but a valid domain name may not necessarily be valid as a hostname .
+  Fact 0.0: The right-most label of a domain name conveys the top-level domain.
+  Fact 0.1: In www.example.com, the top-level domain is com.
+  Fact 0.2: The hierarchy of domains descends from the right label to the left label in the name.
+  Fact 0.3: Each label to the left specifies a subdivision, or subdomain, of the domain to its right.
+  Fact 0.4: The label example specifies the node example.com as a subdomain of the com domain.
+  Fact 0.5: The label www creates www.example.com, a subdomain of example.com.
+  Fact 0.6: Each label may contain from 1 to 63 octets.
+  Fact 0.7: The empty label is reserved for the root node.
+  Fact 0.8: When fully qualified, the root node is expressed as the empty label terminated by a dot.
+  Fact 0.9: The full domain name may not exceed a total length of 253 ASCII characters in its textual representation.
+  Fact 0.10: When using a single character per label, the limit is 127 levels.
+  Fact 0.11: 127 characters plus 126 dots have a total length of 253.
+  Fact 0.12: In practice, some domain registries may have shorter limits.
+  Fact 0.13: A hostname is a domain name that has at least one associated IP address.
+  Fact 0.14: The domain names www.example.com and example.com are also hostnames.
+  Fact 0.15: The com domain is not a hostname.
+  Fact 0.16: Other top-level domains, particularly country code top-level domains, may have an IP address.
+  Fact 0.17: If another top-level domain has an IP address, it is also a hostname.
+  Fact 0.18: Hostnames impose restrictions on the characters allowed in the corresponding domain name.
+  Fact 0.19: A valid hostname is also a valid domain name.
+  Fact 0.20: A valid domain name may not necessarily be valid as a hostname.
+
+Retrieved items:
+<item 1>
+Domain name
+Use in web site hosting The domain name is a component of a uniform resource locator ( URL ) used to access web sites , for example : URL :
+http://www.example.net/index.html Top - level domain : net Second - level domain : example Host name : www A domain name may point to multiple IP addresses to
+provide server redundancy for the services offered , a feature that is used to manage the traffic of large , popular web sites . Web hosting services , on the
+other hand , run servers that are typically assigned only one or a few addresses while serving websites for many domains , a technique referred to as virtual
+web hosting . Such IP address overloading requires that each request identifies the domain name being referenced , for instance by using the HTTP request header
+field Host : , or Server Name Indication . Abuse and regulation Critics often claim abuse of administrative power over domain names . Particularly noteworthy
+was the VeriSign Site Finder system which redirected all unregistered . com and . net domains to a VeriSign webpage .
+</item 1>
+
+<item 2>
+Domain name
+For special purposes , such as network testing , documentation , and other applications , IANA also reserves a set of special - use domain names . This list
+contains domain names such as example , local , localhost , and test . Other top - level domain names containing trade marks are registered for corporate use .
+Cases include brands such as BMW , Google , and Canon . Second - level and lower level domains Below the top - level domains in the domain name hierarchy are
+the second - level domain ( SLD ) names . These are the names directly to the left of . com , . net , and the other top - level domains . As an example , in the
+domain example.co.uk , co is the second - level domain . Next are third - level domains , which are written immediately to the left of a second - level domain .
+There can be fourth - and fifth - level domains , and so on , with virtually no limitation . An example of an operational domain name with four levels of domain
+labels is sos.state.oh.us . Each label is separated by a full stop ( dot ) . '
+</item 2>
+
+<item 3>
+Domain name
+Labels are always separated by the full stop ( period ) character in the textual name representation . Business models Domain names are often seen in analogy to
+real estate in that domain names are foundations on which a website can be built , and the highest quality domain names , like sought - after real estate , tend
+to carry significant value , usually due to their online brand - building potential , use in advertising , search engine optimization , and many other criteria
+. A few companies have offered low - cost , below - cost or even free domain registration with a variety of models adopted to recoup the costs to the provider .
+These usually require that domains be hosted on their website within a framework or portal that includes advertising wrapped around the domain holder 's content
+, revenue from which allows the provider to recoup the costs . Domain registrations were free of charge when the DNS was new . A domain holder may provide
+infinite number of subdomains in their domain . For example , the owner of example.org could provide subdomains such as foo.example.org and foo.bar.example.org
+to interested parties . Many desirable domain names are already assigned and users must search for other acceptable names , using Web - based search features ,
+or WHOIS and dig operating system tools .
+</item 3>
+
+<item 4>
+Domain name
+Each label is separated by a full stop ( dot ) . ' sos ' is said to be a sub-domain of ' state.oh.us ' , and ' state ' a sub-domain of ' oh.us ' , etc . In
+general , subdomains are domains subordinate to their parent domain . An example of very deep levels of subdomain ordering are the IPv6 reverse resolution DNS
+zones , e.g. , 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa , which is the reverse DNS resolution domain name for the IP address of
+a loopback interface , or the localhost name . Second - level ( or lower - level , depending on the established parent hierarchy ) domain names are often
+created based on the name of a company ( e.g. , bbc.co.uk ) , product or service ( e.g. hotmail.com ) . Below these levels , the next domain name component has
+been used to designate a particular host server .
+</item 4>
+
+<item 5>
+Domain name
+Domain name - wikipedia Domain name Jump to : navigation , search This article is about domain names in the Internet . For other uses , see Domain . The
+hierarchy of labels in a fully qualified domain name . A domain name is an identification string that defines a realm of administrative autonomy , authority or
+control within the Internet . Domain names are formed by the rules and procedures of the Domain Name System ( DNS ) . Any name registered in the DNS is a domain
+name . Domain names are used in various networking contexts and for application - specific naming and addressing purposes . In general , a domain name
+represents an Internet Protocol ( IP ) resource , such as a personal computer used to access the Internet , a server computer hosting a web site , or the web
+site itself or any other service communicated via the Internet . In 2017 , 330.6 million domain names had been registered . Domain names are organized in
+subordinate levels ( subdomains ) of the DNS root domain , which is nameless .
+</item 5>
+
+<item 6>
+Domain name
+The first - level set of domain names are the top - level domains ( TLDs ) , including the generic top - level domains ( gTLDs ) , such as the prominent domains
+com , info , net , edu , and org , and the country code top - level domains ( ccTLDs ) . Below these top - level domains in the DNS hierarchy are the second -
+level and third - level domain names that are typically open for reservation by end - users who wish to connect local area networks to the Internet , create
+other publicly accessible Internet resources or run web sites . The registration of these domain names is usually administered by domain name registrars who
+sell their services to the public . A fully qualified domain name ( FQDN ) is a domain name that is completely specified with all labels in the hierarchy of the
+DNS , having no parts omitted . Labels in the Domain Name System are case - insensitive , and may therefore be written in any desired capitalization method ,
+but most commonly domain names are written in lowercase in technical contexts .
+</item 6>
+
+<item 7>
+Domain name
+Domain name space Today , the Internet Corporation for Assigned Names and Numbers ( ICANN ) manages the top - level development and architecture of the Internet
+domain name space . It authorizes domain name registrars , through which domain names may be registered and reassigned . The hierarchical domain name system ,
+organized into zones , each served by domain name servers . The domain name space consists of a tree of domain names . Each node in the tree holds information
+associated with the domain name . The tree sub-divides into zones beginning at the DNS root zone . Domain name syntax A domain name consists of one or more
+parts , technically called labels , that are conventionally concatenated , and delimited by dots , such as example.com . The right-most label conveys the top -
+level domain ; for example , the domain name www.example.com belongs to the top - level domain com . The hierarchy of domains descends from the right to the
+left label in the name ; each label to the left specifies a subdivision , or subdomain of the domain to the right .
+</item 7>
+
+<item 8>
+Domain name
+Hostnames impose restrictions on the characters allowed in the corresponding domain name . A valid hostname is also a valid domain name , but a valid domain
+name may not necessarily be valid as a hostname . Top - level domains The top - level domains ( TLDs ) such as com , net and org are the highest level of domain
+names of the Internet . Top - level domains form the DNS root zone of the hierarchical Domain Name System . Every domain name ends with a top - level domain
+label . When the Domain Name System was devised in the 1980s , the domain name space was divided into two main groups of domains . The country code top - level
+domains ( ccTLD ) were primarily based on the two - character territory codes of ISO - 3166 country abbreviations . In addition , a group of seven generic top -
+level domains ( gTLD ) was implemented which represented a set of categories of names and multi-organizations . These were the domains gov , edu , com , mil ,
+org , net , and int . During the growth of the Internet , it became desirable to create additional generic top - level domains .
+</item 8>
+
+<item 9>
+Domain name
+For example : the label example specifies a node example.com as a subdomain of the com domain , and www is a label to create www.example.com , a subdomain of
+example.com . Each label may contain from 1 to 63 octets . The empty label is reserved for the root node and when fully qualified is expressed as the empty
+label terminated by a dot . The full domain name may not exceed a total length of 253 ASCII characters in its textual representation . Thus , when using a
+single character per label , the limit is 127 levels : 127 characters plus 126 dots have a total length of 253 . In practice , some domain registries may have
+shorter limits . A hostname is a domain name that has at least one associated IP address . For example , the domain names www.example.com and example.com are
+also hostnames , whereas the com domain is not . However , other top - level domains , particularly country code top - level domains , may indeed have an IP
+address , and if so , they are also hostnames . Hostnames impose restrictions on the characters allowed in the corresponding domain name .
+</item 9>
+
+<item 10>
+Domain name
+Below these levels , the next domain name component has been used to designate a particular host server . Therefore , ftp.example.com might be an FTP server ,
+www.example.com would be a World Wide Web server , and mail.example.com could be an email server , each intended to perform only the implied function . Modern
+technology allows multiple physical servers with either different ( cf . load balancing ) or even identical addresses ( cf . anycast ) to serve a single
+hostname or domain name , or multiple domain names to be served by a single computer . The latter is very popular in Web hosting service centers , where service
+providers host the websites of many organizations on just a few servers . The hierarchical DNS labels or components of domain names are separated in a fully
+qualified name by the full stop ( dot , . ) . Internationalized domain names Main article : Internationalized domain name The character set allowed in the
+Domain Name System is based on ASCII and does not allow the representation of names and words of many languages in their native scripts or alphabets . ICANN
+approved the Internationalized domain name ( IDNA ) system , which maps Unicode strings used in application user interfaces into the valid DNS character set by
+an encoding called Punycode .
+</item 10>
+=== END ITEM id=b4a218c9f1224acc ===
+
+=== ITEM id=0a9178b441f1dbf1 ===
+Gold sentences and facts:
+Sentence 0: The Uralic languages ( / jʊəˈrælɪk / ; sometimes called Uralian languages / jʊəˈreɪliən / ) form a language family of 38 languages spoken by approximately 25 million people , predominantly in Northern Eurasia . The Uralic languages with the most native speakers are Hungarian , Finnish , and Estonian , which are the official languages of Hungary , Finland , and Estonia , respectively , and of the European Union . Other Uralic languages with significant numbers of speakers are Erzya , Moksha , Mari , Udmurt , and Komi , which are officially recognized languages in various regions of Russia .
+  Fact 0.0: The Uralic languages form a language family.
+  Fact 0.1: The Uralic languages are sometimes called Uralian languages.
+  Fact 0.2: The Uralic language family has 38 languages.
+  Fact 0.3: The Uralic languages are spoken by approximately 25 million people.
+  Fact 0.4: The Uralic languages are spoken predominantly in Northern Eurasia.
+  Fact 0.5: Hungarian, Finnish, and Estonian are the Uralic languages with the most native speakers.
+  Fact 0.6: Hungarian is the official language of Hungary.
+  Fact 0.7: Finnish is the official language of Finland.
+  Fact 0.8: Estonian is the official language of Estonia.
+  Fact 0.9: Hungarian, Finnish, and Estonian are official languages of the European Union.
+  Fact 0.10: Erzya, Moksha, Mari, Udmurt, and Komi are other Uralic languages with significant numbers of speakers.
+  Fact 0.11: Erzya, Moksha, Mari, Udmurt, and Komi are officially recognized languages in various regions of Russia.
+
+Retrieved items:
+<item 1>
+Uralic languages
+These two authors were the first to outline what was to become the classification of the Finno - Ugric , and later Uralic family . This proposal received some
+of its initial impetus from the fact that these languages , unlike most of the other languages spoken in Europe , are not part of what is now known as the Indo
+- European family . In 1717 , Swedish professor Olof Rudbeck proposed about 100 etymologies connecting Finnish and Hungarian , of which about 40 are still
+considered valid . In the same year , the German scholar Johann Georg von Eckhart , in an essay published in Leibniz 's Collectanea Etymologica , proposed for
+the first time a relation to the Samoyedic languages . In 1730 , Philip Johan von Strahlenberg published his book Das Nord - und Ostliche Theil von Europa und
+Asia ( The North and East Parts of Europe and Asia ) , surveying the geography , peoples and languages of Russia . All the main groups of the Uralic languages
+were already identified here . Nonetheless , these relationships were not widely accepted .
+</item 1>
+
+<item 2>
+Uralic languages
+All of these hypotheses are minority views at the present time in Uralic studies . Other comparisons ( edit ) See also : Alternative theories of the Hungarian
+language relations Various unorthodox comparisons have been advanced such as Finno - Basque , Hungarian - Etruscan , and Cal - Ugrian . These are considered at
+best spurious fringe - theories by specialists . See also ( edit ) Finland portal Hungary portal Languages portal Uralic peoples Finno - Ugric peoples Notes (
+edit ) Jump up ^ Hammarström , Harald ; Forkel , Robert ; Haspelmath , Martin , eds. ( 2017 ) . `` Uralic '' . Glottolog 3.0 . Jena , Germany : Max Planck
+Institute for the Science of Human History . Jump up ^ Simons , Gary F. ; Fenning , Charles F. `` Uralic '' . Ethnologue . SIL International . Retrieved 14
+February 2018 . Jump up ^ Tommola , Hannu ( 2010 ) . `` Finnish among the Finno - Ugrian languages '' . Mood in the Languages of Europe .
+</item 2>
+
+<item 3>
+Uralic languages
+Uralic languages Finnic Estonian Northeastern coastal South Estonian Võro Seto Finnish Kven Meänkieli Ingrian Karelian Karelian proper Livvi Ludic Livonian †
+Veps Votic Sami Akkala † Inari Kainuu † Kemi † Kildin Lule Northern Pite Skolt Southern Ter Ume Mordvinic Erzya Moksha Mari Hill Mari Meadow Mari Permic Komi
+Zyrian Permyak Yodzyak Udmurt Ugric Hungarian Khanty Mansi Samoyedic Enets Yurats † Nenets Forest Nenets Tundra Nenets Nganasan Kamassian † Mator † Selkup
+Others Merya † Meshcherian † Muromian † † indicate extinct languages List of primary language families Africa Afro - Asiatic Austronesian Khoe Kx'a Niger --
+Congo Nilo - Saharan ? Tuu Mande ? Songhay ? Ijaw ? Ubangian ? Kadu ? Isolates Bangime Hadza Jalaa Sandawe Kwadi ? Laal ?
+</item 3>
+
+<item 4>
+Uralic languages
+Uralic languages - wikipedia Uralic languages Jump to : navigation , search Not to be confused with Urali language . This article needs additional citations for
+verification . Please help improve this article by adding citations to reliable sources . Unsourced material may be challenged and removed . ( July 2017 ) (
+Learn how and when to remove this template message ) Uralic Uralian languages Geographic distribution Central , Eastern , and Northern Europe , North Asia
+Linguistic classification One of the world 's primary language families Proto - language Proto - Uralic Subdivisions Finnic Hungarian Khanty Mansi Mari
+Mordvinic Permic Sami Samoyedic ISO 639 - 5 urj Glottolog ural1272 Geographical distribution of the Uralic languages The Uralic languages ( / jʊəˈrælɪk / ;
+sometimes called Uralian languages / jʊəˈreɪliən / ) form a language family of 38 languages spoken by approximately 25 million people , predominantly in
+Northern Eurasia .
+</item 4>
+
+<item 5>
+Uralic languages
+The Uralic languages with the most native speakers are Hungarian , Finnish , and Estonian , which are the official languages of Hungary , Finland , and Estonia
+, respectively , and of the European Union . Other Uralic languages with significant numbers of speakers are Erzya , Moksha , Mari , Udmurt , and Komi , which
+are officially recognized languages in various regions of Russia . The name `` Uralic '' derives from the fact that the areas where the languages are spoken are
+found on both sides of the Ural Mountains . Also , the original homeland ( Urheimat ) is commonly hypothesized to be in the vicinity of the Urals . Finno -
+Ugric is sometimes used as a synonym for Uralic , though Finno - Ugric is widely understood to exclude the Samoyedic languages . Scholars who do not accept the
+traditional notion that Samoyedic split first from the rest of the Uralic family may treat the terms as synonymous .
+</item 5>
+
+<item 6>
+Uralic languages
+1 Selected cognates 3.3. 2 Mutual intelligibility 3.4 Comparison 4 Possible relations with other families 4.1 Indo - Uralic 4.2 Uralic -- Yukaghir 4.3 Eskimo --
+Uralic 4.4 Uralo - Siberian 4.5 Ural -- Altaic 4.6 Nostratic 4.7 Eurasiatic 4.8 Uralo - Dravidian 4.9 Uralic skepticism 4.10 Other comparisons 5 See also 6
+Notes 7 References 7.1 External classification 7.2 Linguistic issues 8 External links 8.1 `` Rebel '' Uralists History ( edit ) Further information : Proto -
+Uralic Homeland ( edit ) Further information : Proto - Uralic homeland hypotheses In recent times , linguists often place the Urheimat ( original homeland ) of
+the Proto - Uralic language in the vicinity of the Volga River , west of the Urals , close to the Urheimat of the Indo - European languages , or to the east and
+southeast of the Urals .
+</item 6>
+
+<item 7>
+Uralic languages
+Classification ( edit ) Relative numbers of speakers of Uralic languages Hungarian 56 % Finnish 20 % Estonian 4.2 % Erzya 2.8 % Moksha 2.5 % Mari 2 % Udmurt 1.9
+% Komi 1.6 % Other 8.9 % The Uralic family comprises nine undisputed groups with no consensus classification between them . ( Some of the proposals are listed
+in the next section . ) An agnostic approach treats them as separate branches . Obsolete or native names are displayed in italics .
+</item 7>
+
+<item 8>
+Uralic languages
+Nonetheless , these relationships were not widely accepted . Hungarian intellectuals especially were not interested in the theory and preferred to assume
+connections with Turkic tribes , an attitude characterized by Merritt Ruhlen as due to `` the wild unfettered Romanticism of the epoch '' . Still , in spite of
+this hostile climate , the Hungarian Jesuit János Sajnovics travelled with Maximilian Hell to survey the alleged relationship between Hungarian and Sami .
+Sajnovics published his results in 1770 , arguing for a relationship based on several grammatical features . In 1799 , the Hungarian Sámuel Gyarmathi published
+the most complete work on Finno - Ugric to that date . Uralic languages in the Russian Empire ( Russian Census of 1897 ; the census was not held in Finland
+because it was an autonomous area ) Progress resumed after a number of decades , with the first major field research expeditions on the Uralic languages spoken
+in the more eastern parts of Russia .
+</item 8>
+
+<item 9>
+Uralic languages
+The internal structure of the Uralic family has been debated since the family was first proposed . Doubts about the validity of most of the proposed higher -
+order branchings ( grouping the nine undisputed families ) are becoming more common . A traditional classification of the Uralic languages has existed since the
+late 19th century . It has enjoyed frequent adaptation in whole or in part in encyclopedias , handbooks , and overviews of the Uralic family . Donner 's model
+is as follows : Ugric ( Ugrian ) Hungarian Ob - Ugric ( Ob Ugrian ) Khanty Mansi Finno - Permic ( Permian - Finnic ) Permic Finno - Volgaic ( Finno - Cheremisic
+, Finno - Mari ) Volga - Finnic Mari Mordvinic Finno - Lappic ( Finno - Saamic , Finno - Samic ) Sami Finnic At Donner 's time , the Samoyedic languages were
+still poorly known , and he was not able to address their position .
+</item 9>
+
+<item 10>
+Uralic languages
+The Finno - Permic grouping still holds some support , though the arrangement of its subgroups is a matter of some dispute . Mordvinic is commonly seen as
+particularly closely related to or part of Finno - Samic . The term Volgaic ( or Volga - Finnic ) was used to denote a branch previously believed to include
+Mari , Mordvinic and a number of the extinct languages , but it is now obsolete and considered a geographic classification rather than a linguistic one . Within
+Ugric , uniting Mansi with Hungarian rather than Khanty has been a competing hypothesis to Ob - Ugric . Lexical isoglosses ( edit ) Lexicostatistics has been
+used in defense of the traditional family tree . A recent re-evaluation of the evidence however fails to find support for Finno - Ugric and Ugric , suggesting
+four lexically distinct branches ( Finno - Permic , Hungarian , Ob - Ugric and Samoyedic ) . One alternate proposal for a family tree , with emphasis on the
+development of numerals , is as follows : Uralic ( * kektä `` 2 '' ,
+</item 10>
+=== END ITEM id=0a9178b441f1dbf1 ===
+
+=== ITEM id=883b6377ffc0b9c3 ===
+Gold sentences and facts:
+Sentence 0: Captain : Christopher Jones . About age 50 , of Harwich , a seaport in Essex , England , which was also the port of his ship Mayflower . He and his ship were veterans of the European cargo business , often carrying wine to England , but neither had ever crossed the Atlantic . By June 1620 , he and the Mayflower had been hired for the Pilgrims voyage by their business agents in London , Thomas Weston of the Merchant Adventurers and Robert Cushman . Historical marker in London honoring the Mayflower and Captain Jones .
+  Fact 0.0: Christopher Jones was the captain of the Mayflower.
+  Fact 0.1: Christopher Jones was about age 50.
+  Fact 0.2: Christopher Jones was from Harwich, a seaport in Essex, England.
+  Fact 0.3: Harwich was also the port of Christopher Jones's ship, the Mayflower.
+  Fact 0.4: Christopher Jones and the Mayflower were veterans of the European cargo business.
+  Fact 0.5: Christopher Jones and the Mayflower often carried wine to England.
+  Fact 0.6: Neither Christopher Jones nor the Mayflower had ever crossed the Atlantic.
+  Fact 0.7: By June 1620, Christopher Jones and the Mayflower had been hired for the Pilgrims' voyage by their business agents in London.
+  Fact 0.8: Thomas Weston of the Merchant Adventurers was one of the business agents in London who hired the Mayflower for the Pilgrims' voyage.
+  Fact 0.9: Robert Cushman was one of the business agents in London who hired the Mayflower for the Pilgrims' voyage.
+  Fact 0.10: There is a historical marker in London honoring the Mayflower.
+  Fact 0.11: There is a historical marker in London honoring Captain Jones.
+Sentence 1: Captain Jones became master of the Mayflower 11 years prior to the Pilgrims ' voyage , sailing the ship cross-Channel taking English woolens to France and bringing French wine to London . In addition , he had also transported hats , hemp , Spanish salt , hops , and vinegar to Norway , and may have taken the Mayflower whaling in the North Atlantic in the Greenland area . She had traveled to Mediterranean ports , being then owned by Christopher Nichols , Robert Child , Thomas Short , and Christopher Jones , the ship 's master . In 1620 , Jones and Robert Child still owned their quarter shares in the ship , and it was from them that Thomas Weston chartered her in the summer of 1620 to undertake the Pilgrim voyage . Weston had a significant role in the Mayflower voyage , due to his membership in the Company of Merchant Adventurers , and he eventually traveled to the Plymouth Colony himself .
+  Fact 1.0: Captain Jones became master of the Mayflower 11 years before the Pilgrims' voyage.
+  Fact 1.1: Captain Jones sailed the Mayflower cross-Channel taking English woolens to France.
+  Fact 1.2: Captain Jones sailed the Mayflower bringing French wine to London.
+  Fact 1.3: Captain Jones also transported hats, hemp, Spanish salt, hops, and vinegar to Norway.
+  Fact 1.4: Captain Jones may have taken the Mayflower whaling in the North Atlantic in the Greenland area.
+  Fact 1.5: The Mayflower had traveled to Mediterranean ports.
+  Fact 1.6: The Mayflower was owned by Christopher Nichols, Robert Child, Thomas Short, and Christopher Jones.
+  Fact 1.7: Christopher Jones was the ship's master.
+  Fact 1.8: In 1620, Christopher Jones still owned a quarter share in the Mayflower.
+  Fact 1.9: In 1620, Robert Child still owned a quarter share in the Mayflower.
+  Fact 1.10: Thomas Weston chartered the Mayflower from Jones and Child in the summer of 1620 to undertake the Pilgrim voyage.
+  Fact 1.11: Weston had a significant role in the Mayflower voyage due to his membership in the Company of Merchant Adventurers.
+  Fact 1.12: Thomas Weston eventually traveled to the Plymouth Colony himself.
+Sentence 2: Aft on the main deck in the stern was the cabin for Master Christopher Jones , measuring about ten by seven feet ( 3 m × 2.1 m ) . Forward of that was the steerage room , which housed a whipstaff ( tiller extension ) for sailing control ; not a wheel , as in later ships . Also here was the ship 's compass and probably also berths for the ship 's officers . Forward of the steerage room was the capstan , a vertical axle used to pull in ropes or cables . Far forward on the main deck , just aft of the bow , was the forecastle space where the ship 's cook prepared meals for the crew ; it may also have been where the ship 's sailors slept .
+  Fact 2.0: The cabin for Master Christopher Jones was aft on the main deck in the stern.
+  Fact 2.1: The cabin for Master Christopher Jones measured about ten by seven feet (3 m × 2.1 m).
+  Fact 2.2: The steerage room was forward of the cabin.
+  Fact 2.3: The steerage room housed a whipstaff (tiller extension) for sailing control.
+  Fact 2.4: The whipstaff was not a wheel, unlike in later ships.
+  Fact 2.5: The ship's compass was also in the same area as the steerage room.
+  Fact 2.6: The ship probably also had berths for the ship's officers in the steerage room area.
+  Fact 2.7: The capstan was forward of the steerage room.
+  Fact 2.8: The capstan was a vertical axle used to pull in ropes or cables.
+  Fact 2.9: The forecastle space was far forward on the main deck, just aft of the bow.
+  Fact 2.10: The ship's cook prepared meals for the crew in the forecastle space.
+  Fact 2.11: The ship's sailors may also have slept in the forecastle space.
+
+Retrieved items:
+<item 1>
+Mayflower
+It was now early September , and they had no choice but to abandon the Speedwell and make a determination on her passengers . This was a dire event , as the
+ship had wasted vital funds and was considered very important to the future success of their settlement in America . Both ships returned to Plymouth , where
+some of the Speedwell passengers joined the Mayflower and others returned to Holland . The Mayflower then continued on her voyage to America , and the Speedwell
+was sold soon afterwards . Mayflower carried 102 passengers plus a crew of 25 to 30 officers and men , bringing the total to approximately 130 . According to
+William Bradford , Speedwell was refitted and `` made many voyages ... to the great profit of her owners . '' Bradford later implied that the Speedwell 's
+master used `` cunning and deceit '' to abort the voyage , possibly by causing leaks in the ship and motivated by a fear of starving to death in America .
+Mayflower sets sail For more details on acquisition of the ship and the planning of the voyage , see Pilgrims ( Plymouth Colony ) . In early September , western
+gales began to make the North Atlantic a dangerous place for sailing .
+</item 1>
+
+<item 2>
+The Mayflower was an English Dutch-style cargo fluyt, partly owned by Christopher Jones, that carried about 135 English Puritans—later known as the
+Pilgrims—from Plymouth, England, to the New World in 1620. It was roughly 80–90 feet long on deck, with a tonnage of about 180 tons. The ship left service
+between 1622 and 1624 and was most likely dismantled around 1624.
+</item 2>
+
+<item 3>
+Mayflower
+There were 102 passengers , and the crew is estimated to have been about 30 , but the exact number is unknown . This voyage has become an iconic story in some
+of the earliest annals of American history , with its story of death and of survival in the harsh New England winter environment . The culmination of the voyage
+in the signing of the Mayflower Compact was an event which established a rudimentary form of democracy , with each member contributing to the welfare of the
+community . There was a second ship named Mayflower that made the London to Plymouth , Massachusetts voyage several times . Contents ( hide ) 1 Mayflower
+structure and layout 1.1 General layout 1.1. 1 Main deck 1.1. 2 Gun deck 1.1. 3 Gun deck armament 1.1.
+</item 3>
+
+<item 4>
+About 65 passengers boarded the Mayflower in London in July 1620, joining English Separatists arriving from Holland aboard the Speedwell. Repeated leaks forced
+the Speedwell to turn back. The Mayflower reached Cape Cod on November 9, after which winter seas prevented the settlers from reaching Virginia. They anchored
+at Provincetown Harbor on November 11 and signed the Mayflower Compact to establish order. An exploration party sought a settlement site. The ship wintered at
+New Plymouth and
+</item 4>
+
+<item 5>
+Mayflower
+In addition , he had also transported hats , hemp , Spanish salt , hops , and vinegar to Norway , and may have taken the Mayflower whaling in the North Atlantic
+in the Greenland area . She had traveled to Mediterranean ports , being then owned by Christopher Nichols , Robert Child , Thomas Short , and Christopher Jones
+, the ship 's master . In 1620 , Jones and Robert Child still owned their quarter shares in the ship , and it was from them that Thomas Weston chartered her in
+the summer of 1620 to undertake the Pilgrim voyage . Weston had a significant role in the Mayflower voyage , due to his membership in the Company of Merchant
+Adventurers , and he eventually traveled to the Plymouth Colony himself . There were 26 vessels bearing the same name as the Pilgrim ship in the Port Books of
+England in the reign of James I ( 1603 -- 1625 ) , and the reason for this popularity of the name has never been found . One particular Mayflower that has
+caused historical confusion is a Mayflower erroneously identified as one of the 1620 Pilgrims .
+</item 5>
+
+<item 6>
+Mayflower
+In 1624 , Thomas Russell supposedly added to part of a farmhouse already there with timbers from a ship , believed to be from the Pilgrim ship Mayflower ,
+bought from a shipbreaker 's yard in Rotherhithe . The well - preserved structure was a tourist attraction , receiving visitors each year from all over the
+world and particularly from America , but it is now privately owned and not open to the public . Second Mayflower Another ship called the Mayflower made a
+voyage from London to Plymouth Colony in 1629 carrying 35 passengers , many from the Pilgrim congregation in Leiden that organized the first voyage . This was
+not the same ship that made the original voyage with the first settlers . This voyage began in May and reached Plymouth in August . This ship also made the
+crossing from England to America in 1630 ( as part of the Winthrop Fleet ) , 1633 , 1634 , and 1639 . It attempted the trip again in 1641 , departing London in
+October of that year under master John Cole , with 140 passengers bound for Virginia . It never arrived . On October 18 , 1642 , a deposition was made in
+England regarding the loss .
+</item 6>
+
+<item 7>
+Mayflower
+Nathaniel Philbrick estimates between 20 and 30 sailors in her crew whose names are unknown . Nick Bunker states that Mayflower had a crew of at least 17 and
+possibly as many as 30 . Caleb Johnson states that the ship carried a crew of about 30 men , but the exact number is unknown . Officers and crew Captain :
+Christopher Jones . About age 50 , of Harwich , a seaport in Essex , England , which was also the port of his ship Mayflower . He and his ship were veterans of
+the European cargo business , often carrying wine to England , but neither had ever crossed the Atlantic . By June 1620 , he and the Mayflower had been hired
+for the Pilgrims voyage by their business agents in London , Thomas Weston of the Merchant Adventurers and Robert Cushman . Historical marker in London honoring
+the Mayflower and Captain Jones . Masters Mate : John Clark ( Clarke ) , Pilot . By age 45 in 1620 , Clark already had greater adventures than most other
+mariners of that dangerous era . His piloting career began in England about 1609 .
+</item 7>
+
+<item 8>
+Mayflower
+At his death , his estate consisted of extensive footwear and other items of clothing , and made his daughter Priscilla and her husband John Alden quite
+prosperous . No cattle or beasts of draft or burden were brought on the journey , but there were pigs , goats , and poultry . Some passengers brought family
+pets such as cats and birds . Peter Browne took his large bitch mastiff , and John Goodman brought along his spaniel . Mayflower officers , crew , and others
+According to author Charles Banks , the officers and crew of the Mayflower consisted of a captain , four mates , four quartermasters , surgeon , carpenter ,
+cooper , cooks , boatswains , gunners , and about 36 men before the mast , making a total of about 50 . The entire crew stayed with the Mayflower in Plymouth
+through the winter of 1620 -- 1621 , and about half of them died during that time . The remaining crewmen returned to England on the Mayflower , which sailed
+for London on April 5 , 1621 . Crew members per various sources Banks states that the crew totaled 36 men before the mast and 14 officers , making a total of 50
+.
+</item 8>
+
+<item 9>
+Mayflower
+Time was measured with the ancient method of an hourglass . Arrival in America On November 9 , 1620 , they sighted present - day Cape Cod . They spent several
+days trying to sail south to their planned destination of the Colony of Virginia , where they had obtained permission to settle from the Company of Merchant
+Adventurers . However , strong winter seas forced them to return to the harbor at Cape Cod hook , well north of the intended area , where they anchored on
+November 11 . The settlers wrote and signed the Mayflower Compact after the ship dropped anchor at Cape Cod , in what is now Provincetown Harbor , in order to
+establish legal order and to quell increasing strife within the ranks . On Monday , November 27 , an exploring expedition was launched under the direction of
+Capt . Christopher Jones to search for a suitable settlement site . As master of the Mayflower , Jones was not required to assist in the search , but he
+apparently thought it in his best interest to assist the search expedition . There were 34 persons in the open shallop : 24 passengers and 10 sailors .
+</item 9>
+
+<item 10>
+Mayflower
+Mayflower - wikipedia Mayflower Jump to : navigation , search For other ships , see Mayflower ( ship ) . For other uses , see Mayflower ( disambiguation ) .
+Mayflower in Plymouth Harbor by William Halsall ( 1882 ) Name : Mayflower Owner : Christopher Jones ( 1⁄4 of the ship ) Maiden voyage : Before 1609 Out of
+service : 1622 -- 1624 Fate : most likely taken apart by Rotherhithe shipbreaker c. 1624 . General characteristics Class and type : Dutch cargo fluyt Tonnage :
+180 tons + Length : c. 80 -- 90 ft ( 24 -- 27.5 m ) on deck , 100 -- 110 ft ( 30 -- 33.5 m ) overall . Decks : Around 4 Capacity : Unknown , but carried c. 135
+people during the historical voyage to what they would call Plymouth Colony The Mayflower was an English ship that famously transported the first English
+Puritans , known today as the Pilgrims , from Plymouth , England to the New World in 1620 .
+</item 10>
+=== END ITEM id=883b6377ffc0b9c3 ===

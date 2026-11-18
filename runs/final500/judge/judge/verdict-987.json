@@ -1,0 +1,68 @@
+[
+  {
+    "id": "9fe9e7fa1e4091f6",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Mumbai ( Marathi : मुंबई ) , from Bombay , renamed in 1995"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Mumbai ( Marathi : मुंबई ) , from Bombay , renamed in 1995"}]},
+      {"fact": "0.2", "status": "contradicted", "evidence": [{"item": 5, "quote": "Mumbai ( Marathi : मुंबई ) , from Bombay , renamed in 1995"}, {"item": 10, "quote": "I am well aware of the name - change effected by an Act of the Indian Parliament in 1997"}]}
+    ]
+  },
+  {
+    "id": "2fe1fdc02471aa93",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "The concept was developed by Georges Auguste Escoffier"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "This structured team system delegates responsibilities to different individuals who specialize in"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "This structured team system delegates responsibilities to different individuals who specialize in certain tasks in the kitchen"}]}
+    ]
+  },
+  {
+    "id": "03017b5ebeb281c3",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Bay of Montevideo"}]}
+    ]
+  },
+  {
+    "id": "b87d69329a44fc5a",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "The official music video for the song was directed by P.R. Brown and produced by Steve Lamar"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "The official music video for the song was directed by P.R. Brown and produced by Steve Lamar"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "The video was filmed along the Californian coast at The Inn at Newport Ranch , a resort and cattle ranch to the north of San Francisco"}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "The Inn at Newport Ranch , a resort and cattle ranch to the north of San Francisco"}]},
+      {"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "The Inn at Newport Ranch , a resort and cattle ranch to the north of San Francisco"}]},
+      {"fact": "0.5", "status": "stated", "evidence": [{"item": 2, "quote": "It features Brown and his duet partner Lauren Alaina singing along the coast"}]},
+      {"fact": "0.6", "status": "stated", "evidence": [{"item": 2, "quote": "It was released on May 14 , 2017"}]},
+      {"fact": "0.7", "status": "stated", "evidence": [{"item": 2, "quote": "An earlier lyric video was first released on May 4 , 2017"}]},
+      {"fact": "0.8", "status": "stated", "evidence": [{"item": 2, "quote": "An earlier lyric video was first released on May 4 , 2017 , and shows Brown and Alaina cruising down a road"}]}
+    ]
+  },
+  {
+    "id": "818663a1f2600f0f",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "An elevator with a counterbalance approximates an ideal Atwood machine"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "An elevator with a counterbalance approximates an ideal Atwood machine and thereby relieves the driving motor from the load of holding the elevator cab"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "it has to overcome only weight difference and inertia of the two masses"}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "The same principle is used for funicular railways with two connected railway cars on inclined tracks"}]},
+      {"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "The same principle is used for funicular railways with two connected railway cars on inclined tracks , and for the elevators on the Eiffel Tower which counterbalance each other"}]},
+      {"fact": "0.5", "status": "stated", "evidence": [{"item": 8, "quote": "Ski lifts are another example"}]},
+      {"fact": "0.6", "status": "stated", "evidence": [{"item": 8, "quote": "where the gondolas move on a closed ( continuous ) pulley system up and down the mountain"}]},
+      {"fact": "0.7", "status": "stated", "evidence": [{"item": 8, "quote": "The ski lift is similar to the counter-weighted elevator , but with a constraining force provided by the cable in the vertical dimension"}]},
+      {"fact": "0.8", "status": "stated", "evidence": [{"item": 8, "quote": "by the cable in the vertical dimension thereby achieving work in both the horizontal and vertical dimensions"}]},
+      {"fact": "0.9", "status": "stated", "evidence": [{"item": 8, "quote": "Boat lifts are another type of counter-weighted elevator system approximating an Atwood machine"}]}
+    ]
+  },
+  {
+    "id": "824aa0a6e67211cf",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Much of the humus in most soils has persisted for more than 100 years , rather than having been decomposed into CO"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Much of the humus in most soils has persisted for more than 100 years , rather than having been decomposed into CO , and can be regarded as stable"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "this organic matter has been protected from decomposition by microbial or enzyme action"}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "because it is hidden ( occluded ) inside small aggregates of soil particles , or tightly sorbed or complexed ) to clays"}]},
+      {"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "Most humus that is not protected in this way is decomposed within 10 years"}]},
+      {"fact": "0.5", "status": "stated", "evidence": [{"item": 8, "quote": "Most humus that is not protected in this way is decomposed within 10 years and can be regarded as less stable or more labile"}]},
+      {"fact": "0.6", "status": "stated", "evidence": [{"item": 8, "quote": "Stable humus contributes few plant - available nutrients in soil"}]},
+      {"fact": "0.7", "status": "stated", "evidence": [{"item": 8, "quote": "Stable humus contributes few plant - available nutrients in soil , but it helps maintain its physical structure"}]},
+      {"fact": "0.8", "status": "stated", "evidence": [{"item": 8, "quote": "A very stable form of humus is formed from the slow oxidation of soil carbon after the incorporation of finely powdered charcoal into the topsoil"}]},
+      {"fact": "0.9", "status": "stated", "evidence": [{"item": 8, "quote": "A very stable form of humus is formed from the slow oxidation of soil carbon after the incorporation of finely powdered charcoal into the topsoil . This process is speculated to have been important in the formation of the very fertile Amazonian terra preta do Indio"}]}
+    ]
+  }
+]

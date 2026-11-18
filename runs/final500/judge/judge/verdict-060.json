@@ -1,0 +1,51 @@
+[
+{"id": "fbe9912d2b7e1c0f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Megan says that while she doesn’t have as many followers on Twitch as she does on her YouTube channel, there are elements of Twitch she prefers to YouTube, including the ability to be herself and engage with fans more closely."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Megan says that while she doesn’t have as many followers on Twitch as she does on her YouTube channel, there are elements of Twitch she prefers to YouTube, including the ability to be herself and engage with fans more closely."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Megan says that while she doesn’t have as many followers on Twitch as she does on her YouTube channel, there are elements of Twitch she prefers to YouTube, including the ability to be herself and engage with fans more closely."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "Megan says that while she doesn’t have as many followers on Twitch as she does on her YouTube channel, there are elements of Twitch she prefers to YouTube, including the ability to be herself and engage with fans more closely."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Right, and that decision to change the revenue split also came out of a decision to prioritize ad revenue."}]}
+]},
+{"id": "d561a5df1600693f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "United have also conceded 14 goals in the Champions League group stages"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "United have also conceded 14 goals in the Champions League group stages, a new and unwanted record for the club"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "a new and unwanted record for the club that could get worse when they face Bayern in the final match."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]}
+]},
+{"id": "85e0999649bb88c4", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+]},
+{"id": "3660094f3e57ca8c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla"}, {"item": 1, "quote": "Google has had its deal with Apple in place since 2003."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 10, "quote": "including its deal with Apple and other partners to make Google the default search engine."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 1, "quote": "the $26.3 billion Google spent making itself the default search engine across platforms in"}, {"item": 10, "quote": "to make Google the default search engine."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "151b60b3ca88f948", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]}
+]

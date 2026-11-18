@@ -1,0 +1,465 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "14041b47fbea719e",
+   "gold": [
+    {
+     "sentence": "Dogo Cubano also known as the Cuban Mastiff, Cuban Dogo and Cuban Dogge is an extinct dog breed from Cuba.",
+     "facts": {
+      "0.0": "The Dogo Cubano is also known as the Cuban Mastiff.",
+      "0.1": "The Dogo Cubano is also known as the Cuban Dogo.",
+      "0.2": "The Dogo Cubano is also known as the Cuban Dogge.",
+      "0.3": "The Dogo Cubano is an extinct dog breed.",
+      "0.4": "The Dogo Cubano is a dog breed from Cuba."
+     }
+    },
+    {
+     "sentence": "The Dutch Shepherd is a herding dog of Dutch origin.",
+     "facts": {
+      "1.0": "The Dutch Shepherd is a herding dog.",
+      "1.1": "The Dutch Shepherd is a herding dog of Dutch origin."
+     }
+    }
+   ],
+   "items": [
+    "Dogo Cubano\nDogo Cubano also known as the Cuban Mastiff, Cuban Dogo and Cuban Dogge is an extinct dog breed from Cuba.\n\n It was of the Bull Mastiff type and was used for dog fighting.",
+    "Dutch Shepherd\nThe Dutch Shepherd is a herding dog of Dutch origin.\n\n They were used by shepherds and farmers who needed a versatile dog, with few demands, and a dog that was able to adapt to a harsh and meager existence.",
+    "Cuban Criollo\nThe Criollo Cubano originates from Spanish horses brought to Cuba by Diego Velázquez in 1751.\n\n There are four different breeds known as criollo: the Cubano de Paso, the Pinto Cubano, the Criollo de Trote and the Patibarcino.\n\n It is a small stout breed used by the Guajiro people.",
+    "Drentse Patrijshond\nThe Drentsche Patrijshond is a versatile spaniel-type hunting dog from the Dutch province of Drenthe.\n\n Called the Dutch Partridge Dog (or \"Drent\" for Drenthe) in English, approximately 5,000 dogs are registered with the breed club in the Netherlands, and breed clubs operate in Belgium, Denmark, Scandinavia and North America.\n\n The Drentsche Patrijshond bears some resemblance to both spaniel and setter types of dog.\n\n An excellent pointer and retriever, this dog is often used to hunt fowl and adapts equally well to the field or marshes.",
+    "Romanian Raven Shepherd Dog\nThe Romanian Raven Shepherd Dog is a very large Romanian livestock guardian dog, taxonomized within the second group of dog breeds - Pinscher and Schanuzer - Molossoid Breeds - Swiss Mountain and Cattle Dogs, section 2.2: Molossoid Breeds - Mountain type.",
+    "Swiss mountain dog\nSennenhund, called Swiss mountain dogs or Swiss cattle dogs in English, are a type of dog originating in the Swiss Alps.\n\n The Sennenhund are farm dogs of the general molosser type.\n\n There are four breeds of Sennenhund, all sporting a unique tricolor coat.\n\n While the two larger ones share a heavy build and a calm temperament, the two smaller ones are more agile.\n\n The breeds range from medium in size to very large.\n\n The name Sennenhund refers to people called \"Senn\" or Senner, Swiss alpine herdsmen and dairymen, and does not translate as \"mountain\" or \"cattle\".",
+    "Guatemalan Dogo\nGuatemalan Dogo (\"Dogo Guatemalteco\"), formerly known as the Guatemalan Bull Terrier (\"Bullterrier Guatemalteco\"), and Guatemalan Mastiff, is a Molosser-type dog breed originating in Guatemala.\n\n It is neither recognized by the Fédération Cynologique Internationale (FCI) nor the American Kennel Club (AKC).\n\n However, it has the official national recognition of the Asociación Canofila Guatemalteca (ACANGUA) where it belongs to the Group 2.2.1 - Mastiffs.\n\n As the unique breed originating in Guatemala, it is also the national dog of the country.\n\n Nowadays it has spread to various other countries, such as the USA.",
+    "Dogo Argentino\nThe Dogo Argentino, also known as the Argentine Mastiff, is a large, white, muscular dog that was developed in Argentina primarily for the purpose of big-game hunting, including wild boar; the breeder, Antonio Nores Martínez, also wanted a dog that would exhibit steadfast bravery and willingly protect its human companion.\n\n It was first bred in 1928, from the Cordoba Fighting Dog along with a wide array of other breeds including the Great Dane.",
+    "Belgian Shepherd\nThe Belgian Shepherd (also known as the Belgian Sheepdog or Chien de Berger Belge) is a breed of medium-to-large-sized herding dog.\n\n It originated in Belgium and is similar to other sheep herding dogs from that region, including the Dutch Shepherd, the German Shepherd, the Briard, and others.\n\n Four types have been identified by various registries as separate breeds or varieties: Groenendael, Laekenois, Tervuren, and Malinois.",
+    "The Bulldog is a muscular, wrinkled English breed, ranked fourth among US purebreds in 2007. West Siberian Laikas are versatile barking hunting dogs whose formal breeding resumed in 1946. Mediterranean warren hounds, including Cretan and Canary Island hounds, typically hunt using smell, sight, and hearing. Segugio Italiano has short- and wire-haired varieties. Guatemala’s national Dogo is locally recognized; Cuba’s Bull Mastiff-type Dog"
+   ]
+  },
+  {
+   "id": "8fc95c733c9ab9a2",
+   "gold": [
+    {
+     "sentence": "Xingcheng (), former name Ningyuan (宁远), is a county-level city of southwest Liaoning province, China, with a population of approximately 140,000 urban inhabitants, and is located on the Liaodong Bay, i.e. the northern coast of the Bohai Sea.",
+     "facts": {
+      "0.0": "Xingcheng is a county-level city of southwest Liaoning province, China.",
+      "0.1": "Xingcheng's former name was Ningyuan (宁远).",
+      "0.2": "Xingcheng has a population of approximately 140,000 urban inhabitants.",
+      "0.3": "Xingcheng is located on Liaodong Bay, the northern coast of the Bohai Sea."
+     }
+    },
+    {
+     "sentence": " It covers an area of 2046 square kilometers and has a population of about one million.",
+     "facts": {
+      "1.0": "Xingcheng covers an area of 2046 square kilometers.",
+      "1.1": "Xingcheng has a population of about one million."
+     }
+    }
+   ],
+   "items": [
+    "Daying County\nDaying County () is a county of Sichuan province, China, under the administration of Suining City and in the central part of the Sichuan Basin.\n\n In 2002, it had a population of 520,000 residing in an area of 703 km2 .\n\n Daying is remarkable for being the home of the \"Chinese Dead Sea\", a tourist attraction that is based on a salt lake with 9 times the salinity of the ocean and which constitutes the largest indoor water park in China.\n\n The G42 Shanghai–Chengdu Expressway and Dazhou–Chengdu Railway (达成铁路) traverses east–west through the entire length of the county.",
+    "Fuzhoucheng\nFuzhou, also Fuzhoucheng () is a town under the administration of Wafangdian City, in southern Liaoning province, China.\n\n It lies at the intersection of China National Highway 202 and Liaoning Provincial Highway 313, 57 km north by road from Pulandian.\n\n Dahe Reservoir is located several kilometres to the east.\n\n There is a 74,132 acres (30,000 hectares) bird reserve nearby with species such as Swan goose and Hooded crane about 15 km southwest of the town.\n\n , it has 2 residential communities (社区) and 14 villages under its administration.",
+    "Huan River\nThe Huan River (), or Anyang River (安阳河), is a river in Henan, China, and part of the Hai River basin.\n\n The river rises north of Linzhou in northwestern Henan, and joins the Wei River near Neihuang in the northeast of the province.",
+    "Shanxi–Henan–Shandong Railway\nThe Shanxi–Henan–Shandong Railway () or the Jinyulu Railway, also known as the Shanxi South Central Railway or the Watang–Rizhao Railway, is an electrified double-track heavy freight railway across northern China.\n\n The line runs 1260 km from the village of Watang in Lüliang, Shanxi Province to the port of Rizhao in Shandong Province, and is named after the three provinces through which it passes Jin (Shanxi), Yu (Henan) and Lu (Shandong).\n\n The line is the world's longest heavy freight railway and is designed to facilitate the export of coal from Shanxi to overseas markets.\n\n The line can accommodate train speeds of up to 120 km/h .",
+    "Shanxi–Henan–Shandong Railway\nThe line can accommodate train speeds of up to 120 km/h .\n\n Cities along route include Lüliang, Liulin, Hongdong, Changzhi and Pingshun in Shanxi; Linzhou, Anyang, Tangyin, Puyang, Hebi, Fan County and Taiqian County in Henan; Liangshan County, Dongping, Ningyang, Xintai, Laiwu, Yiyuan, Yishui, Ju County, Junan and Rizhao in Shandong.\n\n The line was built from 2010 to 2014 and operations began on December 30, 2014.",
+    "Linzhou, Henan\nLinzhou (), formerly Lin County (林县), is a county-level city in Anyang, Henan, China.\n\n Adjacent to Shanxi Province and Hebei Province, it is located in the north of Henan Province and at the eastern foot of the Taihang Mountains.\n\n It covers an area of 2046 square kilometers and has a population of about one million.",
+    "Ezhou\nEzhou () is a prefecture-level city in eastern Hubei Province, China.\n\n As of the 2010 census, the city had a population of 1,048,668, of which 668,727 lived in the core Echeng District.\n\n The Ezhou - Huanggang built-up (\"or metro\") area was home to 1,035,496 inhabitants from the Echeng and Huangzhou, Huanggang Districts.",
+    "Xingcheng\nXingcheng (), former name Ningyuan (宁远), is a county-level city of southwest Liaoning province, China, with a population of approximately 140,000 urban inhabitants, and is located on the Liaodong Bay, i.e. the northern coast of the Bohai Sea.\n\n Currently under the administration of Huludao City, the area is steeped in history, and contains one of the best preserved Ming Dynasty towns in China, as well as functioning as a laidback summer resort.",
+    "Dongtai\nDongtai () is a coastal county-level city under the administration of Yancheng, Jiangsu province, China.\n\n It has a population of roughly 1,170,000 estimated for 2007.\n\n Out of the total population, about 260,000 live in the Dongtai urban core, others are distributed in the 23 suburban towns and rural regions (Some famous towns include Touzao, Anfeng, Qingdong, Sancang, Qianggang, Fu'an, Tangyang, etc.).\n\n With some Yellow Sea coast, it borders the prefecture-level cities of Nantong to the south and Taizhou to the west, and is the southernmost county-level division of Yancheng.",
+    "Wenling\nWenling (Wenling dialect: Uen-lin Zy ] ; ) is a coastal county-level city in the municipal region of Taizhou, in southeastern Zhejiang province, China.\n\n It borders Luqiao and Huangyan to the north, Yuhuan to the south, Yueqing to the west, looks out to the East China Sea to the east.\n\n Wenling locates on 28°22'N, 121°21'E, approximately 300 km south of Shanghai."
+   ]
+  },
+  {
+   "id": "7d6b79f35a68acdf",
+   "gold": [
+    {
+     "sentence": " During his early career, Cage starred in a variety of films such as \"Valley Girl\" (1983), \"Racing with the Moon\" (1984), \"Birdy\" (1984), \"Peggy Sue Got Married\" (1986), \"Raising Arizona\" (1987), \"Moonstruck\" (1987), \"Vampire's Kiss\" (1989), \"Wild at Heart\" (1990), \"Fire Birds\" (1990), \"Honeymoon in Vegas\" (1992), and \"Red Rock West\" (1993).",
+     "facts": {
+      "0.0": "During his early career, Cage starred in a variety of films.",
+      "0.1": "Cage starred in Valley Girl, released in 1983.",
+      "0.2": "Cage starred in Racing with the Moon, released in 1984.",
+      "0.3": "Cage starred in Birdy, released in 1984.",
+      "0.4": "Cage starred in Peggy Sue Got Married, released in 1986.",
+      "0.5": "Cage starred in Raising Arizona, released in 1987.",
+      "0.6": "Cage starred in Moonstruck, released in 1987.",
+      "0.7": "Cage starred in Vampire's Kiss, released in 1989.",
+      "0.8": "Cage starred in Wild at Heart, released in 1990.",
+      "0.9": "Cage starred in Fire Birds, released in 1990.",
+      "0.10": "Cage starred in Honeymoon in Vegas, released in 1992.",
+      "0.11": "Cage starred in Red Rock West, released in 1993."
+     }
+    },
+    {
+     "sentence": "Moonstruck is a 1987 American romantic comedy film directed by Norman Jewison and written by John Patrick Shanley.",
+     "facts": {
+      "1.0": "Moonstruck is a 1987 American film.",
+      "1.1": "Moonstruck is a romantic comedy film.",
+      "1.2": "Moonstruck was directed by Norman Jewison.",
+      "1.3": "Moonstruck was written by John Patrick Shanley."
+     }
+    },
+    {
+     "sentence": " It is about a widowed 37-year-old Italian-American woman (Cher) who falls in love with her fiancé's (Danny Aiello) estranged, hot-tempered younger brother (Nicolas Cage).",
+     "facts": {
+      "2.0": "Moonstruck is about a widowed 37-year-old Italian-American woman played by Cher.",
+      "2.1": "The woman falls in love with her fiancé's estranged, hot-tempered younger brother.",
+      "2.2": "The fiancé is played by Danny Aiello.",
+      "2.3": "The younger brother is played by Nicolas Cage."
+     }
+    }
+   ],
+   "items": [
+    "Cool and the Crazy\nCool and the Crazy is a 1994 American drama film written and directed by Ralph Bakshi and starring Jared Leto and Alicia Silverstone.\n\n The story revolves around an unhappily married couple in the late 1950s who both lead separate affairs.\n\n The film was Bakshi's first feature-length live-action film, being primarily known as a director of animated films which heavily utilize live-action sequences, such as \"Fritz the Cat\", \"Heavy Traffic\", \"Wizards\", \"American Pop\" and \"The Lord of the Rings\".",
+    "Tom Cruise filmography\nTom Cruise is an American actor and producer who made his film debut with a minor role in the 1981 romantic drama \"Endless Love\".\n\n Two years later he made his breakthrough by starring in the romantic comedy \"Risky Business\" (1983), which garnered Cruise his first nomination for the Golden Globe Award for Best Actor – Motion Picture Musical or Comedy.\n\n In 1986, Cruise played a fighter pilot in the Tony Scott-directed action drama \"Top Gun\" (the highest-grossing film that year), and also starred opposite Paul Newman in the Martin Scorsese-directed drama \"The Color of Money\".\n\n Two years later he played opposite Dustin Hoffman in the Academy Award for Best Picture-winning drama \"Rain Man\" (1988), and also appeared in the Golden Raspberry Award for Worst Picture-winning romantic drama \"Cocktail\" (1988).\n\n In doing so Cruise became the first and only person as of 2014 to star in a Best Picture Oscar winner and a Worst Picture Razzie winner in the same year.",
+    "Nicolas Cage\nNicolas Kim Coppola (born January 7, 1964), known professionally as Nicolas Cage, is an American actor, director and producer.\n\n During his early career, Cage starred in a variety of films such as \"Valley Girl\" (1983), \"Racing with the Moon\" (1984), \"Birdy\" (1984), \"Peggy Sue Got Married\" (1986), \"Raising Arizona\" (1987), \"Moonstruck\" (1987), \"Vampire's Kiss\" (1989), \"Wild at Heart\" (1990), \"Fire Birds\" (1990), \"Honeymoon in Vegas\" (1992), and \"Red Rock West\" (1993).",
+    "Moonstruck\nMoonstruck is a 1987 American romantic comedy film directed by Norman Jewison and written by John Patrick Shanley.\n\n It is about a widowed 37-year-old Italian-American woman (Cher) who falls in love with her fiancé's (Danny Aiello) estranged, hot-tempered younger brother (Nicolas Cage).\n\n Vincent Gardenia and Olympia Dukakis play supporting roles.",
+    "Dying of the Light (film)\nDying of the Light is a 2014 American psychological thriller film written and directed by Paul Schrader and starring Nicolas Cage, Anton Yelchin and Irène Jacob about a government agent who must track down and kill a terrorist before he loses his full memory from a disease.\n\n It was released theatrically and through VOD formats by Lionsgate on December 5, 2014.\n\n The film received extremely negative reviews, with controversy surrounding the heavy tampering and reediting of the footage by the studio, who denied Schrader final-cut privilege and led him and principal members of the cast to disown the released version and campaign against it.",
+    "In Country\nIn Country is a 1989 American drama film produced and directed by Norman Jewison, starring Bruce Willis and Emily Lloyd.\n\n The screenplay by Frank Pierson and Cynthia Cidre was based on the novel by Bobbie Ann Mason.\n\n The original music score was composed by James Horner.\n\n Willis earned a best supporting actor Golden Globe nomination for his role.",
+    "Chloe (film)\nChloe is a 2009 erotic thriller film directed by Atom Egoyan, a remake of the 2003 French film \"Nathalie...\".\n\n It stars Julianne Moore, Liam Neeson, and Amanda Seyfried in the title role.\n\n Its screenplay was written by Erin Cressida Wilson, based on the earlier French film, written by Anne Fontaine.",
+    "The Night Before (1988 film)\nThe Night Before is a 1988 film starring Keanu Reeves and Lori Loughlin.\n\n Reeves plays Winston Connelly, the so-called high school nerd and vice president of the astronomy club.\n\n Loughlin plays Tara Mitchell, the pretty and popular head cheerleader who also happens to be the local police chief's daughter.\n\n The Tagline was: \"You lost your father's car, sold your prom date and a guy called 'Tito' wants you dead.\n\n It's a date that's the time of your life.\"\n\n It was filmed and set entirely in Los Angeles, California.",
+    "Deadfall (1993 film)\nDeadfall is a 1993 crime drama film directed by Christopher Coppola.\n\n Coppola co-wrote the script with Nick Vallelonga.\n\n The film stars Michael Biehn, Nicolas Cage, Charlie Sheen, James Coburn, and Peter Fonda.\n\n It is also the prime influence on the song 'Deadfall', written by the American hardcore punk band Snot.\n\n A prequel/sequel, \"Arsenal\", starring Nicolas Cage as his character Eddie King, was released in 2017.",
+    "Cher filmography\nThroughout her acting career, Cher has mainly in comedy, drama, and romance films.\n\n She has appeared in thirteen films, including two as a cameo.\n\n She has also appeared in one starring theater role, numerous television commercials and directed a piece of the motion picture \"If These Walls Could Talk\" in 1996 and some of her music videos of the Geffen-era in late 1980s and in early 1990s.\n\n Cher has starred in various international television commercials, as well as high-profile print advertising for Lori Davis (1992).\n\n Before she started her film career, she had a couple of hits in the 1960s, as a solo artist, and with her ex-husband Sonny Bono as the couple Sonny & Cher."
+   ]
+  },
+  {
+   "id": "fa9a16aedb280b11",
+   "gold": [
+    {
+     "sentence": " It flows in a west to east direction from the western part of the state in the Everglades past the Miami International Airport to a salinity control center near the Miami River.",
+     "facts": {
+      "0.0": "It flows in a west to east direction.",
+      "0.1": "It flows from the western part of the state in the Everglades.",
+      "0.2": "It flows past the Miami International Airport.",
+      "0.3": "It flows to a salinity control center near the Miami River."
+     }
+    },
+    {
+     "sentence": "The Genesee River is a tributary of Lake Ontario flowing northward through the Twin Tiers of Pennsylvania and New York in the United States.",
+     "facts": {
+      "1.0": "The Genesee River is a tributary of Lake Ontario.",
+      "1.1": "The Genesee River flows northward.",
+      "1.2": "The Genesee River flows through the Twin Tiers of Pennsylvania.",
+      "1.3": "The Genesee River flows through the Twin Tiers of New York in the United States."
+     }
+    }
+   ],
+   "items": [
+    "Genesee River\nThe Genesee River is a tributary of Lake Ontario flowing northward through the Twin Tiers of Pennsylvania and New York in the United States.",
+    "New York State Canal System\nThe New York State Canal System (formerly known as the New York State Barge Canal) is a successor to the Erie Canal and other canals within New York.\n\n Currently, the 525 mi system is composed of the Erie Canal, the Oswego Canal, the Cayuga–Seneca Canal, and the Champlain Canal.\n\n In 2014 the system was listed as a national historic district on the National Register of Historic Places in its entirety, and in 2016 it was designated a National Historic Landmark.",
+    "Graph query row:\nwaterway: Tamiami Canal\nrelationship: LOCATED_IN\nconnected_place: Florida\nplace_kind: state\ncountry: United States",
+    "Graph query row:\nwaterway: Genesee River\nrelationship: LOCATED_IN\nconnected_place: Pennsylvania\nplace_kind: state\ncountry: United States",
+    "Cayuga–Seneca Canal\nThe Cayuga–Seneca Canal is a canal in New York, United States.\n\n It is now part of the New York State Canal System.",
+    "New York State Canal Corporation\nThe New York State Canal Corporation is responsible for the oversight, administration and maintenance of the New York State Canal System, which consists of the Erie Canal, Cayuga–Seneca Canal, Oswego Canal and Champlain Canal.\n\n It is also involved with the development and maintenance of the New York State Canalway Trail and with the general development and promotion of the Erie Canal Corridor as both a tourist attraction and a working waterway.",
+    "Tamiami Canal\nThe Tamiami Canal or C-4 Canal, is a canal located in southern Florida in the United States.\n\n It flows in a west to east direction from the western part of the state in the Everglades past the Miami International Airport to a salinity control center near the Miami River.\n\n It averages 8 ft in depth and is over 100 ft wide in some areas.",
+    "Graph query row:\nwaterway: Genesee River\nrelationship: LOCATED_IN\nconnected_place: New York\nplace_kind: state\ncountry: United States",
+    "Seneca River Crossing Canals Historic District\nSeneca River Crossing Canals Historic District is a national historic district located at Montezuma and Tyre in Cayuga and Seneca Counties, New York.\n\n The district includes more than a mile of the Enlarged Erie Canal prism (built here between 1849 and 1857); towpath and heelpath; a drydock; the remains of the Richmond (Montezuma) Aqueduct crossing the Seneca River; remnants of the original Erie Canal, built between 1817 and 1825 and including Lock #62 and piers of the original mule bridge from that era; and a culvert that carries a stream beneath the Enlarged Erie Canal.",
+    "Genesee Valley Park\nGenesee Valley Park is located in the south side of Rochester, New York along the shores of the Genesee River.\n\n The New York State Barge Canal (the currently in-use portion of the Erie Canal) crosses the Genesee River within the park.\n\n The University of Rochester is located near the park's north entrance."
+   ]
+  },
+  {
+   "id": "ddaa89446c8ea1a8",
+   "gold": [
+    {
+     "sentence": " The area along Northern Boulevard is well known for its high-end premium open-air shopping center, the Americana Manhasset.",
+     "facts": {
+      "0.0": "The area along Northern Boulevard is well known for its high-end premium open-air shopping center.",
+      "0.1": "The high-end premium open-air shopping center is named the Americana Manhasset."
+     }
+    },
+    {
+     "sentence": "International fashion designer labels and luxury goods companies—Hermes, Dior, Cartier, Bottega Veneta, Chanel, Fendi, Gucci, Louis Vuitton, MaxMara, Celine, Tiffany & Co., and Prada—maintain a total of more than 60 retail stores and restaurants on a 220000 sqft site surrounded by gardens designed by Oheme van Sweden.",
+     "facts": {
+      "1.0": "Hermes, Dior, Cartier, Bottega Veneta, Chanel, Fendi, Gucci, Louis Vuitton, MaxMara, Celine, Tiffany & Co., and Prada are international fashion designer labels and luxury goods companies.",
+      "1.1": "These companies maintain a total of more than 60 retail stores and restaurants.",
+      "1.2": "These stores and restaurants are on a 220000 sqft site.",
+      "1.3": "The 220000 sqft site is surrounded by gardens.",
+      "1.4": "The gardens surrounding the site were designed by Oheme van Sweden."
+     }
+    }
+   ],
+   "items": [
+    "Daimler, Stuttgart-based German automaker, owned numerous vehicle brands and sold 3 million vehicles in 2016; it was the world’s largest truck maker. Estate jewelry means significant antique, vintage, or pre-owned jewelry. Mouawad is a Geneva- and Dubai-based luxury jeweler founded in Beirut in 1891. Dior is a French luxury group controlled by Bernard Arnault and holds a major stake in LVMH. Concord is a Swiss watch brand now owned by Mov",
+    "Bumble and bumble\nBumble and bumble Products, LLC is one of 27 brands owned by Estée Lauder Companies, Inc.\n\n It was founded as a New York City hair salon in 1977 by hairdresser and entrepreneur Michael Gordon.\n\n The company operates two flagship salons in Manhattan: a midtown location on East 56th Street and on the top two floors of The House of Bumble in the Meatpacking District.",
+    "Daimler, once the world’s largest truckmaker, sold 3 million vehicles in 2016. Mouawad, founded in Beirut in 1891, is a Geneva/Dubai jeweler; Dior is controlled by Bernard Arnault and holds a major LVMH stake. Microsoft My Phone backed up Windows Mobile data (2009–11). Samsung products ranged from budget phones to Galaxy flagships and tablets. SAIC-GM-Wuling sold 1.445 million vehicles",
+    "Miracle Mile (Manhasset)\nThe Miracle Mile is a prominent shopping district in Manhasset on the North Shore of Long Island in Nassau County, New York.\n\n The area along Northern Boulevard is well known for its high-end premium open-air shopping center, the Americana Manhasset.",
+    "New Roc City\nNew Roc City, also known as New Rochelle Center, is an entertainment, retail and residential complex in the Downtown section of the city of New Rochelle in Westchester County, New York.\n\n It is located at 33 LeCount Place, between Main Street North and Main Street South.\n\n The center was built on the site of the former New Rochelle Mall which closed in 1992.",
+    "Americana Manhasset\nInternational fashion designer labels and luxury goods companies—Hermes, Dior, Cartier, Bottega Veneta, Chanel, Fendi, Gucci, Louis Vuitton, MaxMara, Celine, Tiffany & Co., and Prada—maintain a total of more than 60 retail stores and restaurants on a 220000 sqft site surrounded by gardens designed by Oheme van Sweden.\n\n Peter Marino is Americana Manhasset's master architect.",
+    "Estée Lauder Companies\nThe Estée Lauder Companies Inc. ( ) is an American manufacturer and marketer of prestige skincare, makeup, fragrance and hair care products.\n\n The company owns a diverse portfolio of brands, distributed internationally through retail channels and digital commerce, and has its headquarters in Midtown Manhattan, New York City.",
+    "Luxify\nLuxify is a Hong Kong-based company, providing an online marketplace for new, vintage and pre-owned luxury goods.\n\n The company manages an online marketplace website in which members buy and sell a variety of luxury goods.\n\n It was Hong Kong's first online marketplace to buy and sell luxury goods The site has over 15 categories, including real estate, watches, jewelry, luxury cars, yachts, aircraft, luxury handbags, art, collectibles, furniture, antiques and fine wines & spirits.\n\n As of March 2016, the website had over 22,000 listings from luxury dealers from all over the world, making a US$18.6 billion marketplace.\n\n Luxify also has offices in Singapore and London and local partners in Shanghai and Jakarta.",
+    "Mouawad\nMouawad is a privately held Swiss and Emirati luxury goods company that makes fashion accessories, jewelry and retail company that sources diamonds and gemstones, designs, manufacturers, and sells jewelry collections, objects of art, and luxury watches.\n\n The firm has headquarters in Geneva, Switzerland, with a Middle East headquarters at Jumeirah Lakes Towers in Dubai.\n\n Founded in 1891 in Beirut, Lebanon by David Mouawad, the firm is now led by 4th generation co-guardians Fred Mouawad, Alain Mouawad and Pascal Mouawad.\n\n The firm's jewelry and watch design and manufacturing divisions are located in Switzerland and Asia Pacific.",
+    "Christian Dior SE\nChristian Dior SE (] ), commonly known as Dior, is a French luxury goods company controlled and chaired by French businessman Bernard Arnault, who also heads LVMH – the world's largest luxury group.\n\n Dior itself holds 42.36% shares of and 59.01% voting rights within LVMH."
+   ]
+  },
+  {
+   "id": "5249d3a9b0cfd64e",
+   "gold": [
+    {
+     "sentence": " This episode represents a milestone in the history of the series as Snowball II is killed off, which, excluding the death of Homer's mother in season 19's \"Mona Leaves-a\", is to date the closest thing to an actual Simpson family member actually being killed off.",
+     "facts": {
+      "0.0": "This episode is a milestone in the history of the series.",
+      "0.1": "In this episode, Snowball II is killed off.",
+      "0.2": "Homer's mother died in season 19's Mona Leaves-a.",
+      "0.3": "Excluding the death of Homer's mother, the killing of Snowball II is to date the closest thing to an actual Simpson family member being killed off."
+     }
+    },
+    {
+     "sentence": "Mona Penelope Simpson (née Olsen) is a recurring fictional character in the animated television series \"The Simpsons\".",
+     "facts": {
+      "1.0": "Mona Penelope Simpson's maiden name is Olsen.",
+      "1.1": "Mona Penelope Simpson is a recurring fictional character.",
+      "1.2": "Mona Penelope Simpson is a character in the animated television series The Simpsons."
+     }
+    }
+   ],
+   "items": [
+    "Homer to the Max\n\"Homer to the Max\" is the thirteenth episode of \"The Simpsons\"<nowiki>'</nowiki> tenth season.\n\n It originally aired on the Fox network in the United States on February 7, 1999.\n\n In the episode, Homer discovers that a new television show, \"Police Cops\", has a hero also named Homer Simpson.\n\n He is delighted with the positive attention he receives because of his name, but when the television character is rewritten from a hero to a bumbling idiot, he is mocked and taunted, so he changes his name to \"Max Power\" to rid himself of the negative attention.\n\n Max gains new friends, and is forced into a protest to prevent a forest from being knocked down.\n\n In the end, he changes his name back to Homer Simpson.",
+    "Mona Simpson (The Simpsons)\nMona Penelope Simpson (née Olsen) is a recurring fictional character in the animated television series \"The Simpsons\".\n\n She has been voiced by several actresses, including Maggie Roswell, Tress MacNeille, Pamela Hayden, and most prominently, Glenn Close.\n\n Glenn Close's performances as Mona have been well received by critics and she was named one of the top 25 guest stars on the show by IGN.",
+    "Girly Edition\n\"Girly Edition\" is the twenty-first episode in the ninth season of the American animated television series \"The Simpsons\".\n\n It originally aired on the Fox network in the United States on April 19, 1998.\n\n In the episode, Lisa and Bart Simpson must co-anchor a new news program, though when Bart is seen as a more successful news anchor, Lisa becomes jealous and seeks revenge.\n\n Meanwhile, in the subplot, Homer Simpson gets a monkey helper because of his laziness.\n\n \"Girly Edition\" was the first episode written by Larry Doyle and was directed by Mark Kirkland.\n\n Much of the subplot was inspired by the film \"Monkey Shines\".\n\n Critics gave the episode positive reviews and it was well received by Lisa's voice actress Yeardley Smith.",
+    "I, (Annoyed Grunt)-bot\n\"I, (Annoyed Grunt)-Bot\", also known as \"\"I, D'oh-Bot\"\", is the ninth episode of \"The Simpsons\"<nowiki>'</nowiki> fifteenth season.\n\n It originally aired on the Fox network in the United States on January 11, 2004.\n\n This episode represents a milestone in the history of the series as Snowball II is killed off, which, excluding the death of Homer's mother in season 19's \"Mona Leaves-a\", is to date the closest thing to an actual Simpson family member actually being killed off.",
+    "My Mother the Carjacker\n\"My Mother the Carjacker\" is the second episode of \"The Simpsons\"<nowiki>'</nowiki> fifteenth season.\n\n It first aired on the Fox network in the United States on November 9, 2003.\n\n Homer receives a cryptic message in the newspaper informing him to come to a certain place at midnight, and soon discovers that the person who wrote the message is his mother, Mona Simpson.\n\n It was written by Michael Price and directed by Nancy Kruse.\n\n Glenn Close makes her second of six guest spots as Homer's mother.\n\n It has a direct link from the season seven episode, \"Mother Simpson\".\n\n It was nominated for a Writers Guild of America Award in 2004.\n\n In its original run, the episode received 12.4 million viewers.",
+    "Homer Simpson\nHomer Jay Simpson is a fictional character and the main protagonist of the American animated television series \"The Simpsons\" as the patriarch of the eponymous family.\n\n He is voiced by Dan Castellaneta and first appeared on television, along with the rest of his family, in \"The Tracey Ullman Show\" short \"Good Night\" on April 19, 1987.\n\n Homer was created and designed by cartoonist Matt Groening while he was waiting in the lobby of James L. Brooks' office.\n\n Groening had been called to pitch a series of shorts based on his comic strip \"Life in Hell\" but instead decided to create a new set of characters.\n\n He named the character after his father, Homer Groening.\n\n After appearing for three seasons on \"The Tracey Ullman Show\", the Simpson family got their own series on Fox that debuted December 17, 1989.",
+    "Mona Leaves-a\n\"Mona Leaves-a\" is the nineteenth episode of \"The Simpsons\"<nowiki>'</nowiki> nineteenth season.\n\n It originally aired on the Fox network in the United States on May 11, 2008.\n\n The episode features the death of Homer's mother, Mona Simpson.\n\n Homer is reunited with his mother, Mona, but is not willing to forgive her for all the times she left him as a child.\n\n When she dies, a guilt-ridden Homer attempts to make it up to her by fulfilling her final wishes.\n\n It was written by Joel H. Cohen and directed by Mike B. Anderson and Ralph Sosa.\n\n Glenn Close makes her third appearance as Mona Simpson, and Lance Armstrong has a cameo as himself.",
+    "Homer Simpson, This Is Your Wife\n\"Homer Simpson, This Is Your Wife\" is the fifteenth episode of the seventeenth season of the American animated television sitcom \"The Simpsons\".\n\n It originally aired on the Fox network in the United States on March 26, 2006, and was watched by around ten million people during that broadcast.\n\n In the episode, Homer signs the Simpson family up for a reality show in which the mothers of two families switch places.\n\n Marge gets to live with a friendly man named Charles and his perfect son, while Homer, Bart, and Lisa must spend time with Charles' strict wife Verity.",
+    "Moho House\n\"Moho House\" is the twenty first episode of the twenty-eighth season of the animated television series \"The Simpsons\", and the 617th episode of the series overall.\n\n It aired in the United States on Fox on May 7, 2017.",
+    "Grampa Simpson\nAbraham Jedediah Simpson II, often known as Grampa, is a fictional character in the animated television series \"The Simpsons\".\n\n He made his first appearance in the episode entitled \"Grampa and the Kids\", a Simpsons short on \"The Tracey Ullman Show\".\n\n Voiced by Dan Castellaneta, he is the father of Homer Simpson and the grandfather of Bart, Lisa and Maggie Simpson.\n\n In the 1000th issue of \"Entertainment Weekly\", Grampa was selected as the Grandpa for \"The Perfect TV Family\"."
+   ]
+  },
+  {
+   "id": "0b2ecb34ca825e34",
+   "gold": [
+    {
+     "sentence": "Karen Joy Fowler (born February 7, 1950) is an American author of science fiction, fantasy, and literary fiction.",
+     "facts": {
+      "0.0": "Karen Joy Fowler was born on February 7, 1950.",
+      "0.1": "Karen Joy Fowler is American.",
+      "0.2": "Karen Joy Fowler is an author of science fiction.",
+      "0.3": "Karen Joy Fowler is an author of fantasy.",
+      "0.4": "Karen Joy Fowler is an author of literary fiction."
+     }
+    },
+    {
+     "sentence": "Charles Bruce Chatwin (13 May 194018 January 1989) was an English travel writer, novelist, and journalist.",
+     "facts": {
+      "1.0": "Charles Bruce Chatwin was born on 13 May 1940.",
+      "1.1": "Charles Bruce Chatwin died on 18 January 1989.",
+      "1.2": "Charles Bruce Chatwin was English.",
+      "1.3": "Charles Bruce Chatwin was a travel writer.",
+      "1.4": "Charles Bruce Chatwin was a novelist.",
+      "1.5": "Charles Bruce Chatwin was a journalist."
+     }
+    }
+   ],
+   "items": [
+    "Bruce Chatwin\nCharles Bruce Chatwin (13 May 194018 January 1989) was an English travel writer, novelist, and journalist.\n\n His first book, \"In Patagonia\" (1977), established Chatwin as a travel writer, although he considered himself instead a storyteller, interested in bringing to light unusual tales.\n\n He won the James Tait Black Memorial Prize for his novel \"On the Black Hill\" (1982) and his novel \"Utz\" (1988) was shortlisted for the Man Booker Prize.\n\n In 2008 \"The Times\" named Chatwin #46 on their list of \"50 Greatest British Writers Since 1945.\"",
+    "Graph query row:\nperson: Bruce Chatwin\nbirth_date: 13 May 1940",
+    "The Jane Austen Book Club\nThe Jane Austen Book Club is a 2004 novel by American author Karen Joy Fowler.\n\n The story, which takes place near Sacramento, California, centers on a book club consisting of five women and one man who meet once a month to discuss Jane Austen's six novels.\n\n It was a critical success and became a national bestseller.",
+    "Kim Warwick\nKim Warwick (born 8 April 1952) is an Australian former professional male tennis player who competed on the ATP Tour from 1970–1987 reaching the final of the singles Australian Open in 1980.\n\n He defeated over 35 players ranked in the top 10 including Guillermo Vilas, Raul Ramerez, Vitas Gerulaitis, Jan Kodeš, Bob Lutz and Arthur Ashe.\n\n Warwick's career-high singles ranking was World No. 15, achieved in 1981.\n\n He won three singles titles and 26 doubles, including Australian Open 1978 (with Wojtek Fibak) and Australian Open 1980 and 1981, Roland Garros 1986 and also a runner-up in Australian Open 1985, all of them partnering fellow countryman Mark Edmondson.\n\n Partnering with Evonne Goolagong, he won the French Open 1972, defeating Françoise Dürr and Jean-Claude Barclay in the final 6–2, 6–4.\n\n Evonne and Kim were finalists in 1972 at Wimbledon against Rosie Casals and Ilie Năstase who won 6–4, 6–4.",
+    "Graph query row:\nperson: Karen Joy Fowler\nbirth_date: February 7, 1950",
+    "Clinton Walker\nClinton Walker (born 1957) is an Australian writer, best known for his works on popular music but with a broader interest in social and cultural history and theory.\n\n Sydney's \"Sun-Herald\" has called him \"our best chronicler of Australian grass-roots culture.\"\n\n He has always been ahead of the curve.\n\n As \"Rhythms\" magazine said in 2015, \"Like many of Walker’s projects, \"Buried Country\" was at least a decade ahead of its time,\" and as such he is remarkable as a critic who has exerted a pro-active impact on Australian music and its development; groundbreaking books like \"Inner City Sound\" (1981) and \"Buried Country\" (2000) especially have informed and inspired successive generations of musicians.\n\n Similarly, while he found best-selling success as Bon Scott's biographer, Walker's non-music books like \"Football Life\" (1998) and \"Golden Miles\" (2005) have innovatively offered an appreciation of subjects hitherto hardly deemed worthy of serious consideration.",
+    "We Are All Completely Beside Ourselves\nWe Are All Completely Beside Ourselves is a 2013 novel by the American writer Karen Joy Fowler.\n\n The novel won the 2014 PEN/Faulkner Award for Fiction<ref name=\"The Guardian - 3 April 2014 - Karen Joy Fowler wins PEN/Faulkner award for fiction\"> </ref> and was also short-listed for the 2014 Man Booker Prize.",
+    "Karen Joy Fowler\nKaren Joy Fowler (born February 7, 1950) is an American author of science fiction, fantasy, and literary fiction.\n\n Her work often centers on the nineteenth century, the lives of women, and alienation.",
+    "Penelope Fitzgerald\nPenelope Fitzgerald (17 December 1916 – 28 April 2000) was an English Booker Prize-winning novelist, poet, essayist and biographer.\n\n In 2008, \"The Times\" included her in a list of \"the 50 greatest British writers since 1945\".\n\n In 2012, \"The Observer\" named her final novel, \"The Blue Flower\" one of \"the ten best historical novels\".",
+    "Mollie Gillen\nMollie Gillen (née Woolnough; 1908–2009) was an Australian historian, researcher, writer and novelist.\n\n Her work on the First Fleet, in \"The search for John Small,\" \"First Fleeter\" and The Founders of Australia: A Biographical Dictionary of the First Fleet, explored the idea that many of the founding families of Australia were descended from the convict population, rather than those sent to guard them.\n\n Gillen's article Maud Montgomery: The Girl Who Wrote Green Gables instigated a new era in scholarship on Lucy Maud Montgomery."
+   ]
+  },
+  {
+   "id": "143e2de2c16df8d9",
+   "gold": [
+    {
+     "sentence": "Corn Ranch is a spaceport in the West Texas town of Van Horn, Texas, where flight tests of the New Shepard are carried out by Blue Origin.",
+     "facts": {
+      "0.0": "Corn Ranch is a spaceport.",
+      "0.1": "Corn Ranch is located in the West Texas town of Van Horn, Texas.",
+      "0.2": "Flight tests of the New Shepard are carried out at Corn Ranch.",
+      "0.3": "Flight tests of the New Shepard are carried out by Blue Origin."
+     }
+    },
+    {
+     "sentence": "Blue Origin is an American privately funded aerospace manufacturer and spaceflight services company set up by Amazon.com founder Jeff Bezos with its headquarters in Kent, Washington.",
+     "facts": {
+      "1.0": "Blue Origin is an American privately funded aerospace manufacturer.",
+      "1.1": "Blue Origin is a spaceflight services company.",
+      "1.2": "Blue Origin was set up by Amazon.com founder Jeff Bezos.",
+      "1.3": "Blue Origin has its headquarters in Kent, Washington."
+     }
+    }
+   ],
+   "items": [
+    "Corn Ranch\nCorn Ranch is a spaceport in the West Texas town of Van Horn, Texas, where flight tests of the New Shepard are carried out by Blue Origin.\n\n The 165,000-acre (670 km²) land parcel was purchased by Internet billionaire Jeff Bezos.\n\n The first flight test took place on November 13, 2006 with the goal of providing commercial tourist flights.",
+    "Grand Sky\nGrand Sky is an UAS (unmanned aerial systems)-specific business and aviation park located at Grand Forks Air Force Base near Grand Forks, North Dakota.\n\n A groundbreaking for the development was held in September 2015, making it the first UAS business and aviation park in the U.S.\n\n The park consists of 217 acres and includes access to the Grand Forks Air Force Base runway for large UAS flights.",
+    "Northern California TRACON\nNorthern California TRACON (NCT) (Terminal Radar Approach Control), or NorCal TRACON for short, is an air traffic control facility that provides safety alerts, separation, and sequencing of air traffic arriving, departing, and transiting the airspace and airports in Northern California.\n\n Located in Rancho Cordova near Sacramento, NCT controls airspace over 19000 square miles, and serves Reno International Airport, Sacramento International Airport, San Jose International Airport, Oakland International Airport, and San Francisco International Airport, plus 19 other smaller airports with air traffic control towers.\n\n NCT is the 3rd busiest TRACON in America.\n\n NorCal TRACON is the step between local control (in an airport's control tower) and Air Route Traffic Control Center (ARTCC), in this case, Oakland Center (ICAO code: ZOA).\n\n San Francisco International Airport is the 2nd largest airport in California and the largest airport serving Northern California.",
+    "SyberJet Aircraft\nSyberJet Aircraft is the manufacturer of the SJ30 light business jet.\n\n The company's headquarters is in Cedar City, Utah adjacent to the Cedar City Regional Airport with additional engineering offices and manufacturing, service, repair and fatigue test facilities near and on the San Antonio International Airport in San Antonio, Texas.",
+    "LSO (company)\nLSO, formerly Lone Star Overnight, is a regional shipping carrier that focuses on overnight delivery, utilizing both air and ground transportation, to every address in Texas, southeastern New Mexico and all major metro markets in Oklahoma, Louisiana, Arkansas, Alabama & Tennessee, plus the country of Mexico.\n\n Headquartered in Austin, Texas, LSO offers hundreds of drop box locations throughout its service area.\n\n Like its competitors, LSO’s brand distinguishes itself with a signature shade of blue.",
+    "Blue Origin\nBlue Origin is an American privately funded aerospace manufacturer and spaceflight services company set up by Amazon.com founder Jeff Bezos with its headquarters in Kent, Washington.\n\n The company is developing technologies to enable private human access to space with the goal to dramatically lower costs and increase reliability.\n\n Blue Origin is employing an incremental approach from suborbital to orbital flight, with each developmental step building on its prior work.\n\n The company motto is \"\"Gradatim Ferociter\"\", Latin for \"Step by Step, Ferociously\".\n\n Blue Origin is developing a variety of technologies, with a focus on rocket-powered Vertical Takeoff and Vertical Landing (VTVL) vehicles for access to suborbital and orbital space.\n\n The company's name refers to the blue planet, Earth, as the point of origin.",
+    "RAAF Base Amberley\nAmberley was one of only two airfields in Australia (the other being Darwin International Airport) that were listed as a Transoceanic Abort (TOA) landing site for the Space Shuttle.\n\n Amberley is currently undergoing a A$64 million dollar re-development program.\n\n The RAAF has plans to have Amberley operating as its \"superbase\" with flights of F/A-18F Super Hornets, F-35 Lightning II, KC-30A, C-17 Globemaster.\n\n No. 35 Squadron (Operating C-27J Spartan) is planned to move to the base from RAAF Base Richmond after it is fully equipped with the C-27J.",
+    "Texas Air &amp; Space Museum\nThe Texas Air & Space Museum is an aviation museum located near Rick Husband Amarillo International Airport in Amarillo, Texas.\n\n The museum displays civilian and military aircraft as well as a wide range of air and space artifacts.",
+    "Rick Husband Amarillo International Airport\nRick Husband Amarillo International Airport (IATA: AMA, ICAO: KAMA, FAA LID: AMA) is a public airport six miles (10 km) east of downtown Amarillo, in Potter and Randall Counties, Texas, United States.\n\n The airport was renamed in 2003 after NASA astronaut and Amarillo native Rick Husband, who died in the Space Shuttle \"Columbia\" disaster in February of that year.",
+    "M7 Aerospace\nM7 Aerospace LP is an aerospace company with its headquarters on the property of San Antonio International Airport in Uptown San Antonio, Texas, United States."
+   ]
+  },
+  {
+   "id": "358d258d2ca624e1",
+   "gold": [
+    {
+     "sentence": "Sleepless in Seattle is a 1993 American romantic comedy-drama film directed and co-written by Nora Ephron, based on a story by Jeff Arch.",
+     "facts": {
+      "0.0": "Sleepless in Seattle is a 1993 film.",
+      "0.1": "Sleepless in Seattle is an American film.",
+      "0.2": "Sleepless in Seattle is a romantic comedy-drama film.",
+      "0.3": "Sleepless in Seattle was directed by Nora Ephron.",
+      "0.4": "Sleepless in Seattle was co-written by Nora Ephron.",
+      "0.5": "Sleepless in Seattle is based on a story by Jeff Arch."
+     }
+    },
+    {
+     "sentence": " It stars Tom Hanks and Meg Ryan, alongside a supporting cast featuring Bill Pullman, Ross Malinger, Rob Reiner, Rosie O'Donnell, Gaby Hoffmann, Victor Garber, and Rita Wilson.",
+     "facts": {
+      "1.0": "Sleepless in Seattle stars Tom Hanks.",
+      "1.1": "Sleepless in Seattle stars Meg Ryan.",
+      "1.2": "Sleepless in Seattle has a supporting cast featuring Bill Pullman.",
+      "1.3": "Sleepless in Seattle has a supporting cast featuring Ross Malinger.",
+      "1.4": "Sleepless in Seattle has a supporting cast featuring Rob Reiner.",
+      "1.5": "Sleepless in Seattle has a supporting cast featuring Rosie O'Donnell.",
+      "1.6": "Sleepless in Seattle has a supporting cast featuring Gaby Hoffmann.",
+      "1.7": "Sleepless in Seattle has a supporting cast featuring Victor Garber.",
+      "1.8": "Sleepless in Seattle has a supporting cast featuring Rita Wilson."
+     }
+    },
+    {
+     "sentence": "Roseann O'Donnell (born March 21, 1962) is an American comedian, actress, author, and television personality.",
+     "facts": {
+      "2.0": "Roseann O'Donnell was born on March 21, 1962.",
+      "2.1": "Roseann O'Donnell is an American comedian.",
+      "2.2": "Roseann O'Donnell is an American actress.",
+      "2.3": "Roseann O'Donnell is an American author.",
+      "2.4": "Roseann O'Donnell is an American television personality."
+     }
+    }
+   ],
+   "items": [
+    "Ken Kwapis\nKenneth William \"Ken\" Kwapis (born August 17, 1957) is an American film and television director and screenwriter.\n\n He specialized in the single-camera sitcom in the 1990s and 2000s and has directed feature films such as \"Sesame Street Presents Follow That Bird\" (1985), \"The Sisterhood of the Traveling Pants\" (2005), and \"He's Just Not That into You\" (2009).",
+    "Amy O'Neill\nAmy O'Neill (born July 8, 1971) is an American performer and former actress.\n\n After appearing in several sitcoms and starring as Molly Stark on \"The Young and the Restless\" in 1986, she was cast in her notable role as Amy Szalinski in the 1989 Disney film, \"Honey, I Shrunk the Kids\", for which she was nominated for a Young Artist Award.\n\n She reprised her role as Amy Szalinski in the 1992 sequel, \"Honey, I Blew Up the Kid\" and appeared as Lisa Barnes in \"Where's Rodney?\n\n\".",
+    "Sleepless in Seattle\nSleepless in Seattle is a 1993 American romantic comedy-drama film directed and co-written by Nora Ephron, based on a story by Jeff Arch.\n\n It stars Tom Hanks and Meg Ryan, alongside a supporting cast featuring Bill Pullman, Ross Malinger, Rob Reiner, Rosie O'Donnell, Gaby Hoffmann, Victor Garber, and Rita Wilson.\n\n The film was a critical and commercial success, grossing over $220 million worldwide.",
+    "Matthew Perry\nMatthew Langford Perry (born August 19, 1969) is a Canadian-American actor, best known for his role as Chandler Bing on the long-running NBC television sitcom \"Friends\", as well as his portrayal of Ron Clark in the 2006 television movie \"The Ron Clark Story\".",
+    "Kate O'Beirne\nKate Walsh O'Beirne (September 23, 1949 – April 23, 2017) was the President of National Review Institute.\n\n She was the Washington editor of \"National Review\".\n\n Her column, \"Bread and Circuses,\" covered Congress, politics, and U.S. domestic policy.",
+    "Carrie Fisher\nCarrie Frances Fisher (October 21, 1956 – December 27, 2016) was an American actress, writer, and humorist.\n\n Fisher was known for playing Princess Leia in the \"Star Wars\" films; a role for which she was nominated for three Saturn Awards.\n\n Her other film roles included \"Shampoo\" (1975), \"The Blues Brothers\" (1980), \"Hannah and Her Sisters\" (1986), \"The 'Burbs\" (1989), \"When Harry Met Sally...\" (1989), \"Soapdish\" (1991) and \"The Women\" (2008 film).\n\n She was nominated twice for the Primetime Emmy Award for Outstanding Guest Actress in a Comedy Series for her performances on the television series \"30 Rock\" and \"Catastrophe\".\n\n She was posthumously made a Disney Legend in 2017.",
+    "Marty Belafsky\nMarty Belafsky (born September 19, 1975) is an American actor/comedian born in Los Angeles, California.\n\n He began acting professionally at age 13 and was soon cast as Louis Plumb on the short-lived NBC series \"Hull High\".\n\n Shortly thereafter, Belafsky landed the role of Crutchy in the Disney musical film, \"Newsies\".\n\n He continued acting through his teens, making appearances in such television shows as \"The Wonder Years\", \"Great Scott\" and \"Step By Step\" and the film \"Wrestling Ernest Hemingway\".\n\n Belafsky also voiced Kent Swanson in the video game series \"Dead Rising\" released in 2006.",
+    "Rosie O'Donnell\nRoseann O'Donnell (born March 21, 1962) is an American comedian, actress, author, and television personality.\n\n She has been a magazine editor and continues to be a celebrity blogger, a lesbian rights activist, a television producer, and a collaborative partner in the LGBT family vacation company, R Family Vacations.",
+    "Barry Sandler\nBarry Sandler (born February 23, 1947 in Buffalo, New York) is an American screenwriter and film producer.\n\n His career has spanned several decades, with the 1980s being his most prolific.\n\n The openly gay Sandler is perhaps best known for writing the 1982 film \"Making Love\", the first mainstream Hollywood film to deal seriously with issues of homosexuality and coming out.\n\n Sandler discussed \"Making Love\" in the 1995 documentary film \"The Celluloid Closet\".",
+    "Ronn Owens\nRonn Owens (born Ronald Lowenstein on October 17, 1945, in New York City), is an American talk radio host.\n\n Owens was the sole remaining weekday talk radio host on KGO in San Francisco after KGO was reorganized as an all-news station in December 2011."
+   ]
+  },
+  {
+   "id": "29b904997cfed985",
+   "gold": [
+    {
+     "sentence": " The ground was home to the Boston Reds, that played in the Players' League in 1890 and the American Association in 1891.",
+     "facts": {
+      "0.0": "The ground was home to the Boston Reds.",
+      "0.1": "The Boston Reds played in the Players' League in 1890.",
+      "0.2": "The Boston Reds played in the American Association in 1891."
+     }
+    },
+    {
+     "sentence": " It is home to the Port of Boston, a major shipping facility in the northeastern United States.",
+     "facts": {
+      "1.0": "The ground is home to the Port of Boston.",
+      "1.1": "The Port of Boston is a major shipping facility.",
+      "1.2": "The Port of Boston is in the northeastern United States."
+     }
+    }
+   ],
+   "items": [
+    "The Sports Museum\nThe Sports Museum (also known as The Sports Museum of New England) is a non-profit museum currently located in the TD Garden in Boston, Massachusetts.\n\n The museum was founded in 1977 in nearby Cambridge, Massachusetts before eventually moving to Boston to the Garden, which has been home to Celtics and Bruins for twenty years.\n\n The museum's exhibits focus on the history of various sports in the Boston area, including the Boston Bruins, Boston Celtics, Boston Red Sox, New England Patriots, Boston Marathon, New England Revolution, boxing, college sports, and others.\n\n The museum features diverse sports memorabilia, curiosities, and life-size sculptures of Bobby Orr, Larry Bird, Carl Yastrzemski and Ted Williams by Rhode Island sculptor Armand LaMontagne.\n\n The museum is normally open daily between 10 AM and 4 PM, but may close when an event or game is scheduled in the Garden.\n\n It is located on a subway stop.",
+    "Braves Field\nBraves Field was a baseball park in the Northeastern United States, located in Boston, Massachusetts.\n\n Today the site is home to Nickerson Field on the campus of Boston University.\n\n The stadium was home of the Boston Braves of the National League from 1915–1952, prior to the Braves' move to Milwaukee in 1953.\n\n The stadium hosted the 1936 Major League Baseball All-Star Game and Braves home games during the 1948 World Series.\n\n The Boston Red Sox used Braves Field for their home games in the 1915 and 1916 World Series since the stadium had a larger seating capacity than Fenway Park.\n\n Braves Field was the site of Babe Ruth's final season, playing for the Braves in 1935.\n\n From 1929 to 1932, the Boston Red Sox played select regular season games periodically at Braves Field.\n\n On May 1, 1926, Braves Field hosted the longest baseball game in history – 26 Innings.\n\n The game ended in a 1–1 tie.",
+    "TD Garden\nTD Garden, often called Boston Garden and \"The Garden\", is a multi-purpose arena in Boston, Massachusetts.\n\n It is named after its sponsor, TD Bank, a subsidiary of Canada's Toronto-Dominion Bank.\n\n It opened in 1995 as a replacement for the original Boston Garden and has been known as Shawmut Center, FleetCenter, and TD Banknorth Garden.\n\n The arena is located directly above the MBTA's North Station.",
+    "Congress Street Grounds\nCongress Street Grounds is a former baseball ground located in Boston, Massachusetts.\n\n The ballpark, as the name implies, was along Congress Street, near the intersection of Thompson Place, and not far from the Fort Point Channel on South Boston Flats, a newly filled in piece of land on Boston Harbor.\n\n The ground was home to the Boston Reds, that played in the Players' League in 1890 and the American Association in 1891.",
+    "Deering Oaks\nDeering Oaks is a 55 acre public park in Portland, Maine, which has a baseball diamond, tennis courts, a playground, and a pond.\n\n It is located west of downtown Portland and is bordered by Deering Avenue on the west, Forest Avenue on the east, Park Avenue to the south and Interstate 295 to the north.\n\n State Street bisects the park.\n\n Access is from State Street, Deering Avenue, or Park Avenue.\n\n The Portland Farmers Market is located on the Park Avenue side of the park.\n\n The park is listed on the National Register of Historic Places.",
+    "Transportation in Boston\nThe Boston transportation system includes roadway, subway, regional rail, air, and sea options for passenger and freight transit in Boston, Massachusetts.\n\n The Massachusetts Port Authority (Massport) operates the Port of Boston, which includes a container shipping facility in South Boston, and Logan International Airport, in East Boston.\n\n The Massachusetts Bay Transportation Authority (MBTA) operates bus, subway, short distance rail, and water ferry passenger services throughout the city and region.\n\n Amtrak operates passenger rail service to and from major northeastern cities.\n\n A major bus terminal at South Station is served by varied intercity bus companies.\n\n The city is bisected by major highways I-90 and I-93, the intersection of which has undergone a major renovation, nicknamed the Big Dig.",
+    "New Bedford Bay Sox\nThe New Bedford Bay Sox are a baseball team that plays in the New England Collegiate Baseball League, a collegiate summer baseball league located in the northeastern United States region of New England.\n\n The team is located in New Bedford, Massachusetts.\n\n New Bedford's Paul Walsh Field serves as the home field of the Bay Sox.\n\n Th NECBL's players use wooden bats, as opposed to aluminum, and are college baseball players recruited from the top intercollegiate baseball programs in the United States.\n\n The franchise has appeared in league finals four times in their history, all as the Torrington Twisters (1997, 1998, 2003, 2006), and have twice played host to the NECBL All-Star Game as the Twisters (1998, 2008).\n\n Pat and Beth O'Connor, owners of Little Fenway and Little Wrigley joined the ownership team of the New Bedford Bay Sox in October, 2011, and signed a 3-year lease to play at Paul Walsh Field.\n\n In November 2011, former MLB player Rick Miller was announced as the 2012 Bay Sox manager.",
+    "Boston Harbor\nBoston Harbor is a natural harbor and estuary of Massachusetts Bay, and is located adjacent to the city of Boston, Massachusetts.\n\n It is home to the Port of Boston, a major shipping facility in the northeastern United States.",
+    "New Bedford Bay Sox\nMiller was succeeded as manager prior to the 2015 season by Westport, MA native and former Boston Red Sox draft pick Kyle Fernandes.\n\n Fernandes has led the Bay Sox to back-to-back postseason appearances in his two seasons as manager, most recently losing in a three-game series to the eventual NECBL Champions the Mystic Schooners.",
+    "Newark Bay\nNewark Bay is a tidal bay at the confluence of the Passaic and Hackensack Rivers in northeastern New Jersey.\n\n It is home to the Port Newark-Elizabeth Marine Terminal, the largest container shipping facility in Port of New York and New Jersey, the third largest and one of the busiest in the United States.\n\n An estuary, it is periodically dredged to accommodate ocean-going ships."
+   ]
+  },
+  {
+   "id": "0d55e955014d80cd",
+   "gold": [
+    {
+     "sentence": " He succeeded his brothers Eric IV Plovpenning and Abel of Denmark on the throne.",
+     "facts": {
+      "0.0": "The person in this sentence succeeded his brothers Eric IV Plovpenning and Abel of Denmark on the throne."
+     }
+    },
+    {
+     "sentence": "Eric IV, also known as Eric Ploughpenny or Eric Plowpenny (Danish: \"Erik Plovpenning\" ), (  1216 – 10 August 1250) was king of Denmark from 1241 until his death in 1250.",
+     "facts": {
+      "1.0": "Eric IV is also known as Eric Ploughpenny.",
+      "1.1": "Eric IV is also known as Eric Plowpenny.",
+      "1.2": "Eric IV's Danish name is Erik Plovpenning.",
+      "1.3": "Eric IV's dates are 1216 to 10 August 1250.",
+      "1.4": "Eric IV was king of Denmark from 1241.",
+      "1.5": "Eric IV was king of Denmark until his death in 1250."
+     }
+    }
+   ],
+   "items": [
+    "King Kang of Chu\nKing Kang of Chu (, died 545 BC) was from 559 to 545 BC the king of Chu, a major power during the Spring and Autumn period of ancient China.\n\n Born Xiong Zhao (), he succeeded his father King Gong of Chu.\n\n His reign was marked by constant wars with Jin, Chu's traditional enemy, and Wu, its new enemy.\n\n He ruled for 15 years and was succeeded by his son, Jia'ao, who would four years later be murdered by King Kang's younger brother King Ling of Chu.",
+    "John Christiansen\nJohn “Chris” Christiansen (May 1, 1923 － September 12, 1998) was the chief military test pilot for Lockheed California Company for over 30 years.\n\n He might be most known for having performed Lockheed S-3 Viking's maiden flight on January 21, 1972.\n\n His assignments also included the initial test flights of Lockheed P-3 Orion.\n\n Christiansen was born in Oslo, Norway in 1923 and became an American citizen in 1939.\n\n He later served in the U.S. Navy during World War II and the Korean Conflict.\n\n He began experimental flying for Lockheed Martin in 1953, and worked there until his retirement in 1984.\n\n He was a fellow at Society of Experimental Test Pilots.",
+    "Harald II of Denmark\nHarald II of Denmark (died 1018) was King of Denmark from 1014 until his death in 1018.\n\n He was the youngest son of Sweyn Forkbeard and Gunhild of Wenden, and was regent while his father was fighting Ethelred the Unready in England.\n\n He inherited the Danish throne in 1014, and held it while his brother, the later king Cnut the Great conquered England.\n\n After his death in 1018, he was succeeded by Cnut the Great.\n\n Little detail is known about Harald II.",
+    "Eric II of Denmark\nEric II the Memorable (Danish: \"Erik II Emune\" ) (  1090 – 18 September 1137) was king of Denmark between 1134 and 1137.\n\n Eric was an illegitimate son of Eric I of Denmark, who ruled Denmark from 1095 to 1103.\n\n Eric the Memorable rebelled against his uncle Niels of Denmark, and was declared king in 1134.\n\n He punished his adversaries severely, and rewarded his supporters handsomely.\n\n He was killed by a subject in 1137 and was promptly succeeded by his nephew Eric III of Denmark.",
+    "Christopher I of Denmark\nChristopher I (Danish: \"Christoffer I\" ) (1219 – 29 May 1259) was King of Denmark between 1252 and 1259.\n\n He was the son of Valdemar II of Denmark by his wife, Infanta Berengária of Portugal.\n\n He succeeded his brothers Eric IV Plovpenning and Abel of Denmark on the throne.\n\n Christopher was elected King upon the death of his older brother Abel in the summer of 1252.\n\n He was crowned at Lund Cathedral on Christmas Day 1252.",
+    "University of Copenhagen\nThe University of Copenhagen (UCPH) (Danish: \"Københavns Universitet\" ) is the oldest university and research institution in Denmark.\n\n Founded in 1479 as a studium generale, it is the second oldest institution for higher education in Scandinavia after Uppsala University (1477).\n\n The university has 23,473 undergraduate students, 17,398 postgraduate students, 2,968 doctoral students and over 9,000 employees.\n\n The university has four campuses located in and around Copenhagen, with the headquarters located in central Copenhagen.\n\n Most courses are taught in Danish; however, many courses are also offered in English and a few in German.\n\n The university has several thousands of foreign students, about half of whom come from Nordic countries.",
+    "House of Oldenburg\nThe House of Oldenburg is a European dynasty of North German origin.\n\n It is one of Europe's most influential royal houses, with branches that rule or have ruled in Denmark, Iceland, Greece, Norway, Russia, Sweden, Schleswig, Holstein, and Oldenburg.\n\n The current Queen of Denmark and King of Norway, the former King of Greece, the consorts of Greece and the United Kingdom, as well as the first twelve names in the line of succession to the British throne, are all patrilineal members of the Glücksburg branch of this house.",
+    "Eric III of Denmark\nEric III Lamb (Danish: \"Erik III Lam\" ) (  1120 – 27 August 1146) was the King of Denmark from 1137 until 1146.\n\n He was the grandson of Eric I of Denmark and the nephew of Eric II of Denmark, whom he succeeded on the throne.\n\n He abdicated in 1146, as the first and only Danish monarch to do so.\n\n His succession led to a period of civil war between Sweyn III, Canute V, and Valdemar I.",
+    "Prince Christian of Hanover (born 1985)\nPrince Christian of Hanover (Christian Heinrich Clemens Paul Frank Peter Welf Wilhelm-Ernst Friedrich Franz Prince of Hanover, Duke of Brunswick and Lüneburg; born 1 June 1985) is the younger son of Ernst August, Prince of Hanover, and his first wife Chantal Hochuli.\n\n He is the second in the line of succession to the former Hanoverian throne, after his elder brother Prince Ernst August.\n\n As a descendant of George III of the United Kingdom, Christian is also in the line of succession to the British throne.",
+    "Eric IV of Denmark\nEric IV, also known as Eric Ploughpenny or Eric Plowpenny (Danish: \"Erik Plovpenning\" ), (  1216 – 10 August 1250) was king of Denmark from 1241 until his death in 1250.\n\n He was the son of King Valdemar II by his wife, Berengaria of Portugal, and brother of King Abel and King Christopher I."
+   ]
+  },
+  {
+   "id": "d54ad9fd67951707",
+   "gold": [
+    {
+     "sentence": "Hayley Nichole Williams (born December 27, 1988) is an American singer, songwriter and musician.",
+     "facts": {
+      "0.0": "Hayley Nichole Williams was born on December 27, 1988.",
+      "0.1": "Hayley Nichole Williams is an American singer.",
+      "0.2": "Hayley Nichole Williams is an American songwriter.",
+      "0.3": "Hayley Nichole Williams is an American musician."
+     }
+    },
+    {
+     "sentence": " The band consists of Hayley Williams, Zac Farro and Taylor York.",
+     "facts": {
+      "1.0": "The band consists of Hayley Williams.",
+      "1.1": "The band consists of Zac Farro.",
+      "1.2": "The band consists of Taylor York."
+     }
+    },
+    {
+     "sentence": "Terrence Lee Glaze (born November 29, 1964, Columbus), known as Terry Lee, is a Texas-raised singer and guitarist who is most known for his work in American heavy metal bands Lord Tracy and Pantera.",
+     "facts": {
+      "2.0": "Terrence Lee Glaze was born on November 29, 1964, in Columbus.",
+      "2.1": "Terrence Lee Glaze is known as Terry Lee.",
+      "2.2": "Terry Lee is a Texas-raised singer.",
+      "2.3": "Terry Lee is a Texas-raised guitarist.",
+      "2.4": "Terry Lee is most known for his work in the American heavy metal band Lord Tracy.",
+      "2.5": "Terry Lee is most known for his work in the American heavy metal band Pantera."
+     }
+    }
+   ],
+   "items": [
+    "Richard Hawley\nRichard Willis Hawley (born 17 January 1967) is an English guitarist, singer-songwriter and producer.\n\n After his first band Treebound Story (formed while he was still at school) broke up, Hawley found success as a member of Britpop band Longpigs in the 1990s.\n\n After that group broke up in 2000, he later joined the band Pulp, led by his friend Jarvis Cocker, for a short time.\n\n As a solo musician, Hawley has released seven studio albums.\n\n He has been nominated for a Mercury prize twice and once for a Brit Award.\n\n He has collaborated with Lisa Marie Presley, Arctic Monkeys, Manic Street Preachers and Paul Weller.",
+    "Paramore\nParamore is an American rock band from Franklin, Tennessee, formed in 2004.\n\n The band currently consists of lead vocalist Hayley Williams, guitarist Taylor York and drummer Zac Farro.",
+    "Terry Ray (actor)\nTerry Ray (born February 12, 1961) is an American actor, screenwriter, and producer.\n\n Some of his work includes \"Gaydar\" and \"Cost of Living\" (2009).\n\n Ray is the creator and writer of \"here!\n\n TV\"'s sitcom \"From Here on OUT\", the first original gay sitcom created by a gay network.\n\n Terry stars in the sitcom, along with Juliet Mills, Suzanne Whang and T.J. Hoban.\n\n<br><br>Terry Ray's 1987 appearance on Scrabble (game show) is noted as number 3 in the \"10 Great Gay Moments in Game Show History\", after Charles Nelson Reilly and Paul Lynde.\n\n In the same appearance, Terry was also named as one of the \"5 Weirdest Game Show Contestants Ever\", by Movieline.\n\n<br><br>Terry’s first professional writing job was the stage performance “Hollywood Goes Classical\" at the venerable Dorothy Chandler Pavilion starring Mickey Rooney, Michael York, Dean Jones, Rhonda Fleming and several other classic film stars.",
+    "Jason White (musician)\nJason White (born November 11, 1973) is an American musician, best known as the current touring guitarist for the American punk rock band Green Day.\n\n He has played as a touring member of Green Day since 1999.\n\n However, in 2012, he was promoted to being an official member of the band before demoting himself back to his touring guitarist role in 2016.\n\n He is also the guitarist/vocalist for the Californian punk band Pinhead Gunpowder, lead guitarist/lead vocalist for California, and co-founder of Adeline Records alongside Billie Joe Armstrong.",
+    "Terry Glaze\nTerrence Lee Glaze (born November 29, 1964, Columbus), known as Terry Lee, is a Texas-raised singer and guitarist who is most known for his work in American heavy metal bands Lord Tracy and Pantera.",
+    "Hayley Williams (ice hockey)\nHayley Williams (born June 3, 1990) is an American professional ice hockey player for the Brampton Thunder of the Canadian Women's Hockey League (CWHL).\n\n Williams has previously played for the Buffalo Beauts in the National Women's Hockey League (NWHL).",
+    "Zac Farro\nZachary Wayne \"Zac\" Farro (born June 4, 1990) is an American musician and drummer of the rock band Paramore.\n\n He is also the younger brother of Josh Farro, who is Paramore's former lead guitarist and backing vocalist.\n\n After he and his brother exited Paramore in 2010, Josh formed a band named Novel American, which Zac was also a part of.\n\n Zac is currently the sole member of the band HalfNoise.\n\n Farro rejoined Paramore on February 2, 2017.",
+    "Billie Joe Armstrong\nBillie Joe Armstrong (born February 17, 1972) is an American musician, singer, songwriter and actor who is best known as the lead vocalist, primary songwriter, and guitarist of the punk rock band Green Day, which he co-founded with Mike Dirnt.\n\n He is also a guitarist and vocalist for the punk rock band Pinhead Gunpowder and provides lead vocals for Green Day's side projects Foxboro Hot Tubs and The Network.",
+    "Terry Ray (actor)\nHe wrote and starred in two more shows at the Dorothy Chandler Pavilion, one co-starring Amanda Bynes and the other Hilary Duff.\n\n<br><br>Terry is also the voice of the \"Gaydar Gun\", a spinoff toy from the film Gaydar.",
+    "Hayley Williams\nHayley Nichole Williams (born December 27, 1988) is an American singer, songwriter and musician.\n\n She serves as the lead vocalist, primary songwriter and occasional keyboardist of the rock band Paramore.\n\n The band was formed in 2004 by Josh Farro, Zac Farro, Jeremy Davis and Williams.\n\n The band consists of Hayley Williams, Zac Farro and Taylor York.\n\n The band has five studio albums: \"All We Know Is Falling\" (2005), \"Riot!\n\n\" (2007), \"Brand New Eyes\" (2009), \"Paramore\" (2013) and \"After Laughter\" (2017)."
+   ]
+  }
+ ]
+}

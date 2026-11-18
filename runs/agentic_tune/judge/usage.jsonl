@@ -1,0 +1,4 @@
+{"stage":"answer_judge","file":"runs/agentic_tune/judge/items-answers-000.json","model":"haiku","note":"4 new answers, comparison100 run, subagent tokens 25436"}
+{"stage":"answer_judge","file":"runs/agentic_tune/judge/items-answers-001.json","agent":"a841607a98db1adcd","model":"haiku","subagent_tokens":27197,"seconds":12.8}
+{"stage":"answer_judge","file":"runs/agentic_tune/judge/items-answers-002.json","agent":"ad520c6f6d461ff70","model":"haiku","subagent_tokens":26673,"seconds":8.6}
+{"stage":"answer_judge","file":"runs/agentic_tune/judge/items-answers-003.json","agent":"a4aa5d8d7cd8b356b","model":"haiku","subagent_tokens":25739,"seconds":10.7}

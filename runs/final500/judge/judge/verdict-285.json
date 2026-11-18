@@ -1,0 +1,67 @@
+[
+{"id": "586790e06b43ea69", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []},
+{"fact": "3.2", "status": "missing", "evidence": []},
+{"fact": "3.3", "status": "missing", "evidence": []}
+]},
+{"id": "30c454822f7f2642", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Certainly there wasn’t a valid alternative to Google at the time,” Cue said"}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "a5d8390e6f6b51c6", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Kelce confessed that he tried and failed to give Swift a friendship bracelet with his number on it"}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 3, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]}
+]},
+{"id": "8f32d682c3dafe03", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "president of baseball operations Jerry Dipoto decided to move one for a bat."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Moving any of Woo, Miller or Hancock could be more"}, {"item": 9, "quote": "They’d all have significant value if president of baseball operations Jerry Dipoto decided to move one for a bat."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts."}]}
+]},
+{"id": "28d321c4422ee265", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "It might not look like a big change from the outside"}, {"item": 9, "quote": "The thumbsticks have also been made 1mm taller"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "It might not look like a big change from the outside"}, {"item": 1, "quote": "The Steam Deck OLED arrives November 16 with an improved screen and longer battery life"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "The Steam Deck OLED improves much more than its screen"}, {"item": 3, "quote": "Because while Valve hasn’t upped the horsepower, it has improved practically everything else."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+]},
+{"id": "0e9d47655a0ee39d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}, {"item": 6, "quote": "Here are details explaining how the Caesars Sportsbook welcome offer works"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 3, "quote": "expect Caesars to offer the same offer in VT is has elsewhere, with new sign-ups eligible to receive up to a $1,000 Bonus Bet if their first bet loses."}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 3, "quote": "expect Caesars to offer the same offer in VT is has elsewhere, with new sign-ups eligible to receive up to a $1,000 Bonus Bet if their first bet loses."}]},
+{"fact": "3.2", "status": "stated", "evidence": [{"item": 3, "quote": "expect Caesars to offer the same offer in VT is has elsewhere, with new sign-ups eligible to receive up to a $1,000 Bonus Bet if their first bet loses."}]}
+]}
+]

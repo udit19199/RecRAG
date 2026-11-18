@@ -1,0 +1,393 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "d8fc81bc939d36e5",
+   "gold": [
+    {
+     "sentence": "Scott Treleaven is a Canadian artist whose work employs a variety of media including collage, film, video, drawing, photography and installation.",
+     "facts": {
+      "0.0": "Scott Treleaven is a Canadian artist.",
+      "0.1": "Scott Treleaven's work employs a variety of media.",
+      "0.2": "The media employed in Scott Treleaven's work include collage, film, video, drawing, photography and installation."
+     }
+    },
+    {
+     "sentence": "Edmund Mortimer (21 August 1874 – 21 May 1944) was an American actor and film director.",
+     "facts": {
+      "1.0": "Edmund Mortimer's dates are 21 August 1874 to 21 May 1944.",
+      "1.1": "Edmund Mortimer was an American actor.",
+      "1.2": "Edmund Mortimer was an American film director."
+     }
+    }
+   ],
+   "items": [
+    "Rob Bottin\nRobin R. Bottin (born April 1, 1959) is an American special make-up effects creator.\n\n Known for his collaborations with directors John Carpenter, Paul Verhoeven and David Fincher, Bottin worked with Carpenter on both \"The Fog\" and \"The Thing\", with Verhoeven on \"RoboCop\", \"Total Recall\" and \"Basic Instinct\", and with Fincher on \"Se7en\" and \"Fight Club\".\n\n His other film credits include \"Legend\", \"Innerspace\" and \"Fear and Loathing in Las Vegas\".",
+    "Tommy Atkins (director)\nTommy Atkins was an American director of the silent and early sound film eras.\n\n Born on July 18, 1887 in Springfield, Massachusetts, he would make his entrance into the film industry as the assistant director to Ralph Ince on the 1920 silent film, \"Out of the Snows\".\n\n It would be another eight years before he would make another film, again as assistant director, this time for FBO Pictures, on another silent film, \"Crooks Can't Win\".\n\n He'd work as the assistant director on another sixteen films between 1928 and 1934, the most notable of which would be 1933's \"Morning Glory\", directed by Lowell Sherman and starring Katharine Hepburn and Douglas Fairbanks Jr..\n\n In 1934 he would be given the chance to helm his first picture, \"The Silver Streak\", which was one of the top money-makers for RKO Pictures that year.\n\n He would only direct two more films, the second of which, \"Hi, Gaucho!\n\n\", he would also write the story for.",
+    "Richard Estes\nRichard Estes (born May 14, 1932 in Kewanee, Illinois) is an American artist, best known for his photorealist paintings.\n\n The paintings generally consist of reflective, clean, and inanimate city and geometric landscapes.\n\n He is regarded as one of the founders of the international photo-realist movement of the late 1960s, with such painters as John Baeder, Ralph Goings, Chuck Close, Audrey Flack, and Duane Hanson.\n\n Author Graham Thompson writes \"One demonstration of the way photography became assimilated into the art world is the success of photorealist painting in the late 1960s and early 1970s.\n\n It is also called super-realism or hyper-realism and painters like Richard Estes, Denis Peterson, Audrey Flack, and Chuck Close often worked from photographic stills to create paintings that appeared to be photographs.\"",
+    "F. Keogh Gleason\nFrancis Keogh Gleason (April 14, 1906 – December 18, 1982) was a resident set decorator at MGM studios for over 40 years.\n\n In that time he won 4 Academy Awards (for \"An American in Paris\" in 1951, \"The Bad and the Beautiful\" in 1952, \"Somebody Up There Likes Me\" in 1956 and \"Gigi\" in 1958) and was nominated an additional 3 times.\n\n Gleason graduated from the Minnesota School of Fine Arts (now known as the Minneapolis College of Art and Design) in 1927.",
+    "Edmund Mortimer, 2nd Baron Mortimer\nEdmund Mortimer, 2nd Lord Mortimer (1251 – 17 July 1304) was the second son and eventual heir of Roger Mortimer, 1st Baron Mortimer.\n\n His mother was Maud de Braose.\n\n As a younger son, Edmund had been intended for clerical or monastic life, and had been sent to study at Oxford University.",
+    "Edmund Mortimer (actor)\nEdmund Mortimer (21 August 1874 – 21 May 1944) was an American actor and film director.\n\n He appeared in 251 films between 1913 and 1945.\n\n He also directed 23 films between 1918 and 1928.\n\n He was born in New York, New York and died in Los Angeles, California.",
+    "Scott Treleaven\nScott Treleaven is a Canadian artist whose work employs a variety of media including collage, film, video, drawing, photography and installation.",
+    "Henry Murdoch\nHenry Murdoch (17 September, 1920 - 24 April, 1987), born as George Henry Murdock, was an Australian aboriginal actor and stockman who appeared in Australian films of the 1940s and 1950s.\n\n He was working as stockman in Rockhampton when discovered by Ralph Smart, who was helping make \"The Overlanders\" (1946).\n\n The film's director, Harry Watt, later claimed Murdoch and fellow aboriginal actor Clyde Combo \"proved to be first-class actors and were exceedingly quick witted and intelligent.\n\n They certainly disproved the conventional idea that the Australian aboriginal is an animalistic caveman.\"",
+    "Alexander Butler\nAlexander Butler was a British film director who made over sixty features and short films during the 1910s and 1920s including many for G.B. Samuelson's production company.\n\n Butler directed several British films in Hollywood in 1920, where Samuelson had made an arrangement with Universal Pictures.\n\n Amongst his notable films are the Sherlock Holmes adaptation \"The Valley of Fear\" (1916) and the early British horror film \"The Beetle\" (1919).",
+    "Dan Ouellette\nGiger and Beksinski, and he has been featured in magazines internationally.\n\n David Bowie commented while looking at Dan's art that he has noticed a strong influence of science fiction on contemporary art.\n\n Giger saw a different aspect, saying simply \"Very bony.\"\n\n He grew to adore the cinema of Fellini and later to marvel at Lynch's \"Eraserhead\".\n\n Rather than pursue a formal education in the fine arts he chose to study the craft of film making and after college he became a production designer working on feature films in New York City starting with his work as a production designer for Hal Hartley in 1990 with Trust and then, in 1992, with Simple Men."
+   ]
+  },
+  {
+   "id": "b0b34aca9e3b4aed",
+   "gold": [
+    {
+     "sentence": " The album includes collaborations with Popcaan, Zhu, Leikeli47, Dreezy, Flume and Pell.",
+     "facts": {
+      "0.0": "The album includes a collaboration with Popcaan.",
+      "0.1": "The album includes a collaboration with Zhu.",
+      "0.2": "The album includes a collaboration with Leikeli47.",
+      "0.3": "The album includes a collaboration with Dreezy.",
+      "0.4": "The album includes a collaboration with Flume.",
+      "0.5": "The album includes a collaboration with Pell."
+     }
+    },
+    {
+     "sentence": "Steven Zhu (born 1989), known professionally as Zhu ( or ), is a Chinese American electronic musician and singer who has been active since the beginning of 2014, signed to Mind of a Genius Records and Columbia Records.",
+     "facts": {
+      "1.0": "Steven Zhu was born in 1989.",
+      "1.1": "Steven Zhu is known professionally as Zhu.",
+      "1.2": "Zhu is a Chinese American electronic musician.",
+      "1.3": "Zhu is a Chinese American singer.",
+      "1.4": "Zhu has been active since the beginning of 2014.",
+      "1.5": "Zhu is signed to Mind of a Genius Records.",
+      "1.6": "Zhu is signed to Columbia Records."
+     }
+    }
+   ],
+   "items": [
+    "Cherushii\nCherushii (Chelsea Faith Dolan) (September 14, 1983 – December 2, 2016) was an American electronic music producer, DJ, live performer, and radio host based in San Francisco.\n\n Influenced by house music, Detroit techno, and disco, she released several recordings on the independent dance music label 100% Silk, including \"Queen of Cups\", \"Far Away So Close\", and \"Memory of Water\", reissued in 2017.\n\n KQED named Cherushii's album \"Meow Wolf’s Arcade Soundtracks: Wiggy’s Plasma Plex\" one of the 10 best bay area albums of 2016.\n\n While Cherushii has received little recognition from mainstream media, her music is of enormous influence in the underground music scene.\n\n Fellow electronic musician Maria Minerva has called Cherushii criminally underrated.",
+    "Vektroid\nRamona Andra Xavier (born August 19, 1992, known by her primary alias Vektroid) is an American electronic musician from Portland, Oregon.\n\n She has released music under her primary Vektroid alias, as well as others, such as dstnt, Laserdisc Visions, New Dreams Ltd., Macintosh Plus, Virtual Information Desk, and PrismCorp Virtual Enterprises.\n\n Xavier played a prominent role in the popularization of the vaporwave subgenre with the release of her only studio album under her Macintosh Plus alias, \"Floral Shoppe\", in 2011.\n\n The album helped popularize the vaporwave genre throughout the Internet.\n\n Since then, she has continued to release music through Bandcamp and other online platforms, and has recently collaborated with rapper Siddiq on two albums, \"Midnight Run\" and \"Palacio Del Rio\" (both from 2016).",
+    "King Electric\nKing Electric is Chris Isepp and Peter Hartwig.\n\n They took their first musical attempts at the end of 1980s / beginning 1990s and first met each other at the upcoming and flourishing Viennese techno scene back in '92.\n\n While Hartwig was touring with the well known noise-pop band the Basket Boys, Isepp made first attentions as Electro DJ & Producer.",
+    "Sandy Rothman\nSandy Rothman (born January 30, 1946, Miami, Florida) is a San Francisco Bay Area bluegrass multi-instrumentalist and record producer.\n\n He plays mandolin, dobro and banjo, and he also sings.\n\n Rothman was a friend and colleague of Grateful Dead bandleader Jerry Garcia, and a member of the Jerry Garcia Acoustic Band.\n\n He played bluegrass with Garcia and David Nelson as the Black Mountain Boys in 1964, and has played with Bill Monroe and his Blue Grass Boys, Earl Taylor, Red Allen, Jimmie Skinner, Larry Sparks, the Kentucky Colonels, Country Joe McDonald, Kathy Kallick and Clarence White, among other musicians.\n\n He has been described as \"one of the chief biscuits when and where bluegrass music is discussed, scribed, or performed in northern California.\"",
+    "Illmind\nRamon Ibanga, Jr., professionally known as Illmind (often stylized as !\n\nllmind) is a Filipino American hip hop producer and educator from Bloomfield, New Jersey.\n\n He has co-written and produced hip-hop, pop, soul, and electronic music for labels such as Cash Money, Def Jam, and Aftermath, and has worked with artists such as Andy Mineo, Kanye West, Drake, J. Cole, Dr. Dre, Ludacris, 50 Cent, Ariana Grande, and others.\n\n His accomplishments in 2016 include production on the new Hamilton Mixtape and Disney's Moana (2016 film), both created by Lin-Manuel Miranda.\n\n !\n\nllmind has released several studio albums and had a number of songs and albums reach the music charts.\n\n His most recent album, \"Human\", is a collaboration with Joell Ortiz, and was released on July 17, 2015.\n\n Starting in 2008 !\n\nllmind has released the free mixtape series \"Blaps, Rhymes & Life,\" and he operates a producer showcase in New York city called Beats, Love, Alcohol & Party (B.L.A.P.).",
+    "I Remember (AlunaGeorge album)\nI Remember is the second studio album by English electronic music duo AlunaGeorge.\n\n It was released on 16 September 2016 by Island Records.\n\n The album includes collaborations with Popcaan, Zhu, Leikeli47, Dreezy, Flume and Pell.\n\n The album's lead single, \"I'm in Control\", was released in February 2016, featuring vocals from rapper Popcaan, and peaked at number 39 on the UK Singles Chart.",
+    "Zhu (musician)\nSteven Zhu (born 1989), known professionally as Zhu ( or ), is a Chinese American electronic musician and singer who has been active since the beginning of 2014, signed to Mind of a Genius Records and Columbia Records.\n\n Until mid-2014, Zhu remained anonymous, asking to be judged by his music alone.\n\n His debut album, \"Generationwhy\", was released on 29 July 2016.",
+    "Greg Davis (musician)\nGreg Davis is an American electronic musician who has recorded albums drawing from a wide variety of sources, including guitar, field recording, various world/ethnic/traditional instruments, percussion, and voice, all processed through digital manipulation.\n\n After years of experience in hip-hop groups, jazz combos, free improvisation, and experimental composition, Davis moved toward computer-based music in 1997.\n\n At Depaul University in Chicago, he studied classical and jazz guitar alongside composition and jazz studies.\n\n In 1997, he started his own label, Autumn Records, to release his own music and the music of others.\n\n Davis moved to Boston in 1999 to pursue a master's degree in composition (which he received in June 2001) while independently immersing himself in the study of electronic music.\n\n Since 2001, he has played shows all around the world and released records on a number of different labels.\n\n He has collaborated with Keith Fullerton Whitman, Ben Vida, Sebastien Roux, Chris Weisman, Steven Hess, Jeph Jerman, Akron/Family, Toby Aronson (as Harmonizer), and Zach Wallace (as Sun Circle).",
+    "Candy Chen\nCandy Chen (陳斯亞 born January 3, 1993) is a dancer, actress, host, singer, rapper and a model.\n\n She is featured on the Taiwanese variety shows: Blackie's Teenage Club and Blackie Lollipop.\n\n Candy was a member of the Taiwanese girl group Hey Girl from 2010 to 2011, and a member of from 2013 to 2016.\n\n She is 1/8th Dutch.\n\n She changed her name to Chen Yi-Ling in July 2012 to follow her mother's maiden name.\n\n Her English name becomes Nina Chen.\n\n In November 2013, she changed her name to Candy Chen (English Name) and Chen Si Ya (Chinese Name).",
+    "Kid Confucius\nKid Confucius were an eight-piece Australian band from Sydney, Australia.\n\n They formed in 2001 and have since played well over 400 live shows around the country, including major festivals as well as their own headline shows at venues such as The Annandale Hotel and The Metro Theatre.\n\n In 2005 the band released a self-titled album and two singles \"Words\" and \"Skintight.\"\n\n The album, a mish-mash of soul, hip-hop, pop and funk, received great critical acclaim, most notably from Rolling Stone who hailed the album as one of the standout local releases of the year.\n\n \"Words\" also enjoyed some solid months of radio and TV play.\n\n The band released its second album Stripes in 2007 with three singles \"Closer\", \"Last Straw\" and \"Moment\".\n\n Stripes was the band's attempt at making a Detroit-era Motown soul album and it was quick to earn rave reviews from press around the country as well as a publishing deal with Mushroom.\n\n \"Moment\" has enjoyed good radio play on triple j. Kid Confucius is set to release its third album in October 2008.\n\n The first single from this album, \"Good Luck\", is out now."
+   ]
+  },
+  {
+   "id": "aa6f511794a55af0",
+   "gold": [
+    {
+     "sentence": " U2 did not play the song live until 2 July 2009, when they performed it on the second concert of their U2 360° Tour in Barcelona.",
+     "facts": {
+      "0.0": "U2 did not play the song live until 2 July 2009.",
+      "0.1": "U2 performed the song on 2 July 2009 on the second concert of their U2 360° Tour in Barcelona."
+     }
+    },
+    {
+     "sentence": "The U2 360° Tour was a worldwide concert tour by rock band U2.",
+     "facts": {
+      "1.0": "The U2 360° Tour was a worldwide concert tour.",
+      "1.1": "The U2 360° Tour was by rock band U2."
+     }
+    },
+    {
+     "sentence": " The concerts featured the band playing \"in the round\" on a circular stage, allowing the audience to surround them on all sides.",
+     "facts": {
+      "2.0": "The U2 360° Tour concerts featured the band playing 'in the round'.",
+      "2.1": "The U2 360° Tour concerts used a circular stage.",
+      "2.2": "The circular stage allowed the audience to surround the band on all sides."
+     }
+    }
+   ],
+   "items": [
+    "Psycho Circus World Tour\nPsycho Circus World Tour was a Kiss concert tour in 1998–2000.\n\n It was the first concert tour in history to have 3-D visual effects.\n\n The Smashing Pumpkins opened at the Dodger Stadium show only, in costume as The Beatles for the Halloween night performance.\n\n The Dodger Stadium show was streamed live on the internet as well as a radio broadcast.\n\n Two songs, \"Psycho Circus\" and \"Shout It Out Loud\", were screened live on Fox television as part of the \"Kiss Live: The Ultimate Halloween Party\" special.\n\n The vast majority of songs in the setlist were played on the previous Alive/Worldwide concert dates, leading to some frustration from fans expecting the return of classic songs not played on the previous tour.\n\n Peter Criss was quoted in Metal Edge magazine at the time as wanting to add \"Parasite\" to the setlist.\n\n The tour was initially hyped as having circus-style acts as pre-show entertainment.\n\n This ultimately happened only at the first concert at Dodger Stadium.",
+    "Rock &amp; Roll Over Tour\nRock and Roll Over Tour is a concert tour by the American hard rock group Kiss.\n\n It began November 24, 1976 (shortly after the release of the Rock and Roll Over album) and ended April 4, 1977.\n\n It was on this tour where the band performed for the first time at Madison Square Garden on 2/18/77 - a venue all four members of the band had long dreamed of playing (February 18, 1977).\n\n The band also performed in Japan for the first time on this tour.\n\n They played Budokan Hall four nights in a row breaking the previous concert attendance record set by The Beatles.\n\n On December 12, 1976 Ace Frehley suffered a severe electrical shock on stage which delayed the concert.\n\n The delay lasted about fifteen minutes and then resumed; Ace was able to finish the show despite having lost feeling in one of his hands.\n\n Being inspired by the event, Ace wrote the song \"Shock Me\" which appeared on Kiss' next album release Love Gun (1977).\n\n It is the first Kiss song in which Ace sings lead vocals.",
+    "U2 360° Tour\nThe U2 360° Tour was a worldwide concert tour by rock band U2.\n\n Launched in support of the group's 2009 album \"No Line on the Horizon\", the tour visited stadiums from 2009 through 2011.\n\n The concerts featured the band playing \"in the round\" on a circular stage, allowing the audience to surround them on all sides.\n\n To accommodate the stage configuration, a large four-legged structure nicknamed \"The Claw\" was built above the stage, with the sound system and a cylindrical, expanding video screen on top of it.\n\n At 164 ft tall, it was the largest stage ever constructed.\n\n U2 claimed that the tour would be \"the first time a band has toured in stadiums with such a unique and original structure.\"",
+    "Psycho Circus World Tour\nThey used a translator on stage to let the crowd understand exactly what Stanley was saying.\n\n At the end of the performance, the band ignited all of the pyrotechnics at once; as a result, they were banned from performing in Bremen.\n\n Ticket sales for this tour were notably slower than the previous Reunion Tour, with many of the smaller market shows underselling and a second North American leg for the summer of 1999 cancelled all together, the band ultimatly decided on embarking on a Farewell tour in the new millennium.",
+    "Ceremonials Tour\nThe Ceremonials Tour was the second concert tour by English indie rock band Florence and the Machine.\n\n The tour included performances at Music festivals because it is lead singer Florence Welch's favourite way to perform live.\n\n Welch had originally planned to spend over one year touring for \"Ceremonials\" (their previous tour lasted almost three and a half years) before announcing that the December 2012 dates would be the final performances of the tour.\n\n On 25 February 2013 it was announced that Florence and the Machine would be playing at the Coke Live Music Festival in Poland on 10 August 2013, and on 26 March 2013 it was announced that the band would be playing at Chime for Change's \"The Sound of Change Live\" concert at London's Twickenham Stadium alongside Beyoncé, Ellie Goulding and Haim, amongst others.",
+    "World on Fire World Tour\nThe World on Fire World Tour is the third concert tour by lead guitarist Slash as a solo artist, which started in July 2014 and was scheduled to resume in late 2015, in support of Slash's third solo album \"World on Fire\".\n\n The tour features the same backing band that performed with Slash during his two last tours, billed as \"Slash featuring Myles Kennedy and The Conspirators\", featuring Myles Kennedy handling lead vocal, bassist Todd Kerns, drummer Brent Fitz and rhythm guitarist Frank Sidoris.",
+    "Escape Tour\nThe Escape Tour was a concert tour by the American rock band Journey.\n\n It was one of Journey's most successful concert tours, in support of their first number one album, \"Escape\".\n\n The tour included six consecutive sold out dates at the Pine Knob Theatre in Detroit, and four straight sold out shows at the Los Angeles Forum, and Chicago's Rosemont Horizon.\n\n Journey also made an appearance on July 2, 1982 at the Rose Bowl in Pasadena, California with Blue Öyster Cult, Triumph and Aldo Nova.\n\n The 8 ⁄ -month tour took Journey through Japan and North America.\n\n Point Blank, Billy Squier, the Greg Kihn Band and Loverboy were the opening acts during the tour.",
+    "The Year of the Voyager\nThe Year Of The Voyager is a double DVD/CD released by Nevermore.\n\n It was released in Europe on October 20, 2008 and in North America on November 25, 2008 via Century Media.\n\n The set covers the \"This Godless Endeavor\" touring cycle, starting with live footage from the U.S. Gigantour 2005, the Metal Mania festival 2006 in Poland, the Wacken Open Air festival in 2006 in Germany and the main DVD show recorded at the Zeche in Bochum, Germany.\n\n Bonus material includes two songs from Century Media USA 10th Anniversary Party 2001, all promo videos and an interview with singer Warrel Dane which was recorded at the Roax Film Studios in Berlin in the spring of 2008.",
+    "Psycho Circus World Tour\nThis ultimately happened only at the first concert at Dodger Stadium.\n\n Peter Criss later said that it didn't work out because the circus performers wanted equal billing and that some had even wanted to use KISS' backstage dressing room.\n\n \"2,000 Man\" was played to bring in the new Millennium at the 1999/2000 New Year's Eve show at Vancouver, advertised at the time as being recorded for Alive IV.\n\n The Vancouver show was also notable as being the first time the original members had played non-original band era material live in concert – \"I Love It Loud\", \"Lick It Up\" and \"Heaven's on Fire\" were added to the setlist and subsequently played on the Farewell Tour.\n\n \"Forever\" was listed on concert setlists at the Vancouver show but was not played.\n\n It was thought at the time it may have been intended as a Paul Stanley solo version prior to \"Black Diamond\".\n\n One notable show on the tour was the March 12 Bremen, Germany, show.\n\n After the opening song, Paul Stanley announced that the local fire marshall had banned Kiss from using any pyrotechnics during the show.",
+    "Because We Can (concert tour)\nBecause We Can was a concert tour by American rock band, Bon Jovi.\n\n The tour was in support of the band's twelfth studio album \"What About Now\".\n\n The tour was named after the lead single from \"What About Now\".\n\n All five major continents were visited during the 2013 tour.\n\n The tour saw the band travel to Wales for the first time since their 2001 One Wild Night Tour and was also the first time since their 1995 These Days Tour that the band returned to Africa for two dates in South Africa.\n\n Furthermore, this tour was the first time in the band's 30-year history that they visited Bulgaria and Poland.\n\n The tour ranked 1st on Pollstar's annual \"Top 100 Mid Year Worldwide Tours\".\n\n It earned $142.1 million from 60 shows.\n\n At the end of 2013, the tour placed 1st on Pollstar's \"Top 100 Worldwide Tours\", grossing $259.5 million from 102 shows."
+   ]
+  },
+  {
+   "id": "be1cc56f58f0e6de",
+   "gold": [
+    {
+     "sentence": "Steve Rash is an American film director and producer best known for directing such films as \"The Buddy Holly Story\", \"Can't Buy Me Love\", \"Queens Logic\", \"\" and \"\".",
+     "facts": {
+      "0.0": "Steve Rash is an American film director.",
+      "0.1": "Steve Rash is an American producer.",
+      "0.2": "Steve Rash is best known for directing The Buddy Holly Story.",
+      "0.3": "Steve Rash is best known for directing Can't Buy Me Love.",
+      "0.4": "Steve Rash is best known for directing Queens Logic.",
+      "0.5": "Steve Rash is best known for directing two further films whose titles are blank in the source text."
+     }
+    },
+    {
+     "sentence": "Can't Buy Me Love is a 1987 American teen romantic comedy feature film starring Patrick Dempsey and Amanda Peterson in a story about a nerd at a high school in Tucson, Arizona who gives a cheerleader $1,000 to pretend to be his girlfriend for a month.",
+     "facts": {
+      "1.0": "Can't Buy Me Love is a 1987 American film.",
+      "1.1": "Can't Buy Me Love is a teen romantic comedy feature film.",
+      "1.2": "Can't Buy Me Love stars Patrick Dempsey.",
+      "1.3": "Can't Buy Me Love stars Amanda Peterson.",
+      "1.4": "The story of Can't Buy Me Love is about a nerd at a high school in Tucson, Arizona.",
+      "1.5": "In Can't Buy Me Love, the nerd gives a cheerleader $1,000 to pretend to be his girlfriend for a month."
+     }
+    }
+   ],
+   "items": [
+    "Josh Charles\nJoshua Aaron \"Josh\" Charles (born September 15, 1971) is an American stage, film and television actor.\n\n He is best known for the roles of Dan Rydell on \"Sports Night;\" Will Gardner on \"The Good Wife\", which earned him two Primetime Emmy Award nominations; and his early work as Knox Overstreet in \"Dead Poets Society\".",
+    "Steve Rash\nSteve Rash is an American film director and producer best known for directing such films as \"The Buddy Holly Story\", \"Can't Buy Me Love\", \"Queens Logic\", \"\" and \"\".",
+    "Brian Ralston\nBrian Ralston (born April 12, 1974) is a composer and musician living in Los Angeles.\n\n Ralston is a graduate of the University of Arizona and the USC Thornton School of Music Scoring for Motion Pictures and Television program.\n\n Brian's latest film is the 2017 drama Rose starring Cybill Shepherd, James Brolin and Pam Grier.\n\n In 2012 he scored the 20th Century Fox inspirational sports film Crooked Arrows, starring Brandon Routh, directed by Steve Rash.\n\n He has also composed music for the television series \"Angel\" (Season 4) and scores to the theatrical motion pictures \"9/Tenths\", directed by Bob Degus (\"Pleasantville\") starring Gabrielle Anwar, Henry Ian Cusick and Dave Ortiz, the Magnolia Pictures teen heist movie Graduation directed by Mike Mayer and starring Adam Arkin, Shannon Lucio, Chris Marquette, Riley Smith and Chris Lowell, and the dramatic feature Don't Fade Away directed by Luke Kasdan, starring Beau Bridges, Mischa Barton and Ryan Kwanten.",
+    "Jimmy Tatro\nJames Richard Tatro (born February 16, 1992) is an American actor, comedian, writer and YouTube personality.\n\n He is the creator and star of the YouTube channel \"LifeAccordingToJimmy\", which has about 2.7 million subscribers and over 440 million video views.\n\n Tatro writes, produces and directs each of his video sketches with his friend, Christian A. Pierce.\n\n Tatro has appeared in \"Divergent\", \"Grown Ups 2\", \"22 Jump Street\" and \"\", and will appear in the film \"Camp Manna\" alongside Gary Busey, set to be released in 2017.\n\n He is also starring in the true-crime satire, \"American Vandal\", in which he plays Dylan Maxwell, the accused vandal.\n\n He will also appear in the movie, Action No. 1, a film about a group of people who attempt to steal the first comic book with Superman off the actor Nicholas Cage.",
+    "Howard Rosenman\nHoward Rosenman (born February 1, 1945), also known as Zvi Howard Rosenman, is an American producer and motion picture executive.\n\n He specializes in producing romantic comedy films and documentary films.\n\n Some of his most popular productions include \"Father of the Bride\" (1991) starring Steve Martin and Diane Keaton, Joss Whedon's \"Buffy the Vampire Slayer\" (1992) and \"The Family Man\" (2000) starring Nicolas Cage.\n\n Rosenman's documentary film \"\" won the Peabody Award and the 1990 Academy Award for Best Documentary Feature; his film \"The Celluloid Closet\" also won the Peabody Award.",
+    "Just Friends\nJust Friends is a 2005 American romantic comedy film directed by Roger Kumble, written by Adam 'Tex' Davis and starring Ryan Reynolds, Amy Smart, Anna Faris, Chris Klein and Christopher Marquette.\n\n The plot focuses on a formerly overweight high school nerd (Reynolds) who attempts to free himself from the friend zone after reconnecting with his lifelong crush and best friend (Smart) while visiting his hometown for Christmas.",
+    "Robert Oliveri\nRobert Dane Oliveri (born April 28, 1978) is a former American actor.\n\n He is best known for his portrayal of Nick Szalinski in the 1989 Disney film, \"Honey, I Shrunk the Kids\", for which he was nominated for a Young Artist Award and a Saturn Award.\n\n He reprised the role in the 1992 sequel, \"Honey, I Blew Up the Kid\" and the 3D film, \"Honey, I Shrunk the Audience\".\n\n He is also known as Kevin, Winona Ryder's little brother, in Tim Burton's \"Edward Scissorhands\".",
+    "Marty Belafsky\nMarty Belafsky (born September 19, 1975) is an American actor/comedian born in Los Angeles, California.\n\n He began acting professionally at age 13 and was soon cast as Louis Plumb on the short-lived NBC series \"Hull High\".\n\n Shortly thereafter, Belafsky landed the role of Crutchy in the Disney musical film, \"Newsies\".\n\n He continued acting through his teens, making appearances in such television shows as \"The Wonder Years\", \"Great Scott\" and \"Step By Step\" and the film \"Wrestling Ernest Hemingway\".\n\n Belafsky also voiced Kent Swanson in the video game series \"Dead Rising\" released in 2006.",
+    "Bring It On: In It to Win It\nBring It On: In It to Win It is a 2007 teen film directed by Steve Rash and starring Ashley Benson, Cassie Scerbo and Michael Copon.",
+    "Night Life (film)\nNight Life is a 1989 American zombie comedy film directed by David Acomba and starring Scott Grimes, John Astin, and Cheryl Pollak.\n\n It centers around a high school nerd named Archie Melville who is harassed from beyond the grave by the zombie corpses of his former high school bullies (recently deceased) after they are brought back to life by a freak lightning storm.\n\n It is also known as Grave Misdemeanors."
+   ]
+  },
+  {
+   "id": "d5920a25855431e7",
+   "gold": [
+    {
+     "sentence": " One nunatak was first roughly mapped and named \"Moltke Nunatak\" by the Second German Antarctic Expedition of 1911–12 under Wilhelm Filchner.",
+     "facts": {
+      "0.0": "A nunatak was first roughly mapped by the Second German Antarctic Expedition of 1911–12",
+      "0.1": "The Second German Antarctic Expedition of 1911–12 was under Wilhelm Filchner",
+      "0.2": "The Second German Antarctic Expedition named the nunatak Moltke Nunatak"
+     }
+    },
+    {
+     "sentence": " He named it for General Helmuth von Moltke, Chief of the German General Staff and Secretary of State for Home Affairs.",
+     "facts": {
+      "1.0": "The nunatak was named for General Helmuth von Moltke",
+      "1.1": "General Helmuth von Moltke was Chief of the German General Staff",
+      "1.2": "General Helmuth von Moltke was Secretary of State for Home Affairs"
+     }
+    },
+    {
+     "sentence": "Helmuth Johann Ludwig von Moltke (] ; 23 May 1848 – 18 June 1916), also known as Moltke the Younger, was a nephew of \"Generalfeldmarschall\" (Field Marshal) Helmuth Karl Bernhard von Moltke and served as the Chief of the German General Staff from 1906 to 1914.",
+     "facts": {
+      "2.0": "Helmuth Johann Ludwig von Moltke was born 23 May 1848",
+      "2.1": "Helmuth Johann Ludwig von Moltke died 18 June 1916",
+      "2.2": "Helmuth Johann Ludwig von Moltke is also known as Moltke the Younger",
+      "2.3": "Helmuth Johann Ludwig von Moltke was a nephew of Generalfeldmarschall (Field Marshal) Helmuth Karl Bernhard von Moltke",
+      "2.4": "Helmuth Johann Ludwig von Moltke served as Chief of the German General Staff from 1906 to 1914"
+     }
+    }
+   ],
+   "items": [
+    "Franz Halder\nFranz Halder (30 June 1884 – 2 April 1972) was a German general and the chief of the \"Oberkommando des Heeres\" staff (OKH, Army High Command) from 1938 until September 1942, when he was dismissed after frequent disagreements with Adolf Hitler.\n\n Until December 1941 Halder's military position corresponded to the old Chief of the General Staff position, which during World War I had been the highest military office in the German Imperial Army.\n\n Halder's diary during his time as chief of OKH General Staff has been a source for authors that have written about such subjects as Hitler, World War II and the Nazi Party.\n\n In William Shirer's \"The Rise and Fall of the Third Reich\", Halder's diary is cited hundreds of times.",
+    "Helmuth von Moltke the Younger\nHelmuth Johann Ludwig von Moltke (] ; 23 May 1848 – 18 June 1916), also known as Moltke the Younger, was a nephew of \"Generalfeldmarschall\" (Field Marshal) Helmuth Karl Bernhard von Moltke and served as the Chief of the German General Staff from 1906 to 1914.\n\n The two are often differentiated as \"Moltke the Elder\" and \"Moltke the Younger\".",
+    "German General Staff\nThe German General Staff, originally the Prussian General Staff and officially Great General Staff (\"Großer Generalstab\"), was a full-time body at the head of the Prussian Army and later, the German Army, responsible for the continuous study of all aspects of war, and for drawing up and reviewing plans for mobilization or campaign.\n\n It existed unofficially from 1806, and was formally established by law in 1814, the first general staff in existence.\n\n It was distinguished by the formal selection of its officers by intelligence and proven merit rather than patronage or wealth, and by the exhaustive and rigorously structured training which its staff officers undertook.\n\n Its rise and development gave the German armed forces a decisive strategic advantage over their adversaries for nearly a century and a half.",
+    "Ludwig Beck\nLudwig August Theodor Beck (29 June 1880 – 21 July 1944) was a German general and Chief of the German General Staff during the early years of the Nazi regime in Germany before World War II.\n\n Ludwig Beck was never a member of the Nazi Party, though in the early 1930s he supported Adolf Hitler's forceful denunciation of the Versailles Treaty and belief in the need for Germany to rearm.\n\n Beck had grave misgivings regarding the Nazi demand that all German officers swear an oath of fealty to the person of Hitler in 1934, though he believed that Germany needed strong government and that Hitler could successfully provide this so long as he was influenced by traditional elements within the military rather than the SA and SS.",
+    "Admirals Nunatak\nAdmirals Nunatak ( ) is a nunatak rising to 925 m on the upper Uranus Glacier, central Alexander Island, Antarctica.\n\n The name originates from dog teams named \"The Admirals\" that served at various British stations in Antarctica, 1952–94, and honors the loyal service of all Falkland Islands Dependencies Survey/BAS sled dogs.\n\n The nunatak appears to have some relation to Huns Nunatak which lies about 3.7 mi northeast of Admirals Nunatak.",
+    "Herbert Büchs\nHerbert Büchs (20 November 1913 – 19 May 1996) was a Lieutenant General of the German Air Force and a former Luftwaffe staff officer in Nazi Germany's Oberkommando der Wehrmacht (OKW) during World War II.\n\n As second adjutant to General Alfred Jodl with the rank of Major he is notable for being present in the conference room when the 20 July plot bomb exploded in 1944.",
+    "Mount Von Braun\nMount Von Braun ( ) is a mountain (3,275 m) located 4 nautical miles (7 km) south of Mount Sabine in the Admiralty Mountains.\n\n Mapped by United States Geological Survey (USGS) from surveys and U.S. Navy air photos, 1960–63.\n\n Named by Advisory Committee on Antarctic Names (US-ACAN) for Wernher von Braun of the National Aeronautics and Space Administration, a visitor at McMurdo Station, 1966–67.",
+    "Ferdinand Jodl\nFerdinand Alfred Friedrich Jodl (28 November 1896 – 9 June 1956) was a German general during World War II who commanded the Mountain Corps Norway during the Petsamo–Kirkenes Offensive.\n\n He was the brother of Alfred Jodl, Chief of the Operations Staff of the OKW.\n\n Ferdinand Jodl was acquitted by a German court.",
+    "Moltke Nunataks\nThe Moltke Nunataks ( ) are a chain of north–south trending nunataks close to the northeastern end of the Filchner Ice Shelf, Antarctica.\n\n One nunatak was first roughly mapped and named \"Moltke Nunatak\" by the Second German Antarctic Expedition of 1911–12 under Wilhelm Filchner.\n\n He named it for General Helmuth von Moltke, Chief of the German General Staff and Secretary of State for Home Affairs.\n\n Surveys during the mid-1950s by British, Argentine and United States expeditions indicate that a group of four or five nunataks exist in the area.",
+    "Alfred Jodl\nAlfred Josef Ferdinand Jodl (   ; 10 May 1890 – 16 October 1946) was a German general and war criminal during World War II, who served as the Chief of the Operations Staff of the Armed Forces High Command (Oberkommando der Wehrmacht)."
+   ]
+  },
+  {
+   "id": "2cc1e4881b9bb560",
+   "gold": [
+    {
+     "sentence": " He finished second to Paul Hornung in voting for the Heisman Trophy in 1956.",
+     "facts": {
+      "0.0": "The person finished second in voting for the Heisman Trophy in 1956.",
+      "0.1": "Paul Hornung finished first in that Heisman Trophy voting in 1956."
+     }
+    },
+    {
+     "sentence": "Paul Vernon Hornung (born December 23, 1935), nicknamed \"The Golden Boy\", is a former professional American football player, a Hall of Fame running back for the Green Bay Packers of the National Football League (NFL) from 1957 to 1966, winning four NFL titles and the first Super Bowl.",
+     "facts": {
+      "1.0": "Paul Vernon Hornung was born on December 23, 1935.",
+      "1.1": "Paul Vernon Hornung is nicknamed \"The Golden Boy\".",
+      "1.2": "Paul Vernon Hornung is a former professional American football player.",
+      "1.3": "Paul Vernon Hornung is a Hall of Fame running back.",
+      "1.4": "Paul Vernon Hornung played for the Green Bay Packers of the National Football League (NFL).",
+      "1.5": "Paul Vernon Hornung played for the Green Bay Packers from 1957 to 1966.",
+      "1.6": "Paul Vernon Hornung won four NFL titles.",
+      "1.7": "Paul Vernon Hornung won the first Super Bowl."
+     }
+    }
+   ],
+   "items": [
+    "Terry Baker\nTerry Wayne Baker (born May 5, 1941) is a former American football and basketball player.\n\n He played college football and college basketball at the Oregon State University.\n\n He played as a quarterback for the Oregon State Beavers football team from 1960 to 1962, winning the Heisman Trophy as senior.\n\n In the spring of his senior year, he played in the Final Four of the 1963 NCAA Men's Division I Basketball Tournament with the Oregon State Beavers men's basketball team.\n\n To date, he is the only athlete to win a Heisman Trophy and play in the Final Four.\n\n Baker was the first overall pick in the 1963 NFL draft and played with the Los Angeles Rams of the National Football League (NFL) from 1963 to 1965.\n\n He then played for one season in the Canadian Football League (CFL) with the Edmonton Eskimos, in 1966.\n\n Baker was inducted into the College Football Hall of Fame in 1982.",
+    "1976 NCAA Division I football season\nThe 1976 NCAA Division I football season ended with a championship for the Panthers of the University of Pittsburgh.\n\n Led by head coach Johnny Majors (voted the AFCA Coach of the Year), the Pitt Panthers brought a college football championship to the home of the defending pro football champions, the Steelers.\n\n Pitt also had the Heisman Trophy winner, Tony Dorsett; the Panthers had been ranked ninth in the preseason AP poll.",
+    "2012 Texas A&amp;M vs. Alabama football game\nThe 2012 Texas A&M vs. Alabama football game was a college football game between the Texas A&M Aggies and Alabama Crimson Tide at Bryant–Denny Stadium in Tuscaloosa, Alabama.\n\n This was the game where Texas A&M freshman quarterback and eventual Heisman Trophy winner Johnny Manziel completed 24 of 31 passes, had 253 passing yards, and two passing touchdowns with 92 rushing yards to help No. 15 Texas A&M upset No. 1 Alabama 29–24, which led him to being the first freshman to win the Heisman Trophy.",
+    "Frank Eliscu\nFrank Eliscu (1912–1996) was an American sculptor and art teacher who designed and created the Heisman Memorial Football Trophy in 1935 when he was only 20 years old.\n\n The first Heisman Trophy, a strong young bull of a football player cast in bronze, was presented to a college football player in 1935, and is considered one of the greatest honors a college athlete can receive.\n\n Over the years the Heisman Committee has paid tribute to Eliscu and his creation several times, and in 1985, the Heisman Committee invited him to speak at the 50th Anniversary Heisman ceremonies.",
+    "Paul Hornung\nPaul Vernon Hornung (born December 23, 1935), nicknamed \"The Golden Boy\", is a former professional American football player, a Hall of Fame running back for the Green Bay Packers of the National Football League (NFL) from 1957 to 1966, winning four NFL titles and the first Super Bowl.\n\n He is the first in pro football history to win the Heisman Trophy, be selected as the first overall selection in the NFL Draft, win the NFL most valuable player award, and be inducted into both the professional and college football halls of fame.",
+    "Johnny Bright\nJohnny D. Bright (June 11, 1930 – December 14, 1983) was a professional Canadian football player in the Canadian Football League.\n\n He played college football at Drake University.\n\n He is a member of the Canadian Football Hall of Fame, the National Football Foundation's College Football Hall of Fame, the Missouri Valley Conference Hall of Fame, the Edmonton Eskimos Wall of Honour, the Alberta Sports Hall of Fame, and the \"Des Moines Register's\" Iowa Sports Hall of Fame.",
+    "Heisman Trophy\nThe Heisman Memorial Trophy (usually known colloquially as the Heisman Trophy or The Heisman), is awarded annually to the most outstanding player in college football in the United States whose performance best exhibits the pursuit of excellence with integrity.\n\n Winners epitomize great ability combined with diligence, perseverance, and hard work.\n\n It is presented by the Heisman Trophy Trust in early December before the postseason bowl games.",
+    "Johnny Majors\nJohn Terrill Majors (born May 21, 1935) is a former American football player and coach.\n\n A standout halfback at the University of Tennessee, he was an All-American in 1956 and a two-time winner of the Southeastern Conference Most Valuable Player award, in 1955 and 1956.\n\n He finished second to Paul Hornung in voting for the Heisman Trophy in 1956.\n\n Majors served as the head football coach at Iowa State University (1968–1972), the University of Pittsburgh (1973–1976, 1993–1996), and Tennessee (1977–1992), compiling a career college football record of 185–137–10.\n\n His 1976 Pittsburgh squad won a national championship after capping a 12–0 season with a victory in the Sugar Bowl.\n\n Majors was inducted into the College Football Hall of Fame as a player in 1987.",
+    "Charlie Ward\nCharlie Ward Jr. (born October 12, 1970) is a retired American professional NBA basketball player, college football Heisman Trophy winner, Davey O'Brien Award winner and a Major League Baseball draftee.\n\n Despite his NCAA football success, Ward was one of the very few players who won a Heisman trophy but was not drafted in the NFL draft.\n\n He won the College Football National Championship with the Florida State University Seminoles.\n\n Ward played several years with the New York Knicks and started in the NBA Finals.\n\n He was inducted in the College Football Hall of Fame in 2006.\n\n An avid tennis player, Ward also displayed his skills at the Arthur Ashe Tennis Tournament in 1994.",
+    "1997 Tennessee Volunteers football team\nHowever, the Vols' defense could not stop Nebraska's rushing attack, giving up more than 400 yards on the ground in a 42–17 loss.\n\n As a senior, Manning won numerous awards.\n\n He was a consensus first-team All-American and won the Maxwell Award, the Davey O'Brien Award, the Johnny Unitas Award, and the Best College Football Player ESPY Award, among others.\n\n However, he did not win the Heisman Trophy, finishing runner-up to Charles Woodson, a CB from Michigan, and the only defensive player ever to win the Heisman Trophy."
+   ]
+  },
+  {
+   "id": "eceb341b19863c4c",
+   "gold": [
+    {
+     "sentence": "The University of Delaware (colloquially \"UD\") is the largest university in Delaware.",
+     "facts": {
+      "0.0": "The University of Delaware is colloquially called 'UD'.",
+      "0.1": "The University of Delaware is the largest university in Delaware."
+     }
+    },
+    {
+     "sentence": "The University of Debrecen (Hungarian: \"Debreceni Egyetem\" ) is a university located in Debrecen, Hungary.",
+     "facts": {
+      "1.0": "The University of Debrecen's Hungarian name is 'Debreceni Egyetem'.",
+      "1.1": "The University of Debrecen is a university.",
+      "1.2": "The University of Debrecen is located in Debrecen, Hungary."
+     }
+    }
+   ],
+   "items": [
+    "Palace of Music (Miskolc)\nThe Palace of Music (\"Zenepalota\") is a building in Bartók square, Miskolc, Hungary.\n\n It is the building of the Béla Bartók Secondary School and the Béla Bartók Music Institute (a faculty of the University of Miskolc.)\n\n The Palace was designed by Gyula Waelder in Neo-baroque style and was built between 1926 and 1927.\n\n The construction was financed from USA loans, just like that of the Hotel Palace in Lillafüred and the Market Hall on Búza tér.",
+    "University of Delaware Botanic Gardens\nThe University of Delaware Botanic Gardens are botanical gardens and an arboretum located on the campus of the University of Delaware, in Newark, Delaware, United States.\n\n The gardens are open to the public without charge.",
+    "University of Debrecen\nThe University of Debrecen (Hungarian: \"Debreceni Egyetem\" ) is a university located in Debrecen, Hungary.\n\n It is the oldest continuously operating institution of higher education in Hungary (since 1538).\n\n The university has a well established programme in the English language for international students, particularly in the Medical field, which first established education in English in 1986.\n\n There are nearly 4000 international students studying at the university.",
+    "Delaware–William &amp; Mary football rivalry\nThe Delaware–William & Mary football rivalry between the Delaware Fightin' Blue Hens and the William & Mary Tribe is a match-up between two public universities, the University of Delaware and the College of William and Mary, that are also members of the Colonial Athletic Association.\n\n Both schools have academic reputations that have labeled them as Public Ivies.\n\n Both schools are also Colonial Colleges having been founded before the United States became independent in 1776; the College of William and Mary was founded in 1693 and the University of Delaware's predecessor school was founded in 1743.",
+    "Commonwealth System of Higher Education\nThe Commonwealth System of Higher Education is a statutory designation by the Commonwealth of Pennsylvania that confers \"state-related\" status on four universities located within the state.\n\n The designation establishes the schools as an \"instrumentality of the commonwealth\" and provides each university with annual, non-preferred financial appropriations in exchange offering tuition discounts to students that are residents of Pennsylvania and a minority state-representation on each school's board of trustees.\n\n Legally, however, the universities remain separate and private entities, operating under their own charters, governed by independent boards of trustees, and with its assets under their own ownership and control thereby retaining much of the freedom and individuality of private institutions, both administratively and academically.\n\n It is the only public-private hybrid system of higher education in the United States that is so construed, although Cornell University, the University of Delaware, and Rutgers University represent alternative types of public-private university hybrids.",
+    "University of Delaware\nThe University of Delaware (colloquially \"UD\") is the largest university in Delaware.\n\n The main campus is in Newark, with satellite campuses in Dover, Wilmington, Lewes, and Georgetown.\n\n It is considered a large institution with approximately 18,500 undergraduate and 4,500 graduate students. UD is a privately governed university which receives public funding for being a land-grant, sea-grant, space-grant and urban-grant state-supported research institution.",
+    "Lake Fehér (Szeged)\nLake Fehér is a lake of Hungary.\n\n It is named Fehér (White), because it is white.\n\n It is a part of Kiskunság National Park, and it is situated just north of the town of Szeged.\n\n It covers an area of 14 square kilometres.\n\n Lake Fehér is Hungary's largest saltwater lake.\n\n It is carefully protected because it is home to 280 species of bird and because of its ancient flora.\n\n The area is an important stop in the migration of European birds, and serves as a resting and feeding place for them.\n\n During the migration season, crowds of cranes, wild geese, and teal varieties are visible on Lake Fehér.",
+    "College Park, Delaware\nCollege Park is an unincorporated community in New Castle County, Delaware, United States.\n\n College Park is located along Delaware Route 896 southwest of Newark.",
+    "Pike Creek, Delaware\nPike Creek is a census-designated place (CDP) in New Castle County, Delaware and is part of the Philadelphia-Camden-Wilmington, PA-NJ-DE-MD Metropolitan statistical area.\n\n In 2007, CNN's Money Magazine ranked Pike Creek on its list of the 100 Best Places to Live in the United States.\n\n Pike Creek was the only community in Delaware to appear on the list.\n\n The population was 7,898 at the 2010 census.\n\n Local attractions include Middle Run Natural Area, White Clay Creek State Park, Carousel Farm Park & Equestrian Center, Golf and Restaurants.\n\n Pike Creek is approximately 5 miles from downtown Newark, Delaware which contains the University of Delaware.\n\n Pike Creek is connected to the University of Delaware campus and the Newark, Delaware downtown area by several bike trails.\n\n Pike Creek is approximately 10 miles west of the state's largest city, Wilmington, Delaware which is a national financial center.\n\n Chester County, Pennsylvania is located approximately 2 miles west of Pike Creek.",
+    "Rutgers University–Camden\nRutgers University–Camden is one of three regional campuses of Rutgers University, New Jersey's public research university.\n\n It is located in Camden, New Jersey, United States.\n\n Founded in the 1920s, Rutgers–Camden began as an amalgam of the South Jersey Law School and the College of South Jersey.\n\n It is the southernmost of the three regional campuses of Rutgers—the others being located in New Brunswick and Newark.\n\n The city of Camden is located on the Delaware River, east of Philadelphia."
+   ]
+  },
+  {
+   "id": "8f0da3de44907689",
+   "gold": [
+    {
+     "sentence": " He has produced songs for prominent artists such as Justin Bieber, Monica, Britney Spears, Usher, Keri Hilson, T.I., Nelly Furtado, Kevin Cossom, Ciara, Mariah Carey, Timbaland, Madonna, J. Cole, Kanye West, Whitney Houston, Missy Elliott, M.I.A., Justin Timberlake, JoJo, Joe Jonas, Simple Plan, The Clutch, Pink, T-Pain, Diddy, Meek Mill, Björk and Duran Duran.",
+     "facts": {
+      "0.0": "This producer has produced songs for Justin Bieber.",
+      "0.1": "This producer has produced songs for Monica.",
+      "0.2": "This producer has produced songs for Britney Spears.",
+      "0.3": "This producer has produced songs for Usher.",
+      "0.4": "This producer has produced songs for Keri Hilson.",
+      "0.5": "This producer has produced songs for T.I.",
+      "0.6": "This producer has produced songs for Nelly Furtado.",
+      "0.7": "This producer has produced songs for Kevin Cossom.",
+      "0.8": "This producer has produced songs for Ciara.",
+      "0.9": "This producer has produced songs for Mariah Carey.",
+      "0.10": "This producer has produced songs for Timbaland.",
+      "0.11": "This producer has produced songs for Madonna.",
+      "0.12": "This producer has produced songs for J. Cole.",
+      "0.13": "This producer has produced songs for Kanye West.",
+      "0.14": "This producer has produced songs for Whitney Houston.",
+      "0.15": "This producer has produced songs for Missy Elliott.",
+      "0.16": "This producer has produced songs for M.I.A.",
+      "0.17": "This producer has produced songs for Justin Timberlake.",
+      "0.18": "This producer has produced songs for JoJo.",
+      "0.19": "This producer has produced songs for Joe Jonas.",
+      "0.20": "This producer has produced songs for Simple Plan.",
+      "0.21": "This producer has produced songs for The Clutch.",
+      "0.22": "This producer has produced songs for Pink.",
+      "0.23": "This producer has produced songs for T-Pain.",
+      "0.24": "This producer has produced songs for Diddy.",
+      "0.25": "This producer has produced songs for Meek Mill.",
+      "0.26": "This producer has produced songs for Bjork.",
+      "0.27": "This producer has produced songs for Duran Duran."
+     }
+    },
+    {
+     "sentence": " Raised in Fayetteville, North Carolina, Cole initially gained recognition as a rapper following the release of his debut mixtape, \"The Come Up\", in early 2007.",
+     "facts": {
+      "1.0": "Cole was raised in Fayetteville, North Carolina.",
+      "1.1": "Cole initially gained recognition as a rapper.",
+      "1.2": "Cole initially gained recognition as a rapper after the release of his debut mixtape.",
+      "1.3": "Cole's debut mixtape is titled The Come Up.",
+      "1.4": "Cole's debut mixtape The Come Up was released in early 2007."
+     }
+    }
+   ],
+   "items": [
+    "Zach Crowell\nZach Crowell is a Grammy Award-winning songwriter and record producer, who was born and raised in Nashville, Tennessee.\n\n Crowell is involved in a joint publishing deal with Warner/Chappell Music, Combustion Music and Taperoom Music.",
+    "Kaydean\nKaydean is a British-American record and TV producer, composer, DJ, record label executive and artist manager.\n\n Kaydean produces, composes and arranges music in the Dance, Electronica, Latin Pop, Contemporary R&B, and Electronica genres.\n\n Born in London, he has worked with many artists including Janet Jackson, Maxi Priest, Robyn, Man Parrish, Angel \"Cucco\" Peña, Baron Lopez, Raekwon, Ky-Mani Marley, Frankie Cutlass and Nocera amongst others.\n\n He is also known for discovering Latin Pop Star Janid and managing her career.\n\n He produced her Spanish album \"La Magia\" under the Sony Music Latin imprint label, Handshake and her Hit Single \"Penicilina\".\n\n In 2015 he debuted as a TV executive producer with Janid's reality show on Mega TV, The first episode aired on September 6, 2015.",
+    "Raleigh Moncrief\nRaleigh Moncrief is an American electronic musician, record producer and recording engineer who has worked with Zach Hill, Dirty Projectors and !!!\n\n.",
+    "Danny Shirley\nDanny Shirley (born August 12, 1956) is an American country music singer.\n\n He is best known as the lead singer of the country rock band Confederate Railroad, a role he has held since its formation in 1987.",
+    "Lil Ru\nSylvester Samuels better known by his stage name Lil Ru, is an American rapper from Ridgeway, South Carolina currently signed to Def Jam Recordings.\n\n His debut album, 21 & Up was released on August 25, 2009.\n\n The Ridgeway native was 16 when he made his professional foray into the music business.\n\n Inspired by New Orleans’ innovative Cash Money Crew, Ru began making a name for himself on his local music scene, doing live shows and pressing up his own CDs.\n\n His hard-hitting lyrics and entrepreneurial spirit caught the attention of fellow South Carolinian Angie Stone.\n\n Shortly after the neo-soul songstress helped him secure a deal with Elektra Records, Ru found himself unsigned again, among the artists lost in the shuffle after the label merged with Atlantic Records.\n\n Music fans first heard him on his 2001 debut single Will Destroy.\n\n He then released his 2002 follow up, Shawty What You Doin’.\n\n Both songs reached the Billboard R&B/Hip-Hop charts and helped land him at his next label home, Capitol Records.",
+    "Daron Jones\nDaron Tavaris Jones (born December 27, 1976) is an American singer-songwriter, record producer.\n\n He is a member in Bad Boy Records group 112.\n\n His debut solo album titled \"Uncensored\" was released December 5, 2010.\n\n The first single from the album is the digitally-released \"Money.\"\n\n Daron digitally released \"Christmas in Atlanta\" in December 2014, which reached the top 30 on the iTunes R&B chart.\n\n Daron is currently in the studio working on new music.",
+    "Anna Graceman\nAnna Graceman is a young American singer-songwriter and pianist whose self-penned songs and music have gained attention at home and abroad.\n\n Her style of music incorporates elements of folk, soul and rock.\n\n As of 2016 she had written and performed over 70 of her own published songs; writing as well as producing her releases.\n\n Anna continues to divide her time between her solo projects and her new project - the ‘Graceman’ Band - a trio that includes Allie Graceman (Rhythm/Lead Guitar) and Landon Graceman (Drums).",
+    "Danja (record producer)\nFloyd Nathaniel \"Nate\" Hills (born February 22, 1982), professionally known as Danja , is an American record producer and songwriter from Virginia Beach, Virginia.\n\n He has produced songs for prominent artists such as Justin Bieber, Monica, Britney Spears, Usher, Keri Hilson, T.I., Nelly Furtado, Kevin Cossom, Ciara, Mariah Carey, Timbaland, Madonna, J. Cole, Kanye West, Whitney Houston, Missy Elliott, M.I.A., Justin Timberlake, JoJo, Joe Jonas, Simple Plan, The Clutch, Pink, T-Pain, Diddy, Meek Mill, Björk and Duran Duran.",
+    "Doug Grean\nDoug Grean is an American record producer, audio engineer, guitarist, based in Los Angeles.\n\n He has worked with artists Sheryl Crow, Ricki Lee Jones, Glen Campbell, Scott Weiland, Slash, Velvet Revolver, Stone Temple Pilots, The Crystal Method, Tim McGraw, Cyndi Lauper, Annabella Lwin (Bow Wow Wow), Corey Glover (Living Color), Camp Freddy, DJ Hurricane and John Taylor (Duran Duran).\n\n Grean was formerly the lead guitarist and touring musical director for Scott Weiland and the Wildabouts.\n\n Some of Grean's television appearances with Weiland include: VH1 Legends, Last Call with Carson Daly, The Tonight Show with Jay Leno, and the Grammy awards with Velvet Revolver as keyboardist, performing \"All Across the Universe\" with Stevie Wonder, Norah Jones, Bono, Steven Tyler, Brian Wilson, and Alison Krauss.",
+    "J. Cole\nJermaine Lamarr Cole (born January 28, 1985), better known by his stage name J. Cole, is an American hip hop recording artist and record producer.\n\n Raised in Fayetteville, North Carolina, Cole initially gained recognition as a rapper following the release of his debut mixtape, \"The Come Up\", in early 2007.\n\n Intent on further pursuing a solo career as a rapper, he went on to release two additional mixtapes after signing to Jay Z's Roc Nation imprint in 2009."
+   ]
+  },
+  {
+   "id": "1039833db044dc5f",
+   "gold": [
+    {
+     "sentence": "Stephen Lawrence \"Steve\" Winwood (born 12 May 1948) is an English musician whose genres include rock, blue-eyed soul, rhythm and blues, blues rock, pop rock, and jazz.",
+     "facts": {
+      "0.0": "Stephen Lawrence 'Steve' Winwood was born 12 May 1948.",
+      "0.1": "Steve Winwood is an English musician.",
+      "0.2": "Steve Winwood's genres include rock, blue-eyed soul, rhythm and blues, blues rock, pop rock, and jazz."
+     }
+    },
+    {
+     "sentence": "Per \"Pelle\" Almqvist (born 29 May 1978), also known as Howlin' Pelle Almqvist, is a Swedish singer and songwriter.",
+     "facts": {
+      "1.0": "Per 'Pelle' Almqvist was born 29 May 1978.",
+      "1.1": "Per 'Pelle' Almqvist is also known as Howlin' Pelle Almqvist.",
+      "1.2": "Per 'Pelle' Almqvist is a Swedish singer and songwriter."
+     }
+    }
+   ],
+   "items": [
+    "Pelle Almqvist\nPer \"Pelle\" Almqvist (born 29 May 1978), also known as Howlin' Pelle Almqvist, is a Swedish singer and songwriter.\n\n He is the lead singer of garage rock band The Hives.",
+    "Back in the High Life Again\n\"Back in the High Life Again\" is a 1986 single written by Steve Winwood and Will Jennings and performed by Winwood.\n\n The single was included on his album \"Back in the High Life\" and included backing vocals by James Taylor as well as a prominent mandolin played by Winwood.\n\n \"Back in the High Life Again\" was Winwood's second number one on the Adult Contemporary chart.\n\n The single stayed at number one for three weeks and went to number 13 on the \"Billboard\" Hot 100.",
+    "Steve Winwood\nStephen Lawrence \"Steve\" Winwood (born 12 May 1948) is an English musician whose genres include rock, blue-eyed soul, rhythm and blues, blues rock, pop rock, and jazz.\n\n Though primarily a vocalist and keyboardist, Winwood also plays bass guitar, drums, acoustic and electric guitar, mandolin, violin, and other strings.",
+    "Steve Alvord\nSteven Lee Alvord (born October 2, 1964 in Bellingham, Washington) is a former professional American football defensive tackle and defensive end in the National Football League and World League of American Football.\n\n In his four-year pro career he played for the St. Louis/Phoenix Cardinals of the NFL, and the Barcelona Dragons of the WLAF.\n\n Alvord played college football at Washington.\n\nHe has a cool daughter, happy birthday Katie.",
+    "Winwood (album)\nWinwood is the first compilation album of music featuring Steve Winwood.\n\n This two-record set was issued in 1971 by United Artists Records and features music which Winwood performed with The Spencer Davis Group, Powerhouse, Traffic and Blind Faith.\n\n UA Records issued this album after Winwood's band Traffic left UA when their home label Island Records set up their own American operation.\n\n Issued without Winwood's authorization as catalogue number UAS-9950, it was taken off the market after legal action by Winwood and Island Records.\n\n It was then reissued with minor changes as catalogue number UAS-9964.\n\n Currently out of print, it was issued on CD by Universal Music of Japan for the Japanese market.",
+    "Refugees of the Heart\nRefugees of the Heart is the sixth solo studio album by Steve Winwood, released in 1990.\n\n The album contained the hit single, \"One and Only Man\", which topped the Mainstream Rock Tracks chart and saw the return of former Traffic bandmate Jim Capaldi to Winwood's songwriting team.\n\n By coincidence, a Traffic reunion followed in 1994.\n\n Because of that collaboration, Winwood would not record another solo album until late 1997.\n\n Also \"I Will Be Here\" and \"Another Deal Goes Down\" were released as singles.\n\n Winwood stated about the closing track, “In The Light Of Day”: 'When Will and I wrote the song (.\n\n.)\n\n it was our idea of what Nelson Mandela's dream was, while he was in prison.\n\n It was really just a fantasy of ours, but that’s what we based the song on.'",
+    "Revolutions – The Very Best of Steve Winwood\nRevolutions – The Very Best of Steve Winwood is the sixth compilation album by Steve Winwood.\n\n The album includes music from Winwood's solo career, as well as groups with which he has performed, including The Spencer Davis Group, Traffic, and Blind Faith.\n\n The CD was released as a box set and a single disc.\n\n As of October 2014, the box set is out of print (but can be purchased digitally), while the single disc is still available.\n\n The songs \"The Finer Things\" and \"Roll With It\" are exclusive to the single disc version and cannot be found on the box set.",
+    "Steve Winwood (album)\nSteve Winwood is the debut solo studio album by blue-eyed soulster Steve Winwood.\n\n It was released three years after the break-up of Traffic.\n\n Though the album sold moderately well in the USA, it was a commercial disappointment compared to Traffic's recent albums, peaking at number 22 on the \"Billboard\" 200 album chart.\n\n In Winwood's home country the situation was reversed; while Traffic's recent albums had only been moderately successful in the UK, \"Steve Winwood\" reached number 12 on The Official Charts.\n\n Island Records launched two singles from the album, \"Hold On\" and \"Time Is Running Out\", both of which failed to make the charts.",
+    "Peter Wichers\nPeter Wichers is best known as one of the founding members of Swedish melodic death metal band, Soilwork.\n\n From 1995 until late 2005, when he announced his departure from the band, he was known as the lead guitarist and also a songwriter, especially on their \"Stabbing the Drama\" album., He rejoined Soilwork in 2008 and played on 2010s The Panic Broadcast and in June 2012 he quit Soilwork for the second time.\n\n After leaving Soilwork, he filled in for Adam Dutkiewicz when he was injured on Killswitch Engage's European tour.\n\n More recently, he has collaborated with singers from across the melodic death metal genre including Anders Fridén, former band mate Björn \"Speed\" Strid and John Bush (vocalist of Anthrax) to make a CD much in the same style as \"Roadrunner United\", entitled \"Nuclear Blast All-Stars\".\n\n He also co-wrote Warrel Dane's solo record \"Praises to the War Machine\".",
+    "Glen Matlock\nGlen Matlock (born 27 August 1956) is an English musician best known for being the bass guitarist in the original line-up of the punk rock band the Sex Pistols.\n\n He is sometimes credited as a co-author on 10 of the 12 songs on \"Never Mind the Bollocks, Here's the Sex Pistols\", although he had left the band by the time the record was released and the bass was played by Steve Jones.\n\n He also continues to make his own records and tour with various bands, including the Sex Pistols."
+   ]
+  },
+  {
+   "id": "6d250c94ca13116f",
+   "gold": [
+    {
+     "sentence": " She was also a member of a secret society composed exclusively of Cheyenne women.",
+     "facts": {
+      "0.0": "The woman in question was also a member of a secret society.",
+      "0.1": "The secret society was composed exclusively of Cheyenne women."
+     }
+    },
+    {
+     "sentence": "Cheyenne military societies are one of the two central institutions of traditional Cheyenne Indian tribal governance, the other being the Council of Forty-four.",
+     "facts": {
+      "1.0": "Cheyenne military societies are one of the two central institutions of traditional Cheyenne Indian tribal governance.",
+      "1.1": "The other central institution of traditional Cheyenne Indian tribal governance is the Council of Forty-four."
+     }
+    }
+   ],
+   "items": [
+    "Lean Bear\nLean Bear (Cheyenne name Awoninahku, 1813–1864), alternatively translated as Starving Bear, was a Cheyenne peace chief.\n\n He was a member of the Council of Forty-four, a tribal governance devoted to maintaining peace with encroaching United States settlers.\n\n Lean Bear's most notable peace deals include the Treaty of Fort Wise and a meeting with US President Abraham Lincoln.\n\n His work towards peace between his people and the American settlers in the Southern Plains were cut short when he was murdered by the 1st Colorado Cavalry Regiment and violent retaliations ensued.",
+    "Ehyophsta\nEhyophsta (Cheyenne for \"Yellow-Haired Woman\") was a Cheyenne woman.\n\n She was the daughter of Stands-in-the-Timber who died in 1849, and she was the niece of Bad Faced Bull.\n\n She fought in the Battle of Beecher Island in 1868, and also fought the Shoshone that same year, where she counted coup against one enemy and killed another.\n\n She fought the Shoshone again in 1869.\n\n She was also a member of a secret society composed exclusively of Cheyenne women.\n\n She died in 1915.",
+    "Chief Dull Knife College\nChief Dull Knife College (originally Dull Knife Memorial College) is a small, open-admission, Native American tribal community college and land grant institution.\n\n Located on the Northern Cheyenne Indian Reservation, in the city of Lame Deer, it has a current enrollment of about 141 students.\n\n On average, more than half of its graduates move on to four-year colleges.",
+    "Cheyenne military societies\nCheyenne military societies are one of the two central institutions of traditional Cheyenne Indian tribal governance, the other being the Council of Forty-four.\n\n While council chiefs are responsible for overall governance of individual bands and the tribe as a whole, the headmen of military societies are in charge of maintaining discipline within the tribe, overseeing tribal hunts and ceremonies, and providing military leadership.\n\n Historically, council chiefs selected which of the six military societies would assume these duties; after a period of time on-duty, the chiefs would select a different society to take up the duties.",
+    "The material covers several Indigenous histories and conflicts: the Westervelt massacre killed 17 Dutch settlers, including ten Westervelts, and prompted some to join George Rogers Clark’s militia; the Pottawatomie killings by John Brown’s abolitionists were part of Bleeding Kansas. Cheyenne topics include governance, military societies, peace chief Lean Bear, warrior Ehyophsta, Northern Cheyenne Reservation and its Lame Deer headquarters, and Chief Dull Knife College. Concho’s",
+    "Concho Indian Boarding School\nConcho Indian Boarding School (also known as the Cheyenne-Arapaho Boarding School at Concho or Concho Indian School and home to the Concho Demonstration School) was a boarding school for members of the Cheyenne and Arapaho Tribes and later opened to other Native American students.\n\n It existed from 1909 to 1983.\n\n It was located in central Oklahoma, approximately 1 mile south of Concho, Oklahoma and 4 miles north of El Reno, Oklahoma.\n\n The name of the town and school is the Spanish word for \"shell\" and was named for the Indian agent, Charles E. Shell.",
+    "Eugene Little Coyote\nEugene Little Coyote was the president of the Northern Cheyenne Indian Reservation from 2004 to 2007.\n\n He was elected in November 2004, defeating the incumbent president, Geri Small.\n\n However, after a conflict with reservation vice president Rick Wolfname that began in July 2007 escalated, the Northern Cheyenne tribal council declared that it would oust Little Coyote as the tribe's president.\n\n Little Coyote was forcibly removed from office and arrested for trespassing in the tribal office building on December 28, 2007.\n\n It is worth noting that the move by the tribal council to remove Little Coyote from office was deemed unconstitutional and void by the Northern Cheyenne Constitutional Court.\n\n The Constitutional Court was however overruled by Bureau of Indian Affairs' regional director Ed Parisian, and later the Assistant Secretary of Indian Affairs Carl J. Artman.\n\n Their involvement in this matter set a historical precedence of the BIA directly meddling with tribal governments.",
+    "Northern Cheyenne Indian Reservation\nThe Northern Cheyenne Indian Reservation (Tsėhéstáno in Cheyenne, formerly named the Tongue River Indian Reservation) is home of the federally recognized Northern Cheyenne Tribe.\n\n Located in southeastern Montana, the reservation is approximately 444,000 acres in size and home to approximately 5,000 Cheyenne people.\n\n The tribal and government headquarters are in Lame Deer, which is also the home of the annual Northern Cheyenne Pow wow.\n\n The reservation is bounded on the east by the Tongue River and on the west by the Crow Reservation.\n\n There are small parcels of non-contiguous off-reservation trust lands in Meade County, South Dakota, northeast of the city of Sturgis.\n\n Its timbered ridges that extend into northwestern South Dakota are part of Custer National Forest and it is approximately 40 mi east of the site of the 1876 Battle of the Greasy Grass (known to most Americans as the Battle of the Little Bighorn).",
+    "Council of Forty-four\nThe Council of Forty-four was one of the two central institutions of traditional Cheyenne Indian tribal governance, the other being the military societies such as the Dog Soldiers.\n\n The influence of the Council of Forty-four waned in the face of internal conflict among the Cheyenne about Cheyenne policy toward encroaching white settlers on the Great Plains, and was dealt a severe blow by the Sand Creek Massacre.",
+    "Cheyenne\nThe Cheyenne ( ) are one of the Indigenous peoples of the Great Plains and their language is of the Algonquian language family.\n\n The Cheyenne comprise two Native American tribes, the Só'taeo'o or Só'taétaneo'o (more commonly spelled as Suhtai or Sutaio) and the Tsétsêhéstâhese (also spelled Tsitsistas).\n\n These tribes merged in the early 19th century.\n\n Today, the Cheyenne people are split into two federally recognized Nations: the Southern Cheyenne, who are enrolled in the Cheyenne and Arapaho Tribes in Oklahoma, and the Northern Cheyenne, who are enrolled in the Northern Cheyenne Tribe of the Northern Cheyenne Indian Reservation in Montana."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,577 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "3c5951c321fac055",
+   "kind": "answer",
+   "question": "when did they replace lead with graphite in pencils",
+   "gold_answers": [
+    "never contained the element lead"
+   ],
+   "model_answer": "Around 1565; pencils never actually contained lead."
+  },
+  {
+   "id": "cb2597625e44e0f9",
+   "kind": "answer",
+   "question": "who starred in the movie natural born killers",
+   "gold_answers": [
+    "Woody Harrelson",
+    "Juliette Lewis",
+    "Robert Downey, Jr.",
+    "Tommy Lee Jones",
+    "Tom Sizemore",
+    "Robert Downey Jr."
+   ],
+   "model_answer": "Woody Harrelson, Juliette Lewis, Robert Downey Jr., Tom Sizemore, and Tommy Lee Jones"
+  },
+  {
+   "id": "b55eb018b13a5f5f",
+   "kind": "answer",
+   "question": "how much does.it cost to raise a child",
+   "gold_answers": [
+    "Dual - Parent Family - USDA Average Spending per Child ( not the basic cost of raising ) Age of Child Housing Food Transport . Clothing Health Child Care / Education Misc . Total Before - tax income : Less than $59,410 ( Average = $38,000 ) 0 to 2 2,990 1,160 1,170 640 630 2,040 420 9,050 3 to 5 2,990 1,260 1,230 500 590 1,910 620 9,100 6 to 8 2,990 1,710 1,350 570 660 1,290 630 8,760 9 to 11 2,990 1,970 1,350 580 710 1,910 630 9,520 12 to 14 2,990 2,130 1,480 690 1,090 1,110 700 9,960 15 to 17 2,990 2,120 1,630 730 1,010 1,290 580 9,970 Total 53,820 31,050 24,630 11,130 14,070 23,640 10,740 169,080 Before - tax income : $59,410 to $102,870 ( Average = $79,940 ) 0 to 2 3,920 1,405 1,690 760 850 2,860 890 12,370 3 to 5 3,920 1,490 1,740 610 800 2,740 1,090 12,390 6 to 8 3,920 2,100 1,860 680 940 1,680 1,110 12,290 9 to 11 3,920 2,400 1,870 710 1,000 2,110 1,100 13,110 12 to 14 3,920 2,580 1,990 840 1,410 1,910 1,170 13,820 15 to 17 3,920 2,570 2,150 900 1,330 2,400 1,050 14,320 Total 70,560 37,620 33,900 13,500 18,990 41,100 19,230 234,900 Before - tax income : More than $102,870 ( Average = $180,040 ) 0 to 2 7,100 1,900 2,550 1,050 980 5,090 1,790 20,460 3 to 5 7,100 2,000 2,610 880 930 4,970 1,990 20,480 6 to 8 7,100 2,630 2,730 970 1,080 3,910 2,000 20,420 9 to 11 7,100 2,980 2,730 1,010 1,150 4,350 2,000 21,320 12 to 14 7,100 3,190 2,860 1,170 1,610 4,700 2,070 22,700 15 to 17 7,100 3,180 3,020 1,280 1,520 6,460 1,950 24,510 Total 127,800 47,640 49,500 19,080 21,810 88,440 35,400 389,670"
+   ],
+   "model_answer": "It varies by country and income; U.S. estimates range from about $157,000 to $390,000 through age 18."
+  },
+  {
+   "id": "f3fc079cbf9b8f20",
+   "kind": "answer",
+   "question": "florence and the machine i am not a robot",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "No, it’s by Marina and the Diamonds."
+  },
+  {
+   "id": "b0a030d775416f87",
+   "kind": "answer",
+   "question": "where did the idea of fortnite come from",
+   "gold_answers": [
+    "as a cross between Minecraft and Left 4 Dead"
+   ],
+   "model_answer": "An Epic Games game jam, inspired by combining building games with shooters."
+  },
+  {
+   "id": "bc17da2bd93308e2",
+   "kind": "answer",
+   "question": "where does kylo ren's name come from",
+   "gold_answers": [
+    "the character, \"came to the name Kylo Ren when he joined a group called the Knights of Ren.\""
+   ],
+   "model_answer": "He chose “Kylo” himself and took “Ren” from the Knights of Ren."
+  },
+  {
+   "id": "62c0e0fe62984cab",
+   "kind": "answer",
+   "question": "meaning of joy to the world by three dog night",
+   "gold_answers": [
+    "When Hoyt Axton performed the song to the group , two of the three main vocalists -- Danny Hutton and Cory Wells -- rejected the song , but Chuck Negron felt that the band needed a `` silly song '' to help bring the band back together as a working unit . Negron also felt that the song `` was n't even close to our best record , but it might have been one of our most honest . ''",
+    "The song , which has been described by members of Three Dog Night as a `` kid 's song '' and a `` silly song '' , topped the main singles charts in North America , was certified gold by the RIAA , and has since been covered by multiple artists ."
+   ],
+   "model_answer": "A silly, playful song with largely nonsensical lyrics."
+  },
+  {
+   "id": "7863838cf161e9b8",
+   "kind": "answer",
+   "question": "florence and the machine i am not a robot",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "“I Am Not a Robot” is by Marina, not Florence + the Machine."
+  },
+  {
+   "id": "2cd6fac38d3d02bc",
+   "kind": "answer",
+   "question": "explain how an operating system talks to hardware",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Through device drivers and hardware interfaces."
+  },
+  {
+   "id": "2d199e9c85a87f50",
+   "kind": "answer",
+   "question": "when did hawaii become a state and why",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "August 21, 1959, after residents voted for statehood."
+  },
+  {
+   "id": "46172e98ee844d2c",
+   "kind": "answer",
+   "question": "what us president is the only president to become an eagle scout",
+   "gold_answers": [
+    "Ford"
+   ],
+   "model_answer": "Gerald Ford"
+  },
+  {
+   "id": "2a35f2503c5b7f80",
+   "kind": "answer",
+   "question": "what are the zords in the power rangers movie",
+   "gold_answers": [
+    "animal-themed Ninja Zords"
+   ],
+   "model_answer": "T-Rex, Mastodon, Triceratops, Saber-Toothed Tiger, and Pterodactyl Zords."
+  },
+  {
+   "id": "6252cf72f854ba6b",
+   "kind": "answer",
+   "question": "when is the next deadpool movie being released",
+   "gold_answers": [
+    "May 18, 2018"
+   ],
+   "model_answer": "No release date has been announced."
+  },
+  {
+   "id": "82ba3625d1008976",
+   "kind": "answer",
+   "question": "when were 2 dollar bills stopped being made",
+   "gold_answers": [
+    "current denomination of U.S. currency"
+   ],
+   "model_answer": "1966 (temporarily; production resumed in 1976)"
+  },
+  {
+   "id": "583b0c53fb438a92",
+   "kind": "answer",
+   "question": "where was uncle tom's cabin first published",
+   "gold_answers": [
+    "in The National Era, an abolitionist periodical, starting with the June 5, 1851, issue",
+    "The National Era",
+    "The National Era, an abolitionist periodical"
+   ],
+   "model_answer": "Boston, Massachusetts"
+  },
+  {
+   "id": "8ded855f247f9ac9",
+   "kind": "answer",
+   "question": "who lives in the blue house in balamory",
+   "gold_answers": [
+    "Edie McCredie"
+   ],
+   "model_answer": "No one; Penny Pocket wears blue but shares the red house/shop."
+  },
+  {
+   "id": "d44b4b4293338331",
+   "kind": "answer",
+   "question": "yadav caste belongs to which category in andhra pradesh",
+   "gold_answers": [
+    "Yadava ( Golla )"
+   ],
+   "model_answer": "Backward Classes (OBC)"
+  },
+  {
+   "id": "e13ee5b916e5b481",
+   "kind": "answer",
+   "question": "are there many copies of sir gawain and the green knight",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Only one surviving manuscript is mentioned."
+  },
+  {
+   "id": "ac51802b5ef94fb4",
+   "kind": "answer",
+   "question": "head over boots for you by jon pardi",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "A 2015 country single by Jon Pardi."
+  },
+  {
+   "id": "518cf6461966cd65",
+   "kind": "answer",
+   "question": "who got what in the compromise of 1877",
+   "gold_answers": [
+    "The Compromise of 1877 was an informal , unwritten deal that settled the intensely disputed 1876 U.S. presidential election . It resulted in the United States federal government pulling the last troops out of the South , and formally ended the Reconstruction Era . Through the Compromise , Republican Rutherford B. Hayes was awarded the White House over Democrat Samuel J. Tilden on the understanding that Hayes would remove the federal troops whose support was essential for the survival of Republican state governments in South Carolina , Florida and Louisiana . The compromise involved Democrats who controlled the House of Representatives allowing the decision of the Electoral Commission to take effect . The outgoing president , Republican Ulysses S. Grant , removed the soldiers from Florida . As president , Hayes removed the remaining troops from South Carolina and Louisiana . As soon as the troops left , many white Republicans also left , and the `` Redeemer '' Democrats took control . They already dominated other state governments in the South . What was exactly agreed is somewhat contested as the documentation is insufficient ."
+   ],
+   "model_answer": "Hayes became president; Southern Democrats got federal troop withdrawal and “home rule” in the South."
+  },
+  {
+   "id": "5c3f246157a40927",
+   "kind": "answer",
+   "question": "what is the first basic process in the light reaction of photosynthesis",
+   "gold_answers": [
+    "one molecule of the pigment chlorophyll absorbs one photon and loses one electron",
+    "energy from light is absorbed by proteins called reaction centres that contain green chlorophyll pigments"
+   ],
+   "model_answer": "Absorption of light by chlorophyll, exciting and releasing an electron."
+  },
+  {
+   "id": "36ca24dd85410789",
+   "kind": "answer",
+   "question": "what are the importance of rigor mortis in meat processing",
+   "gold_answers": [
+    "rigor mortis and its resolution partially determine the tenderness of meat",
+    "tenderness of meat"
+   ],
+   "model_answer": "It helps determine meat tenderness."
+  },
+  {
+   "id": "1f8443a8567fdea1",
+   "kind": "answer",
+   "question": "what does cost of goods sold consist of",
+   "gold_answers": [
+    "Costs are associated with particular goods using one of the several formulas , including specific identification , first - in first - out ( FIFO ) , or average cost . Costs include all costs of purchase , costs of conversion and other costs that are incurred in bringing the inventories to their present location and condition . Costs of goods made by the businesses include material , labor , and allocated overhead . The costs of those goods which are not yet sold are deferred as costs of inventory until the inventory is sold or written down in value ."
+   ],
+   "model_answer": "Purchase costs, direct labor, and allocated production overhead."
+  },
+  {
+   "id": "e4c9045dd038d697",
+   "kind": "answer",
+   "question": "how has australia been influenced by other cultures",
+   "gold_answers": [
+    "The culture of Australia is a Western culture , derived primarily from Britain but also influenced by the unique geography of Australia , the diverse input of Aboriginal , Torres Strait Islander and other Australian people . The British colonization of Australia began in 1788 , and waves of multi-ethnic migration followed . Evidence of a significant Anglo - Celtic heritage includes the predominance of the English language , the existence of a democratic system of government drawing upon the British traditions of Westminster Government , Parliamentarianism and constitutional monarchy , American constitutionalist and federalist traditions , Christianity as the dominant religion , and the popularity of sports originating in ( or influenced by ) the British Isles . Australian culture has diverged significantly since British settlement ."
+   ],
+   "model_answer": "By Indigenous, British, European, and Asian cultures."
+  },
+  {
+   "id": "42b1fc770f6eac64",
+   "kind": "answer",
+   "question": "in which regions are most of africa petroleum and natural gas found",
+   "gold_answers": [
+    "Nigeria"
+   ],
+   "model_answer": "The Gulf of Guinea and North Africa, especially the Niger Delta and Sahara region."
+  },
+  {
+   "id": "b0db65beff0f65b2",
+   "kind": "answer",
+   "question": "what was the relationship between japan’s emperors and military leaders",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Emperors were the formal rulers, while military leaders often held the real power."
+  },
+  {
+   "id": "9827b26f5d8b60e8",
+   "kind": "answer",
+   "question": "which action shortens the fibers of the serratus anterior",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Scapular protraction (abduction)"
+  },
+  {
+   "id": "60def88162cea622",
+   "kind": "answer",
+   "question": "which film won the oscar for best animated feature in 2007",
+   "gold_answers": [
+    "Ratatouille"
+   ],
+   "model_answer": "Happy Feet"
+  },
+  {
+   "id": "f20cfa6ba8b4293d",
+   "kind": "answer",
+   "question": "where would a subcutaneous injection be made in the skin",
+   "gold_answers": [
+    "into the subcutis,[1] the layer of skin directly below the dermis and epidermis",
+    "the subcutis,[1] the layer of skin directly below the dermis and epidermis, collectively referred to as the cutis",
+    "the subcutis",
+    "the layer of skin directly below the dermis and epidermis, collectively referred to as the cutis"
+   ],
+   "model_answer": "Into the fatty tissue beneath the skin’s outer layers."
+  },
+  {
+   "id": "e318171a13af1c87",
+   "kind": "answer",
+   "question": "what are the zords in the power rangers movie",
+   "gold_answers": [
+    "animal-themed Ninja Zords"
+   ],
+   "model_answer": "Bear, ape, wolf, crane, frog, and falcon Ninja Zords."
+  },
+  {
+   "id": "7adc8886e8955e51",
+   "kind": "answer",
+   "question": "how did the apostles creed get its name",
+   "gold_answers": [
+    "The first mention of the expression `` Apostles ' Creed '' occurs in a letter of AD 390 from a synod in Milan and may have been associated with the belief , widely accepted in the 4th century , that , under the inspiration of the Holy Spirit , each of the Twelve Apostles contributed an article of a creed .",
+    "The title Symbolum Apostolicum ( Symbol or Creed of the Apostles ) appears for the first time in a letter , probably written by Ambrose , from a Council in Milan to Pope Siricius in about AD 390 `` Let them give credit to the Creed of the Apostles , which the Roman Church has always kept and preserved undefiled '' . But what existed at that time was not what is now known as the Apostles ' Creed but a shorter statement of belief that , for instance , did not include the phrase `` maker of heaven and earth '' , a phrase that may have been inserted only in the 7th century ."
+   ],
+   "model_answer": "From the tradition that it summarizes the apostles’ teaching."
+  },
+  {
+   "id": "e18e80609996fc58",
+   "kind": "answer",
+   "question": "what is step 1 of the 12 step program",
+   "gold_answers": [
+    "We admitted we were powerless over alcohol—that our lives had become unmanageable.",
+    "We admitted we were powerless over alcohol—that our lives had become unmanageable"
+   ],
+   "model_answer": "Admitted we were powerless over our addiction and that our lives had become unmanageable."
+  },
+  {
+   "id": "30749915bb36fb3d",
+   "kind": "answer",
+   "question": "where was the deer hunter hunting scene filmed",
+   "gold_answers": [
+    "Mount Baker-Snoqualmie National Forest",
+    "Nooksack Falls in the North Cascades range of, Washington",
+    "Mount Baker-Snoqualmie National Forest and Nooksack Falls in the North Cascades range of, Washington"
+   ],
+   "model_answer": "The Cascade Mountains in Washington state."
+  },
+  {
+   "id": "df294912b63a580b",
+   "kind": "answer",
+   "question": "percy jackson and the olympians sea of monsters summary",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Percy, Annabeth, and Tyson rescue Grover and retrieve the Golden Fleece to heal Thalia’s tree and protect Camp Half-Blood."
+  },
+  {
+   "id": "79f866a34893b447",
+   "kind": "answer",
+   "question": "meaning of lyrics to wade in the water",
+   "gold_answers": [
+    "The song relates to both the Old and New Testaments . The verses reflect the Israelites ' escape out of Egypt as found in Exodus 14 . The chorus refers to healing : see John 5 : 4 , `` For an angel went down at a certain season into the pool , and troubled the water : whosoever then first after the troubling of the water stepped in was made whole of whatsoever disease he had . ''"
+   ],
+   "model_answer": "Biblical deliverance and healing, often associated with escape from slavery."
+  },
+  {
+   "id": "6c7fb9c78946c45a",
+   "kind": "answer",
+   "question": "who were the church fathers and what did they do in the catholic church",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Early Christian theologians and leaders who shaped Catholic doctrine and practice."
+  },
+  {
+   "id": "06b56b3cbfd39a50",
+   "kind": "answer",
+   "question": "what is the main mineral in lithium batteries",
+   "gold_answers": [
+    "lithium",
+    "Lithium"
+   ],
+   "model_answer": "Spodumene"
+  },
+  {
+   "id": "97bd97ba360f3023",
+   "kind": "answer",
+   "question": "how many credits for a bachelor's degree in science",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "360 credits\n"
+  },
+  {
+   "id": "a7d05cf639c832cb",
+   "kind": "answer",
+   "question": "what is the weight of a honda fit",
+   "gold_answers": [
+    "1,020–1,080 kg"
+   ],
+   "model_answer": "About 2,500–2,700 lb (1,130–1,225 kg)."
+  },
+  {
+   "id": "9cab45444096ab68",
+   "kind": "answer",
+   "question": "what is the sentencing reform act of 1984",
+   "gold_answers": [
+    "U.S. federal statute intended to increase consistency in United States federal sentencing",
+    "a U.S. federal statute intended to increase consistency in United States federal sentencing"
+   ],
+   "model_answer": "A U.S. law that established federal sentencing guidelines and abolished federal parole."
+  },
+  {
+   "id": "8b5bb6e59895e705",
+   "kind": "answer",
+   "question": "who may be affected by monetary penalties imposed by the irs",
+   "gold_answers": [
+    "Taxpayers in the United States"
+   ],
+   "model_answer": "Taxpayers and other individuals or entities that violate federal tax laws."
+  },
+  {
+   "id": "3b6bd6cc08c3629c",
+   "kind": "answer",
+   "question": "who was kat slater's sisters in eastenders",
+   "gold_answers": [
+    "Lynne",
+    "Little Mo",
+    "Zoe"
+   ],
+   "model_answer": "Lynne, Little Mo, and Zoe Slater"
+  },
+  {
+   "id": "86e5bb275cf69395",
+   "kind": "answer",
+   "question": "where is gall bladder situated in human body",
+   "gold_answers": [
+    "beneath the liver"
+   ],
+   "model_answer": "Beneath the right lobe of the liver."
+  },
+  {
+   "id": "7576ee1eeb5b025c",
+   "kind": "answer",
+   "question": "how big is the celebrity big brother house",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "About 18,000 square feet."
+  },
+  {
+   "id": "4d6e41008c7ed30a",
+   "kind": "answer",
+   "question": "who got what in the compromise of 1877",
+   "gold_answers": [
+    "The Compromise of 1877 was an informal , unwritten deal that settled the intensely disputed 1876 U.S. presidential election . It resulted in the United States federal government pulling the last troops out of the South , and formally ended the Reconstruction Era . Through the Compromise , Republican Rutherford B. Hayes was awarded the White House over Democrat Samuel J. Tilden on the understanding that Hayes would remove the federal troops whose support was essential for the survival of Republican state governments in South Carolina , Florida and Louisiana . The compromise involved Democrats who controlled the House of Representatives allowing the decision of the Electoral Commission to take effect . The outgoing president , Republican Ulysses S. Grant , removed the soldiers from Florida . As president , Hayes removed the remaining troops from South Carolina and Louisiana . As soon as the troops left , many white Republicans also left , and the `` Redeemer '' Democrats took control . They already dominated other state governments in the South . What was exactly agreed is somewhat contested as the documentation is insufficient ."
+   ],
+   "model_answer": "Hayes got the presidency; Southern Democrats got federal troop withdrawal and home rule."
+  },
+  {
+   "id": "9bdf2509fba4d107",
+   "kind": "answer",
+   "question": "superhero names that start with the letter b",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Bantam, Beast, Battlestar, Butterball"
+  },
+  {
+   "id": "ce2d9da40a4ca282",
+   "kind": "answer",
+   "question": "who said if a tree falls in the woods and nobody hears it",
+   "gold_answers": [
+    "Charles Riborg Mann",
+    "George Ransom Twiss",
+    "Charles Riborg Mann and George Ransom Twiss",
+    "Philosopher George Berkeley"
+   ],
+   "model_answer": "The source is unknown; the modern phrasing appeared in a 1910 book by Charles Riborg Mann and George Ransom Twiss."
+  },
+  {
+   "id": "fde30a75ff34fae0",
+   "kind": "answer",
+   "question": "2. describing write about two instances where the colonists did not submit to the british",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Patriots laid siege to Boston and seized colonial governments and weapons; Continental forces invaded Quebec."
+  },
+  {
+   "id": "d719df7664e8d23f",
+   "kind": "answer",
+   "question": "an edge that is between a vertex and itself is a",
+   "gold_answers": [
+    "loop (also called a self-loop or a \"buckle\")",
+    "loop"
+   ],
+   "model_answer": "self-loop"
+  },
+  {
+   "id": "7ee480c5e046b81f",
+   "kind": "answer",
+   "question": "results of the large-scale women's health initiative released in 2002 revealed hormone therapy may",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Increase the risk of heart disease, stroke, and breast cancer."
+  },
+  {
+   "id": "abaa49ba69986e1c",
+   "kind": "answer",
+   "question": "where is a pulse generator most commonly found in a car",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "In the distributor."
+  },
+  {
+   "id": "3b2a951c8f2c922e",
+   "kind": "answer",
+   "question": "what is the moral of cat in the hat",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Chaos can be fun, but you should clean up after yourself."
+  },
+  {
+   "id": "92b1351140d349f9",
+   "kind": "answer",
+   "question": "where does the formation of atp take place",
+   "gold_answers": [
+    "mitochondrial membrane in eukaryotes",
+    "plasma membrane in bacteria",
+    "thylakoid membrane",
+    "inner mitochondrial membrane"
+   ],
+   "model_answer": "At ATP synthase in the inner mitochondrial membrane."
+  },
+  {
+   "id": "37f2c14370847a4c",
+   "kind": "answer",
+   "question": "where is republic of doyle supposed to take place",
+   "gold_answers": [
+    "St. John's, Newfoundland and Labrador"
+   ],
+   "model_answer": "St. John’s, Newfoundland and Labrador, Canada"
+  },
+  {
+   "id": "af31ee1ee2706d68",
+   "kind": "answer",
+   "question": "where do honey bees live in the world",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Every continent except Antarctica."
+  },
+  {
+   "id": "ff419d6be3af96f5",
+   "kind": "answer",
+   "question": "what are three different types of hotel properties",
+   "gold_answers": [
+    "Hotel barge",
+    "Bed and breakfast",
+    "Botel"
+   ],
+   "model_answer": "Apartment hotel, bed and breakfast, boutique hotel"
+  },
+  {
+   "id": "4e315525669c7c24",
+   "kind": "answer",
+   "question": "where did the term spirits for alcohol come from",
+   "gold_answers": [
+    "Middle Eastern alchemy"
+   ],
+   "model_answer": "Middle Eastern alchemy; the collected vapor was called the “spirit” of the original material."
+  },
+  {
+   "id": "914bae272438486c",
+   "kind": "answer",
+   "question": "the first european town in the present-day united states was new orleans",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No—St. Augustine."
+  },
+  {
+   "id": "1b7a200fcb449508",
+   "kind": "answer",
+   "question": "who lives who dies who tells your atory lyrics",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Sorry, I can’t provide the lyrics."
+  },
+  {
+   "id": "848de48c934506ca",
+   "kind": "answer",
+   "question": "where are the coastal plains of india situated",
+   "gold_answers": [
+    "between the Eastern Ghats and the Bay of Bengal",
+    "from Tamil Nadu in the south to West Bengal in the north through Andhra Pradesh and Odisha"
+   ],
+   "model_answer": "Between the Eastern Ghats and the Bay of Bengal, from Tamil Nadu to West Bengal."
+  }
+ ],
+ "evidence": []
+}

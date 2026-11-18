@@ -1,0 +1,127 @@
+[
+{"id": "3e0df0d55917d53f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "\"Pinus\" is the sole genus in the subfamily Pinoideae."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The Plant List compiled by the Royal Botanic Gardens, Kew and Missouri Botanical Garden accepts 126 species names of pines as current, together with 35 unresolved species and many more synonyms."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "The Plant List compiled by the Royal Botanic Gardens, Kew and Missouri Botanical Garden accepts 126 species names of pines as current, together with 35 unresolved species and many more synonyms."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "The Plant List compiled by the Royal Botanic Gardens, Kew and Missouri Botanical Garden accepts 126 species names of pines as current, together with 35 unresolved species and many more synonyms."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "The Plant List compiled by the Royal Botanic Gardens, Kew and Missouri Botanical Garden accepts 126 species names of pines as current, together with 35 unresolved species and many more synonyms."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "It is sometimes considered to have only two species, \"B. monosperma\" and \"B. superba\", or is expanded to include four or five species."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "It is sometimes considered to have only two species, \"B. monosperma\" and \"B. superba\", or is expanded to include four or five species."}]}
+]},
+{"id": "4b3277bb1a2d9b18", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "The University of California, Santa Barbara (commonly referred to as UC Santa Barbara or UCSB) is a public research university and one of the 10 campuses of the University of California system."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "The University of California, Santa Barbara (commonly referred to as UC Santa Barbara or UCSB) is a public research university and one of the 10 campuses of the University of California system."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "The University of California, Santa Barbara (commonly referred to as UC Santa Barbara or UCSB) is a public research university and one of the 10 campuses of the University of California system."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Tracing its roots back to 1891 as an independent teachers' college, UCSB joined the University of California system in 1944 and is the third-oldest general-education campus in the system."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Tracing its roots back to 1891 as an independent teachers' college, UCSB joined the University of California system in 1944 and is the third-oldest general-education campus in the system."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "Tracing its roots back to 1891 as an independent teachers' college, UCSB joined the University of California system in 1944 and is the third-oldest general-education campus in the system."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "Tracing its roots back to 1891 as an independent teachers' college, UCSB joined the University of California system in 1944 and is the third-oldest general-education campus in the system."}]},
+{"fact": "2.0", "status": "contradicted", "evidence": [{"item": 8, "quote": "Tracing its roots back to 1891 as an independent teachers' college"}]},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "It was founded in 1991 by the renowned philanthropist Hakim Said of the Hamdard Foundation."}]}
+]},
+{"id": "dbfa55a0c38980c1", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "The S70 was essentially a facelifted 850 saloon."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "The Volvo 850 is a compact executive car that was produced by the Swedish manufacturer Volvo Cars from 1991 to 1996."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "The Volvo 850 is a compact executive car that was produced by the Swedish manufacturer Volvo Cars from 1991 to 1996."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "The Volvo 850 is a compact executive car that was produced by the Swedish manufacturer Volvo Cars from 1991 to 1996."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "The 850 was the first front-wheel drive vehicle from Volvo to be sold in North America and also the first all-wheel drive Volvo."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "The 850 was the first front-wheel drive vehicle from Volvo to be sold in North America and also the first all-wheel drive Volvo."}]}
+]},
+{"id": "fa00f11622072e39", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Mosè in Egitto (\"Moses in Egypt)\" (] ) is a three-act opera"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Mosè in Egitto (\"Moses in Egypt)\" (] ) is a three-act opera written by Gioachino Rossini"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "written by Gioachino Rossini to an Italian libretto by Andrea Leone Tottola"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "which was based on a 1760 play by Francesco Ringhieri, \"L'Osiride\"."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 9, "quote": "1760 play by Francesco Ringhieri, \"L'Osiride\"."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Lucrezia Borgia is a melodramatic opera in a prologue and two acts by Gaetano Donizetti."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Lucrezia Borgia is a melodramatic opera in a prologue and two acts by Gaetano Donizetti."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Lucrezia Borgia is a melodramatic opera in a prologue and two acts by Gaetano Donizetti."}]}
+]},
+{"id": "9f21f45ee289889e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Bumble and bumble Products, LLC is one of 27 brands owned by Estée Lauder Companies, Inc."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Bumble and bumble Products, LLC is one of 27 brands owned by Estée Lauder Companies, Inc."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Bumble and bumble Products, LLC is one of 27 brands owned by Estée Lauder Companies, Inc."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "The company owns a diverse portfolio of brands, distributed internationally through retail channels and digital commerce, and has its headquarters in Midtown Manhattan, New York City."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "The company owns a diverse portfolio of brands, distributed internationally through retail channels and digital commerce, and has its headquarters in Midtown Manhattan, New York City."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "The company owns a diverse portfolio of brands, distributed internationally through retail channels and digital commerce, and has its headquarters in Midtown Manhattan, New York City."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "The company owns a diverse portfolio of brands, distributed internationally through retail channels and digital commerce, and has its headquarters in Midtown Manhattan, New York City."}]}
+]},
+{"id": "46d228d7f6183c71", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Ciaran Gribbin (born 1976) is a Northern Irish singer-songwriter, guitarist and producer who hails from Castledawson, Northern Ireland."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Ciaran Gribbin (born 1976) is a Northern Irish singer-songwriter, guitarist and producer who hails from Castledawson, Northern Ireland."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Ciaran Gribbin (born 1976) is a Northern Irish singer-songwriter, guitarist and producer who hails from Castledawson, Northern Ireland."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "Ciaran Gribbin (born 1976) is a Northern Irish singer-songwriter, guitarist and producer who hails from Castledawson, Northern Ireland."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 10, "quote": "Ciaran Gribbin (born 1976) is a Northern Irish singer-songwriter, guitarist and producer who hails from Castledawson, Northern Ireland."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Brett Allen Scallions (born December 21, 1971) is an American musician."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Brett Allen Scallions (born December 21, 1971) is an American musician."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "Brett Allen Scallions (born December 21, 1971) is an American musician."}, {"item": 4, "quote": "He is the lead vocalist, rhythm guitarist, and lyricist of post-grunge band Fuel."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "Brett Allen Scallions (born December 21, 1971) is an American musician."}, {"item": 4, "quote": "He is the lead vocalist, rhythm guitarist, and lyricist of post-grunge band Fuel."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "Brett Allen Scallions (born December 21, 1971) is an American musician."}, {"item": 4, "quote": "He is the lead vocalist, rhythm guitarist, and lyricist of post-grunge band Fuel."}]}
+]},
+{"id": "69c69028135076da", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Ionolyce is a small genus of butterflies in the family Lycaenidae."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Ionolyce is a small genus of butterflies in the family Lycaenidae."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "\"I. helicon\" is widespread in the Indoaustralasian region (India to the Malay Archipelago."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "\"I. helicon\" is widespread in the Indoaustralasian region (India to the Malay Archipelago."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 9, "quote": "India, officially the Republic of India"}, {"item": 9, "quote": "It is the seventh-largest country by area, the second-most populous country (with over 1.2 billion people), and the most populous democracy in the world."}]},
+{"fact": "3.1", "status": "missing", "evidence": []}
+]},
+{"id": "8fa136e46b4d35c1", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Bertalan Farkas (born August 2, 1949) is the first Hungarian cosmonaut and the first Esperantist in space."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Bertalan Farkas (born August 2, 1949) is the first Hungarian cosmonaut and the first Esperantist in space."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Bertalan Farkas (born August 2, 1949) is the first Hungarian cosmonaut and the first Esperantist in space."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Hans Wilhelm Schlegel (Überlingen, 3 August 1951) is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Hans Wilhelm Schlegel (Überlingen, 3 August 1951) is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Hans Wilhelm Schlegel (Überlingen, 3 August 1951) is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "Hans Wilhelm Schlegel (Überlingen, 3 August 1951) is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions."}]}
+]},
+{"id": "c833bcbd33dd30b0", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "It is known for producing the long-running series \"Tom Goes to the Mayor\", \"Nathan For You\", \"Tim and Eric Awesome Show, Great Job!"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "It is known for producing the long-running series \"Tom Goes to the Mayor\", \"Nathan For You\", \"Tim and Eric Awesome Show, Great Job!"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "It is known for producing the long-running series \"Tom Goes to the Mayor\", \"Nathan For You\", \"Tim and Eric Awesome Show, Great Job!"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Check It Out! with Dr. Steve Brule"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "Check It Out! with Dr. Steve Brule"}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 4, "quote": "Check It Out! with Dr. Steve Brule"}]},
+{"fact": "4.0", "status": "stated", "evidence": [{"item": 4, "quote": "Check It Out! with Dr. Steve Brule"}, {"item": 4, "quote": "is an American sketch comedy television series that is a spin-off of \"Tim and Eric Awesome Show, Great Job!"}]},
+{"fact": "4.1", "status": "stated", "evidence": [{"item": 4, "quote": "is an American sketch comedy television series that is a spin-off of \"Tim and Eric Awesome Show, Great Job!"}]}
+]},
+{"id": "e8f77c0271836ce3", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Alice Ann Munro ( , \"née\" Laidlaw ; born 10 July 1931) is a Canadian short story writer and Nobel Prize winner."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Alice Ann Munro ( , \"née\" Laidlaw ; born 10 July 1931) is a Canadian short story writer and Nobel Prize winner."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Alice Ann Munro ( , \"née\" Laidlaw ; born 10 July 1931) is a Canadian short story writer and Nobel Prize winner."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "Alice Ann Munro ( , \"née\" Laidlaw ; born 10 July 1931) is a Canadian short story writer and Nobel Prize winner."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Lillian Florence Hellman (June 20, 1905 – June 30, 1984) was an American dramatist and screenwriter known for her success as a playwright on Broadway, as well"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Lillian Florence Hellman (June 20, 1905 – June 30, 1984) was an American dramatist and screenwriter known for her success as a playwright on Broadway, as well"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Lillian Florence Hellman (June 20, 1905 – June 30, 1984) was an American dramatist and screenwriter known for her success as a playwright on Broadway, as well"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "Lillian Florence Hellman (June 20, 1905 – June 30, 1984) was an American dramatist and screenwriter known for her success as a playwright on Broadway, as well"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 4, "quote": "Lillian Florence Hellman (June 20, 1905 – June 30, 1984) was an American dramatist and screenwriter known for her success as a playwright on Broadway, as well"}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 4, "quote": "as her left-wing sympathies and political activism."}]},
+{"fact": "1.6", "status": "stated", "evidence": [{"item": 4, "quote": "as her left-wing sympathies and political activism."}]}
+]},
+{"id": "488857bd05337c4d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "The Consul is an opera in three acts with music and libretto by Gian Carlo Menotti, his first full-length opera."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "The Consul is an opera in three acts with music and libretto by Gian Carlo Menotti, his first full-length opera."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "The Consul is an opera in three acts with music and libretto by Gian Carlo Menotti, his first full-length opera."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "The Consul is an opera in three acts with music and libretto by Gian Carlo Menotti, his first full-length opera."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 6, "quote": "The Consul is an opera in three acts with music and libretto by Gian Carlo Menotti, his first full-length opera."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 3, "quote": "is a one-act opera with spoken dialog by Ferruccio Busoni"}, {"item": 3, "quote": "He completed the music for the opera while living in Zurich in 1916."}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 3, "quote": "is a one-act opera with spoken dialog by Ferruccio Busoni"}, {"item": 3, "quote": "He completed the music for the opera while living in Zurich in 1916."}]},
+{"fact": "1.2", "status": "contradicted", "evidence": [{"item": 3, "quote": "is a one-act opera with spoken dialog by Ferruccio Busoni"}, {"item": 3, "quote": "He completed the music for the opera while living in Zurich in 1916."}]},
+{"fact": "1.3", "status": "contradicted", "evidence": [{"item": 3, "quote": "is a one-act opera with spoken dialog by Ferruccio Busoni"}, {"item": 3, "quote": "He completed the music for the opera while living in Zurich in 1916."}]}
+]},
+{"id": "717373633cc995cc", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Edmund Robert Harris (c. 1804 – 27 May 1877) was an English lawyer from Preston, Lancashire, UK who was the principal benefactor of the Harris Museum, Harris Institute or Art School, Harris Technical School and the Harris Orphanage."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Edmund Robert Harris (c. 1804 – 27 May 1877) was an English lawyer from Preston, Lancashire, UK who was the principal benefactor of the Harris Museum, Harris Institute or Art School, Harris Technical School and the Harris Orphanage."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Edmund Robert Harris (c. 1804 – 27 May 1877) was an English lawyer from Preston, Lancashire, UK who was the principal benefactor of the Harris Museum, Harris Institute or Art School, Harris Technical School and the Harris Orphanage."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "Edmund Robert Harris (c. 1804 – 27 May 1877) was an English lawyer from Preston, Lancashire, UK who was the principal benefactor of the Harris Museum, Harris Institute or Art School, Harris Technical School and the Harris Orphanage."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 1, "quote": "Edmund Robert Harris (c. 1804 – 27 May 1877) was an English lawyer from Preston, Lancashire, UK who was the principal benefactor of the Harris Museum, Harris Institute or Art School, Harris Technical School and the Harris Orphanage."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 1, "quote": "Edmund Robert Harris (c. 1804 – 27 May 1877) was an English lawyer from Preston, Lancashire, UK who was the principal benefactor of the Harris Museum, Harris Institute or Art School, Harris Technical School and the Harris Orphanage."}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 1, "quote": "Edmund Robert Harris (c. 1804 – 27 May 1877) was an English lawyer from Preston, Lancashire, UK who was the principal benefactor of the Harris Museum, Harris Institute or Art School, Harris Technical School and the Harris Orphanage."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The Harris Museum, Art Gallery & Preston Free Public Library is a Grade I listed museum building in Preston."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "The Harris Museum, Art Gallery & Preston Free Public Library is a Grade I listed building in Preston."}]}
+]}
+]

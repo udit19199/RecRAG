@@ -1,0 +1,6706 @@
+[
+ {
+  "id": "d9fa583a4aa9dafe",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.5",
+    "status": "contradicted",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Playing Dead , '' the season 's first episode featuring Detectives Goren and Eames , had 4.578 million viewers"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.7",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.8",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.9",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.10",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.11",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.12",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.13",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.14",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Goren discovers that Stacy and her family moved to Switzerland for a year when she was in high school , and realizes that Stacy 's younger sister Sophie is actually her daughter by Neil"
+     }
+    ]
+   },
+   {
+    "fact": "0.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Goren discovers that Stacy and her family moved to Switzerland for a year when she was in high school , and realizes that Stacy 's younger sister Sophie is actually her daughter by Neil"
+     }
+    ]
+   },
+   {
+    "fact": "0.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "While questioning Neil and his mother , Camille ( Kathy Baker ) , it is revealed that she had Rick killed"
+     }
+    ]
+   },
+   {
+    "fact": "0.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "it is revealed that she had Rick killed because he was threatening to expose Neil 's family scandal , thwarting his mayoral bid"
+     }
+    ]
+   },
+   {
+    "fact": "0.19",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "157 `` Rock Star '' Bill D'Elia Ed Zuckerman April 26 , 2009 ( 2009 - 04 - 26 ) ( USA ) May 13 , 2009 ( 2009 - 05 - 13 ) ( NBC ) 08008 4.10"
+     }
+    ]
+   },
+   {
+    "fact": "0.20",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "157 `` Rock Star '' Bill D'Elia Ed Zuckerman April 26 , 2009 ( 2009 - 04 - 26 ) ( USA ) May 13 , 2009 ( 2009 - 05 - 13 ) ( NBC ) 08008 4.10"
+     }
+    ]
+   },
+   {
+    "fact": "0.21",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "157 `` Rock Star '' Bill D'Elia Ed Zuckerman April 26 , 2009 ( 2009 - 04 - 26 ) ( USA ) May 13 , 2009 ( 2009 - 05 - 13 ) ( NBC ) 08008 4.10"
+     }
+    ]
+   },
+   {
+    "fact": "0.22",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "157 `` Rock Star '' Bill D'Elia Ed Zuckerman April 26 , 2009 ( 2009 - 04 - 26 ) ( USA ) May 13 , 2009 ( 2009 - 05 - 13 ) ( NBC ) 08008 4.10"
+     }
+    ]
+   },
+   {
+    "fact": "0.23",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "157 `` Rock Star '' Bill D'Elia Ed Zuckerman April 26 , 2009 ( 2009 - 04 - 26 ) ( USA ) May 13 , 2009 ( 2009 - 05 - 13 ) ( NBC ) 08008 4.10"
+     }
+    ]
+   },
+   {
+    "fact": "0.24",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "157 `` Rock Star '' Bill D'Elia Ed Zuckerman April 26 , 2009 ( 2009 - 04 - 26 ) ( USA ) May 13 , 2009 ( 2009 - 05 - 13 ) ( NBC ) 08008 4.10"
+     }
+    ]
+   },
+   {
+    "fact": "0.25",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Detective Wheeler and her new partner , Detective Zack Nichols , investigate the stabbing of an artist , who was found in a neighborhood rife with ethnic tensions"
+     }
+    ]
+   },
+   {
+    "fact": "0.26",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Detective Wheeler and her new partner , Detective Zack Nichols , investigate the stabbing of an artist , who was found in a neighborhood rife with ethnic tensions"
+     }
+    ]
+   },
+   {
+    "fact": "0.27",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.28",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.29",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.30",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.31",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.32",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.33",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.34",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.35",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.36",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.37",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.38",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.39",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.40",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.41",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.42",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.43",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.44",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.45",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.46",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.47",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.48",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.49",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.50",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.51",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.52",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.53",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.54",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.55",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.56",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.57",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.58",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "The May 10 episode was watched by 3.14 million viewers"
+     }
+    ]
+   },
+   {
+    "fact": "0.59",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.60",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.61",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.62",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.63",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.64",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.65",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.66",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.67",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.68",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.69",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.70",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.71",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.72",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.73",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.74",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "161 6 `` Astoria Helen '' Norberto Barba Timothy J. Lea May 31 , 2009 ( 2009 - 05 - 31 ) ( USA ) July 6 , 2009 ( 2009 - 07 - 06 ) ( NBC ) 08004 3.97"
+     }
+    ]
+   },
+   {
+    "fact": "0.75",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "161 6 `` Astoria Helen '' Norberto Barba Timothy J. Lea May 31 , 2009 ( 2009 - 05 - 31 ) ( USA ) July 6 , 2009 ( 2009 - 07 - 06 ) ( NBC ) 08004 3.97"
+     }
+    ]
+   },
+   {
+    "fact": "0.76",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "161 6 `` Astoria Helen '' Norberto Barba Timothy J. Lea May 31 , 2009 ( 2009 - 05 - 31 ) ( USA ) July 6 , 2009 ( 2009 - 07 - 06 ) ( NBC ) 08004 3.97"
+     }
+    ]
+   },
+   {
+    "fact": "0.77",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "161 6 `` Astoria Helen '' Norberto Barba Timothy J. Lea May 31 , 2009 ( 2009 - 05 - 31 ) ( USA ) July 6 , 2009 ( 2009 - 07 - 06 ) ( NBC ) 08004 3.97"
+     }
+    ]
+   },
+   {
+    "fact": "0.78",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "161 6 `` Astoria Helen '' Norberto Barba Timothy J. Lea May 31 , 2009 ( 2009 - 05 - 31 ) ( USA ) July 6 , 2009 ( 2009 - 07 - 06 ) ( NBC ) 08004 3.97"
+     }
+    ]
+   },
+   {
+    "fact": "0.79",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "161 6 `` Astoria Helen '' Norberto Barba Timothy J. Lea May 31 , 2009 ( 2009 - 05 - 31 ) ( USA ) July 6 , 2009 ( 2009 - 07 - 06 ) ( NBC ) 08004 3.97"
+     }
+    ]
+   },
+   {
+    "fact": "0.80",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "161 6 `` Astoria Helen '' Norberto Barba Timothy J. Lea May 31 , 2009 ( 2009 - 05 - 31 ) ( USA ) July 6 , 2009 ( 2009 - 07 - 06 ) ( NBC ) 08004 3.97"
+     }
+    ]
+   },
+   {
+    "fact": "0.81",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "A charming con man named Joe Gallagher ( Creighton James ) targets a lonely , single mother named Helen Bramer ( Arija Bareikis ) to try to hit an armored truck carrying millions of dollars , Bramer worked for the company of the armored truck"
+     }
+    ]
+   },
+   {
+    "fact": "0.82",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "A charming con man named Joe Gallagher ( Creighton James ) targets a lonely , single mother named Helen Bramer ( Arija Bareikis ) to try to hit an armored truck carrying millions of dollars , Bramer worked for the company of the armored truck"
+     }
+    ]
+   },
+   {
+    "fact": "0.83",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "A charming con man named Joe Gallagher ( Creighton James ) targets a lonely , single mother named Helen Bramer ( Arija Bareikis ) to try to hit an armored truck carrying millions of dollars , Bramer worked for the company of the armored truck"
+     }
+    ]
+   },
+   {
+    "fact": "0.84",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Detectives Nichols and Wheeler investigate when one of the con man 's partners dies weeks later in a bomb blast"
+     }
+    ]
+   },
+   {
+    "fact": "0.85",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Bramer and Gallagher become the prime suspects in the case when a van owner named Frank Stroup ( Domenick Lombardozzi ) is ripped off and later shot"
+     }
+    ]
+   },
+   {
+    "fact": "0.86",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "But the detectives later learn that Bramer and Gallagher are n't the prime suspects when Bramer 's son Kevin gets abducted by Frank Stroup"
+     }
+    ]
+   },
+   {
+    "fact": "0.87",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "and to rescue the boy , Detective Nichols has to put himself in the middle of a hostage situation"
+     }
+    ]
+   },
+   {
+    "fact": "0.88",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.89",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.90",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.91",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.92",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.93",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.94",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.95",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.96",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.97",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.98",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.99",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.100",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.101",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "There never was a child at the hotel . As they uncover a shocking conspiracy , Goren and Eames learn that the unstable mother ( Piper Perabo ) has been delusional about the months - ago accidental death of her daughter , prompting her husband ( Luke Kirby ) to exploit her condition in order to continue receiving financial support from his rich but childless aunt . Partially inspired by the Madeleine McCann and Caylee Anthony cases"
+     }
+    ]
+   },
+   {
+    "fact": "0.102",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "There never was a child at the hotel . As they uncover a shocking conspiracy , Goren and Eames learn that the unstable mother ( Piper Perabo ) has been delusional about the months - ago accidental death of her daughter , prompting her husband ( Luke Kirby ) to exploit her condition in order to continue receiving financial support from his rich but childless aunt . Partially inspired by the Madeleine McCann and Caylee Anthony cases"
+     }
+    ]
+   },
+   {
+    "fact": "0.103",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "There never was a child at the hotel . As they uncover a shocking conspiracy , Goren and Eames learn that the unstable mother ( Piper Perabo ) has been delusional about the months - ago accidental death of her daughter , prompting her husband ( Luke Kirby ) to exploit her condition in order to continue receiving financial support from his rich but childless aunt . Partially inspired by the Madeleine McCann and Caylee Anthony cases"
+     }
+    ]
+   },
+   {
+    "fact": "0.104",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "There never was a child at the hotel . As they uncover a shocking conspiracy , Goren and Eames learn that the unstable mother ( Piper Perabo ) has been delusional about the months - ago accidental death of her daughter , prompting her husband ( Luke Kirby ) to exploit her condition in order to continue receiving financial support from his rich but childless aunt . Partially inspired by the Madeleine McCann and Caylee Anthony cases"
+     }
+    ]
+   },
+   {
+    "fact": "0.105",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "163 8 `` The Glory That Was ... '' Norberto Barba Robert Nathan June 14 , 2009 ( 2009 - 06 - 14 ) ( USA ) July 20 , 2009 ( 2009 - 07 - 20 ) ( NBC ) 08002 4.14"
+     }
+    ]
+   },
+   {
+    "fact": "0.106",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "163 8 `` The Glory That Was ... '' Norberto Barba Robert Nathan June 14 , 2009 ( 2009 - 06 - 14 ) ( USA ) July 20 , 2009 ( 2009 - 07 - 20 ) ( NBC ) 08002 4.14"
+     }
+    ]
+   },
+   {
+    "fact": "0.107",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "163 8 `` The Glory That Was ... '' Norberto Barba Robert Nathan June 14 , 2009 ( 2009 - 06 - 14 ) ( USA ) July 20 , 2009 ( 2009 - 07 - 20 ) ( NBC ) 08002 4.14"
+     }
+    ]
+   },
+   {
+    "fact": "0.108",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "163 8 `` The Glory That Was ... '' Norberto Barba Robert Nathan June 14 , 2009 ( 2009 - 06 - 14 ) ( USA ) July 20 , 2009 ( 2009 - 07 - 20 ) ( NBC ) 08002 4.14"
+     }
+    ]
+   },
+   {
+    "fact": "0.109",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "163 8 `` The Glory That Was ... '' Norberto Barba Robert Nathan June 14 , 2009 ( 2009 - 06 - 14 ) ( USA ) July 20 , 2009 ( 2009 - 07 - 20 ) ( NBC ) 08002 4.14"
+     }
+    ]
+   },
+   {
+    "fact": "0.110",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "163 8 `` The Glory That Was ... '' Norberto Barba Robert Nathan June 14 , 2009 ( 2009 - 06 - 14 ) ( USA ) July 20 , 2009 ( 2009 - 07 - 20 ) ( NBC ) 08002 4.14"
+     }
+    ]
+   },
+   {
+    "fact": "0.111",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "163 8 `` The Glory That Was ... '' Norberto Barba Robert Nathan June 14 , 2009 ( 2009 - 06 - 14 ) ( USA ) July 20 , 2009 ( 2009 - 07 - 20 ) ( NBC ) 08002 4.14"
+     }
+    ]
+   },
+   {
+    "fact": "0.112",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "What should have been a simple meeting turns to murder , leaving Detectives Wheeler and Nichols to question an embassy , a security company , the victim 's relatives , and how it all connects to the Olympic Site Selection Committee"
+     }
+    ]
+   },
+   {
+    "fact": "0.113",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "What should have been a simple meeting turns to murder , leaving Detectives Wheeler and Nichols to question an embassy , a security company , the victim 's relatives , and how it all connects to the Olympic Site Selection Committee"
+     }
+    ]
+   },
+   {
+    "fact": "0.114",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "This episode is omitted in the DVD release of season 8"
+     }
+    ]
+   },
+   {
+    "fact": "0.115",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "164 9 `` Family Values '' Jean de Segonzac Teleplay by : Walon Green Story by : Walon Green & Antoinette Stella June 21 , 2009 ( 2009 - 06 - 21 ) ( USA ) August 3 , 2009 ( 2009 - 08 - 03 ) ( NBC ) 08015 3.44"
+     }
+    ]
+   },
+   {
+    "fact": "0.116",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "164 9 `` Family Values '' Jean de Segonzac Teleplay by : Walon Green Story by : Walon Green & Antoinette Stella June 21 , 2009 ( 2009 - 06 - 21 ) ( USA ) August 3 , 2009 ( 2009 - 08 - 03 ) ( NBC ) 08015 3.44"
+     }
+    ]
+   },
+   {
+    "fact": "0.117",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "164 9 `` Family Values '' Jean de Segonzac Teleplay by : Walon Green Story by : Walon Green & Antoinette Stella June 21 , 2009 ( 2009 - 06 - 21 ) ( USA ) August 3 , 2009 ( 2009 - 08 - 03 ) ( NBC ) 08015 3.44"
+     }
+    ]
+   },
+   {
+    "fact": "0.118",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "164 9 `` Family Values '' Jean de Segonzac Teleplay by : Walon Green Story by : Walon Green & Antoinette Stella June 21 , 2009 ( 2009 - 06 - 21 ) ( USA ) August 3 , 2009 ( 2009 - 08 - 03 ) ( NBC ) 08015 3.44"
+     }
+    ]
+   },
+   {
+    "fact": "0.119",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "164 9 `` Family Values '' Jean de Segonzac Teleplay by : Walon Green Story by : Walon Green & Antoinette Stella June 21 , 2009 ( 2009 - 06 - 21 ) ( USA ) August 3 , 2009 ( 2009 - 08 - 03 ) ( NBC ) 08015 3.44"
+     }
+    ]
+   },
+   {
+    "fact": "0.120",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "164 9 `` Family Values '' Jean de Segonzac Teleplay by : Walon Green Story by : Walon Green & Antoinette Stella June 21 , 2009 ( 2009 - 06 - 21 ) ( USA ) August 3 , 2009 ( 2009 - 08 - 03 ) ( NBC ) 08015 3.44"
+     }
+    ]
+   },
+   {
+    "fact": "0.121",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "164 9 `` Family Values '' Jean de Segonzac Teleplay by : Walon Green Story by : Walon Green & Antoinette Stella June 21 , 2009 ( 2009 - 06 - 21 ) ( USA ) August 3 , 2009 ( 2009 - 08 - 03 ) ( NBC ) 08015 3.44"
+     }
+    ]
+   },
+   {
+    "fact": "0.122",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "164 9 `` Family Values '' Jean de Segonzac Teleplay by : Walon Green Story by : Walon Green & Antoinette Stella June 21 , 2009 ( 2009 - 06 - 21 ) ( USA ) August 3 , 2009 ( 2009 - 08 - 03 ) ( NBC ) 08015 3.44"
+     }
+    ]
+   },
+   {
+    "fact": "0.123",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "When a flier from a local Catholic high school drama production connects three murders , Detectives Goren and Eames are back on the case to understand the psychology of a religious fanatic before he claims another victim"
+     }
+    ]
+   },
+   {
+    "fact": "0.124",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "When a flier from a local Catholic high school drama production connects three murders , Detectives Goren and Eames are back on the case to understand the psychology of a religious fanatic before he claims another victim"
+     }
+    ]
+   },
+   {
+    "fact": "0.125",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "165 10 `` Salome in Manhattan '' `` Salome '' Steve Shill Andrew Lipsitz June 28 , 2009 ( 2009 - 06 - 28 ) ( USA ) August 10 , 2009 ( 2009 - 08 - 10 ) ( NBC ) 08006 N / A"
+     }
+    ]
+   },
+   {
+    "fact": "0.126",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "165 10 `` Salome in Manhattan '' `` Salome '' Steve Shill Andrew Lipsitz June 28 , 2009 ( 2009 - 06 - 28 ) ( USA ) August 10 , 2009 ( 2009 - 08 - 10 ) ( NBC ) 08006 N / A"
+     }
+    ]
+   },
+   {
+    "fact": "0.127",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "165 10 `` Salome in Manhattan '' `` Salome '' Steve Shill Andrew Lipsitz June 28 , 2009 ( 2009 - 06 - 28 ) ( USA ) August 10 , 2009 ( 2009 - 08 - 10 ) ( NBC ) 08006 N / A"
+     }
+    ]
+   },
+   {
+    "fact": "0.128",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "165 10 `` Salome in Manhattan '' `` Salome '' Steve Shill Andrew Lipsitz June 28 , 2009 ( 2009 - 06 - 28 ) ( USA ) August 10 , 2009 ( 2009 - 08 - 10 ) ( NBC ) 08006 N / A"
+     }
+    ]
+   },
+   {
+    "fact": "0.129",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "165 10 `` Salome in Manhattan '' `` Salome '' Steve Shill Andrew Lipsitz June 28 , 2009 ( 2009 - 06 - 28 ) ( USA ) August 10 , 2009 ( 2009 - 08 - 10 ) ( NBC ) 08006 N / A"
+     }
+    ]
+   },
+   {
+    "fact": "0.130",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "165 10 `` Salome in Manhattan '' `` Salome '' Steve Shill Andrew Lipsitz June 28 , 2009 ( 2009 - 06 - 28 ) ( USA ) August 10 , 2009 ( 2009 - 08 - 10 ) ( NBC ) 08006 N / A"
+     }
+    ]
+   },
+   {
+    "fact": "0.131",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "165 10 `` Salome in Manhattan '' `` Salome '' Steve Shill Andrew Lipsitz June 28 , 2009 ( 2009 - 06 - 28 ) ( USA ) August 10 , 2009 ( 2009 - 08 - 10 ) ( NBC ) 08006 N / A"
+     }
+    ]
+   },
+   {
+    "fact": "0.132",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "165 10 `` Salome in Manhattan '' `` Salome '' Steve Shill Andrew Lipsitz June 28 , 2009 ( 2009 - 06 - 28 ) ( USA ) August 10 , 2009 ( 2009 - 08 - 10 ) ( NBC ) 08006 N / A"
+     }
+    ]
+   },
+   {
+    "fact": "0.133",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "A celebrity chef 's star is on the rise as he plans the opening of a trendy restaurant with powerful partners"
+     }
+    ]
+   },
+   {
+    "fact": "0.134",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.135",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.136",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.137",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.138",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.139",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.140",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.141",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.142",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.143",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.144",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.145",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.146",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.147",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.148",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.149",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.150",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.151",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.152",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.153",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.154",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.155",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.156",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.157",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.158",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.159",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.160",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.161",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.162",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.163",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "168 13 `` All In '' David Manson Teleplay by : Pamela Wechsler , Antoinette Stella , & Walon Green Story by : Pamela Wechsler July 19 , 2009 ( 2009 - 07 - 19 ) ( USA ) August 31 , 2009 ( 2009 - 08 - 31 ) ( NBC ) 08013 4.14"
+     }
+    ]
+   },
+   {
+    "fact": "0.164",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "168 13 `` All In '' David Manson Teleplay by : Pamela Wechsler , Antoinette Stella , & Walon Green Story by : Pamela Wechsler July 19 , 2009 ( 2009 - 07 - 19 ) ( USA ) August 31 , 2009 ( 2009 - 08 - 31 ) ( NBC ) 08013 4.14"
+     }
+    ]
+   },
+   {
+    "fact": "0.165",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "168 13 `` All In '' David Manson Teleplay by : Pamela Wechsler , Antoinette Stella , & Walon Green Story by : Pamela Wechsler July 19 , 2009 ( 2009 - 07 - 19 ) ( USA ) August 31 , 2009 ( 2009 - 08 - 31 ) ( NBC ) 08013 4.14"
+     }
+    ]
+   },
+   {
+    "fact": "0.166",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "168 13 `` All In '' David Manson Teleplay by : Pamela Wechsler , Antoinette Stella , & Walon Green Story by : Pamela Wechsler July 19 , 2009 ( 2009 - 07 - 19 ) ( USA ) August 31 , 2009 ( 2009 - 08 - 31 ) ( NBC ) 08013 4.14"
+     }
+    ]
+   },
+   {
+    "fact": "0.167",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "168 13 `` All In '' David Manson Teleplay by : Pamela Wechsler , Antoinette Stella , & Walon Green Story by : Pamela Wechsler July 19 , 2009 ( 2009 - 07 - 19 ) ( USA ) August 31 , 2009 ( 2009 - 08 - 31 ) ( NBC ) 08013 4.14"
+     }
+    ]
+   },
+   {
+    "fact": "0.168",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "168 13 `` All In '' David Manson Teleplay by : Pamela Wechsler , Antoinette Stella , & Walon Green Story by : Pamela Wechsler July 19 , 2009 ( 2009 - 07 - 19 ) ( USA ) August 31 , 2009 ( 2009 - 08 - 31 ) ( NBC ) 08013 4.14"
+     }
+    ]
+   },
+   {
+    "fact": "0.169",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "168 13 `` All In '' David Manson Teleplay by : Pamela Wechsler , Antoinette Stella , & Walon Green Story by : Pamela Wechsler July 19 , 2009 ( 2009 - 07 - 19 ) ( USA ) August 31 , 2009 ( 2009 - 08 - 31 ) ( NBC ) 08013 4.14"
+     }
+    ]
+   },
+   {
+    "fact": "0.170",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "168 13 `` All In '' David Manson Teleplay by : Pamela Wechsler , Antoinette Stella , & Walon Green Story by : Pamela Wechsler July 19 , 2009 ( 2009 - 07 - 19 ) ( USA ) August 31 , 2009 ( 2009 - 08 - 31 ) ( NBC ) 08013 4.14"
+     }
+    ]
+   },
+   {
+    "fact": "0.171",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "When poker genius Josh Snow ( Aaron Stanford ) loses $80,000 in a card game , backer and bookie Lou Cardinale ( Boris McGiver ) forces him into collections to work off the losses"
+     }
+    ]
+   },
+   {
+    "fact": "0.172",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Lou gives him a . 38 and a box of blanks to extract gambling debts"
+     }
+    ]
+   },
+   {
+    "fact": "0.173",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "sends along his mistress , Angela ( Aleksa Palladino ) , to keep an eye on the money"
+     }
+    ]
+   },
+   {
+    "fact": "0.174",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "When Josh first collects from a guy in the local neighborhood , he shoots a blank at him . The guy gave him twenty thousand dollars and then he collects from Kip McGonagle ( Robert Leeshock )"
+     }
+    ]
+   },
+   {
+    "fact": "0.175",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "When Josh first collects from a guy in the local neighborhood , he shoots a blank at him . The guy gave him twenty thousand dollars and then he collects from Kip McGonagle ( Robert Leeshock )"
+     }
+    ]
+   },
+   {
+    "fact": "0.176",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "When Josh first collects from a guy in the local neighborhood , he shoots a blank at him . The guy gave him twenty thousand dollars and then he collects from Kip McGonagle ( Robert Leeshock )"
+     }
+    ]
+   },
+   {
+    "fact": "0.177",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.178",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.179",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.180",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.181",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.182",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.183",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.184",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.185",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.186",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.187",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.188",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.189",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.190",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.191",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.192",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.193",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.194",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.195",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.196",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.197",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.198",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.199",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.200",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.201",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.202",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.203",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.204",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "171 16 `` Revolution '' John David Coles Michael S. Chernuchin August 9 , 2009 ( 2009 - 08 - 09 ) ( USA ) September 7 , 2009 ( 2009 - 09 - 07 ) ( NBC ) 08016 4.83"
+     }
+    ]
+   },
+   {
+    "fact": "0.205",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "171 16 `` Revolution '' John David Coles Michael S. Chernuchin August 9 , 2009 ( 2009 - 08 - 09 ) ( USA ) September 7 , 2009 ( 2009 - 09 - 07 ) ( NBC ) 08016 4.83"
+     }
+    ]
+   },
+   {
+    "fact": "0.206",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "171 16 `` Revolution '' John David Coles Michael S. Chernuchin August 9 , 2009 ( 2009 - 08 - 09 ) ( USA ) September 7 , 2009 ( 2009 - 09 - 07 ) ( NBC ) 08016 4.83"
+     }
+    ]
+   },
+   {
+    "fact": "0.207",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "171 16 `` Revolution '' John David Coles Michael S. Chernuchin August 9 , 2009 ( 2009 - 08 - 09 ) ( USA ) September 7 , 2009 ( 2009 - 09 - 07 ) ( NBC ) 08016 4.83"
+     }
+    ]
+   },
+   {
+    "fact": "0.208",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "171 16 `` Revolution '' John David Coles Michael S. Chernuchin August 9 , 2009 ( 2009 - 08 - 09 ) ( USA ) September 7 , 2009 ( 2009 - 09 - 07 ) ( NBC ) 08016 4.83"
+     }
+    ]
+   },
+   {
+    "fact": "0.209",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "171 16 `` Revolution '' John David Coles Michael S. Chernuchin August 9 , 2009 ( 2009 - 08 - 09 ) ( USA ) September 7 , 2009 ( 2009 - 09 - 07 ) ( NBC ) 08016 4.83"
+     }
+    ]
+   },
+   {
+    "fact": "0.210",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "171 16 `` Revolution '' John David Coles Michael S. Chernuchin August 9 , 2009 ( 2009 - 08 - 09 ) ( USA ) September 7 , 2009 ( 2009 - 09 - 07 ) ( NBC ) 08016 4.83"
+     }
+    ]
+   },
+   {
+    "fact": "0.211",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "A revolutionary plans the kidnapping of a powerful banking executive , but the heist goes wrong and the executive is killed"
+     }
+    ]
+   },
+   {
+    "fact": "0.212",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "A revolutionary plans the kidnapping of a powerful banking executive , but the heist goes wrong and the executive is killed"
+     }
+    ]
+   },
+   {
+    "fact": "0.213",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "While probing the murder , Nichols and Eames must also prevent a terrorist campaign"
+     }
+    ]
+   },
+   {
+    "fact": "0.214",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "After this episode , Ed Zuckerman and Michael S. Chernuchin leave the show as executive producers"
+     }
+    ]
+   },
+   {
+    "fact": "0.215",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Zuckerman returned to Law & Order as its executive producer and Chernuchin as its co-executive producer"
+     }
+    ]
+   },
+   {
+    "fact": "0.216",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Zuckerman returned to Law & Order as its executive producer and Chernuchin as its co-executive producer"
+     }
+    ]
+   },
+   {
+    "fact": "0.217",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Walon Green takes over as executive producer / show runner for all episodes"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "7e07536d471aae56",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "1901 Wilhelm Conrad Röntgen Germany `` in recognition of the extraordinary services he has rendered by the discovery of the remarkable rays subsequently named after him"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "1902 Hendrik Lorentz Netherlands `` in recognition of the extraordinary service they rendered by their researches into the influence of magnetism upon radiation phenomena '' Pieter Zeeman Netherlands"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "1902 Hendrik Lorentz Netherlands `` in recognition of the extraordinary service they rendered by their researches into the influence of magnetism upon radiation phenomena '' Pieter Zeeman Netherlands"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "1903 Antoine Henri Becquerel France `` for his discovery of spontaneous radioactivity"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Pierre Curie France `` for their joint researches on the radiation phenomena discovered by Professor Henri Becquerel '' Maria Skłodowska - Curie Poland France"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Pierre Curie France `` for their joint researches on the radiation phenomena discovered by Professor Henri Becquerel '' Maria Skłodowska - Curie Poland France"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "1904 Lord Rayleigh United Kingdom `` for his investigations of the densities of the most important gases and for his discovery of argon in connection with these studies"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "1904 Lord Rayleigh United Kingdom `` for his investigations of the densities of the most important gases and for his discovery of argon in connection with these studies"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "1905 Philipp Eduard Anton von Lenard Austria - Hungary Germany `` for his work on cathode rays"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.10",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.11",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.12",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.13",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.14",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.15",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.16",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.17",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.18",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.19",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.20",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.21",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.22",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.23",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.24",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.25",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.26",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.27",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.28",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.29",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.30",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.31",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.32",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.33",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.34",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.35",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.36",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.37",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.38",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.39",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.40",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "There have been six years in which the Nobel Prize in Physics was not awarded ( 1916 , 1931 , 1934 , 1940 -- 1942 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.41",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.42",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.43",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.44",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "There have been six years in which the Nobel Prize in Physics was not awarded ( 1916 , 1931 , 1934 , 1940 -- 1942 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.45",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.46",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.47",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.48",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.49",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.50",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.51",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.52",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.53",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.54",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.55",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.56",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.57",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.58",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.59",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.60",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.61",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.62",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.63",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.64",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.65",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.66",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.67",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.68",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.69",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.70",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.71",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.72",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.73",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.74",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.75",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.76",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.77",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.78",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.79",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.80",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.81",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.82",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.83",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.84",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.85",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.86",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.87",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.88",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.89",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.90",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.91",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.92",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.93",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.94",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.95",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.96",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.97",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.98",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.99",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.100",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.101",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.102",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.103",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.104",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.105",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.106",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.107",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.108",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.109",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.110",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.111",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.112",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.113",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.114",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.115",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.116",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.117",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.118",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.119",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.120",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.121",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.122",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.123",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.124",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.125",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.126",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.127",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.128",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.129",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.130",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.131",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.132",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.133",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.134",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.135",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.136",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.137",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.138",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.139",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.140",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.141",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.142",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.143",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.144",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.145",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.146",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.147",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.148",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.149",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.150",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.151",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.152",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.153",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.154",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.155",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.156",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.157",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.158",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.159",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.160",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.161",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.162",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.163",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.164",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.165",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.166",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.167",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.168",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.169",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.170",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.171",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.172",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.173",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.174",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.175",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.176",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.177",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.178",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.179",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.180",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.181",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.182",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.183",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.184",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.185",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.186",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.187",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.188",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "1998 Robert B. Laughlin United States `` for their discovery of a new form of quantum fluid with fractionally charged excitations '' Horst Ludwig Störmer Germany Daniel Chee Tsui Republic of China United States"
+     }
+    ]
+   },
+   {
+    "fact": "0.189",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "1998 Robert B. Laughlin United States `` for their discovery of a new form of quantum fluid with fractionally charged excitations '' Horst Ludwig Störmer Germany Daniel Chee Tsui Republic of China United States"
+     }
+    ]
+   },
+   {
+    "fact": "0.190",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "1998 Robert B. Laughlin United States `` for their discovery of a new form of quantum fluid with fractionally charged excitations '' Horst Ludwig Störmer Germany Daniel Chee Tsui Republic of China United States"
+     }
+    ]
+   },
+   {
+    "fact": "0.191",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "1999 Gerard ' t Hooft Netherlands `` for elucidating the quantum structure of electroweak interactions in physics '' Martinus J.G. Veltman Netherlands"
+     }
+    ]
+   },
+   {
+    "fact": "0.192",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "1999 Gerard ' t Hooft Netherlands `` for elucidating the quantum structure of electroweak interactions in physics '' Martinus J.G. Veltman Netherlands"
+     }
+    ]
+   },
+   {
+    "fact": "0.193",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "2000 Zhores Ivanovich Alferov Russia `` for developing semiconductor heterostructures used in high - speed - and optoelectronics '' Herbert Kroemer Germany Jack St. Clair Kilby United States `` for his part in the invention of the integrated circuit"
+     }
+    ]
+   },
+   {
+    "fact": "0.194",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "2000 Zhores Ivanovich Alferov Russia `` for developing semiconductor heterostructures used in high - speed - and optoelectronics '' Herbert Kroemer Germany Jack St. Clair Kilby United States `` for his part in the invention of the integrated circuit"
+     }
+    ]
+   },
+   {
+    "fact": "0.195",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "2000 Zhores Ivanovich Alferov Russia `` for developing semiconductor heterostructures used in high - speed - and optoelectronics '' Herbert Kroemer Germany Jack St. Clair Kilby United States `` for his part in the invention of the integrated circuit"
+     }
+    ]
+   },
+   {
+    "fact": "0.196",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "2001 Eric Allin Cornell United States `` for the achievement of Bose -- Einstein condensation in dilute gases of alkali atoms , and for early fundamental studies of the properties of the condensates '' Carl Edwin Wieman United States Wolfgang Ketterle Germany"
+     }
+    ]
+   },
+   {
+    "fact": "0.197",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "2001 Eric Allin Cornell United States `` for the achievement of Bose -- Einstein condensation in dilute gases of alkali atoms , and for early fundamental studies of the properties of the condensates '' Carl Edwin Wieman United States Wolfgang Ketterle Germany"
+     }
+    ]
+   },
+   {
+    "fact": "0.198",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "2001 Eric Allin Cornell United States `` for the achievement of Bose -- Einstein condensation in dilute gases of alkali atoms , and for early fundamental studies of the properties of the condensates '' Carl Edwin Wieman United States Wolfgang Ketterle Germany"
+     }
+    ]
+   },
+   {
+    "fact": "0.199",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.200",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.201",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.202",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.203",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.204",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.205",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.206",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.207",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.208",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.209",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.210",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.211",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.212",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.213",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.214",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.215",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "2007 Albert Fert France `` for the discovery of giant magnetoresistance '' Peter Grünberg Germany"
+     }
+    ]
+   },
+   {
+    "fact": "0.216",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "2007 Albert Fert France `` for the discovery of giant magnetoresistance '' Peter Grünberg Germany"
+     }
+    ]
+   },
+   {
+    "fact": "0.217",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "2008 Makoto Kobayashi Japan `` for the discovery of the origin of the broken symmetry which predicts the existence of at least three families of quarks in nature '' Toshihide Maskawa Japan Yoichiro Nambu Japan United States `` for the discovery of the mechanism of spontaneous broken symmetry in subatomic physics"
+     }
+    ]
+   },
+   {
+    "fact": "0.218",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "2008 Makoto Kobayashi Japan `` for the discovery of the origin of the broken symmetry which predicts the existence of at least three families of quarks in nature '' Toshihide Maskawa Japan Yoichiro Nambu Japan United States `` for the discovery of the mechanism of spontaneous broken symmetry in subatomic physics"
+     }
+    ]
+   },
+   {
+    "fact": "0.219",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "2008 Makoto Kobayashi Japan `` for the discovery of the origin of the broken symmetry which predicts the existence of at least three families of quarks in nature '' Toshihide Maskawa Japan Yoichiro Nambu Japan United States `` for the discovery of the mechanism of spontaneous broken symmetry in subatomic physics"
+     }
+    ]
+   },
+   {
+    "fact": "0.220",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "2009 Charles K. Kao Hong Kong United Kingdom United States `` for groundbreaking achievements concerning the transmission of light in fibers for optical communication '' Willard S. Boyle Canada United States `` for the invention of an imaging semiconductor circuit -- the CCD sensor '' George E. Smith United States"
+     }
+    ]
+   },
+   {
+    "fact": "0.221",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "2009 Charles K. Kao Hong Kong United Kingdom United States `` for groundbreaking achievements concerning the transmission of light in fibers for optical communication '' Willard S. Boyle Canada United States `` for the invention of an imaging semiconductor circuit -- the CCD sensor '' George E. Smith United States"
+     }
+    ]
+   },
+   {
+    "fact": "0.222",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "2009 Charles K. Kao Hong Kong United Kingdom United States `` for groundbreaking achievements concerning the transmission of light in fibers for optical communication '' Willard S. Boyle Canada United States `` for the invention of an imaging semiconductor circuit -- the CCD sensor '' George E. Smith United States"
+     }
+    ]
+   },
+   {
+    "fact": "0.223",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.224",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.225",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "2011 Saul Perlmutter United States `` for the discovery of the accelerating expansion of the Universe through observations of distant supernovae '' Brian P. Schmidt Australia United States Adam G. Riess United States"
+     }
+    ]
+   },
+   {
+    "fact": "0.226",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "2011 Saul Perlmutter United States `` for the discovery of the accelerating expansion of the Universe through observations of distant supernovae '' Brian P. Schmidt Australia United States Adam G. Riess United States"
+     }
+    ]
+   },
+   {
+    "fact": "0.227",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "2011 Saul Perlmutter United States `` for the discovery of the accelerating expansion of the Universe through observations of distant supernovae '' Brian P. Schmidt Australia United States Adam G. Riess United States"
+     }
+    ]
+   },
+   {
+    "fact": "0.228",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "2012 Serge Haroche France `` for ground - breaking experimental methods that enable measuring and manipulation of individual quantum systems"
+     }
+    ]
+   },
+   {
+    "fact": "0.229",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.230",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.231",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.232",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.233",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.234",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.235",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.236",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.237",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.238",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.239",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.240",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.241",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.242",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The first Nobel Prize in Physics was awarded in 1901 to Wilhelm Conrad Röntgen , of Germany , who received 150,782 SEK , which is equal to 7,731,004 SEK in December 2007"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The first Nobel Prize in Physics was awarded in 1901 to Wilhelm Conrad Röntgen , of Germany , who received 150,782 SEK , which is equal to 7,731,004 SEK in December 2007"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The first Nobel Prize in Physics was awarded in 1901 to Wilhelm Conrad Röntgen , of Germany , who received 150,782 SEK , which is equal to 7,731,004 SEK in December 2007"
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The first Nobel Prize in Physics was awarded in 1901 to Wilhelm Conrad Röntgen , of Germany , who received 150,782 SEK , which is equal to 7,731,004 SEK in December 2007"
+     }
+    ]
+   },
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "John Bardeen is the only laureate to win the prize twice -- in 1956 and 1972"
+     }
+    ]
+   },
+   {
+    "fact": "1.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "John Bardeen is the only laureate to win the prize twice -- in 1956 and 1972"
+     }
+    ]
+   },
+   {
+    "fact": "1.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Maria Skłodowska - Curie also won two Nobel Prizes , for physics in 1903 and chemistry in 1911"
+     }
+    ]
+   },
+   {
+    "fact": "1.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Maria Skłodowska - Curie also won two Nobel Prizes , for physics in 1903 and chemistry in 1911"
+     }
+    ]
+   },
+   {
+    "fact": "1.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Maria Skłodowska - Curie also won two Nobel Prizes , for physics in 1903 and chemistry in 1911"
+     }
+    ]
+   },
+   {
+    "fact": "1.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "William Lawrence Bragg was , until October 2014 , the youngest ever Nobel laureate ; he won the prize in 1915 at the age of 25"
+     }
+    ]
+   },
+   {
+    "fact": "1.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "William Lawrence Bragg was , until October 2014 , the youngest ever Nobel laureate ; he won the prize in 1915 at the age of 25"
+     }
+    ]
+   },
+   {
+    "fact": "1.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Two women have won the prize : Curie and Maria Goeppert - Mayer ( 1963 )"
+     }
+    ]
+   },
+   {
+    "fact": "1.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Two women have won the prize : Curie and Maria Goeppert - Mayer ( 1963 )"
+     }
+    ]
+   },
+   {
+    "fact": "1.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "As of 2017 , the prize has been awarded to 206 individuals"
+     }
+    ]
+   },
+   {
+    "fact": "1.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "There have been six years in which the Nobel Prize in Physics was not awarded ( 1916 , 1931 , 1934 , 1940 -- 1942 )"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "e5e65aed221b1536",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "A justice of the peace ( JP ) is a judicial officer , of a lower or puisne court , elected or appointed by means of a commission ( letters patent ) to keep the peace"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "A justice of the peace ( JP ) is a judicial officer , of a lower or puisne court , elected or appointed by means of a commission ( letters patent ) to keep the peace"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "A justice of the peace ( JP ) is a judicial officer , of a lower or puisne court , elected or appointed by means of a commission ( letters patent ) to keep the peace"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "A justice of the peace ( JP ) is a judicial officer , of a lower or puisne court , elected or appointed by means of a commission ( letters patent ) to keep the peace"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "In past centuries the term commissioner of the peace was often used with the same meaning"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Depending on the jurisdiction , such justices dispense summary justice or merely deal with local administrative applications in common law jurisdictions"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Depending on the jurisdiction , such justices dispense summary justice or merely deal with local administrative applications in common law jurisdictions"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Justices of the peace are appointed or elected from the citizens of the jurisdiction in which they serve"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "and are ( or were ) usually not required to have any formal legal education in order to qualify for the office"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Some jurisdictions have varying forms of training for JPs"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "3b394aa23945eb9b",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Compared to the acetabulum ( at the hip - joint ) the glenoid cavity is relatively shallow"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Compared to the acetabulum ( at the hip - joint ) the glenoid cavity is relatively shallow . This makes the shoulder joint prone to dislocation ( luxation )"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Strong glenohumeral ligaments and muscles prevents dislocation in most cases"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "e8953fb2dc8d91ff",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Focusing on Natsu and the others who were frozen in time for seven years on Tenrou Island , the members return to Magnolia and discover that Saber Tooth is the strongest guild in the Fiore Kingdom"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Natsu and Gajeel facing Dragon Slayers Sting and Rogue"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.9",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.10",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.11",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.12",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.13",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.14",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.15",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.16",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.17",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.18",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.19",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Poluchka reveals herself as the Edolas counterpart of Grandine , and gives Wendy written instructions for two advanced spells that Grandine failed to teach her"
+     }
+    ]
+   },
+   {
+    "fact": "0.20",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Poluchka reveals herself as the Edolas counterpart of Grandine , and gives Wendy written instructions for two advanced spells that Grandine failed to teach her"
+     }
+    ]
+   },
+   {
+    "fact": "0.21",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Meanwhile , Makarov announces Gildarts ' succession as master to the rest of the guild , only to find he has gone on a journey , leaving a letter of resignation behind"
+     }
+    ]
+   },
+   {
+    "fact": "0.22",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Meanwhile , Makarov announces Gildarts ' succession as master to the rest of the guild , only to find he has gone on a journey , leaving a letter of resignation behind"
+     }
+    ]
+   },
+   {
+    "fact": "0.23",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "In the letter , Gildarts reinstates Laxus into the guild , returns mastership to Makarov , and tells him to make Fairy Tail the strongest guild in Fiore again"
+     }
+    ]
+   },
+   {
+    "fact": "0.24",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "In the letter , Gildarts reinstates Laxus into the guild , returns mastership to Makarov , and tells him to make Fairy Tail the strongest guild in Fiore again"
+     }
+    ]
+   },
+   {
+    "fact": "0.25",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "In the letter , Gildarts reinstates Laxus into the guild , returns mastership to Makarov , and tells him to make Fairy Tail the strongest guild in Fiore again"
+     }
+    ]
+   },
+   {
+    "fact": "0.26",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Romeo suggests they participate in the Grand Magic Games , an annual festival designed to determine the guild rankings in Fiore"
+     }
+    ]
+   },
+   {
+    "fact": "0.27",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Romeo suggests they participate in the Grand Magic Games , an annual festival designed to determine the guild rankings in Fiore"
+     }
+    ]
+   },
+   {
+    "fact": "0.28",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "153 `` Song of the Stars '' `` Hoshiboshi no Uta '' ( 星々 の 歌 ) October 20 , 2012 December 1 , 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.29",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "153 `` Song of the Stars '' `` Hoshiboshi no Uta '' ( 星々 の 歌 ) October 20 , 2012 December 1 , 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.30",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "With the Grand Magic Games occurring in three months time , Natsu and his friends train at a beach resort . On their second day of training , Virgo appears and tells the wizards that the Celestial Spirit World is in danger of destruction"
+     }
+    ]
+   },
+   {
+    "fact": "0.31",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "With the Grand Magic Games occurring in three months time , Natsu and his friends train at a beach resort . On their second day of training , Virgo appears and tells the wizards that the Celestial Spirit World is in danger of destruction"
+     }
+    ]
+   },
+   {
+    "fact": "0.32",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "With the Grand Magic Games occurring in three months time , Natsu and his friends train at a beach resort . On their second day of training , Virgo appears and tells the wizards that the Celestial Spirit World is in danger of destruction"
+     }
+    ]
+   },
+   {
+    "fact": "0.33",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.34",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.35",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.36",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.37",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.38",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.39",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.40",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.41",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.42",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.43",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.44",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.45",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The three ask Fairy Tail for their help in determining the source of a magical anomaly similar to Zeref 's magic that they have sensed around the Grand Magic Games arena , Domus Flau . In exchange , Ultear uses her magic to invoke their Second Origin in order to double their magic power"
+     }
+    ]
+   },
+   {
+    "fact": "0.46",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The three ask Fairy Tail for their help in determining the source of a magical anomaly similar to Zeref 's magic that they have sensed around the Grand Magic Games arena , Domus Flau . In exchange , Ultear uses her magic to invoke their Second Origin in order to double their magic power"
+     }
+    ]
+   },
+   {
+    "fact": "0.47",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The three ask Fairy Tail for their help in determining the source of a magical anomaly similar to Zeref 's magic that they have sensed around the Grand Magic Games arena , Domus Flau . In exchange , Ultear uses her magic to invoke their Second Origin in order to double their magic power"
+     }
+    ]
+   },
+   {
+    "fact": "0.48",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Erza talks with Jellal over his regained memories . The two nearly kiss , but Jellal decides that he and Erza can not be together and lies to her that he has a fiancée . Erza quickly picks up on this and respects his decision , seeing Crime Sorcière off as they leave"
+     }
+    ]
+   },
+   {
+    "fact": "0.49",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Erza talks with Jellal over his regained memories . The two nearly kiss , but Jellal decides that he and Erza can not be together and lies to her that he has a fiancée . Erza quickly picks up on this and respects his decision , seeing Crime Sorcière off as they leave"
+     }
+    ]
+   },
+   {
+    "fact": "0.50",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Erza talks with Jellal over his regained memories . The two nearly kiss , but Jellal decides that he and Erza can not be together and lies to her that he has a fiancée . Erza quickly picks up on this and respects his decision , seeing Crime Sorcière off as they leave"
+     }
+    ]
+   },
+   {
+    "fact": "0.51",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Erza talks with Jellal over his regained memories . The two nearly kiss , but Jellal decides that he and Erza can not be together and lies to her that he has a fiancée . Erza quickly picks up on this and respects his decision , seeing Crime Sorcière off as they leave"
+     }
+    ]
+   },
+   {
+    "fact": "0.52",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Erza talks with Jellal over his regained memories . The two nearly kiss , but Jellal decides that he and Erza can not be together and lies to her that he has a fiancée . Erza quickly picks up on this and respects his decision , seeing Crime Sorcière off as they leave"
+     }
+    ]
+   },
+   {
+    "fact": "0.53",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Erza talks with Jellal over his regained memories . The two nearly kiss , but Jellal decides that he and Erza can not be together and lies to her that he has a fiancée . Erza quickly picks up on this and respects his decision , seeing Crime Sorcière off as they leave"
+     }
+    ]
+   },
+   {
+    "fact": "0.54",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "155 `` Crocus , the Flower - Blooming Capital '' `` Hanasaku Miyako : Kurokkasu '' ( 花 笑 く 都 ・ クロッカス ) November 3 , 2012 December 15 , 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.55",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.56",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Natsu , Lucy , Gray , Erza , and Wendy are chosen to represent their guild in the Grand Magic Games , which are to be held in Fiore 's capital , Crocus"
+     }
+    ]
+   },
+   {
+    "fact": "0.57",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Natsu , Lucy , Gray , Erza , and Wendy are chosen to represent their guild in the Grand Magic Games , which are to be held in Fiore 's capital , Crocus"
+     }
+    ]
+   },
+   {
+    "fact": "0.58",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.59",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.60",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.61",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.62",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.63",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.64",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.65",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.66",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.67",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.68",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.69",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.70",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.71",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.72",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.73",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.74",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.75",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.76",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.77",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.78",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.79",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.80",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.81",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.82",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.83",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.84",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.85",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.86",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "To everyone 's shock , the next team is revealed to be a second team from Fairy Tail composed of Gajeel , Juvia , Mirajane , Laxus , and Jellal ( disguised as Mystogan to help investigate the arena"
+     }
+    ]
+   },
+   {
+    "fact": "0.87",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "To everyone 's shock , the next team is revealed to be a second team from Fairy Tail composed of Gajeel , Juvia , Mirajane , Laxus , and Jellal ( disguised as Mystogan to help investigate the arena"
+     }
+    ]
+   },
+   {
+    "fact": "0.88",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The final guild to be announced is Saber Tooth , much to the joy of the audience . With all eight teams announced , they each send out one member to participate in the first contest of the games , with Gray and Juvia representing their teams"
+     }
+    ]
+   },
+   {
+    "fact": "0.89",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The final guild to be announced is Saber Tooth , much to the joy of the audience . With all eight teams announced , they each send out one member to participate in the first contest of the games , with Gray and Juvia representing their teams"
+     }
+    ]
+   },
+   {
+    "fact": "0.90",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The final guild to be announced is Saber Tooth , much to the joy of the audience . With all eight teams announced , they each send out one member to participate in the first contest of the games , with Gray and Juvia representing their teams"
+     }
+    ]
+   },
+   {
+    "fact": "0.91",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The final guild to be announced is Saber Tooth , much to the joy of the audience . With all eight teams announced , they each send out one member to participate in the first contest of the games , with Gray and Juvia representing their teams"
+     }
+    ]
+   },
+   {
+    "fact": "0.92",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The final guild to be announced is Saber Tooth , much to the joy of the audience . With all eight teams announced , they each send out one member to participate in the first contest of the games , with Gray and Juvia representing their teams"
+     }
+    ]
+   },
+   {
+    "fact": "0.93",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "158 `` Night of Shooting Stars '' `` Hoshi Furu Yoru ni '' ( 星 降 ル 夜 ニ ) November 24 , 2012 January 5 , 2016"
+     }
+    ]
+   },
+   {
+    "fact": "0.94",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "158 `` Night of Shooting Stars '' `` Hoshi Furu Yoru ni '' ( 星 降 ル 夜 ニ ) November 24 , 2012 January 5 , 2016"
+     }
+    ]
+   },
+   {
+    "fact": "0.95",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The games ' first contest , `` Hidden '' , requires the eight participants to score points by finding and attacking each other in a virtual city filled with copies of themselves . Raven Tail member Nalpudding repeatedly targets Gray , who scores last place in the contest while Saber Tooth 's Rufus scores first by using his Memory - Make magic to attack all the other participants at once"
+     }
+    ]
+   },
+   {
+    "fact": "0.96",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The games ' first contest , `` Hidden '' , requires the eight participants to score points by finding and attacking each other in a virtual city filled with copies of themselves . Raven Tail member Nalpudding repeatedly targets Gray , who scores last place in the contest while Saber Tooth 's Rufus scores first by using his Memory - Make magic to attack all the other participants at once"
+     }
+    ]
+   },
+   {
+    "fact": "0.97",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The games ' first contest , `` Hidden '' , requires the eight participants to score points by finding and attacking each other in a virtual city filled with copies of themselves . Raven Tail member Nalpudding repeatedly targets Gray , who scores last place in the contest while Saber Tooth 's Rufus scores first by using his Memory - Make magic to attack all the other participants at once"
+     }
+    ]
+   },
+   {
+    "fact": "0.98",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The games ' first contest , `` Hidden '' , requires the eight participants to score points by finding and attacking each other in a virtual city filled with copies of themselves . Raven Tail member Nalpudding repeatedly targets Gray , who scores last place in the contest while Saber Tooth 's Rufus scores first by using his Memory - Make magic to attack all the other participants at once"
+     }
+    ]
+   },
+   {
+    "fact": "0.99",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The games ' first contest , `` Hidden '' , requires the eight participants to score points by finding and attacking each other in a virtual city filled with copies of themselves . Raven Tail member Nalpudding repeatedly targets Gray , who scores last place in the contest while Saber Tooth 's Rufus scores first by using his Memory - Make magic to attack all the other participants at once"
+     }
+    ]
+   },
+   {
+    "fact": "0.100",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.101",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.102",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.103",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.104",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.105",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.106",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.107",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.108",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.109",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.110",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.111",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.112",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.113",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.114",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.115",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.116",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.117",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "match against Jura nearly exposes him before Ultear intervenes"
+     }
+    ]
+   },
+   {
+    "fact": "0.118",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.119",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.120",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.121",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.122",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.123",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Carla awakens from a troubling premonition"
+     }
+    ]
+   },
+   {
+    "fact": "0.124",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.125",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.126",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.127",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.128",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.129",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.130",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.131",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.132",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.133",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.134",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.135",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.136",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.137",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.138",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.139",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.140",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.141",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.142",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.143",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.144",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.145",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.146",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.147",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.148",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.149",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.150",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.151",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.152",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.153",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.154",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.155",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.156",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.157",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.158",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.159",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.160",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.161",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.162",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.163",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.164",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.165",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.166",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.167",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.168",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.169",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.170",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.171",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.172",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.173",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.174",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.175",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.176",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.177",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.178",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.179",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.180",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.181",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.182",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.183",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.184",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.185",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.186",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.187",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.188",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.189",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.190",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.191",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.192",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.193",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.194",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.195",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.196",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.197",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.198",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.199",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.200",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.201",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.202",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.203",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.204",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "The following day as the Grand Magic Games continue , an event called `` Pandemonium '' begins . It involves the participants entering a magical citadel filled with 100 monsters of varying strengths and individually doing battle with any number of monsters they choose . Representing Fairy Tail Team A , Erza requests the 100 monsters as her opponents"
+     }
+    ]
+   },
+   {
+    "fact": "0.205",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "The following day as the Grand Magic Games continue , an event called `` Pandemonium '' begins . It involves the participants entering a magical citadel filled with 100 monsters of varying strengths and individually doing battle with any number of monsters they choose . Representing Fairy Tail Team A , Erza requests the 100 monsters as her opponents"
+     }
+    ]
+   },
+   {
+    "fact": "0.206",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "The following day as the Grand Magic Games continue , an event called `` Pandemonium '' begins . It involves the participants entering a magical citadel filled with 100 monsters of varying strengths and individually doing battle with any number of monsters they choose . Representing Fairy Tail Team A , Erza requests the 100 monsters as her opponents"
+     }
+    ]
+   },
+   {
+    "fact": "0.207",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "The following day as the Grand Magic Games continue , an event called `` Pandemonium '' begins . It involves the participants entering a magical citadel filled with 100 monsters of varying strengths and individually doing battle with any number of monsters they choose . Representing Fairy Tail Team A , Erza requests the 100 monsters as her opponents"
+     }
+    ]
+   },
+   {
+    "fact": "0.208",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "167 `` 100 Against 1 '' `` Hyaku tai Ichi '' ( 100 対 1 ) February 2 , 2013 September 1 , 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.209",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "167 `` 100 Against 1 '' `` Hyaku tai Ichi '' ( 100 対 1 ) February 2 , 2013 September 1 , 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.210",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Erza kills the 100 monsters using various types of armor to match their strength and weaknesses . As a result , the crowd praises Fairy Tail , and the guild is awarded with 10 points . Moreover , the game officials decided to determine the ranks of the remaining participants by means of a device called `` Magic Power Finder '' ( sometimes abbreviated as MPF ) . Using this tool , participants must attack it with their magic power , which will , in turn , calculate and display their equivalent scores depending on the extent of power used"
+     }
+    ]
+   },
+   {
+    "fact": "0.211",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Erza kills the 100 monsters using various types of armor to match their strength and weaknesses . As a result , the crowd praises Fairy Tail , and the guild is awarded with 10 points . Moreover , the game officials decided to determine the ranks of the remaining participants by means of a device called `` Magic Power Finder '' ( sometimes abbreviated as MPF ) . Using this tool , participants must attack it with their magic power , which will , in turn , calculate and display their equivalent scores depending on the extent of power used"
+     }
+    ]
+   },
+   {
+    "fact": "0.212",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Erza kills the 100 monsters using various types of armor to match their strength and weaknesses . As a result , the crowd praises Fairy Tail , and the guild is awarded with 10 points . Moreover , the game officials decided to determine the ranks of the remaining participants by means of a device called `` Magic Power Finder '' ( sometimes abbreviated as MPF ) . Using this tool , participants must attack it with their magic power , which will , in turn , calculate and display their equivalent scores depending on the extent of power used"
+     }
+    ]
+   },
+   {
+    "fact": "0.213",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Erza kills the 100 monsters using various types of armor to match their strength and weaknesses . As a result , the crowd praises Fairy Tail , and the guild is awarded with 10 points . Moreover , the game officials decided to determine the ranks of the remaining participants by means of a device called `` Magic Power Finder '' ( sometimes abbreviated as MPF ) . Using this tool , participants must attack it with their magic power , which will , in turn , calculate and display their equivalent scores depending on the extent of power used"
+     }
+    ]
+   },
+   {
+    "fact": "0.214",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Erza kills the 100 monsters using various types of armor to match their strength and weaknesses . As a result , the crowd praises Fairy Tail , and the guild is awarded with 10 points . Moreover , the game officials decided to determine the ranks of the remaining participants by means of a device called `` Magic Power Finder '' ( sometimes abbreviated as MPF ) . Using this tool , participants must attack it with their magic power , which will , in turn , calculate and display their equivalent scores depending on the extent of power used"
+     }
+    ]
+   },
+   {
+    "fact": "0.215",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Erza kills the 100 monsters using various types of armor to match their strength and weaknesses . As a result , the crowd praises Fairy Tail , and the guild is awarded with 10 points . Moreover , the game officials decided to determine the ranks of the remaining participants by means of a device called `` Magic Power Finder '' ( sometimes abbreviated as MPF ) . Using this tool , participants must attack it with their magic power , which will , in turn , calculate and display their equivalent scores depending on the extent of power used"
+     }
+    ]
+   },
+   {
+    "fact": "0.216",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Cana later wins an event with Mavis’s Fairy Glitter, earning Team"
+     }
+    ]
+   },
+   {
+    "fact": "0.217",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.218",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.219",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.220",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.221",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.222",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.223",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.224",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.225",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.226",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.227",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.228",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.229",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.230",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.231",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.232",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.233",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.234",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.235",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.236",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.237",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.238",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.239",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.240",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.241",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.242",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.243",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.244",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.245",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.246",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.247",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.248",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.249",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.250",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.251",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.252",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.253",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.254",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.255",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.256",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.257",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.258",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.259",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.260",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.261",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.262",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.263",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.264",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.265",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.266",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.267",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.268",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.269",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.270",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.271",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.272",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.273",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.274",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.275",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.276",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.277",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.278",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.279",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.280",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.281",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.282",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.283",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.284",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.285",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.286",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.287",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.288",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.289",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.290",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.291",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.292",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.293",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.294",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.295",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.296",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.297",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.298",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.299",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.300",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.301",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.302",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.303",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.304",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.305",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.306",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.307",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.308",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.309",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.310",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.311",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.312",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.313",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.314",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.315",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.316",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.317",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.318",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.319",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.320",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.321",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.322",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.323",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.324",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.325",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.326",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.327",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.328",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.329",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.330",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.331",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.332",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.333",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.334",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.335",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.336",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.337",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.338",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.339",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.340",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.341",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.342",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "5367a2a349f0a8ef",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "The Daimon is defeated by a pair of mysterious new warriors , leaving the girls to despondently realize that a new conflict has begun"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "The Daimon is defeated by a pair of mysterious new warriors , leaving the girls to despondently realize that a new conflict has begun"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "91 `` Crystal Clear Again '' `` The Rod of Love Is Born : Usagi 's New Transformation '' `` Ai no roddo tanjō ! Usagi no shin henshin"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Yūji Endō Shigeru Yanagawa Yoshiyuki Shikano Katsumi Tamegai March 26 , 1994 June 13 , 2000"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "While Mamoru strives to cheer Usagi up after her failure in the previous battle , a young girl is the latest target of the Death Busters . Due to Usagi 's inability to transform , the under - powered Sailor Team struggles to fight off the Daimon and are once again forced to rely on the mysterious two warriors"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Due to Usagi 's inability to transform , the under - powered Sailor Team struggles to fight off the Daimon and are once again forced to rely on the mysterious two warriors"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Once they determine the girl 's pure heart is not a talisman , they leave the Sailor Team to fend for themselves"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Tuxedo Mask and Usagi hold hands after the latter 's refusal to escape , and through the power of their love , Usagi 's disabled Crystal Star brooch transforms into the Cosmic Heart Compact , and she gains the Spiral Heart Moon Rod and , along with it , the ability to transform and defeat the new enemy"
+     }
+    ]
+   },
+   {
+    "fact": "0.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Tuxedo Mask and Usagi hold hands after the latter 's refusal to escape , and through the power of their love , Usagi 's disabled Crystal Star brooch transforms into the Cosmic Heart Compact , and she gains the Spiral Heart Moon Rod and , along with it , the ability to transform and defeat the new enemy"
+     }
+    ]
+   },
+   {
+    "fact": "0.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Tuxedo Mask and Usagi hold hands after the latter 's refusal to escape , and through the power of their love , Usagi 's disabled Crystal Star brooch transforms into the Cosmic Heart Compact , and she gains the Spiral Heart Moon Rod and , along with it , the ability to transform and defeat the new enemy"
+     }
+    ]
+   },
+   {
+    "fact": "0.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "92 `` Driving Dangerously '' `` A Handsome Boy ? Haruka Tenoh 's Secret '' `` Suteki na bishōnen ? Ten'ō Haruka no himitsu '' ( 素敵 な 美少年 ? 天王 はるか の 秘密 ) Kunihiko Ikuhara Katsuyuki Sumisawa Kazuhisa Asai Hisashi Kagawa April 16 , 1994 June 14 , 2000"
+     }
+    ]
+   },
+   {
+    "fact": "0.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "92 `` Driving Dangerously '' `` A Handsome Boy ? Haruka Tenoh 's Secret '' `` Suteki na bishōnen ? Ten'ō Haruka no himitsu '' ( 素敵 な 美少年 ? 天王 はるか の 秘密 ) Kunihiko Ikuhara Katsuyuki Sumisawa Kazuhisa Asai Hisashi Kagawa April 16 , 1994 June 14 , 2000"
+     }
+    ]
+   },
+   {
+    "fact": "0.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Avoiding their study group , Usagi and Minako meet Haruka Tenou , an attractive and supposedly male student of a prestigious local school , with whom they both become infatuated"
+     }
+    ]
+   },
+   {
+    "fact": "0.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Avoiding their study group , Usagi and Minako meet Haruka Tenou , an attractive and supposedly male student of a prestigious local school , with whom they both become infatuated"
+     }
+    ]
+   },
+   {
+    "fact": "0.19",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "After Minako is defeated in a racing game , Michiru arrives to pick up Haruka , and the two depart with Usagi and Minako soon following behind them . Once Michiru and Haruka separate at a mechanic 's shop , Usagi and Minako take this as their chance , and Haruka tells them about `` him '' - self until a Daimon arrives to attack Kameda , the shop mechanic . The Daimon starts to escape when Usagi and Minako transform into their Guardian forms to chase it down , when Uranus and Neptune arrive to investigate Kameda 's pure heart crystal . When it turns out not to be a talisman they retreat and Sailor Moon defeats the Daimon . Later , the rest of the girls are at Crown Game Center with Usagi and Minako in hopes of seeing the cute boy they 'd told them about ; Michiru arrives with a blonde girl , whom Usagi and Minako initially fail to realize is Haruka ; once they do , Minako falls to the ground in anguish , and Haruka notes that she 'd never said she was male"
+     }
+    ]
+   },
+   {
+    "fact": "0.20",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "After Minako is defeated in a racing game , Michiru arrives to pick up Haruka , and the two depart with Usagi and Minako soon following behind them . Once Michiru and Haruka separate at a mechanic 's shop , Usagi and Minako take this as their chance , and Haruka tells them about `` him '' - self until a Daimon arrives to attack Kameda , the shop mechanic . The Daimon starts to escape when Usagi and Minako transform into their Guardian forms to chase it down , when Uranus and Neptune arrive to investigate Kameda 's pure heart crystal . When it turns out not to be a talisman they retreat and Sailor Moon defeats the Daimon . Later , the rest of the girls are at Crown Game Center with Usagi and Minako in hopes of seeing the cute boy they 'd told them about ; Michiru arrives with a blonde girl , whom Usagi and Minako initially fail to realize is Haruka ; once they do , Minako falls to the ground in anguish , and Haruka notes that she 'd never said she was male"
+     }
+    ]
+   },
+   {
+    "fact": "0.21",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "After Minako is defeated in a racing game , Michiru arrives to pick up Haruka , and the two depart with Usagi and Minako soon following behind them . Once Michiru and Haruka separate at a mechanic 's shop , Usagi and Minako take this as their chance , and Haruka tells them about `` him '' - self until a Daimon arrives to attack Kameda , the shop mechanic . The Daimon starts to escape when Usagi and Minako transform into their Guardian forms to chase it down , when Uranus and Neptune arrive to investigate Kameda 's pure heart crystal . When it turns out not to be a talisman they retreat and Sailor Moon defeats the Daimon . Later , the rest of the girls are at Crown Game Center with Usagi and Minako in hopes of seeing the cute boy they 'd told them about ; Michiru arrives with a blonde girl , whom Usagi and Minako initially fail to realize is Haruka ; once they do , Minako falls to the ground in anguish , and Haruka notes that she 'd never said she was male"
+     }
+    ]
+   },
+   {
+    "fact": "0.22",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "After Minako is defeated in a racing game , Michiru arrives to pick up Haruka , and the two depart with Usagi and Minako soon following behind them . Once Michiru and Haruka separate at a mechanic 's shop , Usagi and Minako take this as their chance , and Haruka tells them about `` him '' - self until a Daimon arrives to attack Kameda , the shop mechanic . The Daimon starts to escape when Usagi and Minako transform into their Guardian forms to chase it down , when Uranus and Neptune arrive to investigate Kameda 's pure heart crystal . When it turns out not to be a talisman they retreat and Sailor Moon defeats the Daimon . Later , the rest of the girls are at Crown Game Center with Usagi and Minako in hopes of seeing the cute boy they 'd told them about ; Michiru arrives with a blonde girl , whom Usagi and Minako initially fail to realize is Haruka ; once they do , Minako falls to the ground in anguish , and Haruka notes that she 'd never said she was male"
+     }
+    ]
+   },
+   {
+    "fact": "0.23",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "After Minako is defeated in a racing game , Michiru arrives to pick up Haruka , and the two depart with Usagi and Minako soon following behind them . Once Michiru and Haruka separate at a mechanic 's shop , Usagi and Minako take this as their chance , and Haruka tells them about `` him '' - self until a Daimon arrives to attack Kameda , the shop mechanic . The Daimon starts to escape when Usagi and Minako transform into their Guardian forms to chase it down , when Uranus and Neptune arrive to investigate Kameda 's pure heart crystal . When it turns out not to be a talisman they retreat and Sailor Moon defeats the Daimon . Later , the rest of the girls are at Crown Game Center with Usagi and Minako in hopes of seeing the cute boy they 'd told them about ; Michiru arrives with a blonde girl , whom Usagi and Minako initially fail to realize is Haruka ; once they do , Minako falls to the ground in anguish , and Haruka notes that she 'd never said she was male"
+     }
+    ]
+   },
+   {
+    "fact": "0.24",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "After Minako is defeated in a racing game , Michiru arrives to pick up Haruka , and the two depart with Usagi and Minako soon following behind them . Once Michiru and Haruka separate at a mechanic 's shop , Usagi and Minako take this as their chance , and Haruka tells them about `` him '' - self until a Daimon arrives to attack Kameda , the shop mechanic . The Daimon starts to escape when Usagi and Minako transform into their Guardian forms to chase it down , when Uranus and Neptune arrive to investigate Kameda 's pure heart crystal . When it turns out not to be a talisman they retreat and Sailor Moon defeats the Daimon . Later , the rest of the girls are at Crown Game Center with Usagi and Minako in hopes of seeing the cute boy they 'd told them about ; Michiru arrives with a blonde girl , whom Usagi and Minako initially fail to realize is Haruka ; once they do , Minako falls to the ground in anguish , and Haruka notes that she 'd never said she was male"
+     }
+    ]
+   },
+   {
+    "fact": "0.25",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "After Minako is defeated in a racing game , Michiru arrives to pick up Haruka , and the two depart with Usagi and Minako soon following behind them . Once Michiru and Haruka separate at a mechanic 's shop , Usagi and Minako take this as their chance , and Haruka tells them about `` him '' - self until a Daimon arrives to attack Kameda , the shop mechanic . The Daimon starts to escape when Usagi and Minako transform into their Guardian forms to chase it down , when Uranus and Neptune arrive to investigate Kameda 's pure heart crystal . When it turns out not to be a talisman they retreat and Sailor Moon defeats the Daimon . Later , the rest of the girls are at Crown Game Center with Usagi and Minako in hopes of seeing the cute boy they 'd told them about ; Michiru arrives with a blonde girl , whom Usagi and Minako initially fail to realize is Haruka ; once they do , Minako falls to the ground in anguish , and Haruka notes that she 'd never said she was male"
+     }
+    ]
+   },
+   {
+    "fact": "0.26",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "After Minako is defeated in a racing game , Michiru arrives to pick up Haruka , and the two depart with Usagi and Minako soon following behind them . Once Michiru and Haruka separate at a mechanic 's shop , Usagi and Minako take this as their chance , and Haruka tells them about `` him '' - self until a Daimon arrives to attack Kameda , the shop mechanic . The Daimon starts to escape when Usagi and Minako transform into their Guardian forms to chase it down , when Uranus and Neptune arrive to investigate Kameda 's pure heart crystal . When it turns out not to be a talisman they retreat and Sailor Moon defeats the Daimon . Later , the rest of the girls are at Crown Game Center with Usagi and Minako in hopes of seeing the cute boy they 'd told them about ; Michiru arrives with a blonde girl , whom Usagi and Minako initially fail to realize is Haruka ; once they do , Minako falls to the ground in anguish , and Haruka notes that she 'd never said she was male"
+     }
+    ]
+   },
+   {
+    "fact": "0.27",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "After Minako is defeated in a racing game , Michiru arrives to pick up Haruka , and the two depart with Usagi and Minako soon following behind them . Once Michiru and Haruka separate at a mechanic 's shop , Usagi and Minako take this as their chance , and Haruka tells them about `` him '' - self until a Daimon arrives to attack Kameda , the shop mechanic . The Daimon starts to escape when Usagi and Minako transform into their Guardian forms to chase it down , when Uranus and Neptune arrive to investigate Kameda 's pure heart crystal . When it turns out not to be a talisman they retreat and Sailor Moon defeats the Daimon . Later , the rest of the girls are at Crown Game Center with Usagi and Minako in hopes of seeing the cute boy they 'd told them about ; Michiru arrives with a blonde girl , whom Usagi and Minako initially fail to realize is Haruka ; once they do , Minako falls to the ground in anguish , and Haruka notes that she 'd never said she was male"
+     }
+    ]
+   },
+   {
+    "fact": "0.28",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "After Minako is defeated in a racing game , Michiru arrives to pick up Haruka , and the two depart with Usagi and Minako soon following behind them . Once Michiru and Haruka separate at a mechanic 's shop , Usagi and Minako take this as their chance , and Haruka tells them about `` him '' - self until a Daimon arrives to attack Kameda , the shop mechanic . The Daimon starts to escape when Usagi and Minako transform into their Guardian forms to chase it down , when Uranus and Neptune arrive to investigate Kameda 's pure heart crystal . When it turns out not to be a talisman they retreat and Sailor Moon defeats the Daimon . Later , the rest of the girls are at Crown Game Center with Usagi and Minako in hopes of seeing the cute boy they 'd told them about ; Michiru arrives with a blonde girl , whom Usagi and Minako initially fail to realize is Haruka ; once they do , Minako falls to the ground in anguish , and Haruka notes that she 'd never said she was male"
+     }
+    ]
+   },
+   {
+    "fact": "0.29",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "After Minako is defeated in a racing game , Michiru arrives to pick up Haruka , and the two depart with Usagi and Minako soon following behind them . Once Michiru and Haruka separate at a mechanic 's shop , Usagi and Minako take this as their chance , and Haruka tells them about `` him '' - self until a Daimon arrives to attack Kameda , the shop mechanic . The Daimon starts to escape when Usagi and Minako transform into their Guardian forms to chase it down , when Uranus and Neptune arrive to investigate Kameda 's pure heart crystal . When it turns out not to be a talisman they retreat and Sailor Moon defeats the Daimon . Later , the rest of the girls are at Crown Game Center with Usagi and Minako in hopes of seeing the cute boy they 'd told them about ; Michiru arrives with a blonde girl , whom Usagi and Minako initially fail to realize is Haruka ; once they do , Minako falls to the ground in anguish , and Haruka notes that she 'd never said she was male"
+     }
+    ]
+   },
+   {
+    "fact": "0.30",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "After Minako is defeated in a racing game , Michiru arrives to pick up Haruka , and the two depart with Usagi and Minako soon following behind them . Once Michiru and Haruka separate at a mechanic 's shop , Usagi and Minako take this as their chance , and Haruka tells them about `` him '' - self until a Daimon arrives to attack Kameda , the shop mechanic . The Daimon starts to escape when Usagi and Minako transform into their Guardian forms to chase it down , when Uranus and Neptune arrive to investigate Kameda 's pure heart crystal . When it turns out not to be a talisman they retreat and Sailor Moon defeats the Daimon . Later , the rest of the girls are at Crown Game Center with Usagi and Minako in hopes of seeing the cute boy they 'd told them about ; Michiru arrives with a blonde girl , whom Usagi and Minako initially fail to realize is Haruka ; once they do , Minako falls to the ground in anguish , and Haruka notes that she 'd never said she was male"
+     }
+    ]
+   },
+   {
+    "fact": "0.31",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.32",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.33",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.34",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.35",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.36",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.37",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.38",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.39",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.40",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.41",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.42",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.43",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.44",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.45",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.46",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.47",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.48",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.49",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.50",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.51",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.52",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.53",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.54",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.55",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.56",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.57",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.58",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.59",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.60",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.61",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.62",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.63",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.64",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.65",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.66",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.67",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.68",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.69",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.70",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.71",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.72",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.73",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.74",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.75",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.76",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.77",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.78",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.79",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.80",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.81",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.82",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.83",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.84",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.85",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.86",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.87",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.88",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.89",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.90",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.91",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.92",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.93",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.94",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.95",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.96",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.97",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.98",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.99",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.100",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.101",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.102",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.103",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.104",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.105",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.106",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.107",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.108",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.109",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Junichi Sato Sukehiro Tomita Yoshiyuki Shikano Kazuya Kuroda September 24 , 1994 July 7 , 2000 Minako becomes jealous that a Daimon has not yet attacked her , and she fears that she does not have a pure heart . After doing as many `` pure '' things as she can , she is attacked , and her pure heart is taken from her . When Eudial nearly gets away , Usagi is forced to reveal her identity to Haruka & Michiru , who in turn , reveal their identities as Sailors Uranus and Neptune to Sailor Moon"
+     }
+    ]
+   },
+   {
+    "fact": "0.110",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Junichi Sato Sukehiro Tomita Yoshiyuki Shikano Kazuya Kuroda September 24 , 1994 July 7 , 2000 Minako becomes jealous that a Daimon has not yet attacked her , and she fears that she does not have a pure heart . After doing as many `` pure '' things as she can , she is attacked , and her pure heart is taken from her . When Eudial nearly gets away , Usagi is forced to reveal her identity to Haruka & Michiru , who in turn , reveal their identities as Sailors Uranus and Neptune to Sailor Moon"
+     }
+    ]
+   },
+   {
+    "fact": "0.111",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Junichi Sato Sukehiro Tomita Yoshiyuki Shikano Kazuya Kuroda September 24 , 1994 July 7 , 2000 Minako becomes jealous that a Daimon has not yet attacked her , and she fears that she does not have a pure heart . After doing as many `` pure '' things as she can , she is attacked , and her pure heart is taken from her . When Eudial nearly gets away , Usagi is forced to reveal her identity to Haruka & Michiru , who in turn , reveal their identities as Sailors Uranus and Neptune to Sailor Moon"
+     }
+    ]
+   },
+   {
+    "fact": "0.112",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Junichi Sato Sukehiro Tomita Yoshiyuki Shikano Kazuya Kuroda September 24 , 1994 July 7 , 2000 Minako becomes jealous that a Daimon has not yet attacked her , and she fears that she does not have a pure heart . After doing as many `` pure '' things as she can , she is attacked , and her pure heart is taken from her . When Eudial nearly gets away , Usagi is forced to reveal her identity to Haruka & Michiru , who in turn , reveal their identities as Sailors Uranus and Neptune to Sailor Moon"
+     }
+    ]
+   },
+   {
+    "fact": "0.113",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Junichi Sato Sukehiro Tomita Yoshiyuki Shikano Kazuya Kuroda September 24 , 1994 July 7 , 2000 Minako becomes jealous that a Daimon has not yet attacked her , and she fears that she does not have a pure heart . After doing as many `` pure '' things as she can , she is attacked , and her pure heart is taken from her . When Eudial nearly gets away , Usagi is forced to reveal her identity to Haruka & Michiru , who in turn , reveal their identities as Sailors Uranus and Neptune to Sailor Moon"
+     }
+    ]
+   },
+   {
+    "fact": "0.114",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "110 `` Destiny 's Arrival '' `` The Death of Uranus and Neptune : The Talisman Appear '' `` Uranusu - tachi no shi ? Tarisuman shutsugen"
+     }
+    ]
+   },
+   {
+    "fact": "0.115",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Kunihiko Ikuhara Yoji Enokido Kenichi Tajiri Mari Tominaga October 15 , 1994 July 10 , 2000"
+     }
+    ]
+   },
+   {
+    "fact": "0.116",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Faced with losing her position at Witches 5 , Eudial creates a computer program to find the true owners of the three Talismans , and learns that Haruka and Michiru are the ones who hold two of the Talismans within their own hearts ! They take away Usagi 's brooch , and follow Eudial onto a lonely island . However , the invitation turns out to be a trick , and Michiru 's pure heart is taken , which turns into the mystical Deep Aqua Mirror . Haruka , in order to release her own talisman , shoots herself with Eudial 's gun . Her pure heart transforms into the mystical Space Sword"
+     }
+    ]
+   },
+   {
+    "fact": "0.117",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Faced with losing her position at Witches 5 , Eudial creates a computer program to find the true owners of the three Talismans , and learns that Haruka and Michiru are the ones who hold two of the Talismans within their own hearts ! They take away Usagi 's brooch , and follow Eudial onto a lonely island . However , the invitation turns out to be a trick , and Michiru 's pure heart is taken , which turns into the mystical Deep Aqua Mirror . Haruka , in order to release her own talisman , shoots herself with Eudial 's gun . Her pure heart transforms into the mystical Space Sword"
+     }
+    ]
+   },
+   {
+    "fact": "0.118",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Faced with losing her position at Witches 5 , Eudial creates a computer program to find the true owners of the three Talismans , and learns that Haruka and Michiru are the ones who hold two of the Talismans within their own hearts ! They take away Usagi 's brooch , and follow Eudial onto a lonely island . However , the invitation turns out to be a trick , and Michiru 's pure heart is taken , which turns into the mystical Deep Aqua Mirror . Haruka , in order to release her own talisman , shoots herself with Eudial 's gun . Her pure heart transforms into the mystical Space Sword"
+     }
+    ]
+   },
+   {
+    "fact": "0.119",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Faced with losing her position at Witches 5 , Eudial creates a computer program to find the true owners of the three Talismans , and learns that Haruka and Michiru are the ones who hold two of the Talismans within their own hearts ! They take away Usagi 's brooch , and follow Eudial onto a lonely island . However , the invitation turns out to be a trick , and Michiru 's pure heart is taken , which turns into the mystical Deep Aqua Mirror . Haruka , in order to release her own talisman , shoots herself with Eudial 's gun . Her pure heart transforms into the mystical Space Sword"
+     }
+    ]
+   },
+   {
+    "fact": "0.120",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Faced with losing her position at Witches 5 , Eudial creates a computer program to find the true owners of the three Talismans , and learns that Haruka and Michiru are the ones who hold two of the Talismans within their own hearts ! They take away Usagi 's brooch , and follow Eudial onto a lonely island . However , the invitation turns out to be a trick , and Michiru 's pure heart is taken , which turns into the mystical Deep Aqua Mirror . Haruka , in order to release her own talisman , shoots herself with Eudial 's gun . Her pure heart transforms into the mystical Space Sword"
+     }
+    ]
+   },
+   {
+    "fact": "0.121",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Faced with losing her position at Witches 5 , Eudial creates a computer program to find the true owners of the three Talismans , and learns that Haruka and Michiru are the ones who hold two of the Talismans within their own hearts ! They take away Usagi 's brooch , and follow Eudial onto a lonely island . However , the invitation turns out to be a trick , and Michiru 's pure heart is taken , which turns into the mystical Deep Aqua Mirror . Haruka , in order to release her own talisman , shoots herself with Eudial 's gun . Her pure heart transforms into the mystical Space Sword"
+     }
+    ]
+   },
+   {
+    "fact": "0.122",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "111 `` The Purity Chalice '' `` The Holy Grail 's Mystical Power : Moon 's Double Transformation '' `` Seihai no shinpi na chikara"
+     }
+    ]
+   },
+   {
+    "fact": "0.123",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Hiroki Shibata Sukehiro Tomita Kazuyuki Hashimoto Ikuko Itō October 22 , 1994 July 11 , 2000"
+     }
+    ]
+   },
+   {
+    "fact": "0.124",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Sailor Pluto appears and reawakens Sailors Uranus and Neptune , and the three talismans resonate with each other ( the third and last being Sailor Pluto 's Garnet Orb ) . The Holy Grail appears , and Sailor Moon grabs it and evolves into Super Sailor Moon , who drives Eudial out . Mimete then kills Eudial by sabotaging her car with snails"
+     }
+    ]
+   },
+   {
+    "fact": "0.125",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Sailor Pluto appears and reawakens Sailors Uranus and Neptune , and the three talismans resonate with each other ( the third and last being Sailor Pluto 's Garnet Orb ) . The Holy Grail appears , and Sailor Moon grabs it and evolves into Super Sailor Moon , who drives Eudial out . Mimete then kills Eudial by sabotaging her car with snails"
+     }
+    ]
+   },
+   {
+    "fact": "0.126",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Sailor Pluto appears and reawakens Sailors Uranus and Neptune , and the three talismans resonate with each other ( the third and last being Sailor Pluto 's Garnet Orb ) . The Holy Grail appears , and Sailor Moon grabs it and evolves into Super Sailor Moon , who drives Eudial out . Mimete then kills Eudial by sabotaging her car with snails"
+     }
+    ]
+   },
+   {
+    "fact": "0.127",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Sailor Pluto appears and reawakens Sailors Uranus and Neptune , and the three talismans resonate with each other ( the third and last being Sailor Pluto 's Garnet Orb ) . The Holy Grail appears , and Sailor Moon grabs it and evolves into Super Sailor Moon , who drives Eudial out . Mimete then kills Eudial by sabotaging her car with snails"
+     }
+    ]
+   },
+   {
+    "fact": "0.128",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Sailor Pluto appears and reawakens Sailors Uranus and Neptune , and the three talismans resonate with each other ( the third and last being Sailor Pluto 's Garnet Orb ) . The Holy Grail appears , and Sailor Moon grabs it and evolves into Super Sailor Moon , who drives Eudial out . Mimete then kills Eudial by sabotaging her car with snails"
+     }
+    ]
+   },
+   {
+    "fact": "0.129",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "112 `` Show Stoppers '' `` Who is the True Messiah ? Chaos of Light and Darkness '' `` Shin no kyūseishu wa dare ? Hikari to kage no kaosu"
+     }
+    ]
+   },
+   {
+    "fact": "0.130",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.131",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.132",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.133",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.134",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.135",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.136",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.137",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.138",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.139",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.140",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.141",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.142",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.143",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.144",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.145",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.146",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.147",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.148",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.149",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.150",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.151",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.152",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.153",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.154",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.155",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.156",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.157",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "He becomes targeted when she goes to give it to him , and she possessively blasts the enemy with a hugely strong amount of energy . She talks to Shun about being frail and weak , and he thanks her for talking to him"
+     }
+    ]
+   },
+   {
+    "fact": "0.158",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "He becomes targeted when she goes to give it to him , and she possessively blasts the enemy with a hugely strong amount of energy . She talks to Shun about being frail and weak , and he thanks her for talking to him"
+     }
+    ]
+   },
+   {
+    "fact": "0.159",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "He becomes targeted when she goes to give it to him , and she possessively blasts the enemy with a hugely strong amount of energy . She talks to Shun about being frail and weak , and he thanks her for talking to him"
+     }
+    ]
+   },
+   {
+    "fact": "0.160",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "118 `` It 's In The Cards '' `` The Battle Inside the Demonic Space : The Sailor Guardians ' Gamble '' `` Makū no tatakai ! Sērā Senshi no kake '' ( 魔 空 の 戦い ! セーラー 戦士 の 賭け ) Noriyo Sasaki Katsuyuki Sumisawa Kenichi Tajiri Masahide Yanagisawa December 17 , 1994 July 20 , 2000 Mimete attempts to create a Daimon by herself , throwing the entire Tomoe house into another dimension . The Guardians enter the dimension and are defeated by a game - master Daimon named U-Ikasaman . Hotaru manages to assist in her defeat by the use of a bluff"
+     }
+    ]
+   },
+   {
+    "fact": "0.161",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "118 `` It 's In The Cards '' `` The Battle Inside the Demonic Space : The Sailor Guardians ' Gamble '' `` Makū no tatakai ! Sērā Senshi no kake '' ( 魔 空 の 戦い ! セーラー 戦士 の 賭け ) Noriyo Sasaki Katsuyuki Sumisawa Kenichi Tajiri Masahide Yanagisawa December 17 , 1994 July 20 , 2000 Mimete attempts to create a Daimon by herself , throwing the entire Tomoe house into another dimension . The Guardians enter the dimension and are defeated by a game - master Daimon named U-Ikasaman . Hotaru manages to assist in her defeat by the use of a bluff"
+     }
+    ]
+   },
+   {
+    "fact": "0.162",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "118 `` It 's In The Cards '' `` The Battle Inside the Demonic Space : The Sailor Guardians ' Gamble '' `` Makū no tatakai ! Sērā Senshi no kake '' ( 魔 空 の 戦い ! セーラー 戦士 の 賭け ) Noriyo Sasaki Katsuyuki Sumisawa Kenichi Tajiri Masahide Yanagisawa December 17 , 1994 July 20 , 2000 Mimete attempts to create a Daimon by herself , throwing the entire Tomoe house into another dimension . The Guardians enter the dimension and are defeated by a game - master Daimon named U-Ikasaman . Hotaru manages to assist in her defeat by the use of a bluff"
+     }
+    ]
+   },
+   {
+    "fact": "0.163",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "118 `` It 's In The Cards '' `` The Battle Inside the Demonic Space : The Sailor Guardians ' Gamble '' `` Makū no tatakai ! Sērā Senshi no kake '' ( 魔 空 の 戦い ! セーラー 戦士 の 賭け ) Noriyo Sasaki Katsuyuki Sumisawa Kenichi Tajiri Masahide Yanagisawa December 17 , 1994 July 20 , 2000 Mimete attempts to create a Daimon by herself , throwing the entire Tomoe house into another dimension . The Guardians enter the dimension and are defeated by a game - master Daimon named U-Ikasaman . Hotaru manages to assist in her defeat by the use of a bluff"
+     }
+    ]
+   },
+   {
+    "fact": "0.164",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "118 `` It 's In The Cards '' `` The Battle Inside the Demonic Space : The Sailor Guardians ' Gamble '' `` Makū no tatakai ! Sērā Senshi no kake '' ( 魔 空 の 戦い ! セーラー 戦士 の 賭け ) Noriyo Sasaki Katsuyuki Sumisawa Kenichi Tajiri Masahide Yanagisawa December 17 , 1994 July 20 , 2000 Mimete attempts to create a Daimon by herself , throwing the entire Tomoe house into another dimension . The Guardians enter the dimension and are defeated by a game - master Daimon named U-Ikasaman . Hotaru manages to assist in her defeat by the use of a bluff"
+     }
+    ]
+   },
+   {
+    "fact": "0.165",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.166",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.167",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.168",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.169",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.170",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.171",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.172",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.173",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.174",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.175",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.176",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.177",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.178",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.179",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.180",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.181",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.182",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.183",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.184",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.185",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.186",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.187",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.188",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.189",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.190",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.191",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.192",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.193",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.194",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "124 `` Who 's Really Who ? '' `` The Coming Terror of Darkness : Struggle of the Eight Guardians '' `` Semari kuru yami no kyōfu ! Kusen no Hassenshi '' ( 迫り 来る 闇 の 恐怖 ! 苦戦 の 8 戦士 ) Takuya Igarashi Yoji Enokido Kazuyuki Hashimoto Ikuko Itō February 4 , 1995 July 28 , 2000"
+     }
+    ]
+   },
+   {
+    "fact": "0.195",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "124 `` Who 's Really Who ? '' `` The Coming Terror of Darkness : Struggle of the Eight Guardians '' `` Semari kuru yami no kyōfu ! Kusen no Hassenshi '' ( 迫り 来る 闇 の 恐怖 ! 苦戦 の 8 戦士 ) Takuya Igarashi Yoji Enokido Kazuyuki Hashimoto Ikuko Itō February 4 , 1995 July 28 , 2000"
+     }
+    ]
+   },
+   {
+    "fact": "0.196",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Mistress 9 uses all remaining Daimon eggs to create a powerful energized shield of evil minions around Infinity Academy . Sailor Moon is abducted , as she is the holder of the Holy Grail . After witnessing Sailor Pluto ultimately sacrificing herself to save them by using her forbidden ability to stop time , Sailor Uranus and Sailor Neptune destroy Germatoid , the Daimon possessing Professor Souichi Tomoe with their talismans , the Deep Aqua Mirror and the Space Sword"
+     }
+    ]
+   },
+   {
+    "fact": "0.197",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Mistress 9 uses all remaining Daimon eggs to create a powerful energized shield of evil minions around Infinity Academy . Sailor Moon is abducted , as she is the holder of the Holy Grail . After witnessing Sailor Pluto ultimately sacrificing herself to save them by using her forbidden ability to stop time , Sailor Uranus and Sailor Neptune destroy Germatoid , the Daimon possessing Professor Souichi Tomoe with their talismans , the Deep Aqua Mirror and the Space Sword"
+     }
+    ]
+   },
+   {
+    "fact": "0.198",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Mistress 9 uses all remaining Daimon eggs to create a powerful energized shield of evil minions around Infinity Academy . Sailor Moon is abducted , as she is the holder of the Holy Grail . After witnessing Sailor Pluto ultimately sacrificing herself to save them by using her forbidden ability to stop time , Sailor Uranus and Sailor Neptune destroy Germatoid , the Daimon possessing Professor Souichi Tomoe with their talismans , the Deep Aqua Mirror and the Space Sword"
+     }
+    ]
+   },
+   {
+    "fact": "0.199",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Mistress 9 uses all remaining Daimon eggs to create a powerful energized shield of evil minions around Infinity Academy . Sailor Moon is abducted , as she is the holder of the Holy Grail . After witnessing Sailor Pluto ultimately sacrificing herself to save them by using her forbidden ability to stop time , Sailor Uranus and Sailor Neptune destroy Germatoid , the Daimon possessing Professor Souichi Tomoe with their talismans , the Deep Aqua Mirror and the Space Sword"
+     }
+    ]
+   },
+   {
+    "fact": "0.200",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Mistress 9 uses all remaining Daimon eggs to create a powerful energized shield of evil minions around Infinity Academy . Sailor Moon is abducted , as she is the holder of the Holy Grail . After witnessing Sailor Pluto ultimately sacrificing herself to save them by using her forbidden ability to stop time , Sailor Uranus and Sailor Neptune destroy Germatoid , the Daimon possessing Professor Souichi Tomoe with their talismans , the Deep Aqua Mirror and the Space Sword"
+     }
+    ]
+   },
+   {
+    "fact": "0.201",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "125 `` Darkness , My Old Friend '' `` The Shining Shooting Star : Saturn and the Messiah '' `` Kagayaku ryūsei !"
+     },
+     {
+      "item": 4,
+      "quote": "Satān soshite kyūseishu"
+     }
+    ]
+   },
+   {
+    "fact": "0.202",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Kōnosuke Uda Yoji Enokido Kenichi Tajiri Ikuko Itō February 11 , 1995 July 29 , 2000"
+     }
+    ]
+   },
+   {
+    "fact": "0.203",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Sailor Moon is tricked into giving Mistress 9 the Holy Grail , which she uses to summon Pharaoh 90 to Earth . Hotaru regains consciousness with the assistance of Sailor Moon and her father , destroying Mistress 9 and fully awakening the spirit of Sailor Saturn within herself at last . Sailor Saturn herself returns Chibiusa 's pure heart crystal , and then appears before Sailor Moon to ultimately sacrifice herself and destroy Pharaoh 90 once and for all with her destructive powers , but Sailor Moon gains the help of the other six Sailor Guardians to become Super Sailor Moon once more , and save both Hotaru and Sailor Saturn , who is reborn as a baby immediately afterward"
+     }
+    ]
+   },
+   {
+    "fact": "0.204",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Sailor Moon is tricked into giving Mistress 9 the Holy Grail , which she uses to summon Pharaoh 90 to Earth . Hotaru regains consciousness with the assistance of Sailor Moon and her father , destroying Mistress 9 and fully awakening the spirit of Sailor Saturn within herself at last . Sailor Saturn herself returns Chibiusa 's pure heart crystal , and then appears before Sailor Moon to ultimately sacrifice herself and destroy Pharaoh 90 once and for all with her destructive powers , but Sailor Moon gains the help of the other six Sailor Guardians to become Super Sailor Moon once more , and save both Hotaru and Sailor Saturn , who is reborn as a baby immediately afterward"
+     }
+    ]
+   },
+   {
+    "fact": "0.205",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Sailor Moon is tricked into giving Mistress 9 the Holy Grail , which she uses to summon Pharaoh 90 to Earth . Hotaru regains consciousness with the assistance of Sailor Moon and her father , destroying Mistress 9 and fully awakening the spirit of Sailor Saturn within herself at last . Sailor Saturn herself returns Chibiusa 's pure heart crystal , and then appears before Sailor Moon to ultimately sacrifice herself and destroy Pharaoh 90 once and for all with her destructive powers , but Sailor Moon gains the help of the other six Sailor Guardians to become Super Sailor Moon once more , and save both Hotaru and Sailor Saturn , who is reborn as a baby immediately afterward"
+     }
+    ]
+   },
+   {
+    "fact": "0.206",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Sailor Moon is tricked into giving Mistress 9 the Holy Grail , which she uses to summon Pharaoh 90 to Earth . Hotaru regains consciousness with the assistance of Sailor Moon and her father , destroying Mistress 9 and fully awakening the spirit of Sailor Saturn within herself at last . Sailor Saturn herself returns Chibiusa 's pure heart crystal , and then appears before Sailor Moon to ultimately sacrifice herself and destroy Pharaoh 90 once and for all with her destructive powers , but Sailor Moon gains the help of the other six Sailor Guardians to become Super Sailor Moon once more , and save both Hotaru and Sailor Saturn , who is reborn as a baby immediately afterward"
+     }
+    ]
+   },
+   {
+    "fact": "0.207",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Sailor Moon is tricked into giving Mistress 9 the Holy Grail , which she uses to summon Pharaoh 90 to Earth . Hotaru regains consciousness with the assistance of Sailor Moon and her father , destroying Mistress 9 and fully awakening the spirit of Sailor Saturn within herself at last . Sailor Saturn herself returns Chibiusa 's pure heart crystal , and then appears before Sailor Moon to ultimately sacrifice herself and destroy Pharaoh 90 once and for all with her destructive powers , but Sailor Moon gains the help of the other six Sailor Guardians to become Super Sailor Moon once more , and save both Hotaru and Sailor Saturn , who is reborn as a baby immediately afterward"
+     }
+    ]
+   },
+   {
+    "fact": "0.208",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Sailor Moon is tricked into giving Mistress 9 the Holy Grail , which she uses to summon Pharaoh 90 to Earth . Hotaru regains consciousness with the assistance of Sailor Moon and her father , destroying Mistress 9 and fully awakening the spirit of Sailor Saturn within herself at last . Sailor Saturn herself returns Chibiusa 's pure heart crystal , and then appears before Sailor Moon to ultimately sacrifice herself and destroy Pharaoh 90 once and for all with her destructive powers , but Sailor Moon gains the help of the other six Sailor Guardians to become Super Sailor Moon once more , and save both Hotaru and Sailor Saturn , who is reborn as a baby immediately afterward"
+     }
+    ]
+   },
+   {
+    "fact": "0.209",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Sailor Moon is tricked into giving Mistress 9 the Holy Grail , which she uses to summon Pharaoh 90 to Earth . Hotaru regains consciousness with the assistance of Sailor Moon and her father , destroying Mistress 9 and fully awakening the spirit of Sailor Saturn within herself at last . Sailor Saturn herself returns Chibiusa 's pure heart crystal , and then appears before Sailor Moon to ultimately sacrifice herself and destroy Pharaoh 90 once and for all with her destructive powers , but Sailor Moon gains the help of the other six Sailor Guardians to become Super Sailor Moon once more , and save both Hotaru and Sailor Saturn , who is reborn as a baby immediately afterward"
+     }
+    ]
+   },
+   {
+    "fact": "0.210",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Sailor Moon is tricked into giving Mistress 9 the Holy Grail , which she uses to summon Pharaoh 90 to Earth . Hotaru regains consciousness with the assistance of Sailor Moon and her father , destroying Mistress 9 and fully awakening the spirit of Sailor Saturn within herself at last . Sailor Saturn herself returns Chibiusa 's pure heart crystal , and then appears before Sailor Moon to ultimately sacrifice herself and destroy Pharaoh 90 once and for all with her destructive powers , but Sailor Moon gains the help of the other six Sailor Guardians to become Super Sailor Moon once more , and save both Hotaru and Sailor Saturn , who is reborn as a baby immediately afterward"
+     }
+    ]
+   },
+   {
+    "fact": "0.211",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.212",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.213",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.214",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.215",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.216",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.217",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.218",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.219",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.220",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.221",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ }
+]

@@ -1,0 +1,1638 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 1 items.
+
+=== ITEM id=8af76cdd85c2747d ===
+Gold sentences and facts:
+Sentence 0: Al Saadi said that her frustration with Meta is common among Palestinians, both in occupied territories and across the diaspora.
+  Fact 0.0: Al Saadi said her frustration with Meta is common among Palestinians.
+  Fact 0.1: Al Saadi said the frustration with Meta is common among Palestinians in occupied territories.
+  Fact 0.2: Al Saadi said the frustration with Meta is common among Palestinians across the diaspora.
+Sentence 1: Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents.
+  Fact 1.0: Meta wants to shift the burden of monitoring social media usage among teens back to the app stores.
+  Fact 1.1: Meta wants to shift the burden of monitoring social media usage among teens to parents.
+
+Retrieved items:
+<item 1>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+“As if there’s better moderation for those languages, and more careless moderation for Arabic content.”
+
+Stone declined to comment on allegations of Meta disproportionately flagging Arabic news content, instead directing TechCrunch to the updated newsroom post —
+which did not directly address the allegations.
+
+And as the Intercept reported, Instagram and Facebook are flagging images of the al-Ahli Hospital, claiming that the content violates Meta’s Community
+Guidelines on nudity or sexual activity.
+
+The Community Guidelines are enforced inconsistently, particularly when it comes to content related to Palestine. Al Saadi recently tried to report a comment
+that said she should be “raped” and “burned alive” — left in response to her comment on a CNN post about the conflict — but in screenshots reviewed by
+TechCrunch, Instagram said that it didn’t violate the platform’s Community Guidelines against violence or dangerous organizations.
+
+“The restrictions on content, especially the content that relates to Palestine, is heavily politicized,” Abukhater said. “It feeds into the bias against
+Palestinian narrative genuinely.
+
+Graph facts:
+- The best movies of 2023 so far -MENTIONS-> Stone
+- North Texas vs. SMU odds, props, predictions: Red hot Mustangs could overpower not-so-Mean Green -MENTIONS-> Stone
+- Stone -SAID-> bug
+- Stone -PARTICIPATED_IN-> SMU 69-10 homecoming belting of Tulsa
+- Stone -LOCATED_IN-> Dallas
+
+Entities: Stone, Abukhater, The Intercept, CNN, al-Ahli Hospital, moderation bias, nudity or sexual activity, violence or dangerous organizations, content
+restrictions, Palestinian narrative, the conflict, Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices, Meta, Al Saadi,
+TechCrunch
+</item 1>
+
+<item 2>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices Instagram users suspect Meta of shadowbanning content about
+Palestine. The platform has a history of inherent bias.
+
+Earlier this year, Palestinian-American filmmaker Khitam Jabr posted a handful of Reels about her family’s trip to the West Bank. In the short travel vlogs,
+Jabr shared snippets of Palestinian culture, from eating decadent meals to dancing at her niece’s wedding.
+
+“I hadn’t been in a decade, so it’s just like, life abroad,” Jabr told TechCrunch.
+
+“I would get [anti-Palestine] comments,” she recalled. “And I couldn’t respond [to them] or use my account for 24 hours. I wasn’t even posting anything about
+the occupation. But fast forward to now and the same shit’s happening.”
+
+In the aftermath of Hamas’ attack on Israelis, Israel’s retaliatory airstrikes and total blockade — cutting access to electricity, water and vital supplies —
+have devastated Gaza.
+
+Graph facts:
+- Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices -MENTIONS-> EU
+- Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices -MENTIONS-> Threads
+- Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices -MENTIONS-> Stone
+- Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices -MENTIONS-> moderation
+- Meta -MENTIONS-> Colombia
+
+Entities: Khitam Jabr, Hamas’ attack on Israelis, Israel’s retaliatory airstrikes, Israel’s total blockade, occupation, moderation bias, Meta has a moderation
+bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices, Meta, TechCrunch, Hamas, West Bank, Instagram, Gaza, Israel, Palestine
+</item 2>
+
+<item 3>
+Graph query row:
+article: Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices
+publishers: ['TechCrunch']
+passages: ['Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\nMeta has a
+moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices Instagram users suspect Meta of shadowbanning content about Palestine. The
+platform has a history of inherent bias.\n\nEarlier this year, Palestinian-American filmmaker Khitam Jabr posted a handful of Reels about her family’s trip to
+the West Bank. In the short travel vlogs, Jabr shared snippets of Palestinian culture, from eating decadent meals to dancing at her niece’s wedding.\n\n“I
+hadn’t been in a decade, so it’s just like, life abroad,” Jabr told TechCrunch.\n\n“I would get [anti-Palestine] comments,” she recalled. “And I couldn’t
+respond [to them] or use my account for 24 hours. I wasn’t even posting anything about the occupation. But fast forward to now and the same shit’s
+happening.”\n\nIn the aftermath of Hamas’ attack on Israelis, Israel’s retaliatory airstrikes and total blockade — cutting access to electricity, water and
+vital supplies — have devastated Gaza.', 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch,
+2023-10-19T23:43:15+00:00)\nIn response to the escalating violence, Meta said that it is closely monitoring its platforms for violations and may inadvertently
+flag certain content, but it never intends to “suppress a particular community or point of view.” Content praising or supporting Hamas, which governs Gaza and
+is designated as a terrorist organization by the United States and the European Union, is expressly forbidden on Meta’s platforms.\n\nAs the humanitarian crisis
+in Gaza grows more dire, many social media users suspect Instagram of censoring content about the besieged Palestinian territory, even if that content doesn’t
+support Hamas. Users have also complained that they’ve been harassed and reported for posting content about Palestine, regardless of whether or not it violates
+Meta’s policies. Jabr, for example, suspects that Instagram restricted her for 24 hours because other users reported her Palestine travel videos. Most recently,
+Instagram users accused Meta of “shadowbanning” their Stories about Palestine.', 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing
+Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\nMost recently, Instagram users accused Meta of “shadowbanning” their Stories about
+Palestine.\n\nIt’s the latest in a lengthy history of incidents on Meta platforms that reflect an inherent bias against Palestinian users in its processes, as
+documented by years of complaints from both inside and outside the company. The company may not intentionally suppress specific communities, but its moderation
+practices often disproportionately affect Palestinian users.\n\nFor instance, Meta struggles to navigate the cultural and linguistic nuances of Arabic, a
+language with over 25 dialects, and has been criticized for neglecting to adequately diversify its language resources. The company’s black-and-white policies
+often preclude it from effectively moderating any nuanced topic, like content that discusses violence without condoning it. Advocacy groups have also raised
+concerns that Meta’s partnerships with government agencies, such as the Israeli Cyber Unit, politically influence the platform’s policy decisions.', 'Meta has a
+moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\nDuring the last violent outbreak
+between Hamas and Israel in 2021, a report commissioned by Meta and conducted by a third party concluded that the company’s actions had an “adverse human rights
+impact” on Palestinian users’ right to freedom of expression and political participation.\n\nMeta communications director Andy Stone declined to comment on the
+record, and pointed TechCrunch to Meta’s newsroom post about the conflict, which was updated on Oct. 18 with a statement addressing the shadowbanning
+claims.\n\n“Our policies are designed to keep people safe on our apps while giving everyone a voice,” the post stated. “We apply these policies equally around
+the world and there is no truth to the suggestion that we are deliberately suppressing voice … We can make errors and that is why there is an appeals process
+for people to tell us when they think we have made the wrong decision, so we can look into it.”\n\nThe belief that Meta shadowbans, or limits the visibility of,
+content about Palestine is not new.', 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch,
+2023-10-19T23:43:15+00:00)\nIn an Instagram Story last year, supermodel and activist Bella Hadid, who is of Palestinian descent, alleged that Instagram
+“disabled” her from posting content on her Story “pretty much only when it is Palestine based.” She said she gets “immediately shadowbanned” when she posts
+about Palestine, and her Story views drop by “almost 1 million.”\n\nAs soon as Kehlani got super vocal and changed her profile picture to “i stand with
+Palestine” she got shadowbanned.\n\nJust as they did to Bella Hadid. The propaganda is insane.\n\nTHEY TRY TO SILENCE US. DON’T STOP!!\n\nFREE PALESTINE. 🇵🇸🇵🇸
+pic.twitter.com/4lUvZsUbiA — Sabby Targaryen 🐉 (@whoisitbad) October 14, 2023\n\nMeta blamed technical errors for the removal of posts about Palestine during
+the 2021 conflict.', 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\nWhen
+reached for comment about these recent claims of shadowbanning, a representative for the company pointed TechCrunch to a Threads post by Stone.\n\n“We
+identified a bug impacting all Stories that re-shared Reels and Feed posts, meaning they weren’t showing up properly in people’s Stories tray, leading to
+significantly reduced reach,” Stone said. “This bug affected accounts equally around the globe and had nothing to do with the subject matter of the content —
+and we fixed it as quickly as possible.”\n\nBut many are frustrated that Meta continues to disproportionately suppress Palestinian voices. Leen Al Saadi, a
+Palestinian journalist currently based in Jordan and host of the podcast “Preserving Palestine,” said she is used to “constantly being censored.” Her Instagram
+account was restricted last year after she posted a trailer for the podcast’s first episode, which discussed a documentary about Palestinian street art under
+occupation.\n\n“Palestinians are currently undergoing two wars,” Al Saadi said. “The first is with their legal occupier.', 'Meta has a moderation bias problem,
+not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\n“The first is with their legal occupier. The second war is with
+the entire Western media landscape, and when I say the entire landscape, I mean social media.”\n\nMeta’s alleged shadowbanning\n\nInstagram users accuse Meta of
+suppressing more than just Stories related to Palestine.\n\nCreators say engagement on their posts tanked specifically after they publicly condemned Israel’s
+response to the Hamas attack as excessively violent. Some, like Jabr, say they were restricted from posting or going live, while others say Instagram flagged
+their content as “sensitive,” limiting its reach. Users also allege their posts were flagged as “inappropriate” and removed, even if the content adhered to
+Instagram’s Community Guidelines.\n\nMeta’s representative didn’t address the other accusations of censorship beyond just Story visibility and did not respond
+to TechCrunch’s follow-up questions. When asked for comment, Stone directed TechCrunch to Meta’s updated newsroom post, which said Meta identified and fixed a
+“bug” that prevented users from going live.', 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch,
+2023-10-19T23:43:15+00:00)\n“This was also a global issue that was fixed within a few hours. We understand people rely on these tools and we’re sorry to anyone
+who felt the impact of these issues,” the post stated.\n\nIt’s unclear if this “bug” impacted accounts posting content unrelated to Gaza. Instagram users have
+posted screenshots showing that Stories about Palestine have received significantly fewer views than other Stories posted on the same day, and allege that their
+view counts went back up when they posted content unrelated to the conflict.\n\nofc IG’s hiding my stories about Palestine, y’all see the difference? lmaoaoaoao
+pic.twitter.com/1iYIIKBhtN — ༒︎ (@arxbprince) October 15, 2023\n\nA user based in Egypt, who asked to stay anonymous for fear of harassment, said her posts
+usually get around 300 views, but when she started posting pro-Palestine content after the Hamas attack earlier this month, her stories would only get one to
+two views.', 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\n“It happened
+to all my friends, too,” she continued. “Then we noticed that posting a random pic would get higher views. So by posting a random pic, then a pro-Palestine
+post, would increase the views.”\n\nAnother Instagram user based in the United Kingdom, who also asked to stay anonymous out of fear of harassment, said that
+his view count returned to normal when he posted a cat photo.\n\n“My stories went from 100s of views to zero or a handful,” he said. “I’ve had to post
+intermittent non-Gaza content in order to ‘release’ my stories to be viewed again.”\n\nIt isn’t just Stories. The Arab Center for Social Media Advancement
+(7amleh), which documents cases of Palestinian digital rights violations and works directly with social media companies to appeal violations, told TechCrunch it
+has received reports of Instagram inconsistently filtering comments containing the Palestinian flag emoji. Users report that Instagram has flagged comments
+containing the emoji as “potentially offensive,” hiding the comment.', 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian
+voices (TechCrunch, 2023-10-19T23:43:15+00:00)\nUsers report that Instagram has flagged comments containing the emoji as “potentially offensive,” hiding the
+comment.\n\nMeta initially did not respond to follow-up requests for comment. When asked for comment, Stone pointed TechCrunch to Meta’s updated newsroom post,
+which did not directly address issues related to comments containing the Palestinian flag.\n\nThe organization has also received countless reports of Meta
+flagging and restricting Arabic content, even if it’s posted by news outlets. Jalal Abukhater, 7amleh’s advocacy manager, said that the organization has
+documented multiple cases of journalists on Instagram reporting the same news in Arabic, Hebrew and English, but only getting flagged for their Arabic
+content.\n\n“It’s literally journalistic content, but the same wording in Hebrew and English does not get restricted,” Abukhater said. “As if there’s better
+moderation for those languages, and more careless moderation for Arabic content.”', 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing
+Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\n“As if there’s better moderation for those languages, and more careless moderation for Arabic
+content.”\n\nStone declined to comment on allegations of Meta disproportionately flagging Arabic news content, instead directing TechCrunch to the updated
+newsroom post — which did not directly address the allegations.\n\nAnd as the Intercept reported, Instagram and Facebook are flagging images of the al-Ahli
+Hospital, claiming that the content violates Meta’s Community Guidelines on nudity or sexual activity.\n\nThe Community Guidelines are enforced inconsistently,
+particularly when it comes to content related to Palestine. Al Saadi recently tried to report a comment that said she should be “raped” and “burned alive” —
+left in response to her comment on a CNN post about the conflict — but in screenshots reviewed by TechCrunch, Instagram said that it didn’t violate the
+platform’s Community Guidelines against violence or dangerous organizations.\n\n“The restrictions on content, especially the content that relates to Palestine,
+is heavily politicized,” Abukhater said. “It feeds into the bias against Palestinian narrative genuinely.', 'Meta has a moderation bias problem, not just a
+‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\n“It feeds into the bias against Palestinian narrative genuinely. It really
+takes the balance against Palestinians in a situation where there’s a huge asymmetry of power.”\n\nA history of suppression\n\nContent about Palestine is
+disproportionately scrutinized, as demonstrated during the last severe violent outbreak between Hamas and Israel two years ago. Amid the violence following the
+May 2021 court ruling to evict Palestinian families from Sheikh Jarrah, a neighborhood in occupied East Jerusalem, users across Facebook and Instagram accused
+Meta of taking down posts and suspending accounts that voiced support for Palestinians.\n\nThe digital rights nonprofit Electronic Frontier Foundation (EFF)
+described Meta’s actions in 2021 as “systemic censorship of Palestinian voices.” In its 2022 report of Palestinian digital rights, 7amleh said that Meta is
+“still the most restricting company” compared to other social media giants in the extent of its moderation of the Palestinian digital space.', 'Meta has a
+moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\nMeta forbids support of terrorist
+organizations, like most social media companies based in the U.S., but struggles to moderate content around it, from user discourse to journalistic updates.
+This policy, along with the company’s partnership with Israel to monitor posts that incite violence, complicates things for Palestinians living under Hamas’
+governance. As EFF points out, something as simple as Hamas’ flag in the background of an image can result in a strike.\n\nJillian York, the director for
+international freedom of expression for EFF, blames automation and decisions made by “minimally trained humans” for the inconsistency. Meta’s zero tolerance
+policy and imprecise enforcement often suppress content from or about conflict zones, she said. The site’s moderation issues have negatively affected multiple
+non-English speaking regions, including Libya, Syria and Ukraine.\n\n“These rules can prevent people from sharing documentation of human rights violations,
+documentation of war crimes, even just news about what’s happening on the ground,” York continued.', 'Meta has a moderation bias problem, not just a ‘bug,’
+that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\n“And so I think that is what is the most problematic right now about that
+particular rule, and the way that it’s enforced.”\n\nOver the 13 days leading up to the ceasefire between Hamas and Israel, 7amleh documented more than 500
+reports of Palestinian “digital rights violations,” including the removal and restriction of content, hashtags and accounts related to the conflict.\n\nMeta
+blamed some of the instances of perceived censorship to technical issues, like one that prevented users in Palestine and Colombia from posting Instagram
+Stories. It attributed others to human error, like blocking the hashtag for Al-Aqsa Mosque, the holy site where Israeli police clashed with Ramadan worshippers,
+because it was mistaken for a terrorist organization. The company also blocked journalists in Gaza from WhatsApp without explanation.\n\nThe same month, a group
+of Facebook employees filed internal complaints accusing the company of bias against Arab and Muslim users. In internal posts obtained by BuzzFeed News, an
+employee attributed the bias to “years and years of implementing policies that just don’t scale globally.”', 'Meta has a moderation bias problem, not just a
+‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\nAt the recommendation of its Oversight Board, Meta conducted a third-party
+due diligence report about the platform’s moderation during the May 2021 conflict. The report found that Arabic content was flagged as potentially violating at
+significantly higher rates than Hebrew content was, and was more likely to be erroneously removed. The report noted that Meta’s moderation system may not be as
+precise for Arabic content as it was for Hebrew content, because the latter is a “more standardized language,” and suggested that reviewers may lack the
+linguistic and cultural competence to understand less common Arabic dialects like Palestinian Arabic.\n\nHas anything improved?\n\nMeta committed to
+implementing policy changes based on the report’s recommendations, such as updating its keywords associated with dangerous organizations, disclosing government
+requests to remove content and launching a hostile speech classifier for Hebrew content. Abukhater added that Meta has improved its response to harassment, at
+least in comparison to other social media platforms like X (formerly Twitter).', 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing
+Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\nAlthough harassment and abuse are still rampant on Instagram and Facebook, he said, the company has
+been responsive to suspending accounts with patterns of targeting other users.\n\nThe company has also made more contact with regional Palestinian organizations
+since 2021, York added, but it’s been slow to implement recommendations from EFF and other advocacy groups. It’s “very clear” that Meta is not putting the same
+resources behind Arabic and other non-English languages, York said, compared to the attention Meta gives to countries that have the most regulatory pressure.
+Moderation of English and other European languages tends to be more comprehensive, for example, because the EU enforces the Digital Services Act.\n\nIn Meta’s
+response to the report, Miranda Sissons, the company’s director of human rights, said that Meta was “assessing the feasibility” of reviewing Arabic content by
+dialect. Sissons said that the company has “large and diverse teams” who understand “local cultural context across the region,” including in Palestine.', 'Meta
+has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\nResponding to the escalating
+violence earlier this month, Meta stated that it established a “special operations center” staffed with fluent Hebrew and Arabic speakers to closely monitor and
+respond to violating content.\n\nDespite Meta’s apparent efforts to diversify its language resources, Arabic is still disproportionately flagged as violating —
+like in the case of journalists reporting news in multiple languages.\n\n“The balance of power is very fixed, in reality, between Israelis and Palestinians,”
+Abukhater said. “And this is something that today is reflected heavily on platforms like Meta, even though they have human rights teams releasing reports and
+trying to improve upon their policies. Whenever an escalation like the one we’re experiencing now happens, things just go back to zero.”\n\nAnd at times, Meta’s
+Arabic translations are completely inaccurate. This week, multiple Instagram users raised concerns over the platform mistranslating the relatively common Arabic
+phrase “Alhamdulillah,” or “Praise be to God.”', 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch,
+2023-10-19T23:43:15+00:00)\nIn screen recordings posted online, users found that if they included “Palestinian” and the corresponding flag emoji in their
+Instagram bio along with the Arabic phrase, Instagram automatically translated their bio to “Palestinian terrorists – Praise be to Allah” or “Praise be to God,
+Palestinian terrorists are fighting for their freedom.” When users removed “Palestinian” and the flag emoji, Instagram translated the Arabic phrase to “Thank
+God.” Instagram users complained that the offensive mistranslation was active for hours before Meta appeared to correct it.\n\nShayaan Khan, a TikTok creator
+who posted a viral video about the mistranslation, told TechCrunch that Meta’s lack of cultural competence isn’t just offensive, it’s dangerous. He said that
+the “glitch” can fuel Islamophobic and racist rhetoric, which has already been exacerbated by the war in Gaza. Khan pointed to the fatal stabbing of Wadea
+Al-Fayoume, a Palestinian-American child whose death is being investigated as a hate crime.', 'Meta has a moderation bias problem, not just a ‘bug,’ that’s
+suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\nMeta did not respond to TechCrunch’s request for comment about the mistranslation.
+Abukhater said that Meta told 7amleh that a “bug” caused the mistranslation. In a statement to 404 Media, a Meta spokesperson said that the issue had been
+fixed.\n\n“We fixed a problem that briefly caused inappropriate Arabic translations in some of our products,” the statement said, “We sincerely apologize that
+this happened.”\n\nAs the war continues, social media users have tried to find ways around the alleged shadowbanning on Instagram. Supposed loopholes include
+misspelling certain words, like “p@lestine” instead of “Palestine,” in hopes of bypassing any content filters. Users also share information about Gaza in text
+superimposed over unrelated images, like a cat photo, so it won’t be flagged as graphic or violent content.', 'Meta has a moderation bias problem, not just a
+‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\nCreators have tried to include an emoji of the Israeli flag or tag their
+posts and Stories with #istandwithisrael, even if they don’t support the Israeli government, in hopes of gaming engagement.\n\nAl Saadi said that her
+frustration with Meta is common among Palestinians, both in occupied territories and across the diaspora.\n\n“All we’re asking for is to give us the exact same
+rights,” she said. “We’re not asking for more. We’re literally just asking Meta, Instagram, every single broadcast channel, every single media outlet, to just
+give us the respect that we deserve.”\n\nDominic-Madori Davis contributed to this story’s reporting.']
+entities_and_connections: [{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Stone', 'related': 'North Texas vs. SMU odds, props,
+predictions: Red hot Mustangs could overpower not-so-Mean Green'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Stone', 'related':
+'The best movies of 2023 so far'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Stone', 'related': 'Meta has a moderation bias
+problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Stone', 'related':
+'bug'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Stone', 'related': 'SMU 69-10 homecoming belting of Tulsa'},
+{'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Stone', 'related': 'Dallas'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'moderation', 'related': 'Why Mozilla is betting on a decentralized social networking future'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'moderation', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'moderation', 'related': 'Elon Musk’s X faces first DSA probe in EU over illegal
+content risks, moderation, transparency and deceptive UX design'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'moderation',
+'related': 'Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'moderation', 'related': 'CEO David Baszucki’s mission to make Roblox a billion-player platform'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'moderation', 'related': 'Pebble, the Twitter alternative previously known as T2, is shutting down'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'moderation', 'related': 'O’Hara'}, {'article_relationship': 'MENTIONS', 'connection':
+'SAID', 'entity': 'moderation', 'related': 'Cselle'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'EU', 'related': 'After warning,
+the EU opens investigation into X over alleged disinformation'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'EU', 'related': 'EU
+fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'EU', 'related': 'Amazon’s iRobot purchase sucks up formal competition concerns in EU'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'EU', 'related': 'ChatGPT: Everything you need to know about the AI-powered chatbot'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'EU', 'related': 'Biden’s AI EO hailed as broad, but not deep without legislation to match'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'EU', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'EU', 'related': 'Norway seeks to extend ban on Meta’s consentless tracking ads across
+the EU'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'EU', 'related': 'European consumer groups band together to fight Meta’s
+self-serving ad-free sub — branding it ‘unfair’ and ‘illegal’'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'EU', 'related': 'Elon
+Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'EU', 'related': 'California’s privacy watchdog eyes AI rules with opt-out and access rights'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'EU', 'related': 'Deepfake election risks trigger EU call for more generative AI safeguards'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'EU', 'related': 'Meta says it’s prioritizing livestreaming checks during Israel-Hamas
+war'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'EU', 'related': 'Europe’s artists and labels could lose $137m annually to US
+recorded music rightsholders if EU law isn’t changed, trade groups warn'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'EU',
+'related': 'X (formerly Twitter) is worst for disinformation, per EU analysis'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'EU',
+'related': "With hopes of victory fading, Ukraine's fight against Russia could get even harder in 2024"}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'EU', 'related': 'EU commissioner sidesteps MEPs’ questions about CSAM microtargeting'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'EU', 'related': 'The UK just laid out new rules for the internet — it only gets harder from here'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'EU', 'related': 'EU says incoming rules for general purpose AIs can evolve over
+time'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'EU', 'related': 'EU lawmakers bag late night deal on ‘global first’ AI
+rules'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'EU', 'related': 'Daye now offers tampon-based STI screening — starting in the
+UK'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'EU', 'related': 'Meta to offer ad-free subscription in Europe in bid to keep
+tracking other users'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'EU', 'related': 'first DSA probe in EU'}, {'article_relationship':
+'MENTIONS', 'connection': 'SAID', 'entity': 'EU', 'related': 'X'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'EU', 'related':
+'infringements of DSA provisions'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'EU', 'related': 'reports by Disinformation Code
+signatories'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'EU', 'related': 'incoming rules for general purpose AIs'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'EU', 'related': 'general purpose AIs'}, {'article_relationship': 'MENTIONS', 'connection':
+'SAID', 'entity': 'EU', 'related': 'rules'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'EU', 'related': 'rules for general purpose
+AIs'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'EU', 'related': 'Helen Smith'}, {'article_relationship': 'MENTIONS', 'connection':
+'SAID', 'entity': 'EU', 'related': 'Sam Cranny-Evans'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'EU', 'related': 'European Data
+Protection Supervisor'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'EU', 'related': 'Thierry Breton'}, {'article_relationship':
+'MENTIONS', 'connection': 'WORKS_FOR', 'entity': 'EU', 'related': 'Margrethe Vestager'}, {'article_relationship': 'MENTIONS', 'connection': 'WORKS_FOR',
+'entity': 'EU', 'related': 'Jourova'}, {'article_relationship': 'MENTIONS', 'connection': 'WORKS_FOR', 'entity': 'EU', 'related': 'Johansson'},
+{'article_relationship': 'MENTIONS', 'connection': 'WORKS_FOR', 'entity': 'EU', 'related': 'Thierry Breton'}, {'article_relationship': 'MENTIONS', 'connection':
+'PARTICIPATED_IN', 'entity': 'EU', 'related': 'Investigation into X over alleged disinformation'}, {'article_relationship': 'MENTIONS', 'connection':
+'PARTICIPATED_IN', 'entity': 'EU', 'related': 'EU investigation into X'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'EU',
+'related': 'investigation into X'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'EU', 'related': 'initial investigation'},
+{'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'EU', 'related': 'in-depth investigation'}, {'article_relationship': 'MENTIONS',
+'connection': 'PARTICIPATED_IN', 'entity': 'EU', 'related': 'political deal'}, {'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'EU',
+'related': 'X'}, {'article_relationship': 'MENTIONS', 'connection': 'PART_OF', 'entity': 'EU', 'related': 'EU’s General Data Protection Regulation (GDPR)'},
+{'article_relationship': 'MENTIONS', 'connection': 'PART_OF', 'entity': 'EU', 'related': 'EU legislature'}, {'article_relationship': 'MENTIONS', 'connection':
+'PART_OF', 'entity': 'EU', 'related': 'Commission'}, {'article_relationship': 'MENTIONS', 'connection': 'PART_OF', 'entity': 'EU', 'related': 'AI Act'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Threads', 'related': 'ChatGPT: Everything you need to know about the AI-powered
+chatbot'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Threads', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’
+that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Threads', 'related': 'X plans to use payment,
+phone and ID verification to stop bots'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Threads', 'related': 'Spill toasts one year
+with a 2.7M seed extension, Kerry Washington and champagne'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Threads', 'related':
+'2023 in social media: the case for the fediverse'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Threads', 'related': 'Pebble, the
+Twitter alternative previously known as T2, is shutting down'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Threads', 'related':
+'Michael Greer'}, {'article_relationship': 'MENTIONS', 'connection': 'MADE', 'entity': 'Threads', 'related': 'Meta'}, {'article_relationship': 'MENTIONS',
+'connection': 'OWNS', 'entity': 'Threads', 'related': 'Meta'}, {'article_relationship': 'MENTIONS', 'connection': 'PART_OF', 'entity': 'Threads', 'related':
+'Instagram'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Khitam Jabr', 'related': 'Meta has a moderation bias problem, not just a
+‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Hamas’ attack on Israelis', 'related':
+'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection':
+'PARTICIPATED_IN', 'entity': 'Hamas’ attack on Israelis', 'related': 'Hamas'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Israel’s retaliatory airstrikes', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel’s total blockade', 'related': 'Meta has a moderation bias problem, not just a
+‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'occupation', 'related': 'Meta has a
+moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Jabr', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'shadowbanning', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'shadowbanning', 'related': 'People are turning to Snap Map for firsthand perspectives
+from Gaza'}, {'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'shadowbanning', 'related': 'Meta'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'suppressing a particular community or point of view', 'related': 'Meta has a moderation bias problem, not just
+a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'suppressing a particular community or
+point of view', 'related': 'Meta'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israeli Cyber Unit', 'related': 'Meta has a
+moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Andy Stone', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS',
+'connection': 'WORKS_FOR', 'entity': 'Andy Stone', 'related': 'Meta'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'violent
+outbreak between Hamas and Israel', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'},
+{'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'violent outbreak between Hamas and Israel', 'related': 'Hamas'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'deliberately suppressing voice', 'related': 'Meta has a moderation bias problem, not
+just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'deliberately suppressing voice',
+'related': 'Meta'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Bella Hadid', 'related': 'Meta has a moderation bias problem, not
+just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Bella Hadid', 'related':
+'Instagram'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Kehlani', 'related': 'Meta has a moderation bias problem, not just a
+‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Sabby Targaryen', 'related': 'Meta has
+a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'technical errors', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship':
+'MENTIONS', 'connection': 'SAID', 'entity': 'technical errors', 'related': 'Meta'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'2021 conflict', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'Leen Al Saadi', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Leen Al Saadi', 'related': 'censorship'}, {'article_relationship': 'MENTIONS',
+'connection': 'LOCATED_IN', 'entity': 'Leen Al Saadi', 'related': 'Jordan'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Preserving Palestine', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Palestinian voices', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing
+Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'bug', 'related': 'Meta has a moderation bias problem, not just a
+‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'bug', 'related': 'Man United vs
+Fulham: Red Devils determined to get back to winning ways in PL'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'bug', 'related':
+'Stone'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Feed posts', 'related': 'Meta has a moderation bias problem, not just a
+‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'censorship', 'related': 'Meta has a
+moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'censorship', 'related': 'The people who ruined the internet'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'censorship',
+'related': 'People are turning to Snap Map for firsthand perspectives from Gaza'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity':
+'censorship', 'related': 'Leen Al Saadi'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'documentary', 'related': 'Meta has a
+moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Palestinian street art', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'wars', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian
+voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'suppression of Palestinian voices', 'related': 'Meta has a moderation bias
+problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'suppression of
+Palestinian voices', 'related': 'Meta'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram Community Guidelines', 'related':
+'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'Israel’s response to the Hamas attack', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta’s updated newsroom post', 'related': 'Meta has a moderation bias problem, not
+just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta identified and fixed a bug
+that prevented users from going live', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta identified and fixed a bug that prevented users from going live', 'related': 'Meta'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Palestine', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s
+suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Gaza', 'related': 'Meta has a moderation bias
+problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'anonymous user',
+'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection':
+'SAID', 'entity': 'anonymous user', 'related': 'Instagram Stories view counts'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity':
+'anonymous user', 'related': 'Egypt'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': '@arxbprince', 'related': 'Meta has a moderation
+bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'global
+issue', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS',
+'connection': 'SAID', 'entity': 'global issue', 'related': 'Meta'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram Stories
+view counts', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS',
+'connection': 'SAID', 'entity': 'Instagram Stories view counts', 'related': 'anonymous user'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'Arab Center for Social Media Advancement', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Palestinian digital rights violations', 'related': 'Meta has a moderation bias
+problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Palestinian flag
+emoji', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'Jalal Abukhater', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian
+voices'}, {'article_relationship': 'MENTIONS', 'connection': 'WORKS_FOR', 'entity': 'Jalal Abukhater', 'related': '7amleh'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': '7amleh', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian
+voices'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': '7amleh', 'related': 'Meta'}, {'article_relationship': 'MENTIONS', 'connection':
+'WORKS_FOR', 'entity': '7amleh', 'related': 'Jalal Abukhater'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Palestinian flag',
+'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'Arabic content', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Abukhater', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s
+suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Abukhater', 'related': 'content restrictions'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Abukhater', 'related': 'Meta'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID',
+'entity': 'Abukhater', 'related': 'balance of power between Israelis and Palestinians'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'The Intercept', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'CNN', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian
+voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'al-Ahli Hospital', 'related': 'Meta has a moderation bias problem, not just
+a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'moderation bias', 'related': 'Meta
+has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF',
+'entity': 'moderation bias', 'related': 'Meta'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'nudity or sexual activity',
+'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'violence or dangerous organizations', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian
+voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'content restrictions', 'related': 'Meta has a moderation bias problem, not
+just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'content restrictions', 'related':
+'Abukhater'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Palestinian narrative', 'related': 'Meta has a moderation bias problem,
+not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'the conflict', 'related':
+'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'Severe violent outbreak between Hamas and Israel', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian
+voices'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Severe violent outbreak between Hamas and Israel', 'related':
+'Hamas'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Severe violent outbreak between Hamas and Israel', 'related':
+'Israel'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Sheikh Jarrah', 'related': 'Meta has a moderation bias problem, not just a
+‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Sheikh Jarrah', 'related': 'People are
+turning to Snap Map for firsthand perspectives from Gaza'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Sheikh Jarrah',
+'related': 'occupied East Jerusalem'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'occupied East Jerusalem', 'related': 'Meta has
+a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'occupied East Jerusalem', 'related': 'How Chinese firm linked to repression of Uyghurs aids Israeli surveillance in West Bank'}, {'article_relationship':
+'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'occupied East Jerusalem', 'related': 'Sheikh Jarrah'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'Electronic Frontier Foundation', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian
+voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Electronic Frontier Foundation', 'related': "Hitting the Books: We are the
+frogs in the boiling pot, it's time we started governing like it."}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Electronic Frontier
+Foundation', 'related': 'Meta'}, {'article_relationship': 'MENTIONS', 'connection': 'FOUNDED', 'entity': 'Electronic Frontier Foundation', 'related': 'John
+Perry Barlow'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Palestinian digital rights', 'related': 'Meta has a moderation bias
+problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Systemic
+censorship of Palestinian voices', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Moderation of the Palestinian digital space', 'related': 'Meta has a moderation bias
+problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'EFF', 'related':
+'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID',
+'entity': 'EFF', 'related': 'content moderation'}, {'article_relationship': 'MENTIONS', 'connection': 'WORKS_FOR', 'entity': 'EFF', 'related': 'Jillian York'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Jillian York', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’
+that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Jillian York', 'related': 'Meta'},
+{'article_relationship': 'MENTIONS', 'connection': 'WORKS_FOR', 'entity': 'Jillian York', 'related': 'EFF'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'international freedom of expression', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian
+voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'human rights violations', 'related': 'Meta has a moderation bias problem,
+not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'terrorist organizations',
+'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'terrorist organizations', 'related': 'Israel thwarts Hamas on the financial battlefield'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'content moderation', 'related': 'After warning, the EU opens investigation into X over alleged disinformation'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'content moderation', 'related': 'EU fires urgent warning at Elon Musk’s X over illegal
+content and disinformation following Hamas attacks'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'content moderation', 'related':
+'Why Mozilla is betting on a decentralized social networking future'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'content
+moderation', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'content moderation', 'related': 'Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation,
+transparency and deceptive UX design'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'content moderation', 'related': 'What’s at
+stake in the Supreme Court’s landmark social media case'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'content moderation', 'related':
+'O’Hara'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'content moderation', 'related': 'EFF'}, {'article_relationship': 'MENTIONS',
+'connection': 'SAID', 'entity': 'content moderation', 'related': 'Barrett'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta',
+'related': 'Colombia'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'Al-Aqsa Mosque'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'WhatsApp'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta',
+'related': 'Instagram Stories'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'Palestine'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'After warning, the EU opens investigation into X over alleged
+disinformation'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'Why Mozilla is betting on a decentralized social
+networking future'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'How ego and fear fuelled the rise of
+artificial intelligence'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'ChatGPT: Everything you need to know
+about the AI-powered chatbot'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'A comprehensive list of 2023 tech
+layoffs'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'How the OpenAI fiasco could bolster Meta and the ‘open
+AI’ movement'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'Meta has a moderation bias problem, not just a
+‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'Norway seeks to
+extend ban on Meta’s consentless tracking ads across the EU'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related':
+'People are turning to Snap Map for firsthand perspectives from Gaza'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta',
+'related': 'European consumer groups band together to fight Meta’s self-serving ad-free sub — branding it ‘unfair’ and ‘illegal’'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'Meta seeks legislation that would require parents to approve teens’ app downloads'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'California’s privacy watchdog eyes AI rules with opt-out and access
+rights'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'Amazon brings conversational AI to kids with launch of
+‘Explore with Alexa’'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': '‘Mass breach of privacy’: TikTok under fire
+for tracking users online'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'X plans to use payment, phone and ID
+verification to stop bots'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'Microsoft Activision: What does deal
+mean for gamers?'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'The 53 best Black Friday deals we could find at
+Amazon, Walmart, Target and more'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'Keep Labs’ smart storage
+redefines medication management'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'Deepfake election risks trigger
+EU call for more generative AI safeguards'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'WebSummit derailed by
+founder’s public fight with those supporting Israel in Hamas conflict'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta',
+'related': 'Meta and IBM form an AI Alliance, but to what end?'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related':
+'Meta turned a blind eye to kids on its platforms for years, unredacted lawsuit alleges'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'Meta', 'related': "Sweeping White House AI executive order takes aim at the technology's toughest challenges"}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'Google fakes an AI demo, Grand Theft Auto VI goes viral and Spotify cuts jobs'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'Meta says it’s prioritizing livestreaming checks during
+Israel-Hamas war'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'Earnings week ahead: Amazon, Microsoft,
+Alphabet, Meta, Ford, GM and more'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'The Ray-Ban Meta smart glasses
+actually make the future look cool'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': '8 predictions for AI in
+2024'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'Temu was the most-downloaded iPhone app in the U.S. in
+2023'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'Every movie and show coming to Netflix in November'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'Robotics Q&A with Boston Dynamics’ Aaron Saunders'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'Amazon’s latest Echo Frames are more style than substance'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'EU commissioner sidesteps MEPs’ questions about CSAM
+microtargeting'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'ASX set to rise ahead of inflation report after
+big tech lifts Wall Street'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'The UK just laid out new rules for
+the internet — it only gets harder from here'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': '2023 in social
+media: the case for the fediverse'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'CEO David Baszucki’s mission
+to make Roblox a billion-player platform'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'Pebble, the Twitter
+alternative previously known as T2, is shutting down'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta', 'related': 'Meta to
+offer ad-free subscription in Europe in bid to keep tracking other users'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta',
+'related': 'news'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta', 'related': 'suppressing a particular community or point of
+view'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta', 'related': 'deliberately suppressing voice'}, {'article_relationship':
+'MENTIONS', 'connection': 'SAID', 'entity': 'Meta', 'related': 'technical errors'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta',
+'related': 'Meta identified and fixed a bug that prevented users from going live'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta',
+'related': 'global issue'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta', 'related': 'technical issues'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta', 'related': 'human error'}, {'article_relationship': 'MENTIONS', 'connection':
+'SAID', 'entity': 'Meta', 'related': 'special operations center'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta', 'related':
+'contractual necessity'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta', 'related': 'legitimate interests'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta', 'related': 'Consent'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID',
+'entity': 'Meta', 'related': 'parental approval for teens’ app downloads'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta',
+'related': 'parental approval of teens’ app downloads'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta', 'related': 'AI-generated
+misinformation'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta', 'related': 'measures to remove under-13 accounts'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta', 'related': 'kids on platforms'}, {'article_relationship': 'MENTIONS', 'connection':
+'SAID', 'entity': 'Meta', 'related': 'livestreaming reports'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta', 'related':
+'livestreaming checks'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta', 'related': 'ad-free subscription'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta', 'related': 'ad experience'}, {'article_relationship': 'MENTIONS', 'connection':
+'SAID', 'entity': 'Meta', 'related': '7amleh'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta', 'related': 'Abukhater'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta', 'related': 'Electronic Frontier Foundation'}, {'article_relationship': 'MENTIONS',
+'connection': 'SAID', 'entity': 'Meta', 'related': 'Jillian York'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta', 'related':
+'York'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta', 'related': 'Miranda Sissons'}, {'article_relationship': 'MENTIONS',
+'connection': 'SAID', 'entity': 'Meta', 'related': 'Al Saadi'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta', 'related': 'DPC'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta', 'related': 'Ursula Pachl'}, {'article_relationship': 'MENTIONS', 'connection':
+'SAID', 'entity': 'Meta', 'related': 'BEUC'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta', 'related': 'Sacha Haworth'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta', 'related': 'Samantha Hoffman'}, {'article_relationship': 'MENTIONS', 'connection':
+'SAID', 'entity': 'Meta', 'related': 'Wilkins'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta', 'related': 'AG Bonta'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta', 'related': 'Max Schrems'}, {'article_relationship': 'MENTIONS', 'connection':
+'WORKS_FOR', 'entity': 'Meta', 'related': 'Mark Zuckerberg'}, {'article_relationship': 'MENTIONS', 'connection': 'WORKS_FOR', 'entity': 'Meta', 'related': 'Andy
+Stone'}, {'article_relationship': 'MENTIONS', 'connection': 'WORKS_FOR', 'entity': 'Meta', 'related': 'Miranda Sissons'}, {'article_relationship': 'MENTIONS',
+'connection': 'WORKS_FOR', 'entity': 'Meta', 'related': 'Matt Pollard'}, {'article_relationship': 'MENTIONS', 'connection': 'WORKS_FOR', 'entity': 'Meta',
+'related': 'Antigone Davis'}, {'article_relationship': 'MENTIONS', 'connection': 'WORKS_FOR', 'entity': 'Meta', 'related': 'David Marcus'},
+{'article_relationship': 'MENTIONS', 'connection': 'WORKS_FOR', 'entity': 'Meta', 'related': 'Yann LeCun'}, {'article_relationship': 'MENTIONS', 'connection':
+'WORKS_FOR', 'entity': 'Meta', 'related': 'Dhruv Batra'}, {'article_relationship': 'MENTIONS', 'connection': 'WORKS_FOR', 'entity': 'Meta', 'related': 'Adam
+Mosseri'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Meta', 'related': 'Meta layoffs'}, {'article_relationship':
+'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Meta', 'related': 'Meta layoff announcement'}, {'article_relationship': 'MENTIONS', 'connection':
+'PARTICIPATED_IN', 'entity': 'Meta', 'related': 'Meta cut 11,000 jobs'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Meta',
+'related': 'Meta workforce cuts'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Meta', 'related': 'launch of a new startup
+accelerator'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Meta', 'related': 'Oslo court rejection of Meta’s arguments'},
+{'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Meta', 'related': 'privacy complaint lodged against Meta'},
+{'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Meta', 'related': 'lawsuit against Meta over harms to teens and young users'},
+{'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Meta', 'related': 'newly formed working group on AI-generated disinformation'},
+{'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Meta', 'related': 'AI Alliance founding'}, {'article_relationship': 'MENTIONS',
+'connection': 'ACCUSED_OF', 'entity': 'Meta', 'related': 'shadowbanning'}, {'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'Meta',
+'related': 'suppression of Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'Meta', 'related': 'moderation
+bias'}, {'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'Meta', 'related': 'personalized ads'}, {'article_relationship': 'MENTIONS',
+'connection': 'ACCUSED_OF', 'entity': 'Meta', 'related': 'EU consumer law'}, {'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'Meta',
+'related': 'harms to teens and young users'}, {'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'Meta', 'related': 'willful
+negligence'}, {'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'Meta', 'related': 'Children’s Online Privacy Protection Act'},
+{'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'Meta', 'related': 'harm to children'}, {'article_relationship': 'MENTIONS',
+'connection': 'ACCUSED_OF', 'entity': 'Meta', 'related': 'lying about it'}, {'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'Meta',
+'related': "unlawful collection of children's personal information"}, {'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'Meta',
+'related': 'verifiable parental consent'}, {'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'Meta', 'related': 'turning a blind eye to
+kids on its platforms'}, {'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'Meta', 'related': 'kids on platforms'},
+{'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'Meta', 'related': "Turning a blind eye to kids on Meta's platforms"},
+{'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'Meta', 'related': "kids on Meta's platforms"}, {'article_relationship': 'MENTIONS',
+'connection': 'ACCUSED_OF', 'entity': 'Meta', 'related': 'COPPA'}, {'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'Meta', 'related':
+'harmful youth marketing claims'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Meta', 'related': 'US'}, {'article_relationship':
+'MENTIONS', 'connection': 'MADE', 'entity': 'Meta', 'related': 'Threads'}, {'article_relationship': 'MENTIONS', 'connection': 'MADE', 'entity': 'Meta',
+'related': 'monthly subscription for an ad-free version of Meta’s social networks'}, {'article_relationship': 'MENTIONS', 'connection': 'MADE', 'entity':
+'Meta', 'related': 'Meta ad-free subscription'}, {'article_relationship': 'MENTIONS', 'connection': 'MADE', 'entity': 'Meta', 'related': 'pay or consent
+offer'}, {'article_relationship': 'MENTIONS', 'connection': 'MADE', 'entity': 'Meta', 'related': 'Meta’s ad-free subscription'}, {'article_relationship':
+'MENTIONS', 'connection': 'MADE', 'entity': 'Meta', 'related': 'ad-free sub'}, {'article_relationship': 'MENTIONS', 'connection': 'MADE', 'entity': 'Meta',
+'related': 'Llama'}, {'article_relationship': 'MENTIONS', 'connection': 'MADE', 'entity': 'Meta', 'related': "Meta's AI-powered image generator"},
+{'article_relationship': 'MENTIONS', 'connection': 'MADE', 'entity': 'Meta', 'related': 'Imagine with Meta AI'}, {'article_relationship': 'MENTIONS',
+'connection': 'MADE', 'entity': 'Meta', 'related': 'Instagram'}, {'article_relationship': 'MENTIONS', 'connection': 'MADE', 'entity': 'Meta', 'related':
+'Instagram Threads'}, {'article_relationship': 'MENTIONS', 'connection': 'MADE', 'entity': 'Meta', 'related': 'Facebook'}, {'article_relationship': 'MENTIONS',
+'connection': 'MADE', 'entity': 'Meta', 'related': 'ad-free subscription version of Facebook and Instagram'}, {'article_relationship': 'MENTIONS', 'connection':
+'MADE', 'entity': 'Meta', 'related': 'ad-free subscription'}, {'article_relationship': 'MENTIONS', 'connection': 'MADE', 'entity': 'Meta', 'related': 'tracking
+offer'}, {'article_relationship': 'MENTIONS', 'connection': 'OWNS', 'entity': 'Meta', 'related': 'Threads'}, {'article_relationship': 'MENTIONS', 'connection':
+'OWNS', 'entity': 'Meta', 'related': 'WhatsApp'}, {'article_relationship': 'MENTIONS', 'connection': 'OWNS', 'entity': 'Meta', 'related': 'ad-free sub'},
+{'article_relationship': 'MENTIONS', 'connection': 'OWNS', 'entity': 'Meta', 'related': 'Facebook'}, {'article_relationship': 'MENTIONS', 'connection': 'OWNS',
+'entity': 'Meta', 'related': 'social media platforms'}, {'article_relationship': 'MENTIONS', 'connection': 'OWNS', 'entity': 'Meta', 'related': 'Emu'},
+{'article_relationship': 'MENTIONS', 'connection': 'OWNS', 'entity': 'Meta', 'related': 'very large online platform (VLOP)'}, {'article_relationship':
+'MENTIONS', 'connection': 'OWNS', 'entity': 'Meta', 'related': 'Instagram'}, {'article_relationship': 'MENTIONS', 'connection': 'OWNS', 'entity': 'Meta',
+'related': 'Instagram Threads'}, {'article_relationship': 'MENTIONS', 'connection': 'COMPETES_WITH', 'entity': 'Meta', 'related': 'OpenAI'},
+{'article_relationship': 'MENTIONS', 'connection': 'PART_OF', 'entity': 'Meta', 'related': 'Code’s Task Force Working Group on Generative AI'},
+{'article_relationship': 'MENTIONS', 'connection': 'PART_OF', 'entity': 'Meta', 'related': 'human rights teams'}, {'article_relationship': 'MENTIONS',
+'connection': 'PART_OF', 'entity': 'Meta', 'related': 'Facebook'}, {'article_relationship': 'MENTIONS', 'connection': 'PART_OF', 'entity': 'Meta', 'related':
+'Instagram'}, {'article_relationship': 'MENTIONS', 'connection': 'FOUNDED', 'entity': 'Meta', 'related': 'AI Alliance'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'ceasefire between Hamas and Israel', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing
+Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'ceasefire between Hamas and Israel', 'related': 'Hamas'},
+{'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'ceasefire between Hamas and Israel', 'related': 'Israel'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Colombia', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s
+suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Colombia', 'related': 'Meta'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Colombia', 'related': 'Every movie and show coming to Netflix in November'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Colombia', 'related': 'Meet Alliance DAO’s latest accelerator cohort of startups
+building in crypto winter'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Colombia', 'related': 'Kravata'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'technical issues', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’
+that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'technical issues', 'related': 'Meta'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Al-Aqsa Mosque', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’
+that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Al-Aqsa Mosque', 'related': 'Meta'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israeli police', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’
+that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israeli police', 'related': 'How Chinese firm
+linked to repression of Uyghurs aids Israeli surveillance in West Bank'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity':
+'Israeli police', 'related': 'clash between Israeli police and Ramadan worshippers'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'clash between Israeli police and Ramadan worshippers', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian
+voices'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'clash between Israeli police and Ramadan worshippers', 'related':
+'Israeli police'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'clash between Israeli police and Ramadan worshippers',
+'related': 'Ramadan worshippers'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Ramadan worshippers', 'related': 'Meta has a
+moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN',
+'entity': 'Ramadan worshippers', 'related': 'clash between Israeli police and Ramadan worshippers'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'WhatsApp', 'related': 'More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'WhatsApp', 'related': 'Everton players and fans will be fired up by points penalty,
+asserts Sean Dyche'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'WhatsApp', 'related': 'Meta has a moderation bias problem, not
+just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'WhatsApp', 'related': 'Meta'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'WhatsApp', 'related': 'X plans to use payment, phone and ID verification to stop
+bots'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'WhatsApp', 'related': '5 things we learned so far about the Google antitrust
+case'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'WhatsApp', 'related': 'The Ray-Ban Meta smart glasses actually make the future
+look cool'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'WhatsApp', 'related': 'Temu was the most-downloaded iPhone app in the
+U.S. in 2023'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'WhatsApp', 'related': "Israel's prince of public diplomacy"},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'WhatsApp', 'related': 'The UK just laid out new rules for the internet — it only gets
+harder from here'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'WhatsApp', 'related': '2023 in social media: the case for the
+fediverse'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'WhatsApp', 'related': 'Beeper reversed engineered iMessage to bring blue
+bubble texts to Android users'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'WhatsApp', 'related': 'Palestine’s growing tech
+industry has been literally blown apart by Israel’s war on Hamas'}, {'article_relationship': 'MENTIONS', 'connection': 'OWNS', 'entity': 'WhatsApp', 'related':
+'Meta'}, {'article_relationship': 'MENTIONS', 'connection': 'OWNS', 'entity': 'WhatsApp', 'related': 'Facebook'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'Facebook employees', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian
+voices'}, {'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'Facebook employees', 'related': 'bias against Arab and Muslim users'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'bias against Arab and Muslim users', 'related': 'Meta has a moderation bias problem,
+not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'bias against Arab and
+Muslim users', 'related': 'Facebook employees'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'BuzzFeed News', 'related': 'policies
+that don’t scale globally'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'BuzzFeed News', 'related': 'Meta has a moderation bias
+problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'human error',
+'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'human error', 'related': 'VAR apology list in Premier League: Updated list of PGMOL apologies for referee mistakes in English football'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'human error', 'related': 'Meta'}, {'article_relationship': 'MENTIONS', 'connection':
+'SAID', 'entity': 'human error', 'related': 'Mikel Arteta'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'policies that don’t scale
+globally', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'policies that don’t scale globally', 'related': 'BuzzFeed News'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'Oversight Board', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'third-party due diligence report', 'related': 'Meta has a moderation bias problem, not
+just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'May 2021 conflict', 'related':
+'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'Hebrew content', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Palestinian Arabic', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing
+Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'hostile speech classifier', 'related': 'Meta has a moderation
+bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'government
+requests to remove content', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'York', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian
+voices'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'York', 'related': 'Meta'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'Miranda Sissons', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Miranda Sissons', 'related': 'Meta'}, {'article_relationship': 'MENTIONS', 'connection':
+'WORKS_FOR', 'entity': 'Miranda Sissons', 'related': 'Meta'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'regional Palestinian
+organizations', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'other advocacy groups', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian
+voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'non-English languages', 'related': 'Meta has a moderation bias problem, not
+just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'special operations center',
+'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'special operations center', 'related': 'Meta says it’s prioritizing livestreaming checks during Israel-Hamas war'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'special operations center', 'related': 'Meta'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'Alhamdulillah', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'balance of power between Israelis and Palestinians', 'related': 'Meta has a moderation
+bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'balance of power
+between Israelis and Palestinians', 'related': 'Abukhater'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'human rights teams',
+'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection':
+'PART_OF', 'entity': 'human rights teams', 'related': 'Meta'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Shayaan Khan',
+'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection':
+'SAID', 'entity': 'Shayaan Khan', 'related': 'Islamophobic and racist rhetoric'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Shayaan
+Khan', 'related': 'Meta’s lack of cultural competence'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Wadea Al-Fayoume', 'related':
+'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'Islamophobic and racist rhetoric', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Islamophobic and racist rhetoric', 'related': 'Shayaan Khan'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'war in Gaza', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian
+voices'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'war in Gaza', 'related': 'Gaza'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'fatal stabbing of Wadea Al-Fayoume', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing
+Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Meta’s lack of cultural competence', 'related': 'Meta has a
+moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Meta’s
+lack of cultural competence', 'related': 'Shayaan Khan'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': '404 Media', 'related': 'Meta
+has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': '404 Media', 'related': 'Kick streamers consider leaving over CEO’s comments in a sex worker ‘prank’ stream'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'Arabic translations', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian
+voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Al Saadi', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’
+that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Al Saadi', 'related': 'Meta'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Al Saadi', 'related': 'Instagram'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'Dominic-Madori Davis', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': '#istandwithisrael', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’
+that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israeli flag', 'related': 'Meta has a
+moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Syria', 'related': "Israel's defense undone by reliance on technology"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Syria',
+'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'Syria', 'related': 'Dissecting impact of Israel-Hamas conflict on markets'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'Syria', 'related': "Israel's blockade of Gaza means that a region the size of Philadelphia faces a real risk of starvation, says Peace
+Studies scholar"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Syria', 'related': "'Too big to fail' Egypt faces economic crisis
+but has an anti-Gaza refugee policy. Israel and the U.S. hope that will change"}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN',
+'entity': 'Syria', 'related': 'clashes along Israel’s borders with Syria and Lebanon'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Court ruling to evict Palestinian families from Sheikh Jarrah', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing
+Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Court ruling to evict Palestinian families from Sheikh Jarrah',
+'related': 'People are turning to Snap Map for firsthand perspectives from Gaza'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'violence', 'related': 'After warning, the EU opens investigation into X over alleged disinformation'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'violence', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'violence', 'related': 'People are turning to Snap Map for firsthand perspectives from
+Gaza'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'violence', 'related': 'The obsessive tormenter who made professors’ lives
+miserable'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'violence', 'related': '5 things to know before watching the Five Nights
+at Freddy’s movie'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'violence', 'related': 'The best horror movies you can watch right
+now'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'violence', 'related': 'Snap'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'Community Guidelines', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Community Guidelines', 'related': 'People are turning to Snap Map for firsthand
+perspectives from Gaza'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Ukraine', 'related': 'Meta has a moderation bias problem,
+not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Ukraine', 'related':
+'People are turning to Snap Map for firsthand perspectives from Gaza'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Ukraine',
+'related': 'Early impressions of Google’s Gemini aren’t great'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Ukraine', 'related':
+"Gen Z just saw the worst war in Israel in 50 years break out all over the internet, but they were raised on 'disturbing images'"}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Ukraine', 'related': "'Too big to fail' Egypt faces economic crisis but has an anti-Gaza refugee policy. Israel
+and the U.S. hope that will change"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Ukraine', 'related': "Vladimir Putin's invasion
+of Ukraine"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Ukraine', 'related': 'Republicans dump Jim Jordan as House Speaker
+nominee, leaving Congress in crisis yet again'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Ukraine', 'related': "Hitting the
+Books: We are the frogs in the boiling pot, it's time we started governing like it."}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Ukraine', 'related': 'Deepfake election risks trigger EU call for more generative AI safeguards'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'Ukraine', 'related': 'Christmas proves that love triumphs over hate — even amid war, suffering, tragedy and turmoil'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Ukraine', 'related': 'Google fakes an AI demo, Grand Theft Auto VI goes viral and
+Spotify cuts jobs'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Ukraine', 'related': "Republicans just dumped Jim Jordan again.
+They're looking for another speaker candidate"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Ukraine', 'related': 'U.S.-China
+relations are now more about crisis prevention'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Ukraine', 'related': "With hopes of
+victory fading, Ukraine's fight against Russia could get even harder in 2024"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Ukraine', 'related': 'Cruise hits the brakes on driverless, UAW makes progress and more EV backpedaling'}, {'article_relationship': 'MENTIONS', 'connection':
+'SAID', 'entity': 'Ukraine', 'related': 'Sam Cranny-Evans'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Ukraine',
+'related': 'war in Europe'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Ukraine', 'related': 'war in Ukraine'},
+{'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Ukraine', 'related': 'Russian invasion of Ukraine'}, {'article_relationship':
+'MENTIONS', 'connection': 'COMPETES_WITH', 'entity': 'Ukraine', 'related': 'Russia'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'humanitarian crisis', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'humanitarian crisis', 'related': 'People are turning to Snap Map for firsthand perspectives from Gaza'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'humanitarian crisis', 'related': "Israel's blockade of Gaza means that a region the
+size of Philadelphia faces a real risk of starvation, says Peace Studies scholar"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'humanitarian crisis', 'related': '8 authors and their 8 gift book picks for this holiday season'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID',
+'entity': 'humanitarian crisis', 'related': 'International aid groups'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'harassment',
+'related': 'Why Mozilla is betting on a decentralized social networking future'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'harassment', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'harassment', 'related': 'The obsessive tormenter who made professors’ lives miserable'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'harassment', 'related': 'The UK just laid out new rules for the internet — it only gets harder from here'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'harassment', 'related': 'YouTube demonetizes popular content creator SSSniperwolf
+after doxxing accusations'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'harassment', 'related': 'Victor Ray'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'harassment', 'related': 'Victoria O’Meara'}, {'article_relationship': 'MENTIONS',
+'connection': 'ACCUSED_OF', 'entity': 'harassment', 'related': 'professor up for tenure'}, {'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF',
+'entity': 'harassment', 'related': 'individual'}, {'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'harassment', 'related': 'S.'},
+{'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'harassment', 'related': 'Douglass'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'hate crime', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'hate crime', 'related': 'The obsessive tormenter who made professors’ lives
+miserable'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'Sam Altman backs teens’ startup, Google unveils the Pixel
+8 and TikTok tests an ad-free tier'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'After warning, the EU opens
+investigation into X over alleged disinformation'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'The Israel-Hamas
+War Is Drowning X in Disinformation'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'EU fires urgent warning at Elon
+Musk’s X over illegal content and disinformation following Hamas attacks'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X',
+'related': 'Is Google Search better than the rest? And is that fair?'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related':
+'X may go ad-free?'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'Travis Kelce says he tried to delete his
+‘nonsense’ tweets before they went viral'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'ChatGPT: Everything you
+need to know about the AI-powered chatbot'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'A comprehensive list of
+2023 tech layoffs'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'From Justin Timberlake to Sam Asghari: A timeline
+of Britney Spears’ relationships'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'Taylor Swift-Travis Kelce
+timeline: Everything to know about rumored romance between pop star, Chiefs TE'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X',
+'related': 'Govee’s colorful LED light strips are on sale just in time for Halloween'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'X', 'related': 'Here’s how Rainforest, a budding Stripe rival, aims to win over software companies'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'X', 'related': 'How the conspiracy-fueled Epoch Times went mainstream and made millions'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'X', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'People are turning to Snap Map for firsthand perspectives from Gaza'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'Early impressions of Google’s Gemini aren’t great'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': "'Massive intel failure by Mossad': Hamas' surprise attack on Israel
+shocks internet"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'Elon Musk’s X faces first DSA probe in EU over
+illegal content risks, moderation, transparency and deceptive UX design'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X',
+'related': 'Travis Kelce faces backlash after comments about ‘finding a breeder’ resurface amid Taylor Swift romance'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'X', 'related': 'Sarah Michelle Gellar hits out at Roblox after her son’s account gets hacked'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from
+NCAA cheating investigation'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'Potential Conor McGregor Fight Could
+Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'X', 'related': 'X plans to use payment, phone and ID verification to stop bots, in addition to the new $1/yr fee'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'X plans to use payment, phone and ID verification to stop bots'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'With Amo, the founder of Zenly wants to make social apps social
+again'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'Comeback kings Richmond take the AFLW points in Cairns'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'Microsoft Activision: What does deal mean for gamers?'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'A scientist reckons with climate grief'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'The best October Prime Day gaming deals'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'X', 'related': 'Deepfake election risks trigger EU call for more generative AI safeguards'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'X', 'related': 'What’s at stake in the Supreme Court’s landmark social media case'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'X', 'related': 'Fans react to most ‘heartbreaking’ scene in The Crown'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'X', 'related': 'WebSummit derailed by founder’s public fight with those supporting Israel in Hamas conflict'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'Truth Behind Jake Paul Dating Dillon Danis’ Ex-girlfriend: Did MMA Star Break Up With Savannah
+Montano?'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': "Bryce Harper 'Atta Boy' controversy, explained: Why
+Orlando Arcia's comments led to backlash, Alanna Rizzo rant"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related':
+"OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did'"}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'Meta says it’s prioritizing livestreaming checks during Israel-Hamas war'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'Tennis News: Kyrgios escalates beef with Becker, change ‘warrior’
+Novak had to make, WTA criticised for charisma fail'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': '8 predictions
+for AI in 2024'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'Here are the best deals on headphones and wireless
+earbuds we could find'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'Binance to pay $4.3B in fines and CEO ‘CZ’ to
+step down, plead guilty to anti-money laundering charges'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': "Blue
+Halloween buckets for autism: What they mean and why they're sparking controversy"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'X', 'related': 'Commission'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'X (formerly Twitter) is worst for
+disinformation, per EU analysis'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'Beeper Mini is back in operation
+after Apple’s attempt to shut it down'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'NBL Round 4: Creek pours in
+points as Phoenix swamp Sixers, CJ claims Kings didn’t look after DJ'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related':
+"Israel's prince of public diplomacy"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'A timeline of Sam Altman’s
+firing from OpenAI — and the fallout'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'EU commissioner sidesteps
+MEPs’ questions about CSAM microtargeting'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'Republicans still don’t
+know how to talk to young voters online'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'Gag City is a viral win for
+Nicki Minaj'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'Spill toasts one year with a 2.7M seed extension, Kerry
+Washington and champagne'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'The UK just laid out new rules for the
+internet — it only gets harder from here'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'Flipboard becomes a
+federated app with support for ActivityPub'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': '2023 in social media:
+the case for the fediverse'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'Sam Altman ousted as OpenAI’s CEO'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'YouTube demonetizes popular content creator SSSniperwolf after doxxing
+accusations'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'Here are the best Kindle deals right now'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'Verge Deals'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'X', 'related': "The inside story of Dave Clark's tumultuous last days at Flexport"}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'X', 'related': 'What’s up with Tesla’s Cybertruck? Everything to know about much-hyped electric pickup'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'TwitchCon 2023 was better than last year, but everyone hated Las Vegas'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': "See stunning images of STEVE and auroras from this weekend's powerful
+solar storm"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'EU lawmakers bag late night deal on ‘global first’ AI
+rules'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'The best anti-Prime Big Deal Day deals'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'Pebble, the Twitter alternative previously known as T2, is shutting
+down'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'X', 'related': 'The world came tantalizingly close to a deal to phase out
+fossil fuels'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'X', 'related': 'Eliot Higgins'}, {'article_relationship': 'MENTIONS',
+'connection': 'SAID', 'entity': 'X', 'related': 'Breton'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'X', 'related': 'Glenn
+Greenwald'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'X', 'related': 'Musk'}, {'article_relationship': 'MENTIONS', 'connection':
+'SAID', 'entity': 'X', 'related': 'EU'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'X', 'related': 'Devin Finzer'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'X', 'related': 'European Commission'}, {'article_relationship': 'MENTIONS', 'connection':
+'SAID', 'entity': 'X', 'related': 'Farraro'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'X', 'related': 'Elon Musk'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'X', 'related': 'Similarweb'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID',
+'entity': 'X', 'related': 'Vera Jourova'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'X', 'related': 'Changpeng Zhao'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'X', 'related': 'EU lawmakers'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID',
+'entity': 'X', 'related': 'EU’s top diplomat'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'X', 'related': 'Commission'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'X', 'related': 'Mekić'}, {'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF',
+'entity': 'X', 'related': 'disinformation'}, {'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'X', 'related': 'illegal content'},
+{'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'X', 'related': 'formal infringement proceedings'}, {'article_relationship':
+'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'X', 'related': 'formal infringement proceedings against X'}, {'article_relationship': 'MENTIONS',
+'connection': 'ACCUSED_OF', 'entity': 'X', 'related': 'deceptive design of user interface'}, {'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF',
+'entity': 'X', 'related': 'transparency obligations'}, {'article_relationship': 'MENTIONS', 'connection': 'MADE', 'entity': 'X', 'related': 'payment, phone and
+ID verification'}, {'article_relationship': 'MENTIONS', 'connection': 'COMPETES_WITH', 'entity': 'X', 'related': 'Spill'}, {'article_relationship': 'MENTIONS',
+'connection': 'COMPETES_WITH', 'entity': 'X', 'related': 'Instagram Threads'}, {'article_relationship': 'MENTIONS', 'connection': 'COMPETES_WITH', 'entity':
+'X', 'related': 'Pebble'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Egypt', 'related': 'EU fires urgent warning at Elon Musk’s
+X over illegal content and disinformation following Hamas attacks'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Egypt',
+'related': "Israel's defense undone by reliance on technology"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Egypt', 'related':
+'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'Egypt', 'related': "Israel's blockade of Gaza means that a region the size of Philadelphia faces a real risk of starvation, says Peace Studies
+scholar"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Egypt', 'related': "'Too big to fail' Egypt faces economic crisis but has
+an anti-Gaza refugee policy. Israel and the U.S. hope that will change"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Egypt',
+'related': 'Israel thwarts Hamas on the financial battlefield'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Egypt', 'related': 'Olaf
+Scholz'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Egypt', 'related': 'Satloff'}, {'article_relationship': 'MENTIONS',
+'connection': 'SAID', 'entity': 'Egypt', 'related': 'Fabiani'}, {'article_relationship': 'MENTIONS', 'connection': 'WORKS_FOR', 'entity': 'Egypt', 'related':
+'Abdel-Fattah El-Sisi'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Egypt', 'related': 'deal with the IMF'},
+{'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Egypt', 'related': '1973 attack on Israel'}, {'article_relationship':
+'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Egypt', 'related': 'peace treaty'}, {'article_relationship': 'MENTIONS', 'connection':
+'PARTICIPATED_IN', 'entity': 'Egypt', 'related': 'establishment of full diplomatic relations'}, {'article_relationship': 'MENTIONS', 'connection':
+'PARTICIPATED_IN', 'entity': 'Egypt', 'related': 'strategic alliance'}, {'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'Egypt',
+'related': 'El-Sisi'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Egypt', 'related': 'anonymous user'},
+{'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Egypt', 'related': 'European governments'}, {'article_relationship': 'MENTIONS',
+'connection': 'PART_OF', 'entity': 'Egypt', 'related': 'anti-Gaza refugee policy'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'terrorism', 'related': 'After warning, the EU opens investigation into X over alleged disinformation'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'terrorism', 'related': 'EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'terrorism', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s
+suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'terrorism', 'related': 'People are turning to Snap
+Map for firsthand perspectives from Gaza'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'terrorism', 'related': "'Massive intel
+failure by Mossad': Hamas' surprise attack on Israel shocks internet"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'terrorism',
+'related': '‘Massive intel failure by Mossad’: Hamas’ surprise attack on Israel shocks internet'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'terrorism', 'related': "'Too big to fail' Egypt faces economic crisis but has an anti-Gaza refugee policy. Israel and the U.S. hope that
+will change"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'terrorism', 'related': 'Israel thwarts Hamas on the financial
+battlefield'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'terrorism', 'related': 'EU lawmakers bag late night deal on ‘global
+first’ AI rules'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'terrorism', 'related': 'Dr. Jaswant Gandhi'}, {'article_relationship':
+'MENTIONS', 'connection': 'SAID', 'entity': 'terrorism', 'related': 'United States'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity':
+'terrorism', 'related': 'Europe'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Palestinians', 'related': 'Meta has a moderation
+bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Palestinians', 'related': "Israel's blockade of Gaza means that a region the size of Philadelphia faces a real risk of starvation, says Peace Studies
+scholar"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Palestinians', 'related': "'Too big to fail' Egypt faces economic crisis
+but has an anti-Gaza refugee policy. Israel and the U.S. hope that will change"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Palestinians', 'related': 'How Chinese firm linked to repression of Uyghurs aids Israeli surveillance in West Bank'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'Palestinians', 'related': "Israel's prince of public diplomacy"}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'Palestinians', 'related': 'Israel’s startup ecosystem: down but not out'}, {'article_relationship': 'MENTIONS', 'connection':
+'LOCATED_IN', 'entity': 'Palestinians', 'related': 'Negev desert'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'European Union',
+'related': 'More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'European Union', 'related': 'After warning, the EU opens investigation into X over alleged disinformation'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'European Union', 'related': 'EU fires urgent warning at Elon Musk’s X over illegal content and disinformation
+following Hamas attacks'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'European Union', 'related': 'Amazon’s iRobot purchase sucks
+up formal competition concerns in EU'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'European Union', 'related': 'ChatGPT:
+Everything you need to know about the AI-powered chatbot'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'European Union',
+'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'European Union', 'related': 'Norway seeks to extend ban on Meta’s consentless tracking ads across the EU'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'European Union', 'related': "Israel's blockade of Gaza means that a region the size of Philadelphia faces a
+real risk of starvation, says Peace Studies scholar"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'European Union', 'related':
+'Patterns of Surface Warming Matter for Climate Sensitivity'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'European Union',
+'related': 'Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'European Union', 'related': 'Tim Sweeney on Epic’s victory royale over Google'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'European Union', 'related': 'Deepfake election risks trigger EU call for more generative AI safeguards'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'European Union', 'related': 'NMPA: Generative AI is ‘the greatest risk to the human
+creative class that has ever existed’'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'European Union', 'related': "What we expect
+at Apple's Scary Fast event: M3-powered MacBook Pros and new iMacs"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'European Union',
+'related': "The shipping industry’s boom-and-bust cycle is so severe carriers face going from bumper profits to losing money in the space of a few years: 'I'm
+certainly concerned'"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'European Union', 'related': 'Meta says it’s prioritizing
+livestreaming checks during Israel-Hamas war'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'European Union', 'related': 'Europe’s
+artists and labels could lose $137m annually to US recorded music rightsholders if EU law isn’t changed, trade groups warn'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'European Union', 'related': '62% of TikTok users in the United States pay for a music streaming service
+(report)'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'European Union', 'related': 'X (formerly Twitter) is worst for
+disinformation, per EU analysis'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'European Union', 'related': 'EU commissioner
+sidesteps MEPs’ questions about CSAM microtargeting'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'European Union', 'related': 'EU
+says incoming rules for general purpose AIs can evolve over time'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'European Union',
+'related': 'EU lawmakers bag late night deal on ‘global first’ AI rules'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'European
+Union', 'related': 'AI-generated disinformation'}, {'article_relationship': 'MENTIONS', 'connection': 'WORKS_FOR', 'entity': 'European Union', 'related': 'Vera
+Jourova'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'European Union', 'related': 'formal DSA investigation on X'},
+{'article_relationship': 'MENTIONS', 'connection': 'PART_OF', 'entity': 'European Union', 'related': 'European Commission'}, {'article_relationship':
+'MENTIONS', 'connection': 'PART_OF', 'entity': 'European Union', 'related': 'European Union Emissions Trading System'}, {'article_relationship': 'MENTIONS',
+'connection': 'PART_OF', 'entity': 'European Union', 'related': 'EU member states'}, {'article_relationship': 'MENTIONS', 'connection': 'PART_OF', 'entity':
+'European Union', 'related': 'Commission'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Hamas', 'related': 'cameras'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Hamas', 'related': 'After warning, the EU opens investigation into X over alleged
+disinformation'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Hamas', 'related': 'EU fires urgent warning at Elon Musk’s X over
+illegal content and disinformation following Hamas attacks'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Hamas', 'related':
+'IDF'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Hamas', 'related': "Israel's defense undone by reliance on technology"},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Hamas', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s
+suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Hamas', 'related': 'Dissecting impact of
+Israel-Hamas conflict on markets'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Hamas', 'related': 'People are turning to Snap Map
+for firsthand perspectives from Gaza'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Hamas', 'related': "'Massive intel failure by
+Mossad': Hamas' surprise attack on Israel shocks internet"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Hamas', 'related':
+'‘Massive intel failure by Mossad’: Hamas’ surprise attack on Israel shocks internet'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Hamas', 'related': "Israel's blockade of Gaza means that a region the size of Philadelphia faces a real risk of starvation, says Peace Studies scholar"},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Hamas', 'related': "Gen Z just saw the worst war in Israel in 50 years break out all
+over the internet, but they were raised on 'disturbing images'"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Hamas', 'related':
+'Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'Hamas', 'related': 'If your startup doesn’t seem impossible at first, it’s not hard enough'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Hamas', 'related': "'Too big to fail' Egypt faces economic crisis but has an anti-Gaza refugee policy. Israel
+and the U.S. hope that will change"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Hamas', 'related': 'WebSummit derailed by
+founder’s public fight with those supporting Israel in Hamas conflict'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Hamas',
+'related': 'ASX rises after Wall Street gains on rate optimism; Oil drops'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Hamas',
+'related': 'Meta says it’s prioritizing livestreaming checks during Israel-Hamas war'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Hamas', 'related': 'How Chinese firm linked to repression of Uyghurs aids Israeli surveillance in West Bank'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'Hamas', 'related': "Israel's prince of public diplomacy"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'Hamas', 'related': 'Israel’s startup ecosystem: down but not out'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Hamas',
+'related': 'ASX set to rise ahead of inflation report after big tech lifts Wall Street'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'Hamas', 'related': 'Israel thwarts Hamas on the financial battlefield'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Hamas', 'related': "Israeli girl spends 9th birthday in 'tunnels of Gaza,' with 'no friends, 'no light,' says distraught father"}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Hamas', 'related': 'Palestine’s growing tech industry has been literally blown apart by Israel’s war on
+Hamas'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Hamas', 'related': 'October 7s'}, {'article_relationship': 'MENTIONS',
+'connection': 'SAID', 'entity': 'Hamas', 'related': 'Benjamin Netanyahu'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Hamas',
+'related': 'Younis Tirawi'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Hamas', 'related': 'Ben Muasya'}, {'article_relationship':
+'MENTIONS', 'connection': 'SAID', 'entity': 'Hamas', 'related': 'Republican politicians'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity':
+'Hamas', 'related': 'Paddy Cosgrave'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Hamas', 'related': 'Levy'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Hamas', 'related': 'Israel'}, {'article_relationship': 'MENTIONS', 'connection':
+'WORKS_FOR', 'entity': 'Hamas', 'related': 'Hamed al-Khachari'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Hamas',
+'related': 'Hamas’ attack'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Hamas', 'related': 'Saturday’s deadly attacks on
+Israel by Hamas terrorists'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Hamas', 'related': 'Hamas attacks on Israeli
+civilians and tourists'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Hamas', 'related': 'The attack'},
+{'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Hamas', 'related': 'Hamas’ attack on Israelis'}, {'article_relationship':
+'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Hamas', 'related': 'violent outbreak between Hamas and Israel'}, {'article_relationship': 'MENTIONS',
+'connection': 'PARTICIPATED_IN', 'entity': 'Hamas', 'related': 'Severe violent outbreak between Hamas and Israel'}, {'article_relationship': 'MENTIONS',
+'connection': 'PARTICIPATED_IN', 'entity': 'Hamas', 'related': 'ceasefire between Hamas and Israel'}, {'article_relationship': 'MENTIONS', 'connection':
+'PARTICIPATED_IN', 'entity': 'Hamas', 'related': 'Israel-Hamas conflict'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity':
+'Hamas', 'related': 'Violent fighting between Hamas and Israel'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Hamas',
+'related': "Hamas' surprise attack on Israel"}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Hamas', 'related': 'Hamas’
+surprise attack on Israel'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Hamas', 'related': '2014 war between Hamas and
+Israel'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Hamas', 'related': "Hamas' surprise attack on 20 Israeli towns and
+several military bases"}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Hamas', 'related': 'peace talks between Israel and
+Hamas'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Hamas', 'related': 'Hamas attacks'}, {'article_relationship':
+'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Hamas', 'related': 'Hamas attack on Israel'}, {'article_relationship': 'MENTIONS', 'connection':
+'PARTICIPATED_IN', 'entity': 'Hamas', 'related': 'Hamas’ terrorist attacks against Israel'}, {'article_relationship': 'MENTIONS', 'connection':
+'PARTICIPATED_IN', 'entity': 'Hamas', 'related': 'conflict between Israel and Hamas'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN',
+'entity': 'Hamas', 'related': 'Hamas’s deadly Oct. 7 assault'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Hamas',
+'related': 'Hamas attack'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Hamas', 'related': 'music festival'},
+{'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Hamas', 'related': "Hamas's attack on Israel"}, {'article_relationship':
+'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Hamas', 'related': '7 October Hamas attacks'}, {'article_relationship': 'MENTIONS', 'connection':
+'PARTICIPATED_IN', 'entity': 'Hamas', 'related': 'war'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Hamas', 'related':
+'Hamas’ deadly attacks on Israelis'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Hamas', 'related': "Hamas' attack on
+Israel"}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Hamas', 'related': 'recruitment operations'},
+{'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Hamas', 'related': 'surprise attack'}, {'article_relationship': 'MENTIONS',
+'connection': 'PARTICIPATED_IN', 'entity': 'Hamas', 'related': 'Emily taken hostage by Hamas'}, {'article_relationship': 'MENTIONS', 'connection':
+'PARTICIPATED_IN', 'entity': 'Hamas', 'related': 'war between Israel and Hamas'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN',
+'entity': 'Hamas', 'related': 'attacks by Hamas'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Hamas', 'related': 'Israel’s
+war on Hamas'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Hamas', 'related': 'brutal attacks on Israel'},
+{'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'Hamas', 'related': 'atrocities'}, {'article_relationship': 'MENTIONS', 'connection':
+'LOCATED_IN', 'entity': 'Hamas', 'related': 'Gaza Strip'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Hamas', 'related':
+'Al-Shifa Hospital'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Hamas', 'related': 'Gaza'}, {'article_relationship':
+'MENTIONS', 'connection': 'MADE', 'entity': 'Hamas', 'related': 'ballistic missiles'}, {'article_relationship': 'MENTIONS', 'connection': 'MADE', 'entity':
+'Hamas', 'related': 'terror tunnels'}, {'article_relationship': 'MENTIONS', 'connection': 'COMPETES_WITH', 'entity': 'Hamas', 'related': 'Israel'},
+{'article_relationship': 'MENTIONS', 'connection': 'PART_OF', 'entity': 'Hamas', 'related': 'Palestinian territory'}, {'article_relationship': 'MENTIONS',
+'connection': 'PART_OF', 'entity': 'Hamas', 'related': 'kibbutz'}, {'article_relationship': 'MENTIONS', 'connection': 'PART_OF', 'entity': 'Hamas', 'related':
+'military wing of Hamas'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Hamas attack', 'related': 'Meta has a moderation bias
+problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Hamas attack',
+'related': 'Dissecting impact of Israel-Hamas conflict on markets'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Hamas attack',
+'related': 'WebSummit derailed by founder’s public fight with those supporting Israel in Hamas conflict'}, {'article_relationship': 'MENTIONS', 'connection':
+'PARTICIPATED_IN', 'entity': 'Hamas attack', 'related': 'Hamas'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Hamas attack',
+'related': 'Israel'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'War crimes', 'related': 'Meta has a moderation bias problem, not
+just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'War crimes', 'related': 'The
+best shows to stream in December'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'War crimes', 'related': 'WebSummit derailed by
+founder’s public fight with those supporting Israel in Hamas conflict'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'War crimes',
+'related': 'Paddy Cosgrave'}, {'article_relationship': 'MENTIONS', 'connection': 'ACCUSED_OF', 'entity': 'War crimes', 'related': 'Ben Roberts-Smith'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Arabic', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s
+suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Arabic', 'related': 'Here are over 40 last-minute
+gifts you can still nab before Christmas'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'West Bank', 'related': 'Meta has a
+moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'West Bank', 'related': "Israel's blockade of Gaza means that a region the size of Philadelphia faces a real risk of starvation, says Peace Studies scholar"},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'West Bank', 'related': 'How Chinese firm linked to repression of Uyghurs aids Israeli
+surveillance in West Bank'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'West Bank', 'related': 'Palestine’s growing tech industry
+has been literally blown apart by Israel’s war on Hamas'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'West Bank', 'related':
+'facial-recognition and surveillance-camera technology'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'West Bank', 'related':
+'Israeli settlers'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'West Bank', 'related': 'Palestinian communities'},
+{'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'West Bank', 'related': 'Palestinian tech startups'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israeli government', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing
+Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israeli government', 'related': "'Too big to fail' Egypt faces
+economic crisis but has an anti-Gaza refugee policy. Israel and the U.S. hope that will change"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'Israeli government', 'related': 'WebSummit derailed by founder’s public fight with those supporting Israel in Hamas conflict'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israeli government', 'related': 'How Chinese firm linked to repression of Uyghurs aids
+Israeli surveillance in West Bank'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israeli government', 'related': "Israel's prince
+of public diplomacy"}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Israeli government', 'related': '7 October Hamas attacks'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'human rights', 'related': 'After warning, the EU opens investigation into X over
+alleged disinformation'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'human rights', 'related': 'Meta has a moderation bias
+problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'human rights',
+'related': 'How Chinese firm linked to repression of Uyghurs aids Israeli surveillance in West Bank'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'human rights', 'related': 'EU lawmakers bag late night deal on ‘global first’ AI rules'}, {'article_relationship': 'MENTIONS',
+'connection': 'SAID', 'entity': 'human rights', 'related': 'Hikvision'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'human rights',
+'related': 'Conor Healy'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'United States', 'related': 'Meta has a moderation bias
+problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'United States',
+'related': "'Too big to fail' Egypt faces economic crisis but has an anti-Gaza refugee policy. Israel and the U.S. hope that will change"},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'United States', 'related': 'Tennis News: Kyrgios escalates beef with Becker, change
+‘warrior’ Novak had to make, WTA criticised for charisma fail'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'United States',
+'related': 'What USMNT can expect from Julian Nagelsmann, Germany in first match for new manager'}, {'article_relationship': 'MENTIONS', 'connection':
+'WORKS_FOR', 'entity': 'United States', 'related': 'David Witt'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'United
+States', 'related': 'United Cup'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'More from the US v Google
+trial: vertical search, pre-installs and the case of Firefox/Yahoo'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram',
+'related': 'Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Taylor Swift'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'From Justin Timberlake to Sam Asghari: A timeline of Britney Spears’ relationships'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': '‘I was being ritually tortured’: the most shocking moments in
+Britney Spears’ memoir'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Travis Kelce'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Taylor Swift-Travis Kelce timeline: Everything to know about
+rumored romance between pop star, Chiefs TE'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': "How OpenAI's
+ChatGPT has changed the world in just a year"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'He’s Hockey’s
+Brightest Young Star. This Is What Makes His Shot So Special.'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram',
+'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'Instagram', 'related': 'Norway seeks to extend ban on Meta’s consentless tracking ads across the EU'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'People are turning to Snap Map for firsthand perspectives from Gaza'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'The restaurant nearest Google'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'The obsessive tormenter who made professors’ lives miserable'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'European consumer groups band together to fight Meta’s
+self-serving ad-free sub — branding it ‘unfair’ and ‘illegal’'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram',
+'related': 'Meta seeks legislation that would require parents to approve teens’ app downloads'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'Instagram', 'related': 'Jamaica vs Canada live score, result, updates, highlights from CONCACAF Nations League quarterfinal first leg'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Will Smith speaks to crowd about ‘tumultuous’ relationship
+with Jada Pinkett Smith'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'How shooting Beyoncé and Kamala
+Harris made this photographer famous too'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Travis Kelce faces
+backlash after comments about ‘finding a breeder’ resurface amid Taylor Swift romance'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'Instagram', 'related': 'Sarah Michelle Gellar hits out at Roblox after her son’s account gets hacked'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'With Amo, the founder of Zenly wants to make social apps social again'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Comeback kings Richmond take the AFLW points in Cairns'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Latin artists have been paving the way for deals that offer more control, transparency,
+and better economics.'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Microsoft Activision: What does deal
+mean for gamers?'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': '5 things we learned so far about the
+Google antitrust case'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Deepfake election risks trigger EU
+call for more generative AI safeguards'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Creatives across
+industries are strategizing together around AI concerns'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related':
+'Truth Behind Jake Paul Dating Dillon Danis’ Ex-girlfriend: Did MMA Star Break Up With Savannah Montano?'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'Instagram', 'related': 'Meta turned a blind eye to kids on its platforms for years, unredacted lawsuit alleges'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Alcoholism, Ayahuasca and the Enlightenment of an N.F.L.
+Player'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Meta says it’s prioritizing livestreaming checks
+during Israel-Hamas war'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Is the Coverage on Taylor Swift and
+Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Britney Spears and Kevin Federline: A complete timeline of their relationship'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'The Ray-Ban Meta smart glasses actually make the future look
+cool'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Temu was the most-downloaded iPhone app in the U.S. in
+2023'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Fast fashion retailer ASOS struggles to engage
+consumers as company losses balloon'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Twitch’s money guy
+talks about the revenue split controversy and its monetization long game'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Instagram', 'related': 'Taylor Swift has already sold over $100 million of tickets for her concert movie. Theaters nationwide brace for impact'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'MLB free agency tracker: Live updates on news, rumors,
+signings and trades after 2023 Winter Meetings'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Amazon’s
+latest Echo Frames are more style than substance'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Adobe:
+Thanksgiving US online sales nudge up to $5.6B; Salesforce: $31.7B spent globally'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Instagram', 'related': 'French soccer players back African mobile video network StarNews Mobile in $3M round'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'ASX set to rise ahead of inflation report after big tech lifts Wall Street'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Israel thwarts Hamas on the financial battlefield'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'NASCAR offseason news roundup: Short track testing in Phoenix,
+new spotters for stars, more moves for 2024'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Noah Gragson'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Spill toasts one year with a 2.7M seed extension, Kerry
+Washington and champagne'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Emily Ratajkowski’s latest photo
+shoot sparks fury'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': '2023 in social media: the case for the
+fediverse'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'YouTube demonetizes popular content creator
+SSSniperwolf after doxxing accusations'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Cell phone shocker
+as 97% of kids use their device during school hours and beyond, says study'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Instagram', 'related': 'M.L.B. Superstar Shohei Ohtani to Sign $700 Million Deal With Dodgers'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'Instagram', 'related': 'Beeper reversed engineered iMessage to bring blue bubble texts to Android users'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Who Are Mikaela Shiffrin’s Parents? All You Need to Know About Skiing Legend’s Family'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Walks, tech and protein: how to parent your own parents'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram', 'related': 'Meta to offer ad-free subscription in Europe in bid to keep
+tracking other users'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Instagram', 'related': 'Bella Hadid'}, {'article_relationship':
+'MENTIONS', 'connection': 'SAID', 'entity': 'Instagram', 'related': 'Al Saadi'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity':
+'Instagram', 'related': 'Shohei Ohtani'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Instagram', 'related': 'Richelle
+Cranston'}, {'article_relationship': 'MENTIONS', 'connection': 'MADE', 'entity': 'Instagram', 'related': 'Meta'}, {'article_relationship': 'MENTIONS',
+'connection': 'OWNS', 'entity': 'Instagram', 'related': 'Meta'}, {'article_relationship': 'MENTIONS', 'connection': 'OWNS', 'entity': 'Instagram', 'related':
+'Facebook'}, {'article_relationship': 'MENTIONS', 'connection': 'PART_OF', 'entity': 'Instagram', 'related': 'Meta'}, {'article_relationship': 'MENTIONS',
+'connection': 'PART_OF', 'entity': 'Instagram', 'related': 'Threads'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram
+Stories', 'related': 'Britney Spears'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram Stories', 'related': 'Meta has a
+moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Instagram Stories', 'related': 'Meta'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Instagram Stories', 'related': 'Truth Behind
+Jake Paul Dating Dillon Danis’ Ex-girlfriend: Did MMA Star Break Up With Savannah Montano?'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'Instagram Stories', 'related': 'Britney Spears and Kevin Federline: A complete timeline of their relationship'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'Instagram Stories', 'related': 'Republicans still don’t know how to talk to young voters online'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'United Kingdom', 'related': 'Watch Argentina vs Paraguay live stream, TV channel, lineups, betting odds for
+World Cup qualifying match'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'United Kingdom', 'related': 'Meta has a moderation bias
+problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'United Kingdom',
+'related': 'Day of Reckoning -- featuring Anthony Joshua, Deontay Wilder: Predictions, undercard, odds, picks, start time'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'United Kingdom', 'related': 'The best VPN services for 2023'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'United Kingdom', 'related': 'Fans react to most ‘heartbreaking’ scene in The Crown'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'United Kingdom', 'related': '62% of TikTok users in the United States pay for a music streaming service (report)'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'United Kingdom', 'related': 'Argentina vs Paraguay live score, result, updates,
+highlights from CONMEBOL World Cup qualifying'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': 'Sam Altman backs
+teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'TikTok', 'related': 'Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': 'After warning, the EU opens investigation into X over alleged disinformation'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': 'The best Black Friday deals you can get for under $25'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': "How OpenAI's ChatGPT has changed the world in just a year"},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s
+suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': 'The people who ruined the
+internet'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': 'People are turning to Snap Map for firsthand
+perspectives from Gaza'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': "Young Taylor Swift fans go viral for
+struggling to open the star's CD: 'Making me laugh'"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': 'The
+obsessive tormenter who made professors’ lives miserable'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': "Gen Z
+just saw the worst war in Israel in 50 years break out all over the internet, but they were raised on 'disturbing images'"}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': 'European consumer groups band together to fight Meta’s self-serving ad-free sub — branding
+it ‘unfair’ and ‘illegal’'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': 'Meta seeks legislation that would
+require parents to approve teens’ app downloads'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': "Suicide
+prevention program at Nebraska children's hospital emphasizes encouraging, 'life-saving' notes"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'TikTok', 'related': '‘Mass breach of privacy’: TikTok under fire for tracking users online'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'TikTok', 'related': 'Martin Scorsese gets quizzed by his daughter on internet slang'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'TikTok', 'related': 'With Amo, the founder of Zenly wants to make social apps social again'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'TikTok', 'related': 'Latin artists have been paving the way for deals that offer more control, transparency, and better
+economics.'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': 'Michelle Jubelirer on Ice Spice, The Beatles, and
+reinventing Capitol Music Group'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': 'Michelle Jubelirer on Ice
+Spice, The Beatles, and reinventing Capitol Music Group: ‘I don’t think any label group has been able to turn things around as quickly as my team and I have
+done in less than two years.’'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': 'Deepfake election risks trigger
+EU call for more generative AI safeguards'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': 'NMPA: Generative AI
+is ‘the greatest risk to the human creative class that has ever existed’'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok',
+'related': 'Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'TikTok', 'related': 'Meta says it’s prioritizing livestreaming checks during Israel-Hamas war'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'TikTok', 'related': '62% of TikTok users in the United States pay for a music streaming service (report)'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': 'The Ray-Ban Meta smart glasses actually make the future look
+cool'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': 'Sony Music’s artists aren’t involved in YouTube’s new
+voice-cloning AI experiment'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': 'Temu was the most-downloaded
+iPhone app in the U.S. in 2023'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': 'Every movie and show coming to
+Netflix in November'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': 'Fast fashion retailer ASOS struggles to
+engage consumers as company losses balloon'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': 'Twitch’s money guy
+talks about the revenue split controversy and its monetization long game'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok',
+'related': 'Amazon’s latest Echo Frames are more style than substance'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok',
+'related': 'Adobe: Thanksgiving US online sales nudge up to $5.6B; Salesforce: $31.7B spent globally'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'TikTok', 'related': 'Republicans still don’t know how to talk to young voters online'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'TikTok', 'related': 'Gag City is a viral win for Nicki Minaj'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'TikTok', 'related': 'Israel thwarts Hamas on the financial battlefield'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'TikTok', 'related': '2023 in social media: the case for the fediverse'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'TikTok', 'related': 'YouTube demonetizes popular content creator SSSniperwolf after doxxing accusations'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'TikTok', 'related': 'Cell phone shocker as 97% of kids use their device during school hours and beyond, says study'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': '78 Absolute Best October Prime Day Deals (2023)'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': '‘Is this worth it?’: The difficult questions the Shameless
+founders have had to ask each other'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': 'Can anyone survive
+Fortnite as a job?'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': 'If the Cybertruck is deadly for
+pedestrians, it’s because all large trucks are'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': 'Some of our
+favorite devices are on sale for Black Friday.'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': 'Subtle as a
+sledgehammer, a pop icon returns'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'TikTok', 'related': 'Dropout’s dropping
+CollegeHumor on its 5th anniversary — here’s why and what the future holds'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'TikTok',
+'related': 'TikTok tracking pixel'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'TikTok', 'related': 'Australia’s privacy laws'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'TikTok', 'related': 'AI-generated content'}, {'article_relationship': 'MENTIONS',
+'connection': 'SAID', 'entity': 'TikTok', 'related': 'Taylor Swift'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'TikTok', 'related':
+'James Paterson'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'TikTok', 'related': 'OAIC spokesman'}, {'article_relationship':
+'MENTIONS', 'connection': 'SAID', 'entity': 'TikTok', 'related': 'Samantha Hoffman'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity':
+'TikTok', 'related': 'Alexis Ohanian'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'TikTok', 'related': 'Luminate'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'TikTok', 'related': 'Ole Obermann'}, {'article_relationship': 'MENTIONS', 'connection':
+'SAID', 'entity': 'TikTok', 'related': 'Henry'}, {'article_relationship': 'MENTIONS', 'connection': 'WORKS_FOR', 'entity': 'TikTok', 'related': 'Ole Obermann'},
+{'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'TikTok', 'related': 'TikTok changed its privacy policy'},
+{'article_relationship': 'MENTIONS', 'connection': 'MADE', 'entity': 'TikTok', 'related': 'TikTok report on songs reaching number one on the US Billboard Hot
+100 in 2022'}, {'article_relationship': 'MENTIONS', 'connection': 'MADE', 'entity': 'TikTok', 'related': 'SoundOn'}, {'article_relationship': 'MENTIONS',
+'connection': 'MADE', 'entity': 'TikTok', 'related': 'ByteDance'}, {'article_relationship': 'MENTIONS', 'connection': 'OWNS', 'entity': 'TikTok', 'related':
+'SoundOn'}, {'article_relationship': 'MENTIONS', 'connection': 'OWNS', 'entity': 'TikTok', 'related': 'ByteDance'}, {'article_relationship': 'MENTIONS',
+'connection': 'COMPETES_WITH', 'entity': 'TikTok', 'related': 'YouTube Shorts'}, {'article_relationship': 'MENTIONS', 'connection': 'COMPETES_WITH', 'entity':
+'TikTok', 'related': 'Google'}, {'article_relationship': 'MENTIONS', 'connection': 'PART_OF', 'entity': 'TikTok', 'related': 'Chinese government'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Reels', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s
+suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Reels', 'related': 'The Ray-Ban Meta smart glasses
+actually make the future look cool'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Libya', 'related': 'Meta has a moderation bias
+problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Libya', 'related':
+"'Too big to fail' Egypt faces economic crisis but has an anti-Gaza refugee policy. Israel and the U.S. hope that will change"}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Libya', 'related': 'The Soccer Star on the Verge of Breaking an 89-Year-Old Record'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Stories', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian
+voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Stories', 'related': 'People are turning to Snap Map for firsthand
+perspectives from Gaza'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Stories', 'related': 'Twitch’s money guy talks about the
+revenue split controversy and its monetization long game'}, {'article_relationship': 'MENTIONS', 'connection': 'MADE', 'entity': 'Stories', 'related':
+'Twitch'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel', 'related': 'After warning, the EU opens investigation into X over
+alleged disinformation'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel', 'related': 'EU fires urgent warning at Elon Musk’s
+X over illegal content and disinformation following Hamas attacks'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel',
+'related': 'ChatGPT: Everything you need to know about the AI-powered chatbot'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Israel', 'related': 'A comprehensive list of 2023 tech layoffs'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel', 'related':
+'Psagot worth 80% less since Rani Zim bought it'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel', 'related': "Israel's
+defense undone by reliance on technology"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel', 'related': 'Meta has a moderation
+bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel',
+'related': 'Dissecting impact of Israel-Hamas conflict on markets'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel',
+'related': 'People are turning to Snap Map for firsthand perspectives from Gaza'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Israel', 'related': 'There are no sacred numbers'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel', 'related': "'Massive
+intel failure by Mossad': Hamas' surprise attack on Israel shocks internet"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel',
+'related': '‘Massive intel failure by Mossad’: Hamas’ surprise attack on Israel shocks internet'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'Israel', 'related': "Israel's blockade of Gaza means that a region the size of Philadelphia faces a real risk of starvation, says Peace
+Studies scholar"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel', 'related': "Gen Z just saw the worst war in Israel in 50
+years break out all over the internet, but they were raised on 'disturbing images'"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Israel', 'related': 'Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel', 'related': 'If your startup doesn’t seem impossible at first, it’s not hard
+enough'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel', 'related': 'Why Gogoro picked India as its new go-to market'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel', 'related': 'Office rents in Israel stay firm - for now'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel', 'related': "'Too big to fail' Egypt faces economic crisis but has an
+anti-Gaza refugee policy. Israel and the U.S. hope that will change"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel',
+'related': '1973 attack on Israel'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel', 'related': 'Republicans dump Jim Jordan
+as House Speaker nominee, leaving Congress in crisis yet again'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel', 'related':
+'WebSummit derailed by founder’s public fight with those supporting Israel in Hamas conflict'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'Israel', 'related': 'Christmas proves that love triumphs over hate — even amid war, suffering, tragedy and turmoil'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel', 'related': 'ASX rises after Wall Street gains on rate optimism; Oil drops'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel', 'related': 'Meta says it’s prioritizing livestreaming checks during Israel-Hamas war'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel', 'related': 'How Chinese firm linked to repression of Uyghurs aids Israeli
+surveillance in West Bank'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel', 'related': 'Palo Alto in advanced talks to buy
+Talon and Dig in a $1B security sweep'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel', 'related': "Check Point sees
+'fantastic' year ahead even as rival report disappointing billings"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel',
+'related': "Republicans just dumped Jim Jordan again. They're looking for another speaker candidate"}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'Israel', 'related': "Israel's prince of public diplomacy"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Israel', 'related': 'Israel’s startup ecosystem: down but not out'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel',
+'related': 'ASX set to rise ahead of inflation report after big tech lifts Wall Street'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'Israel', 'related': 'Israel thwarts Hamas on the financial battlefield'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Israel', 'related': 'Looking for a book to read? Here are 14 tips for October'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Israel', 'related': "Israeli girl spends 9th birthday in 'tunnels of Gaza,' with 'no friends, 'no light,' says distraught father"}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Israel', 'related': 'Palestine’s growing tech industry has been literally blown apart by Israel’s war on
+Hamas'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Israel', 'related': 'Benjamin Netanyahu'}, {'article_relationship': 'MENTIONS',
+'connection': 'SAID', 'entity': 'Israel', 'related': 'Rania Khalek'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Israel', 'related':
+'Tarik Cyril Amar'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Israel', 'related': 'El-Sisi'}, {'article_relationship': 'MENTIONS',
+'connection': 'SAID', 'entity': 'Israel', 'related': 'Cosgrave'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Israel', 'related': 'Dor
+Shapiro'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Israel', 'related': 'Amnesty'}, {'article_relationship': 'MENTIONS',
+'connection': 'SAID', 'entity': 'Israel', 'related': 'Levy'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Israel',
+'related': 'Israel’s retaliatory strikes'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Israel', 'related': 'Severe violent
+outbreak between Hamas and Israel'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Israel', 'related': 'ceasefire between
+Hamas and Israel'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Israel', 'related': 'Israel-Hamas conflict'},
+{'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Israel', 'related': 'Saudi-Israel deal'}, {'article_relationship': 'MENTIONS',
+'connection': 'PARTICIPATED_IN', 'entity': 'Israel', 'related': 'Israel strike in Gaza'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN',
+'entity': 'Israel', 'related': 'clashes along Israel’s borders with Syria and Lebanon'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN',
+'entity': 'Israel', 'related': 'shutdown of offshore energy platform'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity':
+'Israel', 'related': 'Violent fighting between Hamas and Israel'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Israel',
+'related': 'ground invasion'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Israel', 'related': 'peace talks between Israel
+and Hamas'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Israel', 'related': 'peace treaty'}, {'article_relationship':
+'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Israel', 'related': 'establishment of full diplomatic relations'}, {'article_relationship': 'MENTIONS',
+'connection': 'PARTICIPATED_IN', 'entity': 'Israel', 'related': 'strategic alliance'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN',
+'entity': 'Israel', 'related': 'war between Israel and Hamas'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Israel',
+'related': 'Israel’s war on Hamas'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Israel', 'related': 'brutal attacks on
+Israel'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Israel', 'related': 'Ashraf Marwan'}, {'article_relationship':
+'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Israel', 'related': 'terrorist attack on Israel'}, {'article_relationship': 'MENTIONS', 'connection':
+'LOCATED_IN', 'entity': 'Israel', 'related': 'Microsoft'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Israel', 'related':
+'financial institutions'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Israel', 'related': 'Port of Ashdod'},
+{'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Israel', 'related': 'war in Israel’s south'}, {'article_relationship': 'MENTIONS',
+'connection': 'LOCATED_IN', 'entity': 'Israel', 'related': 'investment community'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity':
+'Israel', 'related': "Hamas' surprise attack on Israel"}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Israel', 'related': 'worst
+war in Israel in 50 years'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Israel', 'related': 'Hamas attack on Israel'},
+{'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Israel', 'related': 'war in Israel'}, {'article_relationship': 'MENTIONS',
+'connection': 'LOCATED_IN', 'entity': 'Israel', 'related': 'Hamas’ terrorist attacks against Israel'}, {'article_relationship': 'MENTIONS', 'connection':
+'LOCATED_IN', 'entity': 'Israel', 'related': 'Dig Security'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Israel', 'related':
+'Gogoro'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Israel', 'related': 'Google'}, {'article_relationship': 'MENTIONS',
+'connection': 'LOCATED_IN', 'entity': 'Israel', 'related': 'Israel’s tech industry'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity':
+'Israel', 'related': 'Hamas attack'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Israel', 'related': 'startups'},
+{'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Israel', 'related': "Hamas' attack on Israel"}, {'article_relationship': 'MENTIONS',
+'connection': 'LOCATED_IN', 'entity': 'Israel', 'related': 'Intel'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Israel',
+'related': 'Hand'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Israel', 'related': 'Nvidia'}, {'article_relationship':
+'MENTIONS', 'connection': 'COMPETES_WITH', 'entity': 'Israel', 'related': 'Hamas'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Digital Services Act', 'related': 'After warning, the EU opens investigation into X over alleged disinformation'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'Digital Services Act', 'related': 'EU fires urgent warning at Elon Musk’s X over illegal content and disinformation
+following Hamas attacks'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Digital Services Act', 'related': 'Meta has a moderation
+bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Digital
+Services Act', 'related': 'Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Digital Services Act', 'related': 'X (formerly Twitter) is worst for disinformation,
+per EU analysis'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Digital Services Act', 'related': 'EU commissioner sidesteps MEPs’
+questions about CSAM microtargeting'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Digital Services Act', 'related': 'The UK just
+laid out new rules for the internet — it only gets harder from here'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Digital
+Services Act', 'related': 'Meta to offer ad-free subscription in Europe in bid to keep tracking other users'}, {'article_relationship': 'MENTIONS',
+'connection': 'SAID', 'entity': 'Digital Services Act', 'related': 'X'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Digital Services
+Act', 'related': 'Mekić'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Digital Services Act', 'related': 'Whitehead'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Digital Services Act', 'related': 'Wikimedia Foundation'}, {'article_relationship':
+'MENTIONS', 'connection': 'SAID', 'entity': 'Digital Services Act', 'related': 'Rebecca MacKinnon'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'content filters', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'content filters', 'related': 'Discord’s latest teen safety blitz starts with content
+filters and automated warnings'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'SBF’s trial starts soon, but how
+did he — and FTX — get here?'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'Sam Altman backs teens’ startup,
+Google unveils the Pixel 8 and TikTok tests an ad-free tier'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'More
+from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'U.S.', 'related': "Chiefs vs. Packers live score, updates, highlights from NFL 'Sunday Night Football' game"}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'U.S.', 'related': "Vikings vs. Broncos live score, updates, highlights from NFL 'Sunday Night Football' game"},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'There’s something going on with AI startups in France'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'What to know about Fortnite maker Epic Games’ antitrust battle with
+Google, starting today'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'One year later, ChatGPT is still alive
+and kicking'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'ChatGPT: Everything you need to know about the
+AI-powered chatbot'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'Italy gives OpenAI to-do list for lifting
+ChatGPT suspension order'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'A comprehensive list of 2023 tech
+layoffs'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'After losing her leg to the flu, Virginia woman urges
+people to get vaccinated: ‘Don’t waste time’'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'Ozempic, Wegovy may
+be linked to stomach paralysis and other digestive issues in large-scale study'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'U.S.', 'related': '2023 Kentucky online sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'How the conspiracy-fueled Epoch Times went mainstream and made millions'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'Biden’s AI EO hailed as broad, but not deep without legislation to
+match'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’
+that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'How U.S. Women’s Soccer
+Team Lured Emma Hayes Away From Chelsea'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'Buckle up for more
+‘turbulence’ in the housing market, BofA says—it’s a housing recession, 1980s style'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'U.S.', 'related': 'Meet the American who made cranberries a Turkey Day tradition, Marcus Urann, farmer with can-do spirit'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'Cranberries: A Thanksgiving Staple With a Rich History and Unique Biology'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': "Israel's blockade of Gaza means that a region the size of
+Philadelphia faces a real risk of starvation, says Peace Studies scholar"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.',
+'related': "Gen Z just saw the worst war in Israel in 50 years break out all over the internet, but they were raised on 'disturbing images'"},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'Meta seeks legislation that would require parents to approve teens’
+app downloads'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': "Dolphins vs. Eagles live score, updates,
+highlights from NFL 'Sunday Night Football' game"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': "Bears vs.
+Vikings live score, updates, highlights from NFL 'Monday Night Football' game"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'U.S.', 'related': "Mayo Clinic sees AI as 'transformative force' in health care, appoints Dr. Bhavik Patel as chief AI officer"}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'Beyoncé tops box office with $21 million debut for concert film ‘Renaissance’'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'The fate of US venture capital in China teeters on uncertainty'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'Amazon brings conversational AI to kids with launch of ‘Explore
+with Alexa’'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'If your startup doesn’t seem impossible at first,
+it’s not hard enough'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': "Chiefs vs. Jets live score, updates,
+highlights from NFL 'Sunday Night Football' game"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'Michelle
+Jubelirer on Ice Spice, The Beatles, and reinventing Capitol Music Group: ‘I don’t think any label group has been able to turn things around as quickly as my
+team and I have done in less than two years.’'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'Nike misses
+revenue expectations for the first time in two years, beats on earnings and gross margin'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'U.S.', 'related': "'Too big to fail' Egypt faces economic crisis but has an anti-Gaza refugee policy. Israel and the U.S. hope that will change"},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': "Sex, Signal messages, and sabotaging FTX's code: SBF execs and
+Bahamas roommates tell all in court"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'Keep Labs’ smart storage
+redefines medication management'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'Canada vs Jamaica live score,
+updates, highlights, result from CONCACAF Nations League quarterfinal second leg'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'U.S.', 'related': '5 things we learned so far about the Google antitrust case'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'U.S.', 'related': "We could end the AIDS epidemic in less than a decade. Here's how."}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'U.S.', 'related': 'WebSummit derailed by founder’s public fight with those supporting Israel in Hamas conflict'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': "Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game"},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': "Lions vs. Packers live score, updates, highlights from NFL
+'Thursday Night Football' game"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': "Seahawks vs. Giants live score,
+updates, highlights from NFL 'Monday Night Football' game"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': "Bills
+vs. Bengals live score, updates, highlights from NFL 'Sunday Night Football' game"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'U.S.', 'related': 'Meta turned a blind eye to kids on its platforms for years, unredacted lawsuit alleges'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'U.S.', 'related': 'The small and affordable EVs we lost in 2023'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'U.S.', 'related': 'Northern Lights: Here are the best tips to help you spot the stunning display in the US and abroad'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'Google fakes an AI demo, Grand Theft Auto VI goes viral and Spotify cuts jobs'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'The Steam Deck OLED improves much more than its screen'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': '8 predictions for AI in 2024'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': "Check Point sees 'fantastic' year ahead even as rival report disappointing billings"},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'Binance to pay $4.3B in fines and CEO ‘CZ’ to step down, plead
+guilty to anti-money laundering charges'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'Coinbase rallies more
+than 60% in same month that FTX and Binance founders brace for prison'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.',
+'related': 'Temu was the most-downloaded iPhone app in the U.S. in 2023'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.',
+'related': 'U.S.-China relations are now more about crisis prevention'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.',
+'related': "At Christmas, Don McLean sings the praises of 'Silent Night,' other holiday classics: 'My mother's favorite'"}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'World Series 2023 live score: Rangers vs. Diamondbacks updates, highlights, results from Game 4'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': "Billie Jean King sees progress in her crusade for more investment
+women’s sports: 'We’re kind of at a tipping point'"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'Twitch is the
+best way to watch sports, when you can actually watch sports on Twitch'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.',
+'related': "Jets vs. Raiders live score, updates, highlights from NFL 'Sunday Night Football' game"}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'U.S.', 'related': "With hopes of victory fading, Ukraine's fight against Russia could get even harder in 2024"}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'Israel’s startup ecosystem: down but not out'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'Patriots vs. Broncos live score, updates, highlights from NFL Sunday night football game'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'Adobe: Thanksgiving US online sales nudge up to $5.6B; Salesforce:
+$31.7B spent globally'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'The housing winter arrives early as
+existing home sales crash to Great Recession levels and the long-feared ‘deep freeze’ sets in'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'U.S.', 'related': "Bears vs. Panthers live score, updates, highlights from NFL 'Thursday Night Football' game"}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'World Series 2023 live score: Rangers vs. Diamondbacks updates, highlights, results from Game 3'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': "'In God We Trust' essential to America's future as national faith
+appears to wane, says Washington pastor"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'Tesla ‘digs its own
+grave with the Cybertruck,’ Convoy collapses and Rivian scores a win at Rebelle'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'U.S.', 'related': 'Amazon’s Tye Brady discusses generative AI, humanoid robots and mobile manipulation'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'U.S.', 'related': "The inside story of Dave Clark's tumultuous last days at Flexport"}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'Beeper reversed engineered iMessage to bring blue bubble texts to Android users'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'What’s up with Tesla’s Cybertruck? Everything to know about
+much-hyped electric pickup'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'Fly with Delta frequently? Small
+business owners can score a solid welcome bonus and other perks with the Delta SkyMiles Gold Business Card'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'U.S.', 'related': 'The best horror movies you can watch right now'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'U.S.', 'related': "Dangerous 'superbugs' are a growing threat, and antibiotics can't stop their rise. What can?"}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'Pittsburgh boy, 10, needs second liver transplant to save his life: ‘Only possible through
+love’'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': "Israeli girl spends 9th birthday in 'tunnels of Gaza,'
+with 'no friends, 'no light,' says distraught father"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'U.S.', 'related': 'The best
+comedies you’ll find on streaming right now'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'U.S.', 'related': 'Sylvester'},
+{'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'U.S.', 'related': 'Chapter 11 bankruptcy'}, {'article_relationship': 'MENTIONS',
+'connection': 'LOCATED_IN', 'entity': 'U.S.', 'related': 'Copa America 2024'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity':
+'U.S.', 'related': 'research institutions'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'U.S.', 'related': 'California'},
+{'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'U.S.', 'related': 'autonomous truck startup'}, {'article_relationship': 'MENTIONS',
+'connection': 'LOCATED_IN', 'entity': 'U.S.', 'related': 'Binance'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'U.S.',
+'related': 'crypto staking services'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'U.S.', 'related': 'Texas'},
+{'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'U.S.', 'related': 'eight U.S. medical centers'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'automation', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian
+voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'automation', 'related': 'California’s privacy watchdog eyes AI rules with
+opt-out and access rights'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'automation', 'related': 'Amazon’s Tye Brady discusses
+generative AI, humanoid robots and mobile manipulation'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Facebook', 'related': 'A
+timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Facebook', 'related': 'How the conspiracy-fueled Epoch Times went mainstream and made millions'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'Facebook', 'related': 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Facebook', 'related': 'Norway seeks to extend ban on Meta’s consentless tracking ads
+across the EU'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Facebook', 'related': 'The people who ruined the internet'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Facebook', 'related': 'People are turning to Snap Map for firsthand perspectives from
+Gaza'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Facebook', 'related': 'The obsessive tormenter who made professors’ lives
+miserable'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Facebook', 'related': 'European consumer groups band together to fight
+Meta’s self-serving ad-free sub — branding it ‘unfair’ and ‘illegal’'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Facebook',
+'related': 'The fate of US venture capital in China teeters on uncertainty'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Facebook', 'related': 'Martin Scorsese’s late-stage career has proved Quentin Tarantino wrong'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'Facebook', 'related': 'With Amo, the founder of Zenly wants to make social apps social again'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'Facebook', 'related': 'Deepfake election risks trigger EU call for more generative AI safeguards'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'Facebook', 'related': 'Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Facebook', 'related': 'Meta turned a blind eye to kids on its platforms for years,
+unredacted lawsuit alleges'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Facebook', 'related': 'Meta says it’s prioritizing
+livestreaming checks during Israel-Hamas war'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Facebook', 'related': 'Earnings week
+ahead: Amazon, Microsoft, Alphabet, Meta, Ford, GM and more'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Facebook', 'related':
+'The Ray-Ban Meta smart glasses actually make the future look cool'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Facebook',
+'related': 'Temu was the most-downloaded iPhone app in the U.S. in 2023'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Facebook',
+'related': "Blue Halloween buckets for autism: What they mean and why they're sparking controversy"}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'Facebook', 'related': 'A field guide to the vampire authors who were probably vampires'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'Facebook', 'related': 'Republicans still don’t know how to talk to young voters online'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Facebook', 'related': 'ASX set to rise ahead of inflation report after big tech lifts Wall Street'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Facebook', 'related': 'Israel thwarts Hamas on the financial battlefield'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Facebook', 'related': '2023 in social media: the case for the fediverse'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Facebook', 'related': 'Can anyone survive Fortnite as a job?'},
+{'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Facebook', 'related': 'Pittsburgh boy, 10, needs second liver transplant to save his
+life: ‘Only possible through love’'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Facebook', 'related': 'Meta to offer ad-free
+subscription in Europe in bid to keep tracking other users'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Facebook', 'related':
+'Mapstead'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Facebook', 'related': 'Goeller'}, {'article_relationship': 'MENTIONS',
+'connection': 'MADE', 'entity': 'Facebook', 'related': 'Meta'}, {'article_relationship': 'MENTIONS', 'connection': 'OWNS', 'entity': 'Facebook', 'related':
+'Meta'}, {'article_relationship': 'MENTIONS', 'connection': 'PART_OF', 'entity': 'Facebook', 'related': 'Meta'}, {'article_relationship': 'MENTIONS',
+'connection': 'MENTIONS', 'entity': 'Gaza', 'related': 'After warning, the EU opens investigation into X over alleged disinformation'}, {'article_relationship':
+'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Gaza', 'related': 'EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following
+Hamas attacks'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Gaza', 'related': 'ASX to open lower; Wall Street falls as the clamp
+tightens from rising bond yields'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Gaza', 'related': "Israel's defense undone by
+reliance on technology"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Gaza', 'related': 'Dissecting impact of Israel-Hamas
+conflict on markets'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Gaza', 'related': 'People are turning to Snap Map for firsthand
+perspectives from Gaza'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Gaza', 'related': "Israel's blockade of Gaza means that a
+region the size of Philadelphia faces a real risk of starvation, says Peace Studies scholar"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'Gaza', 'related': 'If your startup doesn’t seem impossible at first, it’s not hard enough'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'Gaza', 'related': "'Too big to fail' Egypt faces economic crisis but has an anti-Gaza refugee policy. Israel and the U.S. hope that will
+change"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Gaza', 'related': 'WebSummit derailed by founder’s public fight with those
+supporting Israel in Hamas conflict'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Gaza', 'related': 'ASX rises after Wall Street
+gains on rate optimism; Oil drops'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Gaza', 'related': 'Meta says it’s prioritizing
+livestreaming checks during Israel-Hamas war'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Gaza', 'related': 'How Chinese firm
+linked to repression of Uyghurs aids Israeli surveillance in West Bank'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Gaza',
+'related': 'U.S.-China relations are now more about crisis prevention'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Gaza',
+'related': "Israel's prince of public diplomacy"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Gaza', 'related': 'Israel’s startup
+ecosystem: down but not out'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Gaza', 'related': 'ASX set to rise ahead of inflation
+report after big tech lifts Wall Street'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Gaza', 'related': 'Israel thwarts Hamas on
+the financial battlefield'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Gaza', 'related': "Israeli girl spends 9th birthday in
+'tunnels of Gaza,' with 'no friends, 'no light,' says distraught father"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Gaza',
+'related': 'Palestine’s growing tech industry has been literally blown apart by Israel’s war on Hamas'}, {'article_relationship': 'MENTIONS', 'connection':
+'SAID', 'entity': 'Gaza', 'related': 'Snap'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Gaza', 'related': 'war in Gaza'},
+{'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Gaza', 'related': 'Israel setting up permanent air, land and sea blockades around
+Gaza'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Gaza', 'related': 'United Nations Relief and Works Agency for Palestine
+Refugees in the Near East'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Gaza', 'related': 'Hamas'}, {'article_relationship':
+'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Gaza', 'related': 'bombardment of Gaza'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN',
+'entity': 'Gaza', 'related': 'currency service providers'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Gaza', 'related':
+'terrorist organizations'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Gaza', 'related': 'tunnels of Gaza'},
+{'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Gaza', 'related': 'Emily'}, {'article_relationship': 'MENTIONS', 'connection':
+'LOCATED_IN', 'entity': 'Gaza', 'related': 'first-ever coding academy'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Gaza',
+'related': 'Gaza Sky Geeks'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Gaza', 'related': 'universities'},
+{'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Gaza', 'related': 'Dalia Awad'}, {'article_relationship': 'MENTIONS', 'connection':
+'PART_OF', 'entity': 'Gaza', 'related': 'northern Gaza'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Israel', 'related': 'moving
+Gazans to tent camps in the Sinai Peninsula'}, {'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Israel', 'related': 'Hamas'},
+{'article_relationship': 'MENTIONS', 'connection': 'SAID', 'entity': 'Israel', 'related': 'Amnesty International'}, {'article_relationship': 'MENTIONS',
+'connection': 'WORKS_FOR', 'entity': 'Israel', 'related': 'Levy'}, {'article_relationship': 'MENTIONS', 'connection': 'PARTICIPATED_IN', 'entity': 'Israel',
+'related': 'Israel setting up permanent air, land and sea blockades around Gaza'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity':
+'Palestine', 'related': 'Meta'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Palestine', 'related': '‘Massive intel failure by
+Mossad’: Hamas’ surprise attack on Israel shocks internet'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Palestine', 'related':
+'‘Bleeds green and gold’: Ballsy career-saving call that’s delivered Arnie a record-breaking moment'}, {'article_relationship': 'MENTIONS', 'connection':
+'MENTIONS', 'entity': 'Palestine', 'related': 'Palestine’s growing tech industry has been literally blown apart by Israel’s war on Hamas'},
+{'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Palestine', 'related': 'Microsoft'}, {'article_relationship': 'MENTIONS',
+'connection': 'LOCATED_IN', 'entity': 'Palestine', 'related': 'Apple'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Palestine',
+'related': 'Gaza Sky Geeks'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Palestine', 'related': 'Palestinian tech startups'},
+{'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Palestine', 'related': 'Saudi Arabia companies'}, {'article_relationship':
+'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Palestine', 'related': 'Nvidia'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity':
+'Palestine', 'related': 'international companies'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Jordan', 'related': 'ChatGPT:
+Everything you need to know about the AI-powered chatbot'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Jordan', 'related': 'Meta
+has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices'}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS',
+'entity': 'Jordan', 'related': "Israel's blockade of Gaza means that a region the size of Philadelphia faces a real risk of starvation, says Peace Studies
+scholar"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Jordan', 'related': "'Too big to fail' Egypt faces economic crisis but has
+an anti-Gaza refugee policy. Israel and the U.S. hope that will change"}, {'article_relationship': 'MENTIONS', 'connection': 'MENTIONS', 'entity': 'Jordan',
+'related': 'Palestine’s growing tech industry has been literally blown apart by Israel’s war on Hamas'}, {'article_relationship': 'MENTIONS', 'connection':
+'LOCATED_IN', 'entity': 'Jordan', 'related': 'Leen Al Saadi'}, {'article_relationship': 'MENTIONS', 'connection': 'LOCATED_IN', 'entity': 'Jordan', 'related':
+'Mohammad Alnobani'}]
+</item 3>
+
+<item 4>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+“And so I think that is what is the most problematic right now about that particular rule, and the way that it’s enforced.”
+
+Over the 13 days leading up to the ceasefire between Hamas and Israel, 7amleh documented more than 500 reports of Palestinian “digital rights violations,”
+including the removal and restriction of content, hashtags and accounts related to the conflict.
+
+Meta blamed some of the instances of perceived censorship to technical issues, like one that prevented users in Palestine and Colombia from posting Instagram
+Stories. It attributed others to human error, like blocking the hashtag for Al-Aqsa Mosque, the holy site where Israeli police clashed with Ramadan worshippers,
+because it was mistaken for a terrorist organization. The company also blocked journalists in Gaza from WhatsApp without explanation.
+
+The same month, a group of Facebook employees filed internal complaints accusing the company of bias against Arab and Muslim users. In internal posts obtained
+by BuzzFeed News, an employee attributed the bias to “years and years of implementing policies that just don’t scale globally.”
+
+Graph facts:
+- Jalal Abukhater -WORKS_FOR-> 7amleh
+- People are turning to Snap Map for firsthand perspectives from Gaza -MENTIONS-> censorship
+- Leen Al Saadi -SAID-> censorship
+- The people who ruined the internet -MENTIONS-> censorship
+- Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices -MENTIONS-> Stone
+
+Entities: censorship, Palestinian digital rights violations, 7amleh, moderation bias, Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing
+Palestinian voices, Meta, ceasefire between Hamas and Israel, Colombia, technical issues, Al-Aqsa Mosque, Israeli police, clash between Israeli police and
+Ramadan worshippers, Ramadan worshippers, WhatsApp, Facebook employees
+</item 4>
+
+<item 5>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+Most recently, Instagram users accused Meta of “shadowbanning” their Stories about Palestine.
+
+It’s the latest in a lengthy history of incidents on Meta platforms that reflect an inherent bias against Palestinian users in its processes, as documented by
+years of complaints from both inside and outside the company. The company may not intentionally suppress specific communities, but its moderation practices
+often disproportionately affect Palestinian users.
+
+For instance, Meta struggles to navigate the cultural and linguistic nuances of Arabic, a language with over 25 dialects, and has been criticized for neglecting
+to adequately diversify its language resources. The company’s black-and-white policies often preclude it from effectively moderating any nuanced topic, like
+content that discusses violence without condoning it. Advocacy groups have also raised concerns that Meta’s partnerships with government agencies, such as the
+Israeli Cyber Unit, politically influence the platform’s policy decisions.
+
+Graph facts:
+- Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices -MENTIONS-> moderation
+- Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices -MENTIONS-> EU
+- People are turning to Snap Map for firsthand perspectives from Gaza -MENTIONS-> shadowbanning
+- Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices -MENTIONS-> Stone
+- Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices -MENTIONS-> Threads
+
+Entities: shadowbanning, Israeli Cyber Unit, moderation bias, Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices, Meta,
+TechCrunch, violence, Arabic, Instagram, Palestine
+</item 5>
+
+<item 6>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+Although harassment and abuse are still rampant on Instagram and Facebook, he said, the company has been responsive to suspending accounts with patterns of
+targeting other users.
+
+The company has also made more contact with regional Palestinian organizations since 2021, York added, but it’s been slow to implement recommendations from EFF
+and other advocacy groups. It’s “very clear” that Meta is not putting the same resources behind Arabic and other non-English languages, York said, compared to
+the attention Meta gives to countries that have the most regulatory pressure. Moderation of English and other European languages tends to be more comprehensive,
+for example, because the EU enforces the Digital Services Act.
+
+In Meta’s response to the report, Miranda Sissons, the company’s director of human rights, said that Meta was “assessing the feasibility” of reviewing Arabic
+content by dialect. Sissons said that the company has “large and diverse teams” who understand “local cultural context across the region,” including in
+Palestine.
+
+Graph facts:
+- EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks -MENTIONS-> EU
+- Amazon’s iRobot purchase sucks up formal competition concerns in EU -MENTIONS-> EU
+- ChatGPT: Everything you need to know about the AI-powered chatbot -MENTIONS-> EU
+- Biden’s AI EO hailed as broad, but not deep without legislation to match -MENTIONS-> EU
+- After warning, the EU opens investigation into X over alleged disinformation -MENTIONS-> EU
+
+Entities: EU, Arabic content, moderation bias, EFF, Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices, Meta, York,
+Miranda Sissons, regional Palestinian organizations, other advocacy groups, non-English languages, TechCrunch, human rights, Instagram, Digital Services Act
+</item 6>
+
+<item 7>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+During the last violent outbreak between Hamas and Israel in 2021, a report commissioned by Meta and conducted by a third party concluded that the company’s
+actions had an “adverse human rights impact” on Palestinian users’ right to freedom of expression and political participation.
+
+Meta communications director Andy Stone declined to comment on the record, and pointed TechCrunch to Meta’s newsroom post about the conflict, which was updated
+on Oct. 18 with a statement addressing the shadowbanning claims.
+
+“Our policies are designed to keep people safe on our apps while giving everyone a voice,” the post stated. “We apply these policies equally around the world
+and there is no truth to the suggestion that we are deliberately suppressing voice … We can make errors and that is why there is an appeals process for people
+to tell us when they think we have made the wrong decision, so we can look into it.”
+
+The belief that Meta shadowbans, or limits the visibility of, content about Palestine is not new.
+
+Graph facts:
+- Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices -MENTIONS-> moderation
+- Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices -MENTIONS-> EU
+- People are turning to Snap Map for firsthand perspectives from Gaza -MENTIONS-> shadowbanning
+- Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices -MENTIONS-> Stone
+- Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices -MENTIONS-> Threads
+
+Entities: shadowbanning, Andy Stone, violent outbreak between Hamas and Israel, deliberately suppressing voice, Meta has a moderation bias problem, not just a
+‘bug,’ that’s suppressing Palestinian voices, Meta, TechCrunch, Hamas, Israel, Palestine
+</item 7>
+
+<item 8>
+Meta seeks legislation that would require parents to approve teens’ app downloads (TechCrunch, 2023-11-15T17:13:10+00:00)
+The former employee had provided to news outlets a treasure trove of documents that appeared to indicate Meta understood the harms it was causing — including
+things like body image issues among teens — but didn’t take action. Instagram head Adam Mosseri was later hauled before Congress in December 2021 to defend the
+app’s teen safety record, but so far, legislators have not come to any decision about how to regulate teen usage of these platforms.
+
+Instead, Meta began regulating itself, adding new defaults and features that would restrict teens’ access to content on its apps, protect their privacy and
+limit ad targeting to teens, as well as introducing parental controls.
+
+In more recent weeks, a second Meta whistleblower, Arturo Bejar, has come forward to express concerns that Instagram’s approach to protecting teens wasn’t
+working to keep them safe from sexual predators and unwanted sexual advances and harassment. Hired as a consultant on the matter, Bejar eventually blew the
+whistle on Meta after seeing issues remain unresolved following years of work.
+
+Graph facts:
+- Meta -MENTIONS-> Al-Aqsa Mosque
+- Meta -MENTIONS-> WhatsApp
+- Meta -MENTIONS-> Instagram Stories
+- Meta -MENTIONS-> Palestine
+- Meta -MENTIONS-> Colombia
+
+Entities: Meta, TechCrunch, Arturo Bejar, body image issues among teens, sexual predators, unwanted sexual advances and harassment, Adam Mosseri hauled before
+Congress, Meta seeks legislation that would require parents to approve teens’ app downloads, Congress, Instagram, teen safety, Adam Mosseri
+</item 8>
+
+<item 9>
+Meta seeks legislation that would require parents to approve teens’ app downloads (TechCrunch, 2023-11-15T17:13:10+00:00)
+Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents. In a blog post published today, Meta’s
+global head of Safety, Antigone Davis, argues that parents should be responsible for approving their teens’ app downloads and staked Meta’s position in
+supporting federal legislation that would require parental approval for app downloads for users under the age of 16.
+
+Guiding its reasoning, Meta pointed to recent Pew research that indicated that 81% of U.S. adults were in favor of requiring parental consent for teens to
+create social media accounts. While this may speak to popular opinion around parental sentiment, it doesn’t mean that parents have thought through who should be
+responsible for preventing or allowing teens’ access to social media, or how those apps should operate to protect teens.
+
+A coalition of 42 states and D.C. are currently suing Meta over its harms to teens and young users, in part referencing findings from Meta whistleblower Frances
+Haugen.
+
+Graph facts:
+- Meta -MENTIONS-> Al-Aqsa Mosque
+- Meta -MENTIONS-> WhatsApp
+- Meta -MENTIONS-> Instagram Stories
+- Meta -MENTIONS-> Palestine
+- Meta -MENTIONS-> Colombia
+
+Entities: Meta, TechCrunch, Antigone Davis, coalition of 42 states and D.C., lawsuit against Meta over harms to teens and young users, Frances Haugen, harms to
+teens and young users, parental approval for teens’ app downloads, parental responsibility for approving teens’ app downloads, Meta seeks legislation that would
+require parents to approve teens’ app downloads, Pew Research
+</item 9>
+
+<item 10>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+“It feeds into the bias against Palestinian narrative genuinely. It really takes the balance against Palestinians in a situation where there’s a huge asymmetry
+of power.”
+
+A history of suppression
+
+Content about Palestine is disproportionately scrutinized, as demonstrated during the last severe violent outbreak between Hamas and Israel two years ago. Amid
+the violence following the May 2021 court ruling to evict Palestinian families from Sheikh Jarrah, a neighborhood in occupied East Jerusalem, users across
+Facebook and Instagram accused Meta of taking down posts and suspending accounts that voiced support for Palestinians.
+
+The digital rights nonprofit Electronic Frontier Foundation (EFF) described Meta’s actions in 2021 as “systemic censorship of Palestinian voices.” In its 2022
+report of Palestinian digital rights, 7amleh said that Meta is “still the most restricting company” compared to other social media giants in the extent of its
+moderation of the Palestinian digital space.
+
+Graph facts:
+- How Chinese firm linked to repression of Uyghurs aids Israeli surveillance in West Bank -MENTIONS-> occupied East Jerusalem
+- Hitting the Books: We are the frogs in the boiling pot, it's time we started governing like it. -MENTIONS-> Electronic Frontier Foundation
+- Jalal Abukhater -WORKS_FOR-> 7amleh
+- People are turning to Snap Map for firsthand perspectives from Gaza -MENTIONS-> Sheikh Jarrah
+- John Perry Barlow -FOUNDED-> Electronic Frontier Foundation
+
+Entities: Palestinian voices, 7amleh, moderation bias, Severe violent outbreak between Hamas and Israel, Sheikh Jarrah, occupied East Jerusalem, Electronic
+Frontier Foundation, Palestinian digital rights, Systemic censorship of Palestinian voices, Moderation of the Palestinian digital space, Meta has a moderation
+bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices, Meta, TechCrunch, Court ruling to evict Palestinian families from Sheikh Jarrah, Hamas
+</item 10>
+=== END ITEM id=8af76cdd85c2747d ===

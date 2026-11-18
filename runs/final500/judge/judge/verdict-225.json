@@ -1,0 +1,60 @@
+[
+{"id": "5d4a34a15ebd4a3f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "For the masses of NFL fans across the U.S., Thursday's clash between the Lions and Packers will be aired on Amazon Prime Video."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "For the masses of NFL fans across the U.S."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "For the masses of NFL fans across the U.S., Thursday's clash between the Bears and Panthers will be aired on Amazon Prime Video."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "For the masses of NFL fans across the U.S."}]}
+]},
+{"id": "96e316a55646e78d", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "While their wins have been dominant"}]}
+]},
+{"id": "7e72b4ec73155b2f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "the same ones the DOJ is going to keep asking: is Google really the best search engine, or is it just the one writing the biggest checks?"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla"}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 7, "quote": "filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "3.2", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "3.3", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "3.4", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]}
+]},
+{"id": "67ab9b2e96b4befa", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "It’s true that the Warriors received glowing grades from draft analysts"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "received glowing grades from draft analysts following their selections of Kuminga"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "selections of Kuminga, out of the G-League Ignite program"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "selections of Kuminga, out of the G-League Ignite program, at No. 7"}]},
+{"fact": "1.0", "status": "missing", "evidence": []}
+]},
+{"id": "2d32c61b84c76c47", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "said an Anthropic spokesperson, Sally Aldous"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "There was no attempt to remove Sam Altman from OpenAI by the co-founders of Anthropic"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "In the year since Altman catapulted ChatGPT to global fame"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "he has become Silicon Valley’s sought-after voice on the promise and potential dangers of artificial intelligence"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "he has become Silicon Valley’s sought-after voice on the promise and potential dangers of artificial intelligence"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "pushed out its co-founder and CEO Sam Altman"}, {"item": 4, "quote": "his sudden and mostly unexplained exit brought uncertainty to the industry’s future"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 4, "quote": "pushed out its co-founder and CEO Sam Altman"}, {"item": 4, "quote": "his sudden and mostly unexplained exit brought uncertainty to the industry’s future"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know."}]},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []},
+{"fact": "3.2", "status": "missing", "evidence": []},
+{"fact": "3.3", "status": "missing", "evidence": []}
+]},
+{"id": "4f44e649bfe25af5", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Floyd Mayweather’s Net Worth and His Billionaire Status"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status"}, {"item": 2, "quote": "his pockets became deeper and deeper"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status"}, {"item": 2, "quote": "his pockets became deeper and deeper"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]}
+]

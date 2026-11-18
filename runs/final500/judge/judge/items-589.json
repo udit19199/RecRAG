@@ -1,0 +1,363 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "3cf4def01c7c836d",
+   "gold": [
+    {
+     "sentence": " Born in Des Moines, Iowa, Watkins rose to fame in the early 1990s as a member of the girl-group TLC.",
+     "facts": {
+      "0.0": "Watkins was born in Des Moines, Iowa.",
+      "0.1": "Watkins rose to fame in the early 1990s.",
+      "0.2": "Watkins rose to fame as a member of the girl-group TLC."
+     }
+    },
+    {
+     "sentence": " She is best known as the former main vocalist and member of South Korean girl group T-ara.",
+     "facts": {
+      "1.0": "Watkins is best known as the former main vocalist of the South Korean girl group T-ara.",
+      "1.1": "Watkins is best known as the former member of the South Korean girl group T-ara."
+     }
+    }
+   ],
+   "items": [
+    "Lisa Lopes\nLisa Nicole Lopes (May 27, 1971 – April 25, 2002), better known by her stage name Left Eye, was an American hip hop singer, rapper, actress, songwriter and producer.\n\n She rose to fame in the early 1990s as one-third of the girl group TLC, alongside Tionne \"T-Boz\" Watkins and Rozonda \"Chilli\" Thomas.\n\n Besides rapping and singing background vocals on TLC recordings, Lopes was one of the creative forces behind the group.\n\n She received more cowriting credits than the other members.\n\n She also designed the outfits and stage for the group and brought concepts to the group image, album titles, artworks and music videos.\n\n Through her work with TLC, Lopes won four Grammy Awards.",
+    "Tionne Watkins\nTionne Tenese Watkins (born April 26, 1970), better known by her stage name T-Boz, is an American singer, songwriter, actress, author, and executive producer.\n\n Born in Des Moines, Iowa, Watkins rose to fame in the early 1990s as a member of the girl-group TLC.\n\n She has won four Grammy Awards for her work with TLC.",
+    "Park So-yeon (singer)\nPark So-yeon (born October 5, 1987), better known mononymously as Soyeon, is a South Korean singer and actress.\n\n She is best known as the former main vocalist and member of South Korean girl group T-ara.",
+    "TLC (group)\nTLC is an American girl group whose original line-up consisted of Tionne \"T-Boz\" Watkins, Lisa \"Left Eye\" Lopes and Rozonda \"Chilli\" Thomas.\n\n Formed in Atlanta, Georgia in 1990, the group was very successful during the 1990s despite numerous spats with the law, each other, and the group's record label and management.\n\n They scored nine top-ten hits on the \"Billboard\" Hot 100, including four number-one singles \"Creep\", \"Waterfalls\", \"No Scrubs\", and \"Unpretty\".\n\n The group also recorded four multi-platinum albums, including \"CrazySexyCool\" (1994) which still remains the only album by a female group to receive a diamond certification from the Recording Industry Association of America (RIAA).\n\n TLC also became the first R&B group in history to receive Million certification from the Recording Industry Association of Japan (RIAJ) for \"FanMail\" (1999).",
+    "Kim Tae-yeon discography\nApart from soundtrack recordings, Taeyeon has also recorded duets with other artists, most notably \"Like a Star\" with The One and \"Different\" with Kim Bum-soo, which peaked at numbers one and two on the Gaon Digital Chart, respectively.",
+    "Kim Tae-yeon discography\nKim Tae-yeon, better known by the mononym Taeyeon, is a South Korean singer.\n\n Her discography consists of one studio album, two extended plays (EPs), twenty singles (including four as featured artist), and three promotional singles.\n\n She debuted as a member of South Korean girl group Girls' Generation in August 2007 and initially gained some popularity as a singer upon recording soundtrack songs \"If\" for \"Hong Gil Dong\" and \"Can You Hear Me\" for \"Beethoven Virus\" (2008).\n\n She subsequently established herself as one of the most renowned vocalist on the South Korean music scene with further soundtrack recordings, notably \"I Love You\" for \"\" (2010), \"Missing You like Crazy\" for \"The King 2 Hearts\", \"Closer\" for \"To the Beautiful You\" (2012), and \"And One\" for \"That Winter, the Wind Blows\" (2013), all of which managed to enter the top ten of South Korea's Gaon Digital Chart.",
+    "Rain (Taeyeon song)\n\"Rain\" is a song by South Korean singer Kim Tae-yeon, a member of the South Korean girl group Girls' Generation.\n\n It was released digitally by S.M. Entertainment on February 3, 2016.",
+    "Girl Talk (TLC song)\n\"Girl Talk\" is a song by American group TLC.\n\n It was written by band members Lisa Lopes and Tionne Watkins along with Anita McLoud, Edmund \"Eddie Hustle\" Clement, and Kandi Burruss for the group's fourth studio album, \"3D\" (2002).\n\n Featuring production by Hustle, it was released as the album's lead single in September 2002, along with a previously unreleased song \"Get Away\".\n\n While the song contains vocals by Lisa Lopes, the music video for \"Girl Talk\" marked the band's first release without Lopes, following her death in April of the same year.",
+    "R U the Girl\nR U the Girl (also known as R U the Girl with T-Boz and Chilli) is an American reality series that aired on UPN in 2005.\n\n The series featured Tionne \"T-Boz\" Watkins and Rozonda \"Chilli\" Thomas, the remaining members of the all-girl R&B group TLC whose former member, Lisa \"Left Eye\" Lopes, died in a car crash in Honduras on April 25, 2002.\n\n Initially promoted as a contest to permanently replace Lopes 3 years after her death by TLC themselves, both Watkins and Thomas admitted that the winner of the contest would not be joining TLC full-time and would not be a full-time replacement member; the winner would only provide guest vocals on a new single by the duo.",
+    "Kim Tae-yeon\nKim Tae-yeon (born March 9, 1989), referred to as Taeyeon, is a South Korean singer.\n\n She had been a trainee at S.M. Entertainment's Starlight Academy during her middle school years before debuting as a member of the agency's girl group, Girls' Generation, in 2007.\n\n Since then, she has risen to prominence due to the group's success on the Asian music scene and further participated in the agency's projects Girls' Generation-TTS and SM the Ballad.\n\n Aside from group activities, she has also recorded songs for various television dramas and movies."
+   ]
+  },
+  {
+   "id": "c74c713b7fae19ae",
+   "gold": [
+    {
+     "sentence": " Game included wild boar, and red, fallow and roe deer.",
+     "facts": {
+      "0.0": "Game included wild boar.",
+      "0.1": "Game included red deer.",
+      "0.2": "Game included fallow deer.",
+      "0.3": "Game included roe deer."
+     }
+    },
+    {
+     "sentence": " This common species is native to western Eurasia, but has been introduced to Antigua & Barbuda, Argentina, South Africa, Fernando Pó, São Tomé, Madagascar, Mauritius, Mayotte, Réunion, Seychelles, Comoro Islands, Morocco, Algeria, Tunisia, Cyprus, Israel, Cape Verde, Lebanon, Australia, New Zealand, Canada, the United States, the Falkland Islands, and Peru.",
+     "facts": {
+      "1.0": "The common species is native to western Eurasia.",
+      "1.1": "The common species has been introduced to Antigua & Barbuda, Argentina, South Africa, Fernando Pó, São Tomé, Madagascar, Mauritius, Mayotte, Réunion, Seychelles, Comoro Islands, Morocco, Algeria, Tunisia, Cyprus, Israel, Cape Verde, Lebanon, Australia, New Zealand, Canada, the United States, the Falkland Islands, and Peru."
+     }
+    }
+   ],
+   "items": [
+    "White-bellied musk deer\nThe White-bellied musk deer or Himalayan musk deer (\"Moschus leucogaster\") is a musk deer species occurring in the Himalayas of Nepal, Bhutan, India, Pakistan and China.\n\n It is listed as endangered by the IUCN because of overexploitation resulting in a probable serious population decline.",
+    "Sri Lankan sambar deer\nThe Sri Lankan sambar deer (\"Rusa unicolor unicolor\") is a subspecies of sambar deer that lives in Sri Lanka.\n\n This subspecies is one of the largest sambar deer species with the largest antlers both in size and in body proportions.\n\n Large males weight up to 270–280 kg.\n\n Sri Lankan sambar live in lowland dry forests and mountain forests.\n\n Large herds of sambar deer roam the Horton Plains National Park, where it is the most common large mammal.",
+    "Red deer\nThe red deer (\"Cervus elaphus\") is one of the largest deer species.\n\n The red deer inhabits most of Europe, the Caucasus Mountains region, Asia Minor, Iran, parts of western Asia, and central Asia.\n\n It also inhabits the Atlas Mountains region between Morocco and Tunisia in northwestern Africa, being the only species of deer to inhabit Africa.\n\n Red deer have been introduced to other areas, including Australia, New Zealand, United States, Canada, Peru, Uruguay, Chile and Argentina.\n\n In many parts of the world, the meat (venison) from red deer is used as a food source.",
+    "Fallow deer\nThe fallow deer (\"Dama dama\") is a ruminant mammal belonging to the family Cervidae.\n\n This common species is native to western Eurasia, but has been introduced to Antigua & Barbuda, Argentina, South Africa, Fernando Pó, São Tomé, Madagascar, Mauritius, Mayotte, Réunion, Seychelles, Comoro Islands, Morocco, Algeria, Tunisia, Cyprus, Israel, Cape Verde, Lebanon, Australia, New Zealand, Canada, the United States, the Falkland Islands, and Peru.\n\n Some taxonomers include the rarer Persian fallow deer as a subspecies (\"D. d. mesopotamica\"), while others treat it as an entirely different species (\"D. mesopotamica\").",
+    "Moose\nThe moose (North America) or elk (Eurasia), \"Alces alces\", is the largest extant species in the deer family.\n\n Moose are distinguished by the broad, flat (or \"palmate\") antlers of the males; other members of the family have antlers with a dendritic (\"twig-like\") configuration.\n\n Moose typically inhabit boreal forests and temperate broadleaf and mixed forests of the Northern Hemisphere in temperate to subarctic climates. Hunting and other human activities have caused a reduction in the size of the moose's range over time.\n\n Moose have been reintroduced to some of their former habitats.\n\n Currently, most moose are found in Canada, Alaska, New England, Fennoscandia, Baltic States, and Russia.\n\n Their diet consists of both terrestrial and aquatic vegetation.\n\n The most common moose predators are the gray wolf along with bears and humans. Unlike most other deer species, moose are solitary animals and do not form herds.\n\n Although generally slow-moving and sedentary, moose can become aggressive and move quickly if angered or startled.\n\n Their mating season in the autumn features energetic fights between males competing for a female.",
+    "Marsh deer\nThe marsh deer (\"Blastocerus dichotomus\") is the largest deer species from South America reaching a length of 2 m and a shoulder height of 1.2 m .\n\n It is found in Argentina, Bolivia, Peru, Brazil, Uruguay and Paraguay.\n\n Formerly found in much of tropical and subtropical South America, it ranged east of the Andes, south from the Amazon rainforest, west of the Brazilian Atlantic rainforest and north of the Argentinian Pampa.\n\n Today it is largely reduced to isolated populations at marsh and lagoon zones in the Paraná, Paraguay, Araguaia and Guapore river basins.\n\n Small populations also occur in the southern Amazon, including Peru where protected in Bahuaja-Sonene National Park.\n\n It is listed as a vulnerable species by the IUCN and on CITES Appendix I.",
+    "Indian muntjac\nThe Indian muntjac (\"Muntiacus muntjak\"), also called red muntjac and barking deer, is a common muntjac deer species in South and Southeast Asia.\n\n It is listed as Least Concern on the IUCN Red List.",
+    "Visayan spotted deer\nThe Visayan spotted deer (\"Rusa alfredi\"), also known as the Philippine spotted deer, is a nocturnal and endangered species of deer located primarily in the rainforests of the Visayan islands of Panay and Negros though it once roamed other islands such as Cebu, Guimaras, Leyte, Masbate, and Samar.\n\n It is one of three endemic deer species in the Philippines, although it was not recognized as a separate species until 1983.\n\n An estimated 2,500 mature individuals survived worldwide as of 1996, according to the IUCN, although it is uncertain of how many of them still survive in the wild.\n\n The diet of the deer, which consists of a variety of different types of grasses, leaves, and buds within the forest, is the primary indicator of its habitat.\n\n Since 1991 the range of the species has severely decreased and is now almost co-extensive with that of the Visayan warty pig.",
+    "Forests of Mara and Mondrem\nThe Forests of Mara and Mondrem were adjacent medieval forests in Cheshire, England, which in the 11th century extended to over 60 sqmi , stretching from the Mersey in the north almost to Nantwich in the south, and from the Gowy in the west to the Weaver in the east.\n\n Mara and Mondrem were a hunting forest of the Norman Earls of Chester, established soon after 1071 by the first earl, Hugh d'Avranches.\n\n They might earlier have been an Anglo-Saxon hunting forest.\n\n Game included wild boar, and red, fallow and roe deer.",
+    "Lame Deer, Montana\nLame Deer (Meaveʼhoʼeno in Cheyenne) is a census-designated place (CDP) in Rosebud County, Montana.\n\n The community is named after Miniconjou Lakota chief Lame Deer, who was killed by the U.S. Army in 1877 under a flag of truce south of the town.\n\n It is the tribal and government agency headquarters of the Northern Cheyenne Indian Reservation.\n\n This is the location of the Chief Dull Knife College and the annual Northern Cheyenne Powwow."
+   ]
+  },
+  {
+   "id": "606b592c55e86dc0",
+   "gold": [
+    {
+     "sentence": "McFarland, USA (also known as McFarland) is a 2015 American sports drama film directed by Niki Caro, produced by Mark Ciardi and Gordon Gray, written by Christopher Cleveland, Bettina Gilois and Grant Thompson with music composed by Antônio Pinto.",
+     "facts": {
+      "0.0": "McFarland, USA is also known as McFarland.",
+      "0.1": "McFarland, USA is a 2015 American sports drama film.",
+      "0.2": "McFarland, USA was directed by Niki Caro.",
+      "0.3": "McFarland, USA was produced by Mark Ciardi.",
+      "0.4": "McFarland, USA was produced by Gordon Gray.",
+      "0.5": "McFarland, USA was written by Christopher Cleveland.",
+      "0.6": "McFarland, USA was written by Bettina Gilois.",
+      "0.7": "McFarland, USA was written by Grant Thompson.",
+      "0.8": "McFarland, USA has music composed by Antônio Pinto."
+     }
+    },
+    {
+     "sentence": "The Black Hole is a 1979 American science fiction film directed by Gary Nelson and produced by Walt Disney Productions.",
+     "facts": {
+      "1.0": "The Black Hole is a 1979 American science fiction film.",
+      "1.1": "The Black Hole was directed by Gary Nelson.",
+      "1.2": "The Black Hole was produced by Walt Disney Productions."
+     }
+    }
+   ],
+   "items": [
+    "Full Metal Jacket\nFull Metal Jacket is a 1987 British-American war film directed and produced by Stanley Kubrick.\n\n The screenplay by Kubrick, Michael Herr, and Gustav Hasford was based on Hasford's novel \"The Short-Timers\" (1979).\n\n Its storyline follows a platoon of U.S. Marines through their training, primarily focusing on two privates, Joker and Pyle, who struggle to get through camp under their foul-mouthed drill instructor, Gunnery Sergeant Hartman, and the experiences of two of the platoon's Marines in the Tet Offensive during the Vietnam War.\n\n The film's title refers to the full metal jacket bullet used by soldiers.\n\n The film was released in the United States on June 26, 1987.",
+    "List of accolades received by The Hurt Locker\n\"The Hurt Locker\" is a 2009 Iraq War film written by Mark Boal and directed by Kathryn Bigelow.\n\n The film premiered on September 4, 2008 at the 65th Venice International Film Festival, where it competed with \"The Wrestler\" for the Golden Lion award.\n\n It was released in Italy by Warner Bros.\n\n Pictures on October 10, 2008.\n\n Following a showing at the 33rd Toronto International Film Festival, Summit Entertainment picked the film up for distribution in the United States.\n\n \"The Hurt Locker\" was released in the United States on June 26, 2009, with a limited release at four theaters in Los Angeles and New York City.\n\n The film grossed over $145,000 on its opening weekend, averaging around $36,000 per theater.\n\n The following weekend, beginning July 3, the film grossed over $131,000 at nine theaters.\n\n It held the highest per-screen average of any movie playing theatrically in the United States for the first two weeks of its release, gradually moving into the top 20 chart.\n\n Summit Entertainment then released \"The Hurt Locker\" to more screens.",
+    "McFarland, USA\nMcFarland, USA (also known as McFarland) is a 2015 American sports drama film directed by Niki Caro, produced by Mark Ciardi and Gordon Gray, written by Christopher Cleveland, Bettina Gilois and Grant Thompson with music composed by Antônio Pinto.\n\n The film was co-produced by Walt Disney Pictures and Mayhem Pictures.\n\n Based on the true story of a 1987 cross country team from a mainly Latino high school in McFarland, California, the film stars Kevin Costner as Jim White, the school's coach, who leads the team to win a state championship.\n\n The film also stars Maria Bello and Morgan Saylor.",
+    "Million Dollar Arm\nMillion Dollar Arm is a 2014 American biographical sports drama film directed by Craig Gillespie and produced by Walt Disney Pictures from a screenplay written by Thomas McCarthy.\n\n The film is based on the true story of baseball pitchers Rinku Singh and Dinesh Patel who were discovered by sports agent J. B. Bernstein after winning a reality show competition.",
+    "The Black Hole\nThe Black Hole is a 1979 American science fiction film directed by Gary Nelson and produced by Walt Disney Productions.\n\n The film stars Maximilian Schell, Robert Forster, Joseph Bottoms, Yvette Mimieux, Anthony Perkins, and Ernest Borgnine, while the voices of the main robot characters are provided by Roddy McDowall and Slim Pickens (both unbilled).\n\n The music for the film was composed by John Barry.\n\n It was the first film from Walt Disney Productions to receive a PG rating.\n\n The film was released on December 18, 1979 in the United Kingdom and on December 21, 1979 in the United States.",
+    "Kathryn Bigelow\nKathryn Ann Bigelow ( ; born November 27, 1951) is an American director, producer, and writer.\n\n Her films include the vampire Western horror film \"Near Dark\" (1987), the action crime film \"Point Break\" (1991), the science fiction action thriller \"Strange Days\" (1995), the mystery thriller \"The Weight of Water\" (2000), the submarine thriller \"\" (2002), the war film \"The Hurt Locker\" (2008), the action thriller war film \"Zero Dark Thirty\" (2012), the short film \"Last Days\" (2014), and the period crime drama \"Detroit\" (2017).\n\n \"The Hurt Locker\" won the 2009 Academy Award for Best Picture and the BAFTA Award for Best Film, and was nominated for the 2010 Golden Globe Award for Best Drama.\n\n She has also acted as producer and writer for many of her films.",
+    "Dangal (film)\nDangal (English: \"Wrestling competition\" ) is a 2016 Indian Hindi-language biographical sports drama film loosely based on the story of Mahavir Singh Phogat, an amateur wrestler, who trains his daughters Geeta Phogat and Babita Kumari to be world-class wrestlers.\n\n It was directed by Nitesh Tiwari.\n\n Produced by Walt Disney Pictures, Aamir Khan Productions and UTV Motion Pictures, it stars Aamir Khan as the father.\n\n Both daughters go on to win medals at the 2010 Commonwealth Games.\n\n Babita won a silver medal at the Games, in the 51 kg class and gold at the 2014 Glasgow Games in the 55 kg class.\n\n In 2012, Geeta became the first Indian female wrestler to qualify for the Olympics.\n\n Mahavir's efforts inspired dozens of Indian women to take to wrestling.\n\n Fatima Sana Shaikh and Sanya Malhotra play the older selves of the sisters while Sakshi Tanwar plays their mother and Aparshakti Khurana, their cousin.",
+    "Steve McQueen (director)\nSteven Rodney \"Steve\" McQueen (born 9 October 1969) is an English film director, producer, screenwriter, and video artist.\n\n For his 2013 film, \"12 Years a Slave\", a historical drama adaptation of an 1853 slave narrative memoir, he won an Academy Award, BAFTA Award for Best Film, and Golden Globe Award for Best Motion Picture – Drama, as a producer, and he also received the award for Best Director from the New York Film Critics Circle.\n\n McQueen is the first black filmmaker to win an Academy Award for Best Picture.\n\n McQueen is known for his collaborations with actor Michael Fassbender, who has starred in all three of McQueen's feature films as of 2014.\n\n McQueen's other feature films are \"Hunger\" (2008), a historical drama about the 1981 Irish hunger strike, and \"Shame\" (2011), a drama about an executive struggling with sex addiction.",
+    "Aliens of the Deep\nAliens of the Deep is a 2005 documentary film, directed in part by James Cameron alongside fellow cameraman and friend Steven Quale, who would go on to direct \"Final Destination 5\" six years later, and filmed in the IMAX 3D format.\n\n It was produced by Walden Media and Walt Disney Pictures.\n\n Cameron teams with NASA scientists to explore the Mid-Ocean Ridges, submerged chains of mountains in the Atlantic and Pacific oceans that are home to some of the planet's more unusual forms of life.",
+    "Remember the Titans\nRemember the Titans is a 2000 American sports film produced by Jerry Bruckheimer and directed by Boaz Yakin.\n\n The screenplay, written by Gregory Allen Howard, is based on the true story of African-American coach Herman Boone, portrayed by Denzel Washington, and his attempt to integrate the T. C. Williams High School football team in Alexandria, Virginia, in 1971.\n\n Will Patton portrays Bill Yoast, Boone's assistant coach.\n\n Real-life athletes Gerry Bertier and Julius Campbell are portrayed by Ryan Hurst and Wood Harris, respectively."
+   ]
+  },
+  {
+   "id": "384831bb9a420ae3",
+   "gold": [
+    {
+     "sentence": " Related fields of study include Islamic philosophy and Sufism.",
+     "facts": {
+      "0.0": "Related fields of study include Islamic philosophy.",
+      "0.1": "Related fields of study include Sufism."
+     }
+    },
+    {
+     "sentence": "Sufism or Taṣawwuf (Arabic: الْتَّصَوُّف [sect]; personal noun: صُوفِيّ - \"ṣūfiyy\"/ \"ṣūfī\", مُتَصَوّف - \"mutaṣawwūf\"), which is often defined as \"Islamic mysticism\", \"the inward dimension of Islam\", or \"the phenomenon of mysticism within Islam\", is a mystical trend in Islam \"characterized ... [by particular] values, ritual practices, doctrines and institutions\" which began very early on in Islamic history and which represents \"the main manifestation and the most important and central crystallization of\" mystical practice in Islam.",
+     "facts": {
+      "1.0": "Sufism is also called Taṣawwuf.",
+      "1.1": "The Arabic name for Sufism is الْتَّصَوُّف [sect].",
+      "1.2": "The personal noun for a Sufi is صُوفِيّ, transliterated as 'ṣūfiyy' or 'ṣūfī'.",
+      "1.3": "The personal noun mutaṣawwūf is مُتَصَوّف.",
+      "1.4": "Sufism is often defined as 'Islamic mysticism'.",
+      "1.5": "Sufism is often defined as 'the inward dimension of Islam'.",
+      "1.6": "Sufism is often defined as 'the phenomenon of mysticism within Islam'.",
+      "1.7": "Sufism is a mystical trend in Islam.",
+      "1.8": "Sufism is characterized by particular values, ritual practices, doctrines and institutions.",
+      "1.9": "Sufism began very early on in Islamic history.",
+      "1.10": "Sufism represents the main manifestation of mystical practice in Islam.",
+      "1.11": "Sufism represents the most important and central crystallization of mystical practice in Islam."
+     }
+    }
+   ],
+   "items": [
+    "Animality studies\nAnimality studies is an emerging interdisciplinary academic field focused on the cultural study of animals and animality.\n\n It can be distinguished from animal studies and critical animal studies by its resistance to animal rights or animal welfare as an explicit justification for work in this field.\n\n According to Michael Lundblad, \"If animal studies can be seen as work that explores representations of animality and related discourses with an emphasis on advocacy for nonhuman animals, animality studies becomes work that emphasizes the history of animality in relation to human cultural studies, without an explicit call for nonhuman advocacy.\"",
+    "Dawud Tai\nAbu Solaiman Dawud ibn Nosair al-Ta’i, usually referred to as Dawud Tai, (died between 777 and 782) was a Islamic scholar and Sufi mystic.\n\n His disciples included many influential personalities of Islamic mysticism, e.g., Maruf Karkhi and Ahmad al-Buni.",
+    "Sufism\nSufism or Taṣawwuf (Arabic: الْتَّصَوُّف [sect]; personal noun: صُوفِيّ - \"ṣūfiyy\"/ \"ṣūfī\", مُتَصَوّف - \"mutaṣawwūf\"), which is often defined as \"Islamic mysticism\", \"the inward dimension of Islam\", or \"the phenomenon of mysticism within Islam\", is a mystical trend in Islam \"characterized ... [by particular] values, ritual practices, doctrines and institutions\" which began very early on in Islamic history and which represents \"the main manifestation and the most important and central crystallization of\" mystical practice in Islam.\n\n Although the overwhelming majority of Sufis, both pre-modern and modern, have been adherents of Sunni Islam, there nevertheless also developed certain strands of Sufi practice within the ambit of Shia Islam during the late medieval period.",
+    "Ovamir Anjum\nOvamir Anjum is the Imam Khattab Chair of Islamic Studies at the Department of Philosophy, University of Toledo.\n\n He studies the connections between theology, ethics, politics, and law in classical and medieval Islam, with a subfocus on its comparisons with western thought.\n\n Related fields of study include Islamic philosophy and Sufism.",
+    "Omid Safi\nOmid Safi is an American Professor of Asian and Middle Eastern Studies at Duke University, where he is the Director of Duke Islamic Studies Center, and a columnist for On Being.\n\n Dr. Safi specializes in Islamic mysticism (Sufism), contemporary Islamic thought and medieval Islamic history.\n\n He has served on the board of the Pluralism project at Harvard University and is the co-chair of the steering committee for the Study of Islam and the Islamic Mysticism Group at the American Academy of Religion.\n\n Before joining Duke University, Dr. Safi was a professor at the University of North Carolina Chapel Hill.",
+    "Moinuddin Chishti\n1325) and Amir Khusrow (d. 1325).\n\n As such, Muʿīn al-Dīn Chishtī's legacy rests primarily on his having been \"one of the most outstanding figures in the annals of Islamic mysticism.\"\n\n Additionally, Muʿīn al-Dīn Chishtī is also notable for having been one of the first major Islamic mystics to formally allow his followers to incorporate the \"use of music\" in their devotions, liturgies, and hymns to God, which he did so in order to make the foreign Arab faith more relatable to the indigenous peoples who had recently entered the religion or whom he sought to convert.",
+    "Lawrencepur, Punjab, Pakistan\nHazrat Baba Jee Sahib is Qutb, Qutb of this time, Sufi Mystic ( Islamic mysticism ), Wali of Allah , acknowledged by various Islamic Scholars, Sufi Masters , Sufi Saints from all over the world.",
+    "Irfan\nIn Islam, ‘Irfaan (Arabic/Persian/Urdu: عرفان ; Turkish: \"İrfan\" ), also spelt \"Irfaan\" and \"Erfan\", literally ‘knowledge, awareness, wisdom’, is gnosis.\n\n Islamic mysticism can be considered as a vast range that engulfs theoretical and practical and conventional mysticism and has been intertwined with sufism and in some cases they are assumed identical.\n\n however Islamic mysticism is assumed as one of the Islamic sciences alongside theology and philosophy.\n\n Islamic’s mysticism is cognition and knowledge that love has been intertwined through it with structure of revelation in Islam.",
+    "Reynold A. Nicholson\nReynold Alleyne Nicholson, or R. A. Nicholson (18 August 1868 – 27 August 1945), was an eminent English orientalist, scholar of both Islamic literature and Islamic mysticism and widely regarded as one of the greatest Rumi (Mevlana or Mawlana) scholars and translators in the English language.",
+    "A Hidden Treasure\nHidden Treasure (Arabic: کنزاً مخفیاً‎ ‎ ) is a Hadith Qudsi that has a very prominent role in Islamic mysticism and Islamic philosophy."
+   ]
+  },
+  {
+   "id": "85ddfbf2a247d42a",
+   "gold": [
+    {
+     "sentence": " He creates bespoke millinery under the J Smith Esquire brand for a portfolio of private clients that includes Angelina Jolie, Brad Pitt and Amal Clooney.",
+     "facts": {
+      "0.0": "This person creates bespoke millinery under the J Smith Esquire brand.",
+      "0.1": "This person creates bespoke millinery for a portfolio of private clients.",
+      "0.2": "The portfolio of private clients includes Angelina Jolie.",
+      "0.3": "The portfolio of private clients includes Brad Pitt.",
+      "0.4": "The portfolio of private clients includes Amal Clooney."
+     }
+    },
+    {
+     "sentence": "Amal Clooney (\"née\" Alamuddin, Arabic: أمل علم الدين‎ ‎ ; born 3 February 1978) is a barrister at Doughty Street Chambers, specialising in international law and human rights.",
+     "facts": {
+      "1.0": "Amal Clooney is also known by the name Alamuddin (née Alamuddin).",
+      "1.1": "Amal Clooney's Arabic name is أمل علم الدين.",
+      "1.2": "Amal Clooney was born on 3 February 1978.",
+      "1.3": "Amal Clooney is a barrister at Doughty Street Chambers.",
+      "1.4": "Amal Clooney specialises in international law.",
+      "1.5": "Amal Clooney specialises in human rights."
+     }
+    }
+   ],
+   "items": [
+    "Pupil master\nA pupil master ('pupilmaster' or 'pupil-master') or in the case of a female barrister, 'pupil mistress' etc., is the former name given to an experienced barrister who a pupil shadows during their pupillage.\n\n The term pupil master or mistress has now been replaced by the term 'pupil supervisor'.\n\n Barristers are called to the Bar via one of the four Inns of Court upon successful completion of the BPTC and having undertaken a required number of \"qualifying sessions\" in their chosen Inn of Court.\n\n In most cases, the newly called barrister is then required to undertake training for a period of at least a year before the barrister can start their own private practice.\n\n This training period is known as pupillage, usually split into two periods of six months known as \"sixes\".\n\n The first \"six\" is a non-practising six, during which the pupil will shadow their pupil master; the second is usually a practising \"six\", when the pupil, with their pupil master's permission, can undertake the supply of legal services and exercise rights of audience in court.",
+    "Doughty Street\nDoughty Street is a broad tree lined street in the Holborn district of the London Borough of Camden.\n\n The southern part is a continuation of the short John Street, which comes off Theobald's Road.\n\n The northern part crosses Guilford Street and ends at Mecklenburgh Square.\n\n The street is named after a landlord of the area at the time it was built, Henry Doughty.",
+    "Doughty Street Chambers\nDoughty Street Chambers is a British set of barristers' chambers situated in Bristol, Manchester and London's Doughty Street, undertaking criminal justice, public law, immigration, employment, human rights and civil liberties work.",
+    "Edward Fitzgerald (barrister)\nEdward Hamilton Fitzgerald CBE QC is an English barrister who specialises in criminal law, public law, and international human rights law.\n\n His work against the death penalty has led him to represent despised criminals such as: Myra Hindley, a perpetrator in the Moors murders; Mary Bell, a child killer; Maxine Carr; Jon Venables, one of James Bulger's killers; various IRA prisoners; and Abu Hamza, the controversial Muslim cleric.\n\n Fitzgerald is currently the joint head of Doughty Street Chambers along with Geoffrey Robertson QC.\n\n Fitzgerald has been called to the Bar in a number of jurisdictions including Belize, Grenada and St Vincent, and has been granted rights of audience to appear in cases in Hong Kong, Trinidad and Tobago, St Lucia, Bahamas, and the British Virgin Islands.\n\n He is also a trustee and patron of a number of charities including The Death Penalty Project and The Longford Trust.",
+    "Amal Clooney\nAmal Clooney (\"née\" Alamuddin, Arabic: أمل علم الدين‎ ‎ ; born 3 February 1978) is a barrister at Doughty Street Chambers, specialising in international law and human rights.\n\n Her clients include Julian Assange, the founder of WikiLeaks, in his fight against extradition.\n\n She has also represented the former prime minister of Ukraine, Yulia Tymoshenko, and Egyptian-Canadian journalist Mohamed Fahmy.\n\n She is married to the American actor George Clooney.",
+    "Mónica Feria Tinta\nMónica Feria Tinta is a leading public international lawyer.\n\n She practises as a Barrister at 20 Essex Street Chambers.\n\n In 2000 she became the first Peruvian-born lawyer to receive the Diploma of the Hague Academy of International Law in history.\n\n Her litigation work led to the first international human rights court decision ordering the prosecution of a former Head of State for crimes under international law.\n\n She was awarded the Inge Genefke International Award for her work as an international lawyer in 2006 and was co-recipient of the Gruber Justice Prize 2007, for her contributions advancing the cause of justice as delivered through the legal system.\n\n She is a member of the Bar of England and Wales, and the American Society of International Law.",
+    "Shahram Taghavi\nShahram Taghavi is a barrister practising in the United Kingdom.\n\n He is a specialist in Judicial Review, Human Rights, Immigration and EU law.\n\n He was called to the England & Wales bar in 1994.\n\n He is a partner at Article 1, a law firm specialising in immigration, EU freedoms of movement and human rights law.\n\n He practised as an independent barrister at Doughty Street Chambers specialising in immigration and public law.\n\n He was head of both the Immigration and Public Law departments at Simons Muirhead & Burton solicitors.\n\n He was a Senior Barrister at Bates Wells & Braithwaite LLP as a member of their Public & Regulatory and Immigration departments, Deputy Head of Immigration at Lewis Silkin LLP, Head of Immigration at Charles Russell LLP (now Charles Russell Speechly LLP) and National Head of Immigration at Grant Thornton LLP.",
+    "Barbados Bar Association\nThe Barbados Bar Association is a voluntary association of attorneys in Barbados who practise at the independent bar as barristers and Queen's Counsel.\n\n It was created by the Barbados Bar Association Act of 1940.",
+    "Pupil master\nOccasionally, a pupil barrister may undertake a third \"six\", extending the training period a further six months.\n\n At the end of pupillage, to continue practising the law, a barrister may attempt to become a tenant in a set of barristers' chambers, or find a position as an employed barrister.",
+    "Edmund Bartley-Denniss\nSir Edmund Robert Bartley Bartley-Denniss KC (9 April 1854 – 20 March 1931), born Edmund Robert Bartley Denniss, was a barrister, prominent Freemason and Conservative Party Member of Parliament in the United Kingdom.\n\n He was also a pioneer of the sport of cycling in Britain."
+   ]
+  },
+  {
+   "id": "3df016a320850a59",
+   "gold": [
+    {
+     "sentence": " It has its offices in New Roc City in New Rochelle, New York.",
+     "facts": {
+      "0.0": "An entity has its offices in New Roc City in New Rochelle, New York."
+     }
+    },
+    {
+     "sentence": "New Roc City, also known as New Rochelle Center, is an entertainment, retail and residential complex in the Downtown section of the city of New Rochelle in Westchester County, New York.",
+     "facts": {
+      "1.0": "New Roc City is also known as New Rochelle Center.",
+      "1.1": "New Roc City is an entertainment complex.",
+      "1.2": "New Roc City is a retail complex.",
+      "1.3": "New Roc City is a residential complex.",
+      "1.4": "New Roc City is in the Downtown section of the city of New Rochelle.",
+      "1.5": "New Rochelle is in Westchester County, New York."
+     }
+    }
+   ],
+   "items": [
+    "Montefiore New Rochelle Hospital\nMontefiore New Rochelle Hospital (formerly Sound Shore Medical Center) is a community-based, teaching hospital located at 16 Guion Place in the city of New Rochelle, in Westchester County, New York, and affiliated with the Albert Einstein College of Medicine.\n\n The hospital opened in 1892 as New Rochelle Hospital.\n\n On November 6, 2013, Sound Shore was acquired by the Bronx-based Montefiore Medical Center, the University Hospital for the Albert Einstein College of Medicine, was renamed Montefiore New Rochelle Hospital, and became part of the Montefiore Health System.",
+    "Random House Tower\nThe Random House Tower, also known as the Park Imperial Apartments, is a 52-story mixed-use tower in New York City, United States, that is used as the headquarters of book publisher Random House and a luxury apartment complex.\n\n The book publisher entrance is on Broadway and goes up to 27 floors, while the apartment complex entrance is on West 56th Street.",
+    "New Rochelle Walk of Fame\nThe New Rochelle Walk of Fame was installed in 2011 in Ruby Dee Park at Library Green, located in the downtown section of the city of New Rochelle in Westchester County, New York.\n\n The \"walk\" is a tribute to some of New Rochelle's most notable residents from throughout its 325-year history.\n\n It was created and funded by former resident Roderick Kennedy, Jr., working in partnership with the City of New Rochelle and the New Rochelle Business Improvement District.",
+    "888 7th Avenue\n888 7th Avenue is a 628 ft (191m) tall modern-style office skyscraper in Midtown Manhattan which was completed in 1969 and has 46 floors.\n\n Emery Roth & Sons designed the building, which is tied with Central Park Place for the 65th tallest building in New York City.\n\n It currently carries the Vornado Realty Trust corporate headquarters.\n\n Previously known as the Arlen Building, its namesake being the company responsible for its construction, Arlen Realty & Development Corporation.\n\n The Red Eye Grill is located in the building at street level.",
+    "New Roc City\nNew Roc City, also known as New Rochelle Center, is an entertainment, retail and residential complex in the Downtown section of the city of New Rochelle in Westchester County, New York.\n\n It is located at 33 LeCount Place, between Main Street North and Main Street South.\n\n The center was built on the site of the former New Rochelle Mall which closed in 1992.",
+    "Princeton Community Japanese Language School\nThe Princeton Community Japanese Language School (PCJLS; プリンストン日本語学校 \"Purinsuton Nihongo Gakkō\") is a Japanese weekend school in the Princeton, New Jersey area.\n\n It holds weekend Japanese classes for Japanese citizen children abroad to the standard of the Ministry of Education, Culture, Sports, Science and Technology (MEXT), and it also has classes for people with Japanese as a second language.",
+    "New Jersey Japanese School\nThe New Jersey Japanese School (ニュージャージー日本人学校 , \"Nyūjājī Nihonjin Gakkō\" , NJJS) is a Japanese school located in Oakland, New Jersey, United States in the New York City metropolitan area.\n\n It is one of the two Japanese day schools operated by the Japanese Educational Institute of New York (JEI; ニューヨーク日本人教育審議会 \"Nyūyōku Nihonjin Kyōiku Shingi Kai\"), a nonprofit organization which also operates two Japanese weekend school systems in the New York City area.",
+    "Japanese Weekend School of New York\nThe Japanese Weekend School of New York (JWSNY; ニューヨーク \"Nyūyōku Hoshū Jugyō Kō\") is a Japanese supplementary school in the New York City metropolitan area.\n\n It has its offices in New Roc City in New Rochelle, New York.\n\n The Japanese Educational Institute of New York (JEI; ニューヨーク日本人教育審議会 \"Nyūyōku Nihonjin Kyōiku Shingi Kai\") manages the school system, and the JWSNY is one of its two weekend school systems.\n\n The JEI also operates two Japanese day schools in the New York area.",
+    "Standard Star Building\nThe Standard Star Building is a historic commercial structure located in the Downtown section of New Rochelle, Westchester County, New York.\n\n The building, designed by architect Lawrence J. Barnard, was completed in 1924 and is an architecturally significant example of the Italian Renaissance style in New Rochelle.\n\n Although it has been altered, these changes occurred only on the Le Count Place façade and the interior of the building.\n\n The original Standard Star building exterior remains largely unchanged.\n\n It is further historically significant for its association with a long-published New Rochelle newspaper covering life in New Rochelle.",
+    "New Rochelle Harbor (Long Island Sound)\nNew Rochelle Harbor is the name of a harbor located along Long Island Sound in the city of New Rochelle in Westchester County, New York.\n\n The Davenport Neck peninsula off the mainland divides New Rochelle's waterfront into two bays; the westerly referred to as New Rochelle Harbor and the easterly as Echo Bay."
+   ]
+  },
+  {
+   "id": "a4a75ba09d444d63",
+   "gold": [
+    {
+     "sentence": "Scott Treleaven is a Canadian artist whose work employs a variety of media including collage, film, video, drawing, photography and installation.",
+     "facts": {
+      "0.0": "Scott Treleaven is a Canadian artist.",
+      "0.1": "Scott Treleaven's work employs a variety of media.",
+      "0.2": "The media employed in Scott Treleaven's work include collage, film, video, drawing, photography and installation."
+     }
+    },
+    {
+     "sentence": "Edmund Mortimer (21 August 1874 – 21 May 1944) was an American actor and film director.",
+     "facts": {
+      "1.0": "Edmund Mortimer's dates are 21 August 1874 to 21 May 1944.",
+      "1.1": "Edmund Mortimer was an American actor.",
+      "1.2": "Edmund Mortimer was an American film director."
+     }
+    }
+   ],
+   "items": [
+    "Ridley Scott\nSir Ridley Scott (born 30 November 1937) is an English film director and producer.\n\n Following his commercial breakthrough with the science-fiction horror film \"Alien\" (1979), his best known works include the neo-noir dystopian science fiction film \"Blade Runner\" (1982), historical drama and Best Picture Oscar winner \"Gladiator\" (2000), and science fiction film \"The Martian\" (2015).",
+    "John Dunning (film producer)\nJohn Dunning (April 27, 1927–September 19, 2011) was a pioneering Canadian film producer from Montreal who co-founded the Canadian film production company Cinépix and produced early works by notable Canadian directors David Cronenberg and Ivan Reitman.\n\n Dunning launched Cinépix with partner André Link in Montreal in the early 1960s.\n\n Their biggest commercial success—and the first Canadian box office hit—came with Reitman’s \"Meatballs\" (1979).",
+    "Edmund Mortimer (1302–1331)\nSir Edmund Mortimer (1302/1303 – 16 December 1331) was the eldest son of Roger Mortimer, 1st Earl of March and Joan de Geneville, 2nd Baroness Geneville.\n\n By his wife Elizabeth de Badlesmere he was the father of Roger Mortimer, 2nd Earl of March.\n\n Though Edmund survived his father by one year, he did not inherit his father's lands and titles as they were forfeited to the Crown and his son only reacquired them gradually.",
+    "Edmund Mortimer (actor)\nEdmund Mortimer (21 August 1874 – 21 May 1944) was an American actor and film director.\n\n He appeared in 251 films between 1913 and 1945.\n\n He also directed 23 films between 1918 and 1928.\n\n He was born in New York, New York and died in Los Angeles, California.",
+    "Scott Treleaven\nScott Treleaven is a Canadian artist whose work employs a variety of media including collage, film, video, drawing, photography and installation.",
+    "Scott Free Productions\nScott Free Productions is a British film and television production company founded by filmmakers and brothers Ridley Scott and Tony Scott.\n\n They formed the feature film development company Percy Main Productions in 1980, naming the company after the English village Percy Main, where their father grew up.\n\n The company was renamed to Scott Free Productions in 1995.\n\n Scott Free has produced films ranging from the 2000 Hollywood blockbuster \"Gladiator\" (2000) to \"smaller pictures\" like \"Cracks\" (2009).\n\n Between productions of \"White Squall\" (1996) and \"G.I. Jane\" (1997), Ridley Scott reorganized the company.",
+    "John Biddle (yachting cinematographer)\nJohn Scott Biddle (1925–2008) was a foremost yachting cinematographer and lecturer, establishing a film-making career that spanned more than forty years.\n\n His films captured not only the technical aspects of sailing but also the human story in events as tranquil as a Nova Scotia cruise and as grand as the America's Cup Races.",
+    "Edmund Mortimer, 5th Earl of March\nEdmund de Mortimer, 5th Earl of March and 7th Earl of Ulster (6 November 1391 – 18 January 1425) was an English nobleman.\n\n A great-great-grandson of King Edward III of England, he was heir presumptive to King Richard II of England, his first cousin twice removed, when Richard II was deposed in favour of Henry IV.\n\n Edmund Mortimer's claim to the throne was the basis of rebellions and plots against Henry IV and his son Henry V, and was later taken up by the House of York in the Wars of the Roses, though Mortimer himself was an important and loyal vassal of Henry V and Henry VI.\n\n Edmund Mortimer was the last Earl of March of the Mortimer family.",
+    "Alexander Butler\nAlexander Butler was a British film director who made over sixty features and short films during the 1910s and 1920s including many for G.B. Samuelson's production company.\n\n Butler directed several British films in Hollywood in 1920, where Samuelson had made an arrangement with Universal Pictures.\n\n Amongst his notable films are the Sherlock Holmes adaptation \"The Valley of Fear\" (1916) and the early British horror film \"The Beetle\" (1919).",
+    "Edmund Mortimer, 2nd Baron Mortimer\nEdmund Mortimer, 2nd Lord Mortimer (1251 – 17 July 1304) was the second son and eventual heir of Roger Mortimer, 1st Baron Mortimer.\n\n His mother was Maud de Braose.\n\n As a younger son, Edmund had been intended for clerical or monastic life, and had been sent to study at Oxford University."
+   ]
+  },
+  {
+   "id": "dc444df9ffd08cec",
+   "gold": [
+    {
+     "sentence": " The album was Prince's third to be released that year (along with \"Chaos and Disorder\" and the soundtrack album of the Spike Lee movie \"Girl 6\"), which made 1996 one of the most prolific years for material released by Prince.",
+     "facts": {
+      "0.0": "The album was Prince's third album released in 1996.",
+      "0.1": "One of Prince's other 1996 releases was \"Chaos and Disorder\".",
+      "0.2": "One of Prince's other 1996 releases was the soundtrack album of the Spike Lee movie \"Girl 6\".",
+      "0.3": "1996 was one of the most prolific years for material released by Prince."
+     }
+    },
+    {
+     "sentence": " His production company, 40 Acres and a Mule Filmworks, has produced over 35 films since 1983.",
+     "facts": {
+      "1.0": "Prince's production company is 40 Acres and a Mule Filmworks.",
+      "1.1": "40 Acres and a Mule Filmworks has produced over 35 films since 1983."
+     }
+    }
+   ],
+   "items": [
+    "Chris Gorak\nChris Gorak is an American film director who started as an art director and production designer.\n\n He directed the 2006 film \"Right at Your Door\" and the 2011 film \"The Darkest Hour\".\n\n Gorak began working in the film industry in the 1990s as an art director.\n\n In the 2000s, he worked on several films as production designer before becoming a film director.",
+    "Still Kicking (film)\nStill Kicking: Six Artistic Women of Project Arts & Longevity is a 2006 32-minute documentary film by Pacific Grove filmmaker Greg Young, featuring six Bay Area women role models over 85 years old who remained artistically active.\n\n The catalyst for Young's film was Amy Gorman and Frances Kandl's Project Arts & Longevity through which they were exploring the link between longevity and artistic vitality.\n\n Along with the film the joint project resulted in a book entitled Aging Artfully.",
+    "Mark Lee Ping-bing\nMark Lee Ping-bing (李屏賓; born August 8, 1954) is a Taiwanese cinematographer, photographer and author with over 70 films and 21 international awards to his credit including 2 Glory Of The Country Awards from the Government Information Office of Taiwan and the president of Taiwan's Light Of The Cinema Award.\n\n Lee began his film career in 1977 and in 1985 he started his prolific collaboration with Taiwanese filmmaker Hou Hsiao-hsien.\n\n Known best for his use of natural lighting utilizing real film and graceful camera movement, Lee received the Grand Technical Prize at the Cannes Film Festival in 2000 for \"In the Mood for Love\".\n\n A member of the Academy of Motion Picture Arts and Sciences, Lee was honored with nominations by the American Society of Cinematographers for its 2014 First Annual Spotlight Award for Best Cinematography for his work on the 2012 film \"Renoir\" and by the French Academy of Cinema Arts for a Cesar Award for Best Cinematography in 2014 also for the film \"Renoir\".",
+    "Girl 6\nGirl 6 is a 1996 American comedy-drama film by director Spike Lee about a phone sex operator.\n\n Theresa Randle played the title character, and playwright Suzan-Lori Parks wrote the screenplay.\n\n The soundtrack is composed entirely of songs written by Prince.\n\n The film was screened in the Un Certain Regard section at the 1996 Cannes Film Festival.\n\n Directors Quentin Tarantino and Ron Silver make cameo appearances as film directors at a pair of interesting auditions.\n\n It is the first film directed by Lee in which he did not write the screenplay.",
+    "Dirty Girl (2010 film)\nDirty Girl is a 2010 American coming of age comedy-drama film written and directed by Abe Sylvia.\n\n It stars Juno Temple, Milla Jovovich and William H. Macy.\n\n It premiered at the 2010 Toronto International Film Festival on September 12, 2010.\n\n It was distributed theatrically by The Weinstein Company on October 7, 2011.",
+    "The Human Centipede 2 (Full Sequence)\nThe Human Centipede 2 (Full Sequence) is a 2011 Dutch black and white exploitation-horror film written, directed, and co-produced by Dutch filmmaker Tom Six.\n\n The sequel to Six's 2009 film \"The Human Centipede (First Sequence)\", the film stars Laurence R. Harvey as a mentally impaired English man who watches and becomes obsessed with the first \"Human Centipede\" film, and decides to make his own \"centipede\" consisting of twelve people, including Ashlynn Yennie, an actress from the first film.",
+    "The Sasquatch Gang\nThe Sasquatch Gang (also known as The Sasquatch Dumpling Gang) is a 2006 comedy film written and directed by Tim Skousen, the first assistant director on \"Napoleon Dynamite\".",
+    "The Doom Generation\nThe Doom Generation is a 1995 American dark comedy film written and directed by Gregg Araki.\n\n It stars James Duval, Rose McGowan, and Johnathon Schaech.\n\n The film follows two troubled teenage lovers Amy Blue (McGowan) and Jordan White (Duval) who pick up a young handsome drifter named Xavier Red (Schaech).\n\n After he accidentally kills a store's clerk, the trio embarks on a journey full of sex, violence, and people from Amy's past.\n\n Billed as \"A Heterosexual Movie by Gregg Araki\", \"The Doom Generation\" is the second film in the director's trilogy known as the \"Teenage Apocalypse Trilogy\", the first being \"Totally Fucked Up\" (1993) and the last one \"Nowhere\" (1997).\n\n The characters of Amy Blue and Jordan White are based on the Mark Beyer comic strip \"Amy and Jordan\".",
+    "Spike Lee\nShelton Jackson \"Spike\" Lee (born March 20, 1957) is an American film director, producer, writer, and actor.\n\n His production company, 40 Acres and a Mule Filmworks, has produced over 35 films since 1983.",
+    "Paul Schrader\nPaul Joseph Schrader (born July 22, 1946) is an American screenwriter, film director, and film critic.\n\n Schrader wrote or co-wrote screenplays for four Martin Scorsese films: \"Taxi Driver\" (1976), \"Raging Bull\" (1980), \"The Last Temptation of Christ\" (1988), and \"Bringing Out the Dead\" (1999).\n\n Schrader has also directed 18 feature films, including his directing debut crime drama, \"Blue Collar\" (co-written with his brother, Leonard Schrader), the crime drama \"Hardcore\" (a loosely autobiographical film also written by Schrader), his 1982 remake of the horror classic \"Cat People\", the crime drama \"American Gigolo\" (1980), the biographical drama \"\" (1985), the cult film \"Light Sleeper\" (1992), the drama \"Affliction\" (1997), the biographical film \"Auto Focus\" (2002), and the erotic dramatic thriller \"The Canyons\" (2013)."
+   ]
+  },
+  {
+   "id": "5eed10ea879aed7a",
+   "gold": [
+    {
+     "sentence": " His American superior, General Dwight D. Eisenhower, wrote that he was \"blunt, at times to the point of rudeness\".",
+     "facts": {
+      "0.0": "The unnamed subject's American superior was General Dwight D. Eisenhower.",
+      "0.1": "Dwight D. Eisenhower wrote that the unnamed subject was 'blunt, at times to the point of rudeness'."
+     }
+    },
+    {
+     "sentence": "Dwight David \"Ike\" Eisenhower ( ; October 14, 1890 – March 28, 1969) was an American politician and Army general who served as the 34th President of the United States from 1953 until 1961.",
+     "facts": {
+      "1.0": "Dwight David 'Ike' Eisenhower was born on October 14, 1890.",
+      "1.1": "Dwight David 'Ike' Eisenhower died on March 28, 1969.",
+      "1.2": "Dwight David 'Ike' Eisenhower was an American politician.",
+      "1.3": "Dwight David 'Ike' Eisenhower was an Army general.",
+      "1.4": "Dwight David 'Ike' Eisenhower served as the 34th President of the United States.",
+      "1.5": "Dwight David 'Ike' Eisenhower served as President from 1953 until 1961."
+     }
+    }
+   ],
+   "items": [
+    "Gerald Ford\nGerald Rudolph Ford Jr. (born Leslie Lynch King Jr.; July 14, 1913 – December 26, 2006) was an American politician who served as the 38th President of the United States from August 1974 to January 1977, following the resignation of Richard Nixon.\n\n Prior to this he served eight months as the 40th Vice President of the United States, following the resignation of Spiro Agnew.\n\n He was the first person appointed to the vice presidency under the terms of the 25th Amendment, and consequently the only person to have served as both Vice President and President of the United States without being elected to executive office.\n\n Before his appointment to the vice presidency, Ford served 25 years as U.S. Representative from Michigan's 5th congressional district, the final nine of them as the House Minority Leader.",
+    "John F. Anderson\nJohn Francis Anderson was an officer in the Union Army during the American Civil War.\n\n When the war broke out, Anderson who was the son of Maine's former Governor Hugh J. Anderson was initially commissioned First Lieutenant in the militia; and on September 2, 1861, Anderson became the adjutant of the 24th Regiment Massachusetts Volunteer Infantry.\n\n He was appointed to Maj. Gen. John G. Foster's staff as a major and an aide-de-camp on June 9, 1863 and served with that officer for most of the remainder of the war, resigning on March 27, 1865.\n\n On December 11, 1866, President Andrew Johnson nominated Major Anderson to the honorary grade of brevet brigadier general, to rank from March 13, 1865 and the United States Senate confirmed the award on February 6, 1867.",
+    "John Anderson (Maine politician)\nJohn Anderson (1792–1853) was a Maine politician.\n\n Anderson served as United States Representative from Maine from 1825-1833.",
+    "Joseph R. Anderson\nJoseph Reid Anderson (February 16, 1813 – September 7, 1892) was an American civil engineer, industrialist, and soldier.\n\n During the American Civil War he served as a Confederate general, and his Tredegar Iron Company was a major source of munitions and ordnance for the Confederate States Army.\n\n Starting with a small forge and rolling mill in the mid-1830s, It was a flourishing operation by 1843 when he leased it.\n\n He eventually bought the company outright in 1848 and forcefully and aggressively built Tredegar Iron Works into the South's largest and most significant iron works.\n\n When the Civil War broke out he entered the Army as a Brigadier General in 1861.\n\n Shortly after he was wounded and then resigned from the Army returning to the iron works.\n\n It was the Confederacy's major (and for much of the war only) source of cannons and munitions, employing some 900 workers, most of whom slaves.\n\n His plant was confiscated by the United States In 1865, but returned to him in 1867 and he remained president until his death.\n\n Anderson was very active in local civic and political affairs.",
+    "John Biddle (United States Army general)\nJohn Biddle (February 2, 1859 – January 18, 1936) was career United States Army officer who became superintendent of the United States Military Academy.",
+    "Wendell Anderson\nWendell Richard \"Wendy\" Anderson (February 1, 1933 – July 17, 2016) was an American politician and the 33rd governor of Minnesota, serving from January 4, 1971, to December 29, 1976.\n\n In late 1976, he resigned as governor in order to be appointed to the U.S. Senate after Senator Walter Mondale was elected Vice President of the United States.\n\n Anderson served in the Senate from December 30, 1976, to December 29, 1978 (after losing the 1978 Senate election to Rudy Boschwitz, he resigned a few days before the end of his term to give Boschwitz seniority).",
+    "Andrew Davis Bruce\nLieutenant General Andrew Davis Bruce (September 14, 1894 – July 28, 1969) was an American academic and soldier who served as the third president of the University of Houston.\n\n He retired from the United States Army in 1954 as a lieutenant general after seeing action in both World War I and World War II and founding Fort Hood, Texas.\n\n Three countries, France, the Philippines, and the United States, awarded him service medals, including the Distinguished Service Cross, the U.S. Army's second highest military decoration.\n\n Bruce is interred in Arlington National Cemetery.",
+    "Dwight D. Eisenhower\nDwight David \"Ike\" Eisenhower ( ; October 14, 1890 – March 28, 1969) was an American politician and Army general who served as the 34th President of the United States from 1953 until 1961.\n\n During World War II, he was a five-star general in the United States Army and served as Supreme Commander of the Allied Expeditionary Forces in Europe.\n\n He was responsible for planning and supervising the invasion of North Africa in Operation Torch in 1942–43 and the successful invasion of France and Germany in 1944–45 from the Western Front.",
+    "Kenneth Anderson (British Army officer)\nGeneral Sir Kenneth Arthur Noel Anderson, (25 December 1891 – 29 April 1959) was a senior British Army officer who saw service in both World wars.\n\n He is mainly remembered as the commander of the British First Army during Operation Torch, the Allied invasion of North Africa.\n\n He had an outwardly reserved character and did not court popularity either with his superiors or with the public.\n\n His American superior, General Dwight D. Eisenhower, wrote that he was \"blunt, at times to the point of rudeness\".\n\n In consequence he is less well known than many of his contemporaries.\n\n Richard Mead wrote that \"He handled a difficult campaign more competently than his critics suggest, but competence without flair was not good enough for a top commander in 1944\".",
+    "Bill Clinton\nWilliam Jefferson Clinton (born William Jefferson Blythe III; August 19, 1946) is an American politician who served as the 42nd President of the United States from 1993 to 2001.\n\n Prior to the presidency, he was the Governor of Arkansas during two separate terms, from 1979 to 1981, and again from 1983 to 1992.\n\n Before that, he served as Arkansas attorney general, from 1977 to 1979.\n\n A member of the Democratic Party, Clinton was ideologically a New Democrat and many of his policies reflected a centrist \"Third Way\" political philosophy."
+   ]
+  },
+  {
+   "id": "1da471c1da64a275",
+   "gold": [
+    {
+     "sentence": "Alice Malsenior Walker (born February 9, 1944) is an American novelist, short story writer, poet, and activist.",
+     "facts": {
+      "0.0": "Alice Malsenior Walker was born on February 9, 1944.",
+      "0.1": "Alice Malsenior Walker is an American novelist.",
+      "0.2": "Alice Malsenior Walker is an American short story writer.",
+      "0.3": "Alice Malsenior Walker is an American poet.",
+      "0.4": "Alice Malsenior Walker is an American activist."
+     }
+    },
+    {
+     "sentence": "Michael David Herr (April 13, 1940 – June 23, 2016) was an American writer and war correspondent, known as the author of \"Dispatches\" (1977), a memoir of his time as a correspondent for \"Esquire magazine\" (1967–1969) during the Vietnam War.",
+     "facts": {
+      "1.0": "Michael David Herr was born on April 13, 1940.",
+      "1.1": "Michael David Herr died on June 23, 2016.",
+      "1.2": "Michael David Herr was an American writer.",
+      "1.3": "Michael David Herr was an American war correspondent.",
+      "1.4": "Michael David Herr is known as the author of the memoir 'Dispatches', published in 1977.",
+      "1.5": "'Dispatches' is a memoir of Michael David Herr's time as a correspondent for 'Esquire magazine' from 1967 to 1969.",
+      "1.6": "Michael David Herr was a correspondent during the Vietnam War."
+     }
+    }
+   ],
+   "items": [
+    "Clinton Walker\nClinton Walker (born 1957) is an Australian writer, best known for his works on popular music but with a broader interest in social and cultural history and theory.\n\n Sydney's \"Sun-Herald\" has called him \"our best chronicler of Australian grass-roots culture.\"\n\n He has always been ahead of the curve.\n\n As \"Rhythms\" magazine said in 2015, \"Like many of Walker’s projects, \"Buried Country\" was at least a decade ahead of its time,\" and as such he is remarkable as a critic who has exerted a pro-active impact on Australian music and its development; groundbreaking books like \"Inner City Sound\" (1981) and \"Buried Country\" (2000) especially have informed and inspired successive generations of musicians.\n\n Similarly, while he found best-selling success as Bon Scott's biographer, Walker's non-music books like \"Football Life\" (1998) and \"Golden Miles\" (2005) have innovatively offered an appreciation of subjects hitherto hardly deemed worthy of serious consideration.",
+    "The entries profile writers, scholars, artists, publishers, and advocates. Highlights include computer scientist Nuria Oliver’s data-science leadership and human-behavior research; Helen Keller’s childhood story “The Frost King”; Booker Prize winner Keri Hulme; Alice Walker’s Pulitzer-winning *The Color Purple* and anti-FGM work; and Lucille Watahomigie’s Hualapai language revitalization. Others include novelists Sarra Manning and Kim Edwards, poet Tara Betts",
+    "Haniel Long\nHaniel Clark Long (March 9, 1888 – October 17, 1956) was an American poet, novelist, publisher and academic.\n\n He is best known for his novella, \"Interlinear to Cabeza de Vaca\" (1936), a fictionalized account of the true story of a Spanish conquistador in 16th century North America.",
+    "Tobe Levin\nAlice Walker expressed appreciation for the text that shows worldwide solidarity with the novelist's literary abolition efforts in the early nineties.\n\n Levin has also teamed up with Maria Kiminta and photographer Britta Radike to publish a memoir and sourcebook, \"Kiminta.\n\n A Maasai's Fight against Female Genital Mutilation.\"",
+    "Alice Munro\nAlice Ann Munro ( , \"née\" Laidlaw ; born 10 July 1931) is a Canadian short story writer and Nobel Prize winner.\n\n Munro's work has been described as having revolutionized the architecture of short stories, especially in its tendency to move forward and backward in time.\n\n Her stories have been said to \"embed more than announce, reveal more than parade.\"",
+    "Warrior Marks\nWarrior Marks: Female Genital Mutilation and the Sexual Blinding of Women is a 1993 book by Alice Walker with Pratibha Parmar, who made an award-winning documentary of the same name.\n\n Following on from her 1992 novel \"Possessing the Secret of Joy\", Walker undertakes a journey to parts of Africa where clitoridectomy is still practised.\n\n \"Warrior Marks\" is a harrowing work as Walker interviews women who have had the operation done and finally interviews a woman—circumcised herself—who performs the operation.",
+    "Alice Walker\nAlice Malsenior Walker (born February 9, 1944) is an American novelist, short story writer, poet, and activist.\n\n She wrote the critically acclaimed novel \"The Color Purple\" (1982) for which she won the National Book Award and the Pulitzer Prize for Fiction.\n\n She also wrote the novels \"Meridian\" (1976) and \"The Third Life of Grange Copeland\" (1970), among other works.",
+    "Alice Walker: Beauty in Truth\nAlice Walker: Beauty in Truth is a documentary film directed by Pratibha Parmar, made by Kali Films production company.\n\n The film follows the life of the Pulitzer Prize-winning author, poet and activist Alice Walker.\n\n Shooting began in May 2011.\n\n It was aired on the BBC on Monday July 8, 2013, and on PBS on February 7, 2014.",
+    "Alice R. Ballard\nAlice R. Ballard.\n\n (born June 16, 1945, Florence, South Carolina) is an American ceramicist based in Greenville, South Carolina.\n\n Much of her work is characterized by the organic earthenware forms of closed containers, pinch pots, platters, pods, teapots, totems, small work, vessels and a series she refers to as her white work.\n\n Much of her work is finished with terra sigillata.\n\n Alice considers her art to be “a reflection of [her] relationship with natural forms.\n\n It is often the metamorphosis of Nature's forms, as they change from season to season, that attracts her to that universal world in which differing life forms share similar qualities.\"\n\n Her aesthetic heavily references the mother/child/germination metaphor and also explores the more evocative realm of wonder and awe.",
+    "Michael Herr\nMichael David Herr (April 13, 1940 – June 23, 2016) was an American writer and war correspondent, known as the author of \"Dispatches\" (1977), a memoir of his time as a correspondent for \"Esquire magazine\" (1967–1969) during the Vietnam War.\n\n The book was called the best \"to have been written about the Vietnam War\" by \"The New York Times Book Review\"; novelist John le Carré called it \"the best book I have ever read on men and war in our time.\"\n\n Herr later was credited with pioneering the literary genre of the nonfiction novel, along with authors such as Truman Capote, Norman Mailer, and Tom Wolfe."
+   ]
+  }
+ ]
+}

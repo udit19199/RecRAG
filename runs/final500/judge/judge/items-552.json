@@ -1,0 +1,444 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "e8c8b62a4c784121",
+   "gold": [
+    {
+     "sentence": "Stephen Reeder Donaldson (born May 13, 1947) is an American fantasy, science fiction and mystery novelist, most famous for \"The Chronicles of Thomas Covenant\", his ten-novel fantasy series.",
+     "facts": {
+      "0.0": "Stephen Reeder Donaldson was born on May 13, 1947.",
+      "0.1": "Stephen Reeder Donaldson is an American novelist.",
+      "0.2": "Stephen Reeder Donaldson writes fantasy novels.",
+      "0.3": "Stephen Reeder Donaldson writes science fiction novels.",
+      "0.4": "Stephen Reeder Donaldson writes mystery novels.",
+      "0.5": "Stephen Reeder Donaldson is most famous for \"The Chronicles of Thomas Covenant\".",
+      "0.6": "\"The Chronicles of Thomas Covenant\" is a ten-novel fantasy series.",
+      "0.7": "\"The Chronicles of Thomas Covenant\" is a series by Stephen Reeder Donaldson."
+     }
+    },
+    {
+     "sentence": "Michael John Moorcock (born 18 December 1939) is an English writer, primarily of science fiction and fantasy, who has also published literary novels.",
+     "facts": {
+      "1.0": "Michael John Moorcock was born on 18 December 1939.",
+      "1.1": "Michael John Moorcock is an English writer.",
+      "1.2": "Michael John Moorcock is primarily a writer of science fiction.",
+      "1.3": "Michael John Moorcock is primarily a writer of fantasy.",
+      "1.4": "Michael John Moorcock has also published literary novels."
+     }
+    }
+   ],
+   "items": [
+    "Epic Pooh\n\"Epic Pooh\" is a 1978 article by the British science fiction writer Michael Moorcock, which reviews the field of epic fantasy, with a particular focus on epic fantasy written for children.\n\n In it Moorcock critiques J. R. R. Tolkien's \"The Lord of the Rings\" for its politically conservative assumptions and for being escapist literature.",
+    "Stephen R. Donaldson\nStephen Reeder Donaldson (born May 13, 1947) is an American fantasy, science fiction and mystery novelist, most famous for \"The Chronicles of Thomas Covenant\", his ten-novel fantasy series.\n\n His work is characterized by psychological complexity, conceptual abstractness, moral bleakness, and the use of an arcane vocabulary, and has attracted critical praise for its \"imagination, vivid characterizations, and fast pace\".\n\n He earned his bachelor's degree from The College of Wooster and a Master's degree from Kent State University.\n\n He currently resides in New Mexico.",
+    "A Cure for Cancer\nA Cure for Cancer is a novel by British fantasy and science fiction writer Michael Moorcock, first published in London 1971 by Allison and Busby.\n\n The book is part of Moorcock's long-running Jerry Cornelius series.",
+    "Michael Moorcock\nMichael John Moorcock (born 18 December 1939) is an English writer, primarily of science fiction and fantasy, who has also published literary novels.\n\n He is best known for his novels about the character Elric of Melniboné, a seminal influence on the field of fantasy in the 1960s and 1970s.",
+    "Douglas Hill\nDouglas Arthur Hill (6 April 1935 – 21 June 2007) was a Canadian science fiction author, editor and reviewer.\n\n He was born in Brandon, Manitoba, the son of a railroad engineer, and was raised in Prince Albert, Saskatchewan.\n\n An avid science fiction reader from an early age, he studied English at the University of Saskatchewan (where he earned an Honours B.A. in 1957) and at the University of Toronto.\n\n He married fellow writer and U. of S. alumna Gail Robinson (writer) in 1958; they moved to Britain in 1959, where he worked as a freelance writer and editor for Aldus Books.\n\n In 1967–1968 he served as Assistant Editor of the controversial \"New Worlds\" science fiction magazine under Michael Moorcock.",
+    "Robert Holdstock\nRobert Paul Holdstock (2 August 1948 – 29 November 2009) was an English novelist and author best known for his works of Celtic, Nordic, Gothic and Pictish fantasy literature, predominantly in the fantasy subgenre of mythic fiction.",
+    "Behold the Man (novel)\nBehold the Man (1969) is a science fiction novel by British writer Michael Moorcock.\n\n It originally appeared as a novella in a 1966 issue of \"New Worlds\"; later, Moorcock produced an expanded version which was first published in 1969 by Allison & Busby.\n\n The title derives from the Gospel of John, Chapter 19, Verse 5: \"Then Jesus came out, wearing the crown of thorns and the purple robe.\n\n And Pilate said to them Behold the Man.\"",
+    "Warlord of the Air\nThe Warlord of the Air is a 1971 British alternate history science fiction novel written by Michael Moorcock.\n\n It concerns the adventures of Oswald Bastable, an Edwardian era soldier stationed in India, and his adventures in an alternate universe, in his own future, wherein the First World War never happened.\n\n It is the first part of Moorcock's 'A Nomad of the Time Streams' trilogy and, in its use of speculative technology (such as airships) juxtaposed against an Edwardian setting, it is widely considered to be one of the first steampunk novels.\n\n The novel was first published by Ace Books as part of their Ace Science Fiction Specials series.",
+    "Edgar Allan Poe’s humorous “A Predicament,” originally “The Scythe of Time,” parodies Gothic sensation tales and is often paired with “How to Write a Blackwood Article.” British writer Michael Moorcock (born 1939), famed for Elric, wrote the science-fiction novels *Behold the Man* (expanded from a 1966 novella; title from John’s Gospel), *The Final Programme*, *The Warlord of the Air* (1971; an",
+    "The Final Programme\nThe Final Programme is a novel by British science fiction and fantasy writer Michael Moorcock.\n\n Written in 1965 as the underground culture was beginning to emerge, it was not published for several years.\n\n Moorcock has stated that publishers at the time considered it was \"too freaky\"."
+   ]
+  },
+  {
+   "id": "dcd4c5ff265e6d12",
+   "gold": [
+    {
+     "sentence": "The Dundee Canal was an industrial canal in Clifton and Passaic in Passaic County, New Jersey.",
+     "facts": {
+      "0.0": "The Dundee Canal was an industrial canal.",
+      "0.1": "The Dundee Canal was in Clifton and Passaic.",
+      "0.2": "Clifton and Passaic are in Passaic County, New Jersey."
+     }
+    },
+    {
+     "sentence": " It was built between 1858 and 1861 and ran parallel to the Passaic River.",
+     "facts": {
+      "1.0": "The Dundee Canal was built between 1858 and 1861.",
+      "1.1": "The Dundee Canal ran parallel to the Passaic River."
+     }
+    },
+    {
+     "sentence": " It runs parallel to the coast, and is separated from the Atlantic Ocean by barrier beaches, including Palm Beach Island.",
+     "facts": {
+      "2.0": "It runs parallel to the coast.",
+      "2.1": "It is separated from the Atlantic Ocean by barrier beaches.",
+      "2.2": "The barrier beaches include Palm Beach Island."
+     }
+    },
+    {
+     "sentence": " The lagoon is connected to the Atlantic Ocean by two permanent, man-made inlets.",
+     "facts": {
+      "3.0": "The lagoon is connected to the Atlantic Ocean.",
+      "3.1": "The lagoon is connected to the Atlantic Ocean by two inlets.",
+      "3.2": "The two inlets are permanent.",
+      "3.3": "The two inlets are man-made."
+     }
+    }
+   ],
+   "items": [
+    "Lake Worth, Florida\nLake Worth is a city in Palm Beach County, Florida, United States, which takes its name from the body of water along its eastern border, originally called \"Lake Worth\", and now generally known as the Lake Worth Lagoon.\n\n The lake itself was named for General William J. Worth, who led U.S. forces during the last part of the Second Seminole War.\n\n s of 2010 , the population estimated by the U.S. Census Bureau was 34,910.\n\n The city is included in the Miami-Fort Lauderdale-Pompano Beach Metropolitan Area, which is home to approximately 5,563,857 people.",
+    "Lake Worth Lagoon\nThe Lake Worth Lagoon is a lagoon located in Palm Beach County, Florida.\n\n It runs parallel to the coast, and is separated from the Atlantic Ocean by barrier beaches, including Palm Beach Island.\n\n The lagoon is connected to the Atlantic Ocean by two permanent, man-made inlets.",
+    "Lake Worth station\nLake Worth is a Tri-Rail commuter rail station in Lake Worth, Florida, at the confluence of Lake Worth Road (SR 802) and Interstate 95.\n\n Opening to service January 9, 1989, parking is available at this station, all of which is beneath I-95 on the south side of Lake Worth Road.",
+    "Dundee Canal\nThe Dundee Canal was an industrial canal in Clifton and Passaic in Passaic County, New Jersey.\n\n It was built between 1858 and 1861 and ran parallel to the Passaic River.\n\n It supplied hydropower and water for manufacturing.\n\n There was interest by some members of the business community to modify the canal to support navigational uses, but the canal was never used for that purpose.",
+    "South Lake Worth Inlet\nThe South Lake Worth Inlet, also known as the Boynton Inlet, is an artificial cut through a barrier beach connecting the south end of the Lake Worth Lagoon in Palm Beach County, Florida with the Atlantic Ocean.\n\n The inlet is 130 ft wide and 6 ft and 12 ft deep.",
+    "Lake Worth Community High School\nLake Worth Community High School is a B State of Florida rated public high school located in Lake Worth, Florida.\n\n Established in 1922 as Lake Worth High School, it is currently one of Palm Beach County's largest schools.\n\n It has six magnet programs: the award-winning Air Force JROTC led by former Multi-National Award-winning Drill Teams, Tyranny and Fidelis; Medicine and Allied Health; Child Care and Development; Criminal Justice; Culinary and Drafting and Design.\n\n The Palm Beach County School Board added the word Community to the names of all public high schools, including Lake Worth High School, in the 1980s.",
+    "Lake Worth Inlet\nThe Palm Beach Inlet, also known as the Lake Worth Inlet is an artificial cut through a barrier island connecting the northern part of the Lake Worth Lagoon in Palm Beach County, Florida with the Atlantic Ocean.\n\n It is bordered by the town of Palm Beach on the south, and by the town of Palm Beach Shores to the north.\n\n The inlet is also the entrance channel for the Port of Palm Beach.\n\n Its coordinates are .",
+    "Raritan Water Power Canal\nThe Raritan Water Power Canal in Raritan, New Jersey was a three-mile long water power canal built during the early 1840s to power industries.\n\n The canal has been determined to be eligible for the National Register.\n\n The canal is included in Duke Island Park, as part of the Somerset County Park System.",
+    "Lake Osborne\nLake Osborne, Florida, USA is a 378-acre (152.9 hectares) lake that is part of a system of once natural freshwater lakes lying along the western slope of the coastal ridge in Palm Beach County just west of the Florida Intracoastal Waterway and Atlantic Ocean.\n\n It is located within the C-16 drainage basin which occupies approximately 40,031 acres of land (16,200 hectares).\n\n Five drainage canals discharge directly to Lake Osborne, and Lake Osborne discharges via the E-4 canal to the C16 and C51 canals to the Lake Worth Lagoon.\n\n The lake is bordered on the west by John Prince Memorial Park, and on the east be the City of Lake Worth.",
+    "Dismal Swamp Canal\nThe Dismal Swamp Canal is located along the eastern edge of the Great Dismal Swamp in Virginia and North Carolina in the United States.\n\n It is the oldest continually operating man-made canal in the United States, opened in 1805, and closed in October 2016.\n\n It is part of the Intracoastal Waterway, an inland route, which parallels the east coast and offers boaters shelter from the Atlantic Ocean from Manasquan Inlet, New Jersey, to Brownsville, Texas.\n\n The route runs through bays, lakes, rivers, streams, and canals, and includes the Intracoastal Waterway running from Norfolk, Virginia, to the Florida Keys."
+   ]
+  },
+  {
+   "id": "3c3d1d8f6694708a",
+   "gold": [
+    {
+     "sentence": "John André (2 May 1750 – 2 October 1780) was a British Army officer hanged as a spy by the Continental Army during the American Revolutionary War for assisting Benedict Arnold's attempted surrender of the fort at West Point, New York to the British.",
+     "facts": {
+      "0.0": "John André lived from 2 May 1750 to 2 October 1780.",
+      "0.1": "John André was a British Army officer.",
+      "0.2": "John André was hanged as a spy by the Continental Army during the American Revolutionary War.",
+      "0.3": "John André was hanged for assisting Benedict Arnold's attempted surrender of the fort at West Point, New York, to the British."
+     }
+    },
+    {
+     "sentence": "Benedict Arnold (January 14, 1741 [O.S. January 3, 1740] June 14, 1801) was a general during the American Revolutionary War, who fought for the American Continental Army, and later defected to the British Army.",
+     "facts": {
+      "1.0": "Benedict Arnold lived from January 14, 1741 (Old Style: January 3, 1740) to June 14, 1801.",
+      "1.1": "Benedict Arnold was a general during the American Revolutionary War.",
+      "1.2": "Benedict Arnold fought for the American Continental Army.",
+      "1.3": "Benedict Arnold later defected to the British Army."
+     }
+    }
+   ],
+   "items": [
+    "John André\nJohn André (2 May 1750 – 2 October 1780) was a British Army officer hanged as a spy by the Continental Army during the American Revolutionary War for assisting Benedict Arnold's attempted surrender of the fort at West Point, New York to the British.",
+    "List of Continental Army units\nThe Continental Army was the national army of first the Thirteen Colonies, and then the independent United States, during the American Revolutionary War, established by a resolution of the Congress on June 14, 1775, three days before the Battle of Bunker Hill, where it saw its first action under that title.\n\n.\n\n The Continental Congress took a number of steps in the spring of 1775 to create the army in response to the Battles of Lexington and Concord in April and the seizure of Fort Ticonderoga in May.\n\n The units composing the Continental Army changed frequently, especially in the first two years of the war.\n\n From 1777 to the close of the war, the organization of the Continental Army became progressively more systematic and sophisticated.\n\n The Continental Army that served at Yorktown in 1781 bore very little resemblance to the Continental Army that blockaded Boston in 1775.",
+    "William Farrar Smith\nWilliam Farrar Smith (February 17, 1824 – February 28, 1903), known as ‘Baldy’ Smith, was a Union general in the American Civil War, notable for attracting the extremes of glory and blame.\n\n He was praised for his gallantry in the Seven Days Battles and the Battle of Antietam, but was demoted for insubordination after the disastrous defeat at the Battle of Fredericksburg.\n\n As chief engineer of the Army of the Cumberland, he achieved recognition by restoring a supply line that saved that army from starvation and surrender, known the “Cracker Line”, that helped Union troops to success in the Chattanooga Campaign in the autumn of 1863.\n\n Leading the first operation against Petersburg, Smith’s hesitation, possibly illness-related, cost the Union a prime opportunity for a quick end to the war, and he was relieved of command.",
+    "Battle of Germantown\nThe Battle of Germantown was a major engagement in the Philadelphia campaign of the American Revolutionary War.\n\n It was fought on October 4, 1777, at Germantown, Pennsylvania, between the British Army led by Sir William Howe, and the American Continental Army, with the 2nd Canadian Regiment, under George Washington.",
+    "Lewis Nicola\nLewis Nicola (1717 – August 9, 1807) was an Irish-born American military officer, merchant, and writer who held various military and civilian positions throughout his career.\n\n Nicola is most notable for authoring the Newburgh letter, which urged George Washington to assume a royal title.\n\n Born in Dublin, Ireland, Nicola had been an officer in the British Army, serving in Europe before immigrating to the Thirteen Colonies.\n\n Establishing a residence in Philadelphia with his family, Nicola opened a library in 1767 and was active in colonial philosophical organizations.\n\n As a result of his work to establish the American Philosophical Society, he was elected as one of its curators.\n\n When the American Revolution broke out, Nicola offered his services to the colonial government, which eventually appointed him to various positions with local forces.",
+    "John F. Anderson\nJohn Francis Anderson was an officer in the Union Army during the American Civil War.\n\n When the war broke out, Anderson who was the son of Maine's former Governor Hugh J. Anderson was initially commissioned First Lieutenant in the militia; and on September 2, 1861, Anderson became the adjutant of the 24th Regiment Massachusetts Volunteer Infantry.\n\n He was appointed to Maj. Gen. John G. Foster's staff as a major and an aide-de-camp on June 9, 1863 and served with that officer for most of the remainder of the war, resigning on March 27, 1865.\n\n On December 11, 1866, President Andrew Johnson nominated Major Anderson to the honorary grade of brevet brigadier general, to rank from March 13, 1865 and the United States Senate confirmed the award on February 6, 1867.",
+    "Benedict Arnold\nBenedict Arnold (January 14, 1741 [O.S. January 3, 1740] June 14, 1801) was a general during the American Revolutionary War, who fought for the American Continental Army, and later defected to the British Army.\n\n While a general on the American side, he obtained command of the fortifications at West Point, New York (which after 1802 would become the site of the U.S. Military Academy), overlooking the cliffs at the Hudson River (upriver from British-occupied New York City), and planned to surrender them to British forces.\n\n This plan was exposed in September 1780.\n\n He was commissioned into the British Army as a brigadier general.",
+    "Benjamin Logan\nBenjamin Logan (c.1742 – December 11, 1802) was an American pioneer, soldier, and politician from Shelby County, Kentucky.\n\n As colonel of the Kentucky County, Virginia militia during the American Revolutionary War, he was second-in-command of all the militia in Kentucky.\n\n He was also a leader in Kentucky's efforts to become a state.\n\n His brother, John Logan, was the first state treasurer of Kentucky.",
+    "Siege of Yorktown\nThe Siege of Yorktown, also known as the Battle of Yorktown, the Surrender at Yorktown, German Battle or the Siege of Little York, ending on October 19, 1781, at Yorktown, Virginia, was a decisive victory by a combined force of American Continental Army troops led by General George Washington and French Army troops led by the Comte de Rochambeau over a British Army commanded by British peer and Lieutenant General Charles Cornwallis.\n\n The culmination of the Yorktown campaign, the siege proved to be the last major land battle of the American Revolutionary War in the North American theater, as the surrender by Cornwallis, and the capture of both him and his army, prompted the British government to negotiate an end to the conflict.\n\n The battle boosted faltering American morale and revived French enthusiasm for the war, as well as undermining popular support for the conflict in Great Britain.",
+    "Benjamin Lincoln\nBenjamin Lincoln (January 24, 1733 (O.S. January 13, 1732) – May 9, 1810) was an American army officer.\n\n He served as a major general in the Continental Army during the American Revolutionary War.\n\n Lincoln is notable for being involved in three major surrenders during the war: his participation in the Battles of Saratoga (sustaining a wound shortly afterward) contributed to John Burgoyne's surrender of a British army, he oversaw the largest American surrender of the war at the 1780 Siege of Charleston, and, as George Washington's second in command, he formally accepted the British surrender at Yorktown."
+   ]
+  },
+  {
+   "id": "33ed88af214d31f4",
+   "gold": [
+    {
+     "sentence": " It was launched in March 1994 by Millivres Ltd, under the editorship of Frances Williams and is now published by Twin Media Group, which is owned by Silke Bader and Linda Riley.",
+     "facts": {
+      "0.0": "The publication was launched in March 1994.",
+      "0.1": "The publication was launched by Millivres Ltd.",
+      "0.2": "The publication was launched under the editorship of Frances Williams.",
+      "0.3": "The publication is now published by Twin Media Group.",
+      "0.4": "Twin Media Group is owned by Silke Bader.",
+      "0.5": "Twin Media Group is owned by Linda Riley."
+     }
+    },
+    {
+     "sentence": "Elle is a worldwide lifestyle magazine of French origin that focuses on fashion, beauty, health, and entertainment.",
+     "facts": {
+      "1.0": "Elle is a worldwide lifestyle magazine.",
+      "1.1": "Elle is of French origin.",
+      "1.2": "Elle focuses on fashion.",
+      "1.3": "Elle focuses on beauty.",
+      "1.4": "Elle focuses on health.",
+      "1.5": "Elle focuses on entertainment."
+     }
+    },
+    {
+     "sentence": " \"Elle\" is also the world's best-selling fashion magazine.",
+     "facts": {
+      "2.0": "Elle is also the world's best-selling fashion magazine."
+     }
+    },
+    {
+     "sentence": " It was founded by Pierre Lazareff and his wife Hélène Gordon in 1945.",
+     "facts": {
+      "3.0": "Elle was founded by Pierre Lazareff.",
+      "3.1": "Elle was founded by Hélène Gordon, the wife of Pierre Lazareff.",
+      "3.2": "Elle was founded in 1945."
+     }
+    }
+   ],
+   "items": [
+    "Esquire (magazine)\nEsquire is an American men's magazine, published by the Hearst Corporation in the United States.\n\n Founded in 1933, it flourished during the Great Depression under the guidance of founders Arnold Gingrich, David A. Smart and Henry L. Jackson.",
+    "Rester vrai\nRester vrai is a 1994 album recorded by French singer Florent Pagny.\n\n It was his third studio album and was released in March 1994.\n\n It achieved moderate success in France where it remained charted for 39 weeks in the top 50, including a peak at #19 for two weeks.\n\n For the first time in Pagny's career, lyrics were written by other artists such as Jean-Jacques Goldman who participated under the pseudonym of Sam Brewski.\n\n This album provided two singles : the unsuccessful \"Est-ce que tu me suis ?\"\n\n (#45 in France) and the hit single \"Si tu veux m'essayer\" (#7 in France), which was recorded as \"If You Want to Know Me\" in 2009 by the Belgian singer Dana Winner for the album \"Between Now and Tomorrow\" with English lyrics by Michael Leahy.\n\n The music video for the track \"Rester vrai\" was directed by Dani Jacobs and shot in London and features Pagny trapped in a glass box in a large empty space as if he is a museum exhibit or part of an experiment.",
+    "Elle (magazine)\nElle is a worldwide lifestyle magazine of French origin that focuses on fashion, beauty, health, and entertainment.\n\n \"Elle\" is also the world's best-selling fashion magazine.\n\n It was founded by Pierre Lazareff and his wife Hélène Gordon in 1945.\n\n The title, in French, means \"she\" or \"her\".",
+    "Essence (magazine)\nEssence is a monthly magazine for African American women between the ages of 18 and 49.\n\n It is the only magazine that focuses on reaching an audience of black women, revolves around the black woman experience, and has remained for a long period of time.\n\n The magazine covers fashion, lifestyle and beauty, with an intimate girlfriend-to-girlfriend tone, and its slogan \"Fierce, Fun, and Fabulous\" suggests the magazine's goal of empowering African-American women.\n\n The topics the magazine discusses range from celebrities, to fashion, to point-of-view pieces addressing current issues in the African-American community.\n\n A number of its readers engage closely and personally with the publication, and it claims to be the magazine \"for and about Black women\".",
+    "VIVmag\nVIVmag is one of the earliest exclusively digital, interactive women's lifestyle magazines.\n\n Launched in 2006 and backed by Canadian industrialist David Harrison Gilmour (the founder of FIJI Water LLC), the bimonthly magazine is distributed by Zinio Systems, Inc.\n\n The first issue appeared in January-February 2007.\n\n There is no print version.\n\n The paperless title can be viewed in most browsers or downloaded to your computer and read via the Zinio Reader.\n\n The magazine is based in Thousand Oaks, California.",
+    "Katarina Ivanovska\nKatarina Ivanovska (Macedonian: Катарина Ивановска ; born 18 August 1988) is a Macedonian model and actress.\n\n She began her modeling career in 2004, appearing at Milan Fashion Week after winning the Look Models International model search in Macedonia.\n\n In December, 2004, she appeared in a pictorial for \"Elle\" magazine and has also appeared in \"Citizen K\", \"Stiletto\" and the Italian and Russian \"Vogue\".\n\n She has been featured on the covers of \"Diva\" and \"Maxima\" magazines and in advertisements for D&G in 2006.\n\n She is considered the most successful Macedonian model.\n\n In 2010, Ivanovska appeared in Serbian \"Elle\" magazine.\n\n In 2011 she signed a contract for advertising Victoria's Secret products.\n\n In 2011 she got her first acting job in the Macedonian World War II film, \"The Third Half\", landing the lead role of a young Jewish girl named Rebecca.",
+    "The Fader\nThe Fader (stylized as The FADER) is a New York City-based music magazine launched in 1999 by Rob Stone and Jon Cohen, covering music, style and culture.\n\n It was the first print publication to be released on iTunes.",
+    "Shape (magazine)\nShape is a monthly English language fitness magazine started by Weider Publications in 1981, founded by Christine MacIntyre (a pioneer in women's free weight fitness) and became the number one women's fitness magazine.\n\n At that time, Weider Enterprises consisted primarily of the bodybuilding magazine \"Muscle & Fitness\".\n\n Joe Weider and Christine MacIntyre had differing views of how to present \"Shape\", Weider endorsing a less journalistic and more commercial approach to articles, MacIntyre endorsing a more academic, doctor-based magazine.\n\n Weider also endorsed a sexier approach to editorial while MacIntyre endorsed a healthier look for women, eschewing sexiness in the models and the copy.\n\n MacIntyre largely won that battle, editing a magazine that required that every byline have an advanced medical degree, that cover models should look healthy rather than sexy, and that sexist language be avoided.\n\n Christine MacIntyre was the editor-in-chief until her death in 1988.\n\n Tara Kraft is the current editor-in-chief.\n\n \"Shape\" found a readership based on that formula.",
+    "Diva (magazine)\nDIVA is a leading lesbian magazine in the United Kingdom, published monthly.\n\n It was launched in March 1994 by Millivres Ltd, under the editorship of Frances Williams and is now published by Twin Media Group, which is owned by Silke Bader and Linda Riley.\n\n Silke Bader is also the publisher of Curve magazine in the USA and LOTL in Australia, and Linda Riley runs the European Diversity Awards and is the former publisher of g3 magazine in the UK.",
+    "Girlfriends (magazine)\nGirlfriends was a women's magazine that provided critical coverage of culture, entertainment and world events from a lesbian perspective.\n\n It was founded by Jacob Anderson-Minshall, Diane Anderson-Minshall and Heather Findlay.\n\n It also offered relationship, health and travel advice.\n\n Published monthly from San Francisco since 1993, it was distributed nationwide by Disticor.\n\n It had the same publisher as lesbian erotica magazine \"On Our Backs\", but distanced itself from its pornographic counterpart by refusing to carry sexual ads.\n\n \"Girlfriends\" magazine ceased publication in 2006."
+   ]
+  },
+  {
+   "id": "7d338361fe061ffc",
+   "gold": [
+    {
+     "sentence": " It contains about 200 species, including several notable radiations, such as the matipo of New Zealand and the kōlea of Hawaiʻ i (the New Zealand \"black matipo\", \"Pittosporum tenuifolium\", is not related to \"Myrsine\").",
+     "facts": {
+      "0.0": "Myrsine contains about 200 species.",
+      "0.1": "Myrsine includes several notable radiations.",
+      "0.2": "The matipo of New Zealand is one of the notable radiations within Myrsine.",
+      "0.3": "The kōlea of Hawaiʻi is one of the notable radiations within Myrsine.",
+      "0.4": "The New Zealand 'black matipo', Pittosporum tenuifolium, is not related to Myrsine."
+     }
+    },
+    {
+     "sentence": "Storax or snowbell is the common names of Styrax, a genus of about 130 species of large shrubs or small trees in the family Styracaceae, mostly native to warm temperate to tropical regions of the Northern Hemisphere, with the majority in eastern and southeastern Asia, but also crossing the equator in South America.",
+     "facts": {
+      "1.0": "Storax or snowbell are the common names of Styrax.",
+      "1.1": "Styrax is a genus of about 130 species.",
+      "1.2": "Styrax species are large shrubs or small trees.",
+      "1.3": "Styrax belongs to the family Styracaceae.",
+      "1.4": "Styrax is mostly native to warm temperate to tropical regions of the Northern Hemisphere.",
+      "1.5": "The majority of Styrax species are in eastern and southeastern Asia.",
+      "1.6": "Styrax also crosses the equator in South America."
+     }
+    }
+   ],
+   "items": [
+    "Styrax litseoides\nStyrax litseoides is a species of flowering plant in the genus \"Styrax\" and family Styracaceae.\n\n It is endemic to Vietnam.",
+    "Styrax crotonoides\nStyrax crotonoides is a species of plant in the genus \"Styrax\" and family Styracaceae.\n\n It is found in Peninsular Malaysia and Singapore.",
+    "Rapanea\nRapanea is a genus of plant in family Primulaceae.\n\n It has often been placed in synonymy with \"Myrsine\", and many species have been moved to \"Myrsine\".",
+    "Styrax fraserensis\nStyrax fraserensis is a species of flowering plant in the genus \"Styrax\" and family Styracaceae.\n\n It is a tree endemic to Peninsular Malaysia.\n\n It is threatened by habitat loss.",
+    "Styrax vilcabambae\nStyrax vilcabambae (syn.\n\n \"Pamphilia vilcabambae\" D.R.Simpson) is a species of flowering plant in the genus \"Styrax\" and the family Styracaceae.\n\n It is endemic to Peru.",
+    "Myrsine\nMyrsine is a genus of flowering plants in the family Primulaceae.\n\n It was formerly placed in the family Myrsinaceae before this was merged into the Primulaceae.\n\n It is found nearly worldwide, primarily in tropical and subtropical areas.\n\n It contains about 200 species, including several notable radiations, such as the matipo of New Zealand and the kōlea of Hawaiʻ i (the New Zealand \"black matipo\", \"Pittosporum tenuifolium\", is not related to \"Myrsine\").\n\n In the United States, members of this genus are known as colicwood.\n\n Some species, especially \"M. africana\", are grown as ornamental shrubs.",
+    "Pterostyrax\nPterostyrax, the epaulette tree, is a small genus of four species of deciduous large shrubs or small trees in the family Styracaceae, native to eastern Asia in China and Japan.\n\n They grow 4 - tall, with alternate, simple ovate leaves 6 - long and 4 - broad.\n\n The flowers are white, produced in dense panicles 8 - long.\n\n The fruit is an oblong dry drupe, with longitudinal ribs or narrow wings (the wings are absent in the related genus \"Styrax\", whence the name \"Pterostyrax\", \"winged styrax\").",
+    "Ardisia\nArdisia (coralberry or marlberry) is a genus of flowering plants in the family Primulaceae.\n\n It was in the former Myrsinaceae family now recognised as the myrsine sub-family Myrsinoideae.\n\n They are distributed in the Americas, Asia, Australia, and the Pacific Islands, mainly in the tropics.\n\n There are 400 to 500 species.",
+    "Styrax\nStorax or snowbell is the common names of Styrax, a genus of about 130 species of large shrubs or small trees in the family Styracaceae, mostly native to warm temperate to tropical regions of the Northern Hemisphere, with the majority in eastern and southeastern Asia, but also crossing the equator in South America.\n\n The resin obtained from the tree is called storax or benzoin (not to be confused with the \"Liquidambar\" storax balsam).",
+    "Strobilanthes\nStrobilanthes is a genus of about 350 species of flowering plants in the family Acanthaceae, mostly native to tropical Asia and Madagascar, but with a few species extending north into temperate regions of Asia.\n\n Many species are cultivated for their 2-lipped, hooded flowers in shades of blue, pink, white and purple.\n\n Most are frost-tender and require protection in frost-prone areas."
+   ]
+  },
+  {
+   "id": "5796eeaee1d9f8ad",
+   "gold": [
+    {
+     "sentence": "Mosè in Egitto (\"Moses in Egypt)\" (] ) is a three-act opera written by Gioachino Rossini to an Italian libretto by Andrea Leone Tottola, which was based on a 1760 play by Francesco Ringhieri, \"L'Osiride\".",
+     "facts": {
+      "0.0": "Mosè in Egitto (Moses in Egypt) is a three-act opera.",
+      "0.1": "Mosè in Egitto was written by Gioachino Rossini.",
+      "0.2": "Mosè in Egitto has an Italian libretto by Andrea Leone Tottola.",
+      "0.3": "The libretto of Mosè in Egitto was based on a 1760 play by Francesco Ringhieri.",
+      "0.4": "The 1760 play by Francesco Ringhieri is titled L'Osiride."
+     }
+    },
+    {
+     "sentence": "Lucrezia Borgia is a melodramatic opera in a prologue and two acts by Gaetano Donizetti.",
+     "facts": {
+      "1.0": "Lucrezia Borgia is a melodramatic opera.",
+      "1.1": "Lucrezia Borgia is in a prologue and two acts.",
+      "1.2": "Lucrezia Borgia is by Gaetano Donizetti."
+     }
+    }
+   ],
+   "items": [
+    "Pagliacci\nPagliacci (] ; literal translation, \"Clowns\") is an Italian opera in a prologue and two acts, with music and libretto by Ruggero Leoncavallo.\n\n It is the only Leoncavallo opera that is still widely performed.\n\n Opera companies have frequently staged \"Pagliacci\" with \"Cavalleria rusticana\" by Mascagni, a double bill known colloquially as 'Cav and Pag'.",
+    "Mosè in Egitto\nMosè in Egitto (\"Moses in Egypt)\" (] ) is a three-act opera written by Gioachino Rossini to an Italian libretto by Andrea Leone Tottola, which was based on a 1760 play by Francesco Ringhieri, \"L'Osiride\".\n\n It premièred on 5 March 1818 at the recently reconstructed Teatro San Carlo in Naples, Italy.",
+    "Romolo ed Ersilia (Hasse)\nRomolo ed Ersilia is an opera in three acts composed by Johann Adolph Hasse to an Italian-language libretto by Pietro Metastasio.\n\n The opera was commissioned by Empress Maria Theresa to celebrate the marriage of her son Leopold to Maria Luisa of Spain.\n\n The opera was first performed on 6 August 1765, the day after their wedding, in the court theatre of the Imperial Palace in Innsbruck.\n\n The opera received its first performance in modern times in 2011 during the Innsbruck Festival of Early Music.",
+    "Daphne (opera)\nDaphne, Op.\n\n82, is an opera in one act by Richard Strauss, subtitled \"Bucolic Tragedy in One Act\".\n\n The German libretto was by Joseph Gregor.\n\n The opera is based loosely on the mythological figure Daphne from Ovid's \"Metamorphoses\" and includes elements taken from \"The Bacchae\" by Euripides.\n\n The opera premiered at the Semperoper in Dresden on 15 October 1938, originally intended as a double bill with Strauss' \"Friedenstag\", but as the scale of \"Daphne\" grew, that idea was abandoned.\n\n The conductor of the first performance was Karl Böhm, to whom the opera was dedicated.",
+    "Il trittico\nIl trittico (\"The Triptych\") is the title of a collection of three one-act operas, \"Il tabarro\", \"Suor Angelica\", and \"Gianni Schicchi\", by Giacomo Puccini.\n\n The work received its world premiere at the Metropolitan Opera on 14 December 1918.",
+    "Orfeo ed Euridice\nOrfeo ed Euridice (French version: Orphée et Eurydice ; English: \"Orpheus and Eurydice\") is an opera composed by Christoph Willibald Gluck based on the myth of Orpheus, set to a libretto by Ranieri de' Calzabigi.\n\n It belongs to the genre of the \"azione teatrale\", meaning an opera on a mythological subject with choruses and dancing.\n\n The piece was first performed at the Burgtheater in Vienna on 5 October 1762 in the presence of Empress Maria Theresa.\n\n \"Orfeo ed Euridice\" is the first of Gluck's \"reform\" operas, in which he attempted to replace the abstruse plots and overly complex music of \"opera seria\" with a \"noble simplicity\" in both the music and the drama.",
+    "L'Orfeo discography\nThese lists show the audio and visual recordings of the opera \"L'Orfeo\" by Claudio Monteverdi.\n\n The opera was first performed in Mantua in 1607, at the court of Duke Vincenzo Gonzaga, and is one of the earliest of all operas.\n\n The first recording of \"L'Orfeo\" was issued in 1939, a freely adapted version of Monteverdi's music edited by Giacomo Benvenuti, given by the orchestra of La Scala Milan conducted by Ferrucio Calusio.\n\n In 1949 the Berlin Radio Orchestra under Helmut Koch recorded the complete opera, on long-playing records (LPs).\n\n The advent of LP recordings was, as Harold Schonberg later wrote, an important factor in the postwar revival of interest in Renaissance and Baroque music, and from the mid-1950s recordings of \"L'Orfeo\" have been issued on many labels.\n\n Koch's landmark version was reissued in 1962, when it was compared unfavourably with others that had by then been issued.",
+    "Lucrezia Borgia (1940 film)\nLucrezia Borgia is a 1940 Italian historical film directed by Hans Hinrich and starring Isa Pola, Friedrich Benfer and Carlo Ninchi.\n\n The film portrays the life of Lucrezia Borgia (1480-1519), one of a number of Italian films of the era set during the Renaissance.\n\n It was made at the Scalera Studios in Rome.",
+    "Lucrezia Borgia (opera)\nLucrezia Borgia is a melodramatic opera in a prologue and two acts by Gaetano Donizetti.\n\n Felice Romani wrote the Italian libretto after the play \"Lucrezia Borgia\" by Victor Hugo, in its turn after the legend of Lucrezia Borgia.\n\n \"Lucrezia Borgia\" was first performed on 26 December 1833 at La Scala, Milan.",
+    "Lucrezia Borgia (play)\nLucrezia Borgia (French: \"Lucrèce Borgia\" ) is an 1833 play by the French writer Victor Hugo.\n\n It is a historical work portraying the Renaissance-era Italian aristocrat Lucrezia Borgia.\n\n The play (along with \"Angelo, Tyrant of Padua\") is believed to have been a major influence on Oscar Wilde's \"The Duchess of Padua\" (1891)."
+   ]
+  },
+  {
+   "id": "daf0501b54e9235d",
+   "gold": [
+    {
+     "sentence": "Lowell J. Sherman (October 11, 1885 – December 28, 1934) was an American actor and film director.",
+     "facts": {
+      "0.0": "Lowell J. Sherman was born on October 11, 1885.",
+      "0.1": "Lowell J. Sherman died on December 28, 1934.",
+      "0.2": "Lowell J. Sherman was an American actor.",
+      "0.3": "Lowell J. Sherman was an American film director."
+     }
+    },
+    {
+     "sentence": "Jonathan Kaplan (born November 25, 1947) is an American film producer and director.",
+     "facts": {
+      "1.0": "Jonathan Kaplan was born on November 25, 1947.",
+      "1.1": "Jonathan Kaplan is an American film producer.",
+      "1.2": "Jonathan Kaplan is an American film director."
+     }
+    }
+   ],
+   "items": [
+    "Leonard Schrader\nLeonard Schrader (November 30, 1943 – November 2, 2006) was an American screenwriter and director, most notable for his ability to write Japanese language films and for his many collaborations with his brother, Paul Schrader.\n\n He earned an Academy Award Nomination for the screenplay he wrote for the film \"Kiss of the Spider Woman\".",
+    "Lowell Sherman\nLowell J. Sherman (October 11, 1885 – December 28, 1934) was an American actor and film director.\n\n At a time when it was highly unusual, he was both the actor and director on several films in the early 1930s, before completely transitioning to the role of director.\n\n At the height of his career, after scoring huge successes with his direction of the films \"She Done Him Wrong\" and \"Morning Glory\" (which starred Mae West and won her first Academy Award for Katharine Hepburn respectively), he succumbed to pneumonia after a brief illness.",
+    "Kevin Brownlow\nKevin Brownlow (born 2 June 1938) is a British film historian, television documentary-maker, filmmaker, author, and film editor.\n\n Brownlow is best known for his work documenting the history of the silent era.\n\n Brownlow became interested in silent film at the age of eleven.\n\n This interest grew into a career spent documenting and restoring film.\n\n He has rescued many silent films and their history.\n\n His initiative in interviewing many largely forgotten, elderly film pioneers in the 1960s and 1970s preserved a legacy of early mass-entertainment cinema.\n\n Brownlow received an Academy Honorary Award at the 2nd Annual Governors Awards given by the Academy of Motion Picture Arts and Sciences on 13 November 2010.\n\n This was the first occasion on which an Academy Honorary Award was given to a film preservationist.",
+    "D. Ross Lederman\nDavid Ross Lederman (December 12, 1894 – August 24, 1972) was an American film director noted for his Western/action/adventure films of the 1930s and 1940s.",
+    "Maurice Browne\nMaurice Browne (12 February 1881 – 21 January 1955), born in Reading, England, was best known as a theater producer in the United States and the UK.\n\n The Cambridge-educated Browne was also a poet, actor, and theater director.\n\n He has been credited, along with his then-wife Ellen Van Volkenburg, with being the founder of the Little Theatre Movement in America through his work with the Chicago Little Theatre.\n\n Browne and Van Volkenburg went on to found the department of drama at the Cornish School in Seattle in 1918, now Cornish College of the Arts.\n\n Browne's greatest triumph came in 1929 when he produced \"Journey's End\", by R. C. Sherriff in London.",
+    "Jonathan Kaplan\nJonathan Kaplan (born November 25, 1947) is an American film producer and director.\n\n His film \"The Accused\" (1988) earned actress Jodie Foster her first Oscar for Best Actress and was nominated for the Golden Bear at the 39th Berlin International Film Festival.\n\n Kaplan received five Emmy nominations for his roles directing and producing \"ER\".",
+    "Elmer Clifton\nElmer Clifton (March 14, 1890 – October 15, 1949) was an American writer, director and actor from the early silent days.\n\n A collaborator of D.W. Griffith, he appeared in \"The Birth of a Nation\" (1915) and \"Intolerance\" (1916) before giving up acting in 1917 to concentrate on work behind the camera, with Griffith and Joseph Henabery as his mentors.\n\n His first feature-length solo effort as a director was \"The Flame of Youth\" with Jack Mulhall.",
+    "Frederick King Keller\nFrederick King Keller (born 1954 in Buffalo, New York) is an American director, producer and screenwriter for film and television.\n\n He is also credited under the names Frederick K. Keller, Fred K. Keller and Fred Keller.\n\n He is the son of actor/screenwriter .\n\n His father was a television pioneer who produced and directed the first weekly dramatic series seen on television.Besides acting and directing in theater his father also ran several art house movie theaters in Buffalo which the young Fred became intimately involved with and which formed the root of his cinematic education.",
+    "Edmund Mortimer (actor)\nEdmund Mortimer (21 August 1874 – 21 May 1944) was an American actor and film director.\n\n He appeared in 251 films between 1913 and 1945.\n\n He also directed 23 films between 1918 and 1928.\n\n He was born in New York, New York and died in Los Angeles, California.",
+    "Still Kicking (film)\nStill Kicking: Six Artistic Women of Project Arts & Longevity is a 2006 32-minute documentary film by Pacific Grove filmmaker Greg Young, featuring six Bay Area women role models over 85 years old who remained artistically active.\n\n The catalyst for Young's film was Amy Gorman and Frances Kandl's Project Arts & Longevity through which they were exploring the link between longevity and artistic vitality.\n\n Along with the film the joint project resulted in a book entitled Aging Artfully."
+   ]
+  },
+  {
+   "id": "d101d90eb53606a9",
+   "gold": [
+    {
+     "sentence": "Old Smokey is a euphemistic name given to the state prison electric chair in New Jersey, which is on display at the New Jersey State Police Museum.",
+     "facts": {
+      "0.0": "Old Smokey is a euphemistic name for the state prison electric chair in New Jersey.",
+      "0.1": "The New Jersey state prison electric chair, called Old Smokey, is on display at the New Jersey State Police Museum."
+     }
+    },
+    {
+     "sentence": " The chair's most notorious victim was Richard Hauptmann, the man executed in the chair after being found guilty of abducting and killing Charles Augustus Lindbergh, Jr. in 1932, the 20-month-old son of famous aviators Charles Lindbergh and Anne Morrow Lindbergh \"(see Lindbergh kidnapping)\".",
+     "facts": {
+      "1.0": "The chair's most notorious victim was Richard Hauptmann.",
+      "1.1": "Richard Hauptmann was executed in the chair.",
+      "1.2": "Richard Hauptmann was found guilty of abducting and killing Charles Augustus Lindbergh, Jr.",
+      "1.3": "The abduction and killing of Charles Augustus Lindbergh, Jr. happened in 1932.",
+      "1.4": "Charles Augustus Lindbergh, Jr. was 20 months old.",
+      "1.5": "Charles Augustus Lindbergh, Jr. was the son of famous aviators Charles Lindbergh and Anne Morrow Lindbergh.",
+      "1.6": "The case is referred to as the Lindbergh kidnapping (see Lindbergh kidnapping)."
+     }
+    },
+    {
+     "sentence": " The Lindbergh kidnapping became known as \"The Crime of the Century\".",
+     "facts": {
+      "2.0": "The Lindbergh kidnapping became known as 'The Crime of the Century'."
+     }
+    }
+   ],
+   "items": [
+    "Johnny Jack Nounes\nJohnny Jack Nounes, also known as the \"Beau Brummell of Galveston\", was an organized crime boss in Galveston, Texas, United States, during the early 1900s.\n\n He, with one-armed George Musey, led the Downtown Gang, one of the two gangs which controlled most of the Galveston Crime Syndicate until the early 1930s.\n\n They fought for control of the island against the rival Beach Gang led by Ollie Quinn and Dutch Voight.\n\n As the prohibition era began, his gang came to be one of the dominant forces in the Galveston Crime Syndicate.\n\n Galveston became the main port of entry for liquor supply in Texas and many parts of the Midwest.",
+    "Smiley face murder theory\nThe Smiley face murder theory (variations include Smiley face murders, Smiley face killings, Smiley face gang, and others) is a theory advanced by two retired New York City detectives, Kevin Gannon and Anthony Duarte, that a number of young men found dead in bodies of water across several Midwestern American states over the last decade did not accidentally drown, as concluded by law enforcement agencies, but were victims of a serial killer or killers.\n\n The term \"smiley face\" became connected to the alleged murders when it was made public that the police had discovered graffiti depicting a smiley face near locations where they think the killer dumped the bodies in at least a dozen of the cases.\n\n The response of law enforcement investigators and other experts to Gannon and Duarte's theory has been largely skeptical.",
+    "The Last Mile (play)\nThe Last Mile is a Broadway play by John Wexley that ran for 289 performances from February 13, 1930 to October 1930 at the Sam H. Harris Theatre.\n\n It was produced by Herman Shumlin and staged by Chester Erskine.\n\n It is set in the death row wing of a prison.\n\n The lead role of John \"Killer\" Mears was first played by Spencer Tracy, and it was the role that bought him to the attention of Hollywood.\n\n It was later played for a time by Clark Gable.\n\n The play was adapted into a 1932 film starring Preston Foster and into a 1959 film starring Mickey Rooney.",
+    "The Big House (1930 film)\nThe Big House is a 1930 American Pre-Code crime drama film directed by George W. Hill, released by Metro-Goldwyn-Mayer, and starring Chester Morris, Wallace Beery, Lewis Stone and Robert Montgomery.\n\n The supporting cast features Leila Hyams, George F. Marion, J. C. Nugent, Karl Dane and Tom Kennedy.\n\n The story and dialogue were written by Frances Marion, with additional dialogue by Joe Farnham and Martin Flavin.\n\n The story was inspired by a spate of prison riots in 1929 and resulting federal investigation.\n\n In response, George Hill wrote a twenty-seven page story treatment called \"The Reign of Terror: A Story of Crime and Punishment\".\n\n Irving Thalberg gave the go ahead for the screenplay and assigned Frances Marion to work with George Hill.",
+    "Old Smokey\nOld Smokey is a euphemistic name given to the state prison electric chair in New Jersey, which is on display at the New Jersey State Police Museum.\n\n The chair's most notorious victim was Richard Hauptmann, the man executed in the chair after being found guilty of abducting and killing Charles Augustus Lindbergh, Jr. in 1932, the 20-month-old son of famous aviators Charles Lindbergh and Anne Morrow Lindbergh \"(see Lindbergh kidnapping)\".",
+    "Sten Forshufvud\nSten Gabriel Bernhard Forshufvud (9 February 1903 – 25 June 1985) was a Swedish dentist and physician, and amateur toxicologist (expert on poisons) who formulated and supported the controversial theory that Napoleon was assassinated by a member of his entourage while in exile.\n\n He wrote a book, in Swedish, about this in 1961, which was translated the following year as \"Who Killed Napoleon?\"\n\n He later published his ideas in English, in the 1983 book \"Assassination At St. Helena: The Poisoning Of Napoleon Bonaparte,\" a book on whose authorship Ben Weider, co-author (with David Hapgood) of the book \"The Murder Of Napoleon,\" published the year earlier, which also advanced Forshufvud's ideas, collaborated.",
+    "Old Sparky\nOld Sparky is the nickname of the electric chairs in Arkansas, Connecticut, Florida, Georgia, Illinois, Kentucky, Nebraska, New York, Ohio, Oklahoma, South Carolina, Texas, Virginia, and West Virginia.\n\n Old Smokey was the nickname of the electric chairs used in New Jersey, Pennsylvania, and Tennessee.",
+    "Convicted (1950 film)\nConvicted is a 1950 American crime film noir directed by Henry Levin starring Glenn Ford and Broderick Crawford.\n\n It was the third Columbia Pictures film adaptation of the 1929 stage play \"The Criminal Code\" by Martin Flavin, following Howard Hawk's \"The Criminal Code\" (1931) and John Brahm's \"Penitentiary\" (1938).",
+    "The Journalist and the Murderer\nThe Journalist and the Murderer is a study by Janet Malcolm about the ethics of journalism, published by Alfred A. Knopf/Random House in 1990.\n\n It is an examination of the professional choices that shape a work of non-fiction, as well as a rumination on the morality that underpins the journalistic enterprise.\n\n The journalist in question is Joe McGinniss; the murderer is the former Special Forces captain Dr. Jeffrey R. MacDonald, who became the subject of McGinniss' 1983 book \"Fatal Vision\".",
+    "Richard Hauptmann\nBruno Richard Hauptmann (November 26, 1899 – April 3, 1936) was a German-born carpenter who was convicted of the abduction and murder of the 20-month-old son of aviator Charles Lindbergh and his wife Anne Morrow Lindbergh.\n\n The Lindbergh kidnapping became known as \"The Crime of the Century\".\n\n Hauptmann proclaimed his innocence to the end, but he was convicted of first degree murder and executed in 1936 in the electric chair at the New Jersey State Prison."
+   ]
+  },
+  {
+   "id": "44fb8daeb48b37a0",
+   "gold": [
+    {
+     "sentence": "Return to Never Land (also known as Peter Pan 2 or Peter Pan In: Return to Never Land) is a 2002 American animated musical fantasy-adventure film produced by Walt Disney Television Animation, and released by Walt Disney Pictures and distributed by Walt Disney Studios Motion Pictures.",
+     "facts": {
+      "0.0": "Return to Never Land is also known as Peter Pan 2.",
+      "0.1": "Return to Never Land is also known as Peter Pan In: Return to Never Land.",
+      "0.2": "Return to Never Land is a 2002 American film.",
+      "0.3": "Return to Never Land is an animated musical fantasy-adventure film.",
+      "0.4": "Return to Never Land was produced by Walt Disney Television Animation.",
+      "0.5": "Return to Never Land was released by Walt Disney Pictures.",
+      "0.6": "Return to Never Land was distributed by Walt Disney Studios Motion Pictures."
+     }
+    },
+    {
+     "sentence": " The film was co-produced by Walt Disney Pictures and Mayhem Pictures.",
+     "facts": {
+      "1.0": "Return to Never Land was co-produced by Walt Disney Pictures.",
+      "1.1": "Return to Never Land was co-produced by Mayhem Pictures."
+     }
+    }
+   ],
+   "items": [
+    "Scott Free Productions\nScott Free Productions is a British film and television production company founded by filmmakers and brothers Ridley Scott and Tony Scott.\n\n They formed the feature film development company Percy Main Productions in 1980, naming the company after the English village Percy Main, where their father grew up.\n\n The company was renamed to Scott Free Productions in 1995.\n\n Scott Free has produced films ranging from the 2000 Hollywood blockbuster \"Gladiator\" (2000) to \"smaller pictures\" like \"Cracks\" (2009).\n\n Between productions of \"White Squall\" (1996) and \"G.I. Jane\" (1997), Ridley Scott reorganized the company.",
+    "Josann McGibbon\nJosann McGibbon is an American screenwriter working in partnership with Sara Parriott.\n\n The team's first major success as a screenwriter was the early Brad Pitt film, \"The Favor\".\n\n Their biggest hits since then include \"Three Men and a Little Lady\" and \"Runaway Bride\".\n\n In 2007, McGibbon and Parriott co-wrote and produced the hit Debra Messing miniseries, \"The Starter Wife\".\n\n \"The Starter Wife\" received 10 Emmy nominations in 2007, including for best screenwriting, and won one Emmy Award.\n\n It was also nominated for Golden Globe and Writers Guild awards, and was then produced as a series, also on USA Network.\n\n McGibbon and Parriott wrote and co-produced the Disney Channel movie, \"Descendants\" which was directed by Kenny Ortega and premiered in July, 2015.\n\n On February, 2013, it won the Writers Guild of America Award in television for Outstanding Children's Long Form.\n\n They then wrote and executive-produced \"Descendants 2\", also directed by Kenny Ortega, which was simulcast on the Disney Channel, ABC, and the other cable channels owned by Disney-ABC in July, 2017.",
+    "McFarland, USA\nMcFarland, USA (also known as McFarland) is a 2015 American sports drama film directed by Niki Caro, produced by Mark Ciardi and Gordon Gray, written by Christopher Cleveland, Bettina Gilois and Grant Thompson with music composed by Antônio Pinto.\n\n The film was co-produced by Walt Disney Pictures and Mayhem Pictures.\n\n Based on the true story of a 1987 cross country team from a mainly Latino high school in McFarland, California, the film stars Kevin Costner as Jim White, the school's coach, who leads the team to win a state championship.\n\n The film also stars Maria Bello and Morgan Saylor.",
+    "Walt Disney Pictures\nWalt Disney Pictures, Inc. is an American film production company and a subsidiary of Walt Disney Studios, owned by The Walt Disney Company.\n\n The division is based at the Walt Disney Studios in Burbank, California, and is the main producer of live-action feature films within the Walt Disney Studios unit.\n\n It took on its current name in 1983.\n\n Today, in conjunction with the other units of Walt Disney Studios, Walt Disney Pictures is classified as one of Hollywood's \"Big Six\" film studios.\n\n Films produced by Walt Disney Animation Studios and Pixar Animation Studios are also released under this brand.",
+    "Disney Renaissance\nIn the history of The Walt Disney Company, the Disney Renaissance refers to the era from 1989 to 1999 during which Walt Disney Feature Animation (renamed Walt Disney Animation Studios in 2006) experienced a creative resurgence in producing successful animated films based on well-known stories, which restored public and critical interest in The Walt Disney Company as a whole.\n\n During this era, the studio produced and released ten animated films: \"The Little Mermaid\" (1989), \"The Rescuers Down Under\" (1990), \"Beauty and the Beast\" (1991), \"Aladdin\" (1992), \"The Lion King\" (1994), \"Pocahontas\" (1995), \"The Hunchback of Notre Dame\" (1996), \"Hercules\" (1997), \"Mulan\" (1998) and \"Tarzan\" (1999).",
+    "Cash McCall\nCash McCall is a 1960 American romantic drama film in Technicolor from Warner Bros., produced by Henry Blanke, directed by Joseph Pevney, that stars James Garner and Natalie Wood.\n\n It is based upon the novel of the same name by Cameron Hawley about a man who buys moribund businesses in order to refurbish them and then sell them on at considerable profit.\n\n The film's screenplay is by Lenore J. Coffee and Marion Hargrove.",
+    "Peter Pan: Adventures in Never Land\nPeter Pan: Adventures in Never Land (also known as Peter Pan in Disney's Return to Never Land) is a 2002 video game based on the Peter Pan Disney franchise.",
+    "Us (film)\nUs is a 1991 television movie broadcast on CBS, produced, written and directed by Michael Landon.\n\n Landon also starred in the film, along with Barney Martin and Casey Peterson.\n\n It was a pilot for what would have been Landon's fourth consecutive television series; Landon's death that year precluded its going ahead.\n\n Landon played Jeff Hayes, a man just released from prison after serving many years due to being wrongfully convicted of killing a wealthy man's wife.",
+    "Return to Never Land\nReturn to Never Land (also known as Peter Pan 2 or Peter Pan In: Return to Never Land) is a 2002 American animated musical fantasy-adventure film produced by Walt Disney Television Animation, and released by Walt Disney Pictures and distributed by Walt Disney Studios Motion Pictures.\n\n The film is a sequel to Walt Disney Feature Animation 1953 film \"Peter Pan\", It is based on J. M. Barrie's novel \"Peter and Wendy\", and had a worldwide gross of $109 million.",
+    "Never Land Books\nThe Never Land Books or Never Land Adventures are a series of short chapter books set in Never Land, the home of Peter Pan.\n\n They are based on the situations and characters established in the novel \"Peter and the Starcatchers\" and its sequels.\n\n Like the novels, they are written by Pulitzer Prize-winning humorist Dave Barry and suspense novelist Ridley Pearson, and illustrated by Greg Call.\n\n Although five books were planned, only three were published, in 2006–2008.\n\n The stories focus on supporting characters from the novels, such as the Indians, mermaids, pirates, and Lost Boys.\n\n They include:"
+   ]
+  },
+  {
+   "id": "9f9ad2e1be6176de",
+   "gold": [
+    {
+     "sentence": " It is the third of Gluck's so-called reform operas for Vienna, following \"Alceste\" and \"Orfeo ed Euridice\", and the least often performed of the three.",
+     "facts": {
+      "0.0": "The work is the third of Gluck's so-called reform operas for Vienna.",
+      "0.1": "The work follows 'Alceste' and 'Orfeo ed Euridice' among Gluck's reform operas for Vienna.",
+      "0.2": "The work is the least often performed of the three reform operas for Vienna."
+     }
+    },
+    {
+     "sentence": "Orfeo ed Euridice (French version: Orphée et Eurydice ; English: \"Orpheus and Eurydice\") is an opera composed by Christoph Willibald Gluck based on the myth of Orpheus, set to a libretto by Ranieri de' Calzabigi.",
+     "facts": {
+      "1.0": "Orfeo ed Euridice is an opera composed by Christoph Willibald Gluck.",
+      "1.1": "Orfeo ed Euridice is based on the myth of Orpheus.",
+      "1.2": "Orfeo ed Euridice is set to a libretto by Ranieri de' Calzabigi.",
+      "1.3": "The French version of Orfeo ed Euridice is titled Orphée et Eurydice.",
+      "1.4": "The English title of Orfeo ed Euridice is 'Orpheus and Eurydice'."
+     }
+    },
+    {
+     "sentence": " The piece was first performed at the Burgtheater in Vienna on 5 October 1762 in the presence of Empress Maria Theresa.",
+     "facts": {
+      "2.0": "The piece was first performed at the Burgtheater in Vienna on 5 October 1762.",
+      "2.1": "The first performance of the piece was in the presence of Empress Maria Theresa."
+     }
+    }
+   ],
+   "items": [
+    "Viennese Girls\nViennese Girls (German:Wiener Mädeln) is a 1945 historical musical film directed by Willi Forst and starring Forst, Anton Edthofer and Judith Holzmeister.\n\n The film was made by Wien-Film, a Vienna-based company set up after Austria had been incorporated into Greater Germany following the 1938 Anschluss.\n\n It was the third film in Forst's \"Viennese Trilogy\" which also included \"Operetta\" (1940) and \"Vienna Blood\" (1942).\n\n The film was finished in 1945, during the closing days of the Second World War.\n\n This led to severe delays in its release, which eventually took place in 1949 in two separate versions.\n\n One was released by the Soviet-backed Sovexport in the Eastern Bloc and the other by Forst.",
+    "Paride ed Elena\nParide ed Elena (] ; \"Paris and Helen\") is an opera by Christoph Willibald Gluck.\n\n It is the third of Gluck's so-called reform operas for Vienna, following \"Alceste\" and \"Orfeo ed Euridice\", and the least often performed of the three.\n\n Like its predecessors, the libretto was written by Ranieri de' Calzabigi.\n\n The opera tells the story of the events between the Judgment of Paris and the flight of Paris and Helen to Troy.\n\n It was premiered at the Burgtheater in Vienna on 3 November 1770.",
+    "Orfeo ed Euridice\nOrfeo ed Euridice (French version: Orphée et Eurydice ; English: \"Orpheus and Eurydice\") is an opera composed by Christoph Willibald Gluck based on the myth of Orpheus, set to a libretto by Ranieri de' Calzabigi.\n\n It belongs to the genre of the \"azione teatrale\", meaning an opera on a mythological subject with choruses and dancing.\n\n The piece was first performed at the Burgtheater in Vienna on 5 October 1762 in the presence of Empress Maria Theresa.\n\n \"Orfeo ed Euridice\" is the first of Gluck's \"reform\" operas, in which he attempted to replace the abstruse plots and overly complex music of \"opera seria\" with a \"noble simplicity\" in both the music and the drama.",
+    "Gottlieb Muffat\nGottlieb Muffat (April 1690 – 9 December 1770), son of Georg Muffat, served as \"Hofscholar\" under Johann Fux in Vienna from 1711 and was appointed to the position of third court organist at the \"Hofkapelle\" in 1717.\n\n He acquired additional duties over time including the instruction of members of the Imperial family, among them the future Empress Maria Theresa.\n\n He was promoted to second organist in 1729 and first organist upon the accession of Maria Theresa to the throne in 1741.\n\n He retired from official duties at the court in 1763.",
+    "Romolo ed Ersilia (Hasse)\nRomolo ed Ersilia is an opera in three acts composed by Johann Adolph Hasse to an Italian-language libretto by Pietro Metastasio.\n\n The opera was commissioned by Empress Maria Theresa to celebrate the marriage of her son Leopold to Maria Luisa of Spain.\n\n The opera was first performed on 6 August 1765, the day after their wedding, in the court theatre of the Imperial Palace in Innsbruck.\n\n The opera received its first performance in modern times in 2011 during the Innsbruck Festival of Early Music.",
+    "Operetta (film)\nOperetta (German: Operette) is a 1940 musical film directed by Willi Forst and starring Forst, Maria Holst and Dora Komar.\n\n The film was made by Wien-Film, a Vienna-based company set up after Austria had been incorporated into Greater Germany following the 1938 Anschluss.\n\n It is the first film in director Willi Forst's \"Viennese Trilogy\" followed by \"Vienna Blood\" (1942) and \"Viennese Girls\" (1945).\n\n The film portrays the life of Franz Jauner (1832–1900), a leading musical figure in the city.\n\n It is both an operetta film and a Wiener Film.",
+    "Das geheime Königreich\nDas geheime Königreich (\"The Secret Kingdom\") is an opera in one act with words and music by Ernst Krenek, his Op.\n\n 50 and the second of three one-acters (with \"Der Diktator\" and \"Schwergewicht, oder Die Ehre der Nation\") which premiered on 6 May 1928 at the Hessisches Staatstheater Wiesbaden as part of the Mai-Festwoche Wiesbaden.\n\n It is subtitled \"Märchenoper in 1 Akt \" (fairy-tale opera in one act) and has been called a satirical fairy-tale opera.",
+    "Agrippina (opera)\nAgrippina (HWV 6) is an \"opera seria\" in three acts by George Frideric Handel with a libretto by Cardinal Vincenzo Grimani.\n\n Composed for the 1709–10 Venice \"Carnevale\" season, the opera tells the story of Agrippina, the mother of Nero, as she plots the downfall of the Roman Emperor Claudius and the installation of her son as emperor.\n\n Grimani's libretto, considered one of the best that Handel set, is an \"anti-heroic satirical comedy\", full of topical political allusions.\n\n Some analysts believe that it reflects Grimani's political and diplomatic rivalry with Pope Clement XI.",
+    "Lucrezia Borgia (opera)\nLucrezia Borgia is a melodramatic opera in a prologue and two acts by Gaetano Donizetti.\n\n Felice Romani wrote the Italian libretto after the play \"Lucrezia Borgia\" by Victor Hugo, in its turn after the legend of Lucrezia Borgia.\n\n \"Lucrezia Borgia\" was first performed on 26 December 1833 at La Scala, Milan.",
+    "Daphne (opera)\nDaphne, Op.\n\n82, is an opera in one act by Richard Strauss, subtitled \"Bucolic Tragedy in One Act\".\n\n The German libretto was by Joseph Gregor.\n\n The opera is based loosely on the mythological figure Daphne from Ovid's \"Metamorphoses\" and includes elements taken from \"The Bacchae\" by Euripides.\n\n The opera premiered at the Semperoper in Dresden on 15 October 1938, originally intended as a double bill with Strauss' \"Friedenstag\", but as the scale of \"Daphne\" grew, that idea was abandoned.\n\n The conductor of the first performance was Karl Böhm, to whom the opera was dedicated."
+   ]
+  },
+  {
+   "id": "84202fac838d1529",
+   "gold": [
+    {
+     "sentence": "Distortion Mirrors is an English alternative rock band, based in Leeds, West Yorkshire, England, and who was formed in 2011.",
+     "facts": {
+      "0.0": "Distortion Mirrors is an English alternative rock band.",
+      "0.1": "Distortion Mirrors is based in Leeds, West Yorkshire, England.",
+      "0.2": "Distortion Mirrors was formed in 2011."
+     }
+    },
+    {
+     "sentence": "OK Go is an American rock band originally from Chicago, Illinois, now based in Los Angeles, California.",
+     "facts": {
+      "1.0": "OK Go is an American rock band.",
+      "1.1": "OK Go was originally from Chicago, Illinois.",
+      "1.2": "OK Go is now based in Los Angeles, California."
+     }
+    }
+   ],
+   "items": [
+    "OK Go videography\nThe musical rock band OK Go has earned considerable fame for their creative but often low-budget music videos, most of which have been promoted through Internet video sharing sites like YouTube.\n\n Many of these have become viral videos; the 2006 video for \"Here It Goes Again\", in which the band performed a complex routine with the aid of motorized treadmills, has received over 50 million views four years later.\n\n Their video for Needing/Getting, released February 5, 2012 in partnership with Chevrolet, debuted during Super Bowl XLVI and has over 32 million views on YouTube.\n\n Samuel Bayer, who produced many music videos in the 1990s, asserted that OK Go's promotion of music videos on the Internet was akin to Nirvana's ushering in the grunge movement.\n\n Many of the videos also use long or single-shot takes, which \"Salon\"' s Matt Zoller Seitz says \"restore[s] a sense of wonder to the musical number by letting the performers' humanity shine through and allowing them to do their thing with a minimum of filmmaking interference\".",
+    "OK Go (2001 EP)\nOK Go or The Pink EP (officially known as OKGoCD.002) is the second EP by American rock band OK Go.",
+    "Twelve Days of OK Go\nTwelve Days of OK Go is a compilation album by American rock band OK Go.\n\n It was released on December 31, 2012.\n\n OK Go started releasing the songs on December 10, with one song released each weekday.\n\n The last song, a cover of \"Any Time at All\", was released on Christmas.\n\n A bonus track, a cover of \"This Will Be Our Year,\" was released on New Year's Eve.",
+    "Distortion Mirrors\nDistortion Mirrors is an English alternative rock band, based in Leeds, West Yorkshire, England, and who was formed in 2011.",
+    "OK Go (album)\nOK Go is the debut studio album by American rock band OK Go.\n\n It was released in September 2002.\n\n The cover was created by designer Stefan Sagmeister.",
+    "OK Go (2000 EP)\nOK Go or The Brown EP (officially known as OKGoCD.001) is the first EP by American rock band OK Go.",
+    "OK Go’s 2012 compilation *Twelve Days of OK Go* released one song each weekday from December 10, ending with “Any Time at All” on Christmas, then adding “This Will Be Our Year” on New Year’s Eve. The Chicago-founded, Los Angeles-based band—Damian Kulash, Tim Nordwind, Dan Konopka, and Andy Ross—is known for elaborate, often one-take viral videos and award-winning music clips. The band also released early EP",
+    "OK Go videography\nThe success of OK Go's music first won the band the 14th Annual Webby Special Achievement Award for Film and Video Artist of the Year.\n\n The video for \"This Too Shall Pass\" was named both \"Video of the Year\" and \"Best Rock Video\" at the 3rd annual UK Music Video Awards.\n\n\"This Too Shall Pass\" won the LA Film Fest's Audience Award for Best Music Video, UK MVA Awards – Music Video of the Year Winner 2010, among others.",
+    "OK Go\nOK Go is an American rock band originally from Chicago, Illinois, now based in Los Angeles, California.\n\n The band is composed of Damian Kulash (lead vocals, guitar), Tim Nordwind (bass guitar and vocals), Dan Konopka (drums and percussion) and Andy Ross (guitar, keyboards and vocals), who joined them in 2005, replacing Andy Duncan.\n\n The band is known for its often quirky and elaborate one-take music videos.",
+    "The Writing's on the Wall (OK Go song)\n\"The Writing's on the Wall\" is a song by American rock band OK Go.\n\n It was released on June 17, 2014, as part of the band's EP \"Upside Out\", and is also the first single from the band's fourth studio album \"Hungry Ghosts\".\n\n On the same day, the band released a music video in which the members use props to create optical illusions, reflecting the song's description of a relationship that fails because the couple has different points of view.\n\n Like previous OK Go videos, it is structured as a one-shot music video.\n\n The many YouTube views of the video caused the song to debut in the top ten of the US \"Billboard\" Hot Rock Songs chart, as well as number one on the Bubbling Under Hot 100 Singles chart."
+   ]
+  }
+ ]
+}

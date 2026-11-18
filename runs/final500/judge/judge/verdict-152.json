@@ -1,0 +1,63 @@
+[
+{"id": "c5d7335189989e0f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "She admits that she may have misinterpreted the evidence"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "maintains that Google manipulates Search to maximise ad revenue"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "f2770723f0b8c4cf", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Doe's story was adapted into the 1971 book \"The Exorcist\""}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "1971 book \"The Exorcist\" by William Peter Blatty"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Doe's story was adapted into the 1971 book \"The Exorcist\" by William Peter Blatty, which was then made into the 1973 movie"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "the 1973 movie starring Ellen Burstyn"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "the 1973 movie starring Ellen Burstyn and Linda Blair."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Clive Barker’s 1987 directorial debut"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "adapts his 1986 novella The Hellbound Heart"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 6, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."}]}
+]},
+{"id": "0f06b74dcf0ac752", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "9183c5b720f5cb1a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Beware of Terry McLaurin (vs. Dolphins)"}, {"item": 7, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 7, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 7, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "Beware of Terry McLaurin (vs. Dolphins)"}, {"item": 7, "quote": "Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 10, "quote": "Beware of Terry McLaurin (vs. Dolphins)"}, {"item": 7, "quote": "Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 10, "quote": "Beware of Terry McLaurin (vs. Dolphins)"}, {"item": 7, "quote": "Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "8aac4fce0621ccf0", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "But while this will probably come up later in the trial"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "b5407a48bc9916ca", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Gary Wang, the lesser-known co-founder of FTX"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "FTX co-founder and former CTO Gary Wang"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Alameda Research’s former CEO, Caroline Ellison"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 10, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse."}]}
+]}
+]

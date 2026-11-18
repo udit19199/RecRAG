@@ -1,0 +1,772 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Topic overlap is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "d7f7ad6cbff8a2d0",
+   "kind": "answer",
+   "question": "Between the report from The Verge on September 28, 2023, concerning Sam Bankman-Fried's role before the collapse of FTX, and the report from TechCrunch on October 7, 2023, alleging Sam Bankman-Fried's fraudulent activities, was there a change in the portrayal of Sam Bankman-Fried's actions related to the FTX trial?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "195fc024eb3f0727",
+   "kind": "answer",
+   "question": "Does the 'Fortune' article suggest that Israel's actions are defensive by mentioning a warning to Gaza residents to relocate due to a potential ground invasion, while the 'Business Today | Latest Stock Market And Economy News India' article implies that Israel was caught off-guard by a Hamas attack, indicating a lack of intelligence support?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "812061d90497fe4f",
+   "kind": "answer",
+   "question": "Was the reporting of the status of Taylor Swift and Travis Kelce's relationship consistent between the report from CBSSports.com published on October 12, 2023, and the report from The Independent - Life and Style published on December 6, 2023?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "d70d7a2fbf502c8b",
+   "kind": "answer",
+   "question": "Between the report from The Verge on Apple's defense of its Google Search deal published on September 26, 2023, and the class action antitrust suit against Google reported by TechCrunch, was there no change in the portrayal of Google's business practices related to competition and market dominance?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "cc5cfac5d773ba2e",
+   "kind": "answer",
+   "question": "After Sporting News reported on Johnny Cardoso's inclusion in the USMNT squad post-injury on October 4, 2023, and CBSSports.com announced De'Von Achane's move to Injured Reserve on October 12, 2023, which player's status changed between the two reports, Johnny Cardoso or De'Von Achane?",
+   "gold_answers": [
+    "Johnny Cardoso"
+   ],
+   "model_answer": "De’Von Achane"
+  },
+  {
+   "id": "27696500fc18c4c6",
+   "kind": "answer",
+   "question": "Did TechCrunch's subsequent report on a class action antitrust suit against Google on December 1, 2023, indicate a consistent portrayal of Google's business practices by the news source?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "61d998f5819d6501",
+   "kind": "answer",
+   "question": "Did Apple, after The Verge reported on September 26, 2023, that it criticized its Google Search deal by stating there was a valid alternative, and TechCrunch later reported on November 13, 2023, that Google spent less than $26.3 billion in 2021 to secure its position as the default search engine on various platforms, maintain a rationale for its Google Search deal that is inconsistent with Google's aggressive spending to maintain default search engine status across platforms? (The Verge/TechCrunch)",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "e4757a74b0d7d66f",
+   "kind": "answer",
+   "question": "After the report from CBSSports.com on October 12, 2023, suggesting an expression of interest from Travis Kelce to Taylor Swift, and the article from The Independent - Life and Style on December 6, 2023, revealing Taylor Swift's openness about her relationship with Travis Kelce, has the narrative regarding the rumored romance between the pop star and the Chiefs TE remained consistent?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "f0a0018fb54351f5",
+   "kind": "answer",
+   "question": "Which team, known for their safe handling throughout a World Cup and previously defeated by Argentina in Sydney in 2020, was involved in a controversial and dramatic final that was influenced by blitz defence and wet conditions according to articles from 'The Roar | Sports Writers Blog'?",
+   "gold_answers": [
+    "All Blacks"
+   ],
+   "model_answer": "The All Blacks (New Zealand)"
+  }
+ ],
+ "evidence": [
+  {
+   "id": "ca3b66fa21505611",
+   "kind": "evidence",
+   "question": "Does the Polygon article suggest that Spider-Man embodies the spirit of Thanksgiving in a way that aligns with the portrayal of Thanksgiving as a time for gratitude and togetherness described in The Independent - Life and Style article?",
+   "gold_sentences": [
+    "Apart from the food - arguably the main component of the day - the holiday is a beloved time of year when Americans come together to celebrate what they are thankful for, either with family or friends."
+   ],
+   "evidence": "polygon argues thanksgiving suits spider-man because his financial strain, loneliness, and everyday struggles make him relatable; holiday meals symbolize mutual care and belonging. examples include chaotic dinners in the 2002 film and a warmly rescued feast in *the spectacular spider-man*. the *spider-man 2* review praises fluid traversal, combat, visuals, and peter-miles teamwork, while noting miles more boldly challenges canon. the game remixes familiar stories and marvel history but gives limited depth to themes like"
+  },
+  {
+   "id": "3b1021a23e5edebd",
+   "kind": "evidence",
+   "question": "Does the Polygon article suggest that Spider-Man embodies the spirit of Thanksgiving in a way that aligns with the portrayal of Thanksgiving as a time for gratitude and togetherness described in The Independent - Life and Style article?",
+   "gold_sentences": [
+    "Apart from the food - arguably the main component of the day - the holiday is a beloved time of year when Americans come together to celebrate what they are thankful for, either with family or friends."
+   ],
+   "evidence": "polygon's coverage highlights spider-man's relatable hardships and thanksgiving's symbolism of care and belonging, alongside praise for *marvel's spider-man 2*'s traversal, combat, visuals, peter-miles teamwork, and improved, more capable mary jane missions. its 2023 recommendations span diverse tabletop games and settings. *rogue trader* earns praise for rich writing, choices, companions, and grimdark atmosphere, despite frustrating combat and progression. *midnight suns* rewards patience with tactical"
+  },
+  {
+   "id": "f74594a3c30bf824",
+   "kind": "evidence",
+   "question": "Does the TechCrunch article on Meta's GDPR compliance concerns suggest a different legal issue than the TechCrunch article on Meta's responsibility for teen social media monitoring, and does it also differ from the TechCrunch article on Meta's moderation bias affecting Palestinian voices?",
+   "gold_sentences": [
+    "“The company’s approach also raises concerns regarding the GDPR,” Pachl further noted.",
+    "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents.",
+    "Al Saadi said that her frustration with Meta is common among Palestinians, both in occupied territories and across the diaspora."
+   ],
+   "evidence": "techcrunch reports widespread allegations that meta platforms restrict palestinian content amid the gaza war: users describe reduced story views, posting limits, removals, sensitive-content labels, and palestinian-flag comments being hidden. meta denies deliberate suppression, citing and fixing global technical bugs and pointing to appeals. critics say these incidents reflect longstanding disproportionate moderation, worsened by weak arabic-language expertise, automation, blunt rules against hamas-related content, and possible political influence. a 2021 meta-commissioned review found adverse human-rights"
+  },
+  {
+   "id": "42119207304c55ca",
+   "kind": "evidence",
+   "question": "Does the article from The Guardian suggest that Britney Spears had less control over her privacy at the age of 16 compared to the control over privacy that the BBC News - Entertainment & Arts article implies Taylor Swift has over her personal experiences?",
+   "gold_sentences": [
+    "\"It was almost like this very strange, subtle clue to the media that they don't know everything that happened in that relationship, and I can have something really major and traumatic happen to me and they don't know about it,\" she told NPR."
+   ],
+   "evidence": "britney spears's memoir portrays a life of little freedom: childhood fame brought relentless scrutiny of her body and sexuality, while her requests to pause her career were rejected. she recounts postpartum depression, paparazzi harassment and a 13-year conservatorship controlled by her father, involving surveillance, medication and a harrowing forced confinement. the restrictions strained relationships and curtailed her autonomy, including reproductive choices. spears describes music as an early passion that later faded into the background, and condemns"
+  },
+  {
+   "id": "562eaccb5ce3f16e",
+   "kind": "evidence",
+   "question": "Does the TechCrunch article discussing the SBF trial suggest that Caroline Ellison acted under the instruction of Sam Bankman-Fried in the misuse of customer funds, while the other TechCrunch article on Sam Bankman-Fried's plea deal only mention his not-guilty plea to fraud and conspiracy, without specifying involvement in directing others?",
+   "gold_sentences": [
+    "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "the verge's courtroom coverage portrays sam bankman-fried's defense as increasingly damaging. on the stand, he struggled to answer questions, admitted failing to create a risk team or safeguards against alameda spending ftx customer funds, and said he did not investigate an $8 billion shortfall despite warnings. prosecutors highlighted testimony from caroline ellison and others tying him to customer-fund misuse and deception; defense cross-examination was described as ineffective. bankman-fried was ultimately convicted on seven counts, including"
+  },
+  {
+   "id": "4c1b6f23dea4f203",
+   "kind": "evidence",
+   "question": "Does the TechCrunch article discussing the SBF trial suggest that Caroline Ellison acted under the instruction of Sam Bankman-Fried in the misuse of customer funds, while the other TechCrunch article on Sam Bankman-Fried's plea deal only mention his not-guilty plea to fraud and conspiracy, without specifying involvement in directing others?",
+   "gold_sentences": [
+    "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "at sam bankman-fried's 2023 trial, prosecutors said he secretly used ftx customer funds through alameda research for risky bets, political donations, and personal purposes, while misleading customers, lenders, and investors. his lawyer portrayed him as a good-faith startup founder whose businesses failed amid crypto-market turmoil, blaming alameda ceo caroline ellison's risk management. a customer testified he could not withdraw nearly $100,000; former friend and employee adam yedidia said he feared code"
+  },
+  {
+   "id": "1fc241c837aa0d52",
+   "kind": "evidence",
+   "question": "Does the 'Fortune' article suggest that Israel's actions are aggressive by mentioning a warning to Gaza residents to relocate due to a potential ground invasion, while the 'Business Today | Latest Stock Market And Economy News India' article implies that Israel was caught off-guard by a Hamas attack, indicating a lack of intelligence support?",
+   "gold_sentences": [
+    "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."
+   ],
+   "evidence": "hamas's october 7 surprise assault, which reportedly seized territory, military facilities and vehicles in southern israel-including sderot police headquarters-sparked shock and criticism of mossad and the idf. commentators questioned how israel's intelligence and surveillance systems missed the attack; some called it a major intelligence failure, while others speculated israel had foreknowledge or allowed it to happen. netanyahu said israel was at war, prioritizing clearing infiltrators, striking hamas in gaza and securing other fronts."
+  },
+  {
+   "id": "3852e68a2b6a3d26",
+   "kind": "evidence",
+   "question": "Does the 'Fortune' article suggest that Israel's actions are defensive by mentioning a warning to Gaza residents to relocate due to a potential ground invasion, while the 'Business Today | Latest Stock Market And Economy News India' article implies that Israel was caught off-guard by a Hamas attack, indicating a lack of intelligence support?",
+   "gold_sentences": [
+    "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."
+   ],
+   "evidence": "the article argues israel's october 7 defenses failed partly because confidence in its high-tech gaza barrier displaced troops, preparedness and contingency planning. hamas used cheap drones to disable cameras and remote weapons; observation balloons and other defenses were unavailable, while communications were disrupted. experts warn that technology cannot replace human intelligence, interpretation of weak signals, redundancy and trained officers. the barrier and iron dome also fostered a false sense of security and encouraged restraint, allowing hamas to strengthen. the lesson: plan for low-pro"
+  },
+  {
+   "id": "b87037041f5910c8",
+   "kind": "evidence",
+   "question": "Does the TechCrunch article claim that Google's release of the Gemini Pro model is a limited version compared to the full Gemini Ultra model, while The Verge article discusses Google's search engine deals with companies, and another TechCrunch article alleges Google's anticompetitive behavior towards news publishers, indicating different types of alleged actions by Google in each case?",
+   "gold_sentences": [
+    "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ],
+   "evidence": "google launched gemini pro in bard, touting strong capabilities, but early user and techcrunch tests found frequent errors: incorrect oscar facts, fabricated claims, failed french word-length prompts, stale or evasive news summaries, and weak coding performance. reports also showed jailbreaks eliciting harmful suggestions. gemini pro is not google's forthcoming ultra model, and google compared it with gpt-3.5; despite promised gains over bard's prior model, the initial results suggest substantial room for improvement."
+  },
+  {
+   "id": "c41cda476d19997f",
+   "kind": "evidence",
+   "question": "Does the Fortune article suggest that Sam Bankman-Fried was responsible for the alleged deceit behind FTX's success, while the TechCrunch article focuses on Gary Wang and Caroline Ellison's admission of guilt to federal criminal charges in relation to the FTX collapse?",
+   "gold_sentences": [
+    "But “all of that, all of it, was built on lies,” Rehn declared to the jury."
+   ],
+   "evidence": "the verge's trial coverage portrays ftx as an alleged fraud from its founding: prosecutors said bankman-fried secretly gave alameda unlimited access to customer funds while publicly denying preferential treatment. cooperating insiders wang, singh, ellison, and yedidia described code privileges, doctored accounts, and misuse of deposits; expert testimony traced billions to loans, investments, real estate, insiders, and political causes. the collapse devastated customers and bankman-fried's friends and family, many now"
+  },
+  {
+   "id": "f20fc19ae1ea228c",
+   "kind": "evidence",
+   "question": "Does the TechCrunch article discussing Google's spending to become the default search engine on various platforms report the same amount of $26.3 billion in 2021 as the claim made in another TechCrunch article covering the US v Google trial, or do they report different amounts?",
+   "gold_sentences": [
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ],
+   "evidence": "the doj argues google's default-search deals and platform control suppress competition and deprive rivals of data; google says users prefer its superior product. trial revelations included $26.3 billion spent on defaults in 2021; android agreements requiring app preloads and, separately, default search/chrome; and lucrative queries such as iphone, insurance and travel. expedia said google ads became costlier while traffic stagnated as google promoted its own travel listings. evidence suggested a €5 billion eu fine prompted search"
+  },
+  {
+   "id": "08b132175d1f0858",
+   "kind": "evidence",
+   "question": "Does the TechCrunch article suggest that Caroline Ellison acted under the instruction of Sam Bankman-Fried in misusing customer funds, while The Verge article focuses on Sam Bankman-Fried's persona in the cryptocurrency industry, and the second TechCrunch article alleges that Sam Bankman-Fried committed fraud for personal gain, indicating different aspects of his involvement in the FTX collapse?",
+   "gold_sentences": [
+    "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "the verge's trial coverage portrays ftx as an alleged fraud from its founding: prosecutors said bankman-fried secretly gave alameda unlimited access to customer funds while publicly denying preferential treatment. cooperating insiders wang, singh, ellison, and yedidia described code privileges, doctored accounts, and misuse of deposits; expert testimony traced billions to loans, investments, real estate, insiders, and political causes. the collapse devastated customers and bankman-fried's friends and family, many now"
+  },
+  {
+   "id": "c2dde6b2c46d2130",
+   "kind": "evidence",
+   "question": "Does the TechCrunch article suggest that Caroline Ellison acted under the instruction of Sam Bankman-Fried in misusing customer funds, while The Verge article focuses on Sam Bankman-Fried's persona in the cryptocurrency industry, and the second TechCrunch article alleges that Sam Bankman-Fried committed fraud for personal gain, indicating different aspects of his involvement in the FTX collapse?",
+   "gold_sentences": [
+    "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "at sam bankman-fried's 2023 trial, prosecutors said he secretly used ftx customer funds through alameda research for risky bets, political donations, and personal purposes, while misleading customers, lenders, and investors. his lawyer portrayed him as a good-faith startup founder whose businesses failed amid crypto-market turmoil, blaming alameda ceo caroline ellison's risk management. a customer testified he could not withdraw nearly $100,000; former friend and employee adam yedidia said he feared code"
+  },
+  {
+   "id": "e10c5599df0debcc",
+   "kind": "evidence",
+   "question": "Does the TechCrunch article suggest that Caroline Ellison acted under the instruction of Sam Bankman-Fried in misusing customer funds, while The Verge article focuses on Sam Bankman-Fried's persona in the cryptocurrency industry, and the second TechCrunch article alleges that Sam Bankman-Fried committed fraud for personal gain, indicating different aspects of his involvement in the FTX collapse?",
+   "gold_sentences": [
+    "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "the verge's courtroom coverage portrays sam bankman-fried's defense as increasingly damaging. on the stand, he struggled to answer questions, admitted failing to create a risk team or safeguards against alameda spending ftx customer funds, and said he did not investigate an $8 billion shortfall despite warnings. prosecutors highlighted testimony from caroline ellison and others tying him to customer-fund misuse and deception; defense cross-examination was described as ineffective. bankman-fried was ultimately convicted on seven counts, including"
+  },
+  {
+   "id": "029186ba0893492d",
+   "kind": "evidence",
+   "question": "Do the articles from Sporting News discussing MLB, NBA, and general sports betting all agree that Sportsbooks adjust their policies or odds in response to external events such as weather conditions, player injuries, or other significant information?",
+   "gold_sentences": [
+    "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."
+   ],
+   "evidence": "sports bets include spreads (favorites must win by more than the handicap; underdogs cover by staying within it or winning), moneylines (outright winner), totals (combined scoring or other results above/below a line), and props (specific events or statistics). exact-line ties usually push and refund stakes; half-points avoid pushes. odds use american, decimal, or fractional formats and shift with wagers, injuries, news, and live action. compare sportsbooks before betting: line shopping can improve prices"
+  },
+  {
+   "id": "58b059046fdf4f61",
+   "kind": "evidence",
+   "question": "Do the articles from Sporting News discussing MLB, NBA, and general sports betting all agree that Sportsbooks adjust their policies or odds in response to external events such as weather conditions, player injuries, or other significant information?",
+   "gold_sentences": [
+    "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."
+   ],
+   "evidence": "sports betting includes spreads (favorites must cover; underdogs cover by staying within the spread or winning), moneylines, totals and props. totals/over-unders wager on whether combined scoring-or, in some sports, rounds, games or individual performance-exceeds or falls below a bookmaker's line, regardless of winner. half-point lines prevent pushes; exact matches on whole-number totals generally refund stakes. odds commonly near -105 to -120. lines shift with betting activity, injuries,"
+  },
+  {
+   "id": "fec5e353bdbf9732",
+   "kind": "evidence",
+   "question": "Does the CBSSports.com article report that Kenneth Walker III left the game due to an injury, similar to how the TalkSport article reports Andy Robertson's unavailability for Liverpool because of an injury?",
+   "gold_sentences": [
+    "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."
+   ],
+   "evidence": "week 14 rb rankings emphasize injury-driven handcuffs: jonathan taylor's thumb surgery sidelines him for weeks, making zack moss a strong start after multiple top-10 outings. kenneth walker (oblique) and zach charbonnet (knee) are both uncertain; deejay dallas would lead seattle's backfield if neither plays. aaron jones remains week-to-week with an mcl sprain. derrick henry, d'onta foreman and d'andre swift are also questionable; rhamond"
+  },
+  {
+   "id": "1ac790fa16b72873",
+   "kind": "evidence",
+   "question": "Does the Sporting News article on the Marshall Thundering Herd indicate no change in starting quarterback similar to the quarterback replacement reported for the Seattle Seahawks by Sporting News?",
+   "gold_sentences": [
+    "Geno Smith's night appears to be done as Drew Lock is back in for the Seahawks."
+   ],
+   "evidence": "with five weeks left in the 2023 season, sporting news recommended small bets on award longshots: c.j. stroud or jared goff for mvp, ceedee lamb for opoy, danielle hunter for dpoy, sean payton for coach of the year, and russell wilson for comeback player. favorites included purdy, prescott, hurts, tyreek hill, parsons, garrett, watt, dan campbell, and damar hamlin. a yardbarker"
+  },
+  {
+   "id": "e1b1cf6503df7b0a",
+   "kind": "evidence",
+   "question": "Did the 'Sporting News' article suggest that the Dallas Cowboys' offensive effectiveness against the 49ers came early in the game, while the same source indicates that Joe Mixon's offensive role for the Cincinnati Bengals has decreased due to Joe Burrow's absence?",
+   "gold_sentences": [
+    "10:59 p.m. — The Cowboys are moving the ball now, when it's a bit too late."
+   ],
+   "evidence": "the bengals led buffalo 14-7 after joe mixon's 2-yard touchdown run, following a drive featuring two near-misses to ja'marr chase. later, cincinnati's b.j. hill sacked josh allen to force a bills punt. a 9-yard punt return gave the bengals another drive starting in buffalo territory; joe burrow then found tyler boyd for 9 yards, setting up fourth-and-1 at the bills' 36 near the two-minute warning."
+  },
+  {
+   "id": "2abfea82fbd76339",
+   "kind": "evidence",
+   "question": "Does 'The Guardian' describe 'the match' as a showcase of equal financial power between teams, while 'CBSSports.com' focuses on the current performance of the 'Dallas team' without mentioning their financial status?",
+   "gold_sentences": [
+    "“It was the millionaires of the Premier League against the youngsters of the Championship,” reflected the former Denmark forward.",
+    "The Commanders are coming off a dud last week against the Giants, while Dallas is flying high."
+   ],
+   "evidence": "the material compiles sporting news and cbs sports coverage across sports. it contrasts the nba's christmas audience (4.27 million average) with the nfl's record thanksgiving average (34.1 million), noting preference determines which tradition is \"better.\" most items offer 2023 nfl fantasy, dfs, betting, and lineup advice: rankings, start/sit calls, picks, props, and player stacks, shaped by matchups, injuries, bye weeks, and scoring rules. other coverage previews bowl games and"
+  },
+  {
+   "id": "0df07af9af148dc8",
+   "kind": "evidence",
+   "question": "Does 'The Guardian' describe 'the match' as a showcase of equal financial power between teams, while 'CBSSports.com' focuses on the current performance of the 'Dallas team' without mentioning their financial status?",
+   "gold_sentences": [
+    "“It was the millionaires of the Premier League against the youngsters of the Championship,” reflected the former Denmark forward.",
+    "The Commanders are coming off a dud last week against the Giants, while Dallas is flying high."
+   ],
+   "evidence": "the nfl's heavy focus on taylor swift and travis kelce has irritated some longtime fans; kelce agreed the coverage was excessive, though the league says it reflects a positive cultural crossover. it has also boosted attention: the chiefs-jets game drew about 27 million viewers, kelce's jersey sales reportedly rose 400%, and teen-girl viewership increased 53%. the coverage may help the nfl pursue its $27 billion revenue goal, alongside international games and safety initiatives. the article compares this growth"
+  },
+  {
+   "id": "9192a2e53027cf0f",
+   "kind": "evidence",
+   "question": "Does 'The Age' article claim that Taylor Swift was merely seen cheering at Arrowhead Stadium, while the 'CBSSports.com' article states that she has both performed and attended a game there, and does 'The Independent - Life and Style' suggest a different aspect of her life by discussing her openness about her relationship with Travis Kelce?",
+   "gold_sentences": [
+    "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."
+   ],
+   "evidence": "taylor swift said she and travis kelce began dating after his july podcast story about trying to give her his number on a friendship bracelet; they were already a couple when she attended his first chiefs game in september. swift said they're proud to support each other publicly, despite intense media attention, and joked she enjoys football. she has attended five games; her appearances boosted nfl attention and jersey sales. kelce praised swift's intelligence and musical talent, saying he admires how she handles scrutiny. he attended"
+  },
+  {
+   "id": "e1b021573d5ddb33",
+   "kind": "evidence",
+   "question": "Does the article from The Verge suggest that Sam Bankman-Fried set withdrawal permissions based on FTX's total trading revenue, while the TechCrunch articles allege that Sam Bankman-Fried committed fraud for personal gain and is facing a criminal trial for fraud and conspiracy, indicating different aspects of the legal issues he is involved in?",
+   "gold_sentences": [
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.",
+    "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "the verge's trial coverage portrays ftx as an alleged fraud from its founding: prosecutors said bankman-fried secretly gave alameda unlimited access to customer funds while publicly denying preferential treatment. cooperating insiders wang, singh, ellison, and yedidia described code privileges, doctored accounts, and misuse of deposits; expert testimony traced billions to loans, investments, real estate, insiders, and political causes. the collapse devastated customers and bankman-fried's friends and family, many now"
+  },
+  {
+   "id": "5fe627869d9d0dc2",
+   "kind": "evidence",
+   "question": "Does the article from The Verge suggest that Alameda Research was involved in manipulating FTX's balance sheet, while the article from Cnbc | World Business News Leader indicates Sam Bankman-Fried's intentions regarding the composition of FTX's board, and are these claims about different aspects of FTX's corporate governance?",
+   "gold_sentences": [
+    "Unfortunately, she did say that she had conversations with investors as part of their due diligence — and, of course, Alameda was taking on losses from FTX to keep FTX’s balance sheet pristine."
+   ],
+   "evidence": "at his ftx fraud trial, sam bankman-fried portrayed himself as overworked and largely unaware of alameda's finances, customer-fund borrowing, and an $8 billion liability. the verge contrasted these claims with testimony and evidence: alameda alone had a code-enabled negative balance, avoided liquidation, and received a credit line that grew to $65 billion. former executives described customer money being used, losses concealed, and ftx's insurance fund misrepresented. bankman-fried's"
+  },
+  {
+   "id": "b62082aacf4de0d5",
+   "kind": "evidence",
+   "question": "Does the Polygon article suggest that Valve has made multiple physical upgrades to the Steam Deck, while The Verge article indicates that Valve's focus is solely on games for their store, and does the Engadget article confirm that Valve will launch the Steam Deck OLED on a specific date with immediate availability, unlike the other two sources which do not mention a launch date?",
+   "gold_sentences": [
+    "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration.",
+    "We look at Valve and we see a store that could be both, but they’ve decided to focus exclusively on games."
+   ],
+   "evidence": "the steam deck oled launches november 16, 2023, as a mid-cycle refresh-not a performance upgrade. its efficient 6nm chip preserves lcd-model performance while enabling a 7.4-inch, 800p hdr oled display (up to 1,000 nits, 90hz), a 50wh battery, cooler operation and lighter, better-balanced design. valve claims 30-50% longer battery life; tests found gains of 62% in *hades"
+  },
+  {
+   "id": "7667a394e0a346f4",
+   "kind": "evidence",
+   "question": "Does the Sporting News article suggest that T.J. Hockenson's participation in Week 10 is expected under similar circumstances as Dalton Kincaid's anticipated play in the Saturday game, with both being less than fully fit but still likely to play?",
+   "gold_sentences": [
+    "Kincaid was a limited participant in practice on Wednesday due to a shoulder injury, but it’s been reported he’s likely to suit up on Saturday at less than 100%."
+   ],
+   "evidence": "week 10 status: justin jefferson (hamstring) was ruled out after limited practices; k.j. osborn and jordan addison became usable if osborn cleared concussion protocol. ja'marr chase (back) was active after a pregame workout; with tee higgins out, chase could see an even larger workload, while tyler boyd was a must-start if chase sat. t.j. hockenson (ribs) and curtis samuel (toe) were active. hockenson remained a"
+  },
+  {
+   "id": "538484caf7b24497",
+   "kind": "evidence",
+   "question": "Does the Sporting News article suggest that T.J. Hockenson's participation in Week 10 is expected under similar circumstances as Dalton Kincaid's anticipated play in the Saturday game, with both being less than fully fit but still likely to play?",
+   "gold_sentences": [
+    "Kincaid was a limited participant in practice on Wednesday due to a shoulder injury, but it’s been reported he’s likely to suit up on Saturday at less than 100%."
+   ],
+   "evidence": "week 14 ppr tight-end advice: travis kelce leads rankings, followed by t.j. hockenson, sam laporta, david njoku and dalton kincaid; george kittle remains a high-ceiling must-start. logan thomas and trey mcbride are on bye. sleepers include taysom hill, isaiah likely, gerald everett, cole kmet, jake ferguson, kyle pitts and deeper options tyler conklin, cade otton, brevin"
+  },
+  {
+   "id": "70ab345c34d25d05",
+   "kind": "evidence",
+   "question": "Does the Fortune article suggest that Sam Bankman-Fried's actions were the primary cause of FTX's success being built on lies, while the TechCrunch article implies that comments by Changpeng Zhao were a contributing factor to the collapse of FTX?",
+   "gold_sentences": [
+    "But “all of that, all of it, was built on lies,” Rehn declared to the jury.",
+    "Binance has made headlines this past year for a range of reasons, including Zhao’s comments contributing to the collapse of FTX, which was once one of its top competitors."
+   ],
+   "evidence": "ahead of sam bankman-fried's fraud trial, michael lewis's book *going infinite* and a 60 minutes interview renewed debate over whether coverage portrays the ftx founder too sympathetically. lewis described sbf's rapid rise, celebrity endorsements, political fundraising, and an alleged $5 billion figure for persuading trump not to run again; its source and whether any payment occurred are unclear. ftx and sister firm alameda collapsed amid financial discrepancies, devastating customers and damaging crypto's reputation. s"
+  },
+  {
+   "id": "ab6803d044abfbfe",
+   "kind": "evidence",
+   "question": "Did the article from 'The Age' about Tyler Mitchell suggest that his career has been unsuccessful due to his early photography experiences, while the article from 'The Roar | Sports Writers Blog' about Graham Arnold indicates that his career choices involved staying with the Australian national team despite offers from Europe?",
+   "gold_sentences": [
+    "His career has only blossomed in the years since he took that trip, and while some artists might feel trepidation at the attainment of so much success from such an early age, Mitchell is clear-eyed."
+   ],
+   "evidence": "football australia retained graham arnold in 2022 despite a poor qualifying campaign, and he repaid that faith by guiding the socceroos to qatar, where they narrowly lost to eventual champions argentina. his bold late substitution of goalkeeper mat ryan for andrew redmayne against peru helped secure qualification. arnold's match against bangladesh will be his 59th as socceroos coach, surpassing frank farina. a national-team player and coach for decades, he says his ambition to help australian football"
+  },
+  {
+   "id": "06f384a8e4e7401e",
+   "kind": "evidence",
+   "question": "Does the article from Fortune suggest that Generation Z experiences distress primarily due to climate change, while the article from Eos: Earth And Space Science News calls for a deeper understanding of sea surface temperature patterns as a significant climate driver?",
+   "gold_sentences": [
+    "In other words, first, we need to improve our understanding of drivers of sea surface temperature patterns—decadal coupled variability; the pace and spatial structure of ocean heat uptake; and forcing by aerosols, greenhouse gases, and volcanoes—as well as the relative timing of these drivers."
+   ],
+   "evidence": "gen z encountered graphic footage of the israel-hamas war through social media, adding to years of digitally witnessed crises: covid-19, political violence, school shootings, ukraine's war, and climate disasters. the article links this constant exposure to poor mental health: 46% of young workers say news distress disrupts work, and nearly 70% feel climate anxiety. gen z prioritizes purposeful, socially responsible work, but faces severe financial stress: 85% couldn't cover a month's"
+  },
+  {
+   "id": "937a72ac06b27483",
+   "kind": "evidence",
+   "question": "Does the Fortune article claim that Sam Bankman-Fried used Caroline Ellison as a front for secret access to customer funds at Alameda Research, while The Verge article alleges that Sam Bankman-Fried himself made the decision to use FTX customer funds to buy out Binance, indicating a difference in the reported involvement of Sam Bankman-Fried in the misuse of customer funds?",
+   "gold_sentences": [
+    "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."
+   ],
+   "evidence": "at sam bankman-fried's 2023 trial, prosecutors said he secretly used ftx customer funds through alameda research for risky bets, political donations, and personal purposes, while misleading customers, lenders, and investors. his lawyer portrayed him as a good-faith startup founder whose businesses failed amid crypto-market turmoil, blaming alameda ceo caroline ellison's risk management. a customer testified he could not withdraw nearly $100,000; former friend and employee adam yedidia said he feared code"
+  },
+  {
+   "id": "084e7736be912ff8",
+   "kind": "evidence",
+   "question": "Does the Fortune article claim that Sam Bankman-Fried used Caroline Ellison as a front for secret access to customer funds at Alameda Research, while The Verge article alleges that Sam Bankman-Fried himself made the decision to use FTX customer funds to buy out Binance, indicating a difference in the reported involvement of Sam Bankman-Fried in the misuse of customer funds?",
+   "gold_sentences": [
+    "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."
+   ],
+   "evidence": "at sam bankman-fried's fraud trial, former alameda ceo and ex-girlfriend caroline ellison testified that he directed her to commit crimes and concealed alameda's dependence on ftx customer funds. she described an undocumented $65 billion credit line, customer money used to buy binance's ftx stake, and misleading valuations of ftt and other tokens. a spreadsheet she prepared showed alameda might be unable to repay loans-and would certainly fail if it invested $3 billion-even assuming access to"
+  },
+  {
+   "id": "5821a054196fde31",
+   "kind": "evidence",
+   "question": "Does the Fortune article claim that Sam Bankman-Fried used Caroline Ellison as a front for secret access to customer funds at Alameda Research, while The Verge article alleges that Sam Bankman-Fried himself made the decision to use FTX customer funds to buy out Binance, indicating a difference in the reported involvement of Sam Bankman-Fried in the misuse of customer funds?",
+   "gold_sentences": [
+    "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."
+   ],
+   "evidence": "at his ftx fraud trial, sam bankman-fried portrayed himself as overworked and largely unaware of alameda's finances, customer-fund borrowing, and an $8 billion liability. the verge contrasted these claims with testimony and evidence: alameda alone had a code-enabled negative balance, avoided liquidation, and received a credit line that grew to $65 billion. former executives described customer money being used, losses concealed, and ftx's insurance fund misrepresented. bankman-fried's"
+  },
+  {
+   "id": "2125c6b471dba6a5",
+   "kind": "evidence",
+   "question": "Did 'The Verge' article suggest that Sam Bankman-Fried set withdrawal permissions based on FTX's customer satisfaction scores, while 'Fortune' and 'TechCrunch' articles focus on the jury's determination of his truthfulness and allegations of committing fraud for personal gain, respectively, without mentioning specific operational practices like withdrawal permissions?",
+   "gold_sentences": [
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.",
+    "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "the verge's trial coverage portrays ftx as an alleged fraud from its founding: prosecutors said bankman-fried secretly gave alameda unlimited access to customer funds while publicly denying preferential treatment. cooperating insiders wang, singh, ellison, and yedidia described code privileges, doctored accounts, and misuse of deposits; expert testimony traced billions to loans, investments, real estate, insiders, and political causes. the collapse devastated customers and bankman-fried's friends and family, many now"
+  },
+  {
+   "id": "ad3c598057bcb817",
+   "kind": "evidence",
+   "question": "Did 'The Verge' article suggest that Sam Bankman-Fried set withdrawal permissions based on FTX's customer satisfaction scores, while 'Fortune' and 'TechCrunch' articles focus on the jury's determination of his truthfulness and allegations of committing fraud for personal gain, respectively, without mentioning specific operational practices like withdrawal permissions?",
+   "gold_sentences": [
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.",
+    "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "the verge's courtroom coverage portrays sam bankman-fried's defense as increasingly damaging. on the stand, he struggled to answer questions, admitted failing to create a risk team or safeguards against alameda spending ftx customer funds, and said he did not investigate an $8 billion shortfall despite warnings. prosecutors highlighted testimony from caroline ellison and others tying him to customer-fund misuse and deception; defense cross-examination was described as ineffective. bankman-fried was ultimately convicted on seven counts, including"
+  },
+  {
+   "id": "f43c31a3ef640200",
+   "kind": "evidence",
+   "question": "Does the TechCrunch article that discusses the expected debut of DeepMind's next-generation chatbot Gemini by the end of the year align with the TechCrunch article mentioning Google's release of only the \"lite\" version known as Gemini Pro, or do they refer to different stages or versions of the Gemini project?",
+   "gold_sentences": [
+    "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."
+   ],
+   "evidence": "google launched gemini pro in bard, touting strong capabilities, but early user and techcrunch tests found frequent errors: incorrect oscar facts, fabricated claims, failed french word-length prompts, stale or evasive news summaries, and weak coding performance. reports also showed jailbreaks eliciting harmful suggestions. gemini pro is not google's forthcoming ultra model, and google compared it with gpt-3.5; despite promised gains over bard's prior model, the initial results suggest substantial room for improvement."
+  },
+  {
+   "id": "3af9fcce6966a297",
+   "kind": "evidence",
+   "question": "Does 'The Roar | Sports Writers Blog' suggest that 'The All Blacks' motivation for playing is the same as the Springboks' as per the first article, while also indicating that 'The All Blacks' handling was compromised by external factors in the second article, and does it confirm 'The All Blacks' losses to Argentina as stated in the third article?",
+   "gold_sentences": [
+    "The All Blacks had their chances, but their usual safe handling, a feature throughout the World Cup after their first-up loss to France, evaded them against the Springboks’ blitz defence in the wet conditions.",
+    "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."
+   ],
+   "evidence": "ahead of their 2023 world cup semi-final against argentina, new zealand defended rieko ioane's taunting gestures toward ireland fans and johnny sexton. coach ian foster recalled sam whitelock and mark telea, stressed respect for argentina, and rejected the \"favourites\" label; michael cheika embraced underdog status and said argentina aimed to inspire through ambition and resilience. a second article framed the final as south africa playing for its country and new zealand for themselves and departing leaders."
+  },
+  {
+   "id": "d50276588a24b8a4",
+   "kind": "evidence",
+   "question": "Did the Sporting News report a defeat for the Dallas Cowboys against the Seattle Seahawks in Week 13 of the NFL season, and did the same source also report a win for the Detroit Lions against the Green Bay Packers?",
+   "gold_sentences": [
+    "The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night, keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14.",
+    "Fueled by a stout defensive showing, a gritty run game and a bit of fairy dust from the likes of St. Brown, Sam LaPorta and Josh Reynolds, the Lions cruised to a 34-20 win over their hated NFC North rivals, Green Bay."
+   ],
+   "evidence": "for week 13 thursday night, dallas was favored in a potentially lopsided matchup. start dak prescott, tony pollard, ceedee lamb, jake ferguson, cowboys d/st and brandon aubrey; sit rico dowdle and brandin cooks. for seattle, start dk metcalf and tyler lockett as volume-based wr3s; sit geno smith, zach charbonnet, jaxon smith-njigba, noah fant, will dissly, seahawks"
+  },
+  {
+   "id": "6f8ed5d25a531a84",
+   "kind": "evidence",
+   "question": "Does the 'Sporting News' article claim that the Bears' defense sacked Joshua Dobbs, while the 'Yardbarker' article discusses the Baltimore Ravens defense's ranking in points allowed per game and total yards in the current NFL season?",
+   "gold_sentences": [
+    "9:47 p.m. — The Bears answer right back and sack Dobbs, with Sweat and Brisker in there to take him down."
+   ],
+   "evidence": "the article assesses two afc contenders. baltimore's offense has scored and generated less epa through six games than any lamar jackson-led ravens team; his explosive runs have also declined as the team shifts toward passing. an executive doubts the change will help when it matters, warning that limiting jackson's runs removes the offense's biggest weapon. jacksonville's outlook depends partly on trevor lawrence's knee; the young, scrappy team has growth potential, and coach doug pederson brings championship experience."
+  },
+  {
+   "id": "2614c965cf0e2e76",
+   "kind": "evidence",
+   "question": "Does the 'Sporting News' article claim that the Bears' defense sacked Joshua Dobbs, while the 'Yardbarker' article discusses the Baltimore Ravens defense's ranking in points allowed per game and total yards in the current NFL season?",
+   "gold_sentences": [
+    "9:47 p.m. — The Bears answer right back and sack Dobbs, with Sweat and Brisker in there to take him down."
+   ],
+   "evidence": "the material compiles sporting news and cbs sports coverage across sports. it contrasts the nba's christmas audience (4.27 million average) with the nfl's record thanksgiving average (34.1 million), noting preference determines which tradition is \"better.\" most items offer 2023 nfl fantasy, dfs, betting, and lineup advice: rankings, start/sit calls, picks, props, and player stacks, shaped by matchups, injuries, bye weeks, and scoring rules. other coverage previews bowl games and"
+  },
+  {
+   "id": "124764849db781c6",
+   "kind": "evidence",
+   "question": "Does the 'Sporting News' article claim that the Bears' defense sacked Joshua Dobbs, while the 'Yardbarker' article discusses the Baltimore Ravens defense's ranking in points allowed per game and total yards in the current NFL season?",
+   "gold_sentences": [
+    "9:47 p.m. — The Bears answer right back and sack Dobbs, with Sweat and Brisker in there to take him down."
+   ],
+   "evidence": "after philadelphia's loss, executives debated its late third-and-9 interception versus running and punting, highlighting tension between analytics and caution. the eagles' explosive-pass rate has dropped from 21% to 11%, perhaps because defenses are adapting, though league-wide declines and effective runs and short passes offer context. baltimore's offense and lamar jackson's explosive runs have faded as passing increases, potentially sidelining its greatest weapon. jacksonville's growth depends partly on trevor lawrence's knee; coach doug pederson brings"
+  },
+  {
+   "id": "6b6e2d87e4412c47",
+   "kind": "evidence",
+   "question": "Does the 'Essentially Sports' article suggest that Canelo Alvarez's wealth accumulation is on a similar trajectory as Floyd Mayweather's, while the 'TechCrunch' article discusses Sam Bankman-Fried's wealth in the context of his altruistic intentions, without comparing it to another individual's wealth trajectory?",
+   "gold_sentences": [
+    "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said."
+   ],
+   "evidence": "a heated exchange on x between canelo alvarez and conor mcgregor sparked speculation about a crossover boxing match. the article argues their global fan bases and strong pay-per-view histories could make it hugely lucrative. canelo, valued at about $180 million and fresh from a reported $45 million payday against gennady golovkin, might earn $55-60 million from the bout. that could move him closer to floyd mayweather, whose estimated net worth is $450 million and career earnings exceeded $"
+  },
+  {
+   "id": "95fcc22ee99eee10",
+   "kind": "evidence",
+   "question": "Does the article from The Verge suggest that Sam Bankman-Fried set withdrawal permissions based on FTX's trading revenue, while the Cnbc | World Business News Leader article discusses his intentions for FTX's board composition, and the TechCrunch article alleges that Sam Bankman-Fried committed fraud for personal gain, indicating different aspects of his professional conduct?",
+   "gold_sentences": [
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.",
+    "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "at his ftx fraud trial, sam bankman-fried portrayed himself as overworked and largely unaware of alameda's finances, customer-fund borrowing, and an $8 billion liability. the verge contrasted these claims with testimony and evidence: alameda alone had a code-enabled negative balance, avoided liquidation, and received a credit line that grew to $65 billion. former executives described customer money being used, losses concealed, and ftx's insurance fund misrepresented. bankman-fried's"
+  },
+  {
+   "id": "370436078756a2b7",
+   "kind": "evidence",
+   "question": "Does the article from The Verge suggest that Sam Bankman-Fried set withdrawal permissions based on FTX's trading revenue, while the Cnbc | World Business News Leader article discusses his intentions for FTX's board composition, and the TechCrunch article alleges that Sam Bankman-Fried committed fraud for personal gain, indicating different aspects of his professional conduct?",
+   "gold_sentences": [
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.",
+    "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "ahead of sam bankman-fried's fraud trial, michael lewis's book *going infinite* and a 60 minutes interview renewed debate over whether coverage portrays the ftx founder too sympathetically. lewis described sbf's rapid rise, celebrity endorsements, political fundraising, and an alleged $5 billion figure for persuading trump not to run again; its source and whether any payment occurred are unclear. ftx and sister firm alameda collapsed amid financial discrepancies, devastating customers and damaging crypto's reputation. s"
+  },
+  {
+   "id": "628c801930e0975e",
+   "kind": "evidence",
+   "question": "Does the article from Music Business Worldwide discussing Sony Music's stance on AI technology suggest a similar opportunity for creative development in music as the Music Business Worldwide article on Warner Music Group's view on the impact of technology on the music industry?",
+   "gold_sentences": [
+    "Kooker added later in the speech: “Music is a tremendous driver for AI technology, and AI technology presents a tremendous opportunity for the creative development of music.",
+    "Robert Kyncl, CEO of Warner Music Group – and an ex-high flyer at YouTube – commented: “With each major leap in technology, the music industry navigates a fresh set of challenges and opportunities."
+   ],
+   "evidence": "at code conference, warner music ceo robert kyncl argued labels remain essential because crowded platforms make discovery and sustaining artists' careers difficult; artists need teams. he predicted rapid ai advances in music within a year, urging artist choice and licensing/rights-tracking systems modeled on youtube content id rather than resisting technology. he sees audio streaming as more resilient than video, with growth from emerging markets and price increases. music-catalog acquisitions may slow, lowering multiples and creating buying opportunities for wmg."
+  },
+  {
+   "id": "e7c99741bc80e88e",
+   "kind": "evidence",
+   "question": "Does 'The Verge' article suggest that Sam Bankman-Fried's inability to manage FTX and Alameda Research was due to the companies' growth, while 'Fortune' focuses on his successful persuasion of Adam Yedidia to join his ventures, and 'TechCrunch' alleges that Sam Bankman-Fried committed fraud for personal gain, indicating different aspects of his leadership and actions?",
+   "gold_sentences": [
+    "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "the verge's trial coverage portrays ftx as an alleged fraud from its founding: prosecutors said bankman-fried secretly gave alameda unlimited access to customer funds while publicly denying preferential treatment. cooperating insiders wang, singh, ellison, and yedidia described code privileges, doctored accounts, and misuse of deposits; expert testimony traced billions to loans, investments, real estate, insiders, and political causes. the collapse devastated customers and bankman-fried's friends and family, many now"
+  },
+  {
+   "id": "75890dcc5c26ad2c",
+   "kind": "evidence",
+   "question": "Does 'The Verge' article suggest that Sam Bankman-Fried's inability to manage FTX and Alameda Research was due to the companies' growth, while 'Fortune' focuses on his successful persuasion of Adam Yedidia to join his ventures, and 'TechCrunch' alleges that Sam Bankman-Fried committed fraud for personal gain, indicating different aspects of his leadership and actions?",
+   "gold_sentences": [
+    "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "at his ftx fraud trial, sam bankman-fried portrayed himself as overworked and largely unaware of alameda's finances, customer-fund borrowing, and an $8 billion liability. the verge contrasted these claims with testimony and evidence: alameda alone had a code-enabled negative balance, avoided liquidation, and received a credit line that grew to $65 billion. former executives described customer money being used, losses concealed, and ftx's insurance fund misrepresented. bankman-fried's"
+  },
+  {
+   "id": "20bd7e0f5eface6b",
+   "kind": "evidence",
+   "question": "Does 'The Verge' article suggest that Sam Bankman-Fried's inability to manage FTX and Alameda Research was due to the companies' growth, while 'Fortune' focuses on his successful persuasion of Adam Yedidia to join his ventures, and 'TechCrunch' alleges that Sam Bankman-Fried committed fraud for personal gain, indicating different aspects of his leadership and actions?",
+   "gold_sentences": [
+    "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "ahead of sam bankman-fried's fraud trial, michael lewis's book *going infinite* and a 60 minutes interview renewed debate over whether coverage portrays the ftx founder too sympathetically. lewis described sbf's rapid rise, celebrity endorsements, political fundraising, and an alleged $5 billion figure for persuading trump not to run again; its source and whether any payment occurred are unclear. ftx and sister firm alameda collapsed amid financial discrepancies, devastating customers and damaging crypto's reputation. s"
+  },
+  {
+   "id": "0925b4ea0ed31632",
+   "kind": "evidence",
+   "question": "Does 'The Verge' article suggest that Sam Bankman-Fried's inability to manage FTX and Alameda Research was due to the companies' growth, while 'Fortune' focuses on his successful persuasion of Adam Yedidia to join his ventures, and 'TechCrunch' alleges that Sam Bankman-Fried committed fraud for personal gain, indicating different aspects of his leadership and actions?",
+   "gold_sentences": [
+    "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "the verge's courtroom coverage portrays sam bankman-fried's defense as increasingly damaging. on the stand, he struggled to answer questions, admitted failing to create a risk team or safeguards against alameda spending ftx customer funds, and said he did not investigate an $8 billion shortfall despite warnings. prosecutors highlighted testimony from caroline ellison and others tying him to customer-fund misuse and deception; defense cross-examination was described as ineffective. bankman-fried was ultimately convicted on seven counts, including"
+  },
+  {
+   "id": "6cf17f03a4b1c0ae",
+   "kind": "evidence",
+   "question": "Does the 'Fortune' article suggest that Rep. Patrick McHenry is avoiding a permanent speaker role, while 'The Age' article indicates that Kevin McCarthy has been removed from the speaker position?",
+   "gold_sentences": [
+    "Wall Street is also absorbing the ouster of Kevin McCarthy as the speaker of the House of Representatives."
+   ],
+   "evidence": "house republicans dropped jim jordan as speaker nominee on oct. 20 after his third ballot drew only 194 votes and 25 gop defections, more opposition than before. centrists resisted his hard-line approach and reported harassment and death threats. with no clear successor or workable plan, republicans will restart the search monday. the house has been largely paralyzed since kevin mccarthy's ouster, delaying legislative work, including aid decisions and funding needed before a mid-november shutdown deadline."
+  },
+  {
+   "id": "8d2daae3feac6ea8",
+   "kind": "evidence",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_sentences": [
+    "The Springboks took a 12-3 lead after 34 minutes when the All Blacks once again failed to release on their goal line."
+   ],
+   "evidence": "ahead of their 2023 world cup semi-final against argentina, new zealand defended rieko ioane's taunting gestures toward ireland fans and johnny sexton. coach ian foster recalled sam whitelock and mark telea, stressed respect for argentina, and rejected the \"favourites\" label; michael cheika embraced underdog status and said argentina aimed to inspire through ambition and resilience. a second article framed the final as south africa playing for its country and new zealand for themselves and departing leaders."
+  },
+  {
+   "id": "edda8fc39affc272",
+   "kind": "evidence",
+   "question": "Does the TechCrunch article suggest that Sam Bankman-Fried's actions were motivated by altruism, while The Verge article focuses on the specific use of FTX customer funds by Sam Bankman-Fried?",
+   "gold_sentences": [
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "at his ftx fraud trial, sam bankman-fried portrayed himself as overworked and largely unaware of alameda's finances, customer-fund borrowing, and an $8 billion liability. the verge contrasted these claims with testimony and evidence: alameda alone had a code-enabled negative balance, avoided liquidation, and received a credit line that grew to $65 billion. former executives described customer money being used, losses concealed, and ftx's insurance fund misrepresented. bankman-fried's"
+  },
+  {
+   "id": "ebfefc8ce8311d54",
+   "kind": "evidence",
+   "question": "Does the TechCrunch article on GPT-4 suggest a different level of susceptibility to producing toxic text compared to other large language models, while the TechCrunch article on the European Commission's probe into Elon Musk’s X focuses on concerns about illegal content and disinformation in a different context?",
+   "gold_sentences": [
+    "Because GPT-4 is more likely to follow the instructions of “jailbreaking” prompts, the co-authors claim that GPT-4 can be more easily prompted than other LLMs to spout toxic, biased text.",
+    "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."
+   ],
+   "evidence": "in its first year, chatgpt expanded across mobile apps, gpt-4, custom instructions, browsing and customizable gpts, prompting partnerships and new uses in news, classrooms, courts and cars. growth brought temporary plus sign-up pauses. debate centered on privacy, bias, misinformation, copyright, cheating and safety; regulators investigated or imposed requirements, while some jurisdictions restricted access. reported abuses included phishing, malware and data leakage, though stanford found no rise in high-school cheating. openai acknowledged"
+  },
+  {
+   "id": "d0220d7820bb8a65",
+   "kind": "evidence",
+   "question": "Does the TechCrunch article on GPT-4 suggest a different level of susceptibility to producing toxic text compared to other large language models, while the TechCrunch article on the European Commission's probe into Elon Musk’s X focuses on concerns about illegal content and disinformation in a different context?",
+   "gold_sentences": [
+    "Because GPT-4 is more likely to follow the instructions of “jailbreaking” prompts, the co-authors claim that GPT-4 can be more easily prompted than other LLMs to spout toxic, biased text.",
+    "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."
+   ],
+   "evidence": "techcrunch's 2023 overview says gpt-4 was chatgpt's newest model. chatgpt offered a free, sign-in-required version and paid chatgpt plus, and was used by individuals and increasingly by companies, though some restricted it. microsoft announced integrating its chatgpt-based bing experience into windows 11; startup looking glass used it for conversational holograms; and solana added a plugin to help users enter web3. the excerpt asks what \"gpt"
+  },
+  {
+   "id": "7864519389191495",
+   "kind": "evidence",
+   "question": "Does the TechCrunch article on GPT-4 suggest a different level of susceptibility to producing toxic text compared to other large language models, while the TechCrunch article on the European Commission's probe into Elon Musk’s X focuses on concerns about illegal content and disinformation in a different context?",
+   "gold_sentences": [
+    "Because GPT-4 is more likely to follow the instructions of “jailbreaking” prompts, the co-authors claim that GPT-4 can be more easily prompted than other LLMs to spout toxic, biased text.",
+    "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."
+   ],
+   "evidence": "the article raises concerns about automating fulfilling jobs, creating potentially superior nonhuman minds, and losing control of civilization, arguing that major ai decisions should not be left to unelected tech leaders and that powerful systems should be developed only when risks are manageable. openai introduced chatgpt plugins linking it to the web and third-party data, initially for a limited alpha group, developers, and plus subscribers, with broader and api access planned. gpt-4, an image- and text-understanding model"
+  },
+  {
+   "id": "02b42384a8fcf1e4",
+   "kind": "evidence",
+   "question": "Does the TechCrunch article discussing Meta's moderation bias problem suggest a similar impact on users compared to the TechCrunch article on Meta's proposed legislation for teen app downloads, with the former affecting Palestinian voices and the latter concerning parental oversight of teen social media usage?",
+   "gold_sentences": [
+    "Al Saadi said that her frustration with Meta is common among Palestinians, both in occupied territories and across the diaspora."
+   ],
+   "evidence": "techcrunch reports widespread allegations that meta platforms restrict palestinian content amid the gaza war: users describe reduced story views, posting limits, removals, sensitive-content labels, and palestinian-flag comments being hidden. meta denies deliberate suppression, citing and fixing global technical bugs and pointing to appeals. critics say these incidents reflect longstanding disproportionate moderation, worsened by weak arabic-language expertise, automation, blunt rules against hamas-related content, and possible political influence. a 2021 meta-commissioned review found adverse human-rights"
+  },
+  {
+   "id": "d64bad3907f053f4",
+   "kind": "evidence",
+   "question": "Did the 'Fortune' article suggest that Sam Bankman-Fried openly conducted all business dealings without using Caroline Ellison as a front for illicit activities involving customer funds at Alameda Research, while the 'TechCrunch' articles focus on his alleged intentions to use wealth for altruistic purposes and accusations of committing fraud for personal gain, without mentioning the use of a front person?",
+   "gold_sentences": [
+    "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "at sam bankman-fried's 2023 trial, prosecutors said he secretly used ftx customer funds through alameda research for risky bets, political donations, and personal purposes, while misleading customers, lenders, and investors. his lawyer portrayed him as a good-faith startup founder whose businesses failed amid crypto-market turmoil, blaming alameda ceo caroline ellison's risk management. a customer testified he could not withdraw nearly $100,000; former friend and employee adam yedidia said he feared code"
+  },
+  {
+   "id": "c818ba883600a3f2",
+   "kind": "evidence",
+   "question": "Did the 'Fortune' article suggest that Sam Bankman-Fried openly conducted all business dealings without using Caroline Ellison as a front for illicit activities involving customer funds at Alameda Research, while the 'TechCrunch' articles focus on his alleged intentions to use wealth for altruistic purposes and accusations of committing fraud for personal gain, without mentioning the use of a front person?",
+   "gold_sentences": [
+    "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "at sam bankman-fried's fraud trial, former alameda ceo and ex-girlfriend caroline ellison testified that he directed her to commit crimes and concealed alameda's dependence on ftx customer funds. she described an undocumented $65 billion credit line, customer money used to buy binance's ftx stake, and misleading valuations of ftt and other tokens. a spreadsheet she prepared showed alameda might be unable to repay loans-and would certainly fail if it invested $3 billion-even assuming access to"
+  },
+  {
+   "id": "11f9f7171861459e",
+   "kind": "evidence",
+   "question": "Does the TechCrunch article discussing the expansion of Google Maps with AI technology agree with the TechCrunch article on LinkedIn's introduction of new AI features in terms of both companies enhancing their products with artificial intelligence?",
+   "gold_sentences": [
+    "The feature is currently available in France, Germany, Japan, the U.K. and the U.S., with plans for further expansion."
+   ],
+   "evidence": "techcrunch's roundups covered sam altman backing induced ai, a teen-founded workflow-automation startup; google's pixel 8 launch; tiktok testing a $4.99 ad-free tier; and new gmail spam rules and linkedin ai tools. other stories included flexport turmoil, ftx trial revelations, ironnet's closure and conflicting x usage figures. later coverage detailed google's misleading ai demo, anduril's autonomous roadrunner weapon, a 23andme breach affecting"
+  },
+  {
+   "id": "51bfe8351f2b7433",
+   "kind": "evidence",
+   "question": "Does the TechCrunch article discussing the expansion of Google Maps with AI technology agree with the TechCrunch article on LinkedIn's introduction of new AI features in terms of both companies enhancing their products with artificial intelligence?",
+   "gold_sentences": [
+    "The feature is currently available in France, Germany, Japan, the U.K. and the U.S., with plans for further expansion."
+   ],
+   "evidence": "techcrunch covered major ai and tech launches, including openai's gpt-4 turbo, custom gpts and apis, google's pixel 8, and emerging ai products. cios remain cautious, while startups and france's ai ecosystem attract investment. robotics promises growth but faces challenges in dexterity, perception and autonomy; amazon is expanding drone delivery and warehouse automation. digital-twin adoption is rising. product innovation should solve real needs, and 2024 is expected to test ai"
+  },
+  {
+   "id": "56c3726c2abc6401",
+   "kind": "evidence",
+   "question": "Does the article from The Verge discussing the Microsoft Elite Series 2 “Core” version mention an increase in features compared to the standard model, and does the article from The Verge on MacBook Pros indicate a reduction in prices for the new models?",
+   "gold_sentences": [
+    "Microsoft also has a stripped-down Elite Series 2 “Core” version for $129.99, which is the same controller in white-and-black, red-and-black, or blue-and-black finishes without the rear paddles, accessory charging case, or extra stick toppers and D-pad."
+   ],
+   "evidence": "coverage highlights apple's 2023 macbook lineup and holiday discounts. the 16-inch m3 max macbook pro was praised as a powerful portable desktop, with a bright xdr screen, extensive ports, four-display support, and 26-hour-45-minute battery test; reviewed setup cost $4,000. m3 pro models suit demanding creative work, while m3 is a more affordable pro-feature option. m2 airs were widely recommended for everyday use, especially the 15-inch model's"
+  },
+  {
+   "id": "a060b0ff34f72728",
+   "kind": "evidence",
+   "question": "Does 'The Guardian' describe Shai Hope's performance against legspin bowling in the first T20 international differently from his innings performance in the fifth T20 international, with one article suggesting a struggle and the other praising the performance?",
+   "gold_sentences": [
+    "13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1) Just a single and the wicket off the over, Shai Hope can’t break the legspin shackles.",
+    "6d ago 22.54 GMT 16th over: West Indies 112-4 (Hope 29, Powell 8) Hope, who is playing an exemplary innings, opens the face to steer Rehan for his first boundary."
+   ],
+   "evidence": "west indies were 113-5, needing 20 from 21 balls to win the deciding t20 and secure a third series victory of the year. shai hope was batting well on 29. adil rashid had dismissed sherfane rutherford (30) and finished with 2-21; he took eight wickets in the series at an economy rate of 6.26. rovman powell fell for eight to reece topley, caught by rashid."
+  },
+  {
+   "id": "42f23c1579b722a3",
+   "kind": "evidence",
+   "question": "Does 'The Guardian' describe Shai Hope's performance against legspin bowling in the first T20 international differently from his innings performance in the fifth T20 international, with one article suggesting a struggle and the other praising the performance?",
+   "gold_sentences": [
+    "13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1) Just a single and the wicket off the over, Shai Hope can’t break the legspin shackles.",
+    "6d ago 22.54 GMT 16th over: West Indies 112-4 (Hope 29, Powell 8) Hope, who is playing an exemplary innings, opens the face to steer Rehan for his first boundary."
+   ],
+   "evidence": "in the fifth and deciding men's t20 international against england, west indies were 114-5 in the 17th over. shai hope was unbeaten on 30, quietly steering the hosts towards victory, while andre russell had 1; england urgently needed hope's wicket."
+  },
+  {
+   "id": "525147bd494b20de",
+   "kind": "evidence",
+   "question": "Does 'The Verge' suggest that Alameda Research was involved in practices to manipulate FTX's balance sheet, while 'Fortune' claims Alameda Research's business practices with FTX were legal, indicating a disagreement in the portrayal of Alameda Research's actions?",
+   "gold_sentences": [
+    "Unfortunately, she did say that she had conversations with investors as part of their due diligence — and, of course, Alameda was taking on losses from FTX to keep FTX’s balance sheet pristine.",
+    "It was not, however, possible for those accounts to avoid liquidation, as Wang testified Alameda could do — or to have an overall negative balance.",
+    "It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."
+   ],
+   "evidence": "the verge's trial coverage portrays ftx as an alleged fraud from its founding: prosecutors said bankman-fried secretly gave alameda unlimited access to customer funds while publicly denying preferential treatment. cooperating insiders wang, singh, ellison, and yedidia described code privileges, doctored accounts, and misuse of deposits; expert testimony traced billions to loans, investments, real estate, insiders, and political causes. the collapse devastated customers and bankman-fried's friends and family, many now"
+  },
+  {
+   "id": "eec9fea534ab36bf",
+   "kind": "evidence",
+   "question": "Does 'The Verge' suggest that Alameda Research was involved in practices to manipulate FTX's balance sheet, while 'Fortune' claims Alameda Research's business practices with FTX were legal, indicating a disagreement in the portrayal of Alameda Research's actions?",
+   "gold_sentences": [
+    "Unfortunately, she did say that she had conversations with investors as part of their due diligence — and, of course, Alameda was taking on losses from FTX to keep FTX’s balance sheet pristine.",
+    "It was not, however, possible for those accounts to avoid liquidation, as Wang testified Alameda could do — or to have an overall negative balance.",
+    "It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."
+   ],
+   "evidence": "at his ftx fraud trial, sam bankman-fried portrayed himself as overworked and largely unaware of alameda's finances, customer-fund borrowing, and an $8 billion liability. the verge contrasted these claims with testimony and evidence: alameda alone had a code-enabled negative balance, avoided liquidation, and received a credit line that grew to $65 billion. former executives described customer money being used, losses concealed, and ftx's insurance fund misrepresented. bankman-fried's"
+  },
+  {
+   "id": "a862e4f2540dbe38",
+   "kind": "evidence",
+   "question": "Do the Polygon article discussing Jess and Bill Walker and the FOX News - Lifestyle article about the holidays both suggest that their respective subjects emphasize the importance of maintaining family connections?",
+   "gold_sentences": [
+    "From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant.",
+    "Speaking of the Christmas season, McLean — born in New Rochelle, New York — said that \"the holidays are a time for families to come together."
+   ],
+   "evidence": "the articles cover: adam grant's advice to foster adaptability, communication and resilience rather than dictate careers, plus habits that support older adults' cognition; fairfield's \"mombies,\" who have raised over $170,000 for metastatic breast cancer research; mikaela shiffrin's supportive skiing family and father's death; adult children returning home amid financial pressures; celebrity parents' tough lessons on failure and gratitude; a bride's choice to honor her late father despite her stepfather's hurt"
+  },
+  {
+   "id": "bd3a335a152a18c7",
+   "kind": "evidence",
+   "question": "Does the Fortune article claim that Sam Bankman-Fried used Caroline Ellison as a front for secret access to customer funds at Alameda Research, while the TechCrunch article alleges that Caroline Ellison took $14 billion from customers to repay debts without Sam Bankman-Fried's knowledge, or do both articles assert different levels of involvement of Sam Bankman-Fried in the misuse of customer funds?",
+   "gold_sentences": [
+    "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.",
+    "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."
+   ],
+   "evidence": "at sam bankman-fried's 2023 trial, prosecutors said he secretly used ftx customer funds through alameda research for risky bets, political donations, and personal purposes, while misleading customers, lenders, and investors. his lawyer portrayed him as a good-faith startup founder whose businesses failed amid crypto-market turmoil, blaming alameda ceo caroline ellison's risk management. a customer testified he could not withdraw nearly $100,000; former friend and employee adam yedidia said he feared code"
+  },
+  {
+   "id": "da3681c975bd16a4",
+   "kind": "evidence",
+   "question": "Does the Fortune article claim that Sam Bankman-Fried used Caroline Ellison as a front for secret access to customer funds at Alameda Research, while the TechCrunch article alleges that Caroline Ellison took $14 billion from customers to repay debts without Sam Bankman-Fried's knowledge, or do both articles assert different levels of involvement of Sam Bankman-Fried in the misuse of customer funds?",
+   "gold_sentences": [
+    "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.",
+    "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."
+   ],
+   "evidence": "at sam bankman-fried's fraud trial, former alameda ceo and ex-girlfriend caroline ellison testified that he directed her to commit crimes and concealed alameda's dependence on ftx customer funds. she described an undocumented $65 billion credit line, customer money used to buy binance's ftx stake, and misleading valuations of ftt and other tokens. a spreadsheet she prepared showed alameda might be unable to repay loans-and would certainly fail if it invested $3 billion-even assuming access to"
+  },
+  {
+   "id": "c9cd75db101e209c",
+   "kind": "evidence",
+   "question": "Does the Fortune article claim that Sam Bankman-Fried used Caroline Ellison as a front for secret access to customer funds at Alameda Research, while the TechCrunch article alleges that Caroline Ellison took $14 billion from customers to repay debts without Sam Bankman-Fried's knowledge, or do both articles assert different levels of involvement of Sam Bankman-Fried in the misuse of customer funds?",
+   "gold_sentences": [
+    "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.",
+    "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."
+   ],
+   "evidence": "at his ftx fraud trial, sam bankman-fried portrayed himself as overworked and largely unaware of alameda's finances, customer-fund borrowing, and an $8 billion liability. the verge contrasted these claims with testimony and evidence: alameda alone had a code-enabled negative balance, avoided liquidation, and received a credit line that grew to $65 billion. former executives described customer money being used, losses concealed, and ftx's insurance fund misrepresented. bankman-fried's"
+  },
+  {
+   "id": "7a804e4ccaf977e3",
+   "kind": "evidence",
+   "question": "Does the Fortune article claim that Sam Bankman-Fried used Caroline Ellison as a front for secret access to customer funds at Alameda Research, while the TechCrunch article alleges that Caroline Ellison took $14 billion from customers to repay debts without Sam Bankman-Fried's knowledge, or do both articles assert different levels of involvement of Sam Bankman-Fried in the misuse of customer funds?",
+   "gold_sentences": [
+    "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.",
+    "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."
+   ],
+   "evidence": "the verge's courtroom coverage portrays sam bankman-fried's defense as increasingly damaging. on the stand, he struggled to answer questions, admitted failing to create a risk team or safeguards against alameda spending ftx customer funds, and said he did not investigate an $8 billion shortfall despite warnings. prosecutors highlighted testimony from caroline ellison and others tying him to customer-fund misuse and deception; defense cross-examination was described as ineffective. bankman-fried was ultimately convicted on seven counts, including"
+  },
+  {
+   "id": "e13b1f96213ea52a",
+   "kind": "evidence",
+   "question": "Does the Wired article suggest that Sony headphones do not offer the best value in their class during the Cyber Monday sale, while the Fortune article indicates that market participants need to act irresponsibly to maintain a reasonable market, despite the current low rates?",
+   "gold_sentences": [
+    "“Each actor will have to be responsible to ensure that the market remains reasonable amid rates that are relatively low,” CMA CGM Chief Financial Officer Ramon Fernandez told reporters Friday."
+   ],
+   "evidence": "wired highlights walmart cyber monday discounts on sony's compact wf-1000xm5 earbuds, praised for sound, features, and noise canceling; sennheiser hd 660s2 headphones, offering richly detailed, bass-enhanced audio despite a tight fit; and sony's more affordable noise-canceling headphones, valued for clear sound, solid performance, and long battery life. discounts help offset premium prices."
+  }
+ ]
+}

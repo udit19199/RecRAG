@@ -1,0 +1,822 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=87fbd7c9344a0759 ===
+Gold sentences and facts:
+Sentence 0: The Sentencing Reform Act , part of the Comprehensive Crime Control Act of 1984 , was a U.S. federal statute intended to increase consistency in United States federal sentencing . It established the United States Sentencing Commission . It also abolished federal parole , except for persons convicted under federal law before November 1 , 1987 , persons convicted under District of Columbia law , `` transfer treaty '' inmates , persons who violated military law who are in federal civilian prisons , and persons who are defendants in state cases and who are under the U.S. Marshals Service Witness Protection Program .
+  Fact 0.0: The Sentencing Reform Act was part of the Comprehensive Crime Control Act of 1984.
+  Fact 0.1: The Sentencing Reform Act was a U.S. federal statute.
+  Fact 0.2: The Sentencing Reform Act was intended to increase consistency in United States federal sentencing.
+  Fact 0.3: The Sentencing Reform Act established the United States Sentencing Commission.
+  Fact 0.4: The Sentencing Reform Act abolished federal parole.
+  Fact 0.5: The abolition of federal parole did not apply to persons convicted under federal law before November 1, 1987.
+  Fact 0.6: The abolition of federal parole did not apply to persons convicted under District of Columbia law.
+  Fact 0.7: The abolition of federal parole did not apply to transfer treaty inmates.
+  Fact 0.8: The abolition of federal parole did not apply to persons who violated military law who are in federal civilian prisons.
+  Fact 0.9: The abolition of federal parole did not apply to persons who are defendants in state cases and who are under the U.S. Marshals Service Witness Protection Program.
+
+Retrieved items:
+<item 1>
+Sentencing Reform Act
+Sentencing Reform Act - Wikipedia Sentencing Reform Act Jump to : navigation , search The Sentencing Reform Act , part of the Comprehensive Crime Control Act of
+1984 , was a U.S. federal statute intended to increase consistency in United States federal sentencing . It established the United States Sentencing Commission
+. It also abolished federal parole , except for persons convicted under federal law before November 1 , 1987 , persons convicted under District of Columbia law
+, `` transfer treaty '' inmates , persons who violated military law who are in federal civilian prisons , and persons who are defendants in state cases and who
+are under the U.S. Marshals Service Witness Protection Program . The act was passed by large majorities in both houses of Congress . References ( edit ) Jump up
+^ `` An Overview of the United States Sentencing Commission '' ( PDF ) . United States Sentencing Commission . United States Sentencing Commission . Retrieved 9
+August 2011 . Jump up ^ Barry L. Johnson . `` Sentencing Reform Act ( 1984 ) '' . eNotes . Retrieved 9 August 2011 .
+</item 1>
+
+<item 2>
+Graph query row:
+entity: Sentencing Reform Act
+relationship: RELATED_TO
+connected_entity: Federal parole
+</item 2>
+
+<item 3>
+Graph query row:
+entity: Sentencing Reform Act
+relationship: RELATED_TO
+connected_entity: United States Sentencing Commission
+</item 3>
+
+<item 4>
+United States Bill of Rights
+The most frequently litigated clause of the amendment is the last , which forbids cruel and unusual punishment . This clause was only occasionally applied by
+the Supreme Court prior to the 1970s , generally in cases dealing with means of execution . In Furman v. Georgia ( 1972 ) , some members of the Court found
+capital punishment itself in violation of the amendment , arguing that the clause could reflect `` evolving standards of decency '' as public opinion changed ;
+others found certain practices in capital trials to be unacceptably arbitrary , resulting in a majority decision that effectively halted executions in the
+United States for several years . Executions resumed following Gregg v. Georgia ( 1976 ) , which found capital punishment to be constitutional if the jury was
+directed by concrete sentencing guidelines . The Court has also found that some poor prison conditions constitute cruel and unusual punishment , as in Estelle
+v. Gamble ( 1976 ) and Brown v. Plata ( 2011 ) . Ninth Amendment Main article : Ninth Amendment to the United States Constitution The enumeration in the
+Constitution , of certain rights , shall not be construed to deny or disparage others retained by the people .
+</item 4>
+
+<item 5>
+Sentencing Reform Act
+This United States federal legislation article is a stub . You can help Wikipedia by expanding it . Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Sentencing_Reform_Act&oldid=813388767 '' Categories : United States federal criminal legislation Penal system in the
+United States United States sentencing law 1984 in law 1984 in the United States United States federal legislation stubs Hidden categories : Use dmy dates from
+August 2011 All stub articles Talk About Wikipedia Add links This page was last edited on 3 December 2017 , at 12 : 21 . About Wikipedia
+</item 5>
+
+<item 6>
+Graph query row:
+entity: Sentencing Reform Act
+relationship: RELATED_TO
+connected_entity: United States federal sentencing
+</item 6>
+
+<item 7>
+Whistleblower Protection Act
+Legislative history Introduced in the Senate as S. 20 by Carl Levin ( D -- MI ) on January 25 , 1989 Passed the Senate on March 16 , 1989 ( 97 - 0 , Roll call
+vote 24 , via Senate.gov ) Passed the House on March 21 , 1989 ( Agreed voice vote ) Signed into law by President George H.W. Bush on April 10 , 1989 The
+Whistleblower Protection Act of 1989 , Pub. L. 101 - 12 as amended , is a United States federal law that protects federal whistleblowers who work for the
+government and report agency misconduct . A federal agency violates the Whistleblower Protection Act if agency authorities take ( or threaten to take )
+retaliatory personnel action against any employee or applicant because of disclosure of information by that employee or applicant . Whistleblowers may file
+complaints that they believe reasonably evidences a violation of a law , rule or regulation ; gross mismanagement ; gross waste of funds ; an abuse of authority
+; or a substantial and specific danger to public health or safety .
+</item 7>
+
+<item 8>
+Sentencing Reform Act
+eNotes . Retrieved 9 August 2011 . Jump up ^ `` FREQUENTLY ASKED QUESTIONS ABOUT THE LACK OF PAROLE FOR FEDERAL PRISONERS '' ( Archive ) . Families Against
+Mandatory Minimums . p. 2 / 4 . Retrieved on December 13 , 2015 . Jump up ^ Stith , Kate ; Koh , Steve Y. ( 1993 ) . `` The Politics of Sentencing Reform : The
+Legislative History of the Federal Sentencing Guidelines '' . Faculty Scholarship Series . Yale Law School . Retrieved 9 August 2011 . This United States
+federal legislation article is a stub . You can help Wikipedia by expanding it .
+</item 8>
+
+<item 9>
+Graph query row:
+entity: Sentencing Reform Act
+relationship: PART_OF
+connected_entity: Comprehensive Crime Control Act of 1984
+</item 9>
+
+<item 10>
+United States Bill of Rights
+194 . ^ Jump up to : Krantz , Sheldon ( 1986 ) . `` Cruel and Unusual Punishment '' . Encyclopedia of the American Constitution . -- via HighBeam Research (
+subscription required ) . Retrieved July 16 , 2013 . Jump up ^ `` U * X * L Encyclopedia of U.S. History '' . UXL Encyclopedia of American History . January 1 ,
+2009 . Retrieved July 15 , 2013 . ^ Jump up to : Weisberg , Robert ( 1986 ) . `` Capital Punishment '' . Encyclopedia of the American Constitution . -- via
+HighBeam Research ( subscription required ) . Retrieved July 16 , 2013 . Jump up ^ `` The Constitution of the United States of America : Analysis and
+Interpretation , Centennial Edition , Interim Edition : Alalysis of Cases Decided by the Supreme Court of the United States to June 26 , 2013 '' ( PDF ) .
+Washington , DC : U.S. Government Printing Office . 2013 . pp. 1738 -- 39 .
+</item 10>
+=== END ITEM id=87fbd7c9344a0759 ===
+
+=== ITEM id=6706df2581e382e8 ===
+Gold sentences and facts:
+Sentence 0: `` Sacrifice '' is a ballad performed by musician Elton John . The lyrics are by Bernie Taupin and the music by John . The song appears on the 1989 album Sleeping with the Past . It was first released in October 1989 , then in 1990 , and was the second single from the album . It achieved success , particularly in France and the UK , where it became his first solo chart - topper , spending five weeks at the top .
+  Fact 0.0: 'Sacrifice' is a ballad performed by musician Elton John.
+  Fact 0.1: The lyrics of 'Sacrifice' are by Bernie Taupin.
+  Fact 0.2: The music of 'Sacrifice' is by Elton John.
+  Fact 0.3: 'Sacrifice' appears on the 1989 album Sleeping with the Past.
+  Fact 0.4: 'Sacrifice' was first released in October 1989.
+  Fact 0.5: 'Sacrifice' was released in 1990.
+  Fact 0.6: 'Sacrifice' was the second single from the album Sleeping with the Past.
+  Fact 0.7: 'Sacrifice' achieved success, particularly in France and the UK.
+  Fact 0.8: 'Sacrifice' became Elton John's first solo chart-topper in France and the UK.
+  Fact 0.9: 'Sacrifice' spent five weeks at the top of the chart.
+
+Retrieved items:
+<item 1>
+Sacrifice (song)
+000 Personnel ( edit ) Elton John : vocals , Roland RD - 1000 digital piano Davey Johnstone : electric guitar Romeo Williams : bass Jonathan Moffett : drums Guy
+Babylon : keyboards Fred Mandel : keyboards Preceded by `` Words '' by The Christians French SNEP number - one single 26 May 1990 -- 9 June 1990 ( 3 weeks )
+Succeeded by `` Bo le lavabo ( WC Kiss ) '' by Lagaf ' Preceded by `` Vogue '' by Madonna Eurochart Hot 100 number - one single 16 June 1990 -- 28 July 1990 ( 7
+weeks ) Succeeded by `` U Ca n't Touch This '' by MC Hammer Preceded by `` World In Motion '' by Englandneworder UK number - one single 17 June 1990 -- 21 July
+1990 ( 5 weeks ) Succeeded by `` Turtle Power '' by Partners in Kryme References ( edit ) ^ Jump up to : `` Elton John - Full Official Chart History '' .
+Official Charts Company . Official Charts Company . Retrieved 20 January 2016 .
+</item 1>
+
+<item 2>
+Sacrifice (song)
+The lyrics are by Bernie Taupin and the music by John . The song appears on the 1989 album Sleeping with the Past . It was first released in October 1989 , then
+in 1990 , and was the second single from the album . It achieved success , particularly in France and the UK , where it became his first solo chart - topper ,
+spending five weeks at the top . A country music cover of the song was performed by Don Henley and Vince Gill as part of the 2018 tribute album Restoration :
+Reimagining the Songs of Elton John and Bernie Taupin . Contents ( hide ) 1 Overview 1.1 Background and writing 1.2 Music video 1.3 Chart performance 2 Track
+listings 3 Charts and sales 3.1 Weekly charts 3.2 Year - end charts 3.3 Certifications and sales 4 Personnel 5 References 6 External links Overview ( edit )
+Background and writing ( edit ) `` Sacrifice '' is inspired both by the Aretha Franklin song `` Do Right Woman , Do Right Man '' and described as a Percy Sledge
+song by Elton John .
+</item 2>
+
+<item 3>
+Sacrifice (song)
+Thus , it became John 's first solo number - one single in the UK Singles Chart , remaining on the top spot for five weeks . With this re-release , Elton John
+also got his first number one in France and stayed on the chart for 26 weeks . Track listings ( edit ) First release 12 '' single -- UK `` Sacrifice '' -- 5 :
+07 `` Love Is a Cannibal '' ( From the Columbia Motion Picture Ghostbusters II ) -- 3 : 53 CD single -- U.S. `` Sacrifice '' -- 5 : 07 `` Love Is a Cannibal ''
+( from the Columbia Motion Picture Ghostbusters II ) -- 3 : 53 `` Durban Deep '' Second release UK single `` Sacrifice '' -- 5 : 07 `` Healing Hands '' -- 4 :
+22 Charts and sales ( edit ) Weekly charts ( edit ) Chart ( 1989 ) Peak position UK Singles Chart 55 U.S.
+</item 3>
+
+<item 4>
+Sacrifice (song)
+Sacrifice ( song ) - wikipedia Sacrifice ( song ) Jump to : navigation , search For other songs with the same title , see Sacrifice ( disambiguation ) § Songs .
+`` Sacrifice '' Single by Elton John from the album Sleeping with the Past A-side `` Healing Hands '' ( second release ) B - side `` Love Is a Cannibal '' (
+first release ) Released October 1989 ( first release ) May 1990 ( second release ) Format CD , vinyl record ( 7 '' and 12 `` ) , audio cassette Length 5 : 11
+Label Rocket , MCA Songwriter ( s ) Elton John , Bernie Taupin Producer ( s ) Chris Thomas Elton John singles chronology `` Healing Hands '' ( 1989 ) ``
+Sacrifice '' ( 1989 ) `` Club at the End of the Street '' ( 1990 ) `` Healing Hands '' ( 1989 ) `` Sacrifice '' ( 1989 ) `` Club at the End of the Street '' (
+1990 ) `` Sacrifice '' is a ballad performed by musician Elton John . The lyrics are by Bernie Taupin and the music by John .
+</item 4>
+
+<item 5>
+Sacrifice (song)
+Jump up ^ `` UK certifications , database '' . Bpi . Retrieved 9 September 2008 . External links ( edit ) Lyrics of this song at MetroLyrics Elton John songs
+1960s and 1970s `` Skyline Pigeon '' ( 1968 ) `` I 've Been Loving You '' ( 1968 ) `` Lady Samantha '' ( 1969 ) `` It 's Me That You Need '' ( 1969 ) `` Border
+Song '' ( 1970 ) `` Rock and Roll Madonna '' ( 1970 ) `` From Denver to L.A. '' ( 1970 ) `` Take Me to the Pilot '' ( 1970 ) `` Your Song '' ( 1970 ) `` Friends
+'' ( 1971 ) `` Levon '' ( 1971 ) `` Tiny Dancer '' ( 1972 ) `` Rocket Man '' ( 1972 ) `` Honky Cat '' ( 1972 ) `` I Think I 'm Going to Kill Myself '' ( 1972 )
+`` Mona Lisas and Mad Hatters '' ( 1972 ) `` Crocodile Rock '' ( 1972 ) `` Elderberry Wine '' (
+</item 5>
+
+<item 6>
+Sacrifice (song)
+The song is beloved by both John and Bernie Taupin and deemed a bookend of sorts to their first hit `` Your Song '' . Taupin has said he is surprised he wrote
+it , and said in an interview , `` I think ' Sacrifice ' is one of the best songs we 've written . '' The song is not a typical love song , but rather a song
+about a breakup of a marriage where the loss of the relationship is `` no sacrifice . '' Although the single was successful , Elton John did not tour Europe in
+both 1989 -- 1990 to support the Sleeping with the Past album ( with the exception of one appearance in Knebworth Park on 30 June 1990 ) touring only in the
+U.S. and Australia . The 1989 European tour was , instead , in support of the Reg Strikes Back album , with no material representing Sleeping with the Past . In
+all shows that were done to support Sleeping with the Past in 1989 -- 1990 , Elton played this song solo on his Roland RD - 1000 Digital Piano .
+</item 6>
+
+<item 7>
+Sacrifice (song)
+'' ( 1997 ) `` Something About the Way You Look Tonight '' ( 1997 ) `` Candle in the Wind 1997 '' ( 1997 ) `` Written in the Stars '' ( 1999 ) 2000s `` I Want
+Love '' ( 2001 ) `` This Train Do n't Stop There Anymore '' ( 2002 ) `` Original Sin '' ( 2002 ) `` Are You Ready for Love '' ( 2003 ) `` Ghetto Gospel '' (
+2005 ) `` Electricity '' ( 2005 ) `` The Bridge '' ( 2006 ) `` Joseph , Better You than Me '' ( 2008 ) `` Tiny Dancer ( Hold Me Closer ) '' ( 2009 ) Related
+articles Albums discography Videography Book : Elton John Category : Elton John Ivor Novello Awards -- Best Song Musically and Lyrically 1960s She 's Leaving
+Home ( 1968 ) 1970s Where Do You Go To ( My Lovely ) ? ( 1970 ) Something ( 1971 ) Do n't Let It Die ( 1972 ) Without You ( 1973 ) Daniel ( 1974 ) Streets
+</item 7>
+
+<item 8>
+Sacrifice (song)
+Awarded as The Best Song Retrieved from `` https://en.wikipedia.org/w/index.php?title=Sacrifice_(song)&oldid=833955469 '' Categories : 1989 singles 1990 singles
+Disney songs Elton John songs European Hot 100 Singles number - one singles SNEP Top Singles number - one singles UK Singles Chart number - one singles Songs
+with lyrics by Bernie Taupin Songs with music by Elton John Pop ballads Rock ballads Song recordings produced by Chris Thomas ( record producer ) 1989 songs MCA
+Records singles The Rocket Record Company singles Music videos directed by Alek Keshishian Hidden categories : CS1 Dutch - language sources ( nl ) CS1 French -
+language sources ( fr ) Webarchive template wayback links CS1 Norwegian - language sources ( no ) CS1 German - language sources ( de ) Articles with hAudio
+microformats Use dmy dates from August 2010 Talk Contents About Wikipedia Dansk Español Français Italiano Nederlands Norsk nynorsk Polski Português Edit links
+This page was last edited on 3 April 2018 , at 05 : 22 .
+</item 8>
+
+<item 9>
+Sacrifice (song)
+Billboard Hot Adult Contemporary Tracks Chart ( 1990 ) Peak position Australian ARIA Singles Chart 7 Dutch Mega Top 100 Eurochart Hot 100 French SNEP Singles
+Chart German Singles Chart 36 Irish Singles Chart New Zealand RIANZ Singles Chart 7 Norwegian Singles Chart Swiss Singles Chart 23 UK Singles Chart U.S.
+Billboard Hot 100 18 Zimbabwe Singles Chart 6 Year - end charts ( edit ) Chart ( 1990 ) Rank Australian Singles Chart 47 Dutch Top 40 11 UK Singles Charts
+Certifications and sales ( edit ) Country Certification Date Sales certified Physical sales France Silver 200,000 380,000 UK Platinum 1 September 1990 600,000
+Personnel ( edit ) Elton John : vocals ,
+</item 9>
+
+<item 10>
+Sacrifice (song)
+Official Charts Company . Official Charts Company . Retrieved 20 January 2016 . ^ Jump up to : `` Elton John singles , Billboard charts '' . allmusic .
+Retrieved 9 September 2008 . Jump up ^ `` '' Sacrifice `` , Australian Singles Chart '' . australian - charts . Retrieved 13 December 2007 . Jump up ^ `` ''
+Sacrifice `` , Dutch Mega Top 100 '' ( in Dutch ) . dutchcharts . Retrieved 11 April 2010 . Jump up ^ `` '' Sacrifice `` , French Singles Chart '' ( in French )
+. lescharts . Retrieved 13 December 2007 . Jump up ^ German Singles Chart Charts-surfer.de Archived 8 January 2009 at the Wayback Machine . ( Retrieved 9
+September 2008 ) Jump up ^ `` Irish Single Chart , database '' . irishcharts . Retrieved 9 September 2008 . Jump up ^ `` '' Sacrifice '' New Zealand Singles
+Chart `` . charts.org.nz . Retrieved 11 April 2010 .
+</item 10>
+=== END ITEM id=6706df2581e382e8 ===
+
+=== ITEM id=8022fe41c7c401c4 ===
+Gold sentences and facts:
+Sentence 0: The 2017 -- 18 NBA season is the 72nd season of the National Basketball Association ( NBA ) . The regular season began on October 17 , 2017 , earlier than previous seasons to reduce the number of `` back - to - back '' games teams are scheduled to play , with the 2017 Eastern Conference champion ( and Finals runner -- up ) Cleveland Cavaliers hosting a game against the Boston Celtics at Quicken Loans Arena in Cleveland , Ohio Christmas games were played on December 25 , 2017 . The 2018 NBA All - Star Game was played on February 18 , 2018 , at the Staples Center in Los Angeles , California . LeBron James of the Cleveland Cavaliers was named the All - Star Game Most Valuable Player . The regular season ended on April 11 , 2018 and the playoffs began on April 14 , 2018 .
+  Fact 0.0: The 2017-18 NBA season is the 72nd season of the National Basketball Association (NBA).
+  Fact 0.1: The 2017-18 NBA regular season began on October 17, 2017.
+  Fact 0.2: The 2017-18 NBA regular season began earlier than previous seasons.
+  Fact 0.3: The earlier start of the 2017-18 season was meant to reduce the number of 'back-to-back' games teams are scheduled to play.
+  Fact 0.4: The 2017 Eastern Conference champion Cleveland Cavaliers, who were also Finals runner-up, hosted a game against the Boston Celtics at Quicken Loans Arena in Cleveland, Ohio.
+  Fact 0.5: Christmas games were played on December 25, 2017.
+  Fact 0.6: The 2018 NBA All-Star Game was played on February 18, 2018.
+  Fact 0.7: The 2018 NBA All-Star Game was played at the Staples Center in Los Angeles, California.
+  Fact 0.8: LeBron James of the Cleveland Cavaliers was named the All-Star Game Most Valuable Player.
+  Fact 0.9: The 2017-18 NBA regular season ended on April 11, 2018.
+  Fact 0.10: The 2017-18 NBA playoffs began on April 14, 2018.
+Sentence 1: 2017 -- 18 NBA season League National Basketball Association Sport Basketball Duration October 17 , 2017 -- April 11 , 2018 April 14 -- May 28 , 2018 ( Playoffs ) May 31 -- June 17 , 2018 ( Finals ) Number of games 82 Number of teams 30 TV partner ( s ) ABC , TNT , ESPN , NBA TV Draft Top draft pick Markelle Fultz Picked by Philadelphia 76ers Regular season Top seed Houston Rockets Top scorer James Harden ( Houston ) Playoffs Finals NBA seasons ← 2016 -- 17 2018 -- 19 →
+  Fact 1.0: The league of the 2017-18 NBA season is the National Basketball Association.
+  Fact 1.1: The sport of the 2017-18 NBA season is basketball.
+  Fact 1.2: The 2017-18 NBA regular season ran from October 17, 2017 to April 11, 2018.
+  Fact 1.3: The 2017-18 NBA playoffs ran from April 14 to May 28, 2018.
+  Fact 1.4: The 2017-18 NBA Finals ran from May 31 to June 17, 2018.
+  Fact 1.5: The 2017-18 NBA season had 82 games.
+  Fact 1.6: The 2017-18 NBA season had 30 teams.
+  Fact 1.7: ABC, TNT, ESPN and NBA TV were the TV partners of the 2017-18 NBA season.
+  Fact 1.8: Markelle Fultz was the top draft pick, picked by the Philadelphia 76ers.
+  Fact 1.9: The Houston Rockets were the top seed in the 2017-18 NBA regular season.
+  Fact 1.10: James Harden of the Houston Rockets was the top scorer of the 2017-18 NBA season.
+  Fact 1.11: The 2016-17 season is the season before the 2017-18 NBA season.
+  Fact 1.12: The 2018-19 season is the season after the 2017-18 NBA season.
+
+Retrieved items:
+<item 1>
+2017–18 NBA season
+-- 57 1957 -- 58 1958 -- 59 1960s 1959 -- 60 1960 -- 61 1961 -- 62 1962 -- 63 1963 -- 64 1964 -- 65 1965 -- 66 1966 -- 67 1967 -- 68 1968 -- 69 1970s 1969 -- 70
+1970 -- 71 1971 -- 72 1972 -- 73 1973 -- 74 1974 -- 75 1975 -- 76 1976 -- 77 1977 -- 78 1978 -- 79 1980s 1979 -- 80 1980 -- 81 1981 -- 82 1982 -- 83 1983 -- 84
+1984 -- 85 1985 -- 86 1986 -- 87 1987 -- 88 1988 -- 89 1990s 1989 -- 90 1990 -- 91 1991 -- 92 1992 -- 93 1993 -- 94 1994 -- 95
+</item 1>
+
+<item 2>
+2017–18 NBA season
+The regular season began on October 17 , 2017 , earlier than previous seasons to reduce the number of `` back - to - back '' games teams are scheduled to play ,
+with the 2017 Eastern Conference champion ( and Finals runner -- up ) Cleveland Cavaliers hosting a game against the Boston Celtics at Quicken Loans Arena in
+Cleveland , Ohio Christmas games were played on December 25 , 2017 . The 2018 NBA All - Star Game was played on February 18 , 2018 , at the Staples Center in
+Los Angeles , California . LeBron James of the Cleveland Cavaliers was named the All - Star Game Most Valuable Player . The regular season ended on April 11 ,
+2018 and the playoffs began on April 14 , 2018 . Contents ( hide ) 1 Transactions 1.1 Retirement 1.2 In - season trades 1.3 Free agency 1.4 Coaching changes
+1.4. 1 Off - season 1.4. 2 In - season 2 Preseason 2.1 International games 3 Regular season 3.1 By conference 3.1.
+</item 2>
+
+<item 3>
+2017–18 NBA season
+92 1992 -- 93 1993 -- 94 1994 -- 95 1995 -- 96 1996 -- 97 1997 -- 98 1998 -- 99 2000s 1999 -- 00 2000 -- 01 2001 -- 02 2002 -- 03 2003 -- 04 2004 -- 05 2005 --
+06 2006 -- 07 2007 -- 08 2008 -- 09 2010s 2009 -- 10 2010 -- 11 2011 -- 12 2012 -- 13 2013 -- 14 2014 -- 15 2015 -- 16 2016 -- 17 2017 -- 18 2018 -- 19 2017 --
+18 NBA season by team Draft Summer League All - Star Game Playoffs Finals Transactions G League Eastern Atlantic Boston Brooklyn New York Philadelphia Toronto
+Central Chicago Cleveland Detroit Indiana Milwaukee Southeast Atlanta Charlotte Miami Orlando Washington Western Northwest Denver Minnesota Oklahoma City
+Portland Utah Pacific Golden State L.A. Clippers L.A.
+</item 3>
+
+<item 4>
+2017–18 NBA season
+573 18.0 82 9 Denver Nuggets 46 36 . 561 19.0 82 10 Los Angeles Clippers 42 40 . 512 23.0 82 11 Los Angeles Lakers 35 47 . 427 30.0 82 12 Sacramento Kings 27 55
+. 329 38.0 82 13 Dallas Mavericks 24 58 . 293 41.0 82 14 Memphis Grizzlies 22 60 . 268 43.0 82 15 Phoenix Suns 21 61 . 256 44.0 82 Notes z -- Clinched home
+court advantage for the entire playoffs c -- Clinched home court advantage for the conference playoffs y -- Clinched division title x -- Clinched playoff spot *
+-- Division leader Tiebreakers ( edit ) Eastern Conference Miami clinched # 6 seed over Milwaukee based on head - to - head sweep ( 3 -- 0 ) .
+</item 4>
+
+<item 5>
+2017–18 NBA season
+2017 -- 18 NBA season - wikipedia 2017 -- 18 NBA season Jump to : navigation , search 2017 -- 18 NBA season League National Basketball Association Sport
+Basketball Duration October 17 , 2017 -- April 11 , 2018 April 14 -- May 28 , 2018 ( Playoffs ) May 31 -- June 17 , 2018 ( Finals ) Number of games 82 Number of
+teams 30 TV partner ( s ) ABC , TNT , ESPN , NBA TV Draft Top draft pick Markelle Fultz Picked by Philadelphia 76ers Regular season Top seed Houston Rockets Top
+scorer James Harden ( Houston ) Playoffs Finals NBA seasons ← 2016 -- 17 2018 -- 19 → The 2017 -- 18 NBA season is the 72nd season of the National Basketball
+Association ( NBA ) .
+</item 5>
+
+<item 6>
+2017–18 NBA season
+1 Tiebreakers 3.2 International games 4 Playoffs 4.1 Bracket 5 Statistics 5.1 Individual statistic leaders 5.2 Individual game highs 5.3 Team statistic leaders
+6 Awards 6.1 Players of the Week 6.2 Players of the Month 6.3 Rookies of the Month 6.4 Coaches of the Month 7 Arenas 8 Media 9 Uniforms 9.1 Uniform sponsorships
+10 Notable occurrences 11 See also 12 References 13 External links Transactions ( edit ) Main article : List of 2017 -- 18 NBA season transactions Retirement (
+edit ) On July 17 , 2017 , Paul Pierce signed a ceremonial contract with the Boston Celtics and officially retired as a Celtic after playing 19 seasons and
+winning one championship with the Celtics in 2008 . On July 19 , 2017 , James Jones was announced to be the vice president of basketball operations for the
+Phoenix Suns , which signified his retirement after playing 14 seasons and winning two championships with the Miami Heat in 2012 and 2013 and one championship
+with the Cleveland Cavaliers in 2016 .
+</item 6>
+
+<item 7>
+2017–18 NBA season
+The Celtics won the game 114 − 103 . Playoffs ( edit ) Main article : 2018 NBA Playoffs The 2018 NBA Playoffs began on Saturday , April 14 , 2018 , ESPN will
+air the 2018 Eastern Conference Finals and TNT will air the 2018 Western Conference Finals . The season will end with the 2018 NBA Finals which will begin on
+May 31 , 2018 on ABC . Bracket ( edit ) First Round Conference Semifinals Conference Finals NBA Finals E1 Toronto * E8 Washington E4 Cleveland * E5 Indiana
+Eastern Conference E3 Philadelphia E6 Miami * E3 Philadelphia 0 E2 Boston E7 Milwaukee W1 Houston * W8 Minnesota W1 Houston * 0 W4 Oklahoma City W5 Utah Western
+Conference W3 Portland * 0 W6 New Orleans W6 New Orleans 0 W2 Golden State * 0 W2 Golden State * W7 San Antonio * Division winner Bold Series winner Italic Team
+with home - court advantage This bracket : view talk edit Statistics ( edit ) Individual statistic leaders ( edit ) Category Player Team Statistic Points per
+game James Harden Houston Rockets 30.
+</item 7>
+
+<item 8>
+2017–18 NBA season
+Africa 2017 Playoffs List Finals Champions History Predecessors BAA NBL ABA Merger Criticisms and controversies 2007 Tim Donaghy betting scandal Lockouts
+Seasons Records regular season post-season All - Star Game Win - loss records Personalities Players Current rosters Foreign players Race and ethnicity First
+overall draft picks Highest paid Retired numbers Banned or suspended NBPA Head coaches Current Player - coaches Champions Foreign coaches NBCA Owners Referees
+Awards and honors Larry O'Brien Trophy NBA Awards NBA MVP Finals MVP All - Star Game MVP Hall of Fame Members NBA Silver Anniversary Team NBA 35th Anniversary
+Team 50 Greatest Players Others Arenas Business Collective bargaining agreement Salary cap NBA Store Culture Cheerleading Mascots Dress code G League Midwest
+Division Media TV NBA TV Rivalries Teams Defunct Expansion Relocated Timeline WNBA Basketball in the United States Category Portal 2017 -- 18 season Retrieved
+from `` https://en.wikipedia.org/w/index.
+</item 8>
+
+<item 9>
+2017–18 NBA season
+The regular season started eight days earlier than the previous season . This move by the NBA aims for fewer `` back - to - back '' games , even fewer than the
+previous season which had already reached an all - time low to help address teams that are `` resting '' their superstars . The NBA decreased the maximum number
+of timeouts in a regulation game from 18 to 14 . The three team timeouts during the last two minutes of the game were also decreased to two per team in the last
+three minutes to improve the flow and pace of the game . The trade deadline was moved from four days after the NBA All - Star Game to ten days before it , so
+teams can settle their rosters before the All - Star break . Free - throw shooters will be assessed a delay - of - game violation if they venture outside of the
+three - point line in between attempts . The NBA also added two - way contracted players , signifying an increasing partnership between the NBA and the newly
+branded NBA G League . Referees can now assess dangerous closeouts of defenders to jump shooters with little space to land for a technical or a flagrant foul .
+</item 9>
+
+<item 10>
+2017–18 NBA season
+Denver Minnesota Oklahoma City Portland Utah Pacific Golden State L.A. Clippers L.A. Lakers Phoenix Sacramento Southwest Dallas Houston Memphis New Orleans San
+Antonio National Basketball Association Eastern Conference Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central
+Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlotte Hornets Miami Heat Orlando Magic Washington
+Wizards Western Conference Northwest Denver Nuggets Minnesota Timberwolves Oklahoma City Thunder Portland Trail Blazers Utah Jazz Pacific Golden State Warriors
+Los Angeles Clippers Los Angeles Lakers Phoenix Suns Sacramento Kings Southwest Dallas Mavericks Houston Rockets Memphis Grizzlies New Orleans Pelicans San
+Antonio Spurs Annual events Draft Eligibility Summer League Christmas Day All - Star Weekend Game Global Games Africa 2015 ,
+</item 10>
+=== END ITEM id=8022fe41c7c401c4 ===
+
+=== ITEM id=66f6f73cc66de405 ===
+Gold sentences and facts:
+Sentence 0: The 2017 -- 18 NBA season is the 72nd season of the National Basketball Association ( NBA ) . The regular season began on October 17 , 2017 , earlier than previous seasons to reduce the number of `` back - to - back '' games teams are scheduled to play , with the 2017 Eastern Conference champion ( and Finals runner -- up ) Cleveland Cavaliers hosting a game against the Boston Celtics at Quicken Loans Arena in Cleveland , Ohio Christmas games were played on December 25 , 2017 . The 2018 NBA All - Star Game was played on February 18 , 2018 , at the Staples Center in Los Angeles , California . LeBron James of the Cleveland Cavaliers was named the All - Star Game Most Valuable Player . The regular season ended on April 11 , 2018 and the playoffs began on April 14 , 2018 .
+  Fact 0.0: The 2017-18 NBA season is the 72nd season of the National Basketball Association (NBA).
+  Fact 0.1: The 2017-18 NBA regular season began on October 17, 2017.
+  Fact 0.2: The 2017-18 NBA regular season began earlier than previous seasons.
+  Fact 0.3: The earlier start of the 2017-18 season was meant to reduce the number of 'back-to-back' games teams are scheduled to play.
+  Fact 0.4: The 2017 Eastern Conference champion Cleveland Cavaliers, who were also Finals runner-up, hosted a game against the Boston Celtics at Quicken Loans Arena in Cleveland, Ohio.
+  Fact 0.5: Christmas games were played on December 25, 2017.
+  Fact 0.6: The 2018 NBA All-Star Game was played on February 18, 2018.
+  Fact 0.7: The 2018 NBA All-Star Game was played at the Staples Center in Los Angeles, California.
+  Fact 0.8: LeBron James of the Cleveland Cavaliers was named the All-Star Game Most Valuable Player.
+  Fact 0.9: The 2017-18 NBA regular season ended on April 11, 2018.
+  Fact 0.10: The 2017-18 NBA playoffs began on April 14, 2018.
+Sentence 1: 2017 -- 18 NBA season League National Basketball Association Sport Basketball Duration October 17 , 2017 -- April 11 , 2018 April 14 -- May 28 , 2018 ( Playoffs ) May 31 -- June 17 , 2018 ( Finals ) Number of games 82 Number of teams 30 TV partner ( s ) ABC , TNT , ESPN , NBA TV Draft Top draft pick Markelle Fultz Picked by Philadelphia 76ers Regular season Top seed Houston Rockets Top scorer James Harden ( Houston ) Playoffs Finals NBA seasons ← 2016 -- 17 2018 -- 19 →
+  Fact 1.0: The league of the 2017-18 NBA season is the National Basketball Association.
+  Fact 1.1: The sport of the 2017-18 NBA season is basketball.
+  Fact 1.2: The 2017-18 NBA regular season ran from October 17, 2017 to April 11, 2018.
+  Fact 1.3: The 2017-18 NBA playoffs ran from April 14 to May 28, 2018.
+  Fact 1.4: The 2017-18 NBA Finals ran from May 31 to June 17, 2018.
+  Fact 1.5: The 2017-18 NBA season had 82 games.
+  Fact 1.6: The 2017-18 NBA season had 30 teams.
+  Fact 1.7: ABC, TNT, ESPN and NBA TV were the TV partners of the 2017-18 NBA season.
+  Fact 1.8: Markelle Fultz was the top draft pick, picked by the Philadelphia 76ers.
+  Fact 1.9: The Houston Rockets were the top seed in the 2017-18 NBA regular season.
+  Fact 1.10: James Harden of the Houston Rockets was the top scorer of the 2017-18 NBA season.
+  Fact 1.11: The 2016-17 season is the season before the 2017-18 NBA season.
+  Fact 1.12: The 2018-19 season is the season after the 2017-18 NBA season.
+
+Retrieved items:
+<item 1>
+2017–18 NBA season
+2017 -- 18 NBA season - wikipedia 2017 -- 18 NBA season Jump to : navigation , search 2017 -- 18 NBA season League National Basketball Association Sport
+Basketball Duration October 17 , 2017 -- April 11 , 2018 April 14 -- May 28 , 2018 ( Playoffs ) May 31 -- June 17 , 2018 ( Finals ) Number of games 82 Number of
+teams 30 TV partner ( s ) ABC , TNT , ESPN , NBA TV Draft Top draft pick Markelle Fultz Picked by Philadelphia 76ers Regular season Top seed Houston Rockets Top
+scorer James Harden ( Houston ) Playoffs Finals NBA seasons ← 2016 -- 17 2018 -- 19 → The 2017 -- 18 NBA season is the 72nd season of the National Basketball
+Association ( NBA ) .
+</item 1>
+
+<item 2>
+2017–18 NBA season
+1 Tiebreakers 3.2 International games 4 Playoffs 4.1 Bracket 5 Statistics 5.1 Individual statistic leaders 5.2 Individual game highs 5.3 Team statistic leaders
+6 Awards 6.1 Players of the Week 6.2 Players of the Month 6.3 Rookies of the Month 6.4 Coaches of the Month 7 Arenas 8 Media 9 Uniforms 9.1 Uniform sponsorships
+10 Notable occurrences 11 See also 12 References 13 External links Transactions ( edit ) Main article : List of 2017 -- 18 NBA season transactions Retirement (
+edit ) On July 17 , 2017 , Paul Pierce signed a ceremonial contract with the Boston Celtics and officially retired as a Celtic after playing 19 seasons and
+winning one championship with the Celtics in 2008 . On July 19 , 2017 , James Jones was announced to be the vice president of basketball operations for the
+Phoenix Suns , which signified his retirement after playing 14 seasons and winning two championships with the Miami Heat in 2012 and 2013 and one championship
+with the Cleveland Cavaliers in 2016 .
+</item 2>
+
+<item 3>
+2017–18 NBA season
+NBA.com . Turner Sports Interactive , Inc . February 13 , 2016 . Retrieved June 21 , 2017 . Jump up ^ `` A first look at the NBA 's refreshed logo '' . NBA.com.
+6 July 2017 . Retrieved 12 July 2017 . Jump up ^ Feldman , Dan . `` NBA moves up trade deadline , reduces timeouts '' . sports.yahoo.com . Yahoo ! Sports .
+Retrieved 12 July 2017 . Jump up ^ Ward - Henninger , Colin . `` NBA moves trade deadline to before All - Star Game , reduces amount of timeouts '' .
+CBSSports.com . CBS Sports . Retrieved 12 July 2017 . Jump up ^ Brown , Maury . `` NBA Makes Sweeping Pace - Of - Play Changes ; MLB Likely Next '' . Forbes.com
+. Forbes . Retrieved 12 July 2017 . Jump up ^ Dauster , Rob ( April 27 , 2017 ) . `` D - League salaries , two - way contracts increase NBA Draft early entries
+'' .
+</item 3>
+
+<item 4>
+2017–18 NBA season
+573 18.0 82 9 Denver Nuggets 46 36 . 561 19.0 82 10 Los Angeles Clippers 42 40 . 512 23.0 82 11 Los Angeles Lakers 35 47 . 427 30.0 82 12 Sacramento Kings 27 55
+. 329 38.0 82 13 Dallas Mavericks 24 58 . 293 41.0 82 14 Memphis Grizzlies 22 60 . 268 43.0 82 15 Phoenix Suns 21 61 . 256 44.0 82 Notes z -- Clinched home
+court advantage for the entire playoffs c -- Clinched home court advantage for the conference playoffs y -- Clinched division title x -- Clinched playoff spot *
+-- Division leader Tiebreakers ( edit ) Eastern Conference Miami clinched # 6 seed over Milwaukee based on head - to - head sweep ( 3 -- 0 ) .
+</item 4>
+
+<item 5>
+2017–18 NBA season
+Media ( edit ) This is the second season of the current nine - year contracts with ABC , ESPN , TNT , and NBA TV . The Chicago Bulls experienced a mid-season
+change in their broadcast partner due to the Cumulus Media Chapter 11 bankruptcy filing nulling and voiding many broadcasting agreements . The team 's games
+moved from Cumulus 's WLS to Entercom 's WSCR on February 3 , 2018 . Uniforms ( edit ) Nike is the official on - court apparel provider beginning with the 2017
+-- 18 season . During this time , each team will be provided with four different jersey apparel that will be displayed throughout the seasons : the ``
+Association Edition '' , `` Icon Edition '' , `` Statement Edition '' ( tentatively called the `` Athlete 's Mindset Edition '' ) , and `` City Edition '' (
+tentatively called the `` Community Edition '' ) jerseys will replace the more typical home and road jersey ideas with alternatives also being included every
+now and then as well . In addition to those jerseys , eight teams will also be provided a `` Classic Edition '' jersey to commemorate some of their past designs
+throughout the season .
+</item 5>
+
+<item 6>
+2017–18 NBA season
+The regular season started eight days earlier than the previous season . This move by the NBA aims for fewer `` back - to - back '' games , even fewer than the
+previous season which had already reached an all - time low to help address teams that are `` resting '' their superstars . The NBA decreased the maximum number
+of timeouts in a regulation game from 18 to 14 . The three team timeouts during the last two minutes of the game were also decreased to two per team in the last
+three minutes to improve the flow and pace of the game . The trade deadline was moved from four days after the NBA All - Star Game to ten days before it , so
+teams can settle their rosters before the All - Star break . Free - throw shooters will be assessed a delay - of - game violation if they venture outside of the
+three - point line in between attempts . The NBA also added two - way contracted players , signifying an increasing partnership between the NBA and the newly
+branded NBA G League . Referees can now assess dangerous closeouts of defenders to jump shooters with little space to land for a technical or a flagrant foul .
+</item 6>
+
+<item 7>
+Game seven
+NBA.com . Retrieved 2012 - 05 - 25 . Jump up ^ `` Minneapolis Makes One Last Title Run '' . NBA.com . Retrieved 2012 - 05 - 25 . Jump up ^ `` Nats Win First
+Title of Shot - Clock Era '' . NBA.com . Retrieved 2012 - 05 - 25 . Jump up ^ `` Celtics Officially Launch Their Dynasty '' . NBA.com . Retrieved 2012 - 05 - 25
+. Jump up ^ `` Hawks Force Game 7 , But Celtics Repeat '' . NBA.com . Retrieved 2012 - 05 - 25 . Jump up ^ `` Celtics , Lakers Work OT to Start Rivalry '' .
+NBA.com . Retrieved 2012 - 05 - 25 . Jump up ^ `` Red Lights Cigar to Close Coaching Career '' . NBA.com . Retrieved 2012 - 05 - 25 . Jump up ^ `` West 's
+Heroics Ca n't Deprive Russell of 11th Title '' . NBA.com .
+</item 7>
+
+<item 8>
+2017–18 NBA season
+Africa 2017 Playoffs List Finals Champions History Predecessors BAA NBL ABA Merger Criticisms and controversies 2007 Tim Donaghy betting scandal Lockouts
+Seasons Records regular season post-season All - Star Game Win - loss records Personalities Players Current rosters Foreign players Race and ethnicity First
+overall draft picks Highest paid Retired numbers Banned or suspended NBPA Head coaches Current Player - coaches Champions Foreign coaches NBCA Owners Referees
+Awards and honors Larry O'Brien Trophy NBA Awards NBA MVP Finals MVP All - Star Game MVP Hall of Fame Members NBA Silver Anniversary Team NBA 35th Anniversary
+Team 50 Greatest Players Others Arenas Business Collective bargaining agreement Salary cap NBA Store Culture Cheerleading Mascots Dress code G League Midwest
+Division Media TV NBA TV Rivalries Teams Defunct Expansion Relocated Timeline WNBA Basketball in the United States Category Portal 2017 -- 18 season Retrieved
+from `` https://en.wikipedia.org/w/index.
+</item 8>
+
+<item 9>
+2017–18 NBA season
+92 1992 -- 93 1993 -- 94 1994 -- 95 1995 -- 96 1996 -- 97 1997 -- 98 1998 -- 99 2000s 1999 -- 00 2000 -- 01 2001 -- 02 2002 -- 03 2003 -- 04 2004 -- 05 2005 --
+06 2006 -- 07 2007 -- 08 2008 -- 09 2010s 2009 -- 10 2010 -- 11 2011 -- 12 2012 -- 13 2013 -- 14 2014 -- 15 2015 -- 16 2016 -- 17 2017 -- 18 2018 -- 19 2017 --
+18 NBA season by team Draft Summer League All - Star Game Playoffs Finals Transactions G League Eastern Atlantic Boston Brooklyn New York Philadelphia Toronto
+Central Chicago Cleveland Detroit Indiana Milwaukee Southeast Atlanta Charlotte Miami Orlando Washington Western Northwest Denver Minnesota Oklahoma City
+Portland Utah Pacific Golden State L.A. Clippers L.A.
+</item 9>
+
+<item 10>
+2017–18 NBA season
+The regular season began on October 17 , 2017 , earlier than previous seasons to reduce the number of `` back - to - back '' games teams are scheduled to play ,
+with the 2017 Eastern Conference champion ( and Finals runner -- up ) Cleveland Cavaliers hosting a game against the Boston Celtics at Quicken Loans Arena in
+Cleveland , Ohio Christmas games were played on December 25 , 2017 . The 2018 NBA All - Star Game was played on February 18 , 2018 , at the Staples Center in
+Los Angeles , California . LeBron James of the Cleveland Cavaliers was named the All - Star Game Most Valuable Player . The regular season ended on April 11 ,
+2018 and the playoffs began on April 14 , 2018 . Contents ( hide ) 1 Transactions 1.1 Retirement 1.2 In - season trades 1.3 Free agency 1.4 Coaching changes
+1.4. 1 Off - season 1.4. 2 In - season 2 Preseason 2.1 International games 3 Regular season 3.1 By conference 3.1.
+</item 10>
+=== END ITEM id=66f6f73cc66de405 ===
+
+=== ITEM id=ee71e6cd23fb059b ===
+Gold sentences and facts:
+Sentence 0: DJ Lance Rock -- ( Portrayed by Lance Robertson U.S. , voice dubbed by Ortis Deley in the UK ) A DJ who is the narrator and friend of the other characters and the series ' host . Muno -- ( Voiced by Adam Deibert U.S. , Bob Golding UK ) A friendly red cyclops boy . He 's the tallest , is somewhat clumsy and has a close bond with Foofa ( though she also bonds with Brobee in the same way ) . He is also the band 's guitarist . In the episodes `` Family '' , `` Circus '' , and `` Baby '' , his family makes an appearance . During Super Bowl XLIV , he appeared in a commercial for the Kia Sorento . His realm resembles the moon , another planet , or a desert and he has a pet horse . He has three stomachs as seen in the X-ray in the Season 1 episode `` Halloween '' ( # 13 ) . However another X-ray in the Season 1 episode `` Imagine '' ( # 20 ) shows him with one stomach , a normal heart and lungs . His catchphrase is `` Razzle Dazzle '' . Foofa -- ( Voiced by Emma Jacobs - Briggs U.S. , Teresa Gallagher UK ) A female flower bubble character who 's `` pink and happy . '' She likes flowers , rainbows and unicorns . Her instrument is the tambourine . Her realm is a spring or summer meadow . Brobee -- ( Voiced by Amos Watene U.S. , Simon Feilder UK ) A small , green monster boy and the baby of the gabbas . He is the drummer for the Gabba band . He is the one of the characters whose facial expression changes depending on the situation ; his normal face turning into a frown , and vice versa . He is often subjected to trying new foods . His realm is a vast autumn forest . It is mentioned that he is four years old . Toodee -- ( Voiced by Erin Pearce U.S. , Jonell Elliot UK ) A blue arctic female cat - dragon who loves to have fun . She has a close bond with Plex and is the bassist for the Gabba band . She resides in a winter arctic realm , with icicles . Plex -- ( Voiced by Christian Jacobs U.S. , Simon Feilder UK ) A magic yellow robot boy and the oldest of the gabbas and he is Toodee 's love instest . He is portrayed as being smart and as the leader of Gabba Land . Plex usually teaches lessons to his friends and is a father figure to the gang . He can also use his special ray to bring things into existence . His instrument is the keytar . He has no realm in particular , though he seems to have a `` docking station '' between Foofa and Brobee 's realms . In `` Gabbaland Begins '' , Plex is the last in DJ Lance 's original creations after he goes through Muno , Foofa , Brobee , and Toodee , although , Brobee is supposedly a four - year - old in the series . Gooble - ( Voiced by Joel Fox U.S. ) A ghost who is always so sad and crying . He resides in a haunted house located in a non-gabba land - place named `` Gooble Land '' .
+  Fact 0.0: DJ Lance Rock is portrayed by Lance Robertson in the U.S.
+  Fact 0.1: DJ Lance Rock's voice is dubbed by Ortis Deley in the UK.
+  Fact 0.2: DJ Lance Rock is a DJ.
+  Fact 0.3: DJ Lance Rock is the narrator of the series.
+  Fact 0.4: DJ Lance Rock is a friend of the other characters.
+  Fact 0.5: DJ Lance Rock is the host of the series.
+  Fact 0.6: Muno is voiced by Adam Deibert in the U.S.
+  Fact 0.7: Muno is voiced by Bob Golding in the UK.
+  Fact 0.8: Muno is a friendly red cyclops boy.
+  Fact 0.9: Muno is the tallest.
+  Fact 0.10: Muno is somewhat clumsy.
+  Fact 0.11: Muno has a close bond with Foofa.
+  Fact 0.12: Foofa also bonds with Brobee in the same way.
+  Fact 0.13: Muno is also the band's guitarist.
+  Fact 0.14: Muno's family makes an appearance in the episodes 'Family', 'Circus', and 'Baby'.
+  Fact 0.15: Muno appeared in a commercial for the Kia Sorento during Super Bowl XLIV.
+  Fact 0.16: Muno's realm resembles the moon, another planet, or a desert.
+  Fact 0.17: Muno has a pet horse.
+  Fact 0.18: Muno has three stomachs as seen in the X-ray in the Season 1 episode 'Halloween' (#13).
+  Fact 0.19: Another X-ray in the Season 1 episode 'Imagine' (#20) shows Muno with one stomach.
+  Fact 0.20: Another X-ray in the Season 1 episode 'Imagine' (#20) shows Muno with a normal heart.
+  Fact 0.21: Another X-ray in the Season 1 episode 'Imagine' (#20) shows Muno with normal lungs.
+  Fact 0.22: Muno's catchphrase is 'Razzle Dazzle'.
+  Fact 0.23: Foofa is voiced by Emma Jacobs-Briggs in the U.S.
+  Fact 0.24: Foofa is voiced by Teresa Gallagher in the UK.
+  Fact 0.25: Foofa is a female flower bubble character.
+  Fact 0.26: Foofa is pink and happy.
+  Fact 0.27: Foofa likes flowers, rainbows and unicorns.
+  Fact 0.28: Foofa's instrument is the tambourine.
+  Fact 0.29: Foofa's realm is a spring or summer meadow.
+  Fact 0.30: Brobee is voiced by Amos Watene in the U.S.
+  Fact 0.31: Brobee is voiced by Simon Feilder in the UK.
+  Fact 0.32: Brobee is a small, green monster boy.
+  Fact 0.33: Brobee is the baby of the gabbas.
+  Fact 0.34: Brobee is the drummer for the Gabba band.
+  Fact 0.35: Brobee is one of the characters whose facial expression changes depending on the situation.
+  Fact 0.36: Brobee's normal face turns into a frown, and vice versa.
+  Fact 0.37: Brobee is often subjected to trying new foods.
+  Fact 0.38: Brobee's realm is a vast autumn forest.
+  Fact 0.39: It is mentioned that Brobee is four years old.
+  Fact 0.40: Toodee is voiced by Erin Pearce in the U.S.
+  Fact 0.41: Toodee is voiced by Jonell Elliot in the UK.
+  Fact 0.42: Toodee is a blue arctic female cat-dragon.
+  Fact 0.43: Toodee loves to have fun.
+  Fact 0.44: Toodee has a close bond with Plex.
+  Fact 0.45: Toodee is the bassist for the Gabba band.
+  Fact 0.46: Toodee resides in a winter arctic realm with icicles.
+  Fact 0.47: Plex is voiced by Christian Jacobs in the U.S.
+  Fact 0.48: Plex is voiced by Simon Feilder in the UK.
+  Fact 0.49: Plex is a magic yellow robot boy.
+  Fact 0.50: Plex is the oldest of the gabbas.
+  Fact 0.51: Plex is Toodee's love interest.
+  Fact 0.52: Plex is portrayed as smart.
+  Fact 0.53: Plex is portrayed as the leader of Gabba Land.
+  Fact 0.54: Plex usually teaches lessons to his friends.
+  Fact 0.55: Plex is a father figure to the gang.
+  Fact 0.56: Plex can use his special ray to bring things into existence.
+  Fact 0.57: Plex's instrument is the keytar.
+  Fact 0.58: Plex has no realm in particular.
+  Fact 0.59: Plex seems to have a 'docking station' between Foofa's and Brobee's realms.
+  Fact 0.60: In 'Gabbaland Begins', Plex is the last of DJ Lance's original creations.
+  Fact 0.61: In 'Gabbaland Begins', Plex comes after Muno, Foofa, Brobee, and Toodee in DJ Lance's original creations.
+  Fact 0.62: Brobee is supposedly a four-year-old in the series.
+  Fact 0.63: Gooble is voiced by Joel Fox in the U.S.
+  Fact 0.64: Gooble is a ghost.
+  Fact 0.65: Gooble is always so sad and crying.
+  Fact 0.66: Gooble resides in a haunted house.
+  Fact 0.67: The haunted house is located in a non-Gabba land place named 'Gooble Land'.
+Sentence 1: Hosted by a character named DJ Lance Rock , the series featured a mix of live - action segments featuring cartoonish costumed characters -- Muno ( the red cyclops ) , Foofa ( the pink flower bubble ) , Brobee ( a little hairy green monster ) , Toodee ( the blue cat - dragon ) and Plex ( the magic yellow robot ) -- and many short animated sketches and musical numbers .
+  Fact 1.0: The series was hosted by a character named DJ Lance Rock.
+  Fact 1.1: The series featured a mix of live-action segments.
+  Fact 1.2: The live-action segments featured cartoonish costumed characters.
+  Fact 1.3: The series featured many short animated sketches.
+  Fact 1.4: The series featured many musical numbers.
+  Fact 1.5: Muno is the red cyclops.
+  Fact 1.6: Foofa is the pink flower bubble.
+  Fact 1.7: Brobee is a little hairy green monster.
+  Fact 1.8: Toodee is the blue cat-dragon.
+  Fact 1.9: Plex is the magic yellow robot.
+
+Retrieved items:
+<item 1>
+Yo Gabba Gabba!
+is an American live action / puppet educational children 's television show starring five costumed toys come to life and their friend DJ Lance Rock . The series
+premiered on Nick Jr . August 20 , 2007 and ended on November 12 , 2015 . There is a single topic in each episode , e.g. `` Adventure '' , `` Friends '' , and
+`` Dance '' , through songs and short storylines in the half - hour program . Additionally , the show teaches children life and social skills , such as sharing
+and trying new foods . It also encourages viewers to move along with and dance with the characters in the program . The show is noted for its indie - culture
+guest stars and bands , and for drawing visual inspiration from 8 - bit video games and H.R. Pufnstuf , among other television shows . Created by Christian
+Jacobs ( lead singer of the Aquabats ) and Scott Schultz , the show is written to appeal to children and their parents . The television program has spawned a
+touring live stage show , various toys and branded clothing . Trademarks relating to Yo Gabba Gabba !
+</item 1>
+
+<item 2>
+Yo Gabba Gabba!
+Other small segments include `` Mark 's Magic Pictures '' and `` Biz 's Beat of the Day '' . Near the end of each episode , DJ Lance and the gabbas do a mix -
+like song about what had occurred during the main segments . After it is finished , DJ Lance shouts `` YOOOO Gabba Gabba ! '' once again , and then Brobee ,
+Muno , Toodee , Foofa , and Plex turn back into toys . One - by - one , DJ Lance puts them back in the radio , closes the radio , and then walks off carrying it
+. The credits then roll . The stars ( edit ) DJ Lance Rock -- ( Portrayed by Lance Robertson U.S. , voice dubbed by Ortis Deley in the UK ) A DJ who is the
+narrator and friend of the other characters and the series ' host . Muno -- ( Voiced by Adam Deibert U.S. , Bob Golding UK ) A friendly red cyclops boy . He 's
+the tallest , is somewhat clumsy and has a close bond with Foofa ( though she also bonds with Brobee in the same way ) .
+</item 2>
+
+<item 3>
+Yo Gabba Gabba!
+Yo Gabba Gabba ! - Wikipedia Yo Gabba Gabba ! Jump to : navigation , search Yo Gabba Gabba ! Yo Gabba Gabba ! title card Genre Educational Created by Christian
+Jacobs Scott Schultz Developed by Kay Wilson Stallings Directed by Christian Jacobs Scott Schultz Matt Fackrell Matt Chapman Presented by Lance Robertson Voices
+of Adam Delbert Christian Jacobs Amos `` Mossi '' Watene Erin Pearce Emma Jacobs - Briggs Country of origin United States Original language ( s ) English No. of
+seasons No. of episodes 66 ( list of episodes ) Production Executive producer ( s ) Michael Polis Jon Berrett Producer ( s ) Justin Lyon Ritamarie Peruggi
+Running time 25 minutes Production company ( s ) The Magic Store W ! ldbrain Entertainment Nickelodeon Productions Distributor DHX Media Release Original
+network Nickelodeon Nick Jr . Original release August 20 , 2007 ( 2007 - 08 - 20 ) -- November 12 , 2015 ( 2015 - 11 - 12 ) External links Website Yo Gabba
+Gabba !
+</item 3>
+
+<item 4>
+Yo Gabba Gabba!
+The toy models of the characters that appeared at the beginning and end of each show were made by Kidrobot . History ( edit ) Yo Gabba Gabba ! was developed by
+two Southern California fathers , Christian Jacobs and Scott Schultz , who first started working together as teenagers , producing and directing skateboarding
+videos . Their goal was to design a kids ' show that was entertaining while featuring real artists and real performers . Both had no previous experience writing
+for television , let alone children 's broadcasting or education . In developing the show they took inspiration from a number of sources including Sesame Street
+, The Electric Company , Pee - wee 's Playhouse , as well as Sid and Marty Krofft puppet shows Banana Splits and H.R. Pufnstuf . In 1999 , after becoming
+parents , Jacobs and Schultz started playing around with ideas for children 's television and produced a pilot independently financed by small loans from
+friends and family . Yo Gabba Gabba ! did not get much attention until it started circulating on the Internet .
+</item 4>
+
+<item 5>
+Yo Gabba Gabba!
+He is the drummer for the Gabba band . He is the one of the characters whose facial expression changes depending on the situation ; his normal face turning into
+a frown , and vice versa . He is often subjected to trying new foods . His realm is a vast autumn forest . It is mentioned that he is four years old . Toodee --
+( Voiced by Erin Pearce U.S. , Jonell Elliot UK ) A blue arctic female cat - dragon who loves to have fun . She has a close bond with Plex and is the bassist
+for the Gabba band . She resides in a winter arctic realm , with icicles . Plex -- ( Voiced by Christian Jacobs U.S. , Simon Feilder UK ) A magic yellow robot
+boy and the oldest of the gabbas and he is Toodee 's love instest . He is portrayed as being smart and as the leader of Gabba Land . Plex usually teaches
+lessons to his friends and is a father figure to the gang . He can also use his special ray to bring things into existence . His instrument is the keytar .
+</item 5>
+
+<item 6>
+Yo Gabba Gabba!
+Episode structure ( edit ) All episodes follow a similar format . In the opening scene , DJ Lance Rock is shown walking on a plain white background while
+holding a gray radio with colorful buttons . He then gets to a table scenery that involves four different colored lands and a gray cloth underneath it . He then
+places down the radio , and then he shouts `` YOOOO Gabba Gabba ! '' and opens the radio , and inside it are 5 toy figures : Toodee , Muno , Foofa , Plex , and
+Brobee . He places down the figures one - by - one , and then they become alive . The episode features four main segments ( it was shortened to three after the
+first season ) that are connected to each other as a plot . They involve DJ Lance and the gabbas doing an activity . After each main segment , a short clip is
+shown that shows a kid dancing around . The kid says his or her name , followed by `` I like to dance ! '' . Between the main segments , there is another
+segment called `` The Super Music Friends Show '' , which features a performance by a band about the episode 's topic .
+</item 6>
+
+<item 7>
+Yo Gabba Gabba!
+Trademarks relating to Yo Gabba Gabba ! and its characters are held by GabbaCaDabra , LLC. in partnership with The Magic Store and WildBrain . Contents ( hide )
+1 Overview 2 History 3 Production 4 Episode structure 5 The Stars 6 Regular segments 7 Episodes 8 Video releases 9 Soundtrack releases 10 Stage shows 11 Mobile
+streaming 12 Critical reception 13 In other media 14 References 15 External links Overview ( edit ) Hosted by a character named DJ Lance Rock , the series
+featured a mix of live - action segments featuring cartoonish costumed characters -- Muno ( the red cyclops ) , Foofa ( the pink flower bubble ) , Brobee ( a
+little hairy green monster ) , Toodee ( the blue cat - dragon ) and Plex ( the magic yellow robot ) -- and many short animated sketches and musical numbers .
+</item 7>
+
+<item 8>
+Yo Gabba Gabba!
+Music is ... Awesome ! ( 2009 ) Music is ... Awesome ! Volume 2 ( 2010 ) Music is ... Awesome ! Volume 3 ( 2011 ) Music is ... Awesome ! Volume 4 ( 2012 ) Hey !
+( 2017 ) Fantastic Voyages ( 2017 ) ABC for Kids released a CD in 2010 titled Yo Gabba Gabba ! Party In My Tummy . Stage shows ( edit ) The world premiere live
+concert tour of Yo Gabba Gabba ! took place in Australia in May 2009 . DJ Lance Rock , Muno , Foofa , Brobee , Toodee and Plex performed in Wollongong ,
+Melbourne , Brisbane and Sydney with an indie house - band and secret special guests at each show . Additional tours in the United States and other countries
+have been performed throughout 2013 . Shows have been toured including three presented by Kia Motors and a special Christmas one presented by Citi , Just Dance
+Kids & Toys for Tots . `` Yo Gabba Gabba ! LIVE ! : There 's a Party in My City ! ''
+</item 8>
+
+<item 9>
+Yo Gabba Gabba!
+His instrument is the keytar . He has no realm in particular , though he seems to have a `` docking station '' between Foofa and Brobee 's realms . In ``
+Gabbaland Begins '' , Plex is the last in DJ Lance 's original creations after he goes through Muno , Foofa , Brobee , and Toodee , although , Brobee is
+supposedly a four - year - old in the series . Gooble - ( Voiced by Joel Fox U.S. ) A ghost who is always so sad and crying . He resides in a haunted house
+located in a non-gabba land - place named `` Gooble Land '' . Regular segments ( edit ) Jingles , each episode has animated music videos featuring music by a
+guest musician and animation by guest artists , designers , and animators . They often happen after the first segment in an episode . ( One episode does not
+have the segment . ) Mark 's Magic Pictures , featuring Mark Mothersbaugh , drawing simple pictures that often come alive at the end of the segment . Biz 's
+Beat of the Day , starring Biz Markie , demonstrating new beatboxing beats .
+</item 9>
+
+<item 10>
+Yo Gabba Gabba!
+He is also the band 's guitarist . In the episodes `` Family '' , `` Circus '' , and `` Baby '' , his family makes an appearance . During Super Bowl XLIV , he
+appeared in a commercial for the Kia Sorento . His realm resembles the moon , another planet , or a desert and he has a pet horse . He has three stomachs as
+seen in the X-ray in the Season 1 episode `` Halloween '' ( # 13 ) . However another X-ray in the Season 1 episode `` Imagine '' ( # 20 ) shows him with one
+stomach , a normal heart and lungs . His catchphrase is `` Razzle Dazzle '' . Foofa -- ( Voiced by Emma Jacobs - Briggs U.S. , Teresa Gallagher UK ) A female
+flower bubble character who 's `` pink and happy . '' She likes flowers , rainbows and unicorns . Her instrument is the tambourine . Her realm is a spring or
+summer meadow . Brobee -- ( Voiced by Amos Watene U.S. , Simon Feilder UK ) A small , green monster boy and the baby of the gabbas .
+</item 10>
+=== END ITEM id=ee71e6cd23fb059b ===
+
+=== ITEM id=663cd3a246d73041 ===
+Gold sentences and facts:
+Sentence 0: The trade winds are the prevailing pattern of easterly surface winds found in the tropics , within the lower portion of the Earth 's atmosphere , in the lower section of the troposphere near the Earth 's equator . The trade winds blow predominantly from the northeast in the Northern Hemisphere and from the southeast in the Southern Hemisphere , strengthening during the winter and when the Arctic oscillation is in its warm phase . Trade winds have been used by captains of sailing ships to cross the world 's oceans for centuries , and enabled European empire expansion into the Americas and trade routes to become established across the Atlantic and Pacific oceans .
+  Fact 0.0: Trade winds are the prevailing pattern of easterly surface winds found in the tropics.
+  Fact 0.1: Trade winds are found within the lower portion of the Earth's atmosphere.
+  Fact 0.2: Trade winds are found in the lower section of the troposphere near the Earth's equator.
+  Fact 0.3: Trade winds blow predominantly from the northeast in the Northern Hemisphere.
+  Fact 0.4: Trade winds blow predominantly from the southeast in the Southern Hemisphere.
+  Fact 0.5: Trade winds strengthen during the winter.
+  Fact 0.6: Trade winds strengthen when the Arctic oscillation is in its warm phase.
+  Fact 0.7: Trade winds have been used by captains of sailing ships to cross the world's oceans for centuries.
+  Fact 0.8: Trade winds enabled European empire expansion into the Americas.
+  Fact 0.9: Trade winds enabled trade routes to become established across the Atlantic and Pacific oceans.
+
+Retrieved items:
+<item 1>
+Trade winds
+Shallow cumulus clouds are seen within trade wind regimes , and are capped from becoming taller by a trade wind inversion , which is caused by descending air
+aloft from within the subtropical ridge . The weaker the trade winds become , the more rainfall can be expected in the neighboring landmasses . Contents ( hide
+) 1 History 2 Cause 3 Weather effects 4 See also 5 References History ( edit ) A Spanish galleon See also : Age of Discovery , Volta do Mar , and Age of sail
+The term trade winds originally derives from the early fourteenth century late Middle English word ' trade , ' meaning `` path '' or `` track . '' The
+Portuguese recognized the importance of the trade winds ( then the Volta do mar , meaning in Portuguese `` turn of the sea '' but also `` return from the sea ''
+) in navigation in both the north and south Atlantic ocean as early as the 15th century . From West Africa , the Portuguese had to sail away from continental
+Portugal , that is , to west and northwest . They could then turn northeast , to the area around the Azores islands , and finally east to mainland Europe .
+</item 1>
+
+<item 2>
+Trade winds
+See also ( edit ) Intertropical Convergence Zone Winds in the Age of Sail Westerly wind burst Volta do mar References ( edit ) Jump up ^ Carol G. Braham ; Enid
+Pearsons ; Deborah M. Posner ; Georgia S. Maas & Richard Goodman ( 2001 ) . Random House Webster 's College Dictionary ( second ed . ) . Random House . p. 1385
+. ISBN 0 - 375 - 42560 - 8 . Jump up ^ Hermann R. Muelder ( 2007 ) . Years of This Land - A Geographical History of the United States . Read Books . p. 38 .
+ISBN 978 - 1 - 4067 - 7740 - 6 . Retrieved 2009 - 11 - 09 . ^ Jump up to : Derek Hayes ( 2001 ) . Historical atlas of the North Pacific Ocean : maps of
+discovery and scientific exploration , 1500 - 2000 . Douglas & McIntyre . p. 18 . ISBN 978 - 1 - 55054 - 865 - 5 .
+</item 2>
+
+<item 3>
+Trade winds
+The subsident ( sinking ) air is relatively dry because as it descends , the temperature increases , but the absolute humidity remains constant , which lowers
+the relative humidity of the air mass . This warm , dry air is known as a superior air mass and normally resides above a maritime tropical ( warm and moist )
+air mass . An increase of temperature with height is known as a temperature inversion . When it occurs within a trade wind regime , it is known as a trade wind
+inversion . The surface air that flows from these subtropical high - pressure belts toward the Equator is deflected toward the west in both hemispheres by the
+Coriolis effect . These winds blow predominantly from the northeast in the Northern Hemisphere and from the southeast in the Southern Hemisphere . Because winds
+are named for the direction from which the wind is blowing , these winds are called the northeasterly trade winds in the Northern Hemisphere and the
+southeasterly trade winds in the Southern Hemisphere . The trade winds of both hemispheres meet at the doldrums . As they blow across tropical regions , air
+masses heat up over lower latitudes due to more direct sunlight .
+</item 3>
+
+<item 4>
+Trade winds
+They also learned that to reach South Africa , they needed to go far out in the ocean , head for Brazil , and around 30 ° S go east again . Following the
+African coast southbound means upwind in the Southern hemisphere . In the Pacific ocean , the full wind circulation , which included both the trade wind
+easterlies and higher - latitude Westerlies , was unknown to Europeans until Andres de Urdaneta 's voyage in 1565 . The captain of a sailing ship seeks a course
+along which the winds can be expected to blow in the direction of travel . During the Age of Sail , the pattern of prevailing winds made various points of the
+globe easy or difficult to access , and therefore had a direct effect on European empire - building and thus on modern political geography . For example ,
+Manila galleons could not sail into the wind at all . By the 18th century the importance of the trade winds to England 's merchant fleet for crossing the
+Atlantic Ocean had led both the general public and etymologists to identify the name with a later meaning of ' trade ' , `` ( foreign ) commerce '' .
+</item 4>
+
+<item 5>
+Trade winds
+Trade winds - wikipedia Trade winds Jump to : navigation , search This article is about the weather phenomenon . For other uses , see Tradewind . The westerlies
+( blue arrows ) and trade winds ( yellow and brown arrows ) The trade winds are the prevailing pattern of easterly surface winds found in the tropics , within
+the lower portion of the Earth 's atmosphere , in the lower section of the troposphere near the Earth 's equator . The trade winds blow predominantly from the
+northeast in the Northern Hemisphere and from the southeast in the Southern Hemisphere , strengthening during the winter and when the Arctic oscillation is in
+its warm phase . Trade winds have been used by captains of sailing ships to cross the world 's oceans for centuries , and enabled European empire expansion into
+the Americas and trade routes to become established across the Atlantic and Pacific oceans . In meteorology , the trade winds act as the steering flow for
+tropical storms that form over the Atlantic , Pacific , and southern Indian Oceans and make landfall in North America , Southeast Asia , and Madagascar and
+eastern Africa , respectively . Trade winds also transport African dust westward across the Atlantic Ocean into the Caribbean Sea , as well as portions of
+southeastern North America .
+</item 5>
+
+<item 6>
+Trade winds
+Those that develop over land ( continental ) are drier and hotter than those that develop over oceans ( maritime ) , and travel northward on the western
+periphery of the subtropical ridge . Maritime tropical air masses are sometimes referred to as trade air masses . The one region of the Earth which has an
+absence of trade winds is the north Indian ocean . Weather effects ( edit ) Clouds which form above regions within trade wind regimes are typically composed of
+cumulus which extend no more than 4 kilometres ( 13,000 ft ) in height , and are capped from being taller by the trade wind inversion . Trade winds originate
+more from the direction of the poles ( northeast in the Northern Hemisphere , southeast in the Southern Hemisphere ) during the cold season , and are stronger
+in the winter than the summer . As an example , the windy season in the Guianas , which lie at low latitudes in South America , occurs between January and April
+. When the phase of the Arctic oscillation ( AO ) is warm , trade winds are stronger within the tropics . The cold phase of the AO leads to weaker trade winds .
+</item 6>
+
+<item 7>
+Trade winds
+`` trade winds '' . Glossary of Meteorology . American Meteorological Society . Archived from the original on 2008 - 12 - 11 . Retrieved 2008 - 09 - 08 . Jump
+up ^ Ralph Stockman Tarr and Frank Morton McMurry ( 1909 ). Advanced geography . W.W. Shannon , State Printing , pp. 246 . Retrieved on 2009 - 04 - 15 . Jump up
+^ JetStream ( 2008 ) . `` How to read weather maps '' . National Weather Service . Retrieved 2007 - 05 - 16 . Jump up ^ Glossary of Meteorology ( June 2000 ) .
+`` Tropical air '' . American Meteorological Society . Retrieved 2009 - 10 - 28 . Jump up ^ Glossary of Meteorology ( June 2000 ) . `` Trade air '' . American
+Meteorological Society . Retrieved 2009 - 10 - 28 . Jump up ^ John E. Oliver ( 2005 ) . Encyclopedia of world climatology . Springer .
+</item 7>
+
+<item 8>
+Trade winds
+Encyclopedia of world climatology . Springer . p. 128 . ISBN 978 - 1 - 4020 - 3264 - 6 . Retrieved 2009 - 11 - 09 . Jump up ^ Bob Rauber ( 2009 - 05 - 22 ) . ``
+Research - The Rain in Cumulus over the Ocean Campaign '' . Retrieved 2009 - 11 - 08 . Jump up ^ James P. Terry ( 2007 ) . Tropical cyclones : climatology and
+impacts in the South Pacific . Springer . p. 8 . ISBN 978 - 0 - 387 - 71542 - 1 . Retrieved 2009 - 11 - 08 . Jump up ^ G.E. Pieter & F. Augustinus . `` The
+influence of the trade winds on the coastal development of the Guianas at various scale levels : a synthesis '' . Marine Geology. 208 ( 2 - 4 ) : 145 -- 151 .
+Bibcode : 2004MGeol. 208 ... 145A .
+</item 8>
+
+<item 9>
+Graph query row:
+wind_entity: Trade winds
+connected_entity: winter months
+relationship_types: ['RELATED_TO', 'RELATED_TO']
+date: None
+kind: None
+relationship_details: [None, None]
+</item 9>
+
+<item 10>
+Trade winds
+Between 1847 and 1849 , Matthew Fontaine Maury collected enough information to create wind and current charts for the world 's oceans . Cause ( edit ) 3D map
+showing Hadley cells in relationship to trade winds on the surface . See also : Air mass , Hadley cell , Humidity , Intertropical Convergence Zone , Monsoon ,
+Monsoon trough , Near - equatorial trough , and Prevailing winds As part of the Hadley cell circulation , surface air flows toward the equator while the flow
+aloft is towards the poles . A low - pressure area of calm , light variable winds near the equator is known as the doldrums , near - equatorial trough ,
+intertropical front , or the Intertropical Convergence Zone . When located within a monsoon region , this zone of low pressure and wind convergence is also
+known as the monsoon trough . Around 30 ° in both hemispheres , air begins to descend toward the surface in subtropical high - pressure belts known as
+subtropical ridges .
+</item 10>
+=== END ITEM id=663cd3a246d73041 ===

@@ -1,0 +1,83 @@
+graphrag: saved retrieval for multihop-rag-306
+graphrag: saved retrieval for multihop-rag-352
+graphrag: saved retrieval for multihop-rag-457
+graphrag: saved retrieval for multihop-rag-470
+graphrag: saved retrieval for multihop-rag-526
+graphrag: saved retrieval for multihop-rag-547
+graphrag: saved retrieval for multihop-rag-563
+graphrag: saved retrieval for multihop-rag-583
+graphrag: saved retrieval for multihop-rag-640
+graphrag: saved retrieval for multihop-rag-717
+graphrag: saved retrieval for multihop-rag-747
+graphrag: saved retrieval for multihop-rag-791
+Received notification from DBMS server: <GqlStatusObject gql_status='01N50', status_description='warn: label does not exist. The label `Publisher OR p` does not exist in database `recrag-benchmark-e5315c2b5c9f57e2595cc51c`. Verify that the spelling is correct.', position=<SummaryInputPosition line=2, column=10, offset=56>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 56, 'line': 2, 'column': 10}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "EXPLAIN MATCH (a:Article)-[:PUBLISHED_BY]->(p)\nWHERE (p:`Publisher OR p`:Organization)\n  AND (\n    toLower(p.name) CONTAINS 'guardian'\n    OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'guardian')\n    OR toLower(p.name) CONTAINS 'cbssports'\n    OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'cbssports')\n  )\nMATCH (a)-[:MENTIONS]->(e:__Entity__)\nWHERE e:Event OR e:Organization\nOPTIONAL MATCH (a)-[:FROM_CHUNK]->(c:Chunk)-[:FROM_DOCUMENT]->(d:Document)\nRETURN a.name AS article, p.name AS publisher, e.name AS match_or_team, labels(e) AS entity_type, d.title AS page, c.text AS passage\nLIMIT 10"
+Received notification from DBMS server: <GqlStatusObject gql_status='01N50', status_description='warn: label does not exist. The label `Publisher OR p` does not exist in database `recrag-benchmark-e5315c2b5c9f57e2595cc51c`. Verify that the spelling is correct.', position=<SummaryInputPosition line=2, column=10, offset=48>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 48, 'line': 2, 'column': 10}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "MATCH (a:Article)-[:PUBLISHED_BY]->(p)\nWHERE (p:`Publisher OR p`:Organization)\n  AND (\n    toLower(p.name) CONTAINS 'guardian'\n    OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'guardian')\n    OR toLower(p.name) CONTAINS 'cbssports'\n    OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'cbssports')\n  )\nMATCH (a)-[:MENTIONS]->(e:__Entity__)\nWHERE e:Event OR e:Organization\nOPTIONAL MATCH (a)-[:FROM_CHUNK]->(c:Chunk)-[:FROM_DOCUMENT]->(d:Document)\nRETURN a.name AS article, p.name AS publisher, e.name AS match_or_team, labels(e) AS entity_type, d.title AS page, c.text AS passage\nLIMIT 10"
+graphrag: saved retrieval for multihop-rag-800
+graphrag: saved retrieval for multihop-rag-865
+graphrag: saved retrieval for multihop-rag-1077
+graphrag: saved retrieval for multihop-rag-1120
+graphrag: saved retrieval for multihop-rag-1252
+graphrag: saved retrieval for multihop-rag-1255
+graphrag: saved retrieval for multihop-rag-1349
+graphrag: saved retrieval for multihop-rag-1613
+graphrag: saved retrieval for multihop-rag-1636
+Received notification from DBMS server: <GqlStatusObject gql_status='01N00', status_description='warn: feature deprecated. CALL subquery without a variable scope clause is deprecated. Use CALL (a) { ... }', position=<SummaryInputPosition line=12, column=1, offset=521>, raw_classification='DEPRECATION', classification=<NotificationClassification.DEPRECATION: 'DEPRECATION'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'DEPRECATION', '_severity': 'WARNING', '_position': {'offset': 521, 'line': 12, 'column': 1}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "EXPLAIN MATCH (a:Article)-[:PUBLISHED_BY]->(pa:Publisher)\nWHERE (toLower(pa.name) CONTAINS 'techcrunch' OR any(alias IN coalesce(pa.aliases, []) WHERE toLower(alias) CONTAINS 'techcrunch'))\n  AND (\n    toLower(a.name) CONTAINS 'gpt-4'\n    OR any(alias IN coalesce(a.aliases, []) WHERE toLower(alias) CONTAINS 'gpt-4')\n    OR EXISTS {\n      MATCH (a)-[:MENTIONS]->(g:__Entity__)\n      WHERE toLower(g.name) CONTAINS 'gpt-4'\n         OR any(alias IN coalesce(g.aliases, []) WHERE toLower(alias) CONTAINS 'gpt-4')\n    }\n  )\nCALL {\n  WITH a\n  MATCH (a)-[:FROM_CHUNK]->(c:Chunk)\n  RETURN collect(c.text) AS gpt4_passages\n}\nMATCH (b:Article)-[:PUBLISHED_BY]->(pb:Publisher)\nWHERE (toLower(pb.name) CONTAINS 'techcrunch' OR any(alias IN coalesce(pb.aliases, []) WHERE toLower(alias) CONTAINS 'techcrunch'))\n  AND EXISTS {\n    MATCH (b)-[:MENTIONS]->(e:__Entity__)\n    WHERE toLower(e.name) CONTAINS 'european commission'\n       OR any(alias IN coalesce(e.aliases, []) WHERE toLower(alias) CONTAINS 'european commission')\n  }\n  AND EXISTS {\n    MATCH (b)-[:MENTIONS]->(x:__Entity__)\n    WHERE toLower(x.name) CONTAINS 'elon musk'\n       OR toLower(x.name) = 'x'\n       OR any(alias IN coalesce(x.aliases, []) WHERE toLower(alias) CONTAINS 'elon musk' OR toLower(alias) = 'x')\n  }\n  AND EXISTS {\n    MATCH (b)-[:MENTIONS]->(q:__Entity__)\n    WHERE toLower(q.name) CONTAINS 'illegal content'\n       OR toLower(q.name) CONTAINS 'disinformation'\n       OR any(alias IN coalesce(q.aliases, []) WHERE toLower(alias) CONTAINS 'illegal content' OR toLower(alias) CONTAINS 'disinformation')\n  }\nCALL {\n  WITH b\n  MATCH (b)-[:FROM_CHUNK]->(d:Chunk)\n  RETURN collect(d.text) AS x_probe_passages\n}\nRETURN a.name AS gpt4_article, gpt4_passages, b.name AS x_probe_article, x_probe_passages\nLIMIT 10"
+Received notification from DBMS server: <GqlStatusObject gql_status='01N00', status_description='warn: feature deprecated. CALL subquery without a variable scope clause is deprecated. Use CALL (b) { ... }', position=<SummaryInputPosition line=36, column=1, offset=1578>, raw_classification='DEPRECATION', classification=<NotificationClassification.DEPRECATION: 'DEPRECATION'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'DEPRECATION', '_severity': 'WARNING', '_position': {'offset': 1578, 'line': 36, 'column': 1}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "EXPLAIN MATCH (a:Article)-[:PUBLISHED_BY]->(pa:Publisher)\nWHERE (toLower(pa.name) CONTAINS 'techcrunch' OR any(alias IN coalesce(pa.aliases, []) WHERE toLower(alias) CONTAINS 'techcrunch'))\n  AND (\n    toLower(a.name) CONTAINS 'gpt-4'\n    OR any(alias IN coalesce(a.aliases, []) WHERE toLower(alias) CONTAINS 'gpt-4')\n    OR EXISTS {\n      MATCH (a)-[:MENTIONS]->(g:__Entity__)\n      WHERE toLower(g.name) CONTAINS 'gpt-4'\n         OR any(alias IN coalesce(g.aliases, []) WHERE toLower(alias) CONTAINS 'gpt-4')\n    }\n  )\nCALL {\n  WITH a\n  MATCH (a)-[:FROM_CHUNK]->(c:Chunk)\n  RETURN collect(c.text) AS gpt4_passages\n}\nMATCH (b:Article)-[:PUBLISHED_BY]->(pb:Publisher)\nWHERE (toLower(pb.name) CONTAINS 'techcrunch' OR any(alias IN coalesce(pb.aliases, []) WHERE toLower(alias) CONTAINS 'techcrunch'))\n  AND EXISTS {\n    MATCH (b)-[:MENTIONS]->(e:__Entity__)\n    WHERE toLower(e.name) CONTAINS 'european commission'\n       OR any(alias IN coalesce(e.aliases, []) WHERE toLower(alias) CONTAINS 'european commission')\n  }\n  AND EXISTS {\n    MATCH (b)-[:MENTIONS]->(x:__Entity__)\n    WHERE toLower(x.name) CONTAINS 'elon musk'\n       OR toLower(x.name) = 'x'\n       OR any(alias IN coalesce(x.aliases, []) WHERE toLower(alias) CONTAINS 'elon musk' OR toLower(alias) = 'x')\n  }\n  AND EXISTS {\n    MATCH (b)-[:MENTIONS]->(q:__Entity__)\n    WHERE toLower(q.name) CONTAINS 'illegal content'\n       OR toLower(q.name) CONTAINS 'disinformation'\n       OR any(alias IN coalesce(q.aliases, []) WHERE toLower(alias) CONTAINS 'illegal content' OR toLower(alias) CONTAINS 'disinformation')\n  }\nCALL {\n  WITH b\n  MATCH (b)-[:FROM_CHUNK]->(d:Chunk)\n  RETURN collect(d.text) AS x_probe_passages\n}\nRETURN a.name AS gpt4_article, gpt4_passages, b.name AS x_probe_article, x_probe_passages\nLIMIT 10"
+Received notification from DBMS server: <GqlStatusObject gql_status='01N00', status_description='warn: feature deprecated. CALL subquery without a variable scope clause is deprecated. Use CALL (a) { ... }', position=<SummaryInputPosition line=12, column=1, offset=513>, raw_classification='DEPRECATION', classification=<NotificationClassification.DEPRECATION: 'DEPRECATION'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'DEPRECATION', '_severity': 'WARNING', '_position': {'offset': 513, 'line': 12, 'column': 1}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "MATCH (a:Article)-[:PUBLISHED_BY]->(pa:Publisher)\nWHERE (toLower(pa.name) CONTAINS 'techcrunch' OR any(alias IN coalesce(pa.aliases, []) WHERE toLower(alias) CONTAINS 'techcrunch'))\n  AND (\n    toLower(a.name) CONTAINS 'gpt-4'\n    OR any(alias IN coalesce(a.aliases, []) WHERE toLower(alias) CONTAINS 'gpt-4')\n    OR EXISTS {\n      MATCH (a)-[:MENTIONS]->(g:__Entity__)\n      WHERE toLower(g.name) CONTAINS 'gpt-4'\n         OR any(alias IN coalesce(g.aliases, []) WHERE toLower(alias) CONTAINS 'gpt-4')\n    }\n  )\nCALL {\n  WITH a\n  MATCH (a)-[:FROM_CHUNK]->(c:Chunk)\n  RETURN collect(c.text) AS gpt4_passages\n}\nMATCH (b:Article)-[:PUBLISHED_BY]->(pb:Publisher)\nWHERE (toLower(pb.name) CONTAINS 'techcrunch' OR any(alias IN coalesce(pb.aliases, []) WHERE toLower(alias) CONTAINS 'techcrunch'))\n  AND EXISTS {\n    MATCH (b)-[:MENTIONS]->(e:__Entity__)\n    WHERE toLower(e.name) CONTAINS 'european commission'\n       OR any(alias IN coalesce(e.aliases, []) WHERE toLower(alias) CONTAINS 'european commission')\n  }\n  AND EXISTS {\n    MATCH (b)-[:MENTIONS]->(x:__Entity__)\n    WHERE toLower(x.name) CONTAINS 'elon musk'\n       OR toLower(x.name) = 'x'\n       OR any(alias IN coalesce(x.aliases, []) WHERE toLower(alias) CONTAINS 'elon musk' OR toLower(alias) = 'x')\n  }\n  AND EXISTS {\n    MATCH (b)-[:MENTIONS]->(q:__Entity__)\n    WHERE toLower(q.name) CONTAINS 'illegal content'\n       OR toLower(q.name) CONTAINS 'disinformation'\n       OR any(alias IN coalesce(q.aliases, []) WHERE toLower(alias) CONTAINS 'illegal content' OR toLower(alias) CONTAINS 'disinformation')\n  }\nCALL {\n  WITH b\n  MATCH (b)-[:FROM_CHUNK]->(d:Chunk)\n  RETURN collect(d.text) AS x_probe_passages\n}\nRETURN a.name AS gpt4_article, gpt4_passages, b.name AS x_probe_article, x_probe_passages\nLIMIT 10"
+Received notification from DBMS server: <GqlStatusObject gql_status='01N00', status_description='warn: feature deprecated. CALL subquery without a variable scope clause is deprecated. Use CALL (b) { ... }', position=<SummaryInputPosition line=36, column=1, offset=1570>, raw_classification='DEPRECATION', classification=<NotificationClassification.DEPRECATION: 'DEPRECATION'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'DEPRECATION', '_severity': 'WARNING', '_position': {'offset': 1570, 'line': 36, 'column': 1}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "MATCH (a:Article)-[:PUBLISHED_BY]->(pa:Publisher)\nWHERE (toLower(pa.name) CONTAINS 'techcrunch' OR any(alias IN coalesce(pa.aliases, []) WHERE toLower(alias) CONTAINS 'techcrunch'))\n  AND (\n    toLower(a.name) CONTAINS 'gpt-4'\n    OR any(alias IN coalesce(a.aliases, []) WHERE toLower(alias) CONTAINS 'gpt-4')\n    OR EXISTS {\n      MATCH (a)-[:MENTIONS]->(g:__Entity__)\n      WHERE toLower(g.name) CONTAINS 'gpt-4'\n         OR any(alias IN coalesce(g.aliases, []) WHERE toLower(alias) CONTAINS 'gpt-4')\n    }\n  )\nCALL {\n  WITH a\n  MATCH (a)-[:FROM_CHUNK]->(c:Chunk)\n  RETURN collect(c.text) AS gpt4_passages\n}\nMATCH (b:Article)-[:PUBLISHED_BY]->(pb:Publisher)\nWHERE (toLower(pb.name) CONTAINS 'techcrunch' OR any(alias IN coalesce(pb.aliases, []) WHERE toLower(alias) CONTAINS 'techcrunch'))\n  AND EXISTS {\n    MATCH (b)-[:MENTIONS]->(e:__Entity__)\n    WHERE toLower(e.name) CONTAINS 'european commission'\n       OR any(alias IN coalesce(e.aliases, []) WHERE toLower(alias) CONTAINS 'european commission')\n  }\n  AND EXISTS {\n    MATCH (b)-[:MENTIONS]->(x:__Entity__)\n    WHERE toLower(x.name) CONTAINS 'elon musk'\n       OR toLower(x.name) = 'x'\n       OR any(alias IN coalesce(x.aliases, []) WHERE toLower(alias) CONTAINS 'elon musk' OR toLower(alias) = 'x')\n  }\n  AND EXISTS {\n    MATCH (b)-[:MENTIONS]->(q:__Entity__)\n    WHERE toLower(q.name) CONTAINS 'illegal content'\n       OR toLower(q.name) CONTAINS 'disinformation'\n       OR any(alias IN coalesce(q.aliases, []) WHERE toLower(alias) CONTAINS 'illegal content' OR toLower(alias) CONTAINS 'disinformation')\n  }\nCALL {\n  WITH b\n  MATCH (b)-[:FROM_CHUNK]->(d:Chunk)\n  RETURN collect(d.text) AS x_probe_passages\n}\nRETURN a.name AS gpt4_article, gpt4_passages, b.name AS x_probe_article, x_probe_passages\nLIMIT 10"
+graphrag: saved retrieval for multihop-rag-1802
+graphrag: saved retrieval for multihop-rag-1895
+graphrag: saved retrieval for multihop-rag-1912
+graphrag: saved retrieval for multihop-rag-1916
+graphrag: saved retrieval for multihop-rag-1958
+graphrag: saved retrieval for multihop-rag-1999
+graphrag: saved retrieval for multihop-rag-2022
+graphrag: saved retrieval for multihop-rag-2072
+graphrag: saved retrieval for multihop-rag-2079
+graphrag: saved retrieval for multihop-rag-2210
+graphrag: saved retrieval for multihop-rag-2214
+graphrag: saved retrieval for multihop-rag-2230
+graphrag: saved retrieval for multihop-rag-2231
+graphrag: saved retrieval for multihop-rag-2327
+graphrag: saved retrieval for multihop-rag-2366
+graphrag: saved retrieval for multihop-rag-2369
+graphrag: saved retrieval for multihop-rag-2448
+graphrag record 0: EM=1.00, F1=1.00
+graphrag record 1: EM=1.00, F1=1.00
+graphrag record 2: EM=1.00, F1=1.00
+graphrag record 3: EM=0.00, F1=0.00
+graphrag record 4: EM=1.00, F1=1.00
+graphrag record 5: EM=1.00, F1=1.00
+graphrag record 6: EM=1.00, F1=1.00
+graphrag record 7: EM=1.00, F1=1.00
+graphrag record 8: EM=0.00, F1=0.00
+graphrag record 9: EM=1.00, F1=1.00
+graphrag record 10: EM=1.00, F1=1.00
+graphrag record 11: EM=0.00, F1=0.00
+graphrag record 12: EM=0.00, F1=0.00
+graphrag record 13: EM=1.00, F1=1.00
+graphrag record 14: EM=1.00, F1=1.00
+graphrag record 15: EM=0.00, F1=0.00
+graphrag record 16: EM=1.00, F1=1.00
+graphrag record 17: EM=1.00, F1=1.00
+graphrag record 18: EM=0.00, F1=1.00
+graphrag record 19: EM=1.00, F1=1.00
+graphrag record 20: EM=1.00, F1=1.00
+graphrag record 21: EM=1.00, F1=1.00
+graphrag record 22: EM=1.00, F1=1.00
+graphrag record 23: EM=1.00, F1=1.00
+graphrag record 24: EM=0.00, F1=0.00
+graphrag record 25: EM=0.00, F1=0.00
+graphrag record 26: EM=1.00, F1=1.00
+graphrag record 27: EM=1.00, F1=1.00
+graphrag record 28: EM=0.00, F1=0.00
+graphrag record 29: EM=1.00, F1=1.00
+graphrag record 30: EM=1.00, F1=1.00
+graphrag record 31: EM=1.00, F1=1.00
+graphrag record 32: EM=1.00, F1=1.00
+graphrag record 33: EM=0.00, F1=0.00
+graphrag record 34: EM=0.00, F1=0.00
+graphrag record 35: EM=0.00, F1=0.00
+graphrag record 36: EM=1.00, F1=1.00
+graphrag record 37: EM=1.00, F1=1.00
+RESULTS /Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/agentic_tune/graphrag/20261112T192751724248Z/results.jsonl

@@ -1,0 +1,73 @@
+[
+  {
+    "id": "multihop-rag-2537",
+    "sentences": [
+      ["The Fed's main interest rate is at its highest level since 2001.", "The central bank indicated last week that it may cut interest rates next year.", "The central bank indicated last week that any cut to interest rates next year may be smaller than it earlier expected."],
+      ["Stocks surged through the week.", "Stocks surged on rising hopes that the Federal Reserve is finally done with its market-crunching hikes to interest rates.", "The Federal Reserve's hikes to interest rates were market-crunching.", "The Federal Reserve's interest rate hikes were intended to get inflation under control."]
+    ]
+  },
+  {
+    "id": "5a7a1d305542990783324e66",
+    "sentences": [
+      ["Charles Thomas 'Tom' Johnston was born on August 15, 1948.", "Charles Thomas 'Tom' Johnston is an American musician.", "Charles Thomas Johnston is known by the name 'Tom'."],
+      ["Daryl Palumbo was born on February 10, 1979.", "Daryl Palumbo is an American musician.", "Daryl Palumbo is originally from Elmira, New York."]
+    ]
+  },
+  {
+    "id": "5a7cdd6b55429909bec76858",
+    "sentences": [
+      ["Edward Sharpe and the Magnetic Zeros is an American folk rock band.", "Edward Sharpe and the Magnetic Zeros was formed in Los Angeles, California.", "Edward Sharpe and the Magnetic Zeros was formed in 2007."],
+      ["Louis XIV is an American rock band.", "Louis XIV is from San Diego, California."],
+      ["The band released four EPs between 2003 and 2007.", "The band released three albums between 2003 and 2008.", "Two of the band's three albums, the latter two, were distributed by Atlantic Records."]
+    ]
+  },
+  {
+    "id": "multihop-rag-1932",
+    "sentences": [
+      ["Sally Aldous is an Anthropic spokesperson.", "Sally Aldous said there was no attempt to remove Sam Altman from OpenAI by the co-founders of Anthropic."],
+      ["A year has passed since Sam Altman catapulted ChatGPT to global fame.", "Sam Altman has become Silicon Valley's sought-after voice on the promise of artificial intelligence.", "Sam Altman has become Silicon Valley's sought-after voice on the potential dangers of artificial intelligence.", "Sam Altman's exit from OpenAI was sudden and mostly unexplained.", "Sam Altman's sudden and mostly unexplained exit from OpenAI brought uncertainty to the industry's future."],
+      ["Sam is one of the most brilliant and impactful people the industry has ever had.", "The speaker says that being one of the most brilliant and impactful people the industry has ever had is less important than Sam being one of the most generous and caring people the speaker knows.", "Sam is one of the most generous and caring people the speaker knows."],
+      ["The board's language supports a prevailing theory.", "The way giant tech companies work supports a prevailing theory.", "The prevailing theory is floating around right now.", "The prevailing theory is based on the board's language and the way giant tech companies work."]
+    ]
+  },
+  {
+    "id": "-5359074013301333095",
+    "sentences": [
+      ["In 1991, the brainwashed super-soldier James 'Bucky' Barnes was dispatched from a Hydra base in Siberia.", "In 1991, James 'Bucky' Barnes was dispatched to intercept an automobile carrying a case of super-soldier serum.", "In the present day, Ultron's defeat in the nation of Sokovia at the hands of the Avengers happened approximately one year earlier.", "Ultron was defeated in the nation of Sokovia by the Avengers.", "In the present day, Steve Rogers, Natasha Romanoff, Sam Wilson, and Wanda Maximoff stop Brock Rumlow from stealing a biological weapon from a lab in Lagos.", "Brock Rumlow blows himself up.", "Brock Rumlow hoped to kill Steve Rogers by blowing himself up.", "Wanda Maximoff throws the explosion into the sky with telekinesis.", "The explosion damages a nearby building.", "The explosion killed several Wakandan humanitarian workers."]
+    ]
+  },
+  {
+    "id": "5abd247e5542996e802b472f",
+    "sentences": [
+      ["Robert Harry Philibosian was born in 1940.", "Robert Harry Philibosian is an American politician."],
+      ["David R. Ignatius was born on May 26, 1950.", "David R. Ignatius is an American journalist.", "David R. Ignatius is an American novelist."]
+    ]
+  },
+  {
+    "id": "955374967862684316",
+    "sentences": [
+      ["The Intertropical Convergence Zone (ITCZ) swings northward over West Africa from the Southern Hemisphere in April.", "In April, heavy showers come from pre-monsoonal convective clouds, mainly in the form of squall lines.", "The squall lines are also known as the north easterlies.", "The north easterlies formed mainly as a result of the interactions of the two dominant airmasses in Nigeria.", "The two dominant airmasses in Nigeria are the Maritime tropical (south westerlies) and the Continental tropical (north easterlies).", "The pre-monsoonal showers begin in central Nigeria.", "The monsoons from the South Atlantic Ocean arrive in central Nigeria in July.", "The monsoons bring high humidity, heavy cloud cover and heavy rainfall to central Nigeria in July.", "The rainfall from the monsoons can be a daily occurrence in central Nigeria.", "The monsoon rainfall in central Nigeria lasts until September.", "The monsoons gradually begin retreating southward to the southern part of Nigeria when September arrives.", "Rainfall totals in central Nigeria vary from 1,100 mm (43.3 in) in the lowlands of the river Niger Benue trough.", "Rainfall totals in central Nigeria reach over 2,000 mm (78.7 in) along the south western escarpment of the Jos Plateau."]
+    ]
+  },
+  {
+    "id": "5a7e0bb65542997cc2c4750a",
+    "sentences": [
+      ["The exploits of the man referred to here in that battle were described by Hal Moore.", "Hal Moore described the exploits in the book 'We Were Soldiers Once and Young'."],
+      ["Harold Gregory 'Hal' Moore, Jr. was born on February 13, 1922.", "Harold Gregory 'Hal' Moore, Jr. died on February 10, 2017.", "Harold Gregory 'Hal' Moore, Jr. was a United States Army lieutenant general.", "Harold Gregory 'Hal' Moore, Jr. was an author."]
+    ]
+  },
+  {
+    "id": "5a8675b1554299211dda2b44",
+    "sentences": [
+      ["Black is a Bangladeshi rock band.", "Black was formed in Dhaka, Bangladesh.", "The Bengali name of Black is ব্ল্যাক."],
+      ["New Found Glory is an American rock band.", "New Found Glory was formerly known as A New Found Glory.", "New Found Glory is from Coral Springs, Florida.", "New Found Glory was formed in 1997."]
+    ]
+  },
+  {
+    "id": "5a7c99705542990527d554de",
+    "sentences": [
+      ["Levitt & Sons developed the Monmouth Heights section from 1965 to 1969."],
+      ["Levitt & Sons is most famous for having built the town of Levittown, New York."]
+    ]
+  }
+]

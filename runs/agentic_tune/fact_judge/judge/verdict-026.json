@@ -1,0 +1,21 @@
+[
+  {"id": "27e7e52fae02d4fe", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]}
+  ]},
+  {"id": "f8e5d67791e2a3bc", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}]}
+  ]},
+  {"id": "97a094304d5766bb", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]}
+]

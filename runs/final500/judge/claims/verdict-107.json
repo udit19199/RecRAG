@@ -1,0 +1,162 @@
+[
+  {
+    "id": "5adf82945542993344016ca4",
+    "sentences": [
+      [
+        "Alan Crosland was born on August 10, 1894.",
+        "Alan Crosland died on July 16, 1936.",
+        "Alan Crosland was an American stage actor.",
+        "Alan Crosland was an American film director."
+      ],
+      [
+        "Kurt Voss was born Kurt Christopher Peter Wössner.",
+        "Kurt Voss is an American film director.",
+        "Kurt Voss is an American screenwriter.",
+        "Kurt Voss is an American musician-songwriter."
+      ]
+    ]
+  },
+  {
+    "id": "-5248648953323441399",
+    "sentences": [
+      [
+        "The 1836 article and other sources show that this verse was not used soon after 1745.",
+        "The 1836 article and other sources show that this verse was certainly not used before the song became accepted as the British national anthem in the 1780s and 1790s."
+      ],
+      [
+        "The verse was included as an integral part of the song in the Oxford Book of Eighteenth Century Verse of 1926.",
+        "The Oxford Book of Eighteenth Century Verse of 1926 erroneously referenced the 'fourth verse' to the Gentleman's Magazine article of 1745."
+      ]
+    ]
+  },
+  {
+    "id": "multihop-rag-532",
+    "sentences": [
+      [
+        "Time-restricted eating can also improve the quality of sleep, according to the speaker.",
+        "Better sleep can help the brain recover better, according to the speaker."
+      ],
+      [
+        "Today the internet is full of tips and tricks that promise a sound sleep.",
+        "Not all of these sleep tips are effective.",
+        "None of these sleep tips are foolproof."
+      ]
+    ]
+  },
+  {
+    "id": "multihop-rag-1987",
+    "sentences": [
+      [
+        "This whole line of argument is called 'market definition'."
+      ],
+      [
+        "If the court decides the relevant market is phones and app stores, not specifically Android ones, then Google is on the road to victory."
+      ],
+      [
+        "Monday's trial hearing revealed the $26.3 billion Google spent in 2021 to make itself the default search engine across platforms.",
+        "Monday's trial hearing revealed that Google tried to take its default search engine position further.",
+        "Monday's trial hearing revealed that Google tried to have Chrome preinstalled on iPhones."
+      ]
+    ]
+  },
+  {
+    "id": "multihop-rag-1748",
+    "sentences": [
+      [
+        "In July, Kelce spoke on the podcast he shares with his brother, New Heights.",
+        "Kelce said he intended to give Swift a friendship bracelet with his number on it.",
+        "Kelce said he intended to give the bracelet during Swift's Eras Tour concert in Kansas City."
+      ],
+      [
+        "On his podcast, Kelce later invited the 'Anti-Hero' singer to one of his games at Arrowhead Stadium.",
+        "The 'Anti-Hero' singer famously accepted the invitation on 24 September."
+      ],
+      [
+        "Swift has shared that she has nothing to hide in her new relationship with Kelce."
+      ]
+    ]
+  },
+  {
+    "id": "multihop-rag-832",
+    "sentences": [
+      [
+        "Delays may lead to bets being refunded.",
+        "Whether bets are refunded depends on the circumstances and the specific rules of the sportsbook."
+      ],
+      [
+        "Every sportsbook adjusts when a betting line moves or odds change for a legitimate reason.",
+        "Examples of legitimate reasons include an injury or a roster move."
+      ],
+      [
+        "Sportsbooks are also gathering this information.",
+        "Sportsbooks begin to tighten the NBA Rookie of the Year lines in response."
+      ]
+    ]
+  },
+  {
+    "id": "5a8db348554299068b959dc2",
+    "sentences": [
+      [
+        "'Love Incredible' is a song by Norwegian DJ and record producer Cashmere Cat.",
+        "'Love Incredible' features vocals by Cuban-American singer Camila Cabello."
+      ],
+      [
+        "'Love Incredible' was released on 17 February 2017.",
+        "'Love Incredible' was released through Interscope and Mad Love.",
+        "'Love Incredible' was the third single from the debut album '9' of Cashmere Cat."
+      ],
+      [
+        "An imprint of Interscope Geffen A&M Records has Universal Music Group as its parent company.",
+        "Universal Music Group is a subsidiary of Vivendi S.A."
+      ]
+    ]
+  },
+  {
+    "id": "multihop-rag-315",
+    "sentences": [
+      [
+        "Thursday's game between the Lions and Packers will be aired on Amazon Prime Video.",
+        "The broadcast is for NFL fans across the U.S."
+      ],
+      [
+        "Thursday's game between the Bears and Panthers will be aired on Amazon Prime Video.",
+        "The broadcast is for NFL fans across the U.S."
+      ]
+    ]
+  },
+  {
+    "id": "-3632974700795137148",
+    "sentences": [
+      [
+        "The full name of the club is Reading Football Club.",
+        "The club's nickname is The Royals.",
+        "Reading was founded in 1871.",
+        "Reading was founded 147 years ago.",
+        "Reading's ground is Madejski Stadium, with a ground capacity of 24,161.",
+        "Reading's owners are Dai Yongge and Dai Xiuli (majority).",
+        "Reading's chairman is Sir John Madejski.",
+        "Reading's manager is Jaap Stam.",
+        "Reading competed in the Championship in the 2016-17 season, finishing 3rd.",
+        "Reading's website is listed as the club website."
+      ],
+      [
+        "Reading Football Club's ownership structure is 75% owned by Renhe Sports Management Ltd.",
+        "Renhe Sports Management Ltd is 100% owned by Xiu Li Dai and Yongge Dai.",
+        "25% of Reading Football Club is owned by Narin Niruttinanon."
+      ]
+    ]
+  },
+  {
+    "id": "multihop-rag-2271",
+    "sentences": [
+      [
+        "Griffais explained that it is important to Valve that developers do not need to 'split their attention' between different performance targets.",
+        "Griffais said this applies for now."
+      ],
+      [
+        "The Steam Deck OLED will go on sale on November 16th at 1pm ET.",
+        "Valve has Steam Deck OLED units ready to ship on that same day."
+      ]
+    ]
+  }
+]

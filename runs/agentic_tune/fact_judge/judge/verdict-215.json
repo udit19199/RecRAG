@@ -1,0 +1,68 @@
+[
+{"id": "9ff5577dd45182b4", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "by the age of 16, she is public property – incapable of going outside without being mobbed, and her love of singing and dancing now a lucrative resource"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "by the age of 16, she is public property – incapable of going outside without being mobbed, and her love of singing and dancing now a lucrative resource"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "by the age of 16, she is public property – incapable of going outside without being mobbed, and her love of singing and dancing now a lucrative resource"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "It was almost like this very strange, subtle clue to the media"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "subtle clue to the media that they don't know everything that happened in that relationship"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "and I can have something really major and traumatic happen to me and they don't know about it"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "she told NPR"}]}
+]},
+{"id": "79f126290a7a37d5", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]}
+]},
+{"id": "6ebd3e79c3b959cf", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+]},
+{"id": "b419ef2b32c73003", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 3, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 3, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 8, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 8, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]}
+]},
+{"id": "66088c78d943fff3", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "“all of that, all of it, was built on lies,” Rehn declared to the jury"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "“all of that, all of it, was built on lies,” Rehn declared to the jury"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 10, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse"}]}
+]},
+{"id": "7d0ff1665cbb4e1c", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Alameda Research’s former CEO, Caroline Ellison"}]},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry"}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]}
+]

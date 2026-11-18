@@ -1,0 +1,56 @@
+[
+{"id": "9d486fe293535d8e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "anticompetitive by making deals with Apple and others. The DOJ doubled down on this"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "making itself the default search engine across platforms"}, {"item": 7, "quote": "including its deal with Apple and other partners to make Google the default search engine."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "ab78f7df3d531e46", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion."}]}
+]},
+{"id": "f02eefd8f07c4829", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "0e2c1d3c4098cec3", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "With a 10% surge in the stock this year"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]}
+]},
+{"id": "5930c4c44d741a85", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "That answer ultimately lies with the jury"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX?"}, {"item": 6, "quote": "Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX"}]},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 3, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+]},
+{"id": "02be5d0e2281a8f0", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "contradicted", "evidence": [{"item": 4, "quote": "He was ruled questionable to return. NFL Media reported on Monday that Kupp suffered a low ankle sprain and will be evaluated going forward."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "received attention on the sidelines after limping off, then left the game for further evaluation in the locker room"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "received attention on the sidelines after limping off, then left the game for further evaluation in the locker room"}]}
+]}
+]

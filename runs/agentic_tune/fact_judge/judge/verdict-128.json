@@ -1,0 +1,26 @@
+[
+{"id": "39c4f5cf6ea43e82", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "299d1aa8e09b8445", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Start by clicking our Caesars Sportsbook promo code link and sign up for a new account. If your first bet loses, Caesars will credit your account with bonus bets in the amount of your wager up to $1,000."}]}
+]},
+{"id": "82b18a4630ca1243", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "“I’m here until the end,” she said in her press conference on Friday."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]}
+]

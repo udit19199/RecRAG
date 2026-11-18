@@ -1,0 +1,38 @@
+questions to run: 100 first index 0
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Fetching 7 files: 100%|██████████| 7/7 [00:00<00:00, 3850.51it/s]
+graphrag: saved retrieval for 5225754983651766092
+graphrag: saved retrieval for 6986236841860957647
+graphrag: saved retrieval for -3290814144789249484
+graphrag: saved retrieval for 5745452844331879752
+graphrag: saved retrieval for 8851020722386421469
+graphrag: saved retrieval for -909916459264223411
+graphrag: saved retrieval for 7524133268429333037
+graphrag: saved retrieval for -7660771254611710392
+graphrag: saved retrieval for 3223058827565794274
+graphrag: saved retrieval for 8467542931261548456
+graphrag: saved retrieval for -8817510910624892182
+graphrag: saved retrieval for 8081436745274892553
+graphrag: saved retrieval for 955374967862684316
+graphrag: saved retrieval for -4340755100872459608
+graphrag: saved retrieval for -4752044886865067782
+graphrag: saved retrieval for 3368255430684131446
+Received notification from DBMS server: <GqlStatusObject gql_status='01N52', status_description='warn: property key does not exist. The property `aliases` does not exist in database `recrag-benchmark-bd0d3b482c423629ae485a67`. Verify that the spelling is correct.', position=<SummaryInputPosition line=3, column=31, offset=104>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 104, 'line': 3, 'column': 31}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "EXPLAIN MATCH (p:Place)\nWHERE toLower(p.name) CONTAINS 'warsaw, missouri'\n   OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'warsaw, missouri')\nOPTIONAL MATCH (p)-[r]-(m:__Entity__)\nOPTIONAL MATCH (p)-[:LOCATED_IN]->(loc:Place)\nRETURN DISTINCT p.name AS place, type(r) AS relationship, m.name AS connected_to, loc.name AS located_in\nLIMIT 10"
+Received notification from DBMS server: <GqlStatusObject gql_status='01N52', status_description='warn: property key does not exist. The property `aliases` does not exist in database `recrag-benchmark-bd0d3b482c423629ae485a67`. Verify that the spelling is correct.', position=<SummaryInputPosition line=3, column=31, offset=96>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 96, 'line': 3, 'column': 31}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "MATCH (p:Place)\nWHERE toLower(p.name) CONTAINS 'warsaw, missouri'\n   OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'warsaw, missouri')\nOPTIONAL MATCH (p)-[r]-(m:__Entity__)\nOPTIONAL MATCH (p)-[:LOCATED_IN]->(loc:Place)\nRETURN DISTINCT p.name AS place, type(r) AS relationship, m.name AS connected_to, loc.name AS located_in\nLIMIT 10"
+graphrag: saved retrieval for -360833956386934695
+graphrag: saved retrieval for 3221262508309669486
+graphrag: saved retrieval for -3632974700795137148
+graphrag: saved retrieval for 6117400998512150504
+graphrag: saved retrieval for 5696680934593979206
+graphrag: saved retrieval for -7123670178204378853
+graphrag: saved retrieval for -397964857452916469
+graphrag: saved retrieval for -8129143127887276431
+graphrag: saved retrieval for -6965315175406025099
+graphrag: saved retrieval for 7761896900514914630
+graphrag: saved retrieval for -2496943533721790489
+graphrag: saved retrieval for 7621889567969940898
+graphrag: saved retrieval for 8588157975437869890
+Received notification from DBMS server: <GqlStatusObject gql_status='01N52', status_description='warn: property key does not exist. The property `aliases` does not exist in database `recrag-benchmark-3e7f3aed08c8c628578e2de6`. Verify that the spelling is correct.', position=<SummaryInputPosition line=2, column=84, offset=140>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 140, 'line': 2, 'column': 84}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "EXPLAIN MATCH (p:Person)-[r:MEMBER_OF]->(o:Organization)\nWHERE (toLower(p.name) CONTAINS 'rukmini devi arundale' OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'rukmini devi arundale'))\n  AND toLower(o.name) CONTAINS 'rajya sabha'\nRETURN p.name AS person, o.name AS organization, r.term AS term, r.start_date AS start_date, r.end_date AS end_date, r.tenure AS tenure, r.period AS period\nLIMIT 10"
+Received notification from DBMS server: <GqlStatusObject gql_status='01N52', status_description='warn: property key does not exist. The property `aliases` does not exist in database `recrag-benchmark-3e7f3aed08c8c628578e2de6`. Verify that the spelling is correct.', position=<SummaryInputPosition line=2, column=84, offset=132>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 132, 'line': 2, 'column': 84}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "MATCH (p:Person)-[r:MEMBER_OF]->(o:Organization)\nWHERE (toLower(p.name) CONTAINS 'rukmini devi arundale' OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'rukmini devi arundale'))\n  AND toLower(o.name) CONTAINS 'rajya sabha'\nRETURN p.name AS person, o.name AS organization, r.term AS term, r.start_date AS start_date, r.end_date AS end_date, r.tenure AS tenure, r.period AS period\nLIMIT 10"
+graphrag: saved retrieval for 481461689673789519
+/Users/uditagarwal19199/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/multiprocessing/resource_tracker.py:279: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

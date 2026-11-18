@@ -1,0 +1,82 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "multihop-rag-598",
+   "sentences": [
+    "The “app store for AI” will be pushed hard as the platform to get your AI toys and tools from, and never mind Hugging Face or any open source models.",
+    "OpenAI was founded in late 2015, just a few months after he met with Altman at the Rosewood hotel in Silicon Valley.",
+    "OpenAI announced that GPT-4 with vision will become available alongside the upcoming launch of GPT-4 Turbo API."
+   ]
+  },
+  {
+   "id": "5a7643675542994ccc918747",
+   "sentences": [
+    "David Ross Lederman (December 12, 1894 – August 24, 1972) was an American film director noted for his Western/action/adventure films of the 1930s and 1940s.",
+    "Stefan Ruzowitzky (born 25 December 1961) is an Austrian film director and screenwriter."
+   ]
+  },
+  {
+   "id": "5a7a96555542990198eaf159",
+   "sentences": [
+    "Margaret Landon (September 7, 1903 – December 4, 1993) was an American writer best remembered for \"Anna and the King of Siam\", her best-selling 1944 novel of the life of Anna Leonowens which eventually sold over a million copies and was translated into more than twenty languages.",
+    " In 1950, Landon sold the musical play rights to Richard Rodgers and Oscar Hammerstein II, who created the musical \"The King and I\" from her book.",
+    " A later work, \"Never Dies the Dream\", appeared in 1949.",
+    "Dame Elizabeth Rosemond Taylor, DBE (February 27, 1932 – March 23, 2011) was a British-American actress, businesswoman, and humanitarian.",
+    " She began her career as a child actress in the early 1940s, and was one of the most popular stars of classical Hollywood cinema in the 1950s.",
+    " She continued her career successfully into the 1960s, and remained a well known public figure for the rest of her life.",
+    " In 1999, the American Film Institute named her the seventh-greatest female screen legend."
+   ]
+  },
+  {
+   "id": "multihop-rag-1252",
+   "sentences": [
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.",
+    "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-765",
+   "sentences": [
+    "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry.",
+    "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told.",
+    "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "-4843437099290518220",
+   "sentences": [
+    "Because the states were preexisting political entities , the U.S. Constitution did not need to define or explain federalism in any one section but it often mentions the rights and responsibilities of state governments and state officials in relation to the federal government . The federal government has certain express powers ( also called enumerated powers ) which are powers spelled out in the Constitution , including the right to levy taxes , declare war , and regulate interstate and foreign commerce . In addition , the Necessary and Proper Clause gives the federal government the implied power to pass any law `` necessary and proper '' for the execution of its express powers . Other powers -- the reserved powers -- are reserved to the people or the states . The power delegated to the federal government was significantly expanded by the Supreme Court decision in McCulloch v. Maryland ( 1819 ) , amendments to the Constitution following the Civil War , and by some later amendments -- as well as the overall claim of the Civil War , that the states were legally subject to the final dictates of the federal government ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1220",
+   "sentences": [
+    "If the debt continues to rise more than the economy, risks will increase, and the government may “crowd out” private investment as it competes with the private sector for funds to service its debt.",
+    "And yet, “We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr. told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."
+   ]
+  },
+  {
+   "id": "5ade636255429939a52fe896",
+   "sentences": [
+    "Kresy Wschodnie or Kresy (] , Eastern Borderlands, or Borderlands) was a region of the Second Polish Republic during the interwar period constituting nearly half of the territory of the state; where the ethnic Poles, being the largest group, were roughly equal in their number to the size of the national minorities (with notable exceptions).",
+    " It was drawn for the first time by the Supreme War Council as the demarcation line between the newly emerging states, the Second Polish Republic, and the Soviet Union."
+   ]
+  },
+  {
+   "id": "8881606849310681343",
+   "sentences": [
+    "Due to the high salinity , very few fish species can tolerate living in the Salton Sea . Introduced tilapia are the main fish that can tolerate the high salinity levels and pollution . Other freshwater fish species live in the rivers and canals that feed the Salton Sea , including threadfin shad , carp , red shiner , channel catfish , white catfish , largemouth bass , mosquitofish , sailfin molly , and the vulnerable desert pupfish ."
+   ]
+  },
+  {
+   "id": "775172980988648781",
+   "sentences": [
+    "The centerpiece of contemporary Thanksgiving in the United States and Canada is a large meal , generally centered on a large roasted turkey . It is served with a variety of side dishes which vary from traditional dishes such as mashed potatoes , stuffing , and cranberry sauce , to ones that reflect regional or cultural heritage . The majority of the dishes in the traditional American version of Thanksgiving dinner are made from foods native to the New World , as according to tradition the Pilgrims received these foods , or learned how to grow them , from the Native Americans . Thanksgiving dinner is the largest eating event in the United States ; people eat more on Thanksgiving than on any other day of the year ."
+   ]
+  }
+ ]
+}

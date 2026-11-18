@@ -1,0 +1,247 @@
+[
+ {
+  "id": "a035-8bbd6d810e8c7abe",
+  "facts": [
+   {
+    "fact": "2.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "This whole line of argument is called “market definition.”"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a051-65c4625ec045e2d0",
+  "facts": [
+   {
+    "fact": "2.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Alameda Research’s former CEO, Caroline Ellison"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a002-272bb288640d8b64",
+  "facts": [
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "James is seeking $250 million in penalties and a ban on Trump doing business in New York, his home state."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a048-432b64c3da4ced70",
+  "facts": [
+   {
+    "fact": "3.2",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a076-4cfa7a1a8f78e2c9",
+  "facts": [
+   {
+    "fact": "1.4",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a009-211b1942bc8b7590",
+  "facts": [
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a057-f423575513314993",
+  "facts": [
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a010-190cef296b47ad64",
+  "facts": [
+   {
+    "fact": "3.4",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a084-f624083bbb5e9b7f",
+  "facts": [
+   {
+    "fact": "1.2",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a032-135e185c6ade25ff",
+  "facts": [
+   {
+    "fact": "2.5",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a075-eaf782a72268976a",
+  "facts": [
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "The group included: Alexander Bogdanov, Maxim Gorky"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a121-1fff541da3bf716d",
+  "facts": [
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Anatoly Timofeevich Fomenko (Russian: Анато́лий Тимофе́евич Фоме́нко ) (born 13 March 1945 in Stalino, USSR) is a Soviet and Russian mathematician"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a066-095c0d609b718d17",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a127-4969ac5e46f84c95",
+  "facts": [
+   {
+    "fact": "2.0",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a099-0516c698efeac08a",
+  "facts": [
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a067-003b42695f60dc7a",
+  "facts": [
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Naguib Mahfouz (Arabic: نجيب محفوظ‎ ‎ \"Nagīb Maḥfūẓ \", ] ; December 11, 1911"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a021-0625e5e3df8c26e2",
+  "facts": [
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "And after Bankman-Fried left Jane Street"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a056-d917c08b837f0e70",
+  "facts": [
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a083-2ceca2185110ec61",
+  "facts": [
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a033-923b7268a6533edc",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ }
+]

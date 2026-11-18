@@ -1,0 +1,43 @@
+[
+ {"id": "multihop-rag-1155", "sentences": [
+   ["Altman is not trained as an AI engineer.", "Altman is now 38 years old.", "Altman has been seen as a Silicon Valley wunderkind since his early 20s."],
+   ["The board's language is a basis for a theory.", "The way giant tech companies work is a basis for a theory.", "The theory is the prevailing theory floating around right now."]
+ ]},
+ {"id": "5a8bc29a5542995d1e6f1446", "sentences": [
+   ["\"Quiet in Heaven\" / \"Song of Liberty\" is a double A-side single.", "\"Quiet in Heaven\" / \"Song of Liberty\" is the only official release by Faith No Man.", "Faith No Man is stylised as Faith•No Man•.", "The single was released before the majority of Faith No Man's members quit.", "After the majority of Faith No Man's members quit, they formed Faith No More."],
+   ["The band settled on its current name in 1982.", "Before settling on its current name in 1982, the band performed under the name Sharp Young Men.", "The band later performed under the name Faith No Man."]
+ ]},
+ {"id": "multihop-rag-1092", "sentences": [
+   ["His career has only blossomed in the years since he took that trip.", "Some artists might feel trepidation about attaining so much success from such an early age.", "Mitchell is clear-eyed."],
+   ["Since then, he has been linked to club jobs in Europe.", "He opted to stick around with the national team."]
+ ]},
+ {"id": "multihop-rag-1825", "sentences": [
+   ["Kelce averages 81.3 receiving yards per game against the Raiders since 2019.", "Kelce is an All-Pro tight end.", "Kelce's average receiving yards against the Raiders suggest he is in line for a productive outing.", "Kelce could potentially snap his four-game scoring drought."],
+   ["The first link between Swift and Kelce was established in 2016.", "In 2016, Kelce played the classic game \"Kiss, Marry, Kill\" and that is when the first link between Swift and Kelce was established.", "Kelce helped bring his team to Super Bowl victory in 2020.", "Kelce helped bring his team to Super Bowl victory in 2023."]
+ ]},
+ {"id": "multihop-rag-2326", "sentences": [
+   ["In the year since Altman catapulted ChatGPT to global fame, Altman has become Silicon Valley's sought-after voice on the promise of artificial intelligence.", "In the year since Altman catapulted ChatGPT to global fame, Altman has become Silicon Valley's sought-after voice on the potential dangers of artificial intelligence.", "Altman catapulted ChatGPT to global fame.", "Altman's exit was sudden and mostly unexplained.", "Altman's sudden and mostly unexplained exit brought uncertainty to the industry's future."],
+   ["This week's coverage includes Sam Altman backing a teen's AI startup.", "This week's coverage includes Google's hardware event.", "The Google hardware event coverage includes first impressions of the Pixel 8 Pro.", "This week's coverage includes Flexport drama.", "This week's coverage includes the ongoing FTX fallout."],
+   ["The board's language is a basis for a theory.", "The way giant tech companies work is a basis for a theory.", "The theory is the prevailing theory floating around right now."]
+ ]},
+ {"id": "4980328185343503580", "sentences": [
+   ["\"You'll Never Find Another Love Like Mine\" was written by Kenny Gamble and Leon Huff.", "\"You'll Never Find Another Love Like Mine\" is a song performed by R&B singer Lou Rawls.", "\"You'll Never Find Another Love Like Mine\" is on Lou Rawls' 1976 album All Things in Time.", "\"You'll Never Find Another Love Like Mine\" proved to be Rawls' breakthrough hit.", "\"You'll Never Find Another Love Like Mine\" reached number one on the R&B chart.", "\"You'll Never Find Another Love Like Mine\" reached number one on the Easy Listening chart.", "\"You'll Never Find Another Love Like Mine\" reached number four on the dance chart.", "\"You'll Never Find Another Love Like Mine\" reached number two on the US Billboard Hot 100.", "On the Billboard Hot 100, \"You'll Never Find Another Love Like Mine\" was kept from the top spot for two weeks by \"You Should Be Dancing\" by The Bee Gees and by \"(Shake, Shake, Shake) Shake Your Booty\" by KC and the Sunshine Band, respectively.", "\"You'll Never Find Another Love Like Mine\" was the first and only time one of Rawls' records managed to reach Billboard's pop top ten.", "\"You'll Never Find Another Love Like Mine\" was the first big hit for Philadelphia International to feature the reformulated MFSB.", "Many of the original MFSB members left Gamble and Huff for better opportunities.", "The song started Lou Rawls' live shows from 1977 on."]
+ ]},
+ {"id": "multihop-rag-1470", "sentences": [
+   ["He immediately left the game following the hit.", "He proceeded to the locker room following the hit.", "It was confirmed that he would not return to the game with a head injury."],
+   ["The player is a former All-Pro.", "The former All-Pro battled a lingering hamstring injury earlier this year.", "The former All-Pro received attention on the sidelines after limping off.", "The former All-Pro then left the game for further evaluation in the locker room."]
+ ]},
+ {"id": "-8650104853556692961", "sentences": [
+   ["Manchester United Football Club is a professional football club.", "Manchester United Football Club is based in Old Trafford, Greater Manchester, England.", "Manchester United Football Club competes in the Premier League, the top flight of English football.", "Manchester United Football Club is nicknamed \"the Red Devils\".", "Manchester United Football Club was founded as Newton Heath LYR Football Club in 1878.", "Manchester United Football Club changed its name to Manchester United in 1902.", "Manchester United Football Club moved to its current stadium, Old Trafford, in 1910."]
+ ]},
+ {"id": "multihop-rag-310", "sentences": [
+   ["The criminal trial for Sam Bankman-Fried was highly anticipated.", "Sam Bankman-Fried is the former CEO of bankrupt crypto exchange FTX.", "The criminal trial of Sam Bankman-Fried started on Tuesday.", "The trial is to determine whether Sam Bankman-Fried is guilty of seven counts of fraud and conspiracy."],
+   ["Before his fall, Sam Bankman-Fried made himself out to be the Good Boy of crypto.", "Sam Bankman-Fried presented himself as the trustworthy face of a sometimes-shady industry."],
+   ["Judge Lewis Kaplan intervened to ask whether Sam Bankman-Fried had ever been told by Yedidia about that money.", "Judge Lewis Kaplan's question covered whether Sam Bankman-Fried had been told about that money in words or in substance.", "It was not until Judge Lewis Kaplan intervened that Sam Bankman-Fried admitted he had been told about that money."],
+   ["The prosecution portrayed Sam Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.", "The defense argued that the FTX founder acted in good faith.", "The defense argued that the FTX founder never meant to commit fraud or steal.", "The defense argued that the FTX founder basically got in over his head."]
+ ]},
+ {"id": "5a7351785542994cef4bc539", "sentences": [
+   ["Egoyan's most critically acclaimed film is the drama \"The Sweet Hereafter\".", "\"The Sweet Hereafter\" was released in 1997.", "Egoyan received two Academy Award nominations for \"The Sweet Hereafter\".", "Egoyan's biggest commercial success is the erotic thriller \"Chloe\".", "\"Chloe\" was released in 2009."],
+   ["Chloe is a 2009 erotic thriller film.", "Chloe was directed by Atom Egoyan.", "Chloe is a remake of the 2003 French film \"Nathalie...\"."]
+ ]}
+]

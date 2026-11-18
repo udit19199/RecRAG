@@ -1,0 +1,477 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "1152f033e37e2374",
+   "gold": [
+    {
+     "sentence": "Buried Country is a highly regarded documentary film, book and soundtrack album and now also a stageshow as well.",
+     "facts": {
+      "0.0": "Buried Country is a highly regarded documentary film",
+      "0.1": "Buried Country is a highly regarded book",
+      "0.2": "Buried Country is a highly regarded soundtrack album",
+      "0.3": "Buried Country is now also a stageshow"
+     }
+    },
+    {
+     "sentence": "South of the Border is a 2009 American documentary film directed by Oliver Stone.",
+     "facts": {
+      "1.0": "South of the Border is a documentary film",
+      "1.1": "South of the Border is American",
+      "1.2": "South of the Border is from 2009",
+      "1.3": "South of the Border was directed by Oliver Stone"
+     }
+    }
+   ],
+   "items": [
+    "South of the Border (2009 film)\nSouth of the Border is a 2009 American documentary film directed by Oliver Stone.\n\n The documentary premiered at the 2009 Venice Film Festival.\n\n Writer for the project Tariq Ali calls the documentary \"a political road movie\".\n\n Stone stated that he hopes the film will help people better understand a leader who is wrongly ridiculed \"as a strongman, as a buffoon, as a clown.\"",
+    "Love Birds (musical)\nLove Birds is an original musical with book, music and lyrics by Robert J. Sherman.\n\n The musical officially premiered at the 2015 Edinburgh Fringe Festival at The Pleasance on August 7, 2015.\n\n The production was directed and choreographed by Stewart Nicholls.\n\n Prior to the Edinburgh run, there were two previews held in London at the Lost Theatre (in Stockwell) on July 28 and 29.\n\n The Original Edinburgh Cast Recording was recorded on July 30 and mixed and mastered on July 31 and August 3 and was first released by SimG Records on August 12 at the Edinburgh Festival.\n\n Two Edinburgh previews took place on August 5 and 6 with Press Night taking place on August 8.\n\n The final festival performance took place on August 31.\n\n The show starred Ruth Betteridge, Greg Castiglioni, John Guerrasio, George Knapper, Jonny Purchase, Joanna Sawyer, Anna Stolli, Rafe Watts and Ryan Willis.",
+    "Cinema of Uruguay\nThe cinema of Uruguay has a role in the culture of Uruguay and is a part of Latin American cinema.\n\n Since the late 1990s, the Uruguayan cinema undergoes a process of evolution, during which its films have received positive reviews and been internationally recognized.\n\n Over 120 films, fictions and non-fictions, have been produced since then.",
+    "The Last Mile (play)\nThe Last Mile is a Broadway play by John Wexley that ran for 289 performances from February 13, 1930 to October 1930 at the Sam H. Harris Theatre.\n\n It was produced by Herman Shumlin and staged by Chester Erskine.\n\n It is set in the death row wing of a prison.\n\n The lead role of John \"Killer\" Mears was first played by Spencer Tracy, and it was the role that bought him to the attention of Hollywood.\n\n It was later played for a time by Clark Gable.\n\n The play was adapted into a 1932 film starring Preston Foster and into a 1959 film starring Mickey Rooney.",
+    "The Colleen Bawn\nThe Colleen Bawn, or The Brides of Garryowen is a melodramatic play written by Irish playwright Dion Boucicault.\n\n It was first performed at Miss Laura Keene's Theatre, New York, on 27 March 1860 with Laura Keene playing Anne Chute and Boucicault playing Myles na Coppaleen.\n\n It was most recently performed in Dublin at the Project Arts Centre in July and August 2010.\n\n Several film versions have also been made.",
+    "Plain Clothes Theatre Productions\nPlain Clothes Theatre Productions is a Bristol-based theatre company producing contemporary plays from around the globe.\n\n Formed in 2003 by artistic director Sam Berger, the company has produced work in London, Bristol, Cheltenham, Toronto and Vancouver.\n\n Their work has included plays by Joe Orton, Laura Wade and David Mamet, and their style is based around the teachings of American acting coach Sanford Meisner.",
+    "Buried Country\nBuried Country is a highly regarded documentary film, book and soundtrack album and now also a stageshow as well.\n\n It is a prosopography, created by noted writer Clinton Walker, that tells the story of Australian country music in the Aboriginal community by focussing on the genre's most important stars.",
+    "Clinton Walker\nClinton Walker (born 1957) is an Australian writer, best known for his works on popular music but with a broader interest in social and cultural history and theory.\n\n Sydney's \"Sun-Herald\" has called him \"our best chronicler of Australian grass-roots culture.\"\n\n He has always been ahead of the curve.\n\n As \"Rhythms\" magazine said in 2015, \"Like many of Walker’s projects, \"Buried Country\" was at least a decade ahead of its time,\" and as such he is remarkable as a critic who has exerted a pro-active impact on Australian music and its development; groundbreaking books like \"Inner City Sound\" (1981) and \"Buried Country\" (2000) especially have informed and inspired successive generations of musicians.\n\n Similarly, while he found best-selling success as Bon Scott's biographer, Walker's non-music books like \"Football Life\" (1998) and \"Golden Miles\" (2005) have innovatively offered an appreciation of subjects hitherto hardly deemed worthy of serious consideration.",
+    "Bruce Rowland\nBruce Rowland (born May 9, 1942 in Melbourne) is a well-known Australian composer.\n\n He composed the soundtrack for the 1982 movie \"The Man from Snowy River\", as well as the soundtrack for its 1988 sequel \"The Man from Snowy River II\" (which has the United States title of \"Return to Snowy River\", and the United Kingdom title of \"The Untamed\").\n\n Both films were based on Banjo Paterson's poem The Man from Snowy River.\n\n His other film scores include \"Now and Forever\" (1983), \"Phar Lap\" (1983), \"Bushfire Moon\" (1987), \"Cheetah\" (1989), \"Weekend with Kate\" (1990), \"Gross Misconduct\" (1993), \"Andre\" (1994), \"Lightning Jack\" (1994), \"Zeus and Roxanne\" (1997) and the TV movie \"\" (1997).",
+    "Marisha Chamberlin\nMarisha Anne Chamberlain (born January 6, 1952) is an American writer.\n\n Her most recent work, the libretto for \"Mortals & Angels\", a collaboration with American composer Carol Barnett, premiered at Carnegie Hall in 2016, a companion piece to their widely produced collaborative piece, \"The World Beloved: A Bluegrass Mass\".\n\n Her stage plays, both original works and adaptations are widely produced.\n\n Her debut novel, \"The Rose Variations\", was published by Soho Press in 2009.\n\n Her play, \"Scheherazade\", won the Dramatists Guild/CBS National Award, and in her screenplay version, played on public television across the country, and was screened at the British Film Institute Festival in the category of Best of American Public Television."
+   ]
+  },
+  {
+   "id": "f3893044ac61d3b9",
+   "gold": [
+    {
+     "sentence": " His exploits in that battle were described by Hal Moore in, \"We Were Soldiers Once and Young\".",
+     "facts": {
+      "0.0": "The exploits of the man referred to here in that battle were described by Hal Moore.",
+      "0.1": "Hal Moore described the exploits in the book 'We Were Soldiers Once and Young'."
+     }
+    },
+    {
+     "sentence": "Harold Gregory \"Hal\" Moore, Jr. (February 13, 1922 – February 10, 2017) was a United States Army lieutenant general and author.",
+     "facts": {
+      "1.0": "Harold Gregory 'Hal' Moore, Jr. was born on February 13, 1922.",
+      "1.1": "Harold Gregory 'Hal' Moore, Jr. died on February 10, 2017.",
+      "1.2": "Harold Gregory 'Hal' Moore, Jr. was a United States Army lieutenant general.",
+      "1.3": "Harold Gregory 'Hal' Moore, Jr. was an author."
+     }
+    }
+   ],
+   "items": [
+    "Frank A. Armstrong\nFrank Alton Armstrong Jr. (May 24, 1902 – August 20, 1969) was a lieutenant general of the United States Air Force.\n\n As a brigadier general in the United States Army Air Forces during World War II, he was the inspiration for the main character in the novel and subsequent film, \"Twelve O'Clock High.\"\n\n After the war, he held a variety of senior leadership positions prior to and following the establishment of the USAF as an independent service in 1947.\n\n Promoted to major general in 1950, he advanced to lieutenant general in 1956 and retired at that rank in 1962.",
+    "Matthew Ridgway\nGeneral Matthew Bunker Ridgway (March 3, 1895 – July 26, 1993) was the 19 Chief of Staff of the United States Army.\n\n He served with great distinction during World War II, where he was the Commanding General (CG) of the 82nd Airborne Division, leading it in action in Sicily, Italy and Normandy, before taking command of the newly formed XVIII Airborne Corps in August 1944, holding this post until the end of the war, commanding it in the Battle of the Bulge, Operation Varsity and the Western Allied invasion of Germany.",
+    "George McMillin\nGeorge Johnson McMillin (November 25, 1889 – August 29, 1983 ) was a United States Navy Rear Admiral who served as the 38th and final Naval Governor of Guam.\n\n He graduated from the United States Naval Academy in 1911 and served as an officer during four separate conflicts: World War I, the occupation of the Dominican Republic, the United States occupation of Veracruz, and World War II.\n\n He served on the staff of both the Naval Academy and the Naval War College as well.\n\n He is most remembered as the commander who surrendered Guamanian forces to a much larger Japanese force during the First Battle of Guam, only the second battle of World War II involving the United States.\n\n He had previously evacuated all but one civilian American citizen from the island and attempted to rebuild defenses after a strong typhoon devastated the island the year before.\n\n On December 8, 1941, Japanese forces invaded Guam and McMillin surrendered two days later.\n\n He spent the rest of the war at various Japanese prisoner of war camps.",
+    "Hal Moore\nHarold Gregory \"Hal\" Moore, Jr. (February 13, 1922 – February 10, 2017) was a United States Army lieutenant general and author.\n\n He was a recipient of the Distinguished Service Cross, which is the U.S. military's second highest decoration for valor, and was the first of his West Point class (1945) to be promoted to brigadier general, major general, and lieutenant general.",
+    "Myron F. Diduryk\nMyron F. Diduryk (July 15, 1938 to April 24, 1970) was a Ukrainian-American United States Army Major, who played a key role as an infantry company commander in the Battle of Ia Drang, the first major battle of the Vietnam War.\n\n His exploits in that battle were described by Hal Moore in, \"We Were Soldiers Once and Young\".\n\n Moore said that Diduryk was, “… the finest battlefield company commander I had ever seen, bar none.”\n\n Diduryk was killed in action on his second tour in Vietnam.",
+    "Kenneth Anderson (British Army officer)\nGeneral Sir Kenneth Arthur Noel Anderson, (25 December 1891 – 29 April 1959) was a senior British Army officer who saw service in both World wars.\n\n He is mainly remembered as the commander of the British First Army during Operation Torch, the Allied invasion of North Africa.\n\n He had an outwardly reserved character and did not court popularity either with his superiors or with the public.\n\n His American superior, General Dwight D. Eisenhower, wrote that he was \"blunt, at times to the point of rudeness\".\n\n In consequence he is less well known than many of his contemporaries.\n\n Richard Mead wrote that \"He handled a difficult campaign more competently than his critics suggest, but competence without flair was not good enough for a top commander in 1944\".",
+    "William K. MacNulty\nWilliam Kirk MacNulty (May 22, 1892 - August 3, 1964) was a U. S. Marine with a long and distinguished record.\n\n He was a young U.S. Marine Corps Second Lieutenant during World War One and saw action at the Battle of the Argonne Forest.\n\n He served as a captain during the Second U.S. Nicaraguan Campaign (1926–33).\n\n During the Second World War as Lieutenant Colonel he commanded the U.S. Marine Corps defense of Guam against overwhelming Imperial Japanese forces during the First Battle of Guam.\n\n He was incarcerated by the Japanese as a prisoners of war.\n\n He was promoted to Brigadier General during captivity and retired from military service in 1946.\n\n He is buried at the Golden Gate National Cemetery in San Bruno, San Mateo County, California.",
+    "Michael Herr\nMichael David Herr (April 13, 1940 – June 23, 2016) was an American writer and war correspondent, known as the author of \"Dispatches\" (1977), a memoir of his time as a correspondent for \"Esquire magazine\" (1967–1969) during the Vietnam War.\n\n The book was called the best \"to have been written about the Vietnam War\" by \"The New York Times Book Review\"; novelist John le Carré called it \"the best book I have ever read on men and war in our time.\"\n\n Herr later was credited with pioneering the literary genre of the nonfiction novel, along with authors such as Truman Capote, Norman Mailer, and Tom Wolfe.",
+    "Andrew Davis Bruce\nLieutenant General Andrew Davis Bruce (September 14, 1894 – July 28, 1969) was an American academic and soldier who served as the third president of the University of Houston.\n\n He retired from the United States Army in 1954 as a lieutenant general after seeing action in both World War I and World War II and founding Fort Hood, Texas.\n\n Three countries, France, the Philippines, and the United States, awarded him service medals, including the Distinguished Service Cross, the U.S. Army's second highest military decoration.\n\n Bruce is interred in Arlington National Cemetery.",
+    "Mark E. Mitchell\nMark E. Mitchell is the current Acting Assistant Secretary of Defense for Special Operations and Low-Intensity Conflict of the United States Department of Defense.\n\n A retired Colonel, Mitchell was the first member of the United States Army to be awarded the Distinguished Service Cross during the War in Afghanistan and was the first to receive the award since the Vietnam War.\n\n In 2003, he received the award for his actions during the Battle of Qala-i-Jangi, which took place in late November – early December 2001."
+   ]
+  },
+  {
+   "id": "100359947cbdd75f",
+   "gold": [
+    {
+     "sentence": "Brainerd Lakes Regional Airport (IATA: BRD, ICAO: KBRD, FAA LID: BRD) is a public use airport located three nautical miles (6 km) northeast of the central business district of Brainerd, a city in Crow Wing County, Minnesota, United States.",
+     "facts": {
+      "0.0": "Brainerd Lakes Regional Airport has IATA code BRD.",
+      "0.1": "Brainerd Lakes Regional Airport has ICAO code KBRD.",
+      "0.2": "Brainerd Lakes Regional Airport has FAA LID BRD.",
+      "0.3": "Brainerd Lakes Regional Airport is a public use airport.",
+      "0.4": "Brainerd Lakes Regional Airport is located three nautical miles (6 km) northeast of the central business district of Brainerd.",
+      "0.5": "Brainerd is a city in Crow Wing County, Minnesota, United States."
+     }
+    },
+    {
+     "sentence": "Salt Lake City International Airport (IATA: SLC, ICAO: KSLC, FAA LID: SLC) is a civil-military airport located about 4 miles west of Downtown Salt Lake City, Utah in the United States.",
+     "facts": {
+      "1.0": "Salt Lake City International Airport has IATA code SLC.",
+      "1.1": "Salt Lake City International Airport has ICAO code KSLC.",
+      "1.2": "Salt Lake City International Airport has FAA LID SLC.",
+      "1.3": "Salt Lake City International Airport is a civil-military airport.",
+      "1.4": "Salt Lake City International Airport is located about 4 miles west of Downtown Salt Lake City.",
+      "1.5": "Downtown Salt Lake City is in Utah, United States."
+     }
+    }
+   ],
+   "items": [
+    "Green Line (TRAX)\nThe Green Line is a light rail line on the Utah Transit Authority's (UTA) TRAX system in Salt Lake City, Utah, in the United States, operated by the Utah Transit Authority (UTA).\n\n It opened on August 7, 2011, and runs between Airport Station at the Salt Lake City International Airport and West Valley Central Station in West Valley City (via Downtown Salt Lake City) serving a total of eighteen stations: thirteen in Salt Lake City, one in South Salt Lake, and four in West Valley City.",
+    "WLMR\nWLMR (1450 AM) is a radio station broadcasting a religious format.\n\n Licensed to Chattanooga, Tennessee, USA, the station serves the Chattanooga area.\n\n The station is currently owned by Wilkins Communications Network, Inc. and features programming from USA Radio Network.\n\n In the early 1980s, the station was automated and played country music from studios in a strip mall on Brainerd Rd.\n\n It was also Chattanooga's first talk radio station when it held the WZRA call letters.\n\n WZRA was the first home of Jeff Styles, and also featured well known personalities such as Kelly McCoy and Robert T. Nash.",
+    "Temple Square (UTA station)\nTemple Square is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system.\n\n The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper.\n\n The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+    "Salt Lake City International Airport\nSalt Lake City International Airport (IATA: SLC, ICAO: KSLC, FAA LID: SLC) is a civil-military airport located about 4 miles west of Downtown Salt Lake City, Utah in the United States.\n\n The airport is the closest commercial airport for more than 2.5 million people and is within a 30-minute drive of nearly 1.3 million jobs.",
+    "City Center (UTA station)\nCity Center is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system.\n\n The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper.\n\n The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+    "Brainerd Lakes Regional Airport\nBrainerd Lakes Regional Airport (IATA: BRD, ICAO: KBRD, FAA LID: BRD) is a public use airport located three nautical miles (6 km) northeast of the central business district of Brainerd, a city in Crow Wing County, Minnesota, United States.\n\n The airport is owned by the city and county.\n\n It is mostly used for general aviation but is also served by one commercial airline.",
+    "North Temple Bridge/Guadalupe (UTA station)\nNorth Temple Bridge/Guadalupe is a light rail and commuter rail station in Salt Lake City, Utah, United States served by the Green Line of Utah Transit Authority's (UTA) TRAX light rail system and by the \"FrontRunner\", UTA's commuter rail train that operates along the Wasatch Front with service from Pleasant View in northern Weber County through Ogden, Davis County, Salt Lake City, and Salt Lake County to Provo in central Utah County.\n\n The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City) and connects with the rest of the TRAX system and UTA's S Line streetcar.\n\n Although the official name of the station is \"North Temple Bridge/Guadalupe\", it often referenced by UTA as simply North Temple.",
+    "Salt Lake City Air Route Traffic Control Center\nSalt Lake City Air Route Traffic Control Center (ZLC) (radio communications \"Salt Lake Center\") is one of 22 FAA Area Control Centers in the United States.\n\n It is located in Salt Lake City, Utah, adjacent to Salt Lake City International Airport.\n\n It was opened in 1939 and was originally located on the third floor of the old Salt Lake City International Airport terminal.\n\n The Salt Lake Center (ZLC) covers one of the largest geographical areas of any other control center, totaling approximately 350,000 squares miles.",
+    "Brunswick Golden Isles Airport\nBrunswick Golden Isles Airport (IATA: BQK, ICAO: KBQK, FAA LID: BQK) , previously known as Glynco Jetport, is a county-owned public-use airport located five nautical miles (9 km) north of the central business district of Brunswick, a city in Glynn County, Georgia, United States.\n\n It is mostly used for general aviation, but is also served by one commercial airline.",
+    "Arena (UTA station)\nArena is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system.\n\n The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper.\n\n The Green Line has service from the Salt Lake City International Airport and to West Valley City via Downtown Salt Lake City."
+   ]
+  },
+  {
+   "id": "a032a8584e4c145f",
+   "gold": [
+    {
+     "sentence": "On February 25, 2017 he lost to Jarrett Hurd for the International Boxing Federation light middleweight world title.",
+     "facts": {
+      "0.0": "On February 25, 2017, this person lost to Jarrett Hurd.",
+      "0.1": "The February 25, 2017 loss was for the International Boxing Federation light middleweight world title."
+     }
+    },
+    {
+     "sentence": "Jarrett Hurd (born August 31, 1990) is an American light middleweight boxer from Accokeek, Maryland.",
+     "facts": {
+      "1.0": "Jarrett Hurd was born on August 31, 1990.",
+      "1.1": "Jarrett Hurd is an American light middleweight boxer.",
+      "1.2": "Jarrett Hurd is from Accokeek, Maryland."
+     }
+    }
+   ],
+   "items": [
+    "Tony Harrison (boxer)\nOn February 25, 2017 he lost to Jarrett Hurd for the International Boxing Federation light middleweight world title.\n\n The fight was originally supposed to be a title eliminator for the right to fight Jermall Charlo, but when Charlo vacated the title, the fight was elevated to be for the vacant title.\n\n Harrison boxed well for majority of the first half of the fight but began to fade thereafter the finish came in round 9 when Hurd landed a right hand that floored Harrison,",
+    "Nedal Hussein\nOriental and Pacific Boxing Federation (OPBF) featherweight title against Hiroyuki Enoki, and Oriental and Pacific Boxing Federation (OPBF) super featherweight title against Takashi Uchiyama, his professional fighting weight varied from 117+1/4 lb , i.e. bantamweight to 132+3/4 lb , i.e. lightweight.",
+    "Jack Marshman\nJack \"Hammer\" Marshman (born December 19, 1989) is a Welsh mixed martial artist.\n\n He was the Middleweight Cage Warriors Fighting Championship (CWFC) champion and Lonsdale Middleweight Champion.\n\n He currently competes in Middleweight division in the Ultimate Fighting Championship(UFC).",
+    "Jarrett Hurd\nJarrett Hurd (born August 31, 1990) is an American light middleweight boxer from Accokeek, Maryland.",
+    "Scott Dixon (boxer)\nfeatherweight to 167+1/2 lb , i.e. Super middleweight.",
+    "Scott Dixon (boxer)\n\"Super\" Scott Dixon ( (1976--) 28 1976 (age (2017)-(1976)-((11)<(09)or(11)==(09)and(30)<(28)) ) ) born in Hamilton is a Scottish professional feather/super feather/light/light welter/welter/light middle/middle/super middleweight boxer of the 1990s, 2000s and 2010s, who won the British Boxing Board of Control (BBBofC) Scottish Area welterweight title, World Boxing Board (WBB) welterweight title, World Boxing Union (German Version) super middleweight title, and Commonwealth welterweight title, and was a challenger for the World Athletic Association (WAA) welterweight title against Michael Carruth, BBBofC British welterweight title against Derek Roche, World Boxing Federation (WBF) light middleweight title against Steve Roberts, World Boxing Organization (WBO) Inter-Continental light middleweight title against Anthony Farnell, and World Boxing Union (WBU) light middleweight title against Mehrdad Takalobigashi, his professional fighting weight varied from 125 lb , i.e.",
+    "Nedal Hussein\nNedal \"Skinny\" Hussein (born 1 December 1977) is an Australian professional bantam/super bantam/feather/super feather/Lightweight boxer of the 1990s and 2000s who won the Australian super bantamweight title, Australian bantamweight title, International Boxing Federation (IBF) Pan Pacific featherweight title, World Boxing Federation (WBF) featherweight title, World Boxing Union (WBU) super bantamweight title, World Boxing Organization (WBO) Asia Pacific super featherweight title, International Boxing Federation (IBF) Pan Pacific super featherweight title, International Boxing Organization (IBO) Inter-Continental super featherweight title, and Commonwealth super bantamweight title, and was a challenger for the World Boxing Council (WBC) International super bantamweight title against Manny Pacquiao, World Boxing Council (WBC) super bantamweight title against Óscar Larios, World Boxing Organization (WBO) featherweight title against Scott Harrison, Oriental and Pacific Boxing Federation (OPBF) featherweight title against Hiroyuki Enoki,",
+    "Kevin Kelly (boxer)\nKevin \"Bones\" Kelly (born August 7, 1969 in La Perouse, New South Wales) is an Australian retired professional welter/light middle/middleweight boxer of the 1990s and 2000s who won the South Australia State welterweight title, New South Wales (Australia) State welterweight title, New South Wales (Australia) State light middleweight title, Australian light middleweight title, Pan Asian Boxing Association (PABA) light middleweight title, World Boxing Union (WBU) middleweight title, and Commonwealth light middleweight title (twice), and was a challenger for the World Boxing Association (WBA) World light middleweight title against David Reid, and World Boxing Organization (WBO) Inter-Continental light middleweight title against Gary Lockett, his professional fighting weight varied from 142 lb , i.e. welterweight to 158+1/4 lb , i.e. middleweight.",
+    "Vitor Belfort\nVitor Vieira Belfort (] ; born April 1, 1977) is a Brazilian mixed martial artist currently competing in the Middleweight division of the Ultimate Fighting Championship.\n\n He is the former UFC Light Heavyweight Champion, UFC 12 Heavyweight Tournament Champion, and the Cage Rage World Light Heavyweight Champion.\n\n As of June 16, 2017, he is the #11 contender in official UFC Middleweight rankings.",
+    "Richard Williams (boxer)\nRichard \"The Secret\" Williams ( (1971--) 09 1971 (age (2017)-(1971)-((11)<(05)or(11)==(05)and(30)<(09)) ) is an English professional light middle/middle/super middleweight boxer of the 1990s, 2000s and 2010s who won the International Boxing Organization (IBO) light middleweight title, and Commonwealth light middleweight title (twice), and was a challenger for the International Boxing Organization (IBO) light middleweight title against Sergio Gabriel Martinez, and British Boxing Board of Control (BBBofC) British middleweight title against Howard Eastman, his professional fighting weight varied from 149+3/4 lb , i.e. light middleweight to 162+1/4 lb , i.e. super middleweight.\n\n Richard Williams is trained by Brian Lawrence, and managed by Barry Hearn, and John Rooney."
+   ]
+  },
+  {
+   "id": "9c19e875c1cff097",
+   "gold": [
+    {
+     "sentence": "Kelechukwu \"Kele\" Okereke (born 13 October 1981), also known by the mononym Kele, is a British musician, best known as the lead singer and rhythm guitarist of the indie rock band Bloc Party.",
+     "facts": {
+      "0.0": "Kelechukwu 'Kele' Okereke was born on 13 October 1981.",
+      "0.1": "Kelechukwu 'Kele' Okereke is also known by the mononym Kele.",
+      "0.2": "Kelechukwu 'Kele' Okereke is a British musician.",
+      "0.3": "Kelechukwu 'Kele' Okereke is best known as the lead singer and rhythm guitarist of the indie rock band Bloc Party."
+     }
+    },
+    {
+     "sentence": "Jon Hume (born 6 November 1983) is the lead singer of Evermore.",
+     "facts": {
+      "1.0": "Jon Hume was born on 6 November 1983.",
+      "1.1": "Jon Hume is the lead singer of Evermore."
+     }
+    },
+    {
+     "sentence": " Jon is the eldest of the three brothers who make up the New Zealand band Evermore.",
+     "facts": {
+      "2.0": "Jon is the eldest of the three brothers.",
+      "2.1": "The three brothers make up the New Zealand band Evermore.",
+      "2.2": "Evermore is a New Zealand band."
+     }
+    }
+   ],
+   "items": [
+    "Graph query row:\nentity: Jon Hume\nrelationship: MEMBER_OF\nrelated: Evermore",
+    "Evermore (Evermore album)\nEvermore is the self-titled international debut album by New Zealand rock band Evermore, which was also released in Australia and New Zealand on 12 March 2010.\n\n The album is a collection of songs from the band's entire history, as well as three new songs including the single \"Underground\".",
+    "Dann Hume\nDann Hume (born Daniel Benjamin Cobbe, 1 September 1987, Whangaparaoa, New Zealand) is a singer-songwriter and record producer.\n\n Hume is the youngest of three brothers (with Peter Hume and Jon Hume) who make up the alternative rock band, Evermore since 1999.",
+    "Between the Lines (Evermore song)\n\"Between the Lines\" is the first single by Evermore, taken from their third studio album \"\".\n\n Evermore's Jon Hume said that \"Between the Lines was the first song to come out of a search for a new musical experience as a band.\"\n\n It was released as a free download on Evermore's official website on 10 November 2008.",
+    "Nevermore (album)\nNevermore is the eponymous debut studio album by American heavy metal band Nevermore, released on February 14, 1995 by Century Media Records.\n\n It was singer Warrel Dane and bassist Jim Sheppard's first release after departing from their previous band, Sanctuary, in 1994.\n\n Having recruited drummer Van Williams and former Sanctuary touring guitarist Jeff Loomis, they formed the band Nevermore and began anew.",
+    "Nevermore\nNevermore is an American progressive metal band from Seattle, Washington, United States.\n\n Formed in 1991, they are known to incorporate elements from various styles such as power metal, modern hard rock, classic heavy metal and technical thrash metal.\n\n The band has been on hiatus since 2011, due to personal issues between the band members.\n\n In April 2015, lead singer Warrel Dane confirmed that Nevermore has not disbanded, and there is a possibility for them to continue in the next two years with another album.",
+    "Light Surrounding You\n\"Light Surrounding You\" is the second single by alternative rock band, Evermore, taken from their second studio album, \"Real Life\" (June 2006).\n\n It was written by Dann Hume, the group's drummer and lead singer and guitarists Jon Hume.\n\n The record is co-produced by Jon Hume.\n\n The song was released in October 2006 and peaked at No. 15 on the RIANZ Singles Chart in New Zealand and number one on the ARIA Singles Chart, making it Evermore's most successful single in Australia.\n\n It was the first single by a New Zealand artist to top the Australian charts since \"How Bizarre\" by OMC in 1996.",
+    "Jon Hume\nJon Hume (born 6 November 1983) is the lead singer of Evermore.\n\n He is a singer-songwriter, multi-instrumentalist, Record Producer and Studio owner.\n\n Jon is the eldest of the three brothers who make up the New Zealand band Evermore.",
+    "Kele Okereke\nKelechukwu \"Kele\" Okereke (born 13 October 1981), also known by the mononym Kele, is a British musician, best known as the lead singer and rhythm guitarist of the indie rock band Bloc Party.",
+    "Running (Evermore song)\n\"Running\" is the lead single by alternative rock band Evermore, taken from their second studio album, \"Real Life\" (July 2006).\n\n It was written by backing vocalist and drummer, Dann Hume.\n\n It was issued on 3 June, ahead of the album.\n\n It was co-produced by Jon with John Alagía (Dave Matthews Band, John Mayer).\n\n It peaked at No. 4 on their native RIANZ Singles Chart in New Zealand and No. 5 on their adopted country of Australia's ARIA Singles Chart."
+   ]
+  },
+  {
+   "id": "e38c1c2eaed9cdca",
+   "gold": [
+    {
+     "sentence": "Chester Erskine (November 29, 1905 – April 7, 1986) was a Hollywood and Broadway director, writer, and producer.",
+     "facts": {
+      "0.0": "Chester Erskine was born on November 29, 1905.",
+      "0.1": "Chester Erskine died on April 7, 1986.",
+      "0.2": "Chester Erskine was a Hollywood and Broadway director.",
+      "0.3": "Chester Erskine was a Hollywood and Broadway writer.",
+      "0.4": "Chester Erskine was a Hollywood and Broadway producer."
+     }
+    },
+    {
+     "sentence": "Sam Taylor (August 13, 1895, New York City – March 6, 1958, Santa Monica) was a film director, screenwriter, and producer, most active in the silent film era.",
+     "facts": {
+      "1.0": "Sam Taylor was born on August 13, 1895, in New York City.",
+      "1.1": "Sam Taylor died on March 6, 1958, in Santa Monica.",
+      "1.2": "Sam Taylor was a film director.",
+      "1.3": "Sam Taylor was a screenwriter.",
+      "1.4": "Sam Taylor was a film producer.",
+      "1.5": "Sam Taylor was most active in the silent film era."
+     }
+    }
+   ],
+   "items": [
+    "Sam Taylor (director)\nSam Taylor (August 13, 1895, New York City – March 6, 1958, Santa Monica) was a film director, screenwriter, and producer, most active in the silent film era.\n\n Taylor is best known for his comedic directorial work with Harold Lloyd and Mary Pickford, and also later worked with Laurel and Hardy.",
+    "Elizabeth Taylor\nDame Elizabeth Rosemond Taylor, DBE (February 27, 1932 – March 23, 2011) was a British-American actress, businesswoman, and humanitarian.\n\n She began her career as a child actress in the early 1940s, and was one of the most popular stars of classical Hollywood cinema in the 1950s.\n\n She continued her career successfully into the 1960s, and remained a well known public figure for the rest of her life.\n\n In 1999, the American Film Institute named her the seventh-greatest female screen legend.",
+    "Chester Erskine\nChester Erskine (November 29, 1905 – April 7, 1986) was a Hollywood and Broadway director, writer, and producer.",
+    "Clare Taylor\nClare Elizabeth Taylor MBE (born 22 May 1965) is an English sportswoman, the first woman to have played on a World Cup team in both cricket and football.\n\n She represented England at both cricket, as a member of the winning World Cup cricket team in 1993, and football (World Cup 1995).\n\n She was awarded the MBE in the Queen's Birthday Honours in 2000 for her services to women’s sport.\n\n Taylor attended Moor End High School and still has her name on the athletics records board.",
+    "Mavis Taylor\nMavis Taylor (1915 – 14 March 2007) was an Australian who was named an Australian Living Treasure for her humanitarian work for the people of East Timor in her later years.",
+    "Speedy West\nWesley Webb West (January 25, 1924 – November 15, 2003), better known as Speedy West, was an American pedal steel guitarist and record producer.\n\n He frequently played with Jimmy Bryant, both in their own duo and as part of the regular Capitol Records backing band for Tennessee Ernie Ford and many others.\n\n He also played on Loretta Lynn's first single.",
+    "Mary Elizabeth Bliss\nMary Elizabeth \"Betty\" Taylor Bliss Dandridge, born Mary Elizabeth Taylor (April 20, 1824 – July 25, 1909), was the youngest of the three surviving daughters of President Zachary Taylor (1849-1850) and Margaret Mackall Smith Taylor.",
+    "Edmund Mortimer (actor)\nEdmund Mortimer (21 August 1874 – 21 May 1944) was an American actor and film director.\n\n He appeared in 251 films between 1913 and 1945.\n\n He also directed 23 films between 1918 and 1928.\n\n He was born in New York, New York and died in Los Angeles, California.",
+    "Harry Sweet\nHarry Sweet (October 2, 1901 – June 18, 1933) was an American actor, director and screenwriter.\n\n He appeared in 57 films between 1919 and 1932.\n\n He also directed 54 films between 1920 and 1933, including one Harry Langdon short, two of the Tay Garnett- penned comedies Stan Laurel made for Joe Rock, and fifteen of the earliest entries in the Edgar Kennedy \"Average Man\" series.",
+    "Dick Herrick\nThe Very Rev Richard William Herrick (3 December 1913 - 5 May 1981) was an eminent Anglican priest in the 20th century.\n\n He was educated at King Edward VI School Retford and Leeds University and was initially a civil servant.\n\n He was ordained after a period of study at the College of the Resurrection, Mirfield in 1940.\n\n he held curacies at Duston and Portsea, Portsmouth before being appointed Vicar of St Michael’s, Northampton in 1947, a post he held for a decade.\n\n He was then a Canon Residentiary of Chelmsford Cathedral until 1978 when he was appointed Provost of Chelmsford.\n\n He died in post."
+   ]
+  },
+  {
+   "id": "46f5c1c289df3777",
+   "gold": [
+    {
+     "sentence": "Paul Clyne was the District Attorney of Albany County, New York from January 2001 through December 2004.",
+     "facts": {
+      "0.0": "Paul Clyne was the District Attorney of Albany County, New York.",
+      "0.1": "Paul Clyne held this office from January 2001.",
+      "0.2": "Paul Clyne held this office through December 2004."
+     }
+    },
+    {
+     "sentence": "P. David Soares (born October 26, 1969, Brava, Cape Verde) is the Albany County, N.Y. District Attorney.",
+     "facts": {
+      "1.0": "P. David Soares was born on October 26, 1969.",
+      "1.1": "P. David Soares was born in Brava, Cape Verde.",
+      "1.2": "P. David Soares is the District Attorney of Albany County, New York."
+     }
+    }
+   ],
+   "items": [
+    "Doug Clifford\nDouglas \"Cosmo\" Clifford (born April 24, 1945 in Palo Alto, California) is an American drummer, best known as a founding member of Creedence Clearwater Revival.\n\n After the group dissolved in the early 1970s, Clifford released a solo album and later joined CCR bassist Stu Cook in the Don Harrison Band.\n\n In 1995, Clifford and Cook formed the band Creedence Clearwater Revisited, performing live versions of Creedence Clearwater Revival songs.",
+    "City Cruises\nCity Cruises is a public limited company that operates scheduled public sightseeing cruises on the River Thames in London, serving Westminster, London Eye, Tower and Greenwich piers every day throughout the year.\n\n It operates the services mainly using purpose-built wheelchair-accessible 'RiverLiner' vessels, which have a large open top deck and enclosed lower saloon with panoramic windows and bars, backed up by some ex-Paris single-deck conservatory-style sightseeing boats.\n\n The company also owns a number of other boats with which it provides a variety of private charter and waterage services on the River Thames.\n\n City Cruises owns the London Showboat brand, under which it operates an evening dinner, cabaret and dance cruise from Westminster Pier throughout the year, and also owns and operates the Restaurant Ship Hispaniola, which is permanently moored alongside Victoria Embankment close to Embankment Underground station in central London.",
+    "Skip Bolen\nSkip Bolen is a Southern photographer of musicians, architecture, lifestyle and the culture of New Orleans.\n\n Born in Lafayette, Louisiana, he moved to New Orleans where he began his publishing career as a designer and art director.\n\n After moving to New York City, he began working at \"House & Garden,\" renamed \"HG,\" as Senior Designer in January 1988 with Anna Wintour and Alexander Liberman at Condé Nast Publications.\n\n Spending evenings in jazz clubs, he began photographing jazz musicians in New York City and often when he regularly returned to New Orleans.\n\n After three years at Condé Nast Publications in New York City, he returned to New Orleans to pursue his jazz photography full-time.\n\n In 1998, he moved to Los Angeles where he became art director of House of Blues for seven years while photographing at night and weekends.\n\n He continued photographing jazz musicians and had his first major solo exhibition at the Jazz Bakery in Los Angeles on August 9, 2002.\n\n On July 4, 2006, he returned to New Orleans to pursue photography full-time documenting the recovery and rebuilding of New Orleans since Hurricane Katrina, documenting the jazz scene, night-time photography and other photographic projects.",
+    "David Soares\nP. David Soares (born October 26, 1969, Brava, Cape Verde) is the Albany County, N.Y. District Attorney.\n\n He is a Democrat.",
+    "Paul Soniat\nPaul Soniat is the Director of the New Orleans City Park Botanical Gardens.\n\n He was born at the old Touro Hospital in New Orleans.\n\n His family has been in New Orleans since 1727 and he grew up and later lived on the street bearing his family name.\n\n Paul is a self-taught piano player, and has released two CDs, absorbing the sights, sounds, and flavor of New Orleans.\n\n His first CD, titled \"Born in New Orleans\", was released in April 2005.\n\n His second CD was released after Hurricane Katrina hit the Gulf coast and the New Orleans' levees failed.\n\n This second CD is appropriately titled \"Below the Water Line\".",
+    "Scott Treleaven\nScott Treleaven is a Canadian artist whose work employs a variety of media including collage, film, video, drawing, photography and installation.",
+    "Laurent Manrique\nLaurent Manrique (born March 30, 1966) is a French restaurateur and Michelin-starred chef.\n\n Currently overseeing projects in New York and San Francisco, Laurent has extensive professional experience in both locales.\n\n He was the Corporate Executive Chef of Aqua, an upscale seafood restaurant in San Francisco, where he earned 2 Michelin stars in 2006, the first time Michelin came to the San Francisco Bay Area, and again in 2007 and 2008.\n\n Upon his departure in 2009, the restaurant lost its Michelin status.\n\n For several years, he has overseen the Cafe de la Presse, located on the corner of Bush Street and Grant Avenue, as well as two wine bars: Blanc et Rouge and Rouge and Blanc.\n\n In New York, he recently opened Millesime, a seafood brasserie in the Carlton Hotel.",
+    "Paul Clyne\nPaul Clyne was the District Attorney of Albany County, New York from January 2001 through December 2004.\n\n A graduate of Albany Law School, he spent about 14 years as an assistant district attorney, before he was tapped by local politicians to replace the retiring District Attorney, Sol Greenberg.\n\n He was defeated for re-election by David Soares, first in the Democratic Party primary election in September 2004, and then in the general election in November 2004, in which he ran on an independent line.\n\n After a stint teaching at the New York Prosecutors Institute, he went into private practice as a criminal defense attorney in 2007, with an office in Albany, New York.",
+    "Stewart Spiers\nStewart Spiers was a small but innovative firm of plane-makers in Scotland, founded first of all in Ayr in Ayrshire and continuing under the registered name of Stewart Speirs Ltd [\"sic\"] in Paisley, Renfrewshire, from c. 1933 until its demise in the mid to late 1930s.\n\n Like the Glasgow firm of Alexander Mathieson & Sons, Spiers benefited hugely from the thriving industries on the Firth of Clyde in the latter half of the nineteenth century.",
+    "Richard Pleasance\nRichard Arnold Pleasance is an Australian rock musician and producer.\n\n He was a founding member of Boom Crash Opera on guitar, bass guitar, vocals and as a songwriter in 1985; they released three albums before Pleasance left in 1992.\n\n Their hit Australian Recording Industry Association (ARIA) singles, \"Great Wall\" (No. 5, 1986) and \"Onion Skin\" (No. 11, 1989) were co-written by Pleasance, who also co-produced their second album, \"These Here Are Crazy Times\" (No. 10, 1989).\n\n His debut solo release, \"Galleon\" received four nominations at the ARIA Music Awards for 1992.\n\n Pleasance composed the theme music for Australian television series, \"SeaChange\" (1998–2001), for 2006 feature film \"Kenny\" and more recently he composed the theme music for the prison drama series \"Wentworth\".\n\n Pleasance is married to Michelle and, as from May 2009, he was living in Hepburn Springs, Victoria where he has a recording studio."
+   ]
+  },
+  {
+   "id": "70a310b9a2cdc3ed",
+   "gold": [
+    {
+     "sentence": "Yucca is a genus of perennial shrubs and trees in the family Asparagaceae, subfamily Agavoideae.",
+     "facts": {
+      "0.0": "Yucca is a genus of perennial shrubs and trees.",
+      "0.1": "Yucca is in the family Asparagaceae.",
+      "0.2": "Yucca is in the subfamily Agavoideae."
+     }
+    },
+    {
+     "sentence": "Rodgersia is a genus of flowering plants in the Saxifragaceae family.",
+     "facts": {
+      "1.0": "Rodgersia is a genus of flowering plants.",
+      "1.1": "Rodgersia is in the Saxifragaceae family."
+     }
+    },
+    {
+     "sentence": " \"Rodgersia\" are herbaceous perennials originating from east Asia.",
+     "facts": {
+      "2.0": "Rodgersia are herbaceous perennials.",
+      "2.1": "Rodgersia originate from east Asia."
+     }
+    }
+   ],
+   "items": [
+    "Yucca\nYucca is a genus of perennial shrubs and trees in the family Asparagaceae, subfamily Agavoideae.\n\n Its 40-50 species are notable for their rosettes of evergreen, tough, sword-shaped leaves and large terminal panicles of white or whitish flowers.\n\n They are native to the hot and dry (arid) parts of the Americas and the Caribbean.\n\n Early reports of the species were confused with the cassava (\"Manihot esculenta\").\n\n Consequently, Linnaeus mistakenly derived the generic name from the Taíno word for the latter, \"yuca\" (spelled with a single \"c\").\n\n It is commonly found growing in rural graveyards and when in bloom the cluster of (usually pale) flowers on a thin stalk appear as floating apparitions.",
+    "Yucca aloifolia\nYucca aloifolia is the type species for the genus Yucca.\n\n Common names include aloe yucca, dagger plant, and Spanish bayonet.\n\n It grows in sandy soils, especially on sand dunes along the coast.\n\n \"Yucca aloifolia\" is native to the Atlantic and Gulf Coasts of the United States from southern Virginia south to Florida and west to the Texas Gulf Coast, to Mexico along the Yucatán coast, and to Bermuda, and parts of the Caribbean.\n\n Normally Yucca aloifolia is grown in USDA zones 8 through 11.\n\n Yucca aloifolia is a popular landscape plant in beach areas along the lower East Coast from Virginia to Florida.",
+    "Yucca glauca\nYucca glauca (syn.\n\n \"Yucca angustifolia\") is a species of perennial evergreen plant, adapted to xeric (dry)growth conditions.\n\n It is also known as small soapweed, soapweed yucca, Spanish bayonet, Great Plains yucca and beargrass.",
+    "Yucca jaliscensis\nYucca jaliscensis is a \"Yucca\" species native to the highlands of southwestern Mexico.\n\n Common names for this species include Jalisco Yucca, Jalisco Soapwort, Izote Yucca.\n\n It is native to mountainous areas at about 5000 feet in the States of Jalisco, Colima and Guanajuato.",
+    "Yucca rupicola\nYucca rupicola is a plant in the family Asparagaceae, known as the twistleaf yucca, twisted-leaf yucca, Texas yucca or twisted-leaf Spanish-dagger.\n\n The species was described by George Heinrich Adolf Scheele in 1850.\n\n This is a small, acaulescent plant with distinctive twisted leaves.\n\n It is native to the Edwards Plateau region of Texas and also to northeastern Mexico (Coahuila, Nuevo León).",
+    "Yucca × schottii\nYucca\" × \"schottii is a plant species in the genus \"Yucca\", native to southern Arizona, southwestern New Mexico, and the northern parts of Sonora and Chihuahua.\n\n.\n\n The common names are Schott's yucca, hoary yucca, and mountain yucca.\n\n The \"×\" in the name indicates that this is a nothospecies, regarded as being a natural hybrid between two other species.\n\n In this case, \"Yucca\" × \"schottii\" is believed to have originated as a hybrid between \"Y. baccata\" and \"Y. madrensis\".\n\n \"Yucca\" × \"schottii\" is firmly established and does reproduce freely in the wild.",
+    "Yucca gloriosa var. tristis\nYucca gloriosa\" var.\n\n \"tristis (syn.\n\n Yucca recurvifolia, \"Yucca gloriosa\" var.\n\n \"recurvifolia\"), known as curve-leaf yucca, curved-leaved Spanish-dagger or pendulous yucca, is a variety of \"Yucca gloriosa\".\n\n It is often grown as an ornamental plant, but is native to the southeastern United States.\n\n In contrast to \"Y. gloriosa\" var.\n\n \"tristis\", the leaves of \"Y. gloriosa\" var.\n\n \"gloriosa\" are hard stiff, erect and narrower.",
+    "Rodgersia\nRodgersia is a genus of flowering plants in the Saxifragaceae family.\n\n \"Rodgersia\" are herbaceous perennials originating from east Asia.",
+    "Yucca brevifolia\nYucca brevifolia is a plant species belonging to the genus \"Yucca\".\n\n It is tree-like in habit, which is reflected in its common names: Joshua tree, yucca palm, tree yucca, and palm tree yucca.",
+    "Hesperoyucca whipplei\nHesperoyucca whipplei (syn.\n\n \"Yucca whipplei\" ) (chaparral yucca, our Lord's candle, Spanish bayonet, Quixote yucca or foothill yucca is a species of flowering plant closely related to, and formerly usually included in, the genus \"Yucca\".\n\n It is native to southern California, United States and Baja California, Mexico, where it occurs mainly in chaparral, coastal sage scrub, and oak woodland plant communities at altitudes of 0–2500 m."
+   ]
+  },
+  {
+   "id": "57eda8759d18d448",
+   "gold": [
+    {
+     "sentence": "The 1997 European Athletics Junior Championships were held in Ljubljana, Slovenia on July 24–27.",
+     "facts": {
+      "0.0": "The 1997 European Athletics Junior Championships were held in Ljubljana, Slovenia.",
+      "0.1": "The 1997 European Athletics Junior Championships were held on July 24-27."
+     }
+    },
+    {
+     "sentence": "Ljubljana (] , ] ; also known by other, historical names) is the capital and largest city of Slovenia.",
+     "facts": {
+      "1.0": "Ljubljana is the capital of Slovenia.",
+      "1.1": "Ljubljana is the largest city of Slovenia.",
+      "1.2": "Ljubljana is also known by other, historical names."
+     }
+    }
+   ],
+   "items": [
+    "1964 European Junior Games\nThe 1964 European Junior Games was the first edition of the biennial athletics competition for European athletes aged under twenty.\n\n It was an unofficial competition without sanction from the European Athletic Association.\n\n The event was held at the 10th-Anniversary Stadium in Warsaw, Poland.\n\n The competition eventually led to the creation of the European Athletics Junior Championships in 1970.",
+    "1994 Athens International – Doubles\nHoracio de la Peña and Jorge Lozano were the defending champions, but did not participate this year.",
+    "2015 European Athletics Junior Championships\nThe 2015 European Athletics Junior Championships were the 23rd edition of the biennial European U20 athletics championships.\n\n They were held in Eskilstuna, Sweden from 16 July to 19 July.",
+    "1997 European Athletics Junior Championships\nThe 1997 European Athletics Junior Championships were held in Ljubljana, Slovenia on July 24–27.",
+    "European Athletics U20 Championships\nThe European Athletics U20 Championships (formerly named the European Athletics Junior Championships up to 2015) are the European championships for athletes who are 19 years of age or under, which is the age range recognised by the IAAF as junior athletes.\n\n The event is currently organized by the European Athletic Association.",
+    "1968 European Junior Games\nThe 1968 European Junior Games was the third edition of the biennial athletics competition for European athletes aged under twenty.\n\n It was the final edition of the competition under that name and was succeeded by the European Athletics Junior Championships in 1970.\n\n The event was held in Leipzig, part of the German Democratic Republic at that time.\n\n The competition was mainly between Eastern European countries, with Belgium, Austria, Netherlands and Greece being present from the west.",
+    "Amela Terzić\nAmela Terzić (Serbian Cyrillic: Амела Терзић, born 2 January 1993 in Priboj, FR Yugoslavia) is a Serbian middle-distance runner.\n\n She won two gold medals at 2011 European Athletics Junior Championships in Tallinn and was the junior champion at the 2012 European Cross Country Championships.\n\n She has also been a medallist in the 1500 metres at the World Junior and World Youth Championships and a gold medalist at the 2013 European U23 Championship.",
+    "European 10,000m Cup\nThe European 10,000m Cup is an annual 10,000 metres race for European athletes which was first held in 1997.\n\n The competition is organised by the European Athletics Association and first began as the European 10000 Metres Challenge after the event was removed from the European Cup programme.\n\n The competition has roots in the Iberian 10,000 metres Championships – a competition between Spanish and Portuguese athletes that was held between 1991 and 1996 – and the first five editions of the European 10000 Metres Challenge were held in the Iberian Peninsula.\n\n The event was first held under its current title in 2005.",
+    "Athletics at the 2002 Asian Games\nAthletics was contested from October 7 to October 14 at the 2002 Asian Games in Busan Asiad Main Stadium, Busan, South Korea.\n\n A total of 460 athletes (comprising 281 men and 179 women) from 39 nations took part in the competition.\n\n Afghanistan, Bhutan, Brunei, Laos and Maldives were the only nations without a representative in the events.",
+    "Ljubljana\nLjubljana (] , ] ; also known by other, historical names) is the capital and largest city of Slovenia.\n\n It has been the cultural, educational, economic, political, and administrative center of independent Slovenia since 1991.\n\n Its central geographic location within Slovenia, transport connections, concentration of industry, scientific and research institutions, and cultural tradition are contributing factors to its leading position."
+   ]
+  },
+  {
+   "id": "ddc424ef25344507",
+   "gold": [
+    {
+     "sentence": "Hänt Extra is a Swedish language weekly celebrity and youth magazine published by Aller Media in Stockholm, Sweden.",
+     "facts": {
+      "0.0": "Hänt Extra is a Swedish language magazine.",
+      "0.1": "Hänt Extra is a weekly magazine.",
+      "0.2": "Hänt Extra is a celebrity and youth magazine.",
+      "0.3": "Hänt Extra is published by Aller Media.",
+      "0.4": "Hänt Extra is published in Stockholm, Sweden."
+     }
+    },
+    {
+     "sentence": "Tea Moderna (Macedonian: Теа Модерна ) is a Macedonian woman's weekly magazine women.",
+     "facts": {
+      "1.0": "Tea Moderna is a Macedonian woman's weekly magazine.",
+      "1.1": "Tea Moderna's name in Macedonian is Теа Модерна.",
+      "1.2": "Tea Moderna is a magazine for women."
+     }
+    }
+   ],
+   "items": [
+    "Den Za Nas\nDen Za Nas (in Macedonian: Ден за нас ) is the title of the fourth Macedonian language album by the Macedonian superstar Toše Proeski released in 2004.\n\n It is a 2-CD set which contains all of the songs performed on the National final in order to select a song for the Eurovision Song Contest 2004 with which Proeski would represent Macedonia in the contest.\n\n The winning song was \"Life\" which qualified for the final and finished on the 14th place in the final.\n\n Some extra songs such as \"Dzvezdo Severnice\", \"Me Sakaš So Zborovi\", \"Ima Li Den Za Nas\" and others were recorded especially for the album.",
+    "Hänt Bild (Swedish weekly, 2003–, Aller); Hänt Extra (Swedish celebrity/youth weekly); Girlfriends (lesbian culture, 1993–2006); Rap-Up (hip-hop/R&B quarterly, 2001–); Sculptural Pursuit (quarterly art); DIVA (UK lesbian monthly, 1994–); Elle (global fashion/lifestyle, founded 1945); Girls’ Life (US teen, 1994–",
+    "Hänt Bild\nHänt Bild is a celebrity magazine published in Sweden.\n\n The magazine was started in 2003.\n\n It is part of Aller Media AB.\n\n It is published on a weekly basis.",
+    "The entries profile publishers, periodicals, and literary figures: Random House imprints Villard and Simon & Schuster; Macedonian weekly *Makedonsko Sonce*; Nepalese regent and pioneering author Queen Tripurasundari; print-on-demand firm Mimeo; stamp reference Minkus; radical Black British publisher Bogle-L’Ouverture; spiritual media company Sounds True; historical reprint specialist Applewood; podsafe music network PMN; speculative-fiction zine *LC",
+    "Profiles span journalists, artists, politicians, scholars and public figures: Nikola Mladenov founded Macedonia’s respected Fokus and inspired an investigative-journalism award; Johannes Grenzfurthner leads art group monochrom; François Genoud financed Nazi networks and Middle Eastern militants; Edmund de Unger collected Islamic art; Adel Ferdosipour hosts Iran’s Navad; Hans Aschenborn painted African wildlife; Katarina Ivanovska models and acts. Nicolae Titulescu",
+    "Makedonsko Sonce\nMakedonsko Sonce (Macedonian: ; English: Macedonian Sun ) is a weekly magazine published in the Republic of Macedonia.\n\n The title means \"Macedonian Sun\", referring to the Vergina Sun, which is used in the logo of the magazine.\n\n It was established by Gjorgija (George) Atanasoski and the first edition was published on June 24, 1994.\n\n It describes its own political stance as affirming \"Macedonian national values, not only on territory of Macedonia but also in the other parts of ethnic Macedonia\".",
+    "Hänt Extra\nHänt Extra is a Swedish language weekly celebrity and youth magazine published by Aller Media in Stockholm, Sweden.",
+    "2015 Macedonian Football Supercup\nThe 2015 Macedonian Supercup was the 3rd Macedonian Football Supercup, an annual Macedonian football match played between the winners of the previous season's First League and Macedonian Cup.\n\n The game will be played between Rabotnički, who beat Teteks to win the 2015 Macedonian Cup Final, and Vardar, champions of the 2014–15 First League.\n\n It was played at Philip II Arena, Skopje and was won by Vardar by 4–3 on penalties after the match was ended 1–1 after the regular and extra time.",
+    "Nikola Mladenov\nNikola Mladenov (Macedonian: Никола Младенов ; 10 March 1964 – 26 March 2013) was a Macedonian journalist, actor, founder and managing editor of the weekly newspaper \"Fokus\", widely regarded as one of the most reputable journalists in Macedonia, who along with his colleagues from the newspaper \"Mlad borec\" is considered to have laid the basis for the pluralistic principles in the Macedonian journalism.\n\n The \"Award for best research story of the year – Nikola Mladenov\", which is awarded by the Macedonian Institute for Media, is named after him.",
+    "Tea Moderna (magazine)\nTea Moderna (Macedonian: Теа Модерна ) is a Macedonian woman's weekly magazine women."
+   ]
+  },
+  {
+   "id": "1210a867a7c40c71",
+   "gold": [
+    {
+     "sentence": "Mulled wine is a beverage usually made with red wine along with various mulling spices and sometimes raisins.",
+     "facts": {
+      "0.0": "Mulled wine is a beverage.",
+      "0.1": "Mulled wine is usually made with red wine.",
+      "0.2": "Mulled wine is usually made with various mulling spices.",
+      "0.3": "Mulled wine is sometimes made with raisins."
+     }
+    },
+    {
+     "sentence": " It is served hot or warm and is alcoholic, although there are non-alcoholic versions of mulled wine.",
+     "facts": {
+      "1.0": "Mulled wine is served hot or warm.",
+      "1.1": "Mulled wine is alcoholic.",
+      "1.2": "There are non-alcoholic versions of mulled wine."
+     }
+    },
+    {
+     "sentence": "Blue Lagoon is a popular summer cocktail featuring blue Curaçao.",
+     "facts": {
+      "2.0": "Blue Lagoon is a popular summer cocktail.",
+      "2.1": "Blue Lagoon features blue Curaçao."
+     }
+    }
+   ],
+   "items": [
+    "Feuerzangenbowle\nFeuerzangenbowle (] ) is a traditional German alcoholic drink for which a rum-soaked sugarloaf is set on fire and drips into mulled wine.\n\n It is often part of a Christmas or New Year's Eve tradition.\n\n The name translates literally to \"fire-tongs punch\".",
+    "Flaming volcano\nThe flaming volcano is a large tropical group cocktail made of rum, brandy, pineapple juice, orange juice, almond syrup, and sometimes other ingredients.\n\n It is usually a multi-user drink, served to a group in a special, ritual vessel known as a volcano bowl, which is a decorative ceramic bowl (typically of about 32 USoz capacity) designed with a rising central hub feature usually resembling a crude volcano cone.\n\n The cone includes a second, much smaller central pit or \"crater\" which is partially filled with rum or other flammable high-alcohol liquor.\n\n The \"crater\" liquor is then ignited, creating a mild volcanic ambience with its central blue flame.",
+    "Mulled wine\nMulled wine is a beverage usually made with red wine along with various mulling spices and sometimes raisins.\n\n It is served hot or warm and is alcoholic, although there are non-alcoholic versions of mulled wine.\n\n It is a traditional drink during winter, especially around Christmas.",
+    "Flaming beverage\nFlaming beverages include cocktails and other mixed drinks that contain flammable, high-proof alcohol, which is ignited prior to consumption.\n\n The alcohol may be an integral part of the drink, or it may be floated as a thin layer across the top of the drink.\n\n The flames are mostly for dramatic flair.\n\n However, in combination with certain ingredients, the flavor of the drink is altered.\n\n Some flavors are enhanced, and it may impart a toasted flavor to some drinks.",
+    "Mulling spices\nMulling spices is a spice mixture used in drink recipes.\n\n The spices are usually used to spice hot apple cider, mulled wine, wassail, and other drinks (such as juices) during the autumn or winter.\n\n A \"mulled\" drink is a drink which has been prepared with these spices (usually through heating the drink in a pot with mulling spices and then straining).\n\n Mulling spices may also be added to the brewing process to make spiced beer.",
+    "Blue Lagoon (cocktail)\nBlue Lagoon is a popular summer cocktail featuring blue Curaçao.",
+    "Blue Lagoon: The Awakening\nBlue Lagoon: The Awakening is a 2012 American made-for-television film that premiered on Lifetime on June 16, 2012.\n\n Indiana Evans and Brenton Thwaites star in the film, which is based on the novel \"The Blue Lagoon\" and its previous film adaptations.\n\n Christopher Atkins, the male lead of the 1980 film \"The Blue Lagoon\", also appears in the film.",
+    "The Blue Lagoon (novel)\nThe Blue Lagoon is a romance novel written by Henry De Vere Stacpoole and was first published by T. Fisher Unwin in 1908.\n\n It is the first novel of the \"Blue Lagoon\" trilogy, which also includes \"The Garden of God\" (1923) and \"The Gates of Morning\" (1925).\n\n The novel has inspired several film adaptations, most notably \"The Blue Lagoon\" starring Brooke Shields as Emmeline and Christopher Atkins as Richard (\"Dicky\" in the book).",
+    "Oz and Hugh Drink to Christmas\nOz and Hugh Drink to Christmas is a BBC television programme in which wine personality Oz Clarke and comedian Hugh Dennis travel through Britain to sample a wide array of seasonal Christmas beverages, including whisky, winter ales, mulled wine, wassail, sloe gin, Buck's Fizz, Port wine and Sherry.\n\n Upon its 20 December 2009 broadcast on BBC Two, it had a viewership of approximately 2.4 million with an audience share of 9%.",
+    "The entries cover foods, drinks, customs, and folklore. Apple dumplings are baked pastry-wrapped apples; mulling spices flavor warm seasonal drinks such as mulled wine and Finnish glögi. Cocktails include Flaming Volcano (a rum-and-brandy tropical group drink served in an ignited volcano bowl), Flaming Doctor Pepper, Apple-Kneel, and Blue Lagoon; flaming drinks use lit high-proof alcohol for spectacle or flavor. Other topics include Finland’s Christmas feast, the fire"
+   ]
+  },
+  {
+   "id": "086cb3c6e3a3bd2c",
+   "gold": [
+    {
+     "sentence": "Jürgen Melzer (born 22 May 1981 in Vienna) is an Austrian tennis player.",
+     "facts": {
+      "0.0": "Jürgen Melzer was born on 22 May 1981.",
+      "0.1": "Jürgen Melzer was born in Vienna.",
+      "0.2": "Jürgen Melzer is an Austrian tennis player."
+     }
+    },
+    {
+     "sentence": "Tom Gullikson (born September 8, 1951) is a tennis coach and former professional tennis player from the United States.",
+     "facts": {
+      "1.0": "Tom Gullikson was born on September 8, 1951.",
+      "1.1": "Tom Gullikson is a tennis coach.",
+      "1.2": "Tom Gullikson is a former professional tennis player.",
+      "1.3": "Tom Gullikson is from the United States."
+     }
+    }
+   ],
+   "items": [
+    "Carly Gullickson\nCarly Gullickson (born November 26, 1986) is a former American professional tennis player.",
+    "Tom Gullikson\nTom Gullikson (born September 8, 1951) is a tennis coach and former professional tennis player from the United States.",
+    "2012 US Open – Men's Doubles\nJürgen Melzer and Philipp Petzschner were the defending champions, but lost in the second round to Jamie Delgado and Ken Skupski.\n\n Melzer and Petzschner needed a wildcard to compete because they forgot to sign up.\n\n<br>",
+    "2010 Pilot Pen Tennis – Men's Doubles\nJulian Knowle and Jürgen Melzer were the defending champions, but Melzer chose not to participate this year.As a result, Knowle partnered with Andy Ram, but they lost to Robert Lindstedt and Horia Tecău in the semifinals.\n\n Lindstedt and Tecău went on to win the tournament, after defeating Rohan Bopanna and Aisam-ul-Haq Qureshi in the final 6–4, 7–5.",
+    "1983 Bristol Open – Doubles\nTim Gullikson and Tom Gullikson were the defending champions, but Tim Gullikson did not participate this year.\n\n Tom Gullikson partnered Johan Kriek, losing in the final.",
+    "Gerald Melzer\nGerald Melzer (born 13 July 1990) is a professional Austrian tennis player.\n\n As a qualifier, he reached the semifinals of Münich in 2015.\n\n He achieved a career-high singles ranking of world No. 68 in November 2016.",
+    "Thomaz Koch\nThomaz Koch (born May 11, 1945 in Porto Alegre), is a left-handed former tennis player from Brazil, who was a quarter-finalist at the French Open, Wimbledon and the U.S. National Championships.",
+    "Ernests Gulbis\nErnests Gulbis (] , born 30 August 1988, and nicknamed \"The Gull\" or \"Ernie\") is a Latvian professional tennis player.\n\n In 2008, Gulbis won his first ATP Tour doubles title at the U.S. Men's Clay Court Championships, teaming with Rainer Schüttler, and in 2010 won his first ATP Tour singles title in the Delray Beach, defeating Ivo Karlović in the final.\n\n In total, Gulbis has 6 ATP titles to his name and has never lost a final.\n\n His best performance at a Grand Slam is reaching the semifinals of the 2014 French Open.\n\n He had previously reached the quarterfinals of the 2008 French Open.\n\n Gulbis' career-high singles ranking is world No. 10, making him the only Latvian tennis player ever to be ranked inside the top 10 in ATP Singles Ranking.\n\n He achieved this in June 2014.",
+    "Jürgen Melzer\nJürgen Melzer (born 22 May 1981 in Vienna) is an Austrian tennis player.\n\n He reached a career-high singles ranking of world No. 8 in April 2011, and a doubles ranking of world No. 6 in September 2010.\n\n He is a left-handed tennis player, but is right-handed in everyday life.\n\n He has a younger brother, Gerald Melzer, with whom he has played doubles in several tournaments.",
+    "Julian Knowle\nJulian Knowle (born 29 April 1974) is an Austrian male professional tennis player.\n\n Being a born left-hander, Knowle is now one of the few on the ATP Tour who plays his forehand, backhand, and even volleys double-handed.\n\n He was Austria's most successful doubles player in history by reaching world no. 6 in the ATP doubles rankings in January 2008, before being matched by Jürgen Melzer, who reached no. 6 in September 2010, and overtaken by Alexander Peya, who reached no. 3 in August 2013."
+   ]
+  },
+  {
+   "id": "d20aad0cef7bbb6d",
+   "gold": [
+    {
+     "sentence": "Javier Alberto Frana (born 25 December 1966) is a former tennis player from Argentina and current tennis commentator for ESPN Latin America.",
+     "facts": {
+      "0.0": "Javier Alberto Frana was born on 25 December 1966.",
+      "0.1": "Javier Alberto Frana is a former tennis player.",
+      "0.2": "Javier Alberto Frana is from Argentina.",
+      "0.3": "Javier Alberto Frana is a current tennis commentator.",
+      "0.4": "Javier Alberto Frana is a tennis commentator for ESPN Latin America."
+     }
+    },
+    {
+     "sentence": "Thomaz Koch (born May 11, 1945 in Porto Alegre), is a left-handed former tennis player from Brazil, who was a quarter-finalist at the French Open, Wimbledon and the U.S. National Championships.",
+     "facts": {
+      "1.0": "Thomaz Koch was born on May 11, 1945.",
+      "1.1": "Thomaz Koch was born in Porto Alegre.",
+      "1.2": "Thomaz Koch is a left-handed former tennis player.",
+      "1.3": "Thomaz Koch is from Brazil.",
+      "1.4": "Thomaz Koch was a quarter-finalist at the French Open.",
+      "1.5": "Thomaz Koch was a quarter-finalist at Wimbledon.",
+      "1.6": "Thomaz Koch was a quarter-finalist at the U.S. National Championships."
+     }
+    }
+   ],
+   "items": [
+    "1996 Abierto Mexicano de Tenis – Doubles\nJavier Frana and Leonardo Lavalle were the defending champions but lost in the first round to Luis Lobo and Javier Sánchez.",
+    "Graph query row:\nperson: Thomaz Koch\noccupation: former tennis player",
+    "1993 ATP Buenos Aires – Doubles\nPablo Albano and Javier Frana were the defending champions, but lost in the quarterfinals this year.",
+    "1996 Nottingham Open – Singles\nJavier Frana was the defending champion but lost in the first round to Marc-Kevin Goellner.",
+    "1996 IPB Czech Indoor – Doubles\nJonas Björkman and Javier Frana was the defending champions but did not compete that year.",
+    "1993 Movistar Open – Singles\nJavier Frana defeated Emilio Sánchez 7–5, 3–6, 6–3 to win the 1993 Movistar Open singles competition.",
+    "Thomaz Koch\nThomaz Koch (born May 11, 1945 in Porto Alegre), is a left-handed former tennis player from Brazil, who was a quarter-finalist at the French Open, Wimbledon and the U.S. National Championships.",
+    "Javier Frana\nJavier Alberto Frana (born 25 December 1966) is a former tennis player from Argentina and current tennis commentator for ESPN Latin America.",
+    "1994 Movistar Open – Singles\nJavier Frana was the defending champion but lost in the quarterfinals to Alberto Berasategui.",
+    "1995 Nottingham Open – Singles\nJavier Frana defeated Todd Woodbridge 7–6, 6–3 in the final to secure the title."
+   ]
+  }
+ ]
+}

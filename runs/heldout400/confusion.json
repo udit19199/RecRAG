@@ -1,0 +1,520 @@
+{
+ "repeats": [
+  "r1",
+  "r2",
+  "r3"
+ ],
+ "thresholds": [
+  0.5,
+  0.75,
+  1.0
+ ],
+ "evidence_vs_answer": [
+  {
+   "method": "RAG",
+   "type": "comparison_query",
+   "threshold": 0.5,
+   "answers": 300,
+   "found_right": 129,
+   "found_wrong": 75,
+   "missed_right": 25,
+   "missed_wrong": 71
+  },
+  {
+   "method": "RAG",
+   "type": "comparison_query",
+   "threshold": 0.75,
+   "answers": 300,
+   "found_right": 50,
+   "found_wrong": 7,
+   "missed_right": 104,
+   "missed_wrong": 139
+  },
+  {
+   "method": "RAG",
+   "type": "comparison_query",
+   "threshold": 1.0,
+   "answers": 300,
+   "found_right": 50,
+   "found_wrong": 7,
+   "missed_right": 104,
+   "missed_wrong": 139
+  },
+  {
+   "method": "RAG",
+   "type": "inference_query",
+   "threshold": 0.5,
+   "answers": 300,
+   "found_right": 132,
+   "found_wrong": 0,
+   "missed_right": 156,
+   "missed_wrong": 12
+  },
+  {
+   "method": "RAG",
+   "type": "inference_query",
+   "threshold": 0.75,
+   "answers": 300,
+   "found_right": 33,
+   "found_wrong": 0,
+   "missed_right": 255,
+   "missed_wrong": 12
+  },
+  {
+   "method": "RAG",
+   "type": "inference_query",
+   "threshold": 1.0,
+   "answers": 300,
+   "found_right": 33,
+   "found_wrong": 0,
+   "missed_right": 255,
+   "missed_wrong": 12
+  },
+  {
+   "method": "RAG",
+   "type": "temporal_query",
+   "threshold": 0.5,
+   "answers": 300,
+   "found_right": 96,
+   "found_wrong": 60,
+   "missed_right": 49,
+   "missed_wrong": 95
+  },
+  {
+   "method": "RAG",
+   "type": "temporal_query",
+   "threshold": 0.75,
+   "answers": 300,
+   "found_right": 37,
+   "found_wrong": 8,
+   "missed_right": 108,
+   "missed_wrong": 147
+  },
+  {
+   "method": "RAG",
+   "type": "temporal_query",
+   "threshold": 1.0,
+   "answers": 300,
+   "found_right": 37,
+   "found_wrong": 8,
+   "missed_right": 108,
+   "missed_wrong": 147
+  },
+  {
+   "method": "RAPTOR",
+   "type": "comparison_query",
+   "threshold": 0.5,
+   "answers": 300,
+   "found_right": 116,
+   "found_wrong": 82,
+   "missed_right": 28,
+   "missed_wrong": 74
+  },
+  {
+   "method": "RAPTOR",
+   "type": "comparison_query",
+   "threshold": 0.75,
+   "answers": 300,
+   "found_right": 55,
+   "found_wrong": 8,
+   "missed_right": 89,
+   "missed_wrong": 148
+  },
+  {
+   "method": "RAPTOR",
+   "type": "comparison_query",
+   "threshold": 1.0,
+   "answers": 300,
+   "found_right": 55,
+   "found_wrong": 8,
+   "missed_right": 89,
+   "missed_wrong": 148
+  },
+  {
+   "method": "RAPTOR",
+   "type": "inference_query",
+   "threshold": 0.5,
+   "answers": 300,
+   "found_right": 132,
+   "found_wrong": 0,
+   "missed_right": 162,
+   "missed_wrong": 6
+  },
+  {
+   "method": "RAPTOR",
+   "type": "inference_query",
+   "threshold": 0.75,
+   "answers": 300,
+   "found_right": 39,
+   "found_wrong": 0,
+   "missed_right": 255,
+   "missed_wrong": 6
+  },
+  {
+   "method": "RAPTOR",
+   "type": "inference_query",
+   "threshold": 1.0,
+   "answers": 300,
+   "found_right": 36,
+   "found_wrong": 0,
+   "missed_right": 258,
+   "missed_wrong": 6
+  },
+  {
+   "method": "RAPTOR",
+   "type": "temporal_query",
+   "threshold": 0.5,
+   "answers": 300,
+   "found_right": 95,
+   "found_wrong": 49,
+   "missed_right": 52,
+   "missed_wrong": 104
+  },
+  {
+   "method": "RAPTOR",
+   "type": "temporal_query",
+   "threshold": 0.75,
+   "answers": 300,
+   "found_right": 43,
+   "found_wrong": 5,
+   "missed_right": 104,
+   "missed_wrong": 148
+  },
+  {
+   "method": "RAPTOR",
+   "type": "temporal_query",
+   "threshold": 1.0,
+   "answers": 300,
+   "found_right": 43,
+   "found_wrong": 5,
+   "missed_right": 104,
+   "missed_wrong": 148
+  },
+  {
+   "method": "HippoRAG",
+   "type": "comparison_query",
+   "threshold": 0.5,
+   "answers": 300,
+   "found_right": 111,
+   "found_wrong": 78,
+   "missed_right": 33,
+   "missed_wrong": 78
+  },
+  {
+   "method": "HippoRAG",
+   "type": "comparison_query",
+   "threshold": 0.75,
+   "answers": 300,
+   "found_right": 57,
+   "found_wrong": 12,
+   "missed_right": 87,
+   "missed_wrong": 144
+  },
+  {
+   "method": "HippoRAG",
+   "type": "comparison_query",
+   "threshold": 1.0,
+   "answers": 300,
+   "found_right": 57,
+   "found_wrong": 12,
+   "missed_right": 87,
+   "missed_wrong": 144
+  },
+  {
+   "method": "HippoRAG",
+   "type": "inference_query",
+   "threshold": 0.5,
+   "answers": 300,
+   "found_right": 99,
+   "found_wrong": 0,
+   "missed_right": 193,
+   "missed_wrong": 8
+  },
+  {
+   "method": "HippoRAG",
+   "type": "inference_query",
+   "threshold": 0.75,
+   "answers": 300,
+   "found_right": 39,
+   "found_wrong": 0,
+   "missed_right": 253,
+   "missed_wrong": 8
+  },
+  {
+   "method": "HippoRAG",
+   "type": "inference_query",
+   "threshold": 1.0,
+   "answers": 300,
+   "found_right": 24,
+   "found_wrong": 0,
+   "missed_right": 268,
+   "missed_wrong": 8
+  },
+  {
+   "method": "HippoRAG",
+   "type": "temporal_query",
+   "threshold": 0.5,
+   "answers": 300,
+   "found_right": 98,
+   "found_wrong": 55,
+   "missed_right": 80,
+   "missed_wrong": 67
+  },
+  {
+   "method": "HippoRAG",
+   "type": "temporal_query",
+   "threshold": 0.75,
+   "answers": 300,
+   "found_right": 29,
+   "found_wrong": 13,
+   "missed_right": 149,
+   "missed_wrong": 109
+  },
+  {
+   "method": "HippoRAG",
+   "type": "temporal_query",
+   "threshold": 1.0,
+   "answers": 300,
+   "found_right": 29,
+   "found_wrong": 13,
+   "missed_right": 149,
+   "missed_wrong": 109
+  },
+  {
+   "method": "Agentic GraphRAG",
+   "type": "comparison_query",
+   "threshold": 0.5,
+   "answers": 300,
+   "found_right": 125,
+   "found_wrong": 86,
+   "missed_right": 26,
+   "missed_wrong": 63
+  },
+  {
+   "method": "Agentic GraphRAG",
+   "type": "comparison_query",
+   "threshold": 0.75,
+   "answers": 300,
+   "found_right": 44,
+   "found_wrong": 12,
+   "missed_right": 107,
+   "missed_wrong": 137
+  },
+  {
+   "method": "Agentic GraphRAG",
+   "type": "comparison_query",
+   "threshold": 1.0,
+   "answers": 300,
+   "found_right": 44,
+   "found_wrong": 12,
+   "missed_right": 107,
+   "missed_wrong": 137
+  },
+  {
+   "method": "Agentic GraphRAG",
+   "type": "inference_query",
+   "threshold": 0.5,
+   "answers": 300,
+   "found_right": 127,
+   "found_wrong": 2,
+   "missed_right": 162,
+   "missed_wrong": 9
+  },
+  {
+   "method": "Agentic GraphRAG",
+   "type": "inference_query",
+   "threshold": 0.75,
+   "answers": 300,
+   "found_right": 34,
+   "found_wrong": 0,
+   "missed_right": 255,
+   "missed_wrong": 11
+  },
+  {
+   "method": "Agentic GraphRAG",
+   "type": "inference_query",
+   "threshold": 1.0,
+   "answers": 300,
+   "found_right": 27,
+   "found_wrong": 0,
+   "missed_right": 262,
+   "missed_wrong": 11
+  },
+  {
+   "method": "Agentic GraphRAG",
+   "type": "temporal_query",
+   "threshold": 0.5,
+   "answers": 300,
+   "found_right": 119,
+   "found_wrong": 63,
+   "missed_right": 49,
+   "missed_wrong": 69
+  },
+  {
+   "method": "Agentic GraphRAG",
+   "type": "temporal_query",
+   "threshold": 0.75,
+   "answers": 300,
+   "found_right": 46,
+   "found_wrong": 4,
+   "missed_right": 122,
+   "missed_wrong": 128
+  },
+  {
+   "method": "Agentic GraphRAG",
+   "type": "temporal_query",
+   "threshold": 1.0,
+   "answers": 300,
+   "found_right": 46,
+   "found_wrong": 4,
+   "missed_right": 122,
+   "missed_wrong": 128
+  }
+ ],
+ "exact_vs_judge": [
+  {
+   "method": "RAG",
+   "type": "comparison_query",
+   "answers": 300,
+   "em_right_judge_right": 149,
+   "em_right_judge_wrong": 0,
+   "em_wrong_judge_right": 5,
+   "em_wrong_judge_wrong": 146
+  },
+  {
+   "method": "RAG",
+   "type": "inference_query",
+   "answers": 300,
+   "em_right_judge_right": 249,
+   "em_right_judge_wrong": 0,
+   "em_wrong_judge_right": 39,
+   "em_wrong_judge_wrong": 12
+  },
+  {
+   "method": "RAG",
+   "type": "null_query",
+   "answers": 300,
+   "em_right_judge_right": 284,
+   "em_right_judge_wrong": 0,
+   "em_wrong_judge_right": 0,
+   "em_wrong_judge_wrong": 16
+  },
+  {
+   "method": "RAG",
+   "type": "temporal_query",
+   "answers": 300,
+   "em_right_judge_right": 141,
+   "em_right_judge_wrong": 0,
+   "em_wrong_judge_right": 4,
+   "em_wrong_judge_wrong": 155
+  },
+  {
+   "method": "RAPTOR",
+   "type": "comparison_query",
+   "answers": 300,
+   "em_right_judge_right": 138,
+   "em_right_judge_wrong": 0,
+   "em_wrong_judge_right": 6,
+   "em_wrong_judge_wrong": 156
+  },
+  {
+   "method": "RAPTOR",
+   "type": "inference_query",
+   "answers": 300,
+   "em_right_judge_right": 264,
+   "em_right_judge_wrong": 0,
+   "em_wrong_judge_right": 30,
+   "em_wrong_judge_wrong": 6
+  },
+  {
+   "method": "RAPTOR",
+   "type": "null_query",
+   "answers": 300,
+   "em_right_judge_right": 287,
+   "em_right_judge_wrong": 0,
+   "em_wrong_judge_right": 0,
+   "em_wrong_judge_wrong": 13
+  },
+  {
+   "method": "RAPTOR",
+   "type": "temporal_query",
+   "answers": 300,
+   "em_right_judge_right": 146,
+   "em_right_judge_wrong": 0,
+   "em_wrong_judge_right": 1,
+   "em_wrong_judge_wrong": 153
+  },
+  {
+   "method": "HippoRAG",
+   "type": "comparison_query",
+   "answers": 300,
+   "em_right_judge_right": 135,
+   "em_right_judge_wrong": 0,
+   "em_wrong_judge_right": 9,
+   "em_wrong_judge_wrong": 156
+  },
+  {
+   "method": "HippoRAG",
+   "type": "inference_query",
+   "answers": 300,
+   "em_right_judge_right": 252,
+   "em_right_judge_wrong": 0,
+   "em_wrong_judge_right": 40,
+   "em_wrong_judge_wrong": 8
+  },
+  {
+   "method": "HippoRAG",
+   "type": "null_query",
+   "answers": 300,
+   "em_right_judge_right": 281,
+   "em_right_judge_wrong": 0,
+   "em_wrong_judge_right": 0,
+   "em_wrong_judge_wrong": 19
+  },
+  {
+   "method": "HippoRAG",
+   "type": "temporal_query",
+   "answers": 300,
+   "em_right_judge_right": 178,
+   "em_right_judge_wrong": 0,
+   "em_wrong_judge_right": 0,
+   "em_wrong_judge_wrong": 122
+  },
+  {
+   "method": "Agentic GraphRAG",
+   "type": "comparison_query",
+   "answers": 300,
+   "em_right_judge_right": 145,
+   "em_right_judge_wrong": 0,
+   "em_wrong_judge_right": 6,
+   "em_wrong_judge_wrong": 149
+  },
+  {
+   "method": "Agentic GraphRAG",
+   "type": "inference_query",
+   "answers": 300,
+   "em_right_judge_right": 276,
+   "em_right_judge_wrong": 0,
+   "em_wrong_judge_right": 13,
+   "em_wrong_judge_wrong": 11
+  },
+  {
+   "method": "Agentic GraphRAG",
+   "type": "null_query",
+   "answers": 300,
+   "em_right_judge_right": 289,
+   "em_right_judge_wrong": 0,
+   "em_wrong_judge_right": 0,
+   "em_wrong_judge_wrong": 11
+  },
+  {
+   "method": "Agentic GraphRAG",
+   "type": "temporal_query",
+   "answers": 300,
+   "em_right_judge_right": 163,
+   "em_right_judge_wrong": 0,
+   "em_wrong_judge_right": 5,
+   "em_wrong_judge_wrong": 132
+  }
+ ]
+}

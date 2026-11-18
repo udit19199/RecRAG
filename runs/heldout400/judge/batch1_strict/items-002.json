@@ -1,0 +1,716 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [],
+ "evidence": [
+  {
+   "id": "dfd12a7ddf152b19",
+   "kind": "evidence",
+   "question": "Which company, as reported by TechCrunch, is facing scrutiny for its market practices in areas ranging from app distribution and advertising to search engine defaults and content sharing, without planning new measures for its video platform in the next six months?",
+   "gold_sentences": [
+    "Over the next six months Google\u2019s report states it has no additional measures planned for YouTube.",
+    "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google \u201csiphons off\u201d news publishers\u2019 content, their readers and ad revenue through anticompetitive means."
+   ],
+   "evidence": "the eu is signaling a possible investigation into x under the digital services act, though officials told techcrunch no formal investigation had begun. the commission is scrutinizing x's handling of illegal-content notices and complaints, risk assessments, and mitigation measures. an investigation could improve public transparency, as x stopped publishing quarterly reports after going private. a fine could reach 6% of annual revenue-about $180 million if musk's projected $3 billion revenue is accurate."
+  },
+  {
+   "id": "3a9cc13cf0bb77f3",
+   "kind": "evidence",
+   "question": "Which company, as reported by TechCrunch, is facing scrutiny for its market practices in areas ranging from app distribution and advertising to search engine defaults and content sharing, without planning new measures for its video platform in the next six months?",
+   "gold_sentences": [
+    "Over the next six months Google\u2019s report states it has no additional measures planned for YouTube.",
+    "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google \u201csiphons off\u201d news publishers\u2019 content, their readers and ad revenue through anticompetitive means."
+   ],
+   "evidence": "european groups seek reciprocal royalty rules, warning us artists' payments could cost rightsholders \u20ac125 million annually. meta faces child-safety and privacy allegations as it backs parental approval rules; norway seeks wider enforcement against its consentless-ad practices. x tests paid, id-checked sign-ups and faces eu scrutiny over content, transparency and moderation. ai copyright disputes pit creators seeking consent and compensation against google's fair-use defense. seo's history exposes manipulation, spam and google's outsized influence. google also faces"
+  },
+  {
+   "id": "bbd732eba0f3ffb5",
+   "kind": "evidence",
+   "question": "Which company, as reported by TechCrunch, is facing scrutiny for its market practices in areas ranging from app distribution and advertising to search engine defaults and content sharing, without planning new measures for its video platform in the next six months?",
+   "gold_sentences": [
+    "Over the next six months Google\u2019s report states it has no additional measures planned for YouTube.",
+    "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google \u201csiphons off\u201d news publishers\u2019 content, their readers and ad revenue through anticompetitive means."
+   ],
+   "evidence": "the doj argues google's default-search deals and platform control suppress competition and deprive rivals of data; google says users prefer its superior product. trial revelations included $26.3 billion spent on defaults in 2021; android agreements requiring app preloads and, separately, default search/chrome; and lucrative queries such as iphone, insurance and travel. expedia said google ads became costlier while traffic stagnated as google promoted its own travel listings. evidence suggested a \u20ac5 billion eu fine prompted search"
+  },
+  {
+   "id": "6ecd4a6c3f195ad7",
+   "kind": "evidence",
+   "question": "Who is the individual accused of fraud and conspiracy, as reported by TechCrunch, who also sought to establish a board with experts for a company according to Cnbc | World Business News Leader, and made a billion-dollar decision involving customer funds as per The Verge?",
+   "gold_sentences": [
+    "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts.",
+    "It was Bankman-Fried\u2019s decision, she said, as he was the CEO of FTX."
+   ],
+   "evidence": "the verge's trial coverage portrays ftx as an alleged fraud from its founding: prosecutors said bankman-fried secretly gave alameda unlimited access to customer funds while publicly denying preferential treatment. cooperating insiders wang, singh, ellison, and yedidia described code privileges, doctored accounts, and misuse of deposits; expert testimony traced billions to loans, investments, real estate, insiders, and political causes. the collapse devastated customers and bankman-fried's friends and family, many now"
+  },
+  {
+   "id": "fa96960929747528",
+   "kind": "evidence",
+   "question": "Who is the individual accused of fraud and conspiracy, as reported by TechCrunch, who also sought to establish a board with experts for a company according to Cnbc | World Business News Leader, and made a billion-dollar decision involving customer funds as per The Verge?",
+   "gold_sentences": [
+    "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts.",
+    "It was Bankman-Fried\u2019s decision, she said, as he was the CEO of FTX."
+   ],
+   "evidence": "the verge's courtroom coverage portrays sam bankman-fried's defense as increasingly damaging. on the stand, he struggled to answer questions, admitted failing to create a risk team or safeguards against alameda spending ftx customer funds, and said he did not investigate an $8 billion shortfall despite warnings. prosecutors highlighted testimony from caroline ellison and others tying him to customer-fund misuse and deception; defense cross-examination was described as ineffective. bankman-fried was ultimately convicted on seven counts, including"
+  },
+  {
+   "id": "61c155f3ead1ad38",
+   "kind": "evidence",
+   "question": "Who is the individual accused of fraud and conspiracy, as reported by TechCrunch, who also sought to establish a board with experts for a company according to Cnbc | World Business News Leader, and made a billion-dollar decision involving customer funds as per The Verge?",
+   "gold_sentences": [
+    "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts.",
+    "It was Bankman-Fried\u2019s decision, she said, as he was the CEO of FTX."
+   ],
+   "evidence": "cfm sued aog over allegedly falsified records and used parts. ftx founder sbf was convicted on seven counts after testimony detailed alameda's $65 billion access to customer funds; binance admitted u.s. violations and agreed to a $4.3 billion settlement. other legal stories involved hsf's disputed catalog bid, epstein-related claims, and trump's asset-fraud ruling. ev projects faltered, uber faces 80-plus assault suits, and cybertruck deliveries began. china venture"
+  },
+  {
+   "id": "caab08ee09d3fb88",
+   "kind": "evidence",
+   "question": "Who is the individual accused of fraud and conspiracy, as reported by TechCrunch, who also sought to establish a board with experts for a company according to Cnbc | World Business News Leader, and made a billion-dollar decision involving customer funds as per The Verge?",
+   "gold_sentences": [
+    "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts.",
+    "It was Bankman-Fried\u2019s decision, she said, as he was the CEO of FTX."
+   ],
+   "evidence": "at sam bankman-fried's 2023 trial, prosecutors said he secretly used ftx customer funds through alameda research for risky bets, political donations, and personal purposes, while misleading customers, lenders, and investors. his lawyer portrayed him as a good-faith startup founder whose businesses failed amid crypto-market turmoil, blaming alameda ceo caroline ellison's risk management. a customer testified he could not withdraw nearly $100,000; former friend and employee adam yedidia said he feared code"
+  },
+  {
+   "id": "1dac4d42fdf53261",
+   "kind": "evidence",
+   "question": "Which platform is favored by Keira Megan for fan engagement and authenticity, and has also been in the news on TechCrunch for altering its revenue split to focus more on ad revenue?",
+   "gold_sentences": [
+    "Megan says that while she doesn\u2019t have as many followers on Twitch as she does on her YouTube channel, there are elements of Twitch she prefers to YouTube, including the ability to be herself and engage with fans more closely.",
+    "Right, and that decision to change the revenue split also came out of a decision to prioritize ad revenue."
+   ],
+   "evidence": "techcrunch's holiday picks span science fiction, privacy, data, leadership and photojournalism. reddit co-founder alexis ohanian warned that social platforms reward speed, likes and misinformation, despite his techno-optimism. mozilla is cautiously developing a moderated, user-centered mastodon service. the fediverse could let people switch among competing apps while retaining connections and content. flipboard is integrating activitypub so its publishers and nonprofits can reach fediverse users, with privacy controls for curated content."
+  },
+  {
+   "id": "8a2449c30a91a436",
+   "kind": "evidence",
+   "question": "Who is the individual accused of instructing Caroline Ellison to use $14 billion of customer funds to repay debts, claimed to have struggled with managing two major companies due to significant growth, and is alleged by the prosecution to have committed fraud for personal gains, as reported by both TechCrunch and The Verge?",
+   "gold_sentences": [
+    "The second week of the trial\u2019s standout testimony came from Alameda Research\u2019s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.",
+    "Because FTX had grown so much, he could no longer run both companies, he said.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "the verge's courtroom coverage portrays sam bankman-fried's defense as increasingly damaging. on the stand, he struggled to answer questions, admitted failing to create a risk team or safeguards against alameda spending ftx customer funds, and said he did not investigate an $8 billion shortfall despite warnings. prosecutors highlighted testimony from caroline ellison and others tying him to customer-fund misuse and deception; defense cross-examination was described as ineffective. bankman-fried was ultimately convicted on seven counts, including"
+  },
+  {
+   "id": "5cca03c1f6ed8028",
+   "kind": "evidence",
+   "question": "Who is the individual accused of instructing Caroline Ellison to use $14 billion of customer funds to repay debts, claimed to have struggled with managing two major companies due to significant growth, and is alleged by the prosecution to have committed fraud for personal gains, as reported by both TechCrunch and The Verge?",
+   "gold_sentences": [
+    "The second week of the trial\u2019s standout testimony came from Alameda Research\u2019s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.",
+    "Because FTX had grown so much, he could no longer run both companies, he said.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "at sam bankman-fried's fraud trial, former alameda ceo and ex-girlfriend caroline ellison testified that he directed her to commit crimes and concealed alameda's dependence on ftx customer funds. she described an undocumented $65 billion credit line, customer money used to buy binance's ftx stake, and misleading valuations of ftt and other tokens. a spreadsheet she prepared showed alameda might be unable to repay loans-and would certainly fail if it invested $3 billion-even assuming access to"
+  },
+  {
+   "id": "ee242d54886cc852",
+   "kind": "evidence",
+   "question": "Who is the individual accused of instructing Caroline Ellison to use $14 billion of customer funds to repay debts, claimed to have struggled with managing two major companies due to significant growth, and is alleged by the prosecution to have committed fraud for personal gains, as reported by both TechCrunch and The Verge?",
+   "gold_sentences": [
+    "The second week of the trial\u2019s standout testimony came from Alameda Research\u2019s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.",
+    "Because FTX had grown so much, he could no longer run both companies, he said.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "at sam bankman-fried's 2023 trial, prosecutors said he secretly used ftx customer funds through alameda research for risky bets, political donations, and personal purposes, while misleading customers, lenders, and investors. his lawyer portrayed him as a good-faith startup founder whose businesses failed amid crypto-market turmoil, blaming alameda ceo caroline ellison's risk management. a customer testified he could not withdraw nearly $100,000; former friend and employee adam yedidia said he feared code"
+  },
+  {
+   "id": "ba608ed316505802",
+   "kind": "evidence",
+   "question": "Who is the individual accused of instructing Caroline Ellison to use $14 billion of customer funds to repay debts, claimed to have struggled with managing two major companies due to significant growth, and is alleged by the prosecution to have committed fraud for personal gains, as reported by both TechCrunch and The Verge?",
+   "gold_sentences": [
+    "The second week of the trial\u2019s standout testimony came from Alameda Research\u2019s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.",
+    "Because FTX had grown so much, he could no longer run both companies, he said.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "the verge's trial coverage portrays ftx as an alleged fraud from its founding: prosecutors said bankman-fried secretly gave alameda unlimited access to customer funds while publicly denying preferential treatment. cooperating insiders wang, singh, ellison, and yedidia described code privileges, doctored accounts, and misuse of deposits; expert testimony traced billions to loans, investments, real estate, insiders, and political causes. the collapse devastated customers and bankman-fried's friends and family, many now"
+  },
+  {
+   "id": "e091d2ae06b728c9",
+   "kind": "evidence",
+   "question": "Who is the individual that presented themselves as a trustworthy figure in the cryptocurrency industry, as reported by The Verge, but is also alleged by the prosecution in a TechCrunch article to have committed fraud, and according to The Verge, informed another trader about permissible withdrawals from an account tied to a now-collapsed company and also admitted to being aware of a financial discrepancy after a judge's intervention?",
+   "gold_sentences": [
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX\u2019s total trading revenue.",
+    "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he\u2019d been told.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "the verge's trial coverage portrays ftx as an alleged fraud from its founding: prosecutors said bankman-fried secretly gave alameda unlimited access to customer funds while publicly denying preferential treatment. cooperating insiders wang, singh, ellison, and yedidia described code privileges, doctored accounts, and misuse of deposits; expert testimony traced billions to loans, investments, real estate, insiders, and political causes. the collapse devastated customers and bankman-fried's friends and family, many now"
+  },
+  {
+   "id": "8883798ca25eac31",
+   "kind": "evidence",
+   "question": "Who is the individual that presented themselves as a trustworthy figure in the cryptocurrency industry, as reported by The Verge, but is also alleged by the prosecution in a TechCrunch article to have committed fraud, and according to The Verge, informed another trader about permissible withdrawals from an account tied to a now-collapsed company and also admitted to being aware of a financial discrepancy after a judge's intervention?",
+   "gold_sentences": [
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX\u2019s total trading revenue.",
+    "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he\u2019d been told.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "the verge's courtroom coverage portrays sam bankman-fried's defense as increasingly damaging. on the stand, he struggled to answer questions, admitted failing to create a risk team or safeguards against alameda spending ftx customer funds, and said he did not investigate an $8 billion shortfall despite warnings. prosecutors highlighted testimony from caroline ellison and others tying him to customer-fund misuse and deception; defense cross-examination was described as ineffective. bankman-fried was ultimately convicted on seven counts, including"
+  },
+  {
+   "id": "f8db66fb13af7ee4",
+   "kind": "evidence",
+   "question": "Which company, covered by both The Verge and TechCrunch, has influenced internet navigation and local search ranking, while also spending billions to be the default search engine and facing antitrust allegations for affecting news publishers' revenues?",
+   "gold_sentences": [
+    "Google\u2019s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence.",
+    "The company did accomplish that goal, but in doing so, it inadvertently and profoundly changed how the internet looked.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google \u201csiphons off\u201d news publishers\u2019 content, their readers and ad revenue through anticompetitive means."
+   ],
+   "evidence": "the doj argues google's default-search deals and platform control suppress competition and deprive rivals of data; google says users prefer its superior product. trial revelations included $26.3 billion spent on defaults in 2021; android agreements requiring app preloads and, separately, default search/chrome; and lucrative queries such as iphone, insurance and travel. expedia said google ads became costlier while traffic stagnated as google promoted its own travel listings. evidence suggested a \u20ac5 billion eu fine prompted search"
+  },
+  {
+   "id": "d1e65fe864b0a364",
+   "kind": "evidence",
+   "question": "What is the name of the service, covered by TechCrunch, that is temporarily free for users due to Apple's interference and is known for reverse-engineering the iMessage protocol to extend functionality to Android users?",
+   "gold_sentences": [
+    "It has also decided to make Beeper Mini free for the time being, given how \u201cchaotic\u201d things have been over the past few days."
+   ],
+   "evidence": "beeper mini, an android app that reverse-engineered imessage to deliver blue-bubble chats and features such as read receipts, reactions, and high-quality media, resumed service after apple blocked it days after launch over alleged privacy and security risks. beeper says an update fixed messaging, but has not explained how; phone-number registration remains unavailable, so users must sign in with an apple id. the app is temporarily free, with subscriptions potentially returning once service stabilizes. beeper maintains messages remain end"
+  },
+  {
+   "id": "4cb0cb4dbbc53d53",
+   "kind": "evidence",
+   "question": "Which company, covered by both The Verge and Fortune, had a negative balance exceeding the revenue of a related entity, proposed an alert system to prevent its own liquidation, and was claimed to have acted legally in its business practices with a customer, payment processor, and market maker?",
+   "gold_sentences": [
+    "It was a \u201cvery innovative, successful company.\u201d And the business practices between the two were reasonable, he argued, claiming that Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."
+   ],
+   "evidence": "the verge's trial coverage portrays ftx as an alleged fraud from its founding: prosecutors said bankman-fried secretly gave alameda unlimited access to customer funds while publicly denying preferential treatment. cooperating insiders wang, singh, ellison, and yedidia described code privileges, doctored accounts, and misuse of deposits; expert testimony traced billions to loans, investments, real estate, insiders, and political causes. the collapse devastated customers and bankman-fried's friends and family, many now"
+  },
+  {
+   "id": "562dc50c568a3af2",
+   "kind": "evidence",
+   "question": "Which company, covered by both The Verge and Fortune, had a negative balance exceeding the revenue of a related entity, proposed an alert system to prevent its own liquidation, and was claimed to have acted legally in its business practices with a customer, payment processor, and market maker?",
+   "gold_sentences": [
+    "It was a \u201cvery innovative, successful company.\u201d And the business practices between the two were reasonable, he argued, claiming that Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."
+   ],
+   "evidence": "the verge's courtroom coverage portrays sam bankman-fried's defense as increasingly damaging. on the stand, he struggled to answer questions, admitted failing to create a risk team or safeguards against alameda spending ftx customer funds, and said he did not investigate an $8 billion shortfall despite warnings. prosecutors highlighted testimony from caroline ellison and others tying him to customer-fund misuse and deception; defense cross-examination was described as ineffective. bankman-fried was ultimately convicted on seven counts, including"
+  },
+  {
+   "id": "bb91583dee9092f0",
+   "kind": "evidence",
+   "question": "Which company, covered by both The Verge and Fortune, had a negative balance exceeding the revenue of a related entity, proposed an alert system to prevent its own liquidation, and was claimed to have acted legally in its business practices with a customer, payment processor, and market maker?",
+   "gold_sentences": [
+    "It was a \u201cvery innovative, successful company.\u201d And the business practices between the two were reasonable, he argued, claiming that Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."
+   ],
+   "evidence": "at his ftx fraud trial, sam bankman-fried portrayed himself as overworked and largely unaware of alameda's finances, customer-fund borrowing, and an $8 billion liability. the verge contrasted these claims with testimony and evidence: alameda alone had a code-enabled negative balance, avoided liquidation, and received a credit line that grew to $65 billion. former executives described customer money being used, losses concealed, and ftx's insurance fund misrepresented. bankman-fried's"
+  },
+  {
+   "id": "6b905de5e54f8779",
+   "kind": "evidence",
+   "question": "Who is the Silicon Valley figure associated with the rise of artificial intelligence, mentioned in articles by 'The Age', 'Fortune', and 'TechCrunch', who faced no removal efforts by Anthropic co-founders, has been described as generous and impactful, yet is also theorized to have had transparency issues with the board?",
+   "gold_sentences": [
+    "In the year since Altman catapulted ChatGPT to global fame, he has become Silicon Valley\u2019s sought-after voice on the promise and potential dangers of artificial intelligence and his sudden and mostly unexplained exit brought uncertainty to the industry\u2019s future.",
+    "More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know.",
+    "Based on the board\u2019s language and the way these giant tech companies work, this is the prevailing theory floating around right now."
+   ],
+   "evidence": "silicon valley's ai race was driven by both fear of catastrophe and ego, wealth and control. deepmind's founders, convinced they could manage ai's risks, took peter thiel's funding, then sold to google with safety safeguards that soon proved ineffective. google, facebook, microsoft and others competed fiercely for researchers. elon musk helped launch openai to counter google, but left after disputes over its direction; commercial pressures later prompted safety-minded researchers to form anthropic. openai's rapid advances-including"
+  },
+  {
+   "id": "c3b201eaca94367a",
+   "kind": "evidence",
+   "question": "Which national rugby team, highlighted in articles from 'The Independent - Sports' and 'The Roar | Sports Writers Blog', suffered defeats in their home country as well as in Sydney and Christchurch, against opponents including Ireland, South Africa, and Argentina?",
+   "gold_sentences": [
+    "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."
+   ],
+   "evidence": "ahead of their 2023 world cup semi-final against argentina, new zealand defended rieko ioane's taunting gestures toward ireland fans and johnny sexton. coach ian foster recalled sam whitelock and mark telea, stressed respect for argentina, and rejected the \"favourites\" label; michael cheika embraced underdog status and said argentina aimed to inspire through ambition and resilience. a second article framed the final as south africa playing for its country and new zealand for themselves and departing leaders."
+  },
+  {
+   "id": "0eaa86ecbaa7fa91",
+   "kind": "evidence",
+   "question": "Which national rugby team, highlighted in articles from 'The Independent - Sports' and 'The Roar | Sports Writers Blog', suffered defeats in their home country as well as in Sydney and Christchurch, against opponents including Ireland, South Africa, and Argentina?",
+   "gold_sentences": [
+    "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."
+   ],
+   "evidence": "new zealand beat ireland 28-24 in a dramatic rugby world cup quarter-final in paris, extending ireland's record of never winning a world cup knockout match: their eighth quarter-final defeat in 10 tournaments. ireland repeatedly closed the gap, but the all blacks' disciplined defence held firm. ireland's final, five-minute attack lasted 37 phases before a turnover ended their hopes. new zealand advanced to face argentina, with departing coach ian foster still in contention for a fourth title."
+  },
+  {
+   "id": "1e62ced19df19670",
+   "kind": "evidence",
+   "question": "Which entity is at the center of addressing concerns from the music industry about a CJEU ruling, engaging with Amazon on competition issues regarding an acquisition, deploying staff within its AI Office for evolving rules, and probing Elon Musk's X for risks related to illegal content and deceptive UX design, as reported by Music Business Worldwide and TechCrunch?",
+   "gold_sentences": [
+    "The artists\u2019 groups noted in their statement on Tuesday that the European Commission \u201chas on several occasions acknowledged concerns about the impact of the ruling and made clear its intention to find a balanced solution.",
+    "We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage.",
+    "And some of these staff will also be deployed within the European Commission,\u201d they added."
+   ],
+   "evidence": "the eu has launched its first digital services act probe into x, examining illegal-content risks, content moderation, transparency and potentially deceptive design. regulators will assess whether crowdsourced opinions can replace formal moderation and whether cuts to x's moderation teams increased users' exposure to harm. the investigation will test the eu's resolve to enforce its rules-and could lead to an expensive confrontation with elon musk."
+  },
+  {
+   "id": "14690346945512d2",
+   "kind": "evidence",
+   "question": "Which entity is at the center of addressing concerns from the music industry about a CJEU ruling, engaging with Amazon on competition issues regarding an acquisition, deploying staff within its AI Office for evolving rules, and probing Elon Musk's X for risks related to illegal content and deceptive UX design, as reported by Music Business Worldwide and TechCrunch?",
+   "gold_sentences": [
+    "The artists\u2019 groups noted in their statement on Tuesday that the European Commission \u201chas on several occasions acknowledged concerns about the impact of the ruling and made clear its intention to find a balanced solution.",
+    "We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage.",
+    "And some of these staff will also be deployed within the European Commission,\u201d they added."
+   ],
+   "evidence": "the eu has opened its first formal digital services act infringement proceedings against elon musk's x, following a preliminary review of its september risk assessment, november transparency report and responses to information requests. the investigation covers illegal-content notices and handling, complaints, risk assessment and mitigation, transparency, and concerns including illegal-content dissemination linked to hamas's attacks on israel and deceptive interface design."
+  },
+  {
+   "id": "2f125d084da7021e",
+   "kind": "evidence",
+   "question": "Which entity is at the center of addressing concerns from the music industry about a CJEU ruling, engaging with Amazon on competition issues regarding an acquisition, deploying staff within its AI Office for evolving rules, and probing Elon Musk's X for risks related to illegal content and deceptive UX design, as reported by Music Business Worldwide and TechCrunch?",
+   "gold_sentences": [
+    "The artists\u2019 groups noted in their statement on Tuesday that the European Commission \u201chas on several occasions acknowledged concerns about the impact of the ruling and made clear its intention to find a balanced solution.",
+    "We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage.",
+    "And some of these staff will also be deployed within the European Commission,\u201d they added."
+   ],
+   "evidence": "the eu is signaling a possible investigation into x under the digital services act, though officials told techcrunch no formal investigation had begun. the commission is scrutinizing x's handling of illegal-content notices and complaints, risk assessments, and mitigation measures. an investigation could improve public transparency, as x stopped publishing quarterly reports after going private. a fine could reach 6% of annual revenue-about $180 million if musk's projected $3 billion revenue is accurate."
+  },
+  {
+   "id": "71041c287bd6ebb1",
+   "kind": "evidence",
+   "question": "Which entity is at the center of addressing concerns from the music industry about a CJEU ruling, engaging with Amazon on competition issues regarding an acquisition, deploying staff within its AI Office for evolving rules, and probing Elon Musk's X for risks related to illegal content and deceptive UX design, as reported by Music Business Worldwide and TechCrunch?",
+   "gold_sentences": [
+    "The artists\u2019 groups noted in their statement on Tuesday that the European Commission \u201chas on several occasions acknowledged concerns about the impact of the ruling and made clear its intention to find a balanced solution.",
+    "We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage.",
+    "And some of these staff will also be deployed within the European Commission,\u201d they added."
+   ],
+   "evidence": "the european commission opened its first confirmed formal investigation under the digital services act, targeting elon musk's x. it will examine the platform's handling of illegal-content risks, content moderation, deceptive design (\"dark patterns\"), advertising transparency, and researcher data access. the probe follows months of commission inquiries, including urgent questions about illegal content and disinformation related to the israel-hamas war; it is not necessarily connected to a recent privacy-group complaint about x's adtech."
+  },
+  {
+   "id": "af6cd2eff8ef8429",
+   "kind": "evidence",
+   "question": "Who is the individual being scrutinized by a jury for alleged fraud and conspiracy, as depicted by contrasting legal narratives in Fortune and facing a criminal trial as reported by TechCrunch, with the prosecution's claim of intentional fraudulent actions for personal gain also covered by TechCrunch?",
+   "gold_sentences": [
+    "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he\u2019s guilty of seven counts of fraud and conspiracy."
+   ],
+   "evidence": "the verge's trial coverage portrays ftx as an alleged fraud from its founding: prosecutors said bankman-fried secretly gave alameda unlimited access to customer funds while publicly denying preferential treatment. cooperating insiders wang, singh, ellison, and yedidia described code privileges, doctored accounts, and misuse of deposits; expert testimony traced billions to loans, investments, real estate, insiders, and political causes. the collapse devastated customers and bankman-fried's friends and family, many now"
+  },
+  {
+   "id": "70b9fdaaccebfed2",
+   "kind": "evidence",
+   "question": "Who is the individual alleged to have used Caroline Ellison as a cover for unauthorized access to customer funds at Alameda Research, portrayed himself as a credible figure in the cryptocurrency sector prior to a major company collapse, and is accused by prosecutors of committing fraud for personal gain, as reported by Fortune, The Verge, and TechCrunch?",
+   "gold_sentences": [
+    "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto \u2014 the trustworthy face of a sometimes-shady industry.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "at sam bankman-fried's fraud trial, former alameda ceo and ex-girlfriend caroline ellison testified that he directed her to commit crimes and concealed alameda's dependence on ftx customer funds. she described an undocumented $65 billion credit line, customer money used to buy binance's ftx stake, and misleading valuations of ftt and other tokens. a spreadsheet she prepared showed alameda might be unable to repay loans-and would certainly fail if it invested $3 billion-even assuming access to"
+  },
+  {
+   "id": "30c0d43cf4675505",
+   "kind": "evidence",
+   "question": "Who is the individual alleged to have used Caroline Ellison as a cover for unauthorized access to customer funds at Alameda Research, portrayed himself as a credible figure in the cryptocurrency sector prior to a major company collapse, and is accused by prosecutors of committing fraud for personal gain, as reported by Fortune, The Verge, and TechCrunch?",
+   "gold_sentences": [
+    "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto \u2014 the trustworthy face of a sometimes-shady industry.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "at sam bankman-fried's 2023 trial, prosecutors said he secretly used ftx customer funds through alameda research for risky bets, political donations, and personal purposes, while misleading customers, lenders, and investors. his lawyer portrayed him as a good-faith startup founder whose businesses failed amid crypto-market turmoil, blaming alameda ceo caroline ellison's risk management. a customer testified he could not withdraw nearly $100,000; former friend and employee adam yedidia said he feared code"
+  },
+  {
+   "id": "cf4477f0144ae424",
+   "kind": "evidence",
+   "question": "Who is the individual alleged to have used Caroline Ellison as a cover for unauthorized access to customer funds at Alameda Research, portrayed himself as a credible figure in the cryptocurrency sector prior to a major company collapse, and is accused by prosecutors of committing fraud for personal gain, as reported by Fortune, The Verge, and TechCrunch?",
+   "gold_sentences": [
+    "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto \u2014 the trustworthy face of a sometimes-shady industry.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "the verge's courtroom coverage portrays sam bankman-fried's defense as increasingly damaging. on the stand, he struggled to answer questions, admitted failing to create a risk team or safeguards against alameda spending ftx customer funds, and said he did not investigate an $8 billion shortfall despite warnings. prosecutors highlighted testimony from caroline ellison and others tying him to customer-fund misuse and deception; defense cross-examination was described as ineffective. bankman-fried was ultimately convicted on seven counts, including"
+  },
+  {
+   "id": "e3b823a6a6269d13",
+   "kind": "evidence",
+   "question": "Who is the individual alleged to have used Caroline Ellison as a cover for unauthorized access to customer funds at Alameda Research, portrayed himself as a credible figure in the cryptocurrency sector prior to a major company collapse, and is accused by prosecutors of committing fraud for personal gain, as reported by Fortune, The Verge, and TechCrunch?",
+   "gold_sentences": [
+    "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto \u2014 the trustworthy face of a sometimes-shady industry.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "the verge's trial coverage portrays ftx as an alleged fraud from its founding: prosecutors said bankman-fried secretly gave alameda unlimited access to customer funds while publicly denying preferential treatment. cooperating insiders wang, singh, ellison, and yedidia described code privileges, doctored accounts, and misuse of deposits; expert testimony traced billions to loans, investments, real estate, insiders, and political causes. the collapse devastated customers and bankman-fried's friends and family, many now"
+  },
+  {
+   "id": "1494165b1bd16dd5",
+   "kind": "evidence",
+   "question": "Who is the individual whose wealth and influence, as reported by both Fortune and TechCrunch, are under scrutiny by a jury due to allegations of achieving them through fraudulent means related to a crypto exchange?",
+   "gold_sentences": [
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "the verge's trial coverage portrays ftx as an alleged fraud from its founding: prosecutors said bankman-fried secretly gave alameda unlimited access to customer funds while publicly denying preferential treatment. cooperating insiders wang, singh, ellison, and yedidia described code privileges, doctored accounts, and misuse of deposits; expert testimony traced billions to loans, investments, real estate, insiders, and political causes. the collapse devastated customers and bankman-fried's friends and family, many now"
+  },
+  {
+   "id": "ec8a27f58278370e",
+   "kind": "evidence",
+   "question": "Who is the individual associated with a new venture launch and is also central to theories regarding a lack of full truthfulness with the board, as reported by TechCrunch?",
+   "gold_sentences": [
+    "Altman has been telling investors that he\u2019s planning to launch a new venture, according to The Information."
+   ],
+   "evidence": "techcrunch's oct. 13 newsletter says a survey of 50+ founders found no consensus on whether events pay off; value depends on circumstances. it also covers ai's risks and creative-economy debate, meta quest 3, pixel 8, sonos's overturned $32.5m award, reddit apps, creator platforms, and google making passkeys the default. nov. 3 argues startups should tackle difficult, defensible problems. early-stage high-growth firms may still raise"
+  },
+  {
+   "id": "229cfd42bd39db5a",
+   "kind": "evidence",
+   "question": "Which company, covered by multiple TechCrunch articles, is not only criticized for its purportedly anticompetitive spending of $26.3 billion to maintain default search engine status but also for the alleged harms its AI, claimed to surpass competitors like GPT-4 in architecture, has inflicted on news publishers' content and revenue?",
+   "gold_sentences": [
+    "In blog posts and press materials, Google touted Gemini\u2019s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI\u2019s GPT-4.",
+    "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."
+   ],
+   "evidence": "the doj argues google's default-search deals and platform control suppress competition and deprive rivals of data; google says users prefer its superior product. trial revelations included $26.3 billion spent on defaults in 2021; android agreements requiring app preloads and, separately, default search/chrome; and lucrative queries such as iphone, insurance and travel. expedia said google ads became costlier while traffic stagnated as google promoted its own travel listings. evidence suggested a \u20ac5 billion eu fine prompted search"
+  },
+  {
+   "id": "ad18ff9122402e33",
+   "kind": "evidence",
+   "question": "Which company, covered by multiple TechCrunch articles, is not only criticized for its purportedly anticompetitive spending of $26.3 billion to maintain default search engine status but also for the alleged harms its AI, claimed to surpass competitors like GPT-4 in architecture, has inflicted on news publishers' content and revenue?",
+   "gold_sentences": [
+    "In blog posts and press materials, Google touted Gemini\u2019s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI\u2019s GPT-4.",
+    "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."
+   ],
+   "evidence": "arkansas publisher helena world chronicle filed a proposed class-action suit accusing google and alphabet of violating u.s. antitrust laws by using publishers' content to keep users on google and divert traffic and advertising revenue. it says knowledge panels, featured snippets, sge and bard worsen the harm; publishers cannot block sge without losing google search visibility. the suit seeks damages and consent requirements for ai training, plus an option to opt out of sge while remaining in search. google called the case merit"
+  },
+  {
+   "id": "ad8069bac011ab2f",
+   "kind": "evidence",
+   "question": "Who is the individual associated with the crypto exchange FTX, whose purported success was questioned in a Fortune article, who admitted to being informed of financial discrepancies as reported by The Verge, and is alleged by the prosecution to have committed fraud for personal gain according to TechCrunch?",
+   "gold_sentences": [
+    "But \u201call of that, all of it, was built on lies,\u201d Rehn declared to the jury.",
+    "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he\u2019d been told.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "the verge's trial coverage portrays ftx as an alleged fraud from its founding: prosecutors said bankman-fried secretly gave alameda unlimited access to customer funds while publicly denying preferential treatment. cooperating insiders wang, singh, ellison, and yedidia described code privileges, doctored accounts, and misuse of deposits; expert testimony traced billions to loans, investments, real estate, insiders, and political causes. the collapse devastated customers and bankman-fried's friends and family, many now"
+  },
+  {
+   "id": "d92d590d462218ae",
+   "kind": "evidence",
+   "question": "Who is the individual associated with the FTX collapse, facing a trial for fraud and conspiracy charges, and was previously compared to Warren Buffet, yet was not by TechCrunch, and is also accused by the prosecution of using customer funds to repay debts under his direction?",
+   "gold_sentences": [
+    "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it\u2019s worth).",
+    "SBF, as he\u2019s known, has pleaded not-guilty to some seven charges of fraud and conspiracy.",
+    "The second week of the trial\u2019s standout testimony came from Alameda Research\u2019s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "the verge's trial coverage portrays ftx as an alleged fraud from its founding: prosecutors said bankman-fried secretly gave alameda unlimited access to customer funds while publicly denying preferential treatment. cooperating insiders wang, singh, ellison, and yedidia described code privileges, doctored accounts, and misuse of deposits; expert testimony traced billions to loans, investments, real estate, insiders, and political causes. the collapse devastated customers and bankman-fried's friends and family, many now"
+  },
+  {
+   "id": "e5dafda742c457f1",
+   "kind": "evidence",
+   "question": "Who became a notable figure in generative AI for impacting public awareness through ChatGPT, is supporting a teen's AI startup, and is at the center of theories suggesting a lack of full transparency with the board, as reported by Fortune and TechCrunch?",
+   "gold_sentences": [
+    "But it was ChatGPT\u2019s explosion into public consciousness that thrust Altman into the spotlight as a face of generative AI \u2014 technology that can produce novel imagery, passages of text and other media.",
+    "This week, we cover Sam Altman backing a teen\u2019s AI startup, Google\u2019s hardware event (and first impressions of the Pixel 8 Pro), Flexport drama, and the ongoing FTX fallout.",
+    "Based on the board\u2019s language and the way these giant tech companies work, this is the prevailing theory floating around right now."
+   ],
+   "evidence": "openai's chatgpt grew from a writing-and-coding aid into a widely used chatbot adopted by over 92% of fortune 500 companies. its rapid rise boosted openai's profile but intensified competition, including from meta's llama, and ceo sam altman's brief ouster and swift return exposed tensions over commercialization and governance. chatgpt's mobile app became a fast-growing consumer hit; researchers also demonstrated that models could reveal private training data. its voice feature is"
+  },
+  {
+   "id": "7d34583c4b48ed4b",
+   "kind": "evidence",
+   "question": "Which company, recently portrayed as an antagonist by Epic Games and accused by news publishers of harming their bottom line through anticompetitive practices, also ensures its search engine is the default on platforms of companies like Apple, as reported by The Verge and TechCrunch?",
+   "gold_sentences": [
+    "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google \u201csiphons off\u201d news publishers\u2019 content, their readers and ad revenue through anticompetitive means."
+   ],
+   "evidence": "a federal jury found google illegally monopolized android app distribution and payments, backing epic's claims that fees, restrictive policies and payments to developers, carriers and device makers suppressed rivals; google plans to appeal, while epic seeks global remedies and broader competition. separately, the doj says google's default-search deals entrench dominance; google says users prefer its product. evidence included $26.3 billion spent on defaults in 2021 and apple's defense of its google agreement. a publisher lawsuit alleges google's"
+  },
+  {
+   "id": "e4c054f0de4fd6d3",
+   "kind": "evidence",
+   "question": "Which company, recently portrayed as an antagonist by Epic Games and accused by news publishers of harming their bottom line through anticompetitive practices, also ensures its search engine is the default on platforms of companies like Apple, as reported by The Verge and TechCrunch?",
+   "gold_sentences": [
+    "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google \u201csiphons off\u201d news publishers\u2019 content, their readers and ad revenue through anticompetitive means."
+   ],
+   "evidence": "the doj argues google's default-search deals and platform control suppress competition and deprive rivals of data; google says users prefer its superior product. trial revelations included $26.3 billion spent on defaults in 2021; android agreements requiring app preloads and, separately, default search/chrome; and lucrative queries such as iphone, insurance and travel. expedia said google ads became costlier while traffic stagnated as google promoted its own travel listings. evidence suggested a \u20ac5 billion eu fine prompted search"
+  },
+  {
+   "id": "b90d5c0defb3a11f",
+   "kind": "evidence",
+   "question": "Which company, recently portrayed as an antagonist by Epic Games and accused by news publishers of harming their bottom line through anticompetitive practices, also ensures its search engine is the default on platforms of companies like Apple, as reported by The Verge and TechCrunch?",
+   "gold_sentences": [
+    "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google \u201csiphons off\u201d news publishers\u2019 content, their readers and ad revenue through anticompetitive means."
+   ],
+   "evidence": "apple executive eddy cue defended apple's long-running agreement making google the default search engine on apple devices, saying google was the best product and there was \"no valid alternative.\" he said apple never seriously considered switching or building search, and preferred not to add search-engine choices during iphone setup. the doj argued the lucrative deal entrenches google's dominance and conflicts with apple's privacy concerns. cue acknowledged apple viewed its privacy protections as stronger, while google's lawyer emphasized the partnership's history, product integration"
+  },
+  {
+   "id": "907772ba040054e7",
+   "kind": "evidence",
+   "question": "Which company, recently in the news for its CEO's response to \"deeply concerning\" reporting and for reducing its workforce by approximately 600 employees due to cost-cutting measures, has also seen its revenue negatively affected by the decrease in transportation fees for goods, according to a report by a world business news leader?",
+   "gold_sentences": [
+    "Because Flexport makes money by charging fees for the transportation of goods, the company's business was getting hammered.",
+    "Turmoil at Flexport: Dave Clark, the former Amazon executive who was ousted as CEO of Flexport just a year into the job, fired back at its founder and board, calling recent reporting on the logistics company \u201cdeeply concerning.\u201d Clark made the comments Monday in a lengthy post on social media site X following a report from CNBC that provided new information about his last days at Flexport, a freight forwarding and customs brokerage startup valued at $8 billion."
+   ],
+   "evidence": "in 2023, shopify planned to cut 20% of its workforce-over 2,000 jobs-and sell its logistics business to flexport for roughly 13% in stock. bishop fox cut 50 jobs (13%); neato robotics shut down, affecting nearly 100; and clubhouse cut over half its staff. dropbox eliminated 500 jobs (16%). amazon's halo shutdown was part of 27,000 announced cuts, about 8% of corporate staff. rapid cut"
+  },
+  {
+   "id": "f02f2e460c8a2b89",
+   "kind": "evidence",
+   "question": "Which company, recently in the news for its CEO's response to \"deeply concerning\" reporting and for reducing its workforce by approximately 600 employees due to cost-cutting measures, has also seen its revenue negatively affected by the decrease in transportation fees for goods, according to a report by a world business news leader?",
+   "gold_sentences": [
+    "Because Flexport makes money by charging fees for the transportation of goods, the company's business was getting hammered.",
+    "Turmoil at Flexport: Dave Clark, the former Amazon executive who was ousted as CEO of Flexport just a year into the job, fired back at its founder and board, calling recent reporting on the logistics company \u201cdeeply concerning.\u201d Clark made the comments Monday in a lengthy post on social media site X following a report from CNBC that provided new information about his last days at Flexport, a freight forwarding and customs brokerage startup valued at $8 billion."
+   ],
+   "evidence": "techcrunch's 2023 layoff roundup reports cuts and closures across tech. in december, cruise cut 900 jobs (24%); etsy 11% of staff; bolt 29%; and chipper cash reportedly 15 employees. superpedestrian is ending its u.s. scooter operation and exploring a european sale; smiledirectclub shut down after bankruptcy, citing $900 million in debt. earlier, amazon eliminated over 18,000 roles; coinbase cut 950 (20%"
+  },
+  {
+   "id": "fc6a7999bd7260ee",
+   "kind": "evidence",
+   "question": "Who is the Silicon Valley figure that has become known for his views on artificial intelligence and is involved with backing a teen's AI startup, as well as being at the center of controversy regarding his alleged lack of transparency with the board of OpenAI, as reported by Fortune and TechCrunch?",
+   "gold_sentences": [
+    "In the year since Altman catapulted ChatGPT to global fame, he has become Silicon Valley\u2019s sought-after voice on the promise and potential dangers of artificial intelligence and his sudden and mostly unexplained exit brought uncertainty to the industry\u2019s future.",
+    "This week, we cover Sam Altman backing a teen\u2019s AI startup, Google\u2019s hardware event (and first impressions of the Pixel 8 Pro), Flexport drama, and the ongoing FTX fallout."
+   ],
+   "evidence": "silicon valley's ai race was driven by both fear of catastrophe and ego, wealth and control. deepmind's founders, convinced they could manage ai's risks, took peter thiel's funding, then sold to google with safety safeguards that soon proved ineffective. google, facebook, microsoft and others competed fiercely for researchers. elon musk helped launch openai to counter google, but left after disputes over its direction; commercial pressures later prompted safety-minded researchers to form anthropic. openai's rapid advances-including"
+  },
+  {
+   "id": "bfa4990022ddc22b",
+   "kind": "evidence",
+   "question": "Which company is at the center of allegations involving manipulation of search results to maximize ad revenue according to 'The Age', is portrayed as the antagonist in a legal battle highlighted by 'The Verge', and is accused by news publishers in a 'TechCrunch' article of harming their bottom line through anticompetitive practices?",
+   "gold_sentences": [
+    "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one."
+   ],
+   "evidence": "arkansas publisher helena world chronicle filed a proposed class-action suit accusing google and alphabet of violating u.s. antitrust laws by using publishers' content to keep users on google and divert traffic and advertising revenue. it says knowledge panels, featured snippets, sge and bard worsen the harm; publishers cannot block sge without losing google search visibility. the suit seeks damages and consent requirements for ai training, plus an option to opt out of sge while remaining in search. google called the case merit"
+  },
+  {
+   "id": "49eda6381e829886",
+   "kind": "evidence",
+   "question": "Which company is depicted as an antagonist in a legal case covered by The Verge, is known for using relevance, distance, and prominence to rank local search results according to another article by The Verge, and is accused by news publishers in a class action antitrust suit reported by TechCrunch of harming their business by siphoning off content, readers, and ad revenue?",
+   "gold_sentences": [
+    "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one.",
+    "Google\u2019s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence."
+   ],
+   "evidence": "arkansas publisher helena world chronicle filed a proposed class-action suit accusing google and alphabet of violating u.s. antitrust laws by using publishers' content to keep users on google and divert traffic and advertising revenue. it says knowledge panels, featured snippets, sge and bard worsen the harm; publishers cannot block sge without losing google search visibility. the suit seeks damages and consent requirements for ai training, plus an option to opt out of sge while remaining in search. google called the case merit"
+  },
+  {
+   "id": "828525caad529ab3",
+   "kind": "evidence",
+   "question": "Which company, frequently mentioned in articles by TechCrunch and The Verge, has been reported to invest billions to become the default search engine on various platforms, alter the internet's appearance through its initiatives, only release a 'lite' version of an AI model despite showcasing a full version, and has faced a class action antitrust suit for allegedly harming news publishers' revenue and content distribution?",
+   "gold_sentences": [
+    "The company did accomplish that goal, but in doing so, it inadvertently and profoundly changed how the internet looked.",
+    "But it didn\u2019t release the full model, Gemini Ultra \u2014 only a \u201clite\u201d version called Gemini Pro."
+   ],
+   "evidence": "the doj argues google's default-search deals and platform control suppress competition and deprive rivals of data; google says users prefer its superior product. trial revelations included $26.3 billion spent on defaults in 2021; android agreements requiring app preloads and, separately, default search/chrome; and lucrative queries such as iphone, insurance and travel. expedia said google ads became costlier while traffic stagnated as google promoted its own travel listings. evidence suggested a \u20ac5 billion eu fine prompted search"
+  },
+  {
+   "id": "ec98a5c2cf6bf043",
+   "kind": "evidence",
+   "question": "Who is the individual associated with FTX and Alameda, who allegedly used deceit to build a thriving crypto exchange, convinced a former Jane Street colleague to join his ventures, and is accused of misappropriating $1 billion of customer funds as well as committing fraud for personal gain, and has been discussed in articles by Fortune, The Verge, and TechCrunch?",
+   "gold_sentences": [
+    "But \u201call of that, all of it, was built on lies,\u201d Rehn declared to the jury.",
+    "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.",
+    "It was Bankman-Fried\u2019s decision, she said, as he was the CEO of FTX.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "at his ftx fraud trial, sam bankman-fried portrayed himself as overworked and largely unaware of alameda's finances, customer-fund borrowing, and an $8 billion liability. the verge contrasted these claims with testimony and evidence: alameda alone had a code-enabled negative balance, avoided liquidation, and received a credit line that grew to $65 billion. former executives described customer money being used, losses concealed, and ftx's insurance fund misrepresented. bankman-fried's"
+  },
+  {
+   "id": "0e4a0d36eba60dd6",
+   "kind": "evidence",
+   "question": "Who is the individual associated with FTX and Alameda, who allegedly used deceit to build a thriving crypto exchange, convinced a former Jane Street colleague to join his ventures, and is accused of misappropriating $1 billion of customer funds as well as committing fraud for personal gain, and has been discussed in articles by Fortune, The Verge, and TechCrunch?",
+   "gold_sentences": [
+    "But \u201call of that, all of it, was built on lies,\u201d Rehn declared to the jury.",
+    "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.",
+    "It was Bankman-Fried\u2019s decision, she said, as he was the CEO of FTX.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "at sam bankman-fried's 2023 trial, prosecutors said he secretly used ftx customer funds through alameda research for risky bets, political donations, and personal purposes, while misleading customers, lenders, and investors. his lawyer portrayed him as a good-faith startup founder whose businesses failed amid crypto-market turmoil, blaming alameda ceo caroline ellison's risk management. a customer testified he could not withdraw nearly $100,000; former friend and employee adam yedidia said he feared code"
+  },
+  {
+   "id": "a29000214acea239",
+   "kind": "evidence",
+   "question": "Who is the individual associated with FTX and Alameda, who allegedly used deceit to build a thriving crypto exchange, convinced a former Jane Street colleague to join his ventures, and is accused of misappropriating $1 billion of customer funds as well as committing fraud for personal gain, and has been discussed in articles by Fortune, The Verge, and TechCrunch?",
+   "gold_sentences": [
+    "But \u201call of that, all of it, was built on lies,\u201d Rehn declared to the jury.",
+    "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.",
+    "It was Bankman-Fried\u2019s decision, she said, as he was the CEO of FTX.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "the verge's trial coverage portrays ftx as an alleged fraud from its founding: prosecutors said bankman-fried secretly gave alameda unlimited access to customer funds while publicly denying preferential treatment. cooperating insiders wang, singh, ellison, and yedidia described code privileges, doctored accounts, and misuse of deposits; expert testimony traced billions to loans, investments, real estate, insiders, and political causes. the collapse devastated customers and bankman-fried's friends and family, many now"
+  },
+  {
+   "id": "1ada111842ce8d89",
+   "kind": "evidence",
+   "question": "Who is the individual associated with FTX and Alameda, who allegedly used deceit to build a thriving crypto exchange, convinced a former Jane Street colleague to join his ventures, and is accused of misappropriating $1 billion of customer funds as well as committing fraud for personal gain, and has been discussed in articles by Fortune, The Verge, and TechCrunch?",
+   "gold_sentences": [
+    "But \u201call of that, all of it, was built on lies,\u201d Rehn declared to the jury.",
+    "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.",
+    "It was Bankman-Fried\u2019s decision, she said, as he was the CEO of FTX.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "at sam bankman-fried's fraud trial, former alameda ceo and ex-girlfriend caroline ellison testified that he directed her to commit crimes and concealed alameda's dependence on ftx customer funds. she described an undocumented $65 billion credit line, customer money used to buy binance's ftx stake, and misleading valuations of ftt and other tokens. a spreadsheet she prepared showed alameda might be unable to repay loans-and would certainly fail if it invested $3 billion-even assuming access to"
+  },
+  {
+   "id": "278700f93040a19f",
+   "kind": "evidence",
+   "question": "Who is the individual implicated in instructing Caroline Ellison to use $14 billion of customer funds to repay debts, as reported by TechCrunch, and is also alleged by the prosecution to have committed fraud for personal gain, according to another article from TechCrunch?",
+   "gold_sentences": [
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "at sam bankman-fried's fraud trial, former alameda ceo and ex-girlfriend caroline ellison testified that he directed her to commit crimes and concealed alameda's dependence on ftx customer funds. she described an undocumented $65 billion credit line, customer money used to buy binance's ftx stake, and misleading valuations of ftt and other tokens. a spreadsheet she prepared showed alameda might be unable to repay loans-and would certainly fail if it invested $3 billion-even assuming access to"
+  },
+  {
+   "id": "db0d321c94616c42",
+   "kind": "evidence",
+   "question": "Who is the individual implicated in instructing Caroline Ellison to use $14 billion of customer funds to repay debts, as reported by TechCrunch, and is also alleged by the prosecution to have committed fraud for personal gain, according to another article from TechCrunch?",
+   "gold_sentences": [
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "the verge's courtroom coverage portrays sam bankman-fried's defense as increasingly damaging. on the stand, he struggled to answer questions, admitted failing to create a risk team or safeguards against alameda spending ftx customer funds, and said he did not investigate an $8 billion shortfall despite warnings. prosecutors highlighted testimony from caroline ellison and others tying him to customer-fund misuse and deception; defense cross-examination was described as ineffective. bankman-fried was ultimately convicted on seven counts, including"
+  },
+  {
+   "id": "fa4401b08515751b",
+   "kind": "evidence",
+   "question": "Who is the individual implicated in instructing Caroline Ellison to use $14 billion of customer funds to repay debts, as reported by TechCrunch, and is also alleged by the prosecution to have committed fraud for personal gain, according to another article from TechCrunch?",
+   "gold_sentences": [
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "at sam bankman-fried's 2023 trial, prosecutors said he secretly used ftx customer funds through alameda research for risky bets, political donations, and personal purposes, while misleading customers, lenders, and investors. his lawyer portrayed him as a good-faith startup founder whose businesses failed amid crypto-market turmoil, blaming alameda ceo caroline ellison's risk management. a customer testified he could not withdraw nearly $100,000; former friend and employee adam yedidia said he feared code"
+  },
+  {
+   "id": "ef482f9986b99572",
+   "kind": "evidence",
+   "question": "Does the Polygon article suggest that Spider-Man embodies the spirit of Thanksgiving in a way that aligns with the portrayal of Thanksgiving as a time for gratitude and togetherness described in The Independent - Life and Style article?",
+   "gold_sentences": [
+    "Apart from the food - arguably the main component of the day - the holiday is a beloved time of year when Americans come together to celebrate what they are thankful for, either with family or friends."
+   ],
+   "evidence": "{\"article\": \"Thanksgiving is Spider-Man\u2019s holiday\", \"passage\": \"Thanksgiving is Spider-Man\u2019s holiday (Polygon, 2023-11-23T16:04:00+00:00)\\nMarvel built its comic book revolution on the back of one idea: rendering colorful superheroes as relatable. In the mid 20th century, DC do-gooders were essentially square-jawed Sunday school teachers, which let Marvel corner the market on heroes with human depth and fragility. The Fantastic Four were vulnerable to insecurity and in-fighting. The X-Men represented the cost of bigotry on a wide scale.\\n\\nBut Spider-Man represented this new wave best. Consumed by youthful everyman angst and desperate to find balance in his life, Spider-Man is broadly sympathetic. We identify with his struggles and his little glimmers of connection and triumph \u2014 which makes him the perfect superhero for Thanksgiving. And Spider-Man writers know it.\\n\\nThanksgiving has a complicated history, tied to the roots of American colonialism, and more recently processed through a lens of joyful capitalism. But feeding friends and family is perhaps one of the most humane acts we can pursue.\"}"
+  },
+  {
+   "id": "d0ebdf1cf723cff7",
+   "kind": "evidence",
+   "question": "Between the TechCrunch report on Google's AI demo involving the Gemini Ultra model and the TechCrunch report on the antitrust suit filed against Google, was there a change in the nature of the issues reported concerning Google's practices?",
+   "gold_sentences": [
+    "But it didn\u2019t release the full model, Gemini Ultra \u2014 only a \u201clite\u201d version called Gemini Pro.",
+    "Google\u2019s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence."
+   ],
+   "evidence": "{\"demo_report\": \"Early impressions of Google\u2019s Gemini aren\u2019t great\", \"demo_report_date\": \"2023-12-07T16:12:30+00:00\", \"antitrust_report\": \"Apple defends Google Search deal in court: \u2018There wasn\u2019t a valid alternative\u2019\", \"antitrust_report_date\": \"2023-09-26T17:01:22+00:00\", \"shared_entity\": \"Google Search\", \"issue\": \"antitrust\"}"
+  },
+  {
+   "id": "105509ee5df19f21",
+   "kind": "evidence",
+   "question": "Does the TechCrunch article on Meta's GDPR compliance concerns suggest a different legal issue than the TechCrunch article on Meta's responsibility for teen social media monitoring, and does it also differ from the TechCrunch article on Meta's moderation bias affecting Palestinian voices?",
+   "gold_sentences": [
+    "\u201cThe company\u2019s approach also raises concerns regarding the GDPR,\u201d Pachl further noted.",
+    "Al Saadi said that her frustration with Meta is common among Palestinians, both in occupied territories and across the diaspora."
+   ],
+   "evidence": "{\"article\": null, \"article_name\": \"After warning, the EU opens investigation into X over alleged disinformation\", \"published_on\": \"2023-10-13T00:38:56+00:00\", \"legal_issue\": \"Moderation bias affecting Palestinian voices\", \"relevant_mention\": \"content moderation\", \"related_entities\": [\"Investigation into X over alleged disinformation\", \"complaint handling\", \"risk assessment\", \"terrorist and violent content\", \"hate speech\", \"Saturday\u2019s attacks\", \"Commission services\", \"digital services and platforms\", \"T&Cs\", \"the regulation\", \"crisis response mechanism\", \"Article 36\"], \"passages\": [\"After warning, the EU opens investigation into X over alleged disinformation (TechCrunch, 2023-10-13T00:38:56+00:00)\\nEU turns up the heat on X over illegal content in wake of Israel-Hamas war\\n\\nThe European Union is cranking up the heat on Elon Musk-owned X. Late Thursday, the Commission sent the company a formal request for more information \u2014 after issuing a public warning Wednesday about reports that illegal content and disinformation targeting the Israel-Hamas war is circulating on the platform, and Twitter\u2019s CEO sending a high-level (non specific) response to that warning.\\n\\nThe move could prefigure the opening of a formal investigation of X under the bloc\u2019s content moderation rulebook, the Digital Services Act (DSA). If the Commission moves ahead on that, it will be the first investigation opened under the DSA since a compliance deadline for so called \u201cvery large online platforms\u201d (aka VLOPs) kicked in this summer.\\n\\nNon-compliance under DSA rules, meanwhile, could trigger fines of up to 6% of annual turnover, plus potential blocking of a service for repeated infringements. X owner Elon Musk last projected revenues of about $3 billion for this year.\", \"After warning, the EU opens investigation into X over alleged disinformation (TechCrunch, 2023-10-13T00:38:56+00:00)\\nX owner Elon Musk last projected revenues of about $3 billion for this year. It\u2019s anyone\u2019s guess if that\u2019s accurate now, but as an example, that would result in a fine of up to $180 million.\\n\\nIndirectly, an investigation will also be a key way for the public to have significantly more transparency around how X is being used (and abused): since Musk took Twitter private, the company no longer produces quarterly earnings reports and is not held to account as closely as a result.\\n\\nEU officials confirmed to TechCrunch that an investigation has not been taken at this point. Clearly, though, yesterday\u2019s development (and the pace at which regulators are moving) is a strong indication of the bloc\u2019s direction of travel.\\n\\nThe Commission said it is looking at X\u2019s compliance with the DSA across a number of areas \u2014 including with regard to its policies and practices regarding notices on illegal content; complaint handling; risk assessment and measures to mitigate the risks identified.\", \"After warning, the EU opens investigation into X over alleged disinformation (TechCrunch, 2023-10-13T00:38:56+00:00)\\nOn Wednesday, in an \u201curgent\u201d letter to Musk, the EU\u2019s internal market commissioner Thierry Breton said the bloc had seen \u201cindications\u201d from \u201cqualified sources\u201d that X is being used to disseminate illegal content and disinformation in the EU\u201d following Saturday\u2019s attacks \u2014 before reminding X of the DSA\u2019s \u201cvery precise obligations\u201d vis-\u00e0-vis content moderation.\\n\\n\u201cWhen you receive notices of illegal content in the EU, you must be timely, diligent and objective in taking action and removing the relevant content when warranted,\u201d Breton also warned then.\\n\\nIn its latest press release, the EU said it has sent X a formal request for information under the DSA.\\n\\n\u201cThis request follows indications received by the Commission services of the alleged spreading of illegal content and disinformation, in particular the spreading of terrorist and violent content and hate speech,\u201d it wrote, adding that the ask also addresses other aspects of DSA compliance.\\n\\nThe pan-EU regulation puts a series of governance obligations on digital services and platforms with the aim of ensuring companies are responding to reports of illegal content.\"]}"
+  },
+  {
+   "id": "f0f81ca25695df2c",
+   "kind": "evidence",
+   "question": "Who is the individual targeted by Attorney General Letitia James for penalties and a business ban in New York, who also allegedly inflated the value of his Manhattan apartment, as reported by both Fortune and The Age, to conceal the diminished valuation of another one of his properties?",
+   "gold_sentences": [
+    "The prosecution argues that was to mask a drop in the value of one of his other properties."
+   ],
+   "evidence": "{\"entity\": \"Donald Trump defrauded banks with 'fantasy' to build his real estate empire, judge rules in a major repudiation against the former president\", \"relationship\": \"MENTIONS\", \"related\": \"Letitia James\", \"article\": null, \"published_on\": null}"
+  },
+  {
+   "id": "2abefbbe13665816",
+   "kind": "evidence",
+   "question": "After the report by Fortune on October 4, 2023, regarding Sam Bankman-Fried's use of a front for secret access to customer funds, and the subsequent report by TechCrunch on October 7, 2023, alleging that Sam Bankman-Fried knowingly committed fraud, did The Verge report on Sam Bankman-Fried's trial indicate consistent or inconsistent information regarding his actions related to customer funds?",
+   "gold_sentences": [
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX\u2019s total trading revenue.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "{\"kind\": \"connection\", \"subject\": \"Is Sam Bankman-Fried a bad \u2018man\u2019 or a good \u2018boy\u2019? Lawyers swap opening statements before first witnesses take the stand\", \"relationship\": \"PUBLISHED_BY\", \"related\": \"Fortune\", \"page\": null, \"passage\": null}"
+  },
+  {
+   "id": "e7f2868400ff3893",
+   "kind": "evidence",
+   "question": "Between the TechCrunch report on Sam Bankman-Fried's legal situation published after October 2, 2023, and The Verge's coverage of Sam Bankman-Fried's testimony, was there a change in the narrative regarding his ability to manage FTX and Alameda Research?",
+   "gold_sentences": [
+    "SBF, as he\u2019s known, has pleaded not-guilty to some seven charges of fraud and conspiracy.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "{\"article\": \"ASX set to drop as Wall Street\u2019s September slump deepens\", \"published_on\": \"2023-09-26T19:11:30+00:00\", \"publisher\": \"The Sydney Morning Herald\", \"mentioned_organizations\": [], \"passage\": \"ASX set to drop as Wall Street\u2019s September slump deepens (The Sydney Morning Herald, 2023-09-26T19:11:30+00:00)\\nETF provider Betashares, which manages $30 billion in funds, reached an agreement to acquire Bendigo and Adelaide Bank\u2019s superannuation business, in its first venture into the superannuation sector. Betashares said it was part of a longer-term strategy to expand the business into the broader financial sector. Shares in Bendigo increased 0.6 per cent on the news. REITS (up 0.4 per cent) was the strongest sector on the index as Goodman added 0.5 per cent and Dexus climbed 2.8 per cent. The laggards Casino operator Star Entertainment Group\u2019s shares hit an all-time low of 60\u00a2 after it raised $565 million. They closed the session 16 per cent weaker at 63\u00a2. Star, which raised $800 million in February, has had to return to the market for fresh funding and is hoping to raise $750 million at a share price of 60\u00a2 a share.\"}"
+  },
+  {
+   "id": "b18bba9674994d0a",
+   "kind": "evidence",
+   "question": "Who is the individual that communicated to Paradigm about intending to establish a board with specialists for a cryptocurrency exchange, while preferring not to have investors as directors, and is also the same person who, during a court proceeding with Judge Lewis Kaplan, conceded to being aware of a significant financial discrepancy, and is accused by the prosecution of deliberately engaging in fraudulent activities to gain wealth, power, and influence, as reported by Cnbc | World Business News Leader, The Verge, and TechCrunch?",
+   "gold_sentences": [
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "{\"article\": \"SBF Trial: The latest updates from the FTX collapse\u2019s courtroom drama\", \"published_on\": \"2023-10-06T17:22:02+00:00\", \"publisher\": \"TechCrunch\", \"related_entity\": \"Josh Naftalis\"}"
+  },
+  {
+   "id": "ebcfd13757a05885",
+   "kind": "evidence",
+   "question": "Does the TechCrunch article discussing the SBF trial suggest that Caroline Ellison acted under the instruction of Sam Bankman-Fried in the misuse of customer funds, while the other TechCrunch article on Sam Bankman-Fried's plea deal only mention his not-guilty plea to fraud and conspiracy, without specifying involvement in directing others?",
+   "gold_sentences": [
+    "SBF, as he\u2019s known, has pleaded not-guilty to some seven charges of fraud and conspiracy.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "{\"article\": \"SBF Trial: The latest updates from the FTX collapse\u2019s courtroom drama\", \"published_on\": \"2023-10-06T17:22:02+00:00\", \"publisher\": \"TechCrunch\", \"matching_entities\": [\"SBF Trial\", \"SBF\", \"SBF trial\u2019s jury\", \"Sam Bankman-Fried\"], \"connections\": [{\"relationship\": \"MENTIONS\", \"entity\": \"Josh Naftalis\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"Naftalis\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"Jacquelyn Melinek\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"Chain Reaction podcast\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"Apple Podcasts\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"bankruptcy\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"Chain Reaction newsletter\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"jury selection\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"Robert Boroujerdi\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"Third Point\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"University of Notre Dame\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"Easton\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"FTX Ventures\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"Chinese officials\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"Paying Chinese officials $150 million to restore access to $1 billion in frozen trading accounts\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"charities\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"SBF Trial\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"FTX collapse\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"SBF\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"Matt Huang\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"Paradigm\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"class-action lawsuit\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"defrauding customers\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"Chain Reaction\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"SBF trial\u2019s jury\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"Gary Wang\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"Caroline Ellison\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"crypto\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"Thane Rehn\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"Mark Cohen\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"Alameda Research\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"Alameda\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"bribery\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"TechCrunch\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"Equity\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"TechCrunch+\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"money laundering\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"political causes\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"Peter Easton\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"Can Sun\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"real estate\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"FTX\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"Sam Bankman-Fried\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"investments\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"Spotify\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"fraud\"}, {\"relationship\": \"MENTIONS\", \"entity\": \"Stanford University\"}], \"passages\": [\"SBF Trial: The latest updates from the FTX collapse\u2019s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)\\nSBF trial: Everything to know from the FTX courtroom ahead of his testimony Sam Bankman-Fried is in court for alleged fraud and money laundering while leading crypto exchange FTX and sister company Alameda. Here\u2019s our latest coverage as the case nears its end.\\n\\nThe trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX, is entering its next chapter as proceedings resume Thursday. As confirmed during a teleconference Wednesday, SBF will be taking the stand, along with a handful of other witnesses as the onus shifts toward the defense after the prosecution brought its case to its conclusion.\\n\\nAs former federal prosecutor Josh Naftalis told TechCrunch, SBF taking to the stand in his own trial is a \u201cHail Mary\u201d ahead of a verdict and potential sentencing for seven counts tied to fraud and money laundering.\\n\\n\u201cOnce it goes to cross[-examination], he doesn\u2019t get to say, \u2018I\u2019m done,\u2019\u201d Naftalis said.\", \"SBF Trial: The latest updates from the FTX collapse\u2019s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)\\n\u201cHe can\u2019t just walk out if he doesn\u2019t like how it\u2019s going.\u201d\\n\\n\\n\\nNaftalis spoke at length about what comes next in the trial, and addressed common misconceptions about the prosecution and defense in the latest episode of TechCrunch\u2019s Chain Reaction podcast, which you can listen to below, or on Apple Podcasts or Spotify.\\n\\nThe SBF trial is one of the biggest cases of its kind within the crypto space. Our resident crypto expert Jacquelyn Melinek has been on the ground at the trial since it started, and continues to cover the ins and outs of the proceedings. But the trial has been on pause from October 20 to today, so there\u2019s plenty to catch up on if you need a refresher ahead of it entering its final few phases.\\n\\nFor those in need of a total refresher on the case, her breakdown of how FTX went from the third-largest crypto exchange valued at a peak of $32 billion to bankruptcy will get you up to speed.\", \"SBF Trial: The latest updates from the FTX collapse\u2019s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)\\nYou can also follow along with her and the TechCrunch team\u2019s coverage in the Chain Reaction newsletter, which drops Thursdays at 12 p.m. PT, and the Chain Reaction podcast, which will hit your feed every Thursday.\\n\\nHow to follow the SBF trial\\n\\nThe trial kicked off with jury selection October 3. From there, access to the proceedings is limited, as no devices are allowed; reports are being physically put together within the courtroom (or sent to overflow rooms).\\n\\nBeyond our daily coverage, additional expertise and commentary will live on TechCrunch+. There, you can find stories like this in-depth breakdown of what to expect from both sides of the SBF case, where the prosecution and defense could gain ground or fall short in their arguments and what the takeaways were from the opening arguments.\\n\\nSBF trial: What we learned in week three\\n\\nThe third week of the trial featured a couple of noteworthy moments for the prosecution, including FTX\u2019s former general counsel Can Sun.\", \"SBF Trial: The latest updates from the FTX collapse\u2019s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)\\nHe, like many of SBF\u2019s former colleagues, opted to cooperate with authorities and testified that SBF asked him to create a theoretical \u201clegal justification\u201d for the use of billions in consumer funds just days before FTX filed for bankruptcy.\\n\\nRobert Boroujerdi, managing director of the hedge fund Third Point, testified about his experience working with SBF and FTX, in a partnership that ultimately resulted in a $60 million investment and a lack of awareness about the special relationship between Alameda Research and FTX. Had he known of such a relationship, he testified that Third Point would not have invested in FTX in the first place.\\n\\nAnd earlier in the week, a University of Notre Dame professor who helped the government prosecution of Enron and WorldCom, Peter Easton, testified about what he uncovered after tracing the flow of billions of dollars between Alameda Research and FTX.\", \"SBF Trial: The latest updates from the FTX collapse\u2019s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)\\nMuch of said funding came from customers, and Easton testified that he found that user deposits were used by both FTX and Alameda to purchase real estate, make investments or direct funding toward political causes and charities.\\n\\nSBF trial: What we learned in week two\\n\\nThe second week of the trial\u2019s standout testimony came from Alameda Research\u2019s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF. Ellison also went into detail about how a $2 billion venture fund, FTX Ventures, was funded by money that had previously been allocated to Alameda from third-party lenders.\\n\\nAnd though there are no charges of bribery in the case, Ellison also testified to paying Chinese officials $150 million to restore access to $1 billion in frozen trading accounts.\\n\\nSBF trial: What we learned in the week one\\n\\nAs expected, the opening statements in the SBF trial were spicy.\"]}"
+  },
+  {
+   "id": "99fe8b58ff4190bb",
+   "kind": "evidence",
+   "question": "Which individual, featured in articles by The Verge and Fortune, is alleged to have used their position to both persuade a former Jane Street colleague to join his trading and development ventures and to inappropriately utilize customer funds, actions that are now central to fraud allegations discussed in TechCrunch?",
+   "gold_sentences": [
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX\u2019s total trading revenue.",
+    "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.",
+    "It was Bankman-Fried\u2019s decision, she said, as he was the CEO of FTX.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "{\"person\": \"Sam Bankman-Fried\", \"relationship\": \"MENTIONS\", \"article\": \"Is Sam Bankman-Fried a bad \u2018man\u2019 or a good \u2018boy\u2019? Lawyers swap opening statements before first witnesses take the stand\", \"publisher\": \"Fortune\"}"
+  },
+  {
+   "id": "d95978556c4a0535",
+   "kind": "evidence",
+   "question": "Between the report from The Verge on September 28, 2023, concerning Sam Bankman-Fried's role before the collapse of FTX, and the report from TechCrunch on October 7, 2023, alleging Sam Bankman-Fried's fraudulent activities, was there a change in the portrayal of Sam Bankman-Fried's actions related to the FTX trial?",
+   "gold_sentences": [
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX\u2019s total trading revenue.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "{\"article\": \"ASX set to drop as Wall Street\u2019s September slump deepens\", \"published_on\": \"2023-09-26T19:11:30+00:00\", \"publisher\": \"The Sydney Morning Herald\", \"page\": null, \"passage\": null}"
+  },
+  {
+   "id": "c73fc733304c6c83",
+   "kind": "evidence",
+   "question": "Does the article from 'The Independent - Life and Style' suggest the same reason for \"Britney Spears and Justin Timberlake's breakup\" as the reason for \"Dillon Danis and Savannah Montano's relationship\" ending as reported by 'Essentially Sports'?",
+   "gold_sentences": [
+    "Also, another thing that hints towards their breakup is Danis\u2019s first press conference for the Logan Paul fight."
+   ],
+   "evidence": "{\"article\": \"Truth Behind Jake Paul Dating Dillon Danis\u2019 Ex-girlfriend: Did MMA Star Break Up With Savannah Montano?\", \"publisher\": \"Essentially Sports\", \"passage\": \"Truth Behind Jake Paul Dating Dillon Danis\u2019 Ex-girlfriend: Did MMA Star Break Up With Savannah Montano? (Essentially Sports, 2023-10-07T21:14:09+00:00)\\nDillon Danis has been going back and forth with the Paul family long before his upcoming fight against Logan Paul, scheduled for October 14th. At the moment, Danis is preparing hard for his Misfits contest, as he\u2019s tried to get in the head of his opponent leading up to the bout. As a result, Danis has garnered over a million followers on X. \u2018El Jefe\u2019 has been trying to dig up the past relationships of Logan Paul\u2019s fianc\u00e9e, Nina Agdal, as a way to create turmoil in Paul\u2019s mindset during the fight.\\n\\nAmerica\u2019s Favorite Video Today\\n\\nHowever, this beef was first started by Logan Paul\u2019s younger brother, Jake Paul. He called out Danis on his Instagram story in 2020, by taking a hit at his rumored ex-girlfriend, Savannah Montano. So Danis\u2019s target at Agdal could have a revenge angle that many didn\u2019t know about.\"}"
+  },
+  {
+   "id": "e74dae5a5b57d9cc",
+   "kind": "evidence",
+   "question": "Which company, recently compared for its product's performance with OpenAI's GPT-3.5 by TechCrunch, is also accused by The Age of manipulating its primary service to maximize ad revenue and is the subject of a class-action antitrust suit reported by TechCrunch for harming news publishers' bottom lines through anticompetitive practices?",
+   "gold_sentences": [
+    "Google compared the performance of Gemini Pro to GPT-4\u2019s predecessor, GPT-3.5, a model that\u2019s around a year old.",
+    "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue."
+   ],
+   "evidence": "{\"company\": \"Google DeepMind\", \"article\": \"ChatGPT: Everything you need to know about the AI-powered chatbot\", \"publisher\": \"TechCrunch\", \"related_entity\": \"GPT-3.5\", \"page\": \"ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)\", \"passage\": \"ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)\\nBeyond GPT-4 and OpenAI DevDay announcements, OpenAI recently connected ChatGPT to the internet for all users. And with the integration of DALL-E 3, users are also able to generate both text prompts and images right in ChatGPT.\\n\\nHere\u2019s a timeline of ChatGPT product updates and releases, starting with the latest, which we\u2019ve been updating throughout the year. And if you have any other questions, check out our ChatGPT FAQ here.\\n\\nTimeline of the most recent ChatGPT updates\\n\\nDecember 2023\\n\\nOpenAI re-opens ChatGPT Plus subscriptions\\n\\nAfter pausing ChatGPT Plus subscriptions in November due to a \u201csurge of usage,\u201d OpenAI CEO Sam Altman announced they have once again enabled sign-ups. The Plus subscription includes access to GPT-4 and GPT-4 Turbo.\\n\\nwe have re-enabled chatgpt plus subscriptions! \ud83c\udf84 thanks for your patience while we found more gpus.\"}"
+  },
+  {
+   "id": "3fbac45d6a912739",
+   "kind": "evidence",
+   "question": "Between the report from Fortune published on October 4, 2023, which discussed Mark Cohen's claims about Caroline Ellison, and the subsequent reports from The Verge regarding statements made by Caroline Ellison, was there a change in the narrative concerning her role and actions as the CEO of Alameda Research?",
+   "gold_sentences": [
+    "When Changpeng Zhao, the CEO of Binance, announced on Twitter that he intended to acquire FTX, Ellison confessed the theft of customer funds to him and a few other employees, Drappi said.",
+    "In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from the inherent risk of the crypto markets."
+   ],
+   "evidence": "{\"report\": \"The jury finally hears from Sam Bankman-Fried\", \"published_on\": \"2023-10-28T00:12:41+00:00\", \"publisher\": \"The Verge\", \"passages\": [\"The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)\\nIt is honestly kind of incredible to watch a man torpedo his own credibility on direct testimony. We\u2019re not even at the cross yet, and the judge has already instructed him to answer the question he\u2019s being asked by his own lawyer.\\n\\nThe jury is watching all of this intently.\\n\\nThe main thing that\u2019s been clear so far from Bankman-Fried\u2019s testimony is that the man really loves the sound of his own voice. So far, the count of \u201cObjection, narrative!\u201d to Bankman-Fried\u2019s answers, followed by \u201cSustained\u201d is at three.\\n\\nAlso, sometimes when Bankman-Fried says \u201cwe,\u201d he only means himself.\\n\\nSam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, has been found guilty on seven counts including charges of wire fraud. FTX was a fraud \u201cfrom the start,\u201d the Securities and Exchange Commission alleged \u2014 with a \u201cmulti-billion-dollar deficiency caused by his own misappropriation of customer funds.\u201d Follow along for all the latest news and regular updates from the trial.\", \"The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)\\nFollow along for all the latest news and regular updates from the trial.\\n\\nYesterday, during an evidentiary hearing, Bankman-Fried was repeatedly scolded by Judge Lewis Kaplan for not answering prosecutor Danielle Sassoon\u2019s questions on cross-examination. Today, Bankman-Fried was scolded by Kaplan for not answering his counsel Mark Cohen\u2019s questions on direct examination. Bankman-Fried has also occasionally interrupted Cohen with \u201cyes\u201d and \u201cyup.\u201d\\n\\nWe spent a lot of the morning explaining vocabulary. I will spare you the full list, though I will say that explaining \u201cAmazon Web Services\u201d and \u201cdatabase\u201d was a bit too detail-oriented. Then Bankman-Fried tried to define \u201cmarket manipulation.\u201d After Bankman-Fried gave his definition, Kaplan told the jury that he was the final authority on that, thanks.\\n\\nIn fairness to Bankman-Fried, he has been clearer and much easier to understand than he was at the evidentiary hearing yesterday. There was a minimum of word salad today.\", \"The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)\\nThere was a minimum of word salad today. I don\u2019t know if he was more relaxed, or he\u2019d just been more rehearsed, but I will certainly be watching to see if he suddenly becomes much less coherent when Sassoon gets him for the cross.\\n\\nHere is the story of FTX, from his point of view.\\n\\nBankman-Fried, who informed us he\u2019s \u201csomewhat introverted, naturally,\u201d gave us a rather prolonged tour of his pre-Alameda Research life, which I will skip. In 2017, during a crypto bull run, he started his cryptocurrency trading firm. He knew \u201cbasically nothing\u201d about cryptocurrency at the time, he explained, but he wanted to do arbitrage on it anyway.\\n\\nAlameda Research was named for Alameda County in California, which was where its first office was set up. As for its name, here\u2019s what Bankman-Fried said on the stand:\\n\\nEffectively, we wanted to be under the radar at that point in time.\", \"The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)\\nI didn\u2019t want to call it Sam\u2019s Crypto Trading Firm or anything like that. We \u2014 there are a lot of competitors and people who we didn\u2019t particularly want to know what we were building out because they would race to do it. \u201cResearch\u201d was a sort of generic word, which filled out the company name. And that was \u2014 it was far better than the internal name that we had at that point, which was Wireless Mouse.\\n\\nI would find this much more believable if I hadn\u2019t already watched a video of Bankman-Fried explaining on a podcast that the name made it easier to get a bank account. That happened during the first day of Gary Wang\u2019s testimony. Bankman-Fried was there, too. You know who else was there? The jury.\\n\\nAnyway, Bankman-Fried went on a hiring spree for Alameda. He rounded up his merry gang of alleged co-conspirators. First, Wang, to program the computers. Then, Nishad Singh, about a month after founding Alameda Research.\", \"The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)\\nThen, Nishad Singh, about a month after founding Alameda Research. Finally, Caroline Ellison.\\n\\nNot having a risk team, when you are any kind of financial anything, is certainly a choice\\n\\nThough Bankman-Fried was the CEO, and also the majority owner, he wanted to be clear: he did not supervise Wang\u2019s direct work. Anyway, after a bunch of wildly successful arbitrage \u2014 50 percent to 100 percent annualized returns, per his testimony \u2014 he decided to found a cryptocurrency exchange, FTX. He figured he\u2019d fail; that there was only a 20 percent chance of success. Bankman-Fried did not define what he expected the time period to be on this estimate, but arguably 20 percent was a much higher chance of success than FTX would enjoy once Alameda dipped into the customer deposits.\\n\\nBy the way, because he was such a good guy, Bankman-Fried made a point of \u201cperiodically\u201d handling support tickets himself.\", \"The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)\\n\u201cI worried if I didn\u2019t, I would lose touch with the actual concerns of the customers,\u201d he testified. What he did not do was create a risk team, which he is now characterizing as a \u201cbig mistake.\u201d\\n\\nRisk is an inherent part of a futures exchange, which is even more like a casino than regular cryptocurrency. Not having a risk team, when you are any kind of financial anything, is certainly a choice. It is especially a choice when you go around telling everyone your crypto exchange is very good and safe.\\n\\nFTX\u2019s big selling point was its \u201crisk engine,\u201d which was supposed to prevent big losses that would then be spread around all the rest of the customers. But Bankman-Fried testified that in 2020, the \u201crisk engine was effectively sagging under the weight\u201d of the exchange\u2019s rapid growth. So its time to liquidation went up \u2014 it took minutes to determine which accounts needed to be liquidated.\", \"The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)\\nAs a result, at one point the risk engine got stuck in a catastrophic feedback loop that would have created losses in the \u201ctrillions of dollars,\u201d Bankman-Fried testified. As part of that feedback loop, Alameda teetered on the brink of liquidation, which \u201cwould have disastrous consequences\u201d for FTX.\\n\\n\u201cAt the time, I wasn\u2019t entirely sure what was happening.\u201d\\n\\nBecause of that experience, Bankman-Fried suggested an \u201calert\u201d or \u201cdelay\u201d that would keep Alameda from being liquidated by a bug. This is the supposed origin story of \u201callow_negative,\u201d which Bankman-Fried says was the eventual result of that conversation, and that he says he didn\u2019t know about until very recently.\\n\\nThere is a problem with this story. \u201cAllow_negative\u201d was coded and switched on in 2019. I saw the code in court, and so did Bankman-Fried, who was also there for the testimony. Perhaps you are wondering, was the jury also there? Reader, it was.\", \"The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)\\nPerhaps you are wondering, was the jury also there? Reader, it was.\\n\\nBankman-Fried denied he knew about the effectively infinite line of credit Alameda Research received from FTX. This argument was peculiar; essentially my take-away was that the CEO of a financial company simply didn\u2019t pay attention to finances.\\n\\nFTX couldn\u2019t get bank accounts right away. Bankman-Fried anticipated it would take a year or two. Rather than wait, he decided to use Alameda as the \u201cpayment provider\u201d for bank transfers. \u201cMy understanding at the time was that there were teams managing the process,\u201d he said. \u201cAt the time, I wasn\u2019t entirely sure what was happening.\u201d\\n\\nWell, sure, understandable! He\u2019s an introvert!\\n\\nBankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX \u201cover the line\u201d to $1 billion\\n\\nIn 2021, FTX was growing to millions of users, with $1 billion of revenue.\", \"The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)\\nBankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both companies, he said. Bankman-Fried handed the company off to Caroline Ellison and Sam Trabucco, who immediately after being named co-CEO promptly drifted away to early retirement. (Quiet quitting king!) Bankman-Fried did remain involved in hedging and risk at Alameda, though.\\n\\nAbout that $1 billion of revenue in 2021: Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX \u201cover the line\u201d to $1 billion. See, he\u2019d just asked his employees to check and see if there was any source of funds that was missing to get to $1 billion. This testimony was especially rambling.\\n\\nOh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX\u2019s balance sheet?\", \"The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)\\nThe one Wang said Alameda took to keep off FTX\u2019s balance sheet? Yeah, so it was a totally innocent thing where what actually happened was that Bankman-Fried thought it was appropriate that Alameda take the position as a backstop liquidity provider, that\u2019s all.\\n\\nIn June 2022, Bankman-Fried heard about the account called \u201cfiat@ftx\u201d tracking how much money Alameda owed to FTX, he testified. He did not know what it was and did not bother to find out. He was busy! That was when Bankman-Fried directed Ellison to repay Alameda\u2019s lenders, because he thought Alameda was good for it. He also gave BlockFi and Voyager, two crypto lenders, some capital infusions for good measure.\\n\\nHe was \u201cvery surprised!\u201d\\n\\nRemember that testimony Adam Yedidia gave about a conversation with Bankman-Fried in August 2022 about the enormous amount of money Alameda owed FTX? Well, Bankman-Fried remembers it differently.\", \"The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)\\nWell, Bankman-Fried remembers it differently. See, Yedidia was just asking about Alameda\u2019s risk profile, and Bankman-Fried wasn\u2019t talking about insolvency at all.\\n\\nAlso, when Singh and Bankman-Fried had the dramatic balcony conversation at their penthouse, it was just that Singh thought Alameda\u2019s liabilities had gotten too high, and FTX was spending too much money on marketing. But Bankman-Fried still thought that Alameda had more assets than liabilities, so it was all fine, and besides, if Singh thought he was going to be better at marketing, he could take it over. It didn\u2019t have anything to do with the money Alameda owed FTX at all.\\n\\nOf course not! Bankman-Fried didn\u2019t learn about the $8 billion liability associated with Alameda until October 2022, he said. And he learned it all by himself, by looking at a computer database. When he found it, he was \u201cvery surprised!\u201d\", \"The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)\\nWhen he found it, he was \u201cvery surprised!\u201d\\n\\nBesides the two obvious lies Bankman-Fried told on the stand \u2014 about Alameda Research\u2019s name and about \u201callow_negative\u201d \u2014 I have been struck by how little he seems to know about his own companies. Apparently, Singh, Wang, and Ellison were out there just doing whatever their little hearts desired. Because Bankman-Fried was a CEO, but definitely not the kind that pays any attention to money at his crypto trading firm and futures exchange.\"]}"
+  },
+  {
+   "id": "42911e9b37be7afa",
+   "kind": "evidence",
+   "question": "Does the TechCrunch article claim that Google's Gemini has superior architecture and capabilities in comparison to other AI models, while the other TechCrunch article accuses Google of anticompetitive behavior towards news publishers, and does The Verge article also depict Google negatively by portraying it as the antagonist in the Epic v. Google trial?",
+   "gold_sentences": [
+    "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one."
+   ],
+   "evidence": "{\"article\": \"News publisher files class action antitrust suit against Google, citing AI\u2019s harms to their bottom line\", \"publisher\": \"TechCrunch\", \"connections\": [{\"entity\": \"Google Bard AI\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"GoogleBot\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"Google general search service\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"Epic Games lawsuit against Google over app store antitrust issues\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"class action antitrust suit against Google\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"U.S. Justice Department lawsuit against Google\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"Epic Games\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"Google\", \"relationship\": \"MENTIONS\"}], \"passages\": [\"News publisher files class action antitrust suit against Google, citing AI\u2019s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)\\nA new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google \u201csiphons off\u201d news publishers\u2019 content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI technologies like Google\u2019s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.\\n\\nIn the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is \u201cstarving the free press\u201d by sharing publishers\u2019 content on Google, losing them \u201cbillions of dollars.\u201d\\n\\nIn addition to new AI technologies, the suit points to Google\u2019s older question-and-answer technologies, like the \u201cKnowledge Graph\u201d launched in May 2012, as part of the problem.\", \"News publisher files class action antitrust suit against Google, citing AI\u2019s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)\\n\u201cWhen a user searches for information on a topic, Google displays a \u2018Knowledge Panel\u2019 to the right of the search results. This panel contains a summary of content drawn from the Knowledge Graph database,\u201d the complaint states. \u201cGoogle compiled this massive database by extracting information from Publishers\u2019 websites \u2014 what Google calls \u2018materials shared across the web\u2019 \u2014and from \u2018open source and licensed databases,'\u201d it says.\\n\\nBy 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the \u201ccollective intelligence\u201d that Google tapped into was content \u201cmisappropriated from Publishers,\u201d the complaint alleges.\\n\\nOther Google technologies, like \u201cFeatured Snippets\u201d where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from publishers\u2019 websites.\\n\\nMore importantly, perhaps, is the suit\u2019s tackling of how AI will impact publishers\u2019 businesses. The problem was recently detailed in a report on Thursday by The Wall Street Journal, which led with a shocking statistic.\", \"News publisher files class action antitrust suit against Google, citing AI\u2019s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)\\nWhen online magazine The Atlantic modeled what would happen if Google integrated AI into search, it found that 75% of the time the AI would answer the user\u2019s query without requiring a click-through to its website, losing it traffic. This could have a major impact on publishers\u2019 traffic going forward, as Google today drives nearly 40% of their traffic, according to data from Similarweb.\\n\\nSome publishers are now trying to get ahead of the problem. For example, Axel Springer just this week inked a deal with OpenAI to license its news for AI model training. But overall, publishers believe they\u2019ll lose somewhere between 20-40% of their website traffic when Google\u2019s AI products fully roll out, The WSJ\u2019s report noted.\\n\\nThe lawsuit reiterates this concern, claiming that Google\u2019s recent advances in AI-based search were implemented with \u201cthe goal of discouraging end-users from visiting the websites of Class members who are part of the digital news and publishing line of commerce.\u201d\", \"News publisher files class action antitrust suit against Google, citing AI\u2019s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)\\nSGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google\u2019s \u201cwalled garden\u201d as it \u201cplagiarizes\u201d their content. Publishers also can\u2019t block SGE because it uses the same web crawler as Google\u2019s general search service, GoogleBot.\\n\\nPlus, it says Google\u2019s Bard AI was trained on a dataset that included \u201cnews, magazine and digital publications,\u201d citing both a 2023 report from the News Media Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found that News and Media sites were the third largest category of AI training data.)\\n\\nThe case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google\u2019s part, by its destruction of chat messages \u2014 an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.\", \"News publisher files class action antitrust suit against Google, citing AI\u2019s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)\\nThe case also arrives alongside the filing of the U.S. Justice Department\u2019s lawsuit against Google for monopolizing digital ad technologies, and references the 2020 Justice Department\u2019s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent suit).\\n\\n\u201cThe anticompetitive effects of Google\u2019s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,\u201d reads an announcement posted to the website of the law firm handling the case, Hausfeld.\\n\\n\u201cPlaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,\u201d it states.\\n\\nA Google spokesperson offered a statement on the lawsuit, saying \u201cThis lawsuit is meritless.\"]}"
+  },
+  {
+   "id": "cffdcb79314ee7ef",
+   "kind": "evidence",
+   "question": "Who is the individual whose trial is imminent, as reported by TechCrunch, was once considered a reliable representative of the cryptocurrency sector according to The Verge, is accused of fraud and conspiracy involving a financial discrepancy acknowledged after a judge's intervention, also mentioned by The Verge, and is alleged by the prosecution to have pursued wealth, power, and influence through deliberate fraudulent actions, a claim further discussed by TechCrunch?",
+   "gold_sentences": [
+    "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he\u2019s guilty of seven counts of fraud and conspiracy.",
+    "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he\u2019d been told."
+   ],
+   "evidence": "{\"article\": \"SBF Trial: The latest updates from the FTX collapse\u2019s courtroom drama\", \"relationship\": \"PUBLISHED_BY\", \"connected_entity\": \"TechCrunch\"}"
+  },
+  {
+   "id": "82cab6dead439f18",
+   "kind": "evidence",
+   "question": "Does the 'Fortune' article suggest that Israel's actions are aggressive by mentioning a warning to Gaza residents to relocate due to a potential ground invasion, while the 'Business Today | Latest Stock Market And Economy News India' article implies that Israel was caught off-guard by a Hamas attack, indicating a lack of intelligence support?",
+   "gold_sentences": [
+    "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."
+   ],
+   "evidence": "{\"article\": \"'Massive intel failure by Mossad': Hamas' surprise attack on Israel shocks internet\", \"publisher\": \"Business Today | Latest Stock Market And Economy News India\", \"passage\": \"&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India, 2023-10-07T15:37:43+00:00)\\nHamas' surprise attack on Israel has shocked many who are now questioning the country's famed intelligence agency Mossad, which is known for its intelligence-gathering capability. For some, the belief that Mossad was among the best in the spying world was shattered today when Hamas carried out the biggest coordinated attack in Israel and captured some territory in southern Israel. It is not the attack that has surprised people but the scale at which Hamas operated and got control of some military bases and soldiers.\\n\\nAlso Read: Israel at war: Hamas cells, military compounds destroyed, US backs Tel Aviv; all you need to know\\n\\nYounis Tirawi, who reports on Palestinian Affairs, said that Hamas militants had taken over Sderot police HQ and armored vehicles in the town. An analyst wrote that some of the images coming out of Sderot over the last few hours were reaching degrees of horror \\\"that I don't really think I can use words to properly describe.\", \"relationship\": \"MENTIONS\", \"connected_entity\": \"Benjamin Netanyahu\"}"
+  }
+ ]
+}

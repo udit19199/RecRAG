@@ -1,0 +1,71 @@
+[
+  {"id": "1949c3bb7b3ad895", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 6, "quote": "many others — to ensure it is the default search engine on practically every platform."}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 6, "quote": "many others — to ensure it is the default search engine on practically every platform."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "11c4a509cf113d89", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}, {"item": 8, "quote": "Bankman-Fried directed him to have Alameda take it on"}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "contradicted", "evidence": [{"item": 10, "quote": "FTX was no Ponzi scheme. It was a “very innovative, successful company.”"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "And the business practices between the two were reasonable, he argued, claiming that"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy"}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 10, "quote": "Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy"}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 10, "quote": "Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy"}]},
+    {"fact": "2.5", "status": "stated", "evidence": [{"item": 10, "quote": "market maker, or financial entity that acts as a trading partner for customers looking to buy"}, {"item": 10, "quote": "and sell cryptocurrencies."}]}
+  ]},
+  {"id": "aa1066b7f5bdac2c", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Establishing himself as the millennial politician who’s cool enough to use TikTok but anti-woke enough to play in the divisive culture war"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "cool enough to use TikTok but anti-woke enough to play in the divisive culture war"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "work by making their songs trend on TikTok, which audiences have started to resist."}]}
+  ]},
+  {"id": "49505bb5ce86e5e8", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "3.0", "status": "stated", "evidence": [{"item": 8, "quote": "roughly 30-minute story that repeatedly emphasized how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to"}, {"item": 8, "quote": "political candidates, and finance risky bets."}]},
+    {"fact": "3.1", "status": "missing", "evidence": []},
+    {"fact": "3.2", "status": "missing", "evidence": []},
+    {"fact": "3.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "13313a523782b5ed", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Even with those tools, some of the businesses selling on Amazon might still choose to set prices that aren’t competitive,” Zapolsky said."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "That means eBay will give you an eBay coupon for the difference in price between"}, {"item": 7, "quote": "what you bought the item for and what the competitor is selling it for"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "plus an additional 10 percent of that price difference."}]}
+  ]},
+  {"id": "aa90f788c1badb90", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Doe's story was adapted into the 1971 book \"The Exorcist\""}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "1971 book \"The Exorcist\" by William Peter Blatty"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "which was then made into the 1973 movie starring Ellen Burstyn and Linda"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "1973 movie starring Ellen Burstyn and Linda"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "starring Ellen Burstyn and Linda Blair."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 6, "quote": "to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."}]}
+  ]}
+]

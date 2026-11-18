@@ -1,0 +1,120 @@
+[
+{"id": "53189df40c7476ca", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Guitar World is a monthly music magazine devoted to guitarists, published since July 1980."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Guitar World is a monthly music magazine devoted to guitarists, published since July 1980."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Guitar World is a monthly music magazine devoted to guitarists, published since July 1980."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Golf Digest is a monthly golf magazine published by Condé Nast Publications in the United States."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Golf Digest is a monthly golf magazine published by Condé Nast Publications in the United States."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "Golf Digest is a monthly golf magazine published by Condé Nast Publications in the United States."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "The magazine started in 1950, and was sold to The New York Times Company in 1969."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "The magazine started in 1950, and was sold to The New York Times Company in 1969."}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 8, "quote": "The headquarters of \"Golf Digest\" is in Des Moines, Iowa."}]}
+]},
+{"id": "edbda9c68d421d69", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "The University of California, Santa Barbara (commonly referred to as UC Santa Barbara or UCSB)"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "The University of California, Santa Barbara (commonly referred to as UC Santa Barbara or UCSB) is a public research university"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "is a public research university and one of the 10 campuses of the University of California system."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Tracing its roots back to 1891 as an independent teachers' college, UCSB joined"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Tracing its roots back to 1891 as an independent teachers' college, UCSB joined"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "UCSB joined the University of California system in 1944"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "UCSB joined the University of California system in 1944 and is the third-oldest general-education campus in the system."}]},
+{"fact": "2.0", "status": "contradicted", "evidence": [{"item": 4, "quote": "Tracing its roots back to 1891 as an independent teachers' college"}]},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "It was founded in 1991 by the renowned philanthropist Hakim Said of the Hamdard Foundation."}]}
+]},
+{"id": "7ae6fec86760d3b6", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "St. John's College has three divisions, and a number of central academic centres and activities."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Through its three divisions, it offers a wide variety of liberal arts and science courses at the secondary, British A-level, and United States junior college levels."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Through its three divisions, it offers a wide variety of liberal arts and science courses at the secondary, British A-level, and United States junior college levels."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "Through its three divisions, it offers a wide variety of liberal arts and science courses at the secondary, British A-level, and United States junior college levels."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 9, "quote": "Through its three divisions, it offers a wide variety of liberal arts and science courses at the secondary, British A-level, and United States junior college levels."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 9, "quote": "Through its three divisions, it offers a wide variety of liberal arts and science courses at the secondary, British A-level, and United States junior college levels."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Grammar, logic, and rhetoric were the core liberal arts, while arithmetic, geometry, the theory of music, and astronomy also played a (somewhat lesser) part in education."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Grammar, logic, and rhetoric were the core liberal arts, while arithmetic, geometry, the theory of music, and astronomy also played a (somewhat lesser) part in education."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Grammar, logic, and rhetoric were the core liberal arts, while arithmetic, geometry, the theory of music, and astronomy also played a (somewhat lesser) part in education."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "Grammar, logic, and rhetoric were the core liberal arts, while arithmetic, geometry, the theory of music, and astronomy also played a (somewhat lesser) part in education."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 7, "quote": "Grammar, logic, and rhetoric were the core liberal arts, while arithmetic, geometry, the theory of music, and astronomy also played a (somewhat lesser) part in education."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 7, "quote": "Grammar, logic, and rhetoric were the core liberal arts, while arithmetic, geometry, the theory of music, and astronomy also played a (somewhat lesser) part in education."}]},
+{"fact": "1.6", "status": "stated", "evidence": [{"item": 7, "quote": "Grammar, logic, and rhetoric were the core liberal arts, while arithmetic, geometry, the theory of music, and astronomy also played a (somewhat lesser) part in education."}]}
+]},
+{"id": "9347c586b9085d52", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "The Rescuers is a 1977 American animated comedy-drama adventure film produced by Walt Disney Productions and first released on June 22, 1977, by Buena Vista Distribution."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "The Rescuers is a 1977 American animated comedy-drama adventure film produced by Walt Disney Productions and first released on June 22, 1977, by Buena Vista Distribution."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "The Rescuers is a 1977 American animated comedy-drama adventure film produced by Walt Disney Productions and first released on June 22, 1977, by Buena Vista Distribution."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "The Rescuers is a 1977 American animated comedy-drama adventure film produced by Walt Disney Productions and first released on June 22, 1977, by Buena Vista Distribution."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 9, "quote": "The Rescuers is a 1977 American animated comedy-drama adventure film produced by Walt Disney Productions and first released on June 22, 1977, by Buena Vista Distribution."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 9, "quote": "The Rescuers is a 1977 American animated comedy-drama adventure film produced by Walt Disney Productions and first released on June 22, 1977, by Buena Vista Distribution."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The Muppets is a 2011 American musical comedy film and the seventh theatrical film featuring the Muppets."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "The Muppets is a 2011 American musical comedy film and the seventh theatrical film featuring the Muppets."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "The Muppets is a 2011 American musical comedy film and the seventh theatrical film featuring the Muppets."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "The Muppets is a 2011 American musical comedy film and the seventh theatrical film featuring the Muppets."}]}
+]},
+{"id": "7dbcb15473342b68", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Yucca is a genus of perennial shrubs and trees in the family Asparagaceae, subfamily Agavoideae."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Yucca is a genus of perennial shrubs and trees in the family Asparagaceae, subfamily Agavoideae."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Yucca is a genus of perennial shrubs and trees in the family Asparagaceae, subfamily Agavoideae."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Rodgersia is a genus of flowering plants in the Saxifragaceae family."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Rodgersia is a genus of flowering plants in the Saxifragaceae family."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "\"Rodgersia\" are herbaceous perennials originating from east Asia."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "\"Rodgersia\" are herbaceous perennials originating from east Asia."}]}
+]},
+{"id": "38aabecb25859f92", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Her favorite events are 800 metres and 1500 metres."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Her favorite events are 800 metres and 1500 metres."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The distance has been contested at the Summer Olympics since 1896 and the World Championships in Athletics since 1983."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The distance has been contested at the Summer Olympics since 1896 and the World Championships in Athletics since 1983."}]}
+]},
+{"id": "dda6a9d568dc20ba", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "St. John's College has three divisions, and a number of central academic centres and activities."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Through its three divisions, it offers a wide variety of liberal arts and science courses at the secondary, British A-level, and United States junior college levels."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Through its three divisions, it offers a wide variety of liberal arts and science courses at the secondary, British A-level, and United States junior college levels."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "Through its three divisions, it offers a wide variety of liberal arts and science courses at the secondary, British A-level, and United States junior college levels."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "Through its three divisions, it offers a wide variety of liberal arts and science courses at the secondary, British A-level, and United States junior college levels."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 7, "quote": "Through its three divisions, it offers a wide variety of liberal arts and science courses at the secondary, British A-level, and United States junior college levels."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Grammar, logic, and rhetoric were the core liberal arts, while arithmetic, geometry, the theory of music, and astronomy also played a (somewhat lesser) part in education."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Grammar, logic, and rhetoric were the core liberal arts, while arithmetic, geometry, the theory of music, and astronomy also played a (somewhat lesser) part in education."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Grammar, logic, and rhetoric were the core liberal arts, while arithmetic, geometry, the theory of music, and astronomy also played a (somewhat lesser) part in education."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "Grammar, logic, and rhetoric were the core liberal arts, while arithmetic, geometry, the theory of music, and astronomy also played a (somewhat lesser) part in education."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 9, "quote": "Grammar, logic, and rhetoric were the core liberal arts, while arithmetic, geometry, the theory of music, and astronomy also played a (somewhat lesser) part in education."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 9, "quote": "Grammar, logic, and rhetoric were the core liberal arts, while arithmetic, geometry, the theory of music, and astronomy also played a (somewhat lesser) part in education."}]},
+{"fact": "1.6", "status": "stated", "evidence": [{"item": 9, "quote": "Grammar, logic, and rhetoric were the core liberal arts, while arithmetic, geometry, the theory of music, and astronomy also played a (somewhat lesser) part in education."}]}
+]},
+{"id": "f40ead54ed417d5b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Elizabeth Austin (born 1958) is an American writer living in Oak Park, Illinois."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Elizabeth Austin (born 1958) is an American writer living in Oak Park, Illinois."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Elizabeth Austin (born 1958) is an American writer living in Oak Park, Illinois."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "She has also written for \"The Washington Monthly, Ladies Home Journal, Good Housekeeping, Self\", and \"Shape\"."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "She has also written for \"The Washington Monthly, Ladies Home Journal, Good Housekeeping, Self\", and \"Shape\"."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "She has also written for \"The Washington Monthly, Ladies Home Journal, Good Housekeeping, Self\", and \"Shape\"."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "She has also written for \"The Washington Monthly, Ladies Home Journal, Good Housekeeping, Self\", and \"Shape\"."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 10, "quote": "She has also written for \"The Washington Monthly, Ladies Home Journal, Good Housekeeping, Self\", and \"Shape\"."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "Shape is a monthly English language fitness magazine started by Weider Publications in 1981, founded by Christine MacIntyre (a pioneer in women's free weight fitness) and became the number one women's fitness magazine."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "Shape is a monthly English language fitness magazine started by Weider Publications in 1981, founded by Christine MacIntyre (a pioneer in women's free weight fitness) and became the number one women's fitness magazine."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 5, "quote": "Shape is a monthly English language fitness magazine started by Weider Publications in 1981, founded by Christine MacIntyre (a pioneer in women's free weight fitness) and became the number one women's fitness magazine."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 5, "quote": "Shape is a monthly English language fitness magazine started by Weider Publications in 1981, founded by Christine MacIntyre (a pioneer in women's free weight fitness) and became the number one women's fitness magazine."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 5, "quote": "Shape is a monthly English language fitness magazine started by Weider Publications in 1981, founded by Christine MacIntyre (a pioneer in women's free weight fitness) and became the number one women's fitness magazine."}]}
+]},
+{"id": "3af3dc1d51997bee", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "The 1892 Auburn Tigers football team represented Auburn University in the 1892 college football season."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "The 1892 Auburn Tigers football team represented Auburn University in the 1892 college football season."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "It was the first college football team fielded by the Agricultural and Mechanical College of Alabama, now known as Auburn University."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "It was the first college football team fielded by the Agricultural and Mechanical College of Alabama, now known as Auburn University."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "With more than 22,000 undergraduate students and a total enrollment of more than 28,000 with 1,260 faculty members, Auburn is the second largest university in Alabama."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "With more than 22,000 undergraduate students and a total enrollment of more than 28,000 with 1,260 faculty members, Auburn is the second largest university in Alabama."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "With more than 22,000 undergraduate students and a total enrollment of more than 28,000 with 1,260 faculty members, Auburn is the second largest university in Alabama."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "With more than 22,000 undergraduate students and a total enrollment of more than 28,000 with 1,260 faculty members, Auburn is the second largest university in Alabama."}]}
+]},
+{"id": "80280ce0d61061f7", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Built in 1988 by the TOGO company, it was the fastest roller coaster in the world when it was built (taking the record from American Eagle at Six Flags Great America)."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Built in 1988 by the TOGO company, it was the fastest roller coaster in the world when it was built (taking the record from American Eagle at Six Flags Great America)."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Built in 1988 by the TOGO company, it was the fastest roller coaster in the world when it was built (taking the record from American Eagle at Six Flags Great America)."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "TOGO (株式会社トーゴ , Kabushiki-gaisha Tōgo ) was a Japanese amusement ride company that built roller coasters, giant wheels, carousels, flumes, dark rides, sky cycles and other amusement rides."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "TOGO (株式会社トーゴ , Kabushiki-gaisha Tōgo ) was a Japanese amusement ride company that built roller coasters, giant wheels, carousels, flumes, dark rides, sky cycles and other amusement rides."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "TOGO (株式会社トーゴ , Kabushiki-gaisha Tōgo ) was a Japanese amusement ride company that built roller coasters, giant wheels, carousels, flumes, dark rides, sky cycles and other amusement rides."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "TOGO (株式会社トーゴ , Kabushiki-gaisha Tōgo ) was a Japanese amusement ride company that built roller coasters, giant wheels, carousels, flumes, dark rides, sky cycles and other amusement rides."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 10, "quote": "TOGO (株式会社トーゴ , Kabushiki-gaisha Tōgo ) was a Japanese amusement ride company that built roller coasters, giant wheels, carousels, flumes, dark rides, sky cycles and other amusement rides."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 10, "quote": "TOGO (株式会社トーゴ , Kabushiki-gaisha Tōgo ) was a Japanese amusement ride company that built roller coasters, giant wheels, carousels, flumes, dark rides, sky cycles and other amusement rides."}]},
+{"fact": "1.6", "status": "stated", "evidence": [{"item": 10, "quote": "TOGO (株式会社トーゴ , Kabushiki-gaisha Tōgo ) was a Japanese amusement ride company that built roller coasters, giant wheels, carousels, flumes, dark rides, sky cycles and other amusement rides."}]},
+{"fact": "1.7", "status": "stated", "evidence": [{"item": 10, "quote": "TOGO (株式会社トーゴ , Kabushiki-gaisha Tōgo ) was a Japanese amusement ride company that built roller coasters, giant wheels, carousels, flumes, dark rides, sky cycles and other amusement rides."}]}
+]}
+]

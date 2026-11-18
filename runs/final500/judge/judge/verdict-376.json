@@ -1,0 +1,64 @@
+[
+  {"id": "892fd345bbca7682", "facts": [
+    {"fact": "0.0", "status": "missing"},
+    {"fact": "0.1", "status": "missing"},
+    {"fact": "0.2", "status": "missing"},
+    {"fact": "0.3", "status": "missing"},
+    {"fact": "1.0", "status": "missing"},
+    {"fact": "1.1", "status": "missing"},
+    {"fact": "1.2", "status": "missing"},
+    {"fact": "1.3", "status": "missing"}
+  ]},
+  {"id": "0777ff980574c632", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "But no matter how Spider-Man’s Thanksgiving escapades turn out, they remind readers and viewers that the holiday is about the hope of mutual connection, support, and nurturing."}]},
+    {"fact": "1.1", "status": "missing"},
+    {"fact": "1.2", "status": "missing"},
+    {"fact": "1.3", "status": "missing"},
+    {"fact": "1.4", "status": "missing"}
+  ]},
+  {"id": "0037898f0923dafb", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "1.0", "status": "missing"},
+    {"fact": "1.1", "status": "missing"},
+    {"fact": "1.2", "status": "missing"},
+    {"fact": "1.3", "status": "missing"},
+    {"fact": "1.4", "status": "missing"},
+    {"fact": "2.0", "status": "missing"},
+    {"fact": "2.1", "status": "missing"},
+    {"fact": "3.0", "status": "missing"},
+    {"fact": "3.1", "status": "missing"},
+    {"fact": "3.2", "status": "missing"},
+    {"fact": "3.3", "status": "missing"}
+  ]},
+  {"id": "085a5abf201ffefa", "facts": [
+    {"fact": "0.0", "status": "missing"},
+    {"fact": "0.1", "status": "missing"},
+    {"fact": "0.2", "status": "missing"},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "b35f29ce95056b68", "facts": [
+    {"fact": "0.0", "status": "missing"},
+    {"fact": "0.1", "status": "missing"},
+    {"fact": "0.2", "status": "missing"},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]}
+]

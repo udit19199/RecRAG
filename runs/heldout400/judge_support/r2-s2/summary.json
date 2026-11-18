@@ -1,0 +1,574 @@
+{
+  "created_at": "20261107T160944Z",
+  "prompt_version": "2026-10-30.2",
+  "model": "gpt-6-luna",
+  "bootstrap_samples": 1000,
+  "seed": 0,
+  "runs": [
+    "runs/rag/20261101T222337355375Z",
+    "runs/raptor/20261101T222337360447Z",
+    "runs/hipporag/20261101T222337373538Z",
+    "runs/heldout400/judge_support/merged/r2-graphrag-s2"
+  ],
+  "definitions": [
+    "Primary, answer support: the judge sees the question, gold answer, gold sentences as one reference route, and the items. It quotes a chain to the gold answer by the reference route or any route the items state, says whether the chain is complete, and whether the answer is stated, only mentioned, or missing.",
+    "Support score: 3 complete verified chain and answer stated (yes/no answers: complete chain); 2 answer stated; 1 answer mentioned or some verified chain quote; 0 otherwise. Support score % = sum / (3 x questions) x 100; full support rate = share scoring 3.",
+    "Secondary, gold-sentence recall, as follows.",
+    "Gold sentences are split into claims once per question; every method is judged against the same frozen claims.",
+    "Each claim is stated, missing, or contradicted; stated and contradicted need a quote that appears verbatim (after normalization) in the cited item, otherwise the claim counts as missing.",
+    "Gold sentence score: 3 all claims stated; 2 main claim stated; 1 people or things mentioned or a minor claim stated; 0 otherwise. Any verified contradiction scores 0.",
+    "Question score: the lowest gold sentence score.",
+    "Retrieval score: sum of question scores / (3 x questions) x 100.",
+    "Full retrieval rate: share of questions scoring 3, x 100.",
+    "Budget view: ranked methods cut to Agentic GraphRAG's per-question token volume (as in retrieval_quality); quotes outside the cut do not count.",
+    "Judge sees no method name, no question, and items in a seeded shuffle.",
+    "Intervals are paired percentile bootstraps over the same questions."
+  ],
+  "judge_cost_usd": 5.104883685,
+  "datasets": [
+    {
+      "dataset": "multihop_rag",
+      "questions": 100,
+      "scored_questions": 0,
+      "failed_record_ids": [],
+      "methods": [
+        {
+          "method": "rag",
+          "run": "runs/rag/20261101T222337355375Z",
+          "questions": 0,
+          "support_score": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "full_support_rate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "budget_support_score": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "budget_full_support_rate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "support_counts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "support_unverified_quotes": 0,
+          "retrieval_score": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "full_retrieval_rate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "budget_retrieval_score": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "budget_full_retrieval_rate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "score_counts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "unverified_quotes": 0,
+          "total_quotes": 0
+        },
+        {
+          "method": "hipporag",
+          "run": "runs/hipporag/20261101T222337373538Z",
+          "questions": 0,
+          "support_score": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "full_support_rate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "budget_support_score": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "budget_full_support_rate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "support_counts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "support_unverified_quotes": 0,
+          "retrieval_score": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "full_retrieval_rate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "budget_retrieval_score": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "budget_full_retrieval_rate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "score_counts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "unverified_quotes": 0,
+          "total_quotes": 0
+        },
+        {
+          "method": "raptor",
+          "run": "runs/raptor/20261101T222337360447Z",
+          "questions": 0,
+          "support_score": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "full_support_rate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "budget_support_score": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "budget_full_support_rate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "support_counts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "support_unverified_quotes": 0,
+          "retrieval_score": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "full_retrieval_rate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "budget_retrieval_score": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "budget_full_retrieval_rate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "score_counts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "unverified_quotes": 0,
+          "total_quotes": 0
+        },
+        {
+          "method": "graphrag",
+          "run": "runs/heldout400/judge_support/merged/r2-graphrag-s2",
+          "questions": 0,
+          "support_score": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "full_support_rate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "budget_support_score": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "budget_full_support_rate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "support_counts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "support_unverified_quotes": 0,
+          "retrieval_score": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "full_retrieval_rate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "budget_retrieval_score": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "budget_full_retrieval_rate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          },
+          "score_counts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "unverified_quotes": 0,
+          "total_quotes": 0
+        }
+      ],
+      "differences": [
+        {
+          "metric": "support_score",
+          "method": "rag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          }
+        },
+        {
+          "metric": "full_support_rate",
+          "method": "rag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          }
+        },
+        {
+          "metric": "budget_support_score",
+          "method": "rag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          }
+        },
+        {
+          "metric": "budget_full_support_rate",
+          "method": "rag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          }
+        },
+        {
+          "metric": "retrieval_score",
+          "method": "rag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          }
+        },
+        {
+          "metric": "full_retrieval_rate",
+          "method": "rag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          }
+        },
+        {
+          "metric": "budget_retrieval_score",
+          "method": "rag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          }
+        },
+        {
+          "metric": "budget_full_retrieval_rate",
+          "method": "rag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          }
+        },
+        {
+          "metric": "support_score",
+          "method": "hipporag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          }
+        },
+        {
+          "metric": "full_support_rate",
+          "method": "hipporag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          }
+        },
+        {
+          "metric": "budget_support_score",
+          "method": "hipporag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          }
+        },
+        {
+          "metric": "budget_full_support_rate",
+          "method": "hipporag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          }
+        },
+        {
+          "metric": "retrieval_score",
+          "method": "hipporag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          }
+        },
+        {
+          "metric": "full_retrieval_rate",
+          "method": "hipporag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          }
+        },
+        {
+          "metric": "budget_retrieval_score",
+          "method": "hipporag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          }
+        },
+        {
+          "metric": "budget_full_retrieval_rate",
+          "method": "hipporag",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          }
+        },
+        {
+          "metric": "support_score",
+          "method": "raptor",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          }
+        },
+        {
+          "metric": "full_support_rate",
+          "method": "raptor",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          }
+        },
+        {
+          "metric": "budget_support_score",
+          "method": "raptor",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          }
+        },
+        {
+          "metric": "budget_full_support_rate",
+          "method": "raptor",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          }
+        },
+        {
+          "metric": "retrieval_score",
+          "method": "raptor",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          }
+        },
+        {
+          "metric": "full_retrieval_rate",
+          "method": "raptor",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          }
+        },
+        {
+          "metric": "budget_retrieval_score",
+          "method": "raptor",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          }
+        },
+        {
+          "metric": "budget_full_retrieval_rate",
+          "method": "raptor",
+          "baseline": "graphrag",
+          "estimate": {
+            "mean": null,
+            "low": null,
+            "high": null
+          }
+        }
+      ],
+      "agreement": [
+        {
+          "method": "rag",
+          "gold_sentences": 0,
+          "offset_full_judge_3": 0,
+          "offset_full_judge_below_3": 0,
+          "offset_none_judge_0_or_1": 0,
+          "offset_none_judge_2_or_3": 0,
+          "offset_partial": 0,
+          "gold_complete_questions": 0,
+          "gold_complete_support_3": 0,
+          "gold_incomplete_questions": 0,
+          "gold_incomplete_support_3": 0
+        },
+        {
+          "method": "hipporag",
+          "gold_sentences": 0,
+          "offset_full_judge_3": 0,
+          "offset_full_judge_below_3": 0,
+          "offset_none_judge_0_or_1": 0,
+          "offset_none_judge_2_or_3": 0,
+          "offset_partial": 0,
+          "gold_complete_questions": 0,
+          "gold_complete_support_3": 0,
+          "gold_incomplete_questions": 0,
+          "gold_incomplete_support_3": 0
+        },
+        {
+          "method": "raptor",
+          "gold_sentences": 0,
+          "offset_full_judge_3": 0,
+          "offset_full_judge_below_3": 0,
+          "offset_none_judge_0_or_1": 0,
+          "offset_none_judge_2_or_3": 0,
+          "offset_partial": 0,
+          "gold_complete_questions": 0,
+          "gold_complete_support_3": 0,
+          "gold_incomplete_questions": 0,
+          "gold_incomplete_support_3": 0
+        },
+        {
+          "method": "graphrag",
+          "gold_sentences": 0,
+          "offset_full_judge_3": 0,
+          "offset_full_judge_below_3": 0,
+          "offset_none_judge_0_or_1": 0,
+          "offset_none_judge_2_or_3": 0,
+          "offset_partial": 0,
+          "gold_complete_questions": 0,
+          "gold_complete_support_3": 0,
+          "gold_incomplete_questions": 0,
+          "gold_incomplete_support_3": 0
+        }
+      ]
+    }
+  ]
+}

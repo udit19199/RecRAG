@@ -1,0 +1,35 @@
+[
+  {"id": "d4326e4287be668a", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "This week, we cover Sam Altman backing a teen’s AI startup"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Google’s hardware event"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "first impressions of the Pixel 8 Pro"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "Flexport drama"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 8, "quote": "the ongoing FTX fallout"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "this is the prevailing theory floating around right now"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "Based on the board’s language and the way these giant tech companies work"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "Based on the board’s language and the way these giant tech companies work"}]}
+  ]},
+  {"id": "31998b3879861570", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "bc92b9df37206408", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "“all of that, all of it, was built on lies,” Rehn declared to the jury"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly"}, {"item": 4, "quote": "committed fraud to achieve great wealth, power and influence"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "never meant to commit fraud"}, {"item": 4, "quote": "or steal and basically got in over his head"}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 4, "quote": "basically got in over his head"}]}
+  ]}
+]

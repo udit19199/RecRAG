@@ -1,0 +1,28 @@
+[
+{"id": "7bcb3a82fbb60c5c", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "cbf1d6a78aa20e58", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "61f4899e84a70615", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "William (Rufus Kampa)"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "The latest installment takes place between the late 1990s to mid-2000s"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Princess Diana’s fatal Paris car crash in 1997."}]}
+]}
+]

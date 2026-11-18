@@ -1,0 +1,67 @@
+[
+{"id": "a2b7163a3fd9c5ef", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "William (Rufus Kampa) is left heartbroken with grief and angry"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "William (Rufus Kampa) is left heartbroken with grief and angry"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]}
+]},
+{"id": "85ef289a64c1a37a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Google unveiled a new flagship AI model this week called Gemini. But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Google unveiled a new flagship AI model this week called Gemini. But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "anticompetitive by making deals with Apple and others. The DOJ doubled down on this"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "anticompetitive by making deals with Apple and others."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Rosenberg explained how Google gets manufacturers to sign a mobile app distribution agreement (MADA) that requires Android smartphone makers (like Samsung or"}]},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 6, "quote": "including its deal with Apple and other partners to make Google the default search engine."}, {"item": 10, "quote": "Google also has revenue share agreements (RSAs) with smartphone makers and wireless carriers (like Verizon) that require them to set Google search and Chrome"}]},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "64f98e1a1ef8f90c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss."}]}
+]},
+{"id": "51d23002cd07ffa0", "facts": [
+{"fact": "0.0", "status": "contradicted", "evidence": [{"item": 1, "quote": "Shohei Ohtani announced Saturday that he has agreed to a contract with the Dodgers."}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 5, "quote": "ESPN's Jeff Passan reports Ohtani has agreed to a colossal 10-year, $700 million contract"}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 5, "quote": "ESPN's Jeff Passan reports Ohtani has agreed to a colossal 10-year, $700 million contract"}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "4dfcdf8d2a3cdf87", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "0.5", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "c594df93c3b41fbd", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "152.67 -- After missing last week's game, Tyreek Hill now needs to"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "After missing last week's game, Tyreek Hill now needs to"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "his stated goal of 2,000 receiving yards this season"}]}
+]}
+]

@@ -1,0 +1,517 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 1 items.
+
+=== ITEM id=6bff67d158b8639f ===
+Gold sentences and facts:
+Sentence 0: Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on.
+  Fact 0.0: Google unveiled new hardware.
+  Fact 0.1: This week was Google's annual hardware event.
+  Fact 0.2: Google is a search and consumer tech giant.
+  Fact 0.3: At its annual hardware event this week, Google showed off what it had been working on.
+Sentence 1: In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones.
+  Fact 1.0: The last roundup reported that Google spent $26.3 billion in 2021 making itself the default search engine across platforms.
+  Fact 1.1: The last roundup reported that Google tried to have Chrome preinstalled on iPhones.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content through anticompetitive means.
+  Fact 2.2: The case argues that Google 'siphons off' news publishers' readers through anticompetitive means.
+  Fact 2.3: The case argues that Google 'siphons off' news publishers' ad revenue through anticompetitive means.
+
+Retrieved items:
+<item 1>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The amount that Google spent on homepage market share has been a fixing point in the trial. Earlier this month, the CEOs of Microsoft and DuckDuckGo testified
+that their search engines would have been far more successful, even competitive with Google, had they been able to make similar deals with Apple. Microsoft CEO
+Satya Nadella even said he was willing to spend $15 billion per year to get Bing into Apple’s default search, per The Information.
+
+Google agreed not to promote Chrome to Safari users
+
+As part of its search deal with Apple, Google agreed not to promote Chrome to Safari users, reports Bloomberg. Google would have been able to do this with
+banners, pop-ups and other annoying means in other Google apps.
+
+The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones.
+
+Google tried to be preinstalled on iPhones
+
+Pichai admitted to attempting to get Tim Cook to preinstall Google on every iOS device back in 2018, according to The Verge.
+
+Graph facts:
+- Is Google Search better than the rest? And is that fair? -MENTIONS-> Chrome
+- ChatGPT: Everything you need to know about the AI-powered chatbot -MENTIONS-> Chrome
+- Arteta reveals Pochettino influence on his career | Poch: He is family -MENTIONS-> Chrome
+- ‘Mass breach of privacy’: TikTok under fire for tracking users online -MENTIONS-> Chrome
+- More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo -MENTIONS-> Chrome
+
+Entities: Chrome, Satya Nadella, DuckDuckGo, Bing, The Information, Microsoft, Apple, TechCrunch, Tim Cook, Pichai, Google antitrust case, 5 things we learned
+so far about the Google antitrust case, Google, iOS, iPhone
+</item 1>
+
+<item 2>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being
+anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago.
+
+What does it all mean?
+
+The case is expected to continue for several weeks, bringing to a head one of the biggest fights in tech antitrust since the U.S. took Microsoft to trial in the
+1990s.
+
+If the judge rules against Google, the outcome could look a lot like the Microsoft deal, in which the computer company was required to change its behavior and
+share its APIs with third-party developers. Microsoft was also banned from making anticompetitive and exclusive deals with computer manufacturers.
+
+Google might end up having to turn over all or most of the data it has collected to other search engines so they can improve their products and attract more
+users. The DOJ has said that Google gets 16 times more data than Bing does everyday.
+
+Graph facts:
+- Grey -WORKS_FOR-> DuckDuckGo
+- Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ -MENTIONS-> DuckDuckGo
+- Is Google Search better than the rest? And is that fair? -MENTIONS-> DuckDuckGo
+- More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo -MENTIONS-> third-party developers
+- ASX set to drop as Wall Street’s September slump deepens -MENTIONS-> antitrust
+
+Entities: third-party developers, DuckDuckGo, antitrust, Bing, Microsoft, Apple, monopoly, TechCrunch, data, Google antitrust case, Brave, Microsoft trial,
+anticompetitive conduct, APIs, computer manufacturers
+</item 2>
+
+<item 3>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Bellshaw pulled up a message exchange in 2021 where Pichai asked for history to be turned off in a group chat. Pichai responded that he wanted to discuss a
+personnel matter and the subject had nothing to do with the litigation hold, which he said he takes great care to comply with.
+
+A moment of nostalgia for Internet Explorer
+
+Cast your memories back to 2005, when Microsoft’s Internet Explorer became the default search engine. Back then, Google’s legal chief David Drummond sent
+Microsoft an angry letter, saying that making Internet Explorer the search default was anticompetitive. Oh, how the tables have turned.
+
+After establishing that Google understands the inherent value of defaults, Bellshaw brought up Drummond’s letter to establish the hypocrisy of Google today. The
+letter declared that problems with a default setting are made worse by how changes to defaults are handled, and that most end users “do not change defaults.”
+
+Graph facts:
+- Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ -MENTIONS-> Bellshaw
+- Microsoft -MENTIONS-> cloud gaming
+- Microsoft -MENTIONS-> device-agnostic ecosystem
+- 200+ of the best deals from Amazon's Cyber Monday sale -MENTIONS-> Microsoft
+- ASX set to drop as Wall Street’s September slump deepens -MENTIONS-> Microsoft
+
+Entities: Bellshaw, Microsoft, TechCrunch, Pichai, Google antitrust case, message exchange, litigation hold, personnel matter, Internet Explorer, David
+Drummond, Internet Explorer became the default search engine, Drummond’s letter, default settings, 5 things we learned so far about the Google antitrust case,
+Google
+</item 3>
+
+<item 4>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google pays big bucks to be everywhere so that it can take in all the data and be the best search engine across different companies’ devices, said Pichai,
+according to The Verge.
+
+Google understood the value of defaults very early on. U.S. Justice Department lawyer Meagan Bellshaw showed Pichai a 2007 email from a Google product strategy
+meeting containing data showing that when people changed their browser homepage to Google, they did 15% more Google searches. When they switched away, their
+Google searches dropped 27%.
+
+“Nitin argues that focusing on homepage market share is one of the most effective things we can do to make gains in search market share,” read an email that
+summarized the meeting and was sent to Pichai, as well as other Google leaders, according to The Verge.
+
+The amount that Google spent on homepage market share has been a fixing point in the trial.
+
+Graph facts:
+- Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ -MENTIONS-> Meagan Bellshaw
+- U.S. Justice Department -PARTICIPATED_IN-> U.S. Justice Department lawsuit against Google
+- Meagan Bellshaw -WORKS_FOR-> Justice Department
+- News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line -MENTIONS-> U.S. Justice Department
+- U.S. Justice Department -PARTICIPATED_IN-> 2020 Justice Department civil antitrust suit over search and search advertising
+
+Entities: Meagan Bellshaw, U.S. Justice Department, TechCrunch, Pichai, Nitin, homepage market share, search market share, Google antitrust case, 5 things we
+learned so far about the Google antitrust case, Google, The Verge
+</item 4>
+
+<item 5>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+More from the US v Google trial: Vertical search, pre-installs and the case of Firefox/Yahoo
+
+We’re nearly two months into the Justice Department’s landmark antitrust case against Google — one of the biggest fights in tech antitrust since the U.S. took
+Microsoft to trial in the 1990s — and the revelations just keep getting juicier.
+
+In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have
+Chrome preinstalled on iPhones. Over the past couple of weeks, more of the inner workings of Google has come to light, including some of the search engine’s
+most lucrative search queries, what the revenue-share agreements between Google and Android OEMs look like and why Expedia has a bone to pick with Google.
+
+Before we go into some of these tidbits…
+
+Why the Google vs. U.S.
+
+Graph facts:
+- More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo -MENTIONS-> Amit Mehta
+- More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo -MENTIONS-> APIs
+- More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo -MENTIONS-> third-party developers
+- More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo -MENTIONS-> Amazon antitrust lawsuit
+- More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo -MENTIONS-> FTC-Facebook case
+
+Entities: More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo, US v Google trial, Chrome, Expedia, Yahoo, Firefox,
+Android OEMs, antitrust, Microsoft, TechCrunch, Google, Justice Department, iPhones, U.S.
+</item 5>
+
+<item 6>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+Before we go into some of these tidbits…
+
+Why the Google vs. U.S. antitrust case matters
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products. If Judge Amit Mehta rules against Google, the search giant may have to change its
+behavior and share its APIs with third-party developers. It may also be banned from making anticompetitive and exclusive deals with smartphone and computer
+manufacturers and wireless carriers. Google might end up having to turn over all or most of the data it has collected to other search engines so they can
+improve their products and attract more users. The DOJ has said that Google gets 16 times more data than Bing does everyday. Enforcers want to show that
+antitrust law remains relevant and that even though Google is basically the God of the internet, it’s still no match for the U.S. law.
+
+Graph facts:
+- More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo -MENTIONS-> Amazon antitrust lawsuit
+- Amit Mehta -SAID-> Apple
+- Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ -MENTIONS-> Amit Mehta
+- 5 things we learned so far about the Google antitrust case -MENTIONS-> third-party developers
+- More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo -MENTIONS-> FTC-Facebook case
+
+Entities: Amit Mehta, APIs, third-party developers, More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo, US v Google
+trial, Bing, TechCrunch, U.S. government, DOJ, antitrust law, Google, search, advertising
+</item 6>
+
+<item 7>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+That doesn’t make its actions illegal, the company says.
+
+Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in
+2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more.
+
+Google paid $26 billion in 2021 to be everyone’s default search engine
+
+When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple
+browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports.
+
+About $18 billion of that total amount went directly to Apple, according to a New York Times report published earlier this month. Google has had its deal with
+Apple in place since 2003.
+
+When questioned on the amount of money Google spends to get first pick of search engines, Pichai said that the decision was made with the consumer in mind.
+
+Graph facts:
+- Is Google Search better than the rest? And is that fair? -MENTIONS-> Chrome
+- ChatGPT: Everything you need to know about the AI-powered chatbot -MENTIONS-> Chrome
+- Arteta reveals Pochettino influence on his career | Poch: He is family -MENTIONS-> Chrome
+- ‘Mass breach of privacy’: TikTok under fire for tracking users online -MENTIONS-> Chrome
+- More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo -MENTIONS-> Chrome
+
+Entities: Chrome, Mozilla, Apple, TechCrunch, Prabhakar Raghavan, Pichai, trial hearing, court testimony, Google antitrust case, decision made with the consumer
+in mind, 5 things we learned so far about the Google antitrust case, Samsung, Google, New York Times, iPhones
+</item 7>
+
+<item 8>
+Graph query row:
+article: Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier
+published_on: 2023-10-07T20:15:26+00:00
+article_connections: [{'entity': 'TechCrunch', 'relationship': 'PUBLISHED_BY'}, {'entity': 'SBF Trial', 'relationship': 'MENTIONS'}, {'entity': 'Google’s
+hardware event', 'relationship': 'MENTIONS'}, {'entity': 'Pixel 8 Pro', 'relationship': 'MENTIONS'}, {'entity': 'Flexport drama', 'relationship': 'MENTIONS'},
+{'entity': 'FTX fallout', 'relationship': 'MENTIONS'}, {'entity': 'Gmail', 'relationship': 'MENTIONS'}, {'entity': 'ad-free subscription plan', 'relationship':
+'MENTIONS'}, {'entity': 'Induced AI', 'relationship': 'MENTIONS'}, {'entity': 'Manish', 'relationship': 'MENTIONS'}, {'entity': 'Google’s annual hardware
+event', 'relationship': 'MENTIONS'}, {'entity': 'Pixel Fold', 'relationship': 'MENTIONS'}, {'entity': 'Pixel Buds', 'relationship': 'MENTIONS'}, {'entity':
+'Pixel Watch 2', 'relationship': 'MENTIONS'}, {'entity': 'teens’ startup', 'relationship': 'MENTIONS'}, {'entity': 'ad-free tier', 'relationship': 'MENTIONS'},
+{'entity': 'Pixel 7 Pro', 'relationship': 'MENTIONS'}, {'entity': 'recent reporting on Flexport', 'relationship': 'MENTIONS'}, {'entity': 'Ingrid',
+'relationship': 'MENTIONS'}, {'entity': 'Recruiter', 'relationship': 'MENTIONS'}, {'entity': 'LinkedIn Learning coach', 'relationship': 'MENTIONS'}, {'entity':
+'AI-powered tool for marketing campaigns', 'relationship': 'MENTIONS'}, {'entity': 'TikTok’s ad-free plan', 'relationship': 'MENTIONS'}, {'entity': 'X users’
+daily posts and content generation', 'relationship': 'MENTIONS'}, {'entity': 'X users’ daily posts and content generation figures', 'relationship': 'MENTIONS'},
+{'entity': 'Pixel 8', 'relationship': 'MENTIONS'}, {'entity': 'IronNet', 'relationship': 'MENTIONS'}, {'entity': 'Keith Alexander', 'relationship': 'MENTIONS'},
+{'entity': 'NSA', 'relationship': 'MENTIONS'}, {'entity': 'going public', 'relationship': 'MENTIONS'}, {'entity': 'blockchain', 'relationship': 'MENTIONS'},
+{'entity': 'Equity', 'relationship': 'MENTIONS'}, {'entity': 'At One Ventures', 'relationship': 'MENTIONS'}, {'entity': 'Section 32', 'relationship':
+'MENTIONS'}, {'entity': 'Greylock', 'relationship': 'MENTIONS'}, {'entity': 'Fearless Fund', 'relationship': 'MENTIONS'}, {'entity': 'grants', 'relationship':
+'MENTIONS'}, {'entity': 'Black women founders', 'relationship': 'MENTIONS'}, {'entity': 'Found', 'relationship': 'MENTIONS'}, {'entity': 'Esther
+Rodriguez-Villegas', 'relationship': 'MENTIONS'}, {'entity': 'Acurable', 'relationship': 'MENTIONS'}, {'entity': 'patient-friendly wearable devices',
+'relationship': 'MENTIONS'}, {'entity': 'respiratory conditions', 'relationship': 'MENTIONS'}, {'entity': 'epilepsy', 'relationship': 'MENTIONS'}, {'entity':
+'Chain Reaction', 'relationship': 'MENTIONS'}, {'entity': 'Jacquelyn', 'relationship': 'MENTIONS'}, {'entity': 'Southern District of New York courthouse',
+'relationship': 'MENTIONS'}, {'entity': 'Bankman-Fried', 'relationship': 'MENTIONS'}, {'entity': 'SBF and FTX trial', 'relationship': 'MENTIONS'}, {'entity':
+'Breathe Battery Technologies', 'relationship': 'MENTIONS'}, {'entity': 'software', 'relationship': 'MENTIONS'}, {'entity': 'lithium-ion battery',
+'relationship': 'MENTIONS'}, {'entity': 'faster charging speeds', 'relationship': 'MENTIONS'}, {'entity': 'greater longevity', 'relationship': 'MENTIONS'},
+{'entity': 'Anna', 'relationship': 'MENTIONS'}, {'entity': '10 investors', 'relationship': 'MENTIONS'}, {'entity': 'survey of 10 investors', 'relationship':
+'MENTIONS'}, {'entity': 'oligopoly dynamics', 'relationship': 'MENTIONS'}, {'entity': 'first-mover advantages', 'relationship': 'MENTIONS'}, {'entity':
+'proprietary data', 'relationship': 'MENTIONS'}, {'entity': 'Linda Yaccarino', 'relationship': 'MENTIONS'}, {'entity': 'Darrell', 'relationship': 'MENTIONS'},
+{'entity': 'ChatGPT', 'relationship': 'MENTIONS'}, {'entity': 'AI tools', 'relationship': 'MENTIONS'}, {'entity': 'LinkedIn', 'relationship': 'MENTIONS'},
+{'entity': 'Rainforest', 'relationship': 'MENTIONS'}, {'entity': 'Virginia', 'relationship': 'MENTIONS'}, {'entity': 'TechCrunch+', 'relationship': 'MENTIONS'},
+{'entity': 'Tim', 'relationship': 'MENTIONS'}, {'entity': 'the defense', 'relationship': 'MENTIONS'}, {'entity': 'Bard', 'relationship': 'MENTIONS'}, {'entity':
+'X', 'relationship': 'MENTIONS'}, {'entity': 'Christine', 'relationship': 'MENTIONS'}, {'entity': 'AI', 'relationship': 'MENTIONS'}, {'entity': 'spam',
+'relationship': 'MENTIONS'}, {'entity': 'Elon Musk', 'relationship': 'MENTIONS'}, {'entity': 'startups', 'relationship': 'MENTIONS'}, {'entity': 'FTX',
+'relationship': 'MENTIONS'}, {'entity': 'Google', 'relationship': 'MENTIONS'}, {'entity': 'Rebecca', 'relationship': 'MENTIONS'}, {'entity': 'the prosecution',
+'relationship': 'MENTIONS'}, {'entity': 'TikTok', 'relationship': 'MENTIONS'}, {'entity': 'cybersecurity', 'relationship': 'MENTIONS'}, {'entity': 'CNBC',
+'relationship': 'MENTIONS'}, {'entity': 'venture funding', 'relationship': 'MENTIONS'}, {'entity': 'sleep apnea', 'relationship': 'MENTIONS'}, {'entity':
+'Alex', 'relationship': 'MENTIONS'}, {'entity': 'Sam Altman', 'relationship': 'MENTIONS'}, {'entity': 'Google Assistant', 'relationship': 'MENTIONS'},
+{'entity': 'Android 14', 'relationship': 'MENTIONS'}, {'entity': 'U.S.', 'relationship': 'MENTIONS'}, {'entity': 'fraud', 'relationship': 'MENTIONS'},
+{'entity': 'Dave Clark', 'relationship': 'MENTIONS'}, {'entity': 'Flexport', 'relationship': 'MENTIONS'}, {'entity': 'Amazon', 'relationship': 'MENTIONS'}]
+google_connections: [{'entity': 'Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier', 'relationship': 'MENTIONS'},
+{'entity': 'Govee’s colorful LED light strips are on sale just in time for Halloween', 'relationship': 'MENTIONS'}, {'entity': 'The 53 best Black Friday deals
+we could find at Amazon, Walmart, Target and more', 'relationship': 'MENTIONS'}, {'entity': 'Google', 'relationship': 'MADE'}, {'entity': 'Google',
+'relationship': 'OWNS'}, {'entity': 'Apple', 'relationship': 'MENTIONS'}, {'entity': 'AI Principles', 'relationship': 'MENTIONS'}, {'entity': 'Apple defends
+Google Search deal in court: ‘There wasn’t a valid alternative’', 'relationship': 'MENTIONS'}, {'entity': 'More from the US v Google trial: vertical search,
+pre-installs and the case of Firefox/Yahoo', 'relationship': 'MENTIONS'}, {'entity': 'Why Mozilla is betting on a decentralized social networking future',
+'relationship': 'MENTIONS'}, {'entity': 'How ego and fear fuelled the rise of artificial intelligence', 'relationship': 'MENTIONS'}, {'entity': 'Wired opinion
+article', 'relationship': 'MENTIONS'}, {'entity': 'Is Google Search better than the rest? And is that fair?', 'relationship': 'MENTIONS'}, {'entity': 'News
+publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line', 'relationship': 'MENTIONS'}, {'entity': 'There’s something
+going on with AI startups in France', 'relationship': 'MENTIONS'}, {'entity': 'What to know about Fortnite maker Epic Games’ antitrust battle with Google,
+starting today', 'relationship': 'MENTIONS'}, {'entity': 'Founders, are events useful?', 'relationship': 'MENTIONS'}, {'entity': 'Passwords? We don’t need no
+steenkin’ passwords', 'relationship': 'MENTIONS'}, {'entity': 'One year later, ChatGPT is still alive and kicking', 'relationship': 'MENTIONS'}, {'entity':
+'ChatGPT: Everything you need to know about the AI-powered chatbot', 'relationship': 'MENTIONS'}, {'entity': 'A comprehensive list of 2023 tech layoffs',
+'relationship': 'MENTIONS'}, {'entity': 'How the OpenAI fiasco could bolster Meta and the ‘open AI’ movement', 'relationship': 'MENTIONS'}, {'entity': 'From Ten
+Hag’s future to a leaking roof: Ratcliffe’s Manchester United in-tray', 'relationship': 'MENTIONS'}, {'entity': 'The best Black Friday deals you can get for
+under $25', 'relationship': 'MENTIONS'}, {'entity': 'Everton players and fans will be fired up by points penalty, asserts Sean Dyche', 'relationship':
+'MENTIONS'}, {'entity': 'Discogs’ vibrant vinyl community is shattering', 'relationship': 'MENTIONS'}, {'entity': 'Biden’s AI EO hailed as broad, but not deep
+without legislation to match', 'relationship': 'MENTIONS'}, {'entity': 'Chelsea secure last-eight spot after Raheem Sterling sinks Blackburn', 'relationship':
+'MENTIONS'}, {'entity': 'Why We Desperately Need a New (and Better) Google', 'relationship': 'MENTIONS'}, {'entity': 'The people who ruined the internet',
+'relationship': 'MENTIONS'}, {'entity': 'People are turning to Snap Map for firsthand perspectives from Gaza', 'relationship': 'MENTIONS'}, {'entity': 'Early
+impressions of Google’s Gemini aren’t great', 'relationship': 'MENTIONS'}, {'entity': 'The restaurant nearest Google', 'relationship': 'MENTIONS'}, {'entity':
+'Meta seeks legislation that would require parents to approve teens’ app downloads', 'relationship': 'MENTIONS'}, {'entity': 'Tim Sweeney on Epic’s victory
+royale over Google', 'relationship': 'MENTIONS'}, {'entity': 'England thrash Scotland but cannot avoid Team GB Olympic heartbreak', 'relationship': 'MENTIONS'},
+{'entity': '‘Mass breach of privacy’: TikTok under fire for tracking users online', 'relationship': 'MENTIONS'}, {'entity': 'If your startup doesn’t seem
+impossible at first, it’s not hard enough', 'relationship': 'MENTIONS'}, {'entity': 'The best Prime Day smart home deals', 'relationship': 'MENTIONS'},
+{'entity': 'England choose survival over oblivion and a chance of summer trip to France', 'relationship': 'MENTIONS'}, {'entity': "Sex, Signal messages, and
+sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court", 'relationship': 'MENTIONS'}, {'entity': 'The best VPN services for 2023',
+'relationship': 'MENTIONS'}, {'entity': 'Keep Labs’ smart storage redefines medication management', 'relationship': 'MENTIONS'}, {'entity': 'The best October
+Prime Day gaming deals', 'relationship': 'MENTIONS'}, {'entity': '5 things we learned so far about the Google antitrust case', 'relationship': 'MENTIONS'},
+{'entity': 'Ten Hag’s gamble pays off against Chelsea as McTominay steals show | Jonathan Liew', 'relationship': 'MENTIONS'}, {'entity': 'Deepfake election
+risks trigger EU call for more generative AI safeguards', 'relationship': 'MENTIONS'}, {'entity': 'The 30 best Amazon Prime Day deals for October 2023',
+'relationship': 'MENTIONS'}, {'entity': 'Meta and IBM form an AI Alliance, but to what end?', 'relationship': 'MENTIONS'}, {'entity': 'NMPA: Generative AI is
+‘the greatest risk to the human creative class that has ever existed’', 'relationship': 'MENTIONS'}, {'entity': 'The Epic v. Google trial may come down to
+simple v. complicated', 'relationship': 'MENTIONS'}, {'entity': 'Deft is building e-commerce search to help you find the right product quickly', 'relationship':
+'MENTIONS'}, {'entity': "Sweeping White House AI executive order takes aim at the technology's toughest challenges", 'relationship': 'MENTIONS'}, {'entity':
+'These Are Our Favorite Walmart Cyber Monday Deals', 'relationship': 'MENTIONS'}, {'entity': 'Ten Hag demands both positivity and pragmatism from erratic
+Onana', 'relationship': 'MENTIONS'}, {'entity': 'Google fakes an AI demo, Grand Theft Auto VI goes viral and Spotify cuts jobs', 'relationship': 'MENTIONS'},
+{'entity': 'Earnings week ahead: Amazon, Microsoft, Alphabet, Meta, Ford, GM and more', 'relationship': 'MENTIONS'}, {'entity': 'European roundup: Bellingham
+helps Real Madrid go top while Bayern draw', 'relationship': 'MENTIONS'}, {'entity': 'Epic v. Google, explained', 'relationship': 'MENTIONS'}, {'entity': 'The
+Ray-Ban Meta smart glasses actually make the future look cool', 'relationship': 'MENTIONS'}, {'entity': '8 predictions for AI in 2024', 'relationship':
+'MENTIONS'}, {'entity': 'Here are the best deals on headphones and wireless earbuds we could find', 'relationship': 'MENTIONS'}, {'entity': 'Ten Hag’s
+Manchester United stand up and die at club stuck in the past tense', 'relationship': 'MENTIONS'}, {'entity': 'Sony Music has issued nearly 10,000 deepfake
+takedowns… and other things we learned from Dennis Kooker’s speech about AI', 'relationship': 'MENTIONS'}, {'entity': 'Sony Music’s artists aren’t involved in
+YouTube’s new voice-cloning AI experiment', 'relationship': 'MENTIONS'}, {'entity': 'Sony Music’s artists aren’t involved in YouTube’s new voice-cloning AI
+experiment.', 'relationship': 'MENTIONS'}, {'entity': 'Sony Music’s artists aren’t involved in YouTube’s new voice-cloning AI experiment. Not unrelated:
+Google’s recent filing with the US Copyright Office.', 'relationship': 'MENTIONS'}, {'entity': 'Temu was the most-downloaded iPhone app in the U.S. in 2023',
+'relationship': 'MENTIONS'}, {'entity': 'Know the price-matching policies for Best Buy, Target, Walmart, and others', 'relationship': 'MENTIONS'}, {'entity':
+'The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more', 'relationship': 'MENTIONS'}, {'entity': 'Israel’s startup ecosystem: down but
+not out', 'relationship': 'MENTIONS'}, {'entity': 'Warner Music Group boss Robert Kyncl on AI, why labels still exist, and 2 other things we learned from his
+Q&A at the Code Conference', 'relationship': 'MENTIONS'}, {'entity': 'French soccer players back African mobile video network StarNews Mobile in $3M round',
+'relationship': 'MENTIONS'}, {'entity': 'EU commissioner sidesteps MEPs’ questions about CSAM microtargeting', 'relationship': 'MENTIONS'}, {'entity': 'The new,
+‘efficient’ Spotify has a very different approach to podcasting', 'relationship': 'MENTIONS'}, {'entity': 'ASX set to rise ahead of inflation report after big
+tech lifts Wall Street', 'relationship': 'MENTIONS'}, {'entity': 'Spill toasts one year with a 2.7M seed extension, Kerry Washington and champagne',
+'relationship': 'MENTIONS'}, {'entity': 'The UK just laid out new rules for the internet — it only gets harder from here', 'relationship': 'MENTIONS'},
+{'entity': 'Tesla ‘digs its own grave with the Cybertruck,’ Convoy collapses and Rivian scores a win at Rebelle', 'relationship': 'MENTIONS'}, {'entity': '78
+Absolute Best October Prime Day Deals (2023)', 'relationship': 'MENTIONS'}, {'entity': 'EU says incoming rules for general purpose AIs can evolve over time',
+'relationship': 'MENTIONS'}, {'entity': "India to be one of world's fastest growing economies over next decade", 'relationship': 'MENTIONS'}, {'entity': 'Cruise
+hits the brakes on driverless, UAW makes progress and more EV backpedaling', 'relationship': 'MENTIONS'}, {'entity': 'Liverpool enjoy home comforts but Dyche’s
+Everton offer derby danger | Andy Hunter', 'relationship': 'MENTIONS'}, {'entity': 'The 26 best Amazon Prime Day deals you can still shop for today',
+'relationship': 'MENTIONS'}, {'entity': 'Some of our favorite devices are on sale for Black Friday.', 'relationship': 'MENTIONS'}, {'entity': 'The best
+anti-Prime Big Deal Day deals', 'relationship': 'MENTIONS'}, {'entity': 'Pebble, the Twitter alternative previously known as T2, is shutting down',
+'relationship': 'MENTIONS'}, {'entity': 'The best Prime Day deals on headphones for October 2023', 'relationship': 'MENTIONS'}, {'entity': 'Palestine’s growing
+tech industry has been literally blown apart by Israel’s war on Hamas', 'relationship': 'MENTIONS'}, {'entity': 'The best apps and tools for managing your money
+online', 'relationship': 'MENTIONS'}, {'entity': 'Is Google Search better than the rest? And is that fair?', 'relationship': 'SAID'}, {'entity': 'App store
+competition', 'relationship': 'SAID'}, {'entity': 'Chat logs and documents provided to the court', 'relationship': 'SAID'}, {'entity': 'workforce reductions',
+'relationship': 'SAID'}, {'entity': 'open source AI', 'relationship': 'SAID'}, {'entity': 'Apple', 'relationship': 'SAID'}, {'entity': 'misinformation',
+'relationship': 'SAID'}, {'entity': 'Bard', 'relationship': 'SAID'}, {'entity': 'Gemini Pro', 'relationship': 'SAID'}, {'entity': 'Thai food near me',
+'relationship': 'SAID'}, {'entity': 'local search', 'relationship': 'SAID'}, {'entity': 'bias', 'relationship': 'SAID'}, {'entity': 'Activision competing
+store', 'relationship': 'SAID'}, {'entity': 'Epic', 'relationship': 'SAID'}, {'entity': 'ethical reviews', 'relationship': 'SAID'}, {'entity': 'security',
+'relationship': 'SAID'}, {'entity': 'safety', 'relationship': 'SAID'}, {'entity': 'Meta’s open source AI approach', 'relationship': 'SAID'}, {'entity': 'AI
+training', 'relationship': 'SAID'}, {'entity': 'Android sideloading flow', 'relationship': 'SAID'}, {'entity': 'AI-generated content', 'relationship': 'SAID'},
+{'entity': 'Gemini', 'relationship': 'SAID'}, {'entity': 'sideloaded apps equal gaping security holes', 'relationship': 'SAID'}, {'entity': 'fair use',
+'relationship': 'SAID'}, {'entity': 'YouTube', 'relationship': 'SAID'}, {'entity': 'Artificial Intelligence and Copyright', 'relationship': 'SAID'}, {'entity':
+'ingestion of copyrighted material for training generative AI platforms', 'relationship': 'SAID'}, {'entity': 'US copyright law', 'relationship': 'SAID'},
+{'entity': 'copyright harvesting', 'relationship': 'SAID'}, {'entity': 'privacy', 'relationship': 'SAID'}, {'entity': 'generative AI', 'relationship': 'SAID'},
+{'entity': 'Cue', 'relationship': 'SAID'}, {'entity': 'Rosenberg', 'relationship': 'SAID'}, {'entity': 'Barry Diller', 'relationship': 'SAID'}, {'entity':
+'Mitchell Baker', 'relationship': 'SAID'}, {'entity': 'Suleyman', 'relationship': 'SAID'}, {'entity': 'Megan Grey', 'relationship': 'SAID'}, {'entity': 'Helena
+World Chronicle', 'relationship': 'SAID'}, {'entity': 'Epic Games', 'relationship': 'SAID'}, {'entity': 'federal government', 'relationship': 'SAID'},
+{'entity': 'Forrester', 'relationship': 'SAID'}, {'entity': 'Sullivan', 'relationship': 'SAID'}, {'entity': 'SEOs', 'relationship': 'SAID'}, {'entity': 'Ray',
+'relationship': 'SAID'}, {'entity': 'Cutts', 'relationship': 'SAID'}, {'entity': 'Lee', 'relationship': 'SAID'}, {'entity': 'Sacha Haworth', 'relationship':
+'SAID'}, {'entity': 'Tim Sweeney', 'relationship': 'SAID'}, {'entity': 'Don Harrison', 'relationship': 'SAID'}, {'entity': 'Samantha Hoffman', 'relationship':
+'SAID'}, {'entity': 'Wilkins', 'relationship': 'SAID'}, {'entity': 'U.S. government', 'relationship': 'SAID'}, {'entity': 'Pichai', 'relationship': 'SAID'},
+{'entity': 'DOJ', 'relationship': 'SAID'}, {'entity': 'Gary Bornstein', 'relationship': 'SAID'}, {'entity': 'Bornstein', 'relationship': 'SAID'}, {'entity':
+'Pomerantz', 'relationship': 'SAID'}, {'entity': 'Zach Hudson', 'relationship': 'SAID'}, {'entity': 'Justice Department', 'relationship': 'SAID'}, {'entity':
+'Gary Wang', 'relationship': 'WORKS_FOR'}, {'entity': 'John Schmidtlein', 'relationship': 'WORKS_FOR'}, {'entity': 'Jamie Rosenberg', 'relationship':
+'WORKS_FOR'}, {'entity': 'Sundar Pichai', 'relationship': 'WORKS_FOR'}, {'entity': 'Hinton', 'relationship': 'WORKS_FOR'}, {'entity': 'Alan Eustace',
+'relationship': 'WORKS_FOR'}, {'entity': 'Kent Walker', 'relationship': 'WORKS_FOR'}, {'entity': 'Matt Cutts', 'relationship': 'WORKS_FOR'}, {'entity': 'Danny
+Sullivan', 'relationship': 'WORKS_FOR'}, {'entity': 'Sullivan', 'relationship': 'WORKS_FOR'}, {'entity': 'Cutts', 'relationship': 'WORKS_FOR'}, {'entity':
+'Prabhakar Raghavan', 'relationship': 'WORKS_FOR'}, {'entity': 'David Drummond', 'relationship': 'WORKS_FOR'}, {'entity': 'Glenn Pomerantz', 'relationship':
+'WORKS_FOR'}, {'entity': 'Ilya Sutskever', 'relationship': 'WORKS_FOR'}, {'entity': 'Lewis', 'relationship': 'WORKS_FOR'}, {'entity': 'Bradley Horowitz',
+'relationship': 'WORKS_FOR'}, {'entity': 'Dalia Awad', 'relationship': 'WORKS_FOR'}, {'entity': 'Google-Apple revenue-share deal', 'relationship':
+'PARTICIPATED_IN'}, {'entity': 'Google antitrust lawsuit with Match Group', 'relationship': 'PARTICIPATED_IN'}, {'entity': 'Google trial with Epic Games',
+'relationship': 'PARTICIPATED_IN'}, {'entity': 'US v Google trial', 'relationship': 'PARTICIPATED_IN'}, {'entity': 'auction', 'relationship':
+'PARTICIPATED_IN'}, {'entity': 'quality tests', 'relationship': 'PARTICIPATED_IN'}, {'entity': 'Epic Games lawsuit against Google over app store antitrust
+issues', 'relationship': 'PARTICIPATED_IN'}, {'entity': 'Epic Games’ antitrust battle with Google', 'relationship': 'PARTICIPATED_IN'}, {'entity': 'deal between
+Google and Samsung', 'relationship': 'PARTICIPATED_IN'}, {'entity': 'Google developer agreements', 'relationship': 'PARTICIPATED_IN'}, {'entity': 'three-year
+agreement', 'relationship': 'PARTICIPATED_IN'}, {'entity': "Epic's antitrust lawsuit", 'relationship': 'PARTICIPATED_IN'}, {'entity': "Google's antitrust
+lawsuit with the Department of Justice", 'relationship': 'PARTICIPATED_IN'}, {'entity': 'antitrust battle with Google', 'relationship': 'PARTICIPATED_IN'},
+{'entity': '2023 I/O event', 'relationship': 'PARTICIPATED_IN'}, {'entity': 'Activision-Google deal', 'relationship': 'PARTICIPATED_IN'}, {'entity': 'Epic’s
+victory royale over Google', 'relationship': 'PARTICIPATED_IN'}, {'entity': 'Epic v. Google', 'relationship': 'PARTICIPATED_IN'}, {'entity': 'U.S. government’s
+antitrust trial against Google', 'relationship': 'PARTICIPATED_IN'}, {'entity': 'lucrative search agreement', 'relationship': 'PARTICIPATED_IN'}, {'entity':
+'Talks to secure licenses for artists’ vocals and musical melodies', 'relationship': 'PARTICIPATED_IN'}, {'entity': 'trial', 'relationship': 'PARTICIPATED_IN'},
+{'entity': 'Epic sued Google', 'relationship': 'PARTICIPATED_IN'}, {'entity': 'Epic v. Google trial', 'relationship': 'PARTICIPATED_IN'}, {'entity': 'tentative
+settlement over app store antitrust claims', 'relationship': 'PARTICIPATED_IN'}, {'entity': 'settlement', 'relationship': 'PARTICIPATED_IN'}, {'entity': 'US v.
+Google antitrust trial', 'relationship': 'PARTICIPATED_IN'}, {'entity': "Epic's trial", 'relationship': 'PARTICIPATED_IN'}, {'entity': 'Epic v. Google lawsuit',
+'relationship': 'PARTICIPATED_IN'}, {'entity': 'Google’s submission to the United States Copyright Office', 'relationship': 'PARTICIPATED_IN'}, {'entity':
+'Google’s recent filing with the US Copyright Office', 'relationship': 'PARTICIPATED_IN'}, {'entity': 'Google filing with the US Copyright Office',
+'relationship': 'PARTICIPATED_IN'}, {'entity': 'Google USCO submission', 'relationship': 'PARTICIPATED_IN'}, {'entity': 'Google’s USCO filing', 'relationship':
+'PARTICIPATED_IN'}, {'entity': 'US v Google trial', 'relationship': 'ACCUSED_OF'}, {'entity': 'anticompetitive behavior', 'relationship': 'ACCUSED_OF'},
+{'entity': 'U.S. antitrust law', 'relationship': 'ACCUSED_OF'}, {'entity': 'Sherman Act', 'relationship': 'ACCUSED_OF'}, {'entity': 'class action antitrust
+suit', 'relationship': 'ACCUSED_OF'}, {'entity': 'misappropriation of Publishers’ content', 'relationship': 'ACCUSED_OF'}, {'entity': 'Epic Games lawsuit
+against Google over app store antitrust issues', 'relationship': 'ACCUSED_OF'}, {'entity': 'class action antitrust suit against Google', 'relationship':
+'ACCUSED_OF'}, {'entity': 'digital ad technologies', 'relationship': 'ACCUSED_OF'}, {'entity': 'anti-competitive practices', 'relationship': 'ACCUSED_OF'},
+{'entity': 'search monopoly', 'relationship': 'ACCUSED_OF'}, {'entity': 'antitrust', 'relationship': 'ACCUSED_OF'}, {'entity': 'monopoly', 'relationship':
+'ACCUSED_OF'}, {'entity': 'anti-competition law', 'relationship': 'ACCUSED_OF'}, {'entity': 'systematically destroying chats', 'relationship': 'ACCUSED_OF'},
+{'entity': 'anticompetitive conduct', 'relationship': 'ACCUSED_OF'}, {'entity': 'antitrust law', 'relationship': 'ACCUSED_OF'}, {'entity': 'unlawful monopoly',
+'relationship': 'ACCUSED_OF'}, {'entity': 'making potential evidence disappear', 'relationship': 'ACCUSED_OF'}, {'entity': 'illegal tying', 'relationship':
+'ACCUSED_OF'}, {'entity': 'Android app distribution', 'relationship': 'ACCUSED_OF'}, {'entity': 'Android in-app payment processing', 'relationship':
+'ACCUSED_OF'}, {'entity': 'deleting potentially incriminating messages', 'relationship': 'ACCUSED_OF'}, {'entity': 'Epic', 'relationship': 'ACCUSED_OF'},
+{'entity': 'US', 'relationship': 'LOCATED_IN'}, {'entity': 'Israel', 'relationship': 'LOCATED_IN'}, {'entity': 'Gmail', 'relationship': 'MADE'}, {'entity':
+'Pixel 8', 'relationship': 'MADE'}, {'entity': 'Chrome', 'relationship': 'MADE'}, {'entity': 'Play', 'relationship': 'MADE'}, {'entity': 'Google travel
+listings', 'relationship': 'MADE'}, {'entity': 'Google Search', 'relationship': 'MADE'}, {'entity': 'User Choice Billing', 'relationship': 'MADE'}, {'entity':
+'Google first-party billing system', 'relationship': 'MADE'}, {'entity': 'Google Play', 'relationship': 'MADE'}, {'entity': 'Search', 'relationship': 'MADE'},
+{'entity': 'Google Pixel Buds Pro', 'relationship': 'MADE'}, {'entity': 'Google Pixel Watch', 'relationship': 'MADE'}, {'entity': 'Bard', 'relationship':
+'MADE'}, {'entity': 'Gemini Pro', 'relationship': 'MADE'}, {'entity': 'Google Maps', 'relationship': 'MADE'}, {'entity': 'Google One VPN', 'relationship':
+'MADE'}, {'entity': 'Google-developed AI tools', 'relationship': 'MADE'}, {'entity': 'enterprise-focused AI services', 'relationship': 'MADE'}, {'entity':
+'multi-search', 'relationship': 'MADE'}, {'entity': 'multi-search feature', 'relationship': 'MADE'}, {'entity': 'Nest Cam', 'relationship': 'MADE'}, {'entity':
+'Gemini', 'relationship': 'MADE'}, {'entity': 'Gemini Ultra', 'relationship': 'MADE'}, {'entity': 'Google Pixel Buds A-Series', 'relationship': 'MADE'},
+{'entity': 'Google Cloud Platform', 'relationship': 'MADE'}, {'entity': 'Google reCaptcha', 'relationship': 'MADE'}, {'entity': 'Google Nest Thermostat',
+'relationship': 'MADE'}, {'entity': 'Google Nest Hub (second-gen)', 'relationship': 'MADE'}, {'entity': 'Gmail', 'relationship': 'OWNS'}, {'entity': 'Google
+Search', 'relationship': 'OWNS'}, {'entity': 'Google Play', 'relationship': 'OWNS'}, {'entity': 'Google Play Store', 'relationship': 'OWNS'}, {'entity':
+'DeepMind', 'relationship': 'OWNS'}, {'entity': 'Bard', 'relationship': 'OWNS'}, {'entity': 'Riot', 'relationship': 'OWNS'}, {'entity': 'Google Maps',
+'relationship': 'OWNS'}, {'entity': 'Gemini', 'relationship': 'OWNS'}, {'entity': 'YouTube', 'relationship': 'OWNS'}, {'entity': 'Alphabet', 'relationship':
+'OWNS'}, {'entity': 'Yahoo', 'relationship': 'COMPETES_WITH'}, {'entity': 'DuckDuckGo', 'relationship': 'COMPETES_WITH'}, {'entity': 'ChatGPT', 'relationship':
+'COMPETES_WITH'}, {'entity': 'Bing', 'relationship': 'COMPETES_WITH'}, {'entity': 'Apple', 'relationship': 'COMPETES_WITH'}, {'entity': 'Reddit',
+'relationship': 'COMPETES_WITH'}, {'entity': 'large language models', 'relationship': 'COMPETES_WITH'}, {'entity': 'Brave', 'relationship': 'COMPETES_WITH'},
+{'entity': 'OpenAI', 'relationship': 'COMPETES_WITH'}, {'entity': 'TikTok', 'relationship': 'COMPETES_WITH'}, {'entity': 'Epic', 'relationship':
+'COMPETES_WITH'}, {'entity': 'IBM', 'relationship': 'COMPETES_WITH'}, {'entity': 'Deft', 'relationship': 'COMPETES_WITH'}, {'entity': 'TicWatch Pro 5',
+'relationship': 'COMPETES_WITH'}, {'entity': 'Alphabet', 'relationship': 'PART_OF'}, {'entity': 'Partnership on AI', 'relationship': 'PART_OF'}, {'entity':
+'Alphabet Inc.', 'relationship': 'PART_OF'}, {'entity': 'Gradient Ventures', 'relationship': 'PART_OF'}, {'entity': 'DeepMind', 'relationship': 'PART_OF'},
+{'entity': 'Google Users & Products', 'relationship': 'PART_OF'}, {'entity': 'Area 120', 'relationship': 'PART_OF'}, {'entity': 'web spam team', 'relationship':
+'PART_OF'}, {'entity': 'Larry Page', 'relationship': 'FOUNDED'}, {'entity': 'Sergey Brin', 'relationship': 'FOUNDED'}, {'entity': 'The best gifts to level up a
+home theater', 'relationship': 'MENTIONS'}]
+passages: ['Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)\nHiya, folks,
+and welcome to Week in Review (WiR), TechCrunch’s digest of the past week in tech news. It’s TC’s column that highlights the major stories over the past few
+days, and — we humbly submit — it’s a darn useful resource for folks on the go.\n\nThis week, we cover Sam Altman backing a teen’s AI startup, Google’s hardware
+event (and first impressions of the Pixel 8 Pro), Flexport drama, and the ongoing FTX fallout. Also on the agenda: Gmail’s harsher rules to prevent spam, TikTok
+testing an ad-free subscription plan, and LinkedIn going big on AI tools. And that’s not all.\n\nIf you haven’t, sign up here to get WiR in your inbox every
+Saturday. And if you have, our thanks. Now, let’s get on with the news.', 'Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an
+ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)\nAnd if you have, our thanks. Now, let’s get on with the news.\n\nMost read\n\nAltman backs teen
+entrepreneurs: Sam Altman is among the backers of an AI startup, founded by two teenagers, that’s aiming to assist businesses in automating workflows in
+“previously unexplored” ways. Manish writes that Induced AI, founded this year, lets businesses input their back-office tasks in plain English and converts the
+instructions to pseudo-code in real time.\n\nGoogle unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant
+showed off what it’s been working on. Christine wrote up a thorough roundup of the news, which included updates on the Pixel 8 and Pixel 8 Pro, Pixel Fold,
+Android 14, Pixel Buds, Google Assistant, Bard, Pixel Watch 2 and other goodies.', 'Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests
+an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)\nHands on with the Pixel 8 Pro: Darrell took the newly unveiled Pixel 8 Pro for a whirl, and he liked
+what he saw. While very similar to last year’s model (the Pixel 7 Pro), Darrell felt that the improved cameras, brighter screen and enhanced AI-powered features
+made it enough of an upgrade to (potentially) warrant a purchase — minus the underutilized temperature sensor. Stay tuned for his full review.\n\nTurmoil at
+Flexport: Dave Clark, the former Amazon executive who was ousted as CEO of Flexport just a year into the job, fired back at its founder and board, calling
+recent reporting on the logistics company “deeply concerning.” Clark made the comments Monday in a lengthy post on social media site X following a report from
+CNBC that provided new information about his last days at Flexport, a freight forwarding and customs brokerage startup valued at $8 billion.', 'Sam Altman backs
+teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)\nFor $4.99, subscribers get an ad-free
+experience on TikTok — no other strings attached. But don’t look for the option to arrive anytime soon. TikTok says that it’s piloting the plan in a single,
+English-speaking market outside the U.S. for now.\n\nLinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job
+hunting, marketing and sales products, Ingrid writes. They include a big update to its Recruiter talent sourcing platform, with AI assistance built into it
+throughout; an AI-powered LinkedIn Learning coach; and a new AI-powered tool for marketing campaigns.\n\nMusk comes clean about X’s metrics — maybe: In
+September, Elon Musk said that X users were generating a lot of content — creating 100 million to 200 million posts every day, excluding retweets. But speaking
+at an event this week, X CEO Linda Yaccarino offered a contradictory figure.', 'Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an
+ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)\nShe claimed X was seeing 500 million posts per day on the platform. So who’s right? Beats us.\n\nFormer
+NSA director’s startup shutters: IronNet, a once-promising cybersecurity startup founded by a former NSA director, has shuttered and laid off its remaining
+staff following its collapse. The Virginia-based IronNet was founded in 2014 by retired four-star general Keith Alexander and had raised more than $400 million
+in funding. But IronNet failed to gain traction after going public in August 2021, and its stock price continued to steeply decline in the wake of an initial
+spike.\n\nAudio\n\nOn the hunt for a new podcast to listen to while you work out, do the dishes or rake the leaves (now that fall’s arrived)? Look no further
+than TechCrunch’s roster, which covers the world of startups, the blockchain and more.', 'Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok
+tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)\nOn Equity this week, the crew talked about the SBF trial; deals from VR firms Rainforest, At One
+Ventures, Section 32 and Greylock, where venture funding has declined; and how Fearless Fund, a firm founded to invest in women of color, is being barred from
+awarding grants to Black women founders.\n\nMeanwhile, Found featured Esther Rodriguez-Villegas from Acurable, a medical device company that makes
+patient-friendly wearable devices to diagnose and manage respiratory conditions at home. As a career-long academic, Rodriguez-Villegas talks about how she never
+intended to be a founder until she learned about how the currently available medical devices make it extremely difficult to detect and treat diseases like sleep
+apnea and epilepsy.\n\nAnd over on Chain Reaction, Jacquelyn did a crossover episode with Alex about the SBF trial.', 'Sam Altman backs teens’ startup, Google
+unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)\nJacquelyn has been on the ground at the Southern District of New
+York courthouse, listening in to the trial in the same room as Bankman-Fried, so there was lots to talk about.\n\nTechCrunch+\n\nTC+ subscribers get access to
+in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up. Here are a few highlights from
+this week:\n\nInside the SBF trial: Rebecca and Jacquelyn report on the second day of the SBF and FTX trial. The prosecution painted Bankman-Fried as someone
+who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to
+commit fraud or steal and basically got in over his head.', 'Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier
+(TechCrunch, 2023-10-07T20:15:26+00:00)\nBattery-boosting software tech: Tim covers Breathe Battery Technologies, a startup that’s developed a bit of software
+that can be slipped into just about any lithium-ion battery in use today — endowing it with either faster charging speeds or greater longevity.\n\nWhat lies
+beyond ChatGPT: Anna surveyed 10 investors about the future of AI and what they believe might be the next big thing. Among other topics, they touched on where
+startups still stand a chance, where oligopoly dynamics and first-mover advantages are shaping up and the value of proprietary data.']
+</item 8>
+
+<item 9>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company. The executive defended Google’s business tactics,
+including its deal with Apple and other partners to make Google the default search engine.
+
+The lawsuit stems from a 2020 antitrust claim over Google’s dominance in the online search market. The claim is separate from one filed in January by the
+Department of Justice, along with eight states including New York, California and Colorado, that aims to “halt Google’s anticompetitive scheme, unwind Google’s
+monopolistic grip on the market and restore competition to digital advertising.”
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products.
+
+Google argues that it’s just doing business. Everybody wants Google as the default engine because it’s the best. That doesn’t make its actions illegal, the
+company says.
+
+Graph facts:
+- Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ -MENTIONS-> Sundar Pichai
+- What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today -MENTIONS-> Sundar Pichai
+- Tim Sweeney on Epic’s victory royale over Google -MENTIONS-> Sundar Pichai
+- More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo -MENTIONS-> Sundar Pichai
+- The Epic v. Google trial may come down to simple v. complicated -MENTIONS-> Sundar Pichai
+
+Entities: Sundar Pichai, Department of Justice, antitrust, Apple, online search, TechCrunch, New York, California, U.S. government, digital advertising, U.S.
+government’s antitrust trial against Google, 2020 antitrust claim, January filing, eight states, 5 things we learned so far about the Google antitrust case
+</item 9>
+
+<item 10>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+law. The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair
+strategies to illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its
+devices and whether it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell
+Instagram and WhatsApp.
+
+This isn’t Google’s only antitrust case in trial right now. The search engine giant last week settled a separate antitrust lawsuit with dating site Match Group.
+On November 6, Google went to trial with Fortnite maker Epic Games. The latter hopes to prove that Google engages in anticompetitive behavior with regard to its
+Android app store, Google Play, and its commission structure.
+
+Now, onto the roundup!
+
+Graph facts:
+- More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo -MENTIONS-> APIs
+- More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo -MENTIONS-> third-party developers
+- More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo -MENTIONS-> Amit Mehta
+- 5 things we learned so far about the Google antitrust case -MENTIONS-> FTC-Facebook case
+- Amit Mehta -PARTICIPATED_IN-> US v Google trial
+
+Entities: Amazon antitrust lawsuit, FTC-Facebook case, Google antitrust lawsuit with Match Group, Google trial with Epic Games, Anticompetitive and unfair
+strategies to maintain monopoly power, Vertical search, Pre-installs, Third-party apps, Commission structure, More from the US v Google trial: vertical search,
+pre-installs and the case of Firefox/Yahoo, US v Google trial, Yahoo, Firefox, anticompetitive behavior, Google Play
+</item 10>
+=== END ITEM id=6bff67d158b8639f ===

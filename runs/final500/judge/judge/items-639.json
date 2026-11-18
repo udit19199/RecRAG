@@ -1,0 +1,464 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "664514ad76d90daa",
+   "gold": [
+    {
+     "sentence": "Dalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick.",
+     "facts": {
+      "0.0": "Dalhousie University, commonly known as Dal, is a public research university.",
+      "0.1": "Dalhousie University is in Nova Scotia, Canada.",
+      "0.2": "Dalhousie University has three campuses in Halifax.",
+      "0.3": "Dalhousie University has a fourth campus in Bible Hill.",
+      "0.4": "Dalhousie University has medical teaching facilities in Saint John, New Brunswick."
+     }
+    },
+    {
+     "sentence": "California State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States.",
+     "facts": {
+      "1.0": "California State Polytechnic University, Pomona is also known as CPP, Cal Poly Pomona, or Cal Poly.",
+      "1.1": "California State Polytechnic University, Pomona is a public polytechnic university.",
+      "1.2": "California State Polytechnic University, Pomona is located in Pomona, California, United States."
+     }
+    }
+   ],
+   "items": [
+    "California State Polytechnic University, Pomona\nCalifornia State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States.\n\n It is one of two polytechnics in the California State University system.",
+    "Cal Poly Pomona Broncos women's basketball\nThe Cal Poly Pomona Broncos women's basketball team is the women's basketball team that represents California State Polytechnic University, Pomona, in Pomona, California.\n\n The school's team currently competes in the California Collegiate Athletic Association.",
+    "Julian A. McPhee\nJulian Aeneas McPhee (February 7, 1896 – November 10, 1967) was the sixth university president of California Polytechnic State University, San Luis Obispo (Cal Poly SLO) from 1933 to 1966 and the first president of California State Polytechnic University, Pomona (Cal Poly Pomona) from 1938 to 1966.",
+    "Cal Poly Pomona Broncos\nThe Cal Poly Pomona Broncos or Cal Poly Broncos are the athletic sports teams for the California State Polytechnic University, Pomona (Cal Poly Pomona).\n\n Cal Poly Pomona has 10 varsity sports teams and offers student participation in a wide range of sports including soccer, volleyball, track and field, basketball, softball, and baseball.\n\n Cal Poly Pomona participates at the NCAA's Division II (DII) level in the California Collegiate Athletic Association (CCAA).\n\n The Broncos have 65 CCAA championships and 14 NCAA National Championships.\n\n Current and former Cal Poly athletes have won 7 Olympic medals (3 gold, 1 silver, and 3 bronze).",
+    "Dalhousie University\nDalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick.\n\n Dalhousie offers more than 4,000 courses and 180 degree programs in twelve undergraduate, graduate, and professional faculties.\n\n The university is a member of the U15, a group of research-intensive universities in Canada.",
+    "Cal Poly Pomona University Library\nThe Cal Poly Pomona University Library is the main library on the campus of California State Polytechnic University, Pomona (Cal Poly Pomona).\n\n It has in its collection 670,580 books; 6,883 serial subscriptions and 10,417 audiovisual materials.",
+    "1981 Cal Poly Pomona Broncos football team\nThe 1981 Cal Poly Pomona Broncos football team represented California State Polytechnic University, Pomona during the 1981 NCAA Division II football season.\n\n Cal Poly Pomona competed in the California Collegiate Athletic Association (CCAA).",
+    "International Polytechnic High School\nInternational Polytechnic High School, commonly abbreviated merely as iPoly, is a public college preparatory demonstration high school (9-12) located on the California State Polytechnic University, Pomona (Cal Poly Pomona) campus and operated by the Los Angeles County Office of Education (LACOE) in conjunction with the College of Education and Integrative Studies at the university.\n\n iPoly's curriculum is fully accredited by the Western Association of Schools and Colleges and is approved by the University of California and California State University.\n\n It maintains a unique affiliation with the Los Angeles County High School for the Arts (LACHSA), which is also run by LACOE.\n\n Since iPoly does not lie in a fixed school district, it draws students from throughout Los Angeles, San Bernardino, Orange and Riverside counties.\n\n The majority of students come from the Pomona and San Gabriel valleys.\n\n In 2009 and 2013, iPoly was honored as a California Distinguished School by the California Department of Education.",
+    "Cal Poly Pomona College of Engineering\nThe Cal Poly Pomona College of Engineering is the engineering college at California State Polytechnic University, Pomona (Cal Poly Pomona or Cal Poly) located in Pomona, California, United States.\n\n Well known for its \"learn by doing\" philosophy, the college's motto is: \"\"making imagination real\"\".\n\n Cal Poly has one of the top engineering college among public schools in California and, with over 5,600 students (as of fall 2015), it is also the largest engineering college in Southern California, the second largest college of engineering in the California State University system, and the seventeenth largest engineering college in the United States.\n\n In the 2017 \"U.S. News & World Report\" the College of Engineering is ranked the 5th best undergraduate program among public universities (11th overall) in the West for Master's-granting universities, and \"has one of the top ranked engineering programs, and graduates roughly 1 of every 14 engineers in the state of California.\"",
+    "Cal Poly Pomona College of Environmental Design\nThe Cal Poly Pomona College of Environmental Design (CENV) is a college part of the California State Polytechnic University, Pomona (Cal Poly Pomona).\n\n The college houses over 1,600 students; making it one of largest environmental design programs in the United States.\n\n The college offers bachelor's degrees in five departments, as well as three master's degree programs.\n\n It is the only academic unit within the California State University system to be associated with a Pritzker Prize laureate (often referred to as \"The Nobel Prize in Architecture\")."
+   ]
+  },
+  {
+   "id": "a21df4db3521b165",
+   "gold": [
+    {
+     "sentence": " Upon Victoria's death, the British throne passed to her eldest son Edward VII, a member of the House of Saxe-Coburg and Gotha through his father.",
+     "facts": {
+      "0.0": "Victoria died.",
+      "0.1": "The British throne passed to Victoria's eldest son Edward VII upon her death.",
+      "0.2": "Edward VII was a member of the House of Saxe-Coburg and Gotha through his father."
+     }
+    },
+    {
+     "sentence": "The House of Saxe-Coburg and Gotha ( ; German: \"\") is a German dynasty that ruled the duchy of Saxe-Coburg and Gotha, which was one of the Ernestine duchies.",
+     "facts": {
+      "1.0": "The House of Saxe-Coburg and Gotha is a German dynasty.",
+      "1.1": "The House of Saxe-Coburg and Gotha ruled the duchy of Saxe-Coburg and Gotha.",
+      "1.2": "The duchy of Saxe-Coburg and Gotha was one of the Ernestine duchies."
+     }
+    }
+   ],
+   "items": [
+    "Succession to the British throne\nSuccession to the British throne is determined by descent, gender (for people born before October 2011), legitimacy, and religion.\n\n Under common law, the Crown is inherited by a sovereign's children or by a childless sovereign's nearest collateral line.\n\n The Bill of Rights 1689 and the Act of Settlement 1701, restrict succession to the throne to the legitimate Protestant descendants of Sophia of Hanover that are in \"communion with the Church of England\".\n\n Spouses of Roman Catholics were disqualified from 1689 until the law was amended in 2015.\n\n Protestant descendants of those excluded for being Roman Catholics are eligible.",
+    "Principality of Calenberg\nThe Principality of Calenberg was a dynastic division of the Welf duchy of Brunswick-Lüneburg established in 1432.\n\n Calenberg was ruled by the House of Hanover from 1635 onwards; the princes received the ninth electoral dignity of the Holy Roman Empire in 1692.\n\n Their territory became the nucleus of the Electorate of Hanover, ruled in personal union with the Kingdom of Great Britain from 1714 onwards.\n\n The principality received its name from Calenberg Castle, a residence of the Brunswick dukes.",
+    "House of Saxe-Coburg and Gotha\nThe House of Saxe-Coburg and Gotha ( ; German: \"\") is a German dynasty that ruled the duchy of Saxe-Coburg and Gotha, which was one of the Ernestine duchies.\n\n It is a cadet branch of the Saxon House of Wettin.",
+    "House of Hanover\nThe House of Hanover (or the Hanoverians ; German: \"Haus Hannover\" ) is a German royal dynasty that ruled the Electorate and then the Kingdom of Hanover, and that also provided monarchs of Great Britain and Ireland from 1714 and ruled the United Kingdom until the death of Queen Victoria in 1901.\n\n Upon Victoria's death, the British throne passed to her eldest son Edward VII, a member of the House of Saxe-Coburg and Gotha through his father.",
+    "Duke of Bedford\nDuke of Bedford (named after Bedford, England) is a title that has been created six times (for five distinct people) in the Peerage of England.\n\n The first and second creations came in 1414 in favour of Henry IV's third son, John, who later served as regent of France.\n\n He was made Earl of Kendal at the same time and was made Earl of Richmond later the same year.\n\n The titles became extinct on his death in 1435.\n\n The third creation came in 1470 in favour of George Neville, nephew of Warwick the Kingmaker.\n\n He was deprived of the title by Act of Parliament in 1478.\n\n The fourth creation came 1478 in favour of George, the third son of Edward IV.\n\n He died the following year at the age of two.\n\n The fifth creation came in 1485 in favour of Jasper Tudor, half-brother of Henry VI and uncle of Henry VII.\n\n He had already been created Earl of Pembroke in 1452.\n\n However, as he was a Lancastrian, his title was forfeited between 1461 and 1485 during the predominance of the House of York.",
+    "Ernest Augustus, King of Hanover\nErnest Augustus (5 June 1771 – 18 November 1851) was King of Hanover from 20 June 1837 until his death.\n\n He was the fifth son and eighth child of King George III of the United Kingdom and Hanover.\n\n As a fifth son, Ernest seemed unlikely to become a monarch, but none of his four elder brothers had a legitimate son who survived infancy.\n\n The Salic Law, which barred succession to or through a female, prevailed in Hanover; therefore, when his elder brother King William IV died in 1837, Ernest succeeded him as King of Hanover.\n\n In the United Kingdom the succession to the monarchy was determined by primogeniture and his niece Victoria succeeded to the throne, thus ending the personal union between the British Isles and Hanover that had existed since 1714.",
+    "House of Oldenburg\nThe House of Oldenburg is a European dynasty of North German origin.\n\n It is one of Europe's most influential royal houses, with branches that rule or have ruled in Denmark, Iceland, Greece, Norway, Russia, Sweden, Schleswig, Holstein, and Oldenburg.\n\n The current Queen of Denmark and King of Norway, the former King of Greece, the consorts of Greece and the United Kingdom, as well as the first twelve names in the line of succession to the British throne, are all patrilineal members of the Glücksburg branch of this house.",
+    "Canada under British rule\nAlthough confederation in 1867 led to an enlarged Dominion with increased autonomy over domestic affairs, Canada still remained a colony within the British Empire and was thus subordinate to the British Parliament until the enactment of the Statute of Westminster in 1931.\n\n This statute recognized Canada as an independent peer coequal with the United Kingdom, and thus provided the Parliament of Canada with legislative sovereignty over all federal matters except the power to change the constitutional laws of Canada which remained under the purview of the Parliament of the United Kingdom.\n\n Canada's final vestige of legal dependence on the United Kingdom was terminated in 1982 with the enactment of the Canada Act, subsequently providing Canada with full legal sovereignty completely independent of the United Kingdom.",
+    "Prince Christian of Hanover (born 1985)\nPrince Christian of Hanover (Christian Heinrich Clemens Paul Frank Peter Welf Wilhelm-Ernst Friedrich Franz Prince of Hanover, Duke of Brunswick and Lüneburg; born 1 June 1985) is the younger son of Ernst August, Prince of Hanover, and his first wife Chantal Hochuli.\n\n He is the second in the line of succession to the former Hanoverian throne, after his elder brother Prince Ernst August.\n\n As a descendant of George III of the United Kingdom, Christian is also in the line of succession to the British throne.",
+    "The entries survey monarchs, dynasties, and succession systems. Hawaiʻi’s Kalākaua, its last king, revived public hula and Hawaiian culture. Hanover ruled Britain from 1714 until Victoria’s death; Hanover and Oldenburg branches remain linked to European royal families. Calenberg became Hanover’s core, while Hanover’s Ernest Augustus inherited its throne in 1837 under Salic law. Other topics include Silesian Bernstadt, Tus"
+   ]
+  },
+  {
+   "id": "30958c1371a4c00b",
+   "gold": [
+    {
+     "sentence": "The 1997 European Athletics Junior Championships were held in Ljubljana, Slovenia on July 24–27.",
+     "facts": {
+      "0.0": "The 1997 European Athletics Junior Championships were held in Ljubljana, Slovenia.",
+      "0.1": "The 1997 European Athletics Junior Championships were held on July 24-27."
+     }
+    },
+    {
+     "sentence": "Ljubljana (] , ] ; also known by other, historical names) is the capital and largest city of Slovenia.",
+     "facts": {
+      "1.0": "Ljubljana is the capital of Slovenia.",
+      "1.1": "Ljubljana is the largest city of Slovenia.",
+      "1.2": "Ljubljana is also known by other, historical names."
+     }
+    }
+   ],
+   "items": [
+    "European 10,000m Cup\nThe European 10,000m Cup is an annual 10,000 metres race for European athletes which was first held in 1997.\n\n The competition is organised by the European Athletics Association and first began as the European 10000 Metres Challenge after the event was removed from the European Cup programme.\n\n The competition has roots in the Iberian 10,000 metres Championships – a competition between Spanish and Portuguese athletes that was held between 1991 and 1996 – and the first five editions of the European 10000 Metres Challenge were held in the Iberian Peninsula.\n\n The event was first held under its current title in 2005.",
+    "Ljubljana\nLjubljana (] , ] ; also known by other, historical names) is the capital and largest city of Slovenia.\n\n It has been the cultural, educational, economic, political, and administrative center of independent Slovenia since 1991.\n\n Its central geographic location within Slovenia, transport connections, concentration of industry, scientific and research institutions, and cultural tradition are contributing factors to its leading position.",
+    "1964 European Junior Games\nThe 1964 European Junior Games was the first edition of the biennial athletics competition for European athletes aged under twenty.\n\n It was an unofficial competition without sanction from the European Athletic Association.\n\n The event was held at the 10th-Anniversary Stadium in Warsaw, Poland.\n\n The competition eventually led to the creation of the European Athletics Junior Championships in 1970.",
+    "1996 IPB Czech Indoor – Doubles\nJonas Björkman and Javier Frana was the defending champions but did not compete that year.",
+    "The European 10,000m Cup, organized annually by European Athletics since 1997, grew from the Iberian championships and was renamed in 2005. Track 10,000m races cover 25 laps; the 1500m is a major Olympic middle-distance event. Charlottesville’s annual Bill Steers Men’s 4-Miler, held since 2004, promotes men’s health. European under-20 championships evolved from junior games (1964, 1968)",
+    "Amela Terzić\nAmela Terzić (Serbian Cyrillic: Амела Терзић, born 2 January 1993 in Priboj, FR Yugoslavia) is a Serbian middle-distance runner.\n\n She won two gold medals at 2011 European Athletics Junior Championships in Tallinn and was the junior champion at the 2012 European Cross Country Championships.\n\n She has also been a medallist in the 1500 metres at the World Junior and World Youth Championships and a gold medalist at the 2013 European U23 Championship.",
+    "2015 European Athletics Junior Championships\nThe 2015 European Athletics Junior Championships were the 23rd edition of the biennial European U20 athletics championships.\n\n They were held in Eskilstuna, Sweden from 16 July to 19 July.",
+    "1997 European Athletics Junior Championships\nThe 1997 European Athletics Junior Championships were held in Ljubljana, Slovenia on July 24–27.",
+    "European Athletics U20 Championships\nThe European Athletics U20 Championships (formerly named the European Athletics Junior Championships up to 2015) are the European championships for athletes who are 19 years of age or under, which is the age range recognised by the IAAF as junior athletes.\n\n The event is currently organized by the European Athletic Association.",
+    "1968 European Junior Games\nThe 1968 European Junior Games was the third edition of the biennial athletics competition for European athletes aged under twenty.\n\n It was the final edition of the competition under that name and was succeeded by the European Athletics Junior Championships in 1970.\n\n The event was held in Leipzig, part of the German Democratic Republic at that time.\n\n The competition was mainly between Eastern European countries, with Belgium, Austria, Netherlands and Greece being present from the west."
+   ]
+  },
+  {
+   "id": "5ee90058fdf8d1f4",
+   "gold": [
+    {
+     "sentence": "The Battle of Okinawa (Japanese: 沖縄戦 , Hepburn: Okinawa-sen ) (Okinawan: 沖縄戦 , \"Uchinaa ikusa \" ), codenamed Operation Iceberg, was a major battle of the Pacific War fought on the island of Okinawa by United States Marine and Army forces against the Imperial Japanese Army and included the largest amphibious assault in the Pacific War during World War II, the April 1, 1945, invasion of Okinawa itself.",
+     "facts": {
+      "0.0": "The Battle of Okinawa is also known as 沖縄戦 (Okinawa-sen in Hepburn romanization) and as 'Uchinaa ikusa' in Okinawan.",
+      "0.1": "The Battle of Okinawa was codenamed Operation Iceberg.",
+      "0.2": "The Battle of Okinawa was a major battle of the Pacific War.",
+      "0.3": "The Battle of Okinawa was fought on the island of Okinawa.",
+      "0.4": "The Battle of Okinawa was fought by United States Marine and Army forces against the Imperial Japanese Army.",
+      "0.5": "The Battle of Okinawa included the largest amphibious assault in the Pacific War during World War II.",
+      "0.6": "The largest amphibious assault in the Pacific War was the April 1, 1945 invasion of Okinawa itself."
+     }
+    },
+    {
+     "sentence": "Operation Diadem, also referred to as the Fourth Battle of Monte Cassino or, in Canada, the Battle of the Liri Valley, was an offensive operation undertaken by the Allies of World War II (U.S. Fifth Army and British Eighth Army in May 1944, as part of the Italian Campaign of World War II.",
+     "facts": {
+      "1.0": "Operation Diadem was also referred to as the Fourth Battle of Monte Cassino.",
+      "1.1": "In Canada, Operation Diadem was called the Battle of the Liri Valley.",
+      "1.2": "Operation Diadem was an offensive operation undertaken by the Allies of World War II.",
+      "1.3": "The Allies in Operation Diadem included the U.S. Fifth Army.",
+      "1.4": "The Allies in Operation Diadem included the British Eighth Army.",
+      "1.5": "Operation Diadem took place in May 1944.",
+      "1.6": "Operation Diadem was part of the Italian Campaign of World War II."
+     }
+    }
+   ],
+   "items": [
+    "Battle of Guam (1941)\nThe First Battle of Guam was an engagement during the Pacific War in World War II, and took place from 8 December to 10 December 1941 on Guam in the Mariana Islands between Japan and the United States.\n\n The American garrison was defeated by Japanese forces on 10 December, which resulted in an occupation until the Second Battle of Guam in 1944.",
+    "Battle of Guam (1944)\nThe Second Battle of Guam (21 July – 10 August 1944) was the American recapture of the Japanese-held island of Guam, a U.S. territory in the Mariana Islands captured by the Japanese from the U.S. in the 1941 First Battle of Guam during the Pacific campaign of World War II.",
+    "Battle of Saipan\nThe Battle of Saipan was a battle of the Pacific campaign of World War II, fought on the island of Saipan in the Mariana Islands from 15 June to 9 July 1944.\n\n The Allied invasion fleet embarking the expeditionary forces left Pearl Harbor on 5 June 1944, the day before Operation Overlord in Europe was launched.\n\n The U.S. 2nd Marine Division, 4th Marine Division, and the Army's 27th Infantry Division, commanded by Lieutenant General Holland Smith, defeated the 43rd Infantry Division of the Imperial Japanese Army, commanded by Lieutenant General Yoshitsugu Saito.",
+    "Battle of Bataan\nThe Battle of Bataan (7 January – 9 April 1942) represented the most intense phase of Imperial Japan's invasion of the Philippines during World War II.\n\n In January 1942, forces of the Imperial Japanese Army and Navy invaded Luzon along with several islands in the Philippine Archipelago after the bombing of the American naval base at Pearl Harbor.\n\n The commander-in-chief of all Filipino and American forces in the islands, General Douglas MacArthur, consolidated all of his Luzon-based units on the Bataan Peninsula to fight against the Japanese invaders.\n\n By this time, the Japanese controlled nearly all of Southeast Asia.\n\n The Bataan peninsula and the island of Corregidor were the only remaining Allied strongholds in the region.\n\n Despite a lack of supplies, Filipino and American forces managed to fight the Japanese for three months, engaging them initially in a fighting retreat southward.\n\n As the combined Filipino and American forces made a last stand, the delay cost the Japanese valuable time and prevented immediate victory across the Pacific.",
+    "Operation Kikusui\nOperation Kikusui (菊水作戦 , Kikusui sakusen ) was a series of suicidal air attacks by Imperial Japanese forces during the Battle of Okinawa against Allied fleets in the waters around Okinawa, as part of Operation Ten-Go.\n\n The name of the operation, \"Kikusui\", comes from the hata-jirushi of the samurai Kusunoki Masashige.",
+    "Operation Diadem\nOperation Diadem, also referred to as the Fourth Battle of Monte Cassino or, in Canada, the Battle of the Liri Valley, was an offensive operation undertaken by the Allies of World War II (U.S. Fifth Army and British Eighth Army in May 1944, as part of the Italian Campaign of World War II.\n\n \"Diadem\" was supported by air attacks called Operation Strangle.\n\n The opposing force was the German 10th Army.",
+    "Operation Epsom\nOperation Epsom, also known as the First Battle of the Odon, was a British Second World War offensive that took place between 26 and 30 June 1944, during the Battle of Normandy.\n\n The offensive was intended to outflank and seize the German-occupied city of Caen, an important Allied objective, in the early stages of Operation Overlord, the Allied invasion of north-west Europe.",
+    "Battle of Attu\nThe Battle of Attu, which took place from 11–30 May 1943, was a battle fought between forces of the United States, aided by Canadian reconnaissance and fighter-bomber support, and the Empire of Japan on Attu Island off the coast of the Territory of Alaska as part of the Aleutian Islands Campaign during the American Theater and the Pacific Theater and was the only land battle of World War II fought on incorporated territory of the United States.\n\n It is also the only land battle in which Japanese and American forces fought in Arctic conditions.",
+    "Battle of Okinawa\nThe Battle of Okinawa (Japanese: 沖縄戦 , Hepburn: Okinawa-sen ) (Okinawan: 沖縄戦 , \"Uchinaa ikusa \" ), codenamed Operation Iceberg, was a major battle of the Pacific War fought on the island of Okinawa by United States Marine and Army forces against the Imperial Japanese Army and included the largest amphibious assault in the Pacific War during World War II, the April 1, 1945, invasion of Okinawa itself.\n\n The 82-day battle lasted from April 1 until June 22, 1945.\n\n After a long campaign of island hopping, the Allies were planning to use Okinawa, a large island only 340 mi away from mainland Japan, as a base for air operations for the planned invasion of the Japanese home islands.",
+    "Operation Diadem order of battle\nOperation Diadem order of battle is a listing of the significant formations that were involved in the fighting on the Winter Line and at the Anzio bridgehead south of Rome during \"Operation Diadem\" in May - June 1944 which resulted in the Allied breakthrough at Cassino and the breakout at Anzio leading to the capture of Rome."
+   ]
+  },
+  {
+   "id": "6c806f8f9c4f6b48",
+   "gold": [
+    {
+     "sentence": "The Doris Bither case, also known as the Entity hauntings, was an alleged haunting which occurred in 1974 at Culver City, California where a woman named Doris Bither alleged the ghosts of three Asian men were raping her.",
+     "facts": {
+      "0.0": "The Doris Bither case is also known as the Entity hauntings.",
+      "0.1": "The Doris Bither case was an alleged haunting.",
+      "0.2": "The alleged haunting occurred in 1974.",
+      "0.3": "The alleged haunting occurred at Culver City, California.",
+      "0.4": "Doris Bither alleged that the ghosts of three Asian men were raping her."
+     }
+    },
+    {
+     "sentence": "The Entity is a 1982 American horror film directed by Sidney J. Furie and written by Frank De Felitta, who adapted his 1978 novel of the same name.",
+     "facts": {
+      "1.0": "The Entity is a 1982 American horror film.",
+      "1.1": "The Entity was directed by Sidney J. Furie.",
+      "1.2": "The Entity was written by Frank De Felitta.",
+      "1.3": "Frank De Felitta adapted his 1978 novel of the same name for The Entity."
+     }
+    },
+    {
+     "sentence": " Like the novel, the film is based on the 1974 Doris Bither case.",
+     "facts": {
+      "2.0": "The film is based on the 1974 Doris Bither case.",
+      "2.1": "The novel is also based on the 1974 Doris Bither case."
+     }
+    }
+   ],
+   "items": [
+    "Night Life (film)\nNight Life is a 1989 American zombie comedy film directed by David Acomba and starring Scott Grimes, John Astin, and Cheryl Pollak.\n\n It centers around a high school nerd named Archie Melville who is harassed from beyond the grave by the zombie corpses of his former high school bullies (recently deceased) after they are brought back to life by a freak lightning storm.\n\n It is also known as Grave Misdemeanors.",
+    "Hardcore (1979 film)\nHardcore is a 1979 American crime drama film written and directed by Paul Schrader and starring George C. Scott, Peter Boyle and Season Hubley.\n\n The story concerns a father searching for his daughter, who has vanished only to appear in a pornographic film.\n\n Writer-director Schrader had previously written the screenplay for Martin Scorsese's \"Taxi Driver\", and both films share a theme of exploring an unseen subculture.",
+    "Midnight (1934 film)\nMidnight is a 1934 American drama film directed by Chester Erskine and starring Sidney Fox, O.P. Heggie, Henry Hull and Margaret Wycherly.\n\n The film was produced for Universal and was shot on a modest budget of $50,000 at Thomas Edison Studios, which producer/director Chester Erskine had re-opened specifically for the shoot.",
+    "Doris Bither case\nThe Doris Bither case, also known as the Entity hauntings, was an alleged haunting which occurred in 1974 at Culver City, California where a woman named Doris Bither alleged the ghosts of three Asian men were raping her.\n\n The case inspired Frank De Felitta's 1978 book \"The Entity\" which was made into a 1982 film of the same name starring Barbara Hershey.",
+    "Little Fauss and Big Halsy\nLittle Fauss and Big Halsy is a 1970 film directed by Sidney J. Furie, starring Robert Redford and Michael J. Pollard, also featuring Lauren Hutton, Noah Beery, Jr. and Lucille Benson.",
+    "The Entity\nThe Entity is a 1982 American horror film directed by Sidney J. Furie and written by Frank De Felitta, who adapted his 1978 novel of the same name.\n\n It stars Barbara Hershey as a woman who is raped and tormented by an invisible assailant.\n\n Despite being filmed and planned for a release in 1981, the movie was not released in worldwide theaters until September 1982 and February 1983 in the United States.\n\n Like the novel, the film is based on the 1974 Doris Bither case.",
+    "Sheila Levine Is Dead and Living in New York\nSheila Levine Is Dead and Living in New York is a 1975 film directed by Sidney J. Furie, about a shy young woman who moves to New York City and falls in love with the boyfriend of her extroverted roommate.\n\n The film was co-written by Kenny Solms and Gail Parent, and based on her novel.\n\n The film was shot on location in New York City.",
+    "Doctor Blood's Coffin\nDoctor Blood's Coffin is a 1961 British horror film directed by Sidney J. Furie.\n\n Kieron Moore stars as a mad scientist who reanimates the dead.",
+    "The Rocky Horror Picture Show\nThe Rocky Horror Picture Show is a 1975 British-American musical screwball comedy horror film by 20th Century Fox produced by Lou Adler and Michael White and directed by Jim Sharman.\n\n The screenplay was written by Sharman and actor Richard O'Brien, who appears in the film, which is based on the 1973 musical stage production \"of the same title\", with music, book, and lyrics by O'Brien.\n\n The production is a parody tribute to the science fiction and horror B movies of the 1930s through to the early 1970s.\n\n Along with O'Brien, the film stars Tim Curry, Susan Sarandon, and Barry Bostwick and is narrated by Charles Gray with cast members from the original Royal Court Theatre, Roxy Theatre, and Belasco Theatre productions.",
+    "The Snake Woman\nThe Snake Woman is a low budget 1961 British horror film directed by Sidney J. Furie and starring Susan Travers, John McCarthy."
+   ]
+  },
+  {
+   "id": "e2e9fcf01f320522",
+   "gold": [
+    {
+     "sentence": "Anaïs Nin (] ; born Angela Anaïs Juana Antolina Rosa Edelmira Nin y Culmell; February 21, 1903 – January 14, 1977) was an essayist and memoirist born to Cuban parents in France, where she was also raised.",
+     "facts": {
+      "0.0": "Anaïs Nin was born Angela Anaïs Juana Antolina Rosa Edelmira Nin y Culmell.",
+      "0.1": "Anaïs Nin was born on February 21, 1903.",
+      "0.2": "Anaïs Nin died on January 14, 1977.",
+      "0.3": "Anaïs Nin was an essayist.",
+      "0.4": "Anaïs Nin was a memoirist.",
+      "0.5": "Anaïs Nin was born to Cuban parents.",
+      "0.6": "Anaïs Nin was born in France.",
+      "0.7": "Anaïs Nin was raised in France."
+     }
+    },
+    {
+     "sentence": "Odysseas Elytis (Greek: Οδυσσέας Ελύτης , ] , pen name of Odysseas Alepoudellis, Greek: Οδυσσέας Αλεπουδέλλης ; 2 November 1911 – 18 March 1996) was regarded as a major exponent of romantic modernism in Greece and the world.",
+     "facts": {
+      "1.0": "Odysseas Elytis is a pen name of Odysseas Alepoudellis.",
+      "1.1": "Odysseas Elytis's Greek name is Οδυσσέας Ελύτης.",
+      "1.2": "Odysseas Alepoudellis's Greek name is Οδυσσέας Αλεπουδέλλης.",
+      "1.3": "Odysseas Elytis was born on 2 November 1911.",
+      "1.4": "Odysseas Elytis died on 18 March 1996.",
+      "1.5": "Odysseas Elytis was regarded as a major exponent of romantic modernism in Greece.",
+      "1.6": "Odysseas Elytis was regarded as a major exponent of romantic modernism in the world."
+     }
+    },
+    {
+     "sentence": " In 1979 he was awarded the Nobel Prize in Literature.",
+     "facts": {
+      "2.0": "Odysseas Elytis was awarded the Nobel Prize in Literature in 1979."
+     }
+    }
+   ],
+   "items": [
+    "Anaïs Nin\nAnaïs Nin (] ; born Angela Anaïs Juana Antolina Rosa Edelmira Nin y Culmell; February 21, 1903 – January 14, 1977) was an essayist and memoirist born to Cuban parents in France, where she was also raised.\n\n She spent some time in Spain and Cuba, but lived most of her life in the United States, where she became an established author.\n\n She wrote journals (which span more than 60 years, beginning when she was 11 years old and ending shortly before her death), novels, critical studies, essays, short stories, and erotica.\n\n A great deal of her work, including \"Delta of Venus\" and \"Little Birds\", was published posthumously.",
+    "Henry and June\nHenry and June: From the Unexpurgated Diary of Anaïs Nin (full title \"Henry and June: From A Journal of Love: the Unexpurgated Diary of Anaïs Nin (1931–1932)\") is a 1986 book that is based upon material excerpted from the unpublished diaries of Anaïs Nin.",
+    "Incest: From a Journal of Love\nIncest: From a Journal of Love: The Unexpurgated Diary of Anaïs Nin (1932–1934) is a 1992 non-fiction book by Anaïs Nin.\n\n It is a continuation of the diary entries first published in \"Henry and June: From the Unexpurgated Diary of Anaïs Nin\".\n\n It features Nin's relationships with writer Henry Miller, his wife June Miller, the psychoanalyst Otto Rank, her father Joaquín Nin, and her husband Hugh Parker Guiler.\n\n She also copied some of her correspondence with these people into her diary.\n\n Much of this book was written in English, although those of her letters which were originally written in French and Spanish were translated.\n\n Most of this diary takes place in France, particularly Clichy, Paris and Louveciennes.",
+    "Seduction of the Minotaur\nSeduction of the Minotaur is an autobiographical novel by the mixed nationality writer Anaïs Nin, the last part of her \"Cities of the Interior\" sequence.\n\n It is about a woman named Lillian, and her self-psychoanalysis.\n\n The setting is taken from Anaïs' diary account of her first trip to Acapulco in 1947, and the novel repeats much of the first part of \"The Diary of Anaïs Nin\" volume V.\n\n Since the author was concerned with psychology rather than physical adventure, there is actually less violence in the novel than in the diary account.\n\n The exception is that the doctor allows himself to be shot because he is loved only as a doctor and never as a man, perhaps patterned after her understanding of Otto Rank's death.",
+    "Odysseas Elytis\nOdysseas Elytis (Greek: Οδυσσέας Ελύτης , ] , pen name of Odysseas Alepoudellis, Greek: Οδυσσέας Αλεπουδέλλης ; 2 November 1911 – 18 March 1996) was regarded as a major exponent of romantic modernism in Greece and the world.\n\n In 1979 he was awarded the Nobel Prize in Literature.",
+    "Nobel Prize in Literature\nSince 1901, the Nobel Prize in Literature (Swedish: \"Nobelpriset i litteratur\" ) has been awarded annually to an author from any country who has, in the words of the will of Alfred Nobel, produced \"in the field of literature the most outstanding work in an ideal direction\" (original Swedish: \"den som inom litteraturen har producerat det mest framstående verket i en idealisk riktning\").\n\n Though individual works are sometimes cited as being particularly noteworthy, here \"work\" refers to an author's work as a whole.\n\n The Swedish Academy decides who, if anyone, will receive the prize in any given year.\n\n The academy announces the name of the chosen laureate in early October.\n\n It is one of the five Nobel Prizes established by the will of Alfred Nobel in 1895; the others are the Nobel Prize in Chemistry, Nobel Prize in Physics, Nobel Peace Prize, and Nobel Prize in Physiology or Medicine.",
+    "Anaïs Nin: A Biography\nAnaïs Nin: A Biography is Deirdre Bair's award-winning biography of writer Anaïs Nin.\n\n It is considered arguably by many to be the most comprehensive, well-researched, and scholarly biography available of Nin.\n\n Though the biography has received praise, it has also angered some fans of Anaïs Nin as well as some of her former associates, some of whom claim that Bair's critical and rigorous investigation of Anaïs Nin's life is unsympathetic.",
+    "The Diary of Anaïs Nin\nThe Diary of Anaïs Nin is the published version of Anaïs Nin's own private manuscript diary, which she began at age 11 in 1914 during a trip from Europe to New York with her mother and two brothers.\n\n Anaïs Nin would later say she had begun the diary as a letter to her father, Cuban composer Joaquín Nin, who had abandoned the family a few years earlier.",
+    "Nearer the Moon\nNearer the Moon: From a Journal of Love (full title \"Nearer the Moon: From a Journal of Love, the Unexpurgated Diary of Anaïs Nin (1937–1939)\") is a 1996 book based upon material excerpted from the unpublished diaries of Anaïs Nin.\n\n It corresponds temporally to part of Nin's published diaries.\n\n It consists mainly of material that was left out of the published version because it would have hurt people involved or their relationships with Anaïs Nin had it been published at the time.",
+    "Collages (novel)\nCollages, published in 1964, was Anaïs Nin's last published novel (excluding her erotica).\n\n It is very different from the previous novels of the \"Cities of the Interior\" series, because it contains none of the familiar characters in those novels.\n\n It is also different in that it takes place on two continents, has about two dozen important characters, and for the first time in Anaïs Nin's work the female lead is not seeking psychological wholeness.\n\n Most of Anaïs Nin's other novels only have a few main characters, there is rarely much geographical movement in the other novels, and usually the lead character is a woman seeking psychological wholeness."
+   ]
+  },
+  {
+   "id": "07bc168e238ea021",
+   "gold": [
+    {
+     "sentence": "Edward Sharpe and the Magnetic Zeros is an American folk rock band formed in Los Angeles, California in 2007.",
+     "facts": {
+      "0.0": "Edward Sharpe and the Magnetic Zeros is an American folk rock band.",
+      "0.1": "Edward Sharpe and the Magnetic Zeros was formed in Los Angeles, California.",
+      "0.2": "Edward Sharpe and the Magnetic Zeros was formed in 2007."
+     }
+    },
+    {
+     "sentence": "Louis XIV is an American rock band from San Diego, California.",
+     "facts": {
+      "1.0": "Louis XIV is an American rock band.",
+      "1.1": "Louis XIV is from San Diego, California."
+     }
+    },
+    {
+     "sentence": " The band has released four EPs between 2003 and 2007, and three albums between 2003 and 2008, the latter two of which were distributed by Atlantic Records.",
+     "facts": {
+      "2.0": "The band released four EPs between 2003 and 2007.",
+      "2.1": "The band released three albums between 2003 and 2008.",
+      "2.2": "Two of the band's three albums, the latter two, were distributed by Atlantic Records."
+     }
+    }
+   ],
+   "items": [
+    "Louis XIV (band)\nLouis XIV is an American rock band from San Diego, California.\n\n The band has released four EPs between 2003 and 2007, and three albums between 2003 and 2008, the latter two of which were distributed by Atlantic Records.\n\n The band broke up in 2009, but in 2013, in an interview with The Reno Dispatch, Jason Hill confirmed that the band had decided to reunite.",
+    "PersonA\nPersonA (pronounced \"Persona\") is the fourth studio album by the band Edward Sharpe and the Magnetic Zeros.\n\n It was released on April 15, 2016.",
+    "Edward Sharpe and the Magnetic Zeros (album)\nEdward Sharpe and the Magnetic Zeros is the third album by Edward Sharpe and the Magnetic Zeros.\n\n It was released on July 23, 2013 in North America and was released on July 29, 2013 around the world through Vagrant Records, Rough Trade Records and Communion Records.\n\n Frontman Alex Ebert stated that \"These songs mean everything to me - It's the rawest, most liberated, most rambunctious stuff we've done.\"",
+    "Manimal Vinyl\nManimal Vinyl is a Calabasas based record label founded in 2006 by experimental musician and fashion stylist, Paul Beahan.\n\n They were originally known as a psychedelic folk label that makes semi-annual tribute records for worldwide charities, having eventually switched to dance music and progressive underground.\n\n They are the label who has release debut records from act ranging from Warpaint to Bat for Lashes and exclusive singles from Moby, Duran Duran, Carla Bruni, Edward Sharpe and the Magnetic Zeros.\n\n In 2008, they founded the annual Manimal Festival in Pioneertown, California which ran from 2008-2010.\n\n The festival has featured line-ups with Edward Sharpe and the Magnetic Zeros, Warpaint, Ariel Pink and papercranes.\n\n Manimal has offices in Los Angeles and New York City.",
+    "Edward Sharpe and the Magnetic Zeros\nEdward Sharpe and the Magnetic Zeros is an American folk rock band formed in Los Angeles, California in 2007.\n\n The group is led by lead singer Alex Ebert.\n\n The band's name is based on a story Ebert wrote in his youth, about a messianic figure named Edward Sharpe.\n\n Drawing from roots rock, folk, gospel, and psychedelic music, the band's image and sound evoke the hippie movement of the 1960s and 1970s.\n\n The group's first show was played July 18, 2007 at The Troubadour in West Hollywood, California.\n\n Their first studio album, \"Up from Below\", was released on July 7, 2009 on Community Records and featured the popular single \"Home\".\n\n The group released their second full-length album, \"Here\", on May 29, 2012, and third album, \"Edward Sharpe and the Magnetic Zeros\", on July 23, 2013.\n\n Their fourth studio album, \"PersonA\", was released in April 2016.",
+    "40 Day Dream/Geez Louise\n\"40 Day Dream\"/\"Geez Louise\" is a 7\" vinyl single released in the UK to succeed the album \"Up from Below\" by Edward Sharpe and the Magnetic Zeros.\n\n It appeared on the sixth episode of the third season of \"Chuck\" (entitled \"Chuck Versus the Nacho Sampler\" and airing on February 1, 2010); Episode 2 of HBO's \"Hung\"; \"Jimmy Kimmel Live!\n\n\" on November 11, 2010; and \"Conan\" on December 15, 2010.",
+    "Alexander (Alex Ebert album)\nAlexander is the first solo album by American musician Alex Ebert, lead singer of Edward Sharpe and the Magnetic Zeros and Ima Robot.\n\n It was released on March 1, 2011 under the Community Records label.\n\n The song \"Truth\" was featured in the season 4 premiere of AMC's \"Breaking Bad\" titled \"Box Cutter\".",
+    "The White Stripes\nThe White Stripes were an American rock duo formed in 1997 in Detroit, Michigan.\n\n The group consisted of Jack White (songwriter, vocals, guitar, piano, and mandolin) and Meg White (drums and vocals).\n\n After releasing several singles and three albums within the Detroit music scene, The White Stripes rose to prominence in 2002, as part of the garage rock revival scene.\n\n Their successful and critically acclaimed albums \"White Blood Cells\" and \"Elephant\" drew attention from a large variety of media outlets in the United States and the United Kingdom, with the single \"Seven Nation Army\" and its guitar line becoming their signature song.\n\n The band recorded two more albums, \"Get Behind Me Satan\" in 2005 and \"Icky Thump\" in 2007, and dissolved in 2011 after a lengthy hiatus from performing and recording.",
+    "Orpheo McCord\nOrpheo McCord (born 1979) is an American drummer and percussionist.\n\n He is an original member of Edward Sharpe and the Magnetic Zeros, and a former member of The Fall, Fool's Gold and Cass McCombs.",
+    "Lingdian\nZero Band () are a Chinese rock band from Inner Mongolia.\n\n The lead singer is Zhou Xiaoou (周晓鸥).\n\n The English name \"Zero Band\" was used in Beijing concert advertisements, though the band did not originally use an English name; the name has also been translated as \"Point Zero\" in some older English publications.\n\n The band appeared on the Jingwen label in China, but were licensed outside China by JVC.\n\n One of the top Beijing bands at the end of the 1990s, Lingdian originally suffered the same resistance from government-owned venues as other indigenous PRC rock bands."
+   ]
+  },
+  {
+   "id": "60bc3a747d86e9c2",
+   "gold": [
+    {
+     "sentence": "Martin Degville is (born 27 January 1961 in Walsall) is the lead singer and co-songwriter of the UK pop band, Sigue Sigue Sputnik – which had a worldwide hit single in 1986 with \"Love Missile F1-11\" – and six other EMI single releases.",
+     "facts": {
+      "0.0": "Martin Degville was born 27 January 1961 in Walsall.",
+      "0.1": "Martin Degville is the lead singer of the UK pop band Sigue Sigue Sputnik.",
+      "0.2": "Martin Degville is a co-songwriter of Sigue Sigue Sputnik.",
+      "0.3": "Sigue Sigue Sputnik had a worldwide hit single in 1986 with 'Love Missile F1-11'.",
+      "0.4": "Sigue Sigue Sputnik has six other EMI single releases."
+     }
+    },
+    {
+     "sentence": "Paul Richard \"Richie\" Furay (born May 9, 1944) is an American singer, songwriter, and Rock & Roll Hall of Fame member who is best known for forming the bands Buffalo Springfield with Stephen Stills, Neil Young, Bruce Palmer, and Dewey Martin, and Poco with Jim Messina, Rusty Young, George Grantham and Randy Meisner.",
+     "facts": {
+      "1.0": "Paul Richard 'Richie' Furay was born May 9, 1944.",
+      "1.1": "Richie Furay is an American singer.",
+      "1.2": "Richie Furay is an American songwriter.",
+      "1.3": "Richie Furay is a Rock & Roll Hall of Fame member.",
+      "1.4": "Richie Furay is best known for forming Buffalo Springfield with Stephen Stills, Neil Young, Bruce Palmer, and Dewey Martin.",
+      "1.5": "Richie Furay is best known for forming Poco with Jim Messina, Rusty Young, George Grantham, and Randy Meisner."
+     }
+    }
+   ],
+   "items": [
+    "Poco: The Songs of Richie Furay\nPoco: The Songs of Richie Furay is a compilation album consisting of songs by Richie Furay during his tenure with the band Poco, released in 1980.",
+    "Jerry Garcia\nJerome John Garcia (August 1, 1942 – August 9, 1995) was an American singer-songwriter and guitarist, best known for his work as the lead guitarist and as a vocalist with the band the Grateful Dead, which came to prominence during the counterculture era in the 1960s.\n\n Although he disavowed the role, Garcia was viewed by many as the leader or \"spokesman\" of the group.",
+    "Richie Furay\nPaul Richard \"Richie\" Furay (born May 9, 1944) is an American singer, songwriter, and Rock & Roll Hall of Fame member who is best known for forming the bands Buffalo Springfield with Stephen Stills, Neil Young, Bruce Palmer, and Dewey Martin, and Poco with Jim Messina, Rusty Young, George Grantham and Randy Meisner.\n\n His best known song (originally written during his tenure in Buffalo Springfield, but eventually performed by Poco, as well) was \"Kind Woman\", which he wrote for his wife, Nancy.",
+    "Sunshine Becker\nSunshine Becker (born Sunshine Flower Garcia on July 1, 1972) is an American singer who performed backing vocals for the band Furthur.\n\n Despite her maiden name, Garcia, she is not related to Jerry Garcia, an incorrect assumption made by some because of her involvement with Furthur, a post-Garcia incarnation of the Grateful Dead.\n\n Similarly, despite her first name, Sunshine, she is not to be confused with Sunshine Kesey, daughter of Ken Kesey and Carolyn Adams (aka Mountain Girl or MG), Jerry Garcia's second wife.",
+    "Doug Grean\nDoug Grean is an American record producer, audio engineer, guitarist, based in Los Angeles.\n\n He has worked with artists Sheryl Crow, Ricki Lee Jones, Glen Campbell, Scott Weiland, Slash, Velvet Revolver, Stone Temple Pilots, The Crystal Method, Tim McGraw, Cyndi Lauper, Annabella Lwin (Bow Wow Wow), Corey Glover (Living Color), Camp Freddy, DJ Hurricane and John Taylor (Duran Duran).\n\n Grean was formerly the lead guitarist and touring musical director for Scott Weiland and the Wildabouts.\n\n Some of Grean's television appearances with Weiland include: VH1 Legends, Last Call with Carson Daly, The Tonight Show with Jay Leno, and the Grammy awards with Velvet Revolver as keyboardist, performing \"All Across the Universe\" with Stevie Wonder, Norah Jones, Bono, Steven Tyler, Brian Wilson, and Alison Krauss.",
+    "Dean Martin\nDean Martin (born Dino Paul Crocetti; June 7, 1917 – December 25, 1995) was an American singer, actor, comedian, and film producer.\n\n One of the most popular and enduring American entertainers of the mid-20th century, Martin was nicknamed the \"King of Cool\" for his seemingly effortless charisma and self-assurance.",
+    "Martin Degville\nMartin Degville is (born 27 January 1961 in Walsall) is the lead singer and co-songwriter of the UK pop band, Sigue Sigue Sputnik – which had a worldwide hit single in 1986 with \"Love Missile F1-11\" – and six other EMI single releases.\n\n Sputnik was formed with ex-Generation X bassist Tony James.",
+    "Dean Martin Sings\nDean Martin Sings is the first studio album by Italian-American singer Dean Martin, released in 1953.\n\n It is the first long-play 10-inch album recorded by Martin for Capitol Records during two sessions recorded on the evening of November 20, 1952.\n\n The first session was recorded between 5 and 8 PM and it produced five songs featuring string arrangements.\n\n \"There's My Lover\" was recorded but not released.\n\n After a ninety-minute break, Martin was joined by a brass arrangement to record the remaining four songs.\n\n Seven of the eight songs on this album appeared in the Martin & Lewis film, \"The Stooge\".\n\n Two years later, the songs from this 10-inch album would be combined with four newly popular songs recorded between 1951 and 1953 to create a full-length 12-inch album.\n\n The 2005 Collectors' Choice reissue added four bonus songs recorded between 1949 and 1953 and was released with alternative cover artwork.",
+    "Souther–Hillman–Furay Band\nThe Souther Hillman Furay Band (SHF) was a country rock supergroup led by singer-songwriters Richie Furay (Buffalo Springfield, Poco), Chris Hillman (The Byrds, The Flying Burrito Brothers, Manassas), and J.D. Souther (Longbranch Pennywhistle, noted songwriter for Linda Ronstadt and the Eagles).\n\n The band recorded two albums during the 1970s before breaking up due to disagreements between the members.",
+    "Martin Flavin\nMartin Archer Flavin (November 2, 1883 – December 27, 1967) was an American playwright and novelist."
+   ]
+  },
+  {
+   "id": "1ec3a90468813680",
+   "gold": [
+    {
+     "sentence": " They were first year members of the Mountain West Conference.",
+     "facts": {
+      "0.0": "They were first-year members of the Mountain West Conference."
+     }
+    },
+    {
+     "sentence": "The Mountain West Conference (MW) is one of the collegiate athletic conferences affiliated with the National Collegiate Athletic Association (NCAA) Division I Football Bowl Subdivision (FBS) (formerly I-A).",
+     "facts": {
+      "1.0": "The Mountain West Conference (MW) is a collegiate athletic conference.",
+      "1.1": "The Mountain West Conference is one of the collegiate athletic conferences affiliated with the National Collegiate Athletic Association (NCAA).",
+      "1.2": "The Mountain West Conference is affiliated with the NCAA Division I Football Bowl Subdivision (FBS).",
+      "1.3": "The Football Bowl Subdivision (FBS) was formerly called I-A."
+     }
+    }
+   ],
+   "items": [
+    "Men's National Collegiate Athletic Association\nThe Men's National Collegiate Athletic Association is an athletic association in the Philippines, and is the direct counterpart of the older Women's National Collegiate Athletic Association (founded in 1970).\n\n The Men's National Collegiate Athletic Association (MNCAA) is exclusive for men.\n\n The MNCAA was founded in 2004.\n\n Competition is divided into three divisions: Seniors for college students, Juniors for high school students, and Midgets for grade school and first year high school students.\n\n The competing sports of the tournament are Basketball, Volleyball, Futsal, Table Tennis, Badminton and Streetdance.",
+    "2011–12 Wagner Seahawks men's basketball team\nThe 2011–12 Wagner Seahawks men's basketball team represented Wagner College during the 2011–12 NCAA Division I men's basketball season.\n\n The Seahawks, led by second year head coach Dan Hurley, played their home games at Spiro Sports Center and are members of the Northeast Conference.\n\n They finished the season 25–6, 15–3 in NEC play to finish in second place.\n\n They lost in the semifinals of the NEC Basketball Tournament to Robert Morris.\n\n Despite having 25 wins, the Seahawks did not accept an invitation to a post season tournament.",
+    "2013–14 Iona Gaels men's basketball team\nThe 2013–14 Iona Gaels men's basketball team represented Iona College during the 2013–14 NCAA Division I men's basketball season.\n\n The Gaels, led by fourth year head coach Tim Cluess, played their home games at the Hynes Athletic Center and were members of the Metro Atlantic Athletic Conference.\n\n They finished the season 22–11, 17–3 to win the MAAC regular season championship.\n\n They advanced to the championship game of the MAAC Tournament where they lost to Manhattan.\n\n As a regular season conference champion who failed to win their conference tournament, they received an automatic bid to the National Invitation Tournament where they lost in the first round to Louisiana Tech.",
+    "2012 Hawaii Warriors football team\nThe 2012 Hawaii Warriors football team represented the University of Hawaii at Manoa in the 2012 NCAA Division I FBS football season.\n\n They were led by first-year head coach Norm Chow and played their home games at Aloha Stadium.\n\n They were first year members of the Mountain West Conference.\n\n They finished the season 3–9, 1–7 in Mountain West play to finish in a tie for ninth place.",
+    "Hawaii Rainbow Warriors baseball\nThe Hawaii Rainbow Warriors baseball team is a varsity intercollegiate athletic team of the University of Hawaii at Manoa in Honolulu, Hawaii, United States.\n\n The team is a member of the Big West Conference, which is part of the National Collegiate Athletic Association's Division I.\n\n Hawaii's first baseball team was fielded in 1923.\n\n The team plays its home games at Les Murakami Stadium in Honolulu, Hawaii.\n\n The Rainbow Warriors are coached by Mike Trapasso.",
+    "List of Pacific Tigers head football coaches\nThe Pacific Tigers college football team represented University of the Pacific (CA).\n\n The Tigers competed in the National Collegiate Athletic Association (NCAA) College Division in the years 1937–1968.\n\n In 1969, the team moved to National Collegiate Athletic Association (NCAA) Division I and stayed there until disbanding after the 1995 season.",
+    "Wayne State Warriors football\nThe Wayne State Warriors football team is the college football team at Wayne State University in Detroit, Michigan.\n\n The Wayne State football team played their first game in October 1918.\n\n The Wayne State Warriors have competed in the Great Lakes Intercollegiate Athletic Conference since 1999 (and previously from 1975-1989), and are currently a Division II member of the National Collegiate Athletic Association (NCAA).\n\n Wayne State plays their home games at Tom Adams Field at Wayne State Stadium.\n\n All Wayne State games are broadcast on WDTK radio.",
+    "Women's National Collegiate Athletic Association\nThe Women's National Collegiate Athletic Association (WNCAA) is an athletic association in the Philippines exclusively for women.\n\n It was founded in 1970.\n\n Competition is divided into three divisions: Seniors for college students, Juniors for high school students, and Midgets for grade school and first year high school students.\n\n Its men's counterpart is the Men's National Collegiate Athletic Association, founded in 2004.",
+    "Mountain West Conference\nThe Mountain West Conference (MW) is one of the collegiate athletic conferences affiliated with the National Collegiate Athletic Association (NCAA) Division I Football Bowl Subdivision (FBS) (formerly I-A).\n\n The MW officially began operations in July 1999.\n\n Geographically, the MW covers a broad expanse of the Western United States, with member schools located in California, Colorado, Hawaii, Idaho, Nevada, New Mexico, Utah, and Wyoming.\n\n Craig Thompson has served as Commissioner of the MW since its founding in 1999.",
+    "2012–13 Wagner Seahawks men's basketball team\nThe 2012–13 Wagner Seahawks men's basketball team represented Wagner College during the 2012–13 NCAA Division I men's basketball season.\n\n The Seahawks were led by the youngest men's head coach in NCAA Division I, Bashir Mason, who was 28 when he was elevated from an assistant position in March 2012 following the departure of Dan Hurley for Rhode Island.\n\n The Seahawks played their home games at Spiro Sports Center and were members of the Northeast Conference.\n\n They finished the season 19–12, 12–6 in NEC play to finish in a three way tie for second place.\n\n They advanced to the semifinals of the Northeast Tournament where they lost to Long Island.\n\n For the second consecutive year, despite a winning record, Wagner choose not to participate in a post season tournament."
+   ]
+  },
+  {
+   "id": "4214a0ab30967d82",
+   "gold": [
+    {
+     "sentence": "Saddle Rock Elementary School or simply \"Saddle Rock\" is an elementary school, comprising grades Kindergarten through 5.",
+     "facts": {
+      "0.0": "Saddle Rock Elementary School is also called Saddle Rock.",
+      "0.1": "Saddle Rock Elementary School is an elementary school.",
+      "0.2": "Saddle Rock Elementary School comprises grades Kindergarten through 5."
+     }
+    },
+    {
+     "sentence": " It is a public school located in Great Neck, New York, USA as part of the Great Neck School District.",
+     "facts": {
+      "1.0": "Saddle Rock Elementary School is a public school.",
+      "1.1": "Saddle Rock Elementary School is located in Great Neck, New York, USA.",
+      "1.2": "Saddle Rock Elementary School is part of the Great Neck School District."
+     }
+    },
+    {
+     "sentence": "The Great Neck School District is a comprehensive community public school district primarily serving students in Great Neck, New York.",
+     "facts": {
+      "2.0": "The Great Neck School District is a comprehensive community public school district.",
+      "2.1": "The Great Neck School District primarily serves students in Great Neck, New York."
+     }
+    },
+    {
+     "sentence": " It is Union Free School District Number 7 in the Town of North Hempstead, Nassau County, New York, United States, on Long Island.",
+     "facts": {
+      "3.0": "The Great Neck School District is Union Free School District Number 7.",
+      "3.1": "The Great Neck School District is in the Town of North Hempstead.",
+      "3.2": "The Great Neck School District is in Nassau County, New York, United States.",
+      "3.3": "The Great Neck School District is on Long Island."
+     }
+    }
+   ],
+   "items": [
+    "New York State Route 108\nNew York State Route 108 (NY 108) is a 1.72 mi north–south state highway located on the Suffolk County side of the Suffolk–Nassau county line on Long Island, New York, in the United States.\n\n It is a spur route connecting NY 25A in Cold Spring Harbor to the Cold Spring Harbor station on the Long Island Rail Road's Port Jefferson Branch via Harbor Road.\n\n Harbor Road terminates at an intersection with Woodbury Road, on the Nassau County line, which carries County Route 11 to the east and unsigned County Route 12 to the west.\n\n NY 108, assigned in the early 1930s, is the shortest state highway on Long Island.",
+    "Great Neck, New York\nGreat Neck is a region on Long Island, New York, that covers a peninsula on the North Shore of Long Island, which includes the villages of Great Neck, Great Neck Estates, Great Neck Plaza, and others, as well as an area south of the peninsula near Lake Success and the border territory of Queens.\n\n The incorporated village of Great Neck had a population of 9,989 at the 2010 census, while the larger Great Neck area comprises a residential community of some 40,000 people in nine villages and hamlets in the town of North Hempstead, of which Great Neck is the northwestern quadrant.\n\n Great Neck has five ZIP Codes (11020–11024), and one school district.",
+    "East Lyme High School\nEast Lyme High School is a high school located in the Flanders Village region of East Lyme, Connecticut.\n\n It is operated by East Lyme Public Schools.\n\n The mascot is Sven the Viking.\n\n Students from the town of Salem, Connecticut in grades 9 through 12 attend high school in East Lyme (as they have no high school of their own); this will be the case until at least 2016 when the current co-op agreement between the two towns expires.",
+    "Saddle Rock Elementary School\nSaddle Rock Elementary School or simply \"Saddle Rock\" is an elementary school, comprising grades Kindergarten through 5.\n\n It is a public school located in Great Neck, New York, USA as part of the Great Neck School District.\n\n The school has been recognized by the Blue Ribbon Schools Program.",
+    "Old Country Road\nOld Country Road is a major east–west thoroughfare through central Nassau County and extending into western Suffolk County on Long Island, New York.\n\n It serves many of the major shopping centers in central Nassau County including Roosevelt Field Mall.\n\n The road also forms part of the border between the towns of Hempstead and North Hempstead.\n\n In Nassau County, Old Country Road is county-maintained as the unsigned County Route 25 (CR 25) west of Round Swamp Road.",
+    "St. Mary's High School (Manhasset, New York)\nSaint Mary's High School is a private Catholic high school in Manhasset, New York.\n\n St. Mary's parish is part of the Roman Catholic Diocese of Rockville Centre yet the High School serves families of the Roman Catholic Archdiocese of New York, the Diocese of Brooklyn and the Diocese of Rockville Centre.\n\n It is located off Northern Boulevard at 51 Clapham Avenue, Manhasset, near the Miracle Mile.\n\n St. Mary's Men's Varsity Ice Hockey is the all-time leader in State Championships.",
+    "Great Neck School District\nThe Great Neck School District is a comprehensive community public school district primarily serving students in Great Neck, New York.\n\n It also serves students in some parts of Manhasset and New Hyde Park.\n\n It is Union Free School District Number 7 in the Town of North Hempstead, Nassau County, New York, United States, on Long Island.",
+    "Village School (Great Neck, New York)\nVillage School (also known as VS) is an American long-established public alternative school.\n\n It is a member of Coalition of Essential Schools and is located in the village of Great Neck, New York, serving students in grades 8 through 12.\n\n Village School is one of three high schools in the Great Neck School District, which includes Great Neck North High School and Great Neck South High School.\n\n Village School offers its 39 students an outdoor education program, college preparatory program, and inclusion of students with disabilities.",
+    "New Jersey Japanese School\nThe New Jersey Japanese School (ニュージャージー日本人学校 , \"Nyūjājī Nihonjin Gakkō\" , NJJS) is a Japanese school located in Oakland, New Jersey, United States in the New York City metropolitan area.\n\n It is one of the two Japanese day schools operated by the Japanese Educational Institute of New York (JEI; ニューヨーク日本人教育審議会 \"Nyūyōku Nihonjin Kyōiku Shingi Kai\"), a nonprofit organization which also operates two Japanese weekend school systems in the New York City area.",
+    "New Rochelle Harbor (Long Island Sound)\nNew Rochelle Harbor is the name of a harbor located along Long Island Sound in the city of New Rochelle in Westchester County, New York.\n\n The Davenport Neck peninsula off the mainland divides New Rochelle's waterfront into two bays; the westerly referred to as New Rochelle Harbor and the easterly as Echo Bay."
+   ]
+  },
+  {
+   "id": "edb0095ea1825935",
+   "gold": [
+    {
+     "sentence": " It was driven by Eddie Irvine, who was in his second year with the team, and Luciano Burti, who had deputised for Irvine at the 2000 Austrian Grand Prix.",
+     "facts": {
+      "0.0": "The car described in this sentence was driven by Eddie Irvine.",
+      "0.1": "Eddie Irvine was in his second year with the team.",
+      "0.2": "The car described in this sentence was also driven by Luciano Burti.",
+      "0.3": "Luciano Burti had deputised for Eddie Irvine at the 2000 Austrian Grand Prix."
+     }
+    },
+    {
+     "sentence": "Edmund Irvine Jr. (born 10 November 1965) is a retired British racing driver from Northern Ireland.",
+     "facts": {
+      "1.0": "Edmund Irvine Jr. was born on 10 November 1965.",
+      "1.1": "Edmund Irvine Jr. is a retired British racing driver.",
+      "1.2": "Edmund Irvine Jr. is from Northern Ireland."
+     }
+    }
+   ],
+   "items": [
+    "Jordan 194\nThe Jordan 194 was a Formula One car for the 1994 season.\n\n The number 14 seat was taken by Rubens Barrichello and the number 15 seat was taken by Eddie Irvine.\n\n Kelvin Burt was named as test driver, but his mileage in the car was limited.\n\n The engine was a Hart 1035 3.5 V10, a developed version of the engine which had proved promising in 1993.\n\n The team's main sponsor was Sasol, with additional financial support coming from Arisco, the Irish government and other smaller sponsors.\n\n With driver aids such as traction control and active suspension banned for the 1994 season, the car used a conventional semi-automatic gearbox and pushrod double wishbone suspension.\n\n The simpler technical regulations of 1994 seemed to benefit Jordan and the 194 recaptured the level of performance seen in the team's debut season, 1991.\n\n Indeed, the cut-down airbox and drooping front wing of the 194 recalled the design features of the 1991 car.",
+    "Spyker F1\nThe Spyker F1 Team, known as the Etihad Aldar Spyker F1 Team for sponsorship reasons was a Formula One team that competed in the 2007 Formula One World Championship, and was created by Spyker Cars after their buyout of the short-lived Midland F1 (formerly Jordan Grand Prix) team.\n\n The change to the Spyker name was accompanied by a switch in racing livery from the red and white previously used by Midland, to an orange and silver scheme—already seen on the Spyker Spyder GT2-R—orange being the national colour and the auto racing colour of the Netherlands.\n\n At the end of the 2007 season the team was sold and renamed Force India.",
+    "Jordan 195\nThe Jordan 195 was a Formula One car for the 1995 season.\n\n The number 14 seat was taken by Rubens Barrichello and the number 15 seat was taken by Eddie Irvine.\n\n The team never employed a test driver.\n\n The engine was a Peugeot A10 3.0 V10.\n\n The team's main sponsor was Total.",
+    "1999 British Grand Prix\nThe 1999 British Grand Prix was a Formula One motor race held on 11 July 1999 at the Silverstone Circuit near Silverstone, England.\n\n It was the eighth race of the 1999 Formula One season.\n\n The 60-lap race was won by McLaren driver David Coulthard after he started from third position.\n\n Eddie Irvine finished second for the Ferrari team and Williams driver Ralf Schumacher came in third.",
+    "Jaguar R2\nThe Jaguar R2 was the car with which the Jaguar team competed in the Formula One season.\n\n It was driven by Eddie Irvine, who was in his second year with the team, and Luciano Burti, who had deputised for Irvine at the 2000 Austrian Grand Prix.\n\n However, the Brazilian was replaced by Pedro de la Rosa after only four Grands Prix.",
+    "Graph query row:\nperson: Eddie Irvine\nnationality: British\nrelationship: None\nconnected_entity: None",
+    "1983 Volvo International – Doubles\nSherwood Stewart and Ferdi Taygan were the defending champions but they competed with different partners that year, Stewart with Mark Edmondson and Taygan with Cássio Motta.",
+    "1997 Argentine Grand Prix\nThe 1997 Argentine Grand Prix was a Formula One motor race held at Autódromo Oscar Alfredo Gálvez in Buenos Aires, Argentina on 13 April 1997.\n\n It was the third race of the 1997 Formula One season and the 600th World Championship event.\n\n The 72-lap race was won by Williams driver Jacques Villeneuve after he started from pole position.\n\n Eddie Irvine finished second for the Ferrari team and Jordan driver Ralf Schumacher came in third.",
+    "Eddie Irvine\nEdmund Irvine Jr. (born 10 November 1965) is a retired British racing driver from Northern Ireland.\n\n He was a Formula One driver between 1993 and 2002, and runner-up in the 1999 World Drivers' Championship, driving for Scuderia Ferrari.",
+    "Jaguar R3\nThe Jaguar R3 is a Formula One racing car with which Jaguar Racing competed in the 2002 Formula One season.\n\n The car was launched on January 4, 2002.\n\n It was driven by Eddie Irvine and Pedro de la Rosa, both retained from 2001."
+   ]
+  },
+  {
+   "id": "8c0c87d6eb166f98",
+   "gold": [
+    {
+     "sentence": "Tímea Babos (] ; born 10 May 1993) is a Hungarian tennis player.",
+     "facts": {
+      "0.0": "Tímea Babos was born on 10 May 1993.",
+      "0.1": "Tímea Babos is a Hungarian tennis player."
+     }
+    },
+    {
+     "sentence": "Jack Sock (born September 24, 1992) is an American professional tennis player who is currently ranked world No. 21 in men's singles by the Association of Tennis Professionals (ATP).",
+     "facts": {
+      "1.0": "Jack Sock was born on September 24, 1992.",
+      "1.1": "Jack Sock is an American professional tennis player.",
+      "1.2": "Jack Sock is currently ranked world No. 21 in men's singles.",
+      "1.3": "The ranking is by the Association of Tennis Professionals (ATP)."
+     }
+    }
+   ],
+   "items": [
+    "Jack Sock\nJack Sock (born September 24, 1992) is an American professional tennis player who is currently ranked world No. 21 in men's singles by the Association of Tennis Professionals (ATP).\n\n He is one of the top ranked American men in both singles and doubles on the ATP Tour.\n\n A former junior US Open champion, Sock's singles success is highlighted by 7 ATP finals, including three titles.\n\n His career best result came at the 2017 Indian Wells Masters, where he reached the semi-finals.",
+    "2012 Monterrey Open\nThe 2012 Monterrey Open was a women's tennis tournament played on outdoor hard courts.\n\n It was the 4th edition of the Monterrey Open and was an International tournament on the 2012 WTA Tour.\n\n It took place at the Sierra Madre Tennis Club in Monterrey, Mexico, from 20 to 26 February.\n\n Tímea Babos won the singles title.",
+    "Tímea Babos\nTímea Babos (] ; born 10 May 1993) is a Hungarian tennis player.",
+    "2013 Aegon Classic – Doubles\nTímea Babos and Hsieh Su-wei were the defending champions, but Babos decided not to participate.\n\n<br>",
+    "2015 Apia International Sydney – Women's Doubles\nTímea Babos and Lucie Šafářová were the defending champions, but chose not to participate together.\n\n Babos played alongside Kristina Mladenovic, but lost in the semifinals to Raquel Kops-Jones and Abigail Spears.\n\n Šafářová teamed up with Belinda Bencic, but lost in the first round to Kimiko Date-Krumm and Karolína Plíšková.\n\n<br>",
+    "2015 Malaysian Open – Doubles\nTímea Babos and Chan Hao-ching were the defending champions, but Chan chose not to participate this year.\n\n Babos chose to play in Monterrey, but lost in the first round.",
+    "2014 Suzhou Ladies Open – Doubles\nTímea Babos and Michaëlla Krajicek were the defending champions, having won the event in 2013, however both players chose not to participate.",
+    "Carly Gullickson\nCarly Gullickson (born November 26, 1986) is a former American professional tennis player.",
+    "2016 Dubai Tennis Championships – Women's Doubles\nTímea Babos and Kristina Mladenovic were the defending champions, but chose not to compete together.\n\n Babos played alongside Julia Görges, but lost in the semifinals to Caroline Garcia and Mladenovic.\n\n<br>",
+    "2014 Monterrey Open – Doubles\nTímea Babos and Kimiko Date-Krumm were the defending champions, but chose not to participate together.\n\n Babos played alongside Olga Govortsova, while Date-Krumm teamed up with Karolína Plíšková.\n\n The two teams were scheduled to meet in the semifinals, but Date-Krumm withdrew with a right leg injury.\n\n<br>"
+   ]
+  }
+ ]
+}

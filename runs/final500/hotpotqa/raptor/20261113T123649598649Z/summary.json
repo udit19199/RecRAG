@@ -1,0 +1,36 @@
+{
+  "method": "raptor",
+  "dataset": "hotpotqa",
+  "count": 250,
+  "precision": 0.6602396825396826,
+  "recall": 0.7011320346320347,
+  "f1": 0.6531290373884802,
+  "exact_match": 0.456,
+  "overlap_accuracy": 0.776,
+  "retrieval_accuracy": 0.84,
+  "total_construction_seconds": 0.0,
+  "mean_retrieval_seconds": 0.6455712893647724,
+  "mean_answer_seconds": 1.8312117745002032,
+  "mean_retrieved_tokens": 1199.356,
+  "total_storage_mb": 331.110386,
+  "categories": [
+    {
+      "question_type": "bridge",
+      "count": 250,
+      "accuracy": 0.776,
+      "complexity": null
+    }
+  ],
+  "total_question_cost_usd": 0.017523015,
+  "mean_question_cost_usd": 0.00007009206,
+  "mean_retrieval_and_answer_seconds": 2.4767830638649757,
+  "options": {
+    "top_k": 10,
+    "rerank": false,
+    "rerank_candidate_k": 20,
+    "rerank_top_k": 10,
+    "ircot": false,
+    "max_steps": 2
+  },
+  "novelqa_categories": []
+}

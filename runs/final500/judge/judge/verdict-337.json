@@ -1,0 +1,76 @@
+[
+  {"id": "3748d5a30d9dfb3a", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "The DOJ argues Google’s default-search deals"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Google has had its deal with Apple in place since 2003."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "from companies including Apple, Samsung and Mozilla"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "from companies including Apple, Samsung and Mozilla"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "its deal with Apple and other partners to make Google the default search engine"}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 10, "quote": "The DOJ argues Google’s default-search deals and platform control suppress competition"}, {"item": 3, "quote": "making itself the default search engine across platforms"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "$26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones"}]}
+  ]},
+  {"id": "8129b30ce2ab2879", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "The second week of the trial’s standout testimony"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "came from Alameda Research’s former CEO Caroline Ellison"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "who claimed she took $14 billion from customers to repay debts to lenders"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "who claimed she took $14 billion from customers to repay debts to lenders"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "using them as a line of credit under the instruction of SBF"}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 8, "quote": "using them as a line of credit under the instruction of SBF"}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "In January, Bankman-Fried pleaded not guilty to all counts"}, {"item": 6, "quote": "is on trial for seven counts of wire fraud and conspiracy"}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "His lawyer portrayed him as a good-faith startup founder"}]},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "9c6dee4d9f938879", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "It was almost like this very strange, subtle clue to the media"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "that they don't know everything that happened in that relationship"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "I can have something really major and traumatic happen to me and they don't know about it"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "she told NPR"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "Swift has shared that she has nothing to hide in her new relationship with Kelce"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "in her new relationship with Kelce"}]}
+  ]},
+  {"id": "1646ae8c56e95dae", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "received attention on the sidelines after limping off"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "then left the game for further evaluation in the locker room"}]}
+  ]},
+  {"id": "6378583ff2dcb6c9", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}, {"item": 9, "quote": "the government claimed"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "Bankman-Fried had “secret access” to customer money"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 9, "quote": "customer money—both cash and crypto"}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "3.0", "status": "stated", "evidence": [{"item": 9, "quote": "Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents"}]},
+    {"fact": "3.1", "status": "missing", "evidence": []},
+    {"fact": "3.2", "status": "missing", "evidence": []},
+    {"fact": "3.3", "status": "missing", "evidence": []},
+    {"fact": "3.4", "status": "missing", "evidence": []},
+    {"fact": "3.5", "status": "missing", "evidence": []}
+  ]},
+  {"id": "4921a9740d704c96", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Caroline Ellison, Bankman-Fried’s ex-girlfriend"}]},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 8, "quote": "Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX"}, {"item": 8, "quote": "which Ellison said were customer funds"}]},
+    {"fact": "1.5", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]}
+]

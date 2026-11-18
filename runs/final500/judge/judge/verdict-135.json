@@ -1,0 +1,79 @@
+[
+  {
+    "id": "82f3fcfadb369f1f",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family."}]}
+    ]
+  },
+  {
+    "id": "f1d3f722a4fb628d",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Around 2019 or 2020, Wang checked the database"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Wang checked the database and discovered that Alameda was negative by about $200 million"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "which was more than the $150 million FTX made in revenue."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Because of that experience, Bankman-Fried suggested an “alert” or “delay” that would keep Alameda from being liquidated by a bug."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "suggested an “alert” or “delay” that would keep Alameda from being liquidated by a bug"}]},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "missing", "evidence": []},
+      {"fact": "2.4", "status": "missing", "evidence": []},
+      {"fact": "2.5", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "014ab6a6ca4058f1",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]}
+    ]
+  },
+  {
+    "id": "4f8de7490eb74a00",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Jada and Will have often opened up about their relationship over the years"}, {"item": 1, "quote": "I made a promise that there will never be a reason for us to get a divorce"}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "As for her children, Jada praised them for how they’ve helped her grow."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "My children, they’re little gurus."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "She praised her and Will’s two children - Jaden, 25, and Willow, 22"}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "She praised her and Will’s two children - Jaden, 25, and Willow, 22"}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "She praised her and Will’s two children - Jaden, 25, and Willow, 22 - for being her “little gurus” throughout this time"}]},
+      {"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "noting that they’ve taught her “a deep sense of self-acceptance”"}]}
+    ]
+  },
+  {
+    "id": "bdec90ee72049585",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "918bd159b1fd8f82",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "“all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "That answer ultimately lies with the jury"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning"}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+      {"fact": "1.4", "status": "stated", "evidence": [{"item": 4, "quote": "of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+      {"fact": "1.5", "status": "stated", "evidence": [{"item": 4, "quote": "of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+      {"fact": "2.3", "status": "stated", "evidence": [{"item": 7, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+      {"fact": "2.4", "status": "stated", "evidence": [{"item": 7, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+    ]
+  }
+]

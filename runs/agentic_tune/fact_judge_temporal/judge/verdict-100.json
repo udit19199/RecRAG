@@ -1,0 +1,34 @@
+[
+{"id": "df2a7b2a948bdba0", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Erik ten Hag is a top coach from Ajax"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "they need a top blueprint not only for now but for the next five years"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "years, and work towards that"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "sometimes on that journey there are hard moments when you don't get the right results"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "hard moments when you don't get the right results, even though you're doing the right things"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "163eac7ed330c44a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "7c11e5ac2f0dd024", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified"}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics"}]},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]}
+]

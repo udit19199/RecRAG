@@ -1,0 +1,896 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=ce99530aa9668366 ===
+Gold sentences and facts:
+Sentence 0: A transfer case is a part of the drivetrain of four - wheel - drive , all - wheel - drive , and other multiple powered axle vehicles . The transfer case transfers power from the transmission to the front and rear axles by means of drive shafts . It also synchronizes the difference between the rotation of the front and rear wheels , and may contain one or more sets of low range gears for off - road use .
+  Fact 0.0: A transfer case is a part of the drivetrain of four-wheel-drive, all-wheel-drive, and other multiple powered axle vehicles.
+  Fact 0.1: A transfer case transfers power from the transmission to the front and rear axles by means of drive shafts.
+  Fact 0.2: A transfer case synchronizes the difference between the rotation of the front and rear wheels.
+  Fact 0.3: A transfer case may contain one or more sets of low range gears for off-road use.
+
+Retrieved items:
+<item 1>
+Transfer case
+The transfer case may contain one or more sets of low range gears for off - road use . Low range gears are engaged with a shifter or electronic switch . On many
+transfer cases , this shifter is the same as the one that selects 2WD or 4WD operation . Low range gears allow the vehicle to drive at much slower speeds while
+still operating within the usable power band / RPM range of the engine . This also increases the torque available at the axles . Low - range gears are used
+during slow - speed or extreme off - road maneuvers , such as rockcrawling , navigating dangerous roads , or when pulling a heavy load . This feature is often
+absent on all - wheel - drive cars . Some very large vehicles , such as heavy equipment or military trucks , have more than one low - range gear . Types ( edit
+) Transfer cases used on `` part - time '' four - wheel - drive off - road vehicles such as trucks , truggies , rock - crawling vehicles , and some military
+vehicles generally allow the driver to select 2WD or 4WD , as well as high or low gear ranges .
+</item 1>
+
+<item 2>
+Honda Fit
+South Africa Launched in 2003 , it was sold as the Jazz in South Africa . It is available with the 1.3 i - DSI ( badged as a 1.4 ) or 1.5 VTEC engines both
+offered with either manual or CVT ( automatic ) transmission . Chile All Honda Fits sold in Chile are built in Brazil , except for a few early 2004 models .
+Until 2007 , all three Brazilian trim levels were available LX , LXL and EX , with five - speed manual or CVT automatic transmissions , but for 2008 models ,
+the 1.5 - liter 16 - valve VTEC engine is no longer available , while the Brazilian LXL , with 1.35 - liter 8 - valve i - DSI engine , is sold as EX . No
+alcohol powered engines are available in Chile . Australia 2004 - 06 Honda Jazz ( Australia ) The Jazz / Fit offering in Australia follows , to a degree , the
+Japanese versions ( excluding the 4WD models ) , and was released in Australia in October 2002 .
+</item 2>
+
+<item 3>
+Transfer case
+See also ( edit ) NP - 205 AMC / Jeep Transmissions Jeep four wheel drive systems Mitsubishi Super Select References ( edit ) Jump up ^
+http://www.cdxetextbook.com/trans/finalDrives/allWheel/transfercasediff.html Transfer case differential action Jump up ^
+http://www.fourwheeler.com/techarticles/68958_how_transfer_cases_work/index.html How Transfer Cases Work Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Transfer_case&oldid=805616544 '' Categories : Vehicle technology Four - wheel drive layout Hidden categories : All
+articles with unsourced statements Articles with unsourced statements from May 2015 Articles with unsourced statements from March 2012 Talk Contents About
+Wikipedia فارسی 日本 語 Polski Русский Simple English Svenska Українська Edit links This page was last edited on 16 October 2017 , at 15 : 12 . Text is available
+under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use and Privacy Policy
+.
+</item 3>
+
+<item 4>
+Transfer case
+This is necessary because the front and rear tires never turn at the same speed . Different rates of tire rotation are generally due to different tire diameters
+( since front and rear tires inevitably wear at different rates ) and different gear ratios in the front and rear differentials since manufacturers will often
+have a slightly lower ratio in the front vs. the rear to help with control ( such as a 3.55 : 1 in the rear differential and a 3.54 : 1 in the front
+differential ) . If the transfer case did not make up the difference between the two different rates of rotation , binding would occur and the transfer case
+could become damaged . This is also why a transfer case that is not designed for on - road use must never be driven on dry pavement . Transfer cases designed
+for off - road use can mechanically lock the front and rear axles when needed ( e.g. when one of the axles is on a slippery surfaces or stuck in mud , whereas
+the other has better traction ) . This is the equivalent to the differential lock . The transfer case may contain one or more sets of low range gears for off -
+road use .
+</item 4>
+
+<item 5>
+Transfer case
+1 M.S.O.F. 2.3. 2 E.S.O.F. 3 See also 4 References Functions ( edit ) The transfer case receives power from the transmission and sends it to both the front and
+rear axles . This can be done with gears , hydraulics , or chain drive . On some vehicles , such as four - wheel - drive trucks or vehicles intended for off -
+road use , this feature is controlled by the driver . The driver can put the transfer case into either `` two - wheel - drive '' or `` four - wheel - drive ''
+mode . This is sometimes accomplished by means of a shifter , similar to that in a manual transmission . On some vehicles this may be electronically operated by
+a switch instead . Some vehicles , such as all - wheel - drive sports cars , have transfer cases that are not selectable . Such a transfer case is permanently
+`` locked '' into all - wheel - drive mode . Transfer cases that are designed to allow for normal road use synchronize the difference between the rotation of
+the front and rear wheels , in much the same way the differential acts on a given axle . This is necessary because the front and rear tires never turn at the
+same speed .
+</item 5>
+
+<item 6>
+Transfer case
+This is only for the four - wheel - drive high setting . To engage the four - wheel - drive low setting , the vehicle must be stopped and the transmission must
+be shifted to neutral , then the four - wheel - drive low can be selected . ESOF ( edit ) Electronic Shift On - the - Fly ( ESOF ) transfer cases have a dash -
+mounted selector switch or buttons with front sealed automatic locking axle hubs or drive flanges . Some vehicles , such as Jeeps , also have what is called
+SelecTrac , which has a slider switch on the center console . Unlike the manual transfer case , this system has a transfer case motor . To engage the four -
+wheel - drive system the vehicle must be moving at a lower speeds , the speed at which 4x4 can be engaged depends on the vehicle . This is only for the four -
+wheel - drive high setting . To engage the four - wheel - drive low setting , the vehicle must be stopped and the transmission must be shifted to neutral , then
+the four - wheel - drive low can be selected .
+</item 6>
+
+<item 7>
+Transfer case
+Those used in sports cars and performance sedans are usually `` transparent '' to the driver ; there is no shifter or select lever . Drive type ( edit ) Gear -
+driven ( edit ) There are two different types of internal power - transfer mechanism found in most transfer cases . Gear - driven transfer cases use sets of
+gears to drive either the front or both the front and rear driveshafts . These are generally strong , heavy units that are used in large trucks , but there are
+currently several gear drive cases in production for passenger cars . Chain - driven ( edit ) Chain - driven transfer cases use a chain to drive most often only
+one axle , but can drive both axles . Chain - driven transfer cases are quieter and lighter than gear - driven ones . They are used in vehicles such as compact
+trucks , full size trucks , Jeeps and SUVs . Some off - road driving enthusiasts modify their vehicles to use gear - driven transfer cases , accepting the
+additional weight and noise to gain the extra strength they generally provide . Housing type ( edit ) Married ( edit ) Transfer cases are also classified as
+either `` divorced '' / independent or `` married '' .
+</item 7>
+
+<item 8>
+Transfer case
+Transfer case - wikipedia Transfer case Jump to : navigation , search For the US military use of the term , see coffin . Inside of a 231 New Process Gear
+transfer case . Part - time / Manual , shift on the fly A transfer case is a part of the drivetrain of four - wheel - drive , all - wheel - drive , and other
+multiple powered axle vehicles . The transfer case transfers power from the transmission to the front and rear axles by means of drive shafts . It also
+synchronizes the difference between the rotation of the front and rear wheels , and may contain one or more sets of low range gears for off - road use .
+Contents ( hide ) 1 Functions 2 Types 2.1 Drive type 2.1. 1 Gear - driven 2.1. 2 Chain - driven 2.2 Housing type 2.2. 1 Married 2.2. 2 Divorced / independent
+2.3 Transfer case shift type 2.3. 1 M.S.O.F. 2.3. 2 E.S.O.F.
+</item 8>
+
+<item 9>
+Transfer case
+Married transfer cases are bolted directly to the transmission , usually between the transmission 's output shaft and the rear or main driveshaft . Sometimes a
+married transfer case is an integral part of the transmission and the two components share the same housing or `` case '' , as is commonly found on recent
+Subaru products and some other all - wheel - drive cars . Divorced / independent ( edit ) A divorced or independent transfer case is completely separate from
+the transmission . It is located further down the driveline than a married transfer case and connected to the transmission output shaft by a short driveshaft .
+Independent transfer cases are used on very long wheelbase vehicles , such as commercial trucks or military trucks . Transfer case Shift type ( edit ) M.S.O.F.
+( edit ) Manual Shift On - the - Fly transfer cases have a selector lever on the driver 's side floor transmission hump and may also have either two sealed
+automatic front axle locking hubs or two manual front axle hub selectors of `` LOCK '' and `` UNLOCK '' or `` FREE '' . To engage the four - wheel - drive
+system the vehicle must be moving at a low speed , the speed at which 4x4 can be engaged depends on the vehicle .
+</item 9>
+
+<item 10>
+Honda Fit
+All first generation Fit / Jazz models throughout the world utilized the following distinct codes , found in the vehicle 's identification number ( VIN ) : Fit
+/ Jazz GD1 : 1.3 L L13A i - DSI Inline - four engine 2WD ( Europe : 1.4 L ) GD2 : 1.3 L L13A i - DSI Inline - four engine 4WD ( Japan only ) GD3 : 1.5 L L15A
+VTEC Inline - four engine 2WD GD4 : 1.5 L L15A VTEC Inline - four engine 4WD ( Japan only ) GD5 : 1.2 L L12A Inline - four engine ( Europe ) GE3 : 1.3 L L13A i
+- DSI Inline - four engine 2WD ( 2007 Europe 1.4 L model .
+</item 10>
+=== END ITEM id=ce99530aa9668366 ===
+
+=== ITEM id=ba4c89af2550bda0 ===
+Gold sentences and facts:
+Sentence 0: Country Name of animal Scientific name Pictures Ref . Algeria Fennec fox Vulpes zerda Angola Red - crested turaco ( national bird ) Tauraco erythrolophus Anguilla Zenaida dove Zenaida aurita Antigua and Barbuda Fallow deer ( national animal ) Dama dama Frigate ( national bird ) Fregata magnificens Hawksbill turtle ( national sea creature ) Eretmochelys imbricata Argentina Rufous hornero Furnarius rufus Australia Red kangaroo ( national animal ) Macropus rufus Emu ( national bird ) Dromaius novaehollandiae Austria Black eagle Ictinaetus malaiensis Azerbaijan Karabakh horse Equus ferus caballus Bangladesh Royal Bengal tiger ( national animal ) Panthera tigris tigris Magpie robin ( national bird ) Copsychus saularis Ilish ( national fish ) Tenualosa ilisha Belarus European bison Bison bonasus Belgium Lion ( heraldic Leo Belgicus ) Panthera leo Belize Baird 's tapir ( national animal ) Tapirus bairdii Keel - billed toucan ( national bird ) Ramphastos sulfuratus Bhutan Druk Mythical Takin Budorcas taxicolor Brazil Rufous - bellied thrush Turdus rufiventris Cambodia Kouprey Bos sauveli Canada North American beaver ( sovereignty animal symbol ) Castor canadensis Canadian horse ( national horse ) Equus ferus caballus China Giant panda ( national animal ) Ailuropoda melanoleuca Chinese dragon ( national animal ) Mythical Red - crowned crane ( national bird ) Grus japonensis Democratic Republic of the Congo Okapi Okapia johnstoni Colombia Andean condor Vultur gryphus Costa Rica Yigüirro ( national bird ) Turdus grayi White - tailed deer ( national animal ) Odocoileus virginianus West Indian manatee ( national aquatic animal ) Trichechus manatus Croatia Pine marten Martes martes Cuba Cuban trogon Priotelus temnurus Cyprus Cypriot mouflon Ovis orientalis Czech Republic Double - tailed lion Mythical Denmark Mute swan ( national bird ) Cygnus olor Small tortoiseshell ( national butterfly ) Aglais urticae Egypt Steppe eagle Aquila nipalensis Estonia Barn swallow ( national bird ) Hirundo rustica Eritrea Arabian camel Camelus dromedarius Ethiopia Lion Panthera leo Faroe Islands Eurasian oystercatcher ( national bird ) Haematopus ostralgus Finland Brown bear ( national animal ) Ursus arctos Whooper swan ( national bird ) Cygnus cygnus Holly blue ( national butterfly ) Celastrina argiolus European perch ( national fish ) Perca fluviatilis Seven - spot ladybird ( national insect ) Coccinella septempunctata France Gallic rooster Gallus gallus domesticus Germany Unspecified Eagle Members of Accipitridae Greece Phoenix Mythical Dolphins Delphinus Guatemala Quetzal Pharomachrus mocinno Haiti Hispaniolan Trogan Priotelus roseigaster Honduras White - tailed deer Odocoileus virginianus Hungary Turul Mythical ( most probably Falco cherrug ) Iceland Gyrfalcon Falco rusticolus India Bengal tiger ( National predator ) Panthera tigris tigris Indian peafowl ( National bird ) Pavo cristatus King cobra ( National reptile ) Ophiophagus hannah Ganges river dolphin ( National aquatic animal ) Platanista gangetica gangetica Indian elephant ( National heritage animal ) Elephas maximus indicus Indonesia Komodo dragon ( national animal ) Varanus komodoensis Garuda ( historic national animal ) Mythical Iran Persian lion Panthera leo persica Iraq Chukar partridge Alectoris chukar Goat ( KRG ) Capra aegagrus Israel Hoopoe ( national bird ) Upupa epops Jamaica Red - billed streamertail Trochilus polytmus Japan Green pheasant ( national bird ) Phasianus versicolor Carp ( national fish ) Cyprinus carpio Latvia White wagtail ( national bird ) Motacilla alba Two - spotted ladybird ( national insect ) Adalia bipunctata Lithuania White stork Ciconia ciconia Macedonia Lion ( in Macedonian heraldry ) Panthera leo Madagascar Zebu ( in Malagasy heraldry ) Bos primigenius indicus Ring - tailed lemur ( national animal ) Lemur catta Malaysia Malayan tiger ( national animal ) Panthera tigris jacksoni Malta Pharaoh Hound ( national animal ) Canis lupus familiaris ( 1 ) Moldova Aurochs ( national animal ) Bos primigenius Mauritius Dodo Raphus cucullatus Mexico Golden eagle ( national animal ) Aquila chrysaetos Xoloitzcuintli ( national dog ) Canis lupus familiaris Jaguar ( national mammal ) Panthera onca Grasshopper ( national arthropod ) Sphenarium purpurascens Vaquita ( national marine mammal ) Phocoena sinus Nepal Cow ( national animal ) Bos taurus indicus Danphe ( national bird ) Lophophorus impejanus Netherlands Lion ( heraldic symbol ) Panthera leo Black - tailed godwit ( national bird ) Limosa limosa New Zealand Kiwi Apteryx sp . North Korea Chollima Mythical Norway Lion ( royal national animal ) Panthera leo White - throated dipper ( national bird ) Cinclus cinclus Fjord horse ( national horse ) Equus ferus caballus Oman Arabian oryx ( national animal ) Oryx leucoryx Pakistan Markhor ( National animal ) Capra falconeri Indus river dolphin ( National aquatic mammal ) Platanista indicus minor minor Chukar ( National bird ) Alectoris chukar Indus crocodile ( National reptile ) Crocodylus palustris Shaheen falcon ( Heritage bird ) Falco peregrinus peregrinator Snow leopard ( National predator ) Panthera uncia Panama Harpy eagle Harpia harpyja Papua New Guinea Dugong ( national marine mammal ) Dugong dugon Peru Vicuña ( national animal ) Vicugna vicugna Philippines Carabao ( national animal ) Bubalus bubalis Philippine eagle ( national bird ) Pithecophaga jefferyi Poland White - tailed eagle ( national bird ) Haliaeetus albicilla White stork ( national bird ) Ciconia ciconia European bison ( national animal ) Bison bonasus Qatar Arabian oryx Oryx leucoryx Romania Lynx Lynx lynx Russia Eurasian brown bear Ursus arctos arctos Rwanda Leopard Panthera pardus Saint Vincent and the Grenadines Saint Vincent amazon Amazona guildingii Serbia Wolf Canis lupus lupus White eagle Mythical Lynx Lynx lynx Somalia Leopard ( national animal ) Panthera pardus South Africa Springbok ( national animal ) Antidorcas marsupialis Blue crane ( national bird ) Anthropoides paradiseus Galjoen ( national fish ) Dichistius capensis South Korea Siberian tiger Panthera tigris altaica Korean magpie ( national bird ) Pica ( pica ) sericea Sri Lanka Sri Lankan junglefowl ( national bird ) Gallus lafayettii Tanzania Giraffe Giraffa camelopardalis Thailand Elephant Elephas maximus United Arab Emirates Arabian oryx ( national animal ) Oryx leucoryx Peregrine falcon ( national bird ) Falco peregrinus United Kingdom Lion ( United Kingdom , England , Scotland , Wales ) Panthera leo Bulldog ( Britain as `` British Bulldog '' ) Canis lupus familiaris Red kite ( Wales ) Milvus milvus Unicorn ( Scotland ) Mythical Y Ddraig Goch ( Welsh Dragon Wales ) Mythical United States Bald eagle ( national bird ) Haliaeetus leucocephalus American bison ( national mammal ) Bison bison
+  Fact 0.0: In Algeria, the Fennec fox (Vulpes zerda) is listed as the animal.
+  Fact 0.1: In Angola, the Red-crested turaco (Tauraco erythrolophus) is listed as the national bird.
+  Fact 0.2: In Anguilla, the Zenaida dove (Zenaida aurita) is listed.
+  Fact 0.3: In Antigua and Barbuda, the Fallow deer (Dama dama) is listed as the national animal.
+  Fact 0.4: In Antigua and Barbuda, the Frigate (Fregata magnificens) is listed as the national bird.
+  Fact 0.5: In Antigua and Barbuda, the Hawksbill turtle (Eretmochelys imbricata) is listed as the national sea creature.
+  Fact 0.6: In Argentina, the Rufous hornero (Furnarius rufus) is listed.
+  Fact 0.7: In Australia, the Red kangaroo (Macropus rufus) is listed as the national animal.
+  Fact 0.8: In Australia, the Emu (Dromaius novaehollandiae) is listed as the national bird.
+  Fact 0.9: In Austria, the Black eagle (Ictinaetus malaiensis) is listed.
+  Fact 0.10: In Azerbaijan, the Karabakh horse (Equus ferus caballus) is listed.
+  Fact 0.11: In Bangladesh, the Royal Bengal tiger (Panthera tigris tigris) is listed as the national animal.
+  Fact 0.12: In Bangladesh, the Magpie robin (Copsychus saularis) is listed as the national bird.
+  Fact 0.13: In Bangladesh, the Ilish (Tenualosa ilisha) is listed as the national fish.
+  Fact 0.14: In Belarus, the European bison (Bison bonasus) is listed.
+  Fact 0.15: In Belgium, the Lion (Panthera leo) is listed as the heraldic Leo Belgicus.
+  Fact 0.16: In Belize, Baird's tapir (Tapirus bairdii) is listed as the national animal.
+  Fact 0.17: In Belize, the Keel-billed toucan (Ramphastos sulfuratus) is listed as the national bird.
+  Fact 0.18: In Bhutan, the Druk is listed as a mythical animal.
+  Fact 0.19: In Bhutan, the Takin (Budorcas taxicolor) is listed.
+  Fact 0.20: In Brazil, the Rufous-bellied thrush (Turdus rufiventris) is listed.
+  Fact 0.21: In Cambodia, the Kouprey (Bos sauveli) is listed.
+  Fact 0.22: In Canada, the North American beaver (Castor canadensis) is listed as the sovereignty animal symbol.
+  Fact 0.23: In Canada, the Canadian horse (Equus ferus caballus) is listed as the national horse.
+  Fact 0.24: In China, the Giant panda (Ailuropoda melanoleuca) is listed as the national animal.
+  Fact 0.25: In China, the Chinese dragon is listed as a mythical national animal.
+  Fact 0.26: In China, the Red-crowned crane (Grus japonensis) is listed as the national bird.
+  Fact 0.27: In the Democratic Republic of the Congo, the Okapi (Okapia johnstoni) is listed.
+  Fact 0.28: In Colombia, the Andean condor (Vultur gryphus) is listed.
+  Fact 0.29: In Costa Rica, the Yigüirro (Turdus grayi) is listed as the national bird.
+  Fact 0.30: In Costa Rica, the White-tailed deer (Odocoileus virginianus) is listed as the national animal.
+  Fact 0.31: In Costa Rica, the West Indian manatee (Trichechus manatus) is listed as the national aquatic animal.
+  Fact 0.32: In Croatia, the Pine marten (Martes martes) is listed.
+  Fact 0.33: In Cuba, the Cuban trogon (Priotelus temnurus) is listed.
+  Fact 0.34: In Cyprus, the Cypriot mouflon (Ovis orientalis) is listed.
+  Fact 0.35: In the Czech Republic, the Double-tailed lion is listed as a mythical animal.
+  Fact 0.36: In Denmark, the Mute swan (Cygnus olor) is listed as the national bird.
+  Fact 0.37: In Denmark, the Small tortoiseshell (Aglais urticae) is listed as the national butterfly.
+  Fact 0.38: In Egypt, the Steppe eagle (Aquila nipalensis) is listed.
+  Fact 0.39: In Estonia, the Barn swallow (Hirundo rustica) is listed as the national bird.
+  Fact 0.40: In Eritrea, the Arabian camel (Camelus dromedarius) is listed.
+  Fact 0.41: In Ethiopia, the Lion (Panthera leo) is listed.
+  Fact 0.42: In the Faroe Islands, the Eurasian oystercatcher (Haematopus ostralgus) is listed as the national bird.
+  Fact 0.43: In Finland, the Brown bear (Ursus arctos) is listed as the national animal.
+  Fact 0.44: In Finland, the Whooper swan (Cygnus cygnus) is listed as the national bird.
+  Fact 0.45: In Finland, the Holly blue (Celastrina argiolus) is listed as the national butterfly.
+  Fact 0.46: In Finland, the European perch (Perca fluviatilis) is listed as the national fish.
+  Fact 0.47: In Finland, the Seven-spot ladybird (Coccinella septempunctata) is listed as the national insect.
+  Fact 0.48: In France, the Gallic rooster (Gallus gallus domesticus) is listed.
+  Fact 0.49: In Germany, the Unspecified Eagle (a member of Accipitridae) is listed.
+  Fact 0.50: In Greece, the Phoenix is listed as a mythical animal.
+  Fact 0.51: In Greece, the Dolphins (Delphinus) are listed.
+  Fact 0.52: In Guatemala, the Quetzal (Pharomachrus mocinno) is listed.
+  Fact 0.53: In Haiti, the Hispaniolan Trogan (Priotelus roseigaster) is listed.
+  Fact 0.54: In Honduras, the White-tailed deer (Odocoileus virginianus) is listed.
+  Fact 0.55: In Hungary, the Turul is listed as a mythical animal, most probably Falco cherrug.
+  Fact 0.56: In Iceland, the Gyrfalcon (Falco rusticolus) is listed.
+  Fact 0.57: In India, the Bengal tiger (Panthera tigris tigris) is listed as the National predator.
+  Fact 0.58: In India, the Indian peafowl (Pavo cristatus) is listed as the National bird.
+  Fact 0.59: In India, the King cobra (Ophiophagus hannah) is listed as the National reptile.
+  Fact 0.60: In India, the Ganges river dolphin (Platanista gangetica gangetica) is listed as the National aquatic animal.
+  Fact 0.61: In India, the Indian elephant (Elephas maximus indicus) is listed as the National heritage animal.
+  Fact 0.62: In Indonesia, the Komodo dragon (Varanus komodoensis) is listed as the national animal.
+  Fact 0.63: In Indonesia, the Garuda is listed as the historic national animal, a mythical one.
+  Fact 0.64: In Iran, the Persian lion (Panthera leo persica) is listed.
+  Fact 0.65: In Iraq, the Chukar partridge (Alectoris chukar) is listed.
+  Fact 0.66: In Iraq, the Goat (Capra aegagrus) is listed for KRG.
+  Fact 0.67: In Israel, the Hoopoe (Upupa epops) is listed as the national bird.
+  Fact 0.68: In Jamaica, the Red-billed streamertail (Trochilus polytmus) is listed.
+  Fact 0.69: In Japan, the Green pheasant (Phasianus versicolor) is listed as the national bird.
+  Fact 0.70: In Japan, the Carp (Cyprinus carpio) is listed as the national fish.
+  Fact 0.71: In Latvia, the White wagtail (Motacilla alba) is listed as the national bird.
+  Fact 0.72: In Latvia, the Two-spotted ladybird (Adalia bipunctata) is listed as the national insect.
+  Fact 0.73: In Lithuania, the White stork (Ciconia ciconia) is listed.
+  Fact 0.74: In Macedonia, the Lion (Panthera leo) is listed as the animal in Macedonian heraldry.
+  Fact 0.75: In Madagascar, the Zebu (Bos primigenius indicus) is listed as the animal in Malagasy heraldry.
+  Fact 0.76: In Madagascar, the Ring-tailed lemur (Lemur catta) is listed as the national animal.
+  Fact 0.77: In Malaysia, the Malayan tiger (Panthera tigris jacksoni) is listed as the national animal.
+  Fact 0.78: In Malta, the Pharaoh Hound (Canis lupus familiaris) is listed as the national animal, with reference 1.
+  Fact 0.79: In Moldova, the Aurochs (Bos primigenius) is listed as the national animal.
+  Fact 0.80: In Mauritius, the Dodo (Raphus cucullatus) is listed.
+  Fact 0.81: In Mexico, the Golden eagle (Aquila chrysaetos) is listed as the national animal.
+  Fact 0.82: In Mexico, the Xoloitzcuintli (Canis lupus familiaris) is listed as the national dog.
+  Fact 0.83: In Mexico, the Jaguar (Panthera onca) is listed as the national mammal.
+  Fact 0.84: In Mexico, the Grasshopper (Sphenarium purpurascens) is listed as the national arthropod.
+  Fact 0.85: In Mexico, the Vaquita (Phocoena sinus) is listed as the national marine mammal.
+  Fact 0.86: In Nepal, the Cow (Bos taurus indicus) is listed as the national animal.
+  Fact 0.87: In Nepal, the Danphe (Lophophorus impejanus) is listed as the national bird.
+  Fact 0.88: In the Netherlands, the Lion (Panthera leo) is listed as the heraldic symbol.
+  Fact 0.89: In the Netherlands, the Black-tailed godwit (Limosa limosa) is listed as the national bird.
+  Fact 0.90: In New Zealand, the Kiwi (Apteryx sp.) is listed.
+  Fact 0.91: In North Korea, the Chollima is listed as a mythical animal.
+  Fact 0.92: In Norway, the Lion (Panthera leo) is listed as the royal national animal.
+  Fact 0.93: In Norway, the White-throated dipper (Cinclus cinclus) is listed as the national bird.
+  Fact 0.94: In Norway, the Fjord horse (Equus ferus caballus) is listed as the national horse.
+  Fact 0.95: In Oman, the Arabian oryx (Oryx leucoryx) is listed as the national animal.
+  Fact 0.96: In Pakistan, the Markhor (Capra falconeri) is listed as the National animal.
+  Fact 0.97: In Pakistan, the Indus river dolphin (Platanista indicus minor minor) is listed as the National aquatic mammal.
+  Fact 0.98: In Pakistan, the Chukar (Alectoris chukar) is listed as the National bird.
+  Fact 0.99: In Pakistan, the Indus crocodile (Crocodylus palustris) is listed as the National reptile.
+  Fact 0.100: In Pakistan, the Shaheen falcon (Falco peregrinus peregrinator) is listed as the Heritage bird.
+  Fact 0.101: In Pakistan, the Snow leopard (Panthera uncia) is listed as the National predator.
+  Fact 0.102: In Panama, the Harpy eagle (Harpia harpyja) is listed.
+  Fact 0.103: In Papua New Guinea, the Dugong (Dugong dugon) is listed as the national marine mammal.
+  Fact 0.104: In Peru, the Vicuña (Vicugna vicugna) is listed as the national animal.
+  Fact 0.105: In the Philippines, the Carabao (Bubalus bubalis) is listed as the national animal.
+  Fact 0.106: In the Philippines, the Philippine eagle (Pithecophaga jefferyi) is listed as the national bird.
+  Fact 0.107: In Poland, the White-tailed eagle (Haliaeetus albicilla) is listed as the national bird.
+  Fact 0.108: In Poland, the White stork (Ciconia ciconia) is listed as the national bird.
+  Fact 0.109: In Poland, the European bison (Bison bonasus) is listed as the national animal.
+  Fact 0.110: In Qatar, the Arabian oryx (Oryx leucoryx) is listed.
+  Fact 0.111: In Romania, the Lynx (Lynx lynx) is listed.
+  Fact 0.112: In Russia, the Eurasian brown bear (Ursus arctos arctos) is listed.
+  Fact 0.113: In Rwanda, the Leopard (Panthera pardus) is listed.
+  Fact 0.114: In Saint Vincent and the Grenadines, the Saint Vincent amazon (Amazona guildingii) is listed.
+  Fact 0.115: In Serbia, the Wolf (Canis lupus lupus) is listed.
+  Fact 0.116: In Serbia, the White eagle is listed as a mythical animal.
+  Fact 0.117: In Serbia, the Lynx (Lynx lynx) is listed.
+  Fact 0.118: In Somalia, the Leopard (Panthera pardus) is listed as the national animal.
+  Fact 0.119: In South Africa, the Springbok (Antidorcas marsupialis) is listed as the national animal.
+  Fact 0.120: In South Africa, the Blue crane (Anthropoides paradiseus) is listed as the national bird.
+  Fact 0.121: In South Africa, the Galjoen (Dichistius capensis) is listed as the national fish.
+  Fact 0.122: In South Korea, the Siberian tiger (Panthera tigris altaica) is listed.
+  Fact 0.123: In South Korea, the Korean magpie (Pica (pica) sericea) is listed as the national bird.
+  Fact 0.124: In Sri Lanka, the Sri Lankan junglefowl (Gallus lafayettii) is listed as the national bird.
+  Fact 0.125: In Tanzania, the Giraffe (Giraffa camelopardalis) is listed.
+  Fact 0.126: In Thailand, the Elephant (Elephas maximus) is listed.
+  Fact 0.127: In the United Arab Emirates, the Arabian oryx (Oryx leucoryx) is listed as the national animal.
+  Fact 0.128: In the United Arab Emirates, the Peregrine falcon (Falco peregrinus) is listed as the national bird.
+  Fact 0.129: In the United Kingdom, the Lion (Panthera leo) is listed for the United Kingdom, England, Scotland and Wales.
+  Fact 0.130: In the United Kingdom, the Bulldog (Canis lupus familiaris) is listed as Britain, called the British Bulldog.
+  Fact 0.131: In the United Kingdom, the Red kite (Milvus milvus) is listed for Wales.
+  Fact 0.132: In the United Kingdom, the Unicorn is listed as a mythical animal for Scotland.
+  Fact 0.133: In the United Kingdom, the Y Ddraig Goch (Welsh Dragon) is listed as a mythical animal for Wales.
+  Fact 0.134: In the United States, the Bald eagle (Haliaeetus leucocephalus) is listed as the national bird.
+  Fact 0.135: In the United States, the American bison (Bison bison) is listed as the national mammal.
+
+Retrieved items:
+<item 1>
+List of national animals
+bird ) Gallus lafayettii Tanzania Giraffe Giraffa camelopardalis Thailand Elephant Elephas maximus United Arab Emirates Arabian oryx ( national animal ) Oryx
+leucoryx Peregrine falcon ( national bird ) Falco peregrinus United Kingdom Lion ( United Kingdom , England , Scotland , Wales ) Panthera leo Bulldog ( Britain
+as `` British Bulldog '' ) Canis lupus familiaris Red kite ( Wales ) Milvus milvus Unicorn ( Scotland ) Mythical Y Ddraig Goch ( Welsh Dragon Wales ) Mythical
+United States Bald eagle ( national bird ) Haliaeetus leucocephalus American bison ( national mammal ) Bison bison See also Animals portal Lists portal State
+animal List of national birds Animals as heraldic charges Floral emblem National personification References Jump up ^ `` The Fennec Fox : Algeria 's National
+Animal '' . algeria.com . Retrieved 2013 - 03 - 21 . Jump up ^ `` THE NATIONAL BIRD OF ANGOLA '' . BIRDS ANGOLA . Retrieved 12 April 2016 .
+</item 1>
+
+<item 2>
+Graph query row:
+country: China
+</item 2>
+
+<item 3>
+List of national animals
+Vicugna vicugna Philippines Carabao ( national animal ) Bubalus bubalis Philippine eagle ( national bird ) Pithecophaga jefferyi Poland White - tailed eagle (
+national bird ) Haliaeetus albicilla White stork ( national bird ) Ciconia ciconia European bison ( national animal ) Bison bonasus Qatar Arabian oryx Oryx
+leucoryx Romania Lynx Lynx lynx Russia Eurasian brown bear Ursus arctos arctos Rwanda Leopard Panthera pardus Saint Vincent and the Grenadines Saint Vincent
+amazon Amazona guildingii Serbia Wolf Canis lupus lupus White eagle Mythical Lynx Lynx lynx Somalia Leopard ( national animal ) Panthera pardus South Africa
+Springbok ( national animal ) Antidorcas marsupialis Blue crane ( national bird ) Anthropoides paradiseus Galjoen ( national fish ) Dichistius capensis South
+Korea Siberian tiger Panthera tigris altaica Korean magpie ( national bird ) Pica ( pica ) sericea Sri Lanka Sri Lankan junglefowl ( national bird ) Gallus
+lafayettii Tanzania Giraffe Giraffa camelopardalis Thailand Elephant
+</item 3>
+
+<item 4>
+List of national animals
+List of National Animals - wikipedia List of National Animals Jump to : navigation , search This article is incomplete . Please help to improve it , or discuss
+the issue on the talk page . ( June 2017 ) This is a list of national animals . National animals Country Name of animal Scientific name Pictures Ref . Algeria
+Fennec fox Vulpes zerda Angola Red - crested turaco ( national bird ) Tauraco erythrolophus Anguilla Zenaida dove Zenaida aurita Antigua and Barbuda Fallow deer
+( national animal ) Dama dama Frigate ( national bird ) Fregata magnificens Hawksbill turtle ( national sea creature ) Eretmochelys imbricata Argentina Rufous
+hornero Furnarius rufus Australia Red kangaroo ( national animal ) Macropus rufus Emu ( national bird ) Dromaius novaehollandiae Austria Black eagle Ictinaetus
+malaiensis Azerbaijan Karabakh horse Equus ferus caballus Bangladesh Royal Bengal tiger ( national animal ) Panthera tigris tigris Magpie robin ( national bird
+) Copsychus saularis Ilish ( national fish )
+</item 4>
+
+<item 5>
+List of national animals
+versicolor Carp ( national fish ) Cyprinus carpio Latvia White wagtail ( national bird ) Motacilla alba Two - spotted ladybird ( national insect ) Adalia
+bipunctata Lithuania White stork Ciconia ciconia Macedonia Lion ( in Macedonian heraldry ) Panthera leo Madagascar Zebu ( in Malagasy heraldry ) Bos primigenius
+indicus Ring - tailed lemur ( national animal ) Lemur catta Malaysia Malayan tiger ( national animal ) Panthera tigris jacksoni Malta Pharaoh Hound ( national
+animal ) Canis lupus familiaris ( 1 ) Moldova Aurochs ( national animal ) Bos primigenius Mauritius Dodo Raphus cucullatus Mexico Golden eagle ( national animal
+) Aquila chrysaetos Xoloitzcuintli ( national dog ) Canis lupus familiaris Jaguar ( national mammal ) Panthera onca Grasshopper ( national arthropod )
+Sphenarium purpurascens Vaquita ( national marine mammal ) Phocoena sinus Nepal Cow ( national animal ) Bos taurus indicus Danphe ( national bird ) Lophophorus
+impejanus Netherlands Lion ( heraldic symbol
+</item 5>
+
+<item 6>
+List of national animals
+Canadian Heritage . 2016 . Retrieved 1 December 2016 . Jump up ^ `` National Symbols of China '' . 123independenceday.com . Jump up ^ `` China National Symbols
+'' . worldatlast.com. 2015 . Retrieved 2017 - 03 - 28 . Jump up ^ `` China Considers Red - crowned Crane for National Bird '' . www.china.org.cn . Jump up ^ ``
+El cóndor , ave nacional - banrepcultural.org '' . Jump up ^ `` 16 de diciembre : Declaración del yigüirro como ave nacional de Costa Rica '' . Jump up ^ `` El
+Venado Cola Blanca , Símbolo Nacional de la Fauna Silvestre '' . Jump up ^ `` Manatee Now Costa Rica 's New National Symbol '' . QCOSTARICA . Archived from the
+original on 14 September 2014 . Jump up ^ Bousfield , Jonathan ( 2003 ) . Croatia . Rough Guides . p. 72 . ISBN 1843530848 .
+</item 6>
+
+<item 7>
+List of national animals
+Jump up ^ Jon Eldridge . `` Primeval Poland : where the bison roam '' . theguardian.com . Retrieved 2016 - 10 - 10 . Jump up ^ `` Poland '' . allaboutbison.com
+. Retrieved 2016 - 10 - 10 . Jump up ^ Tamra Orr ( 30 June 2008 ) . Qatar . Marshall Cavendish . p. 13 . ISBN 978 - 0 - 7614 - 2566 - 3 . Retrieved 30 July 2011
+. Jump up ^ `` Animalul national - Rasul - Sapte simboluri nationale ale Romaniei mai putin cunoscute '' . 9AM . Jump up ^ `` Birobidjan , Russia Beaverton 's
+sister city since 1990 '' . The City of Beaverton . Retrieved 2017 - 01 - 23 . Jump up ^ `` Rwanda State Symbols , Song , Flag , and More '' . worldatlas.com .
+Retrieved 2013 - 03 - 21 .
+</item 7>
+
+<item 8>
+List of national animals
+ISBN 978 - 0 - 313 - 34498 - 5 . Retrieved 2 January 2012 . Jump up ^ `` 12 countries that have cooler national animals than the United States '' .
+globalpost.com . Retrieved 3 October 2014 . Jump up ^ `` National Animals : The Legendary , Extinct and Imaginary - 8 of 9 '' . abcnews.go.com . Retrieved 2014
+- 10 - 03 . ^ Jump up to : `` Ten Unusual National Animals That Rival the Unicorn - 3 of 10 '' . Retrieved 2017 - 08 - 25 . Jump up ^ Shrestha , Nanda R. ( 2002
+) . Nepal and Bangladesh : a global studies handbook . ABC - CLIO . p. 163 . ISBN 978 - 1 - 57607 - 285 - 1 . Retrieved 1 January 2012 . Jump up ^ `` Galliforms
+and Pheasants '' . Archived from the original on 2007 - 01 - 12 .
+</item 8>
+
+<item 9>
+List of national animals
+Danphe ( national bird ) Lophophorus impejanus Netherlands Lion ( heraldic symbol ) Panthera leo Black - tailed godwit ( national bird ) Limosa limosa New
+Zealand Kiwi Apteryx sp . North Korea Chollima Mythical Norway Lion ( royal national animal ) Panthera leo White - throated dipper ( national bird ) Cinclus
+cinclus Fjord horse ( national horse ) Equus ferus caballus Oman Arabian oryx ( national animal ) Oryx leucoryx Pakistan Markhor ( National animal ) Capra
+falconeri Indus river dolphin ( National aquatic mammal ) Platanista indicus minor minor Chukar ( National bird ) Alectoris chukar Indus crocodile ( National
+reptile ) Crocodylus palustris Shaheen falcon ( Heritage bird ) Falco peregrinus peregrinator Snow leopard ( National predator ) Panthera uncia Panama Harpy
+eagle Harpia harpyja Papua New Guinea Dugong ( national marine mammal ) Dugong dugon Peru Vicuña ( national animal ) Vicugna vicugna Philippines Carabao (
+national animal ) Bubalus bubalis Philippine
+</item 9>
+
+<item 10>
+List of national animals
+Magpie robin ( national bird ) Copsychus saularis Ilish ( national fish ) Tenualosa ilisha Belarus European bison Bison bonasus Belgium Lion ( heraldic Leo
+Belgicus ) Panthera leo Belize Baird 's tapir ( national animal ) Tapirus bairdii Keel - billed toucan ( national bird ) Ramphastos sulfuratus Bhutan Druk
+Mythical Takin Budorcas taxicolor Brazil Rufous - bellied thrush Turdus rufiventris Cambodia Kouprey Bos sauveli Canada North American beaver ( sovereignty
+animal symbol ) Castor canadensis Canadian horse ( national horse ) Equus ferus caballus China Giant panda ( national animal ) Ailuropoda melanoleuca Chinese
+dragon ( national animal ) Mythical Red - crowned crane ( national bird ) Grus japonensis Democratic Republic of the Congo Okapi Okapia johnstoni Colombia
+Andean condor Vultur gryphus Costa Rica Yigüirro ( national bird ) Turdus grayi White - tailed deer ( national animal ) Odocoileus virginianus West Indian
+manatee ( national aquatic animal ) Trichechus manatus Croatia Pine
+</item 10>
+=== END ITEM id=ba4c89af2550bda0 ===
+
+=== ITEM id=67315acbf5bff040 ===
+Gold sentences and facts:
+Sentence 0: In 1910 , in conjunction with advocacy work led by Florence Kelley of the National Consumer League , the Women 's Trade Union League ( WTLU ) of Massachusetts under the leadership of Elizabeth Evans took up the cause of minimum wage legislation in Massachusetts . Over the next two years , a coalition of social reform groups and labor advocates in Boston pushed for minimum wage legislation in the state . In 1912 , Massachusetts passed the first American minimum wage legislation , which established a state commission for recommending non-compulsory minimum wages for women and children . Within eight years , at least thirteen U.S. states and the District of Columbia would pass minimum wage laws , with pressure being placed on state legislatures by the National Consumers League in a coalition with other women 's voluntary associations and organized labor . The United States Supreme Court of the Lochner era consistently invalidated compulsory minimum wage laws . Advocates for these minimum wage laws hoped that they would be upheld under the precedent of Muller v. Oregon , which upheld maximum working hours laws for women on the grounds that women required special protection that men did not . However , the Court did not extend this principle to minimum wage laws , considering the latter as interfering with the ability of employers to freely negotiate wage contracts with employees .
+  Fact 0.0: In 1910, the Women's Trade Union League (WTLU) of Massachusetts, under the leadership of Elizabeth Evans, took up the cause of minimum wage legislation in Massachusetts.
+  Fact 0.1: The 1910 effort was in conjunction with advocacy work led by Florence Kelley of the National Consumer League.
+  Fact 0.2: Over the next two years, a coalition of social reform groups and labor advocates in Boston pushed for minimum wage legislation in the state.
+  Fact 0.3: In 1912, Massachusetts passed the first American minimum wage legislation.
+  Fact 0.4: The 1912 Massachusetts law established a state commission for recommending non-compulsory minimum wages for women and children.
+  Fact 0.5: Within eight years, at least thirteen U.S. states and the District of Columbia would pass minimum wage laws.
+  Fact 0.6: Pressure on state legislatures came from the National Consumers League, in a coalition with other women's voluntary associations and organized labor.
+  Fact 0.7: The United States Supreme Court of the Lochner era consistently invalidated compulsory minimum wage laws.
+  Fact 0.8: Advocates for minimum wage laws hoped they would be upheld under the precedent of Muller v. Oregon.
+  Fact 0.9: Muller v. Oregon upheld maximum working hours laws for women on the grounds that women required special protection that men did not.
+  Fact 0.10: The Court did not extend the Muller v. Oregon principle to minimum wage laws.
+  Fact 0.11: The Court considered minimum wage laws as interfering with the ability of employers to freely negotiate wage contracts with employees.
+Sentence 1: In 1933 , the Roosevelt administration made the first attempt at establishing a national minimum wage , when a $0.25 per hour standard was set as part of the National Industrial Recovery Act . However , in the 1935 court case Schechter Poultry Corp. v. United States ( 295 U.S. 495 ) , the US Supreme Court declared the act unconstitutional , and the minimum wage was abolished . In 1938 , the minimum wage was re-established pursuant to the Fair Labor Standards Act , once again at $0.25 per hour ( $4.78 in 2017 dollars ) . In 1941 , the Supreme Court upheld the Fair Labor Standards Act in United States v. Darby Lumber Co. , holding that Congress had the power under the Commerce Clause to regulate employment conditions .
+  Fact 1.0: In 1933, the Roosevelt administration made the first attempt at establishing a national minimum wage.
+  Fact 1.1: The 1933 minimum wage attempt set a $0.25 per hour standard as part of the National Industrial Recovery Act.
+  Fact 1.2: In the 1935 court case Schechter Poultry Corp. v. United States (295 U.S. 495), the US Supreme Court declared the National Industrial Recovery Act unconstitutional.
+  Fact 1.3: The national minimum wage was abolished after the Schechter Poultry ruling.
+  Fact 1.4: In 1938, the minimum wage was re-established under the Fair Labor Standards Act.
+  Fact 1.5: The 1938 minimum wage was $0.25 per hour.
+  Fact 1.6: The 1938 rate of $0.25 per hour equals $4.78 in 2017 dollars.
+  Fact 1.7: In 1941, the Supreme Court upheld the Fair Labor Standards Act in United States v. Darby Lumber Co.
+  Fact 1.8: In United States v. Darby Lumber Co., the Court held that Congress had the power under the Commerce Clause to regulate employment conditions.
+
+Retrieved items:
+<item 1>
+Minimum wage in the United States
+However , the Court did not extend this principle to minimum wage laws , considering the latter as interfering with the ability of employers to freely negotiate
+wage contracts with employees . In 1933 , the Roosevelt administration made the first attempt at establishing a national minimum wage , when a $0.25 per hour
+standard was set as part of the National Industrial Recovery Act . However , in the 1935 court case Schechter Poultry Corp. v. United States ( 295 U.S. 495 ) ,
+the US Supreme Court declared the act unconstitutional , and the minimum wage was abolished . In 1938 , the minimum wage was re-established pursuant to the Fair
+Labor Standards Act , once again at $0.25 per hour ( $4.78 in 2017 dollars ) . In 1941 , the Supreme Court upheld the Fair Labor Standards Act in United States
+v. Darby Lumber Co. , holding that Congress had the power under the Commerce Clause to regulate employment conditions .
+</item 1>
+
+<item 2>
+Minimum wage in the United States
+Some politicians in the United States have advocated linking the minimum wage to the Consumer Price Index , thereby increasing the wage automatically each year
+based on increases to the Consumer Price Index . So far , Ohio , Oregon , Missouri , Vermont and Washington have linked their minimum wages to the consumer
+price index . Minimum wage indexing also takes place each year in Florida , San Francisco , California , and Santa Fe , New Mexico . The federal minimum wage in
+the United States was reset to its current rate of $7.25 per hour in July 2009 . Some U.S. territories ( such as American Samoa ) are exempt . Some types of
+labor are also exempt : employers may pay tipped labor a minimum of $2.13 per hour , as long as the hour wage plus tip income equals at least the minimum wage .
+Persons under the age of 20 may be paid $4.25 an hour for the first 90 calendar days of employment ( sometimes known as a youth , teen , or training wage )
+unless a higher state minimum exists .
+</item 2>
+
+<item 3>
+Minimum wage in the United States
+Minimum wage in the United States - wikipedia Minimum wage in the United States Jump to : navigation , search Minimum wage by U.S. state and territory , as of
+January 1 , 2018 . Versus the federal rate : Higher Same Lower No state minimum wage law The minimum wage in the United States is set by US labor law and a
+range of state and local laws . Employers generally have to pay workers the highest minimum wage prescribed by federal , state , and local law . Since July 24 ,
+2009 , the federal government has mandated a nationwide minimum wage of $7.25 per hour . As of January 2018 , there were 29 states with a minimum wage higher
+than the federal minimum . From 2017 to 2018 , eight states increased their minimum wage levels through automatic adjustments , while increases in eleven other
+states occurred through referendum or legislative action . Washington has the highest state minimum wage at $11.50 per hour . Using 2017 inflation - adjusted
+dollars , the federal minimum wage peaked at $11.53 per hour in 1968 .
+</item 3>
+
+<item 4>
+Minimum wage in the United States
+From January 1981 to April 1990 , the minimum wage was frozen at $3.35 per hour , then a record - setting minimum wage freeze . From September 1 , 1997 through
+July 23 , 2007 , the federal minimum wage remained constant at $5.15 per hour , breaking the old record . From the United States Department of Labor .
+Employment Standards Administration . Wage and Hour Division , the source page has a clickable US map with current and projected state - by - state minimum wage
+rates for each state . Some government entities , such as counties and cities , observe minimum wages that are higher than the state as a whole . One notable
+example of this is Santa Fe , New Mexico , whose $9.50 per hour minimum wage was the highest in the nation , until San Francisco increased its minimum wage to
+$9.79 in 2009 . Another device to increase wages , living wage ordinances , generally apply only to businesses that are under contract to the local government
+itself . Since 1984 , the purchasing power of the federal minimum wage has decreased .
+</item 4>
+
+<item 5>
+Minimum wage in the United States
+( 1913 ) . `` The Minimum Wage in Great Britain and Australia '' . The Annals of the American Academy of Political and Social Science . 48 : 26 . Jump up ^
+Vivien. , Hart , ( 2001 ) . Bound by Our Constitution : Women , Workers , and the Minimum Wage . Princeton : Princeton University Press . p. 67 . ISBN
+9781400821563 . OCLC 700688619 . Jump up ^ Webb , Sidney ( 1912 ) . `` The Economic Theory of a Legal Minimum Wage '' . Journal of Political Economy. 20 ( 10 )
+: 973 . Jump up ^ Starr , Gerald ( 1993 ) . Minimum wage fixing : an international review of practices and problems ( 2nd impression ( with corrections ) ed . )
+. Geneva : International Labour Office . p. 1 . ISBN 9789221025115 . Jump up ^ Hammond , Matthew B. ( 1913 ) . `` The Minimum Wage in Great Britain and
+Australia '' . The Annals of the American Academy of Political and Social Science .
+</item 5>
+
+<item 6>
+Minimum wage in the United States
+20th century ( edit ) In 1910 , in conjunction with advocacy work led by Florence Kelley of the National Consumer League , the Women 's Trade Union League (
+WTLU ) of Massachusetts under the leadership of Elizabeth Evans took up the cause of minimum wage legislation in Massachusetts . Over the next two years , a
+coalition of social reform groups and labor advocates in Boston pushed for minimum wage legislation in the state . In 1912 , Massachusetts passed the first
+American minimum wage legislation , which established a state commission for recommending non-compulsory minimum wages for women and children . Within eight
+years , at least thirteen U.S. states and the District of Columbia would pass minimum wage laws , with pressure being placed on state legislatures by the
+National Consumers League in a coalition with other women 's voluntary associations and organized labor . The United States Supreme Court of the Lochner era
+consistently invalidated compulsory minimum wage laws . Advocates for these minimum wage laws hoped that they would be upheld under the precedent of Muller v.
+Oregon , which upheld maximum working hours laws for women on the grounds that women required special protection that men did not .
+</item 6>
+
+<item 7>
+Minimum wage in the United States
+, holding that Congress had the power under the Commerce Clause to regulate employment conditions . The 1938 minimum wage law only applied to `` employees
+engaged in interstate commerce or in the production of goods for interstate commerce , '' but in amendments in 1961 and 1966 , the federal minimum wage was
+extended ( with slightly different rates ) to employees in large retail and service enterprises , local transportation and construction , state and local
+government employees , as well as other smaller expansions ; a grandfather clause in 1990 drew most employees into the purview of federal minimum wage policy ,
+which now set the wage at $3.80 . 21st century ( edit ) Legislation ( edit ) Play media An opinion video from the Economic Policy Institute about working for
+the tipped minimum wage of $2.13 per hour . In 2006 , voters in six states ( Arizona , Colorado , Missouri , Montana , Nevada , and Ohio ) approved statewide
+increases in the state minimum wage . The amounts of these increases ranged from $1 to $1.70 per hour and all increases were designed to annually index to
+inflation .
+</item 7>
+
+<item 8>
+Minimum wage in the United States
+May 2006 . Retrieved 2013 - 10 - 06 . ^ Jump up to : `` National Occupational Employment and Wage Estimates United States '' . US Bureau of Labor Statistics .
+May 2008 . Retrieved 2013 - 10 - 06 . Jump up ^ `` National Occupational Employment and Wage Estimates United States '' . US Bureau of Labor Statistics . May
+2009 . Retrieved 2013 - 10 - 06 . External links ( edit ) Minimum wage in the United States at Curlie ( based on DMOZ ) Federal Minimum Wage . United States
+Department of Labor Wage and Hour Division . Minimum Wages for Tipped Employees . United States Department of Labor Wage and Hour Division . History of Federal
+Minimum Wage United States Department of Labor Wage and Hour Division . U.S. Minimum Wage History . Oregon State University -- Wealth and Poverty ( Anth 484 ) .
+Last updated December 26 , 2012 . Maps and charts of minimum wage vs. housing costs - National Low Income Housing Coalition ( advocacy group ) United States
+state - related lists List of states and territories of the United States Demographics
+</item 8>
+
+<item 9>
+Minimum wage in the United States
+The Annals of the American Academy of Political and Social Science . 48 : 27 . Jump up ^ Broda , Rudolf ; United States . Bureau of Labor Statistics ( December
+1928 ) . Minimum Wage Legislation in Various Countries : Bulletin of the United States Bureau of Labor Statistics , No. 467 ( PDF ) . Bulletin of the United
+States Bureau of Labor Statistics . G.P.O. p. 11 . Jump up ^ Jerold L. , , Waltman ( 2000 ) . The politics of the minimum wage . Urbana : University of Illinois
+Press . p. 11 . ISBN 9780252025457 . OCLC 42072067 . Jump up ^ Vivien. , Hart , ( 2001 ) . Bound by Our Constitution : Women , Workers , and the Minimum Wage .
+Princeton : Princeton University Press . p. 63 . ISBN 9781400821563 . OCLC 700688619 . Jump up ^ Vivien. , Hart , ( 2001 ) .
+</item 9>
+
+<item 10>
+Minimum wage in the United States
+Bureau of Labor Statistics '' . Bls.gov . Retrieved 18 October 2017 . Jump up ^ Tritch , Teresa ( March 7 , 2014 ) . `` F.D.R. Makes the Case for the Minimum
+Wage '' . New York Times . Retrieved March 7 , 2014 . Jump up ^ Broda , Rudolf ; United States . Bureau of Labor Statistics ( December 1928 ) . Minimum Wage
+Legislation in Various Countries : Bulletin of the United States Bureau of Labor Statistics , No. 467 ( PDF ) . Bulletin of the United States Bureau of Labor
+Statistics . G.P.O. p. 8 . Jump up ^ Willis J. , Nordlund ( 1997 ) . The quest for a living wage : the history of the federal minimum wage program . Westport ,
+Conn. : Greenwood Press . p. 2 . ISBN 9780313264122 . OCLC 33983425 . Jump up ^ Hammond , Matthew B. ( 1913 ) . `` The Minimum Wage in Great Britain and
+Australia '' .
+</item 10>
+=== END ITEM id=67315acbf5bff040 ===
+
+=== ITEM id=2979b3bfa7853541 ===
+Gold sentences and facts:
+Sentence 0: This was the city of Chicago 's first professional sports championship since the Chicago Fire won MLS Cup ' 98 ( which came four months after the Chicago Bulls ' sixth NBA championship that year ) . The next major Chicago sports championship came in 2010 , when the NHL 's Chicago Blackhawks ended a 49 - year Stanley Cup title drought . With the Chicago Bears ' win in Super Bowl XX and the Chicago Cubs ' own World Series championship in 2016 , all Chicago sports teams have won at least one major championship since 1985 . Meanwhile , the Astros themselves made it back to the World Series in 2017 , but this time as an AL team , where they defeated the Los Angeles Dodgers in seven games , resulting in Houston 's first professional sports championship since the 2006 -- 07 Houston Dynamo won their back - to - back MLS Championships .
+  Fact 0.0: The championship in this context was the first professional sports championship for the city of Chicago since the Chicago Fire won MLS Cup '98.
+  Fact 0.1: The Chicago Fire won MLS Cup '98.
+  Fact 0.2: The Chicago Fire's MLS Cup '98 win came four months after the Chicago Bulls' sixth NBA championship that year.
+  Fact 0.3: The next major Chicago sports championship came in 2010.
+  Fact 0.4: In 2010, the NHL's Chicago Blackhawks ended a 49-year Stanley Cup title drought.
+  Fact 0.5: The Chicago Bears won Super Bowl XX.
+  Fact 0.6: The Chicago Cubs won the World Series in 2016.
+  Fact 0.7: All Chicago sports teams have won at least one major championship since 1985.
+  Fact 0.8: The Astros made it back to the World Series in 2017.
+  Fact 0.9: The Astros were in the 2017 World Series as an American League team.
+  Fact 0.10: In 2017, the Astros defeated the Los Angeles Dodgers in seven games in the World Series.
+  Fact 0.11: The Astros' 2017 World Series win resulted in Houston's first professional sports championship since the 2006-07 Houston Dynamo won their back-to-back MLS Championships.
+  Fact 0.12: The Houston Dynamo won back-to-back MLS Championships in 2006-07.
+Sentence 1: Neither team advanced to the post-season in 2006 , but the 2006 World Series again featured teams from the American League Central and National League Central divisions , this time represented by the Detroit Tigers and the St. Louis Cardinals , respectively . The Cardinals won the World Series in five games , in which manager Tony La Russa became the second manager to win the World Series in both American and National leagues , previously managing the Oakland Athletics to the 1989 World Series championship . Both the White Sox and the Astros were in the Wild Card race until the final weeks of the season , with the White Sox finishing with 90 wins , the Astros with 82 wins . The White Sox made their first post-2005 playoff appearance in 2008 , while the Astros would not return to the postseason until 2015 , their third season as an American League team and would not return to the World Series until 2017 , their fifth season as an American League team .
+  Fact 1.0: Neither team advanced to the post-season in 2006.
+  Fact 1.1: The 2006 World Series again featured teams from the American League Central and National League Central divisions.
+  Fact 1.2: The Detroit Tigers and the St. Louis Cardinals represented the American League Central and the National League Central, respectively, in the 2006 World Series.
+  Fact 1.3: The St. Louis Cardinals won the World Series in five games.
+  Fact 1.4: In the 2006 World Series, manager Tony La Russa became the second manager to win the World Series in both the American and National leagues.
+  Fact 1.5: Tony La Russa had previously managed the Oakland Athletics to the 1989 World Series championship.
+  Fact 1.6: Both the White Sox and the Astros were in the Wild Card race until the final weeks of the season.
+  Fact 1.7: The White Sox finished the season with 90 wins.
+  Fact 1.8: The Astros finished the season with 82 wins.
+  Fact 1.9: The White Sox made their first post-2005 playoff appearance in 2008.
+  Fact 1.10: The Astros would not return to the postseason until 2015, their third season as an American League team.
+  Fact 1.11: The Astros would not return to the World Series until 2017, their fifth season as an American League team.
+
+Retrieved items:
+<item 1>
+Graph query row:
+appearance: 2017 World Series Game 1
+date: None
+opponent: Los Angeles Dodgers
+</item 1>
+
+<item 2>
+2005 World Series
+With the Astros on the verge of clinching their first ever National League pennant in Game 5 , Albert Pujols hit a mammoth three - run home run off Brad Lidge
+in the top of the ninth inning to take the lead , and subsequently stave off elimination . However , behind NLCS MVP Roy Oswalt , the Astros were able to defeat
+the Cards 5 -- 1 in Game 6 and earned a trip to the World Series . This was the Astros ' first World Series appearance in franchise history . Matchups ( edit )
+Game 1 ( edit ) Saturday , October 22 , 2005 7 : 05 pm ( CDT ) at U.S.
+</item 2>
+
+<item 3>
+2017 World Series
+Houston Astros ( edit ) Main article : 2017 Houston Astros season The Astros wore a patch during the 2017 World Series in support of Hurricane Harvey victims in
+Houston With a 101 -- 61 regular season record , the team won its first American League West title since moving from the National League Central starting in its
+2013 season , and their first division title since 2001 . In the American League Division Series , they defeated the Boston Red Sox in four games and then
+defeated the New York Yankees in the American League Championship Series ( ALCS ) in seven games . This was their second World Series appearance and first since
+2005 , when they were swept in four games by the Chicago White Sox . They became the first team in history to make it to the World Series as members of both the
+National League and the American League . The city of Houston in August 2017 suffered record flooding from Hurricane Harvey . The team began to wear patches
+which had the logo of the team with the word `` Strong '' on the bottom of the patch , as well as promoting the hashtag Houston Strong . Manager A.J.
+</item 3>
+
+<item 4>
+Houston Astros
+They finished 101 -- 61 , with a 21 - game lead in the division , and faced the Red Sox in the first round of the AL playoffs . The Astros defeated the Red Sox
+three games to one , and advanced to the American League Championship Series against the New York Yankees . The Astros won the ALCS four games to three , and
+advanced to the World Series to play against the Los Angeles Dodgers . The Astros defeated the Dodgers in the deciding seventh game of the World Series ,
+winning the first championship in franchise history . The city of Houston celebrated the team 's accomplishment with a parade on the afternoon of November 3 ,
+2017 . Houston 's Independent School District gave the students and teachers the day off to watch the parade . On November 16 , 2017 Jose Altuve was named the
+American League Most Valuable Player , capping off a historic season in which he accumulated 200 hits for the fourth consecutive season , led the majors with a
+. 346 BA , and was the unquestioned clubhouse leader of the World Series Champions .
+</item 4>
+
+<item 5>
+2017 World Series
+Contents ( hide ) 1 Background 1.1 Los Angeles Dodgers 1.2 Houston Astros 2 Summary 3 Pre-game ceremonies 4 Game summaries 4.1 Game 1 4.2 Game 2 4.3 Game 3 4.4
+Game 4 4.5 Game 5 4.6 Game 6 4.7 Game 7 4.8 Composite line score 5 Broadcasting 5.1 Television 5.1. 1 Ratings 5.2 Radio 6 Sponsorship 7 See also 8 Notes 9
+References 10 External links Background ( edit ) This was the first World Series matchup , and second postseason meeting overall , between the Astros and
+Dodgers . Los Angeles defeated Houston in the 1981 National League Division Series in five games en route to its World Series championship that year . The teams
+also met in the 1980 National League West tie - breaker game . This was the first Fall Classic since 1970 , and the eighth overall , in which both participants
+had 100 or more wins during the regular season .
+</item 5>
+
+<item 6>
+Houston Astros
+Cellular Field in Chicago and the final two in Houston . Game 3 marked the first World Series game held in the state of Texas , and was the longest game in
+World Series history , lasting 5 hours and 41 minutes . This World Series was marked by a controversy involving the Minute Maid Park roof . MLB & Commissioner
+Bud Selig insisted that the Astros must play with the roof open which mitigated the intensity and enthusiasm of the cheering Astros fans . 2006 -- 2010 : the
+decline ( edit ) In the 2006 offseason , the team signed Preston Wilson and moved Berkman to first base , ending the long tenure of Jeff Bagwell . The Astros
+renewed the contract with Clemens and traded two minor league prospects to the Tampa Bay Devil Rays for left - handed hitter Aubrey Huff . By August , Preston
+Wilson complained about his playing time after the return of Luke Scott from AAA Round Rock . The Astros released Wilson and he was signed by St. Louis . A
+dramatic season end included wins in 10 of their last 12 games , but the Astros missed a playoff appearance when they lost the final game of the season to the
+Atlanta Braves .
+</item 6>
+
+<item 7>
+2017 World Series
+Morton pitched four innings of relief to earn the win , as Corey Seager grounded out to José Altuve , who threw to Yuli Gurriel to end the game , series ,
+baseball season , with the Astros winning their first championship in franchise history , and ending their 56 - year drought . The Astros became the third
+consecutive road team to win a World Series Game 7 as well as the fourth consecutive team to end a World Series on the road ( after the 2014 Giants , 2015
+Royals and 2016 Cubs ) . They also became just the second team to win a seven game League Championship Series and a seven game World Series in the same year ,
+following the 1985 Kansas City Royals . Springer won the World Series MVP Award . Composite line score ( edit ) 2017 World Series ( 4 -- 3 ) : Houston Astros
+beat Los Angeles Dodgers .
+</item 7>
+
+<item 8>
+2017 World Series
+Team 5 6 7 8 9 10 11 Houston Astros 7 5 34 56 Los Angeles Dodgers 0 9 8 34 47 Home runs : HOU : George Springer ( 5 ) , José Altuve ( 2 ) , Alex Bregman ( 2 ) ,
+Carlos Correa ( 2 ) , Yuli Gurriel ( 2 ) , Marwin González ( 1 ) , Brian McCann ( 1 ) LAD : Joc Pederson ( 3 ) , Yasiel Puig ( 2 ) , Cody Bellinger ( 1 ) ,
+Charlie Culberson ( 1 ) , Corey Seager ( 1 ) , Chris Taylor ( 1 ) , Justin Turner ( 1 ) Total attendance : 346,702 Average attendance : 49,529 Winning player 's
+share : $438,901.57 . Losing player 's share : $259,722.14 .
+</item 8>
+
+<item 9>
+Houston Astros
+Louis , but would win the next three games , with Roy Oswalt getting the win . Though the Astros were poised to close out the series in Game Five in Houston ,
+Brad Lidge gave up a monstrous two - out three - run home run to Albert Pujols , forcing the series to a sixth game in St. Louis , where the Astros clinched a
+World Series appearance . Roy Oswalt was named NLCS MVP , having gone 2 -- 0 with a 1.29 ERA in the series . Current honorary NL President William Y. Giles
+presented the league champion Astros with the Warren C. Giles Trophy . Warren Giles , William 's father and President of the National League from 1951 to 1969 ,
+had awarded an MLB franchise to the city of Houston in 1960 . The Astros faced the Chicago White Sox in the World Series . Chicago had been considered the
+slight favorite but would win all four games , the first two at U.S. Cellular Field in Chicago and the final two in Houston .
+</item 9>
+
+<item 10>
+2005 World Series
+The Astros were attempting to become the fourth consecutive wild card team to win the Series , following the Anaheim Angels ( 2002 ) , Florida Marlins ( 2003 )
+and Boston Red Sox ( 2004 ) . Both teams were attempting to overcome decades of disappointment , with a combined 132 years between the two teams without a title
+. The Astros were making their first Series appearance in 44 years of play , while the White Sox had waited exactly twice as long for a title , having last won
+the Series in 1917 , and had not been in the Series since 1959 , three years before the Astros ' inaugural season . Like the 1982 World Series between the St.
+Louis Cardinals and the Milwaukee Brewers , the 2005 World Series is one of only two World Series in the modern era ( 1903 -- present ) with no possibility for
+a rematch between the two opponents , because the Astros moved to the American League in 2013 . However , the Brewers did meet the Cardinals in the 2011
+National League Championship Series .
+</item 10>
+=== END ITEM id=2979b3bfa7853541 ===
+
+=== ITEM id=fe9d7c5eb921197f ===
+Gold sentences and facts:
+Sentence 0: For thousands of years , seawater pearls were retrieved by divers in the Indian Ocean in areas such as the Persian Gulf , the Red Sea and the Gulf of Mannar . Evidence also suggest a prehistoric origin to pearl diving in these regions . Starting in the Han Dynasty ( 206 BC -- 220 AD ) , the Chinese hunted extensively for seawater pearls in the South China Sea . In the 14th - century Arabian Sea , the traveller Ibn Battuta provided the earliest known description of pearl diving by means of attaching a cord to the diver 's waist .
+  Fact 0.0: For thousands of years, seawater pearls were retrieved by divers in the Indian Ocean.
+  Fact 0.1: Seawater pearls were retrieved by divers in the Persian Gulf.
+  Fact 0.2: Seawater pearls were retrieved by divers in the Red Sea.
+  Fact 0.3: Seawater pearls were retrieved by divers in the Gulf of Mannar.
+  Fact 0.4: Evidence suggests a prehistoric origin to pearl diving in the Persian Gulf, the Red Sea and the Gulf of Mannar.
+  Fact 0.5: Starting in the Han Dynasty (206 BC to 220 AD), the Chinese hunted extensively for seawater pearls in the South China Sea.
+  Fact 0.6: In the 14th-century Arabian Sea, the traveller Ibn Battuta provided the earliest known description of pearl diving.
+  Fact 0.7: Ibn Battuta's description of pearl diving involved attaching a cord to the diver's waist.
+
+Retrieved items:
+<item 1>
+Pearl
+1 British Isles 7.2 Pearl farming 8 Timeline of pearl production 9 Freshwater pearl farming 10 Momme weight 11 In jewelry 11.1 Gallery 11.2 Shapes 11.3 Lengths
+of pearl necklaces 11.4 Colors 12 Religious references 12.1 Hindu scriptures 12.2 Hebrew scriptures 12.3 New Testament scriptures 12.4 Islamic scriptures 12.5
+Additional references 13 See also 14 References 15 External links Etymology ( edit ) The English word pearl comes from the French perle , originally from the
+Latin perna meaning leg , after the ham - or mutton leg - shaped bivalve . Definition ( edit ) A black pearl and a shell of the black - lipped pearl oyster .
+The iridescent colors originate from nacre layers . All shelled mollusks can , by natural processes , produce some kind of `` pearl '' when an irritating
+microscopic object becomes trapped within its mantle folds , but the great majority of these `` pearls '' are not valued as gemstones .
+</item 1>
+
+<item 2>
+Pearl
+August 13 , 2013 . Archived from the original on February 21 , 2014 . Jump up ^ Kunz , George F. ; Stevenson , Charles ( 1908 ) . The book of the pearl . New
+York : The Century Co. p. 412 . Archived from the original on May 14 , 2016 . Jump up ^ Kunz , George F. ; Stevenson , Charles ( 1908 ) . The book of the pearl
+. New York : The Century Co. p. 350 . Archived from the original on May 14 , 2016 . External links ( edit ) Wikimedia Commons has media related to : Pearl (
+category ) Wikisource has the text of the 1921 Collier 's Encyclopedia article Pearl . The History of Pearls . PBS Pearl History Special . Recover the major
+pearl produce country by aquaculture in UAE ( Japanese page with English narration ) Jewellery Forms Anklet Barrette Belt buckle Belly chain Bindi Bolo tie
+Bracelet Brooch Chatelaine Collar pin Crown Cufflink Earring Ferronnière Lapel pin Necklace Pectoral Pendant Ring Tiara Tie
+</item 2>
+
+<item 3>
+Pearl
+It is a naturally occurring , non-nacreous , calcareous concretion ( pearl ) from a giant clam . Because it did not grow in a pearl oyster it is not pearly ;
+instead the surface is glossy like porcelain . Other pearls from giant clams are known to exist , but this is a particularly large one weighing 14 lb ( 6.4 kg )
+. The largest known pearl ( also from a giant clam ) was found in the Philippines as well by a fisherman from Puerto Princesa , Palawan Island . The enormous
+pearl is 30 cm wide ( 1 ft ) , 67 cm long ( 2.2 ft ) and weighs 75 lb ( 34 kg ) . History ( edit ) Pearl hunting ( edit ) Main article : Pearl hunting A 14th -
+century piece of clothing used by Kuwaiti divers searching for pearls in the Persian Gulf The ancient chronicle Mahavamsa mentions of the thriving pearl
+industry in the port of Oruwella in the Gulf of Mannar in Sri Lanka .
+</item 3>
+
+<item 4>
+Pearl
+Australia also has one of the world 's last remaining fleets of pearl diving ships . Australian pearl divers dive for south sea pearl oysters to be used in the
+cultured south sea pearl industry . The catch of pearl oysters is similar to the numbers of oysters taken during the natural pearl days . Hence significant
+numbers of natural pearls are still found in the Australian Indian Ocean waters from wild oysters . X-ray examination is required to positively verify natural
+pearls found today . Types of cultured pearls ( edit ) A blister pearl , a half - sphere , formed flush against the shell of the pearl oyster . Keshi pearls ,
+although they often occur by chance , are not considered natural . They are a byproduct of the culturing process , and hence do not happen without human
+intervention . They are quite small , typically only a few millimeters . Keshi pearls are produced by many different types of marine mollusks and freshwater
+mussels in China . Keshi pearls are actually a mistake in the cultured pearl seeding process . In seeding the cultured pearl , a piece of mantle muscle from a
+sacrificed oyster is placed with a bead of mother of pearl within the oyster .
+</item 4>
+
+<item 5>
+Pearl
+Prized for their exquisitely beautiful ' orient ' or lustre , South Sea pearls are now farmed in various parts of the world where the Pinctada maxima oysters
+can be found , with the finest South Sea pearls being produced by Paspaley along the remote coastline of North - Western Australia . White and silver colored
+South Sea pearls tend to come from the Broome area of Australia , while golden colored ones are more prevalent in the Philippines and Indonesia . A farm in the
+Gulf of California , Mexico , is culturing pearls from the black lipped Pinctada mazatlanica oysters and the rainbow lipped Pteria sterna oysters . Also called
+Concha Nácar , the pearls from these rainbow lipped oysters fluoresce red under ultraviolet light . From other species ( edit ) A shell of the Indian volute ,
+Melo melo , surrounded by a number of pearls from this species Conch pearl pendant Biologically speaking , under the right set of circumstances , almost any
+shelled mollusk can produce some kind of pearl . However , most of these molluskan pearls have no luster or iridescence .
+</item 5>
+
+<item 6>
+Pearl
+Jump up ^ Senaveratna , John M ( 1930 ) . The story of the Sinhalese : From the most ancient times up to the end of `` The Mahavasna '' , or great dynasty ;
+Vijaya to Maha Sena ( B.C. 543 to A.D. 302 ) . W.M.A. Wahid . pp. 16 -- 9 , 46,130,144 -- 8,161 -- 3,213 . ASIN B000874SS0 . ISBN 9788120612716 . Archived from
+the original on December 20 , 2017 . Jump up ^ Kunz , George F. ; Stevenson , Charles ( 1908 ) . The book of the pearl . New York : The Century Co. p. 2 .
+Archived from the original on May 14 , 2016 . Jump up ^ R. Raghu Prasad and P.V. Ramachandran Nair ( 1973 ) . `` India and the Indian Ocean Fisheries '' ( PDF )
+. Journal of the Marine Biological Association of India .
+</item 6>
+
+<item 7>
+Pearl
+It also records that eight varieties of pearls accompanied Prince Vijaya 's embassy to the Pandyan king as well as king Devanampiya Tissa 's embassy to Emperor
+Ashoka . Pliny the Elder ( 23 -- 79AD ) praised the pearl fishery of the Gulf as most productive in the world . For thousands of years , seawater pearls were
+retrieved by divers in the Indian Ocean in areas such as the Persian Gulf , the Red Sea and the Gulf of Mannar . Evidence also suggest a prehistoric origin to
+pearl diving in these regions . Starting in the Han Dynasty ( 206 BC -- 220 AD ) , the Chinese hunted extensively for seawater pearls in the South China Sea .
+In the 14th - century Arabian Sea , the traveller Ibn Battuta provided the earliest known description of pearl diving by means of attaching a cord to the diver
+'s waist . Catching of pearls , Bern Physiologus ( 9th century ) When Spanish conquistadors arrived in the Western Hemisphere , they discovered that around the
+islands of Cubagua and Margarita , some 200 km north of the Venezuelan coast , was an extensive pearl bed ( a bed of pearl oysters ) .
+</item 7>
+
+<item 8>
+Pearl
+Pearls of abalone , or pāua , are mabe pearls , or blister pearls , unique to New Zealand waters and are commonly referred to as ' blue pearls ' . They are
+admired for their incredible luster and naturally bright vibrant colors that are often compared to opal . Another example is the conch pearl ( sometimes
+referred to simply as the ' pink pearl ' ) , which is found very rarely growing between the mantle and the shell of the queen conch or pink conch , Strombus
+gigas , a large sea snail or marine gastropod from the Caribbean Sea . These pearls , which are often pink in color , are a by - product of the conch fishing
+industry , and the best of them display a shimmering optical effect related to chatoyance known as ' flame structure ' . Somewhat similar gastropod pearls ,
+this time more orange in hue , are ( again very rarely ) found in the horse conch Pleuroploca gigantea . The second largest pearl known was found in the
+Philippines in 1934 and is known as the Pearl of Lao Tzu .
+</item 8>
+
+<item 9>
+Pearl
+Journal of the Marine Biological Association of India . 15 : 1 -- 19 . Archived ( PDF ) from the original on July 18 , 2011 . Jump up ^ Arnold Wright ( 1999 ) .
+Twentieth century impressions of Ceylon : its history , people , commerce , industries , and resources . p. 227 . ISBN 81 - 206 - 1335 - X . Archived from the
+original on January 18 , 2017 . Jump up ^ James Hornell ( 2009 ) . The Indian Pearl Fisheries of the Gulf of Manar and Palk Bay . BiblioBazaar . p. 6 . ISBN 1 -
+110 - 87096 - 5 . Archived from the original on January 18 , 2017 . Jump up ^ De Silva , K.M. ( 1995 ) . Volume 2 of History of Ceylon , History of Ceylon :
+History of Sri Lanka . Peradeniya : Ceylon University Press . p. 56 . ISBN 955 - 589 - 004 - 8 .
+</item 9>
+
+<item 10>
+Pearl
+While white , and more recently black , saltwater pearls are by far the most popular , other color tints can be found on pearls from the oceans . Pink , blue ,
+champagne , green , black and even purple saltwater pearls can be encountered , but to collect enough of these rare colors to form a complete string of the same
+size and same shade can take years . Religious references ( edit ) This section needs additional citations for verification . Please help improve this article
+by adding citations to reliable sources . Unsourced material may be challenged and removed . ( March 2018 ) ( Learn how and when to remove this template message
+) Hindu scriptures ( edit ) The Hindu tradition describes the sacred Nine Pearls which were first documented in the Garuda Purana , one of the books of the
+Hindu mythology . Ayurveda contains references to pearl powder as a stimulant of digestion and to treat mental ailments . According to Marco Polo , the kings of
+Malabar wore a necklace of 104 rubies and pearls which was given from one generation of kings to the next . The reason was that every king had to say 104
+prayers every morning and every evening .
+</item 10>
+=== END ITEM id=fe9d7c5eb921197f ===
+
+=== ITEM id=4c5c5c426f7726f7 ===
+Gold sentences and facts:
+Sentence 0: Sport Men Women Total Cross-country skiing 0 Total 0
+  Fact 0.0: The table has columns for Sport, Men, Women and Total.
+  Fact 0.1: The table lists Cross-country skiing as a sport.
+  Fact 0.2: The table lists a total of 0 for Cross-country skiing.
+  Fact 0.3: The table lists a grand total of 0.
+Sentence 1: Bermuda competed at the 2018 Winter Olympics in Pyeongchang , South Korea , from 9 to 25 February 2018 , with one competitor . This was the nation sixth appearance in the Winter Olympics .
+  Fact 1.0: Bermuda competed at the 2018 Winter Olympics.
+  Fact 1.1: The 2018 Winter Olympics were held in Pyeongchang, South Korea.
+  Fact 1.2: Bermuda competed from 9 to 25 February 2018.
+  Fact 1.3: Bermuda had one competitor at the 2018 Winter Olympics.
+  Fact 1.4: The 2018 Winter Olympics was Bermuda's sixth appearance in the Winter Olympics.
+
+Retrieved items:
+<item 1>
+2018 Winter Olympics
+Poland Portugal Puerto Rico Romania San Marino Serbia Singapore Slovakia Slovenia South Africa South Korea ( host ) Spain Sweden Switzerland Chinese Taipei
+Thailand Timor - Leste Togo Turkey Ukraine United States Uzbekistan Calendar ( edit ) All dates are KST ( UTC + 9 ) OC Opening ceremony Event competitions Event
+finals EG Exhibition gala CC Closing ceremony February 8th Thu 9th Fri 10th Sat 11th Sun 12th Mon 13th Tue 14th Wed 15th Thu 16th Fri 17th Sat 18th Sun 19th Mon
+20th Tue 21st Wed 22nd Thu 23rd Fri 24th Sat 25th Sun Events Ceremonies OC CC N / A Alpine skiing 11 Biathlon 11 Bobsleigh Cross country skiing 12 Curling
+Figure skating EG 5 Freestyle skiing 10 Ice hockey Luge Nordic combined Short track speed skating 8 Skeleton Ski jumping Snowboarding 10 Speed skating 14 Total
+events 5 7 8 8 6 7 5 9 6 5 7 8 6 8 102 Cumulative total 5 12 20 28 34 41 46 55
+</item 1>
+
+<item 2>
+2018 Winter Olympics
+Mexico Peru Puerto Rico United States Asia China Hong Kong India Iran Japan Kazakhstan Kyrgyzstan Lebanon Malaysia Mongolia North Korea Pakistan Philippines
+Singapore South Korea Chinese Taipei Thailand Timor - Leste Uzbekistan Europe Albania Andorra Armenia Austria Azerbaijan Belarus Belgium Bosnia and Herzegovina
+Bulgaria Croatia Cyprus Czech Republic Denmark Estonia Finland France Georgia Germany Great Britain Greece Hungary Iceland Ireland Israel Italy Kosovo Latvia
+Liechtenstein Lithuania Luxembourg Macedonia Malta Moldova Monaco Montenegro Netherlands Norway Poland Portugal Romania San Marino Serbia Slovakia Slovenia
+Spain Sweden Switzerland Turkey Ukraine Oceania Australia New Zealand Other Olympic Athletes from Russia Venues of the 2018 Winter Olympics Pyeongchang Mountain
+Cluster Alpensia Biathlon Centre Cross-Country Centre Ski Jumping Centre Convention Centre IBC Alpensia Sliding Centre Yongpyong Alpine Centre Pyeongchang
+Olympic Stadium Pyeongchang Olympic Village Bokwang Phoenix Park Stand - alone venues : Jeongseon Alpine Centre Phoenix Snow Park Gangneung Coastal Cluster
+Gangneung Olympic Park Gangneung Curling Centre Gangneung Hockey Centre Gangneung Ice Arena Gangneung Oval Kwandong Hockey Centre Gangneung Olympic Village
+Italics indicate non-competition venues .
+</item 2>
+
+<item 3>
+2018 Winter Olympics
+Numbers in parentheses indicate the number of medal events contested in each sports discipline . Alpine skiing ( 11 ) ( details ) Biathlon ( 11 ) ( details )
+Bobsleigh ( 3 ) ( details ) Cross-country skiing ( 12 ) ( details ) Curling ( 3 ) ( details ) Figure skating ( 5 ) ( details ) Freestyle skiing ( 10 ) ( details
+) Ice hockey ( 2 ) ( details ) Luge ( 4 ) ( details ) Nordic combined ( 3 ) ( details ) Short track speed skating ( 8 ) ( details ) Skeleton ( 2 ) ( details )
+Ski jumping ( 4 ) ( details ) Snowboarding ( 10 ) ( details ) Speed skating ( 14 ) ( details ) Participating national Olympic committees ( edit ) A total of 90
+teams have qualified at least one athlete so far ( 89 nations , and the delegation from Russia which will compete under the IOC flag ) . Ecuador , Eritrea ,
+Kosovo , Malaysia , and Singapore are scheduled to make their Winter Olympics debut if they decide to participate .
+</item 3>
+
+<item 4>
+Bermuda at the 2018 Winter Olympics
+Nations at the 2018 Winter Olympics in Pyeongchang , South Korea Africa Eritrea Ghana Kenya Madagascar Morocco Nigeria South Africa Togo Americas Argentina
+Bermuda Bolivia Brazil Canada Chile Colombia Ecuador Jamaica Mexico Puerto Rico United States Asia China East Timor Hong Kong India Iran Japan Kazakhstan
+Kyrgyzstan Lebanon Malaysia Mongolia North Korea Pakistan Philippines Singapore South Korea Chinese Taipei Thailand Uzbekistan Europe Albania Andorra Armenia
+Austria Azerbaijan Belarus Belgium Bosnia and Herzegovina Bulgaria Croatia Cyprus Czech Republic Denmark Estonia Finland France Georgia Germany Great Britain
+Greece Hungary Iceland Ireland Israel Italy Kosovo Latvia Liechtenstein Lithuania Luxembourg Macedonia Malta Moldova Monaco Montenegro Netherlands Norway Poland
+Portugal Romania San Marino Serbia Slovakia Slovenia Spain Sweden Switzerland Turkey Ukraine Oceania Australia New Zealand Tonga Other Korea Olympic Athletes
+from Russia Bermuda at the Olympics Summer Olympic Games 1936 1948 1952 1956 1960 1964 1968 1972 1976 1980 1984 1992 2000 2008 2012 2016 Winter Olympic Games
+1992 1994 1998 2002 2006 2014 2018 Bermuda did not participate in 1980 due to a boycott .
+</item 4>
+
+<item 5>
+Bermuda at the 2018 Winter Olympics
+12 December 2017 . Retrieved 16 December 2017 . Jump up ^ `` Tucker Murphy Competes In Skiing In Iceland '' . Bernews. Hamilton , Bermuda . 14 May 2017 .
+Retrieved 16 December 2017 .
+</item 5>
+
+<item 6>
+2018 Winter Olympics
+The Gangneung Olympic Park will include the following four venues : Gangneung Hockey Centre -- ice hockey ( men competition ) Gangneung Curling Centre --
+curling Gangneung Oval -- speed skating Gangneung Ice Arena -- short track speed skating and figure skating In addition , a stand - alone venue is located on
+the grounds of Catholic Kwandong University : Kwandong Hockey Centre -- ice hockey ( women competition ) Sports ( edit ) The 2018 Winter Olympics will feature
+102 events in 15 sports . Four new disciplines in existing sports will be introduced in Pyeongchang , including big air snowboarding , mixed doubles curling ,
+mass start speed skating , and mixed team alpine skiing . For the first time since 1998 , the National Hockey League will not provide accommodations ( including
+a break in the season for all teams during the Olympics ) to allow its players to participate in the men 's ice hockey tournament . The NHL 's decision stemmed
+from their demands that the IOC cover the cost of insuring the NHL players who participate in the Games .
+</item 6>
+
+<item 7>
+Bermuda at the 2018 Winter Olympics
+Bermuda at the 2018 Winter Olympics - wikipedia Bermuda at the 2018 Winter Olympics Jump to : navigation , search Bermuda at the 2018 Winter Olympics Flag of
+Bermuda IOC code BER NOC Bermuda Olympic Association Website www.olympics.bm in Pyeongchang , South Korea 9 -- 25 February 2018 Competitors 1 in 1 sport Flag
+bearer Tucker Murphy Medals Gold 0 Silver 0 Bronze 0 Total 0 Winter Olympics appearances ( overview ) 1992 1994 1998 2002 2006 2014 2018 Bermuda competed at the
+2018 Winter Olympics in Pyeongchang , South Korea , from 9 to 25 February 2018 , with one competitor . This was the nation sixth appearance in the Winter
+Olympics . Contents ( hide ) 1 Competitors 2 Cross-country skiing 3 See also 4 References Competitors ( edit ) The following is the list of number of
+competitors participating in the delegation per sport .
+</item 7>
+
+<item 8>
+Bermuda at the 2018 Winter Olympics
+Retrieved from `` https://en.wikipedia.org/w/index.php?title=Bermuda_at_the_2018_Winter_Olympics&oldid=827912272 '' Categories : Nations at the 2018 Winter
+Olympics Bermuda at the Winter Olympics by year 2018 in Bermuda Hidden categories : Use dmy dates from February 2018 Use British English from February 2018 Talk
+Contents About Wikipedia Azərbaycanca Dansk Deutsch Eesti Español Français 한국어 हिन्दी Italiano Nederlands 日本 語 Norsk Polski Português Русский Suomi Svenska
+Українська 中文 10 more Edit links This page was last edited on 27 February 2018 , at 13 : 44 . Text is available under the Creative Commons Attribution -
+ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark
+of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 8>
+
+<item 9>
+2018 Winter Olympics
+Moritz 1952 Oslo 1956 Cortina d'Ampezzo 1960 Squaw Valley 1964 Innsbruck 1968 Grenoble 1972 Sapporo 1976 Innsbruck 1980 Lake Placid 1984 Sarajevo 1988 Calgary
+1992 Albertville 1994 Lillehammer 1998 Nagano 2002 Salt Lake City 2006 Turin 2010 Vancouver 2014 Sochi 2018 Pyeongchang 2022 Beijing 2026 TBD 2030 TBD Ancient
+Olympic Games Intercalated Games 1906 Paralympic Games Youth Olympic Games Events at the 2018 Winter Olympics ( PyeongChang , South Korea ) Alpine skiing
+Biathlon Bobsleigh Cross-country skiing Curling Figure skating Freestyle skiing Ice hockey men women Luge Nordic combined Short track speed skating Skeleton Ski
+jumping Snowboarding Speed skating Nations at the 2018 Winter Olympics in Pyeongchang , South Korea Africa Eritrea Kenya Madagascar Morocco South Africa Togo
+Americas Argentina Bermuda Bolivia Brazil Canada Chile Colombia Dominica Ecuador Mexico Peru Puerto Rico United States Asia China Hong Kong India Iran Japan
+Kazakhstan Kyrgyzstan Lebanon Malaysia Mongolia
+</item 9>
+
+<item 10>
+Bermuda at the 2018 Winter Olympics
+Sport Men Women Total Cross-country skiing 0 Total 0 Cross-country Skiing ( edit ) Main articles : Cross-country skiing at the 2018 Winter Olympics and
+Cross-country skiing at the 2018 Winter Olympics -- Qualification Bermuda qualified one male athlete , Tucker Murphy . Murphy will be making his third straight
+appearance at the Winter Olympics . Distance Athlete Event Final Time Deficit Rank Tucker Murphy Men 's 15 km freestyle 43 : 05.7 + 9 : 21.8 104 See also ( edit
+) Bermuda at the 2018 Commonwealth Games References ( edit ) Jump up ^ `` Opening Ceremony Flagbearers - Olympic Winter Games , PyeongChang 2018 '' ( PDF ) .
+olympic.org . International Olympic Committee ( IOC ) . 9 February 2018 . Retrieved 10 February 2018 . Jump up ^ `` Cross-country Skiing Quota List for Olympic
+Games 2018 '' . www.data.fis-ski.com/ . International Ski Federation ( FIS ) . 12 December 2017 . Retrieved 16 December 2017 .
+</item 10>
+=== END ITEM id=4c5c5c426f7726f7 ===

@@ -1,0 +1,267 @@
+[
+ {
+  "id": "a047-6c83344732b43510",
+  "facts": [
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a128-fdaeff2237b6a965",
+  "facts": [
+   {
+    "fact": "2.3",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a081-aa6f511794a55af0",
+  "facts": [
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a090-cdb914ed738d48f4",
+  "facts": [
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "John Alan Lasseter (born January 12, 1957) is an American animator"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a102-403c213f13ffd184",
+  "facts": [
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Cyrtanthus is a genus of perennial, herbaceous and bulbous plants"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a013-0ae1507504a2b012",
+  "facts": [
+   {
+    "fact": "0.4",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a023-e1270e3b27ca7b29",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Then, on October 17, the U.S. will travel to GEODIS Park in Nashville, Tennessee for a friendly against Ghana."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a087-4b37e0035ad5471b",
+  "facts": [
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Vladimir Igorevich Arnold (alternative spelling Arnol'd, Russian: Влади́мир И́горевич Арно́льд , 12 June 1937 – 3 June 2010)"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a097-de77bfe23b2f35df",
+  "facts": [
+   {
+    "fact": "2.3",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a039-29501e97520624e7",
+  "facts": [
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a103-ef2a6ee1256867b8",
+  "facts": [
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Anatoly Vasilyevich Lunacharsky (Russian: Анато́лий Васи́льевич Лунача́рский , , 23 November [O.S. 11 November] 1875"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a109-8a87cd303087b0b2",
+  "facts": [
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The name Sennenhund refers to people called \"Senn\", herders in the Appenzell region of Switzerland."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a069-49c9f6a788b34fd7",
+  "facts": [
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Although called a \"city\", Qionghai refers to a large land area in Hainan"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a129-a32b7c9ed03b5f76",
+  "facts": [
+   {
+    "fact": "1.2",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a118-d0f537a77dc4da2f",
+  "facts": [
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Rosyth Dockyard is a large naval dockyard on the Firth of Forth at Rosyth, Fife, Scotland, owned by Babcock Marine, which formerly undertook refitting of Royal Navy surface vessels and submarines."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a037-fc659cd00c655b37",
+  "facts": [
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Amazon tumbled 4 per cent after the Federal Trade Commission and 17 state attorneys general filed an antitrust lawsuit against it."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a017-53db8553aaa4dc86",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a071-1ec3a90468813680",
+  "facts": [
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The Mountain West Conference (MW) is one of the collegiate athletic conferences affiliated with the National Collegiate Athletic Association (NCAA) Division I"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a005-01a4cdd6887b3c41",
+  "facts": [
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a108-f585a6ff68a099b5",
+  "facts": [
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "TD Garden, often called Boston Garden and \"The Garden\", is a multi-purpose arena in Boston, Massachusetts."
+     }
+    ]
+   }
+  ]
+ }
+]

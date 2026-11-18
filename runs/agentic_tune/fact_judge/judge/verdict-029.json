@@ -1,0 +1,25 @@
+[
+{"id": "b36c095bb6272d64", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "You can find value in player and team props by gathering information from multiple sources"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "or an over/under bet on the total number of points the team will score in the game."}]}
+]},
+{"id": "b15fd0082d2ba2bb", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "As such, they’re never going to replace the need for reducing emissions of CO 2 and other greenhouse gases."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "As such, they’re never going to replace the need for reducing emissions of CO 2 and other greenhouse gases."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []}
+]},
+{"id": "d77f96c4882ba7bd", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]}
+]

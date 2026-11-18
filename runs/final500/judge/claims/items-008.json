@@ -1,0 +1,78 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5ab28120554299449642c8cc",
+   "sentences": [
+    "The Silent Historian (original title: \"Het zwijgen van Loe de Jong [The Silence of Loe de Jong]\") is a 2011 Dutch documentary film by Simonka de Jong, shown as part of the January 2012 New York Jewish Film Festival, presented in partnership with Jewish Museum and Film Society of Lincoln Center.",
+    "The Betrayal — Nerakhoon is a 2008 documentary film directed by Ellen Kuras and Thavisouk Phrasavath."
+   ]
+  },
+  {
+   "id": "multihop-rag-1916",
+   "sentences": [
+    "Microsoft also has a stripped-down Elite Series 2 “Core” version for $129.99, which is the same controller in white-and-black, red-and-black, or blue-and-black finishes without the rear paddles, accessory charging case, or extra stick toppers and D-pad.",
+    "While these models are still quite new, versions that actual humans buy have begun receiving discounts."
+   ]
+  },
+  {
+   "id": "5abd0d635542992ac4f381b8",
+   "sentences": [
+    " For almost 20 years, it held the record for selling 2 million copies in the UK in the fastest time, doing so in 42 days; in 2015, Adele surpassed the record when her album \"25\" took just 29 days to reach the landmark.",
+    " At the 51st Grammy Awards in 2009, Adele received the awards for Best New Artist and Best Female Pop Vocal Performance."
+   ]
+  },
+  {
+   "id": "-6591614197125818072",
+   "sentences": [
+    "John Brown 's raid on Harper 's Ferry ( also known as John Brown 's raid or The raid on Harper 's Ferry ) was an effort by armed abolitionist John Brown to initiate an armed slave revolt in 1859 by taking over a United States arsenal at Harpers Ferry , Virginia . Brown 's party of 22 was defeated by a company of U.S. Marines , led by First Lieutenant Israel Greene . Colonel Robert E. Lee was in overall command of the operation to retake the arsenal . John Brown had originally asked Harriet Tubman and Frederick Douglass , both of whom he had met in his transformative years as an abolitionist in Springfield , Massachusetts , to join him in his raid , but Tubman was prevented by illness and Douglass declined , as he believed Brown 's plan would fail .",
+    "By 3 : 30 that afternoon , President James Buchanan ordered a company of U.S. Marines ( the only government troops in the immediate area ) to march on Harpers Ferry under the command of Brevet Colonel Robert E. Lee , lieutenant colonel of the 2nd U.S. Cavalry Regiment. Lee had been on leave from his regiment , stationed in Texas , when he was hastily called to lead the detachment and had to command it while wearing his civilian clothes ."
+   ]
+  },
+  {
+   "id": "multihop-rag-960",
+   "sentences": [
+    "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights — Los Pumas are also in the semi-finals — and England have beaten all of them.",
+    "S﻿AINT-ETIENNE: The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com as their Rugby World Cup fate is decided by Fiji and Portugal in Toulouse."
+   ]
+  },
+  {
+   "id": "5a8f51185542992414482a3d",
+   "sentences": [
+    " His primary jockey is Tony McCoy.",
+    " Based in Ireland and the UK, McCoy rode a record 4,358 winners, and was Champion Jockey a record 20 consecutive times, every year he was a professional."
+   ]
+  },
+  {
+   "id": "5a7774e155429967ab10518d",
+   "sentences": [
+    "Return to Never Land (also known as Peter Pan 2 or Peter Pan In: Return to Never Land) is a 2002 American animated musical fantasy-adventure film produced by Walt Disney Television Animation, and released by Walt Disney Pictures and distributed by Walt Disney Studios Motion Pictures.",
+    " The film was co-produced by Walt Disney Pictures and Mayhem Pictures."
+   ]
+  },
+  {
+   "id": "multihop-rag-2324",
+   "sentences": [
+    "“She’s got the Eras Tour booked all through next year, and she’d rather die than cancel a show.",
+    "\"It was almost like this very strange, subtle clue to the media that they don't know everything that happened in that relationship, and I can have something really major and traumatic happen to me and they don't know about it,\" she told NPR.",
+    "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."
+   ]
+  },
+  {
+   "id": "5ab25004554299722f9b4cd7",
+   "sentences": [
+    "The Battle of Stones River or Second Battle of Murfreesboro, was fought from December 31, 1862, to January 2, 1863, in Middle Tennessee, as the culmination of the Stones River Campaign in the Western Theater of the American Civil War.",
+    "The Battle of the Ch'ongch'on River, also known as the Battle of the Ch'ongch'on () or the Second Phase Campaign Western Sector (), was a decisive battle in the Korean War, and it took place from November 25 to December 2, 1950, along the Ch'ongch'on River Valley in the northwestern part of North Korea."
+   ]
+  },
+  {
+   "id": "multihop-rag-1698",
+   "sentences": [
+    "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone – and the generation of players and leaders that will call time on their international careers at week’s end.",
+    "The Springboks took a 12-3 lead after 34 minutes when the All Blacks once again failed to release on their goal line.",
+    "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."
+   ]
+  }
+ ]
+}

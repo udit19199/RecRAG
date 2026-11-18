@@ -1,0 +1,58 @@
+[
+  {"id": "43a7d6a29982ff51", "facts": [
+    {"fact": "0.0", "status": "missing"},
+    {"fact": "0.1", "status": "missing"},
+    {"fact": "0.2", "status": "missing"},
+    {"fact": "0.3", "status": "missing"},
+    {"fact": "1.0", "status": "missing"},
+    {"fact": "1.1", "status": "missing"},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "he specifically pointed the finger at Ellison, the former CEO of Alameda"}]},
+    {"fact": "1.3", "status": "missing"},
+    {"fact": "1.4", "status": "missing"},
+    {"fact": "1.5", "status": "missing"},
+    {"fact": "1.6", "status": "missing"},
+    {"fact": "2.0", "status": "missing"},
+    {"fact": "2.1", "status": "missing"},
+    {"fact": "2.2", "status": "missing"},
+    {"fact": "2.3", "status": "missing"}
+  ]},
+  {"id": "641fc9ef082747d7", "facts": [
+    {"fact": "0.0", "status": "missing"},
+    {"fact": "0.1", "status": "missing"},
+    {"fact": "0.2", "status": "missing"},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Warner Music Group CEO Robert Kyncl"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "biz from ‘Big Tech’, namely YouTube, where he was Chief Business Officer."}]},
+    {"fact": "1.2", "status": "missing"}
+  ]},
+  {"id": "2388c4445a18c81f", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]}
+  ]},
+  {"id": "5fd8062fe11dbc9a", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Around 2019 or 2020, Wang checked the database and discovered that Alameda was negative by about $200 million, which was more than the $150 million FTX made in revenue."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Around 2019 or 2020, Wang checked the database and discovered that Alameda was negative by about $200 million, which was more than the $150 million FTX made in revenue."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Around 2019 or 2020, Wang checked the database and discovered that Alameda was negative by about $200 million, which was more than the $150 million FTX made in revenue."}]},
+    {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 9, "quote": "As a result, at one point the risk engine got stuck in a catastrophic feedback loop"}, {"item": 9, "quote": "Because of that experience, Bankman-Fried suggested an “alert” or “delay”"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Bankman-Fried suggested an “alert” or “delay” that would keep Alameda from being liquidated by a bug."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "FTX was no Ponzi scheme. It was a “very innovative, successful company.”"}]},
+    {"fact": "2.1", "status": "contradicted", "evidence": [{"item": 5, "quote": "And the business practices between the two were reasonable, he argued, claiming that Alameda acted legally"}, {"item": 5, "quote": "was willing to give up his personal wealth to make customers whole, Cohen argued."}]},
+    {"fact": "2.2", "status": "contradicted", "evidence": [{"item": 5, "quote": "claiming that Alameda acted legally as an FTX customer, payment processor, and market maker"}, {"item": 5, "quote": "was willing to give up his personal wealth to make customers whole, Cohen argued."}]},
+    {"fact": "2.3", "status": "contradicted", "evidence": [{"item": 5, "quote": "claiming that Alameda acted legally as an FTX customer, payment processor, and market maker"}, {"item": 5, "quote": "was willing to give up his personal wealth to make customers whole, Cohen argued."}]},
+    {"fact": "2.4", "status": "contradicted", "evidence": [{"item": 5, "quote": "claiming that Alameda acted legally as an FTX customer, payment processor, and market maker"}, {"item": 5, "quote": "was willing to give up his personal wealth to make customers whole, Cohen argued."}]},
+    {"fact": "2.5", "status": "stated", "evidence": [{"item": 5, "quote": "market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."}]}
+  ]},
+  {"id": "cc2340098106defe", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+    {"fact": "2.2", "status": "missing"},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 6, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]}
+  ]}
+]

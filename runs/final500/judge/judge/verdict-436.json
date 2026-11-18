@@ -1,0 +1,115 @@
+[
+{"id": "6d3f7a8d3ebf8bc6", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Stephen Reeder Donaldson (born May 13, 1947) is an American fantasy, science fiction and mystery novelist, most famous for \"The Chronicles of Thomas Covenant\", his ten-novel fantasy series."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Stephen Reeder Donaldson (born May 13, 1947) is an American fantasy, science fiction and mystery novelist, most famous for \"The Chronicles of Thomas Covenant\", his ten-novel fantasy series."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Stephen Reeder Donaldson (born May 13, 1947) is an American fantasy, science fiction and mystery novelist, most famous for \"The Chronicles of Thomas Covenant\", his ten-novel fantasy series."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "Stephen Reeder Donaldson (born May 13, 1947) is an American fantasy, science fiction and mystery novelist, most famous for \"The Chronicles of Thomas Covenant\", his ten-novel fantasy series."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "Stephen Reeder Donaldson (born May 13, 1947) is an American fantasy, science fiction and mystery novelist, most famous for \"The Chronicles of Thomas Covenant\", his ten-novel fantasy series."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 5, "quote": "Stephen Reeder Donaldson (born May 13, 1947) is an American fantasy, science fiction and mystery novelist, most famous for \"The Chronicles of Thomas Covenant\", his ten-novel fantasy series."}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 5, "quote": "Stephen Reeder Donaldson (born May 13, 1947) is an American fantasy, science fiction and mystery novelist, most famous for \"The Chronicles of Thomas Covenant\", his ten-novel fantasy series."}]},
+{"fact": "0.7", "status": "stated", "evidence": [{"item": 5, "quote": "Stephen Reeder Donaldson (born May 13, 1947) is an American fantasy, science fiction and mystery novelist, most famous for \"The Chronicles of Thomas Covenant\", his ten-novel fantasy series."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Michael John Moorcock (born 18 December 1939) is an English writer, primarily of science fiction and fantasy, who has also published literary novels."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Michael John Moorcock (born 18 December 1939) is an English writer, primarily of science fiction and fantasy, who has also published literary novels."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "Michael John Moorcock (born 18 December 1939) is an English writer, primarily of science fiction and fantasy, who has also published literary novels."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "Michael John Moorcock (born 18 December 1939) is an English writer, primarily of science fiction and fantasy, who has also published literary novels."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 8, "quote": "Michael John Moorcock (born 18 December 1939) is an English writer, primarily of science fiction and fantasy, who has also published literary novels."}]}
+]},
+{"id": "dad061991040b89d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "And There's More is a comedy sketch show starring Jimmy Cricket produced by Central Independent Television for ITV from 1985 till 1988."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "And There's More is a comedy sketch show starring Jimmy Cricket produced by Central Independent Television for ITV from 1985 till 1988."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "And There's More is a comedy sketch show starring Jimmy Cricket produced by Central Independent Television for ITV from 1985 till 1988."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "And There's More is a comedy sketch show starring Jimmy Cricket produced by Central Independent Television for ITV from 1985 till 1988."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "And There's More is a comedy sketch show starring Jimmy Cricket produced by Central Independent Television for ITV from 1985 till 1988."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "afa626ea20e4eb03", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Levitt & Sons developed the Monmouth Heights section from 1965-1969."}]},
+{"fact": "1.0", "status": "missing", "evidence": []}
+]},
+{"id": "34492ee2d29a1d18", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Bluebeard's Castle (Hungarian: A kékszakállú herceg vára ; literally: \"The Blue-Bearded Duke's Castle\") is a one-act opera by Hungarian composer Béla Bartók."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Bluebeard's Castle (Hungarian: A kékszakállú herceg vára ; literally: \"The Blue-Bearded Duke's Castle\") is a one-act opera by Hungarian composer Béla Bartók."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Bluebeard's Castle (Hungarian: A kékszakállú herceg vára ; literally: \"The Blue-Bearded Duke's Castle\") is a one-act opera by Hungarian composer Béla Bartók."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "Bluebeard's Castle (Hungarian: A kékszakállú herceg vára ; literally: \"The Blue-Bearded Duke's Castle\") is a one-act opera by Hungarian composer Béla Bartók."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Agrippina (HWV 6) is an \"opera seria\" in three acts by George Frideric Handel with a libretto by Cardinal Vincenzo Grimani."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Agrippina (HWV 6) is an \"opera seria\" in three acts by George Frideric Handel with a libretto by Cardinal Vincenzo Grimani."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Agrippina (HWV 6) is an \"opera seria\" in three acts by George Frideric Handel with a libretto by Cardinal Vincenzo Grimani."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "Agrippina (HWV 6) is an \"opera seria\" in three acts by George Frideric Handel with a libretto by Cardinal Vincenzo Grimani."}]}
+]},
+{"id": "e777bb0057f44e55", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Alan Young (born Angus Young; November 19, 1919 – May 19, 2016) was a British-born Canadian-American actor, voice actor, comedian and radio and television host/personality who \"TV Guide\" called \"The Charlie Chaplin of Television\"."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Alan Young (born Angus Young; November 19, 1919 – May 19, 2016) was a British-born Canadian-American actor, voice actor, comedian and radio and television host/personality who \"TV Guide\" called \"The Charlie Chaplin of Television\"."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Alan Young (born Angus Young; November 19, 1919 – May 19, 2016) was a British-born Canadian-American actor, voice actor, comedian and radio and television host/personality who \"TV Guide\" called \"The Charlie Chaplin of Television\"."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "Alan Young (born Angus Young; November 19, 1919 – May 19, 2016) was a British-born Canadian-American actor, voice actor, comedian and radio and television host/personality who \"TV Guide\" called \"The Charlie Chaplin of Television\"."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "Alan Young (born Angus Young; November 19, 1919 – May 19, 2016) was a British-born Canadian-American actor, voice actor, comedian and radio and television host/personality who \"TV Guide\" called \"The Charlie Chaplin of Television\"."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 2, "quote": "Alan Young (born Angus Young; November 19, 1919 – May 19, 2016) was a British-born Canadian-American actor, voice actor, comedian and radio and television host/personality who \"TV Guide\" called \"The Charlie Chaplin of Television\"."}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 2, "quote": "Alan Young (born Angus Young; November 19, 1919 – May 19, 2016) was a British-born Canadian-American actor, voice actor, comedian and radio and television host/personality who \"TV Guide\" called \"The Charlie Chaplin of Television\"."}]},
+{"fact": "0.7", "status": "stated", "evidence": [{"item": 2, "quote": "Alan Young (born Angus Young; November 19, 1919 – May 19, 2016) was a British-born Canadian-American actor, voice actor, comedian and radio and television host/personality who \"TV Guide\" called \"The Charlie Chaplin of Television\"."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Young was also the voice of Disney's Scrooge McDuck for over thirty years, first in the Academy Award-nominated short film \"Mickey's Christmas Carol\" (1983) and in various other films, TV series and video games until his death."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Young was also the voice of Disney's Scrooge McDuck for over thirty years, first in the Academy Award-nominated short film \"Mickey's Christmas Carol\" (1983) and in various other films, TV series and video games until his death."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Young was also the voice of Disney's Scrooge McDuck for over thirty years, first in the Academy Award-nominated short film \"Mickey's Christmas Carol\" (1983) and in various other films, TV series and video games until his death."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "Young was also the voice of Disney's Scrooge McDuck for over thirty years, first in the Academy Award-nominated short film \"Mickey's Christmas Carol\" (1983) and in various other films, TV series and video games until his death."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "During the 1940s and 1950s, he starred in his own variety/comedy sketch shows \"The Alan Young Show\" on radio and television, the latter gaining him two Emmy Awards in 1951."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "During the 1940s and 1950s, he starred in his own variety/comedy sketch shows \"The Alan Young Show\" on radio and television, the latter gaining him two Emmy Awards in 1951."}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 3, "quote": "The cartoon is an adaptation of Charles Dickens' \"A Christmas Carol\", starring Scrooge McDuck as Ebenezer Scrooge."}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 3, "quote": "The cartoon is an adaptation of Charles Dickens' \"A Christmas Carol\", starring Scrooge McDuck as Ebenezer Scrooge."}]}
+]},
+{"id": "73da6115c776c6d0", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "It plays during the opening sequence and was composed by Danny Elfman in 1989, after series creator Matt Groening approached him requesting a retro-style theme."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "It plays during the opening sequence and was composed by Danny Elfman in 1989, after series creator Matt Groening approached him requesting a retro-style theme."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "It plays during the opening sequence and was composed by Danny Elfman in 1989, after series creator Matt Groening approached him requesting a retro-style theme."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "It plays during the opening sequence and was composed by Danny Elfman in 1989, after series creator Matt Groening approached him requesting a retro-style theme."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "It plays during the opening sequence and was composed by Danny Elfman in 1989, after series creator Matt Groening approached him requesting a retro-style theme."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Clausen has scored or orchestrated music for more than 30 films and television shows, including \"Moonlighting\", \"The Naked Gun\", \"ALF\" and \"Ferris Bueller's Day Off\"."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Clausen has scored or orchestrated music for more than 30 films and television shows, including \"Moonlighting\", \"The Naked Gun\", \"ALF\" and \"Ferris Bueller's Day Off\"."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Clausen has scored or orchestrated music for more than 30 films and television shows, including \"Moonlighting\", \"The Naked Gun\", \"ALF\" and \"Ferris Bueller's Day Off\"."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "Clausen has scored or orchestrated music for more than 30 films and television shows, including \"Moonlighting\", \"The Naked Gun\", \"ALF\" and \"Ferris Bueller's Day Off\"."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 7, "quote": "Clausen has scored or orchestrated music for more than 30 films and television shows, including \"Moonlighting\", \"The Naked Gun\", \"ALF\" and \"Ferris Bueller's Day Off\"."}]}
+]},
+{"id": "8f2d54b0b97f9f8c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "The University of Arizona (also referred to as U of A, UA, or Arizona) is a public research university in Tucson, Arizona, United States."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "The University of Arizona (also referred to as U of A, UA, or Arizona) is a public research university in Tucson, Arizona, United States."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "The University of Arizona (also referred to as U of A, UA, or Arizona) is a public research university in Tucson, Arizona, United States."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "The University of Arizona (also referred to as U of A, UA, or Arizona) is a public research university in Tucson, Arizona, United States."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "The University of Arizona (also referred to as U of A, UA, or Arizona) is a public research university in Tucson, Arizona, United States."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "The Presbyterian University College, Ghana is a partially private & public university located at Abetifi-Kwahu in the Eastern Region of Ghana."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "The Presbyterian University College, Ghana is a partially private & public university located at Abetifi-Kwahu in the Eastern Region of Ghana."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "The Presbyterian University College, Ghana is a partially private & public university located at Abetifi-Kwahu in the Eastern Region of Ghana."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "The Presbyterian University College, Ghana is a partially private & public university located at Abetifi-Kwahu in the Eastern Region of Ghana."}, {"item": 5, "quote": "It is one of the new universities in Ghana granted accreditation by the National Accreditation Board."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "The Presbyterian University College, Ghana is a partially private & public university located at Abetifi-Kwahu in the Eastern Region of Ghana."}, {"item": 5, "quote": "It is one of the new universities in Ghana granted accreditation by the National Accreditation Board."}]}
+]},
+{"id": "14d9b5c1dceca9a6", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Baghdad ER is a documentary released by HBO on May 21, 2006."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Baghdad ER is a documentary released by HBO on May 21, 2006."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Baghdad ER is a documentary released by HBO on May 21, 2006."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Olympia is a 1938 German documentary film written, directed and produced by Leni Riefenstahl, documenting the 1936 Summer Olympics, held in the Olympic Stadium in Berlin, Germany."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Olympia is a 1938 German documentary film written, directed and produced by Leni Riefenstahl, documenting the 1936 Summer Olympics, held in the Olympic Stadium in Berlin, Germany."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Olympia is a 1938 German documentary film written, directed and produced by Leni Riefenstahl, documenting the 1936 Summer Olympics, held in the Olympic Stadium in Berlin, Germany."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "Olympia is a 1938 German documentary film written, directed and produced by Leni Riefenstahl, documenting the 1936 Summer Olympics, held in the Olympic Stadium in Berlin, Germany."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 10, "quote": "Olympia is a 1938 German documentary film written, directed and produced by Leni Riefenstahl, documenting the 1936 Summer Olympics, held in the Olympic Stadium in Berlin, Germany."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 10, "quote": "Olympia is a 1938 German documentary film written, directed and produced by Leni Riefenstahl, documenting the 1936 Summer Olympics, held in the Olympic Stadium in Berlin, Germany."}]},
+{"fact": "1.6", "status": "stated", "evidence": [{"item": 10, "quote": "Olympia is a 1938 German documentary film written, directed and produced by Leni Riefenstahl, documenting the 1936 Summer Olympics, held in the Olympic Stadium in Berlin, Germany."}]},
+{"fact": "1.7", "status": "stated", "evidence": [{"item": 10, "quote": "Olympia is a 1938 German documentary film written, directed and produced by Leni Riefenstahl, documenting the 1936 Summer Olympics, held in the Olympic Stadium in Berlin, Germany."}]}
+]},
+{"id": "ed2a29ec953bfc4c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Frederick King Keller (born 1954 in Buffalo, New York) is an American director, producer and screenwriter for film and television."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Frederick King Keller (born 1954 in Buffalo, New York) is an American director, producer and screenwriter for film and television."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Frederick King Keller (born 1954 in Buffalo, New York) is an American director, producer and screenwriter for film and television."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Frederick King Keller (born 1954 in Buffalo, New York) is an American director, producer and screenwriter for film and television."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "Frederick King Keller (born 1954 in Buffalo, New York) is an American director, producer and screenwriter for film and television."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 8, "quote": "Frederick King Keller (born 1954 in Buffalo, New York) is an American director, producer and screenwriter for film and television."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Ian Schneider (born October 3, 1992), is an independent American film director and screenwriter."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Ian Schneider (born October 3, 1992), is an independent American film director and screenwriter."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "Ian Schneider (born October 3, 1992), is an independent American film director and screenwriter."}]}
+]},
+{"id": "2575db95ea79dfeb", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "The soundtrack for the 1968 film \"Romeo and Juliet\" was composed and conducted by Nino Rota."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "The soundtrack for the 1968 film \"Romeo and Juliet\" was composed and conducted by Nino Rota."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Romeo and Juliet is a 1968 British-Italian romance film based on the tragic play of the same name (1591–1595) by William Shakespeare."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Romeo and Juliet is a 1968 British-Italian romance film based on the tragic play of the same name (1591–1595) by William Shakespeare."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Romeo and Juliet is a 1968 British-Italian romance film based on the tragic play of the same name (1591–1595) by William Shakespeare."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "Romeo and Juliet is a 1968 British-Italian romance film based on the tragic play of the same name (1591–1595) by William Shakespeare."}]}
+]}
+]

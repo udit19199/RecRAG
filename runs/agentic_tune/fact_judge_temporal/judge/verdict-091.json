@@ -1,0 +1,30 @@
+[
+{"id": "2daac905c63ec214", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "a fan tradition at her concerts"}, {"item": 3, "quote": "If you're up on Taylor Swift concerts, there are friendship bracelets"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "with his number on it to give to her"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "I wanted to give Taylor Swift one with my number"}, {"item": 3, "quote": "with his number on it to give to her"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "seemingly expressing his interest in Swift."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 5, "quote": "While on the Pat McAfee show, Kelce discussed the rumors"}, {"item": 5, "quote": "He then admitted that he invited Swift to one of his games"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Sept. 24: Swift attends Chiefs game"}, {"item": 6, "quote": "Swift took Kelce up on his offer and attended the Chiefs' Week 3 game against the Chicago Bears."}]},
+{"fact": "2.0", "status": "missing", "evidence": []}
+]},
+{"id": "1338f76828057a06", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "b1846533cb30e1ad", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+]},
+{"id": "a830da224cc9d3be", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Even with those tools, some of the businesses selling on Amazon might still choose to set prices that aren’t competitive"}, {"item": 7, "quote": "Zapolsky said."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]}
+]

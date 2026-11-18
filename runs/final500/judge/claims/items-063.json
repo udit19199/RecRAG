@@ -1,0 +1,80 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "-7394149107458430124",
+   "sentences": [
+    "Men 's ( 12 ) Basketball ( 3 ) : 1985 , 2016 , 2018 Cross Country ( 4 ) : 1966 , 1967 , 1968 , 1970 Football ( 1 ) : 2009 Indoor Track & Field ( 3 ) : 1968 , 1971 , 1979 Outdoor Track & Field ( 1 ) : 1957 Women 's ( 9 ) Cross Country ( 9 ) : 1989 , 1990 , 1991 , 1992 , 1993 , 1994 , 1998 , 2009 , 2010 see also : Big East Conference NCAA team championships List of NCAA schools with the most NCAA Division I championships",
+    "Basketball ( 3 ) : 1985 , 2016 , 2018",
+    "The Villanova Wildcats compete in the Big East Conference and are coached by Jay Wright . The team has traditionally divides its home schedule between its on - campus arena , the William B. Finneran Pavilion , and the Wells Fargo Center in South Philadelphia , for larger draws . During the 2017 - 18 season , the team played its entire home schedule that season at the Wells Fargo Center following the reconstruction of the Pavilion scheduled to be completed in time for the 2018 - 19 school year . Wright has taken the Wildcats to 12 postseason appearances including 7 consecutive trips ( 2005 -- 2011 ) and 5 consecutive trips ( 2013 - 2017 ) to the NCAA Tournament . The 2011 - 12 team struggled and missed postseason but Coach Wright brought a surprising young team back to the 2013 NCAA Tournament . Villanova has appeared in the NIT 17 times , winning in 1994 , and won the Big East Tournament in 1995 , 2015 and 2017 . The Wildcats have appeared in the NCAA Men 's Tournament 37 times , the 8th highest total in NCAA history have reached the Elite Eight 13 times . They have been to the Final Four of the NCAA Division I Men 's Basketball Tournament on five occasions . The 1939 team coached by Al Severance reached the inaugural NCAA Final Four played at the Palestra for the 1939 NCAA Basketball Tournament . All - American Howard Porter led a Wildcat team coached by Jack Kraft to Final Four of the 1971 NCAA University Division Basketball Tournament . Coach Rollie Massimino took Villanova to a surprising 1985 National Championship . Current Coach Jay Wright reached the Final Four at the 2009 NCAA Division I Men 's Basketball Tournament behind Dante Cunningham and Scottie Reynolds . The team most recently won the 2018 NCAA Division I Men 's Basketball Tournament for their third National Championship .",
+    "Men 's ( 12 ) Basketball ( 3 ) : 1985 , 2016 , 2018 Cross Country ( 4 ) : 1966 , 1967 , 1968 , 1970 Football ( 1 ) : 2009 Indoor Track & Field ( 3 ) : 1968 , 1971 , 1979 Outdoor Track & Field ( 1 ) : 1957"
+   ]
+  },
+  {
+   "id": "5a87bada5542994846c1cddc",
+   "sentences": [
+    "Ravi Sethi (born 1947) is an Indian computer scientist retired from Bell Labs and president of Avaya Labs Research.",
+    "Nokia Bell Labs (formerly named AT&T Bell Laboratories, Bell Telephone Laboratories and Bell Labs) is an American research and scientific development company, owned by Finnish company Nokia.",
+    " Its headquarters are located in Murray Hill, New Jersey, in addition to other laboratories around the rest of the United States and in other countries."
+   ]
+  },
+  {
+   "id": "5a887898554299206df2b2a2",
+   "sentences": [
+    "Broughtonia is a genus of orchids (family Orchidaceae) native to the Bahamas and the Greater Antilles.",
+    "Perilla is a genus consisting of one major Asiatic crop species \"P. frutescens\" and a few recognized wild species in nature, belonging to the mint family, Lamiaceae."
+   ]
+  },
+  {
+   "id": "8316131532075418231",
+   "sentences": [
+    "Yadava ( Golla )"
+   ]
+  },
+  {
+   "id": "5a8340fd55429954d2e2ec6b",
+   "sentences": [
+    "Darby O'Gill and the Little People is a 1959 Walt Disney Productions feature film starring Albert Sharpe, Janet Munro, Sean Connery and Jimmy O'Dea, in a tale about a wily Irishman and his battle of wits with leprechauns.",
+    " Produced by Walt Disney Pictures, Aamir Khan Productions and UTV Motion Pictures, it stars Aamir Khan as the father."
+   ]
+  },
+  {
+   "id": "-6298338522213213977",
+   "sentences": [
+    "Economy of India Mumbai , Maharashtra the financial center of India Currency Indian rupee ( INR ) ₹ 1 = 100 Paise Fiscal year 1 April -- 31 March Trade organisations WTO , WCO , WFTU , G - 20 and others Statistics GDP $2.848 trillion ( nominal ; 2018 est ) $10.385 trillion ( PPP ; 2018 est ) GDP rank 6th ( nominal ) 3rd ( PPP ) GDP growth 7.2 % ( Q3 , 2017 - 18 ) ( MOSPI ) GDP per capita $2,134 ( nominal ; 2018 est ) $7,783 ( PPP ; 2018 est ) GDP per capita rank 141st ( nominal ) 123rd ( PPP ) GDP by sector Agriculture : 17.32 % Industry : 29.02 % Services : 53.66 % ( 2016 est . ) Inflation ( CPI ) 4.28 % ( March 2018 ) Base borrowing rate 6.25 % ( as on 16 Mar. 2018 ) Population below poverty line 21.2 % 58 % live less than $3.10 / day ( 2011 ; World bank estimate ) Gini coefficient 33.9 ( 2013 ) Human Development Index 0.624 ( 2015 ) medium ( 131st ) Labour force 520.2 million ( 2017 ) Labour force by occupation Agriculture : 47 % Industry : 22 % Services : 31 % ( FY 2014 est . ) Unemployment 8.8 % ( 2017 ) Average net salary ₹ 82,269 / $1,284 annually ( 2016 - 17 ) Main industries Textiles chemicals food processing steel cement mining petroleum machinery software pharmaceuticals transportation equipment Ease - of - doing - business rank 100 ( 2017 ) External Exports $275.8 billion ( 2017 ) Export goods Agricultural products 13.2 % Fuels and mining products 15.7 % Manufacturers 68.4 % Others 2.7 % Main export partners European Union 17.6 % United States 16.1 % United Arab Emirates 11.5 % Hong Kong 5.1 % China 3.4 % Other 46.3 % Imports $384.3 billion ( 2017 ) Import goods Agricultural products 7.1 % Fuels and mining products 33.1 % Manufacturers 47.8 % Other 12 % Main import partners China 17 % European Union 11.3 % United States 5.7 % United Arab Emirates 5.4 % Saudi Arabia 5.2 % Other 55.5 % FDI stock Inward : $318.50 billion Outward : $144.13 billion ( 2016 ) Current account 0.7 % of GDP ( 2016 -- 17 ) Gross external debt $471.9 billion ( 31 March 2017 ) Net international investment position - $404.8 billion ( Sept. 2017 ) Public finances Public debt 67.7 % of GDP ( 2017 ) Revenues ₹ 35.41 trillion ( US $540 billion ) ( 2017 ) Expenses ₹ 46.25 trillion ( US $710 billion ) ( 2017 ) Economic aid $2.68 billion ( 2016 ) Credit rating Standard & Poor 's : BBB − ( Domestic ) BBB − ( Foreign ) BBB+ ( T&C Assessment ) Outlook : Stable Moody 's : Baa2 Outlook : Stable Fitch : BBB − Outlook : Stable Foreign reserves $426.082 billion ( 13 April 2018 ) ( 8th ) Main data source : CIA World Fact Book All values , unless otherwise stated , are in US dollars .",
+    "India has one of the fastest growing service sectors in the world with an annual growth rate above 9 % since 2001 , which contributed to 57 % of GDP in 2012 -- 13 . India has become a major exporter of IT services , Business Process Outsourcing ( BPO ) services , and software services with $154 billion revenue in FY 2017 . This is the fastest - growing part of the economy . The IT industry continues to be the largest private - sector employer in India . India is the third - largest start - up hub in the world with over 3,100 technology start - ups in 2014 -- 15 The agricultural sector is the largest employer in India 's economy but contributes to a declining share of its GDP ( 17 % in 2013 -- 14 ) . India ranks second worldwide in farm output . The industry ( manufacturing ) sector has held a steady share of its economic contribution ( 26 % of GDP in 2013 -- 14 ) . The Indian automobile industry is one of the largest in the world with an annual production of 21.48 million vehicles ( mostly two and three - wheelers ) in 2013 -- 14 . India had $600 billion worth of retail market in 2015 and one of world 's fastest growing e-commerce markets .",
+    "India ranks second worldwide in farm output . Agriculture and allied sectors like forestry , logging and fishing accounted for 17 % of the GDP and employed 49 % of its total workforce in 2014 . Agriculture accounted for 23 % of GDP , and employed 59 % of the country 's total workforce in 2016 . As the Indian economy has diversified and grown , agriculture 's contribution to GDP has steadily declined from 1951 to 2011 , yet it is still the country 's largest employment source and a significant piece of its overall socio - economic development . Crop - yield - per - unit - area of all crops has grown since 1950 , due to the special emphasis placed on agriculture in the five - year plans and steady improvements in irrigation , technology , application of modern agricultural practices and provision of agricultural credit and subsidies since the Green Revolution in India . However , international comparisons reveal the average yield in India is generally 30 % to 50 % of the highest average yield in the world . The states of Uttar Pradesh , Punjab , Haryana , Madhya Pradesh , Andhra Pradesh , Telangana , Bihar , West Bengal , Gujarat and Maharashtra are key contributors to Indian agriculture ."
+   ]
+  },
+  {
+   "id": "5a7a15d35542996a35c170c4",
+   "sentences": [
+    " Jan Kodeš and Margaret Court won the singles titles.",
+    " She is currently a Christian minister in Perth, Western Australia."
+   ]
+  },
+  {
+   "id": "multihop-rag-2246",
+   "sentences": [
+    "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4.",
+    "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones.",
+    "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "-2757133660923252051",
+   "sentences": [
+    "Loyalists were American colonists who remained loyal to the British Crown during the American Revolutionary War . At the time they were often called Tories , Royalists , or King 's Men . They were opposed by the Patriots , those who supported the revolution and called them `` persons inimical to the liberties of America '' . Prominent Loyalists repeatedly assured the British government that many thousands of loyalists would spring to arms and fight for the crown . The British government acted in expectation of that , especially in the southern campaigns in 1780 - 81 . In practice , the number of loyalists in military service was far lower than expected . Across the colonies , Patriots watched suspected Loyalists very closely , and would not tolerate any organized Loyalist opposition . Many outspoken or militarily active loyalists were forced to flee , especially to their stronghold of New York City . William Franklin , the royal governor of New Jersey and son of Patriot leader Benjamin Franklin , became the leader of the Loyalists after his release from a Patriot prison in 1778 . He worked to build Loyalist military units to fight in the war , but the number of volunteers was much fewer than London expected ."
+   ]
+  },
+  {
+   "id": "5a7f38e255429930675136b6",
+   "sentences": [
+    "Ronkonkoma is a major railroad station and transportation hub along the Main Line of the Long Island Rail Road in Ronkonkoma, New York.",
+    "Ronkonkoma ( ) is a hamlet and census-designated place (CDP) on Long Island in the Town of Islip, New York, United States."
+   ]
+  }
+ ]
+}

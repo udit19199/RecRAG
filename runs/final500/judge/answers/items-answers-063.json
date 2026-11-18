@@ -1,0 +1,574 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "2a1fb1a0177bb02f",
+   "kind": "answer",
+   "question": "what was the purpose of a revival meeting during the second great awakening",
+   "gold_answers": [
+    "evangelizing"
+   ],
+   "model_answer": "To inspire religious conversion and spiritual renewal."
+  },
+  {
+   "id": "66345ae07bea7922",
+   "kind": "answer",
+   "question": "where was the original flight of the phoenix filmed",
+   "gold_answers": [
+    "20th Century-Fox Studios",
+    "20th Century-Fox Ranch, California",
+    "Buttercup Valley, Arizona",
+    "Pilot Knob Mesa, California",
+    "the 20th Century-Fox Studios",
+    "Pilot Knob Mesa near Winterhaven, located in California's Imperial Valley, on the western fringes of Yuma, Arizona",
+    "at the 20th Century-Fox Studios and 20th Century-Fox Ranch, California",
+    "Winterhaven, located in California's Imperial Valley, on the western fringes of Yuma, Arizona"
+   ],
+   "model_answer": "California and Arizona, including Pilot Knob Mesa and Buttercup Valley."
+  },
+  {
+   "id": "937443cf43dcf69b",
+   "kind": "answer",
+   "question": "where are the orcs made in lord of the rings",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "In the pits of Isengard."
+  },
+  {
+   "id": "0d0d466534a22fef",
+   "kind": "answer",
+   "question": "how many countries are a part of opec",
+   "gold_answers": [
+    "14"
+   ],
+   "model_answer": "12 countries"
+  },
+  {
+   "id": "60005aa53395e682",
+   "kind": "answer",
+   "question": "who died in the first episode of stranger things",
+   "gold_answers": [
+    "Benny"
+   ],
+   "model_answer": "Benny the diner owner"
+  },
+  {
+   "id": "2d1763eadf20360f",
+   "kind": "answer",
+   "question": "what did the american flag look like in 1896",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "A flag with 45 stars and 13 stripes."
+  },
+  {
+   "id": "98335605509b0d4e",
+   "kind": "answer",
+   "question": "what are the kinds of dance and its definition",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Dance is purposeful, rhythmic human movement with aesthetic or symbolic value; its main kinds are performance/theatrical and participatory/social dance."
+  },
+  {
+   "id": "ceb8cec6b8e2a454",
+   "kind": "answer",
+   "question": "when would a post card not be needed",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "When the motherboard has built-in diagnostics or reports POST errors with audible beeps."
+  },
+  {
+   "id": "3c27278e6ce256e2",
+   "kind": "answer",
+   "question": "where do honey bees live in the world",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Worldwide, with their origins in South and Southeast Asia and eastern Africa."
+  },
+  {
+   "id": "b75024473b06baa9",
+   "kind": "answer",
+   "question": "who may be affected by monetary penalties imposed by the irs",
+   "gold_answers": [
+    "Taxpayers in the United States"
+   ],
+   "model_answer": "U.S. taxpayers, businesses, and tax advisers."
+  },
+  {
+   "id": "72e5a6f342667ad1",
+   "kind": "answer",
+   "question": "what are the band members names of the rolling stones",
+   "gold_answers": [
+    "Mick Jagger",
+    "Keith Richards",
+    "Charlie Watts",
+    "Ronnie Wood"
+   ],
+   "model_answer": "Mick Jagger, Keith Richards, Charlie Watts, and Ronnie Wood"
+  },
+  {
+   "id": "ba252b1b43216763",
+   "kind": "answer",
+   "question": "in which regions are most of africa petroleum and natural gas found",
+   "gold_answers": [
+    "Nigeria"
+   ],
+   "model_answer": "The Niger Delta and broader Sub-Saharan Africa."
+  },
+  {
+   "id": "4f2ec456e4dd8fdc",
+   "kind": "answer",
+   "question": "what causes cracked skin at the corners of your mouth",
+   "gold_answers": [
+    "infection",
+    "irritation",
+    "allergies"
+   ],
+   "model_answer": "Angular cheilitis, often from saliva irritation or yeast infection."
+  },
+  {
+   "id": "112a70305409ddea",
+   "kind": "answer",
+   "question": "who has scored the most touchdowns this year",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "LaDainian Tomlinson"
+  },
+  {
+   "id": "7052688910004e13",
+   "kind": "answer",
+   "question": "a legislative act passed by congress is an example of",
+   "gold_answers": [
+    "statutory law"
+   ],
+   "model_answer": "Federal legislation (a statute)"
+  },
+  {
+   "id": "b54390abfb463db2",
+   "kind": "answer",
+   "question": "when did the animal rights movement began in the us",
+   "gold_answers": [
+    "In the United States , there is an Animal Welfare Act that was produced in 1966 . This law protects animals in acts of research , transportation , and sale . Generally , animals are protected from any torture , neglect , or killing . There have been many amendments made towards this act to keep it updated . In order to be charged for animal abuse , there has to be prosecution and a trial . While there is only one act covering the entire United States , there are more current laws surrounding animal rights , which vary by state . Even though there are policies and severe consequences , the laws are not normally enforced with as much force or timeliness as regular crime ."
+   ],
+   "model_answer": "The 1970s"
+  },
+  {
+   "id": "ee27d81acd10fef2",
+   "kind": "answer",
+   "question": "how far from the heavy rain of a thunder storm can lightning strike",
+   "gold_answers": [
+    "Take action immediately upon hearing thunder . Anyone close enough to the storm to hear thunder can be struck by lightning . Avoid electrical appliances , including corded telephones . Cordless and wireless telephones are safe to use during a thunderstorm . Close and stay away from windows and doors , as glass can become a serious hazard in high wind . Do not bathe or shower , as plumbing conducts electricity . If driving , safely exit the roadway , turn on hazard lights , and park . Remain in the vehicle and avoid touching metal .",
+    "Take action immediately upon hearing thunder . Anyone close enough to the storm to hear thunder can be struck by lightning ."
+   ],
+   "model_answer": "Up to about 10 miles (16 km)."
+  },
+  {
+   "id": "90334689affb5418",
+   "kind": "answer",
+   "question": "who do the characters represent in 8 mile",
+   "gold_answers": [
+    "loosely on Eminem"
+   ],
+   "model_answer": "Fictionalized versions of people from Eminem’s upbringing."
+  },
+  {
+   "id": "20c108092540a3af",
+   "kind": "answer",
+   "question": "where do the royalties for winnie the pooh go",
+   "gold_answers": [
+    "Slesinger, Inc.",
+    "the Slesinger family"
+   ],
+   "model_answer": "Primarily to Disney and the rights holders."
+  },
+  {
+   "id": "3ae108f887a29e78",
+   "kind": "answer",
+   "question": "who took over for batman when his back was broken",
+   "gold_answers": [
+    "Jean-Paul Valley (a.k.a. Azrael)",
+    "an apprentice named Jean-Paul Valley (a.k.a. Azrael)"
+   ],
+   "model_answer": "Jean-Paul Valley (Azrael)"
+  },
+  {
+   "id": "88696117c0557fd5",
+   "kind": "answer",
+   "question": "how do i loathe thee let me count the ways shakespeare",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "“How do I love thee? Let me count the ways” — Elizabeth Barrett Browning."
+  },
+  {
+   "id": "9d239fc4af2224d3",
+   "kind": "answer",
+   "question": "what was the purpose of a revival meeting during the second great awakening",
+   "gold_answers": [
+    "evangelizing"
+   ],
+   "model_answer": "To encourage conversion and personal salvation."
+  },
+  {
+   "id": "e0f44c7f7a6b6588",
+   "kind": "answer",
+   "question": "where does the saying like a boss come from",
+   "gold_answers": [
+    "`` Like a Boss '' is a song written and recorded by comedy hip hop troupe The Lonely Island for their debut studio album Incredibad . The song is a parody of the first official single from Slim Thug 's first album Already Platinum , also named `` Like a Boss '' . The song had multiple versions , including an audio - only that did not have the celebrity interviewer and a clean version that was produced in both audio and video . In 2011 it was also subject to a lawsuit from the producers of the song who claimed they never received proper compensation for their work ."
+   ],
+   "model_answer": "Popularized by The Lonely Island’s 2009 SNL sketch “Like a Boss.”"
+  },
+  {
+   "id": "6bb8284d9e6bc1f7",
+   "kind": "answer",
+   "question": "curious incident of the dog in the nighttime singapore wikipedia",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The Curious Incident of the Dog in the Night-Time is a novel by Mark Haddon."
+  },
+  {
+   "id": "de97d696366408e6",
+   "kind": "answer",
+   "question": "how did the apostles creed get its name",
+   "gold_answers": [
+    "The first mention of the expression `` Apostles ' Creed '' occurs in a letter of AD 390 from a synod in Milan and may have been associated with the belief , widely accepted in the 4th century , that , under the inspiration of the Holy Spirit , each of the Twelve Apostles contributed an article of a creed .",
+    "The title Symbolum Apostolicum ( Symbol or Creed of the Apostles ) appears for the first time in a letter , probably written by Ambrose , from a Council in Milan to Pope Siricius in about AD 390 `` Let them give credit to the Creed of the Apostles , which the Roman Church has always kept and preserved undefiled '' . But what existed at that time was not what is now known as the Apostles ' Creed but a shorter statement of belief that , for instance , did not include the phrase `` maker of heaven and earth '' , a phrase that may have been inserted only in the 7th century ."
+   ],
+   "model_answer": "It was named for the tradition that the twelve apostles each contributed an article of the creed."
+  },
+  {
+   "id": "196066fb215ce96b",
+   "kind": "answer",
+   "question": "horatio spafford story it is well with my soul",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "After his four daughters died in the Ville du Havre shipwreck, Spafford wrote “It Is Well with My Soul” while sailing over the place where they died."
+  },
+  {
+   "id": "6052c6cbfb77cc9c",
+   "kind": "answer",
+   "question": "spanky and our gang sunday will never be the same lyrics",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Sorry, I can’t provide the lyrics."
+  },
+  {
+   "id": "f1709ab3429bacc0",
+   "kind": "answer",
+   "question": "when was the drinking age set to 21",
+   "gold_answers": [
+    "By mid-1988"
+   ],
+   "model_answer": "1984 (nationwide by 1988)"
+  },
+  {
+   "id": "fe0407e9ca897c73",
+   "kind": "answer",
+   "question": "how did the apostles creed get its name",
+   "gold_answers": [
+    "The first mention of the expression `` Apostles ' Creed '' occurs in a letter of AD 390 from a synod in Milan and may have been associated with the belief , widely accepted in the 4th century , that , under the inspiration of the Holy Spirit , each of the Twelve Apostles contributed an article of a creed .",
+    "The title Symbolum Apostolicum ( Symbol or Creed of the Apostles ) appears for the first time in a letter , probably written by Ambrose , from a Council in Milan to Pope Siricius in about AD 390 `` Let them give credit to the Creed of the Apostles , which the Roman Church has always kept and preserved undefiled '' . But what existed at that time was not what is now known as the Apostles ' Creed but a shorter statement of belief that , for instance , did not include the phrase `` maker of heaven and earth '' , a phrase that may have been inserted only in the 7th century ."
+   ],
+   "model_answer": "It was traditionally believed that each of the twelve apostles contributed an article of the creed."
+  },
+  {
+   "id": "6f566e824c3c6448",
+   "kind": "answer",
+   "question": "why did government sponsored surveys and land acts encourage migration to the west",
+   "gold_answers": [
+    "The Homestead Acts were several United States federal laws that gave an applicant ownership of land , typically called a `` homestead , '' at no cost . In all , more than 270 million acres of public land , or nearly 10 % of the total area of the U.S. , was given away free to 1.6 million homesteaders ; most of the homesteads were west of the Mississippi River .",
+    "An extension of the Homestead Principle in law , the Homestead Acts were an expression of the `` Free Soil '' policy of Northerners who wanted individual farmers to own and operate their own farms , as opposed to Southern slave - owners who wanted to buy up large tracts of land and use slave labor , thereby shutting out free white men ."
+   ],
+   "model_answer": "They made western land available and offered settlers free acreage."
+  },
+  {
+   "id": "aca68a865b7f8b97",
+   "kind": "answer",
+   "question": "when do the walking dead comics come out",
+   "gold_answers": [
+    "October 2003 – present",
+    "2003"
+   ],
+   "model_answer": "The series ended in July 2019."
+  },
+  {
+   "id": "2d6eaa24019071f8",
+   "kind": "answer",
+   "question": "what causes cracked skin at the corners of your mouth",
+   "gold_answers": [
+    "infection",
+    "irritation",
+    "allergies"
+   ],
+   "model_answer": "Infection, irritation, allergies, or nutritional deficiencies."
+  },
+  {
+   "id": "b81fbe78f2b33db0",
+   "kind": "answer",
+   "question": "who is the current director of the us mint",
+   "gold_answers": [
+    "David Motl",
+    "David J. Ryder"
+   ],
+   "model_answer": "Vacant"
+  },
+  {
+   "id": "4cbbf58c65cc1d14",
+   "kind": "answer",
+   "question": "what caused the breakup of the democratic republican party",
+   "gold_answers": [
+    "the disputed 1824 presidential election"
+   ],
+   "model_answer": "The disputed 1824 election and resulting conflict between Adams’s and Jackson’s factions."
+  },
+  {
+   "id": "c6b141929177f3f7",
+   "kind": "answer",
+   "question": "percy jackson and the olympians sea of monsters summary",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Percy, Annabeth, and Tyson journey to rescue Grover and retrieve the Golden Fleece, which heals Camp Half-Blood’s poisoned tree and restores its protective barrier."
+  },
+  {
+   "id": "2f930d4d19190f03",
+   "kind": "answer",
+   "question": "what is the first basic process in the light reaction of photosynthesis",
+   "gold_answers": [
+    "one molecule of the pigment chlorophyll absorbs one photon and loses one electron",
+    "energy from light is absorbed by proteins called reaction centres that contain green chlorophyll pigments"
+   ],
+   "model_answer": "Absorption of light by chlorophyll, exciting an electron."
+  },
+  {
+   "id": "5fe7f686697d74bc",
+   "kind": "answer",
+   "question": "who was the league of nations made up of",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Member countries, initially 42 nations."
+  },
+  {
+   "id": "95477f25e8095976",
+   "kind": "answer",
+   "question": "i hope that you don't fall in love with me",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "A melancholic song by Tom Waits."
+  },
+  {
+   "id": "dd625418ba034e65",
+   "kind": "answer",
+   "question": "who plays mad max on johnboy and billy",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Billy James"
+  },
+  {
+   "id": "77ec14275cd1fce2",
+   "kind": "answer",
+   "question": "what is the first step in the evolution of the eye",
+   "gold_answers": [
+    "photoreceptor proteins that sense light",
+    "eyespots",
+    "photoreceptor proteins that sense light, found even in unicellular organisms, called \"eyespots\""
+   ],
+   "model_answer": "A patch of light-sensitive photoreceptor cells"
+  },
+  {
+   "id": "c9dfd8ae9bf44710",
+   "kind": "answer",
+   "question": "which regions on earth have seasons tied to the amount of rainfall",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Tropical monsoon and savanna regions, especially Sub-Saharan Africa, South and Southeast Asia, and northern Australia."
+  },
+  {
+   "id": "8c4cff70162ad14a",
+   "kind": "answer",
+   "question": "fear the walking dead season 1 episode 4 explained",
+   "gold_answers": [
+    "No . overall No. in season Title Directed by Written by Original air date U.S. viewers ( millions ) `` Pilot '' Adam Davidson Robert Kirkman & Dave Erickson August 23 , 2015 ( 2015 - 08 - 23 ) 10.13 Nick awakens in a heroin den in an abandoned church , to find his girlfriend Gloria eating a corpse . While fleeing , he is hit by a car and hospitalized . The doctor tells Madison and Travis that Nick 's claims about the incident are heroin hallucinations , but Travis believes Nick after visiting the church himself . Alicia becomes more worried about Nick 's chemical dependency . The next day , school closes early due to the high levels of absenteeism and rumors of an epidemic . Nick escapes from the hospital and meets with Calvin , hoping to learn if the drugs Calvin sold him caused him to hallucinate in the church . Calvin tries to kill Nick to prevent him from exposing Calvin as a drug dealer or impugning the quality of his drugs . In the ensuing struggle , Calvin is mortally shot . After Travis and Madison arrive , the zombified Calvin attacks them . Nick runs over Calvin repeatedly with Travis ' truck , and the three watch in disbelief as the mutilated Calvin is still able to turn his head towards them . `` So Close , Yet So Far '' Adam Davidson Marco Ramirez August 30 , 2015 ( 2015 - 08 - 30 ) 8.18 After the run - in with zombified Calvin , Nick , Madison , and Travis choose to flee to the desert , and they want Alicia , Liza , and Chris to follow . Alicia finds Matt ill in his disheveled house . Travis arrives and sees a bite on Matt , who convinces Alicia to leave . The group returns to Madison 's home to gather supplies . Nick suffers from heroin withdrawal , so Madison drives to her school to get him Oxycodone . There , she encounters Tobias scavenging food . A zombified Artie tries to bite Tobias , so Madison kills Artie and drives Tobias home . Chris ' bus is trapped in a traffic jam caused by a zombie shooting by the police . He films the event and joins in a protest against that and other recent fatal police shootings , when Travis and Liza meet up with him . A riot erupts after police shoot down another zombie , but the three Manawas find refuge with the Salazars in their gated barbershop - home . Travis tells Madison to take the kids to the desert without him ; he will catch up . Alicia witnesses her zombified neighbor , Mr. Dawson , attacking Mrs. Cruz across the street , but Madison prevents her from intervening . The group inside the barbershop remains trapped , while the riot outside intensifies . `` The Dog '' Adam Davidson Jack LoGiudice September 13 , 2015 ( 2015 - 09 - 13 ) 7.19 While a riot rages outside , a mob sets fire to the store adjoining the barbershop , forcing the Salazars and Manawas to flee . The group reaches Travis ' truck and escapes , but not before Griselda is injured by a collapsing scaffold . Unable to reach a hospital , the group drives to Madison 's house , where Nick , Madison , and Alicia temporarily flee when the zombified Mr. Dawson attempts to enter , attracted by the barking dog Nick had let in . Nick leads Madison and Alicia to the Trans ' house next door , where they take a shotgun . Travis arrives and is attacked by Mr. Dawson , who is shot and killed by Daniel . All three families decide to stay the night and evacuate in the morning . Nurse Liza tends to Griselda 's injured foot but notes that Griselda will die if not treated by a doctor . Ofelia tells Daniel they should flee with Travis , but Daniel insists his family can survive alone and will join his cousin later . The next morning , as the Clarks and Manawas start driving away , the National Guard arrives and quarantines the block . While Travis says , `` It 's going to get better , '' Daniel laments that it 's , `` too late , '' as he watches a guardsman mark the neighboring house . `` Not Fade Away '' Kari Skogland Meaghan Oppenheimer September 20 , 2015 ( 2015 - 09 - 20 ) 6.62 Days after the National Guard quarantines the neighborhood into a Safe Zone , residents try to live normally . Tensions build under the military rule . Madison is stressed by extra work caused by her home 's being overcrowded and Travis ' new role as civilian liaison . Chris shows a video to Travis and Madison of a light signaling from the Dead Zone . Travis talks Doug into getting mental help . Liza medically helps neighbors . Nick steals morphine from Hector via IV drip . Ofelia kisses Adams , who was unable to get Griselda 's medicine . Madison exchanges signals with the flashing light in the Dead Zone . She sneaks outside the fence to investigate and finds evidence that the guardsmen killed civilians , even the uninfected . Travis learns that Doug has been hospitalized for his mental issues . Dr. Exner determines that Liza is not technically a nurse . Daniel warns Madison of his El Salvador experience , when the sick were taken under the guise of receiving hospitalization but instead killed . Soldiers take Griselda and Nick to a hospital , but Nick 's family protests his departure . Liza agrees to go to assist the medical team , despite not wanting to leave her son . Travis retreats to the roof and sees the signal from the Dead Zone . Seconds later , he sees and hears gunfire , followed by darkness . 5 5 `` Cobalt '' Kari Skogland David Wiener September 27 , 2015 ( 2015 - 09 - 27 ) 6.66 In a military cell , Strand bribes a guardsman to save feverish Nick from being moved . Liza helps Dr. Exner with patients at the hospital . Chris is devastated that Liza left voluntarily to help at the hospital , but Travis promises to bring her back . Madison discovers Daniel detaining Adams in the Trans ' basement . Alicia and Chris get drunk in and vandalize the abandoned home of a wealthy family . Strand recruits Nick for an escape plot . Travis convinces Moyers ' squad to take him to the hospital to check on his friends . While en route , Moyers encourages Travis to shoot a zombie , but Travis is emotionally unable to pull the trigger . The soldiers stop to assist another squad in a building infested by zombies , and most of those soldiers , including Moyers , are overcome . The few survivors flee and drop off Travis near the Safe Zone . Travis learns that Daniel tortured Adams into revealing what `` Cobalt '' means : in the morning , all civilians will be killed , and the guardsmen will evacuate the city . Griselda dies of septic shock at the hospital ; Liza shoots her brain to prevent reanimation . Daniel visits a nearby sports arena to verify Adams ' story that it was sealed with 2,000 now - zombified civilians inside . 6 6 `` The Good Man '' Stefan Schwartz Robert Kirkman & Dave Erickson October 4 , 2015 ( 2015 - 10 - 04 ) 6.86 The group drives to the National Guard 's headquarters to rescue Liza , Griselda , and Nick . Adams agrees to be their guide when let go by Travis . The group infiltrates the base after Daniel distracts the guards by leading a horde of walkers from the arena . Travis , Madison , Daniel , and Ofelia go inside , while Alicia and Chris stay behind . Meanwhile , the walkers breach the perimeter defenses and swarm the base . Travis ' group reach the holding cells and set the detainees free before reuniting with Nick , Liza , and Strand . They try to escape through the medical ward , where they discover Dr. Exner has euthanized all of the patients . Dr. Exner tells them of an escape route before presumably committing suicide . Before they can escape , the group encounters Adams , who shoots Ofelia in the arm . Enraged , Travis brutally beats Adams and leaves him for dead . Strand leads the group to his oceanside mansion , where he reveals to Nick that he owns a yacht which he plans to escape on , called the Abigail . On the beach , Liza reveals to Madison that she had been bitten during the escape . Liza pleads with Madison and Travis to euthanize her before she turns . Travis promises to protect Chris before shooting Liza ."
+   ],
+   "model_answer": "The military quarantine begins unraveling, and the group realizes they may not be safe."
+  },
+  {
+   "id": "acf192725bc5b25b",
+   "kind": "answer",
+   "question": "what awards did the harry potter movies win",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "BAFTAs, Saturn Awards, Empire Awards, MTV Movie Awards, and numerous audience-voted awards."
+  },
+  {
+   "id": "147725c41df46baa",
+   "kind": "answer",
+   "question": "who got what in the compromise of 1877",
+   "gold_answers": [
+    "The Compromise of 1877 was an informal , unwritten deal that settled the intensely disputed 1876 U.S. presidential election . It resulted in the United States federal government pulling the last troops out of the South , and formally ended the Reconstruction Era . Through the Compromise , Republican Rutherford B. Hayes was awarded the White House over Democrat Samuel J. Tilden on the understanding that Hayes would remove the federal troops whose support was essential for the survival of Republican state governments in South Carolina , Florida and Louisiana . The compromise involved Democrats who controlled the House of Representatives allowing the decision of the Electoral Commission to take effect . The outgoing president , Republican Ulysses S. Grant , removed the soldiers from Florida . As president , Hayes removed the remaining troops from South Carolina and Louisiana . As soon as the troops left , many white Republicans also left , and the `` Redeemer '' Democrats took control . They already dominated other state governments in the South . What was exactly agreed is somewhat contested as the documentation is insufficient ."
+   ],
+   "model_answer": "Hayes got the presidency; Southern Democrats got federal troop withdrawal and restored Southern control."
+  },
+  {
+   "id": "390be480eccd0f4d",
+   "kind": "answer",
+   "question": "who has the rights to alice in wonderland",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Disney held the rights to Sir John Tenniel’s illustrations."
+  },
+  {
+   "id": "3a75b3fe3eebceee",
+   "kind": "answer",
+   "question": "states that have adopted the model rules of professional conduct",
+   "gold_answers": [
+    "The ABA Model Rules of Professional Conduct , created by the American Bar Association ( ABA ) , are a set of rules that prescribe baseline standards of legal ethics and professional responsibility for lawyers in the United States . They were promulgated by the ABA House of Delegates upon the recommendation of the Kutak Commission in 1983 . The rules are merely recommendations , or models , ( hence the name `` Model Rules '' ) and are not themselves binding . However , having a common set of Model Rules facilitates a common discourse on legal ethics , and simplifies professional responsibility training as well as the day - to - day application of such rules . As of 2015 , 49 states and four territories have adopted the rules in whole or in part , of which the most recent to do so was the Commonwealth of the Northern Mariana Islands in March 2015 . California is the only state that has not adopted the ABA Model Rules , while Puerto Rico is the only U.S. jurisdiction outside of confederation has not adopted them but instead has its own Código de Ética Profesional ."
+   ],
+   "model_answer": "All U.S. states except California."
+  },
+  {
+   "id": "5b02b9ba83d6fc01",
+   "kind": "answer",
+   "question": "where do honey bees live in the world",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Worldwide, with native populations mainly in South and Southeast Asia and Africa, and introduced populations elsewhere."
+  },
+  {
+   "id": "bffbc5ce018144cc",
+   "kind": "answer",
+   "question": "what platform is sandringham line at flinders st",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Platform 13"
+  },
+  {
+   "id": "d992ac2f7aecc3c8",
+   "kind": "answer",
+   "question": "where do the royalties for winnie the pooh go",
+   "gold_answers": [
+    "Slesinger, Inc.",
+    "the Slesinger family"
+   ],
+   "model_answer": "The Slesinger family receives royalties for future use."
+  },
+  {
+   "id": "a87fc4b8373be475",
+   "kind": "answer",
+   "question": "who lives in the blue house in balamory",
+   "gold_answers": [
+    "Edie McCredie"
+   ],
+   "model_answer": "No one; Penny Pocket wears blue but shares the red shop."
+  },
+  {
+   "id": "a6b919655ee69ef4",
+   "kind": "answer",
+   "question": "meaning of lyrics to wade in the water",
+   "gold_answers": [
+    "The song relates to both the Old and New Testaments . The verses reflect the Israelites ' escape out of Egypt as found in Exodus 14 . The chorus refers to healing : see John 5 : 4 , `` For an angel went down at a certain season into the pool , and troubled the water : whosoever then first after the troubling of the water stepped in was made whole of whatsoever disease he had . ''"
+   ],
+   "model_answer": "A spiritual song about faith, freedom, and liberation."
+  },
+  {
+   "id": "e6d13a144ef936f8",
+   "kind": "answer",
+   "question": "what is the short story the gift of the magi about",
+   "gold_answers": [
+    "a young husband and wife and how they deal with the challenge of buying secret Christmas gifts for each other with very little money"
+   ],
+   "model_answer": "A couple’s selfless Christmas gifts reveal the depth of their love."
+  },
+  {
+   "id": "d2c65931f306a3bc",
+   "kind": "answer",
+   "question": "in which regions are most of africa petroleum and natural gas found",
+   "gold_answers": [
+    "Nigeria"
+   ],
+   "model_answer": "The coastal Niger Delta and offshore areas."
+  },
+  {
+   "id": "171057cbee9517d5",
+   "kind": "answer",
+   "question": "fear the walking dead season 1 episode 4 explained",
+   "gold_answers": [
+    "No . overall No. in season Title Directed by Written by Original air date U.S. viewers ( millions ) `` Pilot '' Adam Davidson Robert Kirkman & Dave Erickson August 23 , 2015 ( 2015 - 08 - 23 ) 10.13 Nick awakens in a heroin den in an abandoned church , to find his girlfriend Gloria eating a corpse . While fleeing , he is hit by a car and hospitalized . The doctor tells Madison and Travis that Nick 's claims about the incident are heroin hallucinations , but Travis believes Nick after visiting the church himself . Alicia becomes more worried about Nick 's chemical dependency . The next day , school closes early due to the high levels of absenteeism and rumors of an epidemic . Nick escapes from the hospital and meets with Calvin , hoping to learn if the drugs Calvin sold him caused him to hallucinate in the church . Calvin tries to kill Nick to prevent him from exposing Calvin as a drug dealer or impugning the quality of his drugs . In the ensuing struggle , Calvin is mortally shot . After Travis and Madison arrive , the zombified Calvin attacks them . Nick runs over Calvin repeatedly with Travis ' truck , and the three watch in disbelief as the mutilated Calvin is still able to turn his head towards them . `` So Close , Yet So Far '' Adam Davidson Marco Ramirez August 30 , 2015 ( 2015 - 08 - 30 ) 8.18 After the run - in with zombified Calvin , Nick , Madison , and Travis choose to flee to the desert , and they want Alicia , Liza , and Chris to follow . Alicia finds Matt ill in his disheveled house . Travis arrives and sees a bite on Matt , who convinces Alicia to leave . The group returns to Madison 's home to gather supplies . Nick suffers from heroin withdrawal , so Madison drives to her school to get him Oxycodone . There , she encounters Tobias scavenging food . A zombified Artie tries to bite Tobias , so Madison kills Artie and drives Tobias home . Chris ' bus is trapped in a traffic jam caused by a zombie shooting by the police . He films the event and joins in a protest against that and other recent fatal police shootings , when Travis and Liza meet up with him . A riot erupts after police shoot down another zombie , but the three Manawas find refuge with the Salazars in their gated barbershop - home . Travis tells Madison to take the kids to the desert without him ; he will catch up . Alicia witnesses her zombified neighbor , Mr. Dawson , attacking Mrs. Cruz across the street , but Madison prevents her from intervening . The group inside the barbershop remains trapped , while the riot outside intensifies . `` The Dog '' Adam Davidson Jack LoGiudice September 13 , 2015 ( 2015 - 09 - 13 ) 7.19 While a riot rages outside , a mob sets fire to the store adjoining the barbershop , forcing the Salazars and Manawas to flee . The group reaches Travis ' truck and escapes , but not before Griselda is injured by a collapsing scaffold . Unable to reach a hospital , the group drives to Madison 's house , where Nick , Madison , and Alicia temporarily flee when the zombified Mr. Dawson attempts to enter , attracted by the barking dog Nick had let in . Nick leads Madison and Alicia to the Trans ' house next door , where they take a shotgun . Travis arrives and is attacked by Mr. Dawson , who is shot and killed by Daniel . All three families decide to stay the night and evacuate in the morning . Nurse Liza tends to Griselda 's injured foot but notes that Griselda will die if not treated by a doctor . Ofelia tells Daniel they should flee with Travis , but Daniel insists his family can survive alone and will join his cousin later . The next morning , as the Clarks and Manawas start driving away , the National Guard arrives and quarantines the block . While Travis says , `` It 's going to get better , '' Daniel laments that it 's , `` too late , '' as he watches a guardsman mark the neighboring house . `` Not Fade Away '' Kari Skogland Meaghan Oppenheimer September 20 , 2015 ( 2015 - 09 - 20 ) 6.62 Days after the National Guard quarantines the neighborhood into a Safe Zone , residents try to live normally . Tensions build under the military rule . Madison is stressed by extra work caused by her home 's being overcrowded and Travis ' new role as civilian liaison . Chris shows a video to Travis and Madison of a light signaling from the Dead Zone . Travis talks Doug into getting mental help . Liza medically helps neighbors . Nick steals morphine from Hector via IV drip . Ofelia kisses Adams , who was unable to get Griselda 's medicine . Madison exchanges signals with the flashing light in the Dead Zone . She sneaks outside the fence to investigate and finds evidence that the guardsmen killed civilians , even the uninfected . Travis learns that Doug has been hospitalized for his mental issues . Dr. Exner determines that Liza is not technically a nurse . Daniel warns Madison of his El Salvador experience , when the sick were taken under the guise of receiving hospitalization but instead killed . Soldiers take Griselda and Nick to a hospital , but Nick 's family protests his departure . Liza agrees to go to assist the medical team , despite not wanting to leave her son . Travis retreats to the roof and sees the signal from the Dead Zone . Seconds later , he sees and hears gunfire , followed by darkness . 5 5 `` Cobalt '' Kari Skogland David Wiener September 27 , 2015 ( 2015 - 09 - 27 ) 6.66 In a military cell , Strand bribes a guardsman to save feverish Nick from being moved . Liza helps Dr. Exner with patients at the hospital . Chris is devastated that Liza left voluntarily to help at the hospital , but Travis promises to bring her back . Madison discovers Daniel detaining Adams in the Trans ' basement . Alicia and Chris get drunk in and vandalize the abandoned home of a wealthy family . Strand recruits Nick for an escape plot . Travis convinces Moyers ' squad to take him to the hospital to check on his friends . While en route , Moyers encourages Travis to shoot a zombie , but Travis is emotionally unable to pull the trigger . The soldiers stop to assist another squad in a building infested by zombies , and most of those soldiers , including Moyers , are overcome . The few survivors flee and drop off Travis near the Safe Zone . Travis learns that Daniel tortured Adams into revealing what `` Cobalt '' means : in the morning , all civilians will be killed , and the guardsmen will evacuate the city . Griselda dies of septic shock at the hospital ; Liza shoots her brain to prevent reanimation . Daniel visits a nearby sports arena to verify Adams ' story that it was sealed with 2,000 now - zombified civilians inside . 6 6 `` The Good Man '' Stefan Schwartz Robert Kirkman & Dave Erickson October 4 , 2015 ( 2015 - 10 - 04 ) 6.86 The group drives to the National Guard 's headquarters to rescue Liza , Griselda , and Nick . Adams agrees to be their guide when let go by Travis . The group infiltrates the base after Daniel distracts the guards by leading a horde of walkers from the arena . Travis , Madison , Daniel , and Ofelia go inside , while Alicia and Chris stay behind . Meanwhile , the walkers breach the perimeter defenses and swarm the base . Travis ' group reach the holding cells and set the detainees free before reuniting with Nick , Liza , and Strand . They try to escape through the medical ward , where they discover Dr. Exner has euthanized all of the patients . Dr. Exner tells them of an escape route before presumably committing suicide . Before they can escape , the group encounters Adams , who shoots Ofelia in the arm . Enraged , Travis brutally beats Adams and leaves him for dead . Strand leads the group to his oceanside mansion , where he reveals to Nick that he owns a yacht which he plans to escape on , called the Abigail . On the beach , Liza reveals to Madison that she had been bitten during the escape . Liza pleads with Madison and Travis to euthanize her before she turns . Travis promises to protect Chris before shooting Liza ."
+   ],
+   "model_answer": "“Not Fade Away”: The family lives under National Guard rule, while Madison investigates suspicious killings beyond the Safe Zone."
+  },
+  {
+   "id": "d3874bb3ff8dc172",
+   "kind": "answer",
+   "question": "90 day fiance 1st season where are they now",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "As of 2017, all four Season 1 couples were still together; Alan and Kirlyam were expecting their first child."
+  },
+  {
+   "id": "45dd3016fe5c6517",
+   "kind": "answer",
+   "question": "who are the faces of the postcode lottery",
+   "gold_answers": [
+    "People 's Postcode Lottery has a number of celebrity `` ambassadors '' . In March 2018 , these included David Attenborough , Clare Balding , Brian Blessed , Judi Dench , Shobna Gulati , Tim Healy , Stephen Jardine , Ellen MacArthur , Aggie MacKenzie , Carey Mulligan , John Stapleton and Emma Thompson . Fiona Phillips became an ambassador for People 's Postcode Lottery at the end of 2012 , leading the organisation 's DRTV campaigns ."
+   ],
+   "model_answer": "David Attenborough, Clare Balding, Brian Blessed, Judi Dench, Shobna Gulati, Tim Healy, Stephen Jardine, Ellen MacArthur, Aggie MacKenzie, Carey Mulligan, John Stapleton, Emma Thompson and Fiona Phillips."
+  },
+  {
+   "id": "1c0dc14906dc0482",
+   "kind": "answer",
+   "question": "explain how an operating system talks to hardware",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Through the kernel and device drivers, which communicate with hardware."
+  },
+  {
+   "id": "af0f836e06a294d7",
+   "kind": "answer",
+   "question": "what is the form of mozart symphony no 40",
+   "gold_answers": [
+    "G minor",
+    "minor key symphonies"
+   ],
+   "model_answer": "Four-movement classical symphony: fast, slow, minuet, fast."
+  },
+  {
+   "id": "bc008000c3ccb1c6",
+   "kind": "answer",
+   "question": "what was taking place before the industrial revolution",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Merchant capitalism and mercantilism were developing."
+  },
+  {
+   "id": "4ed126750124a12f",
+   "kind": "answer",
+   "question": "industrial city in germany on the rhine herne canal",
+   "gold_answers": [
+    "Duisburg",
+    "Henrichenburg"
+   ],
+   "model_answer": "Herne"
+  }
+ ],
+ "evidence": []
+}

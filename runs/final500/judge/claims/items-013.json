@@ -1,0 +1,77 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "multihop-rag-1287",
+   "sentences": [
+    "The Bears' defense is all over the Vikings tonight, and Minnesota can't get out of its own way.",
+    "Week 4 was the first time all year the Vikings DIDN'T throw the ball on at least 69% of their snaps.",
+    "11:03 p.m. — The Vikings are using their two timeouts, but there isn't much they'll be able to do once this hits fourth down.",
+    "The new man on the Vikings, Josh Dobbs, keeps producing the same results they were enjoying offensively with Kirk Cousins, thanks to more help from the running game for Kevin O'Connell and the defense overall under Brian Flores."
+   ]
+  },
+  {
+   "id": "5a8c90db554299653c1aa0bf",
+   "sentences": [
+    "888 7th Avenue is a 628 ft (191m) tall modern-style office skyscraper in Midtown Manhattan which was completed in 1969 and has 46 floors.",
+    "200 West Street is the global headquarters of the Goldman Sachs investment banking firm.",
+    " The building is a 749 ft , 44-story building located on West Street, between Vesey and Murray Streets in Lower Manhattan."
+   ]
+  },
+  {
+   "id": "-6800766892221135307",
+   "sentences": [
+    "The optic chiasm or optic chiasma ( / ɒptɪk kaɪæzəm / ; Greek χίασμα , `` crossing '' , from the Greek χιάζω ' to mark with an X ' , after the Greek letter ' Χ ' , chi ) is the part of the brain where the optic nerves partially cross . The optic chiasm is located at the bottom of the brain immediately below the hypothalamus . The optic chiasm is found in all vertebrates , although in cyclostomes ( lampreys and hagfishes ) it is located within the brain ."
+   ]
+  },
+  {
+   "id": "6302295099297652599",
+   "sentences": [
+    "Although Surface Pro 4 is backward compatible with Type Cover accessory of Surface Pro 3 , an attachable keyboard which doubles as a screen protector , the Surface Pro 4 Type Cover has been announced with and without a fingerprint ID sensor . The new Type Cover is thinner and lighter than its predecessor , has improved magnetic stability for lap use , a mechanical keyboard with improved key spacing , as well as a larger touchpad ."
+   ]
+  },
+  {
+   "id": "5abc7bc45542993a06baf8ef",
+   "sentences": [
+    "Cassiope is a genus of 9-12 small shrubby species in the family Ericaceae.",
+    "Deutzia ( or ) is a genus of about 60 species of flowering plants in the family Hydrangeaceae, native to eastern and central Asia (from the Himalayas east to Japan and the Philippines), and Central America and also Europe."
+   ]
+  },
+  {
+   "id": "-7876533033876892996",
+   "sentences": [
+    "In Moulmein , the narrator -- Orwell , writing in the first person -- is a police officer during a period of intense anti-European sentiment . Although his intellectual sympathies lie with the Burmese , his official role makes him a symbol of the oppressive imperial power . As such , he is subjected to constant baiting and jeering by the local people .",
+    "The essay describes the experience of the English narrator , possibly Orwell himself , called upon to shoot an aggressive elephant while working as a police officer in Burma . Because the locals expect him to do the job , he does so against his better judgment , his anguish increased by the elephant 's slow and painful death . The story is regarded as a metaphor for British imperialism , and for Orwell 's view that `` when the white man turns tyrant it is his own freedom that he destroys . ''"
+   ]
+  },
+  {
+   "id": "5758694170037504500",
+   "sentences": [
+    "`` The Gift of the Magi '' is a short story , written by O. Henry ( a pen name for William Sydney Porter ) , about a young husband and wife and how they deal with the challenge of buying secret Christmas gifts for each other with very little money . As a sentimental story with a moral lesson about gift - giving , it has been a popular one for adaptation , especially for presentation at Christmas time . The plot and its twist ending are well - known , and the ending is generally considered an example of comic irony . It was allegedly written at Pete 's Tavern on Irving Place in New York City ."
+   ]
+  },
+  {
+   "id": "5a82a1ae55429954d2e2eb89",
+   "sentences": [
+    "Aspidistra is a genus of flowering plants in the family Asparagaceae, subfamily Nolinoideae, native to eastern and southeastern Asia, particularly China and Vietnam.",
+    "Cyrtanthus is a genus of perennial, herbaceous and bulbous plants in the family Amaryllidaceae, subfamily Amaryllidoideae."
+   ]
+  },
+  {
+   "id": "5a80e468554299260e20a1a9",
+   "sentences": [
+    "Suzanne N.J. 'Susie' Chun Oakland is a Democratic member of the Hawaii Senate, representing the 13th District since 1996.",
+    " Previously she was a member of the Hawaii House of Representatives from 1990-96.",
+    " The lower chamber of the legislature is the Hawaiʻi House of Representatives."
+   ]
+  },
+  {
+   "id": "5ab97d0a5542996be202051e",
+   "sentences": [
+    "John André (2 May 1750 – 2 October 1780) was a British Army officer hanged as a spy by the Continental Army during the American Revolutionary War for assisting Benedict Arnold's attempted surrender of the fort at West Point, New York to the British.",
+    "Benedict Arnold (January 14, 1741 [O.S. January 3, 1740] June 14, 1801) was a general during the American Revolutionary War, who fought for the American Continental Army, and later defected to the British Army."
+   ]
+  }
+ ]
+}

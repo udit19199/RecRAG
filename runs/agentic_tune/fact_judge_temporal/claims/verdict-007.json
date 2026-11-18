@@ -1,0 +1,174 @@
+[
+ {
+  "id": "multihop-rag-1937",
+  "sentences": [
+   [
+    "The whole line of argument is called 'market definition'.",
+    "The court may decide the relevant market is phones and app stores.",
+    "The relevant market may be phones and app stores, not specifically Android ones.",
+    "If the court decides the relevant market is phones and app stores, not specifically Android ones, then Google is on the road to victory."
+   ],
+   [
+    "She admits that she may have misinterpreted the evidence.",
+    "She maintains that Google manipulates Search to maximise ad revenue."
+   ],
+   [
+    "The case was filed by Arkansas-based publisher Helena World Chronicle.",
+    "The case argues that Google 'siphons off' news publishers' content through anticompetitive means.",
+    "The case argues that Google 'siphons off' news publishers' readers through anticompetitive means.",
+    "The case argues that Google 'siphons off' news publishers' ad revenue through anticompetitive means."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-1987",
+  "sentences": [
+   [
+    "The whole line of argument is called 'market definition'.",
+    "The court may decide the relevant market is phones and app stores.",
+    "The relevant market may be phones and app stores, not specifically Android ones.",
+    "If the court decides the relevant market is phones and app stores, not specifically Android ones, then Google is on the road to victory."
+   ],
+   [
+    "Monday's trial hearing revealed plenty of juicy tidbits.",
+    "Monday's trial hearing revealed the $26.3 billion Google spent in 2021 making itself the default search engine across platforms.",
+    "Monday's trial hearing revealed how Google tried to take it further and have Chrome preinstalled on iPhones.",
+    "Monday's trial hearing revealed more tidbits beyond those listed."
+   ],
+   [
+    "The case was filed by Arkansas-based publisher Helena World Chronicle.",
+    "The case argues that Google 'siphons off' news publishers' content through anticompetitive means.",
+    "The case argues that Google 'siphons off' news publishers' readers through anticompetitive means.",
+    "The case argues that Google 'siphons off' news publishers' ad revenue through anticompetitive means."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-2002",
+  "sentences": [
+   [
+    "Altman is not trained as an AI engineer.",
+    "Altman is now 38 years old.",
+    "Altman has been seen as a Silicon Valley wunderkind since his early 20s."
+   ],
+   [
+    "According to The Information, Altman has been telling investors.",
+    "According to The Information, Altman has been telling investors that he is planning to launch a new venture."
+   ],
+   [
+    "The prevailing theory is based on the board's language.",
+    "The prevailing theory is based on the way giant tech companies work.",
+    "The prevailing theory is floating around right now."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-2008",
+  "sentences": [
+   [
+    "In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies.",
+    "In this innovation cycle, product design creates a strong need for technologists and designers to be in the process together."
+   ],
+   [
+    "Stufish partner Ric Lipson collaborated on the U2 project for Sphere.",
+    "Artist Es Devlin collaborated on the U2 project for Sphere.",
+    "Producer Brian Eno collaborated on the U2 project for Sphere.",
+    "Ric Lipson, Es Devlin and Brian Eno collaborated together on the U2 project for Sphere."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-2011",
+  "sentences": [
+   [
+    "The quoted speaker has the Eras Tour booked all through next year.",
+    "The quoted speaker would rather die than cancel a show."
+   ],
+   [
+    "The speaker told NPR that it was almost like a very strange, subtle clue to the media.",
+    "The speaker told NPR that the clue suggested the media does not know everything that happened in that relationship.",
+    "The speaker told NPR that something really major and traumatic can happen to her and the media does not know about it."
+   ],
+   [
+    "Swift has now shared that she has nothing to hide in her new relationship with Kelce.",
+    "Swift's relationship with Kelce is new."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-2034",
+  "sentences": [
+   [
+    "The pastor explained that Jesus brought more positivity than anyone.",
+    "The pastor explained that it is important to keep faith aligned with the practice of positive thinking.",
+    "The pastor explained that keeping faith aligned with positive thinking is important because Jesus brought more positivity than anyone."
+   ],
+   [
+    "The pastor added that consistently tapping into the habit makes one's relationship with Jesus grow deeper and deeper.",
+    "The pastor added that the relationship with Jesus grows automatically."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-2042",
+  "sentences": [
+   [
+    "Inflation is fading.",
+    "The fading of inflation leads the Fed to cut interest rates.",
+    "Eventually, housing affordability will improve."
+   ],
+   [
+    "Some economic factors are stronger today than they were during the GFC.",
+    "Housing affordability is undeniably worse today."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-2043",
+  "sentences": [
+   [
+    "The guidance lays out ways to responsibly use AI in the courts.",
+    "The guidance includes being aware of potential bias when using AI in the courts.",
+    "The guidance includes upholding privacy when using AI in the courts."
+   ],
+   [
+    "The unnamed group promised investment in the AI-powered technology.",
+    "The promised AI-powered technology would, among other things, help YouTube protect its community of viewers, creators, artists and songwriters from trademark and copyright abuse."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-2115",
+  "sentences": [
+   [
+    "Google's public documentation says Google uses three categories to rank results that are local to a searcher.",
+    "The three categories are relevance, distance, and prominence."
+   ],
+   [
+    "In the last roundup, the authors learned that Google spent $26.3 billion in 2021 making itself the default search engine across platforms.",
+    "In the last roundup, the authors learned how Google tried to have Chrome preinstalled on iPhones."
+   ],
+   [
+    "The case was filed by Arkansas-based publisher Helena World Chronicle.",
+    "The case argues that Google 'siphons off' news publishers' content through anticompetitive means.",
+    "The case argues that Google 'siphons off' news publishers' readers through anticompetitive means.",
+    "The case argues that Google 'siphons off' news publishers' ad revenue through anticompetitive means."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-2126",
+  "sentences": [
+   [
+    "One can find value in player and team props by gathering information from multiple sources.",
+    "One can find value in player and team props by tracking how players and their teammates perform."
+   ],
+   [
+    "Prop bets can be team prop bets.",
+    "Prop bets can be individual player prop bets.",
+    "A team prop bet can be which team is winning at halftime.",
+    "An individual player prop bet can be the total number of receptions a player collects."
+   ]
+  ]
+ }
+]

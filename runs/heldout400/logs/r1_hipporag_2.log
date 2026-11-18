@@ -1,0 +1,331 @@
+0it [00:00, ?it/s]3287it [00:00, 32796.53it/s]7081it [00:00, 35814.26it/s]7728it [00:00, 34948.54it/s]
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:00<00:00,  1.21it/s]Retrieving: 100%|██████████| 1/1 [00:00<00:00,  1.21it/s]
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:00<00:00,  9.84it/s]Retrieving: 100%|██████████| 1/1 [00:00<00:00,  9.83it/s]
+hipporag: saved retrieval for multihop-rag-106
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:00<00:00,  2.99it/s]Retrieving: 100%|██████████| 1/1 [00:00<00:00,  2.99it/s]
+hipporag: saved retrieval for multihop-rag-112
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:00<00:00, 15.14it/s]
+hipporag: saved retrieval for multihop-rag-139
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:00<00:00,  2.27it/s]Retrieving: 100%|██████████| 1/1 [00:00<00:00,  2.27it/s]
+hipporag: saved retrieval for multihop-rag-155
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:00<00:00,  4.95it/s]Retrieving: 100%|██████████| 1/1 [00:00<00:00,  4.94it/s]
+hipporag: saved retrieval for multihop-rag-163
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:00<00:00,  3.79it/s]Retrieving: 100%|██████████| 1/1 [00:00<00:00,  3.79it/s]
+hipporag: saved retrieval for multihop-rag-225
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:00<00:00,  4.18it/s]Retrieving: 100%|██████████| 1/1 [00:00<00:00,  4.18it/s]
+hipporag: saved retrieval for multihop-rag-267
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:00<00:00, 10.03it/s]
+hipporag: saved retrieval for multihop-rag-284
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:00<00:00, 22.76it/s]
+hipporag: saved retrieval for multihop-rag-300
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:00<00:00,  2.13it/s]Retrieving: 100%|██████████| 1/1 [00:00<00:00,  2.13it/s]
+hipporag: saved retrieval for multihop-rag-337
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.86s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.88s/it]
+hipporag: saved retrieval for multihop-rag-355
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.73s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.73s/it]
+hipporag: saved retrieval for multihop-rag-356
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.26s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.26s/it]
+hipporag: saved retrieval for multihop-rag-369
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.19s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.19s/it]
+hipporag: saved retrieval for multihop-rag-436
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.92s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.92s/it]
+hipporag: saved retrieval for multihop-rag-450
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.44s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.44s/it]
+hipporag: saved retrieval for multihop-rag-456
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:05<00:00,  5.51s/it]Retrieving: 100%|██████████| 1/1 [00:05<00:00,  5.51s/it]
+hipporag: saved retrieval for multihop-rag-467
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.30s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.30s/it]
+hipporag: saved retrieval for multihop-rag-488
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.46s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.46s/it]
+hipporag: saved retrieval for multihop-rag-491
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.68s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.68s/it]
+hipporag: saved retrieval for multihop-rag-512
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.93s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.93s/it]
+hipporag: saved retrieval for multihop-rag-514
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.83s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.83s/it]
+hipporag: saved retrieval for multihop-rag-569
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.32s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.32s/it]
+hipporag: saved retrieval for multihop-rag-587
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.59s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.59s/it]
+hipporag: saved retrieval for multihop-rag-625
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.42s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.42s/it]
+hipporag: saved retrieval for multihop-rag-631
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.28s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.28s/it]
+hipporag: saved retrieval for multihop-rag-656
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.75s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.75s/it]
+hipporag: saved retrieval for multihop-rag-667
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:05<00:00,  5.57s/it]Retrieving: 100%|██████████| 1/1 [00:05<00:00,  5.57s/it]
+hipporag: saved retrieval for multihop-rag-681
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.50s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.50s/it]
+hipporag: saved retrieval for multihop-rag-683
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.91s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.91s/it]
+hipporag: saved retrieval for multihop-rag-685
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.70s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.70s/it]
+hipporag: saved retrieval for multihop-rag-734
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.66s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.66s/it]
+hipporag: saved retrieval for multihop-rag-752
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.21s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.21s/it]
+hipporag: saved retrieval for multihop-rag-823
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.92s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.92s/it]
+hipporag: saved retrieval for multihop-rag-838
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.67s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.67s/it]
+hipporag: saved retrieval for multihop-rag-875
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.44s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.44s/it]
+hipporag: saved retrieval for multihop-rag-895
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.56s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.56s/it]
+hipporag: saved retrieval for multihop-rag-902
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.55s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.55s/it]
+hipporag: saved retrieval for multihop-rag-1094
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.10s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.10s/it]
+hipporag: saved retrieval for multihop-rag-1096
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.49s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.50s/it]
+hipporag: saved retrieval for multihop-rag-1151
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.28s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.28s/it]
+hipporag: saved retrieval for multihop-rag-1196
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.90s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.90s/it]
+hipporag: saved retrieval for multihop-rag-1202
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.51s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.51s/it]
+hipporag: saved retrieval for multihop-rag-1229
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.30s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.30s/it]
+hipporag: saved retrieval for multihop-rag-1234
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.28s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.28s/it]
+hipporag: saved retrieval for multihop-rag-1314
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.05s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.05s/it]
+hipporag: saved retrieval for multihop-rag-1325
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:06<00:00,  6.26s/it]Retrieving: 100%|██████████| 1/1 [00:06<00:00,  6.26s/it]
+hipporag: saved retrieval for multihop-rag-1335
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.44s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.44s/it]
+hipporag: saved retrieval for multihop-rag-1336
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:05<00:00,  5.83s/it]Retrieving: 100%|██████████| 1/1 [00:05<00:00,  5.83s/it]
+hipporag: saved retrieval for multihop-rag-1344
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.51s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.51s/it]
+hipporag: saved retrieval for multihop-rag-1361
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.62s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.62s/it]
+hipporag: saved retrieval for multihop-rag-1382
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.91s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.91s/it]
+hipporag: saved retrieval for multihop-rag-1384
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.10s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.10s/it]
+hipporag: saved retrieval for multihop-rag-1386
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.03s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.03s/it]
+hipporag: saved retrieval for multihop-rag-1415
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.52s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.52s/it]
+hipporag: saved retrieval for multihop-rag-1444
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.11s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.11s/it]
+hipporag: saved retrieval for multihop-rag-1450
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.56s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.56s/it]
+Error parsing field fact_after_filter: 1 validation error for Fact
+  Input should be a valid dictionary or instance of Fact [type=model_type, input_value='{"fact":[]}\n\n[[ ## completed ]]', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/model_type.
+
+		On attempting to parse the value
+```
+{"fact":[]}
+
+[[ ## completed ]]
+```
+hipporag: saved retrieval for multihop-rag-1474
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.00s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.00s/it]
+hipporag: saved retrieval for multihop-rag-1479
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:05<00:00,  5.05s/it]Retrieving: 100%|██████████| 1/1 [00:05<00:00,  5.05s/it]
+hipporag: saved retrieval for multihop-rag-1484
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.53s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.53s/it]
+hipporag: saved retrieval for multihop-rag-1487
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.91s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.92s/it]
+hipporag: saved retrieval for multihop-rag-1488
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.41s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.41s/it]
+hipporag: saved retrieval for multihop-rag-1511
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.79s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.79s/it]
+hipporag: saved retrieval for multihop-rag-1513
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.73s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.73s/it]
+hipporag: saved retrieval for multihop-rag-1531
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.46s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.46s/it]
+hipporag: saved retrieval for multihop-rag-1570
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.75s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.75s/it]
+hipporag: saved retrieval for multihop-rag-1737
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.44s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.44s/it]
+hipporag: saved retrieval for multihop-rag-1768
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.11s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.11s/it]
+hipporag: saved retrieval for multihop-rag-1772
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.27s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.27s/it]
+hipporag: saved retrieval for multihop-rag-1778
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.81s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.81s/it]
+hipporag: saved retrieval for multihop-rag-1863
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.39s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.39s/it]
+hipporag: saved retrieval for multihop-rag-1865
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.56s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.56s/it]
+hipporag: saved retrieval for multihop-rag-1878
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.28s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.28s/it]
+Error parsing field fact_after_filter: 1 validation error for Fact
+  Input should be a valid dictionary or instance of Fact [type=model_type, input_value='{"fact":[["new ultrathin...big carbon footprint"]}', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/model_type.
+
+		On attempting to parse the value
+```
+{"fact":[["new ultrathin materials can pull climate warming co2 from the air","published by","science news for students"],["thakur","points out that making mxenes for carbon capture can have","a big carbon footprint"]}
+```
+hipporag: saved retrieval for multihop-rag-1898
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.08s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.08s/it]
+hipporag: saved retrieval for multihop-rag-1914
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.10s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.10s/it]
+hipporag: saved retrieval for multihop-rag-1919
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.43s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.43s/it]
+hipporag: saved retrieval for multihop-rag-1940
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.66s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.66s/it]
+hipporag: saved retrieval for multihop-rag-1954
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.41s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.41s/it]
+hipporag: saved retrieval for multihop-rag-1971
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.36s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.36s/it]
+hipporag: saved retrieval for multihop-rag-1976
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.75s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.75s/it]
+hipporag: saved retrieval for multihop-rag-2026
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.31s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.31s/it]
+hipporag: saved retrieval for multihop-rag-2029
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.94s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.94s/it]
+hipporag: saved retrieval for multihop-rag-2070
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:05<00:00,  5.57s/it]Retrieving: 100%|██████████| 1/1 [00:05<00:00,  5.57s/it]
+hipporag: saved retrieval for multihop-rag-2085
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.77s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.77s/it]
+hipporag: saved retrieval for multihop-rag-2108
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.20s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.20s/it]
+hipporag: saved retrieval for multihop-rag-2134
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.95s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.95s/it]
+hipporag: saved retrieval for multihop-rag-2154
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.24s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.24s/it]
+hipporag: saved retrieval for multihop-rag-2241
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.52s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.52s/it]
+hipporag: saved retrieval for multihop-rag-2256
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.01s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.01s/it]
+hipporag: saved retrieval for multihop-rag-2310
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:05<00:00,  5.26s/it]Retrieving: 100%|██████████| 1/1 [00:05<00:00,  5.26s/it]
+hipporag: saved retrieval for multihop-rag-2313
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.58s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.58s/it]
+hipporag: saved retrieval for multihop-rag-2353
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.86s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.86s/it]
+hipporag: saved retrieval for multihop-rag-2372
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.34s/it]Retrieving: 100%|██████████| 1/1 [00:01<00:00,  1.34s/it]
+hipporag: saved retrieval for multihop-rag-2376
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.33s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.33s/it]
+hipporag: saved retrieval for multihop-rag-2401
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.41s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.41s/it]
+hipporag: saved retrieval for multihop-rag-2402
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.24s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.24s/it]
+Error parsing field fact_after_filter: 1 validation error for Fact
+  Input should be a valid dictionary or instance of Fact [type=model_type, input_value='{"fact":[]}\n\n[[ ## completed ##]}', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/model_type.
+
+		On attempting to parse the value
+```
+{"fact":[]}
+
+[[ ## completed ##]}
+```
+hipporag: saved retrieval for multihop-rag-2453
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.24s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.24s/it]
+hipporag: saved retrieval for multihop-rag-2479
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.80s/it]Retrieving: 100%|██████████| 1/1 [00:04<00:00,  4.80s/it]
+hipporag: saved retrieval for multihop-rag-2518
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.28s/it]Retrieving: 100%|██████████| 1/1 [00:03<00:00,  3.28s/it]
+hipporag: saved retrieval for multihop-rag-2527
+Retrieving:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.12s/it]Retrieving: 100%|██████████| 1/1 [00:02<00:00,  2.12s/it]
+hipporag: saved retrieval for multihop-rag-2546
+hipporag record 0: EM=1.00, F1=1.00
+hipporag record 1: EM=0.00, F1=0.00
+hipporag record 2: EM=1.00, F1=1.00
+hipporag record 3: EM=1.00, F1=1.00
+hipporag record 4: EM=1.00, F1=1.00
+hipporag record 5: EM=1.00, F1=1.00
+hipporag record 6: EM=1.00, F1=1.00
+hipporag record 7: EM=1.00, F1=1.00
+hipporag record 8: EM=1.00, F1=1.00
+hipporag record 9: EM=0.00, F1=0.00
+hipporag record 10: EM=1.00, F1=1.00
+hipporag record 11: EM=1.00, F1=1.00
+hipporag record 12: EM=1.00, F1=1.00
+hipporag record 13: EM=1.00, F1=1.00
+hipporag record 14: EM=1.00, F1=1.00
+hipporag record 15: EM=1.00, F1=1.00
+hipporag record 16: EM=1.00, F1=1.00
+hipporag record 17: EM=1.00, F1=1.00
+hipporag record 18: EM=1.00, F1=1.00
+hipporag record 19: EM=1.00, F1=1.00
+hipporag record 20: EM=1.00, F1=1.00
+hipporag record 21: EM=1.00, F1=1.00
+hipporag record 22: EM=1.00, F1=1.00
+hipporag record 23: EM=1.00, F1=1.00
+hipporag record 24: EM=1.00, F1=1.00
+hipporag record 25: EM=1.00, F1=1.00
+hipporag record 26: EM=1.00, F1=1.00
+hipporag record 27: EM=1.00, F1=1.00
+hipporag record 28: EM=1.00, F1=1.00
+hipporag record 29: EM=1.00, F1=1.00
+hipporag record 30: EM=1.00, F1=1.00
+hipporag record 31: EM=1.00, F1=1.00
+hipporag record 32: EM=1.00, F1=1.00
+hipporag record 33: EM=1.00, F1=1.00
+hipporag record 34: EM=1.00, F1=1.00
+hipporag record 35: EM=0.00, F1=0.00
+hipporag record 36: EM=1.00, F1=1.00
+hipporag record 37: EM=1.00, F1=1.00
+hipporag record 38: EM=1.00, F1=1.00
+hipporag record 39: EM=1.00, F1=1.00
+hipporag record 40: EM=1.00, F1=1.00
+hipporag record 41: EM=1.00, F1=1.00
+hipporag record 42: EM=1.00, F1=1.00
+hipporag record 43: EM=1.00, F1=1.00
+hipporag record 44: EM=0.00, F1=0.00
+hipporag record 45: EM=0.00, F1=0.00
+hipporag record 46: EM=1.00, F1=1.00
+hipporag record 47: EM=1.00, F1=1.00
+hipporag record 48: EM=1.00, F1=1.00
+hipporag record 49: EM=1.00, F1=1.00
+hipporag record 50: EM=1.00, F1=1.00
+hipporag record 51: EM=1.00, F1=1.00
+hipporag record 52: EM=1.00, F1=1.00
+hipporag record 53: EM=1.00, F1=1.00
+hipporag record 54: EM=1.00, F1=1.00
+hipporag record 55: EM=1.00, F1=1.00
+hipporag record 56: EM=1.00, F1=1.00
+hipporag record 57: EM=1.00, F1=1.00
+hipporag record 58: EM=1.00, F1=1.00
+hipporag record 59: EM=1.00, F1=1.00
+hipporag record 60: EM=1.00, F1=1.00
+hipporag record 61: EM=1.00, F1=1.00
+hipporag record 62: EM=1.00, F1=1.00
+hipporag record 63: EM=1.00, F1=1.00
+hipporag record 64: EM=1.00, F1=1.00
+hipporag record 65: EM=1.00, F1=1.00
+hipporag record 66: EM=1.00, F1=1.00
+hipporag record 67: EM=1.00, F1=1.00
+hipporag record 68: EM=1.00, F1=1.00
+hipporag record 69: EM=1.00, F1=1.00
+hipporag record 70: EM=1.00, F1=1.00
+hipporag record 71: EM=1.00, F1=1.00
+hipporag record 72: EM=1.00, F1=1.00
+hipporag record 73: EM=1.00, F1=1.00
+hipporag record 74: EM=1.00, F1=1.00
+hipporag record 75: EM=1.00, F1=1.00
+hipporag record 76: EM=1.00, F1=1.00
+hipporag record 77: EM=1.00, F1=1.00
+hipporag record 78: EM=1.00, F1=1.00
+hipporag record 79: EM=1.00, F1=1.00
+hipporag record 80: EM=1.00, F1=1.00
+hipporag record 81: EM=1.00, F1=1.00
+hipporag record 82: EM=1.00, F1=1.00
+hipporag record 83: EM=1.00, F1=1.00
+hipporag record 84: EM=1.00, F1=1.00
+hipporag record 85: EM=1.00, F1=1.00
+hipporag record 86: EM=1.00, F1=1.00
+hipporag record 87: EM=1.00, F1=1.00
+hipporag record 88: EM=1.00, F1=1.00
+hipporag record 89: EM=1.00, F1=1.00
+hipporag record 90: EM=1.00, F1=1.00
+hipporag record 91: EM=1.00, F1=1.00
+hipporag record 92: EM=1.00, F1=1.00
+hipporag record 93: EM=1.00, F1=1.00
+hipporag record 94: EM=1.00, F1=1.00
+hipporag record 95: EM=1.00, F1=1.00
+hipporag record 96: EM=1.00, F1=1.00
+hipporag record 97: EM=1.00, F1=1.00
+hipporag record 98: EM=1.00, F1=1.00
+hipporag record 99: EM=1.00, F1=1.00
+RESULTS /Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/hipporag/20261101T212051068538Z/results.jsonl

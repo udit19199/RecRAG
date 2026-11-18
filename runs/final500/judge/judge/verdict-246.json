@@ -1,0 +1,58 @@
+[
+  {"id": "97afe8d7791a1d09", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Valve has made a gaggle of minor physical upgrades with its new iteration"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration"}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "71a69fa4105ee534", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "584f9c9009ee7b26", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry"}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []},
+    {"fact": "3.0", "status": "stated", "evidence": [{"item": 5, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+    {"fact": "3.1", "status": "stated", "evidence": [{"item": 5, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+    {"fact": "3.2", "status": "stated", "evidence": [{"item": 5, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud"}]},
+    {"fact": "3.3", "status": "stated", "evidence": [{"item": 5, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]}
+  ]},
+  {"id": "0a1b73da74e9aa03", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents"}]}
+  ]},
+  {"id": "273304ac204928f3", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Inter Miami scheduled a two-match tour of China in early November"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Inter Miami scheduled a two-match tour of China in early November after their regular season concluded"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Likely with the sole intent of keeping Messi fit in that time off"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "the added bonus of raking in significant cash, Inter Miami scheduled a two-match tour of China"}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 8, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time"}]}
+  ]}
+]

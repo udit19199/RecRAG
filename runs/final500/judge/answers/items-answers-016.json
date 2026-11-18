@@ -1,0 +1,546 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "6f33774c8e5366e8",
+   "kind": "answer",
+   "question": "Which film does \"Naked Weapon\" follow in the \"Naked\" series?",
+   "gold_answers": [
+    "\"Naked Killer\""
+   ],
+   "model_answer": "Naked Killer (1992)"
+  },
+  {
+   "id": "1a057023d13816be",
+   "kind": "answer",
+   "question": "What profession did Willi Forst and Elmer Clifton share?",
+   "gold_answers": [
+    "actor"
+   ],
+   "model_answer": "Actors"
+  },
+  {
+   "id": "da074c0d196388bc",
+   "kind": "answer",
+   "question": "What was the Volvo S70 essentially modeled after and was the first all wheel drive Volvo?",
+   "gold_answers": [
+    "Volvo 850"
+   ],
+   "model_answer": "The Volvo 850; its AWD wagon was Volvo’s first all-wheel-drive model."
+  },
+  {
+   "id": "8a87eee34084473f",
+   "kind": "answer",
+   "question": "Martin Flavin and Peter Benchley both did what occupation?",
+   "gold_answers": [
+    "novelist"
+   ],
+   "model_answer": "Novelists"
+  },
+  {
+   "id": "b656b3d848f3ea29",
+   "kind": "answer",
+   "question": "Swingin' Down Yonder is the first full-length, 12-inch album recorded by a singer known by what nickname?",
+   "gold_answers": [
+    "\"King of Cool\""
+   ],
+   "model_answer": "The Ol’ Pea-Picker"
+  },
+  {
+   "id": "4a50027d1698f3cd",
+   "kind": "answer",
+   "question": "Who was known by his stage name Aladin and helped organizations improve their performance as a consultant?",
+   "gold_answers": [
+    "Eenasul Fateh"
+   ],
+   "model_answer": "I couldn’t identify him."
+  },
+  {
+   "id": "f9e00b5aec38b65b",
+   "kind": "answer",
+   "question": "What was the Volvo S70 essentially modeled after and was the first all wheel drive Volvo?",
+   "gold_answers": [
+    "Volvo 850"
+   ],
+   "model_answer": "The Volvo 850 saloon; the 850 was Volvo’s first all-wheel-drive model."
+  },
+  {
+   "id": "7cdee1567ecf1174",
+   "kind": "answer",
+   "question": "What city did the name come from for the Polish truck manufacturer who sold to various countries, including more than the socialist states of Central and Eastern Europe?",
+   "gold_answers": [
+    "City of Starachowice"
+   ],
+   "model_answer": "Starachowice"
+  },
+  {
+   "id": "30b4e00aea1dd74b",
+   "kind": "answer",
+   "question": "Why is Minister Pool important to Black Country and the West Midlands in England?",
+   "gold_answers": [
+    "defence of the Cathedral"
+   ],
+   "model_answer": "A historic landmark and popular visitor attraction in Lichfield."
+  },
+  {
+   "id": "776631cc981fb8f3",
+   "kind": "answer",
+   "question": "Cherie Currie and Steve Augeri were both what?",
+   "gold_answers": [
+    "American musician"
+   ],
+   "model_answer": "American singers"
+  },
+  {
+   "id": "46899e52094adbb0",
+   "kind": "answer",
+   "question": "Why is Minister Pool important to Black Country and the West Midlands in England?",
+   "gold_answers": [
+    "defence of the Cathedral"
+   ],
+   "model_answer": "It is a historic Lichfield reservoir, with no stated connection to the Black Country."
+  },
+  {
+   "id": "00bd80188de9cb0e",
+   "kind": "answer",
+   "question": "What North Carolina native did Danja produce songs for?",
+   "gold_answers": [
+    "J. Cole"
+   ],
+   "model_answer": "Fantasia Barrino"
+  },
+  {
+   "id": "9c39b7e6269b7a31",
+   "kind": "answer",
+   "question": "What profession did Willi Forst and Elmer Clifton share?",
+   "gold_answers": [
+    "actor"
+   ],
+   "model_answer": "Film director"
+  },
+  {
+   "id": "e2d494b27de09209",
+   "kind": "answer",
+   "question": "Are the 1908 Ex parte Young and 1948 McCollum v. Board of Education United States Supreme Court cases related to each other in any way?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Only in that both are Supreme Court cases; they address unrelated issues."
+  },
+  {
+   "id": "a6f0656b78e1143a",
+   "kind": "answer",
+   "question": "Are Kim Dong-jun and Charlie Harper both singers?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both are singers."
+  },
+  {
+   "id": "efbbc79f8efbbc17",
+   "kind": "answer",
+   "question": " What type of television show did Dylan Everett star in, in 2015?",
+   "gold_answers": [
+    "American-Canadian mystery-drama"
+   ],
+   "model_answer": "A science fiction drama series."
+  },
+  {
+   "id": "0f31525fde8e3a3b",
+   "kind": "answer",
+   "question": "WHAT WAS THE NAME OF THE BOOK MADE INTO THE 2015 SOUTH KOREAN CRIME THRILLER, THE DEAL, DIRECTED BY SON YONG-HO AND FEATURING SOUTH KOREAN ACTOR PARK SUNG-WOONG (BORN JANUARY 9, 1973) AS A SERIAL KILLER?",
+   "gold_answers": [
+    "\"Murder Request\""
+   ],
+   "model_answer": "The Deal"
+  },
+  {
+   "id": "cd67e2837c9edcd0",
+   "kind": "answer",
+   "question": "Between two scientists Ernst Messerschmid and Philippe Perrin, who is older?",
+   "gold_answers": [
+    "Ernst Willi Messerschmid"
+   ],
+   "model_answer": "Ernst Messerschmid"
+  },
+  {
+   "id": "0e31927f3a79ecf2",
+   "kind": "answer",
+   "question": "Who was born first, British novelist Doris Lessing or American writer Philip K. Dick?",
+   "gold_answers": [
+    "Doris May Lessing"
+   ],
+   "model_answer": "Doris Lessing"
+  },
+  {
+   "id": "47fbb4d7ee0afcb7",
+   "kind": "answer",
+   "question": "What is the scentific name of the butterfly that is widespread in the seventh-largest country in the world?",
+   "gold_answers": [
+    "I. helicon"
+   ],
+   "model_answer": "Papilio polytes"
+  },
+  {
+   "id": "b94be6023985bee8",
+   "kind": "answer",
+   "question": "What was the companion piece that Poe's brother published?",
+   "gold_answers": [
+    "\"The Whalestoe Letters\""
+   ],
+   "model_answer": "How to Write a Blackwood Article"
+  },
+  {
+   "id": "0bb8049bbeed39ca",
+   "kind": "answer",
+   "question": "Albanians in Montenegro which make up 4.91 of the county's total population could be members of the Albanian Coalation Perspect which is a what? ",
+   "gold_answers": [
+    "Albanian political party in Montenegro"
+   ],
+   "model_answer": "A political coalition of Albanian parties in Montenegro."
+  },
+  {
+   "id": "eb0b2fa02331ff19",
+   "kind": "answer",
+   "question": "What kind of film are  The Silent Historian and The Betrayal – Nerakhoon?",
+   "gold_answers": [
+    "documentary film"
+   ],
+   "model_answer": "Documentary films"
+  },
+  {
+   "id": "bab541b2cd0310fe",
+   "kind": "answer",
+   "question": "In what year did both Orson Scott Card's novel \"Ender's Game\" and Keri Hulme's \"The Bone People\" come out?",
+   "gold_answers": [
+    "1985"
+   ],
+   "model_answer": "1984 and 1985"
+  },
+  {
+   "id": "eba36532d70980b9",
+   "kind": "answer",
+   "question": "Edmund Robert Harris is the principal benefactor of a museum located where ?",
+   "gold_answers": [
+    "Preston"
+   ],
+   "model_answer": "Preston, Lancashire, UK"
+  },
+  {
+   "id": "fe7452e95f9ea935",
+   "kind": "answer",
+   "question": "Who died last Vladimir Arnold or Georg Cantor?",
+   "gold_answers": [
+    "Vladimir Igorevich Arnold"
+   ],
+   "model_answer": "Vladimir Arnold"
+  },
+  {
+   "id": "8640259a7de86407",
+   "kind": "answer",
+   "question": "are Tinto Brass and Baltasar Kormákur both from the same country ?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No, they are from different countries."
+  },
+  {
+   "id": "80595df7d6ea6882",
+   "kind": "answer",
+   "question": "how many films has the director of \"Girl 6\" produced since 1983?",
+   "gold_answers": [
+    "over 35 films"
+   ],
+   "model_answer": "35 films"
+  },
+  {
+   "id": "e85e54165d5f0674",
+   "kind": "answer",
+   "question": "Edmund Robert Harris is the principal benefactor of a museum located where ?",
+   "gold_answers": [
+    "Preston"
+   ],
+   "model_answer": "Preston, England"
+  },
+  {
+   "id": "fd41d77e7b0de61c",
+   "kind": "answer",
+   "question": "What profession does Matt Thiessen and George Thorogood have in common?",
+   "gold_answers": [
+    "musician"
+   ],
+   "model_answer": "Musician and singer-songwriter"
+  },
+  {
+   "id": "ef731de433c771f2",
+   "kind": "answer",
+   "question": "Are Alice Munro and Lillian Hellman both writers?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both are writers."
+  },
+  {
+   "id": "8f418fe79c5f103f",
+   "kind": "answer",
+   "question": "What is the population of the city where the Akademisches Kunstmuseum is?",
+   "gold_answers": [
+    "300,000"
+   ],
+   "model_answer": "Approximately 335,000 people."
+  },
+  {
+   "id": "48c222598ba23cdb",
+   "kind": "answer",
+   "question": "The twenty-first season of South Park was entitled \"White People Renovating Houses\" is which episode of the series overall?",
+   "gold_answers": [
+    "278th episode"
+   ],
+   "model_answer": "278th episode overall"
+  },
+  {
+   "id": "a7710f9f0d3ffbfb",
+   "kind": "answer",
+   "question": "What is another name, in Swedish, for a seductive forest creature found in Scandinavian folklore?",
+   "gold_answers": [
+    "Rå"
+   ],
+   "model_answer": "Skogsrå"
+  },
+  {
+   "id": "a057e2646ea29d83",
+   "kind": "answer",
+   "question": "Which \"Mirrors\" actress made her film debut in the 2005 comedy film \"Hitch\"?",
+   "gold_answers": [
+    "Paula Maxine Patton"
+   ],
+   "model_answer": "Paula Patton"
+  },
+  {
+   "id": "afbba610d2425a0f",
+   "kind": "answer",
+   "question": "Was Talking Heads and Man or Astro-man? formed further north?",
+   "gold_answers": [
+    "Talking Heads"
+   ],
+   "model_answer": "Yes—Talking Heads."
+  },
+  {
+   "id": "39d570d193067a00",
+   "kind": "answer",
+   "question": "Which was published more frequently, Popular Science or Girlfriends?",
+   "gold_answers": [
+    "Girlfriends"
+   ],
+   "model_answer": "Girlfriends, monthly."
+  },
+  {
+   "id": "55f2134f0724f632",
+   "kind": "answer",
+   "question": "Do singers Lee Donghae and Dappy have the same nationality?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No, Lee Donghae is South Korean and Dappy is English."
+  },
+  {
+   "id": "baf5018457311c79",
+   "kind": "answer",
+   "question": "Are Random House Tower and 888 7th Avenue both used for real estate?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes, both are used for commercial real estate."
+  },
+  {
+   "id": "0e35a23f8e2d3cda",
+   "kind": "answer",
+   "question": "Nikolay Mitrofanovich Krylov and Anatoly Fomenko both held what academic title?",
+   "gold_answers": [
+    "mathematician"
+   ],
+   "model_answer": "Academician"
+  },
+  {
+   "id": "62d8f49af6e98dbb",
+   "kind": "answer",
+   "question": "Are both Miltoniopsis and Strobilanthes examples of a genus?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both are genera."
+  },
+  {
+   "id": "fae11bc7c18a27c6",
+   "kind": "answer",
+   "question": "Do both Changle District and Longkou face water?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both face the sea."
+  },
+  {
+   "id": "059831b7cb70c909",
+   "kind": "answer",
+   "question": "What aspect of the board game Diplomacy is not found in the board game Uncle Wiggily?",
+   "gold_answers": [
+    "negotiation phases"
+   ],
+   "model_answer": "Negotiation and alliance-forming\n"
+  },
+  {
+   "id": "8304a47f0f894670",
+   "kind": "answer",
+   "question": "Who directed and wrote the 2016 film featuring the voice of Townsend Coleman?",
+   "gold_answers": [
+    "Garth Jennings"
+   ],
+   "model_answer": "Sam Liu directed it, and Brian Azzarello wrote it."
+  },
+  {
+   "id": "b3e35674d781945a",
+   "kind": "answer",
+   "question": " Are Isaac Asimov and Michael Cunningham both American writers?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "e28ea4cc45794e13",
+   "kind": "answer",
+   "question": "Did Billy Corgan's band The Smashing Pumpkins or Greek Fire originate in a more southern location?",
+   "gold_answers": [
+    "Greek Fire"
+   ],
+   "model_answer": "Greek Fire (St. Louis)"
+  },
+  {
+   "id": "588e659ba34f9d7e",
+   "kind": "answer",
+   "question": "In addition to the best known comic servant from Commedia dell'arte, who else is featured in La Surprise de l'amour?",
+   "gold_answers": [
+    "Columbine"
+   ],
+   "model_answer": "Columbine (Colombina)"
+  },
+  {
+   "id": "41cfbc1e5ec6d9a6",
+   "kind": "answer",
+   "question": "Which body of water required more intensive man made barriers the Dundee Canal or Lake Worth Lagoon?",
+   "gold_answers": [
+    "The Dundee Canal"
+   ],
+   "model_answer": "Lake Worth Lagoon"
+  },
+  {
+   "id": "157ce8d99859f442",
+   "kind": "answer",
+   "question": "What is the name for plastic water-filled barriers that you might find along the MacArthur Road highway in Pennsylvania?",
+   "gold_answers": [
+    "Jersey barrier"
+   ],
+   "model_answer": "Jersey barriers"
+  },
+  {
+   "id": "da77dfa906d22808",
+   "kind": "answer",
+   "question": "Are Pago Pago International Airport and Hoonah Airport both on American territory?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both are on U.S. territory."
+  },
+  {
+   "id": "466643af6552bd12",
+   "kind": "answer",
+   "question": "What does Age of Chance and Vector share in common? ",
+   "gold_answers": [
+    "was a rock band"
+   ],
+   "model_answer": "British? No—both are rock bands."
+  },
+  {
+   "id": "d1f3d17fdbdd07b2",
+   "kind": "answer",
+   "question": "Which battle came first, the Battle of Okinawa or Operation Diadem?",
+   "gold_answers": [
+    "Operation Diadem"
+   ],
+   "model_answer": "Operation Diadem came first."
+  },
+  {
+   "id": "6934822fbf934d9f",
+   "kind": "answer",
+   "question": "What are some other areas that share a common deer species with the forests of Mara and Mondrem?",
+   "gold_answers": [
+    "New Zealand, Canada, the United States, the Falkland Islands, and Peru."
+   ],
+   "model_answer": "Europe, Asia, and North Africa."
+  },
+  {
+   "id": "7d21f130b997f914",
+   "kind": "answer",
+   "question": "What aspect of the board game Diplomacy is not found in the board game Uncle Wiggily?",
+   "gold_answers": [
+    "negotiation phases"
+   ],
+   "model_answer": "Negotiation and alliances"
+  },
+  {
+   "id": "6a78fc19384bf17f",
+   "kind": "answer",
+   "question": " What type of television show did Dylan Everett star in, in 2015?",
+   "gold_answers": [
+    "American-Canadian mystery-drama"
+   ],
+   "model_answer": "Mystery-drama series"
+  },
+  {
+   "id": "357ee2553a9ea68f",
+   "kind": "answer",
+   "question": "Who is one other client that is represented by the same person that also represents a barrister at Doughty Street Chambers?",
+   "gold_answers": [
+    "Angelina Jolie"
+   ],
+   "model_answer": "George Clooney"
+  },
+  {
+   "id": "7213b9a78f852354",
+   "kind": "answer",
+   "question": "The Church of the Guanche People was founded in the city that is on the most populated island of what larger area?",
+   "gold_answers": [
+    "Macaronesia"
+   ],
+   "model_answer": "Canary Islands"
+  },
+  {
+   "id": "4db3be4241e66b26",
+   "kind": "answer",
+   "question": "What two occupations did Scott Weiland and Richard Hawley have in common?",
+   "gold_answers": [
+    "singer and songwriter"
+   ],
+   "model_answer": "Musician and singer-songwriter"
+  },
+  {
+   "id": "0d71201d7fa9cf35",
+   "kind": "answer",
+   "question": "Where was the movement that August Brancart published literature from centerd?",
+   "gold_answers": [
+    "Western Europe"
+   ],
+   "model_answer": "Paris, France"
+  },
+  {
+   "id": "1f5baca57ecb2344",
+   "kind": "answer",
+   "question": "What are some other areas that share a common deer species with the forests of Mara and Mondrem?",
+   "gold_answers": [
+    "New Zealand, Canada, the United States, the Falkland Islands, and Peru."
+   ],
+   "model_answer": "Australia, New Zealand, Canada, and the United States"
+  }
+ ],
+ "evidence": []
+}

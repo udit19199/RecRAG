@@ -1,0 +1,776 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=d917d4768073bbda ===
+Gold sentences and facts:
+Sentence 0: Capital punishment in Australia has been abolished in all jurisdictions . Queensland abolished the death penalty in 1922 . Tasmania did the same in 1968 , the federal government abolished the death penalty in 1973 , with application also in the Australian Capital Territory and the Northern Territory . Victoria did so in 1975 , South Australia in 1976 , and Western Australia in 1984 . New South Wales abolished the death penalty for murder in 1955 , and for all crimes in 1985 . In 2010 , the federal government passed legislation prohibiting the re-establishment of capital punishment by any state or territory . Neither the Commonwealth nor any of the states will extradite or deport a prisoner to another jurisdiction if they will face the death penalty , and police co-operation with other countries which have the death penalty has been questioned .
+  Fact 0.0: Capital punishment in Australia has been abolished in all jurisdictions.
+  Fact 0.1: Queensland abolished the death penalty in 1922.
+  Fact 0.2: Tasmania abolished the death penalty in 1968.
+  Fact 0.3: The federal government abolished the death penalty in 1973.
+  Fact 0.4: The federal abolition of the death penalty in 1973 applied in the Australian Capital Territory.
+  Fact 0.5: The federal abolition of the death penalty in 1973 applied in the Northern Territory.
+  Fact 0.6: Victoria abolished the death penalty in 1975.
+  Fact 0.7: South Australia abolished the death penalty in 1976.
+  Fact 0.8: Western Australia abolished the death penalty in 1984.
+  Fact 0.9: New South Wales abolished the death penalty for murder in 1955.
+  Fact 0.10: New South Wales abolished the death penalty for all crimes in 1985.
+  Fact 0.11: In 2010, the federal government passed legislation prohibiting the re-establishment of capital punishment by any state or territory.
+  Fact 0.12: The Commonwealth will not extradite a prisoner to another jurisdiction if the prisoner will face the death penalty.
+  Fact 0.13: No state will extradite a prisoner to another jurisdiction if the prisoner will face the death penalty.
+  Fact 0.14: The Commonwealth will not deport a prisoner to another jurisdiction if the prisoner will face the death penalty.
+  Fact 0.15: No state will deport a prisoner to another jurisdiction if the prisoner will face the death penalty.
+  Fact 0.16: Police co-operation with other countries which have the death penalty has been questioned.
+
+Retrieved items:
+<item 1>
+Capital punishment in Australia
+Neither the Commonwealth nor any of the states will extradite or deport a prisoner to another jurisdiction if they will face the death penalty . A recent case
+involving this was the case of American Gabe Watson , who was convicted of the manslaughter of his wife in North Queensland , and faced capital murder charges
+in his home state of Alabama . His deportation was delayed until the government received assurances that he would not be executed if found guilty . New South
+Wales ( edit ) The last execution in New South Wales was carried out on 24 August 1939 , when John Trevor Kelly was hanged at Sydney 's Long Bay Correctional
+Centre for the murder of Marjorie Constance Sommarlad . New South Wales abolished the death penalty for murder in 1955 , but retained it as a potential penalty
+for treason , piracy , and arson in naval dockyards until 1985 . New South Wales was the last Australian State to formally abolish the death penalty for all
+crimes .
+</item 1>
+
+<item 2>
+Capital punishment in Australia
+The last death sentence was given in August 1984 , when Brenda Hodge was sentenced to death by Western Australia ( and subsequently had her sentence commuted to
+life imprisonment ) . Contents ( hide ) 1 History 1.1 Commonwealth 1.2 New South Wales 1.3 Victoria 1.4 Queensland 1.5 Western Australia 1.6 South Australia 1.7
+Tasmania 1.8 Australian Capital Territory 1.9 Northern Territory 2 Public opinion 3 References 4 External links History ( edit ) Death sentences were carried
+out under Aboriginal customary law , either directly or through sorcery . In some cases the condemned could be denied mortuary rites . The first executions
+carried out under European law in Australia took place in Western Australia in 1629 , when Dutch authorities hanged the mutineers of the Batavia . Capital
+punishment had been part of the legal system of Australia since British settlement and during the 19th century , crimes that could carry a death sentence
+included burglary , sheep stealing , forgery , sexual assaults , murder and manslaughter , and there is one reported case of someone being executed for `` being
+illegally at large '' .
+</item 2>
+
+<item 3>
+Capital punishment in Australia
+Retrieved 24 April 2017 . Jump up ^ `` Small majority of Australians favour the death penalty for deadly terrorist acts in Australia '' . Roy Morgan . Melbourne
+, Vic. : Roy Morgan Research Ltd. 19 September 2014 . Retrieved 3 December 2017 . Sources ^ Death Penalty Abolition Act 1973 Capital Punishment from the
+Fremantle Prison site Trends & Issues in Crime and Criminal Justice No. 3 : Capital punishment from the Australian Institute of Criminology Dhakiyarr Wirrpanda
+-- Appeal for Justice `` Capital Punishment '' speech by The Ian Callinan , Justice of the High Court of Australia The History of Correctional Services in South
+Australia External links ( edit ) `` List of Executions in the State of Victoria '' . Archived from the original on 8 October 2011 . `` The Death Penalty (
+Queensland ) '' . Life & Death in the Sunshine State . Archived from the original on 11 May 2015 .
+</item 3>
+
+<item 4>
+Capital punishment in Australia
+Capital punishment in Australia - wikipedia Capital punishment in Australia Jump to : navigation , search Capital punishment in Australia has been abolished in
+all jurisdictions . Queensland abolished the death penalty in 1922 . Tasmania did the same in 1968 , the federal government abolished the death penalty in 1973
+, with application also in the Australian Capital Territory and the Northern Territory . Victoria did so in 1975 , South Australia in 1976 , and Western
+Australia in 1984 . New South Wales abolished the death penalty for murder in 1955 , and for all crimes in 1985 . In 2010 , the federal government passed
+legislation prohibiting the re-establishment of capital punishment by any state or territory . Neither the Commonwealth nor any of the states will extradite or
+deport a prisoner to another jurisdiction if they will face the death penalty , and police co-operation with other countries which have the death penalty has
+been questioned . The last execution in Australia took place in 1967 , when Ronald Ryan was hanged in Victoria . Between Ryan 's execution in 1967 and 1984 ,
+several more people were sentenced to death , but had their sentences commuted to life imprisonment .
+</item 4>
+
+<item 5>
+Capital punishment in Australia
+During the 19th century , these crimes saw about 80 people hanged each year throughout Australia . Before and after federation , each state made its own
+criminal laws and punishments . For a full list see : Main article : List of people legally executed in Australia Commonwealth ( edit ) In 1973 the Death
+Penalty Abolition Act 1973 of the Commonwealth abolished the death penalty for federal offences . It provided in Section 3 that the Act applied to any offence
+against a law of the Commonwealth , the Territories or under an Imperial Act , and in s . 4 that `` ( a ) person is not liable to the punishment of death for
+any offence '' . No executions were carried out under the bridge of the federal government and the passage of the Death Penalty Abolition Act 1973 saw the death
+penalty replaced with life imprisonment as their maximum punishment . Since the Commonwealth effects of utilising this Act no more individuals have been exposed
+to the death penalty and it is now replaced with life imprisonment . On 11 March 2010 Federal Parliament passed laws that prevent the death penalty from being
+reintroduced by any state or territory in Australia .
+</item 5>
+
+<item 6>
+Capital punishment in Australia
+Northern Territory ( edit ) Aborigines who lived in the Northern Territory came under the European law of Australia even though they did not have any contact
+with the government . There were several outcries over Aborigines receiving mandatory death sentences for murder , leading to the passage of the Crimes
+Ordinance 1934 which allowed for discretionary sentences when both the accused and the victim were Aboriginal . The last execution was a double hanging in 1952
+, and the death penalty was abolished 1973 . Public opinion ( edit ) In Australia capital punishment was banned on a state - by - state basis through the 20th
+century . Despite the ban , polls have indicated varying support for the reintroduction of the practice . A 2005 Bulletin poll showed that most Australians
+supported capital punishment . The Australian National University 's 2007 Electoral Survey found that 44 per cent of people thought the death penalty should be
+reintroduced , while only 38 per cent disagreed . In the recent case of the Bali bombers , then prime minister John Howard stated that Australians expected
+their execution by Indonesia . On occasion the issue of capital punishment is published in the media or is subject to media and public support and scrutiny .
+</item 6>
+
+<item 7>
+Capital punishment in Australia
+Elizabeth Woolcock , the only woman ever to have been executed under South Australian law , was hanged on 30 December 1873 . Her body was not released to the
+family and was buried between the inner and outer walls of the prison , identified by a number and the date of the execution . In 1976 , the Criminal Law
+Consolidation Act was modified so that the death sentence was changed to life imprisonment . Tasmania ( edit ) In the early days of colonial rule Tasmania ,
+then known as Van Diemen 's Land , was the site of penal transports . Mary McLauchlan was convicted in 1830 for infanticide ; she was sentenced to both death
+and dissection . She was the first woman to be hanged in Tasmania . The last execution was in 1946 , that of serial murderer and rapist Frederick Thompson . The
+death penalty was abolished in 1968 . Australian capital Territory ( edit ) No executions were carried out in the Australian Capital Territory , where federal
+legislation abolished capital punishment in 1973 .
+</item 7>
+
+<item 8>
+Capital punishment in Australia
+New South Wales was the last Australian State to formally abolish the death penalty for all crimes . Victoria ( edit ) Old Melbourne Gaol gallows Victoria 's
+first executions occurred in 1842 when two Aboriginal men , Tunnerminnerwait and Maulboyheenner , were hanged outside the site of the Melbourne Gaol for the
+killing of two whalers in the Westernport district . Ronald Ryan was the last man executed at Pentridge Prison and in Australia . Ryan was hanged on 3 February
+1967 after being convicted of the shooting death of a prison officer during a prison escape from Pentridge Prison , Coburg , Victoria in 1965 . Ryan was the
+last of 186 executions . Victoria was also the state of the last woman executed in Australia . Jean Lee was hanged in 1951 . She was accused of being an
+accomplice in the murder of 73 - year - old William ( ' Pop ' ) Kent . She , along with her accomplices were executed on 19 February 1951 .
+</item 8>
+
+<item 9>
+Capital punishment in Australia
+Most occasions where capital punishment is brought up in the media , it is regarding current cases of intense media coverage regarding murder , rape and in
+extreme circumstances such as terrorism . On various occasions , the media and public express support for capital punishment for the most heinous of crimes
+including mass murder such as in the cases of the Milat Backpacker Murders and the Bryant Port Arthur massacre , in which a total of 42 people were killed
+stirring strong emotions as to whether or not to reintroduce the death penalty . A similar surge in public support for reintroduction occurred when Lindy
+Chamberlain was convicted of murdering her baby Azaria in 1982 , although it was subsequently shown that she was not guilty . This miscarriage of justice has
+been used as a powerful example of the risks of the death penalty . However , no person of significant stature or influence has advocated the death penalty for
+quite some time since the last execution in 1967 . The death penalty was completely abolished in Australia with the Crimes Legislation Amendment ( Torture
+Prohibition and Death Penalty Abolition ) Bill 2009 passing the Australian Senate without amendments in March 2010 .
+</item 9>
+
+<item 10>
+Capital punishment in Australia
+The last sentence of death in Western Australia ( indeed anywhere in Australia ) was passed in 1984 , but the female killer ( Brenda Hodge ) in question had her
+sentence commuted to imprisonment for life , as was customary by this stage . Capital punishment was formally removed from the statutes of the state with the
+passage of the Acts Amendment ( Abolition of Capital Punishment ) Act 1984 . South Australia ( edit ) The Adelaide Gaol was the site of forty - four hangings ,
+from Joseph Stagg on 18 November 1840 to Glen Sabre Valance , murderer and rapist , on 24 November 1964 and three executions also occurred at Mount Gambier Gaol
+. Two Ngarrindjeri men were controversially executed by hanging along the Coorong on 22 August 1840 , after a drumhead court - martial conducted by Police
+Commissioner O'Halloran on the orders of Governor George Gawler . The men were found to be guilty of murdering the twenty - five survivors of the shipwreck
+Maria a few months before .
+</item 10>
+=== END ITEM id=d917d4768073bbda ===
+
+=== ITEM id=04dface9c564d19d ===
+Gold sentences and facts:
+Sentence 0: The Great Gatsby is a 1925 novel written by American author F. Scott Fitzgerald that follows a cast of characters living in the fictional town of West Egg on prosperous Long Island in the summer of 1922 . The story primarily concerns the young and mysterious millionaire Jay Gatsby and his quixotic passion and obsession for the beautiful former debutante Daisy Buchanan . Considered to be Fitzgerald 's magnum opus , The Great Gatsby explores themes of decadence , idealism , resistance to change , social upheaval , and excess , creating a portrait of the Jazz Age or the Roaring Twenties that has been described as a cautionary tale regarding the American Dream .
+  Fact 0.0: The Great Gatsby is a 1925 novel.
+  Fact 0.1: The Great Gatsby was written by American author F. Scott Fitzgerald.
+  Fact 0.2: The Great Gatsby follows a cast of characters living in the fictional town of West Egg on prosperous Long Island in the summer of 1922.
+  Fact 0.3: The fictional town of West Egg is on prosperous Long Island.
+  Fact 0.4: The story of The Great Gatsby primarily concerns the young and mysterious millionaire Jay Gatsby.
+  Fact 0.5: The story of The Great Gatsby concerns Jay Gatsby's quixotic passion and obsession for the beautiful former debutante Daisy Buchanan.
+  Fact 0.6: Daisy Buchanan is a beautiful former debutante.
+  Fact 0.7: The Great Gatsby is considered to be Fitzgerald's magnum opus.
+  Fact 0.8: The Great Gatsby explores themes of decadence, idealism, resistance to change, social upheaval, and excess.
+  Fact 0.9: The Great Gatsby creates a portrait of the Jazz Age, also called the Roaring Twenties.
+  Fact 0.10: The Great Gatsby has been described as a cautionary tale regarding the American Dream.
+Sentence 1: Set on the prosperous Long Island of 1922 , The Great Gatsby provides a critical social history of America during the Roaring Twenties within its fictional narrative . That era , known for unprecedented economic prosperity , the evolution of jazz music flapper culture , new technologies in communication ( motion pictures , broadcast radio , recorded music ) forging a genuine mass culture ; and bootlegging , along with other criminal activity , is plausibly depicted in Fitzgerald 's novel . Fitzgerald uses many of these societal developments of the 1920s that were to build Gatsby 's stories from many of the simple details like automobiles to broader themes like Fitzgerald 's discreet allusions to the organized crime culture which was the source of Gatsby 's fortune . Fitzgerald depicts the garish society of the Roaring Twenties by placing the book 's plotline within the historical context of the era .
+  Fact 1.0: The Great Gatsby is set on the prosperous Long Island of 1922.
+  Fact 1.1: The Great Gatsby provides a critical social history of America during the Roaring Twenties within its fictional narrative.
+  Fact 1.2: The Roaring Twenties era was known for unprecedented economic prosperity.
+  Fact 1.3: The Roaring Twenties era was known for the evolution of jazz music and flapper culture.
+  Fact 1.4: The Roaring Twenties era saw new technologies in communication: motion pictures, broadcast radio, and recorded music.
+  Fact 1.5: The new communication technologies of the Roaring Twenties forged a genuine mass culture.
+  Fact 1.6: The Roaring Twenties era saw bootlegging, along with other criminal activity.
+  Fact 1.7: Bootlegging and other criminal activity of the Roaring Twenties are plausibly depicted in Fitzgerald's novel.
+  Fact 1.8: Fitzgerald uses many societal developments of the 1920s to build the stories of Gatsby.
+  Fact 1.9: Fitzgerald uses these societal developments in his novel, from simple details like automobiles to broader themes.
+  Fact 1.10: Fitzgerald makes discreet allusions in his novel to the organized crime culture.
+  Fact 1.11: The organized crime culture was the source of Gatsby's fortune.
+  Fact 1.12: Fitzgerald depicts the garish society of the Roaring Twenties.
+  Fact 1.13: Fitzgerald depicts the garish society by placing the book's plotline within the historical context of the era.
+
+Retrieved items:
+<item 1>
+The Great Gatsby
+Fitzgerald uses many of these societal developments of the 1920s that were to build Gatsby 's stories from many of the simple details like automobiles to
+broader themes like Fitzgerald 's discreet allusions to the organized crime culture which was the source of Gatsby 's fortune . Fitzgerald depicts the garish
+society of the Roaring Twenties by placing the book 's plotline within the historical context of the era . Fitzgerald 's visits to Long Island 's north shore
+and his experience attending parties at mansions inspired The Great Gatsby 's setting . Today , there are a number of theories as to which mansion was the
+inspiration for the book . One possibility is Land 's End , a notable Gold Coast Mansion where Fitzgerald may have attended a party . Many of the events in
+Fitzgerald 's early life are reflected throughout The Great Gatsby . Fitzgerald was a young man from Minnesota , and like Nick , he was educated at an Ivy
+League school , Princeton ( in Nick 's case , Yale ) .
+</item 1>
+
+<item 2>
+The Great Gatsby
+Considered to be Fitzgerald 's magnum opus , The Great Gatsby explores themes of decadence , idealism , resistance to change , social upheaval , and excess ,
+creating a portrait of the Jazz Age or the Roaring Twenties that has been described as a cautionary tale regarding the American Dream . Fitzgerald -- inspired
+by the parties he had attended while visiting Long Island 's north shore -- began planning the novel in 1923 , desiring to produce , in his words , `` something
+new -- something extraordinary and beautiful and simple and intricately patterned . '' Progress was slow , with Fitzgerald completing his first draft following
+a move to the French Riviera in 1924 . His editor , Maxwell Perkins , felt the book was vague and persuaded the author to revise over the following winter .
+Fitzgerald was repeatedly ambivalent about the book 's title and he considered a variety of alternatives , including titles that referenced the Roman character
+Trimalchio ; the title he was last documented to have desired was Under the Red , White , and Blue .
+</item 2>
+
+<item 3>
+The Great Gatsby
+Jump up ^ `` 100 Best Novels '' . Modern Library . Retrieved 14 May 2014 . ^ Jump up to : Bruccoli 2000 , pp. 53 -- 54 Jump up ^ Gross , Dalton ( 1998 ) .
+Understanding the Great Gatsby : A Student Casebook to Issues , Sources , and Historical Documents . Westport , Connecticut : Greenwood Press . p. 167 . Jump up
+^ Kellogg , Carolyn . `` Last gasp of the Gatsby house '' . Los Angeles Times . Retrieved 26 April 2013 . ^ Jump up to : SparkNotes Editors . `` The Great
+Gatsby : Context '' . SparkNotes . Retrieved 2013 - 11 - 25 . CS1 maint : Extra text : authors list ( link ) Jump up ^ Powers , Thomas ( July 4 , 2013 ) . ``
+The Road to West Egg '' . London Review of Books . 13 . pp. 9 -- 11 . Jump up ^ Sarah Churchwell ( June 17 , 2014 ) .
+</item 3>
+
+<item 4>
+The Great Gatsby
+The Great Gatsby - Wikipedia The Great Gatsby Jump to : navigation , search This article is about the novel . For the film , TV and opera adaptations , see The
+Great Gatsby ( disambiguation ) . The Great Gatsby Cover of the first edition in 1925 . Author F. Scott Fitzgerald Cover artist Francis Cugat Country United
+States Language English Genre Novel Published April 10 , 1925 ( Charles Scribner 's Sons ) Media type Print ( hardcover & paperback ) Preceded by The Beautiful
+and Damned ( 1922 ) Followed by Tender Is the Night ( 1934 ) The Great Gatsby is a 1925 novel written by American author F. Scott Fitzgerald that follows a cast
+of characters living in the fictional town of West Egg on prosperous Long Island in the summer of 1922 . The story primarily concerns the young and mysterious
+millionaire Jay Gatsby and his quixotic passion and obsession for the beautiful former debutante Daisy Buchanan .
+</item 4>
+
+<item 5>
+The Great Gatsby
+In this novel , Great Neck ( King 's Point ) became the `` new money '' peninsula of West Egg and Port Washington ( Sands Point ) the old - money East Egg .
+Several mansions in the area served as inspiration for Gatsby 's home , such as Oheka Castle and Beacon Towers , since demolished . By mid-1923 , Fitzgerald had
+written 18,000 words for his novel but discarded most of his new story as a false start , some of which resurfaced in the 1924 short story `` Absolution '' .
+Work on The Great Gatsby began in earnest in April 1924 . Fitzgerald wrote in his ledger , `` Out of woods at last and starting novel . '' He decided to make a
+departure from the writing process of his previous novels and told Perkins that the novel was to be a `` consciously artistic achievement '' and a `` purely
+creative work -- not trashy imaginings as in my stories but the sustained imagination of a sincere and yet radiant world . '' He added later , during editing ,
+that he felt `` an enormous power in me now , more than I 've ever had . ''
+</item 5>
+
+<item 6>
+The Great Gatsby
+Nick stages an unsettlingly small funeral for Gatsby in which none of Gatsby 's associates or partygoers attend . Later , Nick runs into Tom in New York and
+finds out that Tom had told George that Gatsby was Myrtle 's secret lover and that Gatsby had killed her , then gave Gatsby 's address to George . Nick breaks
+up with Jordan , and , disillusioned with the East , moves back to the Midwest . Major characters ( edit ) Nick Carraway -- a Yale graduate originating from the
+Midwest , a World War I veteran , and , at the start of the plot , a newly arrived resident of West Egg , who is aged 29 ( later 30 ) . He also serves as the
+first - person narrator of the novel . He is Gatsby 's next - door neighbor and a bond salesman . He is easy - going , occasionally sarcastic , and somewhat
+optimistic , although this latter quality fades as the novel progresses . He is a more grounded character than the others , and more practical , and is always
+in awe of other character 's lifestyles and morals .
+</item 6>
+
+<item 7>
+The Great Gatsby
+Contents ( hide ) 1 Historical context 2 Plot summary 3 Major characters 4 Writing and production 5 Cover art 6 Title 7 Themes 8 Reception 9 Legacy and modern
+analysis 10 Adaptations 10.1 Ballet 10.2 Computer games 10.3 Film and television 10.4 Literature 10.5 Opera 10.6 Radio 10.7 Theater 11 See also 12 Notes 13
+References 13.1 Bibliography 14 External links Historical context ( edit ) Set on the prosperous Long Island of 1922 , The Great Gatsby provides a critical
+social history of America during the Roaring Twenties within its fictional narrative . That era , known for unprecedented economic prosperity , the evolution of
+jazz music flapper culture , new technologies in communication ( motion pictures , broadcast radio , recorded music ) forging a genuine mass culture ; and
+bootlegging , along with other criminal activity , is plausibly depicted in Fitzgerald 's novel .
+</item 7>
+
+<item 8>
+The Great Gatsby
+Jay Gatsby ( originally James `` Jimmy '' Gatz ) -- a young , mysterious millionaire with shady business connections ( later revealed to be a bootlegger ) ,
+originally from North Dakota . He is obsessed with Daisy Buchanan , a beautiful debutante from Louisville , Kentucky whom he had met when he was a young
+military officer stationed at the Army 's Camp Taylor in Louisville during World War I. Fitzgerald himself was actually based at Camp Taylor in Louisville when
+he was in the Army and makes various references to Louisville in the novel , including the Seelbach Hotel where the Buchanan party stayed while in town for Tom
+and Daisy 's wedding . The character is based on the bootlegger and former World War I officer , Max Gerlach , according to Some Sort of Epic Grandeur , Matthew
+J. Bruccoli 's biography of F. Scott Fitzgerald . Gatsby is said to have briefly studied at Trinity College , Oxford in England after the end of World War I .
+Daisy Fay Buchanan -- an attractive and effervescent , if shallow and self - absorbed , young Louisville , Kentucky debutante and socialite , identified as a
+flapper .
+</item 8>
+
+<item 9>
+The Great Gatsby
+They introduce Nick to Jordan Baker , an attractive , cynical young golfer with whom Nick begins a romantic relationship . She reveals to Nick that Tom has a
+mistress , Myrtle Wilson , who lives in the `` valley of ashes '' , an industrial dumping ground between West Egg and New York City . Not long after this
+revelation , Nick travels to New York City with Tom and Myrtle to an apartment Tom keeps for his affairs with Myrtle and others . At Tom 's New York apartment ,
+a vulgar and bizarre party takes place . It ends with Tom breaking Myrtle 's nose after she annoys him by saying Daisy 's name several times . The Plaza Hotel
+in the early - 1920s As the summer progresses , Nick eventually receives an invitation to one of Gatsby 's parties . Nick encounters Jordan Baker at the party ,
+and they meet Gatsby himself , an aloof and surprisingly young man who recognizes Nick from their same division in the Great War . Through Jordan , Nick later
+learns that Gatsby knew Daisy through a purely chance meeting in 1917 , when Daisy and her friends were doing volunteer services ' work with young Officers
+headed to Europe .
+</item 9>
+
+<item 10>
+The Great Gatsby
+In her book Careless People : Murder , Mayhem and the Invention of ' The Great Gatsby ( 2013 ) , Sarah Churchwell speculates that parts of the ending of The
+Great Gatsby were based on the Hall - Mills Case . Based on her forensic search for clues , she asserts that the two victims in the Hall - Mills murder case
+inspired the characters who were murdered in The Great Gatsby . Plot summary ( edit ) The main events of the novel take place in the summer of 1922 . Nick
+Carraway , a Yale graduate and veteran of the Great War from the Midwest -- who serves as the novel 's narrator -- takes a job in New York as a bond salesman .
+He rents a small house on Long Island , in the fictional village of West Egg , next door to the lavish mansion of Jay Gatsby , a mysterious multi-millionaire
+who holds extravagant parties but does not participate in them . Nick drives around the bay to East Egg for dinner at the home of his cousin , Daisy Fay
+Buchanan , and her husband , Tom , a college acquaintance of Nick 's .
+</item 10>
+=== END ITEM id=04dface9c564d19d ===
+
+=== ITEM id=15887c99b6df0e0c ===
+Gold sentences and facts:
+Sentence 0: Superfecundation is the fertilization of two or more ova from the same cycle by sperm from separate acts of sexual intercourse , which can lead to twin babies from two separate biological fathers . The term superfecundation is derived from fecund , meaning the ability to produce offspring . Heteropaternal superfecundation refers to the fertilization of two separate ova by two different fathers . Homopaternal superfecundation refers to the fertilization of two separate ova from the same father , leading to fraternal twins . While heteropaternal superfecundation is referred to as a form of atypical twinning , genetically , the twins are half siblings . Superfecundation , while rare , can occur through either separate occurrences of sexual intercourse or through artificial insemination .
+  Fact 0.0: Superfecundation is the fertilization of two or more ova from the same cycle by sperm from separate acts of sexual intercourse.
+  Fact 0.1: Superfecundation can lead to twin babies from two separate biological fathers.
+  Fact 0.2: The term superfecundation is derived from fecund.
+  Fact 0.3: Fecund means the ability to produce offspring.
+  Fact 0.4: Heteropaternal superfecundation refers to the fertilization of two separate ova by two different fathers.
+  Fact 0.5: Homopaternal superfecundation refers to the fertilization of two separate ova from the same father.
+  Fact 0.6: Homopaternal superfecundation leads to fraternal twins.
+  Fact 0.7: Heteropaternal superfecundation is referred to as a form of atypical twinning.
+  Fact 0.8: Genetically, the twins from heteropaternal superfecundation are half siblings.
+  Fact 0.9: Superfecundation is rare.
+  Fact 0.10: Superfecundation can occur through separate occurrences of sexual intercourse.
+  Fact 0.11: Superfecundation can occur through artificial insemination.
+
+Retrieved items:
+<item 1>
+Superfecundation
+This is known as superfetation . Heteropaternal superfecundation in mammals ( edit ) Heteropaternal superfecundation is common in animals such as cats and dogs
+. Stray dogs can produce litters in which every puppy has a different sire . Though rare in humans , cases have been documented . In one study on humans , the
+frequency was 2.4 % among dizygotic twins whose parents had been involved in paternity suits . Cases involving superfecundation ( edit ) Koen and Teun Stuart ,
+Dutch boys who were the result of in vitro fertilization ( IVF ) . In a mixup at the laboratory , equipment had been used twice , causing another man 's sperm
+to be mixed with the intended father 's . In 1995 , a young woman gave birth to diamniotic monochorionic twins , who were originally assumed to be monozygotic
+twins until a paternity suit led to a DNA test . This led to the discovery that the twins had different fathers .
+</item 1>
+
+<item 2>
+Superfecundation
+This led to the discovery that the twins had different fathers . In 1982 , twins who were born with two different skin colors were discovered to be conceived as
+a result of heteropaternal superfecundation . In 2001 , a case of spontaneous monopaternal superfecundation was reported after a woman undergoing IVF treatments
+gave birth to quintuplets after only two embryos were implanted . Genetic testing supported that the twinning was not a result of the embryos splitting , and
+that all five boys shared the same father . In 2016 , an IVF - implanted surrogate mother gave birth to two children : one genetically unrelated child from an
+implanted embryo , and a biological child from her own egg and her husband 's sperm . See also ( edit ) Castor and Pollux , said to be twins having different
+fathers Chimera ( genetics ) Mixed twins Polyspermy References ( edit ) Jump up ^ Worland , Justin ( May 8 , 2015 ) . `` The Science of How Women Can Have Twins
+With 2 Different Fathers '' . Time . Retrieved March 23 , 2017 .
+</item 2>
+
+<item 3>
+Superfecundation
+PMID 1488855 . Jump up ^ Fierro , Pamela Prindle ( January 5 , 2016 ) , `` Heteropaternal Superfecundation - Twins with Different Fathers '' , About.com ,
+archived from the original on April 4 , 2016 Jump up ^
+https://www.scopus.com/record/display.uri?eid=2-s2.0-0020008620&origin=inward&txGid=F6227767DB3CDB724EA92EFC60A5A985.wsnAw8kcdt7IPYLO0V48gA%3a2 Jump up ^
+Amsalem , Hagai ; Tsvieli , Rimona ; Zentner , Bat Sheva ; Yagel , Simcha ; Mitrani - Rosenbaum , Stella ; Hurwitz , Arye ( 2001 ) . `` Monopaternal
+superfecundation of quintuplets after transfer of two embryos in an in vitro fertilization cycle '' . Fertility and Sterility. 76 ( 3 ) : 621 -- 3 .
+</item 3>
+
+<item 4>
+Superfecundation
+Fertility and Sterility. 76 ( 3 ) : 621 -- 3 . doi : 10.1016 / S0015 - 0282 ( 01 ) 01976 - 8 . PMID 11532493 . Jump up ^ Susan Scutti ( November 3 , 2017 ) . ``
+Surrogate mom delivers two babies , one her own '' . CNN . Further reading ( edit ) `` Doctors Discover Dallas Twins Have Two Different Dads '' , Fox News , Sky
+News , 2009 Lu , H.L. ; Wang , C.X. ; Wu , F.Q. ; Li , J.J. ( 1994 ) . `` Paternity identification in twins with different fathers '' . Journal of forensic
+sciences . 39 ( 4 ) : 1100 -- 2 . PMID 8064269 .
+</item 4>
+
+<item 5>
+Human fertilization
+This possibility has been investigated by computer simulations of the fertilization process . See also ( edit ) Spontaneous conception , the unassisted
+conception of a subsequent child after prior use of assisted reproductive technology References ( edit ) Jump up ^ Garrison , Fielding . An Introduction to the
+History of Medicine , pages 566 - 567 ( Saunders 1921 ) . Jump up ^ `` Archived copy '' . Archived from the original on 2011 - 12 - 22 . Retrieved 2016 - 01 -
+24 . Jump up ^ http://www.americanpregnancy.org/preventingpregnancy/pregnancyfaqmyths.html Jump up ^ Lawyers Guide to Forensic Medicine SBN 978 - 1 - 85941 -
+159 - 9 By Bernard Knight - Page 188 `` Pregnancy is well known to occur from such external ejaculation ... '' Jump up ^ `` Fertilization of the Ovum '' . Gray
+'s Anatomy . Retrieved 2010 - 10 - 16 . Jump up ^ `` Fertilization '' . Retrieved 28 July 2010 .
+</item 5>
+
+<item 6>
+Superfecundation
+PMID 8064269 . Retrieved from `` https://en.wikipedia.org/w/index.php?title=Superfecundation&oldid=818981440 '' Categories : Reproduction Twin Triplets Multiple
+births Free sex Sibling Hidden categories : Articles needing more detailed references All articles with dead external links Articles with dead external links
+from June 2017 Articles needing additional references from May 2009 All articles needing additional references Talk Contents About Wikipedia Deutsch فارسی
+Français Nederlands Polski Português Русский Slovenčina Edit links This page was last edited on 6 January 2018 , at 18 : 28 . About Wikipedia
+</item 6>
+
+<item 7>
+Superfecundation
+Superfecundation - wikipedia Superfecundation Jump to : navigation , search This article needs additional citations for verification . Please help improve this
+article by adding citations to reliable sources . Unsourced material may be challenged and removed . ( May 2009 ) ( Learn how and when to remove this template
+message ) Superfecundation is the fertilization of two or more ova from the same cycle by sperm from separate acts of sexual intercourse , which can lead to
+twin babies from two separate biological fathers . The term superfecundation is derived from fecund , meaning the ability to produce offspring . Heteropaternal
+superfecundation refers to the fertilization of two separate ova by two different fathers . Homopaternal superfecundation refers to the fertilization of two
+separate ova from the same father , leading to fraternal twins . While heteropaternal superfecundation is referred to as a form of atypical twinning ,
+genetically , the twins are half siblings . Superfecundation , while rare , can occur through either separate occurrences of sexual intercourse or through
+artificial insemination .
+</item 7>
+
+<item 8>
+Superfecundation
+Time . Retrieved March 23 , 2017 . Jump up ^ `` Public Education Pamphlets '' . sogc.org . ^ Jump up to : Ambach , E ; Parson , W ; Brezinka , C ( 2000 ) . ``
+Superfecundation and dual paternity in a twin pregnancy ending with placental abruption '' . Journal of forensic sciences . 45 ( 1 ) : 181 -- 3 . PMID 10641935
+. ^ Jump up to : McNamara , Helen C. ; Kane , Stefan C. ; Craig , Jeffrey M. ; Short , Roger V. ; Umstad , Mark P. ( 2016 ) . `` A review of the mechanisms and
+evidence for typical and atypical twinning '' . American Journal of Obstetrics and Gynecology. 214 ( 2 ) : 172 -- 91 . doi : 10.1016 / j. ajog. 2015.10. 930 .
+PMID 26548710 . Jump up ^ Wenk , R.E.
+</item 8>
+
+<item 9>
+Superfecundation
+PMID 26548710 . Jump up ^ Wenk , R.E. ; Houtz , T ; Brooks , M ; Chiafari , F.A. ( 1992 ) . `` How frequent is heteropaternal superfecundation ? '' . Acta
+geneticae medicae et gemellologiae. 41 ( 1 ) : 43 -- 7 . PMID 1488855 .
+</item 9>
+
+<item 10>
+Superfecundation
+Contents ( hide ) 1 Conception 2 Heteropaternal superfecundation in mammals 3 Cases involving superfecundation 4 See also 5 References 6 Further reading
+Conception ( edit ) Superfecundation most commonly happens within hours or days of the first instance of fertilization with ova released during the same cycle .
+The time window when eggs are able to be fertilized is small . Sperm cells can live inside a female 's body for four to five days . Once ovulation occurs , the
+egg remains viable for 12 -- 48 hours before it begins to disintegrate . Thus , the fertile period can span five to seven days . Ovulation is usually suspended
+during pregnancy to prevent further ova becoming fertilized and to help increase the chances of a full - term pregnancy . However , if an ovum is released after
+the female was already impregnated when previously ovulating , a chance of a second pregnancy occurs , albeit at a different stage of development . This is
+known as superfetation .
+</item 10>
+=== END ITEM id=15887c99b6df0e0c ===
+
+=== ITEM id=31990c61b65164f5 ===
+Gold sentences and facts:
+Sentence 0: Starting at 500 million Population ( in billions ) 0.5 8 Year 1500 1804 1927 2024 Years elapsed 304 123 47 50
+  Fact 0.0: The starting value is 500 million.
+  Fact 0.1: The population values, in billions, are 0.5 and 8.
+  Fact 0.2: The year values are 1500, 1804, 1927 and 2024.
+  Fact 0.3: The years elapsed values are 304, 123, 47 and 50.
+
+Retrieved items:
+<item 1>
+World population
+However , after 2024 , it is unlikely that there will be another doubling of the global population in the 21st century . Historic chart showing the periods of
+time the world population has taken to double , from 1700 to 2000 Starting at 500 million Population ( in billions ) 0.5 8 Year 1500 1804 1927 2024 Years
+elapsed 304 123 47 50 Starting at 375 million Population ( in billions ) 0.375 0.75 1.5 6 Year 1171 1715 1881 1960 1999 Years elapsed 544 166 79 39
+Overpopulation ( edit ) Main articles : Human overpopulation and Malthusian catastrophe Predictions of scarcity ( edit ) Greater Los Angeles lies on a coastal
+mediterranean savannah with a small watershed that is able to support at most one million people on its own water ; as of 2015 , the area has a population of
+over 18 million . Researchers predict that similar cases of resource scarcity will grow more common as the world population increases .
+</item 1>
+
+<item 2>
+World population
+Milestones by the billions ( edit ) Main article : World population milestones World population milestones in billions Population 5 6 7 8 9 Year 1804 1927 1960
+1999 2011 2024 2042 Years elapsed -- -- 123 33 14 13 12 12 13 18 It is estimated that the world population reached one billion for the first time in 1804 . It
+was another 123 years before it reached two billion in 1927 , but it took only 33 years to reach three billion in 1960 . Thereafter , the global population
+reached four billion in 1974 , five billion in 1987 , six billion in 1999 and , according to the United States Census Bureau , seven billion in March 2012 . The
+United Nations , however , estimated that the world population reached seven billion in October 2011 . According to current projections , the global population
+will reach eight billion by 2024 , and will likely reach around nine billion by 2042 . Alternative scenarios for 2050 range from a low of 7.4 billion to a high
+of more than 10.6 billion .
+</item 2>
+
+<item 3>
+World population
+The vertical axis is logarithmic and is in millions of people . Population size fluctuates at differing rates in differing regions . Nonetheless , population
+growth is the long - standing trend on all inhabited continents , as well as in most individual states . During the 20th century , the global population saw its
+greatest increase in known history , rising from about 1.6 billion in 1900 to over 6 billion in 2000 . A number of factors contributed to this increase ,
+including the lessening of the mortality rate in many countries by improved sanitation and medical advances , and a massive increase in agricultural
+productivity attributed to the Green Revolution . In 2000 , the United Nations estimated that the world 's population was growing at an annual rate of 1.14 % (
+equivalent to around 75 million people ) , down from a peak of 88 million per year in 1989 . By 2000 , there were approximately ten times as many people on
+Earth as there had been in 1700 .
+</item 3>
+
+<item 4>
+World population
+Early estimates for the population of the world date to the 17th century : William Petty in 1682 estimated world population at 320 million ( modern estimates
+ranging close to twice this number ) ; by the late 18th century , estimates ranged close to one billion ( consistent with modern estimates ) . More refined
+estimates , broken down by continents , were published in the first half of the 19th century , at 600 to 1000 million in the early 1800s and at 800 to 1000
+million in the 1840s . Antiquity and Middle ages ( edit ) Main articles : Classical demography and Medieval demography Estimates of the population of the world
+at the time agriculture emerged in around 10,000 BC have ranged between 1 million and 15 million . Even earlier , genetic evidence suggests humans may have gone
+through a population bottleneck of between 1,000 and 10,000 people about 70,000 BC , according to the Toba catastrophe theory . By contrast , it is estimated
+that around 50 -- 60 million people lived in the combined eastern and western Roman Empire in the 4th century AD .
+</item 4>
+
+<item 5>
+World population
+Projected figures vary depending on underlying statistical assumptions and the variables used in projection calculations , especially the fertility variable .
+Long - range predictions to 2150 range from a population decline to 3.2 billion in the `` low scenario '' , to `` high scenarios '' of 24.8 billion . One
+extreme scenario predicted a massive increase to 256 billion by 2150 , assuming the global fertility rate remained at its 1995 level of 3.04 children per woman
+; however , by 2010 the global fertility rate had declined to 2.52 . There is no estimation for the exact day or month the world 's population surpassed one or
+two billion . The points at which it reached three and four billion were not officially noted , but the International Database of the United States Census
+Bureau placed them in July 1959 and April 1974 respectively . The United Nations did determine , and commemorate , the `` Day of 5 Billion '' on July 11 , 1987
+, and the `` Day of 6 Billion '' on October 12 , 1999 . The Population Division of the United Nations declared the `` Day of 7 Billion '' to be October 31 ,
+2011 .
+</item 5>
+
+<item 6>
+World population
+Improved material conditions led to the population of Britain increasing from 10 million to 40 million in the 19th century . The population of the United
+Kingdom reached 60 million in 2006 . The United States saw its population grow from around 5.3 million in 1800 to 106 million in 1920 , exceeding 307 million in
+2010 . The first half of the 20th century in Imperial Russia and the Soviet Union was marked by a succession of major wars , famines and other disasters which
+caused large - scale population losses ( approximately 60 million excess deaths ) . After the collapse of the Soviet Union , Russia 's population declined
+significantly -- from 150 million in 1991 to 143 million in 2012 -- but by 2013 this decline appeared to have halted . Many countries in the developing world
+have experienced extremely rapid population growth since the early 20th century , due to economic development and improvements in public health . China 's
+population rose from approximately 430 million in 1850 to 580 million in 1953 , and now stands at over 1.3 billion .
+</item 6>
+
+<item 7>
+World population
+The world population has grown by over four billion since the beginning of the Green Revolution , but food production has so far kept pace with population
+growth . Most scholars believe that , without the Revolution , there would be greater levels of famine and malnutrition than the UN presently documents .
+However , neo-Malthusians point out that fossil fuels provided the energy for the Green Revolution , in the form of natural gas - derived fertilizers , oil -
+derived pesticides , and hydrocarbon - fueled irrigation , and that many crops have become so genetically uniform that a crop failure in any one country could
+potentially have global repercussions . In 2004 , a meta - analysis of 70 quantitative studies estimating a sustainable limit to the world population generated
+a meta - estimate of 7.7 billion people . Graph of the global human population from 10,000 BC to AD 2000 , from the US Census Bureau . The graph shows the
+extremely rapid growth in the world population that has taken place since the 18th century . The human population has been growing rapidly since the mid-1800s .
+</item 7>
+
+<item 8>
+World population
+The transition from hyperbolic growth to slower rates of growth is related to the demographic transition . According to the Russian demographer Sergey Kapitsa ,
+the world population grew between 67,000 BC and 1965 according to the following formula : N = C τ arccot ⁡ T 0 − T τ ( \ displaystyle N = ( \ frac ( C ) ( \ tau
+) ) \ operatorname ( arccot ) ( \ frac ( T_ ( 0 ) - T ) ( \ tau ) ) ) where N is current population T is the current year C = ( 1.86 ± 0.01 ) 10 T = 2007 ± 1 τ
+( \ displaystyle \ tau ) = 42 ± 1 Years for world population to double ( edit ) According to linear interpolation and extrapolation of UNDESA population
+estimates , the world population has doubled , or will double , in the years listed in the tables below ( with two different starting points ) . During the 2nd
+millennium , each doubling took roughly half as long as the previous doubling , fitting the hyperbolic growth model mentioned above .
+</item 8>
+
+<item 9>
+World population
+000 BC < 0.015 0 0 10,000 BC 8000 BC 5 6500 BC 5 5000 BC 5 4000 BC 7 3000 BC 14 2000 BC 27 1000 BC 50 7 33 9 500 BC 100 14 66 16 AD 1 200 23 141 28 1000 400 70
+269 50 8 1500 458 86 243 84 39 1600 580 114 339 111 10 1700 682 106 436 125 10 1750 791 106 502 163 16 1800 1,000 107 656 203 24 7 1850 1,262 111 809 276 38 26
+1900 1,650 133 947 408 74 82 6 1950 2,525 229 1,394 549 169 172 12.7 1955 2,758 254 1,534 577 193 187 14.
+</item 9>
+
+<item 10>
+World population
+758 254 1,534 577 193 187 14.2 1960 3,018 285 1,687 606 221 204 15.8 1965 3,322 322 1,875 635 254 219 17.5 1970 3,682 366 2,120 657 288 231 19.7 4,061 416 2,378
+677 326 242 21.5 1980 4,440 478 2,626 694 365 254 23.0 1985 4,853 550 2,897 708 406 267 24.9 5,310 632 3,202 721 447 281 27.0 1995 5,735 720 3,475 728 487 296
+29.1 2000 6,127 814 3,714 726 527 314 31.1 2005 6,520 920 3,945 729 564 329 33.4 6,930 1,044 4,
+</item 10>
+=== END ITEM id=31990c61b65164f5 ===
+
+=== ITEM id=428d2ad845850a73 ===
+Gold sentences and facts:
+Sentence 0: William Alan `` Will '' Friedle ( born August 11 , 1976 ) is an American actor and voice actor . He is best known for his comedic roles , most notably the underachieving elder brother Eric Matthews on the long - running TV sitcom Boy Meets World from 1993 to 2000 . More recently , he has voiced a number of animated characters such as Terry McGinnis / Batman , the title character of Batman Beyond , and Ron Stoppable of Kim Possible . He voices Deadpool in Ultimate Spider - Man and Star - Lord in the animated version of Guardians of the Galaxy , replacing Chris Cox . He also performed the voices of Doyle in The Secret Saturdays , Lion - O in the rebooted ThunderCats series , and Blue Beetle on Batman : The Brave and the Bold . One of his most recent roles has been the speaking voice of Bumblebee in the final episode of Transformers : Prime and the movie Transformers Prime Beast Hunters : Predacons Rising and in the sequel series Transformers : Robots in Disguise , as well as in Transformers : Rescue Bots .
+  Fact 0.0: William Alan "Will" Friedle was born on August 11, 1976.
+  Fact 0.1: William Alan "Will" Friedle is an American actor.
+  Fact 0.2: William Alan "Will" Friedle is an American voice actor.
+  Fact 0.3: Will Friedle is best known for comedic roles.
+  Fact 0.4: Will Friedle is most notably known for playing the underachieving elder brother Eric Matthews on the long-running TV sitcom Boy Meets World.
+  Fact 0.5: Will Friedle played Eric Matthews on Boy Meets World from 1993 to 2000.
+  Fact 0.6: Will Friedle has more recently voiced a number of animated characters.
+  Fact 0.7: Will Friedle voiced Terry McGinnis / Batman, the title character of Batman Beyond.
+  Fact 0.8: Will Friedle voiced Ron Stoppable of Kim Possible.
+  Fact 0.9: Will Friedle voices Deadpool in Ultimate Spider-Man.
+  Fact 0.10: Will Friedle voices Star-Lord in the animated version of Guardians of the Galaxy.
+  Fact 0.11: Will Friedle replaced Chris Cox in the animated Guardians of the Galaxy role.
+  Fact 0.12: Will Friedle performed the voice of Doyle in The Secret Saturdays.
+  Fact 0.13: Will Friedle performed the voice of Lion-O in the rebooted ThunderCats series.
+  Fact 0.14: Will Friedle performed the voice of Blue Beetle on Batman: The Brave and the Bold.
+  Fact 0.15: One of Will Friedle's most recent roles was the speaking voice of Bumblebee in the final episode of Transformers: Prime.
+  Fact 0.16: Will Friedle was the speaking voice of Bumblebee in the movie Transformers Prime Beast Hunters: Predacons Rising.
+  Fact 0.17: Will Friedle was the speaking voice of Bumblebee in the sequel series Transformers: Robots in Disguise.
+  Fact 0.18: Will Friedle was the speaking voice of Bumblebee in Transformers: Rescue Bots.
+
+Retrieved items:
+<item 1>
+Will Friedle
+Personal life ( edit ) In 1997 , Friedle dated American actress Jennifer Love Hewitt , and co-starred with her in the romantic teen comedy Trojan War . Hewitt
+made a guest appearance as Jennifer Love `` Feffy '' Fefferman on Boy Meets World episode `` And Then There Was Shawn '' . Friedle is best friends with actor
+Jason Marsden and was the best man at Marsden 's wedding in October 2004 . The two have also worked together in numerous productions : Boy Meets World , Trojan
+War , Static Shock , Kim Possible , Batman Beyond , Justice League Unlimited , Batman : The Brave and the Bold , ThunderCats and Mad . He married his girlfriend
+, Susan Martens , on September 25 , 2016 in Connecticut . Filmography ( edit ) Film Year Film Role Notes Trojan War Brad Kimble 2000 Batman Beyond : Return of
+the Joker Terry McGinnis / Batman Voice role Direct - to - DVD release 2003 National Lampoon 's Gold Diggers Calvin Menhoffer The Greatest Short Film Ever ! ! !
+</item 1>
+
+<item 2>
+Will Friedle
+Kiel ( 28 January 2009 ) . `` The Bravest & Boldest : Will Friedle '' . Comic Book Resources . Retrieved 30 November 2010 . Jump up ^ Andy Swift . `` ' Girl
+Meets World ' : Eric Returns With Mr. Feeny -- Season 2 Spoilers - TVLine '' . TVLine . Retrieved 4 April 2016 . Jump up ^ `` Girl Meets Writers '' . Twitter .
+Retrieved 4 April 2016 . Jump up ^ `` Will Friedle on Twitter '' . Twitter . Retrieved 4 April 2016 . Jump up ^ `` Art - World Movie Shot In State To Be Shown
+Saturday In New Milford '' . tribunedigital - thecourant . Retrieved 4 April 2016 . Jump up ^ `` The Hartford Courant article archive - Friedle - Leary '' .
+Retrieved 4 April 2016 . Jump up ^ `` The Hartford Courant article archive - She Chose to Have Both '' . Retrieved 4 April 2016 .
+</item 2>
+
+<item 3>
+Daren Kagasoff
+Daren Kagasoff - wikipedia Daren Kagasoff Jump to : navigation , search Daren Kagasoff At the Twilight premiere Daren Maxwell Kagasoff ( 1987 - 09 - 16 )
+September 16 , 1987 ( age 30 ) Encino , California , U.S. Occupation Actor Years active 2008 -- present Daren Maxwell Kagasoff ( KA - guh - sawf ) ( born
+September 16 , 1987 ) is an American actor . He is known for starring as Ricky Underwood on the ABC Family teen drama series The Secret Life of the American
+Teenager from 2008 to 2013 . Contents ( hide ) 1 Early life 2 Career 3 Filmography 4 Awards and nominations 5 References 6 External links Early Life ( edit )
+Kagasoff was born in Encino , California to Elise Kagasoff ( née Levy ) and Barry Kagasoff , a diamond merchant . He is the middle of three children ; he has an
+older brother , Justin , and a younger sister , Natalie .
+</item 3>
+
+<item 4>
+Will Friedle
+Career ( edit ) After co-hosting Nickelodeon 's Do n't Just Sit There for three seasons ( 1988 -- 1991 ) , Friedle was cast as Cory Matthews ' likeable but
+underachieving elder brother Eric on the long - running TV sitcom Boy Meets World from 1993 to 2000 . In 2004 , he co-starred with Chris Owen in the independent
+film National Lampoon 's Gold Diggers ( originally titled Lady Killers ) . He also appeared in a supporting role in the 2005 ABC Family movie Everything You
+Want . Friedle was cast as Mike in the WB sitcom Off Centre , but could not accept the role because of a previous commitment to the UPN series The Random Years
+. The role ended up going to Eddie Kaye Thomas . Friedle voiced Seifer Almasy in the English version of the video game Kingdom Hearts II , Gideon Wyeth in the
+English version of the video game Advent Rising , and Jaster Rogue in the English version of the video game Rogue Galaxy .
+</item 4>
+
+<item 5>
+Will Friedle
+! ! Mark Short film Howl 's Moving Castle Additional voices Voice role 2005 Everything You Want Calvin Dillwaller 2008 Batman : Gotham Knight Anton , Cultist ,
+Youth # 1 Voice role Direct - to - DVD release 2015 Batman Unlimited : Animal Instincts Nightwing / Dick Grayson Voice role Direct - to - DVD release Batman
+Unlimited : Monster Mayhem Nightwing / Dick Grayson Voice role Direct - to - DVD release 2016 Lego DC Comics Super Heroes : Justice League : Gotham City
+Breakout Nightwing / Dick Grayson Voice role Direct - to - DVD release Batman Unlimited : Mech vs. Mutants Nightwing / Dick Grayson Voice role Direct - to - DVD
+release Television Year Title Role Notes Do n't Just Sit There Host Law & Order Russ Episode : `` Trust '' 1993 -- 2000 Boy Meets World Eric Matthews Series
+regular ( 157 episodes ) Young Artist Award ( nominated ) The Gift of Love Luke CBS television movie Are You Afraid of the Dark ?
+</item 5>
+
+<item 6>
+Daren Kagasoff
+Kagasoff graduated from Montclair Preparatory High School in 2005 where he played on his school 's baseball team . While attending school at San Francisco State
+University , Kagasoff decided to become an actor . Career ( edit ) After deciding to return to Los Angeles , Kagasoff landed the lead role in a local theater
+production of Suburbia , a play that the eponymous 1996 film was based upon . After studying acting , he began auditioning for television and film roles .
+During one of his first auditions , he impressed producer Brenda Hampton so much that she hand - picked him to star as Ricky Underwood in the ABC Family series
+The Secret Life of the American Teenager . The show ran for five seasons . It was announced on February 24 , 2013 that Kagasoff had been cast as Alex in the Fox
+pilot Delirium , based on the novel by Lauren Oliver . However , the pilot was not picked up to series . Kagasoff co-starred as Trevor in the supernatural
+horror film Ouija , directed by Stiles White and co-written by Juliet Snowden and White . The film was released in October 2014 .
+</item 6>
+
+<item 7>
+Will Friedle
+Will Friedle - wikipedia Will Friedle Jump to : navigation , search Will Friedle William Alan Friedle ( 1976 - 08 - 11 ) August 11 , 1976 ( age 41 ) Hartford ,
+Connecticut , U.S. Occupation Actor , voice actor Years active 1988 -- present Spouse ( s ) Susan Martens ( m . 2016 ) William Alan `` Will '' Friedle ( born
+August 11 , 1976 ) is an American actor and voice actor . He is best known for his comedic roles , most notably the underachieving elder brother Eric Matthews
+on the long - running TV sitcom Boy Meets World from 1993 to 2000 . More recently , he has voiced a number of animated characters such as Terry McGinnis /
+Batman , the title character of Batman Beyond , and Ron Stoppable of Kim Possible . He voices Deadpool in Ultimate Spider - Man and Star - Lord in the animated
+version of Guardians of the Galaxy , replacing Chris Cox . He also performed the voices of Doyle in The Secret Saturdays , Lion - O in the rebooted ThunderCats
+series , and Blue Beetle on Batman : The Brave and the Bold .
+</item 7>
+
+<item 8>
+High School Musical 2
+Cast Main article : List of High School Musical characters Troy Bolton ( Zac Efron ) is Gabriella 's boyfriend , the most popular male student at East High
+School and the captain of the varsity basketball team . For this movie , Efron did all of his own singing , whereas , in the first High School Musical , his
+singing was blended with singer Drew Seeley 's voice . Gabriella Montez ( Vanessa Hudgens ) is Troy 's girlfriend who is relieved that she will still be
+attending East High . She is the lifeguard at the Lava Springs Country Club until Sharpay 's actions cause her to quit and break up with Troy . Ryan Evans (
+Lucas Grabeel ) is Sharpay 's twin brother who lives in the shadow of his primadonna sister . Sharpay Evans ( Ashley Tisdale ) is Ryan 's primadonna twin sister
+determined to win the talent show while also vying for Troy 's attention and doing anything to help him . Chad Danforth ( Corbin Bleu ) is Troy 's best friend
+and is very good friends with Jason and Zeke .
+</item 8>
+
+<item 9>
+Will Friedle
+One of his most recent roles has been the speaking voice of Bumblebee in the final episode of Transformers : Prime and the movie Transformers Prime Beast
+Hunters : Predacons Rising and in the sequel series Transformers : Robots in Disguise , as well as in Transformers : Rescue Bots . In December 2013 , it was
+announced that Friedle would reprise his Boy Meets World role of Eric Matthews on the continuation series Girl Meets World . Contents ( hide ) 1 Early life 2
+Career 3 Personal life 4 Filmography 5 References 6 External links Early life ( edit ) Friedle was born in Hartford , Connecticut , the son of Patricia Joan (
+née Leary ) and Gary Allen Friedle , both lawyers . After committing himself to becoming an actor , Friedle continually commuted from Avon , Connecticut to New
+York City for auditions . He attended Avon High School in 1994 . Friedle attended Occidental College . In the July 4 , 2006 issue of People , Friedle mentioned
+he had thought about attending culinary school .
+</item 9>
+
+<item 10>
+Daren Kagasoff
+The film was released in October 2014 . In September 2014 , Kagasoff joined the cast of the Red Band Society , a comedy - drama series on Fox for the 2014 -- 15
+American television season developed by Margaret Nagle . He had a recurring role playing Kara 's love interest , Hunter Cole . The series premiered on September
+17 , 2014 and was canceled after one season . Filmography ( edit ) Television and film roles Year Title Role Notes 2008 -- 2013 Secret Life of the American
+Teenager , The The Secret Life of the American Teenager Richard `` Ricky '' Underwood Main role 2014 Ouija Trevor Film 2014 Blue Daren Web series ; 2 episodes
+2014 Delirium Alex Sheathes Unsold television pilot ( FOX ) 2014 Stalker Eric Bates Episode : Pilot 2014 -- 2015 Red Band Society Hunter Cole Recurring role , 7
+episodes 2015 Paradise Pictures Wyatt Osborne Unsold television pilot ( USA ) 2017 S.W.A.T.
+</item 10>
+=== END ITEM id=428d2ad845850a73 ===
+
+=== ITEM id=9c7a69099104d5e1 ===
+Gold sentences and facts:
+Sentence 0: Downton Abbey is a British period drama television series created by Julian Fellowes and co-produced by Carnival Films and Masterpiece . It first aired on ITV in the United Kingdom on 26 September 2010 , and on PBS in the United States on 9 January 2011 , as part of the Masterpiece Classic anthology . Six series have been made , the sixth airing in the autumn of 2015 in the UK and Ireland , and in January 2016 in the United States . On 26 March 2015 , the sixth series was confirmed to be the final series , with the final episode airing in the UK on 25 December 2015 on ITV . During the course of the programme , 52 episodes of Downton Abbey aired over six series .
+  Fact 0.0: Downton Abbey is a British period drama television series.
+  Fact 0.1: Downton Abbey was created by Julian Fellowes.
+  Fact 0.2: Downton Abbey was co-produced by Carnival Films and Masterpiece.
+  Fact 0.3: Downton Abbey first aired on ITV in the United Kingdom on 26 September 2010.
+  Fact 0.4: Downton Abbey first aired on PBS in the United States on 9 January 2011.
+  Fact 0.5: The PBS airing was part of the Masterpiece Classic anthology.
+  Fact 0.6: Six series of Downton Abbey have been made.
+  Fact 0.7: The sixth series aired in the autumn of 2015 in the UK and Ireland.
+  Fact 0.8: The sixth series aired in January 2016 in the United States.
+  Fact 0.9: On 26 March 2015, the sixth series was confirmed to be the final series.
+  Fact 0.10: The final episode of Downton Abbey aired in the UK on 25 December 2015 on ITV.
+  Fact 0.11: 52 episodes of Downton Abbey aired over six series.
+
+Retrieved items:
+<item 1>
+List of Downton Abbey episodes
+Contents ( hide ) 1 Series overview 2 Episode list 2.1 Series 1 ( 2010 ) 2.2 Series 2 ( 2011 ) 2.3 Series 3 ( 2012 ) 2.4 Series 4 ( 2013 ) 2.5 Series 5 ( 2014 )
+2.6 Series 6 ( 2015 ) 3 Notes 4 References Series overview ( edit ) Series Episodes Originally aired Ave . UK viewers ( millions ) First aired Last aired 7 26
+September 2010 ( 2010 - 09 - 26 ) 7 November 2010 ( 2010 - 11 - 07 ) 9.70 8 ( + 1 ) 18 September 2011 ( 2011 - 09 - 18 ) 6 November 2011 ( 2011 - 11 - 06 ) 25
+December 2011 ( special ) 11.
+</item 1>
+
+<item 2>
+List of Downton Abbey episodes
+With the future of Downton hanging in the balance , Mary and the Dowager Countess conspire to show Downton at its grandest to persuade Mrs Levinson to give
+Downton more money and save them from financial ruin . Their attempts are impeded by the oven breaking down , giving Mrs Levinson a chance to take over running
+the party herself in radical fashion . She reveals , when finally asked for help , that though she will `` entertain them in New York '' she can not provide
+them with money , as her own late husband tied it up in the estate , much as Violet 's did . She tells them they have to adapt to the changing world , and
+states her intent to return to America . Meanwhile downstairs , O'Brien and Thomas wage war against one another due to Alfred 's recent promotion to valet to
+Matthew , whilst Mrs Levinson 's maid takes a shine to Alfred . Mrs Hughes faces a cancer scare that she shares only with Mrs Patmore and Doctor Clarkson , and
+Isobel Crawley finds that Ethel has become a prostitute .
+</item 2>
+
+<item 3>
+List of Downton Abbey episodes
+68 8 ( + 1 ) 16 September 2012 ( 2012 - 09 - 16 ) 4 November 2012 ( 2012 - 11 - 04 ) 25 December 2012 ( special ) 11.91 8 ( + 1 ) 22 September 2013 ( 2013 - 09
+- 22 ) 10 November 2013 ( 2013 - 11 - 10 ) 25 December 2013 ( special ) 11.84 5 8 ( + 1 ) 21 September 2014 ( 2014 - 09 - 21 ) 9 November 2014 ( 2014 - 11 - 09
+) 25 December 2014 ( special ) 10.40 6 8 ( + 1 ) 20 September 2015 ( 2015 - 09 - 20 ) 8 November 2015 ( 2015 - 11 - 08 ) 25 December 2015 ( special ) 10.
+</item 3>
+
+<item 4>
+List of Downton Abbey episodes
+Series 6 No . overall No. in series Title Directed by Written by Original air date UK viewers ( millions ) 44 `` Episode One '' Minkie Spiro Julian Fellowes 20
+September 2015 ( 2015 - 09 - 20 ) 10.32 April 1925 . Big changes are afoot . Robert anticipates having to cut costs and reduce staff , worrying Carson . Mrs
+Hughes , nervous she will be embarrassed when performing her wifely duties after marrying Carson , asks Mrs Patmore to sound him out ; after much embarrassment
+, Carson says he expects them to have a full marriage , which reassures Mrs Hughes . The local hospital is threatened with a take - over by the larger County
+Hospital ; the board is split , with Violet objecting , and Isobel approving in the name of efficiency . Rita Bevan , a former chambermaid at the hotel where
+Mary and Lord Gillingham stayed , attempts to blackmail Mary by exposing their tryst .
+</item 4>
+
+<item 5>
+List of Downton Abbey episodes
+List of Downton Abbey episodes - Wikipedia List of Downton Abbey episodes Jump to : navigation , search This article 's plot summaries may be too long or
+excessively detailed . Please help improve them by removing unnecessary details and making them more concise . ( January 2016 ) ( Learn how and when to remove
+this template message ) Downton Abbey is a British period drama television series created by Julian Fellowes and co-produced by Carnival Films and Masterpiece .
+It first aired on ITV in the United Kingdom on 26 September 2010 , and on PBS in the United States on 9 January 2011 , as part of the Masterpiece Classic
+anthology . Six series have been made , the sixth airing in the autumn of 2015 in the UK and Ireland , and in January 2016 in the United States . On 26 March
+2015 , the sixth series was confirmed to be the final series , with the final episode airing in the UK on 25 December 2015 on ITV . During the course of the
+programme , 52 episodes of Downton Abbey aired over six series .
+</item 5>
+
+<item 6>
+List of Downton Abbey episodes
+Christmas special No . overall Title Directed by Written by Original air date UK viewers ( millions ) 52 `` The Finale '' Michael Engler Julian Fellowes 25
+December 2015 ( 2015 - 12 - 25 ) 11.22 29 September -- 31 December 1925 : Carson fumbles serving dinner when his hands begin shaking , suffering from an
+unspecified hereditary disease his family called ' the palsy ' . Thomas secures a job with an elderly couple with a staff of only three , but is unhappy there .
+Edith offers to expand Spratt 's magazine column to a whole page ; Denker discovers Spratt 's secret , and tries to get him dismissed by revealing it to the
+Dowager Countess , but she finds the column jolly amusing and keeps him on . Molesley leaves service when the Headmaster offers him a teaching position , plus a
+cottage ; upon parting , he and Baxter finally express their mutual romantic affection . Lord Merton tells Isobel he suffers from pernicious anaemia , but still
+wants to marry her .
+</item 6>
+
+<item 7>
+List of Downton Abbey episodes
+45 Christmas special No . overall Title Directed by Written by Original air date UK viewers ( millions ) 16 `` Christmas at Downton Abbey '' Brian Percival
+Julian Fellowes 25 December 2011 ( 2011 - 12 - 25 ) 12.11 Series 3 ( 2012 ) ( edit ) ITV confirmed the commissioning of a third series on 3 November 2011 . It
+entered production in early 2012 , and began airing 16 September 2012 on ITV and aired in the United States beginning 6 January 2013 . Series 3 No . overall No.
+in series Title Directed by Written by Original air date UK viewers ( millions ) 17 `` Episode One '' Brian Percival Julian Fellowes 16 September 2012 ( 2012 -
+09 - 16 ) 11.43 7.9 ( PBS ) March / April 1920 . Cora 's mother , Martha Levinson , sweeps into Downton for Matthew and Mary 's wedding , aggravating the
+Dowager Countess ( among others ) with her critical and `` revolutionary '' American way of seeing things .
+</item 7>
+
+<item 8>
+List of Downton Abbey episodes
+Emmys.com . Archived from the original on 13 April 2013 . Retrieved 28 October 2012 . Jump up ^ Duncan , Amy ( 29 January 2015 ) . `` Downton Abbey ' to be axed
+after the sixth series in 2015 with cast members already looking for jobs in the US ' '' . Metro ( British newspaper ) . Retrieved 26 March 2015 . Jump up ^
+Series 1 -- 5 based on 7 - day consolidated ratings data from BARB . Christmas Special ( 2014 ) -- Christmas Special ( 2015 ) based on 28 - day consolidated
+ratings data from BARB . ^ Jump up to : Weekly Top 10 Programmes Broadcasters ' Audience Research Board Jump up ^ `` Weekly Top 30 Programmes : ITV1 w / e 25
+September 2011 '' . Broadcasters ' Audience Research Board . Retrieved 3 October 2011 . Jump up ^ `` Weekly Top 10 Programmes : ITV1 HD w / e 25 September 2011
+'' . Broadcasters ' Audience Research Board .
+</item 8>
+
+<item 9>
+List of Downton Abbey episodes
+overall No. in series Title Directed by Written by Original air date UK viewers ( millions ) 26 `` Episode One '' David Evans Julian Fellowes 22 September 2013
+( 2013 - 09 - 22 ) 11.96 February 1922 . Six months on , a distraught Lady Mary mourns Matthew , and feels little motherly love for baby George , now six months
+old . Lord Grantham and Branson dispute the management of the estate and struggle to pay death duties . Miss O'Brien suddenly leaves to serve Lady Flintshire ,
+on her way to India . Needing a maid in a hurry , Cora hires former maid Edna , who has trained as a lady 's maid , on the strength of the reference which Tom
+persuaded Mrs Hughes to give her ; Carson and Mrs Hughes see trouble ahead , and warn Tom to keep his distance . Miss West , the nanny of George and Sybbie ,
+Mary 's son and Tom 's daughter , respectively , acts insolently with Thomas , and the underbutler lets Cora know of her tendency to leave them to their own
+devices .
+</item 9>
+
+<item 10>
+List of Downton Abbey episodes
+33 11 `` Episode Four '' Brian Kelly Julian Fellowes 9 October 2011 ( 2011 - 10 - 09 ) 11.30 12 5 `` Episode Five '' Brian Kelly Julian Fellowes 16 October 2011
+( 2011 - 10 - 16 ) 11.59 13 6 `` Episode Six '' Andy Goddard Julian Fellowes 23 October 2011 ( 2011 - 10 - 23 ) 11.33 14 7 `` Episode Seven '' James Strong
+Julian Fellowes 30 October 2011 ( 2011 - 10 - 30 ) 12.26 15 8 `` Episode Eight '' James Strong Julian Fellowes 6 November 2011 ( 2011 - 11 - 06 ) 12.45
+Christmas special No .
+</item 10>
+=== END ITEM id=9c7a69099104d5e1 ===

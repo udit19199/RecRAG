@@ -1,0 +1,51 @@
+[
+{"id": "d17dddaf96b0f51d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Alameda Research’s former CEO Caroline Ellison"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 10, "quote": "who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "In January, Bankman-Fried pleaded not guilty to all counts"}, {"item": 6, "quote": "is on trial for seven counts of wire fraud and conspiracy."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "The prosecution painted a picture of an empire"}, {"item": 7, "quote": "He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "The prosecution painted a picture of an empire"}, {"item": 7, "quote": "He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 7, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]}
+]},
+{"id": "89740553b92e602e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "At the time, the music video for the song – which featured a woman with blonde hair - sparked rumours that he and Spears broke up because she allegedly cheated on him."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "At the time, the music video for the song – which featured a woman with blonde hair - sparked rumours that he and Spears broke up because she allegedly cheated on him."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "At the time, the music video for the song – which featured a woman with blonde hair - sparked rumours that he and Spears broke up because she allegedly cheated on him."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Danis’s first press conference for the Logan Paul fight."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Also, another thing that hints towards their breakup is Danis’s first press conference for the Logan Paul fight."}]}
+]},
+{"id": "49fb8c427262aabc", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "975709908d4464b8", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+]},
+{"id": "6e55916ed65a9cae", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+]}
+]

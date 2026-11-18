@@ -33,9 +33,16 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Experiment outputs (local-only; findings go in docs)
+# Experiment outputs: run results are committed; indexes and caches are
+# rebuildable and too large, so they stay local
 results/
-runs/
+runs/**/indexes/
+runs/**/construction-cache/
+runs/hf-cache/
+runs/hipporag-cache/
+runs/**/*.sqlite*
+runs/**/*.parquet
+runs/**/*.pickle
 state/
 tmp/
 

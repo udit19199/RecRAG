@@ -1,0 +1,444 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "5b818210607f51a2",
+   "gold": [
+    {
+     "sentence": "The 2015 Africa Magic Viewers Choice Awards (AMVCA) was held on March 7, 2015 at the Eko Hotel and Suites, Victoria Island, Lagos, Nigeria.",
+     "facts": {
+      "0.0": "The 2015 Africa Magic Viewers Choice Awards (AMVCA) was held.",
+      "0.1": "The 2015 AMVCA was held on March 7, 2015.",
+      "0.2": "The 2015 AMVCA was held at the Eko Hotel and Suites.",
+      "0.3": "The Eko Hotel and Suites is in Victoria Island, Lagos, Nigeria."
+     }
+    },
+    {
+     "sentence": "Lagos initially emerged as a port city which originated on a collection of islands, which are contained in the present day Local Government Areas (LGAs) of Lagos Island, Eti-Osa, Amuwo-Odofin and Apapa; the islands are separated by creeks, fringing the southwest mouth of Lagos Lagoon, while protected from the Atlantic Ocean by barrier islands and long sand spits such as Bar Beach, which stretch up to 100 km east and west of the mouth.",
+     "facts": {
+      "1.0": "Lagos initially emerged as a port city.",
+      "1.1": "Lagos originated on a collection of islands.",
+      "1.2": "The islands are contained in the present day Local Government Areas (LGAs) of Lagos Island, Eti-Osa, Amuwo-Odofin and Apapa.",
+      "1.3": "The islands are separated by creeks.",
+      "1.4": "The creeks fringe the southwest mouth of Lagos Lagoon.",
+      "1.5": "The islands are protected from the Atlantic Ocean by barrier islands.",
+      "1.6": "The islands are protected from the Atlantic Ocean by long sand spits such as Bar Beach.",
+      "1.7": "The barrier islands and long sand spits, such as Bar Beach, stretch up to 100 km east and west of the mouth."
+     }
+    }
+   ],
+   "items": [
+    "British Academy Television Awards 1997\nThe 1997 British Academy Television Awards were held on 29 April at the Royal Albert Hall in London, as a joint ceremony with the British Academy Film Awards.\n\n To date, it is the last occasion upon which the two sets awards have been given jointly at the same event; from 1998, the Film and Television Awards were given at separate ceremonies, for the first time since 1968.",
+    "2012 British Academy Television Awards\nThe 2012 British Academy Television Awards (formally known as the Arqiva British Academy Television Awards) were held on 27 May 2012 at the Royal Festival Hall in London.",
+    "Africa Magic\nAfrica Magic is a collection of Pay TV entertainment channels that focus on African programming.\n\n \"Africa Magic\", which started off as single channel of the same name, is a brand owned by M-Net and now comprises eight channels.\n\n The first \"Africa Magic\" channel was launched in July 2003 as a movie channel and over the next decade, the brand expanded to include seven more channels comprising movies, television shows and general entertainment.\n\n Africa Magic currently broadcasts in more than 50 African countries.\n\n The channels include \"Africa Magic Family\", \"Africa Magic World\", \"Africa Magic Showcase\", \"Africa Magic Yoruba\", \"Africa Magic Igbo\", \"Africa Magic Hausa\".\n\n \"Africa Magic Epic\" and \"Africa Magic Urban\".\n\n Africa Magic is also responsible for the annual Africa Magic Viewers' Choice Awards (AMVCAs), the biggest celebration of film and television talent in Africa.",
+    "2013 Africa Magic Viewers Choice Awards\nThe 2013 Africa Magic Viewers Choice Awards were held on 9 March 2014 and co-hosted by Big Brother Africa presenter IK Osakioduwa and StarGist’s host, Vimbai Mutinhiri.\n\n Ivie Okujaiye and Olu Jacobs were honored with the TrailBlazer and Industry Merit Awards respectively.",
+    "2015 Africa Magic Viewers Choice Awards\nThe 2015 Africa Magic Viewers Choice Awards (AMVCA) was held on March 7, 2015 at the Eko Hotel and Suites, Victoria Island, Lagos, Nigeria.\n\n IK and Vimbai were the hosts of the event.\n\n A new category, Best Indigenous Language (Igbo), was introduced in the 2015 awards.",
+    "British Academy Television Awards\nThe British Academy Television Awards, also known as the BAFTA Television Awards, are presented in an annual award show hosted by the British Academy of Film and Television Arts (BAFTA).\n\n They have been awarded annually since 1955.\n\n It is the British equivalent to the Emmy Awards in the United States and Logie Awards in Australia.",
+    "British Academy Television Awards 2009\nThe 2009 British Academy Television Awards were held on 26 April at the Royal Festival Hall in London.\n\n The event was broadcast live on BBC One and was hosted by Graham Norton.\n\n The nominations were announced on 24 March.\n\n Winners in bold.",
+    "OC Ukeje\nOkechukwu Ukeje, known as OC Ukeje is Nigerian actor, model and musician.\n\n He came into prominence after winning the Amstel Malta Box Office (AMBO) reality show.\n\n He has received several awards including Africa Movie Academy Awards, Africa Magic Viewers Choice Awards, Nollywood Movies Awards, Best of Nollywood Awards, Nigeria Entertainment Awards and Golden Icons Academy Movie Awards.\n\n He has featured in several award winning films including \"Two Brides and a Baby\", \"Hoodrush\", \"Alan Poza\", \"Confusion Na Wa\" and \"Half of a Yellow Sun\".",
+    "Eric Aghimien\nEric Enomamien Aghimien is a Nigerian director, producer, screenwriter and editor.\n\n His debut feature film, \"A Mile from Home\" won awards at both the 2014 Africa Magic Viewers Choice Awards and the 10th Africa Movie Academy Awards.",
+    "Africa Magic Viewers' Choice Awards\nAfrica Magic Viewers' Choice Awards (AMVCA) is an annual accolade presented by Multichoice recognizing outstanding achievement in television and film, voted on by the general public.\n\n The inaugural Africa Magic Viewers’ Choice Awards ceremony was held in Lagos, Lagos State in Nigeria on 9 March 2013, and was broadcast live in more than 50 countries.\n\n Entries into the award ceremony are films and TV series that have been aired on Dstv Channels in the previous year."
+   ]
+  },
+  {
+   "id": "2d8430fafa426999",
+   "gold": [
+    {
+     "sentence": " Upon Victoria's death, the British throne passed to her eldest son Edward VII, a member of the House of Saxe-Coburg and Gotha through his father.",
+     "facts": {
+      "0.0": "Victoria died.",
+      "0.1": "The British throne passed to Victoria's eldest son Edward VII upon her death.",
+      "0.2": "Edward VII was a member of the House of Saxe-Coburg and Gotha through his father."
+     }
+    },
+    {
+     "sentence": "The House of Saxe-Coburg and Gotha ( ; German: \"\") is a German dynasty that ruled the duchy of Saxe-Coburg and Gotha, which was one of the Ernestine duchies.",
+     "facts": {
+      "1.0": "The House of Saxe-Coburg and Gotha is a German dynasty.",
+      "1.1": "The House of Saxe-Coburg and Gotha ruled the duchy of Saxe-Coburg and Gotha.",
+      "1.2": "The duchy of Saxe-Coburg and Gotha was one of the Ernestine duchies."
+     }
+    }
+   ],
+   "items": [
+    "Line of succession to the former Romanian throne\nThe succession order to the throne of the Romanian monarchy, abolished since 1947, was regulated by the monarchical constitution of 1923 and the 1884 Law of the Romanian Royal House Rules enacted pursuant to the 1866 Constitution of Romania which had confirmed the enthronement of Prince Karl (Carol) of Hohenzollern-Sigmaringen.\n\n The defunct 1923 Constitution stipulated Salic law, according to which the throne was hereditary in King Carol I's legitimate descent and, if his male issue failed, in the descent of his brothers of the Sigmaringen princely branch of the House of Hohenzollern, according to agnatic primogeniture and to the perpetual exclusion of females and their descendants.\n\n The last monarch to reign in Romania was King Michael I, who was born in 1921, abdicated his throne on 30 December 1947 under coercion, and went into exile in Switzerland.",
+    "Ernest Augustus, King of Hanover\nErnest Augustus (5 June 1771 – 18 November 1851) was King of Hanover from 20 June 1837 until his death.\n\n He was the fifth son and eighth child of King George III of the United Kingdom and Hanover.\n\n As a fifth son, Ernest seemed unlikely to become a monarch, but none of his four elder brothers had a legitimate son who survived infancy.\n\n The Salic Law, which barred succession to or through a female, prevailed in Hanover; therefore, when his elder brother King William IV died in 1837, Ernest succeeded him as King of Hanover.\n\n In the United Kingdom the succession to the monarchy was determined by primogeniture and his niece Victoria succeeded to the throne, thus ending the personal union between the British Isles and Hanover that had existed since 1714.",
+    "Duke of Bedford\nHe regained the earldom in 1485 when his nephew Henry VII came to the throne and was elevated to the dukedom the same year.\n\n He had no legitimate children and the titles became extinct on his death in 1495.",
+    "House of Saxe-Coburg and Gotha\nThe House of Saxe-Coburg and Gotha ( ; German: \"\") is a German dynasty that ruled the duchy of Saxe-Coburg and Gotha, which was one of the Ernestine duchies.\n\n It is a cadet branch of the Saxon House of Wettin.",
+    "Prince Christian of Hanover (born 1985)\nPrince Christian of Hanover (Christian Heinrich Clemens Paul Frank Peter Welf Wilhelm-Ernst Friedrich Franz Prince of Hanover, Duke of Brunswick and Lüneburg; born 1 June 1985) is the younger son of Ernst August, Prince of Hanover, and his first wife Chantal Hochuli.\n\n He is the second in the line of succession to the former Hanoverian throne, after his elder brother Prince Ernst August.\n\n As a descendant of George III of the United Kingdom, Christian is also in the line of succession to the British throne.",
+    "Succession to the British throne\nSuccession to the British throne is determined by descent, gender (for people born before October 2011), legitimacy, and religion.\n\n Under common law, the Crown is inherited by a sovereign's children or by a childless sovereign's nearest collateral line.\n\n The Bill of Rights 1689 and the Act of Settlement 1701, restrict succession to the throne to the legitimate Protestant descendants of Sophia of Hanover that are in \"communion with the Church of England\".\n\n Spouses of Roman Catholics were disqualified from 1689 until the law was amended in 2015.\n\n Protestant descendants of those excluded for being Roman Catholics are eligible.",
+    "Principality of Calenberg\nThe Principality of Calenberg was a dynastic division of the Welf duchy of Brunswick-Lüneburg established in 1432.\n\n Calenberg was ruled by the House of Hanover from 1635 onwards; the princes received the ninth electoral dignity of the Holy Roman Empire in 1692.\n\n Their territory became the nucleus of the Electorate of Hanover, ruled in personal union with the Kingdom of Great Britain from 1714 onwards.\n\n The principality received its name from Calenberg Castle, a residence of the Brunswick dukes.",
+    "House of Oldenburg\nThe House of Oldenburg is a European dynasty of North German origin.\n\n It is one of Europe's most influential royal houses, with branches that rule or have ruled in Denmark, Iceland, Greece, Norway, Russia, Sweden, Schleswig, Holstein, and Oldenburg.\n\n The current Queen of Denmark and King of Norway, the former King of Greece, the consorts of Greece and the United Kingdom, as well as the first twelve names in the line of succession to the British throne, are all patrilineal members of the Glücksburg branch of this house.",
+    "House of Hanover\nThe House of Hanover (or the Hanoverians ; German: \"Haus Hannover\" ) is a German royal dynasty that ruled the Electorate and then the Kingdom of Hanover, and that also provided monarchs of Great Britain and Ireland from 1714 and ruled the United Kingdom until the death of Queen Victoria in 1901.\n\n Upon Victoria's death, the British throne passed to her eldest son Edward VII, a member of the House of Saxe-Coburg and Gotha through his father.",
+    "Canada under British rule\nAlthough confederation in 1867 led to an enlarged Dominion with increased autonomy over domestic affairs, Canada still remained a colony within the British Empire and was thus subordinate to the British Parliament until the enactment of the Statute of Westminster in 1931.\n\n This statute recognized Canada as an independent peer coequal with the United Kingdom, and thus provided the Parliament of Canada with legislative sovereignty over all federal matters except the power to change the constitutional laws of Canada which remained under the purview of the Parliament of the United Kingdom.\n\n Canada's final vestige of legal dependence on the United Kingdom was terminated in 1982 with the enactment of the Canada Act, subsequently providing Canada with full legal sovereignty completely independent of the United Kingdom."
+   ]
+  },
+  {
+   "id": "54f1fd0478d33f48",
+   "gold": [
+    {
+     "sentence": "Longkou (), formerly Huang County (), is a port city in northeastern Shandong province, China, facing the Bohai Sea to the north and the Laizhou Bay to the west.",
+     "facts": {
+      "0.0": "Longkou was formerly known as Huang County.",
+      "0.1": "Longkou is a port city.",
+      "0.2": "Longkou is in northeastern Shandong province, China.",
+      "0.3": "Longkou faces the Bohai Sea to the north.",
+      "0.4": "Longkou faces the Laizhou Bay to the west."
+     }
+    },
+    {
+     "sentence": " The district faces East China Sea and is connected to Mawei district by the Min River.",
+     "facts": {
+      "1.0": "The district faces the East China Sea.",
+      "1.1": "The district is connected to Mawei district by the Min River."
+     }
+    }
+   ],
+   "items": [
+    "Fuzhoucheng\nFuzhou, also Fuzhoucheng () is a town under the administration of Wafangdian City, in southern Liaoning province, China.\n\n It lies at the intersection of China National Highway 202 and Liaoning Provincial Highway 313, 57 km north by road from Pulandian.\n\n Dahe Reservoir is located several kilometres to the east.\n\n There is a 74,132 acres (30,000 hectares) bird reserve nearby with species such as Swan goose and Hooded crane about 15 km southwest of the town.\n\n , it has 2 residential communities (社区) and 14 villages under its administration.",
+    "Wenling\nWenling (Wenling dialect: Uen-lin Zy ] ; ) is a coastal county-level city in the municipal region of Taizhou, in southeastern Zhejiang province, China.\n\n It borders Luqiao and Huangyan to the north, Yuhuan to the south, Yueqing to the west, looks out to the East China Sea to the east.\n\n Wenling locates on 28°22'N, 121°21'E, approximately 300 km south of Shanghai.",
+    "Dongtai\nDongtai () is a coastal county-level city under the administration of Yancheng, Jiangsu province, China.\n\n It has a population of roughly 1,170,000 estimated for 2007.\n\n Out of the total population, about 260,000 live in the Dongtai urban core, others are distributed in the 23 suburban towns and rural regions (Some famous towns include Touzao, Anfeng, Qingdong, Sancang, Qianggang, Fu'an, Tangyang, etc.).\n\n With some Yellow Sea coast, it borders the prefecture-level cities of Nantong to the south and Taizhou to the west, and is the southernmost county-level division of Yancheng.",
+    "Pulandian District\nPulandian District () is one of the seven districts under the administration of Dalian, located in the south of Liaoning province, People's Republic of China.\n\n Its area is 2769.90 km² and its permanent population as of 2010 is 741,230.\n\n The district borders the prefecture-level city of Yingkou to the north.",
+    "Dafeng District\nDafeng () is a coastal district under the administration of Yancheng, Jiangsu province, China.\n\n Located on the Jiangsu North Plain with a coastline of 112 km , Dafeng was historically one of the largest salt-making areas in China and now is famed for its well preserved eco-system and numerous national conservation parks.\n\n The district has the largest national nature reserve for a rare deer species, Père David's Deer or Milu (麋鹿 ) in Chinese.\n\n It borders the prefecture-level city of Taizhou to the southwest.",
+    "Xingcheng\nXingcheng (), former name Ningyuan (宁远), is a county-level city of southwest Liaoning province, China, with a population of approximately 140,000 urban inhabitants, and is located on the Liaodong Bay, i.e. the northern coast of the Bohai Sea.\n\n Currently under the administration of Huludao City, the area is steeped in history, and contains one of the best preserved Ming Dynasty towns in China, as well as functioning as a laidback summer resort.",
+    "Xujiacao Changle Station\nXujiacao Changle Station () is a station on Line 1 of the Ningbo Rail Transit that started operations on 30May 2014.\n\n It is situated over Wangchun Road () and Xinyuan Road () in the Haishu District of Ningbo City, Zhejiang Province, eastern China.",
+    "Longkou\nLongkou (), formerly Huang County (), is a port city in northeastern Shandong province, China, facing the Bohai Sea to the north and the Laizhou Bay to the west.\n\n Longkou, a county-level city, is administered by the prefecture-level city of Yantai.\n\n The total population of Longkou is 620,000.",
+    "Changle District\n(, Foochow Romanized: Diòng-lŏ̤h) is a district located in eastern Fujian province, China.\n\n Administered by Fuzhou, it occupies a land area of 648 km2 and a sea area of 1327 km2 .\n\n Changle was established in the sixth year of Emperor Wu-De (623 AD) during the Tang Dynasty, and it became a county-level city on February 18, 1994.\n\n The district faces East China Sea and is connected to Mawei district by the Min River.\n\n Due to an increase in businesses, the province is now one of the richest province in China.\n\n The city was upgraded into a district on August 2017 by a government proposal.",
+    "Taiyang Subdistrict\nTaiyang Subdistrict () is a subdistrict of Wafangdian, Dalian District, Liaoning, China.\n\n It is based around the small town of Taiyang, Taiyangsheng or Taiyangshengxiang, which lies 19 kilometres east by road of Fuzhou, 64 kilometres north by road from Pulandian.\n\n To the east is the DFM reservoir."
+   ]
+  },
+  {
+   "id": "f78a498f38752c25",
+   "gold": [
+    {
+     "sentence": " She is a member of the \"Game of Thrones\" stunt teams that won two Screen Actors Guild Awards, and has done stunt performances for films including \"Rogue One\".",
+     "facts": {
+      "0.0": "The person is a member of the Game of Thrones stunt teams.",
+      "0.1": "The Game of Thrones stunt teams won two Screen Actors Guild Awards.",
+      "0.2": "The person has done stunt performances for films including Rogue One."
+     }
+    },
+    {
+     "sentence": " \"Rogue One\" follows a group of rebels on a mission to steal the plans for the Death Star, the Galactic Empire's superweapon.",
+     "facts": {
+      "1.0": "Rogue One follows a group of rebels.",
+      "1.1": "The rebels are on a mission to steal the plans for the Death Star.",
+      "1.2": "The Death Star is the Galactic Empire's superweapon."
+     }
+    }
+   ],
+   "items": [
+    "Rebecca Forstadt\nRebecca Lynn Forstadt (born December 16, 1953), also known as Reba West, is an American voice actress, best known for playing young female roles in various animated series.\n\n After studying theater at Orange Coast College, in Costa Mesa, California, Forstadt began her acting career by working at Knott's Berry Farm's Bird Cage Theater, performing melodramas, often as the damsel in distress character.\n\n Later, she went to Hollywood where she worked as a wardrobe mistress on such television shows as \"The White Shadow\" and \"Hill Street Blues\", as well as for the film \"S.O.B.\".\n\n She also spent several years doing live theater in the Los Angeles area.\n\n Most notably, she won some recognition for her portrayal of the character Josette in the world premiere of Eugène Ionesco's \"Tales for People Under 3 Years of Age\" at the Stages Theatre Center in 1982.\n\n She starred in several low-budget movies such as \"Mugsy's Girls\", with Ruth Gordon and Laura Branigan, and \"Round Numbers\" with Kate Mulgrew, Samantha Eggar, and Shani Wallis.",
+    "Rachelle Henry\nRachelle Henry (born December 16, 2000) is an American teen actress and filmmaker.\n\n She played the role of Sandy Hobbs in the TLC (TV network) Series \"Escaping the Prophet\"and Lissa Golaski in \"Depth\", the film prequel to the Soma (video game) by Frictional Games.\n\n She is also known for directing and producing short films containing messages of social influence and coming of age themes including \"MISSING\" and \"Almost Boyfriends\".",
+    "Rachelle Beinart\nRachelle Amy Beinart (born 29 September 1984) is a British actress and stunt performer.\n\n She is a member of the \"Game of Thrones\" stunt teams that won two Screen Actors Guild Awards, and has done stunt performances for films including \"Rogue One\".\n\n She has also acted in preschool children's shows as a suit actor, including the reboot of \"Teletubbies\".",
+    "Brian Ralston\nBrian Ralston (born April 12, 1974) is a composer and musician living in Los Angeles.\n\n Ralston is a graduate of the University of Arizona and the USC Thornton School of Music Scoring for Motion Pictures and Television program.\n\n Brian's latest film is the 2017 drama Rose starring Cybill Shepherd, James Brolin and Pam Grier.\n\n In 2012 he scored the 20th Century Fox inspirational sports film Crooked Arrows, starring Brandon Routh, directed by Steve Rash.\n\n He has also composed music for the television series \"Angel\" (Season 4) and scores to the theatrical motion pictures \"9/Tenths\", directed by Bob Degus (\"Pleasantville\") starring Gabrielle Anwar, Henry Ian Cusick and Dave Ortiz, the Magnolia Pictures teen heist movie Graduation directed by Mike Mayer and starring Adam Arkin, Shannon Lucio, Chris Marquette, Riley Smith and Chris Lowell, and the dramatic feature Don't Fade Away directed by Luke Kasdan, starring Beau Bridges, Mischa Barton and Ryan Kwanten.",
+    "Rachelle Lefevre\nRachelle Lefevre ( ; born February 1, 1979) is a Canadian actress.\n\n She has starred in the television series \"Big Wolf on Campus\" and had recurring roles in \"What About Brian\", \"Boston Legal\", and \"Swingtown\".\n\n She played the vampire Victoria Sutherland in the first two films of the \"Twilight\" saga, before being replaced by Bryce Dallas Howard in the third installment, \"\", due to scheduling conflicts with her role in the film \"Barney's Version\".\n\n In 2011, she starred in the ABC medical drama \"Off the Map\", followed by the CBS series \"A Gifted Man\" (2011–2012) and \"Under the Dome\" (2013–2015).",
+    "The Runaways (film)\nThe Runaways is a 2010 American drama film about the 1970s rock band of the same name written and directed by Floria Sigismondi.\n\n It is based on the book \"Neon Angel: A Memoir of a Runaway\" by the band's original lead vocalist Cherie Currie.\n\n The film stars Dakota Fanning as Currie, Kristen Stewart as rhythm guitarist and vocalist Joan Jett, and Michael Shannon as record producer Kim Fowley.\n\n \"The Runaways\" depicts the formation of the band in 1975 and focuses on the relationship between Currie and Jett until Currie's departure from the band.\n\n The film grossed about $4.7 million worldwide and received generally favorable reviews from critics.",
+    "Amy O'Neill\nAmy O'Neill (born July 8, 1971) is an American performer and former actress.\n\n After appearing in several sitcoms and starring as Molly Stark on \"The Young and the Restless\" in 1986, she was cast in her notable role as Amy Szalinski in the 1989 Disney film, \"Honey, I Shrunk the Kids\", for which she was nominated for a Young Artist Award.\n\n She reprised her role as Amy Szalinski in the 1992 sequel, \"Honey, I Blew Up the Kid\" and appeared as Lisa Barnes in \"Where's Rodney?\n\n\".",
+    "Contraband (2012 film)\nContraband is a 2012 American crime thriller film directed by Baltasar Kormákur, starring Mark Wahlberg, Kate Beckinsale, Ben Foster, Caleb Landry Jones, Giovanni Ribisi, Lukas Haas, Diego Luna and J. K. Simmons.\n\n The film is a remake of the 2008 Icelandic film \"Reykjavík-Rotterdam\" which Baltasar Kormákur starred in.\n\n It was released on January 13, 2012 in the United States by Universal Pictures.",
+    "Rogue One\nRogue One: A Star Wars Story, or simply Rogue One, is a 2016 American epic space opera film directed by Gareth Edwards.\n\n The screenplay by Chris Weitz and Tony Gilroy is from a story by John Knoll and Gary Whitta.\n\n It was produced by Lucasfilm and distributed by Walt Disney Studios Motion Pictures.\n\n It is the first installment of the \"Star Wars\" \"Anthology\" series, set immediately before the events of the original \"Star Wars\" film.\n\n The cast includes Felicity Jones, Diego Luna, Riz Ahmed, Ben Mendelsohn, Donnie Yen, Mads Mikkelsen, Alan Tudyk, Jiang Wen and Forest Whitaker.\n\n \"Rogue One\" follows a group of rebels on a mission to steal the plans for the Death Star, the Galactic Empire's superweapon.",
+    "Zooey Deschanel filmography\nAmerican actress Zooey Deschanel made her film debut in the 1999 comedy feature \"Mumford\".\n\n She went on to gained public attention by co-starred in the comedy-drama \"Almost Famous\" (2000), the independent drama \"Manic\" (2001), opposite Joseph Gordon-Levitt, and the comedy-drama \"The Good Girl\" (2002).\n\n She landed her first major role as a 18-year-old virgin in the romantic drama \"All the Real Girls\" (2003), for which she was nominated for an Independent Spirit Award for Best Female Lead.\n\n Deschanel's biggest commercial success, as of 2017, came with the Christmas-fantasy film \"Elf\" (also in 2003), which grossed over $220 million worldwide."
+   ]
+  },
+  {
+   "id": "c339a17714ea01d4",
+   "gold": [
+    {
+     "sentence": " It was launched in March 1994 by Millivres Ltd, under the editorship of Frances Williams and is now published by Twin Media Group, which is owned by Silke Bader and Linda Riley.",
+     "facts": {
+      "0.0": "The publication was launched in March 1994.",
+      "0.1": "The publication was launched by Millivres Ltd.",
+      "0.2": "The publication was launched under the editorship of Frances Williams.",
+      "0.3": "The publication is now published by Twin Media Group.",
+      "0.4": "Twin Media Group is owned by Silke Bader.",
+      "0.5": "Twin Media Group is owned by Linda Riley."
+     }
+    },
+    {
+     "sentence": "Elle is a worldwide lifestyle magazine of French origin that focuses on fashion, beauty, health, and entertainment.",
+     "facts": {
+      "1.0": "Elle is a worldwide lifestyle magazine.",
+      "1.1": "Elle is of French origin.",
+      "1.2": "Elle focuses on fashion.",
+      "1.3": "Elle focuses on beauty.",
+      "1.4": "Elle focuses on health.",
+      "1.5": "Elle focuses on entertainment."
+     }
+    },
+    {
+     "sentence": " \"Elle\" is also the world's best-selling fashion magazine.",
+     "facts": {
+      "2.0": "Elle is also the world's best-selling fashion magazine."
+     }
+    },
+    {
+     "sentence": " It was founded by Pierre Lazareff and his wife Hélène Gordon in 1945.",
+     "facts": {
+      "3.0": "Elle was founded by Pierre Lazareff.",
+      "3.1": "Elle was founded by Hélène Gordon, the wife of Pierre Lazareff.",
+      "3.2": "Elle was founded in 1945."
+     }
+    }
+   ],
+   "items": [
+    "The Fader\nThe Fader (stylized as The FADER) is a New York City-based music magazine launched in 1999 by Rob Stone and Jon Cohen, covering music, style and culture.\n\n It was the first print publication to be released on iTunes.",
+    "VIVmag\nVIVmag is one of the earliest exclusively digital, interactive women's lifestyle magazines.\n\n Launched in 2006 and backed by Canadian industrialist David Harrison Gilmour (the founder of FIJI Water LLC), the bimonthly magazine is distributed by Zinio Systems, Inc.\n\n The first issue appeared in January-February 2007.\n\n There is no print version.\n\n The paperless title can be viewed in most browsers or downloaded to your computer and read via the Zinio Reader.\n\n The magazine is based in Thousand Oaks, California.",
+    "Hänt Bild (Swedish weekly, 2003–, Aller); Hänt Extra (Swedish celebrity/youth weekly); Girlfriends (lesbian culture, 1993–2006); Rap-Up (hip-hop/R&B quarterly, 2001–); Sculptural Pursuit (quarterly art); DIVA (UK lesbian monthly, 1994–); Elle (global fashion/lifestyle, founded 1945); Girls’ Life (US teen, 1994–",
+    "Girls' Life (magazine)\nGirls' Life is an American teen magazine.\n\n It was launched in 1994 by Monarch Services.\n\n The magazine is headquartered in Baltimore, Maryland.",
+    "Girlfriends (magazine)\nGirlfriends was a women's magazine that provided critical coverage of culture, entertainment and world events from a lesbian perspective.\n\n It was founded by Jacob Anderson-Minshall, Diane Anderson-Minshall and Heather Findlay.\n\n It also offered relationship, health and travel advice.\n\n Published monthly from San Francisco since 1993, it was distributed nationwide by Disticor.\n\n It had the same publisher as lesbian erotica magazine \"On Our Backs\", but distanced itself from its pornographic counterpart by refusing to carry sexual ads.\n\n \"Girlfriends\" magazine ceased publication in 2006.",
+    "Shape (magazine)\nShape is a monthly English language fitness magazine started by Weider Publications in 1981, founded by Christine MacIntyre (a pioneer in women's free weight fitness) and became the number one women's fitness magazine.\n\n At that time, Weider Enterprises consisted primarily of the bodybuilding magazine \"Muscle & Fitness\".\n\n Joe Weider and Christine MacIntyre had differing views of how to present \"Shape\", Weider endorsing a less journalistic and more commercial approach to articles, MacIntyre endorsing a more academic, doctor-based magazine.\n\n Weider also endorsed a sexier approach to editorial while MacIntyre endorsed a healthier look for women, eschewing sexiness in the models and the copy.\n\n MacIntyre largely won that battle, editing a magazine that required that every byline have an advanced medical degree, that cover models should look healthy rather than sexy, and that sexist language be avoided.\n\n Christine MacIntyre was the editor-in-chief until her death in 1988.\n\n Tara Kraft is the current editor-in-chief.\n\n \"Shape\" found a readership based on that formula.",
+    "Essence (magazine)\nEssence is a monthly magazine for African American women between the ages of 18 and 49.\n\n It is the only magazine that focuses on reaching an audience of black women, revolves around the black woman experience, and has remained for a long period of time.\n\n The magazine covers fashion, lifestyle and beauty, with an intimate girlfriend-to-girlfriend tone, and its slogan \"Fierce, Fun, and Fabulous\" suggests the magazine's goal of empowering African-American women.\n\n The topics the magazine discusses range from celebrities, to fashion, to point-of-view pieces addressing current issues in the African-American community.\n\n A number of its readers engage closely and personally with the publication, and it claims to be the magazine \"for and about Black women\".",
+    "Esquire (magazine)\nEsquire is an American men's magazine, published by the Hearst Corporation in the United States.\n\n Founded in 1933, it flourished during the Great Depression under the guidance of founders Arnold Gingrich, David A. Smart and Henry L. Jackson.",
+    "Elle (magazine)\nElle is a worldwide lifestyle magazine of French origin that focuses on fashion, beauty, health, and entertainment.\n\n \"Elle\" is also the world's best-selling fashion magazine.\n\n It was founded by Pierre Lazareff and his wife Hélène Gordon in 1945.\n\n The title, in French, means \"she\" or \"her\".",
+    "Diva (magazine)\nDIVA is a leading lesbian magazine in the United Kingdom, published monthly.\n\n It was launched in March 1994 by Millivres Ltd, under the editorship of Frances Williams and is now published by Twin Media Group, which is owned by Silke Bader and Linda Riley.\n\n Silke Bader is also the publisher of Curve magazine in the USA and LOTL in Australia, and Linda Riley runs the European Diversity Awards and is the former publisher of g3 magazine in the UK."
+   ]
+  },
+  {
+   "id": "89910ff334e0b782",
+   "gold": [
+    {
+     "sentence": "The Bishop of Ely is the ordinary of the Church of England Diocese of Ely in the Province of Canterbury.",
+     "facts": {
+      "0.0": "The Bishop of Ely is the ordinary of the Diocese of Ely.",
+      "0.1": "The Diocese of Ely is a Church of England diocese.",
+      "0.2": "The Diocese of Ely is in the Province of Canterbury."
+     }
+    },
+    {
+     "sentence": " Conway became Bishop of Ely in 2010, translated from the Diocese of Salisbury where he was Bishop suffragan of Ramsbury.",
+     "facts": {
+      "1.0": "Conway became Bishop of Ely in 2010.",
+      "1.1": "Conway was translated to Bishop of Ely from the Diocese of Salisbury.",
+      "1.2": "Conway was Bishop suffragan of Ramsbury before becoming Bishop of Ely.",
+      "1.3": "Conway was Bishop suffragan of Ramsbury in the Diocese of Salisbury."
+     }
+    },
+    {
+     "sentence": "The Diocese of Salisbury is a Church of England diocese in the south of England, within the ecclesiastical Province of Canterbury.",
+     "facts": {
+      "2.0": "The Diocese of Salisbury is a Church of England diocese.",
+      "2.1": "The Diocese of Salisbury is in the south of England.",
+      "2.2": "The Diocese of Salisbury is within the ecclesiastical Province of Canterbury."
+     }
+    }
+   ],
+   "items": [
+    "Roman Catholic Ecclesiastical Province of Miami\nThe Ecclesiastical Province of Miami is a Catholic ecclesiastical province covering the U.S. state of Florida.\n\n Its metropolitan bishop is the Archbishop of Miami, head of the Archdiocese of Miami.\n\n The province additionally includes the suffragan dioceses of Orlando, Palm Beach, Pensacola-Tallahassee, St. Augustine, St. Petersburg, and Venice.",
+    "Bishop of Ely\nThe Bishop of Ely is the ordinary of the Church of England Diocese of Ely in the Province of Canterbury.\n\n The diocese roughly covers the county of Cambridgeshire (with the exception of the Soke of Peterborough), together with a section of north-west Norfolk and has its episcopal see in the City of Ely, Cambridgeshire, where the seat is located at the Cathedral Church of the Holy Trinity.\n\n The current bishop is Stephen Conway, who signs \"+Stephen Elien:\" (abbreviation of the Latin adjective \"Eliensis\", meaning \"of Ely\").\n\n The diocesan bishops now reside in Bishop's House, Ely, the former cathedral deanery.\n\n Conway became Bishop of Ely in 2010, translated from the Diocese of Salisbury where he was Bishop suffragan of Ramsbury.",
+    "Ecclesiastical Province of Freiburg\nThe Ecclesiastical Province of Freiburg (\"Kirchenprovinz Freiburg\") or Upper Rhenish Ecclesiastical Province (\"Oberrheinische Kirchenprovinz\") is an ecclesiastical province of the Roman Catholic Church in the Upper Rhine area of Germany, centring on Freiburg im Breisgau.\n\n It covers the Roman Catholic Archdiocese of Freiburg, the Roman Catholic Diocese of Mainz and the Roman Catholic Diocese of Rottenburg-Stuttgart, covering large areas of Baden-Württemberg and Hesse and small parts of Rhineland-Palatinate.\n\n Its metropolitan bishop is the Archbishop of Freiburg - that Archdiocese and the Province were both set up in 1821 in the wake of the 1801 Concordat and the 1815 Congress of Vienna.",
+    "Graph query row:\nperson: Stephen Conway\nconnection: MEMBER_OF\ndiocese: Diocese of Ely\nprovince_relationship: PART_OF\nprovince: Province of Canterbury",
+    "Ecclesiastical Province of Ontario\nThe Ecclesiastical Province of Ontario is one of the Anglican Church of Canada's four ecclesiastical provinces.\n\n It was established in 1912 out of six dioceses of the Ecclesiastical Province of Canada located in the civil Province of Ontario, and the Diocese of Moosonee from the Ecclesiastical Province of Rupert's Land.",
+    "Dean of Guildford\nThe Dean of Guildford is the head (\"primus inter pares\" – first among equals) and chair of the chapter of canons, the ruling body of Guildford Cathedral.\n\n The dean and chapter are based at the \"Cathedral Church of the Holy Spirit\" in Guildford.\n\n The cathedral is the mother church of the Diocese of Guildford and seat of the Bishop of Guildford.\n\n The current dean is Dianna Gwilliams, who was installed on 15 September 2013.",
+    "Diocese of Salisbury\nThe Diocese of Salisbury is a Church of England diocese in the south of England, within the ecclesiastical Province of Canterbury.\n\n The diocese covers most of Dorset (excepting the deaneries of Bournemouth and Christchurch, which fall within the Diocese of Winchester), and most of Wiltshire (excepting a part in the north and Swindon).\n\n The diocese is led by the Bishop of Salisbury (Nick Holtam) and the diocesan synod.\n\n The bishop's seat is at Salisbury Cathedral.",
+    "Dean of Chelmsford\nThe Dean of Chelmsford is the head (\"primus inter pares\" – first among equals) and chair of the Cathedral Chapter, the governing body of Chelmsford Cathedral, the Cathedral Church of St Mary the Virgin, St Peter and St Cedd.\n\n Before 2000 the post was designated as a provost, which was then the equivalent of a dean at most English cathedrals.\n\n The cathedral is the mother church of the Diocese of Chelmsford and seat of the Bishop of Chelmsford.\n\n The Dean of Chelmsford is also responsible for the Chapel of St Peter-on-the-Wall at Bradwell-on-Sea, founded by St Cedd, among the oldest church buildings in regular use in England.",
+    "Diocese of Guildford\nThe Diocese of Guildford is a Church of England diocese covering nine of the eleven districts in Surrey, much of north-east Hampshire and a parish in Greater London.\n\n The cathedral is Guildford Cathedral and the bishop is the Bishop of Guildford.\n\n Of the two provinces of the church it falls within the Province of Canterbury.",
+    "Ecclesiastical province\nAn ecclesiastical province is a general term for one of the basic forms of jurisdiction in Christian Churches with traditional hierarchical structure, including Western Christianity and Eastern Christianity.\n\n In general, ecclesiastical province is consisted of several dioceses (or eparchies), one of them being the archdiocese (or archeparchy), headed by metropolitan bishop or archbishop who has ecclesiastical jurisdiction over all other bishops of the province."
+   ]
+  },
+  {
+   "id": "4b2fd66b8bde5bf3",
+   "gold": [
+    {
+     "sentence": "The 2015 Africa Magic Viewers Choice Awards (AMVCA) was held on March 7, 2015 at the Eko Hotel and Suites, Victoria Island, Lagos, Nigeria.",
+     "facts": {
+      "0.0": "The 2015 Africa Magic Viewers Choice Awards (AMVCA) was held.",
+      "0.1": "The 2015 AMVCA was held on March 7, 2015.",
+      "0.2": "The 2015 AMVCA was held at the Eko Hotel and Suites.",
+      "0.3": "The Eko Hotel and Suites is in Victoria Island, Lagos, Nigeria."
+     }
+    },
+    {
+     "sentence": "Lagos initially emerged as a port city which originated on a collection of islands, which are contained in the present day Local Government Areas (LGAs) of Lagos Island, Eti-Osa, Amuwo-Odofin and Apapa; the islands are separated by creeks, fringing the southwest mouth of Lagos Lagoon, while protected from the Atlantic Ocean by barrier islands and long sand spits such as Bar Beach, which stretch up to 100 km east and west of the mouth.",
+     "facts": {
+      "1.0": "Lagos initially emerged as a port city.",
+      "1.1": "Lagos originated on a collection of islands.",
+      "1.2": "The islands are contained in the present day Local Government Areas (LGAs) of Lagos Island, Eti-Osa, Amuwo-Odofin and Apapa.",
+      "1.3": "The islands are separated by creeks.",
+      "1.4": "The creeks fringe the southwest mouth of Lagos Lagoon.",
+      "1.5": "The islands are protected from the Atlantic Ocean by barrier islands.",
+      "1.6": "The islands are protected from the Atlantic Ocean by long sand spits such as Bar Beach.",
+      "1.7": "The barrier islands and long sand spits, such as Bar Beach, stretch up to 100 km east and west of the mouth."
+     }
+    }
+   ],
+   "items": [
+    "Lake Worth Lagoon\nThe Lake Worth Lagoon is a lagoon located in Palm Beach County, Florida.\n\n It runs parallel to the coast, and is separated from the Atlantic Ocean by barrier beaches, including Palm Beach Island.\n\n The lagoon is connected to the Atlantic Ocean by two permanent, man-made inlets.",
+    "Africa Magic\nAfrica Magic is a collection of Pay TV entertainment channels that focus on African programming.\n\n \"Africa Magic\", which started off as single channel of the same name, is a brand owned by M-Net and now comprises eight channels.\n\n The first \"Africa Magic\" channel was launched in July 2003 as a movie channel and over the next decade, the brand expanded to include seven more channels comprising movies, television shows and general entertainment.\n\n Africa Magic currently broadcasts in more than 50 African countries.\n\n The channels include \"Africa Magic Family\", \"Africa Magic World\", \"Africa Magic Showcase\", \"Africa Magic Yoruba\", \"Africa Magic Igbo\", \"Africa Magic Hausa\".\n\n \"Africa Magic Epic\" and \"Africa Magic Urban\".\n\n Africa Magic is also responsible for the annual Africa Magic Viewers' Choice Awards (AMVCAs), the biggest celebration of film and television talent in Africa.",
+    "South Lake Worth Inlet\nThe South Lake Worth Inlet, also known as the Boynton Inlet, is an artificial cut through a barrier beach connecting the south end of the Lake Worth Lagoon in Palm Beach County, Florida with the Atlantic Ocean.\n\n The inlet is 130 ft wide and 6 ft and 12 ft deep.",
+    "2015 Africa Magic Viewers Choice Awards\nThe 2015 Africa Magic Viewers Choice Awards (AMVCA) was held on March 7, 2015 at the Eko Hotel and Suites, Victoria Island, Lagos, Nigeria.\n\n IK and Vimbai were the hosts of the event.\n\n A new category, Best Indigenous Language (Igbo), was introduced in the 2015 awards.",
+    "Lake Worth Inlet\nThe Palm Beach Inlet, also known as the Lake Worth Inlet is an artificial cut through a barrier island connecting the northern part of the Lake Worth Lagoon in Palm Beach County, Florida with the Atlantic Ocean.\n\n It is bordered by the town of Palm Beach on the south, and by the town of Palm Beach Shores to the north.\n\n The inlet is also the entrance channel for the Port of Palm Beach.\n\n Its coordinates are .",
+    "Lagos\nLagos initially emerged as a port city which originated on a collection of islands, which are contained in the present day Local Government Areas (LGAs) of Lagos Island, Eti-Osa, Amuwo-Odofin and Apapa; the islands are separated by creeks, fringing the southwest mouth of Lagos Lagoon, while protected from the Atlantic Ocean by barrier islands and long sand spits such as Bar Beach, which stretch up to 100 km east and west of the mouth.\n\n Due to rapid urbanization, the city expanded to the west of the lagoon to include areas in the present day Lagos Mainland, Ajeromi-Ifelodun and Surulere.\n\n This led to the classification of Lagos into two main areas - the Island, which was the initial city of Lagos, before it expanded into the area known as the Mainland.\n\n This city area was governed directly by the Federal Government through the \"Lagos City Council\", until the creation of Lagos State in 1967, which led to the splitting of Lagos city into the present day seven Local Government Areas (LGAs), and an addition of other towns (which now make up 13 LGAs) from the then Western Region, to form the state.",
+    "2012 British Academy Television Awards\nThe 2012 British Academy Television Awards (formally known as the Arqiva British Academy Television Awards) were held on 27 May 2012 at the Royal Festival Hall in London.",
+    "2013 Africa Magic Viewers Choice Awards\nThe 2013 Africa Magic Viewers Choice Awards were held on 9 March 2014 and co-hosted by Big Brother Africa presenter IK Osakioduwa and StarGist’s host, Vimbai Mutinhiri.\n\n Ivie Okujaiye and Olu Jacobs were honored with the TrailBlazer and Industry Merit Awards respectively.",
+    "Outer barrier\nThe outer barrier, also known as the Long Island and New York City barrier islands, refers to the string of barrier islands that divide the lagoons south of Long Island, New York from the Atlantic Ocean.\n\n These islands include Coney Island, Long Beach Barrier Island, Island Park, Jones Beach Island, Fire Island and Westhampton Island.\n\n The outer barrier extends 75 mi along the South Shore of Long Island, from Rockaway Beach on the New York City/Nassau County border from Long Beach Barrier Islands' western edge, to Suffolk County's east end of Shinnecock Bay.",
+    "Africa Magic Viewers' Choice Awards\nAfrica Magic Viewers' Choice Awards (AMVCA) is an annual accolade presented by Multichoice recognizing outstanding achievement in television and film, voted on by the general public.\n\n The inaugural Africa Magic Viewers’ Choice Awards ceremony was held in Lagos, Lagos State in Nigeria on 9 March 2013, and was broadcast live in more than 50 countries.\n\n Entries into the award ceremony are films and TV series that have been aired on Dstv Channels in the previous year."
+   ]
+  },
+  {
+   "id": "b958a5d64841df98",
+   "gold": [
+    {
+     "sentence": "David Michael Draiman (born March 13, 1973) is an American songwriter and the vocalist for the band Disturbed as well as for the band Device.",
+     "facts": {
+      "0.0": "David Michael Draiman was born on March 13, 1973.",
+      "0.1": "David Michael Draiman is an American songwriter.",
+      "0.2": "David Michael Draiman is the vocalist for the band Disturbed.",
+      "0.3": "David Michael Draiman is the vocalist for the band Device."
+     }
+    },
+    {
+     "sentence": "Terry Alan Kath (January 31, 1946 – January 23, 1978) was an American musician and songwriter, best known as the original guitarist, one of the lead singers and founding members of the rock band Chicago.",
+     "facts": {
+      "1.0": "Terry Alan Kath lived January 31, 1946 to January 23, 1978.",
+      "1.1": "Terry Alan Kath was an American musician.",
+      "1.2": "Terry Alan Kath was an American songwriter.",
+      "1.3": "Terry Alan Kath was best known as the original guitarist of the rock band Chicago.",
+      "1.4": "Terry Alan Kath was one of the lead singers of the rock band Chicago.",
+      "1.5": "Terry Alan Kath was a founding member of the rock band Chicago."
+     }
+    }
+   ],
+   "items": [
+    "Katherine Dienes\nKatherine Dienes (born 1970) is a New Zealand-born organist, conductor and composer.\n\n She is currently Organist and Master of the Choristers at Guildford Cathedral and is the first woman to hold the most senior musical post in a Church of England cathedral.\n\n Her husband is Patrick Williams - librarian of the Royal Phillharmonic Orchestra, and they have a daughter, Hannah, who is currently a chorister at Guildford Cathedral",
+    "Tom Johnston (musician)\nCharles Thomas \"Tom\" Johnston (born August 15, 1948) is an American musician.\n\n He is a guitarist and vocalist, known principally as a founder, guitarist, lead vocalist and songwriter for the rock group The Doobie Brothers, as well as for his own solo career.\n\n His off-and-on career with The Doobie Brothers spans more than 40 years, during which time the band exhibited numerous successful styles.",
+    "Karlfried Graf Dürckheim\nKarl Friedrich Alfred Heinrich Ferdinand Maria Graf Eckbrecht von Dürckheim-Montmartin (24 October 1896 – 28 December 1988) was a German diplomat, psychotherapist and Zen Master.\n\n A veteran of World War I, he was introduced to Zen Buddhism early in life.\n\n After obtaining a doctorate in psychology, he became an avid supporter of the Nazi Party.\n\n Following World War II he was imprisoned in Japan which transformed him spiritually.\n\n Upon returning to Germany he became a leading proponent of the Western esoteric spiritual tradition, synthesizing teachings from Christian Mysticism, Depth Psychology and Zen Buddhism.",
+    "Terry Glaze\nTerrence Lee Glaze (born November 29, 1964, Columbus), known as Terry Lee, is a Texas-raised singer and guitarist who is most known for his work in American heavy metal bands Lord Tracy and Pantera.",
+    "Peter Wichers\nPeter Wichers is best known as one of the founding members of Swedish melodic death metal band, Soilwork.\n\n From 1995 until late 2005, when he announced his departure from the band, he was known as the lead guitarist and also a songwriter, especially on their \"Stabbing the Drama\" album., He rejoined Soilwork in 2008 and played on 2010s The Panic Broadcast and in June 2012 he quit Soilwork for the second time.\n\n After leaving Soilwork, he filled in for Adam Dutkiewicz when he was injured on Killswitch Engage's European tour.\n\n More recently, he has collaborated with singers from across the melodic death metal genre including Anders Fridén, former band mate Björn \"Speed\" Strid and John Bush (vocalist of Anthrax) to make a CD much in the same style as \"Roadrunner United\", entitled \"Nuclear Blast All-Stars\".\n\n He also co-wrote Warrel Dane's solo record \"Praises to the War Machine\".",
+    "Ted Kooshian\nTed Kooshian (born October 8, 1961) is an American jazz pianist, keyboardist, and composer, who has performed with Aretha Franklin, Chuck Berry, Marvin Hamlisch, Sarah Brightman, Il Divo, and Blood, Sweat, and Tears.\n\n Kooshian has played in many Broadway pit orchestras, and has been a member of the Ed Palermo Big Band since 1994.\n\n Originally from San Jose, California, Kooshian has been performing since the 1980s.",
+    "Terry Kath\nTerry Alan Kath (January 31, 1946 – January 23, 1978) was an American musician and songwriter, best known as the original guitarist, one of the lead singers and founding members of the rock band Chicago.\n\n He has been praised by the band for his guitar skills and Ray Charles-influenced vocal style.",
+    "David Draiman\nDavid Michael Draiman (born March 13, 1973) is an American songwriter and the vocalist for the band Disturbed as well as for the band Device.\n\n Draiman is known for his distorted voice and percussive singing style.\n\n In November 2006, Draiman was voted number 42 on the \"Hit Parader\"’s \"\"Top 100 Metal Vocalists of All Time\"\".\n\n Draiman has written some of Disturbed's most successful singles, such as \"Stupify\", \"Down with the Sickness\", \"Indestructible\", and \"Inside the Fire\".",
+    "Device (metal band)\nDevice was an industrial metal band started by David Draiman, frontman of the heavy metal group Disturbed.\n\n Draiman was approached by Geno Lenardo, former guitarist of Filter, and together they started to work on new material.\n\n The two started work on a debut album in June 2012.\n\n The result of those sessions, \"Device\", was released on April 9, 2013.\n\n The first single and third track, \"Vilify\" was released to radio ahead of the album on February 19, 2013, alongside its first music video, directed by P. R. Brown.\n\n The second single and the introductory track, \"You Think You Know\", was released on June 11, 2013, alongside its music video, directed once again by Brown.",
+    "Rock &amp; Roll Over Tour\nIt is the first Kiss song in which Ace sings lead vocals.\n\n This was the first tour on which \"Beth\" was performed live; instead of being played by the entire band, it was sung solo by drummer Peter Criss to a recording of the instrumental track from the Destroyer album."
+   ]
+  },
+  {
+   "id": "afa73de5aa298ee3",
+   "gold": [
+    {
+     "sentence": "William Dwight Schultz (born November 24, 1947) is an American actor and voice artist.",
+     "facts": {
+      "0.0": "William Dwight Schultz was born on November 24, 1947.",
+      "0.1": "William Dwight Schultz is an American actor.",
+      "0.2": "William Dwight Schultz is an American voice artist."
+     }
+    },
+    {
+     "sentence": " He is also well known in animation as the mad scientist Dr. Animo in the \"Ben 10\" series, Chef Mung Daal in the children's cartoon \"Chowder\", and Eddie the Squirrel in \"CatDog\".",
+     "facts": {
+      "1.0": "William Dwight Schultz is well known in animation as the mad scientist Dr. Animo in the \"Ben 10\" series.",
+      "1.1": "William Dwight Schultz is well known in animation as Chef Mung Daal in the children's cartoon \"Chowder\".",
+      "1.2": "William Dwight Schultz is well known in animation as Eddie the Squirrel in \"CatDog\"."
+     }
+    },
+    {
+     "sentence": "Chowder is an American animated television series created by C. H. Greenblatt for Cartoon Network.",
+     "facts": {
+      "2.0": "Chowder is an American animated television series.",
+      "2.1": "Chowder was created by C. H. Greenblatt.",
+      "2.2": "Chowder was created for Cartoon Network."
+     }
+    }
+   ],
+   "items": [
+    "John DiMaggio\nJohn William DiMaggio (born September 4, 1968) is an American voice actor and comedian, known for his gruff voice and for his work as Bender from the television show \"Futurama\", Jake the Dog on \"Adventure Time\", and Marcus Fenix in the hit Xbox video game \"Gears Of War\".\n\n Other voice-over roles of his include Dr. Drakken and Motor Ed on \"Kim Possible\", Brother Blood on \"Teen Titans\", Aquaman in \"\", Rico in \"The Penguins of Madagascar\", and Ogre In \"\", Niblet on \"Pound Puppies\", the Scotsman on \"Samurai Jack\", and Shnitzel on \"Chowder\".",
+    "The Itchy &amp; Scratchy Show\n(voiced by Alex Rocco, and, later, Hank Azaria), who runs the studio and produces the show.",
+    "Rodger Bumpass\nRodger Bumpass (born November 20, 1951) is an American actor and voice actor.\n\n He is best known for his long-running role as Squidward Tentacles on the American animated television series \"SpongeBob SquarePants\".\n\n He voices many other characters on the show, including Dr. Forrest and various anchovies.\n\n He also voiced The Chief in the animated series \"Where on Earth Is Carmen Sandiego?\n\n\", and Mr. Besser, the school principal in the animated series \"The Kids from Room 402\".\n\n Bumpass has many other credits in animated films, animated television series, and video games.",
+    "Townsend Coleman\nTownsend Putnam Coleman III (born May 28, 1954) is an American voice actor who performed in many animated series and TV commercials beginning in the early 1980s.\n\n Among his most notable roles are Michaelangelo from \"Teenage Mutant Ninja Turtles\", Wayne Gretzky on \"ProStars\" and the title character in \"Where's Waldo?\n\n\" and the eponymous \"The Tick\" and he also did additional voices in \"Dexter's Laboratory\", \"The Powerpuff Girls\", \"Adventure Time\", \"Animaniacs\", \"The Buzz on Maggie\", \"Camp Lazlo\", \"CatDog\", \"Catscratch\", \"Danny Phantom\", \"Dave the Barbarian\", \"\", \"The Fairly OddParents\", \"Foster's Home for Imaginary Friends\", \"Gravity Falls\", \"Hi Hi Puffy AmiYumi\", \"\", \"The Loud House\", \"The Mighty B!\n\n\", \"My Life As A Teenage Robot\" and \"The Replacements\" and he also did the voice of Knotty in \"\" (1992) and he also did additional voices in films \"Fantasia 2000\" (1999) and \"Sing\" (2016)",
+    "The entries profile actors, voice performers, puppeteers, composers, writers, and animation history. Ken Barrie voiced and sang for *Postman Pat*; Roger Kitter played Captain Bertorelli in *’Allo ’Allo!* and scored a tennis-themed chart hit. Ralph Bakshi directed influential adult animations including *Fritz the Cat*, *Heavy Traffic*, and *Fire and Ice*, plus live-action *Cool and the Crazy*. Other profiles include Disney composer Buddy Baker; Sc",
+    "Chowder (TV series)\nChowder is an American animated television series created by C. H. Greenblatt for Cartoon Network.\n\n The series follows an aspiring young child named Chowder and his day-to-day adventures as an apprentice in Chef Mung Daal's catering company.\n\n Although he means well, Chowder often finds himself in predicaments due to his perpetual appetite and his nature as a scatterbrain.\n\n It is animated with both traditional animation as well as short stop motion and puppet sequences that are inter-cut into the episodes, and that run over the end credits.\n\n Stop motion sequences are produced by Screen Novelties.\n\n It is also the first Cartoon Network original series to premiere during Stuart Snyder's tenure as Jim Samples had resigned months before the series premiere.",
+    "Alan Young\nAlan Young (born Angus Young; November 19, 1919 – May 19, 2016) was a British-born Canadian-American actor, voice actor, comedian and radio and television host/personality who \"TV Guide\" called \"The Charlie Chaplin of Television\".\n\n He was best known for his role as naive Wilbur Post in the television comedy series \"Mister Ed\" (1961–1966).\n\n Young was also the voice of Disney's Scrooge McDuck for over thirty years, first in the Academy Award-nominated short film \"Mickey's Christmas Carol\" (1983) and in various other films, TV series and video games until his death.\n\n During the 1940s and 1950s, he starred in his own variety/comedy sketch shows \"The Alan Young Show\" on radio and television, the latter gaining him two Emmy Awards in 1951.\n\n He also appeared in a number of feature films, starting from 1946, including the 1960 film \"The Time Machine\" and from the 1980s gaining a new generation of viewers appearing in numerous Walt Disney Productions films as both an actor and voice actor.",
+    "Dwight Schultz\nWilliam Dwight Schultz (born November 24, 1947) is an American actor and voice artist.\n\n He is known for his roles as Captain \"Howling Mad\" Murdock on the 1980s action series \"The A-Team\", and as Reginald Barclay in \"\", \"\" and the film \"\".\n\n He is also well known in animation as the mad scientist Dr. Animo in the \"Ben 10\" series, Chef Mung Daal in the children's cartoon \"Chowder\", and Eddie the Squirrel in \"CatDog\".",
+    "The Return of Chef\n\"The Return of Chef\" is the first episode in the tenth season of the American animated television series \"South Park\".\n\n The 140th episode of the series overall, it first aired on Comedy Central in the United States on March 22, 2006.\n\n The episode was the first after the departure of actor Isaac Hayes, who voiced the character Chef.\n\n Hayes, a Scientologist, left after a falling-out with the creators over their treatment of Scientology in the previous season's episode \"Trapped in the Closet\".\n\n Scientology has been accused of using brainwashing techniques, and the episode portrays Chef as having been brainwashed.",
+    "Bill Barretta\nWilliam Paul \"Bill\" Barretta (born June 19, 1964) is an American puppeteer and producer who has been performing with The Muppets since 1991, when he puppeteered the body of Sinclair family patriarch, Earl Sinclair on \"Dinosaurs\".\n\n He later developed several new characters on \"Muppets Tonight\", including Pepe the King Prawn, Johnny Fiama, Big Mean Carl and Bobo the Bear.\n\n Along with having his own Muppet characters, Barretta has taken over several of Jim Henson's roles, such as Dr. Teeth, Rowlf the Dog, Mahna Mahna and Swedish Chef, and briefly took over Jerry Nelson's role of Lew Zealand.\n\n His film debut as a principal puppeteer was in 1996's \"Muppet Treasure Island\" as Clueless Morgan.\n\n In addition, Barretta has produced two of the Muppets' television films, \"It's a Very Merry Muppet Christmas Movie\" (2002) and \"The Muppets' Wizard of Oz\" (2005).\n\n Barretta also provides additional voices on \"Kim Possible\"."
+   ]
+  },
+  {
+   "id": "2894313fc042f611",
+   "gold": [
+    {
+     "sentence": " It was released as the lead single from their fourth studio album, \"Elephant\", in March 2003, and reached number one on the Modern Rock Tracks—maintaining that position for three weeks.",
+     "facts": {
+      "0.0": "The song was released as the lead single from the fourth studio album of its act, \"Elephant.\"",
+      "0.1": "The song was released in March 2003.",
+      "0.2": "The song reached number one on the Modern Rock Tracks.",
+      "0.3": "The song maintained its number one position on the Modern Rock Tracks for three weeks."
+     }
+    },
+    {
+     "sentence": " Released on April 1, 2003 on V2 Records, its release garnered near unanimous critical acclaim and commercial success, garnering a nomination for Album of the Year and a win for Best Alternative Music Album at the 46th Grammy Awards in 2004, peaking at No. 6 in the US \"Billboard\" charts and topping the UK album charts.",
+     "facts": {
+      "1.0": "The album \"Elephant\" was released on April 1, 2003.",
+      "1.1": "The album \"Elephant\" was released on V2 Records.",
+      "1.2": "The album \"Elephant\" garnered near unanimous critical acclaim.",
+      "1.3": "The album \"Elephant\" garnered commercial success.",
+      "1.4": "The album \"Elephant\" received a nomination for Album of the Year at the 46th Grammy Awards in 2004.",
+      "1.5": "The album \"Elephant\" won Best Alternative Music Album at the 46th Grammy Awards in 2004.",
+      "1.6": "The album \"Elephant\" peaked at No. 6 on the US \"Billboard\" charts.",
+      "1.7": "The album \"Elephant\" topped the UK album charts."
+     }
+    }
+   ],
+   "items": [
+    "Meg White\nMegan Martha \"Meg\" White (born December 10, 1974) is an American drummer and occasional singer known for her work with Jack White in the Detroit rock duo The White Stripes.\n\n On an impulse, she played on Jack's drums in 1997.\n\n The two decided to form a band and began performing two months later, calling themselves The White Stripes because of their last name and Meg's affinity for peppermint candy.\n\n The band quickly became a Detroit underground favorite, before reaching national, then international fame.\n\n White has been nominated for various awards as a part of the White Stripes, and has received four Grammy Awards.",
+    "Seven (Poco album)\nSeven is the sixth studio album (seventh overall) by American country rock band Poco.\n\n It is the first album they made after leader Richie Furay left the band.\n\n The front cover was designed by Phil Hartman.",
+    "Late Night Tales: The Flaming Lips\nLate Night Tales: The Flaming Lips is a compilation album compiled by the members of The Flaming Lips, featuring songs by various artists.\n\n The album was released on March 7, 2005 and it features one new Flaming Lips recording, a cover of the White Stripes' \"Seven Nation Army\".",
+    "Seven Nation Army\n\"Seven Nation Army\" (also stylized as \"7 Nation Army\") is a song by American rock duo The White Stripes.\n\n It was released as the lead single from their fourth studio album, \"Elephant\", in March 2003, and reached number one on the Modern Rock Tracks—maintaining that position for three weeks.\n\n It also became the third best-performing song of the decade on the same chart.\n\n It was well received commercially as well, and won the Grammy Award for Best Rock Song.",
+    "Elephant (album)\nElephant is the fourth album by the American alternative rock duo The White Stripes.\n\n Released on April 1, 2003 on V2 Records, its release garnered near unanimous critical acclaim and commercial success, garnering a nomination for Album of the Year and a win for Best Alternative Music Album at the 46th Grammy Awards in 2004, peaking at No. 6 in the US \"Billboard\" charts and topping the UK album charts.",
+    "Grammy Award for Best Male Rap Solo Performance\nThe Grammy Award for Best Male Rap Solo Performance was an honor presented to male recording artists at the 45th Grammy Awards in 2003 and the 46th Grammy Awards in 2004 for quality rap solo performances.\n\n The Grammy Awards, an annual ceremony that was established in 1958, and originally called the Gramophone Awards, are presented by the National Academy of Recording Arts and Sciences of the United States to \"honor artistic achievement, technical proficiency and overall excellence in the recording industry, without regard to album sales or chart position\".",
+    "Premio Lo Nuestro 2003\nPremio Lo Nuestro 2003 was the 15th anniversary of the awards.\n\n the show was hosted by Mexican presenters Marco Antonio Regil and Adal Ramones.\n\n Juanes, Thalía, Marc Anthony, Pilar Montenegro, Sin Bandera, Banda el Recodo and other Latin music greats gave electrifying performances.\n\n In the show, there was 36 awards winners with 135 nominations.\n\n In Pop genre, Awards was given for : Album of the Year, Best Male Artist, Best Female Artist, Best Group or duo, Best New Artist and Song of the Year.\n\n In Rock Genre : Best Rock Album and Best rock Performer of the Year.\n\n In Tropical genre : Best Tropical Album of the Year, Best Tropical Male Artist, Best Tropical Female Artist, Best Tropical Group or Duo of the Year, Best Tropical New Artist, Tropical Song of the Year, Best Merengue Performance, Best Salsa Performance and Best Traditional Performance.\n\n Juanes was the biggest winner of night, took home four awards Best Pop Male Artist, Best Music Video, Best Rock Performance, and Pop Song of the Year .",
+    "Grammy Award for Best Female Rap Solo Performance\nThe Grammy Award for Best Female Rap Solo Performance was an honor presented to female recording artists at the 45th Grammy Awards in 2003 and the 46th Grammy Awards in 2004 for quality rap solo performances.\n\n The Grammy Awards, an annual ceremony that was established in 1958 and originally called the Gramophone Awards, are presented by the National Academy of Recording Arts and Sciences of the United States to \"honor artistic achievement, technical proficiency and overall excellence in the recording industry, without regard to album sales or chart position\".",
+    "The White Stripes\nThe White Stripes were an American rock duo formed in 1997 in Detroit, Michigan.\n\n The group consisted of Jack White (songwriter, vocals, guitar, piano, and mandolin) and Meg White (drums and vocals).\n\n After releasing several singles and three albums within the Detroit music scene, The White Stripes rose to prominence in 2002, as part of the garage rock revival scene.\n\n Their successful and critically acclaimed albums \"White Blood Cells\" and \"Elephant\" drew attention from a large variety of media outlets in the United States and the United Kingdom, with the single \"Seven Nation Army\" and its guitar line becoming their signature song.\n\n The band recorded two more albums, \"Get Behind Me Satan\" in 2005 and \"Icky Thump\" in 2007, and dissolved in 2011 after a lengthy hiatus from performing and recording.",
+    "The Boys Are Back (The Oak Ridge Boys album)\nThe Boys Are Back is the thirtieth studio album of country music group The Oak Ridge Boys.\n\n It was released in 2009 under the Spring Hill Music Group label.\n\n The album marked the group's return to secular country music after releasing gospel albums since 1992.\n\n The track \"Seven Nation Army,\" a cover of The White Stripes's 2003 song from their album \"Elephant\", was released as the album's first single."
+   ]
+  },
+  {
+   "id": "7aee755ed556aab8",
+   "gold": [
+    {
+     "sentence": "California State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States.",
+     "facts": {
+      "0.0": "California State Polytechnic University, Pomona is also called CPP, Cal Poly Pomona, or Cal Poly.",
+      "0.1": "California State Polytechnic University, Pomona is a public polytechnic university.",
+      "0.2": "California State Polytechnic University, Pomona is located in Pomona, California, United States."
+     }
+    },
+    {
+     "sentence": " It is one of two polytechnics in the California State University system.",
+     "facts": {
+      "1.0": "California State Polytechnic University, Pomona is one of two polytechnics in the California State University system."
+     }
+    },
+    {
+     "sentence": " Ельцина, \"Uralʹskiĭ federalʹnyĭ universitet imeni pervogo Prezidenta Rossii B.N. Yelʹtsina\", often shortened to UrFU, УрФУ ) (formed by a merger of the Ural State Technical University and Ural State University) is one of the leading educational institutions in the Ural region.",
+     "facts": {
+      "2.0": "The university is named after the first President of Russia, B.N. Yeltsin.",
+      "2.1": "The full name of the university is 'Uralʹskiĭ federalʹnyĭ universitet imeni pervogo Prezidenta Rossii B.N. Yelʹtsina'.",
+      "2.2": "The university, Ural Federal University, is often shortened to UrFU or УрФУ.",
+      "2.3": "Ural Federal University was formed by a merger of the Ural State Technical University and Ural State University.",
+      "2.4": "Ural Federal University is one of the leading educational institutions in the Ural region."
+     }
+    },
+    {
+     "sentence": " Ural Federal University acts as a research and innovation center of the Ural region and has close cooperation with the Russian Academy of Sciences.",
+     "facts": {
+      "3.0": "Ural Federal University acts as a research and innovation center of the Ural region.",
+      "3.1": "Ural Federal University has close cooperation with the Russian Academy of Sciences."
+     }
+    }
+   ],
+   "items": [
+    "Ural Federal University\nThe links between the university and intermediate educational institutions are actively developed.\n\n The University also performs consistent work on establishing strategic partnership with employers for the sake of development of the regional economy: employers are involved in the educational environment as direct participants, large-scale enployers-sponsored and corporate education is carried out based on the client-centered approach, joint business projects in economic and social areas are realized.",
+    "Cal Poly Pomona Broncos women's basketball\nThe Cal Poly Pomona Broncos women's basketball team is the women's basketball team that represents California State Polytechnic University, Pomona, in Pomona, California.\n\n The school's team currently competes in the California Collegiate Athletic Association.",
+    "International Polytechnic High School\nInternational Polytechnic High School, commonly abbreviated merely as iPoly, is a public college preparatory demonstration high school (9-12) located on the California State Polytechnic University, Pomona (Cal Poly Pomona) campus and operated by the Los Angeles County Office of Education (LACOE) in conjunction with the College of Education and Integrative Studies at the university.\n\n iPoly's curriculum is fully accredited by the Western Association of Schools and Colleges and is approved by the University of California and California State University.\n\n It maintains a unique affiliation with the Los Angeles County High School for the Arts (LACHSA), which is also run by LACOE.\n\n Since iPoly does not lie in a fixed school district, it draws students from throughout Los Angeles, San Bernardino, Orange and Riverside counties.\n\n The majority of students come from the Pomona and San Gabriel valleys.\n\n In 2009 and 2013, iPoly was honored as a California Distinguished School by the California Department of Education.",
+    "Cal Poly Pomona College of Environmental Design\nThe Cal Poly Pomona College of Environmental Design (CENV) is a college part of the California State Polytechnic University, Pomona (Cal Poly Pomona).\n\n The college houses over 1,600 students; making it one of largest environmental design programs in the United States.\n\n The college offers bachelor's degrees in five departments, as well as three master's degree programs.\n\n It is the only academic unit within the California State University system to be associated with a Pritzker Prize laureate (often referred to as \"The Nobel Prize in Architecture\").",
+    "California State Polytechnic University, Pomona\nCalifornia State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States.\n\n It is one of two polytechnics in the California State University system.",
+    "Ural Federal University\nThe Ural Federal University named after the first President of Russia B. N. Yeltsin (Russian: Уральский федеральный университет имени первого Президента России Б.Н.\n\n Ельцина, \"Uralʹskiĭ federalʹnyĭ universitet imeni pervogo Prezidenta Rossii B.N. Yelʹtsina\", often shortened to UrFU, УрФУ ) (formed by a merger of the Ural State Technical University and Ural State University) is one of the leading educational institutions in the Ural region.\n\n Ural Federal University acts as a research and innovation center of the Ural region and has close cooperation with the Russian Academy of Sciences.\n\n Training of students is carried out in four main areas of knowledge and 108 academic majors.\n\n The links between the university and intermediate educational institutions are actively developed.",
+    "Cal Poly Pomona Broncos\nThe Cal Poly Pomona Broncos or Cal Poly Broncos are the athletic sports teams for the California State Polytechnic University, Pomona (Cal Poly Pomona).\n\n Cal Poly Pomona has 10 varsity sports teams and offers student participation in a wide range of sports including soccer, volleyball, track and field, basketball, softball, and baseball.\n\n Cal Poly Pomona participates at the NCAA's Division II (DII) level in the California Collegiate Athletic Association (CCAA).\n\n The Broncos have 65 CCAA championships and 14 NCAA National Championships.\n\n Current and former Cal Poly athletes have won 7 Olympic medals (3 gold, 1 silver, and 3 bronze).",
+    "Cal Poly Pomona University Library\nThe Cal Poly Pomona University Library is the main library on the campus of California State Polytechnic University, Pomona (Cal Poly Pomona).\n\n It has in its collection 670,580 books; 6,883 serial subscriptions and 10,417 audiovisual materials.",
+    "Cal Poly Pomona College of Engineering\nThe Cal Poly Pomona College of Engineering is the engineering college at California State Polytechnic University, Pomona (Cal Poly Pomona or Cal Poly) located in Pomona, California, United States.\n\n Well known for its \"learn by doing\" philosophy, the college's motto is: \"\"making imagination real\"\".\n\n Cal Poly has one of the top engineering college among public schools in California and, with over 5,600 students (as of fall 2015), it is also the largest engineering college in Southern California, the second largest college of engineering in the California State University system, and the seventeenth largest engineering college in the United States.\n\n In the 2017 \"U.S. News & World Report\" the College of Engineering is ranked the 5th best undergraduate program among public universities (11th overall) in the West for Master's-granting universities, and \"has one of the top ranked engineering programs, and graduates roughly 1 of every 14 engineers in the state of California.\"",
+    "1981 Cal Poly Pomona Broncos football team\nThe 1981 Cal Poly Pomona Broncos football team represented California State Polytechnic University, Pomona during the 1981 NCAA Division II football season.\n\n Cal Poly Pomona competed in the California Collegiate Athletic Association (CCAA)."
+   ]
+  }
+ ]
+}

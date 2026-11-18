@@ -1,0 +1,37 @@
+[
+{"id": "4092cb63cba6532d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Kooker added later in the speech: “Music is a tremendous driver for AI technology, and AI technology presents a tremendous opportunity for the creative development of music."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Kooker added later in the speech: “Music is a tremendous driver for AI technology, and AI technology presents a tremendous opportunity for the creative development of music."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Kooker added later in the speech: “Music is a tremendous driver for AI technology, and AI technology presents a tremendous opportunity for the creative development of music."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Warner Music Group boss Robert Kyncl"}]},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "cb34e2300f57572f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "“It’s not the NHL that he was playing in the last few years,” Davidson said, “but the level of performance and how he could control a game and dominate a game in junior — it indicated he was going to be able to do that at some point in the NHL."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "“It’s not the NHL that he was playing in the last few years,” Davidson said, “but the level of performance and how he could control a game and dominate a game in junior — it indicated he was going to be able to do that at some point in the NHL."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "“It’s not the NHL that he was playing in the last few years,” Davidson said, “but the level of performance and how he could control a game and dominate a game in junior — it indicated he was going to be able to do that at some point in the NHL."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "1.6", "status": "missing", "evidence": []},
+{"fact": "1.7", "status": "missing", "evidence": []}
+]},
+{"id": "82b7c1d86aefc64b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]}
+]

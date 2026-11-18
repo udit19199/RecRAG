@@ -1,0 +1,20 @@
+{
+ "at": "2026-11-13T10:42:19.298353",
+ "note": "cache rows at the 10:42 UTC restart; NQ graph cache was seeded with the NQ 100 pilot rows",
+ "caches": {
+  "runs/final500/natural_questions/graphrag/construction-cache/recrag-benchmark-52b2ad143f0b1235d5e09974.sqlite": {
+   "chat_generations": 5031,
+   "embeddings": 21552
+  },
+  "runs/final500/hotpotqa/graphrag/construction-cache/recrag-benchmark-911fda8a4ba92b0c46f2bd06.sqlite": {
+   "chat_generations": 1726,
+   "embeddings": 5122
+  },
+  "runs/final500/natural_questions/hipporag/indexes/34414cf7e5d00470830c19cd29e28a24bbb5a1a9958ebb05b9c45f1624697d45/responses_cache/responses-v2.sqlite": {
+   "cache": 13435
+  },
+  "runs/final500/hotpotqa/hipporag/indexes/dc616713f8a77d285d4459bcc65f9adef2d8997069551a88b8c672aca9254739/responses_cache/responses-v2.sqlite": {
+   "cache": 5119
+  }
+ }
+}

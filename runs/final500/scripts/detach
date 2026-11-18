@@ -1,0 +1,5 @@
+#!/bin/zsh
+# Run a command in its own session so it outlives the agent's shell and app restarts.
+# Usage: detach LOGFILE command args...
+log=$1; shift
+nohup perl -e 'use POSIX qw(setsid); setsid(); exec @ARGV or die "exec: $!"' "$@" > "$log" 2>&1 < /dev/null &

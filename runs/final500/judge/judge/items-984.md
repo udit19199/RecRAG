@@ -1,0 +1,746 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=dff7ce286d2c58ae ===
+Gold sentences and facts:
+Sentence 0: Because the states were preexisting political entities , the U.S. Constitution did not need to define or explain federalism in any one section but it often mentions the rights and responsibilities of state governments and state officials in relation to the federal government . The federal government has certain express powers ( also called enumerated powers ) which are powers spelled out in the Constitution , including the right to levy taxes , declare war , and regulate interstate and foreign commerce . In addition , the Necessary and Proper Clause gives the federal government the implied power to pass any law `` necessary and proper '' for the execution of its express powers . Other powers -- the reserved powers -- are reserved to the people or the states . The power delegated to the federal government was significantly expanded by the Supreme Court decision in McCulloch v. Maryland ( 1819 ) , amendments to the Constitution following the Civil War , and by some later amendments -- as well as the overall claim of the Civil War , that the states were legally subject to the final dictates of the federal government .
+  Fact 0.0: The states were preexisting political entities.
+  Fact 0.1: The U.S. Constitution did not need to define or explain federalism in any one section, because the states were preexisting political entities.
+  Fact 0.2: The U.S. Constitution often mentions the rights and responsibilities of state governments and state officials in relation to the federal government.
+  Fact 0.3: The federal government has certain express powers, also called enumerated powers.
+  Fact 0.4: Express powers are powers spelled out in the Constitution.
+  Fact 0.5: The federal government's express powers include the right to levy taxes.
+  Fact 0.6: The federal government's express powers include the right to declare war.
+  Fact 0.7: The federal government's express powers include the right to regulate interstate commerce.
+  Fact 0.8: The federal government's express powers include the right to regulate foreign commerce.
+  Fact 0.9: The Necessary and Proper Clause gives the federal government the implied power to pass any law 'necessary and proper' for the execution of its express powers.
+  Fact 0.10: Other powers, the reserved powers, are reserved to the people or the states.
+  Fact 0.11: The Supreme Court decision in McCulloch v. Maryland (1819) significantly expanded the power delegated to the federal government.
+  Fact 0.12: Amendments to the Constitution following the Civil War significantly expanded the power delegated to the federal government.
+  Fact 0.13: Some later amendments to the Constitution significantly expanded the power delegated to the federal government.
+  Fact 0.14: The overall claim of the Civil War, that the states were legally subject to the final dictates of the federal government, significantly expanded the power delegated to the federal government.
+
+Retrieved items:
+<item 1>
+Federalism
+In their arguments , this is particularly demonstrated in the Council of Jerusalem , described in Acts chapter 15 , where the Apostles and elders gathered
+together to govern the Church ; the Apostles being representatives of the universal Church , and elders being such for the local church . To this day , elements
+of federalism can be found in almost every Christian denomination , some more than others . Constitutional structure ( edit ) Division of powers ( edit ) Not to
+be confused with separation of powers . In a federation , the division of power between federal and regional governments is usually outlined in the constitution
+. Almost every country allows some degree of regional self - government , in federations the right to self - government of the component states is
+constitutionally entrenched . Component states often also possess their own constitutions which they may amend as they see fit , although in the event of
+conflict the federal constitution usually takes precedence . In almost all federations the central government enjoys the powers of foreign policy and national
+defense as exclusive federal powers . Were this not the case a federation would not be a single sovereign state , per the UN definition .
+</item 1>
+
+<item 2>
+Federalism
+Its distinctive feature , exemplified in the founding example of modern federalism by the United States of America under the Constitution of 1787 , is a
+relationship of parity between the two levels of government established . It can thus be defined as a form of government in which there is a division of powers
+between two levels of government of equal status . Federalism differs from confederalism , in which the general level of government is subordinate to the
+regional level , and from devolution within a unitary state , in which the regional level of government is subordinate to the general level . It represents the
+central form in the pathway of regional integration or separation , bounded on the less integrated side by confederalism and on the more integrated side by
+devolution within a unitary state . Leading examples of the federation or federal state include the United States , Canada , Brazil , Germany , Switzerland ,
+Argentina , Australia and India . Some also today characterize the European Union as the pioneering example of federalism in a multi-state setting , in a
+concept termed the federal union of states . Contents ( hide ) 1 Overview 1.1 Explanations for adoption of federalist systems 2 European vs.
+</item 2>
+
+<item 3>
+Federalism
+Other technical terms ( edit ) Fiscal federalism -- the relative financial positions and the financial relations between the levels of government in a federal
+system . Formal federalism ( or ' constitutional federalism ' ) -- the delineation of powers is specified in a written constitution , which may or may not
+correspond to the actual operation of the system in practice . Executive federalism refers in the English - speaking tradition to the intergovernmental
+relationships between the executive branches of the levels of government in a federal system and in the continental European tradition to the way constituent
+units ' execute ' or administer laws made centrally . Federalism as a political philosophy ( edit ) Main article : Federalist The meaning of federalism , as a
+political movement , and of what constitutes a ' federalist ' , varies with country and historical context . Movements associated with the establishment or
+development of federations can exhibit either centralising or decentralising trends . For example , at the time those nations were being established , factions
+known as `` federalists '' in the United States and Australia advocated the formation of strong central government . Similarly , in European Union politics ,
+federalists mostly seek greater EU integration .
+</item 3>
+
+<item 4>
+Federalism
+The federalists , on the other hand , argued that it was impossible to list all the rights , and those that were not listed could be easily overlooked because
+they were not in the official bill of rights . Rather , rights in specific cases were to be decided by the judicial system of courts . After the American Civil
+War , the federal government increased greatly in influence on everyday life and in size relative to the state governments . Reasons included the need to
+regulate businesses and industries that span state borders , attempts to secure civil rights , and the provision of social services . The federal government
+acquired no substantial new powers until the acceptance by the Supreme Court of the Sherman Anti-Trust Act . From 1938 until 1995 , the U.S. Supreme Court did
+not invalidate any federal statute as exceeding Congress ' power under the Commerce Clause . Most actions by the federal government can find some legal support
+among the express powers , such as the Commerce Clause , whose applicability has been narrowed by the Supreme Court in recent years .
+</item 4>
+
+<item 5>
+Federalism
+The U.S. Constitution was written as a reaction to the Articles of Confederation , under which the United States was a loose confederation with a weak central
+government . In contrast , Europe has a greater history of unitary states than North America , thus European `` federalism '' argues for a weaker central
+government , relative to a unitary state . The modern American usage of the word is much closer to the European sense . As the power of the Federal government
+has increased , some people have perceived a much more unitary state than they believe the Founding Fathers intended . Most people politically advocating ``
+federalism '' in the United States argue in favor of limiting the powers of the federal government , especially the judiciary ( see Federalist Society , New
+Federalism ) . In Canada , federalism typically implies opposition to sovereigntist movements ( most commonly Quebec separatism ) . The governments of Argentina
+, Australia , Brazil , India , and Mexico , among others , are also organized along federalist principles . Federalism may encompass as few as two or three
+internal divisions , as is the case in Belgium or Bosnia and Herzegovina .
+</item 5>
+
+<item 6>
+Federalism
+American government has evolved from a system of dual federalism to one of associative federalism . In `` Federalist No. 46 , '' James Madison asserted that the
+states and national government `` are in fact but different agents and trustees of the people , constituted with different powers . '' Alexander Hamilton ,
+writing in `` Federalist No. 28 , '' suggested that both levels of government would exercise authority to the citizens ' benefit : `` If their ( the peoples ' )
+rights are invaded by either , they can make use of the other as the instrument of redress . '' ( 1 ) The United States is composed of fifty self - governing
+states and several territories . Because the states were preexisting political entities , the U.S. Constitution did not need to define or explain federalism in
+any one section but it often mentions the rights and responsibilities of state governments and state officials in relation to the federal government . The
+federal government has certain express powers ( also called enumerated powers ) which are powers spelled out in the Constitution , including the right to levy
+taxes , declare war , and regulate interstate and foreign commerce .
+</item 6>
+
+<item 7>
+Federalism
+they are already constitutional , parliamentary , and administratively modernized states ) . European vs. American federalism ( edit ) Main articles : Federal
+Europe and Federalism in the United States In Europe , `` Federalist '' is sometimes used to describe those who favor a common federal government , with
+distributed power at regional , national and supranational levels . Most European federalists want this development to continue within the European Union .
+European federalism originated in post-war Europe ; one of the more important initiatives was Winston Churchill 's speech in Zürich in 1946 . In the United
+States , federalism originally referred to belief in a stronger central government . When the U.S. Constitution was being drafted , the Federalist Party
+supported a stronger central government , while `` Anti-Federalists '' wanted a weaker central government . This is very different from the modern usage of ``
+federalism '' in Europe and the United States . The distinction stems from the fact that `` federalism '' is situated in the middle of the political spectrum
+between a confederacy and a unitary state . The U.S.
+</item 7>
+
+<item 8>
+Federalism
+See also ( edit ) Consociationalism Cooperative federalism Democratic World Federalists Federal Union Layer cake federalism Pillarisation States ' rights Union
+of Utrecht World Federalist Movement Notes and references ( edit ) Jump up ^ In 1946 , scholar Kenneth Wheare observed that the two levels of government in the
+US were ' co-equally supreme ' . In this he echoed the perspective of the founding fathers , James Madison in Federalist 39 having seen the several states as
+forming ' distinct and independent portions of the supremacy ' in relation to the general government . Wheare , Kenneth ( 1946 ) Federal Government , Oxford
+University Press , London , pp. 10 - 15 . Madison , James , Hamilton , Alexander and Jay , John ( 1987 ) The Federalist Papers , Penguin , Harmondsworth , p.
+258 . Jump up ^ Law , John ( 2013 ) ' How Can We Define Federalism ? ' , in Perspectives on Federalism , Vol. 5 , No. 3 , pp. E105 - 6 .
+</item 8>
+
+<item 9>
+Federalism
+Notably , the states of Germany retain the right to act on their own behalf at an international level , a condition originally granted in exchange for the
+Kingdom of Bavaria 's agreement to join the German Empire in 1871 . Beyond this the precise division of power varies from one nation to another . The
+constitutions of Germany and the United States provide that all powers not specifically granted to the federal government are retained by the states . The
+Constitution of some countries like Canada and India , on the other hand , state that powers not explicitly granted to the provincial governments are retained
+by the federal government . Much like the US system , the Australian Constitution allocates to the Federal government ( the Commonwealth of Australia ) the
+power to make laws about certain specified matters which were considered too difficult for the States to manage , so that the States retain all other areas of
+responsibility . Under the division of powers of the European Union in the Lisbon Treaty , powers which are not either exclusively of European competence or
+shared between EU and state as concurrent powers are retained by the constituent states .
+</item 9>
+
+<item 10>
+Federalism
+This was reaffirmed by the Tenth Amendment to the United States Constitution , which reserves all powers and rights that are not delegated to the Federal
+Government as left to the States and to the people . Bicameralism ( edit ) The structures of most federal governments incorporate mechanisms to protect the
+rights of component states . One method , known as ' intrastate federalism ' , is to directly represent the governments of component states in federal political
+institutions . Where a federation has a bicameral legislature the upper house is often used to represent the component states while the lower house represents
+the people of the nation as a whole . A federal upper house may be based on a special scheme of apportionment , as is the case in the senates of the United
+States and Australia , where each state is represented by an equal number of senators irrespective of the size of its population .
+</item 10>
+=== END ITEM id=dff7ce286d2c58ae ===
+
+=== ITEM id=89d10b228874366c ===
+Gold sentences and facts:
+Sentence 0: Brain tissue consumes a large amount of energy in proportion to its volume , so large brains place severe metabolic demands on animals . The need to limit body weight in order , for example , to fly , has apparently led to selection for a reduction of brain size in some species , such as bats . Most of the brain 's energy consumption goes into sustaining the electric charge ( membrane potential ) of neurons . Most vertebrate species devote between 2 % and 8 % of basal metabolism to the brain . In primates , however , the percentage is much higher -- in humans it rises to 20 -- 25 % . The energy consumption of the brain does not vary greatly over time , but active regions of the cerebral cortex consume somewhat more energy than inactive regions ; this forms the basis for the functional brain imaging methods PET , fMRI , and NIRS . The brain typically gets most of its energy from oxygen - dependent metabolism of glucose ( i.e. , blood sugar ) , but ketones provide a major alternative source , together with contributions from medium chain fatty acids ( caprylic and heptanoic acids ) , lactate , acetate , and possibly amino acids .
+  Fact 0.0: Brain tissue consumes a large amount of energy in proportion to its volume.
+  Fact 0.1: Large brains place severe metabolic demands on animals.
+  Fact 0.2: The need to limit body weight, for example in order to fly, has apparently led to selection for a reduction of brain size in some species.
+  Fact 0.3: Bats are one of the species that have apparently been selected for reduced brain size.
+  Fact 0.4: Most of the brain's energy consumption goes into sustaining the electric charge (membrane potential) of neurons.
+  Fact 0.5: Most vertebrate species devote between 2% and 8% of basal metabolism to the brain.
+  Fact 0.6: In primates, the percentage of basal metabolism devoted to the brain is much higher.
+  Fact 0.7: In humans, the brain's share of basal metabolism rises to 20-25%.
+  Fact 0.8: The energy consumption of the brain does not vary greatly over time.
+  Fact 0.9: Active regions of the cerebral cortex consume somewhat more energy than inactive regions.
+  Fact 0.10: This difference in energy use forms the basis for the functional brain imaging methods PET, fMRI, and NIRS.
+  Fact 0.11: The brain typically gets most of its energy from oxygen-dependent metabolism of glucose (blood sugar).
+  Fact 0.12: Ketones provide a major alternative energy source for the brain.
+  Fact 0.13: Medium chain fatty acids (caprylic and heptanoic acids), lactate, acetate, and possibly amino acids also contribute to the brain's energy supply.
+
+Retrieved items:
+<item 1>
+Brain
+PMID 7282965 . Jump up ^ Raichle , M ; Gusnard , DA ( 2002 ) . `` Appraising the brain 's energy budget '' . Proc. Natl. Acad. Sci. U.S.A. 99 ( 16 ) : 10237 --
+10239 . Bibcode : 2002PNAS ... 9910237R . doi : 10.1073 / pnas. 172399499 . PMC 124895 . PMID 12149485 . Jump up ^ Mehagnoul - Schipper , DJ ; Van Der Kallen ,
+BF ; Colier , WNJM ; Van Der Sluijs , MC ; Van Erning , LJ ; Thijssen , HO ; Oeseburg , B ; Hoefnagels , WH ; Jansen , RW ( 2002 ) . `` Simultaneous
+measurements of cerebral oxygenation changes during brain activation by near - infrared spectroscopy and functional magnetic resonance imaging in healthy young
+and elderly subjects '' . Hum Brain Mapp. 16 ( 1 ) : 14 -- 23 .
+</item 1>
+
+<item 2>
+The references include a Brain article (PMID 7282965), Raichle and Gusnard’s 2002 discussion of the brain’s energy budget in *PNAS* (99:10237–10239; PMID
+12149485), and a study by Mehagnoul-Schipper et al. (2002) comparing near-infrared spectroscopy and fMRI measurements of cerebral oxygenation during brain
+activation in healthy young and older adults (*Human Brain Mapping* 16:14
+</item 2>
+
+<item 3>
+The cited studies examine alternative brain fuels using ¹³C magnetic resonance methods: octanoate metabolism in intact rat brain, heptanoate’s energetic and
+neurotransmitter-precursor roles in normal and GLUT1-deficient brains, blood lactate’s contribution to human brain energy metabolism, and acetate transport and
+utilization in rat brain.
+</item 3>
+
+<item 4>
+Brain
+Most of the brain 's energy consumption goes into sustaining the electric charge ( membrane potential ) of neurons . Most vertebrate species devote between 2 %
+and 8 % of basal metabolism to the brain . In primates , however , the percentage is much higher -- in humans it rises to 20 -- 25 % . The energy consumption of
+the brain does not vary greatly over time , but active regions of the cerebral cortex consume somewhat more energy than inactive regions ; this forms the basis
+for the functional brain imaging methods PET , fMRI , and NIRS . The brain typically gets most of its energy from oxygen - dependent metabolism of glucose (
+i.e. , blood sugar ) , but ketones provide a major alternative source , together with contributions from medium chain fatty acids ( caprylic and heptanoic acids
+) , lactate , acetate , and possibly amino acids . Functions Model of a neural circuit in the cerebellum , as proposed by James S. Albus . Information from the
+sense organs is collected in the brain . There it is used to determine what actions the organism is to take . The brain processes the raw data to extract
+information about the structure of the environment .
+</item 4>
+
+<item 5>
+Brain
+`` Acetate transport and utilization in the rat brain '' . J Neurochem. 109 Suppl 1 ( Suppl 1 ) : 46 -- 54 . doi : 10.1111 / j. 1471 - 4159.2009. 05895. x . PMC
+2722917 . PMID 19393008 . Jump up ^ Soengas , JL ; Aldegunde , M ( 2002 ) . `` Energy metabolism of fish brain '' . Comparative Biochemistry and Physiology B.
+131 ( 3 ) : 271 -- 296 . doi : 10.1016 / S1096 - 4959 ( 02 ) 00022 - 2 . PMID 11959012 . ^ Jump up to : Carew , TJ ( 2000 ) . `` Ch. 1 '' . Behavioral
+Neurobiology : the Cellular Organization of Natural Behavior . Sinauer Associates . ISBN 978 - 0 - 87893 - 092 - 0 . Jump up ^ Dafny , N. `` Anatomy of the
+spinal cord '' .
+</item 5>
+
+<item 6>
+Brain
+Norepinephrine , which is involved in arousal , comes exclusively from a nearby small area called the locus coeruleus . Other neurotransmitters such as
+acetylcholine and dopamine have multiple sources in the brain , but are not as ubiquitously distributed as glutamate and GABA . Electrical activity Brain
+electrical activity recorded from a human patient during an epileptic seizure . As a side effect of the electrochemical processes used by neurons for signaling
+, brain tissue generates electric fields when it is active . When large numbers of neurons show synchronized activity , the electric fields that they generate
+can be large enough to detect outside the skull , using electroencephalography ( EEG ) or magnetoencephalography ( MEG ) . EEG recordings , along with
+recordings made from electrodes implanted inside the brains of animals such as rats , show that the brain of a living animal is constantly active , even during
+sleep . Each part of the brain shows a mixture of rhythmic and nonrhythmic activity , which may vary according to behavioral state .
+</item 6>
+
+<item 7>
+Norepinephrine, involved in arousal, comes from the locus coeruleus; other neurotransmitters have multiple sources. Synchronized neuronal activity produces
+measurable EEG/MEG signals. Brain rhythms vary with behavior: delta waves dominate deep sleep, alpha appears during relaxed wakefulness, and active tasks
+produce irregular patterns; seizures cause abnormal spikes and waves. Glia regulate brain chemistry, while neural signaling drives high energy use—especially in
+humans, where the brain uses 20–25% of basal metabolism
+</item 7>
+
+<item 8>
+Brain
+2012.151 . PMC 3564188 . PMID 23072752 . Jump up ^ Boumezbeur , F. ; Petersen , KF. ; Cline , GW. ; Mason , GF. ; Behar , KL. ; Shulman , GI. ; Rothman , DL. (
+Oct 2010 ) . `` The contribution of blood lactate to brain energy metabolism in humans measured by dynamic 13C nuclear magnetic resonance spectroscopy '' . J
+Neurosci. 30 ( 42 ) : 13983 -- 91 . doi : 10.1523 / JNEUROSCI. 2040 - 10.2010 . PMC 2996729 . PMID 20962220 . Jump up ^ Deelchand , DK. ; Shestov , AA. ; Koski
+, DM. ; Uğurbil , K. ; Henry , PG . ( May 2009 ) . `` Acetate transport and utilization in the rat brain '' . J Neurochem.
+</item 8>
+
+<item 9>
+Brain
+Hum Brain Mapp. 16 ( 1 ) : 14 -- 23 . doi : 10.1002 / hbm. 10026 . PMID 11870923 . Jump up ^ Ebert , D. ; Haller , RG. ; Walton , ME . ( Jul 2003 ) . `` Energy
+contribution of octanoate to intact rat brain metabolism measured by 13C nuclear magnetic resonance spectroscopy '' . J Neurosci. 23 ( 13 ) : 5928 -- 35 . PMID
+12843297 . Jump up ^ Marin - Valencia , I. ; Good , LB. ; Ma , Q. ; Malloy , CR. ; Pascual , JM . ( Feb 2013 ) . `` Heptanoate as a neural fuel : energetic and
+neurotransmitter precursors in normal and glucose transporter I - deficient ( G1D ) brain '' . J Cereb Blood Flow Metab. 33 ( 2 ) : 175 -- 82 . doi : 10.1038 /
+jcbfm. 2012.151 . PMC 3564188 .
+</item 9>
+
+<item 10>
+Brain
+In mammals , the cerebral cortex tends to show large slow delta waves during sleep , faster alpha waves when the animal is awake but inattentive , and chaotic -
+looking irregular activity when the animal is actively engaged in a task . During an epileptic seizure , the brain 's inhibitory control mechanisms fail to
+function and electrical activity rises to pathological levels , producing EEG traces that show large wave and spike patterns not seen in a healthy brain .
+Relating these population - level patterns to the computational functions of individual neurons is a major focus of current research in neurophysiology .
+Metabolism All vertebrates have a blood -- brain barrier that allows metabolism inside the brain to operate differently from metabolism in other parts of the
+body . Glial cells play a major role in brain metabolism by controlling the chemical composition of the fluid that surrounds neurons , including levels of ions
+and nutrients . Brain tissue consumes a large amount of energy in proportion to its volume , so large brains place severe metabolic demands on animals . The
+need to limit body weight in order , for example , to fly , has apparently led to selection for a reduction of brain size in some species , such as bats .
+</item 10>
+=== END ITEM id=89d10b228874366c ===
+
+=== ITEM id=fe70949ce84971f8 ===
+Gold sentences and facts:
+Sentence 0: On May 1 , 2017 , Slasher began filming a second season in Orangeville , Ontario , Canada . Shaftesbury Films confirmed that the series will not be returning to Super Channel or Chiller for a second season . However , Netflix acquired the rights to the second season . The second season was released via Netflix on October 17 , 2017 .
+  Fact 0.0: Slasher began filming a second season on May 1, 2017.
+  Fact 0.1: Slasher filmed its second season in Orangeville, Ontario, Canada.
+  Fact 0.2: Shaftesbury Films confirmed that Slasher will not return to Super Channel or Chiller for a second season.
+  Fact 0.3: Netflix acquired the rights to the second season of Slasher.
+  Fact 0.4: The second season of Slasher was released via Netflix on October 17, 2017.
+Sentence 1: The first season , retroactively subtitled The Executioner , was produced in association with the Canadian network Super Channel , Slasher was the first original series by U.S. TV channel Chiller , which premiered the series on Friday , March 4 , 2016 , at 9 : 00 pm EST . Super Channel aired the show 's Canadian premiere on April 1 , 2016 . The series first season , which centered on a mysterious figure billed as `` The Executioner '' terrorizing the fictional town of Waterbury , Canada , was filmed between July and October 2015 in Sudbury , Parry Sound , and Sault Ste . Marie , Ontario .
+  Fact 1.0: The first season of Slasher, retroactively subtitled The Executioner, was produced in association with the Canadian network Super Channel.
+  Fact 1.1: Slasher was the first original series by U.S. TV channel Chiller.
+  Fact 1.2: Chiller premiered the series on Friday, March 4, 2016, at 9:00 pm EST.
+  Fact 1.3: Super Channel aired the show's Canadian premiere on April 1, 2016.
+  Fact 1.4: The first season of Slasher centered on a mysterious figure billed as 'The Executioner'.
+  Fact 1.5: The Executioner terrorized the fictional town of Waterbury, Canada.
+  Fact 1.6: The first season was filmed between July and October 2015.
+  Fact 1.7: The first season was filmed in Sudbury, Parry Sound, and Sault Ste. Marie, Ontario.
+
+Retrieved items:
+<item 1>
+Slasher (TV series)
+Awards and accolades ( edit ) Year Award Nominee ( s ) Result 2017 5th Annual Canadian Screen Awards Best TV Movie or Limited Series Slasher Nominated Best
+Direction in a Dramatic Program or Limited Series Nominated Best Writing in a Dramatic Program or Limited Series Nominated Best Performance by an Actor in a
+Leading Role in a Dramatic Program or Limited Series Steve Byers Nominated Best Performance by an Actress in a Featured Supporting Role in a Dramatic Program or
+Series Wendy Crewson Won International broadcast ( edit ) On May 25 , 2016 , the entire first season of Slasher became available to stream instantly on Netflix
+US . On October 17 , 2017 , the full second season of Slasher became available to stream on Netflix in various countries . References ( edit ) Jump up ^
+Brzoznowski , Kristin . `` Super Channel Sets April Premiere for Original Series Slasher '' . TVDrama.ws . World Screen ( WSN Inc . ) . Retrieved 6 March 2016 .
+^ Jump up to : `` Chiller and Shaftesbury Announce Start of Production and Cast for `` Slasher '' `` .
+</item 1>
+
+<item 2>
+Slasher (TV series)
+Contents ( hide ) 1 Background 2 Plot 2.1 Season 1 : The Executioner ( 2016 ) 2.2 Season 2 : Guilty Party ( 2017 ) 3 Cast and characters 3.1 Recurring cast
+members 3.2 Season 1 : The Executioner 3.2. 1 Main 3.2. 2 Recurring 3.3 Season 2 : Guilty Party 4 Episodes 4.1 Season 1 : The Executioner ( 2016 ) 4.2 Season 2
+: Guilty Party ( 2017 ) 5 Development and production 6 Reception 6.1 Awards and accolades 7 International broadcast 8 References 9 External links Background (
+edit ) Slasher employs a season - long anthology format , with an overarching mystery storyline that will be resolved upon the season 's conclusion .
+</item 2>
+
+<item 3>
+Slasher (TV series)
+Slasher ( TV series ) - wikipedia Slasher ( TV series ) Jump to : navigation , search Slasher Genre Anthology Horror Slasher Drama Created by Aaron Martin
+Starring Katie McGrath Brandon Jay McLaren Steve Byers Patrick Garrow Dean McDermott Leslie Hope Lovell Adams - Gray Jim Watson Christopher Jacot Paulino Nunes
+Ty Olsson Joanne Vannicola Sebastian Pigott Madison Cheeatow Melinda Shankar Kaitlyn Leeb Rebecca Liddiard Paula Brancati Composer ( s ) Shawn Pierce Country of
+origin Canada Original language ( s ) English No. of seasons No.
+</item 3>
+
+<item 4>
+Slasher (TV series)
+The Futon Critic . July 28 , 2016 . Retrieved March 6 , 2016 . ^ Jump up to : `` Lights , camera , action ... ' Slasher ' TV series begins filming in
+Orangeville '' . Orangeville Banner . May 1 , 2017 . Retrieved May 2 , 2017 . ^ Jump up to : `` Slasher returns for a second season '' . Playback Online . May 9
+, 2017 . Retrieved September 29 , 2017 . Jump up ^ Moore , Kasey ( September 20 , 2017 ) . `` October 2017 New Netflix Releases '' . WhatsonNetlix . Retrieved
+September 20 , 2017 . Jump up ^ Urqyhart - White , Alaina ( October 17 , 2017 ) . `` Is ' Slasher 2 : Guilty Party ' A True Story ? The Netflix Series Honors
+Some Legendary Horror Classics '' . Bustle . Retrieved October 18 , 2017 . ^ Jump up to : Patrick Hipes .
+</item 4>
+
+<item 5>
+Slasher (TV series)
+A first trailer for the series would be released on November 26 , 2015 . Unlike most TV series that film their episodes in order , Slasher , under the direction
+of Craig David Wallace , was shot as if it were a `` super-sized '' movie : Scenes from multiple episodes were shot at the same time , with the availability of
+locations and cast being factored in . The out - of - order schedule allowed the actors to know of their characters ' fates , especially those who had to film
+their death scenes one day but return later to film earlier scenes as necessary . As an example of this , Martin cited Mark Ghanimé 's first day on set , when
+his character , Justin Faysal , was laid out in a casket for a scene early in Slasher 's third episode ( Justin 's death , which took place in Episode 2 , would
+be filmed later on ) . On May 1 , 2017 , Slasher began filming a second season in Orangeville , Ontario , Canada . Shaftesbury Films confirmed that the series
+will not be returning to Super Channel or Chiller for a second season .
+</item 5>
+
+<item 6>
+Slasher (TV series)
+Saving Hope , Degrassi : The Next Generation , Being Erica ) . Though the script did not receive immediate interest , Shaftesbury Films would discover and
+option it to prospective broadcasters . The script would land at Canadian premium network Super Channel , who , their interest piqued in part by Slasher 's
+fixed - end format , would order it as a series . The American network Chiller , which specializes in the horror / thriller genre , would join in production
+sometime after Super Channel ; Slasher would be Chiller 's first foray into original scripted series content . Production on Slasher 's 8 - episode first season
+was announced on July 28 , 2015 , with filming taking place between then and October 2015 . Three Northern Ontario municipalities -- the cities of Sudbury and
+Sault Ste . Marie and the town of Parry Sound -- would stand in for the show 's fictitious location , the town of Waterbury . A first trailer for the series
+would be released on November 26 , 2015 .
+</item 6>
+
+<item 7>
+Slasher (TV series)
+However , Netflix acquired the rights to the second season . The second season was released via Netflix on October 17 , 2017 . Reception ( edit ) Slasher has
+received positive reviews . Zap2it called the series `` a whole lot of fun '' and `` something for everyone , '' praising the series ' anthology nature , its
+cast of characters , storyline , plot twists , bloody violence , and even the series - within - the - series Falcon Husbandry ( shown as a favorite of Robin and
+Justin 's in Episode 2 ) . Bloody Disgusting awarded the show four skulls out of five , praising Katie McGrath as a great `` protagonist and possible final girl
+'' and the series ' decision to feature an adult cast , rather than teenagers , with well - developed characters and a `` decidedly classic '' presentation . On
+the occasion of Slasher 's Super Channel premiere , The Globe and Mail 's John Doyle , while remarking that it `` is no masterpiece of horror , nor was it meant
+to be , '' called the show `` very well - crafted , '' praising its `` exceptional cast '' and tight pacing , and noting fans of gory horror will appreciate its
+bloody scenes .
+</item 7>
+
+<item 8>
+Slasher (TV series)
+Not wanting to have the show 's killer be `` a mythological creature '' ( as he feels the killers in most slasher films do not have much mystery surrounding
+them ) , Martin also uses elements of the traditional whodunit in Slasher : The show 's characters , many of whom have mysterious backgrounds -- and their own
+reasons for possibly being the killer -- are featured , explored , and eliminated from consideration , one by one ( either through death or the natural
+deductive process ) , until the `` all too human '' killer and their motivations for their actions are revealed . Plot ( edit ) Season 1 : the Executioner (
+2016 ) ( edit ) Slasher 's 8 - episode first season centers around Sarah Bennett who , with husband Dylan , moves back to the town of her birth , Waterbury ( a
+fictional town in Canada ) , and into her parents ' former home . It was in that house on Halloween Night 1988 where both of her parents , Bryan and Rachel ,
+were murdered . Rachel was pregnant with Sarah at the time of her murder , with police discovering the killer holding Rachel 's newborn baby after the slayings
+.
+</item 8>
+
+<item 9>
+Slasher (TV series)
+Super Channel aired the show 's Canadian premiere on April 1 , 2016 . The series first season , which centered on a mysterious figure billed as `` The
+Executioner '' terrorizing the fictional town of Waterbury , Canada , was filmed between July and October 2015 in Sudbury , Parry Sound , and Sault Ste . Marie
+, Ontario . On May 1 , 2017 , Slasher began filming a second season in Orangeville , Ontario , Canada . The licensing rights for the second season was acquired
+by Netflix . The season was released as a `` Netflix Original '' title in various countries on October 17 , 2017 . The second season titled Slasher : Guilty
+Party is centered on a group of former summer camp counselors who return to an isolated campground in order to bury their sins of the past , before being
+targeted , one by one , by an unknown killer .
+</item 9>
+
+<item 10>
+Slasher (TV series)
+of seasons No. of episodes 16 ( list of episodes ) Production Executive producer ( s ) Aaron Martin Greg Phillips Jonathan Ford Christina Jennings Scott Garvie
+Location ( s ) Ontario , Canada Editor ( s ) Erin Deck Camera setup Single - camera Running time 46 - 53 minutes Production company ( s ) Shaftesbury Films
+Super Channel ( season 1 ) TVA Group ( season 2 ) Distributor Content Media Corporation Release Original network Super Channel ( Canada , season 1 ) Chiller (
+USA , season 1 ) Netflix ( season 2 ) Original release March 4 , 2016 ( 2016 - 03 - 04 ) -- present External links Website www.netflix.com/title/80105452
+Slasher is a Canadian television horror anthology series created by Aaron Martin . The first season , retroactively subtitled The Executioner , was produced in
+association with the Canadian network Super Channel , Slasher was the first original series by U.S. TV channel Chiller , which premiered the series on Friday ,
+March 4 , 2016 , at 9 : 00 pm EST . Super Channel aired the show 's Canadian premiere on April 1 , 2016 .
+</item 10>
+=== END ITEM id=fe70949ce84971f8 ===
+
+=== ITEM id=bff72fd7eb67a4e6 ===
+Gold sentences and facts:
+Sentence 0: Name Type Notes Anthropomorphism Form of personification that applies human - like characteristics to animals and objects The Adventures of Pinocchio by Carlo Collodi or the Cheshire Cat of Alice 's Adventures in Wonderland by Lewis Carroll Hamartia The character flaw of an initially rich and powerful hero that leads to his tragic downfall . This is also referred to as the tragic flaw . Oedipus kills his own father because he does n't understand his true parentage . Pathetic fallacy Reflecting a character 's ( usually the protagonist ) mood in the atmosphere or inanimate objects . Related to anthropomorphism and projection For example , the storm in William Shakespeare 's King Lear , which mirrors Lear 's mental deterioration . Personification Using comparative metaphors and similes to give living characteristics to abstract concepts and non-human entities Taken from Act I , Scene II of Romeo and Juliet : `` When well - appareled April on the heel / Of limping winter treads . ''
+  Fact 0.0: Anthropomorphism is a form of personification that applies human-like characteristics to animals and objects.
+  Fact 0.1: The Adventures of Pinocchio by Carlo Collodi is an example of anthropomorphism.
+  Fact 0.2: The Cheshire Cat of Alice's Adventures in Wonderland by Lewis Carroll is an example of anthropomorphism.
+  Fact 0.3: Hamartia is the character flaw of an initially rich and powerful hero that leads to his tragic downfall.
+  Fact 0.4: Hamartia is also referred to as the tragic flaw.
+  Fact 0.5: Oedipus kills his own father because he does not understand his true parentage.
+  Fact 0.6: Pathetic fallacy reflects a character's, usually the protagonist's, mood in the atmosphere or inanimate objects.
+  Fact 0.7: Pathetic fallacy is related to anthropomorphism and projection.
+  Fact 0.8: The storm in William Shakespeare's King Lear is an example of pathetic fallacy.
+  Fact 0.9: The storm in King Lear mirrors Lear's mental deterioration.
+  Fact 0.10: Personification uses comparative metaphors and similes to give living characteristics to abstract concepts and non-human entities.
+  Fact 0.11: Taken from Act I, Scene II of Romeo and Juliet: "When well-appareled April on the heel / Of limping winter treads."
+
+Retrieved items:
+<item 1>
+Atticus Finch
+This kind of character development , where motivations and ideals between characters , for reasons of plot , are changed is not unusual in the process of
+creative writing . Apart from the more progressive depiction of Atticus , the depiction of the town itself , especially the African - American characters , is
+also dramatically altered between the two drafts. Real - life comparisons with Lee 's father , Amasa Coleman Lee , have also been made in the two differing
+versions of Atticus in that originally Amasa Lee was in favor of segregation but became more liberal later in life , later changing his views to those of
+Integration . Tay Hohoff , Lee 's editor , has also been argued to have played a major part in the character development of the novel and particularly Atticus '
+liberal transformation . Jonathan Mahler of The New York Times notes in his article The Invisible Hand Behind Harper Lee 's ' To Kill a Mockingbird ' that Ms.
+Hohoff , at the same time as she was guiding Ms. Lee through the Mockingbird re-write , was working on her own biography of the early - 20th - century New York
+activist and humanist John Lovejoy Elliot .
+</item 1>
+
+<item 2>
+List of narrative techniques
+His parents died protecting him , and when Voldemort tried to cast a killing curse on Harry , it rebounded and took away most of his strength , and gave Harry
+Potter a unique ability and connection with the Dark Lord thus marking him as his equal . Story within a story ( Hypodiegesis ) A story told within another
+story . See also frame story . In Stephen King 's The Wind Through the Keyhole , of the Dark Tower series , the protagonist tells a story from his past to his
+companions , and in this story he tells another relatively unrelated story . Ticking clock scenario Threat of impending disaster -- often used in thrillers
+where salvation and escape are essential elements In the TV show `` 24 '' , the main character , Jack Bauer often finds himself interrogating a terrorist who is
+caught in order to disarm a bomb . Chekhov 's gun A dramatic principle that requires every element in a narrative to be irreplaceable , with anything else
+removed . `` Remove everything that has no relevance to the story . If you say in the first chapter that there is a rifle hanging on the wall , in the second or
+third chapter it absolutely must go off .
+</item 2>
+
+<item 3>
+List of narrative techniques
+An example of this is in the first chapter of Great Expectations by Charles Dickens : `` A man who had been soaked in water , and smothered in mud , and lamed
+by stones , and cut by flints , and stung by nettles , and torn by briars ; who limped , and shivered , and glared and growled ; and whose teeth chattered in
+his head as he seized me by the chin '' Satire The use of humor , irony or exaggeration to criticize . An example is Network . One of the earliest examples is
+Gullivers Travels , written by Jonathan Swift . The television program South Park is another . Sensory detail sight , sound , taste , touch , smell . The same
+as imagery The boot was tough and sinewy between his hard - biting teeth . There was no flavor to speak of except for the blandness of all the dirt that the
+boot had soaked up over the years . The only thing the boot reminded him of was the smell of a wet - dog . Understatement A diminishing or softening of a theme
+or effect .
+</item 3>
+
+<item 4>
+List of narrative techniques
+29 . ISBN 1 - 134 - 50341 - 5 . Jump up ^ Heath , Peter ( May 1994 ) , `` Reviewed work ( s ) : Story - Telling Techniques in the Arabian Nights by David
+Pinault '' , International Journal of Middle East Studies , Cambridge University Press , 26 ( 2 ) : 358 -- 360 , doi : 10.1017 / s0020743800060633 Jump up ^
+Heath ( 1994 ) p. 360 Jump up ^ `` Personification - Examples and Definition of Personification '' . 2013 - 06 - 27 . Retrieved 2016 - 08 - 16 . Narrative
+Character Antagonist Antihero Archenemy Character arc Characterization Deuteragonist False protagonist Focal character Foil Protagonist Stock character
+Supporting character Tritagonist Narrator Tragic hero Plot Action Backstory Cliché Climax Cliffhanger Conflict Deus ex machina Dialogue Dramatic structure
+Exposition Eucatastrophe Foreshadowing Flashback Flashforward Frame story In medias res Pace Plot device Plot twist Poetic justice Reveal Self - fulfilling
+prophecy Subplot Trope
+</item 4>
+
+<item 5>
+List of narrative techniques
+Personification Using comparative metaphors and similes to give living characteristics to abstract concepts and non-human entities Taken from Act I , Scene II
+of Romeo and Juliet : `` When well - appareled April on the heel / Of limping winter treads . '' References ( edit ) Jump up ^ Orehovec , Barbara ( 2003 ) .
+Revisiting the Reading Workshop : A Complete Guide to Organizing and Managing an Effective Reading Workshop That Builds Independent , Strategic Readers (
+illustrated ed . ) . Scholastic Inc. p. 89 . ISBN 0439444047 . Jump up ^ Demchick , Harrison ( 2013 - 09 - 26 ) . `` Techniques and Tension in Breaking Bad '' .
+Huffington Post . Retrieved 2017 - 11 - 14 . Jump up ^ `` Literature Glossary - Defamiliarization '' . www.shmoop.com . Retrieved 2017 - 11 - 14 . Jump up ^ ``
+Allegory Examples '' . YourDictionary . Retrieved 2017 - 11 - 14 .
+</item 5>
+
+<item 6>
+List of narrative techniques
+If it 's not going to be fired , it should n't be hanging there . '' -- Anton Chekhov Unreliable narrator The narrator of the story is not sincere , or
+introduces a bias in their narration and possibly misleads the reader , hiding or minimizing events , characters , or motivations . An example is The Murder of
+Roger Ackroyd . The novel includes an unexpected plot twist at the end of the novel . In the last chapter , Sheppard describes how he was an unreliable narrator
+. Perspective ( edit ) Name Definition Example Audience surrogate A character who expresses the questions and confusion of the audience , with whom the audience
+can identify . Frequently used in detective fiction and science fiction , where the character asks a central character how he or she accomplished certain deeds
+, for the purpose of inciting that character to explain ( for the curious audience ) his or her methods , or a character asking a relatively educated person to
+explain what amounts to the backstory . Dr Watson in the Sherlock Holmes stories . Scott Evil , played by Seth Green , son of Dr. Evil on the Austin Powers
+movies . Author surrogate Characters which are based on authors , usually to support their personal views .
+</item 6>
+
+<item 7>
+List of narrative techniques
+Author surrogate Characters which are based on authors , usually to support their personal views . Sometimes an intentionally or unintentionally idealized
+version of them . A variation is the Mary Sue or Gary Stu , which primarily serves as an idealized self - insertion . Socrates in the writings of Plato . Plato
+never speaks in his own voice in his dialogues . In the Second Letter , it says , `` no writing of Plato exists or ever will exist , but those now said to be
+his are those of a Socrates become beautiful and new '' . Breaking the fourth wall An author or character addresses the audience directly ( also known as direct
+address ) . This may acknowledge to the reader or audience that what is being presented is fiction , or may seek to extend the world of the story to provide the
+illusion that they are included in it . The characters in Sesame Street often break the fourth wall when they address their viewers as part of the ongoing
+storyline , which is possible because of the high level of suspension of belief afforded by its audience -- children . The American political drama show House
+of Cards also uses this technique frequently to let the viewers know what the main character Frank Underwood is thinking and planning .
+</item 7>
+
+<item 8>
+List of narrative techniques
+Defamiliarization Taking an everyday object and presenting it in a way that is weirdly unfamiliar so that we see the object in a new way . Coined by the early
+20th - century Russian literary critic Viktor Shklovsky in `` Art as Technique . '' In , Swift 's Gulliver 's Travels when Gulliver visits the land of the
+giants and sees a giant woman 's skin he sees it is anything but smooth and beautiful when viewed up close . First - person narration A text presented from the
+point of view of a character , especially the protagonist , as if the character is telling the story themselves . ( Breaking the fourth wall is an option , but
+not a necessity , of this format . ) Mark Twain 's Adventures of Huckleberry Finn uses the title character as the narrator , while Sherlock Holmes is primarily
+told from Watson 's perspective . Magical realism Describing events in a real - world setting but with magical trappings , often incorporating local customs and
+invented beliefs . Different from urban fantasy in that the magic itself is not the focus of the story . Particularly popular with Latin American authors like
+Gabriel García Márquez and Jorge Luis Borges .
+</item 8>
+
+<item 9>
+List of narrative techniques
+As a character , she is telling the `` 1,001 stories '' to the King , in order to delay her execution night by night . However , as a framing device her purpose
+for existing is to tell the same 1,001 stories to the reader . MacGuffin A plot device coined by Alfred Hitchcock referring to some goal , desired object , or
+other motivator that the protagonist pursues , often with little or no narrative explanation as to why it is considered so important . In Hitchcock 's The 39
+Steps the MacGuffin is a mysterious set of `` military secrets . '' No one knows what they are , and in the end they mean almost nothing . For all its power ,
+mystery , and danger , The One Ring in Lord of the Rings is a MacGuffin that saves the world . The stuff that dreams are made of . The Maltese Falcon is a
+powerful MacGuffin in the film of the same name , a supposedly jewel encrusted black bird which creates the greed which propels every character , even the hero
+. In medias res Beginning the story in the middle of a sequence of events .
+</item 9>
+
+<item 10>
+List of narrative techniques
+Her tears were a river flowing down her cheeks . Thematic patterning Distributing recurrent thematic concepts and moralistic motifs among various incidents and
+frames of a story . In a skillfully crafted tale , thematic patterning may emphasize the unifying argument or salient idea disparate events and disparate frames
+have in common . Each of the chapters of Ulysses by James Joyce . Character ( edit ) Name Type Notes Anthropomorphism Form of personification that applies human
+- like characteristics to animals and objects The Adventures of Pinocchio by Carlo Collodi or the Cheshire Cat of Alice 's Adventures in Wonderland by Lewis
+Carroll Hamartia The character flaw of an initially rich and powerful hero that leads to his tragic downfall . This is also referred to as the tragic flaw .
+Oedipus kills his own father because he does n't understand his true parentage . Pathetic fallacy Reflecting a character 's ( usually the protagonist ) mood in
+the atmosphere or inanimate objects . Related to anthropomorphism and projection For example , the storm in William Shakespeare 's King Lear , which mirrors
+Lear 's mental deterioration .
+</item 10>
+=== END ITEM id=bff72fd7eb67a4e6 ===
+
+=== ITEM id=980043a0680469da ===
+Gold sentences and facts:
+Sentence 0: Polar moment of inertia is a quantity used to predict an object 's ability to resist torsion , in objects ( or segments of objects ) with an invariant circular cross section and no significant warping or out - of - plane deformation . It is used to calculate the angular displacement of an object subjected to a torque . It is analogous to the area moment of inertia , which characterizes an object 's ability to resist bending and is required to calculate displacement .
+  Fact 0.0: Polar moment of inertia is a quantity used to predict an object's ability to resist torsion.
+  Fact 0.1: Polar moment of inertia predicts torsion resistance for objects, or segments of objects, with an invariant circular cross section.
+  Fact 0.2: Polar moment of inertia predicts torsion resistance for objects with no significant warping or out-of-plane deformation.
+  Fact 0.3: Polar moment of inertia is used to calculate the angular displacement of an object subjected to a torque.
+  Fact 0.4: Polar moment of inertia is analogous to the area moment of inertia.
+  Fact 0.5: The area moment of inertia characterizes an object's ability to resist bending.
+  Fact 0.6: The area moment of inertia is required to calculate displacement.
+
+Retrieved items:
+<item 1>
+Polar moment of inertia
+See moment ( physics ) . Note : It has become common to use moment of inertia ( MOI ) to refer to either or both of the planar second moment of area , I = ∫ A x
+2 d A ( \ displaystyle I = \ int _ ( A ) x ^ ( 2 ) \ , \ mathrm ( d ) A ) , where x is the distance to some reference plane , or the polar second moment of area
+, I = ∫ A r 2 d A ( \ displaystyle I = \ int _ ( A ) r ^ ( 2 ) \ , \ mathrm ( d ) A ) , where r is the distance to some reference axis . In each case the
+integral is over all the infinitesimal elements of area , dA , in some two - dimensional cross-section .
+</item 1>
+
+<item 2>
+Polar moment of inertia
+If one adds a factor of safety of 5 and re-calculates the radius with the maximal stress equal to the yield stress / 5 the result is a radius of 0.343 m , or a
+diameter of 69 cm , the approximate size of a turboset shaft in a nuclear power plant . Comparing various moments of inertias for a cylinder ( edit ) Polar
+moment of inertia ( edit ) Hollow cylinder I z = π ( D 4 − d 4 ) 32 ( \ displaystyle I_ ( z ) = ( \ frac ( \ pi \ left ( D ^ ( 4 ) - d ^ ( 4 ) \ right ) ) ( 32
+) ) ) Mass moment of inertia J z = I z ρ l = π ρ l ( D 4 − d 4 ) 32 ( \ displaystyle J_ ( z ) = I_ ( z ) \ rho l = ( \ frac ( \ pi \ rho l \ left ( D ^ ( 4 ) -
+d ^ ( 4 ) \ right ) ) ( 32 ) ) ) Solid cylinder I z = π D 4 32 ( \ displaystyle I_ ( z ) = ( \ frac
+</item 2>
+
+<item 3>
+Polar moment of inertia
+Polar moment of inertia - wikipedia Polar moment of inertia Jump to : navigation , search Polar moment of inertia is a quantity used to predict an object 's
+ability to resist torsion , in objects ( or segments of objects ) with an invariant circular cross section and no significant warping or out - of - plane
+deformation . It is used to calculate the angular displacement of an object subjected to a torque . It is analogous to the area moment of inertia , which
+characterizes an object 's ability to resist bending and is required to calculate displacement . The larger the polar moment of area , the less the beam will
+twist , when subjected to a given torque . Polar moment of area should not be confused with moment of inertia , which characterizes an object 's angular
+acceleration due to a torque . See moment ( physics ) .
+</item 3>
+
+<item 4>
+Polar moment of inertia
+In such cases , the torsion constant can be substituted instead . In objects with significant cross-sectional variation ( along the axis of the applied torque )
+, which can not be analyzed in segments , a more complex approach may have to be used . See 3 - D elasticity . However the polar moment of area can be used to
+calculate the moment of inertia of an object with arbitrary cross-section . Definition ( edit ) A schematic showing how the polar moment of area is calculated
+for an arbitrary shape about an axis o. ρ is the radial distance to the element dA .
+</item 4>
+
+<item 5>
+The polar moment of area measures a cross-section’s resistance to twisting and helps predict torsional stress and angular displacement. It is \(J=\int_A
+\rho^2\,dA\), with SI units of m⁴; for a solid circular section, \(J=\pi r^4/2\). It relates to planar area moments by \(J=I_x+I_y\). Do not confuse it with
+mass moment of inertia, which concerns rotational acceleration. Polar area
+</item 5>
+
+<item 6>
+Polar moment of inertia
+= π D 4 32 ( \ displaystyle I_ ( z ) = ( \ frac ( \ pi D ^ ( 4 ) ) ( 32 ) ) ) Mass moment of inertia J z = I z ρ l = π ρ l D 4 32 ( \ displaystyle J_ ( z ) = I_
+( z ) \ rho l = ( \ frac ( \ pi \ rho lD ^ ( 4 ) ) ( 32 ) ) ) where : d ( \ displaystyle d ) is the inner diameter in m D ( \ displaystyle D ) is the outside
+diameter in m J z ( \ displaystyle J_ ( z ) ) is the mass moment of inertia in kg m l ( \ displaystyle l ) is the length of cylinder in m ρ ( \ displaystyle \
+rho ) is the specific mass in kg / m See also ( edit ) Torsion constant Torsion spring Torsion bar Area moment of inertia References ( edit ) Jump up ^ Ugural
+AC , Fenster SK . Advanced Strength and Applied Elasticity . 3rd Ed . Prentice - Hall Inc . Englewood Cliffs , NJ . 1995 .
+</item 6>
+
+<item 7>
+Polar moment of inertia
+Englewood Cliffs , NJ . 1995 . ISBN 0 - 13 - 137589 - X . Jump up ^ http://www.efunda.com/math/areas/MomentOfInertia.cfm Jump up ^ Blodgeit . Design of Welded
+Structures ( 1982 ) . Section 2.10. 2 . Jump up ^ `` What is the difference between the Polar Moment of Inertia , IPIP and the torsional constant , JTJT of a
+cross section ? '' .
+</item 7>
+
+<item 8>
+Polar moment of inertia
+I z = ∫ A ρ 2 d A ( \ displaystyle I_ ( z ) = \ int _ ( A ) \ rho ^ ( 2 ) \ , dA ) I = the polar moment of area about the axis z dA = an elemental area ρ = the
+radial distance to the element dA from the axis z For a circular section with radius r : I z = ∫ 0 2 π ∫ 0 r ρ 2 ρ d ρ d φ = π r 4 2 ( \ displaystyle I_ ( z ) =
+\ int _ ( 0 ) ^ ( 2 \ pi ) \ int _ ( 0 ) ^ ( r ) \ rho ^ ( 2 ) \ rho \ , d \ rho \ , d \ phi = ( \ frac ( \ pi r ^ ( 4 ) ) ( 2 ) ) ) Unit ( edit ) The SI unit
+for polar moment of area , like the area moment of inertia , is meter to the fourth power ( m ) .
+</item 8>
+
+<item 9>
+Polar moment of inertia
+Conversion from area moment of inertia ( edit ) By the perpendicular axis theorem , the following equation relates I to the area moments of inertia about the
+other two mutually perpendicular axes : I z = I x + I y ( \ displaystyle I_ ( z ) = I_ ( x ) + I_ ( y ) ) I x = I y ( \ displaystyle I_ ( x ) = I_ ( y ) ) is
+only true for a circular or hollow circular section with a constant thickness . For non circular cross section analytical formulas are needed : torsion constant
+. Second moment of inertia , I , is the resistance of a solid to being twisted . Polar moment of inertia , I or J , is the inertia moment of a rotating solid
+Application ( edit ) The polar moment of area appears in the formulae that describe torsional stress and angular displacement .
+</item 9>
+
+<item 10>
+Polar moment of inertia
+Moment of inertia is , strictly , the second moment of mass with respect to distance from an axis : I = ∫ m r 2 d m ( \ displaystyle I = \ int _ ( m ) r ^ ( 2 )
+\ mathrm ( d ) m ) , where r is the distance to some potential rotation axis , and the integral is over all the infinitesimal elements of mass , dm , in a three
+- dimensional space occupied by an object . The MOI , in this sense , is the analog of mass for rotational problems . Contents ( hide ) 1 Limitations 2
+Definition 3 Unit 4 Conversion from Area Moment of Inertia 5 Application 6 Sample calculation 7 Comparing various moments of inertias for a cylinder 7.1 Polar
+moment of inertia 8 See also 9 References 10 External links Limitations ( edit ) The polar moment of area can not be used to analyze shafts with non-circular
+cross-sections . In such cases , the torsion constant can be substituted instead .
+</item 10>
+=== END ITEM id=980043a0680469da ===
+
+=== ITEM id=9295423c3c9f5822 ===
+Gold sentences and facts:
+Sentence 0: The optic chiasm or optic chiasma ( / ɒptɪk kaɪæzəm / ; Greek χίασμα , `` crossing '' , from the Greek χιάζω ' to mark with an X ' , after the Greek letter ' Χ ' , chi ) is the part of the brain where the optic nerves partially cross . The optic chiasm is located at the bottom of the brain immediately below the hypothalamus . The optic chiasm is found in all vertebrates , although in cyclostomes ( lampreys and hagfishes ) it is located within the brain .
+  Fact 0.0: The optic chiasm is also called the optic chiasma.
+  Fact 0.1: The name optic chiasm comes from the Greek word chiasma, meaning crossing.
+  Fact 0.2: The name optic chiasm comes from the Greek word chiazo, meaning to mark with an X.
+  Fact 0.3: The name optic chiasm is after the Greek letter chi.
+  Fact 0.4: The optic chiasm is the part of the brain where the optic nerves partially cross.
+  Fact 0.5: The optic chiasm is located at the bottom of the brain.
+  Fact 0.6: The optic chiasm is located immediately below the hypothalamus.
+  Fact 0.7: The optic chiasm is found in all vertebrates.
+  Fact 0.8: In cyclostomes (lampreys and hagfishes), the optic chiasm is located within the brain.
+
+Retrieved items:
+<item 1>
+Optic chiasm
+See also ( edit ) Wikimedia Commons has media related to Optic chiasm . Chiasmal syndrome References ( edit ) Jump up ^ Colman , Andrew M. ( 2006 ) . Oxford
+Dictionary of Psychology ( 2nd ed . ) . Oxford University Press . p. 530 . ISBN 0 - 19 - 861035 - 1 . Jump up ^ Bainbridge , David ( 30 June 2009 ) . Beyond the
+Zonules of Zinn : A Fantastic Journey Through Your Brain . Harvard University Press . p. 162 . ISBN 978 - 0 - 674 - 02042 - 9 . Retrieved 22 November 2015 .
+Jump up ^ de Lussanet , Marc H.E. ; Osse , Jan W.M. ( 2012 ) . `` An ancestral axial twist explains the contralateral forebrain and the optic chiasm in
+vertebrates '' . Animal Biology . 62 ( 2 ) : 193 -- 216 . arXiv : 1003.1872 .
+</item 1>
+
+<item 2>
+Optic chiasm
+arXiv : 1003.1872 . doi : 10.1163 / 157075611X617102 . ISSN 1570 - 7555 . Jump up ^ Purves , Dale ; Augustine , George ; Fitzpatrick , David ; Hall , William ;
+LaMantia , Anthony - Samuel ; White , Leonard ( 2012 ) . Neuroscience . Sinauer Associates . p. 261 . ISBN 978 - 0 - 87893 - 695 - 3 . Jump up ^ `` eye , human
+. '' Encyclopædia Britannica from Encyclopædia Britannica 2006 Ultimate Reference Suite DVD 2009 Jump up ^ Schmolesky MT , Wang Y , Creel DJ , Leventhal AG . ``
+Abnormal retinotopic organization of the dorsal lateral geniculate nucleus of the tyrosinase - negative albino cat '' . J Comp Neurol. 427 ( 2 ) : 209 -- 19 .
+</item 2>
+
+<item 3>
+Optic chiasm
+Other animals ( edit ) In Siamese cats with certain genotypes of the albino gene , this wiring is disrupted , with more of the nerve - crossing than is normal ,
+as a number of scholars have reported . To compensate for lack of crossing in their brains , they cross their eyes ( strabismus ) . This is also seen in albino
+tigers , as Guillery & Kaas report . Additional images ( edit ) Scheme showing central connections of the optic nerves and optic tracts . Base of brain . 3D
+schematic representation of optic tracts Transformations of the visual field toward the visual map on the primary visual cortex . Human brainstem anterior view
+Optic chiasm Optic chiasma Cerebrum. Inferior view. Deep dissection . Cerebrum. Inferior view . Deep dissection . History ( edit ) The crossing of nerve fibres
+, and the impact on vision that this had , was probably first identified by Persian physician `` Esmail Jorjani '' , who appears to be Zayn al - Din Gorgani (
+1042 -- 1137 ) .
+</item 3>
+
+<item 4>
+Optic chiasm
+J Comp Neurol. 427 ( 2 ) : 209 -- 19 . doi : 10.1002 / 1096 - 9861 ( 20001113 ) 427 : 2 < 209 : : aid - cne4 > 3.0.co ; 2 - 3 . PMID 11054689 . Jump up ^
+Guillery , RW ; Kaas , JH ( June 1973 ) . `` Genetic abnormality of the visual pathways in a `` white '' tiger `` . Science . 180 ( 4092 ) : 1287 -- 9 . Bibcode
+: 1973Sci ... 180.1287 G . doi : 10.1126 / science. 180.4092. 1287 . PMID 4707916 . Jump up ^ Guillery RW ( May 1974 ) . `` Visual pathways in albinos '' . Sci.
+Am. 230 ( 5 ) : 44 -- 54 . doi : 10.1038 / scientificamerican0574 - 44 . PMID 4822986 .
+</item 4>
+
+<item 5>
+Optic chiasm
+PMID 4822986 . Jump up ^ Davis , Matthew C. ; Griessenauer , Christoph J. ; Bosmia , Anand N. ; Tubbs , R. Shane ; Shoja , Mohammadali M. ( 2014 - 01 - 01 ) .
+`` The naming of the cranial nerves : A historical review '' . Clinical Anatomy. 27 ( 1 ) : 14 -- 19 . doi : 10.1002 / ca. 22345 . ISSN 1098 - 2353 . Jeffery G
+( October 2001 ) . `` Architecture of the optic chiasm and the mechanisms that sculpt its development '' . Physiol. Rev. 81 ( 4 ) : 1393 -- 414 . PMID 11581492
+. External links ( edit ) `` Anatomy diagram : 13048.000 - 1 '' . Roche Lexicon - illustrated navigator . Elsevier . Archived from the original on 2014 - 01 -
+01 . ( hide ) The cranial nerves terminal Nuclei Septal nuclei Course no significant branches olfactory Nuclei
+</item 5>
+
+<item 6>
+Optic chiasm
+Optic chiasm - wikipedia Optic chiasm Jump to : navigation , search For other meanings of `` chiasm '' , see Chiasm . Optic chiasma Brain viewed from below ;
+the front of the brain is above . Visual pathway with optic chiasm ( X shape ) is shown in red ( 1543 image from Andreas Vesalius ' Fabrica ) Optic nerves ,
+chiasm , and optic tracts Details Part of Visual system Identifiers Latin chiasma opticum MeSH A08. 800.800. 120.680. 600 NeuroLex ID Optic chiasm TA A14. 1.08.
+403 FMA 62045 Anatomical terms of neuroanatomy ( edit on Wikidata ) The optic chiasm or optic chiasma ( / ɒptɪk kaɪæzəm / ; Greek χίασμα , `` crossing '' , from
+the Greek χιάζω ' to mark with an X ' , after the Greek letter ' Χ ' , chi ) is the part of the brain where the optic nerves partially cross .
+</item 6>
+
+<item 7>
+Optic chiasm
+The cranial nerves terminal Nuclei Septal nuclei Course no significant branches olfactory Nuclei Anterior olfactory nucleus Course olfactory bulb olfactory
+tract optic Nuclei Lateral geniculate nucleus Course optic chiasm optic tract oculomotor Nuclei Oculomotor nucleus Edinger -- Westphal nucleus Branches superior
+parasympathetic root of ciliary ganglion / ciliary ganglion inferior trochlear Nucleus Branches no significant branches trigeminal Nuclei PSN Spinal trigeminal
+nucleus MN TMN Course trigeminal ganglion Branches ophthalmic maxillary mandibular abducens Nucleus Branches no significant branches facial near origin
+intermediate nerve geniculate inside facial canal greater petrosal pterygopalatine ganglion nerve to the stapedius chorda tympani lingual nerve submandibular
+ganglion at stylomastoid foramen posterior auricular suprahyoid digastric stylohyoid parotid plexus temporal zygomatic buccal mandibular cervical Nuclei Facial
+motor nucleus Solitary nucleus Superior salivary nucleus vestibulocochlear Nuclei Vestibular nuclei Cochlear
+</item 7>
+
+<item 8>
+Optic chiasm
+The optic chiasm is located at the bottom of the brain immediately below the hypothalamus . The optic chiasm is found in all vertebrates , although in
+cyclostomes ( lampreys and hagfishes ) it is located within the brain . Contents ( hide ) 1 Structure 2 Other animals 3 Additional images 4 History 5 See also 6
+References 7 External links Structure ( edit ) The optic nerve fibres on the nasal sides of each retina cross over ( decussate ) to the opposite side of the
+brain via the optic nerve at the optic chiasm ( decussation of medial fibers ) . The temporal hemiretina , on the other hand , stays on the same side . The
+inferonasal retina are related to anterior portion of the optic chiasm whereas superonasal retinal fibers are related to the posterior portion of the optic
+chiasm . The crossing over of optic nerve fibres at the optic chiasm allows the visual cortex to receive the same hemispheric visual field from both eyes .
+Superimposing and processing these monocular visual signals allow the visual cortex to generate binocular and stereoscopic vision .
+</item 8>
+
+<item 9>
+Optic chiasm
+For example , the right visual cortex receives the temporal visual field from the left eye , and the nasal visual field from the right eye , which results in
+the right visual cortex producing a binocular image of the left hemispheric visual field . The net result of optic nerve crossing over at the optic chiasm is
+for the right cerebral hemisphere to sense and process left hemispheric vision , and for the left cerebral hemisphere to sense and process right hemispheric
+vision . This crossing is an adaptive feature of frontally oriented eyes , found mostly in predatory animals requiring precise visual depth perception . ( Prey
+animals , with laterally positioned eyes , have little binocular vision , so there is a more complete crossover of visual signals . ) Beyond the optic chiasm ,
+with crossed and uncrossed fibers , the optic nerves become optic tracts . The signals are passed on to the lateral geniculate body , in turn giving them to the
+occipital cortex ( the outer matter of the rear brain ) .
+</item 9>
+
+<item 10>
+Retina
+At each synaptic stage there are also laterally connecting horizontal and amacrine cells . The optic nerve is a central tract of many axons of ganglion cells
+connecting primarily to the lateral geniculate body , a visual relay station in the diencephalon ( the rear of the forebrain ) . It also projects to the
+superior colliculus , the suprachiasmatic nucleus , and the nucleus of the optic tract . It passes through the other layers , creating the optic disc in
+primates . Additional structures , not directly associated with vision , are found as outgrowths of the retina in some vertebrate groups . In birds , the pecten
+is a vascular structure of complex shape that projects from the retina into the vitreous humour ; it supplies oxygen and nutrients to the eye , and may also aid
+in vision . Reptiles have a similar , but much simpler , structure . In adult humans , the entire retina is approximately 72 % of a sphere about 22 mm in
+diameter . The entire retina contains about 7 million cones and 75 to 150 million rods .
+</item 10>
+=== END ITEM id=9295423c3c9f5822 ===

@@ -1,0 +1,785 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=bd59e5a2bf038104 ===
+Gold sentences and facts:
+Sentence 0: On the Origin of Species ( or more completely , On the Origin of Species by Means of Natural Selection , or the Preservation of Favoured Races in the Struggle for Life ) , published on 24 November 1859 , is a work of scientific literature by Charles Darwin which is considered to be the foundation of evolutionary biology . Darwin 's book introduced the scientific theory that populations evolve over the course of generations through a process of natural selection . It presented a body of evidence that the diversity of life arose by common descent through a branching pattern of evolution . Darwin included evidence that he had gathered on the Beagle expedition in the 1830s and his subsequent findings from research , correspondence , and experimentation .
+  Fact 0.0: The full title of On the Origin of Species is On the Origin of Species by Means of Natural Selection, or the Preservation of Favoured Races in the Struggle for Life.
+  Fact 0.1: On the Origin of Species was published on 24 November 1859.
+  Fact 0.2: On the Origin of Species is a work of scientific literature by Charles Darwin.
+  Fact 0.3: On the Origin of Species is considered to be the foundation of evolutionary biology.
+  Fact 0.4: Charles Darwin's book On the Origin of Species introduced the scientific theory that populations evolve over the course of generations.
+  Fact 0.5: The scientific theory in On the Origin of Species holds that populations evolve through a process of natural selection.
+  Fact 0.6: On the Origin of Species presented a body of evidence.
+  Fact 0.7: The evidence in On the Origin of Species holds that the diversity of life arose by common descent.
+  Fact 0.8: The evidence in On the Origin of Species holds that this common descent follows a branching pattern of evolution.
+  Fact 0.9: Charles Darwin included evidence he had gathered on the Beagle expedition in the 1830s in On the Origin of Species.
+  Fact 0.10: Charles Darwin included his subsequent findings from research in On the Origin of Species.
+  Fact 0.11: Charles Darwin included his subsequent findings from correspondence in On the Origin of Species.
+  Fact 0.12: Charles Darwin included his subsequent findings from experimentation in On the Origin of Species.
+Sentence 1: On the Origin of Species The title page of the 1859 edition of On the Origin of Species Author Charles Darwin Country United Kingdom of Great Britain and Ireland Language English Subject Natural selection Evolutionary biology Published 24 November 1859 ( John Murray ) Media type Print ( Hardback ) Pages 502 OCLC 352242 Preceded by On the Tendency of Species to form Varieties ; and on the Perpetuation of Varieties and Species by Natural Means of Selection Followed by Fertilisation of Orchids
+  Fact 1.0: On the Origin of Species has the author Charles Darwin.
+  Fact 1.1: On the Origin of Species has the country United Kingdom of Great Britain and Ireland.
+  Fact 1.2: On the Origin of Species is written in English.
+  Fact 1.3: On the Origin of Species has the subject natural selection.
+  Fact 1.4: On the Origin of Species has the subject evolutionary biology.
+  Fact 1.5: On the Origin of Species was published on 24 November 1859 by John Murray.
+  Fact 1.6: The title page of the 1859 edition of On the Origin of Species is shown.
+  Fact 1.7: The media type of On the Origin of Species is print (hardback).
+  Fact 1.8: On the Origin of Species has 502 pages.
+  Fact 1.9: On the Origin of Species has OCLC number 352242.
+  Fact 1.10: On the Origin of Species was preceded by On the Tendency of Species to form Varieties; and on the Perpetuation of Varieties and Species by Natural Means of Selection.
+  Fact 1.11: On the Origin of Species was followed by Fertilisation of Orchids.
+
+Retrieved items:
+<item 1>
+In a survey by UK academic booksellers, publishers, and librarians, Charles Darwin’s *On the Origin of Species* was voted the most influential academic book
+ever written, praised for transforming how people think. First published in 1859 as *On the Origin of Species by Means of Natural Selection*, it appeared in six
+British editions. Online resources include edition texts, translations, a comparison of revisions, audio, and Darwin’s correspondence. Darwin’s later major
+evolutionary work was *The Descent of
+</item 1>
+
+<item 2>
+On the Origin of Species
+He used the term broadly , and as well as discussions of `` the several races , for instance , of the cabbage '' and `` the hereditary varieties or races of our
+domestic animals and plants '' , there are three instances in the book where the phrase `` races of man '' is used , referring to races of humans . Publication
+and subsequent editions ( edit ) On the Origin of Species was first published on Thursday 24 November 1859 , priced at fifteen shillings with a first printing
+of 1250 copies . The book had been offered to booksellers at Murray 's autumn sale on Tuesday 22 November , and all available copies had been taken up
+immediately . In total , 1,250 copies were printed but after deducting presentation and review copies , and five for Stationers ' Hall copyright , around 1,170
+copies were available for sale . Significantly , 500 were taken by Mudie 's Library , ensuring that the book promptly reached a large number of subscribers to
+the library .
+</item 2>
+
+<item 3>
+Charles Darwin’s *On the Origin of Species* was published in English in the United Kingdom by John Murray on 24 November 1859. A 502-page work on evolution and
+evolutionary biology, it set out natural selection as a means by which species change and diversify. It followed Darwin’s earlier essay on the formation and
+perpetuation of species.
+</item 3>
+
+<item 4>
+On the Origin of Species
+On the Origin of species - wikipedia On the Origin of species Jump to : navigation , search `` Origin of Species '' redirects here . For other uses , see Origin
+of Species ( disambiguation ) . On the Origin of Species The title page of the 1859 edition of On the Origin of Species Author Charles Darwin Country United
+Kingdom of Great Britain and Ireland Language English Subject Natural selection Evolutionary biology Published 24 November 1859 ( John Murray ) Media type Print
+( Hardback ) Pages 502 OCLC 352242 Preceded by On the Tendency of Species to form Varieties ; and on the Perpetuation of Varieties and Species by Natural Means
+of Selection Followed by Fertilisation of Orchids Part of a series on Evolutionary biology Key topics ( show ) Introduction to evolution Common descent Evidence
+of common descent Processes and outcomes ( show ) Population genetics Variation Diversity Mutation Natural selection Adaptation Polymorphism Genetic drift Gene
+flow Speciation Adaptive radiation Co-operation Coevolution Divergence Convergence Parallel evolution Extinction Natural history ( show ) Origin of life History
+of life Timeline of evolution Human evolution Phylogeny Biodiversity Biogeography Classification Evolutionary taxonomy Cladistics Transitional fossil Extinction
+event History
+</item 4>
+
+<item 5>
+On the Origin of Species
+Published anonymously . Murray , Andrew ( 1860 ) , `` On Mr Darwin 's Theory of the Origin of Species '' , Proceedings of the Royal Society of Edinburgh , 4 :
+274 -- 291 . Owen , Richard ( 1860 ) , `` Review of Darwin 's Origin of Species '' , Edinburgh Review , 3 ( April 1860 ) : 487 -- 532 . Published anonymously .
+Wilberforce , Samuel ( 1860 ) , `` ( Review of ) On the Origin of Species , by means of Natural Selection ; or the Preservation of Favoured Races in the
+Struggle for Life '' , Quarterly Review , 108 ( 215 : July 1860 ) : 225 -- 264 . Published anonymously . For further reviews , see Darwin Online : Reviews &
+Responses to Darwin , Darwin Online , 10 March 2009 , retrieved 18 June 2009 External links ( edit ) Wikimedia Commons has media related to The Origin of
+Species .
+</item 5>
+
+<item 6>
+On the Origin of Species
+The second edition of 3,000 copies was quickly brought out on 7 January 1860 , and incorporated numerous corrections as well as a response to religious
+objections by the addition of a new epigraph on page ii , a quotation from Charles Kingsley , and the phrase `` by the Creator '' added to the closing sentence
+. During Darwin 's lifetime the book went through six editions , with cumulative changes and revisions to deal with counter-arguments raised . The third edition
+came out in 1861 , with a number of sentences rewritten or added and an introductory appendix , An Historical Sketch of the Recent Progress of Opinion on the
+Origin of Species , while the fourth in 1866 had further revisions . The fifth edition , published on 10 February 1869 , incorporated more changes and for the
+first time included the phrase `` survival of the fittest '' , which had been coined by the philosopher Herbert Spencer in his Principles of Biology ( 1864 ) .
+In January 1871 , George Jackson Mivart 's On the Genesis of Species listed detailed arguments against natural selection , and claimed it included false
+metaphysics .
+</item 6>
+
+<item 7>
+On the Origin of Species
+Darwin made extensive revisions to the sixth edition of the Origin ( this was the first edition in which he used the word `` evolution '' which had commonly
+been associated with embryological development , though all editions concluded with the word `` evolved '' ) , and added a new chapter VII , Miscellaneous
+objections , to address Mivart 's arguments . The sixth edition was published by Murray on 19 February 1872 as The Origin of Species , with `` On '' dropped
+from the title . Darwin had told Murray of working men in Lancashire clubbing together to buy the 5th edition at fifteen shillings and wanted it made more
+widely available ; the price was halved to 7 s 6 d by printing in a smaller font . It includes a glossary compiled by W.S. Dallas . Book sales increased from 60
+to 250 per month .
+</item 7>
+
+<item 8>
+On the Origin of Species
+By 1977 , it had appeared in an additional 18 languages . Content ( edit ) Title pages and introduction ( edit ) John Gould 's illustration of Darwin 's rhea
+was published in 1841 . The existence of two rhea species with overlapping ranges influenced Darwin . Page ii contains quotations by William Whewell and Francis
+Bacon on the theology of natural laws , harmonising science and religion in accordance with Isaac Newton 's belief in a rational God who established a law -
+abiding cosmos . In the second edition , Darwin added an epigraph from Joseph Butler affirming that God could work through scientific laws as much as through
+miracles , in a nod to the religious concerns of his oldest friends . The Introduction establishes Darwin 's credentials as a naturalist and author , then
+refers to John Herschel 's letter suggesting that the origin of species `` would be found to be a natural in contradistinction to a miraculous process '' : WHEN
+on board HMS Beagle , as naturalist , I was much struck with certain facts in the distribution of the inhabitants of South America , and in the geological
+relations of the present to the past inhabitants of that continent .
+</item 8>
+
+<item 9>
+On the Origin of Species
+The theory explains the diversity of living organisms and their adaptation to the environment . It makes sense of the geologic record , biogeography , parallels
+in embryonic development , biological homologies , vestigiality , cladistics , phylogenetics and other fields , with unrivalled explanatory power ; it has also
+become essential to applied sciences such as medicine and agriculture . Despite the scientific consensus , a religion - based political controversy has
+developed over how evolution is taught in schools , especially in the United States . Interest in Darwin 's writings continues , and scholars have generated an
+extensive literature , the Darwin Industry , about his life and work . The text of Origin itself has been subject to much analysis including a variorum ,
+detailing the changes made in every edition , first published in 1959 , and a concordance , an exhaustive external index published in 1981 . Worldwide
+commemorations of the 150th anniversary of the publication of On the Origin of Species and the bicentenary of Darwin 's birth were scheduled for 2009 . They
+celebrated the ideas which `` over the last 150 years have revolutionised our understanding of nature and our place within it '' .
+</item 9>
+
+<item 10>
+On the Origin of Species
+In a survey conducted by a group of academic booksellers , publishers and librarians in advance of Academic Book Week in the United Kingdom , On the Origin of
+Species was voted the most influential academic book ever written . It was hailed as `` the supreme demonstration of why academic books matter '' and `` a book
+which has changed the way we think about everything '' . See also ( edit ) Book : Evolution On the Origin of Species -- full text at Wikisource of the first
+edition , 1859 The Origin of Species -- full text at Wikisource of the 6th edition , 1872 Charles Darwin bibliography History of biology History of evolutionary
+thought History of speciation Modern evolutionary synthesis The Complete Works of Charles Darwin Online The Descent of Man , and Selection in Relation to Sex ,
+published in 1871 ; his second major book on evolutionary theory . Transmutation of species Notes ( edit ) Jump up ^ Darwin 1859 , p. iii ^ Jump up to : Freeman
+1977 ^ Jump up to : The book 's full original title was On the Origin of Species by Means of Natural Selection , or the Preservation of Favoured Races in the
+Struggle for Life .
+</item 10>
+=== END ITEM id=bd59e5a2bf038104 ===
+
+=== ITEM id=db7ac0a68bcb234a ===
+Gold sentences and facts:
+Sentence 0: Life of Pi is a Canadian fantasy adventure novel by Yann Martel published in 2001 . The protagonist is Piscine Molitor `` Pi '' Patel , an Indian boy from Pondicherry who explores issues of spirituality and practicality from an early age . He survives 227 days after a shipwreck while stranded on a lifeboat in the Pacific Ocean with a Bengal tiger named Richard Parker .
+  Fact 0.0: Life of Pi is a Canadian fantasy adventure novel.
+  Fact 0.1: Life of Pi is a novel by Yann Martel.
+  Fact 0.2: Life of Pi was published in 2001.
+  Fact 0.3: The protagonist of Life of Pi is Piscine Molitor 'Pi' Patel.
+  Fact 0.4: Piscine Molitor 'Pi' Patel is an Indian boy from Pondicherry.
+  Fact 0.5: Piscine Molitor 'Pi' Patel explores issues of spirituality and practicality from an early age.
+  Fact 0.6: Pi survives 227 days after a shipwreck.
+  Fact 0.7: Pi is stranded on a lifeboat in the Pacific Ocean.
+  Fact 0.8: Pi is stranded on the lifeboat with a Bengal tiger named Richard Parker.
+
+Retrieved items:
+<item 1>
+Life of Pi
+Canongate Books . 14 May 2002 . Archived from the original on 18 March 2008 . Retrieved 1 September 2010 . Jump up ^ Martel , Yann . `` How Richard Parker Came
+to Get His Name '' . Amazon.com . Retrieved 1 September 2010 . Jump up ^ `` From the Author -- Yann Martel -- Powell 's Books '' . Powells.com . Archived from
+the original on 14 January 2013 . Retrieved 30 December 2012 . Jump up ^ Mitgang , Herbert ( 11 July 1990 ) . `` Books of The Times ; Fleeing the Nazis With a
+Jaguar That May Be Real '' . The New York Times . Retrieved 2 September 2010 . Jump up ^ Rohter , Larry ( 11 July 1990 ) . `` Tiger in a Lifeboat , Panther in a
+Lifeboat : A Furor Over a Novel '' . The New York Times . Retrieved 2 September 2010 .
+</item 1>
+
+<item 2>
+Life of Pi
+The cook amputates the sailor 's leg for use as fishing bait , then kills the sailor himself as well as Pi 's mother for food , and soon he is killed by Pi ,
+who dines on him . The investigators note parallels between the two stories . They soon conclude that the hyena symbolizes the cook , the zebra the sailor , the
+orangutan Pi 's mother , and the tiger represents Pi . Pi points out that neither story can be proven and neither explains the cause of the shipwreck , so he
+asks the officials which story they prefer : the one without animals or the one with animals . They eventually choose the story with the animals . Pi thanks
+them and says : `` And so it goes with God . '' The investigators then leave and file a report . Major themes ( edit ) Life is a story ( edit ) Life of Pi ,
+according to Yann Martel , can be summarized in three statements : `` Life is a story ... You can choose your story ... A story with God is the better story .
+'' A recurring theme throughout the novel seems to be believability .
+</item 2>
+
+<item 3>
+Life of Pi
+Parker names the cub Thirsty after his enthusiasm when drinking from a nearby river . The paperwork that accompanies the shipment of the two tigers to Pi 's
+family 's zoo in Pondicherry states that the cub 's name is `` Richard Parker '' and the hunter 's given name is `` Thirsty '' and his surname is `` None Given
+'' , due to a mix - up with the names . Pi 's father finds the story so amusing that they continue to call the tiger `` Richard Parker '' . Reception ( edit )
+Brian Bethune of Maclean 's describes Life of Pi as a `` head - scratching combination of dense religious allegory , zoological lore and enthralling adventure
+tale , written with warmth and grace '' . Master Plots suggested that the `` central themes of Life of Pi concern religion and human faith in God '' . Reutter
+said , `` So believable is Pi 's story telling that readers will be amazed . '' Gregory Stephens added that it `` achieves something more quietly spectacular .
+'' Smith stated that there was `` no bamboozlement here . ''
+</item 3>
+
+<item 4>
+Life of Pi
+Suddenly emerging from his hideaway , Richard Parker kills and eats the hyena . Frightened , Pi constructs a small raft out of rescue flotation devices ,
+tethers it to the bow of the boat and makes it his place of retirement . He begins conditioning Richard Parker to take a submissive role by using food as a
+positive reinforcer , and seasickness as a punishment mechanism , while using a whistle for signals . Soon , Pi asserts himself as the alpha animal , and is
+eventually able to share the boat with his feline companion , admitting in the end that Richard Parker is the one who helped him survive his ordeal . Pi
+recounts various events while adrift in the Pacific Ocean . At his lowest point , exposure renders him blind and unable to catch fish . In a state of delirium ,
+he talks with a marine `` echo '' , which he initially identifies as Richard Parker having gained the ability to speak , but it turns out to be another blind
+castaway , a Frenchman , who boards the lifeboat with the intention of killing and eating Pi , but is eventually killed by Richard Parker .
+</item 4>
+
+<item 5>
+Life of Pi
+He tries to understand God through the lens of each religion , and comes to recognize benefits in each one . A few years later in 1977 , during the period when
+Indian Prime Minister Indira Gandhi declares `` The Emergency '' , Pi 's father decides to sell the zoo and immigrate with his wife and sons to Canada . Part
+two ( edit ) The second part of the novel begins with Pi 's family aboard the Tsimtsum , a Japanese freighter that is transporting animals from their zoo to
+North America . A few days out of port from Manila , the ship encounters a storm and sinks . Pi manages to escape in a small lifeboat , only to learn that the
+boat also holds a spotted hyena , an injured Grant 's zebra , and an orangutan named Orange Juice . Much to the boy 's distress , the hyena kills the zebra and
+then Orange Juice . A tiger has been hiding under the boat 's tarpaulin : it 's Richard Parker , who had boarded the lifeboat with ambivalent assistance from Pi
+himself some time before the hyena attack . Suddenly emerging from his hideaway , Richard Parker kills and eats the hyena .
+</item 5>
+
+<item 6>
+Life of Pi
+He was named after a swimming pool in Paris , despite the fact that neither his mother nor his father particularly liked swimming . The story is told as a
+narrative from the perspective of a middle - aged Pi , now married with his own family , and living in Canada . At the time of main events of the story , he is
+sixteen years old . He recounts the story of his life and his 227 - day journey on a lifeboat when his ship sinks in the middle of the Pacific Ocean during a
+voyage to North America . Richard Parker ( edit ) A Bengal tiger Richard Parker is a royal Bengal tiger who is stranded on the lifeboat with Pi when the ship
+sinks . Richard Parker lives on the lifeboat with Pi and is kept alive with the food and water Pi delivers . Richard Parker develops a relationship with Pi that
+allows them to coexist in their struggle . In the novel , a hunter named Richard Parker is hired to kill a panther thought to have killed seven people within
+two months . Instead , he accidentally immobilizes a female Bengal tiger with tranquilizer darts while her cub escapes hiding in a bush . Parker names the cub
+Thirsty after his enthusiasm when drinking from a nearby river .
+</item 6>
+
+<item 7>
+Life of Pi
+A recurring theme throughout the novel seems to be believability . Pi at the end of the book asks the two investigators `` If you stumble at mere believability
+, what are you living for ? '' According to Gordon Houser there are two main themes of the book : `` that all life is interdependent , and that we live and
+breathe via belief . '' Growth through adversity ( edit ) PBS has described Martel 's story as one of `` personal growth through adversity . '' The main
+character learns that `` tigers are dangerous '' at a young age when his father forces him to watch the zoo 's Royal Bengal tiger patriarch , Mahisha , devour a
+live goat . Later , after he has been reduced to eking out a desperate existence on the lifeboat with the company of a fully grown tiger , Pi develops `` alpha
+'' qualities as he musters the strength , will and skills he needs to survive . Inspiration ( edit ) In a 2002 interview with PBS , Martel said `` I was sort of
+looking for a story , not only with a small ' s ' but sort of with a capital ' S ' -- something that would direct my life . ''
+</item 7>
+
+<item 8>
+Life of Pi
+His father owns a zoo in Pondicherry . The livelihood provides the family with a relatively affluent lifestyle and some understanding of animal psychology . The
+narrator describes how he acquired his full name , Piscine Molitor Patel , as a tribute to the swimming pool in France . After hearing schoolmates tease him by
+transforming the first name into `` Pissing '' , he establishes the short form of his name as `` Pi '' when he starts secondary school . The name , he says ,
+pays tribute to the irrational number which is the ratio of the circumference of a circle to its diameter . In recounting his experiences , Pi describes several
+other unusual situations involving proper names : two visitors to the zoo , one a devout Muslim , and the other a committed atheist , bear identical names ; and
+a 450 - pound tiger at the zoo bears the name Richard Parker as the result of a clerical error , in which human and animal names were reversed . Pi is raised as
+a Hindu who practices vegetarianism . At the age of fourteen , he investigates Christianity and Islam , and decides to become an adherent of all three religions
+, much to his parents ' dismay , saying he `` just wants to love God . ''
+</item 8>
+
+<item 9>
+Life of Pi
+Life of Pi - Wikipedia Life of Pi Jump to : navigation , search This article is about the novel by Yann Martel . For the film based on the novel and directed by
+Ang Lee , see Life of Pi ( film ) . Life of Pi Life of Pi cover Author Yann Martel Original title Life of Pi Country Canada Language English Genre Fiction
+Publisher Knopf Canada Publication date September 11 , 2001 ( Canada ) ISBN 0 - 676 - 97376 - 0 ( first edition , hardcover ) OCLC 46624335 Preceded by Self
+Followed by Beatrice and Virgil Life of Pi is a Canadian fantasy adventure novel by Yann Martel published in 2001 . The protagonist is Piscine Molitor `` Pi ''
+Patel , an Indian boy from Pondicherry who explores issues of spirituality and practicality from an early age . He survives 227 days after a shipwreck while
+stranded on a lifeboat in the Pacific Ocean with a Bengal tiger named Richard Parker . The novel has sold more than ten million copies worldwide .
+</item 9>
+
+<item 10>
+Life of Pi
+He spoke of being lonely and needing direction in his life , and found that writing the novel met this need . Richard Parker and shipwreck narratives ( edit )
+The name of Martel 's tiger , Richard Parker , was inspired by a character in Edgar Allan Poe 's nautical adventure novel The Narrative of Arthur Gordon Pym of
+Nantucket ( 1838 ) . In this book , Richard Parker is a mutineer who is stranded and eventually cannibalized on the hull of an overturned ship ( and there is a
+dog aboard who is named Tiger ) . The author also had in mind another occurrence of the name , in the famous legal case R v Dudley and Stephens ( 1884 ) where a
+shipwreck again results in the cannibalism of a cabin boy named Richard Parker , this time in a lifeboat . A third Richard Parker drowned in the sinking of the
+Francis Spaight in 1846 , described by author Jack London , and later the cabin boy ( not Richard Parker ) was cannibalized . Having read about these events ,
+Yann Martel thought , `` So many victimized Richard Parkers had to mean something . ''
+</item 10>
+=== END ITEM id=db7ac0a68bcb234a ===
+
+=== ITEM id=ad3fbe6ad9ff7419 ===
+Gold sentences and facts:
+Sentence 0: This article covers the professional life of George W. Bush , the 43rd President of the United States . Prior to his election as President in 2000 , Bush held numerous other positions , including being an oil executive , an owner of the Texas Rangers baseball team , and Governor of Texas . ( Also see Governorship of George W. Bush . )
+  Fact 0.0: This article covers the professional life of George W. Bush.
+  Fact 0.1: George W. Bush was the 43rd President of the United States.
+  Fact 0.2: Bush was elected President in 2000.
+  Fact 0.3: Before his election as President, Bush held numerous other positions.
+  Fact 0.4: Bush was an oil executive.
+  Fact 0.5: Bush was an owner of the Texas Rangers baseball team.
+  Fact 0.6: Bush was Governor of Texas.
+  Fact 0.7: The article Governorship of George W. Bush is a see-also reference.
+
+Retrieved items:
+<item 1>
+Professional life of George W. Bush
+Professional life of George W. Bush - wikipedia Professional life of George W. Bush Jump to : navigation , search George W. Bush This article covers the
+professional life of George W. Bush , the 43rd President of the United States . Prior to his election as President in 2000 , Bush held numerous other positions
+, including being an oil executive , an owner of the Texas Rangers baseball team , and Governor of Texas . ( Also see Governorship of George W. Bush . )
+Contents ( hide ) 1 Business 1.1 Texas Rangers and allegations of insider trading 1.2 Early political career 2 See also 3 References Business ( edit ) Bush
+began his industry career in 1979 , when he established Arbusto Energy , an oil and gas exploration company he financed with his education trust fund surplus
+and money from other investors , including Dorothy Bush , Lewis Lehrman , William Henry Draper III , Bill Gammell , and James R. Bath , the last of whom
+represented Salem bin Laden , a half - brother and cousin of Osama bin Laden .
+</item 1>
+
+<item 2>
+Professional life of George W. Bush
+Securities and Exchange Commission ( SEC ) ruled that it would not charge Bush with insider trading . On June 22 , Bush sold his 212,140 shares of stock anyway
+for a net profit of $848,560 . The very next quarter , Harken announced losses of $23 million , which continued to the end of the year when the stock ``
+plummeted from $4 to $1.25 '' . As President , Bush has refused to authorize the SEC to release its full report on the Harken investigation . When the Rangers
+franchise was sold for $250 million in 1998 , at a total profit of $170 million , Bush personally received $14.9 million for his $600,000 investment . As
+managing general partner of the Rangers , Bush assisted the team 's media relations and the construction of a new stadium . Many in Arlington protested that the
+stadium was paid for with public funds , and when the stadium title was given to the Texas Rangers Organization , it effectively allowed Bush to cash out public
+funds . His public role generated valuable goodwill and reinforced name recognition throughout Texas .
+</item 2>
+
+<item 3>
+2005 World Series
+Cup Chronicle - Telegraph Cup Book : World Series Category : World Series Chicago White Sox Based in Chicago , Illinois Franchise History Seasons Owners and
+executives Managers Players Opening Day starting pitchers first - round draft picks Broadcasters Team records Award winners No - hitters Ballparks South Side
+Park Comiskey Park Guaranteed Rate Field Spring training : * Recreation Park Palm Springs Stadium Plant Field Al Lopez Field Payne Park Ed Smith Stadium Tucson
+Electric Park Camelback Ranch Culture and lore 1994 bat burglary 2008 Blackout Game Andy the Clown Armour Square / Bridgeport Black Sox Scandal Curse of the
+Black Sox Eight Men Out Field of Dreams Shoeless Joe ( novel ) Captain Stubby and the Buccaneers Disco Demolition Night `` Do n't Stop Believin ' '' Gene Honda
+The Hitless Wonders `` Let 's Go ,
+</item 3>
+
+<item 4>
+Professional life of George W. Bush
+Against the advice of his counsel , Bush repaid the loan by selling $848,000 worth of stock in Harken Energy . Harken reported significant financial losses
+within a year of this sale , triggering allegations of insider trading . On March 27 , 1992 , the Securities and Exchange Commission concluded that Bush had a
+`` preexisting plan '' to sell , that Bush had a `` relatively limited role in Harken management '' , and that it had not seen evidence of insider trading . The
+subsequent SEC investigation ended in 1992 with a memo stating `` it appears that Bush did not engage in illegal insider trading , '' but noted that the memo ``
+must in no way be construed as indicating that the party has been exonerated or that no action may ultimately result '' . Critics allege that this decision was
+strongly influenced by the makeup of the SEC at the time , which heavily favored Bush . The chairman at the time was Richard Breeden , a good friend of the Bush
+family 's who had been nominated to the SEC by President George H.W. Bush and who had been a lawyer in James Baker 's firm , Baker Botts .
+</item 4>
+
+<item 5>
+Professional life of George W. Bush
+In House of Bush , House of Saud , Craig Unger notes that at the time of Bush 's sale , Harken Energy `` was expected to run out of money in just three days ''
+( p. 123 ) . In a last - ditch attempt to save the company , Harken was advised by the endowment fund of Harvard University to spin off two of its lower -
+performing divisions . `` According to a Harken memo , if the plan did not go through , the company had ' no other source of immediate financing . ' '' Bush had
+already taken out a $500,000 loan and sought Harken 's general counsel for advice . The reply was explicit : `` The act of trading , particularly if close in
+time to the receipt of the inside information , is strong evidence that the insider 's investment decision was based on the inside information ... the insider
+should be advised not to sell '' . This memo was turned over by Bush 's attorney the day after the U.S. Securities and Exchange Commission ( SEC ) ruled that it
+would not charge Bush with insider trading .
+</item 5>
+
+<item 6>
+Professional life of George W. Bush
+Bush and who had been a lawyer in James Baker 's firm , Baker Botts . The SEC 's general counsel at the time was James Doty , who had been appointed by
+President H.W. Bush and as a lawyer in James Baker 's firm , Baker Botts had represented George W. Bush when arrangements were made to acquire the Texas Rangers
+baseball franchise ( although Doty recused himself from the investigation . ) . With Baker Botts representing W. Bush , the Saudi BinLaden family and W. Bush 's
+funding conduit James R. Bath , Doty was involved in the frivilous litigation campaign launched in the attempt to intimidate BinLaden middleman James R Bath 's
+business partner ( ( Charles W. ( `` Bill '' ) White ) ) into cooperating with the attempted cover - up of secret BinLaden Family funding of W. Bush 's
+campaigns and businesses . Bush 's own lawyer was Robert Jordan , who had been `` partners with both Doty and Breeden at Baker Botts and who later became George
+W. Bush 's ambassador to Saudi Arabia '' .
+</item 6>
+
+<item 7>
+2005 World Series
+2016 2017 2018 Houston Astros Formerly the Houston Colt . 45s Based in Houston , Texas Franchise Expansion Draft History Seasons Records No - hitters Awards
+Players Managers Owners and executives First - round draft picks Opening Day starting pitchers All articles Ballparks Colt Stadium Houston Astrodome Minute Maid
+Park Spring training : Geronimo Park Cocoa Expo Stadium Osceola County Stadium The Ballpark of the Palm Beaches Lore 1980 NL West tie - breaker game Killer B 's
+2015 AL Wild Card Game Houston Strong Culture AstroTurf Orbit Crawford Boxes Tal 's Hill Continental League Houston Buffs Houston College Classic Ball Four (
+Jim Bouton book ) The Bad News Bears in Breaking Training Murder at the World Series Night Game `` The Hot Tub '' ( Seinfeld episode ) Boyhood `` Holy Toledo !
+'' Sunshine Kids Darryl Kile Award Key personnel Owner : Jim Crane President : Reid Ryan General Manager : Jeff Luhnow Manager : A.J.
+</item 7>
+
+<item 8>
+Professional life of George W. Bush
+Jump up ^ `` CNN.com - White House defends Bush handling of stock sale - July 3 , 2002 '' . Jump up ^ `` Files : Bush Knew Firm 's Plight Before Stock Sale '' .
+Washington Post . 2002 - 07 - 21 . Retrieved 2007 - 01 - 02 . Jump up ^ http://www.austinchronicle.com/issues/vol17/issue19/pols.bush.html Jump up ^ `` Team
+Player - Texas - Joe Nick Patoski '' . Jump up ^ `` ESPN.com - Major League Baseball - Friday : Bush gets to know Texas '' . Jump up ^ `` Bush Was n't Always a
+Front - Runner '' . Washington Post . 1999 - 10 - 17 . Retrieved 2007 - 04 - 07 .
+</item 8>
+
+<item 9>
+Houston Astros
+In November 2010 , Drayton McLane announced that the Astros were being put up for sale . McLane stated that because the Astros were one of the few franchises in
+Major League Baseball with only one family as the owners , he was planning his estate . McLane was 75 years old as of November 2011 . In March 2011 , local
+Houston businessman Jim Crane emerged as the front - runner to purchase the franchise . In the 1980s , Crane founded an air freight business which later merged
+with CEVA Logistics , and later founded Crane Capital Group . McLane and Crane had a previous handshake agreement for the franchise in 2008 , but Crane abruptly
+changed his mind and broke off discussions . Crane also attempted to buy the Chicago Cubs in 2008 and the Texas Rangers during their 2010 bankruptcy auction .
+Crane came under scrutiny because of previous allegations of discriminatory hiring practices regarding women and minorities , among other issues . This delayed
+MLB 's approval process . During the summer of 2011 , a frustrated Crane hinted that the delays might threaten the deal .
+</item 9>
+
+<item 10>
+Professional life of George W. Bush
+In 1984 , Bush sold the company , hurt in the wake of the 1979 energy crisis , to Spectrum 7 , another Texas gas exploration firm . Under the terms of the sale
+, Bush became CEO . Spectrum 7 lost revenue and was merged into Harken Energy Corporation in 1986 , with Bush becoming a director of Harken . Texas Rangers and
+allegations of insider trading ( edit ) After working on his father 's successful 1988 presidential campaign , Bush learned from fellow Yale alumnus William
+DeWitt , Jr. , that family friend Eddie Chiles wanted to sell the Texas Rangers baseball franchise along with the new sports stadium ; built on land acquired
+under eminent domain law and built under funding financed through taxpayers ' funds backed by a bond issued for its debt . In April 1989 , Bush assembled a
+group of investors from his father 's close friends , including fellow fraternity brother Roland W. Betts ; the group bought an 86 % share of the Rangers for
+$75 million . Bush received a 2 % share by investing $606,302 , of which $500,000 was a bank loan .
+</item 10>
+=== END ITEM id=ad3fbe6ad9ff7419 ===
+
+=== ITEM id=a5cf9b2d1c099b39 ===
+Gold sentences and facts:
+Sentence 0: Mount Baker - Snoqualmie National Forest and Nooksack Falls in the North Cascades range of , Washington , deer hunting scenes .
+  Fact 0.0: Mount Baker-Snoqualmie National Forest is in the North Cascades range of Washington
+  Fact 0.1: Nooksack Falls is in the North Cascades range of Washington
+  Fact 0.2: Deer hunting scenes are associated with Mount Baker-Snoqualmie National Forest
+  Fact 0.3: Deer hunting scenes are associated with Nooksack Falls
+Sentence 1: St. Theodosius Russian Orthodox Cathedral , in the Tremont neighborhood of Cleveland , Ohio . The name plaque is clearly visible in one scene . Lemko Hall , Cleveland , Ohio . Also located in Tremont , the wedding banquet was filmed here . The name is clearly visible in one scene . U.S. Steel Central Furnaces in Cleveland , Ohio . Opening sequence steel mill scenes . Patpong , Bangkok , Thailand , the area used to represent Saigon 's red light district . Sai Yok , Kanchanaburi Province , Thailand Mount Baker - Snoqualmie National Forest and Nooksack Falls in the North Cascades range of , Washington , deer hunting scenes . Steubenville , Ohio , for some mill and neighborhood shots . Struthers , Ohio , for external house and long - range road shots . Also including , the town 's bowling alley is the Bowladrome Lanes , located at 56 State Street , Struthers , Ohio . Weirton , West Virginia , for mill and trailer shots . River Kwai , Thailand , Prison camp and initial Russian roulette scene .
+  Fact 1.0: St. Theodosius Russian Orthodox Cathedral is in the Tremont neighborhood of Cleveland, Ohio
+  Fact 1.1: The name plaque of St. Theodosius Russian Orthodox Cathedral is clearly visible in one scene
+  Fact 1.2: Lemko Hall is in Cleveland, Ohio
+  Fact 1.3: Lemko Hall is also located in Tremont
+  Fact 1.4: The wedding banquet was filmed at Lemko Hall
+  Fact 1.5: The name of Lemko Hall is clearly visible in one scene
+  Fact 1.6: U.S. Steel Central Furnaces are in Cleveland, Ohio
+  Fact 1.7: Opening sequence steel mill scenes are at U.S. Steel Central Furnaces
+  Fact 1.8: Patpong, Bangkok, Thailand is the area used to represent Saigon's red light district
+  Fact 1.9: Sai Yok is a location in Kanchanaburi Province, Thailand
+  Fact 1.10: Mount Baker-Snoqualmie National Forest is in the North Cascades range of Washington
+  Fact 1.11: Nooksack Falls is in the North Cascades range of Washington
+  Fact 1.12: Deer hunting scenes are associated with Mount Baker-Snoqualmie National Forest
+  Fact 1.13: Deer hunting scenes are associated with Nooksack Falls
+  Fact 1.14: Steubenville, Ohio is a location used for some mill and neighborhood shots
+  Fact 1.15: Struthers, Ohio is a location used for external house and long-range road shots
+  Fact 1.16: The town's bowling alley is the Bowladrome Lanes
+  Fact 1.17: The Bowladrome Lanes are located at 56 State Street, Struthers, Ohio
+  Fact 1.18: Weirton, West Virginia is a location used for mill and trailer shots
+  Fact 1.19: River Kwai, Thailand is the location of the prison camp and initial Russian roulette scene
+
+Retrieved items:
+<item 1>
+The Deer Hunter
+The Deer Hunter - wikipedia The Deer Hunter Jump to : navigation , search For other uses , see Deer Hunter ( disambiguation ) . The Deer Hunter UK theatrical
+release poster Directed by Michael Cimino Produced by Barry Spikings Michael Deeley Michael Cimino John Peverall Screenplay by Deric Washburn Story by Deric
+Washburn Michael Cimino Louis Garfinkle Quinn K. Redeker Starring Robert De Niro John Cazale John Savage Meryl Streep Christopher Walken Music by Stanley Myers
+Cinematography Vilmos Zsigmond Edited by Peter Zinner Production company EMI Distributed by Universal Pictures Release date December 8 , 1978 ( 1978 - 12 - 08 )
+( Los Angeles ) February 23 , 1979 ( 1979 - 02 - 23 ) ( United States ) Running time 183 minutes Country United States Language English Russian Vietnamese
+French Budget $15 million Box office $49 million The Deer Hunter is a 1978 American epic war drama film co-written and directed by Michael Cimino about a trio
+of Russian American steelworkers whose lives are changed forever after they fight in the Vietnam War .
+</item 1>
+
+<item 2>
+The Deer Hunter
+Additionally , director Cimino instructed the props department to fashion complete Pennsylvania IDs for each of them , including driver 's licenses , medical
+cards , and various other pieces of paraphernalia , in order to enhance each actor 's sense of his character . Pre-production ( edit ) There has been
+considerable debate , controversy , and conflicting stories about how The Deer Hunter was initially developed and written . Director and co-writer Michael
+Cimino , writer Deric Washburn , and producers Barry Spikings and Michael Deeley all have different versions of how the film came to be . Development ( edit )
+In 1968 , the record company EMI formed a new company called EMI Films , headed by producers Barry Spikings and Michael Deeley . Deeley purchased the first
+draft of a spec script called The Man Who Came to Play , written by Louis Garfinkle and Quinn K. Redeker , for $19,000 . The spec script was about people who go
+to Las Vegas to play Russian roulette . `` The screenplay had struck me as brilliant , '' wrote Deeley , `` but it was n't complete .
+</item 2>
+
+<item 3>
+The Deer Hunter
+In the end , it took 51 minutes . Deeley believes that Cimino always planned to make this prologue last for an hour , and `` the plan was to be advanced by
+stealth rather than straight dealing . '' At this point in the production , nearly halfway through principal photography , Cimino was already over budget , and
+producer Spikings could tell from the script that shooting the extended scene could sink the project . The bar and the steel mill ( edit ) The bar was specially
+constructed in an empty storefront in Mingo Junction , Ohio for $25,000 ; it later became an actual saloon for local steel mill workers . U.S. Steel allowed
+filming inside its Cleveland mill , including placing the actors around the furnace floor , only after securing a $5 million insurance policy . Other filming
+took place in Pittsburgh . Hunting the Deer ( edit ) The first deer to be shot was depicted in a `` gruesome close - up '' , although he was hit with a
+tranquilizer dart . The stag that Michael allows to get away later was the same one used on TV commercials for the Connecticut Life Insurance Company .
+</item 3>
+
+<item 4>
+The Deer Hunter
+I 'd been working 20 hours a day for a month . I got on the plane the next day , and I went back to Manhattan and my carpenter job . '' Deeley 's reaction to
+the revised script ( edit ) Deeley felt the revised script , now called The Deer Hunter , broke fresh ground for the project . The protagonist in the Redeker /
+Garfinkle script , Merle , was an individual who sustained a bad injury in active service and was damaged psychologically by his violent experiences , but was
+nevertheless a tough character with strong nerves and guts . Cimino and Washburn 's revised script distilled the three aspects of Merle 's personality and
+separated them out into three distinct characters . They became three old friends who grew up in the same small industrial town and worked in the same steel
+mill , and in due course were drafted together to Vietnam . In the original script , the roles of Merle ( later renamed Mike ) and Nick were reversed in the
+last half of the film . Nick returns home to Linda , while Mike remains in Vietnam , sends money home to help Steven , and meets his tragic fate at the Russian
+roulette table .
+</item 4>
+
+<item 5>
+The Deer Hunter
+His direction to his actors : `` You put the gun to your head , Chris , you shoot , you fall over and Bobby cradles your head . '' Filming locations ( edit )
+Lemko Hall St. Theodosius Russian Orthodox Cathedral , in the Tremont neighborhood of Cleveland , Ohio . The name plaque is clearly visible in one scene . Lemko
+Hall , Cleveland , Ohio . Also located in Tremont , the wedding banquet was filmed here . The name is clearly visible in one scene . U.S. Steel Central Furnaces
+in Cleveland , Ohio . Opening sequence steel mill scenes . Patpong , Bangkok , Thailand , the area used to represent Saigon 's red light district . Sai Yok ,
+Kanchanaburi Province , Thailand Mount Baker - Snoqualmie National Forest and Nooksack Falls in the North Cascades range of , Washington , deer hunting scenes .
+Steubenville , Ohio , for some mill and neighborhood shots . Struthers , Ohio , for external house and long - range road shots .
+</item 5>
+
+<item 6>
+The Deer Hunter
+2 Washburn 's claim 3.2. 3 Deeley 's reaction to the revised script 4 Filming 4.1 The wedding scenes 4.2 The bar and the steel mill 4.3 Hunting the deer 4.4
+Vietnam and the Russian roulette scenes 4.5 Filming locations 5 Post-production 5.1 Sound design 5.2 Previews 6 Soundtrack 6.1 Selected tracks 7 Release 8
+Analysis 8.1 Controversy over Russian roulette 8.1. 1 Critics ' response 8.1.
+</item 6>
+
+<item 7>
+The Deer Hunter
+During the helicopter stunt , the runners caught on the rope bridge as the helicopter rose , it threatened to seriously injure De Niro and Savage . The actors
+gestured and yelled furiously to the crew in the helicopter to warn them . Footage of this is included in the film . According to Cimino , De Niro requested a
+live cartridge in the revolver for the scene in which he subjects John Cazale 's character to an impromptu game of Russian roulette , to heighten the intensity
+of the situation . Cazale agreed without protest , but obsessively rechecked the gun before each take to make sure that the live round was n't next in the
+chamber . While appearing later in the film , the first scenes shot upon arrival in Thailand were the hospital sequences between Walken and the military doctor
+. Deeley believed that this scene was `` the spur that would earn him an Academy Award . '' In the final scene in the gambling den between Mike and Nick ,
+Cimino had Walken and De Niro improvise in one take .
+</item 7>
+
+<item 8>
+The Deer Hunter
+The reception scene was filmed at nearby Lemko Hall . The amateur extras lined up for the crowded wedding - dance sequences drank real liquor and beer . The
+scenes were filmed in the summer , but were set in the fall . To accomplish a look of fall , individual leaves were removed from deciduous trees . Zsigmond also
+had to desaturate the colors of the exterior shots , partly in camera and in the laboratory processing . The production manager asked each of the Russian
+immigrant extras to bring to the location a gift - wrapped box to double for wedding presents . The manager figured if the extras did this , not only would the
+production save time and money , but the gifts would also look more authentic . Once the unit wrapped and the extras disappeared , the crew discovered to their
+amusement that the boxes were n't empty but filled with real presents , from china to silverware . `` Who got to keep all these wonderful offerings , '' wrote
+Deeley `` is a mystery I never quite fathomed . '' Cimino originally claimed that the wedding scene would take up 21 minutes of screen time . In the end , it
+took 51 minutes .
+</item 8>
+
+<item 9>
+The Deer Hunter
+Struthers , Ohio , for external house and long - range road shots . Also including , the town 's bowling alley is the Bowladrome Lanes , located at 56 State
+Street , Struthers , Ohio . Weirton , West Virginia , for mill and trailer shots . River Kwai , Thailand , Prison camp and initial Russian roulette scene .
+Post-production ( edit ) By this point , The Deer Hunter had cost $13 million and the film still had to go through an arduous post-production . Film editor
+Peter Zinner was given 600,000 feet of printed film to edit , a monumental task at the time . Producers Spikings and Deeley were pleased with the first cut ,
+which ran for three and a half hours . `` We were thrilled by what we saw , '' wrote Deeley , `` and knew that within the three and a half hours we watched
+there was a riveting film . '' Executives from Universal , including Lew Wasserman and Sid Sheinberg , were not very enthusiastic . `` I think they were shocked
+, '' recalled Spikings . `` What really upset them was ' God Bless America ' .
+</item 9>
+
+<item 10>
+The Deer Hunter
+( Television Production ) . Chicago , IL : WTTW . ^ Jump up to : The Deer Hunter ( 1978 ) -- Filming locations Jump up ^ `` Lemko Hall '' . The Encyclopedia of
+Cleveland History . May 24 , 2002 . Jump up ^ `` 7 Movie Locations in Bangkok - Bangkok.com Magazine '' . Bangkok.com . Retrieved 2016 - 10 - 17 . Jump up ^ Nam
+, Suzanne ( 2012 ) . Moon Thailand . Avalon Travel . p. 320 . ISBN 9781598809695 . Jump up ^ Krause , Mariella ( 2013 ) . Lonely Planet Pacific Northwest 's
+Best Trips . Lonely Planet . p. 118 . ISBN 1741798159 . Jump up ^ `` The Deer Hunter film locations ( 1978 ) '' . Movie-locations.com . Retrieved 2016 - 10 - 17
+. Jump up ^ Randy Fox Writer and photographer ( 2012 - 05 - 05 ) .
+</item 10>
+=== END ITEM id=a5cf9b2d1c099b39 ===
+
+=== ITEM id=1b934203cb2f4346 ===
+Gold sentences and facts:
+Sentence 0: The College Football Playoff selection committee chose the semifinalists following the conclusion of the 2017 regular season . Alabama and Georgia advanced to the national championship after winning the semifinal games hosted by the Sugar Bowl and the Rose Bowl , respectively , on January 1 , 2018 . The championship game was played at Mercedes - Benz Stadium in Atlanta , Georgia on January 8 , 2018 .
+  Fact 0.0: The College Football Playoff selection committee chose the semifinalists.
+  Fact 0.1: The semifinalists were chosen following the conclusion of the 2017 regular season.
+  Fact 0.2: Alabama advanced to the national championship.
+  Fact 0.3: Georgia advanced to the national championship.
+  Fact 0.4: Alabama won its semifinal game hosted by the Sugar Bowl on January 1, 2018.
+  Fact 0.5: Georgia won its semifinal game hosted by the Rose Bowl on January 1, 2018.
+  Fact 0.6: The championship game was played at Mercedes-Benz Stadium in Atlanta, Georgia.
+  Fact 0.7: The championship game was played on January 8, 2018.
+Sentence 1: The Mercedes - Benz Stadium in Atlanta , Georgia was announced as the host site for the fourth College Football National Championship on November 4 , 2015 .
+  Fact 1.0: Mercedes-Benz Stadium in Atlanta, Georgia was announced as the host site for the fourth College Football National Championship.
+  Fact 1.1: The host site announcement was made on November 4, 2015.
+
+Retrieved items:
+<item 1>
+2018 College Football Playoff National Championship
+1990 Sugar Bowl 1991 Fiesta Bowl 1991 Blockbuster Bowl 1993 Sugar Bowl # 1993 Gator Bowl 1995 Florida Citrus Bowl 1997 Outback Bowl 1998 Music City Bowl 2000
+Orange Bowl 2001 Independence Bowl 2004 Music City Bowl 2006 Cotton Bowl Classic 2006 Independence Bowl 2007 Independence Bowl 2009 Sugar Bowl 2010 BCS National
+Championship Game # 2011 Capital One Bowl 2012 BCS National Championship Game # 2013 BCS National Championship Game # 2014 Sugar Bowl 2015 Sugar Bowl / 2015
+Cotton Bowl Classic ( Dec ) / 2016 College Football Playoff National Championship # 2016 Peach Bowl / 2017 College Football Playoff National Championship # 2018
+Sugar Bowl / 2018 College Football Playoff National Championship # # denotes national championship game / denotes College Football Playoff semifinal game
+Georgia Bulldogs bowl games 1942 Orange Bowl 1943 Rose Bowl 1946 Oil Bowl 1947 Sugar Bowl 1948 Gator Bowl 1949 Orange Bowl 1950 Presidential Cup 1960 Orange
+Bowl 1964 Sun Bowl 1966 Cotton Bowl Classic
+</item 1>
+
+<item 2>
+2018 College Football Playoff National Championship
+Alabama and Georgia advanced to the national championship after winning the semifinal games hosted by the Sugar Bowl and the Rose Bowl , respectively , on
+January 1 , 2018 . The championship game was played at Mercedes - Benz Stadium in Atlanta , Georgia on January 8 , 2018 . Contents ( hide ) 1 Background 2 2018
+College Football Playoff 3 Teams 3.1 Alabama 3.2 Georgia 4 Game summary 4.1 Scoring summary 4.2 Statistics 5 Broadcasting 6 Dispute 7 See also 8 References 9
+External links Background ( edit ) The Mercedes - Benz Stadium in Atlanta , Georgia was announced as the host site for the fourth College Football National
+Championship on November 4 , 2015 .
+</item 2>
+
+<item 3>
+2018 College Football Playoff National Championship
+Jump up ^ Alex Scarbrough ( November 4 , 2015 ) . `` Atlanta , Santa Clara and New Orleans land CFP title games for 2018 -- 20 '' . ESPN.com . Retrieved
+November 4 , 2015 . ^ Jump up to : `` Selection Committee Rankings : Final Top 25 Rankings '' ( PDF ) . College Football Playoff . December 3 , 2017 . Retrieved
+December 3 , 2017 . Jump up ^ `` Alabama 's Sugar Bowl win against Clemson sets up all - SEC final : Final score , stats , analysis '' . nola.com . January 1 ,
+2018 . Retrieved January 2 , 2018 . Jump up ^ Emerson , Seth ( January 1 , 2018 ) . `` Georgia to play for national championship after Rose Bowl win in 2 OT ''
+. ajc.com . Retrieved January 2 , 2018 . ^ Jump up to : Hoffman , Benjamin ; Drape , Joe ; Tracy , Marc ( January 8 , 2018 ) . `` National Championship Game :
+Georgia vs.
+</item 3>
+
+<item 4>
+2018 College Football Playoff National Championship
+champions Mythical national championship Plus - One system Power Five conferences Championship games for each season are played in January , while semifinal
+games are identified by season year , alternating between December and January Links to related articles 2017 -- 18 NCAA football bowl game season New Mexico (
+Dec. 16 ) Las Vegas ( Dec. 16 ) Camellia ( Dec. 16 ) Cure ( Dec. 16 ) New Orleans ( Dec. 16 ) Boca Raton ( Dec. 19 ) Frisco ( Dec. 20 ) Gasparilla ( Dec. 21 )
+Famous Idaho Potato ( Dec. 22 ) Bahamas ( Dec. 22 ) Armed Forces ( Dec. 23 ) Birmingham ( Dec. 23 ) Dollar General ( Dec. 23 ) Hawaii ( Dec. 24 ) Quick Lane (
+Dec. 26 ) Heart of Dallas ( Dec. 26 ) Cactus ( Dec. 26 ) Independence ( Dec. 27 ) Pinstripe ( Dec. 27 ) Texas ( Dec. 27 ) Foster Farms ( Dec. 27 ) Military (
+Dec. 28 ) Camping World ( Dec. 28 ) Alamo ( Dec.
+</item 4>
+
+<item 5>
+2018 College Football Playoff National Championship
+28 ) Camping World ( Dec. 28 ) Alamo ( Dec. 28 ) Holiday ( Dec. 28 ) Belk ( Dec. 29 ) Cotton ( Dec. 29 ) Sun ( Dec. 29 ) Music City ( Dec. 29 ) Arizona ( Dec.
+29 ) Fiesta ( Dec. 30 ) Liberty ( Dec. 30 ) Orange ( Dec. 30 ) TaxSlayer ( Dec. 30 ) Citrus ( Jan. 1 ) Outback ( Jan. 1 ) Peach ( Jan. 1 ) College Football
+Playoff games : Rose ( semifinal ) ( Jan. 1 ) Sugar ( semifinal ) ( Jan. 1 ) National Championship Game ( Jan. 8 ) All - Star Games East -- West Shrine Game (
+Jan. 20 ) NFLPA Collegiate Bowl ( Jan. 20 ) Senior Bowl ( Jan. 27 ) NCAA Football Championship Games Division I FBS 2007 * 2008 * 2009 * 2010 * 2011 * 2012 *
+2013 * 2014 * 2015 * 2016 * 2017 * 2018 * 2019 *
+</item 5>
+
+<item 6>
+2018 College Football Playoff National Championship
+2018 College football Playoff ( edit ) Semifinals Championship January 1 -- Sugar Bowl Mercedes - Benz Superdome , New Orleans 1 Clemson 6 4 Alabama 24 January
+8 -- National Championship Mercedes - Benz Stadium , Atlanta 4 Alabama ( OT ) 26 January 1 -- Rose Bowl Rose Bowl , Pasadena 3 Georgia 23 2 Oklahoma 48 3
+Georgia ( 2OT ) 54 This bracket : view talk edit The College Football Playoff ( CFP ) selected four teams to advance to the playoff : the Clemson Tigers ,
+Oklahoma Sooners , Georgia Bulldogs , and Alabama Crimson Tide . Teams ( edit ) Alabama ( edit ) See also : 2017 Alabama Crimson Tide football team The Alabama
+Crimson Tide defeated the Clemson Tigers in the 2018 Sugar Bowl by a score of 24 -- 6 to reach the championship game . The Tide had a 12 -- 1 season , becoming
+the SEC West Division co-champions with the Auburn Tigers . The Crimson Tide were coached by Nick Saban .
+</item 6>
+
+<item 7>
+2018 College Football Playoff National Championship
+1982 1984 1985 1986 1988 1989 1990 1991 1992 1993 1994 1995 1997 1998 1999 2000 2001 2002 2003 2005 2006 2007 2008 2009 2011 2012 2013 2014 2015 2016 2017 2018
+Division III 1973 1976 1977 1978 1979 1980 1981 1982 1984 1985 1986 1988 1989 1990 1991 1992 1993 1994 1995 1997 1998 1999 2000 2001 2002 2003 2005 2006 2007
+2008 2009 2011 2012 2013 2014 2015 2016 2017 2018 Games played in January are denoted by an asterisk Alabama Crimson Tide bowl games 1926 Rose Bowl 1927 Rose
+Bowl 1931 Rose Bowl
+</item 7>
+
+<item 8>
+2018 College Football Playoff National Championship
+related to 2018 College Football Playoff National Championship at Wikimedia Commons College Football Playoff Championships Overview College Football Playoff
+National Championship Games 2014 -- 15 2015 -- 16 2016 -- 17 2017 -- 18 2018 -- 19 2019 -- 20 2020 -- 21 Semifinal Bowls Rose 2014 ( Jan 2015 ) 2017 ( Jan 2018
+) 2020 ( Jan 2021 ) Sugar 2014 ( Jan 2015 ) 2017 ( Jan 2018 ) 2020 ( Jan 2021 ) Orange 2015 ( Dec 2015 ) 2018 ( Dec 2018 ) Cotton 2015 ( Dec 2015 ) 2018 ( Dec
+2018 ) Peach 2016 ( Dec 2016 ) 2019 ( Dec 2019 ) Fiesta 2016 ( Dec 2016 ) 2019 ( Dec 2019 ) Other List of College Football Playoff games New Year 's Six College
+Football Playoff National Championship Trophy NCAA Division I FBS champions Mythical national championship Plus - One system Power Five conferences Championship
+games for each season are played in
+</item 8>
+
+<item 9>
+2018 College Football Playoff National Championship
+2018 College football Playoff national championship - wikipedia 2018 College football Playoff national championship Jump to : navigation , search 2018 College
+Football Playoff National Championship Alabama Crimson Tide Georgia Bulldogs ( 12 -- 1 ) ( 13 -- 1 ) SEC SEC 26 23 Head coach : Nick Saban Head coach : Kirby
+Smart AP Coaches CFP AP Coaches CFP OT Total Alabama 0 0 10 10 6 26 Georgia 0 13 7 0 23 Date January 8 , 2018 Season 2017 Stadium Mercedes - Benz Stadium
+Location Atlanta , Georgia MVP Offensive : # 13 QB Tua Tagovailoa , Fr . Alabama Defensive : # 94 DT Da'Ron Payne , Jr .
+</item 9>
+
+<item 10>
+2018 College Football Playoff National Championship
+Not an officially sanctioned NCAA championship Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=2018_College_Football_Playoff_National_Championship&oldid=822294017 '' Categories : 2017 -- 18 NCAA football bowl
+games 2017 -- 18 College Football Playoff 2018 in sports in Georgia ( U.S. state ) Sports competitions in Atlanta American football in Georgia ( U.S. state )
+2010s in Atlanta Alabama Crimson Tide football bowl games Georgia Bulldogs football bowl games January 2018 sports events in the United States Hidden categories
+: Use mdy dates from January 2018 Talk Contents About Wikipedia Français Edit links This page was last edited on 25 January 2018 , at 15 : 15 . Text is
+available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use and
+Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 10>
+=== END ITEM id=1b934203cb2f4346 ===
+
+=== ITEM id=bb34bfabdeffeffd ===
+Gold sentences and facts:
+Sentence 0: Human fertilization is the union of a human egg and sperm , usually occurring in the ampulla of the fallopian tube . The result of this union is the production of a zygote cell , or fertilized egg , initiating prenatal development . Scientists discovered the dynamics of human fertilization in the nineteenth century .
+  Fact 0.0: Human fertilization is the union of a human egg and sperm.
+  Fact 0.1: Human fertilization usually occurs in the ampulla of the fallopian tube.
+  Fact 0.2: The result of the union of a human egg and sperm is a zygote cell, also called a fertilized egg.
+  Fact 0.3: The union of a human egg and sperm initiates prenatal development.
+  Fact 0.4: Scientists discovered the dynamics of human fertilization in the nineteenth century.
+Sentence 1: The process of fertilization involves a sperm fusing with an ovum . The most common sequence begins with ejaculation during copulation , follows with ovulation , and finishes with fertilization . Various exceptions to this sequence are possible , including artificial insemination , in vitro fertilization , external ejaculation without copulation , or copulation shortly after ovulation . Upon encountering the secondary oocyte , the acrosome of the sperm produces enzymes which allow it to burrow through the outer jelly coat of the egg . The sperm plasma then fuses with the egg 's plasma membrane , the sperm head disconnects from its flagellum and the egg travels down the Fallopian tube to reach the uterus .
+  Fact 1.0: The process of fertilization involves a sperm fusing with an ovum.
+  Fact 1.1: The most common sequence of fertilization begins with ejaculation during copulation.
+  Fact 1.2: The most common sequence of fertilization is followed by ovulation.
+  Fact 1.3: The most common sequence of fertilization finishes with fertilization.
+  Fact 1.4: Various exceptions to the most common sequence of fertilization are possible.
+  Fact 1.5: One exception to the sequence of fertilization is artificial insemination.
+  Fact 1.6: One exception to the sequence of fertilization is in vitro fertilization.
+  Fact 1.7: One exception to the sequence of fertilization is external ejaculation without copulation.
+  Fact 1.8: One exception to the sequence of fertilization is copulation shortly after ovulation.
+  Fact 1.9: Upon encountering the secondary oocyte, the acrosome of the sperm produces enzymes.
+  Fact 1.10: The enzymes from the acrosome of the sperm allow the sperm to burrow through the outer jelly coat of the egg.
+  Fact 1.11: The sperm plasma fuses with the egg's plasma membrane.
+  Fact 1.12: The sperm head disconnects from its flagellum.
+  Fact 1.13: The egg travels down the Fallopian tube to reach the uterus.
+
+Retrieved items:
+<item 1>
+Human fertilization
+This is why all mitochondria in humans are of maternal origin . Still , a considerable amount of RNA from the sperm is delivered to the resulting embryo and
+likely influences embryo development and the phenotype of the offspring . Replication ( edit ) The pronuclei migrate toward the center of the oocyte , rapidly
+replicating their DNA as they do so to prepare the zygote for its first mitotic division . Mitosis ( edit ) Usually 23 chromosomes from spermatozoon and 23
+chromosomes from egg cell fuse ( half of spermatozoons carry X chromosome and the other half Y chromosome ) . Their membranes dissolve , leaving no barriers
+between the male and female chromosomes . During this dissolution , a mitotic spindle forms between them . The spindle captures the chromosomes before they
+disperse in the egg cytoplasm . Upon subsequently undergoing mitosis ( which includes pulling of chromatids towards centrioles in anaphase ) the cell gathers
+genetic material from the male and female together . Thus , the first mitosis of the union of sperm and oocyte is the actual fusion of their chromosomes .
+</item 1>
+
+<item 2>
+Human fertilization
+Sperm preparation ( edit ) Further information : Acrosome reaction At the beginning of the process , the sperm undergoes a series of changes , as freshly
+ejaculated sperm is unable or poorly able to fertilize . The sperm must undergo capacitation in the female 's reproductive tract over several hours , which
+increases its motility and destabilizes its membrane , preparing it for the acrosome reaction , the enzymatic penetration of the egg 's tough membrane , the
+zona pellucida , which surrounds the oocyte . Zona pellucida ( edit ) After binding to the corona radiata the sperm reaches the zona pellucida , which is an
+extra-cellular matrix of glycoproteins . A special complementary molecule on the surface of the sperm head binds to a ZP3 glycoprotein in the zona pellucida .
+This binding triggers the acrosome to burst , releasing enzymes that help the sperm get through the zona pellucida . Some sperm cells consume their acrosome
+prematurely on the surface of the egg cell , facilitating the penetration by other sperm cells .
+</item 2>
+
+<item 3>
+Human fertilization
+The process of fertilization involves a sperm fusing with an ovum . The most common sequence begins with ejaculation during copulation , follows with ovulation
+, and finishes with fertilization . Various exceptions to this sequence are possible , including artificial insemination , in vitro fertilization , external
+ejaculation without copulation , or copulation shortly after ovulation . Upon encountering the secondary oocyte , the acrosome of the sperm produces enzymes
+which allow it to burrow through the outer jelly coat of the egg . The sperm plasma then fuses with the egg 's plasma membrane , the sperm head disconnects from
+its flagellum and the egg travels down the Fallopian tube to reach the uterus . In vitro fertilization ( IVF ) is a process by which egg cells are fertilized by
+sperm outside the womb , in vitro . Contents ( hide ) 1 Anatomy 1.1 Corona radiata 1.2 Cone of attraction and perivitelline membrane 1.3 Sperm preparation 1.4
+Zona pellucida 1.4.
+</item 3>
+
+<item 4>
+Human fertilization
+1 Cortical reaction 2 Fusion 2.1 Cell membranes 2.2 Transformations 2.3 Replication 2.4 Mitosis 3 Fertilization age 4 Diseases 5 See also 6 References 7
+External links Anatomy ( edit ) Corona radiata ( edit ) The sperm binds through the corona radiata , a layer of follicle cells on the outside of the secondary
+oocyte . Fertilization occurs when the nucleus of both a sperm and an egg fuse to form a diploid cell , known as zygote . The successful fusion of gametes forms
+a new organism . Cone of attraction and perivitelline membrane ( edit ) Where the spermatozoon is about to pierce , the yolk ( ooplasm ) is drawn out into a
+conical elevation , termed the cone of attraction or reception cone . Once the spermatozoon has entered , the peripheral portion of the yolk changes into a
+membrane , the perivitelline membrane , which prevents the passage of additional spermatozoa .
+</item 4>
+
+<item 5>
+Human fertilization
+Human fertilization - wikipedia Human fertilization Jump to : navigation , search Part of a series on Human growth and development Stages Human embryogenesis
+Fetus Infant Toddler Early childhood Child Preadolescence Adolescence Adult Middle age Old age Biological milestones Fertilization Childbirth Walking Language
+acquisition Puberty Menopause Ageing Death Development and psychology Pre - and perinatal Infant and child Adolescent Youth Young adult Adult Maturity
+Developmental stage theories Attachment Ecological Psychosocial Psychosexual development Moral Cognitive Cultural - historical Evolutionary Human body portal
+The acrosome reaction for a sea urchin , a similar process . Note that the picture shows several stages of one and the same spermatozoon - only one penetrates
+the ovum Illustration depicting ovulation and fertilization . Human fertilization is the union of a human egg and sperm , usually occurring in the ampulla of
+the fallopian tube . The result of this union is the production of a zygote cell , or fertilized egg , initiating prenatal development . Scientists discovered
+the dynamics of human fertilization in the nineteenth century . The process of fertilization involves a sperm fusing with an ovum .
+</item 5>
+
+<item 6>
+Gametes are haploid reproductive cells, usually made by meiosis: eggs and sperm in animals, with sex-determination patterns varying among species. Oogenesis and
+spermatogenesis involve recombination; fertilization typically occurs in the fallopian tube, where capacitated sperm penetrate the egg’s coats. The egg blocks
+additional sperm, completes meiosis, and combines its chromosomes with the sperm’s to form a diploid zygote; mitochondria are maternally inherited.
+Superfecundation fertil
+</item 6>
+
+<item 7>
+Human fertilization
+Fusion ( edit ) Fertilization and implantation in humans . After the sperm enters the cytoplasm of the oocyte ( also called ovocyte ) , the tail and the outer
+coating of the sperm disintegrate and the cortical reaction takes place , preventing other sperm from fertilizing the same egg . The oocyte now undergoes its
+second meiotic division producing the haploid ovum and releasing a polar body . The sperm nucleus then fuses with the ovum , enabling fusion of their genetic
+material . Cell membranes ( edit ) The fusion of cell membranes of the secondary oocyte and sperm takes place . Transformations ( edit ) In preparation for the
+fusion of their genetic material both the oocyte and the sperm undergo transformations as a reaction to the fusion of cell membranes . The oocyte completes its
+second meiotic division . This results in a mature ovum . The nucleus of the oocyte is called a pronucleus in this process , to distinguish it from the nuclei
+that are the result of fertilization . The sperm 's tail and mitochondria degenerate with the formation of the male pronucleus . This is why all mitochondria in
+humans are of maternal origin .
+</item 7>
+
+<item 8>
+Human fertilization occurs when a sperm fuses with an egg, usually in the ampulla of the fallopian tube. This union creates a zygote and begins prenatal
+development. Scientists investigated the process in the nineteenth century; related research examines sperm–egg interactions and fertilization mechanisms.
+</item 8>
+
+<item 9>
+Human fertilization
+As a population , sperm cells have on average 50 % genome similarity so the premature acrosomal reactions aid fertilization by a member of the same cohort . It
+may be regarded as a mechanism of kin selection . Recent studies have shown that the egg is not passive during this process . Cortical reaction ( edit ) Once
+the sperm cells find their way past the zona pellucida , the cortical reaction occurs . Cortical granules inside the secondary oocyte fuse with the plasma
+membrane of the cell , causing enzymes inside these granules to be expelled by exocytosis to the zona pellucida . This in turn causes the glyco - proteins in
+the zona pellucida to cross-link with each other -- i.e. the enzymes cause the ZP2 to hydrolyse into ZP2f -- making the whole matrix hard and impermeable to
+sperm . This prevents fertilization of an egg by more than one sperm . The cortical reaction and acrosome reaction are both essential to ensure that only one
+sperm will fertilize an egg . Fusion ( edit ) Fertilization and implantation in humans .
+</item 9>
+
+<item 10>
+Human fertilization usually follows ejaculation and ovulation, though assisted or other sequences are possible. Sperm enzymes penetrate the egg’s corona radiata
+and outer coat; sperm and egg membranes then fuse. The sperm head enters, while the egg forms a perivitelline membrane that blocks additional sperm. Fusion of
+the sperm and egg nuclei creates a diploid zygote. In IVF, fertilization occurs outside the womb.
+</item 10>
+=== END ITEM id=bb34bfabdeffeffd ===

@@ -1,0 +1,546 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "b85b557c12d7e0ef",
+   "kind": "answer",
+   "question": "Worker: What professional title to both Christopher Nolan and Paul Schrader boast?",
+   "gold_answers": [
+    "screenwriter"
+   ],
+   "model_answer": "Film directors"
+  },
+  {
+   "id": "a2d34a46202681fb",
+   "kind": "answer",
+   "question": " Pramod Bhasin was the former CEO of a company that provided what kind of services?",
+   "gold_answers": [
+    "IT"
+   ],
+   "model_answer": "Business process outsourcing (BPO) services"
+  },
+  {
+   "id": "5d6c07fe0a90de45",
+   "kind": "answer",
+   "question": "Are Eryngium and Arnebia in the same kingdom of life forms?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both belong to the kingdom Plantae."
+  },
+  {
+   "id": "eb1fb8d721b17ca2",
+   "kind": "answer",
+   "question": "What did the second First Lady to be born outside the United States or areas that would become part of the United States do before marrying?",
+   "gold_answers": [
+    "fashion model"
+   ],
+   "model_answer": "She worked as a fashion model."
+  },
+  {
+   "id": "f9b688559ddf41fa",
+   "kind": "answer",
+   "question": "Was Talking Heads and Man or Astro-man? formed further north?",
+   "gold_answers": [
+    "Talking Heads"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "30686c753d73b877",
+   "kind": "answer",
+   "question": "Robin R. Bottin is known for his collaboration with an American director and producer who won an Academy Award, Golden Globe and BAFTA award for what movie?",
+   "gold_answers": [
+    "The Social Network"
+   ],
+   "model_answer": "Schindler’s List"
+  },
+  {
+   "id": "d92ab1b5610ff8a4",
+   "kind": "answer",
+   "question": "Japanese Weekend School of New York has offices in the entertainment complex in what section of New Rochelle?",
+   "gold_answers": [
+    "Downtown"
+   ],
+   "model_answer": "Downtown section of New Rochelle\n"
+  },
+  {
+   "id": "1443125e1d88a6bf",
+   "kind": "answer",
+   "question": "What region has the indigenous language that includes the word Catuaba?",
+   "gold_answers": [
+    "South America"
+   ],
+   "model_answer": "Brazilian Amazon region"
+  },
+  {
+   "id": "5211ece62dbb0a56",
+   "kind": "answer",
+   "question": "Why is Minister Pool important to Black Country and the West Midlands in England?",
+   "gold_answers": [
+    "defence of the Cathedral"
+   ],
+   "model_answer": "It historically helped defend Lichfield Cathedral Close and powered a mill."
+  },
+  {
+   "id": "a234fe9c4d8b6214",
+   "kind": "answer",
+   "question": "What was the companion piece that Poe's brother published?",
+   "gold_answers": [
+    "\"The Whalestoe Letters\""
+   ],
+   "model_answer": "“The Pirate”"
+  },
+  {
+   "id": "9745c98f35e24c7a",
+   "kind": "answer",
+   "question": "What city is the women's Vans Triple Crown of Surfing event hosted at?",
+   "gold_answers": [
+    "City and County of Honolulu"
+   ],
+   "model_answer": "Haleiwa, Sunset Beach, and Honolua Bay, Maui"
+  },
+  {
+   "id": "007a1c89b2639e19",
+   "kind": "answer",
+   "question": "Where is the county seat for people living in Henderson Point, Mississippi?",
+   "gold_answers": [
+    "Gulfport, Biloxi"
+   ],
+   "model_answer": "Gulfport, Mississippi"
+  },
+  {
+   "id": "21adf9ccd997d28a",
+   "kind": "answer",
+   "question": "Where are Teide National Park and Garajonay National Park located?",
+   "gold_answers": [
+    "Canary Islands, Spain"
+   ],
+   "model_answer": "Tenerife and La Gomera, in Spain’s Canary Islands."
+  },
+  {
+   "id": "7c1577f4b1513798",
+   "kind": "answer",
+   "question": " \"Collateral Damage\" is an episode of the television series \"Millennium\" and features the host of a late night talk show that airs how often?",
+   "gold_answers": [
+    "seven nights a week"
+   ],
+   "model_answer": "Weeknights"
+  },
+  {
+   "id": "829097e21f4e2843",
+   "kind": "answer",
+   "question": "What was the profession of the one who wrote a song on a 2005 album he collaborated on with Marc Predka?",
+   "gold_answers": [
+    "professional wrestler, actor, and hip hop musician"
+   ],
+   "model_answer": "WWE wrestler"
+  },
+  {
+   "id": "4683cb08a16cce6d",
+   "kind": "answer",
+   "question": "Are Random House Tower and 888 7th Avenue both used for real estate?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "480030dd29cd9292",
+   "kind": "answer",
+   "question": "What is the population of the city where the Akademisches Kunstmuseum is?",
+   "gold_answers": [
+    "300,000"
+   ],
+   "model_answer": "Over 300,000 people"
+  },
+  {
+   "id": "c0fe226c9af73935",
+   "kind": "answer",
+   "question": "What type of group does Pablo Carballo and Argentine Air Force have in common?",
+   "gold_answers": [
+    "military"
+   ],
+   "model_answer": "Military aviation group"
+  },
+  {
+   "id": "9f954d75914d98e1",
+   "kind": "answer",
+   "question": "Crash is similar to what 16th century British card game in the sense that there is no betting?",
+   "gold_answers": [
+    "In Crash, there is no betting, as in Brag"
+   ],
+   "model_answer": "Three-card brag"
+  },
+  {
+   "id": "41149c331ed85608",
+   "kind": "answer",
+   "question": "Where is the county seat for people living in Henderson Point, Mississippi?",
+   "gold_answers": [
+    "Gulfport, Biloxi"
+   ],
+   "model_answer": "Biloxi, Mississippi"
+  },
+  {
+   "id": "3da06ec349f35e9b",
+   "kind": "answer",
+   "question": "Were either Hou Hsiao-hsien or Kenny Ortega winners of an Academy Award?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Neither of them."
+  },
+  {
+   "id": "061b999d7b090b5d",
+   "kind": "answer",
+   "question": "Who was born first, Andy Warhol or Alexander Butler?",
+   "gold_answers": [
+    "Alexander Butler"
+   ],
+   "model_answer": "Alexander Butler was born first."
+  },
+  {
+   "id": "a1ca930b4cf50f12",
+   "kind": "answer",
+   "question": "Are the 1908 Ex parte Young and 1948 McCollum v. Board of Education United States Supreme Court cases related to each other in any way?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No direct relationship indicated."
+  },
+  {
+   "id": "def962840495c12a",
+   "kind": "answer",
+   "question": "What occupation have Carly Gullickson and Francesca Schiavone both held?",
+   "gold_answers": [
+    "professional tennis player."
+   ],
+   "model_answer": "Professional tennis players"
+  },
+  {
+   "id": "31dd18712ef062bf",
+   "kind": "answer",
+   "question": "Bandit was built in 1988 by which Japanese amusement ride company that built roller coasters, giant wheels, carousels, flumes, dark rides, sky cycles and other amusement rides?",
+   "gold_answers": [
+    "TOGO company"
+   ],
+   "model_answer": "Togo Co., Ltd."
+  },
+  {
+   "id": "57481aec1c54b979",
+   "kind": "answer",
+   "question": "What are some other areas that share a common deer species with the forests of Mara and Mondrem?",
+   "gold_answers": [
+    "New Zealand, Canada, the United States, the Falkland Islands, and Peru."
+   ],
+   "model_answer": "Europe and western Eurasia\n"
+  },
+  {
+   "id": "15f2fc6d19f960c2",
+   "kind": "answer",
+   "question": "What do the Church of St. Mary of the Spring and Hagia Irene have in common?",
+   "gold_answers": [
+    "Greek Eastern Orthodox church"
+   ],
+   "model_answer": "Both are Eastern Orthodox churches in Istanbul."
+  },
+  {
+   "id": "72d907683b8b7dc9",
+   "kind": "answer",
+   "question": "What type of art does The Consul and Arlecchino have in common?",
+   "gold_answers": [
+    "music"
+   ],
+   "model_answer": "Opera"
+  },
+  {
+   "id": "0892bd05be713080",
+   "kind": "answer",
+   "question": "What movies has Juno Temple starred in?",
+   "gold_answers": [
+    "She has appeared in films such as \" Black Mass\", \"The Other Boleyn Girl\", \"Wild Child\", \"Atonement\", \"Maleficent\", \"The Three Musketeers\" and \"The Dark Knight Rises\"."
+   ],
+   "model_answer": "Black Mass, The Other Boleyn Girl, Wild Child, Atonement, Maleficent, The Three Musketeers, The Dark Knight Rises, Dirty Girl, Cracks, Jack & Diane, Magic Magic, and Lovelace."
+  },
+  {
+   "id": "c9f5d102b712bfd1",
+   "kind": "answer",
+   "question": "In what county did Michael Ola attend high school?",
+   "gold_answers": [
+    "Clayton County, Georgia, United States"
+   ],
+   "model_answer": "Fulton County"
+  },
+  {
+   "id": "d6a5d31fad026c47",
+   "kind": "answer",
+   "question": "What nationality was the Jaguar R2 driver, Eddie Irvine?",
+   "gold_answers": [
+    "British racing driver"
+   ],
+   "model_answer": "Northern Irish"
+  },
+  {
+   "id": "f0f962f294e6205a",
+   "kind": "answer",
+   "question": "Live Acoustic America features a cover of a Beatles song that peaked at what number in the United Kingdom?",
+   "gold_answers": [
+    "4"
+   ],
+   "model_answer": "15th position"
+  },
+  {
+   "id": "db7d6144a0c2dea0",
+   "kind": "answer",
+   "question": "Which American sketch comedy television series starring John C. Reilly was produced by Abso Lutely Productions?",
+   "gold_answers": [
+    "Check It Out!"
+   ],
+   "model_answer": "Check It Out! with Dr. Steve Brule"
+  },
+  {
+   "id": "d5933b0414ff8f54",
+   "kind": "answer",
+   "question": "Out of two American colonies that had a series of skirmishes and raids between 1701 and 1765 at the disputed border, which British proprietary colony became a royal colony on the northeast coast of North America?",
+   "gold_answers": [
+    "Province of New York"
+   ],
+   "model_answer": "New Jersey"
+  },
+  {
+   "id": "81b280e6fe6d89fa",
+   "kind": "answer",
+   "question": "what is the english name of Émile Verdets editorial?",
+   "gold_answers": [
+    "Annals of Chemistry and of Physics"
+   ],
+   "model_answer": "Scientific Annals of the École Normale Supérieure"
+  },
+  {
+   "id": "223748c27d4dbb13",
+   "kind": "answer",
+   "question": "The first edition of the Dungeons & Dragons Basic Set was written by a professor at what university?",
+   "gold_answers": [
+    "University of Southern California"
+   ],
+   "model_answer": "University of Southern California School of Medicine"
+  },
+  {
+   "id": "7385d559668bcf58",
+   "kind": "answer",
+   "question": "The company that created the Data Universal Numbering System has a database that contains how many business records?",
+   "gold_answers": [
+    "265 million"
+   ],
+   "model_answer": "More than 265 million business records"
+  },
+  {
+   "id": "db122294c6251a36",
+   "kind": "answer",
+   "question": "The music magazine launched by Rob Stone and Jon Cohen that interviewed CupcakKe about her album Audacious in September was the first print publication to be released where?",
+   "gold_answers": [
+    "on iTunes."
+   ],
+   "model_answer": "On the iPad"
+  },
+  {
+   "id": "9579b7f18bf7fe31",
+   "kind": "answer",
+   "question": "The first of the Simon Bloom books was optioned by a company founded in what year?",
+   "gold_answers": [
+    "1912"
+   ],
+   "model_answer": "1995"
+  },
+  {
+   "id": "e6a3f82d164def91",
+   "kind": "answer",
+   "question": "What profession does Matt Thiessen and George Thorogood have in common?",
+   "gold_answers": [
+    "musician"
+   ],
+   "model_answer": "Musicians, singers, and songwriters"
+  },
+  {
+   "id": "cb92aba99f1ed47b",
+   "kind": "answer",
+   "question": "Between two bands, Mastodon and Hole, which one has more members?",
+   "gold_answers": [
+    "Mastodon"
+   ],
+   "model_answer": "Neither—both have four members."
+  },
+  {
+   "id": "b234267e866ff2bf",
+   "kind": "answer",
+   "question": "Which was released first, Gasland or To Shoot an Elephant?",
+   "gold_answers": [
+    "To Shoot an Elephant"
+   ],
+   "model_answer": "To Shoot an Elephant (2009)"
+  },
+  {
+   "id": "d81337164ee5919f",
+   "kind": "answer",
+   "question": "Between Pine and Butea, which genus has the greatest number of species?",
+   "gold_answers": [
+    "\"Pinus\""
+   ],
+   "model_answer": "Pine (Pinus)"
+  },
+  {
+   "id": "a9f71dc3981bea69",
+   "kind": "answer",
+   "question": "WHAT WAS THE NAME OF THE BOOK MADE INTO THE 2015 SOUTH KOREAN CRIME THRILLER, THE DEAL, DIRECTED BY SON YONG-HO AND FEATURING SOUTH KOREAN ACTOR PARK SUNG-WOONG (BORN JANUARY 9, 1973) AS A SERIAL KILLER?",
+   "gold_answers": [
+    "\"Murder Request\""
+   ],
+   "model_answer": "The Deal (Salinuiroe)"
+  },
+  {
+   "id": "c15a522244d90836",
+   "kind": "answer",
+   "question": "This annual event held in several major cities in Finland is one of many all-night arts festival whose name is given to areas of high latitude in the weeks around what?",
+   "gold_answers": [
+    "the summer solstice"
+   ],
+   "model_answer": "The summer solstice in June"
+  },
+  {
+   "id": "3e05906faddfc703",
+   "kind": "answer",
+   "question": "Bank street is sandwiched between the headquarters of the Hongkong and Shanghai Banking Corporation and which other building?",
+   "gold_answers": [
+    "Bank of China Building"
+   ],
+   "model_answer": "The Standard Chartered Bank Building"
+  },
+  {
+   "id": "9cb37df8dd8fdcc6",
+   "kind": "answer",
+   "question": "What do Victor Salva and Emilio Fernández have in common?",
+   "gold_answers": [
+    "director and screenwriter."
+   ],
+   "model_answer": "Both were film directors and screenwriters."
+  },
+  {
+   "id": "92f8c9fdf9f6624c",
+   "kind": "answer",
+   "question": "Which Walt Disney film was released earlier, The Rescuers or The Muppets?",
+   "gold_answers": [
+    "The Muppets"
+   ],
+   "model_answer": "The Rescuers"
+  },
+  {
+   "id": "5cb5553b82a4c367",
+   "kind": "answer",
+   "question": "Kresy, which roughly was a part of the land beyond the so-called Curson Line, was drawn for what reason?",
+   "gold_answers": [
+    "demarcation line between the newly emerging states, the Second Polish Republic, and the Soviet Union"
+   ],
+   "model_answer": "To establish Poland’s eastern border after World War I."
+  },
+  {
+   "id": "251f2c4341267d2c",
+   "kind": "answer",
+   "question": "Live Acoustic America features a cover of a Beatles song that peaked at what number in the United Kingdom?",
+   "gold_answers": [
+    "4"
+   ],
+   "model_answer": "4th"
+  },
+  {
+   "id": "b6740653014f9b5c",
+   "kind": "answer",
+   "question": "Are the 1908 Ex parte Young and 1948 McCollum v. Board of Education United States Supreme Court cases related to each other in any way?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No relationship is indicated."
+  },
+  {
+   "id": "2bca9d784493b27a",
+   "kind": "answer",
+   "question": "Were both the Battle of Saipan and the Battle of Manila fought by American forces?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both."
+  },
+  {
+   "id": "279b205b910eb79a",
+   "kind": "answer",
+   "question": "Where was the first governor after the The Missouri Compromise from?",
+   "gold_answers": [
+    "Bath, Maine"
+   ],
+   "model_answer": "Pennsylvania"
+  },
+  {
+   "id": "e8a31386ee44a4c2",
+   "kind": "answer",
+   "question": "What is the subsidiary of the record company who released \"Love Incredible?\"",
+   "gold_answers": [
+    "Vivendi S.A."
+   ],
+   "model_answer": "Interscope Records"
+  },
+  {
+   "id": "8d5142d81d9d7c74",
+   "kind": "answer",
+   "question": "Both Mulled wine and Blue Lagoon are considered primarily alcoholic or non-alcoholic?",
+   "gold_answers": [
+    "alcoholic"
+   ],
+   "model_answer": "Alcoholic (both)"
+  },
+  {
+   "id": "d6076bbb7e4ec5e6",
+   "kind": "answer",
+   "question": "The Ronkonkama railroad station and the town of Islip, New York are near?",
+   "gold_answers": [
+    "Long Island"
+   ],
+   "model_answer": "About 10 miles apart."
+  },
+  {
+   "id": "35df6ceac62721e4",
+   "kind": "answer",
+   "question": "Who was known by his stage name Aladin and helped organizations improve their performance as a consultant?",
+   "gold_answers": [
+    "Eenasul Fateh"
+   ],
+   "model_answer": "Eenasul Fateh (Aladin)"
+  },
+  {
+   "id": "f7b1801384bdd043",
+   "kind": "answer",
+   "question": "Where was the capital of the Arab country, in which the Aulacodes peribocalis moth is found, relocated to?  ",
+   "gold_answers": [
+    "Aden"
+   ],
+   "model_answer": "Riyadh"
+  },
+  {
+   "id": "7d9d5f8bd2efd74b",
+   "kind": "answer",
+   "question": "In what year did both Orson Scott Card's novel \"Ender's Game\" and Keri Hulme's \"The Bone People\" come out?",
+   "gold_answers": [
+    "1985"
+   ],
+   "model_answer": "1985 and 1984, respectively."
+  },
+  {
+   "id": "dea4206216e36a63",
+   "kind": "answer",
+   "question": "Which was founded first, University of California, Santa Barbara or Hamdard University?",
+   "gold_answers": [
+    "University of California, Santa Barbara"
+   ],
+   "model_answer": "University of California, Santa Barbara (1891)"
+  }
+ ],
+ "evidence": []
+}

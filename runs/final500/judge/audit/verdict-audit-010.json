@@ -1,0 +1,87 @@
+[
+ {
+  "id": "a138-cd4a8a6ba2625ba7",
+  "facts": [
+   {
+    "fact": "0.42",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "43 Charlotte United States 827,097 2015"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a137-6a7065055cdc88cf",
+  "facts": [
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "The song , which has been described by members of Three Dog Night as a `` kid 's song ''"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a199-21872926883d4a8c",
+  "facts": [
+   {
+    "fact": "0.265",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a184-ba4c89af2550bda0",
+  "facts": [
+   {
+    "fact": "0.74",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Macedonia Lion ( in Macedonian heraldry ) Panthera leo"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a153-ada74f9430a1b46b",
+  "facts": [
+   {
+    "fact": "1.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The 1924 Winter Olympics were held in Chamonix, France, from 25 January to 5 February. Norway led the medal table with 17 medals"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a175-974d7859b931e445",
+  "facts": [
+   {
+    "fact": "0.31",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Adam Beach Chester Lake Detective"
+     }
+    ]
+   }
+  ]
+ }
+]

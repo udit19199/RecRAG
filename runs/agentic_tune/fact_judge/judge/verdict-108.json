@@ -1,0 +1,41 @@
+[
+  {
+    "id": "ed25509caab4b0d9",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "The Bears' defense swarmed Dobbs throughout the night, sacking him only twice"}]},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030)"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030)"}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030)"}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030)"}]},
+      {"fact": "1.4", "status": "stated", "evidence": [{"item": 5, "quote": "while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)"}]},
+      {"fact": "1.5", "status": "stated", "evidence": [{"item": 5, "quote": "while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)"}]},
+      {"fact": "1.6", "status": "stated", "evidence": [{"item": 5, "quote": "while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)"}]}
+    ]
+  },
+  {
+    "id": "1b90f8400654c56c",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years"}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "bddc3280927f259a",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "missing", "evidence": []},
+      {"fact": "2.4", "status": "missing", "evidence": []}
+    ]
+  }
+]

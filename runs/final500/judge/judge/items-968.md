@@ -1,0 +1,802 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=03d2f62e7516902f ===
+Gold sentences and facts:
+Sentence 0: In graph theory , a loop ( also called a self - loop or a `` buckle '' ) is an edge that connects a vertex to itself . A simple graph contains no loops .
+  Fact 0.0: In graph theory, a loop is an edge that connects a vertex to itself
+  Fact 0.1: A loop is also called a self-loop
+  Fact 0.2: A loop is also called a buckle
+  Fact 0.3: A simple graph contains no loops
+
+Retrieved items:
+<item 1>
+Vanishing point
+The horizon line is a theoretical line that represents the eye level of the observer . If the object is below the horizon line , its vanishing lines angle up to
+the horizon line . If the object is above , they slope down . All vanishing lines end at the horizon line . Properties of vanishing points ( edit ) 1 .
+Projections of two sets of parallel lines lying in some plane π appear to converge , i.e. the vanishing point associated with that pair , on a horizon line , or
+vanishing line H formed by the intersection of the image plane with the plane parallel to π and passing through the pinhole . Proof : Consider the ground plane
+π , as y = c which is , for the sake of simplicity , orthogonal to the image plane . Also , consider a line L that lies in the plane π , which is defined by the
+equation ax + bz = d .
+</item 1>
+
+<item 2>
+Vanishing point
+A , B , C , D and V are points on the image , their separation given in pixels ; A ' , B ' , C ' and D ' are in the real world , their separation in metres . In
+( 1 ) , the width of the side street , W is computed from the known widths of the adjacent shops . In ( 2 ) , the width of only one shop is needed because a
+vanishing point , V is visible . Camera calibration : The vanishing points of an image contain important information for camera calibration . Various
+calibration techniques have been introduced using the properties of vanishing points to find intrinsic and extrinsic calibration parameters . 3D reconstruction
+: A man - made environment has two main characteristics -- several lines in the scene are parallel , and a number of edges present are orthogonal . Vanishing
+points aid in comprehending the environment . Using sets of parallel lines in the plane , the orientation of the plane can be calculated using vanishing points
+. Torre and Coelho performed extensive investigation in the use of vanishing points to implement a full system .
+</item 2>
+
+<item 3>
+Vanishing point
+This is one - point perspective . Similarly , when the image plane intersects two world - coordinate axes , lines parallel to those planes will meet at infinity
+and form two vanishing points . This is called two - point perspective . In three - point perspective the image plane intersects the x , y , and z axes and
+therefore lines parallel to these axes intersect , resulting in three different vanishing points . See also : Property 1 below Theorem ( edit ) The vanishing
+point theorem is the principal theorem in the science of perspective . It says that the image in a picture plane π of a line L in space , not parallel to the
+picture , is determined by its intersection with π and its vanishing point . Some authors have used the phrase , `` the image of a line includes its vanishing
+point '' . Guidobaldo del Monte gave several verifications , and Humphry Ditton called the result the `` main and Great Proposition '' . Brook Taylor wrote the
+first book in English on perspective in 1714 , which introduced the term `` vanishing point '' and was the first to fully explain the geometry of multipoint
+perspective , and historian Kirsti Andersen compiled these observations .
+</item 3>
+
+<item 4>
+Vanishing point
+Vanishing point - wikipedia Vanishing point Jump to : navigation , search For other uses , see Vanishing point ( disambiguation ) . A vanishing point can be
+seen at the far end of this railroad . A vanishing point is a point on the image plane of a perspective drawing where the two - dimensional perspective
+projections ( or drawings ) of mutually parallel lines in three - dimensional space appear to converge . When the set of parallel lines is perpendicular to a
+picture plane , the construction is known as one - point perspective , and their vanishing point corresponds to the oculus , or `` eye point '' , from which the
+image should be viewed for correct perspective geometry . Traditional linear drawings use objects with one to three sets of parallels , defining one to three
+vanishing points . Part of a series on Graphical projection Planar ( show ) Parallel projection Orthographic projection Multiview projection Axonometric
+projection Isometric projection Oblique projection Perspective projection Curvilinear perspective Reverse perspective Views ( show ) 2.
+</item 4>
+
+<item 5>
+Vanishing point
+If we know the coordinates of one of these points , say v , and the direction of a straight line on the image plane , which passes through a second point , say
+v , we can compute the coordinates of both v and v 3 . Let A , B , and C be three mutually orthogonal straight lines in space and v ≡ ( x , y , f ) , v ≡ ( x ,
+y , f ) , v ≡ ( x , y , f ) be the three corresponding vanishing points respectively . The orthocenter of the triangle with vertices in the three vanishing
+points is the intersection of the optical axis and the image plane . Curvilinear and reverse perspective ( edit ) A curvilinear perspective is a drawing with
+either 4 or 5 vanishing points . In 5 - point perspective the vanishing points are mapped into a circle with 4 vanishing points at the cardinal headings N , W ,
+S , E and one at the circle 's origin . A reverse perspective is a drawing with vanishing points that are placed outside the painting with the illusion that
+they are `` in front of '' the painting . Single point perspective projection . Double point perspective projection .
+</item 5>
+
+<item 6>
+Vanishing point
+5 D Bird 's - eye view Cross section Cutaway drawing Exploded view drawing Fisheye lens Panorama Worm 's - eye view Zoom lens Topics ( show ) 3D projection
+Anamorphosis Axonometry Computer graphics Computer - aided design Descriptive geometry Engineering drawing Map projection Picture plane Plans ( drawings )
+Projection ( linear algebra ) Projection plane Projective geometry Stereoscopy Technical drawing Vanishing point Video game graphics Viewing frustum Contents (
+hide ) 1 Vector notation 2 Theorem 3 Vanishing line 4 Properties of vanishing points 5 Curvilinear and reverse perspective 6 Detection of vanishing points 7
+Applications of vanishing points 8 See also 9 References 10 External links Vector notation ( edit ) A 2D construction of perspective viewing , showing the
+formation of a vanishing point The vanishing point may also be referred to as the `` direction point '' , as lines having the same directional vector , say D ,
+will have the same vanishing point or converge at the same vanishing points .
+</item 6>
+
+<item 7>
+Loop (graph theory)
+Loop ( graph Theory ) - wikipedia Loop ( graph Theory ) Jump to : navigation , search A graph with a loop on vertex 1 In graph theory , a loop ( also called a
+self - loop or a `` buckle '' ) is an edge that connects a vertex to itself . A simple graph contains no loops . Depending on the context , a graph or a
+multigraph may be defined so as to either allow or disallow the presence of loops ( often in concert with allowing or disallowing multiple edges between the
+same vertices ) : Where graphs are defined so as to allow loops and multiple edges , a graph without loops or multiple edges is often distinguished from other
+graphs by calling it a `` simple graph '' . Where graphs are defined so as to disallow loops and multiple edges , a graph that does have loops or multiple edges
+is often distinguished from the graphs that satisfy these constraints by calling it a `` multigraph '' or `` pseudograph '' . In a graph with one vertex , all
+edges must be loops . Such a graph is called a bouquet .
+</item 7>
+
+<item 8>
+Loop (graph theory)
+Such a graph is called a bouquet . Contents ( hide ) 1 Degree 2 See also 3 References 4 External links Degree ( edit ) For an undirected graph , the degree of a
+vertex is equal to the number of adjacent vertices . A special case is a loop , which adds two to the degree . This can be understood by letting each connection
+of the loop edge count as its own adjacent vertex . In other words , a vertex with a loop `` sees '' itself as an adjacent vertex from both ends of the edge
+thus adding two , not one , to the degree . For a directed graph , a loop adds one to the in degree and one to the out degree . See also ( edit ) Loops in Graph
+Theory Cycle ( graph theory ) Graph theory Glossary of graph theory Loops in Topology Möbius ladder Möbius strip Strange loop Klein bottle References ( edit )
+Balakrishnan , V.K. ; Graph Theory , McGraw - Hill ; 1 edition ( February 1 , 1997 ) . ISBN 0 - 07 - 005489 - 4 .
+</item 8>
+
+<item 9>
+A graph-theory loop (self-loop or buckle) connects a vertex to itself. Simple graphs exclude loops; conventions distinguish graphs, multigraphs, and
+pseudographs. A loop contributes two to an undirected vertex’s degree, or one to both in-degree and out-degree in a directed graph. A one-vertex graph whose
+edges are all loops is a bouquet.
+
+In perspective drawing, parallel 3D lines appear to meet at vanishing points: one-, two-, or three-point perspective reflects
+</item 9>
+
+<item 10>
+Vanishing point
+She notes , in terms of projective geometry , the vanishing point is the image of the point at infinity associated with L , as the sightline from O through the
+vanishing point is parallel to L . Vanishing line ( edit ) As a vanishing point originates in a line , so a vanishing line originates in a plane α that is not
+parallel to the picture π . Given the eye point O , and β the plane parallel to α and lying on O , then the vanishing line of α is β ∩ π . For example , when α
+is the ground plane and β is the horizon plane , then the vanishing line of α is the horizon line β ∩ π . Anderson notes , `` Only one particular vanishing line
+occurs , often referred to as the `` horizon '' . To put it simply , the vanishing line of some plane , say α , is obtained by the intersection of the image
+plane with another plane , say β , parallel to the plane of interest ( α ) , passing through the camera center . For different sets of lines parallel to this
+plane α , their respective vanishing points will lie on this vanishing line .
+</item 10>
+=== END ITEM id=03d2f62e7516902f ===
+
+=== ITEM id=ef7aac61647282d5 ===
+Gold sentences and facts:
+Sentence 0: The Rhine -- Herne Canal ( German : Rhein - Herne - Kanal ) is a 45.6 - kilometre - long ( 28.3 mi ) transportation canal in the Ruhr area of North Rhine - Westphalia , Germany , with five canal locks . The canal was built over a period of eight years ( 5 April 1906 - 14 July 1914 ) and connects the harbour in Duisburg on the Rhine ( 51 ° 26 ′ 59 '' N 6 ° 46 ′ 1 '' E ﻿ / ﻿ 51.44972 ° N 6.76694 ° E ﻿ / 51.44972 ; 6.76694 ) with the Dortmund - Ems Canal near Henrichenburg ( 51 ° 37 ′ 1 '' N 7 ° 19 ′ 19 '' E ﻿ / ﻿ 51.61694 ° N 7.32194 ° E ﻿ / 51.61694 ; 7.32194 ) , following the valley of the Emscher . It was widened in the 1980s . The Rhein - Herne canal ship was designed specifically for this canal ; normally of about 1300 -- 1350 ton capacity , it has a maximum draft of 2.50 metres ( 8.2 ft ) , a length of approximately 80 metres ( 260 ft ) , and maximum beam of 9.50 metres ( 31.2 ft ) .
+  Fact 0.0: The Rhine-Herne Canal (German: Rhein-Herne-Kanal) is a transportation canal.
+  Fact 0.1: The Rhine-Herne Canal is 45.6 kilometres long (28.3 miles).
+  Fact 0.2: The Rhine-Herne Canal is in the Ruhr area of North Rhine-Westphalia, Germany.
+  Fact 0.3: The Rhine-Herne Canal has five canal locks.
+  Fact 0.4: The canal was built over a period of eight years, from 5 April 1906 to 14 July 1914.
+  Fact 0.5: The canal connects the harbour in Duisburg on the Rhine with the Dortmund-Ems Canal near Henrichenburg.
+  Fact 0.6: The Duisburg harbour is at coordinates 51°26′59″N 6°46′1″E.
+  Fact 0.7: The Henrichenburg end is at coordinates 51°37′1″N 7°19′19″E.
+  Fact 0.8: The canal follows the valley of the Emscher.
+  Fact 0.9: The canal was widened in the 1980s.
+  Fact 0.10: The Rhein-Herne canal ship was designed specifically for this canal.
+  Fact 0.11: The Rhein-Herne canal ship normally has a capacity of about 1300 to 1350 tons.
+  Fact 0.12: The Rhein-Herne canal ship has a maximum draft of 2.50 metres (8.2 ft).
+  Fact 0.13: The Rhein-Herne canal ship has a length of approximately 80 metres (260 ft).
+  Fact 0.14: The Rhein-Herne canal ship has a maximum beam of 9.50 metres (31.2 ft).
+
+Retrieved items:
+<item 1>
+Rhine–Herne Canal
+The industrial port is ~ 900 by 60 metres ( 2,950 by 200 ft ) and the trading port ~ 500 by 75 metres ( 1,640 by 246 ft ) . A private railway of length 18.4
+kilometres ( 11.4 mi ) is operated which is linked to the tracks of the Deutsche Bahn Formerly the port dealt mainly with coal and mining products , now the
+port is a major hub for petroleum products and second - largest inland port for cereals in North Rhine - Westphalia . It is operated by the Gelsenkirchener
+Logistik - , Hafen - und Servicegesellschaft ( Gelsenkirchener logistics , harbour and service company . ) a subsidiary of Stadtwerke Gelsenkirchen . Port
+Grimberg ( edit ) The port at Grimberg Hafen Grimberg ( Port Grimberg ) is on the south canal bank in Gelsenkirchen , near the city boundary to Herne . It was
+named after the nearby Castle Grimberg , of which today only the foundations remain .
+</item 1>
+
+<item 2>
+Rhine–Herne Canal
+The terminal is used as a mooring for pleasure craft . It forms part of the Waltrop lock park . Ecosystem ( edit ) Fish that inhabit the canal include European
+eel , European carp , zander , carp bream , common roach and common rudd , as well as the less common pike and rainbow trout . Cities ( edit ) Duisburg
+Oberhausen Essen Bottrop Gelsenkirchen Herne Recklinghausen Castrop - Rauxel Waltrop Datteln Wikimedia Commons has media related to Rhein - Herne - Kanal .
+References and notes ( edit ) Jump up ^ Route A42 of the Federal Motorways now partly follows the route of the disused canal , ie . the section from the port at
+the Friedrich der Große coal mine to Bahnhofstraße in Herne .
+</item 2>
+
+<item 3>
+Rhine–Herne Canal
+The canal was built over a period of eight years ( 5 April 1906 - 14 July 1914 ) and connects the harbour in Duisburg on the Rhine ( 51 ° 26 ′ 59 '' N 6 ° 46 ′
+1 '' E ﻿ / ﻿ 51.44972 ° N 6.76694 ° E ﻿ / 51.44972 ; 6.76694 ) with the Dortmund - Ems Canal near Henrichenburg ( 51 ° 37 ′ 1 '' N 7 ° 19 ′ 19 '' E ﻿ / ﻿
+51.61694 ° N 7.32194 ° E ﻿ / 51.61694 ; 7.32194 ) , following the valley of the Emscher . It was widened in the 1980s .
+</item 3>
+
+<item 4>
+Rhine–Herne Canal
+From here maintenance and repair work are organised and performed . Oberhausen marina ( edit ) The Oberhausen marina is a yacht port opened in 2004 in close
+proximity to the CentrO shopping centre . The port has a water depth of 2.5 metres ( 8.2 ft ) and over 13 bridges . Also at the Oberhausen marina are the
+attractions Sealife Oberhausen and Oberhausen Modellbahn World . City port of Essen ( edit ) The Stadthafen Essen ( City port of Essen ) is the youngest port on
+the Rhine -- Herne Canal opened in 1934 by the city of Essen , and operated since 1987 by Stadtwerke Essen .
+</item 4>
+
+<item 5>
+Rhine–Herne Canal
+Rhine -- Herne canal - wikipedia Rhine -- Herne canal Jump to : navigation , search View from the Gasometer Oberhausen The Rhine -- Herne Canal ( German : Rhein
+- Herne - Kanal ) is a 45.6 - kilometre - long ( 28.3 mi ) transportation canal in the Ruhr area of North Rhine - Westphalia , Germany , with five canal locks .
+</item 5>
+
+<item 6>
+Rhine–Herne Canal
+The 6,900 - square - metre ( 1.7 - acre ) harbor basin was built from 1897 to 1898 when the section of the canal ( the then branch channel of the Dortmund - Ems
+Canal ) , was already flooded . In 1912 , at the colliery port handled 360,096 tonnes of goods . In 1913 the docks expanded . Because of mining subsidence by
+1954 the quaywall had to be increased by 2.50 metres ( 8.2 ft ) . In the 1980s , it was leased to Automobil - und Motorbootsport - Club Castrop - Rauxel e . V (
+The car and motorboat club of Castrop - Rauxel ) and is used from recreational boating , being no longer used by Ruhrkohle AG , and contains many small boats .
+The former mine railway , which starts at the harbour is now a walking and biking trail .
+</item 6>
+
+<item 7>
+Rhine–Herne Canal
+A possible reconstruction of the sluice gate was commissioned in 1914 with the canal opening . Instead of the old sluice of 165 metres ( 541 ft ) in length and
+10 metres ( 33 ft ) in breadth a new sluice chamber with a usable length of 190 metres ( 620 ft ) and a breadth of 12 metres ( 39 ft ) were commissioned , so
+that bigger ships with lighters ( barges ) as specified in Euro class II can pass through the sluice gates . Ports ( edit ) Duisburg ( edit ) Main article :
+Duisburg § Duisburg Port The canal begins in Duisburg along with the Schifffahrtskanal ; connected to land by three bays of the Kanalhafen , and to the rest of
+the world via the Rhine . The Rhine - Herne Canal headquarters is in the Meiderich district of Duisburg , it serves as the water and shipping management canal
+and its locks from Essen to Herne . From here maintenance and repair work are organised and performed .
+</item 7>
+
+<item 8>
+Rhine–Herne Canal
+Contents ( hide ) 1 Water system 2 Locks 2.1 Duisburg - Meiderich sluicegate 3 Ports 3.1 Duisburg 3.2 Oberhausen marina 3.3 City port of Essen 3.4 City port of
+Gelsenkirchen 3.5 Port Grimberg 3.6 Ports Wanne west and Wanne east 3.7 City port of Recklinghausen 3.8 Port of the Frederick the Great mine 3.9 Port of the
+King Ludwig mine 3.10 Port Victor 3.11 Port Rütgers 3.12 Port Luck 3.13 Port Marmorit 3.14 Waltrop lock park 4 Ecosystem 5 Cities 6 References and notes Water
+system ( edit ) The distribution of water in the canal is realised through five pump stations . Located at Duisburg - Meiderich , Oberhausen , Gelsenkirchen ,
+Wanne - Eickel and East Herne , they pump water from the Rhine into the canal at each stage .
+</item 8>
+
+<item 9>
+Rhine–Herne Canal
+Jump up ^ Stadthafen Essen route-industriekultur.de Jump up ^ Hafen Gelsenkirchen hafen-ge.de Jump up ^ Stadthafen Gelsenkirchen route-industriekultur.de Jump
+up ^ Hafen Grimberg und Erzbahn route-industrielkultur.de ^ Jump up to : Westhafen Wanne is more clearly on the north bank of the canal , with Osthafen Wanne
+almost directly opposite on the south bank . Both are just east of the Schleuse Wanne - Eickel ( Wanne - Eickel lock ) Jump up ^ In German the port is named
+Stadthafen Recklinghausen ^ Jump up to : Aerial image of Hafen der Zeche König Ludwig , ' Hafen der Zeche Friedrich der Große and Schleuse Herne - Ost
+multimap.com ^ Jump up to : Aerial image of Hafen der Zeche König Ludwig , ' Hafen der Zeche Friedrich der Große and Schleuse Herne - Ost maps.google.co.uk Jump
+up ^ Hafen Victor route-industriekultur.
+</item 9>
+
+<item 10>
+Rhine–Herne Canal
+The port consists of a doubled sided canal side quay together with a harbour port at right angles onto the canal , which together form a water area of 63,000
+square metres ( 680,000 sq ft ) with associated dock - land of 300,000 square metres ( 3,200,000 sq ft ) The dock handles bulk goods such as solid mineral fuels
+, petroleum and chemical products , stone , earth and iron and steel as well as recyclable materials , and is an important transhipment point . City port of
+Gelsenkirchen ( edit ) The port of Gelsenkirchen The port of the city of Gelsenkirchen ( Stadthafen Gelsenkirchen ) was opened in July 1914 and is the oldest
+port on the Rhine -- Herne Canal . The port has two docks branched from the canal situated just east of the lock at Gelsenkirchen and has a water surface of
+117,800 square metres ( 1,268,000 sq ft ) .
+</item 10>
+=== END ITEM id=ef7aac61647282d5 ===
+
+=== ITEM id=749f89fbc5d226b5 ===
+Gold sentences and facts:
+Sentence 0: Celebrity Notability ( known for ) Professional partner Status Trista Sutter Reality television star Louis Van Amstel Eliminated 1st on June 8 , 2005 Evander Holyfield Professional boxer Edyta Sliwinska Eliminated 2nd on June 15 , 2005 Rachel Hunter Supermodel & actress Jonathan Roberts Eliminated 3rd on June 22 , 2005 Joey McIntyre New Kids on the Block singer Ashly DelGrosso Third place on June 29 , 2005 John O'Hurley Actor & game show host Charlotte Jorgensen Runner - up on July 6 , 2005 Kelly Monaco Actress Alec Mazo Winner on July 6 , 2005
+  Fact 0.0: Trista Sutter is known for being a reality television star.
+  Fact 0.1: Trista Sutter's professional partner is Louis Van Amstel.
+  Fact 0.2: Trista Sutter was eliminated 1st on June 8, 2005.
+  Fact 0.3: Evander Holyfield is a professional boxer.
+  Fact 0.4: Evander Holyfield's professional partner is Edyta Sliwinska.
+  Fact 0.5: Evander Holyfield was eliminated 2nd on June 15, 2005.
+  Fact 0.6: Rachel Hunter is a supermodel and actress.
+  Fact 0.7: Rachel Hunter's professional partner is Jonathan Roberts.
+  Fact 0.8: Rachel Hunter was eliminated 3rd on June 22, 2005.
+  Fact 0.9: Joey McIntyre is a New Kids on the Block singer.
+  Fact 0.10: Joey McIntyre's professional partner is Ashly DelGrosso.
+  Fact 0.11: Joey McIntyre finished in third place on June 29, 2005.
+  Fact 0.12: John O'Hurley is an actor and game show host.
+  Fact 0.13: John O'Hurley's professional partner is Charlotte Jorgensen.
+  Fact 0.14: John O'Hurley finished as runner-up on July 6, 2005.
+  Fact 0.15: Kelly Monaco is an actress.
+  Fact 0.16: Kelly Monaco's professional partner is Alec Mazo.
+  Fact 0.17: Kelly Monaco was the winner on July 6, 2005.
+
+Retrieved items:
+<item 1>
+Dancing with the Stars (U.S. season 1)
+Martinez Donald Driver Melissa Rycroft Kellie Pickler Amber Riley Meryl Davis Alfonso Ribeiro Rumer Willis Bindi Irwin Nyle DiMarco Laurie Hernandez Rashad
+Jennings Jordan Fisher Professional Alec Mazo Cheryl Burke Julianne Hough Mark Ballas Derek Hough Kym Johnson Karina Smirnoff Peta Murgatroyd Tony Dovolani
+Maksim Chmerkovskiy Witney Carson Valentin Chmerkovskiy Emma Slater Lindsay Arnold Spin - off Dancing with the Stars Junior Games Dancing with the Stars We
+Dance ! Retrieved from `` https://en.wikipedia.org/w/index.php?title=Dancing_with_the_Stars_(U.S._season_1)&oldid=809378398 '' Categories : Dancing with the
+Stars ( U.S. TV series ) 2005 American television seasons Hidden categories : Television season articles that use custom fields Infobox television season
+articles that use the season name parameter Articles needing additional references from August 2015 All articles needing additional references Talk Contents
+About Wikipedia Español Français Edit links This page was last edited on 8 November 2017 , at 18 : 55 .
+</item 1>
+
+<item 2>
+Dancing with the Stars (U.S. season 1)
+Couples Highest Scoring Dances Lowest Scoring Dances Kelly & Alec Freestyle ( 30 ) Waltz ( 13 ) John & Charlotte Foxtrot , Paso doble , Quickstep & Freestyle (
+27 ) Cha - cha - cha ( 20 ) Joey & Ashly Paso doble ( 25 ) Cha - cha - cha , Samba and Foxtrot ( 20 ) Rachel & Jonathan Tango ( 26 ) Waltz ( 20 ) Evander &
+Edyta Cha - cha - cha ( 18 ) Jive ( 13 ) Trista & Louis Rumba ( 19 ) Waltz ( 18 ) Weekly scores and songs ( edit ) Unless indicated otherwise , individual
+judges scores given in the charts below ( given in parentheses ) are listed in this order from left to right : Carrie Ann Inaba , Len Goodman , Bruno Tonioli .
+Week 1 ( edit ) Running order Couple Score Dance Music Joey & Ashly 20 ( 7 , 7 , 6 ) Cha - cha - cha `` Crazy in Love '' -- Beyoncé Rachel & Jonathan 20 ( 7 , 6
+,
+</item 2>
+
+<item 3>
+Dancing with the Stars (U.S. season 1)
+9 , 9 ) Freestyle `` I 'm So Excited '' -- The Pointer Sisters Kelly & Alec 25 ( 7 , 9 , 9 ) Samba `` Bailamos '' -- Enrique Iglesias Winner 30 ( 10 , 10 , 10 )
+Freestyle `` Let 's Get Loud '' -- Jennifer Lopez Dance off ( edit ) Running order Couple Score Style Music Result Kelly & Alec 25 ( 7 , 9 , 9 ) Cha - cha - cha
+`` Lady Marmalade '' -- All Saints Runner - up 24 ( 9 , 7 , 8 ) Quickstep `` Diamonds are a Girl 's Best Friend '' -- Marilyn Monroe 25 ( 8 , 8 , 9 ) Freestyle
+`` Get The Party Started '' -- Pink John & Charlotte 22 ( 7 , 8 , 7 ) Rumba `` The Look of Love '' -- Anita Baker Winner 30 ( 10 , 10 , 10 ) Waltz `` You Light
+Up My Life '' -- Whitney Houston 25 ( 8 , 8 ,
+</item 3>
+
+<item 4>
+Dancing with the Stars (U.S. season 1)
+Unsourced material may be challenged and removed . ( August 2015 ) ( Learn how and when to remove this template message ) The six professionals and celebrities
+that competed were : Celebrity Notability ( known for ) Professional partner Status Trista Sutter Reality television star Louis Van Amstel Eliminated 1st on
+June 8 , 2005 Evander Holyfield Professional boxer Edyta Sliwinska Eliminated 2nd on June 15 , 2005 Rachel Hunter Supermodel & actress Jonathan Roberts
+Eliminated 3rd on June 22 , 2005 Joey McIntyre New Kids on the Block singer Ashly DelGrosso Third place on June 29 , 2005 John O'Hurley Actor & game show host
+Charlotte Jorgensen Runner - up on July 6 , 2005 Kelly Monaco Actress Alec Mazo Winner on July 6 , 2005 † Kelly Monaco returned for the All - Stars season ,
+where this time she was paired with Valentin Chmerkovskiy . They finished third .
+</item 4>
+
+<item 5>
+Dancing on Ice
+The contestants for the first series were : Celebrity Known for Professional partner Status Tamara Beckwith Socialite Sergey Malyshev Eliminated 1st Andi Peters
+TV presenter Tamara Sharp Eliminated 2nd Andrea McLean TV presenter Doug Webster Eliminated 3rd John Barrowman Actor & singer Olga Sharutenko Eliminated 4th
+Sean Wilson Actor Marika Humphreys Eliminated 5th Kelly Holmes Olympic middle distance runner Todd Sand Eliminated 6th David Seaman Retired footballer Pam
+O'Connor Eliminated 7th Bonnie Langford Actress Matt Evers Third place Stefan Booth Actor & singer Kristina Lenko Runner - up Gaynor Faye Actress Daniel Whiston
+Winner Series 2 ( 2007 ) Main article : Dancing on Ice ( series 2 ) The second series began on Saturday 20 January 2007 . In it , 11 celebrities competed ,
+compared to ten in the first series . The final was held on Saturday 17 March 2007 . Phillip Schofield and Holly Willoughby returned to co-present , while Nicky
+Slater , Jason Gardiner , Karen Barber and Robin Cousins returned to The Ice Panel .
+</item 5>
+
+<item 6>
+Dancing with the Stars (U.S. season 1)
+Dancing with the Stars ( U.S. season 1 ) - wikipedia Dancing with the Stars ( U.S. season 1 ) Jump to : navigation , search Dancing with the Stars ( season 1 )
+Country of origin United States No. of episodes 8 Release Original network ABC Original release June 1 -- July 6 , 2005 Additional information Celebrity winner
+Kelly Monaco Professional winner Alec Mazo Season chronology Next → Season 2 The first season of Dancing with the Stars ( U.S. ) debuted on ABC on June 1 , 2005
+. Six celebrities were paired with six professional ballroom dancers . Tom Bergeron and Lisa Canning were the hosts for this season . The judges were Carrie Ann
+Inaba , Len Goodman , and Bruno Tonioli . The premiere drew over 13 million viewers , the second biggest summer debut ever for an American reality series after
+Survivor . The second week climbed to 15 million viewers , and the show climbed to No. 1 in the summer 2005 TV season ratings , where it remained for the
+remainder of the season . The season finale aired July 6 , 2005 .
+</item 6>
+
+<item 7>
+Dancing with the Stars (U.S. season 1)
+6 , 7 ) Waltz `` Three Times A Lady '' -- Lionel Richie Evander & Edyta 18 ( 5 , 7 , 6 ) Cha - cha - cha `` Respect '' -- Aretha Franklin Kelly & Alec 13 ( 5 ,
+4 , 4 ) Waltz `` I Have Nothing '' -- Whitney Houston John & Charlotte 20 ( 7 , 7 , 6 ) Cha - cha - cha `` September '' -- Earth , Wind & Fire Trista & Louis 18
+( 6 , 6 , 6 ) Waltz `` Come Away with Me '' -- Norah Jones Week 2 ( edit ) Running order Couple Score Dance Music Result Rachel & Jonathan 24 ( 8 , 8 , 8 )
+Rumba `` I Do n't Wanna Miss a Thing '' -- Aerosmith from Armageddon Bottom two Joey & Ashly 21 ( 8 , 7 , 6 ) Quickstep `` You 're The One That I Want '' --
+John Travolta and Olivia Newton - John Safe Trista & Louis 19 ( 6 , 7 ,
+</item 7>
+
+<item 8>
+Dancing with the Stars (U.S. season 1)
+The season finale aired July 6 , 2005 . Contents ( hide ) 1 Couples 2 Scoring chart 2.1 Average chart 2.2 Pro 's average chart 3 Highest and lowest scoring
+performances 4 Couples ' highest and lowest scoring performances 5 Weekly scores and songs 5.1 Week 1 5.2 Week 2 5.3 Week 3 5.4 Week 4 5.5 Week 5 5.6 Week 6 :
+Finale 5.7 Dance off 6 Dance chart 7 References 8 External links Couples ( edit ) This section does not cite any sources . Please help improve this section by
+adding citations to reliable sources . Unsourced material may be challenged and removed .
+</item 8>
+
+<item 9>
+Dancing with the Stars (U.S. season 1)
+8 , 9 ) Freestyle `` I Am What I Am '' -- Gloria Gaynor Dance chart ( edit ) Highest scoring dance Lowest scoring dance Couple 5 6 Kelly and Alec Waltz Rumba
+Jive Samba Viennese Waltz Foxtrot Paso doble Samba Freestyle John and Charlotte Cha - cha - cha Quickstep Tango Samba Viennese Waltz Foxtrot Paso doble
+Quickstep Freestyle Joey and Ashly Cha - cha - cha Quickstep Jive Samba Viennese Waltz Foxtrot Paso doble Rachel and Jonathan Waltz Rumba Tango Samba Viennese
+Waltz Evander and Edyta Cha - cha - cha Quickstep Jive Trista and Louis Waltz Rumba References ( edit ) Jump up ^ Associated Press ( 2005 - 06 - 08 ) . `` '
+Dancing With the Stars ' Debuts in 2nd Place '' . FoxNews . Retrieved 2009 - 05 - 06 . Jump up ^ Maynard , John ( 2005 - 07 - 13 ) .
+</item 9>
+
+<item 10>
+Dancing with the Stars (U.S. season 1)
+Jump up ^ `` Dancing with the Stars : Episode 105 '' . TV.com . Retrieved 2009 - 05 - 06 . Jump up ^ `` Dancing with the Stars : Episode 106 '' . TV.com .
+Retrieved 2009 - 05 - 06 . External links ( edit ) Official website ( hide ) Dancing with the Stars ( U.S. TV series ) Seasons 5 6 7 8 9 10 11 12 13 14 15 16 17
+18 19 20 21 22 23 24 25 Participants List of competitors Winners Celebrity Kelly Monaco Drew Lachey Emmitt Smith Apolo Anton Ohno Hélio Castroneves Kristi
+Yamaguchi Brooke Burke Shawn Johnson Donny Osmond Nicole Scherzinger Jennifer Grey Hines Ward J.R.
+</item 10>
+=== END ITEM id=749f89fbc5d226b5 ===
+
+=== ITEM id=95dc2b6cf099a1ff ===
+Gold sentences and facts:
+Sentence 0: Fortnite is set in contemporary Earth , where the sudden appearance of a worldwide storm causes 98 % of the world 's population to disappear , and zombie - like creatures rise to attack the remainder . Considered by Epic as a cross between Minecraft and Left 4 Dead , Fortnite has up to four players cooperating on various missions on randomly - generated maps to collect resources , build fortifications around defensive objectives that are meant to help fight the storm and protect survivors , and construct weapons and traps to engage in combat with waves of these creatures that attempt to destroy the objectives . Players gain rewards through these missions to improve their hero characters , support teams , and arsenal of weapon and trap schematics to be able to take on more difficult missions . The game is supported through microtransactions to purchase in - game currency that can be used towards these upgrades .
+  Fact 0.0: Fortnite is set in contemporary Earth.
+  Fact 0.1: A sudden appearance of a worldwide storm causes 98% of the world's population to disappear.
+  Fact 0.2: Zombie-like creatures rise to attack the remainder of the population.
+  Fact 0.3: Epic considers Fortnite a cross between Minecraft and Left 4 Dead.
+  Fact 0.4: Fortnite has up to four players cooperating on various missions.
+  Fact 0.5: The missions are on randomly generated maps.
+  Fact 0.6: Players collect resources in the missions.
+  Fact 0.7: Players build fortifications around defensive objectives.
+  Fact 0.8: The fortifications are meant to help fight the storm and protect survivors.
+  Fact 0.9: Players construct weapons and traps.
+  Fact 0.10: Players engage in combat with waves of zombie-like creatures.
+  Fact 0.11: The creatures attempt to destroy the objectives.
+  Fact 0.12: Players gain rewards through the missions.
+  Fact 0.13: Rewards are used to improve hero characters, support teams, and arsenal of weapon and trap schematics.
+  Fact 0.14: The rewards help players take on more difficult missions.
+  Fact 0.15: The game is supported through microtransactions.
+  Fact 0.16: Microtransactions purchase in-game currency.
+  Fact 0.17: In-game currency can be used towards these upgrades.
+Sentence 1: Fortnite was first revealed at the 2011 Spike Video Game Awards ( VGA ) , with Epic 's former design director Cliff Bleszinski introducing a trailer for the game . Donald Mustard , creative lead at Epic , said in 2017 that this announcement was `` three weeks after we came up with the idea , before we even made the game '' . The title , which started out as an internal game jam project , represents a departure from the company 's previous work . As Bleszinski explained during the Spike event , Epic wanted to `` switch things up a little bit and do something different and fun '' with Fortnite , describing it as `` a world where you explore , you scavenge , you build and ultimately you survive . '' In an interview with Engadget , he also echoed these statements , claiming that the game would be different from the Gears of War series : `` There 's no dudebros in it ... Not that there 's anything wrong with that , right ? But creatively for the team , Gears has been amazing for us . But it 's fun to kind of stretch our wings and do something that 's a little different from the usual . '' Epic Games Vice President of Publishing Mike Fischer said in 2015 that Epic recognized that they `` announced this game too soon '' , and that its lengthy development period was due to `` very good reasons . ''
+  Fact 1.0: Fortnite was first revealed at the 2011 Spike Video Game Awards (VGA).
+  Fact 1.1: Epic's former design director Cliff Bleszinski introduced a trailer for the game at the 2011 Spike Video Game Awards.
+  Fact 1.2: Donald Mustard, creative lead at Epic, said in 2017 that the announcement was three weeks after we came up with the idea, before we even made the game.
+  Fact 1.3: Fortnite started out as an internal game jam project.
+  Fact 1.4: Fortnite represents a departure from the company's previous work.
+  Fact 1.5: Bleszinski said Epic wanted to switch things up a little bit and do something different and fun with Fortnite.
+  Fact 1.6: Bleszinski described Fortnite as a world where you explore, you scavenge, you build and ultimately you survive.
+  Fact 1.7: In an interview with Engadget, Bleszinski claimed the game would be different from the Gears of War series.
+  Fact 1.8: Bleszinski said there are no dudebros in Fortnite.
+  Fact 1.9: Bleszinski said Gears has been amazing for the team.
+  Fact 1.10: Bleszinski said it is fun to stretch the team's wings and do something a little different from the usual.
+  Fact 1.11: Epic Games Vice President of Publishing Mike Fischer said in 2015 that Epic recognized they announced this game too soon.
+  Fact 1.12: Mike Fischer said the lengthy development period was due to very good reasons.
+
+Retrieved items:
+<item 1>
+Fortnite
+Contents ( hide ) 1 Synopsis 2 Gameplay 3 Development 3.1 History 3.2 Art and design 4 Reception 4.1 Sales 4.2 Accolades 5 References 6 External links Synopsis
+One day , 98 % of Earth 's population suddenly disappeared , and the remaining population found the skies covered in dense clouds , creating chaotic storms that
+dropped husks , humanoid zombie - like creatures , that attacked the living . The survivors found ways to construct `` storm shields '' , a field that cleared
+the storm clouds from immediately overhead and reduced the attacks from husks , and used these to set up survivor bases across the globe . The player is a
+commander of one of these bases , charged with going out of the storm shield to find resources , survivors , and other allies to help expand their storm shield
+and find a way to return Earth to its normal state . Gameplay Currently , the paid - for product Fortnite provides two distinct modes : access to Fortnite
+Battle Royale , ( which is also available as a separate free - to - play title ) and the cooperative player - versus - environment `` Save the World '' , which
+is unique to the main Fortnite game .
+</item 1>
+
+<item 2>
+Fortnite
+They further opted for personal computer exclusivity to avoid the difficulty of having to go through console certification , and as they planned to be
+constantly monitoring and tweaking the game , acting as a dungeon master , the personal computer approach would allow them to do this without restrictions
+normally set by console manfuctures . Bleszinski later clarified that they would not rule out release on other platforms as they developed the title . Fortnite
+cosplayers at Gamescom 2017 Fortnite 's development was spread among several of Epic 's satellite studios , and was also co-developed by the Polish studio
+People Can Fly , which had worked with Epic previously on earlier games , and had been fully acquired by Epic sometime in 2012 . People Can Fly were briefly
+renamed Epic Games Poland in 2013 as to align with Epic 's other studios . By March 2014 , there were about 90 developers working on the game . People Can Fly
+later returned to being an independent studio and their own name in 2015 , but continued to help Epic with Fortnite 's development . During Fortnite 's
+development , Epic had seen the game industry shifting to games as a service model .
+</item 2>
+
+<item 3>
+Fortnite
+To help with this transition , the company brought in Tencent who had several games operating under this model . As part of this agreement , Tencent bought a
+significant share of ownership in Epic Games through stock acquisition around June 2012 . The shifting of Epic 's approach through Tencent led to the departure
+of some high - level staff later that year , including Bleszinski . Fortnite was seen as the spearhead for Epic 's games - as - a-service model as they
+collaborated with Tencent . This caused some road bumps in the development of Fortnite , according to Mustard . Fortnite 's development was also slowed as it
+was used as the testing ground for the new features of the Unreal 4 engine . By November 2013 , Epic confirmed that Fortnite would not release that year , nor
+offered a target released date , though affirmed the game was still in development by several of its studios . Fortnite was a feature in the May 2014 issue of
+Game Informer , revealing that the title would be released as a free - to - play game . By 2014 , Fortnite was at a `` pretty functional prototype '' with most
+of the Unreal 4 engine elements smoothed out , according to Mustard .
+</item 3>
+
+<item 4>
+Fortnite
+Epic Games Vice President of Publishing Mike Fischer said in 2015 that Epic recognized that they `` announced this game too soon '' , and that its lengthy
+development period was due to `` very good reasons . '' As the game was at its very preliminary stages at the VGA reveal , the goal of this reveal was to seek
+public interest in the title and potential publishing partners as to decide on the game 's release platforms and timeframe . During the July 2012 San Diego
+Comic Con , Epic announced that Fortnite would be an exclusive personal computer title , and the first one to be developed by Epic using their new Unreal 4 game
+engine , with a planned release in 2013 . The game 's development was originally started in the Unreal 3 engine , but as they progressed , they had seen the
+opportunity to work in several of the new feature sets and scripting language offered by Unreal 4 for Fortnite , while still running on most personal computers
+at that time .
+</item 4>
+
+<item 5>
+Fortnite
+Considered by Epic as a cross between Minecraft and Left 4 Dead , Fortnite has up to four players cooperating on various missions on randomly - generated maps
+to collect resources , build fortifications around defensive objectives that are meant to help fight the storm and protect survivors , and construct weapons and
+traps to engage in combat with waves of these creatures that attempt to destroy the objectives . Players gain rewards through these missions to improve their
+hero characters , support teams , and arsenal of weapon and trap schematics to be able to take on more difficult missions . The game is supported through
+microtransactions to purchase in - game currency that can be used towards these upgrades . A standalone mode , Fortnite Battle Royale , based on the battle
+royale game genre but based on the core Fortnite gameplay , was released for the same platforms in September 2017 .
+</item 5>
+
+<item 6>
+Fortnite
+Engadget . Archived from the original on October 1 , 2017 . Retrieved July 24 , 2017 . Jump up ^ Orland , Kyle ( June 8 , 2015 ) . `` Hands - on : Fortnite is
+an overwhelming zombie defense experience '' . Ars Technica . Archived from the original on December 8 , 2017 . Retrieved December 7 , 2017 . Jump up ^ Yin -
+Pool , Wesley ( December 12 , 2011 ) . `` Epic reveals Minecraft inspiration for Fortnite '' . Eurogamer . Archived from the original on December 1 , 2017 .
+Retrieved November 29 , 2017 . Jump up ^ Rigney , Ryan ( July 12 , 2012 ) . `` First Screens : Epic 's Fortnite Is the First Unreal Engine 4 Game '' . Wired .
+Archived from the original on December 22 , 2016 . Retrieved November 29 , 2017 . Jump up ^ Hafer , T.J. ( July 12 , 2012 ) .
+</item 6>
+
+<item 7>
+Fortnite
+Development History Fortnite was first revealed at the 2011 Spike Video Game Awards ( VGA ) , with Epic 's former design director Cliff Bleszinski introducing a
+trailer for the game . Donald Mustard , creative lead at Epic , said in 2017 that this announcement was `` three weeks after we came up with the idea , before
+we even made the game '' . The title , which started out as an internal game jam project , represents a departure from the company 's previous work . As
+Bleszinski explained during the Spike event , Epic wanted to `` switch things up a little bit and do something different and fun '' with Fortnite , describing
+it as `` a world where you explore , you scavenge , you build and ultimately you survive . '' In an interview with Engadget , he also echoed these statements ,
+claiming that the game would be different from the Gears of War series : `` There 's no dudebros in it ... Not that there 's anything wrong with that , right ?
+But creatively for the team , Gears has been amazing for us . But it 's fun to kind of stretch our wings and do something that 's a little different from the
+usual . ''
+</item 7>
+
+<item 8>
+Fortnite
+( July 12 , 2012 ) . `` Fortnite will be a PC exclusive and Epic 's first Unreal Engine 4 game '' . PC Gamer . Archived from the original on December 1 , 2017 .
+Retrieved November 29 , 2017 . Jump up ^ McGee , Maxwell ( July 13 , 2012 ) . `` Epic 's Cliff Bleszinski and Tanya Jessen Talk Up Fortnite '' . GameSpot .
+Archived from the original on February 6 , 2018 . Retrieved November 29 , 2017 . ^ Jump up to : Purchase , Robert ( September 1 , 2012 ) . `` Fortnite detailed
+at PAX Prime ; Minecraft meets DayZ '' . Eurogamer . Archived from the original on December 1 , 2017 . Retrieved November 29 , 2017 . Jump up ^ Sheridan ,
+Connor ( November 1 , 2013 ) . `` People Can Fly working on Fortnite , renamed Epic Games Poland '' . GamesRadar . Archived from the original on December 2 ,
+2017 .
+</item 8>
+
+<item 9>
+Fortnite
+Fortnite was being developed alongside Paragon , which Epic announced on November 2015 . As Paragon seemed to take Epic 's focus , leaving little news about
+Fortnite , CEO Tim Sweeney said in March 2016 that they were still committed to Fortnite once Paragon was launched and established , given that much of the work
+on Fortnite would take time to get the right balance for gameplay . `` We figure we should start with one major successful launch and do one at a time .
+Fortnite will be next . '' By June 2017 , Epic Games announced that Fortnite was now set for a 2018 release across Windows , macOS , and the PlayStation 4 and
+Xbox One consoles . Leading up to this free - to - play release , the game was offered as a paid early access period starting on July 25 , 2017 for all
+platforms ; players who pre-ordered Founder 's Packs were granted access to the game on July 21 . The lengthy period since the game 's alpha phases was ascribed
+to developing Fortnite as a games - as - a-service model , according to creative lead Donald Mustard .
+</item 9>
+
+<item 10>
+Fortnite
+Fortnite - wikipedia Fortnite Jump to : navigation , search For the battle royale version of the game , see Fortnite Battle Royale . Fortnite European box art
+Developer ( s ) Epic Games People Can Fly Publisher ( s ) Epic Games Director ( s ) Darren Sugg Artist ( s ) Pete Ellis Composer ( s ) Rom Di Prisco Engine
+Unreal Engine 4 Platform ( s ) Microsoft Windows macOS PlayStation 4 Xbox One iOS Release 2018 Genre ( s ) Survival Mode ( s ) Single - player , multiplayer
+Fortnite is a co-op sandbox survival game developed by Epic Games and People Can Fly and published by Epic Games . The game was released as a paid - for early
+access title for Microsoft Windows , macOS , PlayStation 4 and Xbox One on July 25 , 2017 , with a full free - to - play release expected in 2018 . The retail
+versions of the game were published by Gearbox Publishing , while online distribution of the PC versions is handled by Epic 's launcher . Fortnite is set in
+contemporary Earth , where the sudden appearance of a worldwide storm causes 98 % of the world 's population to disappear , and zombie - like creatures rise to
+attack the remainder .
+</item 10>
+=== END ITEM id=95dc2b6cf099a1ff ===
+
+=== ITEM id=0967c50833c75f71 ===
+Gold sentences and facts:
+Sentence 0: Each state controls where it administers its bar exam . Because the MBE ( below ) is a standardized test , it must be administered on the same day across the country . That day occurs twice a year as the last Wednesday in July and the last Wednesday in February . Two states , Delaware and North Dakota , may administer their bar exams only once , in July , if they do not have enough applicants to merit a second sitting . North Dakota requires ten applicants in order to administer the February exam . Most bar exams are administered on consecutive days . Louisiana is the exception , with the Louisiana Bar Exam being a three - day examination on Monday , Wednesday and Friday . Also , Louisiana 's examination is the longest in the country in terms of examination time , with seven hours on Monday and Wednesday and seven and one half hours on Friday for a total of 21.5 hours of testing . Montana 's bar examination also occurs over a three - day period , with a total of 18 hours of testing . The bar exams in Delaware , Nevada , Ohio , South Carolina , and Texas are also three days long . The California bar exam moved to a two - day format beginning with the July , 2017 exam .
+  Fact 0.0: Each state controls where it administers its bar exam.
+  Fact 0.1: The MBE is a standardized test.
+  Fact 0.2: The MBE must be administered on the same day across the country.
+  Fact 0.3: The MBE day occurs twice a year.
+  Fact 0.4: The MBE day is the last Wednesday in July and the last Wednesday in February.
+  Fact 0.5: Delaware and North Dakota may administer their bar exams only once, in July.
+  Fact 0.6: Delaware and North Dakota may do this if they do not have enough applicants to merit a second sitting.
+  Fact 0.7: North Dakota requires ten applicants in order to administer the February exam.
+  Fact 0.8: Most bar exams are administered on consecutive days.
+  Fact 0.9: Louisiana is the exception to consecutive-day bar exams.
+  Fact 0.10: The Louisiana Bar Exam is a three-day examination on Monday, Wednesday and Friday.
+  Fact 0.11: Louisiana's examination is the longest in the country in terms of examination time.
+  Fact 0.12: Louisiana's examination has seven hours on Monday and Wednesday.
+  Fact 0.13: Louisiana's examination has seven and one half hours on Friday.
+  Fact 0.14: Louisiana's examination totals 21.5 hours of testing.
+  Fact 0.15: Montana's bar examination occurs over a three-day period.
+  Fact 0.16: Montana's bar examination totals 18 hours of testing.
+  Fact 0.17: The bar exams in Delaware, Nevada, Ohio, South Carolina, and Texas are three days long.
+  Fact 0.18: The California bar exam moved to a two-day format beginning with the July 2017 exam.
+Sentence 1: To refresh their memory on `` black - letter rules '' tested on the bar , most students engage in a regimen of study ( called `` bar review '' ) between graduating from law school and sitting for the bar . For bar review , most students in the United States attend a private bar review course which is provided by a third - party company and not their law school .
+  Fact 1.0: Most students engage in a regimen of study called bar review.
+  Fact 1.1: Bar review is done to refresh memory on black-letter rules tested on the bar.
+  Fact 1.2: Bar review is done between graduating from law school and sitting for the bar.
+  Fact 1.3: For bar review, most students in the United States attend a private bar review course.
+  Fact 1.4: The private bar review course is provided by a third-party company.
+  Fact 1.5: Most students in the United States do not take their bar review course from their law school.
+
+Retrieved items:
+<item 1>
+Bar examination
+This exam is composed of three parts : Criminal Law , Criminal Procedural Law and Law of Criminal Enforcement Civil Law , Civil Procedural Law and Business Law
+Constitutional Law , Administrative Law , Labor Law , Social Security Law and Law of the European Union . After passing these exams the candidate can practice
+law as an attorney - at - law / barrister or as a secretary / judge at the court or as a prosecutor at the public prosecutor 's office or in - house legal
+counsel or may operate individually at any field of law . Ireland ( edit ) The bar exams in Ireland are the preserve of the Honorable Society of King 's Inns ,
+which runs a series of fourteen exams over ten weeks , from March to June each year , for those enrolled as students in its one - year Barrister - at - Law
+degree course . These exams cover such skills as advocacy , research and opinion writing , consulting with clients , negotiation , drafting of legal documents
+and knowledge of civil and criminal procedure . For those who fail to meet the requisite 50 % pass mark , repeats are held in the following August and September
+.
+</item 1>
+
+<item 2>
+Bar examination
+Criminal law , employment law , constitution law , administrative law , and tax law . Civil procedure law , bankruptcy and business reorganization law , and the
+system of the court of justice . And Criminal procedure law , human rights , and law on the evidence . Each part has 10 essay questions . The pass mark is 50 .
+The parts 1 - 2 are usually taken in October and the rest are usually taken in March . One does not need to pass all four parts in one year . After passing all
+the written exams , there is an oral exam . Around 10,000 bar students sit the exam each year . In 2013 , 1,231 students were called to the bar , 111 of whom
+did it in only one year . Quite confusingly with international norms , students called to the bar are referred to as netibandit ( เนติบัณฑิต ) , which gets
+translated into English as Barrister - at - Law . The Thai legal profession , however , is a fused one and those with lawyer licenses are able to practice both
+as barristers and solicitors in the British / Commonwealth sense .
+</item 2>
+
+<item 3>
+Bar examination
+Other states split the integrated bar membership and the admissions agency into different bodies within the judiciary ; in Texas , the Board of Law Examiners is
+appointed by the Texas Supreme Court and is independent from the integrated State Bar of Texas . The bar examination in most U.S. states and territories is at
+least two days long ( a few states have three - day exams ) and usually consists of : Essay questions : Essentially all jurisdictions administer several such
+questions that test knowledge of general legal principles , and may also test knowledge of the state 's own law ( usually subjects such as wills , trusts and
+community property , which always vary from one state to another ) . Some jurisdictions choose to use the Multistate Essay Examination ( MEE ) , drafted by the
+NCBE since 1988 , for this purpose . Others may draft their own questions with this goal in mind , while some states both draft their own questions and use the
+MEE . Some jurisdictions administer complicated questions that specifically test knowledge of that state 's law . Multistate standardized examinations ( below )
+When exams occur ( edit ) Each state controls where it administers its bar exam .
+</item 3>
+
+<item 4>
+Bar examination
+The exam is divided in two stages -- the first consists of 80 multiple choice questions covering all disciplines ( Ethics , Human Rights , Philosophy of Law ,
+Constitutional Law , Administrative Law , Civil Law , Consumer Law , Civil Procedure Law , Criminal Law , Criminal Procedure Law , Labour Law and Labour
+Procedure Law ) . The candidate must score at least 40 questions correctly to proceed to the second part of the exam , four essay questions and a drafting
+project ( motion , opinion or claim document ) in Civil Law ( including Consumer Law ) , Labour Law , Criminal Law , Administrative Law , Constitutional Law ,
+Corporate Law or Tax Law , and their respective procedures . The Bar examination can be taken on the graduation year . Success in the examination allows one to
+practice in any court or jurisdiction of the country . Canada ( edit ) In Canada , admission to the bar is a matter of provincial or territorial jurisdiction .
+All provinces except for Québec follow a common law tradition . Lawyers in every common law province are qualified as both barristers and solicitors , and must
+pass a Barristers ' Examination and Solicitors ' Examination administered by the Law Society that governs the legal profession in their respective province or
+territory .
+</item 4>
+
+<item 5>
+Bar examination
+The common law provinces all require prospective lawyers to complete a term of articles ( usually 10 months ) after graduation from law school during which they
+work under the supervision of a qualified lawyer . The bar exams may be taken after graduation from law school , but before the commencement of articling , or
+may be taken during or after articling is completed . Once the barristers ' and solicitors ' exams have been passed and the term of articles is successfully
+completed , students may then be called the bar and admitted to the legal profession as lawyers ( barristers and solicitors ) . People 's Republic of China (
+edit ) Main article : State Judicial Exam England and Wales ( edit ) Since the UK has a separated legal profession , Law graduates in England and Wales can take
+examinations to qualify as a Barrister or a Solicitor by either undertaking the BPTC or the LPC respectively . These courses are the vocational part of the
+training required under the Bar Association and The Law Society rules and are either undertaken on a full - time basis for one year or on a part - time basis
+over two years .
+</item 5>
+
+<item 6>
+Bar examination
+The new law school system that began in 2009 allows only the graduates of a law school to apply for the bar exam . Malaysia ( edit ) Main article : Certificate
+in Legal Practice ( Malaysia ) Philippines ( edit ) The Philippine Bar Examination is administered once every year on the four Sundays of November ( September
+before 2011 ) . It covers eight areas of law : political law , labor law and social legislation , criminal law , civil law , commercial law , taxation law ,
+remedial law , and legal ethics and practical exercises . Poland ( edit ) In Poland , the bar examination is taken after graduating from a law faculty at a
+university . It allows a person to undertake practice , the duration of which varies depending on the specialization . After the practical period applicants
+must pass the exam held by the Professional Chambers with assistance from some members of the Ministry of Justice . Singapore ( edit ) The Singapore Bar
+Examination ( Part B) is administered once every year , usually over the course of four days . The exam is generally held on the last week of November , and is
+administered by the Singapore Institute of Legal Education ( SILE ) .
+</item 6>
+
+<item 7>
+Bar examination
+A logbook signed by the judge on the bench has to certify their weekly attendance . By the end of the eighteenth month , they are eligible to apply to take the
+Final Bar Exam by submitting their case summaries , the logbook and a research work pre-approved by the Bar . It is noteworthy , however , that during these
+eighteen months , Trainees are eligible to have a limited practice of law under the supervision of their supervising Attorney . This practice does not include
+Supreme Court eligible cases and certain criminal and civil cases . Candidates will be tested on Civil law , Civil Procedure , Criminal law , Criminal Procedure
+, Commercial Law , Notary ( including rules pertaining Official Documents , Land & Real Estate registrations and regulations etc . ) . Each exam takes two days
+, a day on oral examination in front of a judge or an attorney , and a day of essay examination , in which they will be tested on hypothetical cases submitted
+to them . Successful applicants will be honoured with the title of `` First Degree Attorney '' , after they take the oath and can practice in all courts of the
+country including the Supreme Court . Those who fail must redo the apprenticeship program in full or in part before taking the Final Bar Exam again .
+</item 7>
+
+<item 8>
+Bar examination
+The MEE and MPT , as uniform though not standardized tests , also must be administered on the same day across the country -- specifically the day before the MBE
+. Preparation for the exam ( edit ) Most law schools teach students common law and how to analyze hypothetical fact patterns like a lawyer , but do not
+specifically prepare law students for any particular bar exam . Only a minority of law schools offer bar preparation courses . To refresh their memory on ``
+black - letter rules '' tested on the bar , most students engage in a regimen of study ( called `` bar review '' ) between graduating from law school and
+sitting for the bar . For bar review , most students in the United States attend a private bar review course which is provided by a third - party company and
+not their law school . Multistate standardized Examinations ( edit ) The National Conference of Bar Examiners ( NCBE ) is a U.S. based non-profit organization
+that develops national ( `` multistate '' ) standardized tests for admission to the bar in individual states . The organization was founded in 1931 .
+</item 8>
+
+<item 9>
+Bar examination
+Bar examination - wikipedia Bar examination Jump to : navigation , search For other non-legal uses , see Bar ( disambiguation ) . For the broader meaning of ``
+bar '' in legal contexts , see Bar ( law ) . This article possibly contains original research . Please improve it by verifying the claims made and adding inline
+citations . Statements consisting only of original research should be removed . ( November 2017 ) ( Learn how and when to remove this template message ) A bar
+examination is a test intended to determine whether a candidate is qualified to practice law in a given jurisdiction . Contents ( hide ) 1 Brazil 2 Canada 3
+People 's Republic of China 4 England and Wales 5 France 6 Germany 7 Ghana 8 Hungary 9 Ireland 10 Iran 11 Japan 12 Korea ( South ) 13 Malaysia 14 Philippines 15
+Poland 16 Singapore 17 South Africa 18 Thailand 19 United States 19.1 When exams occur 19.1. 1 Preparation for the exam 19.2 Multistate standardized
+examinations 19.2. 1 Uniform Bar Examination ( UBE ) 19.2.
+</item 9>
+
+<item 10>
+Bar examination
+Retrieved 2 May 2015 . Jump up ^ 54 JOURNAL OF LEGAL EDUCATION 442 -- 458 Jump up ^ Suzanne Darrow - Kleinhau , `` A Response to Criticism of the Bar Exam '' ,
+The Bar Examiner , May 2005 `` Archived copy '' ( PDF ) . Archived from the original on December 3 , 2010 . Retrieved 2011 - 02 - 17 . CS1 maint : BOT :
+original - url status unknown ( link ) External links ( edit ) National Conference of Bar Examiners : Makers of the Multistate Bar Exam The Louisiana Supreme
+Court Committee on Bar Admission NDL : 00570925 Retrieved from `` https://en.wikipedia.org/w/index.
+</item 10>
+=== END ITEM id=0967c50833c75f71 ===
+
+=== ITEM id=958b0cb4a65e47ba ===
+Gold sentences and facts:
+Sentence 0: In most of the world speed limit signs display the limitation within a red circle . This design follows the style set out by the Vienna Convention on Road Signs and Signals , with the exception of United States and Canada . All countries globally worldwide ( except the United Kingdom and United States ) use metric speed limits in kilometres per hour . Metric signs are optional in the United States though less commonly seen , while Samoa uses both units . In Ontario , Canada , the type , location , and frequency of speed limit signs is covered by regulation 615 of the Ontario Highway Traffic Act .
+  Fact 0.0: In most of the world, speed limit signs display the limitation within a red circle.
+  Fact 0.1: The red-circle speed limit sign design follows the style set out by the Vienna Convention on Road Signs and Signals.
+  Fact 0.2: The Vienna Convention style is not followed by the United States and Canada.
+  Fact 0.3: All countries worldwide, except the United Kingdom and the United States, use metric speed limits in kilometres per hour.
+  Fact 0.4: Metric speed limit signs are optional in the United States.
+  Fact 0.5: Metric speed limit signs are less commonly seen in the United States.
+  Fact 0.6: Samoa uses both units for speed limits.
+  Fact 0.7: In Ontario, Canada, the type, location, and frequency of speed limit signs is covered by regulation 615 of the Ontario Highway Traffic Act.
+
+Retrieved items:
+<item 1>
+Speed limit
+The speeding fatality rate for local roads is three times that for Interstates Jump up ^ http://www.pe.com/articles/speed-776756-survey-limit.html Jump up ^
+http://caselaw.findlaw.com/mt-supreme-court/1110919.html Jump up ^
+http://vincenzeslaw.com/4-ways-virginia-reckless-driving-charges-handled-differently-fairfax-county-arlington-alexandria-stafford/ Jump up ^ `` Traffic
+Operations : Road Signs '' . Government of South Australia . 2002 - 08 - 23 ( last update date ) . Retrieved 2010 - 09 - 26 . Most regulatory signs are
+rectangular with a black legend on a white background ... ( exceptions include ) speed restriction signs ( symbol enclosed in a red circle ) '' Check date
+values in : date = ( help ) Jump up ^ `` Speed Zoning Information '' ( PDF ) . Institute of Transportation Engineers . 22 March 2004 . Retrieved 2009 - 09 - 17
+. Jump up ^ MUTCD Sections 2B.
+</item 1>
+
+<item 2>
+Speed limit
+In the European Union , large signposts showing the national ( default ) speed limits of the respective country are usually erected immediately after border
+crossings , with a repeater sign some 200 to 500 m ( 660 to 1,640 ft ) after the first sign . Some places provide an additional `` speed zone ahead '' ahead of
+the restriction and speed limit reminder signs may appear at regular intervals which may be painted on the road surface . Signs are normally placed on both
+sides of the road and in some places there are small ( less than 1 / 4 the size of the sign ) rectangular orange reflector flags attached to both upper right
+corners of both signs . The speed limit sign marking the new speed zone may also have the orange flags ; this practice can be observed in New York on highways
+where the speed limit varies such as New York State Route 17 . Speed limits on European Motorways in km / h Signage in many countries , especially in Europe ,
+conforms to the Vienna Convention on Road Signs and Signals using black text with a red circle on a white background . In the United States , the signs are
+usually rectangular with the words `` SPEED LIMIT '' and the values in black on a white background .
+</item 2>
+
+<item 3>
+Speed limit
+Jump up ^ MUTCD Sections 2B. 13 - 16 # 12 Jump up ^ `` California Vehicle Code § 21400 ( b ) '' . The State of California . January 1 , 2012 . Retrieved 2013 -
+07 - 28 . Jump up ^ Transportation Research Board of the National Academies ; Kay Fitzpatrick ; Paul Carlson ; Marcus A. Brewer ; Mark D. Wooldridge ; Shaw -
+Pin Miaou ; Texas Transportation Institute ( October 6 , 2003 ) . NCHRP Report 504 -- Design Speed , Operating Speed , and Posted Speed Practices ( PDF ) .
+onlinepubs.trb.org . Washington , D.C. : National Academies Press . p. 88 . ISBN 0 - 309 - 08767 - 8 . ISSN 0077 - 5614 . Archived from the original on April 12
+, 2014 . Retrieved 2009 - 09 - 16 .
+</item 3>
+
+<item 4>
+Speed limit
+In international European roads , speed should be taken into account at design stage . Maximum speed recommended by international European road design standard
+Road classification 60 km / h 80 km / h ( 50 mph ) 100 km / h ( 60 mph ) 120 km / h ( 75 mph ) 140 km / h ( 85 mph ) Motorway x 80 100 120 140 Express road 60
+80 100 120 x Road 60 80 100 x x Minimum speed limits ( edit ) UK minimum speed limit sign Some roads also have `` minimum speed limits '' , where slow speeds
+can impede traffic flow or be dangerous . Signs often use blue circles based on the obligatory signs of the Vienna Convention on Road Signs and Signals . A
+Japanese minimum speed sign has the same design as a maximum speed sign , but with a horizontal line below the number . In the United States of America , they
+are also identical to their respective maximum speed limit signs with the exception of the text `` MINIMUM SPEED '' . This minimum speed is not so common , as
+the risk usually raise with higher speed and not with lower speed .
+</item 4>
+
+<item 5>
+Speed limit
+Speed limit - wikipedia Speed limit Jump to : navigation , search This article is about road speed limits . For speed of light , see special relativity . For
+road speed limits in specific countries , see Speed limits by country . For rail speed limits , see Slow zone . A typical 60 km / h speed limit sign used in
+Australia A typical 50 mph speed limit sign in the United States A typical 50 mph speed limit sign in the United Kingdom and 50 km / h speed limit sign in Hong
+Kong Road speed limits are used in most countries to set the maximum ( or minimum in some cases ) speed at which road vehicles may legally travel on particular
+stretches of road . Speed limits may be variable and in some places speed is unlimited ( e.g. on some Autobahn sections in Germany ) . Speed limits are normally
+indicated on a traffic sign . Speed limits are commonly set by the legislative bodies of nations or provincial governments and enforced by national or regional
+police or judicial bodies . The first maximum speed limit was the 10 mph ( 16 km / h ) limit introduced in the United Kingdom in 1861 .
+</item 5>
+
+<item 6>
+Speed limit
+Per distance traveled , consequences of inappropriate speed are more frequent on lower speed , lower quality roads ; in the United States , for example , the ``
+speeding fatality rate for local roads is three times that for Interstates '' Citations for violations of the basic speed law without a crash have sometimes
+been ruled unfairly vague or arbitrary , hence a violation the due process of law , at least in the State of Montana . Even within states , differing
+jurisdictions ( counties and cities ) choose to prosecute similar cases with differing approaches . Maximum speed limits ( edit ) A speed limit sign in Ontario
+In France city sign has value of speed limit A street limited at 30 km / h End of speed limit , previous speed limit applies Most public roads in most countries
+have a legally assigned numerical maximum speed limit which applies on all roads unless otherwise stated ; lower speed limits are often shown on a sign at the
+start of the restricted section , although the presence of streetlights or the physical arrangement of the road may sometimes also be used instead . A posted
+speed limit may only apply to that road or to all roads beyond the sign that defines them depending on local laws .
+</item 6>
+
+<item 7>
+Speed limit
+p. 343 . External links ( edit ) Wikimedia Commons has media related to Speed limit signs and Driver speed and relative risk of an accident . Global map of
+speed limits from Wikispeedia A Walk Through The History of Speed Limit Signs in The US John F. Carr 's State Traffic and Speed Laws Global map of speed limits
+from OpenStreetMap Traffic signs Signs Warning sign Regulatory sign Prohibitory traffic sign Mandatory sign Special regulation sign Stop sign Yield sign
+Crossbuck Dead End sign One - way traffic Speed limit ( by country ) Advisory speed limit Information sign Direction , position , or indication sign Variable -
+message sign Bilingual sign Driver location signs Logo sign Priority to the right By comparison Comparison of European road signs Comparison of MUTCD -
+influenced traffic signs Comparison of traffic signs in English - speaking countries By country Africa Botswana Mauritius South Africa Zimbabwe Asia Azerbaijan
+Bangladesh Brunei Cambodia China Hong Kong India Indonesia Iran Israel Japan Laos Malaysia Nepal Pakistan Singapore South Korea Sri Lanka Thailand Turkey United
+Arab Emirates Vietnam Europe Austria Bosnia and Herzegovina Czech Republic Denmark Estonia Finland France Germany Greece Iceland Ireland Italy Liechtenstein
+Netherlands Norway Poland Sweden Switzerland Ukraine United Kingdom Scotland Wales North America Canada Mexico United States Oceania Australia New Zealand South
+America Argentina Brazil Chile Colombia Lights Traffic
+</item 7>
+
+<item 8>
+Speed limit
+The U.S. Federal Highway Administration 's Manual on Uniform Traffic Control Devices provides guidelines for the appearance of speed limit signs . In Alaska and
+California , speed limits are often labeled `` MAXIMUM SPEED '' instead . In Oregon , most speed limit signs just say `` SPEED '' and the number . Canada has
+similar signs bearing the legend `` MAXIMUM '' and in km / h instead of mph . `` Maximum '' is used instead of `` Speed Limit '' because it has similar meanings
+in English and French . Australian signs are rectangular but have a red circle like the Vienna Convention signs . The speed limit is commonly set at or below
+the 85th percentile operating speed ( being the speed which no more than 15 % of traffic is exceeding ) and in the US is frequently set 4 to 8 mph ( 6 to 13 km
+/ h ) below that speed . Thus , if the 85th percentile operating speed as measured by a Traffic and Engineering Survey exceeds the design speed , legal
+protection is given to motorists traveling at such speeds ( design speed is `` based on conservative assumptions about driver , vehicle and roadway
+characteristics '' ) .
+</item 8>
+
+<item 9>
+Speed limit
+Variable speed limits ( edit ) Example variable speed limit sign in the United States Digital speed limit sign for variable speed limits In 1965 , the first
+known experiments with variable speed limit signs took place on a 30 km stretch of German motorway A8 between Munich and the border city of Salzburg , Austria .
+Mechanically variable message signs could display speeds of 60 , 80 and 100 km / h , `` danger zone '' or `` accident '' . Personnel monitored traffic using
+video technology , and manually controlled the signage . Beginning in the 1970s , additional advanced traffic control systems were put into service . Modern
+motorway control systems can work without human intervention using various types of sensors to measure traffic flow and weather conditions . In 2009 , 1,300 km
+( 810 mi ) of German motorways were equipped with such systems . In the late 1960s , heavily traveled portions of the New Jersey Turnpike began using variable
+speed limit signs , in combination with variable message signs . Officials can adjust the speed limit according to weather , traffic conditions , and
+construction .
+</item 9>
+
+<item 10>
+Speed limit
+; for example California Vehicle Code section 22350 which states that `` No person shall drive a vehicle upon a highway at a speed greater than is reasonable
+... and in no event at a speed which endangers the safety of persons or property '' . The basic speed law is almost always supplemented by specific maximum or
+minimum limits , but applies regardless . The reasonable speed may be different than the posted speed limit in conditions such as fog , heavy rain , ice , snow
+, gravel , sharp corners , blinding glare , darkness , crossing traffic , or when there is an obstructed view of orthogonal traffic -- such as by road curvature
+, parked cars , vegetation , or snow banks -- thus limiting the Assured Clear Distance Ahead ( ACDA ) . Basic speed laws are statutized reinforcements of the
+centuries - old common law negligence doctrine as specifically applied to vehicular speed .
+</item 10>
+=== END ITEM id=958b0cb4a65e47ba ===

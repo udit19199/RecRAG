@@ -1,0 +1,2535 @@
+[
+ {
+  "id": "6e7f7b097231f0a3",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Algeria Fennec fox Vulpes zerda"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Angola Red - crested turaco ( national bird ) Tauraco erythrolophus"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Anguilla Zenaida dove Zenaida aurita"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Antigua and Barbuda Fallow deer ( national animal ) Dama dama"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Antigua and Barbuda Fallow deer ( national animal ) Dama dama Frigate ( national bird ) Fregata magnificens"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Antigua and Barbuda Fallow deer ( national animal ) Dama dama Frigate ( national bird ) Fregata magnificens Hawksbill turtle ( national sea creature ) Eretmochelys imbricata"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Argentina Rufous hornero Furnarius rufus"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Australia Red kangaroo ( national animal ) Macropus rufus"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Australia Red kangaroo ( national animal ) Macropus rufus Emu ( national bird ) Dromaius novaehollandiae"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Austria Black eagle Ictinaetus malaiensis"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Azerbaijan Karabakh horse Equus ferus caballus"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Bangladesh Royal Bengal tiger ( national animal ) Panthera tigris tigris"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Bangladesh Royal Bengal tiger ( national animal ) Panthera tigris tigris Magpie robin ( national bird ) Copsychus saularis"
+     }
+    ]
+   },
+   {
+    "fact": "0.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Bangladesh Royal Bengal tiger ( national animal ) Panthera tigris tigris Magpie robin ( national bird ) Copsychus saularis Ilish ( national fish )"
+     },
+     {
+      "item": 2,
+      "quote": "Ilish ( national fish ) Tenualosa ilisha"
+     }
+    ]
+   },
+   {
+    "fact": "0.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Belarus European bison Bison bonasus"
+     }
+    ]
+   },
+   {
+    "fact": "0.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Belgium Lion ( heraldic Leo Belgicus ) Panthera leo"
+     }
+    ]
+   },
+   {
+    "fact": "0.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Belize Baird 's tapir ( national animal ) Tapirus bairdii"
+     }
+    ]
+   },
+   {
+    "fact": "0.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Belize Baird 's tapir ( national animal ) Tapirus bairdii Keel - billed toucan ( national bird ) Ramphastos sulfuratus"
+     }
+    ]
+   },
+   {
+    "fact": "0.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Bhutan Druk Mythical Takin Budorcas taxicolor"
+     }
+    ]
+   },
+   {
+    "fact": "0.19",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Brazil Rufous - bellied thrush Turdus rufiventris"
+     }
+    ]
+   },
+   {
+    "fact": "0.20",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Cambodia Kouprey Bos sauveli"
+     }
+    ]
+   },
+   {
+    "fact": "0.21",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Canada North American beaver ( sovereignty animal symbol ) Castor canadensis"
+     }
+    ]
+   },
+   {
+    "fact": "0.22",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Canadian horse ( national horse ) Equus ferus caballus"
+     }
+    ]
+   },
+   {
+    "fact": "0.23",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "China Giant panda ( national animal ) Ailuropoda melanoleuca"
+     }
+    ]
+   },
+   {
+    "fact": "0.24",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "China Giant panda ( national animal ) Ailuropoda melanoleuca Chinese dragon ( national animal ) Mythical"
+     }
+    ]
+   },
+   {
+    "fact": "0.25",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "China Giant panda ( national animal ) Ailuropoda melanoleuca Chinese dragon ( national animal ) Mythical Red - crowned crane ( national bird ) Grus japonensis"
+     }
+    ]
+   },
+   {
+    "fact": "0.26",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Democratic Republic of the Congo Okapi Okapia johnstoni"
+     }
+    ]
+   },
+   {
+    "fact": "0.27",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Colombia Andean condor Vultur gryphus"
+     }
+    ]
+   },
+   {
+    "fact": "0.28",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Costa Rica Yigüirro ( national bird ) Turdus grayi"
+     }
+    ]
+   },
+   {
+    "fact": "0.29",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Costa Rica Yigüirro ( national bird ) Turdus grayi White - tailed deer ( national animal ) Odocoileus virginianus"
+     }
+    ]
+   },
+   {
+    "fact": "0.30",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Costa Rica Yigüirro ( national bird ) Turdus grayi White - tailed deer ( national animal ) Odocoileus virginianus West Indian manatee ( national aquatic animal ) Trichechus manatus"
+     }
+    ]
+   },
+   {
+    "fact": "0.31",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.32",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.33",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.34",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.35",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.36",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.37",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.38",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.39",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.40",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.41",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.42",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.43",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.44",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.45",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.46",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.47",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.48",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.49",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.50",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.51",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.52",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.53",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.54",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.55",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.56",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.57",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.58",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.59",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.60",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.61",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.62",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.63",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.64",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.65",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.66",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.67",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.68",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.69",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.70",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Latvia White wagtail ( national bird ) Motacilla alba"
+     }
+    ]
+   },
+   {
+    "fact": "0.71",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Latvia White wagtail ( national bird ) Motacilla alba Two - spotted ladybird ( national insect ) Adalia bipunctata"
+     }
+    ]
+   },
+   {
+    "fact": "0.72",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Lithuania White stork Ciconia ciconia"
+     }
+    ]
+   },
+   {
+    "fact": "0.73",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Macedonia Lion ( in Macedonian heraldry ) Panthera leo"
+     }
+    ]
+   },
+   {
+    "fact": "0.74",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Madagascar Zebu ( in Malagasy heraldry ) Bos primigenius indicus"
+     }
+    ]
+   },
+   {
+    "fact": "0.75",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Madagascar Zebu ( in Malagasy heraldry ) Bos primigenius indicus Ring - tailed lemur ( national animal ) Lemur catta"
+     }
+    ]
+   },
+   {
+    "fact": "0.76",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Malaysia Malayan tiger ( national animal ) Panthera tigris jacksoni"
+     }
+    ]
+   },
+   {
+    "fact": "0.77",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Malta Pharaoh Hound ( national animal ) Canis lupus familiaris ( 1 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.78",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Moldova Aurochs ( national animal ) Bos primigenius"
+     }
+    ]
+   },
+   {
+    "fact": "0.79",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Mauritius Dodo Raphus cucullatus"
+     }
+    ]
+   },
+   {
+    "fact": "0.80",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Mexico Golden eagle ( national animal ) Aquila chrysaetos Xoloitzcuintli ( national dog ) Canis lupus familiaris Jaguar ( national mammal ) Panthera onca Grasshopper ( national arthropod ) Sphenarium purpurascens Vaquita ( national marine mammal ) Phocoena sinus"
+     }
+    ]
+   },
+   {
+    "fact": "0.81",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Mexico Golden eagle ( national animal ) Aquila chrysaetos Xoloitzcuintli ( national dog ) Canis lupus familiaris Jaguar ( national mammal ) Panthera onca Grasshopper ( national arthropod ) Sphenarium purpurascens Vaquita ( national marine mammal ) Phocoena sinus"
+     }
+    ]
+   },
+   {
+    "fact": "0.82",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Mexico Golden eagle ( national animal ) Aquila chrysaetos Xoloitzcuintli ( national dog ) Canis lupus familiaris Jaguar ( national mammal ) Panthera onca Grasshopper ( national arthropod ) Sphenarium purpurascens Vaquita ( national marine mammal ) Phocoena sinus"
+     }
+    ]
+   },
+   {
+    "fact": "0.83",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Mexico Golden eagle ( national animal ) Aquila chrysaetos Xoloitzcuintli ( national dog ) Canis lupus familiaris Jaguar ( national mammal ) Panthera onca Grasshopper ( national arthropod ) Sphenarium purpurascens Vaquita ( national marine mammal ) Phocoena sinus"
+     }
+    ]
+   },
+   {
+    "fact": "0.84",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Mexico Golden eagle ( national animal ) Aquila chrysaetos Xoloitzcuintli ( national dog ) Canis lupus familiaris Jaguar ( national mammal ) Panthera onca Grasshopper ( national arthropod ) Sphenarium purpurascens Vaquita ( national marine mammal ) Phocoena sinus"
+     }
+    ]
+   },
+   {
+    "fact": "0.85",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Nepal Cow ( national animal ) Bos taurus indicus"
+     }
+    ]
+   },
+   {
+    "fact": "0.86",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Nepal Cow ( national animal ) Bos taurus indicus Danphe ( national bird ) Lophophorus impejanus"
+     }
+    ]
+   },
+   {
+    "fact": "0.87",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Netherlands Lion ( heraldic symbol ) Panthera leo"
+     }
+    ]
+   },
+   {
+    "fact": "0.88",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Netherlands Lion ( heraldic symbol ) Panthera leo Black - tailed godwit ( national bird ) Limosa limosa"
+     }
+    ]
+   },
+   {
+    "fact": "0.89",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "New Zealand Kiwi Apteryx sp ."
+     }
+    ]
+   },
+   {
+    "fact": "0.90",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "North Korea Chollima Mythical"
+     }
+    ]
+   },
+   {
+    "fact": "0.91",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Norway Lion ( royal national animal ) Panthera leo"
+     }
+    ]
+   },
+   {
+    "fact": "0.92",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Norway Lion ( royal national animal ) Panthera leo White - throated dipper ( national bird ) Cinclus cinclus"
+     }
+    ]
+   },
+   {
+    "fact": "0.93",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Norway Lion ( royal national animal ) Panthera leo White - throated dipper ( national bird ) Cinclus cinclus Fjord horse ( national horse ) Equus ferus caballus"
+     }
+    ]
+   },
+   {
+    "fact": "0.94",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Oman Arabian oryx ( national animal ) Oryx leucoryx"
+     }
+    ]
+   },
+   {
+    "fact": "0.95",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Pakistan Markhor ( National animal ) Capra falconeri"
+     }
+    ]
+   },
+   {
+    "fact": "0.96",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Pakistan Markhor ( National animal ) Capra falconeri Indus river dolphin ( National aquatic mammal ) Platanista indicus minor minor"
+     }
+    ]
+   },
+   {
+    "fact": "0.97",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Pakistan Markhor ( National animal ) Capra falconeri Indus river dolphin ( National aquatic mammal ) Platanista indicus minor minor Chukar ( National bird ) Alectoris chukar"
+     }
+    ]
+   },
+   {
+    "fact": "0.98",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Pakistan Markhor ( National animal ) Capra falconeri Indus river dolphin ( National aquatic mammal ) Platanista indicus minor minor Chukar ( National bird ) Alectoris chukar Indus crocodile ( National reptile ) Crocodylus palustris Shaheen falcon ( Heritage bird ) Falco peregrinus peregrinator Snow leopard ( National predator ) Panthera uncia"
+     }
+    ]
+   },
+   {
+    "fact": "0.99",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Pakistan Markhor ( National animal ) Capra falconeri Indus river dolphin ( National aquatic mammal ) Platanista indicus minor minor Chukar ( National bird ) Alectoris chukar Indus crocodile ( National reptile ) Crocodylus palustris Shaheen falcon ( Heritage bird ) Falco peregrinus peregrinator Snow leopard ( National predator ) Panthera uncia"
+     }
+    ]
+   },
+   {
+    "fact": "0.100",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Pakistan Markhor ( National animal ) Capra falconeri Indus river dolphin ( National aquatic mammal ) Platanista indicus minor minor Chukar ( National bird ) Alectoris chukar Indus crocodile ( National reptile ) Crocodylus palustris Shaheen falcon ( Heritage bird ) Falco peregrinus peregrinator Snow leopard ( National predator ) Panthera uncia"
+     }
+    ]
+   },
+   {
+    "fact": "0.101",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Panama Harpy eagle Harpia harpyja"
+     }
+    ]
+   },
+   {
+    "fact": "0.102",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Papua New Guinea Dugong ( national marine mammal ) Dugong dugon"
+     }
+    ]
+   },
+   {
+    "fact": "0.103",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Peru Vicuña ( national animal ) Vicugna vicugna"
+     }
+    ]
+   },
+   {
+    "fact": "0.104",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "Philippines Carabao ( national animal ) Bubalus bubalis"
+     }
+    ]
+   },
+   {
+    "fact": "0.105",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "Philippines Carabao ( national animal ) Bubalus bubalis Philippine eagle ( national bird ) Pithecophaga jefferyi"
+     }
+    ]
+   },
+   {
+    "fact": "0.106",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "Poland White - tailed eagle ( national bird ) Haliaeetus albicilla White stork ( national bird ) Ciconia ciconia European bison ( national animal ) Bison bonasus"
+     }
+    ]
+   },
+   {
+    "fact": "0.107",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "Poland White - tailed eagle ( national bird ) Haliaeetus albicilla White stork ( national bird ) Ciconia ciconia European bison ( national animal ) Bison bonasus"
+     }
+    ]
+   },
+   {
+    "fact": "0.108",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "Poland White - tailed eagle ( national bird ) Haliaeetus albicilla White stork ( national bird ) Ciconia ciconia European bison ( national animal ) Bison bonasus"
+     }
+    ]
+   },
+   {
+    "fact": "0.109",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "Qatar Arabian oryx Oryx leucoryx"
+     }
+    ]
+   },
+   {
+    "fact": "0.110",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "Romania Lynx Lynx lynx"
+     }
+    ]
+   },
+   {
+    "fact": "0.111",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "Russia Eurasian brown bear Ursus arctos arctos"
+     }
+    ]
+   },
+   {
+    "fact": "0.112",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "Rwanda Leopard Panthera pardus"
+     }
+    ]
+   },
+   {
+    "fact": "0.113",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "Saint Vincent and the Grenadines Saint Vincent amazon Amazona guildingii"
+     }
+    ]
+   },
+   {
+    "fact": "0.114",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "Serbia Wolf Canis lupus lupus White eagle Mythical Lynx Lynx lynx"
+     }
+    ]
+   },
+   {
+    "fact": "0.115",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "Serbia Wolf Canis lupus lupus White eagle Mythical Lynx Lynx lynx"
+     }
+    ]
+   },
+   {
+    "fact": "0.116",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "Serbia Wolf Canis lupus lupus White eagle Mythical Lynx Lynx lynx"
+     }
+    ]
+   },
+   {
+    "fact": "0.117",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "Somalia Leopard ( national animal ) Panthera pardus"
+     }
+    ]
+   },
+   {
+    "fact": "0.118",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "South Africa Springbok ( national animal ) Antidorcas marsupialis Blue crane ( national bird ) Anthropoides paradiseus Galjoen ( national fish ) Dichistius capensis"
+     }
+    ]
+   },
+   {
+    "fact": "0.119",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "South Africa Springbok ( national animal ) Antidorcas marsupialis Blue crane ( national bird ) Anthropoides paradiseus Galjoen ( national fish ) Dichistius capensis"
+     }
+    ]
+   },
+   {
+    "fact": "0.120",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "South Africa Springbok ( national animal ) Antidorcas marsupialis Blue crane ( national bird ) Anthropoides paradiseus Galjoen ( national fish ) Dichistius capensis"
+     }
+    ]
+   },
+   {
+    "fact": "0.121",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "South Korea Siberian tiger Panthera tigris altaica"
+     }
+    ]
+   },
+   {
+    "fact": "0.122",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "South Korea Siberian tiger Panthera tigris altaica Korean magpie ( national bird ) Pica ( pica ) sericea"
+     }
+    ]
+   },
+   {
+    "fact": "0.123",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "Sri Lanka Sri Lankan junglefowl ( national bird ) Gallus lafayettii"
+     }
+    ]
+   },
+   {
+    "fact": "0.124",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "Tanzania Giraffe Giraffa camelopardalis"
+     }
+    ]
+   },
+   {
+    "fact": "0.125",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Thailand Elephant Elephas maximus"
+     }
+    ]
+   },
+   {
+    "fact": "0.126",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "United Arab Emirates Arabian oryx ( national animal ) Oryx leucoryx"
+     }
+    ]
+   },
+   {
+    "fact": "0.127",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "United Arab Emirates Arabian oryx ( national animal ) Oryx leucoryx Peregrine falcon ( national bird ) Falco peregrinus"
+     }
+    ]
+   },
+   {
+    "fact": "0.128",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "United Kingdom Lion ( United Kingdom , England , Scotland , Wales ) Panthera leo"
+     }
+    ]
+   },
+   {
+    "fact": "0.129",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Bulldog ( Britain as `` British Bulldog '' ) Canis lupus familiaris"
+     }
+    ]
+   },
+   {
+    "fact": "0.130",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Red kite ( Wales ) Milvus milvus"
+     }
+    ]
+   },
+   {
+    "fact": "0.131",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Unicorn ( Scotland ) Mythical"
+     }
+    ]
+   },
+   {
+    "fact": "0.132",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Y Ddraig Goch ( Welsh Dragon Wales ) Mythical"
+     }
+    ]
+   },
+   {
+    "fact": "0.133",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "United States Bald eagle ( national bird ) Haliaeetus leucocephalus"
+     }
+    ]
+   },
+   {
+    "fact": "0.134",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "United States Bald eagle ( national bird ) Haliaeetus leucocephalus American bison ( national mammal ) Bison bison"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "5206dd93624cced5",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 12,
+      "quote": "Kylo Ren is a fictional character in the Star Wars franchise"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 12,
+      "quote": "Introduced in the 2015 film Star Wars : The Force Awakens"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 12,
+      "quote": "he is portrayed by Adam Driver"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 12,
+      "quote": "Kylo Ren is the chosen name of Ben Solo , the son of original Star Wars trilogy characters Han Solo and Leia Organa"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 12,
+      "quote": "Kylo Ren is the chosen name of Ben Solo , the son of original Star Wars trilogy characters Han Solo and Leia Organa"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 12,
+      "quote": "original Star Wars trilogy characters Han Solo and Leia Organa"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "Though trained by his uncle Luke Skywalker as a Jedi"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "he has been seduced to the dark side of the Force by Supreme Leader Snoke"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "aspires to be as powerful as his grandfather , Darth Vader"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "Kylo Ren is also the master of the Knights of Ren"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "as well as a commander and later the supreme leader of the First Order"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "as well as a commander and later the supreme leader of the First Order"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "an organization spawned from the fallen Galactic Empire"
+     }
+    ]
+   },
+   {
+    "fact": "0.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "He is featured in The Force Awakens media and merchandising"
+     }
+    ]
+   },
+   {
+    "fact": "0.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 11,
+      "quote": "appears in the film 's sequel , Star Wars : The Last Jedi ( 2017 )"
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Abrams told Empire in August 2015 , `` Kylo Ren is not a Sith"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Kylo Ren is not a Sith . He works under Supreme Leader Snoke"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Kylo Ren is not a Sith . He works under Supreme Leader Snoke , who is a powerful figure on the Dark Side of the Force"
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Abrams had previously told Entertainment Weekly that the character , `` came to the name Kylo Ren when he joined a group called the Knights of Ren"
+     }
+    ]
+   },
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Robbie Collin of The Telegraph described Ren as `` a hot - headed , radicalised Dark Side jihadi"
+     }
+    ]
+   },
+   {
+    "fact": "1.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Robbie Collin of The Telegraph described Ren as `` a hot - headed , radicalised Dark Side jihadi , whose red lightsaber splutters and crackles as violently as his temper"
+     }
+    ]
+   },
+   {
+    "fact": "1.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Abrams noted , `` The lightsaber is something that he built himself"
+     }
+    ]
+   },
+   {
+    "fact": "1.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Abrams noted , `` The lightsaber is something that he built himself , and is as dangerous and as fierce and as ragged as the character"
+     }
+    ]
+   },
+   {
+    "fact": "1.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "The Telegraph also explains that Ren 's wild and erratic temper and `` angsty '' instability make him dangerous"
+     }
+    ]
+   },
+   {
+    "fact": "1.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "The Telegraph also explains that Ren 's wild and erratic temper and `` angsty '' instability make him dangerous"
+     }
+    ]
+   },
+   {
+    "fact": "1.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Melissa Leon of The Daily Beast describes Ren 's use of the Force as `` formidable ''"
+     }
+    ]
+   },
+   {
+    "fact": "1.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Melissa Leon of The Daily Beast describes Ren 's use of the Force as `` formidable '' , citing his ability to stop a blaster shot mid-air"
+     }
+    ]
+   },
+   {
+    "fact": "1.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Melissa Leon of The Daily Beast describes Ren 's use of the Force as `` formidable '' , citing his ability to stop a blaster shot mid-air , immobilize victims"
+     }
+    ]
+   },
+   {
+    "fact": "1.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Melissa Leon of The Daily Beast describes Ren 's use of the Force as `` formidable '' , citing his ability to stop a blaster shot mid-air , immobilize victims and probe their minds against their will"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "5416bd512db771ff",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Headquarters Vienna , Austria"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Official language English"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Type International cartel"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Membership 14 states ( May 2017 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "As of May 2017 , OPEC 's members are Algeria , Angola , Ecuador , Equatorial Guinea , Gabon , Iran , Iraq , Kuwait , Libya , Nigeria , Qatar , Saudi Arabia ( the de facto leader ) , United Arab Emirates , and Venezuela"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "founded in 1960 in Baghdad by the first five members ( Iran , Iraq , Kuwait , Saudi Arabia , and Venezuela )"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Secretary General Mohammed Barkindo"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Establishment Baghdad , Iraq"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Statute September 1960 In effect January 1961"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Statute September 1960 In effect January 1961"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Currency Indexed as USD per barrel ( US $ / bbl )"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Website OPEC.org"
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "or OPEP in several other languages"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "OPEC , / ˈoʊpɛk / OH - pek"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "is an intergovernmental organization of 14 nations as of February 2018"
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "founded in 1960 in Baghdad by the first five members ( Iran , Iraq , Kuwait , Saudi Arabia , and Venezuela )"
+     }
+    ]
+   },
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "founded in 1960 in Baghdad by the first five members ( Iran , Iraq , Kuwait , Saudi Arabia , and Venezuela )"
+     }
+    ]
+   },
+   {
+    "fact": "1.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "headquartered since 1965 in Vienna , Austria"
+     }
+    ]
+   },
+   {
+    "fact": "1.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "As of 2016 , the 14 countries accounted for an estimated 44 percent of global oil production"
+     }
+    ]
+   },
+   {
+    "fact": "1.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "As of 2016 , the 14 countries accounted for an estimated 44 percent of global oil production and 73 percent of the world 's `` proven '' oil reserves"
+     }
+    ]
+   },
+   {
+    "fact": "1.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "giving OPEC a major influence on global oil prices"
+     }
+    ]
+   },
+   {
+    "fact": "1.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "global oil prices that were previously determined by American - dominated multinational oil companies"
+     }
+    ]
+   },
+   {
+    "fact": "2.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Oil Production ( bbl / day , 2016 ) Proven Reserves ( bbl , 2016 )"
+     },
+     {
+      "item": 10,
+      "quote": "Algeria North Africa 1969 -- 40,606,052 2,381,740 1,348,361 12,200,000,000"
+     }
+    ]
+   },
+   {
+    "fact": "2.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Oil Production ( bbl / day , 2016 ) Proven Reserves ( bbl , 2016 )"
+     },
+     {
+      "item": 10,
+      "quote": "Angola Southern Africa 2007 -- 28,813,463 1,246,700 1,769,615 8,423,000,000"
+     }
+    ]
+   },
+   {
+    "fact": "2.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Oil Production ( bbl / day , 2016 ) Proven Reserves ( bbl , 2016 )"
+     },
+     {
+      "item": 10,
+      "quote": "Ecuador South America 1973 -- 1992 , 2007 -- 16,385,068 283,560 548,421 8,273,000,000"
+     },
+     {
+      "item": 8,
+      "quote": "Ecuador ( 1973 -- 1992 , rejoined 2007 )"
+     }
+    ]
+   },
+   {
+    "fact": "2.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Oil Production ( bbl / day , 2016 ) Proven Reserves ( bbl , 2016 )"
+     },
+     {
+      "item": 10,
+      "quote": "Equatorial Guinea Central Africa 2017 -- 1,221,490 28,051 227,000 1,100,000,000"
+     }
+    ]
+   },
+   {
+    "fact": "2.4",
+    "status": "contradicted",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Gabon ( 1975 -- 1994 , rejoined 2016 )"
+     }
+    ]
+   },
+   {
+    "fact": "2.5",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.6",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.7",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.8",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.9",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.10",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.11",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.12",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Oil Production ( bbl / day , 2016 ) Proven Reserves ( bbl , 2016 )"
+     },
+     {
+      "item": 1,
+      "quote": "Venezuela South America 1960 -- 31,568,179 912,050 2,276,967 299,953,000,000"
+     }
+    ]
+   },
+   {
+    "fact": "2.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Oil Production ( bbl / day , 2016 ) Proven Reserves ( bbl , 2016 )"
+     },
+     {
+      "item": 1,
+      "quote": "OPEC Total 478,498,000 12,150,695 35,221,740 1,209,103,000,000"
+     }
+    ]
+   },
+   {
+    "fact": "2.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Oil Production ( bbl / day , 2016 ) Proven Reserves ( bbl , 2016 )"
+     },
+     {
+      "item": 1,
+      "quote": "World Total 7,618,511,000 510,072,000 80,622,287 1,650,585,000,000"
+     }
+    ]
+   },
+   {
+    "fact": "2.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Oil Production ( bbl / day , 2016 ) Proven Reserves ( bbl , 2016 )"
+     },
+     {
+      "item": 1,
+      "quote": "OPEC Percent 6 % 2 % 44 % 73 %"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "2efc058c428be248",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Prior to 1940 the term `` jeep '' had been used as U.S. Army slang for new recruits or vehicles"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "the World War II `` jeep '' that went into production in 1941"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "specifically tied the name to this light military 4x4"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "arguably making them the oldest four - wheel drive mass - production vehicles now known as SUVs"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "The Jeep became the primary light 4 - wheel - drive vehicle of the United States Army and the Allies during World War II , as well as the postwar period"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "The Jeep became the primary light 4 - wheel - drive vehicle of the United States Army and the Allies during World War II , as well as the postwar period"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "The Jeep became the primary light 4 - wheel - drive vehicle of the United States Army and the Allies during World War II , as well as the postwar period"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "The term became common worldwide in the wake of the war"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Doug Stewart noted : `` The spartan , cramped , and unstintingly functional jeep"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Doug Stewart noted : `` The spartan , cramped , and unstintingly functional jeep became the ubiquitous World War II four - wheeled personification of Yankee ingenuity and cocky , can - do determination . ''"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Doug Stewart noted : `` The spartan , cramped , and unstintingly functional jeep became the ubiquitous World War II four - wheeled personification of Yankee ingenuity and cocky , can - do determination . ''"
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "At least two Jeep models ( the CJ - 5 and the SJ Wagoneer ) enjoyed extraordinary three - decade production runs of a single body generation"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Jeeps have since the war inspired a number of other light utility vehicles , such as the Land Rover"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Many Jeep variants serving similar military and civilian roles have since been designed in other nations"
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "In lowercase the term `` jeep '' continues to be used as a generic term for vehicles inspired by the Jeep that are suitable for use on rough terrain"
+     }
+    ]
+   },
+   {
+    "fact": "2.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Jeep 's current product range consists solely of sport utility vehicles and off - road vehicles"
+     }
+    ]
+   },
+   {
+    "fact": "2.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "but has also included pickup trucks in the past"
+     }
+    ]
+   },
+   {
+    "fact": "2.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Some of Jeep 's vehicles , such as the Grand Cherokee and the Wagoneer , reach into the luxury segment"
+     }
+    ]
+   },
+   {
+    "fact": "2.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Jeep sold 1.4 million SUVs globally in 2016 , up from 500,000 in 2008"
+     }
+    ]
+   },
+   {
+    "fact": "2.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Jeep sold 1.4 million SUVs globally in 2016 , up from 500,000 in 2008 , two - thirds of which in North America"
+     }
+    ]
+   },
+   {
+    "fact": "2.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "was Fiat - Chrysler 's best selling brand in the U.S. during the first half of 2017"
+     }
+    ]
+   },
+   {
+    "fact": "2.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "In the U.S. alone , over 2400 dealerships hold franchise rights to sell Jeep - branded vehicles"
+     }
+    ]
+   },
+   {
+    "fact": "2.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "if Jeep were spun off into a separate company , it is estimated to be worth between $22 and $33.5 billion"
+     }
+    ]
+   },
+   {
+    "fact": "2.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "between $22 and $33.5 billion -- slightly more than all of FCA ( US )"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a3e36f1786c54bda",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "The Eastern Coastal Plains refers to a wide stretch of landmass of India"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "lying between the Eastern Ghats and the Bay of Bengal"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "It is wider and leveled than the western coastal plains"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "It is wider and leveled than the western coastal plains"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "stretches from Tamil Nadu in the south to West Bengal in the north"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "stretches from Tamil Nadu in the south to West Bengal in the north through Andhra Pradesh and Odisha"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Chilka Lake is a brackish water lake along the eastern coastal plain"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Chilka Lake is a brackish water lake along the eastern coastal plain . It lies in the state of Odisha"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Chilka Lake is a brackish water lake along the eastern coastal plain . It lies in the state of Odisha and stretches to the south of the Mahanadi Delta"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "86ae58e125ee0e1b",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Deion Sanders Sanders in 2011 No. 21 , 37"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Position : Cornerback"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Date of birth : ( 1967 - 08 - 09 ) August 9 , 1967"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "August 9 , 1967 ( age 50 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Place of birth : Fort Myers , Florida"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Height : 6 ft 1 in ( 1.85 m )"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Weight : 198 lb ( 90 kg )"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "He attended North Fort Myers High School in North Fort Myers"
+     },
+     {
+      "item": 3,
+      "quote": "High school : North Fort Myers ( FL )"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 18,
+      "quote": "He attended Florida State University"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "NFL Draft : 1989 / Round : 1 / Pick : 5"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Atlanta Falcons ( 1989 -- 1993 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "San Francisco 49ers ( 1994 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Dallas Cowboys ( 1995 -- 1999 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Washington Redskins ( 2000 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Baltimore Ravens ( 2004 -- 2005 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "2 × Super Bowl champion ( XXIX , XXX )"
+     }
+    ]
+   },
+   {
+    "fact": "0.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "8 × Pro Bowl ( 1991 -- 1994 , 1996 -- 1999 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "8 × First - team All - Pro ( 1991 -- 1994 ,"
+     },
+     {
+      "item": 8,
+      "quote": "1996 -- 1999 ) NFL Defensive Player of the Year ( 1994 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "won the NFL Defensive Player of the Year Award in 1994"
+     }
+    ]
+   },
+   {
+    "fact": "0.19",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "NFL 1990s All - Decade Team"
+     }
+    ]
+   },
+   {
+    "fact": "0.20",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Sanders was inducted into the Atlanta Falcons ' Ring of Honor"
+     }
+    ]
+   },
+   {
+    "fact": "0.21",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Jim Thorpe Award ( 1988 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.22",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "2 × Unanimous All - American ( 1987 , 1988 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.23",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Florida State Seminoles No. 2 retired"
+     }
+    ]
+   },
+   {
+    "fact": "0.24",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Career NFL statistics Interceptions : 53"
+     }
+    ]
+   },
+   {
+    "fact": "0.25",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Defensive touchdowns : 10"
+     }
+    ]
+   },
+   {
+    "fact": "0.26",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Return touchdowns : 9"
+     }
+    ]
+   },
+   {
+    "fact": "0.27",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Receptions : 60"
+     }
+    ]
+   },
+   {
+    "fact": "0.28",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Receiving yards : 784"
+     }
+    ]
+   },
+   {
+    "fact": "0.29",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Receiving touchdowns : 3"
+     }
+    ]
+   },
+   {
+    "fact": "0.30",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Player stats at NFL.com Player stats at PFR"
+     }
+    ]
+   },
+   {
+    "fact": "0.31",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "He was inducted into the Pro Football Hall of Fame in 2011"
+     }
+    ]
+   },
+   {
+    "fact": "0.32",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "On May 17 , 2011 , Sanders was announced as a College Football Hall of Fame inductee"
+     }
+    ]
+   }
+  ]
+ }
+]

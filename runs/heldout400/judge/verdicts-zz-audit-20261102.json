@@ -1,0 +1,64 @@
+[
+ {
+  "id": "ca3c3bcfa23c9830",
+  "correct": false,
+  "audit": "bare No to an either/or question"
+ },
+ {
+  "id": "b757015ec1e00efc",
+  "supported": [],
+  "audit": "topic overlap only; claim not stated"
+ },
+ {
+  "id": "f63784b79eb88c36",
+  "supported": [],
+  "audit": "topic overlap only; claim not stated"
+ },
+ {
+  "id": "e07b2365c1a2c221",
+  "supported": [],
+  "audit": "topic overlap only; claim not stated"
+ },
+ {
+  "id": "e5d05e0b38303b26",
+  "supported": [],
+  "audit": "topic overlap only; claim not stated"
+ },
+ {
+  "id": "68bea65e634e742b",
+  "supported": [],
+  "audit": "topic overlap only; claim not stated"
+ },
+ {
+  "id": "424620aec21d77cb",
+  "supported": [],
+  "audit": "topic overlap only; claim not stated"
+ },
+ {
+  "id": "b66c5c64078b793e",
+  "supported": [],
+  "audit": "topic overlap only; claim not stated"
+ },
+ {
+  "id": "4f432db03a295c32",
+  "supported": [
+   1
+  ],
+  "audit": "gold sentence appears verbatim"
+ },
+ {
+  "id": "a9702b0246bafb8a",
+  "supported": [
+   0,
+   1
+  ],
+  "audit": "gold sentence appears verbatim"
+ },
+ {
+  "id": "cd6548ff8f0f4e52",
+  "supported": [
+   1
+  ],
+  "audit": "same evidence as accepted items 63a300de/8c68b492"
+ }
+]

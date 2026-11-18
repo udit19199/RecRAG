@@ -1,0 +1,855 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=aa3895dd987fab8b ===
+Gold sentences and facts:
+Sentence 0: He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said.
+  Fact 0.0: Bankman-Fried was the richest person in the world under 30.
+  Fact 0.1: Bankman-Fried said he was going to spend his wealth to save humanity from extinction.
+Sentence 1: Because FTX had grown so much, he could no longer run both companies, he said.
+  Fact 1.0: FTX had grown so much.
+  Fact 1.1: The speaker said that because FTX had grown so much, he could no longer run both companies.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense argued that the FTX founder acted in good faith.
+  Fact 2.2: The defense argued that the FTX founder never meant to commit fraud or steal.
+  Fact 2.3: The defense argued that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Then, Nishad Singh, about a month after founding Alameda Research. Finally, Caroline Ellison.
+
+Not having a risk team, when you are any kind of financial anything, is certainly a choice
+
+Though Bankman-Fried was the CEO, and also the majority owner, he wanted to be clear: he did not supervise Wang’s direct work. Anyway, after a bunch of wildly
+successful arbitrage — 50 percent to 100 percent annualized returns, per his testimony — he decided to found a cryptocurrency exchange, FTX. He figured he’d
+fail; that there was only a 20 percent chance of success. Bankman-Fried did not define what he expected the time period to be on this estimate, but arguably 20
+percent was a much higher chance of success than FTX would enjoy once Alameda dipped into the customer deposits.
+
+By the way, because he was such a good guy, Bankman-Fried made a point of “periodically” handling support tickets himself.
+</item 1>
+
+<item 2>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Using the effectively unlimited funds “allowed us to make profitable trades we couldn’t have made otherwise”
+
+Bankman-Fried didn’t grant Ellison equity, even though she asked; he told her it would be too complicated. Instead, she got a $200,000 salary, even as CEO, and
+bonuses twice a year, which ranged from $100,000 to $20 million.
+
+Initially, Alameda and FTX were “very integrated,” Ellison said. They were run by the same team, from the same office. And when Alameda was scrounging for
+funds, Bankman-Fried told Ellison that FTX would be a good source of capital. The $65 billion line of credit Alameda Research had meant that it did not have to
+post collateral. There was no contract and no written terms, she testified. It also wasn’t visible to FTX’s auditors — she’d raised the question with
+Bankman-Fried, and he told her not to worry about it.
+</item 2>
+
+<item 3>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+Joe Bankman, Bankman-Fried’s father. He is among the people included in the “small group chat,” the Signal group where the FTX inner circle strategized during
+the exchange’s last days.
+
+Barbara Fried’s political action committee, Mind the Gap. It is among the entities that received FTX customer money as political donations. Fried and Bankman
+lived together in a Bahamas house purchased for them using FTX investor funds, according to a financial expert called by the prosecution; in a lawsuit filed by
+FTX’s bankruptcy estate, Bankman and Fried are alleged to have been given $10 million of FTX customer funds.
+
+Gabe Bankman-Fried’s nonprofit, Guarding Against Pandemics, which got millions from FTX. He was also in a Signal group chat, Donations Processing, that Singh
+says was used to coordinate the transfer of FTX and Alameda money to various political causes. In that chat, he can be seen recommending some donations be made
+“in the dark” to avoid public relations headaches.
+</item 3>
+
+<item 4>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+It is easy to lie with words and harder to lie with money. Bankman-Fried went around telling people that he wanted to make a lot of money to give it away, an
+idea of the Effective Altruism movement that Bankman-Fried affiliated himself with — but the amount of money he funneled to his Paper Bird vehicle alone was ten
+times the size of his philanthropic spending as outlined by Easton. And it was all vastly outweighed by his investments — the places where he could prove he was
+very smart by investing in the right companies early.
+
+And in brief, explosive testimony, former FTX lawyer Can Sun demonstrated what Bankman-Fried’s tactic was. During the days in November when the exchange
+imploded, Bankman-Fried was trying to raise money from Apollo, the private equity group. Apollo wanted an explanation for what had happened, and so
+Bankman-Fried came to Sun to ask him to come up with justifications for the missing funds.
+</item 4>
+
+<item 5>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Alameda’s credit line — which was taken in increments of $100,000 to $10 million at a time — was used for trading. Using the effectively unlimited funds
+“allowed us to make profitable trades we couldn’t have made otherwise,” Ellison testified.
+
+Customer funds were also used when Bankman-Fried bought back FTX shares from Binance, an early investor, in the summer of 2021. Bankman-Fried told Ellison it
+was “really important,” otherwise “Binance would do things to mess with FTX.” Ellison says she told him Alameda didn’t have the money. So Bankman-Fried took $1
+billion of FTX customer funds to buy out Binance, the first time Ellison recalled an amount that large. It was Bankman-Fried’s decision, she said, as he was the
+CEO of FTX.
+
+FTT was one of several “Sam coins”
+
+There was also the FTT token, which was created by Bankman-Fried and Wang.
+</item 5>
+
+<item 6>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+A substantial chunk had been spent on various investments, including in the celebrity-connected venture firm K5, trading firm Modulo (co-founded by one of
+Bankman-Fried’s ex-girlfriends), and AI company Anthropic.
+
+Another $413 million had gone directly to Bankman-Fried himself, through his wholly-owned company Paper Bird. “Outflows to insiders,” which suggested Singh’s
+not-quite-loans were included, was $192 million; real estate was another $228 million; and the donations to Gabe Bankman-Fried’s Guarding Against Pandemics,
+combined with the philanthropy from the FTX Foundation, totaled less than $40 million.
+
+It is easy to lie with words and harder to lie with money.
+</item 6>
+
+<item 7>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+It was that Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX. The spreadsheet makes this
+clear with a row labeled “FTX borrows,” which Ellison said were customer funds.
+
+Meanwhile, echoing Bankman-Fried and Ellison’s romantic relationship, FTX was keeping cozy private ties with Alameda yet publicly holding it at arm’s length. On
+January 14th, 2022, Bankman-Fried tweeted, “We’re launching a $2b venture fund: FTX Ventures!” Those funds came from Alameda, Ellison testified. But
+Bankman-Fried didn’t want to go public with the source of the funds. He said he thought Alameda’s brand was less good, and he didn’t want his name associated
+with it. Alameda also bought Robinhood shares for Bankman-Fried, who moved them to a vehicle called “Emergent Fidelity Technologies” to avoid association with
+Alameda.
+</item 7>
+
+<item 8>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+The general sense I got, from the testimony of Bankman-Fried’s former friends, was that things just kept escalating
+
+During Yedidia’s testimony, we were shown a photograph in court: former President Bill Clinton and former Prime Minister Tony Blair onstage in suits next to
+Bankman-Fried, in a rumpled T-shirt and cargo shorts. Sure, dressing down is a staple of Silicon Valley startup culture — and a sign of its swagger. The defense
+counsel tried to elicit testimony from Yedidia that the cargo shorts were evidence of Bankman-Fried’s humility, but the photograph seemed to signify just the
+opposite: that the man in cargo shorts is so important, he doesn’t need to dress up, even to meet former world leaders.
+
+Now, in court, Bankman-Fried is wearing a suit.
+
+In 2019, just months after FTX was founded, Wang oversaw code called “allow_negative” that let Alameda Research avoid being liquidated by FTX’s risk management.
+It was turned on in July.
+</item 8>
+
+<item 9>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+If it seems like his peer group supported him, or worse, fawned over him, that’s a real problem for the industry’s reputation.”
+
+After FTX declared bankruptcy, Bankman-Fried went on an extensive media tour, doing interviews with The New York Times’ Andrew Ross Sorkin and Good Morning
+America. Even under house arrest, he did interviews, including with The New Yorker. Bankman-Fried seemed to think that if he just explained things, everyone
+would understand that what he did was a mistake, not a crime.
+</item 9>
+
+<item 10>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Bankman-Fried is accused of using “billions of dollars in misappropriated FTX customer deposits” to help buy more than $200 million of real estate for himself,
+make billions of dollars of investments for his own interest, and repay Alameda’s lenders, according to the indictment, Additionally, Bankman-Fried allegedly
+used more than $100 million of customer funds to make political contributions; prosecutors can show evidence of those contributions in this trial, even though
+they aren’t part of the charges brought. A second trial is scheduled for March 2024, with additional charges.
+
+Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry. He was also very interested
+in publicity, sitting for many interviews both before and after the fall of FTX. The quick rise of FTX as an industry force was at least in part due to
+Bankman-Fried’s appetite for attention.
+</item 10>
+=== END ITEM id=aa3895dd987fab8b ===
+
+=== ITEM id=d7517549f6bfb265 ===
+Gold sentences and facts:
+Sentence 0: Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight.
+  Fact 0.0: Miami has five remaining opponents.
+  Fact 0.1: Four of Miami's five remaining opponents have pass defenses ranked in the league's top eight.
+Sentence 1: -- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season.
+  Fact 1.0: Tyreek Hill missed last week's game.
+  Fact 1.1: Tyreek Hill now needs to average almost 153 yards per game in his final three games.
+  Fact 1.2: Tyreek Hill's stated goal is 2,000 receiving yards this season.
+  Fact 1.3: Tyreek Hill needs to reach 2,000 receiving yards this season to meet his goal.
+
+Retrieved items:
+<item 1>
+Fantasy Football Week 16 Wide Receiver Preview: Waiver adds, DFS plays, and more (CBSSports.com, 2023-12-19T20:51:32+00:00)
+The other three are Tyreek Hill, Tyler Lockett, and DeSean Jackson.
+
+-- Deebo Samuel is on pace to become just the fourth player since 1992 to average more than 11 yards per target with at least 60 targets in multiple seasons.
+The other three are Tyreek Hill, Tyler Lockett, and DeSean Jackson. 18 -- Puka Nacua needs 18 more catches to set the rookie record for most catches in a
+season.
+
+-- Puka Nacua needs 18 more catches to set the rookie record for most catches in a season. 152.67 -- After missing last week's game, Tyreek Hill now needs to
+average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season.
+
+-- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving
+yards this season.
+</item 1>
+
+<item 2>
+Fantasy Football WR PPR Rankings Week 14: Who to start, best sleepers at wide receiver (Sporting News, 2023-12-07T22:11:00+00:00)
+Which WRs are on bye in Week 14?
+
+The final set of bye weeks sees only the Commanders and Cardinals idle, resulting in the losses of Terry McLaurin, Marquise Brown, Jahan Dotson, Curtis Samuel,
+Rondale Moore, and Greg Dortch.
+
+WEEK 14 PPR RANKINGS:
+
+QBs | RBs | TEs | D/STs | Kickers
+
+Even worse, Washington and Arizona sit as two of the weakest pass defenses in the league, so fantasy owners won't be able to count on big stats from their
+receivers going against the Commanders and Cardinals.
+
+WEEK 14 STANDARD RANKINGS:
+
+QBs | RBs | WRs | TEs | D/STs | Kickers
+
+Who are the best fantasy WRs in Week 14?
+
+The league's leading receiver, Tyreek Hill (vs.
+</item 2>
+
+<item 3>
+NFL Best Bets Week 9: Colts clobber Panthers, Dolphins drop Chiefs in Germany (Sporting News, 2023-11-03T20:56:00+00:00)
+Chiefs (Germany game)
+
+We get it — the Dolphins have yet to defeat a true contender this season and the Chiefs are the reigning champions of the NFL. However, Kansas City just got its
+doors blown off by Russell Wilson and the lowly Broncos, a game in which Patrick Mahomes and company suffered five turnovers and three sacks.
+
+We expect a statement win from Mike McDaniel and the Dolphins on neutral ground. The Dolphins have been in Frankfurt since early this week, having flown
+overnight on Monday to give them multiple days to acclimate to the time difference and their surroundings. The Chiefs, meanwhile, waited until after practice on
+Thursday to take the 11-hour voyage.
+
+This also happens to be a revenge game for former Chiefs receiver Tyreek Hill, who's on pace for multiple single-season receiving records and poised for his
+first Offensive Player of the Year award.
+</item 3>
+
+<item 4>
+Fantasy Football WR PPR Rankings Week 13: Who to start, best sleepers at wide receiver (Sporting News, 2023-11-29T20:27:00+00:00)
+Tyreek Hill (@ Commanders in Week 13) did his thing despite a tough matchup in Week 12, resulting in Miami's WR1 returning to the top spot against a putrid
+Washington stop unit. CeeDee Lamb (vs. Seahawks) isn't far behind, as Dallas' WR1 aims to maintain his efficient play against Seattle.
+
+Amon-Ra St. Brown (@ Saints) has been a target hog the past several weeks, seeing at least nine looks in each of his past six games. Don't expect his workload
+to decrease in a bounce-back game for the Lions. Keenan Allen (@ Patriots) looks to continue his dominant ways, as Justin Herbert's go-to target routinely has
+double-digit target potential.
+
+Mike Evans (vs. Panthers) sits in our top five for Week 13, totaling four TDs over the past three weeks. A.J. Brown (vs.
+</item 4>
+
+<item 5>
+MVPs for all 16 AFC teams at the midpoint (Yardbarker, 2023-11-09T21:51:02+00:00)
+MIAMI DOLPHINS | WR Tyreek Hill: Arguably the best wide receiver in the NFL, Hill has somehow reached a new level of dominance in his age-29 season. The
+seven-time Pro Bowler leads the NFL in receiving yards (1,076) and TD catches (eight). As long as the Dolphins maintain their success on offense down the
+stretch, Hill should earn Offensive Player of the Year honors. He's on pace to break Calvin Johnson's season record for receiving yards (1,964).
+
+
+
+NEW YORK JETS | LB Quincy Williams: While his brother, Quinnen, may be the better-known Jets defender in the family, Williams — the AFC Defensive Player of the
+Month for October — is also making a name for himself. Aside from being the fifth-highest-rated linebacker in the NFL by Pro Football Focus, Williams is tied
+for 17th in tackles (74) and tied for ninth in TFLs (nine) among all defenders.
+</item 5>
+
+<item 6>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+9:43 p.m. — Hill is up to 65 yards on eight catches. No other Dolphins receiver has more than two catches, and Hill now has 879 yards on the season.
+
+Eagles 17, Dolphins 10
+
+9:39 p.m. TOUCHDOWN — Tagovailoa hits Hill in the end zone for a touchdown! Hill was facing double coverage but simply beat both defenders. Miami has the
+deficit back to one possession.
+
+9:38 p.m. — Rookie Nolan Smith sacks Tagovailoa with 44 seconds remaining in the half.
+
+9:37 p.m. — The Dolphins are down to the Eagles' 29-yard line after catches by Braxton Berrios and Tyreek Hill. They have a chance to score on back-to-back
+possessions, as they get the ball out of halftime.
+
+9:33 p.m. TWO-MINUTE WARNING — Woah!
+</item 6>
+
+<item 7>
+Fantasy Football Week 16 Wide Receiver Preview: Waiver adds, DFS plays, and more (CBSSports.com, 2023-12-19T20:51:32+00:00)
+Weekly Breakdown MATCHUP @ MIA MIA -1.5 O/U 51 OPP VS WR 15th PROJ PTS 19.4 WR RNK 2nd YTD Stats REC 103 TAR 141 REYDS 1306 TD 10 FPTS/G 21.6 The choice between
+Lamb and Tyreek Hill will not be an easy one. The tiebreaker for me is that Lamb is $900 cheaper and Hill may still not be 100% by the time the Cowboys and
+Dolphins kick off. Last week was the first time since Week 9 that Lamb failed to reach the end zone and the second time since Week 5 that he didn't score at
+least 17 PPR Fantasy points.
+
+Contrarian DFS Play (WR Preview) Projections powered by Sportsline Jaylen Waddle WR MIA Miami • #17
+
+Age: 25 • Experience: 3 yrs.
+</item 7>
+
+<item 8>
+NFL awards odds: Six longshots bettors should consider for MVP, OPOY, DPOY and more (Sporting News, 2023-12-05T20:45:25+00:00)
+1 seed in the conference.
+
+Compared to the 49ers, Cowboys and Eagles, Goff and the Lions may have the easiest schedule to finish the season.
+
+But bettors should also pay attention to C.J. Stroud. He leads the league in passing yards, is one of four quarterbacks eho have started the whole season with a
+passer rating over 100, and his touchdown to interception ratio is the best in the NFL (4 to 1)
+
+As for the value of his play, Stroud has taken one of the worst teams in the NFL (11 total wins the last three seasons) and turned it into a playoff contender
+and potential division champion.
+
+Offensive Player of the Year
+
+Current favorite: Tyreek Hill
+
+Longshot: CeeDee Lamb
+
+There's a good reason why Tyreek Hill is such a heavy favorite to win OPOY. The Dolphins wide receiver is on track to become the first player with 2,000-plus
+receiving yards in a single season.
+</item 8>
+
+<item 9>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+Six of the 17 won anyway. The Dolphins were the only one of those 223 teams to win and cover the spread, which was 13.5 for this game.
+
+• Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games. That ranks second in NFL
+history to Hall of Famer Don Hutson, who had 819 yards through six with Green Bay in 1942.
+</item 9>
+
+<item 10>
+Fantasy Football WR PPR Rankings Week 14: Who to start, best sleepers at wide receiver (Sporting News, 2023-12-07T22:11:00+00:00)
+The league's leading receiver, Tyreek Hill (vs. Titans in Week 14), stands as the unquestioned WR1 for Week 14 after torching the Commanders to the tune of five
+catches, 157 yards, and two TDs. CeeDee Lamb (vs. Eagles) and the Cowboys look to avenge their road loss to the Eagles in Week 9, as Dallas' WR1 routinely has
+double-digit reception potential.
+
+Amon-Ra St. Brown (@ Bears) was relatively quiet this past week, but he's likely to rebound against a Bears defense that he totaled nine catches for 95 yards
+against in Week 11. A.J. Brown (@ Cowboys) reached the century mark for the first time in four games in Week 13, and another high-usage day looks to be in store
+for a potential shootout.
+
+Keenan Allen (vs. Broncos) caught just five-of-nine targets last week, but as L.A.
+</item 10>
+=== END ITEM id=d7517549f6bfb265 ===
+
+=== ITEM id=11ecc2a7b2a57c13 ===
+Gold sentences and facts:
+Sentence 0: New customers can get up to $1000 in bonus bets if they lose their first bet.
+  Fact 0.0: New customers can get up to $1000 in bonus bets.
+  Fact 0.1: New customers get bonus bets if they lose their first bet.
+Sentence 1: We expect Caesars to offer the same offer in VT is has elsewhere, with new sign-ups eligible to receive up to a $1,000 Bonus Bet if their first bet loses.
+  Fact 1.0: The writer expects Caesars to offer the same offer in VT as it has elsewhere.
+  Fact 1.1: New sign-ups would be eligible to receive up to a $1,000 Bonus Bet if their first bet loses.
+
+Retrieved items:
+<item 1>
+Vermont Sportsbook Promos and Sports Betting Launch News (Sporting News, 2023-09-26T22:53:28+00:00)
+The site offers frequent odds boosts and other bonuses, and new sign-ups also get to join the famed Caesars Rewards program that can earn them more site bonuses
+among other benefits.
+
+Here are details explaining how the Caesars Sportsbook welcome offer works:
+
+When registering your new Caesars Sportsbook account, enter the bonus code NEWS1000 .
+
+. Place a first bet within 30 days and if it loses, receive back the equivalent amount in the form of a Bonus Bet worth up to $1,000 .
+
+. After that first bet has been settled, you’ll see the Bonus Bet in your account within two days .
+
+. Use your Bonus Bet within 14 days or else it will expire.
+
+or else it will expire. If you win with your Bonus Bet, you only receive the winnings and not the bet amount back.
+
+BetRivers Vermont promo code
+
+BetRivers Sportsbook is another site that has launched in many states and could be among those coming to Vermont. BetRivers has a lot to offer and many have
+found it a great choice elsewhere.
+</item 1>
+
+<item 2>
+Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers
+(Sporting News, 2023-11-29T21:00:04+00:00)
+Bet CBK games here: $1,550 in bonus bets with BetMGM bonus code TSN50
+
+Bet365 bonus code TSNCO for First Bet Safety Net up to $1,000 or Bet $5, Get $150 in bonus bets for ACC-SEC Challenge games
+
+New customers at Bet365 have their choice of promo offers when using Bet365 bonus code TSNCO. The First Bet Safety Net protects your initial wager up to $1,000!
+
+You can also choose the Bet $5, Get $150 in bonus bets offer. Both of these promos can be used to bet on any CBK games including tonight's ACC-SEC Challenge
+matchups!
+
+Use Bet365 bonus code VATSN in Virginia or NJTSN in New Jersey.
+</item 2>
+
+<item 3>
+2023 Kentucky online sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet (CBSSports.com, 2023-10-13T21:17:17+00:00)
+4. BetMGM Sportsbook: The signup offer at BetMGM caters more to larger players, a $1500 risk free offer which will credit a customer with bonus bets in the
+event their first real money wager loses. The boosts and risk free offers on the site cater to smaller players as the limits for those tokens are generally less
+than the other sites. With a friendly interface and a rewards program that can be redeemed for bonus bets or MGM Resort credit, this sportsbook is one of the
+best in the business for a reason.
+
+5. Caesars Sportsbook: Similar to MGM, the rewards program is what Caesars is most known for in that customers can redeem their wagering credits for use at
+Caesars properties. New customers can get up to $1000 in bonus bets if they lose their first bet. The sportsbook offers an extensive betting menu and
+specializes in specific boosts related to your home state teams.
+
+6.
+</item 3>
+
+<item 4>
+Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers
+(Sporting News, 2023-11-29T21:00:04+00:00)
+This offer requires a minimum $10 deposit, but you can deposit up to the amount of your first bet to $1,500 to maximize your potential winnings. If your first
+bet on the app loses, BetMGM will refund your account with bonus bets in the amount of the original wager up to $1,500.
+
+The extra $50 bonus bet offer is not available in Washington D.C., Kentucky, Mississippi, Nevada, New York, Puerto Rico and Ontario. Customers in those areas
+can use BetMGM bonus code SPORTSPICK for the $1,500 First Bet offer.
+</item 4>
+
+<item 5>
+Best sportsbook bonus offers for NFL Monday Night Football Eagles vs. Seahawks: Claim over $5,000 in bonuses from Bet365, BetMGM, BetRivers, Caesars Sportsbook,
+DraftKings and FanDuel  (Sporting News, 2023-12-18T21:00:03+00:00)
+To claim this top-notch welcome offer, click our Caesars Sportsbook promo code link and sign up for a new Caesars account. Be sure Caesars Sportsbook promo code
+NEWS1000 is entered when prompted. Then make your first deposit ($10 minimum).
+
+After that, place your first Caesars Sportsbook bet and if it loses you’ll get the amount of that wager (up to $1,000) as a single bonus bet.
+
+Get up to $1,200 in bonuses for Eagles vs.
+</item 5>
+
+<item 6>
+Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers
+(Sporting News, 2023-11-29T21:00:04+00:00)
+Use Bet365 bonus code VATSN in Virginia or NJTSN in New Jersey.
+
+Claim here: Bet365 bonus code TSNCO for promo of your choice
+
+FanDuel promo code for Bet any $5 moneyline, Get $150 in bonus bets if your team wins in CBK game
+
+FanDuel has a new offer when using our exclusive FanDuel promo code link. Bet $5 on any moneyline, and Get $150 in bonus bets if your team wins!
+
+It's important to note that there are no odds restrictions, so it'd be prudent to bet a big favorite over an outmatched underdog on the CBK schedule. You need
+to win the wager to receive $150 in bonus bets.
+</item 6>
+
+<item 7>
+Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers
+(Sporting News, 2023-11-29T21:00:04+00:00)
+DraftKings | BetMGM vs. FanDuel | Caesars vs. BetMGM
+</item 7>
+
+<item 8>
+Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers
+(Sporting News, 2023-11-29T21:00:04+00:00)
+7 Tennessee vs. No. 14 North Carolina. Duke vs. Arkansas is another marquee matchup on tonight's slate of CBK games.
+
+Claim thousands in sports betting bonuses for college basketball games with these promo codes and links
+
+Top-rated sportsbooks -- BetMGM, Bet365, FanDuel, Caesars Sportsbook, DraftKings and BetRivers -- make it worth your while when signing up as a new user to the
+tune of $5K+ in bonus bets!
+
+Click our links to activate the best sports betting bonuses in the industry and register your sportsbook accounts now!
+
+Caesars Sportsbook promo code NEWS1000 for $1,000 First Bet on Caesars for Volunteers vs. Tar Heels
+
+Caesars Sportsbook promo code NEWS1000 gives new users a First Bet up to $1,000 on Caesars!
+</item 8>
+
+<item 9>
+Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers
+(Sporting News, 2023-11-29T21:00:04+00:00)
+Start by clicking our Caesars Sportsbook promo code link and sign up for a new account. If your first bet loses, Caesars will credit your account with bonus
+bets in the amount of your wager up to $1,000.
+
+Click to claim: Caesars Sportsbook promo code NEWS1000 for First Bet up to $1K on Caesars
+
+BetMGM bonus code TSN50 unlocks $1,550 in bonus bets for Blue Devils vs. Razorbacks
+
+Use our exclusive BetMGM bonus code TSN50 to claim a First Bet bonus of up to $1,500, and a $50 bonus bet for customers in select states.
+
+Click our BetMGM bonus code link and register for your new account with promo code TSN50 to unlock this bonus.
+</item 9>
+
+<item 10>
+Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers
+(Sporting News, 2023-11-29T21:00:04+00:00)
+Start by clicking on our exclusive DraftKings promo code link
+
+Register as a new user by supplying personal info including your name, email, last four of your SSN#, and mailing address
+
+Deposit $5 to activate $50 bonus bet
+
+Bet $5 and Get $150 in bonus bets
+
+To max out DraftKings' deposit match at $1,000, make a minimum deposit of $5,000 and meet the 25X playthrough requirement.
+
+Claim here: DraftKings promo code for $1,200 in bonus bets
+
+BetRivers promo code SPORTSRIV unlocks 2nd chance bet for CBK games including Duke vs. Arkansas
+
+The BetRivers promo code SPORTSRIV gives new users a 2nd chance bet up to $500 depending on your state.
+
+If your first bet settles as a loss, BetRivers will refund your account in bonus bets.
+</item 10>
+=== END ITEM id=11ecc2a7b2a57c13 ===
+
+=== ITEM id=ddbc822e3346782b ===
+Gold sentences and facts:
+Sentence 0: We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving.
+  Fact 0.0: The writer identifies with the superhero's struggles.
+  Fact 0.1: The writer identifies with the superhero's little glimmers of connection and triumph.
+  Fact 0.2: The superhero is the perfect superhero for Thanksgiving.
+Sentence 1: Apart from the food - arguably the main component of the day - the holiday is a beloved time of year when Americans come together to celebrate what they are thankful for, either with family or friends.
+  Fact 1.0: Food is arguably the main component of Thanksgiving Day.
+  Fact 1.1: Apart from food, the holiday is a beloved time of year.
+  Fact 1.2: Americans come together during the holiday to celebrate what they are thankful for.
+  Fact 1.3: Americans celebrate what they are thankful for either with family or with friends.
+
+Retrieved items:
+<item 1>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Marvel built its comic book revolution on the back of one idea: rendering colorful superheroes as relatable. In the mid 20th century, DC do-gooders were
+essentially square-jawed Sunday school teachers, which let Marvel corner the market on heroes with human depth and fragility. The Fantastic Four were vulnerable
+to insecurity and in-fighting. The X-Men represented the cost of bigotry on a wide scale.
+
+But Spider-Man represented this new wave best. Consumed by youthful everyman angst and desperate to find balance in his life, Spider-Man is broadly sympathetic.
+We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving. And Spider-Man
+writers know it.
+
+Thanksgiving has a complicated history, tied to the roots of American colonialism, and more recently processed through a lens of joyful capitalism. But feeding
+friends and family is perhaps one of the most humane acts we can pursue.
+</item 1>
+
+<item 2>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Sure, everyone in that room is trying to hold things together. Mary Jane wants to impress Norman, Harry wants to impress Norman and Mary Jane, Peter loves Mary
+Jane but doesn’t dare hurt Harry, and Aunt May is finishing what’s presumably a dope turkey, in an attempt to care for all of them.
+
+It’s the trying that counts: Life can be hard, weird, and cruel, but while sitting down for a meal with our nearest and dearest, maybe for at least a little
+while, we won’t need to have it all figured out.
+
+Not all Spider-Man Thanksgiving dinners end up falling apart, and some succeed in reminding Peter that he isn’t alone. The first season of The Spectacular
+Spider-Man ends with a bang: One of Peter’s closest pals, Eddie Brock, has become Venom, and has threatened everyone Peter holds dear. This comes just after
+Peter himself was infected by the symbiote, and went through the now-iconic throes of pushing everyone away.
+</item 2>
+
+<item 3>
+Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)
+inflated Getty Macy's Thanksgiving Day Parade takes place in New York Sinclair's DINO balloon flies as the parade passes down 6th Avenue Reuters Macy's
+Thanksgiving Day Parade takes place in New York An NYPD officer stands by AP Macy's Thanksgiving Day Parade takes place in New York The Charlie Brown balloon
+flies in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York A marching band takes part in the parade Reuters Macy's Thanksgiving Day
+Parade takes place in New York A balloon flies in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York A performer in the parade AP Macy's
+Thanksgiving Day Parade takes place in New York The Ronald McDonald balloon flies in the parade AP Macy's Thanksgiving Day Parade takes place in New York A
+clown performs in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York The Olaf balloon is inflated Getty Macy's Thanksgiving Day Parade
+takes place in New York Flag wavers take part in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York Clowns on roller blades perform in
+the parade Reuters Macy's Thanksgiving Day Parade takes place in New York The Charlie Brown balloon is
+</item 3>
+
+<item 4>
+Graph query row:
+article: Why do Americans celebrate Thanksgiving?
+publisher: The Independent
+connections: [{'entity': 'The Independent', 'relationship': 'PUBLISHED_BY'}, {'entity': 'NFL', 'relationship': 'MENTIONS'}, {'entity': 'Virginia',
+'relationship': 'MENTIONS'}, {'entity': 'Pilgrims', 'relationship': 'MENTIONS'}, {'entity': 'Thanksgiving', 'relationship': 'MENTIONS'}, {'entity': 'Native
+Americans', 'relationship': 'MENTIONS'}, {'entity': 'New York', 'relationship': 'MENTIONS'}, {'entity': 'United States', 'relationship': 'MENTIONS'}, {'entity':
+'Civil War', 'relationship': 'MENTIONS'}, {'entity': 'peace', 'relationship': 'MENTIONS'}, {'entity': 'thankfulness', 'relationship': 'MENTIONS'}, {'entity':
+'holiday season', 'relationship': 'MENTIONS'}, {'entity': 'First Thanksgiving in 1619', 'relationship': 'MENTIONS'}, {'entity': 'First Thanksgiving in 1621',
+'relationship': 'MENTIONS'}, {'entity': 'Plymouth, Massachusetts', 'relationship': 'MENTIONS'}, {'entity': 'Wampanoag Indians', 'relationship': 'MENTIONS'},
+{'entity': "Macy's Thanksgiving Day Parade", 'relationship': 'MENTIONS'}, {'entity': "Macy's", 'relationship': 'MENTIONS'}, {'entity': 'Tom Turkey float',
+'relationship': 'MENTIONS'}, {'entity': 'Ronald McDonald balloon', 'relationship': 'MENTIONS'}, {'entity': "Sinclair's DINO balloon", 'relationship':
+'MENTIONS'}, {'entity': "Sinclair's", 'relationship': 'MENTIONS'}, {'entity': '6th Avenue', 'relationship': 'MENTIONS'}, {'entity': 'NYPD', 'relationship':
+'MENTIONS'}, {'entity': 'Charlie Brown balloon', 'relationship': 'MENTIONS'}, {'entity': 'Olaf balloon', 'relationship': 'MENTIONS'}, {'entity': 'George
+Washington', 'relationship': 'MENTIONS'}, {'entity': 'John Adams', 'relationship': 'MENTIONS'}, {'entity': 'James Madison', 'relationship': 'MENTIONS'},
+{'entity': 'Abraham Lincoln', 'relationship': 'MENTIONS'}, {'entity': 'The Charlie Brown balloon', 'relationship': 'MENTIONS'}, {'entity': 'The Tom Turkey
+float', 'relationship': 'MENTIONS'}, {'entity': 'winter holidays', 'relationship': 'MENTIONS'}, {'entity': 'conquest of Native Americans and Native American
+lands', 'relationship': 'MENTIONS'}, {'entity': 'cultural appropriation', 'relationship': 'MENTIONS'}, {'entity': 'National day of Mourning', 'relationship':
+'MENTIONS'}, {'entity': "Canada's Thanksgiving Day", 'relationship': 'MENTIONS'}, {'entity': 'Thanksgiving in Liberia', 'relationship': 'MENTIONS'}, {'entity':
+'Liberia', 'relationship': 'MENTIONS'}, {'entity': 'vegan lifestyle', 'relationship': 'MENTIONS'}, {'entity': 'turkeys', 'relationship': 'MENTIONS'}, {'entity':
+'yams topped with marshmallows', 'relationship': 'MENTIONS'}, {'entity': 'stuffing', 'relationship': 'MENTIONS'}, {'entity': 'cranberry sauce', 'relationship':
+'MENTIONS'}, {'entity': 'cornbread', 'relationship': 'MENTIONS'}, {'entity': 'pumpkin pie', 'relationship': 'MENTIONS'}, {'entity': 'vegan and vegetarian
+Thanksgiving options', 'relationship': 'MENTIONS'}, {'entity': 'Reuters', 'relationship': 'MENTIONS'}, {'entity': 'AP', 'relationship': 'MENTIONS'}, {'entity':
+'America', 'relationship': 'MENTIONS'}, {'entity': 'Canada', 'relationship': 'MENTIONS'}, {'entity': 'Black Friday', 'relationship': 'MENTIONS'}, {'entity':
+'Getty', 'relationship': 'MENTIONS'}]
+passages: [{'page': 'Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)', 'passage': 'Why do Americans
+celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)\nStay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Please enter a valid email address Please
+enter a valid email address SIGN UP I would like to be emailed about offers, events and updates from The Independent. Read our privacy notice Thanks for signing
+up to the\n\nLifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{
+/verifyErrors }}\n\nAmericans started preparing their Thanksgiving menus weeks ago, with the requisite turkeys and stuffing ingredients likely already purchased
+for the holiday, which is celebrated this year on Thursday 23 November.\n\nApart from the food - arguably the main component of the day - the holiday is a
+beloved time of year when Americans come together to celebrate what they are thankful for, either with family or friends.\n\nIn America, Thanksgiving is a
+cultural holiday that symbolises peace, thankfulness, and the beginning of the holiday season.\n\nWhat is Thanksgiving and where did it come from?'}, {'page':
+'Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)', 'passage': "Why do Americans celebrate Thanksgiving?
+(The Independent - Life and Style, 2023-11-11T09:04:08+00:00)\nWhat is Thanksgiving and where did it come from?\n\nThanksgiving is a national holiday in the
+United States celebrated every fourth Thursday in November.\n\nThe annual feast is in honour of the “first” Thanksgivings in America, in 1619 in Virginia, and
+in 1621, when colonists in Plymouth, Massachusetts, later known as the Pilgrims, allegedly shared a meal with the Wampanoag Indians, who were native to the
+land.\n\nThe later feast was in honour of the help the Pilgrims received from the Native Americans in cultivating crops and surviving their first harsh winter
+and it lasted three days.\n\nMacy's Thanksgiving Day Parade takes place in New York Show all 15 1 / 15 Macy's Thanksgiving Day Parade takes place in New York
+Macy's Thanksgiving Day Parade takes place in New York Performers walk in front of Macy's Tom Turkey float in the Thanksgiving Day Parade in New York AP Macy's
+Thanksgiving Day Parade takes place in New York The Ronald McDonald balloon is inflated Getty Macy's Thanksgiving Day Parade takes place in New York Sinclair's
+DINO balloon flies as the"}, {'page': 'Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)', 'passage': "Why
+do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)\ninflated Getty Macy's Thanksgiving Day Parade takes place in
+New York Sinclair's DINO balloon flies as the parade passes down 6th Avenue Reuters Macy's Thanksgiving Day Parade takes place in New York An NYPD officer
+stands by AP Macy's Thanksgiving Day Parade takes place in New York The Charlie Brown balloon flies in the parade Reuters Macy's Thanksgiving Day Parade takes
+place in New York A marching band takes part in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York A balloon flies in the parade Reuters
+Macy's Thanksgiving Day Parade takes place in New York A performer in the parade AP Macy's Thanksgiving Day Parade takes place in New York The Ronald McDonald
+balloon flies in the parade AP Macy's Thanksgiving Day Parade takes place in New York A clown performs in the parade Reuters Macy's Thanksgiving Day Parade
+takes place in New York The Olaf balloon is inflated Getty Macy's Thanksgiving Day Parade takes place in New York Flag wavers take part in the parade Reuters
+Macy's Thanksgiving Day Parade takes place in New York Clowns on roller blades perform in the parade Reuters Macy's Thanksgiving Day Parade takes place in New
+York The Charlie Brown balloon is"}, {'page': 'Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)',
+'passage': "Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)\nperform in the parade Reuters Macy's
+Thanksgiving Day Parade takes place in New York The Charlie Brown balloon is inflated Getty Macy's Thanksgiving Day Parade takes place in New York The Tom
+Turkey float is in place to start the parade Reuters\n\nLater, US Presidents including George Washington, John Adams and James Madison called for days of thanks
+throughout their presidencies.\n\nHowever, it was not until 1863, during the Civil War, that President Abraham Lincoln declared a national Thanksgiving Day
+would be held each November to be celebrated by all of the country.\n\nWhen is Thanksgiving?\n\nThanksgiving takes place each year on the fourth Thursday of
+November.\n\nThis year, Thanksgiving falls on 23 November.\n\nWhy do Americans celebrate it and what do they do?\n\nAlthough Thanksgiving may originally have
+had religious significance, the day has become a mostly secular holiday.\n\nMost Americans consider the holiday a day to gather and express their thanks through
+food, family, and football – with multiple NFL teams playing on the holiday.\n\nDuring some Thanksgiving celebrations, people write down what they are thankful
+for and then read aloud from the pieces of paper."}, {'page': 'Why do Americans celebrate Thanksgiving? (The Independent - Life and Style,
+2023-11-11T09:04:08+00:00)', 'passage': "Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)\nThe Macy's
+Thanksgiving Day Parade takes place in New York City\n\nThe day is also celebrated with the annual Macy’s Thanksgiving Day Parade in New York City.\n\nThe
+world’s largest Thanksgiving parade includes giant balloons of cartoons that float above the city sky, as well as marching bands and dancers.\n\nFollowing
+Thanksgiving, the month-long shopping for the winter holidays begins, with Black Friday kicking off the season.\n\nWhy is Thanksgiving
+controversial?\n\nAlthough many Americans view Thanksgiving as a beloved holiday, it is viewed by many who have abandoned the holiday as a erroneous celebration
+of what was actually the conquest of Native Americans and Native American lands. The celebration has become controversial, as Thanksgiving has a contentious
+history that goes far beyond when the first feast was held.\n\nIn addition to a holiday steeped with cultural appropriation, the period of history in America is
+frequently white-washed, which leads some Americans to ignore the holiday, or, to instead observe a National day of Mourning.\n\nWhere is it celebrated?"},
+{'page': 'Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)', 'passage': 'Why do Americans celebrate
+Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)\nWhere is it celebrated?\n\nThanksgiving is one of the the most important cultural
+holidays in America, however, Canada also has its own Thanksgiving Day, on the second Monday in October, and Liberia celebrates Thanksgiving on the first
+Thursday of November.\n\nWhat do people eat on Thanksgiving?\n\nIn America, turkeys are an integral part of Thanksgiving Day, with most dinners including the
+bird.\n\nAn estimated 46m turkeys are killed annually for the holiday, however, two turkeys are pardoned each year by the president.\n\nBut Americans who don’t
+eat meat or follow a vegan lifestyle don’t have to worry about missing out, as there are numerous vegan and vegetarian Thanksgiving options.\n\nAmericans also
+indulge in Thanksgiving favourites such as yams topped with marshmallows, stuffing, cranberry sauce, cornbread, and pumpkin pie.'}]
+</item 4>
+
+<item 5>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+But feelings of loneliness spike during the holidays, meaning that there’s a good chance you’ll feel even more like Peter Parker when late November rolls
+around.
+
+It’s what makes the Thanksgiving scene in the 2002 Spider-Man film so engaging. That whole movie is an exercise in heart-on-your-sleeve sweetness. Everyone
+who’s seen it knows the Thanksgiving dinner rapidly descends into chaos, with Norman Osborn ominously sticking his fingers into Aunt May’s sweet-potato
+casserole, figuring out Spider-Man’s secret identity, and delivering a grossly sexist diatribe to his son Harry, leaving Harry and Mary Jane at odds with each
+other. Aunt May and Peter clearly wind up with a ton of leftovers after everyone else storms out.
+
+But for Peter, who’s just lost his Uncle Ben and has been facing the initial trials of being Spider-Man, there’s a nice moment of personal respite at the
+opening of that scene, where he walks into a room where he knows he’s loved, bearing an offering of cranberry sauce,.
+</item 5>
+
+<item 6>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Spider-Man is the only Marvel character to rate a balloon in the Macy’s Thanksgiving Parade. Other Marvel characters have appeared on floats, but only
+Spider-Man has been inflated to 80 feet and pulled through the Upper West Side. (That also makes him the only Marvel character to have his head horrifically
+torn open by a tree branch.)
+
+From his first comic book appearance, Spider-Man has been a reminder that life is hard and complicated, and being a superhero doesn’t preclude anyone from
+experiencing ordinary frustrations, setbacks, and confusion. But no matter how Spider-Man’s Thanksgiving escapades turn out, they remind readers and viewers
+that the holiday is about the hope of mutual connection, support, and nurturing. Even if the girl of your dreams is out of reach and the Green Goblin is on your
+case, a table, some friends, and Aunt May’s rad turkey might just make everything better for a little while.
+</item 6>
+
+<item 7>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+But feeding friends and family is perhaps one of the most humane acts we can pursue. It’s less about the spirit of giving, and more about admitting that people
+have innate, basic needs, like food and social comfort, and that those needs are best fulfilled when people work in tandem. Honestly, we should try to do it
+more on every other day of the year: The number of people volunteering to help feed the homeless and families in need peaks around November and December, but
+that energy needs to be carried through the preceding 10 months, too.
+
+Spider-Man represents these needs, even though very few of us have to balance photojournalist work, a fraught dating life, and pummeling Dr. Octopus. Peter
+Parker is often the most financially strapped among his Avengers buddies, and frequently the loneliest, too. Those are recognizable traits among many young
+people, even those without radioactive-spider powers. When you’re growing up and trying to figure out the world, it’s easy to feel lost and isolated.
+</item 7>
+
+<item 8>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+As Thanksgiving fast approaches, Americans are in the midst of writing their menus and buying the ingredients for their lavish feasts. And although it’s a day
+filled with food and family, there is another popular tradition that’s held around the holiday: Friendsgiving.
+
+Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year.
+</item 8>
+
+<item 9>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Aunt May has just gotten out of the hospital, and even noted jerk “Flash” Thompson has given Peter hell for how awful he’s been acting.
+
+Peter, attempting to make things right, opts to cook the Thanksgiving meal all by himself, but mostly succeeds in ruining the kitchen. No worries — Gwen Stacy
+and her father, along with a recuperating Aunt May and her doctor, all help out, and the episode concludes with a pleasant dinner. There are no big turns or
+twists, aside from Aunt May revealing that she’s publishing a cookbook. It’s just simple, earned solace in a life marked by chaos. Peter even gets a kiss from
+Gwen on his porch, a sequence conducted with a John Hughes sense of satisfying romantic flair.
+
+Various Spider-Man comics have also dabbled in seeing what Thanksgiving looks like when you’re young and arachnid-themed, but real life has associated
+Spider-Man with the holiday, too. Spider-Man is the only Marvel character to rate a balloon in the Macy’s Thanksgiving Parade.
+</item 9>
+
+<item 10>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+While it’s often viewed as a day for Americans to express what they’re grateful for, that doesn’t mean that everyone will celebrate. More specifically, the
+event has been viewed as deeply controversial over the years, due to the contentious history of the first Thanksgiving celebration in the 17th century.
+
+The holiday has been linked to instances of cultural appropriation, with some Americans believing that its history is frequently white-washed, prompting them to
+condemn or ignore Thanksgiving as a whole.
+
+However, the holiday itself has inspired another tradition of Friendsgiving – which can be held before, during, or even after the 23rd of November this year.
+The activity typically consists of a celebration with close pals since some Americans don’t have the opportunity to return home for the holidays.
+
+Over the years, people have celebrated Friendsgiving in a similar vein as Thanksgiving, with everyone sitting around the table for one big feast. It’s also
+often done in a potluck style, with each guest bringing their own dish to contribute.
+</item 10>
+=== END ITEM id=ddbc822e3346782b ===
+
+=== ITEM id=2970e62f8cbcf672 ===
+Gold sentences and facts:
+Sentence 0: But by the age of 16, she is public property – incapable of going outside without being mobbed, and her love of singing and dancing now a lucrative resource.
+  Fact 0.0: By the age of 16, she is public property.
+  Fact 0.1: By the age of 16, she is incapable of going outside without being mobbed.
+  Fact 0.2: By the age of 16, her love of singing and dancing is now a lucrative resource.
+Sentence 1: "It was almost like this very strange, subtle clue to the media that they don't know everything that happened in that relationship, and I can have something really major and traumatic happen to me and they don't know about it," she told NPR.
+  Fact 1.0: The speaker said it was almost like a very strange, subtle clue to the media.
+  Fact 1.1: The clue signaled that the media does not know everything that happened in that relationship.
+  Fact 1.2: The speaker said something really major and traumatic could happen to her and the media would not know about it.
+  Fact 1.3: The speaker told NPR this.
+
+Retrieved items:
+<item 1>
+Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)
+“I think some people think that they saw our first date at that game? We would never be psychotic enough to hard launch a first date,” Swift joked.
+
+Back in April, it was revealed that Swift and British actor Joe Alwyn had broken up after six years of dating. The former couple were notoriously private, as
+the Conversations with Friends star previously expressed he didn’t want to discuss their relationship because it “feeds into a weird part of the culture”.
+
+Now, Swift has shared that she has nothing to hide in her new relationship with Kelce. “When you say a relationship is public, that means I’m going to see him
+do what he loves, we’re showing up for each other, other people are there and we don’t care,” she said. “The opposite of that is you have to go to an extreme
+amount of effort to make sure no one knows that you’re seeing someone. And we’re just proud of each other.”
+</item 1>
+
+<item 2>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+Elsewhere in the conversation with Time, the “Anti-Hero” singer said that she tries not to let the paparazzi get to her, even though so many of her outings with
+pals go on to make headlines. “Over the years, I’ve learned I don’t have the time or bandwidth to get pressed about things that don’t matter. Yes, if I go out
+to dinner, there’s going to be a whole chaotic situation outside the restaurant. But I still want to go to dinner with my friends,” she said.
+
+She emphasised how her perspective about the media has changed over the years, adding: “Life is short. Have adventures. Me locking myself away in my house for a
+lot of years - I’ll never get that time back. I’m more trusting now than I was six years ago.”
+
+With his love life in the public eye, Kelce has also opened up about his relationship with Swift.
+</item 2>
+
+<item 3>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+It's so weird to look back on that - you've got heaping piles of discarded songs that I really loved when I wrote them and I still love now.
+
+"I just need each album to have its own sound and if it doesn't fit that sound, it doesn't matter if it's a great song to me."
+</item 3>
+
+<item 4>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+She specified that she isn’t trying to hide her relationship from the public eye.
+
+“When you say a relationship is public, that means I’m going to see him do what he loves, we’re showing up for each other, other people are there and we don’t
+care,” she said. “The opposite of that is you have to go to an extreme amount of effort to make sure no one knows that you’re seeing someone. And we’re just
+proud of each other.”
+
+During the interview with Time, the Grammy winner addressed how her appearances at Kelce’s games are heavily publicised. So far, she’s attended five of Kelce’s
+games, including one on 3 December, and she’s often seated in the Kelce family suite during the events.
+
+“There’s a camera, like, a half-mile away, and you don’t know where it is, and you have no idea when the camera is putting you in the broadcast, so I don’t know
+if I’m being shown 17 times or once,” she said.
+</item 4>
+
+<item 5>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+In interviews, Taylor delighted in revealing this was based on a true story.
+
+"It was almost like this very strange, subtle clue to the media that they don't know everything that happened in that relationship, and I can have something
+really major and traumatic happen to me and they don't know about it," she told NPR.
+
+In her Rolling Stone cover story, Taylor said the crash actually occurred on a snowmobile "with an ex who lost control and wrecked it so badly that she saw her
+life flash before her eyes".
+
+That prompted speculation the track was also about Styles: The couple had gone skiing with Justin Bieber and Selena Gomez in late 2012.
+
+The lyrics also reference their identical aeroplane necklaces and a December break-up, which ties in with the "Sad Taylor on a boat" meme.
+
+But the singer steadfastly refuses to name names: "The fact that I've never confirmed who those songs are about makes me feel like there is still one card I'm
+holding," she told GQ.
+</item 5>
+
+<item 6>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+There is no love lost for her family
+
+Britney writes about how she was always made to feel she was not enough as a kid; her father’s alleged alcoholism, neglect and brutal standards; how her mother
+always made her feel less-than. She is unsparing about her younger sister, who she characterises as a brat who was spared the pain of Britney’s impoverished
+childhood because of her success. “My mom and I had to witness the ugliness and the violence without believing that there was anywhere else to go.”
+
+Even once Britney is the biggest pop star in the world, her parents still seem to have an undue say in the running of her career, including making her sit for
+humiliating TV interviews – why exactly that is remains unanswered. Her father seizes control legally with the imposition of the conservatorship, telling her,
+chillingly, “I am Britney Spears now,” and her family appear to live off her dime while she lives an extraordinarily restricted life.
+</item 6>
+
+<item 7>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+At what point did I promise to stay 17 for the rest of my life?”
+
+What she knows now, she writes, “is that every part of normal life had been stripped from me – going out in public without becoming a headline, making normal
+mistakes as a new mother of two babies, feeling like I could trust the people around me. I had no freedom and yet also no security. At the time I was also
+suffering, I now know, from severe postpartum depression.” It left her suicidal. “I’ll admit it, I felt that I couldn’t live if things didn’t get better.”
+
+She knows she is trapped in a state of arrested development
+
+It’s often said that famous people are frozen in time at the age they became famous, but Britney was never allowed to be a real child, nor a real adult. Her
+2001 single I’m Not a Girl, Not Yet a Woman may be her most prescient recording; she is painfully conscious of this divide.
+</item 7>
+
+<item 8>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+She has never really known freedom
+
+As a child, Britney escaped her difficult home life – her alcoholic father often rowing with her mother – into the outdoors, which “gave me a sense of aliveness
+and danger”, she writes. Performing also makes her feel invincible. But by the age of 16, she is public property – incapable of going outside without being
+mobbed, and her love of singing and dancing now a lucrative resource.
+
+By the time of her second album, she wants for so little: skinny-dipping with her dancers after playing Rock in Rio in January 2001 is one of her happiest
+memories. “It was a taste of rebellion and freedom, but I was just having fun and being a 19-year-old,” she writes.
+</item 8>
+
+<item 9>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+As the restrictions get tighter, Britney acts out – and ends up legally denied her freedom for 13 years, under a conservatorship controlled by her father.
+
+Her body felt like public property
+
+From day one, Britney’s body is made fair game. Between the videos for her debut single, Baby, One More Time and Sometimes, the media noted her changing
+physique and concluded that the 16-year-old must have had breast implants – rather than simply going through puberty. She notices that talkshow hosts ask her
+about her chest, while her boyfriend Justin Timberlake gets asked serious questions about his music. It’s one of many pressures that ultimately push her to
+breaking point, and when she writes about shaving her head in a salon in 2007, she frames it as a “fuck you” to the impossible beauty standards she felt forced
+to live up to: “I’d smiled politely while TV show hosts leered at my breasts, while American parents said I was destroying their children by wearing a crop
+top.”
+</item 9>
+
+<item 10>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+The conservatorship stripped me of my womanhood, made me into a child.” It’s hard to explain, she says, “how quickly I could vacillate between being a little
+girl and being a teenager and being a woman, because of the way they had robbed me of my freedom … They wanted me to be wild onstage, the way they told me to
+be, and to be a robot the rest of the time.”
+
+Music seems to have become an afterthought
+
+Early on, Britney writes, she loved making music. She told the producer Max Martin that she wanted to sound more R&B than straight pop; she listened to Tainted
+Love the night before recording Baby, One More Time and stayed up late so that she would sound as gravelly and “fried” as Marc Almond. She was a studio
+perfectionist who would stay in the booth for hours, and the school setting and uniforms of the Baby video were her idea.
+</item 10>
+=== END ITEM id=2970e62f8cbcf672 ===

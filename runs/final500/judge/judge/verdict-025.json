@@ -1,0 +1,56 @@
+[
+  {"id": "8a76af0025881fc8", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Depending on which one you get, it might come with USB ports so you can charge multiple devices in one outlet."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "it might come with USB ports so you can charge multiple devices in one outlet."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "It has a 10,000-mAh capacity"}]},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "b6f41314ca456bb8", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "We identify with his struggles"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "We identify with his struggles and his little glimmers of connection and triumph"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "In America, Thanksgiving is a cultural holiday"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Americans started preparing their Thanksgiving menus weeks ago"}, {"item": 3, "quote": "Apart from the food - arguably the main component of the day"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Americans started preparing their Thanksgiving menus weeks ago"}, {"item": 3, "quote": "the holiday is a beloved time of year"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "Americans started preparing their Thanksgiving menus weeks ago"}, {"item": 3, "quote": "when Americans come together to celebrate what they are thankful for"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 3, "quote": "come together to celebrate what they are thankful for, either with family or friends."}]}
+  ]},
+  {"id": "4c2abb5cde8281ef", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "average almost 153 yards per game in his final three"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "to reach his stated goal of 2,000 receiving yards this season"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "to reach his stated goal of 2,000 receiving yards this season"}]}
+  ]},
+  {"id": "a733e036e5bb9f54", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Postponements of such reports could complicate things for the Fed"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy."}]}
+  ]},
+  {"id": "ea84e1ff9c5f2d4c", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "d17930e864b87161", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "we'll trust that Hockenson is ready to go"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "with Josh Dobbs under center"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Kincaid was a limited participant in practice on Wednesday due to a shoulder injury"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Kincaid was a limited participant in practice on Wednesday due to a shoulder injury"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "it’s been reported he’s likely to suit up on Saturday at less than 100%."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "it’s been reported he’s likely to suit up on Saturday at less than 100%."}]}
+  ]}
+]

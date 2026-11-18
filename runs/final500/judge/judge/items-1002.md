@@ -1,0 +1,896 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 3 items.
+
+=== ITEM id=07c0b9d7d166b5b0 ===
+Gold sentences and facts:
+Sentence 0: Year Rank Player Team Points 1992 1st Abedi Pele Marseille -- 1993 1st Rashidi Yekini Vitória de Setúbal -- 1994 1st Emmanuel Amunike Sporting CP 48 2nd George Weah Paris Saint - Germain 44 Rashidi Yekini Olympiacos 1995 1st George Weah Milan -- 2nd Emmanuel Amunike Sporting CP -- 3rd Daniel Amokachi Everton -- 1st Nwankwo Kanu Internazionale -- 2nd George Weah Milan -- 3rd Daniel Amokachi Beşiktaş -- 1st Victor Ikpeba Monaco 56 2nd Japhet N'Doram Monaco 40 3rd Taribo West Internazionale 35 1998 1st Mustapha Hadji Deportivo La Coruña 76 2nd Jay - Jay Okocha Paris Saint - Germain 74 3rd Sunday Oliseh Ajax 58 1999 1st Nwankwo Kanu Arsenal 46 2nd Samuel Kuffour Bayern Munich 44 3rd Ibrahima Bakayoko Marseille 42 2000 1st Patrick M'Boma Parma 123 2nd Lauren Mallorca 36 3rd Samuel Eto'o Mallorca 29 1st El Hadji Diouf Lens 93 2nd Samuel Kuffour Bayern Munich 66 3rd Samuel Eto'o Mallorca 34 2002 1st El Hadji Diouf Liverpool 93 2nd Papa Bouba Diop Lens 46 3rd Mido Ajax 42 2003 1st Samuel Eto'o Mallorca -- 2nd Didier Drogba Marseille -- 3rd Jay - Jay Okocha Bolton Wanderers -- 1st Samuel Eto'o Barcelona 116 2nd Didier Drogba Chelsea 90 3rd Jay - Jay Okocha Bolton Wanderers 68 2005 1st Samuel Eto'o Barcelona 108 2nd Didier Drogba Chelsea 106 3rd Michael Essien Chelsea 50 2006 1st Didier Drogba Chelsea 79 2nd Samuel Eto'o Barcelona 76 3rd Michael Essien Chelsea 36 2007 1st Frédéric Kanouté Sevilla -- 2nd Michael Essien Chelsea -- 3rd Didier Drogba Chelsea -- 2008 1st Emmanuel Adebayor Arsenal 74 2nd Mohamed Aboutrika Al - Ahly 53 3rd Michael Essien Chelsea 36 2009 1st Didier Drogba Chelsea 92 2nd Samuel Eto'o Internazionale 69 3rd Michael Essien Chelsea 43 1st Samuel Eto'o Internazionale -- 2nd Asamoah Gyan Sunderland -- 3rd Didier Drogba Chelsea -- 2011 1st Yaya Touré Manchester City -- 2nd Seydou Keita Barcelona -- 3rd André Ayew Marseille -- 2012 1st Yaya Touré Manchester City -- 2nd Didier Drogba Shanghai Shenhua -- 3rd Alex Song Barcelona -- 2013 1st Yaya Touré Manchester City 373 2nd John Obi Mikel Chelsea 265 3rd Didier Drogba Galatasaray 236 2014 1st Yaya Touré Manchester City 175 2nd Pierre - Emerick Aubameyang Borussia Dortmund 120 3rd Vincent Enyeama Lille 105 2015 1st Pierre - Emerick Aubameyang Borussia Dortmund 143 2nd Yaya Touré Manchester City 136 3rd André Ayew Swansea City 112 2016 1st Riyad Mahrez Leicester City 361 2nd Pierre - Emerick Aubameyang Borussia Dortmund 313 3rd Sadio Mané Liverpool 186 2017 1st Mohamed Salah Liverpool 625 2nd Sadio Mané Liverpool 507 3rd Pierre - Emerick Aubameyang Borussia Dortmund 311
+  Fact 0.0: In 1992, Abedi Pele of Marseille ranked 1st with no points listed.
+  Fact 0.1: In 1993, Rashidi Yekini of Vitória de Setúbal ranked 1st with no points listed.
+  Fact 0.2: In 1994, Emmanuel Amunike of Sporting CP ranked 1st with 48 points.
+  Fact 0.3: In 1994, George Weah of Paris Saint-Germain ranked 2nd with 44 points.
+  Fact 0.4: In 1994, Rashidi Yekini of Olympiacos is listed with no rank shown.
+  Fact 0.5: In 1995, George Weah of Milan ranked 1st with no points listed.
+  Fact 0.6: In 1995, Emmanuel Amunike of Sporting CP ranked 2nd with no points listed.
+  Fact 0.7: In 1995, Daniel Amokachi of Everton ranked 3rd with no points listed.
+  Fact 0.8: In an entry with no year label, Nwankwo Kanu of Internazionale ranked 1st with no points listed.
+  Fact 0.9: In an entry with no year label, George Weah of Milan ranked 2nd with no points listed.
+  Fact 0.10: In an entry with no year label, Daniel Amokachi of Beşiktaş ranked 3rd with no points listed.
+  Fact 0.11: In an entry with no year label, Victor Ikpeba of Monaco ranked 1st with 56 points.
+  Fact 0.12: In an entry with no year label, Japhet N'Doram of Monaco ranked 2nd with 40 points.
+  Fact 0.13: In an entry with no year label, Taribo West of Internazionale ranked 3rd with 35 points.
+  Fact 0.14: In 1998, Mustapha Hadji of Deportivo La Coruña ranked 1st with 76 points.
+  Fact 0.15: In 1998, Jay-Jay Okocha of Paris Saint-Germain ranked 2nd with 74 points.
+  Fact 0.16: In 1998, Sunday Oliseh of Ajax ranked 3rd with 58 points.
+  Fact 0.17: In 1999, Nwankwo Kanu of Arsenal ranked 1st with 46 points.
+  Fact 0.18: In 1999, Samuel Kuffour of Bayern Munich ranked 2nd with 44 points.
+  Fact 0.19: In 1999, Ibrahima Bakayoko of Marseille ranked 3rd with 42 points.
+  Fact 0.20: In 2000, Patrick M'Boma of Parma ranked 1st with 123 points.
+  Fact 0.21: In 2000, Lauren of Mallorca ranked 2nd with 36 points.
+  Fact 0.22: In 2000, Samuel Eto'o of Mallorca ranked 3rd with 29 points.
+  Fact 0.23: In an entry with no year label, El Hadji Diouf of Lens ranked 1st with 93 points.
+  Fact 0.24: In an entry with no year label, Samuel Kuffour of Bayern Munich ranked 2nd with 66 points.
+  Fact 0.25: In an entry with no year label, Samuel Eto'o of Mallorca ranked 3rd with 34 points.
+  Fact 0.26: In 2002, El Hadji Diouf of Liverpool ranked 1st with 93 points.
+  Fact 0.27: In 2002, Papa Bouba Diop of Lens ranked 2nd with 46 points.
+  Fact 0.28: In 2002, Mido of Ajax ranked 3rd with 42 points.
+  Fact 0.29: In 2003, Samuel Eto'o of Mallorca ranked 1st with no points listed.
+  Fact 0.30: In 2003, Didier Drogba of Marseille ranked 2nd with no points listed.
+  Fact 0.31: In 2003, Jay-Jay Okocha of Bolton Wanderers ranked 3rd with no points listed.
+  Fact 0.32: In an entry with no year label, Samuel Eto'o of Barcelona ranked 1st with 116 points.
+  Fact 0.33: In an entry with no year label, Didier Drogba of Chelsea ranked 2nd with 90 points.
+  Fact 0.34: In an entry with no year label, Jay-Jay Okocha of Bolton Wanderers ranked 3rd with 68 points.
+  Fact 0.35: In 2005, Samuel Eto'o of Barcelona ranked 1st with 108 points.
+  Fact 0.36: In 2005, Didier Drogba of Chelsea ranked 2nd with 106 points.
+  Fact 0.37: In 2005, Michael Essien of Chelsea ranked 3rd with 50 points.
+  Fact 0.38: In 2006, Didier Drogba of Chelsea ranked 1st with 79 points.
+  Fact 0.39: In 2006, Samuel Eto'o of Barcelona ranked 2nd with 76 points.
+  Fact 0.40: In 2006, Michael Essien of Chelsea ranked 3rd with 36 points.
+  Fact 0.41: In 2007, Frédéric Kanouté of Sevilla ranked 1st with no points listed.
+  Fact 0.42: In 2007, Michael Essien of Chelsea ranked 2nd with no points listed.
+  Fact 0.43: In 2007, Didier Drogba of Chelsea ranked 3rd with no points listed.
+  Fact 0.44: In 2008, Emmanuel Adebayor of Arsenal ranked 1st with 74 points.
+  Fact 0.45: In 2008, Mohamed Aboutrika of Al-Ahly ranked 2nd with 53 points.
+  Fact 0.46: In 2008, Michael Essien of Chelsea ranked 3rd with 36 points.
+  Fact 0.47: In 2009, Didier Drogba of Chelsea ranked 1st with 92 points.
+  Fact 0.48: In 2009, Samuel Eto'o of Internazionale ranked 2nd with 69 points.
+  Fact 0.49: In 2009, Michael Essien of Chelsea ranked 3rd with 43 points.
+  Fact 0.50: In an entry with no year label, Samuel Eto'o of Internazionale ranked 1st with no points listed.
+  Fact 0.51: In an entry with no year label, Asamoah Gyan of Sunderland ranked 2nd with no points listed.
+  Fact 0.52: In an entry with no year label, Didier Drogba of Chelsea ranked 3rd with no points listed.
+  Fact 0.53: In 2011, Yaya Touré of Manchester City ranked 1st with no points listed.
+  Fact 0.54: In 2011, Seydou Keita of Barcelona ranked 2nd with no points listed.
+  Fact 0.55: In 2011, André Ayew of Marseille ranked 3rd with no points listed.
+  Fact 0.56: In 2012, Yaya Touré of Manchester City ranked 1st with no points listed.
+  Fact 0.57: In 2012, Didier Drogba of Shanghai Shenhua ranked 2nd with no points listed.
+  Fact 0.58: In 2012, Alex Song of Barcelona ranked 3rd with no points listed.
+  Fact 0.59: In 2013, Yaya Touré of Manchester City ranked 1st with 373 points.
+  Fact 0.60: In 2013, John Obi Mikel of Chelsea ranked 2nd with 265 points.
+  Fact 0.61: In 2013, Didier Drogba of Galatasaray ranked 3rd with 236 points.
+  Fact 0.62: In 2014, Yaya Touré of Manchester City ranked 1st with 175 points.
+  Fact 0.63: In 2014, Pierre-Emerick Aubameyang of Borussia Dortmund ranked 2nd with 120 points.
+  Fact 0.64: In 2014, Vincent Enyeama of Lille ranked 3rd with 105 points.
+  Fact 0.65: In 2015, Pierre-Emerick Aubameyang of Borussia Dortmund ranked 1st with 143 points.
+  Fact 0.66: In 2015, Yaya Touré of Manchester City ranked 2nd with 136 points.
+  Fact 0.67: In 2015, André Ayew of Swansea City ranked 3rd with 112 points.
+  Fact 0.68: In 2016, Riyad Mahrez of Leicester City ranked 1st with 361 points.
+  Fact 0.69: In 2016, Pierre-Emerick Aubameyang of Borussia Dortmund ranked 2nd with 313 points.
+  Fact 0.70: In 2016, Sadio Mané of Liverpool ranked 3rd with 186 points.
+  Fact 0.71: In 2017, Mohamed Salah of Liverpool ranked 1st with 625 points.
+  Fact 0.72: In 2017, Sadio Mané of Liverpool ranked 2nd with 507 points.
+  Fact 0.73: In 2017, Pierre-Emerick Aubameyang of Borussia Dortmund ranked 3rd with 311 points.
+
+Retrieved items:
+<item 1>
+African Footballer of the Year
+It had already been replaced by an official award given out by the Confederation of African Football since 1992 . Year Rank Player Team Points 1970 1st Salif
+Keïta Saint - Étienne 54 2nd Laurent Pokou ASEC Abidjan 28 Ali Abo Greisha Ismaily 1971 1st Ibrahim Sunday Asante Kotoko 29 2nd Robert Mensah Asante Kotoko 15
+3rd François Ndoumbé Canon Yaoundé 13 1972 1st Chérif Souleymane Hafia 21 2nd Bwanga Tshimen TP Mazembe 16 3rd Petit Sory Hafia 14 1973 1st Bwanga Tshimen TP
+Mazembe 49 2nd Kazadi Mwamba TP Mazembe 44 3rd Laurent Pokou ASEC Abidjan 41 1st Paul Moukila CARA Brazzaville 57 2nd Lobilo Boba Vita Club 32 3rd Hassan
+Shehata Zamalek 28 1st Ahmed Faras Mohammédia 28 2nd
+</item 1>
+
+<item 2>
+African Footballer of the Year
+Chelsea 265 3rd Didier Drogba Galatasaray 236 2014 1st Yaya Touré Manchester City 175 2nd Pierre - Emerick Aubameyang Borussia Dortmund 120 3rd Vincent Enyeama
+Lille 105 2015 1st Pierre - Emerick Aubameyang Borussia Dortmund 143 2nd Yaya Touré Manchester City 136 3rd André Ayew Swansea City 112 2016 1st Riyad Mahrez
+Leicester City 361 2nd Pierre - Emerick Aubameyang Borussia Dortmund 313 3rd Sadio Mané Liverpool 186 2017 1st Mohamed Salah Liverpool 625 2nd Sadio Mané
+Liverpool 507 3rd Pierre - Emerick Aubameyang Borussia Dortmund 311 Wins By Country ( edit ) Nation Winners Runners - up Third places Cameroon 11 8 11 Ivory
+Coast 8 6 7 Ghana 6 7 7 Nigeria 5 6 7 Morocco 0 Algeria 5 Liberia -- Egypt Mali -- Senegal Guinea DR Congo -- Gabon Zambia -- Togo -- Tunisia -- -- Congo -- --
+Chad -- -- Wins
+</item 2>
+
+<item 3>
+African Footballer of the Year
+Cannes 52 1992 1st Abedi Pele Marseille 198 2nd George Weah Paris Saint - Germain 161 3rd Tony Yeboah Eintracht Frankfurt 64 1993 1st Abedi Pele Marseille 119
+2nd Tony Yeboah Eintracht Frankfurt 117 3rd Rashidi Yekini Vitória de Setúbal 104 1994 1st George Weah Paris Saint - Germain 148 2nd Emmanuel Amunike Sporting
+CP 133 3rd Daniel Amokachi Everton 99 CAF award ( 1992 -- present ) ( edit ) Samuel Eto'o won the award four times . Yaya Touré won the award four consecutive
+times from 2011 to 2014 . Pierre - Emerick Aubameyang was the first player from Gabon to win the award in 2015 . Mohamed Salah is the latest player to win the
+award in 2017 . Year Rank Player Team Points 1992 1st Abedi Pele Marseille -- 1993 1st Rashidi Yekini Vitória de Setúbal -- 1994 1st
+</item 3>
+
+<item 4>
+African Footballer of the Year
+Rsssf.com. 2001 - 01 - 05 . Retrieved 2014 - 01 - 09 . Jump up ^ `` African Player of the Year '' . rsssf.com. 2000 - 01 - 01 . Retrieved 2013 - 07 - 02 . Jump
+up ^ `` African Player of the Year '' . rsssf.com. 2000 - 01 - 01 . Retrieved 2016 - 09 - 29 .
+</item 4>
+
+<item 5>
+African Footballer of the Year
+Zamalek 28 1st Ahmed Faras Mohammédia 28 2nd Roger Milla Tonnerre Yaoundé 24 Mamadou Aliou Kéïta Hafia 1976 1st Roger Milla Tonnerre Yaoundé 33 2nd Papa Camara
+Hafia 32 3rd Ali Bencheikh MC Alger 27 1977 1st Tarak Dhiab Espérance Tunis 45 2nd Papa Camara Hafia 33 3rd Segun Odegbami Shooting Stars 29 1978 1st Karim
+Abdul Razak Asante Kotoko 58 2nd Ali Bencheikh MC Alger 33 3rd Thomas N'Kono Canon Yaoundé 29 1979 1st Thomas N'Kono Canon Yaoundé 55 2nd Adolf Armah Hearts of
+Oak 23 3rd Kerfalla Bangoura Horoya 15 1980 1st Jean Manga - Onguéné Canon Yaoundé 64 2nd Segun Odegbami Shooting Stars 41 3rd Théophile Abega Canon Yaoundé
+</item 5>
+
+<item 6>
+Graph query row:
+award_winner: Yaya Touré
+award: African Footballer of the Year 2014
+year: 2014
+</item 6>
+
+<item 7>
+African Footballer of the Year
+Michael Essien Chelsea 36 2007 1st Frédéric Kanouté Sevilla -- 2nd Michael Essien Chelsea -- 3rd Didier Drogba Chelsea -- 2008 1st Emmanuel Adebayor Arsenal 74
+2nd Mohamed Aboutrika Al - Ahly 53 3rd Michael Essien Chelsea 36 2009 1st Didier Drogba Chelsea 92 2nd Samuel Eto'o Internazionale 69 3rd Michael Essien Chelsea
+43 1st Samuel Eto'o Internazionale -- 2nd Asamoah Gyan Sunderland -- 3rd Didier Drogba Chelsea -- 2011 1st Yaya Touré Manchester City -- 2nd Seydou Keita
+Barcelona -- 3rd André Ayew Marseille -- 2012 1st Yaya Touré Manchester City -- 2nd Didier Drogba Shanghai Shenhua -- 3rd Alex Song Barcelona -- 2013 1st Yaya
+Touré Manchester City 373 2nd John Obi Mikel Chelsea 265 3rd Didier Drogba Galatasaray 236 2014
+</item 7>
+
+<item 8>
+African Footballer of the Year
+African Footballer of the Year - wikipedia African Footballer of the Year Jump to : navigation , search The African Footballer of the Year award , presented to
+the best African footballer each year , has been conferred by the Confederation of African Football ( CAF ) since 1992 . An earlier African Footballer of the
+Year Golden Ball award was given out between 1970 and 1994 by France Football magazine . The changes resulted in parallel Golden Ball awards given out to Abedi
+Pele and George Weah in 1993 and 1994 by the magazine although the CAF sponsored awards for those years were won respectively by Rashidi Yekini and Emmanuel
+Amuneke , as well as two awards given to Abedi Pelé in 1992 . France Football discontinued the election from 1995 after the European Ballon d'Or -- also awarded
+by the magazine -- had been opened to all players in the European leagues . On 2 February 2008 , Sevilla 's Frédéric Kanouté was named the 2007 African
+Footballer of the Year .
+</item 8>
+
+<item 9>
+African Footballer of the Year
+Club -- -- El Mokawloon -- -- Sunderland -- -- Girondins Bordeaux -- -- FC Mulhouse -- -- Hearts of Oak -- -- FC Sion -- -- Aydınspor -- -- JS Kabylie -- --
+Bolton Wanderers -- -- Everton FC -- -- Ajax Amsterdam -- -- Ismaily SC -- -- Zamalek SC -- AS Cannes -- -- Stade Lavallois -- -- Lille OSC -- -- Stade Rennais
+-- -- Olympiacos -- -- Horoya AC -- -- PSV Eindhoven -- -- OC Agaza -- -- Beşiktaş -- -- Galatasaray -- -- Swansea City -- -- See also ( edit ) BBC African
+Footballer of the Year African Women Footballer of the Year FIFA World Player of the Year CAF Awards References ( edit ) Jump up ^ `` African Player of the Year
+1993 '' . Rsssf.com. 2001 - 01 - 05 . Retrieved 2014 - 01 - 09 . Jump up ^ `` African Player of the Year 1994 '' . Rsssf.com. 2001 - 01 - 05 .
+</item 9>
+
+<item 10>
+African Footballer of the Year
+DR Congo -- Gabon Zambia -- Togo -- Tunisia -- -- Congo -- -- Chad -- -- Wins By Club ( edit ) Club Winners Runners - up Third places Olympique Marseille
+Manchester City -- Chelsea 6 AS Monaco Barcelona Asante Kotoko -- Canon Yaoundé RCD Mallorca Inter Milan Liverpool Arsenal -- -- Paris SG -- Hafia Conacry TP
+Mazembe -- Borussia Dortmund -- Sporting CP -- Al Ahly FC Porto Tonnerre Yaoundé -- RC Lens -- Milan -- Sporting CP -- GC Mascara -- Vitória de Setúbal --
+Cercle Brugge -- -- CARA Brazzaville -- -- Leicester City -- -- AS Saint - Étienne -- -- Toulouse FC -- -- Parma -- -- FAR Rabat -- -- SCC Mohammédia -- -- JS
+Saint - Pierroise -- -- Deportivo de La Coruña -- -- Espanyol -- -- Sevilla -- -- Espérance ST -- -- Bayern Munich -- -- MC Alger -- ASEC Mimosas -- Montpellier
+-- Eintracht Frankfurt -- Shooting Stars -- Shanghai Shenhua -- -- Vita Club -- -- El Mokawloon -- -- Sunderland -- -- Girondins Bordeaux -- -- FC
+</item 10>
+=== END ITEM id=07c0b9d7d166b5b0 ===
+
+=== ITEM id=64a7077da2bee01e ===
+Gold sentences and facts:
+Sentence 0: No . Name Province Birth / death Term of active service Term of service as Chief Length in days of active service Length in days as Chief Appointed by Law school Position prior to appointment Codrington Edmund Carrington England 1769 - 1849 March 1801 -- 2 April 1806 March 1801 -- 2 April 1806 North -- Counsel to the East India Company Edmund Henry Lushington England 1766 - 1839 5 September 1801 -- 1809 15 April 1807 - 1809 North University of Cambridge Barrister Alexander Johnston Scotland 1775 - 1849 15 April 1807 -- 14 February 1809 6 November 1811 - 1819 6 November 1811 - 1819 671 + ? Maitland University of Göttingen Advocate Fiscal of Ceylon William Coke England 1776 - 1818 6 March 1809 -- 1 September 1818 † 6 March 1809 -- 1811 3,466 Maitland University of Oxford Advocate Fiscal of Ceylon 5 Henry Byrne 5 November 1818 -- 1819 -- -- Brownrigg Barrister 6 Ambrose Hardinge Giffard Ireland 1771 -- 1827 8 April 1819 -- 2 March 1827 8 April 1819 -- 2 March 1827 2,885 2,885 Brownrigg Trinity College , Dublin Advocate Fiscal of Ceylon 7 Richard Ottley 1782 -- 1845 8 May 1820 -- 1833 1 November 1827 -- 1833 Barnes Chief Justice of Grenada 8 Henry Matthews England 1789 -- 1828 10 October 1827 -- 1828 -- -- Barnes King 's College , Cambridge Advocate Fiscal of Ceylon 9 Charles Marshall England 1788 - 1873 14 June 1828 -- 3 March 1836 18 February 1833 -- 3 March 1836 2,850 1,109 Barnes Jesus College , Cambridge 10 William Rough England 1772 - 1838 18 February 1833 - 1838 -- -- Trinity College , Cambridge 11 William Norris 1834 -- 1837 27 April 1836 -- 1837 Wilmot - Horton Advocate Fiscal of Ceylon 12 John Jeremie Guernsey 1795 - 1841 10 March 1836 -- 1840 -- -- Wilmot - Horton Public prosecutor of Mauritius 13 John Fredrick Stoddart Malta 1805 - 1839 2 June 1838 -- 19 August 1839 † -- 443 -- University of Glasgow 14 Anthony Oliphant Scotland 1793 -- 1859 22 October 1838 - 1854 22 October 1838 - 1854 Attorney General of the Cape Colony 15 J.G. Hildebrand 23 November 1839 -- -- -- 16 William Ogle Carr England 1802 - 1856 19 December 1939 - 1856 17 April 1854 -- 1856 Stewart - Mackenzie King 's Advocate of Ceylon 17 John Stark 10 October 1840 -- -- -- Queen 's Advocate of Ceylon 18 Christopher Temple 28 January 1854 -- -- -- Judge of the District Court of Colombo 19 Paul Ivy Sterling 20 November 1855 -- -- -- Attorney General of Hong Kong 20 William Carpenter Rowe - 1860 1857 -- 1859 -- 21 Edward Shepherd Creasy England 1812 - 1878 -- 27 March 1860 - 1875 University of Cambridge 22 Richard Morgan -- -- -- Queen 's Advocate of Ceylon 23 George Lawson -- -- -- 24 Henry Byerley Thompson - 1867 1 January 1863 -- -- -- Queen 's Advocate of Ceylon 25 Charles Henry Stewart 11 January 1867 -- -- -- 26 Richard Cayley England 26 July 1874 -- 1882 1 October 1879 -- 1882 -- Queen 's Advocate of Ceylon 27 Lovell Burchett Clarence 5 July 1879 -- -- -- 28 Harry Dias Bandaranaike 5 July 1879 -- -- -- 29 William Hackett 3 February 1877 - 1877 3 February 1877 - 1877 -- 30 John Budd Phear England 18 October 1877 -- -- -- 31 Archibald Campbell Lawrie 1837 - 1914 6 July 1892 -- 1901 -- -- Judge of the District Court of Kandy 32 Jacobus de Wet South Africa 31 May 1882 -- 29 May 1883 31 May 1882 -- 29 May 1883 363 363 33 Bruce Burnside Bahamas 21 May 1883 -- 1893 21 May 1883 -- 1893 -- Queen 's Advocate of Ceylon 34 John Winfield Bonser 13 November 1893 -- 1902 13 November 1893 -- 1902 Chief Justice of the Straits Settlements 35 George Henry Withers -- -- -- 36 Dodwell Browne -- -- -- 37 Fredrick Charles Moncrieff 4 April 1900 -- -- -- 38 Henry Lorentz Wendt 15 October 1901 -- 28 November 1910 -- -- 39 John Page Middleton 28 January 1902 -- 1912 -- -- Puisine Judge of the Supreme Court of Cyprus 40 Charles Layard Western 26 April 1902 -- 18 June 1906 26 April 1902 -- 18 June 1906 1,514 1,514 41 Joseph Richard Grenier 28 November 1910 -- 1912 -- -- 42 Alexander Wood Renton 3 September 1905 -- 1918 22 August 1914 - 1918 -- 43 Alfred George Lascelles England 1 May 1911 -- 1914 1 May 1911 -- 1914 -- 44 Joseph Turner Hutchinson England 23 October 1906 -- 1 May 1911 23 October 1906 -- 1 May 1911 1,651 1,651 45 James Cecil Walter Pereira 4 July 1912 -- -- -- 46 James Arthur Van Langenburg -- -- -- 47 Thomas De Sampayo 1915 -- -- -- University of Cambridge Commissioner of Assize 48 George Francis Macdaniel Ennis 5 August 1912 -- -- -- 49 Walter Shaw 10 December 1914 -- -- -- Chief Justice of British Honduras 50 Gualterus Stewart Schneider -- -- -- 51 Anton Bertram 1869 - 1937 26 July 1918 -- 1925 26 July 1918 -- 1925 University of Cambridge Attorney General of Ceylon 52 Hermann Albert Loos -- -- -- 53 William Thomas Porter 12 January 1922 -- -- -- 54 Thomas Garvin 1881 - 1940 21 June 1921 -- 1935 -- -- Manning Colombo Law College Solicitor General of Ceylon 55 John Adrian St. Valentine Jayewardene 1877 -- 1927 1923 -- -- -- Manning Judge of the District Court of Colombo 56 Llwellyn Chisholm Dalton 14 March 1925 -- -- -- 57 Lewis Matthew Maartensz 18 February 1935 -- -- -- 58 Maas Thajoon Akbar 1880 - 1944 -- -- -- University of Cambridge Solicitor General of Ceylon 59 Charles Ernest St. John Branch 1865 - 1939 3 July 1925 -- 25 May 1926 3 July 1925 -- 25 May 1926 326 326 Durham University 60 Stanley Fisher 1867 - 11 December 1926 -- 1930 11 December 1926 -- 1930 Chief Justice of Trinidad and Tobago 61 Robert William Lyall Grant 17 February 1926 -- -- -- 62 Allen Drieberg 19 September 1927 -- -- -- 63 Eugene Wilfred Jayewardene Western 1874 - 1932 May 1928 -- -- -- Fletcher Member of the Colombo Municipal Council 64 Philip James Macdonell 1873 - 1940 3 October 1930 - 1936 3 October 1930 - 1936 Chief Justice of Trinidad and Tobago 65 Lucian Macull Dominic de Silva -- -- -- 66 William Edward Barber -- -- -- 67 Francis Harold Bertram 19 February 1935 -- -- -- 68 Kenneth Poyser -- -- -- 69 Francis Soertsz - 1951 12 November 1936 -- -- -- 70 Sidney Abrahams England 1885 - 1957 3 July 1936 -- 1939 3 July 1936 -- 1939 University of Cambridge 71 Francis Moseley 2 August 1936 -- -- -- 72 Vincent Fernando 11 November 1937 -- -- -- 73 Hector Hearne 21 May 1937 -- -- -- 74 Arthur Eric Keuneman 4 March 1938 -- -- -- University of Cambridge 75 Oswald Leslie De Kretser II Western 1882 - 1959 8 April 1938 -- 1945 -- -- Caldecott University College , Colombo Commissioner of Assize 76 Arthur Wijewardena 1887 - 1964 22 August 1938 -- 1950 15 January 1949 -- 1950 University of Cambridge Solicitor General of Ceylon 77 J.H.B. Nihill 18 November 1938 -- -- -- 78 John Curtois Howard 1 December 1939 -- 1945 1 December 1939 -- 1945 Attorney General of Cyprus 79 G.H.F. Cannon -- -- -- 80 Edward Jayetileke 14 May 1942 -- 11 October 1951 1950 -- 11 October 1951 3,437 Caldecott Solicitor General of Ceylon 81 Alan Rose 11 January 1945 -- 1956 11 October 1951 -- 1956 82 A.R.H. Canakeratne 1886 - 1960 28 March 1945 -- -- -- Ceylon Law College University of London Commissioner of Assize 83 Manikku Wadumestri Hendrick de Silva -- -- -- Attorney General of Ceylon 84 Felix Reginald Dias Bandaranaike I 1861 - 1947 3 September 1946 -- -- -- University of Cambridge Judge of the District Court of Colombo 85 Chellappah Nagalingam 1893 - 1958 22 July 1947 -- 1958 -- -- Ceylon Law College Attorney General of Ceylon 86 Ralph Windham 23 July 1947 -- -- -- 87 Hema Henry Basnayake 1902 - 23 October 1947 -- 3 August 1964 1 January 1956 -- 3 August 1964 6,129 3,137 Senanayake Attorney General of Ceylon 88 Edward Frederick Noel Gratiaen 22 March 1948 -- -- -- Senanayake Attorney General of Ceylon 89 E.H.T. Gunasekera 1 March 1949 -- 25 January 1962 -- 4,713 -- Senanayake 90 M.F.S. Pulle 28 September 1949 -- -- -- Senanayake 91 V.L. St. C. Swan 1 May 1950 -- -- -- Senanayake 92 H.A. de Silva 30 November 1950 -- -- -- Senanayake 93 Kairshasp Choksy Western -- -- -- 94 Henry Weerasooriya 10 July 1953 -- 24 February 1964 -- 3,881 -- Senanayake 95 K.D. de Silva 10 July 1953 -- -- -- Senanayake 96 Miliani Sansoni 10 May 1954 -- 17 November 1966 3 August 1964 -- 17 November 1966 4,574 836 Kotelawala 97 Hugh Fernando 1910 - 1976 16 May 1955 -- 17 November 1973 20 November 1966 - 17 November 1973 6,760 2,554 Kotelawala 98 Thusew Samuel Fernando 2 May 1956 -- -- -- Bandaranaike Colombo Law College Solicitor General of Sri Lanka 99 Nadaraja Sinnetamby 3 May 1956 -- -- -- Bandaranaike 100 Lionel de Silva 5 November 1959 -- -- -- Dahanayake 101 Leonard de Silva 16 August 1966 -- -- -- Senanayake 102 Henry Thambiah Northern 1906 -- 1997 1 December 1961 -- 27 May 1968 -- 2,369 -- Bandaranaike University College , Colombo Ceylon Law College University of London Commissioner of Assize 103 Kingsley Herath 25 January 1962 -- -- -- Bandaranaike 104 Asoka Abeyesundere Southern 1906 - 1988 20 April 1962 -- 3 May 1968 -- 2,205 -- Bandaranaike Ceylon Law College 105 Ponnuduraiswamy Sriskandarajah 1905 - 1968 22 June 1962 -- 8 February 1967 -- 1,692 -- Bandaranaike Ceylon University College Ceylon Law College Commissioner of Assize 106 Gardiye Punchihewage Amaraseela Silva 22 June 1962 -- 1974 1973 -- 1974 -- Bandaranaike 107 Lionel Sirimanne -- -- -- Bandaranaike 108 Vaithalingam Manicavasagar Western 1906 - 1993 17 December 1964 -- 14 December 1967 -- 1,092 -- Bandaranaike Colombo Law College Commissioner of Assize 109 Anthony Alles Central 1911 -- 2003 1964 -- 1974 -- -- Bandaranaike University of Ceylon Ceylon Law College University of London Solicitor General of Sri Lanka 110 Veeravagu Sivasubramaniam 1908 - 1985 1966 -- 1970 -- -- Senanayake University of London Commissioner of Assize 111 George Samerawickrame 18 November 1966 -- 9 April 1981 -- 5,256 -- Senanayake 112 Victor Tennekoon Central 1914 - 8 February 1967 -- 1 July 1970 1 January 1974 - 8 September 1977 1 January 1974 - 8 September 1977 1,239 + 1,346 1,346 Senanayake University of London Ceylon Law College Judge of the Court of Appeal 113 Christopher Weeramantry Western 1926 - 1967 -- 30 April 1972 -- -- Senanayake University of Ceylon University of London Commissioner of Assize 114 Oswald Leslie De Kretser III Western 1910 - 1968 -- 21 January 1972 -- -- Senanayake University College , Colombo University of London Judge of the District Court of Panadura 115 Samarapilimudalige Wijayatilake Central 1912 - 1990 1968 -- 16 May 1975 -- -- Senanayake University College , Colombo Ceylon Law College Commissioner of Assize 116 Pandita Gunawadena 1968 -- 10 February 1971 -- -- Senanayake 117 Vincent Thamotheram 1915 - 23 March 1970 -- 1980 -- -- Senanayake Ceylon University College Ceylon Law College Commissioner of Assize 118 Hector Deheragoda 22 February 1972 -- 27 December 1976 -- 1,770 -- Bandaranaike 119 Cuda Banda Walgampaya 22 February 1972 -- 3 January 1976 -- 1,411 -- Bandaranaike 120 Jaya Pathirana - 2000 22 February 1972 -- 1978 -- -- Bandaranaike 121 Dharmadasa Wimalaratne 10 April 1972 - ? 20 October 1980 -- 15 September 1985 -- 1,791 -- Bandaranaike 122 Tellipalai Rajaratnam 1920 - 1994 10 April 1972 -- 1978 -- -- Bandaranaike Commissioner of Assize 123 Donald Sirimanne 1973 -- -- -- Gopallawa 124 Cyril Udalagama 1 January 1974 -- -- -- Gopallawa 125 T.A. de S. Wijesundera 1 January 1974 -- -- -- Gopallawa 126 Malcolm Perera 1 January 1974 -- -- -- Gopallawa 127 Izadean Mohamed Ismail 1 January 1974 -- 18 December 1981 -- 2,908 -- Gopallawa 128 Joe Weereratne 1 January 1974 -- -- -- Gopallawa 129 Arulampalam Vythialingam 1 January 1974 -- -- -- Gopallawa 130 Noel Tittawela 1 January 1974 -- -- -- Gopallawa 131 Suppiah Sharvananda Northern 1923 - 2007 1 January 1974 -- 1988 29 October 1984 -- 1988 Gopallawa Colombo Law College University of London 132 Somaratne Walpita 1 January 1974 -- -- -- Gopallawa 133 Wilmot Gunasekera 2 May 1974 -- -- -- Gopallawa 134 Barnes Ratwatte II 1918 - 2004 2 December 1974 -- ? 11 April 1981 -- 22 November 1983 -- 955 -- Gopallawa Jayewardene Ceylon Law College President of the Court of Appeal of Sri Lanka 135 Raja Wanasundera Sabaragamuwa 1924 - 2012 5 June 1975 -- ? -- -- Gopallawa University College , Colombo Ceylon Law College University of London Stanford University Solicitor General of Sri Lanka 136 Percy Colin - Thomé Southern 1922 - 12 January 1976 -- 1977 29 December 1981 -- ? -- -- Gopallawa Jayewardene University of Ceylon University of Cambridge Judge of the High Court of Colombo 137 Neville Samarakoon 1919 - 1990 -- 21 October 1984 1977 -- 21 October 1984 Jayewardene University College , Colombo Colombo Law College 138 Victor Perera 24 July 1981 -- 18 August 1983 -- 755 -- Jayewardene 139 Anton Soza Western 1919 - 2013 26 January 1982 -- 3 February 1984 -- 738 -- Jayewardene University of London Judge of the Court of Appeal 140 Parinda Ranasinghe 15 November 1982 -- 1991 1988 -- 1991 Jayewardene Colombo Law College 141 Abdul Cader 8 December 1982 -- 28 May 1985 -- 902 -- Jayewardene 142 Heevi Rodrigo 8 December 1982 -- 4 December 1984 -- 727 -- Jayewardene 143 E.A.D. Atukorale 27 November 1984 -- -- -- Jayewardene 144 Herbert Thambiah Northern 1926 -- 1992 27 November 1984 -- 1992 1991 -- 1991 Jayewardene University of Ceylon Ceylon Law College Judge of the Court of Appeal 145 Lucian Hector de Alwis 27 November 1984 -- -- -- Jayewardene 146 O.S.M. Seneviratne 10 February 1986 -- -- -- Jayewardene 147 H.A.G. de Silva 10 February 1986 -- -- -- Jayewardene Mark Fernando 1941 - 2009 4 March 1988 -- 2005 -- -- Jayewardene University of Ceylon , Peradeniya A.R.B. Amerasinghe 1937 - 2013 -- -- -- A.R.N. Fernando -- -- -- Ameer Ismail 1990 -- 1994 -- -- Premadasa University of Ceylon Ceylon Law College President of the Court of Appeal of Sri Lanka Andrew Ranjan Perera -- -- -- Pathmanathan Ramanathan 1932 - 2006 -- -- -- University of Wales President of the Court of Appeal of Sri Lanka K.M.M.B. Kulatunge -- -- -- G.P.S. de Silva -- 1991 -- 1999 Sarath N. Silva 1995 -- 16 September 1999 16 September 1999 -- 7 June 2009 3,552 Kumaratunga Sri Lanka Law College University of Brussels President of the Court of Appeal of Sri Lanka Shirani Bandaranayake North Western 1958 - 30 October 1996 -- 13 January 2013 28 January 2015 -- 29 January 2015 18 May 2011 -- 13 January 2013 28 January 2015 -- 29 January 2015 5,919 + 1 606 + 1 Kumaratunga University of Colombo University of London Lawyer C.V. Vigneswaran Western 1939 - March 2001 -- October 2004 -- -- Kumaratunga University of Ceylon Ceylon Law College Judge of the Court of Appeal Asoka de Silva 1946 - 1 August 2001 -- 17 May 2011 8 June 2009 -- 17 May 2011 3,576 708 Kumaratunga University of Peradeniya University of Colombo University of Illinois at Urbana -- Champaign President of the Court of Appeal of Sri Lanka Nihal Jayasinghe 19 February 2003 -- 29 February 2008 -- 1,836 -- Kumaratunga University of Colombo Judge of the Court of Appeal Nimal Dissanayake -- 23 April 2008 -- -- Kumaratunga Shiranee Tilakawardane 19 February 2003 - 5 April 2014 -- 1,901 -- Kumaratunga Sri Lanka Law College President of the Court of Appeal of Sri Lanka Nimal Gamini Amaratunga January 2005 -- March 2014 -- -- Kumaratunga University of Colombo International Maritime Law Institute Judge of the Court of Appeal Saleem Marsoof February 2005 -- 2014 -- -- Kumaratunga University of Colombo , University of San Diego School of Law President of the Court of Appeal of Sri Lanka Andrew Somawansa North Western 28 May 2006 -- October 2008 -- -- Rajapaksa University of Ceylon University of Nevada President of the Court of Appeal of Sri Lanka Jagath Balapatabendi Southern -- -- -- Rajapaksa Ceylon Law College Judge of the Court of Appeal Kanagasabapathy Sripavan † 1952 -- 27 March 2008 -- present 30 January 2015 -- 28 February 2017 7003368200000000000 ♠ 3,682 7003118200000000000 ♠ 1,182 Rajapaksa Sri Lanka Law College Judge of the Court of Appeal P.A. Ratnayake 2 May 2008 -- 15 February 2013 -- 7003175100000000000 ♠ 1,751 -- Rajapaksa University of Brussels Chandra Ekanayake November 2008 -- 2016 -- -- Rajapaksa Sri Lanka Law College President of the Court of Appeal of Sri Lanka S.I. Imam Central 9 January 2009 -- 20 February 2013 -- 1,503 -- Rajapaksa Judge of the Court of Appeal R.K.S. Suresh Chandra 17 June 2010 -- -- -- Rajapaksa Sathya Hettige 10 July 2011 -- 18 April 2014 -- 1,013 -- Rajapaksa University of Colombo President of the Court of Appeal of Sri Lanka Priyasath Dep † 10 July 2011 -- present 02 March 2017 - present -- 7003248200000000000 ♠ 2,482 -- Rajapaksa University of Colombo International Institute of Social Studies Solicitor General of Sri Lanka Eva Wansundera † North Western 7 July 2012 -- present -- 7003211900000000000 ♠ 2,119 -- Rajapaksa Sri Lanka Law College University of Leicester Attorney General of Sri Lanka Mohan Peiris ♠ 15 January 2013 -- 28 January 2015 15 January 2013 -- 28 January 2015 743 743 Rajapaksa Sri Lanka Law College Attorney General of Sri Lanka Rohini Marasinghe 26 April 2013 -- 2015 -- -- Rajapaksa University of Hartford Judge of the Court of Appeal Buwaneka Aluwihare † 4 December 2013 -- present -- 7003160400000000000 ♠ 1,604 -- Rajapaksa University of London Additional Solicitor General of Sri Lanka Sisira de Abrew † Western 7 May 2014 -- present -- 7003145000000000000 ♠ 1,450 -- Rajapaksa Sri Lanka Law College President of the Court of Appeal of Sri Lanka Sarath de Abrew 1953 -- 2016 7 May 2014 -- January 2016 -- -- Rajapaksa Sri Lanka Law College Judge of the Court of Appeal Priyantha Jayawardena † 7 May 2014 -- present -- 7003145000000000000 ♠ 1,450 -- Rajapaksa Sri Lanka Law College University of Aberdeen Upali Abeyratne † 17 December 2014 -- present -- 7003122600000000000 ♠ 1,226 -- Rajapaksa Judge of the Court of Appeal Anil Goonaratne † 30 January 2015 -- present -- 7003118200000000000 ♠ 1,182 -- Sirisena Sri Lanka Law College University of Exeter Judge of the Court of Appeal Kankanithanthri Chitrasiri † 3 December 2015 -- present -- 7002875000000000000 ♠ 875 -- Sirisena University of Sri Lanka Queen Mary University of London Judge of the Court of Appeal Nalin Perera † 3 March 2016 -- present -- 7002784000000000000 ♠ 784 -- Sirisena Judge of the Court of Appeal Prasanna Sujeewa Jayawardena † 16 June 2016 -- present -- 7002679000000000000 ♠ 679 -- Sirisena University of Colombo Judge of the Court of Appeal
+  Fact 0.0: Edmund Carrington was from England, born 1769 and died 1849.
+  Fact 0.1: Edmund Carrington's active service term was March 1801 to 2 April 1806.
+  Fact 0.2: Edmund Carrington's province was North.
+  Fact 0.3: Edmund Carrington's prior position was counsel to the East India Company.
+  Fact 0.4: Edmund Henry Lushington was from England, born 1766 and died 1839.
+  Fact 0.5: Edmund Henry Lushington's active service term began 5 September 1801 and ended in 1809.
+  Fact 0.6: Edmund Henry Lushington's term as chief was 15 April 1807 to 1809.
+  Fact 0.7: Edmund Henry Lushington's province was North.
+  Fact 0.8: Edmund Henry Lushington studied at the University of Cambridge.
+  Fact 0.9: Edmund Henry Lushington's prior position was barrister.
+  Fact 0.10: Alexander Johnston was from Scotland, born 1775 and died 1849.
+  Fact 0.11: Alexander Johnston's active service term was 15 April 1807 to 14 February 1809.
+  Fact 0.12: Alexander Johnston's term as chief was 6 November 1811 to 1819.
+  Fact 0.13: Alexander Johnston was appointed by Maitland.
+  Fact 0.14: Alexander Johnston studied at the University of Göttingen.
+  Fact 0.15: Alexander Johnston's prior position was Advocate Fiscal of Ceylon.
+  Fact 0.16: William Coke was from England, born 1776 and died 1818.
+  Fact 0.17: William Coke's active service term was 6 March 1809 to 1 September 1818.
+  Fact 0.18: William Coke's term as chief was 6 March 1809 to 1811.
+  Fact 0.19: William Coke was appointed by Maitland.
+  Fact 0.20: William Coke studied at the University of Oxford.
+  Fact 0.21: William Coke's prior position was Advocate Fiscal of Ceylon.
+  Fact 0.22: Henry Byrne was chief from 5 November 1818 to 1819.
+  Fact 0.23: Henry Byrne was appointed by Brownrigg.
+  Fact 0.24: Henry Byrne's prior position was barrister.
+  Fact 0.25: Ambrose Hardinge Giffard was from Ireland, born 1771 and died 1827.
+  Fact 0.26: Ambrose Hardinge Giffard's active service term was 8 April 1819 to 2 March 1827.
+  Fact 0.27: Ambrose Hardinge Giffard was appointed by Brownrigg.
+  Fact 0.28: Ambrose Hardinge Giffard studied at Trinity College, Dublin.
+  Fact 0.29: Ambrose Hardinge Giffard's prior position was Advocate Fiscal of Ceylon.
+  Fact 0.30: Richard Ottley lived from 1782 to 1845.
+  Fact 0.31: Richard Ottley's active service term was 8 May 1820 to 1833.
+  Fact 0.32: Richard Ottley's term as chief was 1 November 1827 to 1833.
+  Fact 0.33: Richard Ottley was appointed by Barnes.
+  Fact 0.34: Richard Ottley's prior position was Chief Justice of Grenada.
+  Fact 0.35: Henry Matthews was from England, born 1789 and died 1828.
+  Fact 0.36: Henry Matthews's active service term was 10 October 1827 to 1828.
+  Fact 0.37: Henry Matthews was appointed by Barnes.
+  Fact 0.38: Henry Matthews studied at King's College, Cambridge.
+  Fact 0.39: Henry Matthews's prior position was Advocate Fiscal of Ceylon.
+  Fact 0.40: Charles Marshall was from England, born 1788 and died 1873.
+  Fact 0.41: Charles Marshall's active service term was 14 June 1828 to 3 March 1836.
+  Fact 0.42: Charles Marshall's term as chief was 18 February 1833 to 3 March 1836.
+  Fact 0.43: Charles Marshall was appointed by Barnes.
+  Fact 0.44: Charles Marshall studied at Jesus College, Cambridge.
+  Fact 0.45: William Rough was from England, born 1772 and died 1838.
+  Fact 0.46: William Rough's term was 18 February 1833 to 1838.
+  Fact 0.47: William Rough studied at Trinity College, Cambridge.
+  Fact 0.48: William Norris's term was 27 April 1836 to 1837.
+  Fact 0.49: William Norris was appointed by Wilmot-Horton.
+  Fact 0.50: William Norris's prior position was Advocate Fiscal of Ceylon.
+  Fact 0.51: John Jeremie was from Guernsey, born 1795 and died 1841.
+  Fact 0.52: John Jeremie's term was 10 March 1836 to 1840.
+  Fact 0.53: John Jeremie was appointed by Wilmot-Horton.
+  Fact 0.54: John Jeremie's prior position was public prosecutor of Mauritius.
+  Fact 0.55: John Fredrick Stoddart was from Malta, born 1805 and died 1839.
+  Fact 0.56: John Fredrick Stoddart's active service term was 2 June 1838 to 19 August 1839.
+  Fact 0.57: John Fredrick Stoddart's length of active service was 443 days.
+  Fact 0.58: John Fredrick Stoddart studied at the University of Glasgow.
+  Fact 0.59: Anthony Oliphant was from Scotland, born 1793 and died 1859.
+  Fact 0.60: Anthony Oliphant's active service term was 22 October 1838 to 1854.
+  Fact 0.61: Anthony Oliphant's term as chief was 22 October 1838 to 1854.
+  Fact 0.62: Anthony Oliphant's prior position was Attorney General of the Cape Colony.
+  Fact 0.63: J.G. Hildebrand's term began 23 November 1839.
+  Fact 0.64: William Ogle Carr was from England, born 1802 and died 1856.
+  Fact 0.65: William Ogle Carr's term was 17 April 1854 to 1856.
+  Fact 0.66: William Ogle Carr was appointed by Stewart-Mackenzie.
+  Fact 0.67: William Ogle Carr's prior position was King's Advocate of Ceylon.
+  Fact 0.68: John Stark's term began 10 October 1840.
+  Fact 0.69: John Stark's prior position was Queen's Advocate of Ceylon.
+  Fact 0.70: Christopher Temple's term began 28 January 1854.
+  Fact 0.71: Christopher Temple's prior position was judge of the District Court of Colombo.
+  Fact 0.72: Paul Ivy Sterling's term began 20 November 1855.
+  Fact 0.73: Paul Ivy Sterling's prior position was Attorney General of Hong Kong.
+  Fact 0.74: William Carpenter Rowe died in 1860.
+  Fact 0.75: William Carpenter Rowe's term was 1857 to 1859.
+  Fact 0.76: Edward Shepherd Creasy was from England, born 1812 and died 1878.
+  Fact 0.77: Edward Shepherd Creasy's term was 27 March 1860 to 1875.
+  Fact 0.78: Edward Shepherd Creasy studied at the University of Cambridge.
+  Fact 0.79: Richard Morgan's prior position was Queen's Advocate of Ceylon.
+  Fact 0.80: George Lawson has no recorded dates in the table.
+  Fact 0.81: Henry Byerley Thompson died in 1867.
+  Fact 0.82: Henry Byerley Thompson's term began 1 January 1863.
+  Fact 0.83: Henry Byerley Thompson's prior position was Queen's Advocate of Ceylon.
+  Fact 0.84: Charles Henry Stewart's term began 11 January 1867.
+  Fact 0.85: Richard Cayley was from England.
+  Fact 0.86: Richard Cayley's term was 26 July 1874 to 1882.
+  Fact 0.87: Richard Cayley's term as chief was 1 October 1879 to 1882.
+  Fact 0.88: Richard Cayley's prior position was Queen's Advocate of Ceylon.
+  Fact 0.89: Lovell Burchett Clarence's term began 5 July 1879.
+  Fact 0.90: Harry Dias Bandaranaike's term began 5 July 1879.
+  Fact 0.91: William Hackett's term was 3 February 1877 to 1877.
+  Fact 0.92: John Budd Phear was from England and his term began 18 October 1877.
+  Fact 0.93: Archibald Campbell Lawrie lived from 1837 to 1914.
+  Fact 0.94: Archibald Campbell Lawrie's term was 6 July 1892 to 1901.
+  Fact 0.95: Archibald Campbell Lawrie's prior position was judge of the District Court of Kandy.
+  Fact 0.96: Jacobus de Wet was from South Africa.
+  Fact 0.97: Jacobus de Wet's term was 31 May 1882 to 29 May 1883, a length of 363 days.
+  Fact 0.98: Bruce Burnside was from the Bahamas.
+  Fact 0.99: Bruce Burnside's term was 21 May 1883 to 1893.
+  Fact 0.100: Bruce Burnside's prior position was Queen's Advocate of Ceylon.
+  Fact 0.101: John Winfield Bonser's term was 13 November 1893 to 1902.
+  Fact 0.102: John Winfield Bonser's prior position was Chief Justice of the Straits Settlements.
+  Fact 0.103: George Henry Withers has no recorded dates in the table.
+  Fact 0.104: Dodwell Browne has no recorded dates in the table.
+  Fact 0.105: Fredrick Charles Moncrieff's term began 4 April 1900.
+  Fact 0.106: Henry Lorentz Wendt's term was 15 October 1901 to 28 November 1910.
+  Fact 0.107: John Page Middleton's term was 28 January 1902 to 1912.
+  Fact 0.108: John Page Middleton's prior position was judge of the Supreme Court of Cyprus.
+  Fact 0.109: Charles Layard Western's term was 26 April 1902 to 18 June 1906, a length of 1,514 days.
+  Fact 0.110: Joseph Richard Grenier's term was 28 November 1910 to 1912.
+  Fact 0.111: Alexander Wood Renton's term was 3 September 1905 to 1918.
+  Fact 0.112: Alexander Wood Renton's term as chief was 22 August 1914 to 1918.
+  Fact 0.113: Alfred George Lascelles was from England and his term was 1 May 1911 to 1914.
+  Fact 0.114: Joseph Turner Hutchinson was from England and his term was 23 October 1906 to 1 May 1911, a length of 1,651 days.
+  Fact 0.115: James Cecil Walter Pereira's term began 4 July 1912.
+  Fact 0.116: James Arthur Van Langenburg has no recorded dates in the table.
+  Fact 0.117: Thomas De Sampayo's term began in 1915.
+  Fact 0.118: Thomas De Sampayo studied at the University of Cambridge.
+  Fact 0.119: Thomas De Sampayo's prior position was Commissioner of Assize.
+  Fact 0.120: George Francis Macdaniel Ennis's term began 5 August 1912.
+  Fact 0.121: Walter Shaw's term began 10 December 1914.
+  Fact 0.122: Walter Shaw's prior position was Chief Justice of British Honduras.
+  Fact 0.123: Gualterus Stewart Schneider has no recorded dates in the table.
+  Fact 0.124: Anton Bertram lived from 1869 to 1937.
+  Fact 0.125: Anton Bertram's term was 26 July 1918 to 1925.
+  Fact 0.126: Anton Bertram studied at the University of Cambridge.
+  Fact 0.127: Anton Bertram's prior position was Attorney General of Ceylon.
+  Fact 0.128: Hermann Albert Loos has no recorded dates in the table.
+  Fact 0.129: William Thomas Porter's term began 12 January 1922.
+  Fact 0.130: Thomas Garvin lived from 1881 to 1940.
+  Fact 0.131: Thomas Garvin's term was 21 June 1921 to 1935.
+  Fact 0.132: Thomas Garvin studied at Colombo Law College.
+  Fact 0.133: Thomas Garvin's prior position was Solicitor General of Ceylon.
+  Fact 0.134: John Adrian St. Valentine Jayewardene lived from 1877 to 1927.
+  Fact 0.135: John Adrian St. Valentine Jayewardene's term began in 1923.
+  Fact 0.136: John Adrian St. Valentine Jayewardene was appointed by Manning.
+  Fact 0.137: John Adrian St. Valentine Jayewardene's prior position was judge of the District Court of Colombo.
+  Fact 0.138: Llwellyn Chisholm Dalton's term began 14 March 1925.
+  Fact 0.139: Lewis Matthew Maartensz's term began 18 February 1935.
+  Fact 0.140: Maas Thajoon Akbar lived from 1880 to 1944.
+  Fact 0.141: Maas Thajoon Akbar studied at the University of Cambridge.
+  Fact 0.142: Maas Thajoon Akbar's prior position was Solicitor General of Ceylon.
+  Fact 0.143: Charles Ernest St. John Branch lived from 1865 to 1939.
+  Fact 0.144: Charles Ernest St. John Branch's term was 3 July 1925 to 25 May 1926, a length of 326 days.
+  Fact 0.145: Charles Ernest St. John Branch studied at Durham University.
+  Fact 0.146: Stanley Fisher was born in 1867.
+  Fact 0.147: Stanley Fisher's term was 11 December 1926 to 1930.
+  Fact 0.148: Stanley Fisher's prior position was Chief Justice of Trinidad and Tobago.
+  Fact 0.149: Robert William Lyall Grant's term began 17 February 1926.
+  Fact 0.150: Allen Drieberg's term began 19 September 1927.
+  Fact 0.151: Eugene Wilfred Jayewardene lived from 1874 to 1932.
+  Fact 0.152: Eugene Wilfred Jayewardene's term began in May 1928.
+  Fact 0.153: Eugene Wilfred Jayewardene's prior position was member of the Colombo Municipal Council.
+  Fact 0.154: Philip James Macdonell lived from 1873 to 1940.
+  Fact 0.155: Philip James Macdonell's term was 3 October 1930 to 1936.
+  Fact 0.156: Philip James Macdonell's prior position was Chief Justice of Trinidad and Tobago.
+  Fact 0.157: Lucian Macull Dominic de Silva has no recorded dates in the table.
+  Fact 0.158: William Edward Barber has no recorded dates in the table.
+  Fact 0.159: Francis Harold Bertram's term began 19 February 1935.
+  Fact 0.160: Kenneth Poyser has no recorded dates in the table.
+  Fact 0.161: Francis Soertsz's term began 12 November 1936.
+  Fact 0.162: Sidney Abrahams was from England, born 1885 and died 1957.
+  Fact 0.163: Sidney Abrahams's term was 3 July 1936 to 1939.
+  Fact 0.164: Sidney Abrahams studied at the University of Cambridge.
+  Fact 0.165: Francis Moseley's term began 2 August 1936.
+  Fact 0.166: Vincent Fernando's term began 11 November 1937.
+  Fact 0.167: Hector Hearne's term began 21 May 1937.
+  Fact 0.168: Arthur Eric Keuneman's term began 4 March 1938.
+  Fact 0.169: Arthur Eric Keuneman studied at the University of Cambridge.
+  Fact 0.170: Oswald Leslie De Kretser II lived from 1882 to 1959.
+  Fact 0.171: Oswald Leslie De Kretser II's term was 8 April 1938 to 1945.
+  Fact 0.172: Oswald Leslie De Kretser II studied at Caldecott and University College, Colombo.
+  Fact 0.173: Oswald Leslie De Kretser II's prior position was Commissioner of Assize.
+  Fact 0.174: Arthur Wijewardena lived from 1887 to 1964.
+  Fact 0.175: Arthur Wijewardena's term was 22 August 1938 to 1950.
+  Fact 0.176: Arthur Wijewardena's term as chief was 15 January 1949 to 1950.
+  Fact 0.177: Arthur Wijewardena studied at the University of Cambridge.
+  Fact 0.178: Arthur Wijewardena's prior position was Solicitor General of Ceylon.
+  Fact 0.179: J.H.B. Nihill's term began 18 November 1938.
+  Fact 0.180: John Curtois Howard's term was 1 December 1939 to 1945.
+  Fact 0.181: John Curtois Howard's prior position was Attorney General of Cyprus.
+  Fact 0.182: G.H.F. Cannon has no recorded dates in the table.
+  Fact 0.183: Edward Jayetileke's term was 14 May 1942 to 11 October 1951, a length of 3,437 days.
+  Fact 0.184: Edward Jayetileke studied at Caldecott.
+  Fact 0.185: Edward Jayetileke's prior position was Solicitor General of Ceylon.
+  Fact 0.186: Alan Rose's term was 11 January 1945 to 1956.
+  Fact 0.187: A.R.H. Canakeratne lived from 1886 to 1960.
+  Fact 0.188: A.R.H. Canakeratne's term began 28 March 1945.
+  Fact 0.189: A.R.H. Canakeratne studied at Ceylon Law College and the University of London.
+  Fact 0.190: A.R.H. Canakeratne's prior position was Commissioner of Assize.
+  Fact 0.191: Manikku Wadumestri Hendrick de Silva has no recorded dates in the table.
+  Fact 0.192: Manikku Wadumestri Hendrick de Silva's prior position was Attorney General of Ceylon.
+  Fact 0.193: Felix Reginald Dias Bandaranaike I lived from 1861 to 1947.
+  Fact 0.194: Felix Reginald Dias Bandaranaike I's term began 3 September 1946.
+  Fact 0.195: Felix Reginald Dias Bandaranaike I studied at the University of Cambridge.
+  Fact 0.196: Felix Reginald Dias Bandaranaike I's prior position was judge of the District Court of Colombo.
+  Fact 0.197: Chellappah Nagalingam lived from 1893 to 1958.
+  Fact 0.198: Chellappah Nagalingam's term was 22 July 1947 to 1958.
+  Fact 0.199: Chellappah Nagalingam studied at Ceylon Law College.
+  Fact 0.200: Chellappah Nagalingam's prior position was Attorney General of Ceylon.
+  Fact 0.201: Ralph Windham's term began 23 July 1947.
+  Fact 0.202: Hema Henry Basnayake was born in 1902 and his term began 23 October 1947.
+  Fact 0.203: Hema Henry Basnayake's term ended 3 August 1964, a length of 6,129 days.
+  Fact 0.204: Hema Henry Basnayake's term as chief was 1 January 1956 to 3 August 1964, a length of 3,137 days.
+  Fact 0.205: Hema Henry Basnayake's prior position was Attorney General of Ceylon.
+  Fact 0.206: Edward Frederick Noel Gratiaen's term began 22 March 1948.
+  Fact 0.207: E.H.T. Gunasekera's term was 1 March 1949 to 25 January 1962, a length of 4,713 days.
+  Fact 0.208: M.F.S. Pulle's term began 28 September 1949.
+  Fact 0.209: V.L. St. C. Swan's term began 1 May 1950.
+  Fact 0.210: H.A. de Silva's term began 30 November 1950.
+  Fact 0.211: Kairshasp Choksy has no recorded dates in the table.
+  Fact 0.212: Henry Weerasooriya's term was 10 July 1953 to 24 February 1964, a length of 3,881 days.
+  Fact 0.213: K.D. de Silva's term began 10 July 1953.
+  Fact 0.214: Miliani Sansoni's term was 10 May 1954 to 17 November 1966, a length of 4,574 days.
+  Fact 0.215: Miliani Sansoni's term as chief was 3 August 1964 to 17 November 1966, a length of 836 days.
+  Fact 0.216: Hugh Fernando lived from 1910 to 1976.
+  Fact 0.217: Hugh Fernando's term was 16 May 1955 to 17 November 1973, a length of 6,760 days.
+  Fact 0.218: Hugh Fernando's term as chief was 20 November 1966 to 17 November 1973, a length of 2,554 days.
+  Fact 0.219: Thusew Samuel Fernando's term began 2 May 1956.
+  Fact 0.220: Thusew Samuel Fernando studied at Colombo Law College.
+  Fact 0.221: Thusew Samuel Fernando's prior position was Solicitor General of Sri Lanka.
+  Fact 0.222: Nadaraja Sinnetamby's term began 3 May 1956.
+  Fact 0.223: Lionel de Silva's term began 5 November 1959.
+  Fact 0.224: Leonard de Silva's term began 16 August 1966.
+  Fact 0.225: Henry Thambiah was from the Northern province, born 1906 and died 1997.
+  Fact 0.226: Henry Thambiah's term was 1 December 1961 to 27 May 1968, a length of 2,369 days.
+  Fact 0.227: Henry Thambiah studied at University College, Colombo, Ceylon Law College and the University of London.
+  Fact 0.228: Henry Thambiah's prior position was Commissioner of Assize.
+  Fact 0.229: Kingsley Herath's term began 25 January 1962.
+  Fact 0.230: Asoka Abeyesundere was from the Southern province, born 1906 and died 1988.
+  Fact 0.231: Asoka Abeyesundere's term was 20 April 1962 to 3 May 1968, a length of 2,205 days.
+  Fact 0.232: Asoka Abeyesundere studied at Ceylon Law College.
+  Fact 0.233: Ponnuduraiswamy Sriskandarajah lived from 1905 to 1968.
+  Fact 0.234: Ponnuduraiswamy Sriskandarajah's term was 22 June 1962 to 8 February 1967, a length of 1,692 days.
+  Fact 0.235: Ponnuduraiswamy Sriskandarajah studied at Ceylon University College and Ceylon Law College.
+  Fact 0.236: Ponnuduraiswamy Sriskandarajah's prior position was Commissioner of Assize.
+  Fact 0.237: Gardiye Punchihewage Amaraseela Silva's term was 22 June 1962 to 1974.
+  Fact 0.238: Gardiye Punchihewage Amaraseela Silva's term as chief was 1973 to 1974.
+  Fact 0.239: Lionel Sirimanne has no recorded dates in the table.
+  Fact 0.240: Vaithalingam Manicavasagar was from the Western province, born 1906 and died 1993.
+  Fact 0.241: Vaithalingam Manicavasagar's term was 17 December 1964 to 14 December 1967, a length of 1,092 days.
+  Fact 0.242: Vaithalingam Manicavasagar studied at Colombo Law College.
+  Fact 0.243: Vaithalingam Manicavasagar's prior position was Commissioner of Assize.
+  Fact 0.244: Anthony Alles was from the Central province, born 1911 and died 2003.
+  Fact 0.245: Anthony Alles's term was 1964 to 1974.
+  Fact 0.246: Anthony Alles studied at the University of Ceylon, Ceylon Law College and the University of London.
+  Fact 0.247: Anthony Alles's prior position was Solicitor General of Sri Lanka.
+  Fact 0.248: Veeravagu Sivasubramaniam lived from 1908 to 1985.
+  Fact 0.249: Veeravagu Sivasubramaniam's term was 1966 to 1970.
+  Fact 0.250: Veeravagu Sivasubramaniam studied at the University of London.
+  Fact 0.251: Veeravagu Sivasubramaniam's prior position was Commissioner of Assize.
+  Fact 0.252: George Samerawickrame's term was 18 November 1966 to 9 April 1981, a length of 5,256 days.
+  Fact 0.253: Victor Tennekoon was from the Central province and was born in 1914.
+  Fact 0.254: Victor Tennekoon's term as chief was 1 January 1974 to 8 September 1977.
+  Fact 0.255: Victor Tennekoon studied at the University of London and Ceylon Law College.
+  Fact 0.256: Victor Tennekoon's prior position was Judge of the Court of Appeal.
+  Fact 0.257: Christopher Weeramantry was from the Western province, born 1926 and died 1967.
+  Fact 0.258: Christopher Weeramantry's term began 30 April 1972.
+  Fact 0.259: Christopher Weeramantry studied at the University of Ceylon and the University of London.
+  Fact 0.260: Christopher Weeramantry's prior position was Commissioner of Assize.
+  Fact 0.261: Oswald Leslie De Kretser III was from the Western province, born 1910 and died 1968.
+  Fact 0.262: Oswald Leslie De Kretser III's term began 21 January 1972.
+  Fact 0.263: Oswald Leslie De Kretser III studied at University College, Colombo and the University of London.
+  Fact 0.264: Oswald Leslie De Kretser III's prior position was judge of the District Court of Panadura.
+  Fact 0.265: Samarapilimudalige Wijayatilake was from the Central province, born 1912 and died 1990.
+  Fact 0.266: Samarapilimudalige Wijayatilake's term was 1968 to 16 May 1975.
+  Fact 0.267: Samarapilimudalige Wijayatilake studied at University College, Colombo and Ceylon Law College.
+  Fact 0.268: Samarapilimudalige Wijayatilake's prior position was Commissioner of Assize.
+  Fact 0.269: Pandita Gunawadena's term was 1968 to 10 February 1971.
+  Fact 0.270: Vincent Thamotheram was born in 1915 and died on 23 March 1970.
+  Fact 0.271: Vincent Thamotheram studied at Ceylon University College and Ceylon Law College.
+  Fact 0.272: Vincent Thamotheram's prior position was Commissioner of Assize.
+  Fact 0.273: Hector Deheragoda's term was 22 February 1972 to 27 December 1976, a length of 1,770 days.
+  Fact 0.274: Cuda Banda Walgampaya's term was 22 February 1972 to 3 January 1976, a length of 1,411 days.
+  Fact 0.275: Jaya Pathirana died in 2000.
+  Fact 0.276: Jaya Pathirana's term was 22 February 1972 to 1978.
+  Fact 0.277: Dharmadasa Wimalaratne's term began 10 April 1972.
+  Fact 0.278: Dharmadasa Wimalaratne's term as chief was 20 October 1980 to 15 September 1985, a length of 1,791 days.
+  Fact 0.279: Tellipalai Rajaratnam lived from 1920 to 1994.
+  Fact 0.280: Tellipalai Rajaratnam's term was 10 April 1972 to 1978.
+  Fact 0.281: Tellipalai Rajaratnam's prior position was Commissioner of Assize.
+  Fact 0.282: Donald Sirimanne's term began in 1973.
+  Fact 0.283: Cyril Udalagama's term began 1 January 1974.
+  Fact 0.284: T.A. de S. Wijesundera's term began 1 January 1974.
+  Fact 0.285: Malcolm Perera's term began 1 January 1974.
+  Fact 0.286: Izadean Mohamed Ismail's term was 1 January 1974 to 18 December 1981, a length of 2,908 days.
+  Fact 0.287: Joe Weereratne's term began 1 January 1974.
+  Fact 0.288: Arulampalam Vythialingam's term began 1 January 1974.
+  Fact 0.289: Noel Tittawela's term began 1 January 1974.
+  Fact 0.290: Suppiah Sharvananda was from the Northern province, born 1923 and died 2007.
+  Fact 0.291: Suppiah Sharvananda's term was 1 January 1974 to 1988.
+  Fact 0.292: Suppiah Sharvananda's term as chief was 29 October 1984 to 1988.
+  Fact 0.293: Suppiah Sharvananda studied at Colombo Law College and the University of London.
+  Fact 0.294: Somaratne Walpita's term began 1 January 1974.
+  Fact 0.295: Wilmot Gunasekera's term began 2 May 1974.
+  Fact 0.296: Barnes Ratwatte II lived from 1918 to 2004.
+  Fact 0.297: Barnes Ratwatte II's term began 2 December 1974.
+  Fact 0.298: Barnes Ratwatte II's term as chief was 11 April 1981 to 22 November 1983, a length of 955 days.
+  Fact 0.299: Barnes Ratwatte II studied at Ceylon Law College.
+  Fact 0.300: Barnes Ratwatte II's prior position was President of the Court of Appeal of Sri Lanka.
+  Fact 0.301: Raja Wanasundera was from the Sabaragamuwa province, born 1924 and died 2012.
+  Fact 0.302: Raja Wanasundera's term began 5 June 1975.
+  Fact 0.303: Raja Wanasundera studied at University College, Colombo, Ceylon Law College, the University of London and Stanford University.
+  Fact 0.304: Raja Wanasundera's prior position was Solicitor General of Sri Lanka.
+  Fact 0.305: Percy Colin-Thomé was from the Southern province, born 1922.
+  Fact 0.306: Percy Colin-Thomé's term began 12 January 1976 and ran to 1977.
+  Fact 0.307: Percy Colin-Thomé's term as chief began 29 December 1981.
+  Fact 0.308: Percy Colin-Thomé studied at the University of Ceylon and the University of Cambridge.
+  Fact 0.309: Percy Colin-Thomé's prior position was judge of the High Court of Colombo.
+  Fact 0.310: Neville Samarakoon lived from 1919 to 1990.
+  Fact 0.311: Neville Samarakoon's term as chief was 1977 to 21 October 1984.
+  Fact 0.312: Neville Samarakoon studied at University College, Colombo and Colombo Law College.
+  Fact 0.313: Victor Perera's term was 24 July 1981 to 18 August 1983, a length of 755 days.
+  Fact 0.314: Anton Soza was from the Western province, born 1919 and died 2013.
+  Fact 0.315: Anton Soza's term was 26 January 1982 to 3 February 1984, a length of 738 days.
+  Fact 0.316: Anton Soza studied at the University of London.
+  Fact 0.317: Anton Soza's prior position was Judge of the Court of Appeal.
+  Fact 0.318: Parinda Ranasinghe's term was 15 November 1982 to 1991.
+  Fact 0.319: Parinda Ranasinghe's term as chief was 1988 to 1991.
+  Fact 0.320: Parinda Ranasinghe studied at Colombo Law College.
+  Fact 0.321: Abdul Cader's term was 8 December 1982 to 28 May 1985, a length of 902 days.
+  Fact 0.322: Heevi Rodrigo's term was 8 December 1982 to 4 December 1984, a length of 727 days.
+  Fact 0.323: E.A.D. Atukorale's term began 27 November 1984.
+  Fact 0.324: Herbert Thambiah was from the Northern province, born 1926 and died 1992.
+  Fact 0.325: Herbert Thambiah's term began 27 November 1984 and ended in 1992.
+  Fact 0.326: Herbert Thambiah's term as chief was in 1991.
+  Fact 0.327: Herbert Thambiah studied at the University of Ceylon and Ceylon Law College.
+  Fact 0.328: Herbert Thambiah's prior position was Judge of the Court of Appeal.
+  Fact 0.329: Lucian Hector de Alwis's term began 27 November 1984.
+  Fact 0.330: O.S.M. Seneviratne's term began 10 February 1986.
+  Fact 0.331: H.A.G. de Silva's term began 10 February 1986.
+  Fact 0.332: Mark Fernando lived from 1941 to 2009.
+  Fact 0.333: Mark Fernando's term began 4 March 1988 and ended in 2005.
+  Fact 0.334: Mark Fernando studied at the University of Ceylon, Peradeniya.
+  Fact 0.335: A.R.B. Amerasinghe lived from 1937 to 2013.
+  Fact 0.336: A.R.N. Fernando has no recorded dates in the table.
+  Fact 0.337: Ameer Ismail's term was 1990 to 1994.
+  Fact 0.338: Ameer Ismail studied at the University of Ceylon and Ceylon Law College.
+  Fact 0.339: Ameer Ismail's prior position was President of the Court of Appeal of Sri Lanka.
+  Fact 0.340: Andrew Ranjan Perera has no recorded dates in the table.
+  Fact 0.341: Pathmanathan Ramanathan lived from 1932 to 2006.
+  Fact 0.342: Pathmanathan Ramanathan studied at the University of Wales.
+  Fact 0.343: Pathmanathan Ramanathan's prior position was President of the Court of Appeal of Sri Lanka.
+  Fact 0.344: K.M.M.B. Kulatunge has no recorded dates in the table.
+  Fact 0.345: G.P.S. de Silva's term was 1991 to 1999.
+  Fact 0.346: Sarath N. Silva's term began 16 September 1999 and ended 7 June 2009, a length of 3,552 days.
+  Fact 0.347: Sarath N. Silva was appointed by Kumaratunga.
+  Fact 0.348: Sarath N. Silva studied at Sri Lanka Law College and the University of Brussels.
+  Fact 0.349: Sarath N. Silva's prior position was President of the Court of Appeal of Sri Lanka.
+  Fact 0.350: Shirani Bandaranayake was from the North Western province and was born in 1958.
+  Fact 0.351: Shirani Bandaranayake was appointed by Kumaratunga.
+  Fact 0.352: Shirani Bandaranayake studied at the University of Colombo and the University of London.
+  Fact 0.353: Shirani Bandaranayake's prior position was lawyer.
+  Fact 0.354: C.V. Vigneswaran was from the Western province, born 1939 and died in March 2001.
+  Fact 0.355: C.V. Vigneswaran's term began in October 2004.
+  Fact 0.356: C.V. Vigneswaran was appointed by Kumaratunga.
+  Fact 0.357: C.V. Vigneswaran studied at the University of Ceylon and Ceylon Law College.
+  Fact 0.358: C.V. Vigneswaran's prior position was Judge of the Court of Appeal.
+  Fact 0.359: Asoka de Silva lived from 1946 to 1 August 2001.
+  Fact 0.360: Asoka de Silva's term began 17 May 2011.
+  Fact 0.361: Asoka de Silva's active service length was 3,576 days.
+  Fact 0.362: Asoka de Silva's term as chief was 8 June 2009 to 17 May 2011, a length of 708 days.
+  Fact 0.363: Asoka de Silva was appointed by Kumaratunga.
+  Fact 0.364: Asoka de Silva studied at the University of Peradeniya, the University of Colombo and the University of Illinois at Urbana-Champaign.
+  Fact 0.365: Asoka de Silva's prior position was President of the Court of Appeal of Sri Lanka.
+  Fact 0.366: Nihal Jayasinghe's term was 19 February 2003 to 29 February 2008, a length of 1,836 days.
+  Fact 0.367: Nihal Jayasinghe was appointed by Kumaratunga.
+  Fact 0.368: Nihal Jayasinghe studied at the University of Colombo.
+  Fact 0.369: Nihal Jayasinghe's prior position was Judge of the Court of Appeal.
+  Fact 0.370: Nimal Dissanayake's term began 23 April 2008.
+  Fact 0.371: Nimal Dissanayake was appointed by Kumaratunga.
+  Fact 0.372: Shiranee Tilakawardane's term was 19 February 2003 to 5 April 2014, a length of 1,901 days.
+  Fact 0.373: Shiranee Tilakawardane was appointed by Kumaratunga.
+  Fact 0.374: Shiranee Tilakawardane studied at Sri Lanka Law College.
+  Fact 0.375: Shiranee Tilakawardane's prior position was President of the Court of Appeal of Sri Lanka.
+  Fact 0.376: Nimal Gamini Amaratunga's term began in January 2005 and ended in March 2014.
+  Fact 0.377: Nimal Gamini Amaratunga was appointed by Kumaratunga.
+  Fact 0.378: Nimal Gamini Amaratunga studied at the University of Colombo and the International Maritime Law Institute.
+  Fact 0.379: Nimal Gamini Amaratunga's prior position was Judge of the Court of Appeal.
+  Fact 0.380: Saleem Marsoof's term began in February 2005 and ended in 2014.
+  Fact 0.381: Saleem Marsoof was appointed by Kumaratunga.
+  Fact 0.382: Saleem Marsoof studied at the University of Colombo and the University of San Diego School of Law.
+  Fact 0.383: Saleem Marsoof's prior position was President of the Court of Appeal of Sri Lanka.
+  Fact 0.384: Andrew Somawansa was from the North Western province.
+  Fact 0.385: Andrew Somawansa's term began 28 May 2006 and ended in October 2008.
+  Fact 0.386: Andrew Somawansa was appointed by Rajapaksa.
+  Fact 0.387: Andrew Somawansa studied at the University of Ceylon and the University of Nevada.
+  Fact 0.388: Andrew Somawansa's prior position was President of the Court of Appeal of Sri Lanka.
+  Fact 0.389: Jagath Balapatabendi was from the Southern province.
+  Fact 0.390: Jagath Balapatabendi was appointed by Rajapaksa.
+  Fact 0.391: Jagath Balapatabendi studied at Ceylon Law College.
+  Fact 0.392: Jagath Balapatabendi's prior position was Judge of the Court of Appeal.
+  Fact 0.393: Kanagasabapathy Sripavan was born in 1952.
+  Fact 0.394: Kanagasabapathy Sripavan's term began 27 March 2008.
+  Fact 0.395: Kanagasabapathy Sripavan's term as chief was 30 January 2015 to 28 February 2017.
+  Fact 0.396: Kanagasabapathy Sripavan was appointed by Rajapaksa.
+  Fact 0.397: Kanagasabapathy Sripavan studied at Sri Lanka Law College.
+  Fact 0.398: Kanagasabapathy Sripavan's prior position was Judge of the Court of Appeal.
+  Fact 0.399: P.A. Ratnayake's term was 2 May 2008 to 15 February 2013, a length of 1,751 days.
+  Fact 0.400: P.A. Ratnayake was appointed by Rajapaksa.
+  Fact 0.401: P.A. Ratnayake studied at the University of Brussels.
+  Fact 0.402: Chandra Ekanayake's term was November 2008 to 2016.
+  Fact 0.403: Chandra Ekanayake was appointed by Rajapaksa.
+  Fact 0.404: Chandra Ekanayake studied at Sri Lanka Law College.
+  Fact 0.405: Chandra Ekanayake's prior position was President of the Court of Appeal of Sri Lanka.
+  Fact 0.406: S.I. Imam was from the Central province.
+  Fact 0.407: S.I. Imam's term was 9 January 2009 to 20 February 2013, a length of 1,503 days.
+  Fact 0.408: S.I. Imam was appointed by Rajapaksa.
+  Fact 0.409: S.I. Imam's prior position was Judge of the Court of Appeal.
+  Fact 0.410: R.K.S. Suresh Chandra's term began 17 June 2010.
+  Fact 0.411: R.K.S. Suresh Chandra was appointed by Rajapaksa.
+  Fact 0.412: Sathya Hettige's term was 10 July 2011 to 18 April 2014, a length of 1,013 days.
+  Fact 0.413: Sathya Hettige was appointed by Rajapaksa.
+  Fact 0.414: Sathya Hettige studied at the University of Colombo.
+  Fact 0.415: Sathya Hettige's prior position was President of the Court of Appeal of Sri Lanka.
+  Fact 0.416: Priyasath Dep's term began 10 July 2011 and is ongoing.
+  Fact 0.417: Priyasath Dep's term as chief began 2 March 2017.
+  Fact 0.418: Priyasath Dep was appointed by Rajapaksa.
+  Fact 0.419: Priyasath Dep studied at the University of Colombo and the International Institute of Social Studies.
+  Fact 0.420: Priyasath Dep's prior position was Solicitor General of Sri Lanka.
+  Fact 0.421: Eva Wansundera was from the North Western province.
+  Fact 0.422: Eva Wansundera's term began 7 July 2012 and is ongoing.
+  Fact 0.423: Eva Wansundera was appointed by Rajapaksa.
+  Fact 0.424: Eva Wansundera studied at Sri Lanka Law College and the University of Leicester.
+  Fact 0.425: Eva Wansundera's prior position was Attorney General of Sri Lanka.
+  Fact 0.426: Mohan Peiris's term was 15 January 2013 to 28 January 2015, a length of 743 days.
+  Fact 0.427: Mohan Peiris was appointed by Rajapaksa.
+  Fact 0.428: Mohan Peiris studied at Sri Lanka Law College.
+  Fact 0.429: Mohan Peiris's prior position was Attorney General of Sri Lanka.
+  Fact 0.430: Rohini Marasinghe's term was 26 April 2013 to 2015.
+  Fact 0.431: Rohini Marasinghe was appointed by Rajapaksa.
+  Fact 0.432: Rohini Marasinghe studied at the University of Hartford.
+  Fact 0.433: Rohini Marasinghe's prior position was Judge of the Court of Appeal.
+  Fact 0.434: Buwaneka Aluwihare's term began 4 December 2013 and is ongoing.
+  Fact 0.435: Buwaneka Aluwihare was appointed by Rajapaksa.
+  Fact 0.436: Buwaneka Aluwihare studied at the University of London.
+  Fact 0.437: Buwaneka Aluwihare's prior position was Additional Solicitor General of Sri Lanka.
+  Fact 0.438: Sisira de Abrew was from the Western province.
+  Fact 0.439: Sisira de Abrew's term began 7 May 2014 and is ongoing.
+  Fact 0.440: Sisira de Abrew was appointed by Rajapaksa.
+  Fact 0.441: Sisira de Abrew studied at Sri Lanka Law College.
+  Fact 0.442: Sisira de Abrew's prior position was President of the Court of Appeal of Sri Lanka.
+  Fact 0.443: Sarath de Abrew lived from 1953 to 2016.
+  Fact 0.444: Sarath de Abrew's term began 7 May 2014 and ended in January 2016.
+  Fact 0.445: Sarath de Abrew was appointed by Rajapaksa.
+  Fact 0.446: Sarath de Abrew studied at Sri Lanka Law College.
+  Fact 0.447: Sarath de Abrew's prior position was Judge of the Court of Appeal.
+  Fact 0.448: Priyantha Jayawardena's term began 7 May 2014 and is ongoing.
+  Fact 0.449: Priyantha Jayawardena was appointed by Rajapaksa.
+  Fact 0.450: Priyantha Jayawardena studied at Sri Lanka Law College and the University of Aberdeen.
+  Fact 0.451: Upali Abeyratne's term began 17 December 2014 and is ongoing.
+  Fact 0.452: Upali Abeyratne was appointed by Rajapaksa.
+  Fact 0.453: Upali Abeyratne's prior position was Judge of the Court of Appeal.
+  Fact 0.454: Anil Goonaratne's term began 30 January 2015 and is ongoing.
+  Fact 0.455: Anil Goonaratne was appointed by Sirisena.
+  Fact 0.456: Anil Goonaratne studied at Sri Lanka Law College and the University of Exeter.
+  Fact 0.457: Anil Goonaratne's prior position was Judge of the Court of Appeal.
+  Fact 0.458: Kankanithanthri Chitrasiri's term began 3 December 2015 and is ongoing.
+  Fact 0.459: Kankanithanthri Chitrasiri was appointed by Sirisena.
+  Fact 0.460: Kankanithanthri Chitrasiri studied at the University of Sri Lanka and Queen Mary University of London.
+  Fact 0.461: Kankanithanthri Chitrasiri's prior position was Judge of the Court of Appeal.
+  Fact 0.462: Nalin Perera's term began 3 March 2016 and is ongoing.
+  Fact 0.463: Nalin Perera was appointed by Sirisena.
+  Fact 0.464: Nalin Perera's prior position was Judge of the Court of Appeal.
+  Fact 0.465: Prasanna Sujeewa Jayawardena's term began 16 June 2016 and is ongoing.
+  Fact 0.466: Prasanna Sujeewa Jayawardena was appointed by Sirisena.
+  Fact 0.467: Prasanna Sujeewa Jayawardena studied at the University of Colombo.
+  Fact 0.468: Prasanna Sujeewa Jayawardena's prior position was Judge of the Court of Appeal.
+
+Retrieved items:
+<item 1>
+List of Justices of the Supreme Court of Sri Lanka
+University of San Diego School of Law President of the Court of Appeal of Sri Lanka Andrew Somawansa North Western 28 May 2006 -- October 2008 -- -- Rajapaksa
+University of Ceylon University of Nevada President of the Court of Appeal of Sri Lanka Jagath Balapatabendi Southern -- -- -- Rajapaksa Ceylon Law College
+Judge of the Court of Appeal Kanagasabapathy Sripavan † 1952 -- 27 March 2008 -- present 30 January 2015 -- 28 February 2017 7003368200000000000 ♠ 3,682
+7003118200000000000 ♠ 1,182 Rajapaksa Sri Lanka Law College Judge of the Court of Appeal P.A. Ratnayake 2 May 2008 -- 15 February 2013 -- 7003175100000000000 ♠
+1,751 -- Rajapaksa University of Brussels Chandra Ekanayake November 2008 -- 2016 -- -- Rajapaksa Sri Lanka Law College President of the Court of Appeal of Sri
+Lanka S.I.
+</item 1>
+
+<item 2>
+List of Justices of the Supreme Court of Sri Lanka
+760 2,554 Kotelawala 98 Thusew Samuel Fernando 2 May 1956 -- -- -- Bandaranaike Colombo Law College Solicitor General of Sri Lanka 99 Nadaraja Sinnetamby 3 May
+1956 -- -- -- Bandaranaike 100 Lionel de Silva 5 November 1959 -- -- -- Dahanayake 101 Leonard de Silva 16 August 1966 -- -- -- Senanayake 102 Henry Thambiah
+Northern 1906 -- 1997 1 December 1961 -- 27 May 1968 -- 2,369 -- Bandaranaike University College , Colombo Ceylon Law College University of London Commissioner
+of Assize 103 Kingsley Herath 25 January 1962 -- -- -- Bandaranaike 104 Asoka Abeyesundere Southern 1906 - 1988 20 April 1962 -- 3 May 1968 -- 2,
+</item 2>
+
+<item 3>
+List of Justices of the Supreme Court of Sri Lanka
+450 -- Rajapaksa Sri Lanka Law College President of the Court of Appeal of Sri Lanka Sarath de Abrew 1953 -- 2016 7 May 2014 -- January 2016 -- -- Rajapaksa Sri
+Lanka Law College Judge of the Court of Appeal Priyantha Jayawardena † 7 May 2014 -- present -- 7003145000000000000 ♠ 1,450 -- Rajapaksa Sri Lanka Law College
+University of Aberdeen Upali Abeyratne † 17 December 2014 -- present -- 7003122600000000000 ♠ 1,226 -- Rajapaksa Judge of the Court of Appeal Anil Goonaratne †
+30 January 2015 -- present -- 7003118200000000000 ♠ 1,
+</item 3>
+
+<item 4>
+List of Justices of the Supreme Court of Sri Lanka
+9 January - 5 June 1888 ) Jump up ^ On leave ( 25 November 1890 - February 1891 ) Jump up ^ Acting Justice ( 12 May 1903 -- 28 November 1910 ) References ( edit
+) Jump up ^ Amerasinghe , A. Ranjit B ( 1986 ) , The Supreme Court of Sri Lanka : the first 185 years , Sarvodaya Book Pub . Services , ISBN 978 - 955 - 599 -
+000 - 4 Jump up ^ Current to most recent page update . Jump up ^ Current to most recent page update . Jump up ^ Current to most recent page update . Jump up ^
+Current to most recent page update . Jump up ^ Current to most recent page update . Jump up ^ Current to most recent page update . Jump up ^ Current to most
+recent page update . Jump up ^ Current to most recent page update . Jump up ^ Current to most recent page update . Jump up ^ Current to most recent page update
+. Jump up ^ Current to most recent page update . Jump up ^ Current to most recent page update .
+</item 4>
+
+<item 5>
+List of Justices of the Supreme Court of Sri Lanka
+Imam Central 9 January 2009 -- 20 February 2013 -- 1,503 -- Rajapaksa Judge of the Court of Appeal R.K.S. Suresh Chandra 17 June 2010 -- -- -- Rajapaksa Sathya
+Hettige 10 July 2011 -- 18 April 2014 -- 1,013 -- Rajapaksa University of Colombo President of the Court of Appeal of Sri Lanka Priyasath Dep † 10 July 2011 --
+present 02 March 2017 - present -- 7003248200000000000 ♠ 2,482 -- Rajapaksa University of Colombo International Institute of Social Studies Solicitor General of
+Sri Lanka Eva Wansundera † North Western 7 July 2012 -- present -- 7003211900000000000 ♠ 2,
+</item 5>
+
+<item 6>
+List of Justices of the Supreme Court of Sri Lanka
+Kulatunge -- -- -- G.P.S. de Silva -- 1991 -- 1999 Sarath N. Silva 1995 -- 16 September 1999 16 September 1999 -- 7 June 2009 3,552 Kumaratunga Sri Lanka Law
+College University of Brussels President of the Court of Appeal of Sri Lanka Shirani Bandaranayake North Western 1958 - 30 October 1996 -- 13 January 2013 28
+January 2015 -- 29 January 2015 18 May 2011 -- 13 January 2013 28 January 2015 -- 29 January 2015 5,919 + 1 606 + 1 Kumaratunga University of Colombo University
+of London Lawyer C.V. Vigneswaran Western 1939 - March 2001 -- October 2004 -- -- Kumaratunga University of Ceylon Ceylon Law College Judge of the Court of
+Appeal Asoka de Silva 1946 - 1 August 2001 -- 17 May 2011 8 June 2009 -- 17 May 2011 3,
+</item 6>
+
+<item 7>
+List of Justices of the Supreme Court of Sri Lanka
+576 708 Kumaratunga University of Peradeniya University of Colombo University of Illinois at Urbana -- Champaign President of the Court of Appeal of Sri Lanka
+Nihal Jayasinghe 19 February 2003 -- 29 February 2008 -- 1,836 -- Kumaratunga University of Colombo Judge of the Court of Appeal Nimal Dissanayake -- 23 April
+2008 -- -- Kumaratunga Shiranee Tilakawardane 19 February 2003 - 5 April 2014 -- 1,901 -- Kumaratunga Sri Lanka Law College President of the Court of Appeal of
+Sri Lanka Nimal Gamini Amaratunga January 2005 -- March 2014 -- -- Kumaratunga University of Colombo International Maritime Law Institute Judge of the Court of
+Appeal Saleem Marsoof February 2005 -- 2014 -- -- Kumaratunga University of Colombo ,
+</item 7>
+
+<item 8>
+List of Justices of the Supreme Court of Sri Lanka
+List of justices of the Supreme Court of Sri Lanka - wikipedia List of justices of the Supreme Court of Sri Lanka Jump to : navigation , search Shirani
+Bandaranayake was the 43rd Chief Justice of Sri Lanka and the first and only woman to hold the position . List of Justices of the Supreme Court of Sri Lanka In
+this list , justices are placed in the order in which they took the judicial oath of office and thereby started their term of office . While many of the
+justices ' positions prior to appointment are simply listed as `` lawyer '' , many had part - time positions , such as teaching , or acted as counsel to various
+levels of government . Contents ( hide ) 1 Justices 2 See also 3 Notes 4 References 5 Bibliography Justices ( edit ) † Denotes current justices Began as
+Provisional or Acting Puisne Justice ♠ Tenure demoted to de facto † Died in office No .
+</item 8>
+
+<item 9>
+List of Justices of the Supreme Court of Sri Lanka
+182 -- Sirisena Sri Lanka Law College University of Exeter Judge of the Court of Appeal Kankanithanthri Chitrasiri † 3 December 2015 -- present --
+7002875000000000000 ♠ 875 -- Sirisena University of Sri Lanka Queen Mary University of London Judge of the Court of Appeal Nalin Perera † 3 March 2016 --
+present -- 7002784000000000000 ♠ 784 -- Sirisena Judge of the Court of Appeal Prasanna Sujeewa Jayawardena † 16 June 2016 -- present -- 7002679000000000000 ♠
+679 -- Sirisena University of Colombo Judge of the Court of Appeal See also ( edit ) List of Chief Justices of Sri Lanka List of Justices of the Supreme Court
+of Sri Lanka by court composition Notes ( edit ) Jump up ^ Provisional Chief Justice Jump up ^ On leave ( 1 January - 28 April 1871 ) Jump up ^ Acting Chief
+Justice ( 1 - 10 October 1879 ,
+</item 9>
+
+<item 10>
+List of Justices of the Supreme Court of Sri Lanka
+Jump up ^ Current to most recent page update . Bibliography ( edit ) Amerasinghe , A.R.B. ( 1986 ) . The Supreme Court of Sri Lanka : the first 185 years .
+Ratmalana , Sri Lanka : Sarvodaya Book Pub . Services . ISBN 955599000X . ( hide ) Supreme Court of Sri Lanka The Court Decisions Procedure History Court
+Building Current membership Chief Justice Kanagasabapathy Sripavan Puisne Justices Priyasath Dep Eva Wansundera Buwaneka Aluwihare Sisira De Abrew Priyantha
+Jayawardena Upaly Abeyratne Anil Goonaratne K.T.
+</item 10>
+=== END ITEM id=64a7077da2bee01e ===
+
+=== ITEM id=e73c64f06d1ab2c3 ===
+Gold sentences and facts:
+Sentence 0: As a technique for drawing , the closest predecesor to the pencil was Silverpoint until in 1565 ( some sources say as early as 1500 ) , a large deposit of graphite was discovered on the approach to Grey Knotts from the hamlet of Seathwaite in Borrowdale parish , Cumbria , England . This particular deposit of graphite was extremely pure and solid , and it could easily be sawn into sticks . It remains the only large - scale deposit of graphite ever found in this solid form . Chemistry was in its infancy and the substance was thought to be a form of lead . Consequently , it was called plumbago ( Latin for `` lead ore '' ) . Because the pencil core is still referred to as `` lead '' , or a `` lead '' , many people have the misconception that the graphite in the pencil is lead , and the black core of pencils is still referred to as lead , even though it never contained the element lead . The words for pencil in German ( bleistift ) , Irish ( peann luaidhe ) , Arabic ( قلم رصاص qalam raṣāṣ ) , and some other languages literally mean lead pen .
+  Fact 0.0: Before the pencil, the closest predecessor as a drawing technique was Silverpoint, until 1565 (some sources say as early as 1500).
+  Fact 0.1: A large deposit of graphite was discovered on the approach to Grey Knotts from the hamlet of Seathwaite.
+  Fact 0.2: The Grey Knotts graphite deposit is in Borrowdale parish, Cumbria, England.
+  Fact 0.3: The graphite deposit at Grey Knotts was extremely pure and solid.
+  Fact 0.4: The graphite deposit at Grey Knotts could easily be sawn into sticks.
+  Fact 0.5: The Grey Knotts graphite deposit remains the only large-scale deposit of graphite ever found in this solid form.
+  Fact 0.6: Chemistry was in its infancy when the graphite was found.
+  Fact 0.7: The substance was thought to be a form of lead.
+  Fact 0.8: The substance was called plumbago, Latin for 'lead ore'.
+  Fact 0.9: The pencil core is still referred to as 'lead' or 'a lead'.
+  Fact 0.10: Many people have the misconception that the graphite in the pencil is lead.
+  Fact 0.11: The black core of pencils is still referred to as lead.
+  Fact 0.12: The black core of pencils never contained the element lead.
+  Fact 0.13: The German word for pencil, bleistift, literally means lead pen.
+  Fact 0.14: The Irish word for pencil, peann luaidhe, literally means lead pen.
+  Fact 0.15: The Arabic word for pencil, قلم رصاص (qalam raṣāṣ), literally means lead pen.
+  Fact 0.16: Some other languages also use words for pencil that literally mean lead pen.
+
+Retrieved items:
+<item 1>
+Pencil
+Their concept involved the hollowing out of a stick of juniper wood . Shortly thereafter , a superior technique was discovered : two wooden halves were carved ,
+a graphite stick inserted , and the halves then glued together -- essentially the same method in use to this day . New pencils from graphite powder , and
+graphite and clay The first attempt to manufacture graphite sticks from powdered graphite was in Nuremberg , Germany , in 1662 . It used a mixture of graphite ,
+sulphur , and antimony . English and German pencils were not available to the French during the Napoleonic Wars ; France , under naval blockade imposed by Great
+Britain , was unable to import the pure graphite sticks from the British Grey Knotts mines -- the only known source in the world . France was also unable to
+import the inferior German graphite pencil substitute . It took the efforts of an officer in Napoleon 's army to change this . In 1795 , Nicolas - Jacques Conté
+discovered a method of mixing powdered graphite with clay and forming the mixture into rods that were then fired in a kiln . By varying the ratio of graphite to
+clay , the hardness of the graphite rod could also be varied .
+</item 1>
+
+<item 2>
+Pencil
+Contents ( hide ) 1 History 1.1 Camel 's hair pencil 1.2 Discovery of graphite deposit 1.3 Wood holders added 1.4 New pencils from graphite powder , and
+graphite and clay 1.5 The pencil in America 1.6 Eraser attached 1.7 Pencil extenders 2 Types 2.1 By marking material 2.2 By use 2.3 By shape 2.4 By size 2.5 By
+manufacture 3 Health 4 Manufacture 5 Grading and classification 5.1 Pencil hardness test 6 External colour and shape of pencils 7 Notable pencil users 8
+Manufacturers 9 See also 10 References 11 Bibliography 12 Further reading 13 External links History Old Soviet colored pencils with box ( circa 1959 ) Camel 's
+hair pencil Pencil , from Old French pincel , from Latin penicillus a `` little tail '' ( see penis ; pincellus is Latin from the post-classical period )
+originally referred to an artist 's fine brush of camel hair , also used for writing before modern lead or chalk pencils .
+</item 2>
+
+<item 3>
+Pencil
+Because graphite is soft , it requires some form of encasement . Graphite sticks were initially wrapped in string or sheepskin for stability . England would
+enjoy a monopoly on the production of pencils until a method of reconstituting the graphite powder was found in 1662 in Italy . However , the distinctively
+square English pencils continued to be made with sticks cut from natural graphite into the 1860s . The town of Keswick , near the original findings of block
+graphite , still manufactures pencils , the factory also being the location of the Cumberland Pencil Museum . The meaning of `` graphite writing implement ''
+apparently evolved late in the 16th century . Wood holders added Palomino Blackwing 602 pencils Around 1560 , an Italian couple named Simonio and Lyndiana
+Bernacotti made what are likely the first blueprints for the modern , wood - encased carpentry pencil . Their version was a flat , oval , more compact type of
+pencil . Their concept involved the hollowing out of a stick of juniper wood .
+</item 3>
+
+<item 4>
+Pencil
+Archived from the original on 5 March 2016 . Retrieved 5 October 2015 . Jump up ^ Bennett , Howard J. ( 26 November 2014 ) . `` Ever wondered about the lead in
+pencils ? '' . The Washington Post . ISSN 0190 - 8286 . Archived from the original on 6 November 2015 . Retrieved 5 October 2015 . Jump up ^ `` Pencil
+swallowing : MedlinePlus Medical Encyclopedia '' . www.nlm.nih.gov . Archived from the original on 6 October 2015 . Retrieved 5 October 2015 . Jump up ^ ``
+graphite pencils The Weekend Historian '' . umeshmadan.wordpress.com . Archived from the original on 7 October 2015 . Retrieved 5 October 2015 . Jump up ^ ``
+Origins of the Pencil ( Circa 1500 -- 1565 ) : HistoryofInformation.com '' . www.historyofinformation.com . Retrieved 2016 - 10 - 29 .
+</item 4>
+
+<item 5>
+Pencil
+Though the archetypal pencil was an artist 's brush , the stylus , a thin metal stick used for scratching in papyrus or wax tablets , was used extensively by
+the Romans and for palm - leaf manuscripts . Discovery of graphite deposit As a technique for drawing , the closest predecesor to the pencil was Silverpoint
+until in 1565 ( some sources say as early as 1500 ) , a large deposit of graphite was discovered on the approach to Grey Knotts from the hamlet of Seathwaite in
+Borrowdale parish , Cumbria , England . This particular deposit of graphite was extremely pure and solid , and it could easily be sawn into sticks . It remains
+the only large - scale deposit of graphite ever found in this solid form . Chemistry was in its infancy and the substance was thought to be a form of lead .
+Consequently , it was called plumbago ( Latin for `` lead ore '' ) .
+</item 5>
+
+<item 6>
+Pencil
+This method of manufacture , which had been earlier discovered by the Austrian Joseph Hardtmuth , the founder of the Koh - I - Noor in 1790 , remains in use .
+In 1802 , the production of graphite leads from graphite and clay was patented by the Koh - I - Noor company in Vienna . In England , pencils continued to be
+made from whole sawn graphite . Henry Bessemer 's first successful invention ( 1838 ) was a method of compressing graphite powder into solid graphite thus
+allowing the waste from sawing to be reused . The pencil in america Pencil , perhaps made by Henry David Thoreau , in the Concord Museum Pencil manufacturing .
+The top sequence shows the old method that required pieces of graphite to be cut to size ; the lower sequence is the new , current method using rods of graphite
+and clay . American colonists imported pencils from Europe until after the American Revolution . Benjamin Franklin advertised pencils for sale in his
+Pennsylvania Gazette in 1729 , and George Washington used a three - inch pencil when he surveyed the Ohio Territory in 1762 .
+</item 6>
+
+<item 7>
+Pencil
+Consequently , it was called plumbago ( Latin for `` lead ore '' ) . Because the pencil core is still referred to as `` lead '' , or a `` lead '' , many people
+have the misconception that the graphite in the pencil is lead , and the black core of pencils is still referred to as lead , even though it never contained the
+element lead . The words for pencil in German ( bleistift ) , Irish ( peann luaidhe ) , Arabic ( قلم رصاص qalam raṣāṣ ) , and some other languages literally
+mean lead pen . The value of graphite would soon be realised to be enormous , mainly because it could be used to line the moulds for cannonballs ; the mines
+were taken over by the Crown and were guarded . When sufficient stores of graphite had been accumulated , the mines were flooded to prevent theft until more was
+required . The usefulness of graphite for pencils was discovered as well , but graphite for pencils had to be smuggled . The news of the usefulness of these
+early pencils spread far and wide , attracting the attention of artists all over the known world . Because graphite is soft , it requires some form of
+encasement .
+</item 7>
+
+<item 8>
+Pencil
+Manufacture The lead of the pencil is a mix of finely ground graphite and clay powders . Before the two substances are mixed , they are separately cleaned of
+foreign matter and dried in a manner that creates large square cakes . Once the cakes have fully dried , the graphite and the clay squares are mixed together
+using water . The amount of clay content added to the graphite depends on the intended pencil hardness ( lower proportions of clay makes the core softer ) , and
+the amount of time spent on grinding the mixture determines the quality of the lead . The mixture is then shaped into long spaghetti - like strings ,
+straightened , dried , cut , and then tempered in a kiln . The resulting strings are dipped in oil or molten wax , which seeps into the tiny holes of the
+material and allows for the smooth writing ability of the pencil . A juniper or incense - cedar plank with several long parallel grooves is cut to fashion a ``
+slat , '' and the graphite / clay strings are inserted into the grooves . Another grooved plank is glued on top , and the whole assembly is then cut into
+individual pencils , which are then varnished or painted .
+</item 8>
+
+<item 9>
+Pencil
+www.historyofinformation.com . Retrieved 2016 - 10 - 29 . Jump up ^ `` Lead Facts - Uses , Properties , Element Pb , Plumbing , Pipes , Weights '' .
+www.sciencekids.co.nz . Archived from the original on 30 October 2016 . Retrieved 29 October 2016 . Jump up ^ `` Keswick Pencil Museum '' . Pencilmuseum.co.uk .
+Archived from the original on 3 August 2009 . Retrieved 23 July 2009 . Jump up ^ Douglas Harper ( 27 June 2012 ) . `` pencil '' . Online Etymology Dictionary .
+Archived from the original on 23 August 2012 . Retrieved 27 June 2012 . Jump up ^ `` Who invented the pencil ? '' . Rocket City Space Pioneers . Archived from
+the original on 2011 - 10 - 22 . Jump up ^ `` Timeline Outline ViewEra : 1500 - 1550 '' . Historyofscience.com . Retrieved 18 August 2012 . Jump up ^ `` Pencil
+'' .
+</item 9>
+
+<item 10>
+Pencil
+p. 419 . Archived from the original on 17 January 2018 . Jump up ^ Steven S. Zumdahl & Susan A. Zumdahl ( 2008 ) . `` No lead pencils '' . Chemistry . Belmont ,
+CA : Cengage Learning . p. 343 . ISBN 0 - 547 - 12532 - 1 . Jump up ^ Martin and Jean Norgate , Geography Department , Portsmouth University ( 2008 ) . `` Old
+Cumbria Gazetteer , black lead mine , Seathwaite '' . Archived from the original on 7 January 2009 . Retrieved 19 May 2008 . CS1 maint : Multiple names :
+authors list ( link ) Jump up ^ Alfred Wainwright ( 2005 ) . A Pictorial Guide to the Lakeland Fells , Western Fells . ISBN 0 - 7112 - 2460 - 9 . Jump up ^ ``
+Graphite from the Plumbago Mine , Borrowdale , England '' . Department of Physics at Michigan Technological University .
+</item 10>
+=== END ITEM id=e73c64f06d1ab2c3 ===

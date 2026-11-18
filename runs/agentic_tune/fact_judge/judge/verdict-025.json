@@ -1,0 +1,38 @@
+[
+  {
+    "id": "62a0318762ed7def",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "the occurrence of unexpected events, such as injuries to key players"}]},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "4089db2c89232df4",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+      {"fact": "1.4", "status": "stated", "evidence": [{"item": 2, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]}
+    ]
+  },
+  {
+    "id": "846e2f0f2ed42367",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+      {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 8, "quote": "Smith did return, however, for the final drive of the game in the losing effort."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Seattle quickly ruled him questionable to return with an elbow issue, and backup Drew Lock took over under center with 18 seconds left in the third quarter."}]}
+    ]
+  }
+]

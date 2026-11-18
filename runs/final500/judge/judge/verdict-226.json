@@ -1,0 +1,58 @@
+[
+{"id": "4279ce10178b42fb", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "I’m here until the end,” she said in her press conference on Friday."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "ca71d0c5742e9030", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "lets Valve’s new handheld truly deliver on its promise of a portable gaming PC."}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "In our review, we measured a playtime increase of 62 percent when playing Hades on the OLED model versus our 18-month-old original."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets."}]},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []}
+]},
+{"id": "4a9e35a3d449bb0d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []}
+]},
+{"id": "524cecfac05331a5", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies, creating a strong need for technologists and designers to be in the process together."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies, creating a strong need for technologists and designers to be in the process together."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Stufish partner Ric Lipson"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Stufish partner Ric Lipson (along with artist Es Devlin and producer Brian Eno) collaborated on the U2 project for Sphere."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "Stufish partner Ric Lipson (along with artist Es Devlin and producer Brian Eno) collaborated on the U2 project for Sphere."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "Stufish partner Ric Lipson (along with artist Es Devlin and producer Brian Eno) collaborated on the U2 project for Sphere."}]}
+]},
+{"id": "35c3c92afbf03051", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1)"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030)"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)"}]}
+]},
+{"id": "d7c605d4fb3f4ab9", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]}
+]

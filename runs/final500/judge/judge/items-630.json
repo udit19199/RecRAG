@@ -1,0 +1,501 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "74f0a027be9db2f1",
+   "gold": [
+    {
+     "sentence": " It is the fourth and final film in the original \"Superman\" film series, and the first film in that series not to be produced by Alexander and Ilya Salkind, but rather by Golan-Globus' Cannon Films, in association with Warner Bros. Gene Hackman returned as Lex Luthor, who creates an evil solar-powered version of Superman called Nuclear Man.",
+     "facts": {
+      "0.0": "The film is the fourth and final film in the original Superman film series.",
+      "0.1": "The film is the first film in the original Superman series not produced by Alexander and Ilya Salkind.",
+      "0.2": "The film was produced by Golan-Globus' Cannon Films.",
+      "0.3": "The film was produced in association with Warner Bros.",
+      "0.4": "Gene Hackman returned as Lex Luthor in the film.",
+      "0.5": "Lex Luthor creates an evil solar-powered version of Superman called Nuclear Man."
+     }
+    },
+    {
+     "sentence": "Eugene Allen \"Gene\" Hackman (born January 30, 1930) is a retired American actor and novelist.",
+     "facts": {
+      "1.0": "Eugene Allen 'Gene' Hackman was born on January 30, 1930.",
+      "1.1": "Gene Hackman is a retired American actor.",
+      "1.2": "Gene Hackman is a retired American novelist."
+     }
+    }
+   ],
+   "items": [
+    "Superman IV: The Quest for Peace\nSuperman IV: The Quest for Peace is a 1987 American superhero film directed by Sidney J. Furie, based on the DC Comics character Superman.\n\n It is the fourth and final film in the original \"Superman\" film series, and the first film in that series not to be produced by Alexander and Ilya Salkind, but rather by Golan-Globus' Cannon Films, in association with Warner Bros. Gene Hackman returned as Lex Luthor, who creates an evil solar-powered version of Superman called Nuclear Man.",
+    "Charles A. Agemian\nCharles A. Agemian (July 22, 1909 – March 30, 1996) was an American banker who took early retirement from Chase Manhattan Bank, where he was executive vice president of operations, to become chairman and chief executive officer of the Hackensack Trust Co., which later was renamed Garden State National Bank.",
+    "Superman Returns\nSuperman Returns is a 2006 American superhero film directed and produced by Bryan Singer.\n\n It is based on the DC Comics character Superman and serves as an homage sequel to the motion pictures \"Superman\" (1978) and \"Superman II\" (1980), while ignoring the events of \"Superman III\" (1983) and \"\" (1987).\n\n The film stars Brandon Routh as Clark Kent/Superman, Kate Bosworth as Lois Lane, Kevin Spacey as Lex Luthor, with James Marsden, Frank Langella, and Parker Posey.\n\n The film tells the story of the title character returning to Earth after a five-year absence.\n\n He finds that his love interest Lois Lane has moved on with her life, and that his archenemy Lex Luthor is plotting a scheme that will destroy Superman and the world.",
+    "Lex Luthor: Man of Steel\nLex Luthor: Man of Steel (later collected as simply Luthor) is a five-issue monthly American comic book limited series written by Brian Azzarello and illustrated by Lee Bermejo, which features Superman's nemesis Lex Luthor as the protagonist.",
+    "Harry Sweet\nHarry Sweet (October 2, 1901 – June 18, 1933) was an American actor, director and screenwriter.\n\n He appeared in 57 films between 1919 and 1932.\n\n He also directed 54 films between 1920 and 1933, including one Harry Langdon short, two of the Tay Garnett- penned comedies Stan Laurel made for Joe Rock, and fifteen of the earliest entries in the Edgar Kennedy \"Average Man\" series.",
+    "Lionel Luthor\nLionel Luthor is a fictional character portrayed by John Glover in the television series \"Smallville\".\n\n The character was initially a recurring guest in season one, and became a series regular in season two and continued until being written out of the show in season seven.\n\n The character returned to the show in season ten again as a recurring guest role as a parallel universe (Earth-2) version of the character.\n\n In \"Smallville\", Lionel Luthor is the father of Lex Luthor (Michael Rosenbaum), and founder and CEO of LuthorCorp.\n\n Lex Luthor's father was first introduced in \"Superman\" comics by Jerry Siegel in 1961 and has since appeared in other Superman-related media under different names.\n\n \"Smallville\" is the first appearance in which the character has been an intricate part of a Superman adaptation.\n\n Series developers Alfred Gough and Miles Millar created Lionel Luthor for \"Smallville\" to provide an antithesis to the parenting style of Jonathan Kent (John Schneider) and Martha Kent (Annette O'Toole).",
+    "Edmund Mortimer (actor)\nEdmund Mortimer (21 August 1874 – 21 May 1944) was an American actor and film director.\n\n He appeared in 251 films between 1913 and 1945.\n\n He also directed 23 films between 1918 and 1928.\n\n He was born in New York, New York and died in Los Angeles, California.",
+    "Alternative versions of Lex Luthor\nThe fictional character Lex Luthor has appeared in a number of media, always as the archenemy of Superman.\n\n Each version of the work typically establishes its own continuity, and sometimes introduces parallel universes, to the point where distinct differences in the portrayal of the character can be identified.\n\n In addition, the DC Universe has been rewritten a number of times, establishing additional versions of the character.\n\n This article details and lists various versions of Lex Luthor depicted in works including DC Comics \"Multiverse\", \"Elseworlds\", television and film.",
+    "Lex Luthor (Smallville)\nLex Luthor is a fictional character from the television series \"Smallville\".\n\n He was a series regular from the pilot episode until the season seven finale, and has been played continuously by Michael Rosenbaum, with various actors portraying the character as a child throughout the series.\n\n The character of Lex Luthor, first created for comic books by Jerry Siegel and Joe Shuster in 1940 as nemesis of Superman, was adapted to television in 2001 by Alfred Gough and Miles Millar—this is only the third time the character has been adapted to a live action television series.\n\n The character has also appeared in various literature based on the \"Smallville\" television series, none of which directly continues from or into the television episodes.",
+    "Gene Hackman\nEugene Allen \"Gene\" Hackman (born January 30, 1930) is a retired American actor and novelist.\n\n In a career spanning nearly five decades, Hackman was nominated for five Academy Awards, winning Best Actor in \"The French Connection\" and Best Supporting Actor in \"Unforgiven\".\n\n He won three Golden Globes and two BAFTAs."
+   ]
+  },
+  {
+   "id": "7a48505b226edf7f",
+   "gold": [
+    {
+     "sentence": "The soundtrack for the 1968 film \"Romeo and Juliet\" was composed and conducted by Nino Rota.",
+     "facts": {
+      "0.0": "The soundtrack for the 1968 film \"Romeo and Juliet\" was composed by Nino Rota.",
+      "0.1": "The soundtrack for the 1968 film \"Romeo and Juliet\" was conducted by Nino Rota."
+     }
+    },
+    {
+     "sentence": "Romeo and Juliet is a 1968 British-Italian romance film based on the tragic play of the same name (1591–1595) by William Shakespeare.",
+     "facts": {
+      "1.0": "Romeo and Juliet is a 1968 British-Italian romance film.",
+      "1.1": "Romeo and Juliet is based on the tragic play of the same name.",
+      "1.2": "The play Romeo and Juliet was written between 1591 and 1595.",
+      "1.3": "The play Romeo and Juliet was written by William Shakespeare."
+     }
+    }
+   ],
+   "items": [
+    "Il cappello di paglia di Firenze\nIl cappello di paglia di Firenze (literally translated as \"The Florentine Straw Hat\" but usually titled in English language productions as \"The Italian Straw Hat\") is an opera by Nino Rota to an Italian-language libretto by the composer and Ernesta Rota, based on the play \"Le chapeau de paille d'Italie\" by Eugène Labiche and Marc Michel.",
+    "The Godfather Part II (soundtrack)\nThe Godfather Part II is the soundtrack from the movie of the same name, released in 1974 by ABC, and 1991 on compact disc by MCA.\n\n The original score was composed by Nino Rota and conducted by Carmine Coppola, who also provided source music for the film.\n\n Rota expands upon two of the three main themes from the first film: \"The Godfather Waltz\" and \"Michael's Theme\", while \"The Love Theme\" from the first film makes a brief appearance during a flashback sequence (\"Remember Vito Andolini\").\n\n There are several new themes, including one for Kay (Diane Keaton), and two for young Vito (Robert De Niro): \"The Immigrant Theme\" and \"The Tarantella\", introduced in \"A New Carpet\".",
+    "Il trittico\nIl trittico (\"The Triptych\") is the title of a collection of three one-act operas, \"Il tabarro\", \"Suor Angelica\", and \"Gianni Schicchi\", by Giacomo Puccini.\n\n The work received its world premiere at the Metropolitan Opera on 14 December 1918.",
+    "Graph query row:\nentity: William Shakespeare\nrelationship: CREATED_BY\nrelated: Romeo and Juliet",
+    "8½\n8½ (Italian title: Otto e mezzo ] ) is a 1963 semi-autobiographical comedy-drama film directed by Federico Fellini.\n\n Co-scripted by Fellini, Tullio Pinelli, Ennio Flaiano, and Brunello Rondi, it stars Marcello Mastroianni as Guido Anselmi, a famous Italian film director.\n\n Shot in black-and-white by cinematographer Gianni di Venanzo, the film features a soundtrack by Nino Rota with costume and set designs by Piero Gherardi.",
+    "The Godfather (soundtrack)\nThe Godfather is the soundtrack from the film of the same name, released in 1972 by Paramount Records, and in 1991 on compact disc by MCA.\n\n Unless noted, the cues were composed by Nino Rota and conducted by Carlo Savina (who was credited on the LP, but not the CD).\n\n The song \"I Have but One Heart\" is sung by Al Martino, who performed it in the film as character Johnny Fontane.",
+    "Amarcord Nino Rota\nAmarcord Nino Rota is an album by various artists, recorded as a tribute to composer Nino Rota.",
+    "Giuseppe Verdi (film)\nGiuseppe Verdi is a 1938 Italian biographical film directed by Carmine Gallone and starring Fosco Giachetti, Gaby Morlay and Germana Paolieri.\n\n The film portrays the life of the composer Giuseppe Verdi (1813-1901).\n\n The casting of Giachetti as Verdi was intended to emphasise the composer's patriotism, as he had recently played patriotic roles in films such as \"The White Squadron\".\n\n The film was made at the Cinecittà Studios in Rome.\n\n The film is also known by the alternative title The Life of Giuseppe Verdi.",
+    "Romeo and Juliet (1968 film)\nRomeo and Juliet is a 1968 British-Italian romance film based on the tragic play of the same name (1591–1595) by William Shakespeare.",
+    "Romeo and Juliet (1968 film soundtrack)\nThe soundtrack for the 1968 film \"Romeo and Juliet\" was composed and conducted by Nino Rota.\n\n It was originally released as a vinyl record, containing nine entries, most notably the song \"What Is a Youth\", composed by Nino Rota, written by Eugene Walter and performed by Glen Weston.\n\n The music score won a Silver Ribbon award of the Italian National Syndicate of Film Journalists in 1968 and was nominated for two other awards (BAFTA Award for Best Film Music in 1968 and Golden Globe Award for Best Original Score in 1969)."
+   ]
+  },
+  {
+   "id": "6412640654adf204",
+   "gold": [
+    {
+     "sentence": " During his early career, Cage starred in a variety of films such as \"Valley Girl\" (1983), \"Racing with the Moon\" (1984), \"Birdy\" (1984), \"Peggy Sue Got Married\" (1986), \"Raising Arizona\" (1987), \"Moonstruck\" (1987), \"Vampire's Kiss\" (1989), \"Wild at Heart\" (1990), \"Fire Birds\" (1990), \"Honeymoon in Vegas\" (1992), and \"Red Rock West\" (1993).",
+     "facts": {
+      "0.0": "During his early career, Nicolas Cage starred in a variety of films.",
+      "0.1": "Nicolas Cage starred in Valley Girl (1983).",
+      "0.2": "Nicolas Cage starred in Racing with the Moon (1984).",
+      "0.3": "Nicolas Cage starred in Birdy (1984).",
+      "0.4": "Nicolas Cage starred in Peggy Sue Got Married (1986).",
+      "0.5": "Nicolas Cage starred in Raising Arizona (1987).",
+      "0.6": "Nicolas Cage starred in Moonstruck (1987).",
+      "0.7": "Nicolas Cage starred in Vampire's Kiss (1989).",
+      "0.8": "Nicolas Cage starred in Wild at Heart (1990).",
+      "0.9": "Nicolas Cage starred in Fire Birds (1990).",
+      "0.10": "Nicolas Cage starred in Honeymoon in Vegas (1992).",
+      "0.11": "Nicolas Cage starred in Red Rock West (1993)."
+     }
+    },
+    {
+     "sentence": " It is about a widowed 37-year-old Italian-American woman (Cher) who falls in love with her fiancé's (Danny Aiello) estranged, hot-tempered younger brother (Nicolas Cage).",
+     "facts": {
+      "1.0": "The film is about a widowed 37-year-old Italian-American woman.",
+      "1.1": "Cher plays the widowed 37-year-old Italian-American woman.",
+      "1.2": "The widowed woman falls in love with her fiancé's estranged, hot-tempered younger brother.",
+      "1.3": "The widowed woman's fiancé is played by Danny Aiello.",
+      "1.4": "The fiancé's younger brother is estranged.",
+      "1.5": "The fiancé's younger brother is hot-tempered.",
+      "1.6": "The fiancé's younger brother is played by Nicolas Cage."
+     }
+    }
+   ],
+   "items": [
+    "The Notebook\nThe Notebook is a 2004 American romantic drama film directed by Nick Cassavetes and based on the 1996 novel of the same name by Nicholas Sparks.\n\n The film stars Ryan Gosling and Rachel McAdams as a young couple who fall in love in the 1940s.\n\n Their story is narrated from the present day by an elderly man (portrayed by James Garner) telling the tale to a fellow nursing home resident (played by Gena Rowlands, who is Cassavetes's mother).",
+    "Dying of the Light (film)\nDying of the Light is a 2014 American psychological thriller film written and directed by Paul Schrader and starring Nicolas Cage, Anton Yelchin and Irène Jacob about a government agent who must track down and kill a terrorist before he loses his full memory from a disease.\n\n It was released theatrically and through VOD formats by Lionsgate on December 5, 2014.\n\n The film received extremely negative reviews, with controversy surrounding the heavy tampering and reediting of the footage by the studio, who denied Schrader final-cut privilege and led him and principal members of the cast to disown the released version and campaign against it.",
+    "Tom Cruise filmography\nTom Cruise is an American actor and producer who made his film debut with a minor role in the 1981 romantic drama \"Endless Love\".\n\n Two years later he made his breakthrough by starring in the romantic comedy \"Risky Business\" (1983), which garnered Cruise his first nomination for the Golden Globe Award for Best Actor – Motion Picture Musical or Comedy.\n\n In 1986, Cruise played a fighter pilot in the Tony Scott-directed action drama \"Top Gun\" (the highest-grossing film that year), and also starred opposite Paul Newman in the Martin Scorsese-directed drama \"The Color of Money\".\n\n Two years later he played opposite Dustin Hoffman in the Academy Award for Best Picture-winning drama \"Rain Man\" (1988), and also appeared in the Golden Raspberry Award for Worst Picture-winning romantic drama \"Cocktail\" (1988).\n\n In doing so Cruise became the first and only person as of 2014 to star in a Best Picture Oscar winner and a Worst Picture Razzie winner in the same year.",
+    "Old Boyfriends\nOld Boyfriends is a 1979 American drama film directed by Joan Tewkesbury and written by Paul Schrader and Leonard Schrader.\n\n The film stars Talia Shire, Richard Jordan, Keith Carradine, John Belushi, John Houseman and Buck Henry.\n\n The film was released on April 13, 1979, by Embassy Pictures.",
+    "Neon City\nNeon City (also known as Anno 2053 in Italy, Neonski Grad in Serbia) is a 1991 Canadian post-apocalyptic science fiction film directed by Monte Markham and written by Jeff Begun and Ann Lewis Hamilton, under the pseudonym Buck Finch.\n\n The cast includes Michael Ironside, Vanity, Lyle Alzado, Valerie Wildman, Nick Klar, Juliet Landau, Richard Sanders and Markham.",
+    "A Star Is Born (1976 film)\nA Star Is Born is a 1976 American musical drama film telling the story of a young woman, played by Barbra Streisand, who enters show business, and meets and falls in love with an established male star, played by Kris Kristofferson, only to find her career ascending while his goes into decline.\n\n It is a remake of two earlier versions – the 1937 version was a drama starring Janet Gaynor and Fredric March, and the 1954 version was a musical starring Judy Garland and James Mason.\n\n It will be remade for a third time in 2018 starring Stefani Germanotta and Bradley Cooper.",
+    "Nicolas Cage\nNicolas Kim Coppola (born January 7, 1964), known professionally as Nicolas Cage, is an American actor, director and producer.\n\n During his early career, Cage starred in a variety of films such as \"Valley Girl\" (1983), \"Racing with the Moon\" (1984), \"Birdy\" (1984), \"Peggy Sue Got Married\" (1986), \"Raising Arizona\" (1987), \"Moonstruck\" (1987), \"Vampire's Kiss\" (1989), \"Wild at Heart\" (1990), \"Fire Birds\" (1990), \"Honeymoon in Vegas\" (1992), and \"Red Rock West\" (1993).",
+    "Deadfall (1993 film)\nDeadfall is a 1993 crime drama film directed by Christopher Coppola.\n\n Coppola co-wrote the script with Nick Vallelonga.\n\n The film stars Michael Biehn, Nicolas Cage, Charlie Sheen, James Coburn, and Peter Fonda.\n\n It is also the prime influence on the song 'Deadfall', written by the American hardcore punk band Snot.\n\n A prequel/sequel, \"Arsenal\", starring Nicolas Cage as his character Eddie King, was released in 2017.",
+    "Richard Farnsworth\nRichard W. Farnsworth (September 1, 1920 – October 6, 2000) was an American actor and stuntman.\n\n He is best known for his performances in \"The Grey Fox\" (1982), for which he received a Golden Globe Award nomination, \"Anne of Green Gables\" (1985), \"Misery\" (1990), and \"The Straight Story\" (1999), for which he received a nomination for the Academy Award for Best Actor.\n\n His sudden death followed a long struggle with prostate cancer.",
+    "Moonstruck\nMoonstruck is a 1987 American romantic comedy film directed by Norman Jewison and written by John Patrick Shanley.\n\n It is about a widowed 37-year-old Italian-American woman (Cher) who falls in love with her fiancé's (Danny Aiello) estranged, hot-tempered younger brother (Nicolas Cage).\n\n Vincent Gardenia and Olympia Dukakis play supporting roles."
+   ]
+  },
+  {
+   "id": "6bff94be8d32f8ac",
+   "gold": [
+    {
+     "sentence": "Stephanocereus is genus of cactus from Brazil, related to \"Arrojadoa\".",
+     "facts": {
+      "0.0": "Stephanocereus is a genus of cactus.",
+      "0.1": "Stephanocereus is from Brazil.",
+      "0.2": "Stephanocereus is related to \"Arrojadoa\"."
+     }
+    },
+    {
+     "sentence": " They are mostly liana-forming plants of the Old World tropics, ranging from South China, Indonesia, Malaysia and the Philippines; westward to Madagascar (two species) and the Seychelles (one); southward to Australia (three) and New Caledonia (one); and northward to India (one) and Sri Lanka (one).",
+     "facts": {
+      "1.0": "The plants in this sentence are mostly liana-forming.",
+      "1.1": "The plants in this sentence are found in the Old World tropics.",
+      "1.2": "The plants in this sentence range from South China, Indonesia, Malaysia and the Philippines.",
+      "1.3": "The plants in this sentence range westward to Madagascar, with two species there.",
+      "1.4": "The plants in this sentence range westward to the Seychelles, with one species there.",
+      "1.5": "The plants in this sentence range southward to Australia, with three species there.",
+      "1.6": "The plants in this sentence range southward to New Caledonia, with one species there.",
+      "1.7": "The plants in this sentence range northward to India, with one species there.",
+      "1.8": "The plants in this sentence range northward to Sri Lanka, with one species there."
+     }
+    }
+   ],
+   "items": [
+    "Huernia\nThe genus Huernia (family Apocynaceae, subfamily Asclepiadoideae) consists of stem succulents from Eastern and Southern Africa, first described as a genus in 1810.\n\n The flowers are five-lobed, usually somewhat more funnel- or bell-shaped than in the closely related genus \"Stapelia\", and often striped vividly in contrasting colours or tones, some glossy, others matt and wrinkled depending on the species concerned.\n\n To pollinate, the flowers attract flies by emitting a scent similar to that of carrion.\n\n The genus is considered close to the genera \"Stapelia\" and \"Hoodia\".\n\n The name is in honour of Justin Heurnius (1587–1652) a Dutch missionary who is reputed to have been the first collector of South African Cape plants.\n\n His name was actually mis-spelt by the collector.",
+    "Echeveria\nEcheveria is a large genus of flowering plants in the Crassulaceae family, native to semi-desert areas of Central America, Mexico and northwestern South America.",
+    "Robert Cantley\nRobert Cantley is a conservationist and Managing Director of Borneo Exotics, a Sri Lankan-based plant nursery specialising in tissue-cultured and seed-grown \"Nepenthes\" species and hybrids.\n\n Cantley has contributed to a number of papers on \"Nepenthes\".\n\n The species \"Nepenthes robcantleyi\", the natural hybrid \"Nepenthes × cantleyi\" and the cultivar \"Nepenthes\" 'Cantley's Red' are named after him.",
+    "Nepenthes\nNepenthes ( ), also known as tropical pitcher plants, is a genus of carnivorous plants in the monotypic family Nepenthaceae.\n\n The genus comprises roughly 150 species, and numerous natural and many cultivated hybrids.\n\n They are mostly liana-forming plants of the Old World tropics, ranging from South China, Indonesia, Malaysia and the Philippines; westward to Madagascar (two species) and the Seychelles (one); southward to Australia (three) and New Caledonia (one); and northward to India (one) and Sri Lanka (one).\n\n The greatest diversity occurs on Borneo, Sumatra, and the Philippines, with many endemic species.\n\n Many are plants of hot, humid, lowland areas, but the majority are tropical montane plants, receiving warm days but cool to cold, humid nights year round.\n\n A few are considered tropical alpine, with cool days and nights near freezing.\n\n The name \"monkey cups\" refers to the fact that monkeys have been observed drinking rainwater from these plants.",
+    "Nepenthes × kinabaluensis\nNepenthes × kinabaluensis , or the Kinabalu Pitcher-Plant, is the natural hybrid between \"N. rajah\" and \"N. villosa\".\n\n It was first collected near Kambarangoh on Mount Kinabalu, Borneo by Lilian Gibbs in 1910 and later mentioned by John Muirhead Macfarlane as \"\"Nepenthes\" sp.\"\n\n in 1914.\n\n Although Macfarlane did not formally name the plant, he noted that \"[a]ll available morphological details suggest that this is a hybrid between \"N. villosa\" and \"N. rajah\"\".\n\n It was finally described in 1976 by Shigeo Kurata as \"N. × kinabaluensis\".\n\n The name was first published in \"Nepenthes of Mount Kinabalu\", but was a \"nomen nudum\" at the time as it lacked an adequate description and information on the type specimen.\n\n The name was subsequently published validly by Kurata in 1984.",
+    "Nepenthes chaniana\nNepenthes chaniana ( ; after Datuk Chan Chew Lun, Managing Director of Natural History Publications (Borneo)) is a tropical pitcher plant species belonging to the genus \"Nepenthes\".\n\n It is characterised by a dense indumentum of long, white hairs.\n\n Pitchers are cylindrical and mostly white to yellow in colouration.\n\n \"Nepenthes chaniana\" belongs to the loosely defined \"\"N. maxima\" complex\", which also includes, among other species, \"N. boschiana\", \"N. epiphytica\", \"N. eymae\", \"N. faizaliana\", \"N. fusca\", \"N. klossii\", \"N. maxima\", \"N. platychila\", \"N. stenophylla\", and \"N. vogelii\".",
+    "Nepenthes tenax\nNepenthes tenax ( ; from Latin: \"tenax\" \"tenacious\") is a lowland species of tropical pitcher plant native to northern Queensland, Australia.\n\n It is the third \"Nepenthes\" species recorded from the continent and its second endemic species.\n\n \"Nepenthes tenax\" is closely related to the two other Australian \"Nepenthes\" species: \"N. mirabilis\" and \"N. rowaniae\".",
+    "Nepenthes boschiana\nNepenthes boschiana ( ; after Johannes van den Bosch), or Bosch's Pitcher-Plant, is a tropical pitcher plant endemic to Borneo.\n\n It is most closely allied to \"N. faizaliana\".\n\n \"Nepenthes borneensis\" is considered a synonym of this species.\n\n \"Nepenthes boschiana\" has no known natural hybrids.\n\n No valid forms or varieties have been described.\n\n \"Nepenthes boschiana\" belongs to the loosely defined \"\"N. maxima\" complex\", which also includes, among other species, \"N. chaniana\", \"N. epiphytica\", \"N. eymae\", \"N. faizaliana\", \"N. fusca\", \"N. klossii\", \"N. maxima\", \"N. platychila\", \"N. stenophylla\", and \"N. vogelii\".",
+    "Nepenthes veitchii\nNepenthes veitchii ( or ; after James Veitch, nurseryman of the Veitch Nurseries), or Veitch's Pitcher-Plant, is a \"Nepenthes\" species from the island of Borneo.\n\n The plant is widespread in north-western Borneo and can also be found in parts of Kalimantan.\n\n \"Nepenthes veitchii\" usually grows as an epiphyte, though the form from Bario seems to be strictly terrestrial and has not been observed to climb trees.",
+    "Stephanocereus\nStephanocereus is genus of cactus from Brazil, related to \"Arrojadoa\".\n\n This genus was monotypic until \"Pilosocereus luetzelburgii\" was included here, resulting in the combination \"Stephanocereus luetzelburgii\"."
+   ]
+  },
+  {
+   "id": "b597e46346596bd1",
+   "gold": [
+    {
+     "sentence": "Rynella is an unincorporated community in Iberia Parish, Louisiana, that consists of a few residential dwellings and a volunteer fire department along Highway 329 (also known as the Avery Island Highway).",
+     "facts": {
+      "0.0": "Rynella is an unincorporated community.",
+      "0.1": "Rynella is in Iberia Parish, Louisiana.",
+      "0.2": "Rynella consists of a few residential dwellings.",
+      "0.3": "Rynella has a volunteer fire department.",
+      "0.4": "The residential dwellings and the volunteer fire department are along Highway 329.",
+      "0.5": "Highway 329 is also known as the Avery Island Highway."
+     }
+    },
+    {
+     "sentence": " The name \"Rynella\" allegedly is an acronym deriving from the last two letters of the first names of three local women, Rosema\"RY\", Pauli\"NE\", and Lei\"LA\" McIlhenny (someone eventually adding an extra L to the resulting word).",
+     "facts": {
+      "1.0": "The name Rynella allegedly is an acronym.",
+      "1.1": "The acronym derives from the last two letters of the first names of three local women.",
+      "1.2": "The three local women are Rosema, Pauli, and Lei McIlhenny.",
+      "1.3": "The acronym uses the letters RY from Rosema, NE from Pauli, and LA from Lei.",
+      "1.4": "Someone eventually added an extra L to the resulting word."
+     }
+    },
+    {
+     "sentence": " They were daughters of Edward Avery McIlhenny, a noted Louisiana conservationist who presided over McIlhenny Company, maker of Tabasco brand pepper sauce at nearby Avery Island.",
+     "facts": {
+      "2.0": "The three women were daughters of Edward Avery McIlhenny.",
+      "2.1": "Edward Avery McIlhenny was a noted Louisiana conservationist.",
+      "2.2": "Edward Avery McIlhenny presided over McIlhenny Company.",
+      "2.3": "McIlhenny Company is the maker of Tabasco brand pepper sauce.",
+      "2.4": "McIlhenny Company is at nearby Avery Island."
+     }
+    },
+    {
+     "sentence": "Tabasco sauce is a brand of hot sauce made exclusively from tabasco peppers (\"Capsicum frutescens\" var.",
+     "facts": {
+      "3.0": "Tabasco sauce is a brand of hot sauce.",
+      "3.1": "Tabasco sauce is made exclusively from tabasco peppers.",
+      "3.2": "The tabasco pepper is Capsicum frutescens var. tabasco."
+     }
+    },
+    {
+     "sentence": " \"tabasco\"), vinegar, and salt.",
+     "facts": {
+      "4.0": "Tabasco sauce is made with vinegar.",
+      "4.1": "Tabasco sauce is made with salt."
+     }
+    }
+   ],
+   "items": [
+    "Rapanea\nRapanea is a genus of plant in family Primulaceae.\n\n It has often been placed in synonymy with \"Myrsine\", and many species have been moved to \"Myrsine\".",
+    "Ronkonkoma, New York\nRonkonkoma ( ) is a hamlet and census-designated place (CDP) on Long Island in the Town of Islip, New York, United States.\n\n The population of the CDP was 19,082 at the 2010 census.",
+    "Riverton, New York\nHowever, only a small portion of this was built along Scottsville-West Henrietta Rd.\n\n Created as part of the community were Riverton Knolls, a moderately priced townhouse subdivision, the Riverton Golf Club, a small 9-hole golf course, and the Riverton Park, which included a playground, baseball diamond, river front benches, walking trail, and a volleyball court.\n\n Also nestled in a bend in the Genesee was a 28 acre forested nature park.",
+    "Valentina, made in Guadalajara from Jalisco puya chiles, is thick, mildly vinegary, and sold hot/extra-hot; Tabasco uses tabasco peppers, vinegar, and salt. Crystal is a medium-heat Louisiana sauce exported widely. North Carolina’s Texas Pete is mild, with hotter, garlic, sriracha, and Mexican-style variants. Puerto Rican pique steeps peppers in vinegar; Bahamian/Key West Old Sour ferments lime juice and salt",
+    "Riverton, New York\nRiverton, New York was a planned community built in 1973 in the town of Henrietta, New York, along the Genesee River.\n\n Riverton was seventh of the thirteen communities receiving Federal guarantee assistance from HUD as part of their New Communities Program created by the Urban Growth and New Community Development Act of 1970.\n\n $12 million was earmarked for the community.\n\n Riverton was supposed to encompass a 2335 acre land area bordered on the north by the New York State Thruway, on the west by the Genesee River, on the east by East River Rd., and on the south by the Rush-Henrietta town line, with some development continuing east along Erie Station Rd.\n\n Original plans called for construction to occur for a 16-year period and eventually house over 25,000 people, with the community including an 18-hole golf course, 12 swimming pools, 3 artificial lakes, a marina on the Genesee, and commercial and industrial centers.\n\n However, only a small portion of this was built along Scottsville-West Henrietta Rd.",
+    "Tabasco sauce\nTabasco sauce is a brand of hot sauce made exclusively from tabasco peppers (\"Capsicum frutescens\" var.\n\n \"tabasco\"), vinegar, and salt.\n\n It is produced by McIlhenny Company of Avery Island, Louisiana.",
+    "Sriracha sauce\nSriracha (Thai: ศรีราชา ,  ] ; ) is a type of hot sauce or chili sauce made from a paste of chili peppers, distilled vinegar, garlic, sugar, and salt.\n\n It is named after the coastal city of Si Racha, in Chonburi Province of eastern Thailand, where it may have been first produced for dishes served at local seafood restaurants.",
+    "Valentina (hot sauce)\nValentina is a brand of pourable hot sauce manufactured by Salsa Tamazula, a company in Guadalajara, Mexico.\n\n It is typically sold in 12.5-ounce and very large (one-liter or 34-ounce) glass bottles, with a flip-top cap permanently attached to the bottle (the cap does not unscrew).\n\n The sauce, and the parent company's Tamazula hot sauce, are made with puya chilis from Jalisco state – similar to the Guajillo chili and known by the name \"guajillo puya\" – is described as thicker than Tabasco sauce and less vinegary, with more chile flavor.\n\n Valentina comes in two varieties, hot and extra hot, and the sauce is known for its use on tacos and its taste, as opposed to only for its heat.\n\n Valentina's ingredients are water, chili peppers, vinegar, salt, spices and sodium benzoate (as a preservative).",
+    "Raritan Water Power Canal\nThe Raritan Water Power Canal in Raritan, New Jersey was a three-mile long water power canal built during the early 1840s to power industries.\n\n The canal has been determined to be eligible for the National Register.\n\n The canal is included in Duke Island Park, as part of the Somerset County Park System.",
+    "Rynella, Louisiana\nRynella is an unincorporated community in Iberia Parish, Louisiana, that consists of a few residential dwellings and a volunteer fire department along Highway 329 (also known as the Avery Island Highway).\n\n The name \"Rynella\" allegedly is an acronym deriving from the last two letters of the first names of three local women, Rosema\"RY\", Pauli\"NE\", and Lei\"LA\" McIlhenny (someone eventually adding an extra L to the resulting word).\n\n They were daughters of Edward Avery McIlhenny, a noted Louisiana conservationist who presided over McIlhenny Company, maker of Tabasco brand pepper sauce at nearby Avery Island.\n\n (At one time McIlhenny operated a general store at Rynella and he owned much of the land that now comprises and surrounds the community.)"
+   ]
+  },
+  {
+   "id": "067b19dddb746c49",
+   "gold": [
+    {
+     "sentence": "\"For the sedan variant of the car, see Volvo S40.\"",
+     "facts": {
+      "0.0": "The sedan variant of the car is described under Volvo S40."
+     }
+    },
+    {
+     "sentence": "The Volvo S40 is a compact luxury car marketed and produced by the Swedish manufacturer Volvo Cars from 1995 to 2012 across two generations.",
+     "facts": {
+      "1.0": "The Volvo S40 is a compact luxury car.",
+      "1.1": "The Volvo S40 is marketed by Volvo Cars.",
+      "1.2": "The Volvo S40 is produced by Volvo Cars.",
+      "1.3": "Volvo Cars is a Swedish manufacturer.",
+      "1.4": "The Volvo S40 was marketed and produced from 1995 to 2012.",
+      "1.5": "The Volvo S40 spanned two generations."
+     }
+    }
+   ],
+   "items": [
+    "Volvo C30\nThe Volvo C30 is a near-luxury compact hatchback, manufactured and marketed by Volvo Cars for model years 2006-2013, available across its single generation as a three-door hatchback.\n\n Powered by inline-four and straight-five engines, the C30 is variant of the Volvo S40/V50/C70 range, sharing the same Ford C1/Volvo P1 platform.\n\n Volvo marketed the C30 as a premium hatchback / sports coupe.",
+    "Volvo S90\nThe Volvo S90 is an executive sedan manufactured and marketed by Swedish automaker Volvo Cars since 2016.\n\n Its estate variant is called the Volvo V90.",
+    "Volvo S40\nThe Volvo S40 is a compact luxury car marketed and produced by the Swedish manufacturer Volvo Cars from 1995 to 2012 across two generations.",
+    "Volvo P80 platform\nThe Volvo P80 platform was a Swedish mid-size unibody automobile platform developed and produced by Volvo Cars.\n\n It was in use from 1991 to 2005.\n\n It is designed for different wheelbases in front-wheel drive configurations and was adapted to all wheel drive.\n\n It debuted with the 1991 Volvo 850 and again in autumn 1996 with the Volvo 850 AWD.\n\n Although heavily modified by TWR, the same basic chassis was used as the underpinnings for the C70.\n\n After the model year 2000 most P80 models were replaced by their P2 successors, with the exception of the C70 convertible which remained in production until 2005.\n\n A total of 1,360,522 cars based on this platform were built.",
+    "Volvo 850\nThe Volvo 850 is a compact executive car that was produced by the Swedish manufacturer Volvo Cars from 1991 to 1996.\n\n Designed by Jan Wilsgaard it was available in saloon and estate body styles.\n\n The 850 was the first front-wheel drive vehicle from Volvo to be sold in North America and also the first all-wheel drive Volvo.\n\n The range was replaced for 1997 by the Volvo S70 and Volvo V70.",
+    "Volvo 440/460\nThe Volvo 440 and 460 are versions of a small family car produced by the Swedish manufacturer Volvo between 1987 and 1996.\n\n The 440 was introduced in 1987, whilst the 460 followed in 1989.\n\n They were built at the NedCar factory in Born, The Netherlands.\n\n The 440 was a five door front wheel drive hatchback and the 460 a saloon.\n\n They shared many components with the already successful Volvo 480, including floorpan, front and rear suspension, engines, transmission and braking systems.",
+    "Volvo 480\nThe Volvo 480 is a compact car that was produced in Born, Netherlands, by Volvo from 1986 to 1995.\n\n It was the first front-wheel drive car made by the automaker.\n\n The 480 was available in only one body style on a automobile platform related to the Volvo 440/460 five door hatchback and four door sedan models.",
+    "Volvo S70\nThe Volvo S70 was a compact executive car produced by Volvo Cars from 1996 to 2000.\n\n The S70 was essentially a facelifted 850 saloon.\n\n The S70 was replaced with the Volvo S60.",
+    "Volvo 300 Series\nThe Volvo 300 Series is a rear wheel drive small family car sold as both a hatchback and (later) a conventional saloon from 1976 to 1991.\n\n It was launched in the Netherlands shortly after Volvo acquired a major stake in the passenger car division of DAF in 1973.\n\n The series consisted of the Volvo 340 (previously 343/345) and the later Volvo 360.",
+    "Volvo V50\n\"For the sedan variant of the car, see Volvo S40.\""
+   ]
+  },
+  {
+   "id": "a5ea9718f8439886",
+   "gold": [
+    {
+     "sentence": "Essence is a monthly magazine for African American women between the ages of 18 and 49.",
+     "facts": {
+      "0.0": "Essence is a monthly magazine.",
+      "0.1": "Essence is for African American women.",
+      "0.2": "Essence is aimed at women between the ages of 18 and 49."
+     }
+    },
+    {
+     "sentence": "ALT for Damerne (meaning \"All for the Ladies\" in English) is a Danish language weekly women's magazine published in Copenhagen, Denmark.",
+     "facts": {
+      "1.0": "ALT for Damerne is a women's magazine.",
+      "1.1": "ALT for Damerne means 'All for the Ladies' in English.",
+      "1.2": "ALT for Damerne is written in the Danish language.",
+      "1.3": "ALT for Damerne is a weekly magazine.",
+      "1.4": "ALT for Damerne is published in Copenhagen, Denmark."
+     }
+    }
+   ],
+   "items": [
+    "Essence (magazine)\nEssence is a monthly magazine for African American women between the ages of 18 and 49.\n\n It is the only magazine that focuses on reaching an audience of black women, revolves around the black woman experience, and has remained for a long period of time.\n\n The magazine covers fashion, lifestyle and beauty, with an intimate girlfriend-to-girlfriend tone, and its slogan \"Fierce, Fun, and Fabulous\" suggests the magazine's goal of empowering African-American women.\n\n The topics the magazine discusses range from celebrities, to fashion, to point-of-view pieces addressing current issues in the African-American community.\n\n A number of its readers engage closely and personally with the publication, and it claims to be the magazine \"for and about Black women\".",
+    "Hänt Bild\nHänt Bild is a celebrity magazine published in Sweden.\n\n The magazine was started in 2003.\n\n It is part of Aller Media AB.\n\n It is published on a weekly basis.",
+    "Hänt Extra\nHänt Extra is a Swedish language weekly celebrity and youth magazine published by Aller Media in Stockholm, Sweden.",
+    "Diva (magazine)\nDIVA is a leading lesbian magazine in the United Kingdom, published monthly.\n\n It was launched in March 1994 by Millivres Ltd, under the editorship of Frances Williams and is now published by Twin Media Group, which is owned by Silke Bader and Linda Riley.\n\n Silke Bader is also the publisher of Curve magazine in the USA and LOTL in Australia, and Linda Riley runs the European Diversity Awards and is the former publisher of g3 magazine in the UK.",
+    "Esquire (magazine)\nEsquire is an American men's magazine, published by the Hearst Corporation in the United States.\n\n Founded in 1933, it flourished during the Great Depression under the guidance of founders Arnold Gingrich, David A. Smart and Henry L. Jackson.",
+    "Elle (magazine)\nElle is a worldwide lifestyle magazine of French origin that focuses on fashion, beauty, health, and entertainment.\n\n \"Elle\" is also the world's best-selling fashion magazine.\n\n It was founded by Pierre Lazareff and his wife Hélène Gordon in 1945.\n\n The title, in French, means \"she\" or \"her\".",
+    "Shape (magazine)\nShape is a monthly English language fitness magazine started by Weider Publications in 1981, founded by Christine MacIntyre (a pioneer in women's free weight fitness) and became the number one women's fitness magazine.\n\n At that time, Weider Enterprises consisted primarily of the bodybuilding magazine \"Muscle & Fitness\".\n\n Joe Weider and Christine MacIntyre had differing views of how to present \"Shape\", Weider endorsing a less journalistic and more commercial approach to articles, MacIntyre endorsing a more academic, doctor-based magazine.\n\n Weider also endorsed a sexier approach to editorial while MacIntyre endorsed a healthier look for women, eschewing sexiness in the models and the copy.\n\n MacIntyre largely won that battle, editing a magazine that required that every byline have an advanced medical degree, that cover models should look healthy rather than sexy, and that sexist language be avoided.\n\n Christine MacIntyre was the editor-in-chief until her death in 1988.\n\n Tara Kraft is the current editor-in-chief.\n\n \"Shape\" found a readership based on that formula.",
+    "Essence Music Festival\nThe Essence Festival, known as \"the party with a purpose\", is an annual music festival which started in 1995 as a one-time event to celebrate the 25th anniversary of \"Essence\", a magazine aimed primarily towards African-American women.\n\n It is the largest event celebrating African-American culture and music in the United States.\n\n Locally referred to as the Essence Fest, it has been held in New Orleans, Louisiana every year since 1994 except for 2006, when it was held in Houston, Texas due to Hurricane Katrina's effect on New Orleans.\n\n It also held in Durban, KwaZulu-Natal in 2016.\n\n It features artists simultaneously performing on a main stage as well as four standing-room only superlounge stages.",
+    "Alt for Damerne\nALT for Damerne (meaning \"All for the Ladies\" in English) is a Danish language weekly women's magazine published in Copenhagen, Denmark.",
+    "Exclaim!\nExclaim!\n\n is a monthly Canadian music magazine that features in-depth coverage of new music across all genres with a special focus on Canadian and cutting-edge artists.\n\n Content is based on the monthly print publication, which publishes 9 issues per year, distributing over 103,000 copies to over 2,600 locations across Canada.\n\n The magazine has an average of 361,200 monthly readers.\n\n Their website, exclaim.ca, has an average of 675,000 unique visitors a month."
+   ]
+  },
+  {
+   "id": "cb92a606d2080158",
+   "gold": [
+    {
+     "sentence": "Pago Pago International Airport (IATA: PPG, ICAO: NSTU, FAA LID: PPG) , also known as Tafuna Airport, is a public airport located 7 miles (11.3 km) southwest of the central business district of Pago Pago, in the village and plains of Tafuna on the island of Tutuila in American Samoa, an unincorporated territory of the United States.",
+     "facts": {
+      "0.0": "Pago Pago International Airport has IATA code PPG.",
+      "0.1": "Pago Pago International Airport has ICAO code NSTU.",
+      "0.2": "Pago Pago International Airport has FAA LID PPG.",
+      "0.3": "Pago Pago International Airport is also known as Tafuna Airport.",
+      "0.4": "Pago Pago International Airport is a public airport.",
+      "0.5": "Pago Pago International Airport is located 7 miles (11.3 km) southwest of the central business district of Pago Pago.",
+      "0.6": "Pago Pago International Airport is located in the village and plains of Tafuna.",
+      "0.7": "Tafuna is on the island of Tutuila.",
+      "0.8": "Tutuila is in American Samoa.",
+      "0.9": "American Samoa is an unincorporated territory of the United States."
+     }
+    },
+    {
+     "sentence": "Hoonah Airport (IATA: HNH, ICAO: PAOH, FAA LID: HNH) is a state-owned public-use airport located one nautical mile (2 km) southeast of the central business district of Hoonah, Alaska.",
+     "facts": {
+      "1.0": "Hoonah Airport has IATA code HNH.",
+      "1.1": "Hoonah Airport has ICAO code PAOH.",
+      "1.2": "Hoonah Airport has FAA LID HNH.",
+      "1.3": "Hoonah Airport is a state-owned public-use airport.",
+      "1.4": "Hoonah Airport is located one nautical mile (2 km) southeast of the central business district of Hoonah.",
+      "1.5": "Hoonah is in Alaska."
+     }
+    }
+   ],
+   "items": [
+    "Inter Island Airways\nInter Island Airways (also known as \"Inter Island Air\") is a South Pacific regional airline based in Pago Pago, American Samoa.\n\n Inter Island Airways operates passenger and cargo flights in and between American Samoa, Independent Samoa and to neighboring Pacific island countries.\n\n Its main base of operations is at Pago Pago International Airport.",
+    "Graph query row:\nairport: Hoonah Airport\nconnected_to: United States\nrelationships: ['LOCATED_IN', 'LOCATED_IN', 'PART_OF']\npath: ['Hoonah Airport', 'Hoonah', 'Alaska', 'United States']",
+    "Pago Pago International Airport\nPago Pago International Airport (IATA: PPG, ICAO: NSTU, FAA LID: PPG) , also known as Tafuna Airport, is a public airport located 7 miles (11.3 km) southwest of the central business district of Pago Pago, in the village and plains of Tafuna on the island of Tutuila in American Samoa, an unincorporated territory of the United States.",
+    "Tutuila\nTutuila is the largest and the main island of American Samoa in the archipelago of Samoan Islands.\n\n It is the third largest island in the Samoan Islands chain of the Central Pacific located roughly 4000 km northeast of Brisbane, Australia and over 1200 km northeast of Fiji.\n\n It contains a large, natural harbor, Pago Pago Harbor, where Pago Pago, the capital of American Samoa is situated.\n\n Pago Pago International Airport is also located on Tutuila island.\n\n Its land expanse is about 68% of the total land area of American Samoa and with 56,000 people accounts for 95% of its population.\n\n The island has six terrestrial and three marine ecosystems.",
+    "Nu'uuli, American Samoa\nNu'uuli is a village on the central east coast of Tutuila Island, American Samoa.\n\n It is located on a peninsula several miles up from Pago Pago International Airport.",
+    "Tafuna, American Samoa\nTafuna' is a village on the east coast of Tutuila Island, American Samoa.\n\n It is located on a peninsula a mile north of Pago Pago International Airport and one mile south of Nu'uuli, American Samoa.",
+    "Hoonah Airport\nHoonah Airport (IATA: HNH, ICAO: PAOH, FAA LID: HNH) is a state-owned public-use airport located one nautical mile (2 km) southeast of the central business district of Hoonah, Alaska.",
+    "Veterans Memorial Stadium (Pago Pago)\nVeterans Memorial Stadium is a football stadium located in Pago Pago Park, in Pago Pago, American Samoa.\n\n The 10,000 capacity venue is one of the smallest stadiums in Oceania, and serves as American Samoa's national stadium.\n\n It is the home venue of the American Samoa national football team, hosting all of their home games.\n\n It is currently used mostly for matches in various football codes, such as soccer, rugby league, and the territory's most popular code, American football.",
+    "WNG710\nWNG710 (sometimes referred to as Pago Pago All Hazards) is a NOAA Weather Radio station that serves the entire United States territory island of American Samoa.\n\n It is programmed from the National Weather Service Forecast Office in Pago Pago.\n\n The station broadcasts weather and hazard information for the Eastern, Manu'a, and Western Districts, which are the three political divisions of American Samoa.\n\n WNG710 has a sister station, WZ2529 at Mt. Olotele.\n\n Its transmitter is located at the opposite side of the island.",
+    "Pago Pago\nPago Pago ( ; Samoan: ] ) is the territorial capital of American Samoa.\n\n It is on the main island of American Samoa, Tutuila.\n\n The territory is served by Pago Pago International Airport at Tafuna, some 8 miles south west of Pago Pago.\n\n Tourism, entertainment, food, and tuna canning are its main industries."
+   ]
+  },
+  {
+   "id": "fa894a87fdcb4973",
+   "gold": [
+    {
+     "sentence": "The Edison Sault Power Canal supplies the Saint Marys Falls Hydropower Plant, a Cloverland Electric Cooperative hydroelectric plant, in Sault Ste. Marie, Michigan.",
+     "facts": {
+      "0.0": "The Edison Sault Power Canal supplies the Saint Marys Falls Hydropower Plant.",
+      "0.1": "The Saint Marys Falls Hydropower Plant is a Cloverland Electric Cooperative hydroelectric plant.",
+      "0.2": "The Saint Marys Falls Hydropower Plant is in Sault Ste. Marie, Michigan."
+     }
+    },
+    {
+     "sentence": " Excavation of the power canal began in September 1898 and was completed in June 1902.",
+     "facts": {
+      "1.0": "Excavation of the Edison Sault Power Canal began in September 1898.",
+      "1.1": "Excavation of the Edison Sault Power Canal was completed in June 1902."
+     }
+    },
+    {
+     "sentence": " The canal and hydroelectric complex were named a Historic Civil Engineering Landmark in 1983.",
+     "facts": {
+      "2.0": "The canal was named a Historic Civil Engineering Landmark in 1983.",
+      "2.1": "The hydroelectric complex was named a Historic Civil Engineering Landmark in 1983."
+     }
+    },
+    {
+     "sentence": "The Cayuga–Seneca Canal is a canal in New York, United States.",
+     "facts": {
+      "3.0": "The Cayuga–Seneca Canal is a canal in New York, United States."
+     }
+    },
+    {
+     "sentence": " It is now part of the New York State Canal System.",
+     "facts": {
+      "4.0": "The Cayuga–Seneca Canal is now part of the New York State Canal System."
+     }
+    }
+   ],
+   "items": [
+    "Cayuga–Seneca Canal\nThe Cayuga–Seneca Canal is a canal in New York, United States.\n\n It is now part of the New York State Canal System.",
+    "New York State Canal System\nThe New York State Canal System (formerly known as the New York State Barge Canal) is a successor to the Erie Canal and other canals within New York.\n\n Currently, the 525 mi system is composed of the Erie Canal, the Oswego Canal, the Cayuga–Seneca Canal, and the Champlain Canal.\n\n In 2014 the system was listed as a national historic district on the National Register of Historic Places in its entirety, and in 2016 it was designated a National Historic Landmark.",
+    "Dundee Canal\nThe Dundee Canal was an industrial canal in Clifton and Passaic in Passaic County, New Jersey.\n\n It was built between 1858 and 1861 and ran parallel to the Passaic River.\n\n It supplied hydropower and water for manufacturing.\n\n There was interest by some members of the business community to modify the canal to support navigational uses, but the canal was never used for that purpose.",
+    "Graph query row:\nfirst_entity: Edison Sault Power Canal\nfirst_facts: {'name': 'Edison Sault Power Canal'}\nfirst_connections: [{'related': 'Historic Civil Engineering Landmark', 'relationship': 'AWARDED', 'relationship_properties': {'year': 1983}}]\nsecond_entity: Cayuga–Seneca Canal\nsecond_facts: {'name': 'Cayuga–Seneca Canal'}\nsecond_connections: [{'related': 'New York', 'relationship': 'LOCATED_IN', 'relationship_properties': {}}, {'related': 'New York State Canal System', 'relationship': 'PART_OF', 'relationship_properties': {}}]\ndirect_relationships: []\nshared_connections: []",
+    "New York State Canal Corporation\nThe New York State Canal Corporation is responsible for the oversight, administration and maintenance of the New York State Canal System, which consists of the Erie Canal, Cayuga–Seneca Canal, Oswego Canal and Champlain Canal.\n\n It is also involved with the development and maintenance of the New York State Canalway Trail and with the general development and promotion of the Erie Canal Corridor as both a tourist attraction and a working waterway.",
+    "Power canal\nA Power Canal refers to a canal used for hydraulic power generation, rather than for transport of watercraft.\n\n The power canal was a major factor in the Industrial revolution in New England in the 19th century.\n\n Most early power canals were mill races used mechanically to transfer power directly from falling water to machinery in mill buildings.\n\n Later, the hydraulic power generated electricity locally for the same mill factories.\n\n These power canals were often filled in as electricity (transported by power lines) replaced the need for local water power, and road transport needs or city expansion needs reclaimed the land.\n\n Some hydraulic power canals were transformed into local electric generators, but most were closed.\n\n Remains of power canals can be seen in old mill towns and are often protected as historical structures today.",
+    "Beaver and Erie Canal\nThe Beaver and Erie Canal, also known as the Erie Extension Canal, was part of the Pennsylvania Canal system and consisted of three sections: the Beaver Division, the Shenango Division, and the Conneaut Division.\n\n The canal ran 136 mi north–south near the western edge of the state from the Ohio River to Lake Erie through Beaver County, Lawrence County, Mercer County, Crawford County, and Erie County, Pennsylvania.",
+    "Lowell Power Canal System and Pawtucket Gatehouse\nThe Lowell Power Canal System is the largest power canal system in the United States, at 5.6 miles in length.\n\n The system's estimated output is 10,000 horsepower, operating six major canals on two levels, controlled by numerous gates.\n\n The system was begun in the 1790s, beginning its life as a transportation canal called the Pawtucket Canal, which was constructed to get logs from New Hampshire down the Merrimack River to shipbuilding centers at Newburyport, Massachusetts, bypassing the 30-plus-foot drop of the Pawtucket Falls.",
+    "Seneca River Crossing Canals Historic District\nSeneca River Crossing Canals Historic District is a national historic district located at Montezuma and Tyre in Cayuga and Seneca Counties, New York.\n\n The district includes more than a mile of the Enlarged Erie Canal prism (built here between 1849 and 1857); towpath and heelpath; a drydock; the remains of the Richmond (Montezuma) Aqueduct crossing the Seneca River; remnants of the original Erie Canal, built between 1817 and 1825 and including Lock #62 and piers of the original mule bridge from that era; and a culvert that carries a stream beneath the Enlarged Erie Canal.",
+    "Edison Sault Power Canal\nThe Edison Sault Power Canal supplies the Saint Marys Falls Hydropower Plant, a Cloverland Electric Cooperative hydroelectric plant, in Sault Ste. Marie, Michigan.\n\n Excavation of the power canal began in September 1898 and was completed in June 1902.\n\n The canal and hydroelectric complex were named a Historic Civil Engineering Landmark in 1983."
+   ]
+  },
+  {
+   "id": "6024127cabd47c26",
+   "gold": [
+    {
+     "sentence": "Teide National Park (Spanish: \"Parque nacional del Teide\" , ] ) is a national park located in Tenerife (Canary Islands, Spain).",
+     "facts": {
+      "0.0": "The Spanish name of Teide National Park is 'Parque nacional del Teide'.",
+      "0.1": "Teide National Park is a national park.",
+      "0.2": "Teide National Park is located in Tenerife.",
+      "0.3": "Tenerife is in the Canary Islands, Spain."
+     }
+    },
+    {
+     "sentence": "Garajonay National Park (Spanish: \"Parque nacional de Garajonay\" , ] ) is located in the center and north of the island of La Gomera, one of the Canary Islands (Spain).",
+     "facts": {
+      "1.0": "The Spanish name of Garajonay National Park is 'Parque nacional de Garajonay'.",
+      "1.1": "Garajonay National Park is located in the center of the island of La Gomera.",
+      "1.2": "Garajonay National Park is located in the north of the island of La Gomera.",
+      "1.3": "La Gomera is one of the Canary Islands in Spain."
+     }
+    }
+   ],
+   "items": [
+    "Training centre for release of the Atma-energy\nTraining centre for release of the Atma-energy (German: \"Trainingszentrum zur Freisetzung der Atmaenergie\"), also known as \"Atman Foundation\", was a new religious movement active mainly on the island of Tenerife and in Germany.\n\n This sect was originally a splinter group of the Brahma Kumaris and is known for a police and media scare in which an alleged attempt to commit ritual suicide took place in Teide National Park in Tenerife.\n\n The group believed in the end of the world but according to the religious studies scholar Georg Schmid and the sociologist Massimo Introvigne had no intention of collective suicide.",
+    "Guadarrama National Park\nSierra de Guadarrama National Park (in Spanish: \"Parque Nacional de la Sierra de Guadarrama\") is a national park in Spain, covering nearly 34,000 hectares, the fifth largest in Spain's national parks system.\n\n The Guadarrama mountain range (\"Sistema Central\") contains some ecologically valuable areas, located in the Community of Madrid and Castile and León (provinces of Segovia and Ávila).\n\n The law that regulates the recently approved national park was published in the BOE in  26, 2013 (2013--) .",
+    "Tenerife\nTenerife ( ; ] ) is the largest and most populated island of the seven Canary Islands.\n\n It is also the most populated island of Spain, with a land area of 2034.38 km2 and 898,680 inhabitants, 43 percent of the total population of the Canary Islands.\n\n Tenerife is the largest and most populous island of Macaronesia.",
+    "Badiar National Park\nBadiar National Park (French: \"Parc National du Badiar\" ) is a national park in Guinea, on the border with Senegal and contiguous with Senegal's much larger Niokolo-Koba National Park.\n\n It was established on 30 May 1985 (by ordonnance N°124/PRG/85), partly in response to Senegal's concern about poaching in Niokolo-Koba National Park.\n\n Badiar is an International Union for Conservation of Nature Category II park.",
+    "Church of the Guanche People\nThe Church of the Guanche People (Spanish: \"Iglesia del Pueblo Guanche\" ) is a religious organisation, founded in 2001 in the city of San Cristóbal de La Laguna (Tenerife, Canary Islands, Spain).\n\n It aims to perpetuate and spread the pagan religion of the ancient Guanche people.",
+    "Hermigua\nHermigua is a town and a municipality in the northeastern part of La Gomera in the province of Santa Cruz de Tenerife of the Canary Islands, Spain.\n\n It is located 12 km northwest of the island's capital, San Sebastián de la Gomera.\n\n The Garajonay National Park covers the southern part of the municipality.",
+    "Garajonay National Park\nGarajonay National Park (Spanish: \"Parque nacional de Garajonay\" , ] ) is located in the center and north of the island of La Gomera, one of the Canary Islands (Spain).\n\n It was declared a national park in 1981 and a World Heritage Site by UNESCO in 1986.\n\n It occupies 40 km (15 sq mi) and it extends into each of the six municipalities on the island.",
+    "Roque Cinchado\nThe Roque Cinchado is a rock formation, regarded as emblematic of the island of Tenerife (Canary Islands, Spain).\n\n It lies within the Teide National Park (a World Heritage Site) in the municipality of La Orotava, near the volcano of the same name, in the heart of the island.\n\n The Roque Cinchado is one of the largest in the world by altitude, for the entire park totals more than 2000 metres.",
+    "Adenocarpus viscosus\nAdenocarpus viscosus is a shrubby species of flowering plant in the legume family Fabaceae, subfamily Faboideae.\n\n It is endemic to the Canary Islands where it is known locally as Codeso del Pico.\n\n It can be found above 1800 m on two of the islands, La Palma in Caldera de Tabouriente and Tenerife where it is a dominant shrub in Teide National Park and occurs in parts of Corona Forestal Nature Park and Reserva Especial de las Palomas.",
+    "Teide National Park\nTeide National Park (Spanish: \"Parque nacional del Teide\" , ] ) is a national park located in Tenerife (Canary Islands, Spain)."
+   ]
+  },
+  {
+   "id": "d33ac4e03eff3363",
+   "gold": [
+    {
+     "sentence": "Psychopsis, abbreviated Psychp in horticultural trade, is a genus of 5 known species of orchids native to northern South America, Central America and Trinidad.",
+     "facts": {
+      "0.0": "Psychopsis is abbreviated Psychp in horticultural trade.",
+      "0.1": "Psychopsis is a genus of 5 known species of orchids.",
+      "0.2": "Psychopsis orchids are native to northern South America.",
+      "0.3": "Psychopsis orchids are native to Central America.",
+      "0.4": "Psychopsis orchids are native to Trinidad."
+     }
+    },
+    {
+     "sentence": "Aubrieta (commonly known as Aubretia) is a genus of about 12 species of flowering plants in the cabbage family Brassicaceae.",
+     "facts": {
+      "1.0": "Aubrieta is commonly known as Aubretia.",
+      "1.1": "Aubrieta is a genus of about 12 species of flowering plants.",
+      "1.2": "Aubrieta is in the cabbage family Brassicaceae."
+     }
+    }
+   ],
+   "items": [
+    "Echeveria\nEcheveria is a large genus of flowering plants in the Crassulaceae family, native to semi-desert areas of Central America, Mexico and northwestern South America.",
+    "Cassytha\nCassytha is a genus of some two dozen species of obligately parasitic vines in the family Lauraceae.\n\n Superficially, and in some aspects of their ecology, they closely resemble plants in the unrelated genus \"Cuscuta\", the dodders.\n\n When fruit and flowers are absent in the field, the physical resemblance is so close that few people without technical training can tell them apart.\n\n In this respect and in their ecology the two genera present a spectacular example of convergent evolution.\n\n In its divergence from habits typical of the Lauraceae, \"Cassytha\" also presents examples of mosaic evolution",
+    "Cassiope\nCassiope is a genus of 9-12 small shrubby species in the family Ericaceae.\n\n They are native to the Arctic and north temperate montane regions.\n\n The genus is named after Cassiopeia of Greek mythology.\n\n Common names, shared with several other similar related genera, include heather and heath.\n\n They have scale-like leaves lying against the stems, and produce solitary bell-shaped flowers in late spring.\n\n Though hardy, flowers can be damaged by late frosts.",
+    "Psychopsis\nPsychopsis, abbreviated Psychp in horticultural trade, is a genus of 5 known species of orchids native to northern South America, Central America and Trinidad.\n\n It was formerly included in the massively paraphyletic \"wastebin genus\" \"Oncidium\".\n\n The genus as a whole is commonly called butterfly orchids, but some species of other orchid genera are also called thus.",
+    "Hippeastrinae\nHippeastrinae is a subtribe of plants classified under the tribe Hippeastreae.\n\n It belongs to the subfamily Amaryllidoideae of the Amaryllis family (Amaryllidaceae).",
+    "Abrus\nAbrus is a genus of flowering plants in the pea family, Fabaceae and the only genus found in the tribe Abreae.\n\n It contains, 13–18 species, but is best known for a single species, Jequirity (\"A. precatorius\").\n\n The highly toxic seeds of that species are used to make jewellery.",
+    "Aizoaceae\nAizoaceae (the fig-marigold family) is a large family of dicotyledonous flowering plants containing 135 genera and about 1900 species.\n\n They are commonly known as stone plants or carpet weeds.\n\n They are often called vygies in South Africa and New Zealand.\n\n Species that resemble stones or pebbles are sometimes called mesembs.\n\n Several species are known as ice plants because of the glistening globular bladder cells covering their stems, fruit and leaves, \"... they sparkle like ice crystals.\"",
+    "Aubrieta\nAubrieta (commonly known as Aubretia) is a genus of about 12 species of flowering plants in the cabbage family Brassicaceae.\n\n The genus is named after Claude Aubriet, a French flower-painter.\n\n It originates from southern Europe east to central Asia but is now a common garden escape throughout Europe.\n\n It is a low, spreading plant, hardy, evergreen and perennial, with small violet, pink or white flowers, and inhabits rocks and banks.\n\n It prefers light, well-drained soil, is tolerant of a wide pH range, and can grow in partial shade or full sun.",
+    "Deutzia\nDeutzia ( or ) is a genus of about 60 species of flowering plants in the family Hydrangeaceae, native to eastern and central Asia (from the Himalayas east to Japan and the Philippines), and Central America and also Europe.\n\n By far the highest species diversity is in China, where 50 species occur.",
+    "Arnebia\nArnebia is a genus of flowering plants in the family Boraginaceae."
+   ]
+  },
+  {
+   "id": "50a90a8842776e8b",
+   "gold": [
+    {
+     "sentence": "The Sports Museum (also known as The Sports Museum of New England) is a non-profit museum currently located in the TD Garden in Boston, Massachusetts.",
+     "facts": {
+      "0.0": "The Sports Museum is also known as The Sports Museum of New England.",
+      "0.1": "The Sports Museum is a non-profit museum.",
+      "0.2": "The Sports Museum is currently located in the TD Garden.",
+      "0.3": "The TD Garden is in Boston, Massachusetts."
+     }
+    },
+    {
+     "sentence": "TD Garden, often called Boston Garden and \"The Garden\", is a multi-purpose arena in Boston, Massachusetts.",
+     "facts": {
+      "1.0": "TD Garden is often called Boston Garden.",
+      "1.1": "TD Garden is often called \"The Garden\".",
+      "1.2": "TD Garden is a multi-purpose arena.",
+      "1.3": "TD Garden is in Boston, Massachusetts."
+     }
+    },
+    {
+     "sentence": " It opened in 1995 as a replacement for the original Boston Garden and has been known as Shawmut Center, FleetCenter, and TD Banknorth Garden.",
+     "facts": {
+      "2.0": "TD Garden opened in 1995.",
+      "2.1": "TD Garden opened as a replacement for the original Boston Garden.",
+      "2.2": "TD Garden has been known as Shawmut Center.",
+      "2.3": "TD Garden has been known as FleetCenter.",
+      "2.4": "TD Garden has been known as TD Banknorth Garden."
+     }
+    }
+   ],
+   "items": [
+    "Sports Museum of America\nThe Sports Museum of America (SmA) was the United States' first national sports museum dedicated to the history and cultural significance of sports in America.\n\n It opened in May 2008 and closed less than nine months later, in February 2009.",
+    "Fanattic Sports Museum\nFanattic Sports Museum (FSM) is a sports museum, dedicated to various types of sports and located in Ecospace Business Park, New Town, Kolkata, India.\n\n Established in January 2017, FSM is known as the first sports museum in Kolkata as well as in West Bengal.",
+    "J. Robert Donnelly Husky Heritage Sports Museum\nThe J. Robert Donnelly Husky Heritage Sports Museum is a public museum located on the University of Connecticut's main campus at Storrs, Connecticut.\n\n The museum documents and celebrates UConn's intercollegiate athletics.\n\n Opening its doors on January 19, 2002, the 2,700-square-foot museum was named in honor of benefactor and 1940 Connecticut basketball and football captain J. Robert (Bob) Donnelly (1971-2005).\n\n Exhibits include national and regional championship trophies, trading cards, photographs, and various sports memorabilia, as well as a six-screen video wall replaying moments of triumph for the UConn Huskies.\n\n A life-size fiberglass sculpture of Jonathan the Husky, UConn's mascot, greets visitors at the museum entrance.\n\n The Connecticut Basketball Rotunda, featuring NCAA championship trophies and life-size cutouts of Ray Allen and Rebecca Lobo, is among the museum's permanent exhibits.",
+    "Camden Yards Sports Complex\nThe Camden Yards Sports Complex is located in the center of Baltimore, Maryland.\n\n The complex is composed of multiple buildings and stadiums including Oriole Park at Camden Yards and M&T Bank Stadium.\n\n The two stadiums are home to the Baltimore Orioles of Major League Baseball and the Baltimore Ravens of the National Football League.\n\n The complex still houses the recently closed Sports Legends Museum at Camden Yards (a non-profit museum featuring Maryland sports teams).\n\n Along with the Sports Legends Museum, the Babe Ruth Birthplace and Museum is located approximately two blocks from the main entrance of Camden Yards at Eutaw Street.\n\n Geppi's Entertainment Museum is also located in Camden Station, atop the Sports Legends at Camden Yards.\n\n The complex is more than museums and stadiums.\n\n It is a location for community events such as the Dew Tour's Panasonic Open in June 2007 and 2008, the Baltimore Marathon, and the African American Festival which is held every year.",
+    "The Sports Museum\nThe Sports Museum (also known as The Sports Museum of New England) is a non-profit museum currently located in the TD Garden in Boston, Massachusetts.\n\n The museum was founded in 1977 in nearby Cambridge, Massachusetts before eventually moving to Boston to the Garden, which has been home to Celtics and Bruins for twenty years.\n\n The museum's exhibits focus on the history of various sports in the Boston area, including the Boston Bruins, Boston Celtics, Boston Red Sox, New England Patriots, Boston Marathon, New England Revolution, boxing, college sports, and others.\n\n The museum features diverse sports memorabilia, curiosities, and life-size sculptures of Bobby Orr, Larry Bird, Carl Yastrzemski and Ted Williams by Rhode Island sculptor Armand LaMontagne.\n\n The museum is normally open daily between 10 AM and 4 PM, but may close when an event or game is scheduled in the Garden.\n\n It is located on a subway stop.",
+    "Stadio del Ghiaccio Gianmario Scola\nStadio del Ghiaccio Gianmario Scola is an indoor sporting arena in Canazei, Italy.\n\n The capacity of the arena is 3,500 spectators.\n\n It is the home arena of the Sportiva Hockey Club Fassa ice hockey team of the Serie A ice hockey league.\n\n The arena also hosted games during the 1994 World Ice Hockey Championships along with the Forum di Assago in Milan and the PalaOnda in Bolzano.",
+    "The entries describe sports teams, venues, parks, and communities: Seattle Sounders FC 2, a Sounders reserve team founded in 2014; Charlotte Hornets; London Skolars; Sacramento Republic FC, 2014 USL champions seeking MLS expansion; and several baseball, racing, and pipe-band organizations. Facilities include Boston’s TD Garden, Braves Field site, and Camden Yards complex; BYU’s Smith Fieldhouse; Campeche’s Estadio Nelson Barrera; and Sacramento’s Papa",
+    "Sports Legends Museum at Camden Yards\nSports Legends Museum at Camden Yards was a non-profit sports museum in Baltimore, Maryland, United States, owned and operated by the Babe Ruth Birthplace & Museum.\n\n It opened on May 14, 2005, with the daughter of celebrated baseball player Babe Ruth in attendance.\n\n After ten years of operation the museum closed abruptly on October 12, 2015 after failing to reach an agreement with the Maryland Stadium Authority for the continued use of Camden Station.\n\n The 22000 sqft museum was adjacent to the main gate of Oriole Park at Camden Yards and has artifacts and interactive exhibits profiling Maryland’s sports history.\n\n Exhibits included such area teams as the Baltimore Orioles, Baltimore Ravens, Baltimore Colts, Maryland Terrapins, Baltimore Elite Giants, Baltimore Black Sox, and the Baltimore Blast.",
+    "- **J. Robert Donnelly Husky Heritage Sports Museum:** UConn campus museum opened 2002; celebrates Huskies athletics with trophies, memorabilia, video displays, and a basketball championship exhibit.\n- **Jeonju National Museum:** South Korean national museum opened in 1990.\n- **Croatian Natural History Museum:** Zagreb institution founded in 1846; Croatia’s largest natural-history museum, with over 2 million items and a public scientific library.\n- **National",
+    "Estonian Sports Museum\nThe Estonian Sports and Olympic Museum, founded in 1963 and modernised in 2001, is the largest sports museum in the Baltic states.\n\n The museum is located on Rüütli street in Tartu, Estonia and the museum has a small outpost in Otepää that concentrates on the Winter sports.\n\n Before 2016, Estonian Sports and Olympic Museum was named Estonian Sports Museum."
+   ]
+  }
+ ]
+}

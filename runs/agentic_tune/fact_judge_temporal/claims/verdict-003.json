@@ -1,0 +1,46 @@
+[
+ {"id": "multihop-rag-1086", "sentences": [
+   ["The next suspension would be Harbaugh's second suspension of the season.", "The Wolverines self-imposed a three-game ban on Harbaugh to start the season.", "The self-imposed ban came amid an NCAA investigation.", "The NCAA investigation found that Harbaugh lied to investigators."],
+   ["Harbaugh reportedly watched the game from the team hotel.", "The leading piece of drama now returns."]
+ ]},
+ {"id": "multihop-rag-1179", "sentences": [
+   ["Sportsbooks are also gathering this information.", "Sportsbooks begin to tighten the NBA Rookie of the Year lines in response."],
+   ["Sportsbooks might adjust the odds if a significant amount of money is being placed on one team or participant.", "Sportsbooks might adjust the odds to balance their liability."]
+ ]},
+ {"id": "multihop-rag-1182", "sentences": [
+   ["During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue.", "Huang said Bankman-Fried was told by Paradigm that he didn't want investors as directors.", "Huang said Bankman-Fried did plan on having a board with experts."],
+   ["The second week of the trial's standout testimony came from Caroline Ellison.", "Caroline Ellison is Alameda Research's former CEO.", "Caroline Ellison claimed she took $14 billion from customers to repay debts to lenders.", "Caroline Ellison claimed she used the customers as a line of credit under the instruction of SBF."],
+   ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.", "The defense countered that the FTX founder acted in good faith.", "The defense said the FTX founder never meant to commit fraud or steal.", "The defense said the FTX founder basically got in over his head."]
+ ]},
+ {"id": "multihop-rag-1197", "sentences": [
+   ["Epic will also suggest that Google hid items from discovery by allowing execs and employees to have 'off the record' chats.", "Google will counter this as well.", "Google will say it has provided the court with thousands of chat logs.", "Google will say it has provided the court with millions of documents."],
+   ["The full model, Gemini Ultra, was not released.", "Only a 'lite' version called Gemini Pro was released."],
+   ["The case was filed by Arkansas-based publisher Helena World Chronicle.", "The case argues that Google 'siphons off' news publishers' content through anticompetitive means.", "The case argues that Google siphons off news publishers' readers through anticompetitive means.", "The case argues that Google siphons off news publishers' ad revenue through anticompetitive means."]
+ ]},
+ {"id": "multihop-rag-1220", "sentences": [
+   ["Risks will increase if the debt continues to rise more than the economy.", "The government competes with the private sector for funds to service its debt.", "The government may 'crowd out' private investment."],
+   ["President Ferdinand Marcos, Jr. said the Philippines' debt-to-GDP ratio stands at about 63%.", "President Ferdinand Marcos, Jr. said that a 63% debt-to-GDP ratio is a little high for the Philippines.", "President Ferdinand Marcos, Jr. said that a 63% debt-to-GDP ratio is not ideal.", "President Ferdinand Marcos, Jr. made the statement to members of the US-ASEAN Business Council who visited Malacañang.", "The statement is cited to ABS-CBN, Aug. 9, 2023."]
+ ]},
+ {"id": "multihop-rag-1253", "sentences": [
+   ["Kenneth Walker III plays for the Seahawks.", "Kenneth Walker III took four carries against the Rams.", "Kenneth Walker III left the game with an oblique injury."],
+   ["Entering Week 12, Tee Higgins (hamstring) failed to suit up due to nagging injuries.", "Entering Week 12, Noah Brown (knee) failed to suit up due to nagging injuries.", "Entering Week 12, Treylon Burks (concussion) failed to suit up due to nagging injuries.", "Entering Week 12, Kadarius Toney (ankle, hip) failed to suit up due to nagging injuries."]
+ ]},
+ {"id": "multihop-rag-1279", "sentences": [
+   ["Al Saadi said that her frustration with Meta is common among Palestinians.", "Al Saadi said that her frustration with Meta is common among Palestinians in occupied territories.", "Al Saadi said that her frustration with Meta is common among Palestinians across the diaspora."],
+   ["Meta wants to shift the burden of monitoring social media usage among teens back to the app stores.", "Meta wants to shift the burden of monitoring social media usage among teens back to parents."]
+ ]},
+ {"id": "multihop-rag-1308", "sentences": [
+   ["A woman says that people will look back and see this past year as a really important turning point for the role social media plays in our lives."],
+   ["The Goellers are now seeking support again.", "The Goellers are launching the 'Save Lucas' campaign.", "The 'Save Lucas' campaign runs across social media."]
+ ]},
+ {"id": "multihop-rag-1324", "sentences": [
+   ["Google's public documentation says Google uses three categories to rank results that are local to a searcher.", "The three categories are relevance, distance, and prominence."],
+   ["The speaker admits that the speaker may have misinterpreted the evidence.", "The speaker maintains that Google manipulates Search to maximise ad revenue."],
+   ["The case was filed by Arkansas-based publisher Helena World Chronicle.", "The case argues that Google 'siphons off' news publishers' content through anticompetitive means.", "The case argues that Google siphons off news publishers' readers through anticompetitive means.", "The case argues that Google siphons off news publishers' ad revenue through anticompetitive means."]
+ ]},
+ {"id": "multihop-rag-1346", "sentences": [
+   ["The Justice Department is focused on the deals Google makes with Apple.", "The Justice Department is focused on the deals Google makes with Samsung.", "The Justice Department is focused on the deals Google makes with Mozilla.", "The Justice Department is focused on the deals Google makes with many others.", "The deals are meant to ensure Google is the default search engine on practically every platform."],
+   ["This will probably come up later in the trial.", "Epic chose to focus more on simply painting Google as the bad guy on day one."],
+   ["The case was filed by Arkansas-based publisher Helena World Chronicle.", "The case argues that Google 'siphons off' news publishers' content through anticompetitive means.", "The case argues that Google siphons off news publishers' readers through anticompetitive means.", "The case argues that Google siphons off news publishers' ad revenue through anticompetitive means."]
+ ]}
+]

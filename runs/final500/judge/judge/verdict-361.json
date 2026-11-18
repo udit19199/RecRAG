@@ -1,0 +1,62 @@
+[
+{"id": "03bbf7f612b32dc6", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Longtime Hollywood couple Will Smith and Jada Pinkett Smith sent shockwaves around the world this week when the Red Table Talk host revealed that she and the actor have been separated since 2016."}]},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "e78664e6bead59b8", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "James is seeking $250 million in penalties and a ban on Trump doing business in New York, his home state."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "James is seeking $250 million in penalties and a ban on Trump doing business in New York, his home state."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "James is seeking $250 million in penalties and a ban on Trump doing business in New York, his home state."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "No apartment in New York City has ever sold for close to that amount, James said."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "Between 2014 and 2015, Trump increased the value of the apartment to $US327 million from $US200 million. The prosecution argues that was to mask a drop in the value of one of his other properties."}]}
+]},
+{"id": "8554f84490f1aeb1", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "But it was ChatGPT’s explosion into public consciousness that thrust Altman into the spotlight as a face of generative AI — technology that can produce novel imagery, passages of text and other media."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "But it was ChatGPT’s explosion into public consciousness that thrust Altman into the spotlight as a face of generative AI — technology that can produce novel imagery, passages of text and other media."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "But it was ChatGPT’s explosion into public consciousness that thrust Altman into the spotlight as a face of generative AI — technology that can produce novel imagery, passages of text and other media."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "But it was ChatGPT’s explosion into public consciousness that thrust Altman into the spotlight as a face of generative AI — technology that can produce novel imagery, passages of text and other media."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 1, "quote": "But it was ChatGPT’s explosion into public consciousness that thrust Altman into the spotlight as a face of generative AI — technology that can produce novel imagery, passages of text and other media."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 1, "quote": "But it was ChatGPT’s explosion into public consciousness that thrust Altman into the spotlight as a face of generative AI — technology that can produce novel imagery, passages of text and other media."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]}
+]},
+{"id": "e49950cd595d1fb0", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone – and the generation of players and leaders that will call time on their international careers at week’s end."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone – and the generation of players and leaders that will call time on their international careers at week’s end."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone – and the generation of players and leaders that will call time on their international careers at week’s end."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "The All Blacks are 18-point favourites for the opening semi-final."}, {"item": 9, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]}
+]},
+{"id": "db074e3cfa81c8ef", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "951486190e997b3f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "She was named co-CEO of Alameda with Sam Trabucco in 2021, while she and Bankman-Fried were broken up, and CEO in 2022."}]},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []},
+{"fact": "2.6", "status": "missing", "evidence": []}
+]}
+]

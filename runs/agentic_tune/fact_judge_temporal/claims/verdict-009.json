@@ -1,0 +1,79 @@
+[
+ {
+  "id": "multihop-rag-2351",
+  "sentences": [
+   ["Cue said there was no valid alternative to Google at the time."],
+   ["Users get other benefits from Android.", "Google could solve this problem today if it wanted to."],
+   ["The case was filed by Arkansas-based publisher Helena World Chronicle.", "The case argues that Google siphons off news publishers' content through anticompetitive means.", "The case argues that Google siphons off news publishers' readers through anticompetitive means.", "The case argues that Google siphons off news publishers' ad revenue through anticompetitive means."]
+  ]
+ },
+ {
+  "id": "multihop-rag-2392",
+  "sentences": [
+   ["Huang testified during cross-examination.", "Huang said Paradigm pressed Bankman-Fried on the board issue.", "Huang said Bankman-Fried told Paradigm he did not want investors as directors.", "Huang said Bankman-Fried did plan on having a board with experts."],
+   ["Rehn declared to the jury that all of it was built on lies."],
+   ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.", "The defense argued that the FTX founder acted in good faith.", "The defense argued that the FTX founder never meant to commit fraud or steal.", "The defense argued that the FTX founder basically got in over his head."]
+  ]
+ },
+ {
+  "id": "multihop-rag-2415",
+  "sentences": [
+   ["Valve made big improvements with its new iteration.", "Valve has made a gaggle of minor physical upgrades with its new iteration."],
+   ["The writer looks at Valve and sees a store that could be both.", "Valve has decided to focus exclusively on games."],
+   ["The Steam Deck OLED will go on sale on November 16th at 1pm ET.", "Valve has Steam Deck OLED units ready to ship on November 16th."]
+  ]
+ },
+ {
+  "id": "multihop-rag-2432",
+  "sentences": [
+   ["Doe's story was adapted into the 1971 book The Exorcist by William Peter Blatty.", "The 1971 book The Exorcist was made into the 1973 movie.", "The 1973 movie starred Ellen Burstyn.", "The 1973 movie starred Linda Blair."],
+   ["Clive Barker's 1987 directorial debut adapts his 1986 novella The Hellbound Heart.", "Clive Barker's 1987 directorial debut tells the story of Larry, played by Andrew Robinson.", "Clive Barker's 1987 directorial debut tells the story of Julia Cotton, played by Clare Higgins."]
+  ]
+ },
+ {
+  "id": "multihop-rag-2441",
+  "sentences": [
+   ["Google touted Gemini's superior architecture in blog posts and press materials.", "Google touted Gemini's superior capabilities in blog posts and press materials.", "Google claimed Gemini meets or exceeds the performance of other leading gen AI models.", "OpenAI's GPT-4 is an example of a leading gen AI model Google compared Gemini against."],
+   ["She admits she may have misinterpreted the evidence.", "She maintains that Google manipulates Search to maximise ad revenue."],
+   ["The case was filed by Arkansas-based publisher Helena World Chronicle.", "The case argues that Google siphons off news publishers' content through anticompetitive means.", "The case argues that Google siphons off news publishers' readers through anticompetitive means.", "The case argues that Google siphons off news publishers' ad revenue through anticompetitive means."]
+  ]
+ },
+ {
+  "id": "multihop-rag-2490",
+  "sentences": [
+   ["Its usual hours of operation are from 6am to 9pm.", "Stores' opening and closing times on the holiday vary based on location."],
+   ["Thanksgiving is celebrated every year on the fourth Thursday of the month.", "Thanksgiving falls on 23 November this year."]
+  ]
+ },
+ {
+  "id": "multihop-rag-2491",
+  "sentences": [
+   ["Epic will also suggest that Google hid items from discovery by allowing execs and employees to have off the record chats.", "Google will counter this, saying it has provided the court with thousands of chat logs.", "Google will counter this, saying it has provided the court with millions of documents."],
+   ["Monday's trial hearing revealed plenty of juicy tidbits.", "Google spent $26.3 billion in 2021 making itself the default search engine across platforms.", "The hearing revealed how Google tried to take it further.", "The hearing revealed how Google tried to have Chrome preinstalled on iPhones."],
+   ["The case was filed by Arkansas-based publisher Helena World Chronicle.", "The case argues that Google siphons off news publishers' content through anticompetitive means.", "The case argues that Google siphons off news publishers' readers through anticompetitive means.", "The case argues that Google siphons off news publishers' ad revenue through anticompetitive means."]
+  ]
+ },
+ {
+  "id": "multihop-rag-2502",
+  "sentences": [
+   ["The trial's standout testimony in its second week came from Caroline Ellison.", "Caroline Ellison is Alameda Research's former CEO.", "Caroline Ellison claimed she took $14 billion from customers to repay debts to lenders.", "Caroline Ellison claimed she used customers as a line of credit under the instruction of SBF."],
+   ["Bankman-Fried was compared to Warren Buffet.", "Many people called Bankman-Fried the white horse of crypto.", "TechCrunch never called Bankman-Fried the white horse of crypto."],
+   ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.", "The defense argued that the FTX founder acted in good faith.", "The defense argued that the FTX founder never meant to commit fraud or steal.", "The defense argued that the FTX founder basically got in over his head."]
+  ]
+ },
+ {
+  "id": "multihop-rag-2529",
+  "sentences": [
+   ["The Justice Department is focused on the deals Google makes.", "Google makes deals with Apple.", "Google makes deals with Samsung.", "Google makes deals with Mozilla.", "Google makes deals with many others.", "The deals are meant to ensure Google is the default search engine on practically every platform."],
+   ["This will probably come up later in the trial.", "Epic chose to focus more on simply painting Google as the bad guy on day one."],
+   ["The case was filed by Arkansas-based publisher Helena World Chronicle.", "The case argues that Google siphons off news publishers' content through anticompetitive means.", "The case argues that Google siphons off news publishers' readers through anticompetitive means.", "The case argues that Google siphons off news publishers' ad revenue through anticompetitive means."]
+  ]
+ },
+ {
+  "id": "multihop-rag-2537",
+  "sentences": [
+   ["The Fed's main interest rate is at its highest level since 2001.", "The central bank indicated last week it may cut interest rates next year.", "The central bank indicated last week it may cut interest rates next year by less than it earlier expected."],
+   ["Stocks surged through the week.", "Stocks surged on rising hopes that the Federal Reserve is finally done with its market-crunching hikes to interest rates.", "The Federal Reserve's interest rate hikes were meant to get inflation under control."]
+  ]
+ }
+]

@@ -1,0 +1,782 @@
+19:18:46 mem_used 2303 swap_used 667  1567MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+19:19:46 mem_used 4933 swap_used 663  2630MB runs/final500/scripts/build.py natural_questions graphrag 
+19:20:46 mem_used 5463 swap_used 663  3175MB runs/final500/scripts/build.py natural_questions graphrag 
+19:21:46 mem_used 7196 swap_used 688  4918MB runs/final500/scripts/build.py natural_questions graphrag 
+19:22:46 mem_used 7906 swap_used 2867  6414MB runs/final500/scripts/build.py natural_questions graphrag 
+19:23:46 mem_used 7789 swap_used 4216  5297MB runs/final500/scripts/build.py natural_questions graphrag 
+19:24:46 mem_used 7866 swap_used 4870  5208MB runs/final500/scripts/build.py natural_questions graphrag 
+19:25:46 mem_used 7880 swap_used 5082  5197MB runs/final500/scripts/build.py natural_questions graphrag 
+19:26:46 mem_used 7849 swap_used 3809  5314MB runs/final500/scripts/build.py natural_questions graphrag 
+19:27:46 mem_used 7945 swap_used 4403  5439MB runs/final500/scripts/build.py natural_questions graphrag 
+19:28:46 mem_used 7757 swap_used 4475  5950MB runs/final500/scripts/build.py natural_questions graphrag 
+19:29:46 mem_used 7932 swap_used 3956  6677MB runs/final500/scripts/build.py natural_questions graphrag 
+19:30:46 mem_used 7943 swap_used 4511  6614MB runs/final500/scripts/build.py natural_questions graphrag 
+19:31:46 mem_used 7816 swap_used 3811  5197MB runs/final500/scripts/build.py natural_questions graphrag 
+19:32:46 mem_used 3079 swap_used 1363  1979MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+19:33:46 mem_used 4917 swap_used 2202  2987MB runs/final500/scripts/build.py natural_questions raptor 
+19:34:46 mem_used 5143 swap_used 2191  2987MB runs/final500/scripts/build.py natural_questions raptor 
+19:35:46 mem_used 5188 swap_used 2190  2988MB runs/final500/scripts/build.py natural_questions raptor 
+19:36:46 mem_used 5161 swap_used 2188  2973MB runs/final500/scripts/build.py natural_questions raptor 
+19:37:46 mem_used 5163 swap_used 2185  2973MB runs/final500/scripts/build.py natural_questions raptor 
+19:38:46 mem_used 5184 swap_used 2183  2973MB runs/final500/scripts/build.py natural_questions raptor 
+19:39:46 mem_used 5175 swap_used 2183  2974MB runs/final500/scripts/build.py natural_questions raptor 
+19:40:46 mem_used 5167 swap_used 2182  2974MB runs/final500/scripts/build.py natural_questions raptor 
+19:41:46 mem_used 5175 swap_used 2182  2974MB runs/final500/scripts/build.py natural_questions raptor 
+19:42:46 mem_used 5178 swap_used 2181  2974MB runs/final500/scripts/build.py natural_questions raptor 
+19:43:46 mem_used 5183 swap_used 2181  2975MB runs/final500/scripts/build.py natural_questions raptor 
+19:44:46 mem_used 5175 swap_used 2181  2975MB runs/final500/scripts/build.py natural_questions raptor 
+19:45:46 mem_used 5170 swap_used 2180  2975MB runs/final500/scripts/build.py natural_questions raptor 
+19:46:46 mem_used 5177 swap_used 2180  2976MB runs/final500/scripts/build.py natural_questions raptor 
+19:47:46 mem_used 5186 swap_used 2180  2976MB runs/final500/scripts/build.py natural_questions raptor 
+19:48:46 mem_used 5184 swap_used 2179  2977MB runs/final500/scripts/build.py natural_questions raptor 
+19:49:46 mem_used 5219 swap_used 2178  2977MB runs/final500/scripts/build.py natural_questions raptor 
+19:50:46 mem_used 5218 swap_used 2178  2977MB runs/final500/scripts/build.py natural_questions raptor 
+19:51:46 mem_used 5171 swap_used 2177  2967MB runs/final500/scripts/build.py natural_questions raptor 
+19:52:46 mem_used 5180 swap_used 2176  2967MB runs/final500/scripts/build.py natural_questions raptor 
+19:53:46 mem_used 5176 swap_used 2176  2967MB runs/final500/scripts/build.py natural_questions raptor 
+19:54:46 mem_used 5185 swap_used 2176  2967MB runs/final500/scripts/build.py natural_questions raptor 
+19:55:46 mem_used 5175 swap_used 2169  2968MB runs/final500/scripts/build.py natural_questions raptor 
+19:56:46 mem_used 5194 swap_used 2163  2968MB runs/final500/scripts/build.py natural_questions raptor 
+19:57:46 mem_used 5199 swap_used 2158  2968MB runs/final500/scripts/build.py natural_questions raptor 
+19:58:46 mem_used 5210 swap_used 2152  2968MB runs/final500/scripts/build.py natural_questions raptor 
+19:59:46 mem_used 5228 swap_used 2146  2969MB runs/final500/scripts/build.py natural_questions raptor 
+20:00:46 mem_used 5253 swap_used 2131  2969MB runs/final500/scripts/build.py natural_questions raptor 
+20:01:46 mem_used 5288 swap_used 2130  2969MB runs/final500/scripts/build.py natural_questions raptor 
+20:02:46 mem_used 5280 swap_used 2129  2969MB runs/final500/scripts/build.py natural_questions raptor 
+20:03:46 mem_used 5290 swap_used 2128  2970MB runs/final500/scripts/build.py natural_questions raptor 
+20:04:46 mem_used 5316 swap_used 2126  2970MB runs/final500/scripts/build.py natural_questions raptor 
+20:05:46 mem_used 5288 swap_used 2125  2970MB runs/final500/scripts/build.py natural_questions raptor 
+20:06:46 mem_used 5307 swap_used 2119  2971MB runs/final500/scripts/build.py natural_questions raptor 
+20:07:46 mem_used 5304 swap_used 2114  2971MB runs/final500/scripts/build.py natural_questions raptor 
+20:08:46 mem_used 5314 swap_used 2109  2971MB runs/final500/scripts/build.py natural_questions raptor 
+20:09:46 mem_used 5326 swap_used 2105  2971MB runs/final500/scripts/build.py natural_questions raptor 
+20:10:46 mem_used 5331 swap_used 2102  2972MB runs/final500/scripts/build.py natural_questions raptor 
+20:11:46 mem_used 5328 swap_used 2100  2972MB runs/final500/scripts/build.py natural_questions raptor 
+20:12:46 mem_used 5322 swap_used 2099  2972MB runs/final500/scripts/build.py natural_questions raptor 
+20:13:46 mem_used 5318 swap_used 2099  2972MB runs/final500/scripts/build.py natural_questions raptor 
+20:14:46 mem_used 5322 swap_used 2099  2973MB runs/final500/scripts/build.py natural_questions raptor 
+20:15:46 mem_used 5325 swap_used 2099  2973MB runs/final500/scripts/build.py natural_questions raptor 
+20:16:47 mem_used 4658 swap_used 2709  2683MB runs/final500/scripts/build.py natural_questions raptor 
+20:17:47 mem_used 4858 swap_used 2702  2908MB runs/final500/scripts/build.py natural_questions raptor 
+20:18:47 mem_used 6038 swap_used 4074  4457MB runs/final500/scripts/build.py natural_questions raptor 
+20:19:47 mem_used 4857 swap_used 2576  3264MB runs/final500/scripts/build.py natural_questions raptor 
+20:20:47 mem_used 7169 swap_used 5308  5734MB runs/final500/scripts/build.py natural_questions raptor 
+20:21:47 mem_used 4463 swap_used 3026  3232MB runs/final500/scripts/build.py natural_questions raptor 
+20:22:47 mem_used 7859 swap_used 3671  7038MB runs/final500/scripts/build.py natural_questions raptor 
+20:23:48 mem_used 4300 swap_used 3229  3297MB runs/final500/scripts/build.py natural_questions raptor 
+20:24:48 mem_used 4302 swap_used 3220  3297MB runs/final500/scripts/build.py natural_questions raptor 
+20:25:48 mem_used 4138 swap_used 3386  3319MB runs/final500/scripts/build.py natural_questions raptor 
+20:26:48 mem_used 4151 swap_used 3377  3319MB runs/final500/scripts/build.py natural_questions raptor 
+20:27:48 mem_used 5007 swap_used 4646  4287MB runs/final500/scripts/build.py natural_questions raptor 
+20:28:48 mem_used 4156 swap_used 3573  3381MB runs/final500/scripts/build.py natural_questions raptor 
+20:29:48 mem_used 4550 swap_used 4780  3847MB runs/final500/scripts/build.py natural_questions raptor 
+20:30:48 mem_used 4140 swap_used 3688  3392MB runs/final500/scripts/build.py natural_questions raptor 
+20:31:48 mem_used 5117 swap_used 4749  4387MB runs/final500/scripts/build.py natural_questions raptor 
+20:32:48 mem_used 4156 swap_used 3684  3390MB runs/final500/scripts/build.py natural_questions raptor 
+20:33:48 mem_used 3969 swap_used 4579  3213MB runs/final500/scripts/build.py natural_questions raptor 
+20:34:48 mem_used 4165 swap_used 3487  3377MB runs/final500/scripts/build.py natural_questions raptor 
+20:35:48 mem_used 4208 swap_used 3477  3377MB runs/final500/scripts/build.py natural_questions raptor 
+20:36:48 mem_used 4201 swap_used 3467  3378MB runs/final500/scripts/build.py natural_questions raptor 
+20:37:48 mem_used 4220 swap_used 3457  3378MB runs/final500/scripts/build.py natural_questions raptor 
+20:38:48 mem_used 4217 swap_used 3449  3378MB runs/final500/scripts/build.py natural_questions raptor 
+20:39:48 mem_used 4235 swap_used 3436  3379MB runs/final500/scripts/build.py natural_questions raptor 
+20:40:48 mem_used 4261 swap_used 3428  3379MB runs/final500/scripts/build.py natural_questions raptor 
+20:41:48 mem_used 4292 swap_used 3420  3378MB runs/final500/scripts/build.py natural_questions raptor 
+20:42:48 mem_used 4139 swap_used 4309  3256MB runs/final500/scripts/build.py natural_questions raptor 
+20:43:48 mem_used 4228 swap_used 3330  3410MB runs/final500/scripts/build.py natural_questions raptor 
+20:44:48 mem_used 4534 swap_used 4300  3793MB runs/final500/scripts/build.py natural_questions raptor 
+20:45:48 mem_used 4168 swap_used 3251  3387MB runs/final500/scripts/build.py natural_questions raptor 
+20:46:48 mem_used 4314 swap_used 4326  3575MB runs/final500/scripts/build.py natural_questions raptor 
+20:47:48 mem_used 4174 swap_used 3264  3414MB runs/final500/scripts/build.py natural_questions raptor 
+20:48:48 mem_used 4021 swap_used 4328  3300MB runs/final500/scripts/build.py natural_questions raptor 
+20:49:48 mem_used 4161 swap_used 3240  3387MB runs/final500/scripts/build.py natural_questions raptor 
+20:50:48 mem_used 6142 swap_used 4559  5283MB runs/final500/scripts/build.py natural_questions raptor 
+20:51:48 mem_used 4146 swap_used 3281  3430MB runs/final500/scripts/build.py natural_questions raptor 
+20:52:48 mem_used 3861 swap_used 4492  3165MB runs/final500/scripts/build.py natural_questions raptor 
+20:53:48 mem_used 4118 swap_used 3413  3380MB runs/final500/scripts/build.py natural_questions raptor 
+20:54:48 mem_used 3908 swap_used 4409  3225MB runs/final500/scripts/build.py natural_questions raptor 
+20:55:48 mem_used 4097 swap_used 3365  3390MB runs/final500/scripts/build.py natural_questions raptor 
+20:56:48 mem_used 6692 swap_used 4427  6043MB runs/final500/scripts/build.py natural_questions raptor 
+20:57:48 mem_used 4065 swap_used 3302  3381MB runs/final500/scripts/build.py natural_questions raptor 
+20:58:48 mem_used 5997 swap_used 4642  5251MB runs/final500/scripts/build.py natural_questions raptor 
+20:59:48 mem_used 4126 swap_used 3323  3401MB runs/final500/scripts/build.py natural_questions raptor 
+21:00:48 mem_used 4144 swap_used 3313  3401MB runs/final500/scripts/build.py natural_questions raptor 
+21:01:48 mem_used 4152 swap_used 3305  3402MB runs/final500/scripts/build.py natural_questions raptor 
+21:02:48 mem_used 4177 swap_used 3296  3402MB runs/final500/scripts/build.py natural_questions raptor 
+21:03:48 mem_used 4171 swap_used 3288  3402MB runs/final500/scripts/build.py natural_questions raptor 
+21:04:48 mem_used 4257 swap_used 3275  3402MB runs/final500/scripts/build.py natural_questions raptor 
+21:05:48 mem_used 4253 swap_used 3267  3402MB runs/final500/scripts/build.py natural_questions raptor 
+21:06:48 mem_used 4267 swap_used 3259  3403MB runs/final500/scripts/build.py natural_questions raptor 
+21:07:48 mem_used 4271 swap_used 3251  3403MB runs/final500/scripts/build.py natural_questions raptor 
+21:08:48 mem_used 4281 swap_used 3243  3403MB runs/final500/scripts/build.py natural_questions raptor 
+21:09:49 mem_used 4303 swap_used 3234  3404MB runs/final500/scripts/build.py natural_questions raptor 
+21:10:49 mem_used 4308 swap_used 3226  3404MB runs/final500/scripts/build.py natural_questions raptor 
+21:11:49 mem_used 4309 swap_used 3218  3404MB runs/final500/scripts/build.py natural_questions raptor 
+21:12:49 mem_used 4324 swap_used 3209  3404MB runs/final500/scripts/build.py natural_questions raptor 
+21:13:49 mem_used 4329 swap_used 3202  3404MB runs/final500/scripts/build.py natural_questions raptor 
+21:14:49 mem_used 4374 swap_used 3177  3404MB runs/final500/scripts/build.py natural_questions raptor 
+21:15:49 mem_used 4442 swap_used 3170  3404MB runs/final500/scripts/build.py natural_questions raptor 
+21:16:49 mem_used 4440 swap_used 3161  3404MB runs/final500/scripts/build.py natural_questions raptor 
+21:17:49 mem_used 4473 swap_used 3154  3405MB runs/final500/scripts/build.py natural_questions raptor 
+21:18:49 mem_used 1170 swap_used 2506  444MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+21:19:49 mem_used 4305 swap_used 2499  3191MB runs/final500/scripts/build.py natural_questions raptor 
+21:20:49 mem_used 4334 swap_used 2499  3192MB runs/final500/scripts/build.py natural_questions raptor 
+21:21:49 mem_used 4339 swap_used 2499  3158MB runs/final500/scripts/build.py natural_questions raptor 
+21:22:49 mem_used 4318 swap_used 2498  3158MB runs/final500/scripts/build.py natural_questions raptor 
+21:23:49 mem_used 4327 swap_used 2490  3158MB runs/final500/scripts/build.py natural_questions raptor 
+21:24:49 mem_used 4346 swap_used 2483  3159MB runs/final500/scripts/build.py natural_questions raptor 
+21:25:49 mem_used 4337 swap_used 2483  3159MB runs/final500/scripts/build.py natural_questions raptor 
+21:26:49 mem_used 4325 swap_used 2483  3159MB runs/final500/scripts/build.py natural_questions raptor 
+21:27:49 mem_used 4347 swap_used 2483  3159MB runs/final500/scripts/build.py natural_questions raptor 
+21:28:49 mem_used 4344 swap_used 2482  3159MB runs/final500/scripts/build.py natural_questions raptor 
+21:29:49 mem_used 4360 swap_used 2480  3159MB runs/final500/scripts/build.py natural_questions raptor 
+21:30:49 mem_used 4366 swap_used 2479  3159MB runs/final500/scripts/build.py natural_questions raptor 
+21:31:49 mem_used 4362 swap_used 2479  3159MB runs/final500/scripts/build.py natural_questions raptor 
+21:32:49 mem_used 4348 swap_used 2479  3160MB runs/final500/scripts/build.py natural_questions raptor 
+21:33:49 mem_used 4357 swap_used 2479  3160MB runs/final500/scripts/build.py natural_questions raptor 
+21:34:49 mem_used 4358 swap_used 2479  3160MB runs/final500/scripts/build.py natural_questions raptor 
+21:35:49 mem_used 4388 swap_used 2461  3160MB runs/final500/scripts/build.py natural_questions raptor 
+21:36:49 mem_used 4388 swap_used 2461  3160MB runs/final500/scripts/build.py natural_questions raptor 
+21:37:49 mem_used 4373 swap_used 2461  3161MB runs/final500/scripts/build.py natural_questions raptor 
+21:38:49 mem_used 4366 swap_used 2461  3161MB runs/final500/scripts/build.py natural_questions raptor 
+21:39:49 mem_used 4374 swap_used 2461  3161MB runs/final500/scripts/build.py natural_questions raptor 
+21:40:49 mem_used 4379 swap_used 2461  3161MB runs/final500/scripts/build.py natural_questions raptor 
+21:41:49 mem_used 4376 swap_used 2461  3161MB runs/final500/scripts/build.py natural_questions raptor 
+21:42:49 mem_used 4378 swap_used 2461  3162MB runs/final500/scripts/build.py natural_questions raptor 
+21:43:49 mem_used 4392 swap_used 2461  3162MB runs/final500/scripts/build.py natural_questions raptor 
+21:44:49 mem_used 4394 swap_used 2461  3162MB runs/final500/scripts/build.py natural_questions raptor 
+21:45:49 mem_used 4377 swap_used 2461  3162MB runs/final500/scripts/build.py natural_questions raptor 
+21:46:49 mem_used 4387 swap_used 2460  3162MB runs/final500/scripts/build.py natural_questions raptor 
+21:47:49 mem_used 4377 swap_used 2460  3162MB runs/final500/scripts/build.py natural_questions raptor 
+21:48:49 mem_used 4393 swap_used 2460  3163MB runs/final500/scripts/build.py natural_questions raptor 
+21:49:49 mem_used 4396 swap_used 2460  3163MB runs/final500/scripts/build.py natural_questions raptor 
+21:50:49 mem_used 4557 swap_used 2457  3163MB runs/final500/scripts/build.py natural_questions raptor 
+21:51:49 mem_used 4555 swap_used 2457  3163MB runs/final500/scripts/build.py natural_questions raptor 
+21:52:49 mem_used 4571 swap_used 2457  3163MB runs/final500/scripts/build.py natural_questions raptor 
+21:53:49 mem_used 4558 swap_used 2457  3163MB runs/final500/scripts/build.py natural_questions raptor 
+21:54:49 mem_used 4552 swap_used 2456  3164MB runs/final500/scripts/build.py natural_questions raptor 
+21:55:49 mem_used 4566 swap_used 2456  3164MB runs/final500/scripts/build.py natural_questions raptor 
+21:56:49 mem_used 4559 swap_used 2456  3164MB runs/final500/scripts/build.py natural_questions raptor 
+21:57:49 mem_used 4547 swap_used 2456  3164MB runs/final500/scripts/build.py natural_questions raptor 
+21:58:49 mem_used 4568 swap_used 2456  3164MB runs/final500/scripts/build.py natural_questions raptor 
+21:59:49 mem_used 4564 swap_used 2456  3164MB runs/final500/scripts/build.py natural_questions raptor 
+22:00:49 mem_used 4554 swap_used 2456  3165MB runs/final500/scripts/build.py natural_questions raptor 
+22:01:49 mem_used 4576 swap_used 2456  3165MB runs/final500/scripts/build.py natural_questions raptor 
+22:02:49 mem_used 4562 swap_used 2455  3165MB runs/final500/scripts/build.py natural_questions raptor 
+22:03:49 mem_used 4568 swap_used 2453  3165MB runs/final500/scripts/build.py natural_questions raptor 
+22:04:49 mem_used 4573 swap_used 2453  3165MB runs/final500/scripts/build.py natural_questions raptor 
+22:05:49 mem_used 4576 swap_used 2453  3165MB runs/final500/scripts/build.py natural_questions raptor 
+22:06:49 mem_used 4565 swap_used 2453  3165MB runs/final500/scripts/build.py natural_questions raptor 
+22:07:49 mem_used 4564 swap_used 2453  3166MB runs/final500/scripts/build.py natural_questions raptor 
+22:08:49 mem_used 4567 swap_used 2453  3166MB runs/final500/scripts/build.py natural_questions raptor 
+22:09:49 mem_used 4572 swap_used 2453  3166MB runs/final500/scripts/build.py natural_questions raptor 
+22:10:49 mem_used 4565 swap_used 2453  3166MB runs/final500/scripts/build.py natural_questions raptor 
+22:11:49 mem_used 4569 swap_used 2453  3166MB runs/final500/scripts/build.py natural_questions raptor 
+22:12:49 mem_used 4583 swap_used 2453  3166MB runs/final500/scripts/build.py natural_questions raptor 
+22:13:49 mem_used 4575 swap_used 2453  3166MB runs/final500/scripts/build.py natural_questions raptor 
+22:14:49 mem_used 4572 swap_used 2453  3167MB runs/final500/scripts/build.py natural_questions raptor 
+22:15:49 mem_used 4583 swap_used 2453  3167MB runs/final500/scripts/build.py natural_questions raptor 
+22:16:49 mem_used 4565 swap_used 2447  3167MB runs/final500/scripts/build.py natural_questions raptor 
+22:17:49 mem_used 4581 swap_used 2440  3167MB runs/final500/scripts/build.py natural_questions raptor 
+22:18:49 mem_used 4598 swap_used 2432  3167MB runs/final500/scripts/build.py natural_questions raptor 
+22:19:50 mem_used 4623 swap_used 2424  3167MB runs/final500/scripts/build.py natural_questions raptor 
+22:20:50 mem_used 4604 swap_used 2416  3167MB runs/final500/scripts/build.py natural_questions raptor 
+22:21:50 mem_used 4615 swap_used 2411  3167MB runs/final500/scripts/build.py natural_questions raptor 
+22:22:50 mem_used 4616 swap_used 2411  3168MB runs/final500/scripts/build.py natural_questions raptor 
+22:23:50 mem_used 4619 swap_used 2411  3168MB runs/final500/scripts/build.py natural_questions raptor 
+22:24:50 mem_used 4614 swap_used 2411  3168MB runs/final500/scripts/build.py natural_questions raptor 
+22:25:50 mem_used 4613 swap_used 2411  3168MB runs/final500/scripts/build.py natural_questions raptor 
+22:26:50 mem_used 4625 swap_used 2411  3168MB runs/final500/scripts/build.py natural_questions raptor 
+22:27:50 mem_used 4625 swap_used 2411  3168MB runs/final500/scripts/build.py natural_questions raptor 
+22:28:50 mem_used 4619 swap_used 2411  3168MB runs/final500/scripts/build.py natural_questions raptor 
+22:29:50 mem_used 4616 swap_used 2411  3168MB runs/final500/scripts/build.py natural_questions raptor 
+22:30:50 mem_used 4618 swap_used 2411  3168MB runs/final500/scripts/build.py natural_questions raptor 
+22:31:50 mem_used 4620 swap_used 2411  3168MB runs/final500/scripts/build.py natural_questions raptor 
+22:32:50 mem_used 4628 swap_used 2411  3169MB runs/final500/scripts/build.py natural_questions raptor 
+22:33:50 mem_used 4614 swap_used 2408  3169MB runs/final500/scripts/build.py natural_questions raptor 
+22:34:50 mem_used 4653 swap_used 2400  3169MB runs/final500/scripts/build.py natural_questions raptor 
+22:35:50 mem_used 4647 swap_used 2393  3169MB runs/final500/scripts/build.py natural_questions raptor 
+22:36:50 mem_used 4638 swap_used 2385  3169MB runs/final500/scripts/build.py natural_questions raptor 
+22:37:50 mem_used 4654 swap_used 2377  3169MB runs/final500/scripts/build.py natural_questions raptor 
+22:38:50 mem_used 4669 swap_used 2369  3169MB runs/final500/scripts/build.py natural_questions raptor 
+22:39:50 mem_used 4675 swap_used 2361  3169MB runs/final500/scripts/build.py natural_questions raptor 
+22:40:50 mem_used 4681 swap_used 2354  3169MB runs/final500/scripts/build.py natural_questions raptor 
+22:41:50 mem_used 4653 swap_used 2346  3101MB runs/final500/scripts/build.py natural_questions raptor 
+22:42:50 mem_used 4684 swap_used 2339  3102MB runs/final500/scripts/build.py natural_questions raptor 
+22:43:50 mem_used 4698 swap_used 2331  3102MB runs/final500/scripts/build.py natural_questions raptor 
+22:44:50 mem_used 4718 swap_used 2323  3102MB runs/final500/scripts/build.py natural_questions raptor 
+22:45:50 mem_used 4720 swap_used 2316  3103MB runs/final500/scripts/build.py natural_questions raptor 
+22:46:50 mem_used 4731 swap_used 2308  3103MB runs/final500/scripts/build.py natural_questions raptor 
+22:47:50 mem_used 4732 swap_used 2300  3103MB runs/final500/scripts/build.py natural_questions raptor 
+22:48:50 mem_used 4731 swap_used 2292  3103MB runs/final500/scripts/build.py natural_questions raptor 
+22:49:50 mem_used 4767 swap_used 2284  3103MB runs/final500/scripts/build.py natural_questions raptor 
+22:50:50 mem_used 4760 swap_used 2276  3103MB runs/final500/scripts/build.py natural_questions raptor 
+22:51:50 mem_used 4741 swap_used 2269  3093MB runs/final500/scripts/build.py natural_questions raptor 
+22:52:50 mem_used 4746 swap_used 2261  3093MB runs/final500/scripts/build.py natural_questions raptor 
+22:53:50 mem_used 4762 swap_used 2253  3094MB runs/final500/scripts/build.py natural_questions raptor 
+22:54:50 mem_used 4768 swap_used 2245  3094MB runs/final500/scripts/build.py natural_questions raptor 
+22:55:50 mem_used 4785 swap_used 2237  3094MB runs/final500/scripts/build.py natural_questions raptor 
+22:56:50 mem_used 4790 swap_used 2230  3094MB runs/final500/scripts/build.py natural_questions raptor 
+22:57:50 mem_used 4782 swap_used 2222  3094MB runs/final500/scripts/build.py natural_questions raptor 
+22:58:50 mem_used 4797 swap_used 2214  3094MB runs/final500/scripts/build.py natural_questions raptor 
+22:59:50 mem_used 4812 swap_used 2206  3094MB runs/final500/scripts/build.py natural_questions raptor 
+23:00:50 mem_used 4819 swap_used 2198  3095MB runs/final500/scripts/build.py natural_questions raptor 
+23:01:50 mem_used 4821 swap_used 2191  3095MB runs/final500/scripts/build.py natural_questions raptor 
+23:02:50 mem_used 4826 swap_used 2183  3095MB runs/final500/scripts/build.py natural_questions raptor 
+23:03:50 mem_used 4842 swap_used 2175  3095MB runs/final500/scripts/build.py natural_questions raptor 
+23:04:50 mem_used 4864 swap_used 2167  3095MB runs/final500/scripts/build.py natural_questions raptor 
+23:05:50 mem_used 4841 swap_used 2160  3095MB runs/final500/scripts/build.py natural_questions raptor 
+23:06:50 mem_used 4867 swap_used 2152  3095MB runs/final500/scripts/build.py natural_questions raptor 
+23:07:50 mem_used 4877 swap_used 2144  3096MB runs/final500/scripts/build.py natural_questions raptor 
+23:08:50 mem_used 4881 swap_used 2136  3096MB runs/final500/scripts/build.py natural_questions raptor 
+23:09:50 mem_used 4889 swap_used 2135  3096MB runs/final500/scripts/build.py natural_questions raptor 
+23:10:50 mem_used 4886 swap_used 2135  3096MB runs/final500/scripts/build.py natural_questions raptor 
+23:11:50 mem_used 4878 swap_used 2135  3097MB runs/final500/scripts/build.py natural_questions raptor 
+23:12:50 mem_used 4888 swap_used 2135  3097MB runs/final500/scripts/build.py natural_questions raptor 
+23:13:50 mem_used 4882 swap_used 2135  3097MB runs/final500/scripts/build.py natural_questions raptor 
+23:14:50 mem_used 4892 swap_used 2135  3097MB runs/final500/scripts/build.py natural_questions raptor 
+23:15:50 mem_used 4887 swap_used 2135  3097MB runs/final500/scripts/build.py natural_questions raptor 
+23:16:50 mem_used 4891 swap_used 2135  3097MB runs/final500/scripts/build.py natural_questions raptor 
+23:17:50 mem_used 4891 swap_used 2135  3097MB runs/final500/scripts/build.py natural_questions raptor 
+23:18:50 mem_used 4900 swap_used 2135  3097MB runs/final500/scripts/build.py natural_questions raptor 
+23:19:50 mem_used 4908 swap_used 2135  3097MB runs/final500/scripts/build.py natural_questions raptor 
+23:20:50 mem_used 4887 swap_used 2135  3097MB runs/final500/scripts/build.py natural_questions raptor 
+23:21:50 mem_used 7861 swap_used 2338  6235MB runs/final500/scripts/build.py natural_questions raptor 
+23:22:51 mem_used 4473 swap_used 2633  2667MB runs/final500/scripts/build.py natural_questions raptor 
+23:23:51 mem_used 4454 swap_used 2711  2615MB runs/final500/scripts/build.py natural_questions raptor 
+23:24:51 mem_used 4725 swap_used 2707  2914MB runs/final500/scripts/build.py natural_questions raptor 
+23:25:51 mem_used 4161 swap_used 3049  2360MB runs/final500/scripts/build.py natural_questions raptor 
+23:26:51 mem_used 4217 swap_used 3069  2358MB runs/final500/scripts/build.py natural_questions raptor 
+23:27:51 mem_used 4198 swap_used 3066  2378MB runs/final500/scripts/build.py natural_questions raptor 
+23:28:51 mem_used 4227 swap_used 3071  2388MB runs/final500/scripts/build.py natural_questions raptor 
+23:29:51 mem_used 4617 swap_used 3067  2786MB runs/final500/scripts/build.py natural_questions raptor 
+23:30:51 mem_used 4206 swap_used 3107  2386MB runs/final500/scripts/build.py natural_questions raptor 
+23:31:51 mem_used 4207 swap_used 3105  2399MB runs/final500/scripts/build.py natural_questions raptor 
+23:32:51 mem_used 4230 swap_used 3097  2410MB runs/final500/scripts/build.py natural_questions raptor 
+23:33:51 mem_used 6562 swap_used 3080  5497MB runs/final500/scripts/build.py natural_questions raptor 
+23:34:51 mem_used 4354 swap_used 2959  3269MB runs/final500/scripts/build.py natural_questions raptor 
+23:35:51 mem_used 4347 swap_used 2952  3269MB runs/final500/scripts/build.py natural_questions raptor 
+23:36:51 mem_used 4352 swap_used 2946  3269MB runs/final500/scripts/build.py natural_questions raptor 
+23:37:51 mem_used 4375 swap_used 2940  3269MB runs/final500/scripts/build.py natural_questions raptor 
+23:38:51 mem_used 4351 swap_used 2933  3270MB runs/final500/scripts/build.py natural_questions raptor 
+23:39:51 mem_used 4360 swap_used 2930  3270MB runs/final500/scripts/build.py natural_questions raptor 
+23:40:51 mem_used 4381 swap_used 2929  3270MB runs/final500/scripts/build.py natural_questions raptor 
+23:41:51 mem_used 4389 swap_used 2929  3270MB runs/final500/scripts/build.py natural_questions raptor 
+23:42:51 mem_used 4375 swap_used 2929  3270MB runs/final500/scripts/build.py natural_questions raptor 
+23:43:51 mem_used 4374 swap_used 2929  3270MB runs/final500/scripts/build.py natural_questions raptor 
+23:44:51 mem_used 4375 swap_used 2927  3270MB runs/final500/scripts/build.py natural_questions raptor 
+23:45:51 mem_used 4379 swap_used 2920  3271MB runs/final500/scripts/build.py natural_questions raptor 
+23:46:51 mem_used 4393 swap_used 2914  3271MB runs/final500/scripts/build.py natural_questions raptor 
+23:47:51 mem_used 4377 swap_used 2908  3271MB runs/final500/scripts/build.py natural_questions raptor 
+23:48:51 mem_used 4407 swap_used 2901  3271MB runs/final500/scripts/build.py natural_questions raptor 
+23:49:51 mem_used 4447 swap_used 2884  3271MB runs/final500/scripts/build.py natural_questions raptor 
+23:50:51 mem_used 4430 swap_used 2877  3271MB runs/final500/scripts/build.py natural_questions raptor 
+23:51:51 mem_used 4441 swap_used 2870  3271MB runs/final500/scripts/build.py natural_questions raptor 
+23:52:51 mem_used 4462 swap_used 2864  3271MB runs/final500/scripts/build.py natural_questions raptor 
+23:53:51 mem_used 4460 swap_used 2858  3271MB runs/final500/scripts/build.py natural_questions raptor 
+23:54:51 mem_used 4467 swap_used 2851  3271MB runs/final500/scripts/build.py natural_questions raptor 
+23:55:51 mem_used 4465 swap_used 2845  3271MB runs/final500/scripts/build.py natural_questions raptor 
+23:56:51 mem_used 4469 swap_used 2839  3272MB runs/final500/scripts/build.py natural_questions raptor 
+23:57:51 mem_used 4476 swap_used 2832  3272MB runs/final500/scripts/build.py natural_questions raptor 
+23:58:51 mem_used 4474 swap_used 2826  3272MB runs/final500/scripts/build.py natural_questions raptor 
+23:59:51 mem_used 4475 swap_used 2820  3272MB runs/final500/scripts/build.py natural_questions raptor 
+00:00:51 mem_used 4511 swap_used 2809  3272MB runs/final500/scripts/build.py natural_questions raptor 
+00:01:51 mem_used 4509 swap_used 2802  3272MB runs/final500/scripts/build.py natural_questions raptor 
+00:02:51 mem_used 4526 swap_used 2796  3272MB runs/final500/scripts/build.py natural_questions raptor 
+00:03:51 mem_used 4538 swap_used 2789  3272MB runs/final500/scripts/build.py natural_questions raptor 
+00:04:51 mem_used 4594 swap_used 2781  3272MB runs/final500/scripts/build.py natural_questions raptor 
+00:05:51 mem_used 4596 swap_used 2779  3272MB runs/final500/scripts/build.py natural_questions raptor 
+00:06:51 mem_used 4591 swap_used 2779  3273MB runs/final500/scripts/build.py natural_questions raptor 
+00:07:51 mem_used 4575 swap_used 2779  3273MB runs/final500/scripts/build.py natural_questions raptor 
+00:08:51 mem_used 4578 swap_used 2779  3273MB runs/final500/scripts/build.py natural_questions raptor 
+00:09:51 mem_used 4581 swap_used 2779  3273MB runs/final500/scripts/build.py natural_questions raptor 
+00:10:51 mem_used 4569 swap_used 2778  3273MB runs/final500/scripts/build.py natural_questions raptor 
+00:11:51 mem_used 4594 swap_used 2777  3273MB runs/final500/scripts/build.py natural_questions raptor 
+00:12:51 mem_used 4598 swap_used 2777  3273MB runs/final500/scripts/build.py natural_questions raptor 
+00:13:51 mem_used 4578 swap_used 2777  3273MB runs/final500/scripts/build.py natural_questions raptor 
+00:14:51 mem_used 4590 swap_used 2777  3273MB runs/final500/scripts/build.py natural_questions raptor 
+00:15:51 mem_used 4596 swap_used 2777  3273MB runs/final500/scripts/build.py natural_questions raptor 
+00:16:51 mem_used 4588 swap_used 2777  3273MB runs/final500/scripts/build.py natural_questions raptor 
+00:17:51 mem_used 4604 swap_used 2777  3273MB runs/final500/scripts/build.py natural_questions raptor 
+00:18:51 mem_used 4592 swap_used 2777  3273MB runs/final500/scripts/build.py natural_questions raptor 
+00:19:51 mem_used 4603 swap_used 2776  3273MB runs/final500/scripts/build.py natural_questions raptor 
+00:20:51 mem_used 4586 swap_used 2776  3274MB runs/final500/scripts/build.py natural_questions raptor 
+00:21:51 mem_used 4603 swap_used 2776  3274MB runs/final500/scripts/build.py natural_questions raptor 
+00:22:51 mem_used 4584 swap_used 2776  3274MB runs/final500/scripts/build.py natural_questions raptor 
+00:23:51 mem_used 4591 swap_used 2776  3274MB runs/final500/scripts/build.py natural_questions raptor 
+00:24:51 mem_used 4598 swap_used 2776  3274MB runs/final500/scripts/build.py natural_questions raptor 
+00:25:51 mem_used 4595 swap_used 2776  3274MB runs/final500/scripts/build.py natural_questions raptor 
+00:26:51 mem_used 4606 swap_used 2775  3274MB runs/final500/scripts/build.py natural_questions raptor 
+00:27:51 mem_used 4599 swap_used 2775  3274MB runs/final500/scripts/build.py natural_questions raptor 
+00:28:51 mem_used 4609 swap_used 2775  3274MB runs/final500/scripts/build.py natural_questions raptor 
+00:29:51 mem_used 4614 swap_used 2775  3274MB runs/final500/scripts/build.py natural_questions raptor 
+00:30:51 mem_used 4601 swap_used 2775  3274MB runs/final500/scripts/build.py natural_questions raptor 
+00:31:51 mem_used 4592 swap_used 2774  3275MB runs/final500/scripts/build.py natural_questions raptor 
+00:32:51 mem_used 4605 swap_used 2774  3275MB runs/final500/scripts/build.py natural_questions raptor 
+00:33:52 mem_used 4603 swap_used 2774  3275MB runs/final500/scripts/build.py natural_questions raptor 
+00:34:52 mem_used 4627 swap_used 2774  3275MB runs/final500/scripts/build.py natural_questions raptor 
+00:35:52 mem_used 4614 swap_used 2774  3275MB runs/final500/scripts/build.py natural_questions raptor 
+00:36:52 mem_used 4608 swap_used 2774  3276MB runs/final500/scripts/build.py natural_questions raptor 
+00:37:52 mem_used 4607 swap_used 2774  3276MB runs/final500/scripts/build.py natural_questions raptor 
+00:38:52 mem_used 4594 swap_used 2774  3276MB runs/final500/scripts/build.py natural_questions raptor 
+00:39:52 mem_used 4605 swap_used 2774  3276MB runs/final500/scripts/build.py natural_questions raptor 
+00:40:52 mem_used 4598 swap_used 2774  3276MB runs/final500/scripts/build.py natural_questions raptor 
+00:41:52 mem_used 4612 swap_used 2774  3277MB runs/final500/scripts/build.py natural_questions raptor 
+00:42:52 mem_used 4598 swap_used 2774  3277MB runs/final500/scripts/build.py natural_questions raptor 
+00:43:52 mem_used 4605 swap_used 2774  3277MB runs/final500/scripts/build.py natural_questions raptor 
+00:44:52 mem_used 4631 swap_used 2774  3289MB runs/final500/scripts/build.py natural_questions raptor 
+00:45:52 mem_used 4034 swap_used 3253  2852MB runs/final500/scripts/build.py natural_questions raptor 
+00:46:52 mem_used 4088 swap_used 3262  2853MB runs/final500/scripts/build.py natural_questions raptor 
+00:47:52 mem_used 3567 swap_used 3768  2371MB runs/final500/scripts/build.py natural_questions raptor 
+00:48:52 mem_used 3651 swap_used 3767  2386MB runs/final500/scripts/build.py natural_questions raptor 
+00:49:52 mem_used 3689 swap_used 3788  2376MB runs/final500/scripts/build.py natural_questions raptor 
+00:50:52 mem_used 3743 swap_used 3779  2393MB runs/final500/scripts/build.py natural_questions raptor 
+00:51:52 mem_used 3643 swap_used 3796  2382MB runs/final500/scripts/build.py natural_questions raptor 
+00:52:52 mem_used 3712 swap_used 3786  2398MB runs/final500/scripts/build.py natural_questions raptor 
+00:53:52 mem_used 3699 swap_used 3833  2355MB runs/final500/scripts/build.py natural_questions raptor 
+00:54:52 mem_used 3735 swap_used 3824  2371MB runs/final500/scripts/build.py natural_questions raptor 
+00:55:52 mem_used 3687 swap_used 3850  2372MB runs/final500/scripts/build.py natural_questions raptor 
+00:56:52 mem_used 3467 swap_used 3962  2300MB runs/final500/scripts/build.py natural_questions raptor 
+00:57:52 mem_used 3497 swap_used 3963  2311MB runs/final500/scripts/build.py natural_questions raptor 
+00:58:52 mem_used 3579 swap_used 4013  2377MB runs/final500/scripts/build.py natural_questions raptor 
+00:59:52 mem_used 4014 swap_used 3698  2876MB runs/final500/scripts/build.py natural_questions raptor 
+01:00:52 mem_used 4111 swap_used 3641  2932MB runs/final500/scripts/build.py natural_questions raptor 
+01:01:52 mem_used 3499 swap_used 4184  2440MB runs/final500/scripts/build.py natural_questions raptor 
+01:02:52 mem_used 3567 swap_used 4167  2445MB runs/final500/scripts/build.py natural_questions raptor 
+01:03:52 mem_used 3609 swap_used 4159  2446MB runs/final500/scripts/build.py natural_questions raptor 
+01:04:52 mem_used 3651 swap_used 4148  2446MB runs/final500/scripts/build.py natural_questions raptor 
+01:05:52 mem_used 3650 swap_used 4140  2447MB runs/final500/scripts/build.py natural_questions raptor 
+01:06:52 mem_used 3621 swap_used 4131  2433MB runs/final500/scripts/build.py natural_questions raptor 
+01:07:52 mem_used 3632 swap_used 4123  2433MB runs/final500/scripts/build.py natural_questions raptor 
+01:08:52 mem_used 3647 swap_used 4115  2439MB runs/final500/scripts/build.py natural_questions raptor 
+01:09:52 mem_used 4172 swap_used 4107  2979MB runs/final500/scripts/build.py natural_questions raptor 
+01:10:52 mem_used 3474 swap_used 4263  2301MB runs/final500/scripts/build.py natural_questions raptor 
+01:11:52 mem_used 3487 swap_used 4329  2392MB runs/final500/scripts/build.py natural_questions raptor 
+01:12:52 mem_used 3596 swap_used 4113  2443MB runs/final500/scripts/build.py natural_questions raptor 
+01:13:52 mem_used 4630 swap_used 2430  1775MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 1
+01:14:52 mem_used 4975 swap_used 2422  1956MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 1
+01:15:52 mem_used 5405 swap_used 2414  2273MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 1
+01:16:52 mem_used 5239 swap_used 2407  2050MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 1
+01:17:52 mem_used 5416 swap_used 2399  2272MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 1
+01:18:52 mem_used 5433 swap_used 2391  2257MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 1
+01:19:52 mem_used 5322 swap_used 2383  2159MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 1
+01:20:52 mem_used 5182 swap_used 2375  2024MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 1
+01:21:52 mem_used 5149 swap_used 2367  2019MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 1
+01:22:52 mem_used 5187 swap_used 2359  2019MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 1
+01:23:53 mem_used 5189 swap_used 2351  2019MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 1
+01:24:53 mem_used 5405 swap_used 2331  2019MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 1
+01:25:53 mem_used 5410 swap_used 2327  2019MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 1
+01:26:53 mem_used 5378 swap_used 2322  2020MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 1
+01:27:53 mem_used 4978 swap_used 2317  1767MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 2
+01:28:53 mem_used 5313 swap_used 2311  1954MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 2
+01:29:53 mem_used 5436 swap_used 2306  2043MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 2
+01:30:53 mem_used 5565 swap_used 2304  2159MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 2
+01:31:53 mem_used 5437 swap_used 2304  2020MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 2
+01:32:53 mem_used 5475 swap_used 2304  2020MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 2
+01:33:53 mem_used 5667 swap_used 2302  2259MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 2
+01:34:53 mem_used 5440 swap_used 2301  2023MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 2
+01:35:53 mem_used 5437 swap_used 2301  2024MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 2
+01:36:53 mem_used 5427 swap_used 2299  1995MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 2
+01:37:53 mem_used 5428 swap_used 2298  1996MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 2
+01:38:53 mem_used 5425 swap_used 2298  1996MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 2
+01:39:53 mem_used 5424 swap_used 2298  1996MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 2
+01:40:53 mem_used 3482 swap_used 2298  1997MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 2
+01:41:53 mem_used 5051 swap_used 2296  1746MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 3
+01:42:53 mem_used 5223 swap_used 2294  1937MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 3
+01:43:53 mem_used 5497 swap_used 2294  2061MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 3
+01:44:53 mem_used 5484 swap_used 2294  2050MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 3
+01:45:53 mem_used 5489 swap_used 2294  2076MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 3
+01:46:53 mem_used 5620 swap_used 2294  2248MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 3
+01:47:53 mem_used 5515 swap_used 2294  2093MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 3
+01:48:53 mem_used 5424 swap_used 2294  2024MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 3
+01:49:53 mem_used 5457 swap_used 2291  2025MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 3
+01:50:53 mem_used 5460 swap_used 2285  2025MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 3
+01:51:53 mem_used 5412 swap_used 2280  1996MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 3
+01:52:53 mem_used 5461 swap_used 2274  1996MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 3
+01:53:53 mem_used 5469 swap_used 2269  1996MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 3
+01:54:53 mem_used 5472 swap_used 2264  1996MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions rag 3
+01:55:53 mem_used 1622 swap_used 2259  750MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+01:56:53 mem_used 1571 swap_used 2253  754MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+01:57:53 mem_used 2445 swap_used 2248  760MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+01:58:53 mem_used 7723 swap_used 8492  3649MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+01:59:53 mem_used 4359 swap_used 3163  3731MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:00:53 mem_used 4477 swap_used 3138  3734MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:01:53 mem_used 4511 swap_used 3128  3734MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:02:53 mem_used 4519 swap_used 3119  3734MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:03:53 mem_used 4555 swap_used 3110  3735MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:04:53 mem_used 4636 swap_used 3097  3735MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:05:53 mem_used 4646 swap_used 3089  3743MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:06:53 mem_used 4664 swap_used 3081  3743MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:07:53 mem_used 4669 swap_used 3073  3744MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:08:53 mem_used 4674 swap_used 3065  3744MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:09:53 mem_used 4673 swap_used 3057  3744MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:10:53 mem_used 4686 swap_used 3049  3745MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:11:53 mem_used 4678 swap_used 3042  3745MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:12:53 mem_used 1003 swap_used 2606  166MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+02:13:53 mem_used 1006 swap_used 2592  174MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+02:14:53 mem_used 994 swap_used 2585  181MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+02:15:53 mem_used 1015 swap_used 2576  190MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+02:16:53 mem_used 992 swap_used 2568  202MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+02:17:53 mem_used 1016 swap_used 2560  210MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+02:18:53 mem_used 1002 swap_used 2553  218MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+02:19:53 mem_used 1057 swap_used 2545  226MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+02:20:53 mem_used 1066 swap_used 2537  233MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+02:21:54 mem_used 1057 swap_used 2529  241MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+02:22:54 mem_used 1072 swap_used 2521  250MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+02:23:54 mem_used 1080 swap_used 2513  258MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+02:24:54 mem_used 1080 swap_used 2506  266MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+02:25:54 mem_used 1085 swap_used 2498  273MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+02:26:54 mem_used 1102 swap_used 2490  281MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+02:27:54 mem_used 1109 swap_used 2482  289MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+02:28:54 mem_used 1120 swap_used 2475  297MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+02:29:54 mem_used 1115 swap_used 2467  305MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+02:30:54 mem_used 1122 swap_used 2459  313MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+02:31:54 mem_used 1117 swap_used 2451  319MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+02:32:54 mem_used 1130 swap_used 2443  329MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+02:33:54 mem_used 1137 swap_used 2435  337MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+02:34:54 mem_used 1140 swap_used 2427  345MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+02:35:54 mem_used 1154 swap_used 2418  355MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+02:41:02 mem_used 1163 swap_used 2410  364MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+02:42:02 mem_used 1167 swap_used 2401  373MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+02:43:02 mem_used 5925 swap_used 2393  4850MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:44:02 mem_used 4517 swap_used 3108  3804MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:45:03 mem_used 4612 swap_used 3095  3805MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:46:03 mem_used 4630 swap_used 3080  3805MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:47:03 mem_used 4666 swap_used 3070  3805MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:48:03 mem_used 4666 swap_used 3062  3805MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:49:03 mem_used 4675 swap_used 3053  3805MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:50:03 mem_used 4832 swap_used 3030  3805MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:51:03 mem_used 4861 swap_used 3022  3805MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:52:03 mem_used 4859 swap_used 3014  3805MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:53:03 mem_used 4882 swap_used 3006  3805MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:54:03 mem_used 4902 swap_used 2997  3806MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:55:03 mem_used 4917 swap_used 2989  3820MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:56:03 mem_used 4939 swap_used 2983  3821MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:57:03 mem_used 4900 swap_used 2982  3778MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:58:03 mem_used 4911 swap_used 2981  3778MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+02:59:03 mem_used 4920 swap_used 2981  3778MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+03:00:03 mem_used 4902 swap_used 2981  3778MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+03:01:03 mem_used 4906 swap_used 2981  3778MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+03:02:03 mem_used 4924 swap_used 2980  3778MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+03:03:03 mem_used 4924 swap_used 2980  3779MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+03:04:03 mem_used 4915 swap_used 2980  3779MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+03:05:03 mem_used 4916 swap_used 2980  3779MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+03:06:03 mem_used 4915 swap_used 2980  3779MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+03:07:03 mem_used 4915 swap_used 2979  3780MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+03:08:03 mem_used 4921 swap_used 2979  3780MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+03:09:03 mem_used 4959 swap_used 2975  3780MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 1
+03:10:03 mem_used 1241 swap_used 2547  384MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+03:11:03 mem_used 4530 swap_used 3096  3822MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 2
+03:12:03 mem_used 4618 swap_used 3094  3823MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 2
+03:13:03 mem_used 4656 swap_used 3092  3823MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 2
+03:14:03 mem_used 4654 swap_used 3092  3823MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 2
+03:15:03 mem_used 4666 swap_used 3088  3823MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 2
+03:16:03 mem_used 4671 swap_used 3080  3823MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 2
+03:17:03 mem_used 4691 swap_used 3071  3823MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 2
+03:18:03 mem_used 4688 swap_used 3063  3824MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 2
+03:19:03 mem_used 4719 swap_used 3055  3824MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 2
+03:20:03 mem_used 4728 swap_used 3048  3824MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 2
+03:21:03 mem_used 4721 swap_used 3040  3824MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 2
+03:22:03 mem_used 4726 swap_used 3032  3824MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 2
+03:23:03 mem_used 4751 swap_used 3024  3839MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 2
+03:24:03 mem_used 4779 swap_used 3015  3839MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 2
+03:25:03 mem_used 4767 swap_used 3007  3839MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 2
+03:26:03 mem_used 4859 swap_used 3004  3839MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 2
+03:27:03 mem_used 4893 swap_used 3004  3839MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 2
+03:28:03 mem_used 4900 swap_used 3004  3840MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 2
+03:29:03 mem_used 4896 swap_used 3004  3840MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 2
+03:30:03 mem_used 4871 swap_used 3004  3791MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 2
+03:31:03 mem_used 4873 swap_used 3004  3792MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 2
+03:32:03 mem_used 4877 swap_used 3003  3792MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 2
+03:33:03 mem_used 4869 swap_used 3003  3792MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 2
+03:34:03 mem_used 4884 swap_used 3003  3792MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 2
+03:35:03 mem_used 4881 swap_used 3003  3793MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 2
+03:36:03 mem_used 4885 swap_used 3003  3793MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 2
+03:37:03 mem_used 1163 swap_used 2576  346MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+03:38:03 mem_used 1166 swap_used 2575  347MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+03:39:03 mem_used 4416 swap_used 3100  3737MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 3
+03:40:03 mem_used 4607 swap_used 3097  3820MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 3
+03:41:03 mem_used 4637 swap_used 3096  3821MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 3
+03:42:03 mem_used 4659 swap_used 3096  3821MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 3
+03:43:03 mem_used 4655 swap_used 3094  3821MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 3
+03:44:03 mem_used 4700 swap_used 3089  3821MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 3
+03:45:03 mem_used 4680 swap_used 3088  3821MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 3
+03:46:03 mem_used 4688 swap_used 3087  3821MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 3
+03:47:03 mem_used 4704 swap_used 3087  3821MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 3
+03:48:03 mem_used 4713 swap_used 3087  3822MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 3
+03:49:03 mem_used 4693 swap_used 3087  3822MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 3
+03:50:03 mem_used 4702 swap_used 3087  3822MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 3
+03:51:04 mem_used 4776 swap_used 3084  3837MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 3
+03:52:04 mem_used 4759 swap_used 3084  3804MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 3
+03:53:04 mem_used 4768 swap_used 3083  3804MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 3
+03:54:04 mem_used 4794 swap_used 3082  3804MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 3
+03:55:04 mem_used 4783 swap_used 3082  3804MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 3
+03:56:04 mem_used 4805 swap_used 3082  3804MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 3
+03:57:04 mem_used 4758 swap_used 3082  3763MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 3
+03:58:04 mem_used 4777 swap_used 3082  3763MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 3
+03:59:04 mem_used 4769 swap_used 3082  3764MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 3
+04:00:04 mem_used 4780 swap_used 3082  3764MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 3
+04:01:04 mem_used 4773 swap_used 3082  3764MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 3
+04:02:04 mem_used 4764 swap_used 3082  3765MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 3
+04:03:04 mem_used 4784 swap_used 3081  3765MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions raptor 3
+04:04:04 mem_used 1089 swap_used 2649  274MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:05:04 mem_used 2425 swap_used 2596  493MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions graphrag 1
+04:06:04 mem_used 2802 swap_used 2532  707MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:07:04 mem_used 3158 swap_used 2181  1170MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:08:04 mem_used 3321 swap_used 2082  1277MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:09:04 mem_used 3522 swap_used 2051  1311MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:10:04 mem_used 3551 swap_used 2040  1344MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:11:04 mem_used 3668 swap_used 1891  1501MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:12:04 mem_used 3616 swap_used 1870  1514MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:13:04 mem_used 3682 swap_used 1866  1552MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:14:04 mem_used 3739 swap_used 1852  1599MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:15:04 mem_used 3759 swap_used 1839  1618MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:16:04 mem_used 3851 swap_used 1806  1659MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:17:04 mem_used 3753 swap_used 1801  1681MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:18:04 mem_used 3862 swap_used 1793  1693MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:19:04 mem_used 3869 swap_used 1791  1699MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:20:04 mem_used 3822 swap_used 1789  1705MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:21:04 mem_used 3825 swap_used 1787  1714MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:22:04 mem_used 3878 swap_used 1782  1738MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:23:04 mem_used 3883 swap_used 1782  1743MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:24:04 mem_used 3848 swap_used 1778  1750MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:25:04 mem_used 3834 swap_used 1776  1756MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:26:04 mem_used 3888 swap_used 1772  1774MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:27:04 mem_used 3876 swap_used 1772  1751MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:28:04 mem_used 3830 swap_used 1771  1755MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:29:04 mem_used 3832 swap_used 1771  1759MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:30:04 mem_used 3867 swap_used 1771  1772MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:31:04 mem_used 3836 swap_used 1770  1776MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:32:04 mem_used 3917 swap_used 1754  1801MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:33:04 mem_used 3864 swap_used 1746  1812MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:34:04 mem_used 3907 swap_used 1743  1821MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:35:04 mem_used 3938 swap_used 1735  1833MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:36:04 mem_used 3926 swap_used 1735  1837MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:37:04 mem_used 3944 swap_used 1732  1833MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:38:04 mem_used 3885 swap_used 1732  1836MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:39:04 mem_used 3965 swap_used 1732  1839MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:40:04 mem_used 3893 swap_used 1719  1866MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:41:04 mem_used 4013 swap_used 1718  1871MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:42:04 mem_used 3950 swap_used 1716  1865MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:43:04 mem_used 3969 swap_used 1712  1872MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:44:04 mem_used 3955 swap_used 1649  1940MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:45:04 mem_used 4036 swap_used 1649  1944MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:46:04 mem_used 3994 swap_used 1649  1947MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:47:04 mem_used 4032 swap_used 1648  1949MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:48:04 mem_used 4134 swap_used 1639  1960MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:49:04 mem_used 4117 swap_used 1639  1961MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:50:04 mem_used 4127 swap_used 1639  1961MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:51:04 mem_used 3676 swap_used 1639  1961MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:52:04 mem_used 3675 swap_used 1639  1961MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:53:04 mem_used 3228 swap_used 1639  1961MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:54:05 mem_used 2761 swap_used 1639  1961MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:55:05 mem_used 2901 swap_used 1639  1962MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:56:05 mem_used 2744 swap_used 1639  1961MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:57:05 mem_used 2741 swap_used 1638  1961MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:58:05 mem_used 2749 swap_used 1638  1961MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+04:59:05 mem_used 2745 swap_used 1638  1961MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:00:05 mem_used 2735 swap_used 1638  1961MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:01:05 mem_used 3993 swap_used 1638  1963MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:02:05 mem_used 4088 swap_used 1638  1938MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:03:05 mem_used 4034 swap_used 1608  1972MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:04:05 mem_used 4090 swap_used 1608  1976MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:05:05 mem_used 4107 swap_used 1608  1980MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:06:05 mem_used 4353 swap_used 1462  2156MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:07:05 mem_used 4223 swap_used 1455  2161MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:08:05 mem_used 4291 swap_used 1455  2165MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:09:05 mem_used 4286 swap_used 1455  2168MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:10:05 mem_used 4343 swap_used 1455  2171MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:11:05 mem_used 4244 swap_used 1455  2174MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:12:05 mem_used 4228 swap_used 1455  2167MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:13:05 mem_used 4286 swap_used 1454  2170MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:14:05 mem_used 4325 swap_used 1454  2173MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:15:05 mem_used 4223 swap_used 1454  2176MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:16:05 mem_used 4375 swap_used 1454  2179MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:17:05 mem_used 4277 swap_used 1454  2183MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:18:05 mem_used 4254 swap_used 1454  2186MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:19:05 mem_used 4314 swap_used 1454  2188MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:20:05 mem_used 4330 swap_used 1454  2191MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:21:05 mem_used 4283 swap_used 1454  2193MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:22:05 mem_used 4364 swap_used 1454  2194MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:23:05 mem_used 4253 swap_used 1454  2197MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:24:05 mem_used 4322 swap_used 1454  2201MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:25:05 mem_used 4280 swap_used 1454  2204MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:26:05 mem_used 4279 swap_used 1454  2208MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:27:05 mem_used 4303 swap_used 1453  2211MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:28:05 mem_used 4272 swap_used 1453  2200MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:29:05 mem_used 4282 swap_used 1453  2203MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:30:05 mem_used 4314 swap_used 1453  2206MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:31:05 mem_used 4259 swap_used 1453  2209MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:32:05 mem_used 4277 swap_used 1451  2215MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:33:05 mem_used 4312 swap_used 1451  2230MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:34:05 mem_used 4328 swap_used 1448  2254MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:35:05 mem_used 4402 swap_used 1448  2256MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:36:05 mem_used 4359 swap_used 1448  2242MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:37:05 mem_used 4301 swap_used 1448  2232MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:38:05 mem_used 4340 swap_used 1448  2234MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:39:05 mem_used 4298 swap_used 1448  2236MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:40:05 mem_used 4359 swap_used 1448  2238MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:41:05 mem_used 4340 swap_used 1448  2241MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:42:05 mem_used 4364 swap_used 1448  2243MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:43:05 mem_used 4350 swap_used 1448  2246MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:44:05 mem_used 4309 swap_used 1448  2249MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:45:05 mem_used 4380 swap_used 1448  2252MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:46:05 mem_used 4295 swap_used 1448  2254MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:47:05 mem_used 4346 swap_used 1448  2257MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:48:05 mem_used 4390 swap_used 1448  2258MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:49:05 mem_used 4385 swap_used 1448  2258MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:50:05 mem_used 4416 swap_used 1448  2259MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:51:05 mem_used 4424 swap_used 1448  2258MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:52:05 mem_used 3942 swap_used 1448  2241MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:53:05 mem_used 3495 swap_used 1448  2241MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:54:05 mem_used 3496 swap_used 1448  2241MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:55:05 mem_used 3038 swap_used 1448  2241MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:56:05 mem_used 3038 swap_used 1448  2241MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:57:05 mem_used 4275 swap_used 1447  2225MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:58:05 mem_used 4493 swap_used 1447  2227MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+05:59:05 mem_used 4360 swap_used 1447  2231MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:00:05 mem_used 4337 swap_used 1447  2235MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:01:05 mem_used 4351 swap_used 1447  2257MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:02:05 mem_used 4316 swap_used 1447  2243MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:03:05 mem_used 4379 swap_used 1447  2246MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:04:05 mem_used 4451 swap_used 1447  2249MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:05:05 mem_used 4445 swap_used 1447  2251MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:06:05 mem_used 4350 swap_used 1447  2255MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:07:06 mem_used 4290 swap_used 1447  2248MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:08:06 mem_used 4357 swap_used 1447  2253MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:09:06 mem_used 4443 swap_used 1447  2257MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:10:06 mem_used 4362 swap_used 1447  2259MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:11:06 mem_used 4341 swap_used 1447  2269MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:12:06 mem_used 4360 swap_used 1447  2263MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:13:06 mem_used 4348 swap_used 1447  2266MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:14:06 mem_used 4341 swap_used 1447  2268MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:15:06 mem_used 4364 swap_used 1447  2271MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:16:06 mem_used 4316 swap_used 1447  2273MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:17:06 mem_used 4351 swap_used 1447  2276MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:18:06 mem_used 4346 swap_used 1447  2278MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:19:06 mem_used 4466 swap_used 1447  2280MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:20:06 mem_used 4430 swap_used 1446  2283MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:21:06 mem_used 4345 swap_used 1446  2285MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:22:06 mem_used 4400 swap_used 1446  2289MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:23:06 mem_used 4383 swap_used 1446  2291MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:24:06 mem_used 4437 swap_used 1446  2305MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:25:06 mem_used 4500 swap_used 1444  2311MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:26:06 mem_used 4399 swap_used 1444  2313MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:27:06 mem_used 4488 swap_used 1444  2317MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:28:06 mem_used 4408 swap_used 1444  2329MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:29:06 mem_used 4336 swap_used 1444  2320MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:30:07 mem_used 4341 swap_used 1444  2323MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:31:07 mem_used 4521 swap_used 1444  2329MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:32:07 mem_used 4412 swap_used 1444  2332MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:33:07 mem_used 4476 swap_used 1444  2335MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:34:07 mem_used 4399 swap_used 1444  2337MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:35:07 mem_used 4429 swap_used 1444  2345MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:36:07 mem_used 4430 swap_used 1444  2356MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:37:07 mem_used 4567 swap_used 1444  2358MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:38:07 mem_used 4454 swap_used 1444  2360MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:39:07 mem_used 4411 swap_used 1444  2361MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:40:07 mem_used 4408 swap_used 1444  2363MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:41:07 mem_used 4530 swap_used 1444  2364MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:42:07 mem_used 4408 swap_used 1444  2366MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:43:07 mem_used 4521 swap_used 1444  2367MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:44:07 mem_used 4517 swap_used 1444  2368MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:45:07 mem_used 4516 swap_used 1444  2368MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:46:07 mem_used 4526 swap_used 1444  2368MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:47:07 mem_used 4035 swap_used 1444  2368MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:48:07 mem_used 3586 swap_used 1444  2334MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:49:07 mem_used 3471 swap_used 1444  2334MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+06:50:07 mem_used 7928 swap_used 8305  6854MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+06:51:07 mem_used 6552 swap_used 5117  5624MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+06:52:07 mem_used 7334 swap_used 6468  6311MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+06:53:07 mem_used 7480 swap_used 6451  6313MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+06:54:07 mem_used 7449 swap_used 6489  6253MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+06:55:07 mem_used 7463 swap_used 6479  6254MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+06:56:07 mem_used 7485 swap_used 6469  6255MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+06:57:07 mem_used 7505 swap_used 6458  6255MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+06:58:07 mem_used 7550 swap_used 6449  6256MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+06:59:07 mem_used 7527 swap_used 6440  6257MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:00:07 mem_used 7532 swap_used 6430  6258MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:01:07 mem_used 7582 swap_used 6421  6258MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:02:07 mem_used 7599 swap_used 6398  6259MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:03:07 mem_used 7582 swap_used 6383  6259MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:04:08 mem_used 7577 swap_used 6374  6260MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:05:08 mem_used 7568 swap_used 6367  6259MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:06:08 mem_used 7557 swap_used 6359  6258MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:07:08 mem_used 7533 swap_used 6349  6301MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:08:08 mem_used 7518 swap_used 6340  6250MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:09:08 mem_used 7541 swap_used 6424  6135MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:10:08 mem_used 7596 swap_used 6415  6135MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:11:08 mem_used 7594 swap_used 6406  6144MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:12:08 mem_used 7617 swap_used 6389  6135MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:13:08 mem_used 7614 swap_used 6380  6135MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:14:08 mem_used 7649 swap_used 6370  6135MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:15:08 mem_used 7651 swap_used 6362  6136MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:16:08 mem_used 7733 swap_used 6352  6136MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:17:08 mem_used 7624 swap_used 6344  6136MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:18:08 mem_used 7617 swap_used 6327  6146MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:19:08 mem_used 7619 swap_used 6319  6146MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:20:08 mem_used 7693 swap_used 6259  6146MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:21:08 mem_used 7697 swap_used 6252  6146MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:22:08 mem_used 7703 swap_used 6245  6146MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:23:08 mem_used 7712 swap_used 6238  6146MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:24:08 mem_used 7602 swap_used 6339  6053MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:25:08 mem_used 7613 swap_used 6331  6053MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:26:08 mem_used 7622 swap_used 6315  6053MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:27:08 mem_used 7615 swap_used 6303  6046MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:28:08 mem_used 7637 swap_used 6301  6046MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:29:08 mem_used 7623 swap_used 6301  6046MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:30:08 mem_used 7631 swap_used 6301  6046MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:31:08 mem_used 7632 swap_used 6301  6046MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:32:08 mem_used 6259 swap_used 3372  4608MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 1
+07:33:08 mem_used 2194 swap_used 2591  1018MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+07:34:08 mem_used 7813 swap_used 8080  6849MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 2
+07:35:08 mem_used 7943 swap_used 7740  6156MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 2
+07:36:08 mem_used 7320 swap_used 7517  5111MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 2
+07:37:08 mem_used 7390 swap_used 7486  5121MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 2
+07:38:08 mem_used 7469 swap_used 7426  5119MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 2
+07:39:08 mem_used 7455 swap_used 7455  5068MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 2
+07:40:08 mem_used 7429 swap_used 7444  5071MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 2
+07:41:08 mem_used 7370 swap_used 7433  5080MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 2
+07:42:08 mem_used 7350 swap_used 7433  5070MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 2
+07:43:08 mem_used 7377 swap_used 7433  5070MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 2
+07:44:08 mem_used 7382 swap_used 7420  5070MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 2
+07:45:08 mem_used 7395 swap_used 7420  5070MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 2
+07:46:08 mem_used 7395 swap_used 7419  5070MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 2
+07:47:08 mem_used 7407 swap_used 7419  5070MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 2
+07:48:08 mem_used 7421 swap_used 7419  5070MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 2
+07:49:08 mem_used 7423 swap_used 7419  5070MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 2
+07:50:08 mem_used 7407 swap_used 7417  5070MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 2
+07:51:08 mem_used 7412 swap_used 7417  5070MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 2
+07:52:08 mem_used 7369 swap_used 7416  5070MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 2
+07:53:08 mem_used 7408 swap_used 7416  5070MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 2
+07:54:08 mem_used 7398 swap_used 7414  5070MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 2
+07:55:08 mem_used 5642 swap_used 4433  3957MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 2
+07:56:08 mem_used 1319 swap_used 3009  519MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+07:57:08 mem_used 1351 swap_used 3005  519MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+07:58:08 mem_used 7861 swap_used 7494  7134MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 3
+07:59:09 mem_used 7753 swap_used 5738  7312MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 3
+08:00:09 mem_used 7359 swap_used 7345  5292MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 3
+08:01:09 mem_used 7478 swap_used 7316  5296MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 3
+08:02:09 mem_used 7534 swap_used 7254  5299MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 3
+08:03:09 mem_used 7545 swap_used 7243  5302MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 3
+08:04:09 mem_used 7554 swap_used 7233  5305MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 3
+08:05:09 mem_used 7491 swap_used 7218  5315MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 3
+08:06:09 mem_used 7489 swap_used 7218  5315MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 3
+08:07:09 mem_used 7449 swap_used 7216  5304MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 3
+08:08:09 mem_used 7473 swap_used 7204  5304MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 3
+08:09:09 mem_used 7485 swap_used 7172  5304MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 3
+08:10:09 mem_used 7496 swap_used 7172  5304MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 3
+08:11:09 mem_used 7503 swap_used 7171  5304MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 3
+08:12:09 mem_used 7498 swap_used 7171  5303MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 3
+08:13:09 mem_used 7492 swap_used 7171  5303MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 3
+08:14:09 mem_used 7859 swap_used 6809  5303MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 3
+08:15:09 mem_used 7835 swap_used 6768  5119MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 3
+08:16:09 mem_used 7851 swap_used 6768  5119MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 3
+08:17:09 mem_used 7851 swap_used 6768  5119MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 3
+08:18:09 mem_used 7851 swap_used 6768  5119MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 3
+08:19:09 mem_used 2421 swap_used 2775  855MB /data/workspace/RecRAG/runs/final500/scripts/answer.py natural_questions hipporag 3
+08:20:09 mem_used 1590 swap_used 2416  745MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+08:21:09 mem_used 1574 swap_used 2416  745MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+08:22:09 mem_used 1560 swap_used 2411  744MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+08:23:09 mem_used 1568 swap_used 2411  744MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow
+08:24:09 mem_used 1596 swap_used 2411  744MB -cp /var/lib/neo4j/plugins/*:/var/lib/neo4j/conf/*:/var/lib/neo4j/lib/* -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow

@@ -1,0 +1,596 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "d6eaa6c1f9be2021",
+   "kind": "answer",
+   "question": "when's the last time the philadelphia eagles played the new england patriots",
+   "gold_answers": [
+    "in Super Bowl LII"
+   ],
+   "model_answer": "Super Bowl LII in 2018"
+  },
+  {
+   "id": "7c371724493f96b5",
+   "kind": "answer",
+   "question": "what is the final season of downton abbey",
+   "gold_answers": [
+    "six",
+    "the sixth",
+    "the sixth series",
+    "sixth",
+    "Six"
+   ],
+   "model_answer": "The sixth season"
+  },
+  {
+   "id": "c0221867e56f4e49",
+   "kind": "answer",
+   "question": "where was uncle tom's cabin first published",
+   "gold_answers": [
+    "in The National Era, an abolitionist periodical, starting with the June 5, 1851, issue",
+    "The National Era",
+    "The National Era, an abolitionist periodical"
+   ],
+   "model_answer": "The National Era in Washington, D.C."
+  },
+  {
+   "id": "77dba994aa50726a",
+   "kind": "answer",
+   "question": "was nightmare before christmas originally a disney movie",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes—it was released by Disney through Touchstone Pictures."
+  },
+  {
+   "id": "5eab8fa3be651bae",
+   "kind": "answer",
+   "question": "how many words are in national anthem of pakistan",
+   "gold_answers": [
+    "Urdu lyrics كشورِ حسين شاد باد ‬ پاک سرزمین شاد باد ‬ ارضِ پاکستان ! ‏ ‬ تُو نشانِ عزمِ عالی شان ‬ مرکزِ یقین شاد باد ‬ قوّتِ اُخوّتِ عوام ‬ پاک سرزمین کا نظام ‬ پائنده تابنده باد ! ‏ ‬ قوم ، ملک ، سلطنت ‬ شاد باد منزلِ مراد ‬ رہبرِ ترقّی و کمال ‬ پرچمِ ستاره و ہلال ‬ جانِ استقبال ! ‏ ‬ ترجمانِ ماضی ، شانِ حال ‬ سایۂ خدائے ذوالجلال ‬ Transliteration ( ALA - LC ) Translation ( poetical ) Translation ( literal ) Pāk sarzamīn shād bād Kishwar - i ḥasīn shād bād Tū nishān - i ʿazm - i ʿālī shān Arẓ - i Pākistān ! Markaz - i yaqīn shād bād May the holy land , stay glad ; Beautious realm , stay glad . Thou , the sign of high resolve -- O Land of Pakistan ! Citadel of faith , stay glad . Blessed be the sacred land , Happy be the bounteous realm . Thou symbol of high resolve , O Land of Pakistan ! Blessed be the citadel of faith . Pāk sarzamīn kā niz̤ām Quwwat - i Ukhuwwat - i ʿawām Qaum , mulk , salt̤anat Pāyindah tābindah bād ! Shād bād manzil - i murād Order of the holy land , Power of fraternity of the populace ; The nation , country , and domain ; Ever luminous remain ! The cherished goal , stay glad . The order of this sacred land , The might of the brotherhood of the people , May the nation , the country , and the state , Shine in glory everlasting ! Blessed be the goal of our ambition . Parcam - i sitārah o - hilāl Rahbar - i taraqqī o - kamāl Tarjumān - i māẓī , shān - i ḥāl Jān - i istiqbāl ! Sāyah - yi Khudā - yi Ẕū l - jalāl Flag with the star and crescent , The leader of progress and ascent , Dragoman of past , the pride of present ; Soul of the future ! Shadow of the God of grandeur . The flag of the crescent and star , Leads the way to progress and perfection , Interpreter of our past , glory of our present , inspiration for our future ! Shade of God , the Glorious and Mighty ."
+   ],
+   "model_answer": "50 words"
+  },
+  {
+   "id": "8b89cfe6849891d0",
+   "kind": "answer",
+   "question": "what are the five pillars of islam in arabic",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "الشهادة، الصلاة، الزكاة، الصوم، الحج"
+  },
+  {
+   "id": "4aaa148a0f5f2263",
+   "kind": "answer",
+   "question": "what purpose did seasonal monsoon winds have on trade",
+   "gold_answers": [
+    "enabled European empire expansion into the Americas and trade routes to become established across the Atlantic and Pacific oceans"
+   ],
+   "model_answer": "They enabled predictable sea voyages between trading ports."
+  },
+  {
+   "id": "2e7d2172fc7ce3a9",
+   "kind": "answer",
+   "question": "meaning of lyrics to wade in the water",
+   "gold_answers": [
+    "The song relates to both the Old and New Testaments . The verses reflect the Israelites ' escape out of Egypt as found in Exodus 14 . The chorus refers to healing : see John 5 : 4 , `` For an angel went down at a certain season into the pool , and troubled the water : whosoever then first after the troubling of the water stepped in was made whole of whatsoever disease he had . ''"
+   ],
+   "model_answer": "The verses evoke the Israelites’ escape from Egypt, while the refrain refers to healing waters in the Bible."
+  },
+  {
+   "id": "067dc75d39832c78",
+   "kind": "answer",
+   "question": "let my love open the door to your heart grace and frankie",
+   "gold_answers": [
+    "A cover of the song by Stacey Markus is used at the end of episode nine ( `` The Invitation '' ) of the 2015 Netflix original series Grace and Frankie , starring Jane Fonda and Lily Tomlin ."
+   ],
+   "model_answer": "Stacey Markus’s cover of “Let My Love Open the Door”"
+  },
+  {
+   "id": "4abeb53f62e5c57c",
+   "kind": "answer",
+   "question": "90 day fiance 1st season where are they now",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "As of 2017, all four Season 1 couples were still together; Russ and Paola were in Miami, and Kirlyam and Alan were expecting their first child."
+  },
+  {
+   "id": "7af844271119f33c",
+   "kind": "answer",
+   "question": "when did the philadelphia eagles play in the super bowl last",
+   "gold_answers": [
+    "Super Bowl LII"
+   ],
+   "model_answer": "Super Bowl LII in 2018"
+  },
+  {
+   "id": "6d1c740c9d8d4be9",
+   "kind": "answer",
+   "question": "where do car factories tend to be located and why",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Near major markets and transport hubs for access to workers, suppliers, and customers."
+  },
+  {
+   "id": "b08cd805ee6e82bc",
+   "kind": "answer",
+   "question": "make a project report on agricultural crops grown in india",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Agricultural Crops in India: Rice, wheat, millets, pulses, cotton, jute, sugarcane, tea, coffee, fruits, and vegetables are widely grown."
+  },
+  {
+   "id": "07dc73dd168a8e12",
+   "kind": "answer",
+   "question": "when was the minimum wage established in the united states",
+   "gold_answers": [
+    "1912",
+    "1938",
+    "1933"
+   ],
+   "model_answer": "1938 (federally; the first state law was passed in 1912)"
+  },
+  {
+   "id": "39a06100ac2318dc",
+   "kind": "answer",
+   "question": "which mode is used for short wave broadcast service",
+   "gold_answers": [
+    "MFSK",
+    "Olivia"
+   ],
+   "model_answer": "Amplitude modulation (AM)"
+  },
+  {
+   "id": "ba53f7a8c12331bb",
+   "kind": "answer",
+   "question": "who may be affected by monetary penalties imposed by the irs",
+   "gold_answers": [
+    "Taxpayers in the United States"
+   ],
+   "model_answer": "Individuals and businesses that violate tax laws."
+  },
+  {
+   "id": "7d6bcf1e146106c7",
+   "kind": "answer",
+   "question": "where is the hotel in the movie the shining",
+   "gold_answers": [
+    "In 1980 , The Shining became the basis for a film adaptation directed by Stanley Kubrick . Kubrick 's vision for the movie differed from King 's significantly in many ways , including the portrayal of the Overlook Hotel . The exteriors of Kubrick 's Overlook were supplied by the Timberline Lodge on the slopes of Mt . Hood in Oregon . Inspiration for the interior sets ( erected at Elstree Studios in England ) came from the 1927 Ahwahnee Hotel in Yosemite National Park . The management of the Timberline Lodge , fearful that guests would refuse to stay in their Room 217 if it were featured in a horror movie , insisted that Kubrick change the haunted room in the film to Room 237 ."
+   ],
+   "model_answer": "Timberline Lodge, on Mount Hood in Oregon."
+  },
+  {
+   "id": "9414ccd6cd8eb833",
+   "kind": "answer",
+   "question": "who did deion sanders go in the hall of fame as",
+   "gold_answers": [
+    "Cornerback"
+   ],
+   "model_answer": "Atlanta Falcon"
+  },
+  {
+   "id": "960ffb664b773992",
+   "kind": "answer",
+   "question": "meaning of joy to the world by three dog night",
+   "gold_answers": [
+    "When Hoyt Axton performed the song to the group , two of the three main vocalists -- Danny Hutton and Cory Wells -- rejected the song , but Chuck Negron felt that the band needed a `` silly song '' to help bring the band back together as a working unit . Negron also felt that the song `` was n't even close to our best record , but it might have been one of our most honest . ''",
+    "The song , which has been described by members of Three Dog Night as a `` kid 's song '' and a `` silly song '' , topped the main singles charts in North America , was certified gold by the RIAA , and has since been covered by multiple artists ."
+   ],
+   "model_answer": "A playful, silly song with nonsensical lyrics."
+  },
+  {
+   "id": "bfd2c83132912d11",
+   "kind": "answer",
+   "question": "dean koontz dark rivers of the heart summary",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Spencer Grant and Valerie Keene flee a secret government agency, confront Spencer’s abusive father, and start a new life helping a resistance group."
+  },
+  {
+   "id": "52556a86ea65e544",
+   "kind": "answer",
+   "question": "who dies in season 6 of once upon a time",
+   "gold_answers": [
+    "Edmond Dantes, The Count of Monte Cristo",
+    "Jekyll",
+    "Hyde"
+   ],
+   "model_answer": "The Black Fairy (Fiona), Hyde, and the Count of Monte Cristo."
+  },
+  {
+   "id": "9eaf6bc747be681c",
+   "kind": "answer",
+   "question": "what is the first basic process in the light reaction of photosynthesis",
+   "gold_answers": [
+    "one molecule of the pigment chlorophyll absorbs one photon and loses one electron",
+    "energy from light is absorbed by proteins called reaction centres that contain green chlorophyll pigments"
+   ],
+   "model_answer": "Absorption of light by chlorophyll\n"
+  },
+  {
+   "id": "3e1dfe657a267ed5",
+   "kind": "answer",
+   "question": "how many languages do they speak in africa",
+   "gold_answers": [
+    "The total number of languages natively spoken in Africa is variously estimated ( depending on the delineation of language vs. dialect ) at between 1,250 to 2,100 , and by some counts at `` over 3,000 '' , Nigeria alone has over 500 languages ( according to the count of SIL Ethnologue ) , one of the greatest concentrations of linguistic diversity in the world ."
+   ],
+   "model_answer": "About 1,250–2,100; some estimates exceed 3,000."
+  },
+  {
+   "id": "7c8d829588f1d6aa",
+   "kind": "answer",
+   "question": "states that have adopted the model rules of professional conduct",
+   "gold_answers": [
+    "The ABA Model Rules of Professional Conduct , created by the American Bar Association ( ABA ) , are a set of rules that prescribe baseline standards of legal ethics and professional responsibility for lawyers in the United States . They were promulgated by the ABA House of Delegates upon the recommendation of the Kutak Commission in 1983 . The rules are merely recommendations , or models , ( hence the name `` Model Rules '' ) and are not themselves binding . However , having a common set of Model Rules facilitates a common discourse on legal ethics , and simplifies professional responsibility training as well as the day - to - day application of such rules . As of 2015 , 49 states and four territories have adopted the rules in whole or in part , of which the most recent to do so was the Commonwealth of the Northern Mariana Islands in March 2015 . California is the only state that has not adopted the ABA Model Rules , while Puerto Rico is the only U.S. jurisdiction outside of confederation has not adopted them but instead has its own Código de Ética Profesional ."
+   ],
+   "model_answer": "All states except California."
+  },
+  {
+   "id": "95afb5db3421c883",
+   "kind": "answer",
+   "question": "what is the share of agriculture in indian economy",
+   "gold_answers": [
+    "17.32%",
+    "23%"
+   ],
+   "model_answer": "About 17% of GDP."
+  },
+  {
+   "id": "fb2f4c0595149944",
+   "kind": "answer",
+   "question": "alison krauss now that i've found you album",
+   "gold_answers": [
+    "`` Baby , Now That I 've Found You '' ( Tony Macaulay , John MacLeod ) -- 3 : 49 ( Previously Unreleased ) `` Oh , Atlanta '' ( Mick Ralphs ) -- 4 : 41 ( Previously Unreleased ) `` Broadway '' ( Sidney & Suzanne Cox ) -- 3 : 57 ( Previously Unreleased ) `` Every Time You Say Goodbye '' ( John Pennell ) -- 3 : 13 ( From the Album `` Every Time You Say Goodbye '' by Alison Krauss & Union Station ) `` Tonight I 'll Be Lonely Too '' ( Sidney Cox ) -- 3 : 25 ( From the Album `` I 've Got That Old Feeling '' by Alison Krauss ) `` Teardrops Will Kiss the Morning Dew '' ( Paul Craft ) -- 3 : 38 ( From the Album `` Two Highways '' by Alison Krauss & Union Station ) `` Sleep On '' ( Nelson Mandrell ) -- 2 : 23 ( From the Album `` Too Late to Cry '' by Alison Krauss ) `` When God Dips His Pen of Love in My Heart '' ( Cleavant Derricks ) -- 2 : 26 ( From the Album `` Everybody 's Reaching Out for Someone '' by The Cox Family ) `` I Will '' ( John Lennon , Paul McCartney ) -- 4 : 04 ( From the Album `` Within Reach '' by Tony Furtado ) `` I Do n't Believe You 've Met My Baby '' ( Autry Inman ) -- 3 : 10 ( From the Album `` Slide Rule '' by Jerry Douglas ) `` In the Palm of Your Hand '' ( Ron Block ) -- 3 : 24 ( From the Album `` I Know Who Holds Tomorrow '' by Alison Krauss & The Cox Family ) `` When You Say Nothing at All '' ( Paul Overstreet , Don Schlitz ) -- 4 : 21 ( From the Album `` Keith Whitley : A Tribute Album '' performed by Alison Krauss & Union Station )"
+   ],
+   "model_answer": "A 1995 compilation album by Alison Krauss."
+  },
+  {
+   "id": "8bfa86a6af02a7ac",
+   "kind": "answer",
+   "question": "why did government sponsored surveys and land acts encourage migration to the west",
+   "gold_answers": [
+    "The Homestead Acts were several United States federal laws that gave an applicant ownership of land , typically called a `` homestead , '' at no cost . In all , more than 270 million acres of public land , or nearly 10 % of the total area of the U.S. , was given away free to 1.6 million homesteaders ; most of the homesteads were west of the Mississippi River .",
+    "An extension of the Homestead Principle in law , the Homestead Acts were an expression of the `` Free Soil '' policy of Northerners who wanted individual farmers to own and operate their own farms , as opposed to Southern slave - owners who wanted to buy up large tracts of land and use slave labor , thereby shutting out free white men ."
+   ],
+   "model_answer": "They offered settlers free or inexpensive land to claim and farm."
+  },
+  {
+   "id": "6a6ccbb3e9dbfa89",
+   "kind": "answer",
+   "question": "florence and the machine i am not a robot",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "No—it’s by Marina and the Diamonds."
+  },
+  {
+   "id": "678c44113b879e45",
+   "kind": "answer",
+   "question": "when was the worlds first laptop computer introduced in the market and by whom",
+   "gold_answers": [
+    "The portable micro computer the “Portal\" of the French company R2E Micral CCMC officially appeared in September 1980",
+    "September 1980",
+    "R2E Micral CCMC"
+   ],
+   "model_answer": "1981, by Osborne Computer Corporation (the Osborne 1)."
+  },
+  {
+   "id": "e315b9b3b57c44b7",
+   "kind": "answer",
+   "question": "where is the hotel in the movie the shining",
+   "gold_answers": [
+    "In 1980 , The Shining became the basis for a film adaptation directed by Stanley Kubrick . Kubrick 's vision for the movie differed from King 's significantly in many ways , including the portrayal of the Overlook Hotel . The exteriors of Kubrick 's Overlook were supplied by the Timberline Lodge on the slopes of Mt . Hood in Oregon . Inspiration for the interior sets ( erected at Elstree Studios in England ) came from the 1927 Ahwahnee Hotel in Yosemite National Park . The management of the Timberline Lodge , fearful that guests would refuse to stay in their Room 217 if it were featured in a horror movie , insisted that Kubrick change the haunted room in the film to Room 237 ."
+   ],
+   "model_answer": "Timberline Lodge, Oregon (exterior); the interiors were inspired by the Ahwahnee Hotel in Yosemite."
+  },
+  {
+   "id": "ba90ba75b650ef2e",
+   "kind": "answer",
+   "question": "lil dicky ft chris brown freaky friday song",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "“Freaky Friday” is a song by Lil Dicky featuring Chris Brown."
+  },
+  {
+   "id": "16c6f9a0253ca688",
+   "kind": "answer",
+   "question": "the grand tour season 2 episode 2 celebrity guests",
+   "gold_answers": [
+    "Abbie Eaton",
+    "Kevin Pietersen",
+    "Brian Wilson",
+    "Kevin Pietersen, Brian Wilson"
+   ],
+   "model_answer": "Kevin Pietersen and Brian Wilson"
+  },
+  {
+   "id": "e27ef64980781ef0",
+   "kind": "answer",
+   "question": "law & order criminal intent season 8 episode 8",
+   "gold_answers": [
+    "No. in series No. in season Title Directed by Written by Original air date Production code U.S. viewers ( millions ) 156 `` Playing Dead '' Michael Smith Antoinette Stella April 19 , 2009 ( 2009 - 04 - 19 ) ( USA ) May 6 , 2009 ( 2009 - 05 - 06 ) ( NBC ) 08009 4.57 Detectives Goren and Eames investigate the shooting of Stacy Hayes - Fitzgerald and her boyfriend Rick Siebert , two drug addicts who are blackmailing Stacy 's stepfather , Neil Hayes - Fitzgerald ( Scott Cohen ) , a politician running for mayor . Rick was killed in the shooting , but Stacy survived by playing dead for hours under his bleeding corpse until they were found by Stacy 's mother , Josie . After returning home from the hospital , Stacy attempts to commit suicide . After seeing how she reacts when Neil is around , Goren asks Stacy if she has been abused , but she denies it . Goren discovers that Stacy and her family moved to Switzerland for a year when she was in high school , and realizes that Stacy 's younger sister Sophie is actually her daughter by Neil . While questioning Neil and his mother , Camille ( Kathy Baker ) , it is revealed that she had Rick killed because he was threatening to expose Neil 's family scandal , thwarting his mayoral bid . 157 `` Rock Star '' Bill D'Elia Ed Zuckerman April 26 , 2009 ( 2009 - 04 - 26 ) ( USA ) May 13 , 2009 ( 2009 - 05 - 13 ) ( NBC ) 08008 4.10 Detective Wheeler and her new partner , Detective Zack Nichols , investigate the stabbing of an artist , who was found in a neighborhood rife with ethnic tensions . 158 `` Identity Crisis '' Michael Smith Pamela Wechsler May 3 , 2009 ( 2009 - 05 - 03 ) ( USA ) May 20 , 2009 ( 2009 - 05 - 20 ) ( NBC ) 08005 3.14 Two young brothers live with their schizophrenic mother , who dies in the bathtub by electrocution . They are questioned about the turn of events , and the younger brother Anthony tells police that he saw his brother Tommy push the electric heater into the tub . The two are subsequently separated and put into foster care . Twenty years later , Anthony reappears in Tommy 's life , and Tommy responds by shooting him . Goren and Eames are brought in to investigate the murder , and Rodgers tells them that the victim , Anthony , was dying from lymphoma . Meanwhile , over the years Tommy ( Sam Trammell ) has been living a mysterious life , pretending that he is a graduate of Princeton University and taking on false identities . He rents a house on Nantucket under the name Tyler Chisholm , and the owner 's daughter takes a liking to him . The owner is suspicious and runs a background credit check on `` Tyler . '' The credit check is reported to the detectives , as Tyler Chisholm was one of the names noted when interviewing people at the Princeton Eating Club . They travel to Nantucket , where they find Tommy and take him into custody . Back in New York , Eames questions the owner 's daughter and asks if there was anything strange or out of the ordinary that she could recall . She tells Eames that she remembers Tommy throwing something into the water and staring at it . Goren then questions Tommy and reveals that Anthony did not return to bring back old memories and haunt Tommy , but to make amends because of his imminent death . 159 `` In Treatment '' Jean de Segonzac Timothy J. Lea May 10 , 2009 ( 2009 - 05 - 10 ) ( USA ) May 27 , 2009 ( 2009 - 05 - 27 ) ( NBC ) 08010 3.14 Detectives Nichols and Wheeler investigate the murder of a Wall Street executive who is murdered during a gala . Nichols believes that his company is more involved with the case than they have admitted to the police . During the investigation the detectives discover that news of a falling stock , which plunged more after news of a fraud investigation , is tied to this murder . However , their investigation leads them to a treatment clinic , where their prime suspect is under the care of a controlling psychiatrist ( Dennis Boutsikaris ) . 160 5 `` Faithfully '' Jean de Segonzac Antoinette Stella May 17 , 2009 ( 2009 - 05 - 17 ) ( USA ) June 29 , 2009 ( 2009 - 06 - 29 ) ( NBC ) 08001 3.70 When a devout celebrity doctor is murdered , Goren and Eames enter the unexpectedly steamy world behind the pulpit . 161 6 `` Astoria Helen '' Norberto Barba Timothy J. Lea May 31 , 2009 ( 2009 - 05 - 31 ) ( USA ) July 6 , 2009 ( 2009 - 07 - 06 ) ( NBC ) 08004 3.97 A charming con man named Joe Gallagher ( Creighton James ) targets a lonely , single mother named Helen Bramer ( Arija Bareikis ) to try to hit an armored truck carrying millions of dollars , Bramer worked for the company of the armored truck . Detectives Nichols and Wheeler investigate when one of the con man 's partners dies weeks later in a bomb blast . Bramer and Gallagher become the prime suspects in the case when a van owner named Frank Stroup ( Domenick Lombardozzi ) is ripped off and later shot . But the detectives later learn that Bramer and Gallagher are n't the prime suspects when Bramer 's son Kevin gets abducted by Frank Stroup , and to rescue the boy , Detective Nichols has to put himself in the middle of a hostage situation . 162 7 `` Folie à Deux '' David Manson Michael S. Chernuchin June 7 , 2009 ( 2009 - 06 - 07 ) ( USA ) July 13 , 2009 ( 2009 - 07 - 13 ) ( NBC ) 08003 4.01 Detectives Goren and Eames investigate when a couple 's 2 - year - old daughter mysteriously disappears from her room during a robbery at the hotel , where her parents dined . They learn that a family member ( Lynn Redgrave ) is financially supporting the couple , while also dying of a heart condition . Glass fragments and a stolen key - card become substantial evidence which leads them to the robber , although there is no child with him . Further investigation leads Goren and Eames to receive a ransom call . However , they learn that someone relatively close to the family was taking advantage of the crime , attempting to win money over in the process . The detectives find out the parents have been giving a false description . There never was a child at the hotel . As they uncover a shocking conspiracy , Goren and Eames learn that the unstable mother ( Piper Perabo ) has been delusional about the months - ago accidental death of her daughter , prompting her husband ( Luke Kirby ) to exploit her condition in order to continue receiving financial support from his rich but childless aunt . Partially inspired by the Madeleine McCann and Caylee Anthony cases . 163 8 `` The Glory That Was ... '' Norberto Barba Robert Nathan June 14 , 2009 ( 2009 - 06 - 14 ) ( USA ) July 20 , 2009 ( 2009 - 07 - 20 ) ( NBC ) 08002 4.14 What should have been a simple meeting turns to murder , leaving Detectives Wheeler and Nichols to question an embassy , a security company , the victim 's relatives , and how it all connects to the Olympic Site Selection Committee . This episode is omitted in the DVD release of season 8 . 164 9 `` Family Values '' Jean de Segonzac Teleplay by : Walon Green Story by : Walon Green & Antoinette Stella June 21 , 2009 ( 2009 - 06 - 21 ) ( USA ) August 3 , 2009 ( 2009 - 08 - 03 ) ( NBC ) 08015 3.44 When a flier from a local Catholic high school drama production connects three murders , Detectives Goren and Eames are back on the case to understand the psychology of a religious fanatic before he claims another victim . 165 10 `` Salome in Manhattan '' `` Salome '' Steve Shill Andrew Lipsitz June 28 , 2009 ( 2009 - 06 - 28 ) ( USA ) August 10 , 2009 ( 2009 - 08 - 10 ) ( NBC ) 08006 N / A A celebrity chef 's star is on the rise as he plans the opening of a trendy restaurant with powerful partners . Yet his world is upended when his tabloid - friendly , gorgeous girlfriend and business partner is killed under mysterious circumstances . Detectives Nichols and Wheeler enter the seductive world of power and privilege and discover desperation and murder , but the more they learn about the victim and the men in her life , the more they learn about who the true killer is . 166 11 `` Lady 's Man '' Ken Girotti Michael S. Chernuchin June 28 , 2009 ( 2009 - 06 - 28 ) ( USA ) August 17 , 2009 ( 2009 - 08 - 17 ) ( NBC ) 08011 N / A Detectives Goren and Eames are back on the case to investigate the killing of a man who became famous for dodging a murder conviction because of a mishandled trial . The man spun his notoriety into a TV show but turned up dead on his birthday . Eames had worked the case of his first wife 's murder 10 years earlier . The case also involves an ADA ( Raul Esparza ) who has proven a thorn in Eames ' side more than once . 167 12 `` Passion '' Jonathan Herron Michael S. Chernuchin July 12 , 2009 ( 2009 - 07 - 12 ) ( USA ) August 24 , 2009 ( 2009 - 08 - 24 ) ( NBC ) 08012 3.47 Egocentric poet Jacob Garrety ( Will Chase ) would do anything to keep his poetry journal , `` The Village Quarterly '' , afloat . When foundation president Don McCallum shows up and announces he is cutting funding to the journal , Jacob appeals to assistant and lover Lauren to use her sexuality to change Don 's mind . Though reluctant , she agrees . While Jacob enjoys the advances of arts patron Sandra Dunbar ( Sarah Rafferty ) at a poetry reading , Lauren carries out Jacob 's wish , and winds up dead on the street . Detectives Nichols and Wheeler discover the deadly passion that exists behind the arts . 168 13 `` All In '' David Manson Teleplay by : Pamela Wechsler , Antoinette Stella , & Walon Green Story by : Pamela Wechsler July 19 , 2009 ( 2009 - 07 - 19 ) ( USA ) August 31 , 2009 ( 2009 - 08 - 31 ) ( NBC ) 08013 4.14 When poker genius Josh Snow ( Aaron Stanford ) loses $80,000 in a card game , backer and bookie Lou Cardinale ( Boris McGiver ) forces him into collections to work off the losses . Lou gives him a . 38 and a box of blanks to extract gambling debts , and sends along his mistress , Angela ( Aleksa Palladino ) , to keep an eye on the money . When Josh first collects from a guy in the local neighborhood , he shoots a blank at him . The guy gave him twenty thousand dollars and then he collects from Kip McGonagle ( Robert Leeshock ) . He fires the gun expecting a blank , but a real bullet kills Kip in the street . Detectives Goren and Eames , who know Snow from a former case ( identical historical plot elements , but different actor and character 's name , from season five 's `` Cruise to Nowhere '' ) , enter an elaborate game where they must join in the play , or be played . 169 14 `` Major Case '' Chris Zalla Andrew Lipsitz July 26 , 2009 ( 2009 - 07 - 26 ) ( USA ) August 31 , 2009 ( 2009 - 08 - 31 ) ( NBC ) 08014 4.63 A drug dealer is killed the night before she plans to leave town to live on her cousin 's farm . After Wheeler goes into labor , Eames pairs up with Nichols to investigate and find the girl 's killer . But when Nichols suspects the girl 's killer is an old friend ( Dylan Baker ) who works in the medical examiner 's office , Nichols does all he can to prove that he killed the victim , but it could cost Nichols his job in the process . Last episode to feature Julianne Nicholson ( Detective Megan Wheeler ) ; she is replaced by Kathryn Erbe ( Detective Alexandra Eames ) for the remainder of season eight . As of season nine , she is replaced by Saffron Burrows ( Detective Serena Stevens ) . 170 15 `` Alpha Dog '' Norberto Barba Walon Green August 2 , 2009 ( 2009 - 08 - 02 ) ( USA ) September 7 , 2009 ( 2009 - 09 - 07 ) ( NBC ) 08007 4.23 A hunky posterboy with a million - dollar torso has what others crave : sex appeal . When he shows up dead after a night of sex and drugs with an elusive woman , detectives Goren and Eames uncover the sexual paranoia behind the murder . 171 16 `` Revolution '' John David Coles Michael S. Chernuchin August 9 , 2009 ( 2009 - 08 - 09 ) ( USA ) September 7 , 2009 ( 2009 - 09 - 07 ) ( NBC ) 08016 4.83 A revolutionary plans the kidnapping of a powerful banking executive , but the heist goes wrong and the executive is killed . While probing the murder , Nichols and Eames must also prevent a terrorist campaign . After this episode , Ed Zuckerman and Michael S. Chernuchin leave the show as executive producers . Zuckerman returned to Law & Order as its executive producer and Chernuchin as its co-executive producer . Walon Green takes over as executive producer / show runner for all episodes ."
+   ],
+   "model_answer": "“The Glory That Was ...”"
+  },
+  {
+   "id": "8b55d24434f9101a",
+   "kind": "answer",
+   "question": "does microsoft surface pro 4 come with keyboard",
+   "gold_answers": [
+    "no",
+    "yes"
+   ],
+   "model_answer": "No, the Type Cover is sold separately."
+  },
+  {
+   "id": "20dfdc16c0ac69ee",
+   "kind": "answer",
+   "question": "where do we draw the line between painting and drawing",
+   "gold_answers": [
+    "Drawing is one of the major forms of expression within the visual arts . It is generally concerned with the marking of lines and areas of tone onto paper / other material , where the accurate representation of the visual world is expressed upon a plane surface . Traditional drawings were monochrome , or at least had little colour , while modern colored - pencil drawings may approach or cross a boundary between drawing and painting . In Western terminology , drawing is distinct from painting , even though similar media often are employed in both tasks . Dry media , normally associated with drawing , such as chalk , may be used in pastel paintings . Drawing may be done with a liquid medium , applied with brushes or pens . Similar supports likewise can serve both : painting generally involves the application of liquid paint onto prepared canvas or panels , but sometimes an underdrawing is drawn first on that same support ."
+   ],
+   "model_answer": "There’s no strict boundary; painting generally applies liquid paint to a prepared surface, while drawing focuses on making marks."
+  },
+  {
+   "id": "b159aab6220b889c",
+   "kind": "answer",
+   "question": "what caused the breakup of the democratic republican party",
+   "gold_answers": [
+    "the disputed 1824 presidential election"
+   ],
+   "model_answer": "Factional divisions over federal power and economic policy, culminating in the 1824 election."
+  },
+  {
+   "id": "5d8a81899eaf514e",
+   "kind": "answer",
+   "question": "where do car factories tend to be located and why",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Near transportation, labor, materials, energy, and markets."
+  },
+  {
+   "id": "6a370993c2e9ffa1",
+   "kind": "answer",
+   "question": "where does captain america civil war take place",
+   "gold_answers": [
+    "approximately one year after Ultron's defeat in the nation of Sokovia at the hands of the Avengers"
+   ],
+   "model_answer": "Across locations including Lagos, Siberia, Sokovia, and Wakanda."
+  },
+  {
+   "id": "06c95e6cd09948e2",
+   "kind": "answer",
+   "question": "texas flip and move how does it work",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Renovators buy houses at auction, move and renovate them, then resell them at auction."
+  },
+  {
+   "id": "285b9458d26d4de1",
+   "kind": "answer",
+   "question": "what was taking place before the industrial revolution",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The Agricultural Revolution"
+  },
+  {
+   "id": "07b6a81a8fd6a89e",
+   "kind": "answer",
+   "question": "what is the use of adobe flash cs3 professional",
+   "gold_answers": [
+    "supported modern programming practices and enabled business applications to be developed with Flash"
+   ],
+   "model_answer": "Creating Flash animations and interactive applications."
+  },
+  {
+   "id": "8d510fddf4611e41",
+   "kind": "answer",
+   "question": "cast of law & order special victim unit",
+   "gold_answers": [
+    "Christopher Meloni",
+    "Mariska Hargitay",
+    "Richard Belzer",
+    "Dann Florek",
+    "Michelle Hurd",
+    "Stephanie March",
+    "Ice-T",
+    "Tamara Tunie",
+    "B. D. Wong",
+    "Diane Neal",
+    "Adam Beach",
+    "Michaela McManus",
+    "Danny Pino",
+    "Kelli Giddish",
+    "Raúl Esparza",
+    "Peter Scanavino"
+   ],
+   "model_answer": "Mariska Hargitay, Christopher Meloni, Richard Belzer, Dann Florek, Ice-T, and B.D. Wong."
+  },
+  {
+   "id": "e1dc6f488c8f8c1c",
+   "kind": "answer",
+   "question": "global trade during the ming dynasty of china",
+   "gold_answers": [
+    "The Ming dynasty also engaged in a thriving trade with both Europe and Japan . The amount of silver flowing into the Ming dynasty was estimated by Joseph Needham at 300 million taels , which is equivalent to more than 190 billion dollars in today 's money . In addition to silver , the Ming also imported many European firearms , in order to ensure the modernness of their weapons ."
+   ],
+   "model_answer": "Ming China traded extensively with Europe and Japan, importing large amounts of silver and European firearms."
+  },
+  {
+   "id": "cb65d60106968855",
+   "kind": "answer",
+   "question": "who has been ranked no. 1 in the latest football rankings announced by fifa",
+   "gold_answers": [
+    "Germany"
+   ],
+   "model_answer": "Spain"
+  },
+  {
+   "id": "18f9c88aa38b5aed",
+   "kind": "answer",
+   "question": "two examples where low voltage transformers are used",
+   "gold_answers": [
+    "toys",
+    "doorbell installations"
+   ],
+   "model_answer": "Electronic devices and doorbells"
+  },
+  {
+   "id": "ddd8d11c9fd18e7a",
+   "kind": "answer",
+   "question": "who said if a tree falls in the woods and nobody hears it",
+   "gold_answers": [
+    "Charles Riborg Mann",
+    "George Ransom Twiss",
+    "Charles Riborg Mann and George Ransom Twiss",
+    "Philosopher George Berkeley"
+   ],
+   "model_answer": "Unknown\n"
+  },
+  {
+   "id": "8fa0cffeae13e632",
+   "kind": "answer",
+   "question": "polar moment of inertia vs area moment of inertia",
+   "gold_answers": [
+    "Polar moment of inertia is a quantity used to predict an object 's ability to resist torsion , in objects ( or segments of objects ) with an invariant circular cross section and no significant warping or out - of - plane deformation . It is used to calculate the angular displacement of an object subjected to a torque . It is analogous to the area moment of inertia , which characterizes an object 's ability to resist bending and is required to calculate displacement ."
+   ],
+   "model_answer": "Polar moment of inertia resists torsion; area moment of inertia resists bending."
+  },
+  {
+   "id": "222b6d36cae78800",
+   "kind": "answer",
+   "question": "who starred in the movie summer of 42",
+   "gold_answers": [
+    "Gary Grimes",
+    "Jerry Houser",
+    "Oliver Conant",
+    "Jennifer O'Neill",
+    "Katherine Allentuck",
+    "Christopher Norris",
+    "Maureen Stapleton",
+    "Robert Mulligan"
+   ],
+   "model_answer": "Gary Grimes, Jennifer O’Neill, and Jerry Houser"
+  },
+  {
+   "id": "1e627e927bcdf465",
+   "kind": "answer",
+   "question": "who was not killed on the 1959 plane crash",
+   "gold_answers": [
+    "The Day the Music Died The memorial marking the crash site , 2003 Accident summary Date February 3 , 1959 ( 1959 - 02 - 03 ) Summary Spatial disorientation , loss of control in near - IMC conditions Site Near Clear Lake , Iowa , United States 43 ° 13 ′ 13.3 '' N 93 ° 22 ′ 53.1 '' W ﻿ / ﻿ 43.220361 ° N 93.381417 ° W ﻿ / 43.220361 ; - 93.381417 Coordinates : 43 ° 13 ′ 13.3 '' N 93 ° 22 ′ 53.1 '' W ﻿ / ﻿ 43.220361 ° N 93.381417 ° W ﻿ / 43.220361 ; - 93.381417 Passengers Crew Fatalities 4 ( all ) Survivors 0 Aircraft type Beechcraft Bonanza Operator Dwyer Flying Service , Mason City , Iowa Registration N3794N Flight origin Mason City Municipal Airport , Iowa Destination Hector Airport , North Dakota",
+    "At the time , Holly and his band , consisting of Waylon Jennings , Tommy Allsup , and Carl Bunch , were playing on the `` Winter Dance Party '' tour across the United States Midwest . Rising artists Valens and Richardson had joined the tour , as well . The long journeys between venues on board the cold , uncomfortable tour buses adversely affected the performers , with cases of flu and even frostbite . After stopping at Clear Lake to perform , and frustrated by such conditions , Holly chose to charter a plane to reach their next venue in Moorhead , Minnesota . Richardson , who had the flu , swapped places with Jennings , taking his seat on the plane , while Allsup lost his seat to Valens on a coin toss . Soon after takeoff , late at night and in poor , wintry weather conditions , the pilot lost control of the light aircraft , a Beechcraft Bonanza , which subsequently crashed into a cornfield . Everyone on board was killed . The event has since been mentioned in various songs and films . A number of monuments have been erected at the crash site and in Clear Lake , where an annual memorial concert is also held at the Surf Ballroom , the venue that hosted the artists ' last performance ."
+   ],
+   "model_answer": "Waylon Jennings"
+  },
+  {
+   "id": "ab522aff97064d81",
+   "kind": "answer",
+   "question": "where does the story the great gatsby take place",
+   "gold_answers": [
+    "the fictional town of West Egg on prosperous Long Island",
+    "Long Island of 1922"
+   ],
+   "model_answer": "Long Island, New York, in the fictional towns of West Egg and East Egg."
+  },
+  {
+   "id": "e0265309ba84a71d",
+   "kind": "answer",
+   "question": "if there is a line that lies parallel to the horizon it is said to be",
+   "gold_answers": [
+    "A vanishing point"
+   ],
+   "model_answer": "Parallel to the picture plane."
+  },
+  {
+   "id": "f94344b7d99a5eee",
+   "kind": "answer",
+   "question": "where no man has gone before episode cast",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "William Shatner, Leonard Nimoy, Gary Lockwood, Sally Kellerman, Paul Fix, and Lloyd Haynes."
+  },
+  {
+   "id": "7a5a12f7d9640715",
+   "kind": "answer",
+   "question": "are there many copies of sir gawain and the green knight",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No—only one surviving manuscript is known."
+  },
+  {
+   "id": "9f63830637e8f76e",
+   "kind": "answer",
+   "question": "who's playing the late game on sunday night football",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Chicago Bears and Philadelphia Eagles"
+  },
+  {
+   "id": "4a7509f14ff52b19",
+   "kind": "answer",
+   "question": "who was the league of nations made up of",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "A General Assembly, an Executive Council, and a permanent secretariat."
+  },
+  {
+   "id": "101ce507c01cd733",
+   "kind": "answer",
+   "question": "what did the american flag look like in 1896",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "A flag with 45 stars."
+  },
+  {
+   "id": "ddbfe0648d05ff9e",
+   "kind": "answer",
+   "question": "with which regions does australia have historical ties",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Britain and Europe, as well as the Asia-Pacific region."
+  },
+  {
+   "id": "1a27f8c648cac103",
+   "kind": "answer",
+   "question": "the first european town in the present-day united states was new orleans",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No, St. Augustine."
+  },
+  {
+   "id": "11954e9f71b63a42",
+   "kind": "answer",
+   "question": "how did the apostles creed get its name",
+   "gold_answers": [
+    "The first mention of the expression `` Apostles ' Creed '' occurs in a letter of AD 390 from a synod in Milan and may have been associated with the belief , widely accepted in the 4th century , that , under the inspiration of the Holy Spirit , each of the Twelve Apostles contributed an article of a creed .",
+    "The title Symbolum Apostolicum ( Symbol or Creed of the Apostles ) appears for the first time in a letter , probably written by Ambrose , from a Council in Milan to Pope Siricius in about AD 390 `` Let them give credit to the Creed of the Apostles , which the Roman Church has always kept and preserved undefiled '' . But what existed at that time was not what is now known as the Apostles ' Creed but a shorter statement of belief that , for instance , did not include the phrase `` maker of heaven and earth '' , a phrase that may have been inserted only in the 7th century ."
+   ],
+   "model_answer": "From the belief that the twelve apostles each contributed an article of the creed."
+  },
+  {
+   "id": "4272bacc00ad72cb",
+   "kind": "answer",
+   "question": "when was the last time penn state was #2",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "October 22, 2017"
+  }
+ ],
+ "evidence": []
+}

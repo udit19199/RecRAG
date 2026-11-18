@@ -1,0 +1,465 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "92ab6963f79ff263",
+   "gold": [
+    {
+     "sentence": " She is married to Scott Stapp, former frontman of the band Creed, and current frontman for the band Art of Anarchy.",
+     "facts": {
+      "0.0": "The woman described is married to Scott Stapp.",
+      "0.1": "Scott Stapp is a former frontman of the band Creed.",
+      "0.2": "Scott Stapp is the current frontman for the band Art of Anarchy."
+     }
+    },
+    {
+     "sentence": " The band's third album, \"Weathered\", was released in 2001 with Tremonti handling bass before the band disbanded in 2004 due to increasing tension between members.",
+     "facts": {
+      "1.0": "The band's third album, “Weathered”, was released in 2001.",
+      "1.1": "Tremonti handled bass when “Weathered” was released.",
+      "1.2": "The band disbanded in 2004.",
+      "1.3": "The band disbanded in 2004 due to increasing tension between members."
+     }
+    }
+   ],
+   "items": [
+    "Jaclyn Stapp\nJaclyn Nesheiwat Stapp (born July 29, 1980) is a beauty queen, philanthropist and fashion model with pageant roots in Florida and New York.\n\n She is married to Scott Stapp, former frontman of the band Creed, and current frontman for the band Art of Anarchy.\n\n Her most notable titles include Mrs. Florida America 2008 and Miss New York USA 2004.\n\n She is executive director of The Scott Stapp With Arms Wide Open Foundation.",
+    "Scott Weiland\nScott Richard Weiland ( ; born Scott Richard Kline; October 27, 1967 – December 3, 2015) was an American musician, singer and songwriter.\n\n During a career spanning three decades, Weiland was best known as the lead singer of the band Stone Temple Pilots from 1989 to 2002 and 2008 to 2013.\n\n He was also a member of supergroup Velvet Revolver from 2003 to 2008 and recorded one album with another supergroup, Art of Anarchy.\n\n He established himself as a solo artist as well, releasing three studio albums, two cover albums, and collaborations with several other musicians throughout his career.",
+    "Creedence Clearwater Revival (album)\nCreedence Clearwater Revival is the debut studio album by the American rock band Creedence Clearwater Revival, released in 1968.",
+    "Doug Clifford\nDouglas \"Cosmo\" Clifford (born April 24, 1945 in Palo Alto, California) is an American drummer, best known as a founding member of Creedence Clearwater Revival.\n\n After the group dissolved in the early 1970s, Clifford released a solo album and later joined CCR bassist Stu Cook in the Don Harrison Band.\n\n In 1995, Clifford and Cook formed the band Creedence Clearwater Revisited, performing live versions of Creedence Clearwater Revival songs.",
+    "A Compilation of Scott Weiland Cover Songs\nA Compilation of Scott Weiland Cover Songs is a compilation album and third solo studio album by Stone Temple Pilots frontman Scott Weiland, released on August 30, 2011.\n\n The album consists entirely of cover songs, featuring an array of covers of artists that inspired Weiland, such as David Bowie, The Beatles, The Rolling Stones, and The Smiths.\n\n The album was originally set to be released together with Weiland's memoir \"Not Dead & Not for Sale\" but Weiland decided later to release the album by itself exclusively in digital format.",
+    "The Studdogs\nThe band was signed by Orange Recordings in Los Angeles and toured all over the country, sharing bills with the Demolition Doll Rods, Bob Log III, The Fleshtones, and Immortal Lee County Killers and a one-time show with the Suicide Girls Burlesque Tour in Orlando.\n\n While in the Studdogs, Rich Evans began promoting concerts under the tag \"Mutiny Productions\".\n\n He now heads the independent \"Florida's Dying\" label, promoting and releasing material from the Florida-underground music scene.\n\n Kyle Justin joined the band on drums in early 2002 to replace Jason, who was moving to Texas.\n\n Kyle vacated his position as drummer in 2003 to pursue a music career in Los Angeles.\n\n Eric Gebhardt left the band in 2005 to pursue a solo career under the alias Red Mouth.",
+    "Creed (band)\nCreed is an American rock band formed in 1993 in Tallahassee, Florida.\n\n The band's best-known line-up consists of lead vocalist Scott Stapp, guitarist and vocalist Mark Tremonti, bassist Brian Marshall, and drummer Scott Phillips.\n\n Creed released two studio albums, \"My Own Prison\" in 1997 and \"Human Clay\" in 1999, before Marshall left the band in 2000.\n\n The band's third album, \"Weathered\", was released in 2001 with Tremonti handling bass before the band disbanded in 2004 due to increasing tension between members.\n\n Tremonti, Marshall, and Phillips went on to found Alter Bridge while Stapp followed a solo career.",
+    "Creedence Clearwater Revisited\nCreedence Clearwater Revisited is an American rock band formed in 1995 by two former members of Creedence Clearwater Revival – a much more well-known band with a very similar name.\n\n It is known for playing the music that was originally made famous by Creedence Clearwater Revival.\n\n The two common band members are Stu Cook (bass) and Doug \"Cosmo\" Clifford (drums).",
+    "Creedence Clearwater Revival: Box Set\nCreedence Clearwater Revival: Box Set is a box set by Creedence Clearwater Revival, released in 2001.\n\n It contains all of their complete studio albums, two complete live albums, and material recorded by the band under their previous names \"The Golliwogs\" and \"The Blue Velvets\".\n\n In November 2013 the box set was reissued with different artwork.\n\n This box set spans their career, and contains all of their complete materials.",
+    "Scott Weiland and the Wildabouts\nScott Weiland and the Wildabouts (sometimes billed simply as The Wildabouts) were a rock and roll band formed sometime around 2012 by former Stone Temple Pilots and Velvet Revolver lead singer Scott Weiland, along with bassist Tommy Baker, guitarist Jeremy Brown, and multi-instrumentalist Doug Grean.\n\n The Wildabouts were marred with several roster changes (including the death of guitarist Jeremy Brown) and ultimately disbanded after Weiland's sudden death on a tour bus in late 2015."
+   ]
+  },
+  {
+   "id": "0211c1670614f802",
+   "gold": [
+    {
+     "sentence": "The Rescuers is a 1977 American animated comedy-drama adventure film produced by Walt Disney Productions and first released on June 22, 1977, by Buena Vista Distribution.",
+     "facts": {
+      "0.0": "The Rescuers is a 1977 film.",
+      "0.1": "The Rescuers is an American animated film.",
+      "0.2": "The Rescuers is a comedy-drama adventure film.",
+      "0.3": "The Rescuers was produced by Walt Disney Productions.",
+      "0.4": "The Rescuers was first released on June 22, 1977.",
+      "0.5": "The Rescuers was first released by Buena Vista Distribution."
+     }
+    },
+    {
+     "sentence": "The Muppets is a 2011 American musical comedy film and the seventh theatrical film featuring the Muppets.",
+     "facts": {
+      "1.0": "The Muppets is a 2011 film.",
+      "1.1": "The Muppets is an American film.",
+      "1.2": "The Muppets is a musical comedy film.",
+      "1.3": "The Muppets is the seventh theatrical film featuring the Muppets."
+     }
+    }
+   ],
+   "items": [
+    "Muppet Treasure Island\nMuppet Treasure Island is a 1996 American musical adventure comedy film based on Robert Louis Stevenson's \"Treasure Island\".\n\n It is the fifth feature film to star The Muppets, and was directed by Brian Henson.",
+    "List of Walt Disney Pictures films\nThis is a list of films released theatrically under the Walt Disney Pictures banner (known as that since 1983, with \"Never Cry Wolf\" as its first release) and films released before that under the former name of the parent company, Walt Disney Productions (1929–1983).\n\n Most films listed here were distributed in the United States by the company's distribution division, Walt Disney Studios Motion Pictures (formerly known as Buena Vista Distribution Company [1953–1987] and Buena Vista Pictures Distribution [1987–2007]).\n\n The Disney features produced before \"Peter Pan\" (1953) were originally distributed by RKO Radio Pictures, and are now distributed by Walt Disney Studios Motion Pictures.",
+    "List of The Muppets productions\nThis is a list of productions based on The Muppets characters and franchise, including films, television series and specials, and other media.\n\n The franchise's main work is \"The Muppet Show\", a syndicated television series which ran from 1976 to 1981.\n\n The franchise includes eight feature films; \"The Muppet Movie\", \"The Great Muppet Caper\", \"The Muppets Take Manhattan\", \"The Muppet Christmas Carol\", \"Muppet Treasure Island\", \"Muppets from Space\", \"The Muppets\", and \"Muppets Most Wanted\".\n\n The franchise also includes other series such as \"Muppets Tonight\" and \"The Muppets\".",
+    "Disney Renaissance\nIn the history of The Walt Disney Company, the Disney Renaissance refers to the era from 1989 to 1999 during which Walt Disney Feature Animation (renamed Walt Disney Animation Studios in 2006) experienced a creative resurgence in producing successful animated films based on well-known stories, which restored public and critical interest in The Walt Disney Company as a whole.\n\n During this era, the studio produced and released ten animated films: \"The Little Mermaid\" (1989), \"The Rescuers Down Under\" (1990), \"Beauty and the Beast\" (1991), \"Aladdin\" (1992), \"The Lion King\" (1994), \"Pocahontas\" (1995), \"The Hunchback of Notre Dame\" (1996), \"Hercules\" (1997), \"Mulan\" (1998) and \"Tarzan\" (1999).",
+    "Muppets Most Wanted (soundtrack)\nMuppets Most Wanted: An Original Walt Disney Records Soundtrack is a soundtrack album released by Walt Disney Records on March 18, 2014 for the musical comedy film \"Muppets Most Wanted\".\n\n The soundtrack features six original songs, two re-recordings of popular Muppet songs (\"The Muppet Show Theme\" and \"Together Again\"), three cover versions of existing songs (Allen Toussaint's \"Working in the Coal Mine\", Maroon 5's \"Moves Like Jagger\", and Los del Río's \"Macarena (Bayside Boys Mix)\"), an orchestral suite by Christophe Beck, five demos by Bret McKenzie, and eight dialogue tracks.",
+    "The Muppets (film)\nThe Muppets is a 2011 American musical comedy film and the seventh theatrical film featuring the Muppets.\n\n The film is directed by James Bobin, written by Jason Segel and Nicholas Stoller, produced by David Hoberman and Todd Lieberman, and stars Segel, Amy Adams, Chris Cooper and Rashida Jones, as well as Muppet performers Steve Whitmire, Eric Jacobson, Dave Goelz, Bill Barretta, David Rudman, Matt Vogel, and Peter Linz.\n\n Bret McKenzie served as music supervisor, writing four of the film's five original songs, and Christophe Beck composed the film's score.\n\n In \"The Muppets\", devoted fan Walter, his brother Gary, and Gary's girlfriend Mary help Kermit the Frog reunite the disbanded Muppets, as they must raise $10 million to save the Muppet Theater from Tex Richman, a businessman who plans to demolish the studio to drill for oil.",
+    "The Muppets (soundtrack)\nThe Muppets: An Original Walt Disney Records Soundtrack is a soundtrack album released by Walt Disney Records on November 22, 2011 for the musical comedy film \"The Muppets\".\n\n The soundtrack features five original songs, four re-recordings and remasterings of popular Muppet songs (\"The Muppet Show Theme\", \"Rainbow Connection\", and \"Mah Nà Mah Nà\"), two cover versions of existing songs (Cee Lo Green's \"Forget You\" and Nirvana's \"Smells Like Teen Spirit\"), two standalone songs (Paul Simon's \"Me and Julio Down by the Schoolyard\" and Starship's \"We Built This City\"), and fifteen dialogue tracks.\n\n It also features the song \"Man or Muppet\", which won the Academy Award for Best Original Song.\n\n The soundtrack was also nominated for Best Compilation Soundtrack for Visual Media at the 55th Grammy Awards.",
+    "The Rescuers Down Under\nThe Rescuers Down Under is a 1990 American animated comedy-drama adventure film produced by Walt Disney Feature Animation and released by Walt Disney Pictures on November 16, 1990.\n\n The 29th Disney animated feature film, the film is the sequel to the 1977 animated film \"The Rescuers\", which was based on the novels of Margery Sharp.\n\n Set in the Australian Outback, the film centers on Bernard and Bianca traveling to Australia to save a boy named Cody from a villainous poacher in pursuit of an endangered bird of prey.",
+    "The Rescuers\nThe Rescuers is a 1977 American animated comedy-drama adventure film produced by Walt Disney Productions and first released on June 22, 1977, by Buena Vista Distribution.\n\n The 23rd Disney animated feature film, the film is about the Rescue Aid Society, an international mouse organization headquartered in New York City and shadowing the United Nations, dedicated to helping abduction victims around the world at large.\n\n Two of these mice, jittery janitor Bernard (Bob Newhart) and his co-agent, the elegant Miss Bianca (Eva Gabor), set out to rescue Penny (Michelle Stacy), an orphan girl being held prisoner in the Devil's Bayou by treasure huntress Madame Medusa (Geraldine Page).",
+    "The Muppets at Walt Disney World\nThe Muppets at Walt Disney World is a television special starring Jim Henson's Muppets at Walt Disney World in Lake Buena Vista, Florida.\n\n The special aired on NBC as part of \"The Magical World of Disney\" on May 6, 1990, and turned out to be the last Muppets special that Henson would work on (he would die 10 days following its airing, on May 16)."
+   ]
+  },
+  {
+   "id": "a3b2ba5cac3b0f18",
+   "gold": [
+    {
+     "sentence": " The song is one of only two Van Halen tracks featuring Sammy Hagar playing a rhythm guitar part, which he played on a Gibson acoustic.",
+     "facts": {
+      "0.0": "The song is one of only two Van Halen tracks featuring Sammy Hagar playing a rhythm guitar part.",
+      "0.1": "Sammy Hagar played the rhythm guitar part on a Gibson acoustic."
+     }
+    },
+    {
+     "sentence": "OU812 (pronounced \"Oh You Ate One Too\") is the eighth studio album by American hard rock band Van Halen, released in 1988, and the second to feature vocalist Sammy Hagar.",
+     "facts": {
+      "1.0": "OU812 is pronounced 'Oh You Ate One Too'.",
+      "1.1": "OU812 is the eighth studio album by American hard rock band Van Halen.",
+      "1.2": "OU812 was released in 1988.",
+      "1.3": "OU812 is the second Van Halen album to feature vocalist Sammy Hagar."
+     }
+    }
+   ],
+   "items": [
+    "&quot;Happy&quot; in Galoshes\n\"Happy\" in Galoshes is the second solo album by American rock singer Scott Weiland.\n\n Weiland, known for his roles as the lead singer in Stone Temple Pilots and Velvet Revolver, released his first album, \"12 Bar Blues\" in 1998.\n\n Ten years later, \"\"Happy\" in Galoshes\" served as the official follow-up.\n\n Two versions have been released, a single disc and double disc deluxe version—the deluxe edition offers a second disc of 10 extra tracks.\n\n The album was released November 25, 2008 on Weiland's own Softdrive Records.\n\n Produced by Doug Grean and Scott Weiland, with select tracks recorded by Steve Albini, the album features guest appearances by Paul Oakenfold and No Doubt members Adrian Young, Tony Kanal, and Tom Dumont.\n\n Oakenfold appears on a cover of David Bowie's \"Fame.\"\n\n Weiland has cited Bowie as one of his main influences.",
+    "OU812 Tour\nThe OU812 Tour was a concert tour by hard rock band Van Halen.\n\n It was the second tour to include dates in Japan, and was the second with Sammy Hagar as vocalist (who had settled into the role more by this point).\n\n It followed the Monsters of Rock Tour 1988, which had formed the first part of the promotion for the \"OU812\" album.",
+    "Keisuke Kuwata (album)\nKeisuke Kuwata is the eponymous studio album recorded by Keisuke Kuwata, a frontman of the Japanese rock band Southern All Stars.\n\n It was released by Taishita label under the Victor Entertainment in July 1988, shortly after the 10th anniversary of the band.\n\n Aside from the 1982 live recording album \"Kamon Yuzo and Victor Wheels Live\" released under the pseudonym Yūzō Kamon, it was first Kuwata's solo effort.",
+    "Steve Augeri is an American rock singer known for Tall Stories, Tyketto, and Journey. English multi-instrumentalist Steve Winwood performed with the Spencer Davis Group, Traffic, and Blind Faith; his debut solo album reached UK No. 12, while two compilations document his work. His 1986 hit “Back in the High Life Again” topped the US Adult Contemporary chart for three weeks. Pedal-steel guitarist Speedy West played with Jimmy Bryant and on recordings by Tennessee",
+    "Keisuke Kuwata\nKeisuke Kuwata (桑田 佳祐 , Kuwata Keisuke , born February 26, 1956) is a Japanese multi-instrumentalist, singer-songwriter, and frontman for the Southern All Stars, as well of his own solo band, the Kuwata band.\n\n He has also done significant amount of scoring music for films.\n\n He went to Aoyama Gakuin University.",
+    "Finish What Ya Started\n\"Finish What Ya Started\" is a song by Van Halen taken from their 1988 album \"OU812\".\n\n Despite the album being seemingly complete, Eddie Van Halen came up with the riff at 2 in the morning and went down to his then-neighbor Sammy Hagar to show it.\n\n Hagar let Eddie in, and the two played guitars in his balcony until they had a completed song.\n\n Once Eddie left, Hagar decided to write the lyrics despite being late at night.\n\n The theme wound up being unfulfilled sex, summed up by Hagar as \"blue balls.\n\n In the song, Eddie Van Halen recorded his guitar part on a Fender Stratocaster plugged direct into the studio mixing console.\n\n The song is one of only two Van Halen tracks featuring Sammy Hagar playing a rhythm guitar part, which he played on a Gibson acoustic.",
+    "Go Too\nGo Too (1977) is Go's third album.\n\n Go was founded by Stomu Yamashta, Steve Winwood and Michael Shrieve.\n\n For this album, Jess Roden replaced Steve Winwood (who had left the group).\n\n The style of the music became modified accordingly.\n\n In addition, Linda Lewis was hired as a singer.\n\n Together with Paul Jackson, Jr. and the orchestra of Martyn Ford the album unified various soundscapes.",
+    "OU812\nOU812 (pronounced \"Oh You Ate One Too\") is the eighth studio album by American hard rock band Van Halen, released in 1988, and the second to feature vocalist Sammy Hagar.\n\n Van Halen started work on the album in September 1987 and completed it in April 1988, just one month before its release.",
+    "Joe Gooch\nJoe Gooch (born 3 May 1977) was Ten Years After's most recent lead vocalist and lead guitarist.",
+    "The entries cover songs and recordings spanning R&B, rock, pop, and folk. Highlights include Johnny Otis’s 1958 “Willie and the Hand Jive” (US #9), later covered by Eric Clapton (#26) and George Thorogood; Van Halen’s “Finish What Ya Started,” co-written overnight by Eddie Van Halen and Sammy Hagar; and Johnny Otis’s “Every Beat of My Heart,” later a major hit for the Pips."
+   ]
+  },
+  {
+   "id": "6e756fc2ebb333c6",
+   "gold": [
+    {
+     "sentence": "Nelson Algren (March 28, 1909 – May 9, 1981) was an American writer.",
+     "facts": {
+      "0.0": "Nelson Algren was born March 28, 1909.",
+      "0.1": "Nelson Algren died May 9, 1981.",
+      "0.2": "Nelson Algren was an American writer."
+     }
+    },
+    {
+     "sentence": "Nathanael West (born Nathan Weinstein; October 17, 1903 – December 22, 1940) was an American author, screenwriter and satirist.",
+     "facts": {
+      "1.0": "Nathanael West was born Nathan Weinstein.",
+      "1.1": "Nathanael West was born October 17, 1903.",
+      "1.2": "Nathanael West died December 22, 1940.",
+      "1.3": "Nathanael West was an American author.",
+      "1.4": "Nathanael West was an American screenwriter.",
+      "1.5": "Nathanael West was an American satirist."
+     }
+    }
+   ],
+   "items": [
+    "A Walk on the Wild Side\nA Walk on the Wild Side is a 1956 novel by Nelson Algren, most often quoted as the source for Algren's \"three rules of life\": \"Never play cards with a man called Doc.\n\n Never eat at a place called Mom's.\n\n Never sleep with a woman whose troubles are worse than your own.\"",
+    "Bernard Malamud\nBernard Malamud (April 26, 1914 – March 18, 1986) was an American novelist and short story writer.\n\n Along with Saul Bellow and Philip Roth, he was one of the best known American Jewish authors of the 20th century.\n\n His baseball novel, \"The Natural\", was adapted into a 1984 film starring Robert Redford.\n\n His 1966 novel \"The Fixer\" (also filmed), about antisemitism in Tsarist Russia, won both the National Book Award and the Pulitzer Prize.",
+    "Nathanael West\nNathanael West (born Nathan Weinstein; October 17, 1903 – December 22, 1940) was an American author, screenwriter and satirist.",
+    "Chicago: City on the Make\nChicago: City on the Make is an essay by Nelson Algren published in 1951.\n\n Initially greeted with scorn by critics and newspaper editors in the city of its gaze (The \"Chicago Daily News\" famously called it a \"Case for Ra(n)t Control\"), it is now widely regarded by scholars as the definitive prose portrait of the city of Chicago, although it has never rivaled the literary status of Carl Sandburg's 1916 poem \"Chicago.\"\n\n Algren leans heavily on the imagery and themes developed by Sandburg, to whom Algren dedicated the book.\n\n Curiously, he also quietly leans upon a poem about New York called \"The City\" by Ben Maddow, from whom Algren lifted powerful images of urban life.\n\n Subsequent portraits of Chicago, such as Studs Terkel's 1985 \"Chicago\", have likewise leaned heavily upon Algren's work.",
+    "The Man with the Golden Arm (novel)\nThe Man with the Golden Arm is a novel by Nelson Algren, published by Doubleday in November 1949.\n\n One of the seminal novels of post-World War II American letters, \"The Man with the Golden Arm\" is widely considered Algren's greatest and most enduring work.\n\n It won the National Book Award in 1950.",
+    "Nelson DeMille\nNelson Richard DeMille (born August 23, 1943) is an American author of action adventure and suspense novels.\n\n His novels include \"Plum Island\", \"The Charm School\", and \"The Gold Coast\".\n\n DeMille has also written under the pen names Jack Cannon, Kurt Ladner, Ellen Kay and Brad Matthews.",
+    "Nelson Algren\nNelson Algren (March 28, 1909 – May 9, 1981) was an American writer.\n\n He may be best known for \"The Man with the Golden Arm\", a 1949 novel that won the National Book Award and was adapted as a 1955 film of the same name.",
+    "James F. Light\nJames F. Light was an American literary scholar, university vice president, and provost.\n\n During his academic career, he helped revive the works of satirist Nathanael West, with the first book length critical study of his work, \"Nathanael West: An Interpretive Study\", (Northwestern Univ.\n\n Press, 1961).\n\n He was also the leading authority on John William De Forest, the early American realist whose work he critiqued in \"John William De Forest\" (Twayne Pub., 1965), and he wrote extensively on J. D. Salinger, Robert Penn Warren and others.",
+    "Haniel Long\nHaniel Clark Long (March 9, 1888 – October 17, 1956) was an American poet, novelist, publisher and academic.\n\n He is best known for his novella, \"Interlinear to Cabeza de Vaca\" (1936), a fictionalized account of the true story of a Spanish conquistador in 16th century North America.",
+    "Donald Allen\nDonald Merriam Allen (Iowa, 1912 – San Francisco, August 29, 2004) was an influential editor, publisher, and translator of contemporary American literature.\n\n He is perhaps best known for his project \"The New American Poetry 1945-1960\" (1960), among the several important anthologies of contemporary American innovative writing he made available to the public.\n\n Allen began his working life as a Japanese translator within the US military, serving in WWII.\n\n After his military service, Allen became an editor at Grove Press, where he worked for sixteen years.\n\n He was one of the first translators of the Romanian-French Absurdist playwright Eugène Ionesco, and Allen's 1958 volume \"Four Plays of Eugène Ionesco\" helped to introduce the playwright to American audiences in the 1960s."
+   ]
+  },
+  {
+   "id": "50bbac8b5521a5d3",
+   "gold": [
+    {
+     "sentence": "John Kingsley \"Joe\" Orton (1 January 1933 – 9 August 1967) was an English playwright and author.",
+     "facts": {
+      "0.0": "John Kingsley Orton, known as Joe Orton, was born on 1 January 1933.",
+      "0.1": "Joe Orton died on 9 August 1967.",
+      "0.2": "Joe Orton was an English playwright.",
+      "0.3": "Joe Orton was an English author."
+     }
+    },
+    {
+     "sentence": " His public career was short but prolific, lasting from 1964 until his death three years later.",
+     "facts": {
+      "1.0": "Joe Orton's public career was short but prolific.",
+      "1.1": "Joe Orton's public career lasted from 1964 until his death.",
+      "1.2": "Joe Orton died three years after his public career began in 1964."
+     }
+    },
+    {
+     "sentence": " During this brief period he shocked, outraged, and amused audiences with his scandalous black comedies.",
+     "facts": {
+      "2.0": "During his brief public career, Joe Orton shocked audiences with his scandalous black comedies.",
+      "2.1": "During his brief public career, Joe Orton outraged audiences with his scandalous black comedies.",
+      "2.2": "During his brief public career, Joe Orton amused audiences with his scandalous black comedies."
+     }
+    },
+    {
+     "sentence": " The adjective \"Ortonesque\" is sometimes used to refer to work characterised by a similarly dark yet farcical cynicism.",
+     "facts": {
+      "3.0": "The adjective 'Ortonesque' is sometimes used to refer to work characterised by a dark yet farcical cynicism.",
+      "3.1": "The cynicism is similarly dark yet farcical."
+     }
+    },
+    {
+     "sentence": "Henry James, OM ((1843--)15 1843 – (1916--)28 1916 ) was an American author regarded as a key transitional figure between literary realism and literary modernism, and is considered by many to be among the greatest novelists in the English language.",
+     "facts": {
+      "4.0": "Henry James, OM, was an American author.",
+      "4.1": "Henry James was born in 1843.",
+      "4.2": "Henry James died in 1916.",
+      "4.3": "Henry James was regarded as a key transitional figure between literary realism and literary modernism.",
+      "4.4": "Henry James is considered by many to be among the greatest novelists in the English language."
+     }
+    },
+    {
+     "sentence": " He was the son of Henry James, Sr. and the brother of renowned philosopher and psychologist William James and diarist Alice James.",
+     "facts": {
+      "5.0": "Henry James was the son of Henry James, Sr.",
+      "5.1": "Henry James was the brother of the renowned philosopher and psychologist William James.",
+      "5.2": "Henry James was the brother of diarist Alice James."
+     }
+    }
+   ],
+   "items": [
+    "The Henry James Review\nThe Henry James Review is a triannual peer-reviewed academic journal established in 1979 and is the official publication of the Henry James Society.\n\n It is dedicated to the scholarly, critical, and theoretical study of the American writer Henry James.\n\n Each issue focuses on a specific theme of interest and seeks to promote understanding and study of James' contributions.\n\n The journal is published by the Johns Hopkins University Press and the current editor-in-chief is Susan M. Griffin (University of Louisville).",
+    "James Poe\nJames Poe (October 4, 1921 – January 24, 1980) was an American film and television screenwriter.\n\n He is best known for his work on the movies \"Around the World in 80 Days\" for which he jointly won an Academy Award in 1956, \"Cat on a Hot Tin Roof\", \"Summer and Smoke\", \"Lilies of the Field\", and \"They Shoot Horses, Don't They?\n\n\".",
+    "Joe Orton\nJohn Kingsley \"Joe\" Orton (1 January 1933 – 9 August 1967) was an English playwright and author.\n\n His public career was short but prolific, lasting from 1964 until his death three years later.\n\n During this brief period he shocked, outraged, and amused audiences with his scandalous black comedies.\n\n The adjective \"Ortonesque\" is sometimes used to refer to work characterised by a similarly dark yet farcical cynicism.",
+    "Henry James\nHenry James, OM ((1843--)15 1843 – (1916--)28 1916 ) was an American author regarded as a key transitional figure between literary realism and literary modernism, and is considered by many to be among the greatest novelists in the English language.\n\n He was the son of Henry James, Sr. and the brother of renowned philosopher and psychologist William James and diarist Alice James.",
+    "What the Butler Saw (play)\nWhat the Butler Saw is a farce written by the English playwright Joe Orton.\n\n It was premièred at the Queen's Theatre in London on 5 March 1969.\n\n It was Orton's final play and the second to be performed after his death, following \"Funeral Games\" in 1968.",
+    "Prick Up Your Ears\nPrick Up Your Ears is a 1987 British film, directed by Stephen Frears, about the playwright Joe Orton and his lover Kenneth Halliwell.\n\n The screenplay was written by Alan Bennett, based on the biography by John Lahr.\n\n The film stars Gary Oldman as Orton, Alfred Molina as Halliwell, Wallace Shawn as Lahr and Vanessa Redgrave as Peggy Ramsay.",
+    "Tatsuhiro Oshiro\nTatsuhiro Ōshiro (大城 立裕 , Ōshiro Tatsuhiro , born 19 September 1925) is a Japanese novelist and playwright.\n\n He was awarded the Akutagawa Prize in 1967 for his novella of the same year, \"The Cocktail Party\", which has been adapted for the stage and made into a film.\n\n Ōshiro has also been an innovator of the traditional Ryukyuan narrative dance form known as kumi odori.\n\n Having added twenty new pieces to the repertoire, Ōshiro is credited as having \"single-handedly revived the genre that originated in the 18th century\" by incorporating Okinawa shibai (dramas in the Okinawan language) and distinctive rhythms to construct a fluid, hybrid cultural identity.\n\n His writings have been noted for making Okinawan culture and history accessible to Japanese readership, while his more popular works have been critically praised for \"offering an acute perspective on the psychological and moral implications of war and military occupation.\"",
+    "The Ruffian on the Stair\nThe Ruffian On the Stair is a play by British playwright Joe Orton which was first broadcast on BBC Radio in August 1964.\n\n It is an unsympathetic yet comedic one-act portrayal of working class England, as played out by a couple and a mysterious young man who toys with their lives.\n\n It was based on \"The Boy Hairdresser\", a novel by Orton and his lover Kenneth Halliwell.\n\n The title and play are based on a few lines from poet and dramatist William Ernest Henley: \"Madam Life's a piece in bloom, / Death goes dogging everywhere: / She's the tenant of the room, / He's the ruffian on the stair.\"\n\n \"Ruffian\" is not as renowned as other works such as \"Loot\" and \"What the Butler Saw\", but it is still staged on occasion.",
+    "Prick Up Your Ears (play)\nPrick Up Your Ears is a play by Simon Bent, based on the life of playwright Joe Orton.\n\n Produced by Sonia Friedman it opened at the Comedy Theatre in London's West End on 30 September 2009 following previews from 17 September.\n\n It starred Chris New as Joe Orton and Matt Lucas as Orton's lover and murderer, Kenneth Halliwell.",
+    "Simon Bent\nSimon Bent is a British screenwriter and playwright, notable for work including BBC TV drama \"\" (2006), the screenplay for the feature film \"Christie Malry's Own Double-Entry\" (2000), and the Joe Orton biographical play \"Prick Up Your Ears\" based on John Lahr's book."
+   ]
+  },
+  {
+   "id": "8de7280857c4d12d",
+   "gold": [
+    {
+     "sentence": "Nicolae Titulescu (] ; March 4, 1882 – March 17, 1941) was a well-known Romanian diplomat, at various times government minister, finance and foreign minister, and for two terms President of the General Assembly of the League of Nations (1930–32).",
+     "facts": {
+      "0.0": "Nicolae Titulescu was born on March 4, 1882.",
+      "0.1": "Nicolae Titulescu died on March 17, 1941.",
+      "0.2": "Nicolae Titulescu was a well-known Romanian diplomat.",
+      "0.3": "Nicolae Titulescu was at various times a government minister.",
+      "0.4": "Nicolae Titulescu was at various times finance minister.",
+      "0.5": "Nicolae Titulescu was at various times foreign minister.",
+      "0.6": "Nicolae Titulescu served for two terms as President of the General Assembly of the League of Nations.",
+      "0.7": "Nicolae Titulescu's two terms as President of the General Assembly of the League of Nations are dated 1930–32."
+     }
+    },
+    {
+     "sentence": "The League of Nations (abbreviated as LN in English, \"La Société des Nations \" ] abbreviated as SDN or SdN in French) was an intergovernmental organisation founded on 10 January 1920 as a result of the Paris Peace Conference that ended the First World War.",
+     "facts": {
+      "1.0": "The League of Nations is abbreviated as LN in English.",
+      "1.1": "The League of Nations is abbreviated as SDN or SdN in French.",
+      "1.2": "The French name of the League of Nations is 'La Société des Nations'.",
+      "1.3": "The League of Nations was an intergovernmental organisation.",
+      "1.4": "The League of Nations was founded on 10 January 1920.",
+      "1.5": "The League of Nations was founded as a result of the Paris Peace Conference.",
+      "1.6": "The Paris Peace Conference ended the First World War."
+     }
+    }
+   ],
+   "items": [
+    "Robert Suettinger\nRobert Suettinger was United States President Bill Clinton's national intelligence officer for East Asia at the National Intelligence Council (NIC) from 1997-1998.\n\n While there, Suettinger oversaw the preparation of national intelligence estimates for the director of the Central Intelligence Agency.\n\n His areas of specialty included the People's Republic of China and the North Korean nuclear weapons program.\n\n After working in the Clinton administration, Suettinger has been a senior analyst for the Brookings Institution where he wrote the book \"Beyond Tiananmen – The Politics of U.S.-China Relations, 1989-2000\".\n\n He also is a senior advisor at The Stimson Center.",
+    "Remus Nicolai\nRemus Nicolai (b. June 10, 1977 in Bistriţa, Romania) is a retired Romanian aerobic gymnast.\n\n He had a successful career winning six world championships medals (one gold, two silver and three bronze) and five European championships medals (two gold, two silver and one bronze).\n\n After retiring from aerobic gymnastics he opened together with his wife (Daniela Mărănducă) a private gymnastics club in Constanţa.\n\n As of 2013 he trains, together with his wife, the junior artistic women's National Team of Romania at the National Olympic Center in Onesti.",
+    "Line of succession to the former Romanian throne\nThe succession order to the throne of the Romanian monarchy, abolished since 1947, was regulated by the monarchical constitution of 1923 and the 1884 Law of the Romanian Royal House Rules enacted pursuant to the 1866 Constitution of Romania which had confirmed the enthronement of Prince Karl (Carol) of Hohenzollern-Sigmaringen.\n\n The defunct 1923 Constitution stipulated Salic law, according to which the throne was hereditary in King Carol I's legitimate descent and, if his male issue failed, in the descent of his brothers of the Sigmaringen princely branch of the House of Hohenzollern, according to agnatic primogeniture and to the perpetual exclusion of females and their descendants.\n\n The last monarch to reign in Romania was King Michael I, who was born in 1921, abdicated his throne on 30 December 1947 under coercion, and went into exile in Switzerland.",
+    "Nicolae Titulescu\nNicolae Titulescu (] ; March 4, 1882 – March 17, 1941) was a well-known Romanian diplomat, at various times government minister, finance and foreign minister, and for two terms President of the General Assembly of the League of Nations (1930–32).",
+    "Ioan Silviu Suciu\nIoan Silviu Suciu (born 24 November 1977 in Sibiu) is a retired Romanian artistic gymnast.\n\n His best event was the pommel horse.\n\n One of his closest rivals was his team mate and pommel horse Olympic champion Marius Urzică, who was defeated by Suciu in Ljubljana, 2004, when the latter won the title while Urzică took 8th place.\n\n Suciu is an Olympic bronze medalist with the team, a silver world medalist on pommel horse and a six-time European medalist (pommel horse, vault and team).\n\n Suciu was one of the key team members of the Romanian gymnastics team for several years contributing to the 2004 Olympic team bronze medal and three continental team medals (two gold and one silver).\n\n He also placed fourth all around at the 2004 Olympic Games.",
+    "Marius Urzică\nMarius Daniel Urzică (born September 30, 1975, in Topliţa, Romania) is a Romanian gymnast.\n\n Urzică is an Olympic champion, a three-time world champion and a three-time European champion on pommel horse.\n\n He competed at three Olympic games, medaling each time on pommel horse (gold Sydney 2000, silver Atlanta 1996 and silver Athena 2004) and contributed to the team bronze in Athens 2004.\n\n His unique technique and style of performance have won him the recognition as one of the greatest masters on this piece of apparatus ever, together with Miroslav Cerar and Zoltán Magyar.\n\n Known as \"The King of the Pommels\" in 2001 he achieved the maximum score of 10.00 on this piece of apparatus at the Glasgow Grand Prix.\n\n Two elements in artistic gymnastics, one on pommel horse and one on parallel bars are named after him.",
+    "Ghimpețeni\nGhimpețeni is a commune in Olt County, Romania.\n\n It is composed of two villages, Ghimpețeni and Ghimpețenii Noi.\n\n These were part of Nicolae Titulescu Commune until 2004, when they were split off.",
+    "Graph query row:\norganization: League of Nations\nfounding_date: 10 January 1920",
+    "Gheorghe Tătărescu\nDuring his first time in office, he moved closer to King Carol II, leading an ambivalent policy toward the fascist Iron Guard and ultimately becoming instrumental in establishing the authoritarian and corporatist regime around the National Renaissance Front.\n\n In 1940, he accepted the cession of Bessarabia and Northern Bukovina to the Soviet Union, and consequently had to resign.",
+    "Gheorghe Tătărescu\nGheorghe I. Tătărescu (also known as \"Guță Tătărescu\", with a slightly antiquated pet form of his given name; 2 November 1886 – 28 March 1957) was a Romanian politician who served 36th Prime Minister of Romania (1934–1937; 1939–1940), three times as Minister of Foreign Affairs (\"interim\" in 1934 and 1938; appointed to the office in 1945-1947), and once as Minister of War (1934).\n\n Representing the \"young liberals\" faction inside the National Liberal Party (PNL), Tătărescu began his political career as a collaborator of Ion G. Duca, becoming noted for his anti-Communism and, in time, for his conflicts with the PNL's leader Dinu Brătianu and the Foreign Minister Nicolae Titulescu."
+   ]
+  },
+  {
+   "id": "6eb165e6c7e7b20e",
+   "gold": [
+    {
+     "sentence": "Eat to Live: The Amazing Nutrient-Rich Program for Fast and Sustained Weight Loss is a book written in 2003 by Dr. Joel Fuhrman, which he revised in 2011.",
+     "facts": {
+      "0.0": "Eat to Live is a book.",
+      "0.1": "The full title of Eat to Live is 'Eat to Live: The Amazing Nutrient-Rich Program for Fast and Sustained Weight Loss'.",
+      "0.2": "Eat to Live was written in 2003.",
+      "0.3": "Eat to Live was written by Dr. Joel Fuhrman.",
+      "0.4": "Dr. Joel Fuhrman revised Eat to Live in 2011."
+     }
+    },
+    {
+     "sentence": "Joel Fuhrman (born December 2, 1953) is an American celebrity doctor who advocates what he calls a micronutrient-rich diet.",
+     "facts": {
+      "1.0": "Joel Fuhrman was born on December 2, 1953.",
+      "1.1": "Joel Fuhrman is American.",
+      "1.2": "Joel Fuhrman is a celebrity doctor.",
+      "1.3": "Joel Fuhrman advocates a diet that he calls a micronutrient-rich diet."
+     }
+    }
+   ],
+   "items": [
+    "Eat to Live\nEat to Live: The Amazing Nutrient-Rich Program for Fast and Sustained Weight Loss is a book written in 2003 by Dr. Joel Fuhrman, which he revised in 2011.\n\n The book offers a formula: health = nutrients / calories.",
+    "Diet food\nDiet food (or dietetic food) refers to any food or beverage whose recipe is altered to reduce fat, carbohydrates, and/or sugar in order to make it part of a weight loss program or diet.\n\n Such foods are usually intended to assist in weight loss or a change in body type, although bodybuilding supplements are designed to aid in gaining weight or muscle.",
+    "Management of obesity\nManagement of obesity can include lifestyle changes, medications, or surgery.\n\n The main treatment for obesity consists of dieting and physical exercise.\n\n Diet programs may produce weight loss over the short term, but maintaining this weight loss is frequently difficult and often requires making exercise and a lower calorie diet a permanent part of an individual's lifestyle.\n\n Success rates of long-term weight loss maintenance with lifestyle changes are low, ranging from 2 to 20%.\n\n Dietary and lifestyle changes are effective in limiting excessive weight gain in pregnancy and improve outcomes for both the mother and the child.\n\n The National Institutes of Health recommend a weight loss goal of 5% to 10% of the person's current weight over six months.",
+    "Very-low-calorie diet\nVery low calorie diet (VLCD) is a diet with very or extremely low daily food energy consumption.\n\n It is defined as a diet of 800 kcal per day or less.\n\n VLCDs are formulated, nutritionally complete, liquid meals containing 800 kilocalories or less per day.\n\n VLCDs also contain the recommended daily requirements for vitamins, minerals, trace elements, fatty acids and protein.\n\n Carbohydrate may be entirely absent, or substituted for a portion of the protein; this choice has important metabolic effects.\n\n The VLCD products are usually a powder which is mixed with water or another low-food-energy liquid.\n\n The VLCD is prescribed on a case to case basis for rapid weight loss (about 1.5 to 2.5 kilograms or 3 to 5 pounds per week) in people with Body Mass Index of 30 and above.\n\n The health care provider can recommend the diet to a patient with a BMI between 27 and 30 if the medical complications the patient has due to being overweight present serious health risks.\n\n It results in 4% more weight loss over the short term as compared to control.",
+    "Eat Smart, Move More, Weigh Less\nEat Smart, Move More, Weigh Less is a 15-week adult weight management program that uses strategies based on evidence for weight loss and/or weight maintenance.\n\n The Eat Smart Move More Weigh Less classes focus on the 12 evidence-based eating and physical activity behaviors for weight management.\n\n The program does not provide a prescriptive diet plan, it teaches small lifetime changes.\n\n The program teaches mindfulness as a strategy to become more aware of eating and physical activity.\n\n Eat Smart, Move More, Weigh Less includes methods for planning and tracking healthy eating and physical activity behaviors.\n\n In 2007, Eat Smart, Move More, Weigh Less curriculum was developed by a writing team from NC State University and NC Division of Public Health.\n\n A complete listing of authors and their respective affiliations can be found on the program website.\n\n The 15-lesson curriculum was peer reviewed by state and local nutrition and physical activity professionals, representatives from the medical community, and a CDC project officer.",
+    "Diet in Hinduism\nDiet in Hinduism varies with its diverse traditions.\n\n The ancient and medieval Hindu texts do not explicitly prohibit eating meat, but they do strongly recommend ahimsa—non-violence against all life forms including animals.\n\n Many Hindus prefer a vegetarian or lacto-vegetarian lifestyle, and methods of food production that are in sync with nature, compassionate, and respectful of other life forms as well as nature.",
+    "Joel Fuhrman\nJoel Fuhrman (born December 2, 1953) is an American celebrity doctor who advocates what he calls a micronutrient-rich diet.",
+    "Scarsdale diet\nThe Scarsdale diet is a fad diet designed for weight loss created in the 1970s by Herman Tarnower, named for the town in New York where he practiced cardiology, described in the book \"The Complete Scarsdale Medical Diet plus Dr. Tarnower's Lifetime Keep-Slim Program\", which Tarnower wrote with an author of self-help books, Sam Sinclair Baker.\n\n The diet carries potential health risks and does not instill the kind of healthy eating habits required for sustainable weight loss.",
+    "Judy Mazel\nJudy Mazel (December 20, 1943 – October 12, 2007) was the American weight loss advocate and author of the \"\"The Beverly Hills Diet\"\", which became a 1981 best seller and a nationwide diet craze.\n\n Judy Mazel was a devout practicing Jew and was raised in a conservative Ashkenazi Jewish home.",
+    "Weight loss\nWeight loss, in the context of medicine, health, or physical fitness, refers to a reduction of the total body mass, due to a mean loss of fluid, body fat or adipose tissue or lean mass, namely bone mineral deposits, muscle, tendon, and other connective tissue.\n\n Weight loss can either occur unintentionally due to malnourishment or an underlying disease or arise from a conscious effort to improve an actual or perceived overweight or obese state.\n\n \"Unexplained\" weight loss that is not caused by reduction in calorific intake or exercise is called cachexia and may be a symptom of a serious medical condition.\n\n Intentional weight loss is commonly referred to as slimming."
+   ]
+  },
+  {
+   "id": "7298518e67266d89",
+   "gold": [
+    {
+     "sentence": "Ted Kooshian (born October 8, 1961) is an American jazz pianist, keyboardist, and composer, who has performed with Aretha Franklin, Chuck Berry, Marvin Hamlisch, Sarah Brightman, Il Divo, and Blood, Sweat, and Tears.",
+     "facts": {
+      "0.0": "Ted Kooshian was born October 8, 1961.",
+      "0.1": "Ted Kooshian is an American jazz pianist.",
+      "0.2": "Ted Kooshian is an American jazz keyboardist.",
+      "0.3": "Ted Kooshian is an American jazz composer.",
+      "0.4": "Ted Kooshian has performed with Aretha Franklin.",
+      "0.5": "Ted Kooshian has performed with Chuck Berry.",
+      "0.6": "Ted Kooshian has performed with Marvin Hamlisch.",
+      "0.7": "Ted Kooshian has performed with Sarah Brightman.",
+      "0.8": "Ted Kooshian has performed with Il Divo.",
+      "0.9": "Ted Kooshian has performed with Blood, Sweat, and Tears."
+     }
+    },
+    {
+     "sentence": " Hamlisch was one of only twelve people to win Emmy, Grammy, Oscar and Tony awards.",
+     "facts": {
+      "1.0": "Marvin Hamlisch was one of only twelve people to win Emmy, Grammy, Oscar and Tony awards."
+     }
+    },
+    {
+     "sentence": " This collection of all four is referred to as an \"EGOT\".",
+     "facts": {
+      "2.0": "The collection of all four awards (Emmy, Grammy, Oscar and Tony) is referred to as an 'EGOT'."
+     }
+    }
+   ],
+   "items": [
+    "Triple Crown of Acting\nThe Triple Crown of Acting is a term used in the American entertainment industry to describe actors who have won a competitive Academy Award, Emmy Award, and Tony Award in the acting categories.\n\n 23 people have achieved the triple crown of acting (14 women, 9 men).\n\n Helen Hayes' Emmy Award win on February 5, 1953, made her the first person to achieve the triple crown.\n\n Thomas Mitchell became the first man to achieve the triple crown with his Tony Award win later the same year on March 29, 1953.\n\n Hayes and Rita Moreno are the only triple crown winners in competitive acting categories who have also won a Grammy Award to complete the EGOT.",
+    "The entries profile writers, artists, scholars, and public figures across literature, journalism, film, and politics. Highlights include Thomas Merton, the Catholic monk and writer honored by a peace award and studied by an international society; W. Somerset Maugham, whose namesake prize supports young writers’ travel; and notable authors such as Mencken, Orwell, Updike, Malamud, Chatwin, and Gass. Other topics include literary awards, bibliographies, influential editors, Camb",
+    "Marvin Hamlisch\nMarvin Frederick Hamlisch (June 2, 1944August 6, 2012) was an American composer and conductor.\n\n Hamlisch was one of only twelve people to win Emmy, Grammy, Oscar and Tony awards.\n\n This collection of all four is referred to as an \"EGOT\".\n\n He is one of only two people (along with Richard Rodgers) to have won those four prizes and a Pulitzer Prize.",
+    "Ted Kooshian\nTed Kooshian (born October 8, 1961) is an American jazz pianist, keyboardist, and composer, who has performed with Aretha Franklin, Chuck Berry, Marvin Hamlisch, Sarah Brightman, Il Divo, and Blood, Sweat, and Tears.\n\n Kooshian has played in many Broadway pit orchestras, and has been a member of the Ed Palermo Big Band since 1994.\n\n Originally from San Jose, California, Kooshian has been performing since the 1980s.",
+    "Lonesome Pine Fiddlers\nThis most talented family of musicians were the best, surpassed by none.\n\n Finally, on October 1, 2009, The Lonesome Pine Fiddlers got their due when they were inducted into the International Bluegrass Hall of Fame at the Ryman Theater (the original home of the Grand Ole Opry).\n\n Bobby Osborne, Melvin Goins and Paul Williams were there to receive the bands award.\n\n In the crowd of a sold out theater was the son of Ezra Cline, Scotty Ireland Cline, who recalled being in that same theater as a child sitting on stage and watching the Fiddlers play.\n\n (At the time, the Opry had bleachers for family just off stage).\n\n The final act of the evening at the IBMA Awards was the playing of \"Pain in my Heart\" by Osborne, Goins and Williams along with a Song from the Dillards, who were also inducted the same evening.",
+    "List of awards and nominations received by Kim Tae-yeon\nList of awards and nominations received by Kim Tae-yeon",
+    "List of James Tiptree Jr. Award winners\nThe following is a list of winners and shortlisted works of the James Tiptree Jr.\n\n Award, an annual literary prize for works of science fiction or fantasy that expand or explore one's understanding of gender.\n\n It was initiated in February 1991 by science fiction authors Pat Murphy and Karen Joy Fowler, and is awarded and discussed yearly at WisCon.",
+    "Profiles span musicians across jazz, rock, metal, electronic, gospel, and pop. Robert Glasper has three Grammys; Carlos Santana, ten Grammys and a landmark Latin-rock fusion career. Daron Malakian (System of a Down), Gaahl (Gorgoroth), Roy Khan (Kamelot), Toshi (X Japan), and Rivermaya’s former guitarist Perfecto de Castro are noted rock figures. Relient K’s Matt Thiessen, electronic artists Greg Davis and",
+    "Tatsuhiro Oshiro\nTatsuhiro Ōshiro (大城 立裕 , Ōshiro Tatsuhiro , born 19 September 1925) is a Japanese novelist and playwright.\n\n He was awarded the Akutagawa Prize in 1967 for his novella of the same year, \"The Cocktail Party\", which has been adapted for the stage and made into a film.\n\n Ōshiro has also been an innovator of the traditional Ryukyuan narrative dance form known as kumi odori.\n\n Having added twenty new pieces to the repertoire, Ōshiro is credited as having \"single-handedly revived the genre that originated in the 18th century\" by incorporating Okinawa shibai (dramas in the Okinawan language) and distinctive rhythms to construct a fluid, hybrid cultural identity.\n\n His writings have been noted for making Okinawan culture and history accessible to Japanese readership, while his more popular works have been critically praised for \"offering an acute perspective on the psychological and moral implications of war and military occupation.\"",
+    "Premio Lo Nuestro 2003\nIn the Regional Mexican, Pilar Montenegro took three awards for Regional Mexican Song of the Year, Pop Song of the Year (\"Quitame Ese Hombre\"), and for Best Regional Mexican Female Artist.\n\n In the tropical genre, Celia Cruz took home with four great awards of the night for Best Salsa Performance, Best Tropical Female Artist, Best Tropical Song of the year and Tropical Album of the Year.\n\n At the night, the greatest performance was a medley of top Latin hits from the last 15 years, performed by the artists that made them famous, including Vikki Carr, Son by Four, Los Ilegales, La Mafia, Luis Enrique, Wilfrido Vargas and Olga Tañón.\n\n There was a great tribute to Celia Cruz by the world-famous salsa group \"Fania All-Stars\", of which Cruz was a member during the 1970s, reunited for an exclusive performance that rocked the house."
+   ]
+  },
+  {
+   "id": "fdb01d88821c42b9",
+   "gold": [
+    {
+     "sentence": "Cars 2 is a 2011 American computer-animated action comedy spy film produced by Pixar Animation Studios for Walt Disney Pictures.",
+     "facts": {
+      "0.0": "Cars 2 is a film.",
+      "0.1": "Cars 2 was released in 2011.",
+      "0.2": "Cars 2 is American.",
+      "0.3": "Cars 2 is computer-animated.",
+      "0.4": "Cars 2 is an action comedy spy film.",
+      "0.5": "Cars 2 was produced by Pixar Animation Studios.",
+      "0.6": "Cars 2 was produced for Walt Disney Pictures."
+     }
+    },
+    {
+     "sentence": "Lin-Manuel Miranda ( ; born January 16, 1980) is an American composer, lyricist, playwright, and actor best known for creating and starring in the Broadway musicals \"Hamilton\" and \"In the Heights\".",
+     "facts": {
+      "1.0": "Lin-Manuel Miranda was born January 16, 1980.",
+      "1.1": "Lin-Manuel Miranda is American.",
+      "1.2": "Lin-Manuel Miranda is a composer, lyricist, playwright, and actor.",
+      "1.3": "Lin-Manuel Miranda is best known for creating and starring in the Broadway musical Hamilton.",
+      "1.4": "Lin-Manuel Miranda is best known for creating and starring in the Broadway musical In the Heights."
+     }
+    },
+    {
+     "sentence": " He co-wrote the songs for Disney's \"Moana\" soundtrack (2016) and is set to star in their upcoming film \"Mary Poppins Returns\".",
+     "facts": {
+      "2.0": "Lin-Manuel Miranda co-wrote the songs for Disney's Moana soundtrack.",
+      "2.1": "The Moana soundtrack is from 2016.",
+      "2.2": "Lin-Manuel Miranda is set to star in Disney's upcoming film Mary Poppins Returns."
+     }
+    }
+   ],
+   "items": [
+    "Lin-Manuel Miranda\nLin-Manuel Miranda ( ; born January 16, 1980) is an American composer, lyricist, playwright, and actor best known for creating and starring in the Broadway musicals \"Hamilton\" and \"In the Heights\".\n\n He co-wrote the songs for Disney's \"Moana\" soundtrack (2016) and is set to star in their upcoming film \"Mary Poppins Returns\".\n\n Miranda's awards include a Pulitzer Prize, two Grammy Awards, an Emmy Award, a MacArthur Fellowship, and three Tony Awards.",
+    "Hamilton (album)\nHamilton is the cast album to the 2015 musical \"Hamilton\".\n\n The musical is based on the 2004 biography of Alexander Hamilton written by Ron Chernow, with music, lyrics, and book by Lin-Manuel Miranda.\n\n The recording stars Lin-Manuel Miranda, Leslie Odom Jr., Phillipa Soo, Renée Elise Goldsberry, Christopher Jackson, Daveed Diggs, Anthony Ramos, Okieriete Onaodowan, Jasmine Cephas Jones, and Jonathan Groff.\n\n It also features Jon Rua, Thayne Jasperson, Sydney James Harcourt, Ariana DeBose, and Sasha Hutchings.\n\n It achieved the largest first week sales for a digital cast album and is the highest-charting cast album since 1963.\n\n It was the highest-selling Broadway cast album of 2015 and peaked at number one on the Rap Album chart, the first cast album to ever do so.",
+    "Cars 2 (video game)\nCars 2 (also known as Cars 2: The Video Game) is a racing game developed by Avalanche Software.\n\n It is based on the film \"Cars 2\", the sequel to the 2006 film \"Cars\".\n\n Originally announced at E3 2011, the game was released by Disney Interactive on major platforms in North America on June 21, 2011, and in Australia 2 days later.\n\n The game was released in Europe on July 22, 2011.\n\n The PlayStation 3 version of the game was reported to feature stereoscopic 3D gameplay.\n\n A Nintendo 3DS version was released on November 1, 2011 (the same day the film was released on DVD and Blu-ray).\n\n A PlayStation Portable version was released in North America on November 8, 2011.\n\n It was also released in Europe on November 4, 2011.\n\n It was the last Pixar game to be released for the PlayStation Portable.",
+    "Cabinet Battle\n\"Cabinet Battle #1\", \"Cabinet Battle #2\", and \"Cabinet Battle #3\" are songs written for Act II of the musical \"Hamilton\", based on the life of Alexander Hamilton, which premiered on Broadway in 2015.\n\n Lin-Manuel Miranda wrote both the music and lyrics to the song.",
+    "Wreck-It Ralph\nWreck-It Ralph is a 2012 American 3D computer-animated fantasy-comedy film produced by Walt Disney Animation Studios and released by Walt Disney Pictures.\n\n It is the 52nd Disney animated feature film.\n\n The film was directed by Rich Moore, who has directed episodes of \"The Simpsons\" and \"Futurama\", and the screenplay was written by Phil Johnston and Jennifer Lee from a story by Moore, Johnston, and Jim Reardon.\n\n John Lasseter served as the executive producer.\n\n The film features the voices of John C. Reilly, Sarah Silverman, Jack McBrayer, and Jane Lynch.\n\n The film tells the story of the eponymous arcade game villain who rebels against his role and dreams of becoming a hero.\n\n He travels between games in the arcade and ultimately must eliminate a dire threat that could affect the entire arcade and one that Ralph himself unintentionally started.",
+    "Cars 2\nCars 2 is a 2011 American computer-animated action comedy spy film produced by Pixar Animation Studios for Walt Disney Pictures.\n\n It is the sequel to 2006's \"Cars\", and features the voices of Owen Wilson, Larry the Cable Guy, Michael Caine, Emily Mortimer, John Turturro, and Eddie Izzard.\n\n In the film, race car Lightning McQueen and tow truck Mater head to Japan and Europe to compete in the World Grand Prix, but Mater becomes sidetracked with international espionage.\n\n The film was directed by John Lasseter, written by Ben Queen, and produced by Denise Ream.",
+    "Moana (soundtrack)\nMoana: Original Motion Picture Soundtrack is the soundtrack to the 2016 Disney animated film \"Moana\".\n\n The soundtrack was released by Walt Disney Records on November 19, 2016.\n\n It features songs written by Lin-Manuel Miranda, Mark Mancina and Opetaia Foa'i, with lyrics in English, Samoan, Tokelauan, and Tuvalu.\n\n The two-disc deluxe edition includes the score, which was composed by Mancina, as well as demos, outtakes and instrumental karaoke tracks.",
+    "Toy Story 3\nToy Story 3 is a 2010 American 3D computer-animated comedy-drama film produced by Pixar Animation Studios for Walt Disney Pictures.\n\n It is the third installment in Pixar's \"Toy Story\" series, and the sequel to 1999's \"Toy Story 2\".\n\n It was directed by Lee Unkrich, the editor of the first two films and the co-director of \"Toy Story 2\", written by Michael Arndt, while Unkrich wrote the story along with John Lasseter and Andrew Stanton, respectively director and co-writer of the first two films.\n\n The plot focuses on the toys Woody, Buzz Lightyear, and their friends dealing with an uncertain future as their owner, Andy, prepares to leave for college.",
+    "Frozen (2013 film)\nFrozen is a 2013 American 3D computer-animated musical fantasy film produced by Walt Disney Animation Studios and released by Walt Disney Pictures.\n\n It is the 53rd Disney animated feature film.\n\n Inspired by Hans Christian Andersen's fairy tale \"The Snow Queen\", the film tells the story of a fearless princess who sets off on a journey alongside a rugged iceman, his loyal pet reindeer, and a naïve snowman to find her estranged sister, whose icy powers have inadvertently trapped the kingdom in eternal winter.",
+    "Walt Disney Pictures\nWalt Disney Pictures, Inc. is an American film production company and a subsidiary of Walt Disney Studios, owned by The Walt Disney Company.\n\n The division is based at the Walt Disney Studios in Burbank, California, and is the main producer of live-action feature films within the Walt Disney Studios unit.\n\n It took on its current name in 1983.\n\n Today, in conjunction with the other units of Walt Disney Studios, Walt Disney Pictures is classified as one of Hollywood's \"Big Six\" film studios.\n\n Films produced by Walt Disney Animation Studios and Pixar Animation Studios are also released under this brand."
+   ]
+  },
+  {
+   "id": "4f22aca427d22159",
+   "gold": [
+    {
+     "sentence": "The Long–Allen Bridge is a truss bridge in Shreveport, Louisiana, named for Louisiana governors Huey Long and Oscar K. Allen.",
+     "facts": {
+      "0.0": "The Long–Allen Bridge is a truss bridge.",
+      "0.1": "The Long–Allen Bridge is in Shreveport, Louisiana.",
+      "0.2": "The Long–Allen Bridge is named for Louisiana governor Huey Long.",
+      "0.3": "The Long–Allen Bridge is named for Louisiana governor Oscar K. Allen."
+     }
+    },
+    {
+     "sentence": " Opened in 1933, it carries U.S. Route 80 across the Red River.",
+     "facts": {
+      "1.0": "The Long–Allen Bridge opened in 1933.",
+      "1.1": "The Long–Allen Bridge carries U.S. Route 80 across the Red River."
+     }
+    },
+    {
+     "sentence": "U.S. Route 80 (US 80) is an east–west United States Numbered Highway, much of which was once part of the early auto trail known as the Dixie Overland Highway.",
+     "facts": {
+      "2.0": "U.S. Route 80 (US 80) is an east–west United States Numbered Highway.",
+      "2.1": "Much of U.S. Route 80 was once part of the early auto trail known as the Dixie Overland Highway."
+     }
+    },
+    {
+     "sentence": " The highway's eastern terminus is in Tybee Island, Georgia, at the intersection of Butler Avenue, Inlet Avenue, and Tybrisa Street, near the Atlantic Ocean.",
+     "facts": {
+      "3.0": "The eastern terminus of U.S. Route 80 is in Tybee Island, Georgia.",
+      "3.1": "The eastern terminus of U.S. Route 80 is at the intersection of Butler Avenue, Inlet Avenue, and Tybrisa Street.",
+      "3.2": "The eastern terminus of U.S. Route 80 is near the Atlantic Ocean."
+     }
+    }
+   ],
+   "items": [
+    "Ocean To Ocean Bridge\nThe Ocean To Ocean Bridge is a through truss bridge spanning the Colorado River in Yuma, Arizona.\n\n Built in 1915, it was the first highway crossing of the lower Colorado and is the earliest example of a through truss bridge in Arizona.\n\n It is also the only example of a Pennsylvania truss within Arizona.\n\n Originally the bridge carried the transcontinental Ocean-to-Ocean Highway and later carried its successor, US 80 until a new bridge was built to the west in 1956.\n\n Between 1988 and 2001, the bridge was closed to vehicular traffic and only traversable by pedestrians and bicyclists.\n\n After a major restoration, the bridge was rehabilitated and reopened to vehicular traffic in 2002, with a re-dedication by the Quechan nation and Yuma Crossing National Heritage Area.",
+    "The Long–Allen (Texas Street) Bridge, opened in 1933, carries US 80 over the Red River in Shreveport. Yuma’s 1915 Ocean To Ocean Bridge, Arizona’s earliest through-truss and only Pennsylvania-truss bridge, carried US 80; restored for vehicles in 2002, it spans the Colorado River. US 80 once crossed the country but now runs Dallas–Tybee Island. Florida’s Spanish River Boulevard ends at SR A1A;",
+    "Rocky Creek Bridge No. 01089\nRocky Creek Bridge No. 01089, also known as Ben Jones Bridge, is a concrete highway bridge spanning Rocky Creek along the Pacific Ocean coast of the U.S. state of Oregon.\n\n The bridge crosses a gorge near the creek's mouth, about 2 mi south of Depoe Bay in Lincoln County.\n\n Built in 1927, the bridge originally carried U.S. Route 101 (the Oregon Coast Highway) over the creek.\n\n After a stretch of the highway was relocated to make it straighter, the abandoned piece of the old highway became Otter Crest Loop Road, a bypass west of the new highway.",
+    "Outer barrier\nThe outer barrier, also known as the Long Island and New York City barrier islands, refers to the string of barrier islands that divide the lagoons south of Long Island, New York from the Atlantic Ocean.\n\n These islands include Coney Island, Long Beach Barrier Island, Island Park, Jones Beach Island, Fire Island and Westhampton Island.\n\n The outer barrier extends 75 mi along the South Shore of Long Island, from Rockaway Beach on the New York City/Nassau County border from Long Beach Barrier Islands' western edge, to Suffolk County's east end of Shinnecock Bay.",
+    "Low Bridge (song)\nThe popular song \"Low Bridge, Everybody Down\" was written in 1905 by Thomas S. Allen after Erie Canal barge traffic was converted from mule power to engine power, raising the speed of traffic.\n\n Also known as \"Fifteen Years on the Erie Canal\", \"Fifteen Miles on the Erie Canal\", \"Erie Canal Song\", and \"Mule Named Sal\", the song memorializes the years from 1825 to 1880 when the mule barges made boomtowns out of Utica, Rome, Syracuse, Rochester, and Buffalo, and transformed New York into the Empire State.\n\n The tune is sadly nostalgic.",
+    "New York State Route 108\nNew York State Route 108 (NY 108) is a 1.72 mi north–south state highway located on the Suffolk County side of the Suffolk–Nassau county line on Long Island, New York, in the United States.\n\n It is a spur route connecting NY 25A in Cold Spring Harbor to the Cold Spring Harbor station on the Long Island Rail Road's Port Jefferson Branch via Harbor Road.\n\n Harbor Road terminates at an intersection with Woodbury Road, on the Nassau County line, which carries County Route 11 to the east and unsigned County Route 12 to the west.\n\n NY 108, assigned in the early 1930s, is the shortest state highway on Long Island.",
+    "Long–Allen Bridge (Shreveport)\nThe Long–Allen Bridge is a truss bridge in Shreveport, Louisiana, named for Louisiana governors Huey Long and Oscar K. Allen.\n\n Opened in 1933, it carries U.S. Route 80 across the Red River.\n\n It is also known as the Texas Street Bridge.",
+    "Grand Central Parkway\nThe Grand Central Parkway (GCP) is a 14.61-mile (23.51 km) long parkway that stretches from the Triborough Bridge in New York City to Nassau County on Long Island.\n\n At the Queens–Nassau border, it becomes the Northern State Parkway, which runs across the northern part of Long Island through Nassau County and into Suffolk County, where it ends in Hauppauge.\n\n The westernmost stretch (from the Triborough Bridge to exit 4) also carries a short stretch of Interstate 278 (I-278).\n\n The parkway runs through Queens and passes the Cross Island Parkway, Long Island Expressway, LaGuardia Airport and Citi Field, home of the New York Mets.\n\n The parkway is designated New York State Route 907M (NY 907M), an unsigned reference route.\n\n Despite its name, the Grand Central Parkway was not named after Grand Central Terminal.",
+    "Broad Street Bridge (Rochester, New York)\nErie Canal: Second Genesee Aqueduct, also known as the Broad Street Aqueduct or Broad Street Bridge, is a historic stone aqueduct located at Rochester in Monroe County, New York.\n\n It was constructed in 1836-1842 and originally carried the Erie Canal over the Genesee River.\n\n The overall length of the aqueduct including the wings and abutments is 800 ft .\n\n The aqueduct is 70 ft wide and has massive parapets on either side.\n\n It is one of four major aqueducts in the mid-19th century Erie Canal system.\n\n In 1927, a roadbed was added to carry automobile traffic and named Broad Street.\n\n It also carried a part of the Rochester Subway.",
+    "New York’s Erie Canal heritage includes Lock 52 (1849–53), canal buildings and archaeological sites; the 1836–42 Broad Street Aqueduct later became a road and subway route. The 1905 song “Low Bridge” recalls mule-powered canal traffic. The 525-mile state canal system includes the Erie, Oswego, Cayuga–Seneca and Champlain canals. The Genesee River and tributaries Black Creek and Oatka Creek drain western New"
+   ]
+  },
+  {
+   "id": "d66371329aff4d4e",
+   "gold": [
+    {
+     "sentence": "Psychopsis, abbreviated Psychp in horticultural trade, is a genus of 5 known species of orchids native to northern South America, Central America and Trinidad.",
+     "facts": {
+      "0.0": "Psychopsis is abbreviated Psychp in horticultural trade.",
+      "0.1": "Psychopsis is a genus of 5 known species of orchids.",
+      "0.2": "Psychopsis orchids are native to northern South America.",
+      "0.3": "Psychopsis orchids are native to Central America.",
+      "0.4": "Psychopsis orchids are native to Trinidad."
+     }
+    },
+    {
+     "sentence": "Aubrieta (commonly known as Aubretia) is a genus of about 12 species of flowering plants in the cabbage family Brassicaceae.",
+     "facts": {
+      "1.0": "Aubrieta is commonly known as Aubretia.",
+      "1.1": "Aubrieta is a genus of about 12 species of flowering plants.",
+      "1.2": "Aubrieta is in the cabbage family Brassicaceae."
+     }
+    }
+   ],
+   "items": [
+    "Cassytha\nCassytha is a genus of some two dozen species of obligately parasitic vines in the family Lauraceae.\n\n Superficially, and in some aspects of their ecology, they closely resemble plants in the unrelated genus \"Cuscuta\", the dodders.\n\n When fruit and flowers are absent in the field, the physical resemblance is so close that few people without technical training can tell them apart.\n\n In this respect and in their ecology the two genera present a spectacular example of convergent evolution.\n\n In its divergence from habits typical of the Lauraceae, \"Cassytha\" also presents examples of mosaic evolution",
+    "Arnebia\nArnebia is a genus of flowering plants in the family Boraginaceae.",
+    "Cassiope\nCassiope is a genus of 9-12 small shrubby species in the family Ericaceae.\n\n They are native to the Arctic and north temperate montane regions.\n\n The genus is named after Cassiopeia of Greek mythology.\n\n Common names, shared with several other similar related genera, include heather and heath.\n\n They have scale-like leaves lying against the stems, and produce solitary bell-shaped flowers in late spring.\n\n Though hardy, flowers can be damaged by late frosts.",
+    "Dregea\nDregea is a genus of vines in the Apocynaceae, first described as a genus with this name in 1838.\n\n It is native to Africa and southern Asia.",
+    "Aubrieta\nAubrieta (commonly known as Aubretia) is a genus of about 12 species of flowering plants in the cabbage family Brassicaceae.\n\n The genus is named after Claude Aubriet, a French flower-painter.\n\n It originates from southern Europe east to central Asia but is now a common garden escape throughout Europe.\n\n It is a low, spreading plant, hardy, evergreen and perennial, with small violet, pink or white flowers, and inhabits rocks and banks.\n\n It prefers light, well-drained soil, is tolerant of a wide pH range, and can grow in partial shade or full sun.",
+    "Abrus\nAbrus is a genus of flowering plants in the pea family, Fabaceae and the only genus found in the tribe Abreae.\n\n It contains, 13–18 species, but is best known for a single species, Jequirity (\"A. precatorius\").\n\n The highly toxic seeds of that species are used to make jewellery.",
+    "Psychopsis\nPsychopsis, abbreviated Psychp in horticultural trade, is a genus of 5 known species of orchids native to northern South America, Central America and Trinidad.\n\n It was formerly included in the massively paraphyletic \"wastebin genus\" \"Oncidium\".\n\n The genus as a whole is commonly called butterfly orchids, but some species of other orchid genera are also called thus.",
+    "Hippeastrinae\nHippeastrinae is a subtribe of plants classified under the tribe Hippeastreae.\n\n It belongs to the subfamily Amaryllidoideae of the Amaryllis family (Amaryllidaceae).",
+    "Cyrtanthus\nCyrtanthus is a genus of perennial, herbaceous and bulbous plants in the family Amaryllidaceae, subfamily Amaryllidoideae.",
+    "Butea\nButea is a genus of flowering plants belonging to the pea family, Fabaceae.\n\n It is sometimes considered to have only two species, \"B. monosperma\" and \"B. superba\", or is expanded to include four or five species."
+   ]
+  }
+ ]
+}

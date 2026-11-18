@@ -1,0 +1,182 @@
+{
+ "r1|>=50%|agentic-old": {
+  "agentic": 55,
+  "rag": 52,
+  "cells": [
+   46,
+   9,
+   6,
+   39
+  ]
+ },
+ "r1|>=50%|agentic-new": {
+  "agentic": 63,
+  "rag": 52,
+  "cells": [
+   49,
+   14,
+   3,
+   34
+  ]
+ },
+ "r1|>=75%|agentic-old": {
+  "agentic": 25,
+  "rag": 29,
+  "cells": [
+   21,
+   4,
+   8,
+   67
+  ]
+ },
+ "r1|>=75%|agentic-new": {
+  "agentic": 42,
+  "rag": 29,
+  "cells": [
+   26,
+   16,
+   3,
+   55
+  ]
+ },
+ "r1|100%|agentic-old": {
+  "agentic": 19,
+  "rag": 22,
+  "cells": [
+   14,
+   5,
+   8,
+   73
+  ]
+ },
+ "r1|100%|agentic-new": {
+  "agentic": 31,
+  "rag": 22,
+  "cells": [
+   17,
+   14,
+   5,
+   64
+  ]
+ },
+ "r2|>=50%|agentic-old": {
+  "agentic": 57,
+  "rag": 52,
+  "cells": [
+   48,
+   9,
+   4,
+   39
+  ]
+ },
+ "r2|>=50%|agentic-new": {
+  "agentic": 63,
+  "rag": 52,
+  "cells": [
+   49,
+   14,
+   3,
+   34
+  ]
+ },
+ "r2|>=75%|agentic-old": {
+  "agentic": 28,
+  "rag": 29,
+  "cells": [
+   22,
+   6,
+   7,
+   65
+  ]
+ },
+ "r2|>=75%|agentic-new": {
+  "agentic": 42,
+  "rag": 29,
+  "cells": [
+   26,
+   16,
+   3,
+   55
+  ]
+ },
+ "r2|100%|agentic-old": {
+  "agentic": 17,
+  "rag": 22,
+  "cells": [
+   14,
+   3,
+   8,
+   75
+  ]
+ },
+ "r2|100%|agentic-new": {
+  "agentic": 31,
+  "rag": 22,
+  "cells": [
+   17,
+   14,
+   5,
+   64
+  ]
+ },
+ "r3|>=50%|agentic-old": {
+  "agentic": 59,
+  "rag": 52,
+  "cells": [
+   48,
+   11,
+   4,
+   37
+  ]
+ },
+ "r3|>=50%|agentic-new": {
+  "agentic": 63,
+  "rag": 52,
+  "cells": [
+   49,
+   14,
+   3,
+   34
+  ]
+ },
+ "r3|>=75%|agentic-old": {
+  "agentic": 32,
+  "rag": 29,
+  "cells": [
+   22,
+   10,
+   7,
+   61
+  ]
+ },
+ "r3|>=75%|agentic-new": {
+  "agentic": 42,
+  "rag": 29,
+  "cells": [
+   26,
+   16,
+   3,
+   55
+  ]
+ },
+ "r3|100%|agentic-old": {
+  "agentic": 20,
+  "rag": 22,
+  "cells": [
+   12,
+   8,
+   10,
+   70
+  ]
+ },
+ "r3|100%|agentic-new": {
+  "agentic": 31,
+  "rag": 22,
+  "cells": [
+   17,
+   14,
+   5,
+   64
+  ]
+ }
+}

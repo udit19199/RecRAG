@@ -1,0 +1,128 @@
+[
+{"id": "0c2d7c2b2f35c524", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "0.5", "status": "missing", "evidence": []},
+{"fact": "0.6", "status": "missing", "evidence": []},
+{"fact": "0.7", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []}
+]},
+{"id": "cae0f94cddc3c7b1", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "ruled the United Kingdom until the death of Queen Victoria in 1901."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Upon Victoria's death, the British throne passed to her eldest son Edward VII, a member of the House of Saxe-Coburg and Gotha through his father."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Upon Victoria's death, the British throne passed to her eldest son Edward VII, a member of the House of Saxe-Coburg and Gotha through his father."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "The House of Saxe-Coburg and Gotha ( ; German: \"\") is a German dynasty that ruled the duchy of Saxe-Coburg and Gotha, which was one of the Ernestine duchies."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "The House of Saxe-Coburg and Gotha ( ; German: \"\") is a German dynasty that ruled the duchy of Saxe-Coburg and Gotha, which was one of the Ernestine duchies."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "The House of Saxe-Coburg and Gotha ( ; German: \"\") is a German dynasty that ruled the duchy of Saxe-Coburg and Gotha, which was one of the Ernestine duchies."}]}
+]},
+{"id": "168c5dccac2cce79", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "is a board game created by Glenn Drover and published by Eagle Games in 2003."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "is a board game created by Glenn Drover and published by Eagle Games in 2003."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Can't Stop is a board game designed by Sid Sackson originally published by Parker Brothers in 1980, and was long out of print in the United States."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Can't Stop is a board game designed by Sid Sackson originally published by Parker Brothers in 1980, and was long out of print in the United States."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Can't Stop is a board game designed by Sid Sackson originally published by Parker Brothers in 1980, and was long out of print in the United States."}]}
+]},
+{"id": "679fcbc9ee8ac909", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "The Bears and I is a 1974 American drama film directed by Bernard McEveety and written by John Whedon."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "The Bears and I is a 1974 American drama film directed by Bernard McEveety and written by John Whedon."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "The Bears and I is a 1974 American drama film directed by Bernard McEveety and written by John Whedon."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "The film was released on July 31, 1974, by Buena Vista Distribution."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "The film was released on July 31, 1974, by Buena Vista Distribution."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "Oceans (French: Océans ) is a 2009 French nature documentary film directed, produced, co-written, and narrated by Jacques Perrin, with Jacques Cluzaud as co-director."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "Oceans (French: Océans ) is a 2009 French nature documentary film directed, produced, co-written, and narrated by Jacques Perrin, with Jacques Cluzaud as co-director."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "Oceans (French: Océans ) is a 2009 French nature documentary film directed, produced, co-written, and narrated by Jacques Perrin, with Jacques Cluzaud as co-director."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 7, "quote": "Oceans (French: Océans ) is a 2009 French nature documentary film directed, produced, co-written, and narrated by Jacques Perrin, with Jacques Cluzaud as co-director."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 7, "quote": "Oceans (French: Océans ) is a 2009 French nature documentary film directed, produced, co-written, and narrated by Jacques Perrin, with Jacques Cluzaud as co-director."}]},
+{"fact": "2.5", "status": "stated", "evidence": [{"item": 7, "quote": "Oceans (French: Océans ) is a 2009 French nature documentary film directed, produced, co-written, and narrated by Jacques Perrin, with Jacques Cluzaud as co-director."}]}
+]},
+{"id": "a14cce1930352c34", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "She is a member of the \"Game of Thrones\" stunt teams that won two Screen Actors Guild Awards, and has done stunt performances for films including \"Rogue One\"."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "She is a member of the \"Game of Thrones\" stunt teams that won two Screen Actors Guild Awards, and has done stunt performances for films including \"Rogue One\"."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "She is a member of the \"Game of Thrones\" stunt teams that won two Screen Actors Guild Awards, and has done stunt performances for films including \"Rogue One\"."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "\"Rogue One\" follows a group of rebels on a mission to steal the plans for the Death Star, the Galactic Empire's superweapon."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "\"Rogue One\" follows a group of rebels on a mission to steal the plans for the Death Star, the Galactic Empire's superweapon."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "\"Rogue One\" follows a group of rebels on a mission to steal the plans for the Death Star, the Galactic Empire's superweapon."}]}
+]},
+{"id": "290bfaec0280c200", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Obertraun is a popular holiday destination offering activities such as skiing, snowboarding in the winter and mountain biking, swimming and kayaking in the summer."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Obertraun is a popular holiday destination offering activities such as skiing, snowboarding in the winter and mountain biking, swimming and kayaking in the summer."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Obertraun is a popular holiday destination offering activities such as skiing, snowboarding in the winter and mountain biking, swimming and kayaking in the summer."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "Obertraun is a popular holiday destination offering activities such as skiing, snowboarding in the winter and mountain biking, swimming and kayaking in the summer."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The name \"Salzkammergut\" literally means \"Estate of the Salt Chamber\" and derives from the Imperial Salt Chamber, the authority charged with running the precious salt mines of the Habsburg Monarchy."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "The name \"Salzkammergut\" literally means \"Estate of the Salt Chamber\" and derives from the Imperial Salt Chamber, the authority charged with running the precious salt mines of the Habsburg Monarchy."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "The name \"Salzkammergut\" literally means \"Estate of the Salt Chamber\" and derives from the Imperial Salt Chamber, the authority charged with running the precious salt mines of the Habsburg Monarchy."}]}
+]},
+{"id": "01b8a7bbf6e38a6f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Leycesteria is a genus of flowering plants in the honeysuckle family Caprifoliaceae, native to temperate Asia in the Himalaya and southwestern China."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Leycesteria is a genus of flowering plants in the honeysuckle family Caprifoliaceae, native to temperate Asia in the Himalaya and southwestern China."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Leycesteria is a genus of flowering plants in the honeysuckle family Caprifoliaceae, native to temperate Asia in the Himalaya and southwestern China."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "Leycesteria is a genus of flowering plants in the honeysuckle family Caprifoliaceae, native to temperate Asia in the Himalaya and southwestern China."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Anigozanthos is a small genus of Australian plants in the Bloodwort family Haemodoraceae."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Anigozanthos is a small genus of Australian plants in the Bloodwort family Haemodoraceae."}]}
+]},
+{"id": "3bbf4ca044f77159", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Grantley Jonathan \"Grant\" Nicholas (born 12 November 1967) is a Welsh musician, best known as the lead singer and lead guitarist of the rock band Feeder."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Grantley Jonathan \"Grant\" Nicholas (born 12 November 1967) is a Welsh musician, best known as the lead singer and lead guitarist of the rock band Feeder."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Grantley Jonathan \"Grant\" Nicholas (born 12 November 1967) is a Welsh musician, best known as the lead singer and lead guitarist of the rock band Feeder."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "Grantley Jonathan \"Grant\" Nicholas (born 12 November 1967) is a Welsh musician, best known as the lead singer and lead guitarist of the rock band Feeder."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Danny Shirley (born August 12, 1956) is an American country music singer."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Danny Shirley (born August 12, 1956) is an American country music singer."}]}
+]},
+{"id": "dc428db7d992719c", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "The U2 360° Tour was a worldwide concert tour by rock band U2."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "The U2 360° Tour was a worldwide concert tour by rock band U2."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "The concerts featured the band playing \"in the round\" on a circular stage, allowing the audience to surround them on all sides."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "The concerts featured the band playing \"in the round\" on a circular stage, allowing the audience to surround them on all sides."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "The concerts featured the band playing \"in the round\" on a circular stage, allowing the audience to surround them on all sides."}]}
+]},
+{"id": "393b2c052f4f8540", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "The Metropolitan Cathedral Church and Basilica of Saint Chad is the mother church of the Archdiocese of Birmingham and province of the Catholic Church in Great Britain and is dedicated to Saint Chad of Mercia."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "The Metropolitan Cathedral Church and Basilica of Saint Chad is the mother church of the Archdiocese of Birmingham and province of the Catholic Church in Great Britain and is dedicated to Saint Chad of Mercia."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "The Metropolitan Cathedral Church and Basilica of Saint Chad is the mother church of the Archdiocese of Birmingham and province of the Catholic Church in Great Britain and is dedicated to Saint Chad of Mercia."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Built by Augustus Welby Pugin and substantially complete by 1841, St Chad's is one of the first four Catholic churches that were constructed after the English Reformation and raised to cathedral status in 1852."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Built by Augustus Welby Pugin and substantially complete by 1841, St Chad's is one of the first four Catholic churches that were constructed after the English Reformation and raised to cathedral status in 1852."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "Built by Augustus Welby Pugin and substantially complete by 1841, St Chad's is one of the first four Catholic churches that were constructed after the English Reformation and raised to cathedral status in 1852."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "Built by Augustus Welby Pugin and substantially complete by 1841, St Chad's is one of the first four Catholic churches that were constructed after the English Reformation and raised to cathedral status in 1852."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "Chelmsford Cathedral in the city of Chelmsford, Essex, England, is dedicated to St Mary the Virgin, St Peter and St Cedd."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "Chelmsford Cathedral in the city of Chelmsford, Essex, England, is dedicated to St Mary the Virgin, St Peter and St Cedd."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "Chelmsford Cathedral in the city of Chelmsford, Essex, England, is dedicated to St Mary the Virgin, St Peter and St Cedd."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "Chelmsford Cathedral in the city of Chelmsford, Essex, England, is dedicated to St Mary the Virgin, St Peter and St Cedd."}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 2, "quote": "It became a cathedral when the Anglican Diocese of Chelmsford was created in 1914 and is the seat of the Bishop of Chelmsford."}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 2, "quote": "It became a cathedral when the Anglican Diocese of Chelmsford was created in 1914 and is the seat of the Bishop of Chelmsford."}]}
+]},
+{"id": "b095ca1c0145d938", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "During his early career, Cage starred in a variety of films such as \"Valley Girl\" (1983), \"Racing with the Moon\" (1984), \"Birdy\" (1984), \"Peggy Sue Got Married\" (1986), \"Raising Arizona\" (1987), \"Moonstruck\" (1987), \"Vampire's Kiss\" (1989), \"Wild at Heart\" (1990), \"Fire Birds\" (1990), \"Honeymoon in Vegas\" (1992), and \"Red Rock West\" (1993)."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "During his early career, Cage starred in a variety of films such as \"Valley Girl\" (1983), \"Racing with the Moon\" (1984), \"Birdy\" (1984), \"Peggy Sue Got Married\" (1986), \"Raising Arizona\" (1987), \"Moonstruck\" (1987), \"Vampire's Kiss\" (1989), \"Wild at Heart\" (1990), \"Fire Birds\" (1990), \"Honeymoon in Vegas\" (1992), and \"Red Rock West\" (1993)."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "During his early career, Cage starred in a variety of films such as \"Valley Girl\" (1983), \"Racing with the Moon\" (1984), \"Birdy\" (1984), \"Peggy Sue Got Married\" (1986), \"Raising Arizona\" (1987), \"Moonstruck\" (1987), \"Vampire's Kiss\" (1989), \"Wild at Heart\" (1990), \"Fire Birds\" (1990), \"Honeymoon in Vegas\" (1992), and \"Red Rock West\" (1993)."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "During his early career, Cage starred in a variety of films such as \"Valley Girl\" (1983), \"Racing with the Moon\" (1984), \"Birdy\" (1984), \"Peggy Sue Got Married\" (1986), \"Raising Arizona\" (1987), \"Moonstruck\" (1987), \"Vampire's Kiss\" (1989), \"Wild at Heart\" (1990), \"Fire Birds\" (1990), \"Honeymoon in Vegas\" (1992), and \"Red Rock West\" (1993)."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "During his early career, Cage starred in a variety of films such as \"Valley Girl\" (1983), \"Racing with the Moon\" (1984), \"Birdy\" (1984), \"Peggy Sue Got Married\" (1986), \"Raising Arizona\" (1987), \"Moonstruck\" (1987), \"Vampire's Kiss\" (1989), \"Wild at Heart\" (1990), \"Fire Birds\" (1990), \"Honeymoon in Vegas\" (1992), and \"Red Rock West\" (1993)."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 5, "quote": "During his early career, Cage starred in a variety of films such as \"Valley Girl\" (1983), \"Racing with the Moon\" (1984), \"Birdy\" (1984), \"Peggy Sue Got Married\" (1986), \"Raising Arizona\" (1987), \"Moonstruck\" (1987), \"Vampire's Kiss\" (1989), \"Wild at Heart\" (1990), \"Fire Birds\" (1990), \"Honeymoon in Vegas\" (1992), and \"Red Rock West\" (1993)."}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 5, "quote": "During his early career, Cage starred in a variety of films such as \"Valley Girl\" (1983), \"Racing with the Moon\" (1984), \"Birdy\" (1984), \"Peggy Sue Got Married\" (1986), \"Raising Arizona\" (1987), \"Moonstruck\" (1987), \"Vampire's Kiss\" (1989), \"Wild at Heart\" (1990), \"Fire Birds\" (1990), \"Honeymoon in Vegas\" (1992), and \"Red Rock West\" (1993)."}]},
+{"fact": "0.7", "status": "stated", "evidence": [{"item": 5, "quote": "During his early career, Cage starred in a variety of films such as \"Valley Girl\" (1983), \"Racing with the Moon\" (1984), \"Birdy\" (1984), \"Peggy Sue Got Married\" (1986), \"Raising Arizona\" (1987), \"Moonstruck\" (1987), \"Vampire's Kiss\" (1989), \"Wild at Heart\" (1990), \"Fire Birds\" (1990), \"Honeymoon in Vegas\" (1992), and \"Red Rock West\" (1993)."}]},
+{"fact": "0.8", "status": "stated", "evidence": [{"item": 5, "quote": "During his early career, Cage starred in a variety of films such as \"Valley Girl\" (1983), \"Racing with the Moon\" (1984), \"Birdy\" (1984), \"Peggy Sue Got Married\" (1986), \"Raising Arizona\" (1987), \"Moonstruck\" (1987), \"Vampire's Kiss\" (1989), \"Wild at Heart\" (1990), \"Fire Birds\" (1990), \"Honeymoon in Vegas\" (1992), and \"Red Rock West\" (1993)."}]},
+{"fact": "0.9", "status": "stated", "evidence": [{"item": 5, "quote": "During his early career, Cage starred in a variety of films such as \"Valley Girl\" (1983), \"Racing with the Moon\" (1984), \"Birdy\" (1984), \"Peggy Sue Got Married\" (1986), \"Raising Arizona\" (1987), \"Moonstruck\" (1987), \"Vampire's Kiss\" (1989), \"Wild at Heart\" (1990), \"Fire Birds\" (1990), \"Honeymoon in Vegas\" (1992), and \"Red Rock West\" (1993)."}]},
+{"fact": "0.10", "status": "stated", "evidence": [{"item": 5, "quote": "During his early career, Cage starred in a variety of films such as \"Valley Girl\" (1983), \"Racing with the Moon\" (1984), \"Birdy\" (1984), \"Peggy Sue Got Married\" (1986), \"Raising Arizona\" (1987), \"Moonstruck\" (1987), \"Vampire's Kiss\" (1989), \"Wild at Heart\" (1990), \"Fire Birds\" (1990), \"Honeymoon in Vegas\" (1992), and \"Red Rock West\" (1993)."}]},
+{"fact": "0.11", "status": "stated", "evidence": [{"item": 5, "quote": "During his early career, Cage starred in a variety of films such as \"Valley Girl\" (1983), \"Racing with the Moon\" (1984), \"Birdy\" (1984), \"Peggy Sue Got Married\" (1986), \"Raising Arizona\" (1987), \"Moonstruck\" (1987), \"Vampire's Kiss\" (1989), \"Wild at Heart\" (1990), \"Fire Birds\" (1990), \"Honeymoon in Vegas\" (1992), and \"Red Rock West\" (1993)."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Moonstruck is a 1987 American romantic comedy film directed by Norman Jewison and written by John Patrick Shanley."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Moonstruck is a 1987 American romantic comedy film directed by Norman Jewison and written by John Patrick Shanley."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "Moonstruck is a 1987 American romantic comedy film directed by Norman Jewison and written by John Patrick Shanley."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "Moonstruck is a 1987 American romantic comedy film directed by Norman Jewison and written by John Patrick Shanley."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "It is about a widowed 37-year-old Italian-American woman (Cher) who falls in love with her fiancé's (Danny Aiello) estranged, hot-tempered younger brother (Nicolas Cage)."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "It is about a widowed 37-year-old Italian-American woman (Cher) who falls in love with her fiancé's (Danny Aiello) estranged, hot-tempered younger brother (Nicolas Cage)."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 6, "quote": "It is about a widowed 37-year-old Italian-American woman (Cher) who falls in love with her fiancé's (Danny Aiello) estranged, hot-tempered younger brother (Nicolas Cage)."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 6, "quote": "It is about a widowed 37-year-old Italian-American woman (Cher) who falls in love with her fiancé's (Danny Aiello) estranged, hot-tempered younger brother (Nicolas Cage)."}]}
+]}
+]

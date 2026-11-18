@@ -1,0 +1,830 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=beffce8d06215099 ===
+Gold sentences and facts:
+Sentence 0: Queen Elizabeth II is the sovereign , and her heir apparent is her eldest son , Charles , Prince of Wales . Next in line after him is Prince William , Duke of Cambridge , the Prince of Wales 's elder son . Third in line is Prince George , the eldest child of the Duke of Cambridge , followed by his sister , Princess Charlotte and younger brother , Prince Louis . Sixth in line is Prince Henry of Wales , the younger son of the Prince of Wales . Any of the first six in line marrying without the sovereign 's consent would be disqualified from succession .
+  Fact 0.0: Queen Elizabeth II is the sovereign.
+  Fact 0.1: Charles, Prince of Wales, is the heir apparent to the sovereign, Queen Elizabeth II.
+  Fact 0.2: Charles, Prince of Wales, is the eldest son of Queen Elizabeth II.
+  Fact 0.3: Prince William, Duke of Cambridge, is next in line for succession after Charles, Prince of Wales.
+  Fact 0.4: Prince William is the elder son of the Prince of Wales.
+  Fact 0.5: Prince George is third in line for succession.
+  Fact 0.6: Prince George is the eldest child of the Duke of Cambridge.
+  Fact 0.7: Princess Charlotte follows Prince George in the line of succession.
+  Fact 0.8: Princess Charlotte is the sister of Prince George.
+  Fact 0.9: Prince Louis is the younger brother of Prince George.
+  Fact 0.10: Prince Henry of Wales is sixth in line for succession.
+  Fact 0.11: Prince Henry of Wales is the younger son of the Prince of Wales.
+  Fact 0.12: Any of the first six in line to the throne who marries without the sovereign's consent would be disqualified from succession.
+
+Retrieved items:
+<item 1>
+Succession to the British throne
+The first to be affected by the changes , on the day they came into effect in March , were the children of Lady Davina Lewis -- her son Tāne ( born 2012 ) and
+her daughter Senna ( born 2010 ) -- who were reversed in the order of succession , becoming 29th and 28th in line respectively . Current rules ( edit ) The Bill
+of Rights and the Act of Settlement ( restated by the Acts of Union ) still govern succession to the throne . They were amended in the United Kingdom by the
+Succession to the Crown Act 2013 , which was passed mainly `` to make succession to the Crown not depend on gender '' and `` to make provision about Royal
+Marriages '' ( according to its long title ) , thereby implementing the Perth Agreement in the UK and in those realms that , by their laws , have as their
+monarch automatically whoever is monarch of the UK . Other realms passed their own legislation . Anyone ineligible to succeed is treated as if they were `` dead
+'' . That individual 's descendants are not also disqualified , unless they are personally ineligible .
+</item 1>
+
+<item 2>
+Graph query row:
+person: Queen Elizabeth II
+relationship: RELATED_TO
+role: None
+relationship_detail: None
+relation: None
+fact: None
+successor: Charles, Prince of Wales
+</item 2>
+
+<item 3>
+Succession to the British throne
+Succession to the British throne - wikipedia Succession to the British throne This is the latest accepted revision , reviewed on 27 April 2018 . Jump to :
+navigation , search The Sovereign 's Throne in the House of Lords , from which the speech is delivered at State Openings of Parliament Succession to the British
+throne is determined by descent , gender ( for people born before October 2011 ) , legitimacy , and religion . Under common law , the Crown is inherited by a
+sovereign 's children or by a childless sovereign 's nearest collateral line . The Bill of Rights 1689 and the Act of Settlement 1701 , restrict succession to
+the throne to the legitimate Protestant descendants of Sophia of Hanover that are in `` communion with the Church of England '' . Spouses of Roman Catholics
+were disqualified from 1689 until the law was amended in 2015 . Protestant descendants of those excluded for being Roman Catholics are eligible . Queen
+Elizabeth II is the sovereign , and her heir apparent is her eldest son , Charles , Prince of Wales . Next in line after him is Prince William , Duke of
+Cambridge , the Prince of Wales 's elder son .
+</item 3>
+
+<item 4>
+Succession to the British throne
+Each of those countries has the same person as monarch and the same order of succession . In 2011 , the prime ministers of the realms agreed unanimously to
+adopt a common approach to amending the rules on the succession to their respective Crowns so that absolute primogeniture would apply for persons born after the
+date of the agreement , instead of male - preference primogeniture , and the ban on marriages to Roman Catholics would be lifted , but the monarch would still
+need to be in communion with the Church of England . After the necessary legislation had been enacted in accordance with each realm 's constitution , the
+changes took effect on 26 March 2015 . Contents ( hide ) 1 Current line of succession 2 History 2.1 England 2.2 Scotland 2.3 After the union of the crowns 2.3.
+1 Stuarts 2.3.
+</item 4>
+
+<item 5>
+Succession to the British throne
+3 : `` A person who ( when the person marries ) is one of the 6 persons next in the line of succession to the Crown must obtain the consent of Her Majesty
+before marrying . '' Jump up ^ Most sources , including Whitaker 's Almanack , exclude her as a confirmed Catholic , but Debrett 's includes her in line . Jump
+up ^ Albert and Leopold Windsor were listed on The Official Website of the British Monarchy until 2015 and in the 2013 edition of Whitaker 's Almanack as
+following Estella Taylor ( b 2004 ) and eligible to succeed ; MSN News , Debrett 's and Whitaker 's Almanack 2015 lists them after Lady Amelia Windsor and
+before Lady Helen Taylor . They were baptised as Catholics , and are not listed in line in editions of Whitaker 's earlier than 2012 . Jump up ^ Neither the
+Legitimacy Act 1926 nor the Legitimacy Act 1959 changed the Law of Succession . Jump up ^ Per the His Majesty 's Declaration of Abdication Act 1936 .
+</item 5>
+
+<item 6>
+Succession to the British throne
+Third in line is Prince George , the eldest child of the Duke of Cambridge , followed by his sister , Princess Charlotte and younger brother , Prince Louis .
+Sixth in line is Prince Henry of Wales , the younger son of the Prince of Wales . Any of the first six in line marrying without the sovereign 's consent would
+be disqualified from succession . The first four individuals in the line of succession who are over 21 , and the sovereign 's consort , may be appointed
+Counsellors of State . Counsellors of State perform some of the sovereign 's duties in the United Kingdom while he or she is out of the country or temporarily
+incapacitated . Otherwise , individuals in the line of succession need not have specific legal or official roles . The United Kingdom is one of the 16
+Commonwealth realms . Each of those countries has the same person as monarch and the same order of succession .
+</item 6>
+
+<item 7>
+Succession to the British throne
+1 Stuarts 2.3. 2 Hanoverians and Windsors 2.4 Commonwealth realms 3 Current rules 3.1 Marriages 3.2 Religion 3.3 Treason 4 Accession 5 See also 6 Notes 7
+References 8 Sources 9 External links Current line of succession ( edit ) First six in line from 23 April 2018 1 . The Prince of Wales 2 . The Duke of Cambridge
+3 . Prince George of Cambridge 4 . Princess Charlotte of Cambridge 5 . Prince Louis of Cambridge 6 . Prince Henry of Wales No official , complete version of the
+line of succession is currently maintained . The exact number , in remoter collateral lines , of the persons who would be eligible is uncertain . In 2001
+genealogist William Addams Reitwiesner compiled a list of 4,973 living descendants of the Electress Sophia in order of succession , but did so disregarding
+Roman Catholic status . When updated in January 2011 , the number was more than five thousand .
+</item 7>
+
+<item 8>
+Succession to the British throne
+A coronation is not necessary for a sovereign to reign ; for example , Edward VIII was never crowned , yet during his short reign was the undoubted king . See
+also ( edit ) Biography portal Royalty portal United Kingdom portal Accession Declaration Act 1910 Alternative successions of the English crown British prince
+British princess Family tree of the British royal family Jacobite succession List of descendants of George V List of heirs to the British throne List of heirs
+to the English throne List of heirs of Scotland List of monarchs in the British Isles Patrilineal descent of Elizabeth II Posthumous birth Royal Succession Act
+2013 ( New Zealand ) Royal Succession Bills and Acts Succession to the Crown Act 2013 ( United Kingdom ) Succession to the Crown Act 2015 ( Australia )
+Succession to the Throne Act , 2013 ( Canada ) Perth Agreement 2011 and other articles , linked directly or indirectly -- Wikipedia book Notes ( edit ) Jump up
+^ Succession to the Crown Act 2013 , s .
+</item 8>
+
+<item 9>
+Succession to the British throne
+In February 1952 , on her accession , Elizabeth II was proclaimed as sovereign separately throughout her realms . In October 2011 , the heads of government of
+all 16 realms agreed unanimously at a meeting held in Perth , Australia , to proposed changes to the royal succession laws that would see the order of
+succession for people born after 28 October 2011 governed by absolute primogeniture -- wherein succession passes to an individual 's children according to birth
+order , regardless of gender -- instead of male - preference primogeniture . They also agreed to lift a ban on those who marry Roman Catholics . The ban on
+Catholics themselves was retained to ensure that the monarch would be in communion with the Church of England . The changes came into effect across the
+Commonwealth realms on 26 March 2015 , after legislation was made according to each realm 's constitution . Following the changes coming into effect , the
+positions of the first 27 in line remained unchanged , including Princess Anne and her children and grandchildren , until the birth of Princess Charlotte of
+Cambridge on 2 May 2015 .
+</item 9>
+
+<item 10>
+Succession to the British throne
+Edward died childless in 1972 . Edward 's abdication was `` a demise of the Crown '' ( in the words of the Act ) , and the Duke of York , his brother who was
+then next in the line , immediately succeeded to the throne and to its `` rights , privileges , and dignities '' , taking the regnal name George VI . He in turn
+was succeeded in 1952 by his own elder daughter , Elizabeth II . By that time the monarch of the United Kingdom no longer reigned in the greater part of Ireland
+( which had become a republic in 1949 ) , but was the monarch of a number of independent sovereign states ( Commonwealth realms ) . Commonwealth realms ( edit )
+Further information : Perth Agreement Elizabeth II at her coronation in 1953 , passing to the left of the Coronation Chair Each of the Commonwealth realms has
+the same person as monarch and , to maintain that arrangement , they have agreed to continue the same line of succession ; some realms do so through domestic
+succession laws , while others stipulate whoever is monarch of the United Kingdom will also be monarch of that realm .
+</item 10>
+=== END ITEM id=beffce8d06215099 ===
+
+=== ITEM id=483788bca8058d6b ===
+Gold sentences and facts:
+Sentence 0: Rose Stagg ( Valene Kane ) , a woman who had a sexual relationship with Paul whilst at university . During a night of passion , Paul tried to strangle her to death . As the Belfast Strangler comes to the attention of the public , Stagg notices the similarities and contacts her close friend Reed Smith . Her husband was unaware the attack had taken place . She is later kidnapped and held captive by Spector . She is later found unconscious in a car trunk . During series three , Stagg reveals that her sexual relationship with Paul was entirely consensual , and that , during sex , he strangled her so aggressively she had to be revived .
+  Fact 0.0: Rose Stagg (played by Valene Kane) had a sexual relationship with Paul while at university.
+  Fact 0.1: During a night of passion, Paul tried to strangle Rose Stagg to death.
+  Fact 0.2: As the Belfast Strangler comes to the attention of the public, Rose Stagg notices the similarities.
+  Fact 0.3: Rose Stagg contacts her close friend Reed Smith.
+  Fact 0.4: Rose Stagg's husband was unaware the attack had taken place.
+  Fact 0.5: Rose Stagg is later kidnapped and held captive by Spector.
+  Fact 0.6: Rose Stagg is later found unconscious in a car trunk.
+  Fact 0.7: During series three, Rose Stagg reveals that her sexual relationship with Paul was entirely consensual.
+  Fact 0.8: During sex, Paul strangled Rose Stagg so aggressively that she had to be revived.
+Sentence 1: Actor Character Series 1 Series 2 Series 3 Total Appearances 5 6 7 8 9 10 11 12 13 14 15 16 17 Gillian Anderson DSI Stella Gibson 17 Jamie Dornan Paul Spector 17 John Lynch ACC Jim Burns 17 Aisling Franciosi Katie Benedetto N / A 16 Bronagh Waugh Sally Ann Spector N / A 15 Niamh McGrady PC Danielle Ferrington N / A N / A 15 Stuart Graham DCI Matthew Eastwood N / A N / A N / A 13 Bronágh Taggart DC Gail McNally N / A 12 Valene Kane Rose Stagg N / A N / A N / A N / A 11 Emmett J. Scanlan DC Glen Martin N / A N / A N / A 10 Archie Panjabi Prof. Reed Smith N / A N / A 9 Richard Clements DC Rick Turner N / A N / A N / A N / A 9 Colin Morgan DS Tom Anderson N / A 9 Karen Hassan Annie Brawley N / A N / A N / A N / A 8 Jonjo O'Neill Tom Stagg N / A N / A N / A 7 Nick Lee Ned Callan N / A N / A N / A 6 Brian Milligan James Tyler N / A N / A N / A 6 Seainin Brennan Liz Tyler N / A N / A N / A N / A 5 Ben Peel DS James Olson N / A N / A 5 Ian McElhinney Morgan Monroe N / A N / A 5 Aidan McArdle Sean Healy N / A 5 Ruth Bradley Wallace N / A 5 Michael McElhatton DI Rob Breedlove N / A Frank McCusker DCI Garrett Brink N / A N / A Aisling Bea Kiera Sheridan N / A N / A Barry Ward Dr. Patrick Spencer N / A N / A Krister Henriksson Dr. August Larson N / A Laura Donnelly Sarah Kay N / A N / A Richard Coyle Dr. Joe O'Donnell N / A N / A N / A Denise Gough Dr. Alison Walden N / A N / A Seán McGinley Fr . Peter Jensen N / A N / A Genevieve O'Reilly DCI Joan Kinkead N / A N / A Martin McCann David Alvarez N / A N / A
+  Fact 1.0: The cast table lists each actor's character and appearances across series one to three, with episode numbers 5 to 17 as column headers.
+  Fact 1.1: Gillian Anderson plays DSI Stella Gibson, with 17 total appearances.
+  Fact 1.2: Jamie Dornan plays Paul Spector, with 17 total appearances.
+  Fact 1.3: John Lynch plays ACC Jim Burns, with 17 total appearances.
+  Fact 1.4: Aisling Franciosi plays Katie Benedetto, with 16 total appearances.
+  Fact 1.5: Bronagh Waugh plays Sally Ann Spector, with 15 total appearances.
+  Fact 1.6: Niamh McGrady plays PC Danielle Ferrington, with 15 total appearances.
+  Fact 1.7: Stuart Graham plays DCI Matthew Eastwood, with 13 total appearances.
+  Fact 1.8: Bronágh Taggart plays DC Gail McNally, with 12 total appearances.
+  Fact 1.9: Valene Kane plays Rose Stagg, with 11 total appearances.
+  Fact 1.10: Emmett J. Scanlan plays DC Glen Martin, with 10 total appearances.
+  Fact 1.11: Archie Panjabi plays Prof. Reed Smith, with 9 total appearances.
+  Fact 1.12: Richard Clements plays DC Rick Turner, with 9 total appearances.
+  Fact 1.13: Colin Morgan plays DS Tom Anderson, with 9 total appearances.
+  Fact 1.14: Karen Hassan plays Annie Brawley, with 8 total appearances.
+  Fact 1.15: Jonjo O'Neill plays Tom Stagg, with 7 total appearances.
+  Fact 1.16: Nick Lee plays Ned Callan, with 6 total appearances.
+  Fact 1.17: Brian Milligan plays James Tyler, with 6 total appearances.
+  Fact 1.18: Seainin Brennan plays Liz Tyler, with 5 total appearances.
+  Fact 1.19: Ben Peel plays DS James Olson, with 5 total appearances.
+  Fact 1.20: Ian McElhinney plays Morgan Monroe, with 5 total appearances.
+  Fact 1.21: Aidan McArdle plays Sean Healy, with 5 total appearances.
+  Fact 1.22: Ruth Bradley plays Wallace, with 5 total appearances.
+  Fact 1.23: Michael McElhatton plays DI Rob Breedlove.
+  Fact 1.24: Frank McCusker plays DCI Garrett Brink.
+  Fact 1.25: Aisling Bea plays Kiera Sheridan.
+  Fact 1.26: Barry Ward plays Dr. Patrick Spencer.
+  Fact 1.27: Krister Henriksson plays Dr. August Larson.
+  Fact 1.28: Laura Donnelly plays Sarah Kay.
+  Fact 1.29: Richard Coyle plays Dr. Joe O'Donnell.
+  Fact 1.30: Denise Gough plays Dr. Alison Walden.
+  Fact 1.31: Seán McGinley plays Fr. Peter Jensen.
+  Fact 1.32: Genevieve O'Reilly plays DCI Joan Kinkead.
+  Fact 1.33: Martin McCann plays David Alvarez.
+
+Retrieved items:
+<item 1>
+List of The Fall characters
+Katie is a gifted musician and uses online videos to express her feelings . During series 2 she becomes deeply embroiled in Paul 's life . Paul ties her up in a
+hotel room , for example , whilst Katie breaks into a house wearing a shirt with Spector 's face on . Benedetto is placed under police surveillance and later
+arrested whilst trying to dispose of evidence that implicates Paul in the murders . In series three , she attacks a girl with acid , and is detained for her
+crimes . During this time , she reveals to Stella that her father 's death had a severe emotional impact on her , and she has been self - harming . Sally Ann
+Spector ( edit ) Sally Ann Spector ( Bronagh Waugh ) , the wife of Paul Spector and a neonatal nurse . She has a deep devotion to Paul , but is wary of his
+character as she has never met his family . Sally Ann is the mother of his two children and is unaware of his dark side . Over the course of the series , she
+becomes embroiled in his crimes without her knowledge , and even provides a false alibi to the police .
+</item 1>
+
+<item 2>
+List of The Fall characters
+Gibson relies on her heavily during the investigative process . Rose Stagg ( edit ) Rose Stagg ( Valene Kane ) , a woman who had a sexual relationship with Paul
+whilst at university . During a night of passion , Paul tried to strangle her to death . As the Belfast Strangler comes to the attention of the public , Stagg
+notices the similarities and contacts her close friend Reed Smith . Her husband was unaware the attack had taken place . She is later kidnapped and held captive
+by Spector . She is later found unconscious in a car trunk . During series three , Stagg reveals that her sexual relationship with Paul was entirely consensual
+, and that , during sex , he strangled her so aggressively she had to be revived . DC Glen Martin ( edit ) DC Glen Martin ( Emmett Scanlan ) , a capable
+detective with a somewhat boyish attitude towards his work . Martin is an invaluable member of Gibson 's team and , during series two , takes on a more
+prominent role in the decision making process . He is partnered with DC Gail McNally , and is fiercely protective of her , though not to a fault .
+</item 2>
+
+<item 3>
+List of The Fall characters
+Asst . Ch . Constable Jim Burns ( edit ) ACC Jim Burns ( John Lynch ) , the Assistant Chief Constable of the PSNI in charge of operations , and the Gold
+Commander of Musicman . Burns had an affair with Stella several years previously , and , despite being married , still appears to be infatuated with her . He 's
+a skilled officer and knows how to balance politics and police - work . He is initially hesitant about linking the murders , but later provides the
+investigation with all the resources it requires . He is , at first , believed to be linked to the PSNI corruption scandal , though this is later disproved .
+During series 2 , his lust for Stella becomes more apparent when he attempts to force himself on her whilst drunk . This drinking continues into series three ,
+and he resigns his commission during the series finale . Katie Benedetto ( edit ) Katerina `` Katie '' Benedetto ( Aisling Franciosi ) , a 15 - year - old
+schoolgirl . She babysits the Spectors ' children and - over the course of doing so - develops an affinity for Paul Spector .
+</item 3>
+
+<item 4>
+List of The Fall characters
+After leaving Paul for a short time , believing he slept with Katie , the two reconcile and she flees Ireland with him . In series 2 , they return . Sally Ann
+is pregnant with her third child , though she suffers a miscarriage . Following her arrest for assisting an offender , Sally attempts to kill her children . Pc
+Danielle Ferrington ( edit ) PC Danielle Ferrington ( Niamh McGrady ) , a Police Constable first seen attending a breaking and entering call at Sarah Kay 's
+home . She blames herself for Kay 's murder and tells Gibson this , resulting in her being recruited by Stella to work with Operation Musicman . Dani is a
+skilled investigator , and proves herself invaluable to the team . She speaks openly of her homosexuality to bisexual Gibson , and as a result the two develop
+both a professional and a personal bond . She later returns to patrol , believing she can do the most good on the street . It is in this capacity that she is
+involved in a gunfight with Spector and , following her suspension from front - line duty , is re-recruited by Stella . Det . Ch . Insp .
+</item 4>
+
+<item 5>
+When Calls the Heart
+She has a daughter Rosaleen . In season 1 's `` A Telling Silence , '' Rosaleen has trouble in school because she misses her father so much . When she runs away
+, Elizabeth finds her in the mine , feeling guilty that she did n't bring her father his lunch the day of the disaster because she wanted to play with a friend
+instead . She fears her mother will blame her , but Elizabeth convinces her that Molly will `` say that she loves her more than life itself . '' Molly is
+reunited with her daughter , to the joy of the town 's people . In season 2 's `` With All My Heart , '' Lee feels it 's time to `` play hard to get '' with
+Rosemary , so he enlists help from Molly . She pretends to be interested in him romantically . This ploy works and Rosemary admits that she does in fact like
+him . Molly is a kind woman and was among the first to welcome Elizabeth to town . Clara Stanton is the wife of Abigail 's late son Peter , and is a sweet ,
+quiet , and sensitive young woman .
+</item 5>
+
+<item 6>
+List of The Fall characters
+List of the Fall characters - wikipedia List of the Fall characters Jump to : navigation , search The Fall , starring Gillian Anderson , is a British - Irish
+drama series produced by Artists Studio and created by Allan Cubitt . It premiered in the Republic of Ireland at 21 : 30 on 12 May 2013 , and in the UK on BBC
+Two at 21 : 00 on 13 May 2013 . The series features Jamie Dornan , with John Lynch , Bronagh Waugh , Stuart Graham , and Niamh McGrady . Contents ( hide ) 1
+Cast overview 2 Main characters 2.1 Det . Supt . Stella Gibson 2.2 Peter Paul Spector 2.3 Asst . Ch . Constable Jim Burns 2.4 Katie Benedetto 2.5 Sally Ann
+Spector 2.6 PC Danielle Ferrington 2.7 Det . Ch . Insp . Matthew Eastwood 2.8 DC Gail McNally 2.9 Rose Stagg 2.10 DC Glen Martin 2.11 Professor Reed Smith 2.12
+DC Rick Turner 2.13 Det .
+</item 6>
+
+<item 7>
+List of The Fall characters
+`` BBC Two Sets Premiere Date For ' The Fall ' '' . TVWise . Retrieved 1 May 2013 . External links ( edit ) The Fall at BBC Programmes The Fall on RTÉ The Fall
+on Netflix The Fall on IMDb The Fall at Rotten Tomatoes The Fall Trailer at ZDF Enterprises The Fall on Facebook Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=List_of_The_Fall_characters&oldid=811099612 '' Categories : Lists of drama television characters Lists of British
+television series characters Lists of Irish television series characters Hidden categories : Use dmy dates from January 2017 Use British English from January
+2017 BBC programme ID not in Wikidata Talk Contents About Wikipedia Add links This page was last edited on 19 November 2017 , at 14 : 36 . About Wikipedia
+</item 7>
+
+<item 8>
+When Calls the Heart
+He later tells her that his son died , as well as his wife . However , his wife , Nora , comes to confront him in season 2 's `` Heart 's Desire . '' Henry
+Gowen is a cold , cynical man who formerly owned the coal mine . After the mine was shut down , Henry became the mayor of Hope Valley and still creates a cold ,
+cynical presence whenever people are around him . Henry is highly disliked and feared in the town . He frequently uses bribery to get what he wants , which is
+never for the good of the town . Rosemary `` Rosie '' LeVeaux Coulter is a flamboyant , enthusiastic actress from New York . She was briefly engaged to Jack
+Thornton , but they both realized that it would n't work out . Rosie immediately disliked Elizabeth and viewed her as `` the competition , '' but eventually
+came to really care about Elizabeth , even if she has a hard time showing it . At the beginning of season 2 , Rosemary began working at the cafe with Abigail
+and the two quickly became friends . Spending time with Abigail helped tone down some of Rosemary 's enthusiasm and made her a more likable person .
+</item 8>
+
+<item 9>
+List of The Fall characters
+Ch . Insp . Joan Kinkead 2.33 David Alvarez 3 References 4 External links Cast overview ( edit ) Actor Character Series 1 Series 2 Series 3 Total Appearances 5
+6 7 8 9 10 11 12 13 14 15 16 17 Gillian Anderson DSI Stella Gibson 17 Jamie Dornan Paul Spector 17 John Lynch ACC Jim Burns 17 Aisling Franciosi Katie Benedetto
+N / A 16 Bronagh Waugh Sally Ann Spector N / A 15 Niamh McGrady PC Danielle Ferrington N / A N / A 15 Stuart Graham DCI Matthew Eastwood N / A N / A N / A 13
+Bronágh Taggart DC Gail McNally N / A 12 Valene Kane Rose Stagg N / A N / A N / A N / A 11 Emmett J. Scanlan DC Glen Martin N / A N / A N / A 10 Archie Panjabi
+Prof.
+</item 9>
+
+<item 10>
+When Calls the Heart
+Rosemary even came to like Elizabeth , even if only on an acquaintance level . Truthfully , she cares about everyone in Hope Valley , especially Lee , with whom
+she shares an mutual attraction . When Rosie is not spending time with Lee , talking to Abigail , or dreaming about the glamorous life of an actress , she can
+often be found somewhere writing her weekly advice column for Hope Valley 's newspaper ! In season 3 , Rosemary 's friendship with Elizabeth deepened . Instead
+of viewing her as an adversary , she finds a friend in Elizabeth . Throughout season 3 , Rosemary 's relationship with Lee becomes more romantic . In `` Heart
+Of A Hero , '' seeing that Lee needs to spend more time at the sawmill to help the new settlers find jobs , Rosemary tells Lee that the theatre does n't have to
+be built . He insists , but she says how important his job is . He smiles and tells her he will one day build her theatre , telling her that she is `` the best
+part of his life . '' The couple shares in their first kiss . In `` A Gentle Heart , '' Lee is injured .
+</item 10>
+=== END ITEM id=483788bca8058d6b ===
+
+=== ITEM id=f0300c0b0d4ac094 ===
+Gold sentences and facts:
+Sentence 0: The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming .
+  Fact 0.0: Alabama has legislatively adopted stand-your-ground laws.
+  Fact 0.1: Alaska has legislatively adopted stand-your-ground laws.
+  Fact 0.2: Arizona has legislatively adopted stand-your-ground laws.
+  Fact 0.3: Florida has legislatively adopted stand-your-ground laws.
+  Fact 0.4: Georgia has legislatively adopted stand-your-ground laws.
+  Fact 0.5: Idaho has legislatively adopted stand-your-ground laws.
+  Fact 0.6: Indiana has legislatively adopted stand-your-ground laws.
+  Fact 0.7: Iowa has legislatively adopted stand-your-ground laws.
+  Fact 0.8: Kansas has legislatively adopted stand-your-ground laws.
+  Fact 0.9: Kentucky has legislatively adopted stand-your-ground laws.
+  Fact 0.10: Louisiana has legislatively adopted stand-your-ground laws.
+  Fact 0.11: Michigan has legislatively adopted stand-your-ground laws.
+  Fact 0.12: Mississippi has legislatively adopted stand-your-ground laws.
+  Fact 0.13: Missouri has legislatively adopted stand-your-ground laws.
+  Fact 0.14: Montana has legislatively adopted stand-your-ground laws.
+  Fact 0.15: Nevada has legislatively adopted stand-your-ground laws.
+  Fact 0.16: New Hampshire has legislatively adopted stand-your-ground laws.
+  Fact 0.17: North Carolina has legislatively adopted stand-your-ground laws.
+  Fact 0.18: Oklahoma has legislatively adopted stand-your-ground laws.
+  Fact 0.19: Pennsylvania has legislatively adopted stand-your-ground laws.
+  Fact 0.20: South Carolina has legislatively adopted stand-your-ground laws.
+  Fact 0.21: South Dakota has legislatively adopted stand-your-ground laws.
+  Fact 0.22: Tennessee has legislatively adopted stand-your-ground laws.
+  Fact 0.23: Texas has legislatively adopted stand-your-ground laws.
+  Fact 0.24: Utah has legislatively adopted stand-your-ground laws.
+  Fact 0.25: West Virginia has legislatively adopted stand-your-ground laws.
+  Fact 0.26: Wyoming has legislatively adopted stand-your-ground laws.
+
+Retrieved items:
+<item 1>
+Stand-your-ground law
+See also ( edit ) Jury nullification Proxemics , the study of human use of space and the effects that population density has on behavior , communication , and
+social interaction Restorative justice References ( edit ) ^ Jump up to : Dawkins v. State , 252 P. 3d 214 ( Okla . 2011 ) Jump up ^ Randall , Mark ; DeBoer ,
+Hendrick ( April 24 , 2012 ) . `` The Castle Doctrine and Stand - Your - Ground Law '' . Jump up ^ `` Duty to Retreat '' . Wikipedia . Jump up ^ Florida
+Statutes Title XLVI Chapter 776 Jump up ^ Ala . Code 13A - 3 - 23 ( b ) : `` A person who is justified under subsection ( a ) in using physical force ,
+including deadly physical force , and who is not engaged in an unlawful activity and is in any place where he or she has the right to be has no duty to retreat
+and has the right to stand his ground . '' Jump up ^ Eaton , Daysha ( 2013 - 06 - 20 ) .
+</item 1>
+
+<item 2>
+The excerpt lists related topics to stand-your-ground laws, including jury nullification, proxemics, and restorative justice. Its references cite U.S. court
+decisions and statutes, including Florida and Alabama provisions allowing force without a duty to retreat in certain circumstances, as well as German
+criminal-law material on excessive self-defense. Further reading compares other countries’ laws and critiques America’s shift away from retreat.
+</item 2>
+
+<item 3>
+Stand-your-ground law
+Contents ( hide ) 1 United States 1.1 Laws 1.2 Controversy 1.3 Racial disparity 1.4 Crime 2 Other jurisdictions 2.1 England and Wales 2.2 Czech Republic 2.3
+Germany 2.4 Ireland 3 See also 4 References 5 Further reading United states ( edit ) Laws ( edit ) Stand your ground law by US jurisdiction Stand - your -
+ground law Stand - your - ground in practice Stand - your - ground from within one 's vehicle Castle doctrine only ; duty to retreat in public Duty to retreat
+The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas ,
+Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South
+Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming . The states that have adopted stand - your - ground in practice , either through case law /
+precedent , jury instructions or by other means , are California , Colorado , Illinois , New Mexico , Oregon , Virginia , and Washington .
+</item 3>
+
+<item 4>
+Stand-your-ground laws remove the duty to retreat before using force in self-defense or defense of others, wherever a person may lawfully be; deadly force
+generally requires a reasonable belief of imminent serious injury or death. The laws vary by jurisdiction and may not protect people engaged in illegal
+activity. Unlike castle doctrine, which applies at home, stand-your-ground can apply in public. Many U.S. states have adopted such laws or similar rules;
+critics call them “shoot first” laws and argue they hinder prosecutions
+</item 4>
+
+<item 5>
+Stand-your-ground law
+Stand - your - ground law - wikipedia Stand - your - ground law Jump to : navigation , search `` Stand your ground '' redirects here . For other uses , see
+Stand Your Ground ( disambiguation ) . A stand - your - ground law ( sometimes called `` line in the sand '' or `` no duty to retreat '' law ) is a
+justification in a criminal case , whereby defendants can `` stand their ground '' and use force without retreating , in order to protect and defend themselves
+or others against threats or perceived threats . An example is where there is no duty to retreat from any place where they have a lawful right to be , and that
+they may use any level of force if they reasonably believe the threat rises to the level of being an imminent and immediate threat of serious bodily harm and or
+death . One case describes `` the ' stand your ground ' law ... a person has a right to expect absolute safety in a place they have a right to be , and may use
+deadly force to repel an unlawful intruder . ''
+</item 5>
+
+<item 6>
+Stand-your-ground law
+Although police officers make up for additional homicides , they are justified . These are not classified as murder because the officers are acting in the line
+of duty . Police are not required to retreat when acting in the line of duty . A 2015 study found that the adoption of Oklahoma 's stand - your - ground law was
+associated with a decrease in residential burglaries , but also that the law had `` the unintended consequence of increasing the number of non-residential
+burglaries . '' In 2016 , Mark Gius published a study that found that stand - your - ground laws were not associated with lower crime rates . A widely reported
+2016 study in the Journal of the American Medical Association compared homicide rates in Florida following the passage of its `` stand your ground '' self -
+defense law to the rates in four control states , New Jersey , New York , Ohio and Virginia , which have no similar laws . It found that the law was associated
+with a 24.4 % increase in homicide and a 31.6 % increase in firearm - related homicide , but no change in rates of suicide or suicide by firearm , between 2005
+and 2014 .
+</item 6>
+
+<item 7>
+Stand-your-ground law
+States that have adopted stand - your - ground , but limit it to only when a person is within their vehicle , are North Dakota , Ohio , and Wisconsin . The
+states that have castle doctrine only with the duty to retreat in public are Arkansas , Connecticut , Delaware , Maine , Maryland , Massachusetts , Minnesota ,
+Nebraska , New York , New Jersey , and Rhode Island . This means that people can use deadly force in their home , car , or other form of abode but have to
+retreat in public . Controversy ( edit ) Stand - your - ground laws are frequently criticized and called `` shoot first '' laws by critics , including the Brady
+Campaign to Prevent Gun Violence . In Florida , self - defense claims tripled in the years following enactment . The law 's critics argue that Florida 's law
+makes it very difficult to prosecute cases against individuals who shoot others and then claim self - defense . The shooter can argue that he felt threatened ,
+and in most cases , the only witness who could have argued otherwise is the deceased .
+</item 7>
+
+<item 8>
+Stand-your-ground law
+Florida governor Rick Scott plans his own investigation into the law . In a July 16 , 2013 speech in the wake of the jury verdict acquitting George Zimmerman of
+charges stemming from the shooting death of Trayvon Martin , Attorney General Eric Holder criticized stand - your - ground laws as `` senselessly expand ( ing )
+the concept of self - defense and sow ( ing ) dangerous conflict in our neighborhoods . '' The defendant , George Zimmerman , claims he was restrained at the
+time of the shooting , thus allowing no option for retreat and making ' stand your ground ' irrelevant to the case . Florida 's legislature is currently
+considering a bill that would allow people to show a gun or fire a warning shot during a confrontation without drawing a lengthy prison sentence . There is a
+bill moving through Republican legislature that would require the prosecution to prove that the defendant 's use of self - defense is not valid . If this passes
+, prosecutors will have to try a case twice at a hearing and a trial which would make it easier for defendants to argue against prosecution on the basis of
+their fears .
+</item 8>
+
+<item 9>
+Stand-your-ground law
+Vital Statistics , found a significant increase in homicide and injury of whites , especially white males . They also analyzed data from the Health Care
+Utilization Project , which revealed significantly increased rates of emergency room visits and hospital discharges related to gun injuries in states which
+enacted these laws . In a 2007 National District Attorneys Association symposium , numerous concerns were voiced that the law could increase crime . This
+included criminals using the law as a defense for their crimes , more people carrying guns , and that people would not feel safe if they felt that anyone could
+use deadly force in a conflict . The report also noted that the misinterpretation of clues could result in use of deadly force when there was , in fact , no
+danger . The report specifically notes that racial and ethnic minorities could be at greater risk because of negative stereotypes . Florida 's stand - your -
+ground law went into effect on October 1 , 2005 . Florida state representative Dennis Baxley , an author of the law , said that the violent crime rate has
+dropped since the enactment of the law , though he said there may be many reasons for the change . Others have argued that the law may lead to an increase in
+crime .
+</item 9>
+
+<item 10>
+Stand-your-ground law
+smartgunlaws.org . Retrieved 2017 - 01 - 12 . Jump up ^ Penal Code § § 197 , 198.5 , Legislative Counsel , State of California , retrieved April 3 , 2012 Jump
+up ^ `` CALCRIM No. 505 . Justifiable Homicide '' . CaliforniaJuryInstructions.Net . January 2006 . Retrieved April 3 , 2012 . Jump up ^ People v. Toler , 9 P.
+3d 341 ( Colo . 2000 ) Jump up ^ Cassels v. People , 92 P. 3d 951 ( Colo . 2004 ) Jump up ^ `` Virginia Concealed Carry Permit Information '' . USA Carry .
+Retrieved September 10 , 2013 . ^ Jump up to : `` Florida ' Stand Your Ground ' law could complicate Trayvon Martin teen shooting case '' . MSNBC . March 20 ,
+2012 . Retrieved March 21 , 2012 . Jump up ^ `` Deaths Nearly Triple Since ' Stand Your Ground ' Enacted '' . CBS Miami .
+</item 10>
+=== END ITEM id=f0300c0b0d4ac094 ===
+
+=== ITEM id=29e47fb8b097eca2 ===
+Gold sentences and facts:
+Sentence 0: The culture of Australia is a Western culture , derived primarily from Britain but also influenced by the unique geography of Australia , the diverse input of Aboriginal , Torres Strait Islander and other Australian people . The British colonization of Australia began in 1788 , and waves of multi-ethnic migration followed . Evidence of a significant Anglo - Celtic heritage includes the predominance of the English language , the existence of a democratic system of government drawing upon the British traditions of Westminster Government , Parliamentarianism and constitutional monarchy , American constitutionalist and federalist traditions , Christianity as the dominant religion , and the popularity of sports originating in ( or influenced by ) the British Isles . Australian culture has diverged significantly since British settlement .
+  Fact 0.0: The culture of Australia is a Western culture.
+  Fact 0.1: The culture of Australia is derived primarily from Britain.
+  Fact 0.2: The culture of Australia is also influenced by the unique geography of Australia.
+  Fact 0.3: The culture of Australia is influenced by the diverse input of Aboriginal, Torres Strait Islander and other Australian people.
+  Fact 0.4: British colonization of Australia began in 1788.
+  Fact 0.5: Waves of multi-ethnic migration followed the British colonization of Australia.
+  Fact 0.6: Evidence of a significant Anglo-Celtic heritage in Australia includes the predominance of the English language.
+  Fact 0.7: Evidence of Anglo-Celtic heritage in Australia includes a democratic system of government drawing upon the British traditions of Westminster Government, Parliamentarianism and constitutional monarchy.
+  Fact 0.8: Evidence of Anglo-Celtic heritage in Australia includes American constitutionalist and federalist traditions.
+  Fact 0.9: Evidence of Anglo-Celtic heritage in Australia includes Christianity as the dominant religion.
+  Fact 0.10: Evidence of Anglo-Celtic heritage in Australia includes the popularity of sports originating in (or influenced by) the British Isles.
+  Fact 0.11: Australian culture has diverged significantly since British settlement.
+
+Retrieved items:
+<item 1>
+Australia’s culture reflects British colonization from 1788, subsequent multi-ethnic migration, and Indigenous heritage dating back at least 60,000 years.
+British influence shaped English, government, Christianity, and sports, though Australian culture developed distinctively. Convict colonies, bushranger stories,
+and the 1850s gold rushes—including the Eureka Stockade rebellion—feature prominently. Australian colonies also pioneered elected parliaments and workers’ and
+women’s rights.
+</item 1>
+
+<item 2>
+Culture of Australia
+The British colonization of Australia began in 1788 , and waves of multi-ethnic migration followed . Evidence of a significant Anglo - Celtic heritage includes
+the predominance of the English language , the existence of a democratic system of government drawing upon the British traditions of Westminster Government ,
+Parliamentarianism and constitutional monarchy , American constitutionalist and federalist traditions , Christianity as the dominant religion , and the
+popularity of sports originating in ( or influenced by ) the British Isles . Australian culture has diverged significantly since British settlement . Aboriginal
+people are believed to have arrived as early as 60,000 years ago , and evidence of Aboriginal art in Australia dates back at least 30,000 years . Several states
+and territories had their origins as penal colonies , with the first British convicts arriving at Sydney Cove in 1788 . Stories of outlaws like the bushranger
+Ned Kelly have endured in Australian music , cinema and literature . The Australian gold rushes from the 1850s brought wealth as well as new social tensions to
+Australia , including the miners ' Eureka Stockade rebellion . The colonies established elected parliaments and rights for workers and women before most other
+Western nations .
+</item 2>
+
+<item 3>
+Australian culture is predominantly Western and derived from Britain, but shaped by Australia’s distinctive geography and its diverse peoples, including
+Aboriginal and Torres Strait Islander communities. Indigenous cultural traditions are among the world’s oldest; their ancestors have lived in Australia for an
+estimated 40,000–60,000 years. In 2006, Indigenous Australians numbered about 517,000 (2.5% of the population).
+</item 3>
+
+<item 4>
+Culture of Australia
+1 Indigenous music 5.6. 2 Folk music and national songs 5.6. 3 Classical music 5.6. 4 Popular music 5.7 Dance 5.8 Television 6 Religion 7 Public holidays 8
+Cuisine 8.1 Beverages 9 Clothing and apparel 10 Sport 10.1 Cricket 10.2 Football codes 10.3 Water sports 10.4 Other sports 11 Folklore 12 Attitudes , beliefs
+and stereotypes 13 References Development of Australian culture ( edit ) Main article : History of Australia A Luritja man demonstrating method of attack with
+boomerang under cover of shield ( 1920 ) The oldest surviving cultural traditions in Australia -- and some of the oldest surviving cultural traditions on earth
+-- are those of Australia 's Aboriginal and Torres Strait Islander peoples . Their ancestors have inhabited Australia for between 40,000 and 60,000 years ,
+living a hunter - gatherer lifestyle . In 2006 , the Indigenous population was estimated at 517,000 people , or 2.5 per cent of the total population .
+</item 4>
+
+<item 5>
+Culture of Australia
+By 2010 , the post-war immigration program had received more than 6.5 million migrants from every continent . The population tripled in the six decades to
+around 21 million in 2010 , including people originating from 200 countries . More than 43 per cent of Australians were either born overseas or have one parent
+who was born overseas . The population is highly urbanised , with more than 75 % of Australians living in urban centres , largely along the coast . Contemporary
+Australia is a pluralistic society , rooted in liberal democratic traditions and espousing informality and egalitarianism as key societal values . While
+strongly influenced by Anglo - Celtic origins , the culture of Australia has also been shaped by multi-ethnic migration which has influenced all aspects of
+Australian life , including business , the arts , cuisine , sense of humour and sporting tastes . Contemporary Australia is also a culture that is profoundly
+influenced by global movements of meaning and communication , including advertising culture . In turn , globalizing corporations from Holden to Exxon have
+attempted to associate their brand with Australian cultural identity . This process intensified from the 1970s onwards .
+</item 5>
+
+<item 6>
+Culture of Australia
+A 1967 referendum to include all Aborigines in the national electoral roll census was overwhelmingly approved by voters . In 1984 , a group of Pintupi people
+who were living a traditional hunter - gatherer desert - dwelling life were tracked down in the Gibson Desert and brought into a settlement . They are believed
+to have been the last uncontacted tribe . While the British cultural influence remained strong into the 21st century , other influences became increasingly
+important . The Hawaiian sport of surfing was adopted in Australia where a beach culture and the locally developed surf lifesaving movement was already
+burgeoning in the early 20th century . American pop culture and cinema were embraced in the 20th century , with country music and later rock and roll sweeping
+Australia , aided by the new technology of television and a host of American content . The 1956 Melbourne Olympics announced a confident , prosperous post-war
+nation , and new cultural icons like Australian country music star Slim Dusty and dadaist Barry Humphries expressed a uniquely Australian identity . Australia
+'s contemporary immigration program has two components : a program for skilled and family migrants and a humanitarian program for refugees and asylum seekers .
+</item 6>
+
+<item 7>
+Culture of Australia
+Culture of Australia - Wikipedia Culture of Australia Jump to : navigation , search Part of a series on the Culture of Australia History People ( show )
+Australian people African Australian Albanian Australian American Australian Anglo - Celtic Australian Asian Australian Assyrian Australian Bosnian Australian
+Chinese Australian Cornish Australian English Australian European Australian Filipino Australian Greek Australian Indian Australian Indigenous Australian Irish
+Australian Italian Australian Japanese Australian Jewish Australian Korean Australian Latin American Australian Lebanese Australian Macedonian Australian
+Pakistani Australian Scottish Australian Serbian Australian South African Australian Sudanese Australian Taiwanese Australian Welsh Australian Languages
+Traditions ( show ) Humour Mythology and folklore ( show ) Mythology folklore Cuisine Festivals Religion ( show ) Aboriginal Christianity ( Roman Catholic
+Anglican Uniting Church Presbyterian Baptist Lutheran Coptic Orthodox more ) Buddhism Islam Sikhism Judaism Hinduism Bahá'í Faith Irreligion Art ( show )
+Architecture Literature ( show ) Comic books Music and performing arts ( show ) Music Performing arts Media ( show ) Radio Television Cinema Sport Monuments (
+show ) World Heritage Sites Symbols ( show ) Flag Coat of arms Australia portal The culture of Australia is a Western culture , derived primarily from Britain
+but also influenced by the unique geography of Australia , the diverse input of Aboriginal , Torres Strait Islander and other Australian people .
+</item 7>
+
+<item 8>
+Culture of Australia
+The colonies established elected parliaments and rights for workers and women before most other Western nations . Federation in 1901 evidenced a growing sense
+of national identity that had developed over the latter half of the 19th century , as seen in the works of the Heidelberg School painters and writers like Banjo
+Paterson , Henry Lawson and Dorothea Mackellar . The World Wars profoundly altered Australia 's sense of identity , with World War I introducing the ANZAC
+legend , and World War II seeing a reorientation from Britain to the United States as the nation 's foremost major ally . After the second war , 6.5 million
+migrants from 200 nations brought immense new diversity , and Australians grew increasingly aware of their proximity to Asia . Over time , the diverse food ,
+lifestyle and cultural practices of immigrants have been absorbed into mainstream Australian culture . Contents ( hide ) 1 Development of Australian culture 2
+Symbols 3 Language 4 Humour 5 Arts 5.1 Literature 5.2 Theatre 5.3 Architecture 5.4 Visual arts 5.5 Cinema 5.6 Music 5.6. 1 Indigenous music 5.6.
+</item 8>
+
+<item 9>
+Australia’s culture evolved from strong British influence toward a distinctive identity, shaped by Indigenous traditions, American popular culture, surfing and
+television. The 1956 Melbourne Olympics reflected postwar confidence; Slim Dusty and Barry Humphries became cultural icons. In 1967, voters overwhelmingly
+backed counting Aboriginal people in the national census; in 1984, the last known uncontacted Pintupi people were brought from the Gibson Desert to a
+settlement. Immigration includes skilled and family migrants, refugees and asylum
+</item 9>
+
+<item 10>
+Australian culture blends British-derived institutions and traditions, ancient Aboriginal and Torres Strait Islander heritage, and increasingly diverse
+migration. Its identity draws on egalitarianism, mateship, a “fair go,” underdog support, informality and ANZAC service, alongside debates about the “cultural
+cringe,” anti-intellectualism and the “Lucky Country.” Indigenous Dreaming, art and languages remain vital amid reconciliation challenges. Federation,
+democratic and women’s-rights reforms, multiculturalism, religious diversity
+</item 10>
+=== END ITEM id=29e47fb8b097eca2 ===
+
+=== ITEM id=d853611d123cf339 ===
+Gold sentences and facts:
+Sentence 0: The village of New Earswick was built as a genuine mixed community . There was housing for both workers and managers , in a green setting with gardens for each home with its own 2 fruit trees . It was founded by the York philanthropist , Joseph Rowntree , who was quoted as saying , `` I do not want to establish communities bearing the stamp of charity but rather of rightly ordered and self governing communities '' . The first 28 houses were built between 1902 and 1904 by the architect Raymond Unwin , after which the Joseph Rowntree Village Trust ( now the Joseph Rowntree Housing Trust ) was established to continue building and manage the new village . The Joseph Rowntree Housing Trust is part of the Joseph Rowntree Foundation .
+  Fact 0.0: New Earswick was built as a genuine mixed community.
+  Fact 0.1: New Earswick had housing for both workers and managers.
+  Fact 0.2: New Earswick is set in a green setting.
+  Fact 0.3: Each home in New Earswick had a garden.
+  Fact 0.4: Each home in New Earswick had its own 2 fruit trees.
+  Fact 0.5: New Earswick was founded by the York philanthropist Joseph Rowntree.
+  Fact 0.6: Joseph Rowntree said he did not want to establish communities bearing the stamp of charity but rather of rightly ordered and self governing communities.
+  Fact 0.7: The first 28 houses of New Earswick were built between 1902 and 1904.
+  Fact 0.8: The architect Raymond Unwin built the first 28 houses of New Earswick.
+  Fact 0.9: The Joseph Rowntree Village Trust, now the Joseph Rowntree Housing Trust, was established after the first houses were built to continue building and manage the new village.
+  Fact 0.10: The Joseph Rowntree Housing Trust is part of the Joseph Rowntree Foundation.
+Sentence 1: As a result of the report , Joseph Rowntree 's conviction that it must be possible to provide better housing for people on low incomes led him to acquire 150 acres of land near the village of Earswick , two and a half miles to the north of the centre of York . The planner Raymond Unwin and the architect Barry Parker were commissioned to produce an overall plan for a new ' garden ' village and the detailed designs for its first houses . They also designed the garden cities of Letchworth and Welwyn Garden City .
+  Fact 1.0: Joseph Rowntree's conviction followed from a report.
+  Fact 1.1: Joseph Rowntree was convinced it must be possible to provide better housing for people on low incomes.
+  Fact 1.2: Joseph Rowntree acquired 150 acres of land near the village of Earswick.
+  Fact 1.3: The land near Earswick is two and a half miles north of the centre of York.
+  Fact 1.4: The planner Raymond Unwin and the architect Barry Parker were commissioned to produce an overall plan for a new 'garden' village.
+  Fact 1.5: Raymond Unwin and Barry Parker were commissioned to produce the detailed designs for the first houses of the new garden village.
+  Fact 1.6: Raymond Unwin and Barry Parker designed the garden cities of Letchworth and Welwyn Garden City.
+
+Retrieved items:
+<item 1>
+New Earswick
+The planner Raymond Unwin and the architect Barry Parker were commissioned to produce an overall plan for a new ' garden ' village and the detailed designs for
+its first houses . They also designed the garden cities of Letchworth and Welwyn Garden City . The building of New Earswick created a balanced village community
+where rents were kept low , but still represented a modest commercial return on the capital invested . Houses were open to any working people , not just
+Rowntree employees . The village was to be a demonstration of good practice . The Trust Deed of the Joseph Rowntree Village Trust , which was set up in 1904 to
+build and manage New Earswick , safeguarded generous open green space . All the grass verges were planted with trees after which almost all the roads are named
+. The village was built with bricks that were made in the brickworks on the outskirts of New Earswick . From 1950 the brickyard , which closed down in the 1930s
+, was developed into a nature reserve . Due to their religious beliefs , The Rowntree family decreed there would not be a public house in the village .
+</item 1>
+
+<item 2>
+New Earswick
+New Earswick - wikipedia New Earswick Jump to : navigation , search New Earswick New Earswick New Earswick shown within North Yorkshire Population 2,737 ( 2011
+) OS grid reference SE609555 Civil parish New Earswick Unitary authority City of York Ceremonial county North Yorkshire Region Yorkshire and the Humber Country
+England Sovereign state United Kingdom Post town YORK Postcode district YO32 Dialling code 01904 Police North Yorkshire Fire North Yorkshire Ambulance Yorkshire
+EU Parliament Yorkshire and the Humber UK Parliament York Outer List of places UK England Yorkshire 53 ° 59 ′ 31 '' N 1 ° 04 ′ 21 '' W ﻿ / ﻿ 53.992020 ° N
+1.072380 ° W ﻿ / 53.992020 ; - 1.072380 Coordinates : 53 ° 59 ′ 31 '' N 1 ° 04 ′ 21 '' W ﻿ / ﻿ 53.992020 ° N 1.072380 ° W ﻿ / 53.992020 ; - 1.
+</item 2>
+
+<item 3>
+New Earswick
+The Joseph Rowntree Housing Trust . Retrieved 4 March 2017 . Retrieved from `` https://en.wikipedia.org/w/index.php?title=New_Earswick&oldid=826057861 ''
+Categories : Model villages Villages and areas in the City of York Civil parishes in North Yorkshire Rowntree family Hidden categories : All articles with dead
+external links Articles with dead external links from November 2017 Articles with permanently dead external links Use British English from October 2013 Use dmy
+dates from October 2013 Articles with OS grid coordinates Coordinates on Wikidata All articles with unsourced statements Articles with unsourced statements from
+April 2013 Talk Contents About Wikipedia Cebuano Gaeilge Nederlands Polski Svenska Edit links This page was last edited on 16 February 2018 , at 23 : 16 . Text
+is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use and
+Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 3>
+
+<item 4>
+New Earswick
+The first 28 houses were built between 1902 and 1904 by the architect Raymond Unwin , after which the Joseph Rowntree Village Trust ( now the Joseph Rowntree
+Housing Trust ) was established to continue building and manage the new village . The Joseph Rowntree Housing Trust is part of the Joseph Rowntree Foundation .
+The village had contemporaries such as Bournville , Saltaire , Port Sunlight and others . This was in sharp contrast to the slums that had developed in York and
+other cities during the previous century , the deprivation of which had been revealed in Seebohm Rowntree 's report of 1901 , entitled Poverty : a study of town
+life . It revealed appalling statistics of dark , overcrowded and insanitary housing . As a result of the report , Joseph Rowntree 's conviction that it must be
+possible to provide better housing for people on low incomes led him to acquire 150 acres of land near the village of Earswick , two and a half miles to the
+north of the centre of York .
+</item 4>
+
+<item 5>
+New Earswick
+Steve Webster , 10 times FIM Sidecar World Championships , world champion was born and raised in the village. . Gallery ( edit ) Views of New Earswick The Folk
+Hall in New Earswick White Rose Avenue in New Earswick Westfield Beck behind housing on the west of New Earswick References ( edit ) Jump up ^ `` Civil Parish
+population 2011 '' . Neighbourhood Statistics . Office for National Statistics . Retrieved 19 February 2016 . Jump up ^ `` Village History '' . Retrieved 12
+December 2010 . Jump up ^ `` Village planning '' . Retrieved 12 December 2010 . Jump up ^ `` New Earswick : a village of new ideas '' . BBC . Retrieved 29 March
+2014 . Jump up ^ `` Couoncillors '' . Retrieved 12 December 2010 . ^ Jump up to : `` Village Information '' ( PDF ) . Archived from the original ( PDF ) on 4
+October 2013 . Retrieved 12 December 2010 .
+</item 5>
+
+<item 6>
+New Earswick
+There is a library based in the Integrated Children 's Centre at the local primary school , a doctor 's surgery and a range of shops , including two general
+stores , a pet shop and Post Office . As of 2017 the Post Office is situated within the Folk Hall . The village has 36 allotments in two areas , Willow Bank and
+Sleeper Path . In the 1960s , the Folk Hall was a live music venue featuring the likes of Procol Harum and Pink Floyd . Geography ( edit ) The River Foss runs
+along the eastern boundary of New Earswick with the York to Scarborough Line running to the west . The Nestle factory and grounds mark the southern border with
+the northern border being the A1237 York Outer Ring Road . The village was built using bricks from the brickworks on the outskirts of the village . From 1950
+the brickyard was developed into a nature reserve . The reserve is the home of New Earswick Angling Club , which was formed in 1948 .
+</item 6>
+
+<item 7>
+New Earswick
+The catchement area for the secondary school is from the village itself , Huntington , The Groves and the villages of Haxby and Wigginton . Religious sites (
+edit ) In 1914 the Anglican church of St. Andrew 's was built on the edge of the parish . The church was extended in 1939 to cater for the new housing in South
+Huntington just across the River Foss . A Methodist chapel and meeting house for the Society of Friends were added later . St. Andrew 's Church is now part of
+the ecclesiastical parish of Huntington and New Earswick . Sport ( edit ) New Earswick Cricket Club play at the recreation ground on White Rose Avenue . As of
+2014 their two teams will play in Division 3 ( South ) and Division 4 ( Central ) of the York and District Senior Cricket League . The recreation ground is
+shared with New Earswick All Blacks , an open age rugby league club that was founded in the 1980s and currently play in The Pennines Amateur Rugby League
+competition , in 2013 / 4 , playing in the Championship ( the second tier ) .
+</item 7>
+
+<item 8>
+New Earswick
+There never has been , although the Sports Club obtained a drink 's license in the 1980s . Governance ( edit ) New Earswick is part of the Huntington & New
+Earswick Ward of the City of York Council . As of 2010 it is represented by Keith Hyman , Keith Orrel and Carol Runciman who are all members of the local
+Liberal Democrat Party . A Parish Council was created in 1934 consisting of ten elected councillors and a clerk . Community ( edit ) There is a local community
+centre , the Folk Hall , which hosts activities such as keep - fit , yoga , snooker , and a junior youth club . New Earswick has recreational facilities ,
+including a swimming pool ( due for closure without public consultation ) , tennis courts and football , rugby and cricket pitches at the New Earswick Sports
+and Social Club . There were two open access play areas close to the Folk Hall , including a hard surface play area which have recently been bulldozed for a
+development of houses .
+</item 8>
+
+<item 9>
+New Earswick
+Economy ( edit ) Unlike the villages of Port Sunlight , Saltaire and Bournville the village was not designed specifically for the workforce of the nearby Joseph
+Rowntree Cocoa Works although some do earn their living at the factory which was taken over by Swiss firm , Nestle . Transport ( edit ) Transdev York operate a
+bus service that stops in the village as part of the Askham Bar to Clifton Moor route . First Group operate two bus services that stop in the village as part of
+the Wigginton to Acomb and Haxby to York City Centre routes . New Earswick was served by Earswick railway station on the York to Beverley Line between 1847 and
+1965 . Education ( edit ) There are both primary and secondary schools in New Earswick . New Earswick Primary School was built in 1912 . The primary school is
+one of eight Integrated Children 's Centres in York . Joseph Rowntree School is a secondary school and was built in 1941 . In 2006 , the Joseph Rowntree School
+secured £ 27million for a complete rebuild that was completed in late 2009 .
+</item 9>
+
+<item 10>
+New Earswick
+072380 ° W ﻿ / 53.992020 ; - 1.072380 New Earswick is a model village and civil parish in the unitary authority of City of York in North Yorkshire , England ,
+near the River Foss , north of York and south of Haxby . According to the 2001 census the parish had a population of 2,812 , reducing to 2,737 at the 2011
+Census . Before 1996 it had been part of the Ryedale district . Contents ( hide ) 1 History 2 Governance 3 Community 4 Geography 5 Economy 6 Transport 7
+Education 8 Religious sites 9 Sport 10 Gallery 11 References 12 External links History ( edit ) The village of New Earswick was built as a genuine mixed
+community . There was housing for both workers and managers , in a green setting with gardens for each home with its own 2 fruit trees . It was founded by the
+York philanthropist , Joseph Rowntree , who was quoted as saying , `` I do not want to establish communities bearing the stamp of charity but rather of rightly
+ordered and self governing communities '' .
+</item 10>
+=== END ITEM id=d853611d123cf339 ===
+
+=== ITEM id=cec59a2b73ef3859 ===
+Gold sentences and facts:
+Sentence 0: The Day the Music Died The memorial marking the crash site , 2003 Accident summary Date February 3 , 1959 ( 1959 - 02 - 03 ) Summary Spatial disorientation , loss of control in near - IMC conditions Site Near Clear Lake , Iowa , United States 43 ° 13 ′ 13.3 '' N 93 ° 22 ′ 53.1 '' W ﻿ / ﻿ 43.220361 ° N 93.381417 ° W ﻿ / 43.220361 ; - 93.381417 Coordinates : 43 ° 13 ′ 13.3 '' N 93 ° 22 ′ 53.1 '' W ﻿ / ﻿ 43.220361 ° N 93.381417 ° W ﻿ / 43.220361 ; - 93.381417 Passengers Crew Fatalities 4 ( all ) Survivors 0 Aircraft type Beechcraft Bonanza Operator Dwyer Flying Service , Mason City , Iowa Registration N3794N Flight origin Mason City Municipal Airport , Iowa Destination Hector Airport , North Dakota
+  Fact 0.0: The Day the Music Died has a memorial marking the crash site, photographed in 2003.
+  Fact 0.1: The accident date was February 3, 1959 (1959-02-03).
+  Fact 0.2: The accident summary is spatial disorientation and loss of control in near-IMC conditions.
+  Fact 0.3: The accident site is near Clear Lake, Iowa, United States.
+  Fact 0.4: The accident site coordinates are 43°13′13.3″N 93°22′53.1″W.
+  Fact 0.5: The accident site coordinates are 43.220361°N 93.381417°W.
+  Fact 0.6: The accident had 4 fatalities, all of the people involved.
+  Fact 0.7: The accident had 0 survivors.
+  Fact 0.8: The aircraft type was a Beechcraft Bonanza.
+  Fact 0.9: The operator was Dwyer Flying Service, of Mason City, Iowa.
+  Fact 0.10: The aircraft registration was N3794N.
+  Fact 0.11: The flight origin was Mason City Municipal Airport, Iowa.
+  Fact 0.12: The flight destination was Hector Airport, North Dakota.
+Sentence 1: At the time , Holly and his band , consisting of Waylon Jennings , Tommy Allsup , and Carl Bunch , were playing on the `` Winter Dance Party '' tour across the United States Midwest . Rising artists Valens and Richardson had joined the tour , as well . The long journeys between venues on board the cold , uncomfortable tour buses adversely affected the performers , with cases of flu and even frostbite . After stopping at Clear Lake to perform , and frustrated by such conditions , Holly chose to charter a plane to reach their next venue in Moorhead , Minnesota . Richardson , who had the flu , swapped places with Jennings , taking his seat on the plane , while Allsup lost his seat to Valens on a coin toss . Soon after takeoff , late at night and in poor , wintry weather conditions , the pilot lost control of the light aircraft , a Beechcraft Bonanza , which subsequently crashed into a cornfield . Everyone on board was killed . The event has since been mentioned in various songs and films . A number of monuments have been erected at the crash site and in Clear Lake , where an annual memorial concert is also held at the Surf Ballroom , the venue that hosted the artists ' last performance .
+  Fact 1.0: At the time, Holly and his band were playing on the 'Winter Dance Party' tour across the United States Midwest.
+  Fact 1.1: Holly's band consisted of Waylon Jennings, Tommy Allsup, and Carl Bunch.
+  Fact 1.2: Rising artists Valens and Richardson had joined the tour.
+  Fact 1.3: The long journeys between venues on board the cold, uncomfortable tour buses adversely affected the performers.
+  Fact 1.4: The performers had cases of flu.
+  Fact 1.5: The performers had cases of frostbite.
+  Fact 1.6: After stopping at Clear Lake to perform, and frustrated by such conditions, Holly chose to charter a plane.
+  Fact 1.7: Holly chartered the plane to reach the next venue in Moorhead, Minnesota.
+  Fact 1.8: Richardson, who had the flu, swapped places with Jennings, taking Jennings's seat on the plane.
+  Fact 1.9: Allsup lost his seat to Valens on a coin toss.
+  Fact 1.10: Soon after takeoff, late at night and in poor, wintry weather conditions, the pilot lost control of the light aircraft.
+  Fact 1.11: The light aircraft was a Beechcraft Bonanza.
+  Fact 1.12: The aircraft subsequently crashed into a cornfield.
+  Fact 1.13: Everyone on board was killed.
+  Fact 1.14: The event has since been mentioned in various songs and films.
+  Fact 1.15: A number of monuments have been erected at the crash site.
+  Fact 1.16: A number of monuments have been erected in Clear Lake.
+  Fact 1.17: An annual memorial concert is also held at the Surf Ballroom.
+  Fact 1.18: The Surf Ballroom was the venue that hosted the artists' last performance.
+
+Retrieved items:
+<item 1>
+The Day the Music Died
+The tail light was then observed gradually descending until it disappeared out of view . Around 1 : 00 am , when Peterson failed to make the expected radio
+contact , repeated attempts to establish communication were made , at Dwyer 's request , by the radio operator , but they were all unsuccessful . Later that
+morning , Dwyer , having heard no word from Peterson since his departure , took off in another airplane to retrace his planned route . Within minutes , at
+around 9 : 35 am , he spotted the wreckage less than 6 mi ( 9.7 km ) northwest of the airport . The sheriff 's office , alerted by Dwyer , dispatched Deputy
+Bill McGill , who drove to the crash site , a cornfield belonging to Albert Juhl . The Bonanza had impacted terrain at high speed , estimated to have been
+around 170 mph ( 270 km / h ) , banked steeply to the right and in a nose - down attitude .
+</item 1>
+
+<item 2>
+The Day the Music Died
+In fact , no record exists of any name ever having been given to N3794N . The most widely accepted version of events was that Richardson had contracted flu
+during the tour and asked Waylon Jennings for his seat on the plane . When Holly learned that Jennings was not going to fly , he said in jest : `` Well , I hope
+your ol ' bus freezes up . '' Jennings responded : `` Well , I hope your ol ' plane crashes '' , a humorous but ill - fated response that haunted him for the
+rest of his life . Ritchie Valens , who once had a fear of flying , asked Tommy Allsup for his seat on the plane . The two agreed to toss a coin to decide . Bob
+Hale , a DJ with KRIB - AM , was working the concert that night and flipped the coin in the ballroom 's side - stage room shortly before the musicians departed
+for the airport . Valens won the coin toss for the seat on the flight . In contradiction to the testimony of Allsup and Jennings , Dion has since said that
+Holly approached him along with Valens and The Bopper to join the flight , not Holly 's bandmates .
+</item 2>
+
+<item 3>
+The Day the Music Died
+Richardson , who had the flu , swapped places with Jennings , taking his seat on the plane , while Allsup lost his seat to Valens on a coin toss . Soon after
+takeoff , late at night and in poor , wintry weather conditions , the pilot lost control of the light aircraft , a Beechcraft Bonanza , which subsequently
+crashed into a cornfield . Everyone on board was killed . The event has since been mentioned in various songs and films . A number of monuments have been
+erected at the crash site and in Clear Lake , where an annual memorial concert is also held at the Surf Ballroom , the venue that hosted the artists ' last
+performance . Contents ( hide ) 1 Background 2 Flight arrangements 3 Take - off and crash 4 Aftermath 5 Official investigation 6 Subsequent investigations 7
+Legacy 7.1 Notification of victims ' families 7.2 Memorials 7.2. 1 Films 7.2. 2 Memorial concerts 7.2. 3 Monuments 7.2. 4 Roads 7.2.
+</item 3>
+
+<item 4>
+On February 3, 1959, a Beechcraft Bonanza crashed into an Iowa cornfield shortly after takeoff in poor winter weather, killing everyone aboard. Buddy Holly’s
+seat had been taken by J.P. Richardson, who was ill; Ritchie Valens won his seat in a coin toss with Tommy Allsup. Don McLean later called the tragedy “the Day
+the Music Died” in “American Pie,” portraying it as a loss of early rock-and-roll innocence. Memorials
+</item 4>
+
+<item 5>
+The plane struck its right wing on a frozen field, cartwheeled 540 feet, and stopped at a fence. Holly and Valens were ejected near the wreckage; Richardson was
+thrown into a neighboring cornfield, while pilot Peterson remained tangled in the fuselage. Carroll Anderson identified the bodies. The coroner said all four
+died instantly from severe brain trauma. Holly’s pregnant wife, María Elena, learned of his death on television.
+</item 5>
+
+<item 6>
+On February 3, 1959, a Beechcraft Bonanza operated by Dwyer Flying Service crashed near Clear Lake, Iowa, killing pilot Roger Peterson and passengers Buddy
+Holly, Ritchie Valens, and the Big Bopper. The flight had been chartered to take the musicians to Fargo after a concert. Investigators attributed the crash to
+spatial disorientation and loss of control in near-instrument conditions. The aircraft was not named “American Pie.”
+</item 6>
+
+<item 7>
+The Day the Music Died
+The rest of the party would have picked him up in Moorhead , saving him the journey in the bus and leaving him time to get some rest . Flight arrangements (
+edit ) A V - tailed Bonanza similar to N3794N , the accident aircraft Surf Ballroom manager Anderson called Hubert Jerry Dwyer ( 1930 - 2016 ) , owner of the
+Dwyer Flying Service , a company in Mason City , Iowa , to charter the plane to fly to Hector Airport in Fargo , the closest one to Moorhead . Flight
+arrangements were made with Roger Peterson , a 21 - year - old local pilot described as a `` young married man who built his life around flying '' . The flying
+service charged a fee of $36 per passenger for the flight on the 1947 single - engined , V - tailed Beechcraft 35 Bonanza ( registration N3794N ) , which could
+seat three passengers plus the pilot . A popular misconception , originating from Don McLean 's eponymous song about the crash , was that the plane was called
+American Pie . In fact , no record exists of any name ever having been given to N3794N .
+</item 7>
+
+<item 8>
+The Day the Music Died
+The musician 's son , Jay Perry , took the opportunity to have his father 's body re-examined to verify the original findings , and asked forensic
+anthropologist William Bass to carry out the procedure . Among the rumors surrounding the accident that this second examination sought to verify was that an
+accidental firearm discharge took place on board the aircraft and caused the crash , since two months after the event , a farmer had found at the crash site a .
+22 ( 5.6 mm ) pistol known to have belonged to Buddy Holly . Another rumor had Richardson surviving the initial impact and crawling out of the aircraft in
+search for help , prompted by the fact that his body was found farther from the wreckage than the other three . Bass and his team took several X-rays of
+Richardson 's body and eventually concluded that the musician had indeed died instantly from extensive , nonsurvivable fractures to almost all of his bones ; no
+traces of lead were found from any bullet . Coroner Smiley 's original report was , therefore , confirmed . In March 2015 , the National Transportation Safety
+Board ( NTSB ) received a request to reopen the investigation into the accident . The request was made by L.J.
+</item 8>
+
+<item 9>
+The Day the Music Died
+The right wing tip had struck the ground first , sending the aircraft cartwheeling across the frozen field for 540 feet ( 160 m ) , before coming to rest
+against a wire fence at the edge of Juhl 's property . The bodies of Holly and Valens had been ejected from the torn fuselage and lay near the wreckage .
+Richardson 's body had been thrown over the fence and into the cornfield of Juhl 's neighbor Oscar Moffett , while pilot Peterson 's body was entangled in the
+plane 's wreckage . With the rest of the entourage en route to Minnesota , ballroom manager Carroll Anderson , who had driven the party to the airport and
+witnessed the plane 's takeoff , had to identify the bodies of the musicians . County coroner Ralph Smiley certified that all four victims died instantly ,
+citing the cause of death as `` gross trauma to brain '' for the three artists and `` brain damage '' for the pilot . Aftermath ( edit ) Holly 's pregnant wife
+, María Elena , learned of his death from the reports on television .
+</item 9>
+
+<item 10>
+The Day the Music Died
+The Day the Music Died - wikipedia The Day the Music Died Jump to : navigation , search This article is about the plane crash . For other uses , see The Day the
+Music Died ( disambiguation ) . The Day the Music Died The memorial marking the crash site , 2003 Accident summary Date February 3 , 1959 ( 1959 - 02 - 03 )
+Summary Spatial disorientation , loss of control in near - IMC conditions Site Near Clear Lake , Iowa , United States 43 ° 13 ′ 13.3 '' N 93 ° 22 ′ 53.1 '' W ﻿
+/ ﻿ 43.220361 ° N 93.381417 ° W ﻿ / 43.220361 ; - 93.381417 Coordinates : 43 ° 13 ′ 13.3 '' N 93 ° 22 ′ 53.1 '' W ﻿ / ﻿ 43.220361 ° N 93.381417 ° W ﻿ /
+43.220361 ; - 93.381417 Passengers Crew Fatalities 4 ( all ) Survivors 0 Aircraft type Beechcraft Bonanza Operator Dwyer Flying Service ,
+</item 10>
+=== END ITEM id=cec59a2b73ef3859 ===

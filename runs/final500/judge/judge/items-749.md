@@ -1,0 +1,774 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=874aabcaa66f1c48 ===
+Gold sentences and facts:
+Sentence 0: The nineteenth season of Law & Order : Special Victims Unit premiered on September 27 , 2017 .
+  Fact 0.0: The nineteenth season of Law & Order: Special Victims Unit premiered.
+  Fact 0.1: The nineteenth season of Law & Order: Special Victims Unit premiered on September 27, 2017.
+
+Retrieved items:
+<item 1>
+Law & Order: Special Victims Unit
+ET for the first nine episodes , from September 20 through November 29 , 1999 . It was then shifted to Friday nights at 10 p.m. ET on January 7 , 2000 , and
+remained in that time slot through the end of season four on May 16 , 2003 . Beginning with the season five premiere on September 23 , 2003 , SVU moved to
+Tuesday nights at 10 : 00 p.m. ET . NBC airs repeats on Saturday nights at varying times and previous episodes are shown on the USA Network on varying days in
+marathon blocks With the season eleven premiere on September 23 , 2009 , the series vacated its Tuesday 10 p.m. ET slot because NBC began a prime - time
+weeknight Jay Leno series . The new time slot became Wednesday nights at 9 : 00 p.m. ET on NBC , with CTV still airing SVU on Tuesdays at 10 : 00 in Canada .
+After the 2010 Winter Olympics on March 3 , 2010 , the time slot for SVU changed again to Wednesdays at 10 p.m.
+</item 1>
+
+<item 2>
+Law & Order: Special Victims Unit
+2017 ( 2017 - 09 - 27 ) TBA TBA TBA Reception ( edit ) U.S. television Ratings ( edit ) Law & Order : Special Victims Unit premiered on Monday , September 20 ,
+1999 . After nine episodes , the show was moved to Friday nights , where it found its audience and following its first and second seasons became a Top 20 -
+overall show , overcoming the `` Friday night death slot '' phenomenon . Beginning with the season five , the show aired on Tuesdays to compete with CBS '
+Judging Amy and ABC 's NYPD Blue . In its later years , Law & Order : Special Victims Unit consistently outperformed Law & Order in the Nielsen ratings for
+first run episodes until the latter 's cancellation in 2010 . In 2016 , a New York Times study of the 50 TV shows with the most Facebook Likes found that SVU 's
+popularity was `` atypical : generally slightly more popular in rural areas and the Black Belt , but largely restricted to the eastern half of the country . It
+'s most popular in Albany , N.Y. ; least in Colorado and Utah '' .
+</item 2>
+
+<item 3>
+Law & Order: Special Victims Unit
+The first episode , `` Payback '' , premiered on NBC on September 20 , 1999 . Executive producers ( edit ) Executive producer Neal Baer left Law & Order : SVU
+as showrunner at the end of season twelve , after eleven years ( seasons 2 -- 12 ) on the show , in order to sign a three - year deal with CBS Studios . Baer
+was replaced by former Law & Order : Criminal Intent showrunner Warren Leight . In March 2015 , it was announced that Warren Leight signed a three - year deal
+with Sony Pictures Television , that will allow him to work on SVU one more season , its seventeenth . Leight joined the show in season thirteen . It was
+announced on March 10 , 2016 that original Law & Order veteran producer Rick Eid would take Leight 's place as showrunner starting in season 18 . Creator Dick
+Wolf commented to The Hollywood Reporter , `` I 'm extremely pleased that Rick had decided to rejoin the family and hope that he will be here for years to come
+. ''
+</item 3>
+
+<item 4>
+Law & Order: Special Victims Unit
+2012 ( 2012 - 09 - 26 ) May 22 , 2013 ( 2013 - 05 - 22 ) N / A N / A 15 24 September 25 , 2013 ( 2013 - 09 - 25 ) May 21 , 2014 ( 2014 - 05 - 21 ) N / A N / A
+16 23 September 24 , 2014 ( 2014 - 09 - 24 ) May 20 , 2015 ( 2015 - 05 - 20 ) N / A N / A 17 23 September 23 , 2015 ( 2015 - 09 - 23 ) May 25 , 2016 ( 2016 - 05
+- 25 ) N / A N / A 18 21 September 21 , 2016 ( 2016 - 09 - 21 ) May 24 , 2017 ( 2017 - 05 - 24 ) N / A N / A 19 24 September 27 ,
+</item 4>
+
+<item 5>
+Law & Order: Special Victims Unit
+; least in Colorado and Utah '' . Note : Each U.S. network television season starts in late September and ends in late May ( with the exception of the second
+and tenth season ) , which coincides with the completion of May sweeps . Season Time slot ( ET ) Episodes First aired Last aired TV season Rank Viewers ( in
+millions ) Date Viewers ( in millions ) Date Viewers ( in millions ) Monday 9 : 00 pm ( Episodes 1 -- 9 ) Friday 10 : 00 pm ( Episodes 10 -- 22 ) 22 September
+20 , 1999 ( 1999 - 09 - 20 ) 18.43 May 19 , 2000 ( 2000 - 05 - 19 ) 15.11 1999 -- 2000 No. 33 12.18 Friday 10 : 00 pm 21 October 20 , 2000 ( 2000 - 10 - 20 )
+13.20 May 11 , 2001 ( 2001 - 05 - 11 ) 15.06 2000 -- 01 No.
+</item 5>
+
+<item 6>
+Law & Order: Special Victims Unit
+July 7 , 2014 . Retrieved July 14 , 2014 . Jump up ^ `` Top TV Shows For 1999 -- 2000 Season '' . Variety . Retrieved February 12 , 2012 . Jump up ^ `` Law &
+Order : Special Victims Unit -- Series -- Episode List -- Season 2 '' . TV Tango . Retrieved June 10 , 2012 . Jump up ^ `` SpotVault -- Law & Order : SVU ( NBC
+) -- 2000 -- 01 '' . Spot Vault . December 9 , 2011 . Retrieved March 4 , 2012 . Jump up ^ `` The Bitter End '' . Entertainment Weekly Published in issue No.
+598 June 1 , 2001 . June 1 , 2001 . Retrieved February 12 , 2010 . Jump up ^ `` Law & Order : Special Victims Unit -- Series -- Episode List -- Season 3 '' . TV
+Tango . Retrieved June 10 , 2012 .
+</item 6>
+
+<item 7>
+Law & Order: Special Victims Unit
+1999 ( 1999 - 09 - 20 ) -- present Chronology Related shows Law & Order franchise External links Website Law & Order : Special Victims Unit ( often abbreviated
+to Law & Order : SVU or just SVU ) is an American police procedural , legal , crime drama television series set in New York City , where it is also primarily
+produced . In the style of the original Law & Order , episodes are often `` ripped from the headlines '' or loosely based on real crimes that have received
+media attention . Created by Dick Wolf , the series premiered on NBC on September 20 , 1999 , as the second series in Wolf 's successful Law & Order franchise .
+Law & Order : Special Victims Unit has been nominated for and won numerous awards , including the 2006 Emmy for Outstanding Lead Actress in a Drama Series for
+Mariska Hargitay , the first , and to date only , Emmy to be received by a regular on any Law & Order series . It is the current longest running scripted
+non-animated U.S.
+</item 7>
+
+<item 8>
+Law & Order: Special Victims Unit
+On May 12 , 2017 , the series was renewed for a nineteenth season , which premiered on September 27 , 2017 . As of January 17 , 2018 , Law & Order : Special
+Victims Unit has aired 421 original episodes . Contents ( hide ) 1 Production 1.1 History and development 1.1. 1 Executive producers 1.2 Filming 1.3 Broadcast
+history 1.4 Russian adaptation 2 Casting 2.1 Salaries 3 Cast and characters 4 Series overview 5 Episodes 6 Reception 6.1 U.S. television ratings 6.2 Awards and
+honors 7 Broadcast and streaming 7.1 Syndication 8 International broadcast 9 References 9.1 Notes 9.2 Bibliography 10 External links Production ( edit ) History
+and development ( edit ) The idea for Law & Order : Special . Victims Unit originated with the 1986 `` preppie murder '' case of Robert Chambers , who strangled
+Jennifer Levin , a woman he dated whom he later killed during what he claimed was consensual `` rough sex '' in Manhattan 's Central Park .
+</item 8>
+
+<item 9>
+Law & Order: Special Victims Unit
+56 7.30 15 24 September 25 , 2013 ( 2013 - 09 - 25 ) 9.58 May 21 , 2014 ( 2014 - 05 - 21 ) 6.39 2013 -- 14 No. 46 8.18 16 23 September 24 , 2014 ( 2014 - 09 -
+24 ) 10.07 May 20 , 2015 ( 2015 - 05 - 20 ) 6.96 2014 -- 15 No. 52 8.71 17 23 September 23 , 2015 ( 2015 - 09 - 23 ) 8.27 May 25 , 2016 ( 2016 - 05 - 25 ) 7.19
+2015 -- 16 No.
+</item 9>
+
+<item 10>
+Law & Order: Special Victims Unit
+ET , where it stayed until the twelfth season . In the 12th season , SVU moved back to 9 : 00 p.m. to lead in the newest Law & Order spinoff , Law & Order : LA
+, until it was pulled from the network in January 2011 to be retooled . SVU moved back to 10 : 00 p.m. on January 12 , 2011 , until the end of the 13th season .
+With season 14 , SVU moved back to 9 : 00 p.m. after a two - hour season premiere event on September 26 , 2012 , a position the show has held since . Russian
+adaptation ( edit ) In 2007 , the Russian production company Studio 2B purchased the rights to create an adaptation of Law & Order : Special Victims Unit for
+Russian television . Titled Закон и порядок : отдел оперативных расследований ( Law & Order : Division of Field Investigation ) , the series stars Alisa Bogart
+as Major Olga Bobrova .
+</item 10>
+=== END ITEM id=874aabcaa66f1c48 ===
+
+=== ITEM id=5b011e672f1e09e6 ===
+Gold sentences and facts:
+Sentence 0: A transfer case is a part of the drivetrain of four - wheel - drive , all - wheel - drive , and other multiple powered axle vehicles . The transfer case transfers power from the transmission to the front and rear axles by means of drive shafts . It also synchronizes the difference between the rotation of the front and rear wheels , and may contain one or more sets of low range gears for off - road use .
+  Fact 0.0: A transfer case is a part of the drivetrain of four-wheel-drive, all-wheel-drive, and other multiple powered axle vehicles.
+  Fact 0.1: A transfer case transfers power from the transmission to the front and rear axles by means of drive shafts.
+  Fact 0.2: A transfer case synchronizes the difference between the rotation of the front and rear wheels.
+  Fact 0.3: A transfer case may contain one or more sets of low range gears for off-road use.
+
+Retrieved items:
+<item 1>
+Transfer case
+See also ( edit ) NP - 205 AMC / Jeep Transmissions Jeep four wheel drive systems Mitsubishi Super Select References ( edit ) Jump up ^
+http://www.cdxetextbook.com/trans/finalDrives/allWheel/transfercasediff.html Transfer case differential action Jump up ^
+http://www.fourwheeler.com/techarticles/68958_how_transfer_cases_work/index.html How Transfer Cases Work Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Transfer_case&oldid=805616544 '' Categories : Vehicle technology Four - wheel drive layout Hidden categories : All
+articles with unsourced statements Articles with unsourced statements from May 2015 Articles with unsourced statements from March 2012 Talk Contents About
+Wikipedia فارسی 日本 語 Polski Русский Simple English Svenska Українська Edit links This page was last edited on 16 October 2017 , at 15 : 12 . Text is available
+under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use and Privacy Policy
+.
+</item 1>
+
+<item 2>
+Transfer case
+This is necessary because the front and rear tires never turn at the same speed . Different rates of tire rotation are generally due to different tire diameters
+( since front and rear tires inevitably wear at different rates ) and different gear ratios in the front and rear differentials since manufacturers will often
+have a slightly lower ratio in the front vs. the rear to help with control ( such as a 3.55 : 1 in the rear differential and a 3.54 : 1 in the front
+differential ) . If the transfer case did not make up the difference between the two different rates of rotation , binding would occur and the transfer case
+could become damaged . This is also why a transfer case that is not designed for on - road use must never be driven on dry pavement . Transfer cases designed
+for off - road use can mechanically lock the front and rear axles when needed ( e.g. when one of the axles is on a slippery surfaces or stuck in mud , whereas
+the other has better traction ) . This is the equivalent to the differential lock . The transfer case may contain one or more sets of low range gears for off -
+road use .
+</item 2>
+
+<item 3>
+Transfer case
+This is only for the four - wheel - drive high setting . To engage the four - wheel - drive low setting , the vehicle must be stopped and the transmission must
+be shifted to neutral , then the four - wheel - drive low can be selected . ESOF ( edit ) Electronic Shift On - the - Fly ( ESOF ) transfer cases have a dash -
+mounted selector switch or buttons with front sealed automatic locking axle hubs or drive flanges . Some vehicles , such as Jeeps , also have what is called
+SelecTrac , which has a slider switch on the center console . Unlike the manual transfer case , this system has a transfer case motor . To engage the four -
+wheel - drive system the vehicle must be moving at a lower speeds , the speed at which 4x4 can be engaged depends on the vehicle . This is only for the four -
+wheel - drive high setting . To engage the four - wheel - drive low setting , the vehicle must be stopped and the transmission must be shifted to neutral , then
+the four - wheel - drive low can be selected .
+</item 3>
+
+<item 4>
+Transfer case
+Married transfer cases are bolted directly to the transmission , usually between the transmission 's output shaft and the rear or main driveshaft . Sometimes a
+married transfer case is an integral part of the transmission and the two components share the same housing or `` case '' , as is commonly found on recent
+Subaru products and some other all - wheel - drive cars . Divorced / independent ( edit ) A divorced or independent transfer case is completely separate from
+the transmission . It is located further down the driveline than a married transfer case and connected to the transmission output shaft by a short driveshaft .
+Independent transfer cases are used on very long wheelbase vehicles , such as commercial trucks or military trucks . Transfer case Shift type ( edit ) M.S.O.F.
+( edit ) Manual Shift On - the - Fly transfer cases have a selector lever on the driver 's side floor transmission hump and may also have either two sealed
+automatic front axle locking hubs or two manual front axle hub selectors of `` LOCK '' and `` UNLOCK '' or `` FREE '' . To engage the four - wheel - drive
+system the vehicle must be moving at a low speed , the speed at which 4x4 can be engaged depends on the vehicle .
+</item 4>
+
+<item 5>
+Transfer case
+Those used in sports cars and performance sedans are usually `` transparent '' to the driver ; there is no shifter or select lever . Drive type ( edit ) Gear -
+driven ( edit ) There are two different types of internal power - transfer mechanism found in most transfer cases . Gear - driven transfer cases use sets of
+gears to drive either the front or both the front and rear driveshafts . These are generally strong , heavy units that are used in large trucks , but there are
+currently several gear drive cases in production for passenger cars . Chain - driven ( edit ) Chain - driven transfer cases use a chain to drive most often only
+one axle , but can drive both axles . Chain - driven transfer cases are quieter and lighter than gear - driven ones . They are used in vehicles such as compact
+trucks , full size trucks , Jeeps and SUVs . Some off - road driving enthusiasts modify their vehicles to use gear - driven transfer cases , accepting the
+additional weight and noise to gain the extra strength they generally provide . Housing type ( edit ) Married ( edit ) Transfer cases are also classified as
+either `` divorced '' / independent or `` married '' .
+</item 5>
+
+<item 6>
+Transfer case
+1 M.S.O.F. 2.3. 2 E.S.O.F. 3 See also 4 References Functions ( edit ) The transfer case receives power from the transmission and sends it to both the front and
+rear axles . This can be done with gears , hydraulics , or chain drive . On some vehicles , such as four - wheel - drive trucks or vehicles intended for off -
+road use , this feature is controlled by the driver . The driver can put the transfer case into either `` two - wheel - drive '' or `` four - wheel - drive ''
+mode . This is sometimes accomplished by means of a shifter , similar to that in a manual transmission . On some vehicles this may be electronically operated by
+a switch instead . Some vehicles , such as all - wheel - drive sports cars , have transfer cases that are not selectable . Such a transfer case is permanently
+`` locked '' into all - wheel - drive mode . Transfer cases that are designed to allow for normal road use synchronize the difference between the rotation of
+the front and rear wheels , in much the same way the differential acts on a given axle . This is necessary because the front and rear tires never turn at the
+same speed .
+</item 6>
+
+<item 7>
+Jeep
+Off - road abilities Jeep Wrangler off - roading . Jeep advertising has always emphasized the brand 's vehicles ' off - road capabilities . Today , the Wrangler
+is one of the few remaining four - wheel - drive vehicles with solid front and rear axles . These axles are known for their durability , strength , and
+articulation . New Wranglers come with a Dana 44 rear differential and a Dana 30 front differential . The upgraded Rubicon model of the JK Wrangler is equipped
+with electronically activated locking differentials , Dana 44 axles front and rear with 4.10 gears , a 4 : 1 transfer case , electronic sway bar disconnect and
+heavy duty suspension . Another benefit of solid axle vehicles is they tend to be easier and cheaper to `` lift '' with aftermarket suspension systems . This
+increases the distance between the axle and chassis of the vehicle . By increasing this distance , larger tires can be installed , which will increase the
+ground clearance , allowing it to traverse even larger and more difficult obstacles . In addition to higher ground clearance , many owners aim to increase
+suspension articulation or `` flex '' to give their Jeeps greatly improved off - road capabilities .
+</item 7>
+
+<item 8>
+Transfer case
+Transfer case - wikipedia Transfer case Jump to : navigation , search For the US military use of the term , see coffin . Inside of a 231 New Process Gear
+transfer case . Part - time / Manual , shift on the fly A transfer case is a part of the drivetrain of four - wheel - drive , all - wheel - drive , and other
+multiple powered axle vehicles . The transfer case transfers power from the transmission to the front and rear axles by means of drive shafts . It also
+synchronizes the difference between the rotation of the front and rear wheels , and may contain one or more sets of low range gears for off - road use .
+Contents ( hide ) 1 Functions 2 Types 2.1 Drive type 2.1. 1 Gear - driven 2.1. 2 Chain - driven 2.2 Housing type 2.2. 1 Married 2.2. 2 Divorced / independent
+2.3 Transfer case shift type 2.3. 1 M.S.O.F. 2.3. 2 E.S.O.F.
+</item 8>
+
+<item 9>
+Transfer case
+The transfer case may contain one or more sets of low range gears for off - road use . Low range gears are engaged with a shifter or electronic switch . On many
+transfer cases , this shifter is the same as the one that selects 2WD or 4WD operation . Low range gears allow the vehicle to drive at much slower speeds while
+still operating within the usable power band / RPM range of the engine . This also increases the torque available at the axles . Low - range gears are used
+during slow - speed or extreme off - road maneuvers , such as rockcrawling , navigating dangerous roads , or when pulling a heavy load . This feature is often
+absent on all - wheel - drive cars . Some very large vehicles , such as heavy equipment or military trucks , have more than one low - range gear . Types ( edit
+) Transfer cases used on `` part - time '' four - wheel - drive off - road vehicles such as trucks , truggies , rock - crawling vehicles , and some military
+vehicles generally allow the driver to select 2WD or 4WD , as well as high or low gear ranges .
+</item 9>
+
+<item 10>
+Transfer case
+By using this site , you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit
+organization . About Wikipedia
+</item 10>
+=== END ITEM id=5b011e672f1e09e6 ===
+
+=== ITEM id=b643c6eb6c5364a2 ===
+Gold sentences and facts:
+Sentence 0: Queen Elizabeth II is the sovereign , and her heir apparent is her eldest son , Charles , Prince of Wales . Next in line after him is Prince William , Duke of Cambridge , the Prince of Wales 's elder son . Third in line is Prince George , the eldest child of the Duke of Cambridge , followed by his sister , Princess Charlotte and younger brother , Prince Louis . Sixth in line is Prince Henry of Wales , the younger son of the Prince of Wales . Any of the first six in line marrying without the sovereign 's consent would be disqualified from succession .
+  Fact 0.0: Queen Elizabeth II is the sovereign.
+  Fact 0.1: Charles, Prince of Wales, is the heir apparent to the sovereign, Queen Elizabeth II.
+  Fact 0.2: Charles, Prince of Wales, is the eldest son of Queen Elizabeth II.
+  Fact 0.3: Prince William, Duke of Cambridge, is next in line for succession after Charles, Prince of Wales.
+  Fact 0.4: Prince William is the elder son of the Prince of Wales.
+  Fact 0.5: Prince George is third in line for succession.
+  Fact 0.6: Prince George is the eldest child of the Duke of Cambridge.
+  Fact 0.7: Princess Charlotte follows Prince George in the line of succession.
+  Fact 0.8: Princess Charlotte is the sister of Prince George.
+  Fact 0.9: Prince Louis is the younger brother of Prince George.
+  Fact 0.10: Prince Henry of Wales is sixth in line for succession.
+  Fact 0.11: Prince Henry of Wales is the younger son of the Prince of Wales.
+  Fact 0.12: Any of the first six in line to the throne who marries without the sovereign's consent would be disqualified from succession.
+
+Retrieved items:
+<item 1>
+Succession to the British throne
+3 : `` A person who ( when the person marries ) is one of the 6 persons next in the line of succession to the Crown must obtain the consent of Her Majesty
+before marrying . '' Jump up ^ Most sources , including Whitaker 's Almanack , exclude her as a confirmed Catholic , but Debrett 's includes her in line . Jump
+up ^ Albert and Leopold Windsor were listed on The Official Website of the British Monarchy until 2015 and in the 2013 edition of Whitaker 's Almanack as
+following Estella Taylor ( b 2004 ) and eligible to succeed ; MSN News , Debrett 's and Whitaker 's Almanack 2015 lists them after Lady Amelia Windsor and
+before Lady Helen Taylor . They were baptised as Catholics , and are not listed in line in editions of Whitaker 's earlier than 2012 . Jump up ^ Neither the
+Legitimacy Act 1926 nor the Legitimacy Act 1959 changed the Law of Succession . Jump up ^ Per the His Majesty 's Declaration of Abdication Act 1936 .
+</item 1>
+
+<item 2>
+Succession to the British throne
+`` ... And Lastly that after the Decease of Her Present Majesty ( whom God long preserve ) the Soveraign succeeding to her in the Royal Government of the
+Kingdom of Great Britain shall in all time comeing at his or her accession to the Crown Swear and Subscribe That they shall inviolably maintain and preserve the
+foresaid settlement of the True Protestant Religion with the Government Worship Discipline Right and Priviledges of this Church as above established by the Laws
+of this Kingdom in prosecution of the Claim of Right ... '' Jump up ^ Regency Act 1937 , section 1 ( 2 ) Jump up ^ `` Coronation '' . Official website of the
+British Monarchy . Retrieved 7 May 2016 . Sources ( edit ) Blackstone , William ( 1765 ) . `` Chapter 3 : Of The King , and His Title '' . Commentaries on the
+Laws of England , Vol. 1 . Oxford : Clarendon Press . Bogdanor , Vernon ( 1995 ) . The Monarchy and the Constitution . Oxford : Clarendon Press .
+</item 2>
+
+<item 3>
+Succession to the British throne
+Each of those countries has the same person as monarch and the same order of succession . In 2011 , the prime ministers of the realms agreed unanimously to
+adopt a common approach to amending the rules on the succession to their respective Crowns so that absolute primogeniture would apply for persons born after the
+date of the agreement , instead of male - preference primogeniture , and the ban on marriages to Roman Catholics would be lifted , but the monarch would still
+need to be in communion with the Church of England . After the necessary legislation had been enacted in accordance with each realm 's constitution , the
+changes took effect on 26 March 2015 . Contents ( hide ) 1 Current line of succession 2 History 2.1 England 2.2 Scotland 2.3 After the union of the crowns 2.3.
+1 Stuarts 2.3.
+</item 3>
+
+<item 4>
+Succession to the British throne
+In February 1952 , on her accession , Elizabeth II was proclaimed as sovereign separately throughout her realms . In October 2011 , the heads of government of
+all 16 realms agreed unanimously at a meeting held in Perth , Australia , to proposed changes to the royal succession laws that would see the order of
+succession for people born after 28 October 2011 governed by absolute primogeniture -- wherein succession passes to an individual 's children according to birth
+order , regardless of gender -- instead of male - preference primogeniture . They also agreed to lift a ban on those who marry Roman Catholics . The ban on
+Catholics themselves was retained to ensure that the monarch would be in communion with the Church of England . The changes came into effect across the
+Commonwealth realms on 26 March 2015 , after legislation was made according to each realm 's constitution . Following the changes coming into effect , the
+positions of the first 27 in line remained unchanged , including Princess Anne and her children and grandchildren , until the birth of Princess Charlotte of
+Cambridge on 2 May 2015 .
+</item 4>
+
+<item 5>
+Succession to the British throne
+This exclusion is not affected by changes subsequent to the Perth Agreement . History ( edit ) This section needs additional citations for verification . Please
+help improve this article by adding citations to reliable sources . Unsourced material may be challenged and removed . ( May 2015 ) ( Learn how and when to
+remove this template message ) The current succession law in the United Kingdom evolved from succession law in both England and Scotland . Originally in both
+countries , there were no fixed rules governing succession to the throne . The individual could have relied on inheritance , statute , election ( by Parliament
+or by another body ) , nomination ( by a reigning sovereign in his or her will ) , conquest or prescription ( de facto possession of the Crown ) . It was often
+unclear which of these bases should take precedence ; often , the outcome depended not on the legal strength of the claims , but on the political or military
+power of the claimants . However , over time , the default rule became male primogeniture : later monarchs coming to the throne by exception to this rule went
+to great lengths to explain and justify going against these rules , and to prove their rivals illegitimate . Eventually , Parliament asserted control of
+succession .
+</item 5>
+
+<item 6>
+Succession to the British throne
+Succession to the British throne - wikipedia Succession to the British throne This is the latest accepted revision , reviewed on 27 April 2018 . Jump to :
+navigation , search The Sovereign 's Throne in the House of Lords , from which the speech is delivered at State Openings of Parliament Succession to the British
+throne is determined by descent , gender ( for people born before October 2011 ) , legitimacy , and religion . Under common law , the Crown is inherited by a
+sovereign 's children or by a childless sovereign 's nearest collateral line . The Bill of Rights 1689 and the Act of Settlement 1701 , restrict succession to
+the throne to the legitimate Protestant descendants of Sophia of Hanover that are in `` communion with the Church of England '' . Spouses of Roman Catholics
+were disqualified from 1689 until the law was amended in 2015 . Protestant descendants of those excluded for being Roman Catholics are eligible . Queen
+Elizabeth II is the sovereign , and her heir apparent is her eldest son , Charles , Prince of Wales . Next in line after him is Prince William , Duke of
+Cambridge , the Prince of Wales 's elder son .
+</item 6>
+
+<item 7>
+Succession to the British throne
+Jane was also originally excluded on the premise that no woman could reign over England . Nonetheless , the will , which originally referred to Jane 's heirs -
+male , was amended to refer to Jane and her heirs - male . Upon Edward VI 's death in 1553 , Jane was proclaimed Queen of England and Ireland . She was not
+universally recognised and after nine days she was overthrown by the popular Mary . As Henry VIII 's will had been approved by an Act of Parliament in 1544 ,
+Edward 's contravening will was unlawful and ignored . Mary was succeeded by her half - sister , Elizabeth , who broke with the precedents of many of her
+predecessors , and refused to name an heir . Whilst previous monarchs ( including Henry VIII ) had specifically been granted authority to settle uncertain
+successions in their wills , the Treasons Act 1571 asserted that Parliament had the right to settle disputes , and made it treason to deny Parliamentary
+authority . Wary of threats from other possible heirs , Parliament further passed the Act of Association 1584 , which provided that any individual involved in
+attempts to murder the Sovereign would be disqualified from succeeding .
+</item 7>
+
+<item 8>
+Succession to the British throne
+After Mary II died in 1694 , her husband continued to reign alone until his own death in 1702 . The line of succession provided for by the Bill of Rights was
+almost at an end ; William and Mary never had any children , and Princess Anne 's children had all died . Therefore , Parliament passed the Act of Settlement .
+The Act maintained the provision of the Bill of Rights whereby William would be succeeded by Princess Anne and her descendants , and thereafter by his own
+descendants from future marriages . The Act , however , declared that they would be followed by James I & VI 's granddaughter Sophia , Electress Dowager of
+Hanover ( the daughter of James 's daughter Elizabeth Stuart ) , and her heirs . As under the Bill of Rights , non-Protestants and those who married Roman
+Catholics were excluded . Electress Sophia of Hanover ( 1630 -- 1714 ) Upon William 's death , Anne became Queen of England , Scotland and Ireland . Because the
+Parliament of England settled on Sophia as Anne 's heir - presumptive without consulting Scottish leaders , the Estates of Scotland retaliated by passing the
+Scottish Act of Security .
+</item 8>
+
+<item 9>
+Succession to the British throne
+The first to be affected by the changes , on the day they came into effect in March , were the children of Lady Davina Lewis -- her son Tāne ( born 2012 ) and
+her daughter Senna ( born 2010 ) -- who were reversed in the order of succession , becoming 29th and 28th in line respectively . Current rules ( edit ) The Bill
+of Rights and the Act of Settlement ( restated by the Acts of Union ) still govern succession to the throne . They were amended in the United Kingdom by the
+Succession to the Crown Act 2013 , which was passed mainly `` to make succession to the Crown not depend on gender '' and `` to make provision about Royal
+Marriages '' ( according to its long title ) , thereby implementing the Perth Agreement in the UK and in those realms that , by their laws , have as their
+monarch automatically whoever is monarch of the UK . Other realms passed their own legislation . Anyone ineligible to succeed is treated as if they were `` dead
+'' . That individual 's descendants are not also disqualified , unless they are personally ineligible .
+</item 9>
+
+<item 10>
+Succession to the British throne
+Edward died childless in 1972 . Edward 's abdication was `` a demise of the Crown '' ( in the words of the Act ) , and the Duke of York , his brother who was
+then next in the line , immediately succeeded to the throne and to its `` rights , privileges , and dignities '' , taking the regnal name George VI . He in turn
+was succeeded in 1952 by his own elder daughter , Elizabeth II . By that time the monarch of the United Kingdom no longer reigned in the greater part of Ireland
+( which had become a republic in 1949 ) , but was the monarch of a number of independent sovereign states ( Commonwealth realms ) . Commonwealth realms ( edit )
+Further information : Perth Agreement Elizabeth II at her coronation in 1953 , passing to the left of the Coronation Chair Each of the Commonwealth realms has
+the same person as monarch and , to maintain that arrangement , they have agreed to continue the same line of succession ; some realms do so through domestic
+succession laws , while others stipulate whoever is monarch of the United Kingdom will also be monarch of that realm .
+</item 10>
+=== END ITEM id=b643c6eb6c5364a2 ===
+
+=== ITEM id=b1c0dbfa96c75aeb ===
+Gold sentences and facts:
+Sentence 0: A primary ossification center is the first area of a bone to start ossifying . It usually appears during prenatal development in the central part of each developing bone . In long bones the primary centers occur in the diaphysis / shaft and in irregular bones the primary centers occur usually in the body of the bone . Most bones have only one primary center ( e.g. all long bones ) but some irregular bones such as the os coxa ( hip ) and vertebrae have multiple primary centers .
+  Fact 0.0: A primary ossification center is the first area of a bone to start ossifying.
+  Fact 0.1: A primary ossification center usually appears during prenatal development.
+  Fact 0.2: A primary ossification center usually appears in the central part of each developing bone.
+  Fact 0.3: In long bones, the primary centers occur in the diaphysis (shaft).
+  Fact 0.4: In irregular bones, the primary centers usually occur in the body of the bone.
+  Fact 0.5: Most bones have only one primary center, such as all long bones.
+  Fact 0.6: Some irregular bones have multiple primary centers.
+  Fact 0.7: The os coxa (hip) is an irregular bone with multiple primary centers.
+  Fact 0.8: Vertebrae have multiple primary centers.
+
+Retrieved items:
+<item 1>
+Human fertilization
+Each of the two daughter cells resulting from that mitosis has one replica of each chromatid that was replicated in the previous stage . Thus , they are
+genetically identical . Fertilization age ( edit ) Fertilization is the event most commonly used to mark the zero point in descriptions of prenatal development
+of the embryo or fetus . The resultant age is known as fertilization age , fertilizational age , embryonic age , fetal age or ( intrauterine ) developmental (
+IUD ) age . Gestational age , in contrast , takes the beginning of the last menstrual period ( LMP ) as the zero point . By convention , gestational age is
+calculated by adding 14 days to fertilization age and vice versa . In fact , however , fertilization usually occurs within a day of ovulation , which , in turn
+, occurs on average 14.6 days after the beginning of the preceding menstruation ( LMP ) . There is also considerable variability in this interval , with a 95 %
+prediction interval of the ovulation of 9 to 20 days after menstruation even for an average woman who has a mean LMP - to - ovulation time of 14.6 .
+</item 1>
+
+<item 2>
+Ossification center
+Ossification center - wikipedia Ossification center Jump to : navigation , search This article needs additional citations for verification . Please help improve
+this article by adding citations to reliable sources . Unsourced material may be challenged and removed . ( May 2011 ) ( Learn how and when to remove this
+template message ) Ossification center X-ray of ossification centers in a child . Details Identifiers Latin centrum ossificationis Dorlands / Elsevier 12227335
+TA A02. 0.00. 043 FMA 75436 Anatomical terminology ( edit on Wikidata ) The first step in ossification of the cartilage is that the cartilage cells , at the
+point where ossification is commencing and which is termed as an ossification center , enlarge and arrange themselves in rows . The matrix in which they are
+imbedded increases in quantity , so that the cells become further separated from each other . A deposit of calcareous material now takes place in this matrix ,
+between the rows of cells , so that they become separated from each other by longitudinal columns of calcified matrix , presenting a granular and opaque
+appearance .
+</item 2>
+
+<item 3>
+Ossification center
+Here and there the matrix between two cells of the same row also becomes calcified , and transverse bars of calcified substance stretch across from one
+calcareous column to another . Thus there are longitudinal groups of the cartilage cells enclosed in oblong cavities , the walls of which are formed of
+calcified matrix which cuts off all nutrition from the cells ; the cells , in consequence , atrophy , leaving spaces called the primary areolæ . Types of
+ossification centers ( edit ) Section of fetal bone of cat . ir . Irruption of the subperiosteal tissue . p . Fibrous layer of the periosteum . o . Layer of
+osteoblasts . im . Subperiosteal bony deposit . There are two types of ossification centers -- primary and secondary . A primary ossification center is the
+first area of a bone to start ossifying . It usually appears during prenatal development in the central part of each developing bone . In long bones the primary
+centers occur in the diaphysis / shaft and in irregular bones the primary centers occur usually in the body of the bone .
+</item 3>
+
+<item 4>
+Ossification center
+Anatomy , descriptive and applied . the University of California : Lea & Febiger . Development of bone Ossification Triradiate cartilage Limb development Limb
+bud Apical ectodermal ridge Zone of polarizing activity Sclerotome Myotome Septum transversum Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Ossification_center&oldid=808049222 '' Categories : Wikipedia articles incorporating text from the 20th edition of
+Gray 's Anatomy ( 1918 ) Skeletal system Tissues ( biology ) Hidden categories : Articles needing additional references from May 2011 All articles needing
+additional references Medicine infobox template using GraySubject or GrayPage Medicine infobox template using Dorlands parameter Talk About Wikipedia Nederlands
+Edit links This page was last edited on 31 October 2017 , at 15 : 42 . About Wikipedia
+</item 4>
+
+<item 5>
+Middle cranial fossa
+p. 154 . ISBN 9781437735802 . Additional images ( edit ) Middle cranial fossa at human foetus Base of skull Middle cranial fossa Middle cranial fossa Middle
+cranial fossa External links ( edit ) Wikimedia Commons has media related to Middle cranial fossa . Anatomy photo : 22 : os - 0802 at the SUNY Downstate Medical
+Center Compound structures of skull Neurocranium Calvaria Diploë Asterion Pterion Stephanion Inion Bregma Lambda Fossae anterior middle posterior cranial cavity
+Base of skull Fontanelle anterior posterior sphenoidal mastoid Facial skeleton Nasion Gonion Both dacryon zygomatic arch temporal fossa infratemporal fossa
+pterygomaxillary fissure pterygopalatine fossa Foramina of the skull ( and canals , fissures , meatus , and hiatus ) Anterior cranial fossa to Orbit : ethmoidal
+foramina anterior posterior to Nasal cavity : olfactory foramina ( CN - I ) foramen cecum Middle cranial fossa to Orbit : optic canal ( CN - II ) superior
+orbital fissure ( CN - III ,
+</item 5>
+
+<item 6>
+Brain
+Once neurons have positioned themselves , their axons sprout and navigate through the brain , branching and extending as they go , until the tips reach their
+targets and form synaptic connections . In a number of parts of the nervous system , neurons and synapses are produced in excessive numbers during the early
+stages , and then the unneeded ones are pruned away . For vertebrates , the early stages of neural development are similar across all species . As the embryo
+transforms from a round blob of cells into a wormlike structure , a narrow strip of ectoderm running along the midline of the back is induced to become the
+neural plate , the precursor of the nervous system . The neural plate folds inward to form the neural groove , and then the lips that line the groove merge to
+enclose the neural tube , a hollow cord of cells with a fluid - filled ventricle at the center . At the front end , the ventricles and cord swell to form three
+vesicles that are the precursors of the forebrain , midbrain , and hindbrain .
+</item 6>
+
+<item 7>
+Gallbladder
+Early in development , the human embryo has three germ layers and abuts an embryonic yolk sac . During the second week of embryogenesis , as the embryo grows ,
+it begins to surround and envelop portions of this sac . The enveloped portions form the basis for the adult gastrointestinal tract . Sections of this foregut
+begin to differentiate into the organs of the gastrointestinal tract , such as the esophagus , stomach , and intestines . During the fourth week of
+embryological development , the stomach rotates . The stomach , originally lying in the midline of the embryo , rotates so that its body is on the left . This
+rotation also affects the part of the gastrointestinal tube immediately below the stomach , which will go on to become the duodenum . By the end of the fourth
+week , the developing duodenum begins to spout a small outpouching on its right side , the hepatic diverticulum , which will go on to become the biliary tree .
+Just below this is a second outpouching , known as the cystic diverticulum , that will eventually develop into the gallbladder . Function ( edit ) 1 .
+</item 7>
+
+<item 8>
+Human fertilization
+doi : 10.1016 / j. jpeds. 2004.07. 010 . External links ( edit ) Fertilization ( Conception ) ( hide ) Human physiology of sexual reproduction Menstrual cycle
+Menarche Menstruation Follicular phase Ovulation Luteal phase Gametogenesis Spermatogenesis ( spermatogonium spermatocyte spermatid sperm ) Oogenesis ( oogonium
+oocyte ootid ovum ) Germ cell ( gonocyte gamete ) Human sexual behavior Sexual arousal Sexual intercourse Masturbation Erection Orgasm Ejaculation Insemination
+Fertilisation / Fertility Implantation Pregnancy Postpartum period Mechanics of sex Life span Prenatal development / Sexual dimorphism / Sexual differentiation
+( Feminization Virilization ) Puberty ( Gonadarche Pubarche Menarche Spermarche Adrenarche ) Maternal age / Paternal age Climacteric ( Menopause Late - onset
+hypogonadism ) Tanner scale Egg Ovum Oviposition Oviparity Ovoviviparity Vivipary Reproductive endocrinology and infertility Hypothalamic -- pituitary --
+gonadal axis Hypothalamic
+</item 8>
+
+<item 9>
+Gamete
+Retrieved 8 March 2015 . ( hide ) Human physiology of sexual reproduction Menstrual cycle Menarche Menstruation Follicular phase Ovulation Luteal phase
+Gametogenesis Spermatogenesis ( spermatogonium spermatocyte spermatid sperm ) Oogenesis ( oogonium oocyte ootid ovum ) Germ cell ( gonocyte gamete ) Human
+sexual behavior Sexual arousal Sexual intercourse Masturbation Erection Orgasm Ejaculation Insemination Fertilisation / Fertility Implantation Pregnancy
+Postpartum period Mechanics of sex Life span Prenatal development / Sexual dimorphism / Sexual differentiation ( Feminization Virilization ) Puberty (
+Gonadarche Pubarche Menarche Spermarche Adrenarche ) Maternal age / Paternal age Climacteric ( Menopause Late - onset hypogonadism ) Tanner scale Egg Ovum
+Oviposition Oviparity Ovoviviparity Vivipary Reproductive endocrinology and infertility Hypothalamic -- pituitary -- gonadal axis Hypothalamic -- pituitary --
+prolactin axis Andrology Hormone Breast Thelarche Breast development Lactation Breastfeeding Retrieved from `` https://en.
+</item 9>
+
+<item 10>
+Ossification center
+Most bones have only one primary center ( e.g. all long bones ) but some irregular bones such as the os coxa ( hip ) and vertebrae have multiple primary centers
+. A secondary ossification center is the area of ossification that appears after the primary ossification center has already appeared -- most of which appear
+during the postnatal and adolescent years . Most bones have more than one secondary ossification center . In long bones , the secondary centres appear in the
+epiphyses . References ( edit ) This article incorporates text in the public domain from the 20th edition of Gray 's Anatomy ( 1918 ) Jump up ^ Gray and Spitzka
+( 1910 ) , page 44 . Bibliography ( edit ) Gray , Henry ; Spitzka , Edward Anthony ( 1910 ) . Anatomy , descriptive and applied . the University of California :
+Lea & Febiger .
+</item 10>
+=== END ITEM id=b1c0dbfa96c75aeb ===
+
+=== ITEM id=16c799c95083f756 ===
+Gold sentences and facts:
+Sentence 0: With the Intertropical Convergence Zone ( ITCZ ) swinging northward over West Africa from the Southern Hemisphere in April , heavy showers coming from pre-monsoonal convective clouds mainly in the form of squall lines also known as the north easterlies formed mainly as a result of the interactions of the two dominant airmasses in Nigeria known as the Maritime tropical ( south westerlies ) and the Continental tropical ( north easterlies ) , begins in central Nigeria while the Monsoons from the south atlantic ocean arrives in central Nigeria in July bringing with it high humidity , heavy cloud cover and heavy rainfall which can be daily occurrence lasting till September when the monsoons gradually begin retreating southward to the southern part of Nigeria. Rainfall totals in central Nigeria varies from 1,100 mm ( 43.3 in ) in the lowlands of the river Niger Benue trough to over 2,000 mm ( 78.7 in ) along the south western escarpment of the Jos Plateau .
+  Fact 0.0: The Intertropical Convergence Zone (ITCZ) swings northward over West Africa from the Southern Hemisphere in April.
+  Fact 0.1: In April, heavy showers come from pre-monsoonal convective clouds, mainly in the form of squall lines.
+  Fact 0.2: The squall lines are also known as the north easterlies.
+  Fact 0.3: The north easterlies formed mainly as a result of the interactions of the two dominant airmasses in Nigeria.
+  Fact 0.4: The two dominant airmasses in Nigeria are the Maritime tropical (south westerlies) and the Continental tropical (north easterlies).
+  Fact 0.5: The pre-monsoonal showers begin in central Nigeria.
+  Fact 0.6: The monsoons from the South Atlantic Ocean arrive in central Nigeria in July.
+  Fact 0.7: The monsoons bring high humidity, heavy cloud cover and heavy rainfall to central Nigeria in July.
+  Fact 0.8: The rainfall from the monsoons can be a daily occurrence in central Nigeria.
+  Fact 0.9: The monsoon rainfall in central Nigeria lasts until September.
+  Fact 0.10: The monsoons gradually begin retreating southward to the southern part of Nigeria when September arrives.
+  Fact 0.11: Rainfall totals in central Nigeria vary from 1,100 mm (43.3 in) in the lowlands of the river Niger Benue trough.
+  Fact 0.12: Rainfall totals in central Nigeria reach over 2,000 mm (78.7 in) along the south western escarpment of the Jos Plateau.
+
+Retrieved items:
+<item 1>
+Geography of Nigeria
+The northward retreat of the tropical continental airmass ( CT ) , is caused by the sun 's northward shift from the tropic of capricorn in the southern
+hemisphere to the tropic of cancer in the northern hemisphere . This shift begins from February and ends in June , when the sun is fully overhead , at the
+tropic of cancer in the northern hemisphere . During this northward migration of the sun as a result of the earth tilting along its axis , the sun crosses the
+equator ( around March ) , moving over west Africa at this time on its journey to the northern hemisphere . West Africa comes directly under the sun at this
+time . The sun is overhead throughout west Africa and over Nigeria during this period of the sun 's northward migration to the tropic of cancer in the northern
+hemisphere . The whole of West Africa is heated intensely as result of the increased insolation received from the sun being overhead over west Africa .
+Temperatures can climb as high as 35 ° C ( 95.0 ° F ) over west Africa during this time .
+</item 1>
+
+<item 2>
+Geography of Nigeria
+These are the dry season and the rainy season . The dry season is accompanied by a dust laden airmass from the Sahara Desert , locally known as Harmattan , or
+by its main name , The Tropical Continental ( CT ) airmass , while the rainy season is heavily influenced by an airmass originating from the south atlantic
+ocean , locally known as the south west wind , or by its main name , The Tropical Maritime ( MT ) airmass . These two major wind systems in Nigeria are known as
+the trade winds . Trade winds ( edit ) Tropical Maritime airmass ( edit ) The tropical maritime airmass ( MT ) is responsible for Nigeria 's rainy season . This
+wind ( the tropical maritime airmass ) invades the country from February in the southern part of Nigeria while it takes longer for the wind to fully cover the
+whole of the country , reaching the northern part of Nigeria in June . Its invasion is as a result of the northward retreat , of the tropical continental
+airmass ( CT ) known as the harmattan .
+</item 2>
+
+<item 3>
+Geography of Nigeria
+The Tropical Maritime Airmass is a warm humid and unstable trade wind due to its warmth . Convectional currents are easily set up within the airmass whenever
+there is little instability in the airmass as a result of a slight to a very high orographic uplift in mountainous regions like the obudu plateau or the heating
+of the land which can trigger the formation of cumulonimbus cloud leading to thunderstorms within the airmass . During the dominance of the Tropical Maritime
+Airmass ( MT ) in the rainy season of Nigeria , mornings are bright and sunny , the sun 's heating of the land in the mornings and afternoons sets up
+convectional currents , these currents rise vertically and cumulonimbus clouds are formed , by afternoons to evenings , torrential downpour follows . The
+Easterly wave or the African easterly waves is another major contributor of rainfall during the summer monsoons months of May to September in Nigeria . The
+nature of this waves changes at about the 15 degrees line . The waves that pass south of this line carry moisture and create convection that leads to rain
+clouds .
+</item 3>
+
+<item 4>
+Geography of Nigeria
+1 Effects of the tropical continental airmass 4 Temperature 5 Topography 6 Niger Delta 6.1 Vegetation of the Niger Delta 6.2 Human population in the Niger Delta
+6.3 Rainfall in Niger Delta 7 Vegetation 8 Natural resources and land use 9 Extreme points 10 References Climate types found in Nigeria ( edit ) The tropical
+monsoon climate , designated by the Köppen climate classification as `` Am '' , is found in the southern part of the country . This climate is influenced by the
+monsoons originating from the South Atlantic ocean , which is brought into the country by the ( maritime tropical ) MT airmass , a warm moist sea to land
+seasonal wind . Its warmth and high humidity gives it a strong tendency to ascend and produce copious rainfall , which is a result of the condensation of water
+vapour in the rapidly rising air . The Tropical monsoon climate has a very small temperature range .
+</item 4>
+
+<item 5>
+Geography of Nigeria
+Temperatures in the northern part of Nigeria can go as high as 48 ° C ( 118.4 ° F ) in cities like Maiduguri . The high temperatures coupled with an increase in
+insolation causes a region of low pressure to develop over west Africa and Nigeria ( between March to May ) . The Tropical continental airmass ( CT ) from the
+Sahara Desert in the northern part of West Africa , is weakened due to the overheating of the land surface in west Africa and Nigeria at this time . The
+Tropical continental airmass ( CT ) begins to retreat northwards to the Sahara Desert due to massive heating of the land which transfers heat in the form of
+convection into the Tropical continental airmass ( CT ) which constitutes the main layer of air above the land . This transfer of heat in the Tropical
+continental airmass ( CT ) in turn , causes the wind to expand and become lighter as this is the normal behaviour for winds moving above intensely heated
+grounds .
+</item 5>
+
+<item 6>
+Geography of Nigeria
+The Tropical continental airmass ( CT ) loses its strength as a major airmass in the region of west Africa and over Nigeria at this time ( around February in
+the southern part of Nigeria to June in northern Nigeria ) and begins to retreat coupled with the rising of air in form of convection within this airmass (
+Tropical continental airmass ( CT ) ) , further weakening the dominance of the wind over west Africa and Nigeria . The Tropical continental airmass ( CT )
+finally retreats from most part of Nigeria , and the West African atmosphere around April to May , leaving an empty atmosphere over Nigeria . The sun 's rays
+enters into the atmosphere of Nigeria more intense than it does during the presence of the Tropical continental airmass , which contained dust ( in form of haze
+) that reduced the intensity of the sun . The overheating of the west Africa land mass and Nigeria in particular creates a low pressure region over west Africa
+and Nigeria . This low pressure zone attracts the Tropical Maritime Airmass ( MT ) from the south Atlantic Ocean since areas of low pressures experiences inward
+blowing winds because winds are moving air blowing outwards from regions of high pressure to regions of low pressure .
+</item 6>
+
+<item 7>
+Geography of Nigeria
+In the rainy season it is damp , and the rainfalls are usually abundant . The dry season of Nigeria is a period of little cloud cover in the southern part of
+Nigeria to virtually no cloud cover in the northern part of Nigeria . The sun shines through the atmosphere with little obstructions from the clear skies making
+the dry season in Nigeria a period of warm weather conditions.In the middle of the dry season around December , a dusty wind from the Sahara Desert called the
+harmattan enters Nigeria from the northeastern part of the country blocking sun rays partially from shining and also creating haze in the atmosphere , this
+activities of the wind lowers temperatures considerably saving inhabitants for sometime , from the scorching heat that would have occurred as a result of
+clearer skies during the dry season . But with the withdrawal of this wind around March to April following the onset of the rainy season , temperatures can go
+as high as 44 ° C ( 111.2 ° F ) in some parts of Nigeria . Semi temperate weather conditions prevail on the highlands in central Nigeria above 1,200 metres (
+3,937 ft ) above sea level , namely the Jos Plateau .
+</item 7>
+
+<item 8>
+Geography of Nigeria
+The airmass makes life difficult as a result of low visibility which hampers transportation . The dust haze creates an almost desert conditions in the country
+during the dominance of the Tropical continental airmass ( the harmattan ) . But its coming brings some relief to farmers since the low humidity present in the
+air quickens the drying of their crops . Temperature ( edit ) Nigeria 's location in the tropics has given her a tropical hot climate . Temperatures in Nigeria
+vary according to the seasons of the year as with other lands found in the tropics . Nigeria 's seasons are determined by rainfall with rainy season and dry
+season being the major seasons in Nigeria . The rainy season of Nigeria brings in cooler weather to the country as a result of an increased cloud cover that
+acts as a blockage to the intense sunshine of the tropics by blocking much of the suns rays in the rainy season ; this in turn cools the land , and the winds
+above the ground remains cool thereby making for cooler temperatures during the rainy season . But afternoons in the rainy season can be hot and humid , a
+feature of tropical climates .
+</item 8>
+
+<item 9>
+Geography of Nigeria
+With the Intertropical Convergence Zone ( ITCZ ) swinging northward over West Africa from the Southern Hemisphere in April , heavy showers coming from
+pre-monsoonal convective clouds mainly in the form of squall lines also known as the north easterlies formed mainly as a result of the interactions of the two
+dominant airmasses in Nigeria known as the Maritime tropical ( south westerlies ) and the Continental tropical ( north easterlies ) , begins in central Nigeria
+while the Monsoons from the south atlantic ocean arrives in central Nigeria in July bringing with it high humidity , heavy cloud cover and heavy rainfall which
+can be daily occurrence lasting till September when the monsoons gradually begin retreating southward to the southern part of Nigeria. Rainfall totals in
+central Nigeria varies from 1,100 mm ( 43.3 in ) in the lowlands of the river Niger Benue trough to over 2,000 mm ( 78.7 in ) along the south western escarpment
+of the Jos Plateau . The Sahel climate or tropical dry climate , is the predominant climate type in the northern part of Nigeria . Annual rainfall totals are
+lower compared to the southern and central part of Nigeria .
+</item 9>
+
+<item 10>
+Geography of Nigeria
+Nigeria 's northern end is south of the 15 degrees line at about 14 degrees . Nigeria 's location in the wetter part of the easterly waves south of the 15
+degree line creates wetter climatic conditions for Nigeria especially during the monsoons . Tropical continental airmass ( edit ) The Tropical Continental
+Airmass ( CT ) locally known as the harmattan , is a wind originating from North Africa which crosses the Sahara Desert into west Africa to Nigeria . This
+airmass dominates Nigeria 's climate during the dry season from December to March . The Tropical continental airmass is dusty and creates a haze within the
+atmosphere of west Africa and Nigeria when it predominates . The haze is as a result of the dust within the airmass limiting visibility and blocking much of the
+sun 's rays from reaching the earth . Effects of the tropical continental airmass ( edit ) The mass has no ability of forming rain due to low humidity within
+the airmass , since it crosses the Sahara Desert , it picks up dust instead of water thereby creating little chances for rainfall .
+</item 10>
+=== END ITEM id=16c799c95083f756 ===
+
+=== ITEM id=5c8d46a46e2e31fa ===
+Gold sentences and facts:
+Sentence 0: Top 20 rankings as of 16 October 2017 Rank Change Team Points Germany 1631 Brazil 1619 Portugal 1446 Argentina 1445 5 Belgium 1333 6 Poland 1323 7 France 1226 8 Spain 1218 9 Chile 1173 10 Peru 1160 11 Switzerland 1134 12 England 1116 13 Colombia 1095 14 Wales 1072 15 Italy 1066 16 Mexico 1060 17 Uruguay 1034 18 Croatia 1013 19 7 Denmark 1001 20 9 Netherlands 931 * Change from 14 September 2017 Complete rankings at FIFA.com
+  Fact 0.0: The top 20 rankings are as of 16 October 2017.
+  Fact 0.1: Germany is ranked 1 with 1631 points.
+  Fact 0.2: Brazil is ranked 2 with 1619 points.
+  Fact 0.3: Portugal is ranked 3 with 1446 points.
+  Fact 0.4: Argentina is ranked 4 with 1445 points.
+  Fact 0.5: Belgium is ranked 5 with 1333 points.
+  Fact 0.6: Poland is ranked 6 with 1323 points.
+  Fact 0.7: France is ranked 7 with 1226 points.
+  Fact 0.8: Spain is ranked 8 with 1218 points.
+  Fact 0.9: Chile is ranked 9 with 1173 points.
+  Fact 0.10: Peru is ranked 10 with 1160 points.
+  Fact 0.11: Switzerland is ranked 11 with 1134 points.
+  Fact 0.12: England is ranked 12 with 1116 points.
+  Fact 0.13: Colombia is ranked 13 with 1095 points.
+  Fact 0.14: Wales is ranked 14 with 1072 points.
+  Fact 0.15: Italy is ranked 15 with 1066 points.
+  Fact 0.16: Mexico is ranked 16 with 1060 points.
+  Fact 0.17: Uruguay is ranked 17 with 1034 points.
+  Fact 0.18: Croatia is ranked 18 with 1013 points.
+  Fact 0.19: Denmark is ranked 19 with 1001 points and has a rank change of 7.
+  Fact 0.20: Netherlands is ranked 20 with 931 points and has a rank change of 9.
+  Fact 0.21: The rank changes are measured from 14 September 2017.
+  Fact 0.22: The complete rankings are available at FIFA.com.
+
+Retrieved items:
+<item 1>
+FIFA World Rankings
+Travour.com. 1 June 2006 . Archived from the original on 14 June 2006 . Jump up ^ Cummings , Michael . `` FIFA World Rankings Place Brazil 18th , Reinforce
+Flawed Nature of System '' . Retrieved 21 May 2013 . Jump up ^ Freitas , Paulo . `` Scolari blames FIFA for Brazil 's poor ranking '' . Retrieved 16 June 2013 .
+^ Jump up to : Burnton , Simon ( 17 October 2013 ) . `` With a bit of planning England could have been seeded ahead of the Swiss '' . The Guardian . Retrieved
+15 June 2015 . Jump up ^ `` Romania , Wales set to be surprise World Cup top seeds '' . USA Today . Associated Press . 23 July 2015 . Retrieved 29 July 2015 .
+Romania took advice from a consultant who decoded some mysteries of a ranking system used by FIFA since 1992 . Jump up ^ Gavril , Victor ( 5 July 2015 ) .
+</item 1>
+
+<item 2>
+FIFA World Rankings
+The table below shows the three best teams of each year . Year First place Second place Third place 1993 Germany Italy Brazil 1994 Brazil Spain Sweden 1995
+Brazil Germany Italy Brazil Germany France 1997 Brazil Germany Czech Republic 1998 Brazil France Germany 1999 Brazil Czech Republic France 2000 Brazil France
+Argentina 2001 France Argentina Brazil 2002 Brazil France Spain 2003 Brazil France Spain Brazil France Argentina 2005 Brazil Czech Republic Netherlands 2006
+Brazil Italy Argentina 2007 Argentina Brazil Italy 2008 Spain Germany Netherlands 2009 Spain Brazil Netherlands Spain Netherlands Germany 2011 Spain Netherlands
+Germany 2012 Spain Germany Argentina 2013 Spain Germany Argentina 2014 Germany Argentina Colombia 2015 Belgium Argentina Spain 2016 Argentina Brazil Germany
+Performances by countries ( edit ) Team First place Second place Third place Brazil 12 ( 1994 , 1995 , 1996 , 1997 , 1998 , 1999 , 2000 , 2002 , 2003 , 2004 ,
+2005 & 2006 ) 3 ( 2007 ,
+</item 2>
+
+<item 3>
+FIFA World Rankings
+Rank leaders ( edit ) FIFA World Ranking Leaders When the system was introduced , Germany débuted as the top - ranked team following their extended period of
+dominance in which they had reached the three previous FIFA World Cup finals , winning one of them . Brazil took the lead in the run up to the 1994 FIFA World
+Cup after winning eight and losing only one of nine qualification matches , while on the way scoring twenty goals and conceding just four . Italy then led for a
+short time on the back of their own equally successful World Cup qualifying campaign , after which the top place was re-claimed by Germany . Brazil 's success
+in their lengthy qualifying campaign returned them to the lead for a brief period . Germany led again during the 1994 World Cup , until Brazil 's victory in
+that competition gave them a large lead that would stand up for nearly seven years , until they were surpassed by a strong France team that captured both the
+1998 FIFA World Cup and the 2000 European Football Championship .
+</item 3>
+
+<item 4>
+FIFA World Rankings
+FIFA World rankings - wikipedia FIFA World rankings This is the latest accepted revision , reviewed on 25 October 2017 . Jump to : navigation , search This
+article is about the men 's rankings . For the women 's rankings , see FIFA Women 's World Rankings . Top 20 rankings as of 16 October 2017 Rank Change Team
+Points Germany 1631 Brazil 1619 Portugal 1446 Argentina 1445 5 Belgium 1333 6 Poland 1323 7 France 1226 8 Spain 1218 9 Chile 1173 10 Peru 1160 11 Switzerland
+1134 12 England 1116 13 Colombia 1095 14 Wales 1072 15 Italy 1066 16 Mexico 1060 17 Uruguay 1034 18 Croatia 1013 19 7 Denmark 1001 20 9 Netherlands 931 * Change
+from 14 September 2017 Complete rankings at FIFA.com The FIFA World Ranking is a ranking system for men 's national teams in association football , currently
+led by Germany .
+</item 4>
+
+<item 5>
+FIFA World Rankings
+FIFA. 24 August 2011 . Archived from the original on 25 September 2011 . Retrieved 26 August 2011 . Jump up ^ Team of the Year Award 2010 Archived 18 December
+2010 at the Wayback Machine . on the FIFA website Jump up ^ Best Mover of the Year Archived 20 July 2008 at the Wayback Machine . on the FIFA website Jump up ^
+Spain on top and Wales highest climber on the FIFA website Jump up ^ Top Team and the Best Mover of the Year on the FIFA website ( PDF ) Jump up ^ Spain finish
+2012 on top , Colombia in fifth . FIFA.com . Retrieved on 12 August 2013 . Jump up ^ `` Spain on top , Ukraine highest climber '' . fifa.com. 19 December 2013 .
+Retrieved 19 December 2013 . Jump up ^ `` Germany conquer 2014 , Belgium , Slovakia impress '' . fifa.com. 18 December 2014 . Retrieved 18 December 2014 . Jump
+up ^ `` Belgium and Turkey claim awards , Hungary return '' .
+</item 5>
+
+<item 6>
+FIFA World Rankings
+Jump up ^ `` Soccer : Quirky FIFA rankings system sees Israel climb to # 15 '' . The Jerusalem Post . 13 November 2008 . Archived from the original on 16
+November 2008 . Retrieved 13 February 2009 . Israel continued its baffling rise up the FIFA rankings on Wednesday , climbing one more position to a best - ever
+15th in the world . Amazingly , the national team , which has n't reached a major tournament since the 1970 World Cup , is ahead of such teams as Greece ( 18 )
+, Nigeria ( 22 ) , Sweden ( 29 ) , Scotland ( 33 ) , Denmark ( 34 ) and the Republic of Ireland ( 36 ) Jump up ^ `` The Last Word : It 's time to get rid of the
+FIFA rankings '' . The Jerusalem Post . 14 November 2008 . Archived from the original on 16 November 2008 . Retrieved 13 February 2009 .
+</item 6>
+
+<item 7>
+FIFA World Rankings
+Retrieved 13 February 2009 . So the news this week that Israel has risen another place to number 15 in the latest FIFA rankings , above Mexico ( 25 ) , Nigeria
+( 22 ) , the US ( 24 ) and Colombia ( 40 ) , only serves to underline the futility of the ranking system . Jump up ^ `` FIFA Ranking : November 2008 preview (
+II ) '' . Football-Rankings.info. 20 October 2008 . Retrieved 13 February 2009 . Israel will improve ( again ! ) their best ever ranking , climbing one place to
+15th . With a win ( instead of a draw ) against Latvia they would have been tied for 8th place with Russia . Jump up ^ Alistair Tweedale ( 13 October 2015 ) .
+`` Belgium rise to No1 in Fifa world rankings after they beat Israel -- despite playing one tournament in 13 years '' . The Telegraph . Retrieved 14 November
+2015 . Jump up ^ `` FIFA Rankings '' . Travour.com. 1 June 2006 .
+</item 7>
+
+<item 8>
+FIFA World Rankings
+In July 2014 , Germany took over the lead once again , having won the 2014 FIFA World Cup . In July 2015 , Argentina reached the top spot for the first time
+since 2008 , after reaching both the 2014 FIFA World Cup Final , as well as the 2015 Copa America Final . In November 2015 , Belgium became the leader in the
+FIFA rankings for the first time , after topping their Euro 2016 qualifying group . Belgium led the rankings until April 2016 , when Argentina returned to the
+top . On April 6 , 2017 , Brazil returned to the No. 1 spot for the first time since just prior to the 2010 World Cup , but Germany regained the top spot in
+July after winning the Confederations Cup . Uses of the rankings ( edit ) The rankings are used by FIFA to rank the progression and current ability of the
+national football teams of its member nations , and claims that they create `` a reliable measure for comparing national A-teams '' . They are used as part of
+the calculation , or the entire grounds to seed competitions .
+</item 8>
+
+<item 9>
+FIFA World Rankings
+2004 , 2005 & 2006 ) 3 ( 2007 , 2009 & 2016 ) 2 ( 1993 & 2001 ) Spain 6 ( 2008 , 2009 , 2010 , 2011 , 2012 & 2013 ) 1 ( 1994 ) 3 ( 2002 , 2003 & 2015 ) Germany
+2 ( 1993 & 2014 ) 6 ( 1995 , 1996 , 1997 , 2008 , 2012 & 2013 ) 4 ( 1998 , 2010 , 2011 & 2016 ) Argentina 2 ( 2007 & 2016 ) 3 ( 2001 , 2014 & 2015 ) 5 ( 2000 ,
+2004 , 2006 , 2012 & 2013 ) France 1 ( 2001 ) 5 ( 1998 , 2000 , 2002 ,
+</item 9>
+
+<item 10>
+FIFA World Rankings
+The teams of the member nations of FIFA , football 's world governing body , are ranked based on their game results with the most successful teams being ranked
+highest . The rankings were introduced in December 1992 , and eight teams ( Argentina , Belgium , Brazil , France , Germany , Italy , the Netherlands and Spain
+) have held the top position , of which Brazil have spent longest ranked first . A points system is used , with points being awarded based on the results of all
+FIFA - recognised full international matches . Under the existing system , rankings are based on a team 's performance over the last four years , with more
+recent results and more significant matches being more heavily weighted to help reflect the current competitive state of a team . The ranking system was most
+recently revamped after the 2006 World Cup , with the first edition of the new series of rankings issued on 12 July 2006 . The most significant change is that
+the rankings are now based on results over the previous four years instead of the previous eight years .
+</item 10>
+=== END ITEM id=5c8d46a46e2e31fa ===

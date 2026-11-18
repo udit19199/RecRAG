@@ -1,0 +1,546 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "a2470a606f2f0fb0",
+   "kind": "answer",
+   "question": "Could you read both Bicycling and National Review",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, I can discuss both."
+  },
+  {
+   "id": "aae306cff3421b7c",
+   "kind": "answer",
+   "question": "Was Atom Egoyans biggest commercial success on stage or on film?",
+   "gold_answers": [
+    "erotic thriller film"
+   ],
+   "model_answer": "On film"
+  },
+  {
+   "id": "6295c0c1ed733f1b",
+   "kind": "answer",
+   "question": "The first of the Simon Bloom books was optioned by a company founded in what year?",
+   "gold_answers": [
+    "1912"
+   ],
+   "model_answer": "2000"
+  },
+  {
+   "id": "6117cce06e3f9f57",
+   "kind": "answer",
+   "question": "What are the professions of Tom Johnston and Daryl Palumbo?",
+   "gold_answers": [
+    "American musician"
+   ],
+   "model_answer": "Musicians; Tom Johnston is also a guitarist, vocalist, and songwriter."
+  },
+  {
+   "id": "f998a2bd1dc35035",
+   "kind": "answer",
+   "question": "Between two bands, Mastodon and Hole, which one has more members?",
+   "gold_answers": [
+    "Mastodon"
+   ],
+   "model_answer": "Neither; both have four members."
+  },
+  {
+   "id": "cf817dc4611b24ef",
+   "kind": "answer",
+   "question": "What are the professions of Tom Johnston and Daryl Palumbo?",
+   "gold_answers": [
+    "American musician"
+   ],
+   "model_answer": "Tom Johnston: musician, guitarist, vocalist, songwriter; Daryl Palumbo: musician."
+  },
+  {
+   "id": "b5c4828eb8e8a561",
+   "kind": "answer",
+   "question": "What russian Marxist revolutionary born in 1875 was part of the Vpered organization?",
+   "gold_answers": [
+    "Anatoly Vasilyevich Lunacharsky"
+   ],
+   "model_answer": "Anatoly Lunacharsky"
+  },
+  {
+   "id": "38d84855715d3506",
+   "kind": "answer",
+   "question": "Not Richard, But Dick was an album by the band formed in what city?",
+   "gold_answers": [
+    "Philadelphia"
+   ],
+   "model_answer": "Austin, Texas"
+  },
+  {
+   "id": "3e34adf7efda2c68",
+   "kind": "answer",
+   "question": "Which was published more frequently, Popular Science or Girlfriends?",
+   "gold_answers": [
+    "Girlfriends"
+   ],
+   "model_answer": "Popular Science."
+  },
+  {
+   "id": "bd075e33b175c2d9",
+   "kind": "answer",
+   "question": " What type of television show did Dylan Everett star in, in 2015?",
+   "gold_answers": [
+    "American-Canadian mystery-drama"
+   ],
+   "model_answer": "A medical drama series"
+  },
+  {
+   "id": "8dd6f9e36a4b1222",
+   "kind": "answer",
+   "question": "Who was born more recent.y,Gunnar Nelson or Florence Welch?",
+   "gold_answers": [
+    "Florence Leontine Mary Welch"
+   ],
+   "model_answer": "Gunnar Nelson"
+  },
+  {
+   "id": "f2e0d309917e9816",
+   "kind": "answer",
+   "question": "The Sanders-Brown Center on Aging was funded by a grant from a businessman known for what restaurant chain?",
+   "gold_answers": [
+    "Kentucky Fried Chicken (KFC)"
+   ],
+   "model_answer": "KFC (Kentucky Fried Chicken)"
+  },
+  {
+   "id": "f6a149dc841b91c2",
+   "kind": "answer",
+   "question": "The primary jockey of Binocular was Champion Jockey how many consecutive times?",
+   "gold_answers": [
+    "20"
+   ],
+   "model_answer": "20 consecutive times"
+  },
+  {
+   "id": "397de99087a7032c",
+   "kind": "answer",
+   "question": "What aspect of the board game Diplomacy is not found in the board game Uncle Wiggily?",
+   "gold_answers": [
+    "negotiation phases"
+   ],
+   "model_answer": "Negotiation phases and alliance-forming strategy"
+  },
+  {
+   "id": "56d401b16aa9f0f5",
+   "kind": "answer",
+   "question": "Which terrorist group was the cause of the battle in which Mark E. Michell won an award for his actions?",
+   "gold_answers": [
+    "al-Qaeda"
+   ],
+   "model_answer": "Taliban\n"
+  },
+  {
+   "id": "0bbe64c2eee3896a",
+   "kind": "answer",
+   "question": "Which film was released first, Summer Magic or Around the World in 80 Days?",
+   "gold_answers": [
+    "Summer Magic"
+   ],
+   "model_answer": "Around the World in 80 Days"
+  },
+  {
+   "id": "20aa8073b1446ae3",
+   "kind": "answer",
+   "question": "What do the Church of St. Mary of the Spring and Hagia Irene have in common?",
+   "gold_answers": [
+    "Greek Eastern Orthodox church"
+   ],
+   "model_answer": "Greek Orthodox churches in Istanbul, Turkey."
+  },
+  {
+   "id": "57612877cd4b20e3",
+   "kind": "answer",
+   "question": "What do the Church of St. Mary of the Spring and Hagia Irene have in common?",
+   "gold_answers": [
+    "Greek Eastern Orthodox church"
+   ],
+   "model_answer": "Eastern Orthodox churches in Istanbul, Turkey"
+  },
+  {
+   "id": "428ce5b77bb23385",
+   "kind": "answer",
+   "question": "How many days did it take the Best New Artist of 2009 to sell 2 million copies of an album in the UK and break a twenty year old record?",
+   "gold_answers": [
+    "29"
+   ],
+   "model_answer": "161 days"
+  },
+  {
+   "id": "1ba6a85eeff5c7db",
+   "kind": "answer",
+   "question": "In what county did Michael Ola attend high school?",
+   "gold_answers": [
+    "Clayton County, Georgia, United States"
+   ],
+   "model_answer": "Clayton County\n"
+  },
+  {
+   "id": "c689c682e55021ca",
+   "kind": "answer",
+   "question": "Mr. Wilson's Cabinet of Wonder: Pronged Ants, Horned Humans, Mice on Toast, and Other Marvels of Jurassic Technology is a book about a museum that is located in which city ?",
+   "gold_answers": [
+    "Los Angeles"
+   ],
+   "model_answer": "Culver City, California"
+  },
+  {
+   "id": "c4a4878b904ae503",
+   "kind": "answer",
+   "question": "Which one of the Long Island Herald newspaper chain serves a village in Nassau County, New York with a population of 6,483?",
+   "gold_answers": [
+    "The Nassau Herald"
+   ],
+   "model_answer": "Five Towns Herald"
+  },
+  {
+   "id": "86afd0e3ff099db9",
+   "kind": "answer",
+   "question": "Pirates Plunge, at the Grace O'Malley-inspired Pirates Adventure Park in Westport, holds which notable record?",
+   "gold_answers": [
+    "first flume ride in Ireland"
+   ],
+   "model_answer": "Ireland’s only log flume ride."
+  },
+  {
+   "id": "c0efc191a2df3151",
+   "kind": "answer",
+   "question": "Are Eryngium and Arnebia in the same kingdom of life forms?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both belong to Plantae."
+  },
+  {
+   "id": "c6ac8ad35c524d6c",
+   "kind": "answer",
+   "question": "how many films has the director of \"Girl 6\" produced since 1983?",
+   "gold_answers": [
+    "over 35 films"
+   ],
+   "model_answer": "26 films"
+  },
+  {
+   "id": "53a27cb1d7dd65c1",
+   "kind": "answer",
+   "question": "What movies has Juno Temple starred in?",
+   "gold_answers": [
+    "She has appeared in films such as \" Black Mass\", \"The Other Boleyn Girl\", \"Wild Child\", \"Atonement\", \"Maleficent\", \"The Three Musketeers\" and \"The Dark Knight Rises\"."
+   ],
+   "model_answer": "Dirty Girl, Cracks, Jack & Diane, Lovelace, Black Mass, The Other Boleyn Girl, Wild Child, Atonement, Maleficent, The Three Musketeers, and The Dark Knight Rises"
+  },
+  {
+   "id": "82f5e258babee60a",
+   "kind": "answer",
+   "question": "Kresy, which roughly was a part of the land beyond the so-called Curson Line, was drawn for what reason?",
+   "gold_answers": [
+    "demarcation line between the newly emerging states, the Second Polish Republic, and the Soviet Union"
+   ],
+   "model_answer": "As a proposed demarcation line and diplomatic basis for a future border agreement between Poland and the Soviet Union."
+  },
+  {
+   "id": "bf0f62ded898fc64",
+   "kind": "answer",
+   "question": "What do the Church of St. Mary of the Spring and Hagia Irene have in common?",
+   "gold_answers": [
+    "Greek Eastern Orthodox church"
+   ],
+   "model_answer": "Both are Orthodox churches in Istanbul, Turkey."
+  },
+  {
+   "id": "56238f33e6bb8895",
+   "kind": "answer",
+   "question": "Which American filmmaker has directed more films, Jon Paul Puno or Ken Kwapis?",
+   "gold_answers": [
+    "Kenneth William \"Ken\" Kwapis"
+   ],
+   "model_answer": "Ken Kwapis"
+  },
+  {
+   "id": "1d2b36360b9d7f15",
+   "kind": "answer",
+   "question": "Was Suzanne Chun Oakland a member of the upper of lower chamber of the Hawaii State Legislature?",
+   "gold_answers": [
+    "lower chamber"
+   ],
+   "model_answer": "Upper chamber\n"
+  },
+  {
+   "id": "d89c4c9a6c358dcf",
+   "kind": "answer",
+   "question": "What band is a tribute to a band originally known as the Grizzly River Boys?",
+   "gold_answers": [
+    "Nashville Tribute Band"
+   ],
+   "model_answer": "The Grateful Shred"
+  },
+  {
+   "id": "1f5ee1f406d33989",
+   "kind": "answer",
+   "question": "Which musician, Ciaran Gribbin or Brett Scallions, is a member of the post-grunge band Fuel?",
+   "gold_answers": [
+    "Brett Allen Scallions"
+   ],
+   "model_answer": "Both Ciaran Gribbin and Brett Scallions."
+  },
+  {
+   "id": "5bed14ba909d0870",
+   "kind": "answer",
+   "question": "Where was the air-cooled version of a weapon system used on the HMAS \"Narani\" found?",
+   "gold_answers": [
+    "World War I fighter aircraft."
+   ],
+   "model_answer": "Many Allied World War I fighter aircraft"
+  },
+  {
+   "id": "1104d80d4b42be0b",
+   "kind": "answer",
+   "question": "In what movie did the male star of a movie about a widowed 37-year-old woman also star in in the year 1993?",
+   "gold_answers": [
+    "\"Red Rock West\""
+   ],
+   "model_answer": "The Remains of the Day"
+  },
+  {
+   "id": "96f31339b8de11e7",
+   "kind": "answer",
+   "question": "Are Jeff Ragsdale and Millard Webb both authors?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "504fc75165574de0",
+   "kind": "answer",
+   "question": "Which American comedian born on March 21, 1962, appeared in the movie \"Sleepless in Seattle?\"",
+   "gold_answers": [
+    "Rosie O'Donnell"
+   ],
+   "model_answer": "Rosie O’Donnell"
+  },
+  {
+   "id": "ae99d8070c2db12a",
+   "kind": "answer",
+   "question": "The first edition of the Dungeons & Dragons Basic Set was written by a professor at what university?",
+   "gold_answers": [
+    "University of Southern California"
+   ],
+   "model_answer": "University of Southern California (USC)"
+  },
+  {
+   "id": "76ac721bd59ee17a",
+   "kind": "answer",
+   "question": "What aspect of the board game Diplomacy is not found in the board game Uncle Wiggily?",
+   "gold_answers": [
+    "negotiation phases"
+   ],
+   "model_answer": "Player negotiation and alliances"
+  },
+  {
+   "id": "e129531ae42c97ba",
+   "kind": "answer",
+   "question": "which has more acts Pagliacci or Suor Angelica?",
+   "gold_answers": [
+    "Pagliacci"
+   ],
+   "model_answer": "Pagliacci (two acts)\n"
+  },
+  {
+   "id": "3032662e7160570b",
+   "kind": "answer",
+   "question": "The vynil collectible Vinylmation are all shaped with the body of a cartoon character created by who ?",
+   "gold_answers": [
+    "Walt Disney and Ub Iwerks"
+   ],
+   "model_answer": "Walt Disney"
+  },
+  {
+   "id": "53485184ad69ca5a",
+   "kind": "answer",
+   "question": "Where are Catcha Lake and Hedley Mascot Mine located?",
+   "gold_answers": [
+    "British Columbia, Canada"
+   ],
+   "model_answer": "Catcha Lake: Halifax Regional Municipality, Nova Scotia; Hedley Mascot Mine: Hedley, British Columbia."
+  },
+  {
+   "id": "3aff5d93ce16fe55",
+   "kind": "answer",
+   "question": "What city is the women's Vans Triple Crown of Surfing event hosted at?",
+   "gold_answers": [
+    "City and County of Honolulu"
+   ],
+   "model_answer": "Haleiwa, Sunset Beach, and Maui, Hawaii"
+  },
+  {
+   "id": "e6a7bc157905f538",
+   "kind": "answer",
+   "question": "The first of the Simon Bloom books was optioned by a company founded in what year?",
+   "gold_answers": [
+    "1912"
+   ],
+   "model_answer": "2001"
+  },
+  {
+   "id": "439eccd01f1f867c",
+   "kind": "answer",
+   "question": "OU812 was the second album to feature a vocalist that also played what instrument in \"Finish What Ya Started\"?",
+   "gold_answers": [
+    "rhythm guitar"
+   ],
+   "model_answer": "Rhythm guitar (acoustic guitar)"
+  },
+  {
+   "id": "704fd48acdbb885b",
+   "kind": "answer",
+   "question": "What country is the singer from, who duets with Dave Hemingway on the song \"A Little Time\"?",
+   "gold_answers": [
+    "Northern Irish"
+   ],
+   "model_answer": "Northern Ireland"
+  },
+  {
+   "id": "a15340964ea92964",
+   "kind": "answer",
+   "question": "Who was born first, Samantha Cristoforetti or Jean-Loup Chrétien",
+   "gold_answers": [
+    "Jean-Loup Jacques Marie Chrétien"
+   ],
+   "model_answer": "Jean-Loup Chrétien"
+  },
+  {
+   "id": "430cbd1d74282475",
+   "kind": "answer",
+   "question": "What are some other areas that share a common deer species with the forests of Mara and Mondrem?",
+   "gold_answers": [
+    "New Zealand, Canada, the United States, the Falkland Islands, and Peru."
+   ],
+   "model_answer": "Europe, Australia, New Zealand, Canada, and the United States."
+  },
+  {
+   "id": "77cee31f7b4c40da",
+   "kind": "answer",
+   "question": "In what year was the singer who popularized \"I'll Keep the Lovelight Burning\" born?",
+   "gold_answers": [
+    "1927"
+   ],
+   "model_answer": "1917"
+  },
+  {
+   "id": "476064d4154b3886",
+   "kind": "answer",
+   "question": "Crash is similar to what 16th century British card game in the sense that there is no betting?",
+   "gold_answers": [
+    "In Crash, there is no betting, as in Brag"
+   ],
+   "model_answer": "Thirty-One"
+  },
+  {
+   "id": "b3d459ef0f17b685",
+   "kind": "answer",
+   "question": "How many seasons has a popular tv show had, in which one of the episodes is called Moho House?",
+   "gold_answers": [
+    "28"
+   ],
+   "model_answer": "36 seasons"
+  },
+  {
+   "id": "030705557c518429",
+   "kind": "answer",
+   "question": "The Ronkonkama railroad station and the town of Islip, New York are near?",
+   "gold_answers": [
+    "Long Island"
+   ],
+   "model_answer": "In the Town of Islip, New York\n"
+  },
+  {
+   "id": "a71efed409a2150d",
+   "kind": "answer",
+   "question": "Which was published more frequently, Popular Science or Girlfriends?",
+   "gold_answers": [
+    "Girlfriends"
+   ],
+   "model_answer": "Girlfriends (magazine)"
+  },
+  {
+   "id": "673e8c0f6b6c35c2",
+   "kind": "answer",
+   "question": "What type of group does Pablo Carballo and Argentine Air Force have in common?",
+   "gold_answers": [
+    "military"
+   ],
+   "model_answer": "Military group"
+  },
+  {
+   "id": "4c02c610716291ee",
+   "kind": "answer",
+   "question": "Jim Sharman and Ava DuVernay both share what title concerning their actions leading actors in film or stage?",
+   "gold_answers": [
+    "director"
+   ],
+   "model_answer": "Film director"
+  },
+  {
+   "id": "b664fa172633fa67",
+   "kind": "answer",
+   "question": "While at the University of Michigan, Louis Smith played with what American jazz trumpeter, bandleader, and composer?",
+   "gold_answers": [
+    "Miles Dewey Davis III"
+   ],
+   "model_answer": "Donald Byrd"
+  },
+  {
+   "id": "9f55bce65e82e279",
+   "kind": "answer",
+   "question": "In what movie did the male star of a movie about a widowed 37-year-old woman also star in in the year 1993?",
+   "gold_answers": [
+    "\"Red Rock West\""
+   ],
+   "model_answer": "Deadfall and Red Rock West"
+  },
+  {
+   "id": "8cf0815f7565db9c",
+   "kind": "answer",
+   "question": "Not Richard, But Dick was an album by the band formed in what city?",
+   "gold_answers": [
+    "Philadelphia"
+   ],
+   "model_answer": "Los Angeles"
+  },
+  {
+   "id": "863946db147c2623",
+   "kind": "answer",
+   "question": "Could you read both Bicycling and National Review",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, if you share the articles."
+  },
+  {
+   "id": "fea671eafd51fde6",
+   "kind": "answer",
+   "question": "Were either Hou Hsiao-hsien or Kenny Ortega winners of an Academy Award?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Neither is listed as an Academy Award winner."
+  },
+  {
+   "id": "d3a5a9f2c4ac59a0",
+   "kind": "answer",
+   "question": "What movies has Juno Temple starred in?",
+   "gold_answers": [
+    "She has appeared in films such as \" Black Mass\", \"The Other Boleyn Girl\", \"Wild Child\", \"Atonement\", \"Maleficent\", \"The Three Musketeers\" and \"The Dark Knight Rises\"."
+   ],
+   "model_answer": "Atonement, The Other Boleyn Girl, St Trinian’s, The Three Musketeers, Killer Joe, Maleficent, Black Mass, and The Dark Knight Rises."
+  }
+ ],
+ "evidence": []
+}

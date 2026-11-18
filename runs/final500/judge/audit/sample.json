@@ -1,0 +1,1602 @@
+[
+ {
+  "dataset": "multihop_rag",
+  "method": "rag",
+  "task": "35ccf7b1a23ac1aa",
+  "fact": "2.0",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "rag",
+  "task": "05c5d7c571d28064",
+  "fact": "0.5",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "rag",
+  "task": "272bb288640d8b64",
+  "fact": "0.1",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "rag",
+  "task": "72eb50561fbeb609",
+  "fact": "1.1",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "rag",
+  "task": "c69a912e887cd16e",
+  "fact": "1.0",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "rag",
+  "task": "01a4cdd6887b3c41",
+  "fact": "0.2",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "rag",
+  "task": "95d34b6d8e57ec32",
+  "fact": "0.3",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "rag",
+  "task": "1351cc41c77902d0",
+  "fact": "2.3",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "rag",
+  "task": "a314cf73ea8aa699",
+  "fact": "1.3",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "rag",
+  "task": "211b1942bc8b7590",
+  "fact": "1.0",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "rag",
+  "task": "190cef296b47ad64",
+  "fact": "3.4",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "rag",
+  "task": "0a83ab65e13773eb",
+  "fact": "2.1",
+  "judged": "stated",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "rag",
+  "task": "6e62022cb37dde13",
+  "fact": "0.0",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "rag",
+  "task": "0ae1507504a2b012",
+  "fact": "0.4",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "rag",
+  "task": "9f73f9af99e99051",
+  "fact": "1.4",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "rag",
+  "task": "1b980e2c3ea000ce",
+  "fact": "1.2",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "rag",
+  "task": "aa40793277a448d6",
+  "fact": "1.0",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "rag",
+  "task": "53db8553aaa4dc86",
+  "fact": "0.0",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "raptor",
+  "task": "0c8a2340c6f18c41",
+  "fact": "0.1",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "raptor",
+  "task": "5d4a34a15ebd4a3f",
+  "fact": "0.0",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "raptor",
+  "task": "9d9a2bd7e6b0ecb3",
+  "fact": "0.2",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "raptor",
+  "task": "0625e5e3df8c26e2",
+  "fact": "1.0",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "raptor",
+  "task": "d419324dfcbe1012",
+  "fact": "2.1",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "raptor",
+  "task": "e1270e3b27ca7b29",
+  "fact": "0.0",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "raptor",
+  "task": "f1fd3c37c75acc84",
+  "fact": "0.2",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "raptor",
+  "task": "e260d70b2e7ef22f",
+  "fact": "0.6",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "raptor",
+  "task": "5dedff68e76c068c",
+  "fact": "2.2",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "raptor",
+  "task": "96470ce8765b24f2",
+  "fact": "1.1",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "raptor",
+  "task": "cd9274d392051358",
+  "fact": "0.2",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "raptor",
+  "task": "82becf261efceaaa",
+  "fact": "2.2",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "raptor",
+  "task": "5897d9a8897e45cc",
+  "fact": "2.2",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "raptor",
+  "task": "e64be96ed2e45f0d",
+  "fact": "1.1",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "raptor",
+  "task": "135e185c6ade25ff",
+  "fact": "2.5",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "raptor",
+  "task": "923b7268a6533edc",
+  "fact": "0.0",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "raptor",
+  "task": "f24814d19e752012",
+  "fact": "1.1",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "hipporag",
+  "task": "8bbd6d810e8c7abe",
+  "fact": "2.0",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "hipporag",
+  "task": "76782bcf6670e1ed",
+  "fact": "1.3",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "hipporag",
+  "task": "fc659cd00c655b37",
+  "fact": "1.2",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "hipporag",
+  "task": "5fb881294ba578c9",
+  "fact": "0.2",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "hipporag",
+  "task": "29501e97520624e7",
+  "fact": "1.0",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "hipporag",
+  "task": "3461843f84b2ecae",
+  "fact": "0.2",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "hipporag",
+  "task": "13c5ea97fd751376",
+  "fact": "1.2",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "hipporag",
+  "task": "7d2e11ef4d0cd59c",
+  "fact": "0.2",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "hipporag",
+  "task": "7f9ecbfa97a507a0",
+  "fact": "0.2",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "hipporag",
+  "task": "bf4c4d34ff43a5e1",
+  "fact": "0.1",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "hipporag",
+  "task": "cbadfe95337c4f7e",
+  "fact": "1.1",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "hipporag",
+  "task": "e9d2057fdf19cf79",
+  "fact": "0.0",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "hipporag",
+  "task": "6c83344732b43510",
+  "fact": "0.1",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "hipporag",
+  "task": "432b64c3da4ced70",
+  "fact": "3.2",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "hipporag",
+  "task": "c6e13c59a01ff032",
+  "fact": "1.4",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "hipporag",
+  "task": "6c83344732b43510",
+  "fact": "2.0",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "graphrag",
+  "task": "65c4625ec045e2d0",
+  "fact": "2.2",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "graphrag",
+  "task": "aa90f788c1badb90",
+  "fact": "0.4",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "graphrag",
+  "task": "10249954203c6ed2",
+  "fact": "1.0",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "graphrag",
+  "task": "a6a5735879b24793",
+  "fact": "0.0",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "graphrag",
+  "task": "8e523ee0e7b74476",
+  "fact": "0.1",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "graphrag",
+  "task": "d917c08b837f0e70",
+  "fact": "0.1",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "graphrag",
+  "task": "f423575513314993",
+  "fact": "0.2",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "graphrag",
+  "task": "85b59bc880b69feb",
+  "fact": "0.1",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "graphrag",
+  "task": "5f6dd309cd6d764c",
+  "fact": "1.1",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "graphrag",
+  "task": "8dbe62248ad588d8",
+  "fact": "1.2",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "graphrag",
+  "task": "7871588008861533",
+  "fact": "1.1",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "graphrag",
+  "task": "1ac6308430f5cebf",
+  "fact": "0.1",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "graphrag",
+  "task": "4a47056b00c41fe3",
+  "fact": "0.2",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "graphrag",
+  "task": "e070f707fc774413",
+  "fact": "2.2",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "graphrag",
+  "task": "481dce4174203b32",
+  "fact": "1.3",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "multihop_rag",
+  "method": "graphrag",
+  "task": "095c0d609b718d17",
+  "fact": "0.0",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "rag",
+  "task": "003b42695f60dc7a",
+  "fact": "1.0",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "rag",
+  "task": "46c70067a510142e",
+  "fact": "0.6",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "rag",
+  "task": "49c9f6a788b34fd7",
+  "fact": "0.1",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "rag",
+  "task": "376b964c318c6cda",
+  "fact": "0.7",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "rag",
+  "task": "1ec3a90468813680",
+  "fact": "1.0",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "rag",
+  "task": "db4373cf78f7d41e",
+  "fact": "1.2",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "rag",
+  "task": "aeadb475a8697fef",
+  "fact": "0.3",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "rag",
+  "task": "4452e3686daea931",
+  "fact": "0.0",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "rag",
+  "task": "eaf782a72268976a",
+  "fact": "0.1",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "rag",
+  "task": "4cfa7a1a8f78e2c9",
+  "fact": "1.4",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "rag",
+  "task": "9c0c47f313db40d8",
+  "fact": "1.0",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "rag",
+  "task": "6e40b089c813d766",
+  "fact": "1.1",
+  "judged": "stated",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "rag",
+  "task": "5a6e13414d4d6d7a",
+  "fact": "2.3",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "rag",
+  "task": "4c187a602bba002a",
+  "fact": "1.1",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "rag",
+  "task": "aa6f511794a55af0",
+  "fact": "0.1",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "rag",
+  "task": "75f9d4dd30eb4b33",
+  "fact": "2.0",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "rag",
+  "task": "2ceca2185110ec61",
+  "fact": "1.0",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "rag",
+  "task": "f624083bbb5e9b7f",
+  "fact": "1.2",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "raptor",
+  "task": "26b735a246658695",
+  "fact": "0.4",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "raptor",
+  "task": "f36f532e274e90ae",
+  "fact": "1.2",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "raptor",
+  "task": "4b37e0035ad5471b",
+  "fact": "1.3",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "raptor",
+  "task": "71b3651e15fe35ca",
+  "fact": "1.0",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "raptor",
+  "task": "ed2a29ec953bfc4c",
+  "fact": "0.1",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "raptor",
+  "task": "cdb914ed738d48f4",
+  "fact": "1.0",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "raptor",
+  "task": "1cf8c24f8e9b0d54",
+  "fact": "2.0",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "raptor",
+  "task": "3fb5735c13e1b7fd",
+  "fact": "1.4",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "raptor",
+  "task": "07e9700412bf7c5b",
+  "fact": "3.0",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "raptor",
+  "task": "fb1aabfa279d0448",
+  "fact": "1.2",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "raptor",
+  "task": "ce32ea058e6f5774",
+  "fact": "2.0",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "raptor",
+  "task": "b93ab64120c15112",
+  "fact": "0.2",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "raptor",
+  "task": "de77bfe23b2f35df",
+  "fact": "2.3",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "raptor",
+  "task": "c8f90e2616bebb63",
+  "fact": "2.1",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "raptor",
+  "task": "0516c698efeac08a",
+  "fact": "1.0",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "raptor",
+  "task": "329c006eda769187",
+  "fact": "1.5",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "raptor",
+  "task": "7a50832fe857fe9e",
+  "fact": "1.0",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "hipporag",
+  "task": "403c213f13ffd184",
+  "fact": "1.0",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "hipporag",
+  "task": "ef2a6ee1256867b8",
+  "fact": "1.1",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "hipporag",
+  "task": "5fc2db26ecc09089",
+  "fact": "1.0",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "hipporag",
+  "task": "d99adf8e3ab2b8f3",
+  "fact": "0.5",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "hipporag",
+  "task": "8b68a8a5c6e79488",
+  "fact": "0.4",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "hipporag",
+  "task": "189d9bd04d97ffed",
+  "fact": "0.3",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "hipporag",
+  "task": "f585a6ff68a099b5",
+  "fact": "0.3",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "hipporag",
+  "task": "8a87cd303087b0b2",
+  "fact": "1.0",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "hipporag",
+  "task": "0ca93d193e3ff499",
+  "fact": "1.0",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "hipporag",
+  "task": "f13390d87cd4df81",
+  "fact": "1.4",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "hipporag",
+  "task": "52bc10fb5f907841",
+  "fact": "0.0",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "hipporag",
+  "task": "98cc0b9220a49e55",
+  "fact": "0.7",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "hipporag",
+  "task": "98c1b98969743360",
+  "fact": "2.2",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "hipporag",
+  "task": "c0374516833d00c8",
+  "fact": "2.2",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "hipporag",
+  "task": "98cc0b9220a49e55",
+  "fact": "0.2",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "hipporag",
+  "task": "11fbe07c18b5b2ca",
+  "fact": "1.4",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "graphrag",
+  "task": "d0f537a77dc4da2f",
+  "fact": "0.4",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "graphrag",
+  "task": "fbf43eaaea2e7efa",
+  "fact": "0.3",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "graphrag",
+  "task": "63f048bd030cdbe8",
+  "fact": "1.3",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "graphrag",
+  "task": "1fff541da3bf716d",
+  "fact": "1.3",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "graphrag",
+  "task": "85cc761972810b23",
+  "fact": "2.3",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "graphrag",
+  "task": "4b3277bb1a2d9b18",
+  "fact": "1.1",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "graphrag",
+  "task": "ff4ad07848c4134a",
+  "fact": "0.2",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "graphrag",
+  "task": "ff4ad07848c4134a",
+  "fact": "3.1",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "graphrag",
+  "task": "5796400f96ae6d43",
+  "fact": "2.0",
+  "judged": "contradicted",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "graphrag",
+  "task": "4969ac5e46f84c95",
+  "fact": "2.0",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "graphrag",
+  "task": "fdaeff2237b6a965",
+  "fact": "2.3",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "graphrag",
+  "task": "a32b7c9ed03b5f76",
+  "fact": "1.2",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "graphrag",
+  "task": "766d6c78a89f3074",
+  "fact": "0.3",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "graphrag",
+  "task": "1bdd3436857a738d",
+  "fact": "2.3",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "graphrag",
+  "task": "68fe994af99e4f66",
+  "fact": "1.4",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "hotpotqa",
+  "method": "graphrag",
+  "task": "341e5bd338da21a0",
+  "fact": "2.6",
+  "judged": "contradicted",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "rag",
+  "task": "388fffd291b2ac94",
+  "fact": "0.0",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "rag",
+  "task": "0647cbe8f3199123",
+  "fact": "1.84",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "rag",
+  "task": "276a19b86d540f21",
+  "fact": "0.7",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "rag",
+  "task": "6a7065055cdc88cf",
+  "fact": "1.0",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "rag",
+  "task": "cd4a8a6ba2625ba7",
+  "fact": "0.42",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "rag",
+  "task": "0647cbe8f3199123",
+  "fact": "1.117",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "rag",
+  "task": "9119f762f458cbb4",
+  "fact": "0.135",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "rag",
+  "task": "14c49ed84c72faa6",
+  "fact": "2.89",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "rag",
+  "task": "a5cf9b2d1c099b39",
+  "fact": "1.14",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "rag",
+  "task": "50c9bd1e1cc2da58",
+  "fact": "0.46",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "rag",
+  "task": "3d31a5406fa87e0a",
+  "fact": "0.106",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "rag",
+  "task": "15dcd4fc3251c735",
+  "fact": "0.270",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "rag",
+  "task": "984f4fffcd72338d",
+  "fact": "0.9",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "rag",
+  "task": "15dcd4fc3251c735",
+  "fact": "0.86",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "rag",
+  "task": "eace0b33d72b37ae",
+  "fact": "0.308",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "rag",
+  "task": "40f2316344d92b2e",
+  "fact": "0.12",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "rag",
+  "task": "650566f46dc0626c",
+  "fact": "0.1",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "rag",
+  "task": "0bee757f6d93d612",
+  "fact": "0.63",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "raptor",
+  "task": "6f0d15b5824c2475",
+  "fact": "0.57",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "raptor",
+  "task": "ada74f9430a1b46b",
+  "fact": "1.6",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "raptor",
+  "task": "075ebcbd51d04017",
+  "fact": "0.8",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "raptor",
+  "task": "e36d289150b52f23",
+  "fact": "0.121",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "raptor",
+  "task": "e8953fb2dc8d91ff",
+  "fact": "0.27",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "raptor",
+  "task": "ff8458deedf5eb0f",
+  "fact": "1.7",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "raptor",
+  "task": "e9a835bae90cc0d9",
+  "fact": "0.7",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "raptor",
+  "task": "706ca1df308f9f92",
+  "fact": "0.1",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "raptor",
+  "task": "cbaf3b8d27603b0a",
+  "fact": "0.58",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "raptor",
+  "task": "b3b9defe4b6b375d",
+  "fact": "2.15",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "raptor",
+  "task": "77e60381b640a418",
+  "fact": "0.154",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "raptor",
+  "task": "1fcb77dc76521ff7",
+  "fact": "0.104",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "raptor",
+  "task": "c86b342167610132",
+  "fact": "0.46",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "raptor",
+  "task": "a057620d4a3b7ef1",
+  "fact": "0.220",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "raptor",
+  "task": "98d92286a487263f",
+  "fact": "0.143",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "raptor",
+  "task": "f439326c78f9d48b",
+  "fact": "0.65",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "hipporag",
+  "task": "de8980891d3aefca",
+  "fact": "0.84",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "hipporag",
+  "task": "574b58b5f504c485",
+  "fact": "0.7",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "hipporag",
+  "task": "328d55daa0710995",
+  "fact": "0.36",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "hipporag",
+  "task": "fc34d9261e62485f",
+  "fact": "0.0",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "hipporag",
+  "task": "3cd24c8a093ce350",
+  "fact": "0.5",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "hipporag",
+  "task": "18e3e4005cc7fe39",
+  "fact": "0.0",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "hipporag",
+  "task": "709f389a920c164c",
+  "fact": "0.115",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "hipporag",
+  "task": "974d7859b931e445",
+  "fact": "0.31",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "hipporag",
+  "task": "d2f6521da5f57b8c",
+  "fact": "0.150",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "hipporag",
+  "task": "7a4a864abdfa1f7e",
+  "fact": "0.338",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "hipporag",
+  "task": "d2f6521da5f57b8c",
+  "fact": "0.160",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "hipporag",
+  "task": "88b2d38dcf4ec12c",
+  "fact": "0.6",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "hipporag",
+  "task": "e6690f1858a4a3d9",
+  "fact": "0.13",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "hipporag",
+  "task": "11494f8a6120a450",
+  "fact": "0.48",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "hipporag",
+  "task": "dc64e3234bd1b571",
+  "fact": "0.18",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "hipporag",
+  "task": "db798ab094066a4d",
+  "fact": "0.101",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "graphrag",
+  "task": "ba4c89af2550bda0",
+  "fact": "0.74",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "graphrag",
+  "task": "97242bf8a40f049f",
+  "fact": "0.2",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "graphrag",
+  "task": "ee92c857bda4b44e",
+  "fact": "2.12",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "graphrag",
+  "task": "cd4f4b6e019fe573",
+  "fact": "0.6",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "graphrag",
+  "task": "30aa016716dd019a",
+  "fact": "0.6",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "graphrag",
+  "task": "7cfa29d2bd815178",
+  "fact": "0.86",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "graphrag",
+  "task": "7ab6216cb3df4b8e",
+  "fact": "0.226",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "graphrag",
+  "task": "0e72630704aac3a4",
+  "fact": "0.8",
+  "judged": "stated",
+  "found": true
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "graphrag",
+  "task": "0196e65757df2a04",
+  "fact": "0.17",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "graphrag",
+  "task": "e0b5eae77f49be09",
+  "fact": "0.244",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "graphrag",
+  "task": "2979b3bfa7853541",
+  "fact": "1.6",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "graphrag",
+  "task": "c996590513a433e8",
+  "fact": "0.27",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "graphrag",
+  "task": "2f9a101b9393f0cc",
+  "fact": "1.1",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "graphrag",
+  "task": "c90252338c16c857",
+  "fact": "0.107",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "graphrag",
+  "task": "c6ad10f9a1d2ee44",
+  "fact": "0.34",
+  "judged": "missing",
+  "found": false
+ },
+ {
+  "dataset": "natural_questions",
+  "method": "graphrag",
+  "task": "21872926883d4a8c",
+  "fact": "0.265",
+  "judged": "missing",
+  "found": false
+ }
+]

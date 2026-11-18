@@ -1,0 +1,77 @@
+[
+{"id": "d4c4c71effd93041", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "is the lower house of the bicameral Majlis - e-Shura"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "-- Qaumī Asimbli'e Pākistān"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "which also comprises the President of Pakistan"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "and Senate ( upper house )"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 9, "quote": "The National Assembly and the Senate both convene at Parliament House in Islamabad"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 9, "quote": "The National Assembly and the Senate both convene at Parliament House in Islamabad"}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 10, "quote": "The National Assembly is a democratically elected body consisting of a"}]},
+{"fact": "0.7", "status": "stated", "evidence": [{"item": 10, "quote": "total of 332 members who are referred to as Members of the National Assembly ( MNAs )"}]},
+{"fact": "0.8", "status": "stated", "evidence": [{"item": 10, "quote": "total of 332 members who are referred to as Members of the National Assembly ( MNAs )"}]},
+{"fact": "0.9", "status": "stated", "evidence": [{"item": 10, "quote": "of which 272 are directly elected members"}]},
+{"fact": "0.10", "status": "stated", "evidence": [{"item": 10, "quote": "70 seats reserved for women and religious minorities"}]},
+{"fact": "0.11", "status": "stated", "evidence": [{"item": 10, "quote": "A political party must secure 172 seats to obtain and preserve a majority"}]},
+{"fact": "0.12", "status": "stated", "evidence": [{"item": 10, "quote": "A political party must secure 172 seats to obtain and preserve a majority"}]}
+]},
+{"id": "e261d9f0cf7ab86e", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "groups of photoreceptor cells are termed eyespots"}]},
+{"fact": "0.3", "status": "contradicted", "evidence": [{"item": 1, "quote": "These eyespots permit animals to gain only a very basic sense of the direction"}]},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "0.5", "status": "missing", "evidence": []},
+{"fact": "0.6", "status": "missing", "evidence": []},
+{"fact": "0.7", "status": "stated", "evidence": [{"item": 1, "quote": "and intensity of light , but not enough to discriminate an object from its surroundings"}]},
+{"fact": "0.8", "status": "missing", "evidence": []},
+{"fact": "0.9", "status": "contradicted", "evidence": [{"item": 1, "quote": "These eyespots permit animals to gain only a very basic sense of the direction"}]},
+{"fact": "0.10", "status": "missing", "evidence": []},
+{"fact": "0.11", "status": "missing", "evidence": []},
+{"fact": "0.12", "status": "missing", "evidence": []},
+{"fact": "0.13", "status": "missing", "evidence": []},
+{"fact": "0.14", "status": "missing", "evidence": []},
+{"fact": "0.15", "status": "missing", "evidence": []},
+{"fact": "0.16", "status": "missing", "evidence": []},
+{"fact": "0.17", "status": "missing", "evidence": []},
+{"fact": "0.18", "status": "missing", "evidence": []},
+{"fact": "0.19", "status": "missing", "evidence": []},
+{"fact": "0.20", "status": "missing", "evidence": []},
+{"fact": "0.21", "status": "missing", "evidence": []},
+{"fact": "0.22", "status": "missing", "evidence": []},
+{"fact": "0.23", "status": "missing", "evidence": []},
+{"fact": "0.24", "status": "missing", "evidence": []},
+{"fact": "0.25", "status": "missing", "evidence": []}
+]},
+{"id": "0dff5d2be371f233", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Simplified reaction : C H O ( s ) + 6 O ( g ) → 6 CO ( g ) + 6 H O ( l ) + heat"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "ΔG = − 2880 kJ per mol of C H O"}]}
+]},
+{"id": "a256be2001e725d2", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []}
+]},
+{"id": "b0e27e4f9366ba99", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "A. planci has a very wide Indo - Pacific distribution"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "It is perhaps most common in Australia"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "can occur at tropical and subtropical latitudes from the Red Sea"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "Red Sea and the east African coast across the Indian Ocean"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "the east African coast across the Indian Ocean"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 3, "quote": "and across the Pacific Ocean to the west coast of Central America"}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 9, "quote": "It occurs where coral reefs or hard coral communities occur in this region"}]}
+]},
+{"id": "c1fe71ecfa790e26", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 9, "quote": "Beatrice Straight , Best Supporting Actress winner"}, {"item": 10, "quote": "Beatrice Straight -- Network as Louise Schumacher"}]},
+{"fact": "0.6", "status": "missing", "evidence": []},
+{"fact": "0.7", "status": "missing", "evidence": []},
+{"fact": "0.8", "status": "missing", "evidence": []},
+{"fact": "0.9", "status": "stated", "evidence": [{"item": 9, "quote": "Best Picture Best Director Rocky -- Robert Chartoff and Irwin Winkler , producers"}, {"item": 9, "quote": "John G. Avildsen -- Rocky"}]}
+]}
+]

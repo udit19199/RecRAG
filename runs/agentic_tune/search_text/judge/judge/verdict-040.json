@@ -1,0 +1,63 @@
+[
+{"id": "02cbbf76c3744571", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "cheering emphatically when No. 87 scored a touchdown"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]}
+]},
+{"id": "c93749ff85c504bc", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "0e5caf87e002cd4a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]}
+]},
+{"id": "539729c7fffbf941", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "while things like faster charging, improved antennas and smoother haptics are welcome bonuses."}, {"item": 6, "quote": "The thumbsticks have also been made 1mm taller, and the touch pads' haptics are slightly sharper."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "The thumbsticks have also been made 1mm taller, and the touch pads' haptics are slightly sharper."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+]},
+{"id": "afebeb17abac6747", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Dominant wins over Argentina, Japan and Chile sealed passage to the last eight"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "Dominant wins over Argentina, Japan and Chile sealed passage to the last eight"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "Dominant wins over Argentina, Japan and Chile sealed passage to the last eight"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 7, "quote": "the narrow wins over both Samoa and Fiji in their last two games"}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 7, "quote": "the narrow wins over both Samoa and Fiji in their last two games"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "S﻿AINT-ETIENNE: The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com as their Rugby World Cup fate is decided by Fiji and Portugal in Toulouse."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "S﻿AINT-ETIENNE: The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com as their Rugby World Cup fate is decided by Fiji and Portugal in Toulouse."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "S﻿AINT-ETIENNE: The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com as their Rugby World Cup fate is decided by Fiji and Portugal in Toulouse."}]}
+]},
+{"id": "9e008ba41c5360f0", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "especially since he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "especially since he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "especially since he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]}
+]

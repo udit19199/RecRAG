@@ -1,0 +1,972 @@
+[
+ {
+  "id": "b46cf4dedfb54003",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Along with competing in the league, the club will also participate in the FA Cup, EFL Cup and EFL Trophy."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Along with competing in the league, the club will also participate in the FA Cup, EFL Cup and EFL Trophy."
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Along with competing in the league, the club will also participate in the FA Cup, EFL Cup and EFL Trophy."
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Along with competing in the league, the club will also participate in the FA Cup, EFL Cup and EFL Trophy."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "The EFL Cup (referred to historically, and colloquially, as simply the League Cup)"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "The EFL Cup (referred to historically, and colloquially, as simply the League Cup)"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "currently known as the Carabao Cup for sponsorship reasons"
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "is an annual knockout football competition in men's domestic English football."
+     }
+    ]
+   },
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "is an annual knockout football competition in men's domestic English football."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "e8f41422dd561d3d",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Lukas Rossi (born December 21, 1976) is a Canadian rock musician"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Lukas Rossi (born December 21, 1976) is a Canadian rock musician"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "was the winner of the CBS Television reality series"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "a televised audition contest to become lead singer of the hard rock supergroup \"Rock Star Supernova\"."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Terry Alan Kath (January 31, 1946 – January 23, 1978) was an American musician and songwriter"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Terry Alan Kath (January 31, 1946 – January 23, 1978) was an American musician and songwriter"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Terry Alan Kath (January 31, 1946 – January 23, 1978) was an American musician and songwriter"
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Terry Alan Kath (January 31, 1946 – January 23, 1978) was an American musician and songwriter"
+     }
+    ]
+   },
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "best known as the original guitarist, one of the lead singers and founding members of the rock band Chicago."
+     }
+    ]
+   },
+   {
+    "fact": "1.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "best known as the original guitarist, one of the lead singers and founding members of the rock band Chicago."
+     }
+    ]
+   },
+   {
+    "fact": "1.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "best known as the original guitarist, one of the lead singers and founding members of the rock band Chicago."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "6706a67c6b082f24",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Lake Louisvilla is a neighborhood partially located in Louisville, Kentucky."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Lake Louisvilla is a neighborhood partially located in Louisville, Kentucky."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "It is located between Westport Road in Louisville and KY 22 in Oldham County."
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "It is located between Westport Road in Louisville and KY 22 in Oldham County."
+     }
+    ]
+   },
+   {
+    "fact": "2.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Oldham County is a county located in the commonwealth of Kentucky."
+     }
+    ]
+   },
+   {
+    "fact": "2.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Oldham County is a county located in the commonwealth of Kentucky."
+     }
+    ]
+   },
+   {
+    "fact": "3.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Oldham County is a county located in the commonwealth of Kentucky."
+     },
+     {
+      "item": 6,
+      "quote": "As of the 2010 census, the population was 60,316."
+     }
+    ]
+   },
+   {
+    "fact": "4.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Oldham County was a prohibition or completely dry county until January 2005 as the result of a 2004 'moist' vote"
+     }
+    ]
+   },
+   {
+    "fact": "4.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Oldham County was a prohibition or completely dry county until January 2005 as the result of a 2004 'moist' vote"
+     }
+    ]
+   },
+   {
+    "fact": "4.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "permitting sales of alcohol in restaurants that seat at least 100 patrons"
+     }
+    ]
+   },
+   {
+    "fact": "4.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "that seat at least 100 patrons in which 70%+ of total revenue is derived from sales of food."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "c2f30c41019a7496",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "One of only three writers to win the Pulitzer Prize for Fiction more than once (the others were Booth Tarkington and William Faulkner), Updike published more than twenty novels, more than a dozen short-story collections, as well as poetry, art and literary criticism and children's books during his career."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "One of only three writers to win the Pulitzer Prize for Fiction more than once (the others were Booth Tarkington and William Faulkner), Updike published more than twenty novels, more than a dozen short-story collections, as well as poetry, art and literary criticism and children's books during his career."
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "One of only three writers to win the Pulitzer Prize for Fiction more than once (the others were Booth Tarkington and William Faulkner), Updike published more than twenty novels, more than a dozen short-story collections, as well as poetry, art and literary criticism and children's books during his career."
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "One of only three writers to win the Pulitzer Prize for Fiction more than once (the others were Booth Tarkington and William Faulkner), Updike published more than twenty novels, more than a dozen short-story collections, as well as poetry, art and literary criticism and children's books during his career."
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "One of only three writers to win the Pulitzer Prize for Fiction more than once (the others were Booth Tarkington and William Faulkner), Updike published more than twenty novels, more than a dozen short-story collections, as well as poetry, art and literary criticism and children's books during his career."
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "One of only three writers to win the Pulitzer Prize for Fiction more than once (the others were Booth Tarkington and William Faulkner), Updike published more than twenty novels, more than a dozen short-story collections, as well as poetry, art and literary criticism and children's books during his career."
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "One of only three writers to win the Pulitzer Prize for Fiction more than once (the others were Booth Tarkington and William Faulkner), Updike published more than twenty novels, more than a dozen short-story collections, as well as poetry, art and literary criticism and children's books during his career."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "feebff819e4c82dd",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Although the film takes its title from an album by (and Ira Nadel's biography of) Leonard Cohen, the subject of the film is not Cohen, nor does he have any affiliation with the work."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Although the film takes its title from an album by (and Ira Nadel's biography of) Leonard Cohen, the subject of the film is not Cohen, nor does he have any affiliation with the work."
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Although the film takes its title from an album by (and Ira Nadel's biography of) Leonard Cohen, the subject of the film is not Cohen, nor does he have any affiliation with the work."
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Although the film takes its title from an album by (and Ira Nadel's biography of) Leonard Cohen, the subject of the film is not Cohen, nor does he have any affiliation with the work."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Leonard Norman Cohen"
+     },
+     {
+      "item": 6,
+      "quote": "(September 21, 1934 – November 7, 2016) was a Canadian singer, songwriter, musician, poet, novelist, and painter."
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Leonard Norman Cohen"
+     },
+     {
+      "item": 6,
+      "quote": "(September 21, 1934 – November 7, 2016) was a Canadian singer, songwriter, musician, poet, novelist, and painter."
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Leonard Norman Cohen"
+     },
+     {
+      "item": 6,
+      "quote": "(September 21, 1934 – November 7, 2016) was a Canadian singer, songwriter, musician, poet, novelist, and painter."
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Leonard Norman Cohen"
+     },
+     {
+      "item": 6,
+      "quote": "(September 21, 1934 – November 7, 2016) was a Canadian singer, songwriter, musician, poet, novelist, and painter."
+     }
+    ]
+   },
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Leonard Norman Cohen"
+     },
+     {
+      "item": 6,
+      "quote": "(September 21, 1934 – November 7, 2016) was a Canadian singer, songwriter, musician, poet, novelist, and painter."
+     }
+    ]
+   },
+   {
+    "fact": "1.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Leonard Norman Cohen"
+     },
+     {
+      "item": 6,
+      "quote": "(September 21, 1934 – November 7, 2016) was a Canadian singer, songwriter, musician, poet, novelist, and painter."
+     }
+    ]
+   },
+   {
+    "fact": "1.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Leonard Norman Cohen"
+     },
+     {
+      "item": 6,
+      "quote": "(September 21, 1934 – November 7, 2016) was a Canadian singer, songwriter, musician, poet, novelist, and painter."
+     }
+    ]
+   },
+   {
+    "fact": "1.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Leonard Norman Cohen"
+     },
+     {
+      "item": 6,
+      "quote": "(September 21, 1934 – November 7, 2016) was a Canadian singer, songwriter, musician, poet, novelist, and painter."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "cda3428d3bea60fe",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "The pool lies directly south of Lichfield Cathedral and historically has been important to the defence of the Cathedral Close."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "The pool lies directly south of Lichfield Cathedral and historically has been important to the defence of the Cathedral Close."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.3",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "9c507971381f52da",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Obertraun is a popular holiday destination offering activities such as skiing, snowboarding in the winter and mountain biking, swimming and kayaking in the summer."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Obertraun is a popular holiday destination offering activities such as skiing, snowboarding in the winter and mountain biking, swimming and kayaking in the summer."
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Obertraun is a popular holiday destination offering activities such as skiing, snowboarding in the winter and mountain biking, swimming and kayaking in the summer."
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Obertraun is a popular holiday destination offering activities such as skiing, snowboarding in the winter and mountain biking, swimming and kayaking in the summer."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The name \"Salzkammergut\" literally means \"Estate of the Salt Chamber\" and derives from the Imperial Salt Chamber, the authority charged with running the precious salt mines of the Habsburg Monarchy."
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The name \"Salzkammergut\" literally means \"Estate of the Salt Chamber\" and derives from the Imperial Salt Chamber, the authority charged with running the precious salt mines of the Habsburg Monarchy."
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The name \"Salzkammergut\" literally means \"Estate of the Salt Chamber\" and derives from the Imperial Salt Chamber, the authority charged with running the precious salt mines of the Habsburg Monarchy."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "1dc7e31f7b597378",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "The Park is home to the first flume ride in Ireland (Pirates Plunge)."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "The Park is home to the first flume ride in Ireland (Pirates Plunge)."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.4",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "32d56c33ba1bca0b",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Cacareco's candidacy inspired the Rhinoceros Party of Canada, nominally led by the rhinoceros Cornelius the First."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Cacareco's candidacy inspired the Rhinoceros Party of Canada, nominally led by the rhinoceros Cornelius the First."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "The Rhinoceros Party (French: \"Parti Rhinocéros\") was a registered political party in Canada from the 1960s to the 1990s."
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "The Rhinoceros Party (French: \"Parti Rhinocéros\") was a registered political party in Canada from the 1960s to the 1990s."
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "The Rhinoceros Party (French: \"Parti Rhinocéros\") was a registered political party in Canada from the 1960s to the 1990s."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "98cf692eca2c13e6",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Jan Kodeš and Margaret Court won the singles titles."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Jan Kodeš and Margaret Court won the singles titles."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "She is currently a Christian minister in Perth, Western Australia."
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "She is currently a Christian minister in Perth, Western Australia."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "d0412924c195efe9",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Rosario Castellanos Figueroa (] ; 25 May 1925 – 7 August 1974) was a Mexican poet and author."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Rosario Castellanos Figueroa (] ; 25 May 1925 – 7 August 1974) was a Mexican poet and author."
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Rosario Castellanos Figueroa (] ; 25 May 1925 – 7 August 1974) was a Mexican poet and author."
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Rosario Castellanos Figueroa (] ; 25 May 1925 – 7 August 1974) was a Mexican poet and author."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Lucy Maud Montgomery"
+     },
+     {
+      "item": 3,
+      "quote": "(November 30, 1874 – April 24, 1942) published as L.M. Montgomery, was a Canadian author best known for a series of novels beginning in 1908 with \"Anne of Green Gables\"."
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Lucy Maud Montgomery"
+     },
+     {
+      "item": 3,
+      "quote": "(November 30, 1874 – April 24, 1942) published as L.M. Montgomery, was a Canadian author best known for a series of novels beginning in 1908 with \"Anne of Green Gables\"."
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Lucy Maud Montgomery"
+     },
+     {
+      "item": 3,
+      "quote": "(November 30, 1874 – April 24, 1942) published as L.M. Montgomery, was a Canadian author best known for a series of novels beginning in 1908 with \"Anne of Green Gables\"."
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Lucy Maud Montgomery"
+     },
+     {
+      "item": 3,
+      "quote": "(November 30, 1874 – April 24, 1942) published as L.M. Montgomery, was a Canadian author best known for a series of novels beginning in 1908 with \"Anne of Green Gables\"."
+     }
+    ]
+   },
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Lucy Maud Montgomery"
+     },
+     {
+      "item": 3,
+      "quote": "(November 30, 1874 – April 24, 1942) published as L.M. Montgomery, was a Canadian author best known for a series of novels beginning in 1908 with \"Anne of Green Gables\"."
+     }
+    ]
+   },
+   {
+    "fact": "1.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Lucy Maud Montgomery"
+     },
+     {
+      "item": 3,
+      "quote": "(November 30, 1874 – April 24, 1942) published as L.M. Montgomery, was a Canadian author best known for a series of novels beginning in 1908 with \"Anne of Green Gables\"."
+     }
+    ]
+   }
+  ]
+ }
+]

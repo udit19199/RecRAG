@@ -1,0 +1,42 @@
+[
+  {"id": "bf110636c4d31276", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]}
+  ]},
+  {"id": "e6b5c32bbbe5c4b9", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "b2e643c7225de6cd", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "The feature is currently available in France, Germany, Japan, the U.K. and the U.S., with plans for further expansion."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "with plans for further expansion."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."}]}
+  ]},
+  {"id": "fdc93f4c736f70e0", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "a9817fd07ab49030", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "That allows sportsbooks to earn the profit built into the odds and lines without worrying about which side wins."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "That allows sportsbooks to earn the profit built into the odds and lines without worrying about which side wins."}]}
+  ]}
+]

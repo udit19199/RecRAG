@@ -1,0 +1,815 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=5f2f59e5bf6f3965 ===
+Gold sentences and facts:
+Sentence 0: Important production centres today are the Hallertau in Germany ( more hop - growing area than any other country as of 2006 ) , the Yakima ( Washington ) and Willamette ( Oregon ) valleys , and western Canyon County , Idaho ( including the communities of Parma , Wilder , Greenleaf , and Notus ) . The principal production centres in the UK are in Kent ( which produces Kent Goldings hops ) , Herefordshire , and Worcestershire . Essentially all of the harvested hops are used in beer making .
+  Fact 0.0: The Hallertau in Germany has more hop-growing area than any other country as of 2006.
+  Fact 0.1: The Hallertau in Germany is an important hop production centre today.
+  Fact 0.2: The Yakima valley in Washington is an important hop production centre today.
+  Fact 0.3: The Willamette valley in Oregon is an important hop production centre today.
+  Fact 0.4: Western Canyon County, Idaho is an important hop production centre today.
+  Fact 0.5: Western Canyon County, Idaho includes the communities of Parma, Wilder, Greenleaf, and Notus.
+  Fact 0.6: The principal hop production centres in the UK are in Kent.
+  Fact 0.7: Kent produces Kent Goldings hops.
+  Fact 0.8: The principal hop production centres in the UK are in Herefordshire.
+  Fact 0.9: The principal hop production centres in the UK are in Worcestershire.
+  Fact 0.10: Essentially all of the harvested hops are used in beer making.
+Sentence 1: Hops production is concentrated in moist temperate climates , with much of the world 's production occurring near the 48th parallel north . Hop plants prefer the same soils as potatoes and the leading potato - growing states in the United States are also major hops - producing areas ; however , not all potato - growing areas can produce good hops naturally : soils in the Maritime Provinces of Canada , for example , lack the boron that hops prefer . Historically , hops were not grown in Ireland , but were imported from England . In 1752 more than 500 tons of English hops were imported through Dublin alone .
+  Fact 1.0: Hops production is concentrated in moist temperate climates.
+  Fact 1.1: Much of the world's hops production occurs near the 48th parallel north.
+  Fact 1.2: Hop plants prefer the same soils as potatoes.
+  Fact 1.3: The leading potato-growing states in the United States are also major hops-producing areas.
+  Fact 1.4: Not all potato-growing areas can produce good hops naturally.
+  Fact 1.5: Soils in the Maritime Provinces of Canada lack the boron that hops prefer.
+  Fact 1.6: Historically, hops were not grown in Ireland.
+  Fact 1.7: Historically, hops were imported into Ireland from England.
+  Fact 1.8: In 1752 more than 500 tons of English hops were imported through Dublin alone.
+
+Retrieved items:
+<item 1>
+Hops
+A heating unit on the lower floor is used to dry the hops . When dry , the hops are moved to a press , a sturdy box with a plunger . Two long pieces of burlap
+are laid into the hop press at right angles , the hops are poured in and compressed into bales . Hop cones contain different oils , such as lupulin , a
+yellowish , waxy substance , an oleoresin , that imparts flavour and aroma to beer . Lupulin contains lupulone and humulone , which possess antibiotic
+properties , suppressing bacterial growth favoring brewer 's yeast to grow . After lupulin has been extracted in the brewing process the papery cones are
+discarded . Migrant labor and social impact ( edit ) Hops harvest in the Kingdom of Bohemia ( 1898 ) Hops harvest in Skåne , Sweden in 1937 The need for massed
+labor at harvest time meant hop - growing had a big social impact . Around the world , the labor - intensive harvesting work involved large numbers of migrant
+workers who would travel for the annual hop harvest .
+</item 1>
+
+<item 2>
+Hops
+Hops - wikipedia Hops Jump to : navigation , search For other uses , see hop ( disambiguation ) . Hop flower in a hop yard in the Hallertau , Germany
+Cross-section drawing of a hop Hops are the flowers ( also called seed cones or strobiles ) of the hop plant Humulus lupulus . They are used primarily as a
+flavouring and stability agent in beer , to which they impart bitter , zesty , or citric flavours ; though they are also used for various purposes in other
+beverages and herbal medicine . The hop plant is a vigorous , climbing , herbaceous perennial , usually trained to grow up strings in a field called a hopfield
+, hop garden ( nomenclature in the South of England ) , or hop yard ( in the West Country and U.S. ) when grown commercially . Many different varieties of hops
+are grown by farmers around the world , with different types used for particular styles of beer . The first documented use of hops in beer is from the 9th
+century , though Hildegard of Bingen , 300 years later , is often cited as the earliest documented source .
+</item 2>
+
+<item 3>
+Hops
+Essentially all of the harvested hops are used in beer making . Early season hop growth in a hop yard in the Yakima River Valley of Washington with Mount Adams
+in the distance Hop producing country 2012 hop output in tonnes ( t ) Germany 34,434 United States 27,782 China 11,000 Czech Republic 4,338 Poland 2,206 North
+Korea 2,000 Albania 1,650 United Kingdom 1,650 Slovenia 1,338 Cultivation and harvest ( edit ) A superstructure of overhead wires supports strings that in turn
+support bines Although hops are grown in most of the continental United States and Canada , cultivation of hops for commercial production requires a particular
+environment . As hops are a climbing plant , they are trained to grow up trellises made from strings or wires that support the plants and allow them
+significantly greater growth with the same sunlight profile . In this way , energy that would have been required to build structural cells is also freed for
+crop growth . The hop plant 's reproduction method is that male and female flowers develop on separate plants , although occasionally a fertile individual will
+develop which contains both male and female flowers .
+</item 3>
+
+<item 4>
+Hops
+private and public breeding programs are using their stock material . Particular hop varieties are associated with beer regions and styles , for example pale
+lagers are usually brewed with European ( often German , Polish or Czech ) noble hop varieties such as Saaz , Hallertau and Strissel Spalt . British ales use
+hop varieties such as Fuggles , Goldings and W.G.V. North American beers often use Cascade hops , Columbus hops , Centennial hops , Willamette , Amarillo hops
+and about forty more varieties as the U.S.A. have lately been the more significant breeders of new hop varieties , including dwarf hop varieties . Hops from New
+Zealand , such as Pacific Gem , Motueka and Nelson Sauvin , are used in a `` Pacific Pale Ale '' style of beer with increasing production in 2014 . Noble hops (
+edit ) Mature hops growing in a hop yard in Germany The term `` noble hops '' traditionally refers to varieties of hops which are low in bitterness and high in
+aroma . They are the European cultivars or races Hallertau , Tettnanger , Spalt , and Saaz .
+</item 4>
+
+<item 5>
+Hops
+Because pollinated seeds are undesirable for brewing beer , only female plants are grown in hop fields , thus preventing pollination . Female plants are
+propagated vegetatively , and male plants are culled if plants are grown from seeds . Hop plants are planted in rows about 2 to 2.5 metres ( 7 to 8 ft ) apart .
+Each spring , the roots send forth new bines that are started up strings from the ground to an overhead trellis . The cones grow high on the bine , and in the
+past , these cones were picked by hand . Harvesting of hops became much more efficient with the invention of the mechanical hops separator , patented by Emil
+Clemens Horst in 1909 . Harvest comes near the end of summer when the bines are pulled down and the flowers are taken to a hop house or oast house for drying .
+Hop houses are two - story buildings , of which the upper story has a slatted floor covered with burlap . Here the flowers are poured out and raked even . A
+heating unit on the lower floor is used to dry the hops .
+</item 5>
+
+<item 6>
+Hops
+461 . Jump up ^ Charles W. Bamforth ( 1998 ) . Beer : tap into the art and science of brewing . Plenum Press . p. 245 . ISBN 0 - 306 - 45797 - 0 . Jump up ^
+Knight , Paul D. `` HOPS IN BEER '' . USA Hops . Hop Growers of America . Retrieved 11 June 2015 . Jump up ^ Annual Report of the Commissioner of Patents , Part
+2 ; Part 4 . US Patent office . 1858 . p. 291 . ^ Jump up to : Peicanada Jump up ^ `` The London magazine , 1752 '' , page 332 Jump up ^ Summary of Reports :
+Nürnberg , Germany , 14 November 2006 , International Hop Growers ' Convention : Economic Committee Jump up ^ `` NCGR - Corvallis Humulus Genetic Resources '' .
+Ars-grin.gov . Retrieved 2012 - 05 - 20 . Jump up ^ Norman Moss , A Fancy to Worcesters Archived 29 September 2007 at the Wayback Machine.
+</item 6>
+
+<item 7>
+Hops
+In 1752 more than 500 tons of English hops were imported through Dublin alone . Important production centres today are the Hallertau in Germany ( more hop -
+growing area than any other country as of 2006 ) , the Yakima ( Washington ) and Willamette ( Oregon ) valleys , and western Canyon County , Idaho ( including
+the communities of Parma , Wilder , Greenleaf , and Notus ) . The principal production centres in the UK are in Kent ( which produces Kent Goldings hops ) ,
+Herefordshire , and Worcestershire . Essentially all of the harvested hops are used in beer making .
+</item 7>
+
+<item 8>
+Hops
+Problems with powdery mildew and downy mildew devastated New York 's production by the 1920s , and California only produces hops on a small scale . Hop bars
+were used before modern machinery was invented to make the holes for the hop poles . World production ( edit ) Hops production is concentrated in moist
+temperate climates , with much of the world 's production occurring near the 48th parallel north . Hop plants prefer the same soils as potatoes and the leading
+potato - growing states in the United States are also major hops - producing areas ; however , not all potato - growing areas can produce good hops naturally :
+soils in the Maritime Provinces of Canada , for example , lack the boron that hops prefer . Historically , hops were not grown in Ireland , but were imported
+from England . In 1752 more than 500 tons of English hops were imported through Dublin alone .
+</item 8>
+
+<item 9>
+Hops
+Contents ( hide ) 1 History 2 World production 2.1 Cultivation and harvest 2.2 Migrant labor and social impact 3 Chemical composition 3.1 Alpha acids 3.2 Beta
+acids 3.3 Essential oils 3.4 Flavonoids 4 Brewing 5 Varieties 5.1 Breeding programs 5.2 Noble hops 6 Other uses 7 Toxicity 8 See also 9 References 10 External
+links History ( edit ) The first documented hop cultivation was in 736 , in the Hallertau region of present - day Germany , although the first mention of the
+use of hops in brewing in that country was 1079 . However , in a will of Pepin the Short , the father of Charlemagne , hop gardens were left to the Cloister of
+Saint - Denis in 768 . Not until the 13th century did hops begin to start threatening the use of gruit for flavouring . Gruit was used when taxes were levied by
+the nobility on hops . Whichever was taxed made the brewer then quickly switch to the other .
+</item 9>
+
+<item 10>
+Hops
+Hops were then grown as far north as Aberdeen , near breweries for infrastructure convenience . According to Thomas Tusser 's 1557 Five Hundred Points of Good
+Husbandry : `` The hop for his profit I thus do exalt , It strengtheneth drink and it flavoureth malt ; And being well - brewed long kept it will last , And
+drawing abide , if ye draw not too fast . '' In England there were many complaints over the quality of imported hops , the sacks of which were often
+contaminated by stalks , sand or straw to increase their weight . As a result , in 1603 , King James I approved an Act of Parliament banning the practice by
+which `` the Subjects of this Realm have been of late years abused &c. to the Value of £ 20,000 yearly , besides the Danger of their Healths '' . Hop
+cultivation was begun in the present - day United States in 1629 by English and Dutch farmers . Before prohibition , cultivation was mainly centred around New
+York , California , Oregon , and Washington state .
+</item 10>
+=== END ITEM id=5f2f59e5bf6f3965 ===
+
+=== ITEM id=12607713f4ec38a9 ===
+Gold sentences and facts:
+Sentence 0: `` Ca n't Get You Out of My Head '' is a song recorded by Australian singer Kylie Minogue for her eighth studio album , titled Fever , which she released in 2001 . The song was released in Australia by Parlophone as the lead single from the album on 8 September 2001 . It was released on 17 September 2001 in the United Kingdom . In the United States , the single was released on 18 February 2002 . Jointly written , composed , and produced by Cathy Dennis and Rob Davis , `` Ca n't Get You Out of My Head '' is a midtempo dance - pop song which lyrically details its narrator 's obsession towards her lover . The song is famous for its `` la la la '' hook .
+  Fact 0.0: 'Can't Get You Out of My Head' is a song.
+  Fact 0.1: 'Can't Get You Out of My Head' is recorded by Australian singer Kylie Minogue.
+  Fact 0.2: 'Can't Get You Out of My Head' was recorded for Kylie Minogue's eighth studio album.
+  Fact 0.3: The eighth studio album is titled Fever.
+  Fact 0.4: Kylie Minogue released Fever in 2001.
+  Fact 0.5: 'Can't Get You Out of My Head' was released in Australia by Parlophone.
+  Fact 0.6: 'Can't Get You Out of My Head' was released in Australia as the lead single from Fever.
+  Fact 0.7: The Australian release of 'Can't Get You Out of My Head' was on 8 September 2001.
+  Fact 0.8: 'Can't Get You Out of My Head' was released in the United Kingdom on 17 September 2001.
+  Fact 0.9: 'Can't Get You Out of My Head' was released in the United States as a single on 18 February 2002.
+  Fact 0.10: 'Can't Get You Out of My Head' was jointly written by Cathy Dennis and Rob Davis.
+  Fact 0.11: 'Can't Get You Out of My Head' was jointly composed by Cathy Dennis and Rob Davis.
+  Fact 0.12: 'Can't Get You Out of My Head' was jointly produced by Cathy Dennis and Rob Davis.
+  Fact 0.13: 'Can't Get You Out of My Head' is a midtempo dance-pop song.
+  Fact 0.14: 'Can't Get You Out of My Head' lyrically details its narrator's obsession towards her lover.
+  Fact 0.15: The song is famous for its 'la la la' hook.
+
+Retrieved items:
+<item 1>
+Can't Get You Out of My Head
+`` Limitless Joy : Kylie Minogue Interviewed '' . The Quietus . Retrieved 6 October 2013 . ^ Jump up to : `` I Wrote That : Ca n't Get You Out of My Head '' . M
+Magazine . PRS for Music . 26 September 2011 . Retrieved 5 October 2013 . Jump up ^ `` The Kylie hit you ca n't get out of your head '' . BBC . 31 December 2011
+. Retrieved 16 August 2013 . ^ Jump up to : Inglis , Sam ( May 2002 ) . `` People + Opinion : Rob Davis '' . Sound on Sound . SOS Publications Group . Archived
+from the original on 2004 - 02 - 28 . Retrieved 25 June 2014 . Jump up ^ Dorian , Lynskey ( 21 May 2012 ) . `` The best No 1 records : Kylie Minogue -- Ca n't
+Get You Out of My Head '' . The Guardian . Retrieved 22 July 2013 .
+</item 1>
+
+<item 2>
+Graph query row:
+work: Can't Get You Out of My Head
+songwriter: Rob Davis
+credit: None
+relationship: CREATED
+</item 2>
+
+<item 3>
+Can't Get You Out of My Head
+More recently , Minogue has performed a version of the song remixed by Steve Anderson . She performed the version during her `` MasterCard Pricless Gig '' and
+other mini-concerts to promote her twelfth studio album Kiss Me Once . It was performed during her seven - song set at the 2014 Commonwealth Games closing
+ceremony , as the final song of her performance . She also performed on the French TV show Le Grand Journal along with `` I Was Gonna Cancel . '' Following its
+release , `` Ca n't Get You Out of My Head '' has been performed by Minogue during all of her concert tours as of 2013 , with the exception of the Anti Tour in
+2012 . In 2001 , the song was included in the setlist of Minogue 's On a Night Like This tour , which was launched to promote Light Years . According to Tim
+DiGravina from AllMusic , the performance was infused with an `` almost tangible passion and fire . '' The song was included in the encore segment of the
+KylieFever2002 tour , which was launched to promote Fever .
+</item 3>
+
+<item 4>
+Can't Get You Out of My Head
+Queerty . Retrieved 21 January 2017 . ^ Jump up to : `` Kylie and Beckham begin chart race '' . BBC . 17 September 2001 . Retrieved 19 December 2007 . ^ Jump up
+to : `` Kylie Minogue -- Ca n't Get You Out of My Head '' . Australian Charts . Hung Medien . Retrieved 16 August 2013 . Jump up ^ `` ARIA Charts --
+Accreditations -- 2001 Singles '' . Australian Recording Industry Association . Archived from the original on 5 February 2014 . Retrieved 16 August 2013 . Jump
+up ^ `` Kylie Minogue - Can Not Get You Out of My Head '' ( in Dutch ) . Ultratop . Hung Medien . Retrieved 16 August 2013 . Jump up ^ `` Kylie Minogue - Can
+Not Get You Out of My Head '' ( in French ) . Ultratop . Hung Medien . Retrieved 16 August 2013 .
+</item 4>
+
+<item 5>
+Can't Get You Out of My Head
+The Guardian . Retrieved 22 July 2013 . Jump up ^ Ivan ( 28 February 2012 ) . `` Ten Years Gone : Kylie Minogue -- Fever '' . Hectic But Eclectic . Retrieved 4
+August 2013 . ^ Jump up to : True , Chris . `` Fever - Kylie Minogue '' . AllMusic . Rovi Corporation . Retrieved 16 August 2013 . ^ Jump up to : `` Ca n't Get
+You Out of My Head '' . Musicnotes.com . EMI Music Publishing . Retrieved 16 August 2013 . ^ Jump up to : Lynskey , Dorian ( 31 May 2012 ) . `` The best No 1
+records : Kylie Minogue -- Ca n't Get You Out of My Head '' . The Guardian . Retrieved 16 August 2013 . ^ Jump up to : `` The People 's Songs - Ca n't Get You
+Out of My Head '' . BBC . Retrieved 21 August 2013 .
+</item 5>
+
+<item 6>
+Can't Get You Out of My Head
+Single by Kylie Minogue from the album Fever B - side `` Boy '' `` Rendezvous at Sunset '' Released 8 September 2001 ( 2001 - 09 - 08 ) Format CD digital
+download Recorded 2001 ; London , England Genre Synthpop dance - pop Length 3 : 50 Label Parlophone Songwriter ( s ) Cathy Dennis Rob Davis Producer ( s ) Cathy
+Dennis Rob Davis Kylie Minogue singles chronology `` Your Disco Needs You '' ( 2001 ) `` Ca n't Get You Out of My Head '' ( 2001 ) `` In Your Eyes '' ( 2002 )
+`` Your Disco Needs You '' ( 2001 ) `` Ca n't Get You Out of My Head '' ( 2001 ) `` In Your Eyes '' ( 2002 ) Music video `` Ca n't Get You Out of My Head '' on
+YouTube `` Ca n't Get You Out of My Head '' is a song recorded by Australian singer Kylie Minogue for her eighth studio album , titled Fever , which she
+released in 2001 . The song was released in Australia by Parlophone as the lead single from the album on 8 September 2001 .
+</item 6>
+
+<item 7>
+Can't Get You Out of My Head
+Retrieved 3 August 2013 . Jump up ^ `` 100 Best Songs of the 2000s : Kylie Minogue , ' Ca n't Get You Out of My Head ' '' . Rolling Stone . 16 June 2011 .
+Retrieved 22 August 2013 . Jump up ^ `` Kylie Tops Chart For Most Popular Song of the Decade '' . PRS for Music . 3 January 2012 . Retrieved 22 August 2013 .
+Jump up ^ `` The Kylie hit you ca n't get out of your head '' . BBC . 31 December 2011 . Retrieved 22 August 2013 . Jump up ^ Lay , Kat ( 17 October 2013 ) . ``
+Why you ca n't get that tune out of your head ... '' The Times . News UK . Retrieved 18 October 2013 . ^ Jump up to : Barron , Lee ( December 2008 ) . `` The
+Seven Ages of Kylie Minogue : Postmodernism , Identity , and Performative Mimicry '' ( PDF ) . Nebula : 13 .
+</item 7>
+
+<item 8>
+Graph query row:
+work: Can't Get You Out of My Head
+songwriter: Cathy Dennis
+credit: None
+relationship: CREATED
+</item 8>
+
+<item 9>
+Can't Get You Out of My Head
+Apple Inc . Retrieved 22 August 2013 . Jump up ^ `` Australian-charts.com -- Kylie Minogue -- Ca n't Get You Out of My Head '' . ARIA Top 50 Singles . Retrieved
+16 November 2013 . Jump up ^ `` Austriancharts.at -- Kylie Minogue -- Ca n't Get You Out of My Head '' ( in German ) . Ö3 Austria Top 40 . Retrieved 16 November
+2013 . Jump up ^ `` Ultratop.be -- Kylie Minogue -- Ca n't Get You Out of My Head '' ( in Dutch ) . Ultratop 50 . Retrieved 16 November 2013 . Jump up ^ ``
+Ultratop.be -- Kylie Minogue -- Ca n't Get You Out of My Head '' ( in French ) . Ultratop 50 . Retrieved 16 November 2013 . Jump up ^ `` Brazil '' ( PDF ) .
+ABPD . October 6 , 2001 . Retrieved April 1 , 2014 .
+</item 9>
+
+<item 10>
+Can't Get You Out of My Head
+ISBN 1 - 905287 - 89 - 5 External links ( edit ) A page on `` Ca n't Get You Out of My Head '' at Kylie Minogue 's official website Lyrics of this song at
+MetroLyrics Kylie Minogue songs Singles discography Kylie `` I Should Be So Lucky '' `` The Loco - Motion '' `` Je ne sais pas pourquoi '' `` It 's No Secret ''
+`` Got to Be Certain '' `` Turn It into Love '' Enjoy Yourself `` Hand on Your Heart '' `` Would n't Change a Thing '' `` Never Too Late '' `` Tears on My
+Pillow '' `` Especially for You '' Rhythm of Love `` Better the Devil You Know '' `` Step Back in Time '' `` What Do I Have to Do '' `` Shocked '' Let 's Get to
+It `` Word Is Out '' `` Give Me Just a Little More Time '' `` Finer Feelings '' `` If You Were with Me Now '' `` I Guess I Like It Like That '' Greatest Hits ``
+What Kind of Fool ( Heard All That Before ) '' `` Celebration '' Kylie Minogue `` Confide in Me '' `` Put Yourself in My Place '' `` Where Is the Feeling ? ''
+Impossible Princess `` Too Far
+</item 10>
+=== END ITEM id=12607713f4ec38a9 ===
+
+=== ITEM id=a045005f1703f9ae ===
+Gold sentences and facts:
+Sentence 0: The United States two - dollar bill ( $2 ) is a current denomination of U.S. currency . The third U.S. President ( 1801 -- 09 ) , Thomas Jefferson , is featured on the obverse of the note . The reverse features an engraving of the painting The Declaration of Independence by John Trumbull . Throughout the $2 bill 's pre-1929 life as a large - sized note , it was issued as a United States Note , National Bank Note , silver certificate , Treasury or `` Coin '' Note and Federal Reserve Bank Note . When U.S. currency was changed to its current size , the $2 bill was issued only as a United States Note . Production went on until 1966 , when the series was discontinued . Ten years passed before the $2 bill was reissued as a Federal Reserve Note with a new reverse design . Two - dollar bills are seldom seen in circulation as a result of banking policies with businesses which has resulted in low production numbers due to lack of demand . This comparative scarcity in circulation , coupled with a lack of public knowledge that the bill is still in production and circulation , has also inspired urban legends and occasionally has created problems for people trying to use the bill to make purchases .
+  Fact 0.0: The United States two-dollar bill ($2) is a current denomination of U.S. currency.
+  Fact 0.1: Thomas Jefferson was the third U.S. President.
+  Fact 0.2: Thomas Jefferson served as President from 1801 to 1809.
+  Fact 0.3: Thomas Jefferson is featured on the obverse of the $2 bill.
+  Fact 0.4: The reverse of the $2 bill features an engraving of the painting The Declaration of Independence by John Trumbull.
+  Fact 0.5: Before 1929, the $2 bill was a large-sized note.
+  Fact 0.6: Before 1929, the $2 bill was issued as a United States Note.
+  Fact 0.7: Before 1929, the $2 bill was issued as a National Bank Note.
+  Fact 0.8: Before 1929, the $2 bill was issued as a silver certificate.
+  Fact 0.9: Before 1929, the $2 bill was issued as a Treasury or "Coin" Note.
+  Fact 0.10: Before 1929, the $2 bill was issued as a Federal Reserve Bank Note.
+  Fact 0.11: When U.S. currency was changed to its current size, the $2 bill was issued only as a United States Note.
+  Fact 0.12: Production of the $2 bill went on until 1966, when the series was discontinued.
+  Fact 0.13: Ten years passed before the $2 bill was reissued as a Federal Reserve Note with a new reverse design.
+  Fact 0.14: Two-dollar bills are seldom seen in circulation as a result of banking policies with businesses.
+  Fact 0.15: The banking policies with businesses resulted in low production numbers due to lack of demand.
+  Fact 0.16: The comparative scarcity of $2 bills in circulation, coupled with a lack of public knowledge that the bill is still in production and circulation, has inspired urban legends.
+  Fact 0.17: The comparative scarcity of $2 bills and the lack of public knowledge about them have occasionally created problems for people trying to use the bill to make purchases.
+
+Retrieved items:
+<item 1>
+United States two-dollar bill
+When U.S. currency was changed to its current size , the $2 bill was issued only as a United States Note . Production went on until 1966 , when the series was
+discontinued . Ten years passed before the $2 bill was reissued as a Federal Reserve Note with a new reverse design . Two - dollar bills are seldom seen in
+circulation as a result of banking policies with businesses which has resulted in low production numbers due to lack of demand . This comparative scarcity in
+circulation , coupled with a lack of public knowledge that the bill is still in production and circulation , has also inspired urban legends and occasionally
+has created problems for people trying to use the bill to make purchases . Contents ( hide ) 1 Denomination overview 2 Rarity 3 History 3.1 Large - sized notes
+3.2 Small size notes 3.2. 1 1928 -- 1966 3.2. 2 1976 -- present 3.3 Series dates 3.3. 1 Large size 3.3.
+</item 1>
+
+<item 2>
+United States two-dollar bill
+Each note was an obligation of the issuing Federal Reserve Bank and could only be redeemed at the corresponding bank . The obverse of the note featured a
+borderless portrait of Thomas Jefferson to left and wording in the entire center . The reverse featured a World War I battleship . Beginning in the 1950s ,
+production of $2 bills began to decrease . The relative scarcity of the bills lead some to start saving any they found , with the inevitable result that the
+notes became rarer in circulation . Currently , the circulation of $2 bills accounts for around 1 % of the U.S. currency in circulation . Small size notes (
+edit ) ( 6.14 × 2.61 in ≅ 156 × 66 mm ) 1928 -- 1966 ( edit ) In 1928 , when all U.S. currency was changed to its current size , the $2 bill was issued only as
+a United States Note . The obverse featured a cropped version of Thomas Jefferson 's portrait that had been on previous $2 bills . The reverse featured
+Jefferson 's home , Monticello . The note 's seal and serial numbers were red .
+</item 2>
+
+<item 3>
+United States two-dollar bill
+On April 13 , 1976 , the Treasury Department reintroduced the $2 bill as a cost - saving measure . Series 1976 $2 bills were redesigned and issued as a Federal
+Reserve Note . The obverse design remains basically unchanged since 1928 and features the same portrait of Jefferson . A green treasury seal and serial numbers
+replace the red used on the previous United States Notes . Since the reissue of the bill coincided with the United States Bicentennial , it was decided to use a
+bicentennial themed design on the reverse . An engraved rendition ( not an exact reproduction ) of John Trumbull 's The Declaration of Independence replaced
+Monticello on the reverse . First day issues of the new $2 bills could be taken to a post office and stamped with the date `` APR 13 1976 '' . In all ,
+590,720,000 notes from Series 1976 were printed . Currently , stamped series 1976 $2 bills typically trade for about twice their face value . If the bills were
+stamped in an exotic place , the value may be slightly higher .
+</item 3>
+
+<item 4>
+United States two-dollar bill
+In response , the Treasury stated : `` The $2 bill remains one of our circulating currency denominations ... As of April 30 , 2007 there were $1,549,052,714
+worth of $2 bills in circulation worldwide . '' Things such as unusual serial numbers ( example : A11111111A ) , and replacement notes designated by a star in
+the serial number can raise the collector value . `` Collectible '' two - dollar bills have been made and sold by coin dealers and others in recent years merely
+by adding colors and special graphics to regular issue bills by using computer printers . However , these bills are not authorized by the Bureau of Engraving
+and Printing ( BEP ) and are not worth anything more than face value on the collectors ' market . Certain conventions and tourism / convention bureaus
+capitalize on the scarcity of $2 bills in circulation , encouraging convention attendees and tourists to spend $2 bills in order to illustrate to the host
+communities the economic impact that the conventions and tourism bring . Sometimes known as `` SpendTom '' campaigns , the $2 bills linger in the community as a
+constant reminder . Some campaigns encourage people to participate in a hunt for the bills in order to win prizes .
+</item 4>
+
+<item 5>
+United States two-dollar bill
+In 1976 production of the two - dollar denomination was resumed and the two - dollar bill was finally assigned as a Federal Reserve Note , with a new reverse
+design featuring John Trumbull 's depiction of the drafting of the United States Declaration of Independence replacing the previous design of Monticello . It
+has remained a current denomination since then . It was estimated that if the two - dollar bill replaced approximately half of the one - dollar bills in
+circulation , the federal government would be able to save about $26 million in 1976 dollars ( $112 million adjusted for inflation ) over the period from 1976
+to 1981 , due to reduced production , storage , and shipping costs . However , due to their limited use , two - dollar bills are not printed as frequently in a
+new series like other denominations , which are produced according to demand . Though some cash registers accommodate the bill , its slot is often used for
+things like checks and rolls of coins . Some bill acceptors found in vending machines , self checkout lanes , and other automated kiosks are configured to
+accommodate two - dollar bills , even if the fact is not stated on the label .
+</item 5>
+
+<item 6>
+United States two-dollar bill
+1 Large size 3.3. 2 Small size 4 Visual snapshot 5 Usage 5.1 Lockheed U-2 5.2 Incidents 6 Uncut currency sheets 7 References 8 External links Denomination
+overview ( edit ) The denomination of two dollars was authorized under a congressional act , and first used in March 1862 . The denomination was continuously
+used until the 1960s ; by this time the United States Note was the only remaining class of U.S. currency the two - dollar bill was assigned to . In 1966 it was
+decided to discontinue all United States Notes from production , which included the two - dollar bill . The two - dollar bill initially was not reassigned to
+the Federal Reserve Note class of United States currency and was thus fully discontinued ; the Treasury Department cited the two - dollar bill 's low use and
+unpopularity as the reason for not immediately resuming use of the denomination .
+</item 6>
+
+<item 7>
+United States two-dollar bill
+The note 's seal and serial numbers were red . The Series of 1928 $2 bill featured the treasury seal superimposed by the United States Note obligation to the
+left and a large gray TWO to the right . In 1953 the $2 bill received minor design changes analogous to the $5 United States Note . The treasury seal was made
+smaller and moved to the right side of the bill ; it was superimposed over the gray word TWO . The United States Note obligation now became superimposed over a
+gray numeral 2 . The reverse remained unchanged . The final change to $2 United States Notes came in 1963 when the motto IN GOD WE TRUST was added to the
+reverse over the Monticello . And , because dollar bills were soon to no longer be redeemable in silver , WILL PAY TO THE BEARER ON DEMAND was removed from the
+obverse . Two - dollar bills , along with $5 and $100 United States Notes , were officially discontinued in August 1966 , although they remain legal tender .
+1976 -- present ( edit ) Series 1976 first day of issue $2 bill with a canceled JFK postage stamp .
+</item 7>
+
+<item 8>
+United States two-dollar bill
+Some campaigns encourage people to participate in a hunt for the bills in order to win prizes . History ( edit ) Large - sized notes ( edit ) First $2 bill
+issued in 1862 as a Legal Tender Note . Series 1886 $2 Silver Certificate depicting Winfield Scott Hancock Series 1890 featuring James McPherson . This `` Coin
+Note '' was used for government purchases of silver bullion from the mining industry . ( approximately 7.4218 × 3.125 in ≅ 189 × 79 mm ) In March 1862 , the
+first $2 bill was issued as a Legal Tender Note ( United States Note ) with a portrait of Alexander Hamilton ; the portrait of Hamilton used was a profile view
+and is not the same portrait used currently for the $10 bill . The continental congress based on defending the United States , released on June 25 , 1776 ,
+began to authorize $2 credit , the circulation of 49,000 copies . Pass two - dollar bill was first used in March 1862 . Between 1966 and 1976 , two - dollar
+notes were not printed .
+</item 8>
+
+<item 9>
+United States two-dollar bill
+Although they are generally available at most banks , two - dollar bills are usually not handed out arbitrarily except upon specific request by the customer ,
+and even then , may cause a delay with a trip to the vault . Rarity ( edit ) The seeming rarity of a $2 bill can be attributed to its low printing numbers as a
+Federal Reserve Note . Hoarding of the series due to lack of public knowledge of the $2 bill has resulted in very few bills seen in circulation . After its
+initial release , supplies of the Series 1976 two - dollar bill were allowed to dwindle until August 1996 when a new series dated 1995 began to be printed .
+This series was only printed for the Federal Reserve Bank of Atlanta . Today , there is a common misconception by the general public that the $2 bill is no
+longer being produced . According to the Treasury , it `` receives many letters asking why the $2 bill is no longer in circulation '' .
+</item 9>
+
+<item 10>
+United States two-dollar bill
+Visual snapshot ( edit ) A chronological display of the American two - dollar bill . Visual collection of the two - dollar bill throughout the history of the
+United States . Usage ( edit ) Over five million $2 bills are entered into the database of the American currency - tracking website Where 's George ? . Because
+$2 bills are uncommon in daily use , their use can make a particular group of spenders visible . A documented case of using two - dollar bills to send a message
+to a community is the case of Geneva Steel and the communities in surrounding Utah County . In 1989 , Geneva Steel paid its employee bonuses in $2 bills . When
+the bills began to appear in different places , people recognized the importance of the company to the local economy . Use of the two - dollar bill is also
+being suggested by some gun rights activists to show support for Second Amendment rights , particularly at stores that allow Open Carry or Concealed carry of
+weapons on their premises . Two - dollar notes have also seen increased usage in situations where tipping is encouraged , especially in strip clubs .
+</item 10>
+=== END ITEM id=a045005f1703f9ae ===
+
+=== ITEM id=f08d97459e44ce6c ===
+Gold sentences and facts:
+Sentence 0: The right-most label conveys the top - level domain ; for example , the domain name www.example.com belongs to the top - level domain com . The hierarchy of domains descends from the right to the left label in the name ; each label to the left specifies a subdivision , or subdomain of the domain to the right . For example : the label example specifies a node example.com as a subdomain of the com domain , and www is a label to create www.example.com , a subdomain of example.com . Each label may contain from 1 to 63 octets . The empty label is reserved for the root node and when fully qualified is expressed as the empty label terminated by a dot . The full domain name may not exceed a total length of 253 ASCII characters in its textual representation . Thus , when using a single character per label , the limit is 127 levels : 127 characters plus 126 dots have a total length of 253 . In practice , some domain registries may have shorter limits . A hostname is a domain name that has at least one associated IP address . For example , the domain names www.example.com and example.com are also hostnames , whereas the com domain is not . However , other top - level domains , particularly country code top - level domains , may indeed have an IP address , and if so , they are also hostnames . Hostnames impose restrictions on the characters allowed in the corresponding domain name . A valid hostname is also a valid domain name , but a valid domain name may not necessarily be valid as a hostname .
+  Fact 0.0: The right-most label of a domain name conveys the top-level domain.
+  Fact 0.1: In www.example.com, the top-level domain is com.
+  Fact 0.2: The hierarchy of domains descends from the right label to the left label in the name.
+  Fact 0.3: Each label to the left specifies a subdivision, or subdomain, of the domain to its right.
+  Fact 0.4: The label example specifies the node example.com as a subdomain of the com domain.
+  Fact 0.5: The label www creates www.example.com, a subdomain of example.com.
+  Fact 0.6: Each label may contain from 1 to 63 octets.
+  Fact 0.7: The empty label is reserved for the root node.
+  Fact 0.8: When fully qualified, the root node is expressed as the empty label terminated by a dot.
+  Fact 0.9: The full domain name may not exceed a total length of 253 ASCII characters in its textual representation.
+  Fact 0.10: When using a single character per label, the limit is 127 levels.
+  Fact 0.11: 127 characters plus 126 dots have a total length of 253.
+  Fact 0.12: In practice, some domain registries may have shorter limits.
+  Fact 0.13: A hostname is a domain name that has at least one associated IP address.
+  Fact 0.14: The domain names www.example.com and example.com are also hostnames.
+  Fact 0.15: The com domain is not a hostname.
+  Fact 0.16: Other top-level domains, particularly country code top-level domains, may have an IP address.
+  Fact 0.17: If another top-level domain has an IP address, it is also a hostname.
+  Fact 0.18: Hostnames impose restrictions on the characters allowed in the corresponding domain name.
+  Fact 0.19: A valid hostname is also a valid domain name.
+  Fact 0.20: A valid domain name may not necessarily be valid as a hostname.
+
+Retrieved items:
+<item 1>
+Domain name
+Domain name - wikipedia Domain name Jump to : navigation , search This article is about domain names in the Internet . For other uses , see Domain . The
+hierarchy of labels in a fully qualified domain name . A domain name is an identification string that defines a realm of administrative autonomy , authority or
+control within the Internet . Domain names are formed by the rules and procedures of the Domain Name System ( DNS ) . Any name registered in the DNS is a domain
+name . Domain names are used in various networking contexts and for application - specific naming and addressing purposes . In general , a domain name
+represents an Internet Protocol ( IP ) resource , such as a personal computer used to access the Internet , a server computer hosting a web site , or the web
+site itself or any other service communicated via the Internet . In 2017 , 330.6 million domain names had been registered . Domain names are organized in
+subordinate levels ( subdomains ) of the DNS root domain , which is nameless .
+</item 1>
+
+<item 2>
+Domain name
+Each label is separated by a full stop ( dot ) . ' sos ' is said to be a sub-domain of ' state.oh.us ' , and ' state ' a sub-domain of ' oh.us ' , etc . In
+general , subdomains are domains subordinate to their parent domain . An example of very deep levels of subdomain ordering are the IPv6 reverse resolution DNS
+zones , e.g. , 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa , which is the reverse DNS resolution domain name for the IP address of
+a loopback interface , or the localhost name . Second - level ( or lower - level , depending on the established parent hierarchy ) domain names are often
+created based on the name of a company ( e.g. , bbc.co.uk ) , product or service ( e.g. hotmail.com ) . Below these levels , the next domain name component has
+been used to designate a particular host server .
+</item 2>
+
+<item 3>
+Domain name
+Hostnames impose restrictions on the characters allowed in the corresponding domain name . A valid hostname is also a valid domain name , but a valid domain
+name may not necessarily be valid as a hostname . Top - level domains The top - level domains ( TLDs ) such as com , net and org are the highest level of domain
+names of the Internet . Top - level domains form the DNS root zone of the hierarchical Domain Name System . Every domain name ends with a top - level domain
+label . When the Domain Name System was devised in the 1980s , the domain name space was divided into two main groups of domains . The country code top - level
+domains ( ccTLD ) were primarily based on the two - character territory codes of ISO - 3166 country abbreviations . In addition , a group of seven generic top -
+level domains ( gTLD ) was implemented which represented a set of categories of names and multi-organizations . These were the domains gov , edu , com , mil ,
+org , net , and int . During the growth of the Internet , it became desirable to create additional generic top - level domains .
+</item 3>
+
+<item 4>
+Domain name
+The first - level set of domain names are the top - level domains ( TLDs ) , including the generic top - level domains ( gTLDs ) , such as the prominent domains
+com , info , net , edu , and org , and the country code top - level domains ( ccTLDs ) . Below these top - level domains in the DNS hierarchy are the second -
+level and third - level domain names that are typically open for reservation by end - users who wish to connect local area networks to the Internet , create
+other publicly accessible Internet resources or run web sites . The registration of these domain names is usually administered by domain name registrars who
+sell their services to the public . A fully qualified domain name ( FQDN ) is a domain name that is completely specified with all labels in the hierarchy of the
+DNS , having no parts omitted . Labels in the Domain Name System are case - insensitive , and may therefore be written in any desired capitalization method ,
+but most commonly domain names are written in lowercase in technical contexts .
+</item 4>
+
+<item 5>
+Domain name
+Contents ( hide ) 1 Purpose 2 History 3 Domain name space 3.1 Domain name syntax 3.2 Top - level domains 3.3 Second - level and lower level domains 3.4
+Internationalized domain names 4 Domain name registration 4.1 History 4.2 Administration 4.3 Technical requirements and process 4.4 Business models 5 Resale of
+domain names 6 Domain name confusion 7 Use in web site hosting 8 Abuse and regulation 8.1 Truth in Domain Names Act 8.2 Seizures 8.3 Suspensions 9 Fictitious
+domain name 10 See also 11 References 12 External links Purpose Domain names serve to identify Internet resources , such as computers , networks , and services
+, with a text - based label that is easier to memorize than the numerical addresses used in the Internet protocols . A domain name may represent entire
+collections of such resources or individual instances . Individual Internet host computers use domain names as host identifiers , also called host names . The
+term host name is also used for the leaf labels in the domain name system , usually without further subordinate domain name space .
+</item 5>
+
+<item 6>
+Domain name
+Host names appear as a component in Uniform Resource Locators ( URLs ) for Internet resources such as web sites ( e.g. , en.wikipedia.org ) . Domain names are
+also used as simple identification labels to indicate ownership or control of a resource . Such examples are the realm identifiers used in the Session
+Initiation Protocol ( SIP ) , the Domain Keys used to verify DNS domains in e-mail systems , and in many other Uniform Resource Identifiers ( URIs ) . An
+important function of domain names is to provide easily recognizable and memorizable names to numerically addressed Internet resources . This abstraction allows
+any resource to be moved to a different physical location in the address topology of the network , globally or locally in an intranet . Such a move usually
+requires changing the IP address of a resource and the corresponding translation of this IP address to and from its domain name . Domain names are used to
+establish a unique identity . Organizations can choose a domain name that corresponds to their name , helping Internet users to reach them easily . A generic
+domain is a name that defines a general category , rather than a specific or personal instance , for example , the name of an industry , rather than a company
+name .
+</item 6>
+
+<item 7>
+Domain name
+Domain name space Today , the Internet Corporation for Assigned Names and Numbers ( ICANN ) manages the top - level development and architecture of the Internet
+domain name space . It authorizes domain name registrars , through which domain names may be registered and reassigned . The hierarchical domain name system ,
+organized into zones , each served by domain name servers . The domain name space consists of a tree of domain names . Each node in the tree holds information
+associated with the domain name . The tree sub-divides into zones beginning at the DNS root zone . Domain name syntax A domain name consists of one or more
+parts , technically called labels , that are conventionally concatenated , and delimited by dots , such as example.com . The right-most label conveys the top -
+level domain ; for example , the domain name www.example.com belongs to the top - level domain com . The hierarchy of domains descends from the right to the
+left label in the name ; each label to the left specifies a subdivision , or subdomain of the domain to the right .
+</item 7>
+
+<item 8>
+Domain name
+Below these levels , the next domain name component has been used to designate a particular host server . Therefore , ftp.example.com might be an FTP server ,
+www.example.com would be a World Wide Web server , and mail.example.com could be an email server , each intended to perform only the implied function . Modern
+technology allows multiple physical servers with either different ( cf . load balancing ) or even identical addresses ( cf . anycast ) to serve a single
+hostname or domain name , or multiple domain names to be served by a single computer . The latter is very popular in Web hosting service centers , where service
+providers host the websites of many organizations on just a few servers . The hierarchical DNS labels or components of domain names are separated in a fully
+qualified name by the full stop ( dot , . ) . Internationalized domain names Main article : Internationalized domain name The character set allowed in the
+Domain Name System is based on ASCII and does not allow the representation of names and words of many languages in their native scripts or alphabets . ICANN
+approved the Internationalized domain name ( IDNA ) system , which maps Unicode strings used in application user interfaces into the valid DNS character set by
+an encoding called Punycode .
+</item 8>
+
+<item 9>
+Domain name
+Labels are always separated by the full stop ( period ) character in the textual name representation . Business models Domain names are often seen in analogy to
+real estate in that domain names are foundations on which a website can be built , and the highest quality domain names , like sought - after real estate , tend
+to carry significant value , usually due to their online brand - building potential , use in advertising , search engine optimization , and many other criteria
+. A few companies have offered low - cost , below - cost or even free domain registration with a variety of models adopted to recoup the costs to the provider .
+These usually require that domains be hosted on their website within a framework or portal that includes advertising wrapped around the domain holder 's content
+, revenue from which allows the provider to recoup the costs . Domain registrations were free of charge when the DNS was new . A domain holder may provide
+infinite number of subdomains in their domain . For example , the owner of example.org could provide subdomains such as foo.example.org and foo.bar.example.org
+to interested parties . Many desirable domain names are already assigned and users must search for other acceptable names , using Web - based search features ,
+or WHOIS and dig operating system tools .
+</item 9>
+
+<item 10>
+Domain name
+Some examples of generic names are books.com , music.com , and travel.info . Companies have created brands based on generic names , and such generic domain
+names may be valuable . Domain names are often simply referred to as domains and domain name registrants are frequently referred to as domain owners , although
+domain name registration with a registrar does not confer any legal ownership of the domain name , only an exclusive right of use for a particular duration of
+time . The use of domain names in commerce may subject them to trademark law . History The practice of using a simple memorable abstraction of a host 's
+numerical address on a computer network dates back to the ARPANET era , before the advent of today 's commercial Internet . In the early network , each computer
+on the network retrieved the hosts file ( host. txt ) from a computer at SRI ( now SRI International ) , which mapped computer host names to numerical addresses
+. The rapid growth of the network made it impossible to maintain a centrally organized hostname registry and in 1983 the Domain Name System was introduced on
+the ARPANET and published by the Internet Engineering Task Force as RFC 882 and RFC 883 .
+</item 10>
+=== END ITEM id=f08d97459e44ce6c ===
+
+=== ITEM id=3fe0055a5786d4b1 ===
+Gold sentences and facts:
+Sentence 0: Kylo Ren is a fictional character in the Star Wars franchise . Introduced in the 2015 film Star Wars : The Force Awakens , he is portrayed by Adam Driver . Kylo Ren is the chosen name of Ben Solo , the son of original Star Wars trilogy characters Han Solo and Leia Organa . Though trained by his uncle Luke Skywalker as a Jedi , he has been seduced to the dark side of the Force by Supreme Leader Snoke and aspires to be as powerful as his grandfather , Darth Vader . Kylo Ren is also the master of the Knights of Ren , as well as a commander and later the supreme leader of the First Order , an organization spawned from the fallen Galactic Empire . He is featured in The Force Awakens media and merchandising and appears in the film 's sequel , Star Wars : The Last Jedi ( 2017 ) .
+  Fact 0.0: Kylo Ren is a fictional character in the Star Wars franchise.
+  Fact 0.1: Kylo Ren was introduced in the 2015 film Star Wars: The Force Awakens.
+  Fact 0.2: Kylo Ren is portrayed by Adam Driver.
+  Fact 0.3: Kylo Ren is the chosen name of Ben Solo.
+  Fact 0.4: Ben Solo is the son of original Star Wars trilogy characters Han Solo and Leia Organa.
+  Fact 0.5: Kylo Ren was trained by his uncle Luke Skywalker as a Jedi.
+  Fact 0.6: Kylo Ren has been seduced to the dark side of the Force by Supreme Leader Snoke.
+  Fact 0.7: Kylo Ren aspires to be as powerful as his grandfather, Darth Vader.
+  Fact 0.8: Kylo Ren is the master of the Knights of Ren.
+  Fact 0.9: Kylo Ren is a commander of the First Order.
+  Fact 0.10: Kylo Ren later became the supreme leader of the First Order.
+  Fact 0.11: The First Order is an organization spawned from the fallen Galactic Empire.
+  Fact 0.12: Kylo Ren is featured in The Force Awakens media and merchandising.
+  Fact 0.13: Kylo Ren appears in the film's sequel, Star Wars: The Last Jedi.
+  Fact 0.14: Star Wars: The Last Jedi was released in 2017.
+Sentence 1: Abrams told Empire in August 2015 , `` Kylo Ren is not a Sith . He works under Supreme Leader Snoke , who is a powerful figure on the Dark Side of the Force . '' Abrams had previously told Entertainment Weekly that the character , `` came to the name Kylo Ren when he joined a group called the Knights of Ren . '' Robbie Collin of The Telegraph described Ren as `` a hot - headed , radicalised Dark Side jihadi , whose red lightsaber splutters and crackles as violently as his temper '' . Abrams noted , `` The lightsaber is something that he built himself , and is as dangerous and as fierce and as ragged as the character . '' The Telegraph also explains that Ren 's wild and erratic temper and `` angsty '' instability make him dangerous . Melissa Leon of The Daily Beast describes Ren 's use of the Force as `` formidable '' , citing his ability to stop a blaster shot mid-air , immobilize victims and probe their minds against their will .
+  Fact 1.0: Abrams told Empire in August 2015 that Kylo Ren is not a Sith.
+  Fact 1.1: Abrams told Empire in August 2015 that Kylo Ren works under Supreme Leader Snoke.
+  Fact 1.2: Abrams told Empire in August 2015 that Supreme Leader Snoke is a powerful figure on the Dark Side of the Force.
+  Fact 1.3: Abrams had previously told Entertainment Weekly that the character came to the name Kylo Ren when he joined a group called the Knights of Ren.
+  Fact 1.4: Robbie Collin of The Telegraph described Ren as a hot-headed, radicalised Dark Side jihadi.
+  Fact 1.5: Robbie Collin of The Telegraph described Ren's red lightsaber as spluttering and crackling as violently as his temper.
+  Fact 1.6: Abrams noted that the lightsaber is something Ren built himself.
+  Fact 1.7: Abrams noted that the lightsaber is as dangerous, fierce and ragged as the character.
+  Fact 1.8: The Telegraph explains that Ren's wild and erratic temper and angsty instability make him dangerous.
+  Fact 1.9: Melissa Leon of The Daily Beast describes Ren's use of the Force as formidable.
+  Fact 1.10: Melissa Leon cites Ren's ability to stop a blaster shot mid-air.
+  Fact 1.11: Melissa Leon cites Ren's ability to immobilize victims.
+  Fact 1.12: Melissa Leon cites Ren's ability to probe victims' minds against their will.
+
+Retrieved items:
+<item 1>
+Kylo Ren
+Though trained by his uncle Luke Skywalker as a Jedi , he has been seduced to the dark side of the Force by Supreme Leader Snoke and aspires to be as powerful
+as his grandfather , Darth Vader . Kylo Ren is also the master of the Knights of Ren , as well as a commander and later the supreme leader of the First Order ,
+an organization spawned from the fallen Galactic Empire . He is featured in The Force Awakens media and merchandising and appears in the film 's sequel , Star
+Wars : The Last Jedi ( 2017 ) . Contents ( hide ) 1 Concept and creation 2 Character 3 Appearances 3.1 Feature films 3.1. 1 The Force Awakens ( 2015 ) 3.1. 2
+The Last Jedi ( 2017 ) 3.2 Related works and promotional material 3.3 Novels 4 Reception 5 Family tree 6 References 7 External links Concept and creation ( edit
+) After Lucasfilm was acquired by The Walt Disney Company in 2012 , the script for The Force Awakens was written by Lawrence Kasdan , J.J.
+</item 1>
+
+<item 2>
+Kylo Ren
+Ren 's character arc shares similarities with that of the Star Wars expanded universe character Jacen Solo , the son of Han Solo and Princess Leia who threatens
+the galaxy as a fallen Jedi . Additionally , critics have noted a resemblance between Ren 's character design and that of Revan , the protagonist of Knights of
+the Old Republic . Character ( edit ) Abrams told Empire in August 2015 , `` Kylo Ren is not a Sith . He works under Supreme Leader Snoke , who is a powerful
+figure on the Dark Side of the Force . '' Abrams had previously told Entertainment Weekly that the character , `` came to the name Kylo Ren when he joined a
+group called the Knights of Ren . '' Robbie Collin of The Telegraph described Ren as `` a hot - headed , radicalised Dark Side jihadi , whose red lightsaber
+splutters and crackles as violently as his temper '' . Abrams noted , `` The lightsaber is something that he built himself , and is as dangerous and as fierce
+and as ragged as the character . '' The Telegraph also explains that Ren 's wild and erratic temper and `` angsty '' instability make him dangerous .
+</item 2>
+
+<item 3>
+Kylo Ren
+You normally think of order , and structure , and full commitment and no hesitation ... he 's just a little bit more unpolished . It 's in his costume , in his
+lightsaber -- how you kind of get the sense that it could just not work at any moment ; that it could just blow up . That 's kind of like a big metaphor for him
+. Appearances ( edit ) Model of Kylo 's cross-bladed lightsaber on display at Star Wars Launch Bay at Disney 's Hollywood Studios ( 2015 ) . Feature films (
+edit ) The Force Awakens ( 2015 ) ( edit ) Main article : Star Wars : The Force Awakens Kylo Ren first appears in The Force Awakens as the commander of the
+First Order , a sinister regime that has risen from the remains of the old Galactic Empire . After arriving at Jakku to retrieve a map containing the
+coordinates for the location of Luke Skywalker , Ren kills an old vicar known as Lor San Tekka and captures Resistance pilot Poe Dameron , who has also been
+sent to recover the map by General Leia Organa .
+</item 3>
+
+<item 4>
+Kylo Ren
+Jump up ^ Travers , Peter ( December 16 , 2015 ) . `` Star Wars : The Force Awakens '' . Rolling Stone . Retrieved December 21 , 2015 . Jump up ^ Buchanan ,
+Kyle ( November 11 , 2015 ) . `` Let 's Discuss the Ending of Star Wars : The Force Awakens '' . Vulture.com . Retrieved December 19 , 2015 . Jump up ^ Cohen ,
+David S. ( June 23 , 2016 ) . `` The Force Awakens Rings Up Eight Saturn Awards '' . Variety . Retrieved June 23 , 2016 . Jump up ^ Agar , Chris ( January 22 ,
+2018 ) . `` Kylo Ren Voted Seventh - Greatest Movie Villain '' . Screen Rant . Retrieved January 24 , 2018 . External links ( edit ) Wikimedia Commons has media
+related to Kylo Ren . Kylo Ren in the StarWars.com Databank Kylo Ren on Wookieepedia ,
+</item 4>
+
+<item 5>
+Kylo Ren
+Kylo Ren - wikipedia Kylo Ren Jump to : navigation , search `` Kylo '' redirects here . For the web browser , see Kylo ( web browser ) . Kylo Ren Ben Solo Star
+Wars character Kylo Ren 's costume displayed on a mannequin First appearance The Force Awakens ( 2015 ) Created by Lawrence Kasdan J.J.
+</item 5>
+
+<item 6>
+Kylo Ren
+Abrams and Michael Arndt , with no direct participation from Star Wars creator George Lucas . According to director Abrams , the First Order is inspired by
+ODESSA , a theoretical network of SS officers who fled to Argentina following World War II . Driver 's casting in the film in an unnamed role was first
+announced on April 29 , 2014 . Kylo Ren was first seen , but still not named , in the 88 - second The Force Awakens teaser trailer released by Lucasfilm on
+November 28 , 2014 , wielding a jagged red lightsaber with a crossguard . The name Kylo Ren was revealed by Entertainment Weekly in a Lucasfilm - designed Topps
+- style trading card mockup in December 2014 . A May 2015 Vanity Fair photo shoot by Annie Leibovitz confirmed that Driver would be portraying Kylo . In an
+interview with Time , The Force Awakens costume designer Michael Kaplan said that Abrams requested that Ren 's mask be designed to be memorable for a child .
+After numerous attempts to gain Abrams ' approval , the final design was selected .
+</item 6>
+
+<item 7>
+Kylo Ren
+Ren soon learns that the pilot had entrusted his astromech droid , BB - 8 , with the map . Poe flees with the help of rogue stormtrooper Finn , who later finds
+BB - 8 , and the scavenger Rey . Finn , Rey , and BB - 8 escape Jakku in the Millennium Falcon , and are soon intercepted by the ship 's former owner , Han Solo
+, and his co-pilot Chewbacca . It is revealed that Ren is the son of Han and Leia , and was once one of Luke 's Jedi pupils . He was drawn to the dark side of
+the Force by the First Order 's Supreme Leader Snoke . He then helped to destroy his uncle Luke 's new Jedi Academy . However , Ren still feels the pull of the
+light side of the Force and seeks the strength to overcome this weakness from his grandfather Darth Vader , whose burnt helmet is in Ren 's possession .
+Arriving at the Maz Kanata castle , Ren captures Rey , who he senses has seen the map . While interrogating her with the Force , he realizes that she is strong
+with the Force herself , though unaware of it .
+</item 7>
+
+<item 8>
+Kylo Ren
+^ Jump up to : Hiatt , Brian ( December 2 , 2015 ) . `` Star Wars Strikes Back : Behind the Scenes of the Biggest Movie of the Year '' . Rolling Stone .
+Retrieved December 22 , 2015 . Jump up ^ McMillan , Graeme ( December 23 , 2015 ) . `` How the Abandoned Star Wars Expanded Universe Inspired Force Awakens '' .
+The Hollywood Reporter . Retrieved January 1 , 2016 . Jump up ^ Bouie , Jamelle ( December 16 , 2015 ) . `` How The Force Awakens Remixes the Star Wars Expanded
+Universe '' . Slate . Retrieved December 20 , 2015 . Jump up ^ Kendrick , Ben ( December 18 , 2015 ) . `` Star Wars 7 : Kylo Ren Backstory Explained '' . Screen
+Rant . Retrieved December 20 , 2015 . Jump up ^ Saavedra , John ( December 17 , 2015 ) .
+</item 8>
+
+<item 9>
+Kylo Ren
+Novels ( edit ) Kylo Ren is a point of view character in the 2015 novelization of The Force Awakens by Alan Dean Foster . In the 2017 Chuck Wendig novel Star
+Wars : Aftermath : Empire 's End , Ben Solo is stated as having been born on the planet Chandrila on the same day as a peace treaty is signed between the
+remnants of the Empire and the New Galactic Republic . Kylo Ren is additionally mentioned in the 2017 novel Star Wars : Phasma . Reception ( edit ) Adam Driver
+received positive reviews for his performance as Kylo Ren . Both the character of Kylo Ren and Driver 's performance have been positively received . Many
+complimented Ren 's conflicted nature and depth , as well as his costume design , and noted there were many places the character could be taken in future
+installments . Peter Bradshaw of The Guardian praised the character and the actor alike , saying , `` He is gorgeously cruel , spiteful and capricious -- and
+unlike the Vader of old , he is given to petulant temper tantrums , with his lightsaber drawn . ''
+</item 9>
+
+<item 10>
+Kylo Ren
+Abrams Michael Arndt Portrayed by Adam Driver Voiced by Adam Driver ( Disney Infinity 3.0 , Lego Star Wars : The Force Awakens , Lego Star Wars : The Resistance
+Rises ) Matthew Wood ( Star Wars Battlefront II ) Roger Craig Smith ( Star Wars Battlefront II ) Information Full name Ben Solo Species Human Gender Male
+Occupation Supreme Leader of the First Order Master of the Knights of Ren Former Jedi Padawan Affiliation First Order Knights of Ren New Jedi Order ( formerly )
+Family Han Solo ( father ) Leia Organa ( mother ) Relatives Luke Skywalker ( maternal uncle ) Anakin Skywalker ( maternal grandfather ) Padmé Amidala ( maternal
+grandmother ) Bail Organa ( adopted maternal grandfather ) Breha Organa ( adopted maternal grandmother ) Shmi Skywalker ( maternal great - grandmother )
+Homeworld Chandrila Kylo Ren is a fictional character in the Star Wars franchise . Introduced in the 2015 film Star Wars : The Force Awakens , he is portrayed
+by Adam Driver . Kylo Ren is the chosen name of Ben Solo , the son of original Star Wars trilogy characters Han Solo and Leia Organa .
+</item 10>
+=== END ITEM id=3fe0055a5786d4b1 ===
+
+=== ITEM id=dbf1f5d584ff6a8b ===
+Gold sentences and facts:
+Sentence 0: The United States two - dollar bill ( $2 ) is a current denomination of U.S. currency . The third U.S. President ( 1801 -- 09 ) , Thomas Jefferson , is featured on the obverse of the note . The reverse features an engraving of the painting The Declaration of Independence by John Trumbull . Throughout the $2 bill 's pre-1929 life as a large - sized note , it was issued as a United States Note , National Bank Note , silver certificate , Treasury or `` Coin '' Note and Federal Reserve Bank Note . When U.S. currency was changed to its current size , the $2 bill was issued only as a United States Note . Production went on until 1966 , when the series was discontinued . Ten years passed before the $2 bill was reissued as a Federal Reserve Note with a new reverse design . Two - dollar bills are seldom seen in circulation as a result of banking policies with businesses which has resulted in low production numbers due to lack of demand . This comparative scarcity in circulation , coupled with a lack of public knowledge that the bill is still in production and circulation , has also inspired urban legends and occasionally has created problems for people trying to use the bill to make purchases .
+  Fact 0.0: The United States two-dollar bill ($2) is a current denomination of U.S. currency.
+  Fact 0.1: Thomas Jefferson was the third U.S. President.
+  Fact 0.2: Thomas Jefferson served as President from 1801 to 1809.
+  Fact 0.3: Thomas Jefferson is featured on the obverse of the $2 bill.
+  Fact 0.4: The reverse of the $2 bill features an engraving of the painting The Declaration of Independence by John Trumbull.
+  Fact 0.5: Before 1929, the $2 bill was a large-sized note.
+  Fact 0.6: Before 1929, the $2 bill was issued as a United States Note.
+  Fact 0.7: Before 1929, the $2 bill was issued as a National Bank Note.
+  Fact 0.8: Before 1929, the $2 bill was issued as a silver certificate.
+  Fact 0.9: Before 1929, the $2 bill was issued as a Treasury or "Coin" Note.
+  Fact 0.10: Before 1929, the $2 bill was issued as a Federal Reserve Bank Note.
+  Fact 0.11: When U.S. currency was changed to its current size, the $2 bill was issued only as a United States Note.
+  Fact 0.12: Production of the $2 bill went on until 1966, when the series was discontinued.
+  Fact 0.13: Ten years passed before the $2 bill was reissued as a Federal Reserve Note with a new reverse design.
+  Fact 0.14: Two-dollar bills are seldom seen in circulation as a result of banking policies with businesses.
+  Fact 0.15: The banking policies with businesses resulted in low production numbers due to lack of demand.
+  Fact 0.16: The comparative scarcity of $2 bills in circulation, coupled with a lack of public knowledge that the bill is still in production and circulation, has inspired urban legends.
+  Fact 0.17: The comparative scarcity of $2 bills and the lack of public knowledge about them have occasionally created problems for people trying to use the bill to make purchases.
+
+Retrieved items:
+<item 1>
+United States two-dollar bill
+In 1976 production of the two - dollar denomination was resumed and the two - dollar bill was finally assigned as a Federal Reserve Note , with a new reverse
+design featuring John Trumbull 's depiction of the drafting of the United States Declaration of Independence replacing the previous design of Monticello . It
+has remained a current denomination since then . It was estimated that if the two - dollar bill replaced approximately half of the one - dollar bills in
+circulation , the federal government would be able to save about $26 million in 1976 dollars ( $112 million adjusted for inflation ) over the period from 1976
+to 1981 , due to reduced production , storage , and shipping costs . However , due to their limited use , two - dollar bills are not printed as frequently in a
+new series like other denominations , which are produced according to demand . Though some cash registers accommodate the bill , its slot is often used for
+things like checks and rolls of coins . Some bill acceptors found in vending machines , self checkout lanes , and other automated kiosks are configured to
+accommodate two - dollar bills , even if the fact is not stated on the label .
+</item 1>
+
+<item 2>
+United States two-dollar bill
+When U.S. currency was changed to its current size , the $2 bill was issued only as a United States Note . Production went on until 1966 , when the series was
+discontinued . Ten years passed before the $2 bill was reissued as a Federal Reserve Note with a new reverse design . Two - dollar bills are seldom seen in
+circulation as a result of banking policies with businesses which has resulted in low production numbers due to lack of demand . This comparative scarcity in
+circulation , coupled with a lack of public knowledge that the bill is still in production and circulation , has also inspired urban legends and occasionally
+has created problems for people trying to use the bill to make purchases . Contents ( hide ) 1 Denomination overview 2 Rarity 3 History 3.1 Large - sized notes
+3.2 Small size notes 3.2. 1 1928 -- 1966 3.2. 2 1976 -- present 3.3 Series dates 3.3. 1 Large size 3.3.
+</item 2>
+
+<item 3>
+United States two-dollar bill
+Although they are generally available at most banks , two - dollar bills are usually not handed out arbitrarily except upon specific request by the customer ,
+and even then , may cause a delay with a trip to the vault . Rarity ( edit ) The seeming rarity of a $2 bill can be attributed to its low printing numbers as a
+Federal Reserve Note . Hoarding of the series due to lack of public knowledge of the $2 bill has resulted in very few bills seen in circulation . After its
+initial release , supplies of the Series 1976 two - dollar bill were allowed to dwindle until August 1996 when a new series dated 1995 began to be printed .
+This series was only printed for the Federal Reserve Bank of Atlanta . Today , there is a common misconception by the general public that the $2 bill is no
+longer being produced . According to the Treasury , it `` receives many letters asking why the $2 bill is no longer in circulation '' .
+</item 3>
+
+<item 4>
+Authorized in 1862, the $2 bill was issued as a United States Note until production stopped in 1966. It returned in 1976 as a Federal Reserve Note with a
+redesigned reverse. Banking practices, limited printing, and public hoarding make it uncommon in circulation, fostering the mistaken belief it is no longer
+produced. Most circulated bills are worth face value; uncirculated 1976 notes are plentiful. Later print runs continued, including 44.8 million Series 2013
+</item 4>
+
+<item 5>
+United States two-dollar bill
+1 Large size 3.3. 2 Small size 4 Visual snapshot 5 Usage 5.1 Lockheed U-2 5.2 Incidents 6 Uncut currency sheets 7 References 8 External links Denomination
+overview ( edit ) The denomination of two dollars was authorized under a congressional act , and first used in March 1862 . The denomination was continuously
+used until the 1960s ; by this time the United States Note was the only remaining class of U.S. currency the two - dollar bill was assigned to . In 1966 it was
+decided to discontinue all United States Notes from production , which included the two - dollar bill . The two - dollar bill initially was not reassigned to
+the Federal Reserve Note class of United States currency and was thus fully discontinued ; the Treasury Department cited the two - dollar bill 's low use and
+unpopularity as the reason for not immediately resuming use of the denomination .
+</item 5>
+
+<item 6>
+United States two-dollar bill
+Each note was an obligation of the issuing Federal Reserve Bank and could only be redeemed at the corresponding bank . The obverse of the note featured a
+borderless portrait of Thomas Jefferson to left and wording in the entire center . The reverse featured a World War I battleship . Beginning in the 1950s ,
+production of $2 bills began to decrease . The relative scarcity of the bills lead some to start saving any they found , with the inevitable result that the
+notes became rarer in circulation . Currently , the circulation of $2 bills accounts for around 1 % of the U.S. currency in circulation . Small size notes (
+edit ) ( 6.14 × 2.61 in ≅ 156 × 66 mm ) 1928 -- 1966 ( edit ) In 1928 , when all U.S. currency was changed to its current size , the $2 bill was issued only as
+a United States Note . The obverse featured a cropped version of Thomas Jefferson 's portrait that had been on previous $2 bills . The reverse featured
+Jefferson 's home , Monticello . The note 's seal and serial numbers were red .
+</item 6>
+
+<item 7>
+United States two-dollar bill
+In response , the Treasury stated : `` The $2 bill remains one of our circulating currency denominations ... As of April 30 , 2007 there were $1,549,052,714
+worth of $2 bills in circulation worldwide . '' Things such as unusual serial numbers ( example : A11111111A ) , and replacement notes designated by a star in
+the serial number can raise the collector value . `` Collectible '' two - dollar bills have been made and sold by coin dealers and others in recent years merely
+by adding colors and special graphics to regular issue bills by using computer printers . However , these bills are not authorized by the Bureau of Engraving
+and Printing ( BEP ) and are not worth anything more than face value on the collectors ' market . Certain conventions and tourism / convention bureaus
+capitalize on the scarcity of $2 bills in circulation , encouraging convention attendees and tourists to spend $2 bills in order to illustrate to the host
+communities the economic impact that the conventions and tourism bring . Sometimes known as `` SpendTom '' campaigns , the $2 bills linger in the community as a
+constant reminder . Some campaigns encourage people to participate in a hunt for the bills in order to win prizes .
+</item 7>
+
+<item 8>
+United States two-dollar bill
+On April 13 , 1976 , the Treasury Department reintroduced the $2 bill as a cost - saving measure . Series 1976 $2 bills were redesigned and issued as a Federal
+Reserve Note . The obverse design remains basically unchanged since 1928 and features the same portrait of Jefferson . A green treasury seal and serial numbers
+replace the red used on the previous United States Notes . Since the reissue of the bill coincided with the United States Bicentennial , it was decided to use a
+bicentennial themed design on the reverse . An engraved rendition ( not an exact reproduction ) of John Trumbull 's The Declaration of Independence replaced
+Monticello on the reverse . First day issues of the new $2 bills could be taken to a post office and stamped with the date `` APR 13 1976 '' . In all ,
+590,720,000 notes from Series 1976 were printed . Currently , stamped series 1976 $2 bills typically trade for about twice their face value . If the bills were
+stamped in an exotic place , the value may be slightly higher .
+</item 8>
+
+<item 9>
+The $2 bill remains in circulation; in 2007, about $1.55 billion worth circulated worldwide. Unusual serial numbers and star replacement notes may interest
+collectors, but unofficially colored or decorated bills are worth only face value. “SpendTom” campaigns use $2 bills to highlight tourism and convention
+spending. Their uncommon use also makes them useful for signaling economic impact or support: examples include Geneva Steel’s 1989 employee bonuses, gun-rights
+advocacy, tipping, and Clemson fans’
+</item 9>
+
+<item 10>
+United States two-dollar bill
+The note 's seal and serial numbers were red . The Series of 1928 $2 bill featured the treasury seal superimposed by the United States Note obligation to the
+left and a large gray TWO to the right . In 1953 the $2 bill received minor design changes analogous to the $5 United States Note . The treasury seal was made
+smaller and moved to the right side of the bill ; it was superimposed over the gray word TWO . The United States Note obligation now became superimposed over a
+gray numeral 2 . The reverse remained unchanged . The final change to $2 United States Notes came in 1963 when the motto IN GOD WE TRUST was added to the
+reverse over the Monticello . And , because dollar bills were soon to no longer be redeemable in silver , WILL PAY TO THE BEARER ON DEMAND was removed from the
+obverse . Two - dollar bills , along with $5 and $100 United States Notes , were officially discontinued in August 1966 , although they remain legal tender .
+1976 -- present ( edit ) Series 1976 first day of issue $2 bill with a canceled JFK postage stamp .
+</item 10>
+=== END ITEM id=dbf1f5d584ff6a8b ===

@@ -1,0 +1,415 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "35a4df9ec961c38c",
+   "gold": [
+    {
+     "sentence": "William Dwight Schultz (born November 24, 1947) is an American actor and voice artist.",
+     "facts": {
+      "0.0": "William Dwight Schultz was born on November 24, 1947.",
+      "0.1": "William Dwight Schultz is an American actor.",
+      "0.2": "William Dwight Schultz is an American voice artist."
+     }
+    },
+    {
+     "sentence": " He is also well known in animation as the mad scientist Dr. Animo in the \"Ben 10\" series, Chef Mung Daal in the children's cartoon \"Chowder\", and Eddie the Squirrel in \"CatDog\".",
+     "facts": {
+      "1.0": "William Dwight Schultz is well known in animation as the mad scientist Dr. Animo in the \"Ben 10\" series.",
+      "1.1": "William Dwight Schultz is well known in animation as Chef Mung Daal in the children's cartoon \"Chowder\".",
+      "1.2": "William Dwight Schultz is well known in animation as Eddie the Squirrel in \"CatDog\"."
+     }
+    },
+    {
+     "sentence": "Chowder is an American animated television series created by C. H. Greenblatt for Cartoon Network.",
+     "facts": {
+      "2.0": "Chowder is an American animated television series.",
+      "2.1": "Chowder was created by C. H. Greenblatt.",
+      "2.2": "Chowder was created for Cartoon Network."
+     }
+    }
+   ],
+   "items": [
+    "Alan Young\nAlan Young (born Angus Young; November 19, 1919 – May 19, 2016) was a British-born Canadian-American actor, voice actor, comedian and radio and television host/personality who \"TV Guide\" called \"The Charlie Chaplin of Television\".\n\n He was best known for his role as naive Wilbur Post in the television comedy series \"Mister Ed\" (1961–1966).\n\n Young was also the voice of Disney's Scrooge McDuck for over thirty years, first in the Academy Award-nominated short film \"Mickey's Christmas Carol\" (1983) and in various other films, TV series and video games until his death.\n\n During the 1940s and 1950s, he starred in his own variety/comedy sketch shows \"The Alan Young Show\" on radio and television, the latter gaining him two Emmy Awards in 1951.\n\n He also appeared in a number of feature films, starting from 1946, including the 1960 film \"The Time Machine\" and from the 1980s gaining a new generation of viewers appearing in numerous Walt Disney Productions films as both an actor and voice actor.",
+    "Dan Castellaneta\nDaniel Louis Castellaneta ( ; born October 29, 1957) is an American actor, voice actor, comedian and screenwriter.\n\n Noted for his long-running role as Homer Simpson on the animated television series \"The Simpsons\", he also voices many other characters for the show, including Abraham \"Grampa\" Simpson, Barney Gumble, Krusty the Clown, Sideshow Mel, Groundskeeper Willie, Mayor Quimby and Hans Moleman.",
+    "Chowder (TV series)\nChowder is an American animated television series created by C. H. Greenblatt for Cartoon Network.\n\n The series follows an aspiring young child named Chowder and his day-to-day adventures as an apprentice in Chef Mung Daal's catering company.\n\n Although he means well, Chowder often finds himself in predicaments due to his perpetual appetite and his nature as a scatterbrain.\n\n It is animated with both traditional animation as well as short stop motion and puppet sequences that are inter-cut into the episodes, and that run over the end credits.\n\n Stop motion sequences are produced by Screen Novelties.\n\n It is also the first Cartoon Network original series to premiere during Stuart Snyder's tenure as Jim Samples had resigned months before the series premiere.",
+    "Rodger Bumpass\nRodger Bumpass (born November 20, 1951) is an American actor and voice actor.\n\n He is best known for his long-running role as Squidward Tentacles on the American animated television series \"SpongeBob SquarePants\".\n\n He voices many other characters on the show, including Dr. Forrest and various anchovies.\n\n He also voiced The Chief in the animated series \"Where on Earth Is Carmen Sandiego?\n\n\", and Mr. Besser, the school principal in the animated series \"The Kids from Room 402\".\n\n Bumpass has many other credits in animated films, animated television series, and video games.",
+    "Bill Barretta\nWilliam Paul \"Bill\" Barretta (born June 19, 1964) is an American puppeteer and producer who has been performing with The Muppets since 1991, when he puppeteered the body of Sinclair family patriarch, Earl Sinclair on \"Dinosaurs\".\n\n He later developed several new characters on \"Muppets Tonight\", including Pepe the King Prawn, Johnny Fiama, Big Mean Carl and Bobo the Bear.\n\n Along with having his own Muppet characters, Barretta has taken over several of Jim Henson's roles, such as Dr. Teeth, Rowlf the Dog, Mahna Mahna and Swedish Chef, and briefly took over Jerry Nelson's role of Lew Zealand.\n\n His film debut as a principal puppeteer was in 1996's \"Muppet Treasure Island\" as Clueless Morgan.\n\n In addition, Barretta has produced two of the Muppets' television films, \"It's a Very Merry Muppet Christmas Movie\" (2002) and \"The Muppets' Wizard of Oz\" (2005).\n\n Barretta also provides additional voices on \"Kim Possible\".",
+    "The Itchy &amp; Scratchy Show\n(voiced by Alex Rocco, and, later, Hank Azaria), who runs the studio and produces the show.",
+    "The Return of Chef\n\"The Return of Chef\" is the first episode in the tenth season of the American animated television series \"South Park\".\n\n The 140th episode of the series overall, it first aired on Comedy Central in the United States on March 22, 2006.\n\n The episode was the first after the departure of actor Isaac Hayes, who voiced the character Chef.\n\n Hayes, a Scientologist, left after a falling-out with the creators over their treatment of Scientology in the previous season's episode \"Trapped in the Closet\".\n\n Scientology has been accused of using brainwashing techniques, and the episode portrays Chef as having been brainwashed.",
+    "Dwight Schultz\nWilliam Dwight Schultz (born November 24, 1947) is an American actor and voice artist.\n\n He is known for his roles as Captain \"Howling Mad\" Murdock on the 1980s action series \"The A-Team\", and as Reginald Barclay in \"\", \"\" and the film \"\".\n\n He is also well known in animation as the mad scientist Dr. Animo in the \"Ben 10\" series, Chef Mung Daal in the children's cartoon \"Chowder\", and Eddie the Squirrel in \"CatDog\".",
+    "Townsend Coleman\nTownsend Putnam Coleman III (born May 28, 1954) is an American voice actor who performed in many animated series and TV commercials beginning in the early 1980s.\n\n Among his most notable roles are Michaelangelo from \"Teenage Mutant Ninja Turtles\", Wayne Gretzky on \"ProStars\" and the title character in \"Where's Waldo?\n\n\" and the eponymous \"The Tick\" and he also did additional voices in \"Dexter's Laboratory\", \"The Powerpuff Girls\", \"Adventure Time\", \"Animaniacs\", \"The Buzz on Maggie\", \"Camp Lazlo\", \"CatDog\", \"Catscratch\", \"Danny Phantom\", \"Dave the Barbarian\", \"\", \"The Fairly OddParents\", \"Foster's Home for Imaginary Friends\", \"Gravity Falls\", \"Hi Hi Puffy AmiYumi\", \"\", \"The Loud House\", \"The Mighty B!\n\n\", \"My Life As A Teenage Robot\" and \"The Replacements\" and he also did the voice of Knotty in \"\" (1992) and he also did additional voices in films \"Fantasia 2000\" (1999) and \"Sing\" (2016)",
+    "John DiMaggio\nJohn William DiMaggio (born September 4, 1968) is an American voice actor and comedian, known for his gruff voice and for his work as Bender from the television show \"Futurama\", Jake the Dog on \"Adventure Time\", and Marcus Fenix in the hit Xbox video game \"Gears Of War\".\n\n Other voice-over roles of his include Dr. Drakken and Motor Ed on \"Kim Possible\", Brother Blood on \"Teen Titans\", Aquaman in \"\", Rico in \"The Penguins of Madagascar\", and Ogre In \"\", Niblet on \"Pound Puppies\", the Scotsman on \"Samurai Jack\", and Shnitzel on \"Chowder\"."
+   ]
+  },
+  {
+   "id": "756cddc6520548bd",
+   "gold": [
+    {
+     "sentence": "Kolejka ( ; Polish for \"queue\" or \"line (of people)\") is a board game designed by Karol Madaj and launched in February 2011 by Poland's Institute of National Remembrance.",
+     "facts": {
+      "0.0": "Kolejka is a board game.",
+      "0.1": "Kolejka is Polish for 'queue' or 'line (of people)'.",
+      "0.2": "Karol Madaj designed Kolejka.",
+      "0.3": "Kolejka was launched in February 2011.",
+      "0.4": "Kolejka was launched by Poland's Institute of National Remembrance."
+     }
+    },
+    {
+     "sentence": "Ghettopoly is a parody of \"Monopoly\" released in 2003.",
+     "facts": {
+      "1.0": "Ghettopoly is a parody of Monopoly.",
+      "1.1": "Ghettopoly was released in 2003."
+     }
+    }
+   ],
+   "items": [
+    "Plaid Hat Games\nPlaid Hat Games is a United States-based board game studio.\n\n Plaid Hat Games was founded in 2009.\n\n Board game designer Colby Dauch formed a board game publishing company in order to release the companies first game, Summoner Wars.",
+    "Can't Stop (board game)\nCan't Stop is a board game designed by Sid Sackson originally published by Parker Brothers in 1980, and was long out of print in the United States.\n\n It was reprinted by Face 2 Face Games in 2007.\n\n An iOS version was developed by Playdek and released in 2012.\n\n The goal of the game is to \"claim\" (get to the top of) three of the columns before any of the other players can.\n\n But the more that the player risks rolling the dice during a turn, the greater the risk of losing the advances made during that turn.",
+    "Alhambra (board game)\nAlhambra (German: Der Palast von Alhambra , literally \"The Palace of the Alhambra\") is a 2003 tile-based German-style board game designed by Dirk Henn.\n\n It was originally published in Germany by Queen Games in a language-interdependent version; an English-specific version was released in North America by the now-defunct Überplay.\n\n The game is an Arabian-themed update, set during the construction of the Alhambra palace in 14th century Granada, of the 1998 stock trading board game \"Stimmt So!\"\n\n, which in turn was an update of the 1992 mafia influence board game \"Al Capone\"; the original version was subsequently released as \"\".",
+    "Xeko\nXeko is a collectible card game revolving around endangered species.\n\n It was launched on Earthday 2006.\n\n It won the \"Creative Child Magazine\" 2006 Toy of the Year Award and the National Parenting Center's Seal of Approval in its first year.\n\n Four \"Mission\" sets have been released.\n\n \"Mission: Costa Rica\" and \"Mission: Madagascar\", based on biodiversity hotspots were released first.\n\n \"Mission: Indonesia\", was released in 2007, with the final release, \"Mission: China\", was released July 19, 2008.\n\n A total of thirty more missions were planned but never developed.",
+    "Kolejka (game)\nKolejka ( ; Polish for \"queue\" or \"line (of people)\") is a board game designed by Karol Madaj and launched in February 2011 by Poland's Institute of National Remembrance.\n\n It was designed to teach young generations about the hardships under communism (1945–1989), particularly the difficulty of acquiring consumer goods in the shortage economy.\n\n The game has been described as inspired by \"Monopoly\".",
+    "Attack! (board game)\nAttack!\n\n is a board game created by Glenn Drover and published by Eagle Games in 2003.\n\n It is a light war game that is midway between \"Risk\" and \"Axis and Allies\" in complexity.\n\n The game is loosely set in the 1930s and includes plastic pieces featuring tanks, planes, infantry, and artillery.\n\n \"Attack!\"\n\n won the Origins Award for \"Best Historical Game 2003\".",
+    "Castle Ravenloft Board Game\nCastle Ravenloft Board Game is a 2010 board game published by Wizards of the Coast.\n\n It was the first game released in the Dungeons & Dragons Adventure System board game series.",
+    "Ghettopoly\nGhettopoly is a parody of \"Monopoly\" released in 2003.\n\n Invented by David Chang, it uses \"Monopoly\"-like mechanics in the atmosphere of a caricaturized United States ghetto.",
+    "Kill Doctor Lucky\nKill Doctor Lucky is a humorous board game designed by James Ernest and released in 1996 by Cheapass Games.\n\n In 1998, \"Kill Doctor Lucky\" won the Origins Award for \"Best Abstract Board Game of 1997\".",
+    "Egyptian Ratscrew\nEgyptian Ratscrew (also known as Egyptian Ratkiller, Egyptian War, and by other names) is a card game of the matching family of games.\n\n The game is similar to the 19th century British card game Beggar-My-Neighbour, with the added concept of \"slapping\" cards when certain combinations are played, similar to and perhaps borrowed from Slapjack."
+   ]
+  },
+  {
+   "id": "3d06e365a212ee16",
+   "gold": [
+    {
+     "sentence": "Pravda (Russian: Правда ; ] , \"Truth\") is a Russian broadsheet newspaper, formerly the official newspaper of the Communist Party of the Soviet Union, when it was one of the most influential papers in the country with a circulation of 11 million.",
+     "facts": {
+      "0.0": "Pravda's Russian name is Правда, which means 'Truth'.",
+      "0.1": "Pravda is a Russian broadsheet newspaper.",
+      "0.2": "Pravda was formerly the official newspaper of the Communist Party of the Soviet Union.",
+      "0.3": "When Pravda was the official newspaper of the Communist Party of the Soviet Union, it was one of the most influential papers in the country.",
+      "0.4": "When Pravda was one of the most influential papers in the country, its circulation was 11 million."
+     }
+    },
+    {
+     "sentence": "Stiffelio is an opera in three acts by Giuseppe Verdi, from an Italian libretto by Francesco Maria Piave.",
+     "facts": {
+      "1.0": "Stiffelio is an opera.",
+      "1.1": "Stiffelio is an opera in three acts.",
+      "1.2": "Stiffelio is by Giuseppe Verdi.",
+      "1.3": "Stiffelio uses an Italian libretto by Francesco Maria Piave."
+     }
+    }
+   ],
+   "items": [
+    "Operalia, The World Opera Competition\nOperalia, The World Opera Competition is an annual international competition for young opera singers.\n\n Founded in 1993 by Plácido Domingo, the competition has helped launch the careers of several important artists, such as Joseph Calleja, Giuseppe Filianoti, Rolando Villazón, José Cura, Joyce DiDonato, Elizabeth Futral, Inva Mula, Ana María Martínez and Sonya Yoncheva.",
+    "Il trittico\nIl trittico (\"The Triptych\") is the title of a collection of three one-act operas, \"Il tabarro\", \"Suor Angelica\", and \"Gianni Schicchi\", by Giacomo Puccini.\n\n The work received its world premiere at the Metropolitan Opera on 14 December 1918.",
+    "The entries span opera, music, theatre, literature and Renaissance history. Bernhard Bötel sang roles from Mozart to Verdi; operas range from Gluck and Hasse to Rossini and later composers. Commedia dell’arte’s masked stock characters, improvisation and lazzi are described. Musical highlights include Tchaikovsky’s Second Piano Concerto, Debussy’s *Masques* and Bartók’s quartets. Other topics include Verdi’s Busseto theatre,",
+    "Daphne (opera)\nDaphne, Op.\n\n82, is an opera in one act by Richard Strauss, subtitled \"Bucolic Tragedy in One Act\".\n\n The German libretto was by Joseph Gregor.\n\n The opera is based loosely on the mythological figure Daphne from Ovid's \"Metamorphoses\" and includes elements taken from \"The Bacchae\" by Euripides.\n\n The opera premiered at the Semperoper in Dresden on 15 October 1938, originally intended as a double bill with Strauss' \"Friedenstag\", but as the scale of \"Daphne\" grew, that idea was abandoned.\n\n The conductor of the first performance was Karl Böhm, to whom the opera was dedicated.",
+    "Lucrezia Borgia (opera)\nLucrezia Borgia is a melodramatic opera in a prologue and two acts by Gaetano Donizetti.\n\n Felice Romani wrote the Italian libretto after the play \"Lucrezia Borgia\" by Victor Hugo, in its turn after the legend of Lucrezia Borgia.\n\n \"Lucrezia Borgia\" was first performed on 26 December 1833 at La Scala, Milan.",
+    "Bernhard Bötel’s roles ranged from Mozart’s Belmonte to Verdi’s Duke of Mantua. The entries survey operas across eras: Gluck’s reform works *Orfeo ed Euridice* (1762) and *Paride ed Elena* (1770); Hasse’s *Romolo ed Ersilia* (1765); Rossini’s *Mosè in Egitto* (1818); and later works by Donizetti, Bernstein,",
+    "Stiffelio\nStiffelio is an opera in three acts by Giuseppe Verdi, from an Italian libretto by Francesco Maria Piave.\n\n The origin of this was the novel “Le pasteur d’hommes”, by Émile Souvestre, which was published in 1838.\n\n This was adapted into the French play \"Le pasteur, ou L'évangile et le foyer\" by Émile Souvestre and Eugène Bourgeois.\n\n That was in turn translated into Italian by Gaetano Vestri as \"Stifellius\"; this formed the basis of Piave's libretto.",
+    "Pagliacci\nPagliacci (] ; literal translation, \"Clowns\") is an Italian opera in a prologue and two acts, with music and libretto by Ruggero Leoncavallo.\n\n It is the only Leoncavallo opera that is still widely performed.\n\n Opera companies have frequently staged \"Pagliacci\" with \"Cavalleria rusticana\" by Mascagni, a double bill known colloquially as 'Cav and Pag'.",
+    "The material surveys Italian opera history and related figures. Verdi’s Busseto theatre opened in 1868, seats 300, and occupies the former Pallavicino fortress. Verdi studied under Ferdinando Provesi from age 11; French composer Ambroise Thomas wrote *Mignon* and *Hamlet*, whose 1868 premiere featured bass Armand Castelmary, later famed for dying onstage in New York. Monteverdi, a Renaissance-to-Baroque pioneer,",
+    "Orfeo ed Euridice\nOrfeo ed Euridice (French version: Orphée et Eurydice ; English: \"Orpheus and Eurydice\") is an opera composed by Christoph Willibald Gluck based on the myth of Orpheus, set to a libretto by Ranieri de' Calzabigi.\n\n It belongs to the genre of the \"azione teatrale\", meaning an opera on a mythological subject with choruses and dancing.\n\n The piece was first performed at the Burgtheater in Vienna on 5 October 1762 in the presence of Empress Maria Theresa.\n\n \"Orfeo ed Euridice\" is the first of Gluck's \"reform\" operas, in which he attempted to replace the abstruse plots and overly complex music of \"opera seria\" with a \"noble simplicity\" in both the music and the drama."
+   ]
+  },
+  {
+   "id": "a50ca7227accbe28",
+   "gold": [
+    {
+     "sentence": " The first edition was written by J. Eric Holmes based on Gary Gygax and Dave Arneson's original work.",
+     "facts": {
+      "0.0": "The first edition was written by J. Eric Holmes.",
+      "0.1": "The first edition was based on the original work of Gary Gygax and Dave Arneson."
+     }
+    },
+    {
+     "sentence": "John Eric Holmes M.D. (February 16, 1930 – March 20, 2010) was an associate professor of neurology at the University of Southern California School of Medicine, an author and promoter of fantasy role-playing games, a noted fan and enthusiast of Edgar Rice Burroughs, and an American writer of non-fiction, fantasy and science fiction.",
+     "facts": {
+      "1.0": "John Eric Holmes M.D. was born on February 16, 1930.",
+      "1.1": "John Eric Holmes M.D. died on March 20, 2010.",
+      "1.2": "John Eric Holmes M.D. was an associate professor of neurology at the University of Southern California School of Medicine.",
+      "1.3": "John Eric Holmes M.D. was an author and promoter of fantasy role-playing games.",
+      "1.4": "John Eric Holmes M.D. was a noted fan and enthusiast of Edgar Rice Burroughs.",
+      "1.5": "John Eric Holmes M.D. was an American writer of non-fiction, fantasy and science fiction."
+     }
+    }
+   ],
+   "items": [
+    "Dungeons &amp; Dragons Companion Set\nThe Dungeons & Dragons Companion Set is an expansion boxed set for the \"Dungeons & Dragons\" (\"D&D\") fantasy role-playing game.\n\n It was first published in 1984 as an expansion to the \"Dungeons & Dragons Basic Set\".",
+    "GURPS Basic Set\nGURPS Basic Set is a hard-bound two volume set written by Steve Jackson, Sean M. Punch, and David L. Pulver.\n\n The first edition \"GURPS Basic Set\" was published in 1986.",
+    "John Eric Holmes\nJohn Eric Holmes M.D. (February 16, 1930 – March 20, 2010) was an associate professor of neurology at the University of Southern California School of Medicine, an author and promoter of fantasy role-playing games, a noted fan and enthusiast of Edgar Rice Burroughs, and an American writer of non-fiction, fantasy and science fiction.\n\n His father, Wilfred \"Jasper\" Holmes was also a writer of adventure stories under the pen name Alec Hudson.\n\n His writings appeared under his full name and under variants such as Eric Holmes and J. Eric Holmes and the pen name Sidney Leland.",
+    "The Keep on the Borderlands\nThe Keep on the Borderlands is a \"Dungeons & Dragons\" module by Gary Gygax, first printed in December 1979.\n\n In it, player characters are based at a keep and investigate a nearby series of caves that are filled with a variety of monsters.\n\n It was designed to be used with the \"Dungeons & Dragons Basic Set\", and was included in the 1979–1982 editions of the \"Basic Set\".\n\n It was designed for people new to \"Dungeons & Dragons\".",
+    "Dungeons &amp; Dragons Basic Game\nThe Dungeons & Dragons Basic Game is an introductory version of \"Dungeons & Dragons\" (\"D&D\") role-playing game packaged in the form of a board game.\n\n The original game was released in 2004 by Wizards of the Coast and was designed by Jonathan Tweet, one of the \"D&D\" 3rd edition designers.\n\n A new version of this game was released in September 2006.",
+    "Dungeons &amp; Dragons Game (1991 boxed set)\nThe New Easy-to-Master Dungeons & Dragons Game is an introductory set for the \"Dungeons & Dragons\" fantasy role-playing game, published by TSR, Inc. in 1991.\n\n It was a replacement for the previous \"Dungeons & Dragons Basic Set\", serving to introduce new players to the game, using the rule set previously established.",
+    "Dungeons &amp; Dragons Basic Set\nThe Dungeons & Dragons Basic Set is a set of rulebooks for the \"Dungeons & Dragons\" (\"D&D\") fantasy role-playing game.\n\n First published in 1977, it saw a handful of revisions and reprintings.\n\n The first edition was written by J. Eric Holmes based on Gary Gygax and Dave Arneson's original work.\n\n Later editions were edited by Tom Moldvay, Dave Cook, and Frank Mentzer.",
+    "Dungeons &amp; Dragons Master Rules\nDungeons & Dragons Master Rules is an expansion boxed set for the \"Dungeons & Dragons\" (\"D&D\") fantasy role-playing game.\n\n It was first published in 1985 as an expansion to the \"Basic Set\".",
+    "Dungeons &amp; Dragons Immortals Rules\nDungeons & Dragons Immortals Rules, written by Frank Mentzer, is a boxed set for the \"Dungeons & Dragons\" (\"D&D\") fantasy role-playing game first published by TSR in 1986 as an expansion to the \"Basic Set\".",
+    "The Lost City (Dungeons &amp; Dragons)\nThe Lost City (B4) is a \"Dungeons & Dragons\" adventure module by Tom Moldvay.\n\n It was first published by TSR in 1982 and was designed as a stand-alone adventure for use with the \"Dungeons & Dragons Basic Set\".\n\n The working title for the module was \"The Lost City of Cynidecia\".\n\n Moldvay designed the module to give novice Dungeon Masters experience fleshing out adventures and is only partially complete.\n\n The module is described as a low-level scenario, in which the only hope of the player characters' survival can be found in a ruined city slowly rising out of the sands.\n\n The adventure is set inside a huge step pyramid, with the lower pyramid only sketched out and the city itself described with a list of the major areas and a map.\n\n The adventure’s main villain is Zargon, a giant one-eyed monster and his minions.\n\n The entire double pyramid, not including the city, contains over 100 rooms."
+   ]
+  },
+  {
+   "id": "7c02afca58691bf5",
+   "gold": [
+    {
+     "sentence": "The University of Delaware (colloquially \"UD\") is the largest university in Delaware.",
+     "facts": {
+      "0.0": "The University of Delaware is colloquially called 'UD'.",
+      "0.1": "The University of Delaware is the largest university in Delaware."
+     }
+    },
+    {
+     "sentence": "The University of Debrecen (Hungarian: \"Debreceni Egyetem\" ) is a university located in Debrecen, Hungary.",
+     "facts": {
+      "1.0": "The University of Debrecen's Hungarian name is 'Debreceni Egyetem'.",
+      "1.1": "The University of Debrecen is a university.",
+      "1.2": "The University of Debrecen is located in Debrecen, Hungary."
+     }
+    }
+   ],
+   "items": [
+    "Pike Creek, Delaware\nPike Creek is a census-designated place (CDP) in New Castle County, Delaware and is part of the Philadelphia-Camden-Wilmington, PA-NJ-DE-MD Metropolitan statistical area.\n\n In 2007, CNN's Money Magazine ranked Pike Creek on its list of the 100 Best Places to Live in the United States.\n\n Pike Creek was the only community in Delaware to appear on the list.\n\n The population was 7,898 at the 2010 census.\n\n Local attractions include Middle Run Natural Area, White Clay Creek State Park, Carousel Farm Park & Equestrian Center, Golf and Restaurants.\n\n Pike Creek is approximately 5 miles from downtown Newark, Delaware which contains the University of Delaware.\n\n Pike Creek is connected to the University of Delaware campus and the Newark, Delaware downtown area by several bike trails.\n\n Pike Creek is approximately 10 miles west of the state's largest city, Wilmington, Delaware which is a national financial center.\n\n Chester County, Pennsylvania is located approximately 2 miles west of Pike Creek.",
+    "Delaware–William &amp; Mary football rivalry\nThe Delaware–William & Mary football rivalry between the Delaware Fightin' Blue Hens and the William & Mary Tribe is a match-up between two public universities, the University of Delaware and the College of William and Mary, that are also members of the Colonial Athletic Association.\n\n Both schools have academic reputations that have labeled them as Public Ivies.\n\n Both schools are also Colonial Colleges having been founded before the United States became independent in 1776; the College of William and Mary was founded in 1693 and the University of Delaware's predecessor school was founded in 1743.",
+    "University of Debrecen\nThe University of Debrecen (Hungarian: \"Debreceni Egyetem\" ) is a university located in Debrecen, Hungary.\n\n It is the oldest continuously operating institution of higher education in Hungary (since 1538).\n\n The university has a well established programme in the English language for international students, particularly in the Medical field, which first established education in English in 1986.\n\n There are nearly 4000 international students studying at the university.",
+    "The text profiles diverse educational and related institutions worldwide. Highlights include Berat University (Albania), founded in 2009 and expanding to four faculties; Rotman (Toronto), established in 1950; Auburn, Arizona, Debrecen, Copenhagen, Dalhousie and other research universities; specialist schools such as Falmouth and Aalborghus; and private or state colleges across Ghana, Malaysia, Norway, Pakistan and elsewhere. It also covers Syracuse sororities, a",
+    "Dalhousie University\nDalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick.\n\n Dalhousie offers more than 4,000 courses and 180 degree programs in twelve undergraduate, graduate, and professional faculties.\n\n The university is a member of the U15, a group of research-intensive universities in Canada.",
+    "Rutgers University–Camden\nRutgers University–Camden is one of three regional campuses of Rutgers University, New Jersey's public research university.\n\n It is located in Camden, New Jersey, United States.\n\n Founded in the 1920s, Rutgers–Camden began as an amalgam of the South Jersey Law School and the College of South Jersey.\n\n It is the southernmost of the three regional campuses of Rutgers—the others being located in New Brunswick and Newark.\n\n The city of Camden is located on the Delaware River, east of Philadelphia.",
+    "University of Delaware\nThe University of Delaware (colloquially \"UD\") is the largest university in Delaware.\n\n The main campus is in Newark, with satellite campuses in Dover, Wilmington, Lewes, and Georgetown.\n\n It is considered a large institution with approximately 18,500 undergraduate and 4,500 graduate students. UD is a privately governed university which receives public funding for being a land-grant, sea-grant, space-grant and urban-grant state-supported research institution.",
+    "University of Delaware Botanic Gardens\nThe University of Delaware Botanic Gardens are botanical gardens and an arboretum located on the campus of the University of Delaware, in Newark, Delaware, United States.\n\n The gardens are open to the public without charge.",
+    "Ellendale, Delaware\nEllendale is a town in Sussex County, Delaware, United States.\n\n The population was 381 at the 2010 census, an increase of 16.5% since 2000.\n\n It is part of the Salisbury, Maryland-Delaware Metropolitan Statistical Area.\n\n Ellendale is the \"Gateway to Delaware's Resort Beaches\" because it is the town located on U.S. Highway 113, the resort area's westernmost border, and Delaware Route 16, the resort area's northernmost border with the eastern border being the Delaware Bay and Atlantic Ocean and the southern border being the state line with Maryland.\n\n Ellendale is home to the Philadelphia Bible College and the Harbor Christian Academy.",
+    "College Park, Delaware\nCollege Park is an unincorporated community in New Castle County, Delaware, United States.\n\n College Park is located along Delaware Route 896 southwest of Newark."
+   ]
+  },
+  {
+   "id": "198af0b2618fd286",
+   "gold": [
+    {
+     "sentence": "Corn Ranch is a spaceport in the West Texas town of Van Horn, Texas, where flight tests of the New Shepard are carried out by Blue Origin.",
+     "facts": {
+      "0.0": "Corn Ranch is a spaceport.",
+      "0.1": "Corn Ranch is located in the West Texas town of Van Horn, Texas.",
+      "0.2": "Flight tests of the New Shepard are carried out at Corn Ranch.",
+      "0.3": "Flight tests of the New Shepard are carried out by Blue Origin."
+     }
+    },
+    {
+     "sentence": "Blue Origin is an American privately funded aerospace manufacturer and spaceflight services company set up by Amazon.com founder Jeff Bezos with its headquarters in Kent, Washington.",
+     "facts": {
+      "1.0": "Blue Origin is an American privately funded aerospace manufacturer.",
+      "1.1": "Blue Origin is a spaceflight services company.",
+      "1.2": "Blue Origin was set up by Amazon.com founder Jeff Bezos.",
+      "1.3": "Blue Origin has its headquarters in Kent, Washington."
+     }
+    }
+   ],
+   "items": [
+    "Lubbock Arts Festival\nThe Lubbock Arts Festival is an annual arts festival held in April at the Lubbock Memorial Civic Center in Lubbock, Texas.\n\n The festival is the largest fine arts and crafts show in West Texas.\n\n Since its establishment in 1978, the Lubbock Arts Festival focuses on visual, performing, culinary, and children’s art.\n\n The 2013 Lubbock Arts Festival drew a record attendance of over 30,000.\n\n In 2014, the Silent Wings Museum participated in the festival.",
+    "Petroleum Building (Midland)\nThe Petroleum Building (formerly known as the Hogan Building) is a highrise in downtown Midland, TX.\n\n The building was built in 1928 and consists of 12 floors and has a neo-gothic style architecture to it.\n\n The building stands at 137 ft but with its spires reaches a height of 151 ft. The Hogan building is a registered, Texas historical landmark.\n\n The tower is named for lawyer and oil entrepreneur Thomas Stephen Hogan.\n\n For information on Hogan, see article on Jacob Bunn.\n\n The design of the Petroleum Building, like the Woolworth Building in New York City and the Baum Building in Oklahoma City, utilizes many classic architectural devices.\n\n Gothic spires and Moorish arches, lavish carved surfaces and opulent marble, all intended to clothe the business house with the respectability of a cathedral.\n\n Thomas Stephen Hogan intended his building to be a landmark and (Fort Worth architect-engineer) Wyatt Hedrick designed a building that people would talk about.\n\n However, behind the ornate cast-stone façade was (sic) functional reinforced concrete, the finest equipment available, and the determination of one man to establish Midland as the headquarters of the West Texas oil fields.",
+    "SyberJet Aircraft\nSyberJet Aircraft is the manufacturer of the SJ30 light business jet.\n\n The company's headquarters is in Cedar City, Utah adjacent to the Cedar City Regional Airport with additional engineering offices and manufacturing, service, repair and fatigue test facilities near and on the San Antonio International Airport in San Antonio, Texas.",
+    "Northern California TRACON\nNorthern California TRACON (NCT) (Terminal Radar Approach Control), or NorCal TRACON for short, is an air traffic control facility that provides safety alerts, separation, and sequencing of air traffic arriving, departing, and transiting the airspace and airports in Northern California.\n\n Located in Rancho Cordova near Sacramento, NCT controls airspace over 19000 square miles, and serves Reno International Airport, Sacramento International Airport, San Jose International Airport, Oakland International Airport, and San Francisco International Airport, plus 19 other smaller airports with air traffic control towers.\n\n NCT is the 3rd busiest TRACON in America.\n\n NorCal TRACON is the step between local control (in an airport's control tower) and Air Route Traffic Control Center (ARTCC), in this case, Oakland Center (ICAO code: ZOA).\n\n San Francisco International Airport is the 2nd largest airport in California and the largest airport serving Northern California.",
+    "Texas Air &amp; Space Museum\nThe Texas Air & Space Museum is an aviation museum located near Rick Husband Amarillo International Airport in Amarillo, Texas.\n\n The museum displays civilian and military aircraft as well as a wide range of air and space artifacts.",
+    "H-T Ranch\nH-T Ranch is a historic ranch complex 10 mi west of Amidon, North Dakota.\n\n The ranch originally consisted of ten buildings; however, only the ranch house and log barn survive.\n\n The ranch served as the headquarters of the Little Missouri Cattle Company, which was run by Arthur Clark Hidekoper.\n\n Hidekober established the ranch in the 1880s, and by the end of the decade, it had become the \"most notable\" ranch in the area.\n\n The ranch house, called Shackford, was built in 1896; its uncommon style resembles a bungalow but also borrows from other styles such as the Stick style.\n\n By 1906, the \"Fargo Forum\" described the ranch as \"the biggest and most important [ranch] in the state\" and \"one of the largest horse raising outlets in the world\".\n\n In the same year, Hidekoper sold the 70,000 acre ranch; the sale was the largest land deal in North Dakota history.\n\n After the sale, a land company reduced the ranch to 5000 acre ; it was later used as a dude ranch in the 1920s.",
+    "Rick Husband Amarillo International Airport\nRick Husband Amarillo International Airport (IATA: AMA, ICAO: KAMA, FAA LID: AMA) is a public airport six miles (10 km) east of downtown Amarillo, in Potter and Randall Counties, Texas, United States.\n\n The airport was renamed in 2003 after NASA astronaut and Amarillo native Rick Husband, who died in the Space Shuttle \"Columbia\" disaster in February of that year.",
+    "M7 Aerospace\nM7 Aerospace LP is an aerospace company with its headquarters on the property of San Antonio International Airport in Uptown San Antonio, Texas, United States.",
+    "Blue Origin\nBlue Origin is an American privately funded aerospace manufacturer and spaceflight services company set up by Amazon.com founder Jeff Bezos with its headquarters in Kent, Washington.\n\n The company is developing technologies to enable private human access to space with the goal to dramatically lower costs and increase reliability.\n\n Blue Origin is employing an incremental approach from suborbital to orbital flight, with each developmental step building on its prior work.\n\n The company motto is \"\"Gradatim Ferociter\"\", Latin for \"Step by Step, Ferociously\".\n\n Blue Origin is developing a variety of technologies, with a focus on rocket-powered Vertical Takeoff and Vertical Landing (VTVL) vehicles for access to suborbital and orbital space.\n\n The company's name refers to the blue planet, Earth, as the point of origin.",
+    "Corn Ranch\nCorn Ranch is a spaceport in the West Texas town of Van Horn, Texas, where flight tests of the New Shepard are carried out by Blue Origin.\n\n The 165,000-acre (670 km²) land parcel was purchased by Internet billionaire Jeff Bezos.\n\n The first flight test took place on November 13, 2006 with the goal of providing commercial tourist flights."
+   ]
+  },
+  {
+   "id": "68933738fe4b249b",
+   "gold": [
+    {
+     "sentence": "The Monastery of the Mother of God at the Spring (full name in Greek: , pr.",
+     "facts": {
+      "0.0": "The full Greek name of the Monastery of the Mother of God at the Spring is given, with the pronunciation abbreviation 'pr.'"
+     }
+    },
+    {
+     "sentence": " \"Moni tis Theotóku tis Pigis\"; Turkish name: \"Balıklı Meryem Ana Rum Manastiri\") or simply Zoödochos Pege (Greek: Ζωοδόχος Πηγή , \"Life-giving Spring\") is an Eastern Orthodox sanctuary in Istanbul, Turkey.",
+     "facts": {
+      "1.0": "The Monastery of the Mother of God at the Spring has the name 'Moni tis Theotóku tis Pigis'.",
+      "1.1": "The Monastery of the Mother of God at the Spring has the Turkish name 'Balıklı Meryem Ana Rum Manastiri'.",
+      "1.2": "The Monastery of the Mother of God at the Spring is simply called Zoödochos Pege.",
+      "1.3": "Zoödochos Pege is Greek for 'Life-giving Spring' (Ζωοδόχος Πηγή).",
+      "1.4": "The Monastery of the Mother of God at the Spring is an Eastern Orthodox sanctuary.",
+      "1.5": "The Monastery of the Mother of God at the Spring is located in Istanbul, Turkey."
+     }
+    },
+    {
+     "sentence": "Hagia Irene or Hagia Eirene (Ancient Greek: Ἁγία Εἰρήνη , Byzantine ] , \"Holy Peace\", Turkish: \"Aya İrini\" ), sometimes known also as Saint Irene, is a Greek Eastern Orthodox church located in the outer courtyard of Topkapı Palace in Istanbul, Turkey.",
+     "facts": {
+      "2.0": "Hagia Irene is also called Hagia Eirene.",
+      "2.1": "Hagia Irene has the Ancient Greek name Ἁγία Εἰρήνη.",
+      "2.2": "A Byzantine form of the name is given for Hagia Irene, but the text of that form is cut off in the source.",
+      "2.3": "Hagia Irene's name means 'Holy Peace'.",
+      "2.4": "Hagia Irene has the Turkish name 'Aya İrini'.",
+      "2.5": "Hagia Irene is sometimes known also as Saint Irene.",
+      "2.6": "Hagia Irene is a Greek Eastern Orthodox church.",
+      "2.7": "Hagia Irene is located in the outer courtyard of Topkapı Palace.",
+      "2.8": "Topkapı Palace is in Istanbul, Turkey."
+     }
+    }
+   ],
+   "items": [
+    "Old Church of St George, Hill Street Dublin\nThe Old Church of St. George, commonly called \"Little George's\" in Hill Street (formerly Temple Street Lower) Parish of St. Mary, Dublin was built in 1668 by the Eccles family for their workmen and also as a chapel-of-ease to the nearby St. Mary's Church.\n\n However, that St. Mary's Church was not St. Mary's Church, Dublin as its foundation stone was laid in 1700, and it was not St. Mary's Abbey, Dublin as it was dissolved in 1539.\n\n Therefore St George's church, Hill Street, may have been a Chapel-of-Ease to St. Michan's Church in Church Street.\n\n The main body of the church, with the exception of the tower, was demolished in 1894.",
+    "St. Mary's Church (Swormville, New York)\nSt. Mary's Catholic Church is a church located on the corner of Transit (New York State Route 78) and Stahley roads in Swormville, New York, in the United States.\n\n Originally known as St. Mary’s Church of the Assumption at Transit, the building was constructed of about 260,000 bricks.\n\n John Nepomucene Neumann (later to be named St. John Neumann) started to visit Swormville, celebrating mass in local homes, barns and fields.\n\n In 1839 he instructed that a small house would be made to hold mass.\n\n Bishop John Timon established the first catholic church (St. Mary's) of the town of Clarence, New York.\n\n In 1861, Father Michael Schinabeak made plans for a church to be constructed.\n\n Construction began in 1862 and finished in fall of 1865.\n\n The official opening of the Church was in January 1866.\n\n In 2010 a new Church was constructed behind the old St. Mary's.",
+    "St. Mary's Church (Ballston Spa, New York)\nSt. Mary's Church is a Catholic parish located in Ballston Spa, New York.\n\n It is located within the Roman Catholic Diocese of Albany.\n\n Father Thomas J. Kelly is the current pastor.\n\n St. Mary's is the fourth oldest parish in the Diocese.\n\n St. Mary's of Ballston Spa is partnered with St. Mary's of Galway, after the pastor at St. Mary's of Galway died and no replacement was available.",
+    "Graph query row:\nentity: Monastery of the Mother of God at the Spring\nentity_kind: building\ncountry: None\nlocation: None\nrelationship: LOCATED_IN\nconnected_entity: Istanbul\nconnected_kind: city\nconnected_country: Turkey\nconnected_location: None\nheld_on: None\nshared_connection: True",
+    "Graph query row:\nentity: Hagia Irene\nentity_kind: Greek Eastern Orthodox church\ncountry: None\nlocation: None\nrelationship: LOCATED_IN\nconnected_entity: Istanbul\nconnected_kind: city\nconnected_country: Turkey\nconnected_location: None\nheld_on: None\nshared_connection: True",
+    "St. Mary's Episcopal Church (Washington, D.C.)\nSt. Mary's Episcopal Church, also known as St. Mary's, Foggy Bottom or St. Mary's Chapel, is a historic Episcopal church located at 730 23rd Street, N.W. in the Foggy Bottom neighborhood of Washington, D.C..\n\n On April 2, 1973, St. Mary's Episcopal Church was added to the National Register of Historic Places.",
+    "St Mary de Lode Church, Gloucester\nSt Mary de Lode Church, Archdeacon Street, Gloucester GL1 2QT, is a Church of England church immediately outside the grounds of Gloucester Cathedral.\n\n It is believed by some to be on the site of the first Christian church in Britain.\n\n The church is in the Diocese of Gloucester and Grade I listed by English Heritage.\n\n It has also been known as \"St. Mary Before the Gate of St. Peter\", \"St. Mary Broad Gate\" and \"St. Mary De Port\".",
+    "Church of St. Mary of the Spring (Istanbul)\nThe Monastery of the Mother of God at the Spring (full name in Greek: , pr.\n\n \"Moni tis Theotóku tis Pigis\"; Turkish name: \"Balıklı Meryem Ana Rum Manastiri\") or simply Zoödochos Pege (Greek: Ζωοδόχος Πηγή , \"Life-giving Spring\") is an Eastern Orthodox sanctuary in Istanbul, Turkey.\n\n The present church, built in 1835, bears the same dedication as the shrine erected in this place between the end of the fifth and the beginning of the sixth century.\n\n After several renovations, this building was destroyed in the first half of the fifteenth century by the Ottomans.\n\n The complex got its name from a nearby holy spring, reputed to have healing properties.\n\n For almost fifteen hundred years, this sanctuary has been one of the most important pilgrimage sites of Greek Orthodoxy.",
+    "Hagia Irene\nHagia Irene or Hagia Eirene (Ancient Greek: Ἁγία Εἰρήνη , Byzantine ] , \"Holy Peace\", Turkish: \"Aya İrini\" ), sometimes known also as Saint Irene, is a Greek Eastern Orthodox church located in the outer courtyard of Topkapı Palace in Istanbul, Turkey.\n\n It is one of the few churches in Istanbul that has not been converted into a mosque.\n\n The Hagia Irene today operates as a museum and concert hall.",
+    "St. Mary's Church and Rectory (Iowa City, Iowa)\nSt. Mary's Catholic Church, also known as St. Mary of the Visitation Church, is a parish church of the Diocese of Davenport which is located at 228 E. Jefferson St. in Iowa City, Iowa, United States.\n\n The church building and rectory are listed together on the National Register of Historic Places in 1980.\n\n They were both included as contributing properties in the Jefferson Street Historic District in 2004.\n\n The parish's first rectory, which is now a private home, is also listed on the National Register as St. Mary's Rectory.\n\n It is located a few blocks to the east of the present church location at 610 E. Jefferson St."
+   ]
+  },
+  {
+   "id": "787bc802cf3017a6",
+   "gold": [
+    {
+     "sentence": " \"Pinus\" is the sole genus in the subfamily Pinoideae.",
+     "facts": {
+      "0.0": "Pinus is the sole genus in the subfamily Pinoideae."
+     }
+    },
+    {
+     "sentence": " The Plant List compiled by the Royal Botanic Gardens, Kew and Missouri Botanical Garden accepts 126 species names of pines as current, together with 35 unresolved species and many more synonyms.",
+     "facts": {
+      "1.0": "The Plant List was compiled by the Royal Botanic Gardens, Kew and the Missouri Botanical Garden.",
+      "1.1": "The Plant List accepts 126 species names of pines as current.",
+      "1.2": "The Plant List includes 35 unresolved species of pines.",
+      "1.3": "The Plant List includes many more synonyms."
+     }
+    },
+    {
+     "sentence": " It is sometimes considered to have only two species, \"B. monosperma\" and \"B. superba\", or is expanded to include four or five species.",
+     "facts": {
+      "2.0": "The genus is sometimes considered to have only two species, B. monosperma and B. superba.",
+      "2.1": "The genus is sometimes expanded to include four or five species."
+     }
+    }
+   ],
+   "items": [
+    "Pterostyrax\nPterostyrax, the epaulette tree, is a small genus of four species of deciduous large shrubs or small trees in the family Styracaceae, native to eastern Asia in China and Japan.\n\n They grow 4 - tall, with alternate, simple ovate leaves 6 - long and 4 - broad.\n\n The flowers are white, produced in dense panicles 8 - long.\n\n The fruit is an oblong dry drupe, with longitudinal ribs or narrow wings (the wings are absent in the related genus \"Styrax\", whence the name \"Pterostyrax\", \"winged styrax\").",
+    "Lithocarpus\nLithocarpus is a genus in the beech family Fagaceae, differing from \"Quercus\" in the erect spikes of insect-pollinated male flowers and the short styles with punctate stigmas on the female flowers.\n\n The World Checklist (see link below) accepts 334 species, though some other texts suggest as few as 100 species.\n\n About 100 Asian species of the genus were formerly treated in the genus \"Pasania\".\n\n All are native to east and southeast Asia.\n\n These Asian species do not have a well-known English vernacular name, though the generic term stone oak has been proposed.",
+    "Thonningia\nThonningia is a monotypic genus of flowering plants in the family Balanophoraceae containing the single species Thonningia sanguinea.\n\n It is distributed throughout much of southern and western Africa, particularly the tropical regions.\n\n Common names for the plant include ground pineapple.\n\n A familiar plant to humans, it has an extremely long list of common names in many African languages.\n\n Many names are inspired by the resemblance of the plant's inflorescence to a pineapple or palm tree.\n\n Some of the names can be translated as pineapple of the bush (from Anyi), duiker's kolanut (from Igala), and crown of the ground (from Yoruba).",
+    "Bognera\nBognera is a monotypic genus of flowering plants in the Araceae family.\n\n The single species that makes up the genus is Bognera recondita.\n\n The word \"recondita\" means \"hidden\" referring to the fact that the plant is only found in remote areas of Amazonian Brazil near the Peruvian border.\n\n The species was discovered in the late 1970s and was originally placed in the genus \"Ulearum\".\n\n In 1984 a new genus, \"Bognera\" named after the German Aroid specialist Josef Bogner, was created for it.\n\n \"Bognera\" is believed to be closely related to \"Dieffenbachia\".",
+    "Nepenthes\nNepenthes ( ), also known as tropical pitcher plants, is a genus of carnivorous plants in the monotypic family Nepenthaceae.\n\n The genus comprises roughly 150 species, and numerous natural and many cultivated hybrids.\n\n They are mostly liana-forming plants of the Old World tropics, ranging from South China, Indonesia, Malaysia and the Philippines; westward to Madagascar (two species) and the Seychelles (one); southward to Australia (three) and New Caledonia (one); and northward to India (one) and Sri Lanka (one).\n\n The greatest diversity occurs on Borneo, Sumatra, and the Philippines, with many endemic species.\n\n Many are plants of hot, humid, lowland areas, but the majority are tropical montane plants, receiving warm days but cool to cold, humid nights year round.\n\n A few are considered tropical alpine, with cool days and nights near freezing.\n\n The name \"monkey cups\" refers to the fact that monkeys have been observed drinking rainwater from these plants.",
+    "Butea\nButea is a genus of flowering plants belonging to the pea family, Fabaceae.\n\n It is sometimes considered to have only two species, \"B. monosperma\" and \"B. superba\", or is expanded to include four or five species.",
+    "Pine\nA pine is any conifer in the genus Pinus, , of the family Pinaceae.\n\n \"Pinus\" is the sole genus in the subfamily Pinoideae.\n\n The Plant List compiled by the Royal Botanic Gardens, Kew and Missouri Botanical Garden accepts 126 species names of pines as current, together with 35 unresolved species and many more synonyms.",
+    "Myrsine\nMyrsine is a genus of flowering plants in the family Primulaceae.\n\n It was formerly placed in the family Myrsinaceae before this was merged into the Primulaceae.\n\n It is found nearly worldwide, primarily in tropical and subtropical areas.\n\n It contains about 200 species, including several notable radiations, such as the matipo of New Zealand and the kōlea of Hawaiʻ i (the New Zealand \"black matipo\", \"Pittosporum tenuifolium\", is not related to \"Myrsine\").\n\n In the United States, members of this genus are known as colicwood.\n\n Some species, especially \"M. africana\", are grown as ornamental shrubs.",
+    "Hydrangea\nHydrangea ( ; common names hydrangea or hortensia) is a genus of 70–75 species of flowering plants native to southern and eastern Asia (China, Japan, Korea, the Himalayas, and Indonesia) and the Americas.\n\n By far the greatest species diversity is in eastern Asia, notably China, Japan, and Korea.\n\n Most are shrubs 1 to 3 meters tall, but some are small trees, and others lianas reaching up to 30 m by climbing up trees.\n\n They can be either deciduous or evergreen, though the widely cultivated temperate species are all deciduous.",
+    "Deutzia\nDeutzia ( or ) is a genus of about 60 species of flowering plants in the family Hydrangeaceae, native to eastern and central Asia (from the Himalayas east to Japan and the Philippines), and Central America and also Europe.\n\n By far the highest species diversity is in China, where 50 species occur."
+   ]
+  },
+  {
+   "id": "d0ac17b8bac5e09f",
+   "gold": [
+    {
+     "sentence": " It was driven by Eddie Irvine, who was in his second year with the team, and Luciano Burti, who had deputised for Irvine at the 2000 Austrian Grand Prix.",
+     "facts": {
+      "0.0": "The car described in this sentence was driven by Eddie Irvine.",
+      "0.1": "Eddie Irvine was in his second year with the team.",
+      "0.2": "The car described in this sentence was also driven by Luciano Burti.",
+      "0.3": "Luciano Burti had deputised for Eddie Irvine at the 2000 Austrian Grand Prix."
+     }
+    },
+    {
+     "sentence": "Edmund Irvine Jr. (born 10 November 1965) is a retired British racing driver from Northern Ireland.",
+     "facts": {
+      "1.0": "Edmund Irvine Jr. was born on 10 November 1965.",
+      "1.1": "Edmund Irvine Jr. is a retired British racing driver.",
+      "1.2": "Edmund Irvine Jr. is from Northern Ireland."
+     }
+    }
+   ],
+   "items": [
+    "Jordan 194\nThe Jordan 194 was a Formula One car for the 1994 season.\n\n The number 14 seat was taken by Rubens Barrichello and the number 15 seat was taken by Eddie Irvine.\n\n Kelvin Burt was named as test driver, but his mileage in the car was limited.\n\n The engine was a Hart 1035 3.5 V10, a developed version of the engine which had proved promising in 1993.\n\n The team's main sponsor was Sasol, with additional financial support coming from Arisco, the Irish government and other smaller sponsors.\n\n With driver aids such as traction control and active suspension banned for the 1994 season, the car used a conventional semi-automatic gearbox and pushrod double wishbone suspension.\n\n The simpler technical regulations of 1994 seemed to benefit Jordan and the 194 recaptured the level of performance seen in the team's debut season, 1991.\n\n Indeed, the cut-down airbox and drooping front wing of the 194 recalled the design features of the 1991 car.",
+    "1999 British Grand Prix\nThe 1999 British Grand Prix was a Formula One motor race held on 11 July 1999 at the Silverstone Circuit near Silverstone, England.\n\n It was the eighth race of the 1999 Formula One season.\n\n The 60-lap race was won by McLaren driver David Coulthard after he started from third position.\n\n Eddie Irvine finished second for the Ferrari team and Williams driver Ralf Schumacher came in third.",
+    "Jordan 195\nThe Jordan 195 was a Formula One car for the 1995 season.\n\n The number 14 seat was taken by Rubens Barrichello and the number 15 seat was taken by Eddie Irvine.\n\n The team never employed a test driver.\n\n The engine was a Peugeot A10 3.0 V10.\n\n The team's main sponsor was Total.",
+    "Spyker F1\nThe Spyker F1 Team, known as the Etihad Aldar Spyker F1 Team for sponsorship reasons was a Formula One team that competed in the 2007 Formula One World Championship, and was created by Spyker Cars after their buyout of the short-lived Midland F1 (formerly Jordan Grand Prix) team.\n\n The change to the Spyker name was accompanied by a switch in racing livery from the red and white previously used by Midland, to an orange and silver scheme—already seen on the Spyker Spyder GT2-R—orange being the national colour and the auto racing colour of the Netherlands.\n\n At the end of the 2007 season the team was sold and renamed Force India.",
+    "Eddie Irvine\nEdmund Irvine Jr. (born 10 November 1965) is a retired British racing driver from Northern Ireland.\n\n He was a Formula One driver between 1993 and 2002, and runner-up in the 1999 World Drivers' Championship, driving for Scuderia Ferrari.",
+    "Jaguar R2\nThe Jaguar R2 was the car with which the Jaguar team competed in the Formula One season.\n\n It was driven by Eddie Irvine, who was in his second year with the team, and Luciano Burti, who had deputised for Irvine at the 2000 Austrian Grand Prix.\n\n However, the Brazilian was replaced by Pedro de la Rosa after only four Grands Prix.",
+    "1983 Volvo International – Doubles\nSherwood Stewart and Ferdi Taygan were the defending champions but they competed with different partners that year, Stewart with Mark Edmondson and Taygan with Cássio Motta.",
+    "1997 Argentine Grand Prix\nThe 1997 Argentine Grand Prix was a Formula One motor race held at Autódromo Oscar Alfredo Gálvez in Buenos Aires, Argentina on 13 April 1997.\n\n It was the third race of the 1997 Formula One season and the 600th World Championship event.\n\n The 72-lap race was won by Williams driver Jacques Villeneuve after he started from pole position.\n\n Eddie Irvine finished second for the Ferrari team and Jordan driver Ralf Schumacher came in third.",
+    "Graph query row:\nperson: Eddie Irvine\nnationality: British\nnational_identity: None",
+    "Jaguar R3\nThe Jaguar R3 is a Formula One racing car with which Jaguar Racing competed in the 2002 Formula One season.\n\n The car was launched on January 4, 2002.\n\n It was driven by Eddie Irvine and Pedro de la Rosa, both retained from 2001."
+   ]
+  },
+  {
+   "id": "2623e6d9d3c758ac",
+   "gold": [
+    {
+     "sentence": "Karen Joy Fowler (born February 7, 1950) is an American author of science fiction, fantasy, and literary fiction.",
+     "facts": {
+      "0.0": "Karen Joy Fowler was born on February 7, 1950.",
+      "0.1": "Karen Joy Fowler is American.",
+      "0.2": "Karen Joy Fowler is an author of science fiction.",
+      "0.3": "Karen Joy Fowler is an author of fantasy.",
+      "0.4": "Karen Joy Fowler is an author of literary fiction."
+     }
+    },
+    {
+     "sentence": "Charles Bruce Chatwin (13 May 194018 January 1989) was an English travel writer, novelist, and journalist.",
+     "facts": {
+      "1.0": "Charles Bruce Chatwin was born on 13 May 1940.",
+      "1.1": "Charles Bruce Chatwin died on 18 January 1989.",
+      "1.2": "Charles Bruce Chatwin was English.",
+      "1.3": "Charles Bruce Chatwin was a travel writer.",
+      "1.4": "Charles Bruce Chatwin was a novelist.",
+      "1.5": "Charles Bruce Chatwin was a journalist."
+     }
+    }
+   ],
+   "items": [
+    "Mollie Gillen\nMollie Gillen (née Woolnough; 1908–2009) was an Australian historian, researcher, writer and novelist.\n\n Her work on the First Fleet, in \"The search for John Small,\" \"First Fleeter\" and The Founders of Australia: A Biographical Dictionary of the First Fleet, explored the idea that many of the founding families of Australia were descended from the convict population, rather than those sent to guard them.\n\n Gillen's article Maud Montgomery: The Girl Who Wrote Green Gables instigated a new era in scholarship on Lucy Maud Montgomery.",
+    "Always (short story)\n\"Always\" is a science fiction short story written by Karen Joy Fowler.\n\n Originally published in the April/May 2007 issue of \"Asimov's Science Fiction\", it won the 2007 Nebula Award for Best Short Story.\n\n It is collected in Fowler's \"What I Didn't See\".",
+    "Clinton Walker\nClinton Walker (born 1957) is an Australian writer, best known for his works on popular music but with a broader interest in social and cultural history and theory.\n\n Sydney's \"Sun-Herald\" has called him \"our best chronicler of Australian grass-roots culture.\"\n\n He has always been ahead of the curve.\n\n As \"Rhythms\" magazine said in 2015, \"Like many of Walker’s projects, \"Buried Country\" was at least a decade ahead of its time,\" and as such he is remarkable as a critic who has exerted a pro-active impact on Australian music and its development; groundbreaking books like \"Inner City Sound\" (1981) and \"Buried Country\" (2000) especially have informed and inspired successive generations of musicians.\n\n Similarly, while he found best-selling success as Bon Scott's biographer, Walker's non-music books like \"Football Life\" (1998) and \"Golden Miles\" (2005) have innovatively offered an appreciation of subjects hitherto hardly deemed worthy of serious consideration.",
+    "Karen Joy Fowler\nKaren Joy Fowler (born February 7, 1950) is an American author of science fiction, fantasy, and literary fiction.\n\n Her work often centers on the nineteenth century, the lives of women, and alienation.",
+    "The entries profile writers, scholars, artists, publishers, and advocates. Highlights include computer scientist Nuria Oliver’s data-science leadership and human-behavior research; Helen Keller’s childhood story “The Frost King”; Booker Prize winner Keri Hulme; Alice Walker’s Pulitzer-winning *The Color Purple* and anti-FGM work; and Lucille Watahomigie’s Hualapai language revitalization. Others include novelists Sarra Manning and Kim Edwards, poet Tara Betts",
+    "Kate Atkinson’s 2015 *A God in Ruins*, companion to *Life After Life*, follows Teddy Todd in WWII and won the Costa Novel Award. Other works include John Howard’s Central/Eastern European fiction; Conrad’s *Heart of Darkness*, Marlow’s Congo voyage and Kurtz obsession; Keri Hulme’s Booker-winning *The Bone People*; Karen Joy Fowler’s PEN/Faulkner-winning, Booker-shortlisted *We Are All Completely Beside Ours",
+    "Bruce Chatwin\nCharles Bruce Chatwin (13 May 194018 January 1989) was an English travel writer, novelist, and journalist.\n\n His first book, \"In Patagonia\" (1977), established Chatwin as a travel writer, although he considered himself instead a storyteller, interested in bringing to light unusual tales.\n\n He won the James Tait Black Memorial Prize for his novel \"On the Black Hill\" (1982) and his novel \"Utz\" (1988) was shortlisted for the Man Booker Prize.\n\n In 2008 \"The Times\" named Chatwin #46 on their list of \"50 Greatest British Writers Since 1945.\"",
+    "Billy Kahora\nBilly Kahora is a Kenyan writer and editor based in Nairobi.\n\n He was commended by the 2007 Caine Prize judges for his story \"Treadmill Love\".\n\n His stories \"Urban Zoning\" and \"Gorilla’s Apprentice\" were shortlisted for the prize in 2012 and 2014, respectively.\n\n He has written the non-fiction novella \"The True Story of David Munyakei\" the screenplay for \"Soul Boy\" and co-wrote \"Nairobi Half Life\".\n\n As Managing Editor of Kwani Trust, Kahora has edited seven issues of the \"Kwani?\n\n\" journal.\n\n He is a contributing editor to the \"Chimurenga Chronic\".",
+    "The Jane Austen Book Club\nThe Jane Austen Book Club is a 2004 novel by American author Karen Joy Fowler.\n\n The story, which takes place near Sacramento, California, centers on a book club consisting of five women and one man who meet once a month to discuss Jane Austen's six novels.\n\n It was a critical success and became a national bestseller.",
+    "We Are All Completely Beside Ourselves\nWe Are All Completely Beside Ourselves is a 2013 novel by the American writer Karen Joy Fowler.\n\n The novel won the 2014 PEN/Faulkner Award for Fiction<ref name=\"The Guardian - 3 April 2014 - Karen Joy Fowler wins PEN/Faulkner award for fiction\"> </ref> and was also short-listed for the 2014 Man Booker Prize."
+   ]
+  },
+  {
+   "id": "58669e23df5d86c7",
+   "gold": [
+    {
+     "sentence": " He has acted in a few Off Broadway productions and has made appearances on American television shows such as \"\", \"Person of Interest\" and \"\" and video games such as \"Grand Theft Auto V\", \"Red Dead Redemption\", \"\" and \"Red Dead Revolver\".",
+     "facts": {
+      "0.0": "This person has acted in a few Off Broadway productions.",
+      "0.1": "This person has made appearances on American television shows such as Person of Interest.",
+      "0.2": "This person has made appearances on an American television show whose title is blank in the sentence.",
+      "0.3": "This person has made appearances in video games such as Grand Theft Auto V.",
+      "0.4": "This person has made appearances in video games such as Red Dead Redemption.",
+      "0.5": "This person has made appearances in video games such as Red Dead Revolver.",
+      "0.6": "This person has made appearances in a video game whose title is blank in the sentence."
+     }
+    },
+    {
+     "sentence": "Red Dead Redemption is a Western action-adventure video game developed by Rockstar San Diego and published by Rockstar Games.",
+     "facts": {
+      "1.0": "Red Dead Redemption is a Western action-adventure video game.",
+      "1.1": "Red Dead Redemption was developed by Rockstar San Diego.",
+      "1.2": "Red Dead Redemption was published by Rockstar Games."
+     }
+    }
+   ],
+   "items": [
+    "Red Dead Redemption II\nRed Dead Redemption II is an upcoming western action-adventure video game developed and published by Rockstar Games for release on PlayStation 4 and Xbox One in Q2 2018.\n\n The game is a prequel to the 2010 title \"Red Dead Redemption\" and will be the third entry in the \"Red Dead\" series.\n\n It follows outlaw Arthur Morgan, a member of the Dutch van der Linde gang.",
+    "Tyler Bunch\nTyler T. Bunch (born February 10, 1970) is an American puppeteer, puppet designer, director, and actor.\n\n In addition to his work for the Jim Henson Company, Bunch has created and performed puppets for PBS, Nickelodeon and Disney's The Muppets Studio.\n\n He has acted in a few Off Broadway productions and has made appearances on American television shows such as \"\", \"Person of Interest\" and \"\" and video games such as \"Grand Theft Auto V\", \"Red Dead Redemption\", \"\" and \"Red Dead Revolver\".\n\n Currently, he is directing the PBS children's television series \"SeeMore's Playhouse\".\n\n He is also currently scheduled to be one of the puppeteers for the musical stage adaptation of \"Emmet Otter's Jug-Band Christmas\".\n\n He resides in Stratford, Connecticut.",
+    "Development of Grand Theft Auto V\nAn approximately 1,000-person team developed \"Grand Theft Auto V\", an action-adventure video game, over several years.\n\n Rockstar Games released \"Grand Theft Auto V\" on 17 September 2013 for PlayStation 3 and Xbox 360, on 18 November 2014 for PlayStation 4 and Xbox One, and on 14 April 2015 for Microsoft Windows, as the fifteenth entry in the \"Grand Theft Auto\" series.\n\n Development began soon after \"Grand Theft Auto IV\"' s release and was led by Rockstar North's core 360-person team, who collaborated with several other international Rockstar Games studios.\n\n The team considered the game a spiritual successor to many of their previous projects like \"Red Dead Redemption\" and \"Max Payne 3\".\n\n After its unexpected announcement in 2011, the game was fervently promoted with press showings, cinematic trailers, viral marketing strategies and special editions. Its release date, though subject to several delays, was widely anticipated.",
+    "Red Dead Redemption\nRed Dead Redemption is a Western action-adventure video game developed by Rockstar San Diego and published by Rockstar Games.\n\n It was released for PlayStation 3 and Xbox 360 consoles in May 2010.\n\n It is the second title in the \"Red Dead\" franchise, after 2004's \"Red Dead Revolver\".\n\n The game, set during the decline of the American Frontier in the year 1911, follows John Marston, a former outlaw whose wife and son are taken hostage by the government in ransom for his services as a hired gun.\n\n Having no other choice, Marston sets out to bring the three members of his former gang to justice.",
+    "Controversies surrounding Grand Theft Auto V\n\"Grand Theft Auto V\" is an open world, action-adventure video game developed by Rockstar North and published by Rockstar Games.\n\n Upon its 17 September 2013 release on PlayStation 3 and Xbox 360, the game generated controversies related to its violence and depiction of women.\n\n A mission that requires players to use torture equipment in a hostage interrogation polarised reviewers, who noted its political commentary but felt that the torture sequence was in poor taste.\n\n The mission also received criticism from politicians and anti-torture charity groups.\n\n The game became subject to widespread online debate over its portrayal of women, particularly in the wake of backlash against GameSpot journalist Carolyn Petit after she claimed the game was misogynystic in her review.\n\n After Petit's review webpage received more than 20,000 largely negative comments, many journalists defended her right to an opinion and lamented the gaming community's defensiveness towards criticism.\n\n Television personality Karen Gravano and actress Lindsay Lohan both filed lawsuits against Rockstar in allegation that characters in the game were based on their likenesses.",
+    "Grand Theft Auto: Vice City Stories\nGrand Theft Auto: Vice City Stories is an open world action-adventure video game developed by Rockstar Leeds in conjunction with Rockstar North and published by Rockstar Games.\n\n Released on 31 October 2006 for the PlayStation Portable and later for the PlayStation 2 on 5 March 2007.\n\n The game is the tenth instalment in the \"Grand Theft Auto\" series and the sixth and last game in the 3D universe.\n\n This was also the last game in the series to use well-known and Hollywood voice talent; \"Grand Theft Auto IV\" onward would instead use lesser-known and unknown voice actors.\n\n It is a prequel to \"\" and successor to the previous PSP release, \"\".\n\n Vice City is a representation of Miami, Florida.",
+    "List of accolades received by Grand Theft Auto V\n\"Grand Theft Auto V\" is an open world, action-adventure video game developed by Rockstar North and published by Rockstar Games.\n\n Players freely roam the fictional state of San Andreas (based on Southern California), composed of open countryside and the fictional city of Los Santos (based on Los Angeles).\n\n The game was first announced on 25 October 2011, and was widely anticipated.\n\n At the 2012 Spike Video Game Awards (now the VGX), it was awarded Most Anticipated Game.\n\n It was released on 17 September 2013 for the PlayStation 3 and Xbox 360, on 18 November 2014 for the PlayStation 4 and Xbox One, and on 14 April 2015 for Microsoft Windows.\n\n Review aggregator, Metacritic, assigned the game a normalised score of 97 out of 100, indicating \"universal acclaim\", based on 50 reviews for the PlayStation 3 version, 58 reviews for the Xbox 360 version, 66 reviews for the PlayStation 4 version and 14 reviews for the Xbox One version.",
+    "Red Dead Revolver\nRed Dead Revolver is a 2004 western action-adventure third-person shooter video game developed by Rockstar San Diego, published by Rockstar Games and distributed by Take-Two Interactive for the PlayStation 2 and Xbox.\n\n It is the first game in the \"Red Dead\" series.",
+    "List of Grand Theft Auto V characters\nRockstar North's 2013 open world action-adventure video game \"Grand Theft Auto V\", published by Rockstar Games, deals with a trio of criminals and their efforts to commit heists while under pressure from a corrupt government agency.\n\n The game's use of three lead protagonists is a break from series tradition.\n\n Three days after its release, \"Grand Theft Auto V\" had earned more than US $1 billion in sales, making it the fastest selling video game in history.\n\n Additionally, \"Grand Theft Auto V\" was voted Game of the Year from several gaming publications.\n\n The game's characters were created by writers Dan Houser and Rupert Humphries.\n\n The use of multiple lead protagonists, as well as the cast in general, has received generally positive reviews from gaming magazines and websites.",
+    "Red Dead\nRed Dead is a series of western action-adventure video games developed by Rockstar San Diego and published by Rockstar Games.\n\n The first game, titled \"Red Dead Revolver\", was originally released for the PlayStation 2 and Xbox in May 2004.\n\n The second game, \"Red Dead Redemption\", was released for the PlayStation 3 and Xbox 360 in May 2010 to wide critical acclaim, and is considered one of the greatest games of all time.\n\n The third entry in the series, \"Red Dead Redemption II\", is scheduled for release in Q2 2018 for PlayStation 4 and Xbox One."
+   ]
+  }
+ ]
+}

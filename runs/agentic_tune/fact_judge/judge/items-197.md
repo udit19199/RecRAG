@@ -1,0 +1,811 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 4 items.
+
+=== ITEM id=1203c0b76b151ad3 ===
+Gold sentences and facts:
+Sentence 0: Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth.
+  Fact 0.0: PMS provides expert guidance in navigating volatile markets.
+  Fact 0.1: Mutual funds provide expert guidance in navigating volatile markets.
+  Fact 0.2: PMS provides expert guidance in seizing investment opportunities that help create wealth.
+  Fact 0.3: Mutual funds provide expert guidance in seizing investment opportunities that help create wealth.
+Sentence 1: Brown added that he was “surprised” to see that a second valuation expert had not been drafted in to value the HSF portfolio for the latest interim results, especially as Kroll was appointed to consider the “reasonableness” of Citrin Cooperman’s assumptions for HSF’s previous set of results (to end of March 2023).
+  Fact 1.0: Brown added that he was surprised.
+  Fact 1.1: Brown was surprised that a second valuation expert had not been drafted in to value the HSF portfolio for the latest interim results.
+  Fact 1.2: Kroll was appointed to consider the reasonableness of Citrin Cooperman's assumptions for HSF's previous set of results.
+  Fact 1.3: HSF's previous set of results runs to the end of March 2023.
+
+Retrieved items:
+<item 1>
+Hipgnosis Songs Fund Chair, Andrew Sutch, to step down; all-important ‘continuation vote’ likely to take place on October 26 (Music Business Worldwide,
+2023-09-28T23:36:54+00:00)
+its share price).
+
+For example: On September 14, HSF’s market cap stood at approximately GBP £1.125 billion, which represented a 40% discount on the firm’s operative NAV of USD
+$2.316 billion as of the end of March this year.
+
+(Said ‘operative NAV’ was calculated by an independent valuer – Citrin Cooperman – using a discount rate of 8.5%.)
+
+This is where the importance of that potential $440 million transaction comes in.
+
+As MBW reported earlier this month, Hipgnosis Songs Fund’s shareholders are currently considering a proposal to sell 29 of the company’s catalogs to another
+Hipgnosis company – the Blackstone-backed Hipgnosis Songs Capital (HSC) – for USD $440 million.
+</item 1>
+
+<item 2>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+“[It] is up to the [Hipgnosis Songs Fund] Board to satisfy itself that the independent valuer, whom it hires, is up to the job, rather than try and pin the
+blame on [Hipgnosis Songs Management].” Christopher Brown, JP Morgan
+
+Concluded Brown: “[It] is up to the [Hipgnosis Songs Fund] Board to satisfy itself that the independent valuer, whom it hires, is up to the job, rather than try
+and pin the blame on [Hipgnosis Songs Management].
+
+“Our view is that a breakdown in the relationship between Board and manager would not be optimal for maximising shareholder value.”
+
+Brown further noted that JP Morgan would “not be surprised to see Citrin Cooperman resign, having been very publicly undermined by the [HSF] Board today”.
+
+JP Morgan retained its ‘overweight’ rating against HSF’s share price “in spite of yet another [HSF] own goal”.
+</item 2>
+
+<item 3>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+the multiples that Merck Mercuriadis paid to acquire it?
+
+Such questions will only be answered when Hipgnosis Songs Fund’s board elects to release the company’s six-monthly financial results to end of September 30.
+
+The most important KPI within those results, in MBW’s view: the company’s Pro-Forma Revenue, and how it compares, like-for-like, vs. the previous year’s
+equivalent period.
+
+In the meantime, back in the ‘real world’ of the music biz, HSF is actually enjoying quite a fanciable Q4.
+
+The company is benefitting from its cuts on hit albums including Taylor Swift’s 1989 (Taylor’s Version), via its acquired Jack Antonoff catalog, as well as
+Swift’s Lover (via its acquired Joel Little catalog).
+</item 3>
+
+<item 4>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+In response, Hipgnosis Song Management issued its own statement today: “Hipgnosis Song Management has fulfilled its duties to [HSF] with respect to both the
+independent valuation and preparation of the interim results in a timely and efficient manner.
+
+“Notwithstanding the Board’s decision to delay publication of the interim financial statements, [we] will continue to work in a constructive manner to support
+the interests of the Company and its shareholders.”
+
+The oddest thing about all of this? Citrin Cooperman’s valuation of Hipgnosis Songs Fund is, according to HSF’s own company documentation, appointed and
+overseen… by the HSF board.
+
+See this line, in every annual and interim report from HSF so far (bolding MBW’s own): “Portfolio Independent Valuer… Citrin Cooperman Advisors LLC, formerly
+Massarsky Consulting, Inc., [is] appointed by the Board to independently value the Company’s Catalogues within the Portfolio.”
+</item 4>
+
+<item 5>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+The reason for the delay? According to UK-listed HSF, it’s all to do with a recently-updated company valuation from HSF’s official independent valuer,
+US-headquartered Citrin Cooperman (CC).
+
+The HSF board says this valuation from CC was “materially higher than the valuation implied by proposed and recent transactions in the sector”.
+
+HSF’s board particularly points to two transactions/would-be transactions as evidence:
+
+The proposed sale earlier this year of assets to Blackstone-backed Hipgnosis Songs Capital for USD $440 million (pre-costs) – or $417.5 million (post-costs) – a
+proposal that was ultimately rejected by HSF shareholders; The sale of 20,000 “non-core” songs from HSF’s portfolio to an unnamed buyer (possibly Kobalt Music
+Group) for $23.1 million, as announced on December 11.
+</item 5>
+
+<item 6>
+Investment options for high networth investors (Business Line, 2023-10-28T14:42:28+00:00)
+Portfolio Management Services (PMS)
+
+PMS guidelines in India date back to 1993, but this investment avenue has grown in popularity with HNIs recently. The growing financialisation of savings, the
+formalisation of the economy, and the growing prosperity of tier 2 and 3 cities have resulted in an increase in AUM (excluding EPFO/PF), which stood at ₹5.28
+lakh crore as of July 2023. Because the minimum investment is ₹50 lakh, this option is also only available to HNIs. Both PMS and mutual funds provide expert
+guidance in navigating volatile markets and seizing investment opportunities that help create wealth. Because mutual funds cater to retail investors, their
+guidelines are relatively stringent, and compliance is rigorous.
+
+Regarding PMS, the investment guidelines are somewhat more flexible, allowing portfolio managers to outperform mutual funds. Another feature that appeals to
+HNIs is that the beneficial ownership of securities is that of the investors, as opposed to mutual funds, where the ownership is that of the fund.
+</item 6>
+
+<item 7>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+That price, according to HSF’s board, represented a 14.2% discount on Citrin Cooperman’s valuation of this portfolio as of September 30 (something we’ll come
+back to).
+
+As part of its announcement this morning, the HSF board took something of a swipe at its investment adviser, Merck Mercuriadis‘ Hipgnosis Song Management.
+
+After seeing Citrin Cooperman’s latest valuation and believing it to be too high, said HSF, it then “sought advice from Hipgnosis Song Management… which is
+majority owned by funds managed and/or advised by Blackstone, on their opinion on the independent valuer’s valuation.”
+
+HSF’s board added: “Hipgnosis Song Management… eventually provided an opinion, which was heavily caveated, such that the Board has concerns as to the valuation
+of the Company’s assets in its interim results.”
+</item 7>
+
+<item 8>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+A Final thought…
+
+As mentioned in the opening sentence of this article, there is plenty of drama surrounding HSF right now – from the ‘discontinuation vote’ we saw at the company
+in October, through to a recent lawsuit launched against Hipgnosis Songs Fund by a former business partner of Merck Mercuriadis.
+
+Yet, amongst all of the noise, what will likely most interest HSF’s investors (including the likes of Investec Wealth & Investment, Aviva Investors, and
+BlackRock) is the ongoing underlying commercial performance of the firm’s copyrights.
+
+How are Hipgnosis Songs Fund’s assets performing vs. the market? How is the company’s ‘premium-only’ acquisition strategy holding up against its promise of
+growth “uncorrelated” to other industries? And what does all of this suggest about the ongoing growth potential of the HSF portfolio vs. the multiples that
+Merck Mercuriadis paid to acquire it?
+</item 8>
+
+<item 9>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+Worth remembering: The HSF board has known about Citrin Cooperman’s latest valuation (as of September 30) for at least the past eight days.
+
+We know this because, as mentioned, on December 11, HSF announced that the $23.1 million price of an agreed HSF ‘non-core’ asset sale represented a 14.2%
+discount vs. Citrin Cooperman’s latest valuation of the portfolio (i.e. the HSF board had seen this latest valuation).
+
+Yet it took until today (December 19) for HSF to alert its investors to its dissatisfaction with this valuation.
+
+WHAT does JP Morgan make of it all?
+
+One of the closest watchers of Hipgnosis Songs Fund in recent years has been JP Morgan and its analyst Christopher Brown.
+</item 9>
+
+<item 10>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+WHAT’S HAPPENED?
+
+MBW Explains is a series of analytical features in which we explore the context behind major music industry talking points – and suggest what might happen next.
+MBW Explains is supported by JKBX , a technology platform that offers consumers access to music royalties as an asset class.
+
+The drama at Hipgnosis Songs Fund isn’t letting up for the Holidays, it seems.
+
+This morning (December 19), the company’s board – now led by Chairman, Rob Naylor – issued a statement announcing that HSF would no longer, as previously
+expected, be issuing its latest financial results today.
+
+Instead, the results (covering the six months to end of September 2023) are now expected to be published sometime before the close of December 31.
+
+The reason for the delay?
+</item 10>
+=== END ITEM id=1203c0b76b151ad3 ===
+
+=== ITEM id=d5ca0098ec80d841 ===
+Gold sentences and facts:
+Sentence 0: Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth).
+  Fact 0.0: Bankman-Fried was compared to Warren Buffet.
+  Fact 0.1: Many people called Bankman-Fried the white horse of crypto.
+  Fact 0.2: TechCrunch never called Bankman-Fried the white horse of crypto.
+Sentence 1: Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.
+  Fact 1.0: Wang testified that he heard Bankman-Fried tell another trader.
+  Fact 1.1: Bankman-Fried told another trader it was okay to continue withdrawing money from the account.
+  Fact 1.2: Bankman-Fried said the withdrawals were okay as long as the amount was less than FTX's total trading revenue.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense argued that the FTX founder acted in good faith.
+  Fact 2.2: The defense argued that the FTX founder never meant to commit fraud or steal.
+  Fact 2.3: The defense argued that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+This is to say nothing of the regulatory risks around crypto.
+
+As Cohen droned on about airplanes, I couldn’t stop thinking about the missing risk officer. Bringing it up, I thought, was a tremendous mistake. The
+prosecution hadn’t mentioned it. Either Bankman-Fried is stupid — unlikely — or he deliberately didn’t hire a risk officer. Was he worried about what one might
+find?
+
+Sure, as Cohen put it, Bankman-Fried was a math nerd who didn’t party. That paints a picture of someone who’s pretty deliberate, particularly since he
+immediately left MIT and went to work on Wall Street. If he had been a party-hardy trainwreck, I could see overlooking a risk officer in order to do another
+line, or a supermodel, or something else important. Why was the defense bringing this up?
+
+But as Cohen tried to tell me that FTX’s and Alameda’s business relationships were “reasonable under the circumstances,” the lack of risk officer kept elbowing
+me in the ribs.
+</item 1>
+
+<item 2>
+Graph query row:
+title: SBF’s trial starts soon, but how did he — and FTX — get here?
+publisher: TechCrunch
+passages: ['SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)\nWithin two years, more than 80 investors
+provided about $2 billion in capital to FTX, helping Bankman-Fried propel his vision into a reality. In January 2022, the company raised $400 million in a
+Series C round, boosting its valuation to $32 billion. That was its last round of public funding.\n\nThe company gained somewhat mainstream recognition with
+branding deals and partnerships. For example, in 2021 it bought the naming rights for the Miami Heat’s home arena. FTX also got its name branded on Major League
+Baseball umpires’ polos, and it partnered with celebrities like Tom Brady and his ex-wife, Gisele Bündchen, as well as Steph Curry, Shaquille O’Neal and Naomi
+Osaka, among others. He also had close ties to U.S. regulators and government officials, many of whom he donated to.', 'SBF’s trial starts soon, but how did he
+— and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)\nregulators and government officials, many of whom he donated to.\n\nBankman-Fried was even
+compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth).\n\nBut in early November 2022, that all
+changed.\n\nFTX’s collapse\n\nConcerns surrounding FTX’s liquidity grew after CoinDesk published a copy of Alameda’s balance sheet, showing the firm held $14.6
+billion in assets and $8 billion in liabilities as of June 30, 2022.\n\nBut there was a problem: The report showed Alameda’s largest asset was $3.66 billion of
+“unlocked FTT” and $2.16 billion of “FTT collateral.” FTT was the token behind FTX.\n\nThe balance sheet showed that the $5.82 billion in FTT tokens that
+Alameda owned was 193% higher than the total FTT market cap, which was about $3 billion at the time.', 'SBF’s trial starts soon, but how did he — and FTX — get
+here? (TechCrunch, 2023-10-01T14:00:29+00:00)\nThat means it purported to have more FTT tokens on its balance sheet than what existed in the world.\n\nAround
+the same time it was exposed, the world’s largest crypto exchange, Binance, started pulling out its remaining $2.1 billion equivalent of cash in BUSD and FTT.
+(It had an equity position in FTX from 2019 to 2021.) This essentially triggered a bank run on FTX.\n\nFTX and Alameda filed for Chapter 11 bankruptcy in the
+U.S. mid-November 2022. Bankman-Fried resigned, and John J. Ray III, the Enron turnaround veteran, was appointed its new CEO.\n\nBankman-Fried, however,
+maintained his innocence. At The New York Times’ DealBook Summit, he appeared virtually from the Bahamas, saying “I didn’t ever try to commit fraud on anyone; I
+was shocked by what happened this month.”', 'SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)\nU.S.
+Attorney Damian Williams called Bankman-Fried’s alleged crimes “one of the biggest financial frauds in American history,” in a press conference.\n\nThe
+aftermath\n\nFTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal
+criminal charges in relation to the FTX collapse. They’re also facing civil penalties from the U.S. Securities and Exchange Commission (SEC) and Commodity
+Futures Trading Commission (CFTC) alongside the criminal charges. Wang and Ellison plan to cooperate with prosecutors and will be major witnesses in the trial,
+given their close ties to Bankman-Fried, FTX and Alameda.\n\nIn January, Bankman-Fried pleaded not guilty to all counts, which include wire fraud, conspiracy to
+commit money laundering and conspiracy to misuse customer funds. He could face up to 115 years in jail if convicted on all charges.', 'SBF’s trial starts soon,
+but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)\nHe could face up to 115 years in jail if convicted on all charges.\n\nThe crypto
+industry as a whole suffered from FTX’s collapse, which was the first of many. BlockFi filed for Chapter 11 in November 2022, as did Genesis Global Trading in
+January.\n\nWhere we are today\n\nBankman-Fried will be represented by Cohen & Gresser, and Mark Cohen, a high-profile defense attorney and former federal
+prosecutor, will be the lead attorney. If that name sounds familiar, it might be because he also represented Ghislaine Maxwell in her sex trafficking trial
+related to Jeffrey Epstein. He requested an early release for Bankman-Fried but was denied.\n\nWith the trial beginning, we’re witnessing how FTX’s story ends.
+But what’s on our mind is what happens to the investors and creditors affected by the collapse? And what happens to the billions in crypto assets tied up in
+legal proceedings?']
+connected_entities: ['The New York Times', 'FTX collapse', 'SBF', 'SBF’s trial', 'Series C round', 'Gisele Bündchen', 'Shaquille O’Neal', 'Naomi Osaka', 'Warren
+Buffet', 'CoinDesk', 'FTX’s collapse', 'liquidity', 'FTT tokens', 'BUSD', 'Chapter 11 bankruptcy', 'bank run on FTX', 'John J. Ray III', 'DealBook Summit',
+'Damian Williams', 'Gary Wang', 'Caroline Ellison', 'Bankman-Fried’s trial', 'Wang and Ellison pleaded guilty to federal criminal charges', 'Bankman-Fried
+pleaded not guilty', 'financial fraud', 'conspiracy to commit money laundering', 'conspiracy to misuse customer funds', 'civil penalties', 'federal criminal
+charges', 'BlockFi Chapter 11 filing', 'Genesis Global Trading', 'Genesis Global Trading Chapter 11 filing', 'Cohen & Gresser', 'Ghislaine Maxwell', 'sex
+trafficking trial', 'all charges', 'crypto assets', 'legal proceedings', 'Bankman-Fried', 'crypto', 'Mark Cohen', 'Alameda Research', 'Alameda', 'Miami Heat',
+'FTT', 'government officials', 'wire fraud', 'Bahamas', 'Enron', 'FTX', 'Major League Baseball', 'Press conference', 'Sam Bankman-Fried', 'BlockFi', 'Tom
+Brady', 'Binance', 'Commodity Futures Trading Commission', 'U.S. Securities and Exchange Commission', 'crypto industry', 'U.S. regulators', 'Jeffrey Epstein',
+'U.S.', 'fraud', 'Steph Curry']
+</item 2>
+
+<item 3>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Here are the hits:
+
+Bankman-Fried gave interviews freely — and quickly rose to public prominence in the industry. Though FTX hadn’t been in the business as long as competing
+exchanges such as Coinbase, Kraken, or Gemini, Bankman-Fried positioned himself as an important, boyish face for crypto. (At one point, Bankman-Fried told a
+colleague at FTX that “I honestly think it’s negative EV [this may mean “expected value,” as in poker] for me to cut my hair. I think it’s important for people
+to think I look crazy.”)
+
+Because he was so successful at this kind of public relations, his fall from grace was another mark against an industry that was already roiled by bankruptcies
+and scandals. Some additional trouble for the crypto industry is likely to come from one crucial element of the fraud trial — the part where the government must
+prove intent.
+
+The first part of proving the government’s case is pretty simple and a little boring: prosecutors must show that certain transactions took place.
+</item 3>
+
+<item 4>
+Graph query row:
+title: In the end, the FTX trial was about the friends screwed along the way
+publisher: The Verge
+passages: ['In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)\nSure, Sam Bankman-Fried’s trial has
+revealed that FTX was basically a seething mass of scams. But it has also revealed how Bankman-Fried blew up the lives of the people who are closest to
+him.\n\nOf course everyone who had money trapped on the FTX exchange when it collapsed — as the result of Bankman-Fried’s trading firm Alameda Research
+purloining its customers’ funds — had their lives altered. Even if they are made whole by the bankruptcy proceedings, that’s still money that they should have
+had access to at any time they wanted it. That may mean houses that weren’t purchased, medical procedures that were left undone, and life savings lost.\n\nThere
+is a simultaneous drama of ruined lives playing out in the courtroom\n\nBankman-Fried is charged with seven counts: two counts of wire fraud and five conspiracy
+charges. As we near the end of the prosecution’s case, I have been struck by how bizarre it all is.', 'In the end, the FTX trial was about the friends screwed
+along the way (The Verge, 2023-10-26T12:00:00+00:00)\nAll the co-conspirators seem oddly younger than their years, as though they got stuck in the “math camp
+forever” environment Bankman-Fried created for them and simply failed to grow up.\n\nThe prosecution has made a strong case that Bankman-Fried presided over the
+various forms of fraud that played out at Alameda Research and FTX, orchestrating some of it and engaging in some of it directly. In the process of making this
+case, there is a simultaneous drama of ruined lives playing out in the courtroom.\n\nEveryone who loved Bankman-Fried most in the world is now caught up in the
+case. We have:\n\nAdam Yedidia, Bankman-Fried’s college roommate, who testified with immunity because he was concerned he may have unknowingly worked on code
+that contributed to the fraud. “I love you Sam,” he texted at one point. “I’m not going anywhere.” That was before he realized FTX had stolen customer funds —
+at which point, he resigned.', 'In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)\nThat was before he
+realized FTX had stolen customer funds — at which point, he resigned.\n\nGary Wang, the co-founder of FTX and Alameda Research and another college roommate. He
+took the stand after Yedidia and sang like a canary about the secret privileges he’d created for Alameda in the FTX code.\n\nNishad Singh, a longtime family
+friend, who copped to what sounded an awful lot like classic embezzlement. He said he’d backdated transactions on FTX to help create doctored balance sheets to
+show to investors. He pleaded guilty to six charges, including wire fraud, money laundering, and conspiracy counts around his political donations.\n\nCaroline
+Ellison, Bankman-Fried’s ex-girlfriend. She told us about the seven phony balance sheets she’d created. She was clear: Alameda took customer funds;
+Bankman-Fried knew about it and even invested them against her advice.\n\nJoe Bankman, Bankman-Fried’s father.', 'In the end, the FTX trial was about the
+friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)\nJoe Bankman, Bankman-Fried’s father. He is among the people included in the “small group
+chat,” the Signal group where the FTX inner circle strategized during the exchange’s last days.\n\nBarbara Fried’s political action committee, Mind the Gap. It
+is among the entities that received FTX customer money as political donations. Fried and Bankman lived together in a Bahamas house purchased for them using FTX
+investor funds, according to a financial expert called by the prosecution; in a lawsuit filed by FTX’s bankruptcy estate, Bankman and Fried are alleged to have
+been given $10 million of FTX customer funds.\n\nGabe Bankman-Fried’s nonprofit, Guarding Against Pandemics, which got millions from FTX. He was also in a
+Signal group chat, Donations Processing, that Singh says was used to coordinate the transfer of FTX and Alameda money to various political causes. In that chat,
+he can be seen recommending some donations be made “in the dark” to avoid public relations headaches.', 'In the end, the FTX trial was about the friends screwed
+along the way (The Verge, 2023-10-26T12:00:00+00:00)\nSingh also said Gabe had an assistant fly to the Bahamas with a stack of blank checks for Singh to
+sign.\n\nWang, Singh, and Ellison are now felons. Even if they never do time — and they may very well be imprisoned or subjected to house arrest — their lives
+are irrevocably changed, not least by whatever restitution requirements they are subjected to. They are barred from taking certain kinds of jobs. And of course,
+there is the publicity. Bankman, Fried, and Gabe Bankman-Fried’s reputations are tarnished; in the political arenas where they once operated, they are suddenly
+undesirable.\n\nIt is a Greek tragedy, precipitated by one man’s character flaw: the arrogance of Sam Bankman-Fried.', 'In the end, the FTX trial was about the
+friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)\nThe general sense I got, from the testimony of Bankman-Fried’s former friends, was that
+things just kept escalating\n\nDuring Yedidia’s testimony, we were shown a photograph in court: former President Bill Clinton and former Prime Minister Tony
+Blair onstage in suits next to Bankman-Fried, in a rumpled T-shirt and cargo shorts. Sure, dressing down is a staple of Silicon Valley startup culture — and a
+sign of its swagger. The defense counsel tried to elicit testimony from Yedidia that the cargo shorts were evidence of Bankman-Fried’s humility, but the
+photograph seemed to signify just the opposite: that the man in cargo shorts is so important, he doesn’t need to dress up, even to meet former world
+leaders.\n\nNow, in court, Bankman-Fried is wearing a suit.\n\nIn 2019, just months after FTX was founded, Wang oversaw code called “allow_negative” that let
+Alameda Research avoid being liquidated by FTX’s risk management. It was turned on in July.', 'In the end, the FTX trial was about the friends screwed along the
+way (The Verge, 2023-10-26T12:00:00+00:00)\nIt was turned on in July. No other customer trading on FTX had “allow_negative” privileges — only Alameda. Wang’s
+testimony suggests that the fraud at FTX started very early since the same day that allow_negative was switched on, Bankman-Fried tweeted that Alameda’s account
+“was like everyone else’s.”\n\nThe general sense I got, from the testimony of Bankman-Fried’s former friends, was that things just kept escalating. For
+instance, Alameda Research first had a negative balance in late 2019, Wang testified. Wang testified that he heard Bankman-Fried tell another trader that it was
+okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue. A little later, Wang discovered that
+Alameda was negative by $50 million more than FTX’s revenue. Bankman-Fried told him it was fine, and it just didn’t account for the FTT token that the two of
+them had launched. Wang trusted him.', 'In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)\nWang
+trusted him.\n\nWang also set Alameda Research up with an enormous line of credit, unmatched by anyone else on FTX. Ultimately, the number was $65 billion — the
+result of repeated increases as Alameda Research repeatedly ran up against its credit limit. This line of capital wasn’t visible to auditors, Ellison testified.
+That credit line was used primarily for trading because it “allowed us to make profitable trades we couldn’t have made otherwise,” Ellison testified.\n\n“Over
+time, it was something I became more comfortable with.”\n\nWang’s testimony revealed how the fraud got bigger, little by little. First, it was okay to dip into
+FTX’s profits. Then, it was okay to take more. Then, it was okay to take even more. First, it was a little line of credit just to provide liquidity. Then a
+bigger one. Then an effectively limitless one.', 'In the end, the FTX trial was about the friends screwed along the way (The Verge,
+2023-10-26T12:00:00+00:00)\nThen a bigger one. Then an effectively limitless one.\n\nEllison testified to something similar, choking back tears: “When I started
+working at Alameda, I don’t think I would have believed you if you told me I would be sending false balance sheets to our lenders or taking customer money, but
+over time, it was something I became more comfortable with.”\n\nEllison’s tenure as CEO of Alameda Research was an exercise in optics, she testified. Alameda
+Research was, by then, FTX’s sin-eater. When FTX took a loss in the hundreds of million dollars because a trader had exploited its system, Wang moved that loss
+onto Alameda’s balance sheet. FTX’s “insurance fund,” meant to keep traders from getting stuck with other traders’ losses, was totally made up — Alameda simply
+picked up the tab.\n\nEven that wasn’t good enough.', 'In the end, the FTX trial was about the friends screwed along the way (The Verge,
+2023-10-26T12:00:00+00:00)\nEven that wasn’t good enough. Singh testified to sprucing up FTX’s balance sheet with backdated transactions in December 2021 to
+push FTX’s revenue “over the line” to $1 billion. By the time Singh found out about the use of customer money, in 2022, he was already compromised.\n\nAt every
+turn, the scams at FTX and Alameda led back to making Bankman-Fried more important\n\nIn Singh’s case, it wasn’t just balance sheets he was fiddling with — it
+was also the American political system. By coordinating with Gabe Bankman-Fried, Singh had funneled money to a number of political causes. That money came from
+“loans,” which weren’t really loans since he hadn’t signed any term sheets.\n\nWhat was the goal here? What was accomplished? Singh testified to more than a
+billion dollars spent on celebrity endorsements, which made FTX very famous — even though the futures platform didn’t operate in the US.', 'In the end, the FTX
+trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)\nThe political donations gave Bankman-Fried influence in the highest
+echelons of power. Ellison testified to Bankman-Fried’s venture investments, which gave him more dominance in the tech world. At every turn, the scams at FTX
+and Alameda led back to making Bankman-Fried more important.\n\nThe pie chart that accompanied expert witness Peter Easton’s testimony. Image: The prosecution’s
+exhibit 1045\n\nThis was backed up by expert testimony from Notre Dame accounting professor Peter Easton, who’d also assisted in investigating Enron and
+WorldCom. In a pie chart that showed how he’d traced funds for the $11.3 billion liability that Ellison, Singh, Wang, and Bankman-Fried had known about in June
+2022, we saw that $1.2 billion was a loan repayment to crypto lender Genesis.', 'In the end, the FTX trial was about the friends screwed along the way (The
+Verge, 2023-10-26T12:00:00+00:00)\nA substantial chunk had been spent on various investments, including in the celebrity-connected venture firm K5, trading firm
+Modulo (co-founded by one of Bankman-Fried’s ex-girlfriends), and AI company Anthropic.\n\nAnother $413 million had gone directly to Bankman-Fried himself,
+through his wholly-owned company Paper Bird. “Outflows to insiders,” which suggested Singh’s not-quite-loans were included, was $192 million; real estate was
+another $228 million; and the donations to Gabe Bankman-Fried’s Guarding Against Pandemics, combined with the philanthropy from the FTX Foundation, totaled less
+than $40 million.\n\nIt is easy to lie with words and harder to lie with money.', 'In the end, the FTX trial was about the friends screwed along the way (The
+Verge, 2023-10-26T12:00:00+00:00)\nIt is easy to lie with words and harder to lie with money. Bankman-Fried went around telling people that he wanted to make a
+lot of money to give it away, an idea of the Effective Altruism movement that Bankman-Fried affiliated himself with — but the amount of money he funneled to his
+Paper Bird vehicle alone was ten times the size of his philanthropic spending as outlined by Easton. And it was all vastly outweighed by his investments — the
+places where he could prove he was very smart by investing in the right companies early.\n\nAnd in brief, explosive testimony, former FTX lawyer Can Sun
+demonstrated what Bankman-Fried’s tactic was. During the days in November when the exchange imploded, Bankman-Fried was trying to raise money from Apollo, the
+private equity group. Apollo wanted an explanation for what had happened, and so Bankman-Fried came to Sun to ask him to come up with justifications for the
+missing funds.', 'In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)\nThe defense has struggled to
+shake the credibility of witnesses such as Yedidia, Wang, and Ellison\n\nThat “basically confirmed my suspicions that had been rising all day” that
+Bankman-Fried had purloined the funds, Sun said. He ran Bankman-Fried through possible explanations, including a margin loan program, and explained that none of
+them could fit the actual situation — for instance, Alameda had borrowed more from FTX than had ever been in the margin loan program. He said Bankman-Fried
+acknowledged their conversation with a “yup, yup.” “I was expecting a bigger response, but it was very muted,” Sun said.\n\nAfter that, Singh spilled the beans:
+Alameda had withdrawn assets that included the customer funds, Sun testified. He quit the next day. Like Yedidia, Sun testified with immunity.\n\nIn the
+courtroom, we were treated to a Good Morning America appearance by Bankman-Fried on December 1st, 2022.', 'In the end, the FTX trial was about the friends
+screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)\nIn it, Bankman-Fried tried to justify the missing funds through the margin loan program. It was
+such a flimsy excuse that even George Stephanopoulos could see through it.\n\nDid Bankman-Fried really think he could get away with it all? He must still think
+so, or he would not be dragging his closest companions’ names through the mud in a jury trial. Throughout the entire prosecution’s case, the defense has
+struggled to shake the credibility of witnesses such as Yedidia, Wang, and Ellison. The hits the defense made on Singh didn’t make me doubt the overall truth of
+his story — they just made me think that Singh was kind of self-serving and trying to secure himself a lenient sentence.']
+connected_entities: ['Easton', 'Gary Wang', 'Caroline Ellison', 'Bankman-Fried', 'Adam Yedidia', 'Alameda Research', 'Alameda', 'bankruptcy proceedings', 'wire
+fraud', 'conspiracy charges', 'scams', 'Nishad Singh', 'embezzlement', 'money laundering', 'conspiracy', 'political donations', 'Joe Bankman', 'small group
+chat', 'Signal', 'FTX inner circle', 'Barbara Fried', 'Mind the Gap', 'Bahamas', 'house', 'FTX bankruptcy estate', "lawsuit filed by FTX's bankruptcy estate",
+'Guarding Against Pandemics', 'Donations Processing', 'political causes', 'Gabe Bankman-Fried', 'Bankman', 'Fried', 'the Bahamas', 'arrogance', 'Bill Clinton',
+'Tony Blair', 'Silicon Valley startup culture', 'allow_negative', 'line of credit', 'Ellison', 'insurance fund', 'false balance sheets', 'taking customer
+money', 'Singh', 'futures platform', 'American political system', 'celebrity endorsements', 'Peter Easton', 'Enron', 'WorldCom', 'K5', 'Modulo', 'Paper Bird',
+'FTX Foundation', 'Effective Altruism movement', 'Can Sun', 'Apollo', 'missing funds', 'Sun', 'margin loan program', 'Good Morning America appearance',
+'customer funds', 'purloining funds', 'FTX trial', 'George Stephanopoulos', 'the defense', 'FTX', 'Wang', 'Yedidia', 'Anthropic', 'Sam Bankman-Fried',
+'prosecution', 'FTT token', 'the prosecution', 'Silicon Valley', 'Notre Dame', 'fraud', 'Genesis']
+</item 4>
+
+<item 5>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+When he was evaluating the exchange, he thought the sheer volume of users was important, too — at the time, FTX was among the top three biggest exchanges. Plus,
+major VC firms had invested, and “they don’t commit hundreds of millions without doing due diligence, checking the books, the accountancy of the firm, going
+through several compliance process[es], so that was a vote of confidence for me,” Juilliard said. (Evidently he had not paid attention to the Elizabeth Holmes
+trial.)
+
+He also noted FTX’s glossy ads — featuring Gisele Bündchen, for instance — suggested a very high budget. It wouldn’t make sense to spend that much money unless
+FTX had very strong financials, Juilliard figured. He opened an account, transferred in both regular money and cryptocurrency, and used the exchange to execute
+his plan: buying Bitcoin to sell back in five to ten years at higher prices.
+</item 5>
+
+<item 6>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+When he found it, he was “very surprised!”
+
+Besides the two obvious lies Bankman-Fried told on the stand — about Alameda Research’s name and about “allow_negative” — I have been struck by how little he
+seems to know about his own companies. Apparently, Singh, Wang, and Ellison were out there just doing whatever their little hearts desired. Because
+Bankman-Fried was a CEO, but definitely not the kind that pays any attention to money at his crypto trading firm and futures exchange.
+</item 6>
+
+<item 7>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Then, Nishad Singh, about a month after founding Alameda Research. Finally, Caroline Ellison.
+
+Not having a risk team, when you are any kind of financial anything, is certainly a choice
+
+Though Bankman-Fried was the CEO, and also the majority owner, he wanted to be clear: he did not supervise Wang’s direct work. Anyway, after a bunch of wildly
+successful arbitrage — 50 percent to 100 percent annualized returns, per his testimony — he decided to found a cryptocurrency exchange, FTX. He figured he’d
+fail; that there was only a 20 percent chance of success. Bankman-Fried did not define what he expected the time period to be on this estimate, but arguably 20
+percent was a much higher chance of success than FTX would enjoy once Alameda dipped into the customer deposits.
+
+By the way, because he was such a good guy, Bankman-Fried made a point of “periodically” handling support tickets himself.
+</item 7>
+
+<item 8>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+If it seems like his peer group supported him, or worse, fawned over him, that’s a real problem for the industry’s reputation.”
+
+After FTX declared bankruptcy, Bankman-Fried went on an extensive media tour, doing interviews with The New York Times’ Andrew Ross Sorkin and Good Morning
+America. Even under house arrest, he did interviews, including with The New Yorker. Bankman-Fried seemed to think that if he just explained things, everyone
+would understand that what he did was a mistake, not a crime.
+</item 8>
+
+<item 9>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+There was a minimum of word salad today. I don’t know if he was more relaxed, or he’d just been more rehearsed, but I will certainly be watching to see if he
+suddenly becomes much less coherent when Sassoon gets him for the cross.
+
+Here is the story of FTX, from his point of view.
+
+Bankman-Fried, who informed us he’s “somewhat introverted, naturally,” gave us a rather prolonged tour of his pre-Alameda Research life, which I will skip. In
+2017, during a crypto bull run, he started his cryptocurrency trading firm. He knew “basically nothing” about cryptocurrency at the time, he explained, but he
+wanted to do arbitrage on it anyway.
+
+Alameda Research was named for Alameda County in California, which was where its first office was set up. As for its name, here’s what Bankman-Fried said on the
+stand:
+
+Effectively, we wanted to be under the radar at that point in time.
+</item 9>
+
+<item 10>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both
+companies, he said. Bankman-Fried handed the company off to Caroline Ellison and Sam Trabucco, who immediately after being named co-CEO promptly drifted away to
+early retirement. (Quiet quitting king!) Bankman-Fried did remain involved in hedging and risk at Alameda, though.
+
+About that $1 billion of revenue in 2021: Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the
+line” to $1 billion. See, he’d just asked his employees to check and see if there was any source of funds that was missing to get to $1 billion. This testimony
+was especially rambling.
+
+Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?
+</item 10>
+=== END ITEM id=d5ca0098ec80d841 ===
+
+=== ITEM id=a76b8e96ce343dd9 ===
+Gold sentences and facts:
+Sentence 0: Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on.
+  Fact 0.0: Google unveiled new hardware.
+  Fact 0.1: This week was Google's annual hardware event.
+  Fact 0.2: At the event, Google showed off what it has been working on.
+  Fact 0.3: Google is a search and consumer tech giant.
+Sentence 1: Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part.
+  Fact 1.0: Wired removed the article for not meeting its standards.
+  Fact 1.1: The article was widely shared on social media.
+  Fact 1.2: The article was boosted in write-ups at other outlets.
+  Fact 1.3: The degree to which the article was shared and boosted shows how willing people are to accept foul play on Google's part.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content, their readers and ad revenue.
+  Fact 2.2: The case argues that Google does this through anticompetitive means.
+
+Retrieved items:
+<item 1>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 1>
+
+<item 2>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+It is aiming to help any software play nice with ChatGPT and other LLM ecosystems.
+
+What big eyes you have: Adobe continues to push for easier image editing, showing off its Project Stardust as a sneak preview of its next-gen AI photo editing
+engine.
+
+Holding back the tide: Creatives across industries are strategizing in a campaign that targets potential corporate abuse of AI technology. The conglomeration is
+realistic about the ways that musicians and some other creatives could benefit on an individual level from automating parts of their work. The goal is that AI
+tools “become ways for individual humans to make more money, work less, and compete with the corporations that exploit them.”
+
+Tech you can touch
+
+A while back I argued that Apple’s new AR headset is a game-changer for startups. It seems that’s likely the case at the high end. But more in the realm of
+affordability, Meta Quest 3 takes a step closer to mainstream AR/VR, Brian reports.
+</item 2>
+
+<item 3>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The question remains, why do users prefer Google? And if the answer, as Walker says, is that Google is simply better, the question becomes whether that’s down
+to its scale, its longevity, its ubiquity and all the user data it sucks up, which no other company could possibly match.
+
+For the US, which has to prove that Google somehow broke the law to achieve the status quo, this legal case could be an uphill battle. But for the rest of us,
+it offers a rare opportunity for some insight into what the tech giant does with its enormous market share. Is it still focused on being the best? Or, as has
+been alleged, does it use its ubiquity to squeeze us for money even at the expense of product quality? How ‘organic’ are Google’s results? This month, Wired
+posted an opinion article by lawyer and privacy advocate Megan Gray, which alleged that Google had accidentally revealed during the trial that it manipulates
+people’s search queries for maximum ad revenue.
+</item 3>
+
+<item 4>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+In addition to damages, the suit is asking for an injunction that would require Google to obtain consent from publishers to use their website data to train its
+general artificial intelligence products including Google’s own and those of rivals. It also asks Google to allow publishers who opt out of SGE to still show up
+in Google search results, among other things.
+
+The U.S. lawsuit follows an agreement Google reached last month with the Canadian government which would see the search giant paying Canadian media for use of
+their content. Under the terms of the deal, Google will provide $73.5 million (100 million Canadian dollars) every year to news organizations in the country,
+with funds distributed based on the news outlets’ headcount. Negotiations with Meta are still unresolved, though Meta began blocking news in Canada in August,
+in light of the pressure to pay for the content under the new Canadian law.
+
+The case also arrives alongside the filing of the U.S.
+</item 4>
+
+<item 5>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 5>
+
+<item 6>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+And if you have, our thanks. Now, let’s get on with the news.
+
+Most read
+
+Altman backs teen entrepreneurs: Sam Altman is among the backers of an AI startup, founded by two teenagers, that’s aiming to assist businesses in automating
+workflows in “previously unexplored” ways. Manish writes that Induced AI, founded this year, lets businesses input their back-office tasks in plain English and
+converts the instructions to pseudo-code in real time.
+
+Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on.
+Christine wrote up a thorough roundup of the news, which included updates on the Pixel 8 and Pixel 8 Pro, Pixel Fold, Android 14, Pixel Buds, Google Assistant,
+Bard, Pixel Watch 2 and other goodies.
+</item 6>
+
+<item 7>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+When online magazine The Atlantic modeled what would happen if Google integrated AI into search, it found that 75% of the time the AI would answer the user’s
+query without requiring a click-through to its website, losing it traffic. This could have a major impact on publishers’ traffic going forward, as Google today
+drives nearly 40% of their traffic, according to data from Similarweb.
+
+Some publishers are now trying to get ahead of the problem. For example, Axel Springer just this week inked a deal with OpenAI to license its news for AI model
+training. But overall, publishers believe they’ll lose somewhere between 20-40% of their website traffic when Google’s AI products fully roll out, The WSJ’s
+report noted.
+
+The lawsuit reiterates this concern, claiming that Google’s recent advances in AI-based search were implemented with “the goal of discouraging end-users from
+visiting the websites of Class members who are part of the digital news and publishing line of commerce.”
+</item 7>
+
+<item 8>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+Not Sonos fast there: Audio company Sonos scored a big $32.5 million win against Google a while back. Now it transpires that the company’s patents were deemed
+unenforceable and invalid. Whoops. A federal judge threw out the $32.5 million win this week.
+
+When it clicks, it really clicks: We took a deep look at Pixel 8, and our team discovered that it delivers solid performance and design upgrades. The camera got
+a particularly enthusiastic shout-out, with Darrell declaring that Google’s Pixel 8 Pro camera is the new mobile photography champ, and Brian waxing lyrical
+about the phone’s picture-snapper in “The camera’s still the thing.”
+
+Who needs computers anyway?: It seems like all our mobile devices may be starting to cannibalize sales of personal computers — Ron reports that PC shipments
+decline slows in Q3 2023 and that Apple’s sales plunge over 23%.
+
+Let’s get together
+
+Reddit’s API-powered chaos continues, but it appears that things are starting to resolve a little.
+</item 8>
+
+<item 9>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 9>
+
+<item 10>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 10>
+=== END ITEM id=a76b8e96ce343dd9 ===
+
+=== ITEM id=24ff825e535e88bb ===
+Gold sentences and facts:
+Sentence 0: Under American Todd Boehly’s co-ownership, expanding Chelsea’s profile and reach in the U.S. would make sense, especially with USWNT internationals Catarina Macario and Mia Fishel playing their club football there — and CBS Sports holding WSL rights.
+  Fact 0.0: Todd Boehly is American.
+  Fact 0.1: Todd Boehly is a co-owner of Chelsea.
+  Fact 0.2: Expanding Chelsea's profile and reach in the U.S. would make sense under Todd Boehly's co-ownership.
+  Fact 0.3: Catarina Macario is a USWNT international.
+  Fact 0.4: Mia Fishel is a USWNT international.
+  Fact 0.5: Catarina Macario and Mia Fishel play their club football in the U.S.
+  Fact 0.6: CBS Sports holds WSL rights.
+Sentence 1: It was 24 September, Chelsea’s second home Premier League defeat on the spin after the one against Nottingham Forest and they were booed off again.
+  Fact 1.0: The match was on 24 September.
+  Fact 1.1: The match was Chelsea's second home Premier League defeat in a row.
+  Fact 1.2: The defeat followed the one against Nottingham Forest.
+  Fact 1.3: Chelsea were booed off again.
+Sentence 2: Late checks will be made on the fitness of Reece James, Axel Disasi and Nicolas Jackson, while Benoit Badiashile could return from a long-term injury.
+  Fact 2.0: Late checks will be made on the fitness of Reece James.
+  Fact 2.1: Late checks will be made on the fitness of Axel Disasi.
+  Fact 2.2: Late checks will be made on the fitness of Nicolas Jackson.
+  Fact 2.3: Benoit Badiashile could return from a long-term injury.
+
+Retrieved items:
+<item 1>
+Chelsea and England star Cole Palmer: ‘The most annoying thing about moving down south? The traffic’ (The Independent - Sports, 2023-11-15T22:32:05+00:00)
+That is an understatement. And if there seemed a risk involved in swapping the stability of City for the seeming madhouse of Stamford Bridge, there was evidence
+of more cool-headed thinking from a 21-year-old. Chelsea have been manic buyers but he said: “I did look at how many players were there but I don’t think people
+realise how many players they actually got rid off, as well.”
+
+The departures of, among others, Mason Mount, Kai Havertz, Christian Pulisic and Joao Felix, meant there could be opportunities in the attacking midfield
+positions. “I looked at the squad and thought: ‘If I go there and know what I can do then I’ll have the chance of playing’,” he said. “And thankfully it’s
+happened.” If there seemed plenty of traffic in the queue for places in Southgate’s attack, Palmer seems to have accelerated past several rivals. Now an England
+debut could follow in the next week.
+</item 1>
+
+<item 2>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+Soccer’s planned combined headquarters and national training facility in Georgia. As of yet, there’s no targeted date set for the move.
+
+Hayes, too, will benefit in ways other than compensation and prestige. She spoke to reporters about looking forward to spending more time with her five-year-old
+son, Harry. She has never been to one of his sports days, picked him up from school or taken him to an after-school club and she wants to do that.
+
+The main visible wrinkle in the process was Chelsea’s surprise move of announcing Hayes’ departure on Saturday, Nov. 4. With the contract not yet finalized and
+U.S. Soccer board approval still needed, Chelsea issued their statement at 11 a.m. ET in the U.S. in which it noted she would leave at the end of the season “to
+pursue a new opportunity outside of the WSL and club football.” The club feared that the news was starting to leak and wanted to share the news on its own.
+</item 2>
+
+<item 3>
+Arteta reveals Pochettino influence on his career | Poch: He is family (Sky Sports, 2023-10-20T21:30:00+00:00)
+Havertz will command particular focus after his early struggles at Arsenal. With just one goal in 12 appearances for the club there are questions about his form
+and role.
+
+Please use Chrome browser for a more accessible video player Ahead of Kai Havertz's return to Stamford Bridge, Sam Blitz takes a forensic look at his tactical
+role at Arsenal
+
+Armando Broja will miss Chelsea's game against Arsenal due to "irritation" in his knee. Late checks will be made on the fitness of Reece James, Axel Disasi and
+Nicolas Jackson, while Benoit Badiashile could return from a long-term injury.
+
+Enzo Fernandez and Moises Caicedo should be available despite travelling to South America during the international break.
+
+Ben Chilwell, Carney Chukwuemeka, Christopher Nkunku, Romeo Lavia, Wesley Fofana and Trevoh Chalobah remain unavailable.
+
+Arsenal will make a late call on the fitness of Bukayo Saka, William Saliba and Leandro Trossard.
+</item 3>
+
+<item 4>
+Chelsea and England star Cole Palmer: ‘The most annoying thing about moving down south? The traffic’ (The Independent - Sports, 2023-11-15T22:32:05+00:00)
+He struck in the Community Shield and the European Super Cup for City, against Arsenal and Tottenham for Chelsea. That big-match temperament may equip him for
+tournament football in an England shirt. So, too, his nerveless penalty-taking.
+
+Palmer in training at St George’s Park this week (PA)
+
+He has, in effect, anointed himself as the spot-kick taker for the £1bn team, taking the ball at Turf Moor to open his Chelsea account. “It was just an in-game
+thing, really,” he said, with a matter-of-fact stance. “Once I scored at Burnley, I just thought: ‘I’ll take them’.” If penalties have been the English disease,
+Palmer has no hesitation when asked if he would be willing to come off the bench as a specialist from 12 yards for a shootout. “Yeah, I would be,” he said.
+</item 4>
+
+<item 5>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+GO DEEPER USWNT's Emma Hayes hire could create a problem in preparation for the Olympics
+
+What’s next for Chelsea?
+
+Questions surrounding Hayes’ future have cropped up previously in her tenure at Chelsea. She was linked to several jobs in the men’s English Football League in
+the past and has always been interested in managing Spain’s national team, although there was never an official conversation with Spain’s federation. So it was
+a question of when, not if, Hayes would leave. Still, news of her decision came as a shock to her staff and players.
+
+A few staff members were told on the morning of Nov. 4 before Chelsea’s away game at Aston Villa kicked off at 12.30 p.m. UK time. Most of the other staff
+members found out with the players in the post-match meeting minutes before the official club statement, which Hayes had no hand in writing and did not even see
+before publication, was released at 3 p.m.
+</item 5>
+
+<item 6>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+There is the possibility of Hayes retaining a connection to the club via some sort of ambassadorial role, but it’s likely contingent upon a lack of conflict
+with the USWNT role and responsibilities. Under American Todd Boehly’s co-ownership, expanding Chelsea’s profile and reach in the U.S. would make sense,
+especially with USWNT internationals Catarina Macario and Mia Fishel playing their club football there — and CBS Sports holding WSL rights.
+
+There is, for now, an immediate task for Hayes to focus on. Chelsea faces off against Real Madrid on Wednesday for their first match of the UWCL Champions
+League group stage. Her full American arrival will not come for another half a year after that.
+
+(Top photo: Julian Finney/Getty Images)
+</item 6>
+
+<item 7>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+Chelsea’s general manager Paul Green will stay at the club. It is unclear whether any other members of Chelsea’s technical staff are expected to depart.
+
+GO DEEPER What next for Chelsea after Emma Hayes?
+
+The relentless nature of managing a club takes its toll and after what will be 12 years at Chelsea come the end of the season, Hayes, a single parent whose
+father died last month, decided that it was the right time for a change, professionally and personally.
+
+Advertisement
+
+“The biggest factors are my son, leaving at the top and giving the club enough time to be able to transition without there being too much disruption,” she said
+in her press conference.
+
+The club has received several applications regarding Hayes’ replacement but has not yet started an official recruitment process. She will meet with Chelsea’s
+technical directors once a week to create a succession plan and will have a say in who takes the job after her.
+</item 7>
+
+<item 8>
+Ten Hag’s gamble pays off against Chelsea as McTominay steals show | Jonathan Liew (The Guardian, 2023-12-06T23:45:56+00:00)
+But he also pops up in the channels, on the wing, either supporting the man in possession or offering himself for the quick switch of play.
+
+Great times for a great guy. But, of course, if you commit a midfielder to this role, then you leave gaps elsewhere. One of the reasons Chelsea found it so easy
+to play through United was that, with the forwards pushed high and McTominay as the secret sauce in the final third, there were open spaces every time they
+played through the press. Chelsea’s goal was a case in point: two simple vertical passes straight through the centre via Mykhailo Mudryk to Cole Palmer, passes
+that McTominay could see coming but could do precious little to stop.
+
+skip past newsletter promotion Sign up to Football Daily Free daily newsletter Kick off your evenings with the Guardian's take on the world of football Privacy
+Notice: Newsletters may contain info about charities, online ads, and content funded by outside parties.
+</item 8>
+
+<item 9>
+Chelsea secure last-eight spot after Raheem Sterling sinks Blackburn (The Guardian, 2023-11-01T22:03:18+00:00)
+It is no wonder Mauricio Pochettino spends most of his time watching Chelsea on the edge of the touchline with his hands clasped tightly in his pockets and a
+tense expression on his face.
+
+Even with his side 2-0 up and cruising against Blackburn thanks to goals from Benoît Badiashile and a rejuvenated Raheem Sterling, the Chelsea manager was a
+bundle of nerves throughout what turned out to be a comfortable victory in the end.
+
+But while the lack of cutting edge that has become a hallmark of the Todd Boehly-era in west London still looms large as he prepares for his first return to
+table-topping Tottenham on Monday night, Pochettino could take heart from Cole Palmer’s brilliant performance as the former Manchester City forward helped to
+dispatch Jon Dahl Tomasson’s inexperienced side.
+</item 9>
+
+<item 10>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+England and Chelsea captain Millie Bright was “devastated,” and most players were understandably sad — many of whom owe their career progression to Hayes — but
+know they still have a job to do this season.
+
+“It’s been a bit of a whirlwind. As a player and a person, I was devastated. I’ve been here nine years under Emma and the things I’ve learned,” Bright said.
+“She’s a mentor, a coach, a friend, a life coach. It’s more than just football playing under her.”
+
+Bright credits Hayes for her on and off-field guidance. (Photo by Marc Atkins, Getty Images)
+
+Hayes’ American assistant Denise Reddy, born in New Jersey, is likely to follow her across the pond. The former United States Under-20 coach has remained
+faithful to her friend of 20 years and voluntarily quit her job as assistant at Chicago Red Stars in 2010 when Hayes was fired as head coach. Chelsea’s general
+manager Paul Green will stay at the club.
+</item 10>
+=== END ITEM id=24ff825e535e88bb ===

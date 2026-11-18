@@ -1,0 +1,63 @@
+[
+{"id": "d3c210ad2d8f08e1", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "If the debt continues to rise more than the economy, risks will increase"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "If the debt continues to rise more than the economy, risks will increase, and the government may “crowd out” private investment"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "the government may “crowd out” private investment as it competes with the private sector for funds to service its debt"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "the government may “crowd out” private investment as it competes with the private sector for funds to service its debt"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "We worry about our debt-to-GDP ratio in the Philippines"}, {"item": 4, "quote": "President Ferdinand Marcos, Jr."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63%"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "as it stands at about 63% and that’s a little high for us"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "as it stands at about 63% and that’s a little high for us and it is not ideal"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 4, "quote": "President Ferdinand Marcos, Jr."}, {"item": 3, "quote": "told members of the US-ASEAN Business Council who visited Malacañang"}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 3, "quote": "told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)"}]}
+]},
+{"id": "2fae177eb9604f42", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "It could, though, mean some sort of progress"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "It could, though, mean some sort of progress, if the Manchester born Ratcliffe follows through with his vision to revolutionise the club"}]},
+{"fact": "0.2", "status": "contradicted", "evidence": [{"item": 3, "quote": "the Manchester born Ratcliffe"}, {"item": 4, "quote": "Oldham-born Ratcliffe"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "follows through with his vision to revolutionise the club"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Manchester United out of Europe after defeat to Bayern Munich"}, {"item": 9, "quote": "have again gone out of the Champions League at the group stage"}]},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "c1114d82e6dfeca3", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Their 0-3 and 1-4 starts are distant memories"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "But they've also seen the fourth-lowest ADOT from tight ends (5.0 yards per target)"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "the fourth-lowest ADOT from tight ends (5.0 yards per target)"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "VIKINGS: Allow the fewest yards per catch to rival tigh ends (5.9 yards)"}, {"item": 3, "quote": "almost as if teams know they won't be able to succeed on downfield shots against them"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "against them (zero completions of 20-plus yards from tight ends)"}]}
+]},
+{"id": "475be96ccf4c2112", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "And if the Braves let this be the story of their series"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "And if the Braves let this be the story of their series, that's on them."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "the new show steps its game up considerably"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 7, "quote": "by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity"}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 7, "quote": "by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity"}]}
+]},
+{"id": "889333ba2c216648", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move"}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "4028e3ea6dc09d24", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 7, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland"}]}
+]}
+]

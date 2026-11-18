@@ -1,0 +1,55 @@
+[
+  {"id": "664ebce4e898509c", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "and how Google tried to have Chrome preinstalled on iPhones"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28,"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "from companies including Apple, Samsung and Mozilla"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "from companies including Apple, Samsung and Mozilla, The Verge reports."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "d3235662e0a61ca9", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "It will attempt to argue that Google restrains competition within two separate markets"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "including the distribution of apps to Android users"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "the market for payment processing solutions for content inside Android apps"}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]}
+  ]},
+  {"id": "910b453f00437988", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "He revealed that he made a friendship bracelet"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "a fan tradition at her concerts"}, {"item": 5, "quote": "If you're up on Taylor Swift concerts, there are friendship bracelets"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "I wanted to give Taylor Swift one with my number on it"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "with his number on it to give to her"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "with his number on it to give to her, seemingly expressing his interest in Swift"}]},
+    {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 9, "quote": "While on the Pat McAfee show, Kelce discussed the rumors"}, {"item": 9, "quote": "He then admitted that he invited Swift to one of his games"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Sept. 24: Swift attends Chiefs game"}, {"item": 4, "quote": "Swift took Kelce up on his offer"}]},
+    {"fact": "2.0", "status": "missing", "evidence": []}
+  ]},
+  {"id": "66583e59914fbf7b", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "b9105732669de3f5", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+  ]},
+  {"id": "eb3aef9ec0391d65", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Even with those tools, some of the businesses selling on Amazon might still choose to set prices that aren’t competitive,” Zapolsky said."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "That means eBay will give you an eBay coupon for the difference in price between what you bought the item for and what the competitor is selling it for"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "plus an additional 10 percent of that price difference"}]}
+  ]}
+]

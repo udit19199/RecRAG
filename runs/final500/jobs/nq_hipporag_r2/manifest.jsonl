@@ -1,0 +1,1 @@
+{"dataset": "natural_questions", "method": "hipporag", "rep": "2", "shard": 0, "shards": 1, "exit": 0, "run_dir": "/data/workspace/RecRAG/runs/final500/natural_questions/hipporag/20261114T073309037892Z", "log": "/data/workspace/RecRAG/runs/final500/jobs/nq_hipporag_r2/natural_questions_hipporag_r2_s0.log"}

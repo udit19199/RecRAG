@@ -1,0 +1,592 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "d13508ebf85eb671",
+   "kind": "answer",
+   "question": "who was the league of nations made up of",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Member nations that joined the League of Nations."
+  },
+  {
+   "id": "f4021f75ce7f09c7",
+   "kind": "answer",
+   "question": "where did the easter eggs and bunny come from",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The Easter Bunny comes from German Lutheran folklore; Easter eggs stem from ancient fertility symbols and customs surrounding Lent."
+  },
+  {
+   "id": "04efee08fa7f79e4",
+   "kind": "answer",
+   "question": "when is the fourth movie of the divergent series coming out",
+   "gold_answers": [
+    "never made"
+   ],
+   "model_answer": "It was cancelled."
+  },
+  {
+   "id": "e2a39aed8d83559d",
+   "kind": "answer",
+   "question": "where is episode 13 of attack on titan",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "“Primal Desire: The Struggle for Trost, Part 9”"
+  },
+  {
+   "id": "1ecf1ceeeb6e8c2c",
+   "kind": "answer",
+   "question": "where does the autobahn have no speed limit",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "On unrestricted sections of Germany’s Autobahn."
+  },
+  {
+   "id": "0dbac90b7a6f0e6c",
+   "kind": "answer",
+   "question": "who got what in the compromise of 1877",
+   "gold_answers": [
+    "The Compromise of 1877 was an informal , unwritten deal that settled the intensely disputed 1876 U.S. presidential election . It resulted in the United States federal government pulling the last troops out of the South , and formally ended the Reconstruction Era . Through the Compromise , Republican Rutherford B. Hayes was awarded the White House over Democrat Samuel J. Tilden on the understanding that Hayes would remove the federal troops whose support was essential for the survival of Republican state governments in South Carolina , Florida and Louisiana . The compromise involved Democrats who controlled the House of Representatives allowing the decision of the Electoral Commission to take effect . The outgoing president , Republican Ulysses S. Grant , removed the soldiers from Florida . As president , Hayes removed the remaining troops from South Carolina and Louisiana . As soon as the troops left , many white Republicans also left , and the `` Redeemer '' Democrats took control . They already dominated other state governments in the South . What was exactly agreed is somewhat contested as the documentation is insufficient ."
+   ],
+   "model_answer": "Hayes got the presidency; Southern Democrats got federal troop withdrawal and “home rule” in the South."
+  },
+  {
+   "id": "7716f105c78ba97f",
+   "kind": "answer",
+   "question": "where does the saying like a boss come from",
+   "gold_answers": [
+    "`` Like a Boss '' is a song written and recorded by comedy hip hop troupe The Lonely Island for their debut studio album Incredibad . The song is a parody of the first official single from Slim Thug 's first album Already Platinum , also named `` Like a Boss '' . The song had multiple versions , including an audio - only that did not have the celebrity interviewer and a clean version that was produced in both audio and video . In 2011 it was also subject to a lawsuit from the producers of the song who claimed they never received proper compensation for their work ."
+   ],
+   "model_answer": "Slim Thug’s song “Like a Boss”; The Lonely Island’s parody popularized the phrase."
+  },
+  {
+   "id": "5fb64e424b86defb",
+   "kind": "answer",
+   "question": "was nightmare before christmas originally a disney movie",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes—Disney developed it, but released it under Touchstone Pictures."
+  },
+  {
+   "id": "ea8003c08acbb8a8",
+   "kind": "answer",
+   "question": "disney characters for every letter of the alphabet",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Ariel, Belle, Cinderella, Donald Duck, Elsa, Figaro, Goofy, Hercules, Iago, Jasmine, King Louie, Lilo, Mickey Mouse, Nemo, Olaf, Pinocchio, Queen of Hearts, Rapunzel, Simba, Tinker Bell, Ursula, Vanellope, Winnie the Pooh, Xehanort, Yzma, Zazu."
+  },
+  {
+   "id": "f76cf7a81cecde15",
+   "kind": "answer",
+   "question": "when will the next episode of my next guest needs no introduction",
+   "gold_answers": [
+    "May 31, 2018"
+   ],
+   "model_answer": "No release date has been announced."
+  },
+  {
+   "id": "a085a9a50d9ed313",
+   "kind": "answer",
+   "question": "why did government sponsored surveys and land acts encourage migration to the west",
+   "gold_answers": [
+    "The Homestead Acts were several United States federal laws that gave an applicant ownership of land , typically called a `` homestead , '' at no cost . In all , more than 270 million acres of public land , or nearly 10 % of the total area of the U.S. , was given away free to 1.6 million homesteaders ; most of the homesteads were west of the Mississippi River .",
+    "An extension of the Homestead Principle in law , the Homestead Acts were an expression of the `` Free Soil '' policy of Northerners who wanted individual farmers to own and operate their own farms , as opposed to Southern slave - owners who wanted to buy up large tracts of land and use slave labor , thereby shutting out free white men ."
+   ],
+   "model_answer": "They made western land easier and cheaper to claim and settle."
+  },
+  {
+   "id": "7aec172f2253494a",
+   "kind": "answer",
+   "question": "what events occurred in the fighting at seas and near the great lakes",
+   "gold_answers": [
+    "The Battle of Lake Erie , sometimes called the Battle of Put - in - Bay , was fought on 10 September 1813 , in Lake Erie off the coast of Ohio during the War of 1812 . Nine vessels of the United States Navy defeated and captured six vessels of the British Royal Navy . This ensured American control of the lake for the rest of the war , which in turn allowed the Americans to recover Detroit and win the Battle of the Thames to break the Indian confederation of Tecumseh . It was one of the biggest naval battles of the War of 1812 ."
+   ],
+   "model_answer": "The U.S. and Britain fought naval battles, including the American victory at Lake Erie."
+  },
+  {
+   "id": "82c90737c8d5333b",
+   "kind": "answer",
+   "question": "cast of law & order special victim unit",
+   "gold_answers": [
+    "Christopher Meloni",
+    "Mariska Hargitay",
+    "Richard Belzer",
+    "Dann Florek",
+    "Michelle Hurd",
+    "Stephanie March",
+    "Ice-T",
+    "Tamara Tunie",
+    "B. D. Wong",
+    "Diane Neal",
+    "Adam Beach",
+    "Michaela McManus",
+    "Danny Pino",
+    "Kelli Giddish",
+    "Raúl Esparza",
+    "Peter Scanavino"
+   ],
+   "model_answer": "Mariska Hargitay, Ice-T, Peter Scanavino, Octavio Pisano, and Juliana Aidén Martinez"
+  },
+  {
+   "id": "211d77361f90925b",
+   "kind": "answer",
+   "question": "where are the orcs made in lord of the rings",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Utumno (Morgoth’s fortress)"
+  },
+  {
+   "id": "d765581b25cf0dba",
+   "kind": "answer",
+   "question": "where does the brain get its energy from",
+   "gold_answers": [
+    "most of its energy from oxygen-dependent metabolism of glucose (i.e., blood sugar),[73] but ketones provide a major alternative source, together with contributions from medium chain fatty acids (caprylic[78] and heptanoic[79] acids), lactate,[80] acetate,[81] and possibly amino acids",
+    "most of its energy from oxygen-dependent metabolism of glucose (i.e., blood sugar)"
+   ],
+   "model_answer": "Primarily from glucose, with ketones and other fuels as alternatives."
+  },
+  {
+   "id": "f774eaea2a5ffe15",
+   "kind": "answer",
+   "question": "who plays nikki in need for speed carbon",
+   "gold_answers": [
+    "Vaugier appeared in Need for Speed : Carbon as Nikki . She is the girlfriend of the antagonist in the game ( love interest of the protagonist ) .",
+    "Year Title Role Notes 2006 Need for Speed : Carbon Nikki Voice , Mo - Cap , & Likeness 2015 Dying Light Jade Mo - Cap 2015 Hellraid Maine , The Female Kin Voice"
+   ],
+   "model_answer": "Emmanuelle Vaugier"
+  },
+  {
+   "id": "846fccb58a1b8ed9",
+   "kind": "answer",
+   "question": "who warned europe to stay out of the americas",
+   "gold_answers": [
+    "Roosevelt Corollary",
+    "Monroe Doctrine"
+   ],
+   "model_answer": "James Monroe"
+  },
+  {
+   "id": "26a438d19880ea43",
+   "kind": "answer",
+   "question": "why top soil has most amount of humus",
+   "gold_answers": [
+    "Much of the humus in most soils has persisted for more than 100 years , rather than having been decomposed into CO , and can be regarded as stable ; this organic matter has been protected from decomposition by microbial or enzyme action because it is hidden ( occluded ) inside small aggregates of soil particles , or tightly sorbed or complexed ) to clays . Most humus that is not protected in this way is decomposed within 10 years and can be regarded as less stable or more labile . Stable humus contributes few plant - available nutrients in soil , but it helps maintain its physical structure . A very stable form of humus is formed from the slow oxidation of soil carbon after the incorporation of finely powdered charcoal into the topsoil . This process is speculated to have been important in the formation of the very fertile Amazonian terra preta do Indio ."
+   ],
+   "model_answer": "Dead plant and animal matter accumulates and decays at the surface."
+  },
+  {
+   "id": "1901634d21c15803",
+   "kind": "answer",
+   "question": "who did deion sanders go in the hall of fame as",
+   "gold_answers": [
+    "Cornerback"
+   ],
+   "model_answer": "A first-year-eligibility inductee in the Pro Football Hall of Fame"
+  },
+  {
+   "id": "897b5c9e19224cc0",
+   "kind": "answer",
+   "question": "why top soil has most amount of humus",
+   "gold_answers": [
+    "Much of the humus in most soils has persisted for more than 100 years , rather than having been decomposed into CO , and can be regarded as stable ; this organic matter has been protected from decomposition by microbial or enzyme action because it is hidden ( occluded ) inside small aggregates of soil particles , or tightly sorbed or complexed ) to clays . Most humus that is not protected in this way is decomposed within 10 years and can be regarded as less stable or more labile . Stable humus contributes few plant - available nutrients in soil , but it helps maintain its physical structure . A very stable form of humus is formed from the slow oxidation of soil carbon after the incorporation of finely powdered charcoal into the topsoil . This process is speculated to have been important in the formation of the very fertile Amazonian terra preta do Indio ."
+   ],
+   "model_answer": "Dead plant and animal matter accumulates and decays near the soil surface."
+  },
+  {
+   "id": "d031736d40a162cc",
+   "kind": "answer",
+   "question": "whens the last time the patriots played the eagles",
+   "gold_answers": [
+    "Super Bowl LII"
+   ],
+   "model_answer": "Super Bowl LII, following the 2017 season."
+  },
+  {
+   "id": "2eca83f1660456f1",
+   "kind": "answer",
+   "question": "where was the original flight of the phoenix filmed",
+   "gold_answers": [
+    "20th Century-Fox Studios",
+    "20th Century-Fox Ranch, California",
+    "Buttercup Valley, Arizona",
+    "Pilot Knob Mesa, California",
+    "the 20th Century-Fox Studios",
+    "Pilot Knob Mesa near Winterhaven, located in California's Imperial Valley, on the western fringes of Yuma, Arizona",
+    "at the 20th Century-Fox Studios and 20th Century-Fox Ranch, California",
+    "Winterhaven, located in California's Imperial Valley, on the western fringes of Yuma, Arizona"
+   ],
+   "model_answer": "California and Arizona, primarily Pilot Knob Mesa and Buttercup Valley."
+  },
+  {
+   "id": "6d6da5e547f8487a",
+   "kind": "answer",
+   "question": "explain how an operating system talks to hardware",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Through device drivers that translate OS requests into hardware-specific commands."
+  },
+  {
+   "id": "7014a631daa72ba3",
+   "kind": "answer",
+   "question": "what is the lowest recorded temperature on mount vinson",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "−89.2 °C (−128.6 °F)"
+  },
+  {
+   "id": "353112442e1adc33",
+   "kind": "answer",
+   "question": "what is a real world application of an atwood machine",
+   "gold_answers": [
+    "An elevator with a counterbalance"
+   ],
+   "model_answer": "Elevator counterweight systems"
+  },
+  {
+   "id": "e23dcb6eb778d71d",
+   "kind": "answer",
+   "question": "genre of diary of a wimpy kid the getaway",
+   "gold_answers": [
+    "Children's novel",
+    "Graphic Novel"
+   ],
+   "model_answer": "Children’s comedy fiction"
+  },
+  {
+   "id": "841685681e7b6772",
+   "kind": "answer",
+   "question": "who is the girl in green day 21 guns",
+   "gold_answers": [
+    "Lisa Stelly"
+   ],
+   "model_answer": "Evan Rachel Wood"
+  },
+  {
+   "id": "a000a1cab4967585",
+   "kind": "answer",
+   "question": "ye mera dil pyar ka deewana old song free download",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Official YouTube par sunen."
+  },
+  {
+   "id": "aa2002627b7ec6c1",
+   "kind": "answer",
+   "question": "meaning of lyrics to wade in the water",
+   "gold_answers": [
+    "The song relates to both the Old and New Testaments . The verses reflect the Israelites ' escape out of Egypt as found in Exodus 14 . The chorus refers to healing : see John 5 : 4 , `` For an angel went down at a certain season into the pool , and troubled the water : whosoever then first after the troubling of the water stepped in was made whole of whatsoever disease he had . ''"
+   ],
+   "model_answer": "The verses reflect the Israelites’ escape from Egypt, and the chorus refers to healing."
+  },
+  {
+   "id": "4f8182ab54705503",
+   "kind": "answer",
+   "question": "what is the use of adobe flash cs3 professional",
+   "gold_answers": [
+    "supported modern programming practices and enabled business applications to be developed with Flash"
+   ],
+   "model_answer": "Creating animations and interactive multimedia content."
+  },
+  {
+   "id": "8a364889f057ed0e",
+   "kind": "answer",
+   "question": "who sang go tell it on the mountain",
+   "gold_answers": [
+    "`` Go Tell It on the Mountain '' is an African - American spiritual song , compiled by John Wesley Work , Jr. , dating back to at least 1865 , that has been sung and recorded by many gospel and secular performers . It is considered a Christmas carol because its original lyrics celebrate the Nativity of Jesus :"
+   ],
+   "model_answer": "It’s a traditional spiritual with no single original singer."
+  },
+  {
+   "id": "4ed0dd33c3adc80c",
+   "kind": "answer",
+   "question": "where do we draw the line between painting and drawing",
+   "gold_answers": [
+    "Drawing is one of the major forms of expression within the visual arts . It is generally concerned with the marking of lines and areas of tone onto paper / other material , where the accurate representation of the visual world is expressed upon a plane surface . Traditional drawings were monochrome , or at least had little colour , while modern colored - pencil drawings may approach or cross a boundary between drawing and painting . In Western terminology , drawing is distinct from painting , even though similar media often are employed in both tasks . Dry media , normally associated with drawing , such as chalk , may be used in pastel paintings . Drawing may be done with a liquid medium , applied with brushes or pens . Similar supports likewise can serve both : painting generally involves the application of liquid paint onto prepared canvas or panels , but sometimes an underdrawing is drawn first on that same support ."
+   ],
+   "model_answer": "There’s no strict boundary; drawing emphasizes marks, while painting generally applies liquid paint."
+  },
+  {
+   "id": "a2cdafffeff11acf",
+   "kind": "answer",
+   "question": "where did the easter eggs and bunny come from",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The Easter Bunny originated in German Lutheran tradition; Easter eggs come from ancient spring fertility customs and Christian Lenten practices."
+  },
+  {
+   "id": "df0957bb3fdac282",
+   "kind": "answer",
+   "question": "fitting of rim on a locomotive wheel is done by",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Heating the steel tire to expand it, then fitting it over the wheel and letting it cool."
+  },
+  {
+   "id": "0d534a01ed636d29",
+   "kind": "answer",
+   "question": "who was toot toot in the green mile",
+   "gold_answers": [
+    "A trustee",
+    "trustee who stands in for the condemned during execution rehearsals and sells snacks to prisoners and guards",
+    "A trustee who stands in for the condemned during execution rehearsals and sells snacks to prisoners and guards"
+   ],
+   "model_answer": "Toot-Toot was a former death-row inmate at Cold Mountain Penitentiary."
+  },
+  {
+   "id": "71f83ef5cac54e86",
+   "kind": "answer",
+   "question": "what do the films mean in high castle",
+   "gold_answers": [
+    "The Grasshopper Lies Heavy is a series of newsreel films depicting multiple alternative realities",
+    "as-yet-unknown purpose"
+   ],
+   "model_answer": "They depict alternative realities, including one where the Allies won World War II."
+  },
+  {
+   "id": "397b53284844b155",
+   "kind": "answer",
+   "question": "when is dancing on ice on the tv",
+   "gold_answers": [
+    "2019"
+   ],
+   "model_answer": "Sunday evenings on ITV."
+  },
+  {
+   "id": "33aea4d80a01f2d3",
+   "kind": "answer",
+   "question": "which action shortens the fibers of the serratus anterior",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Scapular protraction\n"
+  },
+  {
+   "id": "497f755d7d212b86",
+   "kind": "answer",
+   "question": "where do we draw the line between painting and drawing",
+   "gold_answers": [
+    "Drawing is one of the major forms of expression within the visual arts . It is generally concerned with the marking of lines and areas of tone onto paper / other material , where the accurate representation of the visual world is expressed upon a plane surface . Traditional drawings were monochrome , or at least had little colour , while modern colored - pencil drawings may approach or cross a boundary between drawing and painting . In Western terminology , drawing is distinct from painting , even though similar media often are employed in both tasks . Dry media , normally associated with drawing , such as chalk , may be used in pastel paintings . Drawing may be done with a liquid medium , applied with brushes or pens . Similar supports likewise can serve both : painting generally involves the application of liquid paint onto prepared canvas or panels , but sometimes an underdrawing is drawn first on that same support ."
+   ],
+   "model_answer": "The distinction is fluid, but usually comes down to materials and technique."
+  },
+  {
+   "id": "754f50fae0be6646",
+   "kind": "answer",
+   "question": "where in the constitution is the concept of federalism established",
+   "gold_answers": [
+    "Because the states were preexisting political entities , the U.S. Constitution did not need to define or explain federalism in any one section but it often mentions the rights and responsibilities of state governments and state officials in relation to the federal government . The federal government has certain express powers ( also called enumerated powers ) which are powers spelled out in the Constitution , including the right to levy taxes , declare war , and regulate interstate and foreign commerce . In addition , the Necessary and Proper Clause gives the federal government the implied power to pass any law `` necessary and proper '' for the execution of its express powers . Other powers -- the reserved powers -- are reserved to the people or the states . The power delegated to the federal government was significantly expanded by the Supreme Court decision in McCulloch v. Maryland ( 1819 ) , amendments to the Constitution following the Civil War , and by some later amendments -- as well as the overall claim of the Civil War , that the states were legally subject to the final dictates of the federal government ."
+   ],
+   "model_answer": "Not in any one section; it is reflected throughout the Constitution, including the Tenth Amendment."
+  },
+  {
+   "id": "50e7c0c2b5773958",
+   "kind": "answer",
+   "question": "who was kat slater's sisters in eastenders",
+   "gold_answers": [
+    "Lynne",
+    "Little Mo",
+    "Zoe"
+   ],
+   "model_answer": "Lynne, Little Mo, and Belinda Slater"
+  },
+  {
+   "id": "407ba00e8854e2cc",
+   "kind": "answer",
+   "question": "who has scored the most touchdowns this year",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Which sport?"
+  },
+  {
+   "id": "d93ce9eddd479860",
+   "kind": "answer",
+   "question": "who died in the plane crash greys anatomy",
+   "gold_answers": [
+    "Lexie",
+    "Dr. Lexie Grey",
+    "Dr. Lexie Grey (Chyler Leigh)"
+   ],
+   "model_answer": "Lexie Grey (Dr. Lexie Grey)"
+  },
+  {
+   "id": "f6b6f79d177866da",
+   "kind": "answer",
+   "question": "where have the good guys gone to hideaway",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The commune"
+  },
+  {
+   "id": "6409e98b094e2f4c",
+   "kind": "answer",
+   "question": "what is the sentencing reform act of 1984",
+   "gold_answers": [
+    "U.S. federal statute intended to increase consistency in United States federal sentencing",
+    "a U.S. federal statute intended to increase consistency in United States federal sentencing"
+   ],
+   "model_answer": "A U.S. federal law intended to increase consistency in sentencing and establish the United States Sentencing Commission."
+  },
+  {
+   "id": "c38f53a0074e7654",
+   "kind": "answer",
+   "question": "what was the purpose of a revival meeting during the second great awakening",
+   "gold_answers": [
+    "evangelizing"
+   ],
+   "model_answer": "To evangelize and inspire conversion to Christianity."
+  },
+  {
+   "id": "c5ae4a5b4d48b827",
+   "kind": "answer",
+   "question": "who starred in the movie natural born killers",
+   "gold_answers": [
+    "Woody Harrelson",
+    "Juliette Lewis",
+    "Robert Downey, Jr.",
+    "Tommy Lee Jones",
+    "Tom Sizemore",
+    "Robert Downey Jr."
+   ],
+   "model_answer": "Woody Harrelson, Juliette Lewis, Robert Downey Jr., Tommy Lee Jones, and Tom Sizemore"
+  },
+  {
+   "id": "f6eb0cf0ed30d3e9",
+   "kind": "answer",
+   "question": "who may be affected by monetary penalties imposed by the irs",
+   "gold_answers": [
+    "Taxpayers in the United States"
+   ],
+   "model_answer": "Taxpayers, businesses, and tax advisers"
+  },
+  {
+   "id": "8eb2dcea266e1a45",
+   "kind": "answer",
+   "question": "cast of hawaii five o season 8 episode 9",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Alex O’Loughlin, Scott Caan, Meaghan Rath, Jorge Garcia, Taylor Wily, Dennis Chun, Kimee Balmilero, Chi McBride, Beulah Koale, and Ian Anthony Dale."
+  },
+  {
+   "id": "44e4bfc45d2c2a61",
+   "kind": "answer",
+   "question": "which of the following was a result of the connecticut compromise",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "A bicameral Congress with proportional representation in the House and equal representation for each state in the Senate."
+  },
+  {
+   "id": "1e4c32d79c33f940",
+   "kind": "answer",
+   "question": "who was on the first season of dwts",
+   "gold_answers": [
+    "Trista Sutter",
+    "Evander Holyfield",
+    "Rachel Hunter",
+    "Joey McIntyre",
+    "John O'Hurley",
+    "Kelly Monaco"
+   ],
+   "model_answer": "Trista Sutter, Evander Holyfield, Rachel Hunter, Joey McIntyre, John O’Hurley, and Kelly Monaco."
+  },
+  {
+   "id": "c922591c3f301e85",
+   "kind": "answer",
+   "question": "what was the purpose of a revival meeting during the second great awakening",
+   "gold_answers": [
+    "evangelizing"
+   ],
+   "model_answer": "To inspire conversion, repentance, and personal salvation."
+  },
+  {
+   "id": "062de901d57796cc",
+   "kind": "answer",
+   "question": "senior raf officer equivalent rank to a rear admiral in the royal navy",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Air Vice-Marshal"
+  },
+  {
+   "id": "a855b71bfa3a04a7",
+   "kind": "answer",
+   "question": "superhero names that start with the letter b",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Beast, Bishop, Battlestar, Batwing, Baymax, and Bantam"
+  },
+  {
+   "id": "0ba448bfffaf8b1b",
+   "kind": "answer",
+   "question": "when does the little couples new season start",
+   "gold_answers": [
+    "September 19, 2017"
+   ],
+   "model_answer": "No new season has been announced."
+  },
+  {
+   "id": "c8895a461b81cff2",
+   "kind": "answer",
+   "question": "percy jackson and the olympians sea of monsters summary",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Percy and his friends journey to the Sea of Monsters to find the Golden Fleece and save Camp Half-Blood."
+  },
+  {
+   "id": "167f23421e1bc628",
+   "kind": "answer",
+   "question": "how did the apostles creed get its name",
+   "gold_answers": [
+    "The first mention of the expression `` Apostles ' Creed '' occurs in a letter of AD 390 from a synod in Milan and may have been associated with the belief , widely accepted in the 4th century , that , under the inspiration of the Holy Spirit , each of the Twelve Apostles contributed an article of a creed .",
+    "The title Symbolum Apostolicum ( Symbol or Creed of the Apostles ) appears for the first time in a letter , probably written by Ambrose , from a Council in Milan to Pope Siricius in about AD 390 `` Let them give credit to the Creed of the Apostles , which the Roman Church has always kept and preserved undefiled '' . But what existed at that time was not what is now known as the Apostles ' Creed but a shorter statement of belief that , for instance , did not include the phrase `` maker of heaven and earth '' , a phrase that may have been inserted only in the 7th century ."
+   ],
+   "model_answer": "From the tradition that it reflects the apostles’ teaching."
+  },
+  {
+   "id": "43edb11d1dfe40e9",
+   "kind": "answer",
+   "question": "when is the next time easter falls on april 11th",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "April 11, 2077"
+  },
+  {
+   "id": "720b1f3da32587b2",
+   "kind": "answer",
+   "question": "what are the kinds of dance and its definition",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Ballet—classical technique; jazz—energetic stylized movement; tap—rhythm made with shoes; hip-hop—street-style dance; contemporary—expressive blend of styles; folk—traditional cultural dance."
+  },
+  {
+   "id": "7cd12c06bdfb64ad",
+   "kind": "answer",
+   "question": "the principle of meritocracy has been a key value in u.s. society for centuries. true false",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "True"
+  }
+ ],
+ "evidence": []
+}

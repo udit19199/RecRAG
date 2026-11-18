@@ -1,0 +1,125 @@
+[
+{"id": "f642b7e90d3fd35b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The tour accompanied the release of the piano-based album \"In the Running\""}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "featured pared-back versions of his hits"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "featured pared-back versions of his hits, album tracks"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "featured pared-back versions of his hits, album tracks, and The Beatles cover \"Come Together\""}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The song reached the top of the charts in the United States and peaked at No. 4 in the United Kingdom."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The song reached the top of the charts in the United States and peaked at No. 4 in the United Kingdom."}]}
+]},
+{"id": "ca0803d034736231", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Bombardier Inc. (] ) is a multinational aerospace and transportation company based in Montreal, Quebec, Canada."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Bombardier Inc. (] ) is a multinational aerospace and transportation company based in Montreal, Quebec, Canada."}]}
+]},
+{"id": "aeadb475a8697fef", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Georg Ferdinand Ludwig Philipp Cantor ( ; ] ; March 3 [O.S. February 19] 1845  – January 6, 1918) was a German mathematician."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Georg Ferdinand Ludwig Philipp Cantor ( ; ] ; March 3 [O.S. February 19] 1845  – January 6, 1918) was a German mathematician."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Georg Ferdinand Ludwig Philipp Cantor ( ; ] ; March 3 [O.S. February 19] 1845  – January 6, 1918) was a German mathematician."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "Georg Ferdinand Ludwig Philipp Cantor ( ; ] ; March 3 [O.S. February 19] 1845  – January 6, 1918) was a German mathematician."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Vladimir Igorevich Arnold (alternative spelling Arnol'd, Russian: Влади́мир И́горевич Арно́льд , 12 June 1937 – 3 June 2010) was a Soviet and Russian mathematician."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Vladimir Igorevich Arnold (alternative spelling Arnol'd, Russian: Влади́мир И́горевич Арно́льд , 12 June 1937 – 3 June 2010) was a Soviet and Russian mathematician."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Vladimir Igorevich Arnold (alternative spelling Arnol'd, Russian: Влади́мир И́горевич Арно́льд , 12 June 1937 – 3 June 2010) was a Soviet and Russian mathematician."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "Vladimir Igorevich Arnold (alternative spelling Arnol'd, Russian: Влади́мир И́горевич Арно́льд , 12 June 1937 – 3 June 2010) was a Soviet and Russian mathematician."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 7, "quote": "Vladimir Igorevich Arnold (alternative spelling Arnol'd, Russian: Влади́мир И́горевич Арно́льд , 12 June 1937 – 3 June 2010) was a Soviet and Russian mathematician."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 7, "quote": "Vladimir Igorevich Arnold (alternative spelling Arnol'd, Russian: Влади́мир И́горевич Арно́льд , 12 June 1937 – 3 June 2010) was a Soviet and Russian mathematician."}]}
+]},
+{"id": "2b1f3807580cc8c3", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Bernard Malamud (April 26, 1914 – March 18, 1986) was an American novelist and short story writer."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Bernard Malamud (April 26, 1914 – March 18, 1986) was an American novelist and short story writer."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Bernard Malamud (April 26, 1914 – March 18, 1986) was an American novelist and short story writer."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "Bernard Malamud (April 26, 1914 – March 18, 1986) was an American novelist and short story writer."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Lois McMaster Bujold ( ; born November 2, 1949) is an American speculative fiction writer."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Lois McMaster Bujold ( ; born November 2, 1949) is an American speculative fiction writer."}]}
+]},
+{"id": "9f883fc181ca8c4d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "The Bears and I is a 1974 American drama film directed by Bernard McEveety and written by John Whedon."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "The Bears and I is a 1974 American drama film directed by Bernard McEveety and written by John Whedon."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "The Bears and I is a 1974 American drama film directed by Bernard McEveety and written by John Whedon."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "The film was released on July 31, 1974, by Buena Vista Distribution."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "The film was released on July 31, 1974, by Buena Vista Distribution."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []}
+]},
+{"id": "fba80f182b5c4f10", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Catfish and the Bottlemen are a British rock band, formed in Llandudno, Wales in 2007."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Catfish and the Bottlemen are a British rock band, formed in Llandudno, Wales in 2007."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Catfish and the Bottlemen are a British rock band, formed in Llandudno, Wales in 2007."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "The Lumineers are an American folk rock/Americana band based in Denver, Colorado."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "The Lumineers are an American folk rock/Americana band based in Denver, Colorado."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "Schultz and Fraites began writing and performing together in Ramsey, New Jersey in 2005."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "Schultz and Fraites began writing and performing together in Ramsey, New Jersey in 2005."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "Schultz and Fraites began writing and performing together in Ramsey, New Jersey in 2005."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 10, "quote": "Schultz and Fraites began writing and performing together in Ramsey, New Jersey in 2005."}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 10, "quote": "The Lumineers emerged as one of the most popular folk rock/Americana artists during the revival of those genres and their growing popularity in the 2010s."}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 10, "quote": "The Lumineers emerged as one of the most popular folk rock/Americana artists during the revival of those genres and their growing popularity in the 2010s."}]},
+{"fact": "3.2", "status": "stated", "evidence": [{"item": 10, "quote": "The Lumineers emerged as one of the most popular folk rock/Americana artists during the revival of those genres and their growing popularity in the 2010s."}]}
+]},
+{"id": "8e554b921fed5656", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Jean-François André Clervoy (born 19 November 1958) is a French engineer and a CNES and ESA astronaut."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Jean-François André Clervoy (born 19 November 1958) is a French engineer and a CNES and ESA astronaut."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Jean-François André Clervoy (born 19 November 1958) is a French engineer and a CNES and ESA astronaut."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "Jean-François André Clervoy (born 19 November 1958) is a French engineer and a CNES and ESA astronaut."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Prof. Dr. Ulrich Hans Walter (born February 9, 1954) is a German physicist/engineer and a former DFVLR astronaut."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Prof. Dr. Ulrich Hans Walter (born February 9, 1954) is a German physicist/engineer and a former DFVLR astronaut."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Prof. Dr. Ulrich Hans Walter (born February 9, 1954) is a German physicist/engineer and a former DFVLR astronaut."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "Prof. Dr. Ulrich Hans Walter (born February 9, 1954) is a German physicist/engineer and a former DFVLR astronaut."}]}
+]},
+{"id": "cd736444545767ec", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Warrel Dane (born March 7, 1969) is the lead singer of the American power metal band Sanctuary."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Warrel Dane (born March 7, 1969) is the lead singer of the American power metal band Sanctuary."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Warrel Dane (born March 7, 1969) is the lead singer of the American power metal band Sanctuary."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Roy Sætre Khantatat (born March 12, 1970), is a Norwegian singer-songwriter."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Roy Sætre Khantatat (born March 12, 1970), is a Norwegian singer-songwriter."}]}
+]},
+{"id": "8b85154c6b4c834e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Fastbacks were a Seattle, Washington, punk rock band."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Fastbacks were a Seattle, Washington, punk rock band."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Local Natives (previously known as Cavil at Rest) is an American indie rock band based in Silver Lake, Los Angeles, California, United States."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Local Natives (previously known as Cavil at Rest) is an American indie rock band based in Silver Lake, Los Angeles, California, United States."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Local Natives (previously known as Cavil at Rest) is an American indie rock band based in Silver Lake, Los Angeles, California, United States."}]}
+]},
+{"id": "f007be43802e4089", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "In 2010, he began providing vocals and guitar in the pop rock band Ashland HIGH."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "In 2010, he began providing vocals and guitar in the pop rock band Ashland HIGH."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Jizzy Pearl (born James Wilkinson) is an American vocalist that was born on March 17, 1958, in Chicago, Illinois."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Jizzy Pearl (born James Wilkinson) is an American vocalist that was born on March 17, 1958, in Chicago, Illinois."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Jizzy Pearl (born James Wilkinson) is an American vocalist that was born on March 17, 1958, in Chicago, Illinois."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "Jizzy Pearl (born James Wilkinson) is an American vocalist that was born on March 17, 1958, in Chicago, Illinois."}]}
+]},
+{"id": "3594b6ab7b88d216", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "In the middle of 1984 a Brazilian company called Prológica, which made its own versions of 8 bits US computers, brought to the Brazilian market a new equipment"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "In the middle of 1984 a Brazilian company called Prológica, which made its own versions of 8 bits US computers, brought to the Brazilian market a new equipment"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "a new equipment for its personal computer series called \"CP\" (shorten of Personal Computer in Portuguese)"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "a new equipment for its personal computer series called \"CP\" (shorten of Personal Computer in Portuguese)"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "a new equipment for its personal computer series called \"CP\" (shorten of Personal Computer in Portuguese)"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "The Atari ST is a line of home computers from Atari Corporation and the successor to the Atari 8-bit family."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "The Atari ST is a line of home computers from Atari Corporation and the successor to the Atari 8-bit family."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "The Atari ST is the first personal computer to come with a bitmapped color GUI, using a version of Digital Research's GEM released in February 1985."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "The Atari ST is the first personal computer to come with a bitmapped color GUI, using a version of Digital Research's GEM released in February 1985."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "The Atari ST is the first personal computer to come with a bitmapped color GUI, using a version of Digital Research's GEM released in February 1985."}]}
+]},
+{"id": "5007e50357b637d2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "His experimental works are well known and appropriately discussed in Malayalam Cinema industry and his debut movie Jalachhayam (2010) was well discussed according to its experimental approach."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "His experimental works are well known and appropriately discussed in Malayalam Cinema industry and his debut movie Jalachhayam (2010) was well discussed according to its experimental approach."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "His experimental works are well known and appropriately discussed in Malayalam Cinema industry and his debut movie Jalachhayam (2010) was well discussed according to its experimental approach."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "His experimental works are well known and appropriately discussed in Malayalam Cinema industry and his debut movie Jalachhayam (2010) was well discussed according to its experimental approach."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "His experimental works are well known and appropriately discussed in Malayalam Cinema industry and his debut movie Jalachhayam (2010) was well discussed according to its experimental approach."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Jacques Feyder (] ; 21 July 1885 – 24 May 1948) was a Belgian actor, screenwriter and film director who worked principally in France, but also in the USA, Britain and Germany."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Jacques Feyder (] ; 21 July 1885 – 24 May 1948) was a Belgian actor, screenwriter and film director who worked principally in France, but also in the USA, Britain and Germany."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "Jacques Feyder (] ; 21 July 1885 – 24 May 1948) was a Belgian actor, screenwriter and film director who worked principally in France, but also in the USA, Britain and Germany."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "Jacques Feyder (] ; 21 July 1885 – 24 May 1948) was a Belgian actor, screenwriter and film director who worked principally in France, but also in the USA, Britain and Germany."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 1, "quote": "Jacques Feyder (] ; 21 July 1885 – 24 May 1948) was a Belgian actor, screenwriter and film director who worked principally in France, but also in the USA, Britain and Germany."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 1, "quote": "Jacques Feyder (] ; 21 July 1885 – 24 May 1948) was a Belgian actor, screenwriter and film director who worked principally in France, but also in the USA, Britain and Germany."}]},
+{"fact": "1.6", "status": "stated", "evidence": [{"item": 1, "quote": "Jacques Feyder (] ; 21 July 1885 – 24 May 1948) was a Belgian actor, screenwriter and film director who worked principally in France, but also in the USA, Britain and Germany."}]},
+{"fact": "1.7", "status": "stated", "evidence": [{"item": 1, "quote": "Jacques Feyder (] ; 21 July 1885 – 24 May 1948) was a Belgian actor, screenwriter and film director who worked principally in France, but also in the USA, Britain and Germany."}]},
+{"fact": "1.8", "status": "stated", "evidence": [{"item": 1, "quote": "Jacques Feyder (] ; 21 July 1885 – 24 May 1948) was a Belgian actor, screenwriter and film director who worked principally in France, but also in the USA, Britain and Germany."}]}
+]}
+]

@@ -1,0 +1,546 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "e6c29ee36c004d78",
+   "kind": "answer",
+   "question": "What is in both the Lithocarpus and Duranta species?",
+   "gold_answers": [
+    "trees"
+   ],
+   "model_answer": "China"
+  },
+  {
+   "id": "dc5e013ff12dd1f0",
+   "kind": "answer",
+   "question": "Jim Sharman and Ava DuVernay both share what title concerning their actions leading actors in film or stage?",
+   "gold_answers": [
+    "director"
+   ],
+   "model_answer": "Film directors"
+  },
+  {
+   "id": "def35c31e899baed",
+   "kind": "answer",
+   "question": "McLemore Avenue is to Booker T. & the M.G.s as what road in the city of Westminster in London is to the Beatles?",
+   "gold_answers": [
+    "This road is best known for the Abbey Road Studios and the 1969 album, \"Abbey Road\", by The Beatles."
+   ],
+   "model_answer": "Abbey Road"
+  },
+  {
+   "id": "78b4ec31e1873da1",
+   "kind": "answer",
+   "question": "What award won by only twelve people has a man who Ted Kooshian has performed with won?",
+   "gold_answers": [
+    "EGOT"
+   ],
+   "model_answer": "Grammy Legend Award"
+  },
+  {
+   "id": "6cc8baf5c9371469",
+   "kind": "answer",
+   "question": "What nationality was the Jaguar R2 driver, Eddie Irvine?",
+   "gold_answers": [
+    "British racing driver"
+   ],
+   "model_answer": "British, from Northern Ireland"
+  },
+  {
+   "id": "e07fca3fe7aeae9d",
+   "kind": "answer",
+   "question": "What was the name of the fanzine that interviewed the Sex Pistols bassist when he was in the band \"The Flowers of Romance?\"",
+   "gold_answers": [
+    "SKUM"
+   ],
+   "model_answer": "Ripped & Torn"
+  },
+  {
+   "id": "1985f2bb8e598e9c",
+   "kind": "answer",
+   "question": "Are Tímea Babos and Jack Sock tennis players?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both are tennis players."
+  },
+  {
+   "id": "d0675a3e8b9fdb3c",
+   "kind": "answer",
+   "question": "How many Academy Awards did the film, in which Jimmy Bryant provided the singing voice for the character Tony, win ?",
+   "gold_answers": [
+    "10"
+   ],
+   "model_answer": "10 Academy Awards"
+  },
+  {
+   "id": "3eba413a4b622dac",
+   "kind": "answer",
+   "question": "Kresy, which roughly was a part of the land beyond the so-called Curson Line, was drawn for what reason?",
+   "gold_answers": [
+    "demarcation line between the newly emerging states, the Second Polish Republic, and the Soviet Union"
+   ],
+   "model_answer": "To define Poland’s eastern boundary after World War I."
+  },
+  {
+   "id": "b9a6d8bc12bdee0e",
+   "kind": "answer",
+   "question": "Who is one other client that is represented by the same person that also represents a barrister at Doughty Street Chambers?",
+   "gold_answers": [
+    "Angelina Jolie"
+   ],
+   "model_answer": "Yulia Tymoshenko"
+  },
+  {
+   "id": "fe37733bbab13b15",
+   "kind": "answer",
+   "question": "What city does Paul Clyne and David Soares have in common?",
+   "gold_answers": [
+    "New York"
+   ],
+   "model_answer": "Albany, New York"
+  },
+  {
+   "id": "7c0300d142234cf2",
+   "kind": "answer",
+   "question": "Electronic Attack Squadron 138 is a type of which American carrier-based electronic warfare aircraft, a specialized version of the two-seat F/A-18F Super Hornet?",
+   "gold_answers": [
+    "Boeing EA-18G Growler"
+   ],
+   "model_answer": "EA-18G Growler"
+  },
+  {
+   "id": "84410cf89f94eb9b",
+   "kind": "answer",
+   "question": "What country does Haringey Heartlands and The Mall Wood Green have in common?",
+   "gold_answers": [
+    "London"
+   ],
+   "model_answer": "England"
+  },
+  {
+   "id": "9fb89452b14532e8",
+   "kind": "answer",
+   "question": "Where are Teide National Park and Garajonay National Park located?",
+   "gold_answers": [
+    "Canary Islands, Spain"
+   ],
+   "model_answer": "Tenerife and La Gomera, Canary Islands, Spain."
+  },
+  {
+   "id": "88a71084916aa28d",
+   "kind": "answer",
+   "question": "Are Ruggero Deodato from Italy, and Mexican Alejandro Springall, both film directors?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both are film directors."
+  },
+  {
+   "id": "f30f650ba64ba847",
+   "kind": "answer",
+   "question": "KSCW-DT is part of a duopoly with which virtual channel 12 in Wichita?",
+   "gold_answers": [
+    "KWCH-DT"
+   ],
+   "model_answer": "KWCH-DT (virtual channel 12)"
+  },
+  {
+   "id": "d72a74d0e75f93e7",
+   "kind": "answer",
+   "question": "What was the profession of the one who wrote a song on a 2005 album he collaborated on with Marc Predka?",
+   "gold_answers": [
+    "professional wrestler, actor, and hip hop musician"
+   ],
+   "model_answer": "Professional wrestler, actor, and hip-hop musician"
+  },
+  {
+   "id": "40d825ea12017468",
+   "kind": "answer",
+   "question": "How many women in total competed at the Asian Games the year Lee Young-Sun achieved her personal best throw of 58.87 metres?",
+   "gold_answers": [
+    "179 women"
+   ],
+   "model_answer": "2,177 women"
+  },
+  {
+   "id": "e4d74e6181e384ea",
+   "kind": "answer",
+   "question": "What type of group does Pablo Carballo and Argentine Air Force have in common?",
+   "gold_answers": [
+    "military"
+   ],
+   "model_answer": "Argentine Air Force\n"
+  },
+  {
+   "id": "7df1966ae8af7441",
+   "kind": "answer",
+   "question": "What location is shared by both Great Neck School District and Saddle Rock Elementary School?",
+   "gold_answers": [
+    "New York, United States"
+   ],
+   "model_answer": "Great Neck, New York"
+  },
+  {
+   "id": "52f5f025f0165996",
+   "kind": "answer",
+   "question": "Who is the English Professional Footballer that is the niece of a former footballer born in the same place as where he plays? ",
+   "gold_answers": [
+    "Trent Alexander-Arnold"
+   ],
+   "model_answer": "Lucy Staniforth"
+  },
+  {
+   "id": "e10259cce22e97aa",
+   "kind": "answer",
+   "question": "In between The Bears and I and Oceans which was released on July 31, 1974, by Buena Vista Distribution?",
+   "gold_answers": [
+    "The Bears and I"
+   ],
+   "model_answer": "Herbie Rides Again"
+  },
+  {
+   "id": "879c2b031b891996",
+   "kind": "answer",
+   "question": "Swingin' Down Yonder is the first full-length, 12-inch album recorded by a singer known by what nickname?",
+   "gold_answers": [
+    "\"King of Cool\""
+   ],
+   "model_answer": "The Singing Cowboy"
+  },
+  {
+   "id": "d6ebee214d762af9",
+   "kind": "answer",
+   "question": "Are Pago Pago International Airport and Hoonah Airport both on American territory?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both are in U.S. territory."
+  },
+  {
+   "id": "f9766378cbcb2661",
+   "kind": "answer",
+   "question": "Did the playwrights Eugène Ionesco and Paul Scott live during the same time period?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, their lifetimes overlapped."
+  },
+  {
+   "id": "18443a794899119f",
+   "kind": "answer",
+   "question": "What nationality was the Jaguar R2 driver, Eddie Irvine?",
+   "gold_answers": [
+    "British racing driver"
+   ],
+   "model_answer": "Irish"
+  },
+  {
+   "id": "05d1b6c1bebf46b0",
+   "kind": "answer",
+   "question": "How many days did it take the Best New Artist of 2009 to sell 2 million copies of an album in the UK and break a twenty year old record?",
+   "gold_answers": [
+    "29"
+   ],
+   "model_answer": "238 days"
+  },
+  {
+   "id": "8a62da8db327d1c5",
+   "kind": "answer",
+   "question": "Are Pago Pago International Airport and Hoonah Airport both on American territory?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "No."
+  },
+  {
+   "id": "80f2911c179dde8f",
+   "kind": "answer",
+   "question": "Is Edison Sault Power Canal somehow linked with or used with the Cayuga–Seneca Canal?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No, they’re unrelated."
+  },
+  {
+   "id": "763ec801706121bf",
+   "kind": "answer",
+   "question": "Not Richard, But Dick was an album by the band formed in what city?",
+   "gold_answers": [
+    "Philadelphia"
+   ],
+   "model_answer": "Philadelphia, Pennsylvania"
+  },
+  {
+   "id": "ed868dc41852727a",
+   "kind": "answer",
+   "question": "What are the letters of the radio station serves the area comprising all of Belknap County, among others?",
+   "gold_answers": [
+    "WANH"
+   ],
+   "model_answer": "WEMJ"
+  },
+  {
+   "id": "60b657aba8ca5cb2",
+   "kind": "answer",
+   "question": "What city is the women's Vans Triple Crown of Surfing event hosted at?",
+   "gold_answers": [
+    "City and County of Honolulu"
+   ],
+   "model_answer": "Haleʻiwa, Hawaii"
+  },
+  {
+   "id": "00bbb4bfdf77e138",
+   "kind": "answer",
+   "question": " \"Collateral Damage\" is an episode of the television series \"Millennium\" and features the host of a late night talk show that airs how often?",
+   "gold_answers": [
+    "seven nights a week"
+   ],
+   "model_answer": "Weeknights (five nights a week)"
+  },
+  {
+   "id": "1a93882aaf3e2658",
+   "kind": "answer",
+   "question": "What award won by only twelve people has a man who Ted Kooshian has performed with won?",
+   "gold_answers": [
+    "EGOT"
+   ],
+   "model_answer": "EGOT (Emmy, Grammy, Oscar, and Tony)"
+  },
+  {
+   "id": "90c6bda16224c789",
+   "kind": "answer",
+   "question": "Who was Chamberlain and Colonel of the military staff of The Merrie Monarch?",
+   "gold_answers": [
+    "Colonel Charles Hastings Judd"
+   ],
+   "model_answer": "Charles Berkeley, Earl of Falmouth"
+  },
+  {
+   "id": "f224910f69befd8c",
+   "kind": "answer",
+   "question": "Are Mauritz Stiller and Johannes Grenzfurthner both of the same nationality?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No, they are not."
+  },
+  {
+   "id": "5a5ea21c047ec5e1",
+   "kind": "answer",
+   "question": "Nikolay Mitrofanovich Krylov and Anatoly Fomenko both held what academic title?",
+   "gold_answers": [
+    "mathematician"
+   ],
+   "model_answer": "Professor"
+  },
+  {
+   "id": "5712b1ab3c610a78",
+   "kind": "answer",
+   "question": "During which period the sedan variant of the Volvo V50 car was manufactured?",
+   "gold_answers": [
+    "1995 to 2012"
+   ],
+   "model_answer": "1995–2012"
+  },
+  {
+   "id": "feb3099c60a28b1a",
+   "kind": "answer",
+   "question": "Albanians in Montenegro which make up 4.91 of the county's total population could be members of the Albanian Coalation Perspect which is a what? ",
+   "gold_answers": [
+    "Albanian political party in Montenegro"
+   ],
+   "model_answer": "Political coalition\n"
+  },
+  {
+   "id": "b202b84b17e08d7b",
+   "kind": "answer",
+   "question": "Worker: What professional title to both Christopher Nolan and Paul Schrader boast?",
+   "gold_answers": [
+    "screenwriter"
+   ],
+   "model_answer": "Film director"
+  },
+  {
+   "id": "1c56b2218b200624",
+   "kind": "answer",
+   "question": "In what year did both Orson Scott Card's novel \"Ender's Game\" and Keri Hulme's \"The Bone People\" come out?",
+   "gold_answers": [
+    "1985"
+   ],
+   "model_answer": "1985 and 1984"
+  },
+  {
+   "id": "f13c861d70944386",
+   "kind": "answer",
+   "question": "What kind of group does Pinhead Gunpowder and Billie Joe Armstrong have in common?",
+   "gold_answers": [
+    "band"
+   ],
+   "model_answer": "Punk rock band"
+  },
+  {
+   "id": "bcd41ea071085467",
+   "kind": "answer",
+   "question": "Who is the grandfather to Frederick II and was the Holy Roman Emperor until death?",
+   "gold_answers": [
+    "Frederick I"
+   ],
+   "model_answer": "Frederick I (Frederick Barbarossa)"
+  },
+  {
+   "id": "768c14409af2cea9",
+   "kind": "answer",
+   "question": "What is the international football competition for women that Liu Ailing played in the 1991,1995, 1999 editions?",
+   "gold_answers": [
+    "international football competition"
+   ],
+   "model_answer": "FIFA Women's World Cup"
+  },
+  {
+   "id": "6518b5036a975ed7",
+   "kind": "answer",
+   "question": "Who was the murderer sent to \"Old Smokey\" for allegedly commiting \"The Crime of the Century\"?",
+   "gold_answers": [
+    "Richard Hauptmann"
+   ],
+   "model_answer": "Bruno Richard Hauptmann"
+  },
+  {
+   "id": "3d25d08d47879855",
+   "kind": "answer",
+   "question": "The Ronkonkama railroad station and the town of Islip, New York are near?",
+   "gold_answers": [
+    "Long Island"
+   ],
+   "model_answer": "Ronkonkoma, Long Island, New York"
+  },
+  {
+   "id": "b8c6d389a0852eac",
+   "kind": "answer",
+   "question": "What nationality was the Jaguar R2 driver, Eddie Irvine?",
+   "gold_answers": [
+    "British racing driver"
+   ],
+   "model_answer": "British\n"
+  },
+  {
+   "id": "b9c7fd2654455636",
+   "kind": "answer",
+   "question": "Crash is similar to what 16th century British card game in the sense that there is no betting?",
+   "gold_answers": [
+    "In Crash, there is no betting, as in Brag"
+   ],
+   "model_answer": "Thirty-One (Trente-un)"
+  },
+  {
+   "id": "48fe34c3d50fff71",
+   "kind": "answer",
+   "question": "Have singers Yang Yo-seob and Kim Tae-yeon both appeared in group bands?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both have been members of singing groups."
+  },
+  {
+   "id": "42af2cb0afdd8c7f",
+   "kind": "answer",
+   "question": "What movies has Juno Temple starred in?",
+   "gold_answers": [
+    "She has appeared in films such as \" Black Mass\", \"The Other Boleyn Girl\", \"Wild Child\", \"Atonement\", \"Maleficent\", \"The Three Musketeers\" and \"The Dark Knight Rises\"."
+   ],
+   "model_answer": "Dirty Girl, Jack & Diane, Cracks, Magic Magic, One Percent More Humid, Small Apartments, Lovelace, and Wonder Wheel."
+  },
+  {
+   "id": "27e5a0e09b60f99a",
+   "kind": "answer",
+   "question": "Suicide's 1977 released album features a song based on what brand's comic character?",
+   "gold_answers": [
+    "Marvel"
+   ],
+   "model_answer": "Marvel’s Ghost Rider"
+  },
+  {
+   "id": "3e6d08ad97586090",
+   "kind": "answer",
+   "question": "The primary jockey of Binocular was Champion Jockey how many consecutive times?",
+   "gold_answers": [
+    "20"
+   ],
+   "model_answer": "12 consecutive times"
+  },
+  {
+   "id": "83162da52745500e",
+   "kind": "answer",
+   "question": "What was the Canadian movie called in Italy that stared a professional American football defensive end of the National Football League along with Michael Ironside?",
+   "gold_answers": [
+    "Anno 2053"
+   ],
+   "model_answer": "Il distruttore"
+  },
+  {
+   "id": "38065843c4c39b25",
+   "kind": "answer",
+   "question": "Are Colocasia and Coronilla both flowering plants?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both are flowering plants."
+  },
+  {
+   "id": "fc7aa93df552cc6f",
+   "kind": "answer",
+   "question": "Wheelock Whitney is just one member of the Whitney Family. Where did this American family originate from?",
+   "gold_answers": [
+    "London, England"
+   ],
+   "model_answer": "England, specifically Herefordshire."
+  },
+  {
+   "id": "8acf6428a5d1fe4d",
+   "kind": "answer",
+   "question": "Midland F1 Racing was a racing team that, in 2007, competed under what name for sponsorship reasons?",
+   "gold_answers": [
+    "Spyker F1"
+   ],
+   "model_answer": "Spyker F1 Team"
+  },
+  {
+   "id": "c06101e6eb49c36e",
+   "kind": "answer",
+   "question": "What is the international football competition for women that Liu Ailing played in the 1991,1995, 1999 editions?",
+   "gold_answers": [
+    "international football competition"
+   ],
+   "model_answer": "FIFA Women’s World Cup"
+  },
+  {
+   "id": "ff61e9b147043e58",
+   "kind": "answer",
+   "question": "Pravda and Stiffelio are both operas?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "808a5ae7d7edc0db",
+   "kind": "answer",
+   "question": "Which \"Blackzilians\" fighter is currently competing in the Middleweight division of Ultimate Fighting Championship?",
+   "gold_answers": [
+    "Vitor Belfort"
+   ],
+   "model_answer": "Cezar “Mutante” Ferreira"
+  },
+  {
+   "id": "3e2e54a5bf25686a",
+   "kind": "answer",
+   "question": "Who was known by his stage name Aladin and helped organizations improve their performance as a consultant?",
+   "gold_answers": [
+    "Eenasul Fateh"
+   ],
+   "model_answer": "Alan Fine"
+  }
+ ],
+ "evidence": []
+}

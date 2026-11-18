@@ -1,0 +1,505 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "dd3cdc1b93162714",
+   "gold": [
+    {
+     "sentence": "Ciaran Gribbin (born 1976) is a Northern Irish singer-songwriter, guitarist and producer who hails from Castledawson, Northern Ireland.",
+     "facts": {
+      "0.0": "Ciaran Gribbin was born in 1976.",
+      "0.1": "Ciaran Gribbin is a Northern Irish singer-songwriter.",
+      "0.2": "Ciaran Gribbin is a guitarist.",
+      "0.3": "Ciaran Gribbin is a producer.",
+      "0.4": "Ciaran Gribbin hails from Castledawson, Northern Ireland."
+     }
+    },
+    {
+     "sentence": "Brett Allen Scallions (born December 21, 1971) is an American musician.",
+     "facts": {
+      "1.0": "Brett Allen Scallions was born on December 21, 1971.",
+      "1.1": "Brett Allen Scallions is an American musician."
+     }
+    },
+    {
+     "sentence": " He is the lead vocalist, rhythm guitarist, and lyricist of post-grunge band Fuel.",
+     "facts": {
+      "2.0": "Brett Allen Scallions is the lead vocalist of the post-grunge band Fuel.",
+      "2.1": "Brett Allen Scallions is the rhythm guitarist of the post-grunge band Fuel.",
+      "2.2": "Brett Allen Scallions is the lyricist of the post-grunge band Fuel."
+     }
+    }
+   ],
+   "items": [
+    "Puppet Strings\nPuppet Strings is the fifth studio album by American rock band Fuel.\n\n Released March 4, 2014, it is their first studio effort since 2003's \"Natural Selection\" to feature original lead singer Brett Scallions and the first Fuel album not to feature original songwriter/guitarist, Carl Bell and bassist Jeff Abercrombie.\n\n Additionally, no one who participated in the recording of Fuel's previous album \"Angels & Devils\" participated in the recording of \"Puppet Strings\".",
+    "Ciaran Gribbin\nCiaran Gribbin (born 1976) is a Northern Irish singer-songwriter, guitarist and producer who hails from Castledawson, Northern Ireland.",
+    "The Best of Fuel\nThe Best of Fuel is a compilation album by American hard rock band Fuel.\n\n It contains songs from their first three full-length albums, \"Sunburn\", \"Something Like Human\", and \"Natural Selection\".\n\n All of the said albums featured vocalist Brett Scallions who departed from the group only a few months after the compilation's release.\n\n \"The Best of Fuel\" consists solely of the band's released singles, with the exception of \"Million Miles\" from \"Natural Selection\" (it features \"Quarter\" from the same album instead).",
+    "Brett Scallions\nBrett Allen Scallions (born December 21, 1971) is an American musician.\n\n He is the lead vocalist, rhythm guitarist, and lyricist of post-grunge band Fuel.",
+    "The entries profile rock, punk, and metal albums, bands, and musicians. Fuel’s *Puppet Strings* (2014) reunited singer Brett Scallions but featured none of the prior album’s recording personnel. Jizzy Pearl sang on Quiet Riot’s *10* and L.A. Guns’ *Shrinking Violet*. Other subjects include J. Geils Band, Green Day side projects and collaborators, Glassjaw and Daryl Palumbo, Clearview 77, Sons of Abraham,",
+    "Soul to Preach To\n\"Soul to Preach To\" is the first single released from Fuel's album \"Puppet Strings\".\n\n It is also the first single released featuring original lead singer Brett Scallions since Fuel's 2003 studio album \"Natural Selection\".",
+    "Yeah! (Fuel song)\n\"Yeah!\"\n\n is the first song released from Fuel's album \"Puppet Strings\".\n\n It is also the first song released featuring original lead singer Brett Scallions since Fuel's 2003 studio album \"Natural Selection\".",
+    "Doug Grean\nDoug Grean is an American record producer, audio engineer, guitarist, based in Los Angeles.\n\n He has worked with artists Sheryl Crow, Ricki Lee Jones, Glen Campbell, Scott Weiland, Slash, Velvet Revolver, Stone Temple Pilots, The Crystal Method, Tim McGraw, Cyndi Lauper, Annabella Lwin (Bow Wow Wow), Corey Glover (Living Color), Camp Freddy, DJ Hurricane and John Taylor (Duran Duran).\n\n Grean was formerly the lead guitarist and touring musical director for Scott Weiland and the Wildabouts.\n\n Some of Grean's television appearances with Weiland include: VH1 Legends, Last Call with Carson Daly, The Tonight Show with Jay Leno, and the Grammy awards with Velvet Revolver as keyboardist, performing \"All Across the Universe\" with Stevie Wonder, Norah Jones, Bono, Steven Tyler, Brian Wilson, and Alison Krauss.",
+    "Grant Nicholas\nGrantley Jonathan \"Grant\" Nicholas (born 12 November 1967) is a Welsh musician, best known as the lead singer and lead guitarist of the rock band Feeder.",
+    "Relient K’s “My Girlfriend,” written by 15-year-old Matt Thiessen, began as “Marilyn Manson Ate My Girlfriend”; it reflects a friend’s rejection of Christianity. Thiessen also co-wrote Switchfoot’s “Rebuild” with Jon Foreman. Fuel’s 2007 *Angels & Devils* was Toryn Green’s only album with the band; 2014’s *Puppet Strings* returned Brett Scallions but lacked original members Carl Bell and"
+   ]
+  },
+  {
+   "id": "ce0eeb718463805b",
+   "gold": [
+    {
+     "sentence": "The Second Battle of Guam (21 July – 10 August 1944) was the American recapture of the Japanese-held island of Guam, a U.S. territory in the Mariana Islands captured by the Japanese from the U.S. in the 1941 First Battle of Guam during the Pacific campaign of World War II.",
+     "facts": {
+      "0.0": "The Second Battle of Guam was fought from 21 July to 10 August 1944.",
+      "0.1": "The Second Battle of Guam was the American recapture of the Japanese-held island of Guam.",
+      "0.2": "Guam is a U.S. territory in the Mariana Islands.",
+      "0.3": "Japan captured Guam from the U.S. in the 1941 First Battle of Guam.",
+      "0.4": "The Second Battle of Guam took place during the Pacific campaign of World War II."
+     }
+    },
+    {
+     "sentence": "The Battle of Antietam , also known as the Battle of Sharpsburg, particularly in the South, was fought on September 17, 1862, near Sharpsburg, Maryland and Antietam Creek as part of the Maryland Campaign.",
+     "facts": {
+      "1.0": "The Battle of Antietam was also known as the Battle of Sharpsburg, particularly in the South.",
+      "1.1": "The Battle of Antietam was fought on September 17, 1862.",
+      "1.2": "The Battle of Antietam was fought near Sharpsburg, Maryland.",
+      "1.3": "The Battle of Antietam was fought near Antietam Creek.",
+      "1.4": "The Battle of Antietam was part of the Maryland Campaign."
+     }
+    }
+   ],
+   "items": [
+    "Battle of Manila (1574)\nThe Battle of Manilla (1574) was a battle in the Manila area mainly in the location of what is now Parañaque between Chinese pirates, led by Limahong and the Spanish colonial forces and their native allies.\n\n The battle occurred on November 29, 1574 when Limahong's fleet landed in the town of Parañaque and from there, began to assault the fortifications of Intramuros.\n\n Initially, the inhabitants where disorganized and Limahong's forces routed them.\n\n Furthermore, the Chinese killed the Master-of-Camp of the Spanish, Martin De Goiti.\n\n This caused them to delay their assault on Manila as Martin de Goiti's house was an obstacle in their march.\n\n However, upon the arrival of a certain Filipino hero called, Galo, resistance started to organize.\n\n Under Galo's command, they were able to resist China-born Limahong until Mexico-born Juan de Salcedo arrived from Ilocos with 300 Ilocano Warriors and Limahong was defeated and eventually forced to retreat.\n\n Thereafter Limahong abandoned his plans to invade Manila and instead, set up a temporary kingdom in Pangasinan.",
+    "Battle of Manila (1898)\nThe Battle of Manila, sometimes called the Mock Battle of Manila, was a land engagement which took place in Manila on August 13, 1898, at the end of the Spanish–American War, four months after the decisive victory by Commodore Dewey's Asiatic Squadron at the Battle of Manila Bay.\n\n The belligerents were Spanish forces led by Governor-General of the Philippines Fermín Jáudenes, and American forces led by United States Army Brigadier General Wesley Merritt and United States Navy Commodore George Dewey.\n\n American forces were supported by units of the Philippine Revolutionary Army, led by Emilio Aguinaldo.",
+    "Battle of Attu\nThe Battle of Attu, which took place from 11–30 May 1943, was a battle fought between forces of the United States, aided by Canadian reconnaissance and fighter-bomber support, and the Empire of Japan on Attu Island off the coast of the Territory of Alaska as part of the Aleutian Islands Campaign during the American Theater and the Pacific Theater and was the only land battle of World War II fought on incorporated territory of the United States.\n\n It is also the only land battle in which Japanese and American forces fought in Arctic conditions.",
+    "Battle of Gaines's Mill\nThe Battle of Gaines's Mill, sometimes known as the First Battle of Cold Harbor or the Battle of Chickahominy River, took place on June 27, 1862, in Hanover County, Virginia, as the third of the Seven Days Battles (Peninsula Campaign) of the American Civil War.\n\n Following the inconclusive Battle of Beaver Dam Creek (Mechanicsville) the previous day, Confederate General Robert E. Lee renewed his attacks against the right flank of the Union Army, relatively isolated on the northern side of the Chickahominy River.\n\n There, Brig. Gen. Fitz John Porter's V Corps had established a strong defensive line behind Boatswain's Swamp.\n\n Lee's force was destined to launch the largest Confederate attack of the war, about 57,000 men in six divisions.\n\n Porter's reinforced V Corps held fast for the afternoon as the Confederates attacked in a disjointed manner, first with the division of Maj. Gen. A.P. Hill, then Maj. Gen. Richard S. Ewell, suffering heavy casualties.\n\n The arrival of Maj. Gen. Stonewall Jackson's command was delayed, preventing the full concentration of Confederate force before Porter received some reinforcements from the VI Corps.",
+    "Maryland Campaign\nThe Maryland Campaign—or Antietam Campaign—occurred September 4–20, 1862, during the American Civil War.\n\n Confederate Gen. Robert E. Lee's first invasion of the North was repulsed by the Army of the Potomac under Maj. Gen. George B. McClellan, who moved to intercept Lee and his Army of Northern Virginia and eventually attacked it near Sharpsburg, Maryland.\n\n The resulting Battle of Antietam was the bloodiest single-day battle in American history and is widely considered one of the major turning points of the war.",
+    "George McMillin\nGeorge Johnson McMillin (November 25, 1889 – August 29, 1983 ) was a United States Navy Rear Admiral who served as the 38th and final Naval Governor of Guam.\n\n He graduated from the United States Naval Academy in 1911 and served as an officer during four separate conflicts: World War I, the occupation of the Dominican Republic, the United States occupation of Veracruz, and World War II.\n\n He served on the staff of both the Naval Academy and the Naval War College as well.\n\n He is most remembered as the commander who surrendered Guamanian forces to a much larger Japanese force during the First Battle of Guam, only the second battle of World War II involving the United States.\n\n He had previously evacuated all but one civilian American citizen from the island and attempted to rebuild defenses after a strong typhoon devastated the island the year before.\n\n On December 8, 1941, Japanese forces invaded Guam and McMillin surrendered two days later.\n\n He spent the rest of the war at various Japanese prisoner of war camps.",
+    "Battle of Saipan\nThe Battle of Saipan was a battle of the Pacific campaign of World War II, fought on the island of Saipan in the Mariana Islands from 15 June to 9 July 1944.\n\n The Allied invasion fleet embarking the expeditionary forces left Pearl Harbor on 5 June 1944, the day before Operation Overlord in Europe was launched.\n\n The U.S. 2nd Marine Division, 4th Marine Division, and the Army's 27th Infantry Division, commanded by Lieutenant General Holland Smith, defeated the 43rd Infantry Division of the Imperial Japanese Army, commanded by Lieutenant General Yoshitsugu Saito.",
+    "Battle of Guam (1944)\nThe Second Battle of Guam (21 July – 10 August 1944) was the American recapture of the Japanese-held island of Guam, a U.S. territory in the Mariana Islands captured by the Japanese from the U.S. in the 1941 First Battle of Guam during the Pacific campaign of World War II.",
+    "Battle of Antietam\nThe Battle of Antietam , also known as the Battle of Sharpsburg, particularly in the South, was fought on September 17, 1862, near Sharpsburg, Maryland and Antietam Creek as part of the Maryland Campaign.\n\n It was the first field army–level engagement in the Eastern Theater of the American Civil War to take place on Union soil and is the bloodiest single-day battle in American history, with a combined tally of 22,717 dead, wounded, or missing.",
+    "Battle of Guam (1941)\nThe First Battle of Guam was an engagement during the Pacific War in World War II, and took place from 8 December to 10 December 1941 on Guam in the Mariana Islands between Japan and the United States.\n\n The American garrison was defeated by Japanese forces on 10 December, which resulted in an occupation until the Second Battle of Guam in 1944."
+   ]
+  },
+  {
+   "id": "4b05cdbd2ed600b4",
+   "gold": [
+    {
+     "sentence": "Colocasia is a genus of flowering plants in the family Araceae, native to southeastern Asia and the Indian subcontinent.",
+     "facts": {
+      "0.0": "Colocasia is a genus of flowering plants.",
+      "0.1": "Colocasia is in the family Araceae.",
+      "0.2": "Colocasia is native to southeastern Asia.",
+      "0.3": "Colocasia is native to the Indian subcontinent."
+     }
+    },
+    {
+     "sentence": "The genus Coronilla contains about 20 species of flowering plants native to Europe and North Africa.",
+     "facts": {
+      "1.0": "The genus Coronilla contains about 20 species.",
+      "1.1": "The Coronilla species are flowering plants.",
+      "1.2": "The Coronilla species are native to Europe.",
+      "1.3": "The Coronilla species are native to North Africa."
+     }
+    }
+   ],
+   "items": [
+    "Colocasia\nColocasia is a genus of flowering plants in the family Araceae, native to southeastern Asia and the Indian subcontinent.\n\n Some species are widely cultivated and naturalized in other tropical and subtropical regions.\n\n Common names include tarul, karkala ko ganu, elephant-ear, taro, cocoyam, dasheen, chembu, champadhumpa, shavige gadde, and eddoe.\n\n Elephant-ear and cocoyam are also used for some other large-leaved genera in the Araceae, notably \"Xanthosoma\" and \"Caladium\".\n\n The generic name is derived from the ancient Greek word \"kolokasion\", which in the Greek botanist Dioscorides (1st century AD) meant the edible roots of both \"Colocasia esculenta\" and \"Nelumbo nucifera\".\n\n It is thought that the edible roots of \"Colocasia esculenta\" have been cultivated in Asia for more than ten thousand years.\n\n The species \"Colocasia esculenta\" is an invasive species in wetlands along the American Gulf coast, where it threatens to displace native wetland plants.",
+    "The entries describe diverse flowering plants and groups, chiefly from Africa. Ice plants (Aizoaceae) include South African Aloinopsis and Conophytum, and southern African Conicosia, whose wet-opening capsules release tiny seeds. Other genera span many families and regions: African irises and bulbous amaryllids; Asian toad lilies and Rodgersia; European and North African Coronilla; and aquatic Alismataceae. Vascular plants are defined by xylem",
+    "Caryophyllales\nCaryophyllales ( ) is an order of flowering plants that includes the cacti, carnations, amaranths, ice plants, beets, and many carnivorous plants.\n\n Many members are succulent, having fleshy stems or leaves.",
+    "Xanthosoma\nXanthosoma is a genus of flowering plants in the arum family, Araceae.\n\n The genus is native to tropical America but widely cultivated and naturalized in other tropical regions.\n\n Several are grown for their starchy corms, an important food staple of tropical regions, known variously as \"malanga\", \"otoy\", \"otoe\", cocoyam (or new cocoyam), \"tannia\", \"tannier\", \"yautía\", \"macabo\", \"ocumo\", \"macal\", \"taioba\", \"dasheen\", \"quequisque\", \"ʻ ape\" and (in Papua New Guinea) as Singapore taro (\"taro kongkong\").\n\n Many other species (including especially \"X. roseum\") are used as ornamental plants, and in popular horticultural literature are known as ‘ape or elephant ear (from the purported resemblance of the leaf to an elephant's ear), although the latter name is sometimes also applied to members with similar appearance and uses in the closely related genera \"Caladium\", \"Colocasia\" (i.e., taro), and \"Alocasia\".",
+    "Conicosia\nConicosia is a genus of succulent plants in the ice plant family native to southern Africa.\n\n They are known commonly as narrow-leafed ice plants.\n\n These are relatively short-lived perennials with underground stems and tentacle-shaped, dull-pointed triangular leaves.\n\n They bear large tubular flowers often exceeding 10 centimeters in width, with up to 250 fringelike petals arranged in a ring around a center with hundreds of stamens.\n\n The fruit is a capsule which opens when it gets wet, slowly releasing the hundreds of tiny seeds as they fall out of its drying flesh.",
+    "Conophytum\nConophytum is a genus of South African and Namibian succulent plants that belong to the Aizoaceae family.\n\n The name is derived from the Latin “conus” (cone) and Greek “phytum” (plant).\n\n The plants are also known as knopies (buttons), waterblasies (water blisters), sphaeroids, conos, cone plants, dumplings, or button plants.",
+    "The entries describe diverse plants and one crab genus. Mascarene Dictyosperma album, the wind-shedding “hurricane palm,” is widely cultivated but nearly extinct in its native range. Canary Islands Adenocarpus viscosus grows above 1,800 m. Dregea vines occur in Africa and southern Asia; Duranta shrubs and trees are ornamental, with D. erecta invasive in several regions. Tropical Dieffenbachia are popular houseplants",
+    "Strobilanthes\nStrobilanthes is a genus of about 350 species of flowering plants in the family Acanthaceae, mostly native to tropical Asia and Madagascar, but with a few species extending north into temperate regions of Asia.\n\n Many species are cultivated for their 2-lipped, hooded flowers in shades of blue, pink, white and purple.\n\n Most are frost-tender and require protection in frost-prone areas.",
+    "Coronilla\nThe genus Coronilla contains about 20 species of flowering plants native to Europe and North Africa.",
+    "Caladium\nCaladium is a genus of flowering plants in the family Araceae.\n\n They are often known by the common name elephant ear (which they share with the closely related genera \"Alocasia\", \"Colocasia\", and \"Xanthosoma\"), Heart of Jesus, and Angel Wings.\n\n There are over 1000 named cultivars of \"Caladium bicolor\" from the original South American plant."
+   ]
+  },
+  {
+   "id": "39ad4bc6f4ba1ba3",
+   "gold": [
+    {
+     "sentence": "Isaac Asimov ( ; born Isaak Ozimov; January 2, 1920 – April 6, 1992) was a Russian-American writer and professor of biochemistry at Boston University.",
+     "facts": {
+      "0.0": "Isaac Asimov was born Isaak Ozimov.",
+      "0.1": "Isaac Asimov was born on January 2, 1920.",
+      "0.2": "Isaac Asimov's dates run from January 2, 1920 to April 6, 1992.",
+      "0.3": "Isaac Asimov was a Russian-American writer.",
+      "0.4": "Isaac Asimov was a professor of biochemistry at Boston University."
+     }
+    },
+    {
+     "sentence": "Michael Cunningham (born November 6, 1952) is a U.S. novelist and screenwriter.",
+     "facts": {
+      "1.0": "Michael Cunningham was born on November 6, 1952.",
+      "1.1": "Michael Cunningham is a U.S. novelist.",
+      "1.2": "Michael Cunningham is a U.S. screenwriter."
+     }
+    }
+   ],
+   "items": [
+    "Isaac Asimov's Robots and Aliens\nIsaac Asimov's Robots and Aliens is a series of novels written by various authors and loosely connected to Isaac Asimov's \"Robot\" series.\n\n Each volume is complete in itself, but they form a continuing series.\n\n The series follows the action of the novels of the \"Isaac Asimov's Robot City\" series, with the same protagonists Derec and Ariel, and many other characters.\n\n The plot deals with the Three Laws and encounters between robots and different varieties of alien life.",
+    "The Last Question\n\"The Last Question\" is a science fiction short story by American writer Isaac Asimov.\n\n It first appeared in the November 1956 issue of \"Science Fiction Quarterly\" and was anthologized in the collections \"Nine Tomorrows\" (1959), \"The Best of Isaac Asimov\" (1973), \"Robot Dreams\" (1986), the retrospective \"Opus 100\" (1969), and in \"Isaac Asimov: The Complete Stories, Vol.\n\n 1\" (1990).\n\n It was Asimov's favorite short story of his own authorship, and is one of a loosely connected series of stories concerning a fictional computer called Multivac.\n\n The story overlaps science fiction, theology, and philosophy.",
+    "Isaac Asimov's Robot City: Odyssey\nIsaac Asimov's Robot City: Odyssey is a young adult science fiction novel written in 1987 by Michael P. Kube-McDowell.\n\n It is part of the series Isaac Asimov's Robot City, inspired by Isaac Asimov's \"Robot\" series.\n\n The 1995 computer game Robot City is based on the plot of \"Odyssey\".",
+    "Isaac Asimov's Magical Worlds of Fantasy\nIsaac Asimov's Magical Worlds of Fantasy is a series of twelve themed paperback fantasy and science fiction anthologies edited by Isaac Asimov, Martin H. Greenberg and Charles G. Waugh, a companion set to the ten volume \"Isaac Asimov's Wonderful Worlds of Science Fiction\", produced by the same editors.\n\n It was published by Signet/New American Library from 1983 to 1991.\n\n Volumes 1 and 2 were also issued in hardcover in an omnibus collection titled \"Isaac Asimov's Magical Worlds of Fantasy: Witches & Wizards\".",
+    "Isaac Asimov's Robot City\nIsaac Asimov's Robot City is a series of novels written by various authors and loosely connected to Isaac Asimov's \"Robot\" series.\n\n It takes place between \"The Robots of Dawn\" and \"Robots and Empire\".\n\n Each volume is complete in itself, but they form a continuing series.\n\n The novels were written in response to a writing challenge issued by Asimov to write a series involving the Three Laws of Robotics, which brought about a collaboration of several authors.\n\n Asimov provided outlines for stories which filled in the gap between Asimov's own robot stories and his \"Foundation\" series, explaining the disappearance of the robots prior to the establishment of the galactic empire. \"\n\nIsaac Asimov's Robots and Aliens\" followed in this series, with the same protagonists and many other characters.\n\n The common theme of all books of both series is the interaction between the characters and autonomous cities run and populated by robots (the \"robot cities\" of the series title).\n\n Robot City was also released as a mystery game for the PC in 1995.\n\n The player takes the role of Derec.",
+    "Isaac Asimov's Robot City: Perihelion\nIsaac Asimov's Robot City: Perihelion is a book written in 1988 by William F. Wu.\n\n It is part of the series Isaac Asimov's Robot City, which was inspired by Isaac Asimov's \"Robot\" series.",
+    "Michael Cunningham\nMichael Cunningham (born November 6, 1952) is a U.S. novelist and screenwriter.\n\n He is best known for his 1998 novel \"The Hours\", which won the Pulitzer Prize for Fiction and the PEN/Faulkner Award in 1999.\n\n Cunningham is a senior lecturer of creative writing at Yale University.",
+    "Orson Scott Card\nOrson Scott Card (born August 24, 1951) is an American novelist, critic, public speaker, essayist, and columnist.\n\n He writes in several genres but is known best for science fiction.\n\n His novel \"Ender's Game\" (1985) and its sequel \"Speaker for the Dead\" (1986) both won Hugo and Nebula Awards, making Card the only author to win both science fiction's top U.S. prizes in consecutive years.\n\n A feature film adaptation of \"Ender's Game\", which Card co-produced, was released in late October 2013 in Europe and on November 1, 2013, in North America.",
+    "Wizards (Asimov anthology)\nWizards is an anthology of themed fantasy and science fiction short stories on the subject of wizards edited by Isaac Asimov, Martin H. Greenberg and Charles G. Waugh.\n\n The first volume in their Isaac Asimov's Magical Worlds of Fantasy series, it was first published in paperback by Signet/New American Library in October 1983.\n\n It was later gathered together with \"Witches\", the second book in the series, into the omnibus hardcover collection \"Isaac Asimov's Magical Worlds of Fantasy: Witches & Wizards\" (1985).",
+    "Isaac Asimov\nIsaac Asimov ( ; born Isaak Ozimov; January 2, 1920 – April 6, 1992) was a Russian-American writer and professor of biochemistry at Boston University.\n\n He was known for his works of science fiction and popular science.\n\n Asimov was a prolific writer, and wrote or edited more than 500 books and an estimated 90,000 letters and postcards. His books have been published in 9 of the 10 major categories of the Dewey Decimal Classification."
+   ]
+  },
+  {
+   "id": "383d246ec76d66c9",
+   "gold": [
+    {
+     "sentence": "Awolnation is an American alternative rock band, formed and fronted by Aaron Bruno, formerly of Under the Influence of Giants, Home Town Hero, and Insurgence.",
+     "facts": {
+      "0.0": "Awolnation is an American alternative rock band.",
+      "0.1": "Awolnation was formed by Aaron Bruno.",
+      "0.2": "Awolnation is fronted by Aaron Bruno.",
+      "0.3": "Aaron Bruno was formerly of Under the Influence of Giants.",
+      "0.4": "Aaron Bruno was formerly of Home Town Hero.",
+      "0.5": "Aaron Bruno was formerly of Insurgence."
+     }
+    },
+    {
+     "sentence": "This Mortal Coil was a music collective led by Ivo Watts-Russell, founder of the British record label 4AD.",
+     "facts": {
+      "1.0": "This Mortal Coil was a music collective.",
+      "1.1": "This Mortal Coil was led by Ivo Watts-Russell.",
+      "1.2": "Ivo Watts-Russell founded the British record label 4AD."
+     }
+    }
+   ],
+   "items": [
+    "Awolnation\nAwolnation is an American alternative rock band, formed and fronted by Aaron Bruno, formerly of Under the Influence of Giants, Home Town Hero, and Insurgence.\n\n The band is signed to Red Bull Records, and their first EP, \"Back from Earth\", was released on iTunes on May 18, 2010.\n\n They released their first studio album, \"Megalithic Symphony\", on March 15, 2011; it featured their most notable hit, \"Sail\", which peaked at #17 on the \"Billboard\" Hot 100, #4 on the \"Billboard\" Rock Songs chart, and #5 on the \"Billboard\" Alternative Songs chart.\n\n The song has been certified 6× platinum by the RIAA and has sold 5,500,000 copies in the United States.\n\n As of February 29, 2016, the album has been certified platinum.",
+    "This Mortal Coil\nThis Mortal Coil was a music collective led by Ivo Watts-Russell, founder of the British record label 4AD.\n\n Although Watts-Russell and John Fryer were technically the only two official members, the band's recorded output featured a large rotating cast of supporting artists, many of whom were otherwise associated with 4AD, including members of Cocteau Twins, Colourbox, and Dead Can Dance.\n\n The project became known for its gothic, dream pop sound, and released three full albums beginning in 1984 with \"It'll End in Tears\".",
+    "American Hi-Fi\nAmerican Hi-Fi is an American rock band formed in Boston in 1998.\n\n The band consists of lead vocalist/rhythm guitarist Stacy Jones, lead guitarist Jamie Arentzen, bassist/backing vocalist Drew Parsons, and drummer Brian Nolan.\n\n Prior to the group's formation, Stacy Jones was well known for being a drummer in the successful alternative rock bands Veruca Salt and Letters to Cleo.\n\n American Hi-Fi has a close relationship with Miley Cyrus, whose band shares two members with American Hi-Fi.\n\n The group has a mixed musical style that includes influences from pop punk, alternative rock, and power pop.",
+    "Hollow Moon (Bad Wolf)\n\"Hollow Moon (Bad Wolf)\" is a song by American alternative rock band Awolnation.\n\n It was released as the lead single from their second studio album \"Run\" (2015).\n\n The song became their first number-one hit on the Billboard Alternative Songs chart in early 2015.",
+    "Not Your Fault\n\"Not Your Fault\" is a song by American alternative rock band Awolnation.\n\n It was originally written by frontman Aaron Bruno and recorded by the band for their debut studio album \"Megalithic Symphony\", where it appears as the twelfth track.\n\n \"Not Your Fault\" was released to American modern rock radio on October 17, 2011, and was also released as a single in the United Kingdom and Bosnia on February 26, 2012.\n\n The single peaked at numbers three and eleven on the US \"Billboard\" Alternative Songs and Rock Songs charts, respectively.",
+    "Peepshow (album)\nPeepshow is the ninth studio album by English alternative rock band Siouxsie and the Banshees, released in September 1988 on Polydor.\n\n It was their first record as a quintet.\n\n With the arrival of multi-instrumentalist Martin McCarrick (known for his work as part of 4AD's This Mortal Coil), the group recorded a multifaceted album with a variety of influences.\n\n Including the singles \"Peek-a-Boo\" and \"The Last Beat of My Heart\", the record was a commercial success, peaking at No. 68 on the \"Billboard\" 200 chart in the week of 3 December 1988.\n\n It spent a total of 20 weeks on that chart.",
+    "Automatic (The Jesus and Mary Chain album)\nAutomatic is the third album by Scottish alternative rock band The Jesus and Mary Chain.\n\n The group on this record is basically the core duo of brothers William and Jim Reid with a drum machine providing percussion and even a synthesizer filling in on bass guitar.\n\n The only other credited musician was Richard Thomas who joined the touring version of The Jesus and Mary Chain as a drummer.\n\n Thomas drummed on \"Gimme Hell\" and was a former member of Dif Juz.\n\n He also made appearances on Cocteau Twins' 1986 Victorialand LP and This Mortal Coil's 1986 Filigree & Shadow.",
+    "Mazzy Star\nMazzy Star is an American alternative rock band formed in Santa Monica, California, in 1989 from the group Opal, a collaboration of guitarist David Roback and bassist Kendra Smith.\n\n Roback's friend Hope Sandoval became the group's vocalist when Smith left the band.",
+    "Awolnation discography\nAmerican alternative rock band Awolnation has released two studio albums, three extended plays, eight singles and ten music videos.\n\n The band is signed to Red Bull Records, and their first EP, \"Back from Earth\", was released on iTunes on May 18, 2010.\n\n They released their first studio album, \"Megalithic Symphony\", on March 15, 2011; it featured their most notable hit, \"Sail\", which peaked at #17 on the \"Billboard\" Hot 100, #4 on the \"Billboard\" Rock Songs chart, and #5 on the \"Billboard\" Alternative Songs chart.\n\n The song has been certified 6× platinum by the RIAA and has sold 5,500,000 copies in the United States.\n\n As of February 29, 2016, the album has been certified platinum.\n\n The band's second studio album, \"Run\", was released on March 17, 2015.",
+    "Kill Your Heroes\n\"Kill Your Heroes\" is a song by American alternative rock band Awolnation.\n\n It is written by lead singer Aaron Bruno and musician Brian West for the band's debut studio album \"Megalithic Symphony\", where it appears as the eighth track.\n\n \"Kill Your Heroes\" was released as the third and final single from \"Megalithic Symphony\" and reached the top 20 of the United States \"Billboard\" Alternative Songs and Rock Songs charts."
+   ]
+  },
+  {
+   "id": "b9a2524ea6d60157",
+   "gold": [
+    {
+     "sentence": "The Australian women's national soccer team represents Australia in international women's soccer at the senior level.",
+     "facts": {
+      "0.0": "The Australian women's national soccer team represents Australia in international women's soccer.",
+      "0.1": "The Australian women's national soccer team represents Australia at the senior level."
+     }
+    },
+    {
+     "sentence": " The team's official nickname is the Matildas (from the Australian folk song \"Waltzing Matilda\"), having been known as the Female Socceroos before 1995.",
+     "facts": {
+      "1.0": "The Australian women's national soccer team's official nickname is the Matildas.",
+      "1.1": "The nickname Matildas comes from the Australian folk song \"Waltzing Matilda\".",
+      "1.2": "The Australian women's national soccer team was known as the Female Socceroos before 1995."
+     }
+    },
+    {
+     "sentence": "\"Waltzing Matilda\" is Australia's best-known bush ballad, and has been described as the country's \"unofficial national anthem\".",
+     "facts": {
+      "2.0": "\"Waltzing Matilda\" is Australia's best-known bush ballad.",
+      "2.1": "\"Waltzing Matilda\" has been described as the country's \"unofficial national anthem.\""
+     }
+    }
+   ],
+   "items": [
+    "RPA &amp; The United Nations of Sound\nThe band played in Australia also during the Splendour in the Grass Festival in late July.\n\n The band's debut album as Richard's backing lineup, entitled \"United Nations of Sound\", was released on 19 July 2010.\n\n \"Born Again\", the first proper single, was officially released the same day of the album as a digital download.",
+    "Vanuatu national under-23 football team\nThe Vanuatu national under-23 football team, also known as Vanuatu Cyclone, represents Vanuatu at U23 tournaments.\n\n The team is considered to be the feeder team for the Vanuatu national football team.\n\n They are controlled by the Vanuatu Football Federation.\n\n The team has gained notoriety for thrashing Micronesia's side 46–0 in the 2015 Pacific Games.",
+    "2001 Goodwill Games\nThe 2001 Goodwill Games was the fifth and final edition of the international multi-sport event.\n\n The competition was held in Brisbane, Queensland, Australia from 29 August to 9 September 2001.\n\n A total around 1300 athletes took part in 14 sporting competitions.",
+    "Waltzing Matilda\n\"Waltzing Matilda\" is Australia's best-known bush ballad, and has been described as the country's \"unofficial national anthem\".",
+    "Anigozanthos flavidus\nAnigozanthos flavidus is a species of plant found in Southwest Australia.\n\n It is member of the Haemodoraceae family.\n\n It is commonly known as the tall, yellow, or evergreen, kangaroo paw.\n\n The specific epithet, \"flavidus\", refers to the yellow flowers of this plant.",
+    "Spencer Park, Queensland\nSpencer Park (currently known as Corporate Travel Management Stadium) is a football stadium located in the suburb of Newmarket, north of Brisbane, Queensland, Australia.\n\n It is home to National Premier Leagues Queensland team Brisbane City FC.\n\n The stadium, while officially holding 10,000, seats only 3,000 under the grandstand, the \"Gino Merlo Stand\".\n\n The stadium opened in 1963 on the site of an old Brisbane City Council waste disposal site, and underwent a major renovation in 1981 with the construction of the Gino Merlo Stand.\n\n The stadium is home to La Rustica restaurant, where traditional Italian foods, including pizza, are served.",
+    "Australia at the 2015 Pacific Games\nAustralia competed at the 2015 Pacific Games in Port Moresby, Papua New Guinea from 4 to 18 July 2015.\n\n Australia qualified 43 athletes.\n\n It was the first time that Australia has competed in the Pacific Games.",
+    "Australia women's national soccer team\nThe Australian women's national soccer team represents Australia in international women's soccer at the senior level.\n\n The team is overseen by the governing body for soccer in Australia, Football Federation Australia (FFA), which is currently a member of the Asian Football Confederation (AFC) and the regional ASEAN Football Federation (AFF) since leaving the Oceania Football Confederation (OFC) in 2006.\n\n The team's official nickname is the Matildas (from the Australian folk song \"Waltzing Matilda\"), having been known as the Female Socceroos before 1995.\n\n The current team manager is Alen Stajcic.",
+    "Australia (Gyroscope song)\n\"Australia\" is a song by Australian rock band Gyroscope, from the album \"Breed Obsession\".\n\n It was released as the third single from their highly successful album, which peaked at number one on the Australian Albums Chart.\n\n The song was released to radio in May 2008, and was released as a CD single and digital download on 14 June 2008, along with two acoustic pieces.\n\n One of those being a live acoustic version of \"Australia\", the other a live acoustic cover of Chris Isaak's \"Wicked Game\".",
+    "Anigozanthos manglesii\nAnigozanthos manglesii, commonly known as the red-and-green kangaroo paw, Mangles kangaroo paw, Kurulbrang(Noongar) is a plant species endemic to Western Australia, and the floral emblem of that state."
+   ]
+  },
+  {
+   "id": "3203f6fe2f9c33c3",
+   "gold": [
+    {
+     "sentence": "Tímea Babos (] ; born 10 May 1993) is a Hungarian tennis player.",
+     "facts": {
+      "0.0": "Tímea Babos was born on 10 May 1993.",
+      "0.1": "Tímea Babos is a Hungarian tennis player."
+     }
+    },
+    {
+     "sentence": "Jack Sock (born September 24, 1992) is an American professional tennis player who is currently ranked world No. 21 in men's singles by the Association of Tennis Professionals (ATP).",
+     "facts": {
+      "1.0": "Jack Sock was born on September 24, 1992.",
+      "1.1": "Jack Sock is an American professional tennis player.",
+      "1.2": "Jack Sock is currently ranked world No. 21 in men's singles.",
+      "1.3": "The ranking is by the Association of Tennis Professionals (ATP)."
+     }
+    }
+   ],
+   "items": [
+    "2014 Monterrey Open – Doubles\nTímea Babos and Kimiko Date-Krumm were the defending champions, but chose not to participate together.\n\n Babos played alongside Olga Govortsova, while Date-Krumm teamed up with Karolína Plíšková.\n\n The two teams were scheduled to meet in the semifinals, but Date-Krumm withdrew with a right leg injury.\n\n<br>",
+    "2017 Apia International Sydney – Women's Doubles\nMartina Hingis and Sania Mirza were the defending champions, but chose not to participate together this year.\n\n Hingis played alongside Coco Vandeweghe, but lost in the quarterfinals to Tímea Babos and Anastasia Pavlyuchenkova.\n\n Mirza teamed up with Barbora Strýcová, but lost in the final to Babos and Pavlyuchenkova, 4–6, 4–6.",
+    "Tímea Babos\nTímea Babos (] ; born 10 May 1993) is a Hungarian tennis player.",
+    "2015 Apia International Sydney – Women's Doubles\nTímea Babos and Lucie Šafářová were the defending champions, but chose not to participate together.\n\n Babos played alongside Kristina Mladenovic, but lost in the semifinals to Raquel Kops-Jones and Abigail Spears.\n\n Šafářová teamed up with Belinda Bencic, but lost in the first round to Kimiko Date-Krumm and Karolína Plíšková.\n\n<br>",
+    "2016 Dubai Tennis Championships – Women's Doubles\nTímea Babos and Kristina Mladenovic were the defending champions, but chose not to compete together.\n\n Babos played alongside Julia Görges, but lost in the semifinals to Caroline Garcia and Mladenovic.\n\n<br>",
+    "2013 Aegon Classic – Doubles\nTímea Babos and Hsieh Su-wei were the defending champions, but Babos decided not to participate.\n\n<br>",
+    "2005 BNP Paribas Masters – Doubles\nJonas Björkman and Todd Woodbridge were the defending champions, but did not participate together this year.\n\n Björkman partnered Max Mirnyi, losing in the first round.\n\n Woodbridge retired from professional tennis earlier in the year.",
+    "2014 Suzhou Ladies Open – Doubles\nTímea Babos and Michaëlla Krajicek were the defending champions, having won the event in 2013, however both players chose not to participate.",
+    "Jack Sock\nJack Sock (born September 24, 1992) is an American professional tennis player who is currently ranked world No. 21 in men's singles by the Association of Tennis Professionals (ATP).\n\n He is one of the top ranked American men in both singles and doubles on the ATP Tour.\n\n A former junior US Open champion, Sock's singles success is highlighted by 7 ATP finals, including three titles.\n\n His career best result came at the 2017 Indian Wells Masters, where he reached the semi-finals.",
+    "2015 Malaysian Open – Doubles\nTímea Babos and Chan Hao-ching were the defending champions, but Chan chose not to participate this year.\n\n Babos chose to play in Monterrey, but lost in the first round."
+   ]
+  },
+  {
+   "id": "d7d111e2b026e188",
+   "gold": [
+    {
+     "sentence": "3:10 to Yuma is a 2007 American Western film directed by James Mangold and produced by Cathy Konrad, and starring Russell Crowe and Christian Bale in the lead roles, with supporting performances by Peter Fonda, Gretchen Mol, Ben Foster, Dallas Roberts, Alan Tudyk, Vinessa Shaw, and Logan Lerman.",
+     "facts": {
+      "0.0": "3:10 to Yuma is a 2007 American Western film.",
+      "0.1": "3:10 to Yuma was directed by James Mangold.",
+      "0.2": "3:10 to Yuma was produced by Cathy Konrad.",
+      "0.3": "Russell Crowe and Christian Bale star in the lead roles of 3:10 to Yuma.",
+      "0.4": "Peter Fonda, Gretchen Mol, Ben Foster, Dallas Roberts, Alan Tudyk, Vinessa Shaw, and Logan Lerman have supporting performances in 3:10 to Yuma."
+     }
+    },
+    {
+     "sentence": "Alan Wray Tudyk ( ; born March 16, 1971) is an American actor and voice actor known for his roles as Hoban \"Wash\" Washburne in the space western television series \"Firefly\" and movie \"Serenity\", Alpha in the science fiction TV series \"Dollhouse\", Tucker McGee in \"Tucker & Dale vs. Evil\", Steve the Pirate in \"\", and Wat in \"A Knight's Tale\".",
+     "facts": {
+      "1.0": "Alan Wray Tudyk was born on March 16, 1971.",
+      "1.1": "Alan Tudyk is an American actor.",
+      "1.2": "Alan Tudyk is an American voice actor.",
+      "1.3": "Alan Tudyk is known for playing Hoban \"Wash\" Washburne in the space western television series \"Firefly\" and in the movie \"Serenity\".",
+      "1.4": "Alan Tudyk is known for playing Alpha in the science fiction TV series \"Dollhouse\".",
+      "1.5": "Alan Tudyk is known for playing Tucker McGee in \"Tucker & Dale vs. Evil\".",
+      "1.6": "Alan Tudyk is known for playing Steve the Pirate in \"\" (the title is missing from the source sentence).",
+      "1.7": "Alan Tudyk is known for playing Wat in \"A Knight's Tale\"."
+     }
+    }
+   ],
+   "items": [
+    "Deadfall (2012 film)\nDeadfall is a 2012 American crime drama film directed by Stefan Ruzowitzky, written by Zach Dean and starring Eric Bana, Olivia Wilde, and Charlie Hunnam.",
+    "3:10 to Yuma (2007 film)\n3:10 to Yuma is a 2007 American Western film directed by James Mangold and produced by Cathy Konrad, and starring Russell Crowe and Christian Bale in the lead roles, with supporting performances by Peter Fonda, Gretchen Mol, Ben Foster, Dallas Roberts, Alan Tudyk, Vinessa Shaw, and Logan Lerman.\n\n It is about a drought-impoverished rancher (Bale) who takes on the dangerous job of taking a notorious outlaw (Crowe) to justice.\n\n It is a remake of the , making it the second adaptation of Elmore Leonard's short story \"Three-Ten to Yuma\".\n\n Filming took place in various locations in New Mexico.\n\n \"3:10 to Yuma\" opened September 7, 2007, in the United States and received positive reviews from critics.",
+    "The Appaloosa\nThe Appaloosa (also known as Southwest to Sonora) is a 1966 American Western film Technicolor (set in the 1870s) from Universal Pictures starring Marlon Brando, Anjanette Comer and John Saxon, who was nominated for a Golden Globe for Best Supporting Actor for his portrayal of a Mexican bandit.\n\n The film was directed by Sidney J. Furie, and shot in Wrightwood, Antelope Valley, and Lake Los Angeles, California, St. George, Utah, and Colorado City, Arizona.",
+    "The Man from Snowy River (1982 film)\nThe Man from Snowy River is a 1982 Australian drama film based on the Banjo Paterson poem \"The Man from Snowy River\".\n\n The film had a cast including Kirk Douglas in a dual role as the brothers Harrison (a character who appeared frequently in Paterson's poems) and Spur, Jack Thompson as Clancy, Tom Burlinson as Jim Craig, Sigrid Thornton as Harrison's daughter Jessica, Terence Donovan as Jim's father Henry Craig, and Chris Haywood as Curly.",
+    "Richard Farnsworth\nRichard W. Farnsworth (September 1, 1920 – October 6, 2000) was an American actor and stuntman.\n\n He is best known for his performances in \"The Grey Fox\" (1982), for which he received a Golden Globe Award nomination, \"Anne of Green Gables\" (1985), \"Misery\" (1990), and \"The Straight Story\" (1999), for which he received a nomination for the Academy Award for Best Actor.\n\n His sudden death followed a long struggle with prostate cancer.",
+    "Gene Hackman\nEugene Allen \"Gene\" Hackman (born January 30, 1930) is a retired American actor and novelist.\n\n In a career spanning nearly five decades, Hackman was nominated for five Academy Awards, winning Best Actor in \"The French Connection\" and Best Supporting Actor in \"Unforgiven\".\n\n He won three Golden Globes and two BAFTAs.",
+    "James Garner filmography\nThe following is the filmography for American actor James Garner.\n\n Garner was known for prominent roles in films such as \"Sayonara\" (1957) with Marlon Brando, \"Cash McCall\" (1960) with Natalie Wood, \"The Great Escape\" (1963) with Steve McQueen, \"The Thrill of It All\" (1963) with Doris Day, \"Move Over, Darling\" (1963) with Doris Day, \"The Wheeler Dealers\" (1963) with Lee Remick, Paddy Chayevsky's \"The Americanization of Emily\" (1964) with Julie Andrews, \"Hour of the Gun\" (1967), \"Marlowe\" (1969) with Bruce Lee, \"Support Your Local Sheriff!\n\n\"",
+    "Henry Murdoch\nHenry Murdoch (17 September, 1920 - 24 April, 1987), born as George Henry Murdock, was an Australian aboriginal actor and stockman who appeared in Australian films of the 1940s and 1950s.\n\n He was working as stockman in Rockhampton when discovered by Ralph Smart, who was helping make \"The Overlanders\" (1946).\n\n The film's director, Harry Watt, later claimed Murdoch and fellow aboriginal actor Clyde Combo \"proved to be first-class actors and were exceedingly quick witted and intelligent.\n\n They certainly disproved the conventional idea that the Australian aboriginal is an animalistic caveman.\"",
+    "Alan Tudyk\nAlan Wray Tudyk ( ; born March 16, 1971) is an American actor and voice actor known for his roles as Hoban \"Wash\" Washburne in the space western television series \"Firefly\" and movie \"Serenity\", Alpha in the science fiction TV series \"Dollhouse\", Tucker McGee in \"Tucker & Dale vs. Evil\", Steve the Pirate in \"\", and Wat in \"A Knight's Tale\".\n\n He also co-starred on the ABC sitcom \"Suburgatory\".\n\n Tudyk had a supporting role in the film \"42\" as baseball manager Ben Chapman and voiced roles in every Walt Disney Animation Studios film to date starting with \"Wreck-It Ralph\".\n\n He has also featured in the web series \"Con Man\" and the films \"\" and \"Rogue One: A Star Wars Story\".",
+    "James Garner filmography\n(1969) with Walter Brennan, \"Murphy's Romance\" (1985) with Sally Field, \"Sunset\" (1988) with Bruce Willis, \"Maverick\" (1994) with Mel Gibson and Jodie Foster, \"Divine Secrets of the Ya-Ya Sisterhood\" (2002), and \"The Notebook\" (2004) with Ryan Gosling and Rachel McAdams.\n\n His television series credits include portraying Bret Maverick in \"Maverick\" (1957–1962) and \"Bret Maverick\" (1981–1982), Jim Rockford in \"The Rockford Files\" (1974–1980), and Jim Egan in \"8 Simple Rules\" (2003–2005)."
+   ]
+  },
+  {
+   "id": "aca24c03c4bbfa13",
+   "gold": [
+    {
+     "sentence": "Leitneria floridana (corkwood), the sole species in the genus Leitneria, is a deciduous dioecious shrub or small tree, found only in the southeastern United States states of Arkansas, Florida, Georgia, Missouri and Texas.",
+     "facts": {
+      "0.0": "Leitneria floridana is also called corkwood.",
+      "0.1": "Leitneria floridana is the sole species in the genus Leitneria.",
+      "0.2": "Leitneria floridana is a deciduous dioecious shrub or small tree.",
+      "0.3": "Leitneria floridana is found only in the southeastern United States states of Arkansas, Florida, Georgia, Missouri and Texas."
+     }
+    },
+    {
+     "sentence": "Tricyrtis is a genus of Asian flowering plants in the lily family, with approximately 20 known species.",
+     "facts": {
+      "1.0": "Tricyrtis is a genus of Asian flowering plants.",
+      "1.1": "Tricyrtis is in the lily family.",
+      "1.2": "Tricyrtis has approximately 20 known species."
+     }
+    }
+   ],
+   "items": [
+    "Tricyrtis\nTricyrtis is a genus of Asian flowering plants in the lily family, with approximately 20 known species.\n\n The species are commonly known in English as toad lilies.\n\n The genus has a native range from the Himalayas to eastern Asia, including China, Japan, Philippines and Taiwan, and a few species are cultivated for their ornamental qualities in other parts of the world.",
+    "Tritonia (plant)\nTritonia (flame freesia) is a genus of flowering plants in the iris family first described as a genus in 1802.\n\n They are naturally distributed across southern Africa, with a high concentration of species in Cape Province of western South Africa.\n\n The genus is closely related to the genus \"Ixia\".",
+    "Tritoniopsis\nTritoniopsis is a genus of flowering plants in the family Iridaceae, first described as a genus in 1926.\n\n The entire genus is endemic to Cape Province in South Africa.\n\n The genus name refers to the African genus \"Tritonia\" and is combined with the Greek word \"opsis\", meaning \"look-alike\".",
+    "Leitneria\nLeitneria floridana (corkwood), the sole species in the genus Leitneria, is a deciduous dioecious shrub or small tree, found only in the southeastern United States states of Arkansas, Florida, Georgia, Missouri and Texas.",
+    "Traubiinae\nTraubiinae is a subtribe of plants classified under the tribe Hippeastreae.\n\n It belongs to the subfamily Amaryllidoideae of the Amaryllis family (Amaryllidaceae).",
+    "Cyrtanthus\nCyrtanthus is a genus of perennial, herbaceous and bulbous plants in the family Amaryllidaceae, subfamily Amaryllidoideae.",
+    "Leycesteria\nLeycesteria is a genus of flowering plants in the honeysuckle family Caprifoliaceae, native to temperate Asia in the Himalaya and southwestern China.",
+    "Ericaceae\nThe Ericaceae are a family of flowering plants, commonly known as the heath or heather family, found most commonly in acid and infertile growing conditions.\n\n The family is large, with c. 4250 known species spread across 124 genera, making it the 14th most species-rich family of flowering plants.\n\n The many well-known and economically important members of the Ericaceae include the cranberry, blueberry, huckleberry, rhododendron (including azaleas), and various common heaths and heathers (\"Erica\", \"Cassiope\", \"Daboecia\", and \"Calluna\" for example).",
+    "Deutzia\nDeutzia ( or ) is a genus of about 60 species of flowering plants in the family Hydrangeaceae, native to eastern and central Asia (from the Himalayas east to Japan and the Philippines), and Central America and also Europe.\n\n By far the highest species diversity is in China, where 50 species occur.",
+    "Zygotritonia\nZygotritonia is a genus of herbaceous, perennial and bulbous plants in the Iris family (Iridaceae).\n\n It contains four species distributed in Tropical Africa.\n\n The genus name is derived from the word zygomorphic (meaning bilabiate), and the apparent resemblance to some species in the genus \"Tritonia\"."
+   ]
+  },
+  {
+   "id": "96e5e68924830d97",
+   "gold": [
+    {
+     "sentence": " He is mainly known for his spells at Real Sociedad where his offensive partnership with Nihat Kahveci was one of the best in Spain.",
+     "facts": {
+      "0.0": "He is mainly known for his spells at Real Sociedad.",
+      "0.1": "His offensive partnership with Nihat Kahveci at Real Sociedad was one of the best in Spain."
+     }
+    },
+    {
+     "sentence": "Nihat Kahveci (born 23 November 1979) is a Turkish former footballer who played as a forward.",
+     "facts": {
+      "1.0": "Nihat Kahveci was born on 23 November 1979.",
+      "1.1": "Nihat Kahveci is a Turkish former footballer.",
+      "1.2": "Nihat Kahveci played as a forward."
+     }
+    }
+   ],
+   "items": [
+    "Lippo Hertzka\nLippo Hertzka (19 November 1904 – 14 March 1951) was a Hungarian football player and manager.\n\n He played for Essener Turnerbund, MTK Budapest and Real Sociedad.\n\n After retiring, he coached seven teams, including Real Sociedad and Real Madrid, a team which he coached for 2 years (1930–1932) and led to an undefeated La Liga championship during the 1931-32 season, which meant the first La Liga title for the \"white\" squad.\n\n He also won two league titles in Portugal for Benfica.",
+    "Real Sociedad\nReal Sociedad de Fútbol, S.A.D., more commonly referred to as Real Sociedad (] ; \"Royal Society\") or La Real, is a Spanish football club based in the city of San Sebastián, Basque Country, founded on 7 September 1909.\n\n It plays its home matches at the 32,000-capacity Anoeta Stadium.\n\n Real Sociedad won the Liga title in 1980–81 and 1981–82, and last finished runners-up in 2002–03.\n\n The club has also won the Copa del Rey twice, in 1909 and 1987.\n\n It contests the Basque derby against rivals Athletic Bilbao.\n\n Real Sociedad were founder members of La Liga in 1928, and its longest spell in the top flight was for 40 seasons, from 1967 to 2007.",
+    "2013–14 Real Sociedad season\nThe 2013–14 season was Real Sociedad's 67th season in La Liga.\n\n Real Sociedad finished 7th in the league and reached the semifinals of the Copa del Rey.\n\n The Basque failed to make it out of the group stages of the UEFA Champions League.",
+    "Real Sociedad Femenino\nReal Sociedad Femenino is the women's football section of Real Sociedad de Fútbol.\n\n Founded in 2004",
+    "Darko Kovačević\nDarko Kovačević (] ; Serbian Cyrillic: ; born 18 November 1973) is a Serbian former footballer who played as a forward.\n\n He began his career in Serbia with Proleter Zrenjanin and subsequently played for Red Star Belgrade, with whom he won a Yugoslav League title and two Yugoslav Cups.\n\n His prolific performances earned him a move to Premier League side Sheffield Wednesday, although his time in England was less successful.\n\n He is mainly known for his spells at Real Sociedad where his offensive partnership with Nihat Kahveci was one of the best in Spain.\n\n Kovačević also had positive spells with Italian club Juventus and Greek side Olympiacos.\n\n At international level, he represented Yugoslavia at the 1998 FIFA World Cup and at UEFA Euro 2000.",
+    "Ivan Toplak\nIvan Toplak (Serbian Cyrillic: Ивaн Toплaк; born September 21, 1931 in Belgrade) is a former Yugoslavian football player and manager.\n\n He earned 1 cap for Yugoslavia.\n\n He started his career at Branik in Maribor, where his family moved in 1943 from Belgrade.",
+    "C.D. Real Sociedad\nClub Deportivo Real Sociedad, commonly known as Real Sociedad (] ), is a Honduran football club based on Tocoa, Colón, Honduras.",
+    "Sport Mundi Tournament\nThe Sport Mundi Tournament is a Spanish pre-season women's football invitational charitable tournament held every August in Irun since 2005.\n\n It is contested by four teams, usually including regional powerhouses Athletic Bilbao and Real Sociedad.\n\n Athletic is the most successful team in the competition with four titles, followed by Levante UD and Real Sociedad with two each.",
+    "José Antonio Santamaría Mikel Vaqueriza\nJosé Antonio Santamaría Mikel Vaqueriza (born 16 March 1946 in San Sebastián, Guipúzcoa, Spain; died 19 January 1993) was a Spanish footballer.\n\n During his career as a professional footballer, Santamaría played for SD Eibar (1963 to 1964), Real Sociedad (1964 to 1967), Real Sociedad (1967 to 1971), Hercules CF (1971 to 1974) finishing his career at CE Sabadell FC (1974 to 1975).\n\n After retiring from football he had a career as an entrepreneur in the hospitality sector.\n\n He was killed in an attack committed by ETA in 1993.",
+    "Nihat Kahveci\nNihat Kahveci (born 23 November 1979) is a Turkish former footballer who played as a forward."
+   ]
+  },
+  {
+   "id": "725e56e5b0e5ea72",
+   "gold": [
+    {
+     "sentence": "The 2012 United States Libertarian National Convention, in which delegates of the Libertarian Party (LP) chose the party's nominees for President of the United States and Vice President of the United States in the 2012 general election, was held May 2–6, 2012 in Las Vegas, Nevada at the Red Rock Resort Spa and Casino.",
+     "facts": {
+      "0.0": "The 2012 United States Libertarian National Convention was a convention of the Libertarian Party (LP).",
+      "0.1": "Delegates of the Libertarian Party chose the party's nominees at the 2012 United States Libertarian National Convention.",
+      "0.2": "The nominees chosen at the 2012 United States Libertarian National Convention were for President of the United States.",
+      "0.3": "The nominees chosen at the 2012 United States Libertarian National Convention were for Vice President of the United States.",
+      "0.4": "The nominees were chosen for the 2012 general election.",
+      "0.5": "The 2012 United States Libertarian National Convention was held May 2-6, 2012.",
+      "0.6": "The 2012 United States Libertarian National Convention was held in Las Vegas, Nevada.",
+      "0.7": "The 2012 United States Libertarian National Convention was held at the Red Rock Resort Spa and Casino."
+     }
+    },
+    {
+     "sentence": " Former Governor of New Mexico Gary Johnson won the presidential nomination on the first ballot.",
+     "facts": {
+      "1.0": "Gary Johnson is a former Governor of New Mexico.",
+      "1.1": "Gary Johnson won the presidential nomination.",
+      "1.2": "Gary Johnson won the presidential nomination on the first ballot."
+     }
+    },
+    {
+     "sentence": "Gary Earl Johnson (born January 1, 1953) is an American businessman, author, and politician.",
+     "facts": {
+      "2.0": "Gary Earl Johnson was born on January 1, 1953.",
+      "2.1": "Gary Earl Johnson is an American businessman.",
+      "2.2": "Gary Earl Johnson is an American author.",
+      "2.3": "Gary Earl Johnson is an American politician."
+     }
+    },
+    {
+     "sentence": " He was the 29th Governor of New Mexico from 1995 to 2003 as a member of the Republican Party.",
+     "facts": {
+      "3.0": "Gary Johnson was the 29th Governor of New Mexico.",
+      "3.1": "Gary Johnson was Governor of New Mexico from 1995 to 2003.",
+      "3.2": "Gary Johnson was a member of the Republican Party as Governor of New Mexico."
+     }
+    }
+   ],
+   "items": [
+    "2012 Libertarian National Convention\nThe 2012 United States Libertarian National Convention, in which delegates of the Libertarian Party (LP) chose the party's nominees for President of the United States and Vice President of the United States in the 2012 general election, was held May 2–6, 2012 in Las Vegas, Nevada at the Red Rock Resort Spa and Casino.\n\n Former Governor of New Mexico Gary Johnson won the presidential nomination on the first ballot.\n\n Retired California state court judge Jim Gray won the vice-presidential nomination, also on the first ballot.\n\n The convention also chose to replace most of the Libertarian National Committee party officers and members-at-large.",
+    "Libertarian National Committee\nThe Libertarian National Committee (LNC) controls and manages the affairs, properties, and funds of the United States Libertarian Party.\n\n It is composed of the party officers, five at-large representatives elected every two years at the national convention, and a theoretical maximum of 10 regional representatives.\n\n The current chair, elected in June 2014, is Nicholas Sarwark.\n\n The Executive Director is Wes Benedict.",
+    "Gary Johnson presidential campaign, 2012\nThe 2012 presidential campaign of Gary Johnson, the 29th Governor of New Mexico, was announced on April 21, 2011.\n\n He declared his candidacy for the 2012 Republican Party nomination for President of the United States.\n\n On December 28, 2011, Johnson withdrew his candidacy for the Republican nomination, and declared his candidacy for the 2012 presidential nomination of the Libertarian Party.\n\n The 2012 Libertarian National Convention was held during the first weekend of May 2012.\n\n On May 5, 2012, after promoting his libertarian-oriented political positions to delegates, Johnson received the most votes at the convention and became the official 2012 Libertarian presidential nominee.\n\n On November 6, 2012, Johnson received just under 1% of the popular vote in the general election, amounting to more than 1.2 million votes, more than double what the Barr/Root ticket received in 2008.\n\n This was the most successful result for a third-party presidential candidacy since 2000, and the best in the Libertarian Party's history by vote number at the time.\n\n (Johnson ran again in 2016 and received nearly four times his 2012 vote total.)",
+    "Libertarian National Convention\nThe Libertarian National Convention is held every two years by the Libertarian Party (United States) to choose members of the Libertarian National Committee (LNC), and to conduct other party business.\n\n In presidential election years, the convention delegates enact a platform and nominate the Libertarian presidential and vice-presidential candidates who then face the nominees of other parties in the November general election.",
+    "Libertarian Party presidential primaries, 2016\nThe 2016 Libertarian Party presidential primaries and caucuses allowed electors to indicate non-binding preferences for the Libertarian Party's presidential candidate.\n\n These differed from the Republican or Democratic presidential primaries and caucuses in that they did not appoint delegates to represent a candidate at the party's convention to select the party's nominee for the United States presidential election.\n\n The party's nominee for the 2016 presidential election was chosen directly by registered delegates at the 2016 Libertarian National Convention, which ran from May 26 to 30, 2016.\n\n The delegates nominated former New Mexico Governor Gary Johnson and former Massachusetts Governor Bill Weld.",
+    "David Bergland was the Libertarian presidential nominee in 1984. At the 2012 convention in Las Vegas, delegates nominated Gary Johnson and Jim Gray on the first ballot and replaced most party officers. Johnson, a former New Mexico governor, switched from the Republican race to the Libertarian Party in 2011; he won over 1.2 million votes in 2012 and was nominated again in 2016 alongside Bill Weld. The 2016 primaries were nonbinding; convention delegates selected nominees",
+    "Mark Hinkle\nMark Hinkle (born January 28, 1951) is an American libertarian activist and businessperson.\n\n He was the National Chairman of the United States Libertarian Party until 2012.\n\n He was elected by the delegates of the 2010 Libertarian National Convention in St. Louis, Missouri on May 30, 2010.",
+    "David Bergland\nDavid Peter Bergland (born June 4, 1935) is an American politician who was the United States Libertarian Party's nominee at the 1983 Libertarian National Convention for President of the United States in the 1984 presidential election.",
+    "Gary Johnson\nGary Earl Johnson (born January 1, 1953) is an American businessman, author, and politician.\n\n He was the 29th Governor of New Mexico from 1995 to 2003 as a member of the Republican Party.\n\n He was also the Libertarian Party nominee for President of the United States in the 2012 and 2016 elections.",
+    "Political positions of Gary Johnson\nGary Johnson was the governor of New Mexico from 1995 to 2003 and ran for president in 2012 and 2016.\n\n In December 2011 he announced he would pursue the presidential nomination of the Libertarian Party for the 2012 general election.\n\n The Libertarian National Convention in May, 2012 chose Johnson as the party's candidate.\n\n In November 2014, Johnson announced he would pursue the presidential nomination of the Libertarian Party for the 2016 general election.\n\n Johnson has taken positions on many political issues as revealed through his public comments, his gubernatorial record, his Our America Initiative and his campaigns to win the Republican and Libertarian nominations."
+   ]
+  },
+  {
+   "id": "779915c6f9e680d1",
+   "gold": [
+    {
+     "sentence": "Popular Science (also known as PopSci) is an American bi-monthly magazine carrying popular science content, which refers to articles for the general reader on science and technology subjects.",
+     "facts": {
+      "0.0": "Popular Science is also known as PopSci.",
+      "0.1": "Popular Science is an American bi-monthly magazine.",
+      "0.2": "Popular Science carries popular science content.",
+      "0.3": "Popular science content refers to articles for the general reader on science and technology subjects."
+     }
+    },
+    {
+     "sentence": "Girlfriends was a women's magazine that provided critical coverage of culture, entertainment and world events from a lesbian perspective.",
+     "facts": {
+      "1.0": "Girlfriends was a women's magazine.",
+      "1.1": "Girlfriends provided critical coverage of culture.",
+      "1.2": "Girlfriends provided critical coverage of entertainment.",
+      "1.3": "Girlfriends provided critical coverage of world events.",
+      "1.4": "Girlfriends' coverage was from a lesbian perspective."
+     }
+    },
+    {
+     "sentence": " Published monthly from San Francisco since 1993, it was distributed nationwide by Disticor.",
+     "facts": {
+      "2.0": "Girlfriends was published monthly from San Francisco since 1993.",
+      "2.1": "Girlfriends was distributed nationwide by Disticor."
+     }
+    },
+    {
+     "sentence": " \"Girlfriends\" magazine ceased publication in 2006.",
+     "facts": {
+      "3.0": "Girlfriends magazine ceased publication in 2006."
+     }
+    }
+   ],
+   "items": [
+    "PC Magazine\nPC Magazine (shortened as PCMag) is an American computer magazine published by Ziff Davis.\n\n A print edition was published from 1982 to January 2009.\n\n Publication of online editions started in late 1994 and continues to this day.",
+    "The entries cover popular-science and technology publications, media organizations, and a computer maker. Austrian German-language Universum is financially supported by the Austrian National Science Foundation; U.S. Popular Science, founded in 1872, is award-winning and internationally distributed. Popular science explains science for general audiences across media. NASA-sponsored Astrobiology Magazine has reported on space missions and life-universe research since 2000. Other titles include culture magazine PAPER, PCMag, Windows: The Official Magazine, independent",
+    "Golf Digest\nGolf Digest is a monthly golf magazine published by Condé Nast Publications in the United States.\n\n It is a generalist golf publication covering recreational golf and men's and women's competitive golf.\n\n Condé Nast Publications also publishes the more specialized \"Golf for Women\", \"Golf World\" and \"Golf World Business\".\n\n The magazine started in 1950, and was sold to The New York Times Company in 1969.\n\n The Times company sold their magazine division to Condé Nast in 2001.\n\n The headquarters of \"Golf Digest\" is in Des Moines, Iowa.",
+    "Girls' Life (magazine)\nGirls' Life is an American teen magazine.\n\n It was launched in 1994 by Monarch Services.\n\n The magazine is headquartered in Baltimore, Maryland.",
+    "Essence (magazine)\nEssence is a monthly magazine for African American women between the ages of 18 and 49.\n\n It is the only magazine that focuses on reaching an audience of black women, revolves around the black woman experience, and has remained for a long period of time.\n\n The magazine covers fashion, lifestyle and beauty, with an intimate girlfriend-to-girlfriend tone, and its slogan \"Fierce, Fun, and Fabulous\" suggests the magazine's goal of empowering African-American women.\n\n The topics the magazine discusses range from celebrities, to fashion, to point-of-view pieces addressing current issues in the African-American community.\n\n A number of its readers engage closely and personally with the publication, and it claims to be the magazine \"for and about Black women\".",
+    "The entries cover magazines, journalists, writers, and the meaning of “review.” Children’s titles include bimonthly Jack and Jill and National Wildlife Federation nature magazines Ranger Rick, Ranger Rick Jr., and Ranger Rick Cub. Women’s magazines include Macedonian Tea Moderna and Danish ALT for Damerne. Other publications range from Adventist Review and conservative National Review to the Human Life Review, Henry James Review, and defunct American Mercury and Insurgent49. Profiles include Rosie O’Donnell",
+    "Hänt Bild (Swedish weekly, 2003–, Aller); Hänt Extra (Swedish celebrity/youth weekly); Girlfriends (lesbian culture, 1993–2006); Rap-Up (hip-hop/R&B quarterly, 2001–); Sculptural Pursuit (quarterly art); DIVA (UK lesbian monthly, 1994–); Elle (global fashion/lifestyle, founded 1945); Girls’ Life (US teen, 1994–",
+    "Girlfriends (magazine)\nGirlfriends was a women's magazine that provided critical coverage of culture, entertainment and world events from a lesbian perspective.\n\n It was founded by Jacob Anderson-Minshall, Diane Anderson-Minshall and Heather Findlay.\n\n It also offered relationship, health and travel advice.\n\n Published monthly from San Francisco since 1993, it was distributed nationwide by Disticor.\n\n It had the same publisher as lesbian erotica magazine \"On Our Backs\", but distanced itself from its pornographic counterpart by refusing to carry sexual ads.\n\n \"Girlfriends\" magazine ceased publication in 2006.",
+    "Popular Science\nPopular Science (also known as PopSci) is an American bi-monthly magazine carrying popular science content, which refers to articles for the general reader on science and technology subjects.\n\n \"Popular Science\" has won over 58 awards, including the American Society of Magazine Editors awards for its journalistic excellence in both 2003 (for General Excellence) and 2004 (for Best Magazine Section).\n\n With roots beginning in 1872, \"Popular Science\" has been translated into over 30 languages and is distributed to at least 45 countries.",
+    "Popular science\nPopular science (also pop-science or popsci) is interpretation of science intended for a general audience.\n\n While science journalism focuses on recent scientific developments, popular science is more broad-ranging.\n\n It may be written by professional science journalists or by scientists themselves.\n\n It is presented in many forms, including books, film and television documentaries, magazine articles, and web pages."
+   ]
+  },
+  {
+   "id": "09ec68c2957a9e81",
+   "gold": [
+    {
+     "sentence": " He has written a column for \"Fortune\" magazine for more than twenty years, after having spent a decade at \"Esquire\".",
+     "facts": {
+      "0.0": "The person described has written a column for Fortune magazine for more than twenty years.",
+      "0.1": "The person described spent a decade at Esquire before writing for Fortune."
+     }
+    },
+    {
+     "sentence": " Founded in 1933, it flourished during the Great Depression under the guidance of founders Arnold Gingrich, David A. Smart and Henry L. Jackson.",
+     "facts": {
+      "1.0": "The described publication was founded in 1933.",
+      "1.1": "The described publication flourished during the Great Depression.",
+      "1.2": "The described publication flourished under the guidance of founders Arnold Gingrich, David A. Smart, and Henry L. Jackson."
+     }
+    }
+   ],
+   "items": [
+    "André Laguerre\nMarc André Laguerre (February 21, 1915 – January 18, 1979) was a journalist and magazine editor, best known as the managing editor of \"Sports Illustrated\" from 1960 to 1974, during which time he oversaw the growth in the magazine from a niche publication to become the industry leader in weekly sports magazines.\n\n It was under his leadership that the annual \"Sports Illustrated Swimsuit Issue\" was first published.\n\n When he retired in 1974, he had been managing editor of the magazine for 704 issues, then a record among magazines published by Time, Inc., SI's parent company.",
+    "Simon &amp; Schuster\nSimon & Schuster, Inc. ( ), a subsidiary of CBS Corporation, is an American publishing company founded in New York City in 1924 by Richard Simon and Max Schuster.\n\n As of 2016, Simon & Schuster publishes 2,000 titles annually under 35 different imprints.",
+    "VIVmag\nVIVmag is one of the earliest exclusively digital, interactive women's lifestyle magazines.\n\n Launched in 2006 and backed by Canadian industrialist David Harrison Gilmour (the founder of FIJI Water LLC), the bimonthly magazine is distributed by Zinio Systems, Inc.\n\n The first issue appeared in January-February 2007.\n\n There is no print version.\n\n The paperless title can be viewed in most browsers or downloaded to your computer and read via the Zinio Reader.\n\n The magazine is based in Thousand Oaks, California.",
+    "Esquire (magazine)\nEsquire is an American men's magazine, published by the Hearst Corporation in the United States.\n\n Founded in 1933, it flourished during the Great Depression under the guidance of founders Arnold Gingrich, David A. Smart and Henry L. Jackson.",
+    "PC Magazine\nPC Magazine (shortened as PCMag) is an American computer magazine published by Ziff Davis.\n\n A print edition was published from 1982 to January 2009.\n\n Publication of online editions started in late 1994 and continues to this day.",
+    "This Is Bing Crosby\nThis Is Bing Crosby was a fifteen-minute five times a week daytime radio program featuring Bing Crosby acting as a disc jockey.\n\n Minute Maid quick frozen concentrated orange juice was promoted on the shows.",
+    "H. L. Mencken\nHenry Louis Mencken (September 12, 1880 – January 29, 1956) was an American journalist, satirist, cultural critic and scholar of American English.\n\n Known as the \"Sage of Baltimore\", he is regarded as one of the most influential American writers and prose stylists of the first half of the twentieth century.\n\n He commented widely on the social scene, literature, music, prominent politicians and contemporary movements.\n\n His satirical reporting on the Scopes trial, which he dubbed the \"Monkey Trial\", also gained him attention.",
+    "Stanley Bing\nStanley Bing is the pen name of Gil Schwartz (born May 20, 1951 in New York, NY), a business humorist and novelist.\n\n He has written a column for \"Fortune\" magazine for more than twenty years, after having spent a decade at \"Esquire\".\n\n He is the author of thirteen books including \"What Would Machiavelli Do?\"\n\n and \"The Curriculum\", a satirical textbook for a business school that also offers lessons on the Web.\n\n Schwartz is the senior executive vice president of corporate communications and Chief Communications Officer for CBS.",
+    "The American Mercury\nThe American Mercury was an American magazine published from 1924 to 1981.\n\n It was founded as the brainchild of H. L. Mencken and drama critic George Jean Nathan.\n\n The magazine featured writing by some of the most important writers in the United States through the 1920s and 1930s.\n\n After a change in ownership in the 1940s, the magazine attracted conservative writers.\n\n A second change in ownership a decade later turned the magazine into a virulently anti-Semitic publication.\n\n It was published monthly in New York City.\n\n The magazine went out of business in 1981, having spent the last 25 years of its existence in decline and controversy.",
+    "Dick Gordon (sports writer)\nCharles Richards Gordon, known as Dick \"Scoop\" Gordon (January 15, 1911 – December 8, 2008), was an American sports journalist whose works were a regular feature in venerable sports magazines like \"The Sporting News\", \"Sports Illustrated\", and \"Baseball Digest\".\n\n After earning his nickname \"Scoop\" in 1930 by reporting for \"The Daily Princetonian\" that golfing legend Bobby Jones would be retiring from active competition, Gordon went on to a sports reporting career which ended in 2008."
+   ]
+  }
+ ]
+}

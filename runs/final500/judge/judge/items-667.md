@@ -1,0 +1,678 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=a35c7c6a2014f57d ===
+Gold sentences and facts:
+Sentence 0: Their first video arcade game was 1975 's EVR Race ; a handful of others followed in the next several years , Radar Scope and Donkey Kong being among the most famous of these . The early 1980s saw Nintendo 's video game division ( led by Yokoi ) creating some of its most famous arcade titles . The massively popular Donkey Kong was created in 1981 , with Shigeru Miyamoto as its mastermind , and released in the arcades and on the Atari 2600 , Intellivision , and ColecoVision video game systems ( although Nintendo themselves generally had no involvement with these early console ports ) . This release method would be used on several later Nintendo arcade games of this same period , including the original Mario Bros. ( not to be confused with the later Super Mario Bros . ) In addition to this arcade and dedicated console game activity , Nintendo was testing the consumer handheld video game waters with the Game & Watch .
+  Fact 0.0: Nintendo's first video arcade game was EVR Race, released in 1975.
+  Fact 0.1: A handful of other arcade games followed Nintendo's first video arcade game in the next several years.
+  Fact 0.2: Radar Scope and Donkey Kong were among the most famous of those arcade games.
+  Fact 0.3: In the early 1980s, Nintendo's video game division, led by Yokoi, created some of Nintendo's most famous arcade titles.
+  Fact 0.4: Donkey Kong was massively popular.
+  Fact 0.5: Donkey Kong was created in 1981.
+  Fact 0.6: Shigeru Miyamoto was the mastermind behind Donkey Kong.
+  Fact 0.7: Donkey Kong was released in the arcades.
+  Fact 0.8: Donkey Kong was released on the Atari 2600, Intellivision, and ColecoVision video game systems.
+  Fact 0.9: Nintendo themselves generally had no involvement with the early console ports of Donkey Kong.
+  Fact 0.10: The release method used for Donkey Kong, arcade plus console, was used on several later Nintendo arcade games of the same period.
+  Fact 0.11: The original Mario Bros. was one of these later Nintendo arcade games, and it is not to be confused with the later Super Mario Bros.
+  Fact 0.12: Alongside its arcade and dedicated console game activity, Nintendo was testing the consumer handheld video game market with the Game & Watch.
+Sentence 1: In 1972 , the first commercially available video game console , the Magnavox Odyssey , had a light gun accessory , the Shooting Gallery . This was the first involvement of Nintendo in video games . According to Martin Picard in the International Journal of Computer Game Research : `` in 1971 , Nintendo had -- even before the marketing of the first home console in the United States -- an alliance with the American pioneer Magnavox to develop and produce optoelectronic guns for the Odyssey ( released in 1972 ) , since it was similar to what Nintendo was able to offer in the Japanese toy market in 1970s '' .
+  Fact 1.0: The Magnavox Odyssey was the first commercially available video game console, and it was released in 1972.
+  Fact 1.1: In 1972, the Magnavox Odyssey had a light gun accessory called the Shooting Gallery.
+  Fact 1.2: The Shooting Gallery was the first involvement of Nintendo in video games.
+  Fact 1.3: According to Martin Picard in the International Journal of Computer Game Research, in 1971 Nintendo had an alliance with the American pioneer Magnavox.
+  Fact 1.4: The alliance was formed even before the marketing of the first home console in the United States.
+  Fact 1.5: The alliance was to develop and produce optoelectronic guns for the Odyssey.
+  Fact 1.6: The Odyssey was released in 1972.
+  Fact 1.7: The alliance existed because Nintendo was able to offer something similar in the Japanese toy market in the 1970s.
+
+Retrieved items:
+<item 1>
+History of Nintendo
+The Nintendo Entertainment System ( NES ) , released in 1985 , is one of the most popular consoles of all time . Nintendo was determined not to make the same
+mistakes in the US that Atari had . Because of massive influxes of games that were regarded as some of the worst ever created , gaming had almost completely
+died out in America . Nintendo decided that to avoid facing the same problems , they would only allow games that received their `` Seal of Quality '' to be sold
+for the Famicom . In 1985 , Nintendo announced that they were releasing the Famicom worldwide with a different design under the name the Nintendo Entertainment
+System ( NES ) . They used a creative tactic to counter the bad view that the media was giving on video games , and released the NES with R.O.B. units that
+connected to the console and were synchronised to the games . To ensure the localization of the highest - quality games by third - party developers , Nintendo
+of America limited the number of game titles third - party developers could release in a single year to five .
+</item 1>
+
+<item 2>
+History of Nintendo
+History of Nintendo - wikipedia History of Nintendo Jump to : navigation , search This article needs additional citations for verification . Please help improve
+this article by adding citations to reliable sources . Unsourced material may be challenged and removed . ( November 2006 ) ( Learn how and when to remove this
+template message ) The history of Nintendo traces back to 1889 , when it was founded to produce handmade hanafuda cards . Nintendo Co. , Ltd. ( 任天堂 株式 会社 ,
+Nintendō kabushikigaisha ) is a Japanese multinational consumer electronics company headquartered in Kyoto , Japan . It eventually became one of the most
+prominent figures in today 's video game industry , being the world 's largest video game company by revenue .
+</item 2>
+
+<item 3>
+History of Nintendo
+The massively popular Donkey Kong was created in 1981 , with Shigeru Miyamoto as its mastermind , and released in the arcades and on the Atari 2600 ,
+Intellivision , and ColecoVision video game systems ( although Nintendo themselves generally had no involvement with these early console ports ) . This release
+method would be used on several later Nintendo arcade games of this same period , including the original Mario Bros. ( not to be confused with the later Super
+Mario Bros . ) In addition to this arcade and dedicated console game activity , Nintendo was testing the consumer handheld video game waters with the Game &
+Watch . Game & Watch and Nintendo Entertainment system ( edit ) Main articles : Game & Watch , Nintendo Entertainment System , and History of the Nintendo
+Entertainment System Game & Watch or G&W is a line of handheld electronic games produced by Nintendo from 1980 to 1991 . Created by game designer Gunpei Yokoi ,
+each Game & Watch features a single game to be played on an LCD screen in addition to a clock and / or an alarm . It was the earliest Nintendo product to garner
+major success , with 43.4 million units sold worldwide .
+</item 3>
+
+<item 4>
+History of Nintendo
+Contents ( hide ) 1 Origin 2 1889 -- 1965 : As a card company 3 1966 -- 1972 : Toy company and new ventures 4 1972 -- present : Electronic games 4.1 Color TV -
+Game 6 4.2 Game & Watch and Nintendo Entertainment System 4.3 Game Boy and Super NES 4.4 Nintendo 64 and Game Boy Color 4.5 Game Boy Advance and GameCube 4.6
+Nintendo DS and Wii 4.7 Nintendo 3DS , Wii U , and Nintendo Switch 5 References 6 Further reading 7 External links Origin ( edit ) Nintendo poster from late
+Meiji Era Nintendo started out as a small Japanese company , founded by Fusajiro Yamauchi on September 23 , 1889 , as Nintendo Koppai . Based in Kyoto , Japan ,
+the business produced and marketed Hanafuda cards . The name `` Nintendo '' is commonly assumed to mean `` leave luck to heaven '' , but there are no historical
+records to validate this assumption .
+</item 4>
+
+<item 5>
+History of Nintendo
+The first issue published was the July / August edition , which spotlighted the NES game Super Mario Bros. 2 . Nintendo Power has since ceased publication with
+its December 2012 edition . Game Boy and Super NES ( edit ) Main articles : Game Boy and Super Nintendo Entertainment System The original Game Boy In 1989 ,
+Nintendo ( which had seen a large amount of success from the Game & Watch ) released the Game Boy ( both created by Gunpei Yokoi ) , along with the accompanying
+game Tetris . Due to the price , the game and its durability ( unlike the prior Microvision from Milton Bradley Company , which was prone to static and screen
+rot ) , the Game Boy line sold extremely well , eventually amassing sales of 118 million units . Later , Super Mario Land was also released for the Game Boy ,
+which sold 14 million copies worldwide . 1989 was also the year that Nintendo announced a sequel to the Famicom , to be called the Super Famicom . The last
+major first - party game for the NES , Super Mario Bros. 3 , was released in early 1990 , and went on to sell over 18 million units .
+</item 5>
+
+<item 6>
+History of Nintendo
+Camelot Software Planning DeNA Game Freak Genius Sonority Good - Feel Grezzo HAL Laboratory Intelligent Systems Next Level Games The Pokémon Company Former
+divisions Research & Development 1 Research & Development 2 Entertainment Analysis & Development ( EAD ) Software Planning & Development ( SPD ) Integrated
+Research & Development ( IRD ) System Development ( NSD ) Nintendo video game hardware Consoles Home NES Famicom Titler Twin Famicom NES - 101 Sharp Nintendo
+Television NES Classic Edition accessories Super NES New - Style SF Naizou TV SF1 Super NES Classic Edition Nintendo 64 iQue Player GameCube Panasonic Q
+accessories Wii Wii U Switch Handheld Game Boy Game Boy Color Virtual Boy Game Boy Advance SP Micro Dockable Entertainment Pokémon Mini Nintendo DS Lite DSi
+Nintendo 3DS 2DS New 3DS New 2DS XL Dedicated Home Color TV - Game NES Classic Edition Super NES Classic Edition Handheld Game & Watch Mini Classics Pokémon
+Pikachu Arcade VS .
+</item 6>
+
+<item 7>
+History of Nintendo
+This was the first involvement of Nintendo in video games . According to Martin Picard in the International Journal of Computer Game Research : `` in 1971 ,
+Nintendo had -- even before the marketing of the first home console in the United States -- an alliance with the American pioneer Magnavox to develop and
+produce optoelectronic guns for the Odyssey ( released in 1972 ) , since it was similar to what Nintendo was able to offer in the Japanese toy market in 1970s
+'' . In 1973 , its focus shifted to family entertainment venues with the Laser Clay Shooting System , using the same light gun technology used in Nintendo 's
+Kousenjuu series of toys , and set up in abandoned bowling alleys . Following some success , Nintendo developed several more light gun machines for the emerging
+arcade scene . While the Laser Clay Shooting System ranges had to be shut down following excessive costs , Nintendo had found a new market . In 1974 , Nintendo
+secured the rights to distribute the Magnavox Odyssey video game console in Japan .
+</item 7>
+
+<item 8>
+History of Nintendo
+These devices had a much higher novelty value than traditional toys , allowing Nintendo to charge a higher price margin for each product . Yokoi went on to
+develop many other toys , including the Ten Billion Barrel puzzle , a baseball throwing machine called the Ultra Machine , and a Love Tester . Another invention
+of his , in collaboration with Masayuki Uemura from Sharp , was the Nintendo Beam Gun Game , the precursor to the NES Zapper ( which was used in games like Duck
+Hunt . ) . Nintendo released the first solar - powered light gun , the Nintendo Beam Gun , in 1970 ; this was the first commercially available light - gun for
+home use , produced in partnership with Sharp . In 1972 , Nintendo released the Ele - Conga , one of the first programmable drum machines . It could play
+pre-programmed rhythms from disc - shaped punch cards , which could be altered or programmed by the user , to play different patterns . 1972 -- present :
+electronic games ( edit ) In 1972 , the first commercially available video game console , the Magnavox Odyssey , had a light gun accessory , the Shooting
+Gallery . This was the first involvement of Nintendo in video games .
+</item 8>
+
+<item 9>
+History of Nintendo
+Color TV - game 6 ( edit ) Main article : Color TV Game Nintendo 's first video game system , the Color TV Game 6 Nintendo at this time saw how successful video
+games were and began to dabble in them . Their first step in that field was to secure the rights to distribute the Magnavox Odyssey in Japan in 1975 . At the
+time , home video game consoles were extremely rare -- even the seminal Atari Pong console had yet to be produced . After experiencing reasonable success at
+this , Nintendo began developing its own video games , both for home and for arcades . In the 1970s , Mitsubishi Electric proposed joint development of `` Color
+TV Game Machine '' . In 1977 , they released `` Color TV Game 6 '' and `` Color TV Game 15 '' ( 6 and 15 indicates the number of games ) . Their first video
+arcade game was 1975 's EVR Race ; a handful of others followed in the next several years , Radar Scope and Donkey Kong being among the most famous of these .
+The early 1980s saw Nintendo 's video game division ( led by Yokoi ) creating some of its most famous arcade titles .
+</item 9>
+
+<item 10>
+History of Nintendo
+In 1982 , Nintendo developed a prototype system dubbed the `` Advanced Video System '' ( or AVS for short ) and had controllers much like the NES . There were
+accessories such as a tape drive , a joystick and a lightgun , and along with all of that , the system was made of a computer , much like the Atari 400 ,
+Commodore Vic - 20 and Commodore 64 . It was never released and is on display at the Nintendo World Store in New York . In July 1983 , Nintendo released the
+Famicom ( Family Computer ) system in Japan , which was its first attempt at a cartridge - based video game console . The system sold over 500,000 units within
+two months at a price around $100 USD . However , after a few months of favorable sales , Nintendo received complaints that some Famicom consoles would freeze
+when the player attempted to play certain games . The fault was found in a malfunctioning chip and Nintendo decided to recall all Famicom units that were
+currently on store shelves , which ultimately cost them approximately half a million USD .
+</item 10>
+=== END ITEM id=a35c7c6a2014f57d ===
+
+=== ITEM id=ed05a409d74d4d1d ===
+Gold sentences and facts:
+Sentence 0: Windows Defender , officially called Windows Defender Antivirus in Windows 10 Creators Update , is an anti-malware component of Microsoft Windows.It was first released as a free antispyware program download for Windows XP , shipped with Windows Vista and Windows 7 and made into a full antivirus program replacing Microsoft Security Essentials as part of Windows 8 and later versions .
+  Fact 0.0: Windows Defender is an anti-malware component of Microsoft Windows.
+  Fact 0.1: Windows Defender is officially called Windows Defender Antivirus in Windows 10 Creators Update.
+  Fact 0.2: Windows Defender was first released as a free antispyware program download for Windows XP.
+  Fact 0.3: Windows Defender shipped with Windows Vista.
+  Fact 0.4: Windows Defender shipped with Windows 7.
+  Fact 0.5: Windows Defender was made into a full antivirus program as part of Windows 8 and later versions.
+  Fact 0.6: Windows Defender replaced Microsoft Security Essentials as part of Windows 8 and later versions.
+
+Retrieved items:
+<item 1>
+Windows Defender
+Since Windows 10 Anniversary Update , offline functionality is integrated into the regular Windows Defender program . Mitigated Security vulnerability ( edit )
+On 5 May 2017 , Tavis Ormandy , a vulnerability researcher for Google , discovered a security vulnerability in the JavaScript analysis module ( NScript ) of
+Microsoft Antimalware Engine ( MsMpEngine ) that impacted Windows Defender , Microsoft Security Essentials and System Center Endpoint Protection . By 8 May 2017
+, Microsoft had released a patch to all affected systems . Ars Technica commended Microsoft for its unprecedented patching speed and said that the disaster had
+been averted . See also ( edit ) Security and safety features new to Windows Vista References ( edit ) Jump up ^ `` Windows Defender '' . Download Center .
+Microsoft . 23 May 2007 . Archived from the original on 29 April 2012 . ^ Jump up to : `` What is Windows Defender ? '' . Computer Hope . Retrieved 31 December
+2017 . Jump up ^ Shultz , Greg . `` Windows Defender : Past , present , and future '' . Retrieved 13 June 2017 .
+</item 1>
+
+<item 2>
+Windows Defender
+Windows Defender - wikipedia Windows Defender Jump to : navigation , search Not to be confused with Windows Defender Security Center . This article needs
+additional citations for verification . Please help improve this article by adding citations to reliable sources . Unsourced material may be challenged and
+removed . ( July 2009 ) ( Learn how and when to remove this template message ) Windows Defender A component of Microsoft Windows Windows Defender Antivirus , as
+appears in the Windows 10 Creators Update Details Type Antivirus software on Windows 8 and later ; formerly spyware removal software Included with Windows Vista
+and later , Windows Server 2016 Also available for Windows XP and Windows Server 2003 Support status Same as the version of Windows with which it is integrated
+Related components Microsoft Security Essentials Windows Defender Security Center Windows Defender , officially called Windows Defender Antivirus in Windows 10
+Creators Update , is an anti-malware component of Microsoft Windows.It was first released as a free antispyware program download for Windows XP , shipped with
+Windows Vista and Windows 7 and made into a full antivirus program replacing Microsoft Security Essentials as part of Windows 8 and later versions .
+</item 2>
+
+<item 3>
+Windows Defender
+For Windows Windows Firewall ( 2001 ) Baseline Security Analyzer ( 2004 ) Malicious Software Removal Tool ( 2005 ) Windows Defender ( 2006 ) Microsoft
+SmartScreen ( 2006 ) Microsoft Security Essentials ( 2009 ) Microsoft Safety Scanner ( 2011 ) For Windows Server Exchange Online Protection ( 2007 ) System
+Center Data Protection Manager ( 2007 ) Identity Manager ( 2010 ) Discontinued MSAV ( 1993 ) Threat Management Gateway ( 1997 ) OneCare Safety Scanner ( 2006 )
+Unified Access Gateway ( 2007 ) Windows Live OneCare ( 2006 ) RootkitRevealer ( 2006 ) Related topics Data Execution Prevention Kernel Patch Protection
+Mandatory Integrity Control MS Antivirus ( malware ) User Account Control Computer security portal Microsoft portal Software portal Microsoft Windows components
+Management tools App Installer Command Prompt Control Panel Applets Device Manager Disk Cleanup Disk Defragmenter Driver Verifier Event Viewer IExpress
+Management Console Netsh Performance Monitor Recovery Console Resource Monitor Settings Sysprep System Configuration System File Checker System Information
+System Policy Editor System Restore Task Manager Windows Error Reporting Windows Ink Windows Installer PowerShell Windows Update Windows Insider WinRE WMI Apps
+Alarms & Clock Calculator Calendar Camera Character Map Cortana Edge
+</item 3>
+
+<item 4>
+Windows Defender
+Jump up ^ Hau , Kevin ( 23 June 2009 ) . `` Windows Defender and Microsoft Security Essentials '' . Microsoft Answers . Microsoft Corporation . Retrieved 8 May
+2011 . Jump up ^ Marius , Marius Oiaga ( 30 August 2010 ) . `` Microsoft Security Essentials 1.0 and 2.0 Disable Windows Defender '' . Softpedia . SoftNews NET
+SRL . Retrieved 8 May 2011 . Jump up ^ Windows 8 Consumer Preview : Set Up Windows 8 with the Web Installer Jump up ^ `` Protect your PC '' . Support ( 12 ed .
+) . Microsoft . 8 September 2016 . Retrieved 14 December 2016 . Jump up ^ Lich , Brian ( 18 May 2017 ) . `` Windows Defender Antivirus in the Windows Defender
+Security Center app '' . docs.microsoft.com . Microsoft . Jump up ^ Popa , Bogdan ( 24 August 2017 ) . `` Quick Tip : Use the Old Windows Defender in Windows 10
+Creators Update '' . Softpedia . SoftNews .
+</item 4>
+
+<item 5>
+Windows Defender
+Initially , its `` Settings '' dialog box was replaced by dedicated page in the Settings app . In Windows 10 Creators Update , Windows Defender is renamed
+Windows Defender Antivirus to distinguish it from Windows Defender Security Center . The latter has become the default avenue to interface with Windows Defender
+. While there is no shortcut on the Start menu for Windows Defender 's native client , it can still run . Advanced features ( edit ) Windows Defender
+successfully blocks the EICAR test file Real - time protection In the Windows Defender options , the user can configure real - time protection options . Browser
+integration Integration with Internet Explorer and Microsoft Edge enables files to be scanned as they are downloaded to detect malicious software inadvertently
+downloaded . Although it does not integrate with non-Microsoft web browsers , Windows Defender scans for malicious downloaded files as part of its real - time
+protection . Windows 10 's Anniversary Update introduced Limited Periodic Scanning , which optionally allows Windows Defender to scan a system periodically if
+another antivirus app is installed . It also introduced Block at First Sight , which uses machine learning to predict whether a file is malicious . Windows
+Vista - specific functionality ( edit ) Windows Defender had additional functionality in Windows Vista which was removed in subsequent versions of Windows .
+</item 5>
+
+<item 6>
+Windows Defender
+Resource Manager Hyper - V Server Core Architecture Architecture of Windows NT Startup process NT Vista CSRSS Desktop Window Manager Portable Executable EXE DLL
+Enhanced Write Filter Graphics Device Interface hal. dll I / O request packet Imaging Format Kernel Transaction Manager Library files Logical Disk Manager LSASS
+MinWin NTLDR Ntoskrnl. exe Object Manager Open XML Paper Specification Registry Resource Protection Security Account Manager Server Message Block Shadow Copy
+SMSS System Idle Process USER WHEA Win32 console Winlogon WinUSB Security Security and Maintenance BitLocker Data Execution Prevention Family Safety Kernel
+Patch Protection Mandatory Integrity Control Protected Media Path User Account Control User Interface Privilege Isolation Windows Defender Windows Firewall
+Compatibility COMMAND.COM Virtual DOS machine Windows on Windows WoW64 Windows Subsystem for Linux API Active Scripting WSH VBScript JScript COM ActiveX ActiveX
+Document COM Structured storage DCOM OLE OLE Automation Transaction Server DirectX .
+</item 6>
+
+<item 7>
+Windows Defender
+The first and last categories carry a link to learn more about the particular item , and the second category invites users to submit the program to Microsoft
+SpyNet for analysis by community members . The Software Explorer feature has been removed from Windows Defender in Windows 7 . Notification of startup programs
+that run as an administrator Windows Defender in Windows Vista automatically blocks all startup items that require administrator privileges to run ( this is
+considered suspicious behavior for a startup item ) . This automatic blocking is related to the User Account Control functionality in Windows Vista , and
+requires users to manually run each of these startup items each time they log in if they desire the item to run at startup . User interface In Windows Vista ,
+it is possible to close the window and have the program run in the system tray while a scan is running . However , in Windows 7 , this functionality was removed
+and the window must remain open while a scan is running . Windows Defender offline ( edit ) Windows Defender Offline ( formerly known as Standalone System
+Sweeper Beta ) is a bootable standalone antimalware program that runs from a bootable disk and is designed to scan infected systems while their operating
+systems are offline .
+</item 7>
+
+<item 8>
+Windows Defender
+Contents ( hide ) 1 Basic features 2 History 2.1 Beta 2.2 General availability 2.3 Conversion to antivirus 3 Advanced features 4 Windows Vista - specific
+functionality 5 Windows Defender Offline 6 Mitigated security vulnerability 7 See also 8 References 9 External links Basic features ( edit ) Before Windows 8 ,
+Windows Defender protected against spyware . It included a number of real - time security agents that monitored several common areas of Windows for changes
+which might have been caused by spyware . It also included the ability to easily remove installed ActiveX software. Windows Defender featured integrated support
+for Microsoft SpyNet that allows users to report to Microsoft what they consider to be spyware , and what applications and device drivers they allow to be
+installed on their system . Protection against viruses was added in Windows 8 ; Windows Defender in Windows 8 resembles Microsoft Security Essentials ( MSE )
+and uses the same virus definitions . In Windows 10 , Windows Defender settings are controlled by the Settings app , and the Settings button opens the Settings
+app . In the Windows 10 Anniversary Update , toast notifications appear to announce the results of a scan , even if no viruses are found .
+</item 8>
+
+<item 9>
+Windows Defender
+Windows Defender ( Beta 2 ) was released on February 13 , 2006 . It featured the program 's new name and a significant user interface redesign . The core engine
+was rewritten in C++ , unlike the original GIANT - developed one , which was written in Visual Basic . This improved the application 's performance . Also ,
+since beta 2 , the program works as a Windows service , unlike earlier releases , which enables the application to protect the computer even when a user is not
+logged on . Beta 2 also requires Windows Genuine Advantage validation . However , Windows Defender ( Beta 2 ) did not contain some of the tools found in
+Microsoft AntiSpyware ( Beta 1 ) ; Microsoft removed the System Inoculation , Secure Shredder and System Explorer tools found in MSAS ( Beta 1 ) as well as the
+Tracks Eraser tool , which allowed users to easily delete many different types of temporary files related to Internet Explorer 6 , including HTTP cookies , web
+cache , and Windows Media Player playback history . Microsoft later released German and Japanese versions of Windows Defender ( Beta 2 ) . General availability
+( edit ) On October 24 , 2006 , Microsoft released Windows Defender .
+</item 9>
+
+<item 10>
+Windows Defender
+General availability ( edit ) On October 24 , 2006 , Microsoft released Windows Defender . It supports Windows XP and Windows Server 2003 ; however , unlike the
+betas , it does not run on Windows 2000 . Conversion to antivirus ( edit ) Windows Defender was released with Windows Vista and Windows 7 , serving as their
+built - in antispyware component . In Windows Vista and Windows 7 , Windows Defender was superseded by Microsoft Security Essentials , an antivirus product from
+Microsoft which provided protection against a wider range of malware . Upon installation , Microsoft Security Essentials disabled and replaced Windows Defender
+. In Windows 8 , Microsoft upgraded Windows Defender into an antivirus program very similar to Microsoft Security Essentials for Windows 7 and using the same
+virus definition updates . MSE itself does not run on Windows versions beyond 7 . In Windows 8 and Windows 10 , Windows Defender is on by default . It switches
+itself off upon installation of a third party anti-virus package . Starting with Windows 10 , Microsoft began to transfer the control of Windows Defender out of
+its native client . Initially , its `` Settings '' dialog box was replaced by dedicated page in the Settings app .
+</item 10>
+=== END ITEM id=ed05a409d74d4d1d ===
+
+=== ITEM id=2eed5191b865c7e3 ===
+Gold sentences and facts:
+Sentence 0: Hotel barge Bed and breakfast Botel Boutique hotel Bunkhouse
+  Fact 0.0: Hotel barge is one of the listed terms.
+  Fact 0.1: Bed and breakfast is one of the listed terms.
+  Fact 0.2: Botel is one of the listed terms.
+  Fact 0.3: Boutique hotel is one of the listed terms.
+  Fact 0.4: Bunkhouse is one of the listed terms.
+
+Retrieved items:
+<item 1>
+Disney's Art of Animation Resort
+Theming ( edit ) The resort is designed `` with families in mind . '' It features four of Disney 's popular character themes : Cars , Finding Nemo , The Lion
+King , and The Little Mermaid . Much like the other Disney Value Resorts , giant versions of various items are built around the hotel on each of the ten wings ,
+such as a 35 - foot ( 11 m ) model of King Triton . In total , there are 1,984 rooms. of which 1,120 are family suites capable of housing up to six people ,
+featuring living rooms and bedrooms . The remaining 864 sport the standard value layout . The resort has a total of ten buildings , as well as three themed
+pools . Finding Nemo : The Finding Nemo section of the resort is themed with the ocean setting featured in the film , with underwater plant and animal
+decorations throughout the buildings . This is the first area of the resort , which opened on May 31 , 2012 . Cars : The Cars section of the resort is themed
+like the Cozy Cone Motel that has featured in the film .
+</item 1>
+
+<item 2>
+Category:Hotel types
+Category : Hotel types - wikipedia Help Category : Hotel types Jump to : navigation , search Wikimedia Commons has media related to Hotels by type . The main
+article for this category is Hotel . Pages in category `` Hotel types '' The following 40 pages are in this category , out of 40 total . This list may not
+reflect recent changes ( learn more ) .
+</item 2>
+
+<item 3>
+Disney's Art of Animation Resort
+TheDailyDisney.com . Retrieved June 6 , 2010 . ^ Jump up to : `` More details on Disney 's Art of Animation Resort '' . TheDisneyBlog.com . Retrieved June 10 ,
+2010 . Jump up ^ `` Disney 's Art of Animation Resort Unveiled `` Disney Parks Blog '' . Disneyparks.disney.go.com . May 12 , 2010 . Retrieved June 6 , 2010 .
+Jump up ^ `` First look at new Art of Animation Resort concept art and rooms shown at Destination D: Walt Disney World '' . Inside the Magic . External links (
+edit ) Official website Art of Animation Photo Gallery at HanBan Photos Walt Disney World Resorts Location Deluxe Moderate Value Deluxe Villa / Disney Vacation
+Club Magic Kingdom Resort Area Disney 's Contemporary Resort Disney 's Grand Floridian Resort & Spa Disney 's Polynesian Village Resort Disney 's Wilderness
+Lodge None None Bay Lake Tower at Disney 's Contemporary Resort Disney 's Polynesian Villas & Bungalows The Villas at Disney 's Grand Floridian Resort & Spa
+Boulder Ridge Villas at Disney 's Wilderness Lodge Copper Creek Villas &
+</item 3>
+
+<item 4>
+Disney's Art of Animation Resort
+Floridian Resort & Spa Boulder Ridge Villas at Disney 's Wilderness Lodge Copper Creek Villas & Cabins at Disney 's Wilderness Lodge Epcot Resort Area Disney 's
+Beach Club Resort Disney 's BoardWalk Inn Disney 's Yacht Club Resort Star Wars Hotel Disney 's Caribbean Beach Resort None Disney 's Beach Club Villas Disney
+'s BoardWalk Villas Disney Riviera Resort Animal Kingdom Resort Area Disney 's Animal Kingdom Lodge Disney 's Coronado Springs Resort Disney 's All - Star
+Movies Resort Disney 's All - Star Music Resort Disney 's All - Star Sports Resort Disney 's Animal Kingdom Villas Disney Springs Resort Area None Disney 's
+Port Orleans Resort - French Quarter Disney 's Port Orleans Resort - Riverside None Disney 's Old Key West Resort Disney 's Saratoga Springs Resort & Spa ESPN
+Wide World of Sports Resort Area None None Disney 's Art of Animation Resort Disney 's Pop Century Resort None Campsites and cabins Disney 's Fort Wilderness
+Resort & Campground Residental Golden Oak at Walt Disney World Resort Non-Disney Resorts B Resort & Spa Best Western Buena Vista Palace Doubletree Four Seasons
+Hilton Holiday Inn Shades of Green Walt Disney World Dolphin Walt Disney World Swan Wyndham
+</item 4>
+
+<item 5>
+Category:Hotel types
+This list may not reflect recent changes ( learn more ) . Albergo Diffuso Apartment hotel Hotel barge Bed and breakfast Botel Boutique hotel Bunkhouse Capsule
+hotel Caravanserai Casa particular Casino hotel Choultry Condo hotel Conference and resort hotels Eco hotel Extended stay hotel Flophouse Garden hotels Gasthaus
+Guest house Heuhotel Holiday cottage Hostal Hostel Ice hotel Inn Love hotel Motel Patient hotel Pension ( lodging ) Pension hotel Pentahotels Pop - up hotel
+Roadhouse ( facility ) Ryokan ( inn ) Serviced apartment Hotelship Stopping house Transit hotel Turbaza Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Category:Hotel_types&oldid=766350044 '' Categories : Hotels Talk Help About Wikipedia Azərbaycanca Deutsch Español
+Euskara فارسی Français 한국어 Ido Magyar Polski Português Русский ไทย Türkçe اردو 中文 Edit links This page was last edited on 19 February 2017 , at 18 : 19 . About
+Wikipedia
+</item 5>
+
+<item 6>
+Bed
+A pallet is a thin , lightweight mattress . A platform bed is a mattress resting on a solid , flat raised surface , either free - standing or part of the
+structure of the room . A roll - away bed is a bed whose frame folds in half and rolls in order to be more easily stored and moved . This is used in different
+settings , including hotels for either free or a nominal fee per night , where more people than expected may need to sleep in the same room , e.g. 5 people in a
+hotel room for 4 ( two twin beds ) . A rope bed is a pre-modern bed whose wooden frame includes crossing ropes to support the typically down - filled single
+mattress . A sofabed ( `` pull - out '' or `` pull - out bed '' ) is a folding bed that is stored inside a sofa . A state bed developed in Early Modern Europe
+from a hieratic canopy of state . A toddler bed is a small bed for young children .
+</item 6>
+
+<item 7>
+Ownership
+Personal ownership - Assets and property belonging to an individual , also known as individual ownership . Common ownership - Assets and property that are held
+in common by all members of society ( or non-ownership ) . Communal ownership - Property held in common by a commune ( see Communalism ) . Collective ownership
+- Assets and property that belong to a collective body of people who control their use and collect the proceeds of their operation . Private ownership - A
+subset of collective property whereby a collective group of owners ( such as shareholders ) own productive property that is used by employees , usually for the
+purpose of generating a profit . Cooperative ownership - Property that is owned by those who operate and use it . Also referred to as social ownership . Types
+of property ( edit ) Personal property ( edit ) Main article : Personal property Personal property is a type of property . In the common law systems personal
+property may also be called chattels . It is distinguished from real property , or real estate . In the civil law systems personal property is often called
+movable property or movables - any property that can be moved from one location or another .
+</item 7>
+
+<item 8>
+Ownership
+Types of owners ( edit ) In person ( edit ) Individuals may own property directly . In some societies only adult men may own property ; in other societies (
+such as the Haudenosaunee ) , property is matrilinear and passed on from mother to the offspring . In most societies both men and women can own property with no
+restrictions and limitations at all . Structured ownership entities ( edit ) Throughout history , nations ( or governments ) and religious organizations have
+owned property . These entities exist primarily for other purposes than to own or operate property ; hence , they may have no clear rules regarding the
+disposition of their property . To own and operate property , structures ( often known today as legal entities ) have been created in many societies throughout
+history . The differences in how they deal with members ' rights is a key factor in determining their type . Each type has advantages and disadvantages derived
+from their means of recognizing or disregarding ( rewarding or not ) contributions of financial capital or personal effort . Cooperatives , corporations ,
+trusts , partnerships , and condominium associations are only some of the many varied types of structured ownership ; each type has many subtypes .
+</item 8>
+
+<item 9>
+Bed
+Some inexpensive hostels provide bunk beds for guests . Bunk beds are used for children in private homes . A loft bed is similar to a bunk bed , except there is
+no lower bunk . This leaves space underneath for storage , other furniture , a desk etc . A captain 's bed ( also known as a `` captain bed '' , `` chest bed ''
+, or `` cabin bed '' ) is a platform bed with drawers and storage compartments built in underneath . A camp bed ( also `` cot '' ) is a simple , temporary ,
+portable bed used by armies and by campers . Cots are also used to provide a sleeping surface for refugees and other homeless people during disasters , floods ,
+or other crises . A canopy bed is similar to a four poster bed , but the posts usually extend higher and are adorned or draped with cloth , sometimes completely
+enclosing the bed . A curtained bed is a luxury bed with curtains . A daybed is a couch that is used as a seat by day and as a bed by night . Usually it has pop
+up trundle which is used as bed in the night . A futon is a traditional style of Japanese bed using a mattress on a wooden frame .
+</item 9>
+
+<item 10>
+Dead Sea
+Tourism and leisure Ein Bokek , a resort on the Israeli shore British mandate period A golf course named for Sodom and Gomorrah was built by the British at
+Kalia on the northern shore . Israel The first major Israeli hotels were built in nearby Arad , and since the 1960s at the Ein Bokek resort complex . Israel has
+15 hotels along the Dead Sea shore , generating total revenues of $291 million in 2012 . Most Israeli hotels and resorts on the Dead Sea are on a six -
+kilometre ( 3.7 - mile ) stretch of the southern shore . Jordan Kempinski Hotel , one of the many hotels on the Jordanian shore On the Jordanian side , nine
+international franchises have opened seaside resort hotels near the King Hussein Bin Talal Convention Center , along with resort apartments , on the eastern
+shore of the Dead Sea . The 9 hotels have boosted the Jordanian side 's capacity to 2,800 rooms . On November 22 , 2015 , the Dead Sea panorama road was
+included along with 40 archaeological locations in Jordan , to become live on Google Street View .
+</item 10>
+=== END ITEM id=2eed5191b865c7e3 ===
+
+=== ITEM id=5c063f639b02d4b3 ===
+Gold sentences and facts:
+Sentence 0: In 1980 , The Shining became the basis for a film adaptation directed by Stanley Kubrick . Kubrick 's vision for the movie differed from King 's significantly in many ways , including the portrayal of the Overlook Hotel . The exteriors of Kubrick 's Overlook were supplied by the Timberline Lodge on the slopes of Mt . Hood in Oregon . Inspiration for the interior sets ( erected at Elstree Studios in England ) came from the 1927 Ahwahnee Hotel in Yosemite National Park . The management of the Timberline Lodge , fearful that guests would refuse to stay in their Room 217 if it were featured in a horror movie , insisted that Kubrick change the haunted room in the film to Room 237 .
+  Fact 0.0: The Shining became the basis for a film adaptation in 1980.
+  Fact 0.1: The Shining film adaptation was directed by Stanley Kubrick.
+  Fact 0.2: Kubrick's vision for the movie differed from Stephen King's significantly in many ways.
+  Fact 0.3: Kubrick's vision differed from King's in the portrayal of the Overlook Hotel.
+  Fact 0.4: The exteriors of Kubrick's Overlook were supplied by the Timberline Lodge.
+  Fact 0.5: The Timberline Lodge is on the slopes of Mt. Hood in Oregon.
+  Fact 0.6: Inspiration for the interior sets of the Kubrick film came from the 1927 Ahwahnee Hotel in Yosemite National Park.
+  Fact 0.7: The interior sets were erected at Elstree Studios in England.
+  Fact 0.8: The management of the Timberline Lodge was fearful that guests would refuse to stay in their Room 217 if it were featured in a horror movie.
+  Fact 0.9: The management of the Timberline Lodge insisted that Kubrick change the haunted room in the film to Room 237.
+
+Retrieved items:
+<item 1>
+The Stanley Hotel
+- Roe Emery Maurice L. Albertson , Civil Engineer at CSU Maxwell Abbell , Chicago real estate investor 1995 -- present - Grand Heritage Hotel Group See also (
+edit ) Freelan Oscar Stanley The Shining ( novel ) The Shining ( film ) The Shining ( miniseries ) Colonial Revival Architecture Estes Park , CO National
+Register of Historic Places listings in Larimer County , Colorado References ( edit ) ^ Jump up to : National Park Service ( 2008 - 04 - 15 ) . `` National
+Register Information System '' . National Register of Historic Places . National Park Service . ^ Jump up to : `` Rocky Mountain Legends '' .
+LegendsOfAmerica.com . Missing or empty url = ( help ) ; access - date = requires url = ( help ) ^ Jump up to : `` Rocky Mountain National Park - Culture '' .
+US-Parks.com . Retrieved 2007 - 05 - 10 . Jump up ^ Turkewitz , Julie ( 3 September 2015 ) . `` Hotel That Inspired ' The Shining ' Builds on Its Eerie Appeal
+'' . New York Times . Retrieved 17 September 2015 .
+</item 1>
+
+<item 2>
+The Stanley Hotel
+That night , according to King , `` I dreamed of my three - year - old son running through the corridors , looking back over his shoulder , eyes wide ,
+screaming . He was being chased by a fire - hose . I woke up with a tremendous jerk , sweating all over , within an inch of falling out of bed . I got up , lit
+a cigarette , sat in a chair looking out the window at the Rockies , and by the time the cigarette was done , I had the bones of The Shining firmly set in my
+mind . '' The Shining was published in 1977 and became the third great success of King 's career after Carrie and ' Salem 's Lot . The Overlook Hotel - the
+fictional hotel in King 's book inspired by the Stanley - is an evil entity haunted by its many victims . Room 217 of the Overlook features prominently in the
+novel , having been the room where King spent the night at the Stanley . This is the room on the second floor in the center of the west wing with a balcony
+overlooking the south terrace . Room 217 remains the hotel 's most requested accommodation .
+</item 2>
+
+<item 3>
+The Stanley Hotel
+The Hotel has also been used as a filming location for other movies and TV shows ; most notably , as the fictional `` Hotel Danbury '' of Aspen , CO , in the
+1994 film Dumb and Dumber . From 2013 to 2015 , the hotel property hosted the Stanley Film Festival , an independent horror film festival operated by the Denver
+Film Society , held in early May . The festival featured screenings , panels , student competitions , audience awards and receptions . The Stanley Film Festival
+was put on hiatus in 2016 , and canceled for 2017 . The historic Stanley Concert Hall serves as venue for various musical groups such as country - punk band
+Murder By Death which has performed a Shining - themed series of concerts in the space . Haunted reputation ( edit ) Despite a peaceful early history , in the
+years following the publication of The Shining , The Stanley Hotel has gained a reputation among paranormal investigators for frequent activity . The hotel
+offers guided `` Ghost Tours '' to guests and visitors which feature spaces reputed to be exceptionally active . The hotel has also served as a location for
+numerous paranormal investigation shows such as Ghost Hunters and Ghost Adventures .
+</item 3>
+
+<item 4>
+The Stanley Hotel
+Famous guests ( edit ) The Stanley Hotel has hosted the following persons of note : 1934 - Erich Fromm , the German psychoanalyst 1936 - Gov. Alf Landon ( R ,
+Kansas ) : opponent to Franklin Delano Roosevelt 's re-election 1974 - Stephen King , author who was inspired to write The Shining from his stay in room 217
+1976 - Bob Dylan & Joan Baez , classic rock icons during the Rolling Thunder Revue tour 1994 - HM Emperor Akihito of Japan with consort and crown prince , on a
+state visit to the US Ownership History ( edit ) 1908 - 26 - Freelan Oscar Stanley 1926 - 29 - The Stanley Corporation 1929 - 30 - Freelan Oscar Stanley 1930 -
+?
+</item 4>
+
+<item 5>
+The Stanley Hotel
+Approximately five miles from the entrance to Rocky Mountain National Park , the Stanley offers panoramic views of Lake Estes , the Rockies and especially Long
+'s Peak . It was built by Freelan Oscar Stanley of Stanley Steamer fame and opened on July 4 , 1909 , catering to the American upper class at the turn of the
+century . The hotel and its surrounding structures are listed on the National Register of Historic Places . The Stanley Hotel hosted the horror novelist Stephen
+King , serving as inspiration for the Overlook Hotel in his 1977 bestseller The Shining and its 1980 film adaption of the same name , as well as the location
+for the 1997 miniseries . Today , it includes a restaurant , spa , and bed - and - breakfast and provides guided tours which feature the history and alleged
+paranormal activity of the site .
+</item 5>
+
+<item 6>
+The Stanley Hotel
+Contents ( hide ) 1 History 2 Gallery 3 Architecture 3.1 Main Building 3.2 Concert Hall 3.3 The Lodge 3.4 The Hedge Maze 4 The Shining 5 Film location and arts
+venue 6 Haunted reputation 7 Famous Guests 8 Ownership History 9 See also 10 References 11 External links History ( edit ) In 1903 , the Yankee steam - powered
+car inventor Freelan Oscar Stanley ( 1849 - 1940 ) was stricken with a life - threatening resurgence of tuberculosis . The most highly recommended treatment of
+the day was fresh , dry air with lots of sunlight and a hearty diet . Therefore , like many `` lungers '' of his day , Stanley resolved to take the curative air
+of Rocky Mountain Colorado . He and Flora arrived in Denver in March and , in June , decided to spend the rest of the summer in the mountains , in Estes Park .
+Over the course of the season , Stanley 's health improved dramatically . Impressed by the beauty of the valley and grateful for his recovery , he decided to
+return every year .
+</item 6>
+
+<item 7>
+The Stanley Hotel
+Stanley holding one of his violins . The sculpture was installed and dedicated on September 29 , 2016 . They used another hotel to film the outside shots and
+the Stanley for inside shots . The Shining ( edit ) Cover of The Shining , first edition , 1977 On October 30 , 1974 , horror writer Stephen King and his wife
+Tabitha spent one night at the Stanley Hotel during their one year of residency in Boulder , Colorado . They were driving through Estes Park as night approached
+when they happened upon the Stanley Hotel . They decided to book a room and , upon checking in , discovered that they were the only overnight guests . `` They
+were just getting ready to close for the season , and we found ourselves the only guests in the place -- with all those long , empty corridors . '' He and his
+wife were served dinner in an empty dining room accompanied by canned orchestral music . `` Except for our table all the chairs were up on the tables . So the
+music is echoing down the hall , and , I mean , it was like God had put me there to hear that and see those things . ''
+</item 7>
+
+<item 8>
+The Stanley Hotel
+The stage features a trap door , used for theatrical entrances and exits . The lower level once housed a bowling alley . This feature has long since disappeared
+but it possibly resembled the one at the Stanley 's Hunnewell Club in Newton , pictures of which are archived in the Newton Free Library . The hall underwent
+extensive repair and renovation in the 2000s . The Lodge ( edit ) Once called Stanley Manor , this smaller hotel between the main structure and the concert hall
+is a 2 : 3 scaled - down version of the main hotel . Unlike its model , the manor was fully heated from completion in 1910 which may indicate that Stanley
+planned to use it as a winter resort when the main building was closed for the season . However , unlike many other Colorado mountain towns now famous for their
+winter sports , Estes Park never attracted off - season visitors in Stanley 's day and the manor remained empty for much of the year . Today it is called The
+Lodge and serves as a bed - and - breakfast off - limits to the public .
+</item 8>
+
+<item 9>
+The Stanley Hotel
+Room 217 remains the hotel 's most requested accommodation . Film location and arts venue ( edit ) In 1980 , The Shining became the basis for a film adaptation
+directed by Stanley Kubrick . Kubrick 's vision for the movie differed from King 's significantly in many ways , including the portrayal of the Overlook Hotel .
+The exteriors of Kubrick 's Overlook were supplied by the Timberline Lodge on the slopes of Mt . Hood in Oregon . Inspiration for the interior sets ( erected at
+Elstree Studios in England ) came from the 1927 Ahwahnee Hotel in Yosemite National Park . The management of the Timberline Lodge , fearful that guests would
+refuse to stay in their Room 217 if it were featured in a horror movie , insisted that Kubrick change the haunted room in the film to Room 237 . In 1997 The
+Shining TV series was produced , with the Stanley Hotel as the primary shooting location . A playhouse version of the main building which adorned the lawn of
+the Overlook Hotel in the series can be viewed in the basement of the Stanley .
+</item 9>
+
+<item 10>
+The Stanley Hotel
+The hedge maze ( edit ) In 2015 , the open area in front of the hotel , originally a driveway for Stanley Steamers and a promenade for guests to enjoy mountain
+views , was replaced with a hedge maze . This non-historic feature was added to evoke the hotel 's connection to The Shining . Although a hedge maze features
+prominently in Stanley Kubrick 's version of The Shining , no such feature can be found in Stephen King 's novel . The lawn of the Overlook Hotel , as King
+imagined it , was adorned with topiary animals and it was set that way for the shooting of the miniseries in 1996 . Historically , neither feature existed at
+the Stanley . The design was the result of a competition , chosen from amongst 300 entrants from across the globe . The winning submission was designed by New
+York architect Mairim Dallaryan Standing . In 2016 , John Cullen , owner of the Stanley Hotel , announced a competition for a sculpture to be the centerpiece of
+the terrace in front of the hotel . Sculptors Sutton Betti and Daniel Glanz won the competition with a sculpture of F.O.
+</item 10>
+=== END ITEM id=5c063f639b02d4b3 ===
+
+=== ITEM id=03950bdcccbc1c20 ===
+Gold sentences and facts:
+Sentence 0: Callability -- Some bonds give the issuer the right to repay the bond before the maturity date on the call dates ; see call option . These bonds are referred to as callable bonds . Most callable bonds allow the issuer to repay the bond at par . With some bonds , the issuer has to pay a premium , the so - called call premium . This is mainly the case for high - yield bonds . These have very strict covenants , restricting the issuer in its operations . To be free from these covenants , the issuer can repay the bonds early , but only at a high cost .
+  Fact 0.0: Some bonds give the issuer the right to repay the bond before the maturity date on the call dates.
+  Fact 0.1: Bonds that give the issuer this right are referred to as callable bonds.
+  Fact 0.2: Most callable bonds allow the issuer to repay the bond at par.
+  Fact 0.3: With some bonds, the issuer has to pay a premium, called the call premium.
+  Fact 0.4: Call premiums are mainly the case for high-yield bonds.
+  Fact 0.5: High-yield bonds have very strict covenants that restrict the issuer in its operations.
+  Fact 0.6: To be free from these covenants, the issuer can repay high-yield bonds early.
+  Fact 0.7: Repaying high-yield bonds early to be free from covenants is possible only at a high cost.
+
+Retrieved items:
+<item 1>
+Bond (finance)
+This will depend on a wide range of factors . High - yield bonds are bonds that are rated below investment grade by the credit rating agencies . As these bonds
+are riskier than investment grade bonds , investors expect to earn a higher yield . These bonds are also called junk bonds . Market price ( edit ) The market
+price of a tradable bond will be influenced , amongst other factors , by the amounts , currency and timing of the interest payments and capital repayment due ,
+the quality of the bond , and the available redemption yield of other comparable bonds which can be traded in the markets . The price can be quoted as clean or
+dirty . `` Dirty '' includes the present value of all future cash flows , including accrued interest , and is most often used in Europe . `` Clean '' does not
+include accrued interest , and is most often used in the U.S. The issue price at which investors buy the bonds when they are first issued will typically be
+approximately equal to the nominal amount . The net proceeds that the issuer receives are thus the issue price , less issuance fees .
+</item 1>
+
+<item 2>
+Bond (finance)
+situation Squeeze out Staggered board of directors Stock swap Super-majority amendment Tag - along right Takeover Reverse Tender offer Leverage Debt
+restructuring Debtor - in - possession financing Financial sponsor Leveraged buyout Leveraged recapitalization High - yield debt Private equity Project finance
+Valuation Accretion / dilution analysis Adjusted present value Associate company Business valuation Conglomerate discount Cost of capital Weighted average
+Discounted cash flow Economic Value Added Enterprise value Fairness opinion Financial modeling Free cash flow Free cash flow to equity Market value added
+Minority interest Modigliani -- Miller theorem Net present value Pure play Real options Residual income Stock valuation Sum - of - the - parts analysis Tax
+shield Terminal value Valuation using multiples List of investment banks Outline of finance Debt Instruments Bonds Corporate Debenture Government Municipal
+Loans Business loan Consumer lending Loan shark Payday loan Predatory lending Usury Management Bankruptcy Consolidation Management plan Relief Restructuring
+Debt - snowball method Debtor - in - possession ( DIP ) financing Loan guarantee Collection Evasion Bad debt Charge - off Collection agency Compliance Debt
+bondage Debtors ' prison Distraint Garnishment Phantom debt Strategic default Tax refund interception Markets Consumer Corporate Government Municipal Venture
+Buyer Deposit account Fixed income Money market Securitization
+</item 2>
+
+<item 3>
+Bond (finance)
+The net proceeds that the issuer receives are thus the issue price , less issuance fees . The market price of the bond will vary over its life : it may trade at
+a premium ( above par , usually because market interest rates have fallen since issue ) , or at a discount ( price below par , if market rates have risen or
+there is a high probability of default on the bond ) . Others ( edit ) Indentures and Covenants -- An indenture is a formal debt agreement that establishes the
+terms of a bond issue , while covenants are the clauses of such an agreement . Covenants specify the rights of bondholders and the duties of issuers , such as
+actions that the issuer is obligated to perform or is prohibited from performing . In the U.S. , federal and state securities and commercial laws apply to the
+enforcement of these agreements , which are construed by courts as contracts between issuers and bondholders . The terms may be changed only with great
+difficulty while the bonds are outstanding , with amendments to the governing document generally requiring approval by a majority ( or super-majority ) vote of
+the bondholders .
+</item 3>
+
+<item 4>
+Bond (finance)
+The name `` coupon '' arose because in the past , paper bond certificates were issued which had coupons attached to them , one for each interest payment . On
+the due dates the bondholder would hand in the coupon to a bank in exchange for the interest payment . Interest can be paid at different frequencies : generally
+semi-annual , i.e. every 6 months , or annual . Bond issued by the Dutch East India Company in 1623 Yield ( edit ) The yield is the rate of return received from
+investing in the bond . It usually refers either to The current yield , or running yield , which is simply the annual interest payment divided by the current
+market price of the bond ( often the clean price ) . The yield to maturity , or redemption yield , which is a more useful measure of the return of the bond .
+This takes into account the current market price , and the amount and timing of all remaining coupon payments and of the repayment due on maturity . It is
+equivalent to the internal rate of return of a bond . Credit quality ( edit ) The quality of the issue refers to the probability that the bondholders will
+receive the amounts promised at the due dates .
+</item 4>
+
+<item 5>
+Bond (finance)
+Optionality : Occasionally a bond may contain an embedded option ; that is , it grants option - like features to the holder or the issuer : Callability -- Some
+bonds give the issuer the right to repay the bond before the maturity date on the call dates ; see call option . These bonds are referred to as callable bonds .
+Most callable bonds allow the issuer to repay the bond at par . With some bonds , the issuer has to pay a premium , the so - called call premium . This is
+mainly the case for high - yield bonds . These have very strict covenants , restricting the issuer in its operations . To be free from these covenants , the
+issuer can repay the bonds early , but only at a high cost . Putability -- Some bonds give the holder the right to force the issuer to repay the bond before the
+maturity date on the put dates ; see put option . These are referred to as retractable or putable bonds . Call dates and put dates -- the dates on which
+callable and putable bonds can be redeemed early . There are four main categories : A Bermudan callable has several call dates , usually coinciding with coupon
+dates .
+</item 5>
+
+<item 6>
+Bond (finance)
+The most common types of bonds include municipal bonds and corporate bonds . The bond is a debt security , under which the issuer owes the holders a debt and (
+depending on the terms of the bond ) is obliged to pay them interest ( the coupon ) or to repay the principal at a later date , termed the maturity date .
+Interest is usually payable at fixed intervals ( semiannual , annual , sometimes monthly ) . Very often the bond is negotiable , that is , the ownership of the
+instrument can be transferred in the secondary market . This means that once the transfer agents at the bank medallion stamp the bond , it is highly liquid on
+the secondary market . Thus a bond is a form of loan or IOU : the holder of the bond is the lender ( creditor ) , the issuer of the bond is the borrower (
+debtor ) , and the coupon is the interest . Bonds provide the borrower with external funds to finance long - term investments , or , in the case of government
+bonds , to finance current expenditure . Certificates of deposit ( CDs ) or short - term commercial paper are considered to be money market instruments and not
+bonds : the main difference is the length of the term of the instrument .
+</item 6>
+
+<item 7>
+Bond (finance)
+See IO ( Interest Only ) and PO ( Principal Only ) . High - yield bonds ( junk bonds ) are bonds that are rated below investment grade by the credit rating
+agencies . As these bonds are riskier than investment grade bonds , investors expect to earn a higher yield . Convertible bonds let a bondholder exchange a bond
+to a number of shares of the issuer 's common stock . These are known as hybrid securities , because they combine equity and debt features . Exchangeable bonds
+allows for exchange to shares of a corporation other than the issuer . Inflation - indexed bonds ( linkers ) ( US ) or Index - linked bond ( UK ) , in which the
+principal amount and the interest payments are indexed to inflation . The interest rate is normally lower than for fixed rate bonds with a comparable maturity (
+this position briefly reversed itself for short - term UK bonds in December 2008 ) . However , as the principal amount grows , the payments increase with
+inflation . The United Kingdom was the first sovereign issuer to issue inflation linked gilts in the 1980s . Treasury Inflation - Protected Securities ( TIPS )
+and I - bonds are examples of inflation linked bonds issued by the U.S.
+</item 7>
+
+<item 8>
+Bond (finance)
+The latter are often issued in tranches . The senior tranches get paid back first , the subordinated tranches later . Covered bonds are backed by cash flows
+from mortgages or public sector assets . Contrary to asset - backed securities the assets for such bonds remain on the issuers balance sheet . Perpetual bonds
+are also often called perpetuities or ' Perps ' . They have no maturity date . The most famous of these are the UK Consols , which are also known as Treasury
+Annuities or Undated Treasuries . Some of these were issued back in 1888 and still trade today , although the amounts are now insignificant . Some ultra-long -
+term bonds ( sometimes a bond can last centuries : West Shore Railroad issued a bond which matures in 2361 ( i.e. 24th century ) are virtually perpetuities from
+a financial point of view , with the current value of principal near zero . Bearer bond is an official certificate issued without a named holder . In other
+words , the person who has the paper certificate can claim the value of the bond .
+</item 8>
+
+<item 9>
+Bond (finance)
+A European callable has only one call date . This is a special case of a Bermudan callable . An American callable can be called at any time until the maturity
+date . A death put is an optional redemption feature on a debt instrument allowing the beneficiary of the estate of a deceased bondholder to put ( sell ) the
+bond back to the issuer at face value in the event of the bondholder 's death or legal incapacitation . This is also known as a `` survivor 's option '' .
+Sinking fund provision of the corporate bond indenture requires a certain portion of the issue to be retired periodically . The entire bond issue can be
+liquidated by the maturity date ; if not , the remainder is called balloon maturity . Issuers may either pay to trustees , which in turn call randomly selected
+bonds in the issue , or , alternatively , purchase bonds in open market , then return them to trustees . Bonds are often identified by its international
+securities identification number , or ISIN , which is a 12 digit alphanumeric code that uniquely identifies debt securities .
+</item 9>
+
+<item 10>
+Bond (finance)
+The length of time until the maturity date is often referred to as the term or tenure or maturity of a bond . The maturity can be any length of time , although
+debt securities with a term of less than one year are generally designated money market instruments rather than bonds . Most bonds have a term of up to 30 years
+. Some bonds have been issued with terms of 50 years or more , and historically there have been some issues with no maturity date ( irredeemable ) . In the
+market for United States Treasury securities , there are three categories of bond maturities : short term ( bills ) : maturities between one and five years ;
+medium term ( notes ) : maturities between six and twelve years ; long term ( bonds ) : maturities longer than twelve years . Coupon ( edit ) The coupon is the
+interest rate that the issuer pays to the holder . Usually this rate is fixed throughout the life of the bond . It can also vary with a money market index ,
+such as LIBOR , or it can be even more exotic .
+</item 10>
+=== END ITEM id=03950bdcccbc1c20 ===

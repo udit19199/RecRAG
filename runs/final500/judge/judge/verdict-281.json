@@ -1,0 +1,56 @@
+[
+  {"id": "6cf304fc8b1ef213", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "That answer ultimately lies with the jury"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "lawyers for the government and then Bankman-Fried swapped two very different stories"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall"}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+  ]},
+  {"id": "eb9fb6162000406c", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "He also believes that after everything on social media becomes so perfectly curated for us, our brains will start to crave things that are not."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "He also believes that after everything on social media becomes so perfectly curated for us"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "What we have done since then, all the success and failures [matters in our preparation]."}]}
+  ]},
+  {"id": "51906801373eab82", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "234ed21e83d021aa", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]}
+  ]},
+  {"id": "88996b63c6d87804", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Huang said Paradigm pressed Bankman-Fried on the board issue"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "3.0", "status": "missing", "evidence": []},
+    {"fact": "3.1", "status": "missing", "evidence": []},
+    {"fact": "3.2", "status": "missing", "evidence": []},
+    {"fact": "3.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "7b6fed9d5b57c4ae", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Gary Wang, the co-founder of FTX and Alameda Research and another college roommate."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "FTX co-founder and former CTO Gary Wang"}, {"item": 2, "quote": "Wang, 30, was technology chief for FTX"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Alameda Research’s former CEO, Caroline Ellison"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 10, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse."}]}
+  ]}
+]

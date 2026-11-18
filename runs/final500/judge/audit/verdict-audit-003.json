@@ -1,0 +1,242 @@
+[
+ {
+  "id": "a019-5d4a34a15ebd4a3f",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "For the masses of NFL fans across the U.S., Thursday's clash between the Lions and Packers will be aired on Amazon Prime Video."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a036-76782bcf6670e1ed",
+  "facts": [
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a098-c8f90e2616bebb63",
+  "facts": [
+   {
+    "fact": "2.1",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a065-481dce4174203b32",
+  "facts": [
+   {
+    "fact": "1.3",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a086-f36f532e274e90ae",
+  "facts": [
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Lillian Florence Hellman (June 20, 1905 – June 30, 1984) was an American dramatist"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a031-e64be96ed2e45f0d",
+  "facts": [
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a132-68fe994af99e4f66",
+  "facts": [
+   {
+    "fact": "1.4",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a046-e9d2057fdf19cf79",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a058-85b59bc880b69feb",
+  "facts": [
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "He immediately left the game and proceeded to the locker room following the hit"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a059-5f6dd309cd6d764c",
+  "facts": [
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a040-3461843f84b2ecae",
+  "facts": [
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Alameda Research’s former CEO Caroline Ellison"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a113-98cc0b9220a49e55",
+  "facts": [
+   {
+    "fact": "0.7",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a068-46c70067a510142e",
+  "facts": [
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "The 'Burbs is a 1989 American comedy thriller film directed by Joe Dante starring Tom Hanks, Bruce Dern, Carrie Fisher, Rick Ducommun"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a063-4a47056b00c41fe3",
+  "facts": [
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a026-5dedff68e76c068c",
+  "facts": [
+   {
+    "fact": "2.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Aaron Finch (81 runs in 116 balls)"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a104-5fc2db26ecc09089",
+  "facts": [
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Briana Corrigan (born 30 May 1965) is a Northern Irish singer."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a110-0ca93d193e3ff499",
+  "facts": [
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a117-11fbe07c18b5b2ca",
+  "facts": [
+   {
+    "fact": "1.4",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a114-98c1b98969743360",
+  "facts": [
+   {
+    "fact": "2.2",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a130-766d6c78a89f3074",
+  "facts": [
+   {
+    "fact": "0.3",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ }
+]

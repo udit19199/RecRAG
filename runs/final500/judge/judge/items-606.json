@@ -1,0 +1,505 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "e320f2b368927351",
+   "gold": [
+    {
+     "sentence": "Leycesteria is a genus of flowering plants in the honeysuckle family Caprifoliaceae, native to temperate Asia in the Himalaya and southwestern China.",
+     "facts": {
+      "0.0": "Leycesteria is a genus of flowering plants.",
+      "0.1": "Leycesteria is in the honeysuckle family Caprifoliaceae.",
+      "0.2": "Leycesteria is native to temperate Asia in the Himalaya.",
+      "0.3": "Leycesteria is native to southwestern China."
+     }
+    },
+    {
+     "sentence": "Anigozanthos is a small genus of Australian plants in the Bloodwort family Haemodoraceae.",
+     "facts": {
+      "1.0": "Anigozanthos is a small genus of Australian plants.",
+      "1.1": "Anigozanthos is in the Bloodwort family Haemodoraceae."
+     }
+    }
+   ],
+   "items": [
+    "Anigozanthos humilis\nAnigozanthos humilis is a species of \"Anigozanthos\" in the family Haemodoraceae, known as common cat's paw or catspaw.\n\n This flowering perennial plant is endemic to Southwest Australia and widespread in its open forests.",
+    "Leycesteria formosa\nLeycesteria formosa (Himalayan honeysuckle, flowering nutmeg, Himalaya nutmeg or pheasant berry) is a deciduous shrub in the family Caprifoliaceae, native to the Himalaya and southwestern China.\n\n It is considered a noxious invasive species in Australia, New Zealand, the neighboring islands of Micronesia, and some other places.",
+    "Haemodoraceae\nHaemodoraceae is a family of perennial herbaceous flowering plants with 14 genera and 102 known species.\n\n It is sometimes known as the \"bloodwort family\".\n\n Primarily a Southern Hemisphere family, they are found in South Africa, Australia and New Guinea, and in the Americas (from SE U.S.A. to tropical South America).\n\n Perhaps the best known are the widely cultivated and unusual kangaroo paws from Australia, of the two closely related genera \"Anigozanthos\" and \"Macropidia\".",
+    "Anigozanthos flavidus\nAnigozanthos flavidus is a species of plant found in Southwest Australia.\n\n It is member of the Haemodoraceae family.\n\n It is commonly known as the tall, yellow, or evergreen, kangaroo paw.\n\n The specific epithet, \"flavidus\", refers to the yellow flowers of this plant.",
+    "Anigozanthos\nAnigozanthos is a small genus of Australian plants in the Bloodwort family Haemodoraceae.\n\n The 11 species and several subspecies are commonly known as kangaroo paw and catspaw depending on the shape of their flowers.\n\n A further species, previously identified as \"Anigozanthos fuliginosus\" and commonly known as the black kangaroo paw, has been transferred to its own monotypic genus and is now known as \"Macropidia fuliginosa\".",
+    "Common brown leafhopper\nThe common brown leafhopper, \"Orosius orientalis\" (Matsumura) (Hemiptera: Cicadellidae) is one of the most common species of Australian leafhoppers with a very wide host range.\n\n It is an important vector of several viruses and phytoplasmas worldwide.\n\n In Australia, phytoplasmas vectored by \"O. orientalis\" cause a range of economically important diseases including legume little leaf, tomato big bud, lucerne witches broom, potato purple top wilt, Australian lucerne and is a possible vector of Australian grapevine yellows.\n\n \"O. orientalis\" also transmits Tobacco yellow dwarf virus (TYDV genus Mastrevirus, family Geminiviridae) to beans, causing bean summer death disease and to tobacco, causing tobacco yellow dwarf disease.",
+    "Anigozanthos manglesii\nAnigozanthos manglesii, commonly known as the red-and-green kangaroo paw, Mangles kangaroo paw, Kurulbrang(Noongar) is a plant species endemic to Western Australia, and the floral emblem of that state.",
+    "Lepidozamia\nLepidozamia is a genus of two species of cycad, both endemic to Australia.\n\n The name, derived from the Greek word lepidos, meaning scaly, refers to the scale-like structure of the stem and leaf bases.\n\n They are native to rainforest climates in eastern Queensland and eastern New South Wales.\n\n They have a chromosome number of 2n = 18.",
+    "Anigozanthos preissii\nAnigozanthos preissii, the Albany cat's paw, is a herbaceous plant species in the family Haemodoraceae, endemic to Western Australia.",
+    "Leycesteria\nLeycesteria is a genus of flowering plants in the honeysuckle family Caprifoliaceae, native to temperate Asia in the Himalaya and southwestern China."
+   ]
+  },
+  {
+   "id": "c9dea7ee4bde234f",
+   "gold": [
+    {
+     "sentence": "Inner Secrets is the ninth studio album by Santana.",
+     "facts": {
+      "0.0": "Inner Secrets is a studio album by Santana.",
+      "0.1": "Inner Secrets is Santana's ninth studio album."
+     }
+    },
+    {
+     "sentence": "Carlos Santana    (born July 20, 1947) is a Mexican and American musician who first became famous in the late 1960s and early 1970s with his band, Santana, which pioneered a fusion of rock and Latin American music.",
+     "facts": {
+      "1.0": "Carlos Santana was born on July 20, 1947.",
+      "1.1": "Carlos Santana is a Mexican musician.",
+      "1.2": "Carlos Santana is an American musician.",
+      "1.3": "Carlos Santana first became famous in the late 1960s and early 1970s.",
+      "1.4": "Carlos Santana first became famous with his band Santana.",
+      "1.5": "The band Santana pioneered a fusion of rock and Latin American music."
+     }
+    }
+   ],
+   "items": [
+    "Hot Streets\nHot Streets is the tenth studio album (twelfth overall) by the American band Chicago, released in 1978.\n\n In many ways, \"Hot Streets\" marked the beginning of a new era for the band, turning to disco music, a move which would be derided in retrospect.\n\n It was also the band's first album with all-new material released since their second that didn't have a numbered title.\n\n It was also the first album not to feature original guitarist/vocalist Terry Kath, who died from an accidental self-inflicted gunshot wound in January 1978.\n\n He was replaced by Donnie Dacus on this album.",
+    "Inner Secrets\nInner Secrets is the ninth studio album by Santana.\n\n It was released in 1978 and marks the start of the phase of Santana's career where he moved away from the fusion of Latin, jazz, rock and blues that marked his previous records and began to move towards an album-oriented rock direction.\n\n As such, the album's quality is widely disputed among fans. \"\n\nStormy\" and \"One Chain (Don't Make No Prison)\" were both hit singles.\n\n In The Netherlands \"Well All Right\" was released as a single and reached #22 in the top 40.",
+    "The Secret (Vib Gyor EP)\nThe Secret EP is the EP from the Leeds band Vib Gyor.\n\n It was released on 5 March 2007, and is the follow-up to their well-received debut single, \"Fallen\".\n\n It was recorded in Bath and produced by Paul Corkett.\n\n It also has a hidden fifth instrumental track - which the band recently revealed was called <:.\n\n~.\n\n:>",
+    "Chicago 13\nChicago 13 is the eleventh studio album by the American band Chicago, released in 1979.\n\n The follow-up to \"Hot Streets\", \"Chicago 13\" is often critically disfavored.\n\n This would be the band's final release that features lead guitarist Donnie Dacus, who had followed late, founding lead guitarist, Terry Kath.\n\n All band members would contribute to the songwriting (one of only two albums where this is the case, with the other being \"Chicago VII\").",
+    "The V.I.P.s (band)\nThat album was published in 1967 on Liberty Records and contained only five songs from two minutes to more than 15 minutes of psychedelic and almost meditative state kind of music.",
+    "Suicide (1977 album)\nSuicide is the debut album from the American rock band Suicide.\n\n It was released in 1977 on Red Star Records and produced by Craig Leon and Marty Thau.\n\n The album was recorded in four days at Ultima Sound Studios in New York and featured Martin Rev's minimalist electronics and harsh, repetitive rhythms paired with Alan Vega's rock and roll-inspired vocals and depictions of urban life.",
+    "The V.I.P.s (band)\nThe V.I.P.s were a British R&B musical ensemble formed in Carlisle, Cumberland, (North West England) in late 1963, out of an earlier outfit known as The Ramrods, who had formed in Carlisle in 1960.\n\n After a change of personnel in April 1967, the band changed their name to \"Art\", and released the album \"Supernatural Fairy Tales\".\n\n They also participated to a psychedelic bizarre album called \"Featuring The Human Host And The Heavy Metal Kids\" by a collective known as Hapshash and the Coloured Coat, formed by Guy Stevens and an influential British graphic design and avant-garde musical partnership between Michael English and Nigel Waymouth.\n\n The musicians involved in that project were Mike Harrison on keys and vocals, Luther Grosvenor on guitars, Greg Ridley on bass and Mike Kellie on drums, as well as performances by Stevens, English and Waymouth.\n\n It was the first time that the term \"heavy metal\" was ever used in music, even though that album had nothing to do with heavy metal music, being closer to psychedelic music.",
+    "Moment of Truth (Terri Nunn album)\nMoment of Truth is the début and sole solo album from American singer and actress Terri Nunn, best known as lead singer of the American New Wave/Synthpop band Berlin.",
+    "Seven (Poco album)\nSeven is the sixth studio album (seventh overall) by American country rock band Poco.\n\n It is the first album they made after leader Richie Furay left the band.\n\n The front cover was designed by Phil Hartman.",
+    "Information (Berlin album)\nInformation is the first album by Berlin, released in 1980 by Vinyl Records.\n\n It was recorded during the period when Terri Nunn had temporarily left the band to pursue an acting career and Virginia Macolino performed the lead vocals.\n\n Several songs were written by previous lead singer Toni Childs who went solo prior to the album's release."
+   ]
+  },
+  {
+   "id": "3f1b0659ede256ff",
+   "gold": [
+    {
+     "sentence": "William Somerset Maugham CH ( ; 25 January 1874 – 16 December 1965), better known as W. Somerset Maugham, was a British playwright, novelist and short story writer.",
+     "facts": {
+      "0.0": "William Somerset Maugham was born 25 January 1874.",
+      "0.1": "William Somerset Maugham died 16 December 1965.",
+      "0.2": "William Somerset Maugham is better known as W. Somerset Maugham.",
+      "0.3": "William Somerset Maugham was British.",
+      "0.4": "William Somerset Maugham was a playwright.",
+      "0.5": "William Somerset Maugham was a novelist.",
+      "0.6": "William Somerset Maugham was a short story writer.",
+      "0.7": "William Somerset Maugham's name includes the post-nominal CH."
+     }
+    },
+    {
+     "sentence": " He was among the most popular writers of his era and reputedly the highest-paid author during the 1930s.",
+     "facts": {
+      "1.0": "W. Somerset Maugham was among the most popular writers of his era.",
+      "1.1": "W. Somerset Maugham was reputedly the highest-paid author during the 1930s."
+     }
+    },
+    {
+     "sentence": "Thomas Merton, O.C.S.O. (January 31, 1915 – December 10, 1968) was an American Catholic writer, theologian and mystic.",
+     "facts": {
+      "2.0": "Thomas Merton, O.C.S.O., was born January 31, 1915.",
+      "2.1": "Thomas Merton died December 10, 1968.",
+      "2.2": "Thomas Merton was an American Catholic writer.",
+      "2.3": "Thomas Merton was a theologian.",
+      "2.4": "Thomas Merton was a mystic."
+     }
+    },
+    {
+     "sentence": " In 1949, he was ordained to the priesthood and given the name Father Louis.",
+     "facts": {
+      "3.0": "In 1949, Thomas Merton was ordained to the priesthood.",
+      "3.1": "Thomas Merton was given the name Father Louis."
+     }
+    }
+   ],
+   "items": [
+    "Thomas Merton Award\nThe Thomas Merton Award has been awarded since 1972 by the Thomas Merton Center for Peace and Social Justice in Pittsburgh, United States.\n\n It is named after Thomas Merton and is given annually to \"national and international individuals struggling for justice.\"",
+    "Trio (film)\nTrio (also known as W. Somerset Maugham's Trio) is a 1950 British anthology film based on three short stories by W. Somerset Maugham: \"The Verger\", \"Mr. Know-All\" and \"Sanatorium\".\n\n Ken Annakin directed \"The Verger\" and \"Mr. Know-All\", while Harold French was responsible for \"Sanatorium\".",
+    "International Thomas Merton Society\nThe International Thomas Merton Society, founded in 1987, is a learned society which studies the works of American Catholic writer and mystic Thomas Merton.\n\n It sponsors conferences and co-publishes a journal, \"The Merton Seasonal\".\n\n The society and the Thomas Merton Center are located at Bellarmine University in Louisville, Kentucky, U.S.A.",
+    "The entries profile writers, artists, scholars, and public figures across literature, journalism, film, and politics. Highlights include Thomas Merton, the Catholic monk and writer honored by a peace award and studied by an international society; W. Somerset Maugham, whose namesake prize supports young writers’ travel; and notable authors such as Mencken, Orwell, Updike, Malamud, Chatwin, and Gass. Other topics include literary awards, bibliographies, influential editors, Camb",
+    "Robert Calder (writer)\nRobert Lorin Calder, a Canadian writer and professor, won the Governor General's Award for English-language non-fiction in 1989 for his \"Willie: The Life of W. Somerset Maugham\", a biography based on extensive archival work and interviews with surviving associates of Maugham, in particular Alan Searle.\n\n Unlike Ted Morgan, who had obtained permission from Maugham's executors to publish from Maugham's letters in his biography (1980), Calder was refused permission to do so by the Royal Literary Fund and had to rely on paraphrase in referencing Maugham's unpublished correspondence.",
+    "Somerset Maugham Award\nThe Somerset Maugham Award is a British literary prize given each May by the Society of Authors.\n\n It is awarded to the best writer or writers of a book published in the past year who is under the age of 35.\n\n The prize was instituted in 1947 by William Somerset Maugham and thus bears his name.\n\n The award is to be spent on foreign travel.\n\n The total fund for each year is £12,000.",
+    "List of works about Thomas Merton\nThe following is a list of works about Thomas Merton, publications about Thomas Merton, the Trappist monk from Abbey of Gethsemani.\n\n The bibliography is organized into categories.\n\n A separate list of works by Thomas Merton is also available.",
+    "W. Somerset Maugham\nWilliam Somerset Maugham CH ( ; 25 January 1874 – 16 December 1965), better known as W. Somerset Maugham, was a British playwright, novelist and short story writer.\n\n He was among the most popular writers of his era and reputedly the highest-paid author during the 1930s.",
+    "Thomas Merton\nThomas Merton, O.C.S.O. (January 31, 1915 – December 10, 1968) was an American Catholic writer, theologian and mystic.\n\n A Trappist monk of the Abbey of Gethsemani, Kentucky, he was a poet, social activist, and student of comparative religion.\n\n In 1949, he was ordained to the priesthood and given the name Father Louis.",
+    "Adam Fox\nAdam Fox (1883 – 1977), Canon, was the Dean of Divinity at Magdalen College, Oxford.\n\n He was one of the first members of the \"Inklings\", a literary group which also included C.S. Lewis and J.R.R. Tolkien.\n\n Between 1938 and 1942 he was Professor of Poetry.\n\n Later he became Canon of Westminster Abbey and he is buried there in Poet's Corner.\n\n He was also Warden (Headmaster) of the famous Radley College."
+   ]
+  },
+  {
+   "id": "866d5d0199b41263",
+   "gold": [
+    {
+     "sentence": " He was the brother of Alfred Jodl, Chief of the Operations Staff of the OKW.",
+     "facts": {
+      "0.0": "The person described in this sentence was the brother of Alfred Jodl.",
+      "0.1": "Alfred Jodl was Chief of the Operations Staff of the OKW."
+     }
+    },
+    {
+     "sentence": "Alfred Josef Ferdinand Jodl (   ; 10 May 1890 – 16 October 1946) was a German general and war criminal during World War II, who served as the Chief of the Operations Staff of the Armed Forces High Command (Oberkommando der Wehrmacht).",
+     "facts": {
+      "1.0": "Alfred Josef Ferdinand Jodl lived from 10 May 1890 to 16 October 1946.",
+      "1.1": "Alfred Jodl was a German general.",
+      "1.2": "Alfred Jodl was a war criminal during World War II.",
+      "1.3": "Alfred Jodl served as Chief of the Operations Staff of the Armed Forces High Command (Oberkommando der Wehrmacht)."
+     }
+    }
+   ],
+   "items": [
+    "Hasso von Wedel (general)\nHasso von Wedel (20 November 1898 – 3 January 1961) was a German general who commanded the Wehrmacht Propaganda Troops during World War II.\n\n He was directly subordinate to the head of OKW Operations Staff (\"Wehrmachtführungsstab, WFSt.\")\n\n, General Alfred Jodl.\n\n Wedel's Propaganda Department had control over the propaganda units and served to mediate between them and the Reich Propaganda Ministry of Joseph Goebbels.",
+    "Ludwig Beck\nLudwig August Theodor Beck (29 June 1880 – 21 July 1944) was a German general and Chief of the German General Staff during the early years of the Nazi regime in Germany before World War II.\n\n Ludwig Beck was never a member of the Nazi Party, though in the early 1930s he supported Adolf Hitler's forceful denunciation of the Versailles Treaty and belief in the need for Germany to rearm.\n\n Beck had grave misgivings regarding the Nazi demand that all German officers swear an oath of fealty to the person of Hitler in 1934, though he believed that Germany needed strong government and that Hitler could successfully provide this so long as he was influenced by traditional elements within the military rather than the SA and SS.",
+    "Alfred Jodl\nAlfred Josef Ferdinand Jodl (   ; 10 May 1890 – 16 October 1946) was a German general and war criminal during World War II, who served as the Chief of the Operations Staff of the Armed Forces High Command (Oberkommando der Wehrmacht).",
+    "Walter Dornberger\nMajor-General Dr. Walter Robert Dornberger (6 September 1895 – 27 June 1980) was a German Army artillery officer whose career spanned World War I and World War II.\n\n He was a leader of Nazi Germany's V-2 rocket program and other projects at the Peenemünde Army Research Center.",
+    "List of Generalobersts\nGeneraloberst, in English Colonel General, was, in Germany and Austria-Hungary—the German \"Reichswehr\" and \"Wehrmacht\", the Austro-Hungarian Common Army, and the East German National People's Army, as well as the respective police services—the second highest general officer rank, ranking above full general but below general field marshal.\n\n It was equivalent to \"Generaladmiral\" in the \"Kriegsmarine\" until 1945, or to Flottenadmiral in the \"Volksmarine\" until 1990.\n\n The rank was the highest ordinary military rank and the highest military rank awarded in peacetime; the higher rank of general field marshal was only awarded in wartime by the head of state.\n\n In general, a Generaloberst had the same privileges as a general field marshal.",
+    "Helmuth von Moltke the Younger\nHelmuth Johann Ludwig von Moltke (] ; 23 May 1848 – 18 June 1916), also known as Moltke the Younger, was a nephew of \"Generalfeldmarschall\" (Field Marshal) Helmuth Karl Bernhard von Moltke and served as the Chief of the German General Staff from 1906 to 1914.\n\n The two are often differentiated as \"Moltke the Elder\" and \"Moltke the Younger\".",
+    "Herbert Büchs\nHerbert Büchs (20 November 1913 – 19 May 1996) was a Lieutenant General of the German Air Force and a former Luftwaffe staff officer in Nazi Germany's Oberkommando der Wehrmacht (OKW) during World War II.\n\n As second adjutant to General Alfred Jodl with the rank of Major he is notable for being present in the conference room when the 20 July plot bomb exploded in 1944.",
+    "Ferdinand Jodl\nFerdinand Alfred Friedrich Jodl (28 November 1896 – 9 June 1956) was a German general during World War II who commanded the Mountain Corps Norway during the Petsamo–Kirkenes Offensive.\n\n He was the brother of Alfred Jodl, Chief of the Operations Staff of the OKW.\n\n Ferdinand Jodl was acquitted by a German court.",
+    "Franz Halder\nFranz Halder (30 June 1884 – 2 April 1972) was a German general and the chief of the \"Oberkommando des Heeres\" staff (OKH, Army High Command) from 1938 until September 1942, when he was dismissed after frequent disagreements with Adolf Hitler.\n\n Until December 1941 Halder's military position corresponded to the old Chief of the General Staff position, which during World War I had been the highest military office in the German Imperial Army.\n\n Halder's diary during his time as chief of OKH General Staff has been a source for authors that have written about such subjects as Hitler, World War II and the Nazi Party.\n\n In William Shirer's \"The Rise and Fall of the Third Reich\", Halder's diary is cited hundreds of times.",
+    "Friedrich Jeckeln\nFriedrich Jeckeln (2 February 1895 – 3 February 1946) was a high-ranking official in the SS of Nazi Germany who served as an SS and Police Leader in the occupied Soviet Union during World War II.\n\n Jeckeln was the commander of one of the largest collection of \"Einsatzgruppen\" and was personally responsible for ordering and organizing the deaths of over 100,000 Jews, Slavs, Romani, and other \"undesirables\".\n\n After the end of World War II, Jeckeln was convicted for his crimes by a Soviet military tribunal in Riga, Latvia and executed in 1946."
+   ]
+  },
+  {
+   "id": "da71c2cf3cd89175",
+   "gold": [
+    {
+     "sentence": "Eugène Ionesco (born Eugen Ionescu, ] ; 26 November 1909 – 28 March 1994) was a Romanian-French playwright who wrote mostly in French, and one of the foremost figures of the French Avant-garde theatre.",
+     "facts": {
+      "0.0": "Eugène Ionesco was born Eugen Ionescu.",
+      "0.1": "Eugène Ionesco was born on 26 November 1909.",
+      "0.2": "Eugène Ionesco died on 28 March 1994.",
+      "0.3": "Eugène Ionesco was a Romanian-French playwright.",
+      "0.4": "Eugène Ionesco wrote mostly in French.",
+      "0.5": "Eugène Ionesco was one of the foremost figures of the French Avant-garde theatre."
+     }
+    },
+    {
+     "sentence": "Paul Mark Scott (25 March 19201 March 1978) was an English novelist, playwright, and poet, best known for his monumental tetralogy \"The Raj Quartet.\"",
+     "facts": {
+      "1.0": "Paul Mark Scott was born on 25 March 1920.",
+      "1.1": "Paul Mark Scott died on 1 March 1978.",
+      "1.2": "Paul Mark Scott was an English novelist.",
+      "1.3": "Paul Mark Scott was an English playwright.",
+      "1.4": "Paul Mark Scott was an English poet.",
+      "1.5": "Paul Mark Scott is best known for his monumental tetralogy \"The Raj Quartet.\""
+     }
+    }
+   ],
+   "items": [
+    "The Lesson\nThe Lesson (French: \"La Leçon\" ) is a one-act play by French-Romanian playwright Eugène Ionesco.\n\n It was first performed in 1951 in a production directed by Marcel Cuvelier (who also played the Professor).\n\n Since 1957 it has been in permanent showing at Paris' Théâtre de la Huchette, on an Ionesco double-bill with The Bald Soprano.\n\n The play is regarded as an important work in the \"Theatre of the Absurd\".",
+    "Paul Scott (novelist)\nPaul Mark Scott (25 March 19201 March 1978) was an English novelist, playwright, and poet, best known for his monumental tetralogy \"The Raj Quartet.\"\n\n His novel \"Staying On\" won the Booker Prize for 1977.",
+    "The Killer (play)\nThe Killer (French: Tueur sans gages , sometimes translated \"The Killer without Reason\" or \"The Killer without Cause\") is a play written by Eugène Ionesco in 1958.\n\n It is the first of Ionesco's Berenger plays, the others being \"Rhinocéros\" (1959), \"Exit the King\" (1962), and \"A Stroll in the Air\" (1963).",
+    "Eugène Ionesco\nEugène Ionesco (born Eugen Ionescu, ] ; 26 November 1909 – 28 March 1994) was a Romanian-French playwright who wrote mostly in French, and one of the foremost figures of the French Avant-garde theatre.\n\n Beyond ridiculing the most banal situations, Ionesco's plays depict the solitude and insignificance of human existence in a tangible way.",
+    "Victims of Duty\nVictims of Duty (French: Victimes du Devoir ) is a one-act play written in 1953 by French-Romanian playwright Eugène Ionesco.\n\n An early work, it has not received the notoriety of his other works.\n\n The play is in the Theatre of the Absurd style, of which Ionesco was a pioneer.",
+    "The New Tenant\nThe New Tenant (French: \"Le Nouveau Locataire\" ) is a play written by Eugène Ionesco in 1955.\n\n The central image is common to many Ionesco plays: something accumulates on stage and overwhelms the characters.\n\n In this case its furniture.\n\n The main characters are a gentleman, a caretaker, and two movers.\n\n The caretaker talks as the gentleman, the \"new tenant\" of the title, directs the two movers who continuously bring in furniture.",
+    "Bill Scott (author)\nWilliam Neville \"Bill\" Scott OAM (4 October 1923 – 22 December 2005) was an Australian author, folklorist, songwriter, poet and a collector of bush ballads and Australian folk history.\n\n He has published anthologies of Australian bush songs, including the best selling book \"The Complete Book of Australian Folklore\" published in 1976.\n\n He was awarded the Order of Australia in 1992 for his contributions to folklore, folk music and Australian literature.\n\n He was considered a living treasure and his anthologies of songs and his donated collections continue his legacy.",
+    "Exit the King\nExit the King (French: Le Roi se meurt ) is an absurdist drama by Eugène Ionesco that premiered in 1962.\n\n It is the third in Ionesco's \"Berenger Cycle\", preceded by \"The Killer\" (1958) and \"Rhinocéros\" (1959), and followed by \"A Stroll in the Air\" (1963).",
+    "Graph query row:\nperson: Paul Mark Scott\nbirth_date: 25 March 1920\ndeath_date: 1 March 1978",
+    "Joe Orton\nJohn Kingsley \"Joe\" Orton (1 January 1933 – 9 August 1967) was an English playwright and author.\n\n His public career was short but prolific, lasting from 1964 until his death three years later.\n\n During this brief period he shocked, outraged, and amused audiences with his scandalous black comedies.\n\n The adjective \"Ortonesque\" is sometimes used to refer to work characterised by a similarly dark yet farcical cynicism."
+   ]
+  },
+  {
+   "id": "50eca4066e56afe9",
+   "gold": [
+    {
+     "sentence": "William Somerset Maugham CH ( ; 25 January 1874 – 16 December 1965), better known as W. Somerset Maugham, was a British playwright, novelist and short story writer.",
+     "facts": {
+      "0.0": "William Somerset Maugham was born 25 January 1874.",
+      "0.1": "William Somerset Maugham died 16 December 1965.",
+      "0.2": "William Somerset Maugham is better known as W. Somerset Maugham.",
+      "0.3": "William Somerset Maugham was British.",
+      "0.4": "William Somerset Maugham was a playwright.",
+      "0.5": "William Somerset Maugham was a novelist.",
+      "0.6": "William Somerset Maugham was a short story writer.",
+      "0.7": "William Somerset Maugham's name includes the post-nominal CH."
+     }
+    },
+    {
+     "sentence": " He was among the most popular writers of his era and reputedly the highest-paid author during the 1930s.",
+     "facts": {
+      "1.0": "W. Somerset Maugham was among the most popular writers of his era.",
+      "1.1": "W. Somerset Maugham was reputedly the highest-paid author during the 1930s."
+     }
+    },
+    {
+     "sentence": "Thomas Merton, O.C.S.O. (January 31, 1915 – December 10, 1968) was an American Catholic writer, theologian and mystic.",
+     "facts": {
+      "2.0": "Thomas Merton, O.C.S.O., was born January 31, 1915.",
+      "2.1": "Thomas Merton died December 10, 1968.",
+      "2.2": "Thomas Merton was an American Catholic writer.",
+      "2.3": "Thomas Merton was a theologian.",
+      "2.4": "Thomas Merton was a mystic."
+     }
+    },
+    {
+     "sentence": " In 1949, he was ordained to the priesthood and given the name Father Louis.",
+     "facts": {
+      "3.0": "In 1949, Thomas Merton was ordained to the priesthood.",
+      "3.1": "Thomas Merton was given the name Father Louis."
+     }
+    }
+   ],
+   "items": [
+    "Robert Calder (writer)\nRobert Lorin Calder, a Canadian writer and professor, won the Governor General's Award for English-language non-fiction in 1989 for his \"Willie: The Life of W. Somerset Maugham\", a biography based on extensive archival work and interviews with surviving associates of Maugham, in particular Alan Searle.\n\n Unlike Ted Morgan, who had obtained permission from Maugham's executors to publish from Maugham's letters in his biography (1980), Calder was refused permission to do so by the Royal Literary Fund and had to rely on paraphrase in referencing Maugham's unpublished correspondence.",
+    "Trio (film)\nTrio (also known as W. Somerset Maugham's Trio) is a 1950 British anthology film based on three short stories by W. Somerset Maugham: \"The Verger\", \"Mr. Know-All\" and \"Sanatorium\".\n\n Ken Annakin directed \"The Verger\" and \"Mr. Know-All\", while Harold French was responsible for \"Sanatorium\".",
+    "Thomas Merton Award\nThe Thomas Merton Award has been awarded since 1972 by the Thomas Merton Center for Peace and Social Justice in Pittsburgh, United States.\n\n It is named after Thomas Merton and is given annually to \"national and international individuals struggling for justice.\"",
+    "W. Somerset Maugham\nWilliam Somerset Maugham CH ( ; 25 January 1874 – 16 December 1965), better known as W. Somerset Maugham, was a British playwright, novelist and short story writer.\n\n He was among the most popular writers of his era and reputedly the highest-paid author during the 1930s.",
+    "Somerset Maugham Award\nThe Somerset Maugham Award is a British literary prize given each May by the Society of Authors.\n\n It is awarded to the best writer or writers of a book published in the past year who is under the age of 35.\n\n The prize was instituted in 1947 by William Somerset Maugham and thus bears his name.\n\n The award is to be spent on foreign travel.\n\n The total fund for each year is £12,000.",
+    "Thomas Merton\nThomas Merton, O.C.S.O. (January 31, 1915 – December 10, 1968) was an American Catholic writer, theologian and mystic.\n\n A Trappist monk of the Abbey of Gethsemani, Kentucky, he was a poet, social activist, and student of comparative religion.\n\n In 1949, he was ordained to the priesthood and given the name Father Louis.",
+    "William H. Gass\nWilliam Howard Gass (born July 30, 1924) is an American novelist, short-story writer, essayist, critic, and former philosophy professor.\n\n He has written three novels, three collections of short stories, a collection of novellas, and seven volumes of essays, three of which have won National Book Critics Circle Award prizes and one of which, \"A Temple of Texts\" (2006), won the Truman Capote Award for Literary Criticism.\n\n His 1995 novel \"The Tunnel\" received the American Book Award.\n\n His 2013 novel \"Middle C\" won the 2015 William Dean Howells Medal.",
+    "International Thomas Merton Society\nThe International Thomas Merton Society, founded in 1987, is a learned society which studies the works of American Catholic writer and mystic Thomas Merton.\n\n It sponsors conferences and co-publishes a journal, \"The Merton Seasonal\".\n\n The society and the Thomas Merton Center are located at Bellarmine University in Louisville, Kentucky, U.S.A.",
+    "Adam Fox\nAdam Fox (1883 – 1977), Canon, was the Dean of Divinity at Magdalen College, Oxford.\n\n He was one of the first members of the \"Inklings\", a literary group which also included C.S. Lewis and J.R.R. Tolkien.\n\n Between 1938 and 1942 he was Professor of Poetry.\n\n Later he became Canon of Westminster Abbey and he is buried there in Poet's Corner.\n\n He was also Warden (Headmaster) of the famous Radley College.",
+    "List of works about Thomas Merton\nThe following is a list of works about Thomas Merton, publications about Thomas Merton, the Trappist monk from Abbey of Gethsemani.\n\n The bibliography is organized into categories.\n\n A separate list of works by Thomas Merton is also available."
+   ]
+  },
+  {
+   "id": "011592d637c315f6",
+   "gold": [
+    {
+     "sentence": "Lowell J. Sherman (October 11, 1885 – December 28, 1934) was an American actor and film director.",
+     "facts": {
+      "0.0": "Lowell J. Sherman was born on October 11, 1885.",
+      "0.1": "Lowell J. Sherman died on December 28, 1934.",
+      "0.2": "Lowell J. Sherman was an American actor.",
+      "0.3": "Lowell J. Sherman was an American film director."
+     }
+    },
+    {
+     "sentence": "Jonathan Kaplan (born November 25, 1947) is an American film producer and director.",
+     "facts": {
+      "1.0": "Jonathan Kaplan was born on November 25, 1947.",
+      "1.1": "Jonathan Kaplan is an American film producer.",
+      "1.2": "Jonathan Kaplan is an American film director."
+     }
+    }
+   ],
+   "items": [
+    "Frederick King Keller\nFrederick King Keller (born 1954 in Buffalo, New York) is an American director, producer and screenwriter for film and television.\n\n He is also credited under the names Frederick K. Keller, Fred K. Keller and Fred Keller.\n\n He is the son of actor/screenwriter .\n\n His father was a television pioneer who produced and directed the first weekly dramatic series seen on television.Besides acting and directing in theater his father also ran several art house movie theaters in Buffalo which the young Fred became intimately involved with and which formed the root of his cinematic education.",
+    "Jonathan Kaplan\nJonathan Kaplan (born November 25, 1947) is an American film producer and director.\n\n His film \"The Accused\" (1988) earned actress Jodie Foster her first Oscar for Best Actress and was nominated for the Golden Bear at the 39th Berlin International Film Festival.\n\n Kaplan received five Emmy nominations for his roles directing and producing \"ER\".",
+    "John Bailey (cinematographer)\nJohn Ira Bailey, A.S.C. (born August 10, 1942) is an American cinematographer and film director best known for his collaborations with directors Paul Schrader, Lawrence Kasdan, Michael Apted, and Ken Kwapis.\n\n In August 2017, Bailey was elected President of the Academy of Motion Picture Arts and Sciences for a four-year term.",
+    "Lev Kuleshov\nLev Vladimirovich Kuleshov (Russian: Лев Влади́мирович Кулешо́в ; 13 January [O.S. 1 January] 1899 – 29 March 1970) was a Russian and Soviet filmmaker and film theorist, one of the founders of the world's first film school, the Moscow Film School.\n\n He was given the title People's Artist of the RSFSR in 1969.\n\n He was intimately involved in development of the style of film making known as Soviet montage, especially it's psychological underpinning, including the use of editing and the cut to emotionally influence the audience, a principle known as the Kuleshov effect.\n\n He also developed the theory of creative geography, which is the use of the action around a cut to connect otherwise disparate settings into a cohesive narrative.",
+    "Elmer Clifton\nElmer Clifton (March 14, 1890 – October 15, 1949) was an American writer, director and actor from the early silent days.\n\n A collaborator of D.W. Griffith, he appeared in \"The Birth of a Nation\" (1915) and \"Intolerance\" (1916) before giving up acting in 1917 to concentrate on work behind the camera, with Griffith and Joseph Henabery as his mentors.\n\n His first feature-length solo effort as a director was \"The Flame of Youth\" with Jack Mulhall.",
+    "Lowell Sherman\nLowell J. Sherman (October 11, 1885 – December 28, 1934) was an American actor and film director.\n\n At a time when it was highly unusual, he was both the actor and director on several films in the early 1930s, before completely transitioning to the role of director.\n\n At the height of his career, after scoring huge successes with his direction of the films \"She Done Him Wrong\" and \"Morning Glory\" (which starred Mae West and won her first Academy Award for Katharine Hepburn respectively), he succumbed to pneumonia after a brief illness.",
+    "Edmund Mortimer (actor)\nEdmund Mortimer (21 August 1874 – 21 May 1944) was an American actor and film director.\n\n He appeared in 251 films between 1913 and 1945.\n\n He also directed 23 films between 1918 and 1928.\n\n He was born in New York, New York and died in Los Angeles, California.",
+    "D. Ross Lederman\nDavid Ross Lederman (December 12, 1894 – August 24, 1972) was an American film director noted for his Western/action/adventure films of the 1930s and 1940s.",
+    "Leonard Schrader\nLeonard Schrader (November 30, 1943 – November 2, 2006) was an American screenwriter and director, most notable for his ability to write Japanese language films and for his many collaborations with his brother, Paul Schrader.\n\n He earned an Academy Award Nomination for the screenplay he wrote for the film \"Kiss of the Spider Woman\".",
+    "Kevin Brownlow\nKevin Brownlow (born 2 June 1938) is a British film historian, television documentary-maker, filmmaker, author, and film editor.\n\n Brownlow is best known for his work documenting the history of the silent era.\n\n Brownlow became interested in silent film at the age of eleven.\n\n This interest grew into a career spent documenting and restoring film.\n\n He has rescued many silent films and their history.\n\n His initiative in interviewing many largely forgotten, elderly film pioneers in the 1960s and 1970s preserved a legacy of early mass-entertainment cinema.\n\n Brownlow received an Academy Honorary Award at the 2nd Annual Governors Awards given by the Academy of Motion Picture Arts and Sciences on 13 November 2010.\n\n This was the first occasion on which an Academy Honorary Award was given to a film preservationist."
+   ]
+  },
+  {
+   "id": "54a58a3333182c2e",
+   "gold": [
+    {
+     "sentence": "Essence is a monthly magazine for African American women between the ages of 18 and 49.",
+     "facts": {
+      "0.0": "Essence is a monthly magazine.",
+      "0.1": "Essence is for African American women.",
+      "0.2": "Essence is aimed at women between the ages of 18 and 49."
+     }
+    },
+    {
+     "sentence": "ALT for Damerne (meaning \"All for the Ladies\" in English) is a Danish language weekly women's magazine published in Copenhagen, Denmark.",
+     "facts": {
+      "1.0": "ALT for Damerne is a women's magazine.",
+      "1.1": "ALT for Damerne means 'All for the Ladies' in English.",
+      "1.2": "ALT for Damerne is written in the Danish language.",
+      "1.3": "ALT for Damerne is a weekly magazine.",
+      "1.4": "ALT for Damerne is published in Copenhagen, Denmark."
+     }
+    }
+   ],
+   "items": [
+    "Alt for Damerne\nALT for Damerne (meaning \"All for the Ladies\" in English) is a Danish language weekly women's magazine published in Copenhagen, Denmark.",
+    "Essence Music Festival\nThe Essence Festival, known as \"the party with a purpose\", is an annual music festival which started in 1995 as a one-time event to celebrate the 25th anniversary of \"Essence\", a magazine aimed primarily towards African-American women.\n\n It is the largest event celebrating African-American culture and music in the United States.\n\n Locally referred to as the Essence Fest, it has been held in New Orleans, Louisiana every year since 1994 except for 2006, when it was held in Houston, Texas due to Hurricane Katrina's effect on New Orleans.\n\n It also held in Durban, KwaZulu-Natal in 2016.\n\n It features artists simultaneously performing on a main stage as well as four standing-room only superlounge stages.",
+    "Exclaim!\nExclaim!\n\n is a monthly Canadian music magazine that features in-depth coverage of new music across all genres with a special focus on Canadian and cutting-edge artists.\n\n Content is based on the monthly print publication, which publishes 9 issues per year, distributing over 103,000 copies to over 2,600 locations across Canada.\n\n The magazine has an average of 361,200 monthly readers.\n\n Their website, exclaim.ca, has an average of 675,000 unique visitors a month.",
+    "Esquire (magazine)\nEsquire is an American men's magazine, published by the Hearst Corporation in the United States.\n\n Founded in 1933, it flourished during the Great Depression under the guidance of founders Arnold Gingrich, David A. Smart and Henry L. Jackson.",
+    "Diva (magazine)\nDIVA is a leading lesbian magazine in the United Kingdom, published monthly.\n\n It was launched in March 1994 by Millivres Ltd, under the editorship of Frances Williams and is now published by Twin Media Group, which is owned by Silke Bader and Linda Riley.\n\n Silke Bader is also the publisher of Curve magazine in the USA and LOTL in Australia, and Linda Riley runs the European Diversity Awards and is the former publisher of g3 magazine in the UK.",
+    "Hänt Extra\nHänt Extra is a Swedish language weekly celebrity and youth magazine published by Aller Media in Stockholm, Sweden.",
+    "Hänt Bild (Swedish weekly, 2003–, Aller); Hänt Extra (Swedish celebrity/youth weekly); Girlfriends (lesbian culture, 1993–2006); Rap-Up (hip-hop/R&B quarterly, 2001–); Sculptural Pursuit (quarterly art); DIVA (UK lesbian monthly, 1994–); Elle (global fashion/lifestyle, founded 1945); Girls’ Life (US teen, 1994–",
+    "Essence (magazine)\nEssence is a monthly magazine for African American women between the ages of 18 and 49.\n\n It is the only magazine that focuses on reaching an audience of black women, revolves around the black woman experience, and has remained for a long period of time.\n\n The magazine covers fashion, lifestyle and beauty, with an intimate girlfriend-to-girlfriend tone, and its slogan \"Fierce, Fun, and Fabulous\" suggests the magazine's goal of empowering African-American women.\n\n The topics the magazine discusses range from celebrities, to fashion, to point-of-view pieces addressing current issues in the African-American community.\n\n A number of its readers engage closely and personally with the publication, and it claims to be the magazine \"for and about Black women\".",
+    "Elle (magazine)\nElle is a worldwide lifestyle magazine of French origin that focuses on fashion, beauty, health, and entertainment.\n\n \"Elle\" is also the world's best-selling fashion magazine.\n\n It was founded by Pierre Lazareff and his wife Hélène Gordon in 1945.\n\n The title, in French, means \"she\" or \"her\".",
+    "The entries cover magazines, journalists, writers, and the meaning of “review.” Children’s titles include bimonthly Jack and Jill and National Wildlife Federation nature magazines Ranger Rick, Ranger Rick Jr., and Ranger Rick Cub. Women’s magazines include Macedonian Tea Moderna and Danish ALT for Damerne. Other publications range from Adventist Review and conservative National Review to the Human Life Review, Henry James Review, and defunct American Mercury and Insurgent49. Profiles include Rosie O’Donnell"
+   ]
+  },
+  {
+   "id": "94aed753a0f9d879",
+   "gold": [
+    {
+     "sentence": "PC Magazine (shortened as PCMag) is an American computer magazine published by Ziff Davis.",
+     "facts": {
+      "0.0": "PC Magazine is shortened as PCMag.",
+      "0.1": "PC Magazine is an American computer magazine.",
+      "0.2": "PC Magazine is published by Ziff Davis."
+     }
+    },
+    {
+     "sentence": " The magazine focuses on sculpture, its collectors and enthusiasts, but painting and poetry are also frequently featured.",
+     "facts": {
+      "1.0": "The magazine focuses on sculpture.",
+      "1.1": "The magazine focuses on sculpture collectors.",
+      "1.2": "The magazine focuses on sculpture enthusiasts.",
+      "1.3": "Painting is also frequently featured in the magazine.",
+      "1.4": "Poetry is also frequently featured in the magazine."
+     }
+    }
+   ],
+   "items": [
+    "Sculptural Pursuit\nSculptural Pursuit was a quarterly art/literary magazine published by Hammer & Pen Productions, a Denver, Colorado publishing company.\n\n The magazine focuses on sculpture, its collectors and enthusiasts, but painting and poetry are also frequently featured.",
+    "Computer Magazine\n\"Computer Magazine\" is a free publication (in addition to their webcasts and other resources) sponsored by the nonprofit UTCP (United Technology and Computing Professionals) organization, and as such charges no fees for the publication nor is influenced by advertising, so their reviews are relied on in the industry and considered unbiased and thorough.\n\n \"Computer Magazine\" is one of the early large technology publications and resources available on the web still existent and thriving today and that has remained independent.\n\n ComputerMagazine.com is a tech news and resources consolidator that publishes part of the site in a semi-time line/blogging format that is popular among their wide following of subscriber and non-subscriber readers, allowing readers to respond and comment on various articles.\n\n Site contributors include many of the well known technology authors, experts and publication sources, content and articles are provided by major technology syndicators and by external expert technology sources (such as \"Computer World\", \"Information Week\", \"Network World\", \"Wired,\" \"Time\", etc.)",
+    "Mary Jo Foley\nMary Jo Foley is an American freelance technology writer, author, podcaster and news editor.\n\n She regularly writes news, previews, and reviews for Microsoft's strategy, products and technology.\n\n Foley has been covering news on Microsoft Windows, and previously on Unix-related technology, since 1983, for publications including \"ZDNet\", \"eWeek\", \"Baseline\", \"Redmond magazine\" and \"PC Magazine\".",
+    "Computer Magazine\nas well as \"Computer Magazine\" staff writers, and is currently managed and edited by the industry veteran Christopher Swearingin an MCSE and former CIO and regarded author as well as contributor/reporter for \"Computer Magazine\" and other publications.",
+    "Windows: The Official Magazine\nWindows: The Official Magazine is a technology magazine produced by Future plc in association with Microsoft, and published worldwide.\n\n The title describes itself as \"A PC magazine for real life\", and contains news, features, guides and reviews designed to show readers how to make better use of their Windows PC.",
+    "Computer Press Association\nFounded in 1983, the Computer Press Association (CPA) was established to promote excellence in the field of computer journalism.\n\n The association was composed of working editors, writers, producers, and freelancers who covered issues related to computers and technology.\n\n The CPA conducted the annual Computer Press Awards, which was the preeminent editorial awards of the computer and technology media.\n\n The CPA Awards honored outstanding examples in print, broadcast and electronic media.\n\n Awards were given for print publications, such as PC Magazine; online news media, such as Newsbytes News Network (both were multiple winners); individual columns and features by well-known journalists such as Steven Levy (author of “”); broadcast awards such as “Best Radio Program”; as well as book awards in categories such as Best Product Specific Book.\n\n CPA President Jeff Yablon (1994-1996) developed an updated code of ethics for technology journalists that was adopted by many major trade show groups, most notably Bruno Blenheim.\n\n The Computer Press Association disbanded in 2000.",
+    "PC Magazine\nPC Magazine (shortened as PCMag) is an American computer magazine published by Ziff Davis.\n\n A print edition was published from 1982 to January 2009.\n\n Publication of online editions started in late 1994 and continues to this day.",
+    "Lance Ulanoff\nLance Ulanoff is an American tech and social media commentator.\n\n He is a former Editor-in-Chief of \"PCMag.com\", \"PC Magazine\", and Mashable and SVP of Content for PCMag Digital Network, and is now an editor at Mashable.\n\n He spent nearly two decades in the computer technology publishing industry.\n\n Previously, he edited PCMag.com, the website for \"PC Magazine\".\n\n Ulanoff also writes an award-winning and popular column for the website.",
+    "Computer Magazine\nComputer Magazine (and their website www.ComputerMagazine.com) is a popular magazine and online news site on computing and technology, offering current news and reviews of popular and new business and consumer technologies, software, hardware, mobile computing, tablets, PCs, Macs, Windows, Linux, telecom, cellular, wireless, data, cloud and science news on digital technologies and everything in the \"tech-sphere and digi-verse\", especially focused on information technology, devices, software and services and related subjects, such as networking, servers, data centers and corporate data infrastructure technologies, and the Internet.\n\n Their online site, since 1997, is located at ComputerMagazine.com.\n\n \"Computer Magazine\" produces industry instructional and a popular ongoing webcast/podcast talk show and performs evaluations and reviews of IT industry technology products, hardware, software and services with objective reporting widely respected as independent and objective, and trusted in the industry.",
+    "AES+F\nAES+F is an artist collective of four Russian artists: Tatiana Arzamasova (1955), Lev Evzovich (1958), Evgeny Svyatsky (1957), and Vladimir Fridkes (1956).\n\n It was first formed as AES Group in 1987 by Arzamasova, Evzovich, and Svyatsky, becoming AES+F when Fridkes joined in 1995.\n\n The collective works in photography, video, installation, and animation, as well as more traditional media, such as painting, drawing, and sculpture.\n\n AES+F's early work included performance, installation, painting, and illustration.\n\n Well known for their monumental video-art installations that Gareth Harris describes as \"monumental painting set in motion\", AES+F create grand visual narratives that explore contemporary global values, vices and conflicts."
+   ]
+  },
+  {
+   "id": "741ef1201bc1e0a9",
+   "gold": [
+    {
+     "sentence": " In 2010, he began providing vocals and guitar in the pop rock band Ashland HIGH.",
+     "facts": {
+      "0.0": "In 2010, the person referred to as \"he\" began providing vocals in the pop rock band Ashland HIGH.",
+      "0.1": "In 2010, the person referred to as \"he\" began providing guitar in the pop rock band Ashland HIGH."
+     }
+    },
+    {
+     "sentence": "Jizzy Pearl (born James Wilkinson) is an American vocalist that was born on March 17, 1958, in Chicago, Illinois.",
+     "facts": {
+      "1.0": "Jizzy Pearl was born James Wilkinson.",
+      "1.1": "Jizzy Pearl is an American vocalist.",
+      "1.2": "Jizzy Pearl was born on March 17, 1958.",
+      "1.3": "Jizzy Pearl was born in Chicago, Illinois."
+     }
+    }
+   ],
+   "items": [
+    "Quiet Riot 10\nQuiet Riot 10 (also alternatively known as just 10, or Quiet Riot Number 10) is the twelfth studio album by the heavy metal band Quiet Riot, which was released on June 27, 2014.\n\n It is their first studio album since 1988's \"QR\" not to feature longtime and founding vocalist Kevin DuBrow in any newly recorded material, due to his death in November 2007.\n\n It is also the band's first album since reuniting in 2010.\n\n Although a studio album, the final four tracks on \"Quiet Riot 10\" are live performances taken from some of the band's final shows with DuBrow in 2007.\n\n Love/Hate vocalist Jizzy Pearl joined the band in November 2013 and performs lead vocals on the six studio tracks.",
+    "Ron Cyrus\nRonald Ray \"Ron\" Cyrus (July 10, 1935 – February 28, 2006) was an American Democratic politician and public servant in Greenup County, Kentucky.\n\n He was the father of American country music singer/actor Billy Ray Cyrus and the paternal grandfather of Trace Cyrus, Miley Cyrus and Noah Cyrus.",
+    "Jizzy Pearl\nJizzy Pearl (born James Wilkinson) is an American vocalist that was born on March 17, 1958, in Chicago, Illinois.\n\n He's had notable performances in several heavy metal and hard rock groups.\n\n He first fronted the band Data Clan, which eventually became Love/Hate.\n\n Pearl has also sung for L.A. Guns, Ratt, Adler's Appetite, and other, lesser known acts.",
+    "Gold (Metro Station EP)\nGold is an EP by American pop rock band Metro Station released in 2014.\n\n It was the band's first release after Trace Cyrus' return to the group in 2014.",
+    "Trace Cyrus\nTrace Dempsey Cyrus (born Neil Timothy Helson; February 24, 1989) is an American musician.\n\n The son of country singer Billy Ray Cyrus and brother of recording artist Miley Cyrus, he is the backing vocalist and bassist of the band Metro Station.\n\n He left the band in 2010 but returned in 2014.\n\n In 2010, he began providing vocals and guitar in the pop rock band Ashland HIGH.\n\n He also owns the clothing company From Backseats to Bedrooms.",
+    "Brother Clyde (album)\nBrother Clyde is the debut studio album from alternative rock group Brother Clyde.\n\n It is the first side-project from country music singer Billy Ray Cyrus.\n\n The album features duets with Cyrus' son Trace Cyrus as well as Dolly Parton, who Cyrus said \"wanted to rock.\"\n\n It was released on August 10, 2010.\n\n Its first single, \"Lately\", which features rapper King Phaze, was issued to digital retailers on June 29, 2010, and a music video, which was directed by Cyrus, was released for the song in July 2010.",
+    "Shrinking Violet (album)\nShrinking Violet is the sixth album by glam metal band L.A. Guns, first released on June 1, 1999, through Perris Records, and is the only L.A. Guns album with singer Jizzy Pearl.\n\n The album was reissued, with bonus tracks and new artwork, on May 24, 2010, through Favored Nations.\n\n The album was produced by former Guns N' Roses guitarist Gilby Clarke who also provided additional guitars on the track \"Dreamtime\".",
+    "American Hi-Fi\nAmerican Hi-Fi is an American rock band formed in Boston in 1998.\n\n The band consists of lead vocalist/rhythm guitarist Stacy Jones, lead guitarist Jamie Arentzen, bassist/backing vocalist Drew Parsons, and drummer Brian Nolan.\n\n Prior to the group's formation, Stacy Jones was well known for being a drummer in the successful alternative rock bands Veruca Salt and Letters to Cleo.\n\n American Hi-Fi has a close relationship with Miley Cyrus, whose band shares two members with American Hi-Fi.\n\n The group has a mixed musical style that includes influences from pop punk, alternative rock, and power pop.",
+    "Metro Station (band)\nMetro Station is an American pop rock band that was formed in Los Angeles by Trace Cyrus and Mason Musso.\n\n In late 2006, the band signed a recording contract with Columbia Records and RED Ink Records.\n\n The band is best known for the Top 10 \"Billboard\" hit single \"Shake It\" from the group's self-titled debut album.\n\n In 2010, tension between Cyrus and Musso caused the band to go on hiatus.\n\n In 2011 the band returned, however it was announced that Cyrus was no longer a part of the group and Musso had purchased the rights to the name.\n\n An EP entitled \"Middle of the Night\" was released in 2013, which was led by the single \"Every Time I Touch You\".\n\n In 2014 Cyrus and a new drummer, Spencer Steffan came to the band and a new single entitled \"Love & War\" was released.\n\n In 2015, the band released a second full-length album titled \"Savior\".",
+    "Noah Cyrus\nNoah Lindsey Cyrus (born January 8, 2000) is an American actress and singer.\n\n She voiced the title role in the English version of the 2009 animated feature film \"Ponyo\".\n\n In 2016, she released her debut single \"Make Me (Cry)\", featuring vocals from Labrinth.\n\n Her debut album is set to be released in late 2017.\n\n She is the youngest daughter of Tish Cyrus and Billy Ray Cyrus and the younger sister of Miley Cyrus and Trace Cyrus."
+   ]
+  },
+  {
+   "id": "653f743003514850",
+   "gold": [
+    {
+     "sentence": "Dangal (English: \"Wrestling competition\" ) is a 2016 Indian Hindi-language biographical sports drama film loosely based on the story of Mahavir Singh Phogat, an amateur wrestler, who trains his daughters Geeta Phogat and Babita Kumari to be world-class wrestlers.",
+     "facts": {
+      "0.0": "Dangal's English title is \"Wrestling competition\".",
+      "0.1": "Dangal is a 2016 film.",
+      "0.2": "Dangal is an Indian film.",
+      "0.3": "Dangal is a Hindi-language film.",
+      "0.4": "Dangal is a biographical sports drama film.",
+      "0.5": "Dangal is loosely based on the story of Mahavir Singh Phogat.",
+      "0.6": "Mahavir Singh Phogat is an amateur wrestler.",
+      "0.7": "Mahavir Singh Phogat trains his daughters Geeta Phogat and Babita Kumari.",
+      "0.8": "Mahavir Singh Phogat trains his daughters to be world-class wrestlers."
+     }
+    },
+    {
+     "sentence": "The Man from Snowy River II is a 1988 Australian drama film, the sequel to the 1982 film \"The Man from Snowy River\".",
+     "facts": {
+      "1.0": "The Man from Snowy River II is a 1988 film.",
+      "1.1": "The Man from Snowy River II is an Australian drama film.",
+      "1.2": "The Man from Snowy River II is the sequel to the 1982 film \"The Man from Snowy River\"."
+     }
+    }
+   ],
+   "items": [
+    "Dangal (film)\nDangal (English: \"Wrestling competition\" ) is a 2016 Indian Hindi-language biographical sports drama film loosely based on the story of Mahavir Singh Phogat, an amateur wrestler, who trains his daughters Geeta Phogat and Babita Kumari to be world-class wrestlers.\n\n It was directed by Nitesh Tiwari.\n\n Produced by Walt Disney Pictures, Aamir Khan Productions and UTV Motion Pictures, it stars Aamir Khan as the father.\n\n Both daughters go on to win medals at the 2010 Commonwealth Games.\n\n Babita won a silver medal at the Games, in the 51 kg class and gold at the 2014 Glasgow Games in the 55 kg class.\n\n In 2012, Geeta became the first Indian female wrestler to qualify for the Olympics.\n\n Mahavir's efforts inspired dozens of Indian women to take to wrestling.\n\n Fatima Sana Shaikh and Sanya Malhotra play the older selves of the sisters while Sakshi Tanwar plays their mother and Aparshakti Khurana, their cousin.",
+    "Return to Snowy River\nReturn to Snowy River is the original motion picture soundtrack from the 1988 film \"The Man from Snowy River II\".\n\n The soundtrack album is named after the American title for the film.",
+    "The Man from Snowy River (poem)\n\"The Man from Snowy River\" is a poem by Australian bush poet Banjo Paterson.\n\n It was first published in \"The Bulletin\", an Australian news magazine, on 26 April 1890, and was published by Angus & Robertson in October 1895, with other poems by Paterson, in \"The Man from Snowy River and Other Verses\".",
+    "The Man from Snowy River (TV series)\nThe Man from Snowy River is an Australian adventure drama television series based on Banjo Paterson's poem \"The Man from Snowy River\".\n\n Released in Australia as \"Banjo Paterson's The Man from Snowy River\", the series was subsequently released in both the United States and the United Kingdom as \"Snowy River: The McGregor Saga\".",
+    "The Man from Snowy River (soundtrack)\n\"The Man from Snowy River is the original motion picture soundtrack from the 1982 film \"The Man from Snowy River\".",
+    "The Man from Snowy River II\nThe Man from Snowy River II is a 1988 Australian drama film, the sequel to the 1982 film \"The Man from Snowy River\".",
+    "Graph query row:\nfilm: Dangal\npublished_on: 2016\ncompared_film: The Man from Snowy River II\ncompared_published_on: 1988\nconnection: None",
+    "The Man from Snowy River (1982 film)\nThe Man from Snowy River is a 1982 Australian drama film based on the Banjo Paterson poem \"The Man from Snowy River\".\n\n The film had a cast including Kirk Douglas in a dual role as the brothers Harrison (a character who appeared frequently in Paterson's poems) and Spur, Jack Thompson as Clancy, Tom Burlinson as Jim Craig, Sigrid Thornton as Harrison's daughter Jessica, Terence Donovan as Jim's father Henry Craig, and Chris Haywood as Curly.",
+    "Frozen (2013 film)\nFrozen is a 2013 American 3D computer-animated musical fantasy film produced by Walt Disney Animation Studios and released by Walt Disney Pictures.\n\n It is the 53rd Disney animated feature film.\n\n Inspired by Hans Christian Andersen's fairy tale \"The Snow Queen\", the film tells the story of a fearless princess who sets off on a journey alongside a rugged iceman, his loyal pet reindeer, and a naïve snowman to find her estranged sister, whose icy powers have inadvertently trapped the kingdom in eternal winter.",
+    "Bruce Rowland\nBruce Rowland (born May 9, 1942 in Melbourne) is a well-known Australian composer.\n\n He composed the soundtrack for the 1982 movie \"The Man from Snowy River\", as well as the soundtrack for its 1988 sequel \"The Man from Snowy River II\" (which has the United States title of \"Return to Snowy River\", and the United Kingdom title of \"The Untamed\").\n\n Both films were based on Banjo Paterson's poem The Man from Snowy River.\n\n His other film scores include \"Now and Forever\" (1983), \"Phar Lap\" (1983), \"Bushfire Moon\" (1987), \"Cheetah\" (1989), \"Weekend with Kate\" (1990), \"Gross Misconduct\" (1993), \"Andre\" (1994), \"Lightning Jack\" (1994), \"Zeus and Roxanne\" (1997) and the TV movie \"\" (1997)."
+   ]
+  },
+  {
+   "id": "d86329fc7352dfaa",
+   "gold": [
+    {
+     "sentence": "Alice Ann Munro ( , \"née\" Laidlaw ; born 10 July 1931) is a Canadian short story writer and Nobel Prize winner.",
+     "facts": {
+      "0.0": "Alice Ann Munro's nee name is Laidlaw.",
+      "0.1": "Alice Ann Munro was born on 10 July 1931.",
+      "0.2": "Alice Ann Munro is a Canadian short story writer.",
+      "0.3": "Alice Ann Munro is a Nobel Prize winner."
+     }
+    },
+    {
+     "sentence": "Lillian Florence Hellman (June 20, 1905 – June 30, 1984) was an American dramatist and screenwriter known for her success as a playwright on Broadway, as well as her left-wing sympathies and political activism.",
+     "facts": {
+      "1.0": "Lillian Florence Hellman was born on June 20, 1905.",
+      "1.1": "Lillian Florence Hellman died on June 30, 1984.",
+      "1.2": "Lillian Florence Hellman was an American dramatist.",
+      "1.3": "Lillian Florence Hellman was an American screenwriter.",
+      "1.4": "Lillian Florence Hellman is known for her success as a playwright on Broadway.",
+      "1.5": "Lillian Florence Hellman is known for her left-wing sympathies.",
+      "1.6": "Lillian Florence Hellman is known for her political activism."
+     }
+    }
+   ],
+   "items": [
+    "Rea Wilmshurst\nRea Wilmshurst (August 10, 1941 – March 22, 1996) graduated from the University of Toronto with a degree in English in 1970.\n\n She went on to edit eight volumes of Lucy Maud Montgomery's previously unknown short stories and publish them through McClelland & Stewart.\n\n In 1985, she published a bibliography of Montgomery's short stories, poems, and articles.\n\n Wilmshurst was also an editorial assistant for the projects that compiled the Collected Works of John Stuart Mill and the Collected Works of Samuel Taylor Coleridge.",
+    "Alice Munro\nAlice Ann Munro ( , \"née\" Laidlaw ; born 10 July 1931) is a Canadian short story writer and Nobel Prize winner.\n\n Munro's work has been described as having revolutionized the architecture of short stories, especially in its tendency to move forward and backward in time.\n\n Her stories have been said to \"embed more than announce, reveal more than parade.\"",
+    "Lucy Maud Montgomery\nLucy Maud Montgomery {'1': \", '2': \", '3': \", '4': \"} (November 30, 1874 – April 24, 1942) published as L.M. Montgomery, was a Canadian author best known for a series of novels beginning in 1908 with \"Anne of Green Gables\".\n\n The book was an immediate success.\n\n The central character, Anne Shirley, an orphaned girl, made Montgomery famous in her lifetime and gave her an international following.",
+    "Lillian Hellman\nLillian Florence Hellman (June 20, 1905 – June 30, 1984) was an American dramatist and screenwriter known for her success as a playwright on Broadway, as well as her left-wing sympathies and political activism.\n\n She was blacklisted after her appearance before the House Committee on Un-American Activities (HUAC) at the height of the anti-communist campaigns of 1947–52.\n\n Although she continued to work on Broadway in the 1950s, her blacklisting by the American film industry caused a drop in her income.\n\n Many praised Hellman for refusing to answer questions by HUAC, but others believed, despite her denial, that she had belonged to the Communist Party.",
+    "Mollie Gillen\nMollie Gillen (née Woolnough; 1908–2009) was an Australian historian, researcher, writer and novelist.\n\n Her work on the First Fleet, in \"The search for John Small,\" \"First Fleeter\" and The Founders of Australia: A Biographical Dictionary of the First Fleet, explored the idea that many of the founding families of Australia were descended from the convict population, rather than those sent to guard them.\n\n Gillen's article Maud Montgomery: The Girl Who Wrote Green Gables instigated a new era in scholarship on Lucy Maud Montgomery.",
+    "The Autumn Garden\nThe Autumn Garden is a 1951 play by Lillian Hellman.\n\n The play is set in September, 1949 in a summer home in a resort on the Gulf of Mexico, about 100 miles from New Orleans.\n\n The play is a study of the defeats, disappointments and diminished expectations of people reaching middle age.\n\n For inspiration, Hellman drew on her memories of her time in her aunts' boardinghouse.\n\n Dashiell Hammett, who had been Hellman's lover for 20 years, helped her write the play and received 15 percent of the royalties.\n\n Of all Hellman's plays it was her favorite.",
+    "Graph query row:\nperson: Alice Munro\noccupation: short story writer\nrelationship: None\nrelated_work: None",
+    "Anne Perry\nAnne Perry (born 28 October 1938 as Juliet Marion Hulme) is an English author of historical detective fiction, best known for her Thomas Pitt and William Monk series.\n\n At the age of fifteen she was convicted of participating in the murder of her friend's mother, in 1954.\n\n She changed her name after serving her five-year sentence.",
+    "Lillian Hellman: An Imperious Life\nLillian Hellman: An Imperious Life is a 2014 book by Dorothy Gallagher.\n\n It is a critical biography of the American playwright and writer Lillian Hellman.",
+    "Alice Walker\nAlice Malsenior Walker (born February 9, 1944) is an American novelist, short story writer, poet, and activist.\n\n She wrote the critically acclaimed novel \"The Color Purple\" (1982) for which she won the National Book Award and the Pulitzer Prize for Fiction.\n\n She also wrote the novels \"Meridian\" (1976) and \"The Third Life of Grange Copeland\" (1970), among other works."
+   ]
+  },
+  {
+   "id": "13836c93ff576052",
+   "gold": [
+    {
+     "sentence": " His television series credits include portraying Bret Maverick in \"Maverick\" (1957–1962) and \"Bret Maverick\" (1981–1982), Jim Rockford in \"The Rockford Files\" (1974–1980), and Jim Egan in \"8 Simple Rules\" (2003–2005).",
+     "facts": {
+      "0.0": "The subject of this sentence portrayed Bret Maverick in the series Maverick from 1957 to 1962.",
+      "0.1": "The subject of this sentence portrayed Bret Maverick in the series Bret Maverick from 1981 to 1982.",
+      "0.2": "The subject of this sentence portrayed Jim Rockford in the series The Rockford Files from 1974 to 1980.",
+      "0.3": "The subject of this sentence portrayed Jim Egan in the series 8 Simple Rules from 2003 to 2005."
+     }
+    },
+    {
+     "sentence": "The Notebook is a 2004 American romantic drama film directed by Nick Cassavetes and based on the 1996 novel of the same name by Nicholas Sparks.",
+     "facts": {
+      "1.0": "The Notebook is a 2004 film.",
+      "1.1": "The Notebook is an American romantic drama film.",
+      "1.2": "The Notebook was directed by Nick Cassavetes.",
+      "1.3": "The Notebook is based on a 1996 novel.",
+      "1.4": "The 1996 novel has the same name as the film The Notebook.",
+      "1.5": "The 1996 novel was written by Nicholas Sparks."
+     }
+    }
+   ],
+   "items": [
+    "Moonstruck\nMoonstruck is a 1987 American romantic comedy film directed by Norman Jewison and written by John Patrick Shanley.\n\n It is about a widowed 37-year-old Italian-American woman (Cher) who falls in love with her fiancé's (Danny Aiello) estranged, hot-tempered younger brother (Nicolas Cage).\n\n Vincent Gardenia and Olympia Dukakis play supporting roles.",
+    "James Garner filmography\nThe following is the filmography for American actor James Garner.\n\n Garner was known for prominent roles in films such as \"Sayonara\" (1957) with Marlon Brando, \"Cash McCall\" (1960) with Natalie Wood, \"The Great Escape\" (1963) with Steve McQueen, \"The Thrill of It All\" (1963) with Doris Day, \"Move Over, Darling\" (1963) with Doris Day, \"The Wheeler Dealers\" (1963) with Lee Remick, Paddy Chayevsky's \"The Americanization of Emily\" (1964) with Julie Andrews, \"Hour of the Gun\" (1967), \"Marlowe\" (1969) with Bruce Lee, \"Support Your Local Sheriff!\n\n\"",
+    "Cash McCall\nCash McCall is a 1960 American romantic drama film in Technicolor from Warner Bros., produced by Henry Blanke, directed by Joseph Pevney, that stars James Garner and Natalie Wood.\n\n It is based upon the novel of the same name by Cameron Hawley about a man who buys moribund businesses in order to refurbish them and then sell them on at considerable profit.\n\n The film's screenplay is by Lenore J. Coffee and Marion Hargrove.",
+    "Mister Buddwing\nMister Buddwing is a 1966 American film drama directed by Delbert Mann and starring James Garner.",
+    "Bride and Prejudice\nBride and Prejudice is a 2004 romantic drama film directed by Gurinder Chadha.\n\n The screenplay by Chadha and Paul Mayeda Berges is a Bollywood-style adaptation of \"Pride and Prejudice\" by Jane Austen.\n\n It was filmed primarily in English, with some Hindi and Punjabi dialogue.\n\n The film released in the United States on 11 February 2005 and was well received by critics.",
+    "List of American films of 2004\nA list of American films released in 2004. \"\n\nMillion Dollar Baby\" won the 2004 Academy Award for Best Picture and \"Crash\" won the 2005 Academy Award for Best Picture. \"\n\nThe Aviator\" won the BAFTA Award for Best Film and the Golden Globe Award for Best Motion Picture – Drama. \"\n\nSideways\" won the Golden Globe Award for Best Motion Picture – Musical or Comedy and the Satellite Award for Best Film – Musical or Comedy. \"\n\nHotel Rwanda\" won the Satellite Award for Best Film – Drama.",
+    "Sleepless in Seattle\nSleepless in Seattle is a 1993 American romantic comedy-drama film directed and co-written by Nora Ephron, based on a story by Jeff Arch.\n\n It stars Tom Hanks and Meg Ryan, alongside a supporting cast featuring Bill Pullman, Ross Malinger, Rob Reiner, Rosie O'Donnell, Gaby Hoffmann, Victor Garber, and Rita Wilson.\n\n The film was a critical and commercial success, grossing over $220 million worldwide.",
+    "James Garner filmography\n(1969) with Walter Brennan, \"Murphy's Romance\" (1985) with Sally Field, \"Sunset\" (1988) with Bruce Willis, \"Maverick\" (1994) with Mel Gibson and Jodie Foster, \"Divine Secrets of the Ya-Ya Sisterhood\" (2002), and \"The Notebook\" (2004) with Ryan Gosling and Rachel McAdams.\n\n His television series credits include portraying Bret Maverick in \"Maverick\" (1957–1962) and \"Bret Maverick\" (1981–1982), Jim Rockford in \"The Rockford Files\" (1974–1980), and Jim Egan in \"8 Simple Rules\" (2003–2005).",
+    "Milan (2004 film)\nMilan is a 2004 romantic drama film released under Star Cinema, ABS-CBN Film Productions, Inc. in the Philippines.\n\n It stars Claudine Barretto and Piolo Pascual.\n\n It is a love story written by Raymond Lee, and under Olivia Lamasan's direction.\n\n The movie made more than P100 million in the box office.",
+    "The Notebook\nThe Notebook is a 2004 American romantic drama film directed by Nick Cassavetes and based on the 1996 novel of the same name by Nicholas Sparks.\n\n The film stars Ryan Gosling and Rachel McAdams as a young couple who fall in love in the 1940s.\n\n Their story is narrated from the present day by an elderly man (portrayed by James Garner) telling the tale to a fellow nursing home resident (played by Gena Rowlands, who is Cassavetes's mother)."
+   ]
+  }
+ ]
+}

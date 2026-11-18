@@ -1,0 +1,80 @@
+[
+{"id": "b4c322a108f6e78e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Epic, meanwhile, lost its antitrust battle with Apple and is now asking the Supreme Court to weigh in."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Epic, meanwhile, lost its antitrust battle with Apple and is now asking the Supreme Court to weigh in."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 2, "quote": "Google spent most of its first day attempting to explain complicated ins and outs of business"}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 2, "quote": "Epic was able to paint a black-and-white picture of good and evil"}]},
+{"fact": "3.2", "status": "stated", "evidence": [{"item": 2, "quote": "Epic was able to paint a black-and-white picture of good and evil with itself as the clear underdog"}]},
+{"fact": "3.3", "status": "stated", "evidence": [{"item": 2, "quote": "while Google spent most of its first day attempting to explain complicated ins and outs of business"}]}
+]},
+{"id": "703c5f2d632ebcaf", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "As for the All Blacks, they looked lost at times during this World Cup cycle"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "still faintly remarkable that head coach Ian Foster survived last summer"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Ian Foster survived last summer as the home defeats to Ireland, South Africa and Argentina piled up"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "as the home defeats to Ireland, South Africa and Argentina piled up"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 1, "quote": "as the home defeats to Ireland, South Africa and Argentina piled up"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 1, "quote": "as the home defeats to Ireland, South Africa and Argentina piled up"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "as well as a maiden defeat in 2020 in Sydney"}]}
+]},
+{"id": "fc75180589674c6d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "“all of that, all of it, was built on lies,” Rehn declared to the jury"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Bankman-Fried was even compared to Warren Buffet"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth)"}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front"}, {"item": 4, "quote": "he specifically pointed the finger at Ellison, the former CEO of Alameda"}]},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []},
+{"fact": "3.2", "status": "missing", "evidence": []},
+{"fact": "3.3", "status": "missing", "evidence": []}
+]},
+{"id": "d7ae926c016b307e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "But it was ChatGPT’s explosion into public consciousness that thrust Altman into the spotlight as a face of generative AI"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "But it was ChatGPT’s explosion into public consciousness that thrust Altman into the spotlight as a face of generative AI"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "technology that can produce novel imagery, passages of text and other media"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "technology that can produce novel imagery, passages of text and other media"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 10, "quote": "technology that can produce novel imagery, passages of text and other media"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier"}, {"item": 7, "quote": "connection: Induced AI"}]},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now"}]}
+]},
+{"id": "f905bf947f787529", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "McHenry himself has brushed off attempts to take the job more permanently"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "he was appointed to the role after the unprecedented ouster of McCarthy"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "the unprecedented ouster of McCarthy"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "the unprecedented ouster of McCarthy more than two weeks ago"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "The House had never ousted its speaker before McCarthy"}, {"item": 8, "quote": "stuck now 15 days without a speaker — a position of power second in line to the presidency — since the sudden ouster of Kevin McCarthy"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "stuck now 15 days without a speaker — a position of power second in line to the presidency — since the sudden ouster of Kevin McCarthy"}, {"item": 5, "quote": "since hard-liners ousted Kevin McCarthy at the start of the month"}]}
+]},
+{"id": "755195eefc14cbe7", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "She’s got the Eras Tour booked all through next year, and she’d rather die than cancel a show."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "She’s got the Eras Tour booked all through next year, and she’d rather die than cancel a show."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "contradicted", "evidence": [{"item": 9, "quote": "including Sunday's game agains the Chargers"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before"}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 10, "quote": "She specified that she isn’t trying to hide her relationship from the public eye"}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 10, "quote": "She specified that she isn’t trying to hide her relationship from the public eye"}]}
+]}
+]

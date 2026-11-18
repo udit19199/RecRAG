@@ -1,0 +1,51 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "709d41306ea83159",
+   "kind": "answer",
+   "question": "Considering the injury updates reported by CBSSports.com on November 19, 2023, regarding Cooper Kupp and the subsequent report by Sporting News on December 7, 2023, about Derrick Henry, does the sequence of reports indicate that both players suffered in-game injuries that led to them leaving their respective games for further evaluation or not returning to the game?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "2d9a8039f3ec8768",
+   "kind": "answer",
+   "question": "Was there inconsistency in the portrayal of Sam Bankman-Fried's legal challenges between the TechCrunch report published on October 1, 2023, and the TechCrunch report on October 7, 2023, and was there disagreement between the TechCrunch report on October 1, 2023, and the report by Cnbc | World Business News Leader on Sam Bankman-Fried's approach to the board composition for FTX?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No; the October 1 report doesn’t address his approach to FTX’s board composition."
+  },
+  {
+   "id": "9646b5e0db1a2c80",
+   "kind": "answer",
+   "question": "Between the report from The Age on October 22, 2023, claiming that Google manipulates Search to minimize ad revenue, and the report from TechCrunch on December 15, 2023, alleging that Google \"siphons off\" news publishers' content and ad revenue through anticompetitive means, is there consistency in the portrayal of Google's influence on ad revenue and content distribution?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes. Both portray Google as using its influence in ways that affect ad revenue and content distribution."
+  },
+  {
+   "id": "ab6e29d751345fb8",
+   "kind": "answer",
+   "question": "Was there inconsistency in the portrayal of Sam Bankman-Fried's legal challenges between the TechCrunch report published on October 1, 2023, and the TechCrunch report on October 7, 2023, and was there disagreement between the TechCrunch report on October 1, 2023, and the report by Cnbc | World Business News Leader on Sam Bankman-Fried's approach to the board composition for FTX?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No; Insufficient Information."
+  },
+  {
+   "id": "366da1227226772a",
+   "kind": "answer",
+   "question": "After the report by Cnbc | World Business News Leader on October 6, 2023, stating that businesses selling on Amazon might opt to set non-competitive prices, did The Verge report a change or consistency in eBay's approach to pricing competitiveness in their article on October 25, 2023?",
+   "gold_answers": [
+    "Consistency"
+   ],
+   "model_answer": "Consistency—eBay’s Best Price Guarantee offered a coupon for 110% of the price difference."
+  }
+ ],
+ "evidence": []
+}

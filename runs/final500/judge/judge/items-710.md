@@ -1,0 +1,757 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=c6f77ecaa55faaa6 ===
+Gold sentences and facts:
+Sentence 0: Their first video arcade game was 1975 's EVR Race ; a handful of others followed in the next several years , Radar Scope and Donkey Kong being among the most famous of these . The early 1980s saw Nintendo 's video game division ( led by Yokoi ) creating some of its most famous arcade titles . The massively popular Donkey Kong was created in 1981 , with Shigeru Miyamoto as its mastermind , and released in the arcades and on the Atari 2600 , Intellivision , and ColecoVision video game systems ( although Nintendo themselves generally had no involvement with these early console ports ) . This release method would be used on several later Nintendo arcade games of this same period , including the original Mario Bros. ( not to be confused with the later Super Mario Bros . ) In addition to this arcade and dedicated console game activity , Nintendo was testing the consumer handheld video game waters with the Game & Watch .
+  Fact 0.0: Nintendo's first video arcade game was EVR Race, released in 1975.
+  Fact 0.1: A handful of other arcade games followed Nintendo's first video arcade game in the next several years.
+  Fact 0.2: Radar Scope and Donkey Kong were among the most famous of those arcade games.
+  Fact 0.3: In the early 1980s, Nintendo's video game division, led by Yokoi, created some of Nintendo's most famous arcade titles.
+  Fact 0.4: Donkey Kong was massively popular.
+  Fact 0.5: Donkey Kong was created in 1981.
+  Fact 0.6: Shigeru Miyamoto was the mastermind behind Donkey Kong.
+  Fact 0.7: Donkey Kong was released in the arcades.
+  Fact 0.8: Donkey Kong was released on the Atari 2600, Intellivision, and ColecoVision video game systems.
+  Fact 0.9: Nintendo themselves generally had no involvement with the early console ports of Donkey Kong.
+  Fact 0.10: The release method used for Donkey Kong, arcade plus console, was used on several later Nintendo arcade games of the same period.
+  Fact 0.11: The original Mario Bros. was one of these later Nintendo arcade games, and it is not to be confused with the later Super Mario Bros.
+  Fact 0.12: Alongside its arcade and dedicated console game activity, Nintendo was testing the consumer handheld video game market with the Game & Watch.
+Sentence 1: In 1972 , the first commercially available video game console , the Magnavox Odyssey , had a light gun accessory , the Shooting Gallery . This was the first involvement of Nintendo in video games . According to Martin Picard in the International Journal of Computer Game Research : `` in 1971 , Nintendo had -- even before the marketing of the first home console in the United States -- an alliance with the American pioneer Magnavox to develop and produce optoelectronic guns for the Odyssey ( released in 1972 ) , since it was similar to what Nintendo was able to offer in the Japanese toy market in 1970s '' .
+  Fact 1.0: The Magnavox Odyssey was the first commercially available video game console, and it was released in 1972.
+  Fact 1.1: In 1972, the Magnavox Odyssey had a light gun accessory called the Shooting Gallery.
+  Fact 1.2: The Shooting Gallery was the first involvement of Nintendo in video games.
+  Fact 1.3: According to Martin Picard in the International Journal of Computer Game Research, in 1971 Nintendo had an alliance with the American pioneer Magnavox.
+  Fact 1.4: The alliance was formed even before the marketing of the first home console in the United States.
+  Fact 1.5: The alliance was to develop and produce optoelectronic guns for the Odyssey.
+  Fact 1.6: The Odyssey was released in 1972.
+  Fact 1.7: The alliance existed because Nintendo was able to offer something similar in the Japanese toy market in the 1970s.
+
+Retrieved items:
+<item 1>
+History of Nintendo
+Color TV - game 6 ( edit ) Main article : Color TV Game Nintendo 's first video game system , the Color TV Game 6 Nintendo at this time saw how successful video
+games were and began to dabble in them . Their first step in that field was to secure the rights to distribute the Magnavox Odyssey in Japan in 1975 . At the
+time , home video game consoles were extremely rare -- even the seminal Atari Pong console had yet to be produced . After experiencing reasonable success at
+this , Nintendo began developing its own video games , both for home and for arcades . In the 1970s , Mitsubishi Electric proposed joint development of `` Color
+TV Game Machine '' . In 1977 , they released `` Color TV Game 6 '' and `` Color TV Game 15 '' ( 6 and 15 indicates the number of games ) . Their first video
+arcade game was 1975 's EVR Race ; a handful of others followed in the next several years , Radar Scope and Donkey Kong being among the most famous of these .
+The early 1980s saw Nintendo 's video game division ( led by Yokoi ) creating some of its most famous arcade titles .
+</item 1>
+
+<item 2>
+History of Nintendo
+Contents ( hide ) 1 Origin 2 1889 -- 1965 : As a card company 3 1966 -- 1972 : Toy company and new ventures 4 1972 -- present : Electronic games 4.1 Color TV -
+Game 6 4.2 Game & Watch and Nintendo Entertainment System 4.3 Game Boy and Super NES 4.4 Nintendo 64 and Game Boy Color 4.5 Game Boy Advance and GameCube 4.6
+Nintendo DS and Wii 4.7 Nintendo 3DS , Wii U , and Nintendo Switch 5 References 6 Further reading 7 External links Origin ( edit ) Nintendo poster from late
+Meiji Era Nintendo started out as a small Japanese company , founded by Fusajiro Yamauchi on September 23 , 1889 , as Nintendo Koppai . Based in Kyoto , Japan ,
+the business produced and marketed Hanafuda cards . The name `` Nintendo '' is commonly assumed to mean `` leave luck to heaven '' , but there are no historical
+records to validate this assumption .
+</item 2>
+
+<item 3>
+History of Nintendo
+The massively popular Donkey Kong was created in 1981 , with Shigeru Miyamoto as its mastermind , and released in the arcades and on the Atari 2600 ,
+Intellivision , and ColecoVision video game systems ( although Nintendo themselves generally had no involvement with these early console ports ) . This release
+method would be used on several later Nintendo arcade games of this same period , including the original Mario Bros. ( not to be confused with the later Super
+Mario Bros . ) In addition to this arcade and dedicated console game activity , Nintendo was testing the consumer handheld video game waters with the Game &
+Watch . Game & Watch and Nintendo Entertainment system ( edit ) Main articles : Game & Watch , Nintendo Entertainment System , and History of the Nintendo
+Entertainment System Game & Watch or G&W is a line of handheld electronic games produced by Nintendo from 1980 to 1991 . Created by game designer Gunpei Yokoi ,
+each Game & Watch features a single game to be played on an LCD screen in addition to a clock and / or an alarm . It was the earliest Nintendo product to garner
+major success , with 43.4 million units sold worldwide .
+</item 3>
+
+<item 4>
+History of Nintendo
+Camelot Software Planning DeNA Game Freak Genius Sonority Good - Feel Grezzo HAL Laboratory Intelligent Systems Next Level Games The Pokémon Company Former
+divisions Research & Development 1 Research & Development 2 Entertainment Analysis & Development ( EAD ) Software Planning & Development ( SPD ) Integrated
+Research & Development ( IRD ) System Development ( NSD ) Nintendo video game hardware Consoles Home NES Famicom Titler Twin Famicom NES - 101 Sharp Nintendo
+Television NES Classic Edition accessories Super NES New - Style SF Naizou TV SF1 Super NES Classic Edition Nintendo 64 iQue Player GameCube Panasonic Q
+accessories Wii Wii U Switch Handheld Game Boy Game Boy Color Virtual Boy Game Boy Advance SP Micro Dockable Entertainment Pokémon Mini Nintendo DS Lite DSi
+Nintendo 3DS 2DS New 3DS New 2DS XL Dedicated Home Color TV - Game NES Classic Edition Super NES Classic Edition Handheld Game & Watch Mini Classics Pokémon
+Pikachu Arcade VS .
+</item 4>
+
+<item 5>
+History of Nintendo
+These devices had a much higher novelty value than traditional toys , allowing Nintendo to charge a higher price margin for each product . Yokoi went on to
+develop many other toys , including the Ten Billion Barrel puzzle , a baseball throwing machine called the Ultra Machine , and a Love Tester . Another invention
+of his , in collaboration with Masayuki Uemura from Sharp , was the Nintendo Beam Gun Game , the precursor to the NES Zapper ( which was used in games like Duck
+Hunt . ) . Nintendo released the first solar - powered light gun , the Nintendo Beam Gun , in 1970 ; this was the first commercially available light - gun for
+home use , produced in partnership with Sharp . In 1972 , Nintendo released the Ele - Conga , one of the first programmable drum machines . It could play
+pre-programmed rhythms from disc - shaped punch cards , which could be altered or programmed by the user , to play different patterns . 1972 -- present :
+electronic games ( edit ) In 1972 , the first commercially available video game console , the Magnavox Odyssey , had a light gun accessory , the Shooting
+Gallery . This was the first involvement of Nintendo in video games .
+</item 5>
+
+<item 6>
+History of Nintendo
+The first issue published was the July / August edition , which spotlighted the NES game Super Mario Bros. 2 . Nintendo Power has since ceased publication with
+its December 2012 edition . Game Boy and Super NES ( edit ) Main articles : Game Boy and Super Nintendo Entertainment System The original Game Boy In 1989 ,
+Nintendo ( which had seen a large amount of success from the Game & Watch ) released the Game Boy ( both created by Gunpei Yokoi ) , along with the accompanying
+game Tetris . Due to the price , the game and its durability ( unlike the prior Microvision from Milton Bradley Company , which was prone to static and screen
+rot ) , the Game Boy line sold extremely well , eventually amassing sales of 118 million units . Later , Super Mario Land was also released for the Game Boy ,
+which sold 14 million copies worldwide . 1989 was also the year that Nintendo announced a sequel to the Famicom , to be called the Super Famicom . The last
+major first - party game for the NES , Super Mario Bros. 3 , was released in early 1990 , and went on to sell over 18 million units .
+</item 6>
+
+<item 7>
+History of Nintendo
+Mario Mario Artist Mario RPG Mario Sports Mario vs. Donkey Kong Donkey Kong Luigi Yoshi Wario Other 1080 ° Animal Crossing Another Code Art Academy Art Style
+Balloon Fight Bit Generations BoxBoy ! Brain Age Chibi - Robo ! Custom Robo Daigasso ! Band Brothers Dillon 's Rolling Western Endless Ocean Excite Famicom
+Detective Club F - Zero Fire Emblem Fluidity Game & Watch Golden Sun Kid Icarus Kirby The Legendary Starfy The Legend of Zelda Master of Illusion Metroid Mother
+/ EarthBound NES Remix Nintendogs Osu ! Tatakae ! Ouendan Pikmin Pilotwings Pokémon Pushmo Punch - Out ! ! Puzzle League Rhythm Heaven Sheriff Sin and
+Punishment Space Fever Splatoon StarTropics Star Fox Steel Diver Style Savvy Super Smash Bros . Tomodachi Touch ! Generations Vegas Wars Wave Race Wii Xenoblade
+Chronicles X Yakuman Co-owned Cruis'n ( with Eugene Jarvis ) Fatal Frame / Project Zero ( with Koei Tecmo ) Electronics industry in Japan Companies Current
+Alaxala Networks Alinco Alps Alpine Anritsu AOR Audio - Technica Brother Canon Casio
+</item 7>
+
+<item 8>
+History of Nintendo
+In 1982 , Nintendo developed a prototype system dubbed the `` Advanced Video System '' ( or AVS for short ) and had controllers much like the NES . There were
+accessories such as a tape drive , a joystick and a lightgun , and along with all of that , the system was made of a computer , much like the Atari 400 ,
+Commodore Vic - 20 and Commodore 64 . It was never released and is on display at the Nintendo World Store in New York . In July 1983 , Nintendo released the
+Famicom ( Family Computer ) system in Japan , which was its first attempt at a cartridge - based video game console . The system sold over 500,000 units within
+two months at a price around $100 USD . However , after a few months of favorable sales , Nintendo received complaints that some Famicom consoles would freeze
+when the player attempted to play certain games . The fault was found in a malfunctioning chip and Nintendo decided to recall all Famicom units that were
+currently on store shelves , which ultimately cost them approximately half a million USD .
+</item 8>
+
+<item 9>
+History of Nintendo
+System PlayChoice - 10 Super Famicom Box Nintendo Super System Peripherals Add - ons 3D System Data Recorder Disk System Satellaview Super NES CD - ROM (
+unreleased ) Super Game Boy Game Boy Camera Game Boy Printer 64DD Rumble Pak e-Reader Game Boy Player Connectivity NES Four Score NES Satellite Game Link Cable
+GCN - GBA Link Cable Controllers Family BASIC NES Advantage NES Zapper Power Pad R.O.B. Speedboard SNES Mouse Super Scope Nintendo 64 controller GameCube
+controller WaveBird Wireless Wii Balance Board Wii Remote Classic Controller MotionPlus Wii Zapper Third - party accessories Wii Speak Wii U GamePad Wii U Pro
+Controller Joy - Con Networking Family Computer Network System Teleplay Modem XBAND Satellaview Nintendo Wi - Fi USB Connector Other Nintendo Power Nintendo DS
+& DSi Browser Amiibo Technology Media NES Game Pak SNES Game Pak N64 Game Pak Game Boy Advance Video Nintendo optical discs Nintendo game card Processors 2A03
+PPU 5A22 S - APU GSU RCP Gekko Broadway Hollywood PICA200 Espresso Erista List of products Nintendo franchises Mario Super Mario Mario Kart Mario Party Dr.
+</item 9>
+
+<item 10>
+History of Nintendo
+This was the first involvement of Nintendo in video games . According to Martin Picard in the International Journal of Computer Game Research : `` in 1971 ,
+Nintendo had -- even before the marketing of the first home console in the United States -- an alliance with the American pioneer Magnavox to develop and
+produce optoelectronic guns for the Odyssey ( released in 1972 ) , since it was similar to what Nintendo was able to offer in the Japanese toy market in 1970s
+'' . In 1973 , its focus shifted to family entertainment venues with the Laser Clay Shooting System , using the same light gun technology used in Nintendo 's
+Kousenjuu series of toys , and set up in abandoned bowling alleys . Following some success , Nintendo developed several more light gun machines for the emerging
+arcade scene . While the Laser Clay Shooting System ranges had to be shut down following excessive costs , Nintendo had found a new market . In 1974 , Nintendo
+secured the rights to distribute the Magnavox Odyssey video game console in Japan .
+</item 10>
+=== END ITEM id=c6f77ecaa55faaa6 ===
+
+=== ITEM id=fb467e38bd42ec7c ===
+Gold sentences and facts:
+Sentence 0: The Proud Family is a soundtrack album for the show of the same name . A combination of both original tunes by the characters in the show , popular hits by popular music artists such as Alicia Keys , Jhené Aiko , India Arie , and Solange Knowles & Destiny 's Child ( who perform the theme song ) , and classic soul music from artists such as Aretha Franklin and The O'Jays .
+  Fact 0.0: The Proud Family is a soundtrack album.
+  Fact 0.1: The Proud Family soundtrack album is for the show of the same name.
+  Fact 0.2: The album combines original tunes by the characters in the show.
+  Fact 0.3: The album combines popular hits by popular music artists such as Alicia Keys, Jhené Aiko, India Arie, and Solange Knowles & Destiny's Child.
+  Fact 0.4: Solange Knowles & Destiny's Child perform the theme song.
+  Fact 0.5: The album combines classic soul music from artists such as Aretha Franklin and The O'Jays.
+
+Retrieved items:
+<item 1>
+The Partridge Family
+More than one song was used as the theme song . Season 1 episodes feature the song `` When We 're Singin ' '' , which was replaced in subsequent seasons with ``
+C'mon Get Happy '' . `` Five of us , and Mom working all day , we knew we could help her if our music would pay , Danny got Reuben to sell our song , and it
+really came together when Mom sang along ... '' ( from `` When We 're Singin ' '' ) Later , under Farrell 's direction , the new version had new lyrics sung to
+the `` When We 're Singin ' '' tune . With the new chorus finalized , `` C'mon Get Happy '' showcased the new verse : `` We had a dream , we 'd go travelin '
+together , We 'd spread a little lovin ' then we 'd keep movin ' on .
+</item 1>
+
+<item 2>
+The Partridge Family
+The Partridge Family - wikipedia The Partridge Family Jump to : navigation , search The Partridge Family Genre Musical sitcom Created by Bernard Slade Starring
+Shirley Jones David Cassidy Danny Bonaduce Susan Dey Suzanne Crough Jeremy Gelbwaks Dave Madden Brian Forster Theme music composer Diane Hilderbrand Danny
+Janssen Wes Farrell Opening theme `` When We 're Singin ' '' ( 1970 -- 71 ) `` C'mon , Get Happy '' ( 1971 -- 74 ) Composer ( s ) George Duning Benny Golson
+Warren Barker Hugo Montenegro Shorty Rogers Country of origin United States Original language ( s ) English No. of seasons No. of episodes 96 ( list of episodes
+) Production Executive producer ( s ) Bob Claver Producer ( s ) William Bickley Paul Junger Witt Dale McRaven Larry Rosen Mel Swope Cinematography Fred Jackman
+, Jr .
+</item 2>
+
+<item 3>
+NBC Sunday Night Football
+Singer Pink sang the theme song for the broadcast in 2006 , a reworking of the Joan Jett song `` I Hate Myself for Loving You '' retitled `` Waiting All Day for
+Sunday Night '' . Several alternative versions were used throughout the season , substituting different lyrics when appropriate ( such as `` Waiting All Year
+For Opening Night '' ) . In 2007 , country singer Faith Hill replaced Pink as the singer of the opening theme , and a new arrangement of the Joan Jett song
+coincided with her debut . The Faith Hill intro , in particular , was not without criticism and parody . The intro was lampooned in the October 9 , 2010 episode
+of Saturday Night Live , with host Jane Lynch as Hill ( with Jason Sudeikis as Al Michaels and Bill Hader as Cris Collinsworth ) . In the 30 Rock episode ``
+Season 4 '' , the character of Jenna Maroney ( Jane Krakowski ) sings what appears to be an allusion to the Faith Hill intro for NBC 's fictional Tennis Night
+in America program .
+</item 3>
+
+<item 4>
+You'll Never Find Another Love Like Mine
+in which Lou Rawls himself sings it to Damon Wayans during a colonoscopy , That ' 70s Show ( 1998 -- 2006 ) , South Park ( 1997 -- ) , Two and a Half Men ( 2003
+-- 2015 ) , and Psych ( 2006 -- 2014 ) . The song could also be heard in an episode of The Proud Family , where Lou Rawls sings and dances with Penny Proud . In
+addition , it was performed by the singer in doll form in an Action League Now ! segment on KaBlam ! . The song `` If You Could Love Me '' by Edwyn Collins uses
+many of the same chords , and has a similar sound . Rocco DiSpirito and Karina Smirnoff also danced the rumba to this song in week 2 of season 7 of Dancing with
+the Stars .
+</item 4>
+
+<item 5>
+The Proud Family (soundtrack)
+The Proud Family ( soundtrack ) - Wikipedia The Proud Family ( soundtrack ) Jump to : navigation , search This article does not cite any sources . Please help
+improve this article by adding citations to reliable sources . Unsourced material may be challenged and removed . ( December 2009 ) ( Learn how and when to
+remove this template message ) The Proud Family Soundtrack album by Various Artists Released April 20 , 2004 August 16 , 2005 ( Re-release ) Genre Soul , hip
+hop , hip hop soul Label Walt Disney The Proud Family is a soundtrack album for the show of the same name . A combination of both original tunes by the
+characters in the show , popular hits by popular music artists such as Alicia Keys , Jhené Aiko , India Arie , and Solange Knowles & Destiny 's Child ( who
+perform the theme song ) , and classic soul music from artists such as Aretha Franklin and The O'Jays . References ( edit ) This soundtrack - related article is
+a stub . You can help Wikipedia by expanding it .
+</item 5>
+
+<item 6>
+The Partridge Family
+L-R : Shirley Jones , Jeremy Gelbwaks , Suzanne Crough , Susan Dey , Danny Bonaduce and David Cassidy In the pilot episode , a group of musical siblings in the
+fictitious city of San Pueblo , California ( said to be `` 40 miles from Napa County '' in episode 24 , A Partridge By Any Other Name ) convinces their widowed
+mother , bank teller Shirley Partridge , to help them out by singing as they record a pop song in their garage . Through the efforts of precocious 10 - year -
+old Danny they find a manager , Reuben Kincaid , who helps make the song a Top 40 hit . After more persuading , Shirley agrees that the family can go on tour .
+They acquire an old school bus , a 1957 Chevrolet Series 6800 Superior , for touring , paint it with Mondrian - inspired patterns , and head to Las Vegas ,
+Nevada for their first live gig at Caesars Palace . Subsequent episodes usually feature the band performing in various venues or in their garage . The shows
+often contrast suburban life with the adventures of a show - business family on the road .
+</item 6>
+
+<item 7>
+The Proud Family (soundtrack)
+You can help Wikipedia by expanding it . Retrieved from `` https://en.wikipedia.org/w/index.php?title=The_Proud_Family_(soundtrack)&oldid=638462881 ''
+Categories : Television animation soundtracks 2004 soundtracks Hip hop soundtracks Soul soundtracks Walt Disney Records soundtracks Soundtrack stubs Hidden
+categories : Articles lacking sources from December 2009 All articles lacking sources Articles with hAudio microformats Music infoboxes with deprecated
+parameters All stub articles Talk About Wikipedia Add links This page was last edited on 17 December 2014 , at 07 : 09 . Text is available under the Creative
+Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a
+registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 7>
+
+<item 8>
+Sing (2016 American film)
+Despite an interruption by Judith , Ash sings her original rock song `` Set It All Free . '' Mike returns to the show and sings Frank Sinatra 's `` My Way . ''
+Meena finally overcomes her fears and sings Stevie Wonder 's `` Do n't You Worry ' bout a Thing , '' which literally brings down the house . The show becomes a
+success and impresses Nana , who was in the audience . Nana buys the lot and the theater is rebuilt and reopened . Voice cast ( edit ) Matthew McConaughey ,
+Reese Witherspoon , Scarlett Johansson , Tori Kelly , Taron Egerton , and Nick Kroll at the film 's premiere at the Toronto International Film Festival .
+Matthew McConaughey as Buster Moon , an optimistic koala who plans to save his theater from closure by holding a singing competition . Reese Witherspoon as
+Rosita , a pig who gave up her teenage music dreams to become a devoted wife to Norman , and mother to their 25 piglets . Seth MacFarlane as Mike , an arrogant
+street musician mouse with a big Frank Sinatra-esque voice .
+</item 8>
+
+<item 9>
+The Partridge Family
+It ran from September 25 , 1970 , until March 23 , 1974 , on the ABC network as part of a Friday - night lineup , and had subsequent runs in syndication . The
+family was loosely based on the real - life musical family The Cowsills , a popular band in the late 1960s and early 1970s . Contents ( hide ) 1 Premise 2
+History 3 Cast and characters 3.1 Notable guest stars 4 Episodes 5 Production 5.1 Music 6 Broadcast history 6.1 Ratings 6.2 Syndication 7 Reception 7.1 Awards
+and nominations 8 Media 8.1 Discography 8.2 Danny Bonaduce album 8.3 Animated spin - off 8.4 Board game 8.5 Comic books 8.6 Reunion special 8.7 Reunion on Danny
+! 8.8 The New Partridge Family 8.9 DVD releases 9 See also 10 Notes 11 References 12 External links Premise ( edit ) The Partridge Family , season 1 .
+</item 9>
+
+<item 10>
+NBC Sunday Night Football
+A new Underwood - sung theme known as `` Oh , Sunday Night '' , which takes elements from her 2014 duet hit with Miranda Lambert , `` Somethin ' Bad '' ,
+premiered with the opening game of the 2016 season on September 11 . For NBC 's coverage of Thursday Night Football , a capella group Pentatonix sings the
+opening theme song called `` Weekend Go . '' The song is a reworked version of their original song `` Sing . '' NBC also used the `` TNF '' main theme music
+called `` Ca n't Hold Us Down , '' performed by members of the Broadway orchestra for Hamilton . Show opening ( edit ) The song is at the centerpiece of the
+opening montage , which has changed several times over the years . Underwood 's music has always played in the background over the official welcome after the
+opening is completed and the teams take the field . 2006 ( edit ) For the first season , Pink appeared to sing from the top of a skyscraper as a helicopter
+zoomed down on a city skyline with enlarged players Shaun Alexander , LaDainian Tomlinson and Tom Brady and the field , the results of computer - generated
+imagery .
+</item 10>
+=== END ITEM id=fb467e38bd42ec7c ===
+
+=== ITEM id=6730d71a6d43aa12 ===
+Gold sentences and facts:
+Sentence 0: Symphony No. 40 in G minor , KV. 550 was written by Wolfgang Amadeus Mozart in 1788 . It is sometimes referred to as the `` Great G minor symphony '' , to distinguish it from the `` Little G minor symphony '' , No. 25 . The two are the only extant minor key symphonies Mozart wrote .
+  Fact 0.0: Symphony No. 40 in G minor, KV. 550 was written by Wolfgang Amadeus Mozart.
+  Fact 0.1: Symphony No. 40 in G minor, KV. 550 was written in 1788.
+  Fact 0.2: Symphony No. 40 in G minor, KV. 550 is sometimes referred to as the 'Great G minor symphony'.
+  Fact 0.3: The Great G minor symphony is distinguished from the 'Little G minor symphony', No. 25.
+  Fact 0.4: Symphony No. 40 and the Little G minor symphony, No. 25, are the only extant minor key symphonies Mozart wrote.
+
+Retrieved items:
+<item 1>
+Symphony No. 40 (Mozart)
+504 , Prague ) No. 39 ( K. 543 ) No. 40 ( K. 550 ) No. 41 ( K. 551 , Jupiter ) Lost K. 19b K. 66c K. 66d K. 66e K. Anh. C 11.07 K. Anh. C 11.08 No. 2 now
+attributed to Leopold Mozart . No. 3 now attributed to Carl Friedrich Abel . No. 37 now attributed to Michael Haydn . List of symphonies by Wolfgang Amadeus
+Mozart List of spurious / doubtful Mozart symphonies LCCN : n81018421 GND : 300111150 BNF : cb13915276b ( data ) Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Symphony_No._40_(Mozart)&oldid=825476175 '' Categories : Symphonies by Wolfgang Amadeus Mozart 1788 compositions
+Compositions in G minor Hidden categories : All articles with specifically marked weasel - worded phrases Articles with specifically marked weasel - worded
+phrases from
+</item 1>
+
+<item 2>
+Symphony No. 40 (Mozart)
+17 ( K. 129 ) No. 18 ( K. 130 ) No. 19 ( K. 132 ) No. 20 ( K. 133 ) No. 21 ( K. 134 ) No. 22 ( K. 162 ) No. 23 ( K. 181 ) No. 24 ( K. 182 ) No. 25 ( K. 183 )
+No. 26 ( K. 184 ) No. 27 ( K. 199 ) No. 28 ( K. 200 ) No. 29 ( K. 201 ) No. 30 ( K. 202 ) No. 31 ( K. 297 , Paris ) No. 32 ( K. 318 ) No. 33 ( K. 319 ) No. 34 (
+K. 338 ) No. 35 ( K. 385 , Haffner ) No. 36 ( K. 425 , Linz ) No. 37 ( K. 444 ) No. 38 ( K. 504 , Prague ) No. 39 ( K. 543 ) No.
+</item 2>
+
+<item 3>
+Symphony No. 40 (Mozart)
+Franz Schubert likewise copied down the music of Mozart 's minuet , and the minuet of his Fifth Symphony strongly evokes Mozart 's . Zaslaw has suggested that a
+passage late in Joseph Haydn 's oratorio The Seasons ( 1801 ) , a meditation on death , quotes the second movement of the 40th Symphony and was included by
+Haydn as a memorial to his long - dead friend . First recording ( edit ) The first known recording of the 40th Symphony is by the Victor Recording Company and
+issued in 1915 under the title `` Symphony in G Minor '' . The Victor Concert Orchestra performed under the direction of conductor Walter B. Rogers . Media (
+edit ) The following files contain a digital recording of a performance of the 40th Symphony by the Fulda Symphonic Orchestra . The performance took place on
+March 18 , 2001 in the Orangerie in Fulda , Germany . 1st movement Molto allegro 2nd movement Andante 3rd movement Menuetto , Allegretto - Trio 4th movement
+Allegro assai Problems playing these files ? See media help .
+</item 3>
+
+<item 4>
+Symphony No. 40 (Mozart)
+Nikolaus Harnoncourt conjectured that Mozart composed the three symphonies as a unified work , pointing , among other things , to the fact that the Symphony No.
+40 , as the middle work , has no introduction ( unlike No. 39 ) and does not have a finale of the scale of No. 41 's . The 40th symphony exists in two versions
+, differing primarily in that one includes parts for a pair of clarinets ( with suitable adjustments made in the other wind parts ) . Most likely , the clarinet
+parts were added in a revised version . The autograph scores of both versions were acquired in the 1860s by Johannes Brahms , who later donated the manuscripts
+to the Gesellschaft der Musikfreunde in Vienna , where they reside today . Premiere ( edit ) As Neal Zaslaw has pointed out , writers on Mozart have often
+suggested -- or even asserted -- that Mozart never heard his 40th Symphony performed . Some commentators go further , suggesting that Mozart wrote the symphony
+( and its companions , Nos.
+</item 4>
+
+<item 5>
+Symphony No. 40 (Mozart)
+Zaslaw , Neal , and William Cowdery ( 1990 ) . The Compleat Mozart : A Guide to the Musical Works of Wolfgang Amadeus Mozart . New York : W.W. Norton & Company
+. Extracts cited are viewable online at Google Books : ( 6 ) . External links ( edit ) Wikimedia Commons has media related to Symphony No. 40 ( Mozart ) .
+Versions of the score : Sinfonie in g minor K. 550 ( 1st version ) : Score and critical report ( in German ) in the Neue Mozart - Ausgabe Sinfonie in g minor K.
+550 ( 2nd version ) : Score in the Neue Mozart - Ausgabe Symphony No. 40 : Scores at the International Music Score Library Project ( IMSLP ) Kalmus miniature
+editions , from the William and Gayle Cook Music Library at the Indiana University Jacobs School of Music A Public Domain version by the Columbia University
+Orchestra at TEOC Classical Music Radio : Symphony No.
+</item 5>
+
+<item 6>
+Symphony No. 40 (Mozart)
+Passage quoted may be viewed on line at Google Books : ( 5 ) . Schoenberg , Arnold ( 1954 , rvs. 1969 ) . Structural Functions of Harmony . New York : W.W.
+Norton & Company . Analyzes the wide - ranging development sections of both outer movements at some length . Swafford , Jan ( 1997 ) . Johannes Brahms : A
+Biography . New York : Alfred A. Knopf . Zaslaw , Neal ( 1983 ) . Introductory notes to a recording of the 31st and 40th Symphonies made by Christopher Hogwood
+and the Academy of Ancient Music , Oiseau - Lyre 410 - 197 - 2 . Zaslaw , Neal ( 1994 ) . `` Mozart as Working Stiff '' . In James M. Morris , ed . On Mozart ,
+. Washington : Woodrow Wilson Center Press . Zaslaw , Neal , and William Cowdery ( 1990 ) .
+</item 6>
+
+<item 7>
+Symphony No. 40 (Mozart)
+The work is in four movements , in the usual arrangement for a classical - style symphony ( fast movement , slow movement , minuet , fast movement ) : Molto
+allegro , Andante , Menuetto . Allegretto -- Trio , Finale . Allegro assai , The first movement begins darkly , not with its first theme but with accompaniment
+, played by the lower strings with divided violas . The technique of beginning a work with an accompaniment figure was later used by Mozart in his last piano
+concerto ( KV. 595 ) and later became a favourite of the Romantics ( examples include the openings of Mendelssohn 's Violin Concerto and Sergei Rachmaninoff 's
+Third Piano Concerto ) . The first theme is as follows . The second movement is a lyrical work in time . It is in the subdominant key of the relative major of G
+minor ( B ♭ major ) : E ♭ major .
+</item 7>
+
+<item 8>
+Symphony No. 40 (Mozart)
+The contrapuntal opening bars of this movement appear thus in keyboard reduction : The minuet begins with an angry , cross-accented hemiola rhythm and a pair of
+three - bar phrases , as shown in the following piano reduction : Various commentators have asserted that while the music is labelled `` minuet '' , it would
+hardly be suitable for dancing . The contrasting gentle trio section , in G major , alternates the playing of the string section with that of the winds . The
+fourth movement opens with a series of rapidly ascending notes outlining the tonic triad illustrating what is commonly referred to as the Mannheim rocket . The
+movement is written largely in eight - bar phrases , following the general tendency toward rhythmic squareness in the finales of classical - era symphonies . A
+remarkable modulating passage in which every tone in the chromatic scale but one is played , strongly destabilising the key , occurs at the beginning of the
+development section . The single note left out is in fact a G ( the tonic ) . The symphony typically has a duration of about 25 minutes . Reception ( edit )
+This work has elicited varying interpretations from critics .
+</item 8>
+
+<item 9>
+Symphony No. 40 (Mozart)
+334 . Jump up ^ Hopkins 1981 . Jump up ^ Nottebohm 1887 , p. 531 . Jump up ^ Zaslaw and Cowdery 1990 , p. 210 . Jump up ^ See No. 38 , the aria `` Erblicke hier
+, bethörter Mensch '' . Source : Zaslaw and Cowdery 1990 , p. 210 ) . Jump up ^ `` Wolfgang Amadeus Mozart - Symphony in G Minor '' . Discography of American
+Historical Recordings . References ( edit ) Biba , Otto ( 2009 ) . `` Kommentar '' , Wolfgang Amadeus Mozart . Sinfonie g - moll , KV 550 . Autographe Partitur
+. Erste und zweite Fassung . Faksimile - Ausgabe . Gesellschaft der Musikfreunde in Wien , p. 8 . Deutsch , Otto Erich ( 1965 ) . Mozart : A Documentary
+Biography . Stanford , CA : Stanford University Press .
+</item 9>
+
+<item 10>
+Symphony No. 40 (Mozart)
+Symphony No. 40 ( Mozart ) - wikipedia Symphony No. 40 ( Mozart ) Jump to : navigation , search Symphony No. 40 in G minor , KV. 550 was written by Wolfgang
+Amadeus Mozart in 1788 . It is sometimes referred to as the `` Great G minor symphony '' , to distinguish it from the `` Little G minor symphony '' , No. 25 .
+The two are the only extant minor key symphonies Mozart wrote . Contents ( hide ) 1 Composition 2 Premiere 3 The music 4 Reception 5 Influence 6 First recording
+7 Media 8 Notes 9 References 10 External links Composition ( edit ) The date of completion of this symphony is known exactly , since Mozart in his mature years
+kept a full catalog of his completed works ; he entered the 40th Symphony into it on 25 July 1788 . Work on the symphony occupied an exceptionally productive
+period of just a few weeks during which time he also completed the 39th and 41st symphonies ( 26 June and 10 August , respectively ) .
+</item 10>
+=== END ITEM id=6730d71a6d43aa12 ===
+
+=== ITEM id=5130cbb14be3ef99 ===
+Gold sentences and facts:
+Sentence 0: The ABA Model Rules of Professional Conduct , created by the American Bar Association ( ABA ) , are a set of rules that prescribe baseline standards of legal ethics and professional responsibility for lawyers in the United States . They were promulgated by the ABA House of Delegates upon the recommendation of the Kutak Commission in 1983 . The rules are merely recommendations , or models , ( hence the name `` Model Rules '' ) and are not themselves binding . However , having a common set of Model Rules facilitates a common discourse on legal ethics , and simplifies professional responsibility training as well as the day - to - day application of such rules . As of 2015 , 49 states and four territories have adopted the rules in whole or in part , of which the most recent to do so was the Commonwealth of the Northern Mariana Islands in March 2015 . California is the only state that has not adopted the ABA Model Rules , while Puerto Rico is the only U.S. jurisdiction outside of confederation has not adopted them but instead has its own Código de Ética Profesional .
+  Fact 0.0: The ABA Model Rules of Professional Conduct were created by the American Bar Association (ABA).
+  Fact 0.1: The ABA Model Rules of Professional Conduct are a set of rules.
+  Fact 0.2: The ABA Model Rules prescribe baseline standards of legal ethics for lawyers in the United States.
+  Fact 0.3: The ABA Model Rules prescribe baseline standards of professional responsibility for lawyers in the United States.
+  Fact 0.4: The ABA House of Delegates promulgated the rules upon the recommendation of the Kutak Commission.
+  Fact 0.5: The Kutak Commission's recommendation came in 1983.
+  Fact 0.6: The rules are merely recommendations, or models.
+  Fact 0.7: The name Model Rules reflects that the rules are recommendations or models.
+  Fact 0.8: The rules are not themselves binding.
+  Fact 0.9: Having a common set of Model Rules facilitates a common discourse on legal ethics.
+  Fact 0.10: Having a common set of Model Rules simplifies professional responsibility training.
+  Fact 0.11: Having a common set of Model Rules simplifies the day-to-day application of such rules.
+  Fact 0.12: As of 2015, 49 states and four territories had adopted the rules in whole or in part.
+  Fact 0.13: The most recent jurisdiction to adopt the rules as of 2015 was the Commonwealth of the Northern Mariana Islands.
+  Fact 0.14: The Commonwealth of the Northern Mariana Islands adopted the rules in March 2015.
+  Fact 0.15: California is the only state that has not adopted the ABA Model Rules.
+  Fact 0.16: Puerto Rico is the only U.S. jurisdiction outside of confederation that has not adopted the ABA Model Rules.
+  Fact 0.17: Puerto Rico has its own Codigo de Etica Profesional instead.
+
+Retrieved items:
+<item 1>
+American Bar Association Model Rules of Professional Conduct
+As of 2015 , 49 states and four territories have adopted the rules in whole or in part , of which the most recent to do so was the Commonwealth of the Northern
+Mariana Islands in March 2015 . California is the only state that has not adopted the ABA Model Rules , while Puerto Rico is the only U.S. jurisdiction outside
+of confederation has not adopted them but instead has its own Código de Ética Profesional . Contents ( hide ) 1 State , commonwealth and territorial adoptions
+of the Rules 1.1 California 2 Professional regulation 3 See also 4 References 5 External links State , Commonwealth and territorial adoptions of the Rules (
+edit ) The American Bar Association is a private sector voluntary professional association . As such , it has no lawmaking power or regulatory authority , but
+it is just like any other nongovernmental bar association . Accordingly , the Model Rules are not legally binding on ABA members or within any particular
+jurisdiction .
+</item 1>
+
+<item 2>
+American Bar Association Model Rules of Professional Conduct
+However , the Model Rules have been adopted , in whole or in part , and sometimes in variation , as the rules of professional conduct for attorneys in 49 states
+, the District of Columbia , and four of the five inhabited U.S. territories . The rules of professional conduct or professional responsibility adopted in a
+particular state are legally enforceable against the lawyers of that state as well as any lawyer practicing there on a pro hac vice basis . On December 17 ,
+2008 , New York announced that it would finally abandon the old ABA Model Code of Professional Responsibility ( the last state to do so ) and adopt a heavily
+modified version of the ABA Model Rules , effective April 1 , 2009 . New York 's version of the Model Rules was created by adjusting the standard Model Rules to
+reflect indigenous New York rules that had been incorporated over the years into its version of the Model Code .
+</item 2>
+
+<item 3>
+American Bar Association Model Rules of Professional Conduct
+American Bar Association Model Rules of professional conduct - wikipedia American Bar Association Model Rules of professional conduct Jump to : navigation ,
+search Professional responsibility Duties to the client Confidentiality Avoiding conflict of interest Due diligence and Competence ( law ) Avoid commingling
+Avoid self - dealing Effective assistance Avoid fee splitting Withdrawal from representation Duties to the court Disclosure of perjury Disclosure of adverse
+authority Duties to the profession Limitations on legal advertising Report misconduct Sources of law ABA Model Rules Penalties for misconduct Disbarment
+Judicial misconduct The ABA Model Rules of Professional Conduct , created by the American Bar Association ( ABA ) , are a set of rules that prescribe baseline
+standards of legal ethics and professional responsibility for lawyers in the United States . They were promulgated by the ABA House of Delegates upon the
+recommendation of the Kutak Commission in 1983 . The rules are merely recommendations , or models , ( hence the name `` Model Rules '' ) and are not themselves
+binding . However , having a common set of Model Rules facilitates a common discourse on legal ethics , and simplifies professional responsibility training as
+well as the day - to - day application of such rules .
+</item 3>
+
+<item 4>
+American Bar Association Model Rules of Professional Conduct
+California ( edit ) California still has its own set of unique rules governing professional attorney conduct . Although many of the rules are similar and
+sometimes identical to the ABA Model Rules , the California rules differ markedly from the ABA models in both format , scope and content . For example , under
+the ABA Model Rules , an attorney may be disciplined for the appearance of impropriety , regardless whether any actual impropriety occurred ; whereas the
+California rules permit discipline for only actual impropriety . This reflects the nature of California law . It is unlikely that California will ever adopt the
+ABA Model Rules apart beyond harmonising the format and existing California rules that are identical or nearly identical to ABA Model Rules . Reasons for this
+reluctance include the fact there are more than 280,000 attorneys licensed in California , so a drastic change from the existing rules to completely different
+rules would shock the profession and , ultimately , would most likely fail . Additionally , many of California 's rules of professional conduct are established
+by statute and , thus , would require action by the California Legislature to change them ; or , alternatively , action by the people of California through the
+voter initiative process .
+</item 4>
+
+<item 5>
+American Bar Association Model Rules of Professional Conduct
+Jump up ^ http://www.mebaroverseers.org/attorney_regulation/maine_conduct_rules.html Jump up ^
+http://www.maine.gov/tools/whatsnew/index.php?topic=mebar_overseers_bar_rules&id=88185&v=article Jump up ^ http://www.cnmilaw.org/pdf/court_rules/R07.pdf
+Northern Mariana Islands Rules of Attorney Discipline and Procedure . ^ Jump up to : Rogers , Joan C. ( 2 October 2014 ) . `` California Justices Tell State Bar
+to Redo Proposals for Updating Lawyer Conduct Rules '' . ABA / BNA Lawyers ' Manual on Professional Conduct . Bloomberg BNA . Retrieved 15 October 2014 . ^ Jump
+up to : Zitrin , Richard ( 10 October 2014 ) . `` Viewpoint : State Supreme Court Resets Ethics Rewrite '' . The Recorder . ALM Media Properties , LLC .
+Retrieved 15 October 2014 . Jump up ^ http://www.calbar.ca.gov/AboutUs/BoardofTrustees.aspx Board of Trustees , State Bar of California .
+</item 5>
+
+<item 6>
+American Bar Association Model Rules of Professional Conduct
+This is due to California law and public policy being so markedly different from the rest of the country in so many ways . For example , California is one of
+only four states where covenants not to compete are void as against public policy ; and it is one of only three states where trusts are presumed to be revocable
+unless the trust instrument explicitly states the trust is irrevocable ( whereas the opposite is true in the other 47 states ) . By way of comparative example ,
+California has long held the position that clients must be encouraged to speak candidly to their legal counsel about both past and future actions knowing their
+statements will be held in complete confidence . Their counsel can then explain the relevant law to them and urge them to conform their future conduct to the
+law , thus promoting lawful conduct . In contrast , ABA Model Rule 1.6 contains exceptions to confidentiality for both violent and nonviolent ( e.g. financial )
+future crimes , which California believes creates a strong disincentive for clients to discuss their future plans with their attorneys - but for which the
+client might chose to comply with the law instead of violating it .
+</item 6>
+
+<item 7>
+American Bar Association Model Rules of Professional Conduct
+In 2001 , the Commission for the Revision of the Rules of Professional Conduct of the State Bar of California began a comprehensive revision of the California
+rules that would , among other things , convert them into a localized version of the ABA Model Rules . However , the Commission 's progress had been extremely
+slow , simply because there are so many substantive and structural differences between the California rules and the ABA models . In October 2010 , the State Bar
+of California formally adopted the Commission 's report , recommending adoption of 67 proposed changes to harmonise the California Rules of Professional Conduct
+with the ABA Model Rules of Professional Responsibility . On September 19 , 2014 , however , for reasons that were not fully explained , the Supreme Court of
+California rejected all of the proposed revisions and returned them to the State Bar . The Court 's letter directed the State Bar to start the process all over
+again with a new Commission , and to submit a new set of revised rules by March 31 , 2017 . Professional regulation ( edit ) Except for the Patent Bar , there
+is no national legal profession in the United States but there are 56 separate legal professions .
+</item 7>
+
+<item 8>
+American Bar Association Model Rules of Professional Conduct
+Even though New York did not adopt the Model Rules verbatim , the advantage of adopting its overall structure is that it simplifies the professional
+responsibility training of New York lawyers , and makes it easier for out - of - state lawyers to conform their conduct to New York rules by simply comparing
+their home state 's version of the Model Rules to New York 's version . In June 2009 , the Supreme Court of Maine approved the adoption of the Model Rules in
+that state , effective August 1 , 2009 . Among the portions of the Model Rules that the Maine Rules of Professional Conduct do not include is Model Rule 1.8 ( j
+) ( 2002 ) categorically prohibiting sexual relations between lawyer and client . In March 2015 , the Supreme Court of the Commonwealth of the Northern Mariana
+Islands adopted its current Rules of Attorney Discipline and Procedure , which incorporates the ABA Model Rules by reference and expands upon them by adding
+another 22 local rules of professional conduct . California ( edit ) California still has its own set of unique rules governing professional attorney conduct .
+</item 8>
+
+<item 9>
+American Bar Association Model Rules of Professional Conduct
+While either of their secretaries could be a member of the State Bar , they most likely are not . Similarly , the Board of Trustees that oversee the business
+operations of the State Bar of California under supervision of the California Supreme Court is legally required to be a mix of attorneys licensed to practice in
+California and `` public members '' who may not be licensed attorneys . So , while American attorneys are regulated by public sector agencies instead of private
+sector law societies , most of the people who develop the regulatory policies are practising attorneys and sitting judges , so there is a degree of self -
+regulation but not nearly to the same degree that solicitors and barristers in England and Wales , and other Commonwealth jurisdictions are self - regulated by
+private sector associations . See also ( edit ) American Bar Association Model Code of Professional Responsibility American Bar Association References ( edit )
+Jump up ^ Press Release : New Attorney Rules of Professional Conduct Announced , Communications Office of the New York Courts , 17 December 2008 .
+</item 9>
+
+<item 10>
+American Bar Association Model Rules of Professional Conduct
+External links ( edit ) The ABA Model Rules of Professional Conduct Pre-2002 Changes to the Model Rules since its adoption in 1983 from Cornell Law School
+Retrieved from `` https://en.wikipedia.org/w/index.php?title=American_Bar_Association_Model_Rules_of_Professional_Conduct&oldid=789593953 '' Categories : 1983
+in law Legal ethics Codes of conduct American Bar Association United States law 1983 documents Hidden categories : Articles containing potentially dated
+statements from 2015 All articles containing potentially dated statements Talk Contents About Wikipedia 한국어 Suomi Edit links This page was last edited on 8 July
+2017 , at 08 : 30 . Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree
+to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 10>
+=== END ITEM id=5130cbb14be3ef99 ===
+
+=== ITEM id=5a566bf27578d33c ===
+Gold sentences and facts:
+Sentence 0: `` Go Tell It on the Mountain '' is an African - American spiritual song , compiled by John Wesley Work , Jr. , dating back to at least 1865 , that has been sung and recorded by many gospel and secular performers . It is considered a Christmas carol because its original lyrics celebrate the Nativity of Jesus :
+  Fact 0.0: 'Go Tell It on the Mountain' is an African-American spiritual song.
+  Fact 0.1: 'Go Tell It on the Mountain' was compiled by John Wesley Work, Jr.
+  Fact 0.2: 'Go Tell It on the Mountain' dates back to at least 1865.
+  Fact 0.3: 'Go Tell It on the Mountain' has been sung and recorded by many gospel performers.
+  Fact 0.4: 'Go Tell It on the Mountain' has been sung and recorded by many secular performers.
+  Fact 0.5: 'Go Tell It on the Mountain' is considered a Christmas carol.
+  Fact 0.6: The original lyrics of 'Go Tell It on the Mountain' celebrate the Nativity of Jesus.
+  Fact 0.7: 'Go Tell It on the Mountain' is considered a Christmas carol because its original lyrics celebrate the Nativity of Jesus.
+
+Retrieved items:
+<item 1>
+Go Tell It on the Mountain (song)
+Go Tell It on the Mountain ( song ) - wikipedia Go Tell It on the Mountain ( song ) Jump to : navigation , search Go Tell It on the Mountain by unknown Genre
+Christmas , spiritual Language English Published 1909 `` Go Tell It on the Mountain '' is an African - American spiritual song , compiled by John Wesley Work ,
+Jr. , dating back to at least 1865 , that has been sung and recorded by many gospel and secular performers . It is considered a Christmas carol because its
+original lyrics celebrate the Nativity of Jesus : `` Go tell it on the mountain , over the hills and everywhere ; go tell it on the mountain , that Jesus Christ
+is born . '' Recording artists ( edit ) This section needs additional citations for verification . Please help improve this article by adding citations to
+reliable sources . Unsourced material may be challenged and removed .
+</item 1>
+
+<item 2>
+Go Tell It on the Mountain (song)
+Dumpling Hallaca Tamale Meat Ham Roast goose Romeritos Turkey Stuffing Portal Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Go_Tell_It_on_the_Mountain_(song)&oldid=812507828 '' Categories : Christmas carols Songs about mountains Songs about
+Jesus Mahalia Jackson songs Peter , Paul and Mary songs Hidden categories : Articles needing additional references from December 2016 All articles needing
+additional references Talk About Wikipedia Deutsch Italiano Svenska Tagalog Edit links This page was last edited on 28 November 2017 , at 06 : 07 . Text is
+available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use and
+Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 2>
+
+<item 3>
+Graph query row:
+artist: Mahalia Jackson
+relationship: RELATED_TO
+song: Go Tell It on the Mountain
+</item 3>
+
+<item 4>
+Go Tell It on the Mountain (song)
+on the album ( various artists ) 2003 : The Blind Boys of Alabama on the album Go Tell It on the Mountain 2004 : James Taylor on the album A Christmas Album
+2007 : Toby Keith on the album A Classic Christmas 2008 : Needtobreathe on the album An Alternative Christmas ( various artists ) 2008 : Sheryl Crow on the
+album Home for Christmas 2009 : Big Daddy Weave on the album Christ Is Come 2012 : Pentatonix on the album PTXmas 2013 : David Crowder Band on the album Wow
+Christmas : 30 Top Christian Artists and Holiday Songs 2015 : Hunter Hayes on the album Country Faith Christmas ( various artists ) 2016 : Jennifer Nettles on
+the album To Celebrate Christmas 2016 : Sarah McLachlan on the album Wonderland 2016 : Blues Traveler on Go Tell It On The Mountain ( single ) 2017 : Hanson (
+band ) - mashup of ' Joy To The World ' and ' Go Tell It On The Mountain ' ( ' Joy To The Mountain ' ) on the album Finally It 's Christmas References ( edit )
+Jump up ^ Marsh ,
+</item 4>
+
+<item 5>
+Go Tell It on the Mountain (song)
+3 AM 1965 : Ray Conniff Singers on the album Here We Come A-Caroling 1971 : Bob Marley and the Wailers featuring Peter Tosh on the album The Best of The Wailers
+1981 : Anne Murray on the album Christmas Wishes 1990 : Dolly Parton on the album Home for Christmas 1993 : Bruce Cockburn on the album Christmas 1996 : Vanessa
+L. Williams on the album Star Bright 1998 : Cece Winans on the album His Gift 1999 : Garth Brooks on the album Garth Brooks and the Magic of Christmas 1999 :
+Jewel on the album Joy : A Holiday Collection 2001 : Candi Staton on the album Christmas in My Heart 2001 : Fred Hammond on the album Christmas ... Just
+Remember 2001 : Sara Evans on the album Country Christmas 2001 2002 : Jim Nabors on the album Jim Nabors Christmas 2003 : Oh Susanna on the album Maybe This
+Christmas Too ?
+</item 5>
+
+<item 6>
+Go Tell It on the Mountain (song)
+Charles ( 1997 ) . God 's Long Summer . Princeton . p. 47 . ISBN 9780691130675 . Jump up ^ Whitburn , Joel ( 2008 ) . Hot Country Songs 1944 to 2008 . Record
+Research , Inc. p. 241 . ISBN 0 - 89820 - 177 - 2 . Jump up ^ `` Firestone Your Favorite Christmas Music - Volume Three - 1964 '' . DLF Music Transfer. 2006 .
+Christmas Christmas Eve Children 's Day Boxing Day Nochebuena Saint Nicholas Day St.
+</item 6>
+
+<item 7>
+Go Tell It on the Mountain (song)
+Unsourced material may be challenged and removed . ( December 2016 ) ( Learn how and when to remove this template message ) In 1963 , the musical team Peter ,
+Paul and Mary , along with their musical director Milt Okun , adapted and rewrote `` Go Tell It on the Mountain '' as `` Tell It on the Mountain '' , their
+lyrics referring specifically to : Exodus and using the phrase `` Let my people go , '' but referring implicitly to the Civil Rights struggle of the early 1960s
+. This version became a moderately successful single for them ( US # 33 pop , 1964 ) . According to Religious Studies professor and Civil Rights historian
+Charles Marsh , it was African American Civil Rights leader Fannie Lou Hamer who combined this song with the spiritual `` Go Down Moses , '' taking the last
+line of the chorus , `` Let my people go '' and substituting it in the chorus of `` Go Tell It on the Mountain . ''
+</item 7>
+
+<item 8>
+Graph query row:
+artist: Peter, Paul and Mary
+relationship: RELATED_TO
+song: Go Tell It on the Mountain
+</item 8>
+
+<item 9>
+Go Tell It on the Mountain (song)
+Christmas Christmas Eve Children 's Day Boxing Day Nochebuena Saint Nicholas Day St. Stephen 's Day Sol Invictus Yule In Christianity Biblical Magi Adoration of
+the Magi Adoration of the Shepherds Advent Angel Gabriel Annunciation Annunciation to the shepherds Baptism of the Lord Bethlehem Christingle Christmastide
+Epiphany Herod the Great Jesus Joseph Mary Massacre of the Innocents flight into Egypt Nativity Fast Nativity of Jesus in art in later culture Nativity scene
+Saint Nicholas Star of Bethlehem Twelfth Night In folklore Badalisc La Befana Belsnickel Caganer Christkind Ded Moroz Elves Father Christmas Grýla Jack Frost
+Joulupukki Knecht Ruprecht Korvatunturi Krampus Mikulás Miner 's figure Mrs. Claus Nisse / Tomte North Pole Old Man Winter Olentzero Père Fouettard Père Noël
+Rudolph the Red - Nosed Reindeer Saint Lucy Santa 's reindeer Santa 's workshop Sinterklaas Tió de Nadal Vertep Yule Cat Yule Lads Zwarte Piet Gift - bringers
+Saint Nicholas Santa Claus List of
+</item 9>
+
+<item 10>
+Go Tell It on the Mountain (song)
+Marsh does not document this claim , but notes that Hamer was highly active in civil rights work beginning in the 1950s , and that the use of the Exodus story
+and the singing of spirituals played a central role in her activities . Little Big Town 's 2006 non-album single version reached No. 35 on the Hot Country Songs
+chart . Other artists who have recorded the song ( chiefly on either Christmas - themed music albums or collections of spirituals or folk songs ) include : 195
+? : Mahalia Jackson on the album Silent Night , Holy Night 1960 : Bobby Darin on the album The 25th Day of December 1964 : Gordon MacRae on the album Firestone
+Presents Your Christmas Favorites , Volume 3 1964 : Bing Crosby and Frank Sinatra on the album 12 Songs of Christmas 1964 : Simon & Garfunkel on the album
+Wednesday Morning ,
+</item 10>
+=== END ITEM id=5a566bf27578d33c ===
+
+=== ITEM id=e1b32a04efcb47ea ===
+Gold sentences and facts:
+Sentence 0: On 19 February 2007 Disney lost a court case in Los Angeles which ruled their `` misguided claims '' to dispute the licensing agreements with Slesinger , Inc. were unjustified , but a federal ruling of 28 September 2009 , again from Judge Florence - Marie Cooper , determined that the Slesinger family had granted all trademark and copyright rights to Disney , although Disney must pay royalties for all future use of the characters . Both parties have expressed satisfaction with the outcome .
+  Fact 0.0: On 19 February 2007, Disney lost a court case in Los Angeles.
+  Fact 0.1: That court ruled that Disney's misguided claims to dispute the licensing agreements with Slesinger, Inc. were unjustified.
+  Fact 0.2: A federal ruling of 28 September 2009 was again from Judge Florence-Marie Cooper.
+  Fact 0.3: The federal ruling of 28 September 2009 determined that the Slesinger family had granted all trademark and copyright rights to Disney.
+  Fact 0.4: Disney must pay royalties for all future use of the characters.
+  Fact 0.5: Both parties have expressed satisfaction with the outcome.
+
+Retrieved items:
+<item 1>
+Winnie-the-Pooh
+Parker Brothers introduced A.A. Milne 's Winnie - the - Pooh Game in 1933 , again with Pooh in his red shirt . In the 1940s , Agnes Brush created the first
+plush dolls with Pooh in his red shirt . Shepard had drawn Pooh with a shirt as early as the first Winnie - The - Pooh book , which was subsequently coloured
+red in later coloured editions . Disney ownership era ( 1966 -- present ) Main article : Winnie the Pooh ( franchise ) After Slesinger 's death in 1953 , his
+wife , Shirley Slesinger Lasswell , continued developing the character herself . In 1961 , she licensed rights to Walt Disney Productions in exchange for
+royalties in the first of two agreements between Stephen Slesinger , Inc. and Disney . The same year , A.A. Milne 's widow , Daphne Milne , also licensed
+certain rights , including motion picture rights , to Disney . Since 1966 , Disney has released numerous animated productions starring Winnie the Pooh and
+related characters .
+</item 1>
+
+<item 2>
+Winnie-the-Pooh
+were unjustified , but a federal ruling of 28 September 2009 , again from Judge Florence - Marie Cooper , determined that the Slesinger family had granted all
+trademark and copyright rights to Disney , although Disney must pay royalties for all future use of the characters . Both parties have expressed satisfaction
+with the outcome . Adaptations Theatre Winnie - the - Pooh at the Guild Theater Sue Hastings Marionettes , 1931 Winnie - the - Pooh , a play in three acts
+Dramatized by Kristin Sergel , Dramatic Publishing Company , 1957 Winnie - the - Pooh , a musical comedy in two acts Lyrics by A.A. Milne and Kristin Sergel ,
+Music by Allan Jay Friedman , Book by Kristin Sergel , Dramatic Publishing Company , 1964 A Winnie - the - Pooh Christmas Tail , In Which Winnie - the - Pooh
+and His Friends Help Eeyore Have a Very Merry Christmas ( Or a Very Happy Birthday . ) Book , Music and Lyrics by James W. Rogers , Dramatic Publishing Company
+, 1977 `` Bother !
+</item 2>
+
+<item 3>
+Winnie-the-Pooh
+Jump up ^ `` The Curse of Pooh . '' Fortune . Jump up ^ `` The Pooh Files '' The Albion Monitor . Jump up ^ Nelson , Valerie J ( 20 July 2007 ) . `` Shirley
+Slesinger Lasswell , 84 ; fought Disney over Pooh royalties '' . Los Angeles Times . Retrieved 14 August 2007 . Jump up ^ `` Judge dismisses Winnie the Pooh
+lawsuit '' The Disney Corner . Jump up ^ James , Meg ( 26 September 2007 ) . `` Disney wins lawsuit ruling on Pooh rights '' . Los Angeles Times . Retrieved 26
+September 2007 . Jump up ^ `` Winnie the Pooh goes to court '' USA Today Jump up ^ `` USATODAY.com -- Justices wo n't hear copyright appeal by relative of
+Winnie the Pooh '' . USA Today . Associated Press . Jump up ^ `` Disney loses court battle in Winnie the Pooh copyright case '' . ABC News . 17 February 2007 .
+Retrieved 15 May 2008 .
+</item 3>
+
+<item 4>
+Winnie-the-Pooh
+17 February 2007 . Retrieved 15 May 2008 . Jump up ^ James , Meg ( 29 September 2009 ) . `` Pooh rights belong to Disney , judge rules '' . Los Angeles Times .
+Retrieved 5 October 2009 . Jump up ^ Shea , Joe ( 4 October 2009 ) . `` The gordian knot of Pooh rights is finally untied in federal court '' . The American
+Reporter . Retrieved 5 October 2009 . Jump up ^ `` Hastings Marionettes : Will Open Holiday Season at Guild Theatre on Saturday '' . The New York Times . 22
+December 1931 . p. 28 . Jump up ^ `` Ian Carmichael And Full Cast -- The House at Pooh Corner -- HMV Junior Record Club -- UK -- 7EG 117 '' . 45cat. 23 July
+2010 . Retrieved 5 November 2011 . Jump up ^ `` Winnie the Pooh '' . OCLC WorldCat . Retrieved 15 January 2016 .
+</item 4>
+
+<item 5>
+Winnie-the-Pooh
+These have included theatrical featurettes , television series , and direct - to - video films , as well as the theatrical feature - length films The Tigger
+Movie , Piglet 's Big Movie , Pooh 's Heffalump Movie , and Winnie the Pooh . Merchandising revenue dispute Pooh videos , soft toys , and other merchandise
+generate substantial annual revenues for Disney . The size of Pooh stuffed toys ranges from Beanie and miniature to human - sized . In addition to the stylised
+Disney Pooh , Disney markets Classic Pooh merchandise which more closely resembles E.H. Shepard 's illustrations . In 1991 , Stephen Slesinger , Inc. filed a
+lawsuit against Disney which alleged that Disney had breached their 1983 agreement by again failing to accurately report revenue from Winnie the Pooh sales .
+Under this agreement , Disney was to retain approximately 98 % of gross worldwide revenues while the remaining 2 % was to be paid to Slesinger . In addition ,
+the suit alleged that Disney had failed to pay required royalties on all commercial exploitation of the product name .
+</item 5>
+
+<item 6>
+Winnie-the-Pooh
+A further special story , Winnie - the - Pooh Meets the Queen , was published in 2016 to mark the 90th anniversary of Milne 's creation and the 90th birthday of
+Elizabeth II . It sees Winnie the Pooh meet the Queen at Buckingham Palace . Stephen Slesinger On 6 January 1930 , Stephen Slesinger purchased US and Canadian
+merchandising , television , recording and other trade rights to the `` Winnie - the - Pooh '' works from Milne for a $1000 advance and 66 % of Slesinger 's
+income , creating the modern licensing industry . By November 1931 , Pooh was a $50 million - a-year business . Slesinger marketed Pooh and his friends for more
+than 30 years , creating the first Pooh doll , record , board game , puzzle , US radio broadcast ( NBC ) , animation , and motion picture film . Red shirt Pooh
+The first time Pooh and his friends appeared in colour was 1932 , when he was drawn by Slesinger in his now - familiar red shirt and featured on an RCA Victor
+picture record .
+</item 6>
+
+<item 7>
+Winnie-the-Pooh
+Winnie - the - Pooh - wikipedia Winnie - the - Pooh Jump to : navigation , search `` Pooh '' redirects here . For other uses , see Pooh ( disambiguation ) . ``
+Hunny '' redirects here . For the food , see Honey . This article is about the fictional character . For the songwriter , see Poo Bear . For other uses , see
+Winnie - the - Pooh ( disambiguation ) . Winnie - the - Pooh Pooh in an illustration by E.H. Shepard First appearance When We Were Very Young ( 1924 ) ( As
+Edward Bear ) Winnie - the - Pooh ( As Winnie - the - Pooh ) Created by A.A. Milne Information Gender Male Winnie - the - Pooh , also called Pooh Bear , is a
+fictional anthropomorphic teddy bear created by English author A.A. Milne . The first collection of stories about the character was the book Winnie - the - Pooh
+( 1926 ) , and this was followed by The House at Pooh Corner ( 1928 ) .
+</item 7>
+
+<item 8>
+Winnie-the-Pooh
+Winnie the Pooh , included in Pooh 's Heffalump Halloween Movie 1998 : A Winnie the Pooh Thanksgiving , included in Seasons of Giving 1999 : A Valentine for You
+Direct - to - video shorts 1990 : Winnie the Pooh 's ABC of Me Direct - to - video features 1997 : Pooh 's Grand Adventure : The Search for Christopher Robin
+1999 : Seasons of Giving * 2001 : The Book of Pooh : Stories from the Heart 2002 : A Very Merry Pooh Year * 2004 : Springtime with Roo 2005 : Pooh 's Heffalump
+Halloween Movie 2007 : Super Sleuth Christmas Movie 2009 : Tigger & Pooh and a Musical Too 2010 : Super Duper Super Sleuths These features integrate stories
+from The New Adventures of Winnie the Pooh and / or holiday specials with new footage . Legacy A plaque on Winnie - the - Pooh Street ( ulica Kubusia Puchatka )
+in Warsaw Winnie the Pooh has inspired multiple texts to explain complex philosophical ideas .
+</item 8>
+
+<item 9>
+Winnie-the-Pooh
+OCLC WorldCat . Retrieved 15 January 2016 . Jump up ^ `` Tigger comes to the forest : and other stories '' . OCLC WorldCat . Retrieved 15 January 2016 . Jump up
+^ `` His Master 's Voice Speaks Again '' . Playthings . November 1932 . Jump up ^ Fleming Jr. , Mike . `` Disney Sets Live - Action ' Winnie The Pooh ' Film ;
+Alex Ross Perry To Write '' . Deadline . Retrieved 6 April 2015 . Jump up ^ Lincoln , Ross A. ( 18 November 2016 ) . `` Marc Forster To Helm Live - Action '
+Christopher Robin ' Based On ' Winnie The Pooh ' Character '' . Deadline . Jump up ^ `` Russian animation in letters and figures `` Winnie the Pooh '' `` .
+Animator.ru . Retrieved 9 March 2015 . Jump up ^ Biography : Willie Rushton . BBC . Retrieved 11 March 2015 . Jump up ^ `` Mini Adventures of Winnie the Pooh ''
+. IMDb.
+</item 9>
+
+<item 10>
+Winnie-the-Pooh
+Benjamin Hoff used Milne 's characters in The Tao of Pooh and The Te of Piglet to explain Taoism . Similarly , Frederick Crews wrote essays about the Pooh books
+in abstruse academic jargon in The Pooh Perplex and Postmodern Pooh to satirise a range of philosophical approaches . Pooh and the Philosophers by John T.
+Williams uses Winnie the Pooh as a backdrop to illustrate the works of philosophers including Descartes , Kant , Plato and Nietzsche . One of the best known
+characters in British children 's literature , a 2011 poll saw Winnie the Pooh voted onto the list of icons of England . Forbes magazine ranked Pooh the most
+valuable fictional character in 2002 , with merchandising products alone generating more than $5.9 billion that year . In 2005 , Pooh generated $6 billion , a
+figure surpassed by only Mickey Mouse . In 2006 , Pooh received a star on the Hollywood Walk of Fame , marking the 80th birthday of Milne 's creation .
+</item 10>
+=== END ITEM id=e1b32a04efcb47ea ===

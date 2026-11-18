@@ -1,0 +1,980 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=32390e98f76f7c06 ===
+Gold sentences and facts:
+Sentence 0: No . Cloverway inc . title Original Japanese and Viz Media titles Episode director ( s ) Writer ( s ) Art director ( s ) Animation director ( s ) Original airdate English airdate ( United States ) 90 `` Star Struck , Bad Luck '' `` Premonition of the Apocalypse : The Mysterious New Guardians Appear '' `` Chikyū hōkai no yokan ? Nazo no shin Senshi shutsugen '' ( 地球 崩壊 の 予感 ? 謎 の 新 戦士 出現 ) Junichi Sato Sukehiro Tomita Kenichi Tajiri Masahiro Andō March 19 , 1994 June 12 , 2000 After experiencing apocalyptic visions , Rei is attacked by a powerful monster called a Daimon that Sailor Moon is unable to fight after it disables her brooch , reversing her transformation . The Daimon is defeated by a pair of mysterious new warriors , leaving the girls to despondently realize that a new conflict has begun . 91 `` Crystal Clear Again '' `` The Rod of Love Is Born : Usagi 's New Transformation '' `` Ai no roddo tanjō ! Usagi no shin henshin '' ( 愛 の ロッド 誕生 ! うさぎ の 新 変身 ) Yūji Endō Shigeru Yanagawa Yoshiyuki Shikano Katsumi Tamegai March 26 , 1994 June 13 , 2000 While Mamoru strives to cheer Usagi up after her failure in the previous battle , a young girl is the latest target of the Death Busters . Due to Usagi 's inability to transform , the under - powered Sailor Team struggles to fight off the Daimon and are once again forced to rely on the mysterious two warriors . Once they determine the girl 's pure heart is not a talisman , they leave the Sailor Team to fend for themselves . Meanwhile , Tuxedo Mask and Usagi hold hands after the latter 's refusal to escape , and through the power of their love , Usagi 's disabled Crystal Star brooch transforms into the Cosmic Heart Compact , and she gains the Spiral Heart Moon Rod and , along with it , the ability to transform and defeat the new enemy . 92 `` Driving Dangerously '' `` A Handsome Boy ? Haruka Tenoh 's Secret '' `` Suteki na bishōnen ? Ten'ō Haruka no himitsu '' ( 素敵 な 美少年 ? 天王 はるか の 秘密 ) Kunihiko Ikuhara Katsuyuki Sumisawa Kazuhisa Asai Hisashi Kagawa April 16 , 1994 June 14 , 2000 Avoiding their study group , Usagi and Minako meet Haruka Tenou , an attractive and supposedly male student of a prestigious local school , with whom they both become infatuated . After Minako is defeated in a racing game , Michiru arrives to pick up Haruka , and the two depart with Usagi and Minako soon following behind them . Once Michiru and Haruka separate at a mechanic 's shop , Usagi and Minako take this as their chance , and Haruka tells them about `` him '' - self until a Daimon arrives to attack Kameda , the shop mechanic . The Daimon starts to escape when Usagi and Minako transform into their Guardian forms to chase it down , when Uranus and Neptune arrive to investigate Kameda 's pure heart crystal . When it turns out not to be a talisman they retreat and Sailor Moon defeats the Daimon . Later , the rest of the girls are at Crown Game Center with Usagi and Minako in hopes of seeing the cute boy they 'd told them about ; Michiru arrives with a blonde girl , whom Usagi and Minako initially fail to realize is Haruka ; once they do , Minako falls to the ground in anguish , and Haruka notes that she 'd never said she was male . 93 `` Bad Harmony '' `` Usagi 's Idol : The Graceful Genius Michiru '' `` Usagi no akogare ! Yūbi no tensai Michiru '' ( うさぎ の 憧れ ! 優美 な 天才 みちる ) Hiroki Shibata Megumi Sugihara Kazuyuki Hashimoto Taichi Nakamura April 23 , 1994 June 15 , 2000 When Usagi is concerned that she is not smart enough to be with Mamoru after being scolded by the other girls , she seeks advice from Michiru Kaioh , who suggests that Usagi and Mamoru go to a violin recital . 94 `` Swept Off Her Feet '' `` Protect the Pure Heart : The Three - Way Battle '' `` Pyua na kokoro wo mamore ! Teki mikata mittsu tomoe ransen '' ( 純 な 心 を 守れ ! 敵 味方 三つ巴 乱戦 ) Noriyo Sasaki Sukehiro Tomita Kenichi Tajiri Ikuko Itō April 30 , 1994 June 16 , 2000 Usagi 's friend , Unazuki , is attacked by a Daimon and has her pure heart crystal stolen . But when Sailor Moon tries to take the crystal back to Unazuki , Uranus and Neptune attempt to steal it in order to claim the Talisman . 95 `` Blinded By Love 's Light '' `` Let Moon Help With Your Love Problems '' `` Koi no otasuke wa Mūn ni omakase '' ( 恋 の おたすけ は ムーン に おまかせ ) Harume Kosaka Shigeru Yanagawa Yoshiyuki Shikano Mari Tominaga May 7 , 1994 June 19 , 2000 Naru and Umino enter an affection contest in order to prove their strong mutual romantic love for each other , but find themselves targeted by a Daimon . 96 `` Lita Borrows Trouble '' `` Coldhearted Uranus : Makoto in Danger '' `` Reikoku na Uranusu ? Makoto no pinchi '' ( 冷酷 な ウラヌス ? まこと の ピンチ ) Kōnosuke Uda Yoji Enokido Kazuhisa Asai Masahiro Andō May 14 , 1994 June 20 , 2000 Makoto is targeted by a Daimon , but manages to temporarily evade it . Keen to analyze her pure heart crystal , Haruka befriends Makoto in order to get close to her . 97 `` Damp Spirits '' `` The Labyrinth of Water : Ami Targeted '' `` Mizu no rabarinsu ! Nerawareta Ami '' ( 水 の ラビリンス ! ねら われ た 亜美 ) Junichi Sato Megumi Sugihara Kazuyuki Hashimoto Katsumi Tamegai May 21 , 1994 June 21 , 2000 Ami 's desire to avoid competition leads her to offending Michiru inadvertently in a swimming race , as well as Usagi accidentally hurting Ami 's feelings . Meanwhile , a Daimon selects Ami as a target . 98 `` Friendly Foes '' `` To Save Our Friends : Moon and Uranus Join Forces '' `` Tomodachi wo sukue ! Mūn Uranusu rengō '' ( 友達 を 救え ! ムーン ウラヌス 連合 ) Yūji Endō Sukehiro Tomita Kenichi Tajiri Taichi Nakamura May 28 , 1994 June 22 , 2000 After Sailor Neptune is captured and possibly killed by Kaolinite , Sailor Moon and Sailor Uranus find themselves shackled together and forced to reassess their less - than - friendly attitudes toward each other in order to save Sailor Neptune from further harm . 99 `` Mixed Emotions '' `` A Man 's Kindness : Yuichiro Heartbroken by Rei '' `` Otoko no yasashisa ! Yūichirō Rei ni shitsuren ? '' ( 男 の 優し さ ! 雄一郎 レイ に 失恋 ? ) Harume Kosaka Megumi Sugihara Yoshiyuki Shikano Shinya Hasegawa June 18 , 1994 June 23 , 2000 Worried by Rei 's intensive meditation , Yuuichirou becomes concerned that she has fallen deeply head - over-heels in love for another man . When he sees her with Haruka and mistakes her for a man , Yuuichirou is convinced that `` he '' is Rei 's new romantic suitor . 100 `` Individual Happiness '' `` I Want to Quit Being a Sailor Guardian : Minako 's Dilemma '' `` Sērā Senshi wo yametai ! ? Minako no nayami '' ( S 戦士 を 辞め たい ! ? 美奈子 の 悩み ) Hiroki Shibata Yoji Enokido Kazuhisa Asai Mari Tominaga June 25 , 1994 June 26 , 2000 Minako is despondent about her double life of being a Sailor Guardian and a normal girl . Meanwhile , an old friend of hers , who she once fell in love with , is attacked by a Daimon , and Minako , as Sailor Venus , must use her skills of volleyball to save him . 101 `` Birthday Blues , Part 1 '' `` Usagi in Tears : a Glass Slipper for My Birthday '' `` Usagi namida ! Tanjōbi ni garasu no kutsu wo '' ( うさぎ 涙 ! 誕生 日 に ガラス の 靴 を ) Yūji Endō Katsuyuki Sumisawa Kazuyuki Hashimoto Masahiro Andō July 2 , 1994 June 27 , 2000 Usagi is furious when Mamoru forgets her 15th birthday . When Mamoru buys her an expensive pair of glass slippers to make up for it , he fails to realize that Kaolinite sabotaged the shoes with a Daimon egg to steal her pure heart crystal . To make matters worse , Kaolinite steals Usagi 's Cosmic Heart Compact leaving her unable to transform , and Tuxedo Mask gets captured . 102 `` Birthday Blues , Part Two '' `` The Stolen Pure Heart : Usagi 's Crisis '' `` Ubawareta pyua na kokoro ! Usagi zettai zetsumei '' ( 奪 われ た 純 な 心 ! うさぎ 絶 体 絶命 ) Noriyo Sasaki Katsuyuki Sumisawa Kenichi Tajiri Taichi Nakamura July 16 , 1994 June 28 , 2000 With the Cosmic Heart Compact stolen and Tuxedo Mask kidnapped , Usagi and the four other Sailor Guardians , along with Sailors Uranus and Neptune , go to retake the compact so Usagi can become Sailor Moon again , rescue Tuxedo Mask and face Kaolinite in a final showdown at Tokyo Tower . 103 `` Hello , Sailor Mini Moon '' `` The Arrival of a Tiny Pretty Guardian '' `` Yatte kita chiccha na Bishōjo Senshi '' ( やって来 た ちっちゃな 美 少女 戦士 ) Kunihiko Ikuhara Shigeru Yanagawa Yoshiyuki Shikano Kazuya Kuroda August 6 , 1994 June 29 , 2000 Eudial , and the Witches 5 are tasked to take over from Kaolinite 's position , in which they target a genius drummer recruited to play at a festival for Rei . The Sailor Guardians can not defeat the Daimon who attacks her , but Chibiusa arrives as the Guardians ' newest ally , Sailor Chibi - Moon . 104 `` Tainted Tea Party '' `` Making New Friends : Chibi Moon 's Adventure '' `` Tomodachi wo motomete ! Chibi Mūn no katsuyaku '' ( 友達 を 求め て ! ちび ムーン の 活躍 ) Junichi Sato Megumi Sugihara Kazuhisa Asai Ikuko Itō August 20 , 1994 June 30 , 2000 Chibiusa , who has returned from Crystal Tokyo for further training , attempts to adapt to her new home by making friends her age . She tries to befriend a master who does tea ceremonies , only to become the Death Busters ' latest target . 105 `` People Who Need People '' `` I Want Power : Mako Lost in Doubt '' `` Pawā ga hoshī ! Mako - chan no mayoi michi '' ( 力 が 欲しい ! まこ ちゃん の 迷い 道 ) Hiroki Shibata Shigeru Yanagawa Yoshiyuki Shikano Mari Tominaga August 27 , 1994 July 3 , 2000 Makoto is training in the mountains , trying to become much stronger after being easily defeated by a Daimon before . Her trainer is attacked , and tells her that nobody can live alone . She attacks the Daimon , fails , and realizes she needs her best friends in order to win . 106 `` Related By Destiny '' `` The Bond of Destiny : Uranus 's Distant Past '' `` Unmei no kizuna ! Uranusu no tōi hi '' ( 運命 の きずな ! ウラヌス の 遠い 日 ) Takuya Igarashi Yoji Enokido Kenichi Tajiri Katsumi Tamegai September 3 , 1994 July 4 , 2000 Haruka remembers the past when she first met Michiru , who told her that she was destined to become Sailor Uranus . Haruka initially refused that destiny , for she loved her life too much and was afraid of change . Haruka was attacked , and Sailor Neptune was injured while defending her . In her anguish , Haruka took the transformation pen and accepted her destiny as Sailor Uranus , the Sailor Guardian of the Sky . 107 `` Art Appreciation '' `` Art Is an Explosion of Love : Chibiusa 's First Love '' `` Geijutsu wa ai no bakuhatsu ! Chibiusa no hatsukoi '' ( 芸術 は 愛 の 爆発 ! ちびうさ の 初恋 ) Yūji Endō Katsuyuki Sumisawa Minoru Ōkōchi Taichi Nakamura September 10 , 1994 July 5 , 2000 Chibiusa meets a boy named Masanori at her art class and develops a crush on him . Unfortunately , he already has a crush on Michiru , who is taking a class at that school as well . When a Daimon attacks Masanori , Chibiusa must take a stand to protect him . 108 `` Everything 's Coming Up Rosey '' `` Usagi Dancing to the Waltz '' `` Usagi no dansu wa warutsu ni notte '' ( うさぎ の ダンス は ワルツ に 乗っ て ) Harume Kosaka Megumi Sugihara Kazuhisa Asai Masahiro Andō September 17 , 1994 July 6 , 2000 An English gentleman named Edwards invites Mamoru and the girls to a fancy party , where Usagi accidentally becomes drunk and the team is forced to confront a fashionable Eudial and her latest Daimon . 109 `` No Turning Back '' `` The Shocking Moment : Everyone 's Identities Revealed '' `` Shōgeki no toki ! Akasareta tagai no shōtai '' ( 衝撃 の 刻 ! 明か され た 互い の 正体 ) Junichi Sato Sukehiro Tomita Yoshiyuki Shikano Kazuya Kuroda September 24 , 1994 July 7 , 2000 Minako becomes jealous that a Daimon has not yet attacked her , and she fears that she does not have a pure heart . After doing as many `` pure '' things as she can , she is attacked , and her pure heart is taken from her . When Eudial nearly gets away , Usagi is forced to reveal her identity to Haruka & Michiru , who in turn , reveal their identities as Sailors Uranus and Neptune to Sailor Moon . 110 `` Destiny 's Arrival '' `` The Death of Uranus and Neptune : The Talisman Appear '' `` Uranusu - tachi no shi ? Tarisuman shutsugen '' ( ウラヌス 達 の 死 ? タリスマン 出現 ) Kunihiko Ikuhara Yoji Enokido Kenichi Tajiri Mari Tominaga October 15 , 1994 July 10 , 2000 Faced with losing her position at Witches 5 , Eudial creates a computer program to find the true owners of the three Talismans , and learns that Haruka and Michiru are the ones who hold two of the Talismans within their own hearts ! They take away Usagi 's brooch , and follow Eudial onto a lonely island . However , the invitation turns out to be a trick , and Michiru 's pure heart is taken , which turns into the mystical Deep Aqua Mirror . Haruka , in order to release her own talisman , shoots herself with Eudial 's gun . Her pure heart transforms into the mystical Space Sword . 111 `` The Purity Chalice '' `` The Holy Grail 's Mystical Power : Moon 's Double Transformation '' `` Seihai no shinpi na chikara ! Mūn nidan henshin '' ( 聖杯 の 神秘 な 力 ! ムーン 二 段 変身 ) Hiroki Shibata Sukehiro Tomita Kazuyuki Hashimoto Ikuko Itō October 22 , 1994 July 11 , 2000 Sailor Pluto appears and reawakens Sailors Uranus and Neptune , and the three talismans resonate with each other ( the third and last being Sailor Pluto 's Garnet Orb ) . The Holy Grail appears , and Sailor Moon grabs it and evolves into Super Sailor Moon , who drives Eudial out . Mimete then kills Eudial by sabotaging her car with snails . 112 `` Show Stoppers '' `` Who is the True Messiah ? Chaos of Light and Darkness '' `` Shin no kyūseishu wa dare ? Hikari to kage no kaosu '' ( 真 の 救世主 は 誰 ? 光 と 影 の カオス ) Noriyo Sasaki Shigeru Yanagawa Minoru Ōkōchi Shinya Hasegawa November 5 , 1994 July 12 , 2000 The girls end up watching the filming of a movie , where Chibiusa encounters Hotaru , whom she quickly befriends . But in the end , she is revealed to be the 12 - year - old daughter of Professor Souichi Tomoe , the possessed leader of the Death Busters . Super Sailor Moon uses her new `` Rainbow Moon Heartache '' attack to defeat the Daimon of the day . 113 `` Rini 's Risky Friendship '' `` A House Filled With Evil Presence : The Beautiful Hotaru 's Secret '' `` Yōki tadayou ie ! Bishōjo Hotaru no himitsu '' ( 妖気 漂う 家 ! 美 少女 ほたる の 秘密 ) Kōnosuke Uda Megumi Sugihara Kenichi Tajiri Taichi Nakamura November 12 , 1994 July 13 , 2000 The three Outer Guardians appear to Tuxedo Mask , and tell him why they can not fight alongside Sailor Moon and the other four Sailor Guardians . Usagi and Chibiusa visit Hotaru , and see a woman who looks like Kaolinite . The Messiah of Silence appears demanding pure hearts . 114 `` Mimet 's Mess '' `` I Love Idols : Mimete 's Dilemma '' `` Aidoru daisuki ! Nayameru Mimetto '' ( アイドル 大好き ! 悩め る ミメット ) Harume Kosaka Yoji Enokido Yoshiyuki Shikano Masahiro Andō November 19 , 1994 July 14 , 2000 Minako and Mimete enter a beauty contest at the same time , with Mimete willing to risk it all to obtain victory . Both fall short of the needed votes to win the idol position , and Mimete decides to just go back to her evil ways . 115 `` The Shadow of Silence '' `` Shadow of Silence : The Pale Glimmer of a Firefly '' `` Chinmoku no kage ! ? Awaki Hotaru hi no yurameki '' ( 沈黙 の 影 ! ? あ わき 蛍火 の ゆらめき ) Takuya Igarashi Yoji Enokido Kenichi Tajiri Katsumi Tamegai November 26 , 1994 July 17 , 2000 Hotaru overexerts herself , and is hospitalized , during which her past without friends is shown , and the reasons for it . Meanwhile , Mimete targets a soap opera actor , during which the attacking Daimon runs near Hotaru , who glows and completely freezes the Daimon . 116 `` Thorny Weather '' `` Sunny Skies After a Storm : A Friendship Dedicated to Hotaru '' `` Arashi nochi hare ! Hotaru ni sasageru yūjō '' ( 嵐 のち 晴れ ! ほたる に 捧げる 友情 ) Yūji Endō Megumi Sugihara Kazuhisa Asai Jouji Yanase December 3 , 1994 July 18 , 2000 Mamoru takes Usagi , Chibiusa and Hotaru to a botanical garden that is tended by Yoshiki Kurebayashi , an old classmate of his . While there , Mimete targets Yoshiki 's pure heart and causes a storm that puts the plants at risk . Sailor Moon defeats the accompanying Daimon , U-Bara . 117 `` Heightened Hazard '' `` Higher and Stronger : A Cheer from Usagi '' `` Yori takaku yori tsuyoku ! Usagi no ōen '' ( より 高く より 強く ! うさぎ の 応援 ) Kunihiko Ikuhara Shigeru Yanagawa Minoru Ōkōchi Taichi Nakamura December 10 , 1994 July 19 , 2000 Hotaru wishes to give a letter to Shun Hayase , a famous athlete . He becomes targeted when she goes to give it to him , and she possessively blasts the enemy with a hugely strong amount of energy . She talks to Shun about being frail and weak , and he thanks her for talking to him . 118 `` It 's In The Cards '' `` The Battle Inside the Demonic Space : The Sailor Guardians ' Gamble '' `` Makū no tatakai ! Sērā Senshi no kake '' ( 魔 空 の 戦い ! セーラー 戦士 の 賭け ) Noriyo Sasaki Katsuyuki Sumisawa Kenichi Tajiri Masahide Yanagisawa December 17 , 1994 July 20 , 2000 Mimete attempts to create a Daimon by herself , throwing the entire Tomoe house into another dimension . The Guardians enter the dimension and are defeated by a game - master Daimon named U-Ikasaman . Hotaru manages to assist in her defeat by the use of a bluff . 119 `` Goodness Eclipsed '' `` The Messiah of Silence Awakens ? Stars of Destiny '' `` Chinmoku no Meshia kakusei ? Unmei no hoshiboshi '' ( 沈黙 の メシア の 覚せい ? 運命 の 星々 ) Harume Kosaka Yoji Enokido Kazuhisa Asai Shinya Hasegawa December 24 , 1994 September 13 , 2000 The Sailor Guardians visit a planetarium , where a man is attacked by a Daimon . The symbol of Saturn appears on Hotaru 's forehead , and she attacks the Daimon . However , Sailor Uranus , Neptune , and Pluto attack Hotaru , since she is both Sailor Saturn , the Sailor Guardian of Silence , Ruin and Birth , and also possessed by the Messiah of Silence . Super Sailor Moon takes the blow to protect Hotaru . 120 `` Next In Line '' `` An Invasion from an Another Dimension : Mystery of Infinity Academy '' `` Ijigen kara no shinryaku ! Mugen Gakuen no nazo '' ( 異 次元 から の 侵略 ! 無限 学園 の 謎 ) Kōnosuke Uda Megumi Sugihara Minoru Ōkōchi Katsumi Tamegai January 7 , 1995 July 21 , 2000 Chibiusa goes to Hotaru 's house to find that Hotaru has disappeared , and is devastated about it . At the same time , the Sailor Guardians investigate Infinity Academy , where Mimete tries one final time to defeat them before Tellu literally pulls the plug on her operation . 121 `` Fiendish Ferns '' `` A Bewitching Flower That Steals Hearts : Tellu , the Third Witch '' `` Kokoro wo ubau yōka ! Daisan no majō Teruru '' ( 心 を 奪う 妖花 ! 第 三 の 魔女 テルル ) Takuya Igarashi Shigeru Yanagawa Kazuyuki Hashimoto Taichi Nakamura January 14 , 1995 July 24 , 2000 Tellu develops a new plan to steal pure hearts , using a plant bred for that purpose . Setsuna realizes it is an alien plant made to steal pure hearts , and warns the Sailor Guardians . Tuxedo Mask causes a mutated plant to destroy Tellu , leading to them tracing her back to the mysterious Infinity Academy . 122 `` The Science Of Love '' `` Believe in Love : Ami , the Kindhearted Guardian '' `` Ai wo shinjite ! Ami , kokoro yasashiki Senshi '' ( 愛 を 信じ て ! 亜美 心 優しき 戦士 ) Yūji Endō Sukehiro Tomita Kenichi Tajiri Hideyuki Motohashi January 21 , 1995 July 25 , 2000 Ami investigates the Infinity Academy , where she meets Viluy , the fourth of the Witches 5 . Viluy attempts to use her nanorobots to steal pure hearts from entrance exam takers . But after her battle , her own microscopic robots turn against her , destroying her in the process . 123 `` Wake Up Call '' `` Shadows of Destruction : the Messiah of Silence Awakens '' `` Hametsu no kage ! Chinmoku no Meshia no mezame '' ( 破滅 の 影 ! 沈黙 の メシア の 目覚め ) Harume Kosaka Megumi Sugihara Minoru Ōkōchi Mari Tominaga January 28 , 1995 July 26 , 2000 The last of the Witches 5 , Cyprine steals pure hearts from Infinity Academy students , and the Sailor Guardians engage Cyprine , and her alter - ego , Ptilol , in a showdown . Meanwhile , Chibiusa is abducted by the recently resurrected Kaolinite , and her pure heart is stolen by Mistress 9 , having taken over Hotaru 's body , which allows her to awaken as the Messiah of Silence . 124 `` Who 's Really Who ? '' `` The Coming Terror of Darkness : Struggle of the Eight Guardians '' `` Semari kuru yami no kyōfu ! Kusen no Hassenshi '' ( 迫り 来る 闇 の 恐怖 ! 苦戦 の 8 戦士 ) Takuya Igarashi Yoji Enokido Kazuyuki Hashimoto Ikuko Itō February 4 , 1995 July 28 , 2000 Mistress 9 uses all remaining Daimon eggs to create a powerful energized shield of evil minions around Infinity Academy . Sailor Moon is abducted , as she is the holder of the Holy Grail . After witnessing Sailor Pluto ultimately sacrificing herself to save them by using her forbidden ability to stop time , Sailor Uranus and Sailor Neptune destroy Germatoid , the Daimon possessing Professor Souichi Tomoe with their talismans , the Deep Aqua Mirror and the Space Sword . 125 `` Darkness , My Old Friend '' `` The Shining Shooting Star : Saturn and the Messiah '' `` Kagayaku ryūsei ! Satān soshite kyūseishu '' ( 輝く 流星 ! サターン そして 救世主 ) Kōnosuke Uda Yoji Enokido Kenichi Tajiri Ikuko Itō February 11 , 1995 July 29 , 2000 Sailor Moon is tricked into giving Mistress 9 the Holy Grail , which she uses to summon Pharaoh 90 to Earth . Hotaru regains consciousness with the assistance of Sailor Moon and her father , destroying Mistress 9 and fully awakening the spirit of Sailor Saturn within herself at last . Sailor Saturn herself returns Chibiusa 's pure heart crystal , and then appears before Sailor Moon to ultimately sacrifice herself and destroy Pharaoh 90 once and for all with her destructive powers , but Sailor Moon gains the help of the other six Sailor Guardians to become Super Sailor Moon once more , and save both Hotaru and Sailor Saturn , who is reborn as a baby immediately afterward . 126 `` Second Chance '' `` A New Life : Parting of the Stars of Destiny '' `` Atarashiki seimei ! Unmei no hoshiboshi betsuri no toki '' ( 新しき 生命 ! 運命 の 星々 別離 の 時 ) Yūji Endō Megumi Sugihara Kazuhisa Asai Taichi Nakamura February 18 , 1995 July 30 , 2000 Haruka and Michiru give the newly reborn infant Hotaru to a still - healing Professor Souichi Tomoe , who is finally free of the Death Busters . However , they viciously attack Sailor Moon , for she protected Hotaru 's body and Sailor Saturn , and risked the whole entire world for one mere life . The Silver Crystal throws them back , and they kneel to her as their leader and leave the city . 127 `` Tough Kindness '' `` A Guardian 's Realization : Strength Lies Within a Pure Heart '' `` Senshi no Jikaku ! Tsuyosa wa Pyua na Kokoro no Naka ni '' ( 戦士 の 自覚 ! 強 さ は 純 な 心 の 中 に ) Harume Kosaka Sukehiro Tomita February 25 , 1995 August 1 , 2000 Chibiusa returns to the future after receiving a letter from her mother , Neo-Queen Serenity . Meanwhile , a final Daimon emerges from the rubble of Infinity Academy , and Chibiusa returns just in time to help defeat it .
+  Fact 0.0: The table columns are No., Cloverway Inc. title, original Japanese and Viz Media titles, episode director(s), writer(s), art director(s), animation director(s), original airdate, and English airdate in the United States.
+  Fact 0.1: Episode 90 has the Cloverway Inc. title 'Star Struck, Bad Luck', the Viz Media title 'Premonition of the Apocalypse: The Mysterious New Guardians Appear', and the original Japanese title romanized as 'Chikyū hōkai no yokan? Nazo no shin Senshi shutsugen'.
+  Fact 0.2: Episode 90 was directed by Junichi Sato, written by Sukehiro Tomita, art directed by Kenichi Tajiri, and animation directed by Masahiro Andō. It originally aired on March 19, 1994 and aired in English in the United States on June 12, 2000.
+  Fact 0.3: After experiencing apocalyptic visions, Rei is attacked by a powerful monster called a Daimon.
+  Fact 0.4: Sailor Moon is unable to fight the Daimon after it disables her brooch, which reverses her transformation.
+  Fact 0.5: The Daimon is defeated by a pair of mysterious new warriors.
+  Fact 0.6: The girls despondently realize that a new conflict has begun.
+  Fact 0.7: Episode 91 has the Cloverway Inc. title 'Crystal Clear Again', the Viz Media title 'The Rod of Love Is Born: Usagi's New Transformation', and the original Japanese title romanized as 'Ai no roddo tanjō! Usagi no shin henshin'.
+  Fact 0.8: Episode 91 was directed by Yūji Endō, written by Shigeru Yanagawa, art directed by Yoshiyuki Shikano, and animation directed by Katsumi Tamegai. It originally aired on March 26, 1994 and aired in English in the United States on June 13, 2000.
+  Fact 0.9: While Mamoru strives to cheer Usagi up after her failure in the previous battle, a young girl is the latest target of the Death Busters.
+  Fact 0.10: Due to Usagi's inability to transform, the under-powered Sailor Team struggles to fight off the Daimon and is once again forced to rely on the mysterious two warriors.
+  Fact 0.11: Once the Sailor Team determines the girl's pure heart is not a talisman, they leave the Sailor Team to fend for themselves.
+  Fact 0.12: Tuxedo Mask and Usagi hold hands after the latter's refusal to escape.
+  Fact 0.13: Through the power of their love, Usagi's disabled Crystal Star brooch transforms into the Cosmic Heart Compact.
+  Fact 0.14: Usagi gains the Spiral Heart Moon Rod and, along with it, the ability to transform and defeat the new enemy.
+  Fact 0.15: Episode 92 has the Cloverway Inc. title 'Driving Dangerously', the Viz Media title 'A Handsome Boy? Haruka Tenoh's Secret', and the original Japanese title romanized as 'Suteki na bishōnen? Ten'ō Haruka no himitsu'.
+  Fact 0.16: Episode 92 was directed by Kunihiko Ikuhara, written by Katsuyuki Sumisawa, art directed by Kazuhisa Asai, and animation directed by Hisashi Kagawa. It originally aired on April 16, 1994 and aired in English in the United States on June 14, 2000.
+  Fact 0.17: Avoiding their study group, Usagi and Minako meet Haruka Tenou, an attractive and supposedly male student of a prestigious local school.
+  Fact 0.18: Usagi and Minako both become infatuated with Haruka.
+  Fact 0.19: After Minako is defeated in a racing game, Michiru arrives to pick up Haruka.
+  Fact 0.20: Michiru and Haruka depart, with Usagi and Minako following behind them soon after.
+  Fact 0.21: Once Michiru and Haruka separate at a mechanic's shop, Usagi and Minako take this as their chance.
+  Fact 0.22: Haruka tells Usagi and Minako about 'him'-self until a Daimon arrives to attack Kameda, the shop mechanic.
+  Fact 0.23: The Daimon starts to escape when Usagi and Minako transform into their Guardian forms to chase it down.
+  Fact 0.24: Uranus and Neptune arrive to investigate Kameda's pure heart crystal.
+  Fact 0.25: When the crystal turns out not to be a talisman, Uranus and Neptune retreat.
+  Fact 0.26: Sailor Moon defeats the Daimon.
+  Fact 0.27: Later, the rest of the girls are at Crown Game Center with Usagi and Minako in hopes of seeing the cute boy they had told them about.
+  Fact 0.28: Michiru arrives with a blonde girl, whom Usagi and Minako initially fail to realize is Haruka.
+  Fact 0.29: Once Usagi and Minako realize the blonde girl is Haruka, Minako falls to the ground in anguish.
+  Fact 0.30: Haruka notes that she had never said she was male.
+  Fact 0.31: Episode 93 has the Cloverway Inc. title 'Bad Harmony', the Viz Media title 'Usagi's Idol: The Graceful Genius Michiru', and the original Japanese title romanized as 'Usagi no akogare! Yūbi no tensai Michiru'.
+  Fact 0.32: Episode 93 was directed by Hiroki Shibata, written by Megumi Sugihara, art directed by Kazuyuki Hashimoto, and animation directed by Taichi Nakamura. It originally aired on April 23, 1994 and aired in English in the United States on June 15, 2000.
+  Fact 0.33: When Usagi is concerned that she is not smart enough to be with Mamoru after being scolded by the other girls, she seeks advice from Michiru Kaioh.
+  Fact 0.34: Michiru Kaioh suggests that Usagi and Mamoru go to a violin recital.
+  Fact 0.35: Episode 94 has the Cloverway Inc. title 'Swept Off Her Feet', the Viz Media title 'Protect the Pure Heart: The Three-Way Battle', and the original Japanese title romanized as 'Pyua na kokoro wo mamore! Teki mikata mittsu tomoe ransen'.
+  Fact 0.36: Episode 94 was directed by Noriyo Sasaki, written by Sukehiro Tomita, art directed by Kenichi Tajiri, and animation directed by Ikuko Itō. It originally aired on April 30, 1994 and aired in English in the United States on June 16, 2000.
+  Fact 0.37: Usagi's friend, Unazuki, is attacked by a Daimon and has her pure heart crystal stolen.
+  Fact 0.38: When Sailor Moon tries to take the crystal back to Unazuki, Uranus and Neptune attempt to steal it in order to claim the Talisman.
+  Fact 0.39: Episode 95 has the Cloverway Inc. title 'Blinded By Love's Light', the Viz Media title 'Let Moon Help With Your Love Problems', and the original Japanese title romanized as 'Koi no otasuke wa Mūn ni omakase'.
+  Fact 0.40: Episode 95 was directed by Harume Kosaka, written by Shigeru Yanagawa, art directed by Yoshiyuki Shikano, and animation directed by Mari Tominaga. It originally aired on May 7, 1994 and aired in English in the United States on June 19, 2000.
+  Fact 0.41: Naru and Umino enter an affection contest in order to prove their strong mutual romantic love for each other.
+  Fact 0.42: Naru and Umino find themselves targeted by a Daimon.
+  Fact 0.43: Episode 96 has the Cloverway Inc. title 'Lita Borrows Trouble', the Viz Media title 'Coldhearted Uranus: Makoto in Danger', and the original Japanese title romanized as 'Reikoku na Uranusu? Makoto no pinchi'.
+  Fact 0.44: Episode 96 was directed by Kōnosuke Uda, written by Yoji Enokido, art directed by Kazuhisa Asai, and animation directed by Masahiro Andō. It originally aired on May 14, 1994 and aired in English in the United States on June 20, 2000.
+  Fact 0.45: Makoto is targeted by a Daimon, but manages to temporarily evade it.
+  Fact 0.46: Haruka wants to analyze Makoto's pure heart crystal, and befriends Makoto in order to get close to her.
+  Fact 0.47: Episode 97 has the Cloverway Inc. title 'Damp Spirits', the Viz Media title 'The Labyrinth of Water: Ami Targeted', and the original Japanese title romanized as 'Mizu no rabarinsu! Nerawareta Ami'.
+  Fact 0.48: Episode 97 was directed by Junichi Sato, written by Megumi Sugihara, art directed by Kazuyuki Hashimoto, and animation directed by Katsumi Tamegai. It originally aired on May 21, 1994 and aired in English in the United States on June 21, 2000.
+  Fact 0.49: Ami's desire to avoid competition leads her to inadvertently offend Michiru in a swimming race.
+  Fact 0.50: Usagi accidentally hurts Ami's feelings.
+  Fact 0.51: Meanwhile, a Daimon selects Ami as a target.
+  Fact 0.52: Episode 98 has the Cloverway Inc. title 'Friendly Foes', the Viz Media title 'To Save Our Friends: Moon and Uranus Join Forces', and the original Japanese title romanized as 'Tomodachi wo sukue! Mūn Uranusu rengō'.
+  Fact 0.53: Episode 98 was directed by Yūji Endō, written by Sukehiro Tomita, art directed by Kenichi Tajiri, and animation directed by Taichi Nakamura. It originally aired on May 28, 1994 and aired in English in the United States on June 22, 2000.
+  Fact 0.54: After Sailor Neptune is captured and possibly killed by Kaolinite, Sailor Moon and Sailor Uranus find themselves shackled together.
+  Fact 0.55: Sailor Moon and Sailor Uranus are forced to reassess their less-than-friendly attitudes toward each other in order to save Sailor Neptune from further harm.
+  Fact 0.56: Episode 99 has the Cloverway Inc. title 'Mixed Emotions', the Viz Media title 'A Man's Kindness: Yuichiro Heartbroken by Rei', and the original Japanese title romanized as 'Otoko no yasashisa! Yūichirō Rei ni shitsuren?'.
+  Fact 0.57: Episode 99 was directed by Harume Kosaka, written by Megumi Sugihara, art directed by Yoshiyuki Shikano, and animation directed by Shinya Hasegawa. It originally aired on June 18, 1994 and aired in English in the United States on June 23, 2000.
+  Fact 0.58: Worried by Rei's intensive meditation, Yuuichirou becomes concerned that she has fallen deeply head-over-heels in love for another man.
+  Fact 0.59: When Yuuichirou sees Rei with Haruka and mistakes Haruka for a man, he is convinced that 'he' is Rei's new romantic suitor.
+  Fact 0.60: Episode 100 has the Cloverway Inc. title 'Individual Happiness', the Viz Media title 'I Want to Quit Being a Sailor Guardian: Minako's Dilemma', and the original Japanese title romanized as 'Sērā Senshi wo yametai!? Minako no nayami'.
+  Fact 0.61: Episode 100 was directed by Hiroki Shibata, written by Yoji Enokido, art directed by Kazuhisa Asai, and animation directed by Mari Tominaga. It originally aired on June 25, 1994 and aired in English in the United States on June 26, 2000.
+  Fact 0.62: Minako is despondent about her double life of being a Sailor Guardian and a normal girl.
+  Fact 0.63: Meanwhile, an old friend of Minako's, who she once fell in love with, is attacked by a Daimon.
+  Fact 0.64: Minako, as Sailor Venus, must use her skills of volleyball to save the old friend.
+  Fact 0.65: Episode 101 has the Cloverway Inc. title 'Birthday Blues, Part 1', the Viz Media title 'Usagi in Tears: a Glass Slipper for My Birthday', and the original Japanese title romanized as 'Usagi namida! Tanjōbi ni garasu no kutsu wo'.
+  Fact 0.66: Episode 101 was directed by Yūji Endō, written by Katsuyuki Sumisawa, art directed by Kazuyuki Hashimoto, and animation directed by Masahiro Andō. It originally aired on July 2, 1994 and aired in English in the United States on June 27, 2000.
+  Fact 0.67: Usagi is furious when Mamoru forgets her 15th birthday.
+  Fact 0.68: When Mamoru buys her an expensive pair of glass slippers to make up for it, he fails to realize that Kaolinite sabotaged the shoes with a Daimon egg to steal her pure heart crystal.
+  Fact 0.69: Kaolinite steals Usagi's Cosmic Heart Compact, leaving her unable to transform.
+  Fact 0.70: Tuxedo Mask gets captured.
+  Fact 0.71: Episode 102 has the Cloverway Inc. title 'Birthday Blues, Part Two', the Viz Media title 'The Stolen Pure Heart: Usagi's Crisis', and the original Japanese title romanized as 'Ubawareta pyua na kokoro! Usagi zettai zetsumei'.
+  Fact 0.72: Episode 102 was directed by Noriyo Sasaki, written by Katsuyuki Sumisawa, art directed by Kenichi Tajiri, and animation directed by Taichi Nakamura. It originally aired on July 16, 1994 and aired in English in the United States on June 28, 2000.
+  Fact 0.73: With the Cosmic Heart Compact stolen and Tuxedo Mask kidnapped, Usagi and the four other Sailor Guardians, along with Sailors Uranus and Neptune, go to retake the compact.
+  Fact 0.74: They go to retake the compact so Usagi can become Sailor Moon again and rescue Tuxedo Mask.
+  Fact 0.75: They face Kaolinite in a final showdown at Tokyo Tower.
+  Fact 0.76: Episode 103 has the Cloverway Inc. title 'Hello, Sailor Mini Moon', the Viz Media title 'The Arrival of a Tiny Pretty Guardian', and the original Japanese title romanized as 'Yatte kita chiccha na Bishōjo Senshi'.
+  Fact 0.77: Episode 103 was directed by Kunihiko Ikuhara, written by Shigeru Yanagawa, art directed by Yoshiyuki Shikano, and animation directed by Kazuya Kuroda. It originally aired on August 6, 1994 and aired in English in the United States on June 29, 2000.
+  Fact 0.78: Eudial and the Witches 5 are tasked to take over from Kaolinite's position.
+  Fact 0.79: The Witches 5 target a genius drummer recruited to play at a festival for Rei.
+  Fact 0.80: The Sailor Guardians cannot defeat the Daimon who attacks the drummer.
+  Fact 0.81: Chibiusa arrives as the Guardians' newest ally, Sailor Chibi-Moon.
+  Fact 0.82: Episode 104 has the Cloverway Inc. title 'Tainted Tea Party', the Viz Media title 'Making New Friends: Chibi Moon's Adventure', and the original Japanese title romanized as 'Tomodachi wo motomete! Chibi Mūn no katsuyaku'.
+  Fact 0.83: Episode 104 was directed by Junichi Sato, written by Megumi Sugihara, art directed by Kazuhisa Asai, and animation directed by Ikuko Itō. It originally aired on August 20, 1994 and aired in English in the United States on June 30, 2000.
+  Fact 0.84: Chibiusa has returned from Crystal Tokyo for further training.
+  Fact 0.85: Chibiusa attempts to adapt to her new home by making friends her age.
+  Fact 0.86: Chibiusa tries to befriend a master who does tea ceremonies, only to become the Death Busters' latest target.
+  Fact 0.87: Episode 105 has the Cloverway Inc. title 'People Who Need People', the Viz Media title 'I Want Power: Mako Lost in Doubt', and the original Japanese title romanized as 'Pawā ga hoshī! Mako-chan no mayoi michi'.
+  Fact 0.88: Episode 105 was directed by Hiroki Shibata, written by Shigeru Yanagawa, art directed by Yoshiyuki Shikano, and animation directed by Mari Tominaga. It originally aired on August 27, 1994 and aired in English in the United States on July 3, 2000.
+  Fact 0.89: Makoto is training in the mountains, trying to become much stronger after being easily defeated by a Daimon before.
+  Fact 0.90: Makoto's trainer is attacked, and tells her that nobody can live alone.
+  Fact 0.91: Makoto attacks the Daimon and fails, and realizes she needs her best friends in order to win.
+  Fact 0.92: Episode 106 has the Cloverway Inc. title 'Related By Destiny', the Viz Media title 'The Bond of Destiny: Uranus's Distant Past', and the original Japanese title romanized as 'Unmei no kizuna! Uranusu no tōi hi'.
+  Fact 0.93: Episode 106 was directed by Takuya Igarashi, written by Yoji Enokido, art directed by Kenichi Tajiri, and animation directed by Katsumi Tamegai. It originally aired on September 3, 1994 and aired in English in the United States on July 4, 2000.
+  Fact 0.94: Haruka remembers the past when she first met Michiru, who told her that she was destined to become Sailor Uranus.
+  Fact 0.95: Haruka initially refused that destiny, for she loved her life too much and was afraid of change.
+  Fact 0.96: Haruka was attacked, and Sailor Neptune was injured while defending her.
+  Fact 0.97: In her anguish, Haruka took the transformation pen and accepted her destiny as Sailor Uranus, the Sailor Guardian of the Sky.
+  Fact 0.98: Episode 107 has the Cloverway Inc. title 'Art Appreciation', the Viz Media title 'Art Is an Explosion of Love: Chibiusa's First Love', and the original Japanese title romanized as 'Geijutsu wa ai no bakuhatsu! Chibiusa no hatsukoi'.
+  Fact 0.99: Episode 107 was directed by Yūji Endō, written by Katsuyuki Sumisawa, art directed by Minoru Ōkōchi, and animation directed by Taichi Nakamura. It originally aired on September 10, 1994 and aired in English in the United States on July 5, 2000.
+  Fact 0.100: Chibiusa meets a boy named Masanori at her art class and develops a crush on him.
+  Fact 0.101: Masanori already has a crush on Michiru, who is taking a class at that school as well.
+  Fact 0.102: When a Daimon attacks Masanori, Chibiusa must take a stand to protect him.
+  Fact 0.103: Episode 108 has the Cloverway Inc. title 'Everything's Coming Up Rosey', the Viz Media title 'Usagi Dancing to the Waltz', and the original Japanese title romanized as 'Usagi no dansu wa warutsu ni notte'.
+  Fact 0.104: Episode 108 was directed by Harume Kosaka, written by Megumi Sugihara, art directed by Kazuhisa Asai, and animation directed by Masahiro Andō. It originally aired on September 17, 1994 and aired in English in the United States on July 6, 2000.
+  Fact 0.105: An English gentleman named Edwards invites Mamoru and the girls to a fancy party.
+  Fact 0.106: At the party, Usagi accidentally becomes drunk.
+  Fact 0.107: At the party, the team is forced to confront a fashionable Eudial and her latest Daimon.
+  Fact 0.108: Episode 109 has the Cloverway Inc. title 'No Turning Back', the Viz Media title 'The Shocking Moment: Everyone's Identities Revealed', and the original Japanese title romanized as 'Shōgeki no toki! Akasareta tagai no shōtai'.
+  Fact 0.109: Episode 109 was directed by Junichi Sato, written by Sukehiro Tomita, art directed by Yoshiyuki Shikano, and animation directed by Kazuya Kuroda. It originally aired on September 24, 1994 and aired in English in the United States on July 7, 2000.
+  Fact 0.110: Minako becomes jealous that a Daimon has not yet attacked her, and she fears that she does not have a pure heart.
+  Fact 0.111: After doing as many 'pure' things as she can, Minako is attacked, and her pure heart is taken from her.
+  Fact 0.112: When Eudial nearly gets away, Usagi is forced to reveal her identity to Haruka and Michiru.
+  Fact 0.113: Haruka and Michiru reveal their identities as Sailors Uranus and Neptune to Sailor Moon.
+  Fact 0.114: Episode 110 has the Cloverway Inc. title 'Destiny's Arrival', the Viz Media title 'The Death of Uranus and Neptune: The Talisman Appear', and the original Japanese title romanized as 'Uranusu-tachi no shi? Tarisuman shutsugen'.
+  Fact 0.115: Episode 110 was directed by Kunihiko Ikuhara, written by Yoji Enokido, art directed by Kenichi Tajiri, and animation directed by Mari Tominaga. It originally aired on October 15, 1994 and aired in English in the United States on July 10, 2000.
+  Fact 0.116: Faced with losing her position at Witches 5, Eudial creates a computer program to find the true owners of the three Talismans.
+  Fact 0.117: Eudial learns that Haruka and Michiru are the ones who hold two of the Talismans within their own hearts.
+  Fact 0.118: Eudial and her companions take away Usagi's brooch, and follow Eudial onto a lonely island.
+  Fact 0.119: The invitation turns out to be a trick, and Michiru's pure heart is taken, which turns into the mystical Deep Aqua Mirror.
+  Fact 0.120: Haruka, in order to release her own talisman, shoots herself with Eudial's gun.
+  Fact 0.121: Haruka's pure heart transforms into the mystical Space Sword.
+  Fact 0.122: Episode 111 has the Cloverway Inc. title 'The Purity Chalice', the Viz Media title 'The Holy Grail's Mystical Power: Moon's Double Transformation', and the original Japanese title romanized as 'Seihai no shinpi na chikara! Mūn nidan henshin'.
+  Fact 0.123: Episode 111 was directed by Hiroki Shibata, written by Sukehiro Tomita, art directed by Kazuyuki Hashimoto, and animation directed by Ikuko Itō. It originally aired on October 22, 1994 and aired in English in the United States on July 11, 2000.
+  Fact 0.124: Sailor Pluto appears and reawakens Sailors Uranus and Neptune.
+  Fact 0.125: The three talismans resonate with each other, the third and last being Sailor Pluto's Garnet Orb.
+  Fact 0.126: The Holy Grail appears, and Sailor Moon grabs it and evolves into Super Sailor Moon.
+  Fact 0.127: Super Sailor Moon drives Eudial out.
+  Fact 0.128: Mimete kills Eudial by sabotaging her car with snails.
+  Fact 0.129: Episode 112 has the Cloverway Inc. title 'Show Stoppers', the Viz Media title 'Who is the True Messiah? Chaos of Light and Darkness', and the original Japanese title romanized as 'Shin no kyūseishu wa dare? Hikari to kage no kaosu'.
+  Fact 0.130: Episode 112 was directed by Noriyo Sasaki, written by Shigeru Yanagawa, art directed by Minoru Ōkōchi, and animation directed by Shinya Hasegawa. It originally aired on November 5, 1994 and aired in English in the United States on July 12, 2000.
+  Fact 0.131: The girls end up watching the filming of a movie, where Chibiusa encounters Hotaru, whom she quickly befriends.
+  Fact 0.132: In the end, Chibiusa is revealed to be the 12-year-old daughter of Professor Souichi Tomoe, the possessed leader of the Death Busters.
+  Fact 0.133: Super Sailor Moon uses her new 'Rainbow Moon Heartache' attack to defeat the Daimon of the day.
+  Fact 0.134: Episode 113 has the Cloverway Inc. title 'Rini's Risky Friendship', the Viz Media title 'A House Filled With Evil Presence: The Beautiful Hotaru's Secret', and the original Japanese title romanized as 'Yōki tadayou ie! Bishōjo Hotaru no himitsu'.
+  Fact 0.135: Episode 113 was directed by Kōnosuke Uda, written by Megumi Sugihara, art directed by Kenichi Tajiri, and animation directed by Taichi Nakamura. It originally aired on November 12, 1994 and aired in English in the United States on July 13, 2000.
+  Fact 0.136: The three Outer Guardians appear to Tuxedo Mask, and tell him why they cannot fight alongside Sailor Moon and the other four Sailor Guardians.
+  Fact 0.137: Usagi and Chibiusa visit Hotaru, and see a woman who looks like Kaolinite.
+  Fact 0.138: The Messiah of Silence appears demanding pure hearts.
+  Fact 0.139: Episode 114 has the Cloverway Inc. title 'Mimet's Mess', the Viz Media title 'I Love Idols: Mimete's Dilemma', and the original Japanese title romanized as 'Aidoru daisuki! Nayameru Mimetto'.
+  Fact 0.140: Episode 114 was directed by Harume Kosaka, written by Yoji Enokido, art directed by Yoshiyuki Shikano, and animation directed by Masahiro Andō. It originally aired on November 19, 1994 and aired in English in the United States on July 14, 2000.
+  Fact 0.141: Minako and Mimete enter a beauty contest at the same time, with Mimete willing to risk it all to obtain victory.
+  Fact 0.142: Both Minako and Mimete fall short of the needed votes to win the idol position.
+  Fact 0.143: Mimete decides to go back to her evil ways.
+  Fact 0.144: Episode 115 has the Cloverway Inc. title 'The Shadow of Silence', the Viz Media title 'Shadow of Silence: The Pale Glimmer of a Firefly', and the original Japanese title romanized as 'Chinmoku no kage!? Awaki Hotaru hi no yurameki'.
+  Fact 0.145: Episode 115 was directed by Takuya Igarashi, written by Yoji Enokido, art directed by Kenichi Tajiri, and animation directed by Katsumi Tamegai. It originally aired on November 26, 1994 and aired in English in the United States on July 17, 2000.
+  Fact 0.146: Hotaru overexerts herself and is hospitalized, during which her past without friends is shown, and the reasons for it.
+  Fact 0.147: Meanwhile, Mimete targets a soap opera actor.
+  Fact 0.148: During the attack on the actor, the attacking Daimon runs near Hotaru, who glows and completely freezes the Daimon.
+  Fact 0.149: Episode 116 has the Cloverway Inc. title 'Thorny Weather', the Viz Media title 'Sunny Skies After a Storm: A Friendship Dedicated to Hotaru', and the original Japanese title romanized as 'Arashi nochi hare! Hotaru ni sasageru yūjō'.
+  Fact 0.150: Episode 116 was directed by Yūji Endō, written by Megumi Sugihara, art directed by Kazuhisa Asai, and animation directed by Jouji Yanase. It originally aired on December 3, 1994 and aired in English in the United States on July 18, 2000.
+  Fact 0.151: Mamoru takes Usagi, Chibiusa and Hotaru to a botanical garden that is tended by Yoshiki Kurebayashi, an old classmate of Mamoru's.
+  Fact 0.152: While there, Mimete targets Yoshiki's pure heart and causes a storm that puts the plants at risk.
+  Fact 0.153: Sailor Moon defeats the accompanying Daimon, U-Bara.
+  Fact 0.154: Episode 117 has the Cloverway Inc. title 'Heightened Hazard', the Viz Media title 'Higher and Stronger: A Cheer from Usagi', and the original Japanese title romanized as 'Yori takaku yori tsuyoku! Usagi no ōen'.
+  Fact 0.155: Episode 117 was directed by Kunihiko Ikuhara, written by Shigeru Yanagawa, art directed by Minoru Ōkōchi, and animation directed by Taichi Nakamura. It originally aired on December 10, 1994 and aired in English in the United States on July 19, 2000.
+  Fact 0.156: Hotaru wishes to give a letter to Shun Hayase, a famous athlete.
+  Fact 0.157: Shun Hayase becomes targeted when Hotaru goes to give the letter to him.
+  Fact 0.158: Hotaru possessively blasts the enemy with a hugely strong amount of energy.
+  Fact 0.159: Hotaru talks to Shun about being frail and weak, and he thanks her for talking to him.
+  Fact 0.160: Episode 118 has the Cloverway Inc. title 'It's In The Cards', the Viz Media title 'The Battle Inside the Demonic Space: The Sailor Guardians' Gamble', and the original Japanese title romanized as 'Makū no tatakai! Sērā Senshi no kake'.
+  Fact 0.161: Episode 118 was directed by Noriyo Sasaki, written by Katsuyuki Sumisawa, art directed by Kenichi Tajiri, and animation directed by Masahide Yanagisawa. It originally aired on December 17, 1994 and aired in English in the United States on July 20, 2000.
+  Fact 0.162: Mimete attempts to create a Daimon by herself, throwing the entire Tomoe house into another dimension.
+  Fact 0.163: The Guardians enter the dimension and are defeated by a game-master Daimon named U-Ikasaman.
+  Fact 0.164: Hotaru manages to assist in U-Ikasaman's defeat by the use of a bluff.
+  Fact 0.165: Episode 119 has the Cloverway Inc. title 'Goodness Eclipsed', the Viz Media title 'The Messiah of Silence Awakens? Stars of Destiny', and the original Japanese title romanized as 'Chinmoku no Meshia kakusei? Unmei no hoshiboshi'.
+  Fact 0.166: Episode 119 was directed by Harume Kosaka, written by Yoji Enokido, art directed by Kazuhisa Asai, and animation directed by Shinya Hasegawa. It originally aired on December 24, 1994 and aired in English in the United States on September 13, 2000.
+  Fact 0.167: The Sailor Guardians visit a planetarium, where a man is attacked by a Daimon.
+  Fact 0.168: The symbol of Saturn appears on Hotaru's forehead, and she attacks the Daimon.
+  Fact 0.169: Sailor Uranus, Neptune, and Pluto attack Hotaru, since she is both Sailor Saturn, the Sailor Guardian of Silence, Ruin and Birth, and also possessed by the Messiah of Silence.
+  Fact 0.170: Super Sailor Moon takes the blow to protect Hotaru.
+  Fact 0.171: Episode 120 has the Cloverway Inc. title 'Next In Line', the Viz Media title 'An Invasion from an Another Dimension: Mystery of Infinity Academy', and the original Japanese title romanized as 'Ijigen kara no shinryaku! Mugen Gakuen no nazo'.
+  Fact 0.172: Episode 120 was directed by Kōnosuke Uda, written by Megumi Sugihara, art directed by Minoru Ōkōchi, and animation directed by Katsumi Tamegai. It originally aired on January 7, 1995 and aired in English in the United States on July 21, 2000.
+  Fact 0.173: Chibiusa goes to Hotaru's house to find that Hotaru has disappeared, and is devastated about it.
+  Fact 0.174: At the same time, the Sailor Guardians investigate Infinity Academy.
+  Fact 0.175: Mimete tries one final time to defeat the Sailor Guardians before Tellu literally pulls the plug on her operation.
+  Fact 0.176: Episode 121 has the Cloverway Inc. title 'Fiendish Ferns', the Viz Media title 'A Bewitching Flower That Steals Hearts: Tellu, the Third Witch', and the original Japanese title romanized as 'Kokoro wo ubau yōka! Daisan no majō Teruru'.
+  Fact 0.177: Episode 121 was directed by Takuya Igarashi, written by Shigeru Yanagawa, art directed by Kazuyuki Hashimoto, and animation directed by Taichi Nakamura. It originally aired on January 14, 1995 and aired in English in the United States on July 24, 2000.
+  Fact 0.178: Tellu develops a new plan to steal pure hearts, using a plant bred for that purpose.
+  Fact 0.179: Setsuna realizes the plant is an alien plant made to steal pure hearts, and warns the Sailor Guardians.
+  Fact 0.180: Tuxedo Mask causes a mutated plant to destroy Tellu.
+  Fact 0.181: This leads the Sailor Guardians to trace Tellu back to the mysterious Infinity Academy.
+  Fact 0.182: Episode 122 has the Cloverway Inc. title 'The Science Of Love', the Viz Media title 'Believe in Love: Ami, the Kindhearted Guardian', and the original Japanese title romanized as 'Ai wo shinjite! Ami, kokoro yasashiki Senshi'.
+  Fact 0.183: Episode 122 was directed by Yūji Endō, written by Sukehiro Tomita, art directed by Kenichi Tajiri, and animation directed by Hideyuki Motohashi. It originally aired on January 21, 1995 and aired in English in the United States on July 25, 2000.
+  Fact 0.184: Ami investigates the Infinity Academy, where she meets Viluy, the fourth of the Witches 5.
+  Fact 0.185: Viluy attempts to use her nanorobots to steal pure hearts from entrance exam takers.
+  Fact 0.186: After Viluy's battle, her own microscopic robots turn against her, destroying her in the process.
+  Fact 0.187: Episode 123 has the Cloverway Inc. title 'Wake Up Call', the Viz Media title 'Shadows of Destruction: the Messiah of Silence Awakens', and the original Japanese title romanized as 'Hametsu no kage! Chinmoku no Meshia no mezame'.
+  Fact 0.188: Episode 123 was directed by Harume Kosaka, written by Megumi Sugihara, art directed by Minoru Ōkōchi, and animation directed by Mari Tominaga. It originally aired on January 28, 1995 and aired in English in the United States on July 26, 2000.
+  Fact 0.189: Cyprine is the last of the Witches 5.
+  Fact 0.190: Cyprine steals pure hearts from Infinity Academy students.
+  Fact 0.191: The Sailor Guardians engage Cyprine, and her alter-ego, Ptilol, in a showdown.
+  Fact 0.192: Chibiusa is abducted by the recently resurrected Kaolinite.
+  Fact 0.193: Chibiusa's pure heart is stolen by Mistress 9, who has taken over Hotaru's body, which allows her to awaken as the Messiah of Silence.
+  Fact 0.194: Episode 124 has the Cloverway Inc. title 'Who's Really Who?', the Viz Media title 'The Coming Terror of Darkness: Struggle of the Eight Guardians', and the original Japanese title romanized as 'Semari kuru yami no kyōfu! Kusen no Hassenshi'.
+  Fact 0.195: Episode 124 was directed by Takuya Igarashi, written by Yoji Enokido, art directed by Kazuyuki Hashimoto, and animation directed by Ikuko Itō. It originally aired on February 4, 1995 and aired in English in the United States on July 28, 2000.
+  Fact 0.196: Mistress 9 uses all remaining Daimon eggs to create a powerful energized shield of evil minions around Infinity Academy.
+  Fact 0.197: Sailor Moon is abducted, as she is the holder of the Holy Grail.
+  Fact 0.198: After witnessing Sailor Pluto ultimately sacrificing herself to save them by using her forbidden ability to stop time, Sailor Uranus and Sailor Neptune destroy Germatoid.
+  Fact 0.199: Germatoid is the Daimon possessing Professor Souichi Tomoe.
+  Fact 0.200: Sailor Uranus and Sailor Neptune destroy Germatoid with their talismans, the Deep Aqua Mirror and the Space Sword.
+  Fact 0.201: Episode 125 has the Cloverway Inc. title 'Darkness, My Old Friend', the Viz Media title 'The Shining Shooting Star: Saturn and the Messiah', and the original Japanese title romanized as 'Kagayaku ryūsei! Satān soshite kyūseishu'.
+  Fact 0.202: Episode 125 was directed by Kōnosuke Uda, written by Yoji Enokido, art directed by Kenichi Tajiri, and animation directed by Ikuko Itō. It originally aired on February 11, 1995 and aired in English in the United States on July 29, 2000.
+  Fact 0.203: Sailor Moon is tricked into giving Mistress 9 the Holy Grail, which she uses to summon Pharaoh 90 to Earth.
+  Fact 0.204: Hotaru regains consciousness with the assistance of Sailor Moon and her father, destroying Mistress 9.
+  Fact 0.205: Hotaru fully awakens the spirit of Sailor Saturn within herself at last.
+  Fact 0.206: Sailor Saturn returns Chibiusa's pure heart crystal.
+  Fact 0.207: Sailor Saturn appears before Sailor Moon to ultimately sacrifice herself and destroy Pharaoh 90 once and for all with her destructive powers.
+  Fact 0.208: Sailor Moon gains the help of the other six Sailor Guardians to become Super Sailor Moon once more.
+  Fact 0.209: Super Sailor Moon saves both Hotaru and Sailor Saturn.
+  Fact 0.210: Sailor Saturn is reborn as a baby immediately afterward.
+  Fact 0.211: Episode 126 has the Cloverway Inc. title 'Second Chance', the Viz Media title 'A New Life: Parting of the Stars of Destiny', and the original Japanese title romanized as 'Atarashiki seimei! Unmei no hoshiboshi betsuri no toki'.
+  Fact 0.212: Episode 126 was directed by Yūji Endō, written by Megumi Sugihara, art directed by Kazuhisa Asai, and animation directed by Taichi Nakamura. It originally aired on February 18, 1995 and aired in English in the United States on July 30, 2000.
+  Fact 0.213: Haruka and Michiru give the newly reborn infant Hotaru to a still-healing Professor Souichi Tomoe, who is finally free of the Death Busters.
+  Fact 0.214: Haruka and Michiru viciously attack Sailor Moon, for she protected Hotaru's body and Sailor Saturn, and risked the whole entire world for one mere life.
+  Fact 0.215: The Silver Crystal throws Haruka and Michiru back.
+  Fact 0.216: Haruka and Michiru kneel to Sailor Moon as their leader and leave the city.
+  Fact 0.217: Episode 127 has the Cloverway Inc. title 'Tough Kindness', the Viz Media title 'A Guardian's Realization: Strength Lies Within a Pure Heart', and the original Japanese title romanized as 'Senshi no Jikaku! Tsuyosa wa Pyua na Kokoro no Naka ni'.
+  Fact 0.218: Episode 127 was directed by Harume Kosaka and written by Sukehiro Tomita. It originally aired on February 25, 1995 and aired in English in the United States on August 1, 2000.
+  Fact 0.219: Chibiusa returns to the future after receiving a letter from her mother, Neo-Queen Serenity.
+  Fact 0.220: Meanwhile, a final Daimon emerges from the rubble of Infinity Academy.
+  Fact 0.221: Chibiusa returns just in time to help defeat the final Daimon.
+
+Retrieved items:
+<item 1>
+List of Sailor Moon S episodes
+Meanwhile , Tuxedo Mask and Usagi hold hands after the latter 's refusal to escape , and through the power of their love , Usagi 's disabled Crystal Star brooch
+transforms into the Cosmic Heart Compact , and she gains the Spiral Heart Moon Rod and , along with it , the ability to transform and defeat the new enemy . 92
+`` Driving Dangerously '' `` A Handsome Boy ? Haruka Tenoh 's Secret '' `` Suteki na bishōnen ? Ten'ō Haruka no himitsu '' ( 素敵 な 美少年 ? 天王 はるか の 秘密 ) Kunihiko
+Ikuhara Katsuyuki Sumisawa Kazuhisa Asai Hisashi Kagawa April 16 , 1994 June 14 , 2000 Avoiding their study group , Usagi and Minako meet Haruka Tenou , an
+attractive and supposedly male student of a prestigious local school , with whom they both become infatuated .
+</item 1>
+
+<item 2>
+List of Sailor Moon S episodes
+Mūn nidan henshin '' ( 聖杯 の 神秘 な 力 ! ムーン 二 段 変身 ) Hiroki Shibata Sukehiro Tomita Kazuyuki Hashimoto Ikuko Itō October 22 , 1994 July 11 , 2000 Sailor Pluto
+appears and reawakens Sailors Uranus and Neptune , and the three talismans resonate with each other ( the third and last being Sailor Pluto 's Garnet Orb ) .
+The Holy Grail appears , and Sailor Moon grabs it and evolves into Super Sailor Moon , who drives Eudial out . Mimete then kills Eudial by sabotaging her car
+with snails . 112 `` Show Stoppers '' `` Who is the True Messiah ? Chaos of Light and Darkness '' `` Shin no kyūseishu wa dare ? Hikari to kage no kaosu '' ( 真
+の 救世主 は 誰 ?
+</item 2>
+
+<item 3>
+List of Sailor Moon S episodes
+The Daimon is defeated by a pair of mysterious new warriors , leaving the girls to despondently realize that a new conflict has begun . 91 `` Crystal Clear
+Again '' `` The Rod of Love Is Born : Usagi 's New Transformation '' `` Ai no roddo tanjō ! Usagi no shin henshin '' ( 愛 の ロッド 誕生 ! うさぎ の 新 変身 ) Yūji Endō
+Shigeru Yanagawa Yoshiyuki Shikano Katsumi Tamegai March 26 , 1994 June 13 , 2000 While Mamoru strives to cheer Usagi up after her failure in the previous
+battle , a young girl is the latest target of the Death Busters . Due to Usagi 's inability to transform , the under - powered Sailor Team struggles to fight
+off the Daimon and are once again forced to rely on the mysterious two warriors . Once they determine the girl 's pure heart is not a talisman , they leave the
+Sailor Team to fend for themselves .
+</item 3>
+
+<item 4>
+List of Sailor Moon S episodes
+Satān soshite kyūseishu '' ( 輝く 流星 ! サターン そして 救世主 ) Kōnosuke Uda Yoji Enokido Kenichi Tajiri Ikuko Itō February 11 , 1995 July 29 , 2000 Sailor Moon is tricked
+into giving Mistress 9 the Holy Grail , which she uses to summon Pharaoh 90 to Earth . Hotaru regains consciousness with the assistance of Sailor Moon and her
+father , destroying Mistress 9 and fully awakening the spirit of Sailor Saturn within herself at last . Sailor Saturn herself returns Chibiusa 's pure heart
+crystal , and then appears before Sailor Moon to ultimately sacrifice herself and destroy Pharaoh 90 once and for all with her destructive powers , but Sailor
+Moon gains the help of the other six Sailor Guardians to become Super Sailor Moon once more , and save both Hotaru and Sailor Saturn , who is reborn as a baby
+immediately afterward . 126 `` Second Chance '' `` A New Life : Parting of the Stars of Destiny '' `` Atarashiki seimei !
+</item 4>
+
+<item 5>
+List of Sailor Moon S episodes
+タリスマン 出現 ) Kunihiko Ikuhara Yoji Enokido Kenichi Tajiri Mari Tominaga October 15 , 1994 July 10 , 2000 Faced with losing her position at Witches 5 , Eudial
+creates a computer program to find the true owners of the three Talismans , and learns that Haruka and Michiru are the ones who hold two of the Talismans within
+their own hearts ! They take away Usagi 's brooch , and follow Eudial onto a lonely island . However , the invitation turns out to be a trick , and Michiru 's
+pure heart is taken , which turns into the mystical Deep Aqua Mirror . Haruka , in order to release her own talisman , shoots herself with Eudial 's gun . Her
+pure heart transforms into the mystical Space Sword . 111 `` The Purity Chalice '' `` The Holy Grail 's Mystical Power : Moon 's Double Transformation '' ``
+Seihai no shinpi na chikara !
+</item 5>
+
+<item 6>
+List of Sailor Moon S episodes
+After Minako is defeated in a racing game , Michiru arrives to pick up Haruka , and the two depart with Usagi and Minako soon following behind them . Once
+Michiru and Haruka separate at a mechanic 's shop , Usagi and Minako take this as their chance , and Haruka tells them about `` him '' - self until a Daimon
+arrives to attack Kameda , the shop mechanic . The Daimon starts to escape when Usagi and Minako transform into their Guardian forms to chase it down , when
+Uranus and Neptune arrive to investigate Kameda 's pure heart crystal . When it turns out not to be a talisman they retreat and Sailor Moon defeats the Daimon .
+Later , the rest of the girls are at Crown Game Center with Usagi and Minako in hopes of seeing the cute boy they 'd told them about ; Michiru arrives with a
+blonde girl , whom Usagi and Minako initially fail to realize is Haruka ; once they do , Minako falls to the ground in anguish , and Haruka notes that she 'd
+never said she was male .
+</item 6>
+
+<item 7>
+List of Sailor Moon S episodes
+124 `` Who 's Really Who ? '' `` The Coming Terror of Darkness : Struggle of the Eight Guardians '' `` Semari kuru yami no kyōfu ! Kusen no Hassenshi '' ( 迫り 来る
+闇 の 恐怖 ! 苦戦 の 8 戦士 ) Takuya Igarashi Yoji Enokido Kazuyuki Hashimoto Ikuko Itō February 4 , 1995 July 28 , 2000 Mistress 9 uses all remaining Daimon eggs to
+create a powerful energized shield of evil minions around Infinity Academy . Sailor Moon is abducted , as she is the holder of the Holy Grail . After witnessing
+Sailor Pluto ultimately sacrificing herself to save them by using her forbidden ability to stop time , Sailor Uranus and Sailor Neptune destroy Germatoid , the
+Daimon possessing Professor Souichi Tomoe with their talismans , the Deep Aqua Mirror and the Space Sword . 125 `` Darkness , My Old Friend '' `` The Shining
+Shooting Star : Saturn and the Messiah '' `` Kagayaku ryūsei !
+</item 7>
+
+<item 8>
+List of Sailor Moon S episodes
+明か され た 互い の 正体 ) Junichi Sato Sukehiro Tomita Yoshiyuki Shikano Kazuya Kuroda September 24 , 1994 July 7 , 2000 Minako becomes jealous that a Daimon has not
+yet attacked her , and she fears that she does not have a pure heart . After doing as many `` pure '' things as she can , she is attacked , and her pure heart
+is taken from her . When Eudial nearly gets away , Usagi is forced to reveal her identity to Haruka & Michiru , who in turn , reveal their identities as Sailors
+Uranus and Neptune to Sailor Moon . 110 `` Destiny 's Arrival '' `` The Death of Uranus and Neptune : The Talisman Appear '' `` Uranusu - tachi no shi ?
+Tarisuman shutsugen '' ( ウラヌス 達 の 死 ?
+</item 8>
+
+<item 9>
+List of Sailor Moon S episodes
+He becomes targeted when she goes to give it to him , and she possessively blasts the enemy with a hugely strong amount of energy . She talks to Shun about
+being frail and weak , and he thanks her for talking to him . 118 `` It 's In The Cards '' `` The Battle Inside the Demonic Space : The Sailor Guardians '
+Gamble '' `` Makū no tatakai ! Sērā Senshi no kake '' ( 魔 空 の 戦い ! セーラー 戦士 の 賭け ) Noriyo Sasaki Katsuyuki Sumisawa Kenichi Tajiri Masahide Yanagisawa December
+17 , 1994 July 20 , 2000 Mimete attempts to create a Daimon by herself , throwing the entire Tomoe house into another dimension . The Guardians enter the
+dimension and are defeated by a game - master Daimon named U-Ikasaman . Hotaru manages to assist in her defeat by the use of a bluff . 119 `` Goodness Eclipsed
+'' `` The Messiah of Silence Awakens ?
+</item 9>
+
+<item 10>
+List of Sailor Moon S episodes
+Viluy attempts to use her nanorobots to steal pure hearts from entrance exam takers . But after her battle , her own microscopic robots turn against her ,
+destroying her in the process . 123 `` Wake Up Call '' `` Shadows of Destruction : the Messiah of Silence Awakens '' `` Hametsu no kage ! Chinmoku no Meshia no
+mezame '' ( 破滅 の 影 ! 沈黙 の メシア の 目覚め ) Harume Kosaka Megumi Sugihara Minoru Ōkōchi Mari Tominaga January 28 , 1995 July 26 , 2000 The last of the Witches 5 ,
+Cyprine steals pure hearts from Infinity Academy students , and the Sailor Guardians engage Cyprine , and her alter - ego , Ptilol , in a showdown . Meanwhile ,
+Chibiusa is abducted by the recently resurrected Kaolinite , and her pure heart is stolen by Mistress 9 , having taken over Hotaru 's body , which allows her to
+awaken as the Messiah of Silence . 124 `` Who 's Really Who ? ''
+</item 10>
+=== END ITEM id=32390e98f76f7c06 ===
+
+=== ITEM id=13a8f540a163e414 ===
+Gold sentences and facts:
+Sentence 0: In probability theory , two events are independent , statistically independent , or stochastically independent if the occurrence of one does not affect the probability of occurrence of the other . Similarly , two random variables are independent if the realization of one does not affect the probability distribution of the other .
+  Fact 0.0: In probability theory, two events can be called independent.
+  Fact 0.1: In probability theory, two events can be called statistically independent.
+  Fact 0.2: In probability theory, two events can be called stochastically independent.
+  Fact 0.3: Two events are independent if the occurrence of one does not affect the probability of occurrence of the other.
+  Fact 0.4: Two random variables are independent if the realization of one does not affect the probability distribution of the other.
+
+Retrieved items:
+<item 1>
+Independence (probability theory)
+) and yet no two of the three events are pairwise independent ( and hence the set of events are not mutually independent ) . This example shows that mutual
+independence involves requirements on the products of probabilities of all combinations of events , not just the single events as in this example . See also (
+edit ) Copula ( statistics ) Independent and identically distributed random variables Mutually exclusive events Subindependence Linear dependence between random
+variables Conditional independence Normally distributed and uncorrelated does not imply independent Mean dependence References ( edit ) Jump up ^ Russell ,
+Stuart ; Norvig , Peter ( 2002 ) . Artificial Intelligence : A Modern Approach . Prentice Hall . p. 478 . ISBN 0 - 13 - 790395 - 2 . ^ Jump up to : Feller , W (
+1971 ) . `` Stochastic Independence '' . An Introduction to Probability Theory and Its Applications . Wiley . Jump up ^ George , Glyn , `` Testing for the
+independence of three events , '' Mathematical Gazette 88 , November 2004 , 568 .
+</item 1>
+
+<item 2>
+Independence (probability theory)
+1 Two random variables 1.2. 2 More than two random variables 1.2. 3 Conditional independence 1.3 Independent σ - algebras 2 Properties 2.1 Self - independence
+2.2 Expectation and covariance 2.3 Characteristic function 3 Examples 3.1 Rolling dice 3.2 Drawing cards 3.3 Pairwise and mutual independence 3.4 Mutual
+independence 4 See also 5 References Definition ( edit ) For events ( edit ) Two events ( edit ) Two events A and B are independent ( often written as A ⊥ B ( \
+displaystyle A \ perp B ) or A ⊥ ⊥ B ( \ displaystyle A \ perp \ ! \ ! \ ! \ perp B ) ) if their joint probability equals the product of their probabilities : P
+( A ∩ B ) = P ( A ) P ( B ) ( \ displaystyle \ mathrm ( P ) ( A \ cap B ) = \ mathrm ( P ) ( A ) \ mathrm ( P ) ( B ) ) .
+</item 2>
+
+<item 3>
+Independence (probability theory)
+For more than two events , a mutually independent set of events is ( by definition ) pairwise independent ; but the converse is not necessarily true ( see below
+for a counterexample ) . For random variables ( edit ) Two random variables ( edit ) Two random variables X and Y are independent if and only if ( iff ) the
+elements of the π - system generated by them are independent ; that is to say , for every a and b , the events ( X ≤ a ) and ( Y ≤ b ) are independent events (
+as defined above ) .
+</item 3>
+
+<item 4>
+Independence (probability theory)
+A finite set of events is mutually independent if every event is independent of any intersection of the other events -- that is , if and only if for every k -
+element subset of ( A i ) i = 1 n ( \ displaystyle \ ( A_ ( i ) \ ) _ ( i = 1 ) ^ ( n ) ) , P ( ⋂ i = 1 k A i ) = ∏ i = 1 k P ( A i ) . ( \ displaystyle \
+mathrm ( P ) \ left ( \ bigcap _ ( i = 1 ) ^ ( k ) A_ ( i ) \ right ) = \ prod _ ( i = 1 ) ^ ( k ) \ mathrm ( P ) ( A_ ( i ) ) . ) This is called the
+multiplication rule for independent events . Note that it is not a single condition involving only the product of all the probabilities of all single events (
+see below for a counterexample ) ; it must hold true for all subsets of events .
+</item 4>
+
+<item 5>
+Independence (probability theory)
+A ( \ displaystyle ( \ mathcal ( A ) ) ) and B ( \ displaystyle ( \ mathcal ( B ) ) ) are said to be independent if , whenever A ∈ A ( \ displaystyle A \ in ( \
+mathcal ( A ) ) ) and B ∈ B ( \ displaystyle B \ in ( \ mathcal ( B ) ) ) , P ( A ∩ B ) = P ( A ) P ( B ) . ( \ displaystyle \ mathrm ( P ) ( A \ cap B ) = \
+mathrm ( P ) ( A ) \ mathrm ( P ) ( B ) . )
+</item 5>
+
+<item 6>
+Independence (probability theory)
+Drawing cards ( edit ) If two cards are drawn with replacement from a deck of cards , the event of drawing a red card on the first trial and that of drawing a
+red card on the second trial are independent . By contrast , if two cards are drawn without replacement from a deck of cards , the event of drawing a red card
+on the first trial and that of drawing a red card on the second trial are not independent , because a deck that has had a red card removed has proportionately
+fewer red cards . Pairwise and mutual independence ( edit ) Pairwise independent , but not mutually independent , events . Mutually independent events .
+Consider the two probability spaces shown . In both cases , P ( A ) = P ( B ) = 1 / 2 and P ( C ) = 1 / 4 .
+</item 6>
+
+<item 7>
+Independence (probability theory)
+The random variables in the first space are pairwise independent because P ( A B ) = P ( A C ) = 1 / 2 = P ( A ) , P ( B A ) = P ( B C ) = 1 / 2 = P ( B ) , and
+P ( C A ) = P ( C B ) = 1 / 4 = P ( C ) ; but the three random variables are not mutually independent . The random variables in the second space are both
+pairwise independent and mutually independent . To illustrate the difference , consider conditioning on two events . In the pairwise independent case , although
+any one event is independent of each of the other two individually , it is not independent of the intersection of the other two : P ( A B C ) = 4 40 4 40 + 1 40
+= 4 5 ≠ P ( A ) ( \ displaystyle \ mathrm ( P ) ( A BC ) = ( \ frac ( \ frac ( 4 ) ( 40 ) ) ( ( \ frac ( 4 ) ( 40 ) ) + ( \ frac ( 1 ) ( 40 ) ) ) ) = ( \ tfrac
+( 4 )
+</item 7>
+
+<item 8>
+Independence (probability theory)
+More than two random variables ( edit ) A set of random variables is pairwise independent if and only if every pair of random variables is independent . Even if
+the set of random variables is pairwise independent , it is not necessarily mutually independent as defined next . A set of random variables is mutually
+independent if and only if for any finite subset X 1 , ... , X n ( \ displaystyle X_ ( 1 ) , \ ldots , X_ ( n ) ) and any finite sequence of numbers a 1 , ... ,
+a n ( \ displaystyle a_ ( 1 ) , \ ldots , a_ ( n ) ) , the events ( X 1 ≤ a 1 ) , ... , ( X n ≤ a n ) ( \ displaystyle \ ( X_ ( 1 ) \ leq a_ ( 1 ) \ ) , \ ldots
+, \ ( X_ ( n ) \ leq a_ ( n ) \ ) ) are mutually independent events ( as defined above ) . The measure - theoretically inclined may prefer to substitute events
+( X ∈ A ) for events ( X ≤ a ) in the above definition , where A is any Borel set .
+</item 8>
+
+<item 9>
+Independence (probability theory)
+Thus , the occurrence of B does not affect the probability of A , and vice versa . Although the derived expressions may seem more intuitive , they are not the
+preferred definition , as the conditional probabilities may be undefined if P ( A ) or P ( B ) are 0 . Furthermore , the preferred definition makes clear by
+symmetry that when A is independent of B , B is also independent of A . More than two events ( edit ) A finite set of events ( A i ) i = 1 n ( \ displaystyle \
+( A_ ( i ) \ ) _ ( i = 1 ) ^ ( n ) ) is pairwise independent if every pair of events is independent -- that is , if and only if for all distinct pairs of
+indices m , k , P ( A m ∩ A k ) = P ( A m ) P ( A k ) . ( \ displaystyle \ mathrm ( P ) ( A_ ( m ) \ cap A_ ( k ) ) = \ mathrm ( P ) ( A_ ( m ) ) \ mathrm ( P )
+( A_ ( k ) ) . )
+</item 9>
+
+<item 10>
+Independence (probability theory)
+Independence ( probability theory ) - wikipedia Independence ( probability theory ) Jump to : navigation , search Part of a series on Statistics Probability
+theory Probability axioms Probability space Sample space Elementary event Event Random variable Probability measure Complementary event Joint probability
+Marginal probability Conditional probability Independence Conditional independence Law of total probability Law of large numbers Bayes ' theorem Boole 's
+inequality Venn diagram Tree diagram In probability theory , two events are independent , statistically independent , or stochastically independent if the
+occurrence of one does not affect the probability of occurrence of the other . Similarly , two random variables are independent if the realization of one does
+not affect the probability distribution of the other . The concept of independence extends to dealing with collections of more than two events or random
+variables , in which case the events are pairwise independent if each pair are independent of each other , and the events are mutually independent if each event
+is independent of each other combination of events . Contents ( hide ) 1 Definition 1.1 For events 1.1. 1 Two events 1.1. 2 More than two events 1.2 For random
+variables 1.2. 1 Two random variables 1.2.
+</item 10>
+=== END ITEM id=13a8f540a163e414 ===
+
+=== ITEM id=105abed214347fd7 ===
+Gold sentences and facts:
+Sentence 0: Daren Maxwell Kagasoff ( KA - guh - sawf ) ( born September 16 , 1987 ) is an American actor . He is known for starring as Ricky Underwood on the ABC Family teen drama series The Secret Life of the American Teenager from 2008 to 2013 .
+  Fact 0.0: Daren Maxwell Kagasoff is pronounced KA-guh-sawf.
+  Fact 0.1: Daren Maxwell Kagasoff was born September 16, 1987.
+  Fact 0.2: Daren Maxwell Kagasoff is an American actor.
+  Fact 0.3: Daren Maxwell Kagasoff is known for starring as Ricky Underwood.
+  Fact 0.4: Daren Maxwell Kagasoff starred as Ricky Underwood on The Secret Life of the American Teenager.
+  Fact 0.5: The Secret Life of the American Teenager is an ABC Family teen drama series.
+  Fact 0.6: Daren Maxwell Kagasoff starred on The Secret Life of the American Teenager from 2008 to 2013.
+
+Retrieved items:
+<item 1>
+Daren Kagasoff
+Kagasoff graduated from Montclair Preparatory High School in 2005 where he played on his school 's baseball team . While attending school at San Francisco State
+University , Kagasoff decided to become an actor . Career ( edit ) After deciding to return to Los Angeles , Kagasoff landed the lead role in a local theater
+production of Suburbia , a play that the eponymous 1996 film was based upon . After studying acting , he began auditioning for television and film roles .
+During one of his first auditions , he impressed producer Brenda Hampton so much that she hand - picked him to star as Ricky Underwood in the ABC Family series
+The Secret Life of the American Teenager . The show ran for five seasons . It was announced on February 24 , 2013 that Kagasoff had been cast as Alex in the Fox
+pilot Delirium , based on the novel by Lauren Oliver . However , the pilot was not picked up to series . Kagasoff co-starred as Trevor in the supernatural
+horror film Ouija , directed by Stiles White and co-written by Juliet Snowden and White . The film was released in October 2014 .
+</item 1>
+
+<item 2>
+Daren Kagasoff
+Daren Kagasoff - wikipedia Daren Kagasoff Jump to : navigation , search Daren Kagasoff At the Twilight premiere Daren Maxwell Kagasoff ( 1987 - 09 - 16 )
+September 16 , 1987 ( age 30 ) Encino , California , U.S. Occupation Actor Years active 2008 -- present Daren Maxwell Kagasoff ( KA - guh - sawf ) ( born
+September 16 , 1987 ) is an American actor . He is known for starring as Ricky Underwood on the ABC Family teen drama series The Secret Life of the American
+Teenager from 2008 to 2013 . Contents ( hide ) 1 Early life 2 Career 3 Filmography 4 Awards and nominations 5 References 6 External links Early Life ( edit )
+Kagasoff was born in Encino , California to Elise Kagasoff ( née Levy ) and Barry Kagasoff , a diamond merchant . He is the middle of three children ; he has an
+older brother , Justin , and a younger sister , Natalie .
+</item 2>
+
+<item 3>
+Graph query row:
+entity: Ricky Underwood
+relationship: RELATED_TO
+related: Daren Kagasoff
+</item 3>
+
+<item 4>
+Daren Kagasoff
+^ Jump up to : Ng , Philiana ( 3 June 2013 ) . `` ' Secret Life of the American Teenager ' : Daren Kagasoff on Series Finale ( Exclusive Video ) '' . The
+Hollywood Reporter . Retrieved 24 February 2015 . Jump up ^ Hibberd , James ( 8 May 2013 ) . `` Fox rejects ' Delirium ' pilot starring Emma Roberts '' .
+Entertainment Weekly . Retrieved 8 May 2013 . Jump up ^ Goldberg , Lesley ( 25 February 2013 ) . `` Fox 's ' Delirium ' Finds Co-Lead in ' Secret Life of the
+American Teenager ' Star '' . The Hollywood Reporter . Retrieved 24 February 2015 . Jump up ^ The Deadline Team ( 4 December 2013 ) . `` Daren Kagasoff Joins '
+Ouija ' '' . Deadline.com . Retrieved 5 February 2014 . Jump up ^ Thompson , Avery ( 12 November 2014 ) .
+</item 4>
+
+<item 5>
+Krysten Ritter
+The The Last International Playboy Ozzy 2008 27 Dresses Gina the goth 2008 What Happens in Vegas Kelly 2009 Glock Beretta Short film 2009 Confessions of a
+Shopaholic Suze Cleath - Stuart She 's Out of My League Patty How to Make Love to a Woman Lauren 2011 Killing Bono Gloria 2011 Life Happens Kim Also writer and
+co-producer 2011 Margaret Shopgirl 2012 BuzzKill Nicole 2012 Vamps Stacy Daimen 2012 Refuge Amy 2014 Listen Up Philip Melanie 2014 Veronica Mars Gia Goodman
+2014 Asthma Ruby 2014 Search Party Christy 2014 Big Eyes DeAnn 2017 Hero , The The Hero Lucy Television ( edit ) Year Title Role Notes Whoopi Brynn Episode : ``
+The Squatters '' One Life to Live Kay 4 episodes Law & Order Tracy Warren Episode : `` Everybody Loves Raimondo 's '' Tanner on Tanner Saleswoman 2 episodes
+2005 Jonny Zero Quinn Episode : `` Pilot '' 2005 -- 2006 Veronica Mars Gia Goodman Recurring role ; 8 episodes 2006 Bedford Diaries ,
+</item 5>
+
+<item 6>
+Krysten Ritter
+She also played the first iteration of Allison Stark on the Fox sitcom ' Til Death ( which eventually had four actresses play that role through its run ) .
+Ritter at the premiere of 27 Dresses in January 2008 Ritter continued working in film , often cast as the best friend of the lead character . In 2008 , she had
+supporting roles in the romantic comedies What Happens in Vegas and 27 Dresses . She co-starred in the 2009 film Confessions of a Shopaholic as Suze , the best
+friend of Isla Fisher 's character . Ritter spent three months shooting She 's Out of My League in Pittsburgh in 2008 . She played Patty , the cynical best
+friend of Alice Eve 's character Molly . Ritter was cast as a young Carol Rhodes in an episode of The CW 's teen drama series Gossip Girl titled `` Valley Girls
+'' , which aired May 11 , 2009 . The episode was a backdoor pilot for a proposed spin - off series of the same title , set in 1980s Los Angeles , that would
+chronicle the teenage years of the character Lily van der Woodsen .
+</item 6>
+
+<item 7>
+Daren Kagasoff
+The film was released in October 2014 . In September 2014 , Kagasoff joined the cast of the Red Band Society , a comedy - drama series on Fox for the 2014 -- 15
+American television season developed by Margaret Nagle . He had a recurring role playing Kara 's love interest , Hunter Cole . The series premiered on September
+17 , 2014 and was canceled after one season . Filmography ( edit ) Television and film roles Year Title Role Notes 2008 -- 2013 Secret Life of the American
+Teenager , The The Secret Life of the American Teenager Richard `` Ricky '' Underwood Main role 2014 Ouija Trevor Film 2014 Blue Daren Web series ; 2 episodes
+2014 Delirium Alex Sheathes Unsold television pilot ( FOX ) 2014 Stalker Eric Bates Episode : Pilot 2014 -- 2015 Red Band Society Hunter Cole Recurring role , 7
+episodes 2015 Paradise Pictures Wyatt Osborne Unsold television pilot ( USA ) 2017 S.W.A.T.
+</item 7>
+
+<item 8>
+Krysten Ritter
+8 episodes 2006 Bedford Diaries , The The Bedford Diaries Erin Kavenaugh 2 episodes 2006 -- 2007 Gilmore Girls Lucy Recurring role ; 8 episodes 2006 -- 2007 '
+Til Death Allison Stark 5 episodes 2006 Justice Eva Episode : `` Christmas Party '' 2007 Big Day Ellen Episode : `` The Ceremony '' 2009 -- 2010 Breaking Bad
+Jane Margolis Recurring role ; 9 episodes 2009 Gossip Girl Young Carol Rhodes Episode : `` Valley Girls '' Gravity Lily Champagne Main role ; 10 episodes 2011
+Love Bites Cassie Episode : `` Firsts '' 2012 -- 2013 Do n't Trust the B -- -- in Apartment 23 Chloe Lead role ; 26 episodes 2013 Robot Chicken Dana Polk (
+voice ) Episode : `` Immortal '' 2013 Cleveland Show , The The Cleveland Show Gina ( voice ) Episode : `` California Dreamin ' ( All the Cleves Are Brown ) ''
+2013 Eric Andre Show , The The Eric Andre Show Herself Episode : `` Krysten Ritter ; Dominic Monaghan '' 2014 Blacklist ,
+</item 8>
+
+<item 9>
+Daren Kagasoff
+Gordon Episode : `` Imposters '' Awards and nominations ( edit ) Year Award Work Result 2009 Teen Choice Award Choice TV Breakout Star : Male The Secret Life of
+the American Teenager Nominated 2009 Teen Choice Award Choice Summer TV Star : Male The Secret Life of the American Teenager Won Teen Choice Award Choice TV
+Actor : Drama The Secret Life of the American Teenager Nominated Teen Choice Award Teen Choice Award The Secret Life of the American Teenager Nominated 2011
+Teen Choice Award Choice TV Actor : Drama The Secret Life of the American Teenager Nominated 2012 Teen Choice Award Choice Summer TV Star : Male The Secret Life
+of the American Teenager Nominated References ( edit ) Jump up ^ `` Daren Maxwell Kagasoff - California , Birth Index '' . FamilySearch . Retrieved 24 February
+2015 . Jump up ^ `` Barry H Kagasoff mentioned in the record of Barry H Kagasoff and Elise Levy '' . FamilySearch . Retrieved 24 February 2015 . Jump up ^
+Matsushita , Elaine ( 22 March 2009 ) .
+</item 9>
+
+<item 10>
+Krysten Ritter
+Ritter told Philadelphia Style that she felt her `` outgoing and bubbly and funny '' personality as a performer helped her transition into acting naturally by
+letting her entertain the casting people . She won several bit film roles starting in 2001 , and then played a 1950s art history student in Julia Roberts ' Mona
+Lisa Smile ( 2003 ) . In 2006 , she appeared in All This Intimacy , a two - act , Off - Broadway play by Rajiv Joseph , at the Second Stage Theatre . Ritter
+signed on to star in the premiere of Zach Braff 's play , All New People , at Second Stage Theatre . Anna Camp , David Wilson Barnes and Justin Bartha
+co-starred in the production under the direction of Peter DuBois . Ritter had a number of guest starring roles on television , and appeared on the second season
+of Veronica Mars , playing Gia Goodman , the daughter of mayor Woody Goodman ( Steve Guttenberg ) . Ritter guest - starred on Gilmore Girls for eight episodes
+from 2006 to 2007 as Rory Gilmore 's friend , Lucy .
+</item 10>
+=== END ITEM id=105abed214347fd7 ===
+
+=== ITEM id=a37de826d6c2d9f5 ===
+Gold sentences and facts:
+Sentence 0: Character Actor Job House Song ( s ) Miss Hoolie Julie Wilson Nimmo Nursery teacher Green house Nursery Song : Everybody everyone Day off song : What do you want to do today ( Series 1 -- 2 ) Strike up the band ( Series 3 -- 4 ) Archie the Inventor Miles Jupp Inventor Pink castle I 'm Archie the Inventor ( Series 1 - 4 ) Great Inventions , Groovy Solutions ( Series 3 -- 4 ) Josie Jump Buki Akib ( series 1 - 2 ) Kasia Haddad ( Series 3 -- 4 ) Fitness instructor Yellow house Josie Jump is My Name ( Jump a Little Higher ) ( Series 1 - 4 ) Cheer You Up ( Series 3 -- 4 ) Edie McCredie Juliet Cadzow Bus driver Blue garage / house When I Honk My Horn ( Series 1 - 4 ) Let Me Take You on a Journey ( Series 3 -- 4 ) PC Plum Andrew Agnew Policeman Black and white police station I 'm PC Plum ( Series 1 -- 4 ) Follow the Clue ( Series 3 -- 4 ) Spencer the Painter Rodd Christensen Painter / Musician Orange house Climbing Up My Musical Ladder ( Series 1 -- 4 ) If You Need a Little Rhythm ( Series 3 -- 4 ) Suzie Sweet Mary Riggans Shop and café workers Red shop I 'm Suzie Sweet , I 'm Penny Pocket ( Series 1 -- 4 ) Suzie 's Cooking ( Series 3 -- 4 ) Penny Pocket Kim Tserkezie I 'm Suzie Sweet , I 'm Penny Pocket ( Series 1 -- 4 ) Sort It ( Series 3 -- 4 )
+  Fact 0.0: Miss Hoolie is played by Julie Wilson Nimmo.
+  Fact 0.1: Miss Hoolie's job is nursery teacher.
+  Fact 0.2: Miss Hoolie's house is the Green house (Nursery).
+  Fact 0.3: Miss Hoolie's Nursery Song is Everybody everyone.
+  Fact 0.4: Miss Hoolie's Day off song is What do you want to do today (Series 1-2).
+  Fact 0.5: Miss Hoolie's Day off song is Strike up the band (Series 3-4).
+  Fact 0.6: Archie the Inventor is played by Miles Jupp.
+  Fact 0.7: Archie the Inventor's job is inventor.
+  Fact 0.8: Archie the Inventor's house is the Pink castle.
+  Fact 0.9: Archie the Inventor's song is I'm Archie the Inventor (Series 1-4).
+  Fact 0.10: Archie the Inventor's song is Great Inventions, Groovy Solutions (Series 3-4).
+  Fact 0.11: Josie Jump is played by Buki Akib in Series 1-2.
+  Fact 0.12: Josie Jump is played by Kasia Haddad in Series 3-4.
+  Fact 0.13: Josie Jump's job is fitness instructor.
+  Fact 0.14: Josie Jump's house is the Yellow house.
+  Fact 0.15: Josie Jump's song is Josie Jump is My Name (Jump a Little Higher) (Series 1-4).
+  Fact 0.16: Josie Jump's song is Cheer You Up (Series 3-4).
+  Fact 0.17: Edie McCredie is played by Juliet Cadzow.
+  Fact 0.18: Edie McCredie's job is bus driver.
+  Fact 0.19: Edie McCredie's house is the Blue garage / house.
+  Fact 0.20: Edie McCredie's song is When I Honk My Horn (Series 1-4).
+  Fact 0.21: Edie McCredie's song is Let Me Take You on a Journey (Series 3-4).
+  Fact 0.22: PC Plum is played by Andrew Agnew.
+  Fact 0.23: PC Plum's job is policeman.
+  Fact 0.24: PC Plum's house is the Black and white police station.
+  Fact 0.25: PC Plum's song is I'm PC Plum (Series 1-4).
+  Fact 0.26: PC Plum's song is Follow the Clue (Series 3-4).
+  Fact 0.27: Spencer the Painter is played by Rodd Christensen.
+  Fact 0.28: Spencer the Painter's job is painter and musician.
+  Fact 0.29: Spencer the Painter's house is the Orange house.
+  Fact 0.30: Spencer the Painter's song is Climbing Up My Musical Ladder (Series 1-4).
+  Fact 0.31: Spencer the Painter's song is If You Need a Little Rhythm (Series 3-4).
+  Fact 0.32: Suzie Sweet is played by Mary Riggans.
+  Fact 0.33: Suzie Sweet's job is shop and café worker.
+  Fact 0.34: Suzie Sweet's house is the Red shop.
+  Fact 0.35: Suzie Sweet's song is I'm Suzie Sweet, I'm Penny Pocket (Series 1-4).
+  Fact 0.36: Suzie Sweet's song is Suzie's Cooking (Series 3-4).
+  Fact 0.37: Penny Pocket is played by Kim Tserkezie.
+  Fact 0.38: Penny Pocket's song is I'm Suzie Sweet, I'm Penny Pocket (Series 1-4).
+  Fact 0.39: Penny Pocket's song is Sort It (Series 3-4).
+
+Retrieved items:
+<item 1>
+Balamory
+I 'm Penny Pocket ( Series 1 -- 4 ) Suzie 's Cooking ( Series 3 -- 4 ) Penny Pocket Kim Tserkezie I 'm Suzie Sweet , I 'm Penny Pocket ( Series 1 -- 4 ) Sort It
+( Series 3 -- 4 ) The nursery teacher Miss Hoolie is the framing character and narrator for each episode . She introduces the programme and the problem which
+needs to be solved , provides a recap in the middle , and summarises the story at the end of the episode . Archie the Inventor builds zany creations from
+household objects , such as boxes , bottles , yoghurt pots , string , and similar items that young children might typically use in craft projects . His
+inventions are intended to be useful , but sometimes backfire . Josie Jump is the fitness instructor at the primary school next door to Miss Hoolie 's nursery
+school . She plays and coaches all types of gymnastics , sports , and dance , and encourages the young viewers to exercise . She is also talented at
+storytelling through expressive movement and dance . Edie McCredie drives the nursery school bus .
+</item 1>
+
+<item 2>
+Balamory
+Balamory - wikipedia Balamory Jump to : navigation , search This article needs additional citations for verification . Please help improve this article by
+adding citations to reliable sources . Unsourced material may be challenged and removed . ( December 2010 ) ( Learn how and when to remove this template message
+) Balamory Created by Brian Jameson Starring Julie Wilson Nimmo Miles Jupp Kasia Haddad Buki Akib Juliet Cadzow Andrew Agnew Rodd Christensen Mary Riggans Kim
+Tserkezie Country of origin United Kingdom Original language ( s ) English No. of episodes 254 , including Christmas special . Production Producer ( s ) Brian
+Jameson Running time 19 -- 21 minutes . 28 -- 30 minutes .
+</item 2>
+
+<item 3>
+Balamory
+Groovy Solutions ( Series 3 -- 4 ) Josie Jump Buki Akib ( series 1 - 2 ) Kasia Haddad ( Series 3 -- 4 ) Fitness instructor Yellow house Josie Jump is My Name (
+Jump a Little Higher ) ( Series 1 - 4 ) Cheer You Up ( Series 3 -- 4 ) Edie McCredie Juliet Cadzow Bus driver Blue garage / house When I Honk My Horn ( Series 1
+- 4 ) Let Me Take You on a Journey ( Series 3 -- 4 ) PC Plum Andrew Agnew Policeman Black and white police station I 'm PC Plum ( Series 1 -- 4 ) Follow the
+Clue ( Series 3 -- 4 ) Spencer the Painter Rodd Christensen Painter / Musician Orange house Climbing Up My Musical Ladder ( Series 1 -- 4 ) If You Need a Little
+Rhythm ( Series 3 -- 4 ) Suzie Sweet Mary Riggans Shop and café workers Red shop I 'm Suzie Sweet ,
+</item 3>
+
+<item 4>
+Balamory
+It was also shown on TLC . In Ireland , episodes were shown until recently on weekdays on RTÉ Two 's The Den and continue to be shown on The Den 's replacement
+, RTÉjr . Tobermory , Mull , the setting for the fictional town of Balamory Edie McCredie 's bus ( LDV Convoy ) in the Glasgow Museum of Transport Contents (
+hide ) 1 Characters 2 Episodes 2.1 Episode guide 3 Audience 4 Songs 5 Production 6 Retirement 7 Awards 8 References 9 External links Characters ( edit ) There
+are eight central characters in Balamory . Each character wears a distinctive colour of clothing like pink or yellow , and lives in a house of the same colour
+like Archie lives in a pink castle , with the exception of Penny Pocket ( who shares the red house / shop with Suzie Sweet , and wears blue ) and PC Plum ( who
+lives in the white house but wears a police uniform ) . Each character also has one or more individual songs .
+</item 4>
+
+<item 5>
+Balamory
+Penny Pocket is a young woman who uses a wheelchair ; she has a talent for mathematics . Episodes ( edit ) A typical episode follows this general plan : The
+opening credits show the town of `` Balamory '' with its brightly coloured houses . Miss Hoolie opens the nursery school , greets the nursery children , and
+talks about that day 's weather . One of the other characters ( who will be the main character of that episode ) tells Miss Hoolie about a problem . This
+character then sings `` Which Coloured House Are We Going To ? '' , asking the young viewers to guess which of the Balamory characters will be most helpful in
+solving the problem . The main character then proceeds to visit several other characters until the problem is solved . Miss Hoolie and the main character
+provide a summary of the story at each point , and a final recap at the end of the episode . For example , in one episode Josie Jump has been asked to look
+after a neighbour 's rabbit , but does not know what it needs . She is advised to visit PC Plum , who advises her to feed it vegetables .
+</item 5>
+
+<item 6>
+Balamory
+28 -- 30 minutes . Specials Production company ( s ) BBC Scotland Distributor BBC Release Original network CBeebies Picture format 16 : 9 Widescreen Audio
+format Stereo Original release 10 February 2002 -- 14 April 2005 External links Website www.bbc.co.uk/cbeebies/shows/balamory Balamory is a Scottish live action
+television series on British television ( BBC One , BBC Two and CBeebies ) for pre school children , about a fictional small island community called Balamory in
+Scotland . It was produced between 10 February 2002 and 14 April 2005 by BBC Scotland , with 254 episodes made ( including a DVD exclusive Christmas episode ) .
+The series was created by Brian Jameson . Balamory was filmed mostly in Tobermory on the Isle of Mull , with the exception of scenes at Archie 's castle filmed
+at Fenton Tower in North Berwick , and other scenes , such as Camden and the nursery filmed in Glasgow . A select series of episodes was shown for two brief
+seasons in the United States on the Discovery Kids channel . It was also shown on TLC .
+</item 6>
+
+<item 7>
+Balamory
+Edie McCredie drives the nursery school bus . She has travelled all over the world , and has a variety of photographs and souvenirs to talk about . She is also
+an expert driver and motor mechanic , and occasionally gets exasperated with other road users . Police officer PC Plum aspires to be a master detective , but
+Balamory is a crime free village . He spends most of his time watching wildlife and using his detective skills , to figure out what the animals have been doing
+. He is also particularly interested in rules , regulations , and safety . Spencer is officially responsible for painting the coloured houses of Balamory , but
+also paints pictures and creates music . His painter 's ladder is musical , each rung sounding a different note . Spencer is also the only American to reside in
+Balamory and he is black . Suzie Sweet and Penny Pocket together run the village shop and cafe . Suzie Sweet is an older , grandmotherly figure who loves to
+tell customers about the items in the shop . Penny Pocket is a young woman who uses a wheelchair ; she has a talent for mathematics .
+</item 7>
+
+<item 8>
+Balamory
+She is advised to visit PC Plum , who advises her to feed it vegetables . She then goes to the shop run by Pocket and Sweet to buy rabbit food , and finally
+brings the rabbit to Miss Hoolie 's nursery for the children to feed and pat it . Each episode of Balamory contains at least five songs : `` What 's the Story
+in Balamory ? '' , the theme song Miss Hoolie 's opening song , either `` Everybody , Everyone '' if the nursery school is open , or one of the two `` day off
+'' songs otherwise `` Which Coloured House Are We Going To ? '' , sung by the main character after presenting his or her problem Character - specific songs ,
+sung by the characters visited by the main character Episode guide ( edit ) Series One Series Two Series Three Series Four Audience ( edit ) The programme was
+aimed at pre schoolers . The programme 's creator had intended it as a `` soap opera for children '' . The show can also be seen in a humorous light . The
+characters in Balamory are somewhat naive and light hearted , often appearing to be children trapped in adult bodies with adult roles .
+</item 8>
+
+<item 9>
+Balamory
+The storyline revolves around simple problems designed to challenge pre schoolers ' minds . Songs ( edit ) There are many songs in Balamory , mainly sung by the
+actors . These songs are used consistently throughout the series , when corresponding characters or circumstances are introduced . In the run starting from
+September 2004 , new songs were introduced . These songs are longer and take up more time in the episode , so the old versions were still often used . In
+addition to the character specific songs mentioned in the `` Characters '' section , there are two general songs : `` What 's the Story in Balamory ? '' is the
+show 's theme song , sung over the opening titles and played as an instrumental over the closing credits . `` Which Coloured House Are We Going To ? '' is sung
+by the main character of each episode after introducing that episode 's problem . Production ( edit ) Very few episodes feature actors other than the main
+characters and the nursery children . Terry Wogan made a guest appearance in one episode ( The Game Show ) as a television director .
+</item 9>
+
+<item 10>
+Balamory
+Each character also has one or more individual songs . Character Actor Job House Song ( s ) Miss Hoolie Julie Wilson Nimmo Nursery teacher Green house Nursery
+Song : Everybody everyone Day off song : What do you want to do today ( Series 1 -- 2 ) Strike up the band ( Series 3 -- 4 ) Archie the Inventor Miles Jupp
+Inventor Pink castle I 'm Archie the Inventor ( Series 1 - 4 ) Great Inventions ,
+</item 10>
+=== END ITEM id=a37de826d6c2d9f5 ===
+
+=== ITEM id=f5aa83bf4ce3db21 ===
+Gold sentences and facts:
+Sentence 0: Sanitary napkins ( also called sanitary towels or pads ) -- Rectangular pieces of material worn attached to the underwear to absorb menstrual flow , often with an adhesive backing to hold the pad in place . Disposable pads may contain wood pulp or gel products , usually with a plastic lining and bleached . Tampons -- Disposable cylinders of treated rayon / cotton blends or all - cotton fleece , usually bleached , that are inserted into the vagina to absorb menstrual flow . Disposable menstrual cups made of soft plastic -- A firm , flexible cup - shaped device worn inside the vagina to collect menstrual flow .
+  Fact 0.0: Sanitary napkins are also called sanitary towels or pads.
+  Fact 0.1: Sanitary napkins are rectangular pieces of material worn attached to the underwear to absorb menstrual flow.
+  Fact 0.2: Sanitary napkins are often given an adhesive backing to hold the pad in place.
+  Fact 0.3: Disposable sanitary pads may contain wood pulp or gel products.
+  Fact 0.4: Disposable sanitary pads usually have a plastic lining and are bleached.
+  Fact 0.5: Tampons are disposable cylinders of treated rayon / cotton blends or all-cotton fleece.
+  Fact 0.6: Tampons are usually bleached.
+  Fact 0.7: Tampons are inserted into the vagina to absorb menstrual flow.
+  Fact 0.8: Disposable menstrual cups are made of soft plastic.
+  Fact 0.9: Disposable menstrual cups are a firm, flexible, cup-shaped device.
+  Fact 0.10: Disposable menstrual cups are worn inside the vagina.
+  Fact 0.11: Disposable menstrual cups collect menstrual flow.
+Sentence 1: Disposable menstrual cups made of soft plastic -- A firm , flexible cup - shaped device worn inside the vagina to collect menstrual flow .
+  Fact 1.0: Disposable menstrual cups are made of soft plastic.
+  Fact 1.1: Disposable menstrual cups are a firm, flexible, cup-shaped device.
+  Fact 1.2: Disposable menstrual cups are worn inside the vagina.
+  Fact 1.3: Disposable menstrual cups collect menstrual flow.
+Sentence 2: Menstrual cups -- A firm , flexible bell - shaped device worn inside the vagina to collect menstrual flow . Menstrual cups are usually made of silicone and can last 5 years or longer .
+  Fact 2.0: Menstrual cups are a firm, flexible, bell-shaped device.
+  Fact 2.1: Menstrual cups are worn inside the vagina.
+  Fact 2.2: Menstrual cups collect menstrual flow.
+  Fact 2.3: Menstrual cups are usually made of silicone.
+  Fact 2.4: Menstrual cups can last 5 years or longer.
+
+Retrieved items:
+<item 1>
+Menstruation
+Menstrual cups are usually made of silicone and can last 5 years or longer . Reusable cloth pads -- Pads that are made of cotton ( often organic ) , terrycloth
+, or flannel , and may be handsewn ( from material or reused old clothes and towels ) or storebought . Padded panties or period - proof underwear -- Reusable
+cloth ( usually cotton ) underwear with extra absorbent layers sewn in to absorb flow . Some also use patented technology to be leak resistant , such as the
+brand THINX . Sea sponges -- Natural sponges , worn internally like a tampon to absorb menstrual flow . Blanket , towel -- ( also known as a draw sheet ) --
+large reusable piece of cloth , most often used at night , placed between legs to absorb menstrual flow . Non-commercial items In developing countries , many
+poor women can not afford commercial feminine hygiene products . Instead , they use materials found in the environment or other improvised materials .
+</item 1>
+
+<item 2>
+Menstruation
+Some anthropologists have questioned the energy cost of rebuilding the endometrium every fertility cycle . However , anthropologist Beverly Strassmann has
+proposed that the energy savings of not having to continuously maintain the uterine lining more than offsets energy cost of having to rebuild the lining in the
+next fertility cycle , even in species such as humans where much of the lining is lost through bleeding ( overt menstruation ) rather than reabsorbed ( covert
+menstruation ) . Many have questioned the evolution of overt menstruation in humans and related species , speculating on what advantage there could be to losing
+blood associated with dismantling the endometrium , rather than absorbing it , as most mammals do . Humans do , in fact , reabsorb about two - thirds of the
+endometrium each cycle . Strassmann asserts that overt menstruation occurs not because it is beneficial in itself . Rather , the fetal development of these
+species requires a more developed endometrium , one which is too thick to reabsorb completely . Strassman correlates species that have overt menstruation to
+those that have a large uterus relative to the adult female body size .
+</item 2>
+
+<item 3>
+Graph query row:
+entity: Menstrual cup
+relationship: RELATED_TO
+related: Menstrual flow
+</item 3>
+
+<item 4>
+Menstruation
+Instead , they use materials found in the environment or other improvised materials . Absorption materials that may be used by women who can not afford anything
+else include : sand , ash , small hole in earth , cloth , whole leaf , leaf fibre ( such as water hyacinth , banana , papyrus , cotton fibre ) , paper ( toilet
+paper , re-used newspaper , pulped and dried paper ) , animal pelt e.g. goat skin , double layer of underwear , skirt or sari . Society and culture Amra Padatik
+India , celebration of Menstrual Hygiene Day in India Traditions and taboos Main article : Culture and menstruation Further information : Menstrual taboo Many
+religions have menstruation - related traditions . Islam Islam prohibits sexual contact with women during menstruation in the 2nd chapter of the Quran . Women
+are exempted from Salah ( prayer ) . They are also prohibited from fasting and obligatory fasts of Ramadan are to be performed during other days . During menses
+pilgrimages are allowed ; however , circumambulation of the Kaaba is prohibited and is to be performed during other times .
+</item 4>
+
+<item 5>
+Menstruation
+The intention behind this decision was the hope of the inventor , John Rock , to win approval for his invention from the Roman Catholic Church . That attempt
+failed , but the 28 - day cycle remained the standard when the pill became available to the public . There is debate among medical researchers about the
+potential long - term impacts of these practices upon female health . Some researchers point to the fact that historically , females have had far fewer
+menstrual periods throughout their lifetimes , a result of shorter life expectancies , as well as a greater length of time spent pregnant or breast - feeding ,
+which reduced the number of periods experienced by females . These researchers believe that the higher number of menstrual periods by females in modern
+societies may have a negative impact upon their health . On the other hand , some researchers believe there is a greater potential for negative impacts from
+exposing females perhaps unnecessarily to regular low doses of synthetic hormones over their reproductive years . Breastfeeding Main article : Lactational
+amenorrhea method Breastfeeding causes negative feedback to occur on pulse secretion of gonadotropin - releasing hormone ( GnRH ) and luteinizing hormone ( LH )
+.
+</item 5>
+
+<item 6>
+Menstruation
+Scotland is the first country to ban period poverty . In 2015 a petition was put forward in England seeking the elimination of the 5 % `` tampon tax '' . The
+government voted in favour but it has yet to be implemented due to Brexit complications . In England , one in ten women between 14 and 21 can not afford
+menstrual management products . In the United States , nine states have eliminated the tampon tax , and seven states have introduced legislation . In January
+2018 , California rejected a proposal to eliminate tampon tax . Evolution All female placental mammals have a uterine lining that builds up when the animal is
+fertile , but it is dismantled when the animal is infertile . Most female mammals have an estrous cycle , yet only primates ( including humans ) , several
+species of bats , and elephant shrews have a menstrual cycle . ( Killer whales , Orcinus orca , are one of the few species to experience menopause . ) Some
+anthropologists have questioned the energy cost of rebuilding the endometrium every fertility cycle .
+</item 6>
+
+<item 7>
+Graph query row:
+entity: Menstrual cup
+relationship: RELATED_TO
+related: Vagina
+</item 7>
+
+<item 8>
+Menstruation
+Menstruation : A Cultural History . Palgrave Macmillan . ISBN 1 - 4039 - 3935 - 7 . Retrieved 9 November 2013 . Knight , Chris ( 1995 ) . Blood Relations :
+Menstruation and the Origins of Culture . New Haven and London : Yale University . ISBN 0 - 300 - 04911 - 0 . Retrieved 9 November 2013 . External links
+Wikiquote has quotations related to : Menstruation Wikimedia Commons has media related to Menstruation . Museum of Menstruation Human physiology of sexual
+reproduction Menstrual cycle Menarche Menstruation Follicular phase Ovulation Luteal phase Gametogenesis Spermatogenesis ( spermatogonium spermatocyte spermatid
+sperm ) Oogenesis ( oogonium oocyte ootid ovum ) Germ cell ( gonocyte gamete ) Human sexual behavior Sexual arousal Sexual intercourse Masturbation Erection
+Orgasm Ejaculation Insemination Fertilisation / Fertility Implantation Pregnancy Postpartum period Mechanics of sex Life span Prenatal development / Sexual
+dimorphism / Sexual differentiation ( Feminization Virilization
+</item 8>
+
+<item 9>
+Menstruation
+The egg is released from an ovary around day fourteen in the cycle ; the thickened lining of the uterus provides nutrients to an embryo after implantation . If
+pregnancy does not occur , the lining is released in what is known as menstruation . Contents ( hide ) 1 Onset and frequency 2 Health effects 2.1 Cramps 2.2
+Mood and behavior 2.3 Bleeding 2.4 Menstrual disorders 3 Ovulation suppression 3.1 Birth control 3.2 Breastfeeding 4 Menstrual management 4.1 Disposable
+products 4.2 Reusable products 4.3 Non-commercial items 5 Society and culture 5.1 Traditions and taboos 5.1. 1 Islam 5.1. 2 Judaism 5.1. 3 Hinduism 5.1. 4
+Christianity 5.1. 5 Secular culture 5.1.
+</item 9>
+
+<item 10>
+Menstruation
+Menstrual products ( also called `` feminine hygiene '' products ) are made to absorb or catch menstrual blood . A number of different products are available -
+some are disposable , some are reusable . Where women can afford it , items used to absorb or catch menses are usually commercially manufactured products .
+Disposable products Disposable sanitary napkin Tampon in plastic applicator Sanitary napkins ( also called sanitary towels or pads ) -- Rectangular pieces of
+material worn attached to the underwear to absorb menstrual flow , often with an adhesive backing to hold the pad in place . Disposable pads may contain wood
+pulp or gel products , usually with a plastic lining and bleached . Tampons -- Disposable cylinders of treated rayon / cotton blends or all - cotton fleece ,
+usually bleached , that are inserted into the vagina to absorb menstrual flow . Disposable menstrual cups made of soft plastic -- A firm , flexible cup - shaped
+device worn inside the vagina to collect menstrual flow . Reusable products Menstrual cup Cloth menstrual pad Menstrual cups -- A firm , flexible bell - shaped
+device worn inside the vagina to collect menstrual flow . Menstrual cups are usually made of silicone and can last 5 years or longer .
+</item 10>
+=== END ITEM id=f5aa83bf4ce3db21 ===
+
+=== ITEM id=9be5e24eddc968d4 ===
+Gold sentences and facts:
+Sentence 0: Brain tissue consumes a large amount of energy in proportion to its volume , so large brains place severe metabolic demands on animals . The need to limit body weight in order , for example , to fly , has apparently led to selection for a reduction of brain size in some species , such as bats . Most of the brain 's energy consumption goes into sustaining the electric charge ( membrane potential ) of neurons . Most vertebrate species devote between 2 % and 8 % of basal metabolism to the brain . In primates , however , the percentage is much higher -- in humans it rises to 20 -- 25 % . The energy consumption of the brain does not vary greatly over time , but active regions of the cerebral cortex consume somewhat more energy than inactive regions ; this forms the basis for the functional brain imaging methods PET , fMRI , and NIRS . The brain typically gets most of its energy from oxygen - dependent metabolism of glucose ( i.e. , blood sugar ) , but ketones provide a major alternative source , together with contributions from medium chain fatty acids ( caprylic and heptanoic acids ) , lactate , acetate , and possibly amino acids .
+  Fact 0.0: Brain tissue consumes a large amount of energy in proportion to its volume.
+  Fact 0.1: Large brains place severe metabolic demands on animals.
+  Fact 0.2: The need to limit body weight, for example in order to fly, has apparently led to selection for a reduction of brain size in some species.
+  Fact 0.3: Bats are one of the species that have apparently been selected for reduced brain size.
+  Fact 0.4: Most of the brain's energy consumption goes into sustaining the electric charge (membrane potential) of neurons.
+  Fact 0.5: Most vertebrate species devote between 2% and 8% of basal metabolism to the brain.
+  Fact 0.6: In primates, the percentage of basal metabolism devoted to the brain is much higher.
+  Fact 0.7: In humans, the brain's share of basal metabolism rises to 20-25%.
+  Fact 0.8: The energy consumption of the brain does not vary greatly over time.
+  Fact 0.9: Active regions of the cerebral cortex consume somewhat more energy than inactive regions.
+  Fact 0.10: This difference in energy use forms the basis for the functional brain imaging methods PET, fMRI, and NIRS.
+  Fact 0.11: The brain typically gets most of its energy from oxygen-dependent metabolism of glucose (blood sugar).
+  Fact 0.12: Ketones provide a major alternative energy source for the brain.
+  Fact 0.13: Medium chain fatty acids (caprylic and heptanoic acids), lactate, acetate, and possibly amino acids also contribute to the brain's energy supply.
+
+Retrieved items:
+<item 1>
+Brain
+In mammals , the cerebral cortex tends to show large slow delta waves during sleep , faster alpha waves when the animal is awake but inattentive , and chaotic -
+looking irregular activity when the animal is actively engaged in a task . During an epileptic seizure , the brain 's inhibitory control mechanisms fail to
+function and electrical activity rises to pathological levels , producing EEG traces that show large wave and spike patterns not seen in a healthy brain .
+Relating these population - level patterns to the computational functions of individual neurons is a major focus of current research in neurophysiology .
+Metabolism All vertebrates have a blood -- brain barrier that allows metabolism inside the brain to operate differently from metabolism in other parts of the
+body . Glial cells play a major role in brain metabolism by controlling the chemical composition of the fluid that surrounds neurons , including levels of ions
+and nutrients . Brain tissue consumes a large amount of energy in proportion to its volume , so large brains place severe metabolic demands on animals . The
+need to limit body weight in order , for example , to fly , has apparently led to selection for a reduction of brain size in some species , such as bats .
+</item 1>
+
+<item 2>
+Brain
+PMID 7282965 . Jump up ^ Raichle , M ; Gusnard , DA ( 2002 ) . `` Appraising the brain 's energy budget '' . Proc. Natl. Acad. Sci. U.S.A. 99 ( 16 ) : 10237 --
+10239 . Bibcode : 2002PNAS ... 9910237R . doi : 10.1073 / pnas. 172399499 . PMC 124895 . PMID 12149485 . Jump up ^ Mehagnoul - Schipper , DJ ; Van Der Kallen ,
+BF ; Colier , WNJM ; Van Der Sluijs , MC ; Van Erning , LJ ; Thijssen , HO ; Oeseburg , B ; Hoefnagels , WH ; Jansen , RW ( 2002 ) . `` Simultaneous
+measurements of cerebral oxygenation changes during brain activation by near - infrared spectroscopy and functional magnetic resonance imaging in healthy young
+and elderly subjects '' . Hum Brain Mapp. 16 ( 1 ) : 14 -- 23 .
+</item 2>
+
+<item 3>
+Brain
+Norepinephrine , which is involved in arousal , comes exclusively from a nearby small area called the locus coeruleus . Other neurotransmitters such as
+acetylcholine and dopamine have multiple sources in the brain , but are not as ubiquitously distributed as glutamate and GABA . Electrical activity Brain
+electrical activity recorded from a human patient during an epileptic seizure . As a side effect of the electrochemical processes used by neurons for signaling
+, brain tissue generates electric fields when it is active . When large numbers of neurons show synchronized activity , the electric fields that they generate
+can be large enough to detect outside the skull , using electroencephalography ( EEG ) or magnetoencephalography ( MEG ) . EEG recordings , along with
+recordings made from electrodes implanted inside the brains of animals such as rats , show that the brain of a living animal is constantly active , even during
+sleep . Each part of the brain shows a mixture of rhythmic and nonrhythmic activity , which may vary according to behavioral state .
+</item 3>
+
+<item 4>
+Cellular respiration
+Double / Multiple Sugars & Glycans Simple Sugars Inositol - P Amino Sugars & Sialic Acids Nucleotide Sugars Hexose - P Triose - P Glycerol P - glycerates
+Pentose - P Tetrose - P Propionyl - CoA Succinate Acetyl - CoA Pentose - P P - glycerates Glyoxylate Photosystems Pyruvate Lactate Acetyl - CoA Citrate Oxalo -
+acetate Malate Succinyl - CoA α - Keto - glutarate Ketone Bodies Respiratory Chain Serine Group Alanine Branched - chain Amino Acids Aspartate Group Homoserine
+Group & Lysine Glutamate Group & Proline Arginine Creatine & Polyamines Ketogenic & Glucogenic Amino Acids Amino Acids Shikimate Aromatic Amino Acids &
+Histidine Ascorbate ( Vitamin C ) δ - ALA Bile Pigments Hemes Cobalamins ( Vitamin B ) Various Vitamin B 's Calciferols ( Vitamin D ) Retinoids ( Vitamin A )
+Quinones ( Vitamin K ) & Carotenoids ( Vitamin E ) Cofactors
+</item 4>
+
+<item 5>
+Brain
+`` Acetate transport and utilization in the rat brain '' . J Neurochem. 109 Suppl 1 ( Suppl 1 ) : 46 -- 54 . doi : 10.1111 / j. 1471 - 4159.2009. 05895. x . PMC
+2722917 . PMID 19393008 . Jump up ^ Soengas , JL ; Aldegunde , M ( 2002 ) . `` Energy metabolism of fish brain '' . Comparative Biochemistry and Physiology B.
+131 ( 3 ) : 271 -- 296 . doi : 10.1016 / S1096 - 4959 ( 02 ) 00022 - 2 . PMID 11959012 . ^ Jump up to : Carew , TJ ( 2000 ) . `` Ch. 1 '' . Behavioral
+Neurobiology : the Cellular Organization of Natural Behavior . Sinauer Associates . ISBN 978 - 0 - 87893 - 092 - 0 . Jump up ^ Dafny , N. `` Anatomy of the
+spinal cord '' .
+</item 5>
+
+<item 6>
+Brain
+Hum Brain Mapp. 16 ( 1 ) : 14 -- 23 . doi : 10.1002 / hbm. 10026 . PMID 11870923 . Jump up ^ Ebert , D. ; Haller , RG. ; Walton , ME . ( Jul 2003 ) . `` Energy
+contribution of octanoate to intact rat brain metabolism measured by 13C nuclear magnetic resonance spectroscopy '' . J Neurosci. 23 ( 13 ) : 5928 -- 35 . PMID
+12843297 . Jump up ^ Marin - Valencia , I. ; Good , LB. ; Ma , Q. ; Malloy , CR. ; Pascual , JM . ( Feb 2013 ) . `` Heptanoate as a neural fuel : energetic and
+neurotransmitter precursors in normal and glucose transporter I - deficient ( G1D ) brain '' . J Cereb Blood Flow Metab. 33 ( 2 ) : 175 -- 82 . doi : 10.1038 /
+jcbfm. 2012.151 . PMC 3564188 .
+</item 6>
+
+<item 7>
+Brain
+Most of the brain 's energy consumption goes into sustaining the electric charge ( membrane potential ) of neurons . Most vertebrate species devote between 2 %
+and 8 % of basal metabolism to the brain . In primates , however , the percentage is much higher -- in humans it rises to 20 -- 25 % . The energy consumption of
+the brain does not vary greatly over time , but active regions of the cerebral cortex consume somewhat more energy than inactive regions ; this forms the basis
+for the functional brain imaging methods PET , fMRI , and NIRS . The brain typically gets most of its energy from oxygen - dependent metabolism of glucose (
+i.e. , blood sugar ) , but ketones provide a major alternative source , together with contributions from medium chain fatty acids ( caprylic and heptanoic acids
+) , lactate , acetate , and possibly amino acids . Functions Model of a neural circuit in the cerebellum , as proposed by James S. Albus . Information from the
+sense organs is collected in the brain . There it is used to determine what actions the organism is to take . The brain processes the raw data to extract
+information about the structure of the environment .
+</item 7>
+
+<item 8>
+Brain
+2012.151 . PMC 3564188 . PMID 23072752 . Jump up ^ Boumezbeur , F. ; Petersen , KF. ; Cline , GW. ; Mason , GF. ; Behar , KL. ; Shulman , GI. ; Rothman , DL. (
+Oct 2010 ) . `` The contribution of blood lactate to brain energy metabolism in humans measured by dynamic 13C nuclear magnetic resonance spectroscopy '' . J
+Neurosci. 30 ( 42 ) : 13983 -- 91 . doi : 10.1523 / JNEUROSCI. 2040 - 10.2010 . PMC 2996729 . PMID 20962220 . Jump up ^ Deelchand , DK. ; Shestov , AA. ; Koski
+, DM. ; Uğurbil , K. ; Henry , PG . ( May 2009 ) . `` Acetate transport and utilization in the rat brain '' . J Neurochem.
+</item 8>
+
+<item 9>
+Brain
+In rituals Some archaeological evidence suggests that the mourning rituals of European Neanderthals also involved the consumption of the brain . The Fore people
+of Papua New Guinea are known to eat human brains . In funerary rituals , those close to the dead would eat the brain of the deceased to create a sense of
+immortality . A prion disease called kuru has been traced to this . For Tanning The brain can be useful to hunters : most animals have enough brain matter for
+use in the tanning of their own hides . See also Brain -- computer interface Central nervous system disease List of neuroscience databases Neurological disorder
+Neuroplasticity Optogenetics Outline of neuroscience References Jump up ^ Pelvig , DP ; Pakkenberg , H ; Stark , AK ; Pakkenberg , B ( 2008 ) . `` Neocortical
+glial cell numbers in human brains '' . Neurobiology of Aging. 29 ( 11 ) : 1754 -- 1762 . doi : 10.1016 / j. neurobiolaging. 2007.04. 013 . PMID 17544173 . Jump
+up ^ Yuste , Rafael ; Church , George M.
+</item 9>
+
+<item 10>
+Photosynthesis
+- P Tetrose - P Propionyl - CoA Succinate Acetyl - CoA Pentose - P P - glycerates Glyoxylate Photosystems Pyruvate Lactate Acetyl - CoA Citrate Oxalo - acetate
+Malate Succinyl - CoA α - Keto - glutarate Ketone Bodies Respiratory Chain Serine Group Alanine Branched - chain Amino Acids Aspartate Group Homoserine Group &
+Lysine Glutamate Group & Proline Arginine Creatine & Polyamines Ketogenic & Glucogenic Amino Acids Amino Acids Shikimate Aromatic Amino Acids & Histidine
+Ascorbate ( Vitamin C ) δ - ALA Bile Pigments Hemes Cobalamins ( Vitamin B ) Various Vitamin B 's Calciferols ( Vitamin D ) Retinoids ( Vitamin A ) Quinones (
+Vitamin K ) & Carotenoids ( Vitamin E ) Cofactors Vitamins & Minerals Antioxidants PRPP Nucleotides Nucleic Acids Proteins Glycoproteins & Proteoglycans
+Chlorophylls MEP MVA Acetyl - CoA Polyketides Terpenoid Backbones
+</item 10>
+=== END ITEM id=9be5e24eddc968d4 ===

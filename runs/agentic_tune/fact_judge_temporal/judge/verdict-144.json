@@ -1,0 +1,57 @@
+[
+{"id": "dafa06d73531af9c", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]}
+]},
+{"id": "d3747d0c1f136631", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX"}, {"item": 2, "quote": "how FTX went from the third-largest crypto exchange valued at a peak of $32 billion to bankruptcy"}]},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "has pleaded not-guilty to some seven charges of fraud and conspiracy"}, {"item": 7, "quote": "ahead of a verdict and potential sentencing for seven counts"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 5, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 5, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]}
+]},
+{"id": "adc0bf6166b76941", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "He immediately left the game and proceeded to the locker room following the hit, and it was confirmed that he would not return with a head injury."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "He immediately left the game and proceeded to the locker room following the hit, and it was confirmed that he would not return with a head injury."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "He immediately left the game and proceeded to the locker room following the hit, and it was confirmed that he would not return with a head injury."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room."}]}
+]},
+{"id": "1d95a6900c7bdc81", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "The company did accomplish that goal, but in doing so, it inadvertently and profoundly changed how the internet looked."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "The company did accomplish that goal, but in doing so, it inadvertently and profoundly changed how the internet looked."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "9d19e95377b218b0", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "That answer ultimately lies with the jury"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "which was selected on Wednesday morning"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 3, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]}
+]},
+{"id": "79d33ec745a74ac9", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room."}]}
+]}
+]

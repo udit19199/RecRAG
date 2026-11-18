@@ -1,0 +1,483 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "c73542b11cac4806",
+   "gold": [
+    {
+     "sentence": "The 'Burbs is a 1989 American comedy thriller film directed by Joe Dante starring Tom Hanks, Bruce Dern, Carrie Fisher, Rick Ducommun, Corey Feldman, Wendy Schaal and Henry Gibson.",
+     "facts": {
+      "0.0": "The 'Burbs is a 1989 American film.",
+      "0.1": "The 'Burbs is a comedy thriller film.",
+      "0.2": "The 'Burbs was directed by Joe Dante.",
+      "0.3": "The 'Burbs stars Tom Hanks.",
+      "0.4": "The 'Burbs stars Bruce Dern.",
+      "0.5": "The 'Burbs stars Carrie Fisher.",
+      "0.6": "The 'Burbs stars Rick Ducommun.",
+      "0.7": "The 'Burbs stars Corey Feldman.",
+      "0.8": "The 'Burbs stars Wendy Schaal.",
+      "0.9": "The 'Burbs stars Henry Gibson."
+     }
+    },
+    {
+     "sentence": "Richard \"Rick\" Ducommun (July 3, 1952 – June 12, 2015) was a Canadian actor, comedian and writer who appeared in films and television.",
+     "facts": {
+      "1.0": "Rick Ducommun was born on July 3, 1952.",
+      "1.1": "Rick Ducommun died on June 12, 2015.",
+      "1.2": "Rick Ducommun was a Canadian actor.",
+      "1.3": "Rick Ducommun was a Canadian comedian.",
+      "1.4": "Rick Ducommun was a Canadian writer.",
+      "1.5": "Rick Ducommun appeared in films.",
+      "1.6": "Rick Ducommun appeared in television."
+     }
+    }
+   ],
+   "items": [
+    "Pizza 73\nPizza 73 is a Canadian restaurant chain that offers a number of different styles of pizza, along with chicken wings.\n\n It has been operated by Pizza Pizza since 2007.\n\n Toronto-based Pizza Pizza had acquired the restaurant for a total of $CAN70.2 million.\n\n There are 89 locations throughout Western Canada, which include the provinces of British Columbia, Alberta, and Saskatchewan.\n\n The restaurant's name originates from its original phone number: 473–7373.\n\n Founded by David Tougas and Guy Goodwin in 1985, Pizza 73 is headquartered in Edmonton, Alberta, Canada.",
+    "The 'Burbs\nThe 'Burbs is a 1989 American comedy thriller film directed by Joe Dante starring Tom Hanks, Bruce Dern, Carrie Fisher, Rick Ducommun, Corey Feldman, Wendy Schaal and Henry Gibson.\n\n The film was written by Dana Olsen, who also has a cameo in the movie.\n\n The film pokes fun at suburban environments and their eccentric dwellers.",
+    "Neon City\nNeon City (also known as Anno 2053 in Italy, Neonski Grad in Serbia) is a 1991 Canadian post-apocalyptic science fiction film directed by Monte Markham and written by Jeff Begun and Ann Lewis Hamilton, under the pseudonym Buck Finch.\n\n The cast includes Michael Ironside, Vanity, Lyle Alzado, Valerie Wildman, Nick Klar, Juliet Landau, Richard Sanders and Markham.",
+    "Freebie and the Bean\nFreebie and the Bean is a 1974 American action-comedy film about two off-beat police detectives who wreak havoc in San Francisco attempting to bring down a local organized crime boss.\n\n The picture, a precursor to the buddy cop film genre popularized a decade later, stars James Caan, Alan Arkin, Loretta Swit and Valerie Harper.\n\n Harper was nominated for the Golden Globe for New Star of the Year for playing the Hispanic wife of Alan Arkin.\n\n The film was directed by Richard Rush.\n\n An article in Rolling Stone magazine alleged that Stanley Kubrick called \"Freebie and the Bean\" the best film of 1974.\n\n Arkin and Caan would not appear in another movie together until the 2008 film adaptation of \"Get Smart\".",
+    "Dunston Checks In\nDunston Checks In is a 1996 American family comedy film starring Eric Lloyd, Graham Sack, Jason Alexander, Faye Dunaway, Rupert Everett, Paul Reubens, Glenn Shadix, and introducing Sam the Orangutan as Dunston.\n\n It was written by John Hopkins and Bruce Graham and directed by Ken Kwapis.",
+    "Marty Belafsky\nMarty Belafsky (born September 19, 1975) is an American actor/comedian born in Los Angeles, California.\n\n He began acting professionally at age 13 and was soon cast as Louis Plumb on the short-lived NBC series \"Hull High\".\n\n Shortly thereafter, Belafsky landed the role of Crutchy in the Disney musical film, \"Newsies\".\n\n He continued acting through his teens, making appearances in such television shows as \"The Wonder Years\", \"Great Scott\" and \"Step By Step\" and the film \"Wrestling Ernest Hemingway\".\n\n Belafsky also voiced Kent Swanson in the video game series \"Dead Rising\" released in 2006.",
+    "Jebb Fink\nJebb Fink is an American-Canadian stand-up comedian and television personality.\n\n Best known as a reporter and host for \"the Big Breakfast\" on A-Channel, Calgary.\n\n He won a Gemini as co-creator of the CBC comedy \"An American in Canada\" and was a weather presenter on \"Your City\" for City TV Calgary, he also hosted the short-lived late night talk show \"Global Late Night\" for the Global Television Network in 2004.",
+    "Vegas Vacation\nVegas Vacation is a 1997 American comedy film directed by Stephen Kessler.\n\n It is the fourth installment in \"National Lampoon\"’s \"Vacation\" film series, and was written by Elisa Bell, based on a story by Bell and Bob Ducsay.\n\n The film stars Chevy Chase, Beverly D'Angelo and Randy Quaid, with Ethan Embry and Marisol Nichols as Griswold children Rusty and Audrey.\n\n The film opened at #4 at the box office and grossed over $36.4 million domestically.\n\n \"Vegas Vacation\" became the first theatrical \"Vacation\" film not to carry the National Lampoon label or a screenwriting credit from John Hughes.",
+    "Araby Lockhart\nAraby Lockhart (born December 4, 1926) is a Canadian stage and television actress, best known for her performances in the films \"Capote\" and \"Police Academy\" and her stage performances as a member of Hart House Theatre and the Straw Hat Players.\n\n Lockhart has also served as President of the Actors' Fund of Canada.",
+    "Night Life (film)\nNight Life is a 1989 American zombie comedy film directed by David Acomba and starring Scott Grimes, John Astin, and Cheryl Pollak.\n\n It centers around a high school nerd named Archie Melville who is harassed from beyond the grave by the zombie corpses of his former high school bullies (recently deceased) after they are brought back to life by a freak lightning storm.\n\n It is also known as Grave Misdemeanors."
+   ]
+  },
+  {
+   "id": "bb68618e960e6a84",
+   "gold": [
+    {
+     "sentence": "Matthew Arnold \"Matt\" Thiessen (born August 12, 1980) is a Canadian-American musician, singer and songwriter known for being co-founder, lead singer, guitarist, pianist, and primary songwriter for the Christian rock band Relient K.",
+     "facts": {
+      "0.0": "Matthew Arnold 'Matt' Thiessen was born August 12, 1980.",
+      "0.1": "Matt Thiessen is a Canadian-American musician, singer, and songwriter.",
+      "0.2": "Matt Thiessen is known for being co-founder of the Christian rock band Relient K.",
+      "0.3": "Matt Thiessen is known for being lead singer of the Christian rock band Relient K.",
+      "0.4": "Matt Thiessen is known for being guitarist of the Christian rock band Relient K.",
+      "0.5": "Matt Thiessen is known for being pianist of the Christian rock band Relient K.",
+      "0.6": "Matt Thiessen is known for being primary songwriter for the Christian rock band Relient K."
+     }
+    },
+    {
+     "sentence": "George Thorogood (born February 24, 1950) is an American musician, singer and songwriter from Wilmington, Delaware.",
+     "facts": {
+      "1.0": "George Thorogood was born February 24, 1950.",
+      "1.1": "George Thorogood is an American musician, singer, and songwriter.",
+      "1.2": "George Thorogood is from Wilmington, Delaware."
+     }
+    }
+   ],
+   "items": [
+    "More George Thorogood and The Destroyers\nMore George Thorogood and the Destroyers is the fourth album by George Thorogood and The Destroyers, released in 1980.\n\n An alternate name for the album is I'm Wanted.",
+    "Tom Johnston (musician)\nCharles Thomas \"Tom\" Johnston (born August 15, 1948) is an American musician.\n\n He is a guitarist and vocalist, known principally as a founder, guitarist, lead vocalist and songwriter for the rock group The Doobie Brothers, as well as for his own solo career.\n\n His off-and-on career with The Doobie Brothers spans more than 40 years, during which time the band exhibited numerous successful styles.",
+    "Matt Thiessen\nMatthew Arnold \"Matt\" Thiessen (born August 12, 1980) is a Canadian-American musician, singer and songwriter known for being co-founder, lead singer, guitarist, pianist, and primary songwriter for the Christian rock band Relient K.\n\n With Relient K, he has released eight full-length albums, including three that were certified Gold, and three that peaked in the top twenty on the \"Billboard\" 200.\n\n Outside of his work with Relient K, Thiessen maintains a low-profile side project called Matthew Thiessen and the Earthquakes.\n\n In 2009, he co-produced and collaborated on Owl City's album \"Ocean Eyes\".",
+    "Better Than the Rest\nBetter Than the Rest is the third album (mini-album) of songs by George Thorogood and the Destroyers, recorded in 1974 and released in 1979.\n\n At the time the songs were recorded, Thorogood was an unknown artist who was not signed to a record label.\n\n In 1979, after Thorogood had released his first two official albums on Rounder Records, \"Better Than The Rest\" was released by MCA.\n\n In 1986, the songs from this album were released on compact disc with the title \"Nadine\" using a different track order.",
+    "“Nadine” (1986) is a reordered CD reissue of George Thorogood and the Destroyers’ “Better Than the Rest” (1979), made from Thorogood’s first, 1974 recordings. Thorogood, a Wilmington-born boogie-blues musician, is known for “Bad to the Bone” and blues covers. The text also notes the band’s 1977 debut, 1980 “More George Thorogood” (“I’m Wanted",
+    "2120 South Michigan Ave.\n2120 South Michigan Ave. is the fifteenth studio album by George Thorogood and the Destroyers.\n\n It was released on June 14, 2011 on the Capitol Records label.\n\n The album peaked at #2 on the \"Billboard\" Top Blues Albums chart.\n\n The title refers to the address of the offices and recording studios of Chess Records in Chicago.\n\n The album contains ten covers of songs recorded on Chess Records by artists such as Chuck Berry, Bo Diddley, Willie Dixon, and Muddy Waters; plus a cover of The Rolling Stones' instrumental \"2120 South Michigan Avenue\" and two original songs about Chess Records artists.\n\n Capitol Records approached Thorogood with the idea for the album and selected most of the songs.\n\n Buddy Guy and Charlie Musselwhite perform on the album, although their work was added after primary recording was complete.",
+    "Mike Mattison\nMike Mattison is an American musician and vocalist of the Grammy Award-winning blues rock/soul group, the Tedeschi Trucks Band, as well as lead vocalist and co-founder of the blues rock trio Scrapomatic.\n\n Mattison's vocal sound has been described as \"strong,\" with an \"expressive blues voice\".\n\n As lead vocalist of Scrapomatic, he picked up a nomination for Minnesota Music Awards best male vocalist, and both he and co-founder Paul Olsen were also nominated for best R&B Group.\n\n Mattison was previously the lead vocalist of the Grammy Award winning Derek Trucks Band and has been a main songwriter of all three bands.\n\n He is also an active essayist who publishes on music and poetry.\n\n Since 2013 Mattison and Ernest Suarez have edited “Hot Rocks: Songs and Verse,” an ongoing feature in Five Points: A Journal of Literature and Art.",
+    "George Thorogood\nGeorge Thorogood (born February 24, 1950) is an American musician, singer and songwriter from Wilmington, Delaware.\n\n His \"high-energy boogie-blues\" sound became a staple of 1980s rock radio, with hits like his original songs \"Bad to the Bone\" and \"I Drink Alone\".\n\n He has also helped popularize older songs by American icons, such as \"Move It on Over\", \"Who Do You Love?\n\n\", and \"House Rent Boogie/One Bourbon, One Scotch, One Beer\", which became staples of classic rock radio.",
+    "Bob Thomas (actor)\nBob Thomas (born March 1, 1954 in Appalachia, Virginia ) is a radio personality, actor, and writer.\n\n He was one of the top radio announcers in Knoxville, Tennessee for 25 years.\n\n As an actor, he has appeared in many films and hundreds of commercials.\n\n He wrote two episodes of the popular TV show \"Lizzie McGuire\".\n\n In 2004, his voice was heard as \"Slammin' Sammy\" in the film \"Friday Night Lights\".",
+    "George Thorogood and the Destroyers (album)\nGeorge Thorogood and the Destroyers is the self-titled debut album by American blues rock band George Thorogood and the Destroyers, released in 1977.\n\n Consisting mostly of covers of blues hits, it included a medley of John Lee Hooker's \"House Rent Boogie\" and \"One Bourbon, One Scotch, One Beer\", the latter a song written by Rudy Toombs for Amos Milburn, and later covered by Hooker."
+   ]
+  },
+  {
+   "id": "184c764dfea61d34",
+   "gold": [
+    {
+     "sentence": "Andrew and Jeremy Get Married is a 2004 British documentary film written and directed by Don Boyd for the BBC.",
+     "facts": {
+      "0.0": "Andrew and Jeremy Get Married is a 2004 film.",
+      "0.1": "Andrew and Jeremy Get Married is a British documentary film.",
+      "0.2": "Andrew and Jeremy Get Married was written by Don Boyd.",
+      "0.3": "Andrew and Jeremy Get Married was directed by Don Boyd.",
+      "0.4": "Andrew and Jeremy Get Married was made for the BBC."
+     }
+    },
+    {
+     "sentence": "The Last Lions is a 2011 African nature documentary film by National Geographic Society, videotaped and directed by Dereck and Beverly Joubert.",
+     "facts": {
+      "1.0": "The Last Lions is a 2011 film.",
+      "1.1": "The Last Lions is an African nature documentary film.",
+      "1.2": "The Last Lions is by the National Geographic Society.",
+      "1.3": "The Last Lions was videotaped by Dereck and Beverly Joubert.",
+      "1.4": "The Last Lions was directed by Dereck and Beverly Joubert."
+     }
+    }
+   ],
+   "items": [
+    "The Last Lions\nThe Last Lions is a 2011 African nature documentary film by National Geographic Society, videotaped and directed by Dereck and Beverly Joubert.\n\n It was shot at the Okavango Delta in Botswana.\n\n The film premiered at the Palm Springs International Film Festival in January 2011 and was released in select theaters on February 18, 2011.\n\n The film follows in the tradition of other National Geographic big cat films, such as \"India: Land of the Tiger\" and \"Eye of the Leopard\".",
+    "The Wolf of Wall Street (2013 film)\nThe film marks the director's fifth collaboration with DiCaprio, after \"Gangs of New York\" (2002), \"The Aviator\" (2004), \"The Departed\" (2006) and \"Shutter Island\" (2010), as well as his second collaboration with Winter after the television series \"Boardwalk Empire\" (2010–14).",
+    "Aliens of the Deep\nAliens of the Deep is a 2005 documentary film, directed in part by James Cameron alongside fellow cameraman and friend Steven Quale, who would go on to direct \"Final Destination 5\" six years later, and filmed in the IMAX 3D format.\n\n It was produced by Walden Media and Walt Disney Pictures.\n\n Cameron teams with NASA scientists to explore the Mid-Ocean Ridges, submerged chains of mountains in the Atlantic and Pacific oceans that are home to some of the planet's more unusual forms of life.",
+    "Get Married 3\nGet Married 3 is an Indonesian romantic comedy directed by Monty Tiwa and released in 2011.\n\n A sequel to Hanung Bramantyo's \"Get Married\" and \"Get Married 2\", it stars Nirina Zubir and Fedi Nuril as a married couple attempting to raise their triplets while under intense pressure from their family and friends.\n\n The film was a commercial success and received favourable reviews in \"The Jakarta Post\" and \"Suara Karya\".",
+    "The Lion (2010 novel)\nThe Lion is a 2010 novel by American author Nelson DeMille.\n\n It is the fifth of DeMille's novels to feature Detective John Corey, now working as a contractor for the fictional FBI Anti-Terrorist Task Force in New York City.\n\n The novel is the sequel to \"Wild Fire\".\n\n The Lion is followed by DeMille’s 2012 novel, \"The Panther\".",
+    "Richard T. Jones\nRichard Timothy Jones (born January 16, 1972), known professionally as Richard T. Jones, is an American actor.\n\n Jones is best known for his portrayals of Laveinio in the dramatic film \"The Wood\" and Mike of the dramatic films \"Why Did I Get Married?\n\n\" and \"Why Did I Get Married Too?\n\n\".",
+    "Jack &amp; Diane (film)\nJack & Diane is a 2012 American romantic horror film written and directed by Bradley Rust Gray, and starring Riley Keough and Juno Temple.\n\n Olivia Thirlby and Ellen Page were originally cast for the lead roles in 2008 before the project was postponed.",
+    "Two Brides and a Baby\nTwo Brides and a Baby is a 2011 Nigerian romantic drama film directed by Teco Benson, starring Keira Hewatch, Kalu Ikeagwu, OC Ukeje, Chelsea Eze, Stella Damasus-Aboderin and Okey Uzoeshi.\n\n It premiered on November 17, 2011.\n\n It received awards and nominations at Africa Movie Academy Awards, Best of Nollywood Awards and Africa Magic Viewers Choice Awards.",
+    "Andrew and Jeremy Get Married\nAndrew and Jeremy Get Married is a 2004 British documentary film written and directed by Don Boyd for the BBC.\n\n It tells the story of two Englishmen, Andrew Thomas and Jeremy Trafford, as they plan for their commitment ceremony.\n\n Originally commissioned for the \"BBC Storyville\" series, the film premiered at the 2004 Toronto International Film Festival.",
+    "Peter Jackson\nSir Peter Robert Jackson {'1': \", '2': \", '3': \", '4': \"} (born 31 October 1961) is a New Zealand film director, screenwriter and film producer.\n\n He is best known as the director, writer, and producer of \"The Lord of the Rings\" trilogy (2001–03) and \"The Hobbit\" trilogy (2012–14), both of which are adapted from the novels of the same name by J. R. R. Tolkien.\n\n Other notable films include the critically lauded drama \"Heavenly Creatures\" (1994), the mockumentary \"Forgotten Silver\" (1995), the horror comedy \"The Frighteners\" (1996), the epic monster remake film \"King Kong\" (2005), and the supernatural drama film \"The Lovely Bones\" (2009).\n\n He also produced \"District 9\" (2009), \"The Adventures of Tintin: The Secret of the Unicorn\" (2011), and the documentary \"West of Memphis\" (2012)."
+   ]
+  },
+  {
+   "id": "137f49239de53c39",
+   "gold": [
+    {
+     "sentence": " He finished second to Paul Hornung in voting for the Heisman Trophy in 1956.",
+     "facts": {
+      "0.0": "The person finished second in voting for the Heisman Trophy in 1956.",
+      "0.1": "Paul Hornung finished first in that Heisman Trophy voting in 1956."
+     }
+    },
+    {
+     "sentence": "Paul Vernon Hornung (born December 23, 1935), nicknamed \"The Golden Boy\", is a former professional American football player, a Hall of Fame running back for the Green Bay Packers of the National Football League (NFL) from 1957 to 1966, winning four NFL titles and the first Super Bowl.",
+     "facts": {
+      "1.0": "Paul Vernon Hornung was born on December 23, 1935.",
+      "1.1": "Paul Vernon Hornung is nicknamed \"The Golden Boy\".",
+      "1.2": "Paul Vernon Hornung is a former professional American football player.",
+      "1.3": "Paul Vernon Hornung is a Hall of Fame running back.",
+      "1.4": "Paul Vernon Hornung played for the Green Bay Packers of the National Football League (NFL).",
+      "1.5": "Paul Vernon Hornung played for the Green Bay Packers from 1957 to 1966.",
+      "1.6": "Paul Vernon Hornung won four NFL titles.",
+      "1.7": "Paul Vernon Hornung won the first Super Bowl."
+     }
+    }
+   ],
+   "items": [
+    "Johnny Majors\nJohn Terrill Majors (born May 21, 1935) is a former American football player and coach.\n\n A standout halfback at the University of Tennessee, he was an All-American in 1956 and a two-time winner of the Southeastern Conference Most Valuable Player award, in 1955 and 1956.\n\n He finished second to Paul Hornung in voting for the Heisman Trophy in 1956.\n\n Majors served as the head football coach at Iowa State University (1968–1972), the University of Pittsburgh (1973–1976, 1993–1996), and Tennessee (1977–1992), compiling a career college football record of 185–137–10.\n\n His 1976 Pittsburgh squad won a national championship after capping a 12–0 season with a victory in the Sugar Bowl.\n\n Majors was inducted into the College Football Hall of Fame as a player in 1987.",
+    "Heisman Trophy\nThe Heisman Memorial Trophy (usually known colloquially as the Heisman Trophy or The Heisman), is awarded annually to the most outstanding player in college football in the United States whose performance best exhibits the pursuit of excellence with integrity.\n\n Winners epitomize great ability combined with diligence, perseverance, and hard work.\n\n It is presented by the Heisman Trophy Trust in early December before the postseason bowl games.",
+    "Frank Eliscu\nFrank Eliscu (1912–1996) was an American sculptor and art teacher who designed and created the Heisman Memorial Football Trophy in 1935 when he was only 20 years old.\n\n The first Heisman Trophy, a strong young bull of a football player cast in bronze, was presented to a college football player in 1935, and is considered one of the greatest honors a college athlete can receive.\n\n Over the years the Heisman Committee has paid tribute to Eliscu and his creation several times, and in 1985, the Heisman Committee invited him to speak at the 50th Anniversary Heisman ceremonies.",
+    "2012 Texas A&amp;M vs. Alabama football game\nThe 2012 Texas A&M vs. Alabama football game was a college football game between the Texas A&M Aggies and Alabama Crimson Tide at Bryant–Denny Stadium in Tuscaloosa, Alabama.\n\n This was the game where Texas A&M freshman quarterback and eventual Heisman Trophy winner Johnny Manziel completed 24 of 31 passes, had 253 passing yards, and two passing touchdowns with 92 rushing yards to help No. 15 Texas A&M upset No. 1 Alabama 29–24, which led him to being the first freshman to win the Heisman Trophy.",
+    "1976 NCAA Division I football season\nThe 1976 NCAA Division I football season ended with a championship for the Panthers of the University of Pittsburgh.\n\n Led by head coach Johnny Majors (voted the AFCA Coach of the Year), the Pitt Panthers brought a college football championship to the home of the defending pro football champions, the Steelers.\n\n Pitt also had the Heisman Trophy winner, Tony Dorsett; the Panthers had been ranked ninth in the preseason AP poll.",
+    "Heisman curse\nAlthough many Heisman winners have not enjoyed success at the professional level, including players like Matt Leinart, Andre Ware, Jason White, Rashaan Salaam, Eric Crouch, Ty Detmer, Troy Smith and Gino Torretta, proponents of the \"curse\" rarely cite highly successful players such as Barry Sanders, Charles Woodson, Eddie George, Tim Brown, Bo Jackson, Marcus Allen, Earl Campbell, and Tony Dorsett among the notables.",
+    "Terry Baker\nTerry Wayne Baker (born May 5, 1941) is a former American football and basketball player.\n\n He played college football and college basketball at the Oregon State University.\n\n He played as a quarterback for the Oregon State Beavers football team from 1960 to 1962, winning the Heisman Trophy as senior.\n\n In the spring of his senior year, he played in the Final Four of the 1963 NCAA Men's Division I Basketball Tournament with the Oregon State Beavers men's basketball team.\n\n To date, he is the only athlete to win a Heisman Trophy and play in the Final Four.\n\n Baker was the first overall pick in the 1963 NFL draft and played with the Los Angeles Rams of the National Football League (NFL) from 1963 to 1965.\n\n He then played for one season in the Canadian Football League (CFL) with the Edmonton Eskimos, in 1966.\n\n Baker was inducted into the College Football Hall of Fame in 1982.",
+    "Charlie Ward\nCharlie Ward Jr. (born October 12, 1970) is a retired American professional NBA basketball player, college football Heisman Trophy winner, Davey O'Brien Award winner and a Major League Baseball draftee.\n\n Despite his NCAA football success, Ward was one of the very few players who won a Heisman trophy but was not drafted in the NFL draft.\n\n He won the College Football National Championship with the Florida State University Seminoles.\n\n Ward played several years with the New York Knicks and started in the NBA Finals.\n\n He was inducted in the College Football Hall of Fame in 2006.\n\n An avid tennis player, Ward also displayed his skills at the Arthur Ashe Tennis Tournament in 1994.",
+    "1997 Tennessee Volunteers football team\nHowever, the Vols' defense could not stop Nebraska's rushing attack, giving up more than 400 yards on the ground in a 42–17 loss.\n\n As a senior, Manning won numerous awards.\n\n He was a consensus first-team All-American and won the Maxwell Award, the Davey O'Brien Award, the Johnny Unitas Award, and the Best College Football Player ESPY Award, among others.\n\n However, he did not win the Heisman Trophy, finishing runner-up to Charles Woodson, a CB from Michigan, and the only defensive player ever to win the Heisman Trophy.",
+    "Graph query row:\nperson: Paul Vernon Hornung\nbirth_date: December 23, 1935\nheisman_trophy: None\ntrophy_connection: None\nconnected_person: None\nperson_connection: None"
+   ]
+  },
+  {
+   "id": "7a287654cfb52872",
+   "gold": [
+    {
+     "sentence": "Inner Secrets is the ninth studio album by Santana.",
+     "facts": {
+      "0.0": "Inner Secrets is a studio album by Santana.",
+      "0.1": "Inner Secrets is Santana's ninth studio album."
+     }
+    },
+    {
+     "sentence": "Carlos Santana    (born July 20, 1947) is a Mexican and American musician who first became famous in the late 1960s and early 1970s with his band, Santana, which pioneered a fusion of rock and Latin American music.",
+     "facts": {
+      "1.0": "Carlos Santana was born on July 20, 1947.",
+      "1.1": "Carlos Santana is a Mexican musician.",
+      "1.2": "Carlos Santana is an American musician.",
+      "1.3": "Carlos Santana first became famous in the late 1960s and early 1970s.",
+      "1.4": "Carlos Santana first became famous with his band Santana.",
+      "1.5": "The band Santana pioneered a fusion of rock and Latin American music."
+     }
+    }
+   ],
+   "items": [
+    "Graph query row:\nentity: Inner Secrets\nrelationship: CREATED_BY\nrelated: Santana",
+    "Suicide (1977 album)\nSuicide is the debut album from the American rock band Suicide.\n\n It was released in 1977 on Red Star Records and produced by Craig Leon and Marty Thau.\n\n The album was recorded in four days at Ultima Sound Studios in New York and featured Martin Rev's minimalist electronics and harsh, repetitive rhythms paired with Alan Vega's rock and roll-inspired vocals and depictions of urban life.",
+    "Moment of Truth (Terri Nunn album)\nMoment of Truth is the début and sole solo album from American singer and actress Terri Nunn, best known as lead singer of the American New Wave/Synthpop band Berlin.",
+    "Inner Secrets\nInner Secrets is the ninth studio album by Santana.\n\n It was released in 1978 and marks the start of the phase of Santana's career where he moved away from the fusion of Latin, jazz, rock and blues that marked his previous records and began to move towards an album-oriented rock direction.\n\n As such, the album's quality is widely disputed among fans. \"\n\nStormy\" and \"One Chain (Don't Make No Prison)\" were both hit singles.\n\n In The Netherlands \"Well All Right\" was released as a single and reached #22 in the top 40.",
+    "Hot Streets\nHot Streets is the tenth studio album (twelfth overall) by the American band Chicago, released in 1978.\n\n In many ways, \"Hot Streets\" marked the beginning of a new era for the band, turning to disco music, a move which would be derided in retrospect.\n\n It was also the band's first album with all-new material released since their second that didn't have a numbered title.\n\n It was also the first album not to feature original guitarist/vocalist Terry Kath, who died from an accidental self-inflicted gunshot wound in January 1978.\n\n He was replaced by Donnie Dacus on this album.",
+    "The V.I.P.s (band)\nThat album was published in 1967 on Liberty Records and contained only five songs from two minutes to more than 15 minutes of psychedelic and almost meditative state kind of music.",
+    "Seven (Poco album)\nSeven is the sixth studio album (seventh overall) by American country rock band Poco.\n\n It is the first album they made after leader Richie Furay left the band.\n\n The front cover was designed by Phil Hartman.",
+    "The V.I.P.s (band)\nThe V.I.P.s were a British R&B musical ensemble formed in Carlisle, Cumberland, (North West England) in late 1963, out of an earlier outfit known as The Ramrods, who had formed in Carlisle in 1960.\n\n After a change of personnel in April 1967, the band changed their name to \"Art\", and released the album \"Supernatural Fairy Tales\".\n\n They also participated to a psychedelic bizarre album called \"Featuring The Human Host And The Heavy Metal Kids\" by a collective known as Hapshash and the Coloured Coat, formed by Guy Stevens and an influential British graphic design and avant-garde musical partnership between Michael English and Nigel Waymouth.\n\n The musicians involved in that project were Mike Harrison on keys and vocals, Luther Grosvenor on guitars, Greg Ridley on bass and Mike Kellie on drums, as well as performances by Stevens, English and Waymouth.\n\n It was the first time that the term \"heavy metal\" was ever used in music, even though that album had nothing to do with heavy metal music, being closer to psychedelic music.",
+    "Chicago 13\nChicago 13 is the eleventh studio album by the American band Chicago, released in 1979.\n\n The follow-up to \"Hot Streets\", \"Chicago 13\" is often critically disfavored.\n\n This would be the band's final release that features lead guitarist Donnie Dacus, who had followed late, founding lead guitarist, Terry Kath.\n\n All band members would contribute to the songwriting (one of only two albums where this is the case, with the other being \"Chicago VII\").",
+    "The Secret (Vib Gyor EP)\nThe Secret EP is the EP from the Leeds band Vib Gyor.\n\n It was released on 5 March 2007, and is the follow-up to their well-received debut single, \"Fallen\".\n\n It was recorded in Bath and produced by Paul Corkett.\n\n It also has a hidden fifth instrumental track - which the band recently revealed was called <:.\n\n~.\n\n:>"
+   ]
+  },
+  {
+   "id": "88ce3d86176471fe",
+   "gold": [
+    {
+     "sentence": "Javier Alberto Frana (born 25 December 1966) is a former tennis player from Argentina and current tennis commentator for ESPN Latin America.",
+     "facts": {
+      "0.0": "Javier Alberto Frana was born on 25 December 1966.",
+      "0.1": "Javier Alberto Frana is a former tennis player.",
+      "0.2": "Javier Alberto Frana is from Argentina.",
+      "0.3": "Javier Alberto Frana is a current tennis commentator.",
+      "0.4": "Javier Alberto Frana is a tennis commentator for ESPN Latin America."
+     }
+    },
+    {
+     "sentence": "Thomaz Koch (born May 11, 1945 in Porto Alegre), is a left-handed former tennis player from Brazil, who was a quarter-finalist at the French Open, Wimbledon and the U.S. National Championships.",
+     "facts": {
+      "1.0": "Thomaz Koch was born on May 11, 1945.",
+      "1.1": "Thomaz Koch was born in Porto Alegre.",
+      "1.2": "Thomaz Koch is a left-handed former tennis player.",
+      "1.3": "Thomaz Koch is from Brazil.",
+      "1.4": "Thomaz Koch was a quarter-finalist at the French Open.",
+      "1.5": "Thomaz Koch was a quarter-finalist at Wimbledon.",
+      "1.6": "Thomaz Koch was a quarter-finalist at the U.S. National Championships."
+     }
+    }
+   ],
+   "items": [
+    "Paulo Borrachinha\nPaulo Henrique Costa (born April 21, 1991), better known as Paulo Borrachinha, is a Brazilian mixed martial artist currently competing in the Middleweight division of the Ultimate Fighting Championship.\n\n In the day August 3 of 2017, Borracinha and the Clube Atlético Mineiro officialized institutional partnership.\n\n The agreement did not create a bond between the club and the athlete.\n\n The agreement allows the use of the athletic shield of Atlético in the training uniforms of the fighter, within the possibilities of his contract with the UFC.",
+    "Javier Frana\nJavier Alberto Frana (born 25 December 1966) is a former tennis player from Argentina and current tennis commentator for ESPN Latin America.",
+    "Thomaz Koch\nThomaz Koch (born May 11, 1945 in Porto Alegre), is a left-handed former tennis player from Brazil, who was a quarter-finalist at the French Open, Wimbledon and the U.S. National Championships.",
+    "1994 Movistar Open – Singles\nJavier Frana was the defending champion but lost in the quarterfinals to Alberto Berasategui.",
+    "1996 Abierto Mexicano de Tenis – Doubles\nJavier Frana and Leonardo Lavalle were the defending champions but lost in the first round to Luis Lobo and Javier Sánchez.",
+    "1995 Nottingham Open – Singles\nJavier Frana defeated Todd Woodbridge 7–6, 6–3 in the final to secure the title.",
+    "Franz Josef Och\nFranz Josef Och (November 2, 1971) is a German computer scientist.\n\n He is currently working at Grail (an Illumina company) as Head of Data Science.\n\n Prior to this he was Chief Data Scientist at Human Longevity Inc., and earlier worked for Google as a Distinguished Research Scientist and head of machine translation based at Google's Mountain View, California, headquarters south of San Francisco.",
+    "1993 Movistar Open – Singles\nJavier Frana defeated Emilio Sánchez 7–5, 3–6, 6–3 to win the 1993 Movistar Open singles competition.",
+    "1996 Nottingham Open – Singles\nJavier Frana was the defending champion but lost in the first round to Marc-Kevin Goellner.",
+    "Adam František Kollár\nAdam František Kollár de Keresztén (German: \"Adam Franz Kollar von Keresztén\" , Hungarian: \"kereszténi Kollár Ádám Ferenc\" ; 1718–1783) was a Slovak jurist, Imperial-Royal Court Councilor and Chief Imperial-Royal Librarian, a member of Natio Hungarica in the Kingdom of Hungary, a historian, ethnologist, an influential advocate of Empress Maria Theresa's Enlightened and centralist policies.\n\n His advancement of Maria Theresa's status in the Kingdom of Hungary as its apostolic ruler in 1772 was used as an argument in support of the subsequent Habsburg annexations of Galicia and Dalmatia.\n\n Kollár is also credited with coining the term \"ethnology\" and providing its first definition in 1783.\n\n Some authors see him as one of the earliest pro-Slovak, pro-Slavic, and pan-Slavic activists in the Habsburg Monarchy."
+   ]
+  },
+  {
+   "id": "d94894ec5dbff003",
+   "gold": [
+    {
+     "sentence": "Ronkonkoma is a major railroad station and transportation hub along the Main Line of the Long Island Rail Road in Ronkonkoma, New York.",
+     "facts": {
+      "0.0": "Ronkonkoma is a major railroad station.",
+      "0.1": "Ronkonkoma is a major transportation hub.",
+      "0.2": "Ronkonkoma is along the Main Line of the Long Island Rail Road.",
+      "0.3": "The Ronkonkoma railroad station is in Ronkonkoma, New York."
+     }
+    },
+    {
+     "sentence": "Ronkonkoma ( ) is a hamlet and census-designated place (CDP) on Long Island in the Town of Islip, New York, United States.",
+     "facts": {
+      "1.0": "Ronkonkoma is a hamlet.",
+      "1.1": "Ronkonkoma is a census-designated place (CDP).",
+      "1.2": "Ronkonkoma is on Long Island.",
+      "1.3": "Ronkonkoma is in the Town of Islip.",
+      "1.4": "The Town of Islip is in New York, United States."
+     }
+    }
+   ],
+   "items": [
+    "Ridgefield Park station\nRidgefield Park Station, also known as West Shore Station, was railroad station in Ridgefield Park, New Jersey at the foot of Mount Vernon Street served by the New York, Susquehanna and Western Railroad (NYSW) and the West Shore Railroad, a division of New York Central (NYCRR) The New York, Ontario and Western Railway (NYO&W) had running rights along the West Shore and sometimes stopped at Ridgefield Park.\n\n First opened in 1883 it was one of three passenger stations in the village, the others being the Little Ferry Station to the south and Westview Station to the north.\n\n The station house, built at a cost $100,000 opened in 1927.\n\n Southbound service crossed Overpeck Creek and continued to terminals on the Hudson River waterfront where there was connecting ferry service across the Hudson River to Manhattan.\n\n Northbound near Bogota the parallel NYSW and West Shore lines diverge and continue into northern New Jersey, Pennsylviania, and upstate New York.\n\n Passenger service ended in 1966.",
+    "New Rochelle Harbor (Long Island Sound)\nNew Rochelle Harbor is the name of a harbor located along Long Island Sound in the city of New Rochelle in Westchester County, New York.\n\n The Davenport Neck peninsula off the mainland divides New Rochelle's waterfront into two bays; the westerly referred to as New Rochelle Harbor and the easterly as Echo Bay.",
+    "Long Island Electric Railway\nThe Long Island Electric Railway was a streetcar company operating in Brooklyn, Queens, and Nassau County, New York, United States between 1894 and 1926.\n\n The company was partially owned by the Long Island Consolidated Electric Companies, a holding company for the Long Island Rail Road and partially by August Belmont and the Interborough Rapid Transit Company.\n\n It connected the east end of the Fulton Street El at Crescent Street station in City Line, Brooklyn with Jamaica, Queens, and ran from there to the Nassau County line at Queens Village and to Far Rockaway, Queens via Nassau County.\n\n It also had a connection to Belmont Park.\n\n The New York and Long Island Traction Company used trackage rights over its line from Crescent Street to Queens Village.",
+    "Ronkonkoma, New York\nRonkonkoma ( ) is a hamlet and census-designated place (CDP) on Long Island in the Town of Islip, New York, United States.\n\n The population of the CDP was 19,082 at the 2010 census.",
+    "North Creek Railroad Station\nThe North Creek Railroad Station is a historic railroad station complex located at North Creek, Warren County, New York.\n\n The complex consists of the railroad station, the freight house, round house, turntable, and horse barn.\n\n The station was built in 1874 and is a simple, rectangular, gable roofed building with a broad, overhanging strut-supported roof in the Stick-Eastlake style.\n\n Its exterior is covered with vertical boards.",
+    "New York State Route 108\nNew York State Route 108 (NY 108) is a 1.72 mi north–south state highway located on the Suffolk County side of the Suffolk–Nassau county line on Long Island, New York, in the United States.\n\n It is a spur route connecting NY 25A in Cold Spring Harbor to the Cold Spring Harbor station on the Long Island Rail Road's Port Jefferson Branch via Harbor Road.\n\n Harbor Road terminates at an intersection with Woodbury Road, on the Nassau County line, which carries County Route 11 to the east and unsigned County Route 12 to the west.\n\n NY 108, assigned in the early 1930s, is the shortest state highway on Long Island.",
+    "Lacona Railroad Station and Depot\nLacona Railroad Station and Depot, also known as New York Central and Hudson River Railroad Station and Depot, is a historic railway depot located at Lacona in Oswego County, New York.\n\n It was built in 1891 by the New York Central and Hudson River Railroad.\n\n It is a small rectangular, one story, gable ended structure.",
+    "Ronkonkoma (LIRR station)\nRonkonkoma is a major railroad station and transportation hub along the Main Line of the Long Island Rail Road in Ronkonkoma, New York.\n\n The station is the eastern terminus of the Ronkonkoma Branch and the western terminus of the out Branch.",
+    "Old Country Road\nOld Country Road is a major east–west thoroughfare through central Nassau County and extending into western Suffolk County on Long Island, New York.\n\n It serves many of the major shopping centers in central Nassau County including Roosevelt Field Mall.\n\n The road also forms part of the border between the towns of Hempstead and North Hempstead.\n\n In Nassau County, Old Country Road is county-maintained as the unsigned County Route 25 (CR 25) west of Round Swamp Road.",
+    "Jamestown Gateway Train Station\nThe Jamestown Gateway Train Station, also known as the Jamestown Erie Railroad station, and the Erie-Lackawanna Railroad Station, is a historic train station located at Jamestown in Chautauqua County, New York.\n\n Although no longer an active railroad station due to a lack of passenger service in the area after a restoration done in 2011 the building currently serves as a bus transportation center and community space for Jamestown.\n\n The first train arrived at Jamestown on August 25, 1860 as part of the Atlantic and Great Western Railroad."
+   ]
+  },
+  {
+   "id": "6639f413fe7d6574",
+   "gold": [
+    {
+     "sentence": " During his early career, Cage starred in a variety of films such as \"Valley Girl\" (1983), \"Racing with the Moon\" (1984), \"Birdy\" (1984), \"Peggy Sue Got Married\" (1986), \"Raising Arizona\" (1987), \"Moonstruck\" (1987), \"Vampire's Kiss\" (1989), \"Wild at Heart\" (1990), \"Fire Birds\" (1990), \"Honeymoon in Vegas\" (1992), and \"Red Rock West\" (1993).",
+     "facts": {
+      "0.0": "During his early career, Nicolas Cage starred in a variety of films.",
+      "0.1": "Nicolas Cage starred in Valley Girl (1983).",
+      "0.2": "Nicolas Cage starred in Racing with the Moon (1984).",
+      "0.3": "Nicolas Cage starred in Birdy (1984).",
+      "0.4": "Nicolas Cage starred in Peggy Sue Got Married (1986).",
+      "0.5": "Nicolas Cage starred in Raising Arizona (1987).",
+      "0.6": "Nicolas Cage starred in Moonstruck (1987).",
+      "0.7": "Nicolas Cage starred in Vampire's Kiss (1989).",
+      "0.8": "Nicolas Cage starred in Wild at Heart (1990).",
+      "0.9": "Nicolas Cage starred in Fire Birds (1990).",
+      "0.10": "Nicolas Cage starred in Honeymoon in Vegas (1992).",
+      "0.11": "Nicolas Cage starred in Red Rock West (1993)."
+     }
+    },
+    {
+     "sentence": " It is about a widowed 37-year-old Italian-American woman (Cher) who falls in love with her fiancé's (Danny Aiello) estranged, hot-tempered younger brother (Nicolas Cage).",
+     "facts": {
+      "1.0": "The film is about a widowed 37-year-old Italian-American woman.",
+      "1.1": "Cher plays the widowed 37-year-old Italian-American woman.",
+      "1.2": "The widowed woman falls in love with her fiancé's estranged, hot-tempered younger brother.",
+      "1.3": "The widowed woman's fiancé is played by Danny Aiello.",
+      "1.4": "The fiancé's younger brother is estranged.",
+      "1.5": "The fiancé's younger brother is hot-tempered.",
+      "1.6": "The fiancé's younger brother is played by Nicolas Cage."
+     }
+    }
+   ],
+   "items": [
+    "Last Man Standing (1996 film)\nLast Man Standing is a 1996 American action thriller film written and directed by Walter Hill and starring Bruce Willis, Christopher Walken and Bruce Dern.\n\n It is a credited remake of Akira Kurosawa's \"Yojimbo\".",
+    "James Garner filmography\n(1969) with Walter Brennan, \"Murphy's Romance\" (1985) with Sally Field, \"Sunset\" (1988) with Bruce Willis, \"Maverick\" (1994) with Mel Gibson and Jodie Foster, \"Divine Secrets of the Ya-Ya Sisterhood\" (2002), and \"The Notebook\" (2004) with Ryan Gosling and Rachel McAdams.\n\n His television series credits include portraying Bret Maverick in \"Maverick\" (1957–1962) and \"Bret Maverick\" (1981–1982), Jim Rockford in \"The Rockford Files\" (1974–1980), and Jim Egan in \"8 Simple Rules\" (2003–2005).",
+    "These Old Broads\nThese Old Broads is a 2001 television film written by Carrie Fisher and starring her mother Debbie Reynolds, as well as Shirley MacLaine, Joan Collins, and Elizabeth Taylor in her final film role.\n\n In a 2001 BBC \"Omnibus\" documentary about Elizabeth Taylor, Shirley MacLaine says that Julie Andrews and Lauren Bacall were originally planned to be in the movie.\n\n The role of Miriam Hodges was originally offered to June Allyson.",
+    "Moonstruck\nMoonstruck is a 1987 American romantic comedy film directed by Norman Jewison and written by John Patrick Shanley.\n\n It is about a widowed 37-year-old Italian-American woman (Cher) who falls in love with her fiancé's (Danny Aiello) estranged, hot-tempered younger brother (Nicolas Cage).\n\n Vincent Gardenia and Olympia Dukakis play supporting roles.",
+    "In Country\nIn Country is a 1989 American drama film produced and directed by Norman Jewison, starring Bruce Willis and Emily Lloyd.\n\n The screenplay by Frank Pierson and Cynthia Cidre was based on the novel by Bobbie Ann Mason.\n\n The original music score was composed by James Horner.\n\n Willis earned a best supporting actor Golden Globe nomination for his role.",
+    "License to Wed\nLicense to Wed is a 2007 American romantic comedy film starring Robin Williams, Mandy Moore and John Krasinski, and directed by Ken Kwapis.\n\n The film was released in theaters on July 3, 2007.",
+    "Sleepless in Seattle\nSleepless in Seattle is a 1993 American romantic comedy-drama film directed and co-written by Nora Ephron, based on a story by Jeff Arch.\n\n It stars Tom Hanks and Meg Ryan, alongside a supporting cast featuring Bill Pullman, Ross Malinger, Rob Reiner, Rosie O'Donnell, Gaby Hoffmann, Victor Garber, and Rita Wilson.\n\n The film was a critical and commercial success, grossing over $220 million worldwide.",
+    "The entries cover films across action, comedy, romance, horror, and drama. Bruce Willis stars in titles including *Last Man Standing* (a credited *Yojimbo* remake), *Unbreakable*, *Signs*, and *Die Hard with a Vengeance*. Shyamalan’s *Signs* explores faith and alien encounters; *Unbreakable* launches a superhero trilogy. Other highlights include *The Whole Nine Yards*, *Striking Distance*, *Mercury Rising",
+    "The collection spans films and TV from 1947–2010: Bruce Willis’s dramas, action comedies and thrillers include *In Country* (Golden Globe-nominated), *Last Man Standing* (a *Yojimbo* remake), *The Whole Nine Yards* and *Cop Out*. Other highlights: *The Bears and I*; teen comedies *Can’t Buy Me Love* and *The Night Before*; *The Country Girl* (Oscar-winning screenplay",
+    "Old Boyfriends\nOld Boyfriends is a 1979 American drama film directed by Joan Tewkesbury and written by Paul Schrader and Leonard Schrader.\n\n The film stars Talia Shire, Richard Jordan, Keith Carradine, John Belushi, John Houseman and Buck Henry.\n\n The film was released on April 13, 1979, by Embassy Pictures."
+   ]
+  },
+  {
+   "id": "2a8306a23edc4208",
+   "gold": [
+    {
+     "sentence": "Summer Magic is a 1963 Walt Disney Productions film starring Hayley Mills, Burl Ives, and Dorothy McGuire in a story about a Boston widow and her children taking up residence in a small town in Maine.",
+     "facts": {
+      "0.0": "Summer Magic is a 1963 Walt Disney Productions film.",
+      "0.1": "Summer Magic stars Hayley Mills.",
+      "0.2": "Summer Magic stars Burl Ives.",
+      "0.3": "Summer Magic stars Dorothy McGuire.",
+      "0.4": "Summer Magic is a story about a Boston widow and her children.",
+      "0.5": "In Summer Magic, the Boston widow and her children take up residence in a small town in Maine."
+     }
+    },
+    {
+     "sentence": "Around the World in 80 Days is a 2004 American action-adventure comedy family film based on Jules Verne's novel of the same name.",
+     "facts": {
+      "1.0": "Around the World in 80 Days is a 2004 American film.",
+      "1.1": "Around the World in 80 Days is an action-adventure comedy family film.",
+      "1.2": "Around the World in 80 Days is based on Jules Verne's novel of the same name."
+     }
+    }
+   ],
+   "items": [
+    "Around the World (1956 song)\n\"Around the World\" was the theme tune from the 1956 movie \"Around the World in 80 Days\" In the film, only an instrumental version of the song appeared, although the vocal version has become by far the better known one.\n\n The song was written by Harold Adamson and Victor Young; Young died in 1956, several weeks after the film's release and he received the Academy Award for Best Music, Scoring of a Dramatic or Comedy Picture posthumously.\n\n Young's orchestral version was a #13 hit on the Billboard charts in 1957.\n\n The recording by Bing Crosby was the B-side of the Victor Young version in 1957, on Festival SP45-1274 in Australia, and was a joint charting success.",
+    "Around the World in 80 Days (2004 film)\nAround the World in 80 Days is a 2004 American action-adventure comedy family film based on Jules Verne's novel of the same name.\n\n It stars Jackie Chan, Steve Coogan and Cécile de France.\n\n The film is set in 19th-century Britain and centers on Phileas Fogg (Steve Coogan), here reimagined as an eccentric inventor, and his efforts to circumnavigate the globe in 80 days.\n\n During the trip, he is accompanied by his Chinese valet, Passepartout (Jackie Chan).\n\n For comedic reasons, the film intentionally deviated wildly from the novel and included a number of anachronistic elements.\n\n With production costs of about $110 million and estimated marketing costs of $30 million, it earned $24 million at the U.S. box office and $72 million worldwide, making it a box office flop.\n\n It was Arnold Schwarzenegger's last film before he took a hiatus from acting to become Governor of California until 2010's \"The Expendables\".",
+    "People Who Travel (1938 German-language film)\nTravelling People (German:Fahrendes Volk) is a 1938 German drama film directed by Jacques Feyder and starring Hans Albers, Françoise Rosay and Camilla Horn.\n\n It is a circus film.\n\n It premiered in Hamburg on 1 July 1938.\n\n A Separate French-language version \"People Who Travel\" (\"Les gens du voyage\") was also released.\n\n While it was also directed by Feyder and starred Rosay, the rest of the cast were different.",
+    "Around the World in 80 Days (1956 film)\nAround the World in 80 Days (sometimes spelled as Around the World in Eighty Days) is a 1956 American epic adventure-comedy film starring Cantinflas and David Niven , produced by the Michael Todd Company and released by United Artists.",
+    "Around the World in Eighty Days\nAround the World in Eighty Days (French: \"Le tour du monde en quatre-vingts jours\" ) is a classic adventure novel by the French writer Jules Verne, published in 1873.\n\n In the story, Phileas Fogg of London and his newly employed French valet Passepartout attempt to circumnavigate the world in 80 days on a £20,000 wager (the approximate equivalent of £2 million in 2016) set by his friends at the Reform Club.\n\n It is one of Verne's most acclaimed works .",
+    "Summer Holiday (1963 film)\nSummer Holiday is a British CinemaScope and Technicolor musical film featuring singer Cliff Richard.\n\n The film was directed by Peter Yates (his debut), produced by Kenneth Harper.\n\n The original screenplay was written by Peter Myers and Ronald Cass (who also wrote most of the song numbers and lyrics).\n\n The cast includes Lauri Peters, Melvyn Hayes, Teddy Green, Jeremy Bulloch, Una Stubbs, Pamela Hart, Jacqueline Daryl, Lionel Murton, Madge Ryan, David Kossoff, Nicholas Phipps, Ron Moody and The Shadows.\n\n Herbert Ross choreographed the musical numbers.",
+    "Michael Palin: Around the World in 80 Days\nAround the World in 80 Days is a 7-part BBC television travel series first broadcast on BBC1 in 1989.\n\n It was presented by comedian and actor Michael Palin.\n\n The show was inspired by Jules Verne's classic novel \"Around the World in Eighty Days\", in which a character named Phileas Fogg accepts a wager to circumnavigate the globe in eighty days or less.\n\n Palin was given the same deadline, and not allowed to use aircraft, which did not exist in Jules Verne's time and would make completing the journey far too easy.\n\n He followed Phileas Fogg's route as closely as possible.\n\n Along the way he commented on the sights and cultures he encountered.\n\n Palin encountered several setbacks during his voyage, partly because he travelled with a five-person film crew, who are collectively named after Passepartout, Phileas Fogg's manservant.",
+    "Summer Magic\nSummer Magic is a 1963 Walt Disney Productions film starring Hayley Mills, Burl Ives, and Dorothy McGuire in a story about a Boston widow and her children taking up residence in a small town in Maine.\n\n The film was based on the novel \"Mother Carey's Chickens\" by Kate Douglas Wiggin and was directed by James Neilson.\n\n This was the fourth of six film Mills did for Disney, and the young actress received a Golden Globe nomination for her work here.",
+    "A Boy Scout Around the World\nA Boy Scout Around the World (Danish: \"Jorden Rundt i 44 dage\", literally: \"Around the World in 44 Days\") is a travel description published in October 1928 and written by Danish Boy Scout and later actor Palle Huld at the age of 15 following his travel around the world in spring 1928.\n\n His trip was sponsored by a Danish newspaper and made on the occasion of the 100 birthday of Jules Verne a French author of adventure and science fiction.\n\n Palle Huld was chosen after having answered to an ad in the newspaper; applicants had to be boys, 15 years old, able to manage in English and German and of good health.\n\n Like the characters in Jules Verne’s novel \"Around the World in 80 days\" he was only allowed to travel by land and sea, not by air.\n\n The travel (on first class) went from Denmark to Great Britain, across the Atlantic Ocean to Canada.\n\n From the American west coast he continued to Japan, China, Soviet Union, Poland, Germany and back to Denmark.",
+    "Around the World in 80 Days (1988 film)\nAround the World in 80 Days is an Australian 48-minute direct-to-video animated film from Burbank Films Australia.\n\n It was originally released in 1988.\n\n The film is based on Jules Verne's classic French novel, \"Around the World in 80 Days\", first published in 1873, and was adapted by Leonard Lee.\n\n It was produced by Roz Phillips and featured original music by Simon Walker.\n\n The film imitated BRB Internacional's Spanish 1981 series, \"La vuelta al mundo de Willy Fog\", in its use of anthropomorphic animals in the human roles.\n\n The copyright in this film is now owned by Pulse Distribution and Entertainment and administered by digital rights management firm NuTech Digital."
+   ]
+  },
+  {
+   "id": "76df8094b14a692e",
+   "gold": [
+    {
+     "sentence": "Todos Me Miran (\"\"Everyone looks at me\"\") is a single from the Mexican artist Gloria Trevi reaching number 32 on Latin charts, and becoming a club anthem that confirmed Trevi's status as a gay icon.",
+     "facts": {
+      "0.0": "Todos Me Miran ('Everyone looks at me') is a single from the Mexican artist Gloria Trevi.",
+      "0.1": "Todos Me Miran reached number 32 on Latin charts.",
+      "0.2": "Todos Me Miran became a club anthem.",
+      "0.3": "Todos Me Miran confirmed Trevi's status as a gay icon."
+     }
+    },
+    {
+     "sentence": "Gloria Trevi (] ; born Gloria de los Ángeles Treviño Ruiz on February 15, 1968) is a Mexican singer and songwriter.",
+     "facts": {
+      "1.0": "Gloria Trevi was born Gloria de los Angeles Trevino Ruiz.",
+      "1.1": "Gloria Trevi was born on February 15, 1968.",
+      "1.2": "Gloria Trevi is a Mexican singer.",
+      "1.3": "Gloria Trevi is a Mexican songwriter."
+     }
+    }
+   ],
+   "items": [
+    "Tu Ángel de la Guarda\nTu Ángel de la Guarda (\"Your guardian angel\") is Gloria Trevi's second album, and it contained one of her signature songs and her most widely known hit, \"Pelo Suelto\".\n\n It also contained other hit songs such as \"Tu angel de la guarda\", \"Ya no\", \"Virgen de las virgenes\", and \"Hoy me ire de casa\".\n\n This album was very controversial different from other artists' albums such as Lucero.\n\n \"Virgen de las virgenes\" mocked girls who said they were virgins but had actually lost their virginity, and \"¡Ya no!\"\n\n went against the machismo movement of México.\n\n Following the release of the album, Gloria was working hard in promoting radio, television and print media.\n\n Trevi first traveled abroad visiting American Union countries, Puerto Rico, Argentina, Colombia, Guatemala, Venezuela, Costa Rica, and received a Gold and Platinum for high sales achieved.",
+    "Todos Los Romances\nTodos Los Romances (English: \"All the Romances\" ) is a three-disc compilation album by Mexican singer Luis Miguel.\n\n Released on 11 August 1998 by WEA Latina, the record features the three previously released \"Romance\"-themed albums in which Miguel covered classic boleros in each of them: \"Romance\" (1991), \"Segundo Romance\" (1994), and \"Romances\" (1997).\n\n An editor for AllMusic rated the album four of five stars.\n\n Commercially, \"Todos Los Romances\" peaked at number four in Spain and was certified double Platinum in the country.\n\n It also achieved Gold status in Argentina and peaked at number 12 on the \"Billboard\"'s Top Latin Albums in the United States.",
+    "Graph query row:\npath: ['Gloria Trevi', 'Todos Me Miran']\nrelationships: ['CREATED_BY']",
+    "Mexico Espanol Airplay\nMexico Espanol Airplay is a record chart published weekly by \"Billboard\" magazine for Spanish language singles released in Mexico.\n\n According to \"Billboard\"' s electronic database, the first chart was published on October 1, 2011, with the track \"Amor Clandestino\" by Mexican band Maná at number one; in the same year, fellow Mexican duo Jesse & Joy reached the top of the chart with their single \"¡Corre!\n\n\", the first of their six number-one singles in the chart, the most for any act. \"\n\n¡Corre!\"\n\n also won the Latin Grammy Awards for Record of the Year and Song of the Year in 2012.\n\n Starting on December 1, 2012, Mexican singer Thalía spent 10 non-consecutive weeks at number-one with \"Manías\", the first single from the album \"Habítame Siempre\", which won the Lo Nuestro Award for Pop Album of the Year. \"\n\nHoy Tengo Ganas de Ti\" by Mexican artist Alejandro Fernández and American singer Christina Aguilera reached number-one in 2013, and also peaked at number four in Spain.",
+    "Gloria Trevi\nGloria Trevi (] ; born Gloria de los Ángeles Treviño Ruiz on February 15, 1968) is a Mexican singer and songwriter.",
+    "No eres tú, soy yo\nNo eres tú, soy yo (English: It's not you, it's me ) is a 2010 Mexican romantic comedy directed by Alejandro Springall starring Eugenio Derbez, Alejandra Barros and Martina García and based on the Argentinean film \"No sos vos, soy yo\" (2004), written by Juan Taratuto.\n\n It was produced by Matthias Eherenberg and filmed in Mexico City.",
+    "Todos Me Miran\nTodos Me Miran (\"\"Everyone looks at me\"\") is a single from the Mexican artist Gloria Trevi reaching number 32 on Latin charts, and becoming a club anthem that confirmed Trevi's status as a gay icon.\n\n The song, as interpreted in the music video, is about a young man who dares to crossdress in spite of society's opinions.",
+    "Premio Lo Nuestro 2003\nIn the Regional Mexican, Pilar Montenegro took three awards for Regional Mexican Song of the Year, Pop Song of the Year (\"Quitame Ese Hombre\"), and for Best Regional Mexican Female Artist.\n\n In the tropical genre, Celia Cruz took home with four great awards of the night for Best Salsa Performance, Best Tropical Female Artist, Best Tropical Song of the year and Tropical Album of the Year.\n\n At the night, the greatest performance was a medley of top Latin hits from the last 15 years, performed by the artists that made them famous, including Vikki Carr, Son by Four, Los Ilegales, La Mafia, Luis Enrique, Wilfrido Vargas and Olga Tañón.\n\n There was a great tribute to Celia Cruz by the world-famous salsa group \"Fania All-Stars\", of which Cruz was a member during the 1970s, reunited for an exclusive performance that rocked the house.",
+    "De Contrabando\n\"De Contrabando\" (\"Smuggled\") is a song written by Joan Sebastian.\n\n It was first performed by Mexican singer Imelda, and included on her album \"Aparentemente\", released in 1991.\n\n Six years later, was performed by fellow Mexican singer Zayda Y Los Culpables and released by Musart Records as the second single from her self-titled album in 1997.\n\n Mexican-American singer Jenni Rivera recorded a cover version for her studio album \"Parrandera, Rebelde y Atrevida\".\n\n \"De Contrabando\" was released as the second single from the album in 2006.\n\n In the United States, the song peaked at number fourteen on the \"Billboard\" Hot Latin Songs chart and number one on the \"Billboard\" Regional Mexican Songs chart.\n\n The song was nominated for a Lo Nuestro Award for Regional Mexican Song of the Year at the 2007 Lo Nuestro Awards.\n\n Rivera was also recognized for Regional Mexican Female Artist of the Year.\n\n Rivera was also awarded Regional Mexican Airplay Song of the Year for at the 2007 Latin \"Billboard\" Music Awards.",
+    "La Trayectoria (Gloria Trevi album)\nLa Trayectoria (In English: The Trajectory) is a 2006 double live CD and multimedia DVD release by the Mexican singer Gloria Trevi.\n\n The DVD includes scenes from parts of the tour from the Palacio de los Deportes of the Mexico City and The Arena Monterrey and the CD includes four new songs like: \"Todos Me Miran\" (They All Look At Me) is the first single compilation study of Mexican singer \"Gloria Trevi\", this is an unreleased song from the album."
+   ]
+  },
+  {
+   "id": "90f067bf765084af",
+   "gold": [
+    {
+     "sentence": " He is best known for his roles in \"How To Be Indie\" (2009–2011), \"Wingin' It\" (2010–2013), \"\" (2012–2013), and \"Open Heart\" (2015).",
+     "facts": {
+      "0.0": "The person described is best known for a role in 'How To Be Indie' (2009–2011).",
+      "0.1": "The person described is best known for a role in 'Wingin' It' (2010–2013).",
+      "0.2": "The person described is best known for a role in an untitled work (2012–2013).",
+      "0.3": "The person described is best known for a role in 'Open Heart' (2015)."
+     }
+    },
+    {
+     "sentence": "Open Heart is a 2015 American-Canadian mystery-drama television series produced by the Epitome Pictures unit of DHX Media in association with marblemedia.",
+     "facts": {
+      "1.0": "Open Heart is a 2015 television series.",
+      "1.1": "Open Heart is an American-Canadian television series.",
+      "1.2": "Open Heart is a mystery-drama television series.",
+      "1.3": "Open Heart was produced by the Epitome Pictures unit of DHX Media.",
+      "1.4": "Open Heart was produced in association with marblemedia."
+     }
+    }
+   ],
+   "items": [
+    "Allison Miller\nAllison Miller (born September 2, 1985) is an American actress.\n\n She is best known for playing Michelle Benjamin on the NBC series \"Kings\", Skye Tate on the Fox series \"Terra Nova\", and Carrie on the NBC series \"Go On\".\n\n She starred as Laura Larson on the Syfy television series \"Incorporated\".",
+    "Wingin' It\nWingin' It (originally titled Angel on Campus prior to its debut) is a Canadian teen sitcom which aired on Family.\n\n The series was produced by Temple Street Productions in association with Family.\n\n It stars Demetrius Joyette and Dylan Everett.\n\n This show included guest-stars from other Family Channel shows such as \"The Latest Buzz\".\n\n It was announced that the series was renewed for a third season on June 13, 2011.\n\n Family announced that the series is not planned for a fourth season.",
+    "Open Heart (TV series)\nOpen Heart is a 2015 American-Canadian mystery-drama television series produced by the Epitome Pictures unit of DHX Media in association with marblemedia.\n\n It first aired on January 20, 2015, on TeenNick in the United States and previously on YTV; now currently on ABC Spark in Canada.",
+    "Don't Stop Believing (TV series)\nDon't Stop Believing is a British television talent show that aired on Channel 5 in summer 2010.\n\n It was inspired by the musical comedy-drama \"Glee\", which airs in the United States on the Fox network.\n\n The series featured live shows in which musical performance groups competed against each other, with viewers voting on the winner.\n\n Solo singers were also sought to join a group to represent the United Kingdom on the American glee club circuit.\n\n The show was hosted by Emma Bunton, and judged by Anastacia, Duncan James, Tamzin Outhwaite and Charles \"Chucky\" Klapow.\n\n The programme was shown in simulcast on Irish TV channel 3e and repeated a week later on parent channel TV3 Ireland.\n\n The show was not renewed for a second series due to low ratings.",
+    "Dan Flannery\nArthur Daniel Flannery (born March 10, 1944) is an American actor from Evanston, Illinois.\n\n He has played roles in several movies, short films, and T.V. shows from a variety of genres including drama, action, and thriller.\n\n His filmography includes The Straight Story (1999), and Contagion (2011) and T.V. series such as Empire (2015 TV series) and Boss (2011-2012).",
+    "Everest (2015 film)\nEverest is a 2015 British-American biographical adventure film directed and co-produced by Baltasar Kormákur, co-produced by Tim Bevan, Eric Fellner, Nicky Kentish Barnes, Tyler Thompson and Brian Oliver and written by William Nicholson and Simon Beaufoy, adapted from Beck Weathers' memoir \"Left for Dead: My Journey Home from Everest\" (2000).\n\n It stars an ensemble cast of Jason Clarke, Josh Brolin, John Hawkes, Robin Wright, Michael Kelly, Sam Worthington, Keira Knightley, Emily Watson, and Jake Gyllenhaal.\n\n It is based on the real events of the 1996 Mount Everest disaster, and focuses on the survival attempts of two expedition groups, one led by Rob Hall (Clarke) and the other by Scott Fischer (Gyllenhaal).",
+    "Rachelle Lefevre\nRachelle Lefevre ( ; born February 1, 1979) is a Canadian actress.\n\n She has starred in the television series \"Big Wolf on Campus\" and had recurring roles in \"What About Brian\", \"Boston Legal\", and \"Swingtown\".\n\n She played the vampire Victoria Sutherland in the first two films of the \"Twilight\" saga, before being replaced by Bryce Dallas Howard in the third installment, \"\", due to scheduling conflicts with her role in the film \"Barney's Version\".\n\n In 2011, she starred in the ABC medical drama \"Off the Map\", followed by the CBS series \"A Gifted Man\" (2011–2012) and \"Under the Dome\" (2013–2015).",
+    "Terry Ray (actor)\nHe wrote and starred in two more shows at the Dorothy Chandler Pavilion, one co-starring Amanda Bynes and the other Hilary Duff.\n\n<br><br>Terry is also the voice of the \"Gaydar Gun\", a spinoff toy from the film Gaydar.",
+    "Dean Winchester\nDean Winchester is a fictional character and one of the two protagonists of the American drama television series \"Supernatural\".\n\n He is portrayed by Jensen Ackles.\n\n Other versions of the character having been portrayed by Hunter Brochu (toddler), Ridge Canipe (child), Nicolai Lawton-Giustra (pre-teen), Brock Kelly and Dylan Everett (teen), and Chad Everett (elderly).",
+    "Dylan Everett\nDylan Everett (born January 24, 1995) is a Canadian actor.\n\n He is best known for his roles in \"How To Be Indie\" (2009–2011), \"Wingin' It\" (2010–2013), \"\" (2012–2013), and \"Open Heart\" (2015)."
+   ]
+  },
+  {
+   "id": "d58545f015bbd3c2",
+   "gold": [
+    {
+     "sentence": "Robin R. Bottin (born April 1, 1959) is an American special make-up effects creator.",
+     "facts": {
+      "0.0": "Robin R. Bottin was born on April 1, 1959.",
+      "0.1": "Robin R. Bottin is an American special make-up effects creator."
+     }
+    },
+    {
+     "sentence": " Known for his collaborations with directors John Carpenter, Paul Verhoeven and David Fincher, Bottin worked with Carpenter on both \"The Fog\" and \"The Thing\", with Verhoeven on \"RoboCop\", \"Total Recall\" and \"Basic Instinct\", and with Fincher on \"Se7en\" and \"Fight Club\".",
+     "facts": {
+      "1.0": "Robin R. Bottin is known for collaborations with directors John Carpenter, Paul Verhoeven and David Fincher.",
+      "1.1": "Robin R. Bottin worked with John Carpenter on “The Fog”.",
+      "1.2": "Robin R. Bottin worked with John Carpenter on “The Thing”.",
+      "1.3": "Robin R. Bottin worked with Paul Verhoeven on “RoboCop”.",
+      "1.4": "Robin R. Bottin worked with Paul Verhoeven on “Total Recall”.",
+      "1.5": "Robin R. Bottin worked with Paul Verhoeven on “Basic Instinct”.",
+      "1.6": "Robin R. Bottin worked with David Fincher on “Se7en”.",
+      "1.7": "Robin R. Bottin worked with David Fincher on “Fight Club”."
+     }
+    },
+    {
+     "sentence": "David Andrew Leo Fincher (born August 28, 1962) is an American director and producer, notably for films, television series and music videos.",
+     "facts": {
+      "2.0": "David Andrew Leo Fincher was born on August 28, 1962.",
+      "2.1": "David Andrew Leo Fincher is an American director and producer.",
+      "2.2": "David Andrew Leo Fincher is notably known for films, television series and music videos."
+     }
+    },
+    {
+     "sentence": " He was nominated for the Academy Award for Best Director for \"The Curious Case of Benjamin Button\" (2008) and \"The Social Network\" (2010).",
+     "facts": {
+      "3.0": "David Fincher was nominated for the Academy Award for Best Director for “The Curious Case of Benjamin Button” (2008).",
+      "3.1": "David Fincher was nominated for the Academy Award for Best Director for “The Social Network” (2010)."
+     }
+    },
+    {
+     "sentence": " For the latter, he won the Golden Globe Award for Best Director and the BAFTA Award for Best Direction.",
+     "facts": {
+      "4.0": "For “The Social Network”, David Fincher won the Golden Globe Award for Best Director.",
+      "4.1": "For “The Social Network”, David Fincher won the BAFTA Award for Best Direction."
+     }
+    }
+   ],
+   "items": [
+    "Meet the Robinsons\nMeet the Robinsons is a 2007 American computer-animated science fiction comedy film produced by Walt Disney Animation Studios and released by Walt Disney Pictures on March 30, 2007.\n\n The 47th Disney animated feature film, it was released in standard and Disney Digital 3-D versions.\n\n The film is loosely based on characters from the children's book \"A Day with Wilbur Robinson\", by William Joyce.\n\n The voice cast includes Jordan Fry, Wesley Singerman, Harland Williams, Tom Kenny, Steve Anderson, Laurie Metcalf, Adam West, Tom Selleck, and Angela Bassett.\n\n It was the first film released after John Lasseter became chief creative officer of Walt Disney Animation Studios.",
+    "Danny Boyle\nDanny Boyle (born 20 October 1956) is an English director, producer, screenwriter and theatre director, known for his work on films including \"Shallow Grave\", \"Trainspotting\", \"The Beach\", \"28 Days Later\", \"Sunshine\", \"Slumdog Millionaire\", \"127 Hours\", and \"Steve Jobs\".\n\n His debut film \"Shallow Grave\" won the BAFTA Award for Best British Film.\n\n Boyle's 2008 film \"Slumdog Millionaire\" was nominated for ten Academy Awards and won eight, including the Academy Award for Best Director.\n\n He also won the Golden Globe and BAFTA Award for Best Director.\n\n Boyle was presented with the Extraordinary Contribution to Filmmaking Award at the 2008 Austin Film Festival, where he also introduced that year's AFF Audience Award Winner \"Slumdog Millionaire\".",
+    "Robin Chalk\nRobin Chalk (born 1981) is an English actor, best known for his role as Neil Kellerman in the West End production of \"Dirty Dancing\" and his work on British science-fiction film \"Moon\" directed by Duncan Jones.",
+    "Rick Carter\nRick Carter (born 1950) is an American production designer and art director.\n\n He is known for his work in the film \"Forrest Gump\", which earned him an Oscar nomination, as well as numerous nominations of other awards for his work in \"Amistad\" and \"A.I. Artificial Intelligence\".\n\n Other films include \"Cast Away\", \"War of the Worlds\", \"What Lies Beneath\", \"Jurassic Park\", \"Avatar\", and \"Back to the Future Part II\" and \"Part III\".\n\n Many of the films that he has worked on are directed by Steven Spielberg or Robert Zemeckis.\n\n For his part in the Art Direction of \"Avatar\", he was awarded the Academy Award for Best Production Design alongside Robert Stromberg and Kim Sinclair.\n\n In 2013, Carter won his second Academy Award, for production design on Steven Spielberg's biopic, \"Lincoln\".",
+    "Howard Barish\nHoward Barish is an Oscar nominated, Emmy award winning producer and director known for his producing partnership with acclaimed director, writer Ava DuVernay.\n\n Their most recognized project to date, \"13TH\", is a 2016 American documentary from Netflix directed by DuVernay.\n\n Centered on race in the United States criminal justice system, the critically lauded film is titled after the Thirteenth Amendment to the United States Constitution, which outlawed slavery (unless as punishment for a crime).\n\n It argues that slavery is being effectively perpetuated through mass incarceration.",
+    "Steve McQueen (director)\nSteven Rodney \"Steve\" McQueen (born 9 October 1969) is an English film director, producer, screenwriter, and video artist.\n\n For his 2013 film, \"12 Years a Slave\", a historical drama adaptation of an 1853 slave narrative memoir, he won an Academy Award, BAFTA Award for Best Film, and Golden Globe Award for Best Motion Picture – Drama, as a producer, and he also received the award for Best Director from the New York Film Critics Circle.\n\n McQueen is the first black filmmaker to win an Academy Award for Best Picture.\n\n McQueen is known for his collaborations with actor Michael Fassbender, who has starred in all three of McQueen's feature films as of 2014.\n\n McQueen's other feature films are \"Hunger\" (2008), a historical drama about the 1981 Irish hunger strike, and \"Shame\" (2011), a drama about an executive struggling with sex addiction.",
+    "Peter Jackson\nSir Peter Robert Jackson {'1': \", '2': \", '3': \", '4': \"} (born 31 October 1961) is a New Zealand film director, screenwriter and film producer.\n\n He is best known as the director, writer, and producer of \"The Lord of the Rings\" trilogy (2001–03) and \"The Hobbit\" trilogy (2012–14), both of which are adapted from the novels of the same name by J. R. R. Tolkien.\n\n Other notable films include the critically lauded drama \"Heavenly Creatures\" (1994), the mockumentary \"Forgotten Silver\" (1995), the horror comedy \"The Frighteners\" (1996), the epic monster remake film \"King Kong\" (2005), and the supernatural drama film \"The Lovely Bones\" (2009).\n\n He also produced \"District 9\" (2009), \"The Adventures of Tintin: The Secret of the Unicorn\" (2011), and the documentary \"West of Memphis\" (2012).",
+    "David Fincher\nDavid Andrew Leo Fincher (born August 28, 1962) is an American director and producer, notably for films, television series and music videos.\n\n He was nominated for the Academy Award for Best Director for \"The Curious Case of Benjamin Button\" (2008) and \"The Social Network\" (2010).\n\n For the latter, he won the Golden Globe Award for Best Director and the BAFTA Award for Best Direction.",
+    "Loveleen Tandan\nLoveleen Tandan is an Indian film director and casting director.\n\n She is the \"Co-Director: India\" of the four time Golden Globe, seven time BAFTA Award and eight Academy Award winning (including best picture) \"Slumdog Millionaire\" (2008), for which she shared a New York Film Critics Online Award, Rotterdam International Film Festival Award and Amanda Awards, Norway, of \"Best Director\" with Danny Boyle.\n\n She has also been the Casting Director for several other films, including the Golden Lion winning and Golden Globe nominated \"Monsoon Wedding\" (2001) and the BAFTA Award nominated \"Brick Lane\" (2007).\n\n She has been a Casting Consultant for the Gotham Award and Independent Spirit Award nominated film \"The Namesake\" (2007).",
+    "Rob Bottin\nRobin R. Bottin (born April 1, 1959) is an American special make-up effects creator.\n\n Known for his collaborations with directors John Carpenter, Paul Verhoeven and David Fincher, Bottin worked with Carpenter on both \"The Fog\" and \"The Thing\", with Verhoeven on \"RoboCop\", \"Total Recall\" and \"Basic Instinct\", and with Fincher on \"Se7en\" and \"Fight Club\".\n\n His other film credits include \"Legend\", \"Innerspace\" and \"Fear and Loathing in Las Vegas\"."
+   ]
+  }
+ ]
+}

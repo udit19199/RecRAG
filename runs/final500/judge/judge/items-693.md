@@ -1,0 +1,817 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=0196e65757df2a04 ===
+Gold sentences and facts:
+Sentence 0: The earliest predecessors of the eye were photoreceptor proteins that sense light , found even in unicellular organisms , called `` eyespots '' . Eyespots can only sense ambient brightness : they can distinguish light from dark , sufficient for photoperiodism and daily synchronization of circadian rhythms . They are insufficient for vision , as they can not distinguish shapes or determine the direction light is coming from . Eyespots are found in nearly all major animal groups , and are common among unicellular organisms , including euglena . The euglena 's eyespot , called a stigma , is located at its anterior end . It is a small splotch of red pigment which shades a collection of light sensitive crystals . Together with the leading flagellum , the eyespot allows the organism to move in response to light , often toward the light to assist in photosynthesis , and to predict day and night , the primary function of circadian rhythms . Visual pigments are located in the brains of more complex organisms , and are thought to have a role in synchronising spawning with lunar cycles . By detecting the subtle changes in night - time illumination , organisms could synchronise the release of sperm and eggs to maximise the probability of fertilisation .
+  Fact 0.0: The earliest predecessors of the eye were photoreceptor proteins that sense light.
+  Fact 0.1: The light-sensing photoreceptor proteins that were the earliest predecessors of the eye are found even in unicellular organisms.
+  Fact 0.2: These early light-sensing structures are called 'eyespots'.
+  Fact 0.3: Eyespots can only sense ambient brightness.
+  Fact 0.4: Eyespots can distinguish light from dark.
+  Fact 0.5: Sensing ambient brightness is sufficient for photoperiodism.
+  Fact 0.6: Sensing ambient brightness is sufficient for daily synchronization of circadian rhythms.
+  Fact 0.7: Eyespots are insufficient for vision.
+  Fact 0.8: Eyespots cannot distinguish shapes.
+  Fact 0.9: Eyespots cannot determine the direction light is coming from.
+  Fact 0.10: Eyespots are found in nearly all major animal groups.
+  Fact 0.11: Eyespots are common among unicellular organisms.
+  Fact 0.12: Euglena is a unicellular organism with an eyespot.
+  Fact 0.13: The euglena's eyespot is called a stigma.
+  Fact 0.14: The euglena's stigma is located at its anterior end.
+  Fact 0.15: The euglena's stigma is a small splotch of red pigment.
+  Fact 0.16: The euglena's stigma shades a collection of light-sensitive crystals.
+  Fact 0.17: Together with the leading flagellum, the euglena's eyespot allows the organism to move in response to light.
+  Fact 0.18: The euglena often moves toward the light to assist in photosynthesis.
+  Fact 0.19: The euglena's eyespot allows the organism to predict day and night.
+  Fact 0.20: Predicting day and night is the primary function of circadian rhythms.
+  Fact 0.21: Visual pigments are located in the brains of more complex organisms.
+  Fact 0.22: Visual pigments are thought to have a role in synchronising spawning with lunar cycles.
+  Fact 0.23: Organisms could detect subtle changes in night-time illumination.
+  Fact 0.24: By detecting night-time illumination changes, organisms could synchronise the release of sperm and eggs.
+  Fact 0.25: Synchronising the release of sperm and eggs maximises the probability of fertilisation.
+
+Retrieved items:
+<item 1>
+Evolution of the eye
+This suggests that when the two lineages diverged in the Precambrian , they had only very primitive light receptors , which developed into more complex eyes
+independently . Early eyes ( edit ) The basic light - processing unit of eyes is the photoreceptor cell , a specialized cell containing two types of molecules
+in a membrane : the opsin , a light - sensitive protein , surrounding the chromophore , a pigment that distinguishes colors . Groups of such cells are termed ``
+eyespots '' , and have evolved independently somewhere between 40 and 65 times . These eyespots permit animals to gain only a very basic sense of the direction
+and intensity of light , but not enough to discriminate an object from its surroundings . Developing an optical system that can discriminate the direction of
+light to within a few degrees is apparently much more difficult , and only six of the thirty - some phyla possess such a system . However , these phyla account
+for 96 % of living species . The planarian has `` cup '' eyespots that can slightly distinguish light direction .
+</item 1>
+
+<item 2>
+Evolution of the eye
+Evolution of the eye - wikipedia Evolution of the eye Jump to : navigation , search Major stages in the evolution of the eye in vertebrates . The evolution of
+the eye is attractive to study , because the eye distinctively exemplifies an analogous organ found in many animal forms . Complex , image - forming eyes have
+evolved independently several times . The evolutionary geneticist Walter Gering holds a different opinion . According his theory , the genes engaged with
+photoreceptor cells ( so called Pax 6 genes ) appeared probably at once in the life history , at a very early stage of the evolution . Probably , the complex ,
+image forming kinds of eyes are at least five : Chidaria - lens eye , complex eye ; Molluscs - lens eye , everse retina ; Annelids - lens eye , everse retina ;
+Arthropods - facet eye ; Vertebrate - lens eye , inverse retina Complex eyes appeared first within the few million years of the Cambrian explosion . From before
+the Cambrian , no evidence of eyes has survived , but diverse eyes are known from the Burgess shale of the Middle Cambrian , and from the slightly older Emu Bay
+Shale .
+</item 2>
+
+<item 3>
+Evolution of the eye
+PMID 7892602 . Jump up ^ Tomarev , S.I. ; Callaerts , P. ; Kos , L. ; Zinovieva , R. ; Halder , G. ; Gehring , W. ; Piatigorsky , J. ( 1997 ) . `` Squid Pax - 6
+and eye development '' . Proceedings of the National Academy of Sciences of the United States of America . 94 ( 6 ) : 2421 -- 2426 . Bibcode : 1997PNAS ...
+94.2421 T . doi : 10.1073 / pnas. 94.6. 2421 . PMC 20103 . PMID 9122210 . ^ Jump up to : Gehring , W.J. ( 13 January 2005 ) . `` New Perspectives on Eye
+Development and the Evolution of Eyes and Photoreceptors '' ( Full text ) . Journal of Heredity . Oxford Journals. 96 ( 3 ) : 171 -- 184 .
+</item 3>
+
+<item 4>
+Evolution of the eye
+149 Jump up ^ Lee , M.S.Y. ; Jago , J.B. ; Garcia - Bellido , D.C. ; Edgecombe , G.E. ; Gehling , J. G ; Paterson , J.R. ( 2011 ) . `` Modern optics in
+exceptionally preserved eyes of Early Cambrian arthropods from Australia '' . Nature . 474 : 631 -- 634 . doi : 10.1038 / nature10097 . PMID 21720369 . ^ Jump
+up to : Darwin , Charles ( 1859 ) . On the Origin of Species . London : John Murray . Jump up ^ Gehring WJ ( 2005 ) . `` New perspectives on eye development and
+the evolution of eyes and photoreceptors '' . J. Hered. 96 ( 3 ) : 171 -- 84 . doi : 10.1093 / jhered / esi027 . PMID 15653558 . Jump up ^ Nilsson , D. - E. (
+2013 ) . `` Eye evolution and its functional basis '' . Visual Neuroscience.
+</item 4>
+
+<item 5>
+Evolution of the eye
+Jump up ^ Dawkins , Richard ( 1986 ) . The Blind Watchmaker . ^ Jump up to : Schoenemann , B. ; Liu , J.N. ; Shu , D.G. ; Han , J. ; Zhang , Z.F. ( 2008 ) . ``
+A miniscule optimized visual system in the Lower Cambrian '' . Lethaia. 42 ( 3 ) : 265 -- 273 . doi : 10.1111 / j. 1502 - 3931.2008. 00138. x . Jump up ^ Ali ,
+M.A. and M.A. Klyne. 1985 . Vision in vertebrates . New York : Plenum Press Jump up ^ Fernald , Russell D. ( 2001 ) . The Evolution of Eyes : Why Do We See What
+We See ? Karger Gazette 64 : `` The Eye in Focus '' . Jump up ^ Fernald , Russell D. ( 1998 ) . Aquatic Adaptations in Fish Eyes . New York , Springer .
+</item 5>
+
+<item 6>
+Evolution of the eye
+Oxford Journals. 96 ( 3 ) : 171 -- 184 . doi : 10.1093 / jhered / esi027 . PMID 15653558 . Retrieved 2008 - 04 - 26 . ^ Jump up to : MF Land ; RD Fernald ( 1992
+) . `` The Evolution of Eyes '' . Annual Review of Neuroscience. 15 : 1 -- 29 . doi : 10.1146 / annurev. ne. 15.030192. 000245 . PMID 1575438 . Jump up ^ Autrum
+, H ( 1979 ) . `` Introduction '' . In H. Autrum . Comparative Physiology and Evolution of Vision in Invertebrates - A : Invertebrate Photoreceptors . Handbook
+of Sensory Physiology . VII / 6A . New York : Springer - Verlag . pp. 6 -- 9 . ISBN 3 - 540 - 08837 - 7 .
+</item 6>
+
+<item 7>
+Evolution of the eye
+`` Eye evolution and its functional basis '' . Visual Neuroscience. 30 : 5 -- 20 . doi : 10.1017 / s0952523813000035 . ^ Jump up to : Nilsson , D. - E. ; Pelger
+, S. ( 1994 ) . `` A pessimistic estimate of the time required for an eye to evolve '' . Proceedings of the Royal Society B : Biological Sciences . 256 : 53 --
+58 . doi : 10.1098 / rspb. 1994.0048 . PMID 8008757 . Jump up ^ Young , G.C. ( 2008 ) . `` Early evolution of the vertebrate eye -- fossil evidence '' . Evo Edu
+Outreach. 1 : 427 -- 438 . doi : 10.1007 / s12052 - 008 - 0087 - y . Jump up ^ Parker , A.R. ( 2009 ) . `` On the origin of optics '' . Optics & Laser
+Technology . 43 ( 2 ) : 323 -- 329 .
+</item 7>
+
+<item 8>
+Graph query row:
+entity: eyespot
+relationship: LOCATED_IN
+related: anterior end
+</item 8>
+
+<item 9>
+Evolution of the eye
+1 ( 4 ) : 439 -- 447 . doi : 10.1007 / s12052 - 008 - 0084 - 1 . ISSN 1936 - 6426 . Further reading ( edit ) Lamb TD , Collin SP , Pugh EN ( December 2007 ) .
+`` Evolution of the vertebrate eye : opsins , photoreceptors , retina and eye cup '' . Nat. Rev. Neurosci. 8 ( 12 ) : 960 -- 76 . doi : 10.1038 / nrn2283 . PMC
+3143066 . PMID 18026166 . Illustration . Review Lamb , TD ( 2011 ) . `` Evolution of the Eye '' ( PDF ) . Scientific American . 305 : 64 -- 69 . doi : 10.1038 /
+scientificamerican0711 - 64 . Land , Michael F. ; Nilsson , Dan - Eric ( 2012 ) . `` The origin of vision '' . Animal Eyes ( 2 ed . ) . Oxford : Oxford
+University Press .
+</item 9>
+
+<item 10>
+Evolution of the eye
+PMID 25734540 . Greuet , C ( 1968 ) . `` Organisation ultrastructurale de l'ocelle de deux Peridiniens Warnowiidae , Erythropsis pavillardi Kofoid et Swezy et
+Warnowia pulchra Schiller '' . Protistologica. 4 : 209 -- 230 . Gregory S. Gavelis , Shiho Hayakawa , Richard A. White III , Takashi Gojobori , Curtis A. Suttle
+, Patrick J. Keeling , Brian S. Leander ( 2015 ) . `` Eye - like ocelloids are built from different endosymbiotically acquired components '' . Nature . 523 :
+204 -- 7 . Bibcode : 2015Natur. 523 ... 204G . doi : 10.1038 / nature14593 . PMID 26131935 . CS1 maint : Uses authors parameter ( link ) Oakley , Todd H. ;
+Speiser , Daniel I. ( 2015 ) . `` How Complexity Originates : The Evolution of Animal Eyes '' .
+</item 10>
+=== END ITEM id=0196e65757df2a04 ===
+
+=== ITEM id=31c887ec30aa17cc ===
+Gold sentences and facts:
+Sentence 0: A main vertical stroke is called a stem . The letter m has three , the left , middle , and right stems . The central stroke of an s is called the spine . When the stroke is part of a lowercase and rises above the height of an x ( called the x height ) , it is called an ascender . Letters with ascenders are bdfhkl . A stroke which drops below the baseline is a descender . Letters with descenders are gjpqy . An arching stroke is called a shoulder as in the top of an R or sometimes just an arch , as in hnm . A closed curved stroke is called a bowl in bdopq DOPQ ; B has two bowls . A trailing outstroke , as in jy JQR is called a tail . The inferior diagonal stroke in K is called leg . A short horizontal stroke , as in the center of ef and the middle stroke of EF , is called a bar . When the strokes connect as in A and H or cross strokes as in t is also known as crossbar . A longer horizontal stroke at the top or bottom , as in ET , is called an arm . The bottom of the two - story g is called a loop ; the very short stroke at the top is called the ear . ij each have a dot , jot , or tittle . Angles of strokes are called apices if at the top and vertices if at the bottom . w has one apex and two vertices ; v has one vertex .
+  Fact 0.0: A main vertical stroke is called a stem.
+  Fact 0.1: The letter m has three stems: the left stem, the middle stem, and the right stem.
+  Fact 0.2: The central stroke of an s is called the spine.
+  Fact 0.3: When a stroke is part of a lowercase letter and rises above the height of an x (called the x height), it is called an ascender.
+  Fact 0.4: The letters with ascenders are b, d, f, h, k, and l.
+  Fact 0.5: A stroke which drops below the baseline is called a descender.
+  Fact 0.6: The letters with descenders are g, j, p, q, and y.
+  Fact 0.7: An arching stroke is called a shoulder, as in the top of an R.
+  Fact 0.8: An arching stroke is sometimes just called an arch, as in h, n, and m.
+  Fact 0.9: A closed curved stroke is called a bowl, as in b, d, o, p, q, D, O, P, and Q.
+  Fact 0.10: The letter B has two bowls.
+  Fact 0.11: A trailing outstroke, as in j, y, J, Q, and R, is called a tail.
+  Fact 0.12: The inferior diagonal stroke in K is called a leg.
+  Fact 0.13: A short horizontal stroke, as in the center of e and f and the middle stroke of E and F, is called a bar.
+  Fact 0.14: When strokes connect, as in A and H, or cross, as in t, the stroke is also known as a crossbar.
+  Fact 0.15: A longer horizontal stroke at the top or bottom, as in E and T, is called an arm.
+  Fact 0.16: The bottom of the two-story g is called a loop.
+  Fact 0.17: The very short stroke at the top of the two-story g is called the ear.
+  Fact 0.18: The letters i and j each have a dot, jot, or tittle.
+  Fact 0.19: Angles of strokes are called apices if at the top.
+  Fact 0.20: Angles of strokes are called vertices if at the bottom.
+  Fact 0.21: The letter w has one apex and two vertices.
+  Fact 0.22: The letter v has one vertex.
+
+Retrieved items:
+<item 1>
+Typeface anatomy
+The close counter in e is also named eye . Angles of white space , as in w , are corners ( w has three corners ) ; the term is not used for angles of strokes .
+The small corner formed by a serif , whether curved or angular , is called the serif bracket . Proportions ( edit ) A subtle change in proportion impacts weight
+, perception , measure , and legibility . The letterform height compared to its stroke width modifies the aspect ; this slight change in weight sometimes helps
+to create emphasis . The disparity between thick and thin strokes , known as stress , alters optical perception . As an example , the initial san serif
+typefaces used a constantly thin stroke . The technological advances allow drawing thinner strokes . Condense type occupies less space than expanded type , then
+the text written on a page can be reduced to half a page. The capline and x-height ratio improve or decrease word legibility . Metal type era ( edit ) During
+the late metal type period , many fonts ( particularly in American typefounding ) were issued to `` common line '' . This meant that they were made to
+standardised proportions , so that fonts of different typefaces could be mixed with no difficulty .
+</item 1>
+
+<item 2>
+Typeface anatomy
+`` Typeface Mechanics : 001 '' . Frere - Jones Type . Retrieved 17 April 2016 . Frere - Jones , Tobias . `` Typeface Mechanics : 002 '' . Frere - Jones Type .
+Retrieved 17 April 2016 . Coles , Stephen . `` The Anatomy of Type '' . Blog for Coles ' 2012 book The Anatomy of Type : A Graphic Guide to 100 Typefaces . ``
+Glossary '' . FontShop . Monotype . ( hide ) Typography terminology Page Canons of page construction Column Even working Margin Page numbering Pagination Pull
+quote Recto and verso Paragraph Alignment Justification Leading River Sentence spacing Widows and orphans Character Typeface anatomy Counter Diacritics Dingbat
+Glyph Initial Kerning Letter - spacing Ligature Subscript and superscript Swash Text figures Tittle Capitalization ALL CAPS Camel Case Letter case Petite caps
+Small caps Visual distinction Italics Oblique Bold Color Underline Blackboard bold Blackletter Infɑnt Vertical aspects Ascender Baseline Cap height Descender
+Median Overshoot x-height Classifications Roman type Antiqua ( old style ) Didone ( modern ) Sans - serif Script Serif Slab serif Transitional Reverse
+</item 2>
+
+<item 3>
+Typeface anatomy
+The central stroke of an s is called the spine . When the stroke is part of a lowercase and rises above the height of an x ( called the x height ) , it is
+called an ascender . Letters with ascenders are bdfhkl . A stroke which drops below the baseline is a descender . Letters with descenders are gjpqy . An arching
+stroke is called a shoulder as in the top of an R or sometimes just an arch , as in hnm . A closed curved stroke is called a bowl in bdopq DOPQ ; B has two
+bowls . A trailing outstroke , as in jy JQR is called a tail . The inferior diagonal stroke in K is called leg . A short horizontal stroke , as in the center of
+ef and the middle stroke of EF , is called a bar . When the strokes connect as in A and H or cross strokes as in t is also known as crossbar . A longer
+horizontal stroke at the top or bottom , as in ET , is called an arm . The bottom of the two - story g is called a loop ; the very short stroke at the top is
+called the ear .
+</item 3>
+
+<item 4>
+Typeface anatomy names the parts of letterforms: stems, spines, bowls, shoulders, bars, arms, legs, tails, loops, ears, ascenders, descenders, serifs, and
+terminals. White spaces inside or between strokes are counters; angles are apices or vertices. Proportions, stroke contrast (stress), x-height, cap height, and
+spacing affect weight, appearance, and legibility. Type design uses optical adjustments because mathematically equal shapes may not look equal
+</item 4>
+
+<item 5>
+In October 1989, marking its 50th anniversary and distinguishing Toyota from the newly launched Lexus brand, Toyota introduced a worldwide logo first seen on
+the Celsior. Its three ovals form a “T”: the overlapping inner ovals symbolize customer-company trust and mutual benefit, while the outer oval represents global
+technological expansion and future potential. The logo appeared widely on Toyota vehicles and materials from 1990. In traditional-Chinese-speaking regions such
+as Hong Kong and Taiwan, Toyota is called
+</item 5>
+
+<item 6>
+Typeface anatomy
+ij each have a dot , jot , or tittle . Angles of strokes are called apices if at the top and vertices if at the bottom . w has one apex and two vertices ; v has
+one vertex . The font shown in the example is stressed : strokes have varying widths . In this example , the stroke at the top of the g is thinner at the top
+and bottom than on the sides -- a vertical stress . Terminals ( edit ) The terminals ( ends ) of instrokes and outstrokes often end in serif or sans - serif . A
+seriffed terminal may be described as a wedge , bulbous , teardrop , slab , etc. , depending on the design of the type . Sorting typefaces can be practical
+based on its look . A clue feature is to define the serif style . Some designs also have spurs , which are smaller than serifs and appear on angles rather than
+at a terminal , as on e or G . Space ( edit ) Areas of negative space ( white space ) formed by straight or curved strokes are called counters . Closed counters
+are found in abdegopq ABDOPQR , and open counters in acefhmnrstu .
+</item 6>
+
+<item 7>
+Typeface anatomy
+Typeface Anatomy - wikipedia Typeface Anatomy Jump to : navigation , search Typographic parts of a glyph : 1 ) x-height ; 2 ) ascender line ; 3 ) apex ; 4 )
+baseline ; 5 ) ascender ; 6 ) crossbar ; 7 ) stem ; 8 ) serif ; 9 ) leg ; 10 ) bowl ; 11 ) counter ; 12 ) collar / link / neck ; 13 ) loop ; 14 ) ear ; 15 ) tie
+; 16 ) horizontal bar ; 17 ) arm ; 18 ) vertical bar ; 19 ) cap height ; 20 ) descender line . Typeface anatomy describes the graphic elements that make up
+printed letters in a typeface . Contents ( hide ) 1 Strokes 2 Terminals 3 Space 4 Proportions 5 Metal type era 6 See also 7 References 8 Further reading 9
+External links Strokes ( edit ) The strokes are the components of a letterform . Strokes may be straight , as in klvwxz , or curved , as in cos . If straight ,
+they may be horizontal , vertical , or diagonal ; if curved , open or closed .
+</item 7>
+
+<item 8>
+Typeface anatomy
+This made it possible to mix typefaces from completely different genres such as sans - serifs and serifs and have the cap height , baseline and linespacing
+match perfectly , something not possible with most digital fonts . It even allowed mixing of different sizes of type with a consistent baseline . It however had
+the disadvantage of often forcing typefaces to be issued with cropped descenders compared to historical typefaces , to allow tight linespacing . A `` script
+line '' or `` art line '' was used for more delicate fonts with long descenders . Titling capitals , meanwhile , were issued taking up the whole space of the
+metal type area , with no room for descenders . See also ( edit ) Type design Type foundry Typography Typesetting References ( edit ) Jump up ^ Studer , Anton (
+29 February 2016 ) . `` Is What I See What I Get ? -- Math & Optics in Type Design '' . Typographica . Retrieved 17 April 2016 . ^ Jump up to : Carter , Bob ;
+Day , Ben ; Meggs , Philip ( 2007 ) . Typographic Design : Form and Communication .
+</item 8>
+
+<item 9>
+Typeface anatomy
+Typographers also speak of an instroke , where one starts writing the letter , as at the top of acf , and an outstroke , where the pen leaves off , as at the
+bottom of cejkty . Typefaces are born from the struggle between rules and results . Squeezing a square about 1 % helps it look more like a square ; to appear
+the same height as a square , a circle must be measurably taller . The two strokes in an X are n't the same thickness , nor are their parallel edges actually
+parallel ; the vertical stems of a lowercase alphabet are thinner than those of its capitals ; the ascender on ad is n't the same length as the descender on ap
+, and so on . For the rational mind , type design can be a maddening game of drawing things differently in order to make them appear the same . Hoefler & Frere
+- Jones A main vertical stroke is called a stem . The letter m has three , the left , middle , and right stems . The central stroke of an s is called the spine
+.
+</item 9>
+
+<item 10>
+Church Fathers
+549 ) Jump up ^ Herbermann , Charles , ed. ( 1913 ) . `` Tertullian '' . Catholic Encyclopedia . New York : Robert Appleton Company . Jump up ^ A History of
+Christian Thought , Paul Tillich , Touchstone Books , 1972 . ISBN 0 - 671 - 21426 - 8 ( p. 43 ) Jump up ^ To Autolycus , Book 2 , chapter XV Jump up ^ Known in
+Latin and Low Franconian as Ambrosius , in Italian as Ambrogio and in Lombard as Ambroeus . Jump up ^ Cross , F.L. , ed . The Oxford Dictionary of the Christian
+Church . New York : Oxford University Press . 2005 , article Platonism Jump up ^ Pope St. Gregory I at about.com Jump up ^ Karim , Cyril Aphrem ( December 2004
+) . Symbols of the cross in the writings of the early Syriac Fathers . Gorgias Press LLC . p. 3 . ISBN 978 - 1 - 59333 - 230 - 3 .
+</item 10>
+=== END ITEM id=31c887ec30aa17cc ===
+
+=== ITEM id=f9ba18f08b902103 ===
+Gold sentences and facts:
+Sentence 0: The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming .
+  Fact 0.0: Alabama has legislatively adopted stand-your-ground laws.
+  Fact 0.1: Alaska has legislatively adopted stand-your-ground laws.
+  Fact 0.2: Arizona has legislatively adopted stand-your-ground laws.
+  Fact 0.3: Florida has legislatively adopted stand-your-ground laws.
+  Fact 0.4: Georgia has legislatively adopted stand-your-ground laws.
+  Fact 0.5: Idaho has legislatively adopted stand-your-ground laws.
+  Fact 0.6: Indiana has legislatively adopted stand-your-ground laws.
+  Fact 0.7: Iowa has legislatively adopted stand-your-ground laws.
+  Fact 0.8: Kansas has legislatively adopted stand-your-ground laws.
+  Fact 0.9: Kentucky has legislatively adopted stand-your-ground laws.
+  Fact 0.10: Louisiana has legislatively adopted stand-your-ground laws.
+  Fact 0.11: Michigan has legislatively adopted stand-your-ground laws.
+  Fact 0.12: Mississippi has legislatively adopted stand-your-ground laws.
+  Fact 0.13: Missouri has legislatively adopted stand-your-ground laws.
+  Fact 0.14: Montana has legislatively adopted stand-your-ground laws.
+  Fact 0.15: Nevada has legislatively adopted stand-your-ground laws.
+  Fact 0.16: New Hampshire has legislatively adopted stand-your-ground laws.
+  Fact 0.17: North Carolina has legislatively adopted stand-your-ground laws.
+  Fact 0.18: Oklahoma has legislatively adopted stand-your-ground laws.
+  Fact 0.19: Pennsylvania has legislatively adopted stand-your-ground laws.
+  Fact 0.20: South Carolina has legislatively adopted stand-your-ground laws.
+  Fact 0.21: South Dakota has legislatively adopted stand-your-ground laws.
+  Fact 0.22: Tennessee has legislatively adopted stand-your-ground laws.
+  Fact 0.23: Texas has legislatively adopted stand-your-ground laws.
+  Fact 0.24: Utah has legislatively adopted stand-your-ground laws.
+  Fact 0.25: West Virginia has legislatively adopted stand-your-ground laws.
+  Fact 0.26: Wyoming has legislatively adopted stand-your-ground laws.
+
+Retrieved items:
+<item 1>
+Stand-your-ground law
+See also ( edit ) Jury nullification Proxemics , the study of human use of space and the effects that population density has on behavior , communication , and
+social interaction Restorative justice References ( edit ) ^ Jump up to : Dawkins v. State , 252 P. 3d 214 ( Okla . 2011 ) Jump up ^ Randall , Mark ; DeBoer ,
+Hendrick ( April 24 , 2012 ) . `` The Castle Doctrine and Stand - Your - Ground Law '' . Jump up ^ `` Duty to Retreat '' . Wikipedia . Jump up ^ Florida
+Statutes Title XLVI Chapter 776 Jump up ^ Ala . Code 13A - 3 - 23 ( b ) : `` A person who is justified under subsection ( a ) in using physical force ,
+including deadly physical force , and who is not engaged in an unlawful activity and is in any place where he or she has the right to be has no duty to retreat
+and has the right to stand his ground . '' Jump up ^ Eaton , Daysha ( 2013 - 06 - 20 ) .
+</item 1>
+
+<item 2>
+Graph query row:
+entity: Alabama
+relationship: RELATED_TO
+related: Stand-your-ground law
+</item 2>
+
+<item 3>
+Stand-your-ground law
+Justification using stand - your - ground laws may be limited when `` ( the defendant ) was engaged in illegal activities and not entitled to benefit from
+provisions of the ' stand your ground ' law '' . This may be the case even if the illegal conduct the defendant was engaged in had nothing to do with the threat
+which instigated his use of deadly force . For instance , using an illegally obtained weapon in self defense to avoid being robbed and beaten is not justified
+by this law . The castle doctrine is a common law doctrine stating that persons have no duty to retreat in their home , or `` castle '' , and may use reasonable
+force , including deadly force , to defend their property , person , or another . Outside of the abode , however , a person has a duty to retreat , if possible
+, before using deadly force . Castle doctrine and `` stand - your - ground '' laws are acceptable defenses for people who have been charged with criminal
+homicide . At common law , self - defense claims are not valid if the defendant could have safely retreated from danger ( duty to retreat ) . The castle
+doctrine is an exception to this .
+</item 3>
+
+<item 4>
+Stand-your-ground law
+Although police officers make up for additional homicides , they are justified . These are not classified as murder because the officers are acting in the line
+of duty . Police are not required to retreat when acting in the line of duty . A 2015 study found that the adoption of Oklahoma 's stand - your - ground law was
+associated with a decrease in residential burglaries , but also that the law had `` the unintended consequence of increasing the number of non-residential
+burglaries . '' In 2016 , Mark Gius published a study that found that stand - your - ground laws were not associated with lower crime rates . A widely reported
+2016 study in the Journal of the American Medical Association compared homicide rates in Florida following the passage of its `` stand your ground '' self -
+defense law to the rates in four control states , New Jersey , New York , Ohio and Virginia , which have no similar laws . It found that the law was associated
+with a 24.4 % increase in homicide and a 31.6 % increase in firearm - related homicide , but no change in rates of suicide or suicide by firearm , between 2005
+and 2014 .
+</item 4>
+
+<item 5>
+Stand-your-ground law
+At English common law there is no duty to retreat before a person may use reasonable force against an attacker , nor need a person wait to be attacked before
+using such force , but one who chooses not to retreat , when retreat would be a safe and easy option , might find it harder to justify his use of force as '
+reasonable ' . Any force used must be reasonable in the circumstances as the person honestly perceived them to be , after making allowance for the fact that
+some degree of excess force might still be reasonable in the heat of the moment . It was once thought that in ' householder defence ' cases , excessive force
+would be regarded as unreasonable only if `` grossly disproportionate '' , but that view has twice been rejected by the courts . Grossly disproportionate force
+can never be reasonable , but lesser force might or might not be , depending on the circumstances . In R v Ray ( 2017 ) the Lord Chief Justice , giving the
+judgment of the Court of Appeal , said : `` If there is a threat of confrontation in the street , then the option to retreat may be important in determining
+whether the use of any force was reasonable .
+</item 5>
+
+<item 6>
+Stand-your-ground law
+States that have adopted stand - your - ground , but limit it to only when a person is within their vehicle , are North Dakota , Ohio , and Wisconsin . The
+states that have castle doctrine only with the duty to retreat in public are Arkansas , Connecticut , Delaware , Maine , Maryland , Massachusetts , Minnesota ,
+Nebraska , New York , New Jersey , and Rhode Island . This means that people can use deadly force in their home , car , or other form of abode but have to
+retreat in public . Controversy ( edit ) Stand - your - ground laws are frequently criticized and called `` shoot first '' laws by critics , including the Brady
+Campaign to Prevent Gun Violence . In Florida , self - defense claims tripled in the years following enactment . The law 's critics argue that Florida 's law
+makes it very difficult to prosecute cases against individuals who shoot others and then claim self - defense . The shooter can argue that he felt threatened ,
+and in most cases , the only witness who could have argued otherwise is the deceased .
+</item 6>
+
+<item 7>
+Stand-your-ground law
+The castle doctrine is an exception to this . It gives immunity from liability to individuals who acted in self - defense in the home even if they could have
+safely retreated from the threat and failed to do so . The duty to retreat is a legal requirement in some jurisdictions that a threatened person can not stand
+one 's ground and apply lethal force in self - defense , but must retreat to a place of safety instead . Deadly force or lethal force is force with the intent
+of serious bodily injury or death to another person . In most jurisdictions it is only accepted under conditions of extreme necessity and last resort . Stand -
+your - ground laws eliminate the retreat requirement at any location the defendant has a legal right to be , though this varies from state to state .
+</item 7>
+
+<item 8>
+Stand-your-ground law
+Stand - your - ground law - wikipedia Stand - your - ground law Jump to : navigation , search `` Stand your ground '' redirects here . For other uses , see
+Stand Your Ground ( disambiguation ) . A stand - your - ground law ( sometimes called `` line in the sand '' or `` no duty to retreat '' law ) is a
+justification in a criminal case , whereby defendants can `` stand their ground '' and use force without retreating , in order to protect and defend themselves
+or others against threats or perceived threats . An example is where there is no duty to retreat from any place where they have a lawful right to be , and that
+they may use any level of force if they reasonably believe the threat rises to the level of being an imminent and immediate threat of serious bodily harm and or
+death . One case describes `` the ' stand your ground ' law ... a person has a right to expect absolute safety in a place they have a right to be , and may use
+deadly force to repel an unlawful intruder . ''
+</item 8>
+
+<item 9>
+Stand-your-ground law
+Contents ( hide ) 1 United States 1.1 Laws 1.2 Controversy 1.3 Racial disparity 1.4 Crime 2 Other jurisdictions 2.1 England and Wales 2.2 Czech Republic 2.3
+Germany 2.4 Ireland 3 See also 4 References 5 Further reading United states ( edit ) Laws ( edit ) Stand your ground law by US jurisdiction Stand - your -
+ground law Stand - your - ground in practice Stand - your - ground from within one 's vehicle Castle doctrine only ; duty to retreat in public Duty to retreat
+The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas ,
+Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South
+Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming . The states that have adopted stand - your - ground in practice , either through case law /
+precedent , jury instructions or by other means , are California , Colorado , Illinois , New Mexico , Oregon , Virginia , and Washington .
+</item 9>
+
+<item 10>
+Stand-your-ground law
+Jump up ^ Coleman , Christina . `` Kill At Will : Stand Your Ground Laws Contribute To 600 Additional Homicides A Year ( DETAILS ) '' . Retrieved 1 December
+2014 . Jump up ^ Roberts , Joshua ( Winter 2012 ) . `` Deadly Force and the Right of Self - Defense Stand Your Ground Laws '' . Forensic Examiner -- via
+ProQuest . Jump up ^ Chamlin , Mitchell B. ; Krajewski , Andrea E. ( 29 December 2015 ) . `` Use of Force and Home Safety : An Impact Assessment of Oklahoma 's
+'' . Deviant Behavior : 1 -- 9 . doi : 10.1080 / 01639625.2015. 1012027 . Jump up ^ Gius , Mark ( September 2016 ) . `` The relationship between stand - your -
+ground laws and crime : A state - level analysis '' . The Social Science Journal . 53 ( 3 ) : 329 -- 338 . doi : 10.1016 / j. soscij. 2016.01. 001 .
+</item 10>
+=== END ITEM id=f9ba18f08b902103 ===
+
+=== ITEM id=854fadad0b6a618d ===
+Gold sentences and facts:
+Sentence 0: The film was directed by Robert Mulligan , and starred Gary Grimes as Hermie , Jerry Houser as his best friend Oscy , Oliver Conant as their nerdy young friend Benjie , Jennifer O'Neill as Hermie 's mysterious love interest , and Katherine Allentuck and Christopher Norris as a pair of girls whom Hermie and Oscy attempt to seduce . Mulligan also has an uncredited role as the voice of the adult Hermie . Maureen Stapleton ( Allentuck 's real - life mother ) also appears in a small , uncredited voice role ( calling after Hermie as he leaves the house in an early scene , and after he enters his room in a later scene ) .
+  Fact 0.0: Robert Mulligan directed the film.
+  Fact 0.1: Gary Grimes starred as Hermie.
+  Fact 0.2: Jerry Houser starred as Hermie's best friend Oscy.
+  Fact 0.3: Oliver Conant played Benjie, a nerdy young friend of Hermie and Oscy.
+  Fact 0.4: Jennifer O'Neill played Hermie's mysterious love interest.
+  Fact 0.5: Katherine Allentuck and Christopher Norris played a pair of girls whom Hermie and Oscy attempt to seduce.
+  Fact 0.6: Robert Mulligan has an uncredited role as the voice of the adult Hermie.
+  Fact 0.7: Maureen Stapleton is Katherine Allentuck's real-life mother.
+  Fact 0.8: Maureen Stapleton has a small, uncredited voice role.
+  Fact 0.9: Maureen Stapleton's voice calls after Hermie as he leaves the house in an early scene.
+  Fact 0.10: Maureen Stapleton's voice calls after Hermie as he enters his room in a later scene.
+Sentence 1: Summer of ' 42 Theatrical release poster Directed by Robert Mulligan Produced by Richard A. Roth Written by Herman Raucher Starring Jennifer O'Neill Gary Grimes Jerry Houser Oliver Conant Narrated by Robert Mulligan Music by Michel Legrand Cinematography Robert Surtees Edited by Folmar Blangsted Distributed by Warner Bros. Pictures Release date April 18 , 1971 ( 1971 - 04 - 18 ) Running time 104 minutes Country United States Language English Budget $1 million Box office $32,063,634
+  Fact 1.0: Summer of '42 has a theatrical release poster.
+  Fact 1.1: Summer of '42 was directed by Robert Mulligan.
+  Fact 1.2: Summer of '42 was produced by Richard A. Roth.
+  Fact 1.3: Summer of '42 was written by Herman Raucher.
+  Fact 1.4: Summer of '42 starred Jennifer O'Neill, Gary Grimes, Jerry Houser and Oliver Conant.
+  Fact 1.5: Summer of '42 was narrated by Robert Mulligan.
+  Fact 1.6: Summer of '42 had music by Michel Legrand.
+  Fact 1.7: Summer of '42 had cinematography by Robert Surtees.
+  Fact 1.8: Summer of '42 was edited by Folmar Blangsted.
+  Fact 1.9: Summer of '42 was distributed by Warner Bros. Pictures.
+  Fact 1.10: Summer of '42 was released on April 18, 1971.
+  Fact 1.11: Summer of '42 has a running time of 104 minutes.
+  Fact 1.12: Summer of '42 is a United States production.
+  Fact 1.13: Summer of '42 is in English.
+  Fact 1.14: Summer of '42 had a budget of $1 million.
+  Fact 1.15: Summer of '42 had a box office of $32,063,634.
+
+Retrieved items:
+<item 1>
+*Summer of ’42* is a 1971 American coming-of-age comedy-drama directed by Robert Mulligan, based on screenwriter Herman Raucher’s memoirs. Set during a 1942
+summer on Nantucket, it follows a teenage boy’s unrequited feelings for Dorothy, a young woman whose husband is away fighting in World War II. Starring Jennifer
+O’Neill, Gary Grimes, Jerry Houser, and Oliver Conant, the film earned about $32 million
+</item 1>
+
+<item 2>
+Summer of '42
+Summer of ' 42 - wikipedia Summer of ' 42 Jump to : navigation , search Summer of ' 42 Theatrical release poster Directed by Robert Mulligan Produced by Richard
+A. Roth Written by Herman Raucher Starring Jennifer O'Neill Gary Grimes Jerry Houser Oliver Conant Narrated by Robert Mulligan Music by Michel Legrand
+Cinematography Robert Surtees Edited by Folmar Blangsted Distributed by Warner Bros. Pictures Release date April 18 , 1971 ( 1971 - 04 - 18 ) Running time 104
+minutes Country United States Language English Budget $1 million Box office $32,063,634 Summer of ' 42 is a 1971 American coming - of - age comedy - drama film
+based on the memoirs of screenwriter Herman Raucher . It tells the story of how Raucher , in his early teens on his 1942 summer vacation on Nantucket Island (
+off the coast of Cape Cod ) , embarks on a one - sided romance with a young woman , Dorothy , whose husband had gone off to fight in World War II .
+</item 2>
+
+<item 3>
+Summer of '42
+Archived from the original on January 29 , 2009 . Jump up ^ Jennifer O'Neill in 2002 tv-now.com Retrieved August 11 , 2006 Archived August 29 , 2006 , at the
+Wayback Machine . Jump up ^ Theatermania.com , Starry , Starry Morning : Charles Nelson 's Casts and Forecasts . Retrieved September 3 , 2007 Jump up ^ Summer
+of ' 42 Plus Twenty usatoday.com . Retrieved July 6 , 2006 . External links ( edit ) www.hermanraucher.com Summer of ' 42 on IMDb Summer of ' 42 at the TCM
+Movie Database Summer of ' 42 by Andy Williamson -- The Wordslinger dated April 14 ,
+</item 3>
+
+<item 4>
+Summer of '42
+The film is recognized by American Film Institute in these lists : 2002 : AFI 's 100 Years ... 100 Passions -- Nominated 2005 : AFI 's 100 Years of Film Scores
+-- Nominated Sequel ( edit ) In 1973 , the film was followed by Class of ' 44 , a slice - of - life film made up of vignettes about Herman Raucher and Oscar
+Seltzer 's experiences in college . Class of ' 44 involves the boys facing army service in the last year of World War II . The only crew member from Summer of '
+42 to return to the project was Raucher himself , who wrote the script ; a new director and composer were brought in to replace Mulligan and Legrand . Of the
+principal four cast members of Summer of ' 42 , only Jerry Houser and Gary Grimes returned for prominent roles , with Oliver Conant making two brief appearances
+totaling less than two minutes of screen time . Jennifer O'Neill did not appear in the film at all , nor was the character of Dorothy mentioned . The film is
+noted for featuring a young , slim John Candy briefly appearing in his first film role .
+</item 4>
+
+<item 5>
+Summer of '42
+Retrieved September 3 , 2010 . Jump up ^ Internet Movie Database : Summer of ' 42 Business Data IMDb.com Retrieved July 3 , 2006 . Jump up ^ `` Summer of ' 42 (
+1971 ) -- Misc Notes '' . TCM.com . Retrieved February 8 , 2012 . Jump up ^ `` AFI 's 100 Years ... 100 Passions Nominees '' ( PDF ) . Retrieved August 20 ,
+2016 . Jump up ^ `` AFI 's 100 Years of Film Scores Nominees '' ( PDF ) . Retrieved August 20 , 2016 .
+</item 5>
+
+<item 6>
+Summer of '42
+wikipedia.org/w/index.php?title=Summer_of_%2742&oldid=803913855 '' Categories : 1971 films English - language films 1970s comedy - drama films 1970s coming - of
+- age films 1970s teen films American biographical films American comedy - drama films American coming - of - age films American films Film scores by Michel
+Legrand Films about vacationing Films about virginity Films directed by Robert Mulligan Films set in 1942 Films set in Massachusetts Films set on beaches Films
+set on islands Films set on the home front during World War II Films that won the Best Original Score Academy Award Nantucket , Massachusetts Warner Bros.
+</item 6>
+
+<item 7>
+*Summer of ’42* was both a commercial and critical success. Screenwriter Herman Raucher said his 10% share of gross, plus book royalties, continued to pay his
+bills. The film received more than a dozen award nominations, including two Golden Globe and five Oscar nominations, and won the 1972 Oscar and 1971 BAFTA for
+Michel Legrand’s music. Stanley Kubrick was a fan and featured it on a television in *The Shining*.
+</item 7>
+
+<item 8>
+Summer of '42
+The 1973 song `` Summer ( The First Time ) '' by Bobby Goldsboro has almost exactly the same subject and apparent setting , although there is no direct credited
+link . Bryan Adams has , however , credited the film as being a partial inspiration for his 1985 hit `` Summer of ' 69 '' . Garth Brooks ' 1993 hit `` That
+Summer '' features a similar story of a coming - of - age male in a romance with an older female . Film and television ( edit ) In Stanley Kubrick 's 1980 film
+version of Stephen King 's The Shining , Wendy ( Shelley Duvall ) is shown watching Summer of ' 42 on television ( a brief clip of the scene featuring Hermie
+helping Dorothy bring her groceries in the house is playing on the television in the background during the scene ) . An episode of the 1970s sitcom Happy Days
+was loosely based upon Summer of ' 42 , with Richie Cunningham befriending a Korean War widow . The film 's title formed the basis of a Season 7 episode of The
+Simpsons , `` Summer of 4 Ft. 2 '' .
+</item 8>
+
+<item 9>
+Summer of '42
+Though a pop culture phenomenon in the first half of the 1970s , the novelization went out of print and slipped into obscurity throughout the next two decades
+until a Broadway adaptation in 2001 brought it back into the public light and prompted Barnes & Noble to acquire the publishing rights to the book . Contents (
+hide ) 1 Plot 2 Cast 3 Production 4 Factual basis 5 Reception and awards 6 Sequel 7 Soundtrack 8 Cultural impact 8.1 Music 8.2 Film and television 8.3 Remakes
+8.4 Off - Broadway musical 8.5 Alternate sequel 9 See also 10 References 11 External links Plot ( edit ) The film opens with a series of still photographs
+appearing over melancholic music , representing the abstract memories of the unseen Herman Raucher , now a middle - aged man . We then hear Raucher recalling
+the summer he spent on the island in 1942 . The film flashes back to a day that then 15 - year - old `` Hermie '' and his friends -- jock Oscy and introverted
+nerd Benjie -- spent playing on the beach .
+</item 9>
+
+<item 10>
+Summer of '42
+Alternate sequel ( edit ) In 2002 , O'Neill claimed to have obtained the rights to make a sequel to Summer of ' 42 , based on a short story she wrote , which
+took place in an alternate reality where Herman Raucher had a son and divorced his wife , went back to Nantucket in 1962 with a still - living Oscar Seltzer ,
+and encountered Dorothy again and married her . As of 2017 , this project -- which O'Neill had hoped to produce with Lifetime television -- has not been
+realized , and it is unknown whether O'Neill is still attempting to get it produced , or if Raucher consented to its production . See also ( edit ) List of
+American films of 1971 References ( edit ) Jump up ^ `` SUMMER OF ' 42 ( X ) '' . British Board of Film Classification . 1971 - 04 - 15 . Retrieved 2013 - 02 -
+06 . Jump up ^ `` Summer of ' 42 , Box Office Information '' . The Numbers . Retrieved January 12 , 2012 . ^ Jump up to : Park , Louis Hillary ( May 2002 ) .
+</item 10>
+=== END ITEM id=854fadad0b6a618d ===
+
+=== ITEM id=1b77155dd73fa481 ===
+Gold sentences and facts:
+Sentence 0: The Second Great Awakening occurred in several episodes and over different denominations ; however , the revivals were very similar . As the most effective form of evangelizing during this period , revival meetings cut across geographical boundaries , and the movement quickly spread throughout Kentucky , Tennessee and southern Ohio . Each denomination had assets that allowed it to thrive on the frontier . The Methodists had an efficient organization that depended on itinerant ministers , known as circuit riders , who sought out people in remote frontier locations . The circuit riders came from among the common people , which helped them establish rapport with the frontier families they hoped to convert .
+  Fact 0.0: The Second Great Awakening occurred in several episodes.
+  Fact 0.1: The Second Great Awakening occurred over different denominations.
+  Fact 0.2: The revivals of the Second Great Awakening were very similar to each other.
+  Fact 0.3: Revival meetings were the most effective form of evangelizing during this period.
+  Fact 0.4: Revival meetings cut across geographical boundaries.
+  Fact 0.5: The revival movement quickly spread throughout Kentucky, Tennessee and southern Ohio.
+  Fact 0.6: Each denomination had assets that allowed it to thrive on the frontier.
+  Fact 0.7: The Methodists had an efficient organization.
+  Fact 0.8: The Methodist organization depended on itinerant ministers known as circuit riders.
+  Fact 0.9: Circuit riders sought out people in remote frontier locations.
+  Fact 0.10: Circuit riders came from among the common people.
+  Fact 0.11: Coming from among the common people helped circuit riders establish rapport with the frontier families they hoped to convert.
+Sentence 1: The revivals enrolled millions of new members in existing evangelical denominations and led to the formation of new denominations . Many converts believed that the Awakening heralded a new millennial age . The Second Great Awakening stimulated the establishment of many reform movements designed to remedy the evils of society before the anticipated Second Coming of Jesus Christ .
+  Fact 1.0: The revivals enrolled millions of new members in existing evangelical denominations.
+  Fact 1.1: The revivals led to the formation of new denominations.
+  Fact 1.2: Many converts believed that the Awakening heralded a new millennial age.
+  Fact 1.3: The Second Great Awakening stimulated the establishment of many reform movements.
+  Fact 1.4: The reform movements were designed to remedy the evils of society before the anticipated Second Coming of Jesus Christ.
+Sentence 2: In the newly settled frontier regions , the revival was implemented through camp meetings . These often provided the first encounter for some settlers with organized religion , and they were important as social venues . The camp meeting was a religious service of several days ' length with preachers . Settlers in thinly populated areas gathered at the camp meeting for fellowship as well as worship . The sheer exhilaration of participating in a religious revival with crowds of hundreds and perhaps thousands of people inspired the dancing , shouting , and singing associated with these events . The revivals followed an arc of great emotional power , with an emphasis of the individual 's sins and need to turn to Christ , restored by a sense of personal salvation . Upon their return home , most converts joined or created small local churches , which grew rapidly . The Second Great Awakening marked a religious transition in society in America . Many Americans from the Calvinist sect emphasized man 's inability to save themselves and that their only way to be saved was from grace from God .
+  Fact 2.0: In the newly settled frontier regions, the revival was implemented through camp meetings.
+  Fact 2.1: Camp meetings often provided the first encounter for some settlers with organized religion.
+  Fact 2.2: Camp meetings were important as social venues.
+  Fact 2.3: A camp meeting was a religious service of several days' length with preachers.
+  Fact 2.4: Settlers in thinly populated areas gathered at the camp meeting for fellowship as well as worship.
+  Fact 2.5: Participating in a religious revival with crowds of hundreds and perhaps thousands of people was sheer exhilaration.
+  Fact 2.6: That exhilaration inspired the dancing, shouting, and singing associated with camp meeting events.
+  Fact 2.7: The revivals followed an arc of great emotional power.
+  Fact 2.8: The revivals emphasized the individual's sins and need to turn to Christ.
+  Fact 2.9: The revivals were restored by a sense of personal salvation.
+  Fact 2.10: Upon their return home, most converts joined or created small local churches.
+  Fact 2.11: The small local churches grew rapidly.
+  Fact 2.12: The Second Great Awakening marked a religious transition in society in America.
+  Fact 2.13: Many Americans from the Calvinist sect emphasized man's inability to save themselves.
+  Fact 2.14: Many Americans from the Calvinist sect emphasized that their only way to be saved was by grace from God.
+
+Retrieved items:
+<item 1>
+The Second Great Awakening intensified Protestantism’s influence on American politics and society. Scholarship links the revival movement to social reform,
+abolitionism, women’s religious roles, camp meetings, evangelical political culture, and the democratization and diversification of Christianity. Its varied
+traditions and legacy include Methodism, Baptist and Presbyterian movements, Adventism, Latter-day Saints, and Restorationist churches, with notable regional
+centers such as western New York’s “Burned-over District.”
+</item 1>
+
+<item 2>
+The Second Great Awakening embraced Romantic enthusiasm, emotion, and the supernatural, rejecting Enlightenment skepticism and rationalism; related Pietist and
+Evangelical movements flourished in Europe. Revival meetings spread across denominations and the frontier, especially Kentucky, Tennessee, and southern Ohio.
+Methodist circuit riders reached remote communities. Postmillennialism dominated Protestant theology. The Awakening influenced the Restoration Movement,
+particularly Barton W. Stone, and encouraged converts to pursue social reform as well as personal repentance. Congregational missionary societies
+</item 2>
+
+<item 3>
+Second Great Awakening
+the Second reflected Romanticism characterized by enthusiasm , emotion , and an appeal to the super-natural . It rejected the skepticism , deism , and
+rationalism left over from the Enlightenment . At about the same time , similar movements flourished in Europe . Pietism was sweeping German countries .
+Evangelicalism was waxing strong in England . The Second Great Awakening occurred in several episodes and over different denominations ; however , the revivals
+were very similar . As the most effective form of evangelizing during this period , revival meetings cut across geographical boundaries , and the movement
+quickly spread throughout Kentucky , Tennessee and southern Ohio . Each denomination had assets that allowed it to thrive on the frontier . The Methodists had
+an efficient organization that depended on itinerant ministers , known as circuit riders , who sought out people in remote frontier locations . The circuit
+riders came from among the common people , which helped them establish rapport with the frontier families they hoped to convert . Theology ( edit ) Main article
+: Postmillennialism Postmillennialism theology dominated American Protestantism in the first half of the 19th century .
+</item 3>
+
+<item 4>
+Second Great Awakening
+Many converts believed that the Awakening heralded a new millennial age . The Second Great Awakening stimulated the establishment of many reform movements
+designed to remedy the evils of society before the anticipated Second Coming of Jesus Christ . Historians named the Second Great Awakening in the context of the
+First Great Awakening of the 1730s and 1740s and of the Third Great Awakening of the late 1850s to early 1900s . These revivals were part of a much larger
+Romantic religious movement that was sweeping across Europe at the time , mainly throughout England , Scotland , and Germany .
+</item 4>
+
+<item 5>
+Second Great Awakening
+While Protestant religion had previously played an important role on the American political scene , the Second Great Awakening strengthened the role it would
+play . See also ( edit ) Baptist portal Methodism portal Calvinism portal Seventh - day Adventist Church portal Latter Day Saints portal LDS Church portal
+Advent Christian Church Christian revival Christianity in the 19th century The Church of Jesus Christ of Latter - day Saints Cumberland Presbyterian Church
+Ethnocultural politics in the United States Holiness movement Restoration Movement Seventh - day Adventist Church References ( edit ) ^ Jump up to : Timothy L.
+Smith , Revivalism and Social Reform : American Protestantism on the Eve of the Civil War ( 1957 ) . Jump up ^ Heyrman , Christine Leigh . `` The First Great
+Awakening '' . Divining America , TeacherServe . National Humanities Center . Jump up ^ Henry B. Clark ( 1982 ) . Freedom of Religion in America : Historical
+Roots , Philosophical Concepts , Contemporary Problems . Transaction Publishers . p. 16 . ^ Jump up to : Nancy Cott , `` Young Women in the Second Great
+Awakening in New England , '' Feminist Studies , ( 1975 ) , 3 # 1 p.
+</item 5>
+
+<item 6>
+Second Great Awakening
+West ( edit ) Main article : Revival of 1800 In the newly settled frontier regions , the revival was implemented through camp meetings . These often provided
+the first encounter for some settlers with organized religion , and they were important as social venues . The camp meeting was a religious service of several
+days ' length with preachers . Settlers in thinly populated areas gathered at the camp meeting for fellowship as well as worship . The sheer exhilaration of
+participating in a religious revival with crowds of hundreds and perhaps thousands of people inspired the dancing , shouting , and singing associated with these
+events . The revivals followed an arc of great emotional power , with an emphasis of the individual 's sins and need to turn to Christ , restored by a sense of
+personal salvation . Upon their return home , most converts joined or created small local churches , which grew rapidly . The Second Great Awakening marked a
+religious transition in society in America . Many Americans from the Calvinist sect emphasized man 's inability to save themselves and that their only way to be
+saved was from grace from God . The Revival of 1800 in Logan County , Kentucky , began as a traditional Presbyterian sacramental occasion .
+</item 6>
+
+<item 7>
+The Second Great Awakening, a U.S. Protestant revival beginning around 1790, peaked after 1820 and waned by the late 1850s. Emotional camp meetings—from
+Kentucky’s Cane Ridge to frontier settlements—expanded Methodist and Baptist churches and emphasized conversion, salvation, and postmillennial hopes. It
+fostered Adventism, Mormonism, Holiness churches, and the Restoration Movement. Women gained influence through religious and reform work, while Black preachers
+and independent congregations challenged discrimination
+</item 7>
+
+<item 8>
+The Second Great Awakening was a U.S. Protestant revival beginning around 1790, peaking after 1820 and fading by the late 1850s. Emphasizing emotional
+conversion and a personal relationship with Christ, it rejected Enlightenment skepticism and rapidly expanded Baptist and Methodist churches. Women and young
+people converted in especially large numbers. Revivalism spawned denominations including the Disciples of Christ and Seventh-day Adventists, and inspired social
+reforms tied to hopes for Christ’s return. Western New York
+</item 8>
+
+<item 9>
+Second Great Awakening
+Second Great Awakening - wikipedia Second Great Awakening Jump to : navigation , search An engraving of a Methodist camp meeting in 1819 ( Library of Congress )
+. Great Awakening First ( c. 1730 -- 1755 ) Second ( c. 1790 -- 1840 ) Third ( c. 1855 -- 1900 ) Fourth ( c. 1960 -- 1980 ) The Second Great Awakening was a
+Protestant religious revival during the early 19th century in the United States . The movement began around 1790 , gained momentum by 1800 and , after 1820 ,
+membership rose rapidly among Baptist and Methodist congregations whose preachers led the movement . It was past its peak by the late 1850s . The Second Great
+Awakening reflected Romanticism characterized by enthusiasm , emotion , and an appeal to the super-natural . It rejected the skeptical rationalism and deism of
+the Enlightenment . The revivals enrolled millions of new members in existing evangelical denominations and led to the formation of new denominations . Many
+converts believed that the Awakening heralded a new millennial age .
+</item 9>
+
+<item 10>
+Second Great Awakening
+The Restoration Movement began during , and was greatly influenced by , the Second Great Awakening . While the leaders of one of the two primary groups making
+up this movement , Thomas Campbell and Alexander Campbell , resisted what they saw as the spiritual manipulation of the camp meetings , the revivals contributed
+to the development of the other major branch , led by Barton W. Stone . The Southern phase of the Awakening `` was an important matrix of Barton Stone 's reform
+movement '' and shaped the evangelistic techniques used by both Stone and the Campbells . Culture and society ( edit ) Efforts to apply Christian teaching to
+the resolution of social problems presaged the Social Gospel of the late 19th century . Converts were taught that to achieve salvation they needed not just to
+repent personal sin but also work for the moral perfection of society , which meant eradicating sin in all its forms . Thus , evangelical converts were leading
+figures in a variety of 19th century reform movements . Congregationalists set up missionary societies to evangelize the western territory of the northern tier
+. Members of these groups acted as apostles for the faith , and also as educators and exponents of northeastern urban culture .
+</item 10>
+=== END ITEM id=1b77155dd73fa481 ===
+
+=== ITEM id=40f2316344d92b2e ===
+Gold sentences and facts:
+Sentence 0: This was the city of Chicago 's first professional sports championship since the Chicago Fire won MLS Cup ' 98 ( which came four months after the Chicago Bulls ' sixth NBA championship that year ) . The next major Chicago sports championship came in 2010 , when the NHL 's Chicago Blackhawks ended a 49 - year Stanley Cup title drought . With the Chicago Bears ' win in Super Bowl XX and the Chicago Cubs ' own World Series championship in 2016 , all Chicago sports teams have won at least one major championship since 1985 . Meanwhile , the Astros themselves made it back to the World Series in 2017 , but this time as an AL team , where they defeated the Los Angeles Dodgers in seven games , resulting in Houston 's first professional sports championship since the 2006 -- 07 Houston Dynamo won their back - to - back MLS Championships .
+  Fact 0.0: The championship in this context was the first professional sports championship for the city of Chicago since the Chicago Fire won MLS Cup '98.
+  Fact 0.1: The Chicago Fire won MLS Cup '98.
+  Fact 0.2: The Chicago Fire's MLS Cup '98 win came four months after the Chicago Bulls' sixth NBA championship that year.
+  Fact 0.3: The next major Chicago sports championship came in 2010.
+  Fact 0.4: In 2010, the NHL's Chicago Blackhawks ended a 49-year Stanley Cup title drought.
+  Fact 0.5: The Chicago Bears won Super Bowl XX.
+  Fact 0.6: The Chicago Cubs won the World Series in 2016.
+  Fact 0.7: All Chicago sports teams have won at least one major championship since 1985.
+  Fact 0.8: The Astros made it back to the World Series in 2017.
+  Fact 0.9: The Astros were in the 2017 World Series as an American League team.
+  Fact 0.10: In 2017, the Astros defeated the Los Angeles Dodgers in seven games in the World Series.
+  Fact 0.11: The Astros' 2017 World Series win resulted in Houston's first professional sports championship since the 2006-07 Houston Dynamo won their back-to-back MLS Championships.
+  Fact 0.12: The Houston Dynamo won back-to-back MLS Championships in 2006-07.
+Sentence 1: Neither team advanced to the post-season in 2006 , but the 2006 World Series again featured teams from the American League Central and National League Central divisions , this time represented by the Detroit Tigers and the St. Louis Cardinals , respectively . The Cardinals won the World Series in five games , in which manager Tony La Russa became the second manager to win the World Series in both American and National leagues , previously managing the Oakland Athletics to the 1989 World Series championship . Both the White Sox and the Astros were in the Wild Card race until the final weeks of the season , with the White Sox finishing with 90 wins , the Astros with 82 wins . The White Sox made their first post-2005 playoff appearance in 2008 , while the Astros would not return to the postseason until 2015 , their third season as an American League team and would not return to the World Series until 2017 , their fifth season as an American League team .
+  Fact 1.0: Neither team advanced to the post-season in 2006.
+  Fact 1.1: The 2006 World Series again featured teams from the American League Central and National League Central divisions.
+  Fact 1.2: The Detroit Tigers and the St. Louis Cardinals represented the American League Central and the National League Central, respectively, in the 2006 World Series.
+  Fact 1.3: The St. Louis Cardinals won the World Series in five games.
+  Fact 1.4: In the 2006 World Series, manager Tony La Russa became the second manager to win the World Series in both the American and National leagues.
+  Fact 1.5: Tony La Russa had previously managed the Oakland Athletics to the 1989 World Series championship.
+  Fact 1.6: Both the White Sox and the Astros were in the Wild Card race until the final weeks of the season.
+  Fact 1.7: The White Sox finished the season with 90 wins.
+  Fact 1.8: The Astros finished the season with 82 wins.
+  Fact 1.9: The White Sox made their first post-2005 playoff appearance in 2008.
+  Fact 1.10: The Astros would not return to the postseason until 2015, their third season as an American League team.
+  Fact 1.11: The Astros would not return to the World Series until 2017, their fifth season as an American League team.
+
+Retrieved items:
+<item 1>
+Houston Astros
+They finished 101 -- 61 , with a 21 - game lead in the division , and faced the Red Sox in the first round of the AL playoffs . The Astros defeated the Red Sox
+three games to one , and advanced to the American League Championship Series against the New York Yankees . The Astros won the ALCS four games to three , and
+advanced to the World Series to play against the Los Angeles Dodgers . The Astros defeated the Dodgers in the deciding seventh game of the World Series ,
+winning the first championship in franchise history . The city of Houston celebrated the team 's accomplishment with a parade on the afternoon of November 3 ,
+2017 . Houston 's Independent School District gave the students and teachers the day off to watch the parade . On November 16 , 2017 Jose Altuve was named the
+American League Most Valuable Player , capping off a historic season in which he accumulated 200 hits for the fourth consecutive season , led the majors with a
+. 346 BA , and was the unquestioned clubhouse leader of the World Series Champions .
+</item 1>
+
+<item 2>
+2005 World Series
+People really cheering me . I had tears in my eyes . To really know the fans cared that much about me -- it was a great feeling . One of my proudest moments in
+the game . '' Houston Astros ( edit ) Main article : 2005 Houston Astros season The Houston Astros won the Wild Card for the second straight year , once again
+clinching it on the final day of the season . The Astros embarked on a memorable Division Series rematch against the Atlanta Braves . With the Astros in the
+lead two games to one , the teams played an eighteen - inning marathon in Game 4 , which was the longest ( in both time and innings played ) postseason game in
+history . In this game , Roger Clemens made only the second relief appearance of his career , and the first in postseason play . Chris Burke 's walk - off home
+run ended the game in the bottom of the eighteenth . For the second straight year , the Astros played the St. Louis Cardinals in the League Championship Series
+. Like the White Sox , the Astros dropped Game 1 , but were able to regroup and win Games 2 -- 4 .
+</item 2>
+
+<item 3>
+2005 World Series
+The Astros were attempting to become the fourth consecutive wild card team to win the Series , following the Anaheim Angels ( 2002 ) , Florida Marlins ( 2003 )
+and Boston Red Sox ( 2004 ) . Both teams were attempting to overcome decades of disappointment , with a combined 132 years between the two teams without a title
+. The Astros were making their first Series appearance in 44 years of play , while the White Sox had waited exactly twice as long for a title , having last won
+the Series in 1917 , and had not been in the Series since 1959 , three years before the Astros ' inaugural season . Like the 1982 World Series between the St.
+Louis Cardinals and the Milwaukee Brewers , the 2005 World Series is one of only two World Series in the modern era ( 1903 -- present ) with no possibility for
+a rematch between the two opponents , because the Astros moved to the American League in 2013 . However , the Brewers did meet the Cardinals in the 2011
+National League Championship Series .
+</item 3>
+
+<item 4>
+2017 World Series
+Houston Astros ( edit ) Main article : 2017 Houston Astros season The Astros wore a patch during the 2017 World Series in support of Hurricane Harvey victims in
+Houston With a 101 -- 61 regular season record , the team won its first American League West title since moving from the National League Central starting in its
+2013 season , and their first division title since 2001 . In the American League Division Series , they defeated the Boston Red Sox in four games and then
+defeated the New York Yankees in the American League Championship Series ( ALCS ) in seven games . This was their second World Series appearance and first since
+2005 , when they were swept in four games by the Chicago White Sox . They became the first team in history to make it to the World Series as members of both the
+National League and the American League . The city of Houston in August 2017 suffered record flooding from Hurricane Harvey . The team began to wear patches
+which had the logo of the team with the word `` Strong '' on the bottom of the patch , as well as promoting the hashtag Houston Strong . Manager A.J.
+</item 4>
+
+<item 5>
+2005 World Series
+Pierzynski hit a two - out double to Tal 's Hill , driving in two runs , scoring Iguchi and Dye giving the Sox the lead . The Astros rallied in the last of the
+eighth with two outs when Lane 's double scored Ensberg with the tying run after back - to - back walks by Ensberg and Mike Lamb , giving Dustin Hermanson a
+blown save . Houston tried to rally to win in the ninth , but stranded Chris Burke at third , after he had walked , reached second on an error and stolen third
+. The Astros tried again in the 10th as well as in the 11th , but failed each time . In the top of the 14th , after the Sox hit into a spectacular double play
+started by Ensberg , Geoff Blum ( a former Astro and the Astros ' television color analyst as of 2015 ) , who had entered the game in the 13th , homered to
+right with two outs off Ezequiel Astacio . Infield singles by Rowand and Crede were followed by walks to Uribe and Chris Widger .
+</item 5>
+
+<item 6>
+2005 World Series
+With the Astros on the verge of clinching their first ever National League pennant in Game 5 , Albert Pujols hit a mammoth three - run home run off Brad Lidge
+in the top of the ninth inning to take the lead , and subsequently stave off elimination . However , behind NLCS MVP Roy Oswalt , the Astros were able to defeat
+the Cards 5 -- 1 in Game 6 and earned a trip to the World Series . This was the Astros ' first World Series appearance in franchise history . Matchups ( edit )
+Game 1 ( edit ) Saturday , October 22 , 2005 7 : 05 pm ( CDT ) at U.S.
+</item 6>
+
+<item 7>
+2017 World Series
+In the bottom of the inning , Yasiel Puig hit a home run off of Ken Giles and Enrique Hernández drove in Logan Forsythe to tie the game , with the latter being
+the Dodgers ' first run that was not driven in by a home run . In the next inning , George Springer hit a two - run home run for the Astros off of Brandon
+McCarthy to retake the lead . In the bottom of the 11th inning , Charlie Culberson homered off of Chris Devenski , who later struck out Puig to end the game .
+This was the first ever World Series game in which a team hit home runs in the ninth , tenth and eleventh inning . The teams set a new record for combined home
+runs in a single World Series game with eight and this was the first time in MLB history , regular season or postseason , that five home runs were hit in extra
+innings . The Astros won their first World Series game in franchise history as they had been swept in their previous appearance in 2005 . Game 3 ( edit ) Lance
+McCullers Jr. earned the win in Game 3 .
+</item 7>
+
+<item 8>
+2005 World Series
+The Astros wasted a chance in the sixth , Jason Lane striking out with the bases loaded . The White Sox in the top of the seventh put runners at second and
+third , but shortstop Juan Uribe struck out to end the inning . Chicago broke through in the next inning against embattled Houston closer Brad Lidge . Willie
+Harris hit a pinch - hit single . Podsednik advanced him with a sacrifice bunt . Carl Everett pinch - hit for Iguchi and grounded out to the right side to allow
+Harris to move to third . Jermaine Dye , the Most Valuable Player of the series , had the game - winning single , driving in Harris . Things got a little sticky
+for the Sox in the Astros half of the eighth when reliever Cliff Politte hit Willy Taveras , threw a wild pitch , sending Taveras to second , and walked Lance
+Berkman . After Morgan Ensberg flew out to center , the White Sox manager Ozzie Guillén brought in Neal Cotts to finish the inning . Cotts induced pinch -
+hitter José Vizcaíno into a ground out to Uribe .
+</item 8>
+
+<item 9>
+Houston Astros
+The contributions of the other starters -- Brandon Backe ( 10 -- 8 , 4.76 ) and rookie starters Ezequiel Astacio ( 3 -- 6 , 5.67 ) and Wandy Rodríguez ( 10 --
+10 , 5.53 ) -- were less remarkable , but enough to push the Astros into position for a playoff run . The Astros won a wild card berth on the final day of the
+regular season , becoming the first team since the world champion 1914 Boston Braves to qualify for the postseason after being 15 games under . 500 . The Astros
+won the National League Division Series against the Atlanta Braves , 3 - 1 , with a game four that set postseason records for most innings ( 18 ) , most players
+used by a single team ( 23 ) , and longest game time ( 5 hours and 50 minutes ) . Trailing by a score of 6 - 1 , Lance Berkman hit an eighth inning grand slam
+to narrow the score to 6 -- 5 . In the bottom of the ninth , catcher Brad Ausmus , hit a game tying home run that allowed the game to continue in extra innings
+.
+</item 9>
+
+<item 10>
+Houston Astros
+Cellular Field in Chicago and the final two in Houston . Game 3 marked the first World Series game held in the state of Texas , and was the longest game in
+World Series history , lasting 5 hours and 41 minutes . This World Series was marked by a controversy involving the Minute Maid Park roof . MLB & Commissioner
+Bud Selig insisted that the Astros must play with the roof open which mitigated the intensity and enthusiasm of the cheering Astros fans . 2006 -- 2010 : the
+decline ( edit ) In the 2006 offseason , the team signed Preston Wilson and moved Berkman to first base , ending the long tenure of Jeff Bagwell . The Astros
+renewed the contract with Clemens and traded two minor league prospects to the Tampa Bay Devil Rays for left - handed hitter Aubrey Huff . By August , Preston
+Wilson complained about his playing time after the return of Luke Scott from AAA Round Rock . The Astros released Wilson and he was signed by St. Louis . A
+dramatic season end included wins in 10 of their last 12 games , but the Astros missed a playoff appearance when they lost the final game of the season to the
+Atlanta Braves .
+</item 10>
+=== END ITEM id=40f2316344d92b2e ===

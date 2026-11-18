@@ -1,0 +1,112 @@
+[
+{"id": "449ae2b87a3d9415", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Fastbacks were a Seattle, Washington, punk rock band."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Fastbacks were a Seattle, Washington, punk rock band."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Local Natives (previously known as Cavil at Rest) is an American indie rock band based in Silver Lake, Los Angeles, California, United States."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Local Natives (previously known as Cavil at Rest) is an American indie rock band based in Silver Lake, Los Angeles, California, United States."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "Local Natives (previously known as Cavil at Rest) is an American indie rock band based in Silver Lake, Los Angeles, California, United States."}]}
+]},
+{"id": "8e857d5aa9029061", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "His exploits in that battle were described by Hal Moore in, \"We Were Soldiers Once and Young\"."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "His exploits in that battle were described by Hal Moore in, \"We Were Soldiers Once and Young\"."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "person: Hal Moore military_rank: ['United States Army lieutenant general', 'author']"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "person: Hal Moore military_rank: ['United States Army lieutenant general', 'author']"}]}
+]},
+{"id": "2ea1ca84e4289ae4", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Editors are based in Silver Spring, Maryland and Seoul, Korea."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Editors are based in Silver Spring, Maryland and Seoul, Korea."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "The magazine is headquartered in Baltimore, Maryland."}]}
+]},
+{"id": "d3fae6b776b9000b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "His siblings were Abby, Nelson, Laurance, Winthrop, and David."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "His siblings were Abby, Nelson, Laurance, Winthrop, and David."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "His siblings were Abby, Nelson, Laurance, Winthrop, and David."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "His siblings were Abby, Nelson, Laurance, Winthrop, and David."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "His siblings were Abby, Nelson, Laurance, Winthrop, and David."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "David Rockefeller (June 12, 1915 – March 20, 2017) was an American banker who was chairman and chief executive of Chase Manhattan Corporation."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "David Rockefeller (June 12, 1915 – March 20, 2017) was an American banker who was chairman and chief executive of Chase Manhattan Corporation."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "David Rockefeller (June 12, 1915 – March 20, 2017) was an American banker who was chairman and chief executive of Chase Manhattan Corporation."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "David Rockefeller (June 12, 1915 – March 20, 2017) was an American banker who was chairman and chief executive of Chase Manhattan Corporation."}]}
+]},
+{"id": "2c03f7562cd70fe9", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "He is the main vocalist of the boy group Highlight."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "She had been a trainee at S.M. Entertainment's Starlight Academy during her middle school years before debuting as a member of the agency's girl group, Girls' Generation, in 2007."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "She had been a trainee at S.M. Entertainment's Starlight Academy during her middle school years before debuting as a member of the agency's girl group, Girls' Generation, in 2007."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "She had been a trainee at S.M. Entertainment's Starlight Academy during her middle school years before debuting as a member of the agency's girl group, Girls' Generation, in 2007."}]}
+]},
+{"id": "44b6325b190ac9a7", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "The breed is used for hunting in packs and descends from the old Hound of Saintonge type of large hunting dog."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "The breed is used for hunting in packs and descends from the old Hound of Saintonge type of large hunting dog."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "The Kritikos Lagonikos (Cretan Hound) (Greek:Kρητικός Λαγωνικός) is a hunting breed of dog from the island of Crete, in Greece."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "The Kritikos Lagonikos (Cretan Hound) (Greek:Kρητικός Λαγωνικός) is a hunting breed of dog from the island of Crete, in Greece."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "The Kritikos Lagonikos (Cretan Hound) (Greek:Kρητικός Λαγωνικός) is a hunting breed of dog from the island of Crete, in Greece."}]}
+]},
+{"id": "c5fa0b06d0cf1058", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "The Segugio Italiano ] is an Italian breed of dog of the scenthound family."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "The Segugio Italiano ] is an Italian breed of dog of the scenthound family."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "The Sapsali (삽살이) is a shaggy Korean breed of dog."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "The Sapsali (삽살이) is a shaggy Korean breed of dog."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "Traditionally, these dogs were believed to dispel ghosts and evil spirits."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "Traditionally, these dogs were believed to dispel ghosts and evil spirits."}]}
+]},
+{"id": "729e119e352a5145", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "On February 25, 2017 he lost to Jarrett Hurd for the International Boxing Federation light middleweight world title."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "On February 25, 2017 he lost to Jarrett Hurd for the International Boxing Federation light middleweight world title."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Jarrett Hurd (born August 31, 1990) is an American light middleweight boxer from Accokeek, Maryland."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Jarrett Hurd (born August 31, 1990) is an American light middleweight boxer from Accokeek, Maryland."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Jarrett Hurd (born August 31, 1990) is an American light middleweight boxer from Accokeek, Maryland."}]}
+]},
+{"id": "594249288ae1fe98", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Miltoniopsis, abbreviated Mltnps in horticultural trade, is a genus of orchids native to Costa Rica, Panama, Venezuela, Colombia, Ecuador, and Peru."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Miltoniopsis, abbreviated Mltnps in horticultural trade, is a genus of orchids native to Costa Rica, Panama, Venezuela, Colombia, Ecuador, and Peru."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Miltoniopsis, abbreviated Mltnps in horticultural trade, is a genus of orchids native to Costa Rica, Panama, Venezuela, Colombia, Ecuador, and Peru."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Strobilanthes is a genus of about 350 species of flowering plants in the family Acanthaceae, mostly native to tropical Asia and Madagascar, but with a few species extending north into temperate regions of Asia."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Strobilanthes is a genus of about 350 species of flowering plants in the family Acanthaceae, mostly native to tropical Asia and Madagascar, but with a few species extending north into temperate regions of Asia."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Strobilanthes is a genus of about 350 species of flowering plants in the family Acanthaceae, mostly native to tropical Asia and Madagascar, but with a few species extending north into temperate regions of Asia."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "Strobilanthes is a genus of about 350 species of flowering plants in the family Acanthaceae, mostly native to tropical Asia and Madagascar, but with a few species extending north into temperate regions of Asia."}]}
+]},
+{"id": "6aa8a197980c9b81", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Willi Forst, born Wilhelm Anton Frohs (7 April 1903 – 11 August 1980) was an Austrian actor, screenwriter, film director, film producer and singer."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Willi Forst, born Wilhelm Anton Frohs (7 April 1903 – 11 August 1980) was an Austrian actor, screenwriter, film director, film producer and singer."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Willi Forst, born Wilhelm Anton Frohs (7 April 1903 – 11 August 1980) was an Austrian actor, screenwriter, film director, film producer and singer."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "Willi Forst, born Wilhelm Anton Frohs (7 April 1903 – 11 August 1980) was an Austrian actor, screenwriter, film director, film producer and singer."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 1, "quote": "Willi Forst, born Wilhelm Anton Frohs (7 April 1903 – 11 August 1980) was an Austrian actor, screenwriter, film director, film producer and singer."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 1, "quote": "Willi Forst, born Wilhelm Anton Frohs (7 April 1903 – 11 August 1980) was an Austrian actor, screenwriter, film director, film producer and singer."}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 1, "quote": "Willi Forst, born Wilhelm Anton Frohs (7 April 1903 – 11 August 1980) was an Austrian actor, screenwriter, film director, film producer and singer."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Elmer Clifton (March 14, 1890 – October 15, 1949) was an American writer, director and actor from the early silent days."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Elmer Clifton (March 14, 1890 – October 15, 1949) was an American writer, director and actor from the early silent days."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Elmer Clifton (March 14, 1890 – October 15, 1949) was an American writer, director and actor from the early silent days."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "Elmer Clifton (March 14, 1890 – October 15, 1949) was an American writer, director and actor from the early silent days."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 5, "quote": "Elmer Clifton (March 14, 1890 – October 15, 1949) was an American writer, director and actor from the early silent days."}]}
+]},
+{"id": "5a4ab0680a777395", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Remember the Titans is a 2000 American sports film produced by Jerry Bruckheimer and directed by Boaz Yakin."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Remember the Titans is a 2000 American sports film produced by Jerry Bruckheimer and directed by Boaz Yakin."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Remember the Titans is a 2000 American sports film produced by Jerry Bruckheimer and directed by Boaz Yakin."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "My Favorite Martian is a 1999 American science fiction comedy film starring Christopher Lloyd, Jeff Daniels, Daryl Hannah, Elizabeth Hurley, Wallace Shawn and Ray Walston, based on the 1960s television series of the same name in which Walston starred."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "My Favorite Martian is a 1999 American science fiction comedy film starring Christopher Lloyd, Jeff Daniels, Daryl Hannah, Elizabeth Hurley, Wallace Shawn and Ray Walston, based on the 1960s television series of the same name in which Walston starred."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "My Favorite Martian is a 1999 American science fiction comedy film starring Christopher Lloyd, Jeff Daniels, Daryl Hannah, Elizabeth Hurley, Wallace Shawn and Ray Walston, based on the 1960s television series of the same name in which Walston starred."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "My Favorite Martian is a 1999 American science fiction comedy film starring Christopher Lloyd, Jeff Daniels, Daryl Hannah, Elizabeth Hurley, Wallace Shawn and Ray Walston, based on the 1960s television series of the same name in which Walston starred."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 6, "quote": "My Favorite Martian is a 1999 American science fiction comedy film starring Christopher Lloyd, Jeff Daniels, Daryl Hannah, Elizabeth Hurley, Wallace Shawn and Ray Walston, based on the 1960s television series of the same name in which Walston starred."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 6, "quote": "My Favorite Martian is a 1999 American science fiction comedy film starring Christopher Lloyd, Jeff Daniels, Daryl Hannah, Elizabeth Hurley, Wallace Shawn and Ray Walston, based on the 1960s television series of the same name in which Walston starred."}]},
+{"fact": "1.6", "status": "stated", "evidence": [{"item": 6, "quote": "My Favorite Martian is a 1999 American science fiction comedy film starring Christopher Lloyd, Jeff Daniels, Daryl Hannah, Elizabeth Hurley, Wallace Shawn and Ray Walston, based on the 1960s television series of the same name in which Walston starred."}]},
+{"fact": "1.7", "status": "stated", "evidence": [{"item": 6, "quote": "My Favorite Martian is a 1999 American science fiction comedy film starring Christopher Lloyd, Jeff Daniels, Daryl Hannah, Elizabeth Hurley, Wallace Shawn and Ray Walston, based on the 1960s television series of the same name in which Walston starred."}]},
+{"fact": "1.8", "status": "stated", "evidence": [{"item": 6, "quote": "My Favorite Martian is a 1999 American science fiction comedy film starring Christopher Lloyd, Jeff Daniels, Daryl Hannah, Elizabeth Hurley, Wallace Shawn and Ray Walston, based on the 1960s television series of the same name in which Walston starred."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "The film grossed $36.8 million domestically against a budget of $65 million."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "The film grossed $36.8 million domestically against a budget of $65 million."}]}
+]},
+{"id": "6bdbdb474123f75d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Samantha Cristoforetti (] ; born 26 April 1977 in Milan) is an Italian European Space Agency astronaut, Italian Air Force pilot and engineer."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Samantha Cristoforetti (] ; born 26 April 1977 in Milan) is an Italian European Space Agency astronaut, Italian Air Force pilot and engineer."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Samantha Cristoforetti (] ; born 26 April 1977 in Milan) is an Italian European Space Agency astronaut, Italian Air Force pilot and engineer."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "Samantha Cristoforetti (] ; born 26 April 1977 in Milan) is an Italian European Space Agency astronaut, Italian Air Force pilot and engineer."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Jean-Loup Jacques Marie Chrétien (born 20 August 1938) is a French retired \"Général de Brigade\" (brigadier general) in the \"Armée de l'Air\" (French air force), and a former CNES spationaut."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Jean-Loup Jacques Marie Chrétien (born 20 August 1938) is a French retired \"Général de Brigade\" (brigadier general) in the \"Armée de l'Air\" (French air force), and a former CNES spationaut."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Jean-Loup Jacques Marie Chrétien (born 20 August 1938) is a French retired \"Général de Brigade\" (brigadier general) in the \"Armée de l'Air\" (French air force), and a former CNES spationaut."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "Jean-Loup Jacques Marie Chrétien (born 20 August 1938) is a French retired \"Général de Brigade\" (brigadier general) in the \"Armée de l'Air\" (French air force), and a former CNES spationaut."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 3, "quote": "Jean-Loup Jacques Marie Chrétien (born 20 August 1938) is a French retired \"Général de Brigade\" (brigadier general) in the \"Armée de l'Air\" (French air force), and a former CNES spationaut."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 3, "quote": "Jean-Loup Jacques Marie Chrétien (born 20 August 1938) is a French retired \"Général de Brigade\" (brigadier general) in the \"Armée de l'Air\" (French air force), and a former CNES spationaut."}]}
+]}
+]

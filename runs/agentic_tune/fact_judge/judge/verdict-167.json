@@ -1,0 +1,70 @@
+[
+  {"id": "2fb69697c378fd57", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "ce0abcae90ea6e91", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 9, "quote": "Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+  ]},
+  {"id": "261e9754223c4cd1", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "If the debt continues to rise more than the economy, risks will increase, and the government may “crowd out” private investment as it competes with the private sector for funds to service its debt."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "If the debt continues to rise more than the economy, risks will increase, and the government may “crowd out” private investment as it competes with the private sector for funds to service its debt."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "If the debt continues to rise more than the economy, risks will increase, and the government may “crowd out” private investment as it competes with the private sector for funds to service its debt."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "If the debt continues to rise more than the economy, risks will increase, and the government may “crowd out” private investment as it competes with the private sector for funds to service its debt."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "“We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "“We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "“We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "“We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 4, "quote": "“We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}, {"item": 7, "quote": "told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."}]},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 7, "quote": "told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."}]}
+  ]},
+  {"id": "b08f21f68f357bd1", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "contradicted", "evidence": [{"item": 3, "quote": "the race for United was a straight shootout between Oldham-born Ratcliffe, who had previously offered"}]},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Manchester United’s defeat means they miss out on a spot in the Europa League (PA)"}, {"item": 10, "quote": "Instead, they are cast out of continental competition altogether."}]},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "6a9ec7abef78cff4", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "VIKINGS: Allow the fewest yards per catch to rival tigh ends (5.9 yards), even keeping a lid on Travis Kelce last week (6.7 yards per catch). But they've also seen the fourth-lowest ADOT from tight ends (5.0 yards per target)"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "seen the fourth-lowest ADOT from tight ends (5.0 yards per target)"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "almost as if teams know they won't be able to succeed on downfield shots against them (zero completions of 20-plus yards from tight ends)"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "almost as if teams know they won't be able to succeed on downfield shots against them (zero completions of 20-plus yards from tight ends)"}]}
+  ]},
+  {"id": "f837041483536299", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "And if the Braves let this be the story of their series, that's on them."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "And if the Braves let this be the story of their series, that's on them."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 7, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 7, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]}
+  ]}
+]

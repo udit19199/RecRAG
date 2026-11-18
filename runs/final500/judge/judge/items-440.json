@@ -1,0 +1,369 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "a821c5711cc16927",
+   "gold": [
+    {
+     "sentence": "\"Moho House\" is the twenty first episode of the twenty-eighth season of the animated television series \"The Simpsons\", and the 617th episode of the series overall.",
+     "facts": {
+      "0.0": "Moho House is the twenty-first episode of the twenty-eighth season of the animated television series The Simpsons.",
+      "0.1": "Moho House is the 617th episode of The Simpsons overall.",
+      "0.2": "The Simpsons is an animated television series."
+     }
+    },
+    {
+     "sentence": " On May 4, 2015, Fox announced that \"The Simpsons\" had been renewed for season 28.",
+     "facts": {
+      "1.0": "Fox announced on May 4, 2015.",
+      "1.1": "Fox announced that The Simpsons had been renewed for season 28."
+     }
+    }
+   ],
+   "items": [
+    "Mona Leaves-a\n\"Mona Leaves-a\" is the nineteenth episode of \"The Simpsons\"<nowiki>'</nowiki> nineteenth season.\n\n It originally aired on the Fox network in the United States on May 11, 2008.\n\n The episode features the death of Homer's mother, Mona Simpson.\n\n Homer is reunited with his mother, Mona, but is not willing to forgive her for all the times she left him as a child.\n\n When she dies, a guilt-ridden Homer attempts to make it up to her by fulfilling her final wishes.\n\n It was written by Joel H. Cohen and directed by Mike B. Anderson and Ralph Sosa.\n\n Glenn Close makes her third appearance as Mona Simpson, and Lance Armstrong has a cameo as himself.",
+    "Moe Szyslak\nMorris \"Moe\" Szyslak is a fictional character from the American animated television series \"The Simpsons\".\n\n He is voiced by Hank Azaria and first appeared in the series premiere episode \"Simpsons Roasting on an Open Fire\".\n\n Moe is the proprietor and bartender of Moe's Tavern, a Springfield bar frequented by Homer Simpson, Barney Gumble, Carl Carlson, Lenny Leonard, Sam, Larry, and others.",
+    "The Simpsons (season 28)\nThe twenty-eighth season of the animated television series \"The Simpsons\" began airing on Fox in the United States on September 25, 2016, and ended on May 21, 2017.\n\n On May 4, 2015, Fox announced that \"The Simpsons\" had been renewed for season 28.",
+    "The Simpsons Spin-Off Showcase\n\"The Simpsons Spin-Off Showcase\" is the twenty-fourth episode of the eighth season of \"The Simpsons\".\n\n It originally aired on the Fox network in the United States on May 11, 1997.\n\n The episode centers on fictional pilot episodes of non-existent television series derived from \"The Simpsons\", and is a parody of the tendency of networks to spin off characters from a hit series.\n\n As such it includes references to many different TV series.\n\n The first fictional spin-off is \"Chief Wiggum P.I.\", a cop-drama featuring Chief Wiggum and Seymour Skinner.\n\n The second is \"The Love-matic Grampa\", a sitcom featuring Moe Szyslak who receives dating advice from Abraham Simpson, whose ghost is possessing a love testing machine.\n\n The final segment is \"The Simpson Family Smile-Time Variety Hour\", a variety show featuring the Simpson family except for Lisa, who has been replaced.",
+    "Homer to the Max\n\"Homer to the Max\" is the thirteenth episode of \"The Simpsons\"<nowiki>'</nowiki> tenth season.\n\n It originally aired on the Fox network in the United States on February 7, 1999.\n\n In the episode, Homer discovers that a new television show, \"Police Cops\", has a hero also named Homer Simpson.\n\n He is delighted with the positive attention he receives because of his name, but when the television character is rewritten from a hero to a bumbling idiot, he is mocked and taunted, so he changes his name to \"Max Power\" to rid himself of the negative attention.\n\n Max gains new friends, and is forced into a protest to prevent a forest from being knocked down.\n\n In the end, he changes his name back to Homer Simpson.",
+    "Flaming Moe's\n\"Flaming Moe's\" is the tenth episode of \"The Simpsons\"' third season.\n\n It first aired on the Fox network in the United States on November 21, 1991.\n\n In the episode, Homer tells Moe Szyslak of a secret alcoholic cocktail that includes cough medicine and fire that he calls \"Flaming Homer\".\n\n Moe steals the recipe from Homer, renames the drink the \"Flaming Moe\" and begins selling it at his tavern.\n\n The drink is a success and boosts business and patronage, but Homer is angry at Moe for his betrayal, and seeks revenge.",
+    "South Park (season 10)\nThe tenth season of \"South Park\", an American animated television series created by Trey Parker and Matt Stone, began airing on March 22, 2006.\n\n The tenth season concluded after 14 episodes on November 15, 2006.\n\n This is the first season in which Kenny does not die and the last season featuring Isaac Hayes (the voice of Chef) as Hayes quit the show following the backlash behind season nine's \"Trapped in the Closet\" episode.\n\n This season also had a minor controversy when the Halloween episode \"Hell on Earth 2006\" depicted \"The Crocodile Hunter's\" Steve Irwin with a stingray lodged in his chest getting thrown out of Satan's Halloween party for not being in costume.\n\n Episode 2 in this season is the last one with the Braniff Airlines logo.\n\n All the episodes in this season were written and directed by Trey Parker.",
+    "Lisa the Drama Queen\n\"Lisa the Drama Queen\" is the ninth episode of the twentieth season of \"The Simpsons\".\n\n It originally aired on the Fox network in the United States on January 25, 2009 and guest starred Emily Blunt as Juliet.\n\n A special version of the end credits theme was performed by Fall Out Boy, although they do not guest star in the actual episode.\n\n This was the last episode in the series to be presented only in standard definition, the first regular episode to begin right after the opening credits without a commercial break, with an episode now having four segments, and the last episode to use the original opening sequence starting from Season 2.\n\n Brian Kelley returns as a writer after five seasons of being absent from the show.\n\n The episode is very loosely based on the 1994 film \"Heavenly Creatures\".",
+    "Moho House\n\"Moho House\" is the twenty first episode of the twenty-eighth season of the animated television series \"The Simpsons\", and the 617th episode of the series overall.\n\n It aired in the United States on Fox on May 7, 2017.",
+    "Judge Me Tender\n\"Judge Me Tender\" is the twenty-third episode and season finale of \"The Simpsons'\" twenty-first season.\n\n The 464th episode of the series overall, it originally aired on the Fox network in the United States on May 23, 2010.\n\n In the episode, Moe discovers his talent for judging in competitions and is invited to appear on the show \"American Idol\".\n\n Meanwhile, Homer drives Marge crazy when he starts spending too much time at home, and Lisa tries to comfort Santa's Little Helper."
+   ]
+  },
+  {
+   "id": "56c5fadd831ee059",
+   "gold": [
+    {
+     "sentence": "Muppet Treasure Island is a 1996 American musical adventure comedy film based on Robert Louis Stevenson's \"Treasure Island\".",
+     "facts": {
+      "0.0": "Muppet Treasure Island is a 1996 American musical adventure comedy film",
+      "0.1": "Muppet Treasure Island is based on Robert Louis Stevenson's Treasure Island"
+     }
+    },
+    {
+     "sentence": "Million Dollar Arm is a 2014 American biographical sports drama film directed by Craig Gillespie and produced by Walt Disney Pictures from a screenplay written by Thomas McCarthy.",
+     "facts": {
+      "1.0": "Million Dollar Arm is a 2014 American biographical sports drama film",
+      "1.1": "Million Dollar Arm was directed by Craig Gillespie",
+      "1.2": "Million Dollar Arm was produced by Walt Disney Pictures",
+      "1.3": "Million Dollar Arm was made from a screenplay written by Thomas McCarthy"
+     }
+    }
+   ],
+   "items": [
+    "Million Dollar Arm\nMillion Dollar Arm is a 2014 American biographical sports drama film directed by Craig Gillespie and produced by Walt Disney Pictures from a screenplay written by Thomas McCarthy.\n\n The film is based on the true story of baseball pitchers Rinku Singh and Dinesh Patel who were discovered by sports agent J. B. Bernstein after winning a reality show competition.",
+    "Toy Story\nToy Story is a 1995 American computer-animated buddy comedy adventure film produced by Pixar Animation Studios for Walt Disney Pictures.\n\n The directorial debut of John Lasseter, \"Toy Story\" was the first feature-length computer-animated film and the first feature film produced by Pixar.\n\n Taking place in a world where anthropomorphic toys pretend to be lifeless whenever humans are present, the film's plot focuses on the relationship between Woody, an old-fashioned pullstring cowboy doll (voiced by Tom Hanks), and Buzz Lightyear, an astronaut action figure (voiced by Tim Allen), as they evolve from rivals competing for the affections of Andy, their owner, to friends who work together to be reunited with Andy as his family prepares to move to a new home.\n\n The screenplay was written by Joss Whedon, Andrew Stanton, Joel Cohen and Alec Sokolow, based on a story by Lasseter, Pete Docter, Stanton and Joe Ranft.\n\n The film features music by Randy Newman, and was executive-produced by Steve Jobs and Edwin Catmull.",
+    "List of The Muppets productions\nThis is a list of productions based on The Muppets characters and franchise, including films, television series and specials, and other media.\n\n The franchise's main work is \"The Muppet Show\", a syndicated television series which ran from 1976 to 1981.\n\n The franchise includes eight feature films; \"The Muppet Movie\", \"The Great Muppet Caper\", \"The Muppets Take Manhattan\", \"The Muppet Christmas Carol\", \"Muppet Treasure Island\", \"Muppets from Space\", \"The Muppets\", and \"Muppets Most Wanted\".\n\n The franchise also includes other series such as \"Muppets Tonight\" and \"The Muppets\".",
+    "Muppet Treasure Island\nMuppet Treasure Island is a 1996 American musical adventure comedy film based on Robert Louis Stevenson's \"Treasure Island\".\n\n It is the fifth feature film to star The Muppets, and was directed by Brian Henson.",
+    "The Muppets (film)\nThe Muppets is a 2011 American musical comedy film and the seventh theatrical film featuring the Muppets.\n\n The film is directed by James Bobin, written by Jason Segel and Nicholas Stoller, produced by David Hoberman and Todd Lieberman, and stars Segel, Amy Adams, Chris Cooper and Rashida Jones, as well as Muppet performers Steve Whitmire, Eric Jacobson, Dave Goelz, Bill Barretta, David Rudman, Matt Vogel, and Peter Linz.\n\n Bret McKenzie served as music supervisor, writing four of the film's five original songs, and Christophe Beck composed the film's score.\n\n In \"The Muppets\", devoted fan Walter, his brother Gary, and Gary's girlfriend Mary help Kermit the Frog reunite the disbanded Muppets, as they must raise $10 million to save the Muppet Theater from Tex Richman, a businessman who plans to demolish the studio to drill for oil.",
+    "Managed Money\nManaged Money is a 1934 short comedy film directed by Charles Lamont.\n\n The film stars Frank Coghlan Jr. and Shirley Temple.\n\n It was also known as \"Frolics of Youth\" and \"Measured Money\".\n\n This was the second film in which Temple starred as Mary Lou.\n\n The film tells the story of Sonny and Sid prospecting for gold to pay for their military academy education.\n\n Sonny's sister, Mary Lou stows away in the back of their car.\n\n Eventually, they meet an inventor who helps them financially.",
+    "Bill Barretta\nWilliam Paul \"Bill\" Barretta (born June 19, 1964) is an American puppeteer and producer who has been performing with The Muppets since 1991, when he puppeteered the body of Sinclair family patriarch, Earl Sinclair on \"Dinosaurs\".\n\n He later developed several new characters on \"Muppets Tonight\", including Pepe the King Prawn, Johnny Fiama, Big Mean Carl and Bobo the Bear.\n\n Along with having his own Muppet characters, Barretta has taken over several of Jim Henson's roles, such as Dr. Teeth, Rowlf the Dog, Mahna Mahna and Swedish Chef, and briefly took over Jerry Nelson's role of Lew Zealand.\n\n His film debut as a principal puppeteer was in 1996's \"Muppet Treasure Island\" as Clueless Morgan.\n\n In addition, Barretta has produced two of the Muppets' television films, \"It's a Very Merry Muppet Christmas Movie\" (2002) and \"The Muppets' Wizard of Oz\" (2005).\n\n Barretta also provides additional voices on \"Kim Possible\".",
+    "Rinku Singh\nRinku Singh (born August 8, 1988 in Lucknow, India) is a left-handed baseball pitcher who is currently a free agent.\n\n Singh was signed by the Pittsburgh Pirates organization after he won a pitching contest on a 2008 reality television show, \"The Million Dollar Arm\".\n\n He was the first Indian to play professional baseball and has spent several seasons in the minor leagues, only reaching as high as the A level.\n\n He is the subject of the movie \"Million Dollar Arm\".",
+    "Muppets Most Wanted (soundtrack)\nMuppets Most Wanted: An Original Walt Disney Records Soundtrack is a soundtrack album released by Walt Disney Records on March 18, 2014 for the musical comedy film \"Muppets Most Wanted\".\n\n The soundtrack features six original songs, two re-recordings of popular Muppet songs (\"The Muppet Show Theme\" and \"Together Again\"), three cover versions of existing songs (Allen Toussaint's \"Working in the Coal Mine\", Maroon 5's \"Moves Like Jagger\", and Los del Río's \"Macarena (Bayside Boys Mix)\"), an orchestral suite by Christophe Beck, five demos by Bret McKenzie, and eight dialogue tracks.",
+    "The Muppets (soundtrack)\nThe Muppets: An Original Walt Disney Records Soundtrack is a soundtrack album released by Walt Disney Records on November 22, 2011 for the musical comedy film \"The Muppets\".\n\n The soundtrack features five original songs, four re-recordings and remasterings of popular Muppet songs (\"The Muppet Show Theme\", \"Rainbow Connection\", and \"Mah Nà Mah Nà\"), two cover versions of existing songs (Cee Lo Green's \"Forget You\" and Nirvana's \"Smells Like Teen Spirit\"), two standalone songs (Paul Simon's \"Me and Julio Down by the Schoolyard\" and Starship's \"We Built This City\"), and fifteen dialogue tracks.\n\n It also features the song \"Man or Muppet\", which won the Academy Award for Best Original Song.\n\n The soundtrack was also nominated for Best Compilation Soundtrack for Visual Media at the 55th Grammy Awards."
+   ]
+  },
+  {
+   "id": "83febe58d8a2406d",
+   "gold": [
+    {
+     "sentence": "Emmitt H. Ford (December 13, 1943 – November 10, 2014) was an American politician from Tennessee.",
+     "facts": {
+      "0.0": "Emmitt H. Ford was born on December 13, 1943.",
+      "0.1": "Emmitt H. Ford died on November 10, 2014.",
+      "0.2": "Emmitt H. Ford was an American politician.",
+      "0.3": "Emmitt H. Ford was from Tennessee."
+     }
+    },
+    {
+     "sentence": " He was also an uncle of former United States Congressman Harold Ford Jr.",
+     "facts": {
+      "1.0": "Emmitt H. Ford was an uncle of Harold Ford Jr.",
+      "1.1": "Harold Ford Jr. is a former United States Congressman."
+     }
+    },
+    {
+     "sentence": " He is the son of former Congressman Harold Ford Sr., who held the same seat for 22 years.",
+     "facts": {
+      "2.0": "Emmitt H. Ford is the son of Harold Ford Sr.",
+      "2.1": "Harold Ford Sr. is a former Congressman.",
+      "2.2": "Harold Ford Sr. held the same seat for 22 years."
+     }
+    }
+   ],
+   "items": [
+    "John Anderson (Maine politician)\nJohn Anderson (1792–1853) was a Maine politician.\n\n Anderson served as United States Representative from Maine from 1825-1833.",
+    "John Y. Brown Jr.\nJohn Young Brown Jr. (born December 28, 1933) is an American politician, entrepreneur, and businessman from the U.S. state of Kentucky.\n\n He served as the 55th governor of Kentucky from 1979 to 1983, although he may be best known for building Kentucky Fried Chicken (KFC) into a multimillion-dollar restaurant chain.",
+    "L. R. Ford Jr.\nLester Randolph Ford Jr. (born September 23, 1927 – February 26, 2017) was an American mathematician specializing in network flow problems.\n\n He was the son of mathematician Lester R. Ford Sr.",
+    "Ophelia Ford\nOphelia Ford (born July 5, 1950) was a member of the Tennessee Senate.\n\n She is the younger sister of former state senator John Ford and former Congressman Harold Ford, Sr., and the aunt of former Congressman Harold Ford, Jr. She represented Senate District 29, which covers South Memphis and North Memphis.",
+    "Harold Ford Jr.\nHarold Eugene Ford Jr. (born May 11, 1970) is an American politician and author who served five terms in the United States House of Representatives as a member of the Democratic Party from  's 9 congressional district , centered in Memphis, from 1997 to 2007.\n\n He is the son of former Congressman Harold Ford Sr., who held the same seat for 22 years.\n\n In 2006, Ford made an unsuccessful bid for the US Senate seat vacated by retiring Bill Frist.\n\n He is a member of the Ford political family from Memphis.\n\n Ford was the last chairman of the Democratic Leadership Council (DLC).",
+    "John Ford (Tennessee politician)\nJohn N. Ford (born May 3, 1942 in Memphis, Tennessee), is a former Democratic member of the Tennessee State Senate and a member of Tennessee's most prominent African-American political family.\n\n He is the older brother of former U.S. Representative Harold Ford, Sr. and the uncle of former Tennessee U.S. Representative and 2006 United States Senate candidate Harold Ford, Jr. He is a member of the Ford political family from Memphis.",
+    "Emmitt Ford\nEmmitt H. Ford (December 13, 1943 – November 10, 2014) was an American politician from Tennessee.\n\n He represented the 86th district encompassing Shelby County from 1975–1981.\n\n He was also an uncle of former United States Congressman Harold Ford Jr.",
+    "Gerald Ford\nGerald Rudolph Ford Jr. (born Leslie Lynch King Jr.; July 14, 1913 – December 26, 2006) was an American politician who served as the 38th President of the United States from August 1974 to January 1977, following the resignation of Richard Nixon.\n\n Prior to this he served eight months as the 40th Vice President of the United States, following the resignation of Spiro Agnew.\n\n He was the first person appointed to the vice presidency under the terms of the 25th Amendment, and consequently the only person to have served as both Vice President and President of the United States without being elected to executive office.\n\n Before his appointment to the vice presidency, Ford served 25 years as U.S. Representative from Michigan's 5th congressional district, the final nine of them as the House Minority Leader.",
+    "United States Senate election in Tennessee, 2006\nThe 2006 United States Senate election in Tennessee was held on November 7, 2006.\n\n The election winner, Bob Corker, served his term between January 3, 2007 and January 3, 2013.\n\n Corker replaced Republican Bill Frist in the Senate, who retired upon the end of his second term in 2007.\n\n Corker was the Republican nominee, and the Democratic nominee was Harold Ford, Jr..\n\n The race between Ford and Corker was one of the most competitive Senate races of 2006, with Corker winning the race by less than three percent of the vote.\n\n Corker was the only non-incumbent Republican to win a U.S. Senate seat in 2006.\n\n Since 1994, the Republican Party has held both of Tennessee's Senate seats.",
+    "Doug Ford Jr.\nDouglas Bruce Ford Jr. (born November 20, 1964) is a Canadian businessman and politician in Toronto, Ontario.\n\n Ford was Toronto City Councillor for Ward 2 Etobicoke North in Toronto from 2010 to 2014 at the same time that his brother, Rob Ford (1969–2016), was mayor of Toronto.\n\n Their father, Doug Ford Sr., was a Member of Provincial Parliament from 1995 to 1999 and founded Deco Labels and Tags, a printing business operating in Canada and the United States.\n\n The business is now owned by Doug Ford Jr., who has served as company president since 2002, and his brother, Randy."
+   ]
+  },
+  {
+   "id": "2e61f81419c3ec98",
+   "gold": [
+    {
+     "sentence": "The Nashville Tribute Band is a Mormon music group founded by Jason Deere and Dan Truman, the pianist of the popular country group Diamond Rio.",
+     "facts": {
+      "0.0": "The Nashville Tribute Band is a Mormon music group.",
+      "0.1": "The Nashville Tribute Band was founded by Jason Deere.",
+      "0.2": "The Nashville Tribute Band was founded by Dan Truman.",
+      "0.3": "Dan Truman is the pianist of the popular country group Diamond Rio."
+     }
+    },
+    {
+     "sentence": "Diamond Rio is an American country and Christian country music band.",
+     "facts": {
+      "1.0": "Diamond Rio is an American country music band.",
+      "1.1": "Diamond Rio is a Christian country music band."
+     }
+    },
+    {
+     "sentence": " The band was founded in 1982 as an attraction for the Opryland USA theme park in Nashville, Tennessee, and was originally known as the Grizzly River Boys, then the Tennessee River Boys.",
+     "facts": {
+      "2.0": "Diamond Rio was founded in 1982.",
+      "2.1": "Diamond Rio was founded as an attraction for the Opryland USA theme park in Nashville, Tennessee.",
+      "2.2": "Diamond Rio was originally known as the Grizzly River Boys.",
+      "2.3": "Diamond Rio was later known as the Tennessee River Boys."
+     }
+    }
+   ],
+   "items": [
+    "The entries profile rock, punk, and metal albums, bands, and musicians. Fuel’s *Puppet Strings* (2014) reunited singer Brett Scallions but featured none of the prior album’s recording personnel. Jizzy Pearl sang on Quiet Riot’s *10* and L.A. Guns’ *Shrinking Violet*. Other subjects include J. Geils Band, Green Day side projects and collaborators, Glassjaw and Daryl Palumbo, Clearview 77, Sons of Abraham,",
+    "The Pilgrims (band)\nThe Pilgrims are an alternative rock band from Windsor, Vermont.\n\n Seven Days contributor Dan Bolles compared their style to alt-punk and indie rock, while John Powell, writing for www.angelica-music.com, has likened them to rock and roll bands from the 1960s and 1970s.\n\n They are part of the Windsor, VT music collective What Doth Life, which has released albums by The Pilgrims, Giant Travel Avant Garde, Derek and The Demons, Carton, and Luke Chrisinger.",
+    "Grizzly River Run\nGrizzly River Run is located at Disney California Adventure at the Disneyland Resort in Anaheim, California.\n\n It is similar to Kali River Rapids in Disney's Animal Kingdom but distinctive as the rafts are engineered to spin as they descend chutes.\n\n The attraction's name comes from Grizzly Peak, the bear shaped mountain that the rapids flow around.\n\n It was designed by Walt Disney Imagineering and constructed by Intamin.",
+    "Creedence Clearwater Revisited\nCreedence Clearwater Revisited is an American rock band formed in 1995 by two former members of Creedence Clearwater Revival – a much more well-known band with a very similar name.\n\n It is known for playing the music that was originally made famous by Creedence Clearwater Revival.\n\n The two common band members are Stu Cook (bass) and Doug \"Cosmo\" Clifford (drums).",
+    "Diamond Rio\nDiamond Rio is an American country and Christian country music band.\n\n The band was founded in 1982 as an attraction for the Opryland USA theme park in Nashville, Tennessee, and was originally known as the Grizzly River Boys, then the Tennessee River Boys.\n\n It was founded by Matt Davenport, Danny Gregg, and Ty Herndon, the last of whom became a solo artist in the mid-1990s.\n\n After undergoing several membership changes in its initial years, the band has consisted of the same six members since 1989: Marty Roe (lead vocals, rhythm guitar), Gene Johnson (mandolin, guitar, fiddle, tenor vocals), Jimmy Olander (lead guitar, Dobro, banjo), Brian Prout (drums), Dan Truman (keyboards, organ, synthesizer), and Dana Williams (bass guitar, baritone vocals).",
+    "Bullmoose\nBullmoose (aka Zach Dobbins) is a Canadian rock band formed in Elgin, Ontario in 1996.\n\n Three of the original members continue in the band, which today is based in Montreal.\n\n They include twin brothers Jeff Cowan (drums/vocals) and Seamus Cowan (bass/vocals) from Westport, Ontario and Eric Lawrance (guitar/vocals) from Delta, Ontario, who launched the band when they attended school at Montreal.\n\n The band performs in the rock music genre, citing experimental influences of the late 1960s and early 1970s.",
+    "The Studdogs\nThe Studdogs was a rock band from Orlando, Florida.\n\n The band's music contains elements of punk, blues rock, garage rock, and noise rock.\n\n The band was formed in 2000 and stayed active until 2005.\n\n They released a lot of material, particularly the full-length album, \"The Gospel According to the Studdogs\" and the 7\" vinyl 3-song EP, and gained local and national notoriety.\n\n They were featured in several national music magazines, including Magnet and Amplifier.\n\n Comparisons were made to the Stooges, Dead Boys, and it was said they sounded \"like absolute victory by way of slurring, Rolling Stones-y garage rock from nowhere in particular.\"\n\n Their drunken, abrasive live shows often ended with someone bleeding or being thrown out of the venue.\n\n Their live shows were said to be \"what Howling Wolf would sound like through a wall of noise and distortion.\"",
+    "The Hillmen (album)\nThe Hillmen is a studio album by The Hillmen, a southern California bluegrass band originally known as The Golden State Boys.\n\n The Hillmen consisted of Chris Hillman (later of The Byrds, The Flying Burrito Brothers, Manassas and The Desert Rose Band) on mandolin, country singer/songwriter Vern Gosdin on guitar and lead vocals, his brother Rex Gosdin on double bass, and Don Parmley (later of the Bluegrass Cardinals) on banjo.",
+    "The material covers country, country-rock, folk-rock and bluegrass artists and releases. Oak Ridge Boys’ 2009 *The Boys Are Back* marked a return to secular country, led by a White Stripes cover. Richie Furay helped form Buffalo Springfield and Poco, later joining the Souther–Hillman–Furay Band; Poco’s debut featured his “Pickin’ Up the Pieces.” Other subjects include Buffalo Springfield’s final album, the Lonesome Pine F",
+    "Nashville Tribute Band\nThe Nashville Tribute Band is a Mormon music group founded by Jason Deere and Dan Truman, the pianist of the popular country group Diamond Rio."
+   ]
+  },
+  {
+   "id": "aaff9cb0b7507393",
+   "gold": [
+    {
+     "sentence": " For almost 20 years, it held the record for selling 2 million copies in the UK in the fastest time, doing so in 42 days; in 2015, Adele surpassed the record when her album \"25\" took just 29 days to reach the landmark.",
+     "facts": {
+      "0.0": "For almost 20 years, a record (held by a subject not named in this sentence) stood for selling 2 million copies in the UK in the fastest time.",
+      "0.1": "The record for selling 2 million copies in the UK in the fastest time was set in 42 days.",
+      "0.2": "In 2015, Adele surpassed the record.",
+      "0.3": "Adele's album '25' took just 29 days to reach the 2 million copies landmark."
+     }
+    },
+    {
+     "sentence": " At the 51st Grammy Awards in 2009, Adele received the awards for Best New Artist and Best Female Pop Vocal Performance.",
+     "facts": {
+      "1.0": "The 51st Grammy Awards were held in 2009.",
+      "1.1": "Adele received the Best New Artist award at the 51st Grammy Awards.",
+      "1.2": "Adele received the Best Female Pop Vocal Performance award at the 51st Grammy Awards."
+     }
+    }
+   ],
+   "items": [
+    "List of Billboard 200 number-one albums of 2002\nCountry music singer Shania Twain's album \"Up!\n\n\" opened up with a huge first week sales of 857,000 copies in its first week alone, giving her the recognition of the highest first week sales of her career and second highest of the year, only behind Eminem's \"The Eminem Show\" and at the time the fastest selling solo female album ever.\n\n Nelly's album \"Nellyville\" opened up with his highest first week sales of his career which logged on with huge sales of 714,000 copies in its first week alone, which beat his sales of his debut album \"Country Grammar\", which opened up with first week sales of 235,000 copies.\n\n Country singer Alan Jackson album \"Drive\" gave him his first number one album on the chart and opened up with first week sales of 211,000 copies alone.",
+    "List of Billboard 200 number-one albums of 2002\nThe band Creed continued its eight week long run on the chart but is credited as the longest running album 2001.\n\n Jennifer Lopez earned her second number one album on the charts with \"\", which became the highest first week sales of a remix album at the time.\n\n R&B artist Ashanti earned her first number one album with her self-titled debut album \"Ashanti\", which opened up with first week sales of 503,000 copies in its first week alone.\n\n Puff Daddy earned his first number one album since \"No Way Out\" back in 1997.\n\n Rapper Jay-Z earned his fifth chart topper with \"\", which opened up with first week sales of 545,000 copies alone.\n\n Heavy metal band Disturbed earned its first number one album on the chart with \"Believe\", which opened up with first week sales of 284,000 copies alone.\n\n Country music singer Shania Twain's album \"Up!\n\n\"",
+    "MTV Video Music Award for Best New Artist\nThe MTV Video Music Award for Best New Artist have been given out since the first annual MTV Video Music Awards in 1984.\n\n From then to 2006, the award was named Best New Artist in a Video.\n\n In 2007 its name was changed to Best New Artist, as the category underwent a format change to award the artist's body of work for the full year rather than a specific video.\n\n For the 2008 ceremony, though, while the award retained its 2007 name, it returned to the format of awarding a specific video rather than the artist's full body of work.\n\n The category was later renamed Artist to Watch through 2013 to 2015 while still keeping the format of an award going to a certain video.",
+    "Billboard Year-End\n\"Billboard\" Year-End charts are a cumulative measure of a single or album's performance in the United States, based upon the \"Billboard\" magazine charts during any given chart year.\n\n \"Billboard's\" \"chart year\" runs from the first Billboard \"week\" of December to the final week in November, but because the Billboard week is dated in advance of publication, the last calendar week for which sales are counted is usually the third week in November.\n\n This altered calendar allows for \"Billboard\" to calculate year-end charts and release them in time for its final print issue in the last week of December.\n\n Prior to incorporating chart data from Nielsen SoundScan (from 1991), year-end charts were calculated by an inverse-point system based solely on a title's performance (for example a single appearing on the \"Billboard\" Hot 100 would be given one point for a week spent at position 100, two points for a week spent at position ninety-nine, and so forth, up to 100 points for each week spent at number one).\n\n Other factors including the total weeks a song spent on the chart and at its peak position were calculated into its year-end total.",
+    "Japan Record Award for Best New Artist\nThe Japan Record Award for Best New Artist (最優秀新人賞 ) is awarded annually.\n\n Until the 10th Japan Record Awards it was called New Artist Award, since 11th — Best New Artist Award.\n\n At present all nominees for the Best New Artist Award are awarded the New Artist Award.",
+    "List of accolades received by Grand Theft Auto V\nWithin twenty-four hours of its release, \"Grand Theft Auto V\" generated more than $815.7 million in worldwide revenue, equating to approximately 11.21 million copies sold for Take Two.\n\n Three days after release, the game had surpassed one billion dollars in sales, making it the fastest selling entertainment product in history.",
+    "List of Billboard 200 number-one albums of 2002\nThe highest-selling albums and EPs in the United States are ranked in the \"Billboard\" 200, published by \"Billboard\" magazine.\n\n The data are compiled by Nielsen Soundscan based on each album's weekly physical and digital sales.\n\n 25 acts achieved number one albums during this year with artist such as Nelly and Shania Twain who had their albums debut at number one on the chart.\n\n Rapper Eminem's \"The Eminem Show\" is the best selling album of 2002 selling over approximately 7.6 million copies by the end of the year.\n\n It is also the longest running album of 2002 spending six non-consecutive weeks the chart and was known for its first full week of sales debut of 1.322 million copies which Nielsen SoundScan scanned as the sixth largest sales of all time in its first week.\n\n Its debut of 1.322 million copies has still not been matched by any album today since except for Taylor Swift's album \"1989\", which opened with first week sales of 1.279 million copies.",
+    "Robson &amp; Jerome (album)\nRobson & Jerome is the debut studio album by British singing duo Robson & Jerome.\n\n It was released in the UK in 1995 by RCA Records, and reached number one on the UK Albums Chart.\n\n It was the Christmas number one album of 1995, and was the biggest-selling album of the year, with sales of 2,040,000.\n\n For almost 20 years, it held the record for selling 2 million copies in the UK in the fastest time, doing so in 42 days; in 2015, Adele surpassed the record when her album \"25\" took just 29 days to reach the landmark.",
+    "Adele\nAdele Laurie Blue Adkins (born 5 May 1988) ( ) is an English singer-songwriter.\n\n After graduating from the BRIT School for Performing Arts and Technology in 2006, Adele was given a recording contract by XL Recordings after a friend posted her demo on Myspace the same year.\n\n In 2007, she received the Brit Awards \"Critics' Choice\" award and won the BBC Sound of 2008 poll.\n\n Her debut album, \"19\", was released in 2008 to commercial and critical success.\n\n It is certified seven times platinum in the UK, and three times platinum in the US.\n\n The album contains her first song, \"Hometown Glory\", written when she was 16, which is based on her home suburb of West Norwood in London.\n\n An appearance she made on \"Saturday Night Live\" in late 2008 boosted her career in the US.\n\n At the 51st Grammy Awards in 2009, Adele received the awards for Best New Artist and Best Female Pop Vocal Performance.",
+    "Billboard Year-End\nThe same method was used for albums based on the \"Billboard\" 200, and songs appearing on the other charts (e.g. Hot Country Singles)."
+   ]
+  },
+  {
+   "id": "215a25646c2bbe14",
+   "gold": [
+    {
+     "sentence": "Pravda (Russian: Правда ; ] , \"Truth\") is a Russian broadsheet newspaper, formerly the official newspaper of the Communist Party of the Soviet Union, when it was one of the most influential papers in the country with a circulation of 11 million.",
+     "facts": {
+      "0.0": "Pravda's Russian name is Правда, which means 'Truth'.",
+      "0.1": "Pravda is a Russian broadsheet newspaper.",
+      "0.2": "Pravda was formerly the official newspaper of the Communist Party of the Soviet Union.",
+      "0.3": "When Pravda was the official newspaper of the Communist Party of the Soviet Union, it was one of the most influential papers in the country.",
+      "0.4": "When Pravda was one of the most influential papers in the country, its circulation was 11 million."
+     }
+    },
+    {
+     "sentence": "Stiffelio is an opera in three acts by Giuseppe Verdi, from an Italian libretto by Francesco Maria Piave.",
+     "facts": {
+      "1.0": "Stiffelio is an opera.",
+      "1.1": "Stiffelio is an opera in three acts.",
+      "1.2": "Stiffelio is by Giuseppe Verdi.",
+      "1.3": "Stiffelio uses an Italian libretto by Francesco Maria Piave."
+     }
+    }
+   ],
+   "items": [
+    "Daphne (opera)\nDaphne, Op.\n\n82, is an opera in one act by Richard Strauss, subtitled \"Bucolic Tragedy in One Act\".\n\n The German libretto was by Joseph Gregor.\n\n The opera is based loosely on the mythological figure Daphne from Ovid's \"Metamorphoses\" and includes elements taken from \"The Bacchae\" by Euripides.\n\n The opera premiered at the Semperoper in Dresden on 15 October 1938, originally intended as a double bill with Strauss' \"Friedenstag\", but as the scale of \"Daphne\" grew, that idea was abandoned.\n\n The conductor of the first performance was Karl Böhm, to whom the opera was dedicated.",
+    "Graph query row:\nwork: Stiffelio\nkind: opera\ngenre: None\nrelationship: None\ngenre_entity: None",
+    "Lucrezia Borgia (opera)\nLucrezia Borgia is a melodramatic opera in a prologue and two acts by Gaetano Donizetti.\n\n Felice Romani wrote the Italian libretto after the play \"Lucrezia Borgia\" by Victor Hugo, in its turn after the legend of Lucrezia Borgia.\n\n \"Lucrezia Borgia\" was first performed on 26 December 1833 at La Scala, Milan.",
+    "Pravda Pyat\nPravda Pyat (Russian: правда пять or \"Truth Five\") is a weekly Russian tabloid news publication that was a spin-off from \"Pravda\".\n\n It was founded by Greek entrepreneurs Christos Giannikos and Fyodoros Giannikos of Pravda International in 1996.\n\n The magazine replaced \"Pravda\" when that publication ceased operations.\n\n Its intended audience was younger readers, and coverage was more sensationalistic than \"Pravda\", focusing on crime and scandals.",
+    "Pravda\nPravda (Russian: Правда ; ] , \"Truth\") is a Russian broadsheet newspaper, formerly the official newspaper of the Communist Party of the Soviet Union, when it was one of the most influential papers in the country with a circulation of 11 million.",
+    "Stiffelio\nStiffelio is an opera in three acts by Giuseppe Verdi, from an Italian libretto by Francesco Maria Piave.\n\n The origin of this was the novel “Le pasteur d’hommes”, by Émile Souvestre, which was published in 1838.\n\n This was adapted into the French play \"Le pasteur, ou L'évangile et le foyer\" by Émile Souvestre and Eugène Bourgeois.\n\n That was in turn translated into Italian by Gaetano Vestri as \"Stifellius\"; this formed the basis of Piave's libretto.",
+    "Steamer Pravda\nSteamer \"Pravda\" was a Soviet merchant freighter of about 3,100 tonnes displacement, which was active in the Soviet Arctic during the 1930s.\n\n This ship had been normally used for carrying timber.\n\n It was named after Soviet newspaper \"Pravda\".",
+    "Pagliacci\nPagliacci (] ; literal translation, \"Clowns\") is an Italian opera in a prologue and two acts, with music and libretto by Ruggero Leoncavallo.\n\n It is the only Leoncavallo opera that is still widely performed.\n\n Opera companies have frequently staged \"Pagliacci\" with \"Cavalleria rusticana\" by Mascagni, a double bill known colloquially as 'Cav and Pag'.",
+    "Graph query row:\nwork: Pravda\nkind: Soviet newspaper\ngenre: None\nrelationship: None\ngenre_entity: None",
+    "Orfeo ed Euridice\nOrfeo ed Euridice (French version: Orphée et Eurydice ; English: \"Orpheus and Eurydice\") is an opera composed by Christoph Willibald Gluck based on the myth of Orpheus, set to a libretto by Ranieri de' Calzabigi.\n\n It belongs to the genre of the \"azione teatrale\", meaning an opera on a mythological subject with choruses and dancing.\n\n The piece was first performed at the Burgtheater in Vienna on 5 October 1762 in the presence of Empress Maria Theresa.\n\n \"Orfeo ed Euridice\" is the first of Gluck's \"reform\" operas, in which he attempted to replace the abstruse plots and overly complex music of \"opera seria\" with a \"noble simplicity\" in both the music and the drama."
+   ]
+  },
+  {
+   "id": "27e32faccff19c07",
+   "gold": [
+    {
+     "sentence": "Groom Lake is a salt flat in Nevada used for runways of the Nellis Bombing Range Test Site airport (KXTA).",
+     "facts": {
+      "0.0": "Groom Lake is a salt flat in Nevada.",
+      "0.1": "Groom Lake is used for runways of the Nellis Bombing Range Test Site airport.",
+      "0.2": "The Nellis Bombing Range Test Site airport has the code KXTA."
+     }
+    },
+    {
+     "sentence": " Located within the namesake Groom Lake Valley portion of the Tonopah Basin, the lake is 25 mi south of Rachel, Nevada.",
+     "facts": {
+      "1.0": "Groom Lake is located within the Groom Lake Valley portion of the Tonopah Basin.",
+      "1.1": "Groom Lake Valley is the namesake of the Groom Lake Valley portion of the Tonopah Basin.",
+      "1.2": "Groom Lake is 25 miles south of Rachel, Nevada."
+     }
+    },
+    {
+     "sentence": "Rachel is a census-designated place (CDP) in Lincoln County, Nevada, United States.",
+     "facts": {
+      "2.0": "Rachel is a census-designated place (CDP).",
+      "2.1": "Rachel is in Lincoln County, Nevada, United States."
+     }
+    }
+   ],
+   "items": [
+    "Papoose Lake\nPapoose Lake is a dry lake bed located in Lincoln County, Nevada, USA.\n\n The lake lies within the plot of land referred to as the Groom Lake facility (aka Area 51) and is a restricted area.\n\n The lake is located a few miles southwest of the Groom lake facility nestled adjacent the Papoose Range.",
+    "Saskatchewan Highway 35\nHighway 35 is a paved undivided provincial highway in the Canadian province of Saskatchewan.\n\n It runs from the US Border near Port of Oungre (where it meets United States Route 85) to a dead end near the north shore of Tobin Lake.\n\n Saskatchewan Highway 35 is about 540 km long.\n\n The CanAm Highway comprises Saskatchewan Highways 35, SK Hwy 39, SK Hwy 6, SK Hwy 3, SK Hwy 2 and U.S. Route 85.\n\n 46.5 mi of SK Hwy 35 contribute to the CanAm Highway between Port of Oungre on the Canada – United States border and Weyburn.\n\n Mudslides, and spring flooding were huge road building and maintenance problems around Nipawin as well as along the southern portion of the route named the \"Greater Yellow Grass Marsh\".\n\n Over 20 early dams were built until the problem was addressed with the Rafferty-Alameda Project on the Souris River and the construction of the Qu'Appelle River Dam which have helped to eliminate washed out roads and flooded communities.",
+    "Squire Creek Country Club\nThe Squire Creek Country Club is a private, members-only country club located in Choudrant, Louisiana, five miles northeast of Ruston.\n\n Squire Creek features an 18-hole championship golf course designed by Tom Fazio.\n\n The course has been ranked as number one in the state of Louisiana four times, and was ranked as the No. 5 best new course in the United States by \"Golf Digest\".\n\n Squire Creek is the home golf course for the Louisiana Tech Bulldogs golf team.\n\n Squire Creek offers a golf training facility, which features dual bays with retractable doors for indoor or outdoor use, motion analysis, and launch monitor.\n\n The Squire Creek tennis facility has 6 lighted courts (4 Hydro Courts and 2 Hard Courts).\n\n Squire Creek has full service golf and tennis shops.\n\n The Squire Creek fitness facility has 2 exercise rooms and offers massage therapy.\n\n The Squire Creek Clubhouse features three dining areas: the more formal Main Dining Hall, the casual 19th Hole, and the Fazio Grill.\n\n The Squire Creek Lodge features two floors offering a combined total of seven bedrooms.",
+    "Rachel, Nevada\nRachel is a census-designated place (CDP) in Lincoln County, Nevada, United States.\n\n As of the 2010 census it had a population of 54.\n\n As the closest habitation to the Nellis Air Force Range and Area 51, Rachel enjoys a modest celebrity, particularly among aviation enthusiasts and UFO hunters.\n\n North of the town is the Quinn Canyon Range, which has the ghost town of Adaven.",
+    "Leviathan Mine\nLeviathan Mine is a United States superfund site (CERCLIS ID: CAD98067685) at an abandoned open-pit sulfur mine located in Alpine County, California.\n\n The mine is located at on the eastern slope of the Sierra Nevada at about 7,000 ft elevation, 6 mi east of Markleeville and 24 mi southeast of Lake Tahoe.\n\n The mine site comprises approximately 250 acre of land surrounded by the Toiyabe National Forest, which is only accessible a few months a year.\n\n The approximately 22 million tons of sulfur ore-containing crushed rock at the mine are responsible for contaminating the Leviathan and Aspen Creek, which join with Mountaineer Creek to form Bryant Creek which ultimately empties into the East Fork of the Carson River.\n\n These water bodies are listed as 303(d) impaired.\n\n The site location is seismically active.",
+    "Crystal Lake (Gilmanton, New Hampshire)\nCrystal Lake is a 455 acre water body located in Belknap County in the Lakes Region of central New Hampshire, United States, in the town of Gilmanton.\n\n Crystal Lake is at the head of the Suncook River watershed.\n\n Water flows into Crystal Lake from the Belknap Range through Manning and Sunset lakes to the north.\n\n Water from Manning Lake enters Crystal Lake via Nelson Brook.\n\n Other waterways flowing into Crystal Lake include Wasson Brook and Mill Brook.\n\n Water flows out of a dam from the southern end of Crystal Lake via the Suncook Lakes and Suncook River to the Merrimack River.\n\n Shoreline development along Crystal Lake consists primarily of summer cottages, with a few year-round residents.\n\n Belknap Mountain and Mount Major can be seen from the shoreline.",
+    "Groom Lake (salt flat)\nGroom Lake is a salt flat in Nevada used for runways of the Nellis Bombing Range Test Site airport (KXTA).\n\n It is located immediately north of the Area 51 USAF installation.\n\n The lake at 4409 ft elevation is approximately 3.7 mi from north to south and 3 mi from east to west at its widest point, and is approximately 11.3 miles in circumference.\n\n Located within the namesake Groom Lake Valley portion of the Tonopah Basin, the lake is 25 mi south of Rachel, Nevada.",
+    "John Skillern House\nThe John Skillern House is a historic cabin located 25 mi northwest of Fairfield in Camas County, Idaho, near the confluence of the Big Smokey and Little Smokey creeks.\n\n The cabin was built in 1921-22 for John Skillern and his wife, who used it as a summer home and headquarters for John's large sheep ranching business.\n\n Skillern's wife based the cabin's rustic design off of the Old Faithful Inn in Yellowstone National Park, which is reflected in the cabin's steep roof and covered front porch.\n\n The cabin's other significant rustic features include its sleeping lofts with pole railings, its horizontal log construction with exposed logs on the inner walls, and its stone chimney.",
+    "Groom Range\nThe Groom Range is a mountain range in Lincoln County, Nevada.\n\n It is located within the Nevada Test and Training Range, north of Groom Dry Lake.\n\n The highest point in the Groom Range is 9,249 feet.\n\n The Groom Range is situated 26.6 miles north of the dry Groom Lake.",
+    "Tonopah Test Range\nTonopah Test Range (TTR), is a restricted military installation located about 30 mi southeast of Tonopah, Nevada.\n\n It is part of the northern fringe of the Nellis Range, measuring 625 sqmi .\n\n Tonopah Test Range is located about 70 mi northwest of Groom Dry Lake, the home of the Area 51 facility.\n\n Like the Groom Lake facility, Tonopah is a site of interest to conspiracy theorists, mostly for its use of experimental and classified aircraft.\n\n As such, it is not the focus of alien enthusiasts, unlike its neighbor.\n\n It is currently used for nuclear weapons stockpile reliability testing, research and development of fusing and firing systems, and testing nuclear weapon delivery systems.\n\n The airspace comprises restricted area R-4809 of the Nevada Test and Training Range and is often used for military training."
+   ]
+  },
+  {
+   "id": "09a25f962193036c",
+   "gold": [
+    {
+     "sentence": "Paola Suárez (born 23 June 1976) is a retired professional tennis player from Argentina.",
+     "facts": {
+      "0.0": "Paola Suárez was born on 23 June 1976.",
+      "0.1": "Paola Suárez is a retired professional tennis player.",
+      "0.2": "Paola Suárez is from Argentina."
+     }
+    },
+    {
+     "sentence": " She was one of the most prominent women's doubles players throughout the early and mid-2000s, winning eight Grand Slam titles, all of them with Virginia Ruano Pascual, and holding the No. 1 doubles ranking for 87 non-consecutive weeks.",
+     "facts": {
+      "1.0": "Paola Suárez was one of the most prominent women's doubles players throughout the early and mid-2000s.",
+      "1.1": "Paola Suárez won eight Grand Slam titles.",
+      "1.2": "All eight of Paola Suárez's Grand Slam titles were won with Virginia Ruano Pascual.",
+      "1.3": "Paola Suárez held the No. 1 doubles ranking for 87 non-consecutive weeks."
+     }
+    },
+    {
+     "sentence": " He reached a career high singles ranking of 274 in July 2011, but is much better known as a leading doubles player with a huge serve.",
+     "facts": {
+      "2.0": "Paola Suárez reached a career high singles ranking of 274 in July 2011.",
+      "2.1": "Paola Suárez is much better known as a leading doubles player with a huge serve."
+     }
+    }
+   ],
+   "items": [
+    "1999 Brasil Open – Doubles\nThe 1999 Brasil Open – Doubles was the tennis doubles event of the first edition of the most prestigious tournament in Brazil.\n\n Argentinian team Laura Montalvo and Paola Suárez won the title, in what was the team's second title of the year, defeating Janette Husárová and Florencia Labat in the final.",
+    "Francesca Schiavone\nFrancesca Schiavone (] ; born 23 June 1980 in Milan) is an Italian tennis player who turned professional in 1998.\n\n She won the 2010 French Open singles title, becoming the first Italian woman to win a Grand Slam event in singles.\n\n She was also runner-up at the 2011 French Open.\n\n Her career high ranking is world No. 4, achieved on 31 January 2011.\n\n To date, Schiavone is the last one handed-backhand player to win a Grand Slam title on the women's tour.",
+    "1999 Copa Colsanitas – Doubles\nThe 1999 Copa Colsanitas – Doubles was the doubles event of the second edition of the Copa Colsanitas; a WTA Tier IV tournament and the most prestigious women's tennis tournament held in Colombia and Hispanic America.\n\n Janette Husárová and Paola Suárez were the defending champions but only Suárez competed that year with Laura Montalvo.",
+    "1999 Copa Colsanitas – Singles\nThe 1999 Copa Colsanitas – Singles was the singles event of the second edition of the Copa Colsanitas; a WTA Tier IV tournament and the most prestigious women's tennis tournament held in Colombia and Hispanic America.\n\n Paola Suárez was the defending champion but lost in the semifinals to Christína Papadáki.",
+    "Patricia Tarabini\nPatricia Tarabini (born 6 August 1968) is an Argentine former tennis player.\n\n Tarabini represented her country and won the bronze Olympic medal at the 2004 Athens games, with Paola Suárez, where they lost 7–9 in the third set to eventual gold medalists from China, Sun Tiantian and Li Ting.\n\n On May 9, 1988, Patricia reached her highest singles ranking; world number 29.\n\n Tarabini's highest doubles ranking was world number 12, which she achieved on August 17, 1998.\n\n Patricia turned pro in 1986, and won a total of 15 top-level doubles titles in her career.\n\n She is the 1996 French Open mixed doubles champion, which she won with Javier Frana.",
+    "Clarisa Fernández\nClarisa Fernández (born 28 August 1981) is a retired Argentine tennis player who is best known for her semi-final appearance at the 2002 French Open, the first Argentine since Sabatini in 1992 to reach that stage.\n\n Fernández was ranked 87th in the world at the time of her shocking result.\n\n She defeated, in order: (Q) Lubomira Bacheva, Jelena Kostanić, Kim Clijsters, (13) Elena Dementieva, Paola Suárez, before losing to second-seeded Venus Williams in straight sets.",
+    "Michael Venus (tennis)\nMichael Venus (born 16 October 1987) is a New Zealand professional tennis player.\n\n He reached a career high singles ranking of 274 in July 2011, but is much better known as a leading doubles player with a huge serve.\n\n His highest ranking in this discipline is 12, gained in July 2017.\n\n He won the final of the 2017 French Open partnering with American Ryan Harrison, and followed that with a runner-up finish in the 2017 US Open mixed doubles with Chan Hao-ching of Chinese Taipei as his partner.",
+    "1999 Egger Tennis Festival – Doubles\nThe 1999 Egger Tennis Festival – Singles was the singles event of the twenty-ninth edition of the Egger Tennis Festival; a WTA Tier IV tournament and the second most prestigious women's tennis tournament held in Austria.\n\n Laura Montalvo and Paola Suárez were the defending champions, but they didn't compete together this year.\n\n Montalvo played with Olga Lugina as the third seed, while Suárez teamed up with Virginia Ruano Pascual as the second seed.",
+    "1999 Italian Open – Women's Doubles\nThe 1999 Italian Open – Doubles was the doubles event of the fifty-fifth edition of the tennis tournament played at Rome, Italy, the most prestigious tennis tournament in Southern Europe.\n\n It was the fifth WTA Tier I tournament of the year, and part of the European claycourt season.\n\n Virginia Ruano Pascual and Paola Suárez were the defending champions, but lost to Martina Hingis and Anna Kournikova in the quarterfinals.",
+    "Paola Suárez\nPaola Suárez (born 23 June 1976) is a retired professional tennis player from Argentina.\n\n She was one of the most prominent women's doubles players throughout the early and mid-2000s, winning eight Grand Slam titles, all of them with Virginia Ruano Pascual, and holding the No. 1 doubles ranking for 87 non-consecutive weeks.\n\n She was also a singles semifinalist at the 2004 French Open."
+   ]
+  },
+  {
+   "id": "62a324accd33ae7d",
+   "gold": [
+    {
+     "sentence": "of Montreal is an American experimental pop band from Athens, Georgia.",
+     "facts": {
+      "0.0": "of Montreal is an American band.",
+      "0.1": "of Montreal is an experimental pop band.",
+      "0.2": "of Montreal is from Athens, Georgia."
+     }
+    },
+    {
+     "sentence": "Vib Gyor was a band that was formed in Leeds, England.",
+     "facts": {
+      "1.0": "Vib Gyor was a band.",
+      "1.1": "Vib Gyor was formed in Leeds, England."
+     }
+    }
+   ],
+   "items": [
+    "The Secret (Vib Gyor EP)\nThe Secret EP is the EP from the Leeds band Vib Gyor.\n\n It was released on 5 March 2007, and is the follow-up to their well-received debut single, \"Fallen\".\n\n It was recorded in Bath and produced by Paul Corkett.\n\n It also has a hidden fifth instrumental track - which the band recently revealed was called <:.\n\n~.\n\n:>",
+    "Montreal Victorias\nThe Victoria Hockey Club of Montreal, Quebec, Canada was an early men's amateur ice hockey club.\n\n Its date of origin is ascribed to either 1874, 1877 or 1881, making it either the first or second organized ice hockey club after McGill University.\n\n The club played at its own rink, the Victoria Skating Rink in Montreal.\n\n The club was winners of the Stanley Cup in 1895 and held it except for a period in 1896 until 1899.\n\n The club remained amateur, splitting from the ranks of teams turned professional in 1908.\n\n The amateur hockey club was the first winner of the Allan Cup and continued in play until 1939 after its 65th season.\n\n The club often also fielded junior and intermediate teams.",
+    "Bullmoose\nBullmoose (aka Zach Dobbins) is a Canadian rock band formed in Elgin, Ontario in 1996.\n\n Three of the original members continue in the band, which today is based in Montreal.\n\n They include twin brothers Jeff Cowan (drums/vocals) and Seamus Cowan (bass/vocals) from Westport, Ontario and Eric Lawrance (guitar/vocals) from Delta, Ontario, who launched the band when they attended school at Montreal.\n\n The band performs in the rock music genre, citing experimental influences of the late 1960s and early 1970s.",
+    "Bloc Party\nBloc Party are an English indie rock band, currently composed of Kele Okereke (lead vocals, rhythm guitar, keyboards, sampler), Russell Lissack (lead guitar, keyboards), Justin Harris (bass guitar, keyboards, saxophones, backing vocals) and Louise Bartle (drums, percussion).\n\n Former members Matt Tong and Gordon Moakes left the band in 2013 and 2015 respectively.\n\n Their brand of music, whilst rooted in rock, retains elements of other genres such as electronica and house music.\n\n The band was formed at the 1999 Reading Festival by Okereke and Lissack.\n\n They went through a variety of names before settling on Bloc Party in 2003.\n\n Moakes joined the band after answering an advert in \"NME\" magazine, while Tong was picked via an audition.\n\n Bloc Party got their break by giving BBC Radio 1 DJ Steve Lamacq and Franz Ferdinand's lead singer, Alex Kapranos, a copy of their demo \"She's Hearing Voices\".",
+    "The Famines (band)\nThe Famines are a Canadian indie rock band formed in 2008 in Edmonton, Alberta, Canada now based in Montreal, Quebec, Canada.\n\n The two piece band uses a modern and minimalistic approach that draws comparison to mid 1970's protopunk and fuzzy garage rock.\n\nThe band name is meant to be a commentary on the continued feeling of emptiness and lacking in a society that is materially fulfilled.\n\n The band has two members, R. E. Biesinger on guitar and vocals, and Drew Demers on the drums.",
+    "The Gorgeous\nThe Gorgeous were a Canadian metalcore band formed in the summer of 2003 in Montreal.\n\n The band formed with Dali Shaw on guitar, Julien Brousseau on Bass and Miguel Shaw on drums.\n\n The three played a few shows without a vocalist and quickly recruited Jordon Daniel.",
+    "Vib Gyor\nVib Gyor was a band that was formed in Leeds, England.\n\n The name was derived from the first letters of all the colours in the rainbow, in order from the shortest to longest wavelengths.",
+    "Of Montreal\nof Montreal is an American experimental pop band from Athens, Georgia.\n\n It was founded by frontman Kevin Barnes in 1996, named after a failed romance between Barnes and a woman \"of Montreal.\"\n\n The band is identified as part of the Elephant 6 collective.\n\n Throughout its existence, of Montreal's musical style has evolved considerably and drawn inspiration from numerous 1960s psychedelic pop acts.",
+    "The V.I.P.s (band)\nThe V.I.P.s were a British R&B musical ensemble formed in Carlisle, Cumberland, (North West England) in late 1963, out of an earlier outfit known as The Ramrods, who had formed in Carlisle in 1960.\n\n After a change of personnel in April 1967, the band changed their name to \"Art\", and released the album \"Supernatural Fairy Tales\".\n\n They also participated to a psychedelic bizarre album called \"Featuring The Human Host And The Heavy Metal Kids\" by a collective known as Hapshash and the Coloured Coat, formed by Guy Stevens and an influential British graphic design and avant-garde musical partnership between Michael English and Nigel Waymouth.\n\n The musicians involved in that project were Mike Harrison on keys and vocals, Luther Grosvenor on guitars, Greg Ridley on bass and Mike Kellie on drums, as well as performances by Stevens, English and Waymouth.\n\n It was the first time that the term \"heavy metal\" was ever used in music, even though that album had nothing to do with heavy metal music, being closer to psychedelic music.",
+    "Fallen (Vib Gyor song)\n\"Fallen\" was the first single from the Leeds band Vib Gyor.\n\n It was first given limited release in July 2006, and has attained critical acclaim and a large amount of radio play on both sides of the atlantic."
+   ]
+  },
+  {
+   "id": "de1f9d091de30165",
+   "gold": [
+    {
+     "sentence": "Electronic Attack Squadron 138 (VAQ-138), also known as the \"Yellow Jackets\", is an expeditionary EA-18G Growler squadron of the United States Navy based at Naval Air Station Whidbey Island, Washington.",
+     "facts": {
+      "0.0": "Electronic Attack Squadron 138 (VAQ-138) is also known as the \"Yellow Jackets\".",
+      "0.1": "Electronic Attack Squadron 138 is an expeditionary EA-18G Growler squadron of the United States Navy.",
+      "0.2": "Electronic Attack Squadron 138 is based at Naval Air Station Whidbey Island, Washington."
+     }
+    },
+    {
+     "sentence": "The Boeing EA-18G Growler is an American carrier-based electronic warfare aircraft, a specialized version of the two-seat F/A-18F Super Hornet.",
+     "facts": {
+      "1.0": "The Boeing EA-18G Growler is an American carrier-based electronic warfare aircraft.",
+      "1.1": "The Boeing EA-18G Growler is a specialized version of the two-seat F/A-18F Super Hornet."
+     }
+    }
+   ],
+   "items": [
+    "Boeing F/A-18E/F Super Hornet\nThe Boeing F/A-18E and F/A-18F Super Hornet are twin-engine carrier-capable multirole fighter aircraft variants based on the McDonnell Douglas F/A-18 Hornet.\n\n The F/A-18E single-seat and F/A-18F tandem-seat variants are larger and more advanced derivatives of the F/A-18C and D Hornet.\n\n The Super Hornet has an internal 20 mm M61 rotary cannon and can carry air-to-air missiles and air-to-surface weapons.\n\n Additional fuel can be carried in up to five external fuel tanks and the aircraft can be configured as an airborne tanker by adding an external air refueling system.",
+    "No. 1 Squadron RAAF\nNo. 1 Squadron is a Royal Australian Air Force (RAAF) squadron headquartered at RAAF Base Amberley, Queensland.\n\n Controlled by No. 82 Wing, it is equipped with Boeing F/A-18F Super Hornet multi-role fighters.\n\n The squadron was formed under the Australian Flying Corps in 1916 and saw action in the Sinai and Palestine Campaigns during World War I.\n\n It flew obsolete Royal Aircraft Factory B.E.2s, B.E.12s, Martinsyde G.100s and G.102s, as well as Airco DH.6s, Bristol Scouts and Nieuport 17s, before re-equipping with the R.E.8 in October 1917 and finally the Bristol Fighter in December.\n\n Its commanding officer in 1917–18 was Major Richard Williams, later known as the \"Father of the RAAF\".\n\n Disbanded in 1919, No. 1 Squadron was re-formed on paper as part of the RAAF in 1922, and re-established as an operational unit three years later.",
+    "Boeing EA-18G Growler\nThe Boeing EA-18G Growler is an American carrier-based electronic warfare aircraft, a specialized version of the two-seat F/A-18F Super Hornet.\n\n The EA-18G replaced the Northrop Grumman EA-6B Prowlers in service with the United States Navy.\n\n The Growler's electronic warfare capability is primarily provided by Northrop Grumman.\n\n The EA-18G began production in 2007 and entered operational service with the US Navy in late 2009.\n\n Australia has also purchased twelve EA-18Gs, which entered service with the Royal Australian Air Force in 2017.",
+    "VAQ-209\nElectronic Attack Squadron 209 (VAQ-209) is a United States Navy Reserve electronic attack squadron.\n\n Known as the \"Star Warriors\", the squadron flies the EA-18G Growler carrier-based electronic warfare jet aircraft.\n\n Based at Naval Air Station Whidbey Island, WA, it is assigned to the Tactical Support Wing.",
+    "VFA-2\nStrike Fighter Squadron 2 (VFA-2) also known as the \"Bounty Hunters\" is a United States Navy F/A-18F Super Hornet strike fighter squadron based at Naval Air Station Lemoore, California.\n\n Their tail code is NE and their callsign is \"Bullet\".\n\n They are attached to Carrier Air Wing 2 (CVW-2), a composite unit made up of a wide array of aircraft performing a variety of combat and support missions that deploy aboard the \"Carl Vinson\" .",
+    "No. 82 Wing RAAF\nNo. 82 Wing is the strike and reconnaissance wing of the Royal Australian Air Force (RAAF).\n\n It is headquartered at RAAF Base Amberley, Queensland.\n\n Coming under the control of Air Combat Group, the wing operates F/A-18F Super Hornet multirole fighters and Pilatus PC-9 forward air control aircraft.\n\n Its units include Nos. 1 and 6 Squadrons, operating the Super Hornet, and No. 4 Squadron, operating the PC-9.",
+    "RAAF Base Amberley\nRAAF Base Amberley (ICAO: YAMB) is a Royal Australian Air Force (RAAF) military airbase located 8 km southwest of Ipswich, Queensland in Australia and 50 km southwest of Brisbane.\n\n It is currently home to No. 1 Squadron and No. 6 Squadron (operating the F/A-18F Super Hornet), No. 33 Squadron (taking delivery of the Airbus KC-30A) and No. 36 Squadron (operating the Boeing C-17 Globemaster III jet transport).\n\n Amberley is also home to Army units making up the 9th Force Support Battalion (9FSB).\n\n Located on 1600 ha , RAAF Amberley is the largest operational base in the RAAF, employing over 5,000 uniformed and civilian personnel.\n\n There are a variety of other formations on the base such as training colleges and maintenance areas.\n\n Amberley's largest squadron in terms of personnel is No. 382 Expeditionary Combat Support Squadron RAAF (ECSS) providing both garrison and deployed combat support.",
+    "VAQ-138\nElectronic Attack Squadron 138 (VAQ-138), also known as the \"Yellow Jackets\", is an expeditionary EA-18G Growler squadron of the United States Navy based at Naval Air Station Whidbey Island, Washington.\n\n Their radio callsign is \"RAMPAGE\".",
+    "VFA-154\nStrike Fighter Squadron 154 (VFA-154), also known as the \"Black Knights\", is a United States Navy strike fighter squadron stationed at Naval Air Station Lemoore.\n\n The Black Knights are an operational fleet squadron flying the F/A-18F Super Hornet.\n\n They are currently attached to Carrier Air Wing Eleven and deployed aboard the aircraft carrier USS \"Nimitz\" .\n\n Their tailcode is NH and their callsign is \"Knight\".",
+    "VAQ-135\nElectronic Attack Squadron 135 (VAQ-135), known as the \"Black Ravens\", is a United States Navy electronic attack squadron that currently operates the EA-18G Growler carrier-based electronic warfare jet aircraft.\n\n The squadron is permanently stationed at Naval Air Station Whidbey Island with a radio callsign of \"\"Thunder\"\"."
+   ]
+  }
+ ]
+}

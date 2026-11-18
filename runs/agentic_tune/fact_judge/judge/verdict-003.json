@@ -1,0 +1,58 @@
+[
+{"id": "fc6b3b45db571585", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "It could, though, mean some sort of progress, if the Manchester born Ratcliffe follows through with his vision to revolutionise the club."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "It could, though, mean some sort of progress, if the Manchester born Ratcliffe follows through with his vision to revolutionise the club."}]},
+{"fact": "0.2", "status": "contradicted", "evidence": [{"item": 3, "quote": "it quickly became clear the race for United was a straight shootout between Oldham-born Ratcliffe"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "if the Manchester born Ratcliffe follows through with his vision to revolutionise the club."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "b8dc12fdc93b93d2", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "VIKINGS: Allow the fewest yards per catch to rival tigh ends (5.9 yards)"}, {"item": 7, "quote": "seen the fourth-lowest ADOT from tight ends (5.0 yards per target)"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "seen the fourth-lowest ADOT from tight ends (5.0 yards per target)"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "almost as if teams know they won't be able to succeed on downfield shots against them"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "(zero completions of 20-plus yards from tight ends)"}]}
+]},
+{"id": "840338aea6e1695e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "And if the Braves let this be the story of their series"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "And if the Braves let this be the story of their series, that's on them."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Though Nocturne takes place in the same continuity as the previous Castlevania show, it also uses major pieces of lore"}]},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []}
+]},
+{"id": "375b05a6ffa56843", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "a9e5535e2c1f1d65", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []}
+]},
+{"id": "c6e2cf013279bcde", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 4, "quote": "Smith did return, however, for the final drive of the game in the losing effort."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "backup Drew Lock took over under center with 18 seconds left"}]}
+]}
+]

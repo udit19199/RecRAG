@@ -1,0 +1,1313 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 7 items.
+
+=== ITEM id=7211abd91290036c ===
+Gold sentences and facts:
+Sentence 0: The Dead Sea ( Hebrew : יָם הַמֶּלַח ‬ Yam ha - Melah lit . Sea of Salt ; Arabic : البحر الميت ‎ Al - Bahr al - Mayyit ) is a salt lake bordered by Jordan to the east and Israel and Palestine to the west . Its surface and shores are 430.5 metres ( 1,412 ft ) below sea level , Earth 's lowest elevation on land . The Dead Sea is 304 m ( 997 ft ) deep , the deepest hypersaline lake in the world . With a salinity of 342 g / kg , or 34.2 % , ( in 2011 ) , it is 9.6 times as salty as the ocean and one of the world 's saltiest bodies of water . This salinity makes for a harsh environment in which plants and animals can not flourish , hence its name . The Dead Sea is 50 kilometres ( 31 mi ) long and 15 kilometres ( 9 mi ) wide at its widest point . It lies in the Jordan Rift Valley , and its main tributary is the Jordan River .
+  Fact 0.0: The Dead Sea is also called יָם הַמֶּלַח (Yam ha-Melah) in Hebrew, which means Sea of Salt.
+  Fact 0.1: The Dead Sea is also called البحر الميت (Al-Bahr al-Mayyit) in Arabic.
+  Fact 0.2: The Dead Sea is a salt lake.
+  Fact 0.3: The Dead Sea is bordered by Jordan to the east.
+  Fact 0.4: The Dead Sea is bordered by Israel and Palestine to the west.
+  Fact 0.5: The surface and shores of the Dead Sea are 430.5 metres (1,412 ft) below sea level.
+  Fact 0.6: The surface and shores of the Dead Sea are Earth's lowest elevation on land.
+  Fact 0.7: The Dead Sea is 304 m (997 ft) deep.
+  Fact 0.8: The Dead Sea is the deepest hypersaline lake in the world.
+  Fact 0.9: In 2011, the Dead Sea had a salinity of 342 g/kg, or 34.2%.
+  Fact 0.10: The Dead Sea is 9.6 times as salty as the ocean.
+  Fact 0.11: The Dead Sea is one of the world's saltiest bodies of water.
+  Fact 0.12: The Dead Sea's salinity makes for a harsh environment in which plants and animals cannot flourish.
+  Fact 0.13: The Dead Sea's name comes from its harsh environment in which plants and animals cannot flourish.
+  Fact 0.14: The Dead Sea is 50 kilometres (31 mi) long.
+  Fact 0.15: The Dead Sea is 15 kilometres (9 mi) wide at its widest point.
+  Fact 0.16: The Dead Sea lies in the Jordan Rift Valley.
+  Fact 0.17: The main tributary of the Dead Sea is the Jordan River.
+
+Retrieved items:
+<item 1>
+Dead Sea
+Dead Sea - wikipedia Dead Sea Jump to : navigation , search For the novel , see Dead Sea ( novel ) . Dead Sea ים המלח ‬ ( in Hebrew ) البحر الميت ( in Arabic )
+A view of the sea from the Israeli shore Location Israel Jordan Palestine Coordinates 31 ° 30 ′ N 35 ° 30 ′ E ﻿ / ﻿ 31.500 ° N 35.500 ° E ﻿ / 31.500 ; 35.500
+Coordinates : 31 ° 30 ′ N 35 ° 30 ′ E ﻿ / ﻿ 31.500 ° N 35.500 ° E ﻿ / 31.500 ; 35.500 Lake type Endorheic Hypersaline Primary inflows Jordan River Primary
+outflows None Catchment area 41,650 km ( 16,080 sq mi ) Basin countries Israel Jordan Palestine Max. length 50 km ( 31 mi ) ( northern basin only ) Max . width
+15 km ( 9.3 mi ) Surface area 605 km ( 234 sq mi ) ( 2016 ) Average depth 199 m ( 653 ft ) Max .
+</item 1>
+
+<item 2>
+Dead Sea
+In January 2015 it was reported that the level of water is now dropping by 1 m ( 3 ft ) a year . On 27 November 2016 , it was announced that the Jordanian
+government is shortlisting five consortiums to implement the project . Jordan 's ministry of Water and Irrigation said that the $100 million first phase of the
+project will begin construction in the first quarter of 2018 , and will be completed by 2021 . Views in 1972 , 1989 , and 2011 compared See also Red Sea -- Dead
+Sea Water Conveyance Aral Sea Dead Sea Works Great Salt Lake List of drying lakes List of places on land with elevations below sea level Mediterranean -- Dead
+Sea Canal Benjamin Elazari Volcani World Discoveries III : Dead Sea References ^ Jump up to : `` Virtual Israel Experience : The Dead Sea '' . Jewish Virtual
+Library . Retrieved 21 January 2013 . ^ Jump up to : `` The Dead Sea Is Dying Fast : Is It Too Late to Save It , or Was It Always a Lost Cause ? '' . Haaretz. 7
+October 2016 .
+</item 2>
+
+<item 3>
+Dead Sea
+depth 298 m ( 978 ft ) ( elevation of deepest point , 728 m BSL ( below sea level ) , minus current surface elevation ) Water volume 114 km ( 27 cu mi ) Shore
+length 135 km ( 84 mi ) Surface elevation − 430.5 m ( − 1,412 ft ) ( 2016 ) References Shore length is not a well - defined measure . Play media Short video
+about the Dead Sea from the Israeli News Company The Dead Sea ( Hebrew : יָם הַמֶּלַח ‬ Yam ha - Melah lit . Sea of Salt ; Arabic : البحر الميت ‎ Al - Bahr al -
+Mayyit ) is a salt lake bordered by Jordan to the east and Israel and Palestine to the west . Its surface and shores are 430.5 metres ( 1,412 ft ) below sea
+level , Earth 's lowest elevation on land . The Dead Sea is 304 m ( 997 ft ) deep , the deepest hypersaline lake in the world .
+</item 3>
+
+<item 4>
+Dead Sea
+The Greeks called it Lake Asphaltites ( Attic Greek ἡ Θάλαττα ἀσφαλτῖτης , hē Thálatta asphaltĩtēs , `` the Asphaltite sea '' ) . Geography Satellite photograph
+showing the location of the Dead Sea east of the Mediterranean Sea The Dead Sea is an endorheic lake located in the Jordan Rift Valley , a geographic feature
+formed by the Dead Sea Transform ( DST ) . This left lateral - moving transform fault lies along the tectonic plate boundary between the African Plate and the
+Arabian Plate . It runs between the East Anatolian Fault zone in Turkey and the northern end of the Red Sea Rift offshore of the southern tip of Sinai . It is
+here that the Upper Jordan River / Sea of Galilee / Lower Jordan River water system comes to an end . The Jordan River is the only major water source flowing
+into the Dead Sea , although there are small perennial springs under and around the Dead Sea , forming pools and quicksand pits along the edges . There are no
+outlet streams .
+</item 4>
+
+<item 5>
+Dead Sea
+With a salinity of 342 g / kg , or 34.2 % , ( in 2011 ) , it is 9.6 times as salty as the ocean and one of the world 's saltiest bodies of water . This salinity
+makes for a harsh environment in which plants and animals can not flourish , hence its name . The Dead Sea is 50 kilometres ( 31 mi ) long and 15 kilometres ( 9
+mi ) wide at its widest point . It lies in the Jordan Rift Valley , and its main tributary is the Jordan River . The Dead Sea has attracted visitors from around
+the Mediterranean basin for thousands of years . It was one of the world 's first health resorts ( for Herod the Great ) , and it has been the supplier of a
+wide variety of products , from asphalt for Egyptian mummification to potash for fertilisers . People also use the salt and the minerals from the Dead Sea to
+create cosmetics and herbal sachets . The Dead Seawater has a density of 1.24 kg / litre , which makes swimming similar to floating . The Dead Sea is receding
+at an alarming rate .
+</item 5>
+
+<item 6>
+Graph query row:
+place: Dead Sea
+relationship: LOCATED_IN
+related: Jordan Rift Valley
+context: None
+relation: None
+fact: None
+</item 6>
+
+<item 7>
+Dead Sea
+There are no outlet streams . The Mujib River , biblical Arnon , is one the larger water sources of the Dead Sea other than the Jordan . The Wadi Mujib valley ,
+420 m below the sea level in the southern of Jordan valley , is a biosphere reserve , with an area of 212 km ( 82 sq mi ) . Other more substantial sources are
+Wadi Darajeh ( Arabic ) / Nahal Dragot ( Hebrew ) , and Nahal Arugot . Wadi Hasa ( biblical Zered ) is another wadi flowing into the Dead Sea . Rainfall is
+scarcely 100 mm ( 4 in ) per year in the northern part of the Dead Sea and barely 50 mm ( 2 in ) in the southern part . The Dead Sea zone 's aridity is due to
+the rainshadow effect of the Judaean Mountains . The highlands east of the Dead Sea receive more rainfall than the Dead Sea itself . To the west of the Dead Sea
+, the Judaean mountains rise less steeply and are much lower than the mountains to the east .
+</item 7>
+
+<item 8>
+Graph query row:
+place: Dead Sea
+relationship: LOCATED_IN
+related: Jordan
+context: None
+relation: None
+fact: None
+</item 8>
+
+<item 9>
+Dead Sea
+Along the southwestern side of the lake is a 210 m ( 700 ft ) tall halite formation called `` Mount Sodom '' . Natural History There are two contending
+hypotheses about the origin of the low elevation of the Dead Sea . The older hypothesis is that the Dead Sea lies in a true rift zone , an extension of the Red
+Sea Rift , or even of the Great Rift Valley of eastern Africa . A more recent hypothesis is that the Dead Sea basin is a consequence of a `` step - over ''
+discontinuity along the Dead Sea Transform , creating an extension of the crust with consequent subsidence . Around 3.7 million years ago , what is now the
+valley of the Jordan River , Dead Sea , and the northern Wadi Arabah was repeatedly inundated by waters from the Mediterranean Sea . The waters formed in a
+narrow , crooked bay that is called by geologists the Sedom Lagoon , which was connected to the sea through what is now the Jezreel Valley . The floods of the
+valley came and went depending on long - scale climate change . The Sedom Lagoon deposited beds of salt that eventually became 2.5 km ( 1.55 mi ) thick .
+</item 9>
+
+<item 10>
+Dead Sea
+In Roman and Byzantine times , sugarcane , henna , and sycamore fig all made the lower Jordan valley wealthy . One of the most valuable products produced by
+Jericho was the sap of the balsam tree , which could be made into perfume . By the 19th century , Jericho 's fertility had disappeared . Human settlement There
+are several small communities near the Dead Sea . These include Ein Gedi , Neve Zohar and the Israeli settlements in the Megilot Regional Council : Kalya ,
+Mitzpe Shalem and Avnat . There is a nature preserve at Ein Gedi , and several Dead Sea hotels are located on the southwest end at Ein Bokek near Neve Zohar .
+Highway 90 runs north - south on the Israeli side for a total distance of 565 km ( 351 mi ) from Metula on the Lebanese border in the north to its southern
+terminus at the Egyptian border near the Red Sea port of Eilat . Potash City is a small community on the Jordanian side of the Dead Sea , and others including
+Suweima .
+</item 10>
+=== END ITEM id=7211abd91290036c ===
+
+=== ITEM id=48f0d803cae202b4 ===
+Gold sentences and facts:
+Sentence 0: ABO and Rh blood type distribution by country ( population averages ) Country Population O+ A+ B+ AB+ O − A − B − AB − Argentina 44,270,440 45.4 % 34.26 % 8.59 % 2.64 % 8.4 % 0.44 % 0.21 % 0.06 % Armenia 2,931,568 29.0 % 46.3 % 12.0 % 5.6 % 2.0 % 3.7 % 1.0 % 0.4 % Australia 24,642,693 40.0 % 31.0 % 8.0 % 2.0 % 9.0 % 7.0 % 2.0 % 1.0 % Austria 8,592,470 30.0 % 33.0 % 12.0 % 6.0 % 7.0 % 8.0 % 3.0 % 1.0 % Bahrain 1,418,695 48.48 % 19.35 % 22.61 % 3.67 % 3.27 % 1.33 % 1.04 % 0.25 % Bangladesh 164,833,667 31.18 % 21.44 % 34.58 % 8.85 % 1.39 % 0.96 % 0.96 % 0.64 % Belgium 11,444,053 38.0 % 34.0 % 8.6 % 4.1 % 7.0 % 6.0 % 1.5 % 0.8 % Bolivia 11,053,376 51.53 % 29.45 % 10.11 % 1.15 % 4.39 % 2.73 % 0.54 % 0.1 % Bosnia and Herzegovina 3,792,730 31.0 % 36.0 % 12.0 % 6.0 % 5.0 % 7.0 % 2.0 % 1.0 % Brazil 211,248,418 36.0 % 34.0 % 8.0 % 2.5 % 9.0 % 8.0 % 2.0 % 0.5 % Bulgaria 7,045,097 28.0 % 37.0 % 13.0 % 7.0 % 5.0 % 7.0 % 2.0 % 1.0 % Cambodia 16,077,172 46.7 % 27.2 % 18.5 % 4.9 % 1.3 % 0.8 % 0.5 % 0.1 % Cameroon 24,515,533 42.8 % 38.8 % 12.0 % 3.3 % 1.4 % 1.2 % 0.4 % 0.1 % Canada 36,627,140 39.0 % 36.0 % 7.6 % 2.5 % 7.0 % 6.0 % 1.4 % 0.5 % Chile 18,314,060 85.5 % 8.7 % 3.35 % 1.0 % 1.2 % 0.1 % 0.05 % 0.1 % China 1,388,251,023 47.7 % 27.8 % 18.9 % 5.0 % 0.28 % 0.19 % 0.1 % 0.03 % Colombia 49,069,267 61.3 % 26.11 % 2.28 % 1.47 % 5.13 % 2.7 % 0.7 % 0.31 % Côte d'Ivoire 23,869,656 46.5 % 22.5 % 22.5 % 4.3 % 2.0 % 1.0 % 1.0 % 0.2 % Croatia 4,207,355 29.0 % 36.0 % 15.0 % 5.0 % 5.0 % 6.0 % 3.0 % 1.0 % Cuba 11,486,750 45.8 % 33.5 % 10.2 % 2.9 % 3.6 % 2.8 % 1.0 % 0.2 % Cyprus 1,189,395 35.22 % 40.35 % 11.11 % 4.72 % 3.85 % 3.48 % 0.87 % 0.40 % Czech Republic 10,555,152 27.0 % 36.0 % 15.0 % 7.0 % 5.0 % 6.0 % 3.0 % 1.0 % Denmark 5,711,902 35.0 % 37.0 % 8.0 % 4.0 % 6.0 % 7.0 % 2.0 % 1.0 % Dominican Republic 10,766,932 46.2 % 26.4 % 16.9 % 3.1 % 3.7 % 2.1 % 1.4 % 0.2 % Ecuador 16,665,756 75.0 % 14.0 % 7.1 % 0.5 % 2.38 % 0.7 % 0.3 % 0.02 % Egypt 95,220,838 52.0 % 24.0 % 12.4 % 3.8 % 5.0 % 2.0 % 0.6 % 0.2 % El Salvador 6,171,483 62.0 % 23.0 % 11.0 % 1.0 % 1.0 % 1.0 % 0.7 % 0.3 % Estonia 1,305,745 29.5 % 30.8 % 20.7 % 6.3 % 4.3 % 4.5 % 3.0 % 0.9 % Ethiopia 104,352,727 39.0 % 28.0 % 21.0 % 5.0 % 3.0 % 2.0 % 1.0 % 1.0 % Finland 5,541,328 27.0 % 38.0 % 15.0 % 7.0 % 4.0 % 6.0 % 2.0 % 1.0 % France 64,939,560 36.0 % 37.0 % 9.0 % 3.0 % 6.0 % 7.0 % 1.0 % 1.0 % Germany 80,635,980 35.0 % 37.0 % 9.0 % 4.0 % 6.0 % 6.0 % 2.0 % 1.0 % Greece 10,892,849 37.4 % 32.9 % 11.0 % 3.7 % 7.0 % 5.0 % 2.0 % 1.0 % Guinea 13,291,741 46.88 % 21.64 % 22.86 % 4.52 % 2.0 % 0.9 % 1.0 % 0.2 % Honduras 9,348,898 57.5 % 27.0 % 7.8 % 2.5 % 2.7 % 1.7 % 0.6 % 0.2 % Hong Kong 7,402,115 41.5 % 26.13 % 25.34 % 6.35 % 0.32 % 0.17 % 0.14 % 0.05 % Hungary 9,787,801 27.0 % 33.0 % 16.0 % 8.0 % 5.0 % 7.0 % 3.0 % 1.0 % Iceland 334,311 47.6 % 26.4 % 9.3 % 1.6 % 8.4 % 4.6 % 1.7 % 0.4 % India 1,342,561,902 27.85 % 20.8 % 38.14 % 8.93 % 1.43 % 0.57 % 1.79 % 0.49 % Indonesia 263,519,317 36.82 % 25.87 % 28.85 % 7.96 % 0.18 % 0.13 % 0.15 % 0.04 % Iran 80,982,137 33.5 % 27.0 % 22.2 % 7.0 % 4.0 % 3.0 % 2.5 % 0.8 % Iraq 38,657,787 32.1 % 25.0 % 25.6 % 7.4 % 3.6 % 2.7 % 2.7 % 0.9 % Ireland 4,749,263 47.0 % 26.0 % 9.0 % 2.0 % 8.0 % 5.0 % 2.0 % 1.0 % Israel 8,323,659 32.0 % 34.0 % 17.0 % 7.0 % 3.0 % 4.0 % 2.0 % 1.0 % Italy 59,797,969 39.0 % 36.0 % 7.5 % 2.5 % 7.0 % 6.0 % 1.5 % 0.5 % Jamaica 2,813,316 47.0 % 23.0 % 20.0 % 3.0 % 3.5 % 2.0 % 1.0 % 0.5 % Japan 126,044,340 29.9 % 39.8 % 19.9 % 9.9 % 0.15 % 0.2 % 0.1 % 0.05 % Kenya 48,470,780 45.6 % 25.2 % 21.28 % 4.2 % 1.8 % 1.0 % 0.9 % 0.02 % Latvia 1,944,122 30.6 % 31.0 % 17.0 % 6.0 % 5.4 % 6.0 % 3.0 % 1.0 % Lebanon 6,039,438 38.4 % 32.3 % 9.5 % 3.2 % 7.7 % 6.5 % 1.7 % 0.7 % Libya 6,408,990 42.64 % 28.86 % 11.19 % 4.5 % 6.26 % 4.24 % 1.64 % 0.67 % Lithuania 2,827,573 36.0 % 33.0 % 11.0 % 4.0 % 7.0 % 6.0 % 2.0 % 1.0 % Luxemburg 587,297 35.0 % 37.0 % 9.0 % 4.0 % 6.0 % 6.0 % 2.0 % 1.0 % Macao 606,413 41.5 % 26.1 % 25.4 % 6.3 % 0.33 % 0.17 % 0.15 % 0.05 % Macedonia 2,083,690 30.0 % 34.0 % 15.0 % 6.0 % 5.0 % 6.0 % 3.0 % 1.0 % Malaysia 31,165,480 34.32 % 30.35 % 27.37 % 7.46 % 0.17 % 0.15 % 0.14 % 0.04 % Mauritania 4,266,765 46.3 % 26.68 % 17.47 % 3.85 % 2.8 % 1.6 % 1.1 % 0.2 % Mauritius 1,267,303 38.3 % 26.0 % 25.0 % 6.7 % 1.7 % 1.0 % 1.0 % 0.3 % Mexico 130,227,836 55.79 % 29.9 % 8.0 % 1.63 % 2.7 % 1.5 % 0.4 % 0.08 % Mongolia 3,052,044 55.4 % 27.7 % 10.9 % 4.96 % 0.6 % 0.3 % 0.1 % 0.04 % Myanmar 53,507,932 35.7 % 23.8 % 32.7 % 6.95 % 0.3 % 0.2 % 0.3 % 0.05 % Nepal 29,188,100 35.2 % 28.3 % 27.1 % 8.6 % 0.3 % 0.2 % 0.2 % 0.1 % Netherlands 17,033,012 39.5 % 35.0 % 6.7 % 2.5 % 7.5 % 7.0 % 1.3 % 0.5 % New Zealand 4,604,996 38.0 % 32.0 % 9.0 % 3.0 % 9.0 % 6.0 % 2.0 % 1.0 % Nigeria 191,851,411 51.3 % 22.4 % 20.7 % 2.6 % 1.6 % 0.7 % 0.6 % 0.1 % Norway 5,330,986 33.0 % 41.5 % 6.8 % 3.4 % 6.0 % 7.5 % 1.2 % 0.6 % North Korea 25,432,033 27.15 % 31.08 % 30.15 % 11.32 % 0.08 % 0.1 % 0.1 % 0.03 % Pakistan 180,440,005 24.63 % 20.6 % 34.40 % 9.52 % 4.17 % 2.66 % 3.57 % 0.45 % Papua New Guinea 7,952,511 48.0 % 37.2 % 9.6 % 2.8 % 1.0 % 0.8 % 0.4 % 0.2 % Peru 32,167,717 70.0 % 18.4 % 7.8 % 1.6 % 1.4 % 0.5 % 0.28 % 0.02 % Philippines 103,801,747 36.9 % 28.9 % 26.9 % 6.97 % 0.1 % 0.1 % 0.1 % 0.03 % Poland 38,563,480 31.0 % 32.0 % 15.0 % 7.0 % 6.0 % 6.0 % 2.0 % 1.0 % Portugal 10,264,672 36.3 % 40.0 % 6.6 % 2.9 % 6.0 % 6.6 % 1.1 % 0.5 % Republic of Moldova 4,043,722 28.5 % 31.8 % 17.6 % 7.0 % 5.0 % 6.0 % 3.0 % 1.1 % Romania 19,237,087 28.0 % 37.0 % 14.0 % 7.0 % 5.0 % 6.0 % 2.0 % 1.0 % Russia 143,374,801 28.0 % 30.0 % 20.0 % 7.0 % 4.9 % 5.8 % 3.2 % 1.1 % Saudi Arabia 32,744,532 47.8 % 23.9 % 17.0 % 4.0 % 4.0 % 2.0 % 1.0 % 0.3 % Serbia 8,776,827 31.92 % 35.28 % 12.6 % 4.2 % 6.08 % 6.72 % 2.4 % 0.8 % Singapore 5,784,819 43.6 % 23.9 % 24.4 % 6.0 % 0.9 % 0.7 % 0.4 % 0.1 % Slovakia 5,432,265 27.2 % 35.7 % 15.3 % 6.8 % 4.8 % 6.3 % 2.7 % 1.2 % Slovenia 2,071,258 31.0 % 33.0 % 12.0 % 6.0 % 7.0 % 7.0 % 3.0 % 1.0 % South Africa 55,437,815 39.0 % 32.0 % 12.0 % 3.0 % 6.0 % 5.0 % 2.0 % 1.0 % South Korea 50,748,307 27.9 % 33.87 % 26.92 % 10.98 % 0.1 % 0.13 % 0.08 % 0.02 % Spain 46,070,163 36.0 % 34.0 % 8.0 % 2.5 % 9.0 % 8.0 % 2.0 % 0.5 % Sudan 40,827,975 48.0 % 27.7 % 15.2 % 2.8 % 3.5 % 1.8 % 0.8 % 0.2 % Sweden 9,920,843 32.0 % 37.0 % 10.0 % 5.0 % 6.0 % 7.0 % 2.0 % 1.0 % Switzerland 8,454,321 35.0 % 40.0 % 7.0 % 3.0 % 6.0 % 7.0 % 1.0 % 1.0 % Syria 18,920,698 43.0 % 30.0 % 14.0 % 3.7 % 5.0 % 3.0 % 1.0 % 0.3 % Taiwan 23,234,936 43.9 % 25.9 % 23.9 % 6.0 % 0.17 % 0.1 % 0.01 % 0.02 % Thailand 68,298,027 40.8 % 16.9 % 36.8 % 4.97 % 0.2 % 0.1 % 0.2 % 0.03 % Turkey 80,420,065 29.8 % 37.8 % 14.2 % 7.2 % 3.9 % 4.7 % 1.6 % 0.8 % Uganda 43,276,492 43.7 % 39.0 % 10.7 % 3.9 % 1.3 % 1.0 % 0.3 % 0.1 % Ukraine 44,404,078 32.0 % 34.0 % 15.0 % 5.0 % 5.0 % 6.0 % 2.0 % 1.0 % United Arab Emirates 3,398,017 44.1 % 21.9 % 20.9 % 4.3 % 4.3 % 2.1 % 2.0 % 0.4 % United Kingdom 65,512,375 37.0 % 35.0 % 8.0 % 3.0 % 7.0 % 7.0 % 2.0 % 1.0 % United States 326,481,533 37.4 % 35.7 % 8.5 % 3.4 % 6.6 % 6.3 % 1.5 % 0.6 % Venezuela 32,011,082 58.5 % 28.3 % 5.3 % 1.8 % 3.5 % 1.7 % 0.7 % 0.2 % Vietnam 95,414,640 41.7 % 21.9 % 30.8 % 4.98 % 0.3 % 0.1 % 0.2 % 0.02 % Zimbabwe 16,642,880 63.3 % 18.5 % 14.6 % 0.99 % 1.7 % 0.5 % 0.4 % 0.01 % World 6,635,281,257 38.67 % 27.42 % 22.02 % 5.88 % 2.55 % 1.99 % 1.11 % 0.36 %
+  Fact 0.0: The table gives ABO and Rh blood type distribution by country as population averages.
+  Fact 0.1: Each row lists a country, its population, and the percentages of O+, A+, B+, AB+, O−, A−, B−, and AB− blood types.
+  Fact 0.2: Argentina has a population of 44,270,440, with blood type percentages O+ 45.4, A+ 34.26, B+ 8.59, AB+ 2.64, O− 8.4, A− 0.44, B− 0.21, AB− 0.06.
+  Fact 0.3: Armenia has a population of 2,931,568, with blood type percentages O+ 29.0, A+ 46.3, B+ 12.0, AB+ 5.6, O− 2.0, A− 3.7, B− 1.0, AB− 0.4.
+  Fact 0.4: Australia has a population of 24,642,693, with blood type percentages O+ 40.0, A+ 31.0, B+ 8.0, AB+ 2.0, O− 9.0, A− 7.0, B− 2.0, AB− 1.0.
+  Fact 0.5: Austria has a population of 8,592,470, with blood type percentages O+ 30.0, A+ 33.0, B+ 12.0, AB+ 6.0, O− 7.0, A− 8.0, B− 3.0, AB− 1.0.
+  Fact 0.6: Bahrain has a population of 1,418,695, with blood type percentages O+ 48.48, A+ 19.35, B+ 22.61, AB+ 3.67, O− 3.27, A− 1.33, B− 1.04, AB− 0.25.
+  Fact 0.7: Bangladesh has a population of 164,833,667, with blood type percentages O+ 31.18, A+ 21.44, B+ 34.58, AB+ 8.85, O− 1.39, A− 0.96, B− 0.96, AB− 0.64.
+  Fact 0.8: Belgium has a population of 11,444,053, with blood type percentages O+ 38.0, A+ 34.0, B+ 8.6, AB+ 4.1, O− 7.0, A− 6.0, B− 1.5, AB− 0.8.
+  Fact 0.9: Bolivia has a population of 11,053,376, with blood type percentages O+ 51.53, A+ 29.45, B+ 10.11, AB+ 1.15, O− 4.39, A− 2.73, B− 0.54, AB− 0.1.
+  Fact 0.10: Bosnia and Herzegovina has a population of 3,792,730, with blood type percentages O+ 31.0, A+ 36.0, B+ 12.0, AB+ 6.0, O− 5.0, A− 7.0, B− 2.0, AB− 1.0.
+  Fact 0.11: Brazil has a population of 211,248,418, with blood type percentages O+ 36.0, A+ 34.0, B+ 8.0, AB+ 2.5, O− 9.0, A− 8.0, B− 2.0, AB− 0.5.
+  Fact 0.12: Bulgaria has a population of 7,045,097, with blood type percentages O+ 28.0, A+ 37.0, B+ 13.0, AB+ 7.0, O− 5.0, A− 7.0, B− 2.0, AB− 1.0.
+  Fact 0.13: Cambodia has a population of 16,077,172, with blood type percentages O+ 46.7, A+ 27.2, B+ 18.5, AB+ 4.9, O− 1.3, A− 0.8, B− 0.5, AB− 0.1.
+  Fact 0.14: Cameroon has a population of 24,515,533, with blood type percentages O+ 42.8, A+ 38.8, B+ 12.0, AB+ 3.3, O− 1.4, A− 1.2, B− 0.4, AB− 0.1.
+  Fact 0.15: Canada has a population of 36,627,140, with blood type percentages O+ 39.0, A+ 36.0, B+ 7.6, AB+ 2.5, O− 7.0, A− 6.0, B− 1.4, AB− 0.5.
+  Fact 0.16: Chile has a population of 18,314,060, with blood type percentages O+ 85.5, A+ 8.7, B+ 3.35, AB+ 1.0, O− 1.2, A− 0.1, B− 0.05, AB− 0.1.
+  Fact 0.17: China has a population of 1,388,251,023, with blood type percentages O+ 47.7, A+ 27.8, B+ 18.9, AB+ 5.0, O− 0.28, A− 0.19, B− 0.1, AB− 0.03.
+  Fact 0.18: Colombia has a population of 49,069,267, with blood type percentages O+ 61.3, A+ 26.11, B+ 2.28, AB+ 1.47, O− 5.13, A− 2.7, B− 0.7, AB− 0.31.
+  Fact 0.19: Côte d'Ivoire has a population of 23,869,656, with blood type percentages O+ 46.5, A+ 22.5, B+ 22.5, AB+ 4.3, O− 2.0, A− 1.0, B− 1.0, AB− 0.2.
+  Fact 0.20: Croatia has a population of 4,207,355, with blood type percentages O+ 29.0, A+ 36.0, B+ 15.0, AB+ 5.0, O− 5.0, A− 6.0, B− 3.0, AB− 1.0.
+  Fact 0.21: Cuba has a population of 11,486,750, with blood type percentages O+ 45.8, A+ 33.5, B+ 10.2, AB+ 2.9, O− 3.6, A− 2.8, B− 1.0, AB− 0.2.
+  Fact 0.22: Cyprus has a population of 1,189,395, with blood type percentages O+ 35.22, A+ 40.35, B+ 11.11, AB+ 4.72, O− 3.85, A− 3.48, B− 0.87, AB− 0.40.
+  Fact 0.23: Czech Republic has a population of 10,555,152, with blood type percentages O+ 27.0, A+ 36.0, B+ 15.0, AB+ 7.0, O− 5.0, A− 6.0, B− 3.0, AB− 1.0.
+  Fact 0.24: Denmark has a population of 5,711,902, with blood type percentages O+ 35.0, A+ 37.0, B+ 8.0, AB+ 4.0, O− 6.0, A− 7.0, B− 2.0, AB− 1.0.
+  Fact 0.25: Dominican Republic has a population of 10,766,932, with blood type percentages O+ 46.2, A+ 26.4, B+ 16.9, AB+ 3.1, O− 3.7, A− 2.1, B− 1.4, AB− 0.2.
+  Fact 0.26: Ecuador has a population of 16,665,756, with blood type percentages O+ 75.0, A+ 14.0, B+ 7.1, AB+ 0.5, O− 2.38, A− 0.7, B− 0.3, AB− 0.02.
+  Fact 0.27: Egypt has a population of 95,220,838, with blood type percentages O+ 52.0, A+ 24.0, B+ 12.4, AB+ 3.8, O− 5.0, A− 2.0, B− 0.6, AB− 0.2.
+  Fact 0.28: El Salvador has a population of 6,171,483, with blood type percentages O+ 62.0, A+ 23.0, B+ 11.0, AB+ 1.0, O− 1.0, A− 1.0, B− 0.7, AB− 0.3.
+  Fact 0.29: Estonia has a population of 1,305,745, with blood type percentages O+ 29.5, A+ 30.8, B+ 20.7, AB+ 6.3, O− 4.3, A− 4.5, B− 3.0, AB− 0.9.
+  Fact 0.30: Ethiopia has a population of 104,352,727, with blood type percentages O+ 39.0, A+ 28.0, B+ 21.0, AB+ 5.0, O− 3.0, A− 2.0, B− 1.0, AB− 1.0.
+  Fact 0.31: Finland has a population of 5,541,328, with blood type percentages O+ 27.0, A+ 38.0, B+ 15.0, AB+ 7.0, O− 4.0, A− 6.0, B− 2.0, AB− 1.0.
+  Fact 0.32: France has a population of 64,939,560, with blood type percentages O+ 36.0, A+ 37.0, B+ 9.0, AB+ 3.0, O− 6.0, A− 7.0, B− 1.0, AB− 1.0.
+  Fact 0.33: Germany has a population of 80,635,980, with blood type percentages O+ 35.0, A+ 37.0, B+ 9.0, AB+ 4.0, O− 6.0, A− 6.0, B− 2.0, AB− 1.0.
+  Fact 0.34: Greece has a population of 10,892,849, with blood type percentages O+ 37.4, A+ 32.9, B+ 11.0, AB+ 3.7, O− 7.0, A− 5.0, B− 2.0, AB− 1.0.
+  Fact 0.35: Guinea has a population of 13,291,741, with blood type percentages O+ 46.88, A+ 21.64, B+ 22.86, AB+ 4.52, O− 2.0, A− 0.9, B− 1.0, AB− 0.2.
+  Fact 0.36: Honduras has a population of 9,348,898, with blood type percentages O+ 57.5, A+ 27.0, B+ 7.8, AB+ 2.5, O− 2.7, A− 1.7, B− 0.6, AB− 0.2.
+  Fact 0.37: Hong Kong has a population of 7,402,115, with blood type percentages O+ 41.5, A+ 26.13, B+ 25.34, AB+ 6.35, O− 0.32, A− 0.17, B− 0.14, AB− 0.05.
+  Fact 0.38: Hungary has a population of 9,787,801, with blood type percentages O+ 27.0, A+ 33.0, B+ 16.0, AB+ 8.0, O− 5.0, A− 7.0, B− 3.0, AB− 1.0.
+  Fact 0.39: Iceland has a population of 334,311, with blood type percentages O+ 47.6, A+ 26.4, B+ 9.3, AB+ 1.6, O− 8.4, A− 4.6, B− 1.7, AB− 0.4.
+  Fact 0.40: India has a population of 1,342,561,902, with blood type percentages O+ 27.85, A+ 20.8, B+ 38.14, AB+ 8.93, O− 1.43, A− 0.57, B− 1.79, AB− 0.49.
+  Fact 0.41: Indonesia has a population of 263,519,317, with blood type percentages O+ 36.82, A+ 25.87, B+ 28.85, AB+ 7.96, O− 0.18, A− 0.13, B− 0.15, AB− 0.04.
+  Fact 0.42: Iran has a population of 80,982,137, with blood type percentages O+ 33.5, A+ 27.0, B+ 22.2, AB+ 7.0, O− 4.0, A− 3.0, B− 2.5, AB− 0.8.
+  Fact 0.43: Iraq has a population of 38,657,787, with blood type percentages O+ 32.1, A+ 25.0, B+ 25.6, AB+ 7.4, O− 3.6, A− 2.7, B− 2.7, AB− 0.9.
+  Fact 0.44: Ireland has a population of 4,749,263, with blood type percentages O+ 47.0, A+ 26.0, B+ 9.0, AB+ 2.0, O− 8.0, A− 5.0, B− 2.0, AB− 1.0.
+  Fact 0.45: Israel has a population of 8,323,659, with blood type percentages O+ 32.0, A+ 34.0, B+ 17.0, AB+ 7.0, O− 3.0, A− 4.0, B− 2.0, AB− 1.0.
+  Fact 0.46: Italy has a population of 59,797,969, with blood type percentages O+ 39.0, A+ 36.0, B+ 7.5, AB+ 2.5, O− 7.0, A− 6.0, B− 1.5, AB− 0.5.
+  Fact 0.47: Jamaica has a population of 2,813,316, with blood type percentages O+ 47.0, A+ 23.0, B+ 20.0, AB+ 3.0, O− 3.5, A− 2.0, B− 1.0, AB− 0.5.
+  Fact 0.48: Japan has a population of 126,044,340, with blood type percentages O+ 29.9, A+ 39.8, B+ 19.9, AB+ 9.9, O− 0.15, A− 0.2, B− 0.1, AB− 0.05.
+  Fact 0.49: Kenya has a population of 48,470,780, with blood type percentages O+ 45.6, A+ 25.2, B+ 21.28, AB+ 4.2, O− 1.8, A− 1.0, B− 0.9, AB− 0.02.
+  Fact 0.50: Latvia has a population of 1,944,122, with blood type percentages O+ 30.6, A+ 31.0, B+ 17.0, AB+ 6.0, O− 5.4, A− 6.0, B− 3.0, AB− 1.0.
+  Fact 0.51: Lebanon has a population of 6,039,438, with blood type percentages O+ 38.4, A+ 32.3, B+ 9.5, AB+ 3.2, O− 7.7, A− 6.5, B− 1.7, AB− 0.7.
+  Fact 0.52: Libya has a population of 6,408,990, with blood type percentages O+ 42.64, A+ 28.86, B+ 11.19, AB+ 4.5, O− 6.26, A− 4.24, B− 1.64, AB− 0.67.
+  Fact 0.53: Lithuania has a population of 2,827,573, with blood type percentages O+ 36.0, A+ 33.0, B+ 11.0, AB+ 4.0, O− 7.0, A− 6.0, B− 2.0, AB− 1.0.
+  Fact 0.54: Luxemburg has a population of 587,297, with blood type percentages O+ 35.0, A+ 37.0, B+ 9.0, AB+ 4.0, O− 6.0, A− 6.0, B− 2.0, AB− 1.0.
+  Fact 0.55: Macao has a population of 606,413, with blood type percentages O+ 41.5, A+ 26.1, B+ 25.4, AB+ 6.3, O− 0.33, A− 0.17, B− 0.15, AB− 0.05.
+  Fact 0.56: Macedonia has a population of 2,083,690, with blood type percentages O+ 30.0, A+ 34.0, B+ 15.0, AB+ 6.0, O− 5.0, A− 6.0, B− 3.0, AB− 1.0.
+  Fact 0.57: Malaysia has a population of 31,165,480, with blood type percentages O+ 34.32, A+ 30.35, B+ 27.37, AB+ 7.46, O− 0.17, A− 0.15, B− 0.14, AB− 0.04.
+  Fact 0.58: Mauritania has a population of 4,266,765, with blood type percentages O+ 46.3, A+ 26.68, B+ 17.47, AB+ 3.85, O− 2.8, A− 1.6, B− 1.1, AB− 0.2.
+  Fact 0.59: Mauritius has a population of 1,267,303, with blood type percentages O+ 38.3, A+ 26.0, B+ 25.0, AB+ 6.7, O− 1.7, A− 1.0, B− 1.0, AB− 0.3.
+  Fact 0.60: Mexico has a population of 130,227,836, with blood type percentages O+ 55.79, A+ 29.9, B+ 8.0, AB+ 1.63, O− 2.7, A− 1.5, B− 0.4, AB− 0.08.
+  Fact 0.61: Mongolia has a population of 3,052,044, with blood type percentages O+ 55.4, A+ 27.7, B+ 10.9, AB+ 4.96, O− 0.6, A− 0.3, B− 0.1, AB− 0.04.
+  Fact 0.62: Myanmar has a population of 53,507,932, with blood type percentages O+ 35.7, A+ 23.8, B+ 32.7, AB+ 6.95, O− 0.3, A− 0.2, B− 0.3, AB− 0.05.
+  Fact 0.63: Nepal has a population of 29,188,100, with blood type percentages O+ 35.2, A+ 28.3, B+ 27.1, AB+ 8.6, O− 0.3, A− 0.2, B− 0.2, AB− 0.1.
+  Fact 0.64: Netherlands has a population of 17,033,012, with blood type percentages O+ 39.5, A+ 35.0, B+ 6.7, AB+ 2.5, O− 7.5, A− 7.0, B− 1.3, AB− 0.5.
+  Fact 0.65: New Zealand has a population of 4,604,996, with blood type percentages O+ 38.0, A+ 32.0, B+ 9.0, AB+ 3.0, O− 9.0, A− 6.0, B− 2.0, AB− 1.0.
+  Fact 0.66: Nigeria has a population of 191,851,411, with blood type percentages O+ 51.3, A+ 22.4, B+ 20.7, AB+ 2.6, O− 1.6, A− 0.7, B− 0.6, AB− 0.1.
+  Fact 0.67: Norway has a population of 5,330,986, with blood type percentages O+ 33.0, A+ 41.5, B+ 6.8, AB+ 3.4, O− 6.0, A− 7.5, B− 1.2, AB− 0.6.
+  Fact 0.68: North Korea has a population of 25,432,033, with blood type percentages O+ 27.15, A+ 31.08, B+ 30.15, AB+ 11.32, O− 0.08, A− 0.1, B− 0.1, AB− 0.03.
+  Fact 0.69: Pakistan has a population of 180,440,005, with blood type percentages O+ 24.63, A+ 20.6, B+ 34.40, AB+ 9.52, O− 4.17, A− 2.66, B− 3.57, AB− 0.45.
+  Fact 0.70: Papua New Guinea has a population of 7,952,511, with blood type percentages O+ 48.0, A+ 37.2, B+ 9.6, AB+ 2.8, O− 1.0, A− 0.8, B− 0.4, AB− 0.2.
+  Fact 0.71: Peru has a population of 32,167,717, with blood type percentages O+ 70.0, A+ 18.4, B+ 7.8, AB+ 1.6, O− 1.4, A− 0.5, B− 0.28, AB− 0.02.
+  Fact 0.72: Philippines has a population of 103,801,747, with blood type percentages O+ 36.9, A+ 28.9, B+ 26.9, AB+ 6.97, O− 0.1, A− 0.1, B− 0.1, AB− 0.03.
+  Fact 0.73: Poland has a population of 38,563,480, with blood type percentages O+ 31.0, A+ 32.0, B+ 15.0, AB+ 7.0, O− 6.0, A− 6.0, B− 2.0, AB− 1.0.
+  Fact 0.74: Portugal has a population of 10,264,672, with blood type percentages O+ 36.3, A+ 40.0, B+ 6.6, AB+ 2.9, O− 6.0, A− 6.6, B− 1.1, AB− 0.5.
+  Fact 0.75: Republic of Moldova has a population of 4,043,722, with blood type percentages O+ 28.5, A+ 31.8, B+ 17.6, AB+ 7.0, O− 5.0, A− 6.0, B− 3.0, AB− 1.1.
+  Fact 0.76: Romania has a population of 19,237,087, with blood type percentages O+ 28.0, A+ 37.0, B+ 14.0, AB+ 7.0, O− 5.0, A− 6.0, B− 2.0, AB− 1.0.
+  Fact 0.77: Russia has a population of 143,374,801, with blood type percentages O+ 28.0, A+ 30.0, B+ 20.0, AB+ 7.0, O− 4.9, A− 5.8, B− 3.2, AB− 1.1.
+  Fact 0.78: Saudi Arabia has a population of 32,744,532, with blood type percentages O+ 47.8, A+ 23.9, B+ 17.0, AB+ 4.0, O− 4.0, A− 2.0, B− 1.0, AB− 0.3.
+  Fact 0.79: Serbia has a population of 8,776,827, with blood type percentages O+ 31.92, A+ 35.28, B+ 12.6, AB+ 4.2, O− 6.08, A− 6.72, B− 2.4, AB− 0.8.
+  Fact 0.80: Singapore has a population of 5,784,819, with blood type percentages O+ 43.6, A+ 23.9, B+ 24.4, AB+ 6.0, O− 0.9, A− 0.7, B− 0.4, AB− 0.1.
+  Fact 0.81: Slovakia has a population of 5,432,265, with blood type percentages O+ 27.2, A+ 35.7, B+ 15.3, AB+ 6.8, O− 4.8, A− 6.3, B− 2.7, AB− 1.2.
+  Fact 0.82: Slovenia has a population of 2,071,258, with blood type percentages O+ 31.0, A+ 33.0, B+ 12.0, AB+ 6.0, O− 7.0, A− 7.0, B− 3.0, AB− 1.0.
+  Fact 0.83: South Africa has a population of 55,437,815, with blood type percentages O+ 39.0, A+ 32.0, B+ 12.0, AB+ 3.0, O− 6.0, A− 5.0, B− 2.0, AB− 1.0.
+  Fact 0.84: South Korea has a population of 50,748,307, with blood type percentages O+ 27.9, A+ 33.87, B+ 26.92, AB+ 10.98, O− 0.1, A− 0.13, B− 0.08, AB− 0.02.
+  Fact 0.85: Spain has a population of 46,070,163, with blood type percentages O+ 36.0, A+ 34.0, B+ 8.0, AB+ 2.5, O− 9.0, A− 8.0, B− 2.0, AB− 0.5.
+  Fact 0.86: Sudan has a population of 40,827,975, with blood type percentages O+ 48.0, A+ 27.7, B+ 15.2, AB+ 2.8, O− 3.5, A− 1.8, B− 0.8, AB− 0.2.
+  Fact 0.87: Sweden has a population of 9,920,843, with blood type percentages O+ 32.0, A+ 37.0, B+ 10.0, AB+ 5.0, O− 6.0, A− 7.0, B− 2.0, AB− 1.0.
+  Fact 0.88: Switzerland has a population of 8,454,321, with blood type percentages O+ 35.0, A+ 40.0, B+ 7.0, AB+ 3.0, O− 6.0, A− 7.0, B− 1.0, AB− 1.0.
+  Fact 0.89: Syria has a population of 18,920,698, with blood type percentages O+ 43.0, A+ 30.0, B+ 14.0, AB+ 3.7, O− 5.0, A− 3.0, B− 1.0, AB− 0.3.
+  Fact 0.90: Taiwan has a population of 23,234,936, with blood type percentages O+ 43.9, A+ 25.9, B+ 23.9, AB+ 6.0, O− 0.17, A− 0.1, B− 0.01, AB− 0.02.
+  Fact 0.91: Thailand has a population of 68,298,027, with blood type percentages O+ 40.8, A+ 16.9, B+ 36.8, AB+ 4.97, O− 0.2, A− 0.1, B− 0.2, AB− 0.03.
+  Fact 0.92: Turkey has a population of 80,420,065, with blood type percentages O+ 29.8, A+ 37.8, B+ 14.2, AB+ 7.2, O− 3.9, A− 4.7, B− 1.6, AB− 0.8.
+  Fact 0.93: Uganda has a population of 43,276,492, with blood type percentages O+ 43.7, A+ 39.0, B+ 10.7, AB+ 3.9, O− 1.3, A− 1.0, B− 0.3, AB− 0.1.
+  Fact 0.94: Ukraine has a population of 44,404,078, with blood type percentages O+ 32.0, A+ 34.0, B+ 15.0, AB+ 5.0, O− 5.0, A− 6.0, B− 2.0, AB− 1.0.
+  Fact 0.95: United Arab Emirates has a population of 3,398,017, with blood type percentages O+ 44.1, A+ 21.9, B+ 20.9, AB+ 4.3, O− 4.3, A− 2.1, B− 2.0, AB− 0.4.
+  Fact 0.96: United Kingdom has a population of 65,512,375, with blood type percentages O+ 37.0, A+ 35.0, B+ 8.0, AB+ 3.0, O− 7.0, A− 7.0, B− 2.0, AB− 1.0.
+  Fact 0.97: United States has a population of 326,481,533, with blood type percentages O+ 37.4, A+ 35.7, B+ 8.5, AB+ 3.4, O− 6.6, A− 6.3, B− 1.5, AB− 0.6.
+  Fact 0.98: Venezuela has a population of 32,011,082, with blood type percentages O+ 58.5, A+ 28.3, B+ 5.3, AB+ 1.8, O− 3.5, A− 1.7, B− 0.7, AB− 0.2.
+  Fact 0.99: Vietnam has a population of 95,414,640, with blood type percentages O+ 41.7, A+ 21.9, B+ 30.8, AB+ 4.98, O− 0.3, A− 0.1, B− 0.2, AB− 0.02.
+  Fact 0.100: Zimbabwe has a population of 16,642,880, with blood type percentages O+ 63.3, A+ 18.5, B+ 14.6, AB+ 0.99, O− 1.7, A− 0.5, B− 0.4, AB− 0.01.
+  Fact 0.101: The World row has a population of 6,635,281,257, with blood type percentages O+ 38.67, A+ 27.42, B+ 22.02, AB+ 5.88, O− 2.55, A− 1.99, B− 1.11, AB− 0.36.
+
+Retrieved items:
+<item 1>
+Blood type distribution by country
+975 48.0 % 27.7 % 15.2 % 2.8 % 3.5 % 1.8 % 0.8 % 0.2 % Sweden 9,920,843 32.0 % 37.0 % 10.0 % 5.0 % 6.0 % 7.0 % 2.0 % 1.0 % Switzerland 8,454,321 35.0 % 40.0 %
+7.0 % 3.0 % 6.0 % 7.0 % 1.0 % 1.0 % Syria 18,920,698 43.0 % 30.0 % 14.0 % 3.7 % 5.0 % 3.0 % 1.0 % 0.3 % Taiwan 23,234,936 43.9 % 25.9 % 23.9 % 6.0 % 0.17 % 0.1
+% 0.01 % 0.02 % Thailand 68,298,027 40.8 % 16.9 % 36.
+</item 1>
+
+<item 2>
+Blood type distribution by country
+Retrieved 2017 - 11 - 23 . Jump up ^ `` Veregruppidest '' ( Blood groups ) . verekeskus.ee ( in Estonian ) . Retrieved 2017 - 11 - 23 . Jump up ^ ``
+Suomalaisten veriryhmäjakauma '' ( in Finnish ) . 2009 - 08 - 21 . Retrieved 2010 - 11 - 19 . Jump up ^ `` Les groupes sanguins ( système ABO ) '' . Centre
+Hospitalier Princesse GRACE - Monaco ( in French ) . C.H.P.G. MONACO. 2005 . Retrieved 2008 - 07 - 15 . Jump up ^ `` Blóðflokkar '' ( in Icelandic ) ...
+landspitali.is . Archived from the original on 2011 - 07 - 19 . Retrieved 2010 - 11 - 19 . Jump up ^ `` Blood Type Frequencies by Country including the Rh
+Factor '' .
+</item 2>
+
+<item 3>
+Blood type distribution by country
+40 11 Spanish 38 47 10 5 Sudanese 62 16 21 0 Swedish 38 47 10 5 Swiss 40 50 7 Tatars 28 30 29 13 Thais 37 22 33 8 Turks 43 34 18 6 Ukrainians 37 40 18 6 Black
+Americans 49 27 20 White Americans 45 40 11 Vietnamese 42 22 30 5 Mean 43.91 34.80 16.55 5.14 Standard deviation 16.87 13.80 9.97 3.41 Blood group B has its
+highest frequency in South Asia where it ranks first as the largest share of the earth 's population . In Southeast Asia the share of the population is high ,
+especially in Thailand and Indonesia , then in East Asia , Northern Asia and neighboring Central Asia , and its incidence diminishes both towards the east and
+the west , falling to single digit percentages in Netherlands , Norway , Portugal and Switzerland . It is believed to have been entirely absent from Native
+American and Australian Aboriginal populations prior to the arrival of Europeans in those areas .
+</item 3>
+
+<item 4>
+Blood type distribution by country
+7 % 15.3 % 6.8 % 4.8 % 6.3 % 2.7 % 1.2 % Slovenia 2,071,258 31.0 % 33.0 % 12.0 % 6.0 % 7.0 % 7.0 % 3.0 % 1.0 % South Africa 55,437,815 39.0 % 32.0 % 12.0 % 3.0
+% 6.0 % 5.0 % 2.0 % 1.0 % South Korea 50,748,307 27.9 % 33.87 % 26.92 % 10.98 % 0.1 % 0.13 % 0.08 % 0.02 % Spain 46,070,163 36.0 % 34.0 % 8.0 % 2.5 % 9.0 % 8.0
+% 2.0 % 0.5 % Sudan 40,827,975 48.0 % 27.7 % 15.2 % 2.
+</item 4>
+
+<item 5>
+Blood type distribution by country
+2 % El Salvador 6,171,483 62.0 % 23.0 % 11.0 % 1.0 % 1.0 % 1.0 % 0.7 % 0.3 % Estonia 1,305,745 29.5 % 30.8 % 20.7 % 6.3 % 4.3 % 4.5 % 3.0 % 0.9 % Ethiopia
+104,352,727 39.0 % 28.0 % 21.0 % 5.0 % 3.0 % 2.0 % 1.0 % 1.0 % Finland 5,541,328 27.0 % 38.0 % 15.0 % 7.0 % 4.0 % 6.0 % 2.0 % 1.0 % France 64,939,560 36.0 %
+37.0 % 9.0 % 3.0 % 6.0 % 7.0 % 1.0 % 1.0 % Germany 80,635,980 35.
+</item 5>
+
+<item 6>
+Blood type distribution by country
+Blood group A is associated with high frequencies in Europe , especially in Scandinavia and Central Europe , although its highest frequencies occur in some
+Australian Aboriginal populations and the Blackfoot Indians of Montana , the US . Maps of allele ABO among native populations ( edit ) Map of allele A among
+native populations Map of allele B among native populations Map of allele O among native populations References ( edit ) Jump up ^ CIA World Factbook Jump up ^
+`` Study of Blood Immunogenetical Markers in Armenian Population '' ( PDF ) . 1989 . Jump up ^ Blood Types - What Are They ? , Australian Red Cross Jump up ^ ``
+Austrian Red Cross - Blood Donor Information '' . Old.roteskreuz.at. 2006 - 03 - 21 . Retrieved 2010 - 11 - 19 . Jump up ^ `` Rode Kruis Wielsbeke - Blood Donor
+information material '' . Rodekruiswielsbeke.be . Archived from the original on 26 November 2010 . Retrieved 2010 - 11 - 19 .
+</item 6>
+
+<item 7>
+Blood type distribution by country
+0 % 5.0 % 6.0 % 2.0 % 1.0 % Russia 143,374,801 28.0 % 30.0 % 20.0 % 7.0 % 4.9 % 5.8 % 3.2 % 1.1 % Saudi Arabia 32,744,532 47.8 % 23.9 % 17.0 % 4.0 % 4.0 % 2.0 %
+1.0 % 0.3 % Serbia 8,776,827 31.92 % 35.28 % 12.6 % 4.2 % 6.08 % 6.72 % 2.4 % 0.8 % Singapore 5,784,819 43.6 % 23.9 % 24.4 % 6.0 % 0.9 % 0.7 % 0.4 % 0.1 %
+Slovakia 5,432,265 27.2 % 35.7 % 15.3 % 6.8 % 4.8 % 6.
+</item 7>
+
+<item 8>
+Blood type distribution by country
+Retrieved 2010 - 11 - 19 . Jump up ^ `` Federación Nacional de Donantes de Sangre / La sangre / Grupos '' . Donantesdesangre.net . Retrieved 2010 - 11 - 19 .
+Jump up ^ `` Frequency of major blood groups in the Swedish population '' . Geblod.nu. 2007 - 10 - 02 . Archived from the original on 24 November 2010 .
+Retrieved 2010 - 11 - 19 . Jump up ^ - BLUTSPENDE https://www.blutspende.ch/fr/don_de_sang/sanguin_groupe/groupe_sanguin - BLUTSPENDE Check url = value ( help )
+. Missing or empty title = ( help ) Jump up ^ `` Turkey Blood Group Site '' . Kangrubu.com . Archived from the original on 29 May 2010 . Retrieved 2010 - 11 -
+19 . Jump up ^ `` Blood Group Basics '' . Blood.co.uk . Retrieved 2017 - 07 - 30 .
+</item 8>
+
+<item 9>
+Blood type distribution by country
+Jump up ^ `` Portuguese Blood Institute '' ( in Portuguese ) . ( assuming Rh and AB antigens are independent ) Jump up ^ Sanguina Jump up ^ BASHAWRI , Layla A.
+; AL - MULHIMiz , Abdul Az ; AHMAD , Malik S. ( 2001 ) . `` Frequency of ABO blood groups in the eastern region of Saudi Arabia '' . Saudi Medical Journal . 22
+( 11 ) : 1008 -- 1101 . ISSN 0379 - 5284 . PMID 11744976 . Jump up ^ `` Najčastejšie otázky '' ( Frequently Asked Questions ) ( in Slovak ) . Národná transfúzna
+služba SR . Retrieved 2017 - 09 - 22 . Jump up ^ `` What 's Your Type ? '' . South African National Blood Service . Archived from the original on 2010 - 02 - 06
+. Retrieved 2010 - 11 - 19 .
+</item 9>
+
+<item 10>
+Blood type distribution by country
+In countries such as Austria , Denmark , Norway , and Switzerland , about 45 -- 50 % of the population have this blood type , whereas about 40 % of Poles and
+Ukrainians do so . The highest frequencies are found in small , unrelated populations . For example , about 80 % of the Blackfoot Indians of Montana have blood
+type A ... Jump up ^ Technical Monograph No. 2 : The ABO Blood Group System and ABO Subgroups ( PDF ) . Biotec . March 2005 . Archived from the original ( PDF )
+on 6 February 2007 ... The frequency of blood group A is quite high ( 25 -- 55 % ) in Europe , especially in Scandinavia and parts of central Europe . High
+group A frequency is also found in the Aboriginal people of South Australia ( up to 45 % ) and in certain American Indian tribes where the frequency reaches 35
+% ...
+</item 10>
+=== END ITEM id=48f0d803cae202b4 ===
+
+=== ITEM id=13910a99fa50f7a5 ===
+Gold sentences and facts:
+Sentence 0: The Homestead Acts were several United States federal laws that gave an applicant ownership of land , typically called a `` homestead , '' at no cost . In all , more than 270 million acres of public land , or nearly 10 % of the total area of the U.S. , was given away free to 1.6 million homesteaders ; most of the homesteads were west of the Mississippi River .
+  Fact 0.0: The Homestead Acts were several United States federal laws.
+  Fact 0.1: The Homestead Acts gave an applicant ownership of land.
+  Fact 0.2: The land given under the Homestead Acts is typically called a homestead.
+  Fact 0.3: The land was given at no cost.
+  Fact 0.4: More than 270 million acres of public land were given away free under the Homestead Acts.
+  Fact 0.5: The 270 million acres of public land were nearly 10% of the total area of the U.S.
+  Fact 0.6: The public land was given away free to 1.6 million homesteaders.
+  Fact 0.7: Most of the homesteads were west of the Mississippi River.
+Sentence 1: An extension of the Homestead Principle in law , the Homestead Acts were an expression of the `` Free Soil '' policy of Northerners who wanted individual farmers to own and operate their own farms , as opposed to Southern slave - owners who wanted to buy up large tracts of land and use slave labor , thereby shutting out free white men .
+  Fact 1.0: The Homestead Acts were an extension of the Homestead Principle in law.
+  Fact 1.1: The Homestead Acts were an expression of the 'Free Soil' policy of Northerners.
+  Fact 1.2: Northerners with the Free Soil policy wanted individual farmers to own and operate their own farms.
+  Fact 1.3: Southern slave-owners, as opposed to Northerners, wanted to buy up large tracts of land.
+  Fact 1.4: Southern slave-owners wanted to use slave labor on large tracts of land.
+  Fact 1.5: Southern slave-owners' land purchases would shut out free white men.
+
+Retrieved items:
+<item 1>
+U.S. Homestead Acts offered public land to encourage settlement and farming; similar proposals by Northern Republicans had been blocked before the Civil War by
+Southern Democrats. Settlers generally had to be household heads or at least 21, live on their land, build a home, improve and farm it for five years. Later
+measures included the 1916 act granting up to 640 acres for ranching and New Deal subsistence homesteads. Intensive, ecologically unsuitable cultivation
+contributed to severe
+</item 1>
+
+<item 2>
+Homestead Acts
+Some scholars believe the acreage limits were reasonable when the act was written , but reveal that no one understood the physical conditions of the plains .
+According to Hugh Nibley , much of the rain forest west of Portland , Oregon was acquired by the Oregon Lumber Company by illegal claims under the Act .
+Nonetheless , in 1995 , a random survey of 178 members of the Economic History Association found that 70 percent of economists and 84 percent of economic
+historians disagreed that `` Nineteenth - century U.S. land policy , which attempted to give away free land , probably represented a net drain on the productive
+capacity of the country . '' Related Acts in other countries ( edit ) Canada ( edit ) Similar laws were passed in Canada : The Legislative Assembly of Ontario
+passed The Free Grants and Homestead Act in 1868 , which introduced a conditional scheme to an existing free grant plan previously authorized by the Province of
+Canada in The Public Lands Act of 1860 .
+</item 2>
+
+<item 3>
+Homestead Acts
+The Free Soil Party of 1848 -- 52 , and the new Republican Party after 1854 , demanded that the new lands opening up in the west be made available to
+independent farmers , rather than wealthy planters who would develop it with the use of slaves forcing the yeomen farmers onto marginal lands . Southern
+Democrats had continually fought ( and defeated ) previous homestead law proposals , as they feared free land would attract European immigrants and poor
+Southern whites to the west . After the South seceded and their delegates left Congress in 1861 , the Republicans and other supporters from the upper South
+passed a homestead act . The intent of the first Homestead Act , passed in 1862 , was to liberalize the homesteading requirements of the Preemption Act of 1841
+. Its leading advocates were Andrew Johnson , George Henry Evans and Horace Greeley . The homestead was an area of public land in the West ( usually 160 acres
+or 65 ha ) granted to any US citizen willing to settle on and farm the land for at least five years .
+</item 3>
+
+<item 4>
+The Homestead Acts were U.S. federal laws granting public land—usually free—to applicants who settled and improved it. More than 1.6 million homesteaders
+received over 270 million acres, nearly 10% of U.S. territory, mostly west of the Mississippi. The laws advanced the Northern “Free Soil” ideal of independent
+farmers rather than large slave-worked estates. The 1862 act allowed adults who had not fought against the U.S. to apply. An earlier
+</item 4>
+
+<item 5>
+From 1830–1870, hundreds of thousands of migrants traveled overland westward, driven by religious persecution, economic opportunity, land, and the California
+Gold Rush. Major routes included the Oregon, California, and Mormon Trails from Missouri and Illinois, plus southern routes such as the Santa Fe and Old Spanish
+Trails. About 500,000 used the three principal emigrant trails by 1869; journeys were arduous and dangerous, with disease the leading killer. Railroads later
+reduced trail
+</item 5>
+
+<item 6>
+Homestead Acts
+The federal government charged royalties for extraction of these resources from public lands . On the other hand , homesteading schemes were generally pointless
+for land containing `` locatable minerals , '' such as gold and silver , which could be controlled through mining claims under the Mining Act of 1872 , for
+which the federal government did not charge royalties . The government developed no systematic method to evaluate claims under the homestead acts . Land offices
+relied on affidavits from witnesses that the claimant had lived on the land for the required period of time and made the required improvements . In practice ,
+some of these witnesses were bribed or otherwise colluded with the claimant . Although not necessarily fraud , it was common practice for the eligible children
+of a large family to claim nearby land as soon as possible . After a few generations , a family could build up a sizable estate . The homesteads were criticized
+as too small for the environmental conditions on the Great Plains ; a homesteader using 19th - century animal - powered tilling and harvesting could not have
+cultivated the 1500 acres later recommended for dry land farming .
+</item 6>
+
+<item 7>
+Some critics argue U.S. Homestead Act acreage limits reflected ignorance of Plains conditions; Hugh Nibley alleged the Oregon Lumber Company acquired much of
+the land west of Portland through illegal claims. Yet a 1995 survey found most economists and economic historians rejected the claim that free-land policy
+reduced national productive capacity. Canada adopted similar measures: Ontario’s conditional free-grant laws (1868) were extended, consolidated in 1913, and
+repealed by 1961; the Dominion Lands
+</item 7>
+
+<item 8>
+Westward Expansion Trails
+After the end of the Mexican -- American War in 1849 , vast new American conquests again enticed mass immigration . Legislation like the Donation Land Claim Act
+and significant events like the California Gold Rush further lured colonists to travel overland to the west . Two major wagon - based transportation networks ,
+one typically starting in Missouri and the other in the Mexican province of Santa Fe de Nuevo México , served the majority of migrants during the era of
+westward expansion . Three of the Missouri - based routes -- the Oregon , Mormon , and California Trails -- were collectively known as the Emigrant Trails .
+Historians have estimated at least 500,000 emigrants used these three trails between 1843 and 1869 , and despite growing competition from transcontinental
+railroads , some use even continued into the early 20th century . The major southern routes were the Santa Fe Trail , the Southern Emigrant Trail , and the Old
+Spanish Trail , as well as its wagon road successor the Mormon Road , a southern spur of the California Trail used in the winter that also made use of the
+western half of the Old Spanish Trail .
+</item 8>
+
+<item 9>
+Westward Expansion Trails
+Westward expansion trails - wikipedia Westward expansion trails Jump to : navigation , search This article needs additional citations for verification . Please
+help improve this article by adding citations to reliable sources . Unsourced material may be challenged and removed . ( March 2013 ) ( Learn how and when to
+remove this template message ) In the American Old West , overland trails were popular means of travel used by pioneers and immigrants throughout the 19th
+century and especially between 1830 and 1870 as an alternative to sea and railroad transport . These immigrants began to settle various regions of North America
+west of the Great Plains as part of the mass overland migrations of the mid-19th century . Settlers emigrating from the eastern United States were spurred by
+various motives , among them religious persecution , economic incentives , and the prospect of new wealth and new freedoms in what was then a largely unspoiled
+and unregulated country . By the 1840s , several popular and well - established routes had been blazed through the continental interior to destinations in the
+far west , including the Oregon Trail , California Trail , and Mormon Trail .
+</item 9>
+
+<item 10>
+Westward Expansion Trails
+During the twenty - five years 1841 -- 1866 , 250,000 to 650,000 people `` pulled up stakes , '' and headed west along these trails . About one - third
+immigrated to Oregon , one - third to California and one - third to Utah , Colorado , and Montana . Although it is often stated that the Northern trails began
+in certain cities on the Missouri River , emigrants following any of the three trails typically left from one of three `` jumping off '' points on the Missouri
+'s steamboat serviced river ports : Independence , Missouri or Saint Joseph , Missouri , or Council Bluffs , Iowa . ( Once known as Kanesville , Iowa until 1852
+; after river dredging in the early 1850s , the latter town at the Missouri - Platte confluence became the most common departure point since it was close in
+proximity to the River Platte -- along which the eastern trails ascend to South Pass above Fort Laramie. ) The trails from these cities ( and several others )
+converged in the mostly empty flatlands of central Nebraska near present - day Kearney , in the vicinity of Fort Kearney .
+</item 10>
+=== END ITEM id=13910a99fa50f7a5 ===
+
+=== ITEM id=5f8cc2cc4255e0a6 ===
+Gold sentences and facts:
+Sentence 0: A. planci has a very wide Indo - Pacific distribution . It is perhaps most common in Australia , but can occur at tropical and subtropical latitudes from the Red Sea and the east African coast across the Indian Ocean , and across the Pacific Ocean to the west coast of Central America . It occurs where coral reefs or hard coral communities occur in this region .
+  Fact 0.0: A. planci has a very wide Indo-Pacific distribution.
+  Fact 0.1: A. planci is perhaps most common in Australia.
+  Fact 0.2: A. planci can occur at tropical and subtropical latitudes from the Red Sea.
+  Fact 0.3: A. planci can occur at tropical and subtropical latitudes from the east African coast.
+  Fact 0.4: A. planci can occur across the Indian Ocean.
+  Fact 0.5: A. planci can occur across the Pacific Ocean to the west coast of Central America.
+  Fact 0.6: A. planci occurs where coral reefs or hard coral communities occur in this region.
+
+Retrieved items:
+<item 1>
+Crown-of-thorns starfish
+A. planci has a very wide Indo - Pacific distribution . It is perhaps most common in Australia , but can occur at tropical and subtropical latitudes from the
+Red Sea and the east African coast across the Indian Ocean , and across the Pacific Ocean to the west coast of Central America . It occurs where coral reefs or
+hard coral communities occur in this region .
+</item 1>
+
+<item 2>
+Crown-of-thorns starfish
+It occurs where coral reefs or hard coral communities occur in this region . Contents ( hide ) 1 Description 2 Taxonomy 2.1 Family 2.2 Genus and species 2.3
+Genetic studies 3 Biology 3.1 Toxins 3.2 Behaviour 3.3 Predators 4 Life - cycle 4.1 Gametes and embryos 4.2 Larval stages 4.3 Metamorphosis , development and
+growth 4.4 Field observations of life - cycle 5 Ecology 5.1 Ecological impact on reefs 5.2 Population outbreaks 5.3 Causes of population outbreaks 6 Population
+control 7 References 8 External links Description ( edit ) Unusual brightly coloured crown - of - thorns starfish , Thailand The body form of the crown - of -
+thorns starfish is fundamentally the same as that of a typical starfish , with a central disk and radiating arms . Its special traits , however , include being
+disc - shaped , multiple - armed , flexible , prehensile , and heavily spined , and having a large ratio of stomach surface to body mass .
+</item 2>
+
+<item 3>
+Crown-of-thorns starfish
+Crown - of - thorns starfish - wikipedia Crown - of - thorns starfish Jump to : navigation , search Crown - of - thorns starfish Scientific classification
+Kingdom : Animalia Phylum : Echinodermata Class : Asteroidea Order : Valvatida Family : Acanthasteridae Genus : Acanthaster Species : Acanthaster planci
+Binomial name Acanthaster planci ( Linnaeus , 1758 ) The crown - of - thorns starfish , Acanthaster planci , is a large , multiple - armed starfish that usually
+preys upon hard , or stony , coral polyps ( Scleractinia ) . The crown - of - thorns starfish receives its name from venomous thorn - like spines that cover its
+upper surface , resembling the biblical crown of thorns . It is one of the largest starfish in the world . A. planci has a very wide Indo - Pacific distribution
+.
+</item 3>
+
+<item 4>
+Crown-of-thorns starfish
+Its prehensile ability arises from the two rows of numerous tube feet that extend to the tip of each arm . In being multiple - armed , it has lost the five-fold
+symmetry ( pentamerism ) typical of starfish , although it begins its life cycle with this symmetry . Adult crown - of - thorns starfish normally range in size
+from 25 to 35 cm ( 9.8 to 13.8 in ) . They have up to 21 arms . Although the body of the crown of thorns has a stiff appearance , it is able to bend and twist
+to fit around the contours of the corals on which it feeds . The underside of each arm has a series of closely fitting plates which form a groove and extend in
+rows to the mouth . They are usually of subdued colours , pale brown to grey - green , but they may be garish with bright warning colours in some parts of their
+wide range . The long , sharp spines on the sides of the starfish 's arms and upper ( aboral ) surface resemble thorns and create a crown - like shape , giving
+the creature its name .
+</item 4>
+
+<item 5>
+Crown-of-thorns starfish have sharp aboral and blunt oral spines, but their body surface is soft and membranous. Out of water, it can rupture, leaking fluid and
+causing the body and spines to collapse; living starfish recover their shape when reimmersed. The family Acanthasteridae contains only one genus, and its
+taxonomic placement is debated. Based on morphological similarities to Oreasteridae, Blake moved it from Spinulosida to Val
+</item 5>
+
+<item 6>
+The crown-of-thorns starfish lives wherever coral reefs or hard-coral communities occur. Adults are typically 25–35 cm across and may have up to 21 flexible
+arms, losing the fivefold symmetry seen early in life. Rows of tube feet help them grip and bend around corals. Their long, sharp spines form a crown-like
+shape; coloration ranges from subdued browns and greys to bright warning colors.
+</item 6>
+
+<item 7>
+Crown-of-thorns starfish
+The spines , which are brittle , may also break off and become embedded in the tissue where they must be removed surgically . Saponins seem to occur throughout
+the lifecycle of the crown - of - thorns starfish . The saponins in the eggs are similar to those in the adult tissues , and presumably these carry over to the
+larvae . The mouthing behaviour of predators of juvenile starfish with rejection suggests the juveniles contain saponins . Behaviour ( edit ) Juveniles
+concealed under coral rubble Feeding scars of white coral skeleton Feeding on branching Acropora coral Starfish ' competing ' for remaining live coral The adult
+crown - of - thorns is a carnivorous predator that usually preys on reef coral polyps . It climbs onto a section of living coral colony using the large number
+of tube feet on its oral surface and flexible body . It fits closely to the surface of the coral , even the complex surfaces of branching corals . It then
+extrudes its stomach out through its mouth over the surface to virtually its own diameter . The stomach surface secretes digestive enzymes that allow the
+starfish to absorb nutrients from the liquefied coral tissue .
+</item 7>
+
+<item 8>
+Crown-of-thorns starfish
+The spines are stiff and very sharp , and readily pierce through soft surfaces . Despite the battery of sharp spines on the aboral surface and blunt spines on
+the oral surface , the crown - of - thorns starfish 's general body surface is membranous and soft . When the starfish is removed from the water , the body
+surface ruptures and the body fluid leaks out , so the body collapses and flattens . The spines bend over and flatten , as well . They recover their shape when
+reimmersed , if they are still alive . Taxonomy ( edit ) Family ( edit ) The family Acanthasteridae is monogeneric ; its position within the Asteroides is
+unsettled . It is generally recognised as a distinctly isolated taxon . Recently , Blake concluded from comparative morphology studies of Acanthaster planci
+that it has strong similarities with various members of the Oreasteridae . He transferred Acanthasteridae from the Spinulosida to the Valvatida and assigned it
+a position near to the Oreasteridae , from which it appears to be derived .
+</item 8>
+
+<item 9>
+The crown-of-thorns starfish (Acanthaster planci) is a large Indo-Pacific starfish that feeds mainly on hard-coral polyps. Its upper surface bears venomous,
+thorn-like spines. It inhabits coral reefs from the Red Sea and East Africa across the Indian and Pacific oceans, including Australia. Its taxonomy has a long,
+confusing history, with many former names. Eastern Pacific specimens have distinctive plump bodies and short, blunt spines. Genetic studies found
+</item 9>
+
+<item 10>
+Crown-of-thorns starfish
+This article 's use of external links may not follow Wikipedia 's policies or guidelines . Please improve this article by removing excessive or inappropriate
+external links , and converting useful links where appropriate into footnote references . ( March 2016 ) ( Learn how and when to remove this template message )
+An overview of the crown - of - thorns starfish as observed on the Great Barrier Reef Current status of crown - of - thorns starfish on Australia 's Great
+Barrier Reef History of outbreaks of crown - of - thorns starfish on Australia 's Great Barrier Reef since 1986 ( Animation ) Recent information on crown - of -
+thorns starfish on Australia 's Great Barrier Reef Controlling crown - of - thorns starfish Crown - of - thorn outbreak simulation Microdocs : Crown - of -
+thorns Acanthaster planci expedition 1969 to Eastern Caroline Islands An infographic relating to the crown - of - thorns starfish in the Great Barrier Reef
+Crown of Thorns starfish 1971 Fathom magazine ( Australia ) Taxon identifiers Wd : Q26634 ADW : Acanthaster_planci ARKive : acanthaster - planci BioLib :
+</item 10>
+=== END ITEM id=5f8cc2cc4255e0a6 ===
+
+=== ITEM id=164fc747f6f8f9a0 ===
+Gold sentences and facts:
+Sentence 0: Callability -- Some bonds give the issuer the right to repay the bond before the maturity date on the call dates ; see call option . These bonds are referred to as callable bonds . Most callable bonds allow the issuer to repay the bond at par . With some bonds , the issuer has to pay a premium , the so - called call premium . This is mainly the case for high - yield bonds . These have very strict covenants , restricting the issuer in its operations . To be free from these covenants , the issuer can repay the bonds early , but only at a high cost .
+  Fact 0.0: Some bonds give the issuer the right to repay the bond before the maturity date on the call dates.
+  Fact 0.1: Bonds that give the issuer this right are referred to as callable bonds.
+  Fact 0.2: Most callable bonds allow the issuer to repay the bond at par.
+  Fact 0.3: With some bonds, the issuer has to pay a premium, called the call premium.
+  Fact 0.4: Call premiums are mainly the case for high-yield bonds.
+  Fact 0.5: High-yield bonds have very strict covenants that restrict the issuer in its operations.
+  Fact 0.6: To be free from these covenants, the issuer can repay high-yield bonds early.
+  Fact 0.7: Repaying high-yield bonds early to be free from covenants is possible only at a high cost.
+
+Retrieved items:
+<item 1>
+Bond (finance)
+Bonds and stocks are both securities , but the major difference between the two is that ( capital ) stockholders have an equity stake in a company ( that is ,
+they are owners ) , whereas bondholders have a creditor stake in the company ( that is , they are lenders ) . Being a creditor , bondholders have priority over
+stockholders . This means they will be repaid in advance of stockholders , but will rank behind secured creditors , in the event of bankruptcy . Another
+difference is that bonds usually have a defined term , or maturity , after which the bond is redeemed , whereas stocks typically remain outstanding indefinitely
+. An exception is an irredeemable bond , such as a consol , which is a perpetuity , that is , a bond with no maturity .
+</item 1>
+
+<item 2>
+Bond (finance)
+situation Squeeze out Staggered board of directors Stock swap Super-majority amendment Tag - along right Takeover Reverse Tender offer Leverage Debt
+restructuring Debtor - in - possession financing Financial sponsor Leveraged buyout Leveraged recapitalization High - yield debt Private equity Project finance
+Valuation Accretion / dilution analysis Adjusted present value Associate company Business valuation Conglomerate discount Cost of capital Weighted average
+Discounted cash flow Economic Value Added Enterprise value Fairness opinion Financial modeling Free cash flow Free cash flow to equity Market value added
+Minority interest Modigliani -- Miller theorem Net present value Pure play Real options Residual income Stock valuation Sum - of - the - parts analysis Tax
+shield Terminal value Valuation using multiples List of investment banks Outline of finance Debt Instruments Bonds Corporate Debenture Government Municipal
+Loans Business loan Consumer lending Loan shark Payday loan Predatory lending Usury Management Bankruptcy Consolidation Management plan Relief Restructuring
+Debt - snowball method Debtor - in - possession ( DIP ) financing Loan guarantee Collection Evasion Bad debt Charge - off Collection agency Compliance Debt
+bondage Debtors ' prison Distraint Garnishment Phantom debt Strategic default Tax refund interception Markets Consumer Corporate Government Municipal Venture
+Buyer Deposit account Fixed income Money market Securitization
+</item 2>
+
+<item 3>
+Bond (finance)
+The net proceeds that the issuer receives are thus the issue price , less issuance fees . The market price of the bond will vary over its life : it may trade at
+a premium ( above par , usually because market interest rates have fallen since issue ) , or at a discount ( price below par , if market rates have risen or
+there is a high probability of default on the bond ) . Others ( edit ) Indentures and Covenants -- An indenture is a formal debt agreement that establishes the
+terms of a bond issue , while covenants are the clauses of such an agreement . Covenants specify the rights of bondholders and the duties of issuers , such as
+actions that the issuer is obligated to perform or is prohibited from performing . In the U.S. , federal and state securities and commercial laws apply to the
+enforcement of these agreements , which are construed by courts as contracts between issuers and bondholders . The terms may be changed only with great
+difficulty while the bonds are outstanding , with amendments to the governing document generally requiring approval by a majority ( or super-majority ) vote of
+the bondholders .
+</item 3>
+
+<item 4>
+Bond (finance)
+The name `` coupon '' arose because in the past , paper bond certificates were issued which had coupons attached to them , one for each interest payment . On
+the due dates the bondholder would hand in the coupon to a bank in exchange for the interest payment . Interest can be paid at different frequencies : generally
+semi-annual , i.e. every 6 months , or annual . Bond issued by the Dutch East India Company in 1623 Yield ( edit ) The yield is the rate of return received from
+investing in the bond . It usually refers either to The current yield , or running yield , which is simply the annual interest payment divided by the current
+market price of the bond ( often the clean price ) . The yield to maturity , or redemption yield , which is a more useful measure of the return of the bond .
+This takes into account the current market price , and the amount and timing of all remaining coupon payments and of the repayment due on maturity . It is
+equivalent to the internal rate of return of a bond . Credit quality ( edit ) The quality of the issue refers to the probability that the bondholders will
+receive the amounts promised at the due dates .
+</item 4>
+
+<item 5>
+Bond (finance)
+Optionality : Occasionally a bond may contain an embedded option ; that is , it grants option - like features to the holder or the issuer : Callability -- Some
+bonds give the issuer the right to repay the bond before the maturity date on the call dates ; see call option . These bonds are referred to as callable bonds .
+Most callable bonds allow the issuer to repay the bond at par . With some bonds , the issuer has to pay a premium , the so - called call premium . This is
+mainly the case for high - yield bonds . These have very strict covenants , restricting the issuer in its operations . To be free from these covenants , the
+issuer can repay the bonds early , but only at a high cost . Putability -- Some bonds give the holder the right to force the issuer to repay the bond before the
+maturity date on the put dates ; see put option . These are referred to as retractable or putable bonds . Call dates and put dates -- the dates on which
+callable and putable bonds can be redeemed early . There are four main categories : A Bermudan callable has several call dates , usually coinciding with coupon
+dates .
+</item 5>
+
+<item 6>
+Bond (finance)
+The most common types of bonds include municipal bonds and corporate bonds . The bond is a debt security , under which the issuer owes the holders a debt and (
+depending on the terms of the bond ) is obliged to pay them interest ( the coupon ) or to repay the principal at a later date , termed the maturity date .
+Interest is usually payable at fixed intervals ( semiannual , annual , sometimes monthly ) . Very often the bond is negotiable , that is , the ownership of the
+instrument can be transferred in the secondary market . This means that once the transfer agents at the bank medallion stamp the bond , it is highly liquid on
+the secondary market . Thus a bond is a form of loan or IOU : the holder of the bond is the lender ( creditor ) , the issuer of the bond is the borrower (
+debtor ) , and the coupon is the interest . Bonds provide the borrower with external funds to finance long - term investments , or , in the case of government
+bonds , to finance current expenditure . Certificates of deposit ( CDs ) or short - term commercial paper are considered to be money market instruments and not
+bonds : the main difference is the length of the term of the instrument .
+</item 6>
+
+<item 7>
+Bond (finance)
+See IO ( Interest Only ) and PO ( Principal Only ) . High - yield bonds ( junk bonds ) are bonds that are rated below investment grade by the credit rating
+agencies . As these bonds are riskier than investment grade bonds , investors expect to earn a higher yield . Convertible bonds let a bondholder exchange a bond
+to a number of shares of the issuer 's common stock . These are known as hybrid securities , because they combine equity and debt features . Exchangeable bonds
+allows for exchange to shares of a corporation other than the issuer . Inflation - indexed bonds ( linkers ) ( US ) or Index - linked bond ( UK ) , in which the
+principal amount and the interest payments are indexed to inflation . The interest rate is normally lower than for fixed rate bonds with a comparable maturity (
+this position briefly reversed itself for short - term UK bonds in December 2008 ) . However , as the principal amount grows , the payments increase with
+inflation . The United Kingdom was the first sovereign issuer to issue inflation linked gilts in the 1980s . Treasury Inflation - Protected Securities ( TIPS )
+and I - bonds are examples of inflation linked bonds issued by the U.S.
+</item 7>
+
+<item 8>
+Bond (finance)
+The latter are often issued in tranches . The senior tranches get paid back first , the subordinated tranches later . Covered bonds are backed by cash flows
+from mortgages or public sector assets . Contrary to asset - backed securities the assets for such bonds remain on the issuers balance sheet . Perpetual bonds
+are also often called perpetuities or ' Perps ' . They have no maturity date . The most famous of these are the UK Consols , which are also known as Treasury
+Annuities or Undated Treasuries . Some of these were issued back in 1888 and still trade today , although the amounts are now insignificant . Some ultra-long -
+term bonds ( sometimes a bond can last centuries : West Shore Railroad issued a bond which matures in 2361 ( i.e. 24th century ) are virtually perpetuities from
+a financial point of view , with the current value of principal near zero . Bearer bond is an official certificate issued without a named holder . In other
+words , the person who has the paper certificate can claim the value of the bond .
+</item 8>
+
+<item 9>
+Bond (finance)
+A European callable has only one call date . This is a special case of a Bermudan callable . An American callable can be called at any time until the maturity
+date . A death put is an optional redemption feature on a debt instrument allowing the beneficiary of the estate of a deceased bondholder to put ( sell ) the
+bond back to the issuer at face value in the event of the bondholder 's death or legal incapacitation . This is also known as a `` survivor 's option '' .
+Sinking fund provision of the corporate bond indenture requires a certain portion of the issue to be retired periodically . The entire bond issue can be
+liquidated by the maturity date ; if not , the remainder is called balloon maturity . Issuers may either pay to trustees , which in turn call randomly selected
+bonds in the issue , or , alternatively , purchase bonds in open market , then return them to trustees . Bonds are often identified by its international
+securities identification number , or ISIN , which is a 12 digit alphanumeric code that uniquely identifies debt securities .
+</item 9>
+
+<item 10>
+Bond (finance)
+The length of time until the maturity date is often referred to as the term or tenure or maturity of a bond . The maturity can be any length of time , although
+debt securities with a term of less than one year are generally designated money market instruments rather than bonds . Most bonds have a term of up to 30 years
+. Some bonds have been issued with terms of 50 years or more , and historically there have been some issues with no maturity date ( irredeemable ) . In the
+market for United States Treasury securities , there are three categories of bond maturities : short term ( bills ) : maturities between one and five years ;
+medium term ( notes ) : maturities between six and twelve years ; long term ( bonds ) : maturities longer than twelve years . Coupon ( edit ) The coupon is the
+interest rate that the issuer pays to the holder . Usually this rate is fixed throughout the life of the bond . It can also vary with a money market index ,
+such as LIBOR , or it can be even more exotic .
+</item 10>
+=== END ITEM id=164fc747f6f8f9a0 ===
+
+=== ITEM id=97a49bcdc3ebfdac ===
+Gold sentences and facts:
+Sentence 0: When leaving work in Idaho 's Snake River Valley , Billy Colman sees a pack of dogs attacking a stray coonhound . He takes the stray home to feed it . Once it has rested , Billy sets it free , knowing that it will return home .
+  Fact 0.0: Billy Colman leaves work in Idaho's Snake River Valley.
+  Fact 0.1: Billy Colman sees a pack of dogs attacking a stray coonhound.
+  Fact 0.2: Billy Colman takes the stray coonhound home to feed it.
+  Fact 0.3: After the coonhound has rested, Billy Colman sets it free.
+  Fact 0.4: Billy Colman knows that the coonhound will return home.
+
+Retrieved items:
+<item 1>
+Where the Red Fern Grows
+Background ( edit ) In a talk given to a group of schoolteachers , Wilson Rawls related how he wrote the first version of the novel ( along with five full
+novels , and hundreds of short stories and novelettes ) during the years that he worked on construction in Mexico and Idaho . He rolled the manuscripts up and
+saved them in a trunk at his parents ' home . When he met his fiancée , Sophie , he did not want her to know about his failed dreams of becoming a writer , so
+about a week before he got married he visited his parents and burned all his manuscripts . He then returned to Idaho and married Sophie . About three months
+later , he confessed to his wife that he had burned all his manuscripts and had always dreamed of being a writer . She encouraged him to rewrite one of his
+stories . He quit his job and wrote the novel in just three weeks . He said , `` I had it memorized . '' He would not let her read it until it was finished . He
+said , `` I finished it on a Friday . I gave it to her Saturday morning and I went to town . I stayed in town all day .
+</item 1>
+
+<item 2>
+Where the Red Fern Grows
+Every year in Tahlequah Oklahoma there is a Red Fern festival . It is listed below in the links . See also ( edit ) List of Where the Red Fern Grows Characters
+Footnotes ( edit ) Jump up ^ Where the Red Fern Grows Discussion Guide Scholastic.com ^ Jump up to : Where the Red Fern Grows ( 1974 ) on IMDb Jump up ^ IMDb :
+Where the Red Fern Grows : Part Two ^ Jump up to : Wilson Rawls , Dreams Can Come True , audio recording with commentary by Jim Trelease ^ Jump up to :
+http://www.trelease-on-reading.com/rawls.html Jump up ^
+https://news.google.com/newspapers?nid=336&dat=19740216&id=bMdSAAAAIBAJ&sjid=AH4DAAAAIBAJ&pg=5192,3528282&hl=en Jump up ^ `` All - Time Bestselling Children 's
+Books '' . PublishersWeekly.com . Retrieved 2017 - 01 - 29 .
+</item 2>
+
+<item 3>
+Where the Red Fern Grows
+Upon the second submission to the Saturday Evening Post , it was accepted . It was first published in serialization in the Saturday Evening Post in 1961 under
+the title The Hounds of Youth . Doubleday then accepted the book for publication . Rawls said Doubleday then `` broke my heart . '' They changed the title to
+Where the Red Fern Grows , and attempted to market it to adult readers . For about six years , it languished on shelves and failed to sell . Doubleday was going
+to put it out of print , but one agent named Mr. Breinholt from Salt Lake City fought for it and asked for just a few more months to market it . He got Rawls a
+speaking engagement at the University of Utah to a conference of over 5,000 reading teachers and librarians . Copies of it were made available to them . When
+they took it back to their schools , the children loved it , and orders began pouring in . Jim Trelease states , `` Each year since then , it has sold more
+copies than the previous year . ''
+</item 3>
+
+<item 4>
+Where the Red Fern Grows
+As he tries to call them off , they look at him sadly and he cuts the tree down , which takes him two days and costs him blistered hands . In the end , when he
+'s about to give up his effort , Billy offers a short prayer for strength to continue . A strong wind starts to blow and the tree falls . Old Dan and Little Ann
+take the raccoon down . Billy , Old Dan , and Little Ann go hunting almost every night and become well - known in the Ozarks . Billy and his grandfather make a
+bet with Rubin and Rainie Pritchard that Old Dan and Little Ann can tree the `` ghost coon '' . It leads them on a long , complicated hunt , and Rubin and
+Rainie want to give up . When they finally have it treed , Billy refuses to kill it . Rubin then orders his dog , Old Blue , to attack Old Dan , who is smaller
+; and Rubin starts to beat Billy . Little Ann helps Old Dan , and together they injure Old Blue ; Rubin runs to attack them with an axe , but he trips , falls
+on it and kills himself .
+</item 4>
+
+<item 5>
+Where the Red Fern Grows
+Where the Red Fern Grows - wikipedia Where the Red Fern Grows Jump to : navigation , search For the film adaptations , see Where the Red Fern Grows ( 1974 film
+) and Where the Red Fern Grows ( 2003 film ) . Where the Red Fern Grows First edition hardback cover Author Wilson Rawls Country United States Language English
+Genre Children 's novel Publisher Doubleday Publication date 1961 Media type Print ( Hardcover ) Pages 245 pp ISBN 0 - 440 - 22814 - X OCLC 39850615 Where the
+Red Fern Grows is a 1961 children 's novel by Wilson Rawls about a boy who buys and trains two Redbone Coonhound hunting dogs . Contents ( hide ) 1 Plot summary
+2 Films 3 Background 4 Reception 5 See also 6 Footnotes 7 External links Plot summary ( edit ) When leaving work in Idaho 's Snake River Valley , Billy Colman
+sees a pack of dogs attacking a stray coonhound . He takes the stray home to feed it . Once it has rested , Billy sets it free , knowing that it will return
+home .
+</item 5>
+
+<item 6>
+Where the Red Fern Grows
+Billy 's grandfather enters him into a championship coon hunt , putting him against experienced hunters and the finest dogs in the country . Before it starts ,
+he enters Little Ann into a conformation contest , where she wins the silver cup . On the fourth night of the hunt , Old Dan and Little Ann tree three raccoons
+, making it to the final round . The sixth night , they tree one before a blizzard hits . Billy , his father , grandfather , and the judge lose sight of the
+dogs . When they finally find them , Billy 's grandfather sprains his ankle . They build a fire , and when Billy 's father chops down a tree , three raccoons
+jump out . Old Dan and Little Ann take two of them down , and chase the third to another tree . In the morning , the hunters find them covered with ice circling
+the tree . That raccoon wins them the championship , gold cup , and $300 of jackpot money . One night Old Dan and Little Ann tree a mountain lion , and it
+attacks . Billy enters the fight with his axe , hoping to save his dogs , but they end up having to save him .
+</item 6>
+
+<item 7>
+Where the Red Fern Grows
+Eventually , they kill the mountain lion , but Old Dan is badly wounded , and Billy finds his intestines in a bush . He dies late that night . Billy is
+heartbroken , and Little Ann loses the will to live , stops eating , and dies of grief a few days later on Old Dan 's grave . Billy 's father tries to tell him
+that it is all for the best , because with the money they received from winning the championship hunt , they can move to town . He goes to visit Old Dan and
+Little Ann 's graves and finds a giant red fern between them . According to Native American legend , only an angel can plant one . He feels ready to move on
+knowing that his dogs are always going to be remembered . Films ( edit ) The novel was made into a 1974 film starring Stewart Petersen , James Whitmore ,
+Beverly Garland , and Jack Ging . It was followed by a sequel in 1992 , which starred Wilford Brimley , Chad McQueen , Lisa Whelchel , and Karen Carlson . The
+film was remade in 2003 and starred Joseph Ashton , Dabney Coleman , Ned Beatty and Dave Matthews .
+</item 7>
+
+<item 8>
+Where the Red Fern Grows
+Once it has rested , Billy sets it free , knowing that it will return home . The experience reminds Billy of his childhood in the Ozark Mountains of Oklahoma .
+He wants a dog , and his parents offer to get him a mongrel from a neighbor . He wants two coonhounds , but his parents tell him they can not afford them .
+Billy finds a magazine ad for a Kentucky kennel which breeds Redbone Coonhounds and sells them for $25 each . He goes to work performing odd jobs and saves the
+$50 he needs with the help of his grandfather . Since it takes two years to do so , his grandfather writes to see if the kennel will honor the ad . They do ,
+and the price has dropped so the two puppies only cost $40 . Billy 's dogs are delivered to the freight depot in Tahlequah . His family does not have
+transportation , so he finds his own way to get to the depot and walks through the hills . He picks up his puppies , which are a male and a female . He buys a
+gift for each member of his family with his extra $10 before heading back home .
+</item 8>
+
+<item 9>
+Where the Red Fern Grows
+Reception ( edit ) Although sales of the novel began slowly , by 1974 over 90,000 copies had been sold . In 2001 , Publishers Weekly estimated that it had sold
+6,754,308 copies . Today Where the Red Fern Grows is required reading in many American schools . One critic said it will please adults as well as children . I
+remember crying so much through this book , and even today I tear up thinking of Old Dan and Little Ann . I also loaned this to my ( then ) children 's
+librarian , because the library copy was always out . I even marked the pages , `` Get out tissue here . '' -- DeAnn Okamura I love , love , love this book with
+all my heart and soul . My fourth grade teacher read it to me eons ago , and I 've read it to two of my three boys . There 's something about weeping together
+uncontrollably that builds a community of readers ... -- Tess Alfonsin There is a statue of Billy and his dogs at the Idaho Falls Public Library . Every year in
+Tahlequah Oklahoma there is a Red Fern festival .
+</item 9>
+
+<item 10>
+Where the Red Fern Grows
+On the way back home , he spends the night in Robber 's Cave in the Sparrow Hawk Mountains . There he builds a fire and plays with the puppies . While trying to
+sleep , he hears a noise that he realizes is the cry of a mountain lion . In the morning , he continues on . He comes to a sycamore tree and sees the names Dan
+and Ann carved inside a heart in the bark and decides to name the puppies Old Dan and Little Ann . To train Old Dan and Little Ann , Billy traps a raccoon with
+the help of his grandfather and uses its pelt to teach them to hunt . During their training , their personalities become apparent : Old Dan is brave and strong
+, while Little Ann is very intelligent . Both are very loyal to each other and to Billy . On the first night of hunting season , Billy takes Old Dan and Little
+Ann out for their first hunt . He promises them that if they tree a raccoon , he will do the rest . They tree one in a large sycamore , which Billy had
+previously nicknamed `` The Big Tree '' .
+</item 10>
+=== END ITEM id=97a49bcdc3ebfdac ===
+
+=== ITEM id=e4891cbc4c75b893 ===
+Gold sentences and facts:
+Sentence 0: No . overall No. in season Title Directed by Written by Original air date U.S. viewers ( millions ) 112 `` The Savior '' Eagle Egilsson Edward Kitsis & Adam Horowitz September 25 , 2016 ( 2016 - 09 - 25 ) 3.99 In the past , Aladdin , a `` Savior '' , is taunted by Jafar over the inevitable downfall of all Saviors . In Storybrooke , refugees arrive from the Land of Untold Stories . Emma experiences tremors and visions ; an arrested Hyde helps her receive an oracle 's vision of a hooded figure killing her . Guided by Morpheus , Gold enters Belle 's dreams to lift the sleeping curse ; he tries to renew their love , but she rejects him . `` Morpheus '' reveals he is really their unborn son , and desired this outcome . Belle wakes and leaves Gold . Henry convinces Regina that Hades may have lied about Robin Hood 's soul having been destroyed . Zelena moves in with Regina but , after learning her sister blames her for Robin Hood 's death , moves out and is approached by the Evil Queen . 113 `` A Bitter Draught '' Ron Underwood Andrew Chambliss & Dana Horgan October 2 , 2016 ( 2016 - 10 - 02 ) 3.72 In the past in the Enchanted Forest , the Evil Queen offers to aid the revenge plot of Edmond Dantes , The Count of Monte Cristo , if he kills Snow and David . When he falls in love with Snow 's handmaiden , he reneges and flees with her to the Land of Untold Stories to save her from poison . In Storybrooke , the Evil Queen recruits Zelena and uses Edmond 's heart to set him against Snow and David ; Regina kills Edmond to save the others , and realizes she retains the capacity for darkness . The Evil Queen declares that the undesirable `` untold stories '' will be played out . She gives David evidence that his father 's death was not accidental . Belle lives on Hook 's ship ; in a deal with Gold , the Evil Queen will not harm her or the baby . Emma tells Archie about her visions and notes that Regina is n't present in them and could be the hooded figure . 114 `` The Other Shoe '' Steve Pearlman Jane Espenson & Jerome Schwartz October 9 , 2016 ( 2016 - 10 - 09 ) 4.11 In the past in the Enchanted Forest , Cinderella meets Prince Thomas at the ball , but flees when she believes he loves her stepsister Clorinda ; Clorinda actually plans to elope with Thomas ' footman , Jacob , but her mother , Lady Tremaine , abducts her to the Land of Untold Stories after forcing Cinderella to betray Clorinda 's location . In Storybrooke , Ashley hopes to reconcile with Clorinda . Aided by the Evil Queen , Tremaine lures Ashley into a trap for her and Jacob . Ashley protects Jacob ; Clorinda reunites with him and forgives Cinderella , while Tremaine is arrested . Emma struggles to control her magic . Whale helps Jekyll recreate his serum , while the Evil Queen and Hyde form an alliance and she releases him . Snow White wants normality , but David secretly investigates his father 's death ; Gold provides information in exchange for David delivering a message to Belle . 115 `` Strange Case '' Alrick Riley David H. Goodman & Nelson Soler October 16 , 2016 ( 2016 - 10 - 16 ) 3.53 In the past in Victorian England , Jekyll petitions the Academy of Science for membership but Dr. Lydgate rejects him . Rumplestiltskin arrives and magically perfects Jekyll 's serum ; Jekyll transforms into Hyde , who blackmails Lydgate for Jekyll 's membership . Mary is Lydgate 's daughter and Jekyll 's unrequited love ; she and Hyde fall in love . Jekyll accidentally fatally defenestrates Mary ; he frames Hyde . In Storybrooke , Gold imprisons Belle on the ship to protect her from Hyde ; but it is Jekyll who tries to kill Belle in revenge for Rumplestiltskin 's role in Mary 's death . Hook saves Belle by killing Jekyll , and Hyde dies of identical wounds ; Regina asks Emma to kill her if necessary to stop the Evil Queen . Gold warns Belle that their child will need his protection . Mary Margaret resumes teaching , and her assistant Shirin inspires her to draw on her life as Snow . Shirin is secretly Princess Jasmine , working with the Oracle to search for Aladdin . 116 5 `` Street Rats '' Norman Buckley Edward Kitsis & Adam Horowitz October 23 , 2016 ( 2016 - 10 - 23 ) 3.40 In the past in Agrabah , Aladdin seeks a magical weapon for Jasmine , to save the kingdom from Jafar ; he is the weapon and a Savior . Jafar tempts Aladdin with magical shears that can sever him from his fate as the Savior and from his resulting death . Aladdin rejects Jafar and saves Jasmine . In Storybrooke , the Oracle is murdered . Emma helps Jasmine , hoping Aladdin 's survival ensures her own . Having faked his death , Aladdin reveals himself to Emma and confesses that he doomed Agrabah by using the shears , which he gives to her ; she asks Hook to dispose of them , but he secretly keeps them . The Evil Queen impersonates Archie to learn of Emma 's visions , and convinces Zelena to turn Archie back into a cricket . 117 6 `` Dark Waters '' Robert Duncan Andrew Chambliss & Brigitte Hales October 30 , 2016 ( 2016 - 10 - 30 ) 3.06 During the Dark Curse , Captain Nemo abducts Hook and invites him to join the crew `` family '' of his submarine , Nautilus , in their quest for the `` Mysterious Island '' , which is the Land of Untold Stories . Hook discovers the first mate is his half - brother , Liam , and decides to leave to avoid confrontation ; but Liam attacks him , instead mortally wounding Nemo , who steps in . In the present , Archie is freed . Henry confronts Hook over lying about the shears , and Liam imprisons them on Nautilus . Hook opens up and Henry accepts him as family ; they save each other and dispose of the shears . Modern medicine saves Nemo ; he , Liam , and Hook make amends . Emma and Aladdin discuss being a Savior . Jasmine reveals that Agrabah vanished . Snow supports Belle at her ultrasound . The Evil Queen seduces Gold and offers the retrieved shears in exchange for help taking Snow 's heart . 118 7 `` Heartless '' Ralph Hemecker Jane Espenson November 6 , 2016 ( 2016 - 11 - 06 ) 3.56 In the past , fugitive Snow and shepherd David separately travel to Longbourn ; she to flee the kingdom and he to sell his struggling farm . Without ever seeing each other 's faces , David saves Snow from a bounty hunter and she repays him with money to save the farm , deciding not to flee . Their hands touch and a magical sapling is created . In the present , the Evil Queen threatens to destroy Storybrooke with River of Lost Souls water unless Mary Margaret and David hand over their hearts . They learn the sapling could stop the Queen , who destroys it just after they find it . But it has shown them their previous meeting , and they conclude that their love can endure anything ; they surrender themselves . The Queen casts a sleeping curse on their hearts ; because they share Snow 's heart , the curse affects them both ; each can wake the other but immediately succumbs to the curse , so they can never be awake together . Regina uses Gold 's relationship with the Queen to separate the latter from Zelena , who earns Gold 's enmity by exposing his schemes to Belle . 119 8 `` I 'll Be Your Mirror '' Jennifer Lynch Jerome Schwartz & Leah Fong November 13 , 2016 ( 2016 - 11 - 13 ) 3.40 Regina and Emma try to magically trap the Evil Queen in the World Behind the Mirror , but she traps them there , where the Dragon is already imprisoned . Henry prepares for a date with Violet ; the Queen impersonates Regina and tries to manipulate him but he recognizes her . Emma and Regina discover Sidney was building a mirror portal out of the world and try and finish it , but the Evil Queen forces the Dragon to attack Emma and Regina , using his heart , and tries to make Henry kill the Dragon with the Hammer of Hephaestus ; he instead uses it to free his mothers . Mary Margaret and David adjust to living in shifts . Belle asks Zelena to help her escape Storybrooke via magical portal , and they form an alliance with Aladdin and Jasmine . Aladdin steals the Genie 's lamp and the Sorcerer 's wand from Gold 's shop , but Gold takes the wand back from Zelena and puts a magical tracking device on Belle . He asks the Queen to kill Zelena , as the connection between his and Zelena 's hearts protects her from him . 120 9 `` Changelings '' Mairzee Almas David H. Goodman & Brian Ridings November 27 , 2016 ( 2016 - 11 - 27 ) 3.28 In the Enchanted Forest , while served by Belle , Rumplestiltskin abducts a baby to use as bait for the Black Fairy , the mother who abandoned him ; she escapes without answering his questions . In the present , Belle receives advice from her unborn child while Gold becomes increasingly unhinged . Resenting Gold 's order to attack Zelena , the Evil Queen accelerates Belle 's pregnancy ; Mother Superior delivers Belle 's son , Gideon , and sends him into hiding ; Gold vows to find him . As the Genie has been freed , Aladdin takes his place . Zelena and Regina continue to feud . Emma obtains the sword from her vision . 121 10 `` Wish You Were Here '' Ron Underwood Edward Kitsis & Adam Horowitz December 4 , 2016 ( 2016 - 12 - 04 ) 3.27 The Black Fairy abducts Gideon . Emma discovers the sword can kill the Evil Queen without hurting Regina . The Queen steals the lamp and wishes Emma to an alternate reality where she was never the Savior ; Regina follows her . David and his allies take the lamp from the Queen , who is turned into a serpent by the hooded figure , revealed to be the adult Gideon . Jasmine wishes herself and Aladdin to Agrabah . In the `` wish realm '' , Emma lives as a princess until Regina traumatically restores her memory . Regina frees Rumplestiltskin in exchange for a magic bean , but the portal to Storybrooke closes while Regina is distracted by the appearance of Robin Hood . 122 11 `` Tougher Than the Rest '' Billy Gierhart Edward Kitsis & Adam Horowitz March 5 , 2017 ( 2017 - 03 - 05 ) 3.03 In 1990 Minnesota , a young Emma is told by a teenager that she has the power to change her fate . In present day , after they miss their way out of the Wish realm , Emma and Regina find another option for escape when they come across August , who agrees to help create a new portal . Regina goes to find Robin Hood to see if he would 've been better off without her . After Regina finds Robin , they 're caught by the Sheriff of Nottingham and later by the Wish realm Rumple . Robin believes Regina when she tells him about their being in an alternate reality . Emma discovers that August was the teenager she met back in Minnesota and inspires him to complete the portal . Emma , Regina , and Robin return to Storybrooke , where Gideon explains to Gold and Belle his intention to kill Emma so that he can acquire her savior powers and kill the Black Fairy , a move that has David furious and Belle concerned . Emma and Gideon finally meet for the battle , but Emma survives , choosing her own fate . Gideon retreats , proclaiming this far from over . Gold and Belle decide to work together for the good of their son . 123 12 `` Murder Most Foul '' Morgan Beggs Jerome Schwartz & Jane Espenson March 12 , 2017 ( 2017 - 03 - 12 ) 3.06 The events of how Robert , the father of David and James , was murdered are detailed in a flashback , in which Robert learns what happened to James after he ran away from King George . With help from Rumple , he tracks him to Pleasure Island , but their reunion is cut short by King George , who orders Robert 's execution . His death affects David in the present day after he sees visions of Robert and asks Hook to help him , despite his being reformed . When Hook becomes concerned that David is taking this investigation too far by going after Albert , he intervenes and brings David back to sanity . Hook is also worried about whether David will give him his blessing to marry Emma , but David does . Meanwhile , Regina tries to get the Wish Realm Robin assimilated into Storybrooke , but soon questions why he agreed to follow her , as it turns out that he had something else planned after he steals a chest from the vault . The truth as to who really murdered Robert is revealed when August gives Hook missing pages he took from Henry 's book . When Hook sees an illustration of David 's dad , he recognizes him and recalls murdering him during a robbery in the Enchanted Forest so that there was no witness to his crime . 124 13 `` Ill - Boding Patterns '' Ron Underwood Andrew Chambliss & Dana Horgan March 19 , 2017 ( 2017 - 03 - 19 ) 2.71 During the First Ogres War , Beowulf leads a fearsome charge on the battlefield in the Enchanted Forest of old . After every last soldier had been slain , Beowulf surrenders to death just as Rumplestiltskin intervenes , killing all the ogres . Hailed as a hero in the village , Beowulf is irked by Rumple 's new title . He creates a ruse to lead Rumple to his demise . Fearing he would not be able to follow through on protecting the villagers without Dark Magic , Rumple bestows his dagger upon Baelfire as an insurance policy . Following a turbulent exchange and threat to frame Rumplestiltskin as a murderer , Beowulf retreats . Feeling the pressure of his threat , Bae commands his father to kill him . Rumple later doses Bae with a memory potion to erase the ordeal from his mind and restore his innocence . In Storybrooke , Rumple recognizes a familiar pattern in Gideon , who makes strides in his quest to kill Emma Swan at the cost of The Blue Fairy 's vitality . Hook worries about the repercussions of telling Emma his newly unveiled secret . Meanwhile , Emma unknowingly forces a proposal after happening upon Hook 's engagement ring . Robin of Locksley attempts to flee the town , but to no avail . The Evil Queen escapes her reptilian confinement and indoctrinates Robin . 125 14 `` Page 23 '' Kate Woods David H. Goodman & Brigitte Hales March 26 , 2017 ( 2017 - 03 - 26 ) 2.85 In the Enchanted Forest , The Evil Queen is in search of a spell that will help her end Snow White for good , but her father has love in mind for his daughter and leads her on a quest to Cupid 's Arrow . However , The Evil Queen rebrands the arrow to follow hatred and discovers that the person she despises the most is herself . In Storybrooke , The Evil Queen and Regina face off in a final confrontation . Just when Regina wins the upper hand , she remembers the Evil Queen 's self - loating and evenly splits the light and the darkness in their hearts , to share their love and hate and allow the Evil Queen to reform . After Emma calls off the engagement , Hook decides to board the Nautilus with Captain Nemo . Hook later changes his mind following a conversation with Snow but , before he can return , Gideon hijacks the vessel and sends it out of Storybrooke . 126 15 `` A Wondrous Place '' Steve Pearlman Jane Espenson & Jerome Schwartz April 2 , 2017 ( 2017 - 04 - 02 ) 2.80 At a loss for hope , Regina suggests a `` girls ' night out '' for Emma with her and Snow . While at the bar , she confides in the mixologist and sheds a tear . Meanwhile , the Nautilus is transported to the Enchanted Forest , where Aladdin and Jasmine board . They have yet to locate Agrabah and are growing weary . After Hook and Jasmine confide in one another , the vessel is irrevocably damaged and Jasmine uses a genie wish to relocate the group to the island where Jafar is located . They discover a cabana belonging to Ariel and Prince Eric . Ariel has collected a genie lamp that houses Jafar . Jasmine is able to sway him into divulging the location of the hidden Agrabah before defeating him with magic dust . Through true love 's kiss , Aladdin and Jasmine , along with Hook and Ariel , are transported to the restored city and Aladdin 's genie curse is broken . Ariel supplies Hook with a means to reach Emma . Emma receives the message and Gideon , no longer masquerading as the mixologist , threatens that he will use her tears to keep Hook from returning to Storybrooke unless she helps him kill the Black Fairy . Flashbacks to Ariel and Jasmine 's first meeting show the princess falter under Jafar 's trickery . 127 16 `` Mother 's Little Helper '' Billy Gierhart Story by : Edward Kitsis & Adam Horowitz Teleplay by : Paul Karp April 9 , 2017 ( 2017 - 04 - 09 ) 2.60 In Storybrooke , Gold reveals to Emma and Snow that the Black Fairy is his mother and that the Dark Curse Regina cast was created by the Black Fairy . Emma agrees to help Gideon kill the Black Fairy , but is double - crossed by Gideon and left to die at the hands of a giant spider . Gideon opens a portal with the sword , allowing the Black Fairy to slip through into Storybrooke . Meanwhile in the Enchanted Forest , Hook wagers the Jolly Roger for a magic bean in a game of cards with Blackbeard . As Blackbeard and Hook go through the portal , it malfunctions thanks to Gideon and the duo ends up in Neverland , on the run from the remnants of Peter Pan 's Lost Boys . Back in Storybrooke , Henry experiences a disorienting shift in his Author powers , so he and Regina seek help from the only person who can aid them : the previous Author , Isaac . Isaac reveals to Regina and Henry that they are nearing the end of the story in which the savior must fight the Final Battle . Flashbacks reveal the abuses the Black Fairy inflicted on Gideon and that the Black Fairy ripped out Gideon 's heart and is controlling him to kill Emma . 128 17 `` Awake '' Sharat Raju Andrew Chambliss & Leah Fong April 16 , 2017 ( 2017 - 04 - 16 ) 2.51 Regina works feverishly to wake Snow and Charming from the Sleeping Curse . Gold comes face to face with the Black Fairy , the powerful enemy Emma must fight in the Final Battle . Hook , still in Neverland , meets up with Tiger Lily , who gives him a piece of an ancient fairy wand to aid Emma in defeating the Black Fairy . Gold confronts the Black Fairy over her manipulating Gideon with his heart and she maintains that Storybrooke would be destroyed if the two of them fought . A pixie flower allows Emma to open a doorway to Neverland and rescue Hook , who then re-proposes properly . The townsfolk gather around Emma 's sleeping parents and each take small amounts of the Sleeping Curse unto themselves , diluting it and allowing Snow and David to finally reunite . In 1993 , a pixie flower awakens Snow and Charming from their cursed selves , but an awakened Rumplestiltskin tells them they must make a difficult decision to ensure that Emma fulfills her destiny as the Savior . 129 18 `` Where Bluebirds Fly '' Michael Schultz David H. Goodman & Brigitte Hales April 23 , 2017 ( 2017 - 04 - 23 ) 2.69 In Zelena 's past , her childhood friend Stanum asks for her help in finding the Crimson Heart , a magical artifact that would be able to restore his human form after having been cursed by the Wicked Witch of the North to slowly turn into tin . Zelena 's refusal to give up her magic leads to her betraying Stanum , as she keeps the Heart and leaves him to become the Tin Man . In the Present , The Black Fairy tempts Zelena with an offer to join her , only to have Zelena oppose her instead . Regina is brought into the chaos by trying to stop her sister and they find the Black Fairy and Gideon in the crystal mines , with the Black Fairy tricking Zelena into utilizing her unstable Dark Magic to strengthen her for the Final Battle . Realizing that there is nothing left for her back in Oz , Zelena decides to help the residents fight back against the Black Fairy by using the Crimson Heart to give up her magic , thereby undoing the mess she made in the mines . Emma then uses her magic and one of the crystals to bring Mother Superior out of her coma with some help from Regina and Zelena . 130 19 `` The Black Fairy '' Alrick Riley Jerome Schwartz & Dana Horgan April 30 , 2017 ( 2017 - 04 - 30 ) 3.05 The origin of Rumplestiltskin 's true destiny is revealed , as his mother Fiona learns from the Blue Fairy and Tiger Lily that he was destined to become The Savior . When Fiona fears for her son and chooses power over protecting Rumple , it results in her becoming the Black Fairy , and the Blue Fairy banishing her to the Dark Realm . In the Present , as everyone looks for the missing wand , Gold brings Gideon and Emma into the Dream World to search for Gideon 's heart , where the events of the flashbacks unfold . Gold then confronts Fiona , but she reveals the real reason behind why he was abandoned . Gold later retrieves Gideon 's heart and tells everyone that the Black Fairy is dead , paving the way for Emma and Hook 's wedding . However , Gold and Fiona make a deal that will see the Final Battle go forward , with Emma being the Savior that will fight in it . Meanwhile , Regina helps Zelena adjust to life without her powers . 131 20 `` The Song in Your Heart '' Ron Underwood David H. Goodman & Andrew Chambliss May 7 , 2017 ( 2017 - 05 - 07 ) 2.87 In the past , Snow makes a wish that grants the entire Enchanted Forest the ability to use the gift of song as a strength , which also spreads to Oz as well . When Regina becomes affected by the wish , she finds a way to end it before the first curse takes place , but the Blue Fairy , who granted Snow the wish , tells Snow and David that the wish will be part of Emma 's destiny . In Emma 's past , her chance to make use of her talent is held back by being told she 'll be alone . This would come back to taunt Emma in the present day , as Fiona returns to use that weakness to take Emma 's heart before unleashing a new curse on her wedding day , with help from Gold by freezing her family . When Henry discovers the page in the book that reveals the song in Emma 's heart will make her stronger , not only does it embolden Emma , it stops Fiona from crushing her heart , but Fiona still tells Emma that the battle will continue . On her wedding day , Emma and Hook finally marry , just in time for the dark clouds of the Black Fairy 's curse to erupt from the clock tower and engulf them at 6 : 00 PM , setting up the final battle . 132 133 21 22 `` The Final Battle '' Steve Pearlman Ralph Hemecker Edward Kitsis & Adam Horowitz May 14 , 2017 ( 2017 - 05 - 14 ) 2.95 Fiona 's curse alters Storybrooke , institutionalizing Emma and leaving only Henry and Gold `` awake , '' while sending Emma 's other allies to their home realms . The Final Battle begins over Emma 's belief ; if she stops believing in the realms of story , they will be consumed by the Darkness and cease to exist . If all the realms are destroyed , Fiona would gain unchecked powers and be able to break the Laws of Magic at will . In the Enchanted Forest , the banished characters gather at Regina 's castle ; David and Hook obtain a magic bean and the Evil Queen sacrifices herself , holding off the Darkness to delay the group 's destruction . Fiona convinces Emma to destroy the book , but Henry hand - draws one that restores her belief in time to save everyone in the castle . Gold kills Fiona , who had hidden Belle and turned her into a coward ; this breaks the Curse , which restores everyone 's memories and reunites them in Storybrooke . However , Gideon is still under orders to kill Emma . Gold attempts to free Gideon 's heart ; however , a spell cast by the Black Fairy prevents him from doing so . Emma lays down her sword , allowing Gideon to impale her ; this releases Emma 's light magic and ends the battle . With both Gold and Emma having chosen good , Gideon is returned to infancy and the realms are restored , and those who died in the crisis are revived . The characters embark on their `` happy beginnings . '' Many years later in the New Enchanted Forest , an adult Henry vanishes while defending his daughter Lucy from an unidentified entity . Guided by Tiger Lily , Lucy travels to Seattle , where Henry no longer remembers her .
+  Fact 0.0: Episode 112, 'The Savior', was directed by Eagle Egilsson and written by Edward Kitsis and Adam Horowitz.
+  Fact 0.1: Episode 112 aired on September 25, 2016 and had 3.99 million U.S. viewers.
+  Fact 0.2: In the past, Aladdin, a 'Savior', is taunted by Jafar over the inevitable downfall of all Saviors.
+  Fact 0.3: In Storybrooke, refugees arrive from the Land of Untold Stories.
+  Fact 0.4: Emma experiences tremors and visions.
+  Fact 0.5: An arrested Hyde helps Emma receive an oracle's vision of a hooded figure killing her.
+  Fact 0.6: Guided by Morpheus, Gold enters Belle's dreams to lift the sleeping curse.
+  Fact 0.7: Gold tries to renew his love with Belle, but she rejects him.
+  Fact 0.8: 'Morpheus' reveals he is really Belle and Gold's unborn son, and that he desired this outcome.
+  Fact 0.9: Belle wakes and leaves Gold.
+  Fact 0.10: Henry convinces Regina that Hades may have lied about Robin Hood's soul having been destroyed.
+  Fact 0.11: Zelena moves in with Regina.
+  Fact 0.12: After learning her sister Regina blames her for Robin Hood's death, Zelena moves out.
+  Fact 0.13: Zelena is approached by the Evil Queen after moving out.
+  Fact 0.14: Episode 113, 'A Bitter Draught', was directed by Ron Underwood and written by Andrew Chambliss and Dana Horgan.
+  Fact 0.15: Episode 113 aired on October 2, 2016 and had 3.72 million U.S. viewers.
+  Fact 0.16: In the past in the Enchanted Forest, the Evil Queen offers to aid the revenge plot of Edmond Dantes, The Count of Monte Cristo.
+  Fact 0.17: The Evil Queen's offer to Edmond Dantes is conditional on him killing Snow and David.
+  Fact 0.18: Edmond Dantes falls in love with Snow's handmaiden.
+  Fact 0.19: Edmond Dantes reneges on the revenge plot and flees with the handmaiden to the Land of Untold Stories to save her from poison.
+  Fact 0.20: In Storybrooke, the Evil Queen recruits Zelena.
+  Fact 0.21: In Storybrooke, the Evil Queen uses Edmond's heart to set him against Snow and David.
+  Fact 0.22: Regina kills Edmond to save the others.
+  Fact 0.23: Regina realizes she retains the capacity for darkness.
+  Fact 0.24: The Evil Queen declares that the undesirable 'untold stories' will be played out.
+  Fact 0.25: The Evil Queen gives David evidence that his father's death was not accidental.
+  Fact 0.26: Belle lives on Hook's ship.
+  Fact 0.27: In a deal with Gold, the Evil Queen will not harm Belle or the baby.
+  Fact 0.28: Emma tells Archie about her visions.
+  Fact 0.29: Emma notes that Regina is not present in her visions and could be the hooded figure.
+  Fact 0.30: Episode 114, 'The Other Shoe', was directed by Steve Pearlman and written by Jane Espenson and Jerome Schwartz.
+  Fact 0.31: Episode 114 aired on October 9, 2016 and had 4.11 million U.S. viewers.
+  Fact 0.32: In the past in the Enchanted Forest, Cinderella meets Prince Thomas at the ball.
+  Fact 0.33: Cinderella flees when she believes Thomas loves her stepsister Clorinda.
+  Fact 0.34: Clorinda actually plans to elope with Thomas' footman, Jacob.
+  Fact 0.35: Clorinda's mother, Lady Tremaine, abducts Clorinda to the Land of Untold Stories.
+  Fact 0.36: Lady Tremaine abducts Clorinda after forcing Cinderella to betray Clorinda's location.
+  Fact 0.37: In Storybrooke, Ashley hopes to reconcile with Clorinda.
+  Fact 0.38: Aided by the Evil Queen, Lady Tremaine lures Ashley into a trap for her and Jacob.
+  Fact 0.39: Ashley protects Jacob.
+  Fact 0.40: Clorinda reunites with Jacob and forgives Cinderella.
+  Fact 0.41: Lady Tremaine is arrested.
+  Fact 0.42: Emma struggles to control her magic.
+  Fact 0.43: Whale helps Jekyll recreate his serum.
+  Fact 0.44: The Evil Queen and Hyde form an alliance, and she releases him.
+  Fact 0.45: Snow White wants normality.
+  Fact 0.46: David secretly investigates his father's death.
+  Fact 0.47: Gold provides information in exchange for David delivering a message to Belle.
+  Fact 0.48: Episode 115, 'Strange Case', was directed by Alrick Riley and written by David H. Goodman and Nelson Soler.
+  Fact 0.49: Episode 115 aired on October 16, 2016 and had 3.53 million U.S. viewers.
+  Fact 0.50: In the past in Victorian England, Jekyll petitions the Academy of Science for membership.
+  Fact 0.51: Dr. Lydgate rejects Jekyll's petition.
+  Fact 0.52: Rumplestiltskin arrives and magically perfects Jekyll's serum.
+  Fact 0.53: Jekyll transforms into Hyde.
+  Fact 0.54: Hyde blackmails Lydgate for Jekyll's membership.
+  Fact 0.55: Mary is Lydgate's daughter and Jekyll's unrequited love.
+  Fact 0.56: Mary and Hyde fall in love.
+  Fact 0.57: Jekyll accidentally fatally defenestrates Mary.
+  Fact 0.58: Jekyll frames Hyde for Mary's death.
+  Fact 0.59: In Storybrooke, Gold imprisons Belle on the ship to protect her from Hyde.
+  Fact 0.60: Jekyll tries to kill Belle in revenge for Rumplestiltskin's role in Mary's death.
+  Fact 0.61: Hook saves Belle by killing Jekyll.
+  Fact 0.62: Hyde dies of identical wounds.
+  Fact 0.63: Regina asks Emma to kill her if necessary to stop the Evil Queen.
+  Fact 0.64: Gold warns Belle that their child will need his protection.
+  Fact 0.65: Mary Margaret resumes teaching.
+  Fact 0.66: Mary Margaret's assistant Shirin inspires her to draw on her life as Snow.
+  Fact 0.67: Shirin is secretly Princess Jasmine.
+  Fact 0.68: Princess Jasmine is working with the Oracle to search for Aladdin.
+  Fact 0.69: Episode 116, 'Street Rats', is season episode 5 and was directed by Norman Buckley and written by Edward Kitsis and Adam Horowitz.
+  Fact 0.70: Episode 116 aired on October 23, 2016 and had 3.40 million U.S. viewers.
+  Fact 0.71: In the past in Agrabah, Aladdin seeks a magical weapon for Jasmine to save the kingdom from Jafar.
+  Fact 0.72: Aladdin is the weapon and a Savior.
+  Fact 0.73: Jafar tempts Aladdin with magical shears that can sever him from his fate as the Savior and from his resulting death.
+  Fact 0.74: Aladdin rejects Jafar and saves Jasmine.
+  Fact 0.75: In Storybrooke, the Oracle is murdered.
+  Fact 0.76: Emma helps Jasmine, hoping Aladdin's survival ensures her own.
+  Fact 0.77: Aladdin has faked his death.
+  Fact 0.78: Aladdin reveals himself to Emma.
+  Fact 0.79: Aladdin confesses that he doomed Agrabah by using the shears.
+  Fact 0.80: Aladdin gives the shears to Emma.
+  Fact 0.81: Emma asks Hook to dispose of the shears.
+  Fact 0.82: Hook secretly keeps the shears.
+  Fact 0.83: The Evil Queen impersonates Archie to learn of Emma's visions.
+  Fact 0.84: The Evil Queen convinces Zelena to turn Archie back into a cricket.
+  Fact 0.85: Episode 117, 'Dark Waters', is season episode 6 and was directed by Robert Duncan and written by Andrew Chambliss and Brigitte Hales.
+  Fact 0.86: Episode 117 aired on October 30, 2016 and had 3.06 million U.S. viewers.
+  Fact 0.87: During the Dark Curse, Captain Nemo abducts Hook.
+  Fact 0.88: Captain Nemo invites Hook to join the crew 'family' of his submarine, Nautilus.
+  Fact 0.89: The crew is on a quest for the 'Mysterious Island', which is the Land of Untold Stories.
+  Fact 0.90: Hook discovers the first mate is his half-brother, Liam.
+  Fact 0.91: Hook decides to leave to avoid confrontation.
+  Fact 0.92: Liam attacks Hook, instead mortally wounding Nemo, who steps in.
+  Fact 0.93: In the present, Archie is freed.
+  Fact 0.94: Henry confronts Hook over lying about the shears.
+  Fact 0.95: Liam imprisons Henry and Hook on Nautilus.
+  Fact 0.96: Hook opens up and Henry accepts him as family.
+  Fact 0.97: Henry and Hook save each other and dispose of the shears.
+  Fact 0.98: Modern medicine saves Nemo.
+  Fact 0.99: Nemo, Liam and Hook make amends.
+  Fact 0.100: Emma and Aladdin discuss being a Savior.
+  Fact 0.101: Jasmine reveals that Agrabah vanished.
+  Fact 0.102: Snow supports Belle at her ultrasound.
+  Fact 0.103: The Evil Queen seduces Gold.
+  Fact 0.104: The Evil Queen offers Gold the retrieved shears in exchange for help taking Snow's heart.
+  Fact 0.105: Episode 118, 'Heartless', is season episode 7 and was directed by Ralph Hemecker and written by Jane Espenson.
+  Fact 0.106: Episode 118 aired on November 6, 2016 and had 3.56 million U.S. viewers.
+  Fact 0.107: In the past, fugitive Snow and shepherd David separately travel to Longbourn.
+  Fact 0.108: Snow travels to Longbourn to flee the kingdom.
+  Fact 0.109: David travels to Longbourn to sell his struggling farm.
+  Fact 0.110: Without seeing each other's faces, David saves Snow from a bounty hunter.
+  Fact 0.111: Snow repays David with money to save the farm.
+  Fact 0.112: Snow decides not to flee.
+  Fact 0.113: Their hands touch and a magical sapling is created.
+  Fact 0.114: In the present, the Evil Queen threatens to destroy Storybrooke with River of Lost Souls water.
+  Fact 0.115: The Evil Queen's threat is unless Mary Margaret and David hand over their hearts.
+  Fact 0.116: Mary Margaret and David learn the sapling could stop the Queen.
+  Fact 0.117: The Queen destroys the sapling just after they find it.
+  Fact 0.118: The sapling showed Mary Margaret and David their previous meeting.
+  Fact 0.119: Mary Margaret and David conclude that their love can endure anything.
+  Fact 0.120: Mary Margaret and David surrender themselves.
+  Fact 0.121: The Queen casts a sleeping curse on their hearts.
+  Fact 0.122: Because they share Snow's heart, the curse affects both of them.
+  Fact 0.123: Each can wake the other but immediately succumbs to the curse.
+  Fact 0.124: They can never be awake together.
+  Fact 0.125: Regina uses Gold's relationship with the Queen to separate the Queen from Zelena.
+  Fact 0.126: Zelena earns Gold's enmity by exposing his schemes to Belle.
+  Fact 0.127: Episode 119, 'I'll Be Your Mirror', is season episode 8 and was directed by Jennifer Lynch and written by Jerome Schwartz and Leah Fong.
+  Fact 0.128: Episode 119 aired on November 13, 2016 and had 3.40 million U.S. viewers.
+  Fact 0.129: Regina and Emma try to magically trap the Evil Queen in the World Behind the Mirror.
+  Fact 0.130: The Evil Queen traps Regina and Emma in the World Behind the Mirror.
+  Fact 0.131: The Dragon is already imprisoned in the World Behind the Mirror.
+  Fact 0.132: Henry prepares for a date with Violet.
+  Fact 0.133: The Queen impersonates Regina and tries to manipulate Henry.
+  Fact 0.134: Henry recognizes the Queen.
+  Fact 0.135: Emma and Regina discover Sidney was building a mirror portal out of the world.
+  Fact 0.136: Emma and Regina try to finish the mirror portal.
+  Fact 0.137: The Evil Queen forces the Dragon to attack Emma and Regina, using his heart.
+  Fact 0.138: The Evil Queen tries to make Henry kill the Dragon with the Hammer of Hephaestus.
+  Fact 0.139: Henry instead uses the Hammer of Hephaestus to free his mothers.
+  Fact 0.140: Mary Margaret and David adjust to living in shifts.
+  Fact 0.141: Belle asks Zelena to help her escape Storybrooke via magical portal.
+  Fact 0.142: Belle and Zelena form an alliance with Aladdin and Jasmine.
+  Fact 0.143: Aladdin steals the Genie's lamp and the Sorcerer's wand from Gold's shop.
+  Fact 0.144: Gold takes the wand back from Zelena.
+  Fact 0.145: Gold puts a magical tracking device on Belle.
+  Fact 0.146: Gold asks the Queen to kill Zelena.
+  Fact 0.147: The connection between Gold's and Zelena's hearts protects Zelena from Gold.
+  Fact 0.148: Episode 120, 'Changelings', is season episode 9 and was directed by Mairzee Almas and written by David H. Goodman and Brian Ridings.
+  Fact 0.149: Episode 120 aired on November 27, 2016 and had 3.28 million U.S. viewers.
+  Fact 0.150: In the Enchanted Forest, Rumplestiltskin, while served by Belle, abducts a baby.
+  Fact 0.151: Rumplestiltskin uses the abducted baby as bait for the Black Fairy, the mother who abandoned him.
+  Fact 0.152: The Black Fairy escapes without answering Rumplestiltskin's questions.
+  Fact 0.153: In the present, Belle receives advice from her unborn child.
+  Fact 0.154: In the present, Gold becomes increasingly unhinged.
+  Fact 0.155: The Evil Queen resents Gold's order to attack Zelena.
+  Fact 0.156: The Evil Queen accelerates Belle's pregnancy.
+  Fact 0.157: Mother Superior delivers Belle's son, Gideon.
+  Fact 0.158: Mother Superior sends Gideon into hiding.
+  Fact 0.159: Gold vows to find Gideon.
+  Fact 0.160: The Genie has been freed.
+  Fact 0.161: Aladdin takes the Genie's place.
+  Fact 0.162: Zelena and Regina continue to feud.
+  Fact 0.163: Emma obtains the sword from her vision.
+  Fact 0.164: Episode 121, 'Wish You Were Here', is season episode 10 and was directed by Ron Underwood and written by Edward Kitsis and Adam Horowitz.
+  Fact 0.165: Episode 121 aired on December 4, 2016 and had 3.27 million U.S. viewers.
+  Fact 0.166: The Black Fairy abducts Gideon.
+  Fact 0.167: Emma discovers the sword can kill the Evil Queen without hurting Regina.
+  Fact 0.168: The Queen steals the lamp.
+  Fact 0.169: The Queen wishes Emma to an alternate reality where Emma was never the Savior.
+  Fact 0.170: Regina follows the Queen into the alternate reality.
+  Fact 0.171: David and his allies take the lamp from the Queen.
+  Fact 0.172: The Queen is turned into a serpent by the hooded figure.
+  Fact 0.173: The hooded figure is revealed to be the adult Gideon.
+  Fact 0.174: Jasmine wishes herself and Aladdin to Agrabah.
+  Fact 0.175: In the 'wish realm', Emma lives as a princess.
+  Fact 0.176: Regina traumatically restores Emma's memory in the wish realm.
+  Fact 0.177: Regina frees Rumplestiltskin in exchange for a magic bean.
+  Fact 0.178: The portal to Storybrooke closes while Regina is distracted by the appearance of Robin Hood.
+  Fact 0.179: Episode 122, 'Tougher Than the Rest', is season episode 11 and was directed by Billy Gierhart and written by Edward Kitsis and Adam Horowitz.
+  Fact 0.180: Episode 122 aired on March 5, 2017 and had 3.03 million U.S. viewers.
+  Fact 0.181: In 1990 Minnesota, a young Emma is told by a teenager that she has the power to change her fate.
+  Fact 0.182: In the present day, Emma and Regina miss their way out of the Wish realm.
+  Fact 0.183: Emma and Regina find another option for escape when they come across August.
+  Fact 0.184: August agrees to help create a new portal.
+  Fact 0.185: Regina goes to find Robin Hood to see if he would have been better off without her.
+  Fact 0.186: Regina and Robin are caught by the Sheriff of Nottingham.
+  Fact 0.187: Regina and Robin are later caught by the Wish realm Rumple.
+  Fact 0.188: Robin believes Regina when she tells him about their being in an alternate reality.
+  Fact 0.189: Emma discovers that August was the teenager she met in Minnesota.
+  Fact 0.190: Emma inspires August to complete the portal.
+  Fact 0.191: Emma, Regina and Robin return to Storybrooke.
+  Fact 0.192: Gideon explains to Gold and Belle his intention to kill Emma.
+  Fact 0.193: Gideon intends to kill Emma so that he can acquire her savior powers and kill the Black Fairy.
+  Fact 0.194: Gideon's intention has David furious and Belle concerned.
+  Fact 0.195: Emma and Gideon finally meet for the battle.
+  Fact 0.196: Emma survives, choosing her own fate.
+  Fact 0.197: Gideon retreats, proclaiming this far from over.
+  Fact 0.198: Gold and Belle decide to work together for the good of their son.
+  Fact 0.199: Episode 123, 'Murder Most Foul', is season episode 12 and was directed by Morgan Beggs and written by Jerome Schwartz and Jane Espenson.
+  Fact 0.200: Episode 123 aired on March 12, 2017 and had 3.06 million U.S. viewers.
+  Fact 0.201: A flashback details how Robert, the father of David and James, was murdered.
+  Fact 0.202: In the flashback, Robert learns what happened to James after James ran away from King George.
+  Fact 0.203: With help from Rumple, Robert tracks James to Pleasure Island.
+  Fact 0.204: King George cuts short Robert and James' reunion.
+  Fact 0.205: King George orders Robert's execution.
+  Fact 0.206: Robert's death affects David in the present day.
+  Fact 0.207: David sees visions of Robert and asks Hook to help him, despite Hook being reformed.
+  Fact 0.208: Hook becomes concerned that David is taking the investigation too far by going after Albert.
+  Fact 0.209: Hook intervenes and brings David back to sanity.
+  Fact 0.210: Hook is worried about whether David will give him his blessing to marry Emma.
+  Fact 0.211: David gives Hook his blessing to marry Emma.
+  Fact 0.212: Regina tries to get the Wish Realm Robin assimilated into Storybrooke.
+  Fact 0.213: Regina questions why Robin agreed to follow her.
+  Fact 0.214: Robin had something else planned, and he steals a chest from the vault.
+  Fact 0.215: The truth about who murdered Robert is revealed when August gives Hook missing pages he took from Henry's book.
+  Fact 0.216: Hook sees an illustration of David's dad and recognizes him.
+  Fact 0.217: Hook recalls murdering David's dad during a robbery in the Enchanted Forest so that there was no witness to his crime.
+  Fact 0.218: Episode 124, 'Ill-Boding Patterns', is season episode 13 and was directed by Ron Underwood and written by Andrew Chambliss and Dana Horgan.
+  Fact 0.219: Episode 124 aired on March 19, 2017 and had 2.71 million U.S. viewers.
+  Fact 0.220: During the First Ogres War, Beowulf leads a fearsome charge on the battlefield in the Enchanted Forest of old.
+  Fact 0.221: After every last soldier had been slain, Beowulf surrenders to death just as Rumplestiltskin intervenes.
+  Fact 0.222: Rumplestiltskin kills all the ogres.
+  Fact 0.223: Beowulf is irked by Rumple's new title as a hero in the village.
+  Fact 0.224: Beowulf creates a ruse to lead Rumple to his demise.
+  Fact 0.225: Fearing he would not be able to protect the villagers without Dark Magic, Rumple bestows his dagger upon Baelfire as an insurance policy.
+  Fact 0.226: Beowulf retreats after a turbulent exchange and a threat to frame Rumplestiltskin as a murderer.
+  Fact 0.227: Feeling the pressure of Beowulf's threat, Bae commands his father to kill him.
+  Fact 0.228: Rumple later doses Bae with a memory potion to erase the ordeal from his mind and restore his innocence.
+  Fact 0.229: In Storybrooke, Rumple recognizes a familiar pattern in Gideon.
+  Fact 0.230: Gideon makes strides in his quest to kill Emma Swan at the cost of the Blue Fairy's vitality.
+  Fact 0.231: Hook worries about the repercussions of telling Emma his newly unveiled secret.
+  Fact 0.232: Emma unknowingly forces a proposal after happening upon Hook's engagement ring.
+  Fact 0.233: Robin of Locksley attempts to flee the town, but to no avail.
+  Fact 0.234: The Evil Queen escapes her reptilian confinement.
+  Fact 0.235: The Evil Queen indoctrinates Robin.
+  Fact 0.236: Episode 125, 'Page 23', is season episode 14 and was directed by Kate Woods and written by David H. Goodman and Brigitte Hales.
+  Fact 0.237: Episode 125 aired on March 26, 2017 and had 2.85 million U.S. viewers.
+  Fact 0.238: In the Enchanted Forest, the Evil Queen is in search of a spell that will help her end Snow White for good.
+  Fact 0.239: The Evil Queen's father has love in mind for his daughter and leads her on a quest to Cupid's Arrow.
+  Fact 0.240: The Evil Queen rebrands the arrow to follow hatred.
+  Fact 0.241: The Evil Queen discovers that the person she despises the most is herself.
+  Fact 0.242: In Storybrooke, the Evil Queen and Regina face off in a final confrontation.
+  Fact 0.243: When Regina wins the upper hand, she remembers the Evil Queen's self-loathing.
+  Fact 0.244: Regina evenly splits the light and the darkness in their hearts, to share their love and hate.
+  Fact 0.245: Regina's split allows the Evil Queen to reform.
+  Fact 0.246: After Emma calls off the engagement, Hook decides to board the Nautilus with Captain Nemo.
+  Fact 0.247: Hook later changes his mind following a conversation with Snow.
+  Fact 0.248: Before Hook can return, Gideon hijacks the Nautilus.
+  Fact 0.249: Gideon sends the Nautilus out of Storybrooke.
+  Fact 0.250: Episode 126, 'A Wondrous Place', is season episode 15 and was directed by Steve Pearlman and written by Jane Espenson and Jerome Schwartz.
+  Fact 0.251: Episode 126 aired on April 2, 2017 and had 2.80 million U.S. viewers.
+  Fact 0.252: At a loss for hope, Regina suggests a 'girls' night out' for Emma with her and Snow.
+  Fact 0.253: At the bar, Regina confides in the mixologist and sheds a tear.
+  Fact 0.254: In the Enchanted Forest, the Nautilus is transported.
+  Fact 0.255: Aladdin and Jasmine board the Nautilus.
+  Fact 0.256: Aladdin and Jasmine have yet to locate Agrabah and are growing weary.
+  Fact 0.257: After Hook and Jasmine confide in one another, the vessel is irrevocably damaged.
+  Fact 0.258: Jasmine uses a genie wish to relocate the group to the island where Jafar is located.
+  Fact 0.259: The group discovers a cabana belonging to Ariel and Prince Eric.
+  Fact 0.260: Ariel has collected a genie lamp that houses Jafar.
+  Fact 0.261: Jasmine sways Jafar into divulging the location of the hidden Agrabah.
+  Fact 0.262: Jasmine defeats Jafar with magic dust.
+  Fact 0.263: Through true love's kiss, Aladdin and Jasmine, along with Hook and Ariel, are transported to the restored city.
+  Fact 0.264: Aladdin's genie curse is broken.
+  Fact 0.265: Ariel supplies Hook with a means to reach Emma.
+  Fact 0.266: Emma receives the message.
+  Fact 0.267: Gideon, no longer masquerading as the mixologist, threatens to use Emma's tears to keep Hook from returning to Storybrooke.
+  Fact 0.268: Gideon's threat is unless Emma helps him kill the Black Fairy.
+  Fact 0.269: Flashbacks to Ariel and Jasmine's first meeting show the princess faltering under Jafar's trickery.
+  Fact 0.270: Episode 127, 'Mother's Little Helper', is season episode 16 and was directed by Billy Gierhart, with a story by Edward Kitsis and Adam Horowitz and a teleplay by Paul Karp.
+  Fact 0.271: Episode 127 aired on April 9, 2017 and had 2.60 million U.S. viewers.
+  Fact 0.272: In Storybrooke, Gold reveals to Emma and Snow that the Black Fairy is his mother.
+  Fact 0.273: Gold reveals to Emma and Snow that the Dark Curse Regina cast was created by the Black Fairy.
+  Fact 0.274: Emma agrees to help Gideon kill the Black Fairy.
+  Fact 0.275: Gideon double-crosses Emma.
+  Fact 0.276: Gideon leaves Emma to die at the hands of a giant spider.
+  Fact 0.277: Gideon opens a portal with the sword.
+  Fact 0.278: The portal allows the Black Fairy to slip through into Storybrooke.
+  Fact 0.279: In the Enchanted Forest, Hook wagers the Jolly Roger for a magic bean in a game of cards with Blackbeard.
+  Fact 0.280: As Blackbeard and Hook go through the portal, it malfunctions thanks to Gideon.
+  Fact 0.281: Blackbeard and Hook end up in Neverland.
+  Fact 0.282: Blackbeard and Hook are on the run from the remnants of Peter Pan's Lost Boys.
+  Fact 0.283: In Storybrooke, Henry experiences a disorienting shift in his Author powers.
+  Fact 0.284: Henry and Regina seek help from the previous Author, Isaac.
+  Fact 0.285: Isaac reveals to Regina and Henry that they are nearing the end of the story.
+  Fact 0.286: In the story, the savior must fight the Final Battle.
+  Fact 0.287: Flashbacks reveal the abuses the Black Fairy inflicted on Gideon.
+  Fact 0.288: The Black Fairy ripped out Gideon's heart.
+  Fact 0.289: The Black Fairy is controlling Gideon to kill Emma.
+  Fact 0.290: Episode 128, 'Awake', is season episode 17 and was directed by Sharat Raju and written by Andrew Chambliss and Leah Fong.
+  Fact 0.291: Episode 128 aired on April 16, 2017 and had 2.51 million U.S. viewers.
+  Fact 0.292: Regina works feverishly to wake Snow and Charming from the Sleeping Curse.
+  Fact 0.293: Gold comes face to face with the Black Fairy.
+  Fact 0.294: The Black Fairy is the powerful enemy Emma must fight in the Final Battle.
+  Fact 0.295: In Neverland, Hook meets up with Tiger Lily.
+  Fact 0.296: Tiger Lily gives Hook a piece of an ancient fairy wand to aid Emma in defeating the Black Fairy.
+  Fact 0.297: Gold confronts the Black Fairy over her manipulating Gideon with his heart.
+  Fact 0.298: The Black Fairy maintains that Storybrooke would be destroyed if she and Gold fought.
+  Fact 0.299: A pixie flower allows Emma to open a doorway to Neverland.
+  Fact 0.300: Emma rescues Hook.
+  Fact 0.301: Hook re-proposes properly.
+  Fact 0.302: The townsfolk gather around Emma's sleeping parents.
+  Fact 0.303: The townsfolk each take small amounts of the Sleeping Curse unto themselves, diluting it.
+  Fact 0.304: Diluting the curse allows Snow and David to finally reunite.
+  Fact 0.305: In 1993, a pixie flower awakens Snow and Charming from their cursed selves.
+  Fact 0.306: An awakened Rumplestiltskin tells Snow and Charming they must make a difficult decision to ensure that Emma fulfills her destiny as the Savior.
+  Fact 0.307: Episode 129, 'Where Bluebirds Fly', is season episode 18 and was directed by Michael Schultz and written by David H. Goodman and Brigitte Hales.
+  Fact 0.308: Episode 129 aired on April 23, 2017 and had 2.69 million U.S. viewers.
+  Fact 0.309: In Zelena's past, her childhood friend Stanum asks for her help in finding the Crimson Heart.
+  Fact 0.310: The Crimson Heart is a magical artifact that would restore Stanum's human form.
+  Fact 0.311: Stanum was cursed by the Wicked Witch of the North to slowly turn into tin.
+  Fact 0.312: Zelena refuses to give up her magic.
+  Fact 0.313: Zelena betrays Stanum by keeping the Heart.
+  Fact 0.314: Zelena leaves Stanum to become the Tin Man.
+  Fact 0.315: In the present, the Black Fairy tempts Zelena with an offer to join her.
+  Fact 0.316: Zelena opposes the Black Fairy instead.
+  Fact 0.317: Regina is brought into the chaos by trying to stop her sister.
+  Fact 0.318: Regina and Zelena find the Black Fairy and Gideon in the crystal mines.
+  Fact 0.319: The Black Fairy tricks Zelena into utilizing her unstable Dark Magic to strengthen her for the Final Battle.
+  Fact 0.320: Zelena realizes there is nothing left for her back in Oz.
+  Fact 0.321: Zelena decides to help the residents fight back against the Black Fairy.
+  Fact 0.322: Zelena uses the Crimson Heart to give up her magic.
+  Fact 0.323: Giving up her magic undoes the mess Zelena made in the mines.
+  Fact 0.324: Emma uses her magic and one of the crystals to bring Mother Superior out of her coma.
+  Fact 0.325: Regina and Zelena help Emma bring Mother Superior out of her coma.
+  Fact 0.326: Episode 130, 'The Black Fairy', is season episode 19 and was directed by Alrick Riley and written by Jerome Schwartz and Dana Horgan.
+  Fact 0.327: Episode 130 aired on April 30, 2017 and had 3.05 million U.S. viewers.
+  Fact 0.328: The origin of Rumplestiltskin's true destiny is revealed.
+  Fact 0.329: Rumplestiltskin's mother, Fiona, learns from the Blue Fairy and Tiger Lily that he was destined to become The Savior.
+  Fact 0.330: Fiona fears for her son and chooses power over protecting Rumple.
+  Fact 0.331: Fiona becomes the Black Fairy.
+  Fact 0.332: The Blue Fairy banishes Fiona to the Dark Realm.
+  Fact 0.333: In the present, everyone looks for the missing wand.
+  Fact 0.334: Gold brings Gideon and Emma into the Dream World to search for Gideon's heart.
+  Fact 0.335: The events of the flashbacks unfold in the Dream World.
+  Fact 0.336: Gold confronts Fiona.
+  Fact 0.337: Fiona reveals the real reason behind why Gold was abandoned.
+  Fact 0.338: Gold retrieves Gideon's heart.
+  Fact 0.339: Gold tells everyone that the Black Fairy is dead.
+  Fact 0.340: The Black Fairy's death paves the way for Emma and Hook's wedding.
+  Fact 0.341: Gold and Fiona make a deal that will see the Final Battle go forward.
+  Fact 0.342: Emma will be the Savior that fights in the Final Battle.
+  Fact 0.343: Regina helps Zelena adjust to life without her powers.
+  Fact 0.344: Episode 131, 'The Song in Your Heart', is season episode 20 and was directed by Ron Underwood and written by David H. Goodman and Andrew Chambliss.
+  Fact 0.345: Episode 131 aired on May 7, 2017 and had 2.87 million U.S. viewers.
+  Fact 0.346: In the past, Snow makes a wish that grants the entire Enchanted Forest the ability to use the gift of song as a strength.
+  Fact 0.347: The wish also spreads to Oz.
+  Fact 0.348: Regina becomes affected by the wish.
+  Fact 0.349: Regina finds a way to end the wish before the first curse takes place.
+  Fact 0.350: The Blue Fairy, who granted Snow the wish, tells Snow and David that the wish will be part of Emma's destiny.
+  Fact 0.351: In Emma's past, her chance to make use of her talent is held back by being told she'll be alone.
+  Fact 0.352: The weakness of being told she'll be alone comes back to taunt Emma in the present day.
+  Fact 0.353: Fiona returns to use that weakness to take Emma's heart.
+  Fact 0.354: Fiona unleashes a new curse on Emma's wedding day, with help from Gold.
+  Fact 0.355: The curse freezes Emma's family.
+  Fact 0.356: Henry discovers the page in the book that reveals the song in Emma's heart will make her stronger.
+  Fact 0.357: The song embolden Emma.
+  Fact 0.358: The song stops Fiona from crushing Emma's heart.
+  Fact 0.359: Fiona tells Emma that the battle will continue.
+  Fact 0.360: On her wedding day, Emma and Hook finally marry.
+  Fact 0.361: Dark clouds of the Black Fairy's curse erupt from the clock tower at 6:00 PM.
+  Fact 0.362: The dark clouds engulf Emma and Hook.
+  Fact 0.363: The curse sets up the final battle.
+  Fact 0.364: Season episodes 21 and 22, 'The Final Battle', were directed by Steve Pearlman and Ralph Hemecker and written by Edward Kitsis and Adam Horowitz.
+  Fact 0.365: The Final Battle aired on May 14, 2017 and had 2.95 million U.S. viewers.
+  Fact 0.366: Fiona's curse alters Storybrooke.
+  Fact 0.367: Fiona's curse institutionalizes Emma.
+  Fact 0.368: Fiona's curse leaves only Henry and Gold 'awake'.
+  Fact 0.369: Fiona's curse sends Emma's other allies to their home realms.
+  Fact 0.370: The Final Battle begins over Emma's belief.
+  Fact 0.371: If Emma stops believing in the realms of story, they will be consumed by the Darkness and cease to exist.
+  Fact 0.372: If all the realms are destroyed, Fiona would gain unchecked powers.
+  Fact 0.373: If all the realms are destroyed, Fiona would be able to break the Laws of Magic at will.
+  Fact 0.374: In the Enchanted Forest, the banished characters gather at Regina's castle.
+  Fact 0.375: David and Hook obtain a magic bean.
+  Fact 0.376: The Evil Queen sacrifices herself.
+  Fact 0.377: The Evil Queen holds off the Darkness to delay the group's destruction.
+  Fact 0.378: Fiona convinces Emma to destroy the book.
+  Fact 0.379: Henry hand-draws a new book.
+  Fact 0.380: Henry's hand-drawn book restores Emma's belief in time to save everyone in the castle.
+  Fact 0.381: Gold kills Fiona.
+  Fact 0.382: Fiona had hidden Belle and turned her into a coward.
+  Fact 0.383: Gold's killing of Fiona breaks the Curse.
+  Fact 0.384: Breaking the Curse restores everyone's memories.
+  Fact 0.385: Breaking the Curse reunites everyone in Storybrooke.
+  Fact 0.386: Gideon is still under orders to kill Emma.
+  Fact 0.387: Gold attempts to free Gideon's heart.
+  Fact 0.388: A spell cast by the Black Fairy prevents Gold from freeing Gideon's heart.
+  Fact 0.389: Emma lays down her sword, allowing Gideon to impale her.
+  Fact 0.390: Gideon impaling Emma releases Emma's light magic and ends the battle.
+  Fact 0.391: Gold and Emma have both chosen good.
+  Fact 0.392: Gideon is returned to infancy.
+  Fact 0.393: The realms are restored.
+  Fact 0.394: Those who died in the crisis are revived.
+  Fact 0.395: The characters embark on their 'happy beginnings'.
+  Fact 0.396: Many years later in the New Enchanted Forest, an adult Henry vanishes while defending his daughter Lucy from an unidentified entity.
+  Fact 0.397: Guided by Tiger Lily, Lucy travels to Seattle.
+  Fact 0.398: In Seattle, Henry no longer remembers Lucy.
+
+Retrieved items:
+<item 1>
+Once Upon a Time (season 6)
+Emma and Gideon finally meet for the battle , but Emma survives , choosing her own fate . Gideon retreats , proclaiming this far from over . Gold and Belle
+decide to work together for the good of their son . 123 12 `` Murder Most Foul '' Morgan Beggs Jerome Schwartz & Jane Espenson March 12 , 2017 ( 2017 - 03 - 12
+) 3.06 The events of how Robert , the father of David and James , was murdered are detailed in a flashback , in which Robert learns what happened to James after
+he ran away from King George . With help from Rumple , he tracks him to Pleasure Island , but their reunion is cut short by King George , who orders Robert 's
+execution . His death affects David in the present day after he sees visions of Robert and asks Hook to help him , despite his being reformed . When Hook
+becomes concerned that David is taking this investigation too far by going after Albert , he intervenes and brings David back to sanity . Hook is also worried
+about whether David will give him his blessing to marry Emma , but David does .
+</item 1>
+
+<item 2>
+In April 2017, Once Upon a Time creators Adam Horowitz and Edward Kitsis said the season-six finale was designed to give departing characters complete story
+endings. Jennifer Morrison confirmed she would leave, followed by Rebecca Mader. Ginnifer Goodwin, Josh Dallas, Jared Gilmore, and Emilie de Ravin were also
+announced as departing, concluding the stories of Emma, Snow White, Prince Charming, Belle, and Zelena.
+</item 2>
+
+<item 3>
+Once Upon a Time (season 6)
+In April 2017 , Horowitz and Kitsis confirmed that a group of characters will indeed have their stories wrapped up by the end of the season in acknowledging the
+potential cast changes , saying : `` We planned this finale from the beginning of the year , so whoever stays and whoever goes ... all those questions have
+already been dealt with . The audience does not have to fear ( anything feeling ) incomplete . '' On May 8 , Morrison confirmed that she had declined an offer
+to remain on the show and that the sixth season would be her last , signaling the end of Emma 's time on the show as the main protagonist . On May 11 , Rebecca
+Mader announced that she would also be leaving the show at the end of the season , citing creative decisions beyond her control . On May 12 , season six was
+announced to be the last for four additional main actors : Ginnifer Goodwin , Josh Dallas , Jared Gilmore , and Emilie de Ravin . Thus , characters seeing their
+storylines wrapped up in the season six finale include Emma Swan , Snow White , Prince Charming , Belle , and Zelena .
+</item 3>
+
+<item 4>
+Once Upon a Time (season 6)
+Cast and characters ( edit ) Main article : List of Once Upon a Time characters Regular ( edit ) Ginnifer Goodwin as Snow White / Mary Margaret Blanchard
+Jennifer Morrison as Emma Swan Lana Parrilla as Evil Queen / Regina Mills Josh Dallas as Prince Charming / David Nolan Emilie de Ravin as Belle / Lacey Colin
+O'Donoghue as Captain Hook / Killian Jones Jared S. Gilmore as Henry Mills Rebecca Mader as Wicked Witch of the West / Zelena Robert Carlyle as Rumplestiltskin
+/ Mr. Gold Recurring ( edit ) Beverley Elliott as Widow Lucas / Granny Raphael Sbarge as Jiminy Cricket / Dr. Archie Hopper Lee Arenberg as Dreamy / Grumpy /
+Leroy David Paul Grove as Doc Gabe Khouth as Sneezy / Mr. Clark Faustino Di Bauda as Sleepy / Walter Mig Macario as Bashful Geoff Gustafson as Stealthy Tony
+Amendola as Geppetto / Marco Keegan Connor Tracy as the Blue Fairy / Mother Superior Eion Bailey as Pinocchio / August Booth David Anders as Victor Frankenstein
+/ Dr.
+</item 4>
+
+<item 5>
+*Once Upon a Time* season 6 aired 22 episodes from September 2016 to May 2017, returning to a season-one-style format. Storybrooke’s heroes faced the Evil
+Queen, Mr. Hyde, and ultimately the Black Fairy and Final Battle; they prevailed, with adult Henry and daughter Lucy featured in a future-set epilogue. The
+season introduced Aladdin, Jasmine, Jafar, and many other characters, and included a mythology-driven musical episode. Ratings declined overall
+</item 5>
+
+<item 6>
+Once Upon a Time (season 6)
+Existing fictional characters introduced to the series during the season include Aladdin , Princess Jasmine , the Count of Monte Cristo , Captain Nemo , Lady
+Tremaine , Beowulf , Tiger Lily and the Tin Man . Original new characters include Gideon , the Black Fairy , Mary Lydgate , and Robert . The show also
+reintroduced Jafar and Dr. Arthur Lydgate , who previously appeared in Once Upon a Time in Wonderland . This season also marks the final appearance of Emma Swan
+( Jennifer Morrison ) as a series regular . Morrison announced she would be departing the series after the sixth - season finale , but if the series receives a
+seventh season renewal she has agreed to appear in at least one episode . After serving as a series regular for two seasons , Rebecca Mader also announced that
+season six would be her last on the show as a regular . Shortly after , Adam Horowitz and Edward Kitsis announced that original cast members Ginnifer Goodwin ,
+Josh Dallas , and Jared Gilmore , as well as Emilie de Ravin who joined the main cast in season two , would also exit the show at the end of the season .
+</item 6>
+
+<item 7>
+Season 6 of *Once Upon a Time* follows Storybrooke’s residents as they face the Evil Queen and Mr. Hyde after refugees arrive from the Land of Untold Stories.
+Tests of Emma’s Savior abilities lead to the Black Fairy and the prophesied Final Battle. A new curse threatens to destroy the magical realms, but the heroes
+win and gain their happy beginnings. In a far-future epilogue, adult Henry and his daughter Lucy confront a looming curse in the New Enchanted
+</item 7>
+
+<item 8>
+Once Upon a Time (season 6)
+Contents ( hide ) 1 Premise 2 Cast and characters 2.1 Regular 2.2 Recurring 2.3 Guest 3 Episodes 4 Production 4.1 Development 4.1. 1 Musical episode 4.2 Casting
+5 Ratings 6 References 7 External links Premise ( edit ) The residents of Storybrooke are faced with threats from the Evil Queen and Mr. Hyde , both with
+different agendas following the arrival of refugees from the Land of Untold Stories . This leads to events to test Emma 's savior abilities that results in the
+arrival of the Black Fairy to begin the Final Battle that was prophesied centuries ago . As dark and light collides , a new , and darker curse is unleashed ,
+leading to the fall of all the realms with magic . The Final Battle is fought and won , leading to the heroes earning their happy beginnings , but a new
+adventure begins in the far future for an adult Henry involving his daughter Lucy , and another curse looming across the New Enchanted Forest inhabitants .
+</item 8>
+
+<item 9>
+Season 6 of ABC’s fantasy drama *Once Upon a Time* premiered September 25, 2016, and ended May 14, 2017, with 22 episodes. Its principal cast included Ginnifer
+Goodwin, Jennifer Morrison, Lana Parrilla, Josh Dallas, Emilie de Ravin, Colin O’Donoghue, Jared S. Gilmore, Rebecca Mader, and Robert Carlyle. The season
+concluded the show’s main storyline; season 7 was planned
+</item 9>
+
+<item 10>
+Season 6 of *Once Upon a Time* features regulars Ginnifer Goodwin, Jennifer Morrison, Lana Parrilla, Josh Dallas, Emilie de Ravin, Colin O’Donoghue, Jared
+Gilmore, Rebecca Mader and Robert Carlyle. Its recurring and guest cast includes Jaime Murray as the Black Fairy, Giles Matthey as Gideon, Andrew J. West as
+adult Henry, Alison Fernandez as Lucy, and characters from stories such as *Cinderella*, *The
+</item 10>
+=== END ITEM id=e4891cbc4c75b893 ===

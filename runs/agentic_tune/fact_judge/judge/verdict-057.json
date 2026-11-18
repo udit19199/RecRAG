@@ -1,0 +1,31 @@
+[
+{"id": "6a68f7eb2752c3f8", "facts": [
+{"fact": "0.0", "status": "missing"},
+{"fact": "0.1", "status": "missing"},
+{"fact": "0.2", "status": "missing"},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Having to depend much on his weaker arm, Hamlin stayed in contention for the championship four race until the final race in Martinsville."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Having to depend much on his weaker arm, Hamlin stayed in contention for the championship four race until the final race in Martinsville."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Having to depend much on his weaker arm, Hamlin stayed in contention for the championship four race until the final race in Martinsville."}]}
+]},
+{"id": "9102d0c5aeef5918", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 10, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Sam Bankman-Fried is in court for alleged fraud and money laundering while leading"}, {"item": 3, "quote": "SBF taking to the stand in his own trial"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "In January, Bankman-Fried pleaded not guilty to all counts, which include wire fraud, conspiracy to commit money laundering and conspiracy to misuse customer funds."}, {"item": 3, "quote": "sentencing for seven counts tied to fraud and money laundering."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "The prosecution painted a picture of an empire “built on lies” and made a point to show"}, {"item": 9, "quote": "He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+{"fact": "2.3", "status": "missing"},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 9, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]}
+]},
+{"id": "97d79555f23ac29a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "At the time, the music video for the song – which featured a woman with blonde hair - sparked rumours that he and Spears broke up because she allegedly cheated on him."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "At the time, the music video for the song – which featured a woman with blonde hair - sparked rumours that he and Spears broke up because she allegedly cheated on him."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "At the time, the music video for the song – which featured a woman with blonde hair - sparked rumours that he and Spears broke up because she allegedly cheated on him."}]},
+{"fact": "1.0", "status": "missing"},
+{"fact": "1.1", "status": "missing"}
+]}
+]

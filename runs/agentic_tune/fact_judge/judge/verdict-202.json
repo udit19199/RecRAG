@@ -1,0 +1,50 @@
+[
+  {"id": "ff60f55443799ea3", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "That answer ultimately lies with the jury"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "and then Bankman-Fried swapped two very different stories"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 6, "quote": "two very different stories of the former crypto mogul’s sudden rise"}]},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 6, "quote": "different stories of the former crypto mogul’s sudden rise and almost instantaneous fall"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "A conscious criminal"}, {"item": 6, "quote": "The prosecution’s account of the alleged crimes by Bankman-Fried"}]},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "What the jury will see is a nerdy startup founder who acted in “good faith,”"}, {"item": 1, "quote": "Cohen repeatedly harped on Bankman-Fried’s allegedly good-faith actions"}]},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 3, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads"}]}
+  ]},
+  {"id": "f9d0313027fee5bd", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "He also believes that after everything on social media becomes so perfectly curated for us"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "our brains will start to crave things that are not"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "What we have done since then, all the success and failures [matters in our preparation]."}]}
+  ]},
+  {"id": "ad48935c6cc3e84b", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "A “lite” version of Gemini, Gemini Pro, began rolling out to Bard yesterday"}]}
+  ]},
+  {"id": "fe581a442f9a0471", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "After a winless campaign in 2022, the Swans"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "the Swans – led by ex-Collingwood player Chloe Molloy"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "the Swans – led by ex-Collingwood player Chloe Molloy"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season"}]}
+  ]},
+  {"id": "a2a7685b790d5afc", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "“It’s not the NHL that he was playing in the last few years,” Davidson said"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "but the level of performance and how he could control a game and dominate a game in junior — it indicated he was going to be able to do that at some point in the NHL."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "but the level of performance and how he could control a game and dominate a game in junior — it indicated he was going to be able to do that at some point in the NHL."}]},
+    {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 8, "quote": "Evason spent the next several seasons working in the Predators organization as the head coach of their AHL affiliate, the Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others."}]},
+    {"fact": "1.1", "status": "contradicted", "evidence": [{"item": 8, "quote": "Evason spent the next several seasons working in the Predators organization as the head coach of their AHL affiliate, the Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others."}]},
+    {"fact": "1.2", "status": "contradicted", "evidence": [{"item": 8, "quote": "Evason spent the next several seasons working in the Predators organization as the head coach of their AHL affiliate, the Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others."}]},
+    {"fact": "1.3", "status": "contradicted", "evidence": [{"item": 8, "quote": "Evason spent the next several seasons working in the Predators organization as the head coach of their AHL affiliate, the Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others."}]},
+    {"fact": "1.4", "status": "contradicted", "evidence": [{"item": 8, "quote": "Evason spent the next several seasons working in the Predators organization as the head coach of their AHL affiliate, the Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others."}]},
+    {"fact": "1.5", "status": "contradicted", "evidence": [{"item": 8, "quote": "Evason spent the next several seasons working in the Predators organization as the head coach of their AHL affiliate, the Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others."}]},
+    {"fact": "1.6", "status": "contradicted", "evidence": [{"item": 8, "quote": "Evason spent the next several seasons working in the Predators organization as the head coach of their AHL affiliate, the Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others."}]},
+    {"fact": "1.7", "status": "contradicted", "evidence": [{"item": 8, "quote": "Evason spent the next several seasons working in the Predators organization as the head coach of their AHL affiliate, the Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others."}]}
+  ]}
+]

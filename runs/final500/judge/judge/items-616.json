@@ -1,0 +1,463 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "7e3d1114cde4a13b",
+   "gold": [
+    {
+     "sentence": "Victor Ronald Salva (born March 29, 1958) is an American film director and screenwriter.",
+     "facts": {
+      "0.0": "Victor Ronald Salva was born March 29, 1958.",
+      "0.1": "Victor Ronald Salva is an American film director.",
+      "0.2": "Victor Ronald Salva is an American screenwriter."
+     }
+    },
+    {
+     "sentence": "Emilio \"El Indio\" Fernández (born Emilio Fernández Romo, ] ; March 26, 1904 – August 6, 1986) was a Mexican film director, actor and screenwriter.",
+     "facts": {
+      "1.0": "Emilio \"El Indio\" Fernández was born Emilio Fernández Romo.",
+      "1.1": "Emilio \"El Indio\" Fernández was born March 26, 1904.",
+      "1.2": "Emilio \"El Indio\" Fernández died August 6, 1986.",
+      "1.3": "Emilio \"El Indio\" Fernández was a Mexican film director.",
+      "1.4": "Emilio \"El Indio\" Fernández was a Mexican actor.",
+      "1.5": "Emilio \"El Indio\" Fernández was a Mexican screenwriter."
+     }
+    }
+   ],
+   "items": [
+    "Victor Salva\nVictor Ronald Salva (born March 29, 1958) is an American film director and screenwriter.\n\n He directed the films \"Powder\" (1995) and \"Jeepers Creepers\" (2001).\n\n The latter of these has been expanded into a franchise with two sequels that he has also directed.",
+    "Columba Domínguez\nColumba Domínguez Adalid (March 4, 1929 – August 13, 2014) was a Mexican actress, singer, and painter.\n\n Considered a crucial figure in the Golden Age of Mexican cinema, she was one of the muses of the film director Emilio Fernández, with whom she was romantically linked for several years.\n\n She is remembered particularly for her performance in the film \"Pueblerina\" (1949), which is considered one of the jewels of the Mexican Cinema.",
+    "José Antonio Santamaría Mikel Vaqueriza\nJosé Antonio Santamaría Mikel Vaqueriza (born 16 March 1946 in San Sebastián, Guipúzcoa, Spain; died 19 January 1993) was a Spanish footballer.\n\n During his career as a professional footballer, Santamaría played for SD Eibar (1963 to 1964), Real Sociedad (1964 to 1967), Real Sociedad (1967 to 1971), Hercules CF (1971 to 1974) finishing his career at CE Sabadell FC (1974 to 1975).\n\n After retiring from football he had a career as an entrepreneur in the hospitality sector.\n\n He was killed in an attack committed by ETA in 1993.",
+    "Comedy in the Golden Age of Mexican cinema\nSadly, it was not as successful as many directors and film maker though it would be.\n\n Many failed to correctly synchronize the audio with the picture.\n\n Although to some extent it may have been unsuccessful, it is agreeable that it helped revolutionize film in Latin America.\n\n Mexico’s film industry takes its height post “El Cine Sonoro” to what is known as “The Golden Age”.\n\n Many film members consider this one of the most successful eras in the history of Mexican cinema.\n\n Many recognize the films of this era when they see black and white.\n\n It is also important to note that the films also portrayed social issues.\n\n Some of the most influential directors and actors are Emilio Fernández, Raul De Anda, Roberto B. Cervenna, Cantinflas, Vitola, Tin Tan, etc.\n\n The focus of this article will be on some of top grossing comedian actors of the time Cantinflas, Tin Tan, Clavillazo and others.",
+    "Antonio De Carlo\nAntonio De Carlo, born (1967--) 4, 1967 (age 50 ) in Tijuana, Baja California, Mexico, is a Mexican actor also known as Antonio in the late 1980s and early 1990s.\n\n He won an Emmy Award in 2005-2006.\n\n He is president and founder of the \"Fundación Cultura Sin Fronteras AC\".\n\n After twelve years out of show business, in 2012 he returned to the soap operas performing \"Magic Dragon\" one of the main characters for \"Miss XV\", a co-production from Televisa México and Nickelodeon directed and produced by Pedro Damian.\n\n He is also part of the cast of \"Muchacha Italiana Viene a Casarse\", directed by Pedro Damian (Televisa, México).",
+    "Emilio Fernández\nEmilio \"El Indio\" Fernández (born Emilio Fernández Romo, ] ; March 26, 1904 – August 6, 1986) was a Mexican film director, actor and screenwriter.\n\n He was one of the most prolific film directors of the Golden Age of Mexican cinema in the 1940s and 1950s.\n\n He is best known for his work as director of the film \"Maria Candelaria\" (1944), which won the Palme d'Or award at the 1946 Cannes Film Festival.\n\n As an actor, he worked in numerous film productions in Mexico and in Hollywood.",
+    "Valerio Fioravanti\nGiuseppe Valerio \"Giusva\" Fioravanti (born 28 March 1958) is an Italian who, with Francesca Mambro, was a leading figure in a far right terrorist group \"Nuclei Armati Rivoluzionari\" (\"Armed Revolutionary Nuclei\" or NAR).\n\n Fioravanti appeared in films and television from a young age, and in his early teens was the most famous child in Italy.\n\n He and Mambro were fugitives wanted for terrorist offences by their early twenties, they spent a further period on the run while wanted for the Bologna bombing.\n\n Both were captured after gunfights with police.\n\n Although Fioravanti, Mambro and a third NAR mamber were convicted of the bombing, there were those who thought that a higher level of the conspiracy was never uncovered.\n\n Fioravanti and Mambro admit carrying out terrorist murders, but have always denied any involvement in the Bologna station bomb.",
+    "Fernando Fernández (actor)\nFernando Fernández \"El Crooner de México\" (1916–1999) was a Mexican actor and singer.\n\n He was born on November 9, 1916, in Monterrey, Mexico, and died in Mexico City, Mexico, on November 24, 1999.\n\n Fernando was the son of Eloisa Reyes.\n\n He was brother of the famous film director Emilio Fernández and actor Jaime Fernández.\n\n He was married to singer Lupita Palomera, who died in 2008.\n\n Fernando Fernández was known as \"the Crooner of Mexico.\"",
+    "Jaime Fernández (actor)\nJaime Fernández Reyes (December 6, 1937 – April 15, 2005) was a Mexican actor.\n\n Over his career, he won 3 Silver Ariel awards - the Mexican equivalent of the Oscar - including one for what is arguably his best-known role, playing Friday in Luis Buñuel's \"Robinson Crusoe\".\n\n He appeared in over 200 films and served as the General Secretary of the Mexican actors' union for 11 years.\n\n His older brother was actor/director Emilio Fernández.",
+    "Filiberto Ojeda Ríos\nFiliberto Ojeda Ríos (April 26, 1933 – September 23, 2005) was the commander-in-chief (\"Responsable General\") of the Boricua Popular Army (\"Ejército Popular Boricua, a.k.a., Los Macheteros\").\n\n According to an unsigned article in the \"Los Angeles Times\", Los Macheteros was “a terrorist group seeking Puerto Rico's independence.”\n\n The group campaigned for, and supported, the independence of Puerto Rico from the United States.\n\n In 2001, FBI Director Louis J. Freeh claimed the group was linked to acts of terrorism, but Ronald Fernandez, scholar of Puerto Rican history, suggests such labeling was an act of political convenience by the United States Government, intended to \"shift the blame for any attacks on U.S. policy or personnel from us to them\".\n\n Ríos was also a founder of the FALN.\n\n In a 1983 New York Times article, Robert McFadden described the FALN as a Puerto Rican terrorist organization responsible for bombings during the 1970s and early 1980s \"in the name of Puerto Rican independence\"."
+   ]
+  },
+  {
+   "id": "9c8d22dc472b0de9",
+   "gold": [
+    {
+     "sentence": " They competed at the 2015 Pacific Games, where they finished with an 0-4 record.",
+     "facts": {
+      "0.0": "The unnamed subject competed at the 2015 Pacific Games",
+      "0.1": "The unnamed subject finished the 2015 Pacific Games with an 0-4 record"
+     }
+    },
+    {
+     "sentence": "Basketball at the 2015 Pacific Games in Port Moresby, Papua New Guinea was held at the BSP Arena and PNG Power Dome on 3–12 July 2015.",
+     "facts": {
+      "1.0": "Basketball at the 2015 Pacific Games was held in Port Moresby, Papua New Guinea",
+      "1.1": "Basketball at the 2015 Pacific Games was held at the BSP Arena and PNG Power Dome",
+      "1.2": "Basketball at the 2015 Pacific Games was held on 3 to 12 July 2015"
+     }
+    }
+   ],
+   "items": [
+    "Vanuatu national under-23 football team\nThe Vanuatu national under-23 football team, also known as Vanuatu Cyclone, represents Vanuatu at U23 tournaments.\n\n The team is considered to be the feeder team for the Vanuatu national football team.\n\n They are controlled by the Vanuatu Football Federation.\n\n The team has gained notoriety for thrashing Micronesia's side 46–0 in the 2015 Pacific Games.",
+    "Australia at the 2015 Pacific Games\nAustralia competed at the 2015 Pacific Games in Port Moresby, Papua New Guinea from 4 to 18 July 2015.\n\n Australia qualified 43 athletes.\n\n It was the first time that Australia has competed in the Pacific Games.",
+    "Kiribati national basketball team\nThe Kiribati national basketball team are the basketball side that represent Kiribati in international competitions.\n\n They competed at the 2015 Pacific Games, where they finished with an 0-4 record.",
+    "2015 Pacific Games\nThe 2015 Pacific Games was held in Port Moresby, Papua New Guinea, from 4 to 18 July 2015.\n\n It was the fifteenth staging of the Pacific Games.",
+    "Powerlifting at the 2015 Pacific Games\nPowerlifting at the 2015 Pacific Games was held from 9–10 July 2015 in the Sir John Guise Indoor Power Dome at Port Moresby, Papua New Guinea.\n\n The host nation Papua New Guinea was the dominant team, particularly in the women's divisions where it claimed six of the seven possible gold medals.\n\n Nauru was the strongest team in the men's divisions, winning four of the eight weight categories.\n\n Telupe Iosefa received the first ever gold medal won by Tuvalu at the Pacific Games in the 120 kg male division.",
+    "Women's football at the 2015 Pacific Games\nThe 2015 Pacific Games women's football tournament was the 4th edition of the Pacific Games women's football tournament.\n\n The women's football tournament was held in Port Moresby, Papua New Guinea between 6–16 July 2015 as part of the 2015 Pacific Games.\n\n The tournament was open to full women's national teams (unlike the men's tournament, which was age-restricted).",
+    "Nicolas N'Godrela\nNicolas N'Godrela (born (6 October 1984) is a New Caledonian tennis player.\n\n He won the Men's singles and Men's doubles gold medal at the 2015 Pacific Games.\n\n Apart from that, he was also part of the New Caledonian Tennis Team which won Gold at the 2015 Pacific Games Men's Team Event.",
+    "Men's football at the 2015 Pacific Games\nThe 2015 Pacific Games men's football tournament was the 14th edition of the Pacific Games men's football tournament.\n\n The men's football tournament was held in Port Moresby, Papua New Guinea between 3–17 July 2015 as part of the 2015 Pacific Games.\n\n The tournament was age-restricted and open to men's under-23 national teams only.",
+    "Kiribati at the 2015 Pacific Games\nKiribati competed at the 2015 Pacific Games in Port Moresby, Papua New Guinea from 4 to 18 July 2015.\n\n A total of 86 competitors for Kiribati were listed as of 4 July 2015.",
+    "Basketball at the 2015 Pacific Games\nBasketball at the 2015 Pacific Games in Port Moresby, Papua New Guinea was held at the BSP Arena and PNG Power Dome on 3–12 July 2015."
+   ]
+  },
+  {
+   "id": "eeb792b4c5a5b760",
+   "gold": [
+    {
+     "sentence": "Kenneth William \"Ken\" Kwapis (born August 17, 1957) is an American film and television director and screenwriter.",
+     "facts": {
+      "0.0": "Kenneth William Kwapis, also known as Ken Kwapis, was born on August 17, 1957.",
+      "0.1": "Ken Kwapis is an American film director.",
+      "0.2": "Ken Kwapis is an American television director.",
+      "0.3": "Ken Kwapis is an American screenwriter."
+     }
+    },
+    {
+     "sentence": " He specialized in the single-camera sitcom in the 1990s and 2000s and has directed feature films such as \"Sesame Street Presents Follow That Bird\" (1985), \"The Sisterhood of the Traveling Pants\" (2005), and \"He's Just Not That into You\" (2009).",
+     "facts": {
+      "1.0": "He specialized in the single-camera sitcom in the 1990s.",
+      "1.1": "He specialized in the single-camera sitcom in the 2000s.",
+      "1.2": "He has directed feature films.",
+      "1.3": "He directed Sesame Street Presents Follow That Bird, released in 1985.",
+      "1.4": "He directed The Sisterhood of the Traveling Pants, released in 2005.",
+      "1.5": "He directed He's Just Not That into You, released in 2009."
+     }
+    },
+    {
+     "sentence": " As a filmmaker, he has directed films such as Valle de Lágrimas (2006) and Peace Grows (2004).",
+     "facts": {
+      "2.0": "As a filmmaker, he has directed Valle de Lágrimas, released in 2006.",
+      "2.1": "As a filmmaker, he has directed Peace Grows, released in 2004."
+     }
+    }
+   ],
+   "items": [
+    "Chris Gorak\nChris Gorak is an American film director who started as an art director and production designer.\n\n He directed the 2006 film \"Right at Your Door\" and the 2011 film \"The Darkest Hour\".\n\n Gorak began working in the film industry in the 1990s as an art director.\n\n In the 2000s, he worked on several films as production designer before becoming a film director.",
+    "Takeshi Fukunaga\nTakeshi Fukunaga is a Japanese filmmaker based in New York.\n\n His first feature film, \"Out of My Hand\" (2015) premiered in the Panorama section at the 65th Berlin International Film Festival and won the Top Prize at the 2015 Los Angeles Film Festival.\n\n The film was later released worldwide through Ava DuVernay’s distribution company, ARRAY.\n\n Takeshi was nominated for the John Cassavetes Award at the 2016 Independent Spirit Awards.\n\n In 2017, he was selected for The Residence by Cannes Film Festival's Cinéfondation to develop his second feature film.",
+    "John Bailey (cinematographer)\nJohn Ira Bailey, A.S.C. (born August 10, 1942) is an American cinematographer and film director best known for his collaborations with directors Paul Schrader, Lawrence Kasdan, Michael Apted, and Ken Kwapis.\n\n In August 2017, Bailey was elected President of the Academy of Motion Picture Arts and Sciences for a four-year term.",
+    "Leonard Schrader\nLeonard Schrader (November 30, 1943 – November 2, 2006) was an American screenwriter and director, most notable for his ability to write Japanese language films and for his many collaborations with his brother, Paul Schrader.\n\n He earned an Academy Award Nomination for the screenplay he wrote for the film \"Kiss of the Spider Woman\".",
+    "Peter Jackson\nSir Peter Robert Jackson {'1': \", '2': \", '3': \", '4': \"} (born 31 October 1961) is a New Zealand film director, screenwriter and film producer.\n\n He is best known as the director, writer, and producer of \"The Lord of the Rings\" trilogy (2001–03) and \"The Hobbit\" trilogy (2012–14), both of which are adapted from the novels of the same name by J. R. R. Tolkien.\n\n Other notable films include the critically lauded drama \"Heavenly Creatures\" (1994), the mockumentary \"Forgotten Silver\" (1995), the horror comedy \"The Frighteners\" (1996), the epic monster remake film \"King Kong\" (2005), and the supernatural drama film \"The Lovely Bones\" (2009).\n\n He also produced \"District 9\" (2009), \"The Adventures of Tintin: The Secret of the Unicorn\" (2011), and the documentary \"West of Memphis\" (2012).",
+    "The Private Eyes (1976 film)\nThe Private Eyes is a 1976 Hong Kong comedy film written, directed by and starring Michael Hui and co-starring his brothers, Samuel Hui and Ricky Hui, and also starring Shih Kien and Richard Ng in his second film role.\n\n John Woo was the production designer and also co-director though he was uncredited.\n\n Sammo Hung served as the film's action director and Jackie Chan was also a stuntman.\n\n This is the third film of the Hui Brothers and it is the first film that established the Hui Brothers' comedies internationally.",
+    "Paul Schrader\nPaul Joseph Schrader (born July 22, 1946) is an American screenwriter, film director, and film critic.\n\n Schrader wrote or co-wrote screenplays for four Martin Scorsese films: \"Taxi Driver\" (1976), \"Raging Bull\" (1980), \"The Last Temptation of Christ\" (1988), and \"Bringing Out the Dead\" (1999).\n\n Schrader has also directed 18 feature films, including his directing debut crime drama, \"Blue Collar\" (co-written with his brother, Leonard Schrader), the crime drama \"Hardcore\" (a loosely autobiographical film also written by Schrader), his 1982 remake of the horror classic \"Cat People\", the crime drama \"American Gigolo\" (1980), the biographical drama \"\" (1985), the cult film \"Light Sleeper\" (1992), the drama \"Affliction\" (1997), the biographical film \"Auto Focus\" (2002), and the erotic dramatic thriller \"The Canyons\" (2013).",
+    "Ken Kwapis\nKenneth William \"Ken\" Kwapis (born August 17, 1957) is an American film and television director and screenwriter.\n\n He specialized in the single-camera sitcom in the 1990s and 2000s and has directed feature films such as \"Sesame Street Presents Follow That Bird\" (1985), \"The Sisterhood of the Traveling Pants\" (2005), and \"He's Just Not That into You\" (2009).",
+    "John Dunning (film producer)\nJohn Dunning (April 27, 1927–September 19, 2011) was a pioneering Canadian film producer from Montreal who co-founded the Canadian film production company Cinépix and produced early works by notable Canadian directors David Cronenberg and Ivan Reitman.\n\n Dunning launched Cinépix with partner André Link in Montreal in the early 1960s.\n\n Their biggest commercial success—and the first Canadian box office hit—came with Reitman’s \"Meatballs\" (1979).",
+    "Jon Paul Puno\nJon Paul Puno (born 1985) is an American filmmaker and classical crossover singer.\n\n As a filmmaker, he has directed films such as Valle de Lágrimas (2006) and Peace Grows (2004).\n\n And also played a small role in the 2006 movie I Will Always Love You (film)."
+   ]
+  },
+  {
+   "id": "8f67332422653a7c",
+   "gold": [
+    {
+     "sentence": "Mirpur University of Science & Technology (میرپور یونیورسٹی براۓ سائنس اور ٹیکنولوجی) (MUST) was formerly a constituent college of University of Azad Jammu and Kashmir as University College of Engineering & Technology Mirpur (UCET Mirpur).",
+     "facts": {
+      "0.0": "Mirpur University of Science & Technology (MUST) was formerly a constituent college of University of Azad Jammu and Kashmir.",
+      "0.1": "The Urdu name of Mirpur University of Science & Technology is میرپور یونیورسٹی براۓ سائنس اور ٹیکنولوجی.",
+      "0.2": "Mirpur University of Science & Technology was formerly named University College of Engineering & Technology Mirpur (UCET Mirpur)."
+     }
+    },
+    {
+     "sentence": "The University of Debrecen (Hungarian: \"Debreceni Egyetem\" ) is a university located in Debrecen, Hungary.",
+     "facts": {
+      "1.0": "The University of Debrecen is a university located in Debrecen, Hungary.",
+      "1.1": "The Hungarian name of the University of Debrecen is 'Debreceni Egyetem'."
+     }
+    }
+   ],
+   "items": [
+    "Graph query row:\nuniversity: University of Debrecen\nuniversity_status: university\nlocation: Debrecen\ncountry: Hungary",
+    "Albanian University in Berat\nThrough presentations, research and exchange, the University directs and encourages the identification and development of projects that will once again consolidate its primary purpose, scientific development, and research toward better quality.",
+    "Albanian University in Berat\nThe University of Berat is a private institution, independent and secular Higher Education, which operates the state fee.\n\n Licensed by the Council of Ministers, no. 697 dated 18.06.2009, he opened the doors in the academic year 2009- 2010, offering programs in two faculties: Faculty of Social Sciences Programs in Science Teaching Legal, Political Science and Psychology General Administration and the Faculty of Economics with Learning programs in Banking and Finance-Business Administration.\n\n During the first academic year, about 1,000 students attended studies.\n\n A year later, this new institution offering undergraduate degrees in study programs: Preschool Teacher Education, Primary Education Teacher, English Language, Nursing, Engineering Computer and Information Technology, thus finalizing the 2010-2011 academic year with the opening of two new faculties: Faculty of Medical Sciences and the Faculty of Architecture and Inxhinierive.\n\n Academic Year 2010-2011 finds the University Berat with about 2600 students in the first cycle of study.\n\n Since the first year of its inception, the institution pointed at the center of academic life, the promotion of intellectual product and melting learning and research.",
+    "Mirpur University of Science and Technology\nMirpur University of Science & Technology (میرپور یونیورسٹی براۓ سائنس اور ٹیکنولوجی) (MUST) was formerly a constituent college of University of Azad Jammu and Kashmir as University College of Engineering & Technology Mirpur (UCET Mirpur).\n\n It is a state university and the President of Azad Jammu & Kashmir is the Chancellor of the university.\n\n The Vice-Chancellor is the executive head and manages the university functions.",
+    "Dalhousie University\nDalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick.\n\n Dalhousie offers more than 4,000 courses and 180 degree programs in twelve undergraduate, graduate, and professional faculties.\n\n The university is a member of the U15, a group of research-intensive universities in Canada.",
+    "University of Debrecen\nThe University of Debrecen (Hungarian: \"Debreceni Egyetem\" ) is a university located in Debrecen, Hungary.\n\n It is the oldest continuously operating institution of higher education in Hungary (since 1538).\n\n The university has a well established programme in the English language for international students, particularly in the Medical field, which first established education in English in 1986.\n\n There are nearly 4000 international students studying at the university.",
+    "Graph query row:\nuniversity: Mirpur University of Science and Technology\nuniversity_status: state university\nlocation: None\ncountry: None",
+    "Hamdard University\nHamdard University (Urdu: ) is a private research university with campuses in Karachi and Islamabad, Pakistan.\n\n It was founded in 1991 by the renowned philanthropist Hakim Said of the Hamdard Foundation.\n\n Hamdard is one of the first and the oldest private institutions of higher education in Pakistan.\n\n In Karachi, Hamdard University is the largest private research university with a campus area of over 350 acres.",
+    "University of Delaware\nThe University of Delaware (colloquially \"UD\") is the largest university in Delaware.\n\n The main campus is in Newark, with satellite campuses in Dover, Wilmington, Lewes, and Georgetown.\n\n It is considered a large institution with approximately 18,500 undergraduate and 4,500 graduate students. UD is a privately governed university which receives public funding for being a land-grant, sea-grant, space-grant and urban-grant state-supported research institution.",
+    "Bangladesh University of Business and Technology\nBangladesh University of Business and Technology (Bengali: বাংলাদেশ ইউনিভার্সিটি অফ বিজনেস অ্যান্ড টেকনোলজি ) or BUBT is one of the eight private universities to receive the green Signal from the government, located in Mirpur, Dhaka, Bangladesh.\n\n The university was established under the Private University Act 1992.\n\n BUBT is regulated by the Bangladesh University Grants Commission (UGC)."
+   ]
+  },
+  {
+   "id": "ea8432a1ace70b0e",
+   "gold": [
+    {
+     "sentence": "Blinding Edge Pictures is an American film production company, founded in 2000 by M. Night Shyamalan, which is known for producing films written and directed by Shyamalan like \"Unbreakable\" (2000), \"Signs\" (2002), \"The Village\" (2004), \"The Happening\" (2008), \"After Earth\" (2013), \"The Visit\" (2015) and \"Split\" (2017).",
+     "facts": {
+      "0.0": "Blinding Edge Pictures is an American film production company.",
+      "0.1": "Blinding Edge Pictures was founded in 2000 by M. Night Shyamalan.",
+      "0.2": "Blinding Edge Pictures is known for producing films written and directed by Shyamalan.",
+      "0.3": "Blinding Edge Pictures produced Unbreakable (2000), written and directed by Shyamalan.",
+      "0.4": "Blinding Edge Pictures produced Signs (2002), written and directed by Shyamalan.",
+      "0.5": "Blinding Edge Pictures produced The Village (2004), written and directed by Shyamalan.",
+      "0.6": "Blinding Edge Pictures produced The Happening (2008), written and directed by Shyamalan.",
+      "0.7": "Blinding Edge Pictures produced After Earth (2013), written and directed by Shyamalan.",
+      "0.8": "Blinding Edge Pictures produced The Visit (2015), written and directed by Shyamalan.",
+      "0.9": "Blinding Edge Pictures produced Split (2017), written and directed by Shyamalan."
+     }
+    },
+    {
+     "sentence": "Unbreakable is a 2000 American superhero thriller film written, produced, and directed by M. Night Shyamalan, and starring Bruce Willis and Samuel L. Jackson, alongside Robin Wright and Spencer Treat Clark.",
+     "facts": {
+      "1.0": "Unbreakable is a 2000 American superhero thriller film.",
+      "1.1": "Unbreakable was written by M. Night Shyamalan.",
+      "1.2": "Unbreakable was produced by M. Night Shyamalan.",
+      "1.3": "Unbreakable was directed by M. Night Shyamalan.",
+      "1.4": "Unbreakable stars Bruce Willis.",
+      "1.5": "Unbreakable stars Samuel L. Jackson.",
+      "1.6": "Robin Wright is in the cast of Unbreakable.",
+      "1.7": "Spencer Treat Clark is in the cast of Unbreakable."
+     }
+    }
+   ],
+   "items": [
+    "Cop Out (2010 film)\nCop Out is a 2010 American buddy cop action-comedy film directed and edited by Kevin Smith, written by Mark and Robb Cullen and starring Bruce Willis, Tracy Morgan, Kevin Pollak and Seann William Scott.\n\n The plot revolves around two veteran NYPD partners (Willis and Morgan) on the trail of a stolen, rare, mint-condition baseball card who find themselves up against a relentless, memorabilia-obsessed bloodthirsty gangster.\n\n This is the first film that Smith directed that he did not also write.\n\n Upon its release, the film was met with negative reviews by critics and underperformed at the box office.\n\n It is nevertheless Kevin Smith's highest grossing film.",
+    "Graph query row:\nfilm: Unbreakable\nstars: []",
+    "In Country\nIn Country is a 1989 American drama film produced and directed by Norman Jewison, starring Bruce Willis and Emily Lloyd.\n\n The screenplay by Frank Pierson and Cynthia Cidre was based on the novel by Bobbie Ann Mason.\n\n The original music score was composed by James Horner.\n\n Willis earned a best supporting actor Golden Globe nomination for his role.",
+    "Die Hard with a Vengeance\nDie Hard with a Vengeance is a 1995 American action film and the third in the \"Die Hard\" film series.\n\n It was co-produced and directed by John McTiernan (who directed \"Die Hard\"), written by Jonathan Hensleigh, and stars Bruce Willis as New York City Police Department Lieutenant John McClane, Samuel L. Jackson as McClane's reluctant partner Zeus Carver, and Jeremy Irons as Simon Gruber.\n\n It was released on May 19, 1995, five years after \"Die Hard 2\", becoming the highest-grossing film at the worldwide box-office that year, but received mixed reviews.\n\n It was followed by \"Live Free or Die Hard\" and \"A Good Day to Die Hard\" in 2007 and 2013, respectively.",
+    "Last Man Standing (1996 film)\nLast Man Standing is a 1996 American action thriller film written and directed by Walter Hill and starring Bruce Willis, Christopher Walken and Bruce Dern.\n\n It is a credited remake of Akira Kurosawa's \"Yojimbo\".",
+    "The Whole Nine Yards (film)\nThe Whole Nine Yards is a 2000 American-Canadian crime comedy film directed by Jonathan Lynn and starring Bruce Willis, Matthew Perry, Amanda Peet, Michael Clarke Duncan and Natasha Henstridge.\n\n The title derives from a popular expression of uncertain origin.\n\n A sequel, \"The Whole Ten Yards\", was released in 2004.",
+    "Unbreakable (film)\nUnbreakable is a 2000 American superhero thriller film written, produced, and directed by M. Night Shyamalan, and starring Bruce Willis and Samuel L. Jackson, alongside Robin Wright and Spencer Treat Clark.\n\n The movie is the first installment in a trilogy.\n\n In \"Unbreakable\", a security guard named David Dunn survives a horrific train crash.\n\n After the incident, with the help of a manipulative disabled comic book shop owner named Elijah Price, he learns that he possesses superhuman powers.\n\n As Dunn explores and reluctantly confronts his powers while trying to navigate a difficult family life, he begins to fight crime and learns the true nature of Elijah Price.",
+    "Blinding Edge Pictures\nBlinding Edge Pictures is an American film production company, founded in 2000 by M. Night Shyamalan, which is known for producing films written and directed by Shyamalan like \"Unbreakable\" (2000), \"Signs\" (2002), \"The Village\" (2004), \"The Happening\" (2008), \"After Earth\" (2013), \"The Visit\" (2015) and \"Split\" (2017).\n\n In 2015, the company released its first television series \"Wayward Pines\".",
+    "Striking Distance\nStriking Distance is a 1993 American action thriller film starring Bruce Willis as Pittsburgh Police homicide detective Thomas Hardy.\n\n The film co-stars Sarah Jessica Parker, Dennis Farina, and Tom Sizemore.\n\n It was directed by Rowdy Herrington and written by Herrington and Marty Kaplan.\n\n The film was shot on location throughout Pittsburgh; its early title was \"Three Rivers\".",
+    "Mercury Rising\nMercury Rising is a 1998 American political action thriller film starring Bruce Willis and Alec Baldwin.\n\n Directed by Harold Becker, the movie is based on Ryne Douglas Pearson's 1996 novel originally published as \"Simple Simon\".\n\n Willis plays Art Jeffries, an undercover FBI agent who protects a 9-year-old boy with autism who is targeted by government assassins after he cracks a top secret government code."
+   ]
+  },
+  {
+   "id": "4ccd80e88ae82448",
+   "gold": [
+    {
+     "sentence": "The Nassau Herald is a weekly newspaper serving the Five Towns communities of Nassau County – Lawrence, Woodmere, Hewlett, Cedarhurst, Inwood and Atlantic Beach.",
+     "facts": {
+      "0.0": "The Nassau Herald is a weekly newspaper.",
+      "0.1": "The Nassau Herald serves the Five Towns communities of Nassau County.",
+      "0.2": "The Five Towns communities of Nassau County are Lawrence, Woodmere, Hewlett, Cedarhurst, Inwood, and Atlantic Beach."
+     }
+    },
+    {
+     "sentence": "Lawrence is a village in Nassau County, New York in the United States.",
+     "facts": {
+      "1.0": "Lawrence is a village.",
+      "1.1": "Lawrence is in Nassau County, New York, United States."
+     }
+    },
+    {
+     "sentence": " As of the 2010 United States Census, the village population was 6,483.",
+     "facts": {
+      "2.0": "As of the 2010 United States Census, the population of the village of Lawrence was 6,483."
+     }
+    }
+   ],
+   "items": [
+    "New York State Route 108\nNew York State Route 108 (NY 108) is a 1.72 mi north–south state highway located on the Suffolk County side of the Suffolk–Nassau county line on Long Island, New York, in the United States.\n\n It is a spur route connecting NY 25A in Cold Spring Harbor to the Cold Spring Harbor station on the Long Island Rail Road's Port Jefferson Branch via Harbor Road.\n\n Harbor Road terminates at an intersection with Woodbury Road, on the Nassau County line, which carries County Route 11 to the east and unsigned County Route 12 to the west.\n\n NY 108, assigned in the early 1930s, is the shortest state highway on Long Island.",
+    "The Hudson Reporter\nThe Hudson Reporter is a newspaper chain based in Hudson County, New Jersey.\n\n It is the only weekly newspaper chain in Hudson County and one of only two newspaper companies in this busy metropolitan area.\n\n \"The Hudson Reporter\" publications focus on local politics and community news.\n\n In addition to articles written by the staff, the papers print readers' letters to the editor.\n\n The oldest newspaper in the chain is the \"Hoboken Reporter\", founded in 1983.",
+    "Great Neck, New York\nGreat Neck is a region on Long Island, New York, that covers a peninsula on the North Shore of Long Island, which includes the villages of Great Neck, Great Neck Estates, Great Neck Plaza, and others, as well as an area south of the peninsula near Lake Success and the border territory of Queens.\n\n The incorporated village of Great Neck had a population of 9,989 at the 2010 census, while the larger Great Neck area comprises a residential community of some 40,000 people in nine villages and hamlets in the town of North Hempstead, of which Great Neck is the northwestern quadrant.\n\n Great Neck has five ZIP Codes (11020–11024), and one school district.",
+    "Lawrence, Nassau County, New York\nLawrence is a village in Nassau County, New York in the United States.\n\n As of the 2010 United States Census, the village population was 6,483.",
+    "Great Neck School District\nThe Great Neck School District is a comprehensive community public school district primarily serving students in Great Neck, New York.\n\n It also serves students in some parts of Manhasset and New Hyde Park.\n\n It is Union Free School District Number 7 in the Town of North Hempstead, Nassau County, New York, United States, on Long Island.",
+    "Ronkonkoma, New York\nRonkonkoma ( ) is a hamlet and census-designated place (CDP) on Long Island in the Town of Islip, New York, United States.\n\n The population of the CDP was 19,082 at the 2010 census.",
+    "Anton Media Group\nAnton Media Group, formerly Anton Community Newspapers, and also known by its legal name Long Island Community Newspapers, Inc. is a print media company based in Mineola, NY on Long Island in Nassau County and produces 17 weekly newspapers in Nassau County as well as \"Long Island Weekly\" and special sections such as Healthy Living, Camp & School, and Dining Guides.\n\n Anton Community Newspapers is one of the largest privately owned newspaper companies in New York State.",
+    "Floral Park, New York\nFloral Park is an incorporated village in Nassau County, New York, United States, on Long Island.\n\n The neighborhood of Floral Park in the New York City borough of Queens, is adjacent to the village.\n\n The village is at the western border of Nassau County, and is located mainly in the Town of Hempstead, while the section north of Jericho Turnpike is within the Town of North Hempstead.\n\n The population as of the US Census of 2010 is 15,863.",
+    "Nassau Herald\nThe Nassau Herald is a weekly newspaper serving the Five Towns communities of Nassau County – Lawrence, Woodmere, Hewlett, Cedarhurst, Inwood and Atlantic Beach.\n\n It is part of the Long Island Herald newspaper chain, which includes The Jewish Star and The Oyster Bay Guardian is owned by Richner Communications, and covers Nassau County, New York.",
+    "Old Country Road\nOld Country Road is a major east–west thoroughfare through central Nassau County and extending into western Suffolk County on Long Island, New York.\n\n It serves many of the major shopping centers in central Nassau County including Roosevelt Field Mall.\n\n The road also forms part of the border between the towns of Hempstead and North Hempstead.\n\n In Nassau County, Old Country Road is county-maintained as the unsigned County Route 25 (CR 25) west of Round Swamp Road."
+   ]
+  },
+  {
+   "id": "6185880da249a012",
+   "gold": [
+    {
+     "sentence": "Pulandian District () is one of the seven districts under the administration of Dalian, located in the south of Liaoning province, People's Republic of China.",
+     "facts": {
+      "0.0": "Pulandian District is one of the seven districts under the administration of Dalian.",
+      "0.1": "Pulandian District is located in the south of Liaoning province, People's Republic of China."
+     }
+    },
+    {
+     "sentence": "Hailar District (Mongolian: ᠬᠠᠶᠢᠯᠠᠷ ᠲᠣᠭᠣᠷᠢᠭ \"Qayilar toɣoriɣ\" Хайлаар тойрог, Cyrillic: Хайлаар дүүрэг, \"Khailaar düüreg\"; ) is an urban district that serves as the seat of the prefecture-level city Hulunbuir in northeastern Inner Mongolia, China.",
+     "facts": {
+      "1.0": "Hailar District's Mongolian name is ᠬᠠᠶᠢᠯᠠᠷ ᠲᠣᠭᠣᠷᠢᠭ, romanized as Qayilar toɣoriɣ.",
+      "1.1": "Hailar District's Mongolian name in Cyrillic script is Хайлаар тойрог.",
+      "1.2": "Hailar District's Cyrillic name is Хайлаар дүүрэг, romanized as Khailaar düüreg.",
+      "1.3": "Hailar District is an urban district.",
+      "1.4": "Hailar District serves as the seat of the prefecture-level city Hulunbuir.",
+      "1.5": "Hailar District is located in northeastern Inner Mongolia, China."
+     }
+    }
+   ],
+   "items": [
+    "Mingli Sar\nMingli Sar is a mountain located in the Shimshal valley in Gilgit-Baltistan, Pakistan.\n\n The mountain, located in the Karakoram mountain range, is 6050 meters high and located at the southernmost part of the Pamir mountain range.\n\n It was first climbed in 1988 by the famous Pakistani climber Nazir Sabir.\n\n Shimshal lake sits at the base of the mountain.\n\n China is located to the north, while to the left is the Hindukush mountain range.\n\n K2 is located on the south eastern side of the valley.",
+    "Old Barag Banner\nOld Barag Banner (Mongolian: ᠬᠠᠭᠤᠴᠢᠨ ᠪᠠᠷᠭᠤ ᠬᠣᠰᠢᠭᠤ Қаучин Бару қосиу \"Qaɣučin Barɣu qosiɣu\"; ) is a banner of northeastern Inner Mongolia, People's Republic of China.\n\n It is located 28 km from Hailar District, the administrative centre of Hulunbuir City, which administers this banner.",
+    "Dali–Ruili Railway\nThe Dali–Ruili Railway or Darui Railway (), is a single-track electrified railroad under construction in Yunnan Province of Southwest China.\n\n The line is slated to run 336.39 km from Dali in central Yunnan to Ruili in southwestern Yunnan on the border with Myanmar.\n\n The line traverses rugged terrain, and bridges and tunnels will account for 75% of the total track length, including a 36-km tunnel through the Gaoligong Mountains.\n\n Construction began in May 2011 and is scheduled to take six years.\n\n Cities and towns along route include Dali, Yangbi Yi Autonomous County, Yongping County, Baoshan, Mang City (also known as Mangshi or Dehong) and Ruili.",
+    "Pulandian District\nPulandian District () is one of the seven districts under the administration of Dalian, located in the south of Liaoning province, People's Republic of China.\n\n Its area is 2769.90 km² and its permanent population as of 2010 is 741,230.\n\n The district borders the prefecture-level city of Yingkou to the north.",
+    "Shuangta, Pulandian\nShuangta () is a town under the administration of Pulandian City in southern Liaoning province, China, located 58 km northeast of downtown Pulandian and about 120 km northeast of Dalian.\n\n , it has 9 villages under its administration.",
+    "Hulunbuir\nHulunbuir or Hulun Buir (Mongolian: ; , \"Hūlúnbèi'ěr\") is a region that is governed as a prefecture-level city in northeastern Inner Mongolia, in China.\n\n Its administrative center is located at Hailar District, its largest urban area.\n\n Major scenic features are the high steppes of the Hulun Buir grasslands, the Hulun and Buir lakes (the latter partially in Mongolia), and the Khingan range.\n\n Hulun Buir borders Russia to the north and west, Mongolia to the south and west, Heilongjiang province to the east and Hinggan League to the direct south.\n\n Hulunbuir is a linguistically diverse area: next to Mandarin Chinese, Mongolian dialects such as Khorchin and Buryat, the Mongolic language Dagur and some Tungusic languages are spoken there.",
+    "Hailar District\nHailar District (Mongolian: ᠬᠠᠶᠢᠯᠠᠷ ᠲᠣᠭᠣᠷᠢᠭ \"Qayilar toɣoriɣ\" Хайлаар тойрог, Cyrillic: Хайлаар дүүрэг, \"Khailaar düüreg\"; ) is an urban district that serves as the seat of the prefecture-level city Hulunbuir in northeastern Inner Mongolia, China.\n\n Hulunbuir, due to its massive size, is a city in administrative terms only, being mainly grassland and rural.\n\n Hailar, therefore, is a \"de facto\" city.\n\n Hailar can also refer to the urban area around the Hailar district, with Hulunbuir being the wider geographical region that contains the urban area.",
+    "Distaghil Sar\nDisteghil Sar or Distaghil Sar (Urdu: ‎ ) is the highest mountain in the Hispar Muztagh, a subrange of the Karakoram mountain range, in Gilgit-Baltistan.\n\n It is the 19th highest mountain on earth and the 7th highest peak in Pakistan.\n\n Destghil sar is a Wakhi language word, that means \"above the inner ranch.\"\n\n The mountain has an about 3 km long top ridge above 7400m with three distinct summits: (north)west 7885m, central 7760 m, and (south)east 7696m or 7535m ().",
+    "Ruili\nRuili (; Burmese: ရွှေလီ ; Thai: เมืองมาว ) is a county-level city of Dehong Prefecture, in the west of Yunnan province, People's Republic of China.\n\n It is a major border crossing between China and Myanmar, with the town of Muse located across the border.",
+    "Hispar Muztagh\nHispar Muztagh is a sub-range of the Karakoram mountain range.\n\n It is located in the Gojal region of Gilgit-Baltistan, Pakistan, north of Hispar Glacier, south of Shimshal Valley, and east of the Hunza Valley.\n\n It is the second highest sub-range of the Karakoram, the highest being the Baltoro Muztagh.\n\n The highest mountain in the range is Distaghil Sar (7,885m/25,869 ft)."
+   ]
+  },
+  {
+   "id": "8e9cf2520bd4b79b",
+   "gold": [
+    {
+     "sentence": "Dana Robins Ivey (born August 12, 1941) is an American actress.",
+     "facts": {
+      "0.0": "Dana Robins Ivey was born on August 12, 1941.",
+      "0.1": "Dana Robins Ivey is an American actress."
+     }
+    },
+    {
+     "sentence": "Two Weeks Notice is a 2002 Australian-American romantic comedy film starring Hugh Grant and Sandra Bullock.",
+     "facts": {
+      "1.0": "Two Weeks Notice is a 2002 film.",
+      "1.1": "Two Weeks Notice is an Australian-American film.",
+      "1.2": "Two Weeks Notice is a romantic comedy film.",
+      "1.3": "Two Weeks Notice stars Hugh Grant.",
+      "1.4": "Two Weeks Notice stars Sandra Bullock."
+     }
+    }
+   ],
+   "items": [
+    "The Whole Nine Yards (film)\nThe Whole Nine Yards is a 2000 American-Canadian crime comedy film directed by Jonathan Lynn and starring Bruce Willis, Matthew Perry, Amanda Peet, Michael Clarke Duncan and Natasha Henstridge.\n\n The title derives from a popular expression of uncertain origin.\n\n A sequel, \"The Whole Ten Yards\", was released in 2004.",
+    "Two Weeks Notice\nTwo Weeks Notice is a 2002 Australian-American romantic comedy film starring Hugh Grant and Sandra Bullock.\n\n The film was written and directed by Marc Lawrence, who had previously scripted two other box-office hits for Bullock, \"Miss Congeniality\" and \"Forces of Nature\".\n\n Although critical response was mixed, the film received a successful box office run, both in the United States and globally.",
+    "Dana Brown\nDana Brown (born December 11, 1959 in Dana Point, California) is an American surfer and filmmaker, and is the oldest son of filmmaker Bruce Brown.\n\n His films include \"The Endless Summer Revisited\" (2000) which is made up of unused footage from \"The Endless Summer\" (1964) and \"The Endless Summer II\" (1994), as well as some original interviews with the stars of those films.\n\n His first all-original film was \"Step Into Liquid\" (2003) followed by a documentary on the Baja 1000 titled \"Dust to Glory\" (2005).\n\n In 2009, he debuted a new film called \"Highwater\" during the 100th anniversary of the Santa Monica Pier; the film follows life on the North Shore and the surfers who compete in the Vans Triple Crown of Surfing.\n\n In 2014, the movie \"On Any Sunday, The Next Chapter\" continues the saga of motocross documentaries which began with the 1972 Academy Award for Documentary Feature nominated film \"On Any Sunday\" (1971).",
+    "Josann McGibbon\nJosann McGibbon is an American screenwriter working in partnership with Sara Parriott.\n\n The team's first major success as a screenwriter was the early Brad Pitt film, \"The Favor\".\n\n Their biggest hits since then include \"Three Men and a Little Lady\" and \"Runaway Bride\".\n\n In 2007, McGibbon and Parriott co-wrote and produced the hit Debra Messing miniseries, \"The Starter Wife\".\n\n \"The Starter Wife\" received 10 Emmy nominations in 2007, including for best screenwriting, and won one Emmy Award.\n\n It was also nominated for Golden Globe and Writers Guild awards, and was then produced as a series, also on USA Network.\n\n McGibbon and Parriott wrote and co-produced the Disney Channel movie, \"Descendants\" which was directed by Kenny Ortega and premiered in July, 2015.\n\n On February, 2013, it won the Writers Guild of America Award in television for Outstanding Children's Long Form.\n\n They then wrote and executive-produced \"Descendants 2\", also directed by Kenny Ortega, which was simulcast on the Disney Channel, ABC, and the other cable channels owned by Disney-ABC in July, 2017.",
+    "The Bears and I\nThe Bears and I is a 1974 American drama film directed by Bernard McEveety and written by John Whedon.\n\n The film stars Patrick Wayne, Chief Dan George, Andrew Duggan, Michael Ansara and Robert Pine.\n\n The film was released on July 31, 1974, by Buena Vista Distribution.",
+    "Dana (surname)\nDana ( or ) as a surname may have several origins.\n\n In England, it came from \"dann\", the valley of a meadow, and it may mean the dweller of that valley.\n\n In Continental Europe, it probably came from \"Dane\" (or Danish, from Denmark).\n\n This surname is related to Danese in Italy and it can be found mostly in the Piedmont region.\n\n It may also be a modification of Huguenot French origin, probably a variant of \"d'Aunay\", of geographical origin.\n\n It may be also a Gaelic patronymic, since it is a common forename in Ireland.\n\n Dana is a relatively common surname in the US, ranking 7161 out of 88,799 in the 1990 U.S. Census.\n\n Dana is also the Persian word for wisdom.",
+    "Kathryn Drysdale\nKathryn Drysdale (born December 1981) is an English actress known for her role as Grace Shelley in The West End show \"The Ruling Class\" opposite James Mcavoy, as Taylor in the movie \"St Trinian's\", Rhoda Swartz in Mira Nair's Vanity Fair, and Louise Brooks in the BBC comedy series \"Two Pints of Lager and a Packet of Crisps\" from 2001 until her departure from the show in 2009.\n\n She has also starred in the fourth series of the ITV sitcom \"Benidorm\" and as Brownwell in William Boyd's award-winning \"Any Human Heart\" opposite Jim Broadbent.\n\n She previously worked with Broadbent on Mira Nair's feature adaptation of William Thackery's \"Vanity Fair\" starring Reese Witherspoon.\n\n She played the role of mixed-race heiress Rhoda Swartz.\n\n She is also known for her role as Lizzie in the drama series \"Tripping Over\" by Mike Bullen.\n\n She appeared in \"Doctor Who\" as Bliss in the episode \"Love & Monsters\".\n\n She currently plays Meghan Markle in season 2 of \"The Windsors\".",
+    "Return to the Blue Lagoon\nReturn to the Blue Lagoon is a 1991 American romance and adventure film starring Milla Jovovich and Brian Krause, produced and directed by William A. Graham.\n\n The film is a sequel to \"The Blue Lagoon\" (1980).\n\n The screenplay by Leslie Stevens was based on the novel \"The Garden of God\" by Henry De Vere Stacpoole.\n\n The original music score was composed by Basil Poledouris.\n\n The film's closing theme song \"A World of Our Own\" is performed by Surface featuring Bernard Jackson.\n\n The music was written by Barry Mann, and the lyrics were written by Cynthia Weil.",
+    "Two Weeks (The Office)\n\"Two Weeks\" is the twenty-first episode of the fifth season of the television series \"The Office\", and the 93rd overall episode of the series.\n\n It originally aired on NBC in the United States on March 26, 2009.\n\n In this episode, Michael, who has given his two weeks' notice to Dunder Mifflin, tries to convince others in the office to quit and join him in starting a new paper company.\n\n Meanwhile, Pam spends her day trying to put together the new photocopier and becomes frustrated with her job.",
+    "Dana Ivey\nDana Robins Ivey (born August 12, 1941) is an American actress.\n\n She is a five-time Tony Award nominee for her work on Broadway, and won the 1997 Drama Desk Award for Outstanding Featured Actress in a Play for her work in both \"Sex and Longing\" and \"The Last Night of Ballyhoo\".\n\n Her film appearances include \"The Color Purple\" (1985), \"Dirty Rotten Scoundrels\" (1988), \"The Addams Family\" (1991), \"Two Weeks Notice\" (2002), \"Rush Hour 3\" (2007) and \"The Help\" (2011)."
+   ]
+  },
+  {
+   "id": "c4be8e664cf36a45",
+   "gold": [
+    {
+     "sentence": "Karen Joy Fowler (born February 7, 1950) is an American author of science fiction, fantasy, and literary fiction.",
+     "facts": {
+      "0.0": "Karen Joy Fowler was born on February 7, 1950.",
+      "0.1": "Karen Joy Fowler is American.",
+      "0.2": "Karen Joy Fowler is an author of science fiction.",
+      "0.3": "Karen Joy Fowler is an author of fantasy.",
+      "0.4": "Karen Joy Fowler is an author of literary fiction."
+     }
+    },
+    {
+     "sentence": "Charles Bruce Chatwin (13 May 194018 January 1989) was an English travel writer, novelist, and journalist.",
+     "facts": {
+      "1.0": "Charles Bruce Chatwin was born on 13 May 1940.",
+      "1.1": "Charles Bruce Chatwin died on 18 January 1989.",
+      "1.2": "Charles Bruce Chatwin was English.",
+      "1.3": "Charles Bruce Chatwin was a travel writer.",
+      "1.4": "Charles Bruce Chatwin was a novelist.",
+      "1.5": "Charles Bruce Chatwin was a journalist."
+     }
+    }
+   ],
+   "items": [
+    "Mollie Gillen\nMollie Gillen (née Woolnough; 1908–2009) was an Australian historian, researcher, writer and novelist.\n\n Her work on the First Fleet, in \"The search for John Small,\" \"First Fleeter\" and The Founders of Australia: A Biographical Dictionary of the First Fleet, explored the idea that many of the founding families of Australia were descended from the convict population, rather than those sent to guard them.\n\n Gillen's article Maud Montgomery: The Girl Who Wrote Green Gables instigated a new era in scholarship on Lucy Maud Montgomery.",
+    "Always (short story)\n\"Always\" is a science fiction short story written by Karen Joy Fowler.\n\n Originally published in the April/May 2007 issue of \"Asimov's Science Fiction\", it won the 2007 Nebula Award for Best Short Story.\n\n It is collected in Fowler's \"What I Didn't See\".",
+    "Clinton Walker\nClinton Walker (born 1957) is an Australian writer, best known for his works on popular music but with a broader interest in social and cultural history and theory.\n\n Sydney's \"Sun-Herald\" has called him \"our best chronicler of Australian grass-roots culture.\"\n\n He has always been ahead of the curve.\n\n As \"Rhythms\" magazine said in 2015, \"Like many of Walker’s projects, \"Buried Country\" was at least a decade ahead of its time,\" and as such he is remarkable as a critic who has exerted a pro-active impact on Australian music and its development; groundbreaking books like \"Inner City Sound\" (1981) and \"Buried Country\" (2000) especially have informed and inspired successive generations of musicians.\n\n Similarly, while he found best-selling success as Bon Scott's biographer, Walker's non-music books like \"Football Life\" (1998) and \"Golden Miles\" (2005) have innovatively offered an appreciation of subjects hitherto hardly deemed worthy of serious consideration.",
+    "Karen Joy Fowler\nKaren Joy Fowler (born February 7, 1950) is an American author of science fiction, fantasy, and literary fiction.\n\n Her work often centers on the nineteenth century, the lives of women, and alienation.",
+    "The entries profile writers, scholars, artists, publishers, and advocates. Highlights include computer scientist Nuria Oliver’s data-science leadership and human-behavior research; Helen Keller’s childhood story “The Frost King”; Booker Prize winner Keri Hulme; Alice Walker’s Pulitzer-winning *The Color Purple* and anti-FGM work; and Lucille Watahomigie’s Hualapai language revitalization. Others include novelists Sarra Manning and Kim Edwards, poet Tara Betts",
+    "Kate Atkinson’s 2015 *A God in Ruins*, companion to *Life After Life*, follows Teddy Todd in WWII and won the Costa Novel Award. Other works include John Howard’s Central/Eastern European fiction; Conrad’s *Heart of Darkness*, Marlow’s Congo voyage and Kurtz obsession; Keri Hulme’s Booker-winning *The Bone People*; Karen Joy Fowler’s PEN/Faulkner-winning, Booker-shortlisted *We Are All Completely Beside Ours",
+    "Bruce Chatwin\nCharles Bruce Chatwin (13 May 194018 January 1989) was an English travel writer, novelist, and journalist.\n\n His first book, \"In Patagonia\" (1977), established Chatwin as a travel writer, although he considered himself instead a storyteller, interested in bringing to light unusual tales.\n\n He won the James Tait Black Memorial Prize for his novel \"On the Black Hill\" (1982) and his novel \"Utz\" (1988) was shortlisted for the Man Booker Prize.\n\n In 2008 \"The Times\" named Chatwin #46 on their list of \"50 Greatest British Writers Since 1945.\"",
+    "William Gibson\nWilliam Ford Gibson (born March 17, 1948) is an American-Canadian speculative fiction writer and essayist widely credited with pioneering the science fiction subgenre known as cyberpunk.\n\n Beginning his writing career in the late 1970s, his early works were noir, near-future stories that explored the effects of technology, cybernetics, and computer networks on humans—a \"combination of lowlife and high tech\"—and helped to create an iconography for the information age before the ubiquity of the Internet in the 1990s.\n\n Gibson notably coined the term \"cyberspace\" in his short story \"Burning Chrome\" (1982) and later popularized the concept in his acclaimed debut novel \"Neuromancer\" (1984).\n\n These early works have been credited with \"renovating\" science fiction literature after it had fallen largely into insignificance in the 1970s.",
+    "The Jane Austen Book Club\nThe Jane Austen Book Club is a 2004 novel by American author Karen Joy Fowler.\n\n The story, which takes place near Sacramento, California, centers on a book club consisting of five women and one man who meet once a month to discuss Jane Austen's six novels.\n\n It was a critical success and became a national bestseller.",
+    "We Are All Completely Beside Ourselves\nWe Are All Completely Beside Ourselves is a 2013 novel by the American writer Karen Joy Fowler.\n\n The novel won the 2014 PEN/Faulkner Award for Fiction<ref name=\"The Guardian - 3 April 2014 - Karen Joy Fowler wins PEN/Faulkner award for fiction\"> </ref> and was also short-listed for the 2014 Man Booker Prize."
+   ]
+  },
+  {
+   "id": "f937b74f203e4f52",
+   "gold": [
+    {
+     "sentence": "The Wire Fox Terrier is a breed of dog, one of many terrier breeds.",
+     "facts": {
+      "0.0": "The Wire Fox Terrier is a breed of dog.",
+      "0.1": "The Wire Fox Terrier is one of many terrier breeds."
+     }
+    },
+    {
+     "sentence": "The West Siberian Laika or \"WSL\", is a breed of hunting dog and a breed of spitz type.",
+     "facts": {
+      "1.0": "The West Siberian Laika, also called WSL, is a breed of hunting dog.",
+      "1.1": "The West Siberian Laika, also called WSL, is a breed of spitz type."
+     }
+    }
+   ],
+   "items": [
+    "Wire Fox Terrier\nThe Wire Fox Terrier is a breed of dog, one of many terrier breeds.\n\n It is a fox terrier, and although it bears a resemblance to the smooth fox terrier, they are believed to have been developed separately.",
+    "West Siberian Laika\nThe West Siberian Laika or \"WSL\", is a breed of hunting dog and a breed of spitz type.\n\n Russian publications indicate that the term West Siberian Laika loosely applied to hunting dogs originating with the Mansi and Khanty people in Ural and West Siberia, but there were no standards or registrations of WSL as such until 1930.\n\n Then WWll disrupted it for a while, but \"systematic breeding with registrations\" resumed after the war ended, in 1946.\n\n This was the time the breed began taking modern shape.\n\n Before that hunters only knew of Mansi Laika and Khanty Laika.\n\n In early 1960 many hunters in Ural still preferred the term Mansi Laika, when speaking of West Siberian Laika.\n\n In Russian language, the term Laika originated from the word \"layat\" that means to bark.\n\n The word Laika simply means \"barker\".\n\n Any hunting Laika is a bark pointer (pointing at animal of interest by barking and staying with the animal ).\n\n It is a versatile dog depending on use and environment, but in certain parts of the country they have become more specialized.",
+    "Podenco Canario\nPodenco Canario (In English: \"Canary Islands Hound\", \"Canarian Warren Hound\") is a breed of dog originally from the Canary Islands.\n\n The Podenco Canario is still used in the Canary Islands today in packs as a hunting dog, primarily used for rabbit hunting.\n\n The word \"podenco\" is Spanish for \"hound\".\n\n \"Canario\" means \"Canarian\" or \"of the Canaries\".",
+    "Fox Terrier\nFox Terriers are two different breeds of the terrier dog type: the Smooth Fox Terrier and the Wire Fox Terrier.\n\n Both of these breeds originated in the 19th century from a handful of dogs who are descended from earlier varieties of British terriers, and are related to other modern white terrier breeds.\n\n In addition, a number of breeds have diverged from these two main types of fox terrier and have been recognised separately, including the Jack Russell Terrier, Miniature Fox Terrier and Rat Terrier.\n\n The Wire and Smooth Fox Terriers share similar characteristics, the main differences being in the coat and markings.\n\n They have been successful in conformation shows, more prominently in America than their homeland.",
+    "Welsh Springer Spaniel\nThe Welsh Springer Spaniel is a breed of dog and a member of the spaniel family.\n\n Thought to be comparable to the old Land Spaniel, they are similar to the English Springer Spaniel and historically have been referred to as both the Welsh Spaniel and the Welsh Cocker Spaniel.\n\n They were relatively unknown until a succession of victories in dog trials by the breed increased its popularity.\n\n Following recognition by The Kennel Club in 1902, the breed gained the modern name of Welsh Springer Spaniel.\n\n The breed's coat only comes in a single colour combination of white with red markings, usually in a piebald pattern.\n\n Loyal and affectionate, they can become very attached to family members and are wary of strangers.\n\n Health conditions are limited to those common among many breeds of dog, although they are affected more than average by hip dysplasia and some eye conditions.\n\n They are a working dog, bred for hunting, and while not as rare as some varieties of spaniel, they are rarer than the more widely known English Springer Spaniel with which they are sometimes confused.",
+    "German Spitz (Klein)\nThe German Spitz Klein is a breed of dog of the German Spitz type.\n\n They are usually classed as a toy or utility breed.",
+    "Signal Circuit of Halleston\nSignal Circuit of Halleston was a Wire Fox Terrier and winner of the 1926 Westminster Kennel Club Dog Show.\n\n This was the 50th Westminster show, and the fourth Fox Terrier to win best in show.",
+    "German Spitz\nGerman Spitz is used to refer to both a breed of dog and category or type of dog.\n\n Several modern breeds have been developed from the German Spitz, and are either registered as separate breeds or as varieties of German Spitz.\n\n All the \"German Spitz type\" dogs are dogs of the Spitz type of German origin.\n\n The Großspitz, Mittelspitz, and Kleinspitz breeds of \"German Spitz type\" are also called the German Spitz in English.",
+    "Teddy Roosevelt Terrier\nThe Teddy Roosevelt Terrier is a small to medium-sized American hunting terrier.\n\n Lower-set with shorter legs, more muscular, and heavier bone density than its cousin the American Rat Terrier.\n\n There is much diversity in the history of the Teddy Roosevelt Terrier breed and it shares a common early history with the American Rat Terrier, Fox Paulistinha and Tenterfield Terrier.\n\n It is said the Rat Terrier background stems from the terriers or other dogs that were brought over by early English and other working class immigrants.\n\n Since the breed was a farm, hunting and utility dog there was little to no planned breeding other than breeding dogs with agreeable traits to each other in order to produce the desired work ethic in the dog.\n\n It is assumed that the Feist (dog), Bull Terrier, Smooth Fox Terrier, Manchester Terrier, Whippet, Italian Greyhound, the now extinct English White Terrier, Turnspit dog and or Wry Legged Terrier all share in the Teddy Roosevelt Terrier's ancestry.\n\n These early Ratting Terriers were then most likely bred to the Beagle or Beagle cross bred dogs (for increased scenting ability) and other dogs.",
+    "Pomeranian (dog)\nThe Pomeranian (often known as a Pom or Pom Pom) is a breed of dog of the Spitz type that is named for the Pomerania region in Germany and Poland in Central Europe.\n\n Classed as a toy dog breed because of its small size, the Pomeranian is descended from the larger Spitz type dogs, specifically the German Spitz.\n\n It has been determined by the Fédération Cynologique Internationale to be part of the German Spitz breed; and in many countries, they are known as the Zwergspitz (\"Dwarf-Spitz\")."
+   ]
+  },
+  {
+   "id": "d4aaeeb279b3b779",
+   "gold": [
+    {
+     "sentence": "Sigmund Werner Paul Jähn (born 13 February 1937) is a German cosmonaut and pilot, who in 1978 became the first East German (and German native) to fly in space as part of the Soviet Union's Interkosmos programme.",
+     "facts": {
+      "0.0": "Sigmund Werner Paul Jähn was born on 13 February 1937.",
+      "0.1": "Sigmund Werner Paul Jähn is a German cosmonaut.",
+      "0.2": "Sigmund Werner Paul Jähn is a pilot.",
+      "0.3": "In 1978 Sigmund Werner Paul Jähn became the first East German to fly in space.",
+      "0.4": "In 1978 Sigmund Werner Paul Jähn became the first German native to fly in space.",
+      "0.5": "The 1978 flight by Sigmund Werner Paul Jähn was part of the Soviet Union's Interkosmos programme."
+     }
+    },
+    {
+     "sentence": "Arne Christer Fuglesang (] ) (born March 18, 1957 in Stockholm) is a Swedish physicist and an ESA astronaut.",
+     "facts": {
+      "1.0": "Arne Christer Fuglesang was born on March 18, 1957.",
+      "1.1": "Arne Christer Fuglesang was born in Stockholm.",
+      "1.2": "Arne Christer Fuglesang is a Swedish physicist.",
+      "1.3": "Arne Christer Fuglesang is an ESA astronaut."
+     }
+    },
+    {
+     "sentence": " He was first launched aboard the STS-116 Space Shuttle mission on December 10, 2006, at 01:47 GMT, making him the first Swedish citizen in space.",
+     "facts": {
+      "2.0": "Arne Christer Fuglesang was first launched aboard the STS-116 Space Shuttle mission.",
+      "2.1": "That launch was on December 10, 2006, at 01:47 GMT.",
+      "2.2": "Arne Christer Fuglesang became the first Swedish citizen in space."
+     }
+    }
+   ],
+   "items": [
+    "Christer Fuglesang\nArne Christer Fuglesang (] ) (born March 18, 1957 in Stockholm) is a Swedish physicist and an ESA astronaut.\n\n He was first launched aboard the STS-116 Space Shuttle mission on December 10, 2006, at 01:47 GMT, making him the first Swedish citizen in space.",
+    "Claude Nicollier\nClaude Nicollier (born 2 September 1944 in Vevey, Switzerland) is the first astronaut from Switzerland.\n\n He has flown on four Space Shuttle missions.\n\n His first spaceflight (STS-46) was in 1992, and his final spaceflight (STS-103) was in 1999.\n\n He took part in two servicing missions to the Hubble Space Telescope (called STS-61 and STS-103).\n\n During his final spaceflight he participated in a spacewalk, becoming the first European Space Agency astronaut to do so during a Space Shuttle mission (previous ESA astronauts conducted spacewalks aboard \"Mir\", see List of spacewalks and moonwalks 1965–1999).\n\n In 2000 he was assigned to the Astronaut Office Extravehicular Activity Branch, while maintaining a position as Lead ESA Astronaut in Houston.\n\n Nicollier retired from ESA in April 2007.",
+    "Ernst Messerschmid\nProf. Dr. Ernst Willi Messerschmid (born May 21, 1945) is a German physicist and former astronaut.",
+    "Hans Schlegel\nHans Wilhelm Schlegel (Überlingen, 3 August 1951) is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions.",
+    "Bertalan Farkas\nBertalan Farkas (born August 2, 1949) is the first Hungarian cosmonaut and the first Esperantist in space.\n\n He is currently the president of Airlines Service and Trade.\n\n With Charles Simonyi's travel, Farkas is no longer the only Hungarian who has been to space (he is still the only astronaut, as Simonyi flew as a space tourist).",
+    "Ulf Merbold\nDr. Ulf Dietrich Merbold (born June 20, 1941) is the first West German citizen and second German native (after Sigmund Jähn) to have flown in space.\n\n He is also the first member of the European Space Agency Astronaut Corps to participate in a spaceflight mission and the first non-US citizen to reach orbit in a US spacecraft.\n\n In 1983, he and Byron Lichtenberg became the first Payload Specialists to fly on the shuttle.",
+    "Sigmund Jähn\nSigmund Werner Paul Jähn (born 13 February 1937) is a German cosmonaut and pilot, who in 1978 became the first East German (and German native) to fly in space as part of the Soviet Union's Interkosmos programme.",
+    "Eberhard Köllner\nEberhard Köllner (born 29 September 1939 in Stassfurt, Germany) was selected for Soyuz 31 as the backup for Sigmund Jähn.",
+    "Jean-François Clervoy\nJean-François André Clervoy (born 19 November 1958) is a French engineer and a CNES and ESA astronaut.\n\n He is a veteran of three NASA Space Shuttle missions.",
+    "Breathing Your Love\n\"Breathing Your Love\" is a song by the Swedish singer Darin featuring vocals by singer Kat DeLuna and the first single from \"Flashback\".\n\n The song co-written by Darin with RedOne, Bilal Hajji and Novel was released to radio stations and as a digital download in Sweden on 8 October 2008.\n\n The single was released in Finland and is also the first single from Darin to be released in the United Kingdom in January 2010.\n\n In October 2009 Swedish astronaut Christer Fuglesang took 2 copies of the single into space with him, as his daughter is a Darin fan, a photo of the disc can be seen with earth in the distance can be found on the official Darin website."
+   ]
+  },
+  {
+   "id": "464d8c08d2848bce",
+   "gold": [
+    {
+     "sentence": "Spettekaka or spettkaka (\"spiddekaga\" in native Scanian) is a local dessert of the southern parts of Sweden, chiefly in the province of Scania (Skåne) but also in Halland.",
+     "facts": {
+      "0.0": "Spettekaka is also called spettkaka.",
+      "0.1": "In native Scanian, spettekaka is called \"spiddekaga\".",
+      "0.2": "Spettekaka is a local dessert.",
+      "0.3": "Spettekaka is a local dessert of the southern parts of Sweden.",
+      "0.4": "Spettekaka is chiefly found in the province of Scania (Skåne).",
+      "0.5": "Spettekaka is also found in Halland."
+     }
+    },
+    {
+     "sentence": "Scanian (   ) is a closely related group of South Swedish dialects spoken in the province of Scania in southern Sweden.",
+     "facts": {
+      "1.0": "Scanian is a closely related group of South Swedish dialects.",
+      "1.1": "Scanian dialects are spoken in the province of Scania.",
+      "1.2": "Scanian dialects are spoken in southern Sweden."
+     }
+    },
+    {
+     "sentence": " Scanian formed part of the old Scandinavian dialect continuum and are by most historical linguists considered to be an East Danish dialect group, but due to the modern-era influence from Standard Swedish in the region and because traditional dialectology in the Scandinavian countries normally has not considered isoglosses that cut across state borders, the Scanian dialects have normally been treated as a South Swedish dialect group in Swedish dialect research.",
+     "facts": {
+      "2.0": "Scanian formed part of the old Scandinavian dialect continuum.",
+      "2.1": "Most historical linguists consider Scanian to be an East Danish dialect group.",
+      "2.2": "Standard Swedish has influenced the Scanian dialects in the region in the modern era.",
+      "2.3": "The Scanian dialects have normally been treated as a South Swedish dialect group in Swedish dialect research.",
+      "2.4": "The Scanian dialects have been treated as South Swedish due to the modern-era influence from Standard Swedish in the region.",
+      "2.5": "The Scanian dialects have been treated as South Swedish because traditional dialectology in the Scandinavian countries normally has not considered isoglosses that cut across state borders."
+     }
+    }
+   ],
+   "items": [
+    "Hänt Extra\nHänt Extra is a Swedish language weekly celebrity and youth magazine published by Aller Media in Stockholm, Sweden.",
+    "Ghegs\nThe Ghegs or Gegs (Albanian: \"Gegët\" ) are one of two major ethnic subgroups of Albanians (the other being the Tosks) differentiated by their cultural, linguistic, social and religious characteristics.\n\n The Ghegs live in Albania (north of the Shkumbin river), Kosovo, Macedonia and Montenegro.\n\n The name Gheg is derived from the term initially used by Orthodox population of pre-Ottoman Albania for confessional denotation when referring to their Catholic neighbors who converted to Catholicism to better resist the Orthodox Serbs.\n\n The Ghegs speak Gheg Albanian, one of the two main dialects of Albanian language.\n\n The social organization of the Ghegs was traditionally tribal, with several distinct tribal groups of Ghegs.",
+    "Scanian dialect\nScanian (   ) is a closely related group of South Swedish dialects spoken in the province of Scania in southern Sweden.\n\n Scanian formed part of the old Scandinavian dialect continuum and are by most historical linguists considered to be an East Danish dialect group, but due to the modern-era influence from Standard Swedish in the region and because traditional dialectology in the Scandinavian countries normally has not considered isoglosses that cut across state borders, the Scanian dialects have normally been treated as a South Swedish dialect group in Swedish dialect research.\n\n However, many of the early Scandinavian linguists, including Adolf Noreen and G. Sjöstedt, classified it as \"South Scandinavian\", and some linguists, such as Elias Wessén, also considered Old Scanian a separate language, classified apart from both Old Danish and Old Swedish.",
+    "Upper Saxon German\nUpper Saxon (German: \"Obersächsisch\" ) is an East Central German dialect spoken in much of the modern German State of Saxony and in the adjacent parts of Saxony-Anhalt and Thuringia.\n\n Though colloquially called \"Saxon\" (\"Sächsisch\" ), it is not to be confused with the Low Saxon dialect group in Northern Germany.\n\n Upper Saxon is closely linked to the Thuringian dialect spoken in the adjacent areas to the west.",
+    "Hakata dialect\nHakata dialect (博多弁 , Hakata-ben ) is a Japanese dialect spoken in Fukuoka city.\n\n Hakata dialect originated in Hakata commercial district, while a related Fukuoka dialect (福岡弁 , Fukuoka-ben ) was spoken in the central district.\n\n Hakata dialect has spread throughout the city and its suburbs.\n\n Most of Japanese regard Hakata dialect as the dialect typical of Fukuoka, so it is sometimes called \"Fukuoka-ben\".",
+    "Skogsrå\nThe skogsrå , (Forest Rå), \"Skogsfrun\" (The Mistress of the Forest), \"Skogssnuvan\", \"Skogsnymfen\" (Forest Nymph), \"Råndan\" (the Rå) or \"huldra\", was a mythical creature of the forest, or Rå, in Swedish folklore.",
+    "Scoliopus\nScoliopus, or fetid adderstongue, is a genus of plant within the Liliaceae family consisting of two species, \"Scoliopus bigelovii\" and \"S. hallii.\"\n\n Both are found in deep shaded forests, primarily in the coastal counties of the western United States from central California to northern Oregon.\n\n The name \"\"Scoliopus\"\" derives from the Greek words \"skolios\" and \"pous\", meaning curved foot, a reference to the shape of the pedicel.\n\n Taxonomists believe that \"Scoliopus\" is closely related to \"Calochortus\", \"Prosartes\", \"Streptopus\" and \"Tricyrtis\", which all have creeping rhizomes as well as styles that divide at the tip.",
+    "Scandinavian folklore\nScandinavian folklore or Nordic folklore is the folklore of Norway, Sweden, Finland, Denmark, Iceland and the Faroe Islands.",
+    "Spettekaka\nSpettekaka or spettkaka (\"spiddekaga\" in native Scanian) is a local dessert of the southern parts of Sweden, chiefly in the province of Scania (Skåne) but also in Halland.\n\n It is an important part of the Scanian culinary heritage.\n\n The name means \"cake on a spit\", and this describes the method of preparation: it is the Swedish variation on the spit cake.",
+    "South Bergish\nSouth Bergish (German: \"Südbergische Dialekte \") or Upper Bergish (German: \"Oberbergische Dialekte \") is a group of German dialects of the Bergisches Land Region East of the Rhine and approximately south of the Wupper and north of the Sieg.\n\n These dialects are part of the Ripuarian group and thus are also called East Ripuarian.\n\n Ripuarian dialects are also spoken west of the Rhine up to the German border, and in some small areas next to the respective borders in Belgium and in the Netherlands.\n\n Ripuarian Bergish dialects belong to the Middle German group, and thus are varieties of High German, where they belong to the northmost ones.\n\n In the North, they border to the East Bergish and the West Bergish aka Low Bergish language groups, which are part of the Low Franconian group like Dutch."
+   ]
+  }
+ ]
+}

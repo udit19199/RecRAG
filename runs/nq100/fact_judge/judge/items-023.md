@@ -1,0 +1,835 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=c1797541f7b3133d ===
+Gold sentences and facts:
+Sentence 0: Manchester United Football Club is a professional football club based in Old Trafford , Greater Manchester , England , that competes in the Premier League , the top flight of English football . Nicknamed `` the Red Devils '' , the club was founded as Newton Heath LYR Football Club in 1878 , changed its name to Manchester United in 1902 and moved to its current stadium , Old Trafford , in 1910 .
+  Fact 0.0: Manchester United Football Club is a professional football club.
+  Fact 0.1: Manchester United Football Club is based in Old Trafford, Greater Manchester, England.
+  Fact 0.2: Manchester United Football Club competes in the Premier League.
+  Fact 0.3: The Premier League is the top flight of English football.
+  Fact 0.4: Manchester United is nicknamed the Red Devils.
+  Fact 0.5: The club was founded as Newton Heath LYR Football Club in 1878.
+  Fact 0.6: The club changed its name to Manchester United in 1902.
+  Fact 0.7: The club moved to its current stadium, Old Trafford, in 1910.
+
+Retrieved items:
+<item 1>
+Manchester United F.C.
+on BBC Sport : Club news -- Recent results and fixtures Manchester United at Sky Sports Manchester United at Premier League Manchester United Football Club
+Players Managers Reserves & Academy Records & statistics Current season History 1878 -- 1945 1945 -- 1969 1969 -- 1986 1986 -- 2013 Seasons Europe Munich air
+disaster Munich air disaster Busby Babes United Home stadium North Road ( 1878 -- 1893 ) Bank Street ( 1893 -- 1910 ) Old Trafford ( 1910 -- present ) Stretford
+End Sir Matt Busby Way Training ground The Cliff Trafford Training Centre Players 100 + appearances 25 -- 99 appearances 1 -- 24 appearances Sir Matt Busby
+Player of the Year Rivalries League record by opponent Manchester derby Liverpool rivalry Leeds United rivalry Arsenal rivalry Supporters Independent Manchester
+United Supporters Association Manchester United Supporters ' Trust Red Army Media MUTV MU Radio Inside United Red Issue Red News Related articles Fergie 's
+Fledglings United Trinity F.C. United of Manchester Glazer ownership Mascots 1915 British football betting scandal Railway station The Class of ' 92 Book :
+Manchester United F.C. Category : Manchester United F.C. Portal
+</item 1>
+
+<item 2>
+Manchester United F.C.
+Nicknamed `` the Red Devils '' , the club was founded as Newton Heath LYR Football Club in 1878 , changed its name to Manchester United in 1902 and moved to its
+current stadium , Old Trafford , in 1910 . Manchester United have won a record 20 League titles , 12 FA Cups , 5 League Cups and a record 21 FA Community
+Shields . The club has also won three UEFA Champions Leagues , one UEFA Europa League , one UEFA Cup Winners ' Cup , one UEFA Super Cup , one Intercontinental
+Cup and one FIFA Club World Cup . In 1998 -- 99 , the club became the first in the history of English football to achieve the treble of the Premier League , the
+FA Cup and the UEFA Champions League . In 2016 -- 17 , by winning the UEFA Europa League , they became one of five clubs to have won all three main UEFA club
+competitions . In addition , they became the only professional English club to have won every ongoing honour available to the first team that is organised by a
+national or international governing body . The 1958 Munich air disaster claimed the lives of eight players .
+</item 2>
+
+<item 3>
+Manchester United F.C.
+The record was pushed steadily upwards before reaching its peak on 31 March 2007 , when 76,098 spectators saw Manchester United beat Blackburn Rovers 4 -- 1 ,
+with just 114 seats ( 0.15 per cent of the total capacity of 76,212 ) unoccupied . In 2009 , reorganisation of the seating resulted in a reduction of capacity
+by 255 to 75,957 . Manchester United has the second highest average attendance of European football clubs only behind Borussia Dortmund . Support Manchester
+United is one of the most popular football clubs in the world , with one of the highest average home attendance in Europe . The club states that its worldwide
+fan base includes more than 200 officially recognised branches of the Manchester United Supporters Club ( MUSC ) , in at least 24 countries . The club takes
+advantage of this support through its worldwide summer tours . Accountancy firm and sports industry consultants Deloitte estimate that Manchester United has 75
+million fans worldwide , while other estimates put this figure closer to 333 million .
+</item 3>
+
+<item 4>
+Manchester United F.C.
+These were dismantled in 1987 and replaced by a lighting system embedded in the roof of each stand , which remains in use today . The Taylor Report 's
+requirement for an all - seater stadium lowered capacity at Old Trafford to around 44,000 by 1993 . In 1995 , the North Stand was redeveloped into three tiers ,
+restoring capacity to approximately 55,000 . At the end of the 1998 -- 99 season , second tiers were added to the East and West Stands , raising capacity to
+around 67,000 , and between July 2005 and May 2006 , 8,000 more seats were added via second tiers in the north - west and north - east quadrants . Part of the
+new seating was used for the first time on 26 March 2006 , when an attendance of 69,070 became a new Premier League record .
+</item 4>
+
+<item 5>
+Graph query row:
+entity: Manchester United F.C.
+relationship: LOCATED_IN
+connection: None
+context: None
+fact: None
+related: Old Trafford
+</item 5>
+
+<item 6>
+Graph query row:
+entity: Manchester United F.C.
+relationship: RELATED_TO
+connection: None
+context: None
+fact: None
+related: Park Ji - sung appointed Manchester United club ambassador as retired South Korean returns to Old Trafford for Everton clash
+</item 6>
+
+<item 7>
+Manchester United F.C.
+Manchester United F.C. - Wikipedia Manchester United F.C. Jump to : navigation , search `` MUFC '' and `` Manchester United '' redirect here . For other uses ,
+see MUFC ( disambiguation ) . For the basketball team , see Manchester Eagles . Not to be confused with F.C. United of Manchester . Manchester United Full name
+Manchester United Football Club Nickname ( s ) The Red Devils Short name MUFC Founded 1878 ; 140 years ago ( 1878 ) , as Newton Heath LYR F.C. 1902 ; 116 years
+ago ( 1902 ) , as Manchester United F.C. Ground Old Trafford Ground Capacity 74,994 Owner Manchester United plc ( NYSE : MANU ) Co-chairmen Joel and Avram
+Glazer Manager José Mourinho League Premier League 2016 -- 17 Premier League , 6th of 20 Website Club website Home colours Away colours Third colours Current
+season Manchester United Football Club is a professional football club based in Old Trafford , Greater Manchester , England , that competes in the Premier
+League , the top flight of English football .
+</item 7>
+
+<item 8>
+Manchester United F.C.
+Kit evolution 1879 -- 1880 , 1896 -- 1902 1880 -- 1887 1887 -- 1893 1893 -- 1894 1894 -- 1896 1902 -- 1920 , 1921 -- 1922 , 1927 -- 1934 , 1934 -- 1960 , 1971
+-- present 1920 -- 1921 , 1963 -- 1971 1922 -- 1927 1934 1960 -- 1963 ( 1997 -- present ) Notes ^ Since 1997 this combination is primarily used in domestic
+competitions and friendlies . ^ Since 1997 this combination is primarily used in European and international competitions . Grounds Old Trafford after its
+expansion completed in 2006 Newton Heath initially played on a field on North Road , close to the railway yard ; the original capacity was about 12,000 , but
+club officials deemed the facilities inadequate for a club hoping to join The Football League .
+</item 8>
+
+<item 9>
+Graph query row:
+entity: Manchester United Football Club
+relationship: LOCATED_IN
+connection: None
+context: None
+fact: None
+related: Old Trafford
+</item 9>
+
+<item 10>
+Manchester United F.C.
+Non-League ( tiers 5 -- 11 ) 5 None 6 Curzon Ashton F.C. United of Manchester Salford City Stockport County 7 Altrincham Ashton United Stalybridge Celtic 8
+Atherton Collieries Droylsden Hyde United Mossley Radcliffe Borough Ramsbottom United Trafford 9 Abbey Hey Ashton Athletic Irlam Maine Road West Didsbury &
+Chorlton 10 Atherton Laburnum Rovers Chadderton Cheadle Town Daisy Hill Prestwich Heys Stockport Town 11 Ashton Town Eagley Wythenshawe Amateurs Competitions
+Manchester Premier Cup Manchester Senior Cup Venues Boundary Park Bower Fold Broadhurst Park Butcher 's Arms Ground City of Manchester Stadium DW Stadium
+Edgeley Park Ewen Fields Gigg Lane Macron Stadium Moss Lane Old Trafford Spotland Stadium Other topics Manchester derby Laureus World Sports Award for Team of
+the Year winners 2000 : Manchester United F.C.
+</item 10>
+
+<item 11>
+Graph query row:
+entity: Manchester United F.C.
+relationship: RELATED_TO
+connection: None
+context: None
+fact: None
+related: Old Trafford
+</item 11>
+
+<item 12>
+Manchester United F.C.
+Some expansion took place in 1887 , and in 1891 , Newton Heath used its minimal financial reserves to purchase two grandstands , each able to hold 1,000
+spectators . Although attendances were not recorded for many of the earliest matches at North Road , the highest documented attendance was approximately 15,000
+for a First Division match against Sunderland on 4 March 1893 . A similar attendance was also recorded for a friendly match against Gorton Villa on 5 September
+1889 . In June 1893 , after the club was evicted from North Road by its owners , Manchester Deans and Canons , who felt it was inappropriate for the club to
+charge an entry fee to the ground , secretary A.H. Albut procured the use of the Bank Street ground in Clayton . It initially had no stands , by the start of
+the 1893 -- 94 season , two had been built ; one spanning the full length of the pitch on one side and the other behind the goal at the `` Bradford end '' . At
+the opposite end , the `` Clayton end '' , the ground had been `` built up , thousands thus being provided for '' .
+</item 12>
+
+<item 13>
+Manchester United F.C.
+Within four years , the stadium had cover on all four sides , as well as the ability to hold approximately 50,000 spectators , some of whom could watch from the
+viewing gallery atop the Main Stand . However , following Manchester United 's first league title in 1908 and the FA Cup a year later , it was decided that Bank
+Street was too restrictive for Davies ' ambition ; in February 1909 , six weeks before the club 's first FA Cup title , Old Trafford was named as the home of
+Manchester United , following the purchase of land for around £ 60,000 . Architect Archibald Leitch was given a budget of £ 30,000 for construction ; original
+plans called for seating capacity of 100,000 , though budget constraints forced a revision to 77,000 . The building was constructed by Messrs Brameld and Smith
+of Manchester . The stadium 's record attendance was registered on 25 March 1939 , when an FA Cup semi-final between Wolverhampton Wanderers and Grimsby Town
+drew 76,962 spectators .
+</item 13>
+
+<item 14>
+Manchester United F.C.
+Bombing in the Second World War destroyed much of the stadium ; the central tunnel in the South Stand was all that remained of that quarter . After the war ,
+the club received compensation from the War Damage Commission in the amount of £ 22,278 . While reconstruction took place , the team played its `` home '' games
+at Manchester City 's Maine Road ground ; Manchester United was charged £ 5,000 per year , plus a nominal percentage of gate receipts . Later improvements
+included the addition of roofs , first to the Stretford End and then to the North and East Stands . The roofs were supported by pillars that obstructed many
+fans ' views , and they were eventually replaced with a cantilevered structure . The Stretford End was the last stand to receive a cantilevered roof , completed
+in time for the 1993 -- 94 season . First used on 25 March 1957 and costing £ 40,000 , four 180 - foot ( 55 m ) pylons were erected , each housing 54 individual
+floodlights .
+</item 14>
+=== END ITEM id=c1797541f7b3133d ===
+
+=== ITEM id=214fca7beaa2c009 ===
+Gold sentences and facts:
+Sentence 0: Teri Garr as Mrs. Ramsay , Alec 's mother
+  Fact 0.0: Teri Garr plays Mrs. Ramsay.
+  Fact 0.1: Mrs. Ramsay is Alec's mother.
+
+Retrieved items:
+<item 1>
+The Black Stallion (film)
+In 2002 , it was selected for preservation in the United States National Film Registry by the Library of Congress as being `` culturally , historically , or
+aesthetically significant '' . Also , the film is recognized by American Film Institute in these lists : 2001 : AFI 's 100 Years ... 100 Thrills -- Nominated
+2005 : AFI 's 100 Years of Film Scores -- Nominated 2006 : AFI 's 100 Years ... 100 Cheers -- # 64 Sequel , prequel and television series ( edit ) The film was
+followed in 1983 by a sequel , The Black Stallion Returns , which also starred Reno . There was also a television series called The Adventures of the Black
+Stallion which aired from 1990 to 1993 and starred Mickey Rooney and Richard Ian Cox . In 2003 , a 50 - minute prequel called The Young Black Stallion , was
+shot and released for IMAX theaters . See also ( edit ) The Black Stallion books References ( edit ) Jump up ^ `` The Black Stallion , Box Office Information ''
+. The Numbers .
+</item 1>
+
+<item 2>
+The Black Stallion (film)
+He falls behind , but the Black wo n't stop . When Alec regains his balance , the Black is well on his way to catch up with his opponents . Alec now encourages
+the Black to run as fast as he can , remembering the wild rides on the island , as they catch up . The Black eventually wins by two lengths . Cast ( edit )
+Kelly Reno as Alec Ramsay Mickey Rooney as Henry Dailey Teri Garr as Mrs. Ramsay , Alec 's mother Hoyt Axton as Mr. Ramsay , Alec 's father Clarence Muse as
+Snoe Michael Higgins as Jim Neville Ed McNamara as Jake Doghmi Larbi as Arab John Burton as Jockey No. 1 John Buchanan as Jockey No.
+</item 2>
+
+<item 3>
+The Black Stallion (film)
+After being rescued , they are set on entering a race challenging two champion horses . The film is adapted by Melissa Mathison , Jeanne Rosenberg and William
+D. Wittliff . It is directed by Carroll Ballard . The movie stars Kelly Reno , Mickey Rooney , Teri Garr , Hoyt Axton , and the Arabian horse Cass Ole . The
+film features music by Carmine Coppola , the father of Hollywood producer Francis Ford Coppola , who was the executive producer of the film . Contents ( hide )
+1 Plot 2 Cast 2.1 Horses 3 Awards and honors 3.1 Academy Awards 3.2 Golden Globe Awards 3.3 British Academy Awards 3.4 LA Film Critics Awards 3.5 Others 4
+Sequel , prequel and television series 5 See also 6 References 7 External links Plot ( edit ) In 1946 Alec Ramsey is aboard the steamer Drake off the coast of
+North Africa , where he sees a wild black stallion being forced into a makeshift stable compartment and heavily restrained by ropes leading to his halter .
+</item 3>
+
+<item 4>
+The Black Stallion (film)
+wikipedia.org/w/index.php?title=The_Black_Stallion_(film)&oldid=836268326 '' Categories : 1979 films English - language films American children 's films Films
+about horses United States National Film Registry films United Artists films American Zoetrope films Directorial debut films Films shot in Sardinia Films
+directed by Carroll Ballard Films that won the Best Sound Editing Academy Award Horse racing films Screenplays by Melissa Mathison American films Films set on
+islands Films set in 1946 Hidden categories : Pages using div col with deprecated parameters Talk Contents About Wikipedia Català Dansk Deutsch Español فارسی
+Français Bahasa Indonesia Italiano Bahasa Melayu Nederlands 日本 語 Polski Português Русский Svenska 6 more Edit links This page was last edited on 13 April 2018 ,
+at 18 : 25 . About Wikipedia
+</item 4>
+
+<item 5>
+The Black Stallion (film)
+1 John Buchanan as Jockey No. 2 Kristen Vigard as Becky Fausto Tozzi as Rescue Captain John Karlsen as Archeologist Leopoldo Trieste as Priest Frank Cousins as
+African Chieftain Don Hudson as Zaurog Marne Maitland as Drake Captain Tom Dahlgren as Veterinarian Horses ( edit ) Cass Ole , a champion Arabian stallion , was
+featured in most of the movie 's scenes , with Fae Jur , another black Arabian stallion , being his main double . Fae Jur 's main scene is the one where Alec is
+trying to gain the trust of the Black on the beach . Two other stunt doubles were used for running , fighting and swimming scenes . El Mokhtar , an Egyptian
+Arabian racehorse , was the producers ' first choice to portray the Black , but they were unable to secure his services for the film from his owners , who
+declined any offers . He does appear in The Black Stallion Returns , alongside Cass Ole , by which time the studio bought out the syndicate of owners in order
+to secure El Mokhtar 's services .
+</item 5>
+
+<item 6>
+The Black Stallion (film)
+American Film Institute . Retrieved 2016 - 08 - 20 . External links ( edit ) Official website The Black Stallion on IMDb The Black Stallion at AllMovie The
+Black Stallion at Rotten Tomatoes The Black Stallion at Box Office Mojo The Black Stallion at the TCM Movie Database The Black Stallion by Walter Farley Books
+The Black Stallion book series Films The Black Stallion ( 1979 ) The Black Stallion Returns ( 1983 ) The Young Black Stallion ( 2003 ) Television The Adventures
+of the Black Stallion ( 1990 - 1993 ) Related Cass Ole El Mokhtar Docs Keepin Time Films directed by Carroll Ballard The Black Stallion ( 1979 ) Never Cry Wolf
+( 1983 ) Nutcracker : The Motion Picture ( 1986 ) Wind ( 1992 ) Fly Away Home ( 1996 ) Duma ( 2005 ) Retrieved from `` https://en.wikipedia.org/w/index.
+</item 6>
+
+<item 7>
+The Black Stallion (film)
+Alec 's father rescues Alec from his attacker but the life jacket is lost and father & son are separated . The black stallion breaks free from his compartment
+and then jumps into the sea . Alec himself is swept overboard by a gigantic wave . Once in the water , he swims toward the stallion and managed to grab hold of
+the ropes that were previously restraining the stallion . Alec wakes on the shore of a deserted island and starts to explore . He finds the stallion caught in
+his restraints with the ropes stuck between the rocks . With his knife , Alec manages to free the stallion once again and the stallion runs away . For a time ,
+the two keep their distance . Alec discovers means to survive by catching fish and seaweed . As Alec suddenly faces a cobra eye to eye , the Black comes to the
+rescue and kills the snake , only to run off again . By now , Alec decides to try to get closer to the horse and offer him some seaweed . The hungry stallion
+finds himself unable to resist , but visibly struggles with his distrust for humans .
+</item 7>
+
+<item 8>
+The Black Stallion (film)
+The hungry stallion finds himself unable to resist , but visibly struggles with his distrust for humans . Eventually , the hunger wins and he takes Alec 's
+offer ; their bond has been sealed and the two are now inseparable . Alec even manages to ride the unbroken horse , after many times falling off the horse . One
+day , a fishing ship arrives , rescuing both Alec and the stallion . Back home in Flushing , NY , Alec is given a hero 's welcome . The Black has a temporary
+home in Alec 's backyard , but a garbage man not knowing that there is a wild horse in the backyard is chased by the Black , who races off down the street after
+being spooked by a passing car . Alec chases after him through every part of town , but loses track of him . The next day , Alec meets Snoe ( and Napoleon ) who
+tell him where the Black is . Alec finds the stallion in the barn of Henry Dailey , a retired jockey and racehorse trainer , who apparently spent all night
+catching the Black . Henry allows Alec to keep the Black in his barn .
+</item 8>
+
+<item 9>
+The Black Stallion (film)
+Henry allows Alec to keep the Black in his barn . When Alec wonders how fast the Black is , Alec and Henry decide to train the Black for the racetrack , while
+Henry teaches Alec how to be a jockey . The Black surprises Henry with his speed . Henry immediately starts plotting to get the Black into a match race between
+two of the country 's current champions , to be held at Santa Anita , California . To do that , he sets up a secret demonstration at night where the press can
+witness his speed , keeping the identity of Alec and the Black secret . The news about the mystery horse is soon widespread and the Black is entered into the
+race . The race is the most anticipated horse - racing event of the year . Before the two champions and the Black enter the starting gate , the Black gets into
+a fight with one of his opponents , wounding his leg . Alec does not see the wound until he is in the gate . As he dismounts , the bell rings and the horses
+take off . Alec desperately tries to stay on his horse and trying to stop him . He falls behind , but the Black wo n't stop .
+</item 9>
+
+<item 10>
+The Black Stallion (film)
+The Black stallion ( film ) - wikipedia The Black stallion ( film ) Jump to : navigation , search The Black Stallion 1979 poster Directed by Carroll Ballard
+Produced by Fred Roos Francis Ford Coppola Tom Sternberg Screenplay by Melissa Mathison Jeanne Rosenberg William D. Wittliff Based on The Black Stallion by
+Walter Farley Starring Kelly Reno Mickey Rooney Teri Garr Music by Carmine Coppola Cinematography Caleb Deschanel Edited by Robert Dalva Production company
+American Zoetrope Distributed by United Artists Release date October 17 , 1979 ( 1979 - 10 - 17 ) Running time 118 minutes Country United States Language
+English Budget $2.7 million Box office $37.8 million The Black Stallion is a 1979 American adventure film based on the 1941 classic children 's novel The Black
+Stallion by Walter Farley . But the film starts in 1946 , five years after the book was published . It tells the story of Alec Ramsey , who is shipwrecked on a
+deserted island with a wild Arabian stallion whom he befriends .
+</item 10>
+=== END ITEM id=214fca7beaa2c009 ===
+
+=== ITEM id=8b87fd492449c63a ===
+Gold sentences and facts:
+Sentence 0: The Proud Family is a soundtrack album for the show of the same name . A combination of both original tunes by the characters in the show , popular hits by popular music artists such as Alicia Keys , Jhené Aiko , India Arie , and Solange Knowles & Destiny 's Child ( who perform the theme song ) , and classic soul music from artists such as Aretha Franklin and The O'Jays .
+  Fact 0.0: The Proud Family is a soundtrack album for the show of the same name.
+  Fact 0.1: The album combines original tunes by the characters in the show.
+  Fact 0.2: The album includes popular hits by popular music artists such as Alicia Keys, Jhené Aiko, India Arie, and Solange Knowles and Destiny's Child.
+  Fact 0.3: Destiny's Child performs the theme song.
+  Fact 0.4: The album includes classic soul music from artists such as Aretha Franklin and The O'Jays.
+
+Retrieved items:
+<item 1>
+Graph query row:
+entity: Solange Knowles
+work: The Proud Family
+connection: ['RELATED_TO', 'FROM_CHUNK', 'FROM_CHUNK']
+</item 1>
+
+<item 2>
+The Proud Family (soundtrack)
+The Proud Family ( soundtrack ) - Wikipedia The Proud Family ( soundtrack ) Jump to : navigation , search This article does not cite any sources . Please help
+improve this article by adding citations to reliable sources . Unsourced material may be challenged and removed . ( December 2009 ) ( Learn how and when to
+remove this template message ) The Proud Family Soundtrack album by Various Artists Released April 20 , 2004 August 16 , 2005 ( Re-release ) Genre Soul , hip
+hop , hip hop soul Label Walt Disney The Proud Family is a soundtrack album for the show of the same name . A combination of both original tunes by the
+characters in the show , popular hits by popular music artists such as Alicia Keys , Jhené Aiko , India Arie , and Solange Knowles & Destiny 's Child ( who
+perform the theme song ) , and classic soul music from artists such as Aretha Franklin and The O'Jays . References ( edit ) This soundtrack - related article is
+a stub . You can help Wikipedia by expanding it .
+</item 2>
+
+<item 3>
+Graph query row:
+entity: Solange Knowles
+work: The Proud Family
+connection: ['RELATED_TO', 'RELATED_TO']
+</item 3>
+
+<item 4>
+The Proud Family (soundtrack)
+You can help Wikipedia by expanding it . Retrieved from `` https://en.wikipedia.org/w/index.php?title=The_Proud_Family_(soundtrack)&oldid=638462881 ''
+Categories : Television animation soundtracks 2004 soundtracks Hip hop soundtracks Soul soundtracks Walt Disney Records soundtracks Soundtrack stubs Hidden
+categories : Articles lacking sources from December 2009 All articles lacking sources Articles with hAudio microformats Music infoboxes with deprecated
+parameters All stub articles Talk About Wikipedia Add links This page was last edited on 17 December 2014 , at 07 : 09 . Text is available under the Creative
+Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a
+registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 4>
+
+<item 5>
+Graph query row:
+entity: Solange Knowles
+work: The Proud Family (soundtrack)
+connection: ['RELATED_TO']
+</item 5>
+
+<item 6>
+Graph query row:
+entity: Solange Knowles
+work: The Proud Family (soundtrack)
+connection: ['RELATED_TO', 'FROM_CHUNK', 'FROM_CHUNK']
+</item 6>
+
+<item 7>
+Graph query row:
+entity: Solange Knowles
+work: The Proud Family (soundtrack)
+connection: ['RELATED_TO', 'RELATED_TO', 'RELATED_TO']
+</item 7>
+
+<item 8>
+Graph query row:
+entity: Solange Knowles
+work: The Proud Family (soundtrack)
+connection: ['FROM_CHUNK', 'FROM_CHUNK']
+</item 8>
+
+<item 9>
+Graph query row:
+entity: Solange Knowles
+work: The Proud Family
+connection: ['FROM_CHUNK', 'FROM_CHUNK', 'RELATED_TO']
+</item 9>
+=== END ITEM id=8b87fd492449c63a ===
+
+=== ITEM id=59ab93265f8ba7ef ===
+Gold sentences and facts:
+Sentence 0: `` Ca n't Get You Out of My Head '' is a song recorded by Australian singer Kylie Minogue for her eighth studio album , titled Fever , which she released in 2001 . The song was released in Australia by Parlophone as the lead single from the album on 8 September 2001 . It was released on 17 September 2001 in the United Kingdom . In the United States , the single was released on 18 February 2002 . Jointly written , composed , and produced by Cathy Dennis and Rob Davis , `` Ca n't Get You Out of My Head '' is a midtempo dance - pop song which lyrically details its narrator 's obsession towards her lover . The song is famous for its `` la la la '' hook .
+  Fact 0.0: Can't Get You Out of My Head is a song recorded by Australian singer Kylie Minogue.
+  Fact 0.1: Can't Get You Out of My Head was recorded for Kylie Minogue's eighth studio album, Fever.
+  Fact 0.2: Fever was released by Kylie Minogue in 2001.
+  Fact 0.3: The song was released in Australia by Parlophone as the lead single from the album Fever on 8 September 2001.
+  Fact 0.4: The song was released in the United Kingdom on 17 September 2001.
+  Fact 0.5: The single was released in the United States on 18 February 2002.
+  Fact 0.6: Can't Get You Out of My Head was jointly written, composed, and produced by Cathy Dennis and Rob Davis.
+  Fact 0.7: Can't Get You Out of My Head is a midtempo dance-pop song.
+  Fact 0.8: The song lyrically details its narrator's obsession with her lover.
+  Fact 0.9: The song is famous for its "la la la" hook.
+
+Retrieved items:
+<item 1>
+Can't Get You Out of My Head
+Jason Thompson from PopMatters described Minogue 's vocals as a `` sexual come on '' and called the song `` trim and funky , certainly something that could n't
+miss anywhere . '' Dominique Leone from Pitchfork Media praised the commercial prospect of the song , saying that it `` exudes a catchiness that belies its
+inherent simplicity , so reassuring during an era when chart acts sound increasingly baroque and producers race to see who can ape electronic music trends first
+. '' Jim Farber from Entertainment Weekly said that the song `` fully lives up to its title '' with `` every sound a hook , '' and compared it to the works of
+Andrea True . Michael Hubbard from MusicOMH labelled the song `` one of 2001 's best singles , '' saying that it `` predictably beat off lesser ' competition .
+' '' In 2012 , The Guardian critic Everett True defined `` Ca n't Get You Out of My Head '' as `` one of those rare moments in pop : sleek and chic and stylish
+and damnably danceable , but with a darker element hidden in plain sight . ''
+</item 1>
+
+<item 2>
+Can't Get You Out of My Head
+Ca n't Get You Out of My Head - Wikipedia Ca n't Get You Out of My Head Jump to : navigation , search `` Ca n't Get You Out of My Head '' Single cover used for
+CD # 02 and digital releases of the song .
+</item 2>
+
+<item 3>
+Graph query row:
+work: Can't Get You Out of My Head
+person: Cathy Dennis
+relationship: CREATED
+relation: None
+fact: None
+</item 3>
+
+<item 4>
+Can't Get You Out of My Head
+My A&R at the time , Miles Leonard and Jamie Nelson , said , `` We 've got something . Come into the office . We 've got to play you something . '' So I went to
+the EMI office , and I had the same reaction you did , about 20 seconds in . I could n't even fathom what I was hearing . It just ... did something . I was
+beside myself . Then at the end of the song , panic set in . I was saying `` Are you sure we 've got this song ? Do n't tell me that we do n't ! Is it secured ?
+Can we have it ? '' And we did ! And that kick - started a whole different phase in my career . -- Minogue , about her reaction to hearing the demo of the song
+. `` Ca n't Get You Out of My Head '' was jointly written , composed , and produced by Cathy Dennis and Rob Davis . Dennis and Davis had been brought together
+by British artist manager Simon Fuller , who wanted the duo to come up with a song for British pop group S Club 7 .
+</item 4>
+
+<item 5>
+Can't Get You Out of My Head
+In 2013 , a survey of 700 people was conducted as part of the Manchester Science Festival to find out which song they considered the `` catchiest , '' and `` Ca
+n't Get You Out of My Head '' topped the poll . Lee Barron , in his essay The Seven Ages of Kylie Minogue : Postmodernism , Identity , and Performative Mimicry
+, noted that the song `` further established Minogue 's cultural and commercial relevance in the new millennium . '' He remarked that the song `` with its
+hypnotic ' la la la ' refrain and the deceptively uncomplicated , catchily repetitive beats and synth - sound , marked yet another clearly defined image
+transformation from the camp - infused Light Years to an emphasis upon a cool , machine - like sexuality , a trait clearly identifiable within the promotional
+video for ' Ca n't Get You Out of My Head . '
+</item 5>
+
+<item 6>
+Can't Get You Out of My Head
+The music , excluding the guitar part , was programmed using Korg Triton workstation via MIDI . Dennis later remarked : `` Even though Kylie was n't the first
+artist to be offered the song , I do n't believe it was meant to go to anyone other than Kylie , and I do n't believe anyone else would have done the incredible
+job she did with it , with the video , looking super-hot ! '' Composition ( edit ) `` Ca n't Get You Out of My Head '' A 21 - second sample of `` Ca n't Get You
+Out of My Head '' containing the hook and part of the chorus of the song . The song is known for its `` la la la '' hook . Problems playing this file ? See
+media help . `` Ca n't Get You Out of My Head '' is a `` robotic '' midtempo dance - pop song , with a tempo of 126 beats per minute .
+</item 6>
+
+<item 7>
+Can't Get You Out of My Head
+The Guardian . Retrieved 22 July 2013 . Jump up ^ Ivan ( 28 February 2012 ) . `` Ten Years Gone : Kylie Minogue -- Fever '' . Hectic But Eclectic . Retrieved 4
+August 2013 . ^ Jump up to : True , Chris . `` Fever - Kylie Minogue '' . AllMusic . Rovi Corporation . Retrieved 16 August 2013 . ^ Jump up to : `` Ca n't Get
+You Out of My Head '' . Musicnotes.com . EMI Music Publishing . Retrieved 16 August 2013 . ^ Jump up to : Lynskey , Dorian ( 31 May 2012 ) . `` The best No 1
+records : Kylie Minogue -- Ca n't Get You Out of My Head '' . The Guardian . Retrieved 16 August 2013 . ^ Jump up to : `` The People 's Songs - Ca n't Get You
+Out of My Head '' . BBC . Retrieved 21 August 2013 .
+</item 7>
+
+<item 8>
+Graph query row:
+work: Can't Get You Out of My Head
+person: Rob Davis
+relationship: CREATED
+relation: None
+fact: None
+</item 8>
+
+<item 9>
+Can't Get You Out of My Head
+Through the lyrics of the song , its singer expresses an obsession with an anonymous figure . Dorian Lynskey from The Guardian termed the song a `` mystery ''
+as Minogue never reveals the identity of her object of infatuation . The critic suggested that the person Minogue is referring to is either `` a partner , an
+evasive one - night stand or someone who does n't know she exists . '' Writing for the same newspaper , Everett True identified a `` darker element '' in the
+simple lyrics and felt this sentiment was echoed in Minogue 's restrained vocals . Further , True emphasised that while Minogue 's 1987 single `` I Should Be So
+Lucky '' had presented an optimistic romantic future , `` Ca n't Get You Out of My Head '' focuses on an `` unhealthy '' and potentially destructive obsession .
+He also noted that in the former song , Minogue played `` the wide - eyed ingénue with alacrity , '' but in the latter song she is aware of the harmful nature
+of her infatuation , calling it a `` desire that is wholly dependent on her own self - control . ''
+</item 9>
+
+<item 10>
+Can't Get You Out of My Head
+In 2012 , Priya Elan from NME ranked the song at number four on his `` The Greatest Pop Songs in History '' list , saying : `` It was unlike any song I remember
+hearing before . '' In 2012 , The Guardian included the song in their list of `` The Best Number One Records , '' labelling it to be `` sleek , Arctic - blue
+minimalism , like an emotionally thwarted retelling of Donna Summer 's `` I Feel Love . '' In the same year , PRS for Music , a UK copyright collection society
+and performance rights organisation which collects royalties on behalf of songwriters and composers , named `` Ca n't Get You Out of My Head '' the `` Most
+Popular Song of the Decade '' as it received the highest airplay and live covers in the 2000s ( decade ) . Minogue performing `` Ca n't Get You Out of My Head
+'' during her KylieX Tour ( 2008 ) .
+</item 10>
+
+<item 11>
+Can't Get You Out of My Head
+`` Limitless Joy : Kylie Minogue Interviewed '' . The Quietus . Retrieved 6 October 2013 . ^ Jump up to : `` I Wrote That : Ca n't Get You Out of My Head '' . M
+Magazine . PRS for Music . 26 September 2011 . Retrieved 5 October 2013 . Jump up ^ `` The Kylie hit you ca n't get out of your head '' . BBC . 31 December 2011
+. Retrieved 16 August 2013 . ^ Jump up to : Inglis , Sam ( May 2002 ) . `` People + Opinion : Rob Davis '' . Sound on Sound . SOS Publications Group . Archived
+from the original on 2004 - 02 - 28 . Retrieved 25 June 2014 . Jump up ^ Dorian , Lynskey ( 21 May 2012 ) . `` The best No 1 records : Kylie Minogue -- Ca n't
+Get You Out of My Head '' . The Guardian . Retrieved 22 July 2013 .
+</item 11>
+
+<item 12>
+Can't Get You Out of My Head
+It was released on 17 September 2001 in the United Kingdom . In the United States , the single was released on 18 February 2002 . Jointly written , composed ,
+and produced by Cathy Dennis and Rob Davis , `` Ca n't Get You Out of My Head '' is a midtempo dance - pop song which lyrically details its narrator 's
+obsession towards her lover . The song is famous for its `` la la la '' hook . In addition to positive reviews from music critics , `` Ca n't Get You Out of My
+Head '' found commercial success on a large scale . It peaked at number one on the charts of Austria , Belgium , France , Germany , Italy , Poland , Switzerland
+, the United Kingdom , and every other European country excluding Finland . It also topped the charts of Minogue 's native country Australia , Canada and New
+Zealand . In the United States , the song peaked at number seven on the US Billboard Hot 100 chart , becoming Minogue 's biggest hit in the region since `` The
+Loco - Motion '' . `` Ca n't Get You Out of My Head '' reportedly reached number one in 40 countries across the globe .
+</item 12>
+=== END ITEM id=59ab93265f8ba7ef ===
+
+=== ITEM id=a53224718c3d2355 ===
+Gold sentences and facts:
+Sentence 0: The story of Shakespeare 's Hamlet was derived from the legend of Amleth , preserved by 13th - century chronicler Saxo Grammaticus in his Gesta Danorum , as subsequently retold by the 16th - century scholar François de Belleforest . Shakespeare may also have drawn on an earlier Elizabethan play known today as the Ur - Hamlet , though some scholars believe he himself wrote the Ur - Hamlet , later revising it to create the version of Hamlet we now have . He almost certainly wrote his version of the title role for his fellow actor , Richard Burbage , the leading tragedian of Shakespeare 's time . In the 400 years since its inception , the role has been performed by numerous highly acclaimed actors in each successive century .
+  Fact 0.0: The story of Shakespeare's Hamlet was derived from the legend of Amleth.
+  Fact 0.1: The legend of Amleth was preserved by 13th-century chronicler Saxo Grammaticus in his Gesta Danorum.
+  Fact 0.2: The legend of Amleth was subsequently retold by 16th-century scholar François de Belleforest.
+  Fact 0.3: Shakespeare may also have drawn on an earlier Elizabethan play known today as the Ur-Hamlet.
+  Fact 0.4: Some scholars believe Shakespeare himself wrote the Ur-Hamlet.
+  Fact 0.5: Some scholars believe Shakespeare later revised the Ur-Hamlet to create the version of Hamlet we now have.
+  Fact 0.6: Shakespeare almost certainly wrote his version of the title role for his fellow actor, Richard Burbage.
+  Fact 0.7: Richard Burbage was the leading tragedian of Shakespeare's time.
+  Fact 0.8: In the 400 years since Hamlet's inception, the role of Hamlet has been performed by numerous highly acclaimed actors in each successive century.
+
+Retrieved items:
+<item 1>
+Hamlet
+( father ) Mary Arden ( mother ) Gilbert Shakespeare ( brother ) Joan Shakespeare ( sister ) Edmund Shakespeare ( brother ) Richard Shakespeare ( grandfather )
+John Hall ( son - in - law ) Thomas Quiney ( son - in - law ) Thomas Nash ( grandson - in - law ) * Shakespeare and other authors Lost William Shakespeare 's
+Hamlet Characters Hamlet Claudius Gertrude Ghost Polonius Laertes Ophelia Horatio Rosencrantz and Guildenstern Fortinbras The Gravediggers Yorick Soliloquies ``
+To be , or not to be '' `` Mortal coil '' `` What a piece of work is a man '' `` Speak the speech '' Words and phrases `` The lady doth protest too much ,
+methinks '' `` Thy name is '' `` Primrose path '' Terminology Dumbshow Induction Quiddity Substitution Sources Criticism Legend of Hamlet The Spanish Tragedy Ur
+- Hamlet Critical approaches Bibliographies Horwendill Saxo Grammaticus House of Gonzaga Damon and Pythias Influence Common phrases from Hamlet Hamlet in
+popular culture References to Ophelia Language of flowers Human skull symbolism Performances Moscow Art Theatre ( 1911 -- 1912 )
+</item 1>
+
+<item 2>
+Hamlet
+Firm evidence for specific early performances of the play is scant . What is known is that the crew of the ship Red Dragon , anchored off Sierra Leone ,
+performed Hamlet in September 1607 ; that the play toured in Germany within five years of Shakespeare 's death ; and that it was performed before James I in
+1619 and Charles I in 1637 . Oxford editor George Hibbard argues that , since the contemporary literature contains many allusions and references to Hamlet (
+only Falstaff is mentioned more , from Shakespeare ) , the play was surely performed with a frequency that the historical record misses . All theatres were
+closed down by the Puritan government during the Interregnum . Even during this time , however , playlets known as drolls were often performed illegally ,
+including one called The Grave - Makers based on Act 5 , Scene 1 of Hamlet . Restoration and 18th century ( edit ) Title page and frontispiece for Hamlet ,
+Prince of Denmark : A Tragedy . As it is now acted at the Theatres - Royal in Drury - Lane and Covent - Garden . London , 1776 The play was revived early in the
+Restoration .
+</item 2>
+
+<item 3>
+Graph query row:
+entity: Richard Burbage
+relationship: RELATED_TO
+relation: None
+fact: None
+context: None
+related: Shakespeare
+</item 3>
+
+<item 4>
+Graph query row:
+entity: Shakespeare
+relationship: CREATED
+relation: None
+fact: None
+context: None
+related: Ur-Hamlet
+</item 4>
+
+<item 5>
+Hamlet
+Jenkins suggests that any personal satire may be found in the name `` Polonius '' , which might point to a Polish or Polonian connection . G.R. Hibbard
+hypothesised that differences in names ( Corambis / Polonius : Montano / Raynoldo ) between the First Quarto and other editions might reflect a desire not to
+offend scholars at Oxford University . Date ( edit ) John Barrymore as Hamlet ( 1922 ) `` Any dating of Hamlet must be tentative '' , cautions the New Cambridge
+editor , Phillip Edwards . The earliest date estimate relies on Hamlet 's frequent allusions to Shakespeare 's Julius Caesar , itself dated to mid-1599 . The
+latest date estimate is based on an entry , of 26 July 1602 , in the Register of the Stationers ' Company , indicating that Hamlet was `` latelie Acted by the
+Lo : Chamberleyne his servantes '' . In 1598 , Francis Meres published his Palladis Tamia , a survey of English literature from Chaucer to its present day ,
+within which twelve of Shakespeare 's plays are named .
+</item 5>
+
+<item 6>
+Graph query row:
+entity: Shakespeare
+relationship: RELATED_TO
+relation: None
+fact: None
+context: None
+related: Richard Burbage
+</item 6>
+
+<item 7>
+Hamlet
+In the 400 years since its inception , the role has been performed by numerous highly acclaimed actors in each successive century . Three different early
+versions of the play are extant : the First Quarto ( Q1 , 1603 ) ; the Second Quarto ( Q2 , 1604 ) ; and the First Folio ( F1 , 1623 ) . Each version includes
+lines and entire scenes missing from the others . The play 's structure and depth of characterisation have inspired much critical scrutiny . One such example is
+the centuries - old debate about Hamlet 's hesitation to kill his uncle , which some see as merely a plot device to prolong the action , but which others argue
+is a dramatisation of the complex philosophical and ethical issues that surround cold - blooded murder , calculated revenge , and thwarted desire . More
+recently , psychoanalytic critics have examined Hamlet 's unconscious desires , while feminist critics have re-evaluated and attempted to rehabilitate the often
+maligned characters of Ophelia and Gertrude . Contents ( hide ) 1 Characters 2 Plot 2.1 Act I 2.2 Act II 2.3 Act III 2.
+</item 7>
+
+<item 8>
+Graph query row:
+entity: Shakespeare
+relationship: RELATED_TO
+relation: None
+fact: None
+context: None
+related: Ur-Hamlet
+</item 8>
+
+<item 9>
+Graph query row:
+entity: Richard Burbage
+relationship: MEMBER_OF
+relation: None
+fact: None
+context: None
+related: Lord Chamberlain's Men
+</item 9>
+
+<item 10>
+Hamlet
+He is dethroned by the spectre of an actor , and we shall never be able to keep the usurper out of our dreams . Maurice Maeterlinck in La Jeune Belgique ( 1890
+) . Shakespeare 's day to the Interregnum ( edit ) Shakespeare almost certainly wrote the role of Hamlet for Richard Burbage . He was the chief tragedian of the
+Lord Chamberlain 's Men , with a capacious memory for lines and a wide emotional range . Judging by the number of reprints , Hamlet appears to have been
+Shakespeare 's fourth most popular play during his lifetime -- only Henry IV Part 1 , Richard III and Pericles eclipsed it . Shakespeare provides no clear
+indication of when his play is set ; however , as Elizabethan actors performed at the Globe in contemporary dress on minimal sets , this would not have affected
+the staging . Firm evidence for specific early performances of the play is scant .
+</item 10>
+
+<item 11>
+Hamlet
+It was probably one of Shakespeare 's most popular works during his lifetime , and still ranks among his most performed , topping the performance list of the
+Royal Shakespeare Company and its predecessors in Stratford - upon - Avon since 1879 . It has inspired many other writers -- from Johann Wolfgang von Goethe and
+Charles Dickens to James Joyce and Iris Murdoch -- and has been described as `` the world 's most filmed story after Cinderella '' . The story of Shakespeare 's
+Hamlet was derived from the legend of Amleth , preserved by 13th - century chronicler Saxo Grammaticus in his Gesta Danorum , as subsequently retold by the 16th
+- century scholar François de Belleforest . Shakespeare may also have drawn on an earlier Elizabethan play known today as the Ur - Hamlet , though some scholars
+believe he himself wrote the Ur - Hamlet , later revising it to create the version of Hamlet we now have . He almost certainly wrote his version of the title
+role for his fellow actor , Richard Burbage , the leading tragedian of Shakespeare 's time .
+</item 11>
+
+<item 12>
+Graph query row:
+entity: Lord Chamberlain's Men
+relationship: MEMBER_OF
+relation: None
+fact: None
+context: None
+related: Richard Burbage
+</item 12>
+
+<item 13>
+Hamlet
+Hamlet - wikipedia Hamlet Jump to : navigation , search This article is about the play by William Shakespeare . For other uses , see Hamlet ( disambiguation ) .
+The American actor Edwin Booth as Hamlet , ca . 1870 The Tragedy of Hamlet , Prince of Denmark , often shortened to Hamlet ( / ˈhæmlɪt / ) , is a tragedy
+written by William Shakespeare at an uncertain date between 1599 and 1602 . Set in Denmark , the play dramatises the revenge Prince Hamlet is called to wreak
+upon his uncle , Claudius , by the ghost of Hamlet 's father , King Hamlet . Claudius had murdered his own brother and seized the throne , also marrying his
+deceased brother 's widow . Hamlet is Shakespeare 's longest play , and is considered among the most powerful and influential works of world literature , with a
+story capable of `` seemingly endless retelling and adaptation by others '' .
+</item 13>
+
+<item 14>
+Hamlet
+For Ian Charleson : A Tribute . London : Constable and Company . ISBN 978 - 0094702509 . Moody , Jane ( 2002 ) . `` Romantic Shakespeare '' . In Wells , Stanley
+; Stanton , Sarah . The Cambridge Companion to Shakespeare on Stage . Cambridge Companions to Literature . Cambridge : Cambridge University Press . pp. 37 -- 57
+. ISBN 0 - 521 - 79711 - X . Morrison , Michael A. ( 2002 ) . `` Shakespeare in North America '' . In Wells , Stanley ; Stanton , Sarah . The Cambridge
+Companion to Shakespeare on Stage . Cambridge Companions to Literature . Cambridge : Cambridge University Press . pp. 230 -- 58 . ISBN 0 - 521 - 79711 - X .
+Morrison , Michael A. ( 1997 ) . John Barrymore , Shakespearean Actor . Cambridge : Cambridge University Press . ISBN 0 - 521 - 62028 - 7 . `` Hamlet 1963 '' .
+Royal National Theatre . n.d.
+</item 14>
+
+<item 15>
+Hamlet
+Claudius . Claudius -- King of Denmark , Hamlet 's uncle and brother to the former King Gertrude -- Queen of Denmark and Hamlet 's mother Polonius -- Chief
+counsellor to the king Ophelia -- Polonius 's daughter Horatio -- Friend to Hamlet Laertes -- Polonius 's son Voltimand and Cornelius -- Courtiers Rosencrantz
+and Guildenstern -- Courtiers , friends of Hamlet Osric -- a Courtier Marcellus -- an Officer Barnardo -- an Officer Francisco -- a Soldier Reynaldo -- Polonius
+'s servant Ghost of Hamlet 's Father Fortinbras -- Prince of Norway Gravediggers -- a Sexton Player King , Player Queen , Lucianus etc. -- Players Plot ( edit )
+Act I ( edit ) The protagonist of Hamlet is Prince Hamlet of Denmark , son of the recently deceased King Hamlet , and nephew of King Claudius , his father 's
+brother and successor . Claudius hastily married King Hamlet 's widow , Gertrude , Hamlet 's mother , and took the throne for himself .
+</item 15>
+
+<item 16>
+Hamlet
+1 Act I 2.2 Act II 2.3 Act III 2.4 Act IV 2.5 Act V 3 Sources 4 Date 5 Texts 6 Analysis and criticism 6.1 Critical history 6.2 Dramatic structure 6.3 Length 6.4
+Language 7 Context and interpretation 7.1 Religious 7.2 Philosophical 7.3 Psychoanalytic 7.4 Feminist 8 Influence 9 Performance history 9.1 Shakespeare 's day
+to the Interregnum 9.2 Restoration and 18th century 9.3 19th century 9.4 20th century 9.5 21st century 9.6 Film and TV performances 9.7 Stage pastiches 10 Notes
+and references 10.1 Notes 10.2 References 11 Sources 11.1 Editions of Hamlet 11.2 Secondary sources 12 External links 12.1 Texts 12.2 Analysis 12.3 Related
+works Characters ( edit ) Main article : Characters in Hamlet Hamlet -- Son of the late King and nephew of the present King , Claudius .
+</item 16>
+=== END ITEM id=a53224718c3d2355 ===
+
+=== ITEM id=58a299fbf6c5ee13 ===
+Gold sentences and facts:
+Sentence 0: The poem survives in a single manuscript , the Cotton Nero A.x. , which also includes three religious narrative poems : Pearl , Purity and Patience . All are thought to have been written by the same unknown author , dubbed the `` Pearl Poet '' or `` Gawain Poet '' , since all four are written in a North West Midland dialect of Middle English .
+  Fact 0.0: The poem survives in a single manuscript, the Cotton Nero A.x.
+  Fact 0.1: The Cotton Nero A.x. manuscript also includes three religious narrative poems: Pearl, Purity, and Patience.
+  Fact 0.2: All four works are thought to have been written by the same unknown author.
+  Fact 0.3: The unknown author is dubbed the "Pearl Poet" or "Gawain Poet".
+  Fact 0.4: All four works are written in a North West Midland dialect of Middle English.
+
+Retrieved items:
+<item 1>
+Sir Gawain and the Green Knight
+Sir Gawain and the Green Knight - wikipedia Sir Gawain and the Green Knight Jump to : navigation , search For the 1973 film adaptation , see Gawain and the
+Green Knight ( film ) . Sir Gawain and the Green Knight First page of survived manuscript , circa 14th century . Author Anonymous Country Kingdom of England
+Language Middle English Genre Poem , chivalric romance , Arthurian and alliterative verse . Publication date 14th century Sir Gawain and the Green Knight (
+Middle English : Sir Gawayn and þe Grene Knyȝt ) is a late 14th - century Middle English chivalric romance . It is one of the best known Arthurian stories ,
+with its plot combining two types of folklore motifs , the beheading game and the exchange of winnings . The Green Knight is interpreted by some as a
+representation of the Green Man of folklore and by others as an allusion to Christ . Written in stanzas of alliterative verse , each of which ends in a rhyming
+bob and wheel , it draws on Welsh , Irish , and English stories , as well as the French chivalric tradition .
+</item 1>
+
+<item 2>
+Sir Gawain and the Green Knight
+doi : 10.5406 / jenglgermphil. 111.4. 0535 . Jump up ^ Hirsch , Edward ( 16 December 2007 ) . `` A Stranger in Camelot '' . The New York Times . p. 7.1 .
+Retrieved 16 March 2010 . Jump up ^ Armitage , Simon ( 2007 ) . Sir Gawain and the Green Knight : A New Verse Translation . New York : Norton . ISBN 978 - 0 -
+393 - 06048 - 5 . Jump up ^ Mills , Maldwyn ( 1991 ) . `` Review '' . The Yearbook of English Studies . 21 : 336 -- 337 . Jump up ^ `` Sir Gawain and the Green
+Knight '' . BBC Four . 17 August 2010 . Retrieved 5 August 2012 . Jump up ^ Stone , Brian ( 1974 ) . Sir Gawain and the Green Knight . Penguin . p. 138 .
+</item 2>
+
+<item 3>
+Graph query row:
+entity: Sword of the Valiant
+page: Sir Gawain and the Green Knight
+passage: Sir Gawain and the Green Knight
+Erkenwald Characters Green Knight Lady Bertilak Poetic style Bob and wheel Alliterative verse Wikiquote Wikisource texts ( hide ) Sir Gawain and the Green
+Knight by Pearl Poet Characters Green Knight Gawain Lady Bertilak Guinevere Morgan le Fay Caradoc Film Gawain and the Green Knight ( 1973 ) Sword of the Valiant
+( 1984 ) Literature The Squire , His Knight , and His Lady The Hollowing Opera Gawain Related The Greene Knight Honi soit qui mal y pense VIAF : 174581151 LCCN
+: n79068347 GND : 4125015 - 1 SUDOC : 028245075 BNF : cb12012068r ( data ) Retrieved from `` https://en.wikipedia.org/w/index.
+</item 3>
+
+<item 4>
+Sir Gawain and the Green Knight
+It is an important example of a chivalric romance , which typically involves a hero who goes on a quest which tests his prowess , and it remains popular to this
+day in modern English renderings from J.R.R. Tolkien , Simon Armitage , and others , as well as through film and stage adaptations . It describes how Sir Gawain
+, a knight of King Arthur 's Round Table , accepts a challenge from a mysterious `` Green Knight '' who challenges any knight to strike him with his axe if he
+will take a return blow in a year and a day . Gawain accepts and beheads him with his blow , at which the Green Knight stands up , picks up his head , and
+reminds Gawain of the appointed time . In his struggles to keep his bargain , Gawain demonstrates chivalry and loyalty until his honour is called into question
+by a test involving Lady Bertilak , the lady of the Green Knight 's castle . The poem survives in a single manuscript , the Cotton Nero A.x. , which also
+includes three religious narrative poems : Pearl , Purity and Patience .
+</item 4>
+
+<item 5>
+Graph query row:
+entity: stage version of Sir Gawain and the Green Knight
+page: Sir Gawain and the Green Knight
+passage: Sir Gawain and the Green Knight
+Also , Bertilak and the Green Knight are never connected . French / Australian director Martin Beilby directed a short ( 30 ' ) film adaptation in 2014 . There
+have been at least two television adaptations , Gawain and the Green Knight in 1991 and the animated Sir Gawain and the Green Knight in 2002 . The BBC broadcast
+a documentary presented by Simon Armitage in which the journey depicted in the poem is traced , using what are believed to be the actual locations . The poem
+was also adapted for the Adventure Time episode ' Seventeen ' where the Green Knight arrives on Finn 's 17th birthday , issuing him the challenge , as well as a
+series of follow - up games . Theatre ( edit ) The Tyneside Theatre company presented a stage version of Sir Gawain and the Green Knight at the University
+Theatre , Newcastle at Christmas 1971 . It was directed by Michael Bogdanov and adapted for the stage from the translation by Brian Stone .
+</item 5>
+
+<item 6>
+Sir Gawain and the Green Knight
+Other modern translations include those by Larry Benson , Brian Stone , James Winny , Helen Cooper , W.S. Merwin , Jacob Rosenberg , William Vantuono , Joseph
+Glaser , Bernard O'Donoghue , John Gardner , and Francis Ingledew . A new and illustrated translation of the work by illustrator and historian Michael Smith is
+currently being crowdsourced by publisher Unbound with a planned publication date of 2018 . Sword of the Valiant ( 1984 ) , one of two film adaptations ,
+starring Sean Connery as the Green Knight Film and television ( edit ) The poem has been adapted to film twice , on both occasions by writer - director Stephen
+Weeks : first as Gawain and the Green Knight in 1973 and again in 1984 as Sword of the Valiant : The Legend of Sir Gawain and the Green Knight , featuring Miles
+O'Keeffe as Gawain and Sean Connery as the Green Knight . Both films have been criticised for deviating from the poem 's plot . Also , Bertilak and the Green
+Knight are never connected .
+</item 6>
+
+<item 7>
+Sir Gawain and the Green Knight
+`` King Arthur and King Cornwall '' . In Sir Gawain : Eleven Romances and Tales . Western Michigan University Medieval Institute Publications , 2000 . p. 427 .
+ISBN 1 - 879288 - 59 - 1 ^ Jump up to : Lasater , Alice E. Spain to England : A Comparative Study of Arabic , European , and English Literature of the Middle
+Ages . University Press of Mississippi , 1974 . ISBN 0 - 87805 - 056 - 6 Jump up ^ Rix , Michael M. `` A Re-Examination of the Castleton Garlanding '' .
+Folklore . ( June 1953 ) 64.2 pp. 342 -- 344 Jump up ^ Buchanan , Alice ( June 1932 ) . `` The Irish Framework of Sir Gawain and the Green Knight '' . PLMA. 47
+( 2 ) : 315 -- 338 . doi : 10.2307 / 457878 . Jump up ^ . Friedman , Albert B. Morgan le Fay in Sir Gawain and the Green Knight . Medieval Academy of America .
+</item 7>
+
+<item 8>
+Sir Gawain and the Green Knight
+JSTOR 462158 . Jump up ^ Arthur , pp. 121 -- 123 . Jump up ^ Frye , Northrop . Anatomy of Criticism , p. 186 . ISBN 0 - 691 - 01298 - 9 ^ Jump up to : Markman ,
+Alan M. `` The Meaning of Sir Gawain and the Green Knight '' . PMLA . ( September 1957 ) 72.4 pp. 574 -- 586 Jump up ^ Sir Gawain and the Green Knight , second
+edition . Ed . J.R.R. Tolkien and E.V. Gordon , 1925 , note to lines 2514ff . ASIN B000IPU84U Jump up ^ The Norton Anthology of English Literature , eighth
+edition , Vol . BEd Stephen Greenblatt . New York , London : W.W. Norton and Co. , 2006 , p. 213 ( footnote ) . ISBN 0 - 393 - 92833 - 0 Jump up ^ Sir Gawain
+and the Green Knight , line 2529 .
+</item 8>
+
+<item 9>
+Sir Gawain and the Green Knight
+Even then , the Gawain poem was not published in its entirety until 1839 . Now held in the British Library , it has been dated to the late 14th century ,
+meaning the poet was a contemporary of Geoffrey Chaucer , author of The Canterbury Tales , though it is unlikely that they ever met . The three other works
+found in the same manuscript as Gawain ( commonly known as Pearl , Patience , and Purity or Cleanliness ) are often considered to be written by the same author
+. However , the manuscript containing these poems was transcribed by a copyist and not by the original poet . Although nothing explicitly suggests that all four
+poems are by the same poet , comparative analysis of dialect , verse form , and diction have pointed towards single authorship . What is known today about the
+poet is largely general . As J.R.R. Tolkien and E.V.
+</item 9>
+
+<item 10>
+Sir Gawain and the Green Knight
+The Knights of the Round Table absolve him of blame and decide that henceforth that they will wear a green sash in recognition of Gawain 's adventure and as a
+reminder to be always honest . `` Pearl poet '' ( edit ) Main article : Pearl Poet Though the real name of `` The Gawain Poet '' ( or poets ) is unknown , some
+inferences about him can be drawn from an informed reading of his works . The manuscript of Gawain is known in academic circles as Cotton Nero A.x. , following
+a naming system used by one of its owners , Robert Cotton , a collector of Medieval English texts . Before the Gawain manuscript came into Cotton 's possession
+, it was in the library of Henry Savile of Banke in Yorkshire . Little is known about its previous ownership , and until 1824 , when the manuscript was
+introduced to the academic community in a second edition of Thomas Warton 's History edited by Richard Price , it was almost entirely unknown . Even then , the
+Gawain poem was not published in its entirety until 1839 .
+</item 10>
+
+<item 11>
+Sir Gawain and the Green Knight
+Retrieved 2016 - 03 - 01 . External links ( edit ) Find more aboutSir Gawain and the Green Knightat Wikipedia 's sister projects Definitions from Wiktionary
+Media from Wikimedia Commons News from Wikinews Quotations from Wikiquote Texts from Wikisource Learning resources from Wikiversity Online texts High -
+resolution , full - sized scan of entire manuscript Sir Gawain and the Green Knight at Archive.org JRR Tolkien and EV Gordon 's Edition The poem in Middle
+English Sir Gawain and the Green Knight public domain audiobook at LibriVox ( various translations ) Google Books results General information The Gawain / Pearl
+Poet from the University of Calgary The Camelot Project Info on Sir Gawain Luminarium SGGK Website Oxford Bibliographies : Bibliography on Sir Gawain and the
+Green Knight BBC documentary tour of locations thought to be found in the poem ... Holywell , the River Mersey , the ' Wild Wirral ' , the Peak District , the
+Roaches , and Lud Chapel Sir Gawain Introduction - Article introducing various translations and adaptations of Sir Gawain The Pearl Poet Works Sir Gawain and
+the Green Knight Pearl Patience Cleanness St.
+</item 11>
+
+<item 12>
+Sir Gawain and the Green Knight
+In other words , the poet portrays kisses between a man and a woman as having the possibility of leading to sex , while in a heterosexual world kisses between a
+man and a man are portrayed as having no such possibility . Modern adaptations ( edit ) Books ( edit ) Though the surviving manuscript dates from the fourteenth
+century , the first published version of the poem did not appear until as late as 1839 , when Sir Frederic Madden of the British Museum recognized the poem as
+worth reading . Madden 's scholarly , Middle English edition of the poem was followed in 1898 by the first Modern English translation -- a prose version by
+literary scholar Jessie L. Weston . In 1925 , J.R.R. Tolkien and E.V. Gordon published a scholarly edition of the Middle English text of Sir Gawain and the
+Green Knight ; a revised edition of this text was prepared by Norman Davis and published in 1967 . The book , featuring a text in Middle English with extensive
+scholarly notes , is frequently confused with the translation into Modern English that Tolkien prepared , along with translations of Pearl and Sir Orfeo , late
+in his life .
+</item 12>
+=== END ITEM id=58a299fbf6c5ee13 ===

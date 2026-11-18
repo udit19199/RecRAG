@@ -1,0 +1,482 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "1044fb4f404249b1",
+   "gold": [
+    {
+     "sentence": " She was born in Guangzhou, China.",
+     "facts": {
+      "0.0": "The woman referred to as \"she\" was born in Guangzhou, China."
+     }
+    },
+    {
+     "sentence": " These videos are an overview and recap of each year's viral videos, events, memes, and music.",
+     "facts": {
+      "1.0": "The videos being described are an overview of each year's viral videos, events, memes, and music.",
+      "1.1": "The videos being described are a recap of each year's viral videos, events, memes, and music."
+     }
+    }
+   ],
+   "items": [
+    "Wengie\nHer YouTube channel also recently got awarded with \"Best Channel\" as well as \"Overall Winner\" for the Australian Online Video Awards.",
+    "CVX Live\nCVX Live (Creator Viewer Experience Live) is an event designed to bring online media creators and their fans together.\n\n It was held for the first time in Orem, Utah, on August 7 to 8, 2015 Originally created by the team behind the \"Bored Shorts TV\" YouTube channel, the convention is Utah's first YouTube event, gathering thousands of online YouTube creators and fans together in one place.\n\n One of the creators, Brett Robers, described it as “...a very unique opportunity to bring YouTube to life.”",
+    "Kevin Nalty\nKevin 'Nalts' Nalty (born May 12, 1969) is a YouTube comedian and partner based in Doylestown, Pennsylvania better known under his YouTube username Nalts.\n\n Nalts began on YouTube as one of the top-20 most-viewed comedy channels, and collaborates with many of today's top YouTube personalities.\n\n He has more than 1,000 videos which, as of April 18, 2016, have been viewed more than 297 million times on YouTube alone.\n\n He has been ranked as one of YouTube's Most Subscribed users.\n\n He is the author of \"Beyond Viral: How to Attract Customers, Promote Your Brand, and Make Money with Online Video (Wiley & Sons, 2010).",
+    "Wong Jing\nWong Jing ( born 3 May 1955) is a Hong Kong film director, producer, actor, presenter, and screenwriter.\n\n A prolific filmmaker with strong instincts for crowd-pleasing and publicity, Wong Jin has played a prominent role in the Hong Kong cinema of the last quarter-century.",
+    "Wengie\nWendy Ayche (born January 9 1986) known professionally as Wengie, is an Australian YouTube personality and vlogger.\n\n She was born in Guangzhou, China.\n\n She got the nickname \"Wengie\" at a dance class when two people gave her a nickname inspired by her Chinese name, Wén Jié.\n\n Since starting her channel on February 11 2013, her videos have received over 281 million views, and her channel has accumulated over 11 followers In the January 2016 edition of \"ElleGirl Japan\", she was nominated as a channel to watch.\n\n In August 2016, she was ranked the 5th Fastest growing channel in the world.\n\n Ayche was featured in the annual YouTube Rewind in 2016 and was also singled out by Google as one of the top beauty creators in the Asia region.\n\n Ayche reached 5 million YouTube subscribers in January 2017, and her channel is currently in the 12th most subscribed How-To & Style Channel on YouTube.\n\n She is also currently a board member of the Internet Creators Guild, a non-profit focused on providing the protection, representation and guidance to online creators.",
+    "YouTube Rewind\nYouTube Rewind is a video series produced and created by YouTube and Portal A Interactive.\n\n These videos are an overview and recap of each year's viral videos, events, memes, and music.\n\n Each year, the number of YouTube celebrities featured in the video, as well as the presentation of the series, have increased.\n\n The latest episode of \"YouTube Rewind\" was released on December 8, 2016.",
+    "MatPat\nMatthew Robert \"Matt\" Patrick, also known by screen name MatPat, is an American internet personality, actor, writer, and producer.\n\n He is best known as the creator and narrator of the YouTube webseries \"Game Theory\", where he comments on topics such as the logic, scientific accuracy, and lore of various video games and the gaming industry.\n\n He is also known for creating the spinoff \"Film Theory,\" centering around cinema and internet filmography.\n\n In 2015, Patrick created one of YouTube's first live gaming channels, \"GTLive\", and in 2016, he created the YouTube Red series \"MatPat's Game Lab\".\n\n As of June 2017, Patrick has amassed over 13 million subscribers and over 1.6 billion views total across his three channels.\n\n Between July 1, 2016 and July 31, 2016, he starred in the game show \"The Runner\".\n\n The show was produced by Ben Affleck and Matt Damon and was available on Go90.",
+    "Lilly Singh\nLilly Singh (born 26 September 1988) is a Canadian YouTube personality, vlogger, comedian, writer, and actress.\n\n She is better known by her YouTube username IISuperwomanII.\n\n Since beginning her channel in October 2010, her videos have received over 2 billion views, and her channel has accumulated over 12 million subscribers.\n\n In 2016, she was ranked 3rd on the \"Forbes\" list of the world's highest paid YouTube stars (behind Roman Atwood and PewDiePie), earning a reported $7.5 million in 2016.\n\n Singh has featured in the annual YouTube Rewind every year since 2014.\n\n She ranked 1st on 2017 Forbes Top Influencers List in the entertainment category.",
+    "Wayne Goss (make-up artist)\nWayne Alan Goss (born 4 March 1978) is an English makeup artist, YouTube personality and entrepreneur.\n\n Best known for his \"Wayne Goss\" channel on YouTube, he is the creator and owner of the self-eponymous makeup brush line launched in September 2013.\n\n As of November 2016, Goss' main YouTube channel had over 2.7 million subscribers and had had 344 million views.",
+    "Issa Rae\nJo-Issa \"Issa\" Rae Diop (born January 12, 1985) is an American actress, writer, director, producer and web series creator.\n\n She is best known as the creator of the YouTube web series \"Awkward Black Girl\".\n\n Since the premiere of \"Awkward Black Girl\", Rae has developed her own YouTube platform where she features various content created by people of color.\n\n Rae's shows have garnered over 20 million views and over 260,000 subscribers on YouTube."
+   ]
+  },
+  {
+   "id": "cfd1a5d3dcdfff6a",
+   "gold": [
+    {
+     "sentence": "Gunnar Eric Nelson (born September 20, 1967) is an American musician, singer, and songwriter and international multi-platinum recording artist.",
+     "facts": {
+      "0.0": "Gunnar Eric Nelson was born on September 20, 1967.",
+      "0.1": "Gunnar Eric Nelson is an American musician.",
+      "0.2": "Gunnar Eric Nelson is an American singer.",
+      "0.3": "Gunnar Eric Nelson is an American songwriter.",
+      "0.4": "Gunnar Eric Nelson is an international multi-platinum recording artist."
+     }
+    },
+    {
+     "sentence": "Florence Leontine Mary Welch (born 28 August 1986) is an English musician, singer and songwriter, best known as the vocalist of indie rock band Florence and the Machine.",
+     "facts": {
+      "1.0": "Florence Leontine Mary Welch was born on 28 August 1986.",
+      "1.1": "Florence Leontine Mary Welch is an English musician.",
+      "1.2": "Florence Leontine Mary Welch is an English singer.",
+      "1.3": "Florence Leontine Mary Welch is an English songwriter.",
+      "1.4": "Florence Leontine Mary Welch is best known as the vocalist of the indie rock band Florence and the Machine."
+     }
+    }
+   ],
+   "items": [
+    "Lungs (album)\nLungs is the debut studio album by English indie rock band Florence and the Machine, released on 3 July 2009 on Island Records.\n\n Frontwoman Florence Welch experimented with and honed the album's sound with bandmate Isabella Summers, while also collaborating with five record producers including James Ford, Paul Epworth, Steve Mackey.\n\n The music on \"Lungs\" established Florence and the Machine as an internationally successful rock act, and also featured the group's successful mix of string arrangements centered around Welch's vocal prowess.",
+    "Ceremonials Tour\nThe Ceremonials Tour was the second concert tour by English indie rock band Florence and the Machine.\n\n The tour included performances at Music festivals because it is lead singer Florence Welch's favourite way to perform live.\n\n Welch had originally planned to spend over one year touring for \"Ceremonials\" (their previous tour lasted almost three and a half years) before announcing that the December 2012 dates would be the final performances of the tour.\n\n On 25 February 2013 it was announced that Florence and the Machine would be playing at the Coke Live Music Festival in Poland on 10 August 2013, and on 26 March 2013 it was announced that the band would be playing at Chime for Change's \"The Sound of Change Live\" concert at London's Twickenham Stadium alongside Beyoncé, Ellie Goulding and Haim, amongst others.",
+    "Gunnar Nelson (musician)\nGunnar Eric Nelson (born September 20, 1967) is an American musician, singer, and songwriter and international multi-platinum recording artist.",
+    "Bo Welch\nRobert W. \"Bo\" Welch III (born November 30, 1951) is an American production designer and director.",
+    "Romeo Nelson\nIromeio \"Romeo\" Nelson (March 12, 1902 – May 17, 1974) was an American boogie woogie pianist whose recordings from 1929 are regarded as some of the finest, and certainly the fastest, boogie woogie showpieces on record.",
+    "Nelson (band)\nNelson is an American rock band founded by singer/songwriters Matthew and Gunnar Nelson (twin sons of Ricky Nelson and Kristin Nelson).\n\n The band achieved success during the early 1990s with their double platinum debut album \"After the Rain\", which featured the number-one hit \"(Can't Live Without Your) Love and Affection\".",
+    "Grant Nicholas\nGrantley Jonathan \"Grant\" Nicholas (born 12 November 1967) is a Welsh musician, best known as the lead singer and lead guitarist of the rock band Feeder.",
+    "Florence Welch\nFlorence Leontine Mary Welch (born 28 August 1986) is an English musician, singer and songwriter, best known as the vocalist of indie rock band Florence and the Machine.",
+    "Sweet Nothing\n\"Sweet Nothing\" is a song by Scottish recording artist and record producer Calvin Harris from his third studio album, \"18 Months\" (2012).\n\n It features vocals from Florence and the Machine singer Florence Welch.\n\n Harris previously worked with the band in a remix of their single, \"Spectrum\" (2012).\n\n While recording \"18 Months\", Harris expressed interest in working with Welch.\n\n He mentioned that it was not easy and he had to chase her, due to schedule conflicts.\n\n Welch accepted his invitation and the two recorded \"Sweet Nothing\".\n\n The track premiered on \"The Chris Moyles Show\" on BBC Radio 1 on 28 August 2012 and was later released as the fifth single from the album on 12 October 2012.",
+    "Florence and the Machine\nFlorence and the Machine (stylised as Florence + the Machine) are an English indie rock band that formed in London in 2007, consisting of lead singer Florence Welch, keyboardist Isabella Summers, and a collaboration of other artists.\n\n The band's music received praise across the media, especially from the BBC, which played a large part in their rise to prominence by promoting Florence and the Machine as part of \"BBC Introducing\".\n\n At the 2009 Brit Awards they received the Brit Awards \"Critics' Choice\" award.\n\n The band's music is renowned for its dramatic and eccentric production and also Welch's powerful vocal performances."
+   ]
+  },
+  {
+   "id": "c644659bb9db9a35",
+   "gold": [
+    {
+     "sentence": "Ralph Foster Smart {'1': \", '2': \", '3': \", '4': \"} (27 August 1908 – 12 February 2001) was a film and television producer, director, and writer, born in England to Australian parents.",
+     "facts": {
+      "0.0": "Ralph Foster Smart was born on 27 August 1908.",
+      "0.1": "Ralph Foster Smart died on 12 February 2001.",
+      "0.2": "Ralph Foster Smart was a film producer.",
+      "0.3": "Ralph Foster Smart was a television producer.",
+      "0.4": "Ralph Foster Smart was a director.",
+      "0.5": "Ralph Foster Smart was a writer.",
+      "0.6": "Ralph Foster Smart was born in England.",
+      "0.7": "Ralph Foster Smart's parents were Australian."
+     }
+    },
+    {
+     "sentence": "Randolph Severn \"Trey\" Parker III (born October 19, 1969) is an American actor, animator, writer, director, producer, singer, and songwriter.",
+     "facts": {
+      "1.0": "Randolph Severn 'Trey' Parker III was born on October 19, 1969.",
+      "1.1": "Randolph Severn 'Trey' Parker III is an American actor.",
+      "1.2": "Randolph Severn 'Trey' Parker III is an animator.",
+      "1.3": "Randolph Severn 'Trey' Parker III is a writer.",
+      "1.4": "Randolph Severn 'Trey' Parker III is a director.",
+      "1.5": "Randolph Severn 'Trey' Parker III is a producer.",
+      "1.6": "Randolph Severn 'Trey' Parker III is a singer.",
+      "1.7": "Randolph Severn 'Trey' Parker III is a songwriter."
+     }
+    }
+   ],
+   "items": [
+    "Everett Greenbaum\nEverett Greenbaum (December 20, 1919 – July 11, 1999) was an American television and film writer and actor who contributed to such shows as \"The Andy Griffith Show\" (24 Episodes), \"M*A*S*H\" (35 Episodes), \"Love American Style\", \"The Real McCoys\" (32 Episodes), \"Sanford and Son\", and \"The George Gobel Show\".\n\n Greenbaum was a co-creator with Jim Fritzell of \"Mister Peepers\" an important early television show which starred Wally Cox.\n\n He wrote the Hollywood feature film \"Good Neighbor Sam\", as well as a series of films starring Don Knotts that included \"The Shakiest Gun in the West\", \"The Reluctant Astronaut\", and \"The Ghost and Mr. Chicken\".",
+    "Jimmy Tatro\nJames Richard Tatro (born February 16, 1992) is an American actor, comedian, writer and YouTube personality.\n\n He is the creator and star of the YouTube channel \"LifeAccordingToJimmy\", which has about 2.7 million subscribers and over 440 million video views.\n\n Tatro writes, produces and directs each of his video sketches with his friend, Christian A. Pierce.\n\n Tatro has appeared in \"Divergent\", \"Grown Ups 2\", \"22 Jump Street\" and \"\", and will appear in the film \"Camp Manna\" alongside Gary Busey, set to be released in 2017.\n\n He is also starring in the true-crime satire, \"American Vandal\", in which he plays Dylan Maxwell, the accused vandal.\n\n He will also appear in the movie, Action No. 1, a film about a group of people who attempt to steal the first comic book with Superman off the actor Nicholas Cage.",
+    "The Itchy &amp; Scratchy Show\n(voiced by Alex Rocco, and, later, Hank Azaria), who runs the studio and produces the show.",
+    "Terry Ray (actor)\nTerry Ray (born February 12, 1961) is an American actor, screenwriter, and producer.\n\n Some of his work includes \"Gaydar\" and \"Cost of Living\" (2009).\n\n Ray is the creator and writer of \"here!\n\n TV\"'s sitcom \"From Here on OUT\", the first original gay sitcom created by a gay network.\n\n Terry stars in the sitcom, along with Juliet Mills, Suzanne Whang and T.J. Hoban.\n\n<br><br>Terry Ray's 1987 appearance on Scrabble (game show) is noted as number 3 in the \"10 Great Gay Moments in Game Show History\", after Charles Nelson Reilly and Paul Lynde.\n\n In the same appearance, Terry was also named as one of the \"5 Weirdest Game Show Contestants Ever\", by Movieline.\n\n<br><br>Terry’s first professional writing job was the stage performance “Hollywood Goes Classical\" at the venerable Dorothy Chandler Pavilion starring Mickey Rooney, Michael York, Dean Jones, Rhonda Fleming and several other classic film stars.",
+    "Ralph Smart\nRalph Foster Smart {'1': \", '2': \", '3': \", '4': \"} (27 August 1908 – 12 February 2001) was a film and television producer, director, and writer, born in England to Australian parents.",
+    "Bill Barretta\nWilliam Paul \"Bill\" Barretta (born June 19, 1964) is an American puppeteer and producer who has been performing with The Muppets since 1991, when he puppeteered the body of Sinclair family patriarch, Earl Sinclair on \"Dinosaurs\".\n\n He later developed several new characters on \"Muppets Tonight\", including Pepe the King Prawn, Johnny Fiama, Big Mean Carl and Bobo the Bear.\n\n Along with having his own Muppet characters, Barretta has taken over several of Jim Henson's roles, such as Dr. Teeth, Rowlf the Dog, Mahna Mahna and Swedish Chef, and briefly took over Jerry Nelson's role of Lew Zealand.\n\n His film debut as a principal puppeteer was in 1996's \"Muppet Treasure Island\" as Clueless Morgan.\n\n In addition, Barretta has produced two of the Muppets' television films, \"It's a Very Merry Muppet Christmas Movie\" (2002) and \"The Muppets' Wizard of Oz\" (2005).\n\n Barretta also provides additional voices on \"Kim Possible\".",
+    "Ralph Bakshi\nRalph Bakshi (born October 29, 1938) is an American director of animated and live-action films.\n\n In the 1970s, he established an alternative to mainstream animation through independent and adult-oriented productions.\n\n Between 1972 and 2015, he directed ten theatrically released feature films, six of which he wrote.\n\n He has been involved in numerous television projects as director, writer, producer and animator.",
+    "Terry Ray (actor)\nHe wrote and starred in two more shows at the Dorothy Chandler Pavilion, one co-starring Amanda Bynes and the other Hilary Duff.\n\n<br><br>Terry is also the voice of the \"Gaydar Gun\", a spinoff toy from the film Gaydar.",
+    "Trey Parker\nRandolph Severn \"Trey\" Parker III (born October 19, 1969) is an American actor, animator, writer, director, producer, singer, and songwriter.\n\n He is known for co-creating \"South Park\" (1997–present) along with his creative partner Matt Stone, as well as co-writing and co-directing the Tony Award-winning musical \"The Book of Mormon\" (2011).\n\n Parker was interested in film and music as a child, and attended the University of Colorado, Boulder following high school, where he met Stone.\n\n The two collaborated on various short films, and starred in a feature-length musical, titled \"Cannibal!\n\n The Musical\" (1993).",
+    "Friends of the People\nFriends of the People is an American sketch comedy television series.\n\n It was slated to premiere on TruTV in summer 2014, but was pushed to October 28, 2014, as part of the network's shift in their programming direction.\n\n Many of the cast members (Jennifer Bartels, Jermaine Fowler, and Lil Rel Howery) were originally reported to be cast members of a planned revival of In Living Color which never materialized.\n\n The show's first season consists of 10 episodes.\n\n This makes it the network's first sketch comedy show.\n\n The series holds a TV-14 rating, though select episodes are rated TV-MA--also a first for the truTV network."
+   ]
+  },
+  {
+   "id": "b737c7f6dcd174d4",
+   "gold": [
+    {
+     "sentence": "The Monastery of the Mother of God at the Spring (full name in Greek: , pr.",
+     "facts": {
+      "0.0": "The full Greek name of the Monastery of the Mother of God at the Spring is given, with the pronunciation abbreviation 'pr.'"
+     }
+    },
+    {
+     "sentence": " \"Moni tis Theotóku tis Pigis\"; Turkish name: \"Balıklı Meryem Ana Rum Manastiri\") or simply Zoödochos Pege (Greek: Ζωοδόχος Πηγή , \"Life-giving Spring\") is an Eastern Orthodox sanctuary in Istanbul, Turkey.",
+     "facts": {
+      "1.0": "The Monastery of the Mother of God at the Spring has the name 'Moni tis Theotóku tis Pigis'.",
+      "1.1": "The Monastery of the Mother of God at the Spring has the Turkish name 'Balıklı Meryem Ana Rum Manastiri'.",
+      "1.2": "The Monastery of the Mother of God at the Spring is simply called Zoödochos Pege.",
+      "1.3": "Zoödochos Pege is Greek for 'Life-giving Spring' (Ζωοδόχος Πηγή).",
+      "1.4": "The Monastery of the Mother of God at the Spring is an Eastern Orthodox sanctuary.",
+      "1.5": "The Monastery of the Mother of God at the Spring is located in Istanbul, Turkey."
+     }
+    },
+    {
+     "sentence": "Hagia Irene or Hagia Eirene (Ancient Greek: Ἁγία Εἰρήνη , Byzantine ] , \"Holy Peace\", Turkish: \"Aya İrini\" ), sometimes known also as Saint Irene, is a Greek Eastern Orthodox church located in the outer courtyard of Topkapı Palace in Istanbul, Turkey.",
+     "facts": {
+      "2.0": "Hagia Irene is also called Hagia Eirene.",
+      "2.1": "Hagia Irene has the Ancient Greek name Ἁγία Εἰρήνη.",
+      "2.2": "A Byzantine form of the name is given for Hagia Irene, but the text of that form is cut off in the source.",
+      "2.3": "Hagia Irene's name means 'Holy Peace'.",
+      "2.4": "Hagia Irene has the Turkish name 'Aya İrini'.",
+      "2.5": "Hagia Irene is sometimes known also as Saint Irene.",
+      "2.6": "Hagia Irene is a Greek Eastern Orthodox church.",
+      "2.7": "Hagia Irene is located in the outer courtyard of Topkapı Palace.",
+      "2.8": "Topkapı Palace is in Istanbul, Turkey."
+     }
+    }
+   ],
+   "items": [
+    "Church of St. Mary of the Spring (Istanbul)\nThe Monastery of the Mother of God at the Spring (full name in Greek: , pr.\n\n \"Moni tis Theotóku tis Pigis\"; Turkish name: \"Balıklı Meryem Ana Rum Manastiri\") or simply Zoödochos Pege (Greek: Ζωοδόχος Πηγή , \"Life-giving Spring\") is an Eastern Orthodox sanctuary in Istanbul, Turkey.\n\n The present church, built in 1835, bears the same dedication as the shrine erected in this place between the end of the fifth and the beginning of the sixth century.\n\n After several renovations, this building was destroyed in the first half of the fifteenth century by the Ottomans.\n\n The complex got its name from a nearby holy spring, reputed to have healing properties.\n\n For almost fifteen hundred years, this sanctuary has been one of the most important pilgrimage sites of Greek Orthodoxy.",
+    "St Mary de Lode Church, Gloucester\nSt Mary de Lode Church, Archdeacon Street, Gloucester GL1 2QT, is a Church of England church immediately outside the grounds of Gloucester Cathedral.\n\n It is believed by some to be on the site of the first Christian church in Britain.\n\n The church is in the Diocese of Gloucester and Grade I listed by English Heritage.\n\n It has also been known as \"St. Mary Before the Gate of St. Peter\", \"St. Mary Broad Gate\" and \"St. Mary De Port\".",
+    "St. Mary's Episcopal Church (Washington, D.C.)\nSt. Mary's Episcopal Church, also known as St. Mary's, Foggy Bottom or St. Mary's Chapel, is a historic Episcopal church located at 730 23rd Street, N.W. in the Foggy Bottom neighborhood of Washington, D.C..\n\n On April 2, 1973, St. Mary's Episcopal Church was added to the National Register of Historic Places.",
+    "Hagia Irene\nHagia Irene or Hagia Eirene (Ancient Greek: Ἁγία Εἰρήνη , Byzantine ] , \"Holy Peace\", Turkish: \"Aya İrini\" ), sometimes known also as Saint Irene, is a Greek Eastern Orthodox church located in the outer courtyard of Topkapı Palace in Istanbul, Turkey.\n\n It is one of the few churches in Istanbul that has not been converted into a mosque.\n\n The Hagia Irene today operates as a museum and concert hall.",
+    "St. Mary's Church (Swormville, New York)\nSt. Mary's Catholic Church is a church located on the corner of Transit (New York State Route 78) and Stahley roads in Swormville, New York, in the United States.\n\n Originally known as St. Mary’s Church of the Assumption at Transit, the building was constructed of about 260,000 bricks.\n\n John Nepomucene Neumann (later to be named St. John Neumann) started to visit Swormville, celebrating mass in local homes, barns and fields.\n\n In 1839 he instructed that a small house would be made to hold mass.\n\n Bishop John Timon established the first catholic church (St. Mary's) of the town of Clarence, New York.\n\n In 1861, Father Michael Schinabeak made plans for a church to be constructed.\n\n Construction began in 1862 and finished in fall of 1865.\n\n The official opening of the Church was in January 1866.\n\n In 2010 a new Church was constructed behind the old St. Mary's.",
+    "St. Mary's Church and Rectory (Iowa City, Iowa)\nSt. Mary's Catholic Church, also known as St. Mary of the Visitation Church, is a parish church of the Diocese of Davenport which is located at 228 E. Jefferson St. in Iowa City, Iowa, United States.\n\n The church building and rectory are listed together on the National Register of Historic Places in 1980.\n\n They were both included as contributing properties in the Jefferson Street Historic District in 2004.\n\n The parish's first rectory, which is now a private home, is also listed on the National Register as St. Mary's Rectory.\n\n It is located a few blocks to the east of the present church location at 610 E. Jefferson St.",
+    "Old Church of St George, Hill Street Dublin\nThe Old Church of St. George, commonly called \"Little George's\" in Hill Street (formerly Temple Street Lower) Parish of St. Mary, Dublin was built in 1668 by the Eccles family for their workmen and also as a chapel-of-ease to the nearby St. Mary's Church.\n\n However, that St. Mary's Church was not St. Mary's Church, Dublin as its foundation stone was laid in 1700, and it was not St. Mary's Abbey, Dublin as it was dissolved in 1539.\n\n Therefore St George's church, Hill Street, may have been a Chapel-of-Ease to St. Michan's Church in Church Street.\n\n The main body of the church, with the exception of the tower, was demolished in 1894.",
+    "Saint Michael the Archangel Church (Monroe, MI)\nIn 1918 the parish built the present building of St. Michael School which is now a part of Monroe Catholic Elementary Schools.\n\n The movement to establish the parish started in 1845 by 14 German immigrants who wanted to worship in their native language.\n\n The only nearby church was St. Mary of the Immaculate Conception right across the river where St. Michael stands today.\n\n St. Mary's only worshiped in French and wouldn't hold services in other languages like German and Irish.\n\n The German and Irish families were forced to move to the second floor of the rectory to have mass in their native languages.\n\n When the German families were able to acquire land they were eager to leave St. Mary's to start a parish of their own.\n\n They first purchased an empty lot Humphrey Street but the plan was soon abandoned.\n\n They then purchased the first mayor of Monroe's estate to build the church and it remains the current site of the church.",
+    "St. Mary's High School (Manhasset, New York)\nSaint Mary's High School is a private Catholic high school in Manhasset, New York.\n\n St. Mary's parish is part of the Roman Catholic Diocese of Rockville Centre yet the High School serves families of the Roman Catholic Archdiocese of New York, the Diocese of Brooklyn and the Diocese of Rockville Centre.\n\n It is located off Northern Boulevard at 51 Clapham Avenue, Manhasset, near the Miracle Mile.\n\n St. Mary's Men's Varsity Ice Hockey is the all-time leader in State Championships.",
+    "St. Mary's Church (Ballston Spa, New York)\nSt. Mary's Church is a Catholic parish located in Ballston Spa, New York.\n\n It is located within the Roman Catholic Diocese of Albany.\n\n Father Thomas J. Kelly is the current pastor.\n\n St. Mary's is the fourth oldest parish in the Diocese.\n\n St. Mary's of Ballston Spa is partnered with St. Mary's of Galway, after the pastor at St. Mary's of Galway died and no replacement was available."
+   ]
+  },
+  {
+   "id": "6c2c9f6f450ffb69",
+   "gold": [
+    {
+     "sentence": " He appeared in 57 films between 1919 and 1932.",
+     "facts": {
+      "0.0": "The person described appeared in 57 films.",
+      "0.1": "The person described appeared in 57 films between 1919 and 1932."
+     }
+    },
+    {
+     "sentence": " He also directed 54 films between 1920 and 1933, including one Harry Langdon short, two of the Tay Garnett- penned comedies Stan Laurel made for Joe Rock, and fifteen of the earliest entries in the Edgar Kennedy \"Average Man\" series.",
+     "facts": {
+      "1.0": "The person described directed 54 films.",
+      "1.1": "The person described directed these films between 1920 and 1933.",
+      "1.2": "The person's directed films include one Harry Langdon short.",
+      "1.3": "The person's directed films include two of the Tay Garnett-penned comedies Stan Laurel made for Joe Rock.",
+      "1.4": "The person's directed films include fifteen of the earliest entries in the Edgar Kennedy \"Average Man\" series."
+     }
+    },
+    {
+     "sentence": "John Scott Biddle (1925–2008) was a foremost yachting cinematographer and lecturer, establishing a film-making career that spanned more than forty years.",
+     "facts": {
+      "2.0": "John Scott Biddle lived from 1925 to 2008.",
+      "2.1": "John Scott Biddle was a foremost yachting cinematographer.",
+      "2.2": "John Scott Biddle was a lecturer.",
+      "2.3": "John Scott Biddle established a film-making career.",
+      "2.4": "John Scott Biddle's film-making career spanned more than forty years."
+     }
+    }
+   ],
+   "items": [
+    "John Biddle (Unitarian)\nJohn Biddle or Bidle (born Wotton-under-Edge, Gloucestershire, England, 14 January 1615 – died 22 September 1662) was an influential English nontrinitarian, and Unitarian.\n\n He is often called \"the Father of English Unitarianism\".",
+    "John Biddle (yachting cinematographer)\nJohn Scott Biddle (1925–2008) was a foremost yachting cinematographer and lecturer, establishing a film-making career that spanned more than forty years.\n\n His films captured not only the technical aspects of sailing but also the human story in events as tranquil as a Nova Scotia cruise and as grand as the America's Cup Races.",
+    "Harry Sweet\nHarry Sweet (October 2, 1901 – June 18, 1933) was an American actor, director and screenwriter.\n\n He appeared in 57 films between 1919 and 1932.\n\n He also directed 54 films between 1920 and 1933, including one Harry Langdon short, two of the Tay Garnett- penned comedies Stan Laurel made for Joe Rock, and fifteen of the earliest entries in the Edgar Kennedy \"Average Man\" series.",
+    "Charles John Biddle\nCharles John Biddle (April 30, 1819 – September 28, 1873) was an American soldier, lawyer, congressman, and newspaper editor.",
+    "John Biddle (United States Army general)\nJohn Biddle (February 2, 1859 – January 18, 1936) was career United States Army officer who became superintendent of the United States Military Academy.",
+    "John Steiner\nJohn Steiner (born 7 January 1941 in Chester, Cheshire) is an English actor.\n\n Tall, thin and gaunt, Steiner attended the Royal Academy of Dramatic Arts and worked for a few years at the BBC.\n\n Steiner featured in a lead role in a television production of \"Design for Living\" by Noël Coward.\n\n Later he found further work primarily in films including \"Marat/Sade\" (1967), and the original \"Bedazzled\" (1967) with Peter Cook and Dudley Moore.\n\n In 1969, Steiner was hired to play a part in the spaghetti western \"Tepepa\", and also appeared opposite Franco Nero in \"White Fang\", directed by Lucio Fulci.",
+    "Charles J. Biddle (aviator)\nMajor Charles John Biddle (13 May 1890 – 22 March 1972) was an American aviator, attorney, and author.\n\n He was a flying ace during World War I.\n\n Postwar, he launched a career in law and wrote his memoirs.",
+    "Kevin Brownlow\nKevin Brownlow (born 2 June 1938) is a British film historian, television documentary-maker, filmmaker, author, and film editor.\n\n Brownlow is best known for his work documenting the history of the silent era.\n\n Brownlow became interested in silent film at the age of eleven.\n\n This interest grew into a career spent documenting and restoring film.\n\n He has rescued many silent films and their history.\n\n His initiative in interviewing many largely forgotten, elderly film pioneers in the 1960s and 1970s preserved a legacy of early mass-entertainment cinema.\n\n Brownlow received an Academy Honorary Award at the 2nd Annual Governors Awards given by the Academy of Motion Picture Arts and Sciences on 13 November 2010.\n\n This was the first occasion on which an Academy Honorary Award was given to a film preservationist.",
+    "Biddle family\nThe American Biddle family of Philadelphia began when William Biddle (1630–1712) and Sarah Kempe (1634–1709), Quakers, emigrated from England to America in 1681, in part, to avoid religious persecution.\n\n Having acquired extensive rights to over 43000 acre of lands in Quaker West Jersey, they settled first at Burlington.\n\n Two third generation brothers, William Biddle, 3rd (1698–1756), and John Biddle (1707–1789), moved from Mount Hope (1684) near Bordentown to Philadelphia in the 1720s and 1730s and constituted the first generation of the Philadelphia Biddle family.",
+    "John Biddle (Michigan politician)\nJohn Biddle (March 2, 1792 – August 25, 1859) was a delegate to the United States Congress from the Michigan Territory."
+   ]
+  },
+  {
+   "id": "90822e34b3a97c2f",
+   "gold": [
+    {
+     "sentence": " It began in 1995 as the merger of two take-and-bake pizza companies: Papa Aldo's Pizza (founded in 1981) and Murphy's Pizza (founded in 1981).",
+     "facts": {
+      "0.0": "The company began in 1995.",
+      "0.1": "The company began as the merger of two take-and-bake pizza companies.",
+      "0.2": "One of the merged companies was Papa Aldo's Pizza.",
+      "0.3": "Papa Aldo's Pizza was founded in 1981.",
+      "0.4": "The other merged company was Murphy's Pizza.",
+      "0.5": "Murphy's Pizza was founded in 1981."
+     }
+    },
+    {
+     "sentence": "Gino's Pizza and Spaghetti is a restaurant chain with 40 locations, most of them within the U.S. state of West Virginia.",
+     "facts": {
+      "1.0": "Gino's Pizza and Spaghetti is a restaurant chain.",
+      "1.1": "Gino's Pizza and Spaghetti has 40 locations.",
+      "1.2": "Most of Gino's Pizza and Spaghetti's locations are within the U.S. state of West Virginia."
+     }
+    },
+    {
+     "sentence": " The company was founded by Kenney Grant in 1961.",
+     "facts": {
+      "2.0": "The company was founded by Kenney Grant.",
+      "2.1": "The company was founded in 1961."
+     }
+    }
+   ],
+   "items": [
+    "Nirula's\nNirula's is India's oldest fast food restaurant chain.\n\n Based in North India and most popular in NCR Delhi, it was Delhi's first fast food restaurant, opening in Connaught Place in 1977.\n\n Today it has over 70 outlets in NCR Delhi, Bihar, Haryana, Madhya Pradesh, Punjab, Rajasthan and Uttar Pradesh states, offering a “Desi” version of Western fast food items.\n\n Nirula's success has led them to branch out into other ventures which include, ‘Potpourri’, an Indian cuisine, casual dining restaurant chain; ‘Nirula's 21’, ice cream parlour chain, in addition to pastry shops and two hotels in Noida and Panipat.\n\n Recently Nirula's opened its first franchise in Patna, their first outlet in the entire east zone.",
+    "Papa Gino's\nPapa Gino's, Inc. is a restaurant chain based in Dedham, Massachusetts specializing in American-style pizza along with pasta, subs, salads, and a variety of appetizers.\n\n There are over 150 Papa Gino's locations in Connecticut, Maine, Massachusetts, New Hampshire, and Rhode Island.",
+    "Lucky Luciano\nCharles \"Lucky\" Luciano ( ; born Salvatore Lucania November 24, 1897 – January 26, 1962) was an Italian-American mobster and crime boss.\n\n Luciano is considered the father of modern organized crime in the United States for the establishment of the first Commission.\n\n He was also the first official boss of the modern Genovese crime family.\n\n He was, along with his associates, instrumental in the development of the National Crime Syndicate.",
+    "Gino's East\nGino's East is a Chicago-based restaurant chain, notable for its deep-dish pizza (sometimes called Chicago-style pizza), and for its interior walls, which patrons have covered in graffiti and etchings.\n\n The restaurant features deep-dish pizza baked in cast-iron pans, as well as sandwiches, soups and salads.",
+    "Prem Ganapathy\nPrem Ganapathy is an Indian entrepreneur and businessman.\n\n He is the founder of the restaurant chain Dosa plaza.\n\n Starting with meager investment, he expanded Dosa plaza into a restaurant chain with 45 outlets in India, New Zealand, Oman, and UAE.",
+    "Gino's Hamburgers\nGino's Hamburgers was a fast-food restaurant chain founded in Baltimore, Maryland, by Baltimore Colts defensive end Gino Marchetti and running back Alan Ameche, along with their close friend Louis Fischer, in 1957.\n\n A new group of restaurants under the Gino's name involving some of the principals of the original chain was started in 2010.",
+    "Papa Murphy's\nPapa Murphy's, a business based in Vancouver, Washington, United States, is a take-and-bake pizza company.\n\n It began in 1995 as the merger of two take-and-bake pizza companies: Papa Aldo's Pizza (founded in 1981) and Murphy's Pizza (founded in 1981).\n\n The company and its franchisees operate more than 1,300 outlets in the United States and Canada.\n\n Papa Murphy's is the fifth-largest pizza chain in the United States.",
+    "Papa Murphy's Park\nPapa Murphy's Park (formerly known as the Cal Expo Multi-Use Sports Field Facility and Bonney Field) is a sports venue located on the grounds of Cal Expo in Sacramento, California.\n\n The soccer-specific stadium has a capacity of 11,569 and includes a full-sized (120 x 80 yard) soccer field.\n\n Papa Murphy's Park is the current home of Sacramento Republic FC soccer team and former home of PRO Rugby team, Sacramento Express.",
+    "Gino's Pizza and Spaghetti\nGino's Pizza and Spaghetti is a restaurant chain with 40 locations, most of them within the U.S. state of West Virginia.\n\n The company was founded by Kenney Grant in 1961.\n\n Many locations are shared with Tudor's Biscuit World although the Gino's brand is exclusive to West Virginia.\n\n There is one located in Ohio, while there are stand alone Tudor's locations in eastern Kentucky, southern Ohio and southwest Virginia.\n\n Gino's serves pizza, spaghetti, sandwiches, and more.\n\n Company headquarters are located in Huntington, West Virginia and Nitro, West Virginia.",
+    "Pizza 73\nPizza 73 is a Canadian restaurant chain that offers a number of different styles of pizza, along with chicken wings.\n\n It has been operated by Pizza Pizza since 2007.\n\n Toronto-based Pizza Pizza had acquired the restaurant for a total of $CAN70.2 million.\n\n There are 89 locations throughout Western Canada, which include the provinces of British Columbia, Alberta, and Saskatchewan.\n\n The restaurant's name originates from its original phone number: 473–7373.\n\n Founded by David Tougas and Guy Goodwin in 1985, Pizza 73 is headquartered in Edmonton, Alberta, Canada."
+   ]
+  },
+  {
+   "id": "469b059a6e1335cd",
+   "gold": [
+    {
+     "sentence": " There is no optimal strategy involved as play entirely rests upon a random drawing of the cards.",
+     "facts": {
+      "0.0": "There is no optimal strategy involved in the game.",
+      "0.1": "Play in the game entirely rests upon a random drawing of the cards."
+     }
+    },
+    {
+     "sentence": "Diplomacy is a strategic board game created by Allan B. Calhamer in 1954 and released commercially in 1959.",
+     "facts": {
+      "1.0": "Diplomacy is a strategic board game.",
+      "1.1": "Diplomacy was created by Allan B. Calhamer.",
+      "1.2": "Diplomacy was created in 1954.",
+      "1.3": "Diplomacy was released commercially in 1959."
+     }
+    },
+    {
+     "sentence": " Its main distinctions from most board wargames are its negotiation phases (players spend much of their time forming and betraying alliances with other players and forming beneficial strategies) and the absence of dice and other game elements that produce random effects.",
+     "facts": {
+      "2.0": "Diplomacy's main distinctions from most board wargames include its negotiation phases.",
+      "2.1": "In Diplomacy's negotiation phases, players spend much of their time forming and betraying alliances with other players.",
+      "2.2": "In Diplomacy's negotiation phases, players spend much of their time forming beneficial strategies.",
+      "2.3": "Diplomacy's main distinctions from most board wargames include the absence of dice and other game elements that produce random effects."
+     }
+    }
+   ],
+   "items": [
+    "Uncle Wiggily\nUncle Wiggily Longears is the main character of a series of children's stories by American author Howard R. Garis.\n\n He began writing the stories for the \"Newark News\" in 1910.\n\n Garis penned an Uncle Wiggily story every day (except Sundays) for more than 30 years, and published 79 books within the author's lifetime.\n\n According to his obituary in the \"Chicago Tribune\", a walk in the woods in Verona, New Jersey was his inspiration.\n\n The books featured work by several illustrators, notably Lansing Campbell.\n\n Other illustrators of the series included George L. Carlson, Louis Wisa, Elmer Rache, Edward Bloomfield, Lang Campbell and Mary and Wallace Stover.",
+    "Can't Stop (board game)\nCan't Stop is a board game designed by Sid Sackson originally published by Parker Brothers in 1980, and was long out of print in the United States.\n\n It was reprinted by Face 2 Face Games in 2007.\n\n An iOS version was developed by Playdek and released in 2012.\n\n The goal of the game is to \"claim\" (get to the top of) three of the columns before any of the other players can.\n\n But the more that the player risks rolling the dice during a turn, the greater the risk of losing the advances made during that turn.",
+    "Simultaneous action selection\nSimultaneous action selection, or SAS, is a game mechanic that occurs when players of a game take action (such as moving their pieces) at the same time.\n\n An example of a game that uses this type of movement is the game Diplomacy.\n\n Typically, a \"secret yet binding\" method of committing to one's move is necessary, so that as players' moves are revealed and implemented, others do not change their moves in light of the new information.\n\n Thus, in Diplomacy, players write down their moves and then reveal them simultaneously.\n\n Because no player gets the first move, this potentially arbitrary source of advantage is not present.\n\n It is also possible for simultaneous movement games to proceed relatively quickly, because players are acting at the same time, rather than waiting for their turn.\n\n Simultaneous action selection is easily implemented in card games such as Apples to Apples in which players simply select cards and throw them face-down into the center.",
+    "Alhambra (board game)\nAlhambra (German: Der Palast von Alhambra , literally \"The Palace of the Alhambra\") is a 2003 tile-based German-style board game designed by Dirk Henn.\n\n It was originally published in Germany by Queen Games in a language-interdependent version; an English-specific version was released in North America by the now-defunct Überplay.\n\n The game is an Arabian-themed update, set during the construction of the Alhambra palace in 14th century Granada, of the 1998 stock trading board game \"Stimmt So!\"\n\n, which in turn was an update of the 1992 mafia influence board game \"Al Capone\"; the original version was subsequently released as \"\".",
+    "Uncle Wiggily (board game)\nUncle Wiggily Game is a track board game based on a character in a series of children's books by American writer Howard Roger Garis.\n\n The game is of the \"racing\" variety in the style of the European \"Goose Game\".\n\n Players advance along the track from Uncle Wiggily's Bungalow to Dr. Possum's House.\n\n There is no optimal strategy involved as play entirely rests upon a random drawing of the cards.\n\n The game was first published by Milton Bradley in 1916 and has seen several editions with minor modifications over the years.\n\n \"Uncle Wiggily\" remains one of the first and favorite games of childhood, and, with \"Candy Land\", is considered a classic juvenile American board game.",
+    "Attack! (board game)\nAttack!\n\n is a board game created by Glenn Drover and published by Eagle Games in 2003.\n\n It is a light war game that is midway between \"Risk\" and \"Axis and Allies\" in complexity.\n\n The game is loosely set in the 1930s and includes plastic pieces featuring tanks, planes, infantry, and artillery.\n\n \"Attack!\"\n\n won the Origins Award for \"Best Historical Game 2003\".",
+    "Kolejka (game)\nKolejka ( ; Polish for \"queue\" or \"line (of people)\") is a board game designed by Karol Madaj and launched in February 2011 by Poland's Institute of National Remembrance.\n\n It was designed to teach young generations about the hardships under communism (1945–1989), particularly the difficulty of acquiring consumer goods in the shortage economy.\n\n The game has been described as inspired by \"Monopoly\".",
+    "Dungeons &amp; Dragons Basic Game\nThe Dungeons & Dragons Basic Game is an introductory version of \"Dungeons & Dragons\" (\"D&D\") role-playing game packaged in the form of a board game.\n\n The original game was released in 2004 by Wizards of the Coast and was designed by Jonathan Tweet, one of the \"D&D\" 3rd edition designers.\n\n A new version of this game was released in September 2006.",
+    "Diplomacy (game)\nDiplomacy is a strategic board game created by Allan B. Calhamer in 1954 and released commercially in 1959.\n\n Its main distinctions from most board wargames are its negotiation phases (players spend much of their time forming and betraying alliances with other players and forming beneficial strategies) and the absence of dice and other game elements that produce random effects.\n\n Set in Europe before the beginning of World War I, \"Diplomacy\" is played by two to seven players, each controlling the armed forces of a major European power (or, with fewer players, multiple powers).\n\n Each player aims to move his or her few starting units and defeat those of others to win possession of a majority of strategic cities and provinces marked as \"supply centers\" on the map; these supply centers allow players who control them to produce more units.",
+    "Kill Doctor Lucky\nKill Doctor Lucky is a humorous board game designed by James Ernest and released in 1996 by Cheapass Games.\n\n In 1998, \"Kill Doctor Lucky\" won the Origins Award for \"Best Abstract Board Game of 1997\"."
+   ]
+  },
+  {
+   "id": "b8751efa33b4fc9c",
+   "gold": [
+    {
+     "sentence": "The Battle of Okinawa (Japanese: 沖縄戦 , Hepburn: Okinawa-sen ) (Okinawan: 沖縄戦 , \"Uchinaa ikusa \" ), codenamed Operation Iceberg, was a major battle of the Pacific War fought on the island of Okinawa by United States Marine and Army forces against the Imperial Japanese Army and included the largest amphibious assault in the Pacific War during World War II, the April 1, 1945, invasion of Okinawa itself.",
+     "facts": {
+      "0.0": "The Battle of Okinawa is also known as 沖縄戦 (Okinawa-sen in Hepburn romanization) and as 'Uchinaa ikusa' in Okinawan.",
+      "0.1": "The Battle of Okinawa was codenamed Operation Iceberg.",
+      "0.2": "The Battle of Okinawa was a major battle of the Pacific War.",
+      "0.3": "The Battle of Okinawa was fought on the island of Okinawa.",
+      "0.4": "The Battle of Okinawa was fought by United States Marine and Army forces against the Imperial Japanese Army.",
+      "0.5": "The Battle of Okinawa included the largest amphibious assault in the Pacific War during World War II.",
+      "0.6": "The largest amphibious assault in the Pacific War was the April 1, 1945 invasion of Okinawa itself."
+     }
+    },
+    {
+     "sentence": "Operation Diadem, also referred to as the Fourth Battle of Monte Cassino or, in Canada, the Battle of the Liri Valley, was an offensive operation undertaken by the Allies of World War II (U.S. Fifth Army and British Eighth Army in May 1944, as part of the Italian Campaign of World War II.",
+     "facts": {
+      "1.0": "Operation Diadem was also referred to as the Fourth Battle of Monte Cassino.",
+      "1.1": "In Canada, Operation Diadem was called the Battle of the Liri Valley.",
+      "1.2": "Operation Diadem was an offensive operation undertaken by the Allies of World War II.",
+      "1.3": "The Allies in Operation Diadem included the U.S. Fifth Army.",
+      "1.4": "The Allies in Operation Diadem included the British Eighth Army.",
+      "1.5": "Operation Diadem took place in May 1944.",
+      "1.6": "Operation Diadem was part of the Italian Campaign of World War II."
+     }
+    }
+   ],
+   "items": [
+    "Operation Diadem\nOperation Diadem, also referred to as the Fourth Battle of Monte Cassino or, in Canada, the Battle of the Liri Valley, was an offensive operation undertaken by the Allies of World War II (U.S. Fifth Army and British Eighth Army in May 1944, as part of the Italian Campaign of World War II.\n\n \"Diadem\" was supported by air attacks called Operation Strangle.\n\n The opposing force was the German 10th Army.",
+    "Battle of Okinawa\nThe Battle of Okinawa (Japanese: 沖縄戦 , Hepburn: Okinawa-sen ) (Okinawan: 沖縄戦 , \"Uchinaa ikusa \" ), codenamed Operation Iceberg, was a major battle of the Pacific War fought on the island of Okinawa by United States Marine and Army forces against the Imperial Japanese Army and included the largest amphibious assault in the Pacific War during World War II, the April 1, 1945, invasion of Okinawa itself.\n\n The 82-day battle lasted from April 1 until June 22, 1945.\n\n After a long campaign of island hopping, the Allies were planning to use Okinawa, a large island only 340 mi away from mainland Japan, as a base for air operations for the planned invasion of the Japanese home islands.",
+    "Battle of Guam (1941)\nThe First Battle of Guam was an engagement during the Pacific War in World War II, and took place from 8 December to 10 December 1941 on Guam in the Mariana Islands between Japan and the United States.\n\n The American garrison was defeated by Japanese forces on 10 December, which resulted in an occupation until the Second Battle of Guam in 1944.",
+    "Graph query row:\nevent: Operation Diadem\ndate: May - June 1944\nkind: None\nlocation: None\nconnections: [{'relationship': 'LOCATED_IN', 'entity': 'Winter Line'}, {'relationship': 'LOCATED_IN', 'entity': 'Anzio bridgehead'}, {'relationship': 'PART_OF', 'entity': 'Italian Campaign of World War II'}, {'relationship': 'PART_OF', 'entity': 'Allied breakthrough at Cassino'}, {'relationship': 'PART_OF', 'entity': 'breakout at Anzio'}, {'relationship': 'PART_OF', 'entity': 'capture of Rome'}]",
+    "Battle of Saipan\nThe Battle of Saipan was a battle of the Pacific campaign of World War II, fought on the island of Saipan in the Mariana Islands from 15 June to 9 July 1944.\n\n The Allied invasion fleet embarking the expeditionary forces left Pearl Harbor on 5 June 1944, the day before Operation Overlord in Europe was launched.\n\n The U.S. 2nd Marine Division, 4th Marine Division, and the Army's 27th Infantry Division, commanded by Lieutenant General Holland Smith, defeated the 43rd Infantry Division of the Imperial Japanese Army, commanded by Lieutenant General Yoshitsugu Saito.",
+    "Operation Diadem order of battle\nOperation Diadem order of battle is a listing of the significant formations that were involved in the fighting on the Winter Line and at the Anzio bridgehead south of Rome during \"Operation Diadem\" in May - June 1944 which resulted in the Allied breakthrough at Cassino and the breakout at Anzio leading to the capture of Rome.",
+    "Operation Epsom\nOperation Epsom, also known as the First Battle of the Odon, was a British Second World War offensive that took place between 26 and 30 June 1944, during the Battle of Normandy.\n\n The offensive was intended to outflank and seize the German-occupied city of Caen, an important Allied objective, in the early stages of Operation Overlord, the Allied invasion of north-west Europe.",
+    "Battle of Attu\nThe Battle of Attu, which took place from 11–30 May 1943, was a battle fought between forces of the United States, aided by Canadian reconnaissance and fighter-bomber support, and the Empire of Japan on Attu Island off the coast of the Territory of Alaska as part of the Aleutian Islands Campaign during the American Theater and the Pacific Theater and was the only land battle of World War II fought on incorporated territory of the United States.\n\n It is also the only land battle in which Japanese and American forces fought in Arctic conditions.",
+    "Operation Kikusui\nOperation Kikusui (菊水作戦 , Kikusui sakusen ) was a series of suicidal air attacks by Imperial Japanese forces during the Battle of Okinawa against Allied fleets in the waters around Okinawa, as part of Operation Ten-Go.\n\n The name of the operation, \"Kikusui\", comes from the hata-jirushi of the samurai Kusunoki Masashige.",
+    "Battle of Guam (1944)\nThe Second Battle of Guam (21 July – 10 August 1944) was the American recapture of the Japanese-held island of Guam, a U.S. territory in the Mariana Islands captured by the Japanese from the U.S. in the 1941 First Battle of Guam during the Pacific campaign of World War II."
+   ]
+  },
+  {
+   "id": "3bf24c11d9400d7f",
+   "gold": [
+    {
+     "sentence": " It began in 1995 as the merger of two take-and-bake pizza companies: Papa Aldo's Pizza (founded in 1981) and Murphy's Pizza (founded in 1981).",
+     "facts": {
+      "0.0": "The company began in 1995.",
+      "0.1": "The company began as the merger of two take-and-bake pizza companies.",
+      "0.2": "One of the merged companies was Papa Aldo's Pizza.",
+      "0.3": "Papa Aldo's Pizza was founded in 1981.",
+      "0.4": "The other merged company was Murphy's Pizza.",
+      "0.5": "Murphy's Pizza was founded in 1981."
+     }
+    },
+    {
+     "sentence": "Gino's Pizza and Spaghetti is a restaurant chain with 40 locations, most of them within the U.S. state of West Virginia.",
+     "facts": {
+      "1.0": "Gino's Pizza and Spaghetti is a restaurant chain.",
+      "1.1": "Gino's Pizza and Spaghetti has 40 locations.",
+      "1.2": "Most of Gino's Pizza and Spaghetti's locations are within the U.S. state of West Virginia."
+     }
+    },
+    {
+     "sentence": " The company was founded by Kenney Grant in 1961.",
+     "facts": {
+      "2.0": "The company was founded by Kenney Grant.",
+      "2.1": "The company was founded in 1961."
+     }
+    }
+   ],
+   "items": [
+    "Papa Gino's\nPapa Gino's, Inc. is a restaurant chain based in Dedham, Massachusetts specializing in American-style pizza along with pasta, subs, salads, and a variety of appetizers.\n\n There are over 150 Papa Gino's locations in Connecticut, Maine, Massachusetts, New Hampshire, and Rhode Island.",
+    "Lucky Luciano\nCharles \"Lucky\" Luciano ( ; born Salvatore Lucania November 24, 1897 – January 26, 1962) was an Italian-American mobster and crime boss.\n\n Luciano is considered the father of modern organized crime in the United States for the establishment of the first Commission.\n\n He was also the first official boss of the modern Genovese crime family.\n\n He was, along with his associates, instrumental in the development of the National Crime Syndicate.",
+    "Graph query row:\norganization: Gino's Pizza and Spaghetti\nfounding_date: 1961\nfounder_relationship: None\nfounder: None",
+    "Papa Murphy's\nPapa Murphy's, a business based in Vancouver, Washington, United States, is a take-and-bake pizza company.\n\n It began in 1995 as the merger of two take-and-bake pizza companies: Papa Aldo's Pizza (founded in 1981) and Murphy's Pizza (founded in 1981).\n\n The company and its franchisees operate more than 1,300 outlets in the United States and Canada.\n\n Papa Murphy's is the fifth-largest pizza chain in the United States.",
+    "Pizza 73\nPizza 73 is a Canadian restaurant chain that offers a number of different styles of pizza, along with chicken wings.\n\n It has been operated by Pizza Pizza since 2007.\n\n Toronto-based Pizza Pizza had acquired the restaurant for a total of $CAN70.2 million.\n\n There are 89 locations throughout Western Canada, which include the provinces of British Columbia, Alberta, and Saskatchewan.\n\n The restaurant's name originates from its original phone number: 473–7373.\n\n Founded by David Tougas and Guy Goodwin in 1985, Pizza 73 is headquartered in Edmonton, Alberta, Canada.",
+    "Gino's Pizza and Spaghetti\nGino's Pizza and Spaghetti is a restaurant chain with 40 locations, most of them within the U.S. state of West Virginia.\n\n The company was founded by Kenney Grant in 1961.\n\n Many locations are shared with Tudor's Biscuit World although the Gino's brand is exclusive to West Virginia.\n\n There is one located in Ohio, while there are stand alone Tudor's locations in eastern Kentucky, southern Ohio and southwest Virginia.\n\n Gino's serves pizza, spaghetti, sandwiches, and more.\n\n Company headquarters are located in Huntington, West Virginia and Nitro, West Virginia.",
+    "Gino's Hamburgers\nGino's Hamburgers was a fast-food restaurant chain founded in Baltimore, Maryland, by Baltimore Colts defensive end Gino Marchetti and running back Alan Ameche, along with their close friend Louis Fischer, in 1957.\n\n A new group of restaurants under the Gino's name involving some of the principals of the original chain was started in 2010.",
+    "Prem Ganapathy\nPrem Ganapathy is an Indian entrepreneur and businessman.\n\n He is the founder of the restaurant chain Dosa plaza.\n\n Starting with meager investment, he expanded Dosa plaza into a restaurant chain with 45 outlets in India, New Zealand, Oman, and UAE.",
+    "Graph query row:\norganization: Papa Murphy's\nfounding_date: 1995\nfounder_relationship: None\nfounder: None",
+    "Gino's East\nGino's East is a Chicago-based restaurant chain, notable for its deep-dish pizza (sometimes called Chicago-style pizza), and for its interior walls, which patrons have covered in graffiti and etchings.\n\n The restaurant features deep-dish pizza baked in cast-iron pans, as well as sandwiches, soups and salads."
+   ]
+  },
+  {
+   "id": "ad8f7e64400764ef",
+   "gold": [
+    {
+     "sentence": "Carly Gullickson (born November 26, 1986) is a former American professional tennis player.",
+     "facts": {
+      "0.0": "Carly Gullickson was born on November 26, 1986.",
+      "0.1": "Carly Gullickson is a former American professional tennis player."
+     }
+    },
+    {
+     "sentence": "Francesca Schiavone (] ; born 23 June 1980 in Milan) is an Italian tennis player who turned professional in 1998.",
+     "facts": {
+      "1.0": "Francesca Schiavone was born on 23 June 1980 in Milan.",
+      "1.1": "Francesca Schiavone is an Italian tennis player.",
+      "1.2": "Francesca Schiavone turned professional in 1998."
+     }
+    }
+   ],
+   "items": [
+    "Samantha Stosur career statistics\nThis is a list of the main career statistics of professional Australian tennis player, Samantha Stosur.\n\n To date, Stosur has won eight WTA singles titles including one Grand Slam singles title at the 2011 US Open.\n\n She was also the runner-up at the 2010 French Open and a semi-finalist at the 2010 and 2011 WTA Tour Championships.\n\n Stosur has also enjoyed a successful doubles career, in which she has held the World No. 1 ranking and won twenty-four WTA doubles titles including two grand slam women's doubles titles at the 2005 US Open and 2006 French Open and two year-ending championships at the 2005 and 2006 WTA Tour Championships.",
+    "Carly Gullickson\nCarly Gullickson (born November 26, 1986) is a former American professional tennis player.",
+    "Francesca Schiavone\nFrancesca Schiavone (] ; born 23 June 1980 in Milan) is an Italian tennis player who turned professional in 1998.\n\n She won the 2010 French Open singles title, becoming the first Italian woman to win a Grand Slam event in singles.\n\n She was also runner-up at the 2011 French Open.\n\n Her career high ranking is world No. 4, achieved on 31 January 2011.\n\n To date, Schiavone is the last one handed-backhand player to win a Grand Slam title on the women's tour.",
+    "1999 Italian Open – Women's Doubles\nThe 1999 Italian Open – Doubles was the doubles event of the fifty-fifth edition of the tennis tournament played at Rome, Italy, the most prestigious tennis tournament in Southern Europe.\n\n It was the fifth WTA Tier I tournament of the year, and part of the European claycourt season.\n\n Virginia Ruano Pascual and Paola Suárez were the defending champions, but lost to Martina Hingis and Anna Kournikova in the quarterfinals.",
+    "2005 Challenge Bell – Doubles\nCarly Gullickson and María Emilia Salerni were the defending champions, but Gullickson decided not to participate this year.\n\n Salerni partnered with Marion Bartoli, but withdrew from their semifinal match against Līga Dekmeijere and Ashley Harkleroad.",
+    "2010 US Open – Mixed Doubles\nCarly Gullickson and Travis Parrott were the defending champions, but lost in the first round to Gisela Dulko and Pablo Cuevas 2–6, 4–6.",
+    "2010 Toray Pan Pacific Open – Doubles\nAlisa Kleybanova and Francesca Schiavone were the defending champions.\n\n Both were present, but competed with different partners.Kleybanova competed with Hsieh Su-wei, but lost in the first round to Benešová and Záhlavová-Strýcová, while Schiavone competed with Tathiana Garbin, however withdrew before their quarterfinal match against Lisa Raymond and Rennae Stubbs.",
+    "2006 Qatar Ladies Open – Doubles\nAlicia Molik and Francesca Schiavone were the defending champions, but Molik did not compete this year.\n\n Schiavone teamed up with Květa Peschke and lost in querterfinals to Elena Likhovtseva and Vera Zvonareva.",
+    "2007 Kremlin Cup – Women's Doubles\nKvěta Peschke and Francesca Schiavone were the defending champions, but Schiavone chose not to participate, and only Peschke competed that year.",
+    "2015 Apia International Sydney – Women's Doubles\nTímea Babos and Lucie Šafářová were the defending champions, but chose not to participate together.\n\n Babos played alongside Kristina Mladenovic, but lost in the semifinals to Raquel Kops-Jones and Abigail Spears.\n\n Šafářová teamed up with Belinda Bencic, but lost in the first round to Kimiko Date-Krumm and Karolína Plíšková.\n\n<br>"
+   ]
+  },
+  {
+   "id": "34b19a4664e04495",
+   "gold": [
+    {
+     "sentence": "The Church of the Guanche People (Spanish: \"Iglesia del Pueblo Guanche\" ) is a religious organisation, founded in 2001 in the city of San Cristóbal de La Laguna (Tenerife, Canary Islands, Spain).",
+     "facts": {
+      "0.0": "The Church of the Guanche People's Spanish name is 'Iglesia del Pueblo Guanche'.",
+      "0.1": "The Church of the Guanche People is a religious organisation.",
+      "0.2": "The Church of the Guanche People was founded in 2001.",
+      "0.3": "The Church of the Guanche People was founded in the city of San Cristobal de La Laguna.",
+      "0.4": "San Cristobal de La Laguna is in Tenerife, Canary Islands, Spain."
+     }
+    },
+    {
+     "sentence": " Tenerife is the largest and most populous island of Macaronesia.",
+     "facts": {
+      "1.0": "Tenerife is the largest island of Macaronesia.",
+      "1.1": "Tenerife is the most populous island of Macaronesia."
+     }
+    }
+   ],
+   "items": [
+    "Tenerife\nTenerife ( ; ] ) is the largest and most populated island of the seven Canary Islands.\n\n It is also the most populated island of Spain, with a land area of 2034.38 km2 and 898,680 inhabitants, 43 percent of the total population of the Canary Islands.\n\n Tenerife is the largest and most populous island of Macaronesia.",
+    "Garajonay National Park\nGarajonay National Park (Spanish: \"Parque nacional de Garajonay\" , ] ) is located in the center and north of the island of La Gomera, one of the Canary Islands (Spain).\n\n It was declared a national park in 1981 and a World Heritage Site by UNESCO in 1986.\n\n It occupies 40 km (15 sq mi) and it extends into each of the six municipalities on the island.",
+    "Teide National Park\nTeide National Park (Spanish: \"Parque nacional del Teide\" , ] ) is a national park located in Tenerife (Canary Islands, Spain).",
+    "Guanche mummies\nGuanche mummies are the intentionally desiccated remains of members of the indigenous Guanche people of the Canary Islands.\n\n The majority of Guanche mummies were made during the eras prior to Spanish settlement of the area in the 15th century.\n\n The methods of embalming are similar to those that were used by the Ancient Egyptians, though fewer mummies remain from the Guanche due to looting and desecration.",
+    "Church of the Guanche People\nThe Church of the Guanche People (Spanish: \"Iglesia del Pueblo Guanche\" ) is a religious organisation, founded in 2001 in the city of San Cristóbal de La Laguna (Tenerife, Canary Islands, Spain).\n\n It aims to perpetuate and spread the pagan religion of the ancient Guanche people.",
+    "Adenocarpus viscosus\nAdenocarpus viscosus is a shrubby species of flowering plant in the legume family Fabaceae, subfamily Faboideae.\n\n It is endemic to the Canary Islands where it is known locally as Codeso del Pico.\n\n It can be found above 1800 m on two of the islands, La Palma in Caldera de Tabouriente and Tenerife where it is a dominant shrub in Teide National Park and occurs in parts of Corona Forestal Nature Park and Reserva Especial de las Palomas.",
+    "Training centre for release of the Atma-energy\nTraining centre for release of the Atma-energy (German: \"Trainingszentrum zur Freisetzung der Atmaenergie\"), also known as \"Atman Foundation\", was a new religious movement active mainly on the island of Tenerife and in Germany.\n\n This sect was originally a splinter group of the Brahma Kumaris and is known for a police and media scare in which an alleged attempt to commit ritual suicide took place in Teide National Park in Tenerife.\n\n The group believed in the end of the world but according to the religious studies scholar Georg Schmid and the sociologist Massimo Introvigne had no intention of collective suicide.",
+    "Hermigua\nHermigua is a town and a municipality in the northeastern part of La Gomera in the province of Santa Cruz de Tenerife of the Canary Islands, Spain.\n\n It is located 12 km northwest of the island's capital, San Sebastián de la Gomera.\n\n The Garajonay National Park covers the southern part of the municipality.",
+    "Chiguata District\nCherubs also decorate the circular cornice, along with four saints in full-length reliefs that occupy the \"pechinas\" of the columns that sustain the temple's dome, which is considered one of the most original works of the colony and now visited by occasional tourists.",
+    "Roque Cinchado\nThe Roque Cinchado is a rock formation, regarded as emblematic of the island of Tenerife (Canary Islands, Spain).\n\n It lies within the Teide National Park (a World Heritage Site) in the municipality of La Orotava, near the volcano of the same name, in the heart of the island.\n\n The Roque Cinchado is one of the largest in the world by altitude, for the entire park totals more than 2000 metres."
+   ]
+  },
+  {
+   "id": "1fc7cf815c725d76",
+   "gold": [
+    {
+     "sentence": "McFarland, USA (also known as McFarland) is a 2015 American sports drama film directed by Niki Caro, produced by Mark Ciardi and Gordon Gray, written by Christopher Cleveland, Bettina Gilois and Grant Thompson with music composed by Antônio Pinto.",
+     "facts": {
+      "0.0": "McFarland, USA is also known as McFarland.",
+      "0.1": "McFarland, USA is a 2015 American sports drama film.",
+      "0.2": "McFarland, USA was directed by Niki Caro.",
+      "0.3": "McFarland, USA was produced by Mark Ciardi.",
+      "0.4": "McFarland, USA was produced by Gordon Gray.",
+      "0.5": "McFarland, USA was written by Christopher Cleveland.",
+      "0.6": "McFarland, USA was written by Bettina Gilois.",
+      "0.7": "McFarland, USA was written by Grant Thompson.",
+      "0.8": "McFarland, USA has music composed by Antônio Pinto."
+     }
+    },
+    {
+     "sentence": "The Black Hole is a 1979 American science fiction film directed by Gary Nelson and produced by Walt Disney Productions.",
+     "facts": {
+      "1.0": "The Black Hole is a 1979 American science fiction film.",
+      "1.1": "The Black Hole was directed by Gary Nelson.",
+      "1.2": "The Black Hole was produced by Walt Disney Productions."
+     }
+    }
+   ],
+   "items": [
+    "Kathryn Bigelow\nKathryn Ann Bigelow ( ; born November 27, 1951) is an American director, producer, and writer.\n\n Her films include the vampire Western horror film \"Near Dark\" (1987), the action crime film \"Point Break\" (1991), the science fiction action thriller \"Strange Days\" (1995), the mystery thriller \"The Weight of Water\" (2000), the submarine thriller \"\" (2002), the war film \"The Hurt Locker\" (2008), the action thriller war film \"Zero Dark Thirty\" (2012), the short film \"Last Days\" (2014), and the period crime drama \"Detroit\" (2017).\n\n \"The Hurt Locker\" won the 2009 Academy Award for Best Picture and the BAFTA Award for Best Film, and was nominated for the 2010 Golden Globe Award for Best Drama.\n\n She has also acted as producer and writer for many of her films.",
+    "List of accolades received by The Hurt Locker\n\"The Hurt Locker\" is a 2009 Iraq War film written by Mark Boal and directed by Kathryn Bigelow.\n\n The film premiered on September 4, 2008 at the 65th Venice International Film Festival, where it competed with \"The Wrestler\" for the Golden Lion award.\n\n It was released in Italy by Warner Bros.\n\n Pictures on October 10, 2008.\n\n Following a showing at the 33rd Toronto International Film Festival, Summit Entertainment picked the film up for distribution in the United States.\n\n \"The Hurt Locker\" was released in the United States on June 26, 2009, with a limited release at four theaters in Los Angeles and New York City.\n\n The film grossed over $145,000 on its opening weekend, averaging around $36,000 per theater.\n\n The following weekend, beginning July 3, the film grossed over $131,000 at nine theaters.\n\n It held the highest per-screen average of any movie playing theatrically in the United States for the first two weeks of its release, gradually moving into the top 20 chart.\n\n Summit Entertainment then released \"The Hurt Locker\" to more screens.",
+    "The Black Hole\nThe Black Hole is a 1979 American science fiction film directed by Gary Nelson and produced by Walt Disney Productions.\n\n The film stars Maximilian Schell, Robert Forster, Joseph Bottoms, Yvette Mimieux, Anthony Perkins, and Ernest Borgnine, while the voices of the main robot characters are provided by Roddy McDowall and Slim Pickens (both unbilled).\n\n The music for the film was composed by John Barry.\n\n It was the first film from Walt Disney Productions to receive a PG rating.\n\n The film was released on December 18, 1979 in the United Kingdom and on December 21, 1979 in the United States.",
+    "Steve McQueen (director)\nSteven Rodney \"Steve\" McQueen (born 9 October 1969) is an English film director, producer, screenwriter, and video artist.\n\n For his 2013 film, \"12 Years a Slave\", a historical drama adaptation of an 1853 slave narrative memoir, he won an Academy Award, BAFTA Award for Best Film, and Golden Globe Award for Best Motion Picture – Drama, as a producer, and he also received the award for Best Director from the New York Film Critics Circle.\n\n McQueen is the first black filmmaker to win an Academy Award for Best Picture.\n\n McQueen is known for his collaborations with actor Michael Fassbender, who has starred in all three of McQueen's feature films as of 2014.\n\n McQueen's other feature films are \"Hunger\" (2008), a historical drama about the 1981 Irish hunger strike, and \"Shame\" (2011), a drama about an executive struggling with sex addiction.",
+    "A broad film, television, documentary, and industry collection spans silent-era cinema through 2010, covering action, comedy, drama, horror, musicals, noir, and more. Highlights include *The Razor’s Edge*, *The Little Foxes*, *Die Hard*, *Unbreakable*, *Signs*, *The Straight Story*, *West Side Story*, and *Rogue One*. Documentaries address music, war, politics, disability, and culture. Profiles feature Bruce Willis, David",
+    "McFarland, USA\nMcFarland, USA (also known as McFarland) is a 2015 American sports drama film directed by Niki Caro, produced by Mark Ciardi and Gordon Gray, written by Christopher Cleveland, Bettina Gilois and Grant Thompson with music composed by Antônio Pinto.\n\n The film was co-produced by Walt Disney Pictures and Mayhem Pictures.\n\n Based on the true story of a 1987 cross country team from a mainly Latino high school in McFarland, California, the film stars Kevin Costner as Jim White, the school's coach, who leads the team to win a state championship.\n\n The film also stars Maria Bello and Morgan Saylor.",
+    "The entries cover diverse films and careers: crime drama *Deadfall* and its *Arsenal* follow-up; *Rogue One*’s rebels stealing Death Star plans; Mel Gibson, Nicolas Cage, James Garner and Tom Cruise filmographies; Everest disaster drama *Everest*; integration-themed sports films *Remember the Titans* and *McFarland, USA*; acclaimed *True Grit* and *The Hurt Locker*; espionage film *The Ipcress File*; Vietnam",
+    "Million Dollar Arm\nMillion Dollar Arm is a 2014 American biographical sports drama film directed by Craig Gillespie and produced by Walt Disney Pictures from a screenplay written by Thomas McCarthy.\n\n The film is based on the true story of baseball pitchers Rinku Singh and Dinesh Patel who were discovered by sports agent J. B. Bernstein after winning a reality show competition.",
+    "The entries cover films across action, comedy, romance, horror, and drama. Bruce Willis stars in titles including *Last Man Standing* (a credited *Yojimbo* remake), *Unbreakable*, *Signs*, and *Die Hard with a Vengeance*. Shyamalan’s *Signs* explores faith and alien encounters; *Unbreakable* launches a superhero trilogy. Other highlights include *The Whole Nine Yards*, *Striking Distance*, *Mercury Rising",
+    "Full Metal Jacket\nFull Metal Jacket is a 1987 British-American war film directed and produced by Stanley Kubrick.\n\n The screenplay by Kubrick, Michael Herr, and Gustav Hasford was based on Hasford's novel \"The Short-Timers\" (1979).\n\n Its storyline follows a platoon of U.S. Marines through their training, primarily focusing on two privates, Joker and Pyle, who struggle to get through camp under their foul-mouthed drill instructor, Gunnery Sergeant Hartman, and the experiences of two of the platoon's Marines in the Tet Offensive during the Vietnam War.\n\n The film's title refers to the full metal jacket bullet used by soldiers.\n\n The film was released in the United States on June 26, 1987."
+   ]
+  }
+ ]
+}

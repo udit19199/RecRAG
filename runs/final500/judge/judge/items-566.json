@@ -1,0 +1,477 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "4c187a602bba002a",
+   "gold": [
+    {
+     "sentence": "Mirrors is a 2008 supernatural horror film directed by Alexandre Aja, starring Kiefer Sutherland, Paula Patton, and Amy Smart.",
+     "facts": {
+      "0.0": "Mirrors is a 2008 supernatural horror film.",
+      "0.1": "Mirrors was directed by Alexandre Aja.",
+      "0.2": "Kiefer Sutherland starred in Mirrors.",
+      "0.3": "Paula Patton starred in Mirrors.",
+      "0.4": "Amy Smart starred in Mirrors."
+     }
+    },
+    {
+     "sentence": "Paula Maxine Patton (born December 5, 1975) is an American actress.",
+     "facts": {
+      "1.0": "Paula Maxine Patton was born on December 5, 1975.",
+      "1.1": "Paula Maxine Patton is an American actress."
+     }
+    }
+   ],
+   "items": [
+    "Heather Burns\nHeather Burns (born April 7, 1975) is an American actress, known for her role as Miss Rhode Island in the 2000 film \"Miss Congeniality\".\n\n Her other film appearances include \"You've Got Mail\" (1998), \"Two Weeks Notice\" (2002) and \"Bewitched\" (2005).",
+    "Hitch (film)\nHitch is a 2005 American romantic comedy film directed by Andy Tennant and starring Will Smith.\n\n The film, which was written by Kevin Bisch, co-stars Eva Mendes, Kevin James, and Amber Valletta.\n\n Smith plays the main fictional character of the film, Alex \"Hitch\" Hitchens, who is a professional dating consultant who makes a living teaching men how to woo women.\n\n The film was released on February 11, 2005 by Columbia Pictures.",
+    "Mirrors (film)\nMirrors is a 2008 supernatural horror film directed by Alexandre Aja, starring Kiefer Sutherland, Paula Patton, and Amy Smart.\n\n The film was first titled \"Into the Mirror\", but the name was later changed to \"Mirrors\".\n\n Filming began on May 1, 2007, and it was released in American theaters on August 15, 2008.",
+    "Zooey Deschanel filmography\nAmerican actress Zooey Deschanel made her film debut in the 1999 comedy feature \"Mumford\".\n\n She went on to gained public attention by co-starred in the comedy-drama \"Almost Famous\" (2000), the independent drama \"Manic\" (2001), opposite Joseph Gordon-Levitt, and the comedy-drama \"The Good Girl\" (2002).\n\n She landed her first major role as a 18-year-old virgin in the romantic drama \"All the Real Girls\" (2003), for which she was nominated for an Independent Spirit Award for Best Female Lead.\n\n Deschanel's biggest commercial success, as of 2017, came with the Christmas-fantasy film \"Elf\" (also in 2003), which grossed over $220 million worldwide.",
+    "Illusions &amp; Mirrors\nIllusions & Mirrors is a 2013 short film directed by Iranian-born American artist and filmmaker Shirin Neshat.\n\n The film, shot in black-and-white, stars Tarek Aylouch, Michael Markiewicz, and the Israeli-born American actress Natalie Portman.\n\n The film was commissioned by Dior, for which Portman is a spokesmodel, for the Miss Dior Expo at the Grand Palais, Paris.\n\n Shirin Neshat said that the film is a tribute to the black-and-white silent films made by such surrealist filmmakers as Man Ray, Jean Cocteau, Luis Buñuel, and Maya Deren.",
+    "Mira Nair\nMira Nair (born 15 October 1957) is an Indian American filmmaker based in New York City.\n\n Her production company, Mirabai Films, specializes in films for international audiences on Indian society, whether in the economic, social or cultural spheres.\n\n Among her best known films are \"Mississippi Masala\", \"The Namesake\", the Golden Lion-winning \"Monsoon Wedding\" and \"Salaam Bombay!\n\n\", which was nominated for the Academy Award for Best Foreign Language Film.",
+    "In the Mirror of Maya Deren\nThe documentary In the Mirror of Maya Deren (\"Im Spiegel der Maya Deren\", 2002) is a film about avant garde filmmaker Maya Deren (1917-1961) by Austrian film maker Martina Kudlacek.\n\n It is based on the biography \"The Legend of Maya Deren\".",
+    "License to Wed\nLicense to Wed is a 2007 American romantic comedy film starring Robin Williams, Mandy Moore and John Krasinski, and directed by Ken Kwapis.\n\n The film was released in theaters on July 3, 2007.",
+    "These Old Broads\nThese Old Broads is a 2001 television film written by Carrie Fisher and starring her mother Debbie Reynolds, as well as Shirley MacLaine, Joan Collins, and Elizabeth Taylor in her final film role.\n\n In a 2001 BBC \"Omnibus\" documentary about Elizabeth Taylor, Shirley MacLaine says that Julie Andrews and Lauren Bacall were originally planned to be in the movie.\n\n The role of Miriam Hodges was originally offered to June Allyson.",
+    "Ela, Hela and The Hitch\nEla, Hela, and the Hitch is a play by Václav Havel.\n\n The play was written for the Artistic Director of the Theatre on the Balustrade, Ivan Vyskočil, as part of a longer evening, entitled \"Hitchhiking\".\n\n Along with \"Ela, Hela, and the Hitch\", Havel also wrote a sketch called \"Motormorphosis\".\n\n Reportedly, Vyskočil altered Havel’s sketches for the performance, though the original text was discovered by a Czech theater scholar, Lenka Jungmannová.\n\n \"Motormorphosis\", in a translation by Carol Rocamora, was performed at the Havel Festival in 2006, a world premiere of the text as written.\n\n \"Ela, Hela, and the Hitch\" premiered in an English translation by Edward Einhorn following a revival of \"Motormorphosis\" at New York’s Bohemian National Hall in 2011."
+   ]
+  },
+  {
+   "id": "86324dec263d88c4",
+   "gold": [
+    {
+     "sentence": "Edmund Robert Harris (c. 1804 – 27 May 1877) was an English lawyer from Preston, Lancashire, UK who was the principal benefactor of the Harris Museum, Harris Institute or Art School, Harris Technical School and the Harris Orphanage.",
+     "facts": {
+      "0.0": "Edmund Robert Harris lived c. 1804 to 27 May 1877.",
+      "0.1": "Edmund Robert Harris was an English lawyer.",
+      "0.2": "Edmund Robert Harris was from Preston, Lancashire, UK.",
+      "0.3": "Edmund Robert Harris was the principal benefactor of the Harris Museum.",
+      "0.4": "Edmund Robert Harris was the principal benefactor of the Harris Institute or Art School.",
+      "0.5": "Edmund Robert Harris was the principal benefactor of the Harris Technical School.",
+      "0.6": "Edmund Robert Harris was the principal benefactor of the Harris Orphanage."
+     }
+    },
+    {
+     "sentence": "The Harris Museum, Art Gallery & Preston Free Public Library is a Grade I listed museum building in Preston.",
+     "facts": {
+      "1.0": "The Harris Museum, Art Gallery & Preston Free Public Library is a museum building in Preston.",
+      "1.1": "The Harris Museum, Art Gallery & Preston Free Public Library is a Grade I listed building."
+     }
+    }
+   ],
+   "items": [
+    "Hanbys Corner, Delaware\nThe last Hanby to occupy the property, Albert T. Hanby (1881-1947), another son of Samuel, attended West Chester State College before getting his law degree from Penn Law School.\n\n Albert became a Philadelphia lawyer and left his farm at Hanby's Corner to be used for the good of \"all the children in Delaware\".\n\n He and his wife created a foundation in 1945 to protect the property from further development.\n\n Today the YMCA operates their Hanby Camp there, and the trust provide scholarships for kids who might not otherwise be able to attend.\n\n In 2007 that support was over $70,000.",
+    "Harris Museum\nThe Harris Museum, Art Gallery & Preston Free Public Library is a Grade I listed museum building in Preston.",
+    "Edmund de Unger\nEdmund Robert Anthony de Unger (Hungarian: \"Odon Antal Robert de Unger\" , b 6 August 1918, Budapest - d 25 January 2011, Ham, Surrey) was a Hungarian-born property developer and art collector.\n\n In London he built up the Keir Collection, one of the greatest post-war collections of Islamic art, bequeathed in 2008 to the Pergamon Museum of Islamic Art in Berlin.\n\n The arrangement for the museum to curate the collection came to an end in July 2012.\n\n The collection is now hosted by the Dallas Museum of Art as of May 2014 for a 15-year renewable loan.",
+    "Edmund Robert Harris\nEdmund Robert Harris (c. 1804 – 27 May 1877) was an English lawyer from Preston, Lancashire, UK who was the principal benefactor of the Harris Museum, Harris Institute or Art School, Harris Technical School and the Harris Orphanage.",
+    "David Hildebrand Wilson\nDavid Hildebrand Wilson is the co-founder, along with his wife, Diana Wilson, of the enigmatic Museum of Jurassic Technology in Los Angeles, California.\n\n After high school, Wilson enrolled at Kalamazoo College where he majored in urban entomology with a minor in art.\n\n He received an MFA in Experimental Animation from the California Institute of the Arts in 1976.\n\n He was awarded the MacArthur Fellowship and the Creative Capital Moving Image Award in 2001.\n\n He and his museum are the subject of the book, \"Mr. Wilson's Cabinet of Wonder\", published in 1995.",
+    "Dick Herrick\nThe Very Rev Richard William Herrick (3 December 1913 - 5 May 1981) was an eminent Anglican priest in the 20th century.\n\n He was educated at King Edward VI School Retford and Leeds University and was initially a civil servant.\n\n He was ordained after a period of study at the College of the Resurrection, Mirfield in 1940.\n\n he held curacies at Duston and Portsea, Portsmouth before being appointed Vicar of St Michael’s, Northampton in 1947, a post he held for a decade.\n\n He was then a Canon Residentiary of Chelmsford Cathedral until 1978 when he was appointed Provost of Chelmsford.\n\n He died in post.",
+    "Colin Hardie\nColin Graham Hardie (16 February 1906 – 17 October 1998) was a British classicist and academic.\n\n From 1933 to 1936, he was Director of the British School at Rome.\n\n From 1936 to 1973, he was a Fellow of Magdalen College, Oxford, and a tutor in classics.\n\n In addition, from 1967 to 1973, he was the Public Orator of the University of Oxford.\n\n He was a member of the Inklings, an informal literary discussion group which included the likes of J. R. R. Tolkien and C. S. Lewis.",
+    "J. Robert Donnelly Husky Heritage Sports Museum\nThe J. Robert Donnelly Husky Heritage Sports Museum is a public museum located on the University of Connecticut's main campus at Storrs, Connecticut.\n\n The museum documents and celebrates UConn's intercollegiate athletics.\n\n Opening its doors on January 19, 2002, the 2,700-square-foot museum was named in honor of benefactor and 1940 Connecticut basketball and football captain J. Robert (Bob) Donnelly (1971-2005).\n\n Exhibits include national and regional championship trophies, trading cards, photographs, and various sports memorabilia, as well as a six-screen video wall replaying moments of triumph for the UConn Huskies.\n\n A life-size fiberglass sculpture of Jonathan the Husky, UConn's mascot, greets visitors at the museum entrance.\n\n The Connecticut Basketball Rotunda, featuring NCAA championship trophies and life-size cutouts of Ray Allen and Rebecca Lobo, is among the museum's permanent exhibits.",
+    "Rice Northwest Museum of Rocks and Minerals\nThe Rice Northwest Museum of Rocks and Minerals is a non-profit museum in Hillsboro, Oregon, United States.\n\n Located just north of the Sunset Highway on the northern edge of Hillsboro, the earth science museum is in the Portland metropolitan area.\n\n Opened in 1997, the museum’s collections date to the 1930s with the museum housed in a home built to display the rock and mineral collections of the museum founders.\n\n The ranch style home is listed on the National Register of Historic Places, the first of its kind listed in Oregon.\n\n In 2015 the museum became a Smithsonian Affiliate museum.",
+    "Imperial War Museum (disambiguation)\nThe Imperial War Museum is a British national museum organisation with branches at five locations in England."
+   ]
+  },
+  {
+   "id": "0e3a09303ec5dec0",
+   "gold": [
+    {
+     "sentence": "John Alexander (born 5 October 1955) is an English former footballer who holds the post of club secretary at Manchester United.",
+     "facts": {
+      "0.0": "John Alexander was born on 5 October 1955.",
+      "0.1": "John Alexander is English.",
+      "0.2": "John Alexander is a former footballer.",
+      "0.3": "John Alexander holds the post of club secretary at Manchester United."
+     }
+    },
+    {
+     "sentence": " Born in Liverpool, Alexander began his football career with a club called Ulysses, before being picked up by Millwall, for whom he made his league debut in 1976.",
+     "facts": {
+      "1.0": "John Alexander was born in Liverpool.",
+      "1.1": "John Alexander began his football career with a club called Ulysses.",
+      "1.2": "John Alexander was later picked up by Millwall.",
+      "1.3": "John Alexander made his league debut for Millwall in 1976."
+     }
+    },
+    {
+     "sentence": " He is the uncle of Liverpool player Trent Alexander-Arnold.",
+     "facts": {
+      "2.0": "John Alexander is the uncle of Liverpool player Trent Alexander-Arnold."
+     }
+    },
+    {
+     "sentence": "Trent John Alexander-Arnold (born 7 October 1998) is an English professional footballer who plays as a right-back for Premier League club Liverpool.",
+     "facts": {
+      "3.0": "Trent John Alexander-Arnold was born on 7 October 1998.",
+      "3.1": "Trent John Alexander-Arnold is English.",
+      "3.2": "Trent John Alexander-Arnold is a professional footballer.",
+      "3.3": "Trent John Alexander-Arnold plays as a right-back.",
+      "3.4": "Trent John Alexander-Arnold plays for Premier League club Liverpool."
+     }
+    }
+   ],
+   "items": [
+    "Trent Alexander-Arnold\nTrent John Alexander-Arnold (born 7 October 1998) is an English professional footballer who plays as a right-back for Premier League club Liverpool.\n\n He is an academy graduate of Liverpool and made his senior debut for the club in 2016, aged 18.\n\n The following year, he won the club's Young Player of the Season award.\n\n He has also represented England at all youth levels from under-16 through to under-19.\n\n Due to the length of his name, his surname is shortened to Alexander for Premier League fixtures.",
+    "Clare Taylor\nClare Elizabeth Taylor MBE (born 22 May 1965) is an English sportswoman, the first woman to have played on a World Cup team in both cricket and football.\n\n She represented England at both cricket, as a member of the winning World Cup cricket team in 1993, and football (World Cup 1995).\n\n She was awarded the MBE in the Queen's Birthday Honours in 2000 for her services to women’s sport.\n\n Taylor attended Moor End High School and still has her name on the athletics records board.",
+    "Wilton Lines\nWilton Lines (fl.\n\n 1889–1890) was an English professional footballer born in Birmingham.\n\n Lines played seven games for Small Heath in the inaugural 1889–90 season of the Football Alliance, covering a variety of forward positions, but was unable to displace the established forwards.",
+    "Tommy Bell (footballer, born 1906)\nThomas Bell (9 November 1906 – 1983) was an English professional footballer born in Seaham Harbour.\n\n He could play at inside right, centre forward and right half and was a regular goalscorer throughout his professional career.",
+    "Billy Morgan (footballer, born 1891)\nWilliam Albert L. Morgan (3 November 1891 – after 1927) was an English professional footballer born in Old Hill, Cradley Heath, Staffordshire, who played either at outside left or inside left.\n\n He played for Birmingham, Coventry City and Crystal Palace in the Football League, and was capped once for a Football League representative side.",
+    "John Logan (footballer, born 1912)\nJohn William Logan (16 August 1912 – October 1980) was an English professional footballer born in Horden, near Peterlee, County Durham who played in the Football League for Darlington, Barnsley and Sheffield Wednesday.\n\n He played as a wing half.",
+    "John Alexander (footballer, born 1955)\nJohn Alexander (born 5 October 1955) is an English former footballer who holds the post of club secretary at Manchester United.\n\n Born in Liverpool, Alexander began his football career with a club called Ulysses, before being picked up by Millwall, for whom he made his league debut in 1976.\n\n After scoring twice in 15 appearances over the course of two years with Millwall, he moved to Reading; he enjoyed greater success with Reading, scoring nine goals in 25 games.\n\n In 1981, he joined Northampton Town, but spent just one season with them before retiring from football at the age of 26 in 1982.\n\n Upon retiring from football, Alexander got a job with the BBC, but he later returned to football as club secretary at Watford.\n\n In 2000, he took up the same post at Tottenham Hotspur, spending 10 years there before applying for the same job at Manchester United, where he would replace the retiring Ken Ramsden.\n\n He took over at Manchester United on 1 July 2010.\n\n He is the uncle of Liverpool player Trent Alexander-Arnold.",
+    "Nick Powell\nNicholas Edward \"Nick\" Powell (born 23 March 1994) is an English professional footballer who plays for Wigan Athletic as a midfielder.\n\n He began his career at Crewe Alexandra, initially as a forward, making his debut at the age of 16.\n\n After impressing for Crewe Alexandra during the 2011–12 season, including scoring in their 2–0 victory in the League Two play-off Final, he moved to Manchester United in July 2012.\n\n Unable to break into the Manchester United first team, however, he went on loan to Wigan Athletic, Leicester City and Hull City before being released in June 2016.\n\n He joined Wigan Athletic in July 2016.\n\n He has represented England at under-16, under-17, under-18, under-19 and under-21 levels.",
+    "William McCourty\nWilliam McCourty (1884 – 10 December 1917) was an English professional footballer born in Morpeth, Northumberland, who played in the Football League for Birmingham.\n\n McCourty, a former coal miner who played at left half, joined Birmingham in May 1909.\n\n He made his debut in the Second Division on 13 September 1909, deputising for the injured Tommy Daykin in a home game against Glossop which finished as a 2–2 draw, and was never picked again, returning to non-league football the following year.",
+    "Jack Charlton\nJohn Charlton, OBE, DL (born 8 May 1935) is an English former footballer and manager who played as a defender.\n\n He was part of the England team that won the 1966 World Cup.\n\n He is the elder brother of former Manchester United forward Bobby Charlton, who was also a teammate in England's World Cup final victory.\n\n He spent his entire club career with Leeds United from 1950 to 1973, helping the club to the Second Division title (1963–64), First Division title (1968–69), FA Cup (1972), League Cup (1968), Charity Shield (1969), Inter-Cities Fairs Cup (1968 and 1971), as well as one other promotion from the Second Division (1955–56) and five second-place finishes in the First Division, two FA Cup final defeats and one Inter-Cities Fairs Cup final defeat.\n\n His 629 league and 762 total competitive appearances are club records.\n\n In 2006, Leeds United supporters voted Charlton into the club's greatest ever XI."
+   ]
+  },
+  {
+   "id": "edcc5e45a74be545",
+   "gold": [
+    {
+     "sentence": "Pagliacci (] ; literal translation, \"Clowns\") is an Italian opera in a prologue and two acts, with music and libretto by Ruggero Leoncavallo.",
+     "facts": {
+      "0.0": "Pagliacci is an Italian opera.",
+      "0.1": "Pagliacci has a prologue and two acts.",
+      "0.2": "Pagliacci has music and libretto by Ruggero Leoncavallo.",
+      "0.3": "The literal translation of Pagliacci is 'Clowns'."
+     }
+    },
+    {
+     "sentence": "Suor Angelica (Sister Angelica) is an opera in one act by Giacomo Puccini to an original Italian libretto by Giovacchino Forzano.",
+     "facts": {
+      "1.0": "Suor Angelica (Sister Angelica) is an opera.",
+      "1.1": "Suor Angelica is in one act.",
+      "1.2": "Suor Angelica is by Giacomo Puccini.",
+      "1.3": "Suor Angelica has an original Italian libretto by Giovacchino Forzano."
+     }
+    }
+   ],
+   "items": [
+    "Barbara Frittoli\nBarbara Frittoli (born 19 April 1967) is an Italian operatic soprano who has sung leading roles in opera houses throughout Europe and in the United States.\n\n She was born in Milan and graduated from the Milan Conservatory.\n\n She made her Metropolitan Opera debut in 1995 as Micaela in \"Carmen\" and has gone on to sing in over 80 performances there including Donna Elvira in \"Don Giovanni\", Fiordiligi in \"Così fan tutte\", Angelica in \"Suor Angelica\", Desdemona in \"Otello\", the title role in \"Luisa Miller\", Amelia in \"Simon Boccanegra\", Vitellia in \"La clemenza di Tito\" and Alicia Ford in \"Falstaff\".",
+    "The Consul\nThe Consul is an opera in three acts with music and libretto by Gian Carlo Menotti, his first full-length opera.",
+    "Pagliacci\nPagliacci (] ; literal translation, \"Clowns\") is an Italian opera in a prologue and two acts, with music and libretto by Ruggero Leoncavallo.\n\n It is the only Leoncavallo opera that is still widely performed.\n\n Opera companies have frequently staged \"Pagliacci\" with \"Cavalleria rusticana\" by Mascagni, a double bill known colloquially as 'Cav and Pag'.",
+    "Stiffelio\nStiffelio is an opera in three acts by Giuseppe Verdi, from an Italian libretto by Francesco Maria Piave.\n\n The origin of this was the novel “Le pasteur d’hommes”, by Émile Souvestre, which was published in 1838.\n\n This was adapted into the French play \"Le pasteur, ou L'évangile et le foyer\" by Émile Souvestre and Eugène Bourgeois.\n\n That was in turn translated into Italian by Gaetano Vestri as \"Stifellius\"; this formed the basis of Piave's libretto.",
+    "Agrippina (opera)\nAgrippina (HWV 6) is an \"opera seria\" in three acts by George Frideric Handel with a libretto by Cardinal Vincenzo Grimani.\n\n Composed for the 1709–10 Venice \"Carnevale\" season, the opera tells the story of Agrippina, the mother of Nero, as she plots the downfall of the Roman Emperor Claudius and the installation of her son as emperor.\n\n Grimani's libretto, considered one of the best that Handel set, is an \"anti-heroic satirical comedy\", full of topical political allusions.\n\n Some analysts believe that it reflects Grimani's political and diplomatic rivalry with Pope Clement XI.",
+    "Bernhard Bötel\nHis stage repertoire included Belmonte in Wolfgang Amadeus Mozart's \"Die Entführung aus dem Serail\", Chapelou in Adolphe Adam's \"Le postillon de Lonjumeau\", Count Almaviva in Gioachino Rossini's \"The Barber of Seville\", Daniel in Franz Lehár's \"The Merry Widow\", the Duke of Mantua in Giuseppe Verdi's \"Rigoletto\", Gabriel von Eisenstein in Johann Strauss II's \"Die Fledermaus\", Indigo in Strauss' \"Indigo und die vierzig Räuber\", Jeník in Bedřich Smetana's \"The Bartered Bride\", Paolino in Domenico Cimarosa's \"Il matrimonio segreto\", Pâris in Jacques Offenbach's \"La belle Hélène\", Pietro in Franz von Suppé's \"Boccaccio\", and Wilhelm Meister in Ambroise Thomas' \"Mignon\".",
+    "Suor Angelica\nSuor Angelica (Sister Angelica) is an opera in one act by Giacomo Puccini to an original Italian libretto by Giovacchino Forzano.\n\n It is the second opera of the trio of operas known as \"Il trittico\" (\"Triptych\").\n\n It received its world premiere at the Metropolitan Opera on December 14, 1918.",
+    "Lucrezia Borgia (opera)\nLucrezia Borgia is a melodramatic opera in a prologue and two acts by Gaetano Donizetti.\n\n Felice Romani wrote the Italian libretto after the play \"Lucrezia Borgia\" by Victor Hugo, in its turn after the legend of Lucrezia Borgia.\n\n \"Lucrezia Borgia\" was first performed on 26 December 1833 at La Scala, Milan.",
+    "Il trittico\nIl trittico (\"The Triptych\") is the title of a collection of three one-act operas, \"Il tabarro\", \"Suor Angelica\", and \"Gianni Schicchi\", by Giacomo Puccini.\n\n The work received its world premiere at the Metropolitan Opera on 14 December 1918.",
+    "Rita Fornia\nRita Fornia (17 July 1878 – 27 October 1922) was an American opera singer.\n\n She began her career in Europe at the beginning of the 20th century singing coloratura soprano roles.\n\n Early on in her career her voice darkened and dropped slightly causing her to focus more within the mezzo-soprano repertoire while still singing some soprano roles.\n\n She joined the Metropolitan Opera company in 1907 where she performed regularly in mostly supporting roles until her retirement in 1922.\n\n She is best remembered today for portraying the role of the Abbess in the original production of Puccini's \"Suor Angelica\" in 1918."
+   ]
+  },
+  {
+   "id": "c48a03ee7061ceb9",
+   "gold": [
+    {
+     "sentence": " In return, William made Copsi earl of Northumbria and sent him back to York.",
+     "facts": {
+      "0.0": "William made Copsi earl of Northumbria in return.",
+      "0.1": "William sent Copsi back to York."
+     }
+    },
+    {
+     "sentence": "York ( ) is a historic walled city at the confluence of the rivers Ouse and Foss in North Yorkshire, England.",
+     "facts": {
+      "1.0": "York is a historic walled city.",
+      "1.1": "York is at the confluence of the rivers Ouse and Foss.",
+      "1.2": "York is in North Yorkshire, England."
+     }
+    }
+   ],
+   "items": [
+    "Earl Cowper\nEarl Cowper (pronounced \"Cooper\") was a title in the Peerage of Great Britain.\n\n It was created in 1718 by George I for William Cowper, 1st Baron Cowper, his first Lord Chancellor, with remainder in default of male issue of his own to his younger brother, Spencer Cowper.\n\n Cowper had already been created Baron Cowper of Wingham in the County of Kent, in the Peerage of England on 14 December 1706, with normal remainder to the heirs male of his body, and was made Viscount Fordwich, in the County of Kent, at the same time as he was given the earldom, also Peerage of Great Britain and with similar remainder.\n\n He was the great-grandson of William Cowper, who was created a Baronet, of Ratling Court in the County of Kent, in the Baronetage of England on 4 March 1642.\n\n The latter was succeeded by his grandson, the second Baronet.\n\n He represented Hertford in Parliament.",
+    "Two Rivers Press\nTwo Rivers Press is an independent publishing house, based in the English town of Reading.\n\n Two Rivers Press was founded in 1994 by Peter Hay (1951–2003), a local artist.\n\n Its name reflects his enthusiasm for the town and its two rivers, the Kennet and the Thames, and its intention to explore \"the place where art and history meet\".\n\n The name also gives a clue to the origins of the company in the, ultimately successful, opposition to Reading's proposed \"Cross-Town Route\", a road scheme that would have seriously impacted the point at which the two rivers meet.",
+    "York\nYork ( ) is a historic walled city at the confluence of the rivers Ouse and Foss in North Yorkshire, England.\n\n The municipality is the traditional county town of the historic county of Yorkshire to which it gives its name.\n\n The city has a rich heritage and has provided the backdrop to major political events in England throughout much of its two millennia of existence.\n\n The city offers a wealth of historic attractions, of which York Minster is the most prominent, and a variety of cultural and sporting activities making it a popular tourist destination for millions.",
+    "Earl of Norbury\nEarl of Norbury, in the County of Tipperary, is a title in the Peerage of Ireland.\n\n It was created in 1827, along with the title Viscount Glandine, of Glandine in the King's County, for the Irish politician and judge John Toler, 1st Baron Norbury, upon his retirement as Chief Justice of the Common Pleas in Ireland.\n\n The titles were created with special remainder to his second son, Hector, as his eldest son, Daniel, was then considered mentally unwell.\n\n Lord Norbury had already been created Baron Norbury, of Ballycrenode in the County of Tipperary, in the Peerage of Ireland in 1800, with remainder to the heirs male of his body.\n\n Moreover, his wife, Grace Toler (née Graham), had been created Baroness Norwood, of Knockalton in the County of Tipperary, in the Peerage of Ireland in 1797, with remainder to the heirs male of her body.\n\n By the time Lord Norbury was raised to the Earldom, his wife had died and their eldest son had succeeded her as 2nd Baron Norwood.",
+    "Tripartite Indenture\nThe Tripartite Indenture was an agreement made in February 1405 between Owain Glyndŵr, Edmund Mortimer, and Henry Percy, 1st Earl of Northumberland, agreeing to divide England and Wales up between them at the expense of Henry IV.\n\n Glyndŵr was to be given Wales, and a substantial part of the west of England, including the English portions of the Welsh Marches.\n\n Northumberland was to have received the north, as well as Northamptonshire, Norfolk, Warwickshire, and Leicestershire.\n\n The Mortimers were to have received the rest of southern England.",
+    "Two Rivers (Red River of the North)\nThe Two Rivers is a 7.0 mi river in Kittson County, northwestern Minnesota, in the United States.\n\n Formed by the North Branch of the Two Rivers and the South Branch of the Two Rivers, it is a tributary of the Red River of the North, with its outflow traveling north through Lake Winnipeg and the Nelson River to Hudson Bay.",
+    "Earl Cowper\nHe represented Hertford in Parliament.\n\n He was succeeded by his eldest son, the aforementioned William Cowper, the third Baronet, who was elevated to the peerage as Baron Cowper in 1706 and made Earl Cowper in 1718.\n\n In 1706 Lord Cowper married as his second wife Mary Clavering, daughter of John Clavering, of Chopwell, County Durham.",
+    "Copsi\nOsulf, however, only ruled as earl until that autumn, when he was killed by an outlaw he was tracking.",
+    "Earl of Norbury\nThis son also succeeded Lord Norbury himself on his death in 1831 as 2nd Baron Norbury, whilst his younger brother Daniel succeeded to the viscountcy and earldom according to the special remainder.\n\n In 1832, the second Earl also succeeded his elder brother in the two baronies.\n\n He had already in 1825 assumed the additional surname of Graham by Royal licence.",
+    "Copsi\nCopsi (or Copsig; Old English: \"Cōpsige\" ) [died 1067] was a Northumbrian magnate in late Anglo-Saxon England.\n\n He was a supporter of Tostig, and was exiled along with him in 1065.\n\n Copsi soon fled to Orkney (then a part of Norway).\n\n The next year (1066), he joined Tostig at Sandwich, in Kent, with 17 ships.\n\n Copsi survived Tostig's defeat at Stamford Bridge, and when William the Conqueror prevailed at Hastings he travelled, in March 1067, to pay William homage at Barking (where William was staying while his tower was being constructed in London).\n\n In return, William made Copsi earl of Northumbria and sent him back to York.\n\n Copsi's rule lasted a mere five weeks, at which time he was murdered by Osulf, son of Eadulf III of the ancient Bernician family which had historically governed the area from Bamburgh, at Newburn-upon-Tyne."
+   ]
+  },
+  {
+   "id": "46c70067a510142e",
+   "gold": [
+    {
+     "sentence": "The 'Burbs is a 1989 American comedy thriller film directed by Joe Dante starring Tom Hanks, Bruce Dern, Carrie Fisher, Rick Ducommun, Corey Feldman, Wendy Schaal and Henry Gibson.",
+     "facts": {
+      "0.0": "The 'Burbs is a 1989 American film.",
+      "0.1": "The 'Burbs is a comedy thriller film.",
+      "0.2": "The 'Burbs was directed by Joe Dante.",
+      "0.3": "The 'Burbs stars Tom Hanks.",
+      "0.4": "The 'Burbs stars Bruce Dern.",
+      "0.5": "The 'Burbs stars Carrie Fisher.",
+      "0.6": "The 'Burbs stars Rick Ducommun.",
+      "0.7": "The 'Burbs stars Corey Feldman.",
+      "0.8": "The 'Burbs stars Wendy Schaal.",
+      "0.9": "The 'Burbs stars Henry Gibson."
+     }
+    },
+    {
+     "sentence": "Richard \"Rick\" Ducommun (July 3, 1952 – June 12, 2015) was a Canadian actor, comedian and writer who appeared in films and television.",
+     "facts": {
+      "1.0": "Rick Ducommun was born on July 3, 1952.",
+      "1.1": "Rick Ducommun died on June 12, 2015.",
+      "1.2": "Rick Ducommun was a Canadian actor.",
+      "1.3": "Rick Ducommun was a Canadian comedian.",
+      "1.4": "Rick Ducommun was a Canadian writer.",
+      "1.5": "Rick Ducommun appeared in films.",
+      "1.6": "Rick Ducommun appeared in television."
+     }
+    }
+   ],
+   "items": [
+    "Pizza 73\nPizza 73 is a Canadian restaurant chain that offers a number of different styles of pizza, along with chicken wings.\n\n It has been operated by Pizza Pizza since 2007.\n\n Toronto-based Pizza Pizza had acquired the restaurant for a total of $CAN70.2 million.\n\n There are 89 locations throughout Western Canada, which include the provinces of British Columbia, Alberta, and Saskatchewan.\n\n The restaurant's name originates from its original phone number: 473–7373.\n\n Founded by David Tougas and Guy Goodwin in 1985, Pizza 73 is headquartered in Edmonton, Alberta, Canada.",
+    "Night Life (film)\nNight Life is a 1989 American zombie comedy film directed by David Acomba and starring Scott Grimes, John Astin, and Cheryl Pollak.\n\n It centers around a high school nerd named Archie Melville who is harassed from beyond the grave by the zombie corpses of his former high school bullies (recently deceased) after they are brought back to life by a freak lightning storm.\n\n It is also known as Grave Misdemeanors.",
+    "Jebb Fink\nJebb Fink is an American-Canadian stand-up comedian and television personality.\n\n Best known as a reporter and host for \"the Big Breakfast\" on A-Channel, Calgary.\n\n He won a Gemini as co-creator of the CBC comedy \"An American in Canada\" and was a weather presenter on \"Your City\" for City TV Calgary, he also hosted the short-lived late night talk show \"Global Late Night\" for the Global Television Network in 2004.",
+    "Dunston Checks In\nDunston Checks In is a 1996 American family comedy film starring Eric Lloyd, Graham Sack, Jason Alexander, Faye Dunaway, Rupert Everett, Paul Reubens, Glenn Shadix, and introducing Sam the Orangutan as Dunston.\n\n It was written by John Hopkins and Bruce Graham and directed by Ken Kwapis.",
+    "Araby Lockhart\nAraby Lockhart (born December 4, 1926) is a Canadian stage and television actress, best known for her performances in the films \"Capote\" and \"Police Academy\" and her stage performances as a member of Hart House Theatre and the Straw Hat Players.\n\n Lockhart has also served as President of the Actors' Fund of Canada.",
+    "The 'Burbs\nThe 'Burbs is a 1989 American comedy thriller film directed by Joe Dante starring Tom Hanks, Bruce Dern, Carrie Fisher, Rick Ducommun, Corey Feldman, Wendy Schaal and Henry Gibson.\n\n The film was written by Dana Olsen, who also has a cameo in the movie.\n\n The film pokes fun at suburban environments and their eccentric dwellers.",
+    "Marty Belafsky\nMarty Belafsky (born September 19, 1975) is an American actor/comedian born in Los Angeles, California.\n\n He began acting professionally at age 13 and was soon cast as Louis Plumb on the short-lived NBC series \"Hull High\".\n\n Shortly thereafter, Belafsky landed the role of Crutchy in the Disney musical film, \"Newsies\".\n\n He continued acting through his teens, making appearances in such television shows as \"The Wonder Years\", \"Great Scott\" and \"Step By Step\" and the film \"Wrestling Ernest Hemingway\".\n\n Belafsky also voiced Kent Swanson in the video game series \"Dead Rising\" released in 2006.",
+    "Freebie and the Bean\nFreebie and the Bean is a 1974 American action-comedy film about two off-beat police detectives who wreak havoc in San Francisco attempting to bring down a local organized crime boss.\n\n The picture, a precursor to the buddy cop film genre popularized a decade later, stars James Caan, Alan Arkin, Loretta Swit and Valerie Harper.\n\n Harper was nominated for the Golden Globe for New Star of the Year for playing the Hispanic wife of Alan Arkin.\n\n The film was directed by Richard Rush.\n\n An article in Rolling Stone magazine alleged that Stanley Kubrick called \"Freebie and the Bean\" the best film of 1974.\n\n Arkin and Caan would not appear in another movie together until the 2008 film adaptation of \"Get Smart\".",
+    "Neon City\nNeon City (also known as Anno 2053 in Italy, Neonski Grad in Serbia) is a 1991 Canadian post-apocalyptic science fiction film directed by Monte Markham and written by Jeff Begun and Ann Lewis Hamilton, under the pseudonym Buck Finch.\n\n The cast includes Michael Ironside, Vanity, Lyle Alzado, Valerie Wildman, Nick Klar, Juliet Landau, Richard Sanders and Markham.",
+    "Vegas Vacation\nVegas Vacation is a 1997 American comedy film directed by Stephen Kessler.\n\n It is the fourth installment in \"National Lampoon\"’s \"Vacation\" film series, and was written by Elisa Bell, based on a story by Bell and Bob Ducsay.\n\n The film stars Chevy Chase, Beverly D'Angelo and Randy Quaid, with Ethan Embry and Marisol Nichols as Griswold children Rusty and Audrey.\n\n The film opened at #4 at the box office and grossed over $36.4 million domestically.\n\n \"Vegas Vacation\" became the first theatrical \"Vacation\" film not to carry the National Lampoon label or a screenwriting credit from John Hughes."
+   ]
+  },
+  {
+   "id": "f90353d54d51bc56",
+   "gold": [
+    {
+     "sentence": "Dalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick.",
+     "facts": {
+      "0.0": "Dalhousie University, commonly known as Dal, is a public research university.",
+      "0.1": "Dalhousie University is in Nova Scotia, Canada.",
+      "0.2": "Dalhousie University has three campuses in Halifax.",
+      "0.3": "Dalhousie University has a fourth campus in Bible Hill.",
+      "0.4": "Dalhousie University has medical teaching facilities in Saint John, New Brunswick."
+     }
+    },
+    {
+     "sentence": "California State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States.",
+     "facts": {
+      "1.0": "California State Polytechnic University, Pomona is also known as CPP, Cal Poly Pomona, or Cal Poly.",
+      "1.1": "California State Polytechnic University, Pomona is a public polytechnic university.",
+      "1.2": "California State Polytechnic University, Pomona is located in Pomona, California, United States."
+     }
+    }
+   ],
+   "items": [
+    "Cal Poly Pomona College of Engineering\nThe Cal Poly Pomona College of Engineering is the engineering college at California State Polytechnic University, Pomona (Cal Poly Pomona or Cal Poly) located in Pomona, California, United States.\n\n Well known for its \"learn by doing\" philosophy, the college's motto is: \"\"making imagination real\"\".\n\n Cal Poly has one of the top engineering college among public schools in California and, with over 5,600 students (as of fall 2015), it is also the largest engineering college in Southern California, the second largest college of engineering in the California State University system, and the seventeenth largest engineering college in the United States.\n\n In the 2017 \"U.S. News & World Report\" the College of Engineering is ranked the 5th best undergraduate program among public universities (11th overall) in the West for Master's-granting universities, and \"has one of the top ranked engineering programs, and graduates roughly 1 of every 14 engineers in the state of California.\"",
+    "Cal Poly Pomona Broncos\nThe Cal Poly Pomona Broncos or Cal Poly Broncos are the athletic sports teams for the California State Polytechnic University, Pomona (Cal Poly Pomona).\n\n Cal Poly Pomona has 10 varsity sports teams and offers student participation in a wide range of sports including soccer, volleyball, track and field, basketball, softball, and baseball.\n\n Cal Poly Pomona participates at the NCAA's Division II (DII) level in the California Collegiate Athletic Association (CCAA).\n\n The Broncos have 65 CCAA championships and 14 NCAA National Championships.\n\n Current and former Cal Poly athletes have won 7 Olympic medals (3 gold, 1 silver, and 3 bronze).",
+    "1981 Cal Poly Pomona Broncos football team\nThe 1981 Cal Poly Pomona Broncos football team represented California State Polytechnic University, Pomona during the 1981 NCAA Division II football season.\n\n Cal Poly Pomona competed in the California Collegiate Athletic Association (CCAA).",
+    "Julian A. McPhee\nJulian Aeneas McPhee (February 7, 1896 – November 10, 1967) was the sixth university president of California Polytechnic State University, San Luis Obispo (Cal Poly SLO) from 1933 to 1966 and the first president of California State Polytechnic University, Pomona (Cal Poly Pomona) from 1938 to 1966.",
+    "California State Polytechnic University, Pomona\nCalifornia State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States.\n\n It is one of two polytechnics in the California State University system.",
+    "Dalhousie University\nDalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick.\n\n Dalhousie offers more than 4,000 courses and 180 degree programs in twelve undergraduate, graduate, and professional faculties.\n\n The university is a member of the U15, a group of research-intensive universities in Canada.",
+    "Cal Poly Pomona University Library\nThe Cal Poly Pomona University Library is the main library on the campus of California State Polytechnic University, Pomona (Cal Poly Pomona).\n\n It has in its collection 670,580 books; 6,883 serial subscriptions and 10,417 audiovisual materials.",
+    "International Polytechnic High School\nInternational Polytechnic High School, commonly abbreviated merely as iPoly, is a public college preparatory demonstration high school (9-12) located on the California State Polytechnic University, Pomona (Cal Poly Pomona) campus and operated by the Los Angeles County Office of Education (LACOE) in conjunction with the College of Education and Integrative Studies at the university.\n\n iPoly's curriculum is fully accredited by the Western Association of Schools and Colleges and is approved by the University of California and California State University.\n\n It maintains a unique affiliation with the Los Angeles County High School for the Arts (LACHSA), which is also run by LACOE.\n\n Since iPoly does not lie in a fixed school district, it draws students from throughout Los Angeles, San Bernardino, Orange and Riverside counties.\n\n The majority of students come from the Pomona and San Gabriel valleys.\n\n In 2009 and 2013, iPoly was honored as a California Distinguished School by the California Department of Education.",
+    "Cal Poly Pomona Broncos women's basketball\nThe Cal Poly Pomona Broncos women's basketball team is the women's basketball team that represents California State Polytechnic University, Pomona, in Pomona, California.\n\n The school's team currently competes in the California Collegiate Athletic Association.",
+    "Cal Poly Pomona College of Environmental Design\nThe Cal Poly Pomona College of Environmental Design (CENV) is a college part of the California State Polytechnic University, Pomona (Cal Poly Pomona).\n\n The college houses over 1,600 students; making it one of largest environmental design programs in the United States.\n\n The college offers bachelor's degrees in five departments, as well as three master's degree programs.\n\n It is the only academic unit within the California State University system to be associated with a Pritzker Prize laureate (often referred to as \"The Nobel Prize in Architecture\")."
+   ]
+  },
+  {
+   "id": "6c8ff7eaa0afa02f",
+   "gold": [
+    {
+     "sentence": "The Random House Tower, also known as the Park Imperial Apartments, is a 52-story mixed-use tower in New York City, United States, that is used as the headquarters of book publisher Random House and a luxury apartment complex.",
+     "facts": {
+      "0.0": "The Random House Tower is also known as the Park Imperial Apartments.",
+      "0.1": "The Random House Tower is a 52-story mixed-use tower.",
+      "0.2": "The Random House Tower is in New York City, United States.",
+      "0.3": "The Random House Tower is used as the headquarters of book publisher Random House.",
+      "0.4": "The Random House Tower is used as a luxury apartment complex."
+     }
+    },
+    {
+     "sentence": " It currently carries the Vornado Realty Trust corporate headquarters.",
+     "facts": {
+      "1.0": "The Random House Tower currently carries the Vornado Realty Trust corporate headquarters."
+     }
+    }
+   ],
+   "items": [
+    "383 Madison Avenue\n383 Madison Avenue is an office building owned and occupied by JP Morgan Chase in New York City on a full block bound by Madison Avenue and Vanderbilt Avenue between East 46th and 47th Streets.\n\n Formerly known as the Bear Stearns Building, it housed the world headquarters of the now-defunct Bear Stearns from the building's completion until Bear's collapse and sale to JPMorgan Chase in 2008.\n\n The building now houses the New York offices for J.P. Morgan's investment banking division, which formerly occupied 277 Park Avenue.\n\n Both 383 Madison and 277 Park are adjacent to JPMorgan Chase's world headquarters at 270 Park Avenue.",
+    "270 Park Avenue\n270 Park Avenue (also known as the JPMorgan Chase Tower and formerly the Union Carbide Building) is a high-rise office building located in Midtown Manhattan, New York City.\n\n It was designed by Natalie de Blois for Skidmore, Owings & Merrill.",
+    "245 Park Avenue\n245 Park Avenue (formerly American Tobacco Company Building, American Brands Building and Bear Stearns Building) is a 648-ft (198 m) tall skyscraper in New York City, New York.\n\n It was completed in 1967 and has 48 floors (1.7 million square feet).\n\n Shreve, Lamb and Harmon designed the building.\n\n The Building Owners and Managers Association awarded the 2000/2001 Pinnacle Award to 245 Park Avenue.\n\n The site used to be occupied by the second Grand Central Palace exhibition hall, which was demolished in 1964 to make way for 245 Park Avenue.",
+    "Random House Tower\nThe Random House Tower, also known as the Park Imperial Apartments, is a 52-story mixed-use tower in New York City, United States, that is used as the headquarters of book publisher Random House and a luxury apartment complex.\n\n The book publisher entrance is on Broadway and goes up to 27 floors, while the apartment complex entrance is on West 56th Street.",
+    "888 7th Avenue\n888 7th Avenue is a 628 ft (191m) tall modern-style office skyscraper in Midtown Manhattan which was completed in 1969 and has 46 floors.\n\n Emery Roth & Sons designed the building, which is tied with Central Park Place for the 65th tallest building in New York City.\n\n It currently carries the Vornado Realty Trust corporate headquarters.\n\n Previously known as the Arlen Building, its namesake being the company responsible for its construction, Arlen Realty & Development Corporation.\n\n The Red Eye Grill is located in the building at street level.",
+    "655 Park Avenue\n655 Park Avenue is a Georgian-style co-op residential building on Manhattan's Upper East Side, located on Park Avenue between 67th Street and 68th Street, adjacent to the Park Avenue Armory.\n\n It was developed in 1924 by Dwight P. Robinson & Company.\n\n The building at 655 Park Avenue was designed by architects James Edwin Ruthven Carpenter, Jr., often referred to by the initials \"J.E.R. Carpenter\", and Mott B. Schmidt.\n\n Carpenter is considered the leading architect for luxury residential high-rise buildings in New York City in the early 1900s, while Schmidt is known for his buildings in the American Georgian Classical style, including Sutton Place and houses for New York City's society figures and business elite.",
+    "90 West Street\n90 West Street (alternatively West Street Building) is a building in Lower Manhattan, New York City.\n\n It was designed by architect Cass Gilbert and structural engineer Gunvald Aus for the West Street Improvement Corporation.\n\n When completed in 1907, the building's Gothic styling and ornamentation served to emphasize its 23-story height, and foreshadowed Gilbert's later work on the Woolworth Building.\n\n Originally built as an office building, the main tenant was the Delaware, Lackawanna and Western Railroad and the top floor was occupied by Garret's Restaurant, which advertised itself as the \"world's highest restaurant\".",
+    "Rubin Schron\nOther buildings he owns include the Monterey, a 521-unit rental multifamily building on Manhattan's Upper East Side; over the decades, Schron has also amassed a portfolio of Mitchell-Lama apartment buildings whose values have been skyrocketing to record values, after reverting to market rates when government subsidies expired.\n\n In 2007, he sold nearly 4,000 units of former Mitchell-Lama properties in five complexes in Harlem and on Roosevelt Island for $940 million.\n\n Schron, who practices Orthodox Judaism, has eight children and 50 grandchildren.\n\n He and his family have lived in the same single-family home in Brooklyn for many decades.",
+    "200 West Street\n200 West Street is the global headquarters of the Goldman Sachs investment banking firm.\n\n The building is a 749 ft , 44-story building located on West Street, between Vesey and Murray Streets in Lower Manhattan.\n\n It is adjacent to the World Financial Center and the Conrad Hotel, the Verizon Building to the east across West Street, and diagonally opposite the World Trade Center.\n\n It is the only office building in Battery Park City north of the World Financial Center.",
+    "Transportation Building\nThe Transportation Building is a 44-story office building located at 225 Broadway on the corner of Barclay Street in the Civic Center neighborhood of Lower Manhattan in New York City.\n\n It also carries the address 2-4 Barclay Street.\n\n It was built in 1927 and was designed by the architecture firm of York & Sawyer, in the Renaissance Revival style, using setbacks common to skyscrapers built after the adoption of the 1916 Zoning Resolution.\n\n It sits across Barclay Street from the Woolworth Building."
+   ]
+  },
+  {
+   "id": "75e2b448789959ac",
+   "gold": [
+    {
+     "sentence": "Remember the Titans is a 2000 American sports film produced by Jerry Bruckheimer and directed by Boaz Yakin.",
+     "facts": {
+      "0.0": "Remember the Titans is a 2000 American sports film",
+      "0.1": "Remember the Titans was produced by Jerry Bruckheimer",
+      "0.2": "Remember the Titans was directed by Boaz Yakin"
+     }
+    },
+    {
+     "sentence": "My Favorite Martian is a 1999 American science fiction comedy film starring Christopher Lloyd, Jeff Daniels, Daryl Hannah, Elizabeth Hurley, Wallace Shawn and Ray Walston, based on the 1960s television series of the same name in which Walston starred.",
+     "facts": {
+      "1.0": "My Favorite Martian is a 1999 American science fiction comedy film",
+      "1.1": "My Favorite Martian stars Christopher Lloyd",
+      "1.2": "My Favorite Martian stars Jeff Daniels",
+      "1.3": "My Favorite Martian stars Daryl Hannah",
+      "1.4": "My Favorite Martian stars Elizabeth Hurley",
+      "1.5": "My Favorite Martian stars Wallace Shawn",
+      "1.6": "My Favorite Martian stars Ray Walston",
+      "1.7": "My Favorite Martian is based on the 1960s television series of the same name",
+      "1.8": "Ray Walston starred in the 1960s television series My Favorite Martian"
+     }
+    },
+    {
+     "sentence": " The film grossed $36.8 million domestically against a budget of $65 million.",
+     "facts": {
+      "2.0": "The film (My Favorite Martian) grossed $36.8 million domestically",
+      "2.1": "The film (My Favorite Martian) had a budget of $65 million"
+     }
+    }
+   ],
+   "items": [
+    "Remember the Titans\nRemember the Titans is a 2000 American sports film produced by Jerry Bruckheimer and directed by Boaz Yakin.\n\n The screenplay, written by Gregory Allen Howard, is based on the true story of African-American coach Herman Boone, portrayed by Denzel Washington, and his attempt to integrate the T. C. Williams High School football team in Alexandria, Virginia, in 1971.\n\n Will Patton portrays Bill Yoast, Boone's assistant coach.\n\n Real-life athletes Gerry Bertier and Julius Campbell are portrayed by Ryan Hurst and Wood Harris, respectively.",
+    "Titan A.E.\nTitan A.E. is a 2000 American animated science fiction film directed by Don Bluth and Gary Goldman.\n\n Its title refers to the spacecraft central to the plot, with \"A.E.\" meaning \"After Earth\".\n\n It stars Matt Damon, Bill Pullman, John Leguizamo, Nathan Lane, Janeane Garofalo and Drew Barrymore.\n\n The film's animation technique combines traditional hand-drawn animation and extensive use of computer generated imagery.\n\n Its working title was \"Planet Ice\".\n\n It was theatrically released on June 16, 2000, by 20th Century Fox and was the final film for Fox Animation Studios.\n\n The film grossed $36.8 million on a $75–$90 million budget, making a $100-million loss for the studio.",
+    "The entries cover diverse films and careers: crime drama *Deadfall* and its *Arsenal* follow-up; *Rogue One*’s rebels stealing Death Star plans; Mel Gibson, Nicolas Cage, James Garner and Tom Cruise filmographies; Everest disaster drama *Everest*; integration-themed sports films *Remember the Titans* and *McFarland, USA*; acclaimed *True Grit* and *The Hurt Locker*; espionage film *The Ipcress File*; Vietnam",
+    "My Favorite Martian (film)\nMy Favorite Martian is a 1999 American science fiction comedy film starring Christopher Lloyd, Jeff Daniels, Daryl Hannah, Elizabeth Hurley, Wallace Shawn and Ray Walston, based on the 1960s television series of the same name in which Walston starred.\n\n It was directed by Donald Petrie and written by Sherri Stoner and Deanna Oliver, based on the television series created by John L. Greene.\n\n Creatures were created by Amalgamated Dynamics from designs by Jordu Schell.\n\n The film grossed $36.8 million domestically against a budget of $65 million.",
+    "Tom Cruise filmography\nTom Cruise is an American actor and producer who made his film debut with a minor role in the 1981 romantic drama \"Endless Love\".\n\n Two years later he made his breakthrough by starring in the romantic comedy \"Risky Business\" (1983), which garnered Cruise his first nomination for the Golden Globe Award for Best Actor – Motion Picture Musical or Comedy.\n\n In 1986, Cruise played a fighter pilot in the Tony Scott-directed action drama \"Top Gun\" (the highest-grossing film that year), and also starred opposite Paul Newman in the Martin Scorsese-directed drama \"The Color of Money\".\n\n Two years later he played opposite Dustin Hoffman in the Academy Award for Best Picture-winning drama \"Rain Man\" (1988), and also appeared in the Golden Raspberry Award for Worst Picture-winning romantic drama \"Cocktail\" (1988).\n\n In doing so Cruise became the first and only person as of 2014 to star in a Best Picture Oscar winner and a Worst Picture Razzie winner in the same year.",
+    "The entries cover films across action, comedy, romance, horror, and drama. Bruce Willis stars in titles including *Last Man Standing* (a credited *Yojimbo* remake), *Unbreakable*, *Signs*, and *Die Hard with a Vengeance*. Shyamalan’s *Signs* explores faith and alien encounters; *Unbreakable* launches a superhero trilogy. Other highlights include *The Whole Nine Yards*, *Striking Distance*, *Mercury Rising",
+    "The collection spans films and TV from 1947–2010: Bruce Willis’s dramas, action comedies and thrillers include *In Country* (Golden Globe-nominated), *Last Man Standing* (a *Yojimbo* remake), *The Whole Nine Yards* and *Cop Out*. Other highlights: *The Bears and I*; teen comedies *Can’t Buy Me Love* and *The Night Before*; *The Country Girl* (Oscar-winning screenplay",
+    "Mercury Rising\nMercury Rising is a 1998 American political action thriller film starring Bruce Willis and Alec Baldwin.\n\n Directed by Harold Becker, the movie is based on Ryne Douglas Pearson's 1996 novel originally published as \"Simple Simon\".\n\n Willis plays Art Jeffries, an undercover FBI agent who protects a 9-year-old boy with autism who is targeted by government assassins after he cracks a top secret government code.",
+    "McFarland, USA\nMcFarland, USA (also known as McFarland) is a 2015 American sports drama film directed by Niki Caro, produced by Mark Ciardi and Gordon Gray, written by Christopher Cleveland, Bettina Gilois and Grant Thompson with music composed by Antônio Pinto.\n\n The film was co-produced by Walt Disney Pictures and Mayhem Pictures.\n\n Based on the true story of a 1987 cross country team from a mainly Latino high school in McFarland, California, the film stars Kevin Costner as Jim White, the school's coach, who leads the team to win a state championship.\n\n The film also stars Maria Bello and Morgan Saylor.",
+    "Million Dollar Arm\nMillion Dollar Arm is a 2014 American biographical sports drama film directed by Craig Gillespie and produced by Walt Disney Pictures from a screenplay written by Thomas McCarthy.\n\n The film is based on the true story of baseball pitchers Rinku Singh and Dinesh Patel who were discovered by sports agent J. B. Bernstein after winning a reality show competition."
+   ]
+  },
+  {
+   "id": "c78c9ed919e777dd",
+   "gold": [
+    {
+     "sentence": " It was the first election for Governor of Maine, taking place after Maine separated from Massachusetts and was recognized as a state on March 15, 1820.",
+     "facts": {
+      "0.0": "The election was the first election for Governor of Maine.",
+      "0.1": "The election took place after Maine separated from Massachusetts.",
+      "0.2": "Maine was recognized as a state on March 15, 1820."
+     }
+    },
+    {
+     "sentence": " Maine's separation from Massachusetts came as a result of The Missouri Compromise.",
+     "facts": {
+      "1.0": "Maine's separation from Massachusetts came as a result of The Missouri Compromise."
+     }
+    },
+    {
+     "sentence": " This election saw the virtually unanimous election of William King, the man most chiefly responsible for the push for Maine statehood.",
+     "facts": {
+      "2.0": "The election saw the virtually unanimous election of William King.",
+      "2.1": "William King was the man most chiefly responsible for the push for Maine statehood."
+     }
+    },
+    {
+     "sentence": "William King (February 9, 1768June 17, 1852) was an American merchant, shipbuilder, army officer, and statesman from Bath, Maine.",
+     "facts": {
+      "3.0": "William King was born February 9, 1768.",
+      "3.1": "William King died June 17, 1852.",
+      "3.2": "William King was an American merchant.",
+      "3.3": "William King was an American shipbuilder.",
+      "3.4": "William King was an American army officer.",
+      "3.5": "William King was an American statesman.",
+      "3.6": "William King was from Bath, Maine."
+     }
+    }
+   ],
+   "items": [
+    "Anti-Nebraska movement\nThe Anti-Nebraska movement was a political alignment in the United States formed in opposition to the Kansas-Nebraska Act of 1854 and to its repeal of the Missouri Compromise provision forbidding slavery in U.S. territories north of latitude 36° 30' N.\n\n (At the time, the name \"Nebraska\" could loosely refer to areas west of the Missouri River.)",
+    "1st Virginia State Regiment\nThe 1st Virginia State Regiment was a regiment of Virginia Militia that fought during the American Revolutionary War.\n\n The regiment was authorized by the General Assembly of the Commonwealth of Virginia in December 1776 as a force of regular troops for the Commonwealth's defense.\n\n In 1777, Virginia had difficulty meeting its quota for the regular line of the Continental Army.\n\n As a result, in July 1777 under the command of Colonel George Gibson, the regiment began a march North to temporarily join the Continental Army in the Philadelphia Campaign.\n\n In January 1778, the Virginia General Assembly passed an act directing that the 1st Virginia State Regiment \"now in Continental service, be continued in said service instead of the Ninth Virginia Regiment, made prisoners by the enemy in the Battle of Germantown.\"\n\n The regiment camped at Valley Forge in the winter of 1777-78 and at Middlebrook in the winter of 1778-79 and participated in the Battle of Monmouth.\n\n The regiment remained in the service of the Continental Army until late 1779 when redeployed Virginia.",
+    "Henry Smith Lane\nHenry Smith Lane (February 24, 1811 – June 19, 1881) was a United States Representative, Senator, and the 13th Governor of Indiana; he was by design the shortest-serving Governor of Indiana, having made plans to resign the office should his party take control of the Indiana General Assembly and elect him to the United States Senate.\n\n He held that office for only two days, and was known for his opposition to slavery.\n\n A Whig until the party collapsed, he supported compromise with the south.\n\n He became an early leader in the Republican Party starting in 1856 serving as the president of the first party convention, delivering its keynote address, and was influential in the nomination of Abraham Lincoln.\n\n With the repeal of the Missouri Compromise, he became a full-fledged",
+    "William King (governor)\nWilliam King (February 9, 1768June 17, 1852) was an American merchant, shipbuilder, army officer, and statesman from Bath, Maine.\n\n A proponent of statehood for Maine, he became its first governor when it separated from Massachusetts in 1820.",
+    "Pottawatomie massacre\nThe Pottawatomie massacre occurred during the night of May 24 and the morning of May 25, 1856.\n\n In reaction to the sacking of Lawrence, Kansas by pro-slavery forces, John Brown and a band of abolitionist settlers—some of them members of the Pottawatomie Rifles—killed five settlers north of Pottawatomie Creek in Franklin County, Kansas.\n\n This was one of the many bloody episodes in Kansas preceding the American Civil War, which came to be known collectively as Bleeding Kansas.\n\n Bleeding Kansas was largely brought about by the Missouri Compromise and the Kansas–Nebraska Act.",
+    "John Bowman (pioneer)\nCol. John (Johannes) Bowman (17 December 1738 – May 4, 1784) was an 18th-century American pioneer, colonial militia officer and sheriff, the first appointed in Lincoln County, Kentucky.\n\n In 1781 he also presided as a justice of the peace over the first county court held in Kentucky.\n\n The first county-lieutenant and military governor of Kentucky County during the American Revolutionary War, Col. Bowman also, served in the American Revolution, many times, second in command to General George Rogers Clark, during the Illinois Campaign, which, at the time, doubled the size of the United States.",
+    "Louisa Adams\nLouisa Catherine Johnson Adams (February 12, 1775 – May 15, 1852), wife of John Quincy Adams, was First Lady of the United States from 1825 to 1829.\n\n The daughter of the American Consul in London, she was the first First Lady to be born outside the United States, or outside areas that were later to become part of the United States, such as the Thirteen Colonies – a distinction that would not be replicated until 192 years later by Melania Trump.",
+    "Compromise of 1790\nThe Compromise of 1790 was a compromise between Alexander Hamilton on the one hand and Thomas Jefferson and James Madison whereby Hamilton won the decision for the national government to take over and pay the state debts, while Jefferson and Madison obtained the national capital (District of Columbia) for the South.\n\n The compromise resolved the deadlock in Congress.\n\n Southerners were blocking the assumption of state debts by the treasury, thereby destroying the Hamiltonian program for building a fiscally strong nation state.\n\n Northerners rejected the proposal, much desired by Virginians, to locate the permanent national capital on the Virginia-Maryland border.\n\n The compromise made possible the passage of the Residence and Funding (Assumption) Acts in July and August 1790.\n\n Historian Jacob Cooke says it is, \"generally regarded as one of the most important bargains in American history, ranking just below the better known Missouri Compromise and the Compromise of 1850.\"",
+    "Maine gubernatorial election, 1820\nThe 1820 Maine gubernatorial election took place on April 3, 1820.\n\n It was the first election for Governor of Maine, taking place after Maine separated from Massachusetts and was recognized as a state on March 15, 1820.\n\n Maine's separation from Massachusetts came as a result of The Missouri Compromise.\n\n This election saw the virtually unanimous election of William King, the man most chiefly responsible for the push for Maine statehood.\n\n He had no opponents.",
+    "Missouri Compromise\nThe Missouri Compromise is the title generally attached to the legislation passed by the 16th United States Congress on May 8, 1820.\n\n The measures provided for the admission of Maine as a state along with Missouri as a slave state, thus maintaining the balance of power between North and South.\n\n As part of the compromise, slavery was prohibited North of the 36°30′ parallel, excluding Missouri.\n\n President James Monroe signed the legislation on April 6, 1820."
+   ]
+  },
+  {
+   "id": "2fbed09604f8438d",
+   "gold": [
+    {
+     "sentence": "Dorian Gray is the main character of the novel \"The Picture of Dorian Gray\" (1890) by Oscar Wilde.",
+     "facts": {
+      "0.0": "Dorian Gray is the main character of the novel The Picture of Dorian Gray.",
+      "0.1": "The Picture of Dorian Gray was published in 1890.",
+      "0.2": "The Picture of Dorian Gray was written by Oscar Wilde."
+     }
+    },
+    {
+     "sentence": "The Picture of Dorian Gray is a philosophical novel by Oscar Wilde, first published complete in the July 1890 issue of \"Lippincott's Monthly Magazine\".",
+     "facts": {
+      "1.0": "The Picture of Dorian Gray is a philosophical novel.",
+      "1.1": "The Picture of Dorian Gray was written by Oscar Wilde.",
+      "1.2": "The Picture of Dorian Gray was first published complete.",
+      "1.3": "The Picture of Dorian Gray was first published complete in the July 1890 issue of Lippincott's Monthly Magazine."
+     }
+    },
+    {
+     "sentence": " The magazine's editor feared the story was indecent, and without Wilde's knowledge, deleted roughly five hundred words before publication.",
+     "facts": {
+      "2.0": "The editor of Lippincott's Monthly Magazine feared the story was indecent.",
+      "2.1": "The editor of Lippincott's Monthly Magazine, without Wilde's knowledge, deleted roughly five hundred words before publication."
+     }
+    }
+   ],
+   "items": [
+    "A Portrait of Dorian Gray\nA Portrait of Dorian Gray (2005) is the fashion designer and photographer Karl Lagerfeld's rendition of Oscar Wilde's novel \"The Picture of Dorian Gray\" (1891) in photography.\n\n The models, Larry Scott and Eva Herzigová, star as Mr. and Mrs. Dorian Gray.",
+    "Dorian Gray (1970 film)\nDorian Gray (Italian: \"Il dio chiamato Dorian\") aka \"The Sins of Dorian Gray\" is a 1970 movie adaptation of Oscar Wilde's novel \"The Picture of Dorian Gray\" starring Helmut Berger.\n\n The Italian title translates as \"A God Called Dorian\".",
+    "Dorian Gray (disambiguation)\nDorian Gray is the main character of the novel \"The Picture of Dorian Gray\" (1890) by Oscar Wilde.",
+    "El retrato de Dorian Gray\nThe Picture of Dorian Gray (\"El retrato de Dorian Gray\"), is a Mexican telenovela, based on \"The Picture of Dorian Gray\", the novel written by Oscar Wilde.\n\n The main character is the handsome young man called Dorian Gray (played by late Enrique Álvarez Félix).\n\n This telenovela was made in 1969.",
+    "The Picture of Dorian Gray (1945 film)\nThe Picture of Dorian Gray is a 1945 American horror-drama film based on Oscar Wilde's 1890 novel of the same name.\n\n Released in March 1945 by Metro-Goldwyn-Mayer, the film is directed by Albert Lewin and stars George Sanders as Lord Henry Wotton and Hurd Hatfield as Dorian Gray.\n\n Shot primarily in black-and-white, the film features four inserts in 3-strip Technicolor of Dorian's portrait as a special effect (the first two of his portrait's original state, and the second two after a major period of degeneration).",
+    "The Picture of Dorian Gray (1917 film)\nThe Picture of Dorian Gray (German: Das Bildnis des Dorian Gray) is a 1917 German silent fantasy film directed by Richard Oswald and starring Bernd Aldor, Ernst Pittschau, and Ernst Ludwig.\n\n The film is based on the novel \"The Picture of Dorian Gray\" by Oscar Wilde.",
+    "Gate of Ivory, Gate of Horn\nGate of Ivory, Gate of Horn is a fantasy novel by British author Robert Holdstock.\n\n It was originally published in the United States in 1997 (and in the United Kingdom under the title \"Gate of Ivory\" in 1998.)\n\n The story is a prequel to \"Mythago Wood\" and explores Christian Huxley's quest into Ryhope Wood and the apparent suicide of his mother, Jennifer Huxley.\n\n The title of the book refers to the gates of horn and ivory described in both Homer's \"Odyssey\" and Virgil's \"Aeneid\".",
+    "The Picture of Dorian Gray\nThe Picture of Dorian Gray is a philosophical novel by Oscar Wilde, first published complete in the July 1890 issue of \"Lippincott's Monthly Magazine\".\n\n The magazine's editor feared the story was indecent, and without Wilde's knowledge, deleted roughly five hundred words before publication.\n\n Despite that censorship, \"The Picture of Dorian Gray\" offended the moral sensibilities of British book reviewers, some of whom said that Oscar Wilde merited prosecution for violating the laws guarding the public morality.\n\n In response, Wilde aggressively defended his novel and art in correspondence with the British press, although he personally made excisions of some of the most controversial material when revising and lengthening the story for book publication the following year.",
+    "The Picture of Dorian Gray (1910 film)\nThe Picture of Dorian Gray (1910), a.k.a. Dorian Grays Portræt, is a Danish silent film based on the novel \"The Picture of Dorian Gray\" by Oscar Wilde.",
+    "Dorian Gray (character)\nDorian Gray is the main character in Oscar Wilde's novel The Picture of Dorian Gray.\n\n Dorian Gray is a handsome, susceptible, wealthy young Victorian gentleman.\n\n He falls in love with and devotes himself to Sibyl Vane.\n\n Dorian has two friends, Basil and Henry.\n\n Basil is an artist who draws a portrait of Dorian that emphasizes his youthful, noble, and natural beauty.\n\n Henry is a friend who has a cynical nature and who shares various thoughts with Dorian."
+   ]
+  },
+  {
+   "id": "3513b992bf63460d",
+   "gold": [
+    {
+     "sentence": "Giovanni \"Tinto\" Brass (born 26 March 1933) is an Italian filmmaker.",
+     "facts": {
+      "0.0": "Giovanni 'Tinto' Brass was born on 26 March 1933.",
+      "0.1": "Giovanni 'Tinto' Brass is an Italian filmmaker."
+     }
+    },
+    {
+     "sentence": "Baltasar Kormákur Samper (born 27 February 1966) is an Icelandic actor, theater and film director, and film producer.",
+     "facts": {
+      "1.0": "Baltasar Kormakur Samper was born on 27 February 1966.",
+      "1.1": "Baltasar Kormakur Samper is an Icelandic actor.",
+      "1.2": "Baltasar Kormakur Samper is an Icelandic theater director.",
+      "1.3": "Baltasar Kormakur Samper is an Icelandic film director.",
+      "1.4": "Baltasar Kormakur Samper is an Icelandic film producer."
+     }
+    }
+   ],
+   "items": [
+    "Fermo posta Tinto Brass\nFermo posta Tinto Brass is a 1995 Italian comedy film-erotic film directed by Tinto Brass and set in vignettes.",
+    "Contraband (2012 film)\nContraband is a 2012 American crime thriller film directed by Baltasar Kormákur, starring Mark Wahlberg, Kate Beckinsale, Ben Foster, Caleb Landry Jones, Giovanni Ribisi, Lukas Haas, Diego Luna and J. K. Simmons.\n\n The film is a remake of the 2008 Icelandic film \"Reykjavík-Rotterdam\" which Baltasar Kormákur starred in.\n\n It was released on January 13, 2012 in the United States by Universal Pictures.",
+    "Tinto Brass\nGiovanni \"Tinto\" Brass (born 26 March 1933) is an Italian filmmaker.\n\n In the 1960s and 1970s, he directed many critically acclaimed avant-garde films of various genres.\n\n Today, he is mainly known for his later work in the erotic genre, with films such as \"Caligula\", \"Così fan tutte\" (released under the English title \"All Ladies Do It\"), \"Paprika\", \"Monella\" (\"Frivolous Lola\") and \"Trasgredire\".",
+    "Graph query row:\nperson: Baltasar Kormákur\nnationality: Icelandic\nrelationship: None\ncountry_or_origin: None",
+    "Baltasar Kormákur\nBaltasar Kormákur Samper (born 27 February 1966) is an Icelandic actor, theater and film director, and film producer.\n\n He is best known for directing the films \"101 Reykjavík\", \"Hafið\", \"A Little Trip to Heaven\" (starring Julia Stiles and Forest Whitaker), a film based on the book \"Mýrin\" \"(Jar City)\" by Arnaldur Indriðason, \"Contraband\", \"2 Guns\" (starring Mark Wahlberg and Denzel Washington) and \"Everest\".\n\n His father is the Spanish painter Baltasar Samper and actor Baltasar Breki Samper is his son.",
+    "Trasgredire\nTrasgredire (Transgressing or Cheeky) is a 2000 sex comedy directed by Tinto Brass, with Yuliya Mayarchuk in the lead role.\n\n Certain parallelisms are drawn between \"Nerosubianco\" (1969), another Tinto Brass film set in London.",
+    "Graph query row:\nperson: Tinto Brass\nnationality: Italian\nrelationship: None\ncountry_or_origin: None",
+    "Dropout (1970 film)\nDropout is a 1970 Italian romantic drama directed by Tinto Brass.\n\n It stars real-life couple, Franco Nero and Vanessa Redgrave.\n\n They also worked with Brass a year later on the drama, \"La vacanza\".\n\n \"Dropout\" was released in France on December 18, 1970, followed by a theatrical release in Italy on February 22, 1971.",
+    "John Steiner\nHe found himself in demand in Italy and moved there, appearing in a great number of Italian exploitation and B-films including police actioners (\"Violent Rome\"), westerns (\"Mannaja\"), war films (\"The Last Hunter\"), nazisploitation (\"Deported Women of the SS Special Section\"), sci-fi adventure films (\"Yor, the Hunter from the Future\"), and horror films, such as Mario Bava's \"Shock\", Dario Argento's \"Tenebrae\", and Ruggero Deodato's \"Body Count\".\n\n He also became a favourite of famed Italian filmmaker Tinto Brass, featuring in \"Salon Kitty\", the infamous \"Caligula\", \"Action\", and \"Paprika\".",
+    "Baltasar Breki Samper\nBaltasar Breki Samper (born 22 July 1989), sometimes referred to as Baltasar Breki Baltasarsson, is an Icelandic actor.\n\n He is the son of Icelandic director Baltasar Kormákur.\n\n Before graduating from the Icelandic Academy of the Arts in 2015 Samper helped his father on several films as second assistant director.\n\n He is known for his role as Hjörtur in the Icelandic TV series \"Trapped\"."
+   ]
+  }
+ ]
+}

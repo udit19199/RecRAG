@@ -1,0 +1,57 @@
+[
+{"id": "d294de7ff638f4b3", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "the EU has “indications” that X is being used to disseminate illegal content and disinformation in the EU” following Saturday’s attacks"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "the EU has “indications” that X is being used to disseminate illegal content and disinformation in the EU” following Saturday’s attacks"}]}
+]},
+{"id": "7ac98258e5529547", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "That allows sportsbooks to earn the profit built into the odds and lines without worrying about which side wins."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "That allows sportsbooks to earn the profit built into the odds and lines without worrying about which side wins."}]}
+]},
+{"id": "df6265111e4f106e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "president of baseball operations Jerry Dipoto decided to move one for a bat"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "They’d all have significant value if president of baseball operations Jerry Dipoto decided to move one for a bat."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts."}]}
+]},
+{"id": "5eed13ce97886593", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "While these models are still quite new, versions that actual humans buy have begun receiving discounts."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "While these models are still quite new, versions that actual humans buy have begun receiving discounts."}]}
+]},
+{"id": "339fed1fb5b0b468", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}, {"item": 7, "quote": "Bankman-Fried directed him to have Alameda take it on instead, because FTX’s balance sheets were visible to investors and Alameda’s weren’t."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "No other customer trading on FTX had “allow_negative” privileges — only Alameda."}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "customers deposited USD, it went to Alameda,\" he said. \"It existed in the computer code. Alameda could have negative balances and unlimited withdrawals.\""}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 8, "quote": "claiming that Alameda acted legally as an FTX customer, payment processor, and market maker"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 8, "quote": "claiming that Alameda acted legally as an FTX customer, payment processor, and market maker"}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 8, "quote": "claiming that Alameda acted legally as an FTX customer, payment processor, and market maker"}]},
+{"fact": "2.5", "status": "stated", "evidence": [{"item": 8, "quote": "market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."}]}
+]},
+{"id": "eacc8e71049f8b08", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]}
+]

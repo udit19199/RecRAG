@@ -1,0 +1,65 @@
+[
+  {"id": "123d118d4b2dccc1", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "stated", "evidence": [
+      {"item": 4, "quote": "After already raising its main interest rate to the highest level since 2001"},
+      {"item": 9, "quote": "The Fed put such pressure on the economy intentionally, hoping to starve inflation of its fuel."}
+    ]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "f50e73f89d694e41", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [
+      {"item": 3, "quote": "In the wake of the Wallabies’ World Cup flop"}
+    ]},
+    {"fact": "0.1", "status": "stated", "evidence": [
+      {"item": 3, "quote": "the Queensland Rugby Union have reaffirmed their position"}
+    ]},
+    {"fact": "0.2", "status": "stated", "evidence": [
+      {"item": 3, "quote": "they are committed to moving to a centralised high-performance model"}
+    ]},
+    {"fact": "0.3", "status": "stated", "evidence": [
+      {"item": 3, "quote": "won’t follow the NSW Waratahs by handing over the keys to Rugby Australia"}
+    ]},
+    {"fact": "0.4", "status": "stated", "evidence": [
+      {"item": 6, "quote": "By doing so, the NSW Waratahs, who were on the brink of insolvency, handed over their commercial and high-performance property."},
+      {"item": 6, "quote": "now one of the two biggest states has agreed to hand over the keys"}
+    ]},
+    {"fact": "1.0", "status": "stated", "evidence": [
+      {"item": 7, "quote": "He will also be tasked with “integrating” the programs"}
+    ]},
+    {"fact": "1.1", "status": "stated", "evidence": [
+      {"item": 7, "quote": "with RA trying to centralise all of the Super Rugby’s high-performance programs"}
+    ]}
+  ]},
+  {"id": "9c009e9f71d7e15b", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [
+      {"item": 2, "quote": "This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday"}
+    ]},
+    {"fact": "0.1", "status": "stated", "evidence": [
+      {"item": 2, "quote": "cheering on No. 87 with gusto"}
+    ]},
+    {"fact": "1.0", "status": "stated", "evidence": [
+      {"item": 1, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}
+    ]},
+    {"fact": "1.1", "status": "stated", "evidence": [
+      {"item": 1, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}
+    ]},
+    {"fact": "1.2", "status": "stated", "evidence": [
+      {"item": 1, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}
+    ]},
+    {"fact": "2.0", "status": "stated", "evidence": [
+      {"item": 3, "quote": "Taylor Swift reveals secret start to her relationship with Travis Kelce"},
+      {"item": 3, "quote": "By the time I went to that first game, we were a couple."}
+    ]},
+    {"fact": "2.1", "status": "stated", "evidence": [
+      {"item": 3, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}
+    ]},
+    {"fact": "2.2", "status": "stated", "evidence": [
+      {"item": 3, "quote": "Taylor Swift reveals secret start to her relationship with Travis Kelce"},
+      {"item": 3, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}
+    ]}
+  ]}
+]

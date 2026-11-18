@@ -1,0 +1,429 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "781f5184e9c8dbe1",
+   "gold": [
+    {
+     "sentence": "Rivermaya is a Filipino rock band.",
+     "facts": {
+      "0.0": "Rivermaya is a Filipino rock band."
+     }
+    },
+    {
+     "sentence": "Kodaline ( ) are an Irish band.",
+     "facts": {
+      "1.0": "Kodaline is an Irish band."
+     }
+    }
+   ],
+   "items": [
+    "Native Tour\nThe Native Tour (also known as the Native Summer Tour in North America or Native Fall Tour in Europe) is the third headlining concert tour by American pop-rock band, OneRepublic in support of their third studio album, \"Native\" (2013).\n\n OneRepublic were joined on the Native Summer leg of the tour by, The Script and American Authors, and on the European \"Native Fall Tour\" leg by Kongos.\n\n The tour has traveled across five continents; Asia, Europe, Oceania, North America, and Africa.\n\n The tour began on April 2, 2013, in Milan, Italy and finished on September 20, 2015, in São Paulo, Brazil.",
+    "Leah Flanagan\nLeah Flanagan is a singer-songwriter from Sydney, NSW.\n\n Leah has appeared on Australian TV shows Spicks & Specks and RockQuiz, has released 2 albums and toured extensively through Australia with her music and part of festival ensembles.\n\n Leah’s status as an Indigenous musician is one of pride and respect; she has helped make history with such recent essential albums as Archie Roach’s 25th anniversary reissue of Charcoal Lane and Buried Country 1.5, The Story of Aboriginal Country Music.\n\n Her latest album Saudades was recorded at the studio of Midnight Oil's Jim Moginie and mixed by Paul McKercher (You Am I, Augie March)",
+    "Rivermaya\nRivermaya is a Filipino rock band.\n\n Formed in 1994, it is one of several bands who spearheaded the 1990s Philippine alternative rock explosion.\n\n Rivermaya is currently composed of original members Mark Escueta and Nathan Azarcon, together with Mike Elgar and Ryan Peralta.\n\n Former original members include Rico Blanco, who had been the original songwriter of the band and vocalist Bamboo Mañalac, who later formed the band Bamboo and later went on his solo career.\n\n Rivermaya is listed as the twentieth biggest-selling artists/act in the Philippines as of present.",
+    "Kodaline\nKodaline ( ) are an Irish band.\n\n Originally known as 21 Demands, in 2012 the band changed their name to Kodaline.",
+    "Moya Brennan\nMoya Brennan, born Máire Ní Bhraonáin (] ), also known as Máire Brennan (born 4 August 1952), is an Irish folk singer, songwriter, harpist, and philanthropist.\n\n She is the older sister of Enya and Brídín Brennan.\n\n She began performing professionally in 1970 when her family formed the band Clannad, and is considered as the \"First Lady of Celtic Music\".\n\n Moya released her first solo album in 1992 called \"Máire\", a successful venture.\n\n She has been nominated for two Grammys and has won an Emmy Award.\n\n She has recorded music for several soundtracks, including \"Titanic\", \"To End All Wars\" and \"King Arthur\".",
+    "Ciaran Gribbin\nCiaran Gribbin (born 1976) is a Northern Irish singer-songwriter, guitarist and producer who hails from Castledawson, Northern Ireland.",
+    "Raindancer\nRaindancer was an electroacoustic rock band formed in Newport, Wales in the early 1990s.\n\n The band featured Grant Nicholas and Jon Lee, who later became founding members of Feeder.",
+    "Vib Gyor\nVib Gyor was a band that was formed in Leeds, England.\n\n The name was derived from the first letters of all the colours in the rainbow, in order from the shortest to longest wavelengths.",
+    "Honest (Kodaline song)\n\"Honest\" is a song by Dublin-based alternative rock quartet Kodaline.\n\n The song was released on 1 February 2015 as the lead single from the band's second studio album, \"Coming Up for Air\" (2015).\n\n \"Honest\" became the band's third top 10 single in their home country, Ireland, following \"High Hopes\" (2013) and \"Love Like This\" (2013).",
+    "Catfish and the Bottlemen\nCatfish and the Bottlemen are a British rock band, formed in Llandudno, Wales in 2007.\n\n Their debut album, \"The Balcony\", reached number 10 in the UK Albums Chart and achieved Platinum status on 30 December 2016.\n\n The band have toured in South America, Japan, UK, Europe, North America, and Australia and have featured in a number of festivals including Lollapalooza, Glastonbury, Latitude, Community festival, Reading and Leeds, T in the Park, Governors Ball and Bonnaroo.\n\n They won a Brit Award for British Breakthrough act on 24 February 2016.\n\n On 27 May 2016, they released their second album, \"The Ride\"."
+   ]
+  },
+  {
+   "id": "5ee95a7afa342dc0",
+   "gold": [
+    {
+     "sentence": " The journalist in question is Joe McGinniss; the murderer is the former Special Forces captain Dr. Jeffrey R. MacDonald, who became the subject of McGinniss' 1983 book \"Fatal Vision\".",
+     "facts": {
+      "0.0": "The journalist in question is Joe McGinniss.",
+      "0.1": "The murderer is the former Special Forces captain Dr. Jeffrey R. MacDonald.",
+      "0.2": "Dr. Jeffrey R. MacDonald became the subject of Joe McGinniss' 1983 book 'Fatal Vision'."
+     }
+    },
+    {
+     "sentence": "Jeffrey Robert MacDonald (born October 12, 1943) is an American medical doctor who was convicted in 1979 of murdering his pregnant wife and two daughters in February 1970.",
+     "facts": {
+      "1.0": "Jeffrey Robert MacDonald was born on October 12, 1943.",
+      "1.1": "Jeffrey Robert MacDonald is an American medical doctor.",
+      "1.2": "Jeffrey Robert MacDonald was convicted in 1979 of murdering his pregnant wife.",
+      "1.3": "Jeffrey Robert MacDonald was convicted in 1979 of murdering his two daughters.",
+      "1.4": "The murders took place in February 1970."
+     }
+    }
+   ],
+   "items": [
+    "Joe McGinniss\nJoseph R. McGinniss, Sr. (December 9, 1942 – March 10, 2014), known as Joe McGinniss, was an American non-fiction writer and novelist.\n\n The author of twelve books, he first came to prominence with the best-selling \"The Selling of the President 1968\" which described the marketing of then-presidential candidate Richard Nixon.\n\n He is popularly known for his trilogy of bestselling true crime books — \"Fatal Vision\", \"Blind Faith\" and \"Cruel Doubt\" — which were adapted into TV miniseries in the 1980s and 90s.\n\n His last book was \"The Rogue: Searching for the Real Sarah Palin\", an account of Sarah Palin, the former governor of Alaska who was the 2008 Republican vice-presidential nominee.",
+    "Jeffrey R. MacDonald\nJeffrey Robert MacDonald (born October 12, 1943) is an American medical doctor who was convicted in 1979 of murdering his pregnant wife and two daughters in February 1970.",
+    "The Journalist and the Murderer\nThe Journalist and the Murderer is a study by Janet Malcolm about the ethics of journalism, published by Alfred A. Knopf/Random House in 1990.\n\n It is an examination of the professional choices that shape a work of non-fiction, as well as a rumination on the morality that underpins the journalistic enterprise.\n\n The journalist in question is Joe McGinniss; the murderer is the former Special Forces captain Dr. Jeffrey R. MacDonald, who became the subject of McGinniss' 1983 book \"Fatal Vision\".",
+    "Fatal Vision controversy\nThe controversy over Fatal Vision, journalist and author Joe McGinniss's best-selling 1983 true crime book, is a decades-long dispute spanning several court cases and discussed in several other published works.",
+    "Smiley face murder theory\nThe Smiley face murder theory (variations include Smiley face murders, Smiley face killings, Smiley face gang, and others) is a theory advanced by two retired New York City detectives, Kevin Gannon and Anthony Duarte, that a number of young men found dead in bodies of water across several Midwestern American states over the last decade did not accidentally drown, as concluded by law enforcement agencies, but were victims of a serial killer or killers.\n\n The term \"smiley face\" became connected to the alleged murders when it was made public that the police had discovered graffiti depicting a smiley face near locations where they think the killer dumped the bodies in at least a dozen of the cases.\n\n The response of law enforcement investigators and other experts to Gannon and Duarte's theory has been largely skeptical.",
+    "Fatal Vision (miniseries)\nFatal Vision is a 1984 American television miniseries based on the account, in the book of the same name, of the murders in 1970 at Fort Bragg of the wife and daughters of U.S. Army officer Jeffrey R. MacDonald.",
+    "Edward Fitzgerald (barrister)\nEdward Hamilton Fitzgerald CBE QC is an English barrister who specialises in criminal law, public law, and international human rights law.\n\n His work against the death penalty has led him to represent despised criminals such as: Myra Hindley, a perpetrator in the Moors murders; Mary Bell, a child killer; Maxine Carr; Jon Venables, one of James Bulger's killers; various IRA prisoners; and Abu Hamza, the controversial Muslim cleric.\n\n Fitzgerald is currently the joint head of Doughty Street Chambers along with Geoffrey Robertson QC.\n\n Fitzgerald has been called to the Bar in a number of jurisdictions including Belize, Grenada and St Vincent, and has been granted rights of audience to appear in cases in Hong Kong, Trinidad and Tobago, St Lucia, Bahamas, and the British Virgin Islands.\n\n He is also a trustee and patron of a number of charities including The Death Penalty Project and The Longford Trust.",
+    "Richard Hauptmann\nBruno Richard Hauptmann (November 26, 1899 – April 3, 1936) was a German-born carpenter who was convicted of the abduction and murder of the 20-month-old son of aviator Charles Lindbergh and his wife Anne Morrow Lindbergh.\n\n The Lindbergh kidnapping became known as \"The Crime of the Century\".\n\n Hauptmann proclaimed his innocence to the end, but he was convicted of first degree murder and executed in 1936 in the electric chair at the New Jersey State Prison.",
+    "Convicted (1950 film)\nConvicted is a 1950 American crime film noir directed by Henry Levin starring Glenn Ford and Broderick Crawford.\n\n It was the third Columbia Pictures film adaptation of the 1929 stage play \"The Criminal Code\" by Martin Flavin, following Howard Hawk's \"The Criminal Code\" (1931) and John Brahm's \"Penitentiary\" (1938).",
+    "Fatal Vision (disambiguation)\nFatal Vision is the 1983 true crime book by Joe McGinniss which lies at the center of the \"Fatal Vision\" controversy."
+   ]
+  },
+  {
+   "id": "5881ad377b1fb30b",
+   "gold": [
+    {
+     "sentence": " He was awarded the 2012 Nobel Prize in Physics, jointly with Serge Haroche, for \"ground-breaking experimental methods that enable measuring and manipulation of individual quantum systems.\"",
+     "facts": {
+      "0.0": "The recipient was awarded the 2012 Nobel Prize in Physics.",
+      "0.1": "The recipient shared the 2012 Nobel Prize in Physics jointly with Serge Haroche.",
+      "0.2": "The 2012 Nobel Prize in Physics was awarded for ground-breaking experimental methods that enable measuring and manipulation of individual quantum systems."
+     }
+    },
+    {
+     "sentence": " Since 2001, Haroche is a Professor at the Collège de France and holds the Chair of Quantum Physics.",
+     "facts": {
+      "1.0": "Since 2001, Serge Haroche has been a Professor at the Collège de France.",
+      "1.1": "Since 2001, Serge Haroche has held the Chair of Quantum Physics."
+     }
+    }
+   ],
+   "items": [
+    "David J. Wineland\nDavid Jeffrey Wineland (born February 24, 1944) is an American Nobel-laureate physicist at the National Institute of Standards and Technology (NIST) physics laboratory.\n\n His work has included advances in optics, specifically laser cooling trapped ions and using ions for quantum computing operations.\n\n He was awarded the 2012 Nobel Prize in Physics, jointly with Serge Haroche, for \"ground-breaking experimental methods that enable measuring and manipulation of individual quantum systems.\"",
+    "List of Nobel laureates in Chemistry\nThe Nobel Prize in Chemistry (Swedish: \"Nobelpriset i kemi\" ) is awarded annually by the Royal Swedish Academy of Sciences to scientists in the various fields of chemistry.\n\n It is one of the five Nobel Prizes established by the 1895 will of Alfred Nobel, who died in 1896.\n\n These prizes are awarded for outstanding contributions in chemistry, physics, literature, peace, and physiology or medicine.\n\n As dictated by Nobel's will, the award is administered by the Nobel Foundation and awarded by a committee that consists of five members elected by the Royal Swedish Academy of Sciences.\n\n The first Nobel Prize in Chemistry was awarded in 1901 to Jacobus Henricus van 't Hoff, of the Netherlands.\n\n Each recipient receives a medal, a diploma and a monetary award prize that has varied throughout the years.\n\n In 1901, van 't Hoff received 150,782 SEK, which is equal to 7,731,004 SEK in December 2007.\n\n The award is presented in Stockholm at an annual ceremony on December 10, the anniversary of Nobel's death.",
+    "Brian Josephson\nBrian David Josephson, {'1': \", '2': \", '3': \", '4': \"} (born 4 January 1940), is a Welsh theoretical physicist and professor emeritus of physics at the University of Cambridge.\n\n Best known for his pioneering work on superconductivity and quantum tunnelling, he was awarded the Nobel Prize in Physics in 1973 for his prediction of the Josephson effect, made in 1962 when he was a 22-year-old PhD student at Cambridge University.\n\n Josephson is the only Welshman to have won a Nobel Prize in Physics.\n\n He shared the prize with physicists Leo Esaki and Ivar Giaever, who jointly received half the award for their own work on quantum tunnelling.",
+    "François Englert\nHe is the recipient of the 2013 Prince of Asturias Award in technical and scientific research, together with Peter Higgs and the CERN.",
+    "Serge Haroche\nSerge Haroche (born 11 September 1944) is a French physicist who was awarded the 2012 Nobel Prize for Physics jointly with David J. Wineland for \"ground-breaking experimental methods that enable measuring and manipulation of individual quantum systems\", a study of the particle of light, the photon.\n\n This and his other works developed laser spectroscopy.\n\n Since 2001, Haroche is a Professor at the Collège de France and holds the Chair of Quantum Physics.\n\n In 1971 he defended his doctoral thesis in physics at the University of Paris VI, his research has been conducted under the direction of Claude Cohen-Tannoudji.",
+    "Émile Verdet\nMarcel Émile Verdet (13 March 1824 – 3 June 1866) was a French physicist.\n\n He worked in magnetism and optics, editing the works of Augustin-Jean Fresnel.\n\n Verdet did much to champion the early theory of the conservation of energy in France through his editorial supervision of the \"Annales de chimie et de physique\".",
+    "François Englert\nFrançois Baron Englert (] ; born 6 November 1932) is a Belgian theoretical physicist and 2013 Nobel prize laureate (shared with Peter Higgs).\n\n He is Professor emeritus at the Université libre de Bruxelles (ULB) where he is member of the Service de Physique Théorique.\n\n He is also a Sackler Professor by Special Appointment in the School of Physics and Astronomy at Tel Aviv University and a member of the Institute for Quantum Studies at Chapman University in California.\n\n He was awarded the 2010 J. J. Sakurai Prize for Theoretical Particle Physics (with Gerry Guralnik, C. R. Hagen, Tom Kibble, Peter Higgs, and Robert Brout), the Wolf Prize in Physics in 2004 (with Brout and Higgs) and the High Energy and Particle Prize of the European Physical Society (with Brout and Higgs) in 1997 for the mechanism which unifies short and long range interactions by generating massive gauge vector bosons.\n\n He has made contributions in statistical physics, quantum field theory, cosmology, string theory and supergravity.",
+    "List of Nobel laureates in Physiology or Medicine\nEach recipient receives a medal, a diploma and a monetary award that has varied throughout the years.\n\n In 1901, von Behring received 150,782 SEK, which is equal to 7,731,004 SEK in December 2008.\n\n In 2013, the prize was awarded to James E. Rothman, Randy W. Schekman and Thomas C. Südhof; they were recognised \"after discovering how cells precisely transport material\".\n\n The award is presented in Stockholm at an annual ceremony on December 10, the anniversary of Nobel's death.",
+    "Duncan Haldane\nFrederick Duncan Michael Haldane {'1': \", '2': \", '3': \", '4': \"} (born 14 September 1951), known as F. Duncan Haldane, is a British born physicist who is Eugene Higgins Professor of Physics at the physics department of Princeton University, and a Distinguished Visiting Research Chair at Perimeter Institute for Theoretical Physics.\n\n He won the 2016 Nobel Prize in Physics with David J. Thouless and John Michael Kosterlitz.",
+    "Nobel Prize in Physics\nThe Nobel Prize in Physics (Swedish: \"Nobelpriset i fysik\" ) is a yearly award given by the Royal Swedish Academy of Sciences for those who conferred the most outstanding contributions for mankind in the field of physics.\n\n It is one of the five Nobel Prizes established by the will of Alfred Nobel in 1895 and awarded since 1901; the others being the Nobel Prize in Chemistry, Nobel Prize in Literature, Nobel Peace Prize, and Nobel Prize in Physiology or Medicine."
+   ]
+  },
+  {
+   "id": "1855057affa8c3fb",
+   "gold": [
+    {
+     "sentence": "Emmitt H. Ford (December 13, 1943 – November 10, 2014) was an American politician from Tennessee.",
+     "facts": {
+      "0.0": "Emmitt H. Ford was born on December 13, 1943.",
+      "0.1": "Emmitt H. Ford died on November 10, 2014.",
+      "0.2": "Emmitt H. Ford was an American politician.",
+      "0.3": "Emmitt H. Ford was from Tennessee."
+     }
+    },
+    {
+     "sentence": " He was also an uncle of former United States Congressman Harold Ford Jr.",
+     "facts": {
+      "1.0": "Emmitt H. Ford was an uncle of Harold Ford Jr.",
+      "1.1": "Harold Ford Jr. is a former United States Congressman."
+     }
+    },
+    {
+     "sentence": " He is the son of former Congressman Harold Ford Sr., who held the same seat for 22 years.",
+     "facts": {
+      "2.0": "Emmitt H. Ford is the son of Harold Ford Sr.",
+      "2.1": "Harold Ford Sr. is a former Congressman.",
+      "2.2": "Harold Ford Sr. held the same seat for 22 years."
+     }
+    }
+   ],
+   "items": [
+    "Emmitt Ford\nEmmitt H. Ford (December 13, 1943 – November 10, 2014) was an American politician from Tennessee.\n\n He represented the 86th district encompassing Shelby County from 1975–1981.\n\n He was also an uncle of former United States Congressman Harold Ford Jr.",
+    "John Ford (Tennessee politician)\nJohn N. Ford (born May 3, 1942 in Memphis, Tennessee), is a former Democratic member of the Tennessee State Senate and a member of Tennessee's most prominent African-American political family.\n\n He is the older brother of former U.S. Representative Harold Ford, Sr. and the uncle of former Tennessee U.S. Representative and 2006 United States Senate candidate Harold Ford, Jr. He is a member of the Ford political family from Memphis.",
+    "Harold Ford Jr.\nHarold Eugene Ford Jr. (born May 11, 1970) is an American politician and author who served five terms in the United States House of Representatives as a member of the Democratic Party from  's 9 congressional district , centered in Memphis, from 1997 to 2007.\n\n He is the son of former Congressman Harold Ford Sr., who held the same seat for 22 years.\n\n In 2006, Ford made an unsuccessful bid for the US Senate seat vacated by retiring Bill Frist.\n\n He is a member of the Ford political family from Memphis.\n\n Ford was the last chairman of the Democratic Leadership Council (DLC).",
+    "Gerald Ford\nGerald Rudolph Ford Jr. (born Leslie Lynch King Jr.; July 14, 1913 – December 26, 2006) was an American politician who served as the 38th President of the United States from August 1974 to January 1977, following the resignation of Richard Nixon.\n\n Prior to this he served eight months as the 40th Vice President of the United States, following the resignation of Spiro Agnew.\n\n He was the first person appointed to the vice presidency under the terms of the 25th Amendment, and consequently the only person to have served as both Vice President and President of the United States without being elected to executive office.\n\n Before his appointment to the vice presidency, Ford served 25 years as U.S. Representative from Michigan's 5th congressional district, the final nine of them as the House Minority Leader.",
+    "L. R. Ford Jr.\nLester Randolph Ford Jr. (born September 23, 1927 – February 26, 2017) was an American mathematician specializing in network flow problems.\n\n He was the son of mathematician Lester R. Ford Sr.",
+    "United States Senate election in Tennessee, 2006\nThe 2006 United States Senate election in Tennessee was held on November 7, 2006.\n\n The election winner, Bob Corker, served his term between January 3, 2007 and January 3, 2013.\n\n Corker replaced Republican Bill Frist in the Senate, who retired upon the end of his second term in 2007.\n\n Corker was the Republican nominee, and the Democratic nominee was Harold Ford, Jr..\n\n The race between Ford and Corker was one of the most competitive Senate races of 2006, with Corker winning the race by less than three percent of the vote.\n\n Corker was the only non-incumbent Republican to win a U.S. Senate seat in 2006.\n\n Since 1994, the Republican Party has held both of Tennessee's Senate seats.",
+    "Doug Ford Jr.\nDouglas Bruce Ford Jr. (born November 20, 1964) is a Canadian businessman and politician in Toronto, Ontario.\n\n Ford was Toronto City Councillor for Ward 2 Etobicoke North in Toronto from 2010 to 2014 at the same time that his brother, Rob Ford (1969–2016), was mayor of Toronto.\n\n Their father, Doug Ford Sr., was a Member of Provincial Parliament from 1995 to 1999 and founded Deco Labels and Tags, a printing business operating in Canada and the United States.\n\n The business is now owned by Doug Ford Jr., who has served as company president since 2002, and his brother, Randy.",
+    "Ophelia Ford\nOphelia Ford (born July 5, 1950) was a member of the Tennessee Senate.\n\n She is the younger sister of former state senator John Ford and former Congressman Harold Ford, Sr., and the aunt of former Congressman Harold Ford, Jr. She represented Senate District 29, which covers South Memphis and North Memphis.",
+    "John Y. Brown Jr.\nJohn Young Brown Jr. (born December 28, 1933) is an American politician, entrepreneur, and businessman from the U.S. state of Kentucky.\n\n He served as the 55th governor of Kentucky from 1979 to 1983, although he may be best known for building Kentucky Fried Chicken (KFC) into a multimillion-dollar restaurant chain.",
+    "John Anderson (Maine politician)\nJohn Anderson (1792–1853) was a Maine politician.\n\n Anderson served as United States Representative from Maine from 1825-1833."
+   ]
+  },
+  {
+   "id": "9e3ba97b95bb3498",
+   "gold": [
+    {
+     "sentence": "The soundtrack for the 1968 film \"Romeo and Juliet\" was composed and conducted by Nino Rota.",
+     "facts": {
+      "0.0": "The soundtrack for the 1968 film \"Romeo and Juliet\" was composed by Nino Rota.",
+      "0.1": "The soundtrack for the 1968 film \"Romeo and Juliet\" was conducted by Nino Rota."
+     }
+    },
+    {
+     "sentence": "Romeo and Juliet is a 1968 British-Italian romance film based on the tragic play of the same name (1591–1595) by William Shakespeare.",
+     "facts": {
+      "1.0": "Romeo and Juliet is a 1968 British-Italian romance film.",
+      "1.1": "Romeo and Juliet is based on the tragic play of the same name.",
+      "1.2": "The play Romeo and Juliet was written between 1591 and 1595.",
+      "1.3": "The play Romeo and Juliet was written by William Shakespeare."
+     }
+    }
+   ],
+   "items": [
+    "8½\n8½ (Italian title: Otto e mezzo ] ) is a 1963 semi-autobiographical comedy-drama film directed by Federico Fellini.\n\n Co-scripted by Fellini, Tullio Pinelli, Ennio Flaiano, and Brunello Rondi, it stars Marcello Mastroianni as Guido Anselmi, a famous Italian film director.\n\n Shot in black-and-white by cinematographer Gianni di Venanzo, the film features a soundtrack by Nino Rota with costume and set designs by Piero Gherardi.",
+    "West Side Story (film)\nWest Side Story is a 1961 American musical romantic drama film directed by Robert Wise and Jerome Robbins.\n\n The film is an adaptation of the 1957 Broadway musical of the same name, which in turn was inspired by William Shakespeare's play \"Romeo and Juliet\".\n\n It stars Natalie Wood, Richard Beymer, Russ Tamblyn, Rita Moreno, and George Chakiris, and was photographed by Daniel L. Fapp, A.S.C., in Super Panavision 70.\n\n Released on October 18, 1961 through United Artists, the film received high praise from critics and viewers, and became the second highest grossing film of the year in the United States.\n\n The film was nominated for 11 Academy Awards and won 10, including Best Picture (as well as a special award for Robbins), becoming the record holder for the most wins for a movie musical.",
+    "The Ruffian on the Stair\nThe Ruffian On the Stair is a play by British playwright Joe Orton which was first broadcast on BBC Radio in August 1964.\n\n It is an unsympathetic yet comedic one-act portrayal of working class England, as played out by a couple and a mysterious young man who toys with their lives.\n\n It was based on \"The Boy Hairdresser\", a novel by Orton and his lover Kenneth Halliwell.\n\n The title and play are based on a few lines from poet and dramatist William Ernest Henley: \"Madam Life's a piece in bloom, / Death goes dogging everywhere: / She's the tenant of the room, / He's the ruffian on the stair.\"\n\n \"Ruffian\" is not as renowned as other works such as \"Loot\" and \"What the Butler Saw\", but it is still staged on occasion.",
+    "Romeo and Juliet (1968 film soundtrack)\nThe soundtrack for the 1968 film \"Romeo and Juliet\" was composed and conducted by Nino Rota.\n\n It was originally released as a vinyl record, containing nine entries, most notably the song \"What Is a Youth\", composed by Nino Rota, written by Eugene Walter and performed by Glen Weston.\n\n The music score won a Silver Ribbon award of the Italian National Syndicate of Film Journalists in 1968 and was nominated for two other awards (BAFTA Award for Best Film Music in 1968 and Golden Globe Award for Best Original Score in 1969).",
+    "Il trittico\nIl trittico (\"The Triptych\") is the title of a collection of three one-act operas, \"Il tabarro\", \"Suor Angelica\", and \"Gianni Schicchi\", by Giacomo Puccini.\n\n The work received its world premiere at the Metropolitan Opera on 14 December 1918.",
+    "The Godfather (soundtrack)\nThe Godfather is the soundtrack from the film of the same name, released in 1972 by Paramount Records, and in 1991 on compact disc by MCA.\n\n Unless noted, the cues were composed by Nino Rota and conducted by Carlo Savina (who was credited on the LP, but not the CD).\n\n The song \"I Have but One Heart\" is sung by Al Martino, who performed it in the film as character Johnny Fontane.",
+    "Il cappello di paglia di Firenze\nIl cappello di paglia di Firenze (literally translated as \"The Florentine Straw Hat\" but usually titled in English language productions as \"The Italian Straw Hat\") is an opera by Nino Rota to an Italian-language libretto by the composer and Ernesta Rota, based on the play \"Le chapeau de paille d'Italie\" by Eugène Labiche and Marc Michel.",
+    "The Godfather Part II (soundtrack)\nThe Godfather Part II is the soundtrack from the movie of the same name, released in 1974 by ABC, and 1991 on compact disc by MCA.\n\n The original score was composed by Nino Rota and conducted by Carmine Coppola, who also provided source music for the film.\n\n Rota expands upon two of the three main themes from the first film: \"The Godfather Waltz\" and \"Michael's Theme\", while \"The Love Theme\" from the first film makes a brief appearance during a flashback sequence (\"Remember Vito Andolini\").\n\n There are several new themes, including one for Kay (Diane Keaton), and two for young Vito (Robert De Niro): \"The Immigrant Theme\" and \"The Tarantella\", introduced in \"A New Carpet\".",
+    "Romeo and Juliet (1968 film)\nRomeo and Juliet is a 1968 British-Italian romance film based on the tragic play of the same name (1591–1595) by William Shakespeare.",
+    "Amarcord Nino Rota\nAmarcord Nino Rota is an album by various artists, recorded as a tribute to composer Nino Rota."
+   ]
+  },
+  {
+   "id": "d85d0f77b37a55d1",
+   "gold": [
+    {
+     "sentence": "Kolejka ( ; Polish for \"queue\" or \"line (of people)\") is a board game designed by Karol Madaj and launched in February 2011 by Poland's Institute of National Remembrance.",
+     "facts": {
+      "0.0": "Kolejka is a board game.",
+      "0.1": "Kolejka is Polish for 'queue' or 'line (of people)'.",
+      "0.2": "Karol Madaj designed Kolejka.",
+      "0.3": "Kolejka was launched in February 2011.",
+      "0.4": "Kolejka was launched by Poland's Institute of National Remembrance."
+     }
+    },
+    {
+     "sentence": "Ghettopoly is a parody of \"Monopoly\" released in 2003.",
+     "facts": {
+      "1.0": "Ghettopoly is a parody of Monopoly.",
+      "1.1": "Ghettopoly was released in 2003."
+     }
+    }
+   ],
+   "items": [
+    "OK Go (2000 EP)\nOK Go or The Brown EP (officially known as OKGoCD.001) is the first EP by American rock band OK Go.",
+    "Sarra Manning\nHer first adult novel, \"Unsticky\" was published by Headline in 2009.\n\n Her next teen novel, \"Nobody's Girl\" was published in 2010, and a second adult novel, \"You Don't Have to Say You Love Me\", was published in February 2011.\n\n Her third adult novel, titled \"Nine Uses for an Ex-Boyfriend\", was published in February 2012.",
+    "The White EP (Vib Gyor EP)\nThe \"White EP\" is a promo EP from the Leeds band Vib Gyor.\n\n It was first sold on their UK tour with American band Transfer and was released through their My Space page and official web-site on 13 November 2007.\n\n It is the follow-up to their The Secret EP.\n\n It was recorded in Rockfield studios in South Wales and produced by Ken Thomas.",
+    "The First Collage\nThe First Collage is the debut and first EP by Yang Yo-seob, released on November 26, 2012.",
+    "Kick Over the Traces\nKick Over the Traces is a compilation album by the American punk rock band Pinhead Gunpowder.\n\n The album contains tracks from Pinhead Gunpowder releases since the band formed in 1990.\n\n The album was released through Recess Records on June 16, 2009.\n\n The Japanese edition features a second disc recorded live at 924 Gilman Street on February 10, 2008, and features different cover art.",
+    "Kolejka (game)\nKolejka ( ; Polish for \"queue\" or \"line (of people)\") is a board game designed by Karol Madaj and launched in February 2011 by Poland's Institute of National Remembrance.\n\n It was designed to teach young generations about the hardships under communism (1945–1989), particularly the difficulty of acquiring consumer goods in the shortage economy.\n\n The game has been described as inspired by \"Monopoly\".",
+    "Compulsive Disclosure\nCompulsive Disclosure is the second compilation album by the American punk rock band Pinhead Gunpowder.\n\n It was released on October 21, 2003, through Lookout!\n\n Records.\n\n The album features songs from the group's eponymously titled 2000 EP, the \"Dillinger Four / Pinhead Gunpowder\" split EP, the \"8 Chords, 328 Words\" EP and also features re-recorded versions of the songs \"2nd Street\" and \"At Your Funeral\" (originally from \"Dillinger Four / Pinhead Gunpowder\").\n\n \"Compulsive Disclosure\" was re-released on CD and vinyl through Recess Records on February 12, 2010, with two unreleased tracks, \"Salting Agents\" and \"El Lasso Grappo\".",
+    "The Hunter (EP)\nThe Hunter is the first EP (and follow up to the 2010 solo album \"The Boxer\") by Kele Okereke (under the professional name Kele), lead singer and rhythm guitarist of the British rock band Bloc Party.\n\n It was released on 7 November 2011 by Wichita Recordings in the UK, set back a week from the original release date, and 3 days earlier on 4 November 2011 by Wichita Recordings and Liberator Music in Australia.\n\n The first single released from the EP was \"What Did I Do?\n\n\", which features guest vocals from Lucy Taylor.\n\n The music video was released on 13 September 2011, with the song released as a digital single in Japan 10 days later.",
+    "OK Go (2001 EP)\nOK Go or The Pink EP (officially known as OKGoCD.002) is the second EP by American rock band OK Go.",
+    "Ghettopoly\nGhettopoly is a parody of \"Monopoly\" released in 2003.\n\n Invented by David Chang, it uses \"Monopoly\"-like mechanics in the atmosphere of a caricaturized United States ghetto."
+   ]
+  },
+  {
+   "id": "30fdaadf7ae093f1",
+   "gold": [
+    {
+     "sentence": "\"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011).",
+     "facts": {
+      "0.0": "What the Water Gave Me is a song",
+      "0.1": "What the Water Gave Me is by English indie rock band Florence and the Machine",
+      "0.2": "What the Water Gave Me is from the band's second studio album Ceremonials",
+      "0.3": "The album Ceremonials is dated 2011"
+     }
+    },
+    {
+     "sentence": " The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth.",
+     "facts": {
+      "1.0": "Lead singer Florence Welch wrote the song What the Water Gave Me",
+      "1.1": "Francis Eg White wrote the song What the Water Gave Me",
+      "1.2": "Paul Epworth produced the song What the Water Gave Me"
+     }
+    },
+    {
+     "sentence": "What the Water Gave Me (\"Lo que el agua me dio\" in Spanish) is an oil painting by Frida Kahlo that was completed in 1938.",
+     "facts": {
+      "2.0": "What the Water Gave Me is an oil painting by Frida Kahlo",
+      "2.1": "The painting is titled Lo que el agua me dio in Spanish",
+      "2.2": "Frida Kahlo completed the painting in 1938"
+     }
+    }
+   ],
+   "items": [
+    "Spectrum (Say My Name)\n\"Spectrum\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011).\n\n It was written by lead singer Florence Welch and Paul Epworth with production being handled by Epworth.\n\n The band premiered the song during a concert at Brooklyn's Creators Project on 15 October 2011, prior to the release of the album.\n\n The album version of \"Spectrum\" is a downtempo orchestral pop, R&B, krautrock and disco song.\n\n The accompanying music video for the song premiered on 30 May 2012.\n\n It was directed by David LaChapelle and John Byrne.",
+    "Florence Welch\nFlorence Leontine Mary Welch (born 28 August 1986) is an English musician, singer and songwriter, best known as the vocalist of indie rock band Florence and the Machine.",
+    "Never Let Me Go (Florence and the Machine song)\n\"Never Let Me Go\" is a song by English indie rock band Florence and the Machine from their second studio album, \"Ceremonials\" (2011).\n\n The song was written by Florence Welch and Paul Epworth while production was handled by Epworth.\n\n Island Records released the song as the third single from the album on 30 March 2012.\n\n The band first premiered the song during one of their concerts before the release of the album on 15 October 2011.\n\n A Clams Casino remix of the song was placed on the 12\" white vinyl single which was available for pre-order on 22 March 2012.",
+    "Wish That You Were Here\n\"Wish That You Were Here\" is a song by the English indie rock band Florence and the Machine, written by Florence Welch, Andrew Wyatt, and Emilie Haynie, and was released on Island Records on 26 August 2016.\n\n The song was made available via digital download, and is featured on the soundtrack of the film \"Miss Peregrine's Home for Peculiar Children\" which was directed by Tim Burton.\n\n Welch — a long-time fan of Burton's work — had expressed interest in collaborating with him long before the recording of \"Wish That You Were Here\" as they shared similar artistic themes.\n\n Upon release, the composition was positively received by music critics and reached number 128 on the UK Singles Chart.",
+    "Lungs (album)\nLungs is the debut studio album by English indie rock band Florence and the Machine, released on 3 July 2009 on Island Records.\n\n Frontwoman Florence Welch experimented with and honed the album's sound with bandmate Isabella Summers, while also collaborating with five record producers including James Ford, Paul Epworth, Steve Mackey.\n\n The music on \"Lungs\" established Florence and the Machine as an internationally successful rock act, and also featured the group's successful mix of string arrangements centered around Welch's vocal prowess.",
+    "What the Water Gave Me (painting)\nWhat the Water Gave Me (\"Lo que el agua me dio\" in Spanish) is an oil painting by Frida Kahlo that was completed in 1938.\n\n It is sometimes referred to as \"What I Saw in the Water\".",
+    "Shake It Out\n\"Shake It Out\" is a song by English indie rock band Florence and the Machine, released as the first official single from their second studio album, \"Ceremonials\" (2011).\n\n It was written by Florence Welch and Paul Epworth, while production was handled by Epworth.\n\n The song was digitally released in Australia on 14 September 2011, and it was available in the United States on 19 October.\n\n It had its radio debut on XFM on 14 September 2011 in the United Kingdom.\n\n Welch revealed that the song was written within an hour and according to her it talked about shaking the regrets and the things that were haunting her.",
+    "What the Water Gave Me (song)\n\"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011).\n\n The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth.\n\n It was released on 23 August 2011 as the first promotional single from \"Ceremonials\".\n\n After the band performed the song in Berkeley, California on 12 June 2011, the studio version premiered on Florence and the Machine's official website.\n\n Welch decided to name the song \"What the Water Gave Me\" after seeing a Frida Kahlo painting of the same name.\n\n During an interview, she confirmed that the song was inspired by English writer Virginia Woolf.",
+    "Florence and the Machine\nFlorence and the Machine (stylised as Florence + the Machine) are an English indie rock band that formed in London in 2007, consisting of lead singer Florence Welch, keyboardist Isabella Summers, and a collaboration of other artists.\n\n The band's music received praise across the media, especially from the BBC, which played a large part in their rise to prominence by promoting Florence and the Machine as part of \"BBC Introducing\".\n\n At the 2009 Brit Awards they received the Brit Awards \"Critics' Choice\" award.\n\n The band's music is renowned for its dramatic and eccentric production and also Welch's powerful vocal performances.",
+    "Lover to Lover\n\"Lover to Lover\" is a song by English indie rock band Florence and the Machine.\n\n The song was released on 30 November 2012, as a digital download on iTunes as the fifth and final single from their second studio album \"Ceremonials\" (2011).\n\n The song was written by Florence Welch and Francis \"Eg\" White and produced by Paul Epworth.\n\n The Ceremonials Tour version of \"Lover to Lover\" is an edited version of the original with further production by Chris Hayden.\n\n The song became the band's first single to miss the top 200 in the UK Singles Chart."
+   ]
+  },
+  {
+   "id": "0a072abbe53eca41",
+   "gold": [
+    {
+     "sentence": "The Constitution of Alberta describes the fundamental rules under which the Canadian province of Alberta is governed.",
+     "facts": {
+      "0.0": "The Constitution of Alberta describes the fundamental rules under which the Canadian province of Alberta is governed.",
+      "0.1": "Alberta is a Canadian province.",
+      "0.2": "Alberta is governed under fundamental rules described in the Constitution of Alberta."
+     }
+    },
+    {
+     "sentence": " As is typical of all Canadian provinces, and Westminster systems more generally, Alberta's is an unwritten constitution.",
+     "facts": {
+      "1.0": "Alberta's constitution is an unwritten constitution.",
+      "1.1": "It is typical of all Canadian provinces for their constitutions to be unwritten.",
+      "1.2": "It is typical of Westminster systems more generally for their constitutions to be unwritten."
+     }
+    },
+    {
+     "sentence": "The Westminster system is a parliamentary system of government modelled after that which developed in the United Kingdom.",
+     "facts": {
+      "2.0": "The Westminster system is a parliamentary system of government.",
+      "2.1": "The Westminster system is modelled after the system of government that developed in the United Kingdom."
+     }
+    }
+   ],
+   "items": [
+    "Canada under British rule\nAlthough confederation in 1867 led to an enlarged Dominion with increased autonomy over domestic affairs, Canada still remained a colony within the British Empire and was thus subordinate to the British Parliament until the enactment of the Statute of Westminster in 1931.\n\n This statute recognized Canada as an independent peer coequal with the United Kingdom, and thus provided the Parliament of Canada with legislative sovereignty over all federal matters except the power to change the constitutional laws of Canada which remained under the purview of the Parliament of the United Kingdom.\n\n Canada's final vestige of legal dependence on the United Kingdom was terminated in 1982 with the enactment of the Canada Act, subsequently providing Canada with full legal sovereignty completely independent of the United Kingdom.",
+    "Quebec Legislature\nThe Quebec Legislature (officially Parliament of Quebec, French: \"Parlement du Québec\" ) is the legislature of the province of Quebec, Canada, since Confederation in 1867.\n\n Today, the legislature is made of two elements: the monarch of Canada, represented by the Lieutenant Governor of Quebec, and the unicameral assembly called the National Assembly of Quebec.\n\n The legislature has existed since 1867 when Quebec, then called Canada East, became one of the founding colonies of Canadian Confederation.\n\n From 1867 until 1968 the legislature was bicameral, containing a lower chamber called the Legislative Assembly of Quebec and an upper chamber called the Legislative Council of Quebec.",
+    "Charter colony\nCharter colony is one of three classes of colonial government established in the 17th century English colonies in North America, the other classes being proprietary colony and royal colony.\n\n The colonies of Rhode Island, Connecticut, and Massachusetts Bay were charter colonies.\n\n In a charter colony, Britain granted a charter to the colonial government establishing the rules under which the colony was to be governed.\n\n The charters of Rhode Island and Connecticut granted the colonists significantly more political liberty than other colonies.\n\n Rhode Island and Connecticut continued to use their colonial charters as their State constitutions after the American Revolution.",
+    "Proprietary colony\nA proprietary colony was a type of British colony mostly in North America and the Caribbean in the 17th century.\n\n In the British Empire, all land belonged to the ruler, and it was his prerogative to divide.\n\n Therefore, all colonial properties were partitioned by royal charter into one of four types: proprietary, royal, joint stock, or covenant.\n\n King Charles II used the proprietary solution to reward allies and focus his own attention on Britain itself.\n\n He offered his friends colonial charters which facilitated private investment and colonial self-government.\n\n The charters made the proprietor the effective ruler, albeit one ultimately responsible to English law and the king.\n\n Charles II gave New Netherland to his younger brother The Duke of York, who named it New York.\n\n He gave an area to William Penn who named it Pennsylvania.",
+    "Westminster system\nThe Westminster system is a parliamentary system of government modelled after that which developed in the United Kingdom.\n\n This term comes from the Palace of Westminster, the seat of the British parliament.",
+    "Canada under British rule\nCanada first came under British rule with the Treaty of Paris (1763) which ceded New France, of which Canada was a part, to the British Empire.\n\n Gradually, other territories, colonies, and provinces that were part of British North America would be added to Canada.\n\n The Royal Proclamation of 1763 enlarged the colony of Canada under the name of the Province of Quebec, which with the Constitutional Act 1791 became known as The Canadas.\n\n With the Act of Union 1840 Upper and Lower Canada were joined to become the United Province of Canada.\n\n Later, with Confederation in 1867, the British maritime colonies of New Brunswick and Nova Scotia were joined with the British colony of Canada to form the Dominion of Canada, which was subsequently divided into four provinces, Ontario, Quebec, New Brunswick, and Nova Scotia.\n\n A number of other British colonies, such as Newfoundland and British Columbia, and large territories such as Rupert's Land initially remained outside of the newly formed federation.\n\n Over time, the remaining colonies and territories within British North America came under the control of Canada until the current geographic extent of the country was reached when Newfoundland and Labrador joined Canada in 1949.",
+    "The New Canada\nThe New Canada is a Canadian political literature book written by Reform Party of Canada founder and leader Preston Manning and published by Macmillan Canada.\n\n The book explains the personal, religious, and political life of Preston Manning and explains the roots and beliefs of the Reform Party.\n\n At the time of its publishing in 1992, Reform had become a popular populist conservative party in Western Canada after the mainstream Progressive Conservative Party of Canada was collapsing in support and in 1991 decided to expand eastward into Ontario and the Maritimes.\n\n One year later the PC party collapsed in the 1993 federal election, allowing the Reform Party to make political history in Canada, deplacing the PCs as the dominant conservative party in Canada.\n\n Reform, later renamed the Canadian Alliance, merged with the PC Party in 2003, to form a united right-wing alternative to the governing Liberal Party of Canada, named the Conservative Party of Canada which has dropped many of the populist themes that the Reform Party had.",
+    "Constitution of Alberta\nThe Constitution of Alberta describes the fundamental rules under which the Canadian province of Alberta is governed.\n\n As is typical of all Canadian provinces, and Westminster systems more generally, Alberta's is an unwritten constitution.\n\n Alberta's constitution, like Britain's (on which it is modeled), includes any and all pieces of legislation, court decisions, proclamations, and conventions which together inform how the province operates.\n\n Many statutes are important to understanding the governance of the province, but nowhere are they consolidated into a single document or even a list.\n\n The office of Attorney-General at one time suggested 23 acts which might be included, but cautioned that this was not a \"definitive list\".\n\n However, since Alberta is a part of federation, its powers are clearly delineated in law, via the Constitution of Canada.",
+    "British North America Acts\nThe British North America Acts 1867–1975 are the original names of a series of Acts at the core of the constitution of Canada.\n\n They were enacted by the Parliament of the United Kingdom and the Parliament of Canada.\n\n In Canada, some of the Acts were amended or repealed by the Constitution Act, 1982.\n\n The rest were renamed in Canada as the \"Constitution Acts\".\n\n In the United Kingdom, those Acts that were passed by the British Parliament remain under their original names.\n\n The term \"British North America\" (BNA) refers to the British colonies in North America.",
+    "Politics of Canada\nThe politics of Canada function within a framework of parliamentary democracy and a federal system of parliamentary government with strong democratic traditions.\n\n Canada is a constitutional monarchy, in which the Monarch is head of state.\n\n The country has a multi-party system in which many of its legislative practices derive from the unwritten conventions of and precedents set by the United Kingdom's Westminster Parliament.\n\n However, Canada has evolved variations: party discipline in Canada is stronger than in the United Kingdom and more parliamentary votes are considered motions of confidence, which tends to diminish the role of non-Cabinet Members of Parliament, (MPs).\n\n Such members, in the government caucus, and junior or lower-profile members of opposition caucuses, are known as backbenchers. Backbenchers can, however, exert their influence by sitting in parliamentary committees, like the Public Accounts Committee or the National-Defence Committee."
+   ]
+  },
+  {
+   "id": "2efb993692a7cc79",
+   "gold": [
+    {
+     "sentence": "Prof. Dr. Ernst Willi Messerschmid (born May 21, 1945) is a German physicist and former astronaut.",
+     "facts": {
+      "0.0": "Ernst Willi Messerschmid is Prof. Dr.",
+      "0.1": "Ernst Willi Messerschmid was born on May 21, 1945.",
+      "0.2": "Ernst Willi Messerschmid is a German physicist.",
+      "0.3": "Ernst Willi Messerschmid is a former astronaut."
+     }
+    },
+    {
+     "sentence": "Philippe Perrin (Colonel, French Air Force) (born January 6, 1963) is a French test pilot and former CNES and European Space Agency astronaut.",
+     "facts": {
+      "1.0": "Philippe Perrin was born on January 6, 1963.",
+      "1.1": "Philippe Perrin is a Colonel in the French Air Force.",
+      "1.2": "Philippe Perrin is a French test pilot.",
+      "1.3": "Philippe Perrin is a former CNES astronaut.",
+      "1.4": "Philippe Perrin is a former European Space Agency astronaut."
+     }
+    }
+   ],
+   "items": [
+    "François Englert\nHe is the recipient of the 2013 Prince of Asturias Award in technical and scientific research, together with Peter Higgs and the CERN.",
+    "Hans Schlegel\nHans Wilhelm Schlegel (Überlingen, 3 August 1951) is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions.",
+    "Émile Verdet\nMarcel Émile Verdet (13 March 1824 – 3 June 1866) was a French physicist.\n\n He worked in magnetism and optics, editing the works of Augustin-Jean Fresnel.\n\n Verdet did much to champion the early theory of the conservation of energy in France through his editorial supervision of the \"Annales de chimie et de physique\".",
+    "François Englert\nFrançois Baron Englert (] ; born 6 November 1932) is a Belgian theoretical physicist and 2013 Nobel prize laureate (shared with Peter Higgs).\n\n He is Professor emeritus at the Université libre de Bruxelles (ULB) where he is member of the Service de Physique Théorique.\n\n He is also a Sackler Professor by Special Appointment in the School of Physics and Astronomy at Tel Aviv University and a member of the Institute for Quantum Studies at Chapman University in California.\n\n He was awarded the 2010 J. J. Sakurai Prize for Theoretical Particle Physics (with Gerry Guralnik, C. R. Hagen, Tom Kibble, Peter Higgs, and Robert Brout), the Wolf Prize in Physics in 2004 (with Brout and Higgs) and the High Energy and Particle Prize of the European Physical Society (with Brout and Higgs) in 1997 for the mechanism which unifies short and long range interactions by generating massive gauge vector bosons.\n\n He has made contributions in statistical physics, quantum field theory, cosmology, string theory and supergravity.",
+    "Philippe Perrin (artist)\nPhilippe Perrin, (La Tronche, 10 August 1964) is a French artist and contemporary photographer who lives and works in Paris.",
+    "Alfred von Arneth\nAlfred Ritter von Arneth (10 July 181930 July 1897) was an Austrian historian.\n\n His principal scholarly work is a ten-volume biography of the Habsburg Empress Maria Theresa, first published in installments from 1863 to 1879 and still regarded as the standard work on the subject.\n\n Born at Vienna, he was the son of Joseph Calasanza von Arneth (1791–1863), a well-known historian and archaeologist, who wrote a history of the Austrian Empire (Vienna, 1827) and several works on numismatics and brother of Doctor Franz Hektor von Arneth (1818–1907).",
+    "Philippe Perrin\nPhilippe Perrin (Colonel, French Air Force) (born January 6, 1963) is a French test pilot and former CNES and European Space Agency astronaut.",
+    "Ernst Messerschmid\nProf. Dr. Ernst Willi Messerschmid (born May 21, 1945) is a German physicist and former astronaut.",
+    "Helmuth von Moltke the Younger\nHelmuth Johann Ludwig von Moltke (] ; 23 May 1848 – 18 June 1916), also known as Moltke the Younger, was a nephew of \"Generalfeldmarschall\" (Field Marshal) Helmuth Karl Bernhard von Moltke and served as the Chief of the German General Staff from 1906 to 1914.\n\n The two are often differentiated as \"Moltke the Elder\" and \"Moltke the Younger\".",
+    "New Chronology (Fomenko)\nThe New Chronology is a pseudohistorical theory which argues that the conventional chronology of Middle Eastern and European history is fundamentally flawed, and that events attributed to the civilizations of the Roman Empire, Ancient Greece and Ancient Egypt actually occurred during the Middle Ages, more than a thousand years later.\n\n The central concepts of the New Chronology are derived from the ideas of Russian scholar Nikolai Morozov (1854–1946), although work by French scholar Jean Hardouin (1646–1729) can be viewed as an earlier predecessor.\n\n However, the New Chronology is most commonly associated with Russian mathematician Anatoly Fomenko (born 1945), although published works on the subject are actually a collaboration between Fomenko and several other mathematicians.\n\n The concept is most fully explained in \"History: Fiction or Science?\"\n\n, originally published in Russian."
+   ]
+  },
+  {
+   "id": "3b88b9949d8eb67a",
+   "gold": [
+    {
+     "sentence": "Mirrors is a 2008 supernatural horror film directed by Alexandre Aja, starring Kiefer Sutherland, Paula Patton, and Amy Smart.",
+     "facts": {
+      "0.0": "Mirrors is a 2008 supernatural horror film.",
+      "0.1": "Mirrors was directed by Alexandre Aja.",
+      "0.2": "Kiefer Sutherland starred in Mirrors.",
+      "0.3": "Paula Patton starred in Mirrors.",
+      "0.4": "Amy Smart starred in Mirrors."
+     }
+    },
+    {
+     "sentence": "Paula Maxine Patton (born December 5, 1975) is an American actress.",
+     "facts": {
+      "1.0": "Paula Maxine Patton was born on December 5, 1975.",
+      "1.1": "Paula Maxine Patton is an American actress."
+     }
+    }
+   ],
+   "items": [
+    "Mirrors (film)\nMirrors is a 2008 supernatural horror film directed by Alexandre Aja, starring Kiefer Sutherland, Paula Patton, and Amy Smart.\n\n The film was first titled \"Into the Mirror\", but the name was later changed to \"Mirrors\".\n\n Filming began on May 1, 2007, and it was released in American theaters on August 15, 2008.",
+    "Illusions &amp; Mirrors\nIllusions & Mirrors is a 2013 short film directed by Iranian-born American artist and filmmaker Shirin Neshat.\n\n The film, shot in black-and-white, stars Tarek Aylouch, Michael Markiewicz, and the Israeli-born American actress Natalie Portman.\n\n The film was commissioned by Dior, for which Portman is a spokesmodel, for the Miss Dior Expo at the Grand Palais, Paris.\n\n Shirin Neshat said that the film is a tribute to the black-and-white silent films made by such surrealist filmmakers as Man Ray, Jean Cocteau, Luis Buñuel, and Maya Deren.",
+    "Mira Nair\nMira Nair (born 15 October 1957) is an Indian American filmmaker based in New York City.\n\n Her production company, Mirabai Films, specializes in films for international audiences on Indian society, whether in the economic, social or cultural spheres.\n\n Among her best known films are \"Mississippi Masala\", \"The Namesake\", the Golden Lion-winning \"Monsoon Wedding\" and \"Salaam Bombay!\n\n\", which was nominated for the Academy Award for Best Foreign Language Film.",
+    "These Old Broads\nThese Old Broads is a 2001 television film written by Carrie Fisher and starring her mother Debbie Reynolds, as well as Shirley MacLaine, Joan Collins, and Elizabeth Taylor in her final film role.\n\n In a 2001 BBC \"Omnibus\" documentary about Elizabeth Taylor, Shirley MacLaine says that Julie Andrews and Lauren Bacall were originally planned to be in the movie.\n\n The role of Miriam Hodges was originally offered to June Allyson.",
+    "Jack &amp; Diane (film)\nJack & Diane is a 2012 American romantic horror film written and directed by Bradley Rust Gray, and starring Riley Keough and Juno Temple.\n\n Olivia Thirlby and Ellen Page were originally cast for the lead roles in 2008 before the project was postponed.",
+    "In the Mirror of Maya Deren\nThe documentary In the Mirror of Maya Deren (\"Im Spiegel der Maya Deren\", 2002) is a film about avant garde filmmaker Maya Deren (1917-1961) by Austrian film maker Martina Kudlacek.\n\n It is based on the biography \"The Legend of Maya Deren\".",
+    "Zooey Deschanel filmography\nAmerican actress Zooey Deschanel made her film debut in the 1999 comedy feature \"Mumford\".\n\n She went on to gained public attention by co-starred in the comedy-drama \"Almost Famous\" (2000), the independent drama \"Manic\" (2001), opposite Joseph Gordon-Levitt, and the comedy-drama \"The Good Girl\" (2002).\n\n She landed her first major role as a 18-year-old virgin in the romantic drama \"All the Real Girls\" (2003), for which she was nominated for an Independent Spirit Award for Best Female Lead.\n\n Deschanel's biggest commercial success, as of 2017, came with the Christmas-fantasy film \"Elf\" (also in 2003), which grossed over $220 million worldwide.",
+    "Paula Patton\nPaula Maxine Patton (born December 5, 1975) is an American actress.\n\n Patton made her film debut in the 2005 comedy film \"Hitch\" and starred in the epic fantasy film \"Warcraft\" (2016), based on the game series of the same name.\n\n Patton has also been the female lead in \"Déjà Vu\" (2006), \"\" (2011) and \"2 Guns\" (2013), and appeared in the critically acclaimed \"Precious\" (2009).",
+    "Hitch (film)\nHitch is a 2005 American romantic comedy film directed by Andy Tennant and starring Will Smith.\n\n The film, which was written by Kevin Bisch, co-stars Eva Mendes, Kevin James, and Amber Valletta.\n\n Smith plays the main fictional character of the film, Alex \"Hitch\" Hitchens, who is a professional dating consultant who makes a living teaching men how to woo women.\n\n The film was released on February 11, 2005 by Columbia Pictures.",
+    "License to Wed\nLicense to Wed is a 2007 American romantic comedy film starring Robin Williams, Mandy Moore and John Krasinski, and directed by Ken Kwapis.\n\n The film was released in theaters on July 3, 2007."
+   ]
+  },
+  {
+   "id": "4f3cbc4150ca3d59",
+   "gold": [
+    {
+     "sentence": " He has written a column for \"Fortune\" magazine for more than twenty years, after having spent a decade at \"Esquire\".",
+     "facts": {
+      "0.0": "The person described has written a column for Fortune magazine for more than twenty years.",
+      "0.1": "The person described spent a decade at Esquire before writing for Fortune."
+     }
+    },
+    {
+     "sentence": " Founded in 1933, it flourished during the Great Depression under the guidance of founders Arnold Gingrich, David A. Smart and Henry L. Jackson.",
+     "facts": {
+      "1.0": "The described publication was founded in 1933.",
+      "1.1": "The described publication flourished during the Great Depression.",
+      "1.2": "The described publication flourished under the guidance of founders Arnold Gingrich, David A. Smart, and Henry L. Jackson."
+     }
+    }
+   ],
+   "items": [
+    "Steve Malzberg\nStephen D. Malzberg (born April 20, 1959) is an American television and radio host, syndicated columnist, and political commentator.\n\n He is the host of \"The Steve Malzberg Show\", a cable news and opinion show on Newsmax TV.\n\n He has also hosted \"The Steve Malzberg Show\" on various talk radio outlets.",
+    "Barry Ackerley headed Ackerley Group and owned the Seattle SuperSonics (1983–2001); he died after a stroke in 2011. Al Carter was an award-winning Texas/Oklahoma sportswriter. André Laguerre led Sports Illustrated (1960–74) and introduced its Swimsuit Issue. Dick “Scoop” Gordon was a longtime sports journalist. Cork fiddler John Murphy learned from his father. Galveston gang leader Johnny Jack N",
+    "Jerry Beck\nJerry Beck (born February 9, 1955 in New York City) is an American animation historian, author, blogger, and video producer.\n\n The author and/or editor of several books on classic American animation and classic characters, including \"The 50 Greatest Cartoons\" (1994), \"The Animated Movie Guide\" (2005), \"Not Just Cartoons: Nicktoons!\"\n\n (2007), \"The Flintstones: The Official Guide to the Cartoon Classic\" (2011), \"The Hanna-Barbera Treasury: Rare Art Mementos from Your Favorite Cartoon Classics\" (2007), \"The SpongeBob SquarePants Experience: A Deep Dive into the World of Bikini Bottom\" (2013), \"Pink Panther: The Ultimate Guide\" (2005), and \"Looney Tunes and Merrie Melodies: A Complete Illustrated Guide to the Warner Bros.\n\n Cartoons\" (with Will Friedwald, 1989) alongside \"The 100 Greatest Looney Tunes Cartoons\" (2010).\n\n He is also an authority on the making of modern films, with his books detailing the art of \"Mr.",
+    "Simon &amp; Schuster\nSimon & Schuster, Inc. ( ), a subsidiary of CBS Corporation, is an American publishing company founded in New York City in 1924 by Richard Simon and Max Schuster.\n\n As of 2016, Simon & Schuster publishes 2,000 titles annually under 35 different imprints.",
+    "André Laguerre\nMarc André Laguerre (February 21, 1915 – January 18, 1979) was a journalist and magazine editor, best known as the managing editor of \"Sports Illustrated\" from 1960 to 1974, during which time he oversaw the growth in the magazine from a niche publication to become the industry leader in weekly sports magazines.\n\n It was under his leadership that the annual \"Sports Illustrated Swimsuit Issue\" was first published.\n\n When he retired in 1974, he had been managing editor of the magazine for 704 issues, then a record among magazines published by Time, Inc., SI's parent company.",
+    "The American Mercury\nThe American Mercury was an American magazine published from 1924 to 1981.\n\n It was founded as the brainchild of H. L. Mencken and drama critic George Jean Nathan.\n\n The magazine featured writing by some of the most important writers in the United States through the 1920s and 1930s.\n\n After a change in ownership in the 1940s, the magazine attracted conservative writers.\n\n A second change in ownership a decade later turned the magazine into a virulently anti-Semitic publication.\n\n It was published monthly in New York City.\n\n The magazine went out of business in 1981, having spent the last 25 years of its existence in decline and controversy.",
+    "Esquire (magazine)\nEsquire is an American men's magazine, published by the Hearst Corporation in the United States.\n\n Founded in 1933, it flourished during the Great Depression under the guidance of founders Arnold Gingrich, David A. Smart and Henry L. Jackson.",
+    "This Is Bing Crosby\nThis Is Bing Crosby was a fifteen-minute five times a week daytime radio program featuring Bing Crosby acting as a disc jockey.\n\n Minute Maid quick frozen concentrated orange juice was promoted on the shows.",
+    "Dick Gordon (sports writer)\nCharles Richards Gordon, known as Dick \"Scoop\" Gordon (January 15, 1911 – December 8, 2008), was an American sports journalist whose works were a regular feature in venerable sports magazines like \"The Sporting News\", \"Sports Illustrated\", and \"Baseball Digest\".\n\n After earning his nickname \"Scoop\" in 1930 by reporting for \"The Daily Princetonian\" that golfing legend Bobby Jones would be retiring from active competition, Gordon went on to a sports reporting career which ended in 2008.",
+    "Stanley Bing\nStanley Bing is the pen name of Gil Schwartz (born May 20, 1951 in New York, NY), a business humorist and novelist.\n\n He has written a column for \"Fortune\" magazine for more than twenty years, after having spent a decade at \"Esquire\".\n\n He is the author of thirteen books including \"What Would Machiavelli Do?\"\n\n and \"The Curriculum\", a satirical textbook for a business school that also offers lessons on the Web.\n\n Schwartz is the senior executive vice president of corporate communications and Chief Communications Officer for CBS."
+   ]
+  },
+  {
+   "id": "e7a45686fbaec5d4",
+   "gold": [
+    {
+     "sentence": "Isaac Asimov ( ; born Isaak Ozimov; January 2, 1920 – April 6, 1992) was a Russian-American writer and professor of biochemistry at Boston University.",
+     "facts": {
+      "0.0": "Isaac Asimov was born Isaak Ozimov.",
+      "0.1": "Isaac Asimov was born on January 2, 1920.",
+      "0.2": "Isaac Asimov's dates run from January 2, 1920 to April 6, 1992.",
+      "0.3": "Isaac Asimov was a Russian-American writer.",
+      "0.4": "Isaac Asimov was a professor of biochemistry at Boston University."
+     }
+    },
+    {
+     "sentence": "Michael Cunningham (born November 6, 1952) is a U.S. novelist and screenwriter.",
+     "facts": {
+      "1.0": "Michael Cunningham was born on November 6, 1952.",
+      "1.1": "Michael Cunningham is a U.S. novelist.",
+      "1.2": "Michael Cunningham is a U.S. screenwriter."
+     }
+    }
+   ],
+   "items": [
+    "The entries cover magic effects; Harry Potter creatures, many drawn from folklore; Karen Joy Fowler’s Nebula-winning story “Always”; and the no-fee Writers of the Future contest. Several focus on Isaac Asimov: his prolific career and “The Last Question”; the Robot City and Robots and Aliens novel series; and his twelve-volume Magical Worlds of Fantasy anthologies, including “Witches” and “Wizards.” Other anthologies include Jewish science fiction collection “Wandering Stars”; “",
+    "Isaac Asimov's Robot City\nIsaac Asimov's Robot City is a series of novels written by various authors and loosely connected to Isaac Asimov's \"Robot\" series.\n\n It takes place between \"The Robots of Dawn\" and \"Robots and Empire\".\n\n Each volume is complete in itself, but they form a continuing series.\n\n The novels were written in response to a writing challenge issued by Asimov to write a series involving the Three Laws of Robotics, which brought about a collaboration of several authors.\n\n Asimov provided outlines for stories which filled in the gap between Asimov's own robot stories and his \"Foundation\" series, explaining the disappearance of the robots prior to the establishment of the galactic empire. \"\n\nIsaac Asimov's Robots and Aliens\" followed in this series, with the same protagonists and many other characters.\n\n The common theme of all books of both series is the interaction between the characters and autonomous cities run and populated by robots (the \"robot cities\" of the series title).\n\n Robot City was also released as a mystery game for the PC in 1995.\n\n The player takes the role of Derec.",
+    "Isaac Asimov's Robot City: Odyssey\nIsaac Asimov's Robot City: Odyssey is a young adult science fiction novel written in 1987 by Michael P. Kube-McDowell.\n\n It is part of the series Isaac Asimov's Robot City, inspired by Isaac Asimov's \"Robot\" series.\n\n The 1995 computer game Robot City is based on the plot of \"Odyssey\".",
+    "The Last Question\n\"The Last Question\" is a science fiction short story by American writer Isaac Asimov.\n\n It first appeared in the November 1956 issue of \"Science Fiction Quarterly\" and was anthologized in the collections \"Nine Tomorrows\" (1959), \"The Best of Isaac Asimov\" (1973), \"Robot Dreams\" (1986), the retrospective \"Opus 100\" (1969), and in \"Isaac Asimov: The Complete Stories, Vol.\n\n 1\" (1990).\n\n It was Asimov's favorite short story of his own authorship, and is one of a loosely connected series of stories concerning a fictional computer called Multivac.\n\n The story overlaps science fiction, theology, and philosophy.",
+    "Michael Cunningham\nMichael Cunningham (born November 6, 1952) is a U.S. novelist and screenwriter.\n\n He is best known for his 1998 novel \"The Hours\", which won the Pulitzer Prize for Fiction and the PEN/Faulkner Award in 1999.\n\n Cunningham is a senior lecturer of creative writing at Yale University.",
+    "Isaac Asimov's Robot City: Perihelion\nIsaac Asimov's Robot City: Perihelion is a book written in 1988 by William F. Wu.\n\n It is part of the series Isaac Asimov's Robot City, which was inspired by Isaac Asimov's \"Robot\" series.",
+    "Wizards (Asimov anthology)\nWizards is an anthology of themed fantasy and science fiction short stories on the subject of wizards edited by Isaac Asimov, Martin H. Greenberg and Charles G. Waugh.\n\n The first volume in their Isaac Asimov's Magical Worlds of Fantasy series, it was first published in paperback by Signet/New American Library in October 1983.\n\n It was later gathered together with \"Witches\", the second book in the series, into the omnibus hardcover collection \"Isaac Asimov's Magical Worlds of Fantasy: Witches & Wizards\" (1985).",
+    "Isaac Asimov\nIsaac Asimov ( ; born Isaak Ozimov; January 2, 1920 – April 6, 1992) was a Russian-American writer and professor of biochemistry at Boston University.\n\n He was known for his works of science fiction and popular science.\n\n Asimov was a prolific writer, and wrote or edited more than 500 books and an estimated 90,000 letters and postcards. His books have been published in 9 of the 10 major categories of the Dewey Decimal Classification.",
+    "Isaac Asimov's Robots and Aliens\nIsaac Asimov's Robots and Aliens is a series of novels written by various authors and loosely connected to Isaac Asimov's \"Robot\" series.\n\n Each volume is complete in itself, but they form a continuing series.\n\n The series follows the action of the novels of the \"Isaac Asimov's Robot City\" series, with the same protagonists Derec and Ariel, and many other characters.\n\n The plot deals with the Three Laws and encounters between robots and different varieties of alien life.",
+    "Isaac Asimov's Magical Worlds of Fantasy\nIsaac Asimov's Magical Worlds of Fantasy is a series of twelve themed paperback fantasy and science fiction anthologies edited by Isaac Asimov, Martin H. Greenberg and Charles G. Waugh, a companion set to the ten volume \"Isaac Asimov's Wonderful Worlds of Science Fiction\", produced by the same editors.\n\n It was published by Signet/New American Library from 1983 to 1991.\n\n Volumes 1 and 2 were also issued in hardcover in an omnibus collection titled \"Isaac Asimov's Magical Worlds of Fantasy: Witches & Wizards\"."
+   ]
+  }
+ ]
+}

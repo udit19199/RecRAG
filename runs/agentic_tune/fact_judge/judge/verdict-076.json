@@ -1,0 +1,38 @@
+[
+  {
+    "id": "3af529b44a905566",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]}
+    ]
+  },
+  {
+    "id": "e4479a2063903b54",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}, {"item": 10, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "4bbc11a6c0e3af82",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The feature is currently available in France, Germany, Japan, the U.K. and the U.S., with plans for further expansion."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "available in France, Germany, Japan, the U.K. and the U.S., with plans for further expansion."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."}]}
+    ]
+  }
+]

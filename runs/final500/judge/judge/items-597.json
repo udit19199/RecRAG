@@ -1,0 +1,476 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "3e0df0d55917d53f",
+   "gold": [
+    {
+     "sentence": " \"Pinus\" is the sole genus in the subfamily Pinoideae.",
+     "facts": {
+      "0.0": "Pinus is the sole genus in the subfamily Pinoideae."
+     }
+    },
+    {
+     "sentence": " The Plant List compiled by the Royal Botanic Gardens, Kew and Missouri Botanical Garden accepts 126 species names of pines as current, together with 35 unresolved species and many more synonyms.",
+     "facts": {
+      "1.0": "The Plant List was compiled by the Royal Botanic Gardens, Kew and the Missouri Botanical Garden.",
+      "1.1": "The Plant List accepts 126 species names of pines as current.",
+      "1.2": "The Plant List includes 35 unresolved species of pines.",
+      "1.3": "The Plant List includes many more synonyms."
+     }
+    },
+    {
+     "sentence": " It is sometimes considered to have only two species, \"B. monosperma\" and \"B. superba\", or is expanded to include four or five species.",
+     "facts": {
+      "2.0": "The genus is sometimes considered to have only two species, B. monosperma and B. superba.",
+      "2.1": "The genus is sometimes expanded to include four or five species."
+     }
+    }
+   ],
+   "items": [
+    "Myrsine\nMyrsine is a genus of flowering plants in the family Primulaceae.\n\n It was formerly placed in the family Myrsinaceae before this was merged into the Primulaceae.\n\n It is found nearly worldwide, primarily in tropical and subtropical areas.\n\n It contains about 200 species, including several notable radiations, such as the matipo of New Zealand and the kōlea of Hawaiʻ i (the New Zealand \"black matipo\", \"Pittosporum tenuifolium\", is not related to \"Myrsine\").\n\n In the United States, members of this genus are known as colicwood.\n\n Some species, especially \"M. africana\", are grown as ornamental shrubs.",
+    "Pterostyrax\nPterostyrax, the epaulette tree, is a small genus of four species of deciduous large shrubs or small trees in the family Styracaceae, native to eastern Asia in China and Japan.\n\n They grow 4 - tall, with alternate, simple ovate leaves 6 - long and 4 - broad.\n\n The flowers are white, produced in dense panicles 8 - long.\n\n The fruit is an oblong dry drupe, with longitudinal ribs or narrow wings (the wings are absent in the related genus \"Styrax\", whence the name \"Pterostyrax\", \"winged styrax\").",
+    "Thonningia\nThonningia is a monotypic genus of flowering plants in the family Balanophoraceae containing the single species Thonningia sanguinea.\n\n It is distributed throughout much of southern and western Africa, particularly the tropical regions.\n\n Common names for the plant include ground pineapple.\n\n A familiar plant to humans, it has an extremely long list of common names in many African languages.\n\n Many names are inspired by the resemblance of the plant's inflorescence to a pineapple or palm tree.\n\n Some of the names can be translated as pineapple of the bush (from Anyi), duiker's kolanut (from Igala), and crown of the ground (from Yoruba).",
+    "Hydrangea\nHydrangea ( ; common names hydrangea or hortensia) is a genus of 70–75 species of flowering plants native to southern and eastern Asia (China, Japan, Korea, the Himalayas, and Indonesia) and the Americas.\n\n By far the greatest species diversity is in eastern Asia, notably China, Japan, and Korea.\n\n Most are shrubs 1 to 3 meters tall, but some are small trees, and others lianas reaching up to 30 m by climbing up trees.\n\n They can be either deciduous or evergreen, though the widely cultivated temperate species are all deciduous.",
+    "Butea\nButea is a genus of flowering plants belonging to the pea family, Fabaceae.\n\n It is sometimes considered to have only two species, \"B. monosperma\" and \"B. superba\", or is expanded to include four or five species.",
+    "Pine\nA pine is any conifer in the genus Pinus, , of the family Pinaceae.\n\n \"Pinus\" is the sole genus in the subfamily Pinoideae.\n\n The Plant List compiled by the Royal Botanic Gardens, Kew and Missouri Botanical Garden accepts 126 species names of pines as current, together with 35 unresolved species and many more synonyms.",
+    "Broughtonia\nBroughtonia is a genus of orchids (family Orchidaceae) native to the Bahamas and the Greater Antilles.\n\n The genus is abbreviated Bro in trade journals.",
+    "Oak\nAn oak is a tree or shrub in the genus Quercus ( ; Latin \"oak tree\") of the beech family, Fagaceae.\n\n There are approximately 600 extant species of oaks.\n\n The common name \"oak\" also appears in the names of species in related genera, notably \"Lithocarpus\" (stone oaks), as well as in those of unrelated species such as \"Grevillea robusta\" (silky oaks) and the Casuarinaceae (she-oaks).\n\n The genus \"Quercus\" is native to the Northern Hemisphere, and includes deciduous and evergreen species extending from cool temperate to tropical latitudes in the Americas, Asia, Europe, and North Africa.\n\n North America contains the largest number of oak species, with approximately 90 occurring in the United States, while Mexico has 160 species of which 109 are endemic.\n\n The second greatest center of oak diversity is China, which contains approximately 100 species.",
+    "Yellow pine\nIn ecology and forestry, yellow pine refers to a number of pine species which tend to grow in similar plant communities and yield similar strong wood.\n\n In the Western United States, yellow pine refers to Jeffrey pine or ponderosa pine.\n\n In the Southern United States, yellow pine refers to longleaf pine, shortleaf pine, slash pine, or Loblolly pine.\n\n In the United Kingdom, yellow pine refers to Eastern white pine or Scots pine.",
+    "Lithocarpus\nLithocarpus is a genus in the beech family Fagaceae, differing from \"Quercus\" in the erect spikes of insect-pollinated male flowers and the short styles with punctate stigmas on the female flowers.\n\n The World Checklist (see link below) accepts 334 species, though some other texts suggest as few as 100 species.\n\n About 100 Asian species of the genus were formerly treated in the genus \"Pasania\".\n\n All are native to east and southeast Asia.\n\n These Asian species do not have a well-known English vernacular name, though the generic term stone oak has been proposed."
+   ]
+  },
+  {
+   "id": "4b3277bb1a2d9b18",
+   "gold": [
+    {
+     "sentence": "The University of California, Santa Barbara (commonly referred to as UC Santa Barbara or UCSB) is a public research university and one of the 10 campuses of the University of California system.",
+     "facts": {
+      "0.0": "The University of California, Santa Barbara is commonly referred to as UC Santa Barbara or UCSB",
+      "0.1": "The University of California, Santa Barbara is a public research university",
+      "0.2": "The University of California, Santa Barbara is one of the 10 campuses of the University of California system"
+     }
+    },
+    {
+     "sentence": " Tracing its roots back to 1891 as an independent teachers' college, UCSB joined the University of California system in 1944 and is the third-oldest general-education campus in the system.",
+     "facts": {
+      "1.0": "UCSB traces its roots back to 1891",
+      "1.1": "UCSB's roots as an independent teachers' college date to 1891",
+      "1.2": "UCSB joined the University of California system in 1944",
+      "1.3": "UCSB is the third-oldest general-education campus in the University of California system"
+     }
+    },
+    {
+     "sentence": " It was founded in 1991 by the renowned philanthropist Hakim Said of the Hamdard Foundation.",
+     "facts": {
+      "2.0": "UCSB was founded in 1991",
+      "2.1": "UCSB was founded by the renowned philanthropist Hakim Said",
+      "2.2": "Hakim Said is a philanthropist of the Hamdard Foundation"
+     }
+    }
+   ],
+   "items": [
+    "Santa Barbara International Marathon\nThe Santa Barbara International Marathon and Half Marathon is an annual race that takes place in Goleta, California and Santa Barbara, California.\n\n The inaugural race was on December 6, 2009.\n\n For the last five years the Santa Barbara City College has been the official host for the finish line and general operations.\n\n Rusty and June Snow are the co-directors of the race with Dan Campbell as the technical director.\n\n The Snow's moved from the East Coast and wanted to bring a marathon to Santa Barbara.\n\n After a few years of getting the race approved and organized it was finally set to happen in 2009, Rusty Snow states, “I learned to be stubborn from running marathons.”\n\n The Santa Barbara International Marathon course serves as a Boston Marathon qualifier.",
+    "University of Arizona\nThe University of Arizona (also referred to as U of A, UA, or Arizona) is a public research university in Tucson, Arizona, United States.\n\n Founded in 1885, the UA was the first university in the Arizona Territory.\n\n The university operates two medical schools (University of Arizona College of Medicine - Tucson and the University of Arizona College of Medicine - Phoenix) and is affiliated with the region's only academic medical centers (Banner - University Medical Center Tucson and Banner - University Medical Center Phoenix).\n\n The university is also home to the James E. Rogers College of Law and numerous other nationally ranked graduate and professional schools.\n\n During the 2016–2017 academic year, there was a total enrollment of 43,625 students, including 34,072 undergraduates The University of Arizona is governed by the Arizona Board of Regents.\n\n The University of Arizona is one of the elected members of the Association of American Universities (an organization of North America's premier research institutions) and is the only representative from the state of Arizona to this group.",
+    "University of Copenhagen\nThe University of Copenhagen (UCPH) (Danish: \"Københavns Universitet\" ) is the oldest university and research institution in Denmark.\n\n Founded in 1479 as a studium generale, it is the second oldest institution for higher education in Scandinavia after Uppsala University (1477).\n\n The university has 23,473 undergraduate students, 17,398 postgraduate students, 2,968 doctoral students and over 9,000 employees.\n\n The university has four campuses located in and around Copenhagen, with the headquarters located in central Copenhagen.\n\n Most courses are taught in Danish; however, many courses are also offered in English and a few in German.\n\n The university has several thousands of foreign students, about half of whom come from Nordic countries.",
+    "Santa Barbara City College\nSanta Barbara City College (SBCC) is a two-year community college that opened in 1909 and is located on a 74 acre campus in the city of Santa Barbara, California, USA.\n\n SBCC was named co-winner of the 2013 Aspen Institute Prize for Community College Excellence, earning it a #1 national ranking.\n\n The college was recognized for its quality and focus in four areas: facilitating underrepresented and minority student success, student learning outcomes, degree completion and transfer rates, and labor market success in securing good jobs after college.\n\n Santa Barbara City College was established by the Santa Barbara High School District in 1909, making it one of the oldest community colleges in California.\n\n The college was discontinued shortly after World War I, and its work largely taken over by the Santa Barbara State Normal School, which became the Santa Barbara State College, and later, the University of California, Santa Barbara.",
+    "Mission Santa Barbara\nMission Santa Barbara, also known as Santa Barbara Mission, is a Spanish mission founded by the Franciscan order near present-day Santa Barbara, California.\n\n It was founded by Padre Fermín Lasuén on December 4, 1786, the feast day of Saint Barbara, as the tenth mission for the religious conversion of the indigenous local Chumash-Barbareño tribe of Native American people.\n\n The mission is the namesake of the city of Santa Barbara as well as of Santa Barbara County.",
+    "Santa Barbara High School\nSanta Barbara Senior High School, \"Home of the Dons,\" is situated on a 40 acre campus in Santa Barbara, California and is part of the Santa Barbara Unified School District.\n\n One of the oldest high schools in California, it was established in 1875, and moved to its current site in 1924.\n\n Until the creation of two rival high schools in 1959 and 1966, it was the sole public high school serving the city of Santa Barbara.\n\n In November 2005, its 18th-century Spanish influenced design was named an official California and City historic landmark.\n\n Today, Santa Barbara High School has an enrollment of roughly 2,200 pupils and certified staff numbering 108.",
+    "University of California, Santa Barbara Library\nThe University of California, Santa Barbara Library is the university library system of the University of California, Santa Barbara in Santa Barbara, California.\n\n The Library includes four facilities: Two libraries (the Main Library and the Music Library) and two annexes (Annex I and Annex II).\n\n The library has some three million print volumes, 30,000 electronic journals, 34,450 e-books, 900,055 digitized items, five million cartographic items (including some 467,000 maps and 3.2 million satellite and aerial images), more than 3.7 million pieces of microform, 167,500 sound recordings, and 4,100 manuscripts.\n\n The Library states that it holds 3.2 mi of manuscript and archival collections.\n\n According to data collected by the American Library Association, as of July 2010 the UC Santa Barbara Library holds the 99th largest library collection in America, reporting 2,948,999 volumes.",
+    "University of California, Santa Barbara\nThe University of California, Santa Barbara (commonly referred to as UC Santa Barbara or UCSB) is a public research university and one of the 10 campuses of the University of California system.\n\n The main campus is located on a 1022 acre site near Isla Vista, California, United States, 8 mi from Santa Barbara and 100 mi northwest of Los Angeles.\n\n Tracing its roots back to 1891 as an independent teachers' college, UCSB joined the University of California system in 1944 and is the third-oldest general-education campus in the system.",
+    "Hamdard University\nHamdard University (Urdu: ) is a private research university with campuses in Karachi and Islamabad, Pakistan.\n\n It was founded in 1991 by the renowned philanthropist Hakim Said of the Hamdard Foundation.\n\n Hamdard is one of the first and the oldest private institutions of higher education in Pakistan.\n\n In Karachi, Hamdard University is the largest private research university with a campus area of over 350 acres.",
+    "Tunku Abdul Rahman University College\nTunku Abdul Rahman University College, abbreviated as TAR UC, is a non-profit, comprehensive, private university college in Malaysia.\n\n Named after the first Prime Minister of Malaysia, YTM Tunku Abdul Rahman Putra Al-Haj, the institution was founded in 1969 as Tunku Abdul Rahman College or TAR College then by the Malaysian Chinese Association (MCA).\n\n In 2013, the college was upgraded to a university college.\n\n TAR UC is one of the prestigious private university college in Malaysia, renowned for its accounting programme."
+   ]
+  },
+  {
+   "id": "dbfa55a0c38980c1",
+   "gold": [
+    {
+     "sentence": " The S70 was essentially a facelifted 850 saloon.",
+     "facts": {
+      "0.0": "The S70 was essentially a facelifted 850 saloon."
+     }
+    },
+    {
+     "sentence": "The Volvo 850 is a compact executive car that was produced by the Swedish manufacturer Volvo Cars from 1991 to 1996.",
+     "facts": {
+      "1.0": "The Volvo 850 is a compact executive car.",
+      "1.1": "The Volvo 850 was produced by the Swedish manufacturer Volvo Cars.",
+      "1.2": "The Volvo 850 was produced from 1991 to 1996."
+     }
+    },
+    {
+     "sentence": " The 850 was the first front-wheel drive vehicle from Volvo to be sold in North America and also the first all-wheel drive Volvo.",
+     "facts": {
+      "2.0": "The Volvo 850 was the first front-wheel drive vehicle from Volvo to be sold in North America.",
+      "2.1": "The Volvo 850 was the first all-wheel drive Volvo."
+     }
+    }
+   ],
+   "items": [
+    "Volvo S40\nThe Volvo S40 is a compact luxury car marketed and produced by the Swedish manufacturer Volvo Cars from 1995 to 2012 across two generations.",
+    "Volvo 300 Series\nThe Volvo 300 Series is a rear wheel drive small family car sold as both a hatchback and (later) a conventional saloon from 1976 to 1991.\n\n It was launched in the Netherlands shortly after Volvo acquired a major stake in the passenger car division of DAF in 1973.\n\n The series consisted of the Volvo 340 (previously 343/345) and the later Volvo 360.",
+    "Volvo 164\nThe Volvo 164 is a 4-door, 6-cylinder luxury sedan unveiled by Volvo at the Paris Motor Show early in October 1968 and first sold as a 1969 model.\n\n 46,008 164s were built before the car was superseded by the 264 in 1975.\n\n The 164 was Volvo's first venture into the luxury segment since the end of PV 60 production in 1950, and was the first six-cylinder Volvo since the PV800 last produced in 1958.",
+    "Volvo P2 platform\nThe Volvo P2 platform is a global full-size unibody automobile platform developed and produced by Volvo.\n\n It is designed for single wheelbases and is adaptable to front- or all wheel drive configurations.\n\n It was developed by the automaker before its 1999 acquisition by Ford Motor Company, and debuted with the 1998 Volvo S80.",
+    "Volvo C30\nThe Volvo C30 is a near-luxury compact hatchback, manufactured and marketed by Volvo Cars for model years 2006-2013, available across its single generation as a three-door hatchback.\n\n Powered by inline-four and straight-five engines, the C30 is variant of the Volvo S40/V50/C70 range, sharing the same Ford C1/Volvo P1 platform.\n\n Volvo marketed the C30 as a premium hatchback / sports coupe.",
+    "Volvo S70\nThe Volvo S70 was a compact executive car produced by Volvo Cars from 1996 to 2000.\n\n The S70 was essentially a facelifted 850 saloon.\n\n The S70 was replaced with the Volvo S60.",
+    "Volvo SI6 engine\nVolvo designed the SI6 (\"short inline 6\") straight-6 automobile engine for use in 2007 models.\n\n An evolution of the company's long-used straight-5 Volvo Modular engine, which itself is an evolution of the Volvo B6304 straight six engine, the SI6 can be mounted transversely for front wheel drive or all wheel drive applications.\n\n Despite the added cylinder and displacement, the engine remains compact, and is in fact 1 mm shorter than the previous straight-5.\n\n The engine was initially offered in two displacements — a 3.0 L turbocharged version and a 3.2 L naturally aspirated version.\n\n Both offered variable cam timing, though only the turbo version varies both the intake and exhaust valves.\n\n On top of the variable cam timing used on the intake cam of the naturally aspirated engine it also had variable valve lift by using Cam Profile Switching (CPS).",
+    "Volvo P80 platform\nThe Volvo P80 platform was a Swedish mid-size unibody automobile platform developed and produced by Volvo Cars.\n\n It was in use from 1991 to 2005.\n\n It is designed for different wheelbases in front-wheel drive configurations and was adapted to all wheel drive.\n\n It debuted with the 1991 Volvo 850 and again in autumn 1996 with the Volvo 850 AWD.\n\n Although heavily modified by TWR, the same basic chassis was used as the underpinnings for the C70.\n\n After the model year 2000 most P80 models were replaced by their P2 successors, with the exception of the C70 convertible which remained in production until 2005.\n\n A total of 1,360,522 cars based on this platform were built.",
+    "Volvo 850\nThe Volvo 850 is a compact executive car that was produced by the Swedish manufacturer Volvo Cars from 1991 to 1996.\n\n Designed by Jan Wilsgaard it was available in saloon and estate body styles.\n\n The 850 was the first front-wheel drive vehicle from Volvo to be sold in North America and also the first all-wheel drive Volvo.\n\n The range was replaced for 1997 by the Volvo S70 and Volvo V70.",
+    "Volvo S90\nThe Volvo S90 is an executive sedan manufactured and marketed by Swedish automaker Volvo Cars since 2016.\n\n Its estate variant is called the Volvo V90."
+   ]
+  },
+  {
+   "id": "fa00f11622072e39",
+   "gold": [
+    {
+     "sentence": "Mosè in Egitto (\"Moses in Egypt)\" (] ) is a three-act opera written by Gioachino Rossini to an Italian libretto by Andrea Leone Tottola, which was based on a 1760 play by Francesco Ringhieri, \"L'Osiride\".",
+     "facts": {
+      "0.0": "Mosè in Egitto (Moses in Egypt) is a three-act opera.",
+      "0.1": "Mosè in Egitto was written by Gioachino Rossini.",
+      "0.2": "Mosè in Egitto has an Italian libretto by Andrea Leone Tottola.",
+      "0.3": "The libretto of Mosè in Egitto was based on a 1760 play by Francesco Ringhieri.",
+      "0.4": "The 1760 play by Francesco Ringhieri is titled L'Osiride."
+     }
+    },
+    {
+     "sentence": "Lucrezia Borgia is a melodramatic opera in a prologue and two acts by Gaetano Donizetti.",
+     "facts": {
+      "1.0": "Lucrezia Borgia is a melodramatic opera.",
+      "1.1": "Lucrezia Borgia is in a prologue and two acts.",
+      "1.2": "Lucrezia Borgia is by Gaetano Donizetti."
+     }
+    }
+   ],
+   "items": [
+    "Pagliacci\nPagliacci (] ; literal translation, \"Clowns\") is an Italian opera in a prologue and two acts, with music and libretto by Ruggero Leoncavallo.\n\n It is the only Leoncavallo opera that is still widely performed.\n\n Opera companies have frequently staged \"Pagliacci\" with \"Cavalleria rusticana\" by Mascagni, a double bill known colloquially as 'Cav and Pag'.",
+    "Romolo ed Ersilia (Hasse)\nRomolo ed Ersilia is an opera in three acts composed by Johann Adolph Hasse to an Italian-language libretto by Pietro Metastasio.\n\n The opera was commissioned by Empress Maria Theresa to celebrate the marriage of her son Leopold to Maria Luisa of Spain.\n\n The opera was first performed on 6 August 1765, the day after their wedding, in the court theatre of the Imperial Palace in Innsbruck.\n\n The opera received its first performance in modern times in 2011 during the Innsbruck Festival of Early Music.",
+    "The entries span opera, music, theatre, literature and Renaissance history. Bernhard Bötel sang roles from Mozart to Verdi; operas range from Gluck and Hasse to Rossini and later composers. Commedia dell’arte’s masked stock characters, improvisation and lazzi are described. Musical highlights include Tchaikovsky’s Second Piano Concerto, Debussy’s *Masques* and Bartók’s quartets. Other topics include Verdi’s Busseto theatre,",
+    "Lucrezia Borgia (1940 film)\nLucrezia Borgia is a 1940 Italian historical film directed by Hans Hinrich and starring Isa Pola, Friedrich Benfer and Carlo Ninchi.\n\n The film portrays the life of Lucrezia Borgia (1480-1519), one of a number of Italian films of the era set during the Renaissance.\n\n It was made at the Scalera Studios in Rome.",
+    "Lucrezia Borgia (1947 film)\nLucrezia Borgia (Spanish:Lucrecia Borgia) is a 1947 Argentine historical film directed by Luis Bayón Herrera and starring Olinda Bozán, Héctor Quintanilla and Gogó Andreu.\n\n The film portrays the life of Lucrezia Borgia (1480-1519).",
+    "Bernhard Bötel’s roles ranged from Mozart’s Belmonte to Verdi’s Duke of Mantua. The entries survey operas across eras: Gluck’s reform works *Orfeo ed Euridice* (1762) and *Paride ed Elena* (1770); Hasse’s *Romolo ed Ersilia* (1765); Rossini’s *Mosè in Egitto* (1818); and later works by Donizetti, Bernstein,",
+    "Lucrezia Borgia (opera)\nLucrezia Borgia is a melodramatic opera in a prologue and two acts by Gaetano Donizetti.\n\n Felice Romani wrote the Italian libretto after the play \"Lucrezia Borgia\" by Victor Hugo, in its turn after the legend of Lucrezia Borgia.\n\n \"Lucrezia Borgia\" was first performed on 26 December 1833 at La Scala, Milan.",
+    "Lucrezia Borgia (play)\nLucrezia Borgia (French: \"Lucrèce Borgia\" ) is an 1833 play by the French writer Victor Hugo.\n\n It is a historical work portraying the Renaissance-era Italian aristocrat Lucrezia Borgia.\n\n The play (along with \"Angelo, Tyrant of Padua\") is believed to have been a major influence on Oscar Wilde's \"The Duchess of Padua\" (1891).",
+    "Mosè in Egitto\nMosè in Egitto (\"Moses in Egypt)\" (] ) is a three-act opera written by Gioachino Rossini to an Italian libretto by Andrea Leone Tottola, which was based on a 1760 play by Francesco Ringhieri, \"L'Osiride\".\n\n It premièred on 5 March 1818 at the recently reconstructed Teatro San Carlo in Naples, Italy.",
+    "Orfeo ed Euridice\nOrfeo ed Euridice (French version: Orphée et Eurydice ; English: \"Orpheus and Eurydice\") is an opera composed by Christoph Willibald Gluck based on the myth of Orpheus, set to a libretto by Ranieri de' Calzabigi.\n\n It belongs to the genre of the \"azione teatrale\", meaning an opera on a mythological subject with choruses and dancing.\n\n The piece was first performed at the Burgtheater in Vienna on 5 October 1762 in the presence of Empress Maria Theresa.\n\n \"Orfeo ed Euridice\" is the first of Gluck's \"reform\" operas, in which he attempted to replace the abstruse plots and overly complex music of \"opera seria\" with a \"noble simplicity\" in both the music and the drama."
+   ]
+  },
+  {
+   "id": "9f21f45ee289889e",
+   "gold": [
+    {
+     "sentence": "Bumble and bumble Products, LLC is one of 27 brands owned by Estée Lauder Companies, Inc.",
+     "facts": {
+      "0.0": "Bumble and bumble Products, LLC is one of 27 brands.",
+      "0.1": "The 27 brands are owned by Estée Lauder Companies, Inc.",
+      "0.2": "Bumble and bumble Products, LLC is owned by Estée Lauder Companies, Inc."
+     }
+    },
+    {
+     "sentence": " The company owns a diverse portfolio of brands, distributed internationally through retail channels and digital commerce, and has its headquarters in Midtown Manhattan, New York City.",
+     "facts": {
+      "1.0": "Estée Lauder Companies, Inc. owns a diverse portfolio of brands.",
+      "1.1": "The brand portfolio is distributed internationally through retail channels.",
+      "1.2": "The brand portfolio is distributed internationally through digital commerce.",
+      "1.3": "Estée Lauder Companies, Inc. has its headquarters in Midtown Manhattan, New York City."
+     }
+    }
+   ],
+   "items": [
+    "Universal Pictures\nUniversal Pictures (also referred to as Universal Studios or simply Universal) is an American film studio owned by Comcast through the Universal Filmed Entertainment Group division of its wholly owned subsidiary NBCUniversal.\n\n The company was founded in 1912 by Carl Laemmle, Mark Dintenfass, Charles O. Baumann, Adam Kessel, Pat Powers, William Swanson, David Horsley, Robert H. Cochrane, and Jules Brulatour, and is the oldest surviving film studio in the United States, the world's fourth oldest after Gaumont, Pathé and Nordisk Film, and the oldest in terms of the overall film market .\n\n Its studios are located in Universal City, California, and its corporate offices are located in New York City.",
+    "Shaver Transportation Company\nThe Shaver Transportation Company is an inland water freight transportation company based in Portland, Oregon, United States.\n\n The company was founded in 1880 and played a major role in the development of freight transport in the Portland area and along the Columbia.",
+    "Cornerstone (agency)\nCornerstone is a New York-based creative lifestyle marketing and public relations agency with offices in New York City, Los Angeles, and London.\n\n It is helmed by co-CEOs Rob Stone and Jon Cohen.\n\n The company employs approximately 100 professionals worldwide, in addition to a network of field marketing representatives throughout the United States.",
+    "Buena Vista (brand)\nBuena Vista is a brand name which was historically often used for divisions and subsidiaries of The Walt Disney Company, whose primary studios, the Walt Disney Studios, are located on Buena Vista Street in Burbank, California.\n\n (The studio lot is also home to the Company's corporate headquarters, the Team Disney Burbank building.)\n\n The logos for the various Buena Vista brands featured the \"Buena Vista\" wordmark superimposed over the Disney Castle image to signal the affiliation between Buena Vista and Disney.\n\n The name literally means \"good view\" in Spanish.",
+    "Estée Lauder Companies\nThe Estée Lauder Companies Inc. ( ) is an American manufacturer and marketer of prestige skincare, makeup, fragrance and hair care products.\n\n The company owns a diverse portfolio of brands, distributed internationally through retail channels and digital commerce, and has its headquarters in Midtown Manhattan, New York City.",
+    "Stanley Bing\nStanley Bing is the pen name of Gil Schwartz (born May 20, 1951 in New York, NY), a business humorist and novelist.\n\n He has written a column for \"Fortune\" magazine for more than twenty years, after having spent a decade at \"Esquire\".\n\n He is the author of thirteen books including \"What Would Machiavelli Do?\"\n\n and \"The Curriculum\", a satirical textbook for a business school that also offers lessons on the Web.\n\n Schwartz is the senior executive vice president of corporate communications and Chief Communications Officer for CBS.",
+    "Walt Disney Studios Motion Pictures\nWalt Disney Studios Motion Pictures (formerly Buena Vista Pictures Distribution and Buena Vista Film Distribution Company) is an American film distributor owned by The Walt Disney Company.\n\n Established in 1953 as Buena Vista Film Distribution Company, the company handles theatrical distribution, marketing and promotion for films produced and released by the Walt Disney Studios, including Walt Disney Pictures, Walt Disney Animation Studios, Pixar Animation Studios, DisneyToon Studios, Marvel Studios, Lucasfilm, Disneynature, and Touchstone Pictures.\n\n The division took on its current name in late 2007, which before that had been Buena Vista Pictures Distribution since 1987.",
+    "Bombardier Inc.\nBombardier Inc. (] ) is a multinational aerospace and transportation company based in Montreal, Quebec, Canada.\n\n Starting as a maker of snow machines or snowmobiles, over the years it has grown into a large manufacturer of regional airliners, business jets, mass transportation equipment, and recreational equipment, and a provider of financial services.",
+    "Bumble and bumble\nBumble and bumble Products, LLC is one of 27 brands owned by Estée Lauder Companies, Inc.\n\n It was founded as a New York City hair salon in 1977 by hairdresser and entrepreneur Michael Gordon.\n\n The company operates two flagship salons in Manhattan: a midtown location on East 56th Street and on the top two floors of The House of Bumble in the Meatpacking District.",
+    "Dun &amp; Bradstreet\nDun & Bradstreet, Inc. () is a company that provides commercial data, analytics and insights for business, headquartered in Short Hills, a community in Millburn, New Jersey, US.\n\n It offers a wide range of products, and services for risk and finance, operations and supply, and sales and marketing professionals, as well as research and insights on global business issues, serving customers in government and industries such as communications, technology, strategic financial services, and retail/telecommunications/manufacturing markets.\n\n Often referred to as D&B, the company’s database contains more than 265 million business records worldwide."
+   ]
+  },
+  {
+   "id": "46d228d7f6183c71",
+   "gold": [
+    {
+     "sentence": "Ciaran Gribbin (born 1976) is a Northern Irish singer-songwriter, guitarist and producer who hails from Castledawson, Northern Ireland.",
+     "facts": {
+      "0.0": "Ciaran Gribbin was born in 1976.",
+      "0.1": "Ciaran Gribbin is a Northern Irish singer-songwriter.",
+      "0.2": "Ciaran Gribbin is a guitarist.",
+      "0.3": "Ciaran Gribbin is a producer.",
+      "0.4": "Ciaran Gribbin hails from Castledawson, Northern Ireland."
+     }
+    },
+    {
+     "sentence": "Brett Allen Scallions (born December 21, 1971) is an American musician.",
+     "facts": {
+      "1.0": "Brett Allen Scallions was born on December 21, 1971.",
+      "1.1": "Brett Allen Scallions is an American musician."
+     }
+    },
+    {
+     "sentence": " He is the lead vocalist, rhythm guitarist, and lyricist of post-grunge band Fuel.",
+     "facts": {
+      "2.0": "Brett Allen Scallions is the lead vocalist of the post-grunge band Fuel.",
+      "2.1": "Brett Allen Scallions is the rhythm guitarist of the post-grunge band Fuel.",
+      "2.2": "Brett Allen Scallions is the lyricist of the post-grunge band Fuel."
+     }
+    }
+   ],
+   "items": [
+    "The Best of Fuel\nThe Best of Fuel is a compilation album by American hard rock band Fuel.\n\n It contains songs from their first three full-length albums, \"Sunburn\", \"Something Like Human\", and \"Natural Selection\".\n\n All of the said albums featured vocalist Brett Scallions who departed from the group only a few months after the compilation's release.\n\n \"The Best of Fuel\" consists solely of the band's released singles, with the exception of \"Million Miles\" from \"Natural Selection\" (it features \"Quarter\" from the same album instead).",
+    "Soul to Preach To\n\"Soul to Preach To\" is the first single released from Fuel's album \"Puppet Strings\".\n\n It is also the first single released featuring original lead singer Brett Scallions since Fuel's 2003 studio album \"Natural Selection\".",
+    "Doug Grean\nDoug Grean is an American record producer, audio engineer, guitarist, based in Los Angeles.\n\n He has worked with artists Sheryl Crow, Ricki Lee Jones, Glen Campbell, Scott Weiland, Slash, Velvet Revolver, Stone Temple Pilots, The Crystal Method, Tim McGraw, Cyndi Lauper, Annabella Lwin (Bow Wow Wow), Corey Glover (Living Color), Camp Freddy, DJ Hurricane and John Taylor (Duran Duran).\n\n Grean was formerly the lead guitarist and touring musical director for Scott Weiland and the Wildabouts.\n\n Some of Grean's television appearances with Weiland include: VH1 Legends, Last Call with Carson Daly, The Tonight Show with Jay Leno, and the Grammy awards with Velvet Revolver as keyboardist, performing \"All Across the Universe\" with Stevie Wonder, Norah Jones, Bono, Steven Tyler, Brian Wilson, and Alison Krauss.",
+    "Brett Scallions\nBrett Allen Scallions (born December 21, 1971) is an American musician.\n\n He is the lead vocalist, rhythm guitarist, and lyricist of post-grunge band Fuel.",
+    "Yeah! (Fuel song)\n\"Yeah!\"\n\n is the first song released from Fuel's album \"Puppet Strings\".\n\n It is also the first song released featuring original lead singer Brett Scallions since Fuel's 2003 studio album \"Natural Selection\".",
+    "Circus Diablo\nCircus Diablo is an American rock band, formed in early 2006 by Billy Morrison (vocals), Billy Duffy (lead guitar) and Ricky Warwick (rhythm guitar).\n\n Fuel frontman Brett Scallions and Velvet Revolver drummer Matt Sorum subsequently joined the band on bass and drums, respectively.\n\n To date, Circus Diablo have released one studio album, entitled \"Circus Diablo\".",
+    "Grant Nicholas\nGrantley Jonathan \"Grant\" Nicholas (born 12 November 1967) is a Welsh musician, best known as the lead singer and lead guitarist of the rock band Feeder.",
+    "Puppet Strings\nPuppet Strings is the fifth studio album by American rock band Fuel.\n\n Released March 4, 2014, it is their first studio effort since 2003's \"Natural Selection\" to feature original lead singer Brett Scallions and the first Fuel album not to feature original songwriter/guitarist, Carl Bell and bassist Jeff Abercrombie.\n\n Additionally, no one who participated in the recording of Fuel's previous album \"Angels & Devils\" participated in the recording of \"Puppet Strings\".",
+    "Angels &amp; Devils (Fuel album)\nAngels & Devils is the fourth studio album by American rock band Fuel.\n\n Released on August 7, 2007, it was their first studio effort since 2003's \"Natural Selection\" and was the last Fuel album to feature original songwriter/guitarist, Carl Bell and bassist Jeff Abercrombie.\n\n No musician on this album is still with the band.\n\n It was also Fuel's only studio album to feature new vocalist Toryn Green, and their final album for Epic Records.\n\n With a new singer, the album also introduced a new Fuel logo.",
+    "Ciaran Gribbin\nCiaran Gribbin (born 1976) is a Northern Irish singer-songwriter, guitarist and producer who hails from Castledawson, Northern Ireland."
+   ]
+  },
+  {
+   "id": "69c69028135076da",
+   "gold": [
+    {
+     "sentence": "Ionolyce is a small genus of butterflies in the family Lycaenidae.",
+     "facts": {
+      "0.0": "Ionolyce is a small genus of butterflies.",
+      "0.1": "Ionolyce is in the family Lycaenidae."
+     }
+    },
+    {
+     "sentence": " \"I. helicon\" is widespread in the Indoaustralasian region (India to the Malay Archipelago.",
+     "facts": {
+      "1.0": "I. helicon is widespread in the Indoaustralasian region.",
+      "1.1": "I. helicon is widespread from India to the Malay Archipelago."
+     }
+    },
+    {
+     "sentence": "India lies on the Indian Plate, the northern portion of the Indo-Australian Plate, whose continental crust forms the Indian subcontinent.",
+     "facts": {
+      "2.0": "India lies on the Indian Plate.",
+      "2.1": "The Indian Plate is the northern portion of the Indo-Australian Plate.",
+      "2.2": "The continental crust of the Indian Plate forms the Indian subcontinent."
+     }
+    },
+    {
+     "sentence": " It is the seventh-largest country in the world, with a total area of 3287263 km2 .",
+     "facts": {
+      "3.0": "India is the seventh-largest country in the world.",
+      "3.1": "India has a total area of 3287263 km2."
+     }
+    }
+   ],
+   "items": [
+    "White-bellied musk deer\nThe White-bellied musk deer or Himalayan musk deer (\"Moschus leucogaster\") is a musk deer species occurring in the Himalayas of Nepal, Bhutan, India, Pakistan and China.\n\n It is listed as endangered by the IUCN because of overexploitation resulting in a probable serious population decline.",
+    "List of companies of India\nIndia is a country in South Asia.\n\n It is the seventh-largest country by area, the second-most populous country (with over 1.2 billion people), and the most populous democracy in the world.",
+    "Forests of Australia\nAustralia has many forests of importance due to significant features, despite being one of the driest continents.\n\n Australia has approximately 123 million hectares of native forest, which represents about 16% of Australia's land area.\n\n The majority of Australia's trees are hardwoods, typically eucalypts, rather than softwoods like pine.\n\n While softwoods dominate some native forests, their total area is judged insufficient to constitute a major forest type in Australia's National Forest Inventory.\n\n The Forests Australia website provides up-to-date information on Australia's forests.\n\n Detailed information on Australia's forests is available from Australia's State of the Forests Reports that are published every five years.",
+    "Aulacodes peribocalis\nAulacodes peribocalis is a moth in the Crambidae family.\n\n It was described by Walker in 1859.\n\n It is found in Yemen and India.",
+    "Marsh deer\nThe marsh deer (\"Blastocerus dichotomus\") is the largest deer species from South America reaching a length of 2 m and a shoulder height of 1.2 m .\n\n It is found in Argentina, Bolivia, Peru, Brazil, Uruguay and Paraguay.\n\n Formerly found in much of tropical and subtropical South America, it ranged east of the Andes, south from the Amazon rainforest, west of the Brazilian Atlantic rainforest and north of the Argentinian Pampa.\n\n Today it is largely reduced to isolated populations at marsh and lagoon zones in the Paraná, Paraguay, Araguaia and Guapore river basins.\n\n Small populations also occur in the southern Amazon, including Peru where protected in Bahuaja-Sonene National Park.\n\n It is listed as a vulnerable species by the IUCN and on CITES Appendix I.",
+    "Kallima paralekta\nKallima paralekta, the Indian leafwing or Malayan leafwing, is a species of brush-footed butterfly of the genus \"Kallima\".\n\n Despite its common names, it is not found in India or Malaysia, but is endemic to Java and Sumatra of Indonesia.\n\n Like other members of its genus, it is remarkable for its strong resemblance to a dead leaf when its wings are folded.\n\n It was one of the species encountered by the British naturalist Alfred Russel Wallace in his travels in maritime Southeast Asia.\n\n It is mentioned in his famous 19th-century work \"The Malay Archipelago\" as one of the best examples of protective camouflage achieved through natural selection.",
+    "Ionolyce\nIonolyce is a small genus of butterflies in the family Lycaenidae.\n\n \"I. helicon\" is widespread in the Indoaustralasian region (India to the Malay Archipelago.\n\n \"I selkon\"and \"I.brunnescens\" are both endemic to the Solomon Islands.",
+    "Common brown leafhopper\nThe common brown leafhopper, \"Orosius orientalis\" (Matsumura) (Hemiptera: Cicadellidae) is one of the most common species of Australian leafhoppers with a very wide host range.\n\n It is an important vector of several viruses and phytoplasmas worldwide.\n\n In Australia, phytoplasmas vectored by \"O. orientalis\" cause a range of economically important diseases including legume little leaf, tomato big bud, lucerne witches broom, potato purple top wilt, Australian lucerne and is a possible vector of Australian grapevine yellows.\n\n \"O. orientalis\" also transmits Tobacco yellow dwarf virus (TYDV genus Mastrevirus, family Geminiviridae) to beans, causing bean summer death disease and to tobacco, causing tobacco yellow dwarf disease.",
+    "India\nIndia, officially the Republic of India (\"Bhārat Gaṇarājya\"), is a country in South Asia.\n\n It is the seventh-largest country by area, the second-most populous country (with over 1.2 billion people), and the most populous democracy in the world.\n\n It is bounded by the Indian Ocean on the south, the Arabian Sea on the southwest, and the Bay of Bengal on the southeast.\n\n It shares land borders with Pakistan to the west; China, Nepal, and Bhutan to the northeast; and Myanmar (Burma) and Bangladesh to the east.\n\n In the Indian Ocean, India is in the vicinity of Sri Lanka and the Maldives.\n\n India's Andaman and Nicobar Islands share a maritime border with Thailand and Indonesia.",
+    "Consul fabius\nConsul fabius, the tiger leafwing, is the most common and well known species of the genus \"Consul\" of subfamily Charaxinae in the brush-footed butterfly family (Nymphalidae).\n\n It is found all over the Neotropics."
+   ]
+  },
+  {
+   "id": "8fa136e46b4d35c1",
+   "gold": [
+    {
+     "sentence": "Bertalan Farkas (born August 2, 1949) is the first Hungarian cosmonaut and the first Esperantist in space.",
+     "facts": {
+      "0.0": "Bertalan Farkas was born on August 2, 1949.",
+      "0.1": "Bertalan Farkas is the first Hungarian cosmonaut.",
+      "0.2": "Bertalan Farkas is the first Esperantist in space."
+     }
+    },
+    {
+     "sentence": "Hans Wilhelm Schlegel (Überlingen, 3 August 1951) is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions.",
+     "facts": {
+      "1.0": "Hans Wilhelm Schlegel was born in Überlingen on 3 August 1951.",
+      "1.1": "Hans Wilhelm Schlegel is a German physicist.",
+      "1.2": "Hans Wilhelm Schlegel is an ESA astronaut.",
+      "1.3": "Hans Wilhelm Schlegel is a veteran of two NASA Space Shuttle missions."
+     }
+    }
+   ],
+   "items": [
+    "Ulf Merbold\nDr. Ulf Dietrich Merbold (born June 20, 1941) is the first West German citizen and second German native (after Sigmund Jähn) to have flown in space.\n\n He is also the first member of the European Space Agency Astronaut Corps to participate in a spaceflight mission and the first non-US citizen to reach orbit in a US spacecraft.\n\n In 1983, he and Byron Lichtenberg became the first Payload Specialists to fly on the shuttle.",
+    "Bertalan Farkas\nBertalan Farkas (born August 2, 1949) is the first Hungarian cosmonaut and the first Esperantist in space.\n\n He is currently the president of Airlines Service and Trade.\n\n With Charles Simonyi's travel, Farkas is no longer the only Hungarian who has been to space (he is still the only astronaut, as Simonyi flew as a space tourist).",
+    "Christer Fuglesang\nArne Christer Fuglesang (] ) (born March 18, 1957 in Stockholm) is a Swedish physicist and an ESA astronaut.\n\n He was first launched aboard the STS-116 Space Shuttle mission on December 10, 2006, at 01:47 GMT, making him the first Swedish citizen in space.",
+    "Eberhard Köllner\nEberhard Köllner (born 29 September 1939 in Stassfurt, Germany) was selected for Soyuz 31 as the backup for Sigmund Jähn.",
+    "Hans Schlegel\nHans Wilhelm Schlegel (Überlingen, 3 August 1951) is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions.",
+    "Jean-François Clervoy\nJean-François André Clervoy (born 19 November 1958) is a French engineer and a CNES and ESA astronaut.\n\n He is a veteran of three NASA Space Shuttle missions.",
+    "Ernst Messerschmid\nProf. Dr. Ernst Willi Messerschmid (born May 21, 1945) is a German physicist and former astronaut.",
+    "Claude Nicollier\nClaude Nicollier (born 2 September 1944 in Vevey, Switzerland) is the first astronaut from Switzerland.\n\n He has flown on four Space Shuttle missions.\n\n His first spaceflight (STS-46) was in 1992, and his final spaceflight (STS-103) was in 1999.\n\n He took part in two servicing missions to the Hubble Space Telescope (called STS-61 and STS-103).\n\n During his final spaceflight he participated in a spacewalk, becoming the first European Space Agency astronaut to do so during a Space Shuttle mission (previous ESA astronauts conducted spacewalks aboard \"Mir\", see List of spacewalks and moonwalks 1965–1999).\n\n In 2000 he was assigned to the Astronaut Office Extravehicular Activity Branch, while maintaining a position as Lead ESA Astronaut in Houston.\n\n Nicollier retired from ESA in April 2007.",
+    "Sigmund Jähn\nSigmund Werner Paul Jähn (born 13 February 1937) is a German cosmonaut and pilot, who in 1978 became the first East German (and German native) to fly in space as part of the Soviet Union's Interkosmos programme.",
+    "Ulrich Walter\nProf. Dr. Ulrich Hans Walter (born February 9, 1954) is a German physicist/engineer and a former DFVLR astronaut."
+   ]
+  },
+  {
+   "id": "c833bcbd33dd30b0",
+   "gold": [
+    {
+     "sentence": " It is known for producing the long-running series \"Tom Goes to the Mayor\", \"Nathan For You\", \"Tim and Eric Awesome Show, Great Job!",
+     "facts": {
+      "0.0": "The entity referred to as 'It' is known for producing the long-running series 'Tom Goes to the Mayor'.",
+      "0.1": "The entity referred to as 'It' is known for producing the long-running series 'Nathan For You'.",
+      "0.2": "The entity referred to as 'It' is known for producing the long-running series 'Tim and Eric Awesome Show, Great Job!'."
+     }
+    },
+    {
+     "sentence": "\" and \"Check It Out!",
+     "facts": {
+      "1.0": "'Check It Out!' is a series title."
+     }
+    },
+    {
+     "sentence": " with Dr. Steve Brule\".",
+     "facts": {
+      "2.0": "The series title is 'Check It Out! with Dr. Steve Brule'."
+     }
+    },
+    {
+     "sentence": "Check It Out!",
+     "facts": {
+      "3.0": "Check It Out! is a title."
+     }
+    },
+    {
+     "sentence": " with Dr. Steve Brule is an American sketch comedy television series that is a spin-off of \"Tim and Eric Awesome Show, Great Job!",
+     "facts": {
+      "4.0": "Check It Out! with Dr. Steve Brule is an American sketch comedy television series.",
+      "4.1": "Check It Out! with Dr. Steve Brule is a spin-off of 'Tim and Eric Awesome Show, Great Job!'."
+     }
+    }
+   ],
+   "items": [
+    "David Jablin\nDavid Jablin is an award winning comedy producer and director and one of the pioneers of original television programming for Pay Television.\n\n In 1981 he created and produced the innovative comedy anthology series \"Likely Stories\" for HBO/Cinemax, which featured the directing debuts of Rob Reiner, Danny DeVito, Christopher Guest, and Billy Crystal.",
+    "Upright Citizens Brigade (TV series)\nUpright Citizens Brigade is an American sketch comedy television series that premiered on August 19, 1998 on Comedy Central.\n\n The show aired for three seasons with each season consisting of ten episodes.\n\n The series featured four members of Upright Citizens Brigade, an improvisational sketch comedy group.\n\n The cast included Matt Besser, Amy Poehler, Ian Roberts, and Matt Walsh.\n\n The cast would later reunite for another series of a similar format that premiered in 2016 on Seeso.",
+    "Abso Lutely Productions\nAbso Lutely Productions is a film and television production company owned by actor and producers Tim Heidecker, Eric Wareheim and producer Dave Kneebone.\n\n It is known for producing the long-running series \"Tom Goes to the Mayor\", \"Nathan For You\", \"Tim and Eric Awesome Show, Great Job!\n\n\" and \"Check It Out!\n\n with Dr. Steve Brule\".",
+    "Check It Out! with Dr. Steve Brule\nCheck It Out!\n\n with Dr. Steve Brule is an American sketch comedy television series that is a spin-off of \"Tim and Eric Awesome Show, Great Job!\n\n\" starring John C. Reilly as Dr. Steve Brule.\n\n The series premiered on Cartoon Network's late night programming block, Adult Swim, on May 16, 2010.\n\n The program follows Brule as he examines different facets of living.\n\n His severe naivete and social awkwardness generally land him in embarrassing situations, though he largely remains ignorant of any embarrassment he's causing himself.\n\n As the series progresses, he reveals shocking and sometimes horrifying details about his past and personal life.",
+    "And There's More\nAnd There's More is a comedy sketch show starring Jimmy Cricket produced by Central Independent Television for ITV from 1985 till 1988.",
+    "In Living Color\nIn Living Color is an American sketch comedy television series that originally ran on Fox from April 15, 1990, to May 19, 1994.\n\n Brothers Keenen and Damon Wayans created, wrote and starred in the program.\n\n The show was produced by Ivory Way Productions in association with 20th Century Fox Television and was taped at stage 7 at the Fox Television Center on Sunset Boulevard in Hollywood, California.\n\n The title of the series was inspired by the NBC announcement of broadcasts being presented \"in living color\" during the 1960s, prior to mainstream color television.\n\n It also refers to the fact that most of the show's cast were black, unlike other sketch comedy shows such as \"Saturday Night Live\" whose casts are mostly white.\n\n It was controversial due to the Wayans' decision to portray African-American humor from the ghetto in a time when mainstream American tastes regarding black comedy had been set by more upscale shows such as \"The Cosby Show\", causing an eventual feud for control between Fox executives and the Wayans.",
+    "Dave Kneebone\nDave Kneebone is an American producer.\n\n Along with Eric Wareheim and Tim Heidecker he runs Abso Lutely Productions which produces a variety of television and films.\n\n His role has been described as the business chief and \"straight man\" at Abso Lutely.\n\n Kneebone has worked as a producer on a variety of television shows including \"Comedy Bang!\n\n Bang!\n\n\", \"Nathan for You\", and \"Tim and Eric Awesome Show, Great Job!\n\n\".\n\n He is also listed a producer on the feature film \"Tim and Eric's Billion Dollar Movie\".",
+    "The Roy Files\nThe Roy Files is an Irish-based British children's television show, filmed in Dublin, Ireland, which was broadcast by CBBC in the United Kingdom and ABC Me in Australia.\n\n It began airing 7 December 2015.\n\n The show centres on the title character Roy O'Brien, the 11-year-old animated son of a live-action family.\n\n The series is a spin-off from \"ROY\", an Irish-British television show which ran from 1 July 2009 to 7 April 2015.\n\n It stars Jason Cullen (replacing Scott Graham as Roy), Simon Delaney, Cathy Belton and Martha Byrne.",
+    "Friends of the People\nFriends of the People is an American sketch comedy television series.\n\n It was slated to premiere on TruTV in summer 2014, but was pushed to October 28, 2014, as part of the network's shift in their programming direction.\n\n Many of the cast members (Jennifer Bartels, Jermaine Fowler, and Lil Rel Howery) were originally reported to be cast members of a planned revival of In Living Color which never materialized.\n\n The show's first season consists of 10 episodes.\n\n This makes it the network's first sketch comedy show.\n\n The series holds a TV-14 rating, though select episodes are rated TV-MA--also a first for the truTV network.",
+    "Bagboy (TV special)\nBagboy is a 2015 American television special produced for Adult Swim, and aired on February 21, 2015, to positive critical reception.\n\n Written and directed by Tim Heidecker and Eric Wareheim for Abso Lutely Productions and John C. Reilly, the special is a fictional sitcom pilot in the universe of \"Tim and Eric Awesome Show, Great Job!\n\n\", written by and starring Reilly's recurring \"Tim and Eric\" character Dr. Steve Brule.\n\n This is the second \"Tim and Eric\" spin-off to feature the Dr. Steve Brule character after \"Check it Out!\n\n with Dr. Steve Brule\"."
+   ]
+  },
+  {
+   "id": "e8f77c0271836ce3",
+   "gold": [
+    {
+     "sentence": "Alice Ann Munro ( , \"née\" Laidlaw ; born 10 July 1931) is a Canadian short story writer and Nobel Prize winner.",
+     "facts": {
+      "0.0": "Alice Ann Munro's nee name is Laidlaw.",
+      "0.1": "Alice Ann Munro was born on 10 July 1931.",
+      "0.2": "Alice Ann Munro is a Canadian short story writer.",
+      "0.3": "Alice Ann Munro is a Nobel Prize winner."
+     }
+    },
+    {
+     "sentence": "Lillian Florence Hellman (June 20, 1905 – June 30, 1984) was an American dramatist and screenwriter known for her success as a playwright on Broadway, as well as her left-wing sympathies and political activism.",
+     "facts": {
+      "1.0": "Lillian Florence Hellman was born on June 20, 1905.",
+      "1.1": "Lillian Florence Hellman died on June 30, 1984.",
+      "1.2": "Lillian Florence Hellman was an American dramatist.",
+      "1.3": "Lillian Florence Hellman was an American screenwriter.",
+      "1.4": "Lillian Florence Hellman is known for her success as a playwright on Broadway.",
+      "1.5": "Lillian Florence Hellman is known for her left-wing sympathies.",
+      "1.6": "Lillian Florence Hellman is known for her political activism."
+     }
+    }
+   ],
+   "items": [
+    "Lillian Hellman: An Imperious Life\nLillian Hellman: An Imperious Life is a 2014 book by Dorothy Gallagher.\n\n It is a critical biography of the American playwright and writer Lillian Hellman.",
+    "The Little Foxes (film)\nThe Little Foxes (1941) is an American drama film directed by William Wyler.\n\n The screenplay by Lillian Hellman is based on her 1939 play of the same name.\n\n Hellman's ex-husband Arthur Kober, Dorothy Parker and her husband Alan Campbell contributed additional scenes and dialogue.",
+    "Rea Wilmshurst\nRea Wilmshurst (August 10, 1941 – March 22, 1996) graduated from the University of Toronto with a degree in English in 1970.\n\n She went on to edit eight volumes of Lucy Maud Montgomery's previously unknown short stories and publish them through McClelland & Stewart.\n\n In 1985, she published a bibliography of Montgomery's short stories, poems, and articles.\n\n Wilmshurst was also an editorial assistant for the projects that compiled the Collected Works of John Stuart Mill and the Collected Works of Samuel Taylor Coleridge.",
+    "Lillian Hellman\nLillian Florence Hellman (June 20, 1905 – June 30, 1984) was an American dramatist and screenwriter known for her success as a playwright on Broadway, as well as her left-wing sympathies and political activism.\n\n She was blacklisted after her appearance before the House Committee on Un-American Activities (HUAC) at the height of the anti-communist campaigns of 1947–52.\n\n Although she continued to work on Broadway in the 1950s, her blacklisting by the American film industry caused a drop in her income.\n\n Many praised Hellman for refusing to answer questions by HUAC, but others believed, despite her denial, that she had belonged to the Communist Party.",
+    "Mollie Gillen\nMollie Gillen (née Woolnough; 1908–2009) was an Australian historian, researcher, writer and novelist.\n\n Her work on the First Fleet, in \"The search for John Small,\" \"First Fleeter\" and The Founders of Australia: A Biographical Dictionary of the First Fleet, explored the idea that many of the founding families of Australia were descended from the convict population, rather than those sent to guard them.\n\n Gillen's article Maud Montgomery: The Girl Who Wrote Green Gables instigated a new era in scholarship on Lucy Maud Montgomery.",
+    "The Autumn Garden\nThe Autumn Garden is a 1951 play by Lillian Hellman.\n\n The play is set in September, 1949 in a summer home in a resort on the Gulf of Mexico, about 100 miles from New Orleans.\n\n The play is a study of the defeats, disappointments and diminished expectations of people reaching middle age.\n\n For inspiration, Hellman drew on her memories of her time in her aunts' boardinghouse.\n\n Dashiell Hammett, who had been Hellman's lover for 20 years, helped her write the play and received 15 percent of the royalties.\n\n Of all Hellman's plays it was her favorite.",
+    "Lucy Maud Montgomery\nLucy Maud Montgomery {'1': \", '2': \", '3': \", '4': \"} (November 30, 1874 – April 24, 1942) published as L.M. Montgomery, was a Canadian author best known for a series of novels beginning in 1908 with \"Anne of Green Gables\".\n\n The book was an immediate success.\n\n The central character, Anne Shirley, an orphaned girl, made Montgomery famous in her lifetime and gave her an international following.",
+    "Dash and Lilly\nDash and Lilly is a 1999 Emmy and Golden Globe Award-nominated biographical television film about writers Dashiell Hammett and Lillian Hellman.\n\n The film was directed by actress Kathy Bates and written by Jerrold L. Ludwig.\n\n It stars Sam Shepard and Judy Davis.",
+    "Alice Walker\nAlice Malsenior Walker (born February 9, 1944) is an American novelist, short story writer, poet, and activist.\n\n She wrote the critically acclaimed novel \"The Color Purple\" (1982) for which she won the National Book Award and the Pulitzer Prize for Fiction.\n\n She also wrote the novels \"Meridian\" (1976) and \"The Third Life of Grange Copeland\" (1970), among other works.",
+    "Alice Munro\nAlice Ann Munro ( , \"née\" Laidlaw ; born 10 July 1931) is a Canadian short story writer and Nobel Prize winner.\n\n Munro's work has been described as having revolutionized the architecture of short stories, especially in its tendency to move forward and backward in time.\n\n Her stories have been said to \"embed more than announce, reveal more than parade.\""
+   ]
+  },
+  {
+   "id": "488857bd05337c4d",
+   "gold": [
+    {
+     "sentence": "The Consul is an opera in three acts with music and libretto by Gian Carlo Menotti, his first full-length opera.",
+     "facts": {
+      "0.0": "The Consul is an opera.",
+      "0.1": "The Consul is an opera in three acts.",
+      "0.2": "The Consul has music by Gian Carlo Menotti.",
+      "0.3": "The Consul has a libretto by Gian Carlo Menotti.",
+      "0.4": "The Consul is Gian Carlo Menotti's first full-length opera."
+     }
+    },
+    {
+     "sentence": " He completed the music for the opera while living in Zurich in 1916.",
+     "facts": {
+      "1.0": "Gian Carlo Menotti completed the music for The Consul.",
+      "1.1": "Gian Carlo Menotti completed the music for The Consul in 1916.",
+      "1.2": "Gian Carlo Menotti was living in Zurich in 1916.",
+      "1.3": "Gian Carlo Menotti completed the music for The Consul while living in Zurich."
+     }
+    }
+   ],
+   "items": [
+    "Harlequin\nHarlequin ( ; Italian: \"Arlecchino\" ] , French: \"Arlequin\" ] , Old French \"Harlequin\") is the best-known of the \"zanni\" or comic servant characters from the Italian \"Commedia dell'arte\".\n\n The role is traditionally believed to have been introduced by Zan Ganassa in the late 16th century, and was definitively popularized by the Italian actor Tristano Martinelli in Paris in 1584–1585 and became a stock character after Martinelli's death in 1630.",
+    "Niccolò Barbieri\nNiccolò (or Nicolò) Barbieri (Vercelli, 1586 - 1641) was an Italian writer and actor of the commedia dell'arte theatrical genre.\n\n He was also known as Beltrame di Milano (\"Beltrame of Milan\") in reference to one of his most popular characters, Beltrame; this was the main character of one of Barbieri's best known plays, \"L'inavertito\", which is known to have inspired Moliere's \"L'Étourdi ou Les Contretemps\" (\"The Blunderer\").\n\n Besides popularizing Beltrame, Barbieri is also credited with creating another \"commedia dell'arte\" mask, Scapino.",
+    "Arlecchino (opera)\nArlecchino, \"oder Die Fenster\" (\"Harlequin, or The Windows\", is a one-act opera with spoken dialog by Ferruccio Busoni, with a libretto in German, composed in 1913.\n\n He completed the music for the opera while living in Zurich in 1916.\n\n It is a number opera written in neo-classical style and includes ironic allusions to operatic conventions and situations typical of the late 18th and early 19th centuries.\n\n It even includes a parody of a duel.",
+    "Graph query row:\nwork: The Consul\ntype: opera\ngenre: None\ncreator: Gian Carlo Menotti\nother_work: Arlecchino, oder Die Fenster\nother_type: one-act opera\nother_genre: None\nother_creator: Ferruccio Busoni\ncreator_connection: None",
+    "Pedrolino\nPedrolino is a \"primo zanni\", or comic servant, of the \"Commedia dell'Arte\"; the name is a hypocorism of \"Pedro\" (Peter), via the suffix \"-lino\".\n\n The character made its first appearance in the last quarter of the 16th century, apparently as the invention of the actor with whom the role was to be long identified, Giovanni Pellesini.\n\n Contemporary illustrations suggest that his white blouse and trousers constituted \"a variant of the typical \"zanni\" suit\", and his Bergamasque dialect marked him as a member of the \"low\" rustic class.\n\n But if his costume and social station were without distinction, his dramatic role was certainly not: as a multifaceted \"first\" \"zanni\", his character was—and still is—rich in comic incongruities.",
+    "The Consul\nThe Consul is an opera in three acts with music and libretto by Gian Carlo Menotti, his first full-length opera.",
+    "Commedia dell'arte\nCommedia dell'arte (] , comedy of the profession) was an early form of professional theatre, originating from Italy, that was popular in Europe from the 16th through the 18th century.\n\n \"Commedia dell'arte\" also is known as \"commedia alla maschera\", \"commedia improvviso\", and \"commedia dell'arte all'improvviso\".\n\n \"Commedia\" is a form of theatre characterized by masked \"types\" which began in Italy in the 16th century and was responsible for the advent of actresses (Isabella Andreini) and improvised performances based on sketches or scenarios.\n\n A \"commedia\", such as \"The Tooth Puller\", is both scripted and improvised.\n\n Characters' entrances and exits are scripted.\n\n A special characteristic of \"commedia dell'arte\" are the \"lazzi\".\n\n A \"lazzo\" is a joke or \"something foolish\" or \"witty\".\n\n Another characteristic of \"commedia dell'arte\" is pantomime, which is mostly used by the character Arlecchino (Harlequin).",
+    "The Carp (opera)\nThe Carp is a one-act comic opera (styled \"a whimsicality\") with a libretto by Frank Desprez and music by Alfred Cellier.\n\n It was first produced at the Savoy Theatre from 13 February 1886 to 19 January 1887, as a companion piece to \"The Mikado\".\n\n It was then revived as companion to \"Ruddigore\" from 21 February 1887 to 5 November 1887.\n\n The piece also toured throughout 1888.",
+    "Tartaglia (commedia dell'arte)\nTartaglia is a dainty character in the Commedia dell'arte.\n\n He is farsighted and with a minor stutter (hence his name; cf. Spanish tartamudear), he is usually classed as one of the group of old characters (vecchio) who appears in many scenarios as one of the lovers (innamorati).\n\n His social status varies; he is sometimes a bailiff, lawyer, notary or chemist.\n\n Dramatist Carlo Gozzi turned him into a statesman, and so he remained thereafter.\n\n Tartaglia wears a large felt hat, an enormous cloak, oversized boots, a long sword, a giant moustache and a cardboard nose.\n\n He usually represents the lower working class but at times the middle or upper class in the commedia dell'arte.\n\n In the opera \"Le maschere\" by Mascagni, one of the characters is Tartaglia, a stuttering servant.",
+    "La Surprise de l'amour\nLike many of Marivaux's , \"La Surprise de l'amour\" makes use of stock characters from the Commedia dell'arte.\n\n In this play, Arlequin and Columbine are featured."
+   ]
+  },
+  {
+   "id": "717373633cc995cc",
+   "gold": [
+    {
+     "sentence": "Edmund Robert Harris (c. 1804 – 27 May 1877) was an English lawyer from Preston, Lancashire, UK who was the principal benefactor of the Harris Museum, Harris Institute or Art School, Harris Technical School and the Harris Orphanage.",
+     "facts": {
+      "0.0": "Edmund Robert Harris lived c. 1804 to 27 May 1877.",
+      "0.1": "Edmund Robert Harris was an English lawyer.",
+      "0.2": "Edmund Robert Harris was from Preston, Lancashire, UK.",
+      "0.3": "Edmund Robert Harris was the principal benefactor of the Harris Museum.",
+      "0.4": "Edmund Robert Harris was the principal benefactor of the Harris Institute or Art School.",
+      "0.5": "Edmund Robert Harris was the principal benefactor of the Harris Technical School.",
+      "0.6": "Edmund Robert Harris was the principal benefactor of the Harris Orphanage."
+     }
+    },
+    {
+     "sentence": "The Harris Museum, Art Gallery & Preston Free Public Library is a Grade I listed museum building in Preston.",
+     "facts": {
+      "1.0": "The Harris Museum, Art Gallery & Preston Free Public Library is a museum building in Preston.",
+      "1.1": "The Harris Museum, Art Gallery & Preston Free Public Library is a Grade I listed building."
+     }
+    }
+   ],
+   "items": [
+    "Edmund Robert Harris\nEdmund Robert Harris (c. 1804 – 27 May 1877) was an English lawyer from Preston, Lancashire, UK who was the principal benefactor of the Harris Museum, Harris Institute or Art School, Harris Technical School and the Harris Orphanage.",
+    "Rice Northwest Museum of Rocks and Minerals\nThe Rice Northwest Museum of Rocks and Minerals is a non-profit museum in Hillsboro, Oregon, United States.\n\n Located just north of the Sunset Highway on the northern edge of Hillsboro, the earth science museum is in the Portland metropolitan area.\n\n Opened in 1997, the museum’s collections date to the 1930s with the museum housed in a home built to display the rock and mineral collections of the museum founders.\n\n The ranch style home is listed on the National Register of Historic Places, the first of its kind listed in Oregon.\n\n In 2015 the museum became a Smithsonian Affiliate museum.",
+    "The entries profile notable figures across philanthropy, arts, journalism, religion, academia, business, and politics: Edmund R. Harris funded Preston institutions; Edmund de Unger built the Keir Islamic-art collection, now loaned to Dallas; Mencken was a major American satirist; and H. Donald Wilson helped create LexisNexis. Others include leaders, scholars, artists, and advocates such as George Albert Smith, Andrew Benjamin, Inderpal Grewal, Emeka Es",
+    "David Hildebrand Wilson\nDavid Hildebrand Wilson is the co-founder, along with his wife, Diana Wilson, of the enigmatic Museum of Jurassic Technology in Los Angeles, California.\n\n After high school, Wilson enrolled at Kalamazoo College where he majored in urban entomology with a minor in art.\n\n He received an MFA in Experimental Animation from the California Institute of the Arts in 1976.\n\n He was awarded the MacArthur Fellowship and the Creative Capital Moving Image Award in 2001.\n\n He and his museum are the subject of the book, \"Mr. Wilson's Cabinet of Wonder\", published in 1995.",
+    "Edmund de Unger\nEdmund Robert Anthony de Unger (Hungarian: \"Odon Antal Robert de Unger\" , b 6 August 1918, Budapest - d 25 January 2011, Ham, Surrey) was a Hungarian-born property developer and art collector.\n\n In London he built up the Keir Collection, one of the greatest post-war collections of Islamic art, bequeathed in 2008 to the Pergamon Museum of Islamic Art in Berlin.\n\n The arrangement for the museum to curate the collection came to an end in July 2012.\n\n The collection is now hosted by the Dallas Museum of Art as of May 2014 for a 15-year renewable loan.",
+    "Harris Museum\nThe Harris Museum, Art Gallery & Preston Free Public Library is a Grade I listed museum building in Preston.",
+    "J. Robert Donnelly Husky Heritage Sports Museum\nThe J. Robert Donnelly Husky Heritage Sports Museum is a public museum located on the University of Connecticut's main campus at Storrs, Connecticut.\n\n The museum documents and celebrates UConn's intercollegiate athletics.\n\n Opening its doors on January 19, 2002, the 2,700-square-foot museum was named in honor of benefactor and 1940 Connecticut basketball and football captain J. Robert (Bob) Donnelly (1971-2005).\n\n Exhibits include national and regional championship trophies, trading cards, photographs, and various sports memorabilia, as well as a six-screen video wall replaying moments of triumph for the UConn Huskies.\n\n A life-size fiberglass sculpture of Jonathan the Husky, UConn's mascot, greets visitors at the museum entrance.\n\n The Connecticut Basketball Rotunda, featuring NCAA championship trophies and life-size cutouts of Ray Allen and Rebecca Lobo, is among the museum's permanent exhibits.",
+    "Imperial War Museum (disambiguation)\nThe Imperial War Museum is a British national museum organisation with branches at five locations in England.",
+    "The Harris Museum, Art Gallery & Preston Free Public Library is a Grade I listed building in Preston. Lichfield’s Minster Pool, formed in the 11th century to power a mill and defend the Cathedral Close, became a public amenity after the mill’s demolition in 1856. Cheshire’s adjacent medieval hunting forests of Mara and Mondrem covered over 60 square miles and held boar and deer. Dean Mills Reservoir lies high on Winter Hill, north of Bolton.",
+    "HSBC Building (Hong Kong)\nHSBC Main Building () is a headquarters building of The Hongkong and Shanghai Banking Corporation, which is today a wholly owned subsidiary of London-based HSBC Holdings.\n\n It is located along the southern side of Statue Square near the location of the old City Hall, Hong Kong (built in 1869, demolished in 1933).\n\n The previous HSBC building was built in 1935 and pulled down to make way for the current building.\n\n The address remains as 1 Queen's Road Central (the north facing side of the building was served by Des Voeux Road, which was seashore, making Queen's Road was the main entrance, in contrast to modern day that usually accessed the bank from Des Voeux Road).\n\n The building can be reached from Exit K of Central MTR Station and facing Statue Square."
+   ]
+  }
+ ]
+}

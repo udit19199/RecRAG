@@ -1,0 +1,854 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=511d3fb2a43b308a ===
+Gold sentences and facts:
+Sentence 0: Loyalists were American colonists who remained loyal to the British Crown during the American Revolutionary War . At the time they were often called Tories , Royalists , or King 's Men . They were opposed by the Patriots , those who supported the revolution and called them `` persons inimical to the liberties of America '' . Prominent Loyalists repeatedly assured the British government that many thousands of loyalists would spring to arms and fight for the crown . The British government acted in expectation of that , especially in the southern campaigns in 1780 - 81 . In practice , the number of loyalists in military service was far lower than expected . Across the colonies , Patriots watched suspected Loyalists very closely , and would not tolerate any organized Loyalist opposition . Many outspoken or militarily active loyalists were forced to flee , especially to their stronghold of New York City . William Franklin , the royal governor of New Jersey and son of Patriot leader Benjamin Franklin , became the leader of the Loyalists after his release from a Patriot prison in 1778 . He worked to build Loyalist military units to fight in the war , but the number of volunteers was much fewer than London expected .
+  Fact 0.0: Loyalists were American colonists who remained loyal to the British Crown during the American Revolutionary War.
+  Fact 0.1: Loyalists were called Tories, Royalists, or King's Men at the time.
+  Fact 0.2: Loyalists were opposed by the Patriots.
+  Fact 0.3: The Patriots were those who supported the revolution.
+  Fact 0.4: The Patriots called the Loyalists "persons inimical to the liberties of America."
+  Fact 0.5: Prominent Loyalists repeatedly assured the British government that many thousands of loyalists would spring to arms and fight for the Crown.
+  Fact 0.6: The British government acted in expectation of that, especially in the southern campaigns in 1780-81.
+  Fact 0.7: In practice, the number of loyalists in military service was far lower than expected.
+  Fact 0.8: Patriots watched suspected Loyalists very closely across the colonies.
+  Fact 0.9: Patriots would not tolerate any organized Loyalist opposition.
+  Fact 0.10: Many outspoken or militarily active loyalists were forced to flee.
+  Fact 0.11: Loyalists fled especially to their stronghold of New York City.
+  Fact 0.12: William Franklin was the royal governor of New Jersey.
+  Fact 0.13: William Franklin was the son of Patriot leader Benjamin Franklin.
+  Fact 0.14: William Franklin became the leader of the Loyalists after his release from a Patriot prison in 1778.
+  Fact 0.15: William Franklin worked to build Loyalist military units to fight in the war.
+  Fact 0.16: The number of volunteers for William Franklin's Loyalist military units was much fewer than London expected.
+
+Retrieved items:
+<item 1>
+Loyalist (American Revolution)
+Historian Robert Middlekauff summarized scholarly research on the nature of Loyalist support as follows : The largest number of loyalists were found in the
+middle colonies : many tenant farmers of New York supported the king , for example , as did many of the Dutch in the colony and in New Jersey . The Germans in
+Pennsylvania tried to stay out of the Revolution , just as many Quakers did , and when that failed , clung to the familiar connection rather than embrace the
+new . Highland Scots in the Carolinas , a fair number of Anglican clergy and their parishioners in Connecticut and New York , a few Presbyterians in the
+southern colonies , and a large number of the Iroquois Indians stayed loyal to the king . Johnson Hall , seat of Sir John Johnson in the Mohawk Valley New York
+City and Long Island were the British military and political base of operations in North America from 1776 to 1783 and had a large concentration of Loyalists ,
+many of whom were refugees from other states . According to Calhoon , Loyalists tended to be older and wealthier , but there were also many Loyalists of humble
+means .
+</item 1>
+
+<item 2>
+Loyalist (American Revolution)
+They were alienated when the Patriots resorted to violence , such as burning houses and tarring and feathering . They wanted to take a middle - of - the road
+position and were angry when forced by the Patriots to declare their opposition . They had a long - standing sentimental attachment to Britain ( often with
+business and family links ) . They were procrastinators who realized that independence was bound to come someday , but wanted to postpone the moment . They were
+cautious and afraid that chaos and mob rule would result . Some were pessimists who lacked the confidence in the future displayed by the Patriots . Others
+recalled the dreadful experiences of many Jacobite rebels after the failure of the last Jacobite rebellion as recently as 1745 who often lost their lands when
+the Hanoverian government won . Other motives of the Loyalists included : They felt a need for order and believed that Parliament was the legitimate authority .
+In New York , powerful families had assembled colony - wide coalitions of supporters , Men long associated with the De Lancey faction went along when its
+leadership decided to support the crown .
+</item 2>
+
+<item 3>
+Loyalist (American Revolution)
+1778 ) , led a band of Tories , commissioned by Lord Dunmore , who upon capture was executed John Randolph ( 1727 -- 1784 ) , King 's Attorney for Virginia Anna
+Rawle , a women loyalist who used letter - diaries to spy and transfer information about Rebels in PA to loyalist in New York James Rivington 1734 - 1802
+Loyalist editor of Rivington Gazette and a Patriot Spy Colonel Beverley Robinson ( 1723 -- 1792 ) , of New York , Loyal American Regiment Lieutenant - Colonel
+Robert Rogers ( 1731 -- 1795 ) , commander of Rogers ' Rangers / Queen 's Rangers to 1777 ( now The Queen 's York Rangers ( 1st American Regiment ) ( RCAC ) ) ,
+innovator of ranging tactics Peggy Shippen ( 1760 -- 1804 ) , Philadelphia socialite and second wife of Benedict Arnold John Graves Simcoe ( 1752 -- 1806 ) ,
+commander of Queen 's Rangers from 1777 ( now The Queen 's York Rangers ( 1st American Regiment ) ( RCAC ) ,
+</item 3>
+
+<item 4>
+Loyalist (American Revolution)
+Approximately half the colonists of European ancestry tried to avoid involvement in the struggle -- some of them deliberate pacifists , others recent immigrants
+, and many more simple apolitical folk . The patriots received active support from perhaps 40 to 45 percent of the white populace , and at most no more than a
+bare majority . A jury finding from Kentucky County , Virginia in July 1780 , confiscating lands of two men adjudged to be British subject . Daniel Boone was
+listed as a member of the jury . Before Calhoon 's work , estimates of the Loyalist share of the population were somewhat higher , at about one - third , but
+these estimates are now rejected as too high by most scholars . In 1968 historian Paul H. Smith estimated there were about 400,000 Loyalists , or 16 % of the
+white population of 2.25 million in 1780 .
+</item 4>
+
+<item 5>
+Loyalist (American Revolution)
+Benjamin Franklin to Baron Francis Maseres , June 26 , 1785 ( Opinion of Benjamin Franklin on persons who called themselves `` Loyalists '' , whom he judged
+better called `` Royalists '' ) Bibliography of the Loyalist Participation in the American Revolution compiled by the United States Army Center of Military
+History `` Black Loyalists : Our History , Our People '' Haldimand Collection The main source for historians in the study of the settlement of the American
+Loyalists in Canada . More than 20,000 letters and documents , now fully indexed , and free on the Web . James Chalmers and `` Plain Truth '' ( A Loyalist
+Answers Thomas Paine ) The Loyalist Declaration of Independence published in The Royal Gazette , ( New York ) on November 17 , 1781 ( Transcription provided by
+Bruce Wallace and posted on The On - Line Institute for Advanced Loyalist Studies . )
+</item 5>
+
+<item 6>
+Loyalist (American Revolution)
+Chesterton Winston Churchill Enoch Powell George Grant Related topics ( show ) Conservatism Distributists Miguelism Vendéens Chouans Legitimism Carlism
+Sanfedismo Viva Maria Cristeros Reactionary High Tory Red Tory Loyalist Royalist Veronese Easter Tory corporatism Tory socialism Pink Tory Ultra-Tories
+Britannia offers solace and a promise of compensation for her exiled American - born Loyalists . ( Reception of the American Loyalists by Great Britain in the
+Year 1783 . Engraving by H. Moses after Benjamin West . ) Loyalists were American colonists who remained loyal to the British Crown during the American
+Revolutionary War . At the time they were often called Tories , Royalists , or King 's Men . They were opposed by the Patriots , those who supported the
+revolution and called them `` persons inimical to the liberties of America '' . Prominent Loyalists repeatedly assured the British government that many
+thousands of loyalists would spring to arms and fight for the crown . The British government acted in expectation of that , especially in the southern campaigns
+in 1780 - 81 .
+</item 6>
+
+<item 7>
+Loyalist (American Revolution)
+Many , like Maryland lawyer Daniel Dulaney , opposed taxation without representation , but would not break their oath to the King or take up arms against him .
+In one of his many pamphlets , Dulaney wrote : `` There may be a time when redress may not be obtained . Till then , I shall recommend a legal , orderly , and
+prudent resentment '' . Most hoped for a peaceful reconciliation , and were forced to choose sides by the Patriots who took control nearly everywhere in 1775 -
+76 . Likely the earliest formal meeting , and use of the term `` royalist '' and the source of the United Empire Loyalist ( `` UEL '' ) acronym , took place in
+Boston on October 28 , 1775 . At the meeting , held at the suggestion of General Thomas Gage , these Loyalists formed a society called `` The Loyalist
+Associators despite the Unity of the Empire '' .
+</item 7>
+
+<item 8>
+Loyalist (American Revolution)
+They felt themselves to be weak or threatened within American society and in need of an outside defender such as the British Crown and Parliament . They had
+been promised freedom from slavery by the British . They felt that being a part of the British Empire was crucial in terms of commerce and their business
+operations . Loyalism and military operations ( edit ) See also : Loyalists fighting in the American Revolution In the opening months of the Revolutionary War ,
+the Patriots laid siege to Boston , where most of the British forces were stationed . Elsewhere there were few British troops and the Patriots seized control of
+all levels of government , as well as supplies of arms and gunpowder . These actions were not without resistance . Especially in New York , New Jersey , and
+parts of North and South Carolina , there was considerable ambivalence about the Patriot cause . Vocal Loyalists , often with the encouragement and assistance
+of royal governors , recruited people to their side . In the South Carolina backcountry Loyalist recruitment oustripped that of Patriots .
+</item 8>
+
+<item 9>
+Loyalist (American Revolution)
+Many active Church of England members became Loyalists . Some recent arrivals from Britain , especially those from Scotland , had a high Loyalist proportion .
+Loyalists in the southern colonies were suppressed by the local Patriots , who controlled local and state government . Many people -- including former
+Regulators in North Carolina -- refused to join the rebellion , as they had earlier protested against corruption by local authorities who later became
+Revolutionary leaders . The oppression by the local Whigs during the Regulation led to many of the residents of backcountry North Carolina sitting out the
+Revolution or siding with the Loyalists . In areas under Patriot control , Loyalists were subject to confiscation of property , and outspoken supporters of the
+king were threatened with public humiliation such as tarring and feathering , or physical attack . It is not known how many Loyalist civilians were harassed by
+the Patriots , but the treatment was a warning to other Loyalists not to take up arms . In September 1775 , William Drayton and Loyalist leader Colonel Thomas
+Fletchall signed a treaty of neutrality in the interior community of Ninety Six , South Carolina .
+</item 9>
+
+<item 10>
+Loyalist (American Revolution)
+Loyalist ( American Revolution ) - wikipedia Loyalist ( American Revolution ) Jump to : navigation , search Part of the Politics series on Toryism
+Characteristics ( show ) Monarchism Traditionalism High Church Anglicanism Traditional Catholicism Loyalism Royalism Interventionism Agrarianism / Self -
+sufficiency Counterrevolution Classicism High culture Noblesse oblige Organic unity Unionism General topics ( show ) Cavaliers Cavalier Parliament Château
+Clique Jacobitism Divine right of kings Corporatism Family Compact ( Canada ) Oxford Movement Powellism People ( show ) Robert Filmer 1st Earl of Clarendon
+Roger L'Estrange 1st Earl of Rochester 1st Viscount Bolingbroke 3rd Earl of Bute 1st Duke of Wellington Walter Scott Stanley Baldwin G.K.
+</item 10>
+=== END ITEM id=511d3fb2a43b308a ===
+
+=== ITEM id=a1dbda7a0bca65f6 ===
+Gold sentences and facts:
+Sentence 0: The following season , a cancerous desmoid tumor was found in Dravecky 's pitching arm . On October 7 , 1988 , he underwent surgery , which removed half of the deltoid muscle in his pitching arm and froze the humerus bone in an effort to eliminate all of the cancerous cells . Doctors advised Dravecky to wait until 1990 to pitch again , but Dravecky was determined to pitch in 1989 . By July 1989 , he was pitching in the minors , and on August 10 , he made a highly publicized return to the major leagues , pitching eight innings and defeating Cincinnati 4 -- 3 . In his following start , five days later in Montreal , Dravecky pitched three no - hit innings , but in the fifth inning , he felt a tingling sensation in his arm . In the sixth inning , he started off shaky , allowing a home run to the leadoff batter and then hitting the second batter , Andrés Galarraga . Then , on his first pitch to Tim Raines , his humerus bone snapped ; the sound of it breaking could be heard throughout the stadium . Dravecky collapsed on the mound . He 'd suffered a clean break midway between his shoulder and elbow , ending his season .
+  Fact 0.0: The following season, a cancerous desmoid tumor was found in Dravecky's pitching arm.
+  Fact 0.1: On October 7, 1988, Dravecky underwent surgery.
+  Fact 0.2: The surgery removed half of the deltoid muscle in Dravecky's pitching arm.
+  Fact 0.3: The surgery froze the humerus bone in Dravecky's pitching arm in an effort to eliminate all of the cancerous cells.
+  Fact 0.4: Doctors advised Dravecky to wait until 1990 to pitch again.
+  Fact 0.5: Dravecky was determined to pitch in 1989.
+  Fact 0.6: By July 1989, Dravecky was pitching in the minors.
+  Fact 0.7: On August 10, Dravecky made a highly publicized return to the major leagues.
+  Fact 0.8: In that return, Dravecky pitched eight innings and defeated Cincinnati 4-3.
+  Fact 0.9: In his following start, five days later in Montreal, Dravecky pitched three no-hit innings.
+  Fact 0.10: In the fifth inning of that start, Dravecky felt a tingling sensation in his arm.
+  Fact 0.11: In the sixth inning, Dravecky started off shaky.
+  Fact 0.12: In the sixth inning, Dravecky allowed a home run to the leadoff batter.
+  Fact 0.13: In the sixth inning, Dravecky hit the second batter, Andrés Galarraga.
+  Fact 0.14: On his first pitch to Tim Raines, Dravecky's humerus bone snapped.
+  Fact 0.15: The sound of the bone breaking could be heard throughout the stadium.
+  Fact 0.16: Dravecky collapsed on the mound.
+  Fact 0.17: Dravecky suffered a clean break midway between his shoulder and elbow.
+  Fact 0.18: The broken bone ended Dravecky's season.
+
+Retrieved items:
+<item 1>
+Dave Dravecky
+1980 : Brett 1981 : Bench 1982 : Thornton 1983 : Knight 1984 : Robinson 1985 : Reuschel 1986 : Leonard 1987 : Molitor 1988 : Oester 1989 : Dravecky 1990 : Bream
+1991 : Wegman 1992 : Lansford 1993 : Olerud 1994 : Dawson 1995 : Abbott 1996 : Vizquel 1997 : Davis 1998 : Cone 1999 : Casey 2000 : Giambi 2001 : Schilling 2002
+: Salmon 2003 : Moyer 2004 : Hoffman 2005 : Biggio 2006 : Loretta 2007 : Sweeney 2008 : Lester 2009 : Teahen 2010 : Hudson 2011 : Butler 2012 : Zito 2013 :
+Ibañez 2014 : Gordon 2015 : Wainwright 2016 : McGowan New York / San Francisco Giants Opening Day starting pitchers Red Ames Fred Anderson Johnny Antonelli
+Jesse Barnes Virgil Barnes Jim Barr Larry Benton Vida Blue Tom Bradley Madison
+</item 1>
+
+<item 2>
+2017 World Series
+Game 1 : The ceremonial first pitch was thrown out by members of former Dodger Jackie Robinson 's family , including his widow Rachel . The game marked the 45th
+anniversary of Robinson 's death , and the 2017 season was the 70th anniversary of his breaking of the baseball color line . Keith Williams Jr. , a gospel
+singer , performed `` The Star - Spangled Banner '' , the national anthem . Game 2 : Fernando Valenzuela threw out the ceremonial first pitch to Steve Yeager ;
+both were introduced by retired Dodgers broadcaster Vin Scully . Country music 's Brad Paisley performed the national anthem . Game 3 : Houston Texans defensive
+end J.J. Watt , who had raised $37 million for Hurricane Harvey victims , threw out the first pitch . The ball was given to him by Astros ' Hall of Famer Craig
+Biggio . The national anthem was performed by Texas Air National Guard Master Sergeant Promise Harris . Game 4 : Hailey Dawson , a seven - year - old girl from
+Nevada , threw out the ceremonial first pitch using a 3D printed hand . The national anthem was performed by the Houston Police Department Quartet .
+</item 2>
+
+<item 3>
+Dave Dravecky (born 1956) was a left-handed MLB pitcher for the San Diego Padres and San Francisco Giants, earning a 1983 All-Star selection. After joining the
+Giants in 1987, he developed a cancerous tumor in his pitching arm and underwent surgery. He returned in 1989, but his arm broke during a game; cancer recurred,
+ending his career. He retired with 64 wins, 57 losses, and a 3.13 ERA
+</item 3>
+
+<item 4>
+Dave Dravecky
+Then , on his first pitch to Tim Raines , his humerus bone snapped ; the sound of it breaking could be heard throughout the stadium . Dravecky collapsed on the
+mound . He 'd suffered a clean break midway between his shoulder and elbow , ending his season . The Giants won the National League pennant in 1989 ( defeating
+the Chicago Cubs in the NLCS in five games ) , and in the post-game celebration , Dravecky 's arm was broken a second time when he was running out to the mound
+to celebrate . A doctor examining Dravecky 's x-rays noticed a mass in his arm , which turned out to be malignant . Dravecky 's cancer had returned , ending his
+career . Eighteen days later , Dravecky retired from baseball with a 64 -- 57 record with 558 strikeouts and a 3.13 ERA in 1,062 2⁄3 innings . He won the 1989
+Willie Mac Award honoring his spirit and leadership .
+</item 4>
+
+<item 5>
+2005 World Series
+In the White Sox half of the fourth , Joe Crede hit what turned out to be the game - winning home run . In the bottom of the eighth , Scott Podsednik hit a
+triple with Pierzynski on second off of Russ Springer for an insurance run . Roger Clemens recorded his shortest World Series start , leaving after the second
+inning with 53 pitches , including 35 for strikes , due to a sore hamstring that he had previously injured ( which had caused him to also miss his last regular
+season start ) as the loss went to Wandy Rodríguez . José Contreras pitched seven innings , allowing three runs on six hits for the win . Before exiting ,
+Contreras allowed a leadoff double by Willie Taveras with no outs . Neal Cotts entered the game in the top of the eighth inning . It marked the first time in
+five games that the White Sox had gone to their bullpen . Cotts pitched ​ ⁄ innings before Bobby Jenks was called upon by manager Ozzie Guillén to relieve him .
+Guillen signaled for the large pitcher by holding his arms out wide and then up high .
+</item 5>
+
+<item 6>
+Joe Crede’s fourth-inning home run proved decisive for Chicago. José Contreras earned the win, pitching seven innings and allowing three runs on six hits;
+Willie Taveras doubled to lead off the eighth before Contreras exited. Scott Podsednik added an insurance run with an eighth-inning triple. Roger Clemens made
+his shortest World Series start, leaving after two innings and 53 pitches with a sore hamstring. Wandy Rodríguez took the loss. Neal Cotts and Bobby Jen
+</item 6>
+
+<item 7>
+Dave Dravecky
+Crisis and comeback ( edit ) The following season , a cancerous desmoid tumor was found in Dravecky 's pitching arm . On October 7 , 1988 , he underwent surgery
+, which removed half of the deltoid muscle in his pitching arm and froze the humerus bone in an effort to eliminate all of the cancerous cells . Doctors advised
+Dravecky to wait until 1990 to pitch again , but Dravecky was determined to pitch in 1989 . By July 1989 , he was pitching in the minors , and on August 10 , he
+made a highly publicized return to the major leagues , pitching eight innings and defeating Cincinnati 4 -- 3 . In his following start , five days later in
+Montreal , Dravecky pitched three no - hit innings , but in the fifth inning , he felt a tingling sensation in his arm . In the sixth inning , he started off
+shaky , allowing a home run to the leadoff batter and then hitting the second batter , Andrés Galarraga .
+</item 7>
+
+<item 8>
+Houston Astros
+Surgery was done to save his life , but the Astros had lost their ace pitcher after a 10 -- 4 start with a stingy 1.89 ERA . Richard attempted a comeback , but
+would never again pitch a big league game . After the loss of Richard and some offensive struggles , the Astros slipped to third place in the division behind
+the Dodgers and the Reds . They bounced back to first with a ten - game winning streak , but the Dodgers had regained a two - game lead when they arrived in
+Houston on September 9 . The Astros won the first two games of that series and the two teams were tied for the division lead . The Astros held a three - game
+lead over the Dodgers with three games left in the season against the Dodgers . The Dodgers swept the series games , forcing a one - game playoff the next day .
+The Astros would however win the one - game playoff 7 - 1 , and advance to their first post-season . The team would face the Philadelphia Phillies in the 1980
+National League Championship Series . The Phillies sent out Steve Carlton in game one of the NLCS after a six - hour flight the night before .
+</item 8>
+
+<item 9>
+2017 World Series
+Morrow relieved Darvish and in the process became only the second pitcher to pitch in all seven games of a single World Series , joining Darold Knowles in the
+1973 World Series . McCullers lasted only 2 ​ ⁄ innings himself ; he allowed three hits and hit a World Series record four batters . This was the first Game 7
+in World Series history where neither starting pitcher got past the third inning . The Dodgers failed to score a run and left eight men on base through five
+innings . Ethier , pinch hitting , scored Pederson on a single in the sixth inning for the Dodgers ' only run . They only had one hit in 13 chances with runners
+in scoring position in the game . Kershaw pitched four scoreless innings of relief in the game , and in the process , he broke Orel Hershiser 's Dodgers
+postseason record with his 33rd strikeout .
+</item 9>
+
+<item 10>
+Houston Astros
+McMullen showed the city of Houston that he too wanted a winning team , signing nearby Alvin , Texas native Nolan Ryan to the first million - dollar - a-year
+deal . Ryan had four career no - hitters already and had struck out 383 in one season . 1980 : on the brink ( edit ) Joe Morgan returned in 1980 . Now back in
+Houston with two MVP awards and two World Series rings , Morgan wanted to help make the Astros a pennant winner . The 1980 pitching staff was one of the best
+Houston ever had , with the fastball of Ryan , the knuckleball of Joe Niekro and the terrifying 6 ft 8 in frame of J.R. Richard . Teams felt lucky to face Ken
+Forsch , who was a double - digit winner in the previous two seasons . Richard became the first Astros pitcher to start an All - Star game . After a medical
+examination three days later , Richard was told to rest his arm and he collapsed during a July 30 workout . He had suffered a stroke after a blood clot in the
+arm apparently moved to his neck and cut off blood flow to the brain .
+</item 10>
+=== END ITEM id=a1dbda7a0bca65f6 ===
+
+=== ITEM id=7dfb72d8ca7d42af ===
+Gold sentences and facts:
+Sentence 0: Sport Men Women Total Cross-country skiing 0 Total 0
+  Fact 0.0: The table has columns for Sport, Men, Women and Total.
+  Fact 0.1: The table lists Cross-country skiing as a sport.
+  Fact 0.2: The table lists a total of 0 for Cross-country skiing.
+  Fact 0.3: The table lists a grand total of 0.
+Sentence 1: Bermuda competed at the 2018 Winter Olympics in Pyeongchang , South Korea , from 9 to 25 February 2018 , with one competitor . This was the nation sixth appearance in the Winter Olympics .
+  Fact 1.0: Bermuda competed at the 2018 Winter Olympics.
+  Fact 1.1: The 2018 Winter Olympics were held in Pyeongchang, South Korea.
+  Fact 1.2: Bermuda competed from 9 to 25 February 2018.
+  Fact 1.3: Bermuda had one competitor at the 2018 Winter Olympics.
+  Fact 1.4: The 2018 Winter Olympics was Bermuda's sixth appearance in the Winter Olympics.
+
+Retrieved items:
+<item 1>
+2018 Winter Olympics
+Moritz 1952 Oslo 1956 Cortina d'Ampezzo 1960 Squaw Valley 1964 Innsbruck 1968 Grenoble 1972 Sapporo 1976 Innsbruck 1980 Lake Placid 1984 Sarajevo 1988 Calgary
+1992 Albertville 1994 Lillehammer 1998 Nagano 2002 Salt Lake City 2006 Turin 2010 Vancouver 2014 Sochi 2018 Pyeongchang 2022 Beijing 2026 TBD 2030 TBD Ancient
+Olympic Games Intercalated Games 1906 Paralympic Games Youth Olympic Games Events at the 2018 Winter Olympics ( PyeongChang , South Korea ) Alpine skiing
+Biathlon Bobsleigh Cross-country skiing Curling Figure skating Freestyle skiing Ice hockey men women Luge Nordic combined Short track speed skating Skeleton Ski
+jumping Snowboarding Speed skating Nations at the 2018 Winter Olympics in Pyeongchang , South Korea Africa Eritrea Kenya Madagascar Morocco South Africa Togo
+Americas Argentina Bermuda Bolivia Brazil Canada Chile Colombia Dominica Ecuador Mexico Peru Puerto Rico United States Asia China Hong Kong India Iran Japan
+Kazakhstan Kyrgyzstan Lebanon Malaysia Mongolia
+</item 1>
+
+<item 2>
+2018 Winter Olympics
+Mexico Peru Puerto Rico United States Asia China Hong Kong India Iran Japan Kazakhstan Kyrgyzstan Lebanon Malaysia Mongolia North Korea Pakistan Philippines
+Singapore South Korea Chinese Taipei Thailand Timor - Leste Uzbekistan Europe Albania Andorra Armenia Austria Azerbaijan Belarus Belgium Bosnia and Herzegovina
+Bulgaria Croatia Cyprus Czech Republic Denmark Estonia Finland France Georgia Germany Great Britain Greece Hungary Iceland Ireland Israel Italy Kosovo Latvia
+Liechtenstein Lithuania Luxembourg Macedonia Malta Moldova Monaco Montenegro Netherlands Norway Poland Portugal Romania San Marino Serbia Slovakia Slovenia
+Spain Sweden Switzerland Turkey Ukraine Oceania Australia New Zealand Other Olympic Athletes from Russia Venues of the 2018 Winter Olympics Pyeongchang Mountain
+Cluster Alpensia Biathlon Centre Cross-Country Centre Ski Jumping Centre Convention Centre IBC Alpensia Sliding Centre Yongpyong Alpine Centre Pyeongchang
+Olympic Stadium Pyeongchang Olympic Village Bokwang Phoenix Park Stand - alone venues : Jeongseon Alpine Centre Phoenix Snow Park Gangneung Coastal Cluster
+Gangneung Olympic Park Gangneung Curling Centre Gangneung Hockey Centre Gangneung Ice Arena Gangneung Oval Kwandong Hockey Centre Gangneung Olympic Village
+Italics indicate non-competition venues .
+</item 2>
+
+<item 3>
+Bermuda at the 2018 Winter Olympics
+Nations at the 2018 Winter Olympics in Pyeongchang , South Korea Africa Eritrea Ghana Kenya Madagascar Morocco Nigeria South Africa Togo Americas Argentina
+Bermuda Bolivia Brazil Canada Chile Colombia Ecuador Jamaica Mexico Puerto Rico United States Asia China East Timor Hong Kong India Iran Japan Kazakhstan
+Kyrgyzstan Lebanon Malaysia Mongolia North Korea Pakistan Philippines Singapore South Korea Chinese Taipei Thailand Uzbekistan Europe Albania Andorra Armenia
+Austria Azerbaijan Belarus Belgium Bosnia and Herzegovina Bulgaria Croatia Cyprus Czech Republic Denmark Estonia Finland France Georgia Germany Great Britain
+Greece Hungary Iceland Ireland Israel Italy Kosovo Latvia Liechtenstein Lithuania Luxembourg Macedonia Malta Moldova Monaco Montenegro Netherlands Norway Poland
+Portugal Romania San Marino Serbia Slovakia Slovenia Spain Sweden Switzerland Turkey Ukraine Oceania Australia New Zealand Tonga Other Korea Olympic Athletes
+from Russia Bermuda at the Olympics Summer Olympic Games 1936 1948 1952 1956 1960 1964 1968 1972 1976 1980 1984 1992 2000 2008 2012 2016 Winter Olympic Games
+1992 1994 1998 2002 2006 2014 2018 Bermuda did not participate in 1980 due to a boycott .
+</item 3>
+
+<item 4>
+Bermuda at the 2018 Winter Olympics
+Sport Men Women Total Cross-country skiing 0 Total 0 Cross-country Skiing ( edit ) Main articles : Cross-country skiing at the 2018 Winter Olympics and
+Cross-country skiing at the 2018 Winter Olympics -- Qualification Bermuda qualified one male athlete , Tucker Murphy . Murphy will be making his third straight
+appearance at the Winter Olympics . Distance Athlete Event Final Time Deficit Rank Tucker Murphy Men 's 15 km freestyle 43 : 05.7 + 9 : 21.8 104 See also ( edit
+) Bermuda at the 2018 Commonwealth Games References ( edit ) Jump up ^ `` Opening Ceremony Flagbearers - Olympic Winter Games , PyeongChang 2018 '' ( PDF ) .
+olympic.org . International Olympic Committee ( IOC ) . 9 February 2018 . Retrieved 10 February 2018 . Jump up ^ `` Cross-country Skiing Quota List for Olympic
+Games 2018 '' . www.data.fis-ski.com/ . International Ski Federation ( FIS ) . 12 December 2017 . Retrieved 16 December 2017 .
+</item 4>
+
+<item 5>
+2018 Winter Olympics
+Numbers in parentheses indicate the number of medal events contested in each sports discipline . Alpine skiing ( 11 ) ( details ) Biathlon ( 11 ) ( details )
+Bobsleigh ( 3 ) ( details ) Cross-country skiing ( 12 ) ( details ) Curling ( 3 ) ( details ) Figure skating ( 5 ) ( details ) Freestyle skiing ( 10 ) ( details
+) Ice hockey ( 2 ) ( details ) Luge ( 4 ) ( details ) Nordic combined ( 3 ) ( details ) Short track speed skating ( 8 ) ( details ) Skeleton ( 2 ) ( details )
+Ski jumping ( 4 ) ( details ) Snowboarding ( 10 ) ( details ) Speed skating ( 14 ) ( details ) Participating national Olympic committees ( edit ) A total of 90
+teams have qualified at least one athlete so far ( 89 nations , and the delegation from Russia which will compete under the IOC flag ) . Ecuador , Eritrea ,
+Kosovo , Malaysia , and Singapore are scheduled to make their Winter Olympics debut if they decide to participate .
+</item 5>
+
+<item 6>
+2018 Winter Olympics
+( тарашкевіца ) ‎ Български Bosanski Català Čeština Dansk Deutsch Eesti Ελληνικά Español Euskara فارسی Français Gaeilge 한국어 Հայերեն Hrvatski Bahasa Indonesia
+Íslenska Italiano עברית ქართული Қазақша Коми Кыргызча Latviešu Lietuvių Limburgs Magyar Македонски मराठी Bahasa Melayu Монгол Nederlands 日本 語 Norsk Norsk
+nynorsk Олык марий Polski Português Română Русский Саха тыла Scots Simple English Slovenčina Slovenščina Српски / srpski Suomi Svenska Татарча / tatarça ไทย
+Türkçe
+</item 6>
+
+<item 7>
+2018 Winter Olympics
+Poland Portugal Puerto Rico Romania San Marino Serbia Singapore Slovakia Slovenia South Africa South Korea ( host ) Spain Sweden Switzerland Chinese Taipei
+Thailand Timor - Leste Togo Turkey Ukraine United States Uzbekistan Calendar ( edit ) All dates are KST ( UTC + 9 ) OC Opening ceremony Event competitions Event
+finals EG Exhibition gala CC Closing ceremony February 8th Thu 9th Fri 10th Sat 11th Sun 12th Mon 13th Tue 14th Wed 15th Thu 16th Fri 17th Sat 18th Sun 19th Mon
+20th Tue 21st Wed 22nd Thu 23rd Fri 24th Sat 25th Sun Events Ceremonies OC CC N / A Alpine skiing 11 Biathlon 11 Bobsleigh Cross country skiing 12 Curling
+Figure skating EG 5 Freestyle skiing 10 Ice hockey Luge Nordic combined Short track speed skating 8 Skeleton Ski jumping Snowboarding 10 Speed skating 14 Total
+events 5 7 8 8 6 7 5 9 6 5 7 8 6 8 102 Cumulative total 5 12 20 28 34 41 46 55
+</item 7>
+
+<item 8>
+Bermuda at the 2018 Winter Olympics
+12 December 2017 . Retrieved 16 December 2017 . Jump up ^ `` Tucker Murphy Competes In Skiing In Iceland '' . Bernews. Hamilton , Bermuda . 14 May 2017 .
+Retrieved 16 December 2017 .
+</item 8>
+
+<item 9>
+Bermuda at the 2018 Winter Olympics
+Bermuda at the 2018 Winter Olympics - wikipedia Bermuda at the 2018 Winter Olympics Jump to : navigation , search Bermuda at the 2018 Winter Olympics Flag of
+Bermuda IOC code BER NOC Bermuda Olympic Association Website www.olympics.bm in Pyeongchang , South Korea 9 -- 25 February 2018 Competitors 1 in 1 sport Flag
+bearer Tucker Murphy Medals Gold 0 Silver 0 Bronze 0 Total 0 Winter Olympics appearances ( overview ) 1992 1994 1998 2002 2006 2014 2018 Bermuda competed at the
+2018 Winter Olympics in Pyeongchang , South Korea , from 9 to 25 February 2018 , with one competitor . This was the nation sixth appearance in the Winter
+Olympics . Contents ( hide ) 1 Competitors 2 Cross-country skiing 3 See also 4 References Competitors ( edit ) The following is the list of number of
+competitors participating in the delegation per sport .
+</item 9>
+
+<item 10>
+Bermuda at the 2018 Winter Olympics
+Retrieved from `` https://en.wikipedia.org/w/index.php?title=Bermuda_at_the_2018_Winter_Olympics&oldid=827912272 '' Categories : Nations at the 2018 Winter
+Olympics Bermuda at the Winter Olympics by year 2018 in Bermuda Hidden categories : Use dmy dates from February 2018 Use British English from February 2018 Talk
+Contents About Wikipedia Azərbaycanca Dansk Deutsch Eesti Español Français 한국어 हिन्दी Italiano Nederlands 日本 語 Norsk Polski Português Русский Suomi Svenska
+Українська 中文 10 more Edit links This page was last edited on 27 February 2018 , at 13 : 44 . Text is available under the Creative Commons Attribution -
+ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark
+of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 10>
+=== END ITEM id=7dfb72d8ca7d42af ===
+
+=== ITEM id=1e1f14dcbda3db31 ===
+Gold sentences and facts:
+Sentence 0: Economy of India Mumbai , Maharashtra the financial center of India Currency Indian rupee ( INR ) ₹ 1 = 100 Paise Fiscal year 1 April -- 31 March Trade organisations WTO , WCO , WFTU , G - 20 and others Statistics GDP $2.848 trillion ( nominal ; 2018 est ) $10.385 trillion ( PPP ; 2018 est ) GDP rank 6th ( nominal ) 3rd ( PPP ) GDP growth 7.2 % ( Q3 , 2017 - 18 ) ( MOSPI ) GDP per capita $2,134 ( nominal ; 2018 est ) $7,783 ( PPP ; 2018 est ) GDP per capita rank 141st ( nominal ) 123rd ( PPP ) GDP by sector Agriculture : 17.32 % Industry : 29.02 % Services : 53.66 % ( 2016 est . ) Inflation ( CPI ) 4.28 % ( March 2018 ) Base borrowing rate 6.25 % ( as on 16 Mar. 2018 ) Population below poverty line 21.2 % 58 % live less than $3.10 / day ( 2011 ; World bank estimate ) Gini coefficient 33.9 ( 2013 ) Human Development Index 0.624 ( 2015 ) medium ( 131st ) Labour force 520.2 million ( 2017 ) Labour force by occupation Agriculture : 47 % Industry : 22 % Services : 31 % ( FY 2014 est . ) Unemployment 8.8 % ( 2017 ) Average net salary ₹ 82,269 / $1,284 annually ( 2016 - 17 ) Main industries Textiles chemicals food processing steel cement mining petroleum machinery software pharmaceuticals transportation equipment Ease - of - doing - business rank 100 ( 2017 ) External Exports $275.8 billion ( 2017 ) Export goods Agricultural products 13.2 % Fuels and mining products 15.7 % Manufacturers 68.4 % Others 2.7 % Main export partners European Union 17.6 % United States 16.1 % United Arab Emirates 11.5 % Hong Kong 5.1 % China 3.4 % Other 46.3 % Imports $384.3 billion ( 2017 ) Import goods Agricultural products 7.1 % Fuels and mining products 33.1 % Manufacturers 47.8 % Other 12 % Main import partners China 17 % European Union 11.3 % United States 5.7 % United Arab Emirates 5.4 % Saudi Arabia 5.2 % Other 55.5 % FDI stock Inward : $318.50 billion Outward : $144.13 billion ( 2016 ) Current account 0.7 % of GDP ( 2016 -- 17 ) Gross external debt $471.9 billion ( 31 March 2017 ) Net international investment position - $404.8 billion ( Sept. 2017 ) Public finances Public debt 67.7 % of GDP ( 2017 ) Revenues ₹ 35.41 trillion ( US $540 billion ) ( 2017 ) Expenses ₹ 46.25 trillion ( US $710 billion ) ( 2017 ) Economic aid $2.68 billion ( 2016 ) Credit rating Standard & Poor 's : BBB − ( Domestic ) BBB − ( Foreign ) BBB+ ( T&C Assessment ) Outlook : Stable Moody 's : Baa2 Outlook : Stable Fitch : BBB − Outlook : Stable Foreign reserves $426.082 billion ( 13 April 2018 ) ( 8th ) Main data source : CIA World Fact Book All values , unless otherwise stated , are in US dollars .
+  Fact 0.0: Mumbai, Maharashtra is the financial center of India.
+  Fact 0.1: The currency of India is the Indian rupee (INR).
+  Fact 0.2: 1 rupee equals 100 paise.
+  Fact 0.3: India's fiscal year runs from 1 April to 31 March.
+  Fact 0.4: India's trade organisations include WTO, WCO, WFTU, G-20 and others.
+  Fact 0.5: India's nominal GDP is $2.848 trillion (2018 estimate).
+  Fact 0.6: India's PPP GDP is $10.385 trillion (2018 estimate).
+  Fact 0.7: India's nominal GDP rank is 6th.
+  Fact 0.8: India's PPP GDP rank is 3rd.
+  Fact 0.9: India's GDP growth is 7.2% (Q3, 2017-18), per MOSPI.
+  Fact 0.10: India's nominal GDP per capita is $2,134 (2018 estimate).
+  Fact 0.11: India's PPP GDP per capita is $7,783 (2018 estimate).
+  Fact 0.12: India's nominal GDP per capita rank is 141st.
+  Fact 0.13: India's PPP GDP per capita rank is 123rd.
+  Fact 0.14: Agriculture makes up 17.32% of India's GDP by sector (2016 estimate).
+  Fact 0.15: Industry makes up 29.02% of India's GDP by sector (2016 estimate).
+  Fact 0.16: Services make up 53.66% of India's GDP by sector (2016 estimate).
+  Fact 0.17: India's CPI inflation is 4.28% (March 2018).
+  Fact 0.18: India's base borrowing rate is 6.25% (as on 16 March 2018).
+  Fact 0.19: 21.2% of India's population is below the poverty line.
+  Fact 0.20: 58% of India's population lives on less than $3.10 per day (2011, World Bank estimate).
+  Fact 0.21: India's Gini coefficient is 33.9 (2013).
+  Fact 0.22: India's Human Development Index is 0.624 (2015), rated medium and ranked 131st.
+  Fact 0.23: India's labour force is 520.2 million (2017).
+  Fact 0.24: Agriculture accounts for 47% of India's labour force by occupation (FY 2014 estimate).
+  Fact 0.25: Industry accounts for 22% of India's labour force by occupation (FY 2014 estimate).
+  Fact 0.26: Services account for 31% of India's labour force by occupation (FY 2014 estimate).
+  Fact 0.27: India's unemployment rate is 8.8% (2017).
+  Fact 0.28: India's average net salary is ₹82,269 or $1,284 annually (2016-17).
+  Fact 0.29: Main industries in India include textiles, chemicals, food processing, steel, cement, mining, petroleum, machinery, software, pharmaceuticals and transportation equipment.
+  Fact 0.30: India's ease-of-doing-business rank is 100 (2017).
+  Fact 0.31: India's exports are $275.8 billion (2017).
+  Fact 0.32: Agricultural products make up 13.2% of India's export goods.
+  Fact 0.33: Fuels and mining products make up 15.7% of India's export goods.
+  Fact 0.34: Manufacturers make up 68.4% of India's export goods.
+  Fact 0.35: Other export goods make up 2.7% of India's exports.
+  Fact 0.36: The European Union is 17.6% of India's main export partners.
+  Fact 0.37: The United States is 16.1% of India's main export partners.
+  Fact 0.38: The United Arab Emirates is 11.5% of India's main export partners.
+  Fact 0.39: Hong Kong is 5.1% of India's main export partners.
+  Fact 0.40: China is 3.4% of India's main export partners.
+  Fact 0.41: Other export partners make up 46.3% of India's exports.
+  Fact 0.42: India's imports are $384.3 billion (2017).
+  Fact 0.43: Agricultural products make up 7.1% of India's import goods.
+  Fact 0.44: Fuels and mining products make up 33.1% of India's import goods.
+  Fact 0.45: Manufacturers make up 47.8% of India's import goods.
+  Fact 0.46: Other import goods make up 12% of India's imports.
+  Fact 0.47: China is 17% of India's main import partners.
+  Fact 0.48: The European Union is 11.3% of India's main import partners.
+  Fact 0.49: The United States is 5.7% of India's main import partners.
+  Fact 0.50: The United Arab Emirates is 5.4% of India's main import partners.
+  Fact 0.51: Saudi Arabia is 5.2% of India's main import partners.
+  Fact 0.52: Other import partners make up 55.5% of India's imports.
+  Fact 0.53: India's inward FDI stock is $318.50 billion (2016).
+  Fact 0.54: India's outward FDI stock is $144.13 billion (2016).
+  Fact 0.55: India's current account is 0.7% of GDP (2016-17).
+  Fact 0.56: India's gross external debt is $471.9 billion (31 March 2017).
+  Fact 0.57: India's net international investment position is -$404.8 billion (Sept. 2017).
+  Fact 0.58: India's public debt is 67.7% of GDP (2017).
+  Fact 0.59: India's public revenues are ₹35.41 trillion, or US$540 billion (2017).
+  Fact 0.60: India's public expenses are ₹46.25 trillion, or US$710 billion (2017).
+  Fact 0.61: India's economic aid is $2.68 billion (2016).
+  Fact 0.62: Standard & Poor's gives India a BBB- domestic credit rating.
+  Fact 0.63: Standard & Poor's gives India a BBB- foreign credit rating.
+  Fact 0.64: Standard & Poor's gives India a BBB+ T&C assessment.
+  Fact 0.65: Standard & Poor's outlook for India is stable.
+  Fact 0.66: Moody's gives India a Baa2 rating with a stable outlook.
+  Fact 0.67: Fitch gives India a BBB- rating with a stable outlook.
+  Fact 0.68: India's foreign reserves are $426.082 billion (13 April 2018), ranked 8th.
+  Fact 0.69: The main data source for these figures is the CIA World Fact Book.
+  Fact 0.70: All values, unless otherwise stated, are in US dollars.
+Sentence 1: India has one of the fastest growing service sectors in the world with an annual growth rate above 9 % since 2001 , which contributed to 57 % of GDP in 2012 -- 13 . India has become a major exporter of IT services , Business Process Outsourcing ( BPO ) services , and software services with $154 billion revenue in FY 2017 . This is the fastest - growing part of the economy . The IT industry continues to be the largest private - sector employer in India . India is the third - largest start - up hub in the world with over 3,100 technology start - ups in 2014 -- 15 The agricultural sector is the largest employer in India 's economy but contributes to a declining share of its GDP ( 17 % in 2013 -- 14 ) . India ranks second worldwide in farm output . The industry ( manufacturing ) sector has held a steady share of its economic contribution ( 26 % of GDP in 2013 -- 14 ) . The Indian automobile industry is one of the largest in the world with an annual production of 21.48 million vehicles ( mostly two and three - wheelers ) in 2013 -- 14 . India had $600 billion worth of retail market in 2015 and one of world 's fastest growing e-commerce markets .
+  Fact 1.0: India has one of the fastest growing service sectors in the world.
+  Fact 1.1: India's service sector has grown at an annual rate above 9% since 2001.
+  Fact 1.2: India's service sector contributed 57% of GDP in 2012-13.
+  Fact 1.3: India has become a major exporter of IT services, Business Process Outsourcing (BPO) services and software services.
+  Fact 1.4: India's IT, BPO and software services exports had $154 billion in revenue in FY 2017.
+  Fact 1.5: The IT and services export part of the economy is the fastest-growing part of the economy.
+  Fact 1.6: The IT industry is the largest private-sector employer in India.
+  Fact 1.7: India is the third-largest start-up hub in the world.
+  Fact 1.8: India had over 3,100 technology start-ups in 2014-15.
+  Fact 1.9: The agricultural sector is the largest employer in India's economy.
+  Fact 1.10: Agriculture's share of India's GDP is declining, at 17% in 2013-14.
+  Fact 1.11: India ranks second worldwide in farm output.
+  Fact 1.12: The industry (manufacturing) sector has held a steady share of India's economic contribution, at 26% of GDP in 2013-14.
+  Fact 1.13: The Indian automobile industry is one of the largest in the world.
+  Fact 1.14: The Indian automobile industry produced 21.48 million vehicles in 2013-14, mostly two- and three-wheelers.
+  Fact 1.15: India had a $600 billion retail market in 2015.
+  Fact 1.16: India has one of the world's fastest growing e-commerce markets.
+Sentence 2: India ranks second worldwide in farm output . Agriculture and allied sectors like forestry , logging and fishing accounted for 17 % of the GDP and employed 49 % of its total workforce in 2014 . Agriculture accounted for 23 % of GDP , and employed 59 % of the country 's total workforce in 2016 . As the Indian economy has diversified and grown , agriculture 's contribution to GDP has steadily declined from 1951 to 2011 , yet it is still the country 's largest employment source and a significant piece of its overall socio - economic development . Crop - yield - per - unit - area of all crops has grown since 1950 , due to the special emphasis placed on agriculture in the five - year plans and steady improvements in irrigation , technology , application of modern agricultural practices and provision of agricultural credit and subsidies since the Green Revolution in India . However , international comparisons reveal the average yield in India is generally 30 % to 50 % of the highest average yield in the world . The states of Uttar Pradesh , Punjab , Haryana , Madhya Pradesh , Andhra Pradesh , Telangana , Bihar , West Bengal , Gujarat and Maharashtra are key contributors to Indian agriculture .
+  Fact 2.0: India ranks second worldwide in farm output.
+  Fact 2.1: Agriculture and allied sectors, such as forestry, logging and fishing, accounted for 17% of India's GDP in 2014.
+  Fact 2.2: Agriculture and allied sectors employed 49% of India's total workforce in 2014.
+  Fact 2.3: Agriculture accounted for 23% of India's GDP in 2016.
+  Fact 2.4: Agriculture employed 59% of India's total workforce in 2016.
+  Fact 2.5: Agriculture's contribution to India's GDP has steadily declined from 1951 to 2011.
+  Fact 2.6: Agriculture is still the country's largest employment source.
+  Fact 2.7: Agriculture is a significant piece of India's overall socio-economic development.
+  Fact 2.8: Crop yield per unit area of all crops in India has grown since 1950.
+  Fact 2.9: Crop yield growth in India is due to the special emphasis on agriculture in the five-year plans.
+  Fact 2.10: Crop yield growth in India is due to steady improvements in irrigation and technology.
+  Fact 2.11: Crop yield growth in India is due to application of modern agricultural practices.
+  Fact 2.12: Crop yield growth in India is due to provision of agricultural credit and subsidies since the Green Revolution.
+  Fact 2.13: International comparisons reveal that the average yield in India is generally 30% to 50% of the highest average yield in the world.
+  Fact 2.14: Uttar Pradesh, Punjab, Haryana, Madhya Pradesh, Andhra Pradesh, Telangana, Bihar, West Bengal, Gujarat and Maharashtra are key contributors to Indian agriculture.
+
+Retrieved items:
+<item 1>
+Economy of India
+Agriculture and allied sectors like forestry , logging and fishing accounted for 17 % of the GDP and employed 49 % of its total workforce in 2014 . Agriculture
+accounted for 23 % of GDP , and employed 59 % of the country 's total workforce in 2016 . As the Indian economy has diversified and grown , agriculture 's
+contribution to GDP has steadily declined from 1951 to 2011 , yet it is still the country 's largest employment source and a significant piece of its overall
+socio - economic development . Crop - yield - per - unit - area of all crops has grown since 1950 , due to the special emphasis placed on agriculture in the
+five - year plans and steady improvements in irrigation , technology , application of modern agricultural practices and provision of agricultural credit and
+subsidies since the Green Revolution in India . However , international comparisons reveal the average yield in India is generally 30 % to 50 % of the highest
+average yield in the world . The states of Uttar Pradesh , Punjab , Haryana , Madhya Pradesh , Andhra Pradesh , Telangana , Bihar , West Bengal , Gujarat and
+Maharashtra are key contributors to Indian agriculture .
+</item 1>
+
+<item 2>
+Economy of India
+India exports several agriculture products , such as Basmati rice , wheat , cereals , spices , fresh fruits , dry fruits , buffalo beef meat , cotton , tea ,
+coffee and other cash crops particularly to the Middle East , Southeast and East Asian countries . About 10 percent of its export earnings come from this trade
+. Industry Industry accounts for 26 % of GDP and employs 22 % of the total workforce . According to the World Bank , India 's industrial manufacturing GDP
+output in 2015 was 6th largest in the world on current US dollar basis ( $559 billion ) , and 9th largest on inflation - adjusted constant 2005 US dollar basis
+( $197.1 billion ) . The industrial sector underwent significant changes due to the 1991 economic reforms , which removed import restrictions , brought in
+foreign competition , led to the privatisation of certain government - owned public - sector industries , liberalised the foreign direct investment ( FDI )
+regime , improved infrastructure and led to an expansion in the production of fast - moving consumer goods . Post-liberalisation , the Indian private sector was
+faced with increasing domestic and foreign competition , including the threat of cheaper Chinese imports .
+</item 2>
+
+<item 3>
+Economy of India
+India will soon have the largest and youngest workforce the world has ever seen . At the same time , the country is in the midst of a massive wave of
+urbanization as some 10 million people move to towns and cities each year in search of jobs and opportunity . It is the largest rural - urban migration of this
+century . Massive investments will be needed to create the jobs , housing , and infrastructure to meet soaring aspirations and make towns and cities more
+livable and green . -- World Bank : India Country Overview 2013 Agriculture Main article : Agriculture in India Agriculture is an important part of the Indian
+economy . At around 1,530,000 square kilometres ( 590,000 sq mi ) , India has the second - largest amount of arable land , after the US , with 52 % of total
+land under cultivation . Although the total land area of the country is only slightly more than one third of China or the US , India 's arable land is
+marginally smaller than that of the US , and marginally larger than that of China . However , agricultural output lags far behind its potential . The low
+productivity in India is a result of several factors .
+</item 3>
+
+<item 4>
+Agriculture in India
+Bihar Peasant Life . Bengal Secretariat Press , Calcutta . References ( edit ) Jump up ^ https://books.google.com/books?id=pU6dCgAAQBAJ&pg=PA96 Jump up ^
+Agriculture 's share in GDP declines to 13.7 % in 2012 - 13 Jump up ^ `` CIA Factbook : India '' . CIA Factbook . Central Intelligence Agency . Archived from
+the original on 11 June 2008 . Retrieved 2008 - 06 - 10 . Jump up ^ Staff , India Brand Equity Foundation Agriculture and Food in India Accessed 7 May 2013 ^
+Jump up to : India 's Agricultural Exports Climb to Record High , United States Department of Agriculture ( 2014 ) Jump up ^
+http://www.ibef.org/exports/agriculture-and-food-industry-india.aspx Jump up ^ http://www.agriexam.com/?m=1 ^ Jump up to : `` FAOSTAT , 2010 data '' .
+Faostat.fao.org . Retrieved 2011 - 09 - 17 .
+</item 4>
+
+<item 5>
+Agriculture in India
+India 's agricultural economy is undergoing structural changes . Between 1970 and 2011 , the GDP share of agriculture has fallen from 43 % to 16 % . This is n't
+because of reduced importance of agriculture or a consequence of agricultural policy . This is largely because of the rapid economic growth in services ,
+industrial output , and non-agricultural sectors in India between 2000 and 2010 . Agricultural scientist MS Swaminathan has played a vital role in the green
+revolution . In 2013 NDTV awarded him as 25 living legend of India for outstanding contribution to agriculture and making India a food sovereign country . An
+irrigation canal in Gujarat . Irrigation contributes significantly to agriculture in India . Two states , Sikkim and Kerala have planned to shift fully to
+organic farming by 2015 and 2016 respectively . Irrigation ( edit ) Main article : Irrigation in India Indian irrigation infrastructure includes a network of
+major and minor canals from rivers , groundwater well - based systems , tanks , and other rainwater harvesting projects for agricultural activities . Of these ,
+the groundwater system is the largest .
+</item 5>
+
+<item 6>
+Economy of India
+Employment See also : Labour in India , Indian labour law , Child labour in India , and Unemployment in India Agricultural and allied sectors accounted for
+about 52.1 % of the total workforce in 2009 -- 10 . While agriculture employment has fallen over time in percentage of labour employed , services which includes
+construction and infrastructure have seen a steady growth accounting for 20.3 % of employment in 2012 -- 13 . Of the total workforce , 7 % is in the organised
+sector , two - thirds of which are in the government - controlled public sector . About 51.2 % of the workforce in India is self - employed . According to a
+2005 -- 06 survey , there is a gender gap in employment and salaries . In rural areas , both men and women are primarily self - employed , mostly in agriculture
+. In urban areas , salaried work was the largest source of employment for both men and women in 2006 . Unemployment in India is characterised by chronic (
+disguised ) unemployment .
+</item 6>
+
+<item 7>
+Agriculture in India
+Amul : an integrated dairy with milk processing plant in Gujarat state . India has some of the world 's best agricultural yields in its tea plantations . A tea
+estate in Kerala state . As of 2011 , India had a large and diverse agricultural sector , accounting , on average , for about 16 % of GDP and 10 % of export
+earnings . India 's arable land area of 159.7 million hectares ( 394.6 million acres ) is the second largest in the world , after the United States . Its gross
+irrigated crop area of 82.6 million hectares ( 215.6 million acres ) is the largest in the world . India is among the top three global producers of many crops ,
+including wheat , rice , pulses , cotton , peanuts , fruits and vegetables . Worldwide , as of 2011 , India had the largest herds of buffalo and cattle , is the
+largest producer of milk and has one of the largest and fastest growing poultry industries . Major crops and yields ( edit ) The following table presents the 20
+most important agricultural products in India , by economic value , in 2009 .
+</item 7>
+
+<item 8>
+Agriculture in India
+The economic contribution of agriculture to India 's GDP is steadily declining with the country 's broad - based economic growth . Still , agriculture is
+demographically the broadest economic sector and plays a significant role in the overall socio - economic fabric of India . India exported $38 billion worth of
+agricultural products in 2013 , making it the seventh largest agricultural exporter worldwide and the sixth largest net exporter . Most of its agriculture
+exports serve developing and least developed nations . Indian agricultural / horticultural and processed foods are exported to more than 120 countries ,
+primarily in the Middle East , Southeast Asia , SAARC countries , the EU and the United States .
+</item 8>
+
+<item 9>
+Agriculture in India
+India 's integration into the global economy has been accompanied by impressive economic growth that has brought significant economic and social benefits to the
+country . Nevertheless , disparities in income and human development are on the rise . Preliminary estimates suggest that in 2009 - 10 the combined all India
+poverty rate was 32 % compared to 37 % in 2004 - 05 . Going forward , it will be essential for India to build a productive , competitive , and diversified
+agricultural sector and facilitate rural , non-farm entrepreneurship and employment . Encouraging policies that promote competition in agricultural marketing
+will ensure that farmers receive better prices . '' -- World Bank : `` India Country Overview 2011 '' A 2003 analysis of India 's agricultural growth from 1970
+to 2001 by the Food and Agriculture Organisation identified systemic problems in Indian agriculture .
+</item 9>
+
+<item 10>
+Economy of India
+The strong efforts taken by the Department of Industrial Policy and Promotion ( DIPP ) to boost ease of doing business rankings at the state level is said to
+impact the overall rankings of India . Sectors Percent labour employment in India by economic sectors ( 2010 ) . Contribution to GDP of India by economic
+sectors of Indian economy have evolved between 1951 and 2013 , as its economy has diversified and developed . Historically , India has classified and tracked
+its economy and GDP in three sectors : agriculture , industry and services . Agriculture includes crops , horticulture , milk and animal husbandry , aquaculture
+, fishing , sericulture , aviculture , forestry and related activities . Industry includes various manufacturing sub-sectors . India 's definition of services
+sector includes its construction , retail , software , IT , communications , hospitality , infrastructure operations , education , health care , banking and
+insurance , and many other economic activities . Agriculture Rice fields near Puri , Odisha on India 's east coast Main articles : Agriculture in India ,
+Forestry in India , Animal husbandry in India , Fishing in India , and Natural resources in India India ranks second worldwide in farm output .
+</item 10>
+=== END ITEM id=1e1f14dcbda3db31 ===
+
+=== ITEM id=99e383302982fc1a ===
+Gold sentences and facts:
+Sentence 0: The story in the book takes place in Tulsa , Oklahoma , in 1965 , but this is never explicitly stated in the book .
+  Fact 0.0: The story in the book takes place in Tulsa, Oklahoma.
+  Fact 0.1: The story in the book takes place in 1965.
+  Fact 0.2: The book never explicitly states that the story takes place in 1965.
+
+Retrieved items:
+<item 1>
+The Outsiders (novel)
+He is the unofficial leader of the gang . Johnny Cade : Ponyboy 's best friend , 16 years old , who is extremely quiet and lives with his alcoholic and abusive
+mother and father . Dallas `` Dally '' Winston : The roughest of the greasers , who lived on the streets of New York City for three years . Keith `` Two - Bit
+'' Mathews : A wise - cracking kleptomaniac . Steve Randle : Sodapop 's best friend since grade school . Timothy `` Tim '' Shepard : Leader of another greaser
+gang : an organized downtown one . Sandy : Sodapop 's girlfriend . Socs Sherri `` Cherry '' Valance : Bob 's girlfriend , attends the same high school as
+Ponyboy . Robert `` Bob '' Sheldon : Cherry 's boyfriend who is stabbed and killed by Johnny . Randy Adderson : A friend of Bob 's and Marcia 's boyfriend .
+Marcia : Cherry 's best friend and Randy 's girlfriend . David : A member of Bob and Randy 's gang who attempted to drown Ponyboy in the fountain .
+</item 1>
+
+<item 2>
+The Outsiders (novel)
+Jump up ^ Cummings , Siena ( 2017 ) . `` ( www.standard.net/TX/2017/09/24/After-50-years-Outsiders After 50 years , ' Outsiders ' continues to ' stay gold ' ) .
+'' Standard - Examiner . Ogden Publishing Corporation . Bibliography Hinton , S.E. ( 1997 ) . The Outsiders . New York : SPEAK . ISBN 9780140385724 . External
+links S.E. Hinton 's Website `` ' The Outsiders ' : 40 Years Later '' By Dale Peck The New York Times September 23 , 2007 S.E. Hinton Books The Outsiders Rumble
+Fish That Was Then , This Is Now Tex Taming the Star Runner Hawkes Harbor Some of Tim 's Stories Big David , Little David The Puppy Sister Books I Love Best
+Yearly : Older Readers Award The Secret Diary of Adrian Mole , Aged 133⁄4 by Sue Townsend ( 1990 ) The Outsiders by S.E. Hinton ( 1991 ) Where 's Wally ?
+</item 2>
+
+<item 3>
+The Outsiders (novel)
+After some heated talk , Ponyboy spits at the Socs , prompting them to try to drown him in a nearby fountain , but Johnny stabs Bob , killing him and dispersing
+the Socs . Terrified of what to do next , Ponyboy and Johnny rush to find Dally , who gives them money and a loaded gun , directing them to hide in an abandoned
+church in Windrixville . During their stay there , Pony cuts and dyes his hair as a disguise , reads Gone with the Wind to Johnny , and , upon viewing a
+beautiful sunrise , recites the poem `` Nothing Gold Can Stay '' by Robert Frost . Days later , Dally comes to check on them , revealing that violence between
+the greasers and Socs has escalated since Bob 's death into all - out city - wide warfare , with Cherry acting out of guilt as a spy for the greasers . Johnny
+decides to turn himself in and Dally agrees to take the boys back home . As they attempt to leave , they notice the church has caught fire and several local
+schoolchildren have become trapped inside .
+</item 3>
+
+<item 4>
+The Outsiders (novel)
+The next night , Ponyboy and two greaser friends , the hardened Dally and the quiet Johnny , meet Cherry and Marcia , a pair of Soc girls , at a drive - in
+movie theater . Cherry spurns Dally 's rude advances , but Ponyboy ends up speaking civilly with Cherry , emotionally connecting with a Soc for the first time
+in his life . Afterward , Ponyboy , Johnny , and their wisecracking friend Two - Bit begin to walk Cherry and Marcia home , when they are stopped by Cherry 's
+boyfriend Bob , who badly beat up Johnny a few months back . Bob and the greasers exchange taunts , but Cherry prevents a fight by willingly leaving with Bob .
+Ponyboy gets home at two in the morning , enraging Darry until he suddenly slaps Ponyboy . Ponyboy runs out the door and meets up with Johnny , expressing his
+anger at Darry 's increasing coldness in the wake of his parents ' recent deaths in a car crash . Ponyboy and Johnny wander into a park , where Bob and four
+other Socs surround them .
+</item 4>
+
+<item 5>
+The Outsiders (novel)
+On their way home , Pony spots Cherry and they talk . Cherry says she is unwilling to visit Johnny in the hospital because he killed her boyfriend . Pony calls
+her a traitor , but after explaining herself , they end on good terms . After escaping the hospital , Dally shows up just in time for the rumble . The greasers
+win the brutal fight . Afterward , Pony and Dally hurry back to the hospital to see Johnny , but he dies moments later and a maniacal Dally runs out of the room
+. Pony returns home that night feeling confused and disoriented . Dally calls the house to say that he has robbed a store and is running from the police . The
+greasers find Dally deliberately pointing an unloaded gun at the police , causing them to shoot and kill him . Overwhelmed , Ponyboy faints and is sick in bed
+for several days due to the resulting concussion . When the hearing finally comes , the judge frees Ponyboy from responsibility for Bob 's death and allows Pony
+to remain at home with Darry and Soda . Ponyboy returns to school , but his grades drop .
+</item 5>
+
+<item 6>
+The Outsiders (novel)
+Paul Holden : A former friend of Darry 's . Other Characters Jerry Wood : The schoolteacher responsible for the children who were in the seemingly abandoned
+church . Mr. Syme : Ponyboy 's English teacher who assigns him a theme to write that becomes the story of the novel itself . Controversy The Outsiders was a
+controversial book at the time of its publication ; it is still currently challenged and debated . It was ranked # 38 on the American Library Association 's Top
+100 Most Frequently Challenged Books of 1990 -- 1999 . This book has been banned from some schools and libraries because of the portrayal of gang violence ,
+underage smoking and drinking , strong language / slang , and family dysfunction . However , in many U.S. schools , the book is part of the English curriculum
+at the middle - or high - school level . See also The Outsiders House Museum References Jump up ^ Hinton , S.E. ( 2005 ) ( 1977 ) . `` speaking with S.E. Hinton
+'' . The Outsiders . Speak / Penguin Putnam . p. 162 .
+</item 6>
+
+<item 7>
+The Outsiders (novel)
+The greasers run inside the burning church to save the children , but Ponyboy is rendered unconscious by the fumes . At the hospital he discovers that he and
+Dally are not badly injured , but a piece of the church roof fell on Johnny and broke his back . Sodapop and Darry come to the hospital ; Darry breaks down and
+cries . Ponyboy then realizes that Darry cares about him , and is only hard on Ponyboy because he loves him and cares about his future . The following morning
+the newspapers declare Pony and Johnny heroes , but Johnny will be charged with manslaughter for Bob 's death . Two - Bit tells them that the greaser -- Soc
+rivalry is to be settled in a final rumble . Ponyboy and Two - Bit are approached by a Soc named Randy , Bob 's best friend , who expresses remorse for his
+involvement in the gang war , lacks confidence about the rumble ending the feud , and says he will not participate . Later , Ponyboy visits Johnny at the
+hospital , where he is in critical condition . On their way home , Pony spots Cherry and they talk .
+</item 7>
+
+<item 8>
+The Outsiders (novel)
+The story is told in first - person perspective by teenaged protagonist Ponyboy Curtis . The story in the book takes place in Tulsa , Oklahoma , in 1965 , but
+this is never explicitly stated in the book . A film adaptation was produced in 1983 , and a little - known short - lived television series appeared in 1990 ,
+picking up where the movie left off . A stage adaptation was written by Christopher Sergel and published in 1990 . Contents ( hide ) 1 Plot summary 2 Major
+characters 2.1 Greasers 2.2 Socs 2.3 Other characters 3 Controversy 4 See also 5 References 6 Bibliography 7 External links Plot summary Ponyboy Curtis , a
+teenaged member of a loose gang of `` greasers '' , is leaving a movie theater when he is jumped by `` Socs '' , the greasers ' rival gang . Several greasers ,
+including Ponyboy 's two older brothers -- the paternal Darry and the popular Sodapop -- come to his rescue .
+</item 8>
+
+<item 9>
+The Outsiders (novel)
+The Outsiders ( novel ) - wikipedia The Outsiders ( novel ) Jump to : navigation , search The Outsiders First hardcover edition , 1967 Author S.E. Hinton Cover
+artist Robert Hunt Country United States Language English Genre Young adult fiction Publisher Viking Press , Dell Publishing Publication date April 24 , 1967
+Media type Print ( hardcover , paperback ) , Audiobook Pages 192 ISBN 0 - 670 - 53257 - 6 OCLC 64396432 Followed by That Was Then , This Is Now The Outsiders is
+a coming - of - age novel by S.E. Hinton , first published in 1967 by Viking Press . Hinton was 15 when she started writing the novel , but did most of the work
+when she was 16 and a junior in high school . Hinton was 18 when the book was published . The book details the conflict between two rival gangs divided by their
+socioeconomic status : the working - class `` greasers '' and the upper - class `` Socs '' ( pronounced / ˈsoʊʃɪz / -- short for Socials ) .
+</item 9>
+
+<item 10>
+The Outsiders (novel)
+Ponyboy returns to school , but his grades drop . Although he is failing English , his teacher , Mr. Syme , says he will pass him if he writes a decent theme .
+In the copy of Gone with the Wind that Johnny gave him before dying , Ponyboy finds a note from Johnny describing how he will die proudly after saving the kids
+from the fire . Johnny also urges Ponyboy to `` stay gold '' . Ponyboy decides to write his English assignment about the recent events , and begins his essay
+with the opening line of the novel : `` When I stepped out into the bright sunlight from the darkness of the movie house , I had only two things on my mind :
+Paul Newman and a ride home ... '' Major Characters Greasers Ponyboy Curtis : Narrator and the youngest Curtis brother , 14 years old , who gets good grades and
+runs track . Sodapop Curtis : The middle Curtis brother , 16 years old , a high school dropout who works at a gas station . Darrel `` Darry '' Curtis : The
+oldest of the Curtis brothers , 20 years old , who has been caring for his brothers since their parents died in a car crash .
+</item 10>
+=== END ITEM id=99e383302982fc1a ===
+
+=== ITEM id=666bc3d179e53033 ===
+Gold sentences and facts:
+Sentence 0: Prior to 1940 the term `` jeep '' had been used as U.S. Army slang for new recruits or vehicles , but the World War II `` jeep '' that went into production in 1941 specifically tied the name to this light military 4x4 , arguably making them the oldest four - wheel drive mass - production vehicles now known as SUVs . The Jeep became the primary light 4 - wheel - drive vehicle of the United States Army and the Allies during World War II , as well as the postwar period . The term became common worldwide in the wake of the war . Doug Stewart noted : `` The spartan , cramped , and unstintingly functional jeep became the ubiquitous World War II four - wheeled personification of Yankee ingenuity and cocky , can - do determination . ''
+  Fact 0.0: Before 1940, 'jeep' had been used as U.S. Army slang for new recruits or vehicles
+  Fact 0.1: The World War II 'jeep' that went into production in 1941 specifically tied the name to a light military 4x4
+  Fact 0.2: The World War II jeep arguably made these vehicles the oldest four-wheel drive mass-production vehicles now known as SUVs
+  Fact 0.3: The Jeep became the primary light four-wheel-drive vehicle of the United States Army during World War II
+  Fact 0.4: The Jeep became the primary light four-wheel-drive vehicle of the Allies during World War II
+  Fact 0.5: The Jeep was the primary light four-wheel-drive vehicle of the United States Army and the Allies in the postwar period
+  Fact 0.6: The term 'jeep' became common worldwide in the wake of the war
+  Fact 0.7: Doug Stewart noted that the spartan, cramped, and unstintingly functional jeep became the ubiquitous World War II four-wheeled personification of Yankee ingenuity and cocky, can-do determination
+Sentence 1: At least two Jeep models ( the CJ - 5 and the SJ Wagoneer ) enjoyed extraordinary three - decade production runs of a single body generation . Jeeps have since the war inspired a number of other light utility vehicles , such as the Land Rover . Many Jeep variants serving similar military and civilian roles have since been designed in other nations . In lowercase the term `` jeep '' continues to be used as a generic term for vehicles inspired by the Jeep that are suitable for use on rough terrain .
+  Fact 1.0: At least two Jeep models, the CJ-5 and the SJ Wagoneer, enjoyed extraordinary three-decade production runs
+  Fact 1.1: The CJ-5 and the SJ Wagoneer each had a production run of a single body generation
+  Fact 1.2: Jeeps have inspired a number of other light utility vehicles since the war, such as the Land Rover
+  Fact 1.3: Many Jeep variants serving similar military and civilian roles have since been designed in other nations
+  Fact 1.4: In lowercase, the term 'jeep' continues to be used as a generic term
+  Fact 1.5: The generic term 'jeep' refers to vehicles inspired by the Jeep that are suitable for use on rough terrain
+Sentence 2: Jeep 's current product range consists solely of sport utility vehicles and off - road vehicles , but has also included pickup trucks in the past . Some of Jeep 's vehicles , such as the Grand Cherokee and the Wagoneer , reach into the luxury segment . Jeep sold 1.4 million SUVs globally in 2016 , up from 500,000 in 2008 , two - thirds of which in North America , and was Fiat - Chrysler 's best selling brand in the U.S. during the first half of 2017 . In the U.S. alone , over 2400 dealerships hold franchise rights to sell Jeep - branded vehicles , and if Jeep were spun off into a separate company , it is estimated to be worth between $22 and $33.5 billion -- slightly more than all of FCA ( US ) .
+  Fact 2.0: Jeep's current product range consists solely of sport utility vehicles and off-road vehicles
+  Fact 2.1: Jeep's product range has also included pickup trucks in the past
+  Fact 2.2: Some of Jeep's vehicles, such as the Grand Cherokee and the Wagoneer, reach into the luxury segment
+  Fact 2.3: Jeep sold 1.4 million SUVs globally in 2016
+  Fact 2.4: Jeep sold 500,000 SUVs globally in 2008
+  Fact 2.5: Two-thirds of the 1.4 million SUVs Jeep sold globally in 2016 were sold in North America
+  Fact 2.6: Jeep was Fiat-Chrysler's best selling brand in the U.S. during the first half of 2017
+  Fact 2.7: In the U.S. alone, over 2400 dealerships hold franchise rights to sell Jeep-branded vehicles
+  Fact 2.8: If Jeep were spun off into a separate company, it is estimated to be worth between $22 and $33.5 billion
+  Fact 2.9: That estimated value is slightly more than all of FCA (US)
+
+Retrieved items:
+<item 1>
+Jeep
+Jeep - wikipedia Jeep Jump to : navigation , search This article is about the U.S. motor manufacturing company . For the original World War II Jeep , see Willys
+MB . For other uses , see Jeep ( disambiguation ) . Jeep Type Division Industry Automotive Founded 1943 trademark application 1945 first civilian Jeep launched
+Headquarters Toledo , Ohio , U.S. Area served Worldwide Key people Michael Manley ( CEO of Jeep division ) Sergio Marchionne ( CEO of FCA US LLC ) Products
+Sport utility vehicles Luxury vehicles Owner Fiat Chrysler Automobiles Parent Willys - Overland ( 1943 - 1953 ) Kaiser - Jeep ( 1953 - 1970 ) American Motors
+Corporation ( 1970 - 1986 ) Chrysler ( 1987 - present ) Website jeep.com Jeep is a brand of American automobiles that is a division of FCA US LLC ( formerly
+Chrysler Group , LLC ) , a wholly owned subsidiary of Fiat Chrysler Automobiles . Jeep has been a part of Chrysler since 1987 , when Chrysler acquired the Jeep
+brand , along with remaining assets , from its previous owner : American Motors Corporation ( AMC ) .
+</item 1>
+
+<item 2>
+Jeep
+Please consider summarizing the material while citing sources as needed . ( December 2017 ) Main article : List of Jeep vehicles Jeep CJ Main article : Jeep CJ
+( Civilian Jeep ) 1982 Jeep Scrambler The CJ ( for `` Civilian Jeep '' ) series were literally the first `` Jeep '' branded vehicles produced for the civilian
+public , beginning in 1945 with the CJ - 2A , followed by the CJ - 3A in 1949 and the CJ - 3B in 1953 . These early Jeeps are commonly referred to as ``
+flatfenders '' because their front fenders were flat and rectangular across , like on their military forebears , the Willys MB and identical Ford GPW models .
+The CJ - 4 exists only as a 1951 prototype , and is the `` missing link '' between the flat - fendered CJ - 2A and CJ - 3B and the round - fendered CJ - 5 first
+introduced in 1955 .
+</item 2>
+
+<item 3>
+The Wrangler, with solid axles and an open top, is central to Jeep’s identity; some models, including the CJ-5 and Wagoneer, had unusually long production runs.
+Wartime Jeeps inspired the Land Rover and many later military and civilian off-road vehicles, and “jeep” became a generic term. Willys promoted its wartime
+contribution, faced trademark disputes with Bantam, and began selling Civilian Jeeps in 1945; it secured the registered Jeep
+</item 3>
+
+<item 4>
+Jeep concept vehicles listed include the windowless hardtop; 2014 Wrangler Level Red, Cherokee Dakar, and Wrangler MOJO; and 2015 Chief, Wrangler Africa,
+Wrangler Red Rock Responder, and Staff Car—the latter honoring Jeep’s military history from WWII. Jeep reportedly produced five current models, while eight
+vehicles carried the brand name or logo. Listed vehicles were the Renegade BU (subcompact SUV), Wrangler JK (two-door compact SUV), JK Unlimited
+</item 4>
+
+<item 5>
+Jeep’s concept history spans experimental 4x4s, production previews, and heritage-inspired designs. Early studies included the 1963 low-cost XM-200,
+Renault-based Model H, Corvair-powered Jeepvair, and 1971 Cowboy. The Cherokee Targa became the Freedom show car; Concept 1 evolved into the Grand Cherokee,
+while the Rubicon Wrangler and Comanche Thunderchief later reached production. Later concepts included the 2005 Gladiator, 2010 military
+</item 5>
+
+<item 6>
+Jeep is an American automotive brand headquartered in Toledo, Ohio, now part of Fiat Chrysler Automobiles (FCA). Founded during World War II and trademarked in
+1943, it became known for four-wheel-drive vehicles. Its ownership passed from Willys-Overland to Kaiser, AMC, Chrysler, and ultimately FCA. Today Jeep
+primarily sells SUVs, including luxury models; global sales reached 1.4 million in 2016. Jeeps have also been built under license worldwide
+</item 6>
+
+<item 7>
+Jeep
+windowless hardtop 2014 Jeep Wrangler Level Red 2014 Jeep Cherokee Dakar 2014 Jeep Wrangler MOJO 2015 Jeep Chief 2015 Jeep Wrangler Africa 2015 Jeep Wrangler
+Red Rock Responder 2015 Jeep Staff Car : a tribute to Jeep 's military history starting with WWII Current models The Jeep brand currently produces five models ,
+but 8 vehicles are under the brand name or use the Jeep logo : Jeep Renegade BU : Subcompact Sport Utility Vehicle Jeep Wrangler JK : Standard wheelbase Compact
+Sport utility vehicle , 2 - door version JK Unlimited : Long wheelbase Mid-Size sport utility vehicle , 4 - door version J8 : Mid-Size military sport utility
+vehicle ; Produced by AIL , AAV , and AEV . TJL : Compact pickup truck , 2 - door version ; Produced by AAV .
+</item 7>
+
+<item 8>
+Jeep
+Also referred to as `` any small plane , helicopter , or gadget . '' This definition is supported by the use of the term `` jeep carrier '' to refer to the Navy
+'s small escort carriers . Early in 1941 , Willys - Overland demonstrated the vehicle 's off - road capability by having it drive up the steps of the United
+States Capitol , driven by Willys test driver Irving `` Red '' Hausmann , who had recently heard soldiers at Fort Holabird calling it a `` jeep . '' When asked
+by syndicated columnist Katharine Hillyer for the Washington Daily News ( or by a bystander , according to another account ) what it was called , Hausmann
+answered , `` It 's a jeep . '' Katharine Hillyer 's article was published nationally on February 19 , 1941 , and included a picture of the vehicle with the
+caption : LAWMAKERS TAKE A RIDE - With Senator Meade , of New York , at the wheel , and Representative Thomas , of New Jersey , sitting beside him , one of the
+Army 's new scout cars , known as `` jeeps '' or `` quads '' , climbs up the Capitol steps in a demonstration yesterday .
+</item 8>
+
+<item 9>
+Jeep
+Jeep 's current product range consists solely of sport utility vehicles and off - road vehicles , but has also included pickup trucks in the past . Some of Jeep
+'s vehicles , such as the Grand Cherokee and the Wagoneer , reach into the luxury segment . Jeep sold 1.4 million SUVs globally in 2016 , up from 500,000 in
+2008 , two - thirds of which in North America , and was Fiat - Chrysler 's best selling brand in the U.S. during the first half of 2017 . In the U.S. alone ,
+over 2400 dealerships hold franchise rights to sell Jeep - branded vehicles , and if Jeep were spun off into a separate company , it is estimated to be worth
+between $22 and $33.5 billion -- slightly more than all of FCA ( US ) . Prior to 1940 the term `` jeep '' had been used as U.S.
+</item 9>
+
+<item 10>
+Jeep
+With its solid axles and open top , the Wrangler has been called the Jeep model that is as central to the brand 's identity as the rear - engined 911 is to
+Porsche . At least two Jeep models ( the CJ - 5 and the SJ Wagoneer ) enjoyed extraordinary three - decade production runs of a single body generation . Jeeps
+have since the war inspired a number of other light utility vehicles , such as the Land Rover . Many Jeep variants serving similar military and civilian roles
+have since been designed in other nations . In lowercase the term `` jeep '' continues to be used as a generic term for vehicles inspired by the Jeep that are
+suitable for use on rough terrain . Contents ( hide ) 1 World War II Jeeps 1.1 Development -- 1 . Bantam Reconnaissance Car 1.2 Development -- 2 . Enter Willys
+and Ford 1.3 Full production -- Willys MB and Ford GPW 2 Post-war military Jeeps 2.1 CJ - V35 / U 2.2 M715 3 Jeep etymology 4 Brand , trademarks and image 4.1
+Off - road abilities 5 Company history and ownership 5.
+</item 10>
+=== END ITEM id=666bc3d179e53033 ===

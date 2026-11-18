@@ -1,0 +1,782 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=f127d6fd7988e975 ===
+Gold sentences and facts:
+Sentence 0: Reading Full name Reading Football Club Nickname ( s ) The Royals Founded 1871 ; 147 years ago ( 1871 ) Ground Madejski Stadium Ground Capacity 24,161 Owner Dai Yongge and Dai Xiuli ( majority ) Chairman Sir John Madejski Manager Jaap Stam League Championship 2016 -- 17 Championship , 3rd Website Club website Home colours Away colours Current season
+  Fact 0.0: Reading Football Club's full name is Reading Football Club.
+  Fact 0.1: Reading Football Club's nickname is The Royals.
+  Fact 0.2: Reading Football Club was founded in 1871, 147 years ago.
+  Fact 0.3: Reading Football Club's ground is the Madejski Stadium.
+  Fact 0.4: The Madejski Stadium has a ground capacity of 24,161.
+  Fact 0.5: Reading Football Club is majority owned by Dai Yongge and Dai Xiuli.
+  Fact 0.6: The chairman of Reading Football Club is Sir John Madejski.
+  Fact 0.7: The manager of Reading Football Club is Jaap Stam.
+  Fact 0.8: Reading Football Club is in the Championship league, finishing 3rd in the 2016-17 Championship.
+  Fact 0.9: Reading Football Club has an official club website.
+Sentence 1: Reading Football Club ownership structure : 75 % Owned by Renhe Sports Management Ltd , 100 % owned by Xiu Li Dai and Yongge Dai . 25 % Owned by Narin Niruttinanon
+  Fact 1.0: Reading Football Club's ownership structure includes 75% owned by Renhe Sports Management Ltd.
+  Fact 1.1: Renhe Sports Management Ltd is 100% owned by Xiu Li Dai and Yongge Dai.
+  Fact 1.2: 25% of Reading Football Club is owned by Narin Niruttinanon.
+
+Retrieved items:
+<item 1>
+Reading F.C.
+Retrieved on 17 July 2013 . Jump up ^ HOW SOUTH GEORGIA UNITED BECAME A READING FC AFFILIATE CLUB . South Georgia United . Retrieved on 5 June 2014 .
+Bibliography ( edit ) Digby , Bob ( 2001 ) . It 's a World Thing . Oxford , Oxfordshire : Oxford University Press . ISBN 978 - 0 - 19 - 913428 - 1 . Retrieved 2
+June 2011 . Yeo , Stephen ( 1976 ) . Religion and Voluntary Organisations in Crisis . Abingdon , Oxfordshire : Taylor & Francis . ISBN 978 - 0 - 85664 - 017 - 9
+. Retrieved 1 June 2011 . External links ( edit ) Wikimedia Commons has media related to Reading F.C. . Official website Supporters ' Trust At Reading Reading
+F.C.
+</item 1>
+
+<item 2>
+Reading F.C.
+On 24 May 2007 , it was announced that planning permission had been granted to extend the stadium to a capacity of 36,900 . Reading have made plans for a new
+training ground at Bearwood Golf Club to replace Hogwood park their current training facility . On 5 July 2016 , at the end of Eamonn Dolan 's funeral , Reading
+announced that the North Stand would be renamed the `` Eamonn Dolan Stand '' . Support ( edit ) See also : Supporters ' Trust at Reading Supporters at a Reading
+match at Elm Park in 1913 In 2001 , Reading became the first football club to register their fans as an official member of their squad , giving the `` player ''
+registered with squad number 13 as ' Reading Fans ' . Rivalries ( edit ) Before going out of business in 1992 , Aldershot were Reading 's biggest rivals . There
+was a strong rift between the two sets of fans , with fighting between fans occurring on several occasions . Strong feelings remain between fans of Reading and
+fans of Aldershot Town , the refounded club in Aldershot .
+</item 2>
+
+<item 3>
+Reading F.C.
+Reading FC - Wikipedia Reading FC Jump to : navigation , search Not to be confused with Reading F.C. Women . Reading Full name Reading Football Club Nickname (
+s ) The Royals Founded 1871 ; 147 years ago ( 1871 ) Ground Madejski Stadium Ground Capacity 24,161 Owner Dai Yongge and Dai Xiuli ( majority ) Chairman Sir
+John Madejski Manager Jaap Stam League Championship 2016 -- 17 Championship , 3rd Website Club website Home colours Away colours Current season Reading Football
+Club ( / ˈrɛdɪŋ / ( listen ) RED - ing ) is a professional association football club based in Reading , Berkshire , England . The team play in the Championship
+, the second tier of English football . Reading are nicknamed The Royals , due to Reading 's location in the Royal County of Berkshire , though they were
+previously known as The Biscuitmen , due to the town 's association with Huntley and Palmers .
+</item 3>
+
+<item 4>
+Reading F.C.
+2006 -- 07 LMA Championship Manager of the Year Brian McDermott 2011 -- 12 Affiliated clubs ( edit ) Albion Hurricanes FC ( 2010 -- present ) Boreham Wood (
+2012 -- present ) Charlotte United FC ( 2007 -- present ) Ernakulam Eagles ( 2013 -- present ) Galatasaray ( 2013 -- present ) Ocean City Nor'easters ( 2008 --
+present ) South Georgia United ( 2008 -- present ) References ( edit ) Jump up ^ `` Madejski Stadium information '' . readingfc.co.uk . Retrieved 14 April 2011
+. ^ Jump up to : `` The History of Reading Football Club '' . readingfc.co.uk. 2 May 2010 . Archived from the original on 4 February 2010 . Retrieved 29
+November 2010 . Jump up ^ Discover gems of our heritage Archived 7 March 2012 at the Wayback Machine. , Reading Chronicle , 10 September 2009 . Jump up ^ `` Elm
+Park Reading '' . Old Football Grounds .
+</item 4>
+
+<item 5>
+Reading F.C.
+Reading were promoted to English football 's top division for the first time in their history . The 2006 -- 07 season saw Reading make their first appearance in
+the top flight of English football . Reading defied pre-season predictions of relegation to finish the season in eighth place with 55 points . Reading turned
+down the chance to play in the UEFA Intertoto Cup . In the run up to their second season in the Premier League , Reading took part in the 2007 Peace Cup in
+South Korea . This second season was less successful , however , and Reading were relegated back to the Championship . Reading started the 2008 -- 09 season
+with a 15 match unbeaten home run . They finished fourth and qualify for the play - offs , where they lost to Burnley in the semi-final . Manager Steve Coppell
+resigned just hours after the game , replaced by Brendan Rodgers . Rodgers left the club by mutual consent on 16 December 2009 and Brian McDermott made
+caretaker manager the same day .
+</item 5>
+
+<item 6>
+Reading F.C.
+25 % Owned by Narin Niruttinanon Reading F.C. Directors : Xiu Li Dai , Yongge Dai , Ronald Gourlay , Narin Niruttinanon , Nigel Howe Players ( edit ) As of 8
+January 2018 First - team squad ( edit ) Note : Flags indicate national team as defined under FIFA eligibility rules . Players may hold more than one non-FIFA
+nationality . No . Position Player GK Vito Mannone DF Chris Gunter MF Joey van den Berg 5 DF Paul McShane ( captain ) 6 DF Liam Moore 7 MF Roy Beerens 8 MF
+George Evans 9 FW Joseph Mendes 10 MF John Swift 11 DF Jordan Obita 12 MF Garath McCleary 14 FW Sone Aluko 15 MF Callum Harriott 16 MF David Edwards 17 FW Modou
+Barrow 18 FW Yann Kermorgant 19 MF Leandro Bacuna No .
+</item 6>
+
+<item 7>
+Reading F.C.
+. Official website Supporters ' Trust At Reading Reading F.C. on BBC Sport : Club news -- Recent results -- Upcoming fixtures Reading Football Club Current
+season Under - 21s & Academy Records & Statistics Honours History History Seasons Thames Valley Royals proposal Grounds Elm Park ( 1896 -- 1998 ) Madejski
+Stadium ( 1998 -- present ) People Managers Players with 1 -- 24 appearances 25 -- 99 appearances 100 + appearances Internationals Player of the Season Notable
+matches Level 2 play - off finals 1995 2011 2017 Level 3 play - off finals Full Members ' Cup finals 1988 Other matches Portsmouth 7 -- 4 Reading Related
+articles Hob Nob Anyone ? Supporters ' Trust At Reading Reading Women Marussia F1 Book : Reading F.C. Category : Reading F.C. Portal : Association football
+Commons : Reading F.C. Reading F.C. seasons 1940 -- 41 1941 -- 42 1942 -- 43 1943 -- 44 1944 -- 45 1945 -- 46 1946 -- 47 1947 -- 48 1948 -- 49
+</item 7>
+
+<item 8>
+Reading F.C.
+internationals Former players ( edit ) Main article : List of Reading F.C. players Club officials ( edit ) Board of Directors & Senior Club Staff Chief
+Executive : Ron Gourlay Commercial Director : Adam Benson Club Secretary : Sue Hewett Financial Controller : Bryan Stabler Directors : Sir John Madejski ( Co
+Chairman ) , Sasima Srivikorn ( Co Chairwoman ) , Nigel Howe , Narin Niruttinanon , Sumrith Thanakarnjanasuth , Taweesuk Srisumrid and Theekharoj Piamphongsarn
+Management team Director of Football : Brian Tevreden First Team Manager : Jaap Stam Assistant Manager : Andries Ulderink & Said Bakkati First Team Coach :
+Michael Gilkes Goalkeeping Coach : Dave Beasant First Team Sports Scientist : Tristan Baker First Team Physio : Jon Urwin Academy Manager : Lee Herron Assistant
+Academy Manager : David Dodds Academy Loan Manager : Mikele Leigertwood Kit Manager : Stewart Bannister First Team Head Scout : Steve Shorey Masseur : Dan
+Buchanan Managers ( edit ) Main article : List of Reading F.C.
+</item 8>
+
+<item 9>
+Reading F.C.
+Reading then finished eighth in the 2006 -- 07 Premier League , their first ever season as a top flight club . Contents ( hide ) 1 History 2 Crest and colours 3
+Stadium 4 Support 4.1 Rivalries 5 Sponsorship 5.1 Additional kit sponsors 6 Ownership and finances 7 Players 7.1 First - team squad 7.2 Under - 23 squad 7.3
+Under - 18 squad 7.4 Out on loan 8 Records and statistics 8.1 Notable players 8.2 Player of the season 8.3 International players 8.4 Former players 9 Club
+officials 10 Managers 11 Women 's team 12 Honours 12.1 Managerial 13 Affiliated clubs 14 References 15 Bibliography 16 External links History ( edit ) Main
+article : History of Reading F.C. See also : Thames Valley Royals proposal Reading were formed on 25 December 1871 , following a public meeting at the Bridge
+Street Rooms organised by the future club secretary Joseph Edward Sydenham .
+</item 9>
+
+<item 10>
+Reading F.C.
+A board meeting the following year decided that the move would not be possible , as `` there was no chance of a move to the ground near to the GWR railway
+stations due to the actions of the Great Western Railway '' . The Madejski Stadium has been Reading 's home ground since 1998 In 1994 , the Taylor Report made
+an all - seater stadium compulsory in the top two divisions ( the Premier League and the first division ) . Reading were champions of the second division in
+1994 , and were promoted to the first division . Reading became subject to the Taylor requirements , though converting Elm Park to an all - seater stadium would
+have been impractical . Instead , a location in Smallmead ( to the south of the town ) was identified as the site for a new stadium . The former council
+landfill site was bought for £ 1 , with further conditions that the development of the stadium would include part - funding of the A33 relief road . Expansion
+of the club 's home would also allow alternative commercial ventures ( particularly leisure facilities ) and shared use with other teams ( such as rugby union
+clubs Richmond and London Irish ) .
+</item 10>
+=== END ITEM id=f127d6fd7988e975 ===
+
+=== ITEM id=81190a91690c69ea ===
+Gold sentences and facts:
+Sentence 0: It is also known as an `` immediate hemolytic transfusion reaction '' . This is a medical emergency as it results from rapid destruction of the donor red blood cells by host antibodies ( IgG , IgM ) . It is usually related to ABO blood group incompatibility - the most severe of which often involves group A red cells being given to a patient with group O type blood . Properdin then binds to complement C3 in the donor blood , facilitating the reaction through the alternate pathway cascade . The donor cells also become coated with IgG and are subsequently removed by macrophages in the reticuloendothelial system ( RES ) . Jaundice and disseminated intravascular coagulation ( DIC ) may also occur . The most common cause is clerical error ( i.e. the wrong unit of blood being given to the patient ) .
+  Fact 0.0: The reaction described is also known as an immediate hemolytic transfusion reaction.
+  Fact 0.1: The immediate hemolytic transfusion reaction is a medical emergency.
+  Fact 0.2: The immediate hemolytic transfusion reaction results from rapid destruction of donor red blood cells by host antibodies.
+  Fact 0.3: The host antibodies involved in the immediate hemolytic transfusion reaction include IgG and IgM.
+  Fact 0.4: The immediate hemolytic transfusion reaction is usually related to ABO blood group incompatibility.
+  Fact 0.5: The most severe ABO blood group incompatibility often involves group A red cells being given to a patient with group O type blood.
+  Fact 0.6: Properdin binds to complement C3 in the donor blood.
+  Fact 0.7: Properdin binding to complement C3 facilitates the reaction through the alternate pathway cascade.
+  Fact 0.8: The donor cells become coated with IgG.
+  Fact 0.9: Coated donor cells are subsequently removed by macrophages in the reticuloendothelial system (RES).
+  Fact 0.10: Jaundice may occur as part of the immediate hemolytic transfusion reaction.
+  Fact 0.11: Disseminated intravascular coagulation (DIC) may occur as part of the immediate hemolytic transfusion reaction.
+  Fact 0.12: The most common cause of the immediate hemolytic transfusion reaction is clerical error.
+  Fact 0.13: A clerical error can result in the wrong unit of blood being given to the patient.
+
+Retrieved items:
+<item 1>
+Acute hemolytic transfusion reaction
+It may also be caused by other non-ABO IgG antibodies such as Rh , Kell , or Duffy . The former results in a severe intravascular hemolysis and the latter
+typically causes extravascular hemolysis . The reactions are mediated by cytokines like TNF , IL - 8 , monocyte chemoattractant protein , IL - 1 etc .
+Non-immune mediated ( edit ) These occur when RBCs are damaged before transfusion , resulting in hemoglobinemia and hemoglobinuria . Clinical symptoms are nil
+or milder . Diagnosis ( edit ) Differential diagnoses ( edit ) Disseminated intravascular coagulation Hemolytic anemia Pulmonary edema Septic shock Management (
+edit ) In case of antibody - mediated acute hemolytic transfusion reactions , Immediately discontinue the transfusion while maintaining venous access for
+emergency management . Anticipate low blood pressure , kidney failure , and DIC . Prophylactic measures to reduce the risk of renal failure may include low -
+dose dopamine , vigorous hydration with intravenous crystalloid solutions ( e.g.
+</item 1>
+
+<item 2>
+Acute hemolytic transfusion reaction
+ISBN 1 - 4051 - 3649 - 9 . Jump up ^ Molthan L , Matulewicz TJ , Bansal - Carver B , Benz EJ ( 1984 ) . `` An immediate hemolytic transfusion reaction due to
+anti-C and a delayed hemolytic transfusion reaction due to anti-Ce + e : hemoglobinemia , hemoglobinuria and transient impaired renal function '' . Vox Sang. 47
+( 5 ) : 348 -- 53 . doi : 10.1111 / j. 1423 - 0410.1984. tb04138. x . PMID 6438912 . Jump up ^ `` The 2011 National Blood Collection and Utilization Survey
+Report '' ( PDF ) . Department of Health and Human Services . Retrieved 21 January 2016 . Jump up ^ Bolton - Maggs , PHB ; Poles , D ; et al . ( The Serious
+Hazards of Transfusion ( SHOT ) Steering Group ) ( 2015 ) . The 2014 Annual SHOT Report ( 2015 ) ( PDF ) .
+</item 2>
+
+<item 3>
+Acute hemolytic transfusion reaction
+The 2014 Annual SHOT Report ( 2015 ) ( PDF ) . SHOT . ISBN 978 - 0 - 9558648 - 7 - 2 . ^ Jump up to : Laura , Dean ( 2005 ) . Blood Groups and Red Cell Antigens
+. Bethesda , United States : National Center for Biotechnology Information . Retrieved 4 October 2017 . Jump up ^ Harrison 's Principles of Internal Medicine (
+18th ed . ) . p. 954 . Jump up ^ `` Transfusion Reactions '' . Retrieved 19 November 2012 . Jump up ^ `` Complications of Transfusion : Transfusion Medicine :
+Merck Manual Professional '' .
+</item 3>
+
+<item 4>
+Acute hemolytic transfusion reaction
+About 20 deaths occur annually in the US due to AHTR . Epidemiology ( edit ) Acute hemolytic , immune mediated ( fatal ) - 1 per 250,000 - 600,000 Acute
+hemolytic , immune mediated ( nonfatal ) - 1 per 6000 - 33,000 Acute hemolytic , nonimmune - Infrequent References ( edit ) Jump up ^ Covin RB , Evans KS ,
+Olshock R , Thompson HW ( 2001 ) . `` Acute hemolytic transfusion reaction caused by anti-Coa '' . Immunohematology. 17 ( 2 ) : 45 -- 9 . PMID 15373591 . Jump
+up ^ Hoffbrand , A.V. ; P.A.H. Moss ; J.E. Pettit ( 2006 ) . Essential Haematology : 5th Edition . Blackwell Publishing . ISBN 1 - 4051 - 3649 - 9 .
+</item 4>
+
+<item 5>
+Acute hemolytic transfusion reaction
+Acute hemolytic transfusion reaction - wikipedia Acute hemolytic transfusion reaction Jump to : navigation , search This article may be too technical for most
+readers to understand . Please help improve it to make it understandable to non-experts , without removing the technical details . ( January 2018 ) ( Learn how
+and when to remove this template message ) An acute hemolytic transfusion reaction ( AHTR ) is a type of transfusion reaction that is associated with hemolysis
+. It occurs very soon after the transfusion , and within 24 hrs post-transfusion . It can occur quickly upon transfusing a few milliliters , or up to 1 -- 2
+hours post-transfusion . It is also known as an `` immediate hemolytic transfusion reaction '' . This is a medical emergency as it results from rapid
+destruction of the donor red blood cells by host antibodies ( IgG , IgM ) . It is usually related to ABO blood group incompatibility - the most severe of which
+often involves group A red cells being given to a patient with group O type blood .
+</item 5>
+
+<item 6>
+Acute hemolytic transfusion reaction
+Properdin then binds to complement C3 in the donor blood , facilitating the reaction through the alternate pathway cascade . The donor cells also become coated
+with IgG and are subsequently removed by macrophages in the reticuloendothelial system ( RES ) . Jaundice and disseminated intravascular coagulation ( DIC ) may
+also occur . The most common cause is clerical error ( i.e. the wrong unit of blood being given to the patient ) .
+</item 6>
+
+<item 7>
+Acute hemolytic transfusion reaction
+Macrophages then recognise these IgG antibodies and engulf these red blood cells , removing the red blood cells from the blood circulation into liver and spleen
+. These red blood cells are then destroyed by macrophages in these organs . Anti-Rh antibodies most commonly directed this type of reaction . This process is
+much more controlled when compared with intravascular haemolysis . Liver has adequate capacity in processing the bilirubin . Therefore , jaundice rarely occurs
+. Signs and symptoms ( edit ) Early signs are fever , low blood pressure , anxiety , and red - colored urine . Late signs are generalized bleeding , caused by
+disseminated intravascular coagulation , and low blood pressure . Laboratory assessment is based on a positive Direct Antiglobulin Test ( DAT ) , a decrease in
+serum haptoglobin , and an increase in blood levels of the enzyme lactate dehydrogenase and indirect bilirubin levels . Pathophysiology ( edit ) Immune mediated
+( edit ) This may be caused by preformed IgM anti-A , anti-B or both .
+</item 7>
+
+<item 8>
+Acute hemolytic transfusion reaction
+Types ( edit ) Acute hemolytic transfusion reactions are divided into two types . Intravascular haemolysis ( edit ) The most common cause of this reaction is
+ABO blood groups incompatibility , secondary to human errors . In this process , the donor 's red blood cells are destroyed by recipient 's preformed antibodies
+through the activation of complement system . Thus , the donor 's red blood cells break open and releases haemoglobin into the blood . The haemoglobin is then
+excreted into urine , causes haemoglobinuria . Meanwhile , haemoglobin can also pass through the liver system and process into bilirubin , which accumulates
+under the skin , causing jaundice . The release of red blood cell debris and the activation of complement system causes uncontrolled clotting ( disseminated
+intravascular coagulation ) and circulatory shock . Extravascular haemolysis ( edit ) In this case , the donor 's red blood cells are recognised and bound to
+IgG antibodies .
+</item 8>
+
+<item 9>
+Acute hemolytic transfusion reaction
+, lactated Ringer 's solution or normal saline ) , and osmotic diuresis with mannitol . If DIC is documented and bleeding requires treatment , transfusions of
+frozen plasma , pooled cryoprecipitates for fibrinogen , and / or platelet concentrates may be indicated . In case of non-antibody mediated AHR This does not
+require rigorous management . Diuresis induced by an infusion of normal saline until the intense red color of hemoglobinuria ceases is usually adequate
+treatment . Prognosis ( edit ) The major complication is that the hemoglobin , released by the destruction of red blood cells , may cause acute kidney failure (
+also known as the `` oliguric phase '' ) . About 20 deaths occur annually in the US due to AHTR .
+</item 9>
+
+<item 10>
+Acute hemolytic transfusion reaction
+the wrong unit of blood being given to the patient ) . Contents ( hide ) 1 Epidemiology 2 Types 2.1 Intravascular haemolysis 2.2 Extravascular haemolysis 3
+Signs and symptoms 4 Pathophysiology 4.1 Immune mediated 4.2 Non-immune mediated 5 Diagnosis 5.1 Differential diagnoses 6 Management 7 Prognosis 8 Epidemiology
+9 References Epidemiology ( edit ) In the USA in 2011 there were 48 episodes of acute hemolysis due to a mismatch in ABO blood type ( 1 in 495,207 blood
+components transfused ) and 168 episodes of hemolysis due to other causes ( 1 in 124,525 blood components transfused ) . In the UK in 2014 there were 18
+episodes of hemolysis due to other causes ( 1 in 147,972 blood components transfused ) . Types ( edit ) Acute hemolytic transfusion reactions are divided into
+two types .
+</item 10>
+=== END ITEM id=81190a91690c69ea ===
+
+=== ITEM id=71dd79dffa4820aa ===
+Gold sentences and facts:
+Sentence 0: All black military pilots who trained in the United States trained at Moton Field , the Tuskegee Army Air Field , and were educated at Tuskegee University , located near Tuskegee , Alabama . The group included five Haitians from the Haitian Air Force , and one pilot from Trinidad. . It also included a Hispanic or Latino airman born in the Dominican Republic .
+  Fact 0.0: All black military pilots who trained in the United States trained at Moton Field.
+  Fact 0.1: All black military pilots who trained in the United States trained at the Tuskegee Army Air Field.
+  Fact 0.2: All black military pilots who trained in the United States were educated at Tuskegee University.
+  Fact 0.3: Tuskegee University is located near Tuskegee, Alabama.
+  Fact 0.4: The group included five Haitians from the Haitian Air Force.
+  Fact 0.5: The group included one pilot from Trinidad.
+  Fact 0.6: The group also included a Hispanic or Latino airman born in the Dominican Republic.
+
+Retrieved items:
+<item 1>
+Tuskegee Airmen
+One rationale behind the non-assignment of trained African - American officers was stated by the commanding officer of the Army Air Forces , General Henry ``
+Hap '' Arnold : `` Negro pilots can not be used in our present Air Corps units since this would result in Negro officers serving over white enlisted men
+creating an impossible social situation . '' Combat assignment ( edit ) Eight Tuskegee Airmen in front of a P - 40 fighter aircraft The 99th was finally
+considered ready for combat duty by April 1943 . It shipped out of Tuskegee on 2 April , bound for North Africa , where it would join the 33rd Fighter Group and
+its commander , Colonel William W. Momyer . Given little guidance from battle - experienced pilots , the 99th 's first combat mission was to attack the small
+strategic volcanic island of Pantelleria in the Mediterranean Sea to clear the sea lanes for the Allied invasion of Sicily in July 1943 . The air assault on the
+island began 30 May 1943 . The 99th flew its first combat mission on 2 June .
+</item 1>
+
+<item 2>
+Tuskegee Airmen
+Several of the Tuskegee Airmen had logged over 900 flight hours by this time . Nevertheless , by Colonel Selway 's fiat , they were trainees . Off - base was no
+better ; many businesses in Seymour would not serve African - Americans . A local laundry would not wash their clothes , yet willingly laundered those of
+captured German soldiers . In early April 1945 , the 118th Base Unit transferred in from Godman Field ; its African - American personnel held orders that
+specified they were base cadre , not trainees . On 5 April , officers of the 477th peaceably tried to enter the whites - only Officer 's Club . Selway had been
+tipped off by a phone call , and had the assistant provost marshal and base billeting manager stationed at the door to refuse the 477th officers entry . The
+latter , a major , ordered them to leave , and took their names as a means of arresting them when they refused . It was the beginning of the Freeman Field
+Mutiny .
+</item 2>
+
+<item 3>
+Tuskegee Airmen
+Psychologists employed in these research studies and training programs used some of the first standardized tests to quantify IQ , dexterity and leadership
+qualities to select and train the best - suited personnel for the roles of bombardier , navigator , and pilot . The Air Corps determined that the existing
+programs would be used for all units , including all - black units . At Tuskegee , this effort continued with the selection and training of the Tuskegee Airmen
+. The War Department set up a system to accept only those with a level of flight experience or higher education which ensured that only the most able and
+intelligent African - American applicants were able to join . The first Lady 's flight ( edit ) The budding flight program at Tuskegee received a publicity
+boost when First Lady Eleanor Roosevelt inspected it in March 1941 , and flew with African - American chief civilian instructor C. Alfred `` Chief '' Anderson .
+Anderson , who had been flying since 1929 , and was responsible for training thousands of rookie pilots , took his prestigious passenger on a half - hour flight
+in a Piper J - 3 Cub . After landing , she cheerfully announced , `` Well , you can fly all right . ''
+</item 3>
+
+<item 4>
+Tuskegee Airmen
+They formed the 332nd Fighter Group and the 477th Bombardment Group of the United States Army Air Forces . The name also applies to the navigators , bombardiers
+, mechanics , instructors , crew chiefs , nurses , cooks and other support personnel . All black military pilots who trained in the United States trained at
+Moton Field , the Tuskegee Army Air Field , and were educated at Tuskegee University , located near Tuskegee , Alabama . The group included five Haitians from
+the Haitian Air Force , and one pilot from Trinidad. . It also included a Hispanic or Latino airman born in the Dominican Republic . Although the 477th
+Bombardment Group trained with North American B - 25 Mitchell bombers , they never served in combat . The 99th Pursuit Squadron ( later , 99th Fighter Squadron
+) was the first black flying squadron , and the first to deploy overseas ( to North Africa in April 1943 , and later to Sicily and Italy ) . The 332nd Fighter
+Group , which originally included the 100th , 301st , and 302nd Fighter Squadrons , was the first black flying group .
+</item 4>
+
+<item 5>
+Tuskegee Airmen
+Census Bureau reported there were only 124 African - American pilots in the nation . The exclusionary policies failed dramatically when the Air Corps received
+an abundance of applications from men who qualified , even under the restrictive requirements . Many of the applicants already had participated in the Civilian
+Pilot Training Program , unveiled in late December 1938 ( CPTP ) . Tuskegee University had participated since 1939 . Testing ( edit ) This section does not cite
+any sources . Please help improve this section by adding citations to reliable sources . Unsourced material may be challenged and removed . ( January 2017 ) (
+Learn how and when to remove this template message ) The U.S. Army Air Corps had established the Psychological Research Unit 1 at Maxwell Army Air Field ,
+Montgomery , Alabama , and other units around the country for aviation cadet training , which included the identification , selection , education , and training
+of pilots , navigators , and bombardiers .
+</item 5>
+
+<item 6>
+Tuskegee Airmen
+This was one of the earliest racially integrated courses in the U.S. Army . Seventeen flight surgeons served with the Tuskegee Airmen from 1941 - 49 . At that
+time , the typical tour of duty for a U.S. Army flight surgeon was four years . Six of these physicians lived under field conditions during operations in North
+Africa , Sicily , and Italy . The chief flight surgeon to the Tuskegee Airmen was Dr. Vance H. Marchbanks , Jr. , MD , a childhood friend of Benjamin Davis .
+The accumulation of washed - out cadets at Tuskegee and the propensity of other commands to `` dump '' African - American personnel on the post exacerbated the
+difficulties of administering Tuskegee . A shortage of jobs for them made these enlisted men a drag on Tuskegee 's housing and culinary departments . Trained
+officers were also left idle , as the plan to shift African - American officers into command slots stalled , and white officers not only continued to hold
+command , but were joined by additional white officers assigned to the post .
+</item 6>
+
+<item 7>
+Tuskegee Airmen
+This small number of enlisted men became the core of other black squadrons forming at Tuskegee and Maxwell Fields in Alabama . The Tuskegee program officially
+began June 1941 with the 99th Pursuit Squadron at Tuskegee University . The unit consisted of 47 officers and 429 enlisted men , and was backed by an entire
+service arm . After primary training at Moton Field , they were moved to the nearby Tuskegee Army Air Field , about 10 miles ( 16 km ) to the west for
+conversion training onto operational types . Consequently , Tuskegee Army Air Field became the only Army installation performing three phases of pilot training
+( basic , advanced , and transition ) at a single location . Initial planning called for 500 personnel in residence at a time . By mid-1942 , over six times
+that many were stationed at Tuskegee , even though only two squadrons were training there . War poster featuring a Tuskegee Airman Tuskegee Army Airfield was
+similar to already - existing airfields reserved for training white pilots , such as Maxwell Field , only 40 miles ( 64 km ) distant .
+</item 7>
+
+<item 8>
+Tuskegee Airmen
+The white population of Freeman Field was 250 officers and 600 enlisted men . Superimposed on it were 400 African - American officers and 2,500 enlisted men of
+the 477th and its associated units . Freeman Field had a firing range , usable runways , and other amenities useful for training . African - American airmen
+would work in proximity with white ones ; both would live in a public housing project adjacent to the base . Colonel Selway turned the non-commissioned officers
+out of their club and turned it into a second officers club . He then classified all white personnel as cadre , and all African - Americans as trainees . One
+officers club became the cadre 's club . The old Non-Commissioned Officers Club , promptly sarcastically dubbed `` Uncle Tom 's Cabin '' , became the trainee 's
+officers club . At least four of the trainees had flown combat in Europe as fighter pilots , and had about four years in service . Four others had completed
+training as pilots , bombardiers and navigators , and may have been the only triply qualified officers in the entire Air Corps .
+</item 8>
+
+<item 9>
+Tuskegee Airmen
+Some ground crews trained at Mather before rotating to Inglewood . Gunners learned to shoot at Eglin Field , Florida . Bombers - navigators learned their trades
+at Hondo Army Air Field and Midland Air Field , Texas or at Roswell , New Mexico . Training of the new African - American crewmen also took place at Sioux Falls
+, South Dakota , Lincoln , Nebraska , and Scott Field , Belleville , Illinois . Once trained , the air and ground crews would be spliced into a working unit at
+Selfridge . Command difficulties ( edit ) The new group 's first commanding officer was Colonel Robert Selway , who had also commanded the 332nd Fighter Group
+before it deployed for combat overseas . Like his ranking officer , Major General Frank O'Driscoll Hunter from Georgia , Selway was a racial segregationist .
+Hunter was blunt about it , saying such things as , `` ... racial friction will occur if colored and white pilots are trained together . '' He backed Selway 's
+violations of Army Regulation 210 - 10 , which forbade segregation of air base facilities .
+</item 9>
+
+<item 10>
+Tuskegee Airmen
+Finally , on 3 April 1939 , Appropriations Bill Public Law 18 was passed by Congress containing an amendment by Senator Harry H. Schwartz , designating funds
+for training African - American pilots . The War Department managed to put the money into funds of civilian flight schools willing to train black Americans .
+War Department tradition and policy mandated the segregation of African - Americans into separate military units staffed by white officers , as had been done
+previously with the 9th Cavalry , 10th Cavalry , 24th Infantry Regiment and 25th Infantry Regiment . When the appropriation of funds for aviation training
+created opportunities for pilot cadets , their numbers diminished the rosters of these older units . In 1941 , the War Department and the Army Air Corps , under
+pressure -- three months before its transformation into the USAAF -- constituted the first all - black flying unit , the 99th Pursuit Squadron . Due to the
+restrictive nature of selection policies , the situation did not seem promising for African - Americans since , in 1940 , the U.S. Census Bureau reported there
+were only 124 African - American pilots in the nation .
+</item 10>
+=== END ITEM id=71dd79dffa4820aa ===
+
+=== ITEM id=987c936267335dfc ===
+Gold sentences and facts:
+Sentence 0: No . overall No. in season Title Directed by Written by Original air date Prod . code U.S. viewers ( millions ) 107 `` Watch Me '' Jann Turner Shonda Rhimes October 5 , 2017 ( 2017 - 10 - 05 ) 701 5.52 108 `` Pressing the Flesh '' Tony Goldwyn Matt Byrne October 12 , 2017 ( 2017 - 10 - 12 ) 702 5.00 109 `` Day 101 '' Scott Foley Zahir McGhee October 19 , 2017 ( 2017 - 10 - 19 ) 703 4.70 110 `` Lost Girls '' Nicole Rubio Ameni Rozsa & Austin Guzman October 26 , 2017 ( 2017 - 10 - 26 ) 704 4.88 111 5 `` Adventures in Babysitting '' Oliver Bokelberg Serveriano Canales & Tia Napolitano November 2 , 2017 ( 2017 - 11 - 02 ) 705 4.89 112 6 `` Vampires and Bloodsuckers '' Jann Turner Chris Van Dusen & Tia Napolitano November 9 , 2017 ( 2017 - 11 - 09 ) 706 5.00 113 7 `` Something Borrowed '' Sharat Raju Mark Fish November 16 , 2017 ( 2017 - 11 - 16 ) 707 4.97 114 8 `` Robin '' Daryn Okada Juan Carlos Fernandez January 18 , 2018 ( 2018 - 01 - 18 ) 709 5.17 115 9 `` Good People '' Nzingha Stewart Shonda Rhimes , Jess Brownell & Nicholas Nardini January 25 , 2018 ( 2018 - 01 - 25 ) 708 TBD 116 10 `` The People v. Olivia Pope '' TBA TBA February 1 , 2018 ( 2018 - 02 - 01 ) 710 TBD 117 11 `` Army of One '' TBA TBA February 8 , 2018 ( 2018 - 02 - 08 ) 711 TBD 118 12 TBA TBA TBA March 1 , 2018 ( 2018 - 03 - 01 ) TBA TBD
+  Fact 0.0: Overall episode 107, 'Watch Me', was directed by Jann Turner and written by Shonda Rhimes.
+  Fact 0.1: Overall episode 107, 'Watch Me', aired October 5, 2017, with production code 701 and 5.52 million U.S. viewers.
+  Fact 0.2: Overall episode 108, 'Pressing the Flesh', was directed by Tony Goldwyn and written by Matt Byrne.
+  Fact 0.3: Overall episode 108, 'Pressing the Flesh', aired October 12, 2017, with production code 702 and 5.00 million U.S. viewers.
+  Fact 0.4: Overall episode 109, 'Day 101', was directed by Scott Foley and written by Zahir McGhee.
+  Fact 0.5: Overall episode 109, 'Day 101', aired October 19, 2017, with production code 703 and 4.70 million U.S. viewers.
+  Fact 0.6: Overall episode 110, 'Lost Girls', was directed by Nicole Rubio and written by Ameni Rozsa and Austin Guzman.
+  Fact 0.7: Overall episode 110, 'Lost Girls', aired October 26, 2017, with production code 704 and 4.88 million U.S. viewers.
+  Fact 0.8: Overall episode 111, season episode 5, 'Adventures in Babysitting', was directed by Oliver Bokelberg and written by Serveriano Canales and Tia Napolitano.
+  Fact 0.9: Overall episode 111, 'Adventures in Babysitting', aired November 2, 2017, with production code 705 and 4.89 million U.S. viewers.
+  Fact 0.10: Overall episode 112, season episode 6, 'Vampires and Bloodsuckers', was directed by Jann Turner and written by Chris Van Dusen and Tia Napolitano.
+  Fact 0.11: Overall episode 112, 'Vampires and Bloodsuckers', aired November 9, 2017, with production code 706 and 5.00 million U.S. viewers.
+  Fact 0.12: Overall episode 113, season episode 7, 'Something Borrowed', was directed by Sharat Raju and written by Mark Fish.
+  Fact 0.13: Overall episode 113, 'Something Borrowed', aired November 16, 2017, with production code 707 and 4.97 million U.S. viewers.
+  Fact 0.14: Overall episode 114, season episode 8, 'Robin', was directed by Daryn Okada and written by Juan Carlos Fernandez.
+  Fact 0.15: Overall episode 114, 'Robin', aired January 18, 2018, with production code 709 and 5.17 million U.S. viewers.
+  Fact 0.16: Overall episode 115, season episode 9, 'Good People', was directed by Nzingha Stewart and written by Shonda Rhimes, Jess Brownell and Nicholas Nardini.
+  Fact 0.17: Overall episode 115, 'Good People', aired January 25, 2018, with production code 708 and U.S. viewer numbers to be determined.
+  Fact 0.18: Overall episode 116, season episode 10, 'The People v. Olivia Pope', has a director and writers to be announced.
+  Fact 0.19: Overall episode 116, 'The People v. Olivia Pope', aired February 1, 2018, with production code 710 and U.S. viewer numbers to be determined.
+  Fact 0.20: Overall episode 117, season episode 11, 'Army of One', has a director and writers to be announced.
+  Fact 0.21: Overall episode 117, 'Army of One', aired February 8, 2018, with production code 711 and U.S. viewer numbers to be determined.
+  Fact 0.22: Overall episode 118, season episode 12, has a title, director, writers and production code to be announced.
+  Fact 0.23: Overall episode 118 aired March 1, 2018, with U.S. viewer numbers to be determined.
+Sentence 1: 116 10 `` The People v. Olivia Pope '' TBA TBA February 1 , 2018 ( 2018 - 02 - 01 ) 710 TBD
+  Fact 1.0: Overall episode 116, season episode 10, 'The People v. Olivia Pope', has a director and writers to be announced.
+  Fact 1.1: Overall episode 116, 'The People v. Olivia Pope', aired February 1, 2018, with production code 710 and U.S. viewer numbers to be determined.
+
+Retrieved items:
+<item 1>
+List of Scandal episodes
+2017 ( 2017 - 03 - 16 ) 605 5.63 97 7 `` A Traitor Among Us '' Tom Verica Alison Schapker March 23 , 2017 ( 2017 - 03 - 23 ) 607 5.40 98 8 `` A Stomach for
+Blood '' Oliver Bokelberg Severiano Canales March 30 , 2017 ( 2017 - 03 - 30 ) 608 6.57 99 9 `` Dead in the Water '' Nicole Rubio Michelle Lirtzman April 6 ,
+2017 ( 2017 - 04 - 06 ) 609 5.10 100 10 `` The Decision '' Sharat Raju Johanna Lee April 13 , 2017 ( 2017 - 04 - 13 ) 610 5.35 101 11 `` Trojan Horse '' Jann
+Turner Jess Brownell & Nicholas Nardini April 20 , 2017 ( 2017 - 04 - 20 ) 611 5.
+</item 1>
+
+<item 2>
+List of Scandal episodes
+2014 ( 2014 - 10 - 16 ) 404A 9.90 52 5 `` The Key '' Paul McCrane Chris Van Dusen October 23 , 2014 ( 2014 - 10 - 23 ) 404B 9.98 53 6 `` An Innocent Man ''
+Jeannot Szwarc Zahir McGhee October 30 , 2014 ( 2014 - 10 - 30 ) 405 9.32 54 7 `` Baby Made a Mess '' Oliver Bokelberg Jenna Bans November 6 , 2014 ( 2014 - 11
+- 06 ) 406 9.82 55 8 `` The Last Supper '' Julie Anne Robinson Allan Heinberg November 13 , 2014 ( 2014 - 11 - 13 ) 407 10.05 56 9 `` Where the Sun Do n't Shine
+'' Tony Goldwyn Mark Wilding November 20 , 2014 ( 2014 - 11 - 20 ) 408 10.14 57 10 `` Run '' Tom Verica Shonda Rhimes January 29 ,
+</item 2>
+
+<item 3>
+List of Scandal episodes
+2015 ( 2015 - 10 - 01 ) 502 9.12 72 `` Paris is Burning '' Jann Turner Matt Byrne October 8 , 2015 ( 2015 - 10 - 08 ) 503 8.76 73 `` Dog - Whistle Politics ''
+Zetna Fuentes Mark Fish October 15 , 2015 ( 2015 - 10 - 15 ) 504 8.06 74 5 `` You Got Served '' Kevin Bray Zahir McGhee October 22 , 2015 ( 2015 - 10 - 22 ) 505
+8.28 75 6 `` Get Out of Jail , Free '' Chandra Wilson Chris Van Dusen October 29 , 2015 ( 2015 - 10 - 29 ) 506 7.80 76 7 `` Even the Devil Deserves a Second
+Chance '' Oliver Bokelberg Raamla Mohamed November 5 , 2015 ( 2015 - 11 - 05 ) 507 8.03 77 8 `` Rasputin '' John Terlesky Paul William Davies November 12 ,
+</item 3>
+
+<item 4>
+List of Scandal episodes
+2013 ( 2013 - 03 - 21 ) 216 8.51 24 17 `` Snake in the Garden '' Ron Underwood Raamla Mohamed March 28 , 2013 ( 2013 - 03 - 28 ) 217 7.97 25 18 `` Molly , You
+in Danger , Girl '' Tom Verica Chris Van Dusen April 4 , 2013 ( 2013 - 04 - 04 ) 218 8.04 26 19 `` Seven Fifty - Two '' Allison Liddi - Brown Mark Fish April 25
+, 2013 ( 2013 - 04 - 25 ) 219 7.90 27 20 `` A Woman Scorned '' Tony Goldwyn Zahir McGhee May 2 , 2013 ( 2013 - 05 - 02 ) 220 8.07 28 21 `` Any Questions ? ''
+</item 4>
+
+<item 5>
+List of Scandal episodes
+2014 ( 2014 - 03 - 13 ) 313 8.22 43 14 `` Kiss Kiss Bang Bang '' Paul McCrane Mark Fish March 20 , 2014 ( 2014 - 03 - 20 ) 314 9.08 44 15 `` Mama Said Knock You
+Out '' Tony Goldwyn Zahir McGhee March 27 , 2014 ( 2014 - 03 - 27 ) 315 9.01 45 16 `` The Fluffer '' Jeannot Szwarc Chris Van Dusen & Raamla Mohamed April 3 ,
+2014 ( 2014 - 04 - 03 ) 316 9.13 46 17 `` Flesh and Blood '' Debbie Allen Severiano Canales & Miguel Nolla April 10 , 2014 ( 2014 - 04 - 10 ) 317 9.23 47 18 ``
+The Price of Free and Fair Elections '' Tom Verica Shonda Rhimes & Mark Wilding April 17 , 2014 ( 2014 - 04 - 17 ) 318 10.
+</item 5>
+
+<item 6>
+List of Scandal episodes
+2017 ( 2017 - 10 - 26 ) 704 4.88 111 5 `` Adventures in Babysitting '' Oliver Bokelberg Serveriano Canales & Tia Napolitano November 2 , 2017 ( 2017 - 11 - 02 )
+705 4.89 112 6 `` Vampires and Bloodsuckers '' Jann Turner Chris Van Dusen & Tia Napolitano November 9 , 2017 ( 2017 - 11 - 09 ) 706 5.00 113 7 `` Something
+Borrowed '' Sharat Raju Mark Fish November 16 , 2017 ( 2017 - 11 - 16 ) 707 4.97 114 8 `` Robin '' Daryn Okada Juan Carlos Fernandez January 18 , 2018 ( 2018 -
+01 - 18 ) 709 5.17 115 9 `` Good People '' Nzingha Stewart Shonda Rhimes , Jess Brownell & Nicholas Nardini January 25 ,
+</item 6>
+
+<item 7>
+List of Scandal episodes
+2012 ( 2012 - 11 - 08 ) 205 6.06 13 6 `` Spies Like Us '' Bethany Rooney Chris Van Dusen November 15 , 2012 ( 2012 - 11 - 15 ) 206 6.02 14 7 `` Defiance '' Tom
+Verica Peter Noah November 29 , 2012 ( 2012 - 11 - 29 ) 207 6.64 15 8 `` Happy Birthday , Mr. President '' Oliver Bokelberg Shonda Rhimes December 6 , 2012 (
+2012 - 12 - 06 ) 208 7.39 16 9 `` Blown Away '' Jessica Yu Mark Wilding December 13 , 2012 ( 2012 - 12 - 13 ) 209 7.14 17 10 `` One for the Dog '' Steve Robin
+Heather Mitchell January 10 , 2013 ( 2013 - 01 - 10 ) 210 8.37 18 11 `` A Criminal , a Whore ,
+</item 7>
+
+<item 8>
+List of Scandal episodes
+2017 ( 2017 - 04 - 20 ) 611 5.11 102 12 `` Mercy '' Nzingha Stewart Severiano Canales & Ameni Rozsa April 27 , 2017 ( 2017 - 04 - 27 ) 612 5.29 103 13 `` The
+Box '' Steph Green Raamla Mohamed & Austin Guzman May 4 , 2017 ( 2017 - 05 - 04 ) 613 5.15 104 14 `` Head Games '' Zetna Fuentes Chris Van Dusen & Juan Carlos
+Fernandez May 11 , 2017 ( 2017 - 05 - 11 ) 614 5.10 105 15 `` Tick Tock '' Salli Richardson - Whitfield Zahir McGhee & Michelle Lirtzman May 18 , 2017 ( 2017 -
+05 - 18 ) 615 5.23 106 16 `` Transfer of Power '' Tony Goldwyn Matt Byrne & Mark Fish May 18 , 2017 ( 2017 - 05 - 18 ) 616 5.
+</item 8>
+
+<item 9>
+List of Scandal episodes
+2016 ( 2016 - 03 - 10 ) 512 5.97 83 14 `` I See You '' Paris Barclay Matt Byrne March 17 , 2016 ( 2016 - 03 - 17 ) 513 6.31 84 15 `` Pencils Down '' Regina King
+Chris Van Dusen March 24 , 2016 ( 2016 - 03 - 24 ) 514 6.15 85 16 `` The Miseducation of Susan Ross '' Scott Foley Raamla Mohamed March 31 , 2016 ( 2016 - 03 -
+31 ) 516 6.44 86 17 `` Thwack ! ''
+</item 9>
+
+<item 10>
+List of Scandal episodes
+37 18 11 `` A Criminal , a Whore , an Idiot and a Liar '' Stephen Cragg Mark Fish January 17 , 2013 ( 2013 - 01 - 17 ) 211 7.93 19 12 `` Truth or Consequences
+'' Jeannot Szwarc Peter Noah January 31 , 2013 ( 2013 - 01 - 31 ) 212 8.09 20 13 `` Nobody Likes Babies '' Tom Verica Mark Wilding February 7 , 2013 ( 2013 - 02
+- 07 ) 213 8.14 21 14 `` Whiskey Tango Foxtrot '' Mark Tinker Matt Byrne February 14 , 2013 ( 2013 - 02 - 14 ) 214 8.02 22 15 `` Boom Goes the Dynamite '' Randy
+Zisk Jenna Bans February 21 , 2013 ( 2013 - 02 - 21 ) 215 7.68 23 16 `` Top of the Hour '' Steve Robin Heather Mitchell March 21 , 2013 ( 2013 - 03 - 21 ) 216
+8.
+</item 10>
+=== END ITEM id=987c936267335dfc ===
+
+=== ITEM id=4093aa4e11ba4ee4 ===
+Gold sentences and facts:
+Sentence 0: The Philadelphia Eagles are a professional American football franchise based in Philadelphia , Pennsylvania . The Eagles compete in the National Football League ( NFL ) as a member club of the league 's National Football Conference ( NFC ) East division . They are Super Bowl champions , having won Super Bowl LII , their fourth NFL title , after winning in 1948 , 1949 , and 1960 .
+  Fact 0.0: The Philadelphia Eagles are a professional American football franchise.
+  Fact 0.1: The Philadelphia Eagles are based in Philadelphia, Pennsylvania.
+  Fact 0.2: The Philadelphia Eagles compete in the National Football League (NFL).
+  Fact 0.3: The Philadelphia Eagles are a member club of the NFL's National Football Conference (NFC) East division.
+  Fact 0.4: The Philadelphia Eagles are Super Bowl champions.
+  Fact 0.5: The Philadelphia Eagles won Super Bowl LII.
+  Fact 0.6: Super Bowl LII was the Eagles' fourth NFL title.
+  Fact 0.7: The Philadelphia Eagles won NFL titles in 1948, 1949, and 1960.
+Sentence 1: Philadelphia Eagles Current season Established July 8 , 1933 ; 84 years ago ( July 8 , 1933 ) First season : 1933 Play in Lincoln Financial Field Philadelphia , Pennsylvania Headquartered in the NovaCare Complex Philadelphia , Pennsylvania Logo Wordmark League / conference affiliations National Football League ( 1933 -- present ) Eastern Division ( 1933 -- 1949 ) American Conference ( 1950 -- 1952 ) Eastern Conference ( 1953 -- 1969 ) Capitol Division ( 1967 -- 1969 ) National Football Conference ( 1970 -- present ) NFC East ( 1970 -- present ) Current uniform Team colors Midnight green , Silver , Black , White Fight song Fly , Eagles Fly Mascot Swoop Personnel Owner ( s ) Jeffrey Lurie Christina Weiss Lurie Chairman Jeffrey Lurie CEO Jeffrey Lurie President Don Smolenski General manager Howie Roseman Head coach Doug Pederson Team history Philadelphia Eagles ( 1933 -- 1942 ; 1944 -- present ) Phil - Pitt `` Steagles '' ( 1943 ) Team nicknames The Birds Championships League championships ( 4 ) NFL championships ( pre-1970 AFL -- NFL merger ) ( 3 ) 1948 , 1949 , 1960 Super Bowl championships ( 1 ) 2017 ( LII ) Conference championships ( 4 ) NFL Eastern : 1960 NFC : 1980 , 2004 , 2017 Division championships ( 13 ) NFL East : 1947 , 1948 , 1949 NFC East : 1980 , 1988 , 2001 , 2002 , 2003 , 2004 , 2006 , 2010 , 2013 , 2017 Playoff appearances ( 25 ) NFL : 1947 , 1948 , 1949 , 1960 , 1978 , 1979 , 1980 , 1981 , 1988 , 1989 , 1990 , 1992 , 1995 , 1996 , 2000 , 2001 , 2002 , 2003 , 2004 , 2006 , 2008 , 2009 , 2010 , 2013 , 2017 Home fields Baker Bowl ( 1933 -- 1935 ) Philadelphia Municipal Stadium ( 1936 -- 1939 , 1941 ) Connie Mack Stadium ( 1940 , 1942 -- 1957 ) Franklin Field ( 1958 -- 1970 ) Veterans Stadium ( 1971 -- 2002 ) Lincoln Financial Field ( 2003 -- present )
+  Fact 1.0: The Philadelphia Eagles were established July 8, 1933, 84 years ago.
+  Fact 1.1: The Philadelphia Eagles' first season was 1933.
+  Fact 1.2: The Philadelphia Eagles play in Lincoln Financial Field in Philadelphia, Pennsylvania.
+  Fact 1.3: The Philadelphia Eagles are headquartered in the NovaCare Complex in Philadelphia, Pennsylvania.
+  Fact 1.4: The Philadelphia Eagles' team colors are midnight green, silver, black and white.
+  Fact 1.5: The Philadelphia Eagles' fight song is 'Fly, Eagles Fly'.
+  Fact 1.6: The Philadelphia Eagles' mascot is Swoop.
+  Fact 1.7: The Philadelphia Eagles are owned by Jeffrey Lurie and Christina Weiss Lurie.
+  Fact 1.8: Jeffrey Lurie is the chairman of the Philadelphia Eagles.
+  Fact 1.9: Jeffrey Lurie is the CEO of the Philadelphia Eagles.
+  Fact 1.10: Don Smolenski is the president of the Philadelphia Eagles.
+  Fact 1.11: Howie Roseman is the general manager of the Philadelphia Eagles.
+  Fact 1.12: Doug Pederson is the head coach of the Philadelphia Eagles.
+  Fact 1.13: The Philadelphia Eagles' team history includes the Philadelphia Eagles from 1933 to 1942 and from 1944 to the present.
+  Fact 1.14: The Philadelphia Eagles' team history includes the Phil-Pitt 'Steagles' in 1943.
+  Fact 1.15: The Philadelphia Eagles are nicknamed The Birds.
+  Fact 1.16: The Philadelphia Eagles have won 4 league championships.
+  Fact 1.17: The Philadelphia Eagles have won 3 NFL championships before the AFL-NFL merger, in 1948, 1949, and 1960.
+  Fact 1.18: The Philadelphia Eagles have won 1 Super Bowl championship, in 2017 (LII).
+  Fact 1.19: The Philadelphia Eagles have won 4 conference championships.
+  Fact 1.20: The Philadelphia Eagles won the NFL Eastern conference championship in 1960.
+  Fact 1.21: The Philadelphia Eagles won the NFC conference championship in 1980, 2004 and 2017.
+  Fact 1.22: The Philadelphia Eagles have won 13 division championships.
+  Fact 1.23: The Philadelphia Eagles won NFL East division championships in 1947, 1948 and 1949.
+  Fact 1.24: The Philadelphia Eagles won NFC East division championships in 1980, 1988, 2001, 2002, 2003, 2004, 2006, 2010, 2013 and 2017.
+  Fact 1.25: The Philadelphia Eagles have made 25 playoff appearances in the NFL.
+  Fact 1.26: The Philadelphia Eagles' NFL playoff appearances were in 1947, 1948, 1949, 1960, 1978, 1979, 1980, 1981, 1988, 1989, 1990, 1992, 1995, 1996, 2000, 2001, 2002, 2003, 2004, 2006, 2008, 2009, 2010, 2013 and 2017.
+  Fact 1.27: The Philadelphia Eagles played home games at Baker Bowl from 1933 to 1935.
+  Fact 1.28: The Philadelphia Eagles played home games at Philadelphia Municipal Stadium in 1936 to 1939 and 1941.
+  Fact 1.29: The Philadelphia Eagles played home games at Connie Mack Stadium in 1940 and 1942 to 1957.
+  Fact 1.30: The Philadelphia Eagles played home games at Franklin Field from 1958 to 1970.
+  Fact 1.31: The Philadelphia Eagles played home games at Veterans Stadium from 1971 to 2002.
+  Fact 1.32: The Philadelphia Eagles have played home games at Lincoln Financial Field since 2003.
+  Fact 1.33: The Philadelphia Eagles have been affiliated with the National Football League since 1933.
+  Fact 1.34: The Philadelphia Eagles were in the Eastern Division from 1933 to 1949.
+  Fact 1.35: The Philadelphia Eagles were in the American Conference from 1950 to 1952.
+  Fact 1.36: The Philadelphia Eagles were in the Eastern Conference from 1953 to 1969.
+  Fact 1.37: The Philadelphia Eagles were in the Capitol Division from 1967 to 1969.
+  Fact 1.38: The Philadelphia Eagles have been in the National Football Conference since 1970.
+  Fact 1.39: The Philadelphia Eagles have been in the NFC East since 1970.
+
+Retrieved items:
+<item 1>
+Philadelphia Eagles
+2002 , 2003 , 2004 , 2006 , 2008 , 2009 , 2010 , 2013 , 2017 Home fields Baker Bowl ( 1933 -- 1935 ) Philadelphia Municipal Stadium ( 1936 -- 1939 , 1941 )
+Connie Mack Stadium ( 1940 , 1942 -- 1957 ) Franklin Field ( 1958 -- 1970 ) Veterans Stadium ( 1971 -- 2002 ) Lincoln Financial Field ( 2003 -- present ) The
+Philadelphia Eagles are a professional American football franchise based in Philadelphia , Pennsylvania . The Eagles compete in the National Football League (
+NFL ) as a member club of the league 's National Football Conference ( NFC ) East division . They are Super Bowl champions , having won Super Bowl LII , their
+fourth NFL title , after winning in 1948 , 1949 , and 1960 . The franchise was established in 1933 as a replacement for the bankrupt Frankford Yellow Jackets ,
+when a group led by Bert Bell secured the rights to an NFL franchise in Philadelphia .
+</item 1>
+
+<item 2>
+Philadelphia Eagles
+As of the conclusion of the 2016 season , during the Lurie era , the Eagles are 1 -- 4 in conference championship games and 0 -- 1 in Super Bowls . On August 13
+, 2009 , the Eagles signed quarterback Michael Vick . On December 6 , 2009 , Andy Reid became only the 5th coach in NFL history to win 100 or more games with a
+single team in a single decade . The other four are Tom Landry , Don Shula , Tony Dungy , and Bill Belichick , all Super Bowl winners . McNabb finally had a
+complete receiving corps , between first round draft pick Jeremy Maclin , DeSean Jackson 's 1,000 yard season , and Brent Celek ranking among the top 5 tight
+ends in the league . Without Brian Dawkins , defensive end Trent Cole stepped up and became the dominant force on defense with 12 sacks , earning him his second
+trip to the Pro Bowl and All - Pro honors .
+</item 2>
+
+<item 3>
+Philadelphia Eagles
+Season records Main article : List of Philadelphia Eagles seasons Regular season record ( all - time ) : 568 -- 594 -- 26 Playoff record ( all - time ) : 22 --
+21 ( last appearance after beating New England Patriots in Super Bowl LII ) Most points in a season : 474 points ( 2014 ) NFL championships won : 4 ( 3 before
+the 1967 NFL - AFL merger created the Super Bowl ) Super Bowls won : 1 out of 3 appearances Passing leader ( all - time ) : Donovan McNabb -- 32,873 yards
+Rushing leader ( all - time ) : LeSean McCoy -- 6,792 yards Receiving leader ( all - time ) : Harold Carmichael -- 8,978 yards Winningest coach ( all - time ) :
+Andy Reid -- 130 wins Top player by approximate value ( all - time ) : Donovan McNabb -- 126 AV Rivalries New York Giants Main article : Eagles -- Giants
+rivalry One of the NFL 's oldest , this rivalry began on October 15 , 1933 when the Giants defeated the newly founded Eagles 56 -- 0 .
+</item 3>
+
+<item 4>
+Philadelphia Eagles
+External links Wikimedia Commons has media related to Philadelphia Eagles . Official website Philadelphia Eagles Founded in 1933 Based and headquartered in
+Philadelphia , Pennsylvania Franchise Franchise History Seasons Coaches Quarterbacks Players Stadiums Baker Bowl Philadelphia Municipal Stadium Connie Mack
+Stadium Franklin Field Veterans Stadium Lincoln Financial Field Culture Fly , Eagles Fly Swoop Curse of Billy Penn The Lombardi Curse Invincible Philadelphia
+Sports Hall of Fame Matt Guokas Sr . Dan Baker Cheerleaders Silver Linings Playbook The Garbage Picking Field Goal Kicking Philadelphia Phenomenon Lore
+Frankford Yellow Jackets Pennsylvania Keystoners `` Pennsylvania Polka '' Steagles `` Happy Hundred '' Miracle at the Meadowlands Buddy Ball Fog Bowl Bounty
+Bowl series Body Bag Game 4th and 26 Miracle at the New Meadowlands Philly Special Rivalries Dallas Cowboys New York Giants Washington Redskins Pittsburgh
+Steelers Division championships ( 13 ) 1947 1948 1949 1980 1988 2001 2002 2003 2006 2013 2017 Conference championships ( 4 ) 1960 1980 2017 League championships
+( 4 ) 1948 1949 1960 2017 ( LII ) Retired numbers 5
+</item 4>
+
+<item 5>
+Philadelphia Eagles
+Championship Super Bowl champions quarterbacks Pro Bowl History League history Executive history Championship history Timeline Defunct franchises Franchise
+moves and mergers Los Angeles team history Proposed stadiums 1995 -- 2016 American Football League ( 1960 -- 1969 ) Playoffs Merger NFL Championship ( 1920 --
+1969 ) Playoff Bowl Records individual team Super Bowl All time win -- loss Last undefeated Tied games Canceled games Controversies Business Owners Properties
+Management Council Competition Committee Collective Bargaining Agreement National Football League Players Association Lockouts Media TV NFL Network NFL RedZone
+Radio NFL Films Other Officials Stadiums Chronology Awards All - Pro Hall of Fame Foreign players Player conduct Suspensions Player misconduct Combine Draft
+Training camp Rivalries NFL Foundation Culture Cheerleading Color Rush Mascots Lore Nicknames Numbers Retired Sports teams based in Pennsylvania Baseball MLB
+Philadelphia Phillies Pittsburgh Pirates IL Lehigh Valley IronPigs Scranton / Wilkes - Barre RailRiders EL Altoona Curve Erie SeaWolves Harrisburg Senators
+Reading Fightin Phils NYPL State College Spikes Williamsport Crosscutters ALPB Lancaster Barnstormers York Revolution FL Washington Wild Things Basketball NBA
+Philadelphia 76ers G League Erie BayHawks Cricket Lehigh Valley Cricket Club Philadelphia Cricket Club Football NFL Philadelphia Eagles Pittsburgh
+</item 5>
+
+<item 6>
+Philadelphia Eagles
+Those two championships mark the Eagles as the only NFL team ever to win back - to - back championships by shutouts , defeating the Chicago Cardinals , 7 -- 0 ,
+in 1948 -- in a blizzard -- and the Los Angeles Rams , 14 -- 0 , in 1949 . After the 1957 season , the Eagles moved from Connie Mack Stadium to Franklin Field
+at the University of Pennsylvania . Franklin Field would seat over 60,000 for the Eagles , whereas Connie Mack had a capacity of 39,000 . The stadium switched
+from grass to AstroTurf in 1969 . It was the first NFL stadium to use artificial turf . In 1960 , the Eagles won their third NFL championship , under the
+leadership of future Pro Football Hall of Famers Norm Van Brocklin and Chuck Bednarik ; the head coach was Buck Shaw . The 1960 Eagles , by a score of 17 -- 13
+, became the only team to defeat Vince Lombardi and his Green Bay Packers in the playoffs .
+</item 6>
+
+<item 7>
+Philadelphia Eagles
+This would be Philadelphia 's first Super Bowl win and their fourth league championship ( their first championship since 1960 ) . Foles won Super Bowl MVP going
+28 -- 43 with 373 passing yards , 3 touchdowns , and an interception . Nick Foles became the first backup quarterback to start and win a Super Bowl since his
+opponent Tom Brady won as the backup for Drew Bledsoe in 2001 .
+</item 7>
+
+<item 8>
+Philadelphia Eagles
+Foles had his best game since week 15 and threw for 352 passing yards and 3 touchdowns including an impressive flea flicker touchdown pass . This win marked the
+franchise 's third Super Bowl appearance and a berth in Super Bowl LII for a 2005 rematch against Tom Brady and the New England Patriots . With Foles at the
+helm , the Eagles started off the game strong , leading the Patriots 22 -- 12 at halftime . In the second half the Patriots gained momentum and for the first
+time took the lead in the 4th quarter 33 -- 32 . The Eagles rallied back and scored an 11 - yard Touchdown to tight end Zach Ertz . Later the Eagles converted
+on a 46 - yard field goal by Jake Elliott to lead 41 -- 33 . On the final play of the game with 9 seconds left , Brady threw a hail - mary pass directed toward
+tight end Rob Gronkowski which was bobbled by Patrick Robinson before being dropped in the end - zone as time expired , securing the win for the Eagles 41 -- 33
+, and ending the 58 - year long championship drought .
+</item 8>
+
+<item 9>
+Philadelphia Eagles
+1944 -- present ) Phil - Pitt `` Steagles '' ( 1943 ) Team nicknames The Birds Championships League championships ( 4 ) NFL championships ( pre-1970 AFL -- NFL
+merger ) ( 3 ) 1948 , 1949 , 1960 Super Bowl championships ( 1 ) 2017 ( LII ) Conference championships ( 4 ) NFL Eastern : 1960 NFC : 1980 , 2004 , 2017
+Division championships ( 13 ) NFL East : 1947 , 1948 , 1949 NFC East : 1980 , 1988 , 2001 , 2002 , 2003 , 2004 , 2006 , 2010 , 2013 , 2017 Playoff appearances (
+25 ) NFL : 1947 , 1948 , 1949 , 1960 , 1978 , 1979 , 1980 , 1981 , 1988 , 1989 , 1990 , 1992 , 1995 , 1996 , 2000 , 2001 , 2002 , 2003 , 2004 , 2006 , 2008 ,
+</item 9>
+
+<item 10>
+Philadelphia Eagles
+In 2003 , they won the NFC first seed , but Westbrook went down in Week 17 , culminating in a loss to the Carolina Panthers in their 3rd straight NFC
+Championship . 2004 season and Super Bowl XXXIX In 2004 , the Philadelphia Eagles had their best season since 1960 , going 13 -- 1 before resting their starters
+and losing their next 2 , clinching the 1st seed for the second year in a row . McNabb set career highs , completing 64 % of his passes for 3,875 yards , though
+he did n't play all 16 games . McNabb became the first quarterback ever to throw more than 30 touchdowns and fewer than 10 interceptions in a season . His
+success could be attributed to the fact that he had a reliable receiver , Terrell Owens , who got 1,200 yards and 14 touchdowns in 14 games . After beating the
+Vikings and Falcons the Eagles advanced to Super Bowl XXXIX , where they dueled the New England Patriots .
+</item 10>
+=== END ITEM id=4093aa4e11ba4ee4 ===
+
+=== ITEM id=d0bf861df0f03e4d ===
+Gold sentences and facts:
+Sentence 0: `` Like a Boss '' is a song written and recorded by comedy hip hop troupe The Lonely Island for their debut studio album Incredibad . The song is a parody of the first official single from Slim Thug 's first album Already Platinum , also named `` Like a Boss '' . The song had multiple versions , including an audio - only that did not have the celebrity interviewer and a clean version that was produced in both audio and video . In 2011 it was also subject to a lawsuit from the producers of the song who claimed they never received proper compensation for their work .
+  Fact 0.0: 'Like a Boss' is a song written and recorded by the comedy hip hop troupe The Lonely Island.
+  Fact 0.1: 'Like a Boss' was recorded for The Lonely Island's debut studio album Incredibad.
+  Fact 0.2: 'Like a Boss' is a parody of the first official single from Slim Thug's first album Already Platinum.
+  Fact 0.3: The first official single from Slim Thug's first album Already Platinum is also named 'Like a Boss'.
+  Fact 0.4: The song 'Like a Boss' had multiple versions.
+  Fact 0.5: One version of 'Like a Boss' was audio-only and did not have the celebrity interviewer.
+  Fact 0.6: A clean version of 'Like a Boss' was produced in both audio and video.
+  Fact 0.7: In 2011, 'Like a Boss' was subject to a lawsuit.
+  Fact 0.8: The lawsuit over 'Like a Boss' was from the producers of the song.
+  Fact 0.9: The producers claimed they never received proper compensation for their work.
+
+Retrieved items:
+<item 1>
+Like a Boss
+Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use
+and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 1>
+
+<item 2>
+Like a Boss
+Abby Elliott and Bobby Moynihan can be seen in the video as background dancers . Popularity ( edit ) Prior to the release of the video on Saturday Night Live ,
+the term `` Like a Boss '' was not often searched for or used in social context . Though it was indeed searched for prior to the release of the video , the term
+clearly spiked at release and peaked on Google in April 2009 , hitting a 100 on the Google Trend chart . It has also become popular on social media sites such
+as Twitter Tumblr , and Facebook , where it is a popular hashtag to cite a task completed , goal achieved or successful action that someone is proud of doing .
+It has also led to parody videos such as `` Like a Bus '' , where a bus is shown flying through traffic and often bad weather conditions with no regard or
+slowing for the bad conditions . On 22 October 2012 , `` Like A Boss '' surpassed 100 million views . The video was featured by The Huffington Post , and TV
+Guide . Lawsuit ( edit ) In November 2011 a production team from St. Louis filed charges against Andy Samberg and Co. , NBC Universal and Universal Republic
+Records .
+</item 2>
+
+<item 3>
+Like a Boss
+Louis filed charges against Andy Samberg and Co. , NBC Universal and Universal Republic Records . At the root of the suit was the claim that Monique `` Foxx
+StarStrukk '' Hines and Aleric `` Rick Tha Rular '' Banks submitted the audio track for `` Like a Boss '' along with the audio track that would become another
+hit for The Lonely Island , `` Shy Ronnie '' . The duo claimed that , through a mutual connection in 2008 , they knew Samberg and submitted their tracks for
+inclusion in the upcoming debut album , Incredibad . The Lonely Island then recorded their own lyrics on top of the audio track to create the songs . The duo
+from StarStrukk productions claimed that they were never compensated properly for their work , both in money and recognition / notoriety . Banks claimed that
+originally he signed an agreement giving him a 50 % ownership of the song , given his position as writer and producer . According to his lawsuit , he received a
+response from Universal Music Group that gave him only a 25 % interest in `` Like a Boss . ''
+</item 3>
+
+<item 4>
+Like a Boss
+Banks , however , claims that he has yet to see any sort of a royalty for the song . Another track from the duo was later featured on the band 's 2011 album
+Turtleneck & Chain in the song `` Shy Ronnie 2 : Ronnie & Clyde . '' Censorship ( edit ) This section does not cite any sources . Please help improve this
+section by adding citations to reliable sources . Unsourced material may be challenged and removed . ( January 2015 ) ( Learn how and when to remove this
+template message ) On the NBC version of this digital short , the part where Andy has a gun in his mouth and whines , `` Oh fuck , man , I ca n't fuckin ' do it
+. Shit ! '' had the shot of Andy with the gun in his mouth shortened and redubbed the line to , `` Oh crap , man , I ca n't effin ' do it . Ugh ! ! ''
+References ( edit ) Jump up ^ Van Dril , Eric ( 5 April 2009 ) . `` ' SNL ' Digital Short : ' Like A Boss ' ( With Video ) '' .
+</item 4>
+
+<item 5>
+Like a Boss
+Like a Boss - wikipedia Like a Boss Jump to : navigation , search ( hide ) This article has multiple issues . Please help improve it or discuss these issues on
+the talk page . ( Learn how and when to remove these template messages ) This article 's lead section does not adequately summarize key points of its contents .
+Please consider expanding the lead to provide an accessible overview of all important aspects of the article . Please discuss this issue on the article 's talk
+page . ( January 2015 ) This article needs additional citations for verification . Please help improve this article by adding citations to reliable sources .
+Unsourced material may be challenged and removed .
+</item 5>
+
+<item 6>
+Like a Boss
+The video ends with the giant fish delivering the final words `` like a boss . '' Video ( edit ) The video features Seth Rogen , recording over the vocals done
+by Akiva Schaffer on the single. The video adds additional visuals not included with the words of the song . It ends with Samberg 's tombstone being shown (
+which has the epitaph `` He was da Best '' ) , and a skeptical Rogen trying to confirm some of the more bizarre events with Samberg . The `` bomb the Russians
+'' part shows Samberg attacking St. Basil 's Cathedral . The video features brief cameo appearances from Saturday Night Live writer John Mulaney as the worker
+that Samberg micromanages , Casey Wilson as the woman giving Samberg the memo , Kristen Wiig as Samberg 's office crush Debra , Jason Sudeikis as Samberg 's
+boss and Bill Hader as the man on whom Samberg performs fellatio . It also features Jorma Taccone as the man giving him the lawsuit , and Akiva Schaffer selling
+him the gun . Abby Elliott and Bobby Moynihan can be seen in the video as background dancers .
+</item 6>
+
+<item 7>
+Like a Boss
+In 2011 it was also subject to a lawsuit from the producers of the song who claimed they never received proper compensation for their work . Contents ( hide ) 1
+Song 2 Video 3 Popularity 4 Lawsuit 5 Censorship 6 References 7 External links Song ( edit ) `` Like a Boss '' premiered as a Saturday Night Live Digital Short
+on April 4 , 2009 . In the song , Andy Samberg is a businessman , evidently in middle management , having a performance review . The reviewer asks him to
+describe the things he does in an average day , and does so for the remainder of the song in his trademark aggressive style while repeating the lyric `` like a
+boss '' after every activity . He first lists activities which are fairly mundane , such as communicating to bigger bosses in corporate headquarters , approving
+memorandums , remembering birthdays , leading a workshop , and promoting synergy . However , the song takes a foul turn after he mentions his female subordinate
+Deborah , whom he repeatedly pursues , rejecting him , causing him to `` swallow sadness '' , face a sexual harassment lawsuit and be passed up for a promotion
+.
+</item 7>
+
+<item 8>
+Like a Boss
+Unsourced material may be challenged and removed . ( February 2011 ) ( Learn how and when to remove this template message ) ( Learn how and when to remove this
+template message ) `` Like a Boss '' Song by The Lonely Island featuring Seth Rogen from the album Incredibad Recorded 2008 Genre Comedy hip hop Length 1 : 46
+Label Universal Republic Records Songwriter ( s ) Andy Samberg , Akiva Schaffer , Jorma Taccone , A. Banks Producer ( s ) Rick tha Rular Incredibad track
+listing `` Shrooms ( skit ) '' ( 9 ) `` Like a Boss '' ( 10 ) `` We Like Sportz '' ( 11 ) `` Like a Boss '' is a song written and recorded by comedy hip hop
+troupe The Lonely Island for their debut studio album Incredibad . The song is a parody of the first official single from Slim Thug 's first album Already
+Platinum , also named `` Like a Boss '' . The song had multiple versions , including an audio - only that did not have the celebrity interviewer and a clean
+version that was produced in both audio and video .
+</item 8>
+
+<item 9>
+Like a Boss
+`` ' SNL ' Digital Short : ' Like A Boss ' ( With Video ) '' . The Ripcord . Archived from the original on 11 April 2009 . Retrieved 2014 - 06 - 21 . Jump up ^
+`` Google Trends - websearch interest : like a boss - Worldwide , 2004 - present '' . Google Trends . Jump up ^ `` Twitter / search - # likeaboss '' .
+Twitter.com . Jump up ^ `` like a boss on Tumblr '' . Tumblr.com . Jump up ^ `` # likeaboss '' . Facebook.com . Jump up ^ `` Like a BUS ! Playlist '' .
+Youtube.com . Jump up ^ `` Like A Boss : SNL Digital Short ( VIDEO ) '' . The Huffington Post . 6 May 2009 . Retrieved 2014 - 06 - 23 . Jump up ^ DiNunno , Gina
+. `` Today 's News : Our Take - Seth Rogen and Andy Samberg in SNL Digital Short `` Like a Boss '' `` . TV Guide.com . Retrieved 23 June 2014 .
+</item 9>
+
+<item 10>
+Like a Boss
+TV Guide.com . Retrieved 23 June 2014 . Jump up ^ Kaufman , Gill . `` ' SNL , ' Andy Samberg Sued By Producers over ' Like A Boss ' - MTV '' . MTV News .
+Retrieved 11 July 2014 . External links ( edit ) Beard , Lanford ( November 8 , 2011 ) . `` NBC , Andy Samberg sued for copyright infringement '' .
+Entertainment Weekly . Retrieved November 8 , 2011 . Original video : `` Like a Boss '' on YouTube Censored video : `` Like a Boss - Clean Version '' on YouTube
+Video and Song Lyrics : `` Like a Boss '' Lonely Island 's Song Page : `` Like a Boss '' ( hide ) The Lonely Island Andy Samberg Akiva Schaffer Jorma Taccone
+Discography Studio albums Incredibad Turtleneck & Chain The Wack Album Popstar : Never Stop Never Stopping Singles `` Dick in a Box '' `` Jizz in My Pants '' ``
+I 'm on a Boat '' `` I Just Had Sex '' `` The Creep '' `` We 're Back ! ''
+</item 10>
+=== END ITEM id=d0bf861df0f03e4d ===

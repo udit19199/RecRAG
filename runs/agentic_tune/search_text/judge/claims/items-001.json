@@ -1,0 +1,371 @@
+{
+ "prompt_version": "2026-11-10.haiku.1",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "multihop-rag-1631",
+   "sentences": [
+    "Kooker added later in the speech: “Music is a tremendous driver for AI technology, and AI technology presents a tremendous opportunity for the creative development of music.",
+    "Robert Kyncl, CEO of Warner Music Group – and an ex-high flyer at YouTube – commented: “With each major leap in technology, the music industry navigates a fresh set of challenges and opportunities."
+   ]
+  },
+  {
+   "id": "multihop-rag-1636",
+   "sentences": [
+    "“It’s not the NHL that he was playing in the last few years,” Davidson said, “but the level of performance and how he could control a game and dominate a game in junior — it indicated he was going to be able to do that at some point in the NHL.",
+    "There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others."
+   ]
+  },
+  {
+   "id": "multihop-rag-1651",
+   "sentences": [
+    "Because FTX had grown so much, he could no longer run both companies, he said.",
+    "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-1656",
+   "sentences": [
+    "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote.",
+    "Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with Russia’s most recent invasion of Ukraine."
+   ]
+  },
+  {
+   "id": "multihop-rag-1700",
+   "sentences": [
+    "McHenry himself has brushed off attempts to take the job more permanently after he was appointed to the role after the unprecedented ouster of McCarthy more than two weeks ago.",
+    "Wall Street is also absorbing the ouster of Kevin McCarthy as the speaker of the House of Representatives."
+   ]
+  },
+  {
+   "id": "multihop-rag-1704",
+   "sentences": [
+    "“The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment,” Goodyear SVP of global operations and CTO Chris Helsel says.",
+    "In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."
+   ]
+  },
+  {
+   "id": "multihop-rag-1729",
+   "sentences": [
+    "The Springboks took a 12-3 lead after 34 minutes when the All Blacks once again failed to release on their goal line.",
+    "Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide.",
+    "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."
+   ]
+  },
+  {
+   "id": "multihop-rag-1758",
+   "sentences": [
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.",
+    "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."
+   ]
+  },
+  {
+   "id": "multihop-rag-1802",
+   "sentences": [
+    "Because GPT-4 is more likely to follow the instructions of “jailbreaking” prompts, the co-authors claim that GPT-4 can be more easily prompted than other LLMs to spout toxic, biased text.",
+    "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."
+   ]
+  },
+  {
+   "id": "multihop-rag-1827",
+   "sentences": [
+    "Al Saadi said that her frustration with Meta is common among Palestinians, both in occupied territories and across the diaspora.",
+    "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."
+   ]
+  },
+  {
+   "id": "multihop-rag-1844",
+   "sentences": [
+    "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.",
+    "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-1846",
+   "sentences": [
+    "The feature is currently available in France, Germany, Japan, the U.K. and the U.S., with plans for further expansion.",
+    "LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."
+   ]
+  },
+  {
+   "id": "multihop-rag-1877",
+   "sentences": [
+    "It was a Michigan quarterback that led the Buccaneers to the promised land last time so perhaps lightning strikes twice.",
+    "Source: The Big Ten is reviewing the lengthy written responses from both Michigan and Jim Harbaugh."
+   ]
+  },
+  {
+   "id": "multihop-rag-1895",
+   "sentences": [
+    "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response.",
+    "That allows sportsbooks to earn the profit built into the odds and lines without worrying about which side wins."
+   ]
+  },
+  {
+   "id": "multihop-rag-1912",
+   "sentences": [
+    "They’d all have significant value if president of baseball operations Jerry Dipoto decided to move one for a bat.",
+    "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts."
+   ]
+  },
+  {
+   "id": "multihop-rag-1916",
+   "sentences": [
+    "Microsoft also has a stripped-down Elite Series 2 “Core” version for $129.99, which is the same controller in white-and-black, red-and-black, or blue-and-black finishes without the rear paddles, accessory charging case, or extra stick toppers and D-pad.",
+    "While these models are still quite new, versions that actual humans buy have begun receiving discounts."
+   ]
+  },
+  {
+   "id": "multihop-rag-1926",
+   "sentences": [
+    "13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1) Just a single and the wicket off the over, Shai Hope can’t break the legspin shackles.",
+    "6d ago 22.54 GMT 16th over: West Indies 112-4 (Hope 29, Powell 8) Hope, who is playing an exemplary innings, opens the face to steer Rehan for his first boundary."
+   ]
+  },
+  {
+   "id": "multihop-rag-1950",
+   "sentences": [
+    "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund.",
+    "He has already been firing in many top-flight goals this term - as well as being the joint-leading scorer from the Champions League group stages."
+   ]
+  },
+  {
+   "id": "multihop-rag-1958",
+   "sentences": [
+    "Unfortunately, she did say that she had conversations with investors as part of their due diligence — and, of course, Alameda was taking on losses from FTX to keep FTX’s balance sheet pristine.",
+    "It was not, however, possible for those accounts to avoid liquidation, as Wang testified Alameda could do — or to have an overall negative balance.",
+    "It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."
+   ]
+  },
+  {
+   "id": "multihop-rag-1959",
+   "sentences": [
+    "Shares of Rogers extended losses on news of the lawsuit, closing down 2.2% to C$53.07 in Toronto.",
+    "Amazon tumbled 4 per cent after the Federal Trade Commission and 17 state attorneys general filed an antitrust lawsuit against it."
+   ]
+  },
+  {
+   "id": "multihop-rag-1999",
+   "sentences": [
+    "From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant.",
+    "Speaking of the Christmas season, McLean — born in New Rochelle, New York — said that \"the holidays are a time for families to come together."
+   ]
+  },
+  {
+   "id": "multihop-rag-2014",
+   "sentences": [
+    "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.",
+    "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."
+   ]
+  },
+  {
+   "id": "multihop-rag-2016",
+   "sentences": [
+    "With this sale, they offer some of the best value in their class from one of the top names in the business.",
+    "“Each actor will have to be responsible to ensure that the market remains reasonable amid rates that are relatively low,” CMA CGM Chief Financial Officer Ramon Fernandez told reporters Friday."
+   ]
+  },
+  {
+   "id": "multihop-rag-2020",
+   "sentences": [
+    "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes.",
+    "If a track isn’t used or taken care of for an extended period of time, it will start to wear out and eventually become completely unsuitable for any kind of racing unless it is taken apart and rebuilt."
+   ]
+  },
+  {
+   "id": "multihop-rag-2022",
+   "sentences": [
+    "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth.",
+    "Brown added that he was “surprised” to see that a second valuation expert had not been drafted in to value the HSF portfolio for the latest interim results, especially as Kroll was appointed to consider the “reasonableness” of Citrin Cooperman’s assumptions for HSF’s previous set of results (to end of March 2023)."
+   ]
+  },
+  {
+   "id": "multihop-rag-2072",
+   "sentences": [
+    "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth).",
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-2079",
+   "sentences": [
+    "Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on.",
+    "Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "multihop-rag-2092",
+   "sentences": [
+    "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.",
+    "Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "multihop-rag-2096",
+   "sentences": [
+    "Back then, just like today, home prices had boomed for years before Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation.",
+    "Postponements of such reports could complicate things for the Fed, which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy."
+   ]
+  },
+  {
+   "id": "multihop-rag-2153",
+   "sentences": [
+    "In the wake of the Wallabies’ World Cup flop, the Queensland Rugby Union have reaffirmed their position that they are committed to moving to a centralised high-performance model but won’t follow the NSW Waratahs by handing over the keys to Rugby Australia.",
+    "He will also be tasked with “integrating” the programs, with RA trying to centralise all of the Super Rugby’s high-performance programs."
+   ]
+  },
+  {
+   "id": "multihop-rag-2197",
+   "sentences": [
+    "Love Story This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No.",
+    "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before.",
+    "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."
+   ]
+  },
+  {
+   "id": "multihop-rag-2205",
+   "sentences": [
+    "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce.",
+    "On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium - an invitation she famously accepted on 24 September."
+   ]
+  },
+  {
+   "id": "multihop-rag-2210",
+   "sentences": [
+    "Under American Todd Boehly’s co-ownership, expanding Chelsea’s profile and reach in the U.S. would make sense, especially with USWNT internationals Catarina Macario and Mia Fishel playing their club football there — and CBS Sports holding WSL rights.",
+    "It was 24 September, Chelsea’s second home Premier League defeat on the spin after the one against Nottingham Forest and they were booed off again.",
+    "Late checks will be made on the fitness of Reece James, Axel Disasi and Nicolas Jackson, while Benoit Badiashile could return from a long-term injury."
+   ]
+  },
+  {
+   "id": "multihop-rag-2214",
+   "sentences": [
+    "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills.",
+    "By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter."
+   ]
+  },
+  {
+   "id": "multihop-rag-2230",
+   "sentences": [
+    "Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs.",
+    "He picked up 16 wickets, conceding just 398 at an economy rate of 4.25 in 10 matches."
+   ]
+  },
+  {
+   "id": "multihop-rag-2231",
+   "sentences": [
+    "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro.",
+    "“Certainly there wasn’t a valid alternative to Google at the time,” Cue said.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "multihop-rag-2252",
+   "sentences": [
+    "Ketamine is primarily used as an anesthetic during surgical procedures — but in recent years it's been used as a remedy for treatment-resistant depression .",
+    "If it worked with the fish, they might then be able to figure out how the diet effects behavior and improve the effectiveness of the treatment for humans."
+   ]
+  },
+  {
+   "id": "multihop-rag-2262",
+   "sentences": [
+    "13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1) Just a single and the wicket off the over, Shai Hope can’t break the legspin shackles.",
+    "6d ago 22.54 GMT 16th over: West Indies 112-4 (Hope 29, Powell 8) Hope, who is playing an exemplary innings, opens the face to steer Rehan for his first boundary."
+   ]
+  },
+  {
+   "id": "multihop-rag-2317",
+   "sentences": [
+    "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook.",
+    "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move.",
+    "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."
+   ]
+  },
+  {
+   "id": "multihop-rag-2327",
+   "sentences": [
+    "Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns.",
+    "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley."
+   ]
+  },
+  {
+   "id": "multihop-rag-2345",
+   "sentences": [
+    "If you've got your gift list handy, now's a good time to start checking it off so you won't be pressed for time or funds when Black Friday and Cyber Monday come around next month.",
+    "“One of the hardest things is resentment can build up if you feel like you need to buy gifts for your family and you can barely make your student loan payments, so bring things up,” Alev said."
+   ]
+  },
+  {
+   "id": "multihop-rag-2366",
+   "sentences": [
+    "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said.",
+    "Because FTX had grown so much, he could no longer run both companies, he said.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-2369",
+   "sentences": [
+    "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight.",
+    "-- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."
+   ]
+  },
+  {
+   "id": "multihop-rag-2388",
+   "sentences": [
+    "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight.",
+    "152.67 -- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."
+   ]
+  },
+  {
+   "id": "multihop-rag-2396",
+   "sentences": [
+    "“Users’ natural behavior for search is to follow the path of least resistance, i.e.",
+    "“We make Google be the default search engine,” he said, “because we’ve always thought it was the best."
+   ]
+  },
+  {
+   "id": "multihop-rag-2408",
+   "sentences": [
+    "Tyreek Hill had two touchdowns among his 157 receiving yards to help the Miami Dolphins rout the Washington Commanders (4-9).",
+    "• Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games.",
+    "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."
+   ]
+  },
+  {
+   "id": "multihop-rag-2440",
+   "sentences": [
+    "The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones.",
+    "Apple has already indicated that it plans to appeal, but appealing is a lengthy process that can take around 18 months.",
+    "They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."
+   ]
+  },
+  {
+   "id": "multihop-rag-2448",
+   "sentences": [
+    "New customers can get up to $1000 in bonus bets if they lose their first bet.",
+    "We expect Caesars to offer the same offer in VT is has elsewhere, with new sign-ups eligible to receive up to a $1,000 Bonus Bet if their first bet loses."
+   ]
+  },
+  {
+   "id": "multihop-rag-2514",
+   "sentences": [
+    "“I’m here until the end,” she said in her press conference on Friday.",
+    "He has been out of work since his Blues tenure came to a close back in April, but it would be a hard sell to fans after his time with the London club went so poorly."
+   ]
+  },
+  {
+   "id": "multihop-rag-2554",
+   "sentences": [
+    "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts.",
+    "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  }
+ ]
+}

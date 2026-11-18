@@ -1,0 +1,235 @@
+{
+ "rule": "comparison questions whose gold-facts-found share differs by >=0.25 between the best and worst of the 3 repeats of the 10 Nov Agentic GraphRAG run (runs/agentic_tune/graphrag/comparison100, _rep2, _rep3), Haiku fact judge 2026-11-10.haiku.2",
+ "record_ids": [
+  "multihop-rag-306",
+  "multihop-rag-352",
+  "multihop-rag-457",
+  "multihop-rag-470",
+  "multihop-rag-526",
+  "multihop-rag-547",
+  "multihop-rag-563",
+  "multihop-rag-583",
+  "multihop-rag-640",
+  "multihop-rag-717",
+  "multihop-rag-747",
+  "multihop-rag-791",
+  "multihop-rag-800",
+  "multihop-rag-865",
+  "multihop-rag-1077",
+  "multihop-rag-1120",
+  "multihop-rag-1252",
+  "multihop-rag-1255",
+  "multihop-rag-1349",
+  "multihop-rag-1613",
+  "multihop-rag-1636",
+  "multihop-rag-1802",
+  "multihop-rag-1895",
+  "multihop-rag-1912",
+  "multihop-rag-1916",
+  "multihop-rag-1958",
+  "multihop-rag-1999",
+  "multihop-rag-2022",
+  "multihop-rag-2072",
+  "multihop-rag-2079",
+  "multihop-rag-2210",
+  "multihop-rag-2214",
+  "multihop-rag-2230",
+  "multihop-rag-2231",
+  "multihop-rag-2327",
+  "multihop-rag-2366",
+  "multihop-rag-2369",
+  "multihop-rag-2448"
+ ],
+ "old_shares": {
+  "multihop-rag-306": {
+   "r1": 1.0,
+   "r2": 1.0,
+   "r3": 0.42857142857142855
+  },
+  "multihop-rag-352": {
+   "r1": 0.42857142857142855,
+   "r2": 1.0,
+   "r3": 0.42857142857142855
+  },
+  "multihop-rag-457": {
+   "r1": 0.8,
+   "r2": 0.2,
+   "r3": 0.2
+  },
+  "multihop-rag-470": {
+   "r1": 1.0,
+   "r2": 1.0,
+   "r3": 0.3333333333333333
+  },
+  "multihop-rag-526": {
+   "r1": 0.75,
+   "r2": 0.3333333333333333,
+   "r3": 0.4166666666666667
+  },
+  "multihop-rag-547": {
+   "r1": 1.0,
+   "r2": 0.7142857142857143,
+   "r3": 1.0
+  },
+  "multihop-rag-563": {
+   "r1": 0.16666666666666666,
+   "r2": 0.25,
+   "r3": 1.0
+  },
+  "multihop-rag-583": {
+   "r1": 0.5,
+   "r2": 0.5,
+   "r3": 0.125
+  },
+  "multihop-rag-640": {
+   "r1": 0.75,
+   "r2": 0.375,
+   "r3": 0.375
+  },
+  "multihop-rag-717": {
+   "r1": 1.0,
+   "r2": 0.75,
+   "r3": 1.0
+  },
+  "multihop-rag-747": {
+   "r1": 0.4,
+   "r2": 0.2,
+   "r3": 0.8
+  },
+  "multihop-rag-791": {
+   "r1": 1.0,
+   "r2": 0.75,
+   "r3": 0.75
+  },
+  "multihop-rag-800": {
+   "r1": 0.0,
+   "r2": 0.0,
+   "r3": 0.25
+  },
+  "multihop-rag-865": {
+   "r1": 1.0,
+   "r2": 0.7142857142857143,
+   "r3": 1.0
+  },
+  "multihop-rag-1077": {
+   "r1": 1.0,
+   "r2": 0.2857142857142857,
+   "r3": 1.0
+  },
+  "multihop-rag-1120": {
+   "r1": 0.36363636363636365,
+   "r2": 0.36363636363636365,
+   "r3": 0.0
+  },
+  "multihop-rag-1252": {
+   "r1": 0.15384615384615385,
+   "r2": 0.0,
+   "r3": 0.5384615384615384
+  },
+  "multihop-rag-1255": {
+   "r1": 1.0,
+   "r2": 0.6666666666666666,
+   "r3": 0.6666666666666666
+  },
+  "multihop-rag-1349": {
+   "r1": 1.0,
+   "r2": 1.0,
+   "r3": 0.6
+  },
+  "multihop-rag-1613": {
+   "r1": 0.6666666666666666,
+   "r2": 0.0,
+   "r3": 0.6666666666666666
+  },
+  "multihop-rag-1636": {
+   "r1": 1.0,
+   "r2": 1.0,
+   "r3": 0.2727272727272727
+  },
+  "multihop-rag-1802": {
+   "r1": 0.4,
+   "r2": 0.4,
+   "r3": 0.0
+  },
+  "multihop-rag-1895": {
+   "r1": 1.0,
+   "r2": 1.0,
+   "r3": 0.5
+  },
+  "multihop-rag-1912": {
+   "r1": 1.0,
+   "r2": 0.3333333333333333,
+   "r3": 1.0
+  },
+  "multihop-rag-1916": {
+   "r1": 0.2857142857142857,
+   "r2": 1.0,
+   "r3": 0.2857142857142857
+  },
+  "multihop-rag-1958": {
+   "r1": 0.23076923076923078,
+   "r2": 0.9230769230769231,
+   "r3": 0.3076923076923077
+  },
+  "multihop-rag-1999": {
+   "r1": 0.0,
+   "r2": 0.625,
+   "r3": 0.0
+  },
+  "multihop-rag-2022": {
+   "r1": 0.5,
+   "r2": 1.0,
+   "r3": 0.5
+  },
+  "multihop-rag-2072": {
+   "r1": 0.0,
+   "r2": 0.1,
+   "r3": 0.3
+  },
+  "multihop-rag-2079": {
+   "r1": 1.0,
+   "r2": 1.0,
+   "r3": 0.6363636363636364
+  },
+  "multihop-rag-2210": {
+   "r1": 0.4666666666666667,
+   "r2": 0.7333333333333333,
+   "r3": 0.4666666666666667
+  },
+  "multihop-rag-2214": {
+   "r1": 1.0,
+   "r2": 0.5,
+   "r3": 0.5
+  },
+  "multihop-rag-2230": {
+   "r1": 1.0,
+   "r2": 0.4444444444444444,
+   "r3": 0.8888888888888888
+  },
+  "multihop-rag-2231": {
+   "r1": 0.42857142857142855,
+   "r2": 0.42857142857142855,
+   "r3": 0.14285714285714285
+  },
+  "multihop-rag-2327": {
+   "r1": 0.7142857142857143,
+   "r2": 0.7142857142857143,
+   "r3": 1.0
+  },
+  "multihop-rag-2366": {
+   "r1": 0.25,
+   "r2": 0.75,
+   "r3": 0.25
+  },
+  "multihop-rag-2369": {
+   "r1": 0.6666666666666666,
+   "r2": 1.0,
+   "r3": 0.6666666666666666
+  },
+  "multihop-rag-2448": {
+   "r1": 0.75,
+   "r2": 1.0,
+   "r3": 0.75
+  }
+ }
+}

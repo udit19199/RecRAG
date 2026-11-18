@@ -1,0 +1,1218 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=08ed3fcf26c86736 ===
+Gold sentences and facts:
+Sentence 0: In 2012 , Maryse was featured on the cover of Le Journal de Montréal , and on MDA Show of Strength with The Miz and other celebrities . In 2015 , Ouellet had roles in Sharknado 3 : Oh Hell No ! and in Santa 's Little Helper , the latter starring Ouellet 's husband , The Miz . In the same year , she appeared on the E ! reality television series WAGS . In 2016 , it was announced that Maryse would appear as a main cast member on the sixth season of Total Divas , which prompted her return to WWE . In June 2017 , Maryse along with Miz were cover of the DUB Magazine with a Jeep car . In 2018 , Maryse along with The Miz will star in a reality television series titled Miz & Mrs .
+  Fact 0.0: In 2012, Maryse was featured on the cover of Le Journal de Montréal.
+  Fact 0.1: In 2012, Maryse was featured on MDA Show of Strength with The Miz.
+  Fact 0.2: In 2012, Maryse was featured on MDA Show of Strength with other celebrities.
+  Fact 0.3: In 2015, Ouellet had a role in Sharknado 3: Oh Hell No!
+  Fact 0.4: In 2015, Ouellet had a role in Santa's Little Helper.
+  Fact 0.5: Santa's Little Helper starred Ouellet's husband, The Miz.
+  Fact 0.6: In 2015, Ouellet appeared on the E! reality television series WAGS.
+  Fact 0.7: In 2016, it was announced that Maryse would appear as a main cast member on the sixth season of Total Divas.
+  Fact 0.8: The 2016 announcement prompted Maryse's return to WWE.
+  Fact 0.9: In June 2017, Maryse and Miz were on the cover of DUB Magazine with a Jeep car.
+  Fact 0.10: In 2018, Maryse and The Miz will star in a reality television series titled Miz & Mrs.
+Sentence 1: In late - 2011 , she announced plans for a clothing and jewelry line called House of Maryse , and later began working as a realtor . In November 2016 , she began starring in the reality television series Total Divas on E ! as part of the main cast . She and her husband The Miz will also star in their own reality show titled Miz & Mrs. that will premiere in 2018 .
+  Fact 1.0: In late 2011, Maryse announced plans for a clothing and jewelry line called House of Maryse.
+  Fact 1.1: Maryse later began working as a realtor.
+  Fact 1.2: In November 2016, Maryse began starring in the reality television series Total Divas on E! as part of the main cast.
+  Fact 1.3: Maryse and her husband The Miz will also star in their own reality show titled Miz & Mrs.
+  Fact 1.4: The reality show Miz & Mrs. will premiere in 2018.
+
+Retrieved items:
+<item 1>
+Maryse Ouellet
+In late - 2011 , she announced plans for a clothing and jewelry line called House of Maryse , and later began working as a realtor . In November 2016 , she
+began starring in the reality television series Total Divas on E ! as part of the main cast . She and her husband The Miz will also star in their own reality
+show titled Miz & Mrs. that will premiere in 2018 . Contents ( hide ) 1 Early life and career 2 Professional wrestling career 2.1 World Wrestling Entertainment
+/ WWE 2.1. 1 Diva Search and developmental territories ( 2006 -- 2007 ) 2.1. 2 Early feuds ( 2006 -- 2008 ) 2.1. 3 Divas Champion ( 2008 -- 2010 ) 2.1. 4
+Managing Ted DiBiase and departure ( 2010 -- 2011 ) 2.2 Independent circuit ( 2012 ) 2.3 Return to WWE 2.3.
+</item 1>
+
+<item 2>
+The sources chronicle Maryse Ouellet’s WWE career and appearances from 2009–17: Raw and SmackDown storylines, Divas-title events, NXT, and a 2012 Family
+Wrestling Entertainment show. After returning to WWE in 2016, she became prominent alongside husband The Miz. In 2017, they feuded with John Cena and Nikki
+Bella, culminating in a WrestleMania 33 mixed-tag match that Cena and Bella won; Cena proposed to Bella
+</item 2>
+
+<item 3>
+Maryse Ouellet
+On September 20 , Miz retained the championship over Ziggler . On October 9 , at No Mercy Miz lost the Intercontinental Championship to Ziggler in a title vs
+career match when Maryse was banned from the ringside along with The Spirit Squad ( Kenny and Mikey ) , who was contracted by her to help Miz , ending Miz 's
+reign at 188 days . On November 8 episode of SmackDown , Maryse went on to speak in Miz 's name due Miz refuse to speak with Daniel Bryan . At that night ,
+Maryse accepted Bryan 's offer to Miz face Ziggler the following week for the Intercontinental Championship in the 900th episode of SmackDown . Later that night
+, Bryan would state on Talking Smack that if Ziggler successfully retains his championship , The Miz and Maryse would be traded to Raw for someone else . On
+November 15 at the 900th episode of SmackDown , Maryse helped Miz to win the championship for the sixth time and also retain it at Survivor Series against Sami
+Zayn .
+</item 3>
+
+<item 4>
+Maryse Ouellet
+Maryse Ouellet - wikipedia Maryse Ouellet Jump to : navigation , search Maryse Ouellet Ouellet in April 2016 Birth name Maryse Ouellet ( 1983 - 01 - 21 )
+January 21 , 1983 ( age 35 ) Montréal , Quebec , Canada Residence Austin , Texas , United States Spouse ( s ) The Miz ( m . 2014 ) Children Professional
+wrestling career Ring name ( s ) Maryse Billed height 5 ft 8 in ( 1.73 m ) Billed weight 116 lb ( 53 kg ) Billed from Montreal , Quebec , Canada Trained by Al
+Snow Dave Finlay Steve Keirn Tom Prichard Ricky Steamboat Debut August 24 , 2006 Maryse Mizanin ( / məˈriːs / ; née Ouellet ; born January 21 , 1983 ) is a
+French Canadian professional wrestler , professional wrestling manager , actress , businesswoman and glamour model currently signed to WWE under the ring name
+Maryse , performing on the SmackDown brand as the manager of her real - life husband The Miz .
+</item 4>
+
+<item 5>
+Maryse Ouellet
+On June 4 , at Extreme Rules , Maryse was in Miz 's corner when he won the WWE Intercontinental Championship for the seventh time by defeating Ambrose . In
+September , following her pregnancy announcement , Maryse stopped appearing on television . On January 22 , 2018 , in the Raw 25 Years special episode , Maryse
+was honored as part of a segment involving women considered legends that contributed to the company 's success , including the Bella Twins , Kelly Kelly ,
+Lilian Garcia , Torrie Wilson , Michelle McCool , Terri Runnels , Maria Kanellis and the Hall of Famers Jacqueline and Trish Stratus . Other media ( edit )
+Maryse and Miz in July 2016 In April 2007 , she appeared alongside fellow WWE Divas Ashley , Torrie Wilson , Brooke Adams , Layla , and Kelly Kelly in Timbaland
+'s music video `` Throw It On Me '' featuring The Hives . Ouellet also appeared in the January 2009 issue of Muscle & Fitness , along with Eve Torres and
+Michelle McCool . She and John Morrison were interviewed on Eurosport in the same year .
+</item 5>
+
+<item 6>
+Maryse Ouellet
+Following a hiatus due to the shoot of a WWE film , Maryse returned to WWE television on the June 27 episode of Raw , where she helped Miz to retain his
+championship against Kane after she faked an ankle injury . After being drafted to Smackdown as part of the 2016 WWE draft which took place on July 19 , Ouellet
+made her first appearance for the brand on July 26 , where she co-hosted a Miz TV segment along her husband before being interrupted by Randy Orton , who
+challenged Miz to a non-title match , in which he was subsequently defeated . At Backlash , Maryse successfully helped Miz to retain the Intercontinental
+Championship by spraying something at Dolph Ziggler whilst Miz distracted the referee . The following week , SmackDown General Manager Daniel Bryan announced a
+rematch for the championship due Maryse 's interference at Backlash . On September 20 , Miz retained the championship over Ziggler .
+</item 6>
+
+<item 7>
+Maryse Ouellet
+On the January 23 , 2009 episode of SmackDown , Maryse returned and sat at ringside commentating during a Divas ' tag team match . She returned to in - ring
+action on February 20 , teaming with Michelle McCool in a win against Maria and Eve Torres , where she pinned Torres . Maryse wrestling during the WrestleMania
+XXV event in April 2009 Maryse made her first appearance on Raw on March 2 , as a commentator for a match involving the WWE Women 's Champion Melina , with
+Maryse attacking her after the match . The following week , Maryse made her in - ring debut on Raw in a champion vs champion lumberjill match , which she
+defeated Melina . The rivalry extended to a tag team match on SmackDown on March 13 , where Melina and Maria defeated McCool and Maryse . On March 27 episode of
+SmackDown , Maryse made her first championship defense , losing by disqualification after the returning Gail Kim attacked Maryse and McCool , and thus retained
+the championship .
+</item 7>
+
+<item 8>
+Maryse Ouellet
+On February 21 episode of SmackDown , Maryse was again hit by Nikki and Natalya backstage during their Falls Count Anywhere match , leading to Maryse attacking
+Bella with a lead pipe and causing her to lose the match . On February 28 episode of SmackDown , during the Miz TV segment , Maryse slapped Nikki 's then real -
+life boyfriend John Cena , causing Nikki to confront her . On March 7 episode of SmackDown , Maryse and Miz attacked Nikki and Cena after they won a match
+against James Ellsworth and Carmella . On March 14 episode of SmackDown , after another showdown between the couples , SmackDown General Manager Daniel Bryan
+announced a mixed tag team match at WrestleMania 33 . Maryse and Miz would ultimately lose in what was Maryse 's first match in over six years . On April 10 ,
+Maryse was drafted to the Raw brand along with Miz as part of the `` Superstar Shake Up '' , where they made their debut on the same night dressed as Bella and
+Cena , before being confronted by the Intercontinental Champion Dean Ambrose .
+</item 8>
+
+<item 9>
+Maryse Ouellet
+. TMZ . February 22 , 2014 . Retrieved March 21 , 2014 . Jump up ^ `` The Miz and Maryse are expecting their first child '' . Retrieved March 19 , 2018 . Jump
+up ^ Waldman , Jon ( April 25 , 2009 ) . `` Smackdown : UK gets a strong episode of SD ! '' . Slam ! Sports . Canadian Online Explorer . Retrieved February 14 ,
+2010 . Jump up ^ David , Stephens ( January 4 , 2010 ) . `` WWE Raw Results -- 1 / 4 / 10 '' . WrestleView . Retrieved April 9 , 2016 . Jump up ^ David ,
+Stephens ( May 17 , 2010 ) . `` WWE Raw Results -- 5 / 17 / 10 '' . WrestleView . Retrieved April 9 , 2016 . Jump up ^ Tedesco , Mike ( December 26 , 2008 ) .
+</item 9>
+
+<item 10>
+Maryse Ouellet
+She began appearing regularly for FWE , where she commentated during women 's matches . Return to WWE ( edit ) Managing the Miz ( 2016 -- present ) ( edit )
+Maryse celebrating along The Miz after winning the Intercontinental Championship at a Raw event in April 2016 On April 4 , 2016 episode of Raw , the episode
+after WrestleMania 32 , Maryse returned during a WWE Intercontinental Championship match between the champion Zack Ryder and her husband , The Miz . During the
+match , Maryse slapped Ryder 's father , who was in the front row , in order to distract Ryder and allowed Miz to capture the championship for the fifth time ,
+thus becoming his manager in the process , where the two then became an on - screen power couple . She formally re-introduced herself three days later on the
+April 7 episode of SmackDown before once more helping Miz to retain his championship over Ryder . She then began to cut various promos with Miz as his host
+during the `` Miz TV '' segments , while calling themselves the `` It '' Couple .
+</item 10>
+=== END ITEM id=08ed3fcf26c86736 ===
+
+=== ITEM id=76c4775b66b600d2 ===
+Gold sentences and facts:
+Sentence 0: When Hoyt Axton performed the song to the group , two of the three main vocalists -- Danny Hutton and Cory Wells -- rejected the song , but Chuck Negron felt that the band needed a `` silly song '' to help bring the band back together as a working unit . Negron also felt that the song `` was n't even close to our best record , but it might have been one of our most honest . ''
+  Fact 0.0: Hoyt Axton performed the song to the group.
+  Fact 0.1: Two of the three main vocalists, Danny Hutton and Cory Wells, rejected the song.
+  Fact 0.2: Chuck Negron felt that the band needed a 'silly song' to help bring the band back together as a working unit.
+  Fact 0.3: Chuck Negron also felt that the song was not even close to the band's best record.
+  Fact 0.4: Chuck Negron also felt that the song might have been one of the band's most honest.
+Sentence 1: The song , which has been described by members of Three Dog Night as a `` kid 's song '' and a `` silly song '' , topped the main singles charts in North America , was certified gold by the RIAA , and has since been covered by multiple artists .
+  Fact 1.0: Members of Three Dog Night have described the song as a 'kid's song'.
+  Fact 1.1: Members of Three Dog Night have described the song as a 'silly song'.
+  Fact 1.2: The song topped the main singles charts in North America.
+  Fact 1.3: The song was certified gold by the RIAA.
+  Fact 1.4: The song has since been covered by multiple artists.
+
+Retrieved items:
+<item 1>
+Joy to the World (Three Dog Night song)
+Entertainment section . August 20 , 2008 . ISSN 1053 - 2889 . Retrieved April 5 , 2011 . Jump up ^ `` Jackson v. Axton '' . Law.justia.com . Retrieved 2016 - 10
+- 04 . Jump up ^ `` Forum - 1970 ( ARIA Charts : Special Occasion Charts ) '' . Australian-charts.com . Archived from the original on 2016 - 10 - 20 . Retrieved
+2017 - 05 - 07 . Jump up ^ `` 100 Singles '' ( PHP ) . RPM. 15 ( 15 ) . May 29 , 1971 . Retrieved April 5 , 2011 . Jump up ^ `` Musicline.de -- Three Dog Night
+Single - Chartverfolgung '' ( in German ) . Media Control Charts . PhonoNet GmbH . Jump up ^ `` Dutchcharts.nl -- Three Dog Night -- Joy To The World '' ( in
+Dutch ) . Single Top 100 .
+</item 1>
+
+<item 2>
+Graph query row:
+song: Joy to the World
+relationship: CREATED
+connected_entity: Hoyt Axton
+entity_types: ['__KGBuilder__', '__Entity__', 'Person']
+kind: None
+date: None
+role: None
+context: None
+relationship_detail: None
+relation: None
+fact: None
+</item 2>
+
+<item 3>
+Joy to the World (Three Dog Night song)
+wikipedia.org/w/index.php?title=Joy_to_the_World_(Three_Dog_Night_song)&oldid=835489072 '' Categories : 1971 singles Billboard Hot 100 number - one singles
+Three Dog Night songs Dunhill Records singles Songs written by Hoyt Axton Songs about animals Novelty songs RPM Top Singles number - one singles 1970 songs
+Hidden categories : Articles needing additional references from June 2008 All articles needing additional references Articles with hAudio microformats
+Singlechart usages for German Singlechart usages for Dutch100 Singlechart usages for UK Singlechart usages for Billboardhot100 Singlechart called without song
+Talk Contents About Wikipedia 日本 語 Edit links This page was last edited on 9 April 2018 , at 00 : 34 . Text is available under the Creative Commons Attribution
+- ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered
+trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 3>
+
+<item 4>
+Joy to the World (Three Dog Night song)
+1965 -- 1975 ( 1993 ) 20th Century Masters -- The Millennium Collection : The Best of Three Dog Night ( 1999 ) Singles `` Nobody '' `` Try a Little Tenderness
+'' `` One '' `` Easy to Be Hard '' `` Eli 's Coming '' `` Celebrate '' `` Mama Told Me ( Not to Come ) '' `` Out in the Country '' `` One Man Band '' `` Joy to
+the World '' `` Liar '' `` An Old Fashioned Love Song '' `` Never Been to Spain '' `` The Family of Man '' `` Black & White '' `` Pieces of April '' `` Shambala
+'' `` Let Me Serenade You '' `` The Show Must Go On '' `` Sure As I 'm Sittin ' Here '' `` Play Something Sweet ( Brickyard Blues ) '' `` Til the World Ends ''
+`` Everybody Is a Masterpiece '' `` It 's a Jungle Out There '' Discography Book Billboard Year - End number one singles ( 1960 -- 1979 ) 1960 : `` Theme from A
+Summer Place '' -- Percy Faith 1961 : `` Tossin ' and Turnin ' '' -- Bobby Lewis 1962 : ``
+</item 4>
+
+<item 5>
+Joy to the World (Three Dog Night song)
+The single went on to sell 5 million copies worldwide , making it one of the best - selling singles of all time . In popular culture ( edit ) Singer -
+songwriter Daniel Johnston likes this song , which inspired his own character Jeremiah the bullfrog , whom he often draws in his artwork and advertisements .
+The frog is also featured on the cover of his album Hi , How Are You ( 1983 ) and has become an official music mascot for Johnston . It is sung by the son of
+one of the main characters at the start of the film The Big Chill ( 1983 ) and is featured on the soundtrack . In The X-Files TV series ( Detour - S05E04 ) ,
+Scully sings this song while she 's lost in a forest with Mulder to show him she is awake and he can rest . It is played during the end credits of the R - rated
+animated film , Sausage Party ( 2016 ) , and later in the end credits of the PG - 13 - rated animated film A Very Spooky Night . It appears in 2017 and 2018 TV
+commercials for Big Lots .
+</item 5>
+
+<item 6>
+Joy to the World (Three Dog Night song)
+Axton wanted to persuade his record producers to record a new melody he had written and the producers asked him to sing any words to the tune . A member of
+Three Dog Night said that the original lyrics to the song were `` Jeremiah was a prophet '' but `` no one liked that '' . When Hoyt Axton performed the song to
+the group , two of the three main vocalists -- Danny Hutton and Cory Wells -- rejected the song , but Chuck Negron felt that the band needed a `` silly song ''
+to help bring the band back together as a working unit . Negron also felt that the song `` was n't even close to our best record , but it might have been one of
+our most honest . '' The song was recorded by Three Dog Night at American Recording Company , produced by Richard Podolor , and engineered by Bill Cooper .
+Unlike most Three Dog Night songs recorded at that point , instead of having just the three main vocalists singing harmony , the song was recorded with all
+seven members of the band singing . Drummer Floyd Sneed sings the deep lyric `` I wan na tell you '' towards the end of the song .
+</item 6>
+
+<item 7>
+Joy to the World (Three Dog Night song)
+Genre Rock Length 3 : 50 ( album ) 3 : 17 ( single ) Label Dunhill Songwriter ( s ) Hoyt Axton Producer ( s ) Richard Podolor Three Dog Night singles chronology
+`` One Man Band '' ( 1970 ) `` Joy to the World '' ( 1971 ) `` Liar '' ( 1971 ) `` One Man Band '' ( 1970 ) `` Joy to the World '' ( 1971 ) `` Liar '' ( 1971 )
+`` Joy to the World '' is a song written by Hoyt Axton , and made famous by the band Three Dog Night . The song is also popularly known by its opening lyric ,
+`` Jeremiah was a bullfrog '' . Three Dog Night originally released the song on their fourth studio album , Naturally in November 1970 and subsequently released
+an edited version of the song as a single in February 1971 .
+</item 7>
+
+<item 8>
+Joy to the World (Three Dog Night song)
+ispot.tv . Retrieved December 24 , 2017 . External links ( edit ) Lyrics of this song at MetroLyrics Three Dog Night Danny Hutton Michael Allsup Paul Kingery
+Pat Bautz Eddie Reasoner David Morgan Cory Wells Chuck Negron Jimmy Greenspoon Floyd Sneed Joe Schermie Skip Konte Al Ciner Gary Moon Richard Campbell Studio
+albums Three Dog Night ( 1968 ) Suitable for Framing ( 1969 ) It Ai n't Easy ( 1970 ) Naturally ( 1970 ) Harmony ( 1971 ) Seven Separate Fools ( 1972 ) Cyan (
+1973 ) Hard Labor ( 1974 ) Coming Down Your Way ( 1975 ) American Pastime ( 1976 ) It 's a Jungle ( 1983 ) Live albums Captured Live at the Forum ( 1969 )
+Around the World with Three Dog Night ( 1973 ) Compilations Golden Bisquits ( 1971 ) Joy to the World : Their Greatest Hits ( 1975 ) The Best of 3 Dog Night (
+1982 ) Celebrate : The Three Dog Night Story , 1965 -- 1975 (
+</item 8>
+
+<item 9>
+Joy to the World (Three Dog Night song)
+The song , which has been described by members of Three Dog Night as a `` kid 's song '' and a `` silly song '' , topped the main singles charts in North
+America , was certified gold by the RIAA , and has since been covered by multiple artists . The song is featured prominently in the film The Big Chill . It is
+sung by a child character at the beginning and the Three Dog Night recording is played over the end credits . It is also played at the end of every Denver
+Broncos home victory . Notable playings of this song after Broncos victories included then - Chicago Bears head coach Abe Gibron 's singing along with the song
+in 1973 ; and at the end of Super Bowl XXXII , played at Qualcomm Stadium in San Diego . It was also played at the end of Super Bowl XXXIII at Pro Player ( now
+Hard Rock ) Stadium in Miami Gardens , Florida and Super Bowl 50 in Santa Clara , California . Contents ( hide ) 1 Background and recording 2 Charts and awards
+3 In popular culture 4 References 5 External links Background and Recording ( edit ) Some of the words are nonsensical .
+</item 9>
+
+<item 10>
+Joy to the World (Three Dog Night song)
+Joy to the World ( Three Dog Night song ) - wikipedia Joy to the World ( Three Dog Night song ) Jump to : navigation , search This article needs additional
+citations for verification . Please help improve this article by adding citations to reliable sources . Unsourced material may be challenged and removed . (
+June 2008 ) ( Learn how and when to remove this template message ) `` Joy to the World '' 1971 French release Single by Three Dog Night from the album Naturally
+B - side `` I Can Hear You Calling '' Released February 1971 ( 1971 - 02 ) Format 7 '' 45 RPM Recorded 1970 at American Recording Co .
+</item 10>
+=== END ITEM id=76c4775b66b600d2 ===
+
+=== ITEM id=d0285092dbdb6983 ===
+Gold sentences and facts:
+Sentence 0: Cousins Bo ( Seann William Scott ) , Luke ( Johnny Knoxville ) , and Daisy Duke ( Jessica Simpson ) run a moonshine business for their Uncle Jesse ( Willie Nelson ) in Hazzard County , Georgia . The cousins ' primary mode of transportation is an orange 1969 Dodge Charger that the boys affectionately refer to as the `` General Lee '' . Along the way , the family is tormented by corrupt Hazzard County Commissioner Jefferson Davis Hogg , widely known as `` Boss Hogg '' ( Burt Reynolds ) , and his willing but dimwitted henchman , Sheriff Rosco P. Coltrane ( M.C. Gainey ) .
+  Fact 0.0: Bo, played by Seann William Scott, is a cousin
+  Fact 0.1: Luke, played by Johnny Knoxville, is a cousin
+  Fact 0.2: Daisy Duke, played by Jessica Simpson, is a cousin
+  Fact 0.3: Bo, Luke, and Daisy Duke run a moonshine business
+  Fact 0.4: Bo, Luke, and Daisy Duke run the moonshine business for their Uncle Jesse
+  Fact 0.5: Uncle Jesse, played by Willie Nelson, is their uncle
+  Fact 0.6: The moonshine business is in Hazzard County, Georgia
+  Fact 0.7: The cousins' primary mode of transportation is an orange 1969 Dodge Charger
+  Fact 0.8: The boys affectionately refer to the orange 1969 Dodge Charger as the 'General Lee'
+  Fact 0.9: The family is tormented by corrupt Hazzard County Commissioner Jefferson Davis Hogg
+  Fact 0.10: Jefferson Davis Hogg is widely known as 'Boss Hogg'
+  Fact 0.11: Boss Hogg is played by Burt Reynolds
+  Fact 0.12: Boss Hogg has a willing but dimwitted henchman, Sheriff Rosco P. Coltrane
+  Fact 0.13: Sheriff Rosco P. Coltrane is played by M.C. Gainey
+  Fact 0.14: Sheriff Rosco P. Coltrane is willing but dimwitted
+Sentence 1: Jessica Simpson as Daisy Duke
+  Fact 1.0: Jessica Simpson plays Daisy Duke
+
+Retrieved items:
+<item 1>
+The Dukes of Hazzard (film)
+In a film review , a New York Daily News entertainment columnist said the movie 's sex humor is `` cruder '' than the TV series , but that it is `` nearly
+identical to the TV series in ... its ogling of the posterior of cousin Daisy Duke . '' Although initially he commented that he enjoyed the new style of
+relationship between the movie versions of Bo and Luke , John Schneider , who played Bo Duke in the original series , was later asked if he saw the film and
+said : `` My gosh ... it was terrible ! It was n't Dukes . It was true to whatever it was ; I just do n't know what that was ! '' Soundtrack ( edit ) Main
+article : These Boots Are Made for Walkin ' § Jessica Simpson version Jessica Simpson recorded her own version of `` These Boots Are Made for Walkin ' '' ( and
+added her own lyrics ) for the soundtrack to the film The Dukes of Hazzard ( 2005 ) . Performed from the point of view of her character in the movie , Simpson
+'s cover was co-produced by Jimmy Jam and Terry Lewis , and was released as the soundtrack 's first single in 2005 .
+</item 1>
+
+<item 2>
+The Dukes of Hazzard (film)
+wikipedia.org/w/index.php?title=The_Dukes_of_Hazzard_(film)&oldid=838270535 '' Categories : 2005 films English - language films The Dukes of Hazzard films 2000s
+buddy films 2000s comedy films 2000s adventure comedy films 2000s road movies American adventure comedy films American action comedy films American buddy films
+American road movies Auto racing films Buddy comedy films Films about cousins Films about fraternities and sororities Films based on adaptations Films based on
+television series Films directed by Jay Chandrasekhar Films set in Georgia ( U.S.
+</item 2>
+
+<item 3>
+The Dukes of Hazzard (film)
+www.usatoday.com . January 5 , 2006 . Retrieved 2008 - 07 - 31 . Jump up ^ Wurm , Gerald . `` Dukes of Hazzard , The ( Comparison : Theatrical Cut - Unrated
+Edition ) - Movie-Censorship.com '' . www.movie-censorship.com . External links ( edit ) Wikimedia Commons has media related to The Dukes of Hazzard ( film ) .
+Wikiquote has quotations related to : The_Dukes_of_Hazzard_ ( film ) The Dukes of Hazzard on IMDb The Dukes of Hazzard at AllMovie The Dukes of Hazzard at Box
+Office Mojo The Dukes of Hazzard at Rotten Tomatoes The Dukes of Hazzard at HazzardNet.com The Dukes of Hazzard Episodes Characters Bo Duke Luke Duke Daisy Duke
+Sheriff Rosco P. Coltrane Boss Hogg Television films The Dukes of Hazzard : Reunion !
+</item 3>
+
+<item 4>
+The Dukes of Hazzard (film)
+The cousins ' primary mode of transportation is an orange 1969 Dodge Charger that the boys affectionately refer to as the `` General Lee '' . Along the way ,
+the family is tormented by corrupt Hazzard County Commissioner Jefferson Davis Hogg , widely known as `` Boss Hogg '' ( Burt Reynolds ) , and his willing but
+dimwitted henchman , Sheriff Rosco P. Coltrane ( M.C. Gainey ) . After Rosco has the General Lee impounded after Bo and Luke 's attempt to run away from a
+daughter of one their many moonshine customers , Billy Prickett ( James Roday ) , a famous stock - car driver , enters Hazzard to participate in the rally .
+Meanwhile , Rosco plants a fake moonshine still ( `` ' cause he 's too dumb to find the real one '' ) in Uncle Jesse 's barn and seizes the Duke property in the
+interest of eminent domain for Boss Hogg , forcing the family to temporarily reside with neighbor and Uncle Jesse 's love - interest , Pauline ( Lynda Carter )
+.
+</item 4>
+
+<item 5>
+The Dukes of Hazzard (film)
+Jump up ^ `` ' Dukes of Hazzard ' Sheriff Sues Warner Bros. for Millions in Royalties '' . The Hollywood Reporter. 2011 - 08 - 02 . Retrieved 2011 - 12 - 04 .
+Jump up ^ Dukes of Hazzard , Cooter 's Place , archived from the original on 2005 - 07 - 16 Jump up ^ NY Daily News , New York , August 5 , 2005 , archived from
+the original on 2005 - 10 - 30 , retrieved September 2009 Check date values in : access - date = ( help ) Jump up ^ Exclusive Interview : John Schneider ,
+Moviehole , 2007 - 12 - 28 , archived from the original on 2007 - 12 - 28 Jump up ^ `` Jessica Simpson : Singles Chart History '' . billboard.com . Retrieved
+2008 - 08 - 07 . Jump up ^ `` USATODAY.com - Jessica Simpson kicks off People 's Choice Awards '' . www.usatoday.com . January 5 , 2006 .
+</item 5>
+
+<item 6>
+The Dukes of Hazzard (film)
+( 1997 ) The Dukes of Hazzard : Hazzard in Hollywood ( 2000 ) Remake films The Dukes of Hazzard ( 2005 ) The Dukes of Hazzard : The Beginning ( 2007 ) Video
+games The Dukes of Hazzard Racing for Home Daisy Dukes It Out Return of the General Lee Spin - offs Enos The Dukes See also The General Lee Boar 's Nest Jerry
+Rushing `` Theme from The Dukes of Hazzard ( Good Ol ' Boys ) '' Moonrunners Hazard Run Films directed by Jay Chandrasekhar Puddle Cruiser ( 1996 ) Super
+Troopers ( 2001 ) Club Dread ( 2004 ) The Dukes of Hazzard ( 2005 ) Beerfest ( 2006 ) Broken Lizard Stands Up ( 2010 ) The Babymakers ( 2012 ) Super Troopers 2
+( 2018 ) VIAF : 185752175 LCCN : no2005089888 Retrieved from `` https://en.wikipedia.org/w/index.
+</item 6>
+
+<item 7>
+The Dukes of Hazzard (film)
+The final scene shows a cook - out at the Dukes ' house where Pauline convinces Uncle Jesse , who could not be found because he was `` using the meat smoker ''
+, to get up and play the television series ' main theme . Bo and Luke are romantically involved with the girls in the General Lee when they are caught by Luke
+'s other love - interest Laurie Pullman ( Alice Greczyn ) from the introduction of the film , who proceeds to chase them with a shotgun as they drive away .
+During the credits , outtakes from the production of the film are shown . Cast ( edit ) Knoxville and Scott at the premiere Johnny Knoxville as Luke Duke Seann
+William Scott as Bo Duke Jessica Simpson as Daisy Duke Burt Reynolds as Boss Hogg Willie Nelson as Uncle Jesse Duke David Koechner as Cooter Davenport M.C.
+</item 7>
+
+<item 8>
+The Dukes of Hazzard (film)
+Gainey as Sheriff Rosco P. Coltrane Michael Weston as Deputy Enos Strate Lynda Carter as Pauline James Roday as Billy Prickett Kevin Heffernan as Derek `` Sheev
+'' Sheevington Nikki Griffin as Katie - Lynn Johnson Jacqui Maxwell as Annette Alice Greczyn as Laurie Pullman Junior Brown as The Balladeer ( narrator ) Joe
+Don Baker as Governor Jim Applewhite Barry Corbin as Bill Pullman Andrew Prine as Angry Man Randy Orton as Bo Duke ( Stunt double ) Cameos ( edit ) All five
+members of the comedy film troupe Broken Lizard make appearances in the film , classified as cameos , except for Kevin Heffernan , who had a larger speaking
+role ( Sheev ) . Broken Lizard cameos Steve Lemme appears as Jimmy Pullman , the son of Bill Pullman , in an early car chase scene in which he accidentally
+shoots the inside of his father 's truck . Jay Chandrasekhar and Erik Stolhanske reprise their roles as Ramathorn and Rabbit from the Broken Lizard comedy ,
+Super Troopers .
+</item 8>
+
+<item 9>
+The Dukes of Hazzard (film)
+Pictures . As in the television series , the film depicts the adventures of cousins Bo , Luke , and Daisy , and their Uncle Jesse , as they outfox crooked
+Hazzard County Commissioner Boss Hogg and Sheriff Rosco P. Coltrane . The film was the acting debut of pop singer Jessica Simpson . While financially successful
+, the film met with negative reviews from critics . The film was followed by a direct - to - video prequel titled The Dukes of Hazzard : The Beginning ( 2007 )
+. Contents ( hide ) 1 Plot 2 Cast 2.1 Cameos 3 Production 3.1 Stunts 3.2 Locations 4 Reception 4.1 Box office 4.2 Critical reception 4.3 Awards 5 Controversy 6
+Soundtrack 7 Unrated Cut 8 Prequel 9 References 10 External links Plot ( edit ) Cousins Bo ( Seann William Scott ) , Luke ( Johnny Knoxville ) , and Daisy Duke
+( Jessica Simpson ) run a moonshine business for their Uncle Jesse ( Willie Nelson ) in Hazzard County , Georgia .
+</item 9>
+
+<item 10>
+The Dukes of Hazzard (film)
+The Dukes of Hazzard ( film ) - wikipedia The Dukes of Hazzard ( film ) Jump to : navigation , search The Dukes of Hazzard Theatrical release poster Directed by
+Jay Chandrasekhar Produced by Bill Gerber Screenplay by John O'Brien Story by John O'Brien Jonathan L. Davis Based on Characters by Gy Waldron Starring Johnny
+Knoxville Seann William Scott Jessica Simpson Burt Reynolds Willie Nelson Narrated by Junior Brown Music by Nathan Barr Cinematography Lawrence Sher Edited by
+Lee Haxall Myron I. Kerstein Production company Village Roadshow Pictures Distributed by Warner Bros. Pictures Release date August 5 , 2005 ( 2005 - 08 - 05 )
+Running time 104 minutes Country United States Language English Budget $50 million Box office $111.1 million The Dukes of Hazzard is a 2005 American buddy
+comedy road film based on the television series , The Dukes of Hazzard . The film was directed by Jay Chandrasekhar and released on August 5 , 2005 , by Warner
+Bros. Pictures .
+</item 10>
+=== END ITEM id=d0285092dbdb6983 ===
+
+=== ITEM id=b02a3c1944507677 ===
+Gold sentences and facts:
+Sentence 0: No . overall No. in season Title Directed by Written by Original release date `` Chapter One : The Vanishing of Will Byers '' The Duffer Brothers The Duffer Brothers July 15 , 2016 ( 2016 - 07 - 15 ) On November 6 , 1983 , in a U.S. Department of Energy laboratory in the town of Hawkins , Indiana , a scientist is attacked by an unseen creature . While bicycling home from a Dungeons & Dragons session with his friends , 12 - year - old Will Byers encounters the creature and vanishes . The next day , a buzz - cut young girl wearing a hospital gown steals food from a local diner . The owner , Benny , takes pity on her and feeds her before calling social services . From a tattoo on her arm , he learns that her name is Eleven . A woman posing as a social worker arrives and murders Benny . Armed men search the diner for Eleven , but she escapes . Will 's mother Joyce believes she hears Will 's voice on a distorted phone call , but her phone short circuits . Will 's friends Mike , Dustin , and Lucas search for Will in the woods and find Eleven . `` Chapter Two : The Weirdo on Maple Street '' The Duffer Brothers The Duffer Brothers July 15 , 2016 ( 2016 - 07 - 15 ) The boys bring Eleven to Mike 's house , where she sleeps in the basement . The next day , Mike nicknames her `` El '' . She says that `` bad people '' are looking for her and refuses to meet Mike 's parents . Scientists from the laboratory find a substance oozing from the walls of Joyce 's home . At Mike 's home , Eleven recognizes and points out Will in a photo . Dustin and Lucas want to inform Mike 's parents about Eleven , but she uses psychokinesis to stop them . While searching for Will , Mr. Clarke , the boys ' science teacher , discovers a scrap of a hospital gown outside the laboratory grounds . Nancy goes with her friend Barb to a party at her boyfriend Steve 's house . Will 's brother Jonathan investigates the woods where Will went missing . Hearing screaming , he runs to help but finds only Steve , Nancy , and their friends roughhousing around Steve 's swimming pool . He secretly photographs them . Barb , left alone by the poolside , vanishes . Joyce receives another call from Will , hears music from his room , and sees something coming through the wall . `` Chapter Three : Holly , Jolly '' Shawn Levy Jessica Mecklenburg July 15 , 2016 ( 2016 - 07 - 15 ) Barb wakes up in an empty and decaying pool . She screams for Nancy and attempts to climb out but is dragged down by something unseen . Joyce strings Christmas lights around her home to talk to Will , who can turn them on and off . Hawkins Lab director Dr. Martin Brenner allows Hopper to view the lab 's security camera footage . Hopper realizes it is fake . He and his deputies research Hawkins Lab , Brenner , and a woman named Terry Ives who claimed her daughter was taken by Brenner . Eleven has a flashback in which Brenner , whom she calls `` Papa , '' has her put in solitary confinement for refusing to telekinetically harm a cat . Nancy worries about Barb , who is missing . Steve and his friends discover Jonathan 's photographs . They destroy them and his camera . Nancy recovers a photo of Barb by the poolside and returns to Steve 's house to search for her . Nancy finds Barb 's car and sees the creature in the woods . Joyce establishes a code with Will using the lights , which he uses to tell her that he is alive but unsafe . He tells Joyce to run as a creature begins to climb through her wall . Will 's apparent body is discovered in the water at a quarry . `` Chapter Four : The Body '' Shawn Levy Justin Doble July 15 , 2016 ( 2016 - 07 - 15 ) Eleven proves to the boys that Will is still alive by making contact through Mike 's walkie - talkie . Joyce goes to the morgue to view the body and refuses to believe it is Will . The boys give Eleven a makeover so they can sneak her into school . Joyce hears Will in her living room wall . Tearing away the wallpaper , she sees him behind a membrane . At school , Eleven uses Mr. Clarke 's ham radio to channel Will talking to his mother . Joyce demolishes the wall with an axe but reveals only her front porch . Nancy discovers a figure behind Barb in Jonathan 's photo . Jonathan realizes that the figure matches his mother 's description of the creature : a humanoid figure with long arms and no face . Nancy tells the police about her missing friend and subsequently admits to her mother that she slept with Steve . When she tells Steve about the police , she is irritated that he cares only about not getting in trouble with his father . Hopper confronts the state trooper who found Will 's body and beats him until he admits he was ordered to lie . Hopper goes to the morgue and finds that Will 's supposed body is a dummy . He breaks into Hawkins laboratory . 5 5 `` Chapter Five : The Flea and the Acrobat '' The Duffer Brothers Alison Tatlock July 15 , 2016 ( 2016 - 07 - 15 ) Will 's father Lonnie assures Joyce her experiences are hallucinations . Hopper discovers a portal in the basement of the lab but is knocked out by the lab 's guards . He wakes at home and discovers a hidden microphone . Sheriff 's deputies inform Hopper that Barb 's car was found , but Hopper finds the state 's involvement suspicious . The boys determine Will is trapped in an alternate dimension Eleven calls the `` Upside Down , '' and he is being pursued by a monster similar to a Demogorgon . After Will 's funeral , science teacher Mr. Clarke tells the boys that a high - energy spacetime tear could create a passage between dimensions . Using their compasses , they search for a disruption in the Earth 's electromagnetic field . Eleven remembers encountering the creature during a lab experiment , and afraid , she redirects the compasses . Lucas notices and confronts her . Mike defends her , he and Lucas fight , and Eleven telekinetically flings Lucas off Mike . While Dustin and Mike tend to the unconscious Lucas , Eleven disappears . In the woods , Nancy and Jonathan find a wounded deer . The creature drags the deer away , and Nancy follows the trail of blood to a portal to the Upside Down . She crawls through and discovers the creature feasting upon the deer . She snaps a twig and draws the creature 's attention . 6 6 `` Chapter Six : The Monster '' The Duffer Brothers Jessie Nickson - Lopez July 15 , 2016 ( 2016 - 07 - 15 ) Jonathan pulls Nancy back through the portal and saves her from the monster . Later , Steve sees them together through her bedroom window and assumes they are dating . Nancy and Jonathan resolve to kill the monster and purchase supplies from an army surplus store . During a fist fight with Steve , Jonathan inadvertently assaults a police officer and is arrested . Joyce and Hopper track down Terry Ives , who is catatonic and tended by her sister Becky . Becky explains that Terry underwent Project MKUltra testing while unknowingly pregnant ; she believed her daughter Jane was kidnapped by Brenner at birth . Joyce and Hopper conclude Eleven is likely Jane . Eleven shoplifts Eggo waffles . She recalls being asked to contact the monster and accidentally opening the portal to the Upside Down in the laboratory basement . While searching for Eleven , Mike and Dustin are ambushed by school bullies Troy and James . Troy holds Dustin at knifepoint and demands Mike make a suicidal jump into the lake where Will 's body was discovered . Mike jumps but is levitated to safety by Eleven , who scares away the bullies . Lucas realizes agents from the laboratory are heading to Mike 's house . 7 7 `` Chapter Seven : The Bathtub '' The Duffer Brothers Justin Doble July 15 , 2016 ( 2016 - 07 - 15 ) Lucas warns Mike via walkie - talkie that government agents are en route . Mike , Dustin , and Eleven flee . Eleven telekinetically flips a van that blocks their path , and the kids escape . Lucas reconciles with Mike and Eleven . Joyce and Hopper are called to the police station because of Jonathan 's assault . Jonathan and Nancy reveal their knowledge of the monster to Joyce and Hopper . The group contacts Mike and his friends and they rendezvous . They ask Eleven to search for Will and Barb , but her earlier feats have left her too weak to find them . To amplify Eleven 's powers , they break into the middle school and build a sensory - deprivation tank . Eleven finds Barb 's corpse with a slug - like creature crawling out of her mouth . With Joyce 's help , she finds Will alive , hiding in the Upside Down `` Castle Byers , '' his backyard fort . Hopper and Joyce break into Hawkins Laboratory but are apprehended by security guards . Nancy and Jonathan resolve to kill the monster and steal their hunting gear back from the police station . In the Upside Down , the monster breaks into the fort where Will is hiding . 8 8 `` Chapter Eight : The Upside Down '' The Duffer Brothers Story by : Paul Dichter Teleplay by : The Duffer Brothers July 15 , 2016 ( 2016 - 07 - 15 ) Hopper gives up Eleven 's location so that he and Joyce can enter the Upside Down . They find Will unconscious in the Upside - Down town library . They pull a tendril out of his throat , perform CPR , and revive him . Nancy and Jonathan booby - trap the Byers ' home , then cut their hands to attract the monster with their blood . Steve arrives , intending to apologize to Jonathan about their fight , but the monster attacks . The monster springs the trap but escapes back to the Upside Down . Eleven and the boys hide in the middle school . Mike asks Eleven to a school dance , the Snow Ball , and kisses her . The military storms the school to re-capture Eleven , but she kills them and collapses . As Brenner cradles her , the monster attacks , apparently killing him . The boys hide Eleven in a classroom . The monster corners them , but Eleven pins it against a wall . She says goodbye to Mike , disintegrates the monster , and vanishes . Will is hospitalized and reunited with his mother , brother , and friends . Hopper is reluctantly picked up by a black car . One month later , Nancy and Steve are back together , and both are friends with Jonathan . Hopper leaves Eggo waffles and other food in a box in the woods . Will coughs up a slug - like creature and has a vision of the world as the Upside Down , but he hides this from his family .
+  Fact 0.0: The table lists, for each episode, its overall number, its number in the season, its title, its director, its writers, and its original release date.
+  Fact 0.1: Chapter One: The Vanishing of Will Byers was directed by The Duffer Brothers and written by The Duffer Brothers.
+  Fact 0.2: Chapter One: The Vanishing of Will Byers was released on July 15, 2016.
+  Fact 0.3: On November 6, 1983, in a U.S. Department of Energy laboratory in the town of Hawkins, Indiana, a scientist is attacked by an unseen creature.
+  Fact 0.4: While bicycling home from a Dungeons & Dragons session with his friends, 12-year-old Will Byers encounters the creature and vanishes.
+  Fact 0.5: The next day, a buzz-cut young girl wearing a hospital gown steals food from a local diner.
+  Fact 0.6: The diner's owner, Benny, takes pity on the girl and feeds her before calling social services.
+  Fact 0.7: From a tattoo on her arm, Benny learns that the girl's name is Eleven.
+  Fact 0.8: A woman posing as a social worker arrives and murders Benny.
+  Fact 0.9: Armed men search the diner for Eleven, but she escapes.
+  Fact 0.10: Will's mother Joyce believes she hears Will's voice on a distorted phone call, but her phone short circuits.
+  Fact 0.11: Will's friends Mike, Dustin, and Lucas search for Will in the woods and find Eleven.
+  Fact 0.12: Chapter Two: The Weirdo on Maple Street was directed by The Duffer Brothers and written by The Duffer Brothers.
+  Fact 0.13: Chapter Two: The Weirdo on Maple Street was released on July 15, 2016.
+  Fact 0.14: The boys bring Eleven to Mike's house, where she sleeps in the basement.
+  Fact 0.15: The next day, Mike nicknames her "El".
+  Fact 0.16: Eleven says that "bad people" are looking for her and refuses to meet Mike's parents.
+  Fact 0.17: Scientists from the laboratory find a substance oozing from the walls of Joyce's home.
+  Fact 0.18: At Mike's home, Eleven recognizes and points out Will in a photo.
+  Fact 0.19: Dustin and Lucas want to inform Mike's parents about Eleven, but she uses psychokinesis to stop them.
+  Fact 0.20: While searching for Will, Mr. Clarke, the boys' science teacher, discovers a scrap of a hospital gown outside the laboratory grounds.
+  Fact 0.21: Nancy goes with her friend Barb to a party at her boyfriend Steve's house.
+  Fact 0.22: Will's brother Jonathan investigates the woods where Will went missing.
+  Fact 0.23: Hearing screaming, Jonathan runs to help but finds only Steve, Nancy, and their friends roughhousing around Steve's swimming pool.
+  Fact 0.24: Jonathan secretly photographs Steve, Nancy, and their friends.
+  Fact 0.25: Barb, left alone by the poolside, vanishes.
+  Fact 0.26: Joyce receives another call from Will, hears music from his room, and sees something coming through the wall.
+  Fact 0.27: Chapter Three: Holly, Jolly was directed by Shawn Levy and written by Jessica Mecklenburg.
+  Fact 0.28: Chapter Three: Holly, Jolly was released on July 15, 2016.
+  Fact 0.29: Barb wakes up in an empty and decaying pool.
+  Fact 0.30: Barb screams for Nancy and attempts to climb out but is dragged down by something unseen.
+  Fact 0.31: Joyce strings Christmas lights around her home to talk to Will, who can turn them on and off.
+  Fact 0.32: Hawkins Lab director Dr. Martin Brenner allows Hopper to view the lab's security camera footage.
+  Fact 0.33: Hopper realizes the footage is fake.
+  Fact 0.34: Hopper and his deputies research Hawkins Lab, Brenner, and a woman named Terry Ives, who claimed her daughter was taken by Brenner.
+  Fact 0.35: Eleven has a flashback in which Brenner, whom she calls "Papa," has her put in solitary confinement for refusing to telekinetically harm a cat.
+  Fact 0.36: Nancy worries about Barb, who is missing.
+  Fact 0.37: Steve and his friends discover Jonathan's photographs.
+  Fact 0.38: Steve and his friends destroy Jonathan's photographs and his camera.
+  Fact 0.39: Nancy recovers a photo of Barb by the poolside and returns to Steve's house to search for her.
+  Fact 0.40: Nancy finds Barb's car and sees the creature in the woods.
+  Fact 0.41: Joyce establishes a code with Will using the lights, which he uses to tell her that he is alive but unsafe.
+  Fact 0.42: Will tells Joyce to run as a creature begins to climb through her wall.
+  Fact 0.43: Will's apparent body is discovered in the water at a quarry.
+  Fact 0.44: Chapter Four: The Body was directed by Shawn Levy and written by Justin Doble.
+  Fact 0.45: Chapter Four: The Body was released on July 15, 2016.
+  Fact 0.46: Eleven proves to the boys that Will is still alive by making contact through Mike's walkie-talkie.
+  Fact 0.47: Joyce goes to the morgue to view the body and refuses to believe it is Will.
+  Fact 0.48: The boys give Eleven a makeover so they can sneak her into school.
+  Fact 0.49: Joyce hears Will in her living room wall.
+  Fact 0.50: Tearing away the wallpaper, Joyce sees Will behind a membrane.
+  Fact 0.51: At school, Eleven uses Mr. Clarke's ham radio to channel Will talking to his mother.
+  Fact 0.52: Joyce demolishes the wall with an axe but reveals only her front porch.
+  Fact 0.53: Nancy discovers a figure behind Barb in Jonathan's photo.
+  Fact 0.54: Jonathan realizes the figure matches his mother's description of the creature: a humanoid figure with long arms and no face.
+  Fact 0.55: Nancy tells the police about her missing friend.
+  Fact 0.56: Nancy subsequently admits to her mother that she slept with Steve.
+  Fact 0.57: When Nancy tells Steve about the police, she is irritated that he cares only about not getting in trouble with his father.
+  Fact 0.58: Hopper confronts the state trooper who found Will's body and beats him until he admits he was ordered to lie.
+  Fact 0.59: Hopper goes to the morgue and finds that Will's supposed body is a dummy.
+  Fact 0.60: Hopper breaks into Hawkins laboratory.
+  Fact 0.61: Chapter Five: The Flea and the Acrobat was directed by The Duffer Brothers and written by Alison Tatlock.
+  Fact 0.62: Chapter Five: The Flea and the Acrobat was released on July 15, 2016.
+  Fact 0.63: Will's father Lonnie assures Joyce her experiences are hallucinations.
+  Fact 0.64: Hopper discovers a portal in the basement of the lab but is knocked out by the lab's guards.
+  Fact 0.65: Hopper wakes at home and discovers a hidden microphone.
+  Fact 0.66: Sheriff's deputies inform Hopper that Barb's car was found.
+  Fact 0.67: Hopper finds the state's involvement suspicious.
+  Fact 0.68: The boys determine Will is trapped in an alternate dimension that Eleven calls the "Upside Down."
+  Fact 0.69: The boys determine Will is being pursued by a monster similar to a Demogorgon.
+  Fact 0.70: After Will's funeral, science teacher Mr. Clarke tells the boys that a high-energy spacetime tear could create a passage between dimensions.
+  Fact 0.71: Using their compasses, the boys search for a disruption in the Earth's electromagnetic field.
+  Fact 0.72: Eleven remembers encountering the creature during a lab experiment.
+  Fact 0.73: Afraid, Eleven redirects the compasses.
+  Fact 0.74: Lucas notices and confronts Eleven.
+  Fact 0.75: Mike defends Eleven, and he and Lucas fight.
+  Fact 0.76: Eleven telekinetically flings Lucas off Mike.
+  Fact 0.77: While Dustin and Mike tend to the unconscious Lucas, Eleven disappears.
+  Fact 0.78: In the woods, Nancy and Jonathan find a wounded deer.
+  Fact 0.79: The creature drags the deer away, and Nancy follows the trail of blood to a portal to the Upside Down.
+  Fact 0.80: Nancy crawls through the portal and discovers the creature feasting upon the deer.
+  Fact 0.81: Nancy snaps a twig and draws the creature's attention.
+  Fact 0.82: Chapter Six: The Monster was directed by The Duffer Brothers and written by Jessie Nickson-Lopez.
+  Fact 0.83: Chapter Six: The Monster was released on July 15, 2016.
+  Fact 0.84: Jonathan pulls Nancy back through the portal and saves her from the monster.
+  Fact 0.85: Later, Steve sees Nancy and Jonathan together through her bedroom window and assumes they are dating.
+  Fact 0.86: Nancy and Jonathan resolve to kill the monster and purchase supplies from an army surplus store.
+  Fact 0.87: During a fist fight with Steve, Jonathan inadvertently assaults a police officer and is arrested.
+  Fact 0.88: Joyce and Hopper track down Terry Ives, who is catatonic and tended by her sister Becky.
+  Fact 0.89: Becky explains that Terry underwent Project MKUltra testing while unknowingly pregnant.
+  Fact 0.90: Becky explains that Terry believed her daughter Jane was kidnapped by Brenner at birth.
+  Fact 0.91: Joyce and Hopper conclude Eleven is likely Jane.
+  Fact 0.92: Eleven shoplifts Eggo waffles.
+  Fact 0.93: Eleven recalls being asked to contact the monster and accidentally opening the portal to the Upside Down in the laboratory basement.
+  Fact 0.94: While searching for Eleven, Mike and Dustin are ambushed by school bullies Troy and James.
+  Fact 0.95: Troy holds Dustin at knifepoint and demands Mike make a suicidal jump into the lake where Will's body was discovered.
+  Fact 0.96: Mike jumps but is levitated to safety by Eleven, who scares away the bullies.
+  Fact 0.97: Lucas realizes agents from the laboratory are heading to Mike's house.
+  Fact 0.98: Chapter Seven: The Bathtub was directed by The Duffer Brothers and written by Justin Doble.
+  Fact 0.99: Chapter Seven: The Bathtub was released on July 15, 2016.
+  Fact 0.100: Lucas warns Mike via walkie-talkie that government agents are en route.
+  Fact 0.101: Mike, Dustin, and Eleven flee.
+  Fact 0.102: Eleven telekinetically flips a van that blocks their path, and the kids escape.
+  Fact 0.103: Lucas reconciles with Mike and Eleven.
+  Fact 0.104: Joyce and Hopper are called to the police station because of Jonathan's assault.
+  Fact 0.105: Jonathan and Nancy reveal their knowledge of the monster to Joyce and Hopper.
+  Fact 0.106: The group contacts Mike and his friends, and they rendezvous.
+  Fact 0.107: The group asks Eleven to search for Will and Barb, but her earlier feats have left her too weak to find them.
+  Fact 0.108: To amplify Eleven's powers, the group breaks into the middle school and builds a sensory-deprivation tank.
+  Fact 0.109: Eleven finds Barb's corpse with a slug-like creature crawling out of her mouth.
+  Fact 0.110: With Joyce's help, Eleven finds Will alive, hiding in the Upside Down "Castle Byers," his backyard fort.
+  Fact 0.111: Hopper and Joyce break into Hawkins Laboratory but are apprehended by security guards.
+  Fact 0.112: Nancy and Jonathan resolve to kill the monster and steal their hunting gear back from the police station.
+  Fact 0.113: In the Upside Down, the monster breaks into the fort where Will is hiding.
+  Fact 0.114: Chapter Eight: The Upside Down was directed by The Duffer Brothers, with story by Paul Dichter and teleplay by The Duffer Brothers.
+  Fact 0.115: Chapter Eight: The Upside Down was released on July 15, 2016.
+  Fact 0.116: Hopper gives up Eleven's location so that he and Joyce can enter the Upside Down.
+  Fact 0.117: Hopper and Joyce find Will unconscious in the Upside-Down town library.
+  Fact 0.118: Hopper and Joyce pull a tendril out of Will's throat, perform CPR, and revive him.
+  Fact 0.119: Nancy and Jonathan booby-trap the Byers' home, then cut their hands to attract the monster with their blood.
+  Fact 0.120: Steve arrives, intending to apologize to Jonathan about their fight, but the monster attacks.
+  Fact 0.121: The monster springs the trap but escapes back to the Upside Down.
+  Fact 0.122: Eleven and the boys hide in the middle school.
+  Fact 0.123: Mike asks Eleven to a school dance, the Snow Ball, and kisses her.
+  Fact 0.124: The military storms the school to re-capture Eleven, but she kills them and collapses.
+  Fact 0.125: As Brenner cradles Eleven, the monster attacks, apparently killing him.
+  Fact 0.126: The boys hide Eleven in a classroom.
+  Fact 0.127: The monster corners the boys and Eleven, but Eleven pins it against a wall.
+  Fact 0.128: Eleven says goodbye to Mike, disintegrates the monster, and vanishes.
+  Fact 0.129: Will is hospitalized and reunited with his mother, brother, and friends.
+  Fact 0.130: Hopper is reluctantly picked up by a black car.
+  Fact 0.131: One month later, Nancy and Steve are back together, and both are friends with Jonathan.
+  Fact 0.132: Hopper leaves Eggo waffles and other food in a box in the woods.
+  Fact 0.133: Will coughs up a slug-like creature and has a vision of the world as the Upside Down, but he hides this from his family.
+
+Retrieved items:
+<item 1>
+Stranger Things
+Gaten Matarazzo , Noah Schnapp , Randy Havens , and Bill Nye Sean Astin October 27 , 2017 ( 2017 - 10 - 27 ) 6 `` The New Class '' Sadie Sink , Brett Gelman ,
+Dacre Montgomery , and Linnea Berthelsen Sean Astin and Paul Reiser October 27 , 2017 ( 2017 - 10 - 27 ) 7 `` Closing the Gate '' Shawn Levy , The Duffer
+Brothers , Millie Bobby Brown , Noah Schnapp , and Natalia Dyer David Harbour , Sean Astin , and Eddie Tsang October 27 , 2017 ( 2017 - 10 - 27 ) Mobile video
+game Netflix and BonusXP developed a free mobile game tie - in for Stranger Things , released to iOS and Android devices on October 4 , 2017 . The game uses a
+retro - pixel style of art , similar to games for the Super Nintendo Entertainment System . The game is loosely based on the Stranger Things story after season
+one , with the player starting as Chief of Police Jim Hopper looking for the missing boys .
+</item 1>
+
+<item 2>
+Stranger Things
+Stranger Things - wikipedia Stranger Things Jump to : navigation , search For other uses , see Stranger Things ( disambiguation ) . Stranger Things Genre
+Science fiction Horror Supernatural Period drama Created by The Duffer Brothers Starring Winona Ryder David Harbour Finn Wolfhard Millie Bobby Brown Gaten
+Matarazzo Caleb McLaughlin Natalia Dyer Charlie Heaton Cara Buono Matthew Modine Noah Schnapp Sadie Sink Joe Keery Dacre Montgomery Sean Astin Paul Reiser
+Composer ( s ) Kyle Dixon Michael Stein Country of origin United States Original language ( s ) English No. of seasons No.
+</item 2>
+
+<item 3>
+Stranger Things
+For the second season , Schnapp and Keery were promoted to series regulars , along with the additions of Sadie Sink , Dacre Montgomery , Sean Astin and Paul
+Reiser . Set in the fictional town of Hawkins , Indiana , in the 1980s , the first season focuses on the investigation into the disappearance of a young boy
+amid supernatural events occurring around the town including the appearance of a girl with psychokinetic abilities who helps the missing boy 's friends in their
+own search . The second season , titled Stranger Things 2 , is set a year after the first , and deals with attempts of the characters to return to normal and
+consequences that linger from the first season . The Duffer Brothers developed the series as a mix of investigative drama alongside supernatural elements with
+childlike sensibilities , establishing its time frame in the 1980s and creating a homage to pop culture of that decade . Several themes and directorial aspects
+were inspired and aesthetically informed by the works of Steven Spielberg , John Carpenter , and Stephen King , among others , including several films , anime
+and video games . The first season was released on Netflix on July 15 , 2016 .
+</item 3>
+
+<item 4>
+Stranger Things
+Cast and characters The Duffer Brothers , Shawn Levy and the main cast of season 2 of Stranger Things at the 2017 San Diego Comic - Con International Main
+Winona Ryder as Joyce Byers , the mother of Will and Jonathan Byers . She is divorced from Lonnie Byers . David Harbour as Jim Hopper , chief of Hawkins Police
+Department . After his young daughter died of cancer , Hopper got divorced and lapsed into alcoholism . Finn Wolfhard as Mike Wheeler , son of Karen and Ted ,
+younger brother of Nancy , and one of three friends of Will Byers . He is an intelligent and conscientious student and is committed to his friends . He develops
+romantic feelings for Eleven . Millie Bobby Brown as Eleven ( `` El '' ) , a young girl with psychokinetic abilities and a limited vocabulary . Her real name is
+Jane , the biological daughter of Terry Ives . After escaping from Hawkins Laboratory , where experiments were being performed on her , she befriends Mike ,
+Dustin , and Lucas . She develops romantic feelings for Mike . Gaten Matarazzo as Dustin Henderson , one of Will 's friends .
+</item 4>
+
+<item 5>
+Stranger Things
+Episodes Season 1 ( 2016 ) No . overall No. in season Title Directed by Written by Original release date `` Chapter One : The Vanishing of Will Byers '' The
+Duffer Brothers The Duffer Brothers July 15 , 2016 ( 2016 - 07 - 15 ) On November 6 , 1983 , in a U.S. Department of Energy laboratory in the town of Hawkins ,
+Indiana , a scientist is attacked by an unseen creature . While bicycling home from a Dungeons & Dragons session with his friends , 12 - year - old Will Byers
+encounters the creature and vanishes . The next day , a buzz - cut young girl wearing a hospital gown steals food from a local diner . The owner , Benny , takes
+pity on her and feeds her before calling social services . From a tattoo on her arm , he learns that her name is Eleven . A woman posing as a social worker
+arrives and murders Benny . Armed men search the diner for Eleven , but she escapes . Will 's mother Joyce believes she hears Will 's voice on a distorted phone
+call , but her phone short circuits .
+</item 5>
+
+<item 6>
+Stranger Things
+The boys give Eleven a makeover so they can sneak her into school . Joyce hears Will in her living room wall . Tearing away the wallpaper , she sees him behind
+a membrane . At school , Eleven uses Mr. Clarke 's ham radio to channel Will talking to his mother . Joyce demolishes the wall with an axe but reveals only her
+front porch . Nancy discovers a figure behind Barb in Jonathan 's photo . Jonathan realizes that the figure matches his mother 's description of the creature :
+a humanoid figure with long arms and no face . Nancy tells the police about her missing friend and subsequently admits to her mother that she slept with Steve .
+When she tells Steve about the police , she is irritated that he cares only about not getting in trouble with his father . Hopper confronts the state trooper
+who found Will 's body and beats him until he admits he was ordered to lie . Hopper goes to the morgue and finds that Will 's supposed body is a dummy . He
+breaks into Hawkins laboratory .
+</item 6>
+
+<item 7>
+Stranger Things
+Jonathan and Nancy play Owens ' confession to Bauman . The three agree to publicize a watered down and more believable story about Barb dying from toxins
+released by the lab . Dustin traps Dart in his root cellar and recruits Steve to fight it . Owens and the lab scientists realize the soil from the infected
+pumpkin patches is part of a hive mind . Eleven hitchhikes to Terry 's house . She telepathically communicates with Terry , seeing images of another child kept
+in Hawkins Lab and of Terry being crippled by forced shock therapy . Bob figures out Hopper 's location , and he and Joyce enter the tunnels to rescue him .
+They are joined by scientists from Hawkins Lab . As the scientists burn the vines filling the tunnels , Will screams in agony and collapses . 14 6 `` Chapter
+Six : The Spy '' Andrew Stanton Kate Trefry October 27 , 2017 ( 2017 - 10 - 27 ) Will is rushed to the lab , where he can not recognize Bob , Hopper , or Owens
+. Owens speculates that damaging the tunnels may be lethal to Will .
+</item 7>
+
+<item 8>
+Stranger Things
+of seasons No. of episodes 17 ( list of episodes ) Production Executive producer ( s ) Karl Gajdusek Cindy Holland Brian Wright Matt Thunell Shawn Levy Dan
+Cohen The Duffer Brothers Iain Paterson Shannon Tsang Location ( s ) Jackson , Georgia Cinematography Tim Ives Tod Campbell Running time 42 -- 62 minutes
+Production company ( s ) 21 Laps Entertainment Monkey Massacre Distributor Netflix Release Original network Netflix Picture format 4K ( Ultra HD ) High dynamic
+range Audio format Dolby Digital 5.1 Original release July 15 , 2016 ( 2016 - 07 - 15 ) -- present External links Website Stranger Things is an American science
+fiction - horror web television series created , written , directed and co-executive produced by The Duffer Brothers , as well as co-executive produced by Shawn
+Levy and Dan Cohen . The first season , released in July 2016 , stars Winona Ryder , David Harbour , Finn Wolfhard , Millie Bobby Brown , Gaten Matarazzo ,
+Caleb McLaughlin , Natalia Dyer , Charlie Heaton , Cara Buono and Matthew Modine , with Noah Schnapp and Joe Keery in recurring roles .
+</item 8>
+
+<item 9>
+Stranger Things
+As Brenner cradles her , the monster attacks , apparently killing him . The boys hide Eleven in a classroom . The monster corners them , but Eleven pins it
+against a wall . She says goodbye to Mike , disintegrates the monster , and vanishes . Will is hospitalized and reunited with his mother , brother , and friends
+. Hopper is reluctantly picked up by a black car . One month later , Nancy and Steve are back together , and both are friends with Jonathan . Hopper leaves Eggo
+waffles and other food in a box in the woods . Will coughs up a slug - like creature and has a vision of the world as the Upside Down , but he hides this from
+his family . Season 2 ( 2017 ) No . overall No. in season Title Directed by Written by Original release date 9 `` Chapter One : MADMAX '' The Duffer Brothers
+The Duffer Brothers October 27 , 2017 ( 2017 - 10 - 27 ) On October 28 , 1984 , Kali and her gang use her psychic powers to escape the police . Her wrist tattoo
+marks her as `` 008 . ''
+</item 9>
+
+<item 10>
+Stranger Things
+1 Introduced in season one 2.3. 2 Introduced in season two 3 Episodes 3.1 Season 1 ( 2016 ) 3.2 Season 2 ( 2017 ) 3.3 Season 3 4 Production 4.1 Development 4.2
+Writing 4.3 Casting 4.4 Filming 4.5 Visual effects 4.6 Music 4.6. 1 Soundtracks 5 Release 5.1 Home media 6 Reception 6.1 Audience viewership 6.2 Critical
+reception 6.2. 1 Season 1 6.2. 2 Season 2 6.3 Commentary 6.4 Awards and nominations 7 Other media 7.1 Beyond Stranger Things 7.2 Mobile video game 7.3
+PlayStation VR game 7.4 Others 8 References 9 External links Premise Stranger Things is set in the fictional rural town of Hawkins , Indiana , during the early
+1980s . The nearby Hawkins National Laboratory ostensibly performs scientific research for the United States Department of Energy , but secretly does
+experiments into the paranormal and supernatural , including those that involve human test subjects .
+</item 10>
+=== END ITEM id=b02a3c1944507677 ===
+
+=== ITEM id=13ba1f62368497f4 ===
+Gold sentences and facts:
+Sentence 0: No . Official English title Original Japanese title Original air date English air date 151 `` Sabertooth '' `` Seibātūsu '' ( 剣 咬 の 虎 ( セイバー トゥース ) ) October 6 , 2012 November 17 , 2015 The Legion Platoon is tasked by Zentopia 's archbishop to retrieve the missing pieces of the Infinity Clock and seal them again . Before embarking on their mission , they visit Fairy Tail and make amends with the guild for their previous hostility against them . It is later discovered that Fairy Tail has lost their title as the strongest guild in Fiore to the Saber Tooth guild over the past seven years . Two of the strongest wizards in the guild include a pair of Dragon Slayers named Sting and Rogue , who are obsessed with fighting Natsu and Gajeel , respectively . Meanwhile , Makarov brings Gildarts to their abandoned guildhall and shows him Lumen Histoire , a light that Makarov says is Fairy Tail 's greatest secret . Makarov then tells Gildarts that he has been chosen to become the next master of Fairy Tail . 152 `` And So We Aim for the Top '' `` Soshite Ore - tachi wa Chōjō o Mezasu '' ( そして オレ たち は 顶 上 を 目指す ) October 13 , 2012 November 24 , 2015 Natsu and his friends discover that a power gap has developed between them and the rest of the guild members who were not on Tenrou Island . The group meets with Poluchka for medicine to strengthen their magic , but are unsuccessful . Wendy recognizes Poluchka 's voice and scent as those of Grandine , the dragon who raised her . Poluchka reveals herself as the Edolas counterpart of Grandine , and gives Wendy written instructions for two advanced spells that Grandine failed to teach her . Meanwhile , Makarov announces Gildarts ' succession as master to the rest of the guild , only to find he has gone on a journey , leaving a letter of resignation behind . In the letter , Gildarts reinstates Laxus into the guild , returns mastership to Makarov , and tells him to make Fairy Tail the strongest guild in Fiore again . Romeo suggests they participate in the Grand Magic Games , an annual festival designed to determine the guild rankings in Fiore . 153 `` Song of the Stars '' `` Hoshiboshi no Uta '' ( 星々 の 歌 ) October 20 , 2012 December 1 , 2015 With the Grand Magic Games occurring in three months time , Natsu and his friends train at a beach resort . On their second day of training , Virgo appears and tells the wizards that the Celestial Spirit World is in danger of destruction . When the wizards arrive , they instead find a surprise party held by the Celestial Spirit King celebrating their return from Sirius Island after seven years . They spend the day in the spirit world partying with the spirits . Before they leave , however , Virgo informs them that one day in the spirit world equals three months in the human world , and they find the Grand Magic Games are upon them . 154 `` For All the Time We Missed Each Other '' `` Surechigatta Jikan no Bun dake '' ( すれ 违 っ た 时间 の 分 だけ ) October 27 , 2012 December 8 , 2015 While mulling over their lost training time , the Fairy Tail wizards receive a message via carrier pigeon requesting a private meeting in the forest nearby . There they meet a runaway Jellal , Ultear , and Merudy , who have formed their own guild , Crime Sorcière , to defeat Zeref and any dark guilds that try to use his power . The three ask Fairy Tail for their help in determining the source of a magical anomaly similar to Zeref 's magic that they have sensed around the Grand Magic Games arena , Domus Flau . In exchange , Ultear uses her magic to invoke their Second Origin in order to double their magic power . As the others undergo the painful process of awakening their Second Origin , Erza talks with Jellal over his regained memories . The two nearly kiss , but Jellal decides that he and Erza can not be together and lies to her that he has a fiancée . Erza quickly picks up on this and respects his decision , seeing Crime Sorcière off as they leave . 155 `` Crocus , the Flower - Blooming Capital '' `` Hanasaku Miyako : Kurokkasu '' ( 花 笑 く 都 ・ クロッカス ) November 3 , 2012 December 15 , 2015 Natsu , Lucy , Gray , Erza , and Wendy are chosen to represent their guild in the Grand Magic Games , which are to be held in Fiore 's capital , Crocus . As they tour the city , Natsu and Happy encounter the twin dragon slayers , Sting and Rogue , who mock Natsu for not being able to kill Acnologia , and boast of becoming true dragon slayers by killing the dragons who raised them . At midnight , Fairy Tail and the other participating guilds are put through a preliminary event -- a race through a massive floating labyrinth -- designed to narrow the number of participating guilds down to eight teams . 156 `` Sky Labyrinth '' `` Sukai Rabirinsu '' ( 空中 迷宮 ( スカイ ラビリンス ) ) November 10 , 2012 December 22 , 2015 Natsu 's team notices that Wendy has gone missing , so Elfman replaces her to keep them from being eliminated . As they make their way through the enchanted labyrinth , the five encounter various other guilds and steal the maps made by the other guilds to better navigate the maze . They manage to reach the end of the maze and pass the elimination round , confident they have arrived first , only to discover they have barely taken last place . Meanwhile , Happy , Lisanna , and the rest of the guild search for Wendy and Carla . They eventually find the two in the garden of the king 's palace , Mercurius , with their magic power depleted . 157 `` New Guild '' `` Shinki Girudo '' ( 新 规 ギルド ) November 17 , 2012 December 29 , 2015 Wendy 's body is weakened as a result of losing her magic power . As Poluchka helps her recover , she formally requests Elfman to take her place in the Grand Magic Games . Fairy Tail steps into the arena with a negative audience reception , but they are bolstered by their guild mates and the spirit of Mavis , whom only the Fairy Tail guild members can see . The next four participating teams are revealed to be Quatro Cerberus , Mermaid Heel , Blue Pegasus , and Lamia Scale . Following them is Raven Tail , a former dark guild led by Makarov 's son Ivan , who confess to attacking Wendy and Carla . To everyone 's shock , the next team is revealed to be a second team from Fairy Tail composed of Gajeel , Juvia , Mirajane , Laxus , and Jellal ( disguised as Mystogan to help investigate the arena ) . The final guild to be announced is Saber Tooth , much to the joy of the audience . With all eight teams announced , they each send out one member to participate in the first contest of the games , with Gray and Juvia representing their teams . 158 `` Night of Shooting Stars '' `` Hoshi Furu Yoru ni '' ( 星 降 ル 夜 ニ ) November 24 , 2012 January 5 , 2016 The games ' first contest , `` Hidden '' , requires the eight participants to score points by finding and attacking each other in a virtual city filled with copies of themselves . Raven Tail member Nalpudding repeatedly targets Gray , who scores last place in the contest while Saber Tooth 's Rufus scores first by using his Memory - Make magic to attack all the other participants at once . Humiliated , Gray swears revenge against Raven Tail and Saber Tooth . Afterwards , Lucy is chosen to fight Raven Tail member Flare in the tournament 's first battle round . 159 `` Lucy vs. Flare '' `` Rūshii vs. Furea '' ( ルーシィ vs. フレア ) December 1 , 2012 January 12 , 2016 Lucy displays tremendous skill in her battle against Flare by being able to summon two spirits simultaneously . As Lucy gains the upper hand , Flare cheats by using her magic hair to hold Alzack and Bisca 's daughter Asuka as a hostage , blackmailing Lucy into not fighting back to keep her from harming Asuka . As Lucy tearfully speaks of Asuka 's danger , Natsu is able to hear it and rushes to Asuka to incinerate Flare 's hair , allowing Lucy to counterattack with her Urano Metoria spell in combination with Gemini . However , before the spell fully activates , Flare 's teammate Obra nullifies Lucy 's magic , causing her to collapse and lose the match . 160 `` Portent '' `` Kyōzui '' ( 凶 瑞 ) December 8 , 2012 January 19 , 2016 Blue Pegasus ' Ren defeats Mermaid Heel 's Araña during the games ' second match , while Saber Tooth 's Orga effortlessly defeats Quatro Cerberus ' War Cry in the third match . For the day 's fourth and final match , Jellal is pitted against Lamia Scale 's Jura , intending to avenge the humiliated Fairy Tail members . He mimics Mystogan 's magic to keep up his disguise , but he finds it ineffective to use against Jura and is forced to use his own magic instead . Before he can cast a spell that will expose his true identity , Ultear uses Merudy 's sensory to force Jellal into submission . Meanwhile , the hospitalized Carla awakens after having a troubling premonition of the future . 161 `` Chariots '' `` Chariotto '' ( 战 车 ( チャリオット ) ) December 15 , 2012 January 26 , 2016 Fairy Tail is undaunted by their poor performance on the first day . As the guild celebrates , they are visited and taunted by Bacchus , Erza 's rival from Quatro Cerberus , who has come to replace War Cry . Carla relays her premonition to Poluchka , saying that she saw Mercurius collapsing around what appeared to be a tearfully singing Lucy . The second day of the tournament begins with a footrace atop a train of moving chariots , causing the participants Natsu , Gajeel , and Sting to suffer from motion sickness as a side effect of their Dragon Slayer magic . As Natsu and Gajeel force themselves forward , Sting inquires about their determination to which Natsu responds that it is as a result of the strength of Fairy Tail 's bonds . Sting eventually throws the race while Natsu and Gajeel manage to finish as sixth and seventh placers , respectively , earning Fairy Tail the audience 's respect . 162 `` Elfman vs. Bacchus '' `` Erufuman vs. Bakkasu '' ( エルフマン vs. バッカス ) December 22 , 2012 September 1 , 2015 Due to a miscomunnication between the king and his knight Arcadios , Elfman is chosen as Bacchus ' opponent instead of Erza . Before the match commences , the two opponents make a wager : if Bacchus wins , he will court Elfman 's sisters , and if Elfman wins , Bacchus ' team name will be changed to `` Quatro Puppy '' for the rest of the games . Bacchus ruthlessly attacks Elfman with his bare palms , who manages to damage Bacchus with his defensive Lizardman transformation . Elfman manages to outlast Bacchus as he exhausts himself , winning the match and forcing Bacchus ' team to be renamed . Meanwhile , Natsu finds Wendy , Carla , and Poluchka being kidnapped by a group of masked men . Upon being caught , the men claim they were hired to kidnap Lucy by Raven Tail . They are soon revealed to have actually been sent by Arcadios , who intends to sow discord between the guilds as he plots to use Lucy for his `` Eclipse Project '' . 163 `` Mirajane vs. Jenny '' `` Mirajēn vs. Jenī '' ( ミラ ジェーン vs. ジェニー ) January 5 , 2013 September 1 , 2015 The second day of the Grand Magic Games continues , with Mirajane of Fairy Tail Team B fighting against Jenny Realight of Team Blue Pegasus . Since the two competitors are well - known for being magazine models , their battle consists almost entirely of a fashion showdown , much to the pleasure of the audience . Eventually as the showdown becomes redundant , Jenny proposes a wager : the loser must pose nude for the Sorcerer Magazine , which Mirajane accepts . Jenny then transforms into her battle armor while Mirajane shifts into her Satan Soul `` Sitri '' form and easily defeats Jenny . The final match of the day is announced , with Kagura Mikazuchi of Mermaid Heel pitted against Yukino Aguria of Saber Tooth . Yukino proposes to Kagura that they wager their lives on their battle . Meanwhile , Arcadios is confronted by Darton , the kingdom 's defense minister , about his `` Eclipse Project '' . 164 `` Kagura vs. Yukino '' `` Kagura vs. Yukino '' ( カグラ vs. ユキノ ) January 12 , 2013 September 1 , 2015 Yukino is revealed to be a celestial spirit wizard when she summons Libra and Pisces to attack Kagura . Using her gravity - altering magic , Kagura defeats the two spirits , thus forcing Yukino to use a Gatekey that summons Ophiuchus , which is regarded as the strongest among the Celestial Spirits . However , Kagura slays Ophiuchus with her sword still sheathed and easily defeats Yukino . Later , Jellal discusses the fact that he has not sensed the evil power similar to Zeref 's even though the second day of the Grand Magic Games has ended . Erza reunites with Milliana , who is revealed to be a member of Mermaid Heel . Meanwhile , Saber Tooth 's master Jiemma is dissatisfied with his guild 's performance . Though Sting is given another chance , Jiemma humiliates Yukino for her failure . 165 `` Hatred at Nightfall '' `` Urami wa Yoru no Tobari ni Tsutsumarete '' ( 怨み は 夜 の 帐 に 包 まれ て ) January 19 , 2013 September 1 , 2015 After Yukino is expelled from Saber Tooth , she offers her two golden Gatekeys to Lucy to complete the latter 's collection of the Zodiac Gatekeys , stating that when the twelve Zodiac Gatekeys are all gathered , a gateway that changes the world will open ; however , Lucy turns down the offer . Meanwhile , Milliana tells Erza that Kagura 's sword , Archenemy , is intended to kill Jellal , and that she and Kagura share the same resentment towards Jellal . Natsu and Happy run after Yukino in an attempt to apologize ; however , Natsu realizes that Yukino had been expelled , and infiltrates the Crocus Garden to fight Jiemma . 166 `` Pandemonium '' `` Pandemoniumu '' ( 伏魔殿 ( パンデモニウム ) ) January 26 , 2013 September 1 , 2015 After Natsu punches out Dobengal , the guild member summoned to fight him , he and Jiemma engage in a duel . However , the guild master 's daughter Minerva appears , ends their duel and , taking Happy hostage , convinces Natsu to settle their dispute in the Grand Magic Games . As Natsu leaves , he states that Saber Tooth will never surpass Fairy Tail because they care for their friends , words that are echoed by Rogue , while Sting is left in awe at Natsu 's strength . The following day as the Grand Magic Games continue , an event called `` Pandemonium '' begins . It involves the participants entering a magical citadel filled with 100 monsters of varying strengths and individually doing battle with any number of monsters they choose . Representing Fairy Tail Team A , Erza requests the 100 monsters as her opponents . 167 `` 100 Against 1 '' `` Hyaku tai Ichi '' ( 100 対 1 ) February 2 , 2013 September 1 , 2015 Erza kills the 100 monsters using various types of armor to match their strength and weaknesses . As a result , the crowd praises Fairy Tail , and the guild is awarded with 10 points . Moreover , the game officials decided to determine the ranks of the remaining participants by means of a device called `` Magic Power Finder '' ( sometimes abbreviated as MPF ) . Using this tool , participants must attack it with their magic power , which will , in turn , calculate and display their equivalent scores depending on the extent of power used . In the end , Cana of Fairy Tail Team B dominates the event by using the Fairy Glitter spell lent to her by Mavis , much to Makarov 's surprise . With Cana 's victory , Fairy Tail Team B receives 8 points , and the audience began to burst once more into a resounding swarm of cheers and claps due to the finish of the two Fairy Tail teams . Meanwhile , the Raven Tail team somehow managed to get an insider information regarding the battle matchups for the day , so the masked leader Alexei tells his subordinates Flare , Obra , Nalpudding , and Kurohebi that it 's about time to proceed with their true mission . 168 `` Laxus vs. Alexei '' `` Rakusasu vs. Arekusei '' ( ラクサス vs. アレクセイ ) February 9 , 2013 September 1 , 2015 In the battle portion of the Grand Magic Games ' third day , Milliana of Mermaid Heel beats Semmes of Quatro Puppy while Saber Tooth 's Rufus swiftly defeats Blue Pegasus ' Eve . For the third match , Laxus of Fairy Tail Team B is chosen to battle against Alexei of Team Raven Tail . Since the opponent is from a suspicious guild , the Fairy Tail members take extra precautions by watching the actions of Ivan Dreyar as well as the other four Raven Tail members . However , as the match commences , the spectators are shocked to see Laxus being beaten by Alexei , although no cautious movements can be seen from the Raven Tail team . It turns out that the two dueling people are just illusions created by Alexei in order for him to have a talk with Laxus . Also , the other Raven Tail members being monitored by Fairy Tail are just lifelike illusions , for in reality they are with Alexei in the battlefield . Alexei reveals himself to be Ivan Dreyar . Unable to interrogate Laxus of the Lumen Histoire 's location , Ivan and the Raven Tail members are forced to fight him . Before their battle begins , Ivan declares that Raven Tail is an anti-Fairy Tail guild . 169 `` Wendy vs. Shelia '' `` Wendi vs. Sheria '' ( ウェンディ vs. シェリア ) February 16 , 2013 September 1 , 2015 After Laxus defeats Ivan and the four Raven Tail elite members , Ivan 's illusions disappear to the shock of everyone in the stadium . The game officials declare Laxus the victor , and Ivan tells him that Lumen Histoire is Fairy Tail 's ' darkness ' . Due to the infraction of the rules , the Raven Tail team is disqualified for the remainder of the Games , and its members are captured by the soldiers . Later , Wendy of Fairy Tail Team A and Sherria Blendy of Team Lamia Scale face off to compete for the final match of the day . As the two exchange attacks , gusts of wind surround the arena since Sherria is revealed to be a Sky God Slayer . Wendy employs an advanced Sky Dragon Slayer attack much to Poluchka 's astonishment , causing Sherria to fall on the ground . Wendy is about to be announced as the winner of the bout when Sherria suddenly stands up with her wounds fully healed . Meanwhile , the Crime Sorcière guild senses the nefarious aura , and Jellal proceeds to the Domus Flau audience , oblivious that he bumped into Doranbolt , who , in turn , wonders what is Mystogan doing in Earthland . 170 `` Small Fists '' `` Chiisana Kobushi '' ( 小さな 拳 ) February 23 , 2013 September 1 , 2015 With Cheria being fully healed and Wendy being almost depleted of magic power , their battle continues , with the former casting a high - level spell towards the latter . However , it seems that Wendy enhances Cheria 's physical strength , causing the attack to gain much force and thus missing Wendy . The two competitors then engage in a hand - to - hand combat , but due to the time limit and neither side is giving up , their battle resulted in a draw , giving both teams with 5 points . Meanwhile , Jellal manages to track the sinister aura among the crowd in the form of a mysterious , hooded person . Jellal is about to confront the aura source , but he is abruptly cornered by Doranbolt , Lahar , and other Rune Knights . Doranbalt then interrogates Jellal , and as his cover was blown , the Rune Knights , as well as Kagura and Milliana glancing nearby , are startled to see the true identity of Mystogan . Yajima convinces the Rune Knights that Mystogan is Jellal 's Edolas counterpart , prompting Lahar to release the fugitive . Meanwhile , Laxus and Makarov have a small conversation regarding Lumen Histoire when Mavis appears and explains that Lumen Histoire is the ' light ' of Fairy Tail . 171 `` Naval Battle '' `` Nabaru Batoru '' ( 海战 ( ナバルバトル ) ) March 2 , 2013 September 1 , 2015 As the jubilant Fairy Tail members celebrate their victories , the other people , such as Sting , Kagura , and Milliana , are contemplating on their own concerns , while Yukino is enlisted as a sergeant under Arcadios ' command . Meanwhile , the fourth day of the competitions comes to a start with an event , `` Naval Battle '' , which involves the participants swimming in a giant water sphere and knocking the other competitors out . After the other participants fall out of the aquatic sphere , a five - minute battle between Lucy and Minerva ensues . However , Minerva quickly attacks Lucy , and she manages to steal the keys of the Celestial Spirit mage . Regardless of this , Lucy refuses to surrender . After hearing Lucy 's intentions , Minerva stops from attacking up to the extent that the five - minute mark was reached . However , Minerva resumes attacking Lucy until the game officials decide to halt the match . The Fairy Tail members snap , and Minerva dangles Lucy out of the sphere while the others rush to her aid . 172 `` A Parfum for You '' `` Kimi ni Sasageru Parufamu '' ( 君 に 捧げる 香り ( パルファム ) ) March 9 , 2013 September 1 , 2015 While Lucy is hospitalized and taken to the infirmary , the Fairy Tail members warn Saber Tooth that they have angered the worst possible guild to do so . Later , Makarov announces that the two Fairy Tail teams must merge as a result of the disqualification of Raven Tail and to compensate for the odd number of teams for the battle round . He also reveals that the new team will have the former Team A 's 35 points to start with . The new Fairy Tail team , consisting of Natsu , Gray , Erza , Gajeel , and Laxus , are well - received as they enter the field . The second part of the tournament begins with a tag battle between Blue Pegasus ' Ichiya and `` Rabbit '' and Quatro Puppy 's Rocker and Bacchus . To everyone 's shock , it is revealed that `` Rabbit '' is actually Nichiya in disguise , and after the Exceed is punched by Bacchus , Ichiya bulks up to defeat the Quatro Puppy opponents , awarding Blue Pegasus with 10 points . 173 `` Battle of Dragon Slayers ! '' `` Batoru obu Doragon Sureiyā '' ( バトル ・ オブ ・ ドラゴン スレイヤー ) March 16 , 2013 September 1 , 2015 Mermaid Heel 's Kagura and Milliana and Lamia Scale 's Lyon and Yuka face off for the second tag battle of the games . The two teams struggle to earn a victory , only to have their battle ending in a draw due to the time limit . For the third and final match of the day , the spectators look on in silence as Natsu and Gajeel of Team Fairy Tail and Sting and Rogue of Team Saber Tooth enter the field . As the battle commences , Sting and Rogue were about to take the initiative when they were suddenly attacked by Natsu and Gajeel . The four mages then exchange attacks ; however , the audience watches in shock as the Fairy Tail Dragon Slayers overpower the Saber Tooth Dragon Slayers . Unable to keep themselves on par with their adversaries , Sting activates ' White Drive ' while Rogue powers up using ' Shadow Drive ' . 174 `` Four Dragons '' `` Yonin no Doragon '' ( 四 人 の 竜 ( ドラゴン ) ) March 23 , 2013 September 1 , 2015 The tag battle continues , with Sting and Rogue beginning to attack Natsu and Gajeel with their powers being increased . After receiving heavy blows from the Saber Tooth Dragon Slayers , Natsu and Gajeel manages to hold them off , thus forcing Sting and Rogue to activate `` Dragon Force '' on their own will , to the shock of the Fairy Tail audience . Sting decides to finish the Fairy Tail Dragon Slayers alone , for he held a promise to his Exceed friend Lector many years ago . As the three mages fight , the tide turns in favor of Sting as he unleashes a powerful attack on Natsu and Gajeel , resulting in the collapse of the arena floor , and after a hand - to - hand combat underground , Sting was seemingly the victor of the match . However , the Fairy Tail duo stands up , comments on Sting 's strength , and argues about his position while attacking , thereby causing Natsu to drag Gajeel on a mining cart and send it away . While Gajeel is left incapacitated due to motion sickness , Natsu challenges the Twin Dragons of Saber Tooth alone , in retribution to what Sting did earlier on them . 175 `` Natsu vs. the Twin Dragons '' `` Natsu vs. Sōryū '' ( ナツ vs. 双竜 ) March 30 , 2013 September 1 , 2015 The tag battle of the Dragon Slayers comes to a close , with Natsu overpowering the combined attacks of Sting and Rogue . The Saber Tooth members watch in dismay , while Jiemma seethes in anger over the defeat of the Twin Dragons , frightening the nearby spectators away . The rest of Fairy Tail celebrates in joy as its team receives 10 points , finally surpassing Team Saber Tooth by a single point . Meanwhile , Gajeel , back to his senses after being dragged by Natsu into a cart earlier , stumbles upon a cave full of dragon skeletons . During that night , Jellal manages to corner the source of the dark aura , standing in disbelief at the identity of the mysterious , hooded person .
+  Fact 0.0: Episode 151, 'Sabertooth', has the Japanese title 'Seibatusu' and originally aired on October 6, 2012.
+  Fact 0.1: Episode 151 aired in English on November 17, 2015.
+  Fact 0.2: The Legion Platoon is tasked by Zentopia's archbishop to retrieve the missing pieces of the Infinity Clock and seal them again.
+  Fact 0.3: Before embarking on their mission, the Legion Platoon visits Fairy Tail.
+  Fact 0.4: The Legion Platoon makes amends with Fairy Tail for their previous hostility against them.
+  Fact 0.5: It is later discovered that Fairy Tail has lost its title as the strongest guild in Fiore to Saber Tooth over the past seven years.
+  Fact 0.6: Sting and Rogue are two of the strongest wizards in Fairy Tail.
+  Fact 0.7: Sting and Rogue are a pair of Dragon Slayers.
+  Fact 0.8: Sting is obsessed with fighting Natsu.
+  Fact 0.9: Rogue is obsessed with fighting Gajeel.
+  Fact 0.10: Makarov brings Gildarts to their abandoned guildhall.
+  Fact 0.11: Makarov shows Gildarts Lumen Histoire, a light that Makarov says is Fairy Tail's greatest secret.
+  Fact 0.12: Makarov tells Gildarts that he has been chosen to become the next master of Fairy Tail.
+  Fact 0.13: Episode 152, 'And So We Aim for the Top', has the Japanese title 'Soshite Ore-tachi wa Chojo o Mezasu' and originally aired on October 13, 2012.
+  Fact 0.14: Episode 152 aired in English on November 24, 2015.
+  Fact 0.15: Natsu and his friends discover that a power gap has developed between them and the rest of the guild members who were not on Tenrou Island.
+  Fact 0.16: The group meets with Poluchka for medicine to strengthen their magic.
+  Fact 0.17: The group is unsuccessful in strengthening their magic with the medicine.
+  Fact 0.18: Wendy recognizes Poluchka's voice and scent as those of Grandine, the dragon who raised her.
+  Fact 0.19: Poluchka reveals herself as the Edolas counterpart of Grandine.
+  Fact 0.20: Poluchka gives Wendy written instructions for two advanced spells that Grandine failed to teach her.
+  Fact 0.21: Makarov announces Gildarts' succession as master to the rest of the guild.
+  Fact 0.22: Makarov finds that Gildarts has gone on a journey, leaving a letter of resignation behind.
+  Fact 0.23: In the letter, Gildarts reinstates Laxus into the guild.
+  Fact 0.24: In the letter, Gildarts returns mastership to Makarov.
+  Fact 0.25: In the letter, Gildarts tells Makarov to make Fairy Tail the strongest guild in Fiore again.
+  Fact 0.26: Romeo suggests they participate in the Grand Magic Games.
+  Fact 0.27: The Grand Magic Games are an annual festival designed to determine the guild rankings in Fiore.
+  Fact 0.28: Episode 153, 'Song of the Stars', has the Japanese title 'Hoshiboshi no Uta' and originally aired on October 20, 2012.
+  Fact 0.29: Episode 153 aired in English on December 1, 2015.
+  Fact 0.30: The Grand Magic Games are occurring in three months' time.
+  Fact 0.31: Natsu and his friends train at a beach resort.
+  Fact 0.32: On their second day of training, Virgo appears and tells the wizards that the Celestial Spirit World is in danger of destruction.
+  Fact 0.33: When the wizards arrive, they find a surprise party held by the Celestial Spirit King.
+  Fact 0.34: The party celebrates the wizards' return from Sirius Island after seven years.
+  Fact 0.35: The wizards spend the day in the spirit world partying with the spirits.
+  Fact 0.36: Virgo informs the wizards that one day in the spirit world equals three months in the human world.
+  Fact 0.37: The wizards find that the Grand Magic Games are upon them.
+  Fact 0.38: Episode 154, 'For All the Time We Missed Each Other', has the Japanese title 'Surechigatta Jikan no Bun dake' and originally aired on October 27, 2012.
+  Fact 0.39: Episode 154 aired in English on December 8, 2015.
+  Fact 0.40: While mulling over their lost training time, the Fairy Tail wizards receive a message via carrier pigeon.
+  Fact 0.41: The message requests a private meeting in the forest nearby.
+  Fact 0.42: At the meeting, the wizards meet a runaway Jellal, Ultear, and Merudy.
+  Fact 0.43: Jellal, Ultear, and Merudy have formed their own guild, Crime Sorciere.
+  Fact 0.44: Crime Sorciere aims to defeat Zeref and any dark guilds that try to use his power.
+  Fact 0.45: Jellal, Ultear, and Merudy ask Fairy Tail for help in determining the source of a magical anomaly similar to Zeref's magic.
+  Fact 0.46: The magical anomaly has been sensed around the Grand Magic Games arena, Domus Flau.
+  Fact 0.47: In exchange, Ultear uses her magic to invoke Fairy Tail's Second Origin in order to double their magic power.
+  Fact 0.48: Erza talks with Jellal over his regained memories.
+  Fact 0.49: Erza and Jellal nearly kiss.
+  Fact 0.50: Jellal decides that he and Erza can not be together.
+  Fact 0.51: Jellal lies to Erza that he has a fiancee.
+  Fact 0.52: Erza quickly picks up on the lie and respects his decision.
+  Fact 0.53: Erza sees Crime Sorciere off as they leave.
+  Fact 0.54: Episode 155, 'Crocus, the Flower-Blooming Capital', has the Japanese title 'Hanasaku Miyako: Kurokkasu' and originally aired on November 3, 2012.
+  Fact 0.55: Episode 155 aired in English on December 15, 2015.
+  Fact 0.56: Natsu, Lucy, Gray, Erza, and Wendy are chosen to represent their guild in the Grand Magic Games.
+  Fact 0.57: The Grand Magic Games are to be held in Fiore's capital, Crocus.
+  Fact 0.58: As they tour the city, Natsu and Happy encounter the twin dragon slayers, Sting and Rogue.
+  Fact 0.59: Sting and Rogue mock Natsu for not being able to kill Acnologia.
+  Fact 0.60: Sting and Rogue boast of becoming true dragon slayers by killing the dragons who raised them.
+  Fact 0.61: At midnight, Fairy Tail and the other participating guilds are put through a preliminary event.
+  Fact 0.62: The preliminary event is a race through a massive floating labyrinth.
+  Fact 0.63: The preliminary event is designed to narrow the number of participating guilds down to eight teams.
+  Fact 0.64: Episode 156, 'Sky Labyrinth', has the Japanese title 'Sukai Rabirinsu' and originally aired on November 10, 2012.
+  Fact 0.65: Episode 156 aired in English on December 22, 2015.
+  Fact 0.66: Natsu's team notices that Wendy has gone missing.
+  Fact 0.67: Elfman replaces Wendy to keep Natsu's team from being eliminated.
+  Fact 0.68: As they make their way through the enchanted labyrinth, the five encounter various other guilds.
+  Fact 0.69: The five steal the maps made by the other guilds to better navigate the maze.
+  Fact 0.70: The five reach the end of the maze and pass the elimination round.
+  Fact 0.71: The five are confident they have arrived first.
+  Fact 0.72: The five discover they have barely taken last place.
+  Fact 0.73: Happy, Lisanna, and the rest of the guild search for Wendy and Carla.
+  Fact 0.74: Happy, Lisanna, and the rest of the guild find Wendy and Carla in the garden of the king's palace, Mercurius.
+  Fact 0.75: Wendy and Carla have their magic power depleted.
+  Fact 0.76: Episode 157, 'New Guild', has the Japanese title 'Shinki Girudo' and originally aired on November 17, 2012.
+  Fact 0.77: Episode 157 aired in English on December 29, 2015.
+  Fact 0.78: Wendy's body is weakened as a result of losing her magic power.
+  Fact 0.79: Poluchka helps Wendy recover.
+  Fact 0.80: Wendy formally requests Elfman to take her place in the Grand Magic Games.
+  Fact 0.81: Fairy Tail steps into the arena with a negative audience reception.
+  Fact 0.82: Fairy Tail is bolstered by their guild mates and the spirit of Mavis, whom only Fairy Tail guild members can see.
+  Fact 0.83: The next four participating teams are Quatro Cerberus, Mermaid Heel, Blue Pegasus, and Lamia Scale.
+  Fact 0.84: Raven Tail is a former dark guild led by Makarov's son Ivan.
+  Fact 0.85: Raven Tail members confess to attacking Wendy and Carla.
+  Fact 0.86: The next team is a second team from Fairy Tail composed of Gajeel, Juvia, Mirajane, Laxus, and Jellal.
+  Fact 0.87: Jellal is disguised as Mystogan to help investigate the arena.
+  Fact 0.88: The final guild to be announced is Saber Tooth.
+  Fact 0.89: The audience cheers joyfully for Saber Tooth's announcement.
+  Fact 0.90: All eight teams are announced.
+  Fact 0.91: Each team sends out one member to participate in the first contest of the games.
+  Fact 0.92: Gray and Juvia represent their teams in the first contest.
+  Fact 0.93: Episode 158, 'Night of Shooting Stars', has the Japanese title 'Hoshi Furu Yoru ni' and originally aired on November 24, 2012.
+  Fact 0.94: Episode 158 aired in English on January 5, 2016.
+  Fact 0.95: The games' first contest, 'Hidden', requires the eight participants to score points by finding and attacking each other.
+  Fact 0.96: The contest takes place in a virtual city filled with copies of the participants.
+  Fact 0.97: Raven Tail member Nalpudding repeatedly targets Gray.
+  Fact 0.98: Gray scores last place in the contest.
+  Fact 0.99: Saber Tooth's Rufus scores first by using his Memory-Make magic to attack all the other participants at once.
+  Fact 0.100: Gray is humiliated and swears revenge against Raven Tail and Saber Tooth.
+  Fact 0.101: Lucy is chosen to fight Raven Tail member Flare in the tournament's first battle round.
+  Fact 0.102: Episode 159, 'Lucy vs. Flare', has the Japanese title 'Rushii vs. Furea' and originally aired on December 1, 2012.
+  Fact 0.103: Episode 159 aired in English on January 12, 2016.
+  Fact 0.104: Lucy displays tremendous skill in her battle against Flare by summoning two spirits simultaneously.
+  Fact 0.105: Flare cheats by using her magic hair to hold Alzack and Bisca's daughter, Asuka, as a hostage.
+  Fact 0.106: Flare blackmails Lucy into not fighting back to keep Flare from harming Asuka.
+  Fact 0.107: Lucy tearfully speaks of Asuka's danger.
+  Fact 0.108: Natsu hears Lucy and rushes to Asuka.
+  Fact 0.109: Natsu incinerates Flare's hair.
+  Fact 0.110: Lucy counterattacks with her Urano Metoria spell in combination with Gemini.
+  Fact 0.111: Flare's teammate Obra nullifies Lucy's magic before the spell fully activates.
+  Fact 0.112: Lucy collapses and loses the match.
+  Fact 0.113: Episode 160, 'Portent', has the Japanese title 'Kyozui' and originally aired on December 8, 2012.
+  Fact 0.114: Episode 160 aired in English on January 19, 2016.
+  Fact 0.115: Blue Pegasus' Ren defeats Mermaid Heel's Arana during the games' second match.
+  Fact 0.116: Saber Tooth's Orga effortlessly defeats Quatro Cerberus' War Cry in the third match.
+  Fact 0.117: For the day's fourth and final match, Jellal is pitted against Lamia Scale's Jura.
+  Fact 0.118: Jellal intends to avenge the humiliated Fairy Tail members.
+  Fact 0.119: Jellal mimics Mystogan's magic to keep up his disguise.
+  Fact 0.120: Jellal finds Mystogan's magic ineffective against Jura.
+  Fact 0.121: Jellal is forced to use his own magic instead.
+  Fact 0.122: Before Jellal can cast a spell that will expose his true identity, Ultear uses Merudy's sensory to force Jellal into submission.
+  Fact 0.123: The hospitalized Carla awakens after having a troubling premonition of the future.
+  Fact 0.124: Episode 161, 'Chariots', has the Japanese title 'Chariotto' and originally aired on December 15, 2012.
+  Fact 0.125: Episode 161 aired in English on January 26, 2016.
+  Fact 0.126: Fairy Tail is undaunted by their poor performance on the first day.
+  Fact 0.127: As the guild celebrates, they are visited and taunted by Bacchus.
+  Fact 0.128: Bacchus is Erza's rival from Quatro Cerberus.
+  Fact 0.129: Bacchus has come to replace War Cry.
+  Fact 0.130: Carla relays her premonition to Poluchka.
+  Fact 0.131: In Carla's premonition, Mercurius is collapsing around what appeared to be a tearfully singing Lucy.
+  Fact 0.132: The second day of the tournament begins with a footrace atop a train of moving chariots.
+  Fact 0.133: Natsu, Gajeel, and Sting suffer from motion sickness as a side effect of their Dragon Slayer magic.
+  Fact 0.134: Natsu responds to Sting that his determination is a result of the strength of Fairy Tail's bonds.
+  Fact 0.135: Sting eventually throws the race.
+  Fact 0.136: Natsu finishes as sixth place.
+  Fact 0.137: Gajeel finishes as seventh place.
+  Fact 0.138: Natsu and Gajeel earn Fairy Tail the audience's respect.
+  Fact 0.139: Episode 162, 'Elfman vs. Bacchus', has the Japanese title 'Erufuman vs. Bakkasu' and originally aired on December 22, 2012.
+  Fact 0.140: Episode 162 aired in English on September 1, 2015.
+  Fact 0.141: Due to a miscommunication between the king and his knight Arcadios, Elfman is chosen as Bacchus' opponent instead of Erza.
+  Fact 0.142: Before the match, Bacchus and Elfman make a wager.
+  Fact 0.143: If Bacchus wins, he will court Elfman's sisters.
+  Fact 0.144: If Elfman wins, Bacchus' team name will be changed to 'Quatro Puppy' for the rest of the games.
+  Fact 0.145: Bacchus ruthlessly attacks Elfman with his bare palms.
+  Fact 0.146: Elfman damages Bacchus with his defensive Lizardman transformation.
+  Fact 0.147: Elfman outlasts Bacchus as Bacchus exhausts himself.
+  Fact 0.148: Elfman wins the match.
+  Fact 0.149: Bacchus' team is renamed.
+  Fact 0.150: Natsu finds Wendy, Carla, and Poluchka being kidnapped by a group of masked men.
+  Fact 0.151: The masked men claim they were hired to kidnap Lucy by Raven Tail.
+  Fact 0.152: The masked men are revealed to have actually been sent by Arcadios.
+  Fact 0.153: Arcadios intends to sow discord between the guilds.
+  Fact 0.154: Arcadios plots to use Lucy for his 'Eclipse Project'.
+  Fact 0.155: Episode 163, 'Mirajane vs. Jenny', has the Japanese title 'Mirajen vs. Jeni' and originally aired on January 5, 2013.
+  Fact 0.156: Episode 163 aired in English on September 1, 2015.
+  Fact 0.157: The second day of the Grand Magic Games continues.
+  Fact 0.158: Mirajane of Fairy Tail Team B fights against Jenny Realight of Team Blue Pegasus.
+  Fact 0.159: Mirajane and Jenny are well-known for being magazine models.
+  Fact 0.160: Their battle consists almost entirely of a fashion showdown.
+  Fact 0.161: Jenny proposes a wager that the loser must pose nude for the Sorcerer Magazine.
+  Fact 0.162: Mirajane accepts the wager.
+  Fact 0.163: Jenny transforms into her battle armor.
+  Fact 0.164: Mirajane shifts into her Satan Soul 'Sitri' form.
+  Fact 0.165: Mirajane easily defeats Jenny.
+  Fact 0.166: The final match of the day is Kagura Mikazuchi of Mermaid Heel against Yukino Aguria of Saber Tooth.
+  Fact 0.167: Yukino proposes to Kagura that they wager their lives on their battle.
+  Fact 0.168: Arcadios is confronted by Darton, the kingdom's defense minister, about his 'Eclipse Project'.
+  Fact 0.169: Episode 164, 'Kagura vs. Yukino', has the Japanese title 'Kagura vs. Yukino' and originally aired on January 12, 2013.
+  Fact 0.170: Episode 164 aired in English on September 1, 2015.
+  Fact 0.171: Yukino is revealed to be a celestial spirit wizard when she summons Libra and Pisces to attack Kagura.
+  Fact 0.172: Kagura defeats Libra and Pisces using her gravity-altering magic.
+  Fact 0.173: Yukino uses a Gatekey that summons Ophiuchus, which is regarded as the strongest among the Celestial Spirits.
+  Fact 0.174: Kagura slays Ophiuchus with her sword still sheathed.
+  Fact 0.175: Kagura easily defeats Yukino.
+  Fact 0.176: Jellal discusses the fact that he has not sensed the evil power similar to Zeref's.
+  Fact 0.177: Jellal's discussion takes place after the second day of the Grand Magic Games has ended.
+  Fact 0.178: Erza reunites with Milliana.
+  Fact 0.179: Milliana is revealed to be a member of Mermaid Heel.
+  Fact 0.180: Saber Tooth's master Jiemma is dissatisfied with his guild's performance.
+  Fact 0.181: Sting is given another chance.
+  Fact 0.182: Jiemma humiliates Yukino for her failure.
+  Fact 0.183: Episode 165, 'Hatred at Nightfall', has the Japanese title 'Urami wa Yoru no Tobari ni Tsutsumarete' and originally aired on January 19, 2013.
+  Fact 0.184: Episode 165 aired in English on September 1, 2015.
+  Fact 0.185: After Yukino is expelled from Saber Tooth, she offers her two golden Gatekeys to Lucy.
+  Fact 0.186: Yukino offers the Gatekeys to complete Lucy's collection of the Zodiac Gatekeys.
+  Fact 0.187: Yukino states that when the twelve Zodiac Gatekeys are all gathered, a gateway that changes the world will open.
+  Fact 0.188: Lucy turns down the offer.
+  Fact 0.189: Milliana tells Erza that Kagura's sword, Archenemy, is intended to kill Jellal.
+  Fact 0.190: Milliana tells Erza that she and Kagura share the same resentment towards Jellal.
+  Fact 0.191: Natsu and Happy run after Yukino in an attempt to apologize.
+  Fact 0.192: Natsu realizes that Yukino had been expelled.
+  Fact 0.193: Natsu infiltrates the Crocus Garden to fight Jiemma.
+  Fact 0.194: Episode 166, 'Pandemonium', has the Japanese title 'Pandemoniumu' and originally aired on January 26, 2013.
+  Fact 0.195: Episode 166 aired in English on September 1, 2015.
+  Fact 0.196: Natsu punches out Dobengal, the guild member summoned to fight him.
+  Fact 0.197: Natsu and Jiemma engage in a duel.
+  Fact 0.198: The guild master's daughter, Minerva, appears and ends their duel.
+  Fact 0.199: Minerva takes Happy hostage.
+  Fact 0.200: Minerva convinces Natsu to settle their dispute in the Grand Magic Games.
+  Fact 0.201: As Natsu leaves, he states that Saber Tooth will never surpass Fairy Tail because they care for their friends.
+  Fact 0.202: Rogue echoes Natsu's words.
+  Fact 0.203: Sting is left in awe at Natsu's strength.
+  Fact 0.204: The following day, an event called 'Pandemonium' begins.
+  Fact 0.205: In Pandemonium, participants enter a magical citadel filled with 100 monsters of varying strengths.
+  Fact 0.206: Participants individually do battle with any number of monsters they choose.
+  Fact 0.207: Erza, representing Fairy Tail Team A, requests the 100 monsters as her opponents.
+  Fact 0.208: Episode 167, '100 Against 1', has the Japanese title '100 tai 1' and originally aired on February 2, 2013.
+  Fact 0.209: Episode 167 aired in English on September 1, 2015.
+  Fact 0.210: Erza kills the 100 monsters using various types of armor to match their strengths and weaknesses.
+  Fact 0.211: The crowd praises Fairy Tail.
+  Fact 0.212: Fairy Tail is awarded 10 points.
+  Fact 0.213: The game officials decide to determine the ranks of the remaining participants by means of a device called the 'Magic Power Finder', sometimes abbreviated as MPF.
+  Fact 0.214: Participants must attack the Magic Power Finder with their magic power.
+  Fact 0.215: The Magic Power Finder calculates and displays participants' equivalent scores based on the extent of power used.
+  Fact 0.216: Cana of Fairy Tail Team B dominates the event by using the Fairy Glitter spell lent to her by Mavis.
+  Fact 0.217: Makarov is surprised by Cana's use of the Fairy Glitter spell.
+  Fact 0.218: Fairy Tail Team B receives 8 points.
+  Fact 0.219: The audience bursts into a resounding swarm of cheers and claps due to the finish of the two Fairy Tail teams.
+  Fact 0.220: The masked leader Alexei tells his subordinates Flare, Obra, Nalpudding, and Kurohebi that it is about time to proceed with their true mission.
+  Fact 0.221: Raven Tail somehow got insider information regarding the battle matchups for the day.
+  Fact 0.222: Episode 168, 'Laxus vs. Alexei', has the Japanese title 'Rakusasu vs. Arekusei' and originally aired on February 9, 2013.
+  Fact 0.223: Episode 168 aired in English on September 1, 2015.
+  Fact 0.224: In the battle portion of the Grand Magic Games' third day, Milliana of Mermaid Heel beats Semmes of Quatro Puppy.
+  Fact 0.225: Saber Tooth's Rufus swiftly defeats Blue Pegasus' Eve.
+  Fact 0.226: Laxus of Fairy Tail Team B is chosen to battle against Alexei of Team Raven Tail.
+  Fact 0.227: The Fairy Tail members take extra precautions because Raven Tail is a suspicious guild.
+  Fact 0.228: Fairy Tail watches the actions of Ivan Dreyar and the other four Raven Tail members.
+  Fact 0.229: The spectators are shocked to see Laxus being beaten by Alexei.
+  Fact 0.230: No cautious movements can be seen from the Raven Tail team.
+  Fact 0.231: The two dueling people are illusions created by Alexei.
+  Fact 0.232: Alexei created the illusions so that he could have a talk with Laxus.
+  Fact 0.233: The other Raven Tail members being monitored by Fairy Tail are lifelike illusions.
+  Fact 0.234: In reality, the other Raven Tail members are with Alexei on the battlefield.
+  Fact 0.235: Alexei reveals himself to be Ivan Dreyar.
+  Fact 0.236: Ivan and the Raven Tail members are unable to interrogate Laxus about the Lumen Histoire's location.
+  Fact 0.237: Ivan and the Raven Tail members are forced to fight Laxus.
+  Fact 0.238: Before their battle begins, Ivan declares that Raven Tail is an anti-Fairy Tail guild.
+  Fact 0.239: Episode 169, 'Wendy vs. Shelia', has the Japanese title 'Wendi vs. Sheria' and originally aired on February 16, 2013.
+  Fact 0.240: Episode 169 aired in English on September 1, 2015.
+  Fact 0.241: Laxus defeats Ivan and the four Raven Tail elite members.
+  Fact 0.242: Ivan's illusions disappear to the shock of everyone in the stadium.
+  Fact 0.243: The game officials declare Laxus the victor.
+  Fact 0.244: Ivan tells Laxus that Lumen Histoire is Fairy Tail's 'darkness'.
+  Fact 0.245: Raven Tail is disqualified for the remainder of the Games due to the infraction of the rules.
+  Fact 0.246: Raven Tail's members are captured by the soldiers.
+  Fact 0.247: Wendy of Fairy Tail Team A and Sherria Blendy of Team Lamia Scale face off for the final match of the day.
+  Fact 0.248: Sherria is revealed to be a Sky God Slayer.
+  Fact 0.249: Gusts of wind surround the arena as Sherria and Wendy exchange attacks.
+  Fact 0.250: Wendy employs an advanced Sky Dragon Slayer attack, much to Poluchka's astonishment.
+  Fact 0.251: Sherria falls on the ground.
+  Fact 0.252: Wendy is about to be announced as the winner of the bout.
+  Fact 0.253: Sherria suddenly stands up with her wounds fully healed.
+  Fact 0.254: The Crime Sorciere guild senses the nefarious aura.
+  Fact 0.255: Jellal proceeds to the Domus Flau audience.
+  Fact 0.256: Jellal is oblivious that he bumped into Doranbolt.
+  Fact 0.257: Doranbolt wonders what Mystogan is doing in Earthland.
+  Fact 0.258: Episode 170, 'Small Fists', has the Japanese title 'Chiisana Kobushi' and originally aired on February 23, 2013.
+  Fact 0.259: Episode 170 aired in English on September 1, 2015.
+  Fact 0.260: Cheria is fully healed.
+  Fact 0.261: Wendy is almost depleted of magic power.
+  Fact 0.262: Cheria casts a high-level spell towards Wendy.
+  Fact 0.263: Wendy enhances Cheria's physical strength, causing the attack to miss Wendy.
+  Fact 0.264: The two competitors engage in hand-to-hand combat.
+  Fact 0.265: Due to the time limit and neither side giving up, their battle results in a draw.
+  Fact 0.266: The draw gives both teams 5 points.
+  Fact 0.267: Jellal tracks the sinister aura among the crowd in the form of a mysterious, hooded person.
+  Fact 0.268: Jellal is about to confront the aura source.
+  Fact 0.269: Doranbolt, Lahar, and other Rune Knights corner Jellal.
+  Fact 0.270: Doranbolt interrogates Jellal.
+  Fact 0.271: Jellal's cover is blown.
+  Fact 0.272: The Rune Knights, Kagura and Milliana see the true identity of Mystogan.
+  Fact 0.273: Yajima convinces the Rune Knights that Mystogan is Jellal's Edolas counterpart.
+  Fact 0.274: Lahar releases the fugitive.
+  Fact 0.275: Laxus and Makarov have a small conversation regarding Lumen Histoire.
+  Fact 0.276: Mavis appears and explains that Lumen Histoire is the 'light' of Fairy Tail.
+  Fact 0.277: Episode 171, 'Naval Battle', has the Japanese title 'Nabaru Batoru' and originally aired on March 2, 2013.
+  Fact 0.278: Episode 171 aired in English on September 1, 2015.
+  Fact 0.279: The jubilant Fairy Tail members celebrate their victories.
+  Fact 0.280: Sting, Kagura, and Milliana are contemplating their own concerns.
+  Fact 0.281: Yukino is enlisted as a sergeant under Arcadios' command.
+  Fact 0.282: The fourth day of the competitions begins with an event called 'Naval Battle'.
+  Fact 0.283: Naval Battle involves participants swimming in a giant water sphere and knocking the other competitors out.
+  Fact 0.284: After the other participants fall out of the sphere, a five-minute battle between Lucy and Minerva ensues.
+  Fact 0.285: Minerva quickly attacks Lucy and steals the keys of the Celestial Spirit mage.
+  Fact 0.286: Lucy refuses to surrender.
+  Fact 0.287: After hearing Lucy's intentions, Minerva stops attacking until the five-minute mark is reached.
+  Fact 0.288: Minerva resumes attacking Lucy until the game officials decide to halt the match.
+  Fact 0.289: The Fairy Tail members snap.
+  Fact 0.290: Minerva dangles Lucy out of the sphere.
+  Fact 0.291: The other Fairy Tail members rush to Lucy's aid.
+  Fact 0.292: Episode 172, 'A Parfum for You', has the Japanese title 'Kimi ni Sasageru Parufamu' and originally aired on March 9, 2013.
+  Fact 0.293: Episode 172 aired in English on September 1, 2015.
+  Fact 0.294: Lucy is hospitalized and taken to the infirmary.
+  Fact 0.295: The Fairy Tail members warn Saber Tooth that they have angered the worst possible guild to do so.
+  Fact 0.296: Makarov announces that the two Fairy Tail teams must merge.
+  Fact 0.297: The merger is a result of the disqualification of Raven Tail.
+  Fact 0.298: The merger compensates for the odd number of teams for the battle round.
+  Fact 0.299: The new team will have the former Team A's 35 points to start with.
+  Fact 0.300: The new Fairy Tail team consists of Natsu, Gray, Erza, Gajeel, and Laxus.
+  Fact 0.301: The new team is well-received as they enter the field.
+  Fact 0.302: The second part of the tournament begins with a tag battle between Blue Pegasus' Ichiya and 'Rabbit' and Quatro Puppy's Rocker and Bacchus.
+  Fact 0.303: 'Rabbit' is revealed to be Ichiya in disguise.
+  Fact 0.304: Bacchus punches the Exceed.
+  Fact 0.305: Ichiya bulks up to defeat the Quatro Puppy opponents.
+  Fact 0.306: Blue Pegasus is awarded 10 points.
+  Fact 0.307: Episode 173, 'Battle of Dragon Slayers!', has the Japanese title 'Batoru obu Doragon Sureiya' and originally aired on March 16, 2013.
+  Fact 0.308: Episode 173 aired in English on September 1, 2015.
+  Fact 0.309: Mermaid Heel's Kagura and Milliana face off against Lamia Scale's Lyon and Yuka for the second tag battle of the games.
+  Fact 0.310: The second tag battle ends in a draw due to the time limit.
+  Fact 0.311: For the third and final match of the day, Natsu and Gajeel of Team Fairy Tail enter the field against Sting and Rogue of Team Saber Tooth.
+  Fact 0.312: Sting and Rogue were about to take the initiative when Natsu and Gajeel attacked them.
+  Fact 0.313: The audience watches in shock as the Fairy Tail Dragon Slayers overpower the Saber Tooth Dragon Slayers.
+  Fact 0.314: Sting activates 'White Drive'.
+  Fact 0.315: Rogue powers up using 'Shadow Drive'.
+  Fact 0.316: Episode 174, 'Four Dragons', has the Japanese title 'Yonin no Doragon' and originally aired on March 23, 2013.
+  Fact 0.317: Episode 174 aired in English on September 1, 2015.
+  Fact 0.318: Sting and Rogue begin attacking Natsu and Gajeel with their powers increased.
+  Fact 0.319: After receiving heavy blows from the Saber Tooth Dragon Slayers, Natsu and Gajeel manage to hold them off.
+  Fact 0.320: Sting and Rogue are forced to activate 'Dragon Force' on their own will.
+  Fact 0.321: The Fairy Tail audience is shocked by Sting and Rogue activating 'Dragon Force'.
+  Fact 0.322: Sting decides to finish the Fairy Tail Dragon Slayers alone.
+  Fact 0.323: Sting held a promise to his Exceed friend Lector many years ago.
+  Fact 0.324: The tide turns in favor of Sting as he unleashes a powerful attack on Natsu and Gajeel.
+  Fact 0.325: Sting's attack causes the collapse of the arena floor.
+  Fact 0.326: After a hand-to-hand combat underground, Sting is seemingly the victor of the match.
+  Fact 0.327: Natsu and Gajeel stand up, comment on Sting's strength, and argue about his position while attacking.
+  Fact 0.328: Natsu drags Gajeel on a mining cart and sends it away.
+  Fact 0.329: Gajeel is left incapacitated due to motion sickness.
+  Fact 0.330: Natsu challenges the Twin Dragons of Saber Tooth alone, in retribution for what Sting did earlier.
+  Fact 0.331: Episode 175, 'Natsu vs. the Twin Dragons', has the Japanese title 'Natsu vs. Soryu' and originally aired on March 30, 2013.
+  Fact 0.332: Episode 175 aired in English on September 1, 2015.
+  Fact 0.333: The tag battle of the Dragon Slayers comes to a close.
+  Fact 0.334: Natsu overpowers the combined attacks of Sting and Rogue.
+  Fact 0.335: The Saber Tooth members watch in dismay.
+  Fact 0.336: Jiemma seethes in anger over the defeat of the Twin Dragons.
+  Fact 0.337: Jiemma's anger frightens the nearby spectators away.
+  Fact 0.338: The rest of Fairy Tail celebrates in joy as its team receives 10 points.
+  Fact 0.339: Fairy Tail surpasses Team Saber Tooth by a single point.
+  Fact 0.340: Gajeel, back to his senses after being dragged by Natsu into a cart earlier, stumbles upon a cave full of dragon skeletons.
+  Fact 0.341: That night, Jellal manages to corner the source of the dark aura.
+  Fact 0.342: Jellal stands in disbelief at the identity of the mysterious, hooded person.
+
+Retrieved items:
+<item 1>
+List of Fairy Tail episodes (season 6)
+The following day as the Grand Magic Games continue , an event called `` Pandemonium '' begins . It involves the participants entering a magical citadel filled
+with 100 monsters of varying strengths and individually doing battle with any number of monsters they choose . Representing Fairy Tail Team A , Erza requests
+the 100 monsters as her opponents . 167 `` 100 Against 1 '' `` Hyaku tai Ichi '' ( 100 対 1 ) February 2 , 2013 September 1 , 2015 Erza kills the 100 monsters
+using various types of armor to match their strength and weaknesses . As a result , the crowd praises Fairy Tail , and the guild is awarded with 10 points .
+Moreover , the game officials decided to determine the ranks of the remaining participants by means of a device called `` Magic Power Finder '' ( sometimes
+abbreviated as MPF ) . Using this tool , participants must attack it with their magic power , which will , in turn , calculate and display their equivalent
+scores depending on the extent of power used .
+</item 1>
+
+<item 2>
+List of Fairy Tail episodes (season 6)
+Later , Jellal discusses the fact that he has not sensed the evil power similar to Zeref 's even though the second day of the Grand Magic Games has ended . Erza
+reunites with Milliana , who is revealed to be a member of Mermaid Heel . Meanwhile , Saber Tooth 's master Jiemma is dissatisfied with his guild 's performance
+. Though Sting is given another chance , Jiemma humiliates Yukino for her failure . 165 `` Hatred at Nightfall '' `` Urami wa Yoru no Tobari ni Tsutsumarete ''
+( 怨み は 夜 の 帐 に 包 まれ て ) January 19 , 2013 September 1 , 2015 After Yukino is expelled from Saber Tooth , she offers her two golden Gatekeys to Lucy to complete
+the latter 's collection of the Zodiac Gatekeys , stating that when the twelve Zodiac Gatekeys are all gathered , a gateway that changes the world will open ;
+however , Lucy turns down the offer .
+</item 2>
+
+<item 3>
+List of Fairy Tail episodes (season 6)
+When the wizards arrive , they instead find a surprise party held by the Celestial Spirit King celebrating their return from Sirius Island after seven years .
+They spend the day in the spirit world partying with the spirits . Before they leave , however , Virgo informs them that one day in the spirit world equals
+three months in the human world , and they find the Grand Magic Games are upon them . 154 `` For All the Time We Missed Each Other '' `` Surechigatta Jikan no
+Bun dake '' ( すれ 违 っ た 时间 の 分 だけ ) October 27 , 2012 December 8 , 2015 While mulling over their lost training time , the Fairy Tail wizards receive a message
+via carrier pigeon requesting a private meeting in the forest nearby . There they meet a runaway Jellal , Ultear , and Merudy , who have formed their own guild
+, Crime Sorcière , to defeat Zeref and any dark guilds that try to use his power .
+</item 3>
+
+<item 4>
+List of Fairy Tail episodes (season 6)
+In the end , Cana of Fairy Tail Team B dominates the event by using the Fairy Glitter spell lent to her by Mavis , much to Makarov 's surprise . With Cana 's
+victory , Fairy Tail Team B receives 8 points , and the audience began to burst once more into a resounding swarm of cheers and claps due to the finish of the
+two Fairy Tail teams . Meanwhile , the Raven Tail team somehow managed to get an insider information regarding the battle matchups for the day , so the masked
+leader Alexei tells his subordinates Flare , Obra , Nalpudding , and Kurohebi that it 's about time to proceed with their true mission . 168 `` Laxus vs. Alexei
+'' `` Rakusasu vs. Arekusei '' ( ラクサス vs. アレクセイ ) February 9 , 2013 September 1 , 2015 In the battle portion of the Grand Magic Games ' third day , Milliana of
+Mermaid Heel beats Semmes of Quatro Puppy while Saber Tooth 's Rufus swiftly defeats Blue Pegasus ' Eve .
+</item 4>
+
+<item 5>
+List of Fairy Tail episodes (season 6)
+To everyone 's shock , the next team is revealed to be a second team from Fairy Tail composed of Gajeel , Juvia , Mirajane , Laxus , and Jellal ( disguised as
+Mystogan to help investigate the arena ) . The final guild to be announced is Saber Tooth , much to the joy of the audience . With all eight teams announced ,
+they each send out one member to participate in the first contest of the games , with Gray and Juvia representing their teams . 158 `` Night of Shooting Stars
+'' `` Hoshi Furu Yoru ni '' ( 星 降 ル 夜 ニ ) November 24 , 2012 January 5 , 2016 The games ' first contest , `` Hidden '' , requires the eight participants to
+score points by finding and attacking each other in a virtual city filled with copies of themselves . Raven Tail member Nalpudding repeatedly targets Gray , who
+scores last place in the contest while Saber Tooth 's Rufus scores first by using his Memory - Make magic to attack all the other participants at once .
+</item 5>
+
+<item 6>
+List of Fairy Tail episodes (season 6)
+As they tour the city , Natsu and Happy encounter the twin dragon slayers , Sting and Rogue , who mock Natsu for not being able to kill Acnologia , and boast of
+becoming true dragon slayers by killing the dragons who raised them . At midnight , Fairy Tail and the other participating guilds are put through a preliminary
+event -- a race through a massive floating labyrinth -- designed to narrow the number of participating guilds down to eight teams . 156 `` Sky Labyrinth '' ``
+Sukai Rabirinsu '' ( 空中 迷宮 ( スカイ ラビリンス ) ) November 10 , 2012 December 22 , 2015 Natsu 's team notices that Wendy has gone missing , so Elfman replaces her to
+keep them from being eliminated . As they make their way through the enchanted labyrinth , the five encounter various other guilds and steal the maps made by
+the other guilds to better navigate the maze . They manage to reach the end of the maze and pass the elimination round , confident they have arrived first ,
+only to discover they have barely taken last place .
+</item 6>
+
+<item 7>
+List of Fairy Tail episodes (season 6)
+Poluchka reveals herself as the Edolas counterpart of Grandine , and gives Wendy written instructions for two advanced spells that Grandine failed to teach her
+. Meanwhile , Makarov announces Gildarts ' succession as master to the rest of the guild , only to find he has gone on a journey , leaving a letter of
+resignation behind . In the letter , Gildarts reinstates Laxus into the guild , returns mastership to Makarov , and tells him to make Fairy Tail the strongest
+guild in Fiore again . Romeo suggests they participate in the Grand Magic Games , an annual festival designed to determine the guild rankings in Fiore . 153 ``
+Song of the Stars '' `` Hoshiboshi no Uta '' ( 星々 の 歌 ) October 20 , 2012 December 1 , 2015 With the Grand Magic Games occurring in three months time , Natsu
+and his friends train at a beach resort . On their second day of training , Virgo appears and tells the wizards that the Celestial Spirit World is in danger of
+destruction .
+</item 7>
+
+<item 8>
+List of Fairy Tail episodes (season 6)
+The three ask Fairy Tail for their help in determining the source of a magical anomaly similar to Zeref 's magic that they have sensed around the Grand Magic
+Games arena , Domus Flau . In exchange , Ultear uses her magic to invoke their Second Origin in order to double their magic power . As the others undergo the
+painful process of awakening their Second Origin , Erza talks with Jellal over his regained memories . The two nearly kiss , but Jellal decides that he and Erza
+can not be together and lies to her that he has a fiancée . Erza quickly picks up on this and respects his decision , seeing Crime Sorcière off as they leave .
+155 `` Crocus , the Flower - Blooming Capital '' `` Hanasaku Miyako : Kurokkasu '' ( 花 笑 く 都 ・ クロッカス ) November 3 , 2012 December 15 , 2015 Natsu , Lucy , Gray
+, Erza , and Wendy are chosen to represent their guild in the Grand Magic Games , which are to be held in Fiore 's capital , Crocus .
+</item 8>
+
+<item 9>
+List of Fairy Tail episodes (season 6)
+It contains a single story arc , titled `` Dai Matō Enbu '' ( 大 魔 闘 演武 , lit `` Grand Magic Games '' ) , which adapts material from the beginning of the 31st
+through the ending of the 35th volumes of Hiro Mashima 's Fairy Tail manga over 24 episodes . Focusing on Natsu and the others who were frozen in time for seven
+years on Tenrou Island , the members return to Magnolia and discover that Saber Tooth is the strongest guild in the Fiore Kingdom . Having become the weakest
+guild during the absence of its core members , Fairy Tail decides to enter the Grand Magic Games , an annual competition to decide Fiore 's strongest guild .
+The season began airing on October 6 , 2012 on TV Tokyo in Japan and concluded its run on March 30 , 2013 . The first DVD compilation , containing the last two
+episodes of the fifth season and the first two episodes of the sixth season , was released by Pony Canyon on March 6 , 2013 .
+</item 9>
+
+<item 10>
+List of Fairy Tail episodes (season 6)
+Meanwhile , Natsu finds Wendy , Carla , and Poluchka being kidnapped by a group of masked men . Upon being caught , the men claim they were hired to kidnap Lucy
+by Raven Tail . They are soon revealed to have actually been sent by Arcadios , who intends to sow discord between the guilds as he plots to use Lucy for his ``
+Eclipse Project '' . 163 `` Mirajane vs. Jenny '' `` Mirajēn vs. Jenī '' ( ミラ ジェーン vs. ジェニー ) January 5 , 2013 September 1 , 2015 The second day of the Grand
+Magic Games continues , with Mirajane of Fairy Tail Team B fighting against Jenny Realight of Team Blue Pegasus . Since the two competitors are well - known for
+being magazine models , their battle consists almost entirely of a fashion showdown , much to the pleasure of the audience . Eventually as the showdown becomes
+redundant , Jenny proposes a wager : the loser must pose nude for the Sorcerer Magazine , which Mirajane accepts .
+</item 10>
+=== END ITEM id=13ba1f62368497f4 ===
+
+=== ITEM id=58df48035ff38978 ===
+Gold sentences and facts:
+Sentence 0: No . Title Featured guest Original release date `` It 's a Whole New Ball Game Now '' Barack Obama January 12 , 2018 ( 2018 - 01 - 12 ) Cold open : Letterman interviewing Obama on Late Show with David Letterman . On - location segment : Walking with Congressman John Lewis across the Edmund Pettus Bridge , site of the civil rights movement 's Bloody Sunday in 1965 . `` You Be the Newsman , I 'll Be Liz Taylor '' George Clooney February 9 , 2018 ( 2018 - 02 - 09 ) Cold open : Letterman and Clooney outside of LAX watching planes land and eating fast food . On - location segment : At the home of Nick Clooney meeting Iraqi refugee Hazim Avdal whom the Clooney family is sponsoring . `` You Know , She Has a Nobel Peace Prize '' Malala Yousafzai March 9 , 2018 ( 2018 - 03 - 09 ) Cold open : Letterman accompanies Yousafzai as she leads a tour group at Lady Margaret Hall , Oxford . On - location segment : Yousafzai continues to lead the tour group as Letterman tags along , the pair browse in the University of Oxford shop , and Letterman eats lunch with Yousafzai 's father . `` I Had a Paper Route Too '' Jay - Z April 6 , 2018 ( 2018 - 04 - 06 ) Cold open : None On - location segment : Letterman visits Shangri La Studio , speaks with music producer Rick Rubin and listens to Madison Ryann Ward recording . 5 `` TBA '' Tina Fey May 4 , 2018 6 `` TBA '' Howard Stern May 31 , 2018
+  Fact 0.0: The table lists episode 1, titled 'It's a Whole New Ball Game Now', with featured guest Barack Obama, original release date January 12, 2018.
+  Fact 0.1: The cold open for episode 1 has Letterman interviewing Obama on Late Show with David Letterman.
+  Fact 0.2: The on-location segment for episode 1 has Letterman walking with Congressman John Lewis across the Edmund Pettus Bridge, site of the civil rights movement's Bloody Sunday in 1965.
+  Fact 0.3: The table lists episode 2, titled 'You Be the Newsman, I'll Be Liz Taylor', with featured guest George Clooney, original release date February 9, 2018.
+  Fact 0.4: The cold open for episode 2 has Letterman and Clooney outside of LAX watching planes land and eating fast food.
+  Fact 0.5: The on-location segment for episode 2 is at the home of Nick Clooney meeting Iraqi refugee Hazim Avdal, whom the Clooney family is sponsoring.
+  Fact 0.6: The table lists episode 3, titled 'You Know, She Has a Nobel Peace Prize', with featured guest Malala Yousafzai, original release date March 9, 2018.
+  Fact 0.7: The cold open for episode 3 has Letterman accompanying Yousafzai as she leads a tour group at Lady Margaret Hall, Oxford.
+  Fact 0.8: The on-location segment for episode 3 has Yousafzai continuing to lead the tour group while Letterman tags along.
+  Fact 0.9: In the episode 3 on-location segment, the pair browse in the University of Oxford shop.
+  Fact 0.10: In the episode 3 on-location segment, Letterman eats lunch with Yousafzai's father.
+  Fact 0.11: The table lists episode 4, titled 'I Had a Paper Route Too', with featured guest Jay-Z, original release date April 6, 2018.
+  Fact 0.12: The cold open for episode 4 is none.
+  Fact 0.13: The on-location segment for episode 4 has Letterman visiting Shangri La Studio.
+  Fact 0.14: In the episode 4 on-location segment, Letterman speaks with music producer Rick Rubin.
+  Fact 0.15: In the episode 4 on-location segment, Letterman listens to Madison Ryann Ward recording.
+  Fact 0.16: The table lists episode 5, titled 'TBA', with featured guest Tina Fey, original release date May 4, 2018.
+  Fact 0.17: The table lists episode 6, titled 'TBA', with featured guest Howard Stern, original release date May 31, 2018.
+
+Retrieved items:
+<item 1>
+My Next Guest Needs No Introduction with David Letterman
+`` I Had a Paper Route Too '' Jay - Z April 6 , 2018 ( 2018 - 04 - 06 ) Cold open : None On - location segment : Letterman visits Shangri La Studio , speaks
+with music producer Rick Rubin and listens to Madison Ryann Ward recording . 5 `` TBA '' Tina Fey May 4 , 2018 6 `` TBA '' Howard Stern May 31 , 2018 Reception
+( edit ) The first season of My Next Guest Needs No Introduction has been met with a positive response from critics . On the review aggregation website Rotten
+Tomatoes , the first season holds a 80 % approval rating with an average rating of 6.4 out of 10 based on 25 reviews . Metacritic , which uses a weighted
+average , assigned the season a score of 70 out of 100 based on 13 reviews , indicating `` generally favorable reviews '' . References ( edit ) Jump up ^
+Andreeva , Nellie ( August 8 , 2017 ) . `` David Letterman Returns To Television With Netflix Series '' . Deadline .
+</item 1>
+
+<item 2>
+My Next Guest Needs No Introduction with David Letterman
+Rotten Tomatoes . Retrieved January 13 , 2018 . Jump up ^ `` My Next Guest Needs No Introduction With David Letterman : Season 1 - Metacritic '' . Metacritic .
+Retrieved January 13 , 2018 . External links ( edit ) Official website David Letterman Television hosting The David Letterman Show ( 1980 ) Late Night with
+David Letterman ( 1982 -- 1993 ) Late Show with David Letterman ( 1993 -- 2015 ) My Next Guest Needs No Introduction with David Letterman ( 2018 ) Companies The
+Letterman Foundation for Courtesy and Grooming Rahal Letterman Lanigan Racing Worldwide Pants Related Dorothy Mengering Netflix original series Current Since
+2013 House of Cards Orange Is the New Black Since 2014 BoJack Horseman Since 2015 Unbreakable Kimmy Schmidt Chef 's Table Daredevil Grace and Frankie Residue
+Sense8 Club de Cuervos Project Mc Dinotrux Narcos Master of None Jessica Jones F Is for Family Making a Murderer Real Rob Since 2016 Degrassi : Next Class
+Fuller House Lego Friends : The Power of Friendship Flaked
+</item 2>
+
+<item 3>
+My Next Guest Needs No Introduction with David Letterman
+My Next Guest Needs No Introduction with David Letterman - wikipedia My Next Guest Needs No Introduction with David Letterman Jump to : navigation , search My
+Next Guest Needs No Introduction with David Letterman Genre Talk show Directed by Michael Bonfiglio Presented by David Letterman Composer ( s ) Paul Shaffer
+Country of origin United States Original language ( s ) English No. of seasons No. of episodes 4 ( list of episodes ) Production Executive producer ( s ) Justin
+Wilkes Dave Sirulnick Jon Kamen Tom Keany Producer ( s ) Mary Barclay Cinematography Declan Quinn Editor ( s ) Jesse Gordon Edward A. Bishop Paul Little Running
+time 50 -- 56 minutes Production company ( s ) RadicalMedia Worldwide Pants Inc . Release Original network Netflix Original release January 12 , 2018 ( 2018 -
+01 - 12 ) -- present External links Official website My Next Guest Needs No Introduction with David Letterman is an American web television talk show hosted by
+David Letterman . The series consists of interviews with one guest per episode both inside and outside a studio setting .
+</item 3>
+
+<item 4>
+My Next Guest Needs No Introduction with David Letterman
+Magic School Bus Rides Again Suburra Mindhunter Super Monsters Cuando conocí al Chapo : La historia de Kate del Castillo Beyond Stranger Things Blazing Transfer
+Student The Punisher Shot in the Dark Stretch Armstrong and the Flex Fighters She 's Gotta Have It Dark Wormwood The Toys That Made Us Since 2018 The End of the
+F * * * ing World My Next Guest Needs No Introduction with David Letterman Trolls : The Beat Goes On ! Llama Llama The New Legends of Monkey Altered Carbon
+Dirty Money Queer Eye First Team : Juventus The Joel McHale Show with Joel McHale Ugly Delicious B : The Beginning Flint Town Girls Incarcerated A.I.C.O. -
+Incarnation - Nailed It ! On My Block Wild Wild Country Alexa & Katie The Mechanism Requiem Sword Gai : The Animation Lost Song Troy : Fall of a City The Boss
+Baby : Back in Business Lost in Space Aggretsuko Spy Kids : Mission Critical The Letdown Luis Miguel Continuations Arrested Development ( season 4 , 2013 ) The
+Killing ( season 4 , 2014 ) Star Wars : The Clone Wars ( season 6 ,
+</item 4>
+
+<item 5>
+My Next Guest Needs No Introduction with David Letterman
+wikipedia.org/w/index.php?title=My_Next_Guest_Needs_No_Introduction_with_David_Letterman&oldid=838074810 '' Categories : 2010s American comedy television series
+2018 American television series debuts David Letterman English - language television programs Netflix original programming Hidden categories : Pages using
+infobox television with editor parameter Episode lists with unformatted air dates Talk Contents About Wikipedia Italiano Nederlands Português Edit links This
+page was last edited on 24 April 2018 , at 19 : 28 . About Wikipedia
+</item 5>
+
+<item 6>
+My Next Guest Needs No Introduction with David Letterman
+On January 5 , 2018 , Netflix released further information about the series . It was announced that Letterman 's guests in the first season would include Barack
+Obama , George Clooney , Malala Yousafzai , Jay - Z , Tina Fey , and Howard Stern . It was also announced that the series would premiere on January 12 , 2018
+with Letterman 's interview with Obama . This interview was Obama 's first since leaving office . Music ( edit ) The show 's theme song and bridging music were
+written and recorded by Letterman 's long - time bandleader , Paul Shaffer . Soon after it was announced publicly that Netflix had given the series an order ,
+Shaffer received a phone call from Letterman asking him to work on the show . Soon after , Shaffer began to receive cuts of episodes from the first season and
+he started to put music in afterwards where the director thought it was needed . In developing the sound of the show 's music , Shaffer initially looked to
+Letterman for guidance .
+</item 6>
+
+<item 7>
+My Next Guest Needs No Introduction with David Letterman
+Seuss ' Green Eggs and Ham ( 2018 ) Harvey Street Kids ( 2018 ) Hilda ( 2018 ) Insatiable ( 2018 ) Kingdom ( 2018 ) Kiss Me First ( 2018 ) Knights of the Zodiac
+: Saint Seiya ( 2018 ) La Casa de las Flores ( 2018 ) Maniac ( 2018 ) The Ballad of Buster Scruggs ( 2018 ) The Epic Tales of Captain Underpants ( 2018 ) The
+Umbrella Academy ( 2018 ) Carmen Sandiego ( 2019 ) Jinn ( 2019 ) Messiah ( 2019 ) Money Heist ( season 3 , 2019 ) Tales of the City ( 2019 ) Top Boy ( season 3
+, 2019 ) The Last Kids on Earth ( 2019 ) Wizards ( 2019 ) Best Worst Weekend Ever ( TBA ) Chambers ( TBA ) Cursed ( TBA ) Dead to Me ( TBA ) Fast & Furious (
+TBA ) Ghoul ( TBA ) Nightflyers ( TBA ) Norm Macdonald Has a Show ( TBA ) Paradise , P.
+</item 7>
+
+<item 8>
+My Next Guest Needs No Introduction with David Letterman
+P.D. ( TBA ) Quicksand ( TBA ) Raising Dion ( TBA ) Ratched ( TBA ) The Dark Crystal : Age of Resistance ( TBA ) The Eddy ( TBA ) The Forgiving Earth ( TBA )
+The Good Cop ( TBA ) The Green Beret 's Guide to Surviving the Apocalypse ( TBA ) The Haunting of Hill House ( TBA ) The Kominsky Method ( TBA ) The Order ( TBA
+) The Politician ( TBA ) The Prince of Peoria ( TBA ) The Spy ( TBA ) The Witcher ( TBA ) Tidelands ( TBA ) Tuca & Bertie ( TBA ) Unbelievable ( TBA ) V - Wars
+( TBA ) Wanderlust ( TBA ) Watership Down ( TBA ) Retrieved from `` https://en.wikipedia.org/w/index.
+</item 8>
+
+<item 9>
+My Next Guest Needs No Introduction with David Letterman
+The series consists of interviews with one guest per episode both inside and outside a studio setting . The first season will consist of six episodes and will
+include interviews with Barack Obama , George Clooney , Malala Yousafzai , Jay - Z , Tina Fey , and Howard Stern . Obama was the first guest on the show , with
+the first episode released on Netflix on January 12 , 2018 . Contents ( hide ) 1 Production 1.1 Development 1.2 Music 2 Episodes 3 Reception 4 References 5
+External links Production ( edit ) Development ( edit ) On August 8 , 2017 , it was announced that Netflix had ordered a six - episode interview series starring
+David Letterman . Each hour - long episode will feature Letterman conducting a longform conversation with a single guest and in - the - field segments , in
+which he will explore topics on his own . On January 5 , 2018 , Netflix released further information about the series .
+</item 9>
+
+<item 10>
+My Next Guest Needs No Introduction with David Letterman
+Washington Post . Retrieved January 13 , 2018 . Jump up ^ Leight , Elias ( February 2 , 2018 ) . `` Paul Shaffer on Writing Letterman 's Netflix Theme Song &
+the Value of Humor in Pop '' . Billboard . Retrieved February 9 , 2018 . Jump up ^ Carr , Mary Kate ( April 24 , 2018 ) . `` What 's on Netflix in May : The
+best shows and movies to watch this month '' . Entertainment Weekly . Retrieved April 24 , 2018 . Jump up ^ Douglas , Nick ( April 24 , 2018 ) . `` Here 's What
+'s Coming And Going From Netflix In May 2018 '' . Lifehacker . Retrieved April 24 , 2018 . Jump up ^ `` My Next Guest Needs No Introduction With David Letterman
+: Season 1 - Rotten Tomatoes '' . Rotten Tomatoes . Retrieved January 13 , 2018 .
+</item 10>
+=== END ITEM id=58df48035ff38978 ===

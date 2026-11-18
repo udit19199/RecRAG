@@ -1,0 +1,66 @@
+[
+  {"id": "13e99989a6ee9b62", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 9, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "3.0", "status": "missing", "evidence": []},
+    {"fact": "3.1", "status": "missing", "evidence": []},
+    {"fact": "3.2", "status": "missing", "evidence": []},
+    {"fact": "3.3", "status": "missing", "evidence": []},
+    {"fact": "3.4", "status": "missing", "evidence": []},
+    {"fact": "3.5", "status": "missing", "evidence": []}
+  ]},
+  {"id": "ca97afffcac600b4", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep, but not all of them are effective and none are foolproof."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep, but not all of them are effective and none are foolproof."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep, but not all of them are effective and none are foolproof."}]}
+  ]},
+  {"id": "211b1942bc8b7590", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "contradicted", "evidence": [{"item": 6, "quote": "1. Philadelphia Eagles 8-1 (previous week: 1)"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Dallas already sits two games behind the Eagles in the NFC East."}]},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 9, "quote": "End of fourth quarter: Lions 34, Packers 20"}, {"item": 9, "quote": "Lions complete yet another fourth down, officially putting the game on ice."}]},
+    {"fact": "1.6", "status": "stated", "evidence": [{"item": 9, "quote": "End of fourth quarter: Lions 34, Packers 20"}, {"item": 2, "quote": "a survival test for Green Bay and a big one for the Lions"}]},
+    {"fact": "1.7", "status": "missing", "evidence": []}
+  ]},
+  {"id": "7b794652b7bcb688", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]}
+  ]},
+  {"id": "da0f2a7057fe4656", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "UPDATE: NFL Network's Ian Rapoport reported Sunday morning that Hockenson is expected to play against New Orleans."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "UPDATE: NFL Network's Ian Rapoport reported Sunday morning that Hockenson is expected to play against New Orleans."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]}
+  ]},
+  {"id": "f43aa3cc0030ca25", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]}
+]

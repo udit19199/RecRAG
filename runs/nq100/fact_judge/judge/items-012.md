@@ -1,0 +1,707 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 4 items.
+
+=== ITEM id=f78f3e3c8c6b61cb ===
+Gold sentences and facts:
+Sentence 0: Shortwave radio is radio transmission using shortwave radio frequencies . There is no official definition of the band , but the range always includes all of the high frequency band ( HF ) , and generally extends from 1.7 -- 30 MHz ( 176.3 -- 10.0 m ) ; from the high end of the medium frequency band ( MF ) just above the mediumwave AM broadcast band , to the end of the HF band .
+  Fact 0.0: Shortwave radio is radio transmission using shortwave radio frequencies.
+  Fact 0.1: There is no official definition of the shortwave band.
+  Fact 0.2: The shortwave range always includes the high frequency band (HF).
+  Fact 0.3: The shortwave range generally extends from 1.7 to 30 MHz (176.3 to 10.0 m).
+  Fact 0.4: The shortwave range extends from the high end of the medium frequency band (MF), just above the mediumwave AM broadcast band, to the end of the HF band.
+Sentence 1: Very little infrastructure is required for long - distance two - way communications using shortwave radio . All one needs is a pair of transceivers , each with an antenna , and a source of energy ( such as a battery , a portable generator , or the electrical grid ) . This makes shortwave radio one of the most robust means of communications , which can be disrupted only by interference or bad ionospheric conditions . Modern digital transmission modes such as MFSK and Olivia are even more robust , allowing successful reception of signals well below the noise floor of a conventional receiver .
+  Fact 1.0: Very little infrastructure is required for long-distance two-way communications using shortwave radio.
+  Fact 1.1: Long-distance two-way shortwave communication needs a pair of transceivers, each with an antenna.
+  Fact 1.2: Long-distance two-way shortwave communication needs a source of energy, such as a battery, a portable generator, or the electrical grid.
+  Fact 1.3: Shortwave radio is one of the most robust means of communications.
+  Fact 1.4: Shortwave communications can be disrupted only by interference or bad ionospheric conditions.
+  Fact 1.5: Modern digital transmission modes such as MFSK and Olivia are even more robust than conventional shortwave modes.
+  Fact 1.6: MFSK and Olivia allow successful reception of signals well below the noise floor of a conventional receiver.
+
+Retrieved items:
+<item 1>
+Graph query row:
+broadcasting: Shortwave broadcasting
+mode: Amplitude modulation
+relationship: None
+fact: None
+context: None
+</item 1>
+
+<item 2>
+Shortwave radio
+See also ( edit ) ALLISS -- a very large rotatable antenna system used in international broadcasting Amateur radio -- also uses the shortwave bands , but with
+power levels under 2 kW International broadcasting List of American shortwave broadcasters List of shortwave radio broadcasters Long wave Medium wave Shortwave
+bands -- shortwave spectrum allocation shortwave relay station -- the fundamental way in which programmes are broadcast on shortwave SSB -- a method of radio
+signal modulation References ( edit ) Jump up ^ Grundig Satellit 400 international / professional ShortWaveRadio.ch Jump up ^ Inconsistent article :
+itwissen.info : KW ( Kurzwelle ) SW ( short wave ) Quote : `` ... Der KW - Frequenzbereich ( SW ) liegt zwischen 3 MHz und 30 MHz ( < - 1 . definition ) ...
+Kurzwelle ist auch eine sendetechnische Bezeichnung für Rundfunk im Frequenzbereich zwischen 2 , 3 MHz und 26 , 1 MHz ( < - 2 .
+</item 2>
+
+<item 3>
+Shortwave radio
+9 MHz 15 m 18.9 -- 19.02 MHz almost unused , could become a DRM band 13 m 21.45 -- 21.85 MHz 11 m 25.6 -- 26.1 MHz may be used for local DRM broadcasting
+Although countries generally follow the table above , there may be small differences between countries or regions . For example , in the official bandplan of
+the Netherlands , the 49 m band starts at 5.95 MHz , the 41 m band ends at 7.45 MHz , the 11 m band starts at 25.67 MHz , and the 120 , 90 and 60 m bands are
+absent altogether . Additionally , international broadcasters sometimes operate outside the normal WRC - allocated bands or use off - channel frequencies . This
+is done for practical reasons , or to attract attention in crowded bands ( 60m , 49m , 40m , 41m , 31m , 25m ) . The new digital audio broadcasting format for
+shortwave DRM operates 10 kHz or 20 kHz channels .
+</item 3>
+
+<item 4>
+Shortwave radio
+Shortwave radio received its name because the wavelengths in this band are relatively shorter than 200 m ( 1,500 kHz ) which marked the original upper limit of
+the medium frequency band first used for radio communications . The broadcast medium wave band now extends above the 200 m / 1,500 kHz limit , and the amateur
+radio 1.8 MHz -- 2.0 MHz band ( known as the `` top band '' ) is the lowest - frequency band considered to be ' shortwave ' . Early long distance radio
+telegraphy used long waves , below 300 kilohertz ( kHz ) . The drawbacks to this system included a very limited spectrum available for long distance
+communication , and the very expensive transmitters , receivers and gigantic antennas that were required . It was also difficult to beam the radio wave
+directionally with long wave , resulting in a major loss of power over long distances . Prior to the 1920s , the shortwave frequencies above 1.5 MHz were
+regarded as useless for long distance communication and were designated in many countries for amateur use .
+</item 4>
+
+<item 5>
+Shortwave radio
+`` Short - Wave Radio Telephone is Success in Tests '' Popular Mechanics , July 1931 , mid page experiments carried out for the French and British governments
+Que Escuchar en la Onda Corta en Español website Time signal stations Longwave BPC BPL BSF DCF77 JJY RBU RJH66 ( Beta ) RTZ MSF TDF WWVB Shortwave BPM BSF CHU
+HD2IOA HLA JN53DV RWM ROA WWV WWVH ( Hawaii , USA ) YVTO VHF / FM / UHF RDS CT Satellite GPS BeiDou Galileo GLONASS IRNSS QZSS Defunct HBG NAA WWVL OMA OLB5 VNG
+Y3S Analog and digital audio broadcasting Terrestrial Radio modulation AM FM COFDM Frequency allocations LW ( LF ) MW ( MF ) SW ( HF ) VHF ( low / mid / high )
+L band ( UHF ) Digital systems CAM - D DAB / DAB+ DRM / DRM+ FMeXtra HD Radio CDR DVB - T2 Lite Satellite Frequency allocations C band K band L band S band
+Digital systems ADR DAB - S DVB - SH S - DMB
+</item 5>
+
+<item 6>
+Shortwave radio
+L band S band Digital systems ADR DAB - S DVB - SH S - DMB SDR Commercial radio providers 1worldspace Sirius XM Holdings SiriusXM Canada Codecs AAC AMR - WB+
+HDC HE - AAC MPEG - 1 Audio Layer II Subcarrier signals AMSS DirectBand PAD RDS / RBDS SCA / SCMO DARC Related topics Technical ( audio ) Audio data compression
+Audio signal processing Technical ( AM stereo formats ) Belar C - QUAM Harris Kahn - Hazeltine Magnavox Technical ( emission ) AM broadcasting AM expanded band
+Cable radio Digital radio Error detection and correction FM broadcast band FM broadcasting Multipath propagation Shortwave relay station Cultural History of
+radio International broadcasting Comparison of radio systems Radio spectrum ( ITU ) ELF 3 Hz / 100 Mm 30 Hz / 10 Mm SLF 30 Hz / 10 Mm 300 Hz / 1 Mm ULF 300 Hz /
+1 Mm 3 kHz / 100 km VLF 3 kHz / 100 km 30 kHz / 10 km LF 30 kHz / 10 km 300 kHz / 1 km MF 300 kHz / 1 km 3 MHz / 100 m HF
+</item 6>
+
+<item 7>
+Shortwave radio
+The drawback is the receiver is more complicated , since it must re-create the carrier to recover the signal . Small errors in the detection process greatly
+affect the pitch of the received signal . As a result , single sideband is not used for music or general broadcast . Single sideband is used for long - range
+voice communications by ships and aircraft , Citizen 's Band , and amateur radio operators . Lower sideband ( LSB ) is generally used below 9 MHz and USB (
+upper sideband ) above 9 MHz . Vestigal sideband transmits the carrier and one complete sideband , but filters out the other sideband . It is a compromise
+between AM and SSB , enabing simple receivers to be used , but requires almost as much transmitter power as AM . One advantage is only half the bandwidth of an
+AM signal is used . It can be heard in the transmission of certain radio time signal stations . Vestigial sideband is used for over the air Television
+Broadcasts both analog and digital .
+</item 7>
+
+<item 8>
+Shortwave radio
+Contents ( hide ) 1 Frequency classifications 2 History 2.1 Development 2.2 Amateur use of shortwave propagation 3 Propagation characteristics 4 Types of
+modulation 5 Users 6 Shortwave broadcasting 6.1 Frequency allocations 6.2 Advantages 6.3 Disadvantages 7 Shortwave listening 8 Shortwave broadcasts and music 9
+Shortwave 's future 10 See also 11 References 12 External links Frequency classifications ( edit ) The widest popular definition of the shortwave frequency
+interval is the ITU Region 1 ( EU + Africa + Russia ... ) definition , and is the span 1.6 -- 30 MHz , just above the medium wave band , which ends
+approximately at 1.6 MHz .
+</item 8>
+
+<item 9>
+Shortwave radio
+Continuous wave ( CW ) is on - and - off keying of a carrier , used for Morse code communications and Hellschreiber facsimile - based teleprinter transmissions
+. Narrow - band frequency modulation ( NBFM ) is used typically above 20 MHz . Because of the larger bandwidth required , NBFM is commonly used for VHF
+communication . Regulations limit the bandwidth of a signal transmitted in the HF bands , and the advantages of frequency modulation are greatest if the FM
+signal has a wide bandwidth . NBFM is limited to short - range transmissions due to the multiphasic distortions created by the ionosphere . Digital Radio
+Mondiale ( DRM ) is a digital modulation for use on bands below 30 MHz . Radioteletype , fax , digital , slow - scan television and other systems use forms of
+frequency - shift keying or audio subcarriers on a shortwave carrier . These generally require special equipment to decode , such as software on a computer
+equipped with a sound card .
+</item 9>
+
+<item 10>
+Shortwave radio
+The last WRC took place in 2007 . At WRC - 97 in 1997 , the following bands were allocated for international broadcasting . AM shortwave broadcasting channels
+are allocated with a 5 kHz separation for traditional analog audio broadcasting . Metre Band Frequency Range Remarks 120 m 2.3 -- 2.495 MHz tropical band 90 m
+3.2 -- 3.4 MHz tropical band 75 m 3.9 -- 4 MHz shared with the North American amateur radio 80m band 60 m 4.75 -- 5.06 MHz tropical band 49 m 5.9 -- 6.2 MHz 41
+m 7.2 -- 7.6 MHz shared with the amateur radio 40m band 31 m 9.4 -- 9.9 MHz currently the most heavily used band 25 m 11.6 -- 12.2 MHz 22 m 13.57 -- 13.87 MHz
+19 m 15.1 -- 15.8 MHz 16 m 17.48 -- 17.9 MHz 15 m 18.9 -- 19.02 MHz almost unused ,
+</item 10>
+
+<item 11>
+Shortwave radio
+Users ( edit ) Portable shortwave receiver 's digital display tuned to the 75 meter band Some established users of the shortwave radio bands may include :
+International broadcasting primarily by government - sponsored propaganda , international news ( for example , the BBC World Service ) or cultural stations to
+foreign audiences : the most common use of all . Domestic broadcasting : to widely dispersed populations with few longwave , mediumwave and FM stations serving
+them ; or for specialty political , religious and alternative media networks ; or of individual commercial and non-commercial paid broadcasts . Oceanic air
+traffic control uses the HF / shortwave band for long distance communication to aircraft over the oceans and poles , which are far beyond the range of
+traditional VHF frequencies . Modern systems also include satellite communications , such as ADS - C / CPDLC `` Utility '' stations transmitting messages not
+intended for the general public , such as merchant shipping , marine weather , and ship - to - shore stations ; for aviation weather and air - to - ground
+communications ; for military communications ; for long - distance governmental purposes , and for other non-broadcast communications .
+</item 11>
+=== END ITEM id=f78f3e3c8c6b61cb ===
+
+=== ITEM id=a0afc2fe000dd42a ===
+Gold sentences and facts:
+Sentence 0: Subjects are all taken on the same level - there is no higher or standard grade as in the past . There are three pass levels , each with different pass requirements. First is a pass with Higher certificate , one must obtain 40 % in home language , 40 % in two other subjects and must obtain 30 % in three other subjects . A learner who passed matric with higher certificate level , can not enroll for a University Degree nor a Diploma at an institute of higher learning . The mean mark in any subject is usually about 55 . Only a small proportion of candidates score an ' A ' in any subject ( from as little as 2 % to a maximum of about 10 % in subjects taken by highly select groups . ) A further 8 -- 15 % are likely to gain a ' B ' and about 20 -- 25 % achieve a ' C ' grade . The National Senior Certificate is a group certificate and records an aggregate mark .
+  Fact 0.0: All subjects are taken on the same level.
+  Fact 0.1: There is no higher or standard grade as in the past.
+  Fact 0.2: There are three pass levels, each with different pass requirements.
+  Fact 0.3: The first pass level is a pass with Higher certificate.
+  Fact 0.4: To pass with Higher certificate, one must obtain 40% in home language.
+  Fact 0.5: To pass with Higher certificate, one must obtain 40% in two other subjects.
+  Fact 0.6: To pass with Higher certificate, one must obtain 30% in three other subjects.
+  Fact 0.7: A learner who passed matric with Higher certificate level cannot enroll for a University Degree.
+  Fact 0.8: A learner who passed matric with Higher certificate level cannot enroll for a Diploma at an institute of higher learning.
+  Fact 0.9: The mean mark in any subject is usually about 55.
+  Fact 0.10: Only a small proportion of candidates score an 'A' in any subject.
+  Fact 0.11: The proportion of candidates scoring an 'A' ranges from as little as 2% to a maximum of about 10%.
+  Fact 0.12: The maximum proportion of about 10% scoring an 'A' occurs in subjects taken by highly select groups.
+  Fact 0.13: A further 8 to 15% of candidates are likely to gain a 'B'.
+  Fact 0.14: About 20 to 25% of candidates achieve a 'C' grade.
+  Fact 0.15: The National Senior Certificate is a group certificate.
+  Fact 0.16: The National Senior Certificate records an aggregate mark.
+
+Retrieved items:
+<item 1>
+National Senior Certificate
+Matric results are usually out of 400 marks . Level system ( 1 to 7 ) ( edit ) Level 7 : 80 - 100 % ( Outstanding achievement ) Level 6 : 70 - 79 % (
+Meritorious achievement ) Level 5 : 60 - 69 % ( Substantial achievement ) Level 4 : 50 - 59 % ( Moderate achievement ) Level 3 : 40 - 49 % ( Adequate
+achievement ) Level 2 : 30 - 39 % ( Elementary achievement ) Level 1 : 0 - 29 % ( Not achieved - Fail ) The 5 % language compensation ( edit ) Language
+compensation is described by several sources : `` To the final mark is added the language compensation , which is 5 % of the mark attained by the candidate for
+all non-language subjects , for candidates whose mother tongue is not English or Afrikaans . The 5 % compensates learners for the disadvantage suffered by these
+candidates being instructed in a language that is not their mother tongue . ''
+</item 1>
+
+<item 2>
+National Senior Certificate
+For example a learner who obtains a mark of zero ( 0 ) out of 300 will obtain 5 % of zero ( which is zero ) for language compensation ; a learner who obtains 10
+out of 300 will receive 5 % of 10 , which is 0 , 5 marks , for language compensation ; a learner who obtains 100 out of 300 marks will obtain an additional 5
+marks for language compensation . '' This kind of compensation has some impact on pass rates , but does provide significant impact at the upper end of the scale
+, affecting those applying for admission to university . For example , a qualifying learner obtaining 95 % would receive 95 x 1.05 = 99.75 % ( which rounds to
+100 % ) . A learner obtaining 40 % would receive 40 x 1.05 = 42.0 % . University entrance ( edit ) In addition to minimum grades required in each subject ,
+universities either set their own entrance tests and / or use the National Benchmark Tests ( NBT ) .
+</item 2>
+
+<item 3>
+National Senior Certificate
+: 10 - 2007 ) Jump up ^ Politicsweb , 3 January 2011 , `` Umalusi explains matric mark adjustments '' , Dr Sizwe Mabizela , 03 January 2011 Jump up ^
+http://nbt.ac.za/ About NBT Retrieved 21 March 2011 Jump up ^ http://wced.pgwc.gov.za/circulars/circulars08/e33_08.html External links ( edit ) Department of
+Education official site IEB official site Retrieved from `` https://en.wikipedia.org/w/index.php?title=National_Senior_Certificate&oldid=837110357 '' Categories
+: Education in South Africa Secondary school qualifications Hidden categories : Articles needing additional references from April 2010 All articles needing
+additional references Talk Contents About Wikipedia Add links This page was last edited on 18 April 2018 , at 19 : 39 . About Wikipedia
+</item 3>
+
+<item 4>
+National Senior Certificate
+Citizenship and Responsibility , this section teaches learners about their rights and their duties as citizens . Assessment ( edit ) There are three types of
+subjects : General Subjects An end - of - year examination : 75 % of the total mark Portfolio ( Continuous Assessment ) : 25 % of the total mark Practical
+Subjects An end - of - year examination : 50 % of the total mark Portfolio ( Continuous Assessment ) : 25 % of the total mark Practical component : 25 % of the
+total mark Language Subjects An end - of - year examination : 50 % of the total mark Portfolio ( Continuous Assessment ) : 25 % of the total mark Oral
+Examination : 25 % of the total mark Continuous Assessment ( CASS ) includes all the tests , examinations , tasks , activities , orals and projects done
+throughout the year . Matric results are usually out of 400 marks .
+</item 4>
+
+<item 5>
+National Senior Certificate
+National Senior certificate - wikipedia National Senior certificate Jump to : navigation , search This article needs additional citations for verification .
+Please help improve this article by adding citations to reliable sources . Unsourced material may be challenged and removed . ( April 2010 ) ( Learn how and
+when to remove this template message ) The National Senior Certificate or NSC is a high school diploma and is the main school - leaving certificate in South
+Africa . This certificate is commonly known as the matriculation ( matric ) certificate , as grade 12 is the matriculation grade . The NSC , previously known as
+the Further Education and Training Certificate or FETC , replaced the Senior Certificate with effect from 2008 and was phased in starting with grade 10 in 2006
+. Pupils study at least seven subjects , including two compulsory official South African languages , either Mathematics or Mathematical Literacy , Life
+Orientation and three elective subjects . Subjects are all taken on the same level - there is no higher or standard grade as in the past . There are three pass
+levels , each with different pass requirements.
+</item 5>
+
+<item 6>
+Graph query row:
+entity: National Senior Certificate
+page: National Senior Certificate
+passage: National Senior Certificate
+( Written reply to parliamentary question in 2011 ) `` The compensation applies to learners whose first language is neither English nor Afrikaans and who offer
+an African language as their first language . They receive an additional 5 % on their non-language subjects . The measure was first introduced in 1999 by the
+South African Certification Council . '' ( Written reply to parliamentary question in 2007 , ) Dr Sizwe Mabizela , Chairperson of Council , Umalusi has provided
+further explanation : `` This is the most misunderstood concept in this country . In terms of the policy on language compensation , learners who offer an
+African language as Home Language and do not offer Afrikaans or English as Home language qualify for a 5 % language compensation on the mark they have obtained
+in a non-language subject .
+</item 6>
+
+<item 7>
+National Senior Certificate
+Life Orientation is a broad - learning subject that covers non-academic skills needed in everyday life . Life Orientation is examined , marked and moderated
+internally and comprises the following sections : World of Work , helping learners find guidance in their choice of career and prepare them for the working
+world Health Education , this sections includes sex education , HIV / Aids talks , pregnancy , etc . Physical Education , involves physical exercise and
+training , it is done on a separate basis but eventually forms part of the Life Orientation mark Religious Education , each South African school decides which
+religion to adhere to ( as according to the South African schools act ) , learners may be exempted from these classes . In practice this means that learners may
+be exempted from , example , the Bible Studies class , but are compelled to attend the Religious Studies class ( which deals with all religions as a study ) .
+Citizenship and Responsibility , this section teaches learners about their rights and their duties as citizens .
+</item 7>
+
+<item 8>
+National Senior Certificate
+V Group a : fundamentals ( compulsory ) ( edit ) Learners must study 4 compulsory subjects , Two official languages of South Africa must be studied : Afrikaans
+English Ndebele Northern Sotho Sesotho Siswati Tsonga Tswana Venda Xhosa Zulu Mathematics or Mathematical Literacy Life Orientation Group B : electives ( edit )
+At least 3 subjects from the following : Accounting Agricultural Management Practices Agricultural Sciences Agricultural Technology Business Studies Civil
+Technology Computer Applications Technology ( previously Computer Studies Standard Grade - Literacy ) Consumer Studies Dance Studies Design Dramatic Arts
+Economics Electrical Technology Engineering Graphics & Design Geography History Hospitality Studies ( previously Home Economics ) Information Technology (
+previously Computer Studies Higher Grade - Programming ) Life Sciences ( previously Biology ) Mechanical Technology Music Physical Science Religion Studies
+Second Additional Language Third Additional Language Tourism Visual Arts Life Orientation ( edit ) Life Orientation ( colloquially abbreviated as `` LO '' ) has
+been introduced into the senior high school phase as an examination subject . Life Orientation is a broad - learning subject that covers non-academic skills
+needed in everyday life .
+</item 8>
+
+<item 9>
+National Senior Certificate
+The IEB operates on a national level catering primarily for independent schools . Contents ( hide ) 1 Subject requirements 1.1 Group A : Fundamentals (
+Compulsory ) 1.2 Group B : Electives 2 Life Orientation 3 Assessment 4 Level system ( 1 to 7 ) 5 The 5 % language compensation 6 University entrance 7 See also
+8 References 9 External links Subject requirements. ( edit ) Learners study at least 7 subjects - 4 compulsory and at least 3 electives . All subjects are
+written on one grade only and are no longer written on Higher or Standard Grade . Not all schools offer the full range of Elective subjects listed here . Each
+school may offer subjects specific to its academic orientation . For example , Agriculture Schools offer the agriculture - orientated subjects whereas technical
+Schools offer the practical and mechanical - orientated subjects.
+</item 9>
+
+<item 10>
+National Senior Certificate
+To study for a bachelor 's degree at a South African university requires that the applicant has at least an NSC endorsed by Umalusi , with a pass of 30 % in the
+chosen university 's language of learning and teaching , as well as a level 4 or higher in the following list of designated , 19 - credit subjects : Accounting
+Agricultural Sciences Business Studies Dramatic Arts Economics Engineering Graphics and Design Geography History Consumer Studies Information Technology
+Languages ( one language of learning and teaching at a higher education institution and two other recognised language subjects ) Life Sciences Mathematics
+Mathematical Literacy Music Physical Sciences Religion Studies Visual Arts See also ( edit ) High school # South Africa Matriculation in South Africa
+Independent Examinations Board References ( edit ) Jump up ^ SOUTH AFRICAN NATIONAL ASSEMBLY : QUESTION 757 , DATE OF PUBLICATION OF INTERNAL QUESTION PAPER :
+11 / 03 / 2011 ( INTERNAL QUESTION PAPER : 06 / 2011 ) Jump up ^ SOUTH AFRICAN NATIONAL ASSEMBLY : WRITTEN REPLY TO QUESTION 469 , DATE OF PUBLICATION IN
+INTERNAL QUESTION PAPER : 26 - 03 - 2007 ( INTERNAL QUESTION PAPER NO.
+</item 10>
+
+<item 11>
+National Senior Certificate
+There are three pass levels , each with different pass requirements. First is a pass with Higher certificate , one must obtain 40 % in home language , 40 % in
+two other subjects and must obtain 30 % in three other subjects . A learner who passed matric with higher certificate level , can not enroll for a University
+Degree nor a Diploma at an institute of higher learning . The mean mark in any subject is usually about 55 . Only a small proportion of candidates score an ' A
+' in any subject ( from as little as 2 % to a maximum of about 10 % in subjects taken by highly select groups . ) A further 8 -- 15 % are likely to gain a ' B '
+and about 20 -- 25 % achieve a ' C ' grade . The National Senior Certificate is a group certificate and records an aggregate mark . The Department of Basic
+Education has responsibility for general educational policy to be implemented by nine provincial education departments and private providers such as the
+Independent Examinations Board ( IEB ) . There are nine provincial examination boards and three independent boards , of which the IEB is the biggest . The IEB
+operates on a national level catering primarily for independent schools .
+</item 11>
+=== END ITEM id=a0afc2fe000dd42a ===
+
+=== ITEM id=775a6fcc52a2c362 ===
+Gold sentences and facts:
+Sentence 0: With the Intertropical Convergence Zone ( ITCZ ) swinging northward over West Africa from the Southern Hemisphere in April , heavy showers coming from pre-monsoonal convective clouds mainly in the form of squall lines also known as the north easterlies formed mainly as a result of the interactions of the two dominant airmasses in Nigeria known as the Maritime tropical ( south westerlies ) and the Continental tropical ( north easterlies ) , begins in central Nigeria while the Monsoons from the south atlantic ocean arrives in central Nigeria in July bringing with it high humidity , heavy cloud cover and heavy rainfall which can be daily occurrence lasting till September when the monsoons gradually begin retreating southward to the southern part of Nigeria. Rainfall totals in central Nigeria varies from 1,100 mm ( 43.3 in ) in the lowlands of the river Niger Benue trough to over 2,000 mm ( 78.7 in ) along the south western escarpment of the Jos Plateau .
+  Fact 0.0: The ITCZ swings northward over West Africa from the Southern Hemisphere in April.
+  Fact 0.1: Heavy showers from pre-monsoonal convective clouds, mainly in the form of squall lines also known as the north easterlies, begin in central Nigeria.
+  Fact 0.2: The heavy showers form mainly from the interaction of two dominant airmasses in Nigeria, the Maritime tropical (south westerlies) and the Continental tropical (north easterlies).
+  Fact 0.3: The monsoons from the South Atlantic Ocean arrive in central Nigeria in July.
+  Fact 0.4: The monsoons bring high humidity, heavy cloud cover, and heavy rainfall to central Nigeria.
+  Fact 0.5: The heavy rainfall can be a daily occurrence, lasting until September.
+  Fact 0.6: The monsoons gradually begin retreating southward to the southern part of Nigeria when September arrives.
+  Fact 0.7: Rainfall totals in central Nigeria vary from 1,100 mm (43.3 in) in the lowlands of the river Niger Benue trough.
+  Fact 0.8: Rainfall totals in central Nigeria exceed 2,000 mm (78.7 in) along the south western escarpment of the Jos Plateau.
+
+Retrieved items:
+<item 1>
+Geography of Nigeria
+With the Intertropical Convergence Zone ( ITCZ ) swinging northward over West Africa from the Southern Hemisphere in April , heavy showers coming from
+pre-monsoonal convective clouds mainly in the form of squall lines also known as the north easterlies formed mainly as a result of the interactions of the two
+dominant airmasses in Nigeria known as the Maritime tropical ( south westerlies ) and the Continental tropical ( north easterlies ) , begins in central Nigeria
+while the Monsoons from the south atlantic ocean arrives in central Nigeria in July bringing with it high humidity , heavy cloud cover and heavy rainfall which
+can be daily occurrence lasting till September when the monsoons gradually begin retreating southward to the southern part of Nigeria. Rainfall totals in
+central Nigeria varies from 1,100 mm ( 43.3 in ) in the lowlands of the river Niger Benue trough to over 2,000 mm ( 78.7 in ) along the south western escarpment
+of the Jos Plateau . The Sahel climate or tropical dry climate , is the predominant climate type in the northern part of Nigeria . Annual rainfall totals are
+lower compared to the southern and central part of Nigeria .
+</item 1>
+
+<item 2>
+Graph query row:
+country: Southern part of Nigeria
+airmass_or_wind: maritime tropical airmass
+connections: ['LOCATED_IN', 'RELATED_TO', 'RELATED_TO']
+page: Geography of Nigeria
+passage: Geography of Nigeria
+1 Effects of the tropical continental airmass 4 Temperature 5 Topography 6 Niger Delta 6.1 Vegetation of the Niger Delta 6.2 Human population in the Niger Delta
+6.3 Rainfall in Niger Delta 7 Vegetation 8 Natural resources and land use 9 Extreme points 10 References Climate types found in Nigeria ( edit ) The tropical
+monsoon climate , designated by the Köppen climate classification as `` Am '' , is found in the southern part of the country . This climate is influenced by the
+monsoons originating from the South Atlantic ocean , which is brought into the country by the ( maritime tropical ) MT airmass , a warm moist sea to land
+seasonal wind . Its warmth and high humidity gives it a strong tendency to ascend and produce copious rainfall , which is a result of the condensation of water
+vapour in the rapidly rising air . The Tropical monsoon climate has a very small temperature range .
+</item 2>
+
+<item 3>
+Geography of Nigeria
+The northward retreat of the tropical continental airmass ( CT ) , is caused by the sun 's northward shift from the tropic of capricorn in the southern
+hemisphere to the tropic of cancer in the northern hemisphere . This shift begins from February and ends in June , when the sun is fully overhead , at the
+tropic of cancer in the northern hemisphere . During this northward migration of the sun as a result of the earth tilting along its axis , the sun crosses the
+equator ( around March ) , moving over west Africa at this time on its journey to the northern hemisphere . West Africa comes directly under the sun at this
+time . The sun is overhead throughout west Africa and over Nigeria during this period of the sun 's northward migration to the tropic of cancer in the northern
+hemisphere . The whole of West Africa is heated intensely as result of the increased insolation received from the sun being overhead over west Africa .
+Temperatures can climb as high as 35 ° C ( 95.0 ° F ) over west Africa during this time .
+</item 3>
+
+<item 4>
+Geography of Nigeria
+In the rainy season it is damp , and the rainfalls are usually abundant . The dry season of Nigeria is a period of little cloud cover in the southern part of
+Nigeria to virtually no cloud cover in the northern part of Nigeria . The sun shines through the atmosphere with little obstructions from the clear skies making
+the dry season in Nigeria a period of warm weather conditions.In the middle of the dry season around December , a dusty wind from the Sahara Desert called the
+harmattan enters Nigeria from the northeastern part of the country blocking sun rays partially from shining and also creating haze in the atmosphere , this
+activities of the wind lowers temperatures considerably saving inhabitants for sometime , from the scorching heat that would have occurred as a result of
+clearer skies during the dry season . But with the withdrawal of this wind around March to April following the onset of the rainy season , temperatures can go
+as high as 44 ° C ( 111.2 ° F ) in some parts of Nigeria . Semi temperate weather conditions prevail on the highlands in central Nigeria above 1,200 metres (
+3,937 ft ) above sea level , namely the Jos Plateau .
+</item 4>
+
+<item 5>
+Graph query row:
+country: Coastal region of Nigeria
+airmass_or_wind: maritime tropical airmass
+connections: ['LOCATED_IN', 'RELATED_TO', 'RELATED_TO']
+page: Geography of Nigeria
+passage: Geography of Nigeria
+1 Effects of the tropical continental airmass 4 Temperature 5 Topography 6 Niger Delta 6.1 Vegetation of the Niger Delta 6.2 Human population in the Niger Delta
+6.3 Rainfall in Niger Delta 7 Vegetation 8 Natural resources and land use 9 Extreme points 10 References Climate types found in Nigeria ( edit ) The tropical
+monsoon climate , designated by the Köppen climate classification as `` Am '' , is found in the southern part of the country . This climate is influenced by the
+monsoons originating from the South Atlantic ocean , which is brought into the country by the ( maritime tropical ) MT airmass , a warm moist sea to land
+seasonal wind . Its warmth and high humidity gives it a strong tendency to ascend and produce copious rainfall , which is a result of the condensation of water
+vapour in the rapidly rising air . The Tropical monsoon climate has a very small temperature range .
+</item 5>
+
+<item 6>
+Graph query row:
+country: Western Nigeria
+airmass_or_wind: maritime tropical airmass
+connections: ['LOCATED_IN', 'RELATED_TO', 'RELATED_TO']
+page: Geography of Nigeria
+passage: Geography of Nigeria
+1 Effects of the tropical continental airmass 4 Temperature 5 Topography 6 Niger Delta 6.1 Vegetation of the Niger Delta 6.2 Human population in the Niger Delta
+6.3 Rainfall in Niger Delta 7 Vegetation 8 Natural resources and land use 9 Extreme points 10 References Climate types found in Nigeria ( edit ) The tropical
+monsoon climate , designated by the Köppen climate classification as `` Am '' , is found in the southern part of the country . This climate is influenced by the
+monsoons originating from the South Atlantic ocean , which is brought into the country by the ( maritime tropical ) MT airmass , a warm moist sea to land
+seasonal wind . Its warmth and high humidity gives it a strong tendency to ascend and produce copious rainfall , which is a result of the condensation of water
+vapour in the rapidly rising air . The Tropical monsoon climate has a very small temperature range .
+</item 6>
+
+<item 7>
+Graph query row:
+country: Nigeria
+airmass_or_wind: maritime tropical airmass
+connections: ['LOCATED_IN', 'RELATED_TO', 'RELATED_TO']
+page: Geography of Nigeria
+passage: Geography of Nigeria
+1 Effects of the tropical continental airmass 4 Temperature 5 Topography 6 Niger Delta 6.1 Vegetation of the Niger Delta 6.2 Human population in the Niger Delta
+6.3 Rainfall in Niger Delta 7 Vegetation 8 Natural resources and land use 9 Extreme points 10 References Climate types found in Nigeria ( edit ) The tropical
+monsoon climate , designated by the Köppen climate classification as `` Am '' , is found in the southern part of the country . This climate is influenced by the
+monsoons originating from the South Atlantic ocean , which is brought into the country by the ( maritime tropical ) MT airmass , a warm moist sea to land
+seasonal wind . Its warmth and high humidity gives it a strong tendency to ascend and produce copious rainfall , which is a result of the condensation of water
+vapour in the rapidly rising air . The Tropical monsoon climate has a very small temperature range .
+</item 7>
+
+<item 8>
+Geography of Nigeria
+The Tropical continental airmass ( CT ) loses its strength as a major airmass in the region of west Africa and over Nigeria at this time ( around February in
+the southern part of Nigeria to June in northern Nigeria ) and begins to retreat coupled with the rising of air in form of convection within this airmass (
+Tropical continental airmass ( CT ) ) , further weakening the dominance of the wind over west Africa and Nigeria . The Tropical continental airmass ( CT )
+finally retreats from most part of Nigeria , and the West African atmosphere around April to May , leaving an empty atmosphere over Nigeria . The sun 's rays
+enters into the atmosphere of Nigeria more intense than it does during the presence of the Tropical continental airmass , which contained dust ( in form of haze
+) that reduced the intensity of the sun . The overheating of the west Africa land mass and Nigeria in particular creates a low pressure region over west Africa
+and Nigeria . This low pressure zone attracts the Tropical Maritime Airmass ( MT ) from the south Atlantic Ocean since areas of low pressures experiences inward
+blowing winds because winds are moving air blowing outwards from regions of high pressure to regions of low pressure .
+</item 8>
+
+<item 9>
+Geography of Nigeria
+Temperatures in the northern part of Nigeria can go as high as 48 ° C ( 118.4 ° F ) in cities like Maiduguri . The high temperatures coupled with an increase in
+insolation causes a region of low pressure to develop over west Africa and Nigeria ( between March to May ) . The Tropical continental airmass ( CT ) from the
+Sahara Desert in the northern part of West Africa , is weakened due to the overheating of the land surface in west Africa and Nigeria at this time . The
+Tropical continental airmass ( CT ) begins to retreat northwards to the Sahara Desert due to massive heating of the land which transfers heat in the form of
+convection into the Tropical continental airmass ( CT ) which constitutes the main layer of air above the land . This transfer of heat in the Tropical
+continental airmass ( CT ) in turn , causes the wind to expand and become lighter as this is the normal behaviour for winds moving above intensely heated
+grounds .
+</item 9>
+
+<item 10>
+Geography of Nigeria
+These are the dry season and the rainy season . The dry season is accompanied by a dust laden airmass from the Sahara Desert , locally known as Harmattan , or
+by its main name , The Tropical Continental ( CT ) airmass , while the rainy season is heavily influenced by an airmass originating from the south atlantic
+ocean , locally known as the south west wind , or by its main name , The Tropical Maritime ( MT ) airmass . These two major wind systems in Nigeria are known as
+the trade winds . Trade winds ( edit ) Tropical Maritime airmass ( edit ) The tropical maritime airmass ( MT ) is responsible for Nigeria 's rainy season . This
+wind ( the tropical maritime airmass ) invades the country from February in the southern part of Nigeria while it takes longer for the wind to fully cover the
+whole of the country , reaching the northern part of Nigeria in June . Its invasion is as a result of the northward retreat , of the tropical continental
+airmass ( CT ) known as the harmattan .
+</item 10>
+
+<item 11>
+Geography of Nigeria
+The Tropical monsoon climate has a very small temperature range . Then temperature ranges are almost constant throughout the year , for example , Warri town in
+the southern part of Nigeria , records a maximum of 28 ° C ( 82.4 ° F ) for its hottest month while its lowest temperature is 26 ° C ( 78.8 ° F ) in its coldest
+month . The temperature difference of Warri town is not more than 2 ° C ( 5 ° F ) . The southern part of Nigeria experiences heavy and abundant rainfall . These
+storms are usually convectional in nature due to the regions proximity , to the equatorial belt . The annual rainfall received in this region is very high ,
+usually above the 2,000 mm ( 78.7 in ) rainfall totals giving for tropical rainforest climates worldwide . Over 4,000 mm ( 157.5 in ) of rainfall is received in
+the coastal region of Nigeria around the Niger delta area . Bonny town found in the coastal region of the Niger delta area in southern Nigeria receives well
+over 4,000 mm ( 157.5 in ) of rainfall annually .
+</item 11>
+
+<item 12>
+Geography of Nigeria
+The Tropical Maritime Airmass is a warm humid and unstable trade wind due to its warmth . Convectional currents are easily set up within the airmass whenever
+there is little instability in the airmass as a result of a slight to a very high orographic uplift in mountainous regions like the obudu plateau or the heating
+of the land which can trigger the formation of cumulonimbus cloud leading to thunderstorms within the airmass . During the dominance of the Tropical Maritime
+Airmass ( MT ) in the rainy season of Nigeria , mornings are bright and sunny , the sun 's heating of the land in the mornings and afternoons sets up
+convectional currents , these currents rise vertically and cumulonimbus clouds are formed , by afternoons to evenings , torrential downpour follows . The
+Easterly wave or the African easterly waves is another major contributor of rainfall during the summer monsoons months of May to September in Nigeria . The
+nature of this waves changes at about the 15 degrees line . The waves that pass south of this line carry moisture and create convection that leads to rain
+clouds .
+</item 12>
+
+<item 13>
+Graph query row:
+country: central Nigeria
+airmass_or_wind: maritime tropical airmass
+connections: ['RELATED_TO', 'RELATED_TO']
+page: Geography of Nigeria
+passage: Geography of Nigeria
+1 Effects of the tropical continental airmass 4 Temperature 5 Topography 6 Niger Delta 6.1 Vegetation of the Niger Delta 6.2 Human population in the Niger Delta
+6.3 Rainfall in Niger Delta 7 Vegetation 8 Natural resources and land use 9 Extreme points 10 References Climate types found in Nigeria ( edit ) The tropical
+monsoon climate , designated by the Köppen climate classification as `` Am '' , is found in the southern part of the country . This climate is influenced by the
+monsoons originating from the South Atlantic ocean , which is brought into the country by the ( maritime tropical ) MT airmass , a warm moist sea to land
+seasonal wind . Its warmth and high humidity gives it a strong tendency to ascend and produce copious rainfall , which is a result of the condensation of water
+vapour in the rapidly rising air . The Tropical monsoon climate has a very small temperature range .
+</item 13>
+
+<item 14>
+Graph query row:
+country: southern Nigeria
+airmass_or_wind: maritime tropical airmass
+connections: ['LOCATED_IN', 'RELATED_TO', 'RELATED_TO']
+page: Geography of Nigeria
+passage: Geography of Nigeria
+1 Effects of the tropical continental airmass 4 Temperature 5 Topography 6 Niger Delta 6.1 Vegetation of the Niger Delta 6.2 Human population in the Niger Delta
+6.3 Rainfall in Niger Delta 7 Vegetation 8 Natural resources and land use 9 Extreme points 10 References Climate types found in Nigeria ( edit ) The tropical
+monsoon climate , designated by the Köppen climate classification as `` Am '' , is found in the southern part of the country . This climate is influenced by the
+monsoons originating from the South Atlantic ocean , which is brought into the country by the ( maritime tropical ) MT airmass , a warm moist sea to land
+seasonal wind . Its warmth and high humidity gives it a strong tendency to ascend and produce copious rainfall , which is a result of the condensation of water
+vapour in the rapidly rising air . The Tropical monsoon climate has a very small temperature range .
+</item 14>
+
+<item 15>
+Geography of Nigeria
+This climate , the tropical savanna climate exhibits a well marked rainy season and a dry season with a single peak known as the summer maximum due to its
+distance from the equator . Temperatures are above 18 ° C ( 64 ° F ) throughout the year . Abuja , Nigeria 's capital city found in central Nigeria , has a
+temperature range of 18.45 ° C ( 65.21 ° F ) to 36.9 ° C ( 98.4 ° F ) , and an annual rainfall of about 1,500 mm ( 59.1 in ) with a single rainfall maxima in
+September . The single Dry season experienced in this climate , the tropical savanna climate in central Nigeria beginning from December to march , is hot and
+dry with the Harmattan wind , a continental tropical ( CT ) airmass laden with dust from the Sahara Desert prevailing throughout this period .
+</item 15>
+
+<item 16>
+Graph query row:
+country: Nigeria
+airmass_or_wind: maritime tropical airmass
+connections: ['RELATED_TO', 'RELATED_TO']
+page: Geography of Nigeria
+passage: Geography of Nigeria
+1 Effects of the tropical continental airmass 4 Temperature 5 Topography 6 Niger Delta 6.1 Vegetation of the Niger Delta 6.2 Human population in the Niger Delta
+6.3 Rainfall in Niger Delta 7 Vegetation 8 Natural resources and land use 9 Extreme points 10 References Climate types found in Nigeria ( edit ) The tropical
+monsoon climate , designated by the Köppen climate classification as `` Am '' , is found in the southern part of the country . This climate is influenced by the
+monsoons originating from the South Atlantic ocean , which is brought into the country by the ( maritime tropical ) MT airmass , a warm moist sea to land
+seasonal wind . Its warmth and high humidity gives it a strong tendency to ascend and produce copious rainfall , which is a result of the condensation of water
+vapour in the rapidly rising air . The Tropical monsoon climate has a very small temperature range .
+</item 16>
+
+<item 17>
+Graph query row:
+country: central Nigeria
+airmass_or_wind: maritime tropical airmass
+connections: ['RELATED_TO', 'RELATED_TO', 'RELATED_TO']
+page: Geography of Nigeria
+passage: Geography of Nigeria
+1 Effects of the tropical continental airmass 4 Temperature 5 Topography 6 Niger Delta 6.1 Vegetation of the Niger Delta 6.2 Human population in the Niger Delta
+6.3 Rainfall in Niger Delta 7 Vegetation 8 Natural resources and land use 9 Extreme points 10 References Climate types found in Nigeria ( edit ) The tropical
+monsoon climate , designated by the Köppen climate classification as `` Am '' , is found in the southern part of the country . This climate is influenced by the
+monsoons originating from the South Atlantic ocean , which is brought into the country by the ( maritime tropical ) MT airmass , a warm moist sea to land
+seasonal wind . Its warmth and high humidity gives it a strong tendency to ascend and produce copious rainfall , which is a result of the condensation of water
+vapour in the rapidly rising air . The Tropical monsoon climate has a very small temperature range .
+</item 17>
+
+<item 18>
+Graph query row:
+country: central Nigeria
+airmass_or_wind: maritime tropical airmass
+connections: ['LOCATED_IN', 'RELATED_TO', 'RELATED_TO']
+page: Geography of Nigeria
+passage: Geography of Nigeria
+1 Effects of the tropical continental airmass 4 Temperature 5 Topography 6 Niger Delta 6.1 Vegetation of the Niger Delta 6.2 Human population in the Niger Delta
+6.3 Rainfall in Niger Delta 7 Vegetation 8 Natural resources and land use 9 Extreme points 10 References Climate types found in Nigeria ( edit ) The tropical
+monsoon climate , designated by the Köppen climate classification as `` Am '' , is found in the southern part of the country . This climate is influenced by the
+monsoons originating from the South Atlantic ocean , which is brought into the country by the ( maritime tropical ) MT airmass , a warm moist sea to land
+seasonal wind . Its warmth and high humidity gives it a strong tendency to ascend and produce copious rainfall , which is a result of the condensation of water
+vapour in the rapidly rising air . The Tropical monsoon climate has a very small temperature range .
+</item 18>
+
+<item 19>
+Graph query row:
+country: Nigeria
+airmass_or_wind: maritime tropical airmass
+connections: ['PART_OF', 'RELATED_TO', 'RELATED_TO']
+page: Geography of Nigeria
+passage: Geography of Nigeria
+1 Effects of the tropical continental airmass 4 Temperature 5 Topography 6 Niger Delta 6.1 Vegetation of the Niger Delta 6.2 Human population in the Niger Delta
+6.3 Rainfall in Niger Delta 7 Vegetation 8 Natural resources and land use 9 Extreme points 10 References Climate types found in Nigeria ( edit ) The tropical
+monsoon climate , designated by the Köppen climate classification as `` Am '' , is found in the southern part of the country . This climate is influenced by the
+monsoons originating from the South Atlantic ocean , which is brought into the country by the ( maritime tropical ) MT airmass , a warm moist sea to land
+seasonal wind . Its warmth and high humidity gives it a strong tendency to ascend and produce copious rainfall , which is a result of the condensation of water
+vapour in the rapidly rising air . The Tropical monsoon climate has a very small temperature range .
+</item 19>
+
+<item 20>
+Geography of Nigeria
+The rest of the southeast receives between 2,000 and 3,000 mm ( 118.1 in ) of rain per year . The southern region of Nigeria experiences a double rainfall
+maxima characterised by two high rainfall peaks , with a short dry season and a longer dry season falling between and after each peaks . The first rainy season
+begins around March and last to the end of July with a peak in June , this rainy season is followed by a short dry break in August known as the August break
+which is a short dry season lasting for two to three weeks in August . This break is broken by the short rainy season starting around early September and
+lasting to Mid October with a peak period at the end of September . The ending of the short rainy season in October is followed by long dry season . This period
+starts from late October and lasts till early March with peak dry conditions between early December and late February . The tropical savanna climate or tropical
+wet and dry climate , is extensive in area and covers most of Western Nigeria to central Nigeria beginning from the Tropical rainforest climate boundary in
+southern Nigeria to the central part of Nigeria , where it exerts enormous influence on the region .
+</item 20>
+=== END ITEM id=775a6fcc52a2c362 ===
+
+=== ITEM id=0aac149f4926c02d ===
+Gold sentences and facts:
+Sentence 0: Health or vitality is an attribute assigned to entities , such as the player character , enemies and objects within a role - playing or video game , that indicates its state in combat . Health is usually measured in hit points or health points , shortened to HP . When the HP of a player character reaches zero , the player may lose a life or their character might become incapacitated or die . When the HP of an enemy reaches zero , it may be defeated or die and the player is usually rewarded in some way .
+  Fact 0.0: Health or vitality is an attribute assigned to entities in role-playing or video games.
+  Fact 0.1: Entities with health include the player character, enemies, and objects.
+  Fact 0.2: Health indicates an entity's state in combat.
+  Fact 0.3: Health is usually measured in hit points or health points.
+  Fact 0.4: Hit points or health points are shortened to HP.
+  Fact 0.5: When a player character's HP reaches zero, the player may lose a life.
+  Fact 0.6: When a player character's HP reaches zero, the character might become incapacitated or die.
+  Fact 0.7: When an enemy's HP reaches zero, the enemy may be defeated or die.
+  Fact 0.8: When an enemy's HP reaches zero, the player is usually rewarded in some way.
+
+Retrieved items:
+<item 1>
+Health (gaming)
+`` Falcom : Legacy of Ys '' . Games ( 111 ) : 152 -- 159 ( 153 ) . ( cf . Szczepaniak , John ( July 8 , 2011 ) . `` History of Ys interviews '' . Hardcore
+Gaming 101 . Retrieved 6 September 2011. ) Jump up ^ Jon Martindale ( 2012 - 10 - 03 ) . `` Let 's Kill off Health Bars '' . Kit Guru Gaming . Archived from the
+original on May 28 , 2015 . Retrieved 2014 - 11 - 21 . Jump up ^ Novak , Jeannie ( 2013 - 04 - 11 ) . The Official GameSalad Guide to Game Development . Cengage
+Learning . p. 31 . ISBN 1133605648 . Retrieved 2014 - 11 - 21 . Jump up ^ Voorhees , Gerald A. ; Call , Joshua ; Whitlock , Katie ( 2012 - 11 - 02 ) .
+</item 1>
+
+<item 2>
+Health (gaming)
+In these games , the fact that the enemies are being damaged is indicated by their behavior . On the other hand , many fighting games , such as the Street
+Fighter series , use easy - to - read health bars to clearly indicate the progress the player is making with each hit . It is common in first - person shooters
+to indicate low health of the player character by blood spatters or by a distorted red hue on the screen , attempting to mimic the effects of wounding and
+trauma . These visual effects fade as health regenerates . References ( edit ) ^ Jump up to : Moore , Michael ( 2011 - 03 - 23 ) . Basics of Game Design . CRC
+Press . pp. 151 , 194 . ISBN 1439867763 . Retrieved 2014 - 12 - 09 . Jump up ^ Chris Antista . `` The 10 most creative life bars '' . GamesRadar. 2010 - 08 - 17
+. p. 2 . Archived from the original on 2014 - 12 - 28 .
+</item 2>
+
+<item 3>
+Health (gaming)
+US Navy used similar concept in their tactical war games already in 1920s and 1930s . In their simulation each ship had Life parameter . The unit of Life of the
+ship was a number of `` equivalent penetrative 14 - inch shell hits '' . The Navy considered ie. that Kongō - class battlecruiser had 12 Life points and Nagato
+- class battleship had 18.8 . A visual power meter representing stamina was used in Nintendo 's 1983 arcade game Punch - Out ! ! and Data East 's 1981 DECO
+Cassette System arcade game Flash Boy . Usage ( edit ) In action video games as well as in role - playing games , health points can usually be depleted by
+attacking the entity . A defense attribute might reduce the amount of HP that is lost when a character is damaged . It is common in role - playing games for a
+character 's maximum health and defense attributes to be gradually raised as the character levels up . In game design , it is deemed important that a player is
+aware of it when they are losing health , each hit playing a clear sound effect .
+</item 3>
+
+<item 4>
+Health (gaming)
+Author Scott Rogers states that `` health should deplete in an obvious manner , because with every hit , a player is closer to losing their life . '' The
+display of health also helps to dramatize the near - loss of a life . Regeneration ( edit ) Player characters can often restore their health points by consuming
+certain items , such as health potions , food or first - aid kits . Staying a night at an inn fully restores a character 's health in many role - playing video
+games . In general , the different methods of regenerating health has its uses in a particular genre . In action games , this method is very quick , whereas
+role - playing games feature slower paced methods to match the gameplay and realism . Some video games feature automatically regenerating health , where lost
+health points are regained over time . This can be useful to not `` cripple '' the player , making them still able to continue even after losing lots of health
+. However , automatically regenerating health may also cause a player to `` power through '' sections they might otherwise have had to approach cautiously ,
+simply because there are no lasting consequences to losing a large amount of health .
+</item 4>
+
+<item 5>
+Health (gaming)
+Health ( Gaming ) - wikipedia Health ( Gaming ) Jump to : navigation , search A health bar , a possible representation of the health of a character . Health or
+vitality is an attribute assigned to entities , such as the player character , enemies and objects within a role - playing or video game , that indicates its
+state in combat . Health is usually measured in hit points or health points , shortened to HP . When the HP of a player character reaches zero , the player may
+lose a life or their character might become incapacitated or die . When the HP of an enemy reaches zero , it may be defeated or die and the player is usually
+rewarded in some way . Any entity within a game could have a health value , including the player character , non-player characters and objects . Indestructible
+entities have no diminishable health value . Health might be displayed as a numeric value , such as `` 50 / 100 '' . Here , the first number indicates the
+current amount of HP an entity has and the second number indicates the entity 's maximum HP .
+</item 5>
+
+<item 6>
+Health (gaming)
+`` Disposable Bodies : Cyborg Regeneration and FPS Mechanics '' . Guns , Grenades , and Grunts : First - Person Shooter Games ( Google eBook ) . Bloomsbury
+Publishing USA . ISBN 1441191445 . Retrieved 2014 - 11 - 21 . ( hide ) Concepts of video games Glossary of video game terms Attributes Health Life Experience
+point Magic Mechanics Item Power - up HUD Warp Fog of war Invisible wall Cutscene Mini-map Paper doll Destructible environment Loading screen Replay value
+Scripted sequence Password Line of sight Critical hit Level Permadeath Status effect Hitbox Movement techniques Rocket jumping Strafe - jumping Strafing
+Trickjump Modes Player type Single - player Multiplayer Cooperative Competitive gameplay eSports Speedrun Gameplay type Capture the flag ( CTF ) Deathmatch Last
+man standing Retrieved from `` https://en.wikipedia.org/w/index.
+</item 6>
+
+<item 7>
+Health (gaming)
+In video games , health can also be displayed graphically , such as with a bar that empties itself when an entity loses health ( a health bar , typically red )
+, icons that are `` chipped away '' , or in more novel ways . Contents ( hide ) 1 History 2 Usage 2.1 Regeneration 3 Display 4 References History ( edit )
+Dungeons & Dragons co-creator Dave Arneson described the origin of hit points in a 2002 interview . When Arneson was adapting the medieval wargame Chainmail (
+1971 ) to a fantasy setting , a process that with Gary Gygax would lead to Dungeons & Dragons , he saw that the emphasis of the gameplay was moving from large
+armies to small groups of heroes and eventually to the identification of one player and one character that is essential to role - playing as it was originally
+conceived . Players became attached to their heroes and did not want them to die every time they lost a die roll . Players were thus given multiple hit points
+which were incrementally decreased as they took damage . Arneson took the concept , along with armor class , from a set of a naval American Civil War game 's
+rules .
+</item 7>
+
+<item 8>
+Health (gaming)
+wikipedia.org/w/index.php?title=Health_(gaming)&oldid=819315199 '' Categories : Role - playing game terminology Video game terminology Hidden categories : All
+articles lacking reliable references Articles lacking reliable references from September 2016 Talk Contents About Wikipedia Deutsch Español فارسی Français 한국어
+Italiano עברית ქართული Nederlands 日本 語 Norsk Norsk nynorsk Polski Português Русский Suomi Svenska Українська 中文 Edit links This page was last edited on 8
+January 2018 , at 18 : 11 . Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site ,
+you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About
+Wikipedia
+</item 8>
+
+<item 9>
+Health (gaming)
+This mechanic initially appeared in action role - playing games , with early examples including the Hydlide series , the Ys series , and Woody Poco . In Woody
+Poco , the rate at which health recharges is based on food level . In Hydlide and Ys , the player character has to stand still for their health to automatically
+regenerate . This system was popularized in first - person shooters by Halo : Combat Evolved ( 2001 ) , though regenerating health in The Getaway ( 2002 ) has
+been cited to be more comparable to later use of the mechanic in first - person shooters . Display ( edit ) Heart - shaped icons can indicate the amount of
+health a player has left . The way health is displayed on the screen has an effect on the player . Many games only show the health of the player character ,
+while keeping the health of enemies hidden . This is done in the Legend of Zelda series , Minecraft and Monster Hunter series to keep the player 's progress in
+defeating their enemy unclear and therefore exciting . In these games , the fact that the enemies are being damaged is indicated by their behavior .
+</item 9>
+
+<item 10>
+Health (gaming)
+2 . Archived from the original on 2014 - 12 - 28 . ^ Jump up to : Rogers , Scott ( 2010 - 09 - 29 ) . Level Up ! : The Guide to Great Video Game Design . John
+Wiley & Sons . pp. 276 -- 277 . ISBN 0470970928 . Retrieved 2014 - 11 - 21 . Jump up ^ Allen Rausch ( 2004 - 08 - 19 ) . `` Dave Arneson Interview '' . GameSpy
+. Retrieved 2014 - 01 - 09 . Jump up ^ American Calculations of Battleline Strength , 1941 - 2 , Alan D. Zimm , The Northern Mariner / le marin du nord , XIX
+No. 3 , ( July 2009 ) , 291 - 317 Jump up ^ `` Glass Joe Boxes Clever '' . Computer + Video Games . Future Publishing : 47 . August 1984 . Retrieved 2015 - 01 -
+02 .
+</item 10>
+=== END ITEM id=0aac149f4926c02d ===

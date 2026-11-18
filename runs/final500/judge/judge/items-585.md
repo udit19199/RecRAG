@@ -1,0 +1,1361 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 10 items.
+
+=== ITEM id=0817ad0010aeb040 ===
+Gold sentences and facts:
+Sentence 0:  The title and cover are an homage to the Beatles album, 926 East McLemore Avenue being the address of the Stax Studios in Memphis, as Abbey Road was for EMI Studios in London, which was soon renamed Abbey Road Studios.
+  Fact 0.0: The title and cover are an homage to the Beatles album Abbey Road.
+  Fact 0.1: 926 East McLemore Avenue is the address of the Stax Studios in Memphis.
+  Fact 0.2: Abbey Road was the address of EMI Studios in London.
+  Fact 0.3: EMI Studios in London was soon renamed Abbey Road Studios.
+Sentence 1:  This road is best known for the Abbey Road Studios and the 1969 album, "Abbey Road", by The Beatles.
+  Fact 1.0: This road is best known for the Abbey Road Studios.
+  Fact 1.1: This road is best known for the 1969 album Abbey Road by The Beatles.
+
+Retrieved items:
+<item 1>
+City of Westminster Magistrates' Court
+The City of Westminster Magistrates' Court was a magistrates' court located at 70 Horseferry Road, in the City of Westminster, London.
+
+ It was originally called Horseferry Road Magistrates' Court, after the road in which it was sited.
+
+ However, it was renamed in July 2006 following the closure of Bow Street Magistrates' Court.
+
+ It served as the court where the Chief Magistrate of England and Wales sat, and all extradition and terrorism-related cases passed through the court.
+
+ The court closed permanently on 22 September 2011, and was replaced on 27 September 2011 with Westminster Magistrates' Court, built on the site of Marylebone
+Magistrates' Court at 181 Marylebone Road.
+</item 1>
+
+<item 2>
+McLemore Avenue
+McLemore Avenue is a 1970 album by Booker T. & the M.G.s, consisting entirely of mostly instrumental covers of songs from the Beatles' album "Abbey Road"
+(released only months earlier, in September 1969).
+
+ The title and cover are an homage to the Beatles album, 926 East McLemore Avenue being the address of the Stax Studios in Memphis, as Abbey Road was for EMI
+Studios in London, which was soon renamed Abbey Road Studios.
+</item 2>
+
+<item 3>
+Doughty Street
+Doughty Street is a broad tree lined street in the Holborn district of the London Borough of Camden.
+
+ The southern part is a continuation of the short John Street, which comes off Theobald's Road.
+
+ The northern part crosses Guilford Street and ends at Mecklenburgh Square.
+
+ The street is named after a landlord of the area at the time it was built, Henry Doughty.
+</item 3>
+
+<item 4>
+Come Together
+"Come Together" is a song by the Beatles written primarily by John Lennon and credited to Lennon–McCartney.
+
+ The song is the opening track on the album "Abbey Road" and was also released as a single coupled with "Something".
+
+ The song reached the top of the charts in the United States and peaked at No. 4 in the United Kingdom.
+</item 4>
+
+<item 5>
+Westminster
+Westminster ( ) is an area of central London within the City of Westminster, part of the West End, on the north bank of the River Thames.
+
+ Westminster's concentration of visitor attractions and historic landmarks, one of the highest in London, includes the Palace of Westminster, Buckingham Palace,
+Westminster Abbey and Westminster Cathedral.
+</item 5>
+
+<item 6>
+Abbey Road, London
+Abbey Road is a thoroughfare in the borough of Camden and the City of Westminster in London, running roughly northwest to southeast through St. John's Wood,
+near Lord's Cricket Ground.
+
+ It is part of the B507 road.
+
+ This road is best known for the Abbey Road Studios and the 1969 album, "Abbey Road", by The Beatles.
+</item 6>
+
+<item 7>
+Westminster tube station
+Westminster is a London Underground station in the City of Westminster.
+
+ It is served by the Circle, District and Jubilee lines.
+
+ On the Circle and District lines, the station is between St. James's Park and Embankment, and on the Jubilee line it is between Green Park and Waterloo.
+
+ It is in Travelcard Zone 1.
+
+ The station is located at the corner of Bridge Street and Victoria Embankment and is close to the Houses of Parliament, Westminster Abbey, Parliament Square,
+Whitehall, Westminster Bridge, and the London Eye.
+
+ Also close by are Downing Street, the Cenotaph, Westminster Millennium Pier, the Treasury, the Foreign and Commonwealth Office, and the Supreme Court.
+</item 7>
+
+<item 8>
+Temple Bar, London
+Temple Bar was the principal ceremonial entrance to the City of London on its western side from the City of Westminster.
+
+ It is situated on the historic royal ceremonial route from the Tower of London to the Palace of Westminster, the two chief residences of the mediaeval English
+monarchs, and from the Palace of Westminster to St Paul's Cathedral.
+
+ The road east of Temple Bar and within the City is Fleet Street, the road to the west, in Westminster, is The Strand.
+
+ At Temple Bar the Corporation of the City of London formerly erected a barrier to regulate trade into the City.
+
+ The 19th century Royal Courts of Justice are located next to it on its north side, having been moved from Westminster Hall.
+
+ To its south is the Temple Church and the Inner Temple and Middle Temple Inns of Court.
+
+ As the most important entrance to the City of London from Westminster, it was formerly long the custom for the monarch to halt at Temple Bar before entering
+the City of London, in order for the Lord Mayor to offer the Corporation's pearl-encrusted Sword of State as a token of loyalty.
+</item 8>
+
+<item 9>
+Westminster St Margaret and St John
+St Margaret was an ancient parish in the City and Liberty of Westminster and the county of Middlesex.
+
+ It included the core of modern Westminster, including the Palace of Westminster and the area around, but not including Westminster Abbey.
+
+ In 1727 it was divided into St Margaret's and St John's, to coincide with the building of the Church of St John the Evangelist, constructed by the Commission
+for Building Fifty New Churches in Smith Square to meet the demands of the growing population, but there continued to be a single vestry for the parishes of St
+Margaret and St John.
+
+ This was reformed in 1855 by the Metropolis Management Act, and the two parishes formed the Westminster District until 1887.
+
+ In 1889 St Margaret and St John became part of the County of London.
+
+ The vestry was abolished in 1900, to be replaced by Westminster City Council, but St Margaret and St John continued to have a nominal existence until 1922.
+</item 9>
+
+<item 10>
+Temple Bar, London
+The term "Temple Bar" strictly refers to a notional bar or barrier across the route, but is commonly used to refer to the 17th-century ornamental Baroque arched
+gateway designed by Christopher Wren which spanned the road until its removal in 1878.
+
+ Wren's arch was preserved and was re-erected in 2004 in the City, in Paternoster Square next to St Paul's Cathedral.
+</item 10>
+=== END ITEM id=0817ad0010aeb040 ===
+
+=== ITEM id=bae48b60358a1bf7 ===
+Gold sentences and facts:
+Sentence 0: "What the Water Gave Me" is a song by English indie rock band Florence and the Machine from their second studio album "Ceremonials" (2011).
+  Fact 0.0: What the Water Gave Me is a song
+  Fact 0.1: What the Water Gave Me is by English indie rock band Florence and the Machine
+  Fact 0.2: What the Water Gave Me is from the band's second studio album Ceremonials
+  Fact 0.3: The album Ceremonials is dated 2011
+Sentence 1:  The song was written by lead singer Florence Welch and Francis "Eg" White, and produced by Paul Epworth.
+  Fact 1.0: Lead singer Florence Welch wrote the song What the Water Gave Me
+  Fact 1.1: Francis Eg White wrote the song What the Water Gave Me
+  Fact 1.2: Paul Epworth produced the song What the Water Gave Me
+Sentence 2: What the Water Gave Me ("Lo que el agua me dio" in Spanish) is an oil painting by Frida Kahlo that was completed in 1938.
+  Fact 2.0: What the Water Gave Me is an oil painting by Frida Kahlo
+  Fact 2.1: The painting is titled Lo que el agua me dio in Spanish
+  Fact 2.2: Frida Kahlo completed the painting in 1938
+
+Retrieved items:
+<item 1>
+Florence Welch (born 1986) leads English indie-rock band Florence + the Machine, formed in 2007 and acclaimed for dramatic production and powerful vocals. Their
+debut, *Lungs* (2009), established international success; *Ceremonials* (2011) produced singles including “Shake It Out,” “What the Water Gave Me,” “Spectrum,”
+“Never Let Me Go,” “No Light, No Light,” and “Lover to Lover.” Welch
+</item 1>
+
+<item 2>
+No Light, No Light
+No Light, No Light is a song by English indie rock band Florence and the Machine from their second studio album, "Ceremonials" (2011).
+
+ The song was written by band members Florence Welch and Isabella Summers while the production was handled by Paul Epworth.
+
+ Island Records released the song as the second single from the album on 16 January 2012.
+
+ The song was the first one written for the album in the band's tour bus in Amsterdam.
+
+ Lyrically, in the song, Welch is expressing frustration about the state of her fragile relationship and she further tries to keep it together.
+
+ "No Light, No Light" received positive reviews by music critics who generally praised Welch's vocals and the drum-led instrumentation.
+
+ It was also placed on several critics' year-end lists of best singles.
+
+ The song peaked at number fifty on the UK Singles Chart, the Irish Singles Chart and number thirty nine on the US "Billboard" Alternative Songs chart.
+</item 2>
+
+<item 3>
+Florence and the Machine
+Florence and the Machine (stylised as Florence + the Machine) are an English indie rock band that formed in London in 2007, consisting of lead singer Florence
+Welch, keyboardist Isabella Summers, and a collaboration of other artists.
+
+ The band's music received praise across the media, especially from the BBC, which played a large part in their rise to prominence by promoting Florence and the
+Machine as part of "BBC Introducing".
+
+ At the 2009 Brit Awards they received the Brit Awards "Critics' Choice" award.
+
+ The band's music is renowned for its dramatic and eccentric production and also Welch's powerful vocal performances.
+</item 3>
+
+<item 4>
+Lungs (album)
+Lungs is the debut studio album by English indie rock band Florence and the Machine, released on 3 July 2009 on Island Records.
+
+ Frontwoman Florence Welch experimented with and honed the album's sound with bandmate Isabella Summers, while also collaborating with five record producers
+including James Ford, Paul Epworth, Steve Mackey.
+
+ The music on "Lungs" established Florence and the Machine as an internationally successful rock act, and also featured the group's successful mix of string
+arrangements centered around Welch's vocal prowess.
+</item 4>
+
+<item 5>
+What the Water Gave Me (song)
+"What the Water Gave Me" is a song by English indie rock band Florence and the Machine from their second studio album "Ceremonials" (2011).
+
+ The song was written by lead singer Florence Welch and Francis "Eg" White, and produced by Paul Epworth.
+
+ It was released on 23 August 2011 as the first promotional single from "Ceremonials".
+
+ After the band performed the song in Berkeley, California on 12 June 2011, the studio version premiered on Florence and the Machine's official website.
+
+ Welch decided to name the song "What the Water Gave Me" after seeing a Frida Kahlo painting of the same name.
+
+ During an interview, she confirmed that the song was inspired by English writer Virginia Woolf.
+</item 5>
+
+<item 6>
+Wish That You Were Here
+"Wish That You Were Here" is a song by the English indie rock band Florence and the Machine, written by Florence Welch, Andrew Wyatt, and Emilie Haynie, and was
+released on Island Records on 26 August 2016.
+
+ The song was made available via digital download, and is featured on the soundtrack of the film "Miss Peregrine's Home for Peculiar Children" which was
+directed by Tim Burton.
+
+ Welch — a long-time fan of Burton's work — had expressed interest in collaborating with him long before the recording of "Wish That You Were Here" as they
+shared similar artistic themes.
+
+ Upon release, the composition was positively received by music critics and reached number 128 on the UK Singles Chart.
+</item 6>
+
+<item 7>
+Lover to Lover
+"Lover to Lover" is a song by English indie rock band Florence and the Machine.
+
+ The song was released on 30 November 2012, as a digital download on iTunes as the fifth and final single from their second studio album "Ceremonials" (2011).
+
+ The song was written by Florence Welch and Francis "Eg" White and produced by Paul Epworth.
+
+ The Ceremonials Tour version of "Lover to Lover" is an edited version of the original with further production by Chris Hayden.
+
+ The song became the band's first single to miss the top 200 in the UK Singles Chart.
+</item 7>
+
+<item 8>
+Never Let Me Go (Florence and the Machine song)
+"Never Let Me Go" is a song by English indie rock band Florence and the Machine from their second studio album, "Ceremonials" (2011).
+
+ The song was written by Florence Welch and Paul Epworth while production was handled by Epworth.
+
+ Island Records released the song as the third single from the album on 30 March 2012.
+
+ The band first premiered the song during one of their concerts before the release of the album on 15 October 2011.
+
+ A Clams Casino remix of the song was placed on the 12" white vinyl single which was available for pre-order on 22 March 2012.
+</item 8>
+
+<item 9>
+Spectrum (Say My Name)
+"Spectrum" is a song by English indie rock band Florence and the Machine from their second studio album "Ceremonials" (2011).
+
+ It was written by lead singer Florence Welch and Paul Epworth with production being handled by Epworth.
+
+ The band premiered the song during a concert at Brooklyn's Creators Project on 15 October 2011, prior to the release of the album.
+
+ The album version of "Spectrum" is a downtempo orchestral pop, R&B, krautrock and disco song.
+
+ The accompanying music video for the song premiered on 30 May 2012.
+
+ It was directed by David LaChapelle and John Byrne.
+</item 9>
+
+<item 10>
+Florence Welch
+Florence Leontine Mary Welch (born 28 August 1986) is an English musician, singer and songwriter, best known as the vocalist of indie rock band Florence and the
+Machine.
+</item 10>
+=== END ITEM id=bae48b60358a1bf7 ===
+
+=== ITEM id=7f9190475d8b3cd5 ===
+Gold sentences and facts:
+Sentence 0: Todos Me Miran (""Everyone looks at me"") is a single from the Mexican artist Gloria Trevi reaching number 32 on Latin charts, and becoming a club anthem that confirmed Trevi's status as a gay icon.
+  Fact 0.0: Todos Me Miran ('Everyone looks at me') is a single from the Mexican artist Gloria Trevi.
+  Fact 0.1: Todos Me Miran reached number 32 on Latin charts.
+  Fact 0.2: Todos Me Miran became a club anthem.
+  Fact 0.3: Todos Me Miran confirmed Trevi's status as a gay icon.
+Sentence 1: Gloria Trevi (] ; born Gloria de los Ángeles Treviño Ruiz on February 15, 1968) is a Mexican singer and songwriter.
+  Fact 1.0: Gloria Trevi was born Gloria de los Angeles Trevino Ruiz.
+  Fact 1.1: Gloria Trevi was born on February 15, 1968.
+  Fact 1.2: Gloria Trevi is a Mexican singer.
+  Fact 1.3: Gloria Trevi is a Mexican songwriter.
+
+Retrieved items:
+<item 1>
+No eres tú, soy yo
+No eres tú, soy yo (English: It's not you, it's me ) is a 2010 Mexican romantic comedy directed by Alejandro Springall starring Eugenio Derbez, Alejandra Barros
+and Martina García and based on the Argentinean film "No sos vos, soy yo" (2004), written by Juan Taratuto.
+
+ It was produced by Matthias Eherenberg and filmed in Mexico City.
+</item 1>
+
+<item 2>
+Mexico Espanol Airplay
+Mexico Espanol Airplay is a record chart published weekly by "Billboard" magazine for Spanish language singles released in Mexico.
+
+ According to "Billboard"' s electronic database, the first chart was published on October 1, 2011, with the track "Amor Clandestino" by Mexican band Maná at
+number one; in the same year, fellow Mexican duo Jesse & Joy reached the top of the chart with their single "¡Corre!
+
+", the first of their six number-one singles in the chart, the most for any act. "
+
+¡Corre!"
+
+ also won the Latin Grammy Awards for Record of the Year and Song of the Year in 2012.
+
+ Starting on December 1, 2012, Mexican singer Thalía spent 10 non-consecutive weeks at number-one with "Manías", the first single from the album "Habítame
+Siempre", which won the Lo Nuestro Award for Pop Album of the Year. "
+
+Hoy Tengo Ganas de Ti" by Mexican artist Alejandro Fernández and American singer Christina Aguilera reached number-one in 2013, and also peaked at number four
+in Spain.
+</item 2>
+
+<item 3>
+Gloria Trevi
+Gloria Trevi (] ; born Gloria de los Ángeles Treviño Ruiz on February 15, 1968) is a Mexican singer and songwriter.
+</item 3>
+
+<item 4>
+Todos Me Miran
+Todos Me Miran (""Everyone looks at me"") is a single from the Mexican artist Gloria Trevi reaching number 32 on Latin charts, and becoming a club anthem that
+confirmed Trevi's status as a gay icon.
+
+ The song, as interpreted in the music video, is about a young man who dares to crossdress in spite of society's opinions.
+</item 4>
+
+<item 5>
+Todos Los Romances
+Todos Los Romances (English: "All the Romances" ) is a three-disc compilation album by Mexican singer Luis Miguel.
+
+ Released on 11 August 1998 by WEA Latina, the record features the three previously released "Romance"-themed albums in which Miguel covered classic boleros in
+each of them: "Romance" (1991), "Segundo Romance" (1994), and "Romances" (1997).
+
+ An editor for AllMusic rated the album four of five stars.
+
+ Commercially, "Todos Los Romances" peaked at number four in Spain and was certified double Platinum in the country.
+
+ It also achieved Gold status in Argentina and peaked at number 12 on the "Billboard"'s Top Latin Albums in the United States.
+</item 5>
+
+<item 6>
+Tu Ángel de la Guarda
+Tu Ángel de la Guarda ("Your guardian angel") is Gloria Trevi's second album, and it contained one of her signature songs and her most widely known hit, "Pelo
+Suelto".
+
+ It also contained other hit songs such as "Tu angel de la guarda", "Ya no", "Virgen de las virgenes", and "Hoy me ire de casa".
+
+ This album was very controversial different from other artists' albums such as Lucero.
+
+ "Virgen de las virgenes" mocked girls who said they were virgins but had actually lost their virginity, and "¡Ya no!"
+
+ went against the machismo movement of México.
+
+ Following the release of the album, Gloria was working hard in promoting radio, television and print media.
+
+ Trevi first traveled abroad visiting American Union countries, Puerto Rico, Argentina, Colombia, Guatemala, Venezuela, Costa Rica, and received a Gold and
+Platinum for high sales achieved.
+</item 6>
+
+<item 7>
+A Cambio de Que
+"A Cambio de Que" (In Exchange for What) is a song written by Xavier Santos Córtes and first performed by Mexican singer Marisela from her studio album
+"Completamente Tuya".
+
+ The song has been covered by several artists which have ranked on the music charts.
+
+ Latin pop band Corvo covered the song in 1999 which reached #18 on the Hot Latin Songs chart in the United States.
+
+ Mexican band Palomo's cover peaked at #31 on the Regional Mexican Airplay chart.
+
+ American singer Huey Dunbar recorded "A Cambio de Que" on his debut studio album "Yo Si Me Enamore" (2001).
+
+ This version peaked at #16 on the Tropical Songs chart.
+
+ Mexican duranguense band Alacranes Musical covered the song on the album of the same name in 2004 which reached #25 on the Regional Mexican Airplay chart.
+</item 7>
+
+<item 8>
+De Contrabando
+"De Contrabando" ("Smuggled") is a song written by Joan Sebastian.
+
+ It was first performed by Mexican singer Imelda, and included on her album "Aparentemente", released in 1991.
+
+ Six years later, was performed by fellow Mexican singer Zayda Y Los Culpables and released by Musart Records as the second single from her self-titled album in
+1997.
+
+ Mexican-American singer Jenni Rivera recorded a cover version for her studio album "Parrandera, Rebelde y Atrevida".
+
+ "De Contrabando" was released as the second single from the album in 2006.
+
+ In the United States, the song peaked at number fourteen on the "Billboard" Hot Latin Songs chart and number one on the "Billboard" Regional Mexican Songs
+chart.
+
+ The song was nominated for a Lo Nuestro Award for Regional Mexican Song of the Year at the 2007 Lo Nuestro Awards.
+
+ Rivera was also recognized for Regional Mexican Female Artist of the Year.
+
+ Rivera was also awarded Regional Mexican Airplay Song of the Year for at the 2007 Latin "Billboard" Music Awards.
+</item 8>
+
+<item 9>
+La Trayectoria (Gloria Trevi album)
+La Trayectoria (In English: The Trajectory) is a 2006 double live CD and multimedia DVD release by the Mexican singer Gloria Trevi.
+
+ The DVD includes scenes from parts of the tour from the Palacio de los Deportes of the Mexico City and The Arena Monterrey and the CD includes four new songs
+like: "Todos Me Miran" (They All Look At Me) is the first single compilation study of Mexican singer "Gloria Trevi", this is an unreleased song from the album.
+</item 9>
+
+<item 10>
+Premio Lo Nuestro 2003 marked the awards’ 15th anniversary, hosted by Marco Antonio Regil and Adal Ramones. Juanes and Celia Cruz each won four awards; Pilar
+Montenegro won three. Highlights included a 15-year Latin-hits medley and Fania All-Stars’ tribute to Cruz. The remaining entries cover Madonna songs and
+videos; Gloria Trevi’s career and albums; Luis Miguel’s *Todos Los Romances*; chart histories and
+</item 10>
+=== END ITEM id=7f9190475d8b3cd5 ===
+
+=== ITEM id=8dccb1378376e262 ===
+Gold sentences and facts:
+Sentence 0:  The body that was to become the Gran i General Consell was founded in 1249, and the Consell was abolished on 22 July 1718 by Philip V, empowered by the Nova Planta Decree of Majorca and Ibiza (28 November 1715).
+  Fact 0.0: The body that was to become the Gran i General Consell was founded in 1249.
+  Fact 0.1: The Consell was abolished on 22 July 1718.
+  Fact 0.2: The Consell was abolished by Philip V.
+  Fact 0.3: Philip V was empowered by the Nova Planta Decree of Majorca and Ibiza.
+  Fact 0.4: The Nova Planta Decree of Majorca and Ibiza is dated 28 November 1715.
+Sentence 1: Philip V (Spanish: "Felipe V" , French: "Philippe" , Italian: "Filippo" ; 19 December 1683 – 9 July 1746) was King of Spain from 1 November 1700 to 15 January 1724, when he abdicated in favour of his son Louis, and from 6 September 1724, when he reassumed the throne upon his son's death, to his own death 9 July 1746.
+  Fact 1.0: Philip V's Spanish name is Felipe V.
+  Fact 1.1: Philip V's French name is Philippe.
+  Fact 1.2: Philip V's Italian name is Filippo.
+  Fact 1.3: Philip V was born on 19 December 1683.
+  Fact 1.4: Philip V died on 9 July 1746.
+  Fact 1.5: Philip V was King of Spain from 1 November 1700 to 15 January 1724.
+  Fact 1.6: Philip V abdicated in favour of his son Louis on 15 January 1724.
+  Fact 1.7: Philip V reassumed the Spanish throne on 6 September 1724, upon his son's death.
+  Fact 1.8: Philip V was King of Spain from 6 September 1724 until his death on 9 July 1746.
+
+Retrieved items:
+<item 1>
+Succession to the British throne
+Succession to the British throne is determined by descent, gender (for people born before October 2011), legitimacy, and religion.
+
+ Under common law, the Crown is inherited by a sovereign's children or by a childless sovereign's nearest collateral line.
+
+ The Bill of Rights 1689 and the Act of Settlement 1701, restrict succession to the throne to the legitimate Protestant descendants of Sophia of Hanover that
+are in "communion with the Church of England".
+
+ Spouses of Roman Catholics were disqualified from 1689 until the law was amended in 2015.
+
+ Protestant descendants of those excluded for being Roman Catholics are eligible.
+</item 1>
+
+<item 2>
+Duke of Bedford
+He regained the earldom in 1485 when his nephew Henry VII came to the throne and was elevated to the dukedom the same year.
+
+ He had no legitimate children and the titles became extinct on his death in 1495.
+</item 2>
+
+<item 3>
+Alessandro Scarlatti
+Pietro Alessandro Gaspare Scarlatti (2 May 1660 – 22 October 1725) was an Italian Baroque composer, especially famous for his operas and chamber cantatas.
+
+ He is considered the founder of the Neapolitan school of opera.
+
+ He was the father of two other composers, Domenico Scarlatti and Pietro Filippo Scarlatti.
+</item 3>
+
+<item 4>
+John Biddle (Unitarian)
+John Biddle or Bidle (born Wotton-under-Edge, Gloucestershire, England, 14 January 1615 – died 22 September 1662) was an influential English nontrinitarian, and
+Unitarian.
+
+ He is often called "the Father of English Unitarianism".
+</item 4>
+
+<item 5>
+Philip V of Spain
+Philip V (Spanish: "Felipe V" , French: "Philippe" , Italian: "Filippo" ; 19 December 1683 – 9 July 1746) was King of Spain from 1 November 1700 to 15 January
+1724, when he abdicated in favour of his son Louis, and from 6 September 1724, when he reassumed the throne upon his son's death, to his own death 9 July 1746.
+</item 5>
+
+<item 6>
+Ernest Augustus, King of Hanover
+Ernest Augustus (5 June 1771 – 18 November 1851) was King of Hanover from 20 June 1837 until his death.
+
+ He was the fifth son and eighth child of King George III of the United Kingdom and Hanover.
+
+ As a fifth son, Ernest seemed unlikely to become a monarch, but none of his four elder brothers had a legitimate son who survived infancy.
+
+ The Salic Law, which barred succession to or through a female, prevailed in Hanover; therefore, when his elder brother King William IV died in 1837, Ernest
+succeeded him as King of Hanover.
+
+ In the United Kingdom the succession to the monarchy was determined by primogeniture and his niece Victoria succeeded to the throne, thus ending the personal
+union between the British Isles and Hanover that had existed since 1714.
+</item 6>
+
+<item 7>
+List of universities in Venezuela
+Venezuela has a wide array of universities, offering courses in a broad variety of subjects, spread between a total 23 public and 24 private universities
+located across several states.
+
+ As a result of a Royal Decree signed by Philip V of Spain, the Central University of Venezuela—the country's oldest—was founded in 1721 as "Universidad Real y
+Pontificia de Caracas".
+
+ The campus was originally at the now-known "Palacio de las Academias" but, in 1944, president Isaías Medina Angarita relocated it to the University City of
+Caracas.
+</item 7>
+
+<item 8>
+Duke of Bedford
+Duke of Bedford (named after Bedford, England) is a title that has been created six times (for five distinct people) in the Peerage of England.
+
+ The first and second creations came in 1414 in favour of Henry IV's third son, John, who later served as regent of France.
+
+ He was made Earl of Kendal at the same time and was made Earl of Richmond later the same year.
+
+ The titles became extinct on his death in 1435.
+
+ The third creation came in 1470 in favour of George Neville, nephew of Warwick the Kingmaker.
+
+ He was deprived of the title by Act of Parliament in 1478.
+
+ The fourth creation came 1478 in favour of George, the third son of Edward IV.
+
+ He died the following year at the age of two.
+
+ The fifth creation came in 1485 in favour of Jasper Tudor, half-brother of Henry VI and uncle of Henry VII.
+
+ He had already been created Earl of Pembroke in 1452.
+
+ However, as he was a Lancastrian, his title was forfeited between 1461 and 1485 during the predominance of the House of York.
+</item 8>
+
+<item 9>
+Line of succession to the former Romanian throne
+The succession order to the throne of the Romanian monarchy, abolished since 1947, was regulated by the monarchical constitution of 1923 and the 1884 Law of the
+Romanian Royal House Rules enacted pursuant to the 1866 Constitution of Romania which had confirmed the enthronement of Prince Karl (Carol) of
+Hohenzollern-Sigmaringen.
+
+ The defunct 1923 Constitution stipulated Salic law, according to which the throne was hereditary in King Carol I's legitimate descent and, if his male issue
+failed, in the descent of his brothers of the Sigmaringen princely branch of the House of Hohenzollern, according to agnatic primogeniture and to the perpetual
+exclusion of females and their descendants.
+
+ The last monarch to reign in Romania was King Michael I, who was born in 1921, abdicated his throne on 30 December 1947 under coercion, and went into exile in
+Switzerland.
+</item 9>
+
+<item 10>
+Gran i General Consell
+The Gran i General Consell (Catalan: "Great and General Council") was the supreme political, administrative, and representative organ of the Kingdom of Majorca.
+
+ Since the Kingdom of Majorca did not have courts, the Gran i General Consell took over most of the functions they would otherwise have had, including the role
+of a representative body.
+
+ The Gran i General Consell evolved from the Catalan municipal councils, especially that of the City of Majorca (present-day Palma de Mallorca.
+
+ The body that was to become the Gran i General Consell was founded in 1249, and the Consell was abolished on 22 July 1718 by Philip V, empowered by the Nova
+Planta Decree of Majorca and Ibiza (28 November 1715).
+
+ At the same time, all other separate Majorcan institutions were dissolved.
+</item 10>
+=== END ITEM id=8dccb1378376e262 ===
+
+=== ITEM id=438a5e5b5ca7eb71 ===
+Gold sentences and facts:
+Sentence 0: Enrico Cocozza (6 November 1921 – 27 December 1997), was a Scottish filmmaker who won many film awards during the 1940s and 1950s.
+  Fact 0.0: Enrico Cocozza was born on 6 November 1921.
+  Fact 0.1: Enrico Cocozza died on 27 December 1997.
+  Fact 0.2: Enrico Cocozza was a Scottish filmmaker.
+  Fact 0.3: Enrico Cocozza won many film awards during the 1940s and 1950s.
+Sentence 1: ", which was nominated for the Academy Award for Best Foreign Language Film.
+  Fact 1.0: A film was nominated for the Academy Award for Best Foreign Language Film.
+  Fact 1.1: The film whose title is quoted in this fragment was nominated for the Academy Award for Best Foreign Language Film.
+
+Retrieved items:
+<item 1>
+Illusions &amp; Mirrors
+Illusions & Mirrors is a 2013 short film directed by Iranian-born American artist and filmmaker Shirin Neshat.
+
+ The film, shot in black-and-white, stars Tarek Aylouch, Michael Markiewicz, and the Israeli-born American actress Natalie Portman.
+
+ The film was commissioned by Dior, for which Portman is a spokesmodel, for the Miss Dior Expo at the Grand Palais, Paris.
+
+ Shirin Neshat said that the film is a tribute to the black-and-white silent films made by such surrealist filmmakers as Man Ray, Jean Cocteau, Luis Buñuel, and
+Maya Deren.
+</item 1>
+
+<item 2>
+Two Brides and a Baby
+Two Brides and a Baby is a 2011 Nigerian romantic drama film directed by Teco Benson, starring Keira Hewatch, Kalu Ikeagwu, OC Ukeje, Chelsea Eze, Stella
+Damasus-Aboderin and Okey Uzoeshi.
+
+ It premiered on November 17, 2011.
+
+ It received awards and nominations at Africa Movie Academy Awards, Best of Nollywood Awards and Africa Magic Viewers Choice Awards.
+</item 2>
+
+<item 3>
+War/Dance
+War/Dance is a 2007 American documentary film written and directed by Sean Fine and Andrea Nix Fine and produced by Shine Global's Susan MacLaury, a professor
+at Kean University, and Albie Hecht.
+
+ It was nominated for the 2008 Academy Award for Best Documentary Feature and received the Emmy Award for Best Documentary and Best Cinematography in 2010.
+</item 3>
+
+<item 4>
+Enrico Cocozza
+Enrico Cocozza (6 November 1921 – 27 December 1997), was a Scottish filmmaker who won many film awards during the 1940s and 1950s.
+
+ His often surreal films were mainly filmed in and around the town of Wishaw in Scotland, where his family owned the popular Belhaven Cafe.
+
+ These include "Chick's Day" (1950), a prize winner at the 1951 Scottish Amateur Film Festival, "The Living Ghost" (1957), and "Glasgow's Docklands" (1959).
+
+ Illness later forced him to give up making films and he spent most of his working life teaching at the University of Strathclyde in Glasgow.
+
+ In 2001 he was the subject of the Channel 4 documentary "Artery: the Story of Enrico Cocozza".
+</item 4>
+
+<item 5>
+Mira Nair
+Mira Nair (born 15 October 1957) is an Indian American filmmaker based in New York City.
+
+ Her production company, Mirabai Films, specializes in films for international audiences on Indian society, whether in the economic, social or cultural spheres.
+
+ Among her best known films are "Mississippi Masala", "The Namesake", the Golden Lion-winning "Monsoon Wedding" and "Salaam Bombay!
+
+", which was nominated for the Academy Award for Best Foreign Language Film.
+</item 5>
+
+<item 6>
+Nitish Roy
+Nitish Roy is an Indian film art director, production designer, and costume designer in Hindi cinema and a Bengali Film Director, who is also known for his work
+with art cinema directors, Shyam Benegal, Mrinal Sen and Govind Nihlani, Hindi mainstream cinema, directors like Rajkumar Santoshi, as well as international
+directors like Mira Nair and Gurinder Chadha.
+</item 6>
+
+<item 7>
+Salaam Bombay!
+Salaam Bombay!
+
+ is a 1988 Hindi film directed by Mira Nair, and screenwritten by her longtime creative collaborator, Sooni Taraporevala.
+
+ The film chronicles the day-to-day life of children living on the streets of Bombay, India's biggest city.
+
+ It won the National Film Award for Best Feature Film in Hindi, the National Board of Review Award for Top Foreign Film, the Golden Camera and Audience Awards
+at the Cannes Film Festival, and three awards at the Montréal World Film Festival.
+
+ The film was India's second film submission to be nominated for the Academy Award for Best Foreign Language Film.
+
+ The film was among the list of "The Best 1,000 Movies Ever Made" by "The New York Times".
+</item 7>
+
+<item 8>
+Maya Deren Award
+The American Film Institute Award for Independent Film and Video Artists, subtitled and generally known as the Maya Deren Award, was an award presented to
+filmmakers and video artists by the American Film Institute to honor independent filmmaking.
+
+ Named for the avant-garde experimental film artist Maya Deren, it was given from 1986 through 1996.
+</item 8>
+
+<item 9>
+Loveleen Tandan
+Loveleen Tandan is an Indian film director and casting director.
+
+ She is the "Co-Director: India" of the four time Golden Globe, seven time BAFTA Award and eight Academy Award winning (including best picture) "Slumdog
+Millionaire" (2008), for which she shared a New York Film Critics Online Award, Rotterdam International Film Festival Award and Amanda Awards, Norway, of "Best
+Director" with Danny Boyle.
+
+ She has also been the Casting Director for several other films, including the Golden Lion winning and Golden Globe nominated "Monsoon Wedding" (2001) and the
+BAFTA Award nominated "Brick Lane" (2007).
+
+ She has been a Casting Consultant for the Gotham Award and Independent Spirit Award nominated film "The Namesake" (2007).
+</item 9>
+
+<item 10>
+Takeshi Fukunaga
+Takeshi Fukunaga is a Japanese filmmaker based in New York.
+
+ His first feature film, "Out of My Hand" (2015) premiered in the Panorama section at the 65th Berlin International Film Festival and won the Top Prize at the
+2015 Los Angeles Film Festival.
+
+ The film was later released worldwide through Ava DuVernay’s distribution company, ARRAY.
+
+ Takeshi was nominated for the John Cassavetes Award at the 2016 Independent Spirit Awards.
+
+ In 2017, he was selected for The Residence by Cannes Film Festival's Cinéfondation to develop his second feature film.
+</item 10>
+=== END ITEM id=438a5e5b5ca7eb71 ===
+
+=== ITEM id=253e30b3a2a0751a ===
+Gold sentences and facts:
+Sentence 0: Operalia, The World Opera Competition is an annual international competition for young opera singers.
+  Fact 0.0: Operalia, The World Opera Competition is an annual international competition.
+  Fact 0.1: Operalia is a competition for young opera singers.
+Sentence 1:  Founded in 1993 by Plácido Domingo, the competition has helped launch the careers of several important artists, such as Joseph Calleja, Giuseppe Filianoti, Rolando Villazón, José Cura, Joyce DiDonato, Elizabeth Futral, Inva Mula, Ana María Martínez and Sonya Yoncheva.
+  Fact 1.0: Operalia was founded in 1993.
+  Fact 1.1: Operalia was founded by Plácido Domingo.
+  Fact 1.2: Operalia has helped launch the careers of several important artists.
+  Fact 1.3: Operalia has helped launch the career of Joseph Calleja.
+  Fact 1.4: Operalia has helped launch the career of Giuseppe Filianoti.
+  Fact 1.5: Operalia has helped launch the career of Rolando Villazón.
+  Fact 1.6: Operalia has helped launch the career of José Cura.
+  Fact 1.7: Operalia has helped launch the career of Joyce DiDonato.
+  Fact 1.8: Operalia has helped launch the career of Elizabeth Futral.
+  Fact 1.9: Operalia has helped launch the career of Inva Mula.
+  Fact 1.10: Operalia has helped launch the career of Ana María Martínez.
+  Fact 1.11: Operalia has helped launch the career of Sonya Yoncheva.
+Sentence 2: Sonya Yoncheva (Bulgarian: Соня Йончева, born 25 December 1981) is a Bulgarian operatic soprano.
+  Fact 2.0: Sonya Yoncheva was born on 25 December 1981.
+  Fact 2.1: Sonya Yoncheva’s Bulgarian name is Соня Йончева.
+  Fact 2.2: Sonya Yoncheva is a Bulgarian operatic soprano.
+
+Retrieved items:
+<item 1>
+Ao Li
+Ao Li (born 8 February 1988) is a Chinese operatic bass-baritone and voice teacher who is particularly known for his performances at the San Francisco Opera.
+
+ In 2013 he won first prize in the Operalia, The World Opera Competition and in 2014 he won the Metropolitan Opera National Council Auditions.
+</item 1>
+
+<item 2>
+Operalia, The World Opera Competition
+Operalia, The World Opera Competition is an annual international competition for young opera singers.
+
+ Founded in 1993 by Plácido Domingo, the competition has helped launch the careers of several important artists, such as Joseph Calleja, Giuseppe Filianoti,
+Rolando Villazón, José Cura, Joyce DiDonato, Elizabeth Futral, Inva Mula, Ana María Martínez and Sonya Yoncheva.
+</item 2>
+
+<item 3>
+Guanqun Yu
+Guanqun Yu (; born 1982) is a Chinese soprano who has sung in opera houses and concert halls internationally.
+
+ In 2008 she won the Belvedere International Singing Competition and in 2012 she placed 2nd in the Operalia, The World Opera Competition.
+
+ She is particularly known for portraying heroines in the operas of Wolfgang Amadeus Mozart, Giacomo Puccini, and Giuseppe Verdi.
+</item 3>
+
+<item 4>
+This collection profiles international performers: Bulgarian actress Tzvetana Maneva (50+ films); French Carmen star Jane Rhodes; and opera singers including
+José Cura, Anna Aglatova, Andrea Carroll, Guanqun Yu, Bogdan Volkov, Sonya Yoncheva, Ao Li, Liao Changyong, Joseph Calleja, Maria Katzarava, Rachel
+Willis-Sørensen, and others. Many earned major competition honors, notably at Operalia, founded
+</item 4>
+
+<item 5>
+Norine Burgess
+Norine Burgess is a Canadian singer.
+
+ She is a graduate of the University of Calgary and the University of Toronto’s Opera School, mezzo-soprano.
+
+ She received additional training as a member of the Canadian Opera Company (COC) Ensemble where she appeared in Electra, Suor Angelica, Lulu and Der
+Rosenkavalier.
+
+ Ms. Burgess also performed Le Nozze di Figaro(Cherubino), Ariadne auf Naxos (Dryad), La Traviata(Flora) and Die Zauberflöte (Second Lady) with the COC.
+
+ Additional operatic successes include Le Nozze di Figaro (Cherubino) and Carmen (Mercedes) with the Vancouver Opera, Fenena in Nabucco with Manitoba Opera,
+Albert Herring (Nancy) with the Calgary Opera and many appearances with the Edmonton Opera.
+</item 5>
+
+<item 6>
+Barbara Frittoli
+Barbara Frittoli (born 19 April 1967) is an Italian operatic soprano who has sung leading roles in opera houses throughout Europe and in the United States.
+
+ She was born in Milan and graduated from the Milan Conservatory.
+
+ She made her Metropolitan Opera debut in 1995 as Micaela in "Carmen" and has gone on to sing in over 80 performances there including Donna Elvira in "Don
+Giovanni", Fiordiligi in "Così fan tutte", Angelica in "Suor Angelica", Desdemona in "Otello", the title role in "Luisa Miller", Amelia in "Simon Boccanegra",
+Vitellia in "La clemenza di Tito" and Alicia Ford in "Falstaff".
+</item 6>
+
+<item 7>
+Jane Rhodes
+Jane Marie Andrée Rhodes (March 13, 1929 – May 7, 2011) was a French opera singer whose voice encompassed both the soprano and high mezzo-soprano ranges.
+
+ Her most celebrated role was Carmen, which she sang in the opera's first ever staging at the Palais Garnier.
+
+ She also created the roles of Isadora in Marcel Landowski's "Le Fou" and Maguelone in Georges Delerue's "Le Chevalier de Neige" and sang Renata in the first
+recorded performance of Prokofiev's "The Fiery Angel".
+
+ Admired for both her voice and her glamorous stage presence, she was nicknamed the "Bardot of the Opéra".
+
+ She was married to conductor Roberto Benzi.
+</item 7>
+
+<item 8>
+Andrea Carroll (soprano)
+Andrea Carroll is an American soprano who has had an active international career in concerts and operas since 2012.
+
+ A finalist in the 2015 Operalia, The World Opera Competition, she is particularly known for her performances with the Houston Grand Opera and the Vienna State
+Opera.
+</item 8>
+
+<item 9>
+Rachel Willis-Sørensen
+Rachel Willis-Sørensen (born 1984) is an American operatic soprano.
+
+ She was a winner of the Metropolitan Opera National Council Auditions in 2010.
+
+ In 2014, she won first prize, the Birgit Nilsson Prize, and the Zarzuela Prize of the Operalia competition.
+
+ Other awards include first place in the 2009 Eleanor McCollum Competition for Young Singers in Houston and the 2010 Sara Tucker Grant from the Richard Tucker
+Music Foundation.
+</item 9>
+
+<item 10>
+Maria Katzarava
+Maria Katzarava (born 1984) is an opera singer from Mexico who achieved international fame by winning first place in the Operalia competition in the opera and
+zarzuela categories.
+
+ Prior to this, she came to the attention of notable Mexican tenor Ramón Vargas, who helped her get a scholarship, and then won Mexico's Carlo Morelli national
+singing competition in 2005, which earned her a debut at the Palacio de Bellas Artes.
+
+ Since winning the Operalia competition, Katzarava has performed in Europe, where she currently lives, Asia and the Americas.
+
+ She currently trains with soprano Mirella Freni.
+</item 10>
+=== END ITEM id=253e30b3a2a0751a ===
+
+=== ITEM id=fe38cb6aebfc802d ===
+Gold sentences and facts:
+Sentence 0: Pinocchio is a 1940 American animated musical fantasy film produced by Walt Disney Productions and based on the Italian children's novel "The Adventures of Pinocchio" by Carlo Collodi.
+  Fact 0.0: Pinocchio is a 1940 American film.
+  Fact 0.1: Pinocchio is an animated musical fantasy film.
+  Fact 0.2: Pinocchio was produced by Walt Disney Productions.
+  Fact 0.3: Pinocchio is based on the Italian children's novel 'The Adventures of Pinocchio'.
+  Fact 0.4: The novel 'The Adventures of Pinocchio' was written by Carlo Collodi.
+Sentence 1:  It was the second animated feature film produced by Disney, made after the success of "Snow White and the Seven Dwarfs" (1937).
+  Fact 1.0: Pinocchio was the second animated feature film produced by Disney.
+  Fact 1.1: Pinocchio was made after the success of 'Snow White and the Seven Dwarfs'.
+  Fact 1.2: Snow White and the Seven Dwarfs is from 1937.
+Sentence 2: Home on the Range is a 2004 American animated musical western comedy film produced by Walt Disney Feature Animation and released by Walt Disney Pictures.
+  Fact 2.0: Home on the Range is a 2004 American film.
+  Fact 2.1: Home on the Range is an animated musical western comedy film.
+  Fact 2.2: Home on the Range was produced by Walt Disney Feature Animation.
+  Fact 2.3: Home on the Range was released by Walt Disney Pictures.
+
+Retrieved items:
+<item 1>
+The Rescuers Down Under
+The Rescuers Down Under is a 1990 American animated comedy-drama adventure film produced by Walt Disney Feature Animation and released by Walt Disney Pictures
+on November 16, 1990.
+
+ The 29th Disney animated feature film, the film is the sequel to the 1977 animated film "The Rescuers", which was based on the novels of Margery Sharp.
+
+ Set in the Australian Outback, the film centers on Bernard and Bianca traveling to Australia to save a boy named Cody from a villainous poacher in pursuit of
+an endangered bird of prey.
+</item 1>
+
+<item 2>
+Return to Never Land
+Return to Never Land (also known as Peter Pan 2 or Peter Pan In: Return to Never Land) is a 2002 American animated musical fantasy-adventure film produced by
+Walt Disney Television Animation, and released by Walt Disney Pictures and distributed by Walt Disney Studios Motion Pictures.
+
+ The film is a sequel to Walt Disney Feature Animation 1953 film "Peter Pan", It is based on J. M. Barrie's novel "Peter and Wendy", and had a worldwide gross
+of $109 million.
+</item 2>
+
+<item 3>
+Get a Horse!
+Get a Horse!
+
+ is a 2013 American 3D animated slapstick comedy short film, produced by Walt Disney Animation Studios.
+
+ Combining black-and-white hand-drawn animation and color CGI animation, the short features the characters of the late 1920s "Mickey Mouse" cartoons, and
+features archival recordings of Walt Disney in his posthumous role as Mickey Mouse.
+
+ It is the first original Mickey Mouse theatrical animated short since "Runaway Brain" (1995), and the first appearance of Oswald the Lucky Rabbit in a Disney
+animated production in 85 years.
+</item 3>
+
+<item 4>
+Pinocchio (1957 TV-musical)
+Pinocchio, a 1957 television production of "Pinocchio", is a live (and live-action) musical version starring Mickey Rooney in the title role of the puppet who
+wishes to become a real boy.
+
+ Based on the novel by Carlo Collodi which also inspired the classic Walt Disney animated film, this version featured a now-forgotten new score by Alec Wilder
+and William Engvick.
+
+ It was telecast once on NBC as a television special, and, as far as is known, never rebroadcast by NBC, or even restaged with a different cast as was Rodgers
+and Hammerstein's "Cinderella".
+
+ Nor has it ever been issued on VHS or DVD.
+
+ Other notable actors who appeared in the special included Walter Slezak (as Geppetto), Fran Allison (as the Blue Fairy), Martyn Green (as the Fox), Jerry
+Colonna (as a Ringmaster), and Stubby Kaye as a Town Crier, a role he repeated in Wilder and Engvick's 1958 television musical, "Hansel and Gretel".
+
+ "Pinocchio" was directed by noted Broadway choreographer Hanya Holm.
+</item 4>
+
+<item 5>
+Off His Rockers
+Off His Rockers is an animated short film produced by Walt Disney Feature Animation and released in 1992.
+
+ It was released theatrically accompanying the film "Honey, I Blew Up the Kid".
+
+ The film started as a side project of director Barry Cook, who, at the time, was working at Walt Disney Feature Animation Florida.
+
+ Starting with a core of six people, the project ended up involving most of the Florida studio's staff of 73 (and some in California), all of whom "donated"
+their time to the project beyond their official duties.
+</item 5>
+
+<item 6>
+Walt Disney Pictures
+Walt Disney Pictures, Inc. is an American film production company and a subsidiary of Walt Disney Studios, owned by The Walt Disney Company.
+
+ The division is based at the Walt Disney Studios in Burbank, California, and is the main producer of live-action feature films within the Walt Disney Studios
+unit.
+
+ It took on its current name in 1983.
+
+ Today, in conjunction with the other units of Walt Disney Studios, Walt Disney Pictures is classified as one of Hollywood's "Big Six" film studios.
+
+ Films produced by Walt Disney Animation Studios and Pixar Animation Studios are also released under this brand.
+</item 6>
+
+<item 7>
+Pinocchio (1940 film)
+Pinocchio is a 1940 American animated musical fantasy film produced by Walt Disney Productions and based on the Italian children's novel "The Adventures of
+Pinocchio" by Carlo Collodi.
+
+ It was the second animated feature film produced by Disney, made after the success of "Snow White and the Seven Dwarfs" (1937).
+</item 7>
+
+<item 8>
+Home on the Range (2004 film)
+Home on the Range is a 2004 American animated musical western comedy film produced by Walt Disney Feature Animation and released by Walt Disney Pictures.
+
+ The 45th Disney animated feature film, it was the last 2D animated Disney film released until "The Princess and the Frog" in 2009.
+
+ Named after the popular country song of the same name, "Home on the Range" features the voices of Roseanne Barr, Judi Dench, Jennifer Tilly, Cuba Gooding Jr.,
+Randy Quaid, and Steve Buscemi.
+
+ The film is set in the Old West, and centers on a mismatched trio of dairy cows—brash, adventurous Maggie; prim, proper Mrs. Caloway; and ditzy, happy-go-lucky
+Grace.
+
+ The three cows must capture an infamous cattle rustler named Alameda Slim for his bounty in order to save their idyllic farm from foreclosure.
+
+ Aiding them in their quest is Lucky Jack, a feisty, peg-legged rabbit, but a selfish horse named Buck, eagerly working in the service of Rico, a famous bounty
+hunter, seeks the glory for himself.
+</item 8>
+
+<item 9>
+Mickey's Christmas Carol
+Mickey's Christmas Carol is a 1983 American animated featurette produced by Walt Disney Productions and released by Buena Vista Distribution.
+
+ It was directed and produced by Burny Mattinson.
+
+ The cartoon is an adaptation of Charles Dickens' "A Christmas Carol", starring Scrooge McDuck as Ebenezer Scrooge.
+
+ Many other Disney characters, primarily from the Mickey Mouse universe, "Robin Hood", and "The Adventures of Ichabod and Mr. Toad", were cast throughout the
+film.
+</item 9>
+
+<item 10>
+Bambi
+Bambi is a 1942 American animated film directed by David Hand (supervising a team of sequence directors), produced by Walt Disney and based on the book "Bambi,
+a Life in the Woods" by Austrian author Felix Salten.
+
+ The film was released by RKO Radio Pictures on August 13, 1942, and is the fifth Disney animated feature film.
+</item 10>
+=== END ITEM id=fe38cb6aebfc802d ===
+
+=== ITEM id=e5270131f6577204 ===
+Gold sentences and facts:
+Sentence 0:  The pool lies directly south of Lichfield Cathedral and historically has been important to the defence of the Cathedral Close.
+  Fact 0.0: The pool lies directly south of Lichfield Cathedral.
+  Fact 0.1: The pool has historically been important to the defence of the Cathedral Close.
+Sentence 1:  The Diocese of Lichfield covers all of Staffordshire, much of Shropshire and part of the Black Country and West Midlands.
+  Fact 1.0: The Diocese of Lichfield covers all of Staffordshire.
+  Fact 1.1: The Diocese of Lichfield covers much of Shropshire.
+  Fact 1.2: The Diocese of Lichfield covers part of the Black Country.
+  Fact 1.3: The Diocese of Lichfield covers part of the West Midlands.
+
+Retrieved items:
+<item 1>
+Minster (church)
+Minster is an honorific title given to particular churches in England, most famously York Minster in York, Westminster in London and Southwell Minster in
+Southwell.
+
+ The term "minster" is first found in royal foundation charters of the 7th century.
+
+ Although it corresponds to the Latin "monasterium" or monastery, it then designated any settlement of clergy living a communal life and endowed by charter with
+the obligation of maintaining the daily office of prayer.
+
+ Widespread in 10th-century Anglo-Saxon England, minsters declined in importance with the systematic introduction of parishes and parish churches from the 11th
+century onwards.
+
+ It continued as a title of dignity in later medieval England, for instances where a cathedral, monastery, collegiate church or parish church had originated
+with an Anglo-Saxon foundation.
+
+ Eventually a minster came to refer more generally to "any large or important church, especially a collegiate or cathedral church".
+
+ In the 21st century, the Church of England has designated additional minsters by bestowing the status on existing parish churches.
+</item 1>
+
+<item 2>
+Black Country Living Museum
+The Black Country Living Museum (formerly The Black Country Museum) is an open-air museum of rebuilt historic buildings in Dudley in the West Midlands of
+England.
+
+ It is located in the centre of the Black Country, 10 miles west of Birmingham.
+
+ The museum occupies 105000 m2 of former industrial land partly reclaimed from a former railway goods yard, disused lime kilns, canal arm and former coal pits.
+</item 2>
+
+<item 3>
+Brierley Hill
+Brierley Hill is a small town and electoral ward of the Dudley Metropolitan Borough, in the West Midlands of England, and is situated approximately 2.5 miles
+south of central Dudley and 2 miles north of Stourbridge.
+
+ Part of the Black Country, and in a heavily industrialised area of the Dudley Borough, it has a population of 13,935 at the 2011 census, and is best known for
+glass and steel manufacturing, although the industry has declined considerably since the 1970s.
+
+ One of the largest factories in the area was the Round Oak Steelworks, which was closed down and redeveloped in the 1980s to become the Merry Hill Shopping
+Centre.
+
+ Brierley Hill was originally in Staffordshire, but is now part of the West Midlands metropolitan county since its creation in 1974.
+</item 3>
+
+<item 4>
+Minster Pool
+Minster Pool is a reservoir located between Bird Street and Dam Street in the heart of the city of Lichfield, Staffordshire in the United Kingdom.
+
+ The pool lies directly south of Lichfield Cathedral and historically has been important to the defence of the Cathedral Close.
+
+ The pool was originally formed in the 11th century when a boggy stream was dammed at its eastern end to drive a mill on Dam Street.
+
+ The pool was used as a mill pond and fishery until 1856 when the mill was demolished; it has since been retained for public amenity.
+</item 4>
+
+<item 5>
+Black Country Rangers F.C.
+Black Country Rangers Football Club is a football club based in Rowley Regis in the West Midlands.
+
+ They are currently members of the West Midlands (Regional) League Premier Division and play at the Beeches in Cradley, groundsharing with Cradley Town.
+</item 5>
+
+<item 6>
+Walsall
+Walsall ( ) is an industrial town in the West Midlands of England.
+
+ It is located 8 miles north-west of the City of Birmingham and 6 miles east of the City of Wolverhampton.
+
+ Historically a part of Staffordshire, Walsall is a component area of the West Midlands conurbation, and part of the Black Country.
+</item 6>
+
+<item 7>
+List of railway stations in the West Midlands
+This is a list of railway stations within the West Midlands, a metropolitan county in central England which includes the cities of Birmingham, Coventry and
+Wolverhampton.
+
+ It includes all railway stations in the West Midlands that currently have regular timetabled train services, as well as certain stations outside the county
+which are within the area supported by Transport for West Midlands (TfWM), formerly known as Centro.
+
+ Transport within the West Midlands is subsidised by TfWM, who since 2006 have used the brand name Network West Midlands to demonstrate the 'joined-up' nature
+of the regions bus and rail networks.
+</item 7>
+
+<item 8>
+2012–13 Midlands football leagues (levels 9–10)
+The 2012–13 Midland Football Alliance season is the 19th in the history of Midland Football Alliance a football competition in England.
+
+ The 2012–13 Midland Football Combination season (known as the 2012–13 Athium Midland Football Combination for sponsorship reasons) is the 76th in the history
+of Midland Football Combination a football competition in England and feeder to the Midland Football Alliance.
+
+ The 2012–13 West Midlands (Regional) League season is the 113th in the history of the West Midlands (Regional) League.
+
+ It is also a feeder league to the Midland Football Alliance.
+</item 8>
+
+<item 9>
+Dudley Zoo
+Dudley Zoological Gardens is a 40 acre zoo located within the grounds of Dudley Castle in the town of Dudley, in the Black Country region of the West Midlands,
+England.
+
+ The Zoo opened to the public on 18 May 1937.
+
+ Dudley Zoo is owned and operated by Dudley and West Midlands Zoological Society, founded in 1935 and a registered charity.
+</item 9>
+
+<item 10>
+Tipton
+Tipton is a town in the borough of Sandwell, West Midlands, England, with a population of around 38,777 at the 2011 UK Census.
+
+ Tipton is located about halfway between Birmingham and Wolverhampton.
+
+ It is a part of the West Midlands conurbation and is a part of the Black Country.
+</item 10>
+=== END ITEM id=e5270131f6577204 ===
+
+=== ITEM id=cd8b01f74ad3c643 ===
+Gold sentences and facts:
+Sentence 0:  Along with competing in the league, the club will also participate in the FA Cup, EFL Cup and EFL Trophy.
+  Fact 0.0: The club will compete in the league.
+  Fact 0.1: The club will also participate in the FA Cup.
+  Fact 0.2: The club will also participate in the EFL Cup.
+  Fact 0.3: The club will also participate in the EFL Trophy.
+Sentence 1: The EFL Cup (referred to historically, and colloquially, as simply the League Cup), currently known as the Carabao Cup for sponsorship reasons, is an annual knockout football competition in men's domestic English football.
+  Fact 1.0: The EFL Cup is historically referred to as the League Cup.
+  Fact 1.1: The EFL Cup is colloquially referred to as simply the League Cup.
+  Fact 1.2: The EFL Cup is currently known as the Carabao Cup for sponsorship reasons.
+  Fact 1.3: The EFL Cup is an annual knockout football competition.
+  Fact 1.4: The EFL Cup is a competition in men's domestic English football.
+
+Retrieved items:
+<item 1>
+1979–80 Wigan Athletic F.C. season
+The 1979–80 season was the 42nd season in the history of Wigan Athletic F.C. and their second as a professional club in the Football League.
+</item 1>
+
+<item 2>
+1978–79 Wigan Athletic F.C. season
+The 1978–79 season was the 41st season in the history of Wigan Athletic F.C. and their first as a professional club in the Football League.
+
+ After finishing 2nd in the Northern Premier League during the previous season, the club was nominated to apply for Football League status, and were elected
+into the league to replace Southport.
+
+ After a poor start, the club exceeded expectations in the league, and towards the end of the season, a second consecutive promotion seemed possible.
+
+ The club eventually fell short, finishing the season in 6th place with a total of 55 points.
+</item 2>
+
+<item 3>
+2017–18 Wigan Athletic F.C. season
+The 2017–18 season is Wigan Athletic's 86th year in existence and their first back in League One, after being relegated the previous season.
+
+ Along with competing in the league, the club will also participate in the FA Cup, EFL Cup and EFL Trophy.
+
+ Paul Cook was appointed as manager on 31 May 2017, signing a 3 year deal, following the departure of much of the previous coaching staff the day before.
+</item 3>
+
+<item 4>
+EFL Cup
+The EFL Cup (referred to historically, and colloquially, as simply the League Cup), currently known as the Carabao Cup for sponsorship reasons, is an annual
+knockout football competition in men's domestic English football.
+
+ Organised by the English Football League (EFL), it is open to any club within the top four levels of the English football league system – 92 clubs in total –
+comprising the top level Premier League, and the three divisions of the English Football League's own league competition (Championship, League One and League
+Two).
+</item 4>
+
+<item 5>
+Trinidad and Tobago League Cup
+The Trinidad and Tobago League Cup, or commonly known as the First Citizens Cup for sponsorship reasons, is the league cup style football competition open for
+Trinidad and Tobago teams competing in the country's TT Pro League.
+
+ Similar to the FA Trophy, it is played on a knockout (single elimination) basis in September and October towards the beginning of each Pro League season.
+
+ Unlike the FA Trophy, where 36 teams enter each season from the top three tiers of the Trinidad and Tobago football league system and the Secondary Schools
+Football League, only teams from the TT Pro League compete in the league cup.
+
+ The knockout tournament was inaugurated in 2000 and is currently sponsored by First Citizens Bank.
+
+ Although the league cup is one of the three major domestic trophies attainable by Trinidad and Tobago league teams, it is perceived as a lower priority than
+the league championship and the FA Trophy.
+
+ The current theme is "Where Winners Reign", with TT$110,000 to the winner, TT$20,000 to the runners-up, semifinal winners receive TT$7,000, quaterfinal winners
+receive TT$5,000 and Play-off round winners receive TT$3,000.
+</item 5>
+
+<item 6>
+2012–13 Midlands football leagues (levels 9–10)
+The 2012–13 Midland Football Alliance season is the 19th in the history of Midland Football Alliance a football competition in England.
+
+ The 2012–13 Midland Football Combination season (known as the 2012–13 Athium Midland Football Combination for sponsorship reasons) is the 76th in the history
+of Midland Football Combination a football competition in England and feeder to the Midland Football Alliance.
+
+ The 2012–13 West Midlands (Regional) League season is the 113th in the history of the West Midlands (Regional) League.
+
+ It is also a feeder league to the Midland Football Alliance.
+</item 6>
+
+<item 7>
+2006–07 Wigan Athletic F.C. season
+The 2006–07 Wigan Athletic F.C. season was the club's 29th season in the Football League and their second season in the Premier League.
+</item 7>
+
+<item 8>
+2007–08 Wigan Athletic F.C. season
+The 2007–08 Wigan Athletic F.C. season was the club's 30th season in the Football League and their third season in the Premier League.
+</item 8>
+
+<item 9>
+List of Wigan Borough F.C. players
+Wigan Borough F.C. was an English football club based in the town of Wigan.
+
+ The club was founded in 1920 and joined the Lancashire Combination.
+
+ In 1921, Borough turned professional when their application was accepted to play in the inaugural season of the newly formed Football League Third Division
+North.
+
+ The team played in the Football League for ten seasons, with their most successful season coming in 1928–29, finishing fourth in the league and reaching the
+third round of the FA Cup.
+
+ Wigan Borough folded during the 1931–32 season due to financial problems, and League football did not return to the town until Wigan Athletic F.C. were elected
+into the Football League in 1978.
+</item 9>
+
+<item 10>
+2013–14 Midlands football leagues (levels 9–10)
+The 2013–14 Midland Football Alliance season was the 20th and final in the history of Midland Football Alliance, a football competition in England.
+
+ The 2013–14 Midland Football Combination season (known as the 2013–14 Athium Midland Football Combination for sponsorship reasons) was the 77th and final in
+the history of Midland Football Combination and it was a feeder to the Midland Football Alliance.
+
+ The 2013–14 West Midlands (Regional) League season was the 114th in the history of the West Midlands (Regional) League.
+
+ It was also a feeder league to the Midland Football Alliance.
+
+ At the end of the season the Midland Alliance and the Midland Combination merged to form the Midland Football League.
+</item 10>
+=== END ITEM id=cd8b01f74ad3c643 ===
+
+=== ITEM id=fa529347df10855a ===
+Gold sentences and facts:
+Sentence 0: Xingcheng (), former name Ningyuan (宁远), is a county-level city of southwest Liaoning province, China, with a population of approximately 140,000 urban inhabitants, and is located on the Liaodong Bay, i.e. the northern coast of the Bohai Sea.
+  Fact 0.0: Xingcheng is a county-level city of southwest Liaoning province, China.
+  Fact 0.1: Xingcheng's former name was Ningyuan (宁远).
+  Fact 0.2: Xingcheng has a population of approximately 140,000 urban inhabitants.
+  Fact 0.3: Xingcheng is located on Liaodong Bay, the northern coast of the Bohai Sea.
+Sentence 1:  It covers an area of 2046 square kilometers and has a population of about one million.
+  Fact 1.0: Xingcheng covers an area of 2046 square kilometers.
+  Fact 1.1: Xingcheng has a population of about one million.
+
+Retrieved items:
+<item 1>
+Dongtai
+Dongtai () is a coastal county-level city under the administration of Yancheng, Jiangsu province, China.
+
+ It has a population of roughly 1,170,000 estimated for 2007.
+
+ Out of the total population, about 260,000 live in the Dongtai urban core, others are distributed in the 23 suburban towns and rural regions (Some famous towns
+include Touzao, Anfeng, Qingdong, Sancang, Qianggang, Fu'an, Tangyang, etc.).
+
+ With some Yellow Sea coast, it borders the prefecture-level cities of Nantong to the south and Taizhou to the west, and is the southernmost county-level
+division of Yancheng.
+</item 1>
+
+<item 2>
+Ezhou
+Ezhou () is a prefecture-level city in eastern Hubei Province, China.
+
+ As of the 2010 census, the city had a population of 1,048,668, of which 668,727 lived in the core Echeng District.
+
+ The Ezhou - Huanggang built-up ("or metro") area was home to 1,035,496 inhabitants from the Echeng and Huangzhou, Huanggang Districts.
+</item 2>
+
+<item 3>
+Linzhou, Henan
+Linzhou (), formerly Lin County (林县), is a county-level city in Anyang, Henan, China.
+
+ Adjacent to Shanxi Province and Hebei Province, it is located in the north of Henan Province and at the eastern foot of the Taihang Mountains.
+
+ It covers an area of 2046 square kilometers and has a population of about one million.
+</item 3>
+
+<item 4>
+Suining
+Suining (; Sichuanese Pinyin: Xunin; Sichuanese pronunciation: ; ) is a prefecture-level city of eastern Sichuan province in Southwest China.
+
+ In 2002, Suining had a population of 658,798.
+</item 4>
+
+<item 5>
+Xingcheng
+Xingcheng (), former name Ningyuan (宁远), is a county-level city of southwest Liaoning province, China, with a population of approximately 140,000 urban
+inhabitants, and is located on the Liaodong Bay, i.e. the northern coast of the Bohai Sea.
+
+ Currently under the administration of Huludao City, the area is steeped in history, and contains one of the best preserved Ming Dynasty towns in China, as well
+as functioning as a laidback summer resort.
+</item 5>
+
+<item 6>
+Wenling
+Wenling (Wenling dialect: Uen-lin Zy ] ; ) is a coastal county-level city in the municipal region of Taizhou, in southeastern Zhejiang province, China.
+
+ It borders Luqiao and Huangyan to the north, Yuhuan to the south, Yueqing to the west, looks out to the East China Sea to the east.
+
+ Wenling locates on 28°22'N, 121°21'E, approximately 300 km south of Shanghai.
+</item 6>
+
+<item 7>
+Huan River
+The Huan River (), or Anyang River (安阳河), is a river in Henan, China, and part of the Hai River basin.
+
+ The river rises north of Linzhou in northwestern Henan, and joins the Wei River near Neihuang in the northeast of the province.
+</item 7>
+
+<item 8>
+Longkou
+Longkou (), formerly Huang County (), is a port city in northeastern Shandong province, China, facing the Bohai Sea to the north and the Laizhou Bay to the
+west.
+
+ Longkou, a county-level city, is administered by the prefecture-level city of Yantai.
+
+ The total population of Longkou is 620,000.
+</item 8>
+
+<item 9>
+Daying County
+Daying County () is a county of Sichuan province, China, under the administration of Suining City and in the central part of the Sichuan Basin.
+
+ In 2002, it had a population of 520,000 residing in an area of 703 km2 .
+
+ Daying is remarkable for being the home of the "Chinese Dead Sea", a tourist attraction that is based on a salt lake with 9 times the salinity of the ocean and
+which constitutes the largest indoor water park in China.
+
+ The G42 Shanghai–Chengdu Expressway and Dazhou–Chengdu Railway (达成铁路) traverses east–west through the entire length of the county.
+</item 9>
+
+<item 10>
+Fuzhoucheng
+Fuzhou, also Fuzhoucheng () is a town under the administration of Wafangdian City, in southern Liaoning province, China.
+
+ It lies at the intersection of China National Highway 202 and Liaoning Provincial Highway 313, 57 km north by road from Pulandian.
+
+ Dahe Reservoir is located several kilometres to the east.
+
+ There is a 74,132 acres (30,000 hectares) bird reserve nearby with species such as Swan goose and Hooded crane about 15 km southwest of the town.
+
+ , it has 2 residential communities (社区) and 14 villages under its administration.
+</item 10>
+=== END ITEM id=fa529347df10855a ===

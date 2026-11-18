@@ -1,0 +1,80 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5a835e215542992ef85e2296",
+   "sentences": [
+    " \"Pinus\" is the sole genus in the subfamily Pinoideae.",
+    " The Plant List compiled by the Royal Botanic Gardens, Kew and Missouri Botanical Garden accepts 126 species names of pines as current, together with 35 unresolved species and many more synonyms.",
+    " It is sometimes considered to have only two species, \"B. monosperma\" and \"B. superba\", or is expanded to include four or five species."
+   ]
+  },
+  {
+   "id": "8221988726104372475",
+   "sentences": [
+    "On 19 February 2007 Disney lost a court case in Los Angeles which ruled their `` misguided claims '' to dispute the licensing agreements with Slesinger , Inc. were unjustified , but a federal ruling of 28 September 2009 , again from Judge Florence - Marie Cooper , determined that the Slesinger family had granted all trademark and copyright rights to Disney , although Disney must pay royalties for all future use of the characters . Both parties have expressed satisfaction with the outcome ."
+   ]
+  },
+  {
+   "id": "multihop-rag-2345",
+   "sentences": [
+    "If you've got your gift list handy, now's a good time to start checking it off so you won't be pressed for time or funds when Black Friday and Cyber Monday come around next month.",
+    "“One of the hardest things is resentment can build up if you feel like you need to buy gifts for your family and you can barely make your student loan payments, so bring things up,” Alev said."
+   ]
+  },
+  {
+   "id": "multihop-rag-1350",
+   "sentences": [
+    "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy.",
+    "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.",
+    "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "5a7b24fe55429931da12c9f7",
+   "sentences": [
+    "German Spitz is used to refer to both a breed of dog and category or type of dog.",
+    " Several modern breeds have been developed from the German Spitz, and are either registered as separate breeds or as varieties of German Spitz.",
+    " The term was used to designate springer type spaniels that were neither Sussex nor Clumber Spaniels, and attempts were made to use it to specify a breed that would later become known as the English Springer Spaniel."
+   ]
+  },
+  {
+   "id": "5a88651b55429938390d3f45",
+   "sentences": [
+    "Bluebeard's Castle (Hungarian: A kékszakállú herceg vára ; literally: \"The Blue-Bearded Duke's Castle\") is a one-act opera by Hungarian composer Béla Bartók.",
+    "Agrippina (HWV 6) is an \"opera seria\" in three acts by George Frideric Handel with a libretto by Cardinal Vincenzo Grimani."
+   ]
+  },
+  {
+   "id": "multihop-rag-2014",
+   "sentences": [
+    "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.",
+    "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."
+   ]
+  },
+  {
+   "id": "5adcf3e35542994ed6169c3a",
+   "sentences": [
+    "Dean Mills Reservoir is a small water reservoir to the north of the town of Bolton, Greater Manchester located high on the slopes of Winter Hill.",
+    " It is located on Rivington Moor, Chorley and is 1496 ft high."
+   ]
+  },
+  {
+   "id": "6728482020797819238",
+   "sentences": [
+    "Your Lie in April Cover of the first tankōbon volume featuring Kōsei Arima and Kaori Miyazono 四 月 は 君 の 嘘 ( Shigatsu wa Kimi no Uso ) Manga Written by Naoshi Arakawa Published by Kodansha English publisher Kodansha Comics Demographic Shōnen Magazine Monthly Shōnen Magazine Original run April 6 , 2011 -- February 6 , 2015 Volumes 11 ( List of volumes ) Anime television series Directed by Kyōhei Ishiguro Written by Takao Yoshioka Music by Masaru Yokoyama Studio A-1 Pictures Licensed by Madman Entertainment Aniplex of America Anime Limited Original network Fuji TV ( Noitamina ) Original run October 9 , 2014 -- March 19 , 2015 Episodes 22 ( List of episodes ) Light novel Your Lie in April - A Six Person Etude Written by Yui Tokiumi Published by Kodansha English publisher Vertical Published November 17 , 2014 Volumes Manga Shigatsu wa Kimi no Uso : Coda Written by Naoshi Arakawa Demographic Shōnen Original run February 25 , 2015 -- October 28 , 2015 Volumes Original video animation Moments Directed by Kazuya Iwata Written by Takao Yoshioka Music by Masaru Yokoyama Studio A-1 Pictures Released May 15 , 2015 Runtime 23 minutes Live - action film Your Lie in April ( film ) Anime and Manga portal"
+   ]
+  },
+  {
+   "id": "5ab9988b554299131ca4238e",
+   "sentences": [
+    "Innocence is a 2013 American horror drama film directed by Hilary Brougher, who co-wrote the film with Tristine Skyler.",
+    " The movie stars Sophie Curtis, Kelly Reilly, Graham Phillips, Linus Roache, Sarah Sutherland and Stephanie March.",
+    "Stephanie Caroline March (born (1974--) 23, 1974 ) is an American actress.",
+    " She is best known for her role as Alexandra Cabot in the long-running NBC series, \"\"."
+   ]
+  }
+ ]
+}

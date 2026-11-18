@@ -1,0 +1,1018 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 7 items.
+
+=== ITEM id=ba9b0dc2524ff00f ===
+Gold sentences and facts:
+Sentence 0: Geoffrey Dyson Palmer , OBE ( born 4 June 1927 ) is an English actor known for his roles in British television sitcoms playing Jimmy Anderson in The Fall and Rise of Reginald Perrin ( 1976 -- 79 ) , Ben Parkinson in Butterflies ( 1978 -- 83 ) and Lionel Hardcastle in As Time Goes By ( 1992 -- 2005 ) . His film appearances include A Fish Called Wanda ( 1988 ) , The Madness of King George ( 1994 ) , Mrs. Brown ( 1997 ) , and Tomorrow Never Dies ( 1997 ) .
+  Fact 0.0: Geoffrey Dyson Palmer, OBE, was born on 4 June 1927.
+  Fact 0.1: Geoffrey Dyson Palmer holds the OBE honour.
+  Fact 0.2: Geoffrey Dyson Palmer is an English actor.
+  Fact 0.3: Geoffrey Dyson Palmer is known for his roles in British television sitcoms.
+  Fact 0.4: Geoffrey Dyson Palmer played Jimmy Anderson in The Fall and Rise of Reginald Perrin, which aired from 1976 to 1979.
+  Fact 0.5: Geoffrey Dyson Palmer played Ben Parkinson in Butterflies, which aired from 1978 to 1983.
+  Fact 0.6: Geoffrey Dyson Palmer played Lionel Hardcastle in As Time Goes By, which aired from 1992 to 2005.
+  Fact 0.7: Geoffrey Dyson Palmer's film appearances include A Fish Called Wanda (1988).
+  Fact 0.8: Geoffrey Dyson Palmer's film appearances include The Madness of King George (1994).
+  Fact 0.9: Geoffrey Dyson Palmer's film appearances include Mrs. Brown (1997).
+  Fact 0.10: Geoffrey Dyson Palmer's film appearances include Tomorrow Never Dies (1997).
+
+Retrieved items:
+<item 1>
+Robbie Coltrane
+Conway `` A Matter of Principle '' 1982 Sin on Saturday 1982 Five Go Mad in Dorset Female shopkeeper / Male gypsy Season 1 , Episode 1 of The Comic Strip
+Presents Are You Being Served Dynamite - truck driver on CB Radio `` Calling All Customers '' Alfresco various 1984 The Young Ones Doctor in Episode `` Bambi ''
+, Bouncer in Episode `` Oil '' Blackadder the Third Samuel Johnson `` Ink and Incapability '' Tutti Frutti Danny McGlone Nominated -- British Academy Television
+Award for Best Actor 1988 Blackadder 's Christmas Carol The Spirit of Christmas 1989 The Robbie Coltrane Special LWT comedy Special 1990 Danny Champion of the
+World Victor Hazell 1991 Screen One Psychiatrist Liam Kane `` Alive And Kicking '' 1993 The Legend of Lochnagar The old man TV film , voice 1993 -- 1995 2006
+Cracker Dr.
+</item 1>
+
+<item 2>
+Geoffrey Palmer (actor)
+Terence `` A Surfeit of H2O '' ( 1965 ) as Martin Smythe The Saint : `` The Rough Diamonds '' ( 1963 ) as Pete Ferguson Gideon 's Way ( TV Series ) `` The Alibi
+Man '' ( 1965 ) as Jeff Grant The Baron : `` Masquerade '' ( 1966 ) as Anstruther `` The Killing '' ( 1966 ) as Anstuther The Wednesday Play : Cathy Come Home (
+1966 ) as Property Agent Mrs Thursday ( 1966 ) as Henry Baxter Doctor Who : Doctor Who and the Silurians ( 1970 ) as Masters The Mutants ( 1972 ) as
+Administrator `` Voyage of the Damned '' ( 2007 ) as Captain Hardaker Colditz ( 1972 ) as Doc The Fall and Rise of Reginald Perrin ( 1976 -- 1979 ) as Jimmy
+Anderson Butterflies ( 1978 -- 1983 ) as Ben Parkinson The Professionals ( 1978 ) as Sinclair in `` Where The Jungle Ends '' Fawlty Towers : `` The Kipper and
+the Corpse '' ( 1979 ) as Dr.
+</item 2>
+
+<item 3>
+Gina Tognoni
+Watros ( 1998 ) Susan Lucci ( 1999 ) Susan Flannery ( 2000 ) Martha Byrne ( 2001 ) Susan Flannery ( 2002 ) Susan Flannery ( 2003 ) Michelle Stafford ( 2004 )
+Erika Slezak ( 2005 ) Kim Zimmer ( 2006 ) Maura West ( 2007 ) Jeanne Cooper ( 2008 ) Susan Haskell ( 2009 ) Maura West ( 2010 ) Laura Wright ( 2011 ) Heather
+Tom ( 2012 ) Heather Tom ( 2013 ) Eileen Davidson ( 2014 ) Maura West ( 2015 ) Mary Beth Evans ( 2016 ) Gina Tognoni ( 2017 ) Daytime Emmy Award for Outstanding
+Supporting Actress in a Drama Series Suzanne Rogers ( 1979 ) Francesca James ( 1980 ) Jane Elliot ( 1981 ) Dorothy Lyman ( 1982 ) Louise Shaffer ( 1983 ) Judi
+Evans ( 1984 ) Beth Maitland ( 1985 ) Leann Hunley ( 1986 ) Kathleen Noone ( 1987 ) Ellen Wheeler ( 1988 ) Nancy
+</item 3>
+
+<item 4>
+Geoffrey Palmer (actor)
+as Lord Scarman The Long Walk to Finchley ( 2008 ) ; as John Crowder Agatha Christie 's Poirot : `` The Clocks '' ( 2009 ) as Vice Admiral Hamling Grandpa in My
+Pocket `` Captain Dumbletwit 's Toughest Mission Yet ! '' ( 2010 ) as Grandad Gillbert Rev `` Christmas Special '' Series 2 , episode 7 ( 2011 ) as Martin Henry
+IV , Part II ( 2012 ) ; as Lord Chief Justice Royal Variety Performance ( 2014 ) ; as the announcer ( voice - only ) Film ( edit ) A Prize of Arms ( 1962 ) as
+Cpl . Myers Incident at Midnight ( 1963 ) as Dr. Tanfield Ring of Spies ( 1964 ) as Police Officer ( uncredited ) Cast a Giant Shadow ( 1966 ) as David (
+uncredited ) O Lucky Man !
+</item 4>
+
+<item 5>
+Robbie Coltrane
+Sgt . Troy 1985 Defence of the Realm Leo McAskey 1986 Caravaggio Scipione 1986 Mona Lisa Thomas Eat the Rich Jeremy 1988 Fruit Machine , The The Fruit Machine
+Annabelle 1989 Henry V Falstaff 1989 Bert Rigby , You 're a Fool Sid Trample 1989 Let It Ride Ticket Seller 1989 Danny , the Champion of the World Victor Hazell
+1989 Slipstream Montclaire 1990 Midnight Breaks Fat 1990 Nuns on the Run Charlie McManus / Sister Inviolata 1990 Perfectly Normal Alonzo Turner 1991 Pope Must
+Die , The The Pope Must Die The Pope 1991 Triple Bogey on a Par Five Hole Steffano Baccardi Oh , What a Night Todd Nominated -- Genie Award for Best Performance
+by an Actor in a Supporting Role 1993 Boswell & Johnson 's Tour of the Western Isles Dr. Samuel Johnson 1993 Adventures of Huck Finn , The The Adventures of
+Huck Finn Duke 1995 GoldenEye Valentin Dmitrovich Zukovsky 1997 Buddy Dr.
+</item 5>
+
+<item 6>
+Robbie Coltrane
+South Atlantic Raiders GLC : The Carnage Continues ... The Pope Must Die Detectives on the Edge of a Nervous Breakdown Churchill : The Hollywood Years The Hunt
+for Tony Blair Related articles Bad News Bad News ( album ) Bootleg 20th Century Coyote French and Saunders BAFTA TV Award for Best Actor Paul Rogers ( 1955 )
+Peter Cushing ( 1956 ) Michael Gough ( 1957 ) Michael Hordern ( 1958 ) Donald Pleasence ( 1959 ) Patrick McGoohan ( 1960 ) Lee Montague ( 1961 ) Rupert Davies (
+1962 ) Harry H. Corbett ( 1963 ) Alan Badel ( 1964 ) Patrick Wymark ( 1965 ) Alan Badel ( 1966 ) Warren Mitchell ( 1967 ) Eric Porter ( 1968 ) Roy Dotrice (
+1969 ) Edward Woodward ( 1970 ) Keith Michell ( 1971 ) John Le Mesurier ( 1972 ) Anthony Hopkins ( 1973 ) Frank Finlay ( 1974 ) Peter Barkworth ( 1975 ) John
+Hurt ( 1976 ) Derek Jacobi (
+</item 6>
+
+<item 7>
+Geoffrey Palmer (actor)
+Geoffrey Palmer ( actor ) - wikipedia Geoffrey Palmer ( actor ) Jump to : navigation , search Geoffrey Palmer OBE Palmer performing at A Breath of Fresh Air ,
+June 2008 ( 1927 - 06 - 04 ) 4 June 1927 ( age 90 ) London , England Occupation Actor Years active 1958 -- present Spouse ( s ) Sally Green ( m . 1963 )
+Children 2 , including Charles Palmer Geoffrey Dyson Palmer , OBE ( born 4 June 1927 ) is an English actor known for his roles in British television sitcoms
+playing Jimmy Anderson in The Fall and Rise of Reginald Perrin ( 1976 -- 79 ) , Ben Parkinson in Butterflies ( 1978 -- 83 ) and Lionel Hardcastle in As Time
+Goes By ( 1992 -- 2005 ) . His film appearances include A Fish Called Wanda ( 1988 ) , The Madness of King George ( 1994 ) , Mrs. Brown ( 1997 ) , and Tomorrow
+Never Dies ( 1997 ) .
+</item 7>
+
+<item 8>
+Gina Tognoni
+The two were married May 16 , 2009 . Filmography ( edit ) List of acting performances in film and television Year Title Role Notes 1995 -- 2001 , 2002 , 2010 --
+2011 One Life to Live Kelly Cramer Series regular 2002 Pride & Loyalty Stephanie 2003 Fastlane Gabriella Episode : `` Iced '' 2003 This Time Around Cara Cabot
+Television film 2003 Phenomenon II Officer Claire Television film 2004 -- 2009 Guiding Light Dinah Marler Series regular 2005 Law & Order : Special Victims Unit
+Officer Kristen Vaill Episode : `` Goliath '' 2005 Art Barbara Short film 2006 The Sopranos Catherine Lipman Episode : `` The Fleshy Part of the Thigh '' 2009
+Venice : The Series Sami Nelson Web series 2011 In the Family Nurse Jackson 2014 -- present The Young and the Restless Phyllis Summers Series regular Awards and
+nominations ( edit ) List of acting awards and nominations Year Award Title Result Ref .
+</item 8>
+
+<item 9>
+Geoffrey Palmer (actor)
+as Field Marshal Douglas Haig Inspector Morse : `` The Infernal Serpent '' ( 1990 ) as Matthew Copley - Barnes Bergerac ( 1990 ) `` Roots of Evil '' as Nigel
+Carter As Time Goes By ( 1992 -- 2005 ) as Lionel Hardcastle The Legacy of Reginald Perrin ( 1996 ) as Jimmy Anderson Alice Through the Looking Glass ( 1998 )
+as White King The Savages ( 2001 ) as Donald The 1940s House ( 2001 ) as Narrator Absolute Power ( 2003 ) as Lord Harcourt Grumpy Old Men ( 2003 -- 2004 , 2006
+) as Narrator He Knew He Was Right ( 2004 ) as Sir Marmaduke Rowley Grumpy Old Holidays ( 2006 ) as Narrator Ashes to Ashes : `` Episode 8 '' ( 2008 ) ; as Lord
+Scarman The Long Walk to Finchley ( 2008 ) ;
+</item 9>
+
+<item 10>
+Geoffrey Palmer (actor)
+Two sitcom roles brought him attention in the 1970s : the hapless brother - in - law of Reggie Perrin in The Fall and Rise of Reginald Perrin ( 1976 -- 79 ) ,
+and the phlegmatic Ben Parkinson in Carla Lane 's Butterflies ( 1978 -- 83 ) . He has continued to appear in productions written by Perrin creator David Nobbs ,
+the latest being the radio comedy The Maltby Collection . He starred opposite Judi Dench for over a decade in the BBC situation comedy As Time Goes By ( 1992 --
+2005 ) . During this time he also appeared with Dench in other productions , including the James Bond film Tomorrow Never Dies , in which he portrayed Admiral
+Roebuck , and Mrs. Brown , playing Sir Henry Ponsonby to Dench 's Queen Victoria . He played Doctor Price in the Fawlty Towers episode `` The Kipper and the
+Corpse '' , determined to get breakfast amidst the confusion caused by the death of a guest and Basil 's inept way of handling the emergency .
+</item 10>
+=== END ITEM id=ba9b0dc2524ff00f ===
+
+=== ITEM id=8fc354f10c3ce513 ===
+Gold sentences and facts:
+Sentence 0: A muscle relaxant is a drug that affects skeletal muscle function and decreases the muscle tone . It may be used to alleviate symptoms such as muscle spasms , pain , and hyperreflexia . The term `` muscle relaxant '' is used to refer to two major therapeutic groups : neuromuscular blockers and spasmolytics . Neuromuscular blockers act by interfering with transmission at the neuromuscular end plate and have no central nervous system ( CNS ) activity . They are often used during surgical procedures and in intensive care and emergency medicine to cause temporary paralysis . Spasmolytics , also known as `` centrally acting '' muscle relaxants , are used to alleviate musculoskeletal pain and spasms and to reduce spasticity in a variety of neurological conditions . While both neuromuscular blockers and spasmolytics are often grouped together as muscle relaxants , the term is commonly used to refer to spasmolytics only .
+  Fact 0.0: A muscle relaxant is a drug that affects skeletal muscle function.
+  Fact 0.1: A muscle relaxant decreases muscle tone.
+  Fact 0.2: A muscle relaxant may be used to alleviate muscle spasms.
+  Fact 0.3: A muscle relaxant may be used to alleviate pain.
+  Fact 0.4: A muscle relaxant may be used to alleviate hyperreflexia.
+  Fact 0.5: The term 'muscle relaxant' is used to refer to two major therapeutic groups.
+  Fact 0.6: The two major therapeutic groups referred to by 'muscle relaxant' are neuromuscular blockers and spasmolytics.
+  Fact 0.7: Neuromuscular blockers act by interfering with transmission at the neuromuscular end plate.
+  Fact 0.8: Neuromuscular blockers have no central nervous system (CNS) activity.
+  Fact 0.9: Neuromuscular blockers are often used during surgical procedures.
+  Fact 0.10: Neuromuscular blockers are often used in intensive care and emergency medicine.
+  Fact 0.11: Neuromuscular blockers are used to cause temporary paralysis.
+  Fact 0.12: Spasmolytics are also known as 'centrally acting' muscle relaxants.
+  Fact 0.13: Spasmolytics are used to alleviate musculoskeletal pain and spasms.
+  Fact 0.14: Spasmolytics are used to reduce spasticity in a variety of neurological conditions.
+  Fact 0.15: Neuromuscular blockers and spasmolytics are often grouped together as muscle relaxants.
+  Fact 0.16: The term 'muscle relaxant' is commonly used to refer to spasmolytics only.
+
+Retrieved items:
+<item 1>
+Muscle relaxant
+In general , muscle relaxants are not approved by FDA for long - term use . However , rheumatologists often prescribe cyclobenzaprine nightly on a daily basis
+to increase stage 4 sleep . By increasing this sleep stage , patients feel more refreshed in the morning . Improving sleep is also beneficial for patients who
+have fibromyalgia . Muscle relaxants such as tizanidine are prescribed in the treatment of tension headaches . Diazepam and carisoprodol are not recommended for
+older adults , pregnant women , or people who suffer depression or for those with a history of drug or alcohol addiction . Mechanism ( edit ) Because of the
+enhancement of inhibition in the CNS , most spasmolytic agents have the side effects of sedation , drowsiness and may cause dependence with long - term use .
+Several of these agents also have abuse potential , and their prescription is strictly controlled . The benzodiazepines , such as diazepam , interact with the
+GABA receptor in the central nervous system . While it can be used in patients with muscle spasm of almost any origin , it produces sedation in most individuals
+at the doses required to reduce muscle tone .
+</item 1>
+
+<item 2>
+Muscle relaxant
+Muscle relaxant - wikipedia Muscle relaxant Jump to : navigation , search This article is about skeletal muscle relaxants . For information on smooth muscle
+relaxants , see Antispasmodic . A muscle relaxant is a drug that affects skeletal muscle function and decreases the muscle tone . It may be used to alleviate
+symptoms such as muscle spasms , pain , and hyperreflexia . The term `` muscle relaxant '' is used to refer to two major therapeutic groups : neuromuscular
+blockers and spasmolytics . Neuromuscular blockers act by interfering with transmission at the neuromuscular end plate and have no central nervous system ( CNS
+) activity . They are often used during surgical procedures and in intensive care and emergency medicine to cause temporary paralysis . Spasmolytics , also
+known as `` centrally acting '' muscle relaxants , are used to alleviate musculoskeletal pain and spasms and to reduce spasticity in a variety of neurological
+conditions . While both neuromuscular blockers and spasmolytics are often grouped together as muscle relaxants , the term is commonly used to refer to
+spasmolytics only .
+</item 2>
+
+<item 3>
+Muscle relaxant
+PMID 17909209 . ^ Jump up to : van Tulder MW , Touray T , Furlan AD , Solway S , Bouter LM ( 2003 ) . Van Tulder , Maurits W , ed . `` Muscle relaxants for
+non-specific low back pain '' . Cochrane Database Syst Rev ( 2 ) : CD004252 . doi : 10.1002 / 14651858. CD004252 . PMID 12804507 . CS1 maint : Multiple names :
+authors list ( link ) ^ Jump up to : Beebe FA , Barkin RL , Barkin S ( 2005 ) . `` A clinical and pharmacologic review of skeletal muscle relaxants for
+musculoskeletal conditions '' . Am J Ther. 12 ( 2 ) : 151 -- 71 . doi : 10.1097 / 01. mjt. 0000134786.50087. d8 . PMID 15767833 . Jump up ^ See , S. ; Ginzburg
+, R. ( Feb 2008 ) . `` Skeletal muscle relaxants '' .
+</item 3>
+
+<item 4>
+Muscle relaxant
+Other skeletal muscle relaxants of that type used around the world come from a number of drug categories and other drugs used primarily for this indication
+include orphenadrine ( anticholinergic ) , chlorzoxazone , tizanidine ( clonidine relative ) , diazepam , tetrazepam and other benzodiazepines , mephenoxalone ,
+methocarbamol , dantrolene , baclofen , Drugs once but no longer or very rarely used to relax skeletal muscles include meprobamate , barbiturates , methaqualone
+, glutethimide and the like ; some subcategories of opioids have muscle relaxant properties , and some are marketed in combination drugs with skeletal and / or
+smooth muscle relaxants such as whole opium products , some ketobemidone , piritramide and fentanyl preparations and Equagesic . Neuromuscular blockers ( edit )
+Detailed view of a neuromuscular junction : 1 . Presynaptic terminal 2 . Sarcolemma 3 . Synaptic vesicle 4 . Nicotinic acetylcholine receptor 5 .
+</item 4>
+
+<item 5>
+Muscle relaxant
+( Feb 2008 ) . `` Skeletal muscle relaxants '' . Pharmacotherapy. 28 ( 2 ) : 207 -- 13 . doi : 10.1592 / phco. 28.2. 207 . PMID 18225966 . Jump up ^ `` When Are
+Muscle Relaxers Prescribed For Arthritis Patients ? '' . Retrieved 2010 - 07 - 09 . Jump up ^ MedlinePlus Encyclopedia Tension Headache Jump up ^ `` Muscle
+Relaxants '' . Retrieved 2010 - 07 - 09 . Jump up ^ Rang , H.P. ; Dale , M.M. ( 1991 ) . `` Drugs Used in Treating Motor Disorders '' . Pharmacology ( 2nd ed .
+) . Churchill Livingston . pp. 684 -- 705 . ISBN 044304483X . Jump up ^ Standaert , D.G. ; Young , A.B. ( 2001 ) . `` Treatment Of Central Nervous System
+Degerative Disorders '' . In Goodman , L.S.
+</item 5>
+
+<item 6>
+Muscle relaxant
+Retrieved 2010 - 07 - 09 . External links ( edit ) Skeletal Muscle Relaxants at the US National Library of Medicine Medical Subject Headings ( MeSH ) Skeletal
+muscle relaxants ( M03 ) Peripherally acting ( primarily antinicotinic , NMJ block ) Non-depolarizing Curare alkaloids Alcuronium Dimethyltubocurarine
+Tubocurarine 4 ° ammonium agents ultra-short duration : Gantacurium short duration : Mivacurium Chandonium intermediate duration : Atracurium Cisatracurium
+Fazadinium Rocuronium Vecuronium long duration : Doxacurium Dimethyltubocurarine Pancuronium Pipecuronium Laudexium Gallamine unsorted : Hexafluronium (
+Hexafluorenium ) Depolarizing Choline derivatives : Suxamethonium ( Succinylcholine ) Polyalkylene derivatives : Hexamethonium ACh release inhibitors Botulinum
+toxin Centrally acting Carbamic acid esters Carisoprodol Cyclarbamate Difebarbamate Febarbamate Meprobamate Phenprobamate Styramate Tybamate
+</item 6>
+
+<item 7>
+Muscle relaxant
+Mayo Clinic . Last Updated : April 1 , 2007 . Retrieved on September 19 , 2007 . ^ Jump up to : Miller , R.D. ( 1998 ) . `` Skeletal Muscle Relaxants '' . In
+Katzung , B.G. Basic & Clinical Pharmacology ( 7th ed . ) . Appleton & Lange . pp. 434 -- 449 . ISBN 0 - 8385 - 0565 - 1 . Jump up ^ Bowman WC ( January 2006 )
+. `` Neuromuscular block '' . Br. J. Pharmacol. 147 Suppl 1 : S277 -- 86 . doi : 10.1038 / sj. bjp. 0706404 . PMC 1760749 . PMID 16402115 . Jump up ^ `` Brief
+History '' . Retrieved 2010 - 07 - 09 . Jump up ^ `` Brief History '' . Retrieved 2010 - 07 - 09 . Jump up ^ Craig , C.R. ; Stitzel , R.E.
+</item 7>
+
+<item 8>
+Muscle relaxant
+dantrolene ) , so this name is inaccurate . Most sources still use the term `` centrally acting muscle relaxant '' . According to MeSH , dantrolene is usually
+classified as a centrally acting muscle relaxant . The World Health Organization , in its ATC , uses the term `` centrally acting agents '' , but adds a
+distinct category of `` directly acting agents '' , for dantrolene . Use of this terminology dates back to at least 1973 . The term `` spasmolytic '' is also
+considered a synonym for antispasmodic . Clinical use ( edit ) Spasmolytics such as carisoprodol , cyclobenzaprine , metaxalone , and methocarbamol are commonly
+prescribed for low back pain or neck pain , fibromyalgia , tension headaches and myofascial pain syndrome . However , they are not recommended as first - line
+agents ; in acute low back pain , they are not more effective than paracetamol or nonsteroidal anti-inflammatory drugs ( NSAIDs ) , and in fibromyalgia they are
+not more effective than antidepressants .
+</item 8>
+
+<item 9>
+Muscle relaxant
+Other common spasmolytic agents include : methocarbamol , carisoprodol , chlorzoxazone , cyclobenzaprine , gabapentin , metaxalone , and orphenadrine . Side
+effects ( edit ) Muscle relaxants are very powerful drugs which may produce negative effects , including heart failure and paralysis . Patients most commonly
+report sedation as the main adverse effect of muscle relaxants . Usually , people become less alert when they are under the effects of muscle relaxant drugs .
+People are normally advised not to drive vehicles or operate heavy machinery while under muscle relaxants ' effects . Cyclobenzaprine produces confusion and
+lethargy , as well as anticholinergic side effects . When taken in excess or in combination with other substances , it may also be toxic . While the body
+adjusts to this medication , it is possible for patients to experience dry mouth , fatigue , lightheadedness , constipation or blurred vision . Some serious but
+unlikely side effects may be experienced , including mental or mood changes , possible confusion and hallucinations , and difficulty urinating .
+</item 9>
+
+<item 10>
+Muscle relaxant
+Febarbamate Meprobamate Phenprobamate Styramate Tybamate Benzodiazepines Bromazepam Diazepam Clonazepam Flunitrazepam Lorazepam Nitrazepam Temazepam Tetrazepam
+Nonbenzodiazepines Eszopiclone Thienodiazepines Etizolam Quinazolines Methaqualone Anticholinergics ( Antimuscarinics ) Cyclobenzaprine Orphenadrine Other
+Arbaclofen placarbil Baclofen Chlormezanone Chlorphenesin Chlorzoxazone Donepezil Eperisone Fenyramidol Flopropione Gabapentin GHB Inaperisone Lanperisone
+Mephenesin Mephenoxalone Metaxalone Methocarbamol Phenibut Pregabalin Pridinol Promoxolane Quinine Silperisone Thiocolchicoside Tizanidine Tolperisone
+Zoxazolamine Directly acting Dantrolene Pharmacology : major drug groups Gastrointestinal tract / metabolism ( A ) stomach acid Antacids H antagonists Proton
+pump inhibitors Antiemetics Laxatives
+</item 10>
+=== END ITEM id=8fc354f10c3ce513 ===
+
+=== ITEM id=689d024a43c73a7b ===
+Gold sentences and facts:
+Sentence 0: The phrase `` objects in ( the ) mirror are closer than they appear '' is a safety warning that is required to be engraved on passenger side mirrors of motor vehicles in the USA , Canada , Nepal , India and Saudi Arabia . It is present because while these mirrors ' convexity gives them a useful field of view , it also makes objects appear smaller . Since smaller - appearing objects seem farther away than they actually are , a driver might make a maneuver such as a lane change assuming an adjacent vehicle is a safe distance behind , when in fact it is quite a bit closer . The warning serves as a reminder to the driver of this potential problem .
+  Fact 0.0: The phrase 'objects in (the) mirror are closer than they appear' is a safety warning.
+  Fact 0.1: The safety warning is required to be engraved on passenger side mirrors of motor vehicles.
+  Fact 0.2: The engraving requirement applies in the USA, Canada, Nepal, India and Saudi Arabia.
+  Fact 0.3: The warning is present on passenger side mirrors because their convexity gives them a useful field of view.
+  Fact 0.4: The convexity of passenger side mirrors makes objects appear smaller.
+  Fact 0.5: Smaller-appearing objects seem farther away than they actually are.
+  Fact 0.6: A driver might make a maneuver such as a lane change assuming an adjacent vehicle is a safe distance behind.
+  Fact 0.7: In fact, the adjacent vehicle is quite a bit closer than the driver assumes.
+  Fact 0.8: The warning serves as a reminder to the driver of this potential problem.
+
+Retrieved items:
+<item 1>
+Objects in mirror are closer than they appear
+In popular culture ( edit ) Despite its origin as a utilitarian safety warning , the phrase has become a well known catch phrase that has been used for many
+other purposes . Some of them are : Objects in the Mirror Are Closer Than They Appear , the 2000 debut album of rap rock group Confrontation Camp . Objects in
+the Mirror Are Closer Than They Appear , a 1993 album by Nancy Moran Objects in Mirror Are Closer Than They Appear , a 2005 album by Jozef van Wissem . Objects
+in Mirror Are Closer Than They Appear , a 1995 novel by Katharine Weber . Showing an approach of a Tyrannosaurus rex in the film Jurassic Park , which was
+parodied in Toy Story 2 . A Far Side cartoon by Gary Larson in which the side mirror showed a very large eyeball . A reference in Ace Ventura : Pet Detective ,
+in which a pejorative term replaces `` objects . '' `` Objects in the Rear View Mirror May Appear Closer than They Are , '' a 1994 song performed by Meat Loaf
+and written by Jim Steinman - the opposite of the safety warning .
+</item 1>
+
+<item 2>
+The safety warning “Objects in mirror are closer than they appear” became a popular catchphrase and inspired several works: albums by Confrontation Camp (2000),
+Nancy Moran (1993), and Jozef van Wissem (2005); a 1995 novel by Katharine Weber; and references in *Jurassic Park*, *Toy Story 2*, *The Far Side*, and *Ace
+Ventura: Pet Detective*. Meat Loaf’s 1994 song “Objects in the Rear
+</item 2>
+
+<item 3>
+“Objects in Mirror Are Closer Than They Appear” is a warning on convex vehicle mirrors, explaining that objects may seem farther away than they are. U.S.
+vehicle safety standards specify its wording, placement, and letter size. Related topics include blind spots, visibility, parking sensors, rear-view mirrors,
+and the London Underground warning “Mind the gap.” “Objects in Mirror” is also an Iranian film.
+</item 3>
+
+<item 4>
+Drawing
+Typically this convergence point is somewhere along the horizon , as buildings are built level with the flat surface . When multiple structures are aligned with
+each other , such as buildings along a street , the horizontal tops and bottoms of the structures typically converge at a vanishing point . When both the fronts
+and sides of a building are drawn , then the parallel lines forming a side converge at a second point along the horizon ( which may be off the drawing paper . )
+This is a two - point perspective . Converging the vertical lines to a third point above or below the horizon then produces a three - point perspective . Depth
+can also be portrayed by several techniques in addition to the perspective approach above . Objects of similar size should appear ever smaller the further they
+are from the viewer . Thus the back wheel of a cart appears slightly smaller than the front wheel . Depth can be portrayed through the use of texture . As the
+texture of an object gets further away it becomes more compressed and busy , taking on an entirely different character than if it was close . Depth can also be
+portrayed by reducing the contrast in more distant objects , and by making their colors less saturated .
+</item 4>
+
+<item 5>
+Objects in mirror are closer than they appear
+Objects in mirror are Closer than they appear - wikipedia Objects in mirror are Closer than they appear Jump to : navigation , search Side - view mirror with
+legend Wing mirror on Korean - specification vehicle . Legend in Korean reads `` Objects in mirror are closer than they appear '' . Main article : Wing mirror
+The phrase `` objects in ( the ) mirror are closer than they appear '' is a safety warning that is required to be engraved on passenger side mirrors of motor
+vehicles in the USA , Canada , Nepal , India and Saudi Arabia . It is present because while these mirrors ' convexity gives them a useful field of view , it
+also makes objects appear smaller . Since smaller - appearing objects seem farther away than they actually are , a driver might make a maneuver such as a lane
+change assuming an adjacent vehicle is a safe distance behind , when in fact it is quite a bit closer . The warning serves as a reminder to the driver of this
+potential problem . Comparison of the real over-the - shoulder view ( green arrow ) and apparent through the passenger side mirror ( sum of red arrows )
+evaluation of distance between the driver 's head and the object behind .
+</item 5>
+
+<item 6>
+Objects in mirror are closer than they appear
+Explanation from PhysLink.com . Retrieved from `` https://en.wikipedia.org/w/index.php?title=Objects_in_mirror_are_closer_than_they_appear&oldid=838121569 ''
+Categories : English phrases Mirrors Car safety Hidden categories : Wikipedia articles needing clarification from March 2016 Interlanguage link template link
+number Talk About Wikipedia 한국어 Edit links This page was last edited on 25 April 2018 , at 01 : 58 . Text is available under the Creative Commons Attribution -
+ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark
+of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 6>
+
+<item 7>
+Objects in mirror are closer than they appear
+A reference in the 2011 film Transformers : Dark of the Moon film occurs when Dino , Bumblebee and Sideswipe are protecting Sentinel from the dreads , this
+appears in a brief shot in Dino 's mirror . `` Objects In The Mirror , '' a song performed by American rapper Mac Miller on his second studio album Watching
+Movies with the Sound Off `` Subjects in the mirror are more far than they appear '' the title of experimental visual project by Hungarian director / production
+designer Pater Sparrow `` Objects in the Mirror , '' a 2015 song by a-ha . Objects in the mirror , a song performed by Chris Miles . ( 2016 ) Objects in mirror
+are closer than they appear was a level in the videogame `` Bugs Bunny : Lost in time '' ( PlayStation 1 ) . In My Little Pony : The Movie , the sentence ``
+Objects in windows may be less mountainous than they appear '' is uttered .
+</item 7>
+
+<item 8>
+Objects in mirror are closer than they appear
+Iranian film Objects in Mirror ( fa ) See also ( edit ) Blind spot ( automobile ) Blind spot monitor Driver visibility Parking sensors Rear - view mirror Mind
+the gap , another safety warning used at various London Underground stations that has also become a well - known catchphrase . References ( edit ) Jump up ^ For
+example , in the U.S , PART 571 Federal Motor Vehicle Safety Standards , Section 571.111 S5. 4.2 `` Each convex mirror shall have permanently and indelibly
+marked at the lower edge of the mirror 's reflective surface , in letters not less than 4.8 mm nor more than 6.4 mm high the words `` Objects in Mirror Are
+Closer Than They Appear . '' Jump up ^ Why does the passenger side window on my car state ' objects in mirror are closer than they appear ? ' Explanation from
+PhysLink.com .
+</item 8>
+
+<item 9>
+The phrase “Objects in the mirror are closer than they appear” is referenced in *Transformers: Dark of the Moon* (2011), where it appears in a brief shot in
+Dino’s mirror as he, Bumblebee, and Sideswipe protect Sentinel from the Dreads. Related titles include Mac Miller’s “Objects in the Mirror,” Hungarian director
+Pater Sparrow’s experimental project *Subjects in the Mirror Are More Far Than They Appear*, a-ha’s 2015
+</item 9>
+
+<item 10>
+The warning “Objects in mirror are closer than they appear” is required on passenger-side mirrors in the United States, Canada, Nepal, India, and Saudi Arabia.
+These mirrors are convex, providing a wider field of view but making objects look smaller and farther away than they are. The warning reminds drivers to account
+for this distortion before maneuvers such as changing lanes.
+</item 10>
+=== END ITEM id=689d024a43c73a7b ===
+
+=== ITEM id=07fa6c7b627f79f3 ===
+Gold sentences and facts:
+Sentence 0: The Sino - Indian War ( Hindi : भारत - चीन युद्ध Bhārat - Chīn Yuddh ) , also known as the Sino - Indian Border Conflict ( simplified Chinese : 中 印 边境 战争 ; traditional Chinese : 中 印 邊境 戰爭 ; pinyin : Zhōng - Yìn Biānjìng Zhànzhēng ) , was a war between China and India that occurred in 1962 . A disputed Himalayan border was the main pretext for war , but other issues played a role . There had been a series of violent border incidents after the 1959 Tibetan uprising , when India had granted asylum to the Dalai Lama . India initiated a Forward Policy in which it placed outposts along the border , including several north of the McMahon Line , the eastern portion of a Line of Actual Control proclaimed by Chinese Premier Zhou Enlai in 1959 .
+  Fact 0.0: The Sino-Indian War is also known as the Sino-Indian Border Conflict.
+  Fact 0.1: The Sino-Indian War's Hindi name is भारत - चीन युद्ध (Bhārat - Chīn Yuddh).
+  Fact 0.2: The Sino-Indian War's simplified Chinese name is 中印边境战争.
+  Fact 0.3: The Sino-Indian War's traditional Chinese name is 中印邊境戰爭.
+  Fact 0.4: The Sino-Indian War's pinyin name is Zhōng-Yìn Biānjìng Zhànzhēng.
+  Fact 0.5: The Sino-Indian War was a war between China and India.
+  Fact 0.6: The Sino-Indian War occurred in 1962.
+  Fact 0.7: A disputed Himalayan border was the main pretext for the Sino-Indian War.
+  Fact 0.8: Other issues played a role in the Sino-Indian War.
+  Fact 0.9: There had been a series of violent border incidents after the 1959 Tibetan uprising.
+  Fact 0.10: India had granted asylum to the Dalai Lama at the time of the 1959 Tibetan uprising.
+  Fact 0.11: India initiated a Forward Policy.
+  Fact 0.12: In its Forward Policy, India placed outposts along the border.
+  Fact 0.13: In its Forward Policy, India placed several outposts north of the McMahon Line.
+  Fact 0.14: The McMahon Line is the eastern portion of a Line of Actual Control.
+  Fact 0.15: The Line of Actual Control was proclaimed by Chinese Premier Zhou Enlai in 1959.
+
+Retrieved items:
+<item 1>
+Sino-Indian War
+It is noteworthy that the buildup and offensive from China occurred concurrently with the 13 - day Cuban Missile Crisis ( 16 -- 28 October 1962 ) that saw both
+the United States and the Soviet Union confronting each other , and India did not receive assistance from either of these world powers until the Cuban Missile
+Crisis was resolved . Contents ( hide ) 1 Location 2 Background 2.1 Aksai Chin 2.2 The McMahon Line 3 Events leading up to war 3.1 Tibet and the border dispute
+3.2 1960 meetings to resolve the boundary question 3.3 The Forward Policy 3.4 Early incidents 4 Confrontation at Thag La 5 Chinese and Indian preparations 5.1
+Motives 5.2 Military planning 6 Chinese offensive 6.1 Eastern theatre 6.2 Western theatre 7 Lull in the fighting 8 Continuation of war 8.1 Eastern theatre 8.2
+Western theatre 9 Ceasefire 10 World opinion 11 Involvement of other nations 12 Aftermath 12.1 China 12.2 India 12.2.
+</item 1>
+
+<item 2>
+The 1962 Sino-Indian War arose from a disputed Himalayan border, amid tensions after India granted asylum to the Dalai Lama and established forward outposts,
+including north of the McMahon Line. Later clashes included the Nathu La and Chola incidents, where Chinese forces withdrew, and a bloodless 1987 skirmish.
+Agreements in 1993 and 1996 aimed to preserve peace along the Line of Actual Control, but efforts to define it made little progress. In
+</item 2>
+
+<item 3>
+The Sino-Indian War was fought between India and China from 20 October to 21 November 1962, primarily in Aksai Chin and the North-East Frontier Agency (now
+Arunachal Pradesh). The conflict ended in a Chinese victory.
+</item 3>
+
+<item 4>
+Sino-Indian War
+The Sino - Indian War ( Hindi : भारत - चीन युद्ध Bhārat - Chīn Yuddh ) , also known as the Sino - Indian Border Conflict ( simplified Chinese : 中 印 边境 战争 ;
+traditional Chinese : 中 印 邊境 戰爭 ; pinyin : Zhōng - Yìn Biānjìng Zhànzhēng ) , was a war between China and India that occurred in 1962 . A disputed Himalayan
+border was the main pretext for war , but other issues played a role . There had been a series of violent border incidents after the 1959 Tibetan uprising ,
+when India had granted asylum to the Dalai Lama . India initiated a Forward Policy in which it placed outposts along the border , including several north of the
+McMahon Line , the eastern portion of a Line of Actual Control proclaimed by Chinese Premier Zhou Enlai in 1959 .
+</item 4>
+
+<item 5>
+The 1962 Sino-Indian War (20 October–21 November) grew from unresolved claims to Aksai Chin and Arunachal Pradesh, sharpened by China’s strategic road through
+Aksai Chin, the Dalai Lama’s asylum in India, and Indian forward posts. China, with roughly 80,000 troops against India’s 10,000–12,000, attacked in both
+regions, using surprise and mountain routes to overrun positions including Tawang, Rez
+</item 5>
+
+<item 6>
+China’s 1962 war aims included retaining territory occupied by the PLA and punishing India for its Forward Policy, which Beijing viewed as creeping annexation;
+China also perceived Indian efforts to undermine its control of Tibet. India said the policy would protect supply routes, but wrongly assumed China would not
+attack its posts. The defeat exposed India’s military unpreparedness, damaged Nehru’s “brotherhood” policy, and prompted criticism and Menon’s resignation.
+India avoided using its air force, though China
+</item 6>
+
+<item 7>
+Sino-Indian War
+China 's heavy artillery facing Taiwan could then be moved to Tibet . It took China six to eight months to gather the resources needed for the war , according
+to Anil Athale , author of the official Indian history . The Chinese sent a large quantity of non-military supplies to Tibet through the Indian port of Calcutta
+. Early incidents ( edit ) Various border conflicts and `` military incidents '' between India and China flared up throughout the summer and autumn of 1962 . In
+May , the Indian Air Force was told not to plan for close air support , although it was assessed as being a feasible way to counter the unfavourable ratio of
+Chinese to Indian troops . In June , a skirmish caused the deaths of dozens of Chinese troops . The Indian Intelligence Bureau received information about a
+Chinese buildup along the border which could be a precursor to war . During June -- July 1962 , Indian military planners began advocating `` probing actions ''
+against the Chinese , and accordingly , moved mountain troops forward to cut off Chinese supply lines . According to Patterson , the Indian motives were
+threefold : Test Chinese resolve and intentions regarding India .
+</item 7>
+
+<item 8>
+After approving a “self-defensive counter-attack,” China launched the Sino-Indian War on 20 October 1962, attacking Indian positions in Aksai Chin and along the
+Namka Chu River; fighting also occurred near Nathula Pass. Chinese forces captured disputed territory after four days. In the eastern theatre on 17 November,
+they outflanked Se La and Bomdi La via mountain trails, cut supply routes, and isolated 10,000 Indian troops. In the west,
+</item 8>
+
+<item 9>
+China’s 1962 attack on India coincided with the Cuban Missile Crisis, leaving the United States and Soviet Union too preoccupied to assist India until the
+crisis ended. Possible motives included undermining Nehru’s prestige, challenging Soviet support for India, and countering perceived encirclement by India, the
+U.S., and the USSR. Some accounts suggest China timed its offensive to reduce the risk of outside intervention, though its preparations may have begun before
+the crisis.
+</item 9>
+
+<item 10>
+India established 60 Forward Policy outposts, including 43 north of the McMahon Line, which China saw as expansionist. Chinese counter-encirclement and Indian
+probing actions escalated tensions. After the U.S. ruled out a Nationalist attack on China, Beijing shifted artillery from Taiwan toward Tibet and spent six to
+eight months preparing supplies. Summer 1962 saw deadly skirmishes and troop buildups. India sought to test China, gauge Soviet support, and win U.S. sympathy;
+in July
+</item 10>
+=== END ITEM id=07fa6c7b627f79f3 ===
+
+=== ITEM id=2d736665afa64e4a ===
+Gold sentences and facts:
+Sentence 0: ( hide ) Climate data for The South Pole Month Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec Year Record high ° C ( ° F ) − 14.4 ( 6.1 ) − 20.6 ( − 5.1 ) − 26.7 ( − 16.1 ) − 27.8 ( − 18 ) − 25.1 ( − 13.2 ) − 28.8 ( − 19.8 ) − 33.9 ( − 29 ) − 32.8 ( − 27 ) − 29.3 ( − 20.7 ) − 25.1 ( − 13.2 ) − 18.9 ( − 2 ) − 12.3 ( 9.9 ) − 12.3 ( 9.9 ) Average high ° C ( ° F ) − 26.0 ( − 14.8 ) − 37.9 ( − 36.2 ) − 49.6 ( − 57.3 ) − 53.0 ( − 63.4 ) − 53.6 ( − 64.5 ) − 54.5 ( − 66.1 ) − 55.2 ( − 67.4 ) − 54.9 ( − 66.8 ) − 54.4 ( − 65.9 ) − 48.4 ( − 55.1 ) − 36.2 ( − 33.2 ) − 26.3 ( − 15.3 ) − 45.8 ( − 50.4 ) Daily mean ° C ( ° F ) − 28.4 ( − 19.1 ) − 40.9 ( − 41.6 ) − 53.7 ( − 64.7 ) − 57.8 ( − 72 ) − 58.0 ( − 72.4 ) − 58.9 ( − 74 ) − 59.8 ( − 75.6 ) − 59.7 ( − 75.5 ) − 59.1 ( − 74.4 ) − 51.6 ( − 60.9 ) − 38.2 ( − 36.8 ) − 28.0 ( − 18.4 ) − 49.5 ( − 57.1 ) Average low ° C ( ° F ) − 29.6 ( − 21.3 ) − 43.1 ( − 45.6 ) − 56.8 ( − 70.2 ) − 60.9 ( − 77.6 ) − 61.5 ( − 78.7 ) − 62.8 ( − 81 ) − 63.4 ( − 82.1 ) − 63.2 ( − 81.8 ) − 61.7 ( − 79.1 ) − 54.3 ( − 65.7 ) − 40.1 ( − 40.2 ) − 29.1 ( − 20.4 ) − 52.2 ( − 62 ) Record low ° C ( ° F ) − 41.1 ( − 42 ) − 58.9 ( − 74 ) − 71.1 ( − 96 ) − 75.0 ( − 103 ) − 78.3 ( − 108.9 ) − 82.8 ( − 117 ) − 80.6 ( − 113.1 ) − 79.3 ( − 110.7 ) − 79.4 ( − 110.9 ) − 72.0 ( − 97.6 ) − 55.0 ( − 67 ) − 41.1 ( − 42 ) − 82.8 ( − 117 ) Average precipitation mm ( inches ) 0.3 ( 0.012 ) 0.6 ( 0.024 ) 0.2 ( 0.008 ) 0.1 ( 0.004 ) 0.2 ( 0.008 ) 0.1 ( 0.004 ) Trace Trace 0.1 ( 0.004 ) 0.1 ( 0.004 ) 0.1 ( 0.004 ) 0.3 ( 0.012 ) 2.3 ( 0.091 ) Average precipitation days ( ≥ 0.1 mm ) 0.2 0.3 0.2 0.0 0.2 0.1 0.0 0.0 0.1 0.1 0.1 0.3 1.6 Average snowy days 22.0 19.6 13.6 11.4 17.2 17.3 18.2 17.5 11.7 16.7 16.9 20.6 203.0 Mean monthly sunshine hours 406.1 497.2 195.3 0.0 0.0 0.0 0.0 0.0 34.1 390.6 558.0 616.9 2,698.2 Mean daily sunshine hours 13.1 17.6 6.3 0.0 0.0 0.0 0.0 0.0 1.1 12.6 18.6 19.9 7.4 Source # 1 : Pogoda.ru.net ( temperatures , 1981 -- 2010 , extremes 1957 -- present ) Source # 2 : Deutscher Wetterdienst ( precipitation 1957 -- 1988 and sun 1978 -- 1993 ) , NOAA ( snowy days data , 1961 -- 1988 )
+  Fact 0.0: The climate data table is for The South Pole.
+  Fact 0.1: The record high temperatures at The South Pole in degrees Celsius (Fahrenheit) are -14.4 (6.1) in January, -20.6 (-5.1) in February, -26.7 (-16.1) in March, -27.8 (-18) in April, -25.1 (-13.2) in May, -28.8 (-19.8) in June, -33.9 (-29) in July, -32.8 (-27) in August, -29.3 (-20.7) in September, -25.1 (-13.2) in October, -18.9 (-2) in November and -12.3 (9.9) in December.
+  Fact 0.2: The record high temperature for the year at The South Pole is -12.3 (9.9) degrees Celsius (Fahrenheit).
+  Fact 0.3: The average high temperatures at The South Pole in degrees Celsius (Fahrenheit) are -26.0 (-14.8) in January, -37.9 (-36.2) in February, -49.6 (-57.3) in March, -53.0 (-63.4) in April, -53.6 (-64.5) in May, -54.5 (-66.1) in June, -55.2 (-67.4) in July, -54.9 (-66.8) in August, -54.4 (-65.9) in September, -48.4 (-55.1) in October, -36.2 (-33.2) in November and -26.3 (-15.3) in December.
+  Fact 0.4: The average high temperature for the year at The South Pole is -45.8 (-50.4) degrees Celsius (Fahrenheit).
+  Fact 0.5: The daily mean temperatures at The South Pole in degrees Celsius (Fahrenheit) are -28.4 (-19.1) in January, -40.9 (-41.6) in February, -53.7 (-64.7) in March, -57.8 (-72) in April, -58.0 (-72.4) in May, -58.9 (-74) in June, -59.8 (-75.6) in July, -59.7 (-75.5) in August, -59.1 (-74.4) in September, -51.6 (-60.9) in October, -38.2 (-36.8) in November and -28.0 (-18.4) in December.
+  Fact 0.6: The daily mean temperature for the year at The South Pole is -49.5 (-57.1) degrees Celsius (Fahrenheit).
+  Fact 0.7: The average low temperatures at The South Pole in degrees Celsius (Fahrenheit) are -29.6 (-21.3) in January, -43.1 (-45.6) in February, -56.8 (-70.2) in March, -60.9 (-77.6) in April, -61.5 (-78.7) in May, -62.8 (-81) in June, -63.4 (-82.1) in July, -63.2 (-81.8) in August, -61.7 (-79.1) in September, -54.3 (-65.7) in October, -40.1 (-40.2) in November and -29.1 (-20.4) in December.
+  Fact 0.8: The average low temperature for the year at The South Pole is -52.2 (-62) degrees Celsius (Fahrenheit).
+  Fact 0.9: The record low temperatures at The South Pole in degrees Celsius (Fahrenheit) are -41.1 (-42) in January, -58.9 (-74) in February, -71.1 (-96) in March, -75.0 (-103) in April, -78.3 (-108.9) in May, -82.8 (-117) in June, -80.6 (-113.1) in July, -79.3 (-110.7) in August, -79.4 (-110.9) in September, -72.0 (-97.6) in October, -55.0 (-67) in November and -41.1 (-42) in December.
+  Fact 0.10: The record low temperature for the year at The South Pole is -82.8 (-117) degrees Celsius (Fahrenheit).
+  Fact 0.11: The average precipitation at The South Pole in millimeters (inches) is 0.3 (0.012) in January, 0.6 (0.024) in February, 0.2 (0.008) in March, 0.1 (0.004) in April, 0.2 (0.008) in May, 0.1 (0.004) in June, Trace in July, Trace in August, 0.1 (0.004) in September, 0.1 (0.004) in October, 0.1 (0.004) in November and 0.3 (0.012) in December.
+  Fact 0.12: The average precipitation for the year at The South Pole is 2.3 (0.091) millimeters (inches).
+  Fact 0.13: The average number of days with precipitation of at least 0.1 mm at The South Pole is 0.2 in January, 0.3 in February, 0.2 in March, 0.0 in April, 0.2 in May, 0.1 in June, 0.0 in July, 0.0 in August, 0.1 in September, 0.1 in October, 0.1 in November and 0.3 in December.
+  Fact 0.14: The average number of days with precipitation of at least 0.1 mm at The South Pole is 1.6 for the year.
+  Fact 0.15: The average number of snowy days at The South Pole is 22.0 in January, 19.6 in February, 13.6 in March, 11.4 in April, 17.2 in May, 17.3 in June, 18.2 in July, 17.5 in August, 11.7 in September, 16.7 in October, 16.9 in November and 20.6 in December.
+  Fact 0.16: The average number of snowy days at The South Pole is 203.0 for the year.
+  Fact 0.17: The mean monthly sunshine hours at The South Pole are 406.1 in January, 497.2 in February, 195.3 in March, 0.0 in April, 0.0 in May, 0.0 in June, 0.0 in July, 0.0 in August, 34.1 in September, 390.6 in October, 558.0 in November and 616.9 in December.
+  Fact 0.18: The mean monthly sunshine hours at The South Pole total 2,698.2 for the year.
+  Fact 0.19: The mean daily sunshine hours at The South Pole are 13.1 in January, 17.6 in February, 6.3 in March, 0.0 in April, 0.0 in May, 0.0 in June, 0.0 in July, 0.0 in August, 1.1 in September, 12.6 in October, 18.6 in November and 19.9 in December.
+  Fact 0.20: The mean daily sunshine hours at The South Pole are 7.4 for the year.
+  Fact 0.21: Source 1 for the data is Pogoda.ru.net, for temperatures from 1981 to 2010 and extremes from 1957 to present.
+  Fact 0.22: Source 2 for the data is Deutscher Wetterdienst, for precipitation from 1957 to 1988 and sun from 1978 to 1993.
+  Fact 0.23: Source 2 also includes NOAA, for snowy days data from 1961 to 1988.
+
+Retrieved items:
+<item 1>
+Graph query row:
+location: South Pole
+relationship: RELATED_TO
+observation: midwinter
+kind: None
+date: None
+detail: In midwinter, the average temperature remains steady at around −58 °C (−72 °F).
+</item 1>
+
+<item 2>
+South Pole
+Retrieved 2013 - 05 - 25 . Jump up ^ `` Crossing the Ice '' . Retrieved 2013 - 05 - 25 . Jump up ^ `` Wilson , nå er vi framme ! '' . Retrieved 2013 - 05 - 25 .
+Jump up ^ Science question of the week , Goddard Space Flight Center . Jump up ^ `` The USAP Portal : Science and Support in Antarctica - Course Material '' .
+www.usap.gov . Jump up ^ `` Why is the South Pole colder than the North Pole ? '' . Jump up ^ Matthew A. Lazzara ( 2011 - 12 - 28 ) . `` Preliminary Report :
+Record Temperatures at South Pole ( and nearby AWS sites ... ) '' . Retrieved 2011 - 12 - 28 . Jump up ^ Your stay at Amundsen -- Scott South Pole Station
+Archived 2006 - 02 - 02 at the Wayback Machine. , National Science Foundation Office of Polar Programs Jump up ^ `` How cold is the Antarctic ? '' . NIWA .
+</item 2>
+
+<item 3>
+South Pole
+Deutscher Wetterdienst . Retrieved 5 April 2017 . Jump up ^ `` Amundsen -- Scott Climate Normals 1961 − 1990 '' . National Oceanic and Atmospheric
+Administration . Retrieved 5 April 2017 . Jump up ^ Mark Sabbatini , `` Non-human life form seen at Pole '' , The Antarctic Sun , 5 January 2003 . Jump up ^ ``
+Snow microbes found at South Pole '' , BBC News , 10 July 2000 External links ( edit ) Wikimedia Commons has media related to South Pole . Wikivoyage has a
+travel guide for South Pole . NOAA South Pole Webcam 360 ° Panoramas of the South Pole Images of this location are available at the Degree Confluence Project
+South Pole Photo Gallery Poles by the Australian Antarctic Division The Antarctic Sun -- Online news source for the U.S. Antarctic Program Big Dead Place UK
+team makes polar trek history -- BBC News article on first expedition to Pole of Inaccessibility without mechanical assistance Listen to Ernest Shackleton
+describing his 1908 South Pole Expedition , and read more about the recording on ( australianscreen online ) .
+</item 3>
+
+<item 4>
+South Pole
+More recent buildings are raised on stilts so that the snow does not build up against the sides of them . ( hide ) Climate data for The South Pole Month Jan Feb
+Mar Apr May Jun Jul Aug Sep Oct Nov Dec Year Record high ° C ( ° F ) − 14.4 ( 6.1 ) − 20.6 ( − 5.1 ) − 26.7 ( − 16.1 ) − 27.8 ( − 18 ) − 25.1 ( − 13.2 ) − 28.8
+( − 19.8 ) − 33.9 ( − 29 ) − 32.8 ( − 27 ) − 29.3 ( − 20.7 ) − 25.1 ( − 13.2 ) − 18.9 ( − 2 ) − 12.3 ( 9.9 ) − 12.3 ( 9.9 ) Average high ° C ( ° F ) − 26.0 ( −
+14.8 ) − 37.9 ( − 36.2 ) − 49.6 ( − 57.3 ) − 53.
+</item 4>
+
+<item 5>
+South Pole
+However , it is always low in the sky , reaching a maximum of 23.5 ° in December . Much of the sunlight that does reach the surface is reflected by the white
+snow . This lack of warmth from the sun , combined with the high altitude ( about 2,800 metres ( 9,200 ft ) ) , means that the South Pole has one of the coldest
+climates on Earth ( though it is not quite the coldest ; that record goes to the region in the vicinity of the Vostok Station , also in Antarctica , which lies
+at a higher elevation ) . Temperatures at the South Pole are much lower than at the North Pole , primarily because the South Pole is located at altitude in the
+middle of a continental land mass , while the North Pole is at sea level in the middle of an ocean , which acts as a reservoir of heat . The South Pole is at an
+altitude of 9,300 feet ( 2,800 m ) but feels like 11,000 feet ( 3,400 m ). . Centrifugal force from the spin of the planet pulls the atmosphere toward the
+equator .
+</item 5>
+
+<item 6>
+South Pole
+The highest temperature ever recorded at the Amundsen -- Scott South Pole Station was − 12.3 ° C ( 9.9 ° F ) on Christmas Day , 2011 , and the lowest was − 82.8
+° C ( − 117.0 ° F ) on June 23 , 1982 ( for comparison , the lowest temperature directly recorded anywhere on earth was − 89.2 ° C ( − 128.6 ° F ) at Vostok
+Station on July 21 , 1983 , though − 93.2 ° C ( − 135.8 ° F ) was measured indirectly by satellite in East Antarctica between Dome A and Dome F in August 2010 )
+. The South Pole has a desert climate , receiving very little precipitation . Air humidity is near zero . However , high winds can cause the blowing of snowfall
+, and the accumulation of snow amounts to about 20 cm ( 8 in ) per year . The former dome seen in pictures of the Amundsen -- Scott station is partially buried
+due to snow storms , and the entrance to the dome had to be regularly bulldozed to uncover it .
+</item 6>
+
+<item 7>
+South Pole
+0 0.0 1.1 12.6 18.6 19.9 7.4 Source # 1 : Pogoda.ru.net ( temperatures , 1981 -- 2010 , extremes 1957 -- present ) Source # 2 : Deutscher Wetterdienst (
+precipitation 1957 -- 1988 and sun 1978 -- 1993 ) , NOAA ( snowy days data , 1961 -- 1988 ) Time ( edit ) In most places on Earth , local time is determined by
+longitude , such that the time of day is more - or-less synchronised to the position of the sun in the sky ( for example , at midday the sun is roughly at its
+highest ) . This line of reasoning fails at the South Pole , where the sun rises and sets only once per year , and all lines of longitude , and hence all time
+zones , converge . There is no a priori reason for placing the South Pole in any particular time zone , but as a matter of practical convenience the Amundsen --
+Scott South Pole Station keeps New Zealand Time ( UTC + 12 ) .
+</item 7>
+
+<item 8>
+South Pole
+. NIWA . Retrieved 2012 - 08 - 13 . Jump up ^ `` Antarctic Weather '' . Retrieved 2013 - 05 - 25 . Jump up ^ `` NASA - USGS Landsat 8 Satellite Pinpoints
+Coldest Spots on Earth '' , NASA , December 9 , 2013 Jump up ^ Initial environmental evaluation -- development of blue - ice and compacted - snow runways ,
+National Science Foundation Office of Polar Programs , April 9 , 1993 Jump up ^ `` Weather and Climate - The Climate of Amundsen -- Scott '' ( in Russian ) .
+Weather and Climate ( Погода и климат ) . Retrieved 5 April 2017 . Jump up ^ `` Klimatafel von Amundsen - Scott / Südpol - Station ( USA ) / Antarktis '' ( PDF
+) . Baseline climate means ( 1961 - 1990 ) from stations all over the world ( in German ) . Deutscher Wetterdienst . Retrieved 5 April 2017 .
+</item 8>
+
+<item 9>
+South Pole
+2 ) − 49.6 ( − 57.3 ) − 53.0 ( − 63.4 ) − 53.6 ( − 64.5 ) − 54.5 ( − 66.1 ) − 55.2 ( − 67.4 ) − 54.9 ( − 66.8 ) − 54.4 ( − 65.9 ) − 48.4 ( − 55.1 ) − 36.2 ( −
+33.2 ) − 26.3 ( − 15.3 ) − 45.8 ( − 50.4 ) Daily mean ° C ( ° F ) − 28.4 ( − 19.1 ) − 40.9 ( − 41.6 ) − 53.7 ( − 64.7 ) − 57.8 ( − 72 ) − 58.0 ( − 72.4 ) − 58.9
+( − 74 ) − 59.8 ( − 75.6 ) − 59.7 ( − 75.5 ) − 59.1 ( − 74.4 ) − 51.
+</item 9>
+
+<item 10>
+South Pole
+1 ( − 42 ) − 58.9 ( − 74 ) − 71.1 ( − 96 ) − 75.0 ( − 103 ) − 78.3 ( − 108.9 ) − 82.8 ( − 117 ) − 80.6 ( − 113.1 ) − 79.3 ( − 110.7 ) − 79.4 ( − 110.9 ) − 72.0
+( − 97.6 ) − 55.0 ( − 67 ) − 41.1 ( − 42 ) − 82.8 ( − 117 ) Average precipitation mm ( inches ) 0.3 ( 0.012 ) 0.6 ( 0.024 ) 0.2 ( 0.008 ) 0.1 ( 0.004 ) 0.2 (
+0.008 ) 0.1 ( 0.004 ) Trace Trace 0.1 ( 0.004 ) 0.1 ( 0.004 ) 0.1 ( 0.004 ) 0.3 ( 0.012 ) 2.3 ( 0.
+</item 10>
+=== END ITEM id=2d736665afa64e4a ===
+
+=== ITEM id=1acbf7e6505cda59 ===
+Gold sentences and facts:
+Sentence 0: The Super Bowl LI Halftime show took place on February 5 , 2017 , at NRG Stadium in Houston , Texas as part of Super Bowl LI . The show was headlined by Lady Gaga , who performed a medley of her songs , including newer material from her most recent studio album Joanne .
+  Fact 0.0: The Super Bowl LI Halftime show took place on February 5, 2017.
+  Fact 0.1: The Super Bowl LI Halftime show took place at NRG Stadium in Houston, Texas.
+  Fact 0.2: The Super Bowl LI Halftime show took place as part of Super Bowl LI.
+  Fact 0.3: The Super Bowl LI Halftime show was headlined by Lady Gaga.
+  Fact 0.4: Lady Gaga performed a medley of her songs at the Super Bowl LI Halftime show.
+  Fact 0.5: The medley included newer material from Lady Gaga's most recent studio album, Joanne.
+
+Retrieved items:
+<item 1>
+Super Bowl LI halftime show
+Retrieved October 1 , 2016 . Jump up ^ Halperin , Shirley ( September 29 , 2016 ) . `` It 's Official : Lady Gaga to Headline 2017 Super Bowl Halftime Show '' .
+The Hollywood Reporter . Retrieved November 8 , 2016 . ^ Jump up to : Atkinson , Katie ( February 5 , 2017 ) . `` Super Bowl Halftime Will Be ' Uniquely Lady
+Gaga ' : Pepsi Execs Promise ' One of the Greatest Halftime Shows Ever ' '' . Billboard . Archived from the original on February 21 , 2017 . Retrieved February
+16 , 2017 . Jump up ^ Feeney , Nolan ( October 21 , 2016 ) . `` Lady Gaga : Joanne sealed my Super Bowl halftime show deal '' . Entertainment Weekly . Archived
+from the original on November 23 , 2016 . Retrieved November 10 , 2016 . ^ Jump up to : Fisher , Kendall ( January 31 , 2017 ) .
+</item 1>
+
+<item 2>
+Super Bowl LI halftime show
+Live Design . Archived from the original on February 21 , 2017 . Retrieved February 20 , 2017 . Jump up ^ Orne , Neil ( February 6 , 2017 ) . `` Nashville
+company played huge role in Super Bowl halftime show '' . WKRN - TV . Archived from the original on February 21 , 2017 . Retrieved February 20 , 2017 . Jump up
+^ Sandberg , Marian ( February 5 , 2017 ) . `` Super Bowl LI Halftime Show 2017 Lighting Network System '' . Live Design . Archived from the original on
+February 21 , 2017 . Retrieved February 20 , 2017 . ^ Jump up to : Lampert - Greaux , Ellen ( February 5 , 2017 ) . `` Bob Barnhart On The Super Bowl LI
+Halftime Show '' . Live Design . Archived from the original on February 15 , 2017 . Retrieved February 20 , 2017 .
+</item 2>
+
+<item 3>
+Super Bowl LI halftime show
+Gaga joined them wearing a football inspired costume and performed the track . As fireworks erupted heralding the end of the show , Gaga reached the edge of the
+stage , shouted `` Super Bowl 51 '' , dropped her microphone , and jumped off stage catching a football . Background ( edit ) Gaga after performing the US
+national anthem at the Super Bowl 50 on February 7 , 2016 Around August 2016 , media started reporting that singer Adele was in discussion with the National
+Football League ( NFL ) to perform at the Super Bowl LI halftime show , to be held on February 5 , 2017 , at Houston 's NRG Stadium ; the show was sponsored by
+Pepsi Zero Sugar . A representative from the NFL said that `` organisers are doing absolutely everything they can to try to persuade her to sign up '' . During
+her Adele Live 2016 concert tour at Los Angeles , Adele clarified that although she had been offered to perform by the NFL , she had declined since she did not
+believe herself to be suitable for the halftime show . The NFL also explained that they had not signed any musician till then and were still in discussion with
+several artists .
+</item 3>
+
+<item 4>
+Super Bowl LI halftime show
+With 117.5 million television viewers , the Super Bowl LI halftime show was the second most - watched Super Bowl halftime show behind Katy Perry 's and had
+higher average viewership than the game itself . Contents ( hide ) 1 Synopsis 2 Background 3 Development 3.1 Conception 3.2 Rehearsals 3.3 Fashion 3.4
+Multimedia 3.5 Drones 4 Critical response 5 Commercial reception 6 Set list 7 Personnel 8 See also 9 References 10 External links Synopsis ( edit ) NRG Stadium
+, where the Super Bowl LI and the halftime show took place The halftime show started on the roof of NRG Stadium . Gaga started singing `` God Bless America ''
+as drones swarm behind her emitting red , blue and white color . She then sang Woody Guthrie 's `` This Land Is Your Land '' , followed by the ending of the
+Pledge of Allegiance : `` One nation under God , indivisible , with liberty and justice for all '' . Gaga then dove from the rooftop as the drones behind formed
+the design of the US flag .
+</item 4>
+
+<item 5>
+Super Bowl LI halftime show
+Jesus Arroyo , Arturo Martinez , Jeff Haas , Anthony Pozos , Micky Dymond , Staging Technician / Fabricator : Julio Roch LED Technicians : Zack Eastland , Blake
+Chandler See also ( edit ) 2017 in American music 2017 in American television References ( edit ) Jump up ^ Nelson , Jeff ( October 4 , 2016 ) . `` Lady Gaga
+Hopes to Deliver ' Powerful ' Super Bowl Halftime Show Like Greats Michael Jackson , Bruce Springsteen '' . People . Archived from the original on November 9 ,
+2016 . Retrieved November 9 , 2016 . Jump up ^ Wooton , Dan ( August 8 , 2016 ) . `` Adele set to perform at the Super Bowl show as ' desperate ' chiefs bid to
+land Brit star '' . The Sun . Archived from the original on November 9 , 2016 . Retrieved November 8 , 2016 . Jump up ^ `` Adele Reveals She Turned Down Super
+Bowl 51 Halftime Gig '' . Rolling Stone . August 14 , 2016 .
+</item 5>
+
+<item 6>
+Super Bowl LI halftime show
+Super Bowl LI halftime show - wikipedia Super Bowl LI halftime show Jump to : navigation , search Super Bowl LI halftime show Date February 5 , 2017 Location
+Houston , Texas Venue NRG Stadium Headliner Lady Gaga Sponsor Pepsi Director Hamish Hamilton Producer Ricky Kirshner Super Bowl halftime show chronology 50 (
+2016 ) LI ( 2017 ) LII ( 2018 ) The Super Bowl LI Halftime show took place on February 5 , 2017 , at NRG Stadium in Houston , Texas as part of Super Bowl LI .
+The show was headlined by Lady Gaga , who performed a medley of her songs , including newer material from her most recent studio album Joanne . Gaga 's
+performance was critically acclaimed , with media outlets praising the show for demonstrating her artistic and musical qualities , and some arguing that it
+ranked among the top Super Bowl halftime performances in history . The show was also noted for its acknowledgment of the LGBT community , the use of a swarm of
+lighting - equipped drones for a pre-recorded intro scene , and its perceived political undertones .
+</item 6>
+
+<item 7>
+Super Bowl LI halftime show
+Toman also took into account the total time it usually takes for the show -- seven minutes for set up , 12 minutes for the main show , and another seven minutes
+to dismantle -- and believed the singer could deliver `` power , punch , performance , singing , lights '' within that time frame . Pepsi sponsored the halftime
+show for the fifth - consecutive year . Development ( edit ) Conception ( edit ) A long shot view of the stage during the performance of `` Just Dance '' in the
+halftime show In October 2016 , Gaga told Entertainment Weekly she wanted to give `` the best show for the football fans , the ones that are watching at home ''
+. Although indecisive about the set list , the singer wanted to play a mixture of her past and recent songs . She also confirmed that the NFL had heard Joanne
+before its release , and decided to offer the halftime performance slot . Inspiration came from previous halftime show performances by Michael Jackson , Diana
+Ross , and Bruce Springsteen , with Gaga remarking that she loved `` all the ( past shows ) '' .
+</item 7>
+
+<item 8>
+Super Bowl LI halftime show
+Barnhart recalled that `` ( the ) show was a little more complicated this year , due to the amount of scenery that we normally do n't have on a halftime show ''
+, but it was better since there were no video backdrops . All around the roof of NRG Stadium , an array of 36 Clay Paky Sharpy fixtures were added , which lit
+the Houston night skyline with light beams . Barnhart also arranged a backlight array fixture , using Philips Vari - Lite VL4000 and PRG Best Boy . LED tape was
+used around the main production area . They were controlled by the lighting team and could light the stage from afar . Director Hamish Hamilton and his crew
+devised their own way of capturing and transmitting the show for the live audience . Drones ( edit ) See also : Quadcopter § Art For performing on top of NRG
+Stadium , Gaga was accompanied by a fleet of 300 synchronized , LED - equipped `` Shooting Star '' quadcopter drones provided by Intel , which formed an image
+of the American flag behind the singer . It marked the first time that the drones had been used as part of a television broadcast .
+</item 8>
+
+<item 9>
+Super Bowl LI halftime show
+Martens and Vera Wang made it a point . Multimedia ( edit ) During `` Million Reasons '' a field cast used Glow Motion LED Batons , creating a three -
+dimensional moving pixels show . The production work on the show was done by designers Bruce Rodgers of Tribe Inc. and LeRoy Bennett , and lighting designer Bob
+Barnhart of 22 Degrees . The stage was created by All Access Staging & Productions , who had also created previous Super Bowl halftime stages . Key features of
+the stage consisted of a main platform , two towers , three star - shaped side stages , a piano dome and a stage lift . The towers were around 30 feet ( 9.1 m )
+tall and could be carried by carts to the field for set - up . All Access had only 4.5 weeks to create the whole piece with the main stage itself , and required
+17 trucks for storage and transport . The show utilized LED system from Verrents and sound by ATK Audio tek . Around 5,000 LED lights were embedded in the stage
+, which was a record number . Special effects group Strictly FX was behind all the pyrotechnics .
+</item 9>
+
+<item 10>
+Super Bowl LI halftime show
+Billboard . Archived from the original on February 6 , 2017 . Retrieved February 5 , 2017 . Jump up ^ `` Super Bowl LI Halftime Show Credits And Staff '' . Live
+Design . Archived from the original on February 21 , 2017 . Retrieved February 21 , 2017 . External links ( edit ) Wikimedia Commons has media related to Super
+Bowl LI halftime show . Do n't Worry About What ' Joanne ' Songs Lady Gaga Is Gonna Perform at the Super Bowl Billboard Super Bowl LI Halftime Show 2017 Staging
+Technical Drawings Live Design Super Bowl LI Halftime Show Set Drawings Live Design Will Lady Gaga 's Drones Win a Lion ?
+</item 10>
+=== END ITEM id=1acbf7e6505cda59 ===
+
+=== ITEM id=0647cbe8f3199123 ===
+Gold sentences and facts:
+Sentence 0: Jane and Rafael start saving up to buy a one - bedroom apartment , but their plan falls apart when Mateo breaks an antique $4,000 clock . Rafael moves into the Villanueva house , but after Alba hits Mateo , the two get into a heated argument and Rafael moves back out . Xiomara starts chemotherapy , and makes a friend named Donna . The timeline moves forward nine weeks , and Donna dies of unforeseen consequences . Xiomara is shown not to be doing well due to the chemotherapy , Alba and Rafael are still in a fight and River and Rogelio are still arguing over the Passions of Santos adaptation . Alba breaks down to Jane , and she and Rafael make up . Xiomara bonds with River over telenovelas , after she accidentally eats a pot brownie , and she agrees to do the Passions of Steve and Brenda the Latin American way . Jane Ramos gets herself disbarred , and as a result gets the case against Petra thrown out .
+  Fact 0.0: Jane and Rafael start saving up to buy a one-bedroom apartment.
+  Fact 0.1: Jane and Rafael's plan to buy the apartment falls apart when Mateo breaks an antique $4,000 clock.
+  Fact 0.2: Rafael moves into the Villanueva house.
+  Fact 0.3: After Alba hits Mateo, Alba and Rafael get into a heated argument.
+  Fact 0.4: Rafael moves back out of the Villanueva house after the argument.
+  Fact 0.5: Xiomara starts chemotherapy.
+  Fact 0.6: Xiomara makes a friend named Donna.
+  Fact 0.7: The timeline moves forward nine weeks.
+  Fact 0.8: Donna dies of unforeseen consequences.
+  Fact 0.9: Xiomara is shown not to be doing well due to the chemotherapy.
+  Fact 0.10: Alba and Rafael are still in a fight.
+  Fact 0.11: River and Rogelio are still arguing over the Passions of Santos adaptation.
+  Fact 0.12: Alba breaks down to Jane.
+  Fact 0.13: Alba and Rafael make up.
+  Fact 0.14: Xiomara bonds with River over telenovelas.
+  Fact 0.15: Xiomara accidentally eats a pot brownie.
+  Fact 0.16: Xiomara agrees to do the Passions of Steve and Brenda the Latin American way.
+  Fact 0.17: Jane Ramos gets herself disbarred.
+  Fact 0.18: As a result of Jane Ramos being disbarred, the case against Petra is thrown out.
+Sentence 1: No . overall No. in season Title Directed by Written by Original air date U.S. viewers ( millions ) 65 `` Chapter Sixty - Five '' Brad Silberling Jennie Snyder Urman & Paul Sciarrotta October 13 , 2017 ( 2017 - 10 - 13 ) 0.68 Picking up immediately after where Season 3 left off , Jane is reunited with her first love , Adam , who found the love letter that Michael wrote . She is surprised , but happy , to see him . However , both Xo and Alba are less thrilled that he is back . Meanwhile , Rafael loses ownership of the hotel to his sister and as a result , he finds himself living at Jane 's house , broke and homeless . Jane and Rafael learn that the missing Petra has been found after she got away from Anezka and they rush to her side , but Anezka is nowhere to be found . When Petra returns to the hotel , Luisa thinks that Petra is Anezka . Petra goes along with the game , until the real Anezka returns . Elsewhere , Xo and Rogelio 's married life is interrupted when they confront the realization that Darci is having Rogelio 's baby and she wants full custody . 66 `` Chapter Sixty - Six '' Gina Lamar Valentina Garza & Jessica O'Toole & Amy Rardin October 20 , 2017 ( 2017 - 10 - 20 ) 0.61 Jane 's relationship with Adam helps bring out her `` fun side '' and reminds her that she is n't just a mom . However , when Adam gets a job opportunity out of state , he asks for Jane 's opinion on if he should stay or go . Meanwhile , Rogelio continues to face issues with his co-star at work and things are about to get even worse . Xo is helping to take care of Darci to prove that Rogelio is committed to being a father to the baby . Also , Petra and Rafael begin working together to try and buy back the hotel from Luisa , but they are running into trouble involving Anezka , causing tension between them . 67 `` Chapter Sixty - Seven '' Fernando Sariñana Carolina Rivera & Micah Schraft October 27 , 2017 ( 2017 - 10 - 27 ) 0.60 Jane and Adam 's relationship seems to be moving on , and Jane thinks that it might be time for him to meet her son Mateo , but Rafael is not happy with this idea . Meanwhile , as the arrival of Darci 's baby approaches , Rogelio 's jealously of her new boyfriend increases as well . Trying to be supportive , Xo encourages Rogelio to step up and be the father he was meant to be . Elsewhere , Rafael is determined to get his hotel and life back from Luisa and will do whatever he has to do to make it happen , with or without Petra 's help . 68 `` Chapter Sixty - Eight '' Gina Lamar Deirdre Shaw & Chantelle M. Wells November 3 , 2017 ( 2017 - 11 - 03 ) 0.69 Jane becomes angry when she learns that Rafael introduced Mateo to his new girlfriend , Katherine , without her consent because she thinks Katherine is a negative influence on both Rafael and Mateo . Jane turns to Petra for help with the situation . Meanwhile , Rogelio and Darci struggle to choose a name for the baby . Elsewhere , Xo , who is focused on opening her own dance studio , decides to go into business with an unlikely foe . 69 5 `` Chapter Sixty - Nine '' Stuart Gillard Paul Sciarrotta November 10 , 2017 ( 2017 - 11 - 10 ) 0.65 After Adam reveals his dating past to Jane , she becomes so unsure and insecure that it puts a strain on their relationship . Meanwhile , Lina seeks Jane 's advice about whether she should get married or not . Petra hears some important information that could help Rafael get the hotel back . Also , Xo asks Rogelio to consider having a medical procedure ( vasectomy ) done , but he is very hesitant . 70 6 `` Chapter Seventy '' Melanie Mayron Carolina Rivera & Micah Schraft November 17 , 2017 ( 2017 - 11 - 17 ) 0.61 Jane 's book is finally being released but her plans to have a party at the local bookshop where she was inspired to be a writer hit a snag . Always wanting to help Jane , Rogelio devises a plan to save the day , but one of his arch - rivals threatens to ruin the day . Meanwhile , Rafael gets a new job , but it is not exactly what he was hoping for . Also , Petra has come up with an interesting strategy to get the Marbella Hotel back from Luisa , but Rafael wants nothing to do with the scheme . 71 7 `` Chapter Seventy - One '' Micah Schraft Valentina Garza & Deidre Shaw December 8 , 2017 ( 2017 - 12 - 08 ) 0.65 Anezka is revealed to have faked her death to see where her loyalties lie ; initially , she trusts Petra after believing she saw her cry , but after finding out she was n't crying because of her fake death , she threatens Petra . Later , Anezka falls from Petra 's apartment to her death ... for real . Meanwhile , Xiomara and Jane set off on Jane 's book tour , when Alba decides to tag along . After they get back , Jane and Rafael share a kiss . 72 8 `` Chapter Seventy - Two '' Melanie Mayron Carolina Rivera & Paul Sciarrotta January 26 , 2018 ( 2018 - 01 - 26 ) 0.68 Mateo starts kindergarten and invites a friend over to Xiomara and Rogelio 's house . Jane and Rafael try to cover up that they are pretending to live in their house so they do n't get kicked out . Jane and Rafael show mixed emotions following the kiss and try again , which Mateo notices . He then proclaims : `` Does this mean you 're going to get married ? '' After Xo convinces Rogelio to attend couples therapy , they both are surprised by their emotions . Meanwhile , Petra hires a lawyer named Jane Ramos ( Rosario Dawson ) , to ensure she gets no charges pending Anezka 's death . Also , Rafael moves out of Jane 's house into his new apartment . 73 9 `` Chapter Seventy - Three '' Eric Lea Valentina Garza & Chantelle M. Wells February 2 , 2018 ( 2018 - 02 - 02 ) 0.67 When Jane and Rafael finally realize that the uncertain state of their relationship ( or lack of it ) is stressing out Mateo , they decide that they need to make a decision . Meanwhile , Petra is on the outs with Jane and Rafael after the Luisa fiasco , so she tries to figure out a way to get back into their good graces . Elsewhere , Rogelio and Xo are both contemplating their career choices . 74 10 `` Chapter Seventy - Four '' Gina Rodriguez Micah Schraft & Paul Sciarrotta February 9 , 2018 ( 2018 - 02 - 09 ) 0.80 Jane and Rafael try to be friends , which works great until Jane goes on a date . Meanwhile , Petra and Jane 's new partnership is off to a rocky start , but they both know they have to find a way to work together somehow . Rogelio is convinced he has male post-partum depression , which puts him at odds with with celebrity Post-Partum Advocate River Fields ( guest star Brooke Shields ) on The Talk . Also , Alba finally confides in Jane why she turned down the marriage proposal , leaving Jane to help Alba in the romance department when Jane takes Alba to a sex store and buys her a vibrator . Elsewhere , Jane and Rafael agree to have sex , and Petra questions her own sexual identity when she starts to have sex dreams about Jane `` J.R. '' Ramos after the lawyer begins flirting with her . 75 11 `` Chapter Seventy - Five '' Gina Lamar Merigan Mulhern March 2 , 2018 ( 2018 - 03 - 02 ) 0.59 Jane is ready to move on from the Marbella Hotel issues and pursue writing full time , but an unexpected development forces her to consider returning to her teaching roots . Xiomara decides to go back to school where she listens in on an art history class , while Jane teaches a seminar about writing . Here , Jane finds out Jonathan Chavez , her former advisor , is taking advantage of another student of his . While trying to warn the student , Jane accidentally grabs her breasts to avoid falling over and , as a result , does n't get the teaching job she was applying for . Meanwhile , Petra gets arrested for Anezka 's murder due to the blackmailer planting the screws in her apartment , leading Jane Ramos to tell Petra that she was framing her because she was being threatened by an unknown blackmailer . Also , Rafael and Jane continue their affair . Elsewhere , Rogelio tries to get Eva Longoria to join his Passions of Santos reboot , but instead finds out the two are distant cousins . 76 12 `` Chapter Seventy - Six '' Melanie Mayron Leah Longoria March 9 , 2018 ( 2018 - 03 - 09 ) 0.58 Jane 's fixation on a negative review has left her with writer 's block , so Rogelio suggests she take a writing class to help . With the encouragement of Jane , Rafael is ready to dig into his past to find out who his real biological parents are . Meanwhile , Rogelio is trying to make things less about him and more about Xo , but he grows suspicious when he learns she is keeping a secret from him . But the secret Xo has been keeping is not what Rogelio suspected . Elsewhere , Petra tests the loyalty of her lawyer , Jane Ramos , by pretending to be romantically interested in her while trying to find out the identity of the blackmailer . After Petra confides in Jane R. of her feelings which are not fake , the two of them sleep together for the first time . 77 13 `` Chapter Seventy - Seven '' Gina Lamar Deirdre Shaw & Chantelle M. Wells March 16 , 2018 ( 2018 - 03 - 16 ) 0.59 When Jane , Rogelio and Alba learn what is going on with Xo who might have breast cancer , they all try to comfort her , but Xo insists they let her live her life . Meanwhile , Rogelio finally gets River Fields to agree to meet with him , but he learns that River has another plan in mind . Also , Rafael is on a mission to find his sister , who may have the information he has been looking for of his origins . Rafael visits Rose in prison to ask for her help , but he quickly turns her down when she makes a demand to know Luisa 's location . Also , Jane is upset with Petra after her twin girls spill a secret to Mateo about the Tooth Fairy being make believe . At the same time , Jane ' J.R. ' Ramos tells Petra after their romantic night together that she is not interested in a relationship due to the blackmailer paying a visit to Jane R. 's dementia - stricken mother in a rest home . At the end , the identity of Jane R 's blackmailer is finally revealed . 78 14 `` Chapter Seventy - Eight '' Justin Baldoni Valentina Garza & Micah Schraft March 23 , 2018 ( 2018 - 03 - 23 ) 0.65 Xo struggles to make an important decision on whether or not to get a full mastectomy and looks to Jane for guidance , leaving Rogelio feeling like an outsider . Alba is frustrated with Rogelio when it seems he is once again making his career a priority over Xo 's well being . Meanwhile , Petra turns to Rafael for advice on her love life after he finally learns about her new romance with J.R. 79 15 `` Chapter Seventy - Nine '' Gina Lamar Paul Sciarrotta April 6 , 2018 ( 2018 - 04 - 06 ) 0.53 80 16 `` Chapter Eighty '' Micah Schraft Micah Schraft April 13 , 2018 ( 2018 - 04 - 13 ) 0.57 Jane and Rafael start saving up to buy a one - bedroom apartment , but their plan falls apart when Mateo breaks an antique $4,000 clock . Rafael moves into the Villanueva house , but after Alba hits Mateo , the two get into a heated argument and Rafael moves back out . Xiomara starts chemotherapy , and makes a friend named Donna . The timeline moves forward nine weeks , and Donna dies of unforeseen consequences . Xiomara is shown not to be doing well due to the chemotherapy , Alba and Rafael are still in a fight and River and Rogelio are still arguing over the Passions of Santos adaptation . Alba breaks down to Jane , and she and Rafael make up . Xiomara bonds with River over telenovelas , after she accidentally eats a pot brownie , and she agrees to do the Passions of Steve and Brenda the Latin American way . Jane Ramos gets herself disbarred , and as a result gets the case against Petra thrown out . 81 17 `` Chapter Eighty - One '' Gina Lamar Jennie Snyder Urman & Paul Sciarrotta April 20 , 2018 ( 2018 - 04 - 20 ) 0.58 Rafael intends to propose to Jane , however Rose 's news unsettles him . Alba becomes a citizen and the Villanueva 's throw her a surprise party . Jane Ramos and Petra plan to move in together , until Jane finds out that Petra killed Anezka . As she walks out , Krishna tells her that her life is in danger . J.R. saves Petra 's life by shooting , and killing , the blackmailer . As Jane meets Rafael , Michael is revealed to be alive .
+  Fact 1.0: The listing has columns for overall episode number, season episode number, title, director, writers, original air date, and U.S. viewers in millions.
+  Fact 1.1: Chapter Sixty-Five is episode 65 overall, directed by Brad Silberling and written by Jennie Snyder Urman and Paul Sciarrotta.
+  Fact 1.2: Chapter Sixty-Five first aired October 13, 2017, with 0.68 million U.S. viewers.
+  Fact 1.3: Chapter Sixty-Five picks up immediately after where Season 3 left off.
+  Fact 1.4: Jane is reunited with her first love, Adam, who found the love letter that Michael wrote.
+  Fact 1.5: Jane is surprised but happy to see Adam.
+  Fact 1.6: Xo and Alba are less thrilled that Adam is back.
+  Fact 1.7: Rafael loses ownership of the hotel to his sister.
+  Fact 1.8: As a result, Rafael finds himself living at Jane's house, broke and homeless.
+  Fact 1.9: Jane and Rafael learn that the missing Petra has been found after she got away from Anezka.
+  Fact 1.10: Jane and Rafael rush to Petra's side, but Anezka is nowhere to be found.
+  Fact 1.11: When Petra returns to the hotel, Luisa thinks Petra is Anezka.
+  Fact 1.12: Petra goes along with the game until the real Anezka returns.
+  Fact 1.13: Xo and Rogelio's married life is interrupted when they confront the realization that Darci is having Rogelio's baby.
+  Fact 1.14: Darci wants full custody of the baby.
+  Fact 1.15: Chapter Sixty-Six is directed by Gina Lamar and written by Valentina Garza, Jessica O'Toole and Amy Rardin.
+  Fact 1.16: Chapter Sixty-Six first aired October 20, 2017, with 0.61 million U.S. viewers.
+  Fact 1.17: Jane's relationship with Adam helps bring out her 'fun side'.
+  Fact 1.18: Adam's relationship with Jane reminds her that she is not just a mom.
+  Fact 1.19: Adam gets a job opportunity out of state.
+  Fact 1.20: Adam asks Jane's opinion on whether he should stay or go.
+  Fact 1.21: Rogelio continues to face issues with his co-star at work.
+  Fact 1.22: Rogelio's issues with his co-star are about to get even worse.
+  Fact 1.23: Xo is helping to take care of Darci to prove that Rogelio is committed to being a father to the baby.
+  Fact 1.24: Petra and Rafael begin working together to try to buy back the hotel from Luisa.
+  Fact 1.25: Petra and Rafael run into trouble involving Anezka.
+  Fact 1.26: Petra and Rafael's trouble involving Anezka causes tension between them.
+  Fact 1.27: Chapter Sixty-Seven is directed by Fernando Sariñana and written by Carolina Rivera and Micah Schraft.
+  Fact 1.28: Chapter Sixty-Seven first aired October 27, 2017, with 0.60 million U.S. viewers.
+  Fact 1.29: Jane and Adam's relationship seems to be moving on.
+  Fact 1.30: Jane thinks it might be time for Adam to meet her son Mateo.
+  Fact 1.31: Rafael is not happy with the idea of Adam meeting Mateo.
+  Fact 1.32: As the arrival of Darci's baby approaches, Rogelio's jealousy of Darci's new boyfriend increases.
+  Fact 1.33: Xo encourages Rogelio to step up and be the father he was meant to be.
+  Fact 1.34: Rafael is determined to get his hotel and life back from Luisa.
+  Fact 1.35: Rafael will do whatever he has to do to get his hotel and life back, with or without Petra's help.
+  Fact 1.36: Chapter Sixty-Eight is directed by Gina Lamar and written by Deirdre Shaw and Chantelle M. Wells.
+  Fact 1.37: Chapter Sixty-Eight first aired November 3, 2017, with 0.69 million U.S. viewers.
+  Fact 1.38: Jane becomes angry when she learns Rafael introduced Mateo to his new girlfriend, Katherine, without her consent.
+  Fact 1.39: Jane thinks Katherine is a negative influence on both Rafael and Mateo.
+  Fact 1.40: Jane turns to Petra for help with the situation.
+  Fact 1.41: Rogelio and Darci struggle to choose a name for the baby.
+  Fact 1.42: Xo is focused on opening her own dance studio.
+  Fact 1.43: Xo decides to go into business with an unlikely foe.
+  Fact 1.44: Chapter Sixty-Nine is episode 69 overall and season 5, directed by Stuart Gillard and written by Paul Sciarrotta.
+  Fact 1.45: Chapter Sixty-Nine first aired November 10, 2017, with 0.65 million U.S. viewers.
+  Fact 1.46: After Adam reveals his dating past to Jane, Jane becomes unsure and insecure.
+  Fact 1.47: Jane's insecurity puts a strain on her relationship with Adam.
+  Fact 1.48: Lina seeks Jane's advice about whether she should get married.
+  Fact 1.49: Petra hears important information that could help Rafael get the hotel back.
+  Fact 1.50: Xo asks Rogelio to consider having a vasectomy.
+  Fact 1.51: Rogelio is very hesitant about the vasectomy.
+  Fact 1.52: Chapter Seventy is episode 70 overall and season 6, directed by Melanie Mayron and written by Carolina Rivera and Micah Schraft.
+  Fact 1.53: Chapter Seventy first aired November 17, 2017, with 0.61 million U.S. viewers.
+  Fact 1.54: Jane's book is finally being released.
+  Fact 1.55: Jane's plans to have a party at the local bookshop where she was inspired to be a writer hit a snag.
+  Fact 1.56: Rogelio devises a plan to save the day for Jane.
+  Fact 1.57: One of Rogelio's arch-rivals threatens to ruin the day.
+  Fact 1.58: Rafael gets a new job, but it is not exactly what he was hoping for.
+  Fact 1.59: Petra has come up with an interesting strategy to get the Marbella Hotel back from Luisa.
+  Fact 1.60: Rafael wants nothing to do with Petra's scheme.
+  Fact 1.61: Chapter Seventy-One is episode 71 overall and season 7, directed by Micah Schraft and written by Valentina Garza and Deidre Shaw.
+  Fact 1.62: Chapter Seventy-One first aired December 8, 2017, with 0.65 million U.S. viewers.
+  Fact 1.63: Anezka is revealed to have faked her death to see where her loyalties lie.
+  Fact 1.64: Anezka initially trusts Petra after believing she saw Petra cry.
+  Fact 1.65: Anezka threatens Petra after finding out Petra was not crying because of Anezka's fake death.
+  Fact 1.66: Later, Anezka falls from Petra's apartment to her death, for real.
+  Fact 1.67: Xiomara and Jane set off on Jane's book tour.
+  Fact 1.68: Alba decides to tag along on Jane's book tour.
+  Fact 1.69: After they get back, Jane and Rafael share a kiss.
+  Fact 1.70: Chapter Seventy-Two is episode 72 overall and season 8, directed by Melanie Mayron and written by Carolina Rivera and Paul Sciarrotta.
+  Fact 1.71: Chapter Seventy-Two first aired January 26, 2018, with 0.68 million U.S. viewers.
+  Fact 1.72: Mateo starts kindergarten.
+  Fact 1.73: Mateo invites a friend over to Xiomara and Rogelio's house.
+  Fact 1.74: Jane and Rafael try to cover up that they are pretending to live in their house so they don't get kicked out.
+  Fact 1.75: Jane and Rafael show mixed emotions following the kiss and try again, which Mateo notices.
+  Fact 1.76: Mateo proclaims: 'Does this mean you're going to get married?'
+  Fact 1.77: After Xo convinces Rogelio to attend couples therapy, Xo and Rogelio are both surprised by their emotions.
+  Fact 1.78: Petra hires a lawyer named Jane Ramos, played by Rosario Dawson.
+  Fact 1.79: Petra hires Jane Ramos to ensure Petra gets no charges pending Anezka's death.
+  Fact 1.80: Rafael moves out of Jane's house into his new apartment.
+  Fact 1.81: Chapter Seventy-Three is episode 73 overall and season 9, directed by Eric Lea and written by Valentina Garza and Chantelle M. Wells.
+  Fact 1.82: Chapter Seventy-Three first aired February 2, 2018, with 0.67 million U.S. viewers.
+  Fact 1.83: Jane and Rafael realize that the uncertain state of their relationship is stressing out Mateo.
+  Fact 1.84: Jane and Rafael decide that they need to make a decision.
+  Fact 1.85: Petra is on the outs with Jane and Rafael after the Luisa fiasco.
+  Fact 1.86: Petra tries to figure out a way to get back into Jane and Rafael's good graces.
+  Fact 1.87: Rogelio and Xo are both contemplating their career choices.
+  Fact 1.88: Chapter Seventy-Four is episode 74 overall and season 10, directed by Gina Rodriguez and written by Micah Schraft and Paul Sciarrotta.
+  Fact 1.89: Chapter Seventy-Four first aired February 9, 2018, with 0.80 million U.S. viewers.
+  Fact 1.90: Jane and Rafael try to be friends, which works great until Jane goes on a date.
+  Fact 1.91: Petra and Jane's new partnership is off to a rocky start.
+  Fact 1.92: Petra and Jane both know they have to find a way to work together.
+  Fact 1.93: Rogelio is convinced he has male post-partum depression.
+  Fact 1.94: Rogelio's belief puts him at odds with celebrity Post-Partum Advocate River Fields on The Talk.
+  Fact 1.95: River Fields is guest starred by Brooke Shields.
+  Fact 1.96: Alba finally confides in Jane why she turned down the marriage proposal.
+  Fact 1.97: Jane helps Alba in the romance department.
+  Fact 1.98: Jane takes Alba to a sex store and buys her a vibrator.
+  Fact 1.99: Jane and Rafael agree to have sex.
+  Fact 1.100: Petra questions her own sexual identity.
+  Fact 1.101: Petra starts to have sex dreams about Jane 'J.R.' Ramos after the lawyer begins flirting with her.
+  Fact 1.102: Chapter Seventy-Five is episode 75 overall and season 11, directed by Gina Lamar and written by Merigan Mulhern.
+  Fact 1.103: Chapter Seventy-Five first aired March 2, 2018, with 0.59 million U.S. viewers.
+  Fact 1.104: Jane is ready to move on from the Marbella Hotel issues and pursue writing full time.
+  Fact 1.105: An unexpected development forces Jane to consider returning to her teaching roots.
+  Fact 1.106: Xiomara decides to go back to school, where she listens in on an art history class.
+  Fact 1.107: Jane teaches a seminar about writing.
+  Fact 1.108: Jane finds out Jonathan Chavez, her former advisor, is taking advantage of another student.
+  Fact 1.109: While trying to warn the student, Jane accidentally grabs her breasts to avoid falling over.
+  Fact 1.110: Because of this, Jane does not get the teaching job she was applying for.
+  Fact 1.111: Petra gets arrested for Anezka's murder due to the blackmailer planting the screws in Petra's apartment.
+  Fact 1.112: Jane Ramos tells Petra that she was framing Petra because Jane was being threatened by an unknown blackmailer.
+  Fact 1.113: Rafael and Jane continue their affair.
+  Fact 1.114: Rogelio tries to get Eva Longoria to join his Passions of Santos reboot.
+  Fact 1.115: Rogelio finds out that he and Eva Longoria are distant cousins.
+  Fact 1.116: Chapter Seventy-Six is episode 76 overall and season 12, directed by Melanie Mayron and written by Leah Longoria.
+  Fact 1.117: Chapter Seventy-Six first aired March 9, 2018, with 0.58 million U.S. viewers.
+  Fact 1.118: Jane's fixation on a negative review has left her with writer's block.
+  Fact 1.119: Rogelio suggests Jane take a writing class to help.
+  Fact 1.120: With Jane's encouragement, Rafael is ready to dig into his past to find out who his real biological parents are.
+  Fact 1.121: Rogelio is trying to make things less about him and more about Xo.
+  Fact 1.122: Rogelio grows suspicious when he learns Xo is keeping a secret from him.
+  Fact 1.123: The secret Xo has been keeping is not what Rogelio suspected.
+  Fact 1.124: Petra tests the loyalty of her lawyer, Jane Ramos, by pretending to be romantically interested in her.
+  Fact 1.125: Petra is trying to find the identity of the blackmailer.
+  Fact 1.126: Petra confides in Jane R. about her feelings, which are not fake.
+  Fact 1.127: Petra and Jane R. sleep together for the first time.
+  Fact 1.128: Chapter Seventy-Seven is episode 77 overall and season 13, directed by Gina Lamar and written by Deirdre Shaw and Chantelle M. Wells.
+  Fact 1.129: Chapter Seventy-Seven first aired March 16, 2018, with 0.59 million U.S. viewers.
+  Fact 1.130: Jane, Rogelio and Alba learn that Xo might have breast cancer.
+  Fact 1.131: Jane, Rogelio and Alba try to comfort Xo.
+  Fact 1.132: Xo insists they let her live her life.
+  Fact 1.133: Rogelio finally gets River Fields to agree to meet with him.
+  Fact 1.134: Rogelio learns that River has another plan in mind.
+  Fact 1.135: Rafael is on a mission to find his sister, who may have information he has been looking for about his origins.
+  Fact 1.136: Rafael visits Rose in prison to ask for her help.
+  Fact 1.137: Rafael quickly turns Rose down when she demands to know Luisa's location.
+  Fact 1.138: Jane is upset with Petra after Jane's twin girls spill a secret to Mateo about the Tooth Fairy being make-believe.
+  Fact 1.139: Jane R. Ramos tells Petra she is not interested in a relationship after their romantic night together.
+  Fact 1.140: The blackmailer paid a visit to Jane R.'s dementia-stricken mother in a rest home.
+  Fact 1.141: The identity of Jane R.'s blackmailer is finally revealed at the end of the episode.
+  Fact 1.142: Chapter Seventy-Eight is episode 78 overall and season 14, directed by Justin Baldoni and written by Valentina Garza and Micah Schraft.
+  Fact 1.143: Chapter Seventy-Eight first aired March 23, 2018, with 0.65 million U.S. viewers.
+  Fact 1.144: Xo struggles to make an important decision on whether or not to get a full mastectomy.
+  Fact 1.145: Xo looks to Jane for guidance on the mastectomy decision.
+  Fact 1.146: Xo's decision leaves Rogelio feeling like an outsider.
+  Fact 1.147: Alba is frustrated with Rogelio when he once again seems to make his career a priority over Xo's well-being.
+  Fact 1.148: Petra turns to Rafael for advice on her love life.
+  Fact 1.149: Rafael finally learns about Petra's new romance with J.R.
+  Fact 1.150: Chapter Seventy-Nine is episode 79 overall and season 15, directed by Gina Lamar and written by Paul Sciarrotta.
+  Fact 1.151: Chapter Seventy-Nine first aired April 6, 2018, with 0.53 million U.S. viewers.
+  Fact 1.152: Chapter Eighty is episode 80 overall and season 16, directed by Micah Schraft and written by Micah Schraft.
+  Fact 1.153: Chapter Eighty first aired April 13, 2018, with 0.57 million U.S. viewers.
+  Fact 1.154: Jane and Rafael start saving up to buy a one-bedroom apartment.
+  Fact 1.155: Jane and Rafael's plan falls apart when Mateo breaks an antique $4,000 clock.
+  Fact 1.156: Rafael moves into the Villanueva house.
+  Fact 1.157: After Alba hits Mateo, Alba and Rafael get into a heated argument.
+  Fact 1.158: Rafael moves back out after the argument.
+  Fact 1.159: Xiomara starts chemotherapy.
+  Fact 1.160: Xiomara makes a friend named Donna.
+  Fact 1.161: The timeline moves forward nine weeks.
+  Fact 1.162: Donna dies of unforeseen consequences.
+  Fact 1.163: Xiomara is shown not to be doing well due to the chemotherapy.
+  Fact 1.164: Alba and Rafael are still in a fight.
+  Fact 1.165: River and Rogelio are still arguing over the Passions of Santos adaptation.
+  Fact 1.166: Alba breaks down to Jane.
+  Fact 1.167: Alba and Rafael make up.
+  Fact 1.168: Xiomara bonds with River over telenovelas.
+  Fact 1.169: Xiomara accidentally eats a pot brownie.
+  Fact 1.170: Xiomara agrees to do the Passions of Steve and Brenda the Latin American way.
+  Fact 1.171: Jane Ramos gets herself disbarred.
+  Fact 1.172: As a result, Jane Ramos gets the case against Petra thrown out.
+  Fact 1.173: Chapter Eighty-One is episode 81 overall and season 17, directed by Gina Lamar and written by Jennie Snyder Urman and Paul Sciarrotta.
+  Fact 1.174: Chapter Eighty-One first aired April 20, 2018, with 0.58 million U.S. viewers.
+  Fact 1.175: Rafael intends to propose to Jane.
+  Fact 1.176: Rose's news unsettles Rafael.
+  Fact 1.177: Alba becomes a citizen.
+  Fact 1.178: The Villanueva family throws Alba a surprise party.
+  Fact 1.179: Jane Ramos and Petra plan to move in together.
+  Fact 1.180: Jane finds out Petra killed Anezka.
+  Fact 1.181: As Jane walks out, Krishna tells her that her life is in danger.
+  Fact 1.182: J.R. saves Petra's life by shooting and killing the blackmailer.
+  Fact 1.183: As Jane meets Rafael, Michael is revealed to be alive.
+
+Retrieved items:
+<item 1>
+Jane the Virgin (season 4)
+Meanwhile , Rogelio is trying to make things less about him and more about Xo , but he grows suspicious when he learns she is keeping a secret from him . But
+the secret Xo has been keeping is not what Rogelio suspected . Elsewhere , Petra tests the loyalty of her lawyer , Jane Ramos , by pretending to be romantically
+interested in her while trying to find out the identity of the blackmailer . After Petra confides in Jane R. of her feelings which are not fake , the two of
+them sleep together for the first time . 77 13 `` Chapter Seventy - Seven '' Gina Lamar Deirdre Shaw & Chantelle M. Wells March 16 , 2018 ( 2018 - 03 - 16 )
+0.59 When Jane , Rogelio and Alba learn what is going on with Xo who might have breast cancer , they all try to comfort her , but Xo insists they let her live
+her life . Meanwhile , Rogelio finally gets River Fields to agree to meet with him , but he learns that River has another plan in mind .
+</item 1>
+
+<item 2>
+Jane the Virgin (season 4)
+Meanwhile , Rafael gets a new job , but it is not exactly what he was hoping for . Also , Petra has come up with an interesting strategy to get the Marbella
+Hotel back from Luisa , but Rafael wants nothing to do with the scheme . 71 7 `` Chapter Seventy - One '' Micah Schraft Valentina Garza & Deidre Shaw December 8
+, 2017 ( 2017 - 12 - 08 ) 0.65 Anezka is revealed to have faked her death to see where her loyalties lie ; initially , she trusts Petra after believing she saw
+her cry , but after finding out she was n't crying because of her fake death , she threatens Petra . Later , Anezka falls from Petra 's apartment to her death
+... for real . Meanwhile , Xiomara and Jane set off on Jane 's book tour , when Alba decides to tag along . After they get back , Jane and Rafael share a kiss .
+</item 2>
+
+<item 3>
+Jane the Virgin (season 4)
+Also , Rafael moves out of Jane 's house into his new apartment . 73 9 `` Chapter Seventy - Three '' Eric Lea Valentina Garza & Chantelle M. Wells February 2 ,
+2018 ( 2018 - 02 - 02 ) 0.67 When Jane and Rafael finally realize that the uncertain state of their relationship ( or lack of it ) is stressing out Mateo , they
+decide that they need to make a decision . Meanwhile , Petra is on the outs with Jane and Rafael after the Luisa fiasco , so she tries to figure out a way to
+get back into their good graces . Elsewhere , Rogelio and Xo are both contemplating their career choices . 74 10 `` Chapter Seventy - Four '' Gina Rodriguez
+Micah Schraft & Paul Sciarrotta February 9 , 2018 ( 2018 - 02 - 09 ) 0.80 Jane and Rafael try to be friends , which works great until Jane goes on a date .
+Meanwhile , Petra and Jane 's new partnership is off to a rocky start , but they both know they have to find a way to work together somehow .
+</item 3>
+
+<item 4>
+Jane the Virgin (season 4)
+Here , Jane finds out Jonathan Chavez , her former advisor , is taking advantage of another student of his . While trying to warn the student , Jane
+accidentally grabs her breasts to avoid falling over and , as a result , does n't get the teaching job she was applying for . Meanwhile , Petra gets arrested
+for Anezka 's murder due to the blackmailer planting the screws in her apartment , leading Jane Ramos to tell Petra that she was framing her because she was
+being threatened by an unknown blackmailer . Also , Rafael and Jane continue their affair . Elsewhere , Rogelio tries to get Eva Longoria to join his Passions
+of Santos reboot , but instead finds out the two are distant cousins . 76 12 `` Chapter Seventy - Six '' Melanie Mayron Leah Longoria March 9 , 2018 ( 2018 - 03
+- 09 ) 0.58 Jane 's fixation on a negative review has left her with writer 's block , so Rogelio suggests she take a writing class to help . With the
+encouragement of Jane , Rafael is ready to dig into his past to find out who his real biological parents are .
+</item 4>
+
+<item 5>
+Jane the Virgin (season 4)
+Rogelio is convinced he has male post-partum depression , which puts him at odds with with celebrity Post-Partum Advocate River Fields ( guest star Brooke
+Shields ) on The Talk . Also , Alba finally confides in Jane why she turned down the marriage proposal , leaving Jane to help Alba in the romance department
+when Jane takes Alba to a sex store and buys her a vibrator . Elsewhere , Jane and Rafael agree to have sex , and Petra questions her own sexual identity when
+she starts to have sex dreams about Jane `` J.R. '' Ramos after the lawyer begins flirting with her . 75 11 `` Chapter Seventy - Five '' Gina Lamar Merigan
+Mulhern March 2 , 2018 ( 2018 - 03 - 02 ) 0.59 Jane is ready to move on from the Marbella Hotel issues and pursue writing full time , but an unexpected
+development forces her to consider returning to her teaching roots . Xiomara decides to go back to school where she listens in on an art history class , while
+Jane teaches a seminar about writing .
+</item 5>
+
+<item 6>
+Jane the Virgin (season 4)
+Also , Rafael is on a mission to find his sister , who may have the information he has been looking for of his origins . Rafael visits Rose in prison to ask for
+her help , but he quickly turns her down when she makes a demand to know Luisa 's location . Also , Jane is upset with Petra after her twin girls spill a secret
+to Mateo about the Tooth Fairy being make believe . At the same time , Jane ' J.R. ' Ramos tells Petra after their romantic night together that she is not
+interested in a relationship due to the blackmailer paying a visit to Jane R. 's dementia - stricken mother in a rest home . At the end , the identity of Jane R
+'s blackmailer is finally revealed . 78 14 `` Chapter Seventy - Eight '' Justin Baldoni Valentina Garza & Micah Schraft March 23 , 2018 ( 2018 - 03 - 23 ) 0.65
+Xo struggles to make an important decision on whether or not to get a full mastectomy and looks to Jane for guidance , leaving Rogelio feeling like an outsider
+.
+</item 6>
+
+<item 7>
+Jane the Virgin (season 4)
+69 5 `` Chapter Sixty - Nine '' Stuart Gillard Paul Sciarrotta November 10 , 2017 ( 2017 - 11 - 10 ) 0.65 After Adam reveals his dating past to Jane , she
+becomes so unsure and insecure that it puts a strain on their relationship . Meanwhile , Lina seeks Jane 's advice about whether she should get married or not .
+Petra hears some important information that could help Rafael get the hotel back . Also , Xo asks Rogelio to consider having a medical procedure ( vasectomy )
+done , but he is very hesitant . 70 6 `` Chapter Seventy '' Melanie Mayron Carolina Rivera & Micah Schraft November 17 , 2017 ( 2017 - 11 - 17 ) 0.61 Jane 's
+book is finally being released but her plans to have a party at the local bookshop where she was inspired to be a writer hit a snag . Always wanting to help
+Jane , Rogelio devises a plan to save the day , but one of his arch - rivals threatens to ruin the day .
+</item 7>
+
+<item 8>
+Jane the Virgin (season 4)
+In this season , Jane deals with her romantic feelings for Rafael while reuniting with an ex-boyfriend while Rafael loses ownership of the Marbella and gets
+back together with his ex-wife , Petra Solano ( Yael Grobglas ) . Also , Rogelio de la Vega ( Jaime Camil ) , Jane 's father , is expecting a baby with an
+ex-girlfriend and marries Jane 's mother , Xiomara Villanueva ( Andrea Navedo ) .
+</item 8>
+
+<item 9>
+Jane the Virgin (season 4)
+5 N / A 15 `` Chapter Seventy - Nine '' April 6 , 2018 0.2 / 1 0.54 0.3 0.59 0.5 1.13 16 `` Chapter Eighty '' April 13 , 2018 0.2 / 1 0.57 TBD TBD TBD TBD 17 ``
+Chapter Eighty - One '' April 20 , 2018 0.2 / 1 0.58 TBD TBD TBD TBD References ( edit ) ^ Jump up to : Welch , Alex ( October 16 , 2017 ) . `` ' Hell 's
+Kitchen , ' ' MacGyver , ' ' Once Upon a Time , ' & more remain unchanged : Friday final ratings '' . TV by the Numbers . Retrieved October 16 , 2017 . ^ Jump
+up to : Porter , Rick ( October 23 , 2017 ) . `` ' Jane the Virgin , ' ' Hawaii Five - 0 , ' all others unchanged : Friday final ratings '' . TV by the Numbers
+. Retrieved October 23 , 2017 .
+</item 9>
+
+<item 10>
+Jane the Virgin (season 4)
+However , both Xo and Alba are less thrilled that he is back . Meanwhile , Rafael loses ownership of the hotel to his sister and as a result , he finds himself
+living at Jane 's house , broke and homeless . Jane and Rafael learn that the missing Petra has been found after she got away from Anezka and they rush to her
+side , but Anezka is nowhere to be found . When Petra returns to the hotel , Luisa thinks that Petra is Anezka . Petra goes along with the game , until the real
+Anezka returns . Elsewhere , Xo and Rogelio 's married life is interrupted when they confront the realization that Darci is having Rogelio 's baby and she wants
+full custody . 66 `` Chapter Sixty - Six '' Gina Lamar Valentina Garza & Jessica O'Toole & Amy Rardin October 20 , 2017 ( 2017 - 10 - 20 ) 0.61 Jane 's
+relationship with Adam helps bring out her `` fun side '' and reminds her that she is n't just a mom .
+</item 10>
+=== END ITEM id=0647cbe8f3199123 ===

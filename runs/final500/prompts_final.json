@@ -1,0 +1,22 @@
+[
+ [
+  "AGENTIC GRAPHRAG AGENT, system message (final; the last part is new on 13 Nov)",
+  "Use vector_search to find passages about a topic. Use cypher_search to look up specific named entities and how they are connected. First call vector_search with the question. Then call cypher_search once about the named entities in that evidence. After that, either call the next best tool with a refined query or make no tool call if the evidence is sufficient. Do not repeat a search that returned no new evidence. Every result line starts with an ID such as [E1a2b3c]. When you stop searching, do not answer the question. Reply only with the IDs of the results the answer needs, at most 10, most important first, one per line. Results from either tool count. Pick evidence for every article, person or part the question asks about."
+ ],
+ [
+  "TEXT-TO-CYPHER prompt (final; the rule \"Return graph facts only...\" replaces the rule about finding passages; the passage-text field is removed from the schema shown to it)",
+  "Task: Generate one read-only Cypher statement for a Neo4j 5 graph database from a user input.\n\nSchema:\n{schema}\n\nExamples:\n{examples}\n\nRules:\n- Use only node labels, relationship types, and properties listed in the schema.\n- Every extracted entity also has the label __Entity__ with a name and optional aliases.\n- Match names case-insensitively: compare toLower(n.name), and each alias in coalesce(n.aliases, []), with a lowercase string.\n- Return graph facts only: names, titles, dates, short properties and relationship types. Never return passage text; vector_search finds passages.\n- Write alternative relationship types as [:A|B].\n- Return names and short properties, never embedding, and end with LIMIT 10 or less.\n\nInput:\n{query_text}\n\nReturn only the Cypher statement, with no triple backticks or other text.\n\nCypher query:"
+ ],
+ [
+  "TEXT-TO-CYPHER examples (final; the second example no longer returns passage text)",
+  "USER INPUT: 'What is connected to Ada Lovelace?' QUERY: MATCH (n:__Entity__)-[r]-(m:__Entity__) WHERE (toLower(n.name) CONTAINS 'ada lovelace' OR any(alias IN coalesce(n.aliases, []) WHERE toLower(alias) CONTAINS 'ada lovelace')) RETURN n.name AS entity, type(r) AS relationship, m.name AS related LIMIT 10\nUSER INPUT: 'Which pages mention Acme Corp?' QUERY: MATCH (n:__Entity__)-[:FROM_CHUNK]->(:Chunk)-[:FROM_DOCUMENT]->(d:Document) WHERE (toLower(n.name) CONTAINS 'acme corp' OR any(alias IN coalesce(n.aliases, []) WHERE toLower(alias) CONTAINS 'acme corp')) RETURN DISTINCT n.name AS entity, d.title AS page LIMIT 10\nUSER INPUT: 'Which organizations is Jane Doe part of?' QUERY: MATCH (p:Person)-[:MEMBER_OF|WORKS_FOR]->(o:Organization) WHERE (toLower(p.name) CONTAINS 'jane doe' OR any(alias IN coalesce(p.aliases, []) WHERE toLower(alias) CONTAINS 'jane doe')) RETURN p.name AS person, o.name AS organization LIMIT 10"
+ ],
+ [
+  "CYPHER_SEARCH tool description, new sentence",
+  "Generates and runs a read-only Cypher query. Returns graph facts (names, titles, dates, relationships), never passage text."
+ ],
+ [
+  "Code rules (no prompt)",
+  "Each result line starts with [E + 6 hex characters of the sha256 of the result]. A Cypher query that reads .text is refused with: \"Refused a query that returns passage text; cypher_search returns graph facts only, vector_search finds passages.\" Keys text and embedding are dropped from rows; lists keep at most 20 items plus \"(+N more)\"."
+ ]
+]

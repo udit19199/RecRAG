@@ -1,0 +1,741 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=762239df95337798 ===
+Gold sentences and facts:
+Sentence 0: `` It Ai n't Me '' is a song by Norwegian DJ Kygo and American singer Selena Gomez . It was released by Interscope Records , Sony and Ultra on 17 February 2017 as the lead single from Kygo 's first EP , Stargazing . The song was written by Kygo , Gomez , Andrew Watt , Brian Lee and Ali Tamposi . It was produced by Kygo , Watt , Ben Rice and Louis Bell . A dance - pop , electropop and tropical house song , `` It Ai n't Me '' comprises an acoustic guitar line , and a build - drop arrangement in its chorus featuring pulsing piano notes , bass , synthesizers , finger - snap claps and pan flute melodies . Gomez sings the track in a husky tone , while in the chorus her vocals are reduced to recurring syllables . The lyrics are nostalgic and narrate a past relationship ruined by alcoholism and partying too often .
+  Fact 0.0: 'It Ai n't Me' is a song by Norwegian DJ Kygo and American singer Selena Gomez.
+  Fact 0.1: 'It Ai n't Me' was released by Interscope Records, Sony and Ultra on 17 February 2017.
+  Fact 0.2: 'It Ai n't Me' was the lead single from Kygo's first EP, Stargazing.
+  Fact 0.3: 'It Ai n't Me' was written by Kygo, Selena Gomez, Andrew Watt, Brian Lee and Ali Tamposi.
+  Fact 0.4: 'It Ai n't Me' was produced by Kygo, Andrew Watt, Ben Rice and Louis Bell.
+  Fact 0.5: 'It Ai n't Me' is a dance-pop, electropop and tropical house song.
+  Fact 0.6: 'It Ai n't Me' comprises an acoustic guitar line.
+  Fact 0.7: 'It Ai n't Me' has a build-drop arrangement in its chorus.
+  Fact 0.8: The chorus of 'It Ai n't Me' features pulsing piano notes, bass, synthesizers, finger-snap claps and pan flute melodies.
+  Fact 0.9: Selena Gomez sings the track in a husky tone.
+  Fact 0.10: In the chorus of 'It Ai n't Me', Selena Gomez's vocals are reduced to recurring syllables.
+  Fact 0.11: The lyrics of 'It Ai n't Me' are nostalgic.
+  Fact 0.12: The lyrics of 'It Ai n't Me' narrate a past relationship ruined by alcoholism and partying too often.
+
+Retrieved items:
+<item 1>
+It Ain't Me
+Enter It Ai n't Me in the search field and then press Enter . Jump up ^ `` American single certifications -- Kygo & Selena Gomez -- It Ai n't Me '' . Recording
+Industry Association of America . Retrieved 7 June 2017 . If necessary , click Advanced , then click Format , then select Single , then click SEARCH Jump up ^
+`` Kygo & Selena Gomez - It Ai n't Me RadioDate '' . Radioairplay.fm. 16 February 2017 . Retrieved 9 September 2017 . Jump up ^ ( 1 ) Jump up ^ `` BBC - Radio 1
+- Playlist '' . BBC Radio 1 . 17 March 2017 . Archived from the original on 18 March 2017 . Retrieved 21 June 2017 . Jump up ^ `` Music Meeting for March 28 ''
+. Play IGA . Archived from the original on 28 March 2017 . External links ( edit ) Lyrics of this song at MetroLyrics Kygo Discography Studio albums Cloud Nine
+( 2016 ) Kids in Love ( 2017 ) EPs Stargazing ( 2017
+</item 1>
+
+<item 2>
+It Ain't Me
+It was released by Interscope Records , Sony and Ultra on 17 February 2017 as the lead single from Kygo 's first EP , Stargazing . The song was written by Kygo
+, Gomez , Andrew Watt , Brian Lee and Ali Tamposi . It was produced by Kygo , Watt , Ben Rice and Louis Bell . A dance - pop , electropop and tropical house
+song , `` It Ai n't Me '' comprises an acoustic guitar line , and a build - drop arrangement in its chorus featuring pulsing piano notes , bass , synthesizers ,
+finger - snap claps and pan flute melodies . Gomez sings the track in a husky tone , while in the chorus her vocals are reduced to recurring syllables . The
+lyrics are nostalgic and narrate a past relationship ruined by alcoholism and partying too often . In addition to reaching number one in Croatia , Lebanon , and
+Norway , the song attained a top five peak in Australia , Austria , Belgium , Canada , the Czech Republic , Denmark , Finland , France , Germany , Greece ,
+Hungary , Ireland , the Netherlands , New Zealand , Poland , Portugal , Slovakia , Sweden and Switzerland .
+</item 2>
+
+<item 3>
+It Ain't Me
+It also reached the top 10 in Italy , Spain , the United Kingdom and the United States . Contents ( hide ) 1 Writing and recording 2 Music and lyrics 3 Release
+4 Critical reception 5 Chart performance 6 Music video 7 Usage in media 8 Track listing 9 Credits and personnel 10 Charts 10.1 Weekly charts 10.2 Year - end
+charts 11 Certifications 12 Release history 13 References 14 External links Writing and Recording ( edit ) The lyrics of `` It Ai n't Me '' were written by
+Andrew Watt , Brian Lee and Ali Tamposi . With Watt previously working with Kygo , the DJ 's manager Myles Shear contacted Watt for a session with Kygo which
+Watt also facilitated for Lee and Tamposi . During their session for `` It Ai n't Me '' , they initially found the track very poor , but were trying to salvage
+it . Kygo and Shear suggested that they continue working on the song .
+</item 3>
+
+<item 4>
+It Ain't Me
+For the Bob Dylan song , see It Ai n't Me , Babe . `` It Ai n't Me '' Single by Kygo and Selena Gomez from the EP Stargazing Released 17 February 2017 Format
+Digital download Recorded 2016 Genre Dance - pop electropop tropical house Length 3 : 40 Label Interscope Sony Ultra Songwriter ( s ) Kyrre Gørvell - Dahll
+Selena Gomez Andrew Wotman Brian Lee Ali Tamposi Producer ( s ) Kygo Andrew Watt Ben Rice Louis Bell Kygo singles chronology `` Carry Me '' ( 2016 ) `` It Ai
+n't Me '' ( 2017 ) `` First Time '' ( 2017 ) Selena Gomez singles chronology `` Trust Nobody '' ( 2016 ) Trust Nobody 2016 `` It Ai n't Me '' ( 2017 ) It Ai n't
+Me2017 `` Bad Liar '' ( 2017 ) Bad Liar 2017 Music video `` It Ai n't Me '' on YouTube `` It Ai n't Me '' is a song by Norwegian DJ Kygo and American singer
+Selena Gomez .
+</item 4>
+
+<item 5>
+It Ain't Me
+Usage in Media ( edit ) The song is featured in tenth episode of the television series The Bold Type . Track listing ( edit ) Digital download `` It Ai n't Me
+'' -- 3 : 40 Digital download -- Tiësto 's AFTR : HRS Remix `` It Ai n't Me '' ( Tiësto 's AFTR : HRS Remix ) -- 3 : 12 Credits and personnel ( edit ) Credits
+adapted from Qobuz . Kygo -- composer , producer Selena Gomez -- composer , vocals Andrew Watt -- guitar , producer , vocal producer , composer , songwriter
+Brian Lee -- composer , songwriter Ali Tamposi -- composer , songwriter Tom Coyne -- mastering engineer Serban Ghenea -- mixing engineer Ben Rice -- vocal
+producer Louis Bell -- vocal producer Charts ( edit ) Weekly charts ( edit ) Chart ( 2017 ) Peak position Australia ( ARIA ) Austria ( Ö3 Austria Top 40 )
+Belgium ( Ultratop 50 Flanders ) Belgium ( Ultratop 50 Wallonia ) Canada ( Canadian Hot 100 ) Canada CHR / Top 40 ( Billboard ) Canada Hot AC ( Billboard ) 6
+Colombia ( Monitor Latino Anglo ) Croatia ( HRT ) Czech Republic (
+</item 5>
+
+<item 6>
+It Ain't Me
+The same synthesizers from the verses are repeated with a piano in the background . Gomez 's vocals in the drop are reduced to syllables from her verses such as
+a recurring `` whiskey neat '' and are accompanied by percussion instruments . `` It Ai n't Me '' is a breakup song with a theme of nostalgia . The lyrics are
+about standing up for yourself in the face of a toxic relationship . Gomez narrates the regret of a previous relationship ruined by her former lover 's habits
+of drinking and partying too often . The lyrics specifically address alcohol abuse , a type of alcoholism . Tamposi explained that `` It Ai n't Me '' is about a
+woman finding the strength to walk away from a toxic relationship despite the pressure she receives from society to stand by her man . Although the lyrics are
+sombre , the song has a distinctly uplifting and empowering sound . Release ( edit ) In early February 2017 , `` It Ai n't Me '' was registered on the American
+Society of Composers , Authors and Publishers ( ASCAP ) database . Gomez first teased the single with two Instagram stories on 3 February 2017 .
+</item 6>
+
+<item 7>
+It Ain't Me
+It Ai n't Me - wikipedia It Ai n't Me Jump to : navigation , search This article is about the Kygo and Selena Gomez song . For the Bob Dylan song , see It Ai
+n't Me , Babe .
+</item 7>
+
+<item 8>
+It Ain't Me
+'' Featured singles `` I Want You to Know '' `` We Do n't Talk Anymore '' `` Hands '' `` Trust Nobody '' Promotional singles `` Tell Me Something I Do n't Know
+'' `` Magic '' `` Whoa Oh ! '' ( remix ) `` Send It On '' `` Shake It Up '' `` Me & the Rhythm '' Other charted songs `` One and the Same '' `` Birthday '' ``
+Stars Dance '' `` Sober '' `` Me & My Girls '' Other songs `` Like a Champion '' `` Forget Forever '' `` Revival '' `` Only You '' Concert tours Stars Dance
+Tour Revival Tour Related articles Selena Gomez & the Scene Francia Raisa Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=It_Ain%27t_Me&oldid=837863799 '' Categories : 2017 singles 2017 songs Kygo songs Selena Gomez songs Sony Music
+Entertainment singles Songs written by Kygo Songs written by Selena Gomez Songs written by Ali Tamposi Ultra Music singles Number - one singles in Norway Songs
+written by Andrew Watt ( musician ) Songs written by Brian Lee ( songwriter ) Songs about alcohol Tropical house songs Interscope Records singles Hidden
+categories :
+</item 8>
+
+<item 9>
+It Ain't Me
+) Kids in Love ( 2017 ) EPs Stargazing ( 2017 ) Singles Cloud Nine `` Firestone '' `` Stole the Show '' `` Nothing Left '' `` Stay '' `` Fragile '' `` Raging ''
+`` Carry Me '' Stargazing `` It Ai n't Me '' `` First Time '' `` Stargazing '' Kids in Love `` Kids in Love '' `` Stranger Things '' `` Remind Me to Forget ''
+Non-album singles `` ID '' `` Coming Over '' `` Here for You '' Remixes `` Cut Your Teeth '' `` Sexual Healing '' `` Take On Me '' `` Tired '' `` You 're the
+Best Thing About Me '' Soundtracks Fifty Shades Darker : Original Motion Picture Soundtrack ( 2017 ) Selena Gomez Discography Awards and nominations Songs
+Studio albums Stars Dance Revival Compilation albums For You Singles `` Come & Get It '' `` Slow Down '' `` The Heart Wants What It Wants '' `` Good for You ''
+`` Same Old Love '' `` Hands to Myself '' `` Kill Em with Kindness '' `` It Ai n't Me '' `` Bad Liar '' `` Fetish '' `` Wolves '' Featured singles `` I Want You
+to Know '' `` We Do n't Talk Anymore ''
+</item 9>
+
+<item 10>
+It Ain't Me
+The song carries a calm tone and a drop common in tropical house music , but is complimented by an equal measure of electronic and pop rock elements . The track
+starts with a folk - like acoustic guitar riff . It is followed immediately by Gomez singing the first verse in a husky tone . As the song develops , a steady
+bass and synthesizers are heard . The production is subtle and varied with finger snaps sometimes being louder than the kick drum , and the guitar riff and
+piano notes alternating in and out . In the chorus , Gomez is accompanied by background vocals that pertain to the sound of a choir . `` It Ai n't Me '' A 21 -
+second sound sample from `` It Ai n't Me '' featuring the chorus to the start of the drop which Gomez sings accompanied by backing vocals , piano notes , a
+guitar riff , and vocal effects . Problems playing this file ? See media help . The chorus has a new melodic arrangement and a crescendo . It is ensued by chord
+- buoyed builds and drops comprising finger snaps and pan flute melodies . The same synthesizers from the verses are repeated with a piano in the background .
+</item 10>
+=== END ITEM id=762239df95337798 ===
+
+=== ITEM id=858499c886a45442 ===
+Gold sentences and facts:
+Sentence 0: Dragon Ball Z ( ドラゴンボール ゼット , Doragon Bōru Zetto , commonly abbreviated as DBZ ) is the long - running anime sequel to the Dragon Ball TV series , adapted from the final twenty - six volumes of the Dragon Ball manga written by Akira Toriyama . The manga portion of the series debuted in Weekly Shōnen Jump in October 4 , 1988 and lasted until 1995 ; the anime adaptation premiered in Japan on Fuji Television on April 26 , 1989 , taking over its predecessor 's time slot , and ran until its end on January 31 , 1996 , lasting 291 episodes in Japan , and 276 episodes in the United States originally , although all 291 episodes were later broadcast when content from the first 67 episodes was restored .
+  Fact 0.0: Dragon Ball Z (ドラゴンボール ゼット, Doragon Bōru Zetto, commonly abbreviated as DBZ) is the long-running anime sequel to the Dragon Ball TV series.
+  Fact 0.1: Dragon Ball Z is adapted from the final twenty-six volumes of the Dragon Ball manga written by Akira Toriyama.
+  Fact 0.2: The Dragon Ball Z manga portion debuted in Weekly Shōnen Jump in October 4, 1988.
+  Fact 0.3: The Dragon Ball Z manga portion lasted until 1995.
+  Fact 0.4: The Dragon Ball Z anime adaptation premiered in Japan on Fuji Television on April 26, 1989.
+  Fact 0.5: The Dragon Ball Z anime adaptation took over its predecessor's time slot.
+  Fact 0.6: The Dragon Ball Z anime adaptation ended on January 31, 1996.
+  Fact 0.7: The Dragon Ball Z anime adaptation lasted 291 episodes in Japan.
+  Fact 0.8: The Dragon Ball Z anime adaptation originally lasted 276 episodes in the United States.
+  Fact 0.9: All 291 Dragon Ball Z episodes were later broadcast, after content from the first 67 episodes was restored.
+
+Retrieved items:
+<item 1>
+List of Dragon Ball Z episodes
+Contents ( hide ) 1 Seasons overview 2 Episode list 2.1 Season 1 : Saiyan Saga ( 1989 -- 1990 ) 2.2 Season 2 : Namek and Captain Ginyu Sagas ( 1990 -- 1991 )
+2.3 Season 3 : Frieza Saga ( 1991 ) 2.4 Season 4 : Garlic Jr.
+</item 1>
+
+<item 2>
+List of Dragon Ball Z episodes
+The manga portion of the series debuted in Weekly Shōnen Jump in October 4 , 1988 and lasted until 1995 ; the anime adaptation premiered in Japan on Fuji
+Television on April 26 , 1989 , taking over its predecessor 's time slot , and ran until its end on January 31 , 1996 , lasting 291 episodes in Japan , and 276
+episodes in the United States originally , although all 291 episodes were later broadcast when content from the first 67 episodes was restored . Dragon Ball Z
+uses four pieces of theme music in the Japanese version . From episodes 1 - 199 , the opening theme is `` Cha - La Head - Cha - La '' by Hironobu Kageyama , and
+the closing theme is `` Detekoi Tobikiri Zenkai Pawā ! '' by MANNA . From episodes 200 - 291 , the opening and closing themes are `` We Gotta Power '' and ``
+Boku - Tachi wa Tenshi Datta , '' both by Hironobu Kagayama .
+</item 2>
+
+<item 3>
+List of Dragon Ball Z episodes
+! 悪く て 強く て とんでも ない 奴 ) October 24 , 1990 May 16 , 1998 October 4 , 2005 ( re-dub ) 65 52 / 55 `` Do n't Die , Gohan ! Goku Finally Touches Down on the
+Battlefield '' / `` Enter Goku '' ( Let the Battle Begin ) `` Shinu na Gohan ! Gokū , Tsui ni Kessenjō ni Tōchaku Da '' ( 死ぬ な 悟 飯 ! 悟空 、 ついに 決戦 場 に 到着 だ )
+October 31 , 1990 May 23 , 1998 October 5 , 2005 ( re-dub ) 66 53 / 56 `` Uncommon Strength ! ! Son Goku , the Legendary Super Saiyan '' / `` Goku ... Super
+Saiyan ? '' ( Goku 's New Power ) `` Ketahazure no Tsuyosa ! !
+</item 3>
+
+<item 4>
+Dragon Ball Z, adapted from the final 26 volumes of Akira Toriyama’s manga, aired in Japan from April 1989 to January 1996 for 291 episodes. Its original US
+broadcast had 276 edited episodes; all 291 later aired with content restored. Funimation’s nine DVD “seasons” group episodes by story arcs, not original
+broadcast seasons. The series covers Saiyan through Kid Buu sagas, used two pairs of Japanese opening and ending themes, and
+</item 4>
+
+<item 5>
+List of Dragon Ball Z episodes
+Season Episodes Japanese airdates English airdates Saiyan Saga 39 ( 1 -- 39 ) April 26 , 1989 -- March 7 , 1990 September 13 , 1996 -- September 20 , 1997 (
+edited ) June 14 , 2005 -- August 18 , 2005 ( uncut ) Namek and Captain Ginyu Sagas 35 ( 40 -- 74 ) March 14 , 1990 -- January 16 , 1991 September 20 , 1997 --
+April 4 , 1998 ( edited ) September 13 , 1999 -- September 20 , 1999 ( uncut ep. 68 -- 74 ) August 22 , 2005 -- October 10 , 2005 ( uncut ep. 40 -- 67 ) Frieza
+Saga 33 ( 75 -- 107 ) January 23 , 1991 -- September 11 , 1991 September 21 , 1999 -- November 3 , 1999 Garlic Jr. , Trunks and Androids Sagas 32 ( 108 -- 139 )
+September 18 ,
+</item 5>
+
+<item 6>
+List of Dragon Ball Z episodes
+! ブッ 飛べ ヤコン ) April 13 , 1994 October 18 , 2001 224 209 `` A Great Miscalculation ! ! Satan vs. Three Super-Warriors ! ? '' / `` Battle Supreme '' `` Daigosan !
+! Satan tai Sannin no Chōsenshi ! ? '' ( 大 誤算 ! ! サタン VS3 人 の 超 戦士 ! ? ) April 20 , 1994 October 22 , 2001 225 210 `` Such Strong Kids ! ! No. 18 's Close Fight
+! ? '' / `` Eighteen Unmasks '' `` Tsuyoi ze Chibikko ! ! Jūhachigō Daikusen ! ? '' ( 強い ぜ チビッコ ! ! 18 号 大 苦戦 ! ? )
+</item 6>
+
+<item 7>
+*Dragon Ball Z*, adapted from manga volumes 17–42, aired in Japan from 1989–1996 for 291 episodes. The original U.S. run edited this to 276 episodes; all 291
+later aired restored. Funimation’s nine DVD seasons group story arcs. The series spans the Saiyan through Kid Buu sagas and used two opening/ending theme pairs.
+The excerpts catalog episode titles, numbering, and Japanese, U.S., and re-dub dates,
+</item 7>
+
+<item 8>
+List of Dragon Ball Z episodes
+( Saiyan Sized Secret ) `` Ima da Gokū ! Subete o Kaketa Saigo no Ōwaza '' ( いまだ 悟空 ! すべて を 賭け た 最後 の 大 技 ) December 20 , 1989 May 3 , 1997 August 4 , 2005 (
+re-dub ) 32 24 `` Battle Power Times Ten ! ! Vegeta 's Great Metamorphosis '' / `` Vegeta ... Saiyan Style ! '' ( Spirit Bomb Away ! ) `` Sentōryoku Jūbai ! !
+Bejīta Daihenshin '' ( 戦闘 力 10 倍 ! ! ベジータ 大 変身 ) January 17 , 1990 May 10 , 1997 August 8 , 2005 ( re-dub ) 33 25 `` Do n't Die , Father ! ! This is the Depth
+of Gohan 's Power '' / `` Stop Vegeta Now ! ''
+</item 8>
+
+<item 9>
+List of Dragon Ball Z episodes
+The series was broadcast in eight separate near - continuous blocks ( 1 - 35 , 36 - 67 , 68 - 107 , 108 - 116 , 117 - 194 , 195 - 237 , 238 - 276 , and 277 -
+291 ) , with breaks varying between four months to over a year between each block . In only one instance ( between episodes 194 and 195 ) was there actually
+parity between the DVD release and the actual broadcast sequence in terms of the end of one `` season '' and the beginning of the next .
+</item 9>
+
+<item 10>
+List of Dragon Ball Z episodes
+? '' ( 炎 の 決勝 ! ! 悟空 か パイクーハン か ! ? ) August 25 , 1993 September 13 , 2001 199 184 `` Do n't Let Victory Get Away ! ! Finish With an Ultra-Fast Kamehame - Ha ''
+/ `` Goku vs. Pikkon '' `` Nigasu na Shōri ! ! Kimero Chōhaya Kamehameha '' ( 逃す な 勝利 ! ! 決めろ 超速 かめ はめ 波 ) September 1 , 1993 September 14 , 2001 200 185 ``
+Seven Years Since Then ! Starting Today , I 'm a High School Student '' / `` Gohan Goes to High School '' `` Are kara Shichinen ! Kyō kara Boku wa Kōkōsei '' (
+あれ から 7 年 !
+</item 10>
+=== END ITEM id=858499c886a45442 ===
+
+=== ITEM id=500490f6b9810a41 ===
+Gold sentences and facts:
+Sentence 0: The 1836 article and other sources make it clear that this verse was not used soon after 1745 , and certainly before the song became accepted as the British national anthem in the 1780s and 1790s . It was included as an integral part of the song in the Oxford Book of Eighteenth Century Verse of 1926 , although erroneously referencing the `` fourth verse '' to the Gentleman 's Magazine article of 1745 .
+  Fact 0.0: The 1836 article and other sources show that this verse was not used soon after 1745.
+  Fact 0.1: The 1836 article and other sources show that this verse was certainly not used before the song became accepted as the British national anthem in the 1780s and 1790s.
+Sentence 1: The French Marquise de Créquy wrote in her Souvenirs that the words `` Grand Dieu , sauvez le Roi ! '' were indeed composed by Jean - Baptiste Lully in gratitude for the survival by Louis XIV of an anal fistula operation . ( The surgical knife purpose - made for the occasion is on display in the Musée d'histoire de la médecine . ) Allegedly , Lully had set words by Marie de Brinon to music , and Créquy claimed that the tune was later plagiarised by Handel , and so adopted by the British as `` un de leurs air nationaux '' . ( The entire story might have been intended as a joke . ) Translated into Latin under the title Domine , Salvum Fac Regem , it became the French anthem until 1792 . After the Battle of Culloden , the Hanover dynasty supposedly adopted this melody as the British anthem .
+  Fact 1.0: The verse was included as an integral part of the song in the Oxford Book of Eighteenth Century Verse of 1926.
+  Fact 1.1: The Oxford Book of Eighteenth Century Verse of 1926 erroneously referenced the 'fourth verse' to the Gentleman's Magazine article of 1745.
+
+Retrieved items:
+<item 1>
+God Save the Queen
+Songs of Praise . Oxford University Press . Jump up ^ `` Forgotten National Anthem Sung at Halesowen Service '' . Black Country Bugle. 15 March 2007 . Retrieved
+20 January 2017 . Source describes it as an `` unusual and little known version of the national anthem ... taken from the order of service for the blessing of
+Halesowen 's borough charter ... on Sunday , 20 September 1936 . '' Jump up ^ Clark , Richard ( 1822 ) . An Account of the National Anthem Entitled God Save the
+King ! . London . pp. 8 -- 9 . Jump up ^ Richards , Jeffrey ( 2002 ) . Imperialism and Music : Britain 1876 to 1953 . Manchester University Press . p. 90 . ISBN
+0 - 7190 - 4506 - 1 .
+</item 1>
+
+<item 2>
+God Save the Queen
+National or royal anthem of Antigua and Barbuda ( royal ) Australia ( royal ) and its dependency of Norfolk Island ( national and royal ) The Bahamas ( royal )
+Barbados ( royal ) Belize ( royal ) Canada ( royal ) Grenada ( royal ) Jamaica ( royal ) New Zealand ( national and royal ) and some of its dependencies ( Cook
+Islands and Niue ( royal ) and Tokelau ( national and royal ) ) Saint Kitts and Nevis ( royal ) Mauritius ( royal ) 1968 - 1992 Solomon Islands ( royal ) Tuvalu
+( royal ) United Kingdom ( national and royal ) , its Crown Dependencies and its overseas territories Also known as `` God Save the King '' ( when the monarch
+is male ) Music Unknown composer Adopted September 1745 Audio sample `` God Save the Queen '' file help `` God Save the Queen '' ( alternatively `` God Save the
+King '' , depending on the gender of the reigning monarch ) is the national or royal anthem in a number of Commonwealth realms , their territories , and the
+British Crown dependencies . The author of the tune is unknown , and it may originate in plainchant ; but an attribution to the composer John Bull is sometimes
+made .
+</item 2>
+
+<item 3>
+God Save the Queen
+Republic . Retrieved 11 November 2017 . External links ( edit ) Wikisource has original text related to this article : God Save the Queen Wikimedia Commons has
+media related to God Save the Queen . National Anthem at the Royal Family website Streaming audio , lyrics and information about God Save the Queen Department
+of Canadian Heritage -- Royal anthem page God Save Great George our King : -- article discussing different versions of the lyrics Free sheet music of God Save
+the Queen from Cantorion.org A Point of View : Is it time for a new British national anthem ? BBC NEWS . Published 15 January 2016 . Retrieved 17 July 2017 .
+National anthems of Europe Sovereign states Albania Andorra Armenia Austria Azerbaijan Belarus Belgium Bosnia and Herzegovina Bulgaria Croatia Cyprus Czech
+Republic Denmark Estonia Finland France Georgia Germany Greece Hungary Iceland Ireland Italy Kazakhstan Latvia Liechtenstein Lithuania Luxembourg Macedonia
+Malta Moldova Monaco Montenegro Netherlands Norway Poland Portugal Romania Russia San Marino Serbia Slovakia Slovenia Spain Sweden Switzerland Turkey Ukraine
+United Kingdom Vatican City Territories , dependencies , other areas United Kingdom Constituent countries England Northern Ireland Scotland Wales British
+Overseas Territories Gibraltar Crown dependencies Guernsey Isle of Man Jersey Counties Cornwall Lincolnshire Yorkshire Russia Adygea
+</item 3>
+
+<item 4>
+God Save the Queen
+Since 1953 , the anthem is sometimes preceded by a fanfare composed by Gordon Jacob for the coronation of Queen Elizabeth II . Alternative British versions (
+edit ) There have been several attempts to improve the song by rewriting the words . In the nineteenth century there was some lively debate about the national
+anthem and , even then , verse two was considered to be slightly offensive . Notably , the question arose over the phrase `` scatter her enemies . '' Some
+thought it placed better emphasis on the respective power of Parliament and the Crown to change `` her '' to `` our '' ; others pointed out that the theology
+was somewhat dubious and substituted `` thine '' instead . Sydney G.R. Coles wrote a completely new version , as did Canon F.K. Harford . In 1836 , William
+Edward Hickson wrote four alternative verses . The first , third , and fourth of these verses are appended to the National Anthem in the English Hymnal ( which
+only includes verses one and three of the original lyrics ) .
+</item 4>
+
+<item 5>
+God Save the Queen
+It is the national anthem of the United Kingdom and one of two national anthems used by New Zealand since 1977 , as well as for several of the UK 's territories
+that have their own additional local anthem . It is also the royal anthem -- played specifically in the presence of the monarch -- of all the aforementioned
+countries , as well as Australia ( since 1984 ) , Canada ( since 1980 ) , Barbados and Tuvalu . In countries not previously part of the British Empire , the
+tune of `` God Save the Queen '' has provided the basis for various patriotic songs , though still generally connected with royal ceremony . In the United
+States , the melody is used for the patriotic song `` My Country , ' Tis of Thee '' . The melody is also used for the national anthem of Liechtenstein , `` Oben
+am jungen Rhein '' . Beyond its first verse , which is consistent , `` God Save the Queen / King '' has many historic and extant versions . Since its first
+publication , different verses have been added and taken away and , even today , different publications include various selections of verses in various orders .
+In general , only one verse is sung .
+</item 5>
+
+<item 6>
+God Save the Queen
+In April 2007 there was an early day motion , number 1319 , to the British Parliament to propose that there should be a separate England anthem : `` That this
+House ... believes that all English sporting associations should adopt an appropriate song that English sportsmen and women , and the English public , would
+favour when competing as England '' . An amendment ( EDM 1319A3 ) was proposed by Evan Harris that the song `` should have a bit more oomph than God Save The
+Queen and should also not involve God . '' For more information see also : National anthem of England National anthem of Scotland Hen Wlad Fy Nhadau Londonderry
+Air Use in other Commonwealth countries ( edit ) `` God Save the King / Queen '' was exported around the world via the expansion of the British Empire , serving
+as each country 's national anthem . Throughout the Empire 's evolution into the Commonwealth of Nations , the song declined in use in most states which became
+independent .
+</item 6>
+
+<item 7>
+God Save the Queen
+Standard version of the music ( edit ) Play media `` God Save the Queen '' sung by the public at St Giles ' Fair , Oxford , 2007 The standard version of the
+melody and its key of G major are still those of the originally published version , although the start of the anthem is often signalled by an introductory
+timpani roll of two bars length . The bass line of the standard version differs little from the second voice part shown in the original , and there is a
+standard version in four - part harmony for choirs . The first three lines ( six bars of music ) are soft , ending with a short crescendo into `` Send her
+victorious '' , and then is another crescendo at `` over us : '' into the final words `` God save the Queen '' . In the early part of the 20th century there
+existed a Military Band version , usually played in march time , in the higher key of B ♭ , because it was easier for brass instruments to play in that key ,
+though it had the disadvantage of being more difficult to sing : however now most Bands play it in the correct key of G .
+</item 7>
+
+<item 8>
+God Save the Queen
+The first music proper , a performance of the National Anthem was programmed by Christopher Strachey on the Mark II Manchester Electronic Computer at same venue
+, in 1951 . Later that year , short extracts of three pieces , the first being the National Anthem , were recorded there by a BBC outside broadcasting unit :
+the other pieces being `` Ba Ba Black Sheep , and `` In the Mood '' . Researchers at the University of Canterbury , Christchurch restored the acetate master
+disc in 2016 and the results may be heard on Soundcloud . Reception ( edit ) The philosopher and reformer Jeremy Bentham praised `` God Save the King '' in 1796
+: `` the melody recommending itself by beauty to the most polished ears , and by its simplicity to the rudest ear . A song of this complexion , implanted by the
+habit of half a century in the mass of popular sentiment , can not be refused a place in the inventory of the national blessings . '' Ludwig van Beethoven wrote
+`` I have to show the English a little of what a blessing ' God Save the King ' is '' . Alex Marshall , the British author of Republic or Death !
+</item 8>
+
+<item 9>
+God Save the Queen
+Radio 4 and Radio 2 also play the National Anthem at 0700 and 0800 on the actual and official birthdays of the Queen and the birthdays of senior members of the
+Royal Family . The UK 's national anthem usually prefaces The Queen 's Christmas Message ( although in 2007 it appeared at the end , taken from a recording of
+the 1957 television broadcast ) , and important royal announcements , such as of royal deaths , when it is played in a slower , sombre arrangement . Other
+British anthems ( edit ) Frequently , when an anthem is needed for one of the constituent countries of the United Kingdom -- at an international sporting event
+, for instance -- an alternative song is used : England generally uses `` God Save the Queen '' , but `` Jerusalem '' , `` Rule , Britannia ! '' and `` Land of
+Hope and Glory '' have also been used . At international test cricket matches , England has , since 2004 , used `` Jerusalem '' as the anthem . At international
+rugby league matches , England uses `` God Save the Queen '' and also `` Jerusalem '' . At international rugby union and football matches , England uses `` God
+Save the Queen '' .
+</item 9>
+
+<item 10>
+God Save the Queen
+Send him victorious Happy and glorious Long to reign over us God save the king ! Use in the United Kingdom ( edit ) See also : National anthem of England The
+phrase `` God Save the King '' in use as a rallying cry to the support of the monarch and the UK 's forces `` God Save the Queen '' is the national anthem of
+the United Kingdom of Great Britain and Northern Ireland . Like many aspects of British constitutional life , its official status derives from custom and use ,
+not from Royal Proclamation or Act of Parliament . In general only one or two verses are sung , but on rare occasions three . The variation in the UK of the
+lyrics to `` God Save the Queen '' is the oldest amongst those currently used , and forms the basis on which all other versions used throughout the Commonwealth
+are formed ; though , again , the words have varied throughout these years . England has no official national anthem of its own ; `` God Save the Queen '' is
+treated as the English national anthem when England is represented at sporting events ( though there are some exceptions to this rule , such as cricket where
+Jerusalem is used ) .
+</item 10>
+=== END ITEM id=500490f6b9810a41 ===
+
+=== ITEM id=905d998efde78e18 ===
+Gold sentences and facts:
+Sentence 0: The story of Shakespeare 's Hamlet was derived from the legend of Amleth , preserved by 13th - century chronicler Saxo Grammaticus in his Gesta Danorum , as subsequently retold by the 16th - century scholar François de Belleforest . Shakespeare may also have drawn on an earlier Elizabethan play known today as the Ur - Hamlet , though some scholars believe he himself wrote the Ur - Hamlet , later revising it to create the version of Hamlet we now have . He almost certainly wrote his version of the title role for his fellow actor , Richard Burbage , the leading tragedian of Shakespeare 's time . In the 400 years since its inception , the role has been performed by numerous highly acclaimed actors in each successive century .
+  Fact 0.0: The story of Shakespeare's Hamlet was derived from the legend of Amleth.
+  Fact 0.1: The legend of Amleth was preserved by the 13th-century chronicler Saxo Grammaticus in his Gesta Danorum.
+  Fact 0.2: The legend of Amleth was subsequently retold by the 16th-century scholar François de Belleforest.
+  Fact 0.3: Shakespeare may also have drawn on an earlier Elizabethan play known today as the Ur-Hamlet.
+  Fact 0.4: Some scholars believe Shakespeare himself wrote the Ur-Hamlet and later revised it to create the version of Hamlet we have today.
+  Fact 0.5: Shakespeare almost certainly wrote his version of the title role for his fellow actor Richard Burbage.
+  Fact 0.6: Richard Burbage was the leading tragedian of Shakespeare's time.
+  Fact 0.7: In the 400 years since the role of Hamlet was created, it has been performed by numerous highly acclaimed actors.
+  Fact 0.8: The role of Hamlet has been performed by highly acclaimed actors in each successive century for 400 years.
+
+Retrieved items:
+<item 1>
+Hamlet
+In the 400 years since its inception , the role has been performed by numerous highly acclaimed actors in each successive century . Three different early
+versions of the play are extant : the First Quarto ( Q1 , 1603 ) ; the Second Quarto ( Q2 , 1604 ) ; and the First Folio ( F1 , 1623 ) . Each version includes
+lines and entire scenes missing from the others . The play 's structure and depth of characterisation have inspired much critical scrutiny . One such example is
+the centuries - old debate about Hamlet 's hesitation to kill his uncle , which some see as merely a plot device to prolong the action , but which others argue
+is a dramatisation of the complex philosophical and ethical issues that surround cold - blooded murder , calculated revenge , and thwarted desire . More
+recently , psychoanalytic critics have examined Hamlet 's unconscious desires , while feminist critics have re-evaluated and attempted to rehabilitate the often
+maligned characters of Ophelia and Gertrude . Contents ( hide ) 1 Characters 2 Plot 2.1 Act I 2.2 Act II 2.3 Act III 2.
+</item 1>
+
+<item 2>
+Hamlet
+He is dethroned by the spectre of an actor , and we shall never be able to keep the usurper out of our dreams . Maurice Maeterlinck in La Jeune Belgique ( 1890
+) . Shakespeare 's day to the Interregnum ( edit ) Shakespeare almost certainly wrote the role of Hamlet for Richard Burbage . He was the chief tragedian of the
+Lord Chamberlain 's Men , with a capacious memory for lines and a wide emotional range . Judging by the number of reprints , Hamlet appears to have been
+Shakespeare 's fourth most popular play during his lifetime -- only Henry IV Part 1 , Richard III and Pericles eclipsed it . Shakespeare provides no clear
+indication of when his play is set ; however , as Elizabethan actors performed at the Globe in contemporary dress on minimal sets , this would not have affected
+the staging . Firm evidence for specific early performances of the play is scant .
+</item 2>
+
+<item 3>
+Hamlet
+( father ) Mary Arden ( mother ) Gilbert Shakespeare ( brother ) Joan Shakespeare ( sister ) Edmund Shakespeare ( brother ) Richard Shakespeare ( grandfather )
+John Hall ( son - in - law ) Thomas Quiney ( son - in - law ) Thomas Nash ( grandson - in - law ) * Shakespeare and other authors Lost William Shakespeare 's
+Hamlet Characters Hamlet Claudius Gertrude Ghost Polonius Laertes Ophelia Horatio Rosencrantz and Guildenstern Fortinbras The Gravediggers Yorick Soliloquies ``
+To be , or not to be '' `` Mortal coil '' `` What a piece of work is a man '' `` Speak the speech '' Words and phrases `` The lady doth protest too much ,
+methinks '' `` Thy name is '' `` Primrose path '' Terminology Dumbshow Induction Quiddity Substitution Sources Criticism Legend of Hamlet The Spanish Tragedy Ur
+- Hamlet Critical approaches Bibliographies Horwendill Saxo Grammaticus House of Gonzaga Damon and Pythias Influence Common phrases from Hamlet Hamlet in
+popular culture References to Ophelia Language of flowers Human skull symbolism Performances Moscow Art Theatre ( 1911 -- 1912 )
+</item 3>
+
+<item 4>
+Hamlet
+Hamlet is not among them , suggesting that it had not yet been written . As Hamlet was very popular , Bernard Lott , the series editor of New Swan , believes it
+`` unlikely that he ( Meres ) would have overlooked ... so significant a piece '' . The phrase `` little eyases '' in the First Folio ( F1 ) may allude to the
+Children of the Chapel , whose popularity in London forced the Globe company into provincial touring . This became known as the War of the Theatres , and
+supports a 1601 dating . Katherine Duncan - Jones accepts a 1600 -- 1 attribution for the date Hamlet was written , but notes that the Lord Chamberlain 's Men ,
+playing Hamlet in the 3000 - capacity Globe , were unlikely to be put to any disadvantage by an audience of `` barely one hundred '' for the Children of the
+Chapel 's equivalent play , Antonio 's Revenge ; she believes that Shakespeare , confident in the superiority of his own work , was making a playful and
+charitable allusion to his friend John Marston 's very similar piece .
+</item 4>
+
+<item 5>
+Hamlet
+Jenkins suggests that any personal satire may be found in the name `` Polonius '' , which might point to a Polish or Polonian connection . G.R. Hibbard
+hypothesised that differences in names ( Corambis / Polonius : Montano / Raynoldo ) between the First Quarto and other editions might reflect a desire not to
+offend scholars at Oxford University . Date ( edit ) John Barrymore as Hamlet ( 1922 ) `` Any dating of Hamlet must be tentative '' , cautions the New Cambridge
+editor , Phillip Edwards . The earliest date estimate relies on Hamlet 's frequent allusions to Shakespeare 's Julius Caesar , itself dated to mid-1599 . The
+latest date estimate is based on an entry , of 26 July 1602 , in the Register of the Stationers ' Company , indicating that Hamlet was `` latelie Acted by the
+Lo : Chamberleyne his servantes '' . In 1598 , Francis Meres published his Palladis Tamia , a survey of English literature from Chaucer to its present day ,
+within which twelve of Shakespeare 's plays are named .
+</item 5>
+
+<item 6>
+Hamlet
+Possibly written by Thomas Kyd or even William Shakespeare , the Ur - Hamlet would have existed by 1589 , and would have incorporated a ghost . Shakespeare 's
+company , the Chamberlain 's Men , may have purchased that play and performed a version for some time , which Shakespeare reworked . However , since no copy of
+the Ur - Hamlet has survived , it is impossible to compare its language and style with the known works of any of its putative authors . Consequently , there is
+no direct evidence that Kyd wrote it , nor any evidence that the play was not an early version of Hamlet by Shakespeare himself . This latter idea -- placing
+Hamlet far earlier than the generally accepted date , with a much longer period of development -- has attracted some support . The upshot is that scholars can
+not assert with any confidence how much material Shakespeare took from the Ur - Hamlet ( if it even existed ) , how much from Belleforest or Saxo , and how much
+from other contemporary sources ( such as Kyd 's The Spanish Tragedy ) . No clear evidence exists that Shakespeare made any direct references to Saxo 's version
+.
+</item 6>
+
+<item 7>
+Hamlet
+Firm evidence for specific early performances of the play is scant . What is known is that the crew of the ship Red Dragon , anchored off Sierra Leone ,
+performed Hamlet in September 1607 ; that the play toured in Germany within five years of Shakespeare 's death ; and that it was performed before James I in
+1619 and Charles I in 1637 . Oxford editor George Hibbard argues that , since the contemporary literature contains many allusions and references to Hamlet (
+only Falstaff is mentioned more , from Shakespeare ) , the play was surely performed with a frequency that the historical record misses . All theatres were
+closed down by the Puritan government during the Interregnum . Even during this time , however , playlets known as drolls were often performed illegally ,
+including one called The Grave - Makers based on Act 5 , Scene 1 of Hamlet . Restoration and 18th century ( edit ) Title page and frontispiece for Hamlet ,
+Prince of Denmark : A Tragedy . As it is now acted at the Theatres - Royal in Drury - Lane and Covent - Garden . London , 1776 The play was revived early in the
+Restoration .
+</item 7>
+
+<item 8>
+Hamlet
+Hamlet - wikipedia Hamlet Jump to : navigation , search This article is about the play by William Shakespeare . For other uses , see Hamlet ( disambiguation ) .
+The American actor Edwin Booth as Hamlet , ca . 1870 The Tragedy of Hamlet , Prince of Denmark , often shortened to Hamlet ( / ˈhæmlɪt / ) , is a tragedy
+written by William Shakespeare at an uncertain date between 1599 and 1602 . Set in Denmark , the play dramatises the revenge Prince Hamlet is called to wreak
+upon his uncle , Claudius , by the ghost of Hamlet 's father , King Hamlet . Claudius had murdered his own brother and seized the throne , also marrying his
+deceased brother 's widow . Hamlet is Shakespeare 's longest play , and is considered among the most powerful and influential works of world literature , with a
+story capable of `` seemingly endless retelling and adaptation by others '' .
+</item 8>
+
+<item 9>
+Hamlet
+It was probably one of Shakespeare 's most popular works during his lifetime , and still ranks among his most performed , topping the performance list of the
+Royal Shakespeare Company and its predecessors in Stratford - upon - Avon since 1879 . It has inspired many other writers -- from Johann Wolfgang von Goethe and
+Charles Dickens to James Joyce and Iris Murdoch -- and has been described as `` the world 's most filmed story after Cinderella '' . The story of Shakespeare 's
+Hamlet was derived from the legend of Amleth , preserved by 13th - century chronicler Saxo Grammaticus in his Gesta Danorum , as subsequently retold by the 16th
+- century scholar François de Belleforest . Shakespeare may also have drawn on an earlier Elizabethan play known today as the Ur - Hamlet , though some scholars
+believe he himself wrote the Ur - Hamlet , later revising it to create the version of Hamlet we now have . He almost certainly wrote his version of the title
+role for his fellow actor , Richard Burbage , the leading tragedian of Shakespeare 's time .
+</item 9>
+
+<item 10>
+Hamlet
+1 Act I 2.2 Act II 2.3 Act III 2.4 Act IV 2.5 Act V 3 Sources 4 Date 5 Texts 6 Analysis and criticism 6.1 Critical history 6.2 Dramatic structure 6.3 Length 6.4
+Language 7 Context and interpretation 7.1 Religious 7.2 Philosophical 7.3 Psychoanalytic 7.4 Feminist 8 Influence 9 Performance history 9.1 Shakespeare 's day
+to the Interregnum 9.2 Restoration and 18th century 9.3 19th century 9.4 20th century 9.5 21st century 9.6 Film and TV performances 9.7 Stage pastiches 10 Notes
+and references 10.1 Notes 10.2 References 11 Sources 11.1 Editions of Hamlet 11.2 Secondary sources 12 External links 12.1 Texts 12.2 Analysis 12.3 Related
+works Characters ( edit ) Main article : Characters in Hamlet Hamlet -- Son of the late King and nephew of the present King , Claudius .
+</item 10>
+=== END ITEM id=905d998efde78e18 ===
+
+=== ITEM id=27c38f584a758dc4 ===
+Gold sentences and facts:
+Sentence 0: Year Film Nominees 2001 ( 74th ) Shrek Aron Warner Jimmy Neutron : Boy Genius Steve Oedekerk and John A. Davis Monsters , Inc . Pete Docter and John Lasseter 2002 ( 75th ) Spirited Away Hayao Miyazaki Ice Age Chris Wedge Lilo & Stitch Chris Sanders Spirit : Stallion of the Cimarron Jeffrey Katzenberg Treasure Planet Ron Clements 2003 ( 76th ) Finding Nemo Andrew Stanton Brother Bear Aaron Blaise and Robert Walker The Triplets of Belleville Sylvain Chomet ( 77th ) The Incredibles Brad Bird Shark Tale Bill Damaschke Shrek 2 Andrew Adamson 2005 ( 78th ) Wallace & Gromit : The Curse of the Were - Rabbit Nick Park and Steve Box Howl 's Moving Castle Hayao Miyazaki Corpse Bride Mike Johnson and Tim Burton 2006 ( 79th ) Happy Feet George Miller Cars John Lasseter Monster House Gil Kenan 2007 ( 80th ) Ratatouille Brad Bird Persepolis Marjane Satrapi and Vincent Paronnaud Surf 's Up Ash Brannon and Chris Buck 2008 ( 81st ) WALL - E Andrew Stanton Bolt Chris Williams and Byron Howard Kung Fu Panda John Stevenson and Mark Osborne 2009 ( 82nd ) Up Pete Docter Coraline Henry Selick Fantastic Mr. Fox Wes Anderson The Princess and the Frog John Musker and Ron Clements The Secret of Kells Tomm Moore
+  Fact 0.0: At the 2001 (74th) list, Shrek was nominated with Aron Warner as nominee.
+  Fact 0.1: At the 2001 (74th) list, Jimmy Neutron: Boy Genius was nominated with Steve Oedekerk and John A. Davis as nominees.
+  Fact 0.2: At the 2001 (74th) list, Monsters, Inc. was nominated with Pete Docter and John Lasseter as nominees.
+  Fact 0.3: At the 2002 (75th) list, Spirited Away was nominated with Hayao Miyazaki as nominee.
+  Fact 0.4: At the 2002 (75th) list, Ice Age was nominated with Chris Wedge as nominee.
+  Fact 0.5: At the 2002 (75th) list, Lilo & Stitch was nominated with Chris Sanders as nominee.
+  Fact 0.6: At the 2002 (75th) list, Spirit: Stallion of the Cimarron was nominated with Jeffrey Katzenberg as nominee.
+  Fact 0.7: At the 2002 (75th) list, Treasure Planet was nominated with Ron Clements as nominee.
+  Fact 0.8: At the 2003 (76th) list, Finding Nemo was nominated with Andrew Stanton as nominee.
+  Fact 0.9: At the 2003 (76th) list, Brother Bear was nominated with Aaron Blaise and Robert Walker as nominees.
+  Fact 0.10: At the 2003 (76th) list, The Triplets of Belleville was nominated with Sylvain Chomet as nominee.
+  Fact 0.11: At the (77th) list, The Incredibles was nominated with Brad Bird as nominee.
+  Fact 0.12: At the (77th) list, Shark Tale was nominated with Bill Damaschke as nominee.
+  Fact 0.13: At the (77th) list, Shrek 2 was nominated with Andrew Adamson as nominee.
+  Fact 0.14: At the 2005 (78th) list, Wallace & Gromit: The Curse of the Were-Rabbit was nominated with Nick Park and Steve Box as nominees.
+  Fact 0.15: At the 2005 (78th) list, Howl's Moving Castle was nominated with Hayao Miyazaki as nominee.
+  Fact 0.16: At the 2005 (78th) list, Corpse Bride was nominated with Mike Johnson and Tim Burton as nominees.
+  Fact 0.17: At the 2006 (79th) list, Happy Feet was nominated with George Miller as nominee.
+  Fact 0.18: At the 2006 (79th) list, Cars was nominated with John Lasseter as nominee.
+  Fact 0.19: At the 2006 (79th) list, Monster House was nominated with Gil Kenan as nominee.
+  Fact 0.20: At the 2007 (80th) list, Ratatouille was nominated with Brad Bird as nominee.
+  Fact 0.21: At the 2007 (80th) list, Persepolis was nominated with Marjane Satrapi and Vincent Paronnaud as nominees.
+  Fact 0.22: At the 2007 (80th) list, Surf's Up was nominated with Ash Brannon and Chris Buck as nominees.
+  Fact 0.23: At the 2008 (81st) list, WALL-E was nominated with Andrew Stanton as nominee.
+  Fact 0.24: At the 2008 (81st) list, Bolt was nominated with Chris Williams and Byron Howard as nominees.
+  Fact 0.25: At the 2008 (81st) list, Kung Fu Panda was nominated with John Stevenson and Mark Osborne as nominees.
+  Fact 0.26: At the 2009 (82nd) list, Up was nominated with Pete Docter as nominee.
+  Fact 0.27: At the 2009 (82nd) list, Coraline was nominated with Henry Selick as nominee.
+  Fact 0.28: At the 2009 (82nd) list, Fantastic Mr. Fox was nominated with Wes Anderson as nominee.
+  Fact 0.29: At the 2009 (82nd) list, The Princess and the Frog was nominated with John Musker and Ron Clements as nominees.
+  Fact 0.30: At the 2009 (82nd) list, The Secret of Kells was nominated with Tomm Moore as nominee.
+
+Retrieved items:
+<item 1>
+Academy Award for Best Animated Feature
+The Academy Award for Best Animated Feature was first given out at the 74th Academy Awards , held on March 24 , 2002 . The Academy included a rule that stated
+that the award would not be presented in a year in which fewer than eight eligible films opened in theaters . People in the animation industry and fans
+expressed hope that the prestige from this award and the resulting boost to the box office would encourage the increased production of animated features . Some
+members and fans have criticized the award , however , saying it is only intended to prevent animated films from having a chance of winning Best Picture .
+DreamWorks had advertised heavily during the holiday 2001 season for Shrek , but was disappointed when the rumored Best Picture nomination did not materialize ,
+though it was nominated for and ended up winning the inaugural Best Animated Feature award. . the Shrek franchise to date is most succsfull franchise with one
+win and three nomtied .
+</item 1>
+
+<item 2>
+Academy Award for Best Animated Feature
+and Kristine Belson Despicable Me 2 Pierre Coffin , Chris Renaud , and Chris Meledandri Ernest & Celestine Benjamin Renner and Didier Brunner The Wind Rises
+Hayao Miyazaki and Toshio Suzuki 2014 ( 87th ) Big Hero 6 Don Hall , Chris Williams , and Roy Conli The Boxtrolls Anthony Stacchi , Graham Annable , and Travis
+Knight How to Train Your Dragon 2 Dean DeBlois and Bonnie Arnold Song of the Sea Tomm Moore and Paul Young The Tale of the Princess Kaguya Isao Takahata and
+Yoshiaki Nishimura 2015 ( 88th ) Inside Out Pete Docter and Jonas Rivera Anomalisa Charlie Kaufman , Duke Johnson , and Rosa Tran Boy and the World Alê Abreu
+Shaun the Sheep Movie Mark Burton and Richard Starzak When Marnie Was There Hiromasa Yonebayashi and Yoshiaki Nishimura 2016 ( 89th ) Zootopia Byron Howard ,
+Rich Moore , and Clark Spencer Kubo and the Two Strings Travis Knight and Arianne Sutner Moana John Musker , Ron Clements ,
+</item 2>
+
+<item 3>
+Academy Award for Best Animated Feature
+Inc. , Finding Nemo , The Incredibles , Cars , Ratatouille , WALL - E , Up , Toy Story 3 , Brave , Inside Out , Coco Disney 10 Lilo & Stitch , Treasure Planet ,
+Brother Bear , Bolt , The Princess and the Frog , Wreck - It Ralph , Frozen , Big Hero 6 , Zootopia , Moana DreamWorks Animation 12 Shrek , Spirit : Stallion of
+the Cimarron , Shrek 2 , Shark Tale , Wallace & Gromit : The Curse of the Were - Rabbit , Kung Fu Panda , How to Train Your Dragon , Kung Fu Panda 2 , Puss in
+Boots , The Croods , How to Train Your Dragon 2 , The Boss Baby Studio Ghibli 6 Spirited Away , Howl 's Moving Castle , The Wind Rises , The Tale of the
+Princess Kaguya , When Marnie Was There , The Red Turtle Aardman Wallace & Gromit : The Curse of the Were - Rabbit , The Pirates !
+</item 3>
+
+<item 4>
+Academy Award for Best Animated Feature
+Ron Clements , and Osnat Shurer My Life as a Zucchini Claude Barras and Max Karli The Red Turtle Michaël Dudok de Wit and Toshio Suzuki 2017 ( 90th ) The Boss
+Baby Tom McGrath and Ramsey Ann Naito The Breadwinner Nora Twomey and Anthony Leo Coco Lee Unkrich and Darla K. Anderson Ferdinand Carlos Saldanha Loving
+Vincent Dorota Kobiela , Hugh Welchman , and Ivan Mactaggart Multiple wins ( edit ) 2 wins Brad Bird Pete Docter Andrew Stanton 1 win Chris Buck Byron Howard
+Hayao Miyazaki Rich Moore Lee Unkrich Chris Williams Multiple nominations ( edit ) 3 nominations Ron Clements Pete Docter Hayao Miyazaki Chris Sanders 2
+nominations Brad Bird Chris Buck Tim Burton Sylvain Chomet Dean DeBlois Byron Howard Travis Knight John Lasseter Rich Moore Tomm Moore John Musker Yoshiaki
+Nishimura Andrew Stanton Toshio Suzuki Lee Unkrich Chris Williams Studio breakdown ( edit ) Studio Wins Nominations Films Pixar 8 11 Monsters , Inc.
+</item 4>
+
+<item 5>
+Academy Award for Best Animated Feature
+Book Portal Academy Award for Best Animated Feature Shrek -- Aron Warner ( 2001 ) Spirited Away -- Hayao Miyazaki ( 2002 ) Finding Nemo -- Andrew Stanton ( 2003
+) The Incredibles -- Brad Bird ( 2004 ) Wallace & Gromit : The Curse of the Were - Rabbit -- Nick Park and Steve Box ( 2005 ) Happy Feet -- George Miller ( 2006
+) Ratatouille -- Brad Bird ( 2007 ) WALL - E -- Andrew Stanton ( 2008 ) Up -- Pete Docter ( 2009 ) Toy Story 3 -- Lee Unkrich ( 2010 ) Rango -- Gore Verbinski (
+2011 ) Brave -- Mark Andrews and Brenda Chapman ( 2012 ) Frozen -- Chris Buck , Jennifer Lee , and Peter Del Vecho ( 2013 ) Big Hero 6 -- Don Hall , Chris
+Williams , and Roy Conli ( 2014 ) Inside Out -- Pete Docter and Jonas Rivera ( 2015 ) Zootopia -- Byron Howard , Rich Moore , and Clark Spencer ( 2016 )
+Retrieved from `` https://en.wikipedia.org/w/index.
+</item 5>
+
+<item 6>
+Academy Award for Best Animated Feature
+The Academy Award for Best Animated Feature was first awarded in 2002 for films made in 2001 . The entire AMPAS membership has been eligible to choose the
+winner since the award 's inception . If there are sixteen or more films submitted for the category , the winner is voted from a shortlist of five films , which
+has happened eight times , otherwise there will only be three films on the shortlist . Additionally , eight eligible animated features must have been
+theatrically released in Los Angeles County within the calendar year for this category to be activated . Animated films can be nominated for other categories ,
+but have rarely been so ; Beauty and the Beast ( 1991 ) was the first animated film ever nominated for Best Picture . Up ( 2009 ) and Toy Story 3 ( 2010 ) also
+received Best Picture nominations after the Academy expanded the number of nominees from five to ten . Waltz with Bashir ( 2008 ) is the only animated film ever
+nominated for Best Foreign Language Film ( though it did not receive a nomination for Best Animated Feature ) .
+</item 6>
+
+<item 7>
+Academy Award for Best Animated Feature
+( 82nd ) Up Pete Docter Coraline Henry Selick Fantastic Mr. Fox Wes Anderson The Princess and the Frog John Musker and Ron Clements The Secret of Kells Tomm
+Moore 2010s ( edit ) Year Film Nominees ( 83rd ) Toy Story 3 Lee Unkrich How to Train Your Dragon Chris Sanders and Dean DeBlois The Illusionist Sylvain Chomet
+2011 ( 84th ) Rango Gore Verbinski A Cat in Paris Alain Gagnol and Jean - Loup Felicioli Chico & Rita Fernando Trueba and Javier Mariscal Kung Fu Panda 2
+Jennifer Yuh Nelson Puss in Boots Chris Miller 2012 ( 85th ) Brave Mark Andrews and Brenda Chapman Frankenweenie Tim Burton ParaNorman Sam Fell and Chris Butler
+The Pirates ! Band of Misfits Peter Lord Wreck - It Ralph Rich Moore 2013 ( 86th ) Frozen Chris Buck , Jennifer Lee , and Peter Del Vecho The Croods Chris
+Sanders , Kirk DeMicco , and Kristine Belson Despicable Me 2 Pierre Coffin , Chris Renaud ,
+</item 7>
+
+<item 8>
+Academy Award for Best Animated Feature
+Finding Nemo The Incredibles Cars Ratatouille WALL - E Up Toy Story 3 Brave Inside Out Coco Disney ( edit ) Bolt Wreck - It Ralph Frozen Big Hero 6 Zootopia
+Moana DreamWorks Animation ( edit ) Shrek Shrek 2 Shark Tale Kung Fu Panda How to Train Your Dragon Kung Fu Panda 2 Puss in Boots The Croods How to Train Your
+Dragon 2 The Boss Baby Nickelodeon ( edit ) Jimmy Neutron : Boy Genius Rango Blue Sky ( edit ) Ice Age Ferdinand Other films ( edit ) Monster House Happy Feet
+Surf 's Up Despicable Me 2 Stop - motion nominees ( edit ) Aardman ( edit ) Wallace & Gromit : The Curse of the Were - Rabbit The Pirates ! Band of Misfits
+Shaun the Sheep Movie Laika ( edit ) Coraline ParaNorman The Boxtrolls Kubo and the Two Strings Tim Burton ( edit ) Corpse Bride Frankenweenie Other films (
+edit ) Fantastic Mr.
+</item 8>
+
+<item 9>
+Academy Award for Best Animated Feature
+This could be the producer , the director , or both . For the 76th Academy Awards in 2004 , only the director ( s ) of the film received the nomination . For
+the 86th Academy Awards ten years later , this was amended to include one producer and up to two directors . Winners and nominations ( edit ) 2000s ( edit )
+Year Film Nominees 2001 ( 74th ) Shrek Aron Warner Jimmy Neutron : Boy Genius Steve Oedekerk and John A. Davis Monsters , Inc . Pete Docter and John Lasseter
+2002 ( 75th ) Spirited Away Hayao Miyazaki Ice Age Chris Wedge Lilo & Stitch Chris Sanders Spirit : Stallion of the Cimarron Jeffrey Katzenberg Treasure Planet
+Ron Clements 2003 ( 76th ) Finding Nemo Andrew Stanton Brother Bear Aaron Blaise and Robert Walker The Triplets of Belleville Sylvain Chomet ( 77th ) The
+Incredibles Brad Bird Shark Tale Bill Damaschke Shrek 2 Andrew Adamson 2005 ( 78th ) Wallace & Gromit : The Curse of the Were -
+</item 9>
+
+<item 10>
+Academy Award for Best Animated Feature
+2005 ( 78th ) Wallace & Gromit : The Curse of the Were - Rabbit Nick Park and Steve Box Howl 's Moving Castle Hayao Miyazaki Corpse Bride Mike Johnson and Tim
+Burton 2006 ( 79th ) Happy Feet George Miller Cars John Lasseter Monster House Gil Kenan 2007 ( 80th ) Ratatouille Brad Bird Persepolis Marjane Satrapi and
+Vincent Paronnaud Surf 's Up Ash Brannon and Chris Buck 2008 ( 81st ) WALL - E Andrew Stanton Bolt Chris Williams and Byron Howard Kung Fu Panda John Stevenson
+and Mark Osborne 2009 ( 82nd ) Up Pete Docter Coraline Henry Selick Fantastic Mr.
+</item 10>
+=== END ITEM id=27c38f584a758dc4 ===
+
+=== ITEM id=9331fbd57a57a833 ===
+Gold sentences and facts:
+Sentence 0: The song relates to both the Old and New Testaments . The verses reflect the Israelites ' escape out of Egypt as found in Exodus 14 . The chorus refers to healing : see John 5 : 4 , `` For an angel went down at a certain season into the pool , and troubled the water : whosoever then first after the troubling of the water stepped in was made whole of whatsoever disease he had . ''
+  Fact 0.0: The song relates to both the Old Testament and the New Testament.
+  Fact 0.1: The verses of the song reflect the Israelites' escape out of Egypt as found in Exodus 14.
+  Fact 0.2: The chorus of the song refers to healing.
+  Fact 0.3: The chorus refers to John 5:4.
+  Fact 0.4: John 5:4 says an angel went down at a certain season into the pool and troubled the water.
+  Fact 0.5: John 5:4 says whoever first stepped into the pool after the water was troubled was made whole of whatever disease he had.
+
+Retrieved items:
+<item 1>
+Wade in the Water
+Retrieved 2016 - 09 - 29 . Jump up ^ `` Wade in the Water , Children ( DVD ) Elizabeth Wood , Gabriel Nussbaum '' . IndiePix Films . Retrieved 2016 - 09 - 29 .
+Jump up ^ William Edward Burghardt Du Bois ( 1925 ) . Crisis . Crisis Publishing Company . Jump up ^ Robert M. Marovich ( 15 March 2015 ) . A City Called Heaven
+: Chicago and the Birth of Gospel Music . University of Illinois Press . p. 135 . ISBN 978 - 0 - 252 - 09708 - 9 . Sources ( edit ) Waltz , Robert B ; David G.
+Engle . `` Wade In The Water '' . The Traditional Ballad Index : An Annotated Bibliography of the Folk Songs of the English - Speaking World . Hosted by
+California State University , Fresno , Folklore , 2007 . Further reading Jones , Arthur C. ( 2005 ) . Wade in the water : the wisdom of the spirituals ( 3rd ed
+. ) .
+</item 1>
+
+<item 2>
+Wade in the Water
+Wade in the Water - wikipedia Wade in the Water Jump to : navigation , search This article is about the song . For the album by Ramsey Lewis , see Wade in the
+Water ( album ) . This article needs additional citations for verification . Please help improve this article by adding citations to reliable sources .
+Unsourced material may be challenged and removed . ( September 2016 ) ( Learn how and when to remove this template message ) `` Wade in the Water '' American
+folk song Native language ( s ) English First publication New Jubilee Songs as Sung by the Fisk Jubilee Singers ( 1901 ) Catalogue ( s ) Roud 5439 Notable
+performer ( s ) The Staple Singers , Ramsey Lewis ; etc . First released recording Title of the recording `` Good News Chariot 's Coming and Wade in the Water
+'' Released ca .
+</item 2>
+
+<item 3>
+Wade in the Water
+. Boulder , Colo. : Leave a Little Room . pp. 54 , 112 . ISBN 0976237709 . `` Music : Wade in the Water '' . Pathways to Freedom : Maryland & the Underground
+Railroad Secrets : Signs and Symbols . Maryland Public Television . 2014 . Tobin , Jacqueline L. ; Dobard , Raymond G. ( 2011 ) . Hidden in plain view the
+secret story of quilts and the underground railroad . New York , N.Y. : Anchor Books . p. 126 . ISBN 0307790568 .
+</item 3>
+
+<item 4>
+Wade in the Water
+Many Internet sources and popular books claim that songs such as `` Wade in the Water '' contained explicit instructions to fugitive slaves on how to avoid
+capture and the route to take to successfully make their way to freedom . An example of this is cited in the book Pathways to Freedom : Maryland & the
+Underground Railroad . The book explains how Harriet Tubman used the song `` Wade in the Water '' to tell escaping slaves to get off the trail and into the
+water to make sure that the dogs employed by slavers lost their trail . In popular culture ( edit ) One version of the song performed by The Staple Singers
+became a part of the civil rights movement in the US . `` Wade in the Water '' was a popular instrumental hit in 1966 for the Ramsey Lewis Trio , which prompted
+further instrumental recordings by Herb Alpert and the Tijuana Brass , and Billy Preston ( both 1967 ) . The melody was used for the 1988 Tony ! Toni ! Toné !
+hit `` Little Walter '' .
+</item 4>
+
+<item 5>
+Wade in the Water
+Peace and Happiness ( 1969 ) CCS ( 1970 ) Alex Harvey , with Rock Workshop ( 1971 ) Peter Herbolzheimer with Rhythm Combination & Brass ( 1972 ) Ellen McIlwain
+Honkey Tonk Angel ( Polydor , 1972 ) Fine Young Cannibals , B - side to Blue ( 1985 ) Tony ! Toni ! Toné ! 's song `` Little Walter '' ( Who ? , 1988 ) includes
+the chorus of `` Wade in the Water '' with the altered lyrics `` Hey , Little Walter ... Hey , Little Walter , listen ... Hey , Little Walter ... Somethin 's
+gon na getcha , Little Walter '' Eva Cassidy ( 1997 ) Make - up Wade in the Water 7 '' ( 1997 ) Chanticleer , recorded in `` Reflections ( An Anniversary
+Celebration ) '' ( 1997 ) and `` A Portrait '' ( 2005 ) Mary Mary Thankful ( 2000 ) Moses Hogan Moses Hogan Singers : Choral Series ( 2002 ) Marc Broussard 's
+song `` Home '' ( Carenco ,
+</item 5>
+
+<item 6>
+Wade in the Water
+2004 ) includes the chorus of `` Wade in the Water '' with the altered lyrics `` Straight from the Water , Straight from the water , children '' IIIrd Tyme Out
+( The Best Durn Ride ) ( 2004 ) Mavis Staples ( Live : Hope at the Hideout ) ( 2008 ) J. Boykin ( Jesus Loves Me ) ( 2009 ) John Boutte , recorded for the film
+Wade in the Water , Children ( see above ) Patty Griffin Downtown Church ( 2010 ) Cerys Matthews - `` Explorer '' ( 2011 ) Tedeschi Trucks Band Everybody 's
+Talkin ' ( 2012 ) Aleksander Vinter sampled the first verse in a song of the same title ( 2012 ) Tina Savage The Son and the Soul ( 2013 ) Jamie N Commons
+Spotify Sessions ( Jamie N Commons EP ) ( 2013 ) Frances Madden ( 2014 ) Sirena : the Sirens Out of the Blue ( 2014 ) PJ Harvey as an intro to `` River
+Anacostia '' ( 2016 ) References ( edit ) ^ Jump up to : Steve Sullivan ( 17 May 2017 ) .
+</item 6>
+
+<item 7>
+Wade in the Water
+: Anchor Books . p. 126 . ISBN 0307790568 . External links ( edit ) Lyrics at Negrospirituals.org MIDI at Gospelsonglyrics.org Lyrics of this song at
+MetroLyrics Retrieved from `` https://en.wikipedia.org/w/index.php?title=Wade_in_the_Water&oldid=833167717 '' Categories : American folk songs Bob Dylan songs
+African - American spiritual songs Eva Cassidy songs 1966 singles 1967 singles Year of song unknown Songs based on American history Hidden categories : Articles
+needing additional references from September 2016 All articles needing additional references All articles with specifically marked weasel - worded phrases
+Articles with specifically marked weasel - worded phrases from November 2015 Articles needing additional references from February 2017 Talk Contents About
+Wikipedia Deutsch Italiano Edit links This page was last edited on 30 March 2018 , at 01 : 17 . Text is available under the Creative Commons Attribution -
+ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark
+of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 7>
+
+<item 8>
+Wade in the Water
+1925 Record label Paramount Records Artist Sunset Four Jubilee Singers Genre Negro spiritual `` Wade in the Water '' ( Roud 5439 ) is the name of a Negro
+spiritual first published in New Jubilee Songs as Sung by the Fisk Jubilee Singers ( 1901 ) by John Wesley Work II and his brother , Frederick J. Work ( see
+Fisk Jubilee Singers ) . It is associated with the songs of the Underground Railroad . Wade in the water Wade in the water , children Wade in the water God 's
+gon na trouble the water Contents ( hide ) 1 Meaning 2 In popular culture 3 Selective list of recordings 4 References 4.1 Sources 5 External links Meaning (
+edit ) The song relates to both the Old and New Testaments . The verses reflect the Israelites ' escape out of Egypt as found in Exodus 14 . The chorus refers
+to healing : see John 5 : 4 , `` For an angel went down at a certain season into the pool , and troubled the water : whosoever then first after the troubling of
+the water stepped in was made whole of whatsoever disease he had . ''
+</item 8>
+
+<item 9>
+Wade in the Water
+The story follows the lives of three characters before , during , and after the great Johnstown Flood of 1889 . Selective list of recordings ( edit ) This
+section does not cite any sources . Please help improve this section by adding citations to reliable sources . Unsourced material may be challenged and removed
+. ( February 2017 ) ( Learn how and when to remove this template message ) The first commercially recorded version of the song was released by Paramount Records
+( sung by Sunset Four Jubilee Singers in 1925 ) , as `` Good News Chariot 's Coming and Wade in the Water '' .
+</item 9>
+
+<item 10>
+Wade in the Water
+Encyclopedia of Great Popular Song Recordings . Rowman & Littlefield Publishers . p. 387 . ISBN 978 - 1 - 4422 - 5449 - 7 . Jump up ^ `` Wade in De Water '' .
+Archived from the original on July 9 , 2008 . Retrieved January 11 , 2008 . Jump up ^ `` Archived copy '' . Archived from the original on 2008 - 07 - 24 .
+Retrieved 2008 - 08 - 18 . Jump up ^ `` Pathways to Freedom Secrets : Signs and Symbols Music '' . Pathways.thinkport.org . Retrieved 2016 - 09 - 29 . Jump up ^
+Robert Pruter ( 1992 ) . Chicago Soul . University of Illinois Press . p. 125 . ISBN 978 - 0 - 252 - 06259 - 9 . Jump up ^ `` Wade in the Water : A Must See
+Film : Boston Globe '' . Wadeinthewater.com . Retrieved 2016 - 09 - 29 .
+</item 10>
+=== END ITEM id=9331fbd57a57a833 ===

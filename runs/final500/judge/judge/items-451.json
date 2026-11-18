@@ -1,0 +1,497 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "8afc56689f25fa33",
+   "gold": [
+    {
+     "sentence": "Muppet Treasure Island is a 1996 American musical adventure comedy film based on Robert Louis Stevenson's \"Treasure Island\".",
+     "facts": {
+      "0.0": "Muppet Treasure Island is a 1996 American musical adventure comedy film",
+      "0.1": "Muppet Treasure Island is based on Robert Louis Stevenson's Treasure Island"
+     }
+    },
+    {
+     "sentence": "Million Dollar Arm is a 2014 American biographical sports drama film directed by Craig Gillespie and produced by Walt Disney Pictures from a screenplay written by Thomas McCarthy.",
+     "facts": {
+      "1.0": "Million Dollar Arm is a 2014 American biographical sports drama film",
+      "1.1": "Million Dollar Arm was directed by Craig Gillespie",
+      "1.2": "Million Dollar Arm was produced by Walt Disney Pictures",
+      "1.3": "Million Dollar Arm was made from a screenplay written by Thomas McCarthy"
+     }
+    }
+   ],
+   "items": [
+    "Sam Eagle\nSam Eagle is a Muppet character originating from the television show \"The Muppet Show\", where he was performed by Frank Oz.\n\n Sam has appeared in every Muppet film; as himself in \"The Muppet Movie\", \"The Great Muppet Caper\", \"The Muppets Take Manhattan\", \"Muppets from Space\", and \"The Muppets\", as well as the Head Schoolmaster in \"The Muppet Christmas Carol,\" Samuel Arrow in \"Muppet Treasure Island\" and a CIA agent in \"Muppets Most Wanted.\"\n\n He also appears in the television series, \"The Muppets.\"",
+    "Managed Money\nManaged Money is a 1934 short comedy film directed by Charles Lamont.\n\n The film stars Frank Coghlan Jr. and Shirley Temple.\n\n It was also known as \"Frolics of Youth\" and \"Measured Money\".\n\n This was the second film in which Temple starred as Mary Lou.\n\n The film tells the story of Sonny and Sid prospecting for gold to pay for their military academy education.\n\n Sonny's sister, Mary Lou stows away in the back of their car.\n\n Eventually, they meet an inventor who helps them financially.",
+    "Bill Barretta\nWilliam Paul \"Bill\" Barretta (born June 19, 1964) is an American puppeteer and producer who has been performing with The Muppets since 1991, when he puppeteered the body of Sinclair family patriarch, Earl Sinclair on \"Dinosaurs\".\n\n He later developed several new characters on \"Muppets Tonight\", including Pepe the King Prawn, Johnny Fiama, Big Mean Carl and Bobo the Bear.\n\n Along with having his own Muppet characters, Barretta has taken over several of Jim Henson's roles, such as Dr. Teeth, Rowlf the Dog, Mahna Mahna and Swedish Chef, and briefly took over Jerry Nelson's role of Lew Zealand.\n\n His film debut as a principal puppeteer was in 1996's \"Muppet Treasure Island\" as Clueless Morgan.\n\n In addition, Barretta has produced two of the Muppets' television films, \"It's a Very Merry Muppet Christmas Movie\" (2002) and \"The Muppets' Wizard of Oz\" (2005).\n\n Barretta also provides additional voices on \"Kim Possible\".",
+    "Muppets Most Wanted (soundtrack)\nMuppets Most Wanted: An Original Walt Disney Records Soundtrack is a soundtrack album released by Walt Disney Records on March 18, 2014 for the musical comedy film \"Muppets Most Wanted\".\n\n The soundtrack features six original songs, two re-recordings of popular Muppet songs (\"The Muppet Show Theme\" and \"Together Again\"), three cover versions of existing songs (Allen Toussaint's \"Working in the Coal Mine\", Maroon 5's \"Moves Like Jagger\", and Los del Río's \"Macarena (Bayside Boys Mix)\"), an orchestral suite by Christophe Beck, five demos by Bret McKenzie, and eight dialogue tracks.",
+    "The Muppets (film)\nThe Muppets is a 2011 American musical comedy film and the seventh theatrical film featuring the Muppets.\n\n The film is directed by James Bobin, written by Jason Segel and Nicholas Stoller, produced by David Hoberman and Todd Lieberman, and stars Segel, Amy Adams, Chris Cooper and Rashida Jones, as well as Muppet performers Steve Whitmire, Eric Jacobson, Dave Goelz, Bill Barretta, David Rudman, Matt Vogel, and Peter Linz.\n\n Bret McKenzie served as music supervisor, writing four of the film's five original songs, and Christophe Beck composed the film's score.\n\n In \"The Muppets\", devoted fan Walter, his brother Gary, and Gary's girlfriend Mary help Kermit the Frog reunite the disbanded Muppets, as they must raise $10 million to save the Muppet Theater from Tex Richman, a businessman who plans to demolish the studio to drill for oil.",
+    "The Muppets (soundtrack)\nThe Muppets: An Original Walt Disney Records Soundtrack is a soundtrack album released by Walt Disney Records on November 22, 2011 for the musical comedy film \"The Muppets\".\n\n The soundtrack features five original songs, four re-recordings and remasterings of popular Muppet songs (\"The Muppet Show Theme\", \"Rainbow Connection\", and \"Mah Nà Mah Nà\"), two cover versions of existing songs (Cee Lo Green's \"Forget You\" and Nirvana's \"Smells Like Teen Spirit\"), two standalone songs (Paul Simon's \"Me and Julio Down by the Schoolyard\" and Starship's \"We Built This City\"), and fifteen dialogue tracks.\n\n It also features the song \"Man or Muppet\", which won the Academy Award for Best Original Song.\n\n The soundtrack was also nominated for Best Compilation Soundtrack for Visual Media at the 55th Grammy Awards.",
+    "List of The Muppets productions\nThis is a list of productions based on The Muppets characters and franchise, including films, television series and specials, and other media.\n\n The franchise's main work is \"The Muppet Show\", a syndicated television series which ran from 1976 to 1981.\n\n The franchise includes eight feature films; \"The Muppet Movie\", \"The Great Muppet Caper\", \"The Muppets Take Manhattan\", \"The Muppet Christmas Carol\", \"Muppet Treasure Island\", \"Muppets from Space\", \"The Muppets\", and \"Muppets Most Wanted\".\n\n The franchise also includes other series such as \"Muppets Tonight\" and \"The Muppets\".",
+    "Muppet Treasure Island\nMuppet Treasure Island is a 1996 American musical adventure comedy film based on Robert Louis Stevenson's \"Treasure Island\".\n\n It is the fifth feature film to star The Muppets, and was directed by Brian Henson.",
+    "Toy Story\nToy Story is a 1995 American computer-animated buddy comedy adventure film produced by Pixar Animation Studios for Walt Disney Pictures.\n\n The directorial debut of John Lasseter, \"Toy Story\" was the first feature-length computer-animated film and the first feature film produced by Pixar.\n\n Taking place in a world where anthropomorphic toys pretend to be lifeless whenever humans are present, the film's plot focuses on the relationship between Woody, an old-fashioned pullstring cowboy doll (voiced by Tom Hanks), and Buzz Lightyear, an astronaut action figure (voiced by Tim Allen), as they evolve from rivals competing for the affections of Andy, their owner, to friends who work together to be reunited with Andy as his family prepares to move to a new home.\n\n The screenplay was written by Joss Whedon, Andrew Stanton, Joel Cohen and Alec Sokolow, based on a story by Lasseter, Pete Docter, Stanton and Joe Ranft.\n\n The film features music by Randy Newman, and was executive-produced by Steve Jobs and Edwin Catmull.",
+    "Million Dollar Arm\nMillion Dollar Arm is a 2014 American biographical sports drama film directed by Craig Gillespie and produced by Walt Disney Pictures from a screenplay written by Thomas McCarthy.\n\n The film is based on the true story of baseball pitchers Rinku Singh and Dinesh Patel who were discovered by sports agent J. B. Bernstein after winning a reality show competition."
+   ]
+  },
+  {
+   "id": "b41d02d8f3df1d99",
+   "gold": [
+    {
+     "sentence": "Nelson Algren (March 28, 1909 – May 9, 1981) was an American writer.",
+     "facts": {
+      "0.0": "Nelson Algren was born March 28, 1909.",
+      "0.1": "Nelson Algren died May 9, 1981.",
+      "0.2": "Nelson Algren was an American writer."
+     }
+    },
+    {
+     "sentence": "Nathanael West (born Nathan Weinstein; October 17, 1903 – December 22, 1940) was an American author, screenwriter and satirist.",
+     "facts": {
+      "1.0": "Nathanael West was born Nathan Weinstein.",
+      "1.1": "Nathanael West was born October 17, 1903.",
+      "1.2": "Nathanael West died December 22, 1940.",
+      "1.3": "Nathanael West was an American author.",
+      "1.4": "Nathanael West was an American screenwriter.",
+      "1.5": "Nathanael West was an American satirist."
+     }
+    }
+   ],
+   "items": [
+    "Haniel Long\nHaniel Clark Long (March 9, 1888 – October 17, 1956) was an American poet, novelist, publisher and academic.\n\n He is best known for his novella, \"Interlinear to Cabeza de Vaca\" (1936), a fictionalized account of the true story of a Spanish conquistador in 16th century North America.",
+    "Nelson (band)\nNelson is an American rock band founded by singer/songwriters Matthew and Gunnar Nelson (twin sons of Ricky Nelson and Kristin Nelson).\n\n The band achieved success during the early 1990s with their double platinum debut album \"After the Rain\", which featured the number-one hit \"(Can't Live Without Your) Love and Affection\".",
+    "Andrew Glaze\nAndrew Glaze (April 21, 1920 – February 7, 2016) was an American poet, playwright and novelist.\n\n Much of Glaze's poetry reflects his coming of age in the South, and his eventual return there.\n\n He also lived and wrote in New York City for 31 years.\n\n In New York City he became part of a circle of poets that included Oscar Williams, Norman Rosten, John Ciardi and William Packard.",
+    "Nelson Algren\nNelson Algren (March 28, 1909 – May 9, 1981) was an American writer.\n\n He may be best known for \"The Man with the Golden Arm\", a 1949 novel that won the National Book Award and was adapted as a 1955 film of the same name.",
+    "Nathanael West\nNathanael West (born Nathan Weinstein; October 17, 1903 – December 22, 1940) was an American author, screenwriter and satirist.",
+    "The Man with the Golden Arm (novel)\nThe Man with the Golden Arm is a novel by Nelson Algren, published by Doubleday in November 1949.\n\n One of the seminal novels of post-World War II American letters, \"The Man with the Golden Arm\" is widely considered Algren's greatest and most enduring work.\n\n It won the National Book Award in 1950.",
+    "Romeo Nelson\nIromeio \"Romeo\" Nelson (March 12, 1902 – May 17, 1974) was an American boogie woogie pianist whose recordings from 1929 are regarded as some of the finest, and certainly the fastest, boogie woogie showpieces on record.",
+    "Nelson DeMille\nNelson Richard DeMille (born August 23, 1943) is an American author of action adventure and suspense novels.\n\n His novels include \"Plum Island\", \"The Charm School\", and \"The Gold Coast\".\n\n DeMille has also written under the pen names Jack Cannon, Kurt Ladner, Ellen Kay and Brad Matthews.",
+    "A Walk on the Wild Side\nA Walk on the Wild Side is a 1956 novel by Nelson Algren, most often quoted as the source for Algren's \"three rules of life\": \"Never play cards with a man called Doc.\n\n Never eat at a place called Mom's.\n\n Never sleep with a woman whose troubles are worse than your own.\"",
+    "Gunnar Nelson (musician)\nGunnar Eric Nelson (born September 20, 1967) is an American musician, singer, and songwriter and international multi-platinum recording artist."
+   ]
+  },
+  {
+   "id": "500840178e261841",
+   "gold": [
+    {
+     "sentence": "Distortion Mirrors is an English alternative rock band, based in Leeds, West Yorkshire, England, and who was formed in 2011.",
+     "facts": {
+      "0.0": "Distortion Mirrors is an English alternative rock band.",
+      "0.1": "Distortion Mirrors is based in Leeds, West Yorkshire, England.",
+      "0.2": "Distortion Mirrors was formed in 2011."
+     }
+    },
+    {
+     "sentence": "OK Go is an American rock band originally from Chicago, Illinois, now based in Los Angeles, California.",
+     "facts": {
+      "1.0": "OK Go is an American rock band.",
+      "1.1": "OK Go was originally from Chicago, Illinois.",
+      "1.2": "OK Go is now based in Los Angeles, California."
+     }
+    }
+   ],
+   "items": [
+    "Twelve Days of OK Go\nTwelve Days of OK Go is a compilation album by American rock band OK Go.\n\n It was released on December 31, 2012.\n\n OK Go started releasing the songs on December 10, with one song released each weekday.\n\n The last song, a cover of \"Any Time at All\", was released on Christmas.\n\n A bonus track, a cover of \"This Will Be Our Year,\" was released on New Year's Eve.",
+    "The Writing's on the Wall (OK Go song)\n\"The Writing's on the Wall\" is a song by American rock band OK Go.\n\n It was released on June 17, 2014, as part of the band's EP \"Upside Out\", and is also the first single from the band's fourth studio album \"Hungry Ghosts\".\n\n On the same day, the band released a music video in which the members use props to create optical illusions, reflecting the song's description of a relationship that fails because the couple has different points of view.\n\n Like previous OK Go videos, it is structured as a one-shot music video.\n\n The many YouTube views of the video caused the song to debut in the top ten of the US \"Billboard\" Hot Rock Songs chart, as well as number one on the Bubbling Under Hot 100 Singles chart.",
+    "OK Go (2000 EP)\nOK Go or The Brown EP (officially known as OKGoCD.001) is the first EP by American rock band OK Go.",
+    "OK Go\nOK Go is an American rock band originally from Chicago, Illinois, now based in Los Angeles, California.\n\n The band is composed of Damian Kulash (lead vocals, guitar), Tim Nordwind (bass guitar and vocals), Dan Konopka (drums and percussion) and Andy Ross (guitar, keyboards and vocals), who joined them in 2005, replacing Andy Duncan.\n\n The band is known for its often quirky and elaborate one-take music videos.",
+    "OK Go videography\nThe musical rock band OK Go has earned considerable fame for their creative but often low-budget music videos, most of which have been promoted through Internet video sharing sites like YouTube.\n\n Many of these have become viral videos; the 2006 video for \"Here It Goes Again\", in which the band performed a complex routine with the aid of motorized treadmills, has received over 50 million views four years later.\n\n Their video for Needing/Getting, released February 5, 2012 in partnership with Chevrolet, debuted during Super Bowl XLVI and has over 32 million views on YouTube.\n\n Samuel Bayer, who produced many music videos in the 1990s, asserted that OK Go's promotion of music videos on the Internet was akin to Nirvana's ushering in the grunge movement.\n\n Many of the videos also use long or single-shot takes, which \"Salon\"' s Matt Zoller Seitz says \"restore[s] a sense of wonder to the musical number by letting the performers' humanity shine through and allowing them to do their thing with a minimum of filmmaking interference\".",
+    "Distortion Mirrors\nDistortion Mirrors is an English alternative rock band, based in Leeds, West Yorkshire, England, and who was formed in 2011.",
+    "OK Go (album)\nOK Go is the debut studio album by American rock band OK Go.\n\n It was released in September 2002.\n\n The cover was created by designer Stefan Sagmeister.",
+    "Rock Star Supernova\nRock Star Supernova was a reality television-formed supergroup consisting of drummer Tommy Lee (Mötley Crüe), bassist Jason Newsted (ex-Metallica), guitarist Gilby Clarke (ex-Guns N' Roses) and singer Lukas Rossi.\n\n The band was formed during the second season of the Rock Star Reality TV series which was called .",
+    "OK Go (2001 EP)\nOK Go or The Pink EP (officially known as OKGoCD.002) is the second EP by American rock band OK Go.",
+    "OK Go videography\nThe success of OK Go's music first won the band the 14th Annual Webby Special Achievement Award for Film and Video Artist of the Year.\n\n The video for \"This Too Shall Pass\" was named both \"Video of the Year\" and \"Best Rock Video\" at the 3rd annual UK Music Video Awards.\n\n\"This Too Shall Pass\" won the LA Film Fest's Audience Award for Best Music Video, UK MVA Awards – Music Video of the Year Winner 2010, among others."
+   ]
+  },
+  {
+   "id": "aba4112964f2ff8a",
+   "gold": [
+    {
+     "sentence": " His siblings were Abby, Nelson, Laurance, Winthrop, and David.",
+     "facts": {
+      "0.0": "Abby was his sibling.",
+      "0.1": "Nelson was his sibling.",
+      "0.2": "Laurance was his sibling.",
+      "0.3": "Winthrop was his sibling.",
+      "0.4": "David was his sibling."
+     }
+    },
+    {
+     "sentence": "David Rockefeller (June 12, 1915 – March 20, 2017) was an American banker who was chairman and chief executive of Chase Manhattan Corporation.",
+     "facts": {
+      "1.0": "David Rockefeller lived from June 12, 1915 to March 20, 2017.",
+      "1.1": "David Rockefeller was an American banker.",
+      "1.2": "David Rockefeller was chairman of Chase Manhattan Corporation.",
+      "1.3": "David Rockefeller was chief executive of Chase Manhattan Corporation."
+     }
+    }
+   ],
+   "items": [
+    "JPMorgan Chase\nJPMorgan Chase & Co. is a U.S. multinational banking and financial services holding company headquartered in New York City.\n\n It is the largest bank in the United States, the world's sixth largest bank by total assets, with total assets of US$2.5 trillion, and the world's second most valuable bank by market capitalization, after ICBC.\n\n It is a major provider of financial services, and according to \"Forbes\" magazine is the world's sixth largest public company based upon a composite ranking.\n\n The hedge fund unit of JPMorgan Chase is the second largest hedge fund in the United States.\n\n The company was formed in 2000, when Chase Manhattan Corporation merged with J.P. Morgan & Co.",
+    "383 Madison Avenue\n383 Madison Avenue is an office building owned and occupied by JP Morgan Chase in New York City on a full block bound by Madison Avenue and Vanderbilt Avenue between East 46th and 47th Streets.\n\n Formerly known as the Bear Stearns Building, it housed the world headquarters of the now-defunct Bear Stearns from the building's completion until Bear's collapse and sale to JPMorgan Chase in 2008.\n\n The building now houses the New York offices for J.P. Morgan's investment banking division, which formerly occupied 277 Park Avenue.\n\n Both 383 Madison and 277 Park are adjacent to JPMorgan Chase's world headquarters at 270 Park Avenue.",
+    "John D. Rockefeller III\nJohn Davison Rockefeller III (March 21, 1906 – July 10, 1978) was a philanthropist and third-generation member of the prominent Rockefeller family.\n\n He was the eldest son of philanthropists John D. Rockefeller Jr. and Abby Aldrich Rockefeller.\n\n His siblings were Abby, Nelson, Laurance, Winthrop, and David.",
+    "David Rockefeller\nDavid Rockefeller (June 12, 1915 – March 20, 2017) was an American banker who was chairman and chief executive of Chase Manhattan Corporation.\n\n He was the oldest living member of the Rockefeller family and family patriarch from August 2004 until his death in March 2017.\n\n Rockefeller was a son of John D. Rockefeller Jr. and Abby Aldrich Rockefeller, and a grandson of John D. Rockefeller and Laura Spelman Rockefeller.",
+    "Rockefeller family\nThe Rockefeller family ( ) is an American industrial, political, and banking family that made one of the world's largest fortunes in the oil business during the late 19th and early 20th centuries, with John D. Rockefeller and his brother William Rockefeller primarily through Standard Oil.\n\n The family is also known for its long association with and control of Chase Manhattan Bank.\n\n They are considered to be one of the most powerful families, if not the most powerful family, in the history of the United States.",
+    "William B. Harrison Jr.\nWilliam B. Harrison Jr., born August 12, 1943, in Rocky Mount, North Carolina, is the former CEO and chairman of JPMorgan Chase.\n\n He attended high school at Virginia Episcopal School, where he was a basketball star.\n\n He attended the University of North Carolina at Chapel Hill, where he was admitted to the Zeta Psi fraternity.\n\n Having risen through the ranks of Chemical Bank before succeeding Walter V. Shipley during the Chemical Bank takeover of the Chase Manhattan Corporation, he and Douglas A. Warner III, then CEO of J.P. Morgan & Co., were the principal architects of the US$30.9 billion Chase and J.P. Morgan & Co. merger of 2000.\n\n Harrison has been a director of the Firm or a predecessor institution since 1991.\n\n Harrison is also a director of Merck & Co., Inc.",
+    "Chase Bank\nJPMorgan Chase Bank, N.A., doing business as Chase Bank, is a national bank that constitutes the consumer and commercial banking subsidiary of the U.S. multinational banking and financial services holding company, JPMorgan Chase.\n\n The bank was known as Chase Manhattan Bank until it merged with J.P. Morgan & Co. in 2000.\n\n Chase Manhattan Bank was formed by the merger of the Chase National Bank and The Manhattan Company in 1955.\n\n The bank has been headquartered in Columbus, Ohio since its merger with Bank One Corporation in 2004.\n\n The bank acquired the deposits and most assets of Washington Mutual.",
+    "Hope Aldrich Rockefeller\nHope Aldrich Rockefeller (born May 17, 1938) is an American newspaper publisher.\n\n She is the eldest daughter of philanthropist John Davison Rockefeller III (1906–1978) and Blanchette Ferry Hooker (1909–1992).\n\n Her elder brother is former Senator John Davison \"Jay\" Rockefeller IV (born 1937).",
+    "Rockefeller Brothers Fund\nThe Rockefeller Brothers Fund (RBF) is a philanthropic foundation created and run by members of the Rockefeller family.\n\n It was founded in New York City in 1940 as the primary philanthropic vehicle for the five third-generation Rockefeller brothers: John D. Rockefeller III, Nelson, Laurance, Winthrop and David.\n\n It is distinct from the Rockefeller Foundation.\n\n The Rockefellers are an industrial, political, and banking family that made one of the world's largest fortunes in the oil business during the late 19th and early 20th centuries.",
+    "Walter V. Shipley\nWalter V. Shipley (born November 2, 1935) was the former Chairman and Chief Executive Officer of Chase Manhattan Bank and, before that, the company with which it merged Chemical Bank.\n\n Shipley was named chief executive of Chemical in 1981 and held the position through 1999 and remained at the bank as chairman through January 2000, just prior to the bank's merger with J.P. Morgan & Co..\n\n During his 18-year tenure, Shipley oversaw Chemical's mergers with Texas Commerce Bank in 1987, Manufacturers Hanover in 1991 and Chase Manhattan Bank in 1996."
+   ]
+  },
+  {
+   "id": "a3181299c1878580",
+   "gold": [
+    {
+     "sentence": "Mauritz Stiller (17 July 1883 – 18 November 1928) was a Finnish-Swedish film director, best known for discovering Greta Garbo and bringing her to America.",
+     "facts": {
+      "0.0": "Mauritz Stiller was born on 17 July 1883.",
+      "0.1": "Mauritz Stiller died on 18 November 1928.",
+      "0.2": "Mauritz Stiller was a Finnish-Swedish film director.",
+      "0.3": "Mauritz Stiller was best known for discovering Greta Garbo.",
+      "0.4": "Mauritz Stiller brought Greta Garbo to America."
+     }
+    },
+    {
+     "sentence": "Johannes Grenzfurthner (] ; born 1975 in Vienna) is an award-winning Austrian artist, filmmaker, writer, actor, curator, theatre director and lecturer.",
+     "facts": {
+      "1.0": "Johannes Grenzfurthner was born in 1975 in Vienna.",
+      "1.1": "Johannes Grenzfurthner is an award-winning Austrian artist.",
+      "1.2": "Johannes Grenzfurthner is an Austrian filmmaker.",
+      "1.3": "Johannes Grenzfurthner is an Austrian writer.",
+      "1.4": "Johannes Grenzfurthner is an Austrian actor.",
+      "1.5": "Johannes Grenzfurthner is an Austrian curator.",
+      "1.6": "Johannes Grenzfurthner is an Austrian theatre director.",
+      "1.7": "Johannes Grenzfurthner is an Austrian lecturer."
+     }
+    }
+   ],
+   "items": [
+    "John Steiner\nJohn Steiner (born 7 January 1941 in Chester, Cheshire) is an English actor.\n\n Tall, thin and gaunt, Steiner attended the Royal Academy of Dramatic Arts and worked for a few years at the BBC.\n\n Steiner featured in a lead role in a television production of \"Design for Living\" by Noël Coward.\n\n Later he found further work primarily in films including \"Marat/Sade\" (1967), and the original \"Bedazzled\" (1967) with Peter Cook and Dudley Moore.\n\n In 1969, Steiner was hired to play a part in the spaghetti western \"Tepepa\", and also appeared opposite Franco Nero in \"White Fang\", directed by Lucio Fulci.",
+    "Stefan Walz\nStefan Walz (born 1963) is a Swiss actor.\n\n His best known role is as Sigmund Jähn in the film \"Good Bye, Lenin!\n\n\".",
+    "Johannes Grenzfurthner\nJohannes Grenzfurthner (] ; born 1975 in Vienna) is an award-winning Austrian artist, filmmaker, writer, actor, curator, theatre director and lecturer.\n\n He is known as the founder, conceptualist and artistic director of monochrom, an international art and theory group.\n\n Most of his artworks are labelled \"monochrom\".",
+    "Willi Forst\nWilli Forst, born Wilhelm Anton Frohs (7 April 1903 – 11 August 1980) was an Austrian actor, screenwriter, film director, film producer and singer.\n\n As a debonair actor he was a darling of the German-speaking film audiences, as a director, one of the most significant makers of the Viennese period musical melodramas and comedies of the 1930s known as \"Wiener Filme\".\n\n From the mid-1930s he also recorded many records, largely of sentimental Viennese songs, for the Odeon Records label owned by Carl Lindström AG.",
+    "Devid Striesow\nDevid Striesow (born 1 October 1973 in Bergen auf Rügen) is a German actor.\n\n He starred as \"Sturmbannführer Herzog\" (Bernhard Krüger) in Stefan Ruzowitzky's 2007 film \"The Counterfeiters\", which was awarded the Academy Award for Best Foreign Language Film for that year.",
+    "Stefan Ruzowitzky\nStefan Ruzowitzky (born 25 December 1961) is an Austrian film director and screenwriter.",
+    "Mauritz Stiller\nMauritz Stiller (17 July 1883 – 18 November 1928) was a Finnish-Swedish film director, best known for discovering Greta Garbo and bringing her to America.",
+    "Soviet Unterzoegersdorf\nSoviet Unterzoegersdorf (German: \"Sowjet-Unterzögersdorf\" ) is a fictitious country created by the art/technology/theory group monochrom.\n\n It is the \"last existing appanage republic of the USSR\", located inside the Republic of Austria.\n\n Unterzögersdorf is partially based on an existing village well-known to Johannes Grenzfurthner, the creator of the concept.\n\n As a kid and teenager, Grenzfurthner spent a lot of time at his grandparents' farm in the small village of Unterzögersdorf (a cadastral municipality of Stockerau).\n\n His grandparents' stories about the Naziism, WWII and the Soviet occupation in allied-occupied Austria (1945-1955) form the inspirational basis of the long-term project \"Soviet Unterzoegersdorf\".",
+    "Richard Genée\nFranz Friedrich Richard Genée (February 7, 1823 – June 15, 1895) was a Prussian born Austrian librettist, playwright, and composer.\n\n He is most famous for the libretto of \"Die Fledermaus\", Johann Strauss II's most famous operetta.\n\n He co-wrote the libretto without having met top-billed librettist Karl Haffner, who constructed the new story based on a play by Henri Meilhac and Ludovic Halévy, which was considered too shocking to perform outside Paris.\n\n Genée, however, wrote the operetta's actual text and drew nothing from Haffner beyond the names of the characters.",
+    "Traceroute (film)\nTraceroute is a 2016 Austrian/American documentary film directed by Johannes Grenzfurthner.\n\n The autobiographical documentary and road movie deals with the history, politics and impact of nerd culture.\n\n Grenzfurthner calls his film a \"personal journey into the uncharted depths of nerd culture, a realm full of dangers, creatures and more or less precarious working conditions\", an attempt to \"chase the ghosts of nerddom's past, present and future.\"\n\n The film was co-produced by art group monochrom and Reisenbauer Film.\n\n It features music by Kasson Crooker, Hans Nieswandt, and many others."
+   ]
+  },
+  {
+   "id": "09ac5119d2ceb5d4",
+   "gold": [
+    {
+     "sentence": "Sigmund Werner Paul Jähn (born 13 February 1937) is a German cosmonaut and pilot, who in 1978 became the first East German (and German native) to fly in space as part of the Soviet Union's Interkosmos programme.",
+     "facts": {
+      "0.0": "Sigmund Werner Paul Jähn was born on 13 February 1937.",
+      "0.1": "Sigmund Werner Paul Jähn is a German cosmonaut.",
+      "0.2": "Sigmund Werner Paul Jähn is a pilot.",
+      "0.3": "In 1978 Sigmund Werner Paul Jähn became the first East German to fly in space.",
+      "0.4": "In 1978 Sigmund Werner Paul Jähn became the first German native to fly in space.",
+      "0.5": "The 1978 flight by Sigmund Werner Paul Jähn was part of the Soviet Union's Interkosmos programme."
+     }
+    },
+    {
+     "sentence": "Arne Christer Fuglesang (] ) (born March 18, 1957 in Stockholm) is a Swedish physicist and an ESA astronaut.",
+     "facts": {
+      "1.0": "Arne Christer Fuglesang was born on March 18, 1957.",
+      "1.1": "Arne Christer Fuglesang was born in Stockholm.",
+      "1.2": "Arne Christer Fuglesang is a Swedish physicist.",
+      "1.3": "Arne Christer Fuglesang is an ESA astronaut."
+     }
+    },
+    {
+     "sentence": " He was first launched aboard the STS-116 Space Shuttle mission on December 10, 2006, at 01:47 GMT, making him the first Swedish citizen in space.",
+     "facts": {
+      "2.0": "Arne Christer Fuglesang was first launched aboard the STS-116 Space Shuttle mission.",
+      "2.1": "That launch was on December 10, 2006, at 01:47 GMT.",
+      "2.2": "Arne Christer Fuglesang became the first Swedish citizen in space."
+     }
+    }
+   ],
+   "items": [
+    "Bertalan Farkas\nBertalan Farkas (born August 2, 1949) is the first Hungarian cosmonaut and the first Esperantist in space.\n\n He is currently the president of Airlines Service and Trade.\n\n With Charles Simonyi's travel, Farkas is no longer the only Hungarian who has been to space (he is still the only astronaut, as Simonyi flew as a space tourist).",
+    "Samantha Cristoforetti\nSamantha Cristoforetti (] ; born 26 April 1977 in Milan) is an Italian European Space Agency astronaut, Italian Air Force pilot and engineer.\n\n She holds the record for the longest uninterrupted spaceflight of a European astronaut (199 days, 16 hours), and until June 2017 held the record for the longest single space flight by a woman until this was broken by Peggy Whitson.\n\n She is also the first Italian woman in space.\n\n Samantha Cristoforetti is also known as the first person who brewed an espresso coffee in space.",
+    "Ernst Messerschmid\nProf. Dr. Ernst Willi Messerschmid (born May 21, 1945) is a German physicist and former astronaut.",
+    "Sigmund Jähn\nSigmund Werner Paul Jähn (born 13 February 1937) is a German cosmonaut and pilot, who in 1978 became the first East German (and German native) to fly in space as part of the Soviet Union's Interkosmos programme.",
+    "Ulf Merbold\nDr. Ulf Dietrich Merbold (born June 20, 1941) is the first West German citizen and second German native (after Sigmund Jähn) to have flown in space.\n\n He is also the first member of the European Space Agency Astronaut Corps to participate in a spaceflight mission and the first non-US citizen to reach orbit in a US spacecraft.\n\n In 1983, he and Byron Lichtenberg became the first Payload Specialists to fly on the shuttle.",
+    "Eberhard Köllner\nEberhard Köllner (born 29 September 1939 in Stassfurt, Germany) was selected for Soyuz 31 as the backup for Sigmund Jähn.",
+    "Jean-Loup Chrétien\nJean-Loup Jacques Marie Chrétien (born 20 August 1938) is a French retired \"Général de Brigade\" (brigadier general) in the \"Armée de l'Air\" (French air force), and a former CNES spationaut.\n\n He flew on two Franco-Soviet space missions and a NASA Space Shuttle mission.\n\n Chrétien was the first Frenchman and the first western European in space.",
+    "Christer Fuglesang\nArne Christer Fuglesang (] ) (born March 18, 1957 in Stockholm) is a Swedish physicist and an ESA astronaut.\n\n He was first launched aboard the STS-116 Space Shuttle mission on December 10, 2006, at 01:47 GMT, making him the first Swedish citizen in space.",
+    "Claude Nicollier\nClaude Nicollier (born 2 September 1944 in Vevey, Switzerland) is the first astronaut from Switzerland.\n\n He has flown on four Space Shuttle missions.\n\n His first spaceflight (STS-46) was in 1992, and his final spaceflight (STS-103) was in 1999.\n\n He took part in two servicing missions to the Hubble Space Telescope (called STS-61 and STS-103).\n\n During his final spaceflight he participated in a spacewalk, becoming the first European Space Agency astronaut to do so during a Space Shuttle mission (previous ESA astronauts conducted spacewalks aboard \"Mir\", see List of spacewalks and moonwalks 1965–1999).\n\n In 2000 he was assigned to the Astronaut Office Extravehicular Activity Branch, while maintaining a position as Lead ESA Astronaut in Houston.\n\n Nicollier retired from ESA in April 2007.",
+    "Hans Schlegel\nHans Wilhelm Schlegel (Überlingen, 3 August 1951) is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions."
+   ]
+  },
+  {
+   "id": "a2cc5b073b8b45f3",
+   "gold": [
+    {
+     "sentence": "Scott Treleaven is a Canadian artist whose work employs a variety of media including collage, film, video, drawing, photography and installation.",
+     "facts": {
+      "0.0": "Scott Treleaven is a Canadian artist.",
+      "0.1": "Scott Treleaven's work employs a variety of media.",
+      "0.2": "The media employed in Scott Treleaven's work include collage, film, video, drawing, photography and installation."
+     }
+    },
+    {
+     "sentence": "Edmund Mortimer (21 August 1874 – 21 May 1944) was an American actor and film director.",
+     "facts": {
+      "1.0": "Edmund Mortimer's dates are 21 August 1874 to 21 May 1944.",
+      "1.1": "Edmund Mortimer was an American actor.",
+      "1.2": "Edmund Mortimer was an American film director."
+     }
+    }
+   ],
+   "items": [
+    "Edmund Mortimer, 2nd Baron Mortimer\nEdmund Mortimer, 2nd Lord Mortimer (1251 – 17 July 1304) was the second son and eventual heir of Roger Mortimer, 1st Baron Mortimer.\n\n His mother was Maud de Braose.\n\n As a younger son, Edmund had been intended for clerical or monastic life, and had been sent to study at Oxford University.",
+    "Scott Free Productions\nScott Free Productions is a British film and television production company founded by filmmakers and brothers Ridley Scott and Tony Scott.\n\n They formed the feature film development company Percy Main Productions in 1980, naming the company after the English village Percy Main, where their father grew up.\n\n The company was renamed to Scott Free Productions in 1995.\n\n Scott Free has produced films ranging from the 2000 Hollywood blockbuster \"Gladiator\" (2000) to \"smaller pictures\" like \"Cracks\" (2009).\n\n Between productions of \"White Squall\" (1996) and \"G.I. Jane\" (1997), Ridley Scott reorganized the company.",
+    "Alexander Butler\nAlexander Butler was a British film director who made over sixty features and short films during the 1910s and 1920s including many for G.B. Samuelson's production company.\n\n Butler directed several British films in Hollywood in 1920, where Samuelson had made an arrangement with Universal Pictures.\n\n Amongst his notable films are the Sherlock Holmes adaptation \"The Valley of Fear\" (1916) and the early British horror film \"The Beetle\" (1919).",
+    "Edmund Mortimer, 5th Earl of March\nEdmund de Mortimer, 5th Earl of March and 7th Earl of Ulster (6 November 1391 – 18 January 1425) was an English nobleman.\n\n A great-great-grandson of King Edward III of England, he was heir presumptive to King Richard II of England, his first cousin twice removed, when Richard II was deposed in favour of Henry IV.\n\n Edmund Mortimer's claim to the throne was the basis of rebellions and plots against Henry IV and his son Henry V, and was later taken up by the House of York in the Wars of the Roses, though Mortimer himself was an important and loyal vassal of Henry V and Henry VI.\n\n Edmund Mortimer was the last Earl of March of the Mortimer family.",
+    "Tommy Atkins (director)\nTommy Atkins was an American director of the silent and early sound film eras.\n\n Born on July 18, 1887 in Springfield, Massachusetts, he would make his entrance into the film industry as the assistant director to Ralph Ince on the 1920 silent film, \"Out of the Snows\".\n\n It would be another eight years before he would make another film, again as assistant director, this time for FBO Pictures, on another silent film, \"Crooks Can't Win\".\n\n He'd work as the assistant director on another sixteen films between 1928 and 1934, the most notable of which would be 1933's \"Morning Glory\", directed by Lowell Sherman and starring Katharine Hepburn and Douglas Fairbanks Jr..\n\n In 1934 he would be given the chance to helm his first picture, \"The Silver Streak\", which was one of the top money-makers for RKO Pictures that year.\n\n He would only direct two more films, the second of which, \"Hi, Gaucho!\n\n\", he would also write the story for.",
+    "Scott Treleaven\nScott Treleaven is a Canadian artist whose work employs a variety of media including collage, film, video, drawing, photography and installation.",
+    "John Dunning (film producer)\nJohn Dunning (April 27, 1927–September 19, 2011) was a pioneering Canadian film producer from Montreal who co-founded the Canadian film production company Cinépix and produced early works by notable Canadian directors David Cronenberg and Ivan Reitman.\n\n Dunning launched Cinépix with partner André Link in Montreal in the early 1960s.\n\n Their biggest commercial success—and the first Canadian box office hit—came with Reitman’s \"Meatballs\" (1979).",
+    "Edmund Mortimer (actor)\nEdmund Mortimer (21 August 1874 – 21 May 1944) was an American actor and film director.\n\n He appeared in 251 films between 1913 and 1945.\n\n He also directed 23 films between 1918 and 1928.\n\n He was born in New York, New York and died in Los Angeles, California.",
+    "John Biddle (yachting cinematographer)\nJohn Scott Biddle (1925–2008) was a foremost yachting cinematographer and lecturer, establishing a film-making career that spanned more than forty years.\n\n His films captured not only the technical aspects of sailing but also the human story in events as tranquil as a Nova Scotia cruise and as grand as the America's Cup Races.",
+    "Ridley Scott\nSir Ridley Scott (born 30 November 1937) is an English film director and producer.\n\n Following his commercial breakthrough with the science-fiction horror film \"Alien\" (1979), his best known works include the neo-noir dystopian science fiction film \"Blade Runner\" (1982), historical drama and Best Picture Oscar winner \"Gladiator\" (2000), and science fiction film \"The Martian\" (2015)."
+   ]
+  },
+  {
+   "id": "d98973fbf618b4be",
+   "gold": [
+    {
+     "sentence": "The Shame of a City is a 2006 feature-length documentary, which premiered at the Philadelphia Film Festival.",
+     "facts": {
+      "0.0": "The Shame of a City is a 2006 feature-length documentary.",
+      "0.1": "The Shame of a City premiered at the Philadelphia Film Festival."
+     }
+    },
+    {
+     "sentence": "Unchained Memories is a 2003 documentary film about the stories of former slaves interviewed during the 1930s as part of the Federal Writers' Project and preserved in the WPA Slave Narrative Collection.",
+     "facts": {
+      "1.0": "Unchained Memories is a 2003 documentary film.",
+      "1.1": "Unchained Memories is about the stories of former slaves.",
+      "1.2": "The former slaves were interviewed during the 1930s.",
+      "1.3": "The interviews were part of the Federal Writers' Project.",
+      "1.4": "The stories are preserved in the WPA Slave Narrative Collection."
+     }
+    }
+   ],
+   "items": [
+    "Unchained Memories\nUnchained Memories is a 2003 documentary film about the stories of former slaves interviewed during the 1930s as part of the Federal Writers' Project and preserved in the WPA Slave Narrative Collection.\n\n This HBO film interpretation directed by Ed Bell and Thomas Lennon is a compilation of slave narratives, narrated by actors, emulating the original conversation with the interviewer.\n\n The slave narratives may be the most accurate in terms of the everyday activities of the enslaved, serving as personal memoirs of more than two thousand former slaves.\n\n The documentary depicts the emotions of the slaves and what they endured.\n\n The \"Master\" had the opportunity to sell, trade, or kill the enslaved, for retribution should one slave not obey.",
+    "Town Without Pity\nTown Without Pity (German: Stadt ohne Mitleid) is a 1961 American, Swiss, and West German international co-production drama film directed by Gottfried Reinhardt.\n\n Produced by The Mirisch Corporation, the film stars Kirk Douglas, Christine Kaufmann, and E. G. Marshall.\n\n Coincidentally, this movie came out the same year that John A. Bennett, to this day the last man executed by the U.S. Army, was hanged for raping an 11-year-old girl.",
+    "American Hardcore (film)\nAmerican Hardcore: The History of American Punk Rock 1980-1986 is a documentary directed by Paul Rachman and written by Steven Blush.\n\n It is based on the book \"\" also written by Blush.\n\n It was released on September 22, 2006 on a limited basis.\n\n The film features some early pioneers of the hardcore punk music scene including Bad Brains, Black Flag, D.O.A., Minor Threat, Minutemen, SSD, and others.\n\n It was released on DVD by Sony Pictures Home Entertainment on February 20, 2007.",
+    "Chicago: City on the Make\nChicago: City on the Make is an essay by Nelson Algren published in 1951.\n\n Initially greeted with scorn by critics and newspaper editors in the city of its gaze (The \"Chicago Daily News\" famously called it a \"Case for Ra(n)t Control\"), it is now widely regarded by scholars as the definitive prose portrait of the city of Chicago, although it has never rivaled the literary status of Carl Sandburg's 1916 poem \"Chicago.\"\n\n Algren leans heavily on the imagery and themes developed by Sandburg, to whom Algren dedicated the book.\n\n Curiously, he also quietly leans upon a poem about New York called \"The City\" by Ben Maddow, from whom Algren lifted powerful images of urban life.\n\n Subsequent portraits of Chicago, such as Studs Terkel's 1985 \"Chicago\", have likewise leaned heavily upon Algren's work.",
+    "Naked City (TV series)\nNaked City is a police drama series from Screen Gems which was broadcast from 1958 to 1959 and from 1960 to 1963 on the ABC television network.\n\n It was inspired by the 1948 motion picture \"The Naked City\" and mimics its dramatic \"semi-documentary\" format.\n\n As in the film, each episode concluded with a narrator intoning the iconic line: \"There are eight million stories in the naked city.\n\n This has been one of them.\"",
+    "The Celluloid Closet\nThe Celluloid Closet is a 1995 American documentary film directed and written by Rob Epstein and Jeffrey Friedman.\n\n The film is based on Vito Russo's book of the same name first published in 1981 and on lecture and film clip presentations he gave in 1972–1982.\n\n Russo had researched the history of how motion pictures, especially Hollywood films, had portrayed gay, lesbian, bisexual and transgender characters.",
+    "The Shame of a City\nThe Shame of a City is a 2006 feature-length documentary, which premiered at the Philadelphia Film Festival.\n\n Filmmaker Tigre Hill chronicles the 2003 Philadelphia mayoral race between Democrat incumbent mayor John Street and Republican challenger Sam Katz.\n\n Early polls showed Katz with a small lead in this predominantly Democratic city but twenty-seven days before the election, an FBI bug was found in the mayor’s office.\n\n The discovery at first seemed like a death knell to the Street campaign and a near certain victory for Katz.\n\n Yet this prediction was proven wrong when Street and his supporters successfully polarized the campaign by leveling accusations of instituational racial prejudice and playing on historical skepticism of the Republican-controlled federal government.\n\n As a result, Street won re-election by a sixteen-point margin.",
+    "First Kill\nFirst Kill is a 2001 Dutch documentary film that revolves around the psychology of war.\n\n Important turning points in the Vietnam War are used to illustrate the effect of war on body and mind.\n\n The documentary consists of interviews with Michael Herr and several Vietnam veterans.\n\n The depth of the interviews provides insight into the feelings that accompany violence, fear, hate, seduction and pleasure.",
+    "The Sorrow and the Pity\nThe Sorrow and the Pity (French: Le Chagrin et la Pitié ) is a two-part 1969 documentary film by Marcel Ophüls about the collaboration between the Vichy government and Nazi Germany during World War II.\n\n The film uses interviews with a German officer, collaborators, and resistance fighters from Clermont-Ferrand.\n\n They comment on the nature of and reasons for collaboration.\n\n The reasons include antisemitism, anglophobia, fear of Bolsheviks and Soviet invasion, the desire for power, and simple caution.",
+    "A Summer in the Cage\nA Summer in the Cage is a 2007 documentary film about a man's experiences with bipolar disorder.\n\n The film follows the filmmaker's friend Sam and features an interview with mental health scholar Kay Redfield Jamison.\n\n It was directed by Benjamin Selkow.\n\n The documentary debuted on the Sundance Channel in 2007."
+   ]
+  },
+  {
+   "id": "3eea503fcf524d70",
+   "gold": [
+    {
+     "sentence": "Sir Nicholas Robert Hytner (born 7 May 1956) is an English theatre director, film director, and film producer.",
+     "facts": {
+      "0.0": "Sir Nicholas Robert Hytner was born on 7 May 1956.",
+      "0.1": "Sir Nicholas Robert Hytner is an English theatre director.",
+      "0.2": "Sir Nicholas Robert Hytner is an English film director.",
+      "0.3": "Sir Nicholas Robert Hytner is an English film producer."
+     }
+    },
+    {
+     "sentence": "Maya Deren (April 29, 1917 – October 13, 1961), born Eleanora Derenkowskaia (Russian: Элеоно́ра Деренко́вская ), was a Russian-American filmmaker and one of the most important American experimental filmmakers and entrepreneurial promoters of the avant-garde in the 1940s and 1950s.",
+     "facts": {
+      "1.0": "Maya Deren was born on April 29, 1917.",
+      "1.1": "Maya Deren died on October 13, 1961.",
+      "1.2": "Maya Deren was born Eleanora Derenkowskaia.",
+      "1.3": "The birth name Eleanora Derenkowskaia is given in Russian as Элеоно́ра Деренко́вская.",
+      "1.4": "Maya Deren was a Russian-American filmmaker.",
+      "1.5": "Maya Deren was one of the most important American experimental filmmakers in the 1940s and 1950s.",
+      "1.6": "Maya Deren was one of the most important American entrepreneurial promoters of the avant-garde in the 1940s and 1950s."
+     }
+    },
+    {
+     "sentence": " Deren was also a choreographer, dancer, film theorist, poet, lecturer, writer and photographer.",
+     "facts": {
+      "2.0": "Maya Deren was also a choreographer.",
+      "2.1": "Maya Deren was also a dancer.",
+      "2.2": "Maya Deren was also a film theorist.",
+      "2.3": "Maya Deren was also a poet.",
+      "2.4": "Maya Deren was also a lecturer.",
+      "2.5": "Maya Deren was also a writer.",
+      "2.6": "Maya Deren was also a photographer."
+     }
+    }
+   ],
+   "items": [
+    "Fayard Nicholas\nFayard Antonio Nicholas (October 20, 1914 – January 24, 2006) was an American choreographer, dancer and actor.\n\n He and his younger brother Harold Nicholas made up the Nicholas Brothers tap-dance duo, who starred in the MGM musicals \"An All-Colored Vaudeville Show\" (1935), \"Stormy Weather\" (1943), \"The Pirate\" (1948), and \"Hard Four\" (2007).\n\n The Nicholas brothers also starred in the 20th Century-Fox musicals \"Down Argentine Way\" (1940), \"Sun Valley Serenade\" (1941), and \"Orchestra Wives\" (1942).",
+    "In the Mirror of Maya Deren\nThe documentary In the Mirror of Maya Deren (\"Im Spiegel der Maya Deren\", 2002) is a film about avant garde filmmaker Maya Deren (1917-1961) by Austrian film maker Martina Kudlacek.\n\n It is based on the biography \"The Legend of Maya Deren\".",
+    "Maya Deren Award\nThe American Film Institute Award for Independent Film and Video Artists, subtitled and generally known as the Maya Deren Award, was an award presented to filmmakers and video artists by the American Film Institute to honor independent filmmaking.\n\n Named for the avant-garde experimental film artist Maya Deren, it was given from 1986 through 1996.",
+    "At Land\nAt Land (1944) is a 15-minute silent experimental film written, directed by, and starring Maya Deren.\n\n It has a dream-like narrative in which a woman, played by Deren, is washed up on a beach and goes on a strange journey encountering other people and other versions of herself.\n\n Deren once said that the film is about the struggle to maintain one's personal identity.",
+    "Tereza Vilišová\nTereza Vilišová (born 1981) is a Czech actress.\n\n She won the Alfréd Radok Award for Best Actress in 2013 for her role of \"Amy\" in the D C Jackson play \"My Romantic History\" at the Divadlo Petra Bezruče in Ostrava.\n\n At the 2013 Thalia Awards she won the category of Best Actress in a Play for the same work.\n\n Vilišová joined Prague's National Theatre in 2015.",
+    "Maya Deren\nMaya Deren (April 29, 1917 – October 13, 1961), born Eleanora Derenkowskaia (Russian: Элеоно́ра Деренко́вская ), was a Russian-American filmmaker and one of the most important American experimental filmmakers and entrepreneurial promoters of the avant-garde in the 1940s and 1950s.\n\n Deren was also a choreographer, dancer, film theorist, poet, lecturer, writer and photographer.",
+    "Illusions &amp; Mirrors\nIllusions & Mirrors is a 2013 short film directed by Iranian-born American artist and filmmaker Shirin Neshat.\n\n The film, shot in black-and-white, stars Tarek Aylouch, Michael Markiewicz, and the Israeli-born American actress Natalie Portman.\n\n The film was commissioned by Dior, for which Portman is a spokesmodel, for the Miss Dior Expo at the Grand Palais, Paris.\n\n Shirin Neshat said that the film is a tribute to the black-and-white silent films made by such surrealist filmmakers as Man Ray, Jean Cocteau, Luis Buñuel, and Maya Deren.",
+    "Filmworks X: In the Mirror of Maya Deren\nFilmworks X: In the Mirror of Maya Deren features a score for film by John Zorn.\n\n The album was released on Zorn's own label, Tzadik Records, in 2001 and contains music that Zorn wrote and recorded for the documentary film \"In the Mirror of Maya Deren\" on the life and work of Maya Deren directed by Martina Kudlácek.",
+    "Nicholas Hytner\nSir Nicholas Robert Hytner (born 7 May 1956) is an English theatre director, film director, and film producer.\n\n He was previously the Artistic Director of London's National Theatre.\n\n His major successes while director include \"Miss Saigon\", \"The History Boys\" and \"One Man, Two Guvnors\".",
+    "Nicholas Mele\nNicholas Mele is an actor who has starred in many movies and on television.\n\n His first movie role was in the 1976 movie \"The Ritz\".\n\n Other movie roles include \"Some Kind of Hero\" (1982) and \"Young Doctors in Love\" (1982).\n\n His most well-known film role was in the 1988 hit horror movie \"\" as Dennis Johnson.\n\n A year later, he reprised his role in the hit sequel \"\".\n\n His most recent movie is the 2003 film \"The Great Gabble\"."
+   ]
+  },
+  {
+   "id": "2f5be481aa4d485b",
+   "gold": [
+    {
+     "sentence": "Xingcheng (), former name Ningyuan (宁远), is a county-level city of southwest Liaoning province, China, with a population of approximately 140,000 urban inhabitants, and is located on the Liaodong Bay, i.e. the northern coast of the Bohai Sea.",
+     "facts": {
+      "0.0": "Xingcheng is a county-level city of southwest Liaoning province, China.",
+      "0.1": "Xingcheng's former name was Ningyuan (宁远).",
+      "0.2": "Xingcheng has a population of approximately 140,000 urban inhabitants.",
+      "0.3": "Xingcheng is located on Liaodong Bay, the northern coast of the Bohai Sea."
+     }
+    },
+    {
+     "sentence": " It covers an area of 2046 square kilometers and has a population of about one million.",
+     "facts": {
+      "1.0": "Xingcheng covers an area of 2046 square kilometers.",
+      "1.1": "Xingcheng has a population of about one million."
+     }
+    }
+   ],
+   "items": [
+    "Shanxi–Henan–Shandong Railway\nThe line can accommodate train speeds of up to 120 km/h .\n\n Cities along route include Lüliang, Liulin, Hongdong, Changzhi and Pingshun in Shanxi; Linzhou, Anyang, Tangyin, Puyang, Hebi, Fan County and Taiqian County in Henan; Liangshan County, Dongping, Ningyang, Xintai, Laiwu, Yiyuan, Yishui, Ju County, Junan and Rizhao in Shandong.\n\n The line was built from 2010 to 2014 and operations began on December 30, 2014.",
+    "Fuzhoucheng\nFuzhou, also Fuzhoucheng () is a town under the administration of Wafangdian City, in southern Liaoning province, China.\n\n It lies at the intersection of China National Highway 202 and Liaoning Provincial Highway 313, 57 km north by road from Pulandian.\n\n Dahe Reservoir is located several kilometres to the east.\n\n There is a 74,132 acres (30,000 hectares) bird reserve nearby with species such as Swan goose and Hooded crane about 15 km southwest of the town.\n\n , it has 2 residential communities (社区) and 14 villages under its administration.",
+    "Huan River\nThe Huan River (), or Anyang River (安阳河), is a river in Henan, China, and part of the Hai River basin.\n\n The river rises north of Linzhou in northwestern Henan, and joins the Wei River near Neihuang in the northeast of the province.",
+    "Dafeng, Yancheng, is a coastal Jiangsu district with 112 km of shoreline, a salt-making history, protected ecosystems, and China’s largest Père David’s deer reserve. Changle, Fuzhou, Fujian, has extensive land and sea areas, Tang-era origins, and became a district in 2017. Fuzhoucheng is a Liaoning town near highways, a reservoir, and a bird reserve. Jiangyin dialect is a Taihu Wu",
+    "Ezhou\nEzhou () is a prefecture-level city in eastern Hubei Province, China.\n\n As of the 2010 census, the city had a population of 1,048,668, of which 668,727 lived in the core Echeng District.\n\n The Ezhou - Huanggang built-up (\"or metro\") area was home to 1,035,496 inhabitants from the Echeng and Huangzhou, Huanggang Districts.",
+    "Xingcheng\nXingcheng (), former name Ningyuan (宁远), is a county-level city of southwest Liaoning province, China, with a population of approximately 140,000 urban inhabitants, and is located on the Liaodong Bay, i.e. the northern coast of the Bohai Sea.\n\n Currently under the administration of Huludao City, the area is steeped in history, and contains one of the best preserved Ming Dynasty towns in China, as well as functioning as a laidback summer resort.",
+    "Wenling\nWenling (Wenling dialect: Uen-lin Zy ] ; ) is a coastal county-level city in the municipal region of Taizhou, in southeastern Zhejiang province, China.\n\n It borders Luqiao and Huangyan to the north, Yuhuan to the south, Yueqing to the west, looks out to the East China Sea to the east.\n\n Wenling locates on 28°22'N, 121°21'E, approximately 300 km south of Shanghai.",
+    "Suining\nSuining (; Sichuanese Pinyin: Xunin; Sichuanese pronunciation: ; ) is a prefecture-level city of eastern Sichuan province in Southwest China.\n\n In 2002, Suining had a population of 658,798.",
+    "Linzhou, Henan\nLinzhou (), formerly Lin County (林县), is a county-level city in Anyang, Henan, China.\n\n Adjacent to Shanxi Province and Hebei Province, it is located in the north of Henan Province and at the eastern foot of the Taihang Mountains.\n\n It covers an area of 2046 square kilometers and has a population of about one million.",
+    "Dongtai\nDongtai () is a coastal county-level city under the administration of Yancheng, Jiangsu province, China.\n\n It has a population of roughly 1,170,000 estimated for 2007.\n\n Out of the total population, about 260,000 live in the Dongtai urban core, others are distributed in the 23 suburban towns and rural regions (Some famous towns include Touzao, Anfeng, Qingdong, Sancang, Qianggang, Fu'an, Tangyang, etc.).\n\n With some Yellow Sea coast, it borders the prefecture-level cities of Nantong to the south and Taizhou to the west, and is the southernmost county-level division of Yancheng."
+   ]
+  },
+  {
+   "id": "3661f1f2a8543720",
+   "gold": [
+    {
+     "sentence": "Pago Pago International Airport (IATA: PPG, ICAO: NSTU, FAA LID: PPG) , also known as Tafuna Airport, is a public airport located 7 miles (11.3 km) southwest of the central business district of Pago Pago, in the village and plains of Tafuna on the island of Tutuila in American Samoa, an unincorporated territory of the United States.",
+     "facts": {
+      "0.0": "Pago Pago International Airport has IATA code PPG.",
+      "0.1": "Pago Pago International Airport has ICAO code NSTU.",
+      "0.2": "Pago Pago International Airport has FAA LID PPG.",
+      "0.3": "Pago Pago International Airport is also known as Tafuna Airport.",
+      "0.4": "Pago Pago International Airport is a public airport.",
+      "0.5": "Pago Pago International Airport is located 7 miles (11.3 km) southwest of the central business district of Pago Pago.",
+      "0.6": "Pago Pago International Airport is located in the village and plains of Tafuna.",
+      "0.7": "Tafuna is on the island of Tutuila.",
+      "0.8": "Tutuila is in American Samoa.",
+      "0.9": "American Samoa is an unincorporated territory of the United States."
+     }
+    },
+    {
+     "sentence": "Hoonah Airport (IATA: HNH, ICAO: PAOH, FAA LID: HNH) is a state-owned public-use airport located one nautical mile (2 km) southeast of the central business district of Hoonah, Alaska.",
+     "facts": {
+      "1.0": "Hoonah Airport has IATA code HNH.",
+      "1.1": "Hoonah Airport has ICAO code PAOH.",
+      "1.2": "Hoonah Airport has FAA LID HNH.",
+      "1.3": "Hoonah Airport is a state-owned public-use airport.",
+      "1.4": "Hoonah Airport is located one nautical mile (2 km) southeast of the central business district of Hoonah.",
+      "1.5": "Hoonah is in Alaska."
+     }
+    }
+   ],
+   "items": [
+    "Tutuila\nTutuila is the largest and the main island of American Samoa in the archipelago of Samoan Islands.\n\n It is the third largest island in the Samoan Islands chain of the Central Pacific located roughly 4000 km northeast of Brisbane, Australia and over 1200 km northeast of Fiji.\n\n It contains a large, natural harbor, Pago Pago Harbor, where Pago Pago, the capital of American Samoa is situated.\n\n Pago Pago International Airport is also located on Tutuila island.\n\n Its land expanse is about 68% of the total land area of American Samoa and with 56,000 people accounts for 95% of its population.\n\n The island has six terrestrial and three marine ecosystems.",
+    "Graph query row:\nairport: Hoonah Airport\nrelationship_path: ['LOCATED_IN', 'LOCATED_IN', 'PART_OF']\nlocation: United States",
+    "Pago Pago International Airport\nPago Pago International Airport (IATA: PPG, ICAO: NSTU, FAA LID: PPG) , also known as Tafuna Airport, is a public airport located 7 miles (11.3 km) southwest of the central business district of Pago Pago, in the village and plains of Tafuna on the island of Tutuila in American Samoa, an unincorporated territory of the United States.",
+    "Inter Island Airways\nInter Island Airways (also known as \"Inter Island Air\") is a South Pacific regional airline based in Pago Pago, American Samoa.\n\n Inter Island Airways operates passenger and cargo flights in and between American Samoa, Independent Samoa and to neighboring Pacific island countries.\n\n Its main base of operations is at Pago Pago International Airport.",
+    "Nu'uuli, American Samoa\nNu'uuli is a village on the central east coast of Tutuila Island, American Samoa.\n\n It is located on a peninsula several miles up from Pago Pago International Airport.",
+    "Tafuna, American Samoa\nTafuna' is a village on the east coast of Tutuila Island, American Samoa.\n\n It is located on a peninsula a mile north of Pago Pago International Airport and one mile south of Nu'uuli, American Samoa.",
+    "Hoonah Airport\nHoonah Airport (IATA: HNH, ICAO: PAOH, FAA LID: HNH) is a state-owned public-use airport located one nautical mile (2 km) southeast of the central business district of Hoonah, Alaska.",
+    "WNG710\nWNG710 (sometimes referred to as Pago Pago All Hazards) is a NOAA Weather Radio station that serves the entire United States territory island of American Samoa.\n\n It is programmed from the National Weather Service Forecast Office in Pago Pago.\n\n The station broadcasts weather and hazard information for the Eastern, Manu'a, and Western Districts, which are the three political divisions of American Samoa.\n\n WNG710 has a sister station, WZ2529 at Mt. Olotele.\n\n Its transmitter is located at the opposite side of the island.",
+    "Veterans Memorial Stadium (Pago Pago)\nVeterans Memorial Stadium is a football stadium located in Pago Pago Park, in Pago Pago, American Samoa.\n\n The 10,000 capacity venue is one of the smallest stadiums in Oceania, and serves as American Samoa's national stadium.\n\n It is the home venue of the American Samoa national football team, hosting all of their home games.\n\n It is currently used mostly for matches in various football codes, such as soccer, rugby league, and the territory's most popular code, American football.",
+    "Pago Pago\nPago Pago ( ; Samoan: ] ) is the territorial capital of American Samoa.\n\n It is on the main island of American Samoa, Tutuila.\n\n The territory is served by Pago Pago International Airport at Tafuna, some 8 miles south west of Pago Pago.\n\n Tourism, entertainment, food, and tuna canning are its main industries."
+   ]
+  },
+  {
+   "id": "5c528577fcbe15eb",
+   "gold": [
+    {
+     "sentence": "Ted Kooshian (born October 8, 1961) is an American jazz pianist, keyboardist, and composer, who has performed with Aretha Franklin, Chuck Berry, Marvin Hamlisch, Sarah Brightman, Il Divo, and Blood, Sweat, and Tears.",
+     "facts": {
+      "0.0": "Ted Kooshian was born October 8, 1961.",
+      "0.1": "Ted Kooshian is an American jazz pianist.",
+      "0.2": "Ted Kooshian is an American jazz keyboardist.",
+      "0.3": "Ted Kooshian is an American jazz composer.",
+      "0.4": "Ted Kooshian has performed with Aretha Franklin.",
+      "0.5": "Ted Kooshian has performed with Chuck Berry.",
+      "0.6": "Ted Kooshian has performed with Marvin Hamlisch.",
+      "0.7": "Ted Kooshian has performed with Sarah Brightman.",
+      "0.8": "Ted Kooshian has performed with Il Divo.",
+      "0.9": "Ted Kooshian has performed with Blood, Sweat, and Tears."
+     }
+    },
+    {
+     "sentence": " Hamlisch was one of only twelve people to win Emmy, Grammy, Oscar and Tony awards.",
+     "facts": {
+      "1.0": "Marvin Hamlisch was one of only twelve people to win Emmy, Grammy, Oscar and Tony awards."
+     }
+    },
+    {
+     "sentence": " This collection of all four is referred to as an \"EGOT\".",
+     "facts": {
+      "2.0": "The collection of all four awards (Emmy, Grammy, Oscar and Tony) is referred to as an 'EGOT'."
+     }
+    }
+   ],
+   "items": [
+    "Grammy Award for Best Male Rap Solo Performance\nThe Grammy Award for Best Male Rap Solo Performance was an honor presented to male recording artists at the 45th Grammy Awards in 2003 and the 46th Grammy Awards in 2004 for quality rap solo performances.\n\n The Grammy Awards, an annual ceremony that was established in 1958, and originally called the Gramophone Awards, are presented by the National Academy of Recording Arts and Sciences of the United States to \"honor artistic achievement, technical proficiency and overall excellence in the recording industry, without regard to album sales or chart position\".",
+    "Triple Crown of Acting\nThe Triple Crown of Acting is a term used in the American entertainment industry to describe actors who have won a competitive Academy Award, Emmy Award, and Tony Award in the acting categories.\n\n 23 people have achieved the triple crown of acting (14 women, 9 men).\n\n Helen Hayes' Emmy Award win on February 5, 1953, made her the first person to achieve the triple crown.\n\n Thomas Mitchell became the first man to achieve the triple crown with his Tony Award win later the same year on March 29, 1953.\n\n Hayes and Rita Moreno are the only triple crown winners in competitive acting categories who have also won a Grammy Award to complete the EGOT.",
+    "Lonesome Pine Fiddlers\nThis most talented family of musicians were the best, surpassed by none.\n\n Finally, on October 1, 2009, The Lonesome Pine Fiddlers got their due when they were inducted into the International Bluegrass Hall of Fame at the Ryman Theater (the original home of the Grand Ole Opry).\n\n Bobby Osborne, Melvin Goins and Paul Williams were there to receive the bands award.\n\n In the crowd of a sold out theater was the son of Ezra Cline, Scotty Ireland Cline, who recalled being in that same theater as a child sitting on stage and watching the Fiddlers play.\n\n (At the time, the Opry had bleachers for family just off stage).\n\n The final act of the evening at the IBMA Awards was the playing of \"Pain in my Heart\" by Osborne, Goins and Williams along with a Song from the Dillards, who were also inducted the same evening.",
+    "Marvin Hamlisch\nMarvin Frederick Hamlisch (June 2, 1944August 6, 2012) was an American composer and conductor.\n\n Hamlisch was one of only twelve people to win Emmy, Grammy, Oscar and Tony awards.\n\n This collection of all four is referred to as an \"EGOT\".\n\n He is one of only two people (along with Richard Rodgers) to have won those four prizes and a Pulitzer Prize.",
+    "Ted Kooshian\nTed Kooshian (born October 8, 1961) is an American jazz pianist, keyboardist, and composer, who has performed with Aretha Franklin, Chuck Berry, Marvin Hamlisch, Sarah Brightman, Il Divo, and Blood, Sweat, and Tears.\n\n Kooshian has played in many Broadway pit orchestras, and has been a member of the Ed Palermo Big Band since 1994.\n\n Originally from San Jose, California, Kooshian has been performing since the 1980s.",
+    "Academy Honorary Award\nThe Academy Honorary Award is often awarded in preference to those with noted achievements in motion pictures who have nevertheless never won an Academy Award.\n\n Thus, many of its recipients are Classic Hollywood stars, such as Lillian Gish, Barbara Stanwyck, Kirk Douglas, and Lauren Bacall.",
+    "Philip K. Dick Award\nThe Philip K. Dick Award is a science fiction award given annually at Norwescon sponsored by the Philadelphia Science Fiction Society and (since 2005) supported by the Philip K. Dick Trust, and named after science fiction and fantasy writer Philip K. Dick.\n\n It has been awarded since 1983, the year after Dick's death.\n\n Works that have received the award are identified on their covers as \"Best Original SF Paperback\".\n\n They are awarded to the best original paperback published each year in the US.",
+    "List of awards and nominations received by Kim Tae-yeon\nList of awards and nominations received by Kim Tae-yeon",
+    "Academy Honorary Award\nThe Academy Honorary Award – instituted in 1948 for the 21st Academy Awards (previously called the Special Award, which was first presented in early 1929) – is given annually by the Board of Governors of the Academy of Motion Picture Arts and Sciences (AMPAS) to celebrate motion picture achievements that are not covered by existing Academy Awards, although prior winners of competitive Academy Awards are not excluded from receiving the Honorary Award.\n\n Unless otherwise specified, Honorary Award recipients receive the same gold Oscar statuettes received by winners of the competitive Academy Awards.\n\n Unlike the Special Achievement Award instituted in 1972 (and discontinued in 1995), those on whom the Academy confers its Honorary Award do not have to meet \"the Academy's eligibility year and deadline requirements.\"\n\n Like the Special Achievement Award, the Special Award and Honorary Award have been used to reward significant achievements of the year that did not fit in existing categories, subsequently leading the Academy to establish several new categories, and to honor exceptional career achievements, contributions to the motion picture industry, and service to the Academy.",
+    "Leonard Cohen\nLeonard Norman Cohen {'1': \", '2': \", '3': \", '4': \"} (September 21, 1934 – November 7, 2016) was a Canadian singer, songwriter, musician, poet, novelist, and painter.\n\n His work explored religion, politics, isolation, sexuality, and personal relationships.\n\n Cohen was inducted into the Canadian Music Hall of Fame, the Canadian Songwriters Hall of Fame, and the Rock and Roll Hall of Fame.\n\n He was a Companion of the Order of Canada, the nation's highest civilian honor.\n\n In 2011, Cohen received one of the Prince of Asturias Awards for literature and the ninth Glenn Gould Prize."
+   ]
+  },
+  {
+   "id": "dc33422c50a3c0f1",
+   "gold": [
+    {
+     "sentence": "Henderson Point is a census-designated place (CDP) in Harrison County, Mississippi, United States.",
+     "facts": {
+      "0.0": "Henderson Point is a census-designated place (CDP).",
+      "0.1": "Henderson Point is in Harrison County, Mississippi, United States."
+     }
+    },
+    {
+     "sentence": " Along with the adjoining city of Gulfport, Biloxi is a county seat of Harrison County.",
+     "facts": {
+      "1.0": "Gulfport is a city adjoining Biloxi.",
+      "1.1": "Biloxi is a county seat of Harrison County."
+     }
+    }
+   ],
+   "items": [
+    "Hendersonville, North Carolina\nHendersonville is a city in Henderson County, North Carolina United States.\n\n This city is 22 miles south of Asheville.\n\n It is the county seat of Henderson County.\n\n Like the county, the city is named for 19th-century North Carolina Supreme Court Chief Justice Leonard Henderson.",
+    "Biloxi, Mississippi\nBiloxi ( ) is a city in Harrison County, Mississippi, United States.\n\n The 2010 United States Census recorded the population as 44,054, and in 2016 the estimated population was 45,975.\n\n Along with the adjoining city of Gulfport, Biloxi is a county seat of Harrison County.",
+    "Henderson County, Kentucky\nHenderson County is a county located in the U.S. state of Kentucky.\n\n As of the 2010 census, the population was 46,250.\n\n The county seat is Henderson.\n\n The county was formed in 1798 and named for Colonel Richard Henderson who purchased 17,000,000 acre of land from the Cherokee Indians, part of which would eventually make up the county.",
+    "Gwendolyn Elaine Armstrong\nGwendolyn Elaine Armstrong was a black Mississippi pioneer in the Civil Rights Movement.\n\n In September, 1965, she and Raylawni Branch, both local natives, integrated the University of Southern Mississippi at Hattiesburg.\n\n They thus completed the process of breaking the segregation barriers at Mississippi’s universities which had been begun by Clyde Kennard at (then) Mississippi Southern College (1956–61) and carried forward by James Meredith at the University of Mississippi (September, 1962) and Richard Holmes at Mississippi State University (July, 1965).",
+    "Henderson, Texas\nHenderson is a city in Rusk County, northeast Texas, United States.\n\n The population was 13,712 at the 2010 census.\n\n It is the county seat of Rusk County.\n\n Henderson is named for James Pinckney Henderson, the first governor of Texas.",
+    "Walpole (CDP), Massachusetts\nWalpole is a small census-designated place (CDP) located within the much larger town (21 square miles in size) of Walpole in Norfolk County, Massachusetts, United States.\n\n Walpole Town as it is called by the US Census Bureau, also includes a much larger population (24,070 in 2010).\n\n The population of the Census Designated Place was 5,918 at the 2010 census.",
+    "Henderson Point, Mississippi\nHenderson Point is a census-designated place (CDP) in Harrison County, Mississippi, United States.\n\n It is part of the Gulfport–Biloxi Metropolitan Statistical Area.\n\n The population was 170 at the 2010 census.",
+    "Paulding, Mississippi\nPaulding is an unincorporated community in and one of the two county seats of Jasper County, Mississippi.\n\n It is the only unincorporated county seat in Mississippi.\n\n Settled in 1833, it was named by United States settlers in honor of Revolutionary War hero John Paulding.\n\n After its citizens refused to contribute to a new railroad, the community was bypassed in favor of Bay Springs, Mississippi, which was designated a railroad stop to the west and the second county seat.\n\n It attracted more development and industry.",
+    "Ronkonkoma, New York\nRonkonkoma ( ) is a hamlet and census-designated place (CDP) on Long Island in the Town of Islip, New York, United States.\n\n The population of the CDP was 19,082 at the 2010 census.",
+    "Piney Woods Country Life School\nThe Piney Woods Country Life School (or The Piney Woods School) is a co-educational independent historically African-American boarding school for grades 9-12 in Piney Woods, unincorporated Rankin County, Mississippi.\n\n It is 21 mi south of Jackson.\n\n It is one of four remaining historically African-American boarding schools in the United States.\n\n It is currently the largest African-American boarding school, as well as being the second oldest continually operating African-American boarding school."
+   ]
+  }
+ ]
+}

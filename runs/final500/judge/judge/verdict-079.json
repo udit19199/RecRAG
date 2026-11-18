@@ -1,0 +1,71 @@
+[
+{"id": "6181f8f017a124e8", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Shares of Rogers extended losses on news of the lawsuit, closing down 2.2% to C$53.07 in Toronto."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Shares of Rogers extended losses on news of the lawsuit, closing down 2.2% to C$53.07 in Toronto."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "a2120678d1518a70", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "making itself the default search engine across platforms in 2021, how Google tried to take it further"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "how Google tried to have Chrome preinstalled on iPhones."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 9, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 8, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 8, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "3.2", "status": "stated", "evidence": [{"item": 8, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "3.3", "status": "stated", "evidence": [{"item": 8, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "3.4", "status": "stated", "evidence": [{"item": 8, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "1679c5e910df67e8", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "But “all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []},
+{"fact": "3.2", "status": "missing", "evidence": []},
+{"fact": "3.3", "status": "missing", "evidence": []}
+]},
+{"id": "d3c70deb3cf0851a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "His 31-yard field goal is good, and the Buffs take the first lead of the game on their first drive."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "His 31-yard field goal is good, and the Buffs take the first lead of the game on their first drive."}]}
+]},
+{"id": "282e99e1901bef07", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "8f2881626d821df2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Erik ten Hag is a top coach from Ajax"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "but they need a top blueprint not only for now but for the next five years"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "the next five years, and work towards that"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "and sometimes on that journey there are hard moments when you don't get the right results"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "even though you're doing the right things."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]}
+]}
+]

@@ -1,0 +1,711 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 2 items.
+
+=== ITEM id=2d423e249ad22392 ===
+Gold sentences and facts:
+Sentence 0: He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift.
+  Fact 0.0: He revealed that he made a friendship bracelet.
+  Fact 0.1: A friendship bracelet is a fan tradition at Swift's concerts.
+  Fact 0.2: The friendship bracelet had his number on it.
+  Fact 0.3: He made the friendship bracelet to give to Swift.
+  Fact 0.4: The friendship bracelet seemingly expressed his interest in Swift.
+Sentence 1: Now, Swift has shared that she has nothing to hide in her new relationship with Kelce.
+  Fact 1.0: Swift has now shared that she has nothing to hide.
+  Fact 1.1: Swift has shared that she has nothing to hide in her new relationship with Kelce.
+  Fact 1.2: Swift has a new relationship with Kelce.
+
+Retrieved items:
+<item 1>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+We will see what happens in the near future."
+
+Sept. 22: Another bracelet
+
+"Lately [he's] been dressing for revenge." - Vigilante Sh--
+
+Kelce was spotted at his nonprofit charity event wearing a bracelet that says "Vigilante Sh--," the name of one of Swift's songs.
+
+Sept. 24: Swift attends Chiefs game
+
+"Dating the boy on the football team." - Fifteen
+
+Swift took Kelce up on his offer and attended the Chiefs' Week 3 game against the Chicago Bears. Swift was dressed on theme and was watching intently, cheering
+and even chest bumping someone during big plays. She was especially thrilled to see Kelce get in the end zone, a three-yard catch that put the Chiefs up 41-0.
+Kansas City went on to win 41-10 to improve to 2-1.
+
+Sept. 24: Swift mingles with Donna Kelce
+
+
+
+"Talkin' over a football team."
+
+Graph facts:
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> Chicago Bears
+- NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game -MENTIONS-> Chicago Bears
+- NFL standings: Updated AFC, NFC playoff picture for Week 13 of 2023 season -MENTIONS-> Chicago Bears
+- Browns survive Bears Hail Mary on wild, near-catch by Darnell Mooney: 'Damn near s— myself' -MENTIONS-> Chicago Bears
+- NFL power rankings: Lions, 49ers level up; Texans jump Bengals, Bills; Jets, Patriots sink to bottom for Week 11 -MENTIONS-> Chicago Bears
+
+Entities: Chicago Bears, Taylor Swift, Travis Kelce, Chiefs' Week 3 game against the Chicago Bears, nonprofit charity event, Vigilante Sh--, Fifteen, Taylor
+Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE, CBSSports.com, Chiefs, Donna Kelce
+</item 1>
+
+<item 2>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Taylor Swift has revealed when her relationship with Travis Kelce really started.
+
+The 33-year-old singer spoke candidly about the romance during a recent interview with Time after she was named the magazine’s 2023 Person of the Year. Speaking
+to the publication, she said she connected with Kelce in July, after he confessed on his podcast that he tried and failed to give her a friendship bracelet with
+his phone number on it during one of her Eras Tour shows.
+
+Graph facts:
+- Taylor Swift is Time’s Person of the Year -MENTIONS-> Time
+- Taylor Swift -MENTIONS-> jersey sales
+- Taylor Swift -MENTIONS-> Instagram
+- Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek -MENTIONS-> Taylor Swift
+- Country music couples Tim McGraw, Faith Hill and Garth Brooks, Trisha Yearwood share tips to lasting marriages -MENTIONS-> Taylor Swift
+
+Entities: Time, Taylor Swift, Eras Tour, Travis Kelce, Taylor Swift reveals secret start to her relationship with Travis Kelce, The Independent
+</item 2>
+
+<item 3>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+24: Swift mingles with Donna Kelce
+
+
+
+"Talkin' over a football team." - Mean
+
+Swift already seems to be making friends with the family. Swift was sitting next to Donna in the box and the two were seen talking and laughing as the game went
+along.
+
+Sept. 24: Postgame interviews turn into Swiftie talk
+
+The postgame press conference seemed more about Swift and Kelce than it did about the actual game. The media wanted any insight it could get into the
+relationship and how Swift ended up at Arrowhead.
+
+"He told me at the last minute," Mahomes said when asked if he knew Swift was coming. "There's some things with Trav where he kind of just says it and you don't
+know if it's true or not. He says it so calmly. ... Friday he was like, 'Yeah, I think she's coming to the game this weekend,' and then moved about his
+business."
+
+Graph facts:
+- Taylor Swift -MENTIONS-> Instagram
+- Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek -MENTIONS-> Taylor Swift
+- Country music couples Tim McGraw, Faith Hill and Garth Brooks, Trisha Yearwood share tips to lasting marriages -MENTIONS-> Taylor Swift
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> Taylor Swift
+- Taylor Swift -MENTIONS-> jersey sales
+
+Entities: Taylor Swift, Arrowhead, rumored romance, Travis Kelce, Mahomes, postgame press conference, Swiftie talk, Taylor Swift-Travis Kelce timeline:
+Everything to know about rumored romance between pop star, Chiefs TE, CBSSports.com, Chiefs, game, Donna Kelce
+</item 3>
+
+<item 4>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Some found issue with these changes, but the NFL said this is a "pop cultural moment" and they are acting as such.
+
+"We frequently change our bios and profile imagery based on what's happening in and around our games, as well as culturally," the NFL wrote in a statement. "The
+Taylor Swift and Travis Kelce news has been a pop cultural moment we've leaned into in real time, as it's an intersection of sport and entertainment, and we've
+seen an incredible amount of positivity around the sport."
+
+Oct. 6: Travis and Jason think the NFL is doing too much
+
+The NFL is really digging into the Swift-Kelce coverage, and not everyone is a fan, including the people involved.
+
+"I think it's fun when they show who's at the game," Travis said. "I think it brings a little bit more to the atmosphere, brings a little bit more to what
+you're watching. But at the same time, they're overdoing it a little bit."
+
+Graph facts:
+- Brock Purdy -MENTIONS-> NFL
+- Raiders vs. Lions live score, updates, highlights from NFL 'Monday Night Football' game -MENTIONS-> NFL
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> NFL
+- Chiefs vs. Packers live score, updates, highlights from NFL 'Sunday Night Football' game -MENTIONS-> NFL
+- Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek -MENTIONS-> NFL
+
+Entities: NFL, Jason, Taylor Swift, rumored romance, Travis Kelce, pop cultural moment, Swift-Kelce coverage, Taylor Swift-Travis Kelce timeline: Everything to
+know about rumored romance between pop star, Chiefs TE, CBSSports.com
+</item 4>
+
+<item 5>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+- Enchanted
+
+Mahomes said he had not met Swift when asked in the postgame press conference, but he did meet her at the afterparty.
+
+"Yea I met her. She's really cool. Good people," Mahomes said, via KSHB 41 in Kansas City. "But like Trav said, imma let them have their privacy and just keep
+it moving."
+
+Sept. 27: Kelce breaks his silence
+
+"And they said speak now." -Speak Now
+
+Kelce addressed Swift's attendance on his podcast, saying, "To see the slow-motion chest bumps, to see the high-fives with Mom, to see how Chiefs Kingdom was
+all excited that she was there -- that s--- was absolutely hysterical. It's definitely a game I'll remember, that's for damn sure."
+
+He is not going to speak too much more about the relationship, noting that he wants "to respect both of our lives."
+
+"Yeah, my personal life -- that's not so personal.
+
+Graph facts:
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> Kansas City
+- When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover -MENTIONS-> Kansas City
+- Chiefs vs. Packers live score, updates, highlights from NFL 'Sunday Night Football' game -MENTIONS-> Kansas City
+- Beyoncé tops box office with $21 million debut for concert film ‘Renaissance’ -MENTIONS-> Kansas City
+- Fantasy Football RB Rankings Week 14: Who to start, best sleepers at running back -MENTIONS-> Kansas City
+
+Entities: Kansas City, Taylor Swift, Travis Kelce, Mahomes, KSHB 41, Chiefs Kingdom, Speak Now, Enchanted, afterparty, Taylor Swift-Travis Kelce timeline:
+Everything to know about rumored romance between pop star, Chiefs TE, CBSSports.com, Chiefs, game
+</item 5>
+
+<item 6>
+Graph query row:
+article: Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE
+published_on: 2023-10-12T23:21:52+00:00
+publisher: CBSSports.com
+section: None
+person: Taylor Swift
+passages: ['Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com,
+2023-10-12T23:21:52+00:00)\n"I was disappointed that she doesn\'t talk before or after her shows because she has to save her voice for the 44 songs she sings
+... She doesn\'t meet anybody, or at least she didn\'t want to meet me, so I took it personal," Kelce said on an episode of the "New Heights" podcast he does
+with his brother, Philadelphia Eagles center Jason Kelce.\n\nHe revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on
+it to give to her, seemingly expressing his interest in Swift. When his brother asked if it was his jersey number or his phone number, Kelce replied, "you know
+which one."\n\n"If you\'re up on Taylor Swift concerts, there are friendship bracelets and I had received a bunch of them, but I wanted to give Taylor Swift one
+with my number on it."\n\nAug. 5: Kelce names his celebrity crush\n\nWell before the two were rumored to be dating, Kelce was asked his crush.', 'Taylor
+Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)\nBut before he
+could even answer, the answer was given for him.\n\nSept. 14: Rumors aren\'t denied\n\n"The rumors are terrible and cruel, but honey, most of them are true." -
+New Romantics\n\nOf course people were going to ask Jason, who is very close with his brother, whether rumors of the two hanging out were true. He did not
+confirm them, but he also did not deny them.\n\nSept. 17: The references begin\n\n"I watched it begin again." - Begin Again\n\nThe rumors began to pick up, and
+now there were a lot of people, commentators included, making Swift references around Kelce.\n\nWhen the tight end caught a touchdown pass from Patrick Mahomes,
+CBS Sports\' Ian Eagle said, "Kelce finds a blank space for the score."\n\nThis was only the start to many, many, Swift lyrics being referenced during NFL
+games.\n\nSept. 21: Kelce sends Swift an invite\n\n"So inviting, I almost jump in."', 'Taylor Swift-Travis Kelce timeline: Everything to know about rumored
+romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)\n21: Kelce sends Swift an invite\n\n"So inviting, I almost jump in." - Gold
+Rush\n\nWhile on the Pat McAfee show, Kelce discussed the rumors and sounded somehow surprised people are talking about it.\n\n"It is hilarious how much
+traction this has actually got," he said of all the talk. "It\'s like that old game in school called telephone where everybody is just whispering in each others
+ear, just hearing some random stuff. Especially when you got Jason Kelce on live television telling people just both sides."\n\nHe then admitted that he invited
+Swift to one of his games, joking that they would compete to see who put on the bigger show at Arrowhead Stadium, home of the Chiefs.\n\n"I threw it out there,
+I threw the ball in her court and I told her you know, I\'ve seen you rock the stage in Arrowhead you might have to come see me rock the stage in Arrowhead and
+see which one is a little more lit. We will see what happens in the near future."', 'Taylor Swift-Travis Kelce timeline: Everything to know about rumored
+romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)\nWe will see what happens in the near future."\n\nSept. 22: Another
+bracelet\n\n"Lately [he\'s] been dressing for revenge." - Vigilante Sh--\n\nKelce was spotted at his nonprofit charity event wearing a bracelet that says
+"Vigilante Sh--," the name of one of Swift\'s songs.\n\nSept. 24: Swift attends Chiefs game\n\n"Dating the boy on the football team." - Fifteen\n\nSwift took
+Kelce up on his offer and attended the Chiefs\' Week 3 game against the Chicago Bears. Swift was dressed on theme and was watching intently, cheering and even
+chest bumping someone during big plays. She was especially thrilled to see Kelce get in the end zone, a three-yard catch that put the Chiefs up 41-0. Kansas
+City went on to win 41-10 to improve to 2-1.\n\nSept. 24: Swift mingles with Donna Kelce\n\n\n\n"Talkin\' over a football team."', 'Taylor Swift-Travis Kelce
+timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)\n24: Swift mingles with Donna
+Kelce\n\n\n\n"Talkin\' over a football team." - Mean\n\nSwift already seems to be making friends with the family. Swift was sitting next to Donna in the box and
+the two were seen talking and laughing as the game went along.\n\nSept. 24: Postgame interviews turn into Swiftie talk\n\nThe postgame press conference seemed
+more about Swift and Kelce than it did about the actual game. The media wanted any insight it could get into the relationship and how Swift ended up at
+Arrowhead.\n\n"He told me at the last minute," Mahomes said when asked if he knew Swift was coming. "There\'s some things with Trav where he kind of just says
+it and you don\'t know if it\'s true or not. He says it so calmly. ... Friday he was like, \'Yeah, I think she\'s coming to the game this weekend,\' and then
+moved about his business."', 'Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com,
+2023-10-12T23:21:52+00:00)\nHead coach Andy Reid was also asked about his star tight end\'s supposed relationship, to which he quipped, "I set them
+up."\n\nSept. 24: Kelce and Swift leave stadium together\n\n"You know when it\'s time to go." - It\'s Time To Go\n\nThis was the first time the two were
+photographed together. They walked side by side, Kelce fittingly wearing an outfit with "1989" in the title and Swift wearing a Chiefs zip-up.\n\nSept. 24: The
+two leave in a convertible\n\n"Nothing good starts in the getaway car." - Getaway Car\n\nSwift and Swift were spotted in a convertible, with the tight end
+driving, after the Chiefs\' win. Kelce reportedly rented out a restaurant for a private party with Swift and his teammates.\n\n"Taylor Swift likes that Travis
+Kelce \'pursued her\' and the two are having a \'great time getting to know each other,\'" a source told Entertainment Tonight.', 'Taylor Swift-Travis Kelce
+timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)\n"\'Taylor wants a guy that\'s into
+his career, does his own thing, but is also supportive and understands her,\' the source added, "and Travis fits those qualities.\'"\n\nSept. 25: Kelce jersey
+sales skyrocket\n\nCall it what you want; I\'ll call it the Taylor Swift effect. Since Swift attended the Chiefs game, there was a 400% increase in Kelce jersey
+sales, his podcast is No. 1 overall on Apple, he gained over 380,000 Instagram followers, and 24.3 million people watched the game, making it the No. 1 game
+last week, according to Front Office Sports.\n\nThere has also been triple the "Chiefs" searches on web and triple the Chiefs ticket sales on Stubhub.\n\nSept.
+25: Belichick weighs in on the matter\n\n\n\nNew England Patriots head coach does not always comment on situations that take place in the game, but he was fully
+ready with a sound bite on the Kelce-Swift situation.', 'Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs
+TE (CBSSports.com, 2023-10-12T23:21:52+00:00)\n"Well I would say that Travis Kelce\'s had a lot of big catches in his career. This would be the
+biggest."\n\nSept. 26: Chiefs games get even more popular\n\n"Welcome to New York (*New Jersey), it\'s been waiting for you." - Welcome to New York\n\nThe
+defending Super Bowl champions are already one of the more popular teams in the league, but it is becoming the hottest ticket in town, no matter what town that
+is.\n\n"Since Swift\'s appearance at the Chiefs game on Sunday, the Jets have sold more tickets for their game against the Chiefs in a single day than since the
+season started -- by more than double," a representatives at StubHub told to Town & Country magazine.\n\nSept. 27: Mahomes confirms he met Swift\n\n"It was
+enchanting to meet you, all I can say is I was enchanted to meet you."', 'Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between
+pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)\n- Enchanted\n\nMahomes said he had not met Swift when asked in the postgame press conference,
+but he did meet her at the afterparty.\n\n"Yea I met her. She\'s really cool. Good people," Mahomes said, via KSHB 41 in Kansas City. "But like Trav said, imma
+let them have their privacy and just keep it moving."\n\nSept. 27: Kelce breaks his silence\n\n"And they said speak now." -Speak Now\n\nKelce addressed Swift\'s
+attendance on his podcast, saying, "To see the slow-motion chest bumps, to see the high-fives with Mom, to see how Chiefs Kingdom was all excited that she was
+there -- that s--- was absolutely hysterical. It\'s definitely a game I\'ll remember, that\'s for damn sure."\n\nHe is not going to speak too much more about
+the relationship, noting that he wants "to respect both of our lives."\n\n"Yeah, my personal life -- that\'s not so personal.', 'Taylor Swift-Travis Kelce
+timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)\n"Yeah, my personal life -- that\'s
+not so personal. I did this to myself Jason, I know this. What\'s real is that you know it is my personal life. ... She\'s not in the media as much as I am
+doing this show every single week."\n\nSept. 27: Jerry Jones comments on the Swift effect\n\nSwift is getting the owners talking, too.\n\n"It is hard to move
+that needle dramatically on a great feeling, a great attraction in the NFL," Jones said Wednesday on 105.3FM The Fan in Dallas. "We get a lot of eye balls. She
+blew it off the charts. It is amazing. It makes you smile. But it just shows the depth of her following, especially with her core constituency. We all, I think,
+felt the same way when she\'s sitting up there with [Travis Kelce\'s] mom and she\'s going nuts when he\'s playing and those hearts are popping out
+everywhere.', 'Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com,
+2023-10-12T23:21:52+00:00)\nHow do you not get that? That\'s called images right there."\n\nOct. 1: Swift attends Chiefs-Jets\n\n"Welcome to New York, it\'s
+been waiting for you," - Welcome to New York\n\nOK, so the Jets technically play in New Jersey, but we\'re just basing this off their name. Swift went to her
+second consecutive Chiefs game, showing up with some famous friends, Blake Lively, Ryan Reynolds and Hugh Jackman. In the week leading up to the game, there
+were reports that the singer would be at the game. The Chiefs defeated the Jets 23-20.\n\nOct. 5: NFL defends itself\n\nSwift coverage is everywhere and the
+league even changed their social media bio to one of the singer\'s lyrics. The league\'s X (formerly Twitter) bio to read, "NFL (Taylor\'s Version)," while
+their Instagram account read, "Chiefs are 2-0 as Swifties."', 'Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star,
+Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)\nSome found issue with these changes, but the NFL said this is a "pop cultural moment" and they are acting
+as such.\n\n"We frequently change our bios and profile imagery based on what\'s happening in and around our games, as well as culturally," the NFL wrote in a
+statement. "The Taylor Swift and Travis Kelce news has been a pop cultural moment we\'ve leaned into in real time, as it\'s an intersection of sport and
+entertainment, and we\'ve seen an incredible amount of positivity around the sport."\n\nOct. 6: Travis and Jason think the NFL is doing too much\n\nThe NFL is
+really digging into the Swift-Kelce coverage, and not everyone is a fan, including the people involved.\n\n"I think it\'s fun when they show who\'s at the
+game," Travis said. "I think it brings a little bit more to the atmosphere, brings a little bit more to what you\'re watching. But at the same time, they\'re
+overdoing it a little bit."', 'Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com,
+2023-10-12T23:21:52+00:00)\nBut at the same time, they\'re overdoing it a little bit."\n\nJason also chimed in on the matter, saying, "I just think the NFL is
+not used to celebrities coming to the games. Like basketball has it all figured out. They\'re all courtside, they\'re sitting there. They show \'em once or
+twice, but then they get back to the game."\n\nOct. 12: Swift attends Chiefs-Broncos\n\n"Now it\'s too late for you and your white horse *Bronco, to come
+around" - White Horse\n\nOne day after her movie premiere, Swift is in the house for the Chiefs\' "Thursday Night Football" divisional matchup against the
+Broncos. The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before. According to Al Michaels, the game will
+have minimal Swift coverage, though so far there has already been a mention of the superstar.\n\nOct.', 'Taylor Swift-Travis Kelce timeline: Everything to know
+about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)\nOct. 15: Kelce, Swift make \'SNL\' cameos\n\nThe two were spotted
+out in NYC together and then had a surprise appearance on "Saturday Night Live." Kelce had a cameo in a skit about how much coverage Swift was getting during
+games, while the singer introduced the musical act of the night, Ice Spice.\n\nOct. 22: Swift attends fifth Chiefs game\n\nSwift has now attended games
+broadcast across all five networks (CBS, NBC, Fox, ESPN and Amazon). This week, she is watching the Chiefs face the Chargers and will be shown on CBS. She is
+sporting a Chiefs sweatshirt and is seated next to Kansas City quarterback Patrick Mahomes\' wife, Brittany.']
+connections: [{'connected_to': 'jersey sales', 'relationship': 'MENTIONS'}, {'connected_to': 'Instagram', 'relationship': 'MENTIONS'}, {'connected_to':
+'Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek', 'relationship': 'MENTIONS'}, {'connected_to': 'Country music couples Tim
+McGraw, Faith Hill and Garth Brooks, Trisha Yearwood share tips to lasting marriages', 'relationship': 'MENTIONS'}, {'connected_to': 'Fans spot Travis Kelce
+wearing Taylor Swift-themed friendship bracelet before she attended his game', 'relationship': 'MENTIONS'}, {'connected_to': "Chiefs vs. Packers live score,
+updates, highlights from NFL 'Sunday Night Football' game", 'relationship': 'MENTIONS'}, {'connected_to': 'When pop culture and sport collide: A timeline of
+Taylor Swift’s NFL takeover', 'relationship': 'MENTIONS'}, {'connected_to': 'Travis Kelce says he tried to delete his ‘nonsense’ tweets before they went viral',
+'relationship': 'MENTIONS'}, {'connected_to': 'Taylor Swift is Time’s Person of the Year', 'relationship': 'MENTIONS'}, {'connected_to': 'Taylor Swift-Travis
+Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE', 'relationship': 'MENTIONS'}, {'connected_to': "Young Taylor Swift fans go
+viral for struggling to open the star's CD: 'Making me laugh'", 'relationship': 'MENTIONS'}, {'connected_to': 'Beyoncé tops box office with $21 million debut
+for concert film ‘Renaissance’', 'relationship': 'MENTIONS'}, {'connected_to': 'Travis Kelce faces backlash after comments about ‘finding a breeder’ resurface
+amid Taylor Swift romance', 'relationship': 'MENTIONS'}, {'connected_to': "Chiefs vs. Jets live score, updates, highlights from NFL 'Sunday Night Football'
+game", 'relationship': 'MENTIONS'}, {'connected_to': 'Michelle Jubelirer on Ice Spice, The Beatles, and reinventing Capitol Music Group: ‘I don’t think any
+label group has been able to turn things around as quickly as my team and I have done in less than two years.’', 'relationship': 'MENTIONS'}, {'connected_to':
+"Taylor Swift's 1989: The stories behind her biggest album", 'relationship': 'MENTIONS'}, {'connected_to': 'Hipgnosis Songs Fund’s board is concerned over
+Citrin Cooperman’s latest valuation of the company. What’s it going to do about it?', 'relationship': 'MENTIONS'}, {'connected_to': 'Taylor Swift reveals secret
+start to her relationship with Travis Kelce', 'relationship': 'MENTIONS'}, {'connected_to': "FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor
+Swift-inspired props for Chiefs-Jets Week 4", 'relationship': 'MENTIONS'}, {'connected_to': 'Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing
+but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?', 'relationship': 'MENTIONS'}, {'connected_to': 'Sony Music’s artists
+aren’t involved in YouTube’s new voice-cloning AI experiment. Not unrelated: Google’s recent filing with the US Copyright Office.', 'relationship': 'MENTIONS'},
+{'connected_to': "At Christmas, Don McLean sings the praises of 'Silent Night,' other holiday classics: 'My mother's favorite'", 'relationship': 'MENTIONS'},
+{'connected_to': 'Taylor Swift has already sold over $100 million of tickets for her concert movie. Theaters nationwide brace for impact', 'relationship':
+'MENTIONS'}, {'connected_to': 'Concert movies are the future of pop music fandom', 'relationship': 'MENTIONS'}, {'connected_to': 'Travis Kelce admits the NFL is
+overdoing it with their Taylor Swift coverage', 'relationship': 'MENTIONS'}, {'connected_to': 'Subtle as a sledgehammer, a pop icon returns', 'relationship':
+'MENTIONS'}, {'connected_to': 'Travis Kelce', 'relationship': 'SAID'}, {'connected_to': 'video', 'relationship': 'SAID'}, {'connected_to': '1989',
+'relationship': 'SAID'}, {'connected_to': 'Style', 'relationship': 'SAID'}, {'connected_to': 'Welcome To New York', 'relationship': 'SAID'}, {'connected_to':
+'the media', 'relationship': 'SAID'}, {'connected_to': 'fashion', 'relationship': 'SAID'}, {'connected_to': 'crash', 'relationship': 'SAID'}, {'connected_to':
+'awkward dancing', 'relationship': 'SAID'}, {'connected_to': 'This Love', 'relationship': 'SAID'}, {'connected_to': 'I Know Places', 'relationship': 'SAID'},
+{'connected_to': 'Clean', 'relationship': 'SAID'}, {'connected_to': 'necessity of pain', 'relationship': 'SAID'}, {'connected_to': 'Wonderland', 'relationship':
+'SAID'}, {'connected_to': 'You Are In Love', 'relationship': 'SAID'}, {'connected_to': 'public relationship', 'relationship': 'SAID'}, {'connected_to':
+'paparazzi', 'relationship': 'SAID'}, {'connected_to': 'TikTok', 'relationship': 'SAID'}, {'connected_to': 'media', 'relationship': 'SAID'}, {'connected_to':
+'football', 'relationship': 'SAID'}, {'connected_to': 'Kelce', 'relationship': 'SAID'}, {'connected_to': 'Time', 'relationship': 'SAID'}, {'connected_to':
+'Mahomes', 'relationship': 'SAID'}, {'connected_to': 'Annika', 'relationship': 'SAID'}, {'connected_to': 'Henslee', 'relationship': 'SAID'}, {'connected_to':
+'Kansas City Chiefs game', 'relationship': 'PARTICIPATED_IN'}, {'connected_to': 'Chiefs–Chicago Bears game', 'relationship': 'PARTICIPATED_IN'},
+{'connected_to': 'post-game celebration', 'relationship': 'PARTICIPATED_IN'}, {'connected_to': 'Eras Tour concert', 'relationship': 'PARTICIPATED_IN'},
+{'connected_to': 'Chiefs vs. Packers game', 'relationship': 'PARTICIPATED_IN'}, {'connected_to': 're-recording 1989 tracks', 'relationship': 'PARTICIPATED_IN'},
+{'connected_to': 'quietly hanging out', 'relationship': 'PARTICIPATED_IN'}, {'connected_to': 'game at Arrowhead Stadium', 'relationship': 'PARTICIPATED_IN'},
+{'connected_to': 'Eras Tour show in Buenos Aires', 'relationship': 'PARTICIPATED_IN'}, {'connected_to': 'NFL appearance', 'relationship': 'PARTICIPATED_IN'},
+{'connected_to': 'Eras Tour', 'relationship': 'PARTICIPATED_IN'}, {'connected_to': 'Kelce sends Swift an invite', 'relationship': 'PARTICIPATED_IN'},
+{'connected_to': "Chiefs' Week 3 game against the Chicago Bears", 'relationship': 'PARTICIPATED_IN'}, {'connected_to': 'Chiefs-Jets game', 'relationship':
+'PARTICIPATED_IN'}, {'connected_to': 'Chiefs-Broncos', 'relationship': 'PARTICIPATED_IN'}, {'connected_to': 'SNL cameos', 'relationship': 'PARTICIPATED_IN'},
+{'connected_to': 'Chiefs game', 'relationship': 'PARTICIPATED_IN'}, {'connected_to': 'Kansas City Chiefs game against the Los Angeles Chargers', 'relationship':
+'PARTICIPATED_IN'}, {'connected_to': 'Chiefs vs. Jets Sunday Night Football game', 'relationship': 'PARTICIPATED_IN'}, {'connected_to': 'game', 'relationship':
+'PARTICIPATED_IN'}, {'connected_to': 'Red Tour', 'relationship': 'PARTICIPATED_IN'}, {'connected_to': '1989 tour', 'relationship': 'PARTICIPATED_IN'},
+{'connected_to': 'skiing', 'relationship': 'PARTICIPATED_IN'}, {'connected_to': '2013 Grammy Awards', 'relationship': 'PARTICIPATED_IN'}, {'connected_to':
+'first game', 'relationship': 'PARTICIPATED_IN'}, {'connected_to': 'Kelce’s game on 3 December', 'relationship': 'PARTICIPATED_IN'}, {'connected_to': 'game
+between the Chiefs and New York Jets', 'relationship': 'PARTICIPATED_IN'}, {'connected_to': 'Eras Tour show', 'relationship': 'PARTICIPATED_IN'},
+{'connected_to': 'their tour', 'relationship': 'PARTICIPATED_IN'}, {'connected_to': "NFL 'Sunday Night Football' game", 'relationship': 'PARTICIPATED_IN'},
+{'connected_to': 'The Eras Tour', 'relationship': 'PARTICIPATED_IN'}, {'connected_to': 'Reputation Stadium Tour', 'relationship': 'PARTICIPATED_IN'},
+{'connected_to': 'NFL viewership', 'relationship': 'PARTICIPATED_IN'}, {'connected_to': 'Katy Perry', 'relationship': 'COMPETES_WITH'}]
+</item 6>
+
+<item 7>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Here's a look at how it all started and where it has gone since:
+
+June 29: Kelce makes friendship bracelets for fellow TEs
+
+Is this where it all begin? Kelce made a friendship bracelet to give to the newcomers at a camp for NFL tight ends. He said he was "taking a page out of Taylor
+Swift's book."
+
+July 26: Kelce makes friendship bracelet for Swift
+
+"So make the friendship bracelets, take the moment and taste it." - You're On Your Own Kid
+
+Kelce announced that he went to Swift's highly anticipated concert, but said he did not have the chance to meet the 12-time Grammy winner.
+</item 7>
+
+<item 8>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+21: Kelce sends Swift an invite
+
+"So inviting, I almost jump in." - Gold Rush
+
+While on the Pat McAfee show, Kelce discussed the rumors and sounded somehow surprised people are talking about it.
+
+"It is hilarious how much traction this has actually got," he said of all the talk. "It's like that old game in school called telephone where everybody is just
+whispering in each others ear, just hearing some random stuff. Especially when you got Jason Kelce on live television telling people just both sides."
+
+He then admitted that he invited Swift to one of his games, joking that they would compete to see who put on the bigger show at Arrowhead Stadium, home of the
+Chiefs.
+
+"I threw it out there, I threw the ball in her court and I told her you know, I've seen you rock the stage in Arrowhead you might have to come see me rock the
+stage in Arrowhead and see which one is a little more lit. We will see what happens in the near future."
+
+Graph facts:
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> Arrowhead Stadium
+- Travis Kelce says he tried to delete his ‘nonsense’ tweets before they went viral -MENTIONS-> Arrowhead Stadium
+- When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover -MENTIONS-> Arrowhead Stadium
+- Travis Kelce faces backlash after comments about ‘finding a breeder’ resurface amid Taylor Swift romance -MENTIONS-> Arrowhead Stadium
+- Taylor Swift reveals secret start to her relationship with Travis Kelce -MENTIONS-> Arrowhead Stadium
+
+Entities: Arrowhead Stadium, Jason Kelce, Taylor Swift, rumored romance, Travis Kelce, Taylor Swift-Travis Kelce timeline: Everything to know about rumored
+romance between pop star, Chiefs TE, CBSSports.com, Chiefs
+</item 8>
+
+<item 9>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+But before he could even answer, the answer was given for him.
+
+Sept. 14: Rumors aren't denied
+
+"The rumors are terrible and cruel, but honey, most of them are true." - New Romantics
+
+Of course people were going to ask Jason, who is very close with his brother, whether rumors of the two hanging out were true. He did not confirm them, but he
+also did not deny them.
+
+Sept. 17: The references begin
+
+"I watched it begin again." - Begin Again
+
+The rumors began to pick up, and now there were a lot of people, commentators included, making Swift references around Kelce.
+
+When the tight end caught a touchdown pass from Patrick Mahomes, CBS Sports' Ian Eagle said, "Kelce finds a blank space for the score."
+
+This was only the start to many, many, Swift lyrics being referenced during NFL games.
+
+Sept. 21: Kelce sends Swift an invite
+
+"So inviting, I almost jump in."
+
+Graph facts:
+- Brock Purdy -MENTIONS-> NFL
+- Raiders vs. Lions live score, updates, highlights from NFL 'Monday Night Football' game -MENTIONS-> NFL
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> NFL
+- Chiefs vs. Packers live score, updates, highlights from NFL 'Sunday Night Football' game -MENTIONS-> NFL
+- Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek -MENTIONS-> NFL
+
+Entities: NFL, Ian Eagle, Jason, Taylor Swift, rumored romance, CBS Sports, New Romantics, Begin Again, Rumors aren't denied, The references begin, Kelce sends
+Swift an invite, Travis Kelce, Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE, Patrick Mahomes,
+CBSSports.com
+</item 9>
+
+<item 10>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+The “All Too Well” singer’s interview with Time marks her first time publicly speaking out about Kelce, who she’s been romantically linked to since this summer,
+when the football tight end first confessed to attempting to give her his number.
+
+While Swift has attended a few of Kelce’s games since their relationship started, he’s also gone on to support her career. In November, he made his way to
+Buenos Aires, Argentina, to attend one of her Eras Tour shows. During the concert, Swift gave a shout-out to the Chiefs player when she changed her “Karma”
+lyrics to reflect their relationship. “Karma is the guy on the Chiefs, coming straight home to me,” she sang, letting out a laugh as fans in the audience
+screamed in response.
+
+After the show, the “Style” singer was seen running into Kelce’s arms and kissing him, before he whisked her away backstage.
+
+Graph facts:
+- Travis Kelce says he tried to delete his ‘nonsense’ tweets before they went viral -MENTIONS-> All Too Well
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> All Too Well
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Argentina
+- Travis Kelce says he tried to delete his ‘nonsense’ tweets before they went viral -MENTIONS-> Argentina
+- ChatGPT: Everything you need to know about the AI-powered chatbot -MENTIONS-> Argentina
+
+Entities: All Too Well, Argentina, Buenos Aires, Karma, Time, Taylor Swift, Travis Kelce, Chiefs, Taylor Swift reveals secret start to her relationship with
+Travis Kelce, Eras Tour show, Style, The Independent
+</item 10>
+=== END ITEM id=2d423e249ad22392 ===
+
+=== ITEM id=f590ac0a418c9d72 ===
+Gold sentences and facts:
+Sentence 0: In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Sorcerer builds for season 2.
+  Fact 0.0: This Diablo 4 guide gathers the best Diablo 4 Sorcerer builds for season 2.
+  Fact 0.1: This Diablo 4 guide simplifies the best Diablo 4 Sorcerer builds for season 2.
+Sentence 1: In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Barbarian builds for season 2.
+  Fact 1.0: This Diablo 4 guide gathers the best Diablo 4 Barbarian builds for season 2.
+  Fact 1.1: This Diablo 4 guide simplifies the best Diablo 4 Barbarian builds for season 2.
+
+Retrieved items:
+<item 1>
+The best Barbarian builds and skills in Diablo 4 (Polygon, 2023-10-19T17:16:31+00:00)
+As such, you’ll need to unlock new skills before enhancing existing ones:
+
+Frenzy / Enhanced Frenzy Hammer of the Ancients / Enhanced Hammer of the Ancients / Furious Hammer of the Ancients Combat Frenzy Rallying Cry / Enhanced
+Rallying Cry / Tactical Rallying Cry Hammer of the Ancients (ranks 2-3) Leap / Enhanced Leap / Power Leap Hammer of the Ancients (ranks 4-5) Death Blow /
+Enhanced Death Blow / Warrior’s Death Blow / Death Blow (rank 2-5) Wrath of the Berserker / Prime Wrath of the Berserker / Supreme Wrath of the Berserker Pit
+Fighter (ranks 1-3) Tempered Fury Furious Impulse (ranks 1-3) Walking Arsenal Hamstring No Mercy Expose Vulnerability (ranks 1-3) No Mercy (ranks 2-3) Swiftness
+(ranks 1-3) Thick Skin (ranks 1-3) Counteroffensive (ranks 1-3) Defensive
+
+Graph facts:
+- The best Warlock subclass, feats, and build in Baldur’s Gate 3 -MENTIONS-> Barbarian
+- How to choose the best class for you in Baldur’s Gate 3 -MENTIONS-> Barbarian
+- Wildheart -PART_OF-> Barbarian
+- Berserker -PART_OF-> Barbarian
+- Wild Magic -PART_OF-> Barbarian
+
+Entities: Barbarian, Hammer of the Ancients, Frenzy, Death Blow, Rallying Cry, Leap, Wrath of the Berserker, Combat Frenzy, Pit Fighter, Tempered Fury, Furious
+Impulse, Walking Arsenal, No Mercy, Expose Vulnerability, Swiftness
+</item 1>
+
+<item 2>
+The best Sorcerer builds and skills in Diablo 4 (Polygon, 2023-10-18T21:43:17+00:00)
+If you don’t want to end up dead more often than not, make sure to invest heavily in defensive skills while making your way toward one of the six Key Passives
+we listed above.
+
+Looking for other Diablo 4 builds? We have explainers on the Barbarian, Rogue, Druid, and Necromancer classes.
+
+Graph facts:
+- The best Sorcerer builds and skills in Diablo 4 -MENTIONS-> Enchantment
+- The best Sorcerer builds and skills in Diablo 4 -MENTIONS-> Sanctuary
+- The best Sorcerer builds and skills in Diablo 4 -MENTIONS-> Sorcerer builds
+- The best Sorcerer builds and skills in Diablo 4 -MENTIONS-> lightning
+- The best Sorcerer builds and skills in Diablo 4 -MENTIONS-> ice
+
+Entities: The best Sorcerer builds and skills in Diablo 4, Sorcerer builds and skills, defensive skills, six Key Passives, Barbarian class, Rogue class, Druid
+class, Necromancer class, Diablo 4, Polygon
+</item 2>
+
+<item 3>
+The best Barbarian builds and skills in Diablo 4 (Polygon, 2023-10-19T17:16:31+00:00)
+There are four main ideas that all Barbarian builds stem from:
+
+Fury dumping (most popular in Diablo 4’s pre-season)
+
+Weapon swapping
+
+Bleed
+
+Berserk
+
+Fury dump builds make use of the Unbridled Rage Key Passive, which causes your Fury spenders to cost double the Fury but deal more than double the damage. These
+kinds of builds obviously require very steady Fury generation, as it’s easy to starve yourself. Berserk builds that use the Unconstrained Key Passive are all
+about keeping your Barbarian in the Berserk stage at all times, which nets you a hefty bonus. All Barbarian builds will likely use some skills that make them go
+Berserk, the Unconstrained Key Passive just enhances the effect.
+
+Bleed builds use the Gushing Wounds Key Passive to create a critical strike heavy build that’s great for whittling down groups of enemies with damage over time
+and explosions. Weapon swapping builds offer what is almost certainly the most unique playstyle for Barbarians and takes advantage of the Walking Arsenal Key
+Passive.
+
+Graph facts:
+- The best Warlock subclass, feats, and build in Baldur’s Gate 3 -MENTIONS-> Barbarian
+- How to choose the best class for you in Baldur’s Gate 3 -MENTIONS-> Barbarian
+- Wildheart -PART_OF-> Barbarian
+- Berserker -PART_OF-> Barbarian
+- Wild Magic -PART_OF-> Barbarian
+
+Entities: Barbarian, Bleed, Walking Arsenal, The best Barbarian builds and skills in Diablo 4, Fury dumping, Weapon swapping, Berserk, Unbridled Rage,
+Unconstrained, Gushing Wounds, Diablo 4, Polygon
+</item 3>
+
+<item 4>
+The best Barbarian builds and skills in Diablo 4 (Polygon, 2023-10-19T17:16:31+00:00)
+Ring 2: Aspect of Limitless Rage
+
+If you want to get into the nitty gritty of stat priorities, refer to AaronActionRPG’s original guide.
+
+Paragon Boards for Double Swing Barbarian build
+
+The Paragon Board system is very complex, and you’ll want to carefully pair your Glyphs with specific boards for your class:
+
+Starter Board / Bloodfeeder Glyph Decimator / Ambidextrous Glyph Carnage / Might Glyph Flawless Technique / Ire Glyph Weapon Master / Territorial Glyph Bone
+Breaker / Exploit Glyph Warbringer / Wrath Glyph
+
+You should level your Glyphs to 15 in this specific order:
+
+Exploit Territorial Ambidextrous Might Wrath Bloodfeeder Ire
+
+You can path your own way through the Paragon Boards following these basic guidelines. However, for the best results, follow AaronActionRPG’s path exactly.
+
+How to make a great Barbarian build
+
+Barbarians are Diablo 4’s only pure melee class, with the other classes having hybrid builds for multiple ranges.
+
+Graph facts:
+- The best Warlock subclass, feats, and build in Baldur’s Gate 3 -MENTIONS-> Barbarian
+- How to choose the best class for you in Baldur’s Gate 3 -MENTIONS-> Barbarian
+- Wildheart -PART_OF-> Barbarian
+- Berserker -PART_OF-> Barbarian
+- Wild Magic -PART_OF-> Barbarian
+
+Entities: Barbarian, Paragon Board system, Glyphs, AaronActionRPG, The best Barbarian builds and skills in Diablo 4, Double Swing Barbarian build, Aspect of
+Limitless Rage, Ring 2, Starter Board, Bloodfeeder Glyph, Decimator, Ambidextrous Glyph, Carnage, Might Glyph, Flawless Technique
+</item 4>
+
+<item 5>
+The best Barbarian builds and skills in Diablo 4 (Polygon, 2023-10-19T17:16:31+00:00)
+Barbarians are a relatively simple class in Diablo 4: They smash stuff. However, Diablo 4 is underscored by math that’s so complex that even the simple act of
+smashing stuff becomes a dizzying equation. That’s where we come in, with our suggestions of the best Barbarian builds for Diablo 4 season 2.
+
+Barbarians are big, muscular, and powerful. They excel at using Bleed to kill their enemies over time. And their unique weapon-swapping system means they get to
+have more Legendary powers at their disposal than any other class.
+
+In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Barbarian builds for season 2. If you need even more information on item affixes or
+other more complex ideas, we’ve been sure to link out to the more detailed versions of these builds, as well as where to find their original creators.
+
+Graph facts:
+- The best Warlock subclass, feats, and build in Baldur’s Gate 3 -MENTIONS-> Barbarian
+- How to choose the best class for you in Baldur’s Gate 3 -MENTIONS-> Barbarian
+- Wildheart -PART_OF-> Barbarian
+- Berserker -PART_OF-> Barbarian
+- Wild Magic -PART_OF-> Barbarian
+
+Entities: Barbarian, item affixes, Barbarian builds, Bleed, weapon-swapping system, Legendary powers, season 2, The best Barbarian builds and skills in Diablo
+4, Diablo 4, Polygon
+</item 5>
+
+<item 6>
+The best Sorcerer builds and skills in Diablo 4 (Polygon, 2023-10-18T21:43:17+00:00)
+refer to Northwar’s original guide.
+
+Paragon Boards for Sorcerer Firewall build
+
+The Paragon Board system is very complex, and you’ll want to carefully pair your Glyphs with specific boards for your class:
+
+Starter Board / Reinforced Glyph Burning Instinct / Destruction Glyph Searing Heat / Adept Glyph Static Surge / Control Glyph Enchantment Master / Exploit
+
+You should level your Glyphs to 15 in this specific order:
+
+Destruction Control Adept Exploit Reinforced
+
+You can path your own way through the Paragon Boards following these basic guidelines. However, for the best results, follow Northwar’s path exactly.
+
+How to make a great Sorcerer build
+
+Sorcerers are Diablo 4’s pure caster class, and use elemental magic to differentiate from the spells of the Druid and Necromancer. The Sorcerer has six Key
+Passives, but only three elements, which is what you’ll base your build around:
+
+Lightning
+
+Fire
+
+Ice
+
+Lightning builds utilize Lightning skills to deal with large groups of enemies at once.
+
+Graph facts:
+- The best Sorcerer builds and skills in Diablo 4 -MENTIONS-> Enchantment
+- 10 scorching-hot discoveries made about the sun in 2023 -MENTIONS-> lightning
+- 54 Best Apple Black Friday Deals (2023): iPad, Apple Watch, AirPods -MENTIONS-> lightning
+- The best Apple Cyber Monday deals of 2023: Save on AirPods, iPads, Apple Watches and more -MENTIONS-> lightning
+- The best Sorcerer builds and skills in Diablo 4 -MENTIONS-> Sanctuary
+
+Entities: lightning, ice, fire, The best Sorcerer builds and skills in Diablo 4, Sorcerer Firewall build, Northwar, Paragon Board system, Glyphs, Starter Board,
+Reinforced Glyph, Burning Instinct, Destruction Glyph, Searing Heat, Adept Glyph, Static Surge
+</item 6>
+
+<item 7>
+The best Barbarian builds and skills in Diablo 4 (Polygon, 2023-10-19T17:16:31+00:00)
+dealing X% of its damage to enemies
+
+(Sunken Ruins dungeon in Scosglen) — Hammer of the Ancients quakes outwards, dealing X% of its damage to enemies Aspect of the Expectant (Underroot dungeon in
+Scosglen) — Attacking enemies with a Basic Skill increases the damage of your next Core Skill cast by X% up to X%
+
+(Underroot dungeon in Scosglen) — Attacking enemies with a Basic Skill increases the damage of your next Core Skill cast by X% up to X% Edgemaster’s Aspect
+(Oldstones dungeon in Scosglen) — Skills deal X% increased damage based on Primary Resource when cast, receiving the maximum benefit while you have full Primary
+Resource
+
+Barbarian Season 2 endgame build — Double Swing
+
+This build is based off of AaronActionRPG’s Double Swing Barbarian endgame guide at IcyVeins, and is a general endgame guide capable of finding success in all
+activities.
+
+Graph facts:
+- The best Warlock subclass, feats, and build in Baldur’s Gate 3 -MENTIONS-> Barbarian
+- How to choose the best class for you in Baldur’s Gate 3 -MENTIONS-> Barbarian
+- Wildheart -PART_OF-> Barbarian
+- Berserker -PART_OF-> Barbarian
+- Wild Magic -PART_OF-> Barbarian
+
+Entities: Barbarian, IcyVeins, Hammer of the Ancients, Sunken Ruins dungeon, Scosglen, Aspect of the Expectant, Underroot dungeon, Edgemaster’s Aspect,
+Oldstones dungeon, Barbarian Season 2 endgame build — Double Swing, AaronActionRPG, Double Swing Barbarian endgame guide, The best Barbarian builds and skills
+in Diablo 4, Diablo 4, Polygon
+</item 7>
+
+<item 8>
+The best Sorcerer builds and skills in Diablo 4 (Polygon, 2023-10-18T21:43:17+00:00)
+Sorcerers are the magic-slinging wizards of Sanctuary in Diablo 4. But with each element they can harness bringing its own unique effect, it can be easy to get
+overwhelmed when trying to design a Sorcerer build. That’s where we come in, with our suggestions of the best Sorcerer builds for Diablo 4 season 2.
+
+Sorcerers are capable of harnessing lightning to deal with crowds, ice to keep the hordes at bay, and fire to burn the demons of hell. But they’re also able to
+enchant their own spells with unique effects, intricately combining abilities for devastating results.
+
+In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Sorcerer builds for season 2. If you need even more information on item affixes or other
+more complex ideas, we’ve been sure to link out to the more detailed versions of these builds, as well as where to find their original creators.
+
+Graph facts:
+- 10 scorching-hot discoveries made about the sun in 2023 -MENTIONS-> lightning
+- 54 Best Apple Black Friday Deals (2023): iPad, Apple Watch, AirPods -MENTIONS-> lightning
+- The best Apple Cyber Monday deals of 2023: Save on AirPods, iPads, Apple Watches and more -MENTIONS-> lightning
+- Diablo 4 season 2’s biggest draw is its quality-of-life updates -MENTIONS-> Sanctuary
+- The best Barbarian builds and skills in Diablo 4 -MENTIONS-> item affixes
+
+Entities: Sanctuary, Sorcerer builds, lightning, ice, fire, item affixes, The best Sorcerer builds and skills in Diablo 4, Sorcerer, Diablo 4, Polygon, season 2
+</item 8>
+
+<item 9>
+The best Barbarian builds and skills in Diablo 4 (Polygon, 2023-10-19T17:16:31+00:00)
+The idea here is that you’re constantly swapping between your skills and weapons to give yourself massive damage buffs.
+
+When making a build, you want to have one of these Key Passives in mind and choose your skills accordingly. Thankfully skills that share certain aspects (like
+Bleed) are color-coded on the skill tree, and you can even use the in-game search function to find them all. Other Barbarian builds let you take advantage of
+mechanics like Thorns or Shouts. But they still typically end with one of these Key Passives.
+
+Looking for other Diablo 4 builds? We have explainers on the Sorcerer, Rogue, Druid, and Necromancer classes.
+
+Graph facts:
+- The best Warlock subclass, feats, and build in Baldur’s Gate 3 -MENTIONS-> Barbarian
+- How to choose the best class for you in Baldur’s Gate 3 -MENTIONS-> Barbarian
+- Wildheart -PART_OF-> Barbarian
+- Berserker -PART_OF-> Barbarian
+- Wild Magic -PART_OF-> Barbarian
+
+Entities: Barbarian, Bleed, The best Barbarian builds and skills in Diablo 4, Key Passives, Thorns, Shouts, Sorcerer, Rogue, Druid, Necromancer, Diablo 4,
+Polygon
+</item 9>
+
+<item 10>
+The best Sorcerer builds and skills in Diablo 4 (Polygon, 2023-10-18T21:43:17+00:00)
+Recharging Aspect (Zenith in Fractured Peaks) — Each time Chain Lightning bounces off you, gain X Mana
+
+(Zenith in Fractured Peaks) — Each time Chain Lightning bounces off you, gain X Mana Aspect of Control (Sunken Library in Kehjistan) — You deal X% more damage
+to Immobilized, Stunned, or Frozen enemies
+
+(Sunken Library in Kehjistan) — You deal X% more damage to Immobilized, Stunned, or Frozen enemies Edgemaster’s Aspect (Oldstones dungeon in Scosglen) — Skills
+deal X% increased damage based on Primary Resource when cast, receiving the maximum benefit while you have full Primary Resource
+
+Sorcerer Season 2 endgame build — Firewall
+
+This build is based off of Northwar’s Sorcerer endgame guide at MaxRoll.gg, and is a general endgame guide capable of finding success in all activities.
+</item 10>
+=== END ITEM id=f590ac0a418c9d72 ===

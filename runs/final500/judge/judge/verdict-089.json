@@ -1,0 +1,57 @@
+[
+{"id": "fcb7f3f6c3d398a0", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "95d34b6d8e57ec32", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Erik ten Hag is a top coach from Ajax"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "they need a top blueprint not only for now but for the next five years"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "they need a top blueprint not only for now but for the next five years, and work towards that"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "sometimes on that journey there are hard moments when you don't get the right results"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "even though you're doing the right things"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "943be117c9a6a496", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family."}]}
+]},
+{"id": "e53e22bf918ea9ac", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "Bankman-Fried is charged with seven counts: two counts of wire fraud and five conspiracy charges."}, {"item": 10, "quote": "has pleaded not-guilty to some seven charges of fraud and conspiracy"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "while the defense countered that the FTX founder acted in good faith"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 8, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]}
+]},
+{"id": "88bdd74635290948", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 1, "quote": "The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 1, "quote": "The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]}
+]},
+{"id": "203a6a8901715f68", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "As an added bonus, Harris is also the preferred goal-line back, scoring in three of those games."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "As an added bonus, Harris is also the preferred goal-line back, scoring in three of those games."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 1, "quote": "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 1, "quote": "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."}]}
+]}
+]

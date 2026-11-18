@@ -1,0 +1,749 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=3311063701b09a0d ===
+Gold sentences and facts:
+Sentence 0: The season is scheduled to be released on March 8 , 2018 .
+  Fact 0.0: The season is scheduled to be released on March 8, 2018.
+
+Retrieved items:
+<item 1>
+Jessica Jones (season 2)
+Retrieved August 14 , 2017 . Jump up ^ Schwartz , Terri ( January 7 , 2015 ) . `` Netflix announces ' Daredevil , ' ' Bloodline , ' ' Kimmy Schmidt ' premiere
+dates '' . Zap2It . Archived from the original on January 10 , 2015 . Retrieved January 10 , 2015 . Jump up ^ Goldman , Eric ( July 28 , 2015 ) . `` Netflix On
+Marvel Series Release Plan And If Punisher Could Get A Spinoff '' . IGN . Archived from the original on July 28 , 2015 . Retrieved July 28 , 2015 . Jump up ^
+Weintraub , Steve ( October 12 , 2015 ) . `` Krysten Ritter & Showrunner Melissa Rosenberg Talk ' Jessica Jones ' at NYCC '' . Collider . Archived from the
+original on October 14 , 2015 . Retrieved October 15 , 2015 . Jump up ^ Ryan , Maureen ( November 20 , 2015 ) .
+</item 1>
+
+<item 2>
+Jessica Jones (season 2)
+`` ' Jessica Jones ' : Raelle Tucker Joins Netflix Series As Executive Producer '' . Deadline.com . Archived from the original on April 1 , 2016 . Retrieved
+March 31 , 2016 . ^ Jump up to : Dibdin , Emma ( September 20 , 2016 ) . `` What To Expect From the Second Season of Jessica Jones '' . Esquire . Archived from
+the original on September 20 , 2016 . Retrieved September 20 , 2016 . ^ Jump up to : Ryan , Maureen ( October 22 , 2016 ) . `` ' Jessica Jones ' Hires All Women
+Directors for Season 2 , Showrunner Says '' . Variety . Archived from the original on October 23 , 2016 . Retrieved October 23 , 2016 . ^ Jump up to : Schwartz
+, Terri ( August 9 , 2016 ) . `` Jessica Jones Showrunner Melissa Rosenberg Previews The Defenders Aftermath And Season 2 Plans '' . IGN . Archived from the
+original on August 10 , 2016 .
+</item 2>
+
+<item 3>
+Jessica Jones (season 2)
+`` JESSICA JONES Renewed For Second Season '' . Newsarama . Archived from the original on January 18 , 2016 . Retrieved January 18 , 2016 . ^ Jump up to : Beard
+, Jim ( February 3 , 2016 ) . `` Rachael Taylor Deals with Trish Walker 's Inner Demons in ' Marvel 's Jessica Jones ' '' . Marvel.com . Archived from the
+original on February 5 , 2016 . Retrieved February 5 , 2016 . ^ Jump up to : Beard , Jim ( February 5 , 2016 ) . `` Carrie - Anne Moss Pays for Hogarth 's Sins
+in ' Marvel 's Jessica Jones ' '' . Marvel.com . Archived from the original on February 6 , 2016 . Retrieved February 6 , 2016 . ^ Jump up to : Perry , Spencer
+( August 17 , 2017 ) . `` Jessica Jones Season 2 Set Photos Tease How Kilgrave Returns '' . ComingSoon.net .
+</item 3>
+
+<item 4>
+Jessica Jones (season 2)
+Retrieved September 7 , 2016 . External links ( edit ) Marvel 's Jessica Jones on IMDb Marvel 's Jessica Jones at TV.com Jessica Jones Brian Michael Bendis
+Michael Gaydos Supporting characters Luke Cage Carol Danvers Jessica Drew Ben Urich Enemies Man Mountain Marko Purple Man Publications Alias The Pulse Jessica
+Jones In other media Jessica Jones season 1 characters Related articles Daily Bugle New Avengers Marvel Cinematic Universe Feature films Phase One Iron Man The
+Incredible Hulk Iron Man 2 Thor Captain America : The First Avenger The Avengers accolades Phase Two Iron Man 3 Thor : The Dark World Captain America : The
+Winter Soldier Guardians of the Galaxy Avengers : Age of Ultron Ant - Man Phase Three Captain America : Civil War Doctor Strange Guardians of the Galaxy Vol. 2
+Spider - Man : Homecoming Thor : Ragnarok Black Panther Avengers : Infinity War production Ant - Man and the Wasp Untitled Avengers film production Television
+series ABC Agents of S.H.I.E.L.D.
+</item 4>
+
+<item 5>
+Jessica Jones (season 2)
+On January 17 , 2016 , Netflix ordered a second season of 13 episodes . Raelle Tucker joined the season as an executive producer and writer , replacing Liz
+Friedman from the first season , who departed the series to work on the pilot for the ABC series , Conviction . Writing ( edit ) Rosenberg and the season 's
+writers were halfway through the writing process by August 2016 , with the scripts completed by the end of October 2016 . With The Defenders releasing before
+the season , Rosenberg used the miniseries as an opportunity to help `` set up '' elements for the season , working with The Defenders executive producers and
+writers Doug Petrie and Marco Ramirez to do so . Rosenberg wanted to `` continue with ( the Jessica Jones ) character '' in the season , saying , `` She 's a
+very damaged character , her damage goes beyond ( David Tennant 's ) Kilgrave . There 's a lot to mine from in her backstory and in her present day situation ''
+.
+</item 5>
+
+<item 6>
+Jessica Jones (season 2)
+Deadline.com . Archived from the original on November 19 , 2015 . Retrieved November 18 , 2015 . ^ Jump up to : Ritter , Stephanie ( May 12 , 2016 ) . Jessica
+Jones Season Two Details Revealed ! ( Exclusive ! ) . Nerdist Industries . Retrieved May 14 , 2016 . Jump up ^ Schwartz , Terri ( January 17 , 2016 ) . `` How
+Jessica Jones ' Final Triumph Is n't An Easy Resolution '' . IGN . Archived from the original on January 19 , 2016 . Retrieved January 19 , 2016 . Jump up ^
+Goldman , Eric ( January 17 , 2016 ) . `` Jessica Jones : Rachael Taylor on Trish 's Potential Hellcat Future in Season 2 '' . IGN . Archived from the original
+on January 18 , 2016 . Retrieved January 18 , 2016 . Jump up ^ Radish , Christina ( January 28 , 2016 ) .
+</item 6>
+
+<item 7>
+Jessica Jones (season 2)
+Jessica Jones ( season 2 ) - wikipedia Jessica Jones ( season 2 ) Jump to : navigation , search Jessica Jones ( season 2 ) Promotional poster Starring Krysten
+Ritter Rachael Taylor Carrie - Anne Moss Eka Darville Leah Gibson J.R. Ramirez Country of origin United States Release Original network Netflix Season
+chronology ← Previous Season 1 List of Jessica Jones episodes The second season of the American web television series Jessica Jones , which is based on the
+Marvel Comics character of the same name , follows Jones as she takes on a new case after the events surrounding her encounter with Kilgrave . It is set in the
+Marvel Cinematic Universe ( MCU ) , sharing continuity with the films and other television series of the franchise . The season will be produced by Marvel
+Television in association with ABC Studios and Tall Girls Productions , with Melissa Rosenberg serving as showrunner . Krysten Ritter stars as Jones , with
+Rachael Taylor , Carrie - Anne Moss , and Eka Darville also returning from the first season . They are joined by Leah Gibson and J.R. Ramirez .
+</item 7>
+
+<item 8>
+Jessica Jones (season 2)
+`` Netflix hit ' Jessica Jones ' films at Long Island Aquarium '' . Northforker . Archived from the original on June 12 , 2017 . Retrieved June 12 , 2017 . Jump
+up ^ Ridgely , Charlie ( September 15 , 2017 ) . `` Filming Wraps on ' Jessica Jones ' Season 2 '' . Comicbook.com . Archived from the original on September 15
+, 2017 . Retrieved September 15 , 2017 . ^ Jump up to : Ramos , Dino - Ray ( December 9 , 2017 ) . `` ' Marvel 's Jessica Jones ' : Season 2 Premiere Date Set
+For Netflix Superhero Series '' . Deadline.com . Archived from the original on December 10 , 2017 . Retrieved December 10 , 2017 . Jump up ^ `` Marvel 's
+Jessica Jones '' . Netflix . Archived from the original on September 7 , 2016 . Retrieved September 7 , 2016 .
+</item 8>
+
+<item 9>
+Jessica Jones (season 2)
+Jump up ^ Ryan , Maureen ( November 20 , 2015 ) . `` ' Jessica Jones ' Showrunner Melissa Rosenberg Talks About Her Tough Heroine '' . Variety . Archived from
+the original on November 21 , 2015 . Retrieved November 21 , 2015 . Jump up ^ Fitzpatrick , Kevin ( July 27 , 2016 ) . `` New ' Jessica Jones , ' ' Daredevil '
+and ' Punisher ' No Earlier Than 2018 ? '' . ScreenCrush . Archived from the original on July 29 , 2016 . Retrieved July 28 , 2016 . Jump up ^ Friedlander ,
+Whitney ( January 17 , 2016 ) . `` ' Jessica Jones ' Renewed for Season 2 on Netflix '' . Variety . Archived from the original on January 17 , 2016 . Retrieved
+January 18 , 2016 . Jump up ^ Andreeva , Nellie ( March 31 , 2016 ) . `` ' Jessica Jones ' : Raelle Tucker Joins Netflix Series As Executive Producer '' .
+</item 9>
+
+<item 10>
+Jessica Jones (season 2)
+This was a goal that `` Marvel was completely on board with '' , and given the demand of many talented female directors at the time , the series ' producers
+looked to book only female directors first , and approach male directors later in the pre-production phase if needed . Another member of the production
+suggested that the series book only female directors for the season , which Rosenberg `` had n't contemplated ( as a ) concept prior to that conversation '' .
+She quickly made that the goal of the production , and in October 2016 , Rosenberg confirmed that all 13 episodes of the season would be directed by women .
+Release ( edit ) The second season of Jessica Jones is scheduled to be released on March 8 , 2018 , on the streaming service Netflix worldwide , in Ultra HD 4K
+and high dynamic range . Marketing ( edit ) In December 2017 , a teaser trailer for the season was released , along with announcing the season release date .
+References ( edit ) ^ Jump up to : Arrant , Chris ( January 17 , 2016 ) . `` JESSICA JONES Renewed For Second Season '' . Newsarama .
+</item 10>
+=== END ITEM id=3311063701b09a0d ===
+
+=== ITEM id=2111364baf2dd9b9 ===
+Gold sentences and facts:
+Sentence 0: Sinéad ( / ʃɪˈneɪd / shi - NADE ; Irish pronunciation : ( ˈʃɪnjeːd̪ɣ ) or ( ʃɪˈnjeːd̪ɣ ) ) , is an Irish feminine name . It is derived from the French Jeanette , which is cognate to the English Janet , itself a feminine form of the Hebrew Yohannan , `` God forgave / God gratified '' . In English , Sinéad is also commonly spelled Sinead . The name is generally translated into English as either Jane or Jennifer , or as the female version of the Scottish name Jean .
+  Fact 0.0: Sinéad is an Irish feminine name.
+  Fact 0.1: Sinéad is pronounced /ʃɪˈneɪd/, shi-NADE, in English.
+  Fact 0.2: Sinéad has an Irish pronunciation of /ˈʃɪnjeːd̪ɣ/ or /ʃɪˈnjeːd̪ɣ/.
+  Fact 0.3: Sinéad is derived from the French name Jeanette.
+  Fact 0.4: Jeanette is cognate to the English name Janet.
+  Fact 0.5: Janet is itself a feminine form of the Hebrew name Yohannan.
+  Fact 0.6: Yohannan means 'God forgave' or 'God gratified'.
+  Fact 0.7: Sinéad is also commonly spelled Sinead in English.
+  Fact 0.8: The name Sinéad is generally translated into English as Jane or Jennifer.
+  Fact 0.9: The name Sinéad is generally translated into English as the female version of the Scottish name Jean.
+
+Retrieved items:
+<item 1>
+Sing (2016 American film)
+The animation was created entirely in France by Illumination MacGuff . Soundtrack ( edit ) Main article : Sing : Original Motion Picture Soundtrack A soundtrack
+album for the film was released on December 21 , 2016 . Release ( edit ) The almost complete film was screened as a work in progress beginning September 11 ,
+2016 at the Toronto International Film Festival . Universal Studios released the film on December 21 , 2016 . Home Media ( edit ) Sing was released on Blu - ray
+, Blu - ray 3D , Ultra HD Blu - ray and DVD on March 21 , 2017 . It includes three short films : Gunter Babysits , Love at First Sight , and Eddie 's Life Coach
+. In Gunter Babysits , Gunter offers to watch over Rosita and Norman 's piglets while they are away as he works to prove himself to be a good babysitter . In
+Love at First Sight , Johnny sets Miss Crawly up with an online dating website where she manages to score a date with a lizard named Herman .
+</item 1>
+
+<item 2>
+Sinéad
+a character on the TV series Hollyoaks , played by Stephanie Davis Sinead Starling is a fictional character from The 39 Clues . Sinéad Ní Shúilleabháin , a
+fictional character in The Wind That Shakes the Barley See also ( edit ) Siobhán , feminine Irish - language name ultimately derived from the same Hebrew name
+References ( edit ) ( hide ) Gaelic given names Native masculine names Aodh Aodhán Aonghus Art Breandán Breasal Brian Cailean Cainnech Caoimhín Cathal Cearbhall
+Cian Cianán Ciarán Cinnéididh Colm Conall Conán Conchobhar Cormac Criofan Dáire Déaglán Diarmaid Domhnall Donn Donnchadh Eachann Éibhear Eochaidh Eóghan
+Fearghal Fearghus Féilim Fiach Fínghin Fionn Fionnbharr Fionnlagh Fionntán Flann Garaidh Iarlaith Lorcan Lughaidh Muircheartach Muiredach Muirgheas Murchadh
+</item 2>
+
+<item 3>
+Sinéad
+Stíofán Téodóir Uinseann See also Goidelic languages Irish language Scottish Gaelic language Manx language Irish name List of Scottish Gaelic given names
+Scottish Gaelic name Irish genealogy This page or section lists people that share the same given name . If an internal link led you here , you may wish to
+change that link to point directly to the intended article . Retrieved from `` https://en.wikipedia.org/w/index.php?title= Sinéad&oldid = 792745813 ''
+Categories : Given names Irish feminine given names Irish - language feminine given names Hidden categories : All set index articles Talk Contents About
+Wikipedia Čeština Deutsch Español Français Italiano 日本 語 Edit links This page was last edited on 28 July 2017 , at 11 : 52 . Text is available under the
+Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use and Privacy Policy .
+Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 3>
+
+<item 4>
+Sing (2016 American film)
+Accolades ( edit ) List of awards and nominations Award Date of ceremony Recipient ( s ) Result Ref ( s ) AARP Annual Movies for Grownups Awards February 6 ,
+2017 Best Movie for Grownups who Refuse to Grow Up Sing Nominated Annie Awards February 4 , 2017 Outstanding Achievement , Music in an Animated Feature
+Production Joby Talbot Golden Globe Awards January 8 , 2017 Best Animated Feature Film Sing Best Original Song `` Faith '' -- Ryan Tedder , Stevie Wonder and
+Francis Farewell Starlite Hollywood Music in Media Awards November 17 , 2016 Best Song -- Animated Film Best Soundtrack Album Sing : Original Motion Picture
+Soundtrack Outstanding Music Supervision -- Film Jojo Villanueva Won Nickelodeon Kids ' Choice Awards March 11 , 2017 Favorite Animated Movie Sing Nominated
+Favorite Voice From an Animated Movie Reese Witherspoon Most Wanted Pet Favorite Soundtrack Sing Saturn Awards June 28 , 2017 Best Animated Film Nominated
+Sequel ( edit ) Universal and Illumination have announced plans for a sequel , tentatively titled Sing 2 , slated for December 25 , 2020 .
+</item 4>
+
+<item 5>
+Sinéad
+cyclist Sinead Russell , Olympic Swimmer Music `` Sinéad '' , a song by Within Temptation from their album The Unforgiving , and the name of a character in the
+album 's tie - in comic book Sinead Harnett , singer / songwriter Sinéad Lohan , singer / songwriter Sinéad Madden , singer / songwriter Sinéad Mulvey , singer
+, air hostess Sinéad O'Carroll , singer with Irish pop band B * Witched Sinéad O'Connor , singer / songwriter Sinéad Quinn , recording artist , reality show
+contestant Film and television Sinéad Cusack , actress Sinead Desmond , TV presenter Sinead Keenan , actress Sinead Matthews , actress Sinéad Moynihan , model
+and actress Sinéad Noonan , model and actress Other Sinéad de Valera , children 's book author Sinéad Morrissey , poet Sinéad Ní Loideáin , presenter Sinéad Ní
+Neachtain , magazine editor Sinéad Sheppard , dancer Fiction ( edit ) Sinead O'Connor ( Hollyoaks ) , a character on the TV series Hollyoaks ,
+</item 5>
+
+<item 6>
+Sinéad
+Liam Maghnus Raghnall Risteárd Roibeárd Séarlas Somhairle Tiobóid Tormond Ualtar Ùisdean Bible - derived masculine names Abracham Adhamh Árón Biniáimin Daibhí
+Dainéal Eafráim Gaibrial Íosac Maitiú Maois Mícheál ( Maidhc ) Nóe Seán Séamus Seosamh Síomón Solamh Tomás Bible - derived feminine names Abigeál Ánna Eábha
+Eilís Léá Madailéin Máire Mallaidh Náoimí Ráichéal Ríobhca Rút Sinéad Siobhán Seacailín Seosaimhín Latin / Greek - derived masculine names Aindréas Antóin
+Críostóir Damhnaic Pádraig Proinsias Giolla Críost Gréagóir Labhrás León Máirtín Nioclás Nollaig Peadar Pilib Pól Seoirse Stíofán Téodóir Uinseann See also
+Goidelic languages
+</item 6>
+
+<item 7>
+I before E except after C
+Less strict interpretations admit as exceptions those words where eir , not preceded by c , represents the vowel of NEAR ( / ɪər / ) . Some categories of
+exception : Many proper names , often because they are adopted from other languages . Fowler says the rule `` is useless with proper names '' ; Carney says ``
+As one might expect of any rule , there are likely to be even more exceptions in names , many of which are Scottish '' : forenames and surnames Keith , Neil ,
+Sheila , Stein , etc . placenames Leith , Keighley , Rheims , Raleigh , etc . Eid in the names of Muslim holidays ( Eid ul - Fitr , Eid al - Adha , etc . )
+others like Cassiopeia Chemical names ending in - ein or - eine ( caffeine , casein , codeine , phthalein , protein , etc . ) . Here - ein ( e ) was originally
+pronounced as two syllables / iː. ɪn / Scottish English words ( deil , deid , weill , etc . )
+</item 7>
+
+<item 8>
+Sinéad
+Lughaidh Muircheartach Muiredach Muirgheas Murchadh Niall Oisín Rían Rónán Ruairí Searbhreathach Tadhg Toirdelbach Native feminine names Aíbinn Aifric Áine
+Aisling Aoife Barrdhubh Bébinn Bríd Cacht Caoimhe Ciara Clíona Clodagh Cobhlaith Dearbhail Dearbhfhorghaill Deirbhile Deirdre Dubhchobhlaigh Eithne Éadaoin
+Feidhelm Fíona Fionnuala Forbflaith Fíneamhain Gormflaith Gráinne Íde Lasairfhíona Meabh Mór Muirgheal Muirenn Niamh Nuala Órlaith Sadhbh Saoirse Síthmaith
+Sláine Sorcha Úna Germanic - derived masculine names Amhlaoibh Annraoi Dubhghall Éamonn Gearóid Gofraid Ímar Lachlann Liam Maghnus Raghnall Risteárd Roibeárd
+Séarlas
+</item 8>
+
+<item 9>
+Sing (2016 American film)
+Shy teenage elephant Meena fails her audition out of stage fright , while Ash 's boyfriend Lance is dismissed from the contest . Rosita is paired with another
+contestant , an exuberant pig named Gunter , for a dance routine . Although Buster discovers the flyers show a prize of $100,000 ( money he does not have ) , he
+remains optimistic . Buster convinces Eddie to arrange a visit with Eddie 's grandmother , former opera singer and theater actress Nana Noodleman , to persuade
+her to sponsor the prize money . She is hesitant to contribute but agrees to see a private screening of the show . Encouraged by her grandfather , Meena tries
+to ask Buster for another chance , but becomes his stage hand instead . When one of the acts quits , and another is injured , Meena is added as an act . The
+performers ' individual problems begin to hinder rehearsals : Rosita flounders in her dance routine with Gunter , after having been distracted by her parenting
+duties that have fallen into disarray .
+</item 9>
+
+<item 10>
+Sinéad
+Sinéad - wikipedia Sinéad Jump to : navigation , search Sinéad ( / ʃɪˈneɪd / shi - NADE ; Irish pronunciation : ( ˈʃɪnjeːd̪ɣ ) or ( ʃɪˈnjeːd̪ɣ ) ) , is an Irish
+feminine name . It is derived from the French Jeanette , which is cognate to the English Janet , itself a feminine form of the Hebrew Yohannan , `` God forgave
+/ God gratified '' . In English , Sinéad is also commonly spelled Sinead . The name is generally translated into English as either Jane or Jennifer , or as the
+female version of the Scottish name Jean . Sinéad may refer to : Contents ( hide ) 1 People 2 Fiction 3 See also 4 References People ( edit ) Sports Sinéad
+Cahalan , camogie player Sinead Jennings , rower Sinead Kerr , ice dancer Sinéad Millea , former camogie player Sinead Miller , cyclist Sinead Russell , Olympic
+Swimmer Music `` Sinéad '' ,
+</item 10>
+=== END ITEM id=2111364baf2dd9b9 ===
+
+=== ITEM id=6ec593ba115d726c ===
+Gold sentences and facts:
+Sentence 0: A. planci has a very wide Indo - Pacific distribution . It is perhaps most common in Australia , but can occur at tropical and subtropical latitudes from the Red Sea and the east African coast across the Indian Ocean , and across the Pacific Ocean to the west coast of Central America . It occurs where coral reefs or hard coral communities occur in this region .
+  Fact 0.0: A. planci has a very wide Indo-Pacific distribution.
+  Fact 0.1: A. planci is perhaps most common in Australia.
+  Fact 0.2: A. planci can occur at tropical and subtropical latitudes from the Red Sea.
+  Fact 0.3: A. planci can occur at tropical and subtropical latitudes from the east African coast.
+  Fact 0.4: A. planci can occur across the Indian Ocean.
+  Fact 0.5: A. planci can occur across the Pacific Ocean to the west coast of Central America.
+  Fact 0.6: A. planci occurs where coral reefs or hard coral communities occur in this region.
+
+Retrieved items:
+<item 1>
+Crown-of-thorns starfish
+The spines , which are brittle , may also break off and become embedded in the tissue where they must be removed surgically . Saponins seem to occur throughout
+the lifecycle of the crown - of - thorns starfish . The saponins in the eggs are similar to those in the adult tissues , and presumably these carry over to the
+larvae . The mouthing behaviour of predators of juvenile starfish with rejection suggests the juveniles contain saponins . Behaviour ( edit ) Juveniles
+concealed under coral rubble Feeding scars of white coral skeleton Feeding on branching Acropora coral Starfish ' competing ' for remaining live coral The adult
+crown - of - thorns is a carnivorous predator that usually preys on reef coral polyps . It climbs onto a section of living coral colony using the large number
+of tube feet on its oral surface and flexible body . It fits closely to the surface of the coral , even the complex surfaces of branching corals . It then
+extrudes its stomach out through its mouth over the surface to virtually its own diameter . The stomach surface secretes digestive enzymes that allow the
+starfish to absorb nutrients from the liquefied coral tissue .
+</item 1>
+
+<item 2>
+Crown-of-thorns starfish
+In the classic pattern for echinoderms , the bilaterally symmetrical larva is replaced by a pentamerously symmetrical stage at metamorphosis , with the latter
+'s body axis bearing no relationship to that of the larva . Thus the newly metamorphosed starfish are five - armed and are 0.4 -- 1 mm diameter . ( Note the
+size of the tube feet relative to the size of the animal . ) They feed on the thin coating layers of hard encrusting algae ( coralline algae ) on the undersides
+of dead coral rubble and other concealed surfaces . They extend their stomach over the surface of the encrusting algae and digest the tissue , as in the feeding
+by larger crown - of - thorns starfish on hard corals . The living tissue of the encrusting algae is approximately pink to dark red and feeding by these early
+juveniles results in white scars on the surface of the algae ( photograph ) . During the next months , the juveniles grow and add arms and associated
+madreporites in the pattern described by Yamaguchi until the adult numbers is attained 5 -- 7 months after metamorphosis .
+</item 2>
+
+<item 3>
+Crown-of-thorns starfish
+However , historic records of distribution patterns and numbers are hard to come by , as SCUBA technology , necessary to conduct population censuses , had only
+been developed in the previous few decades . To prevent overpopulation of crown - of - thorns causing widespread destruction to coral reef habitats , humans
+have implemented a variety of control measures . Manual removals have been successful , but are relatively labour - intensive . Injecting sodium bisulphate into
+the starfish is the most efficient measure in practice . Sodium bisulphate is deadly to crown - of - thorns , but it does not harm the surrounding reef and
+oceanic ecosystems . To control areas of high infestations , teams of divers have had kill rates of up to 120 per hour per diver . The practice of dismembering
+them was shown to have a kill rate of 12 per hour per diver and the diver performing this test was spiked three times . Therefore , it is for this reason and
+not rumours that they might be able to regenerate that dismembering is not recommended . An even more labour - intensive route , but less risky to the diver ,
+is to bury them under rocks or debris .
+</item 3>
+
+<item 4>
+Crown-of-thorns starfish
+This article 's use of external links may not follow Wikipedia 's policies or guidelines . Please improve this article by removing excessive or inappropriate
+external links , and converting useful links where appropriate into footnote references . ( March 2016 ) ( Learn how and when to remove this template message )
+An overview of the crown - of - thorns starfish as observed on the Great Barrier Reef Current status of crown - of - thorns starfish on Australia 's Great
+Barrier Reef History of outbreaks of crown - of - thorns starfish on Australia 's Great Barrier Reef since 1986 ( Animation ) Recent information on crown - of -
+thorns starfish on Australia 's Great Barrier Reef Controlling crown - of - thorns starfish Crown - of - thorn outbreak simulation Microdocs : Crown - of -
+thorns Acanthaster planci expedition 1969 to Eastern Caroline Islands An infographic relating to the crown - of - thorns starfish in the Great Barrier Reef
+Crown of Thorns starfish 1971 Fathom magazine ( Australia ) Taxon identifiers Wd : Q26634 ADW : Acanthaster_planci ARKive : acanthaster - planci BioLib :
+</item 4>
+
+<item 5>
+Crown-of-thorns starfish
+It occurs where coral reefs or hard coral communities occur in this region . Contents ( hide ) 1 Description 2 Taxonomy 2.1 Family 2.2 Genus and species 2.3
+Genetic studies 3 Biology 3.1 Toxins 3.2 Behaviour 3.3 Predators 4 Life - cycle 4.1 Gametes and embryos 4.2 Larval stages 4.3 Metamorphosis , development and
+growth 4.4 Field observations of life - cycle 5 Ecology 5.1 Ecological impact on reefs 5.2 Population outbreaks 5.3 Causes of population outbreaks 6 Population
+control 7 References 8 External links Description ( edit ) Unusual brightly coloured crown - of - thorns starfish , Thailand The body form of the crown - of -
+thorns starfish is fundamentally the same as that of a typical starfish , with a central disk and radiating arms . Its special traits , however , include being
+disc - shaped , multiple - armed , flexible , prehensile , and heavily spined , and having a large ratio of stomach surface to body mass .
+</item 5>
+
+<item 6>
+Crown-of-thorns starfish
+The spines are stiff and very sharp , and readily pierce through soft surfaces . Despite the battery of sharp spines on the aboral surface and blunt spines on
+the oral surface , the crown - of - thorns starfish 's general body surface is membranous and soft . When the starfish is removed from the water , the body
+surface ruptures and the body fluid leaks out , so the body collapses and flattens . The spines bend over and flatten , as well . They recover their shape when
+reimmersed , if they are still alive . Taxonomy ( edit ) Family ( edit ) The family Acanthasteridae is monogeneric ; its position within the Asteroides is
+unsettled . It is generally recognised as a distinctly isolated taxon . Recently , Blake concluded from comparative morphology studies of Acanthaster planci
+that it has strong similarities with various members of the Oreasteridae . He transferred Acanthasteridae from the Spinulosida to the Valvatida and assigned it
+a position near to the Oreasteridae , from which it appears to be derived .
+</item 6>
+
+<item 7>
+Crown-of-thorns starfish
+The starfish show preferences between the hard corals on which they feed . They tend to feed on branching corals and table - like corals , such as Acropora
+species , rather than on more rounded corals with less exposed surface area , such as Porites species . Avoidance of Porites and some other corals may also be
+due to resident bivalve molluscs and polychaete worms in the surface of the coral which discourage the starfish . Similarly , some symbionts , such as small
+crabs , living within the complex structures of branching corals , may ward off the starfish as it seeks to spread its stomach over the coral surface . In reef
+areas of low densities of hard coral , reflecting the nature of the reef community or due to feeding by high density crown - of - thorns , the starfish may be
+found feeding on soft corals ( Alcyonacea ) . The starfish are cryptic in behavior during their first two years , emerging at night to feed . They usually
+remain so as adults when solitary . The only evidence of a hidden individual may be white feeding scars on adjacent coral .
+</item 7>
+
+<item 8>
+Crown-of-thorns starfish
+The juveniles were found in a variety of habitats where they were highly concealed : under coral blocks and rubble in the boulder zone of the exposed reef front
+; on dead bases of Acropora species in more sheltered areas ; in narrow spaces within the reef crest ; and on the fore - reef slope to depths of 8 m . Growth
+rates on Suva Reef were found to be 2.6 , 16.7 and 5.3 mm / month increase in diameter in the pre-coral feeding , early coral feeding and adult phases ,
+respectively . This is in accord with the sigmoidal pattern of size versus age observed in laboratory studies , i.e. slow initial growth , a phase of very rapid
+growth beginning at coral feeding and tapering off of growth after the starfish reaches sexual maturity . In reefs in the Philippines , female and male
+specimens matured at 13 and 16 cm respectively . Stump identified bands in the upper surface spines of A. planci and attributed these to annual growth bands .
+</item 8>
+
+<item 9>
+Crown-of-thorns starfish
+Its prehensile ability arises from the two rows of numerous tube feet that extend to the tip of each arm . In being multiple - armed , it has lost the five-fold
+symmetry ( pentamerism ) typical of starfish , although it begins its life cycle with this symmetry . Adult crown - of - thorns starfish normally range in size
+from 25 to 35 cm ( 9.8 to 13.8 in ) . They have up to 21 arms . Although the body of the crown of thorns has a stiff appearance , it is able to bend and twist
+to fit around the contours of the corals on which it feeds . The underside of each arm has a series of closely fitting plates which form a groove and extend in
+rows to the mouth . They are usually of subdued colours , pale brown to grey - green , but they may be garish with bright warning colours in some parts of their
+wide range . The long , sharp spines on the sides of the starfish 's arms and upper ( aboral ) surface resemble thorns and create a crown - like shape , giving
+the creature its name .
+</item 9>
+
+<item 10>
+Crown-of-thorns starfish
+Crown - of - thorns starfish - wikipedia Crown - of - thorns starfish Jump to : navigation , search Crown - of - thorns starfish Scientific classification
+Kingdom : Animalia Phylum : Echinodermata Class : Asteroidea Order : Valvatida Family : Acanthasteridae Genus : Acanthaster Species : Acanthaster planci
+Binomial name Acanthaster planci ( Linnaeus , 1758 ) The crown - of - thorns starfish , Acanthaster planci , is a large , multiple - armed starfish that usually
+preys upon hard , or stony , coral polyps ( Scleractinia ) . The crown - of - thorns starfish receives its name from venomous thorn - like spines that cover its
+upper surface , resembling the biblical crown of thorns . It is one of the largest starfish in the world . A. planci has a very wide Indo - Pacific distribution
+.
+</item 10>
+=== END ITEM id=6ec593ba115d726c ===
+
+=== ITEM id=b6590b4e54a297bd ===
+Gold sentences and facts:
+Sentence 0: Although Surface Pro 4 is backward compatible with Type Cover accessory of Surface Pro 3 , an attachable keyboard which doubles as a screen protector , the Surface Pro 4 Type Cover has been announced with and without a fingerprint ID sensor . The new Type Cover is thinner and lighter than its predecessor , has improved magnetic stability for lap use , a mechanical keyboard with improved key spacing , as well as a larger touchpad .
+  Fact 0.0: Surface Pro 4 is backward compatible with the Type Cover accessory of Surface Pro 3.
+  Fact 0.1: The Type Cover is an attachable keyboard that doubles as a screen protector.
+  Fact 0.2: The Surface Pro 4 Type Cover has been announced with a fingerprint ID sensor.
+  Fact 0.3: The Surface Pro 4 Type Cover has been announced without a fingerprint ID sensor.
+  Fact 0.4: The new Type Cover is thinner than its predecessor.
+  Fact 0.5: The new Type Cover is lighter than its predecessor.
+  Fact 0.6: The new Type Cover has improved magnetic stability for lap use.
+  Fact 0.7: The new Type Cover has a mechanical keyboard with improved key spacing.
+  Fact 0.8: The new Type Cover has a larger touchpad.
+
+Retrieved items:
+<item 1>
+Surface Pro 4
+designed , developed , marketed , and produced by Microsoft . The Surface Pro 4 was announced on October 6 , 2015 alongside the Surface Book . In the U.S. and
+Canada , the Surface Pro 4 was released on October 26 , 2015 . The Surface Pro 4 is an update over its predecessor , featuring Skylake CPUs , more RAM and SSD
+options and a 12.3 - inch display with a greater resolution . At the same time , the device is compatible with most of its predecessor 's accessories . Contents
+( hide ) 1 History 2 Features 2.1 Hardware 2.2 Software 2.3 Accessories 3 Issues 4 Reception 5 Timeline 6 References History ( edit ) The Surface Pro 4 was
+announced on October 6 , 2015 alongside the Surface Book . Both devices were available for pre-order the following day and available for customers beginning on
+October 26 , 2015 . The device initially exhibited failure to sleep properly , which drained the battery very quickly . Microsoft subsequently developed a fix
+that was made available on February 17 , 2016 .
+</item 1>
+
+<item 2>
+Surface Pro 4
+( hide ) Surface Pro 4 Configuration Options Price Tier ( USD ) CPU Integrated GPU RAM Internal Storage 899 Intel Core m3 - 6Y30 ( 0.9 to 2.2 GHz ) HD 515 4 GB
+128 GB 999 Intel Core i5 - 6300U ( 2.4 to 3.0 GHz ) HD 520 1299 8 GB 256 GB 1499 16 GB 1699 8 GB 512 GB 1899 16 GB 1599 Intel Core i7 - 6650U ( 2.2 to 3.4 GHz )
+Iris 540 8 GB 256 GB 1799 16 GB 2199 512 GB 2699 1 TB Software ( edit ) All Surface Pro 4 models come with a 64 - bit version of Windows 10 Pro and a Microsoft
+Office 30 - day trial . Windows 10 comes pre-installed with Mail , Calendar , People , Xbox ( app ) , Photos , Movies and TV , Groove , and Microsoft Edge .
+With Windows 10 the Tablet mode is available when the Type Cover is detached from the device .
+</item 2>
+
+<item 3>
+Surface Pro 4
+Jump up ^ `` ARK Intel Core i5 Specifications '' . Jump up ^ `` ARK Intel Core i7 Specifications '' . ^ Jump up to : `` Surface Pro 4 -- Power Through Your Day
+'' . October 6 , 2015 . Jump up ^ Surface Pro 5 release date , news and rumors Jump up ^ Microsoft Unveils the Surface Pro 4 With a 12.3 - inch Display Jump up
+^ Surface Pro 4 , Surface Book ' sleep ' fix coming soon ( early 2016 ) Jump up ^ Microsoft Patches Surface Book And Surface Pro 4 Sleep Issue Jump up ^ ``
+Surface Pro 4 tablet models '' . November 5 , 2015 . Jump up ^ Heslip , Ken ( 6 October 2015 ) . `` Microsoft 's new Surface Pen now available for pre-order ''
+. WinBeta . Jump up ^ Guim , Mark ( 22 October 2015 ) . `` 3 essential shortcuts you should know for the new Surface Pen '' . Windows Central . Jump up ^
+Coppock , Mark ( 16 December 2015 ) .
+</item 3>
+
+<item 4>
+Surface Pro 4
+Although Surface Pro 4 is backward compatible with Type Cover accessory of Surface Pro 3 , an attachable keyboard which doubles as a screen protector , the
+Surface Pro 4 Type Cover has been announced with and without a fingerprint ID sensor . The new Type Cover is thinner and lighter than its predecessor , has
+improved magnetic stability for lap use , a mechanical keyboard with improved key spacing , as well as a larger touchpad . An updated version of Surface Pen is
+included with the Surface Pro 4 , which has 1024 levels of pressure sensitivity and is heavier with a rubberized tip . However , the new pen has only one button
+on the side rather than the previous pen 's two . There is a eraser on the end that doubles as a button , which may perform different tasks , like opening the
+OneNote app or activating Cortana , and can be customized using the Surface App . Issues ( edit ) The Surface Pro 4 is known to have wide spread flicker issues
+with the display named as Flickergate after the independent website flickergate.com which was sat up by the affected users after getting no fix from Microsoft .
+</item 4>
+
+<item 5>
+Surface Pro 4
+Microsoft subsequently developed a fix that was made available on February 17 , 2016 . Features ( edit ) Hardware ( edit ) The Surface Pro 4 is the same size as
+the Surface Pro 3 , but has a thinner screen bezel which allows for a display of a slightly greater size of 12.3 inches ( 31 cm ) . The screen resolution is
+also greater than the Surface Pro 3 's , at 2736x1824 at 267 PPI , with the same aspect ratio of 3 : 2 and 10 - point multi-touch . The chassis is 0.03 inches (
+0.76 mm ) thinner and 0.03 pounds ( 14 g ) lighter than the Surface Pro 3 . The cooling system of the 2 - in - 1 has been redesigned and dubbed hybrid liquid
+cooling system . It includes heat pipes with a flowing liquid , which is meant to avoid the use of the internal fan when the device is used for less demanding
+tasks such as web browsing .
+</item 5>
+
+<item 6>
+Surface Pro 4
+Surface Pro 4 - wikipedia Surface Pro 4 Jump to : navigation , search Surface Pro 4 Developer Microsoft Product family Surface Type 2 - in - 1 detachable
+Generation 4th Release date October 26 , 2015 Introductory price $899 ( £ 749 ) Operating system Windows 10 Pro CPU Intel Skylake low - voltage dual - core : m3
+- 6Y30 900 MHz up to 2.2 GHz , 4 MB cache , 4.5 W i5 - 6300U 2.4 up to 3.0 GHz , 3 MB cache , 15 W i7 - 6650U 2.2 up to 3.4 GHz , 4 MB cache , 15 W Memory 4 GB
+, 8 GB , or 16 GB Storage PCI - Express SSD : 128 GB , 256 GB , 512 GB , or 1 TB Display 12.
+</item 6>
+
+<item 7>
+Surface Pro 4
+The common traits , inherited from the previous generation device , are a continuous kickstand , magnesium casing with a silver - colored back side , 802.11 a /
+b / g / n / ac Wi - Fi radio , Bluetooth 4.0 Low Energy , full - size USB 3.0 port , microSD card reader , headset jack , Mini DisplayPort , Cover Port , and a
+renamed SurfaceConnect , a port on the side to connect a wall charger , Docking Station or Surface Dock accessories .
+</item 7>
+
+<item 8>
+Surface Pro 4
+256 GB , 512 GB , or 1 TB Display 12.3 inches ( 31 cm ) 2736x1824 ( 267ppi ) PixelSense display with 3 : 2 aspect ratio Graphics m3 : Intel HD graphics 515 i5 :
+Intel HD graphics 520 i7 : Intel Iris 540 graphics 292.1 millimetres ( 11.50 in ) ( width ) 201.42 millimetres ( 7.930 in ) ( height ) 8.45 millimetres ( 0.333
+in ) ( depth ) Weight m3 : 766 grams ( 1.689 lb ) i5 : 786 grams ( 1.733 lb ) i7 : 786 grams ( 1.733 lb ) Predecessor Surface Pro 3 Successor Surface Pro ( 5th
+generation ) This article is part of a series on the Microsoft Surface Surface Surface Pro Pro 2 Pro 3 Pro 4 Pro ( 2017 ) Surface Book Surface Laptop Surface
+Studio Surface Hub Accessories Surface Pen Covers Dock Dial The Surface Pro 4 is the fourth - generation Surface - series 2 - in - 1 detachable , designed ,
+developed ,
+</item 8>
+
+<item 9>
+Surface Pro 4
+With Windows 10 the Tablet mode is available when the Type Cover is detached from the device . In this mode , all windows are opened full - screen and the
+interface becomes more touch - centric . The device also has a Windows Hello - compatible camera . It combines the use of a regular and infrared cameras to
+authenticate the user . Accessories ( edit ) The Surface Pro 4 is backward compatible with all accessories of its predecessor . At the Windows 10 Devices Event
+on 6 October , 2015 , alongside new Surface 2 - in - 1s , new accessories were announced . The Surface Dock is a redesigned docking accessory in a brick form
+factor . It is compatible with all past and future Surface models with a SurfaceConnect side port , previously used to connect a wall charger or Docking Station
+accessory : Surface Pro 3 , 4 and Surface Book . The Surface Dock will have 2 Mini DisplayPorts , 1 Gigabit Ethernet , 4 USB 3.0 , and 1 audio out ports .
+</item 9>
+
+<item 10>
+Surface Pro 4
+Microsoft 's spokesperson acknowledged the issue stating : `` We are aware that some customers have experienced a screen flicker on Surface Pro 4 and are
+monitoring the situation closely . Customers impacted by this should contact Microsoft support . '' Microsoft has stated that bad batteries , pens and Type
+Covers may be repaired under warranty . Reception ( edit ) The Surface Pro 4 received generally positive reviews from technology critics . Most praise a sharper
+and larger display compared to the one found in the predecessor , redesigned cooling system , improved technical specifications , and an improved Type Cover .
+The common disadvantages found by reviewers were that the Type Cover is still a separate purchase , the relatively modest performance of the Intel Core m3 chip
+, and modest battery life . Timeline ( edit ) Source : Microsoft Devices Blog References ( edit ) Jump up ^ `` Microsoft Surface Pro 4 announced with new
+Surface Pen , starts at $899 '' . The Verge . Jump up ^ `` Here are the details of the Surface Book and Surface Pro 4 chips , and why they matter '' . Jump up ^
+`` ARK Intel Core m3 Specifications '' . Jump up ^ `` ARK Intel Core i5 Specifications '' .
+</item 10>
+=== END ITEM id=b6590b4e54a297bd ===
+
+=== ITEM id=dea688bec8082a2a ===
+Gold sentences and facts:
+Sentence 0: In the United States , there is an Animal Welfare Act that was produced in 1966 . This law protects animals in acts of research , transportation , and sale . Generally , animals are protected from any torture , neglect , or killing . There have been many amendments made towards this act to keep it updated . In order to be charged for animal abuse , there has to be prosecution and a trial . While there is only one act covering the entire United States , there are more current laws surrounding animal rights , which vary by state . Even though there are policies and severe consequences , the laws are not normally enforced with as much force or timeliness as regular crime .
+  Fact 0.0: In the United States, there is an Animal Welfare Act.
+  Fact 0.1: The Animal Welfare Act was produced in 1966.
+  Fact 0.2: The Animal Welfare Act protects animals in acts of research, transportation, and sale.
+  Fact 0.3: Under the Animal Welfare Act, animals are generally protected from any torture, neglect, or killing.
+  Fact 0.4: Many amendments have been made to the Animal Welfare Act to keep it updated.
+  Fact 0.5: To be charged for animal abuse, there has to be prosecution and a trial.
+  Fact 0.6: Only one act covers the entire United States.
+  Fact 0.7: There are more current laws surrounding animal rights, and these laws vary by state.
+  Fact 0.8: There are policies and severe consequences for animal abuse.
+  Fact 0.9: Animal abuse laws are not normally enforced with as much force or timeliness as regular crime.
+
+Retrieved items:
+<item 1>
+Animal rights movement
+L. Clark Alasdair Cochrane J.M. Coetzee Priscilla Cohn David DeGrazia Sue Donaldson Josephine Donovan Lawrence Finsen Gary Francione Robert Garner Antoine
+Goetschel John Hadley Will Kymlicka Andrew Linzey Dan Lyons Mary Midgley Martha Nussbaum Siobhan O'Sullivan Clare Palmer Tom Regan Bernard Rollin Mark Rowlands
+Richard D. Ryder Peter Singer Henry Stephens Salt Steve Sapontzis Gary Steiner Cass Sunstein more . Activists Cleveland Amory Greg Avery Matt Ball Martin
+Balluch Barbi twins Brigitte Bardot Bob Barker Gene Baur Frances Power Cobbe Rod Coronado Evandro Costa Karen Davis Chris DeRose Robert Enke John Feldmann Bruce
+Friedrich Juliet Gellatley Jordan Halliday Barry Horne Ronnie Lee Lizzy Lind af Hageby Jo - Anne McArthur Bill Maher Keith Mann Dan Mathews Luísa Mell Ingrid
+Newkirk Heather Nicholson Alex Pacheco Jill Phipps Craig Rosebraugh Nathan Runkle Henry Spira Kim Stallwood Marianne Thieme Darren Thurston Andrew Tyler Gary
+Yourofsky more .
+</item 1>
+
+<item 2>
+Animal rights movement
+This association continues on into the 21st century , as evidenced by the prominence of vegan punk events such as Fluff Fest in Europe . Michael Socarras of
+Greenberg Traurig told the Association of American Medical Colleges : `` There is a very important shift under way in the manner in which many people in law
+schools and in the legal profession think about animals . This shift has not yet reached popular opinion . However , in ( the U.S. ) , social change has and can
+occur through the courts , which in many instances do not operate as democratic institutions . Therefore , the evolution in elite legal opinion is extremely
+significant ... '' Philosophical and legal aims ( edit ) Further information : Main animal rights philosophical approaches and Veganarchism The movement aims to
+include animals in the moral community by putting the basic interests of non-human animals on an equal footing with the basic interests of human beings . A
+basic interest would be , for example , not being made to suffer pain on behalf of other individual human or non-human animals . The aim is to remove animals
+from the sphere of property and to award them personhood ; that is , to see them awarded legal rights to protect their basic interests .
+</item 2>
+
+<item 3>
+Animal rights movement
+An inclusive movement with strong group solidarity would decrease opportunity costs associated with participating ( e.g. , social stigmatization , lack of
+alternatives , legal persecution ) and thus serve to increase and sustain participation in the movement . Current status of the movement ( edit ) The movement
+is no longer viewed as hovering on the fringe . In the 1980s and 1990s , it was joined by a wide variety of academics and professionals , including lawyers ,
+physicians , psychologists , veterinarians , and former vivisectionists , and is now a common subject of study in philosophy departments in Europe and North
+America . Animal law courses are taught in 92 out of 180 law schools in the U.S. , and the movement has gained the support of senior legal scholars , including
+Alan Dershowitz and Laurence Tribe of Harvard Law School . Chapters of animal rights law have been created in several state bar associations , and resolutions
+related to animal rights are regularly proposed within the American Bar Association . In the 1980s , the movement became associated with punk subculture and
+ideologies , particularly straight edge hardcore punk in the United States and anarcho - punk in the United Kingdom .
+</item 3>
+
+<item 4>
+Animal rights movement
+Other early influences include : Upton Sinclair 's 1906 novel The Jungle , which drew attention to obscured slaughterhouse operations ; Henry Salt 's treatises
+on nonhuman animal rights ; which drew from human abolitionist arguments for recognizing personhood of people considered to be property ; and the Alcott House
+of New England , a community serving as a stop on the Underground Railroad and requiring its residents to eat a vegan diet . Philosopher Peter Singer The
+contemporary movement is regarded as having been founded in the UK in the early 1970s by a group of Oxford university post-graduate philosophy students , now
+known as the `` Oxford Group '' . The group was led by Rosalind and Stanley Godlovitch , graduate students of philosophy who had recently become vegetarians .
+The Godlovitches met John Harris and David Wood , also philosophy graduates , who were soon persuaded of the arguments in favour of animal rights and themselves
+became vegetarian . The group began to actively raise the issue with pre-eminent Oxford moral philosophers , including Professor Richard Hare , both personally
+and in lectures . Their approach was based not on sentimentality ( `` kindness to dumb animals ' ) , but on the moral rights of animals .
+</item 4>
+
+<item 5>
+Animal rights movement
+, the Animal Enterprise Terrorism Act ) and does not economically or politically challenge extant systems . Smaller factions include groups focused around faith
+- based animal rights theory and veganarchists , whose approach is characterized by a critique of capitalism on the grounds that it has led to mass nonhuman ,
+human , and environmental exploitation . Such factionalizing , researchers have pointed out , is common to social movements and plays a role in sustaining their
+health . History ( edit ) Further information : 20th century : Increase in animal use ; animal rights movement , Gary Francione , Tom Regan , Richard D. Ryder ,
+and Peter Singer The Animal Rights Movement traces back to the animal protection movement in Victorian England , which was initiated by aristocratic moral
+crusaders in response to the poor treatment of urban workhorses and stray dogs .
+</item 5>
+
+<item 6>
+Animal rights movement
+Issues Ahimsa Anarchism Animal cognition Animal consciousness Animal law Animal model Animal rights and the Holocaust Animal product Animal rights movement
+Animal testing Animal testing on non-human primates Animals in sport Anthrozoology Anti-hunting Bile bear Bioethics Blood sport Cambridge Declaration on
+Consciousness Carnism Cosmetics testing Chick culling Christianity and animal rights Concentrated Animal Feeding Operation Cormorant culling Covance Cruelty to
+animals Deep ecology Ethics of eating meat Fox hunting Fur trade Great ape research ban Green Scare Huntingdon Life Sciences Intensive animal farming Ivory
+trade Livestock Meat paradox Nafovanny Nonviolence Open rescue Operation Backfire Pain in animals Pain and suffering in laboratory animals Primate trade Seal
+hunting Slaughterhouse Stock - free agriculture Toxicology testing Veganism Vegetarianism Western Australian shark cull more . Cases Brown Dog affair Cambridge
+University primates McLibel case Pit of despair Silver Spring monkeys University of California Riverside 1985 laboratory raid Unnecessary Fuss Advocates
+Academics and writers Carol Adams Tom Beauchamp Marc Bekoff Paola Cavalieri Stephen R.L. Clark Alasdair Cochrane J.M.
+</item 6>
+
+<item 7>
+Animal rights movement
+In the United States , there is an Animal Welfare Act that was produced in 1966 . This law protects animals in acts of research , transportation , and sale .
+Generally , animals are protected from any torture , neglect , or killing . There have been many amendments made towards this act to keep it updated . In order
+to be charged for animal abuse , there has to be prosecution and a trial . While there is only one act covering the entire United States , there are more
+current laws surrounding animal rights , which vary by state . Even though there are policies and severe consequences , the laws are not normally enforced with
+as much force or timeliness as regular crime . Strategy and Tactical repertoires ( edit ) Use of New information communication technologies ( ICTs ) ( edit )
+New media , such as the Internet and email , have been used by Animal Rights Movement actors and countermovement actors in a variety of capacities . Radical
+factions in the movement rely on websites , blogs , podcasts , videos , and online forums to engage in vegan outreach and other mobilization efforts and build
+alliances , thus overcoming exclusion by dominant factions . The use of Internet has allowed the animal rights movement to spread transnationally .
+</item 7>
+
+<item 8>
+Animal rights movement
+It has been noted that the power of the animal rights movement in the United States is centralized in professionalized nonprofit organizations that prefer
+moderated goals of welfare reform and tend to be isomorphic . The abolitionist faction diagnoses the problem as one of nonhuman animal use , offers a prognosis
+including vegan outreach , and employ action frames including a rational and theoretic focus . Gary Francione , a leader in abolitionism , formed his approach
+in response to the traditional movement 's focus on policy reform . Members of the abolitionist faction view policy reform as counterproductive and rely on
+nonviolent education and moral suasion in their repertoire of contention . They see the promotion of veganism as a low - opportunity cost means of creating an
+antispeciesist culture and posing an economic threat to the animal agriculture industrial complex . The direct action or militant faction includes in its
+repertoire of contention property damage , open releases , intimidation , and direct violence . With these , they offer a prognosis to the problem of animal use
+that focuses on changing society through force and fear . Animal rights actors often reject this faction , pointing to violence as a counterproductive tactic
+that invites repression ( e.g.
+</item 8>
+
+<item 9>
+Animal rights movement
+Other books regarded as important include philosopher Tom Regan 's The Case for Animal Rights ( 1983 ) ; Created from Animals : The Moral Implications of
+Darwinism by James Rachels ( 1990 ) ; Animals , Property , and the Law ( 1995 ) by legal scholar Gary Francione , Rattling the Cage : Toward Legal Rights for
+Animals by another legal scholar Steven M. Wise ( 2000 ) ; and Animal Rights and Moral Philosophy by Julian H. Franklin ( 2005 ) . Gender , class , and other
+factors ( edit ) The movement predominately comprises upper - class and middle - class white female members , owing this to its associations with the Victorian
+English animal protection movement and American feminism and environmentalism movements . As such , the movement is widely associated in public spheres with
+women , femininity , and effeminacy . Public perception of the movement is influenced by gendered evaluations ; movement outsiders tend to view activists as
+irrational by virtue of overly emotional sentiments . Aware of this , activists have strategically incorporated men into positions of leadership and theory
+production , in order to legitimate the movement and counter popular beliefs about the primacy of emotion in the animal rights movement .
+</item 9>
+
+<item 10>
+Animal rights movement
+Movement Groups Animal Aid Animal Legal Defense Fund Animal Liberation Front British Union for the Abolition of Vivisection Centre for Animals and Social
+Justice Chinese Animal Protection Network Direct Action Everywhere Farm Animal Rights Movement Great Ape Project Hunt Saboteurs Association In Defense of
+Animals Korea Animal Rights Advocates Last Chance for Animals Mercy for Animals New England Anti-Vivisection Society Oxford Centre for Animal Ethics Oxford
+Group People for the Ethical Treatment of Animals United Poultry Concerns more . Parties AAEVP ( Canada ) Animal Justice Party ( Australia ) Animal Welfare
+Party ( UK ) PACMA ( Spain ) Party for the Animals ( Netherlands ) Partito Animalista Italiano ( Italy ) Tierschutzpartei ( Germany ) V - Partei3 ( Germany )
+People -- Animals -- Nature ( Portugal ) more . Media Books Animals ' Rights : Considered in Relation to Social Progress ( 1894 ) Animals , Men and Morals (
+1971 ) Animal Liberation ( 1975 ) The Case for Animal Rights ( 1983 ) The Lives of Animals ( 1999 ) Striking at the Roots ( 2008 ) An American Trilogy ( 2009 )
+more .
+</item 10>
+=== END ITEM id=dea688bec8082a2a ===
+
+=== ITEM id=2f62253df29cf64c ===
+Gold sentences and facts:
+Sentence 0: In negotiation theory , the best alternative to a negotiated agreement or BATNA is the most advantageous alternative course of action a party can take if negotiations fail and an agreement can not be reached . BATNA is the key focus and the driving force behind a successful negotiator . A party should generally not accept a worse resolution than its BATNA . Care should be taken , however , to ensure that deals are accurately valued , taking into account all considerations , such as relationship value , time value of money and the likelihood that the other party will live up to their side of the bargain . These other considerations are often difficult to value , since they are frequently based on uncertain or qualitative considerations , rather than easily measurable and quantifiable factors .
+  Fact 0.0: In negotiation theory, the best alternative to a negotiated agreement (BATNA) is the most advantageous course of action a party can take if negotiations fail and no agreement can be reached.
+  Fact 0.1: BATNA is the key focus of a successful negotiator.
+  Fact 0.2: BATNA is the driving force behind a successful negotiator.
+  Fact 0.3: A party should generally not accept a resolution worse than its BATNA.
+  Fact 0.4: Care should be taken to ensure that deals are accurately valued.
+  Fact 0.5: Deal valuation should take into account all considerations.
+  Fact 0.6: Relationship value is a consideration in valuing a deal.
+  Fact 0.7: Time value of money is a consideration in valuing a deal.
+  Fact 0.8: The likelihood that the other party will live up to its side of the bargain is a consideration in valuing a deal.
+  Fact 0.9: The other considerations are often difficult to value.
+  Fact 0.10: The other considerations are frequently based on uncertain or qualitative considerations.
+  Fact 0.11: The other considerations are qualitative rather than easily measurable and quantifiable factors.
+
+Retrieved items:
+<item 1>
+Best alternative to a negotiated agreement
+History ( edit ) BATNA was developed by negotiation researchers Roger Fisher and William Ury of the Harvard Program on Negotiation ( PON ) , in their series of
+books on Principled negotiation that started with Getting to YES , unwittingly duplicating the game theory concept of a disagreement point from bargaining
+problems pioneered by Nobel Laureate John Forbes Nash decades earlier . A Nash Equilibrium is reached among a group of players when no player can benefit from
+changing strategies if every other player sticks to their current strategy . For example , Amy and Phil are in Nash Equilibrium if Amy is making the best
+decision she can , taking into account Phil 's decision , and Phil is making the best decision he can , taking into account Amy 's decision . Likewise , a group
+of players are in Nash Equilibrium if each one is making the best decision that he or she can , taking into account the decisions of the others .
+</item 1>
+
+<item 2>
+Best alternative to a negotiated agreement
+, a non-profit organization . About Wikipedia
+</item 2>
+
+<item 3>
+Best alternative to a negotiated agreement
+Contents ( hide ) 1 Overview 2 History 3 See also 4 References 5 External links Overview ( edit ) The BATNA is often seen by negotiators not as a safety net ,
+but rather as a point of leverage in negotiations . Although a negotiator 's alternative options should , in theory , be straightforward to evaluate , the
+effort to understand which alternative represents a party 's BATNA is often not invested . Options need to be actual and actionable to be of value , however
+without the investment of time , options will frequently be included that fail on one of these criteria . Most managers overestimate their BATNA whilst
+simultaneously investing too little time into researching their real options . This can result in poor or faulty decision making and negotiating result .
+Negotiators also need to be aware of the other negotiator 's BATNA and to identify how it compares to what they are offering . Some people may adopt aggressive
+, coercive , threatening and / or deceptive techniques , this is known as a hard negotiation style ; a theoretical example of this is adversarial approach style
+negotiation . Others may employ a soft style , which is friendly , trusting , compromising , and conflict avoiding .
+</item 3>
+
+<item 4>
+Best alternative to a negotiated agreement
+See also ( edit ) Conflict resolution research Opportunity cost References ( edit ) Jump up ^ Best Alternative to a Negotiated Agreement Negotiation Experts
+Jump up ^ Best Alternative to a Negotiated Agreement YArooms Jump up ^ Negotiation , Readings , Exercises and Cases , Roy J. Lewicki ^ Jump up to : Nolan -
+Haley , Jaqueline M ( 2001 ) . Alternative Dispute Resolution in a Nutshell . Thomson West . pp. 39 -- 50 . ISBN 978 - 0 - 314 - 18014 - 8 . ^ Jump up to :
+Fisher and Ury , Roger and William ( 2011 ) . Getting to YES . Penguin Books . pp. 1 -- 170 . ISBN 978 - 0 - 14 - 311875 - 6 . Jump up ^ Gulliver , P.H ( 1979 )
+. Disputes and Negotiation : A Cross Culture Perspective . Academic Press . p. 287 . Jump up ^ Morris , Michael W. ; Gelfand , Michele J. ( 2004 ) .
+</item 4>
+
+<item 5>
+Best alternative to a negotiated agreement
+( 2004 ) . `` Cultural Differences and Cognitive Dynamics : Expanding the Cognitive Perspective on Negotiation '' . In Gelfand , Michele J. ; Brett , Jeanne M.
+The Handbook of Negotiation and Culture . Stanford University Press . pp. 45 -- 70 . ISBN 978 - 0 - 8047 - 4586 - 4 . Jump up ^ Myerson , Roger B. `` Nash
+Equilibrium and the History of Economic Theory '' ( PDF ) . Nash Equilibrium and the History of Economic Theory . Journal of Economic Literature . Retrieved 1
+October 2012 . Jump up ^ Hawkins and Steiner , Jeff and Neil . `` The Nash Equilibrium Meets Batna '' ( PDF ) . Gamed Therory Varied Uses in ADR . Harvard
+University Press . Archived from the original ( PDF ) on February 28 , 2013 . Retrieved 1 October 2012 .
+</item 5>
+
+<item 6>
+Bond (finance)
+situation Squeeze out Staggered board of directors Stock swap Super-majority amendment Tag - along right Takeover Reverse Tender offer Leverage Debt
+restructuring Debtor - in - possession financing Financial sponsor Leveraged buyout Leveraged recapitalization High - yield debt Private equity Project finance
+Valuation Accretion / dilution analysis Adjusted present value Associate company Business valuation Conglomerate discount Cost of capital Weighted average
+Discounted cash flow Economic Value Added Enterprise value Fairness opinion Financial modeling Free cash flow Free cash flow to equity Market value added
+Minority interest Modigliani -- Miller theorem Net present value Pure play Real options Residual income Stock valuation Sum - of - the - parts analysis Tax
+shield Terminal value Valuation using multiples List of investment banks Outline of finance Debt Instruments Bonds Corporate Debenture Government Municipal
+Loans Business loan Consumer lending Loan shark Payday loan Predatory lending Usury Management Bankruptcy Consolidation Management plan Relief Restructuring
+Debt - snowball method Debtor - in - possession ( DIP ) financing Loan guarantee Collection Evasion Bad debt Charge - off Collection agency Compliance Debt
+bondage Debtors ' prison Distraint Garnishment Phantom debt Strategic default Tax refund interception Markets Consumer Corporate Government Municipal Venture
+Buyer Deposit account Fixed income Money market Securitization
+</item 6>
+
+<item 7>
+Best alternative to a negotiated agreement
+Others may employ a soft style , which is friendly , trusting , compromising , and conflict avoiding . According to Fisher and Ury , when hard negotiators meet
+soft negotiators , the hard negotiators usually win their position , but at the cost of potentially damaging the long term relationship between the parties .
+Attractive alternatives are needed to develop a strong BATNA . In the best - selling book Getting to YES : Negotiating Agreement Without Giving In , the authors
+give 3 suggestions of how to accomplish this : Inventing a list of actions one might take if no agreement is reached Converting some of the more promising ideas
+and transforming them into tangible and partial alternatives Selecting the alternative that sounds best In negotiations involving different cultures , all
+parties need to account for cultural cognitive behaviors and should not let judgments and biases affect the negotiation . The individual should be separate from
+the objective . The purpose here , as Gulliver mentions , is for negotiation parties to be aware . Preparation at all levels , including prejudice - free
+thoughts , emotion - free behavior , bias - free behavior are helpful according to Morris and Gelfand .
+</item 7>
+
+<item 8>
+Best alternative to a negotiated agreement
+Retrieved 1 October 2012 . External links ( edit ) BATNA Explained by David Venter Alternative definition of BATNA Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Best_alternative_to_a_negotiated_agreement&oldid=819966880 '' Categories : Negotiation Dispute resolution Business
+terms Hidden categories : Articles needing more detailed references Articles needing additional references from July 2013 All articles needing additional
+references All articles lacking reliable references Articles lacking reliable references from July 2013 All articles with unsourced statements Articles with
+unsourced statements from October 2007 Articles lacking reliable references from February 2015 Wikipedia articles needing page number citations from July 2013
+Talk Contents About Wikipedia Deutsch Español Հայերեն Polski Edit links This page was last edited on 12 January 2018 , at 08 : 19 . Text is available under the
+Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use and Privacy Policy .
+Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization .
+</item 8>
+
+<item 9>
+Bond (finance)
+The security firm takes the risk of being unable to sell on the issue to end investors . Primary issuance is arranged by bookrunners who arrange the bond issue
+, have direct contact with investors and act as advisers to the bond issuer in terms of timing and price of the bond issue . The bookrunner is listed first
+among all underwriters participating in the issuance in the tombstone ads commonly used to announce bonds to the public . The bookrunners ' willingness to
+underwrite must be discussed prior to any decision on the terms of the bond issue as there may be limited demand for the bonds . In contrast , government bonds
+are usually issued in an auction . In some cases , both members of the public and banks may bid for bonds . In other cases , only market makers may bid for
+bonds . The overall rate of return on the bond depends on both the terms of the bond and the price paid . The terms of the bond , such as the coupon , are fixed
+in advance and the price is determined by the market . In the case of an underwritten bond , the underwriters will charge a fee for underwriting .
+</item 9>
+
+<item 10>
+Best alternative to a negotiated agreement
+Best alternative to a negotiated agreement - wikipedia Best alternative to a negotiated agreement Jump to : navigation , search This article needs additional
+citations for verification . Please help improve this article by adding citations to reliable sources . Unsourced material may be challenged and removed . (
+July 2013 ) ( Learn how and when to remove this template message ) In negotiation theory , the best alternative to a negotiated agreement or BATNA is the most
+advantageous alternative course of action a party can take if negotiations fail and an agreement can not be reached . BATNA is the key focus and the driving
+force behind a successful negotiator . A party should generally not accept a worse resolution than its BATNA . Care should be taken , however , to ensure that
+deals are accurately valued , taking into account all considerations , such as relationship value , time value of money and the likelihood that the other party
+will live up to their side of the bargain . These other considerations are often difficult to value , since they are frequently based on uncertain or
+qualitative considerations , rather than easily measurable and quantifiable factors .
+</item 10>
+=== END ITEM id=2f62253df29cf64c ===

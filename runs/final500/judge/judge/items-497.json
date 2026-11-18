@@ -1,0 +1,452 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "c5775ead7f46d946",
+   "gold": [
+    {
+     "sentence": "Wangaratta Wahine is an album by Australian band The Captain Matchbox Whoopee Band, released in 1974 and was their second album.",
+     "facts": {
+      "0.0": "Wangaratta Wahine is an album by the Australian band The Captain Matchbox Whoopee Band.",
+      "0.1": "Wangaratta Wahine was released in 1974.",
+      "0.2": "Wangaratta Wahine was the second album of The Captain Matchbox Whoopee Band."
+     }
+    },
+    {
+     "sentence": " He was declared an Australian Living Treasure by the National Trust of Australia in 1999.",
+     "facts": {
+      "1.0": "The subject of this sentence was declared an Australian Living Treasure by the National Trust of Australia.",
+      "1.1": "The subject of this sentence received this declaration in 1999."
+     }
+    }
+   ],
+   "items": [
+    "He Will Have His Way\nHe Will Have His Way is a compilation album featuring male Australian and New Zealand musicians performing songs written by Neil Finn and Tim Finn (The Finn Brothers), who are best known as members of Split Enz and Crowded House.\n\n It was released on 12 November 2010 and is a sequel to \"She Will Have Her Way\", a 2005 album featuring female Australian and New Zealand musicians.\n\n The two albums were later released together with extra tracks as the double CD \"They Will Have Their Way\".",
+    "Leah Flanagan\nLeah Flanagan is a singer-songwriter from Sydney, NSW.\n\n Leah has appeared on Australian TV shows Spicks & Specks and RockQuiz, has released 2 albums and toured extensively through Australia with her music and part of festival ensembles.\n\n Leah’s status as an Indigenous musician is one of pride and respect; she has helped make history with such recent essential albums as Archie Roach’s 25th anniversary reissue of Charcoal Lane and Buried Country 1.5, The Story of Aboriginal Country Music.\n\n Her latest album Saudades was recorded at the studio of Midnight Oil's Jim Moginie and mixed by Paul McKercher (You Am I, Augie March)",
+    "Winwood (album)\nWinwood is the first compilation album of music featuring Steve Winwood.\n\n This two-record set was issued in 1971 by United Artists Records and features music which Winwood performed with The Spencer Davis Group, Powerhouse, Traffic and Blind Faith.\n\n UA Records issued this album after Winwood's band Traffic left UA when their home label Island Records set up their own American operation.\n\n Issued without Winwood's authorization as catalogue number UAS-9950, it was taken off the market after legal action by Winwood and Island Records.\n\n It was then reissued with minor changes as catalogue number UAS-9964.\n\n Currently out of print, it was issued on CD by Universal Music of Japan for the Japanese market.",
+    "RPA &amp; The United Nations of Sound\nThe band played in Australia also during the Splendour in the Grass Festival in late July.\n\n The band's debut album as Richard's backing lineup, entitled \"United Nations of Sound\", was released on 19 July 2010.\n\n \"Born Again\", the first proper single, was officially released the same day of the album as a digital download.",
+    "Light Surrounding You\n\"Light Surrounding You\" is the second single by alternative rock band, Evermore, taken from their second studio album, \"Real Life\" (June 2006).\n\n It was written by Dann Hume, the group's drummer and lead singer and guitarists Jon Hume.\n\n The record is co-produced by Jon Hume.\n\n The song was released in October 2006 and peaked at No. 15 on the RIANZ Singles Chart in New Zealand and number one on the ARIA Singles Chart, making it Evermore's most successful single in Australia.\n\n It was the first single by a New Zealand artist to top the Australian charts since \"How Bizarre\" by OMC in 1996.",
+    "Wangaratta Wahine\nWangaratta Wahine is an album by Australian band The Captain Matchbox Whoopee Band, released in 1974 and was their second album.\n\n It was recorded at top recording studio Armstrong Studios in Melbourne and the cover art was by famed Australian artist Michael Leunig.",
+    "The Preytells\nThe Preytells were an Australian indie rock band from Perth, formed in 2004 by Jessica Bennett (a.k.a. Audrey Tell) on lead guitar and backing vocals, Simon Okely (a.k.a. Will Tell) on guitar and lead vocals, Jaclyn Pearson on drums and percussion and Cameron Stewart on bass guitar and backing vocals.\n\n Their sole album, \"Flood Songs/June Songs\", was issued in September 2009; before they disbanded later that year.\n\n Their single, \"Shout!\"\n\n ( May 2008), was nominated for WAM Song of the Year in the Pop category in 2008; while, \"Lord Hold My Hand\", was nominated for the same category in 2009.",
+    "Clinton Walker\nClinton Walker (born 1957) is an Australian writer, best known for his works on popular music but with a broader interest in social and cultural history and theory.\n\n Sydney's \"Sun-Herald\" has called him \"our best chronicler of Australian grass-roots culture.\"\n\n He has always been ahead of the curve.\n\n As \"Rhythms\" magazine said in 2015, \"Like many of Walker’s projects, \"Buried Country\" was at least a decade ahead of its time,\" and as such he is remarkable as a critic who has exerted a pro-active impact on Australian music and its development; groundbreaking books like \"Inner City Sound\" (1981) and \"Buried Country\" (2000) especially have informed and inspired successive generations of musicians.\n\n Similarly, while he found best-selling success as Bon Scott's biographer, Walker's non-music books like \"Football Life\" (1998) and \"Golden Miles\" (2005) have innovatively offered an appreciation of subjects hitherto hardly deemed worthy of serious consideration.",
+    "Waltzing Matilda\n\"Waltzing Matilda\" is Australia's best-known bush ballad, and has been described as the country's \"unofficial national anthem\".",
+    "Beasts of Bourbon\nBeasts of Bourbon are an Australian alternative rock, blues rock band formed in August 1983, with James Baker on drums (ex-Hoodoo Gurus), Spencer P. Jones on guitar (The Johnnys), Tex Perkins on vocals (Dum Dums), Kim Salmon on guitar and Boris Sujdovic on bass guitar (both ex-The Scientists).\n\n Except for mainstays, Jones and Perkins, the line-up has changed as the group splintered and reformed several times.\n\n Their debut album, \"The Axeman's Jazz\" (July 1984), was the best selling Australian alternative rock album for 1984.\n\n Their debut single, \"Psycho\", is a cover version of the Leon Payne original, and was the best selling Australian alternative rock single for that year.\n\n However the group disbanded by mid-1985 and each member pursued other musical projects.\n\n They reformed in 1987 and issued a second album, \"Sour Mash\", in December 1988 on Red Eye Records.\n\n According to rock music historian, Ian McFarlane, it \"virtually redefined the parameters of guitar-based rock'n'roll."
+   ]
+  },
+  {
+   "id": "02e0f5498dc646e1",
+   "gold": [
+    {
+     "sentence": "\"Love Incredible\" is a song by Norwegian DJ and record producer Cashmere Cat, featuring vocals by Cuban-American singer Camila Cabello.",
+     "facts": {
+      "0.0": "'Love Incredible' is a song by Norwegian DJ and record producer Cashmere Cat.",
+      "0.1": "'Love Incredible' features vocals by Cuban-American singer Camila Cabello."
+     }
+    },
+    {
+     "sentence": " It was released on 17 February 2017 through Interscope and Mad Love as the third single from his debut album, \"9\".",
+     "facts": {
+      "1.0": "'Love Incredible' was released on 17 February 2017.",
+      "1.1": "'Love Incredible' was released through Interscope and Mad Love.",
+      "1.2": "'Love Incredible' was the third single from the debut album '9' of Cashmere Cat."
+     }
+    },
+    {
+     "sentence": " An imprint of Interscope Geffen A&M Records, its parent company is Universal Music Group, a subsidiary of Vivendi S.A.",
+     "facts": {
+      "2.0": "An imprint of Interscope Geffen A&M Records has Universal Music Group as its parent company.",
+      "2.1": "Universal Music Group is a subsidiary of Vivendi S.A."
+     }
+    }
+   ],
+   "items": [
+    "Incredible Connection\nIncredible Connection (Pty) Ltd is the largest consumer electronics and IT retailer in South Africa.\n\n On 15 December 1998, Incredible Connection was acquired by Connection Group Holdings Limited and now operates as subsidiary of that company, itself a subsidiary of JD Group Limited.\n\n As of 2005, Incredible Connection has 34 retail outlets in South Africa, and in 2002 it was reported to hold 45% of the IT retail market in the country.",
+    "Love in Motion (song)\n\"Love in Motion\" is the first new material released by the Australian rock synthpop band Icehouse as a 7\" vinyl single-only in October 1981 on Regular Records for the Australian market.\n\n The band had been known as Flowers until 27 June 1981 after which they changed their name to Icehouse, they had signed to Chrysalis Records and most of Flowers' material was released under the new name into Europe, UK and US markets.\n\n \"Love in Motion\" peaked at #10 on the Australian singles charts.\n\n The B-side, \"Goodnight, Mr. Matthews\" was included on the 1982 album \"Primitive Man\" with \"Love in Motion\" included on the Chrysalis Records US / European versions of the album, the UK 1983 version of the album was re-titled \"Love in Motion\".",
+    "Just a Little Time\nJust a Little Time is an album by Lynsey de Paul.\n\n It was originally released in 30 September 1994 on the Music Deluxe (catalogue number MSCD9) label but has since been released on the Tring International PLC label (catalogue number JHD128) and on Arc Records/The Magic Collection (Catalogue number MEC 949080).\n\n All of the songs on the album are written or co-written by de Paul.\n\n The songs \"Sugar Me\", Getting a Drag\", \"Storm in a Teacup and \"Dancing on a Saturday Night\" are radical re-recordings of her earlier hits performed in an updated and uptempo fashion.\n\n \"Won't Somebody Dance with Me\" is still performed as a ballad, but has been updated and extended with an extra refrain.\n\n Never before released songs on the album include the ballads \"Words Don't Mean A Thing\" and title track \"Just a Little Time\" as well as the more uptempo \"Instant Love\" and \"Now & Then\".",
+    "Nobody Else (CeCe Peniston song)\n\"Nobody Else\" is a 1998 song by CeCe Peniston.\n\n The composition was to be the lead single of the singer's originally scheduled album release on the Silk Entertainment label, as well as reportedly released on Steve Hurley's compilation \"The Voices of Life, Vol 1.\"\n\n The production of her album was cancelled eventually, and releasing of the compilation wouldn't happen either.\n\n However, the singer released another two singles on the label, \"He Loves Me 2\" the following year and \"My Boo\" in 2000.",
+    "No Promises (Icehouse song)\n\"No Promises\" is the first single released by Australian band, Icehouse from the band's 1986 album, \"Measure for Measure\" and was released in November 1985 on Regular Records as 7\" Vinyl Single and 12\" Vinyl Single formats.\n\n It was also released in the UK and Europe by Chrysalis Records again on 7\" and 12\" formats but with different track listings.\n\n It was subsequently released in the US by Chrysalis on 7\" and 12\" formats, again with different track listings.\n\n It peaked at #30 on the Australian singles charts.\n\n A remix version by [love] tatto was released on the Icehouse album \"Meltdown\" in 2002.",
+    "Kinetic Records\nThe label was distributed by Reprise/Warner Bros.\n\n Records from its inception until 2001, when Kinetic switched distribution to BMG.\n\n The latter eventually absorbed the label during the merger with Sony Music.",
+    "Breathing Your Love\n\"Breathing Your Love\" is a song by the Swedish singer Darin featuring vocals by singer Kat DeLuna and the first single from \"Flashback\".\n\n The song co-written by Darin with RedOne, Bilal Hajji and Novel was released to radio stations and as a digital download in Sweden on 8 October 2008.\n\n The single was released in Finland and is also the first single from Darin to be released in the United Kingdom in January 2010.\n\n In October 2009 Swedish astronaut Christer Fuglesang took 2 copies of the single into space with him, as his daughter is a Darin fan, a photo of the disc can be seen with earth in the distance can be found on the official Darin website.",
+    "Bigtop Records\nBigtop Records was an American record label started by music executive Johnny Bienstock and the major music publisher Hill & Range Music and was co-owned along with Big Top Record Distributors (sic).\n\n Hit artists included Del Shannon, Johnny and the Hurricanes, Lou Johnson, Sammy Turner, Don and Juan, and Toni Fisher.\n\n Big Top Record Distributors also distributed Paul Case's Dunes Records label in the early 60's, which had hits from Ray Peterson (\"Corrina, Corrina\") and Curtis Lee (\"Pretty Little Angel Eyes\"), both records produced by Phil Spector.\n\n Bell Records briefly distributed Bigtop prior to the label closing, around 1965.\n\n \"Bigtop\" also released two Mad Magazine music parody themed albums; \"Mad Twists Rock 'N' Roll\" and \"Fink Along With Mad\" in 1963.",
+    "Interscope Records\nInterscope Records is an American major record label.\n\n An imprint of Interscope Geffen A&M Records, its parent company is Universal Music Group, a subsidiary of Vivendi S.A.",
+    "Love Incredible\n\"Love Incredible\" is a song by Norwegian DJ and record producer Cashmere Cat, featuring vocals by Cuban-American singer Camila Cabello.\n\n It was released on 17 February 2017 through Interscope and Mad Love as the third single from his debut album, \"9\"."
+   ]
+  },
+  {
+   "id": "46aa679a0c519da3",
+   "gold": [
+    {
+     "sentence": "Mosè in Egitto (\"Moses in Egypt)\" (] ) is a three-act opera written by Gioachino Rossini to an Italian libretto by Andrea Leone Tottola, which was based on a 1760 play by Francesco Ringhieri, \"L'Osiride\".",
+     "facts": {
+      "0.0": "Mosè in Egitto (Moses in Egypt) is a three-act opera.",
+      "0.1": "Mosè in Egitto was written by Gioachino Rossini.",
+      "0.2": "Mosè in Egitto has an Italian libretto by Andrea Leone Tottola.",
+      "0.3": "The libretto of Mosè in Egitto was based on a 1760 play by Francesco Ringhieri.",
+      "0.4": "The 1760 play by Francesco Ringhieri is titled L'Osiride."
+     }
+    },
+    {
+     "sentence": "Lucrezia Borgia is a melodramatic opera in a prologue and two acts by Gaetano Donizetti.",
+     "facts": {
+      "1.0": "Lucrezia Borgia is a melodramatic opera.",
+      "1.1": "Lucrezia Borgia is in a prologue and two acts.",
+      "1.2": "Lucrezia Borgia is by Gaetano Donizetti."
+     }
+    }
+   ],
+   "items": [
+    "Lucrezia Borgia (opera)\nLucrezia Borgia is a melodramatic opera in a prologue and two acts by Gaetano Donizetti.\n\n Felice Romani wrote the Italian libretto after the play \"Lucrezia Borgia\" by Victor Hugo, in its turn after the legend of Lucrezia Borgia.\n\n \"Lucrezia Borgia\" was first performed on 26 December 1833 at La Scala, Milan.",
+    "Lucrezia Borgia (1912 film)\nLucrezia Borgia is a 1912 Italian silent historical film directed by Gerolamo Lo Savio and starring Francesca Bertini in the title role of Lucrezia Borgia.",
+    "Lucrezia Borgia (1940 film)\nLucrezia Borgia is a 1940 Italian historical film directed by Hans Hinrich and starring Isa Pola, Friedrich Benfer and Carlo Ninchi.\n\n The film portrays the life of Lucrezia Borgia (1480-1519), one of a number of Italian films of the era set during the Renaissance.\n\n It was made at the Scalera Studios in Rome.",
+    "Romolo ed Ersilia (Hasse)\nRomolo ed Ersilia is an opera in three acts composed by Johann Adolph Hasse to an Italian-language libretto by Pietro Metastasio.\n\n The opera was commissioned by Empress Maria Theresa to celebrate the marriage of her son Leopold to Maria Luisa of Spain.\n\n The opera was first performed on 6 August 1765, the day after their wedding, in the court theatre of the Imperial Palace in Innsbruck.\n\n The opera received its first performance in modern times in 2011 during the Innsbruck Festival of Early Music.",
+    "Lucrezia Borgia (1922 film)\nLucrezia Borgia is a 1922 German silent historical film directed by Richard Oswald and starring Conrad Veidt, Liane Haid and Albert Bassermann.\n\n It was based on a novel by Harry Sheff, and portrayed the life of the Renaissance Italian aristocrat Lucrezia Borgia (1480-1519).\n\n Botho Hoefer and Robert Neppach worked as the film's art directors, designing the period sets needed.",
+    "Lucrezia Borgia (play)\nLucrezia Borgia (French: \"Lucrèce Borgia\" ) is an 1833 play by the French writer Victor Hugo.\n\n It is a historical work portraying the Renaissance-era Italian aristocrat Lucrezia Borgia.\n\n The play (along with \"Angelo, Tyrant of Padua\") is believed to have been a major influence on Oscar Wilde's \"The Duchess of Padua\" (1891).",
+    "Orfeo ed Euridice\nOrfeo ed Euridice (French version: Orphée et Eurydice ; English: \"Orpheus and Eurydice\") is an opera composed by Christoph Willibald Gluck based on the myth of Orpheus, set to a libretto by Ranieri de' Calzabigi.\n\n It belongs to the genre of the \"azione teatrale\", meaning an opera on a mythological subject with choruses and dancing.\n\n The piece was first performed at the Burgtheater in Vienna on 5 October 1762 in the presence of Empress Maria Theresa.\n\n \"Orfeo ed Euridice\" is the first of Gluck's \"reform\" operas, in which he attempted to replace the abstruse plots and overly complex music of \"opera seria\" with a \"noble simplicity\" in both the music and the drama.",
+    "Mosè in Egitto\nMosè in Egitto (\"Moses in Egypt)\" (] ) is a three-act opera written by Gioachino Rossini to an Italian libretto by Andrea Leone Tottola, which was based on a 1760 play by Francesco Ringhieri, \"L'Osiride\".\n\n It premièred on 5 March 1818 at the recently reconstructed Teatro San Carlo in Naples, Italy.",
+    "Pagliacci\nPagliacci (] ; literal translation, \"Clowns\") is an Italian opera in a prologue and two acts, with music and libretto by Ruggero Leoncavallo.\n\n It is the only Leoncavallo opera that is still widely performed.\n\n Opera companies have frequently staged \"Pagliacci\" with \"Cavalleria rusticana\" by Mascagni, a double bill known colloquially as 'Cav and Pag'.",
+    "Lucrezia Borgia (1947 film)\nLucrezia Borgia (Spanish:Lucrecia Borgia) is a 1947 Argentine historical film directed by Luis Bayón Herrera and starring Olinda Bozán, Héctor Quintanilla and Gogó Andreu.\n\n The film portrays the life of Lucrezia Borgia (1480-1519)."
+   ]
+  },
+  {
+   "id": "0abb5ddd46b49d1d",
+   "gold": [
+    {
+     "sentence": "Disteghil Sar or Distaghil Sar (Urdu: ‎ ) is the highest mountain in the Hispar Muztagh, a subrange of the Karakoram mountain range, in Gilgit-Baltistan.",
+     "facts": {
+      "0.0": "Disteghil Sar is also called Distaghil Sar.",
+      "0.1": "Disteghil Sar is the highest mountain in the Hispar Muztagh.",
+      "0.2": "The Hispar Muztagh is a subrange of the Karakoram mountain range.",
+      "0.3": "Disteghil Sar is in Gilgit-Baltistan."
+     }
+    },
+    {
+     "sentence": " The mountain has an about 3 km long top ridge above 7400m with three distinct summits: (north)west 7885m, central 7760 m, and (south)east 7696m or 7535m ().",
+     "facts": {
+      "1.0": "Disteghil Sar has a top ridge about 3 km long.",
+      "1.1": "The top ridge of Disteghil Sar is above 7400 m.",
+      "1.2": "Disteghil Sar has three distinct summits.",
+      "1.3": "The (north)west summit of Disteghil Sar is 7885 m high.",
+      "1.4": "The central summit of Disteghil Sar is 7760 m high.",
+      "1.5": "The (south)east summit of Disteghil Sar is 7696 m or 7535 m high."
+     }
+    },
+    {
+     "sentence": " Its summit has an elevation of 7295 m and it is the highest peak in the Yengisogat subrange of the Karakoram.",
+     "facts": {
+      "2.0": "The summit of Disteghil Sar has an elevation of 7295 m.",
+      "2.1": "Disteghil Sar is the highest peak in the Yengisogat subrange of the Karakoram."
+     }
+    }
+   ],
+   "items": [
+    "The Crown (mountain)\nThe Crown, also known as Huang Guan Shan and sometimes Crown Peak, is a mountain in the Karakoram mountain range in China.\n\n It is located in the Xinjiang Uyghur Autonomous Region of China.\n\n Its summit has an elevation of 7295 m and it is the highest peak in the Yengisogat subrange of the Karakoram.",
+    "Distaghil Sar\nDisteghil Sar or Distaghil Sar (Urdu: ‎ ) is the highest mountain in the Hispar Muztagh, a subrange of the Karakoram mountain range, in Gilgit-Baltistan.\n\n It is the 19th highest mountain on earth and the 7th highest peak in Pakistan.\n\n Destghil sar is a Wakhi language word, that means \"above the inner ranch.\"\n\n The mountain has an about 3 km long top ridge above 7400m with three distinct summits: (north)west 7885m, central 7760 m, and (south)east 7696m or 7535m ().",
+    "Kezhen Peak\nKezhen Peak, also known as Karpogo Sar, is a mountain in the Karakoram mountain range.\n\n It is located in the Xinjiang Autonomous Region of China.",
+    "Kanjut Sar\nKanjut Sar (Urdu: کنجت سر‎ ) or Kunjudh Sar as pronounced in \"Wakhi\" is a mountain located in the Hispar Muztagh, a subrange of the Karakoram mountain range.\n\n Kunjudh Sar in wakhi language mean that which overlooks Kunjudh, or above Kunjudh, while Khujudh is the wakhi name for Lower Hunza.\n\n It is the 26th highest mountain on Earth and the 11th highest in Pakistan.",
+    "Passu Sar\nPassu Sar (Urdu: ‎ ; or Passu Sar, Passu I) is a mountain peak in the Batura Muztagh, a sub-range of the Karakoram mountain range, located in the Gilgit District of Gilgit-Baltistan, Pakistan, west of the Hunza Valley.\n\n It is the high point of the Passu massif, which also includes Passu Diar (or \"Passu East\", \"Pasu II\").\n\n The peak lies on the main ridge of the Batura Muztagh, about 7 km (4 mi) east of Batura Sar.",
+    "Yengisogat\nThe Yengisogat range (音苏盖提 ), also known as the Wesm Mountains, is a Chinese subrange of the Karakoram mountain range.\n\n It lies north of the Baltoro Muztagh, home of the eight-thousanders of the Karakoram.\n\n The highest peak is Huangguan Shan, or Crown Peak, 7,265 m (23,835 ft) (also sometimes given as 7,295 m/23,934 ft).",
+    "Mingli Sar\nMingli Sar is a mountain located in the Shimshal valley in Gilgit-Baltistan, Pakistan.\n\n The mountain, located in the Karakoram mountain range, is 6050 meters high and located at the southernmost part of the Pamir mountain range.\n\n It was first climbed in 1988 by the famous Pakistani climber Nazir Sabir.\n\n Shimshal lake sits at the base of the mountain.\n\n China is located to the north, while to the left is the Hindukush mountain range.\n\n K2 is located on the south eastern side of the valley.",
+    "Hispar Muztagh\nHispar Muztagh is a sub-range of the Karakoram mountain range.\n\n It is located in the Gojal region of Gilgit-Baltistan, Pakistan, north of Hispar Glacier, south of Shimshal Valley, and east of the Hunza Valley.\n\n It is the second highest sub-range of the Karakoram, the highest being the Baltoro Muztagh.\n\n The highest mountain in the range is Distaghil Sar (7,885m/25,869 ft).",
+    "Yutmaru Sar\nYutmaru Sar is a mountain in the Hispar mountain range, a subrange of the Karakoram.\n\n At an elevation of 7283 m it is the 88th highest mountain in the world.\n\n Yutmaru Sar is located in Gilgit-Baltistan, Pakistan.\n\n It was first climbed in 1980.",
+    "Momhil Sar\nMomhil Sar, or Mumhail Sar as pronounced in Wakhi is at 7343 m above sea level, is the 64th highest mountain peak in the world.\n\n Mumhail Sar in Wakhi means the mountain that overlooks or is above Grandmother's cattle pen or paddock.\n\n It is situated in the Hispar Muztagh subrange of the Karakoram range, a few kilometres to the north-west of its parent peak Trivor."
+   ]
+  },
+  {
+   "id": "fa2465efefbbdab7",
+   "gold": [
+    {
+     "sentence": "Ronkonkoma is a major railroad station and transportation hub along the Main Line of the Long Island Rail Road in Ronkonkoma, New York.",
+     "facts": {
+      "0.0": "Ronkonkoma is a major railroad station.",
+      "0.1": "Ronkonkoma is a major transportation hub.",
+      "0.2": "Ronkonkoma is along the Main Line of the Long Island Rail Road.",
+      "0.3": "The Ronkonkoma railroad station is in Ronkonkoma, New York."
+     }
+    },
+    {
+     "sentence": "Ronkonkoma ( ) is a hamlet and census-designated place (CDP) on Long Island in the Town of Islip, New York, United States.",
+     "facts": {
+      "1.0": "Ronkonkoma is a hamlet.",
+      "1.1": "Ronkonkoma is a census-designated place (CDP).",
+      "1.2": "Ronkonkoma is on Long Island.",
+      "1.3": "Ronkonkoma is in the Town of Islip.",
+      "1.4": "The Town of Islip is in New York, United States."
+     }
+    }
+   ],
+   "items": [
+    "Old Country Road\nOld Country Road is a major east–west thoroughfare through central Nassau County and extending into western Suffolk County on Long Island, New York.\n\n It serves many of the major shopping centers in central Nassau County including Roosevelt Field Mall.\n\n The road also forms part of the border between the towns of Hempstead and North Hempstead.\n\n In Nassau County, Old Country Road is county-maintained as the unsigned County Route 25 (CR 25) west of Round Swamp Road.",
+    "Ronkonkoma (LIRR station)\nRonkonkoma is a major railroad station and transportation hub along the Main Line of the Long Island Rail Road in Ronkonkoma, New York.\n\n The station is the eastern terminus of the Ronkonkoma Branch and the western terminus of the out Branch.",
+    "Great Neck, NY, encompasses nine North Hempstead villages/hamlets (~40,000 residents), five ZIP codes and one school district; Saddle Rock is its Blue Ribbon K–5 school. Floral Park village had 15,863 residents in 2010. Old Country Road serves central Nassau shopping and partly borders Hempstead/North Hempstead. Long Island’s 75-mile outer barrier separates lagoons from the Atlantic. The Nassau Herald serves Five Towns. Other entries describe",
+    "Ridgefield Park station\nRidgefield Park Station, also known as West Shore Station, was railroad station in Ridgefield Park, New Jersey at the foot of Mount Vernon Street served by the New York, Susquehanna and Western Railroad (NYSW) and the West Shore Railroad, a division of New York Central (NYCRR) The New York, Ontario and Western Railway (NYO&W) had running rights along the West Shore and sometimes stopped at Ridgefield Park.\n\n First opened in 1883 it was one of three passenger stations in the village, the others being the Little Ferry Station to the south and Westview Station to the north.\n\n The station house, built at a cost $100,000 opened in 1927.\n\n Southbound service crossed Overpeck Creek and continued to terminals on the Hudson River waterfront where there was connecting ferry service across the Hudson River to Manhattan.\n\n Northbound near Bogota the parallel NYSW and West Shore lines diverge and continue into northern New Jersey, Pennsylviania, and upstate New York.\n\n Passenger service ended in 1966.",
+    "Lacona Railroad Station and Depot\nLacona Railroad Station and Depot, also known as New York Central and Hudson River Railroad Station and Depot, is a historic railway depot located at Lacona in Oswego County, New York.\n\n It was built in 1891 by the New York Central and Hudson River Railroad.\n\n It is a small rectangular, one story, gable ended structure.",
+    "Outer barrier\nThe outer barrier, also known as the Long Island and New York City barrier islands, refers to the string of barrier islands that divide the lagoons south of Long Island, New York from the Atlantic Ocean.\n\n These islands include Coney Island, Long Beach Barrier Island, Island Park, Jones Beach Island, Fire Island and Westhampton Island.\n\n The outer barrier extends 75 mi along the South Shore of Long Island, from Rockaway Beach on the New York City/Nassau County border from Long Beach Barrier Islands' western edge, to Suffolk County's east end of Shinnecock Bay.",
+    "Ronkonkoma, New York\nRonkonkoma ( ) is a hamlet and census-designated place (CDP) on Long Island in the Town of Islip, New York, United States.\n\n The population of the CDP was 19,082 at the 2010 census.",
+    "North Creek Railroad Station\nThe North Creek Railroad Station is a historic railroad station complex located at North Creek, Warren County, New York.\n\n The complex consists of the railroad station, the freight house, round house, turntable, and horse barn.\n\n The station was built in 1874 and is a simple, rectangular, gable roofed building with a broad, overhanging strut-supported roof in the Stick-Eastlake style.\n\n Its exterior is covered with vertical boards.",
+    "New York State Route 108\nNew York State Route 108 (NY 108) is a 1.72 mi north–south state highway located on the Suffolk County side of the Suffolk–Nassau county line on Long Island, New York, in the United States.\n\n It is a spur route connecting NY 25A in Cold Spring Harbor to the Cold Spring Harbor station on the Long Island Rail Road's Port Jefferson Branch via Harbor Road.\n\n Harbor Road terminates at an intersection with Woodbury Road, on the Nassau County line, which carries County Route 11 to the east and unsigned County Route 12 to the west.\n\n NY 108, assigned in the early 1930s, is the shortest state highway on Long Island.",
+    "Long Island Electric Railway\nThe Long Island Electric Railway was a streetcar company operating in Brooklyn, Queens, and Nassau County, New York, United States between 1894 and 1926.\n\n The company was partially owned by the Long Island Consolidated Electric Companies, a holding company for the Long Island Rail Road and partially by August Belmont and the Interborough Rapid Transit Company.\n\n It connected the east end of the Fulton Street El at Crescent Street station in City Line, Brooklyn with Jamaica, Queens, and ran from there to the Nassau County line at Queens Village and to Far Rockaway, Queens via Nassau County.\n\n It also had a connection to Belmont Park.\n\n The New York and Long Island Traction Company used trackage rights over its line from Crescent Street to Queens Village."
+   ]
+  },
+  {
+   "id": "5b659feb094959b0",
+   "gold": [
+    {
+     "sentence": " Dan Hurley is the son of Hall of Fame high school coach Bob Hurley and younger brother of former Duke and Sacramento Kings guard Bobby Hurley.",
+     "facts": {
+      "0.0": "Dan Hurley is the son of Bob Hurley.",
+      "0.1": "Bob Hurley is a Hall of Fame high school coach.",
+      "0.2": "Dan Hurley is the younger brother of Bobby Hurley.",
+      "0.3": "Bobby Hurley is a former Duke guard.",
+      "0.4": "Bobby Hurley is a former Sacramento Kings guard."
+     }
+    },
+    {
+     "sentence": "Robert Matthew Hurley (born June 28, 1971) is an American basketball coach, and former college and professional player.",
+     "facts": {
+      "1.0": "Robert Matthew Hurley was born on June 28, 1971.",
+      "1.1": "Robert Matthew Hurley is an American basketball coach.",
+      "1.2": "Robert Matthew Hurley is a former college player.",
+      "1.3": "Robert Matthew Hurley is a former professional player."
+     }
+    },
+    {
+     "sentence": " Hurley is currently the head coach of the Arizona State men's team.",
+     "facts": {
+      "2.0": "Hurley is currently the head coach of the Arizona State men's team."
+     }
+    }
+   ],
+   "items": [
+    "Aaron McCreary\nAaron Monroe \"Mac\" McCreary (September 15, 1892 – ?)\n\n was an American football, basketball, and baseball player, coach, and college athletics administrator.\n\n He served as the head football coach at Tempe State Teachers College, known at Arizona State Teachers College by 1929 and now called Arizona State University, compiling a career college football record of 25–17–4.\n\n McCreary was also the head basketball coach at Tempe/Arizona State Teachers from 1923 to 1930 and at Arizona State Teacher's College of Flagstaff, now Northern Arizona University, amassing a career college basketball record of 140–149.\n\n In addition, he coached baseball at Tempe/Arizona State Teachers (1924–1926, 1928, 1930–1931) and at Arizona State Teacher's Flagstaff in 1959, tallying a career college baseball mark of 22–56–1.",
+    "Bobby Hurley\nRobert Matthew Hurley (born June 28, 1971) is an American basketball coach, and former college and professional player.\n\n Hurley is currently the head coach of the Arizona State men's team.\n\n He was previously the head coach at Buffalo.\n\n Before becoming a head coach he was an assistant coach for Wagner and an associate head coach for Rhode Island on the staffs of his younger brother Dan.",
+    "2015–16 Iowa State Cyclones men's basketball team\nThe 2015–16 Iowa State Cyclones men's basketball team represents Iowa State University during the 2015–16 NCAA Division I men's basketball season.\n\n The Cyclones were coached by Steve Prohm, who was in his 1st season.\n\n They played their home games at Hilton Coliseum in Ames, Iowa and competed in the Big 12 Conference.",
+    "Bob Hurley\nRobert Emmet Hurley, Sr. (born July 31, 1947) is a basketball coach at St. Anthony High School in Jersey City, New Jersey.\n\n Hurley has amassed 28 state championships and more than 1000 wins in 39 years as a coach.\n\n On February 2, 2011, Hurley became the tenth coach in high school history to win 1000 games.\n\n He is featured in the documentary \"The Street Stops Here\".\n\n Five of his teams have gone undefeated.\n\n On April 5, 2010, he was announced as the only coach to be inducted into the Naismith Memorial Basketball Hall of Fame that year and only the third high school coach in history to be so honored; he was formally inducted on August 13 of that year.\n\n Hurley is the father of Bobby Hurley, a former All-American point guard at Duke and the head basketball coach at Arizona State, and Dan Hurley, who was hired in February 2012 to coach the University of Rhode Island after two years of coaching at Wagner College and nine years coaching at Newark's Saint Benedict's Preparatory School, also one of the top high school programs in the nation.",
+    "Dan Hurley\nDaniel S. Hurley (born January 16, 1973) is currently the head basketball coach at the University of Rhode Island.\n\n He was named head coach on March 20, 2012 after a two-year stint at Wagner College.\n\n Prior to Wagner, Hurley had a standout career as head coach of Saint Benedict's Preparatory School, where he built the New Jersey school into one of the top high school basketball programs in America.\n\n Dan Hurley is the son of Hall of Fame high school coach Bob Hurley and younger brother of former Duke and Sacramento Kings guard Bobby Hurley.",
+    "Rhode Island Rams men's basketball\nThe Rhode Island Rams men's basketball team is a college basketball program that competes in NCAA Division I and the Atlantic 10 Conference representing the University of Rhode Island.\n\n The team is under the direction of head coach Dan Hurley, who was hired on March 20, 2012.\n\n The Rams play their home games at the Ryan Center (capacity 7,657).",
+    "Tim Esmay\nTim Esmay is an American baseball coach.\n\n He is the former head coach of the Arizona State Sun Devils baseball team.\n\n He was the head coach of the Arizona State Sun Devils baseball team from prior to the 2010 season until the end of the 2014 season, when he announced his resignation.\n\n Esmay is an Arizona State alumnus, and he played baseball there from 1986–1987.\n\n After graduating from Arizona State in 1987, Esmay served as an assistant at Arizona State, Grand Canyon, and Utah.\n\n He was Utah's head coach from 1997–2004, before he was hired as an assistant at Arizona State prior to the 2005 season.",
+    "Nate Oats\nNathanael \"Nate\" Oats (born October 13, 1974) is an American basketball coach.\n\n He is currently the head basketball coach at the State University of New York at Buffalo, following two seasons as an assistant coach under Bobby Hurley.\n\n Oats was named head coach on April 11, 2015 after Hurley was hired by Arizona State as head coach.\n\n In only his first season as head coach, he took the Buffalo Bulls to their second straight NCAA Tournament bid after winning the Mid-American Conference Championship.",
+    "David Hobbs (basketball)\nDavid A. Hobbs (born April 25, 1949) is an American basketball coach.\n\n Hobbs currently serves as a special assistant to Iowa State's head coach Steve Prohm.\n\n He was the men's head coach at the University of Alabama from 1992 to 1998 and also was an assistant coach at Alabama, the University of Kentucky and Virginia Commonwealth University.",
+    "Rudy Lavik\nRudolph H. \"Rudy\" Lavik (April 30, 1892 – September 29, 1979) was an American football and basketball coach and college athletics administrator.\n\n He served as the head football coach at Concordia College in Moorhead, Minnesota from 1920 to 1921, at Arizona State Teacher's College of Flagstaff—now Northern Arizona University—from 1928 to 1932, and at Arizona State Teachers College at Tempe—now Arizona State University—from 1933 to 1937, compiling a career college football record of 37–42–7.\n\n Lavik was also the head basketball coach at Arizona State Flagstaff (1927–1931) and Arizona State Tempe (1933–1935, 1939–1948), tallying a career college basketball mark of 146–137.\n\n In addition he served as the athletic director at Arizona State from 1933 to 1949.\n\n He was a graduate of Springfield College in Springfield, Massachusetts."
+   ]
+  },
+  {
+   "id": "11875c9559fa24a0",
+   "gold": [
+    {
+     "sentence": " Related fields of study include Islamic philosophy and Sufism.",
+     "facts": {
+      "0.0": "Related fields of study include Islamic philosophy.",
+      "0.1": "Related fields of study include Sufism."
+     }
+    },
+    {
+     "sentence": "Sufism or Taṣawwuf (Arabic: الْتَّصَوُّف [sect]; personal noun: صُوفِيّ - \"ṣūfiyy\"/ \"ṣūfī\", مُتَصَوّف - \"mutaṣawwūf\"), which is often defined as \"Islamic mysticism\", \"the inward dimension of Islam\", or \"the phenomenon of mysticism within Islam\", is a mystical trend in Islam \"characterized ... [by particular] values, ritual practices, doctrines and institutions\" which began very early on in Islamic history and which represents \"the main manifestation and the most important and central crystallization of\" mystical practice in Islam.",
+     "facts": {
+      "1.0": "Sufism is also called Taṣawwuf.",
+      "1.1": "The Arabic name for Sufism is الْتَّصَوُّف [sect].",
+      "1.2": "The personal noun for a Sufi is صُوفِيّ, transliterated as 'ṣūfiyy' or 'ṣūfī'.",
+      "1.3": "The personal noun mutaṣawwūf is مُتَصَوّف.",
+      "1.4": "Sufism is often defined as 'Islamic mysticism'.",
+      "1.5": "Sufism is often defined as 'the inward dimension of Islam'.",
+      "1.6": "Sufism is often defined as 'the phenomenon of mysticism within Islam'.",
+      "1.7": "Sufism is a mystical trend in Islam.",
+      "1.8": "Sufism is characterized by particular values, ritual practices, doctrines and institutions.",
+      "1.9": "Sufism began very early on in Islamic history.",
+      "1.10": "Sufism represents the main manifestation of mystical practice in Islam.",
+      "1.11": "Sufism represents the most important and central crystallization of mystical practice in Islam."
+     }
+    }
+   ],
+   "items": [
+    "Moinuddin Chishti\nChishtī Muʿīn al-Dīn Ḥasan Sijzī (1142–1236 CE), known more commonly as Muʿīn al-Dīn Chishtī or Moinuddin Chishti, or reverently as a Shaykh Muʿīn al-Dīn or Hazrat Muʿīn al-Dīn or Khwājā Muʿīn al-Dīn by South Asian Muslims, was a Persian Muslim preacher, ascetic, religious scholar, philosopher, and mystic from Sistan, who eventually ended up settling in the Indian subcontinent in the early 13th-century, where he promulgated the famous Chishtiyya order of Sunni mysticism.\n\n This particular \"tariqa\" (order) became the dominant Muslim spiritual group in medieval India and many of the most beloved and venerated Indian Sunni saints were Chishti in their affiliation, including Nizamuddin Awliya (d. 1325) and Amir Khusrow (d. 1325).",
+    "A Hidden Treasure\nHidden Treasure (Arabic: کنزاً مخفیاً‎ ‎ ) is a Hadith Qudsi that has a very prominent role in Islamic mysticism and Islamic philosophy.",
+    "Sufism\nSufism or Taṣawwuf (Arabic: الْتَّصَوُّف [sect]; personal noun: صُوفِيّ - \"ṣūfiyy\"/ \"ṣūfī\", مُتَصَوّف - \"mutaṣawwūf\"), which is often defined as \"Islamic mysticism\", \"the inward dimension of Islam\", or \"the phenomenon of mysticism within Islam\", is a mystical trend in Islam \"characterized ... [by particular] values, ritual practices, doctrines and institutions\" which began very early on in Islamic history and which represents \"the main manifestation and the most important and central crystallization of\" mystical practice in Islam.\n\n Although the overwhelming majority of Sufis, both pre-modern and modern, have been adherents of Sunni Islam, there nevertheless also developed certain strands of Sufi practice within the ambit of Shia Islam during the late medieval period.",
+    "Ovamir Anjum\nOvamir Anjum is the Imam Khattab Chair of Islamic Studies at the Department of Philosophy, University of Toledo.\n\n He studies the connections between theology, ethics, politics, and law in classical and medieval Islam, with a subfocus on its comparisons with western thought.\n\n Related fields of study include Islamic philosophy and Sufism.",
+    "Omid Safi\nOmid Safi is an American Professor of Asian and Middle Eastern Studies at Duke University, where he is the Director of Duke Islamic Studies Center, and a columnist for On Being.\n\n Dr. Safi specializes in Islamic mysticism (Sufism), contemporary Islamic thought and medieval Islamic history.\n\n He has served on the board of the Pluralism project at Harvard University and is the co-chair of the steering committee for the Study of Islam and the Islamic Mysticism Group at the American Academy of Religion.\n\n Before joining Duke University, Dr. Safi was a professor at the University of North Carolina Chapel Hill.",
+    "Moinuddin Chishti\n1325) and Amir Khusrow (d. 1325).\n\n As such, Muʿīn al-Dīn Chishtī's legacy rests primarily on his having been \"one of the most outstanding figures in the annals of Islamic mysticism.\"\n\n Additionally, Muʿīn al-Dīn Chishtī is also notable for having been one of the first major Islamic mystics to formally allow his followers to incorporate the \"use of music\" in their devotions, liturgies, and hymns to God, which he did so in order to make the foreign Arab faith more relatable to the indigenous peoples who had recently entered the religion or whom he sought to convert.",
+    "Abdal\nAbdāl (\"lit\": substitutes, but which can also mean \"generous\" [\"karīm\"] and \"noble\" [\"sharīf\"]) is a term used in Islamic metaphysics and Islamic mysticism, both Sunni and Shiite, to refer to a particularly important group of God's saints.\n\n In the tradition of Sunni Islam in particular, the concept attained an especially important position in the writings of the Sunni mystics and theologians, whence it appears in the works of Sunni authorities as diverse as Abu Talib al-Makki (d. 956), Ali Hujwiri (d. 1072), Ibn Asakir (d. 1076), Khwaja Abdullah Ansari (d. 1088), and Ibn Khaldun (d. 1406).",
+    "Irfan\nIn Islam, ‘Irfaan (Arabic/Persian/Urdu: عرفان ; Turkish: \"İrfan\" ), also spelt \"Irfaan\" and \"Erfan\", literally ‘knowledge, awareness, wisdom’, is gnosis.\n\n Islamic mysticism can be considered as a vast range that engulfs theoretical and practical and conventional mysticism and has been intertwined with sufism and in some cases they are assumed identical.\n\n however Islamic mysticism is assumed as one of the Islamic sciences alongside theology and philosophy.\n\n Islamic’s mysticism is cognition and knowledge that love has been intertwined through it with structure of revelation in Islam.",
+    "Dawud Tai\nAbu Solaiman Dawud ibn Nosair al-Ta’i, usually referred to as Dawud Tai, (died between 777 and 782) was a Islamic scholar and Sufi mystic.\n\n His disciples included many influential personalities of Islamic mysticism, e.g., Maruf Karkhi and Ahmad al-Buni.",
+    "Reynold A. Nicholson\nReynold Alleyne Nicholson, or R. A. Nicholson (18 August 1868 – 27 August 1945), was an eminent English orientalist, scholar of both Islamic literature and Islamic mysticism and widely regarded as one of the greatest Rumi (Mevlana or Mawlana) scholars and translators in the English language."
+   ]
+  },
+  {
+   "id": "3e43aa87c2825e08",
+   "gold": [
+    {
+     "sentence": "Hänt Extra is a Swedish language weekly celebrity and youth magazine published by Aller Media in Stockholm, Sweden.",
+     "facts": {
+      "0.0": "Hänt Extra is a Swedish language magazine.",
+      "0.1": "Hänt Extra is a weekly magazine.",
+      "0.2": "Hänt Extra is a celebrity and youth magazine.",
+      "0.3": "Hänt Extra is published by Aller Media.",
+      "0.4": "Hänt Extra is published in Stockholm, Sweden."
+     }
+    },
+    {
+     "sentence": "Tea Moderna (Macedonian: Теа Модерна ) is a Macedonian woman's weekly magazine women.",
+     "facts": {
+      "1.0": "Tea Moderna is a Macedonian woman's weekly magazine.",
+      "1.1": "Tea Moderna's name in Macedonian is Теа Модерна.",
+      "1.2": "Tea Moderna is a magazine for women."
+     }
+    }
+   ],
+   "items": [
+    "Katarina Ivanovska\nKatarina Ivanovska (Macedonian: Катарина Ивановска ; born 18 August 1988) is a Macedonian model and actress.\n\n She began her modeling career in 2004, appearing at Milan Fashion Week after winning the Look Models International model search in Macedonia.\n\n In December, 2004, she appeared in a pictorial for \"Elle\" magazine and has also appeared in \"Citizen K\", \"Stiletto\" and the Italian and Russian \"Vogue\".\n\n She has been featured on the covers of \"Diva\" and \"Maxima\" magazines and in advertisements for D&G in 2006.\n\n She is considered the most successful Macedonian model.\n\n In 2010, Ivanovska appeared in Serbian \"Elle\" magazine.\n\n In 2011 she signed a contract for advertising Victoria's Secret products.\n\n In 2011 she got her first acting job in the Macedonian World War II film, \"The Third Half\", landing the lead role of a young Jewish girl named Rebecca.",
+    "Tennis (magazine)\nTENNIS is an American sports magazine owned by the Sinclair Broadcast Group.\n\n There are eight issues per year covering the world of tennis.\n\n The \"tennis.com\" website is an offshoot of the magazine and part of the same media company.",
+    "Cult MTL\nCult MTL is an English language arts, culture and news website and monthly print publication, based in Montreal, Quebec, Canada.\n\n Its first print edition appeared on 7 September 2012.\n\n It was created only a few months after Montreal's last English-language alternative weekly, \"Montreal Mirror\", was unceremoniously closed by its parent company, Quebecor.\n\n The founding editor's of \"Cult MTL\" were also involved with the \"Mirror\".\n\n In August 2013 the print version of the magazine was started.",
+    "Hänt Extra\nHänt Extra is a Swedish language weekly celebrity and youth magazine published by Aller Media in Stockholm, Sweden.",
+    "Hänt Bild\nHänt Bild is a celebrity magazine published in Sweden.\n\n The magazine was started in 2003.\n\n It is part of Aller Media AB.\n\n It is published on a weekly basis.",
+    "Makedonsko Sonce\nMakedonsko Sonce (Macedonian: ; English: Macedonian Sun ) is a weekly magazine published in the Republic of Macedonia.\n\n The title means \"Macedonian Sun\", referring to the Vergina Sun, which is used in the logo of the magazine.\n\n It was established by Gjorgija (George) Atanasoski and the first edition was published on June 24, 1994.\n\n It describes its own political stance as affirming \"Macedonian national values, not only on territory of Macedonia but also in the other parts of ethnic Macedonia\".",
+    "Nikola Mladenov\nNikola Mladenov (Macedonian: Никола Младенов ; 10 March 1964 – 26 March 2013) was a Macedonian journalist, actor, founder and managing editor of the weekly newspaper \"Fokus\", widely regarded as one of the most reputable journalists in Macedonia, who along with his colleagues from the newspaper \"Mlad borec\" is considered to have laid the basis for the pluralistic principles in the Macedonian journalism.\n\n The \"Award for best research story of the year – Nikola Mladenov\", which is awarded by the Macedonian Institute for Media, is named after him.",
+    "Tea Moderna (magazine)\nTea Moderna (Macedonian: Теа Модерна ) is a Macedonian woman's weekly magazine women.",
+    "Den Za Nas\nDen Za Nas (in Macedonian: Ден за нас ) is the title of the fourth Macedonian language album by the Macedonian superstar Toše Proeski released in 2004.\n\n It is a 2-CD set which contains all of the songs performed on the National final in order to select a song for the Eurovision Song Contest 2004 with which Proeski would represent Macedonia in the contest.\n\n The winning song was \"Life\" which qualified for the final and finished on the 14th place in the final.\n\n Some extra songs such as \"Dzvezdo Severnice\", \"Me Sakaš So Zborovi\", \"Ima Li Den Za Nas\" and others were recorded especially for the album.",
+    "2015 Macedonian Football Supercup\nThe 2015 Macedonian Supercup was the 3rd Macedonian Football Supercup, an annual Macedonian football match played between the winners of the previous season's First League and Macedonian Cup.\n\n The game will be played between Rabotnički, who beat Teteks to win the 2015 Macedonian Cup Final, and Vardar, champions of the 2014–15 First League.\n\n It was played at Philip II Arena, Skopje and was won by Vardar by 4–3 on penalties after the match was ended 1–1 after the regular and extra time."
+   ]
+  },
+  {
+   "id": "473d37b3cb869d0d",
+   "gold": [
+    {
+     "sentence": "Miltoniopsis, abbreviated Mltnps in horticultural trade, is a genus of orchids native to Costa Rica, Panama, Venezuela, Colombia, Ecuador, and Peru.",
+     "facts": {
+      "0.0": "Miltoniopsis is a genus of orchids.",
+      "0.1": "Miltoniopsis is abbreviated Mltnps in horticultural trade.",
+      "0.2": "Miltoniopsis is native to Costa Rica, Panama, Venezuela, Colombia, Ecuador, and Peru."
+     }
+    },
+    {
+     "sentence": "Strobilanthes is a genus of about 350 species of flowering plants in the family Acanthaceae, mostly native to tropical Asia and Madagascar, but with a few species extending north into temperate regions of Asia.",
+     "facts": {
+      "1.0": "Strobilanthes is a genus of about 350 species of flowering plants.",
+      "1.1": "Strobilanthes is in the family Acanthaceae.",
+      "1.2": "Strobilanthes is mostly native to tropical Asia and Madagascar.",
+      "1.3": "A few Strobilanthes species extend north into temperate regions of Asia."
+     }
+    }
+   ],
+   "items": [
+    "Miltoniopsis vexillaria\nMiltoniopsis vexillaria (\"the flag-like \"Miltoniopsis\"\") is a species of epiphytic orchid in the genus Miltoniopsis.",
+    "Nepenthes\nNepenthes ( ), also known as tropical pitcher plants, is a genus of carnivorous plants in the monotypic family Nepenthaceae.\n\n The genus comprises roughly 150 species, and numerous natural and many cultivated hybrids.\n\n They are mostly liana-forming plants of the Old World tropics, ranging from South China, Indonesia, Malaysia and the Philippines; westward to Madagascar (two species) and the Seychelles (one); southward to Australia (three) and New Caledonia (one); and northward to India (one) and Sri Lanka (one).\n\n The greatest diversity occurs on Borneo, Sumatra, and the Philippines, with many endemic species.\n\n Many are plants of hot, humid, lowland areas, but the majority are tropical montane plants, receiving warm days but cool to cold, humid nights year round.\n\n A few are considered tropical alpine, with cool days and nights near freezing.\n\n The name \"monkey cups\" refers to the fact that monkeys have been observed drinking rainwater from these plants.",
+    "Genoplesium\nGenoplesium commonly known as midge orchids, is a genus of about 50 species of flowering plants in the orchid family, Orchidaceae and is found in Australia, New Zealand and New Caledonia.\n\n Midge orchids are terrestrial herbs with a single leaf at the base of the plant.\n\n They are similar to orchids in the genus \"Prasophyllum\" in that plants without flowers have a hollow, onion-like leaf.\n\n The flowers are small but often scented and attractive to their insect pollinators.\n\n There is disagreement about which species belong to this genus and some taxonomists suggest that most belong in the genus \"Corunastylis\".",
+    "Clinantheae\nClinantheae is a tribe (in the family Amaryllidaceae, subfamily Amaryllidoideae), where it forms part of the Andean clade, one of two American clades.\n\n The tribe was described in 2000 by Alan Meerow \"et al.\" as a result of a molecular phylogenetic study of the American Amaryllidoideae.\n\n This demonstrated that the Stenomesseae tribe, including the type genus \"Stenomesson\" was polyphyletic.\n\n Part of the tribe segregated with the Eucharideae and were submerged into it, while the other part formed a unique subclade.\n\n Since the type species of \"Stenomesson\" was not part of the second sublclade it was necessary to form a new name for the remaining species together with the other genera that remained.\n\n This was \"Clinanthus\", the oldest name for these species, and consequently the tribe Clinantheae.",
+    "Broughtonia\nBroughtonia is a genus of orchids (family Orchidaceae) native to the Bahamas and the Greater Antilles.\n\n The genus is abbreviated Bro in trade journals.",
+    "Miltoniopsis\nMiltoniopsis, abbreviated Mltnps in horticultural trade, is a genus of orchids native to Costa Rica, Panama, Venezuela, Colombia, Ecuador, and Peru.\n\n This genus comprises 5 species.\n\n Miltoniopsis's common name is Pansy Orchid.",
+    "Tritoniopsis\nTritoniopsis is a genus of flowering plants in the family Iridaceae, first described as a genus in 1926.\n\n The entire genus is endemic to Cape Province in South Africa.\n\n The genus name refers to the African genus \"Tritonia\" and is combined with the Greek word \"opsis\", meaning \"look-alike\".",
+    "Hemigraphis\nHemigraphis is a genus of plants in the family Acanthaceae, consisting of about 30 species native to tropical Asia.\n\n \"Hemigraphis\" is sometimes included in the genus \"Strobilanthes\"",
+    "Strobilanthes japonica\nStrobilanthes japonica is a flowering herbaceous perennial plant from Asia, one of around 350 plants of the genus \"Strobilanthes\".\n\n The 20–50 cm ornamental plant is cultivated in Japan and China, and blooms in autumn with 1.5 cm purple to white funnel-shaped flowers.",
+    "Strobilanthes\nStrobilanthes is a genus of about 350 species of flowering plants in the family Acanthaceae, mostly native to tropical Asia and Madagascar, but with a few species extending north into temperate regions of Asia.\n\n Many species are cultivated for their 2-lipped, hooded flowers in shades of blue, pink, white and purple.\n\n Most are frost-tender and require protection in frost-prone areas."
+   ]
+  },
+  {
+   "id": "bdd37407bd672a18",
+   "gold": [
+    {
+     "sentence": "The Rescuers is a 1977 American animated comedy-drama adventure film produced by Walt Disney Productions and first released on June 22, 1977, by Buena Vista Distribution.",
+     "facts": {
+      "0.0": "The Rescuers is a 1977 film.",
+      "0.1": "The Rescuers is an American animated film.",
+      "0.2": "The Rescuers is a comedy-drama adventure film.",
+      "0.3": "The Rescuers was produced by Walt Disney Productions.",
+      "0.4": "The Rescuers was first released on June 22, 1977.",
+      "0.5": "The Rescuers was first released by Buena Vista Distribution."
+     }
+    },
+    {
+     "sentence": "The Muppets is a 2011 American musical comedy film and the seventh theatrical film featuring the Muppets.",
+     "facts": {
+      "1.0": "The Muppets is a 2011 film.",
+      "1.1": "The Muppets is an American film.",
+      "1.2": "The Muppets is a musical comedy film.",
+      "1.3": "The Muppets is the seventh theatrical film featuring the Muppets."
+     }
+    }
+   ],
+   "items": [
+    "The Muppets (soundtrack)\nThe Muppets: An Original Walt Disney Records Soundtrack is a soundtrack album released by Walt Disney Records on November 22, 2011 for the musical comedy film \"The Muppets\".\n\n The soundtrack features five original songs, four re-recordings and remasterings of popular Muppet songs (\"The Muppet Show Theme\", \"Rainbow Connection\", and \"Mah Nà Mah Nà\"), two cover versions of existing songs (Cee Lo Green's \"Forget You\" and Nirvana's \"Smells Like Teen Spirit\"), two standalone songs (Paul Simon's \"Me and Julio Down by the Schoolyard\" and Starship's \"We Built This City\"), and fifteen dialogue tracks.\n\n It also features the song \"Man or Muppet\", which won the Academy Award for Best Original Song.\n\n The soundtrack was also nominated for Best Compilation Soundtrack for Visual Media at the 55th Grammy Awards.",
+    "The Muppets at Walt Disney World\nThe Muppets at Walt Disney World is a television special starring Jim Henson's Muppets at Walt Disney World in Lake Buena Vista, Florida.\n\n The special aired on NBC as part of \"The Magical World of Disney\" on May 6, 1990, and turned out to be the last Muppets special that Henson would work on (he would die 10 days following its airing, on May 16).",
+    "Mickey's Christmas Carol\nMickey's Christmas Carol is a 1983 American animated featurette produced by Walt Disney Productions and released by Buena Vista Distribution.\n\n It was directed and produced by Burny Mattinson.\n\n The cartoon is an adaptation of Charles Dickens' \"A Christmas Carol\", starring Scrooge McDuck as Ebenezer Scrooge.\n\n Many other Disney characters, primarily from the Mickey Mouse universe, \"Robin Hood\", and \"The Adventures of Ichabod and Mr. Toad\", were cast throughout the film.",
+    "Muppets Most Wanted (soundtrack)\nMuppets Most Wanted: An Original Walt Disney Records Soundtrack is a soundtrack album released by Walt Disney Records on March 18, 2014 for the musical comedy film \"Muppets Most Wanted\".\n\n The soundtrack features six original songs, two re-recordings of popular Muppet songs (\"The Muppet Show Theme\" and \"Together Again\"), three cover versions of existing songs (Allen Toussaint's \"Working in the Coal Mine\", Maroon 5's \"Moves Like Jagger\", and Los del Río's \"Macarena (Bayside Boys Mix)\"), an orchestral suite by Christophe Beck, five demos by Bret McKenzie, and eight dialogue tracks.",
+    "Muppet Treasure Island\nMuppet Treasure Island is a 1996 American musical adventure comedy film based on Robert Louis Stevenson's \"Treasure Island\".\n\n It is the fifth feature film to star The Muppets, and was directed by Brian Henson.",
+    "The Muppets (film)\nThe Muppets is a 2011 American musical comedy film and the seventh theatrical film featuring the Muppets.\n\n The film is directed by James Bobin, written by Jason Segel and Nicholas Stoller, produced by David Hoberman and Todd Lieberman, and stars Segel, Amy Adams, Chris Cooper and Rashida Jones, as well as Muppet performers Steve Whitmire, Eric Jacobson, Dave Goelz, Bill Barretta, David Rudman, Matt Vogel, and Peter Linz.\n\n Bret McKenzie served as music supervisor, writing four of the film's five original songs, and Christophe Beck composed the film's score.\n\n In \"The Muppets\", devoted fan Walter, his brother Gary, and Gary's girlfriend Mary help Kermit the Frog reunite the disbanded Muppets, as they must raise $10 million to save the Muppet Theater from Tex Richman, a businessman who plans to demolish the studio to drill for oil.",
+    "Disney Renaissance\nIn the history of The Walt Disney Company, the Disney Renaissance refers to the era from 1989 to 1999 during which Walt Disney Feature Animation (renamed Walt Disney Animation Studios in 2006) experienced a creative resurgence in producing successful animated films based on well-known stories, which restored public and critical interest in The Walt Disney Company as a whole.\n\n During this era, the studio produced and released ten animated films: \"The Little Mermaid\" (1989), \"The Rescuers Down Under\" (1990), \"Beauty and the Beast\" (1991), \"Aladdin\" (1992), \"The Lion King\" (1994), \"Pocahontas\" (1995), \"The Hunchback of Notre Dame\" (1996), \"Hercules\" (1997), \"Mulan\" (1998) and \"Tarzan\" (1999).",
+    "The Rescuers\nThe Rescuers is a 1977 American animated comedy-drama adventure film produced by Walt Disney Productions and first released on June 22, 1977, by Buena Vista Distribution.\n\n The 23rd Disney animated feature film, the film is about the Rescue Aid Society, an international mouse organization headquartered in New York City and shadowing the United Nations, dedicated to helping abduction victims around the world at large.\n\n Two of these mice, jittery janitor Bernard (Bob Newhart) and his co-agent, the elegant Miss Bianca (Eva Gabor), set out to rescue Penny (Michelle Stacy), an orphan girl being held prisoner in the Devil's Bayou by treasure huntress Madame Medusa (Geraldine Page).",
+    "List of The Muppets productions\nThis is a list of productions based on The Muppets characters and franchise, including films, television series and specials, and other media.\n\n The franchise's main work is \"The Muppet Show\", a syndicated television series which ran from 1976 to 1981.\n\n The franchise includes eight feature films; \"The Muppet Movie\", \"The Great Muppet Caper\", \"The Muppets Take Manhattan\", \"The Muppet Christmas Carol\", \"Muppet Treasure Island\", \"Muppets from Space\", \"The Muppets\", and \"Muppets Most Wanted\".\n\n The franchise also includes other series such as \"Muppets Tonight\" and \"The Muppets\".",
+    "The Rescuers Down Under\nThe Rescuers Down Under is a 1990 American animated comedy-drama adventure film produced by Walt Disney Feature Animation and released by Walt Disney Pictures on November 16, 1990.\n\n The 29th Disney animated feature film, the film is the sequel to the 1977 animated film \"The Rescuers\", which was based on the novels of Margery Sharp.\n\n Set in the Australian Outback, the film centers on Bernard and Bianca traveling to Australia to save a boy named Cody from a villainous poacher in pursuit of an endangered bird of prey."
+   ]
+  },
+  {
+   "id": "79b6a08b4fc97ca0",
+   "gold": [
+    {
+     "sentence": "Edward Benjamin Britten, Baron Britten {'1': \", '2': \", '3': \", '4': \"} (22 November 1913 – 4 December 1976) was an English composer, conductor and pianist.",
+     "facts": {
+      "0.0": "Edward Benjamin Britten, Baron Britten, lived from 22 November 1913 to 4 December 1976.",
+      "0.1": "Edward Benjamin Britten, Baron Britten, was an English composer.",
+      "0.2": "Edward Benjamin Britten, Baron Britten, was an English conductor.",
+      "0.3": "Edward Benjamin Britten, Baron Britten, was an English pianist."
+     }
+    },
+    {
+     "sentence": "Béla Viktor János Bartók ( ; ] ; 25 March 1881 – 26 September 1945) was a Hungarian composer, pianist and an ethnomusicologist.",
+     "facts": {
+      "1.0": "Béla Viktor János Bartók lived from 25 March 1881 to 26 September 1945.",
+      "1.1": "Béla Viktor János Bartók was a Hungarian composer.",
+      "1.2": "Béla Viktor János Bartók was a Hungarian pianist.",
+      "1.3": "Béla Viktor János Bartók was a Hungarian ethnomusicologist."
+     }
+    }
+   ],
+   "items": [
+    "String Quartet No. 6 (Bartók)\nDue to the difficulties of the war, communication between Bartók and Székely was difficult, and the quartet was not premiered until 20 January 1941, when the Kolisch Quartet, to whom the work is dedicated, gave its premiere at the Town Hall in New York City.",
+    "List of string quartets by Béla Bartók\nThe Hungarian composer Béla Bartók wrote six string quartets, each for the usual forces of two violins, viola and cello.\n\n Notable composers who have been influenced by them include Benjamin Britten, particularly in the Sonata in C for Cello and Piano (; ), Elliott Carter, who refers in the opening of his own First String Quartet to Bartók’s Sixth Quartet , Chen Yi , Edison Denisov, whose Second Quartet is closely related to Bartók’s Fifth Quartet , Franco Donatoni, who was deeply impressed when he heard a broadcast of Bartók's Fourth Quartet , Robert Fripp, who mentions them as an influence upon King Crimson , Miloslav Ištvan , György Kurtág, whose Opp.",
+    "List of string quartets by Béla Bartók\n1 and 28 both owe a great deal to Bartók's quartets (; ), György Ligeti, whose two string quartets both owe a great deal to Bartók’s quartets (; ), Bruno Maderna , George Perle, who credits the Bartók Fourth and Fifth Quartets as precedents for his use of arrays of chords related to one another by different types of symmetry , Walter Piston (; ), Kim Dzmitrïyevich Tsesakow , Wilfried Westerlinck , Stefan Wolpe, who explained in a public lecture how he had derived ideas from Bartók’s Fourth Quartet , and Xu Yongsan .",
+    "Béla Bartók\nBéla Viktor János Bartók ( ; ] ; 25 March 1881 – 26 September 1945) was a Hungarian composer, pianist and an ethnomusicologist.\n\n He is considered one of the most important composers of the 20th century; he and Liszt are regarded as Hungary's greatest composers .\n\n Through his collection and analytical study of folk music, he was one of the founders of comparative musicology, which later became ethnomusicology.",
+    "Béla Bartók Music High School\nBéla Bartók Music High School (Bartók Béla Zeneművészeti Szakközépiskola) is situated in the Palace of Music (Zenepalota) in Bartók square Miskolc, Hungary.\n\nIt is a famous Music school named after the famous Hungarian composer Béla Bartók.\n\nIt was founded in 1966.",
+    "Debussy’s *Masques* (1904), premiered by Ricardo Viñes in 1905, evokes existential tragedy amid his marital separation. Elizabeth Barrett Browning’s 44 *Sonnets from the Portuguese* (written 1845–46; published 1850) remain popular. Bartók (1881–1945), Hungarian composer and ethnomusicology pioneer, wrote six influential quartets. His Sixth, begun in Switzerland in 1939 and completed",
+    "String Quartet No. 6 (Bartók)\nThe String Quartet No. 6, Sz.\n\n 114, BB 119, was the final string quartet that Béla Bartók wrote before his death.\n\n It was begun in August 1939 in Saanen, Switzerland, where Bartók was a guest of his patron, the conductor Paul Sacher.\n\n Shortly after he completed the Divertimento for String Orchestra on the 17th, he started on a commission for his friend, the violinist Zoltán Székely.\n\n Székely was acting as intermediary for the \"New Hungarian Quartet\", who had given the Budapest premiere of the String Quartet No. 5.\n\n With the outbreak of World War II and his mother's illness, Bartók returned to Budapest, where the quartet was finished in November.\n\n After his mother's death, Bartók decided to leave with his family for the United States.",
+    "Suite, Op. 14 (Bartók)\nThe Suite, Op. 14, Sz.\n\n 62, BB 70 is a piece for solo piano written by Béla Bartók.\n\n It was written in February 1916, published in 1918, and debuted by the composer on April 21, 1919, in Budapest.\n\n The Suite is one of Bartók's most significant works for piano, only comparable with his 1926 Piano Sonata.\n\n Though much of Bartók's work makes frequent use of Eastern European folk music, this suite is one of the few pieces without melodies of folk origin.\n\n However, Romanian, Arabic, and North African rhythmic influences can still be found in some movements.\n\n Originally intending the suite to be a five-movement work, Bartók later decided against the idea and discarded the second movement, the \"Andante\", which was published only posthumously in the October 1955 issue of \"Új Zenei Szemle\" (New Musical Review).",
+    "Benjamin Britten\nEdward Benjamin Britten, Baron Britten {'1': \", '2': \", '3': \", '4': \"} (22 November 1913 – 4 December 1976) was an English composer, conductor and pianist.\n\n He was a central figure of 20th-century British classical music, with a range of works including opera, other vocal music, orchestral and chamber pieces.\n\n His best-known works include the opera \"Peter Grimes\" (1945), the \"War Requiem\" (1962) and the orchestral showpiece \"The Young Person's Guide to the Orchestra\" (1945).",
+    "List of compositions by Béla Bartók\nThis aspires to be a complete list of compositions by Béla Bartók.\n\n The catalogue numbering by András Szőllősy (Sz.)\n\n, László Somfai (BB.)\n\n and Denijs Dille (DD.)\n\n are provided, as well as Bartók's own opus numbers.\n\n Note that Bartók started three times anew with opus numbers, here indicated with \"(list 1)\", \"(list 2)\" and \"(list 3)\" respectively.\n\n The pieces from the third listing are by far best known; opus lists 1 and 2 are early works.\n\n The year of composition and instrumentation (including voice) are included.\n\n See the main article on Béla Bartók for more details."
+   ]
+  },
+  {
+   "id": "6510bdb3d917f249",
+   "gold": [
+    {
+     "sentence": "The Silent Historian (original title: \"Het zwijgen van Loe de Jong [The Silence of Loe de Jong]\") is a 2011 Dutch documentary film by Simonka de Jong, shown as part of the January 2012 New York Jewish Film Festival, presented in partnership with Jewish Museum and Film Society of Lincoln Center.",
+     "facts": {
+      "0.0": "The Silent Historian has the original title 'Het zwijgen van Loe de Jong [The Silence of Loe de Jong]'.",
+      "0.1": "The Silent Historian is a 2011 Dutch documentary film.",
+      "0.2": "The Silent Historian is a documentary film by Simonka de Jong.",
+      "0.3": "The Silent Historian was shown as part of the January 2012 New York Jewish Film Festival.",
+      "0.4": "The January 2012 New York Jewish Film Festival screening of The Silent Historian was presented in partnership with the Jewish Museum.",
+      "0.5": "The January 2012 New York Jewish Film Festival screening of The Silent Historian was presented in partnership with the Film Society of Lincoln Center."
+     }
+    },
+    {
+     "sentence": "The Betrayal — Nerakhoon is a 2008 documentary film directed by Ellen Kuras and Thavisouk Phrasavath.",
+     "facts": {
+      "1.0": "The Betrayal — Nerakhoon is a 2008 documentary film.",
+      "1.1": "The Betrayal — Nerakhoon was directed by Ellen Kuras.",
+      "1.2": "The Betrayal — Nerakhoon was directed by Thavisouk Phrasavath."
+     }
+    }
+   ],
+   "items": [
+    "Betrayal (1929 film)\nBetrayal was a 1929 drama film produced for Famous Players-Lasky and released by Paramount Pictures.\n\n The film is the last silent film directed by Lewis Milestone, the last silent performance by Gary Cooper, the last silent performance by Germany's Emil Jannings, and the only onscreen pairing of Cooper and Jannings.\n\n It is considered a lost film.",
+    "Graph query row:\nfilm: The Silent Historian\nfilm_type: documentary film\ngenre: None\nlinked_genre: None",
+    "The Decembrists (film)\nThe Decembrists (Russian: Декабристы , \"Dekabristy \" ) is a 1927 Soviet silent historical drama film directed by Aleksandr Ivanovsky.",
+    "The Price of Betrayal\nThe Price of Betrayal (Swedish: \"Judaspengar\" ) is a 1915 Swedish silent drama film directed by Victor Sjöström.",
+    "No Names on the Doors\nNo Names on the Doors (Hebrew: אין שמות על הדלתות‎ ) is a 1997 Israeli drama directed by Nadav Levitan.\n\n The film was screened at the Berlin International Film Festival, the Montpellier Film Festival, the Shanghai International Film Festival, and the Melbourne International Film Festival.\n\n It received two nominations for an Ophir Award in the categories of Best Actor and Best Screenplay.",
+    "The Counterfeiters (2007 film)\nThe Counterfeiters (German: \"Die Fälscher\" ) is a 2007 Austrian-German drama film written and directed by Stefan Ruzowitzky.\n\n It fictionalizes Operation Bernhard, a secret plan by Nazi Germany during World War II to destabilize the United Kingdom by flooding its economy with forged Bank of England pound notes.\n\n The film centres on a Jewish counterfeiter, Salomon 'Sally' Sorowitsch, who is coerced into assisting the operation at the Sachsenhausen concentration camp.",
+    "Graph query row:\nfilm: The Betrayal – Nerakhoon\nfilm_type: documentary film\ngenre: None\nlinked_genre: None",
+    "Thérèse Raquin (1928 film)\nThérèse Raquin is a 1928 drama film directed by Jacques Feyder.\n\n It is the third silent film adaptation of the novel of the same name by Émile Zola.\n\n The film stars Gina Manès as Thérèse Raquin, Wolfgang Zilzer as Monsieur Raquin, and Jeanne Marie Laurent as Madame Raquin.\n\n The décors of the Paris suburbs for the film were built by André Andrejew.\n\n The film was produced by Deutsche Film Union in Germany, with German and French actors, in a French-German co-production, to be later released at the same time in France as \"Thérèse Raquin\" and Germany as Du sollst nicht ehebrechen!\n\n.\n\n As no words were spoken, both versions differed only with the language of intertitles.\n\n The British title at the time of the film's original release was Thou Shalt Not.\n\n This is last silent film imports distributed by Warner Bros.' newly acquired First National subsidiary.\n\n No dialong with music score and sound effects.",
+    "The Silent Historian\nThe Silent Historian (original title: \"Het zwijgen van Loe de Jong [The Silence of Loe de Jong]\") is a 2011 Dutch documentary film by Simonka de Jong, shown as part of the January 2012 New York Jewish Film Festival, presented in partnership with Jewish Museum and Film Society of Lincoln Center.",
+    "The Betrayal – Nerakhoon\nThe Betrayal — Nerakhoon is a 2008 documentary film directed by Ellen Kuras and Thavisouk Phrasavath."
+   ]
+  }
+ ]
+}

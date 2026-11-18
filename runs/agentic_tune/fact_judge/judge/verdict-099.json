@@ -1,0 +1,76 @@
+[
+  {
+    "id": "3d5688f5397a85df",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 2, "quote": "In the third quarter, Uber generated $394 million in operating income"}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "contradicted",
+        "evidence": [
+          {"item": 2, "quote": "generated $394 million in operating income and $219 million worth of net income"},
+          {"item": 7, "quote": "Uber reported net income of $221 million in the third quarter"}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 5, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 5, "quote": "the rate of sexual assault reported on the app decreased 38% between its first and second reports."}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "b98d4dd5ed130cec",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 4, "quote": "10:59 p.m. — The Cowboys are moving the ball now"}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 4, "quote": "The Cowboys are moving the ball now, when it's a bit too late."}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 7, "quote": "Mixon has been forced to step up without Burrow under center"}
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 7, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 7, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}
+        ]
+      }
+    ]
+  }
+]

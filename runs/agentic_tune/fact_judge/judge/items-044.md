@@ -1,0 +1,568 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 1 items.
+
+=== ITEM id=be4ecb607b121ff8 ===
+Gold sentences and facts:
+Sentence 0: From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant.
+  Fact 0.0: The item is from Netflix.
+  Fact 0.1: Jess and Bill Walker are doing their best to keep their family connected.
+  Fact 0.2: The Walkers' children are growing older.
+  Fact 0.3: The Walkers' children are growing more independent.
+  Fact 0.4: The Walkers' children are growing more distant.
+Sentence 1: Speaking of the Christmas season, McLean — born in New Rochelle, New York — said that "the holidays are a time for families to come together.
+  Fact 1.0: McLean was born in New Rochelle, New York.
+  Fact 1.1: McLean spoke about the Christmas season.
+  Fact 1.2: McLean said the holidays are a time for families to come together.
+
+Retrieved items:
+<item 1>
+The 5 biggest mistakes parents make at Christmastime, according to a parenting expert (FOX News - Lifestyle, 2023-12-09T19:46:55+00:00)
+Pressures are high for parents and caregivers around the holidays.
+
+That means there’s room for error, according to parenting expert Hannah Keeley, who offered up some of the biggest mistakes parents tend to make at
+Christmastime.
+
+In an email she sent to Fox News Digital, Virginia-based Keeley identified the top five holiday blunders that parents often make.
+
+HOME FOR THE HOLIDAYS? HERE'S HOW TO AVOID STRESS AROUND FAMILY MEMBERS, ACCORDING TO EXPERTS
+
+Here are the mistakes Keeley thinks parents should try to avoid.
+
+Diving right in …
+
+1. Creating unrealistic expectations
+
+Parents who make a "must-do" Christmas list that’s a "mile long" at the "first sniff of peppermint mochas" are perhaps setting themselves up for failure — and
+Keeley said she empathized with this instinct.
+
+Doing the most could lead to a season of disappointment, she warned.
+
+CHRISTMAS TREE SHOPPING?
+
+Graph facts:
+- After losing her leg to the flu, Virginia woman urges people to get vaccinated: ‘Don’t waste time’ -MENTIONS-> Virginia
+- Biden’s AI EO hailed as broad, but not deep without legislation to match -MENTIONS-> Virginia
+- The obsessive tormenter who made professors’ lives miserable -MENTIONS-> Virginia
+- Best sportsbook bonus offers for NFL Monday Night Football Eagles vs. Seahawks: Claim over $5,000 in bonuses from Bet365, BetMGM, BetRivers, Caesars
+Sportsbook, DraftKings and FanDuel -MENTIONS-> Virginia
+- Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier -MENTIONS-> Virginia
+
+Entities: Virginia, Hannah Keeley, Christmastime, unrealistic expectations, holiday blunders, The 5 biggest mistakes parents make at Christmastime, according to
+a parenting expert, Fox News, Fox News Digital, parenting
+</item 1>
+
+<item 2>
+The 5 biggest mistakes parents make at Christmastime, according to a parenting expert (FOX News - Lifestyle, 2023-12-09T19:46:55+00:00)
+CHRISTMAS TREE SHOPPING? HERE'S HOW TO SELECT THE PERFECT ONE FOR YOU
+
+"Aside from the time I asked my husband to turn our bathroom into a Hallmark movie and he actually pulled it off, unrealistic expectations around Christmas
+usually just set up moms for inevitable disappointment," Keeley said.
+
+"Beautiful family Christmas memories can be made without the drive-in ‘Grinch’ movie, the tacky light tour and the neighborhood Christmas cookie bake-off all in
+the same weekend."
+
+Instead, parents should "take it easy and leave plenty of room to relax," said Keeley.
+
+2. Using Christmas as a bribe
+
+While it’s easy for parents to use a message of "be good or else" as a parenting tactic before Santa Claus comes down the chimney, Keeley said this approach
+lowers parenting standards.
+
+"I refer to this tactic as ‘stooping to Santa,’" she said. "Don’t lower your parenting standards to bribery, especially around a season and a character that is
+supposed to symbolize peace and goodwill on Earth."
+
+Graph facts:
+- Keeley -SAID-> Santa bribe
+- Keeley -SAID-> self-discipline
+- The best October Prime Day gaming deals -MENTIONS-> Hallmark
+- Which M.L.B. Playoff Team Has the Most Daunting Home Field? We Ranked Them. -MENTIONS-> Santa Claus
+- Keeley -SAID-> holiday martyrdom
+
+Entities: Santa Claus, Hallmark, Grinch movie, Keeley, The 5 biggest mistakes parents make at Christmastime, according to a parenting expert, Christmas, FOX
+News - Lifestyle, Earth
+</item 2>
+
+<item 3>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+“I’d recommend pulling your partner aside and saying: ‘How are we doing?’ Like a temperature check,” she added. “Those are points where the two of you can come
+and remind each other: ‘We are a team in this.’ Or, the two of you could go on a walk and separate from the family, just for a little bit of time to reset
+within the relationship.”
+
+During the holiday season, your partner may be seeing how you interact with your family for the first time. But that’s not necessarily a bad thing, according to
+the relationship experts. “I think introducing a significant other to family is a really vulnerable act, and that vulnerability is going to be what allows for
+greater intimacy,” Lurie said. “When your significant other sees you with your family, they may see another side of you that they may not have had access to
+before.”
+
+(Getty Images)
+
+On the other hand, your partner could learn that your relationship with your parents and extended family members is complex.
+
+Graph facts:
+- Country music couples Tim McGraw, Faith Hill and Garth Brooks, Trisha Yearwood share tips to lasting marriages -MENTIONS-> Family
+- A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation -MENTIONS-> Family
+- Who Are Mikaela Shiffrin’s Parents? All You Need to Know About Skiing Legend’s Family -MENTIONS-> Family
+- The best comedies you’ll find on streaming right now -MENTIONS-> Family
+- Jada Pinkett Smith -SAID-> Family
+
+Entities: Family, Should you introduce your partner to your family during the holidays? Relationship experts weigh in, Intimacy, Lurie, Getty Images,
+relationships, The Independent
+</item 3>
+
+<item 4>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+That isn’t necessarily a cause for concern, as long as you inform your significant other about the interworkings of your family dynamics.
+
+“I think that we tend to be our best relational self when we’ve really done the work around understanding all of our past relationships,” Zar explained. “You
+can tell your partner: ‘I don’t have a close relationship with my brother, and here’s why. Here are the intentional choices that I’ve made around it.’ Or you
+can say: ‘Here’s my chosen family. These are the people who are important to me.’ Your significant other will see that you’ve been introspective and have
+takeaways around how you’ve navigated your family’s origin.”
+
+As long as you and your partner have discussed your relationship expectations - both before and during the holidays – introducing them to your family may deepen
+your relationship and could be a step in the right direction.
+
+Graph facts:
+- Should you introduce your partner to your family during the holidays? Relationship experts weigh in -PUBLISHED_BY-> The Independent - Life and Style
+- Should you introduce your partner to your family during the holidays? Relationship experts weigh in -MENTIONS-> Family
+- Should you introduce your partner to your family during the holidays? Relationship experts weigh in -MENTIONS-> Rachel Zar
+- Should you introduce your partner to your family during the holidays? Relationship experts weigh in -MENTIONS-> Spark Chicago Therapy
+- Should you introduce your partner to your family during the holidays? Relationship experts weigh in -MENTIONS-> Hanukkah
+
+Entities: Should you introduce your partner to your family during the holidays? Relationship experts weigh in, Zar, family dynamics, past relationships,
+relationship expectations, chosen family, The Independent, holidays
+</item 4>
+
+<item 5>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+“Sometimes it can be helpful for them to know about the dynamics that they’re stepping into and how they can best support you. Frankly, they should be aware if
+there is tension or if there is stress within your family.”
+
+(Getty Images)
+
+Communication before the holidays goes both ways, and there are things that your family should know about your significant other too. “If there’s something
+about your partner that could be surprising to your family, or that’s a notable difference from who someone you’ve brought home before, tell your relatives
+that,” Zar said. “Let’s set your family and partner up for success.”
+
+Before bringing your significant other home for the holidays, you may want to express to your family how you wish for them to feel included - such as
+incorporating your partner’s family traditions into your own celebration. However, Zar advised against oversharing information before Christmas. You still want
+your family and partner to connect in person, rather than hearing about each other through the grapevine.
+
+Graph facts:
+- Should you introduce your partner to your family during the holidays? Relationship experts weigh in -PUBLISHED_BY-> The Independent - Life and Style
+- Should you introduce your partner to your family during the holidays? Relationship experts weigh in -MENTIONS-> Family
+- Should you introduce your partner to your family during the holidays? Relationship experts weigh in -MENTIONS-> Rachel Zar
+- Should you introduce your partner to your family during the holidays? Relationship experts weigh in -MENTIONS-> Spark Chicago Therapy
+- Should you introduce your partner to your family during the holidays? Relationship experts weigh in -MENTIONS-> Hanukkah
+
+Entities: Should you introduce your partner to your family during the holidays? Relationship experts weigh in, Zar, Getty Images, The Independent
+</item 5>
+
+<item 6>
+Graph query row:
+article: Every movie and show coming to Netflix in November
+publisher: Polygon
+passages: ['Every movie and show coming to Netflix in November (Polygon, 2023-11-01T12:00:00+00:00)\nEven with Netflix’s recommendation algorithm serving you
+new movies, new TV shows, and original programming tailored to your viewing habits, the streaming service’s firehose of content makes what’s coming and going
+difficult to parse.\n\nIt’s a great month for adult animation, with both the Scott Pilgrim animated show and Blue Eye Samurai hitting Netflix this month. Also,
+there’s the Squid Game reality show — because right, that’s a thing — and a new season of The Crown. But this month, we’re highlighting The Social Network, with
+another new David Fincher movie on its way to Netflix... but not for the reasons you probably think.\n\nEditor’s Pick: The Social Network\n\nHey, did you know
+that there’s a popular fan theory that bestselling romantic comedy Red, White, and Royal Blue started off as fanfic of The Social Network? Well, now you do!',
+'Every movie and show coming to Netflix in November (Polygon, 2023-11-01T12:00:00+00:00)\nWell, now you do!\n\nI could talk about how with each passing year,
+David Fincher’s Mark Zuckerberg biopic grows increasingly more relevant, as Facebook’s (excuse me, Meta’s) grip on the internet becomes stronger, but that’s
+been done to the death. Instead, I’m going to praise both Jesse Eisenberg and Andrew Garfield for their electric performances and their zinging chemistry. Come
+for the Facebook and Mark Zuckerberg origin story, stay for the tale of doomed friendship (and maybe write a fanfic about it?).\n\nAlso, this is a great
+November movie because of the autumnal shots of Harvard and the Winklevoss twins rowing. Impeccable vibes to fuel the dark academia aesthetic TikTok
+videos.\n\nAvailable Now\n\nSlayaway Camp 2: Netflix & Kill (Netflix Games)\n\nFrom Netflix: Leave no survivors. In this sequel, you’re Skullface, a killer
+stuck inside a retro horror movie catalog — solve puzzles, stalk victims and get stabby.', 'Every movie and show coming to Netflix in November (Polygon,
+2023-11-01T12:00:00+00:00)\nAvailable in November\n\nDead Cells: Netflix Edition (Netflix Games)\n\nFrom Netflix: You’re a pile of undead sludge. Find a body,
+uncover secrets and defeat bosses to escape a deserted castle. If you die, restart and reignite the fight.\n\nElena Knows (Netflix Film)\n\nFrom Netflix: As her
+Parkinson’s disease progresses, a woman leads a relentless investigation into finding those responsible for the sudden death of her daughter.\n\nThe Railway Men
+(Netflix Series)\n\nFrom Netflix: After a deadly gas leaks from a factory in Bhopal, brave railway workers risk their lives to save others in the face of an
+unspeakable disaster.\n\nReplacing Chef Chico (Netflix Series)\n\nFrom Netflix: When a head chef falls into a coma, it’s up to his devoted sous-chef to keep
+their Filipino fine dining restaurant from closing down.\n\nAvailable Nov. 1\n\nHurricane Season (Netflix Film)\n\nFrom Netflix: When a group of kids finds a
+corpse floating in a canal, the brutal reality behind the perverse crime unravels a town’s hidden secrets.', 'Every movie and show coming to Netflix in November
+(Polygon, 2023-11-01T12:00:00+00:00)\nLocked In (Netflix Film)\n\nFrom Netflix: A kindly nurse tries to unlock the secrets of a coma patient’s injuries — and
+discovers the bitter rivalry, infidelity, betrayal and murder behind them.\n\nMysteries of the Faith (Netflix Documentary)\n\nFrom Netflix: Mysteries of the
+Faith is a sweeping docuseries exploring the secrets of Christianity’s most legendary artifacts. From the Veil of the Veronica to the Holy Nails, these
+cherished objects have mystified and inspired millions for centuries, but only a few have seen them up close and personal. Until now.\n\nNuovo Olimpo (Netflix
+Film)\n\nFrom Netflix: In 1970s Rome, a casual encounter between Enea and Pietro at a movie theater turns into an unforgettable romance — until destiny pulls
+them apart.\n\nTill Murder Do Us Part: Soering vs. Haysom (Netflix Documentary)\n\nFrom Netflix: Did Jens Soering murder his girlfriend’s parents in 1985 — or
+was she the killer? This docuseries digs into questions that still swirl around the case.', 'Every movie and show coming to Netflix in November (Polygon,
+2023-11-01T12:00:00+00:00)\nThis docuseries digs into questions that still swirl around the case.\n\nWingwomen (Netflix Film)\n\nFrom Netflix: Tired of life on
+the run, a pro thief decides to retire — but not before one easy last job with her partner in crime and a feisty new getaway driver.\n\n13 Going on 30\n\n13
+Hours: The Secret Soldiers of Benghazi\n\n60 Days In: Season 5\n\nThe Addams Family\n\nThe Big Lebowski\n\nThe Change-Up\n\nDesperado\n\nDownsizing\n\nDrag Me
+to Hell\n\nLove in the Wild: Season 1\n\nMadea’s Family Reunion\n\nThe Mummy (2017)\n\nPaul Blart: Mall Cop\n\nPaul Blart: Mall Cop 2\n\nPitch Perfect\n\nThe
+Scorpion King\n\nScott Pilgrim vs. the World\n\nSherlock Gnomes\n\nSix Feet Under: Seasons 1-5\n\nSixteen Candles\n\nThe Social Network\n\nTed 2\n\nVictorious:
+Season 3\n\nWhiplash\n\nAvailable Nov.', 'Every movie and show coming to Netflix in November (Polygon, 2023-11-01T12:00:00+00:00)\n2\n\nAll the Light We Cannot
+See (Netflix Series)\n\nFrom Netflix: In the final days of WWII, the paths of a blind French girl and a German soldier collide in a story of the extraordinary
+power of human connection. Directed by Shawn Levy and based on the Pulitzer Prize-winning novel by Anthony Doerr.\n\nCigarette Girl (Netflix Series)\n\nFrom
+Netflix: A gifted artisan’s journey of love and self-discovery unfolds as she defies tradition within Indonesia’s clove cigarette industry in the
+1960s.\n\nHiguita: The Way of the Scorpion (Netflix Documentary)\n\nFrom Netflix: From poverty to soccer legend, this documentary captures the rise of
+Colombia’s René Higuita, his revolutionary career and the birth of “The Scorpion.”\n\nOnimusha (Netflix Anime)\n\nFrom Netflix: With a demonic weapon in hand, a
+wandering swordsman-for-hire and a samurai brotherhood take on an uprising of the undead.', 'Every movie and show coming to Netflix in November (Polygon,
+2023-11-01T12:00:00+00:00)\nUnicorn Academy (Netflix Family)\n\nFrom Netflix: When a dark force threatens to destroy Unicorn Island, a brave teen and her five
+schoolmates must rise up to protect their beloved magical academy.\n\nAvailable Nov. 3\n\nBlue Eye Samurai (Netflix Anime)\n\nFrom Netflix: Driven by a dream of
+revenge against the white father who made her an outcast in Edo-period Japan, a young warrior cuts a bloody path toward her destiny.\n\nDaily Dose of Sunshine
+(Netflix Series)\n\nFrom Netflix: A kind-hearted nurse working in psychiatry goes above and beyond to be a ray of light for those under her care, despite the
+challenges coming her way.\n\nErin & Aaron: Season 1\n\nFerry: The Series (Netflix Series)\n\nFrom Netflix: Desperate for funds, Ferry Bouman stumbles upon a
+golden opportunity when a high-profile bust leaves a vacant position among Brabant’s top dealers.', 'Every movie and show coming to Netflix in November
+(Polygon, 2023-11-01T12:00:00+00:00)\nNYAD (Netflix Film)\n\nFrom Netflix: NYAD tells the remarkable true story of athlete Diana Nyad who, at the age of 60 and
+with the help of her best friend and coach, commits to achieving her life-long dream: a 110-mile open ocean swim from Cuba to Florida.\n\nSelling Sunset: Season
+7 (Netflix Series)\n\nFrom Netflix: Set in the world of LA’s high-end real estate, Selling Sunset follows the city’s most successful female realtors who all
+work under the same roof at The Oppenheim Group, the #1 agency in the Hollywood Hills and the Sunset Strip. They work hard and play harder, as they compete with
+the cutthroat LA market... and each other.\n\nSly (Netflix Documentary)\n\nFrom Netflix: His love of film began as an escape from a rocky childhood. From
+underdog to Hollywood legend, Sylvester Stallone tells his story in this documentary.', 'Every movie and show coming to Netflix in November (Polygon,
+2023-11-01T12:00:00+00:00)\nFrom underdog to Hollywood legend, Sylvester Stallone tells his story in this documentary.\n\nThe Tailor: Season 3 (Netflix
+Series)\n\nFrom Netflix: Peyami’s feelings for Esvet intensify, forcing him to make the difficult choice between their love and his lifelong friendship with
+Dimitri.\n\nVacaciones de verano (Netflix Film)\n\nFrom Netflix: When two friends lose their jobs and find gigs as children’s entertainers at a luxury hotel,
+they sneak in their kids to give them a summer vacation.\n\nAvailable Nov. 4\n\nThe Amazing Race: Season 17\n\nThe Amazing Race: Season 31\n\nInsidious: The Red
+Door\n\nLopez vs. Lopez: Season 1\n\nAvailable Nov. 7\n\nFace Off: Seasons 4-5\n\nThe Improv: 60 and Still Standing (Netflix Comedy)\n\nFrom Netflix: The Improv
+turns 60 with original performances from today’s most celebrated artists and biggest concert acts, along with exclusive and rarely seen moments from one of the
+largest comedy archives.', 'Every movie and show coming to Netflix in November (Polygon, 2023-11-01T12:00:00+00:00)\nIt’s a one-night event to honor artists who
+defined comedy and culture for decades... all while standing in front of a simple brick wall.\n\nAvailable Nov. 8\n\nThe Billionaire, the Butler and the
+Boyfriend (Netflix Documentary)\n\nFrom Netflix: How did a conflict between the world’s wealthiest woman and her daughter spiral into national scandal? This
+riveting docuseries tells the whole story.\n\nThe Claus Family 3 (Netflix Film)\n\nWhen the delivery of presents goes wrong and Grandpa Noël gets in trouble,
+siblings Jules From Netflix: and Noor must work together to save Christmas. Can they do it?\n\nCyberbunker: The Criminal Underworld (Netflix
+Documentary)\n\nFrom Netflix: This documentary reveals how a group of hackers powered the darkest corners of the internet from a Cold War-era bunker in a quiet
+German tourist town.\n\nEscaping Twin Flames (Netflix Documentary)\n\nFrom Netflix: In our digital era, why not turn to the internet to find your soulmate?',
+'Every movie and show coming to Netflix in November (Polygon, 2023-11-01T12:00:00+00:00)\nEnter Jeff and Shaleia, the leaders of Twin Flames Universe who sell
+online classes that guarantee harmonious union with your destined partner. From the Emmy-nominated filmmaking team behind Seduced: Inside the NXIVM Cult, comes
+Escaping Twin Flames, a three-part documentary series that pulls back the veil on Twin Flames Universe, a controversial online community that preys on people
+looking for love. With exclusive access to former members, the series reveals the horrifying stories of coercion and exploitation surrounding Twin Flames
+Universe – from encouraging stalking behavior to manipulating gender identities. The series also documents the active efforts of family members to rescue their
+loved ones from Jeff and Shaleia’s web.\n\nRobbie Williams (Netflix Documentary)\n\nFrom Netflix: After 25 years of his record-breaking solo career, Robbie
+looks back on his younger self and reflects on a lifetime spent in the spotlight.\n\nAvailable Nov. 9\n\nAkuma Kun (Netflix Anime)\n\nFrom Netflix: Akuma Kun, a
+boy raised by a demon, works with his half-human partner Mephisto III as paranormal investigators to solve various murder and mysteries.', 'Every movie and show
+coming to Netflix in November (Polygon, 2023-11-01T12:00:00+00:00)\nTemple of Film: 100 Years of the Egyptian Theatre (Netflix Documentary)\n\nFrom Netflix:
+Guillermo del Toro, Rian Johnson and other film luminaries look back at LA’s historic Egyptian Theatre as it returns to its former movie palace
+glory.\n\nAvailable Nov. 10\n\nAt the Moment (Netflix Series)\n\nFrom Netflix: This anthology series set during the pandemic follows 10 unique love stories of
+passion and heartache.\n\nThe Killer (Netflix Film)\n\nFrom Netflix: After a fateful near miss, an assassin battles his employers — and himself — on an
+international hunt for retribution he insists isn’t personal.\n\nTeam Ninja Warrior: Season 2\n\nAvailable Nov. 11\n\nLaguna Beach: Season 3\n\nAvailable Nov.
+14\n\nCriminal Code (Netflix Series)\n\nFrom Netflix: To crack the code of an investigation into a larger-than-life robbery, federal agents need to get
+creative.\n\nDubai Bling: Season 2 (Netflix Series)\n\nFrom Netflix: New relationships, new love and plenty of new drama as Dubai’s favorite frenemies ball out
+and fall out in epic fashion.', 'Every movie and show coming to Netflix in November (Polygon, 2023-11-01T12:00:00+00:00)\nHow to Become a Mob Boss (Netflix
+Documentary)\n\nFrom Netflix: Narrator Peter Dinklage guides you through this darkly satirical how-to guide that explores the rise and fall of history’s most
+notorious mob bosses - from Al Capone to Pablo Escobar - and their tactics for success.\n\nThe Netflix Cup: Swing to Survive (Netflix Live Event)\n\nFrom
+Netflix: This fall, in a clash of wheels and irons, stars of two Netflix sports series will face off in The Netflix Cup, Netflix’s first-ever live sports event
+featuring athletes from Formula 1: Drive to Survive and Full Swing. The Formula 1® drivers and PGA TOUR professionals will pair up to compete in a match play
+tournament at Wynn Golf Club at Wynn Las Vegas, The Netflix Cup is set to stream live on Netflix beginning at 3p.m. PT / 6p.m. ET on Tuesday, November
+14th.\n\nSuburræterna (Netflix Series)\n\nFrom Netflix: While chaos rules over Rome, established alliances are at risk as tensions rise with emerging clans.',
+'Every movie and show coming to Netflix in November (Polygon, 2023-11-01T12:00:00+00:00)\nThe world of “Suburra” takes a new turn.\n\nAvailable Nov.
+15\n\nFeedback (Netflix Series)\n\nFrom Netflix: A former rock star with a faulty memory and a family in shambles, all due to his addiction problem, sets off on
+a frantic search to find his missing son.\n\nFirst Wives Club: Seasons 1-3\n\nMatt Rife: Natural Selection (Netflix Comedy)\n\nFrom Netflix: A new stand-up
+special from comedian Matt Rife.\n\nMillion Dollar Decorators: Season 1\n\nAvailable Nov. 16\n\nBest. Christmas. Ever! (Netflix Film)\n\nFrom Netflix: After a
+twist of fate brings their families together for Christmas, Charlotte sets out to prove her old friend Jackie’s life is too good to be true.\n\nThe Crown:
+Season 6 Part 1 (Netflix Series)\n\nFrom Netflix: Queen Elizabeth II reflects on her legacy and lineage as Diana dazzles the public in the final weeks of her
+life and the monarchy faces a reckoning.', 'Every movie and show coming to Netflix in November (Polygon, 2023-11-01T12:00:00+00:00)\nDownton
+Abbey\n\nHarriet\n\nIn Love and Deep Water (Netflix Film)\n\nFrom Netflix: Romance, mystery and mayhem unfolds aboard a luxury liner heading for the Aegean Sea
+when a butler and a passenger try to solve a baffling murder.\n\nLone Survivor\n\nAvailable Nov. 17\n\nAll-Time High (Netflix Film)\n\nFrom Netflix: A con
+artist in dire need of cash and a woman with a crypto fortune hit it off. Is she the target of his dreams, or is the scammer about to get scammed?\n\nBeliever 2
+(Netflix Film)\n\nA determined detective continues his search for the truth behind Asia’s largest drug organization and its elusive boss he has unfinished
+business with.\n\nCoComelon Lane (Netflix Film)\n\nFrom Netflix: Join your favorite “CoComelon” characters on imaginative adventures as they explore feelings —
+and the world around them — in this story-driven series.', 'Every movie and show coming to Netflix in November (Polygon, 2023-11-01T12:00:00+00:00)\nThe Dads
+(Netflix Documentary)\n\nFrom Netflix: In this gentle meditation on fatherhood, brotherhood and manhood, five fathers of trans children join Dennis Shepard –
+the father of slain gay college student Matthew Shepard – for a weekend fishing trip in rural Oklahoma. As the men cast their lines into the river, they find
+common ground across racial, geographical and generational lines: their unconditional love for their children.\n\nThe Queenstown Kings (Netflix Film)\n\nFrom
+Netflix: After his father’s death, a washed-up soccer star returns to rural Queenstown and struggles to connect with his son, a promising player with big
+dreams.\n\nRustin (Netflix Film)\n\nFrom Netflix: Activist Bayard Rustin faces racism and homophobia as he helps change the course of Civil Rights history by
+orchestrating the 1963 March on Washington.\n\nSagrada Familia: Season 2 (Netflix Series)\n\nFrom Netflix: Haunted by the past, Gloria will stop at nothing to
+carve out a future for her family while new schemes and mysteries bubble up in the neighborhood.', 'Every movie and show coming to Netflix in November (Polygon,
+2023-11-01T12:00:00+00:00)\nScott Pilgrim Takes Off (Netflix Anime)\n\nFrom Netflix: Scott Pilgrim meets the girl of his dreams, Ramona Flowers, but learns he
+must defeat her seven evil exes in order to date her. Then things get even more complicated.\n\nStamped from the Beginning (Netflix Documentary)\n\nUsing
+innovative animation and expert insights, this documentary based on Ibram X. Kendi’s bestseller explores the history of racist ideas in America.\n\nAvailable
+Nov. 20\n\nShahs of Sunset: Seasons 1-2\n\nAvailable Nov. 21\n\nLeo (Netflix Family)\n\nFrom Netflix: Adam Sandler is a lizard named Leo in this coming-of-age
+musical comedy about the last year of elementary school as seen through the eyes of a class pet.\n\nAvailable Nov. 22\n\nCrime Diaries: The Celebrity Stylist
+(Netflix Film)\n\nFrom Netflix: When an up-and-coming stylist is found stabbed to death in his home, a young detective is given 20 days to solve the case.
+Inspired by true events.', 'Every movie and show coming to Netflix in November (Polygon, 2023-11-01T12:00:00+00:00)\nInspired by true events.\n\nHigh on the
+Hog: How African American Cuisine Transformed America: Season 2 — (Netflix Documentary)\n\nFrom Netflix: In season two of the immersive award-winning
+docu-series High on the Hog, host Stephen Satterfield travels across the United States to uncover how African-American cuisine has fueled social justice
+movements, transformed communities and awakened cultural creativity in America in powerful and lasting ways.\n\nSquid Game: The Challenge (Netflix
+Series)\n\n*New episodes released weekly, through December 6\n\nFrom Netflix: 456 real players will enter the competition show in pursuit of a life-changing
+reward of USD $4.56 million. As they compete through a series of games inspired by the original show - plus surprising new additions - their strategies,
+alliances, and character will be put to the test while competitors are eliminated around them.\n\nAvailable Nov. 23\n\nLove Island USA: Season 3\n\nMy Daemon
+(Netflix Anime)\n\nFrom Netflix: To save his mother, a kind-hearted boy and his tiny daemon friend set out on a journey across post-apocalyptic Japan as dark
+forces close in.', 'Every movie and show coming to Netflix in November (Polygon, 2023-11-01T12:00:00+00:00)\nMy Little Pony: Make Your Mark: Chapter 6 (Netflix
+Family)\n\nFrom Netflix: Opaline has captured nearly all the power of Equestria, and time’s running out! Can the ponies team up with the dragons to save magic
+and restore peace?\n\nAvailable Nov. 24\n\nA Nearly Normal Family (Netflix Series)\n\nFrom Netflix: The world of a seemingly perfect family shatters when a
+shocking murder proves that they’re willing to make desperate moves to protect each other.\n\nDOI BOY (Netflix Film)\n\nFrom Netflix: A refugee builds a new
+identity as a sex worker in Thailand and gets caught up in a client’s risky scheme that might lead to a better life.\n\nI Don’t Expect Anyone to Believe Me
+(Netflix Film)\n\nFrom Netflix: A writer’s career — and entire life — suddenly goes off script when he falls prey to a dangerous web of criminals right before
+moving to Barcelona.\n\nLast Call for Istanbul (Netflix Film)\n\nFrom Netflix: A chance meeting at the airport leads two married people to an unforgettable
+night full of excitement, desire, and temptation in New York City.', 'Every movie and show coming to Netflix in November (Polygon,
+2023-11-01T12:00:00+00:00)\nMy Demon (Netflix Series)\n\nFrom Netflix: Chaebol heiress Do Do Hee is an adversary to many, and Jung Koo Won is a powerful entity
+superior to humans. However, one day, Jung Koo Won loses his powers. Forced to collaborate with Do Do Hee to regain them, sparks of romance begin to fly between
+them as they embark on this journey together.\n\nWedding Games (Netflix Film)\n\nFrom Netflix: When Alex and Eva choose to exchange vows at the very spot they
+first crossed paths, a series of hilarious missteps derails their journey to the altar.\n\nAvailable Nov. 27\n\nGo Dog Go: Season 4 (Netflix Family)\n\nFrom
+Netflix: Tag and her best friend Scooch love lending a paw to their friends around Pawston, whether it’s delivering cookie boxes or hosting the
+Dogcathalon!\n\nAvailable Nov. 28\n\nComedy Royale (Netflix Series)\n\nFrom Netflix: Hand-picked by Korean comedy icons, five teams of rising comics battle for
+a chance to host in a Netflix show — delivering nonstop, zany laughter.', 'Every movie and show coming to Netflix in November (Polygon,
+2023-11-01T12:00:00+00:00)\nLove Like a K-Drama (Netflix Series)\n\nFrom Netflix: Four actresses from Japan go to South Korea to audition and act alongside
+Korean actors for roles in a series of love stories. Will true romance follow?\n\nOnmyoji (Netflix Anime)\n\nFrom Netflix: In the gilded enclave of the imperial
+court, a gifted mystic befriends a brilliant musician, and together they solve cases rising from the demonic realm.\n\nVerified Stand-Up (Netflix
+Comedy)\n\nFrom Netflix: 10 comics. 10 sets. 1 show. Introducing: Verified Stand-Up, a new stand-up comedy series Filmed at Webster Hall in New York City, the
+series features 10 of the best comedians in the game: Asif Ali, Dulcé Sloan, Gianmarco Soresi, Isiah Kelly, Leslie Liao, Nimesh Patel, Robby Hoffman, Rosebud
+Baker, Sabrina Wu, and Vanessa Gonzalez. Over the course of two-episodes, discover your new favorite comedian.\n\nAvailable Nov.', 'Every movie and show coming
+to Netflix in November (Polygon, 2023-11-01T12:00:00+00:00)\nOver the course of two-episodes, discover your new favorite comedian.\n\nAvailable Nov.
+29\n\nAmerican Symphony (Netflix Documentary)\n\nBad Surgeon: Love Under the Knife (Netflix Documentary)\n\nFrom Netflix: This shocking docuseries about one of
+the biggest frauds in modern medical history exposes a thoracic surgeon famous for groundbreaking achievements in the field of regenerative
+medicine.\n\nAvailable Nov. 30\n\nThe Bad Guys: A Very Bad Holiday (Netflix Family)\n\nFrom Netflix: Mr. Wolf and his crew of animal outlaws realize they’ll
+need to restore the city’s Christmas spirit to keep their annual holiday heist afloat.\n\nFamily Switch (Netflix Film)\n\nFrom Netflix: Jess and Bill Walker are
+doing their best to keep their family connected as their children grow older, more independent, and more distant. When a chance encounter with an astrological
+reader causes the family to wake up to a full body switch, on the morning of the most important day of each of their lives, can the Walkers unite to land a
+promotion, college interview, record deal and soccer tryout?', 'Every movie and show coming to Netflix in November (Polygon,
+2023-11-01T12:00:00+00:00)\nJennifer Garner, Ed Helms, Emma Myers and Brady Noon star in this family comedy directed by McG and based on the book “Bedtime For
+Mommy” by Amy Krouse-Rosenthal.\n\nHard Days (Netflix Film)\n\nFrom Netflix: Already running from a mess of problems, a desperate cop thinks he’s gotten away
+with a hit-and-run. But there was a witness, and they’ve got his number.\n\nObliterated (Netflix Series)\n\nFrom Netflix: An elite special forces team must
+thwart a deadly threat in Las Vegas in this high-octane action-comedy series from the creators of “Cobra Kai.”\n\nSchool Spirits: Season 1\n\nVirgin River:
+Season 5 Part 2 (Netflix Series)\n\nFrom Netflix: Mel adjusts to a different pace of life, Jack works to grow his business, and the town faces new threats as
+secrets begin to surface in Virgin River.']
+connections: [{'entity': 'Polygon', 'relationship': 'PUBLISHED_BY'}, {'entity': 'Mark Zuckerberg', 'relationship': 'MENTIONS'}, {'entity': 'crypto',
+'relationship': 'MENTIONS'}, {'entity': 'New York City', 'relationship': 'MENTIONS'}, {'entity': 'Netflix', 'relationship': 'MENTIONS'}, {'entity': 'pandemic',
+'relationship': 'MENTIONS'}, {'entity': 'Meta', 'relationship': 'MENTIONS'}, {'entity': 'Colombia', 'relationship': 'MENTIONS'}, {'entity': 'internet',
+'relationship': 'MENTIONS'}, {'entity': 'Ibram X. Kendi', 'relationship': 'MENTIONS'}, {'entity': 'David Fincher', 'relationship': 'MENTIONS'}, {'entity':
+'Robbie Williams', 'relationship': 'MENTIONS'}, {'entity': 'All the Light We Cannot See', 'relationship': 'MENTIONS'}, {'entity': 'Guillermo del Toro',
+'relationship': 'MENTIONS'}, {'entity': 'Cuba', 'relationship': 'MENTIONS'}, {'entity': 'Japan', 'relationship': 'MENTIONS'}, {'entity': 'Rian Johnson',
+'relationship': 'MENTIONS'}, {'entity': 'United States', 'relationship': 'MENTIONS'}, {'entity': 'real estate', 'relationship': 'MENTIONS'}, {'entity': 'Diana',
+'relationship': 'MENTIONS'}, {'entity': 'The Crown', 'relationship': 'MENTIONS'}, {'entity': 'racism', 'relationship': 'MENTIONS'}, {'entity': 'Hollywood',
+'relationship': 'MENTIONS'}, {'entity': 'LA', 'relationship': 'MENTIONS'}, {'entity': 'TikTok', 'relationship': 'MENTIONS'}, {'entity': 'Oklahoma',
+'relationship': 'MENTIONS'}, {'entity': 'Indonesia', 'relationship': 'MENTIONS'}, {'entity': 'Scott Pilgrim', 'relationship': 'MENTIONS'}, {'entity': 'Blue Eye
+Samurai', 'relationship': 'MENTIONS'}, {'entity': 'The Social Network', 'relationship': 'MENTIONS'}, {'entity': 'Red, White, and Royal Blue', 'relationship':
+'MENTIONS'}, {'entity': 'adult animation', 'relationship': 'MENTIONS'}, {'entity': 'Jesse Eisenberg', 'relationship': 'MENTIONS'}, {'entity': 'Andrew Garfield',
+'relationship': 'MENTIONS'}, {'entity': 'Winklevoss twins', 'relationship': 'MENTIONS'}, {'entity': 'Harvard', 'relationship': 'MENTIONS'}, {'entity': 'Mark
+Zuckerberg biopic', 'relationship': 'MENTIONS'}, {'entity': 'Slayaway Camp 2: Netflix & Kill', 'relationship': 'MENTIONS'}, {'entity': 'Netflix Games',
+'relationship': 'MENTIONS'}, {'entity': 'dark academia aesthetic', 'relationship': 'MENTIONS'}, {'entity': 'Dead Cells: Netflix Edition', 'relationship':
+'MENTIONS'}, {'entity': 'Elena Knows', 'relationship': 'MENTIONS'}, {'entity': 'The Railway Men', 'relationship': 'MENTIONS'}, {'entity': 'Replacing Chef
+Chico', 'relationship': 'MENTIONS'}, {'entity': 'Hurricane Season', 'relationship': 'MENTIONS'}, {'entity': 'Parkinson’s disease', 'relationship': 'MENTIONS'},
+{'entity': 'Bhopal', 'relationship': 'MENTIONS'}, {'entity': 'Locked In', 'relationship': 'MENTIONS'}, {'entity': 'Mysteries of the Faith', 'relationship':
+'MENTIONS'}, {'entity': 'Christianity', 'relationship': 'MENTIONS'}, {'entity': 'Veil of the Veronica', 'relationship': 'MENTIONS'}, {'entity': 'Holy Nails',
+'relationship': 'MENTIONS'}, {'entity': 'Nuovo Olimpo', 'relationship': 'MENTIONS'}, {'entity': 'Enea', 'relationship': 'MENTIONS'}, {'entity': 'Pietro',
+'relationship': 'MENTIONS'}, {'entity': 'Till Murder Do Us Part: Soering vs. Haysom', 'relationship': 'MENTIONS'}, {'entity': 'Jens Soering', 'relationship':
+'MENTIONS'}, {'entity': 'Haysom', 'relationship': 'MENTIONS'}, {'entity': 'Wingwomen', 'relationship': 'MENTIONS'}, {'entity': '13 Going on 30', 'relationship':
+'MENTIONS'}, {'entity': '13 Hours: The Secret Soldiers of Benghazi', 'relationship': 'MENTIONS'}, {'entity': '60 Days In: Season 5', 'relationship':
+'MENTIONS'}, {'entity': 'The Addams Family', 'relationship': 'MENTIONS'}, {'entity': 'The Big Lebowski', 'relationship': 'MENTIONS'}, {'entity': 'The
+Change-Up', 'relationship': 'MENTIONS'}, {'entity': 'Desperado', 'relationship': 'MENTIONS'}, {'entity': 'Downsizing', 'relationship': 'MENTIONS'}, {'entity':
+'Drag Me to Hell', 'relationship': 'MENTIONS'}, {'entity': 'Love in the Wild: Season 1', 'relationship': 'MENTIONS'}, {'entity': 'Madea’s Family Reunion',
+'relationship': 'MENTIONS'}, {'entity': 'The Mummy (2017)', 'relationship': 'MENTIONS'}, {'entity': 'Paul Blart: Mall Cop', 'relationship': 'MENTIONS'},
+{'entity': 'Paul Blart: Mall Cop 2', 'relationship': 'MENTIONS'}, {'entity': 'Pitch Perfect', 'relationship': 'MENTIONS'}, {'entity': 'The Scorpion King',
+'relationship': 'MENTIONS'}, {'entity': 'Scott Pilgrim vs. the World', 'relationship': 'MENTIONS'}, {'entity': 'Sherlock Gnomes', 'relationship': 'MENTIONS'},
+{'entity': 'Six Feet Under: Seasons 1-5', 'relationship': 'MENTIONS'}, {'entity': 'Sixteen Candles', 'relationship': 'MENTIONS'}, {'entity': 'Ted 2',
+'relationship': 'MENTIONS'}, {'entity': 'Victorious: Season 3', 'relationship': 'MENTIONS'}, {'entity': 'Whiplash', 'relationship': 'MENTIONS'}, {'entity':
+'Shawn Levy', 'relationship': 'MENTIONS'}, {'entity': 'Anthony Doerr', 'relationship': 'MENTIONS'}, {'entity': 'Cigarette Girl', 'relationship': 'MENTIONS'},
+{'entity': 'clove cigarette industry', 'relationship': 'MENTIONS'}, {'entity': 'Higuita: The Way of the Scorpion', 'relationship': 'MENTIONS'}, {'entity': 'René
+Higuita', 'relationship': 'MENTIONS'}, {'entity': 'Onimusha', 'relationship': 'MENTIONS'}, {'entity': 'WWII', 'relationship': 'MENTIONS'}, {'entity': 'Unicorn
+Academy', 'relationship': 'MENTIONS'}, {'entity': 'Unicorn Island', 'relationship': 'MENTIONS'}, {'entity': 'Daily Dose of Sunshine', 'relationship':
+'MENTIONS'}, {'entity': 'psychiatry', 'relationship': 'MENTIONS'}, {'entity': 'Erin & Aaron: Season 1', 'relationship': 'MENTIONS'}, {'entity': 'Ferry: The
+Series', 'relationship': 'MENTIONS'}, {'entity': 'Ferry Bouman', 'relationship': 'MENTIONS'}, {'entity': 'Brabant', 'relationship': 'MENTIONS'}, {'entity':
+'NYAD', 'relationship': 'MENTIONS'}, {'entity': 'Selling Sunset: Season 7', 'relationship': 'MENTIONS'}, {'entity': 'Sly', 'relationship': 'MENTIONS'},
+{'entity': 'Diana Nyad', 'relationship': 'MENTIONS'}, {'entity': 'Sylvester Stallone', 'relationship': 'MENTIONS'}, {'entity': 'The Oppenheim Group',
+'relationship': 'MENTIONS'}, {'entity': 'Hollywood Hills', 'relationship': 'MENTIONS'}, {'entity': 'Sunset Strip', 'relationship': 'MENTIONS'}, {'entity': 'open
+ocean swimming', 'relationship': 'MENTIONS'}, {'entity': 'The Tailor: Season 3', 'relationship': 'MENTIONS'}, {'entity': 'Peyami', 'relationship': 'MENTIONS'},
+{'entity': 'Esvet', 'relationship': 'MENTIONS'}, {'entity': 'Dimitri', 'relationship': 'MENTIONS'}, {'entity': 'Vacaciones de verano', 'relationship':
+'MENTIONS'}, {'entity': 'The Amazing Race: Season 17', 'relationship': 'MENTIONS'}, {'entity': 'The Amazing Race: Season 31', 'relationship': 'MENTIONS'},
+{'entity': 'Insidious: The Red Door', 'relationship': 'MENTIONS'}, {'entity': 'Lopez vs. Lopez: Season 1', 'relationship': 'MENTIONS'}, {'entity': 'Face Off:
+Seasons 4-5', 'relationship': 'MENTIONS'}, {'entity': 'The Improv: 60 and Still Standing', 'relationship': 'MENTIONS'}, {'entity': 'The Billionaire, the Butler
+and the Boyfriend', 'relationship': 'MENTIONS'}, {'entity': 'The Claus Family 3', 'relationship': 'MENTIONS'}, {'entity': 'Cyberbunker: The Criminal
+Underworld', 'relationship': 'MENTIONS'}, {'entity': 'Escaping Twin Flames', 'relationship': 'MENTIONS'}, {'entity': 'Jules', 'relationship': 'MENTIONS'},
+{'entity': 'Noor', 'relationship': 'MENTIONS'}, {'entity': 'Grandpa Noël', 'relationship': 'MENTIONS'}, {'entity': 'Polygon', 'relationship': 'MENTIONS'},
+{'entity': 'Shaleia', 'relationship': 'MENTIONS'}, {'entity': 'Twin Flames Universe', 'relationship': 'MENTIONS'}, {'entity': 'Seduced: Inside the NXIVM Cult',
+'relationship': 'MENTIONS'}, {'entity': 'NXIVM Cult', 'relationship': 'MENTIONS'}, {'entity': 'Akuma Kun', 'relationship': 'MENTIONS'}, {'entity': 'Mephisto
+III', 'relationship': 'MENTIONS'}, {'entity': 'Temple of Film: 100 Years of the Egyptian Theatre', 'relationship': 'MENTIONS'}, {'entity': 'Egyptian Theatre',
+'relationship': 'MENTIONS'}, {'entity': 'At the Moment', 'relationship': 'MENTIONS'}, {'entity': 'The Killer', 'relationship': 'MENTIONS'}, {'entity': 'Team
+Ninja Warrior: Season 2', 'relationship': 'MENTIONS'}, {'entity': 'Laguna Beach: Season 3', 'relationship': 'MENTIONS'}, {'entity': 'Criminal Code',
+'relationship': 'MENTIONS'}, {'entity': 'Dubai Bling: Season 2', 'relationship': 'MENTIONS'}, {'entity': 'How to Become a Mob Boss', 'relationship':
+'MENTIONS'}, {'entity': 'Peter Dinklage', 'relationship': 'MENTIONS'}, {'entity': 'mob bosses', 'relationship': 'MENTIONS'}, {'entity': 'Al Capone',
+'relationship': 'MENTIONS'}, {'entity': 'Pablo Escobar', 'relationship': 'MENTIONS'}, {'entity': 'The Netflix Cup', 'relationship': 'MENTIONS'}, {'entity':
+'Formula 1: Drive to Survive', 'relationship': 'MENTIONS'}, {'entity': 'Full Swing', 'relationship': 'MENTIONS'}, {'entity': 'Formula 1', 'relationship':
+'MENTIONS'}, {'entity': 'Wynn Golf Club', 'relationship': 'MENTIONS'}, {'entity': 'Wynn Las Vegas', 'relationship': 'MENTIONS'}, {'entity': 'Suburræterna',
+'relationship': 'MENTIONS'}, {'entity': 'Suburra', 'relationship': 'MENTIONS'}, {'entity': 'Feedback', 'relationship': 'MENTIONS'}, {'entity': 'First Wives
+Club', 'relationship': 'MENTIONS'}, {'entity': 'Matt Rife', 'relationship': 'MENTIONS'}, {'entity': 'Natural Selection', 'relationship': 'MENTIONS'}, {'entity':
+'Million Dollar Decorators', 'relationship': 'MENTIONS'}, {'entity': 'Best. Christmas. Ever!', 'relationship': 'MENTIONS'}, {'entity': 'Charlotte',
+'relationship': 'MENTIONS'}, {'entity': 'Jackie', 'relationship': 'MENTIONS'}, {'entity': 'The Crown: Season 6 Part 1', 'relationship': 'MENTIONS'}, {'entity':
+'Queen Elizabeth II', 'relationship': 'MENTIONS'}, {'entity': 'Downton Abbey', 'relationship': 'MENTIONS'}, {'entity': 'Harriet', 'relationship': 'MENTIONS'},
+{'entity': 'In Love and Deep Water', 'relationship': 'MENTIONS'}, {'entity': 'Aegean Sea', 'relationship': 'MENTIONS'}, {'entity': 'Lone Survivor',
+'relationship': 'MENTIONS'}, {'entity': 'All-Time High', 'relationship': 'MENTIONS'}, {'entity': 'Believer 2', 'relationship': 'MENTIONS'}, {'entity': 'drug
+organization', 'relationship': 'MENTIONS'}, {'entity': 'CoComelon Lane', 'relationship': 'MENTIONS'}, {'entity': 'CoComelon', 'relationship': 'MENTIONS'},
+{'entity': 'The Dads', 'relationship': 'MENTIONS'}, {'entity': 'The Queenstown Kings', 'relationship': 'MENTIONS'}, {'entity': 'Rustin', 'relationship':
+'MENTIONS'}, {'entity': 'Sagrada Familia: Season 2', 'relationship': 'MENTIONS'}, {'entity': 'Dennis Shepard', 'relationship': 'MENTIONS'}, {'entity': 'Matthew
+Shepard', 'relationship': 'MENTIONS'}, {'entity': 'Bayard Rustin', 'relationship': 'MENTIONS'}, {'entity': 'Gloria', 'relationship': 'MENTIONS'}, {'entity':
+'Queenstown', 'relationship': 'MENTIONS'}, {'entity': 'weekend fishing trip', 'relationship': 'MENTIONS'}, {'entity': '1963 March on Washington',
+'relationship': 'MENTIONS'}, {'entity': 'fatherhood', 'relationship': 'MENTIONS'}, {'entity': 'brotherhood', 'relationship': 'MENTIONS'}, {'entity': 'manhood',
+'relationship': 'MENTIONS'}, {'entity': 'homophobia', 'relationship': 'MENTIONS'}, {'entity': 'Civil Rights history', 'relationship': 'MENTIONS'}, {'entity':
+'Scott Pilgrim Takes Off', 'relationship': 'MENTIONS'}, {'entity': 'Ramona Flowers', 'relationship': 'MENTIONS'}, {'entity': 'Stamped from the Beginning',
+'relationship': 'MENTIONS'}, {'entity': 'racist ideas', 'relationship': 'MENTIONS'}, {'entity': 'Shahs of Sunset: Seasons 1-2', 'relationship': 'MENTIONS'},
+{'entity': 'Leo', 'relationship': 'MENTIONS'}, {'entity': 'Adam Sandler', 'relationship': 'MENTIONS'}, {'entity': 'Crime Diaries: The Celebrity Stylist',
+'relationship': 'MENTIONS'}, {'entity': 'Availability of Stamped from the Beginning', 'relationship': 'MENTIONS'}, {'entity': 'Availability of Shahs of Sunset:
+Seasons 1-2', 'relationship': 'MENTIONS'}, {'entity': 'Availability of Leo', 'relationship': 'MENTIONS'}, {'entity': 'High on the Hog: How African American
+Cuisine Transformed America: Season 2', 'relationship': 'MENTIONS'}, {'entity': 'Stephen Satterfield', 'relationship': 'MENTIONS'}, {'entity': 'African-American
+cuisine', 'relationship': 'MENTIONS'}, {'entity': 'social justice movements', 'relationship': 'MENTIONS'}, {'entity': 'Squid Game: The Challenge',
+'relationship': 'MENTIONS'}, {'entity': 'Squid Game', 'relationship': 'MENTIONS'}, {'entity': 'Love Island USA: Season 3', 'relationship': 'MENTIONS'},
+{'entity': 'My Daemon', 'relationship': 'MENTIONS'}, {'entity': 'My Little Pony: Make Your Mark: Chapter 6', 'relationship': 'MENTIONS'}, {'entity': 'A Nearly
+Normal Family', 'relationship': 'MENTIONS'}, {'entity': 'DOI BOY', 'relationship': 'MENTIONS'}, {'entity': 'I Don’t Expect Anyone to Believe Me',
+'relationship': 'MENTIONS'}, {'entity': 'Last Call for Istanbul', 'relationship': 'MENTIONS'}, {'entity': 'Equestria', 'relationship': 'MENTIONS'}, {'entity':
+'Barcelona', 'relationship': 'MENTIONS'}, {'entity': 'Available Nov. 24', 'relationship': 'MENTIONS'}, {'entity': 'My Demon', 'relationship': 'MENTIONS'},
+{'entity': 'Do Do Hee', 'relationship': 'MENTIONS'}, {'entity': 'Jung Koo Won', 'relationship': 'MENTIONS'}, {'entity': 'Wedding Games', 'relationship':
+'MENTIONS'}, {'entity': 'Eva', 'relationship': 'MENTIONS'}, {'entity': 'Go Dog Go: Season 4', 'relationship': 'MENTIONS'}, {'entity': 'Tag', 'relationship':
+'MENTIONS'}, {'entity': 'Scooch', 'relationship': 'MENTIONS'}, {'entity': 'Pawston', 'relationship': 'MENTIONS'}, {'entity': 'Dogcathalon', 'relationship':
+'MENTIONS'}, {'entity': 'Comedy Royale', 'relationship': 'MENTIONS'}, {'entity': 'Love Like a K-Drama', 'relationship': 'MENTIONS'}, {'entity': 'Onmyoji',
+'relationship': 'MENTIONS'}, {'entity': 'Verified Stand-Up', 'relationship': 'MENTIONS'}, {'entity': 'Webster Hall', 'relationship': 'MENTIONS'}, {'entity':
+'Asif Ali', 'relationship': 'MENTIONS'}, {'entity': 'Dulcé Sloan', 'relationship': 'MENTIONS'}, {'entity': 'Gianmarco Soresi', 'relationship': 'MENTIONS'},
+{'entity': 'Isiah Kelly', 'relationship': 'MENTIONS'}, {'entity': 'Leslie Liao', 'relationship': 'MENTIONS'}, {'entity': 'Nimesh Patel', 'relationship':
+'MENTIONS'}, {'entity': 'Robby Hoffman', 'relationship': 'MENTIONS'}, {'entity': 'Rosebud Baker', 'relationship': 'MENTIONS'}, {'entity': 'Sabrina Wu',
+'relationship': 'MENTIONS'}, {'entity': 'Vanessa Gonzalez', 'relationship': 'MENTIONS'}, {'entity': 'American Symphony', 'relationship': 'MENTIONS'}, {'entity':
+'Bad Surgeon: Love Under the Knife', 'relationship': 'MENTIONS'}, {'entity': 'regenerative medicine', 'relationship': 'MENTIONS'}, {'entity': 'The Bad Guys: A
+Very Bad Holiday', 'relationship': 'MENTIONS'}, {'entity': 'Mr. Wolf', 'relationship': 'MENTIONS'}, {'entity': 'Family Switch', 'relationship': 'MENTIONS'},
+{'entity': 'Jess Walker', 'relationship': 'MENTIONS'}, {'entity': 'Bill Walker', 'relationship': 'MENTIONS'}, {'entity': 'Jennifer Garner', 'relationship':
+'MENTIONS'}, {'entity': 'Ed Helms', 'relationship': 'MENTIONS'}, {'entity': 'Emma Myers', 'relationship': 'MENTIONS'}, {'entity': 'Brady Noon', 'relationship':
+'MENTIONS'}, {'entity': 'McG', 'relationship': 'MENTIONS'}, {'entity': 'Bedtime For Mommy', 'relationship': 'MENTIONS'}, {'entity': 'Amy Krouse-Rosenthal',
+'relationship': 'MENTIONS'}, {'entity': 'Hard Days', 'relationship': 'MENTIONS'}, {'entity': 'Obliterated', 'relationship': 'MENTIONS'}, {'entity': 'Cobra Kai',
+'relationship': 'MENTIONS'}, {'entity': 'School Spirits: Season 1', 'relationship': 'MENTIONS'}, {'entity': 'Virgin River: Season 5 Part 2', 'relationship':
+'MENTIONS'}, {'entity': 'Virgin River', 'relationship': 'MENTIONS'}, {'entity': 'America', 'relationship': 'MENTIONS'}, {'entity': 'South Korea',
+'relationship': 'MENTIONS'}, {'entity': 'PGA Tour', 'relationship': 'MENTIONS'}, {'entity': 'Alex', 'relationship': 'MENTIONS'}, {'entity': 'fraud',
+'relationship': 'MENTIONS'}, {'entity': 'Florida', 'relationship': 'MENTIONS'}, {'entity': 'Thailand', 'relationship': 'MENTIONS'}, {'entity': 'Las Vegas',
+'relationship': 'MENTIONS'}, {'entity': 'Rome', 'relationship': 'MENTIONS'}, {'entity': 'Jeff', 'relationship': 'MENTIONS'}, {'entity': 'Dubai', 'relationship':
+'MENTIONS'}]
+</item 6>
+
+<item 7>
+The 5 biggest mistakes parents make at Christmastime, according to a parenting expert (FOX News - Lifestyle, 2023-12-09T19:46:55+00:00)
+These parents, said Keeley, "subconsciously compensate for a lack of self-worth and validate their role as a [parent] by creating too much busyness in their
+life."
+
+She said that "all that results from a mom who runs herself into the ground is just that: a mom who runs herself into the ground."
+
+DELICIOUS CUT-OUT SUGAR COOKIES FOR CHRISTMAS: TRY THE SIMPLE RECIPE
+
+She added, "If this is you, take a breath, put away the to-do list and ask yourself, ‘What would I have to believe in order to have a relaxed and joyful
+Christmas?’ Maybe we can use that as a guide to sit back and relax."
+
+4. Griping like the Grinch
+
+Parents should be sure not to be "grinchy" around their kids amid holiday stress, Keeley said.
+
+Children up to the age of 9 process information egocentrically, she said — which means if there’s a problem, they see themselves as the cause.
+
+Graph facts:
+- Keeley -SAID-> holiday martyrdom
+- Keeley -SAID-> mom brain
+- Keeley -SAID-> Santa bribe
+- Keeley -SAID-> self-discipline
+- Keeley -SAID-> child brain
+
+Entities: holiday stress, self-worth, Grinch, cut-out sugar cookies, egocentric information processing, Keeley, The 5 biggest mistakes parents make at
+Christmastime, according to a parenting expert, Christmas, FOX News - Lifestyle
+</item 7>
+
+<item 8>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+“I think anytime that emotions are heightened, with the holidays certainly being one of those times, our expectations are really high,” she said. “We’re
+expecting it to be this joyful, happy, perfect occasion. So, we sometimes forget that the holidays come with a lot of stress.”
+
+Despite tensions between relatives at the dinner table, that doesn’t mean your relationship shouldn’t be celebrated. Saba Lurie is a licensed marriage and
+family therapist at Take Root Thereapy in California. She explained to The Independent that while there isn’t a right or wrong time to introduce your partner to
+your family, the intentions of such an introduction must be clear. Not only should you have already discussed where your relationship is headed, but you should
+also tell your partner everything they need to know about your family.
+
+“I think you should tell the person why you’re bringing them home for the holidays, so you’re on the same page about the intentions and what’s motivating the
+decision to include,” she said.
+
+Graph facts:
+- Should you introduce your partner to your family during the holidays? Relationship experts weigh in -PUBLISHED_BY-> The Independent - Life and Style
+- Should you introduce your partner to your family during the holidays? Relationship experts weigh in -MENTIONS-> Family
+- Should you introduce your partner to your family during the holidays? Relationship experts weigh in -MENTIONS-> Rachel Zar
+- Should you introduce your partner to your family during the holidays? Relationship experts weigh in -MENTIONS-> Spark Chicago Therapy
+- Should you introduce your partner to your family during the holidays? Relationship experts weigh in -MENTIONS-> Hanukkah
+
+Entities: Should you introduce your partner to your family during the holidays? Relationship experts weigh in, Saba Lurie, Take Root Thereapy, California, The
+Independent
+</item 8>
+
+<item 9>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+In a recent poll from the American Psychological Association, 41 per cent of US adults said their stress levels increased from November to January when compared
+to other months of the year. Nearly 50 per cent of Americans also described their stress level during the season as “moderate”.
+
+Everyone has different concerns leading up to Christmas, Hanukkah, or New Years - from family drama at the dinner table to a small spats with your mother about
+decorations. With what can be stressful events, it only begs the question: do you really want to bring your partner into the mix? While it’s important to
+eventually introduce your loved ones to your significant other, relationship experts believe there are some discussions you should have beforehand, especially
+during the holidays.
+
+Speaking to The Independent, Rachel Zar - a licensed marriage and family therapist at Spark Chicago Therapy - acknowledged that while every family is different,
+there’s a variety of problems that could arise during the holiday season - mainly because we put too much pressure on having a joyful holiday.
+
+Graph facts:
+- Should you introduce your partner to your family during the holidays? Relationship experts weigh in -MENTIONS-> Take Root Thereapy
+- Should you introduce your partner to your family during the holidays? Relationship experts weigh in -MENTIONS-> Family
+- Should you introduce your partner to your family during the holidays? Relationship experts weigh in -PUBLISHED_BY-> The Independent - Life and Style
+- Should you introduce your partner to your family during the holidays? Relationship experts weigh in -MENTIONS-> Saba Lurie
+- Gen Z just saw the worst war in Israel in 50 years break out all over the internet, but they were raised on 'disturbing images' -MENTIONS-> American
+Psychological Association
+
+Entities: Should you introduce your partner to your family during the holidays? Relationship experts weigh in, Rachel Zar, Spark Chicago Therapy, Hanukkah, New
+Years, family problems, American Psychological Association, Christmas, The Independent, stress
+</item 9>
+
+<item 10>
+The 5 biggest mistakes parents make at Christmastime, according to a parenting expert (FOX News - Lifestyle, 2023-12-09T19:46:55+00:00)
+With this in mind, parents should avoid "processing their frustration around the holidays audibly around the children," she said.
+
+"The ‘mom brain’ is wired to process problems rapidly and move on to solutions," she said. "The ‘child brain,’ however, is wired to process a problem internally
+and take on the responsibility."
+
+Said Keeley, "Knowing this, make sure you don’t do any ‘grinchy griping’ out loud to the children. You may see it as temporary venting, but they see it as, ‘Mom
+is upset and I’m probably the reason.’"
+
+CLICK HERE TO SIGN UP FOR OUR LIFESTYLE NEWSLETTER
+
+Instead, parents should stay calm, find a reason to be grateful and vocalize it, even when frustrations accumulate.
+
+5. Neglecting the ‘give list’
+
+While building a wish list is fun for kids, Keeley emphasized the moral importance of the "give list."
+
+Graph facts:
+- Keeley -SAID-> Santa bribe
+- Keeley -SAID-> self-discipline
+- Keeley -SAID-> holiday martyrdom
+- Keeley -SAID-> egocentric information processing
+- Keeley -SAID-> Christmas
+
+Entities: Keeley, mom brain, child brain, grinchy griping, give list, wish list, The 5 biggest mistakes parents make at Christmastime, according to a parenting
+expert, FOX News - Lifestyle
+</item 10>
+=== END ITEM id=be4ecb607b121ff8 ===

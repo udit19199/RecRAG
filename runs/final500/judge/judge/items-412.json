@@ -1,0 +1,469 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "b8e39684419a0363",
+   "gold": [
+    {
+     "sentence": "Leycesteria is a genus of flowering plants in the honeysuckle family Caprifoliaceae, native to temperate Asia in the Himalaya and southwestern China.",
+     "facts": {
+      "0.0": "Leycesteria is a genus of flowering plants.",
+      "0.1": "Leycesteria is in the honeysuckle family Caprifoliaceae.",
+      "0.2": "Leycesteria is native to temperate Asia in the Himalaya.",
+      "0.3": "Leycesteria is native to southwestern China."
+     }
+    },
+    {
+     "sentence": "Anigozanthos is a small genus of Australian plants in the Bloodwort family Haemodoraceae.",
+     "facts": {
+      "1.0": "Anigozanthos is a small genus of Australian plants.",
+      "1.1": "Anigozanthos is in the Bloodwort family Haemodoraceae."
+     }
+    }
+   ],
+   "items": [
+    "Anigozanthos manglesii\nAnigozanthos manglesii, commonly known as the red-and-green kangaroo paw, Mangles kangaroo paw, Kurulbrang(Noongar) is a plant species endemic to Western Australia, and the floral emblem of that state.",
+    "Lepidozamia\nLepidozamia is a genus of two species of cycad, both endemic to Australia.\n\n The name, derived from the Greek word lepidos, meaning scaly, refers to the scale-like structure of the stem and leaf bases.\n\n They are native to rainforest climates in eastern Queensland and eastern New South Wales.\n\n They have a chromosome number of 2n = 18.",
+    "Alopecurus\nAlopecurus, or foxtail grass, is a common and widespread genus of plants in the grass family.\n\n It is common across temperate and subtropical parts of Eurasia, northern Africa, and the Americas, as well as naturalized in Australia and on various islands.",
+    "Anigozanthos flavidus\nAnigozanthos flavidus is a species of plant found in Southwest Australia.\n\n It is member of the Haemodoraceae family.\n\n It is commonly known as the tall, yellow, or evergreen, kangaroo paw.\n\n The specific epithet, \"flavidus\", refers to the yellow flowers of this plant.",
+    "Leycesteria formosa\nLeycesteria formosa (Himalayan honeysuckle, flowering nutmeg, Himalaya nutmeg or pheasant berry) is a deciduous shrub in the family Caprifoliaceae, native to the Himalaya and southwestern China.\n\n It is considered a noxious invasive species in Australia, New Zealand, the neighboring islands of Micronesia, and some other places.",
+    "Forests of Australia\nAustralia has many forests of importance due to significant features, despite being one of the driest continents.\n\n Australia has approximately 123 million hectares of native forest, which represents about 16% of Australia's land area.\n\n The majority of Australia's trees are hardwoods, typically eucalypts, rather than softwoods like pine.\n\n While softwoods dominate some native forests, their total area is judged insufficient to constitute a major forest type in Australia's National Forest Inventory.\n\n The Forests Australia website provides up-to-date information on Australia's forests.\n\n Detailed information on Australia's forests is available from Australia's State of the Forests Reports that are published every five years.",
+    "Anigozanthos humilis\nAnigozanthos humilis is a species of \"Anigozanthos\" in the family Haemodoraceae, known as common cat's paw or catspaw.\n\n This flowering perennial plant is endemic to Southwest Australia and widespread in its open forests.",
+    "Leycesteria\nLeycesteria is a genus of flowering plants in the honeysuckle family Caprifoliaceae, native to temperate Asia in the Himalaya and southwestern China.",
+    "Anigozanthos\nAnigozanthos is a small genus of Australian plants in the Bloodwort family Haemodoraceae.\n\n The 11 species and several subspecies are commonly known as kangaroo paw and catspaw depending on the shape of their flowers.\n\n A further species, previously identified as \"Anigozanthos fuliginosus\" and commonly known as the black kangaroo paw, has been transferred to its own monotypic genus and is now known as \"Macropidia fuliginosa\".",
+    "Anigozanthos preissii\nAnigozanthos preissii, the Albany cat's paw, is a herbaceous plant species in the family Haemodoraceae, endemic to Western Australia."
+   ]
+  },
+  {
+   "id": "5003195407214e4f",
+   "gold": [
+    {
+     "sentence": "Claudio Giovanni Antonio Monteverdi (] ; 15 May 1567 (baptized) – 29 November 1643) was an Italian composer, string player and choirmaster.",
+     "facts": {
+      "0.0": "Claudio Giovanni Antonio Monteverdi was baptized on 15 May 1567.",
+      "0.1": "Claudio Giovanni Antonio Monteverdi died on 29 November 1643.",
+      "0.2": "Claudio Giovanni Antonio Monteverdi was an Italian composer.",
+      "0.3": "Claudio Giovanni Antonio Monteverdi was an Italian string player.",
+      "0.4": "Claudio Giovanni Antonio Monteverdi was an Italian choirmaster."
+     }
+    },
+    {
+     "sentence": " A composer of both secular and sacred music, and a pioneer in the development of opera, he is considered a crucial transitional figure between the Renaissance and the Baroque periods of music history.",
+     "facts": {
+      "1.0": "Monteverdi composed both secular and sacred music.",
+      "1.1": "Monteverdi was a pioneer in the development of opera.",
+      "1.2": "Monteverdi is considered a crucial transitional figure between the Renaissance and the Baroque periods of music history."
+     }
+    },
+    {
+     "sentence": "Georges Bizet (] ; 25 October 18383 June 1875), registered at birth as Alexandre César Léopold Bizet, was a French composer of the romantic era.",
+     "facts": {
+      "2.0": "Georges Bizet was born on 25 October 1838.",
+      "2.1": "Georges Bizet died on 3 June 1875.",
+      "2.2": "Georges Bizet was registered at birth as Alexandre César Léopold Bizet.",
+      "2.3": "Georges Bizet was a French composer.",
+      "2.4": "Georges Bizet was a composer of the romantic era."
+     }
+    },
+    {
+     "sentence": " Best known for his operas in a career cut short by his early death, Bizet achieved few successes before his final work, \"Carmen\", which has become one of the most popular and frequently performed works in the entire opera repertoire.",
+     "facts": {
+      "3.0": "Georges Bizet is best known for his operas.",
+      "3.1": "Bizet's career was cut short by his early death.",
+      "3.2": "Bizet achieved few successes before his final work.",
+      "3.3": "Bizet's final work is 'Carmen'.",
+      "3.4": "Carmen has become one of the most popular works in the entire opera repertoire.",
+      "3.5": "Carmen is one of the most frequently performed works in the entire opera repertoire."
+     }
+    }
+   ],
+   "items": [
+    "Symphony in C (Bizet)\nThe Symphony in C is an early work by the French composer Georges Bizet.\n\n According to \"Grove's Dictionary\", the symphony \"reveals an extraordinarily accomplished talent for a 17-year-old student, in melodic invention, thematic handling and orchestration.\"\n\n Bizet started work on the symphony in C major on 29 October 1855, four days after turning 17, and finished it roughly a month later.\n\n It was written while he was studying at the Paris Conservatoire under the composer Charles Gounod, and was evidently a student assignment.\n\n Bizet showed no apparent interest in having it performed or published, and the piece was never played in his lifetime.\n\n He used certain material from the symphony in later works, however.\n\n There is no mention of the work in Bizet's letters, and it was unknown to his earlier biographers.\n\n His widow, Geneviève Halévy (1849–1926), gave the manuscript to Reynaldo Hahn, who left it along with other papers to the archives of the conservatory library, where it was found in 1933 by Jean Chantavoine.",
+    "Roma Symphony (Bizet)\nThe Symphony in C \"Roma\" is the second of Georges Bizet's symphonies.\n\n Unlike his first symphony, also in C major, which was written quickly at the age of 17, \"Roma\" was written over an eleven-year span, between the ages of 22 and 33 (he died at age 36).\n\n Bizet was never fully satisfied with it, subjecting it to a number of revisions, but died before finishing his definitive version.\n\n All four movements were performed in his lifetime, but never all on the same occasion.\n\n The full symphony in its latest revision was premiered in 1875, after his death.\n\n It is perhaps because of Bizet's dissatisfaction that the work is often said to be \"unfinished\".\n\n However, in the form in which it exists today, it is a complete work and is fully scored.\n\n It has been recorded a number of times but is not often heard on the concert platform.",
+    "L'Orfeo discography\nThese lists show the audio and visual recordings of the opera \"L'Orfeo\" by Claudio Monteverdi.\n\n The opera was first performed in Mantua in 1607, at the court of Duke Vincenzo Gonzaga, and is one of the earliest of all operas.\n\n The first recording of \"L'Orfeo\" was issued in 1939, a freely adapted version of Monteverdi's music edited by Giacomo Benvenuti, given by the orchestra of La Scala Milan conducted by Ferrucio Calusio.\n\n In 1949 the Berlin Radio Orchestra under Helmut Koch recorded the complete opera, on long-playing records (LPs).\n\n The advent of LP recordings was, as Harold Schonberg later wrote, an important factor in the postwar revival of interest in Renaissance and Baroque music, and from the mid-1950s recordings of \"L'Orfeo\" have been issued on many labels.\n\n Koch's landmark version was reissued in 1962, when it was compared unfavourably with others that had by then been issued.",
+    "John Whenham\nJohn Whenham is an English musicologist and academic who specializes in early Italian baroque music.\n\n He earned both a Bachelor of Music and a Master of Music from the University of Nottingham, and a Doctor of Philosophy from the University of Oxford.\n\n He is a leading expert on the life and works of Claudio Monteverdi, and is the author of the books \"Duet and Dialogue in the Age of Monteverdi\" (Ann Arbor, Michigan: University Microfilms International, 1982) \"Monteverdi, 'Orfeo' \" (London: Cambridge University Press, 1986), \"Monteverdi, Vespers (1610)\" (Cambridge University Press, 1997), and \"The Cambridge Companion to Monteverdi\" (with Richard Wistreich, Cambridge University Press, 2007).\n\n For five years he was co-editor of the journal \"Music & Letters\".\n\n He currently serves on the board of the Birmingham Early Music Festival and is head of the music history department at the University of Birmingham.",
+    "Stattkus-Verzeichnis\nThe Stattkus-Verzeichnis (SV) is a catalogue of the musical compositions of the Italian composer Claudio Monteverdi.\n\n The catalogue was published in 1985 by Manfred H. Stattkus (\"Claudio Monteverdi: Verzeichnis der erhaltenen Werke\").\n\n A free, basic second edition of the catalogue is available online.",
+    "L'Arlésienne (Bizet)\nGeorges Bizet composed L'Arlésienne as incidental music to Alphonse Daudet's play of the same name, usually translated as \"The Girl from Arles\".\n\n It was first performed on 1 October 1872 at the Vaudeville Theatre (now a cinema known as the Gaumont Opéra).\n\n Bizet's music consists of 27 numbers (some only a few bars) for voice, chorus, and small orchestra, ranging from short solos to longer entr'actes. Bizet himself played the harmonium backstage at the premiere performance.",
+    "Claudio Monteverdi\nClaudio Giovanni Antonio Monteverdi (] ; 15 May 1567 (baptized) – 29 November 1643) was an Italian composer, string player and choirmaster.\n\n A composer of both secular and sacred music, and a pioneer in the development of opera, he is considered a crucial transitional figure between the Renaissance and the Baroque periods of music history.",
+    "Carmen Jones\nCarmen Jones is a 1943 Broadway musical with music by Georges Bizet (orchestrated for Broadway by Robert Russell Bennett) and lyrics and book by Oscar Hammerstein II which was performed at The Broadway Theatre.\n\n Conceptually, it is Bizet's opera \"Carmen\" updated to a World War II-era African-American setting.\n\n (Bizet's opera was, in turn, based on the 1846 novella by Prosper Mérimée.)\n\n The Broadway musical was produced by Billy Rose, using an all-black cast, and directed by Hassard Short.\n\n Robert Shaw prepared the choral portions of the show.",
+    "Georges Bizet\nGeorges Bizet (] ; 25 October 18383 June 1875), registered at birth as Alexandre César Léopold Bizet, was a French composer of the romantic era.\n\n Best known for his operas in a career cut short by his early death, Bizet achieved few successes before his final work, \"Carmen\", which has become one of the most popular and frequently performed works in the entire opera repertoire.",
+    "Kamarinskaya\nKamarinskaya (Russian: камаринская ) is a Russian traditional folk dance, which is mostly known today as the Russian composer Mikhail Glinka's composition of the same name.\n\n Glinka's \"Kamarinskaya\", written in 1848, was the first orchestral work based entirely on Russian folk song and to use the compositional principles of that genre to dictate the form of the music.\n\n It became a touchstone for the following generation of Russian composers ranging from the Western-oriented Pyotr Ilyich Tchaikovsky to the group of nationalists known collectively as The Five and was also lauded abroad, most notably by French composer Hector Berlioz."
+   ]
+  },
+  {
+   "id": "ec7bbd3b0c2d01d4",
+   "gold": [
+    {
+     "sentence": " He has written three novels, three collections of short stories, a collection of novellas, and seven volumes of essays, three of which have won National Book Critics Circle Award prizes and one of which, \"A Temple of Texts\" (2006), won the Truman Capote Award for Literary Criticism.",
+     "facts": {
+      "0.0": "The writer has written three novels.",
+      "0.1": "The writer has written three collections of short stories.",
+      "0.2": "The writer has written a collection of novellas.",
+      "0.3": "The writer has written seven volumes of essays.",
+      "0.4": "Three of the writer's essay volumes have won National Book Critics Circle Award prizes.",
+      "0.5": "One of the writer's essay volumes, 'A Temple of Texts' (2006), won the Truman Capote Award for Literary Criticism."
+     }
+    },
+    {
+     "sentence": "Naguib Mahfouz (Arabic: نجيب محفوظ‎ ‎ \"Nagīb Maḥfūẓ \", ] ; December 11, 1911 – August 30, 2006) was an Egyptian writer who won the 1988 Nobel Prize for Literature.",
+     "facts": {
+      "1.0": "Naguib Mahfouz was born on December 11, 1911.",
+      "1.1": "Naguib Mahfouz died on August 30, 2006.",
+      "1.2": "Naguib Mahfouz's Arabic name is نجيب محفوظ, transliterated Nagīb Maḥfūẓ.",
+      "1.3": "Naguib Mahfouz was an Egyptian writer.",
+      "1.4": "Naguib Mahfouz won the 1988 Nobel Prize for Literature."
+     }
+    }
+   ],
+   "items": [
+    "The Beginning and the End (novel)\nThe Beginning and the End (بداية ونهاية) is a novel by Naguib Mahfouz, who was awarded the Nobel Prize in literature in 1988.\n\n An Egyptian, Naguib has been credited with modernizing Arabic literature, with his prolific writing style and his themes on existentialism.\n\n The novel is marked by very bold characterization by Naguib Mahfouz, for the time period that the story is set in.\n\n The story moves at a prolific pace and tries to look at the world from each characters view point.",
+    "Nobel Prize in Literature\nSince 1901, the Nobel Prize in Literature (Swedish: \"Nobelpriset i litteratur\" ) has been awarded annually to an author from any country who has, in the words of the will of Alfred Nobel, produced \"in the field of literature the most outstanding work in an ideal direction\" (original Swedish: \"den som inom litteraturen har producerat det mest framstående verket i en idealisk riktning\").\n\n Though individual works are sometimes cited as being particularly noteworthy, here \"work\" refers to an author's work as a whole.\n\n The Swedish Academy decides who, if anyone, will receive the prize in any given year.\n\n The academy announces the name of the chosen laureate in early October.\n\n It is one of the five Nobel Prizes established by the will of Alfred Nobel in 1895; the others are the Nobel Prize in Chemistry, Nobel Prize in Physics, Nobel Peace Prize, and Nobel Prize in Physiology or Medicine.",
+    "Cairo Trilogy\nThe Cairo Trilogy (Arabic: الثلاثية‎ ‎ (\"The Trilogy\") or ثلاثية القاهرة (\"The Cairo Trilogy\")) is a trilogy of novels written by the Egyptian novelist and Nobel Prize winner Naguib Mahfouz, and one of the prime works of his literary career.",
+    "Naguib Mahfouz\nNaguib Mahfouz (Arabic: نجيب محفوظ‎ ‎ \"Nagīb Maḥfūẓ \", ] ; December 11, 1911 – August 30, 2006) was an Egyptian writer who won the 1988 Nobel Prize for Literature.\n\n He is regarded as one of the first contemporary writers of Arabic literature, along with Tawfiq el-Hakim, to explore themes of existentialism.\n\n He published 34 novels, over 350 short stories, dozens of movie scripts, and five plays over a 70-year career.\n\n Many of his works have been made into Egyptian and foreign films.",
+    "Frances Liardet\nFrances E. Liardet is a writer and translator of Arabic literature.\n\n She studied Creative Writing at the University of East Anglia.\n\n She has translated several book-length works, including two books by the modernist Egyptian writer Edwar al-Kharrat and one by Nobel Prize winner Naguib Mahfouz.",
+    "Naguib Mahfouz Medal for Literature\nThe Naguib Mahfouz Medal for Literature is a literary award for Arabic literature.\n\n It is given to the best contemporary novel written in Arabic, but not available in English translation.\n\n The winning book is then translated into English, and published by American University in Cairo Press.\n\n It was first awarded in 1996 and is presented annually on December 11, the birthday of Nobel laureate Naguib Mahfouz, by the President of the American University in Cairo.",
+    "Thebes at War\nThebes at War is an early novel by the Egyptian writer Naguib Mahfouz.\n\n It was originally published in Arabic in 1944.\n\n An English translation by Humphrey Davies appeared in 2003.\n\n The novel is one of several that Mahfouz wrote at the beginning of his career, with Pharaonic Egypt as their setting.\n\n Others in this series of novels include \"Khufu's Wisdom\" (1939) and \"Rhadopis of Nubia\" (1943).\n\n All have been translated into English and appeared in one volume under the title \"Three Novels of Ancient Egypt\" (Everyman's Library, 2007).",
+    "Arabian Nights and Days\nArabian Nights and Days (1979) is a novel by Egyptian writer Naguib Mahfouz, winner of the Nobel Prize for Literature.\n\n The novel serves as a sequel and companion piece for \"One Thousand and One Nights\" and includes many of the same characters that appeared in the original work such as Shahryar, Scheherazade, and Aladdin.",
+    "William H. Gass\nWilliam Howard Gass (born July 30, 1924) is an American novelist, short-story writer, essayist, critic, and former philosophy professor.\n\n He has written three novels, three collections of short stories, a collection of novellas, and seven volumes of essays, three of which have won National Book Critics Circle Award prizes and one of which, \"A Temple of Texts\" (2006), won the Truman Capote Award for Literary Criticism.\n\n His 1995 novel \"The Tunnel\" received the American Book Award.\n\n His 2013 novel \"Middle C\" won the 2015 William Dean Howells Medal.",
+    "Bidaya wa Nihaya\nBidaya wa Nihaya (Arabic: بداية و نهاية‎ ‎ , English: A Beginning and an End ) is a 1960 Egyptian film directed by Salah Abouseif and based on the novel by the same name.\n\n It was the first film adapted from a novel written by Nobel Prize winner Naguib Mahfouz."
+   ]
+  },
+  {
+   "id": "b18cb4a2f3546e68",
+   "gold": [
+    {
+     "sentence": " He is best known for the roles of Dan Rydell on \"Sports Night;\" Will Gardner on \"The Good Wife\", which earned him two Primetime Emmy Award nominations; and his early work as Knox Overstreet in \"Dead Poets Society\".",
+     "facts": {
+      "0.0": "The actor referred to as 'He' is best known for the role of Dan Rydell on \"Sports Night.\"",
+      "0.1": "The actor referred to as 'He' is best known for the role of Will Gardner on \"The Good Wife.\"",
+      "0.2": "The role of Will Gardner on \"The Good Wife\" earned the actor two Primetime Emmy Award nominations.",
+      "0.3": "The actor referred to as 'He' is best known for his early work as Knox Overstreet in \"Dead Poets Society.\""
+     }
+    },
+    {
+     "sentence": "Dead Poets Society is a 1989 American drama film directed by Peter Weir, written by Tom Schulman, and starring Robin Williams.",
+     "facts": {
+      "1.0": "Dead Poets Society is a 1989 American drama film.",
+      "1.1": "Dead Poets Society was directed by Peter Weir.",
+      "1.2": "Dead Poets Society was written by Tom Schulman.",
+      "1.3": "Dead Poets Society stars Robin Williams."
+     }
+    },
+    {
+     "sentence": " Set in 1959 at the fictional elite conservative Vermont boarding school Welton Academy, it tells the story of an English teacher who inspires his students through his teaching of poetry.",
+     "facts": {
+      "2.0": "Dead Poets Society is set in 1959.",
+      "2.1": "Dead Poets Society is set at the fictional elite conservative Vermont boarding school Welton Academy.",
+      "2.2": "Dead Poets Society tells the story of an English teacher.",
+      "2.3": "The English teacher in Dead Poets Society inspires his students through his teaching of poetry."
+     }
+    }
+   ],
+   "items": [
+    "Josh Charles\nJoshua Aaron \"Josh\" Charles (born September 15, 1971) is an American stage, film and television actor.\n\n He is best known for the roles of Dan Rydell on \"Sports Night;\" Will Gardner on \"The Good Wife\", which earned him two Primetime Emmy Award nominations; and his early work as Knox Overstreet in \"Dead Poets Society\".",
+    "License to Wed\nLicense to Wed is a 2007 American romantic comedy film starring Robin Williams, Mandy Moore and John Krasinski, and directed by Ken Kwapis.\n\n The film was released in theaters on July 3, 2007.",
+    "The 'Burbs\nThe 'Burbs is a 1989 American comedy thriller film directed by Joe Dante starring Tom Hanks, Bruce Dern, Carrie Fisher, Rick Ducommun, Corey Feldman, Wendy Schaal and Henry Gibson.\n\n The film was written by Dana Olsen, who also has a cameo in the movie.\n\n The film pokes fun at suburban environments and their eccentric dwellers.",
+    "Dunston Checks In\nDunston Checks In is a 1996 American family comedy film starring Eric Lloyd, Graham Sack, Jason Alexander, Faye Dunaway, Rupert Everett, Paul Reubens, Glenn Shadix, and introducing Sam the Orangutan as Dunston.\n\n It was written by John Hopkins and Bruce Graham and directed by Ken Kwapis.",
+    "Robin Chalk\nRobin Chalk (born 1981) is an English actor, best known for his role as Neil Kellerman in the West End production of \"Dirty Dancing\" and his work on British science-fiction film \"Moon\" directed by Duncan Jones.",
+    "Old Boyfriends\nOld Boyfriends is a 1979 American drama film directed by Joan Tewkesbury and written by Paul Schrader and Leonard Schrader.\n\n The film stars Talia Shire, Richard Jordan, Keith Carradine, John Belushi, John Houseman and Buck Henry.\n\n The film was released on April 13, 1979, by Embassy Pictures.",
+    "Meet the Robinsons\nMeet the Robinsons is a 2007 American computer-animated science fiction comedy film produced by Walt Disney Animation Studios and released by Walt Disney Pictures on March 30, 2007.\n\n The 47th Disney animated feature film, it was released in standard and Disney Digital 3-D versions.\n\n The film is loosely based on characters from the children's book \"A Day with Wilbur Robinson\", by William Joyce.\n\n The voice cast includes Jordan Fry, Wesley Singerman, Harland Williams, Tom Kenny, Steve Anderson, Laurie Metcalf, Adam West, Tom Selleck, and Angela Bassett.\n\n It was the first film released after John Lasseter became chief creative officer of Walt Disney Animation Studios.",
+    "Dead Poets Society\nDead Poets Society is a 1989 American drama film directed by Peter Weir, written by Tom Schulman, and starring Robin Williams.\n\n Set in 1959 at the fictional elite conservative Vermont boarding school Welton Academy, it tells the story of an English teacher who inspires his students through his teaching of poetry.",
+    "Reunion (1989 film)\nThe story is centred on the \"enchanted friendship\" of two teenagers in 1933 Germany.\n\n Hans Strauss (Christien Anholt) is the son of a Jewish doctor and Konradin Von Lohenburg (Samuel West) is from an aristocratic family.\n\n The background is the rise of Nazism.\n\n Jason Robards plays the older Hans in the 1970s as he prepares to travel to Germany for the first time since the 1930s.\n\n The film was shot on location in Berlin, New York and Stuttgart.\n\n \"Reunion\" was nominated for a Golden Palm at the 1989 Cannes Film Festival.",
+    "Remember the Titans\nRemember the Titans is a 2000 American sports film produced by Jerry Bruckheimer and directed by Boaz Yakin.\n\n The screenplay, written by Gregory Allen Howard, is based on the true story of African-American coach Herman Boone, portrayed by Denzel Washington, and his attempt to integrate the T. C. Williams High School football team in Alexandria, Virginia, in 1971.\n\n Will Patton portrays Bill Yoast, Boone's assistant coach.\n\n Real-life athletes Gerry Bertier and Julius Campbell are portrayed by Ryan Hurst and Wood Harris, respectively."
+   ]
+  },
+  {
+   "id": "81c5217ff8588e06",
+   "gold": [
+    {
+     "sentence": "Giovanni \"Tinto\" Brass (born 26 March 1933) is an Italian filmmaker.",
+     "facts": {
+      "0.0": "Giovanni 'Tinto' Brass was born on 26 March 1933.",
+      "0.1": "Giovanni 'Tinto' Brass is an Italian filmmaker."
+     }
+    },
+    {
+     "sentence": "Baltasar Kormákur Samper (born 27 February 1966) is an Icelandic actor, theater and film director, and film producer.",
+     "facts": {
+      "1.0": "Baltasar Kormakur Samper was born on 27 February 1966.",
+      "1.1": "Baltasar Kormakur Samper is an Icelandic actor.",
+      "1.2": "Baltasar Kormakur Samper is an Icelandic theater director.",
+      "1.3": "Baltasar Kormakur Samper is an Icelandic film director.",
+      "1.4": "Baltasar Kormakur Samper is an Icelandic film producer."
+     }
+    }
+   ],
+   "items": [
+    "Baltasar Breki Samper\nBaltasar Breki Samper (born 22 July 1989), sometimes referred to as Baltasar Breki Baltasarsson, is an Icelandic actor.\n\n He is the son of Icelandic director Baltasar Kormákur.\n\n Before graduating from the Icelandic Academy of the Arts in 2015 Samper helped his father on several films as second assistant director.\n\n He is known for his role as Hjörtur in the Icelandic TV series \"Trapped\".",
+    "Trasgredire\nTrasgredire (Transgressing or Cheeky) is a 2000 sex comedy directed by Tinto Brass, with Yuliya Mayarchuk in the lead role.\n\n Certain parallelisms are drawn between \"Nerosubianco\" (1969), another Tinto Brass film set in London.",
+    "Fermo posta Tinto Brass\nFermo posta Tinto Brass is a 1995 Italian comedy film-erotic film directed by Tinto Brass and set in vignettes.",
+    "Stjórnin\nStjórnin comprised two singers, Grétar Örvarsson, born July 11, 1959 and Sigríður Beinteinsdóttir, born July 24, 1962.\n\n Together they represented Iceland at the Eurovision Song Contest 1990 held in Zagreb.\n\n Their entry, \"Eitt lag enn\" was placed fourth out of 22 songs.\n\n Both singers were later members of another Eurovision group Heart 2 Heart who represented Iceland in 1992 with the song \"Nei eða já\".\n\n This entry was placed seventh out of 23 in Malmö.",
+    "Peter Jackson\nSir Peter Robert Jackson {'1': \", '2': \", '3': \", '4': \"} (born 31 October 1961) is a New Zealand film director, screenwriter and film producer.\n\n He is best known as the director, writer, and producer of \"The Lord of the Rings\" trilogy (2001–03) and \"The Hobbit\" trilogy (2012–14), both of which are adapted from the novels of the same name by J. R. R. Tolkien.\n\n Other notable films include the critically lauded drama \"Heavenly Creatures\" (1994), the mockumentary \"Forgotten Silver\" (1995), the horror comedy \"The Frighteners\" (1996), the epic monster remake film \"King Kong\" (2005), and the supernatural drama film \"The Lovely Bones\" (2009).\n\n He also produced \"District 9\" (2009), \"The Adventures of Tintin: The Secret of the Unicorn\" (2011), and the documentary \"West of Memphis\" (2012).",
+    "John Steiner\nHe found himself in demand in Italy and moved there, appearing in a great number of Italian exploitation and B-films including police actioners (\"Violent Rome\"), westerns (\"Mannaja\"), war films (\"The Last Hunter\"), nazisploitation (\"Deported Women of the SS Special Section\"), sci-fi adventure films (\"Yor, the Hunter from the Future\"), and horror films, such as Mario Bava's \"Shock\", Dario Argento's \"Tenebrae\", and Ruggero Deodato's \"Body Count\".\n\n He also became a favourite of famed Italian filmmaker Tinto Brass, featuring in \"Salon Kitty\", the infamous \"Caligula\", \"Action\", and \"Paprika\".",
+    "Tinto Brass\nGiovanni \"Tinto\" Brass (born 26 March 1933) is an Italian filmmaker.\n\n In the 1960s and 1970s, he directed many critically acclaimed avant-garde films of various genres.\n\n Today, he is mainly known for his later work in the erotic genre, with films such as \"Caligula\", \"Così fan tutte\" (released under the English title \"All Ladies Do It\"), \"Paprika\", \"Monella\" (\"Frivolous Lola\") and \"Trasgredire\".",
+    "Dropout (1970 film)\nDropout is a 1970 Italian romantic drama directed by Tinto Brass.\n\n It stars real-life couple, Franco Nero and Vanessa Redgrave.\n\n They also worked with Brass a year later on the drama, \"La vacanza\".\n\n \"Dropout\" was released in France on December 18, 1970, followed by a theatrical release in Italy on February 22, 1971.",
+    "Contraband (2012 film)\nContraband is a 2012 American crime thriller film directed by Baltasar Kormákur, starring Mark Wahlberg, Kate Beckinsale, Ben Foster, Caleb Landry Jones, Giovanni Ribisi, Lukas Haas, Diego Luna and J. K. Simmons.\n\n The film is a remake of the 2008 Icelandic film \"Reykjavík-Rotterdam\" which Baltasar Kormákur starred in.\n\n It was released on January 13, 2012 in the United States by Universal Pictures.",
+    "Baltasar Kormákur\nBaltasar Kormákur Samper (born 27 February 1966) is an Icelandic actor, theater and film director, and film producer.\n\n He is best known for directing the films \"101 Reykjavík\", \"Hafið\", \"A Little Trip to Heaven\" (starring Julia Stiles and Forest Whitaker), a film based on the book \"Mýrin\" \"(Jar City)\" by Arnaldur Indriðason, \"Contraband\", \"2 Guns\" (starring Mark Wahlberg and Denzel Washington) and \"Everest\".\n\n His father is the Spanish painter Baltasar Samper and actor Baltasar Breki Samper is his son."
+   ]
+  },
+  {
+   "id": "4969ac5e46f84c95",
+   "gold": [
+    {
+     "sentence": " The name comes from the City of Starachowice, where the factory is located.",
+     "facts": {
+      "0.0": "The name comes from the City of Starachowice.",
+      "0.1": "The factory is located in the City of Starachowice."
+     }
+    },
+    {
+     "sentence": " It was sold in various countries for many years (not only in the Eastern Bloc; for example it was used by the Yemen Army).",
+     "facts": {
+      "1.0": "The item was sold in various countries for many years.",
+      "1.1": "The item was sold in countries beyond the Eastern Bloc.",
+      "1.2": "The item was used by the Yemen Army."
+     }
+    },
+    {
+     "sentence": "The Eastern Bloc was the group of socialist states of Central and Eastern Europe, generally the Soviet Union and the countries of the Warsaw Pact.",
+     "facts": {
+      "2.0": "The Eastern Bloc was the group of socialist states of Central and Eastern Europe.",
+      "2.1": "The Eastern Bloc generally included the Soviet Union.",
+      "2.2": "The Eastern Bloc generally included the countries of the Warsaw Pact."
+     }
+    }
+   ],
+   "items": [
+    "Kross SA\nKross is a Polish company within the sports industry that makes bicycles and bicycle frames.\n\n The company is currently the largest in Poland manufacturing bicycles sold in the Polish market.\n\n In 2005 the company sold almost 800,000 products, half of which were exported to 35 countries, 30 of which are in Europe.",
+    "Pioneer Pekao Investments\nPioneer Pekao is a Polish company managing several investment funds in Poland.\n\n It is the biggest and first investment funds manager on the Polish market.",
+    "E-Z Polish Factory\nThe E-Z Polish Factory is a building designed by Frank Lloyd Wright and is located in Chicago, Illinois, United States.\n\n Built in 1905, the E-Z Polish Company made polish for shoes and stoves.\n\n It now serves as practice space for local bands and artists.",
+    "Graph query row:\nmanufacturer: FSC Star\nrelationships: ['LOCATED_IN']\nplace: Starachowice\nfounded_on: None\ncountry: None",
+    "Leader Trucks\nLeader found their niche in the heavy transport market and built as a rigid 4x4 and 6x6 configuration for tray, tipper and agitator applications, they offered reliable machines in the industries of earth-moving and off-road construction.\n\n Leader was notable for being the first manufacturer to fit Caterpillar engines to trucks, to fit automatic transmissions to diesel trucks in assembly, and the first truck manufacturer in Australia to offer disc brakes.\n\n Leader boasted its components to be 80 percent Australian built with only the engine, transmission and steering box imported.\n\n By 1980, Leader had sold its 1000th truck in Australia and had also sold trucks to New Zealand, South Africa, Hong Kong, China and Indonesia.",
+    "FSC Star\nFabryka Samochodów Ciężarowych \"Star\" was a Polish truck manufacturer.\n\n The name comes from the City of Starachowice, where the factory is located.\n\n Their first vehicle was the \"Star 20\" in 1948.\n\n The most popular product was the \"Star 266\".\n\n The 266 model offered very good quality and powerful engines for a low price.\n\n It was sold in various countries for many years (not only in the Eastern Bloc; for example it was used by the Yemen Army).\n\n For many years FSC Star was a state-owned company.\n\n Star is now owned by MAN AG who eliminated the brand in January 2009.",
+    "Shaanxi Automobile Group\nShaanxi Automobile Group Co., Ltd. is a Chinese bus and truck manufacturer headquartered in Xi'an, Shaanxi.\n\n It employs around 23,000 employees.\n\n It manufactures heavy duty truck, buses (chassis), medium-size heavy truck and heavy duty axles for trucks.\n\n It utilizes Magna Steyr and MAN SE technologies.\n\n Its bus chassis are sold under the Eurostar Bus brand.",
+    "Daimler AG\nDaimler AG (] ) is a German multinational automotive corporation.\n\n Daimler AG is headquartered in Stuttgart, Baden-Württemberg, Germany.\n\n As of 2014, Daimler owns or has shares in a number of car, bus, truck and motorcycle brands including Mercedes-Benz, Mercedes-AMG, Smart Automobile, Detroit Diesel, Freightliner, Western Star, Thomas Built Buses, Setra, BharatBenz, Mitsubishi Fuso, MV Agusta as well as shares in Denza, KAMAZ, Beijing Automotive Group.\n\n The luxury Maybach brand was terminated at the end of 2012, but revived in April 2015 as \"Mercedes-Maybach\" versions of the Mercedes-Benz S-Class and G-Class.\n\n In 2016 Daimler sold 3.0 million vehicles.\n\n By unit sales, Daimler is the thirteenth-largest car manufacturer and is the largest truck manufacturer in the world.\n\n In addition to automobiles, Daimler manufactures buses and provides financial services through its Daimler Financial Services arm.\n\n The company is a component of the Euro Stoxx 50 stock market index.",
+    "J. A. Baczewski\nJ. A. Baczewski was a Polish company most well known for its fine spirits such as vodka and gin.\n\n The factory, dating back to the late 18th century, was based in Lwów (Lviv) and until 1939 was one of two most popular Polish export goods.",
+    "Optimus S.A.\nOptimus S.A. was a Polish company specializing in assembly of PCs, fiscal systems, and providing complex IT solutions for companies.In the 1990s Optimus was one of the leaders of the Polish computer market."
+   ]
+  },
+  {
+   "id": "411254bc428dad68",
+   "gold": [
+    {
+     "sentence": "Cantarella was a poison allegedly used by the Borgias during the papacy of Pope Alexander VI.",
+     "facts": {
+      "0.0": "Cantarella was a poison",
+      "0.1": "Cantarella was allegedly used by the Borgias",
+      "0.2": "The alleged use of Cantarella by the Borgias occurred during the papacy of Pope Alexander VI"
+     }
+    },
+    {
+     "sentence": " The use of this poison is not well documented in any of the papal records and it was most likely conceived after 1503 as part of Pope Julius II's effort to remove his name from the records.",
+     "facts": {
+      "1.0": "The use of Cantarella is not well documented in any of the papal records",
+      "1.1": "Cantarella was most likely conceived after 1503",
+      "1.2": "Cantarella was most likely conceived as part of Pope Julius II's effort to remove his name from the records"
+     }
+    },
+    {
+     "sentence": "Damnatio memoriae is a modern Latin phrase literally meaning \"condemnation of memory\", meaning that a person must not be remembered.",
+     "facts": {
+      "2.0": "Damnatio memoriae is a modern Latin phrase",
+      "2.1": "Damnatio memoriae literally means condemnation of memory",
+      "2.2": "Damnatio memoriae means that a person must not be remembered"
+     }
+    }
+   ],
+   "items": [
+    "Cantarella\nCantarella was a poison allegedly used by the Borgias during the papacy of Pope Alexander VI.\n\n It was probably a variation of arsenic or cantharidin powder (made from blister beetles) .\n\n The use of this poison is not well documented in any of the papal records and it was most likely conceived after 1503 as part of Pope Julius II's effort to remove his name from the records.",
+    "Sicut Dudum\nSicut Dudum (English: \"Just As Long Ago\" ) is a papal bull promulgated by Pope Eugene IV in Florence on January 13, 1435, which forbade the enslavement of local natives in the Canary Islands who had converted or were converting to Christianity.\n\n \"Sicut Dudum\" was meant to reinforce \"Creator Omnium\", issued the previous year, condemning Portuguese slave raids in the Canary Islands.\n\n Over forty years after \"Creator Omnium\" and \"Sicut Dudum, Pope Sixtus IV found it necessary repeat the prohibition in his papal bull \"Regimini Gregis\" which threatened the excommunication of all captains or pirates who enslaved Christians.",
+    "Felice della Rovere\nFelice della Rovere (c. 1483 – September 27, 1536), also known as Madonna Felice, was the illegitimate daughter of Pope Julius II.\n\n One of the most powerful women of the Italian Renaissance, she was born in Rome around 1483 to Lucrezia Normanni and Cardinal Giuliano della Rovere, later Pope Julius II.\n\n Felice was well educated, became accepted into close courtly circles of aristocratic families, and formed friendships with scholars and poets through her education and genuine interest in humanism.\n\n Through the influence of her father, including an arranged marriage to Gian Giordano Orsini, she wielded extraordinary wealth and influence both within and beyond the Roman Curia.\n\n In particular, she negotiated a peace between Julius II and the Queen of France, and held the position of Orsini Signora for over a decade following the death of her husband in 1517.\n\n Felice further increased her power through a castle that she bought with money received from her father, the Castle at Palo, and through her involvement in the grain trade.",
+    "Pope Julius II\nPope Julius II (Italian: \"Papa Giulio II\" ; Latin: \"Iulius II\" ) (5 December 1443 – 21 February 1513), born Giuliano della Rovere, and nicknamed \"The Fearsome Pope\" and \"The Warrior Pope\", was Pope from 1 November 1503 to his death in 1513.\n\n His papacy was marked by an active foreign policy, ambitious building projects, and patronage of the arts—he commissioned the destruction and rebuilding of St. Peter's Basilica, and Michelangelo's decoration of the ceiling of the Sistine Chapel.\n\n In addition to an active military policy, he personally led troops into battle on at least two occasions, the first to expel Giovanni Bentivoglio from Bologna (17 August 1506–23 March 1507), and the second in an attempt to recover Ferrara for the Papal States (1 September 1510–29 June 1512).",
+    "Pedro Luis de Borja Lanzol de Romaní\nPedro Luis de Borja Lanzol de Romaní, O.S.Io.Hieros.\n\n (1472–1511) was a Roman Catholic cardinal and cardinal-nephew and papal military leader.\n\n He received a wide variety of sinecures during the papacy of his great-uncle, Pope Alexander VI, but was exiled to Naples on the election of Borja rival Pope Julius II.\n\n Borja also fought with the Knights Hospitaller in Jerusalem and Rhodes.",
+    "Papal conclave, September 1503\nThe papal conclave of September 1503 elected Pope Pius III to succeed Pope Alexander VI.\n\n Due to the Italian Wars, the College of Cardinals was surrounded by three potentially hostile armies, loyal to Louis XII of France, Ferdinand II of Aragon, and Cesare Borgia (the cardinal-nephew of Alexander VI).",
+    "Portrait of Pope Julius II\nPortrait of Pope Julius II is an oil painting of 1511–12 by the Italian High Renaissance painter Raphael.\n\n The portrait of Pope Julius II was unusual for its time and would carry a long influence on papal portraiture.\n\n From early in its life, it was specially hung at the pillars of the church of Santa Maria del Popolo, on the main route from the north into Rome, on feast and high holy days.\n\n Giorgio Vasari, writing long after Julius' death, said that \"it was so lifelike and true it frightened everyone who saw it, as if it were the living man himself\".",
+    "Dictatus papae\nDictatus papae is a compilation of 27 statements of powers arrogated to the Pope that was included in Pope Gregory VII's register under the year 1075.\n\n Some historians argue that it was written (or dictated) by Gregory VII himself; others argue that it has been inserted in the register at a later date, and that it had a different origin.\n\n In 1087 Cardinal Deusdedit published a collection of decretals, dedicated to Pope Victor III, that embodied the law of the Church – Canon law – which he had compiled from many sources, both legitimate and false (see Pseudo-Isidore).\n\n The \"Dictatus papae\" agrees so clearly and closely with this collection that some have argued the \"Dictatus\" must have been based on it; and so must be of a later date of compilation and insertion in the papal register than 1087.",
+    "The Agony and the Ecstasy (film)\nThe Agony and the Ecstasy is a 1965 American film directed by Carol Reed, starring Charlton Heston as Michelangelo and Rex Harrison as Pope Julius II.\n\n The film was partly based on Irving Stone's biographical novel of the same name.\n\n This film deals with the conflicts of Michelangelo and Pope Julius II during the painting of the Sistine Chapel's ceiling.\n\n It also features a soundtrack co-written by prolific composers Alex North and Jerry Goldsmith.",
+    "Dum Diversas\nDum Diversas (English: \"Until different\") is a papal bull issued on 18 June 1452 by Pope Nicholas V.\n\n It authorized Afonso V of Portugal to conquer Saracens and pagans and consign them to \"perpetual servitude\".\n\n Pope Calixtus III reiterated the bull in 1456 with \"Inter Caetera\" (not to be confused with Alexander VI's), renewed by Pope Sixtus IV in 1481 and Pope Leo X in 1514 with \"Precelse denotionis\".\n\n The concept of the consignment of exclusive spheres of influence to certain nation states was extended to the Americas in 1493 by Pope Alexander VI with \"Inter caetera\"."
+   ]
+  },
+  {
+   "id": "f9a08cd0552866bc",
+   "gold": [
+    {
+     "sentence": "The Shame of a City is a 2006 feature-length documentary, which premiered at the Philadelphia Film Festival.",
+     "facts": {
+      "0.0": "The Shame of a City is a 2006 feature-length documentary.",
+      "0.1": "The Shame of a City premiered at the Philadelphia Film Festival."
+     }
+    },
+    {
+     "sentence": "Unchained Memories is a 2003 documentary film about the stories of former slaves interviewed during the 1930s as part of the Federal Writers' Project and preserved in the WPA Slave Narrative Collection.",
+     "facts": {
+      "1.0": "Unchained Memories is a 2003 documentary film.",
+      "1.1": "Unchained Memories is about the stories of former slaves.",
+      "1.2": "The former slaves were interviewed during the 1930s.",
+      "1.3": "The interviews were part of the Federal Writers' Project.",
+      "1.4": "The stories are preserved in the WPA Slave Narrative Collection."
+     }
+    }
+   ],
+   "items": [
+    "Unchained Memories\nUnchained Memories is a 2003 documentary film about the stories of former slaves interviewed during the 1930s as part of the Federal Writers' Project and preserved in the WPA Slave Narrative Collection.\n\n This HBO film interpretation directed by Ed Bell and Thomas Lennon is a compilation of slave narratives, narrated by actors, emulating the original conversation with the interviewer.\n\n The slave narratives may be the most accurate in terms of the everyday activities of the enslaved, serving as personal memoirs of more than two thousand former slaves.\n\n The documentary depicts the emotions of the slaves and what they endured.\n\n The \"Master\" had the opportunity to sell, trade, or kill the enslaved, for retribution should one slave not obey.",
+    "Chicago: City on the Make\nChicago: City on the Make is an essay by Nelson Algren published in 1951.\n\n Initially greeted with scorn by critics and newspaper editors in the city of its gaze (The \"Chicago Daily News\" famously called it a \"Case for Ra(n)t Control\"), it is now widely regarded by scholars as the definitive prose portrait of the city of Chicago, although it has never rivaled the literary status of Carl Sandburg's 1916 poem \"Chicago.\"\n\n Algren leans heavily on the imagery and themes developed by Sandburg, to whom Algren dedicated the book.\n\n Curiously, he also quietly leans upon a poem about New York called \"The City\" by Ben Maddow, from whom Algren lifted powerful images of urban life.\n\n Subsequent portraits of Chicago, such as Studs Terkel's 1985 \"Chicago\", have likewise leaned heavily upon Algren's work.",
+    "The Sorrow and the Pity\nThe Sorrow and the Pity (French: Le Chagrin et la Pitié ) is a two-part 1969 documentary film by Marcel Ophüls about the collaboration between the Vichy government and Nazi Germany during World War II.\n\n The film uses interviews with a German officer, collaborators, and resistance fighters from Clermont-Ferrand.\n\n They comment on the nature of and reasons for collaboration.\n\n The reasons include antisemitism, anglophobia, fear of Bolsheviks and Soviet invasion, the desire for power, and simple caution.",
+    "The Shame of a City\nThe Shame of a City is a 2006 feature-length documentary, which premiered at the Philadelphia Film Festival.\n\n Filmmaker Tigre Hill chronicles the 2003 Philadelphia mayoral race between Democrat incumbent mayor John Street and Republican challenger Sam Katz.\n\n Early polls showed Katz with a small lead in this predominantly Democratic city but twenty-seven days before the election, an FBI bug was found in the mayor’s office.\n\n The discovery at first seemed like a death knell to the Street campaign and a near certain victory for Katz.\n\n Yet this prediction was proven wrong when Street and his supporters successfully polarized the campaign by leveling accusations of instituational racial prejudice and playing on historical skepticism of the Republican-controlled federal government.\n\n As a result, Street won re-election by a sixteen-point margin.",
+    "The Celluloid Closet\nThe Celluloid Closet is a 1995 American documentary film directed and written by Rob Epstein and Jeffrey Friedman.\n\n The film is based on Vito Russo's book of the same name first published in 1981 and on lecture and film clip presentations he gave in 1972–1982.\n\n Russo had researched the history of how motion pictures, especially Hollywood films, had portrayed gay, lesbian, bisexual and transgender characters.",
+    "American Hardcore (film)\nAmerican Hardcore: The History of American Punk Rock 1980-1986 is a documentary directed by Paul Rachman and written by Steven Blush.\n\n It is based on the book \"\" also written by Blush.\n\n It was released on September 22, 2006 on a limited basis.\n\n The film features some early pioneers of the hardcore punk music scene including Bad Brains, Black Flag, D.O.A., Minor Threat, Minutemen, SSD, and others.\n\n It was released on DVD by Sony Pictures Home Entertainment on February 20, 2007.",
+    "The entries cover documentaries on Boston hardcore (All Ages, 2012), punk (Punk’s Not Dead, 2007; American Hardcore, 2006), bipolar disorder, artistic aging, slavery, archaeology, bookstores, and Charles Bukowski; plus Barbara Hammer’s autobiographical Tender Fictions. Fiction films include Bakshi’s acclaimed X-rated Heavy Traffic, Heavyweights, several American Pie and Bring It On sequels, Schrader’s Hardcore, Blue Collar, and The",
+    "Town Without Pity\nTown Without Pity (German: Stadt ohne Mitleid) is a 1961 American, Swiss, and West German international co-production drama film directed by Gottfried Reinhardt.\n\n Produced by The Mirisch Corporation, the film stars Kirk Douglas, Christine Kaufmann, and E. G. Marshall.\n\n Coincidentally, this movie came out the same year that John A. Bennett, to this day the last man executed by the U.S. Army, was hanged for raping an 11-year-old girl.",
+    "Naked City (TV series)\nNaked City is a police drama series from Screen Gems which was broadcast from 1958 to 1959 and from 1960 to 1963 on the ABC television network.\n\n It was inspired by the 1948 motion picture \"The Naked City\" and mimics its dramatic \"semi-documentary\" format.\n\n As in the film, each episode concluded with a narrator intoning the iconic line: \"There are eight million stories in the naked city.\n\n This has been one of them.\"",
+    "First Kill\nFirst Kill is a 2001 Dutch documentary film that revolves around the psychology of war.\n\n Important turning points in the Vietnam War are used to illustrate the effect of war on body and mind.\n\n The documentary consists of interviews with Michael Herr and several Vietnam veterans.\n\n The depth of the interviews provides insight into the feelings that accompany violence, fear, hate, seduction and pleasure."
+   ]
+  },
+  {
+   "id": "ce5bdbcdfe846c57",
+   "gold": [
+    {
+     "sentence": "George Albert Smith Sr. (April 4, 1870 – April 4, 1951) was an American religious leader who served as the eighth president of The Church of Jesus Christ of Latter-day Saints (LDS Church).",
+     "facts": {
+      "0.0": "George Albert Smith Sr. was born on April 4, 1870.",
+      "0.1": "George Albert Smith Sr. died on April 4, 1951.",
+      "0.2": "George Albert Smith Sr. was an American religious leader.",
+      "0.3": "George Albert Smith Sr. served as the eighth president of The Church of Jesus Christ of Latter-day Saints (LDS Church)."
+     }
+    },
+    {
+     "sentence": "Wong Jing ( born 3 May 1955) is a Hong Kong film director, producer, actor, presenter, and screenwriter.",
+     "facts": {
+      "1.0": "Wong Jing was born on 3 May 1955.",
+      "1.1": "Wong Jing is a Hong Kong film director.",
+      "1.2": "Wong Jing is a Hong Kong film producer.",
+      "1.3": "Wong Jing is a Hong Kong actor.",
+      "1.4": "Wong Jing is a Hong Kong presenter.",
+      "1.5": "Wong Jing is a Hong Kong screenwriter."
+     }
+    }
+   ],
+   "items": [
+    "Ba-Jia-Jiang\nBa Jia Jiang (八家將) originated from the Chinese folk beliefs and myths, and usually generally refers to eight members of the godly realm.\n\n The general understanding of the origin of Ba Jia Jiang is that it is derived from the existence of eight generals who performed exorcism of evil spirits for the Wufu Emperor (五福大帝).\n\n These eight generals became revered as the gods of the underworld, and are represented as the bodyguards or attendants for the temples of the nether Gods such as the Dongyue Emperor (東獄大帝), Yama (King of Hell, 閻羅王) and Cheng Huang (the City Gods, 城隍).\n\n Gradually Ba Jia Jiang evolved to appear also as bodyguards to Wang Ye (Royal Lord, 王爺) and Matsu (媽祖), and at many other temples.\n\n Later on, believers at those temples dressed up as Ba Jia Jiang in order to defend the Gods.",
+    "George A. Smith\nGeorge Albert Smith (June 26, 1817 – September 1, 1875) (known throughout his life as George A. Smith) was an early leader in the Latter-day Saint movement.\n\n He served in the Quorum of the Twelve Apostles and as a member of the First Presidency of The Church of Jesus Christ of Latter-day Saints (LDS Church).",
+    "Ba-Jia-Jiang\nThese actions evolved into Taiwanese folk activities, which are part of the Wu Array (Military Array, 武陣) in Din Tao (Taiwanese troupes, 陣頭).\n\n Ba Jia Jiang is responsible for the capture of ghosts and evil spirits, bringing safety and good luck, and providing protection.\n\n They contain a strong religious nature, and Din Tao (Taiwanese troupes, 陣頭) often seem as mysterious, threatening and serious.\n\n Some Ba Jia Jiang members have relations with Taiwanese gangsters.",
+    "D. Arthur Haycock\nDavid Arthur Haycock (September 4, 1916 – February 25, 1994) was a personal secretary to several twentieth-century presidents of The Church of Jesus Christ of Latter-day Saints (LDS Church), including George Albert Smith, Joseph Fielding Smith, Harold B. Lee, Spencer W. Kimball and Ezra Taft Benson.",
+    "George Albert Smith\nGeorge Albert Smith Sr. (April 4, 1870 – April 4, 1951) was an American religious leader who served as the eighth president of The Church of Jesus Christ of Latter-day Saints (LDS Church).",
+    "Justin Smith (milliner)\nJustin Smith (born 1978) is a leading British milliner based in London.\n\n He creates bespoke millinery under the J Smith Esquire brand for a portfolio of private clients that includes Angelina Jolie, Brad Pitt and Amal Clooney.\n\n Smith's hats have been exhibited around the world, and have been acquired by such museums as the Fashion Institute of Technology in New York and the Victoria & Albert Museum in London for Hats: An Anthology curated by Stephen Jones.\n\n His work is in continuous demand by stylists and photographers for the quality style press.\n\n He has been visiting lecturer at London's Royal College of Art and has conducted seminars and teaching workshops for the British Council.",
+    "Wong Jing\nWong Jing ( born 3 May 1955) is a Hong Kong film director, producer, actor, presenter, and screenwriter.\n\n A prolific filmmaker with strong instincts for crowd-pleasing and publicity, Wong Jin has played a prominent role in the Hong Kong cinema of the last quarter-century.",
+    "Graph query row:\nGeorgeAlbertSmith: George Albert Smith Sr.\nchurch: The Church of Jesus Christ of Latter-day Saints\nGeorgeAlbertSmithChurchPosition: eighth president\nWongJing: Wong Jing\nWongJingChurch: None\nWongJingChurchRole: None",
+    "Smith Fieldhouse\nThe George Albert Smith Fieldhouse is a 5,000 seat multi-purpose arena in Provo, Utah.\n\n Built in 1951, it is the home of the Brigham Young University Cougars volleyball teams and most home gymnastics meets.\n\n It was named for George Albert Smith, the eighth president of The Church of Jesus Christ of Latter-day Saints, who died the year the fieldhouse opened.\n\n Prior to the Marriott Center opening in 1971 it was home to the basketball teams.\n\n At that time, the arena held 10,500 people.\n\n Smith Fieldhouse also has a track and several offices used by BYU's athletic department.",
+    "Old Church of St George, Hill Street Dublin\nThe Old Church of St. George, commonly called \"Little George's\" in Hill Street (formerly Temple Street Lower) Parish of St. Mary, Dublin was built in 1668 by the Eccles family for their workmen and also as a chapel-of-ease to the nearby St. Mary's Church.\n\n However, that St. Mary's Church was not St. Mary's Church, Dublin as its foundation stone was laid in 1700, and it was not St. Mary's Abbey, Dublin as it was dissolved in 1539.\n\n Therefore St George's church, Hill Street, may have been a Chapel-of-Ease to St. Michan's Church in Church Street.\n\n The main body of the church, with the exception of the tower, was demolished in 1894."
+   ]
+  },
+  {
+   "id": "dd051a91ad526930",
+   "gold": [
+    {
+     "sentence": "Eryngium is a genus of flowering plants in the family Apiaceae.",
+     "facts": {
+      "0.0": "Eryngium is a genus of flowering plants.",
+      "0.1": "Eryngium is in the family Apiaceae."
+     }
+    },
+    {
+     "sentence": "Arnebia is a genus of flowering plants in the family Boraginaceae.",
+     "facts": {
+      "1.0": "Arnebia is a genus of flowering plants.",
+      "1.1": "Arnebia is in the family Boraginaceae."
+     }
+    }
+   ],
+   "items": [
+    "Eryngium\nEryngium is a genus of flowering plants in the family Apiaceae.\n\n There are about 250 species.\n\n The genus has a cosmopolitan distribution, with the center of diversity in South America.\n\n Common names include eryngo and amethyst sea holly (though the genus is not related to the true hollies, \"Ilex\").",
+    "Abrus\nAbrus is a genus of flowering plants in the pea family, Fabaceae and the only genus found in the tribe Abreae.\n\n It contains, 13–18 species, but is best known for a single species, Jequirity (\"A. precatorius\").\n\n The highly toxic seeds of that species are used to make jewellery.",
+    "Hippeastrinae\nHippeastrinae is a subtribe of plants classified under the tribe Hippeastreae.\n\n It belongs to the subfamily Amaryllidoideae of the Amaryllis family (Amaryllidaceae).",
+    "Ericaceae\nThe Ericaceae are a family of flowering plants, commonly known as the heath or heather family, found most commonly in acid and infertile growing conditions.\n\n The family is large, with c. 4250 known species spread across 124 genera, making it the 14th most species-rich family of flowering plants.\n\n The many well-known and economically important members of the Ericaceae include the cranberry, blueberry, huckleberry, rhododendron (including azaleas), and various common heaths and heathers (\"Erica\", \"Cassiope\", \"Daboecia\", and \"Calluna\" for example).",
+    "Arnebia\nArnebia is a genus of flowering plants in the family Boraginaceae.",
+    "Cyanobiont\nSeveral cyanobionts involved with fungi and marine organisms also belong to the genera \"Richelia, Calothrix, Synechocystis, Aphanocapsa\" and \"Anabaena\", as well as the species \"Oscillatoria spongeliae\".\n\n Although there are many documented symbioses between cyanobacteria and marine organisms, little is known about the nature of many of these symbioses.\n\n The possibility of discovering more novel symbiotic relationships is apparent from preliminary microscopic observations.",
+    "Eriogonum\nEriogonum is the scientific name for a genus of flowering plants in the family Polygonaceae.\n\n The genus is found in North America and is known as wild buckwheat.\n\n This is a highly species-rich genus, and indications are that active speciation is continuing.\n\n It includes some common wildflowers such as the California buckwheat (\"Eriogonum fasciculatum\").",
+    "Lophodermium\nLophodermium is a genus of fungi within the family Rhytismataceae.\n\n The genus contains 145 species and has a global distribution.\n\n Species of this genus are usually observed producing zone lines, conidiomata and ascomata on dead fallen leaves, but at least some are known to colonize living leaves.\n\n In many cases they then live inside the colonized leaf as a symptomless endobiont, where they are regarded as detritivores utilising dead plant matter.\n\n In a few cases they may kill all or part of the leaf prematurely, and there is a substantial literature dealing with those species as plant pathogens.\n\n The genus infects many different plant families but with a notable concentration in the family Pinaceae; many \"Lophodermium\" species are restricted to a single host genus (or even species), but some, particularly those infecting grasses, may infect several genera.\n\n Some are economically important plant pathogens, such as those that cause needlecast disease in European Black Pine, Scots Pine and Red Pine in forestry and christmas tree plantations.",
+    "Eucryphia\nEucryphia is a small genus of trees and large shrubs native to the south temperate regions of South America and coastal eastern Australia.\n\n Sometimes placed in a family of their own, the Eucryphiaceae, more recent classifications place them in the Cunoniaceae.\n\n There are seven species, two in South America and five in Australia, and several named hybrids.\n\n They are mostly evergreen though one species (\"E. glutinosa\") is usually deciduous.",
+    "Ardisia\nArdisia (coralberry or marlberry) is a genus of flowering plants in the family Primulaceae.\n\n It was in the former Myrsinaceae family now recognised as the myrsine sub-family Myrsinoideae.\n\n They are distributed in the Americas, Asia, Australia, and the Pacific Islands, mainly in the tropics.\n\n There are 400 to 500 species."
+   ]
+  },
+  {
+   "id": "7e762adb03488bac",
+   "gold": [
+    {
+     "sentence": "Keisuke Kuwata (桑田 佳祐 , Kuwata Keisuke , born February 26, 1956) is a Japanese multi-instrumentalist, singer-songwriter, and frontman for the Southern All Stars, as well of his own solo band, the Kuwata band.",
+     "facts": {
+      "0.0": "Keisuke Kuwata's name is written 桑田 佳祐 (Kuwata Keisuke).",
+      "0.1": "Keisuke Kuwata was born February 26, 1956.",
+      "0.2": "Keisuke Kuwata is a Japanese multi-instrumentalist.",
+      "0.3": "Keisuke Kuwata is a Japanese singer-songwriter.",
+      "0.4": "Keisuke Kuwata is frontman for the Southern All Stars.",
+      "0.5": "Keisuke Kuwata has his own solo band, the Kuwata band."
+     }
+    },
+    {
+     "sentence": "Moya Brennan, born Máire Ní Bhraonáin (] ), also known as Máire Brennan (born 4 August 1952), is an Irish folk singer, songwriter, harpist, and philanthropist.",
+     "facts": {
+      "1.0": "Moya Brennan was born Máire Ní Bhraonáin.",
+      "1.1": "Moya Brennan is also known as Máire Brennan.",
+      "1.2": "Moya Brennan was born 4 August 1952.",
+      "1.3": "Moya Brennan is an Irish folk singer.",
+      "1.4": "Moya Brennan is an Irish songwriter.",
+      "1.5": "Moya Brennan is an Irish harpist.",
+      "1.6": "Moya Brennan is an Irish philanthropist."
+     }
+    }
+   ],
+   "items": [
+    "Bruce Yonemoto\nBruce Yonemoto (born 1949) is a Japanese-American multimedia artist.\n\n His work has been recognized by the National Endowment for the Arts, the American Film Institute, The Rockefeller Foundation, the Maya Deren Award for Experimental Film and Video, and a mid-career survey show at the Japanese American National Museum, in addition to major solo exhibitions at the InterCommunication Center in Tokyo, the Institute of Contemporary Art the University of Pennsylvania, and the Kemper Museum in Kansas City, MO.\n\n Yonemoto was featured in the 2002 Corcoran Gallery Bienniel, in Washington D.C. Yonemoto was also a recipient of the Creative Capital Visual Arts Award in 2008.",
+    "Kate Berlant\nKate Berlant (born July 16, 1987) is an American stand-up comedian, actress, and writer.\n\n She is known for appearing on \"The Meltdown with Jonah and Kumail\" and starring in an episode of the Netflix original series \"\".\n\n With John Early, Berlant created the Vimeo original series \"555\" produced by Abso Lutely Productions.\n\n Her father is the artist Tony Berlant.",
+    "Keisuke Kuwata\nKeisuke Kuwata (桑田 佳祐 , Kuwata Keisuke , born February 26, 1956) is a Japanese multi-instrumentalist, singer-songwriter, and frontman for the Southern All Stars, as well of his own solo band, the Kuwata band.\n\n He has also done significant amount of scoring music for films.\n\n He went to Aoyama Gakuin University.",
+    "2014 Monterrey Open – Doubles\nTímea Babos and Kimiko Date-Krumm were the defending champions, but chose not to participate together.\n\n Babos played alongside Olga Govortsova, while Date-Krumm teamed up with Karolína Plíšková.\n\n The two teams were scheduled to meet in the semifinals, but Date-Krumm withdrew with a right leg injury.\n\n<br>",
+    "Moya Brennan\nMoya Brennan, born Máire Ní Bhraonáin (] ), also known as Máire Brennan (born 4 August 1952), is an Irish folk singer, songwriter, harpist, and philanthropist.\n\n She is the older sister of Enya and Brídín Brennan.\n\n She began performing professionally in 1970 when her family formed the band Clannad, and is considered as the \"First Lady of Celtic Music\".\n\n Moya released her first solo album in 1992 called \"Máire\", a successful venture.\n\n She has been nominated for two Grammys and has won an Emmy Award.\n\n She has recorded music for several soundtracks, including \"Titanic\", \"To End All Wars\" and \"King Arthur\".",
+    "Two Horizons\nTwo Horizons is the fifth solo album by Irish singer Moya Brennan.\n\n It is her first full-length release under the name \"Moya Brennan\", as opposed to \"Máire Brennan\".\n\n The album was predominantly recorded in her home studio in Dublin and was nominated for a Grammy award.\n\n The album was recorded between 2002–2003 and first became available on 23 October 2003.\n\n It is also Brennan's first non-Christian album since her 1993 recording Misty Eyed Adventures.\n\n It is the most successful of her solo albums to date and the second to be Grammy-nominated.",
+    "Óró – A Live Session\nÓró – A Live Session is a music album by Irish musician Máire Brennan, now known as \"Moya Brennan\".\n\n Just before the start of the German tour, Moya and her band recorded a \"live session\" album to have available for fans on the tour.\n\n She's tried to recreate some of the live feel with the band in the studio covering many of the songs she plays (and was about to play) in concert.\n\n The album will become more widely available subsequently, but originally was released in 2005.",
+    "Keiko Utoku\nKeiko Utoku (宇徳敬子 , \"Utoku Keiko\" , born April 7, 1967 in Izumi, Kagoshima, Japan) is a Japanese singer and songwriter under UK Sweet label.Keiko made first debut with chorus part in band B.B.Queens then joined with J-pop female band Mi-Ke from 1991 to 1993, before starting a solo career.\n\n As a child, Utoku listened to a lot of music, including music made by Momoe Yamaguchi.\n\n She has written and sung many songs, such as \"Wasurenagusa\", and Sonic the Hedgehog fans remember her for her vocal work in the original version of the Sonic CD video game's opening and closing themes in Japan and Europe, \"Sonic – You Can Do Anything\" and \"Cosmic Eternity – Believe In Yourself\" in 1993.\n\n In addition, she also provided Sonic's vocals in the game.\n\n At recent dates, she has released 15 singles, 5 digital singles, 4 studio albums, 1 mini and 2 best albums.",
+    "Kevin Mayer\nKevin Mayer (] , ] or ] , born 10 February 1992) is a French athlete specializing in combined events.\n\n A native of Drôme in southeast France, Mayer excelled in combined events from a young age; highlights from his youth career include winning gold medals in the octathlon at the 2009 World Youth Championships and in the decathlon at the 2010 World Junior Championships and at the 2011 European Athletics Junior Championships, establishing a new national junior record at the latter.",
+    "My Match Is a Makin'\nMy Match Is A Makin' (English translation of opening track title) is a music album by Irish musicians Moya Brennan and Cormac de Barra.\n\n This is Moya's eighth studio album to be released.\n\n It was released on 14 April 2010 exclusively to concert goers on her Spring 2010 tour of the Netherlands.\n\n The album was re-released to a wider audience under the title Voices & Harps."
+   ]
+  },
+  {
+   "id": "d1b978836a2987a8",
+   "gold": [
+    {
+     "sentence": "Dalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick.",
+     "facts": {
+      "0.0": "Dalhousie University, commonly known as Dal, is a public research university.",
+      "0.1": "Dalhousie University is in Nova Scotia, Canada.",
+      "0.2": "Dalhousie University has three campuses in Halifax.",
+      "0.3": "Dalhousie University has a fourth campus in Bible Hill.",
+      "0.4": "Dalhousie University has medical teaching facilities in Saint John, New Brunswick."
+     }
+    },
+    {
+     "sentence": "California State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States.",
+     "facts": {
+      "1.0": "California State Polytechnic University, Pomona is also known as CPP, Cal Poly Pomona, or Cal Poly.",
+      "1.1": "California State Polytechnic University, Pomona is a public polytechnic university.",
+      "1.2": "California State Polytechnic University, Pomona is located in Pomona, California, United States."
+     }
+    }
+   ],
+   "items": [
+    "Cal Poly Pomona University Library\nThe Cal Poly Pomona University Library is the main library on the campus of California State Polytechnic University, Pomona (Cal Poly Pomona).\n\n It has in its collection 670,580 books; 6,883 serial subscriptions and 10,417 audiovisual materials.",
+    "Cal Poly Pomona College of Environmental Design\nThe Cal Poly Pomona College of Environmental Design (CENV) is a college part of the California State Polytechnic University, Pomona (Cal Poly Pomona).\n\n The college houses over 1,600 students; making it one of largest environmental design programs in the United States.\n\n The college offers bachelor's degrees in five departments, as well as three master's degree programs.\n\n It is the only academic unit within the California State University system to be associated with a Pritzker Prize laureate (often referred to as \"The Nobel Prize in Architecture\").",
+    "1981 Cal Poly Pomona Broncos football team\nThe 1981 Cal Poly Pomona Broncos football team represented California State Polytechnic University, Pomona during the 1981 NCAA Division II football season.\n\n Cal Poly Pomona competed in the California Collegiate Athletic Association (CCAA).",
+    "Cal Poly Pomona Broncos women's basketball\nThe Cal Poly Pomona Broncos women's basketball team is the women's basketball team that represents California State Polytechnic University, Pomona, in Pomona, California.\n\n The school's team currently competes in the California Collegiate Athletic Association.",
+    "Dalhousie University\nDalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick.\n\n Dalhousie offers more than 4,000 courses and 180 degree programs in twelve undergraduate, graduate, and professional faculties.\n\n The university is a member of the U15, a group of research-intensive universities in Canada.",
+    "California State Polytechnic University, Pomona\nCalifornia State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States.\n\n It is one of two polytechnics in the California State University system.",
+    "Julian A. McPhee\nJulian Aeneas McPhee (February 7, 1896 – November 10, 1967) was the sixth university president of California Polytechnic State University, San Luis Obispo (Cal Poly SLO) from 1933 to 1966 and the first president of California State Polytechnic University, Pomona (Cal Poly Pomona) from 1938 to 1966.",
+    "International Polytechnic High School\nInternational Polytechnic High School, commonly abbreviated merely as iPoly, is a public college preparatory demonstration high school (9-12) located on the California State Polytechnic University, Pomona (Cal Poly Pomona) campus and operated by the Los Angeles County Office of Education (LACOE) in conjunction with the College of Education and Integrative Studies at the university.\n\n iPoly's curriculum is fully accredited by the Western Association of Schools and Colleges and is approved by the University of California and California State University.\n\n It maintains a unique affiliation with the Los Angeles County High School for the Arts (LACHSA), which is also run by LACOE.\n\n Since iPoly does not lie in a fixed school district, it draws students from throughout Los Angeles, San Bernardino, Orange and Riverside counties.\n\n The majority of students come from the Pomona and San Gabriel valleys.\n\n In 2009 and 2013, iPoly was honored as a California Distinguished School by the California Department of Education.",
+    "Cal Poly Pomona College of Engineering\nThe Cal Poly Pomona College of Engineering is the engineering college at California State Polytechnic University, Pomona (Cal Poly Pomona or Cal Poly) located in Pomona, California, United States.\n\n Well known for its \"learn by doing\" philosophy, the college's motto is: \"\"making imagination real\"\".\n\n Cal Poly has one of the top engineering college among public schools in California and, with over 5,600 students (as of fall 2015), it is also the largest engineering college in Southern California, the second largest college of engineering in the California State University system, and the seventeenth largest engineering college in the United States.\n\n In the 2017 \"U.S. News & World Report\" the College of Engineering is ranked the 5th best undergraduate program among public universities (11th overall) in the West for Master's-granting universities, and \"has one of the top ranked engineering programs, and graduates roughly 1 of every 14 engineers in the state of California.\"",
+    "Cal Poly Pomona Broncos\nThe Cal Poly Pomona Broncos or Cal Poly Broncos are the athletic sports teams for the California State Polytechnic University, Pomona (Cal Poly Pomona).\n\n Cal Poly Pomona has 10 varsity sports teams and offers student participation in a wide range of sports including soccer, volleyball, track and field, basketball, softball, and baseball.\n\n Cal Poly Pomona participates at the NCAA's Division II (DII) level in the California Collegiate Athletic Association (CCAA).\n\n The Broncos have 65 CCAA championships and 14 NCAA National Championships.\n\n Current and former Cal Poly athletes have won 7 Olympic medals (3 gold, 1 silver, and 3 bronze)."
+   ]
+  }
+ ]
+}

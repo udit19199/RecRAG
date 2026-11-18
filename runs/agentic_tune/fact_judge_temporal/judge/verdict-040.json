@@ -1,0 +1,18 @@
+[
+  {"id": "a0981ea5182816b1", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Kelce made a friendship bracelet to give to the newcomers at a camp for NFL tight ends."}]},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "July 26: Kelce makes friendship bracelet for Swift"}]},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "d267083f2264bebd", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Sorcerer builds for season 2."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Sorcerer builds for season 2."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Barbarian builds for season 2."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Barbarian builds for season 2."}]}
+  ]}
+]

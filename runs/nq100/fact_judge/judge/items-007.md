@@ -1,0 +1,843 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=c24e71fdb4b9dd81 ===
+Gold sentences and facts:
+Sentence 0: In 2007 , Adobe 's first version release was Adobe Flash CS3 Professional , the ninth major version of Flash . It introduced the ActionScript 3.0 programming language , which supported modern programming practices and enabled business applications to be developed with Flash . Adobe Flex Builder ( built on Eclipse ) targeted the enterprise application development market , and was also released the same year . Flex Builder included the Flex SDK , a set of components that included charting , advanced UI , and data services ( Flex Data Services ) .
+  Fact 0.0: Adobe's first version release in 2007 was Adobe Flash CS3 Professional.
+  Fact 0.1: Adobe Flash CS3 Professional was the ninth major version of Flash.
+  Fact 0.2: Adobe Flash CS3 Professional introduced the ActionScript 3.0 programming language.
+  Fact 0.3: ActionScript 3.0 supported modern programming practices.
+  Fact 0.4: ActionScript 3.0 enabled business applications to be developed with Flash.
+  Fact 0.5: Adobe Flex Builder was built on Eclipse.
+  Fact 0.6: Adobe Flex Builder targeted the enterprise application development market.
+  Fact 0.7: Adobe Flex Builder was also released in 2007.
+  Fact 0.8: Flex Builder included the Flex SDK.
+  Fact 0.9: The Flex SDK is a set of components.
+  Fact 0.10: The Flex SDK components included charting.
+  Fact 0.11: The Flex SDK components included advanced UI.
+  Fact 0.12: The Flex SDK components included data services, called Flex Data Services.
+
+Retrieved items:
+<item 1>
+Adobe Flash
+Adobe Wallaby Server - side Adobe Flash Media Server Obsolete software Adobe Flash Builder Adobe Flash Catalyst Adobe Flash Lite SWFAddress SWFObject MTASC
+Scaleform GFx SWiSH Max Swift 3D Papervision3D Ajax Animator Shumway Swfdec OpenLaszlo Related topics Comparison of HTML5 and Flash Apple and Adobe Flash
+controversy Flash animation films television Protected Streaming Real - Time Messaging Protocol Real - Time Media Flow Protocol Developers FutureWave Software
+Macromedia Adobe Systems Adobe Creative Suite and Creative Cloud Current products Acrobat After Effects Animate Audition Bridge Dreamweaver Flash Builder
+Illustrator InCopy InDesign Lightroom Media Encoder Muse Photoshop Prelude Premiere Pro Spark XD Creative Cloud services Behance Business Catalyst Story Typekit
+Former products Contribute Device Central Edge Edge Animate Encore Flash Catalyst Fireworks GoLive ImageReady OnLocation Soundbooth Stock Photos Ultra Adobe
+eLearning Suite Current products Captivate Flash Dreamweaver Photoshop Acrobat Presenter Soundbooth Shared applications Bridge Device Central Adobe Systems
+Software Suites Creative Cloud ( Creative Suite ) eLearning Suite Technical Communication Suite Desktop Animate Acrobat After Effects Brackets Edge Code Edge
+Reflow Digital Editions Director Dreamweaver FrameMaker FreeHand Flash Player Flex Builder GoLive Illustrator InDesign Media Encoder Media Player Muse PageMaker
+Photoshop
+</item 1>
+
+<item 2>
+Adobe Flash
+, blend modes ( similar to Adobe Photoshop ) , and advanced features for FLV video . Adobe ( edit ) Macromedia was acquired by Adobe Systems in 2005 , and the
+entire Macromedia product line including Flash , Dreamweaver , Director / Shockwave , Fireworks ( which has since been discontinued ) and Authorware is now
+handled by Adobe . In 2007 , Adobe 's first version release was Adobe Flash CS3 Professional , the ninth major version of Flash . It introduced the ActionScript
+3.0 programming language , which supported modern programming practices and enabled business applications to be developed with Flash . Adobe Flex Builder (
+built on Eclipse ) targeted the enterprise application development market , and was also released the same year . Flex Builder included the Flex SDK , a set of
+components that included charting , advanced UI , and data services ( Flex Data Services ) . In 2008 , Adobe released the tenth version of Flash , Adobe Flash
+CS4 . Flash 10 improved animation capabilities within the Flash editor , adding a motion editor panel ( similar to Adobe After Effects ) , inverse kinematics (
+bones ) , basic 3D object animation , object - based animation , and other text and graphics features .
+</item 2>
+
+<item 3>
+Adobe Flash
+Macromedia distributed Flash Player as a free browser plugin in order to quickly gain market share . By 2005 , more computers worldwide had Flash Player
+installed than any other Web media format , including Java , QuickTime , RealNetworks and Windows Media Player . Macromedia upgraded the Flash system between
+1996 and 1999 adding MovieClips , Actions ( the precursor to ActionScript ) , Alpha transparency , and other features . As Flash matured , Macromedia 's focus
+shifted from marketing it as a graphics and media tool to promoting it as a Web application platform , adding scripting and data access capabilities to the
+player while attempting to retain its small footprint . In 2000 , the first major version of ActionScript was developed , and released with Flash 5 .
+Actionscript 2.0 was released with Flash MX 2004 and supported object - oriented programming , improved UI components and other programming features . The last
+version of Flash released by Macromedia was Flash 8 , which focused on graphical upgrades such as filters ( blur , drop shadow , etc . ) , blend modes ( similar
+to Adobe Photoshop ) , and advanced features for FLV video .
+</item 3>
+
+<item 4>
+Adobe Flash
+The Apache Flex ActionScript 3.0 compiler generates SWF files from ActionScript 3 files . Flex was the primary ActionScript 3 compiler and was actively
+developed by Adobe before it was donated to Apache Software Foundation in 2011 . Adobe Animate -- primarily used to design graphics and animation , but supports
+ActionScript scripting and debugging . Adobe Flash Builder -- enterprise application development & debugging , contains the Flex SDK with UI and charting
+components . Adobe Scout -- a visual profiler to optimize performance of Flash content . CrossBridge -- a free SDK to cross-compile C++ code to run in Flash
+Player . Third - party tools ( edit ) Third - party development tools have been created to assist developers in creating software applications and video games
+with Flash . FlashDevelop is a free and open - source Flash ActionScript IDE , which includes a project manager and debugger for building applications on Flash
+Player and Adobe AIR . Powerflasher FDT is a commercial ActionScript IDE similar to FlashDevelop . Haxe is an open source , high - level object - oriented
+programming language geared towards web - content creation that can compile SWF files from Haxe programs .
+</item 4>
+
+<item 5>
+Adobe Flash
+Previously , developers could not use the specification for making SWF - compatible players , but only for making SWF - exporting authoring software . The
+specification still omits information on codecs such as Sorenson Spark , however . Animation tools ( edit ) Official tools ( edit ) Main article : Adobe Animate
+The Adobe Animate authoring program is primarily used to design graphics and animation and publish the same for websites , web applications , and video games .
+The program also offers limited support for audio and video embedding , and ActionScript scripting . Adobe released Adobe LiveMotion , designed to create
+interactive animation content and export it to a variety of formats , including SWF . LiveMotion failed to gain any notable user base . In February 2003 ,
+Macromedia purchased Presedia , which had developed a Flash authoring tool that automatically converted PowerPoint files into Flash . Macromedia subsequently
+released the new product as Breeze , which included many new enhancements .
+</item 5>
+
+<item 6>
+Adobe Flash
+Adobe Flash - Wikipedia Adobe Flash Jump to : navigation , search For the application / animation - maker , see Adobe Animate . For other uses , see Adobe Flash
+( disambiguation ) . Adobe Flash Developer ( s ) Adobe Systems Macromedia FutureWave Target platform ( s ) Web browsers , iOS , Android , Windows , macOS Editor
+software Adobe Animate , Flash Builder , FlashDevelop , Powerflasher FDT , Flash Catalyst Scaleform Player software Flash Player Adobe AIR OpenFL Scaleform
+Gnash Lightspark Format ( s ) SWF FLV FLA Programming language ( s ) ActionScript Application ( s ) Animation Browser games Rich Internet applications Desktop
+applications Mobile apps Mobile games console games computer games Status Active ( Until 2020 ) License Proprietary Adobe Flash is a multimedia software
+platform used for production of animations , rich Internet applications , desktop applications , mobile applications , mobile games and embedded web browser
+video players . Flash displays text , vector graphics and raster graphics to provide animations , video games and applications . It allows streaming of audio
+and video , and can capture mouse , keyboard , microphone and camera input . Artists may produce Flash graphics and animations using Adobe Animate .
+</item 6>
+
+<item 7>
+Adobe Flash
+FreeHand Flash Player Flex Builder GoLive Illustrator InDesign Media Encoder Media Player Muse PageMaker Photoshop Photoshop Lightroom Premiere Pro Reader
+Shockwave Player Server LiveCycle Flash Media Server BlazeDS ColdFusion JRun PhoneGap Build Technologies ActionScript Adobe AIR Adobe Flash Adobe Flex Adobe
+Shockwave Adobe Font Folio Digital Negative ( DNG ) Authorware FlashPaper Portable Document Format ( PDF ) PostScript Web services Acrobat.com Adobe Solutions
+Network Adobe Photoshop Express Adobe Premiere Express Adobe Spark Adobe Stock Acquisitions Aldus Macromedia Scene7 Omniture Behance Fotolia People Bruce Chizen
+Charles Geschke Shantanu Narayen John Warnock Del Yocam Commons Retrieved from `` https://en.wikipedia.org/w/index.php?title=Adobe_Flash&oldid=821675124 ''
+Categories : Adobe Flash American inventions Cross-platform software Computing platforms C++ software Mac OS multimedia software MacOS multimedia software
+Windows multimedia software Macromedia software Adobe software 1993 software Video game development software Hidden categories : Webarchive template wayback
+links Pages using web citations with no URL Pages using citations with accessdate and no URL Use mdy dates from April 2012 Articles containing potentially dated
+statements from February 2009 All articles containing potentially dated statements Articles containing potentially
+</item 7>
+
+<item 8>
+Adobe Flash
+Artists may produce Flash graphics and animations using Adobe Animate . Software developers may produce applications and video games using Adobe Flash Builder ,
+FlashDevelop , Flash Catalyst , or any text editor when used with the Apache Flex SDK . End - users can view Flash content via Flash Player ( for web browsers )
+, AIR ( for desktop or mobile apps ) or third - party players such as Scaleform ( for video games ) . Adobe Flash Player ( supported on Microsoft Windows ,
+macOS and Linux ) enables end - users to view Flash content using web browsers . Adobe Flash Lite enabled viewing Flash content on older smartphones , but has
+been discontinued and superseded by Adobe AIR . The ActionScript programming language allows the development of interactive animations , video games , web
+applications , desktop applications and mobile applications . Programmers can implement Flash software using an IDE such as Adobe Animate , Adobe Flash Builder
+, Adobe Director , FlashDevelop and Powerflasher FDT . Adobe AIR enables full - featured desktop and mobile applications to be developed with Flash and
+published for Windows , macOS , Android , iOS , Xbox One , PlayStation 4 , and Nintendo Wii U and Switch .
+</item 8>
+
+<item 9>
+Adobe Flash
+Macromedia subsequently released the new product as Breeze , which included many new enhancements . Third - party tools ( edit ) Main article : Comparison of
+vector graphics editors Various free and commercial software packages can output animations into the Flash SWF format , suitable for display on the web ,
+including : SWiSH Max is an animation editor with preset animation , developed by an ex-employee of Macromedia , that can output Flash animations Toon Boom is a
+traditional animation tool that can output Flash animations Apple Keynote allows users to export presentations to Flash SWF animations Xara Photo & Graphic
+Designer can output Flash animations Ajax Animator aim to create a Flash development environment KToon can edit vectors and generate SWF , but its interface is
+very different from Macromedia 's Screencast and Screencam , produces demos or tutorials by capturing the screen and generating a Flash animation of the same
+GoAnimate is a software as a service tool to create animated videos .
+</item 9>
+
+<item 10>
+Adobe Flash
+CreateJS is library that while available separately was also adopted by Adobe as a replacement for Wallaby in CS6 . Unlike Wallaby , which was a standalone
+program , the `` Toolkit for CreateJS '' only works as a plug - in inside Flash Professional ; it generates output for the HTML5 canvas , animated with
+JavaScript . Around December 2013 , the toolkit was integrated directly into Flash Professional CC . Criticisms ( edit ) Mobile support ( edit ) Websites built
+with Adobe Flash will not function on most modern mobile devices running Google Android or iOS ( iPhone , iPad ) . The only alternative is using HTML5 and
+responsive web design to build websites that support both desktop and mobile devices . However , Flash is still used to build mobile games using Adobe AIR .
+Such games will not work in mobile web browsers , but must be installed via the appropriate app store . Vendor dependence ( edit ) See also : Vendor lock - in
+The reliance on Adobe for decoding Flash makes its use on the World Wide Web a concern -- the completeness of its public specifications are debated , and no
+complete implementation of Flash is publicly available in source code form with a license that permits reuse .
+</item 10>
+=== END ITEM id=c24e71fdb4b9dd81 ===
+
+=== ITEM id=b09bde557e844ae8 ===
+Gold sentences and facts:
+Sentence 0: Duncan 's diagnosis was publicly confirmed during a CDC news conference the same day . That evening , Duncan reported feeling better and requested to watch a movie . The following morning , Duncan was breathing rapidly and complaining of `` pain all over '' . By the afternoon , however , he was able to eat , and the doctor noted that he was feeling better . The next day , October 3 , Duncan again reported feeling abdominal pain . That evening , the hospital contacted Chimerix , a biotechnology company developing Brincidofovir to combat the disease . The next day , Duncan 's organs were failing , and he was intubated to help him breathe . In the afternoon , the hospital began administering Brincidofovir . Nurses Nina Pham and Amber Joy Vinson continued to care for Duncan around the clock . On October 7 , the hospital reported that Duncan 's condition was improving . However , Duncan died at 7 : 51 a.m. on October 8 , becoming the first person to die in the United States of Ebola virus disease and the index patient for the later infections of nurses Pham and Vinson .
+  Fact 0.0: Duncan's diagnosis was publicly confirmed the same day during a CDC news conference.
+  Fact 0.1: On the evening the diagnosis was confirmed, Duncan reported feeling better.
+  Fact 0.2: On the evening the diagnosis was confirmed, Duncan requested to watch a movie.
+  Fact 0.3: The following morning, Duncan was breathing rapidly.
+  Fact 0.4: The following morning, Duncan was complaining of 'pain all over'.
+  Fact 0.5: By the afternoon, Duncan was able to eat.
+  Fact 0.6: By the afternoon, the doctor noted that Duncan was feeling better.
+  Fact 0.7: On October 3, Duncan again reported feeling abdominal pain.
+  Fact 0.8: On the evening of October 3, the hospital contacted Chimerix.
+  Fact 0.9: Chimerix is a biotechnology company developing Brincidofovir to combat the disease.
+  Fact 0.10: The day after October 3, Duncan's organs were failing.
+  Fact 0.11: The day after October 3, Duncan was intubated to help him breathe.
+  Fact 0.12: In the afternoon of that day, the hospital began administering Brincidofovir.
+  Fact 0.13: Nurses Nina Pham and Amber Joy Vinson continued to care for Duncan around the clock.
+  Fact 0.14: On October 7, the hospital reported that Duncan's condition was improving.
+  Fact 0.15: Duncan died at 7:51 a.m. on October 8.
+  Fact 0.16: Duncan became the first person to die in the United States of Ebola virus disease.
+  Fact 0.17: Duncan was the index patient for the later infections of nurses Pham and Vinson.
+Sentence 1: In December 2014 , Ebola virus cases in the United States occurred due to four laboratory - confirmed cases of Ebola virus disease ( commonly known as `` Ebola '' ) in the United States . Eleven cases have been reported , including these four cases and seven cases medically evacuated from other countries ; the first was reported in September 2014 . Nine of the people contracted the disease outside the US and traveled into the country , either as regular airline passengers or as medical evacuees ; of those nine , two died . Two people have contracted Ebola in the United States . Both were nurses who treated an Ebola patient ; both have recovered .
+  Fact 1.0: In December 2014, there were four laboratory-confirmed cases of Ebola virus disease in the United States.
+  Fact 1.1: Ebola virus disease is commonly known as Ebola.
+  Fact 1.2: Eleven Ebola cases have been reported in the United States.
+  Fact 1.3: The eleven cases include the four cases in the United States and seven cases medically evacuated from other countries.
+  Fact 1.4: The first of the Ebola cases was reported in September 2014.
+  Fact 1.5: Nine of the people contracted Ebola outside the US and traveled into the country.
+  Fact 1.6: The nine people traveled into the country either as regular airline passengers or as medical evacuees.
+  Fact 1.7: Two of the nine people who contracted Ebola outside the US died.
+  Fact 1.8: Two people have contracted Ebola in the United States.
+  Fact 1.9: Both people who contracted Ebola in the United States were nurses who treated an Ebola patient.
+  Fact 1.10: Both nurses have recovered.
+Sentence 2: On September 30 , 2014 , the CDC announced that Thomas Eric Duncan , a reportedly 42 - year - old ( later corrected by CDC reports as a 45 - year - old ) Liberian national visiting the United States from Liberia , had been diagnosed with Ebola in Dallas , Texas . Duncan , who had been visiting family in Dallas , was treated at Texas Health Presbyterian Hospital Dallas . By October 4 , Duncan 's condition had deteriorated from `` serious but stable '' to `` critical '' . On October 8 , Duncan died of Ebola. The other three cases diagnosed in the United States as of October 2014 were :
+  Fact 2.0: On September 30, 2014, the CDC announced that Thomas Eric Duncan had been diagnosed with Ebola in Dallas, Texas.
+  Fact 2.1: Thomas Eric Duncan was reportedly 42 years old.
+  Fact 2.2: CDC reports later corrected Duncan's age to 45 years old.
+  Fact 2.3: Thomas Eric Duncan was a Liberian national.
+  Fact 2.4: Thomas Eric Duncan was visiting the United States from Liberia.
+  Fact 2.5: Duncan was visiting family in Dallas.
+  Fact 2.6: Duncan was treated at Texas Health Presbyterian Hospital Dallas.
+  Fact 2.7: By October 4, Duncan's condition had deteriorated from 'serious but stable' to 'critical'.
+  Fact 2.8: On October 8, Duncan died of Ebola.
+  Fact 2.9: As of October 2014, three other cases had been diagnosed in the United States besides Duncan's.
+Sentence 3: Ebola virus disease in the U.S. Map of Ebola cases and infrastructure throughout the U.S. Cases contracted in the U.S. Cases first diagnosed in U.S. Cases evacuated to U.S. from other countries 7 Total cases 11 Deaths Recoveries from Ebola 9 Active cases 0
+  Fact 3.0: The infographic is titled Ebola virus disease in the U.S.
+  Fact 3.1: The map shows Ebola cases and infrastructure throughout the U.S.
+  Fact 3.2: One category is cases contracted in the U.S.
+  Fact 3.3: One category is cases first diagnosed in the U.S.
+  Fact 3.4: One category is cases evacuated to the U.S. from other countries, with 7 listed.
+  Fact 3.5: Total cases are listed as 11.
+  Fact 3.6: Recoveries from Ebola are listed as 9.
+  Fact 3.7: Active cases are listed as 0.
+
+Retrieved items:
+<item 1>
+Ebola virus cases in the United States
+Jump up ^ `` First diagnosed case of Ebola in the U.S. '' CNN . September 30 , 2014 . Retrieved October 27 , 2014 . Jump up ^ `` New Details About Ebola In
+Dallas Revealed In CDC Report '' . HuffingtonPost . November 14 , 2014 . Retrieved November 14 , 2014 . Jump up ^ CDC confirms first ever Ebola case in United
+States , cdc.gov ; accessed October 9 , 2014 . Jump up ^ Fernandez , Manny ; Philipps , Dave ( October 9 , 2014 ) . `` Death of Thomas Eric Duncan in Dallas
+Fuels Alarm Over Ebola '' . The New York Times . Retrieved October 9 , 2014 . ^ Jump up to : Fernandez , Manny ; Onishi , Norimitsu ( October 1 , 2014 ) . ``
+U.S. Patient Aided Ebola Victim in Liberia '' . The New York Times . ^ Jump up to : `` Thomas Eric Duncan : From healthy to Ebola '' . WYFF4 . Retrieved October
+3 , 2014 .
+</item 1>
+
+<item 2>
+Ebola virus cases in the United States
+Medical evacuations from West Africa ( edit ) Local transmissions -- no deaths : Texas Initial cases -- deaths : Texas Initial cases -- no deaths : New York
+Medically evacuated cases -- no deaths : Georgia , Maryland Medically evacuated cases -- deaths : Nebraska By the time the Ebola virus epidemic in West Africa
+was over in June 2016 , seven Americans had been evacuated to the U.S. for treatment after contracting Ebola virus while working with medical teams trying to
+stop the epidemic . Kent Brantly , a physician and medical director in Liberia for the aid group Samaritan 's Purse , and co-worker Nancy Writebol were infected
+in July 2014 , while working in Monrovia . Both were flown to the United States at the beginning of August via the CDC 's Aeromedical Biological Containment
+System for further treatment in Atlanta 's Emory University Hospital . On August 21 , Brantly and Writebol recovered and were discharged . Brantly has since
+donated blood to three others with Ebola ( Sacra , Mukpo and Pham ) .
+</item 2>
+
+<item 3>
+Ebola virus cases in the United States
+See also ( edit ) Ebola virus epidemic in Guinea Ebola virus epidemic in Liberia Ebola virus epidemic in Nigeria Ebola virus epidemic in Sierra Leone Ebola
+virus disease in Spain List of Ebola outbreaks West Nile virus in the United States Notes ( edit ) Jump up ^ Duncan contracted Ebola in Liberia and was
+diagnosed in the U.S. Two of the victims had had direct contact with Duncan . One victim was diagnosed in New York City ; his case is unrelated to the Texas
+cases . ^ Jump up to : This takes into account the seven Americans who were medically evacuated from West Africa with Ebola . References ( edit ) Jump up ^ ``
+Who are the American Ebola patients ? '' , CNN , October 6 , 2014 Jump up ^ `` Nebraska Hospital : Surgeon With Ebola Has Died '' . ABC News . November 17 ,
+2014 . Retrieved November 17 , 2014 . Jump up ^ `` 2014 Ebola Outbreak - Case Count '' . CDC . December 15 , 2014 . Retrieved December 16 , 2014 . Jump up ^ ``
+First diagnosed case of Ebola in the U.S. '' CNN .
+</item 3>
+
+<item 4>
+Ebola virus cases in the United States
+Ebola virus cases in the United States - wikipedia Ebola virus cases in the United States Jump to : navigation , search This article is about Ebola virus cases
+in the United States starting in 2014 . For the 2013 - 2016 outbreak in Africa , see Ebola virus epidemic in West Africa . For the U.S. discovery of a different
+species of the Ebolavirus genus in 1989 , see Reston virus . Ebola virus disease in the U.S. Map of Ebola cases and infrastructure throughout the U.S. Cases
+contracted in the U.S. Cases first diagnosed in U.S. Cases evacuated to U.S. from other countries 7 Total cases 11 Deaths Recoveries from Ebola 9 Active cases 0
+In December 2014 , Ebola virus cases in the United States occurred due to four laboratory - confirmed cases of Ebola virus disease ( commonly known as `` Ebola
+'' ) in the United States . Eleven cases have been reported , including these four cases and seven cases medically evacuated from other countries ; the first
+was reported in September 2014 .
+</item 4>
+
+<item 5>
+Ebola virus cases in the United States
+CBS News . November 13 , 2014 . Jump up ^ Sieff , Kevin ( November 17 , 2014 ) . `` A doctor 's mistaken Ebola test : ' We were celebrating ... Then everything
+fell apart ' '' . Washington Post . Jump up ^ `` Martin Salia , Surgeon With Ebola , Arrives in Nebraska From Sierra Leone '' . New York Times . November 15 ,
+2014 . Retrieved November 16 , 2014 . Jump up ^ Goodnough , Abby ; Trenchard , Tommy ( November 17 , 2014 ) . `` Doctor Being Treated for Ebola in Omaha Dies ''
+. The New York Times . Jump up ^ U.S.
+</item 5>
+
+<item 6>
+Ebola virus cases in the United States
+Nine of the people contracted the disease outside the US and traveled into the country , either as regular airline passengers or as medical evacuees ; of those
+nine , two died . Two people have contracted Ebola in the United States . Both were nurses who treated an Ebola patient ; both have recovered . On September 30
+, 2014 , the CDC announced that Thomas Eric Duncan , a reportedly 42 - year - old ( later corrected by CDC reports as a 45 - year - old ) Liberian national
+visiting the United States from Liberia , had been diagnosed with Ebola in Dallas , Texas . Duncan , who had been visiting family in Dallas , was treated at
+Texas Health Presbyterian Hospital Dallas . By October 4 , Duncan 's condition had deteriorated from `` serious but stable '' to `` critical '' . On October 8 ,
+Duncan died of Ebola. The other three cases diagnosed in the United States as of October 2014 were : October 11 , 2014 , a nurse , Nina Pham , who had provided
+care to Duncan at the hospital . October 14 , 2014 , Amber Joy Vinson , another nurse who treated Duncan .
+</item 6>
+
+<item 7>
+Ebola virus cases in the United States
+In addition , on September 21 , a CDC employee , who showed no symptoms of the disease , was flown back to the United States as a preventative measure after low
+- risk exposure with a healthcare worker ; he posed no risks to his family or the United States , and he is not known to have died . On September 28 , a fourth
+American doctor was admitted to National Institutes of Health hospital . On October 2 , NBC News photojournalist Ashoka Mukpo , covering the outbreak in Liberia
+, tested positive for Ebola after showing symptoms . Four other members of the NBC team , including physician Nancy Snyderman , were being closely monitored for
+symptoms . Mukpo was evacuated on October 6 to the University of Nebraska Medical Center for treatment in their isolation unit . On October 21 , Mukpo was
+declared Ebola - free and allowed to return to his home in Rhode Island . A government official in Sierra Leone announced on November 13 , that a doctor from
+Sierra Leone , a permanent resident of the United States married to a U.S. citizen , would be transported to the Nebraska Medical Center for treatment for Ebola
+. The doctor , identified later as Dr.
+</item 7>
+
+<item 8>
+Ebola virus cases in the United States
+October 14 , 2014 , Amber Joy Vinson , another nurse who treated Duncan . October 23 , 2014 , physician Craig Spencer , diagnosed in New York City ; he had just
+returned from working with Doctors Without Borders in Guinea , a country in west Africa . Hundreds of people were tested or monitored for potential Ebola virus
+infection , but the two nurses were the only confirmed cases of locally transmitted Ebola . Public health experts and the Obama administration opposed
+instituting a travel ban on Ebola endemic areas , stating that it would be ineffective and would paradoxically worsen the situation . No one both contracted and
+died of Ebola virus disease while in the United States . No new cases have been diagnosed in the United States since Craig Spencer was released from a New York
+City hospital on November 11 , 2014 . Contents ( hide ) 1 Cases diagnosed in U.S. 1.1 First case : Thomas Eric Duncan 1.1. 1 Thomas Eric Duncan in Liberia 1.1.
+2 Duncan 's illness in Dallas 1.1. 3 Contact tracing 1.1.
+</item 8>
+
+<item 9>
+Ebola virus cases in the United States
+The next day , October 3 , Duncan again reported feeling abdominal pain . That evening , the hospital contacted Chimerix , a biotechnology company developing
+Brincidofovir to combat the disease . The next day , Duncan 's organs were failing , and he was intubated to help him breathe . In the afternoon , the hospital
+began administering Brincidofovir . Nurses Nina Pham and Amber Joy Vinson continued to care for Duncan around the clock . On October 7 , the hospital reported
+that Duncan 's condition was improving . However , Duncan died at 7 : 51 a.m. on October 8 , becoming the first person to die in the United States of Ebola
+virus disease and the index patient for the later infections of nurses Pham and Vinson . Contact tracing ( edit ) On October 5 , the CDC announced it had lost
+track of a homeless man who had been in the same ambulance as Duncan . They announced efforts were underway to find the man and place him in a comfortable and
+compassionate monitoring environment . Later that day , the CDC announced that the man had been found and was being monitored .
+</item 9>
+
+<item 10>
+Ebola virus cases in the United States
+WYFF4 . Retrieved October 3 , 2014 . Jump up ^ `` First US Ebola case Thomas Duncan ' critical ' '' . BBC News . October 4 , 2014 . Retrieved October 4 , 2014 .
+Jump up ^ `` Texas Ebola patient dies '' . CNN . October 8 , 2014 . Retrieved October 8 , 2014 . ^ Jump up to : Fernandez , Manny ( October 12 , 2014 ) . ``
+Texas Health Worker Tests Positive for Ebola '' . New York Times . Retrieved October 12 , 2014 . Jump up ^ `` Ebola outbreak : Second Texas health worker '
+tests positive ' '' . BBC News . October 15 , 2014 . Retrieved October 15 , 2014 . ^ Jump up to : `` New York Doctor Just Back From Africa Has Ebola '' . NBC
+News . October 23 , 2014 . Retrieved October 23 , 2014 . Jump up ^ Dan Diamond ( October 20 , 2014 ) .
+</item 10>
+=== END ITEM id=b09bde557e844ae8 ===
+
+=== ITEM id=45d4922389e98dbf ===
+Gold sentences and facts:
+Sentence 0: It houses the temporal lobes of the brain and the pituitary gland . A middle fossa craniotomy is one means to surgically remove acoustic neuromas ( vestibular schwannoma ) growing within the internal auditory canal of the temporal bone .
+  Fact 0.0: An unnamed structure, referred to as 'it', houses the temporal lobes of the brain.
+  Fact 0.1: That structure houses the pituitary gland.
+  Fact 0.2: A middle fossa craniotomy is one means to surgically remove acoustic neuromas.
+  Fact 0.3: Acoustic neuromas are also called vestibular schwannomas.
+  Fact 0.4: Acoustic neuromas grow within the internal auditory canal of the temporal bone.
+
+Retrieved items:
+<item 1>
+Middle cranial fossa
+IV , V1 , VI ) to Pterygopalatine fossa : foramen rotundum ( CN - V2 ) pterygoid canal to Infratemporal fossa : foramen ovale ( CN - V3 ) foramen spinosum /
+carotid canal other : foramen lacerum hiatus for greater petrosal nerve hiatus for lesser petrosal nerve sphenoidal emissary foramen Posterior cranial fossa
+internal auditory meatus / facial canal / stylomastoid foramen ( CN - VII , VIII ) jugular foramen ( CN - IX , X ,
+</item 1>
+
+<item 2>
+Middle cranial fossa
+Behind the tuberculum sellæ is a deep depression , the sella turcica , containing the fossa hypophyseos , which lodges the hypophysis , and presents on its
+anterior wall the middle clinoid processes . The sella turcica is bounded posteriorly by a quadrilateral plate of bone , the dorsum sellae , the upper angles of
+which are surmounted by the posterior clinoid processes : these afford attachment to the tentorium cerebelli , and below each is a notch for the abducent nerve
+. On either side of the sella turcica is the carotid groove , which is broad , shallow , and curved somewhat like the italic letter f . It begins behind at the
+foramen lacerum , and ends on the medial side of the anterior clinoid process , where it is sometimes converted into a foramen ( carotico - clinoid ) by the
+union of the anterior with the middle clinoid process ; posteriorly , it is bounded laterally by the lingula . This groove lodges the cavernous sinus and the
+internal carotid artery , the latter being surrounded by a plexus of sympathetic nerves .
+</item 2>
+
+<item 3>
+Middle cranial fossa
+On the anterior surface of the petrous portion of the temporal bone are seen the eminence caused by the projection of the superior semicircular canal ; in front
+of and a little lateral to this a depression corresponding to the roof of the tympanic cavity ; the groove leading to the hiatus of the facial canal , for the
+transmission of the greater superficial petrosal nerve and the petrosal branch of the middle meningeal artery ; beneath it , the smaller groove , for the
+passage of the lesser superficial petrosal nerve ; and , near the apex of the bone , the depression for the semilunar ganglion and the orifice of the carotid
+canal . See also ( edit ) Anterior cranial fossa Posterior cranial fossa References ( edit ) This article incorporates text in the public domain from the 20th
+edition of Gray 's Anatomy ( 1918 ) Jump up ^ Mancall , Elliott L. ; Brock , David G. , eds. ( 2011 ) . `` Cranial Fossae '' . Gray 's Clinical Anatomy .
+Elsevier Health Sciences . p. 154 . ISBN 9781437735802 .
+</item 3>
+
+<item 4>
+Middle cranial fossa
+wikipedia.org/w/index.php?title=Middle_cranial_fossa&oldid=808415657 '' Categories : Wikipedia articles incorporating text from the 20th edition of Gray 's
+Anatomy ( 1918 ) Skull Hidden categories : Medicine infobox template using GraySubject or GrayPage Talk Contents About Wikipedia Deutsch فارسی Polski Edit links
+This page was last edited on 2 November 2017 , at 18 : 54 . Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may
+apply . By using this site , you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a
+non-profit organization . About Wikipedia
+</item 4>
+
+<item 5>
+Middle cranial fossa
+Middle cranial fossa - wikipedia Middle cranial fossa Jump to : navigation , search Middle cranial fossa Base of the skull . Upper surface . ( Middle cranial
+fossa is the centermost of the three indentations , in pink and yellow . ) Details Identifiers Latin fossa cranii media TA A02. 1.00. 049 FMA 54369 Anatomical
+terminology ( edit on Wikidata ) The middle cranial fossa , deeper than the anterior cranial fossa , is narrow medially and widens laterally to the sides of the
+skull . It is separated from the posterior fossa by the clivus and the petrous crest . It is bounded in front by the posterior margins of the lesser wings of
+the sphenoid bone , the anterior clinoid processes , and the ridge forming the anterior margin of the chiasmatic groove ; behind , by the superior angles of the
+petrous portions of the temporal bones and the dorsum sellæ ; laterally by the temporal squamæ , sphenoidal angles of the parietals , and greater wings of the
+sphenoid .
+</item 5>
+
+<item 6>
+Middle cranial fossa
+Lateral parts ( edit ) The lateral parts of the middle fossa are of considerable depth , and support the temporal lobes of the brain . They are marked by
+depressions for the brain convolutions and traversed by furrows for the anterior and posterior branches of the middle meningeal vessels . These furrows begin
+near the foramen spinosum , and the anterior runs forward and upward to the sphenoidal angle of the parietal , where it is sometimes converted into a bony canal
+; the posterior runs lateralward and backward across the temporal squama and passes on to the parietal near the middle of its lower border . The following
+apertures are also to be seen . In front is the superior orbital fissure , bounded above by the small wing , below , by the great wing , and medially , by the
+body of the sphenoid ; it is usually completed laterally by the orbital plate of the frontal bone .
+</item 6>
+
+<item 7>
+Middle cranial fossa
+It is traversed by the squamosal , sphenoparietal , sphenosquamosal , and sphenopetrosal sutures . It houses the temporal lobes of the brain and the pituitary
+gland . A middle fossa craniotomy is one means to surgically remove acoustic neuromas ( vestibular schwannoma ) growing within the internal auditory canal of
+the temporal bone . Middle cranial fossa surgical anatomy as demonstrated in a right cadaver temporal bone by Dr Jack M Kartush - view from above . Contents (
+hide ) 1 Middle part 2 Lateral parts 3 See also 4 References 5 Additional images 6 External links Middle part ( edit ) The middle part of the fossa presents ,
+in front , the chiasmatic groove and tuberculum sellae ; the chiasmatic groove ends on either side at the optic foramen , which transmits the optic nerve and
+ophthalmic artery to the orbital cavity . Behind the optic foramen the anterior clinoid process is directed backward and medialward and gives attachment to the
+tentorium cerebelli .
+</item 7>
+
+<item 8>
+Middle cranial fossa
+p. 154 . ISBN 9781437735802 . Additional images ( edit ) Middle cranial fossa at human foetus Base of skull Middle cranial fossa Middle cranial fossa Middle
+cranial fossa External links ( edit ) Wikimedia Commons has media related to Middle cranial fossa . Anatomy photo : 22 : os - 0802 at the SUNY Downstate Medical
+Center Compound structures of skull Neurocranium Calvaria Diploë Asterion Pterion Stephanion Inion Bregma Lambda Fossae anterior middle posterior cranial cavity
+Base of skull Fontanelle anterior posterior sphenoidal mastoid Facial skeleton Nasion Gonion Both dacryon zygomatic arch temporal fossa infratemporal fossa
+pterygomaxillary fissure pterygopalatine fossa Foramina of the skull ( and canals , fissures , meatus , and hiatus ) Anterior cranial fossa to Orbit : ethmoidal
+foramina anterior posterior to Nasal cavity : olfactory foramina ( CN - I ) foramen cecum Middle cranial fossa to Orbit : optic canal ( CN - II ) superior
+orbital fissure ( CN - III ,
+</item 8>
+
+<item 9>
+Middle cranial fossa
+It transmits to the orbital cavity the oculomotor , the trochlear , the ophthalmic division of the trigeminal , and the abducent nerves , some filaments from
+the cavernous plexus of the sympathetic , and the orbital branch of the middle meningeal artery ; and from the orbital cavity a recurrent branch from the
+lacrimal artery to the dura mater , and the ophthalmic veins . Behind the medial end of the superior orbital fissure is the foramen rotundum , for the passage
+of the maxillary nerve . Behind and lateral to the foramen rotundum is the foramen ovale , which transmits the mandibular nerve , the accessory meningeal artery
+, and the lesser superficial petrosal nerve . Medial to the foramen ovale is the foramen Vesalii , which varies in size in different individuals , and is often
+absent ; when present , it opens below at the lateral side of the scaphoid fossa , and transmits a small vein .
+</item 9>
+
+<item 10>
+Middle cranial fossa
+Lateral to the foramen ovale is the foramen spinosum , for the passage of the middle meningeal vessels , and a recurrent branch from the mandibular nerve .
+Medial to the foramen ovale is the foramen lacerum ; in the fresh state the lower part of this aperture is filled up by a layer of fibrocartilage , while its
+upper and inner parts transmit the internal carotid artery surrounded by a plexus of sympathetic nerves . The nerve of the pterygoid canal and a meningeal
+branch from the ascending pharyngeal artery pierce the layer of fibrocartilage .
+</item 10>
+=== END ITEM id=45d4922389e98dbf ===
+
+=== ITEM id=daf45b9809910f88 ===
+Gold sentences and facts:
+Sentence 0: The story in the book takes place in Tulsa , Oklahoma , in 1965 , but this is never explicitly stated in the book .
+  Fact 0.0: The story in the book takes place in Tulsa, Oklahoma.
+  Fact 0.1: The story in the book takes place in 1965.
+  Fact 0.2: The book never explicitly states that the story takes place in Tulsa, Oklahoma, in 1965.
+
+Retrieved items:
+<item 1>
+The Outsiders (novel)
+The story is told in first - person perspective by teenaged protagonist Ponyboy Curtis . The story in the book takes place in Tulsa , Oklahoma , in 1965 , but
+this is never explicitly stated in the book . A film adaptation was produced in 1983 , and a little - known short - lived television series appeared in 1990 ,
+picking up where the movie left off . A stage adaptation was written by Christopher Sergel and published in 1990 . Contents ( hide ) 1 Plot summary 2 Major
+characters 2.1 Greasers 2.2 Socs 2.3 Other characters 3 Controversy 4 See also 5 References 6 Bibliography 7 External links Plot summary Ponyboy Curtis , a
+teenaged member of a loose gang of `` greasers '' , is leaving a movie theater when he is jumped by `` Socs '' , the greasers ' rival gang . Several greasers ,
+including Ponyboy 's two older brothers -- the paternal Darry and the popular Sodapop -- come to his rescue .
+</item 1>
+
+<item 2>
+The Outsiders (novel)
+After some heated talk , Ponyboy spits at the Socs , prompting them to try to drown him in a nearby fountain , but Johnny stabs Bob , killing him and dispersing
+the Socs . Terrified of what to do next , Ponyboy and Johnny rush to find Dally , who gives them money and a loaded gun , directing them to hide in an abandoned
+church in Windrixville . During their stay there , Pony cuts and dyes his hair as a disguise , reads Gone with the Wind to Johnny , and , upon viewing a
+beautiful sunrise , recites the poem `` Nothing Gold Can Stay '' by Robert Frost . Days later , Dally comes to check on them , revealing that violence between
+the greasers and Socs has escalated since Bob 's death into all - out city - wide warfare , with Cherry acting out of guilt as a spy for the greasers . Johnny
+decides to turn himself in and Dally agrees to take the boys back home . As they attempt to leave , they notice the church has caught fire and several local
+schoolchildren have become trapped inside .
+</item 2>
+
+<item 3>
+The Outsiders (novel)
+The greasers run inside the burning church to save the children , but Ponyboy is rendered unconscious by the fumes . At the hospital he discovers that he and
+Dally are not badly injured , but a piece of the church roof fell on Johnny and broke his back . Sodapop and Darry come to the hospital ; Darry breaks down and
+cries . Ponyboy then realizes that Darry cares about him , and is only hard on Ponyboy because he loves him and cares about his future . The following morning
+the newspapers declare Pony and Johnny heroes , but Johnny will be charged with manslaughter for Bob 's death . Two - Bit tells them that the greaser -- Soc
+rivalry is to be settled in a final rumble . Ponyboy and Two - Bit are approached by a Soc named Randy , Bob 's best friend , who expresses remorse for his
+involvement in the gang war , lacks confidence about the rumble ending the feud , and says he will not participate . Later , Ponyboy visits Johnny at the
+hospital , where he is in critical condition . On their way home , Pony spots Cherry and they talk .
+</item 3>
+
+<item 4>
+The Outsiders (novel)
+Ponyboy returns to school , but his grades drop . Although he is failing English , his teacher , Mr. Syme , says he will pass him if he writes a decent theme .
+In the copy of Gone with the Wind that Johnny gave him before dying , Ponyboy finds a note from Johnny describing how he will die proudly after saving the kids
+from the fire . Johnny also urges Ponyboy to `` stay gold '' . Ponyboy decides to write his English assignment about the recent events , and begins his essay
+with the opening line of the novel : `` When I stepped out into the bright sunlight from the darkness of the movie house , I had only two things on my mind :
+Paul Newman and a ride home ... '' Major Characters Greasers Ponyboy Curtis : Narrator and the youngest Curtis brother , 14 years old , who gets good grades and
+runs track . Sodapop Curtis : The middle Curtis brother , 16 years old , a high school dropout who works at a gas station . Darrel `` Darry '' Curtis : The
+oldest of the Curtis brothers , 20 years old , who has been caring for his brothers since their parents died in a car crash .
+</item 4>
+
+<item 5>
+The Outsiders (novel)
+The Outsiders ( novel ) - wikipedia The Outsiders ( novel ) Jump to : navigation , search The Outsiders First hardcover edition , 1967 Author S.E. Hinton Cover
+artist Robert Hunt Country United States Language English Genre Young adult fiction Publisher Viking Press , Dell Publishing Publication date April 24 , 1967
+Media type Print ( hardcover , paperback ) , Audiobook Pages 192 ISBN 0 - 670 - 53257 - 6 OCLC 64396432 Followed by That Was Then , This Is Now The Outsiders is
+a coming - of - age novel by S.E. Hinton , first published in 1967 by Viking Press . Hinton was 15 when she started writing the novel , but did most of the work
+when she was 16 and a junior in high school . Hinton was 18 when the book was published . The book details the conflict between two rival gangs divided by their
+socioeconomic status : the working - class `` greasers '' and the upper - class `` Socs '' ( pronounced / ˈsoʊʃɪz / -- short for Socials ) .
+</item 5>
+
+<item 6>
+The Outsiders (novel)
+Jump up ^ Cummings , Siena ( 2017 ) . `` ( www.standard.net/TX/2017/09/24/After-50-years-Outsiders After 50 years , ' Outsiders ' continues to ' stay gold ' ) .
+'' Standard - Examiner . Ogden Publishing Corporation . Bibliography Hinton , S.E. ( 1997 ) . The Outsiders . New York : SPEAK . ISBN 9780140385724 . External
+links S.E. Hinton 's Website `` ' The Outsiders ' : 40 Years Later '' By Dale Peck The New York Times September 23 , 2007 S.E. Hinton Books The Outsiders Rumble
+Fish That Was Then , This Is Now Tex Taming the Star Runner Hawkes Harbor Some of Tim 's Stories Big David , Little David The Puppy Sister Books I Love Best
+Yearly : Older Readers Award The Secret Diary of Adrian Mole , Aged 133⁄4 by Sue Townsend ( 1990 ) The Outsiders by S.E. Hinton ( 1991 ) Where 's Wally ?
+</item 6>
+
+<item 7>
+The Outsiders (novel)
+He is the unofficial leader of the gang . Johnny Cade : Ponyboy 's best friend , 16 years old , who is extremely quiet and lives with his alcoholic and abusive
+mother and father . Dallas `` Dally '' Winston : The roughest of the greasers , who lived on the streets of New York City for three years . Keith `` Two - Bit
+'' Mathews : A wise - cracking kleptomaniac . Steve Randle : Sodapop 's best friend since grade school . Timothy `` Tim '' Shepard : Leader of another greaser
+gang : an organized downtown one . Sandy : Sodapop 's girlfriend . Socs Sherri `` Cherry '' Valance : Bob 's girlfriend , attends the same high school as
+Ponyboy . Robert `` Bob '' Sheldon : Cherry 's boyfriend who is stabbed and killed by Johnny . Randy Adderson : A friend of Bob 's and Marcia 's boyfriend .
+Marcia : Cherry 's best friend and Randy 's girlfriend . David : A member of Bob and Randy 's gang who attempted to drown Ponyboy in the fountain .
+</item 7>
+
+<item 8>
+The Outsiders (novel)
+The next night , Ponyboy and two greaser friends , the hardened Dally and the quiet Johnny , meet Cherry and Marcia , a pair of Soc girls , at a drive - in
+movie theater . Cherry spurns Dally 's rude advances , but Ponyboy ends up speaking civilly with Cherry , emotionally connecting with a Soc for the first time
+in his life . Afterward , Ponyboy , Johnny , and their wisecracking friend Two - Bit begin to walk Cherry and Marcia home , when they are stopped by Cherry 's
+boyfriend Bob , who badly beat up Johnny a few months back . Bob and the greasers exchange taunts , but Cherry prevents a fight by willingly leaving with Bob .
+Ponyboy gets home at two in the morning , enraging Darry until he suddenly slaps Ponyboy . Ponyboy runs out the door and meets up with Johnny , expressing his
+anger at Darry 's increasing coldness in the wake of his parents ' recent deaths in a car crash . Ponyboy and Johnny wander into a park , where Bob and four
+other Socs surround them .
+</item 8>
+
+<item 9>
+The Outsiders (novel)
+On their way home , Pony spots Cherry and they talk . Cherry says she is unwilling to visit Johnny in the hospital because he killed her boyfriend . Pony calls
+her a traitor , but after explaining herself , they end on good terms . After escaping the hospital , Dally shows up just in time for the rumble . The greasers
+win the brutal fight . Afterward , Pony and Dally hurry back to the hospital to see Johnny , but he dies moments later and a maniacal Dally runs out of the room
+. Pony returns home that night feeling confused and disoriented . Dally calls the house to say that he has robbed a store and is running from the police . The
+greasers find Dally deliberately pointing an unloaded gun at the police , causing them to shoot and kill him . Overwhelmed , Ponyboy faints and is sick in bed
+for several days due to the resulting concussion . When the hearing finally comes , the judge frees Ponyboy from responsibility for Bob 's death and allows Pony
+to remain at home with Darry and Soda . Ponyboy returns to school , but his grades drop .
+</item 9>
+
+<item 10>
+The Outsiders (novel)
+Paul Holden : A former friend of Darry 's . Other Characters Jerry Wood : The schoolteacher responsible for the children who were in the seemingly abandoned
+church . Mr. Syme : Ponyboy 's English teacher who assigns him a theme to write that becomes the story of the novel itself . Controversy The Outsiders was a
+controversial book at the time of its publication ; it is still currently challenged and debated . It was ranked # 38 on the American Library Association 's Top
+100 Most Frequently Challenged Books of 1990 -- 1999 . This book has been banned from some schools and libraries because of the portrayal of gang violence ,
+underage smoking and drinking , strong language / slang , and family dysfunction . However , in many U.S. schools , the book is part of the English curriculum
+at the middle - or high - school level . See also The Outsiders House Museum References Jump up ^ Hinton , S.E. ( 2005 ) ( 1977 ) . `` speaking with S.E. Hinton
+'' . The Outsiders . Speak / Penguin Putnam . p. 162 .
+</item 10>
+=== END ITEM id=daf45b9809910f88 ===
+
+=== ITEM id=690bd7140fa2eb1f ===
+Gold sentences and facts:
+Sentence 0: After their plane crashes in the woods , Dr. Meredith Grey ( Ellen Pompeo ) , Dr. Lexie Grey ( Chyler Leigh ) , Dr. Cristina Yang ( Sandra Oh ) , Dr. Arizona Robbins ( Jessica Capshaw ) , Dr. Derek Shepherd ( Patrick Dempsey ) , and Dr. Mark Sloan ( Eric Dane ) desperately fight to stay alive . Meredith is relatively unscathed , while the rest have serious injuries : the pilot , Jerry ( James LeGros ) , has a major spine injury , and Yang dislocates her arm . Robbins ' femur is broken and sticking through the skin , Sloan has serious internal injuries ; though initially adrenaline keeps him on his feet . Shepherd is sucked out the side of the plane and awakens alone in the wood ; his mangled hand having been pushed through the door of the plane . However , none are in as bad shape as Lexie , who is crushed under a piece of the plane . While Meredith searches for Shepherd , Yang and Sloan try to move the debris off Lexie . Eventually , the two realize that they can not save her , so Sloan holds her hand while she dies , telling her that he loves her . As Sloan tells her of the life the two were meant to have together , Lexie dies with a smile on her face just as Meredith and Yang are approaching .
+  Fact 0.0: After their plane crashes in the woods, six doctors desperately fight to stay alive.
+  Fact 0.1: The six doctors are Meredith Grey, Lexie Grey, Cristina Yang, Arizona Robbins, Derek Shepherd and Mark Sloan.
+  Fact 0.2: Dr. Meredith Grey is portrayed by Ellen Pompeo.
+  Fact 0.3: Dr. Lexie Grey is portrayed by Chyler Leigh.
+  Fact 0.4: Dr. Cristina Yang is portrayed by Sandra Oh.
+  Fact 0.5: Dr. Arizona Robbins is portrayed by Jessica Capshaw.
+  Fact 0.6: Dr. Derek Shepherd is portrayed by Patrick Dempsey.
+  Fact 0.7: Dr. Mark Sloan is portrayed by Eric Dane.
+  Fact 0.8: Meredith is relatively unscathed.
+  Fact 0.9: The rest of the group have serious injuries.
+  Fact 0.10: The pilot is named Jerry.
+  Fact 0.11: The pilot, Jerry, is portrayed by James LeGros.
+  Fact 0.12: The pilot, Jerry, has a major spine injury.
+  Fact 0.13: Yang dislocates her arm.
+  Fact 0.14: Robbins' femur is broken and sticking through the skin.
+  Fact 0.15: Sloan has serious internal injuries.
+  Fact 0.16: Sloan is initially kept on his feet by adrenaline.
+  Fact 0.17: Shepherd is sucked out the side of the plane.
+  Fact 0.18: Shepherd awakens alone in the woods.
+  Fact 0.19: Shepherd's mangled hand was pushed through the door of the plane.
+  Fact 0.20: No one is in as bad shape as Lexie.
+  Fact 0.21: Lexie is crushed under a piece of the plane.
+  Fact 0.22: While Meredith searches for Shepherd, Yang and Sloan try to move the debris off Lexie.
+  Fact 0.23: Yang and Sloan eventually realize that they cannot save Lexie.
+  Fact 0.24: Sloan holds Lexie's hand while she dies.
+  Fact 0.25: Sloan tells Lexie that he loves her.
+  Fact 0.26: Sloan tells Lexie of the life she and he were meant to have together.
+  Fact 0.27: Lexie dies with a smile on her face.
+  Fact 0.28: Lexie dies just as Meredith and Yang are approaching.
+Sentence 1: `` Flight '' is the twenty - fourth and final episode of the eighth season of the American television medical drama Grey 's Anatomy , and the show 's 172nd episode overall . It was written by series creator Shonda Rhimes , and directed by Rob Corn . The episode was originally broadcast on the American Broadcasting Company ( ABC ) in the United States on May 17 , 2012 . In the episode , six doctors from Seattle Grace Mercy West Hospital who are victims of an aviation accident fight to stay alive , but Dr. Lexie Grey ( Chyler Leigh ) ultimately dies . Other storylines occur in Seattle where Dr. Richard Webber ( James Pickens , Jr . ) plans his annual dinner for the departing residents , Dr. Owen Hunt ( Kevin McKidd ) fires Dr. Teddy Altman ( Kim Raver ) , and Dr. Miranda Bailey ( Chandra Wilson ) gets engaged .
+  Fact 1.0: 'Flight' is the twenty-fourth and final episode of the eighth season of Grey's Anatomy.
+  Fact 1.1: Grey's Anatomy is an American television medical drama.
+  Fact 1.2: Flight is the show's 172nd episode overall.
+  Fact 1.3: Shonda Rhimes, the series creator, wrote Flight.
+  Fact 1.4: Rob Corn directed Flight.
+  Fact 1.5: Flight was originally broadcast on the American Broadcasting Company (ABC) in the United States.
+  Fact 1.6: Flight was originally broadcast on May 17, 2012.
+  Fact 1.7: In Flight, six doctors from Seattle Grace Mercy West Hospital who are victims of an aviation accident fight to stay alive.
+  Fact 1.8: In Flight, Dr. Lexie Grey, played by Chyler Leigh, ultimately dies.
+  Fact 1.9: Other storylines in Flight occur in Seattle.
+  Fact 1.10: Dr. Richard Webber, played by James Pickens, Jr., plans his annual dinner for the departing residents.
+  Fact 1.11: Dr. Owen Hunt, played by Kevin McKidd, fires Dr. Teddy Altman.
+  Fact 1.12: Dr. Teddy Altman is played by Kim Raver.
+  Fact 1.13: Dr. Miranda Bailey, played by Chandra Wilson, gets engaged.
+
+Retrieved items:
+<item 1>
+Flight (Grey's Anatomy)
+Mark Sloan ) 's . `` Flight '' earned Rhimes an NAACP Image Award nomination and it was also nominated under several categories of Entertainment Weekly 's
+finale awards . Upon its initial airing , the episode was viewed in the United States by 11.44 million people , garnered a 4.1 / 11 Nielsen rating / share in
+the 18 -- 49 demographic , ranking fourth for the night in terms of viewership , and registering as Thursday 's highest - rated drama . Contents ( hide ) 1 Plot
+2 Production 3 Reception 4 References 5 External links Plot ( edit ) After their plane crashes in the woods , Dr. Meredith Grey ( Ellen Pompeo ) , Dr. Lexie
+Grey ( Chyler Leigh ) , Dr. Cristina Yang ( Sandra Oh ) , Dr. Arizona Robbins ( Jessica Capshaw ) , Dr. Derek Shepherd ( Patrick Dempsey ) , and Dr. Mark Sloan
+( Eric Dane ) desperately fight to stay alive .
+</item 1>
+
+<item 2>
+Flight (Grey's Anatomy)
+In the episode , six doctors from Seattle Grace Mercy West Hospital who are victims of an aviation accident fight to stay alive , but Dr. Lexie Grey ( Chyler
+Leigh ) ultimately dies . Other storylines occur in Seattle where Dr. Richard Webber ( James Pickens , Jr . ) plans his annual dinner for the departing
+residents , Dr. Owen Hunt ( Kevin McKidd ) fires Dr. Teddy Altman ( Kim Raver ) , and Dr. Miranda Bailey ( Chandra Wilson ) gets engaged . The episode marked
+Leigh 's and Raver 's final appearance to the series . Exterior filming of the accident took place at Big Bear Lake , California . Jason George reprised his
+role as a guest star , whereas James LeGros made his first appearance . The episode opened to mixed reviews from television critics , with some criticizing the
+death of Lexie , but praising Leigh 's performance , in addition to Ellen Pompeo ( Dr. Meredith Grey ) 's and Eric Dane ( Dr. Mark Sloan ) 's .
+</item 2>
+
+<item 3>
+Flight (Grey's Anatomy)
+`` ' Grey 's Anatomy ' recap : Major death in season finale ' Flight ' '' . Digital Spy . Nat Mags . Retrieved May 22 , 2012 . Jump up ^ Stransky , Tanner ( May
+18 , 2012 ) . `` ' Grey 's Anatomy ' season finale recap : A Grey Goes Down '' . Entertainment Weekly . Time Inc . Retrieved May 22 , 2012 . Jump up ^ Bierly ,
+Mandi ( May 29 , 2012 ) . `` Grey 's Anatomy , Chyler Leigh , ... TV Season Finale Awards : YOUR 2012 Winners ! Photo 9 of 20 '' . Entertainment Weekly . Time
+Inc . Retrieved June 17 , 2012 . Jump up ^ Bierly , Mandi ( May 29 , 2012 ) . `` Grey 's Anatomy , Ellen Pompeo TV Season Finales TV Season Finale Awards : YOUR
+2012 Winners ! Photo 12 of 20 '' . Entertainment Weekly . Time Inc . Retrieved June 18 , 2012 .
+</item 3>
+
+<item 4>
+Flight (Grey's Anatomy)
+Lexie 's death devastates Meredith , who is still desperately trying to find her husband . Eventually , she and Shepherd reunite and they fix his hand as best
+as they can . Meanwhile , back at Seattle Grace Mercy West Hospital , no one is aware of what has happened to the other doctors . Dr. Richard Webber ( James
+Pickens , Jr . ) prepares the annual dinner for the departing residents , which Dr. Alex Karev ( Justin Chambers ) , Dr. Jackson Avery ( Jesse Williams ) , and
+Dr. April Kepner ( Sarah Drew ) are dreading . Avery makes the choice to take a job offer at Tulane Medical Center , and he and Kepner share a moment . Dr. Ben
+Warren ( Jason George ) and Dr. Miranda Bailey ( Chandra Wilson ) decide to get married , even though Warren is going to start his surgical internship in Los
+Angeles . After realizing Dr. Teddy Altman ( Kim Raver ) was offered a chief position at United States Army Medical Command ( MEDCOM ) and is refusing to leave
+Seattle out of loyalty , Dr.
+</item 4>
+
+<item 5>
+Flight (Grey's Anatomy)
+Mark Sloan ( Eric Dane ) desperately fight to stay alive . Meredith is relatively unscathed , while the rest have serious injuries : the pilot , Jerry ( James
+LeGros ) , has a major spine injury , and Yang dislocates her arm . Robbins ' femur is broken and sticking through the skin , Sloan has serious internal
+injuries ; though initially adrenaline keeps him on his feet . Shepherd is sucked out the side of the plane and awakens alone in the wood ; his mangled hand
+having been pushed through the door of the plane . However , none are in as bad shape as Lexie , who is crushed under a piece of the plane . While Meredith
+searches for Shepherd , Yang and Sloan try to move the debris off Lexie . Eventually , the two realize that they can not save her , so Sloan holds her hand
+while she dies , telling her that he loves her . As Sloan tells her of the life the two were meant to have together , Lexie dies with a smile on her face just
+as Meredith and Yang are approaching . Lexie 's death devastates Meredith , who is still desperately trying to find her husband .
+</item 5>
+
+<item 6>
+Flight (Grey's Anatomy)
+Owen Hunt ( Kevin McKidd ) , the chief of surgery , fires her to free her from the hospital where her husband died . As the episode ends , Hunt picks up his
+messages to discover the surgical team never made it to Boise . The residents , finally excited to celebrate at Webber 's dinner , are left waiting for their
+stranded friends . The remaining crash survivors are left struggling to stay awake as their last match goes out . In the closing monologue , Meredith repeats
+the opening to the speech that Webber gave in the pilot episode of the series . Production ( edit ) `` It was so hard . It was physically and emotionally
+challenging because you 're constantly at extremely high stakes . The physicality for Cristina , she had to do a lot of things with one arm , and I had to do a
+lot of things with one shoe . You 're running around the mountain with one shoe and one arm basically and doing things that way . And it 's like we 've had this
+cushy time on stages and in the hospital . But being out in the open on the side of a mountain was exhilarating ; you can not beat location work .
+</item 6>
+
+<item 7>
+Flight (Grey's Anatomy)
+Jump up ^ Writer : Rhimes , Shonda . Director : Corn , Rob ( May 17 , 2012 ) . `` Flight '' . Grey 's Anatomy . Season 8 . American Broadcasting Company . Jump
+up ^ `` Season 8 , Episode : 24 `` Flight '' Music `` . TV Fanatic . SheKnows Entertainment . Retrieved July 22 , 2012 . Jump up ^ Dos Santos , Kristin ( May 1
+, 2012 ) . `` Spoiler Chat Daily : American Horror Story Season Two Scoop ! Plus , Grey 's , True Blood and More ! '' . E ! Online . NBCUniversal . Retrieved
+July 21 , 2012 . Jump up ^ Hilton , Perez ( June 24 , 2010 ) . `` Chyler Leigh Describes Filming Deets Behind Grey 's Anatomy Death ! '' . PerezHilton.com .
+Retrieved July 21 , 2012 . Jump up ^ Goldberg , Lesley ( April 26 , 2012 ) .
+</item 7>
+
+<item 8>
+Flight (Grey's Anatomy)
+I mean , how awful was it to watch one of Grey 's longest - running characters pass away so quickly -- and rather unceremoniously ? I get that Ms. Rhimes had to
+do what she had to do -- and every show needs to be shaken up once in a while -- but I do n't love that Lexie was the one to die . Could it have been someone
+less important somehow ? I guess it would have been too obvious to do Kepner . And you probably just do n't kill off a hottie like Mark Sloan , right ? ''
+Stransky also complained about Robbins ' screams at the beginning of the episode , but enjoyed Bailey 's story . In an Entertainment Weekly poll that judged all
+the television season finales of the year , Lexie 's death was voted the `` Top Tissue Moment '' , while Robbins ' injured leg and Shepherd 's mangled hand were
+voted the `` Most Disturbing Image '' . The ending of the episode was also considered as the `` Best Ending to an Otherwise So - So Season '' .
+</item 8>
+
+<item 9>
+Flight (Grey's Anatomy)
+Grey 's Anatomy has once again managed to shock with its season finale . '' While she appreciated the `` realism and authenticity that Grey 's is known for '' ,
+she found the episode was `` almost too much '' as it was `` extremely gory and difficult to watch , initially because of the grisly wounds '' but later because
+of the `` heavy and emotional things that transpired '' . She thought Pompeo gave one of her best performances when her character learned that her sister was
+dead . Digital Spy 's Ben Lee found Leigh 's and Dane 's performances `` phenomenal '' and added that he had probably never seen a better performance from Dane
+. He described the moment the two actors shared as `` truly poignant '' . To him , Lexie 's death felt like a finale , which was thus too early . As for what
+was happening in Seattle Grace , he thought it was `` a bit pointless '' and `` uninteresting '' except Altman 's departure , which he deemed `` the most
+significant moment at the hospital '' . Entertainment Weekly 's Tanner Stransky commented of Lexie 's death : `` It was an intense death .
+</item 9>
+
+<item 10>
+Flight (Grey's Anatomy)
+Everybody was very accommodating -- the crew , cast . And I opted to stay underneath ( the wreckage ) for the most part over two days rather than trying to get
+in and out . '' In regard to the episode , Rhimes commented before it originally aired that it was difficult to write , largely because of the death of a main
+character . She compared it to writing the season six finale , by explaining that the former was `` more painful '' to write . After the episode aired , Rhimes
+repeated in a tweet that it was hard for her to write the finale , adding : `` I did not enjoy it . It made me sick and it made me sad . '' Rhimes also
+explained the departure of Leigh , whose character died after the plane crash , by saying that the two came to an agreement on the decision to kill Lexie ,
+after extensive discussion . Speaking of Raver 's departure whose character left Seattle Grace for MEDCOM , Rhimes elaborated that Raver was offered a contract
+renewal , but declined . Reception ( edit ) Chyler Leigh 's performance was deemed `` phenomenal '' .
+</item 10>
+=== END ITEM id=690bd7140fa2eb1f ===
+
+=== ITEM id=9bd88bfa4eb463d8 ===
+Gold sentences and facts:
+Sentence 0: Important production centres today are the Hallertau in Germany ( more hop - growing area than any other country as of 2006 ) , the Yakima ( Washington ) and Willamette ( Oregon ) valleys , and western Canyon County , Idaho ( including the communities of Parma , Wilder , Greenleaf , and Notus ) . The principal production centres in the UK are in Kent ( which produces Kent Goldings hops ) , Herefordshire , and Worcestershire . Essentially all of the harvested hops are used in beer making .
+  Fact 0.0: The Hallertau in Germany is an important hop production centre today.
+  Fact 0.1: As of 2006, the Hallertau in Germany had more hop-growing area than any other country.
+  Fact 0.2: The Yakima Valley in Washington is an important hop production centre today.
+  Fact 0.3: The Willamette Valley in Oregon is an important hop production centre today.
+  Fact 0.4: Western Canyon County, Idaho is an important hop production centre today.
+  Fact 0.5: Western Canyon County, Idaho includes the communities of Parma, Wilder, Greenleaf, and Notus.
+  Fact 0.6: The principal hop production centres in the UK are in Kent.
+  Fact 0.7: Kent produces Kent Goldings hops.
+  Fact 0.8: The principal hop production centres in the UK are in Herefordshire.
+  Fact 0.9: The principal hop production centres in the UK are in Worcestershire.
+  Fact 0.10: Essentially all of the harvested hops are used in beer making.
+Sentence 1: Hops production is concentrated in moist temperate climates , with much of the world 's production occurring near the 48th parallel north . Hop plants prefer the same soils as potatoes and the leading potato - growing states in the United States are also major hops - producing areas ; however , not all potato - growing areas can produce good hops naturally : soils in the Maritime Provinces of Canada , for example , lack the boron that hops prefer . Historically , hops were not grown in Ireland , but were imported from England . In 1752 more than 500 tons of English hops were imported through Dublin alone .
+  Fact 1.0: Hops production is concentrated in moist temperate climates.
+  Fact 1.1: Much of the world's hops production occurs near the 48th parallel north.
+  Fact 1.2: Hop plants prefer the same soils as potatoes.
+  Fact 1.3: The leading potato-growing states in the United States are also major hops-producing areas.
+  Fact 1.4: Not all potato-growing areas can naturally produce good hops.
+  Fact 1.5: Soils in the Maritime Provinces of Canada lack the boron that hops prefer.
+  Fact 1.6: Historically, hops were not grown in Ireland.
+  Fact 1.7: Historically, hops were imported into Ireland from England.
+  Fact 1.8: In 1752, more than 500 tons of English hops were imported through Dublin alone.
+
+Retrieved items:
+<item 1>
+Hops
+A heating unit on the lower floor is used to dry the hops . When dry , the hops are moved to a press , a sturdy box with a plunger . Two long pieces of burlap
+are laid into the hop press at right angles , the hops are poured in and compressed into bales . Hop cones contain different oils , such as lupulin , a
+yellowish , waxy substance , an oleoresin , that imparts flavour and aroma to beer . Lupulin contains lupulone and humulone , which possess antibiotic
+properties , suppressing bacterial growth favoring brewer 's yeast to grow . After lupulin has been extracted in the brewing process the papery cones are
+discarded . Migrant labor and social impact ( edit ) Hops harvest in the Kingdom of Bohemia ( 1898 ) Hops harvest in Skåne , Sweden in 1937 The need for massed
+labor at harvest time meant hop - growing had a big social impact . Around the world , the labor - intensive harvesting work involved large numbers of migrant
+workers who would travel for the annual hop harvest .
+</item 1>
+
+<item 2>
+Hops
+Hops - wikipedia Hops Jump to : navigation , search For other uses , see hop ( disambiguation ) . Hop flower in a hop yard in the Hallertau , Germany
+Cross-section drawing of a hop Hops are the flowers ( also called seed cones or strobiles ) of the hop plant Humulus lupulus . They are used primarily as a
+flavouring and stability agent in beer , to which they impart bitter , zesty , or citric flavours ; though they are also used for various purposes in other
+beverages and herbal medicine . The hop plant is a vigorous , climbing , herbaceous perennial , usually trained to grow up strings in a field called a hopfield
+, hop garden ( nomenclature in the South of England ) , or hop yard ( in the West Country and U.S. ) when grown commercially . Many different varieties of hops
+are grown by farmers around the world , with different types used for particular styles of beer . The first documented use of hops in beer is from the 9th
+century , though Hildegard of Bingen , 300 years later , is often cited as the earliest documented source .
+</item 2>
+
+<item 3>
+Hops
+Essentially all of the harvested hops are used in beer making . Early season hop growth in a hop yard in the Yakima River Valley of Washington with Mount Adams
+in the distance Hop producing country 2012 hop output in tonnes ( t ) Germany 34,434 United States 27,782 China 11,000 Czech Republic 4,338 Poland 2,206 North
+Korea 2,000 Albania 1,650 United Kingdom 1,650 Slovenia 1,338 Cultivation and harvest ( edit ) A superstructure of overhead wires supports strings that in turn
+support bines Although hops are grown in most of the continental United States and Canada , cultivation of hops for commercial production requires a particular
+environment . As hops are a climbing plant , they are trained to grow up trellises made from strings or wires that support the plants and allow them
+significantly greater growth with the same sunlight profile . In this way , energy that would have been required to build structural cells is also freed for
+crop growth . The hop plant 's reproduction method is that male and female flowers develop on separate plants , although occasionally a fertile individual will
+develop which contains both male and female flowers .
+</item 3>
+
+<item 4>
+Hops
+private and public breeding programs are using their stock material . Particular hop varieties are associated with beer regions and styles , for example pale
+lagers are usually brewed with European ( often German , Polish or Czech ) noble hop varieties such as Saaz , Hallertau and Strissel Spalt . British ales use
+hop varieties such as Fuggles , Goldings and W.G.V. North American beers often use Cascade hops , Columbus hops , Centennial hops , Willamette , Amarillo hops
+and about forty more varieties as the U.S.A. have lately been the more significant breeders of new hop varieties , including dwarf hop varieties . Hops from New
+Zealand , such as Pacific Gem , Motueka and Nelson Sauvin , are used in a `` Pacific Pale Ale '' style of beer with increasing production in 2014 . Noble hops (
+edit ) Mature hops growing in a hop yard in Germany The term `` noble hops '' traditionally refers to varieties of hops which are low in bitterness and high in
+aroma . They are the European cultivars or races Hallertau , Tettnanger , Spalt , and Saaz .
+</item 4>
+
+<item 5>
+Hops
+Because pollinated seeds are undesirable for brewing beer , only female plants are grown in hop fields , thus preventing pollination . Female plants are
+propagated vegetatively , and male plants are culled if plants are grown from seeds . Hop plants are planted in rows about 2 to 2.5 metres ( 7 to 8 ft ) apart .
+Each spring , the roots send forth new bines that are started up strings from the ground to an overhead trellis . The cones grow high on the bine , and in the
+past , these cones were picked by hand . Harvesting of hops became much more efficient with the invention of the mechanical hops separator , patented by Emil
+Clemens Horst in 1909 . Harvest comes near the end of summer when the bines are pulled down and the flowers are taken to a hop house or oast house for drying .
+Hop houses are two - story buildings , of which the upper story has a slatted floor covered with burlap . Here the flowers are poured out and raked even . A
+heating unit on the lower floor is used to dry the hops .
+</item 5>
+
+<item 6>
+Hops
+461 . Jump up ^ Charles W. Bamforth ( 1998 ) . Beer : tap into the art and science of brewing . Plenum Press . p. 245 . ISBN 0 - 306 - 45797 - 0 . Jump up ^
+Knight , Paul D. `` HOPS IN BEER '' . USA Hops . Hop Growers of America . Retrieved 11 June 2015 . Jump up ^ Annual Report of the Commissioner of Patents , Part
+2 ; Part 4 . US Patent office . 1858 . p. 291 . ^ Jump up to : Peicanada Jump up ^ `` The London magazine , 1752 '' , page 332 Jump up ^ Summary of Reports :
+Nürnberg , Germany , 14 November 2006 , International Hop Growers ' Convention : Economic Committee Jump up ^ `` NCGR - Corvallis Humulus Genetic Resources '' .
+Ars-grin.gov . Retrieved 2012 - 05 - 20 . Jump up ^ Norman Moss , A Fancy to Worcesters Archived 29 September 2007 at the Wayback Machine.
+</item 6>
+
+<item 7>
+Hops
+In 1752 more than 500 tons of English hops were imported through Dublin alone . Important production centres today are the Hallertau in Germany ( more hop -
+growing area than any other country as of 2006 ) , the Yakima ( Washington ) and Willamette ( Oregon ) valleys , and western Canyon County , Idaho ( including
+the communities of Parma , Wilder , Greenleaf , and Notus ) . The principal production centres in the UK are in Kent ( which produces Kent Goldings hops ) ,
+Herefordshire , and Worcestershire . Essentially all of the harvested hops are used in beer making .
+</item 7>
+
+<item 8>
+Hops
+Problems with powdery mildew and downy mildew devastated New York 's production by the 1920s , and California only produces hops on a small scale . Hop bars
+were used before modern machinery was invented to make the holes for the hop poles . World production ( edit ) Hops production is concentrated in moist
+temperate climates , with much of the world 's production occurring near the 48th parallel north . Hop plants prefer the same soils as potatoes and the leading
+potato - growing states in the United States are also major hops - producing areas ; however , not all potato - growing areas can produce good hops naturally :
+soils in the Maritime Provinces of Canada , for example , lack the boron that hops prefer . Historically , hops were not grown in Ireland , but were imported
+from England . In 1752 more than 500 tons of English hops were imported through Dublin alone .
+</item 8>
+
+<item 9>
+Hops
+Contents ( hide ) 1 History 2 World production 2.1 Cultivation and harvest 2.2 Migrant labor and social impact 3 Chemical composition 3.1 Alpha acids 3.2 Beta
+acids 3.3 Essential oils 3.4 Flavonoids 4 Brewing 5 Varieties 5.1 Breeding programs 5.2 Noble hops 6 Other uses 7 Toxicity 8 See also 9 References 10 External
+links History ( edit ) The first documented hop cultivation was in 736 , in the Hallertau region of present - day Germany , although the first mention of the
+use of hops in brewing in that country was 1079 . However , in a will of Pepin the Short , the father of Charlemagne , hop gardens were left to the Cloister of
+Saint - Denis in 768 . Not until the 13th century did hops begin to start threatening the use of gruit for flavouring . Gruit was used when taxes were levied by
+the nobility on hops . Whichever was taxed made the brewer then quickly switch to the other .
+</item 9>
+
+<item 10>
+Hops
+Hops were then grown as far north as Aberdeen , near breweries for infrastructure convenience . According to Thomas Tusser 's 1557 Five Hundred Points of Good
+Husbandry : `` The hop for his profit I thus do exalt , It strengtheneth drink and it flavoureth malt ; And being well - brewed long kept it will last , And
+drawing abide , if ye draw not too fast . '' In England there were many complaints over the quality of imported hops , the sacks of which were often
+contaminated by stalks , sand or straw to increase their weight . As a result , in 1603 , King James I approved an Act of Parliament banning the practice by
+which `` the Subjects of this Realm have been of late years abused &c. to the Value of £ 20,000 yearly , besides the Danger of their Healths '' . Hop
+cultivation was begun in the present - day United States in 1629 by English and Dutch farmers . Before prohibition , cultivation was mainly centred around New
+York , California , Oregon , and Washington state .
+</item 10>
+=== END ITEM id=9bd88bfa4eb463d8 ===

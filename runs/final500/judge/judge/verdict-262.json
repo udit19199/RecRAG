@@ -1,0 +1,60 @@
+[
+  {"id": "b7ccedb6ccd15943", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "that X is being used to disseminate illegal content and disinformation in the EU"}]},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "284615c3318759eb", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Their 0-3 and 1-4 starts are distant memories as the Vikings look for a sixth straight win"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "seen the fourth-lowest ADOT from tight ends (5.0 yards per target)"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "seen the fourth-lowest ADOT from tight ends (5.0 yards per target)"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "almost as if teams know they won't be able to succeed on downfield shots against them"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "(zero completions of 20-plus yards from tight ends)"}]}
+  ]},
+  {"id": "baaef6ee97926d9b", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Jada Pinkett Smith has revealed that she and husband Will Smith have been separated for the last seven years."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Of course, outsiders aren’t fully aware of the “heavy-duty work” that Jada and Will have done throughout their marriage."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Of course, outsiders aren’t fully aware of the “heavy-duty work” that Jada and Will have done throughout their marriage."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 8, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."}]},
+    {"fact": "3.0", "status": "missing", "evidence": []},
+    {"fact": "3.1", "status": "missing", "evidence": []},
+    {"fact": "3.2", "status": "missing", "evidence": []},
+    {"fact": "3.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "bda1f6c0e6f60d70", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team will score in the game."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team will score in the game."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team will score in the game."}]}
+  ]},
+  {"id": "b77614f9e43161e5", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "The survivors in the joined lawsuit also allege that Uber’s “fast and shallow background checks” are substandard and designed to make it as easy as possible for drivers to sign up quickly."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "The survivors in the joined lawsuit also allege that Uber’s “fast and shallow background checks” are substandard and designed to make it as easy as possible for drivers to sign up quickly."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "Uber has attempted to address sexual assaults by drivers — which the lawsuits claim Uber has known about since 2014 — through new safety features in its app"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "Uber has attempted to address sexual assaults by drivers — which the lawsuits claim Uber has known about since 2014 — through new safety features in its app"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 6, "quote": "like a 911 button and the ability to share location with a friend"}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 6, "quote": "like a 911 button and the ability to share location with a friend"}]},
+    {"fact": "3.0", "status": "stated", "evidence": [{"item": 7, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+    {"fact": "3.1", "status": "stated", "evidence": [{"item": 7, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]}
+  ]},
+  {"id": "124bf7a50e174174", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "There, you can find stories like this in-depth breakdown of what to expect from both sides of the SBF case, where the prosecution and defense could gain ground or fall short in their arguments and what the takeaways were from the opening arguments."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "There, you can find stories like this in-depth breakdown of what to expect from both sides of the SBF case, where the prosecution and defense could gain ground or fall short in their arguments and what the takeaways were from the opening arguments."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "There, you can find stories like this in-depth breakdown of what to expect from both sides of the SBF case, where the prosecution and defense could gain ground or fall short in their arguments and what the takeaways were from the opening arguments."}]}
+  ]}
+]

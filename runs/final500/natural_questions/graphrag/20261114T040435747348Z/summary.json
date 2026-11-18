@@ -1,0 +1,29 @@
+{
+  "method": "graphrag",
+  "dataset": "natural_questions",
+  "count": 167,
+  "precision": 0.4188613038045752,
+  "recall": 0.459684295541497,
+  "f1": 0.39126656955939654,
+  "exact_match": 0.23353293413173654,
+  "overlap_accuracy": 0.5808383233532934,
+  "retrieval_accuracy": 0.5029940119760479,
+  "total_construction_seconds": 0.0,
+  "mean_retrieval_seconds": 15.632675421347399,
+  "mean_answer_seconds": 1.589081080215605,
+  "mean_retrieved_tokens": 2186.4191616766466,
+  "total_storage_mb": 0.006096,
+  "categories": [],
+  "total_question_cost_usd": 0.28284721,
+  "mean_question_cost_usd": 0.001693695868263473,
+  "mean_retrieval_and_answer_seconds": 17.221756501563004,
+  "options": {
+    "top_k": 10,
+    "rerank": false,
+    "rerank_candidate_k": 20,
+    "rerank_top_k": 10,
+    "ircot": false,
+    "max_steps": 2
+  },
+  "novelqa_categories": []
+}

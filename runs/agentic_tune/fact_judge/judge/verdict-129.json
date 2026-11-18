@@ -1,0 +1,51 @@
+[
+{"id": "0bdae270479c9238", "facts": [
+ {"fact": "0.0", "status": "missing", "evidence": []},
+ {"fact": "0.1", "status": "missing", "evidence": []},
+ {"fact": "0.2", "status": "missing", "evidence": []},
+ {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "he specifically pointed the finger at Ellison, the former CEO of Alameda"}, {"item": 6, "quote": "Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda"}]},
+ {"fact": "1.1", "status": "missing", "evidence": []},
+ {"fact": "1.2", "status": "missing", "evidence": []},
+ {"fact": "1.3", "status": "missing", "evidence": []},
+ {"fact": "1.4", "status": "missing", "evidence": []},
+ {"fact": "1.5", "status": "missing", "evidence": []},
+ {"fact": "2.0", "status": "missing", "evidence": []},
+ {"fact": "2.1", "status": "missing", "evidence": []},
+ {"fact": "2.2", "status": "missing", "evidence": []},
+ {"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "9c4e0fe038bc19fa", "facts": [
+ {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving."}]},
+ {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving."}]},
+ {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving."}]},
+ {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Apart from the food - arguably the main component of the day"}]},
+ {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Apart from the food - arguably the main component of the day - the holiday is a beloved time of year"}]},
+ {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "the holiday is a beloved time of year when Americans come together to celebrate what they are thankful for, either with family or friends."}]},
+ {"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "when Americans come together to celebrate what they are thankful for, either with family or friends."}]}
+]},
+{"id": "fa87dd486f2b9729", "facts": [
+ {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "The company’s approach also raises concerns regarding the GDPR,” Pachl further noted."}]},
+ {"fact": "1.0", "status": "missing", "evidence": []},
+ {"fact": "1.1", "status": "missing", "evidence": []},
+ {"fact": "2.0", "status": "missing", "evidence": []},
+ {"fact": "2.1", "status": "missing", "evidence": []},
+ {"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "2a0f8821dc0f25e1", "facts": [
+ {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "But by the age of 16, she is public property – incapable of going outside without being mobbed, and her love of singing and dancing now a lucrative resource."}]},
+ {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "But by the age of 16, she is public property – incapable of going outside without being mobbed, and her love of singing and dancing now a lucrative resource."}]},
+ {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "But by the age of 16, she is public property – incapable of going outside without being mobbed, and her love of singing and dancing now a lucrative resource."}]},
+ {"fact": "1.0", "status": "missing", "evidence": []},
+ {"fact": "1.1", "status": "missing", "evidence": []},
+ {"fact": "1.2", "status": "missing", "evidence": []},
+ {"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "30848e9f363f6c50", "facts": [
+ {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "The winger came firing out of the gate"}]},
+ {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "the outlook has changed for the Devils in recent days"}]},
+ {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "the outlook has changed for the Devils in recent days after losing the superstar center Hughes to injury"}]},
+ {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Having to depend much on his weaker arm, Hamlin stayed in contention for the championship four race until the final race in Martinsville."}]},
+ {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Having to depend much on his weaker arm, Hamlin stayed in contention for the championship four race until the final race in Martinsville."}]},
+ {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Having to depend much on his weaker arm, Hamlin stayed in contention for the championship four race until the final race in Martinsville."}]}
+]}
+]

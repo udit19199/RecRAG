@@ -1,0 +1,546 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "b2650a83eeca1e49",
+   "kind": "answer",
+   "question": "Is Edison Sault Power Canal somehow linked with or used with the Cayuga–Seneca Canal?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No stated connection."
+  },
+  {
+   "id": "97a46e9fe07f640b",
+   "kind": "answer",
+   "question": "Between the two operas, Mosè in Egitto and Lucrezia Borgia, which one has more acts?",
+   "gold_answers": [
+    "Mosè in Egitto"
+   ],
+   "model_answer": "Neither; both have three acts."
+  },
+  {
+   "id": "f35abd7c9f2d1bdc",
+   "kind": "answer",
+   "question": "Which filmmaker was known for animation, Lev Yilmaz or Pamela B. Green?",
+   "gold_answers": [
+    "Levni Yilmaz"
+   ],
+   "model_answer": "Lev Yilmaz"
+  },
+  {
+   "id": "adc58a425e93141a",
+   "kind": "answer",
+   "question": "What American politician from Tennessee born December 13, 1943 is related to former United States Congressman Harold Ford Jr. as well as former Congressman Harold Ford Sr.",
+   "gold_answers": [
+    "Emmitt H. Ford"
+   ],
+   "model_answer": "Emmitt Ford"
+  },
+  {
+   "id": "2b55155e5ac46e92",
+   "kind": "answer",
+   "question": "Which was founded first, University of California, Santa Barbara or Hamdard University?",
+   "gold_answers": [
+    "University of California, Santa Barbara"
+   ],
+   "model_answer": "University of California, Santa Barbara (UCSB)"
+  },
+  {
+   "id": "147337d3f36f0600",
+   "kind": "answer",
+   "question": "Worker: What professional title to both Christopher Nolan and Paul Schrader boast?",
+   "gold_answers": [
+    "screenwriter"
+   ],
+   "model_answer": "Film director and screenwriter"
+  },
+  {
+   "id": "062b75e3d3daae01",
+   "kind": "answer",
+   "question": "What is Rachelle Amy Beinart's role in the film that follows a group of rebels on a mission?",
+   "gold_answers": [
+    "stunt performances"
+   ],
+   "model_answer": "Stunt performer"
+  },
+  {
+   "id": "616ffcee3901e03f",
+   "kind": "answer",
+   "question": "What was the Volvo S70 essentially modeled after and was the first all wheel drive Volvo?",
+   "gold_answers": [
+    "Volvo 850"
+   ],
+   "model_answer": "Facelifted Volvo 850 saloon; the 850 was Volvo’s first AWD model."
+  },
+  {
+   "id": "fdacc0d22c316d20",
+   "kind": "answer",
+   "question": "What American politician from Tennessee born December 13, 1943 is related to former United States Congressman Harold Ford Jr. as well as former Congressman Harold Ford Sr.",
+   "gold_answers": [
+    "Emmitt H. Ford"
+   ],
+   "model_answer": "John Ford"
+  },
+  {
+   "id": "a6f2c911ba90a7ff",
+   "kind": "answer",
+   "question": "What country of origin does  Dana Ivey and Two Weeks Notice have in common?",
+   "gold_answers": [
+    "American"
+   ],
+   "model_answer": "United States of America"
+  },
+  {
+   "id": "d76572b13d22c9b9",
+   "kind": "answer",
+   "question": "Worker: What professional title to both Christopher Nolan and Paul Schrader boast?",
+   "gold_answers": [
+    "screenwriter"
+   ],
+   "model_answer": "Writer-directors"
+  },
+  {
+   "id": "5b23a0ea0e76403b",
+   "kind": "answer",
+   "question": "Are Sunset Strip and American Hardcore both music documentaries?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes, both are music documentaries."
+  },
+  {
+   "id": "b38da685ae8a375d",
+   "kind": "answer",
+   "question": "How many women in total competed at the Asian Games the year Lee Young-Sun achieved her personal best throw of 58.87 metres?",
+   "gold_answers": [
+    "179 women"
+   ],
+   "model_answer": "1,876 women"
+  },
+  {
+   "id": "5b94e68fae971b10",
+   "kind": "answer",
+   "question": "What is in both the Lithocarpus and Duranta species?",
+   "gold_answers": [
+    "trees"
+   ],
+   "model_answer": "Small trees"
+  },
+  {
+   "id": "1a670c48982db73f",
+   "kind": "answer",
+   "question": "Between Pine and Butea, which genus has the greatest number of species?",
+   "gold_answers": [
+    "\"Pinus\""
+   ],
+   "model_answer": "Pine"
+  },
+  {
+   "id": "3a408b9c82d69ddf",
+   "kind": "answer",
+   "question": "What was the Volvo S70 essentially modeled after and was the first all wheel drive Volvo?",
+   "gold_answers": [
+    "Volvo 850"
+   ],
+   "model_answer": "The Volvo 850; no—the 850 AWD wagon was Volvo’s first AWD model."
+  },
+  {
+   "id": "c37c1a6135f38df2",
+   "kind": "answer",
+   "question": "Was Suzanne Chun Oakland a member of the upper of lower chamber of the Hawaii State Legislature?",
+   "gold_answers": [
+    "lower chamber"
+   ],
+   "model_answer": "Upper chamber (Senate)"
+  },
+  {
+   "id": "50c6c42e1b88f327",
+   "kind": "answer",
+   "question": "What is the name of the person that named Moltke Nunatak after the Chief of the German General staff that served from 1906 to 1914?",
+   "gold_answers": [
+    "Second German Antarctic Expedition of 1911–12 under Wilhelm Filchner."
+   ],
+   "model_answer": "Alfred Ritscher"
+  },
+  {
+   "id": "ba2863bb85d43a44",
+   "kind": "answer",
+   "question": "The music magazine launched by Rob Stone and Jon Cohen that interviewed CupcakKe about her album Audacious in September was the first print publication to be released where?",
+   "gold_answers": [
+    "on iTunes."
+   ],
+   "model_answer": "iTunes"
+  },
+  {
+   "id": "8d429435e126b9aa",
+   "kind": "answer",
+   "question": "Martin Flavin and Peter Benchley both did what occupation?",
+   "gold_answers": [
+    "novelist"
+   ],
+   "model_answer": "Writers"
+  },
+  {
+   "id": "76b0b1ff168c1639",
+   "kind": "answer",
+   "question": "Javier Frana and Thomaz Koch both share what occupation?",
+   "gold_answers": [
+    "tennis player"
+   ],
+   "model_answer": "Tennis players"
+  },
+  {
+   "id": "87af583b713d879b",
+   "kind": "answer",
+   "question": "Where was the air-cooled version of a weapon system used on the HMAS \"Narani\" found?",
+   "gold_answers": [
+    "World War I fighter aircraft."
+   ],
+   "model_answer": "On many Allied World War I fighter aircraft."
+  },
+  {
+   "id": "c8c629cc1082e31e",
+   "kind": "answer",
+   "question": "What are some other areas that share a common deer species with the forests of Mara and Mondrem?",
+   "gold_answers": [
+    "New Zealand, Canada, the United States, the Falkland Islands, and Peru."
+   ],
+   "model_answer": "Epping Forest and Richmond Park."
+  },
+  {
+   "id": "53fba46f2a75442f",
+   "kind": "answer",
+   "question": "Corn Ranch is a spaceport where test flights are carried out by a company headquartered in what state?",
+   "gold_answers": [
+    "Washington"
+   ],
+   "model_answer": "Washington state"
+  },
+  {
+   "id": "9d94d323b8b63756",
+   "kind": "answer",
+   "question": "Who has more productions under their belt Ridley Scott or Elmer Clifton?",
+   "gold_answers": [
+    "Ridley Scott"
+   ],
+   "model_answer": "Elmer Clifton"
+  },
+  {
+   "id": "a73251ec53c645eb",
+   "kind": "answer",
+   "question": "Are both Aloinopsis and Eriogonum ice plants?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No—Aloinopsis is, but Eriogonum isn’t."
+  },
+  {
+   "id": "47e8ccf6d9f654f0",
+   "kind": "answer",
+   "question": "Are Ural Federal University and California State Polytechnic University, Pomona both public universities?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both are public universities."
+  },
+  {
+   "id": "c447c275bcb585a6",
+   "kind": "answer",
+   "question": "are Tinto Brass and Baltasar Kormákur both from the same country ?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No, Tinto Brass is Italian and Baltasar Kormákur is Icelandic."
+  },
+  {
+   "id": "a5ed8e60a8fbba83",
+   "kind": "answer",
+   "question": "What is the name for plastic water-filled barriers that you might find along the MacArthur Road highway in Pennsylvania?",
+   "gold_answers": [
+    "Jersey barrier"
+   ],
+   "model_answer": "Water-filled traffic barriers"
+  },
+  {
+   "id": "d234ae10bc66bd8d",
+   "kind": "answer",
+   "question": "Which Canadian artist is credited with first coming up with the title of Various Positions?",
+   "gold_answers": [
+    "Leonard Cohen"
+   ],
+   "model_answer": "Irving Layton"
+  },
+  {
+   "id": "c016b7c5276b6f47",
+   "kind": "answer",
+   "question": "Albanians in Montenegro which make up 4.91 of the county's total population could be members of the Albanian Coalation Perspect which is a what? ",
+   "gold_answers": [
+    "Albanian political party in Montenegro"
+   ],
+   "model_answer": "Albanian political coalition\n"
+  },
+  {
+   "id": "67461ebae2bef7df",
+   "kind": "answer",
+   "question": " Pramod Bhasin was the former CEO of a company that provided what kind of services?",
+   "gold_answers": [
+    "IT"
+   ],
+   "model_answer": "Business process management and IT services"
+  },
+  {
+   "id": "980e0f8ac283c481",
+   "kind": "answer",
+   "question": "Who played the crime boss considered the father of modern organized crime in the 1997 drama Hoodlum?",
+   "gold_answers": [
+    "Andy García"
+   ],
+   "model_answer": "Andy Garcia"
+  },
+  {
+   "id": "9e924ff13eacd6eb",
+   "kind": "answer",
+   "question": "Martin Flavin and Peter Benchley both did what occupation?",
+   "gold_answers": [
+    "novelist"
+   ],
+   "model_answer": "Authors and novelists"
+  },
+  {
+   "id": "58cdae5f0038822b",
+   "kind": "answer",
+   "question": "Which  American chain of bakery-café fast casual restaurants sponsored Bill Steers Men's 4-Miler",
+   "gold_answers": [
+    "Panera Bread Company"
+   ],
+   "model_answer": "Panera Bread"
+  },
+  {
+   "id": "d0bca19485ade31f",
+   "kind": "answer",
+   "question": "What current NHL team owner played for the team that won the Stanley cup in 1992?",
+   "gold_answers": [
+    "Mario Lemieux"
+   ],
+   "model_answer": "Mario Lemieux, owner of the Pittsburgh Penguins"
+  },
+  {
+   "id": "5fa60584c8d6e991",
+   "kind": "answer",
+   "question": "Have Jelena Janković and Marat Safin both played tennis professionally?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both have played professional tennis."
+  },
+  {
+   "id": "68a07f28547318b9",
+   "kind": "answer",
+   "question": "What is the nickname of this American retired airline captain celebrated for his water landing with Jeffrey Skiles, after a bird strike and being unable to reach an airport?",
+   "gold_answers": [
+    "Sully"
+   ],
+   "model_answer": "Sully Sullenberger"
+  },
+  {
+   "id": "8afbb918d93d24d0",
+   "kind": "answer",
+   "question": "What phone series serves as the successor to phones officially unveiled at the \"Samsung Unpacked 2015\" event?",
+   "gold_answers": [
+    "The S7 series"
+   ],
+   "model_answer": "Samsung Galaxy S7 series"
+  },
+  {
+   "id": "53789c981c9e8c02",
+   "kind": "answer",
+   "question": "Where are Catcha Lake and Hedley Mascot Mine located?",
+   "gold_answers": [
+    "British Columbia, Canada"
+   ],
+   "model_answer": "Catcha Lake is in Nova Scotia; Hedley Mascot Mine is in Hedley, British Columbia."
+  },
+  {
+   "id": "2add50450802ef87",
+   "kind": "answer",
+   "question": "Which dialect spoken in the province of Scania calls Spettekaka, \"spiddekaga\"?",
+   "gold_answers": [
+    "Scanian dialects"
+   ],
+   "model_answer": "Scanian dialect (Skånska)"
+  },
+  {
+   "id": "13c4ce4e33ea79a0",
+   "kind": "answer",
+   "question": "The company that created the Data Universal Numbering System has a database that contains how many business records?",
+   "gold_answers": [
+    "265 million"
+   ],
+   "model_answer": "Over 500 million business records."
+  },
+  {
+   "id": "9deff0e31ccf2b4a",
+   "kind": "answer",
+   "question": "Which of the following was founded in 2003: University of Arizona or Presbyterian University College?",
+   "gold_answers": [
+    "Presbyterian University College"
+   ],
+   "model_answer": "Presbyterian University College, Ghana"
+  },
+  {
+   "id": "c2f37f71b67b7fab",
+   "kind": "answer",
+   "question": "When Copsi was made earl of Northumbria he went back to reside in a town at the confluence of which two rivers?",
+   "gold_answers": [
+    "Ouse and Foss"
+   ],
+   "model_answer": "The rivers Ouse and Foss"
+  },
+  {
+   "id": "5487c7fe98565526",
+   "kind": "answer",
+   "question": "Was Suzanne Chun Oakland a member of the upper of lower chamber of the Hawaii State Legislature?",
+   "gold_answers": [
+    "lower chamber"
+   ],
+   "model_answer": "Upper chamber (Hawaii State Senate)"
+  },
+  {
+   "id": "a21e6e19ca79d1c2",
+   "kind": "answer",
+   "question": "Elizabeth Austin wrote for a fitness magazine founded by who?",
+   "gold_answers": [
+    "Christine MacIntyre"
+   ],
+   "model_answer": "Joe Weider"
+  },
+  {
+   "id": "925f1d95d4887269",
+   "kind": "answer",
+   "question": "Which musician who first became famous in the late 1960s and early 1970s is Inner Secrets  the ninth studio album by",
+   "gold_answers": [
+    "Carlos Santana"
+   ],
+   "model_answer": "Santana"
+  },
+  {
+   "id": "f08e59aef32de044",
+   "kind": "answer",
+   "question": "Which is a record producer, Zach Bogosian or Daron Malakian?",
+   "gold_answers": [
+    "Daron Vartan Malakian"
+   ],
+   "model_answer": "Daron Malakian"
+  },
+  {
+   "id": "5d5ac55de231fc80",
+   "kind": "answer",
+   "question": "Where is the transportation company that owns Talbot based in?",
+   "gold_answers": [
+    "Montreal"
+   ],
+   "model_answer": "Montreal, Quebec, Canada"
+  },
+  {
+   "id": "53eab8f2d26c822b",
+   "kind": "answer",
+   "question": "What is the title of the person who is Head of the Department of Biological Sciences at the University of Lincoln",
+   "gold_answers": [
+    "Doctor"
+   ],
+   "model_answer": "Professor Daniel Mills"
+  },
+  {
+   "id": "d1b9a324302bd261",
+   "kind": "answer",
+   "question": "Myron F. Diduryk's exploits were described in a book by an author holding what military rank?",
+   "gold_answers": [
+    "lieutenant general"
+   ],
+   "model_answer": "Colonel"
+  },
+  {
+   "id": "dd22cdb51382cc5a",
+   "kind": "answer",
+   "question": "WHAT WAS THE NAME OF THE BOOK MADE INTO THE 2015 SOUTH KOREAN CRIME THRILLER, THE DEAL, DIRECTED BY SON YONG-HO AND FEATURING SOUTH KOREAN ACTOR PARK SUNG-WOONG (BORN JANUARY 9, 1973) AS A SERIAL KILLER?",
+   "gold_answers": [
+    "\"Murder Request\""
+   ],
+   "model_answer": "No book; it was an original screenplay."
+  },
+  {
+   "id": "3339dd9896d8c293",
+   "kind": "answer",
+   "question": "What episode did Mona Penelope Simpson  on the animated show \"The Simpsons\"die?",
+   "gold_answers": [
+    "\"Mona Leaves-a\""
+   ],
+   "model_answer": "“Mona Leaves-a”"
+  },
+  {
+   "id": "eb598cbf48d6c7f8",
+   "kind": "answer",
+   "question": "Who is the English Professional Footballer that is the niece of a former footballer born in the same place as where he plays? ",
+   "gold_answers": [
+    "Trent Alexander-Arnold"
+   ],
+   "model_answer": "Jade Moore"
+  },
+  {
+   "id": "8a5c54d4cdc826f3",
+   "kind": "answer",
+   "question": "Are Jeff Ragsdale and Millard Webb both authors?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes, both are authors."
+  },
+  {
+   "id": "272b66a692b25edd",
+   "kind": "answer",
+   "question": "Are Prológica CP-400 and Atari ST both personal computers?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both are personal computers."
+  },
+  {
+   "id": "f34f3c5ad67b6e4e",
+   "kind": "answer",
+   "question": "How many more singles titles did Kim Warwick win than Jorge Lozano?",
+   "gold_answers": [
+    "three singles titles"
+   ],
+   "model_answer": "3 more\n"
+  },
+  {
+   "id": "ad45007afc213919",
+   "kind": "answer",
+   "question": "Is Edison Sault Power Canal somehow linked with or used with the Cayuga–Seneca Canal?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No stated link."
+  },
+  {
+   "id": "65d05dd6d97c10cb",
+   "kind": "answer",
+   "question": "In between The Bears and I and Oceans which was released on July 31, 1974, by Buena Vista Distribution?",
+   "gold_answers": [
+    "The Bears and I"
+   ],
+   "model_answer": "Walt Disney Studios Motion Pictures"
+  },
+  {
+   "id": "51d94e6b3e198e2a",
+   "kind": "answer",
+   "question": "Which \"Blackzilians\" fighter is currently competing in the Middleweight division of Ultimate Fighting Championship?",
+   "gold_answers": [
+    "Vitor Belfort"
+   ],
+   "model_answer": "Rashad Evans and Vitor Belfort"
+  }
+ ],
+ "evidence": []
+}

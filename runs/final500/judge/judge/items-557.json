@@ -1,0 +1,480 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "e050e801c3cf9825",
+   "gold": [
+    {
+     "sentence": "Lake Louisvilla is a neighborhood partially located in Louisville, Kentucky.",
+     "facts": {
+      "0.0": "Lake Louisvilla is a neighborhood.",
+      "0.1": "Lake Louisvilla is partially located in Louisville, Kentucky."
+     }
+    },
+    {
+     "sentence": " It is located between Westport Road in Louisville and KY 22 in Oldham County.",
+     "facts": {
+      "1.0": "Lake Louisvilla is located between Westport Road in Louisville.",
+      "1.1": "Lake Louisvilla is located between KY 22 in Oldham County."
+     }
+    },
+    {
+     "sentence": "Oldham County is a county located in the commonwealth of Kentucky.",
+     "facts": {
+      "2.0": "Oldham County is a county.",
+      "2.1": "Oldham County is located in the commonwealth of Kentucky."
+     }
+    },
+    {
+     "sentence": " As of the 2010 census, the population was 60,316.",
+     "facts": {
+      "3.0": "As of the 2010 census, the population of Oldham County was 60,316."
+     }
+    },
+    {
+     "sentence": " Oldham County was a prohibition or completely dry county until January 2005 as the result of a 2004 'moist' vote, permitting sales of alcohol in restaurants that seat at least 100 patrons in which 70%+ of total revenue is derived from sales of food.",
+     "facts": {
+      "4.0": "Oldham County was a prohibition or completely dry county until January 2005.",
+      "4.1": "Oldham County stopped being completely dry in January 2005 as the result of a 2004 'moist' vote.",
+      "4.2": "The 2004 'moist' vote permitted sales of alcohol in restaurants that seat at least 100 patrons.",
+      "4.3": "The 2004 'moist' vote permitted alcohol sales only in restaurants where 70% or more of total revenue is derived from sales of food."
+     }
+    }
+   ],
+   "items": [
+    "Lake Louisvilla, Louisville\nLake Louisvilla is a neighborhood partially located in Louisville, Kentucky.\n\n It is located between Westport Road in Louisville and KY 22 in Oldham County.\n\n Lake Louisvilla was developed in the 1920s as a summer resort for people living in the city of Louisville.\n\n The state of Kentucky drained the lake in the late 1980s due to safety concerns regarding the stability of a dam.",
+    "Henderson County, Kentucky\nHenderson County is a county located in the U.S. state of Kentucky.\n\n As of the 2010 census, the population was 46,250.\n\n The county seat is Henderson.\n\n The county was formed in 1798 and named for Colonel Richard Henderson who purchased 17,000,000 acre of land from the Cherokee Indians, part of which would eventually make up the county.",
+    "Lawrence, Nassau County, New York\nLawrence is a village in Nassau County, New York in the United States.\n\n As of the 2010 United States Census, the village population was 6,483.",
+    "Lake Worth, Florida\nLake Worth is a city in Palm Beach County, Florida, United States, which takes its name from the body of water along its eastern border, originally called \"Lake Worth\", and now generally known as the Lake Worth Lagoon.\n\n The lake itself was named for General William J. Worth, who led U.S. forces during the last part of the Second Seminole War.\n\n s of 2010 , the population estimated by the U.S. Census Bureau was 34,910.\n\n The city is included in the Miami-Fort Lauderdale-Pompano Beach Metropolitan Area, which is home to approximately 5,563,857 people.",
+    "Oldham County, Kentucky\nOldham County is a county located in the commonwealth of Kentucky.\n\n As of the 2010 census, the population was 60,316.\n\n Its county seat is La Grange.\n\n The county is named for Colonel William Oldham.\n\n Oldham County was a prohibition or completely dry county until January 2005 as the result of a 2004 'moist' vote, permitting sales of alcohol in restaurants that seat at least 100 patrons in which 70%+ of total revenue is derived from sales of food.\n\n After a vote in late 2015; Oldham county has become a completely wet county.",
+    "Wheeling Island\nWheeling Island is the most populated island in the Ohio River.\n\n It lies within the city of Wheeling in Ohio County, West Virginia, in the United States.\n\n The 2000 census showed a resident population of 3,142 people on the island, which has a land area of 1.514 km² (374 acres).\n\n Neville Island, PA is larger (3.4 km²) but has fewer people (1,232).",
+    "Casey County, Kentucky\nCasey County is a county located in the U.S. Commonwealth of Kentucky.\n\n As of the 2010 census, the population was 15,955.\n\n Its county seat is Liberty.\n\n The county was formed in 1806 from the western part of Lincoln County and named for Colonel William Casey, a pioneer settler who moved his family to Kentucky in 1779.\n\n It is the only Kentucky county entirely in the Knobs region.\n\n Casey County is home to annual Casey County Apple Festival, and is a prohibition or dry county.\n\n It is considered part of the Appalachian region of Kentucky.",
+    "Garrard County, Kentucky\nGarrard County ( ;) is a county located in the U.S. state of Kentucky.\n\n As of the 2010 census, the population was 16,912.\n\n Its county seat is Lancaster.\n\n The county was formed in 1796 and was named for James Garrard, Governor of Kentucky from 1796 to 1804.\n\n It is a prohibition or dry county but Lancaster is wet.\n\n Lancaster was founded as a settlement of log cabins in 1776 at a springs that later provided a constant source of water to early pioneers.\n\n It is one of the oldest cities in the Commonwealth.\n\n Boonesborough, 25 miles to the east, was founded by Daniel Boone in 1775.\n\n Lexington, 28 miles to the north, was founded in 1775.\n\n Stanford, originally known as St. Asaph, is 10 miles south of Lancaster.\n\n It too was founded in 1775.\n\n The oldest permanent settlemenet in Kentucky, Harrodsburg, was founded in 1774 and is 18 miles to the west.\n\n The present day courthouse is one of the oldest courthouses in Kentucky in continuous use.",
+    "Kentucky County, Virginia\nKentucky County (then alternately spelled Kentucke County) was formed by the Commonwealth of Virginia by dividing Fincastle County into three new counties: Kentucky, Washington, and Montgomery, effective December 31, 1776.\n\n During the three and one-half years of Kentucky County's existence, its seat of government was Harrodstown (then also known as Oldtown, later renamed Harrodsburg).",
+    "Squire Creek Country Club\nThe Squire Creek Lodge features two floors offering a combined total of seven bedrooms.\n\n The Squire Creek Pool overlooks the golf course and is served by the Waterside Cafe.\n\n The Squire Creek Development offers six residential estates including the Squire Creek Estates, Timberland Estates, Fairway Estates, The Fairways, Fairway Villas, and The Park Homes.\n\n Squire Creek Country Club is the title sponsor of the Louisiana Peach Festival in Ruston.\n\n Squire Creek hosted the 2005 Western Athletic Conference Golf Championships."
+   ]
+  },
+  {
+   "id": "af560bfeb8b5aceb",
+   "gold": [
+    {
+     "sentence": " It is most known through the 1989 single by Kathy Mattea, released in conjunction with her album \"Willow in the Wind\", though the song was first recorded and released on the 1987 Don Williams album \"Traces\" and also released in 1988 by Clark's husband on his album \"Old Friends\".",
+     "facts": {
+      "0.0": "This song is most known through the 1989 single by Kathy Mattea.",
+      "0.1": "The 1989 single by Kathy Mattea was released in conjunction with her album Willow in the Wind.",
+      "0.2": "This song was first recorded and released on the 1987 Don Williams album Traces.",
+      "0.3": "This song was also released in 1988 by Clark's husband on his album Old Friends."
+     }
+    },
+    {
+     "sentence": "This is a detailed discography for American country music artist Don Williams.",
+     "facts": {
+      "1.0": "The discography is detailed.",
+      "1.1": "The discography is for American country music artist Don Williams."
+     }
+    }
+   ],
+   "items": [
+    "Diamond Rio\nDiamond Rio is an American country and Christian country music band.\n\n The band was founded in 1982 as an attraction for the Opryland USA theme park in Nashville, Tennessee, and was originally known as the Grizzly River Boys, then the Tennessee River Boys.\n\n It was founded by Matt Davenport, Danny Gregg, and Ty Herndon, the last of whom became a solo artist in the mid-1990s.\n\n After undergoing several membership changes in its initial years, the band has consisted of the same six members since 1989: Marty Roe (lead vocals, rhythm guitar), Gene Johnson (mandolin, guitar, fiddle, tenor vocals), Jimmy Olander (lead guitar, Dobro, banjo), Brian Prout (drums), Dan Truman (keyboards, organ, synthesizer), and Dana Williams (bass guitar, baritone vocals).",
+    "Progressive country\nProgressive country is a subgenre of country music developed in the early 1970s.\n\n In the late 1960s and early 1970s, mainstream country music was dominated by the slick Nashville sound and the rock-influenced Bakersfield sound of artists like Merle Haggard.\n\n A new generation of country artists emerged, influenced by contemporary rock music, singer-songwriters such as Bob Dylan, and the liberal politics of the 1960s counterculture.",
+    "Hjärtats trakt\nHjärtats trakt was released on 20 April 1993 and is a compilation album from Swedish pop artist Per Gessle.\n\n The album includes songs taken from Gessle's solo albums \"Per Gessle\" and \"Scener\".\n\n It was also released under license by the British record company Pickwick and it is the only Gessle album released by another label than EMI.\n\n In 1998 the album was re-released by the Dutch record company Disky Communications B.V. which is a subsidiary of EMI.",
+    "Danny Shirley\nDanny Shirley (born August 12, 1956) is an American country music singer.\n\n He is best known as the lead singer of the country rock band Confederate Railroad, a role he has held since its formation in 1987.",
+    "Night Is Fallin' in My Heart\n\"Night Is Fallin' in My Heart\" is a song written by Dennis Linde.\n\n The song was first recorded by Country music artist J.P. Pennington for his 1991 album, \"Whatever It Takes\".\n\n It was later recorded and released as a single in October 1994 by American country music group Diamond Rio.\n\n It was the second single released from their third album, \"Love a Little Stronger\".\n\n It peaked at number 9 in the United States, and number 6 in Canada.",
+    "Come from the Heart\n\"Come from the Heart\" is a country music song written by Richard Leigh and Susanna Clark and published in 1987.\n\n It is most known through the 1989 single by Kathy Mattea, released in conjunction with her album \"Willow in the Wind\", though the song was first recorded and released on the 1987 Don Williams album \"Traces\" and also released in 1988 by Clark's husband on his album \"Old Friends\".",
+    "Don Williams discography\nThis is a detailed discography for American country music artist Don Williams.",
+    "Hate to See Your Heart Break\n\"Hate to See Your Heart Break\" is a song by American rock band Paramore, recorded for their 2013 self-titled fourth album \"Paramore\".\n\n It was re-recorded to feature vocals by Joy Williams (formerly of The Civil Wars) for the 2014 deluxe edition of the album, the first time Paramore has collaborated with another artist or group on a studio recording.",
+    "Every Beat of My Heart (song)\n\"Every Beat of My Heart\" is a rhythm and blues song by Johnny Otis.\n\n It was first recorded in 1954 by his group, The Royals (later to be known as The Midnighters).\n\n In 1961 Gladys Knight & the Pips recorded the song for their debut single on the Vee-Jay label.\n\n Credited to The Pips, it was the first of eleven releases by the group to make it to number one on the R&B/soul chart.\n\n It was also the group's first top ten on the \"Billboard\" Hot 100.\n\n \"Every Beat of My Heart\" was first recorded for the Huntom label, who later sold the master to Vee-Jay.\n\n At the time of the song's release, The Pips were on the Fury label where they re-recorded the song without piano.\n\n In an unusual occurrence, the Fury recording of the song also made the top twenty on the R&B Sides chart and also made the Hot 100.",
+    "Leave Them Boys Alone\n\"Leave Them Boys Alone\" is a song recorded by American country music artist Hank Williams Jr. with Waylon Jennings and Ernest Tubb.\n\n It was released in May 1983 as the second single from Williams' album \"Strong Stuff\".\n\n The song reached number 6 on the \"Billboard\" Hot Country Singles chart.\n\n It was written by Williams, Dean Dillon, Gary Stewart and Tanya Tucker.\n\n The song is notable for its combination of two singers associated with the outlaw movement with a country legend from the honky tonk days and golden age of the Grand Ole Opry.\n\n Outlaw singers like Williams and Jennings saw themselves as taking country music back to its raw, honky tonk roots, and recording an up tempo song with Tubb (who would never have received radio airplay in the late 1970s and early 80's) and reaching #6 was a slap in the face to the proponents of the country pop sound.\n\n The lyrics of the song, much like Williams' \"Family Tradition\" echo the sentiment that the outlaw singers and their current escapades were predated by the hard living honky tonkers of the 1950s such as Hank Williams, Sr."
+   ]
+  },
+  {
+   "id": "e156e7a8246a3b98",
+   "gold": [
+    {
+     "sentence": " In the category of pornographic websites, it was surpassed in the rankings by competitor sites xHamster, XVideos, and Pornhub, as well as the adult webcam site LiveJasmin.",
+     "facts": {
+      "0.0": "In the category of pornographic websites, this site was surpassed in the rankings by xHamster.",
+      "0.1": "In the category of pornographic websites, this site was surpassed in the rankings by XVideos.",
+      "0.2": "In the category of pornographic websites, this site was surpassed in the rankings by Pornhub.",
+      "0.3": "In the category of pornographic websites, this site was surpassed in the rankings by the adult webcam site LiveJasmin.",
+      "0.4": "xHamster, XVideos, and Pornhub are competitor sites."
+     }
+    },
+    {
+     "sentence": "XVideos is the world's largest pornographic video sharing and viewing website.",
+     "facts": {
+      "1.0": "XVideos is the world's largest pornographic video sharing and viewing website."
+     }
+    }
+   ],
+   "items": [
+    "XY TV\nIt launched in December 2003 and distribution was limited to select cable companies.\n\n As of May 31, 2006, XY.tv has ceased operations, and is no longer broadcasting.\n\n It was wholly owned by American radio personality John Garabedian.",
+    "Optimus S.A.\nOptimus S.A. was a Polish company specializing in assembly of PCs, fiscal systems, and providing complex IT solutions for companies.In the 1990s Optimus was one of the leaders of the Polish computer market.",
+    "Pravda.ru\nPravda.ru (formerly Pravda Online) is a Russian internet news website established in 1999 and owned by Pravda.ru Holding (headed by Vadim Gorshenin).",
+    "Kross SA\nKross is a Polish company within the sports industry that makes bicycles and bicycle frames.\n\n The company is currently the largest in Poland manufacturing bicycles sold in the Polish market.\n\n In 2005 the company sold almost 800,000 products, half of which were exported to 35 countries, 30 of which are in Europe.",
+    "YouPorn\nYouPorn is a free pornographic video sharing website and one of the 100 most accessed websites in the world.\n\n Since launching in August 2006, it grew to become the most popular pornographic website on the internet, and, in November 2007, it was reported to be the largest free pornographic website as well.\n\n As of February 2013, it was the 83rd most popular website overall and the fifth most popular pornographic website.\n\n In the category of pornographic websites, it was surpassed in the rankings by competitor sites xHamster, XVideos, and Pornhub, as well as the adult webcam site LiveJasmin.",
+    "18 Doughty Street\n18 Doughty Street was a British political Internet-based broadcaster that hosted a webcast as its chief product.\n\n It began broadcasting at 18:55 on 10 October 2006, from its studio at 18 Doughty Street in the Bloomsbury area of London, and ceased broadcasting at 23:00 on Thursday 8 November 2007.\n\n It claimed to be Britain's first Internet-based TV station.",
+    "XVideos\nXVideos is the world's largest pornographic video sharing and viewing website.\n\n It's registered to the Polish company, WGCZ Holding.\n\n Alexa ranks it as the 50th most visited website in the world.",
+    "Wengie\nHer YouTube channel also recently got awarded with \"Best Channel\" as well as \"Overall Winner\" for the Australian Online Video Awards.",
+    "XHamster\nxHamster is a pornographic media and social networking site headquartered in Limassol, Cyprus.\n\n xHamster serves user-submitted pornographic videos, webcam models, pornographic photographs, and erotic literature, and incorporates social networking features.\n\n xHamster was founded in 2007.\n\n With more than 10 million members, it is the third most popular pornography website on the Internet after XVideos and Pornhub.",
+    "Pioneer Pekao Investments\nPioneer Pekao is a Polish company managing several investment funds in Poland.\n\n It is the biggest and first investment funds manager on the Polish market."
+   ]
+  },
+  {
+   "id": "9b4dc9dabef5c9d3",
+   "gold": [
+    {
+     "sentence": "Aliens of the Deep is a 2005 documentary film, directed in part by James Cameron alongside fellow cameraman and friend Steven Quale, who would go on to direct \"Final Destination 5\" six years later, and filmed in the IMAX 3D format.",
+     "facts": {
+      "0.0": "Aliens of the Deep is a 2005 documentary film.",
+      "0.1": "Aliens of the Deep was directed in part by James Cameron.",
+      "0.2": "James Cameron directed Aliens of the Deep alongside fellow cameraman and friend Steven Quale.",
+      "0.3": "Steven Quale would go on to direct Final Destination 5 six years later.",
+      "0.4": "Aliens of the Deep was filmed in the IMAX 3D format."
+     }
+    },
+    {
+     "sentence": " Cameron teams with NASA scientists to explore the Mid-Ocean Ridges, submerged chains of mountains in the Atlantic and Pacific oceans that are home to some of the planet's more unusual forms of life.",
+     "facts": {
+      "1.0": "James Cameron teams with NASA scientists to explore the Mid-Ocean Ridges.",
+      "1.1": "The Mid-Ocean Ridges are submerged chains of mountains.",
+      "1.2": "The Mid-Ocean Ridges are in the Atlantic and Pacific oceans.",
+      "1.3": "The Mid-Ocean Ridges are home to some of the planet's more unusual forms of life."
+     }
+    },
+    {
+     "sentence": "Poetry in Motion is a 1982 Canadian documentary film directed by Ron Mann featuring contemporary North American poetry and music.",
+     "facts": {
+      "2.0": "Poetry in Motion is a 1982 Canadian documentary film.",
+      "2.1": "Poetry in Motion was directed by Ron Mann.",
+      "2.2": "Poetry in Motion features contemporary North American poetry.",
+      "2.3": "Poetry in Motion features contemporary North American music."
+     }
+    },
+    {
+     "sentence": " Featured are some of the Black Mountain poets, Beats, minimalist poets, and avant-garde poets.",
+     "facts": {
+      "3.0": "Poetry in Motion features some Black Mountain poets.",
+      "3.1": "Poetry in Motion features some Beat poets.",
+      "3.2": "Poetry in Motion features some minimalist poets.",
+      "3.3": "Poetry in Motion features some avant-garde poets."
+     }
+    },
+    {
+     "sentence": " It was released in theaters, later being distributed on VHS, LaserDisc, and DVD.",
+     "facts": {
+      "4.0": "Poetry in Motion was released in theaters.",
+      "4.1": "Poetry in Motion was later distributed on VHS.",
+      "4.2": "Poetry in Motion was later distributed on LaserDisc.",
+      "4.3": "Poetry in Motion was later distributed on DVD."
+     }
+    },
+    {
+     "sentence": " An extended CD-ROM version was also released.",
+     "facts": {
+      "5.0": "An extended CD-ROM version of Poetry in Motion was also released."
+     }
+    }
+   ],
+   "items": [
+    "From the Sea to the Land Beyond\nFrom The Sea to the Land Beyond: Britain's Coast on Film is a documentary feature film directed by Penny Woolcock, with an original soundtrack by British indie-rock band British Sea Power.\n\n The project was originally produced by Crossover and Sheffield Doc/Fest as part of The Space project from the BBC and the Arts Council England.\n\n The film was edited by Alex Fry.",
+    "The entries profile filmmakers, producers, performers, and artists: Tim Bedore is a Chicago-born comedian; Rogue One (2016) depicts rebels stealing Death Star plans; Frederick K. Keller, Peter Guber, Baltasar Kormákur, Steve Rash, Jonathan Kaplan, Kurt Voss, Jim Sharman, Barry Sandler, and Howard Rosenman are directors or producers. Other highlights include Titan A.E.’s commercial failure; Vito Russo’s documentary; Scott Free’s founding by the",
+    "Titan A.E.\nTitan A.E. is a 2000 American animated science fiction film directed by Don Bluth and Gary Goldman.\n\n Its title refers to the spacecraft central to the plot, with \"A.E.\" meaning \"After Earth\".\n\n It stars Matt Damon, Bill Pullman, John Leguizamo, Nathan Lane, Janeane Garofalo and Drew Barrymore.\n\n The film's animation technique combines traditional hand-drawn animation and extensive use of computer generated imagery.\n\n Its working title was \"Planet Ice\".\n\n It was theatrically released on June 16, 2000, by 20th Century Fox and was the final film for Fox Animation Studios.\n\n The film grossed $36.8 million on a $75–$90 million budget, making a $100-million loss for the studio.",
+    "Poetry in Motion (film)\nPoetry in Motion is a 1982 Canadian documentary film directed by Ron Mann featuring contemporary North American poetry and music.\n\n Featured are some of the Black Mountain poets, Beats, minimalist poets, and avant-garde poets.\n\n It was released in theaters, later being distributed on VHS, LaserDisc, and DVD.\n\n An extended CD-ROM version was also released.",
+    "The entries survey documentaries, films, TV, and film-related concepts: Los Angeles hip-hop, Aboriginal country music, Latin American politics, oceans, nerd culture, Iraqi life and war, Bougainville, education, disability, poetry, surfing, and family relationships. Featured works include *Gasland*, *Baghdad ER*, *War/Dance*, *First Life*, and *The Coconut Revolution*. Several received major awards or nominations. The material also profiles filmmaker Wayne Coles-Janess and defines",
+    "Oceans (film)\nOceans (French: Océans ) is a 2009 French nature documentary film directed, produced, co-written, and narrated by Jacques Perrin, with Jacques Cluzaud as co-director.\n\n The film explores the marine species of Earth's five oceans and reflects on the negative aspects of human activity on the environment, with Perrin (Pierce Brosnan in English) providing narration.",
+    "We Are Poets\nWe Are Poets is a documentary film directed by Daniel Lucchesi and Alex Ramseyer-Bache.\n\n It follows six young poets from Leeds Young Authors performance poetry group in Leeds on their visit to the international Poetry Slam Competition in Washington D.C, United States.\n\n It premièred at Europe's largest Documentary Film festival - Doc/Fest in Sheffield's Showroom Cinema on 11 June 2011, where it won the coveted Sheffield Youth Jury Award.",
+    "Aliens of the Deep\nAliens of the Deep is a 2005 documentary film, directed in part by James Cameron alongside fellow cameraman and friend Steven Quale, who would go on to direct \"Final Destination 5\" six years later, and filmed in the IMAX 3D format.\n\n It was produced by Walden Media and Walt Disney Pictures.\n\n Cameron teams with NASA scientists to explore the Mid-Ocean Ridges, submerged chains of mountains in the Atlantic and Pacific oceans that are home to some of the planet's more unusual forms of life.",
+    "Deep Dark Canyon\nDeep Dark Canyon is a 2012 American independent dramatic thriller film by husband and wife writer/director team Abe Levy and Silver Tree.\n\n The film stars Ted Levine, Nick Eversman and Spencer Treat Clark.\n\n The film was originally called \"Lawless\" and was shot on location in the rural town of Guerneville, California.",
+    "The Polar Bears\nThe Polar Bears is a 2012 3D computer animated short film presented by The Coca-Cola Company, produced by Ridley Scott, written by David Reynolds, and directed by John Stevenson.\n\n The film features the voices of Lin-Manuel Miranda, Armie Hammer, Jonathan Adams, and Megyn Price.\n\n The film is based on Coca-Cola's iconic polar bears and was released on the company's website and YouTube channel on December 31, 2012."
+   ]
+  },
+  {
+   "id": "2ac2a558a64ac33c",
+   "gold": [
+    {
+     "sentence": " He is best known for his roles in \"How To Be Indie\" (2009–2011), \"Wingin' It\" (2010–2013), \"\" (2012–2013), and \"Open Heart\" (2015).",
+     "facts": {
+      "0.0": "The person described is best known for a role in 'How To Be Indie' (2009–2011).",
+      "0.1": "The person described is best known for a role in 'Wingin' It' (2010–2013).",
+      "0.2": "The person described is best known for a role in an untitled work (2012–2013).",
+      "0.3": "The person described is best known for a role in 'Open Heart' (2015)."
+     }
+    },
+    {
+     "sentence": "Open Heart is a 2015 American-Canadian mystery-drama television series produced by the Epitome Pictures unit of DHX Media in association with marblemedia.",
+     "facts": {
+      "1.0": "Open Heart is a 2015 television series.",
+      "1.1": "Open Heart is an American-Canadian television series.",
+      "1.2": "Open Heart is a mystery-drama television series.",
+      "1.3": "Open Heart was produced by the Epitome Pictures unit of DHX Media.",
+      "1.4": "Open Heart was produced in association with marblemedia."
+     }
+    }
+   ],
+   "items": [
+    "Don't Stop Believing (TV series)\nDon't Stop Believing is a British television talent show that aired on Channel 5 in summer 2010.\n\n It was inspired by the musical comedy-drama \"Glee\", which airs in the United States on the Fox network.\n\n The series featured live shows in which musical performance groups competed against each other, with viewers voting on the winner.\n\n Solo singers were also sought to join a group to represent the United Kingdom on the American glee club circuit.\n\n The show was hosted by Emma Bunton, and judged by Anastacia, Duncan James, Tamzin Outhwaite and Charles \"Chucky\" Klapow.\n\n The programme was shown in simulcast on Irish TV channel 3e and repeated a week later on parent channel TV3 Ireland.\n\n The show was not renewed for a second series due to low ratings.",
+    "Dan Flannery\nArthur Daniel Flannery (born March 10, 1944) is an American actor from Evanston, Illinois.\n\n He has played roles in several movies, short films, and T.V. shows from a variety of genres including drama, action, and thriller.\n\n His filmography includes The Straight Story (1999), and Contagion (2011) and T.V. series such as Empire (2015 TV series) and Boss (2011-2012).",
+    "Everest (2015 film)\nEverest is a 2015 British-American biographical adventure film directed and co-produced by Baltasar Kormákur, co-produced by Tim Bevan, Eric Fellner, Nicky Kentish Barnes, Tyler Thompson and Brian Oliver and written by William Nicholson and Simon Beaufoy, adapted from Beck Weathers' memoir \"Left for Dead: My Journey Home from Everest\" (2000).\n\n It stars an ensemble cast of Jason Clarke, Josh Brolin, John Hawkes, Robin Wright, Michael Kelly, Sam Worthington, Keira Knightley, Emily Watson, and Jake Gyllenhaal.\n\n It is based on the real events of the 1996 Mount Everest disaster, and focuses on the survival attempts of two expedition groups, one led by Rob Hall (Clarke) and the other by Scott Fischer (Gyllenhaal).",
+    "Terry Ray (actor)\nHe wrote and starred in two more shows at the Dorothy Chandler Pavilion, one co-starring Amanda Bynes and the other Hilary Duff.\n\n<br><br>Terry is also the voice of the \"Gaydar Gun\", a spinoff toy from the film Gaydar.",
+    "Rachelle Lefevre\nRachelle Lefevre ( ; born February 1, 1979) is a Canadian actress.\n\n She has starred in the television series \"Big Wolf on Campus\" and had recurring roles in \"What About Brian\", \"Boston Legal\", and \"Swingtown\".\n\n She played the vampire Victoria Sutherland in the first two films of the \"Twilight\" saga, before being replaced by Bryce Dallas Howard in the third installment, \"\", due to scheduling conflicts with her role in the film \"Barney's Version\".\n\n In 2011, she starred in the ABC medical drama \"Off the Map\", followed by the CBS series \"A Gifted Man\" (2011–2012) and \"Under the Dome\" (2013–2015).",
+    "Garcia Plays Dylan\nGarcia Plays Dylan is an album composed of various live performances featuring Jerry Garcia playing covers of Bob Dylan songs.\n\n It is culled from performances from 1973–1995, and features Garcia playing with Grateful Dead, Legion of Mary, Jerry Garcia Band, and Garcia-Saunders.\n\n Garcia takes lead vocals on all tracks.",
+    "Dean Winchester\nDean Winchester is a fictional character and one of the two protagonists of the American drama television series \"Supernatural\".\n\n He is portrayed by Jensen Ackles.\n\n Other versions of the character having been portrayed by Hunter Brochu (toddler), Ridge Canipe (child), Nicolai Lawton-Giustra (pre-teen), Brock Kelly and Dylan Everett (teen), and Chad Everett (elderly).",
+    "Wingin' It\nWingin' It (originally titled Angel on Campus prior to its debut) is a Canadian teen sitcom which aired on Family.\n\n The series was produced by Temple Street Productions in association with Family.\n\n It stars Demetrius Joyette and Dylan Everett.\n\n This show included guest-stars from other Family Channel shows such as \"The Latest Buzz\".\n\n It was announced that the series was renewed for a third season on June 13, 2011.\n\n Family announced that the series is not planned for a fourth season.",
+    "Dylan Everett\nDylan Everett (born January 24, 1995) is a Canadian actor.\n\n He is best known for his roles in \"How To Be Indie\" (2009–2011), \"Wingin' It\" (2010–2013), \"\" (2012–2013), and \"Open Heart\" (2015).",
+    "Open Heart (TV series)\nOpen Heart is a 2015 American-Canadian mystery-drama television series produced by the Epitome Pictures unit of DHX Media in association with marblemedia.\n\n It first aired on January 20, 2015, on TeenNick in the United States and previously on YTV; now currently on ABC Spark in Canada."
+   ]
+  },
+  {
+   "id": "e58ef4e72eb11edc",
+   "gold": [
+    {
+     "sentence": "Aspidistra is a genus of flowering plants in the family Asparagaceae, subfamily Nolinoideae, native to eastern and southeastern Asia, particularly China and Vietnam.",
+     "facts": {
+      "0.0": "Aspidistra is a genus of flowering plants.",
+      "0.1": "Aspidistra is in the family Asparagaceae.",
+      "0.2": "Aspidistra is in the subfamily Nolinoideae.",
+      "0.3": "Aspidistra is native to eastern Asia.",
+      "0.4": "Aspidistra is native to southeastern Asia.",
+      "0.5": "Aspidistra is particularly native to China.",
+      "0.6": "Aspidistra is particularly native to Vietnam."
+     }
+    },
+    {
+     "sentence": "Cyrtanthus is a genus of perennial, herbaceous and bulbous plants in the family Amaryllidaceae, subfamily Amaryllidoideae.",
+     "facts": {
+      "1.0": "Cyrtanthus is a genus of perennial plants.",
+      "1.1": "Cyrtanthus is a genus of herbaceous plants.",
+      "1.2": "Cyrtanthus is a genus of bulbous plants.",
+      "1.3": "Cyrtanthus is in the family Amaryllidaceae.",
+      "1.4": "Cyrtanthus is in the subfamily Amaryllidoideae."
+     }
+    }
+   ],
+   "items": [
+    "Traubiinae\nTraubiinae is a subtribe of plants classified under the tribe Hippeastreae.\n\n It belongs to the subfamily Amaryllidoideae of the Amaryllis family (Amaryllidaceae).",
+    "Hymenocallideae\nHymenocallideae is a tribe (in the family Amaryllidaceae, subfamily Amaryllidoideae), where it forms part of the Andean clade, one of two American clades.\n\n The tribe was originally recognised by both Meerow (1995) and the Muller-Doblies' (1996).\n\n Its phylogenetic position within the Amaryllidoideae was established by Meerow \"et al.\" in 2000, while in-depth infratribal relationships were established in 2002.",
+    "Ammocharis\nAmmocharis is a small genus from sub-Saharan Africa, in the Amaryllidaceae family (subfamily Amaryllidoideae) which includes 7 species distributed in Africa.\n\n The plant grows as a succulent, above-ground bulb, preferring seasonally wet, hot, sandy soils and full sun.",
+    "Caryophyllales\nCaryophyllales ( ) is an order of flowering plants that includes the cacti, carnations, amaranths, ice plants, beets, and many carnivorous plants.\n\n Many members are succulent, having fleshy stems or leaves.",
+    "Amarylloidinae\nAmarylloidinae is a now obsolete informal name for an \"infrafamily\" within the Amaryllidaceae (Amaryllis) family, erected by Hamilton Traub.\n\n This grouping was designed to fill a perceived gap between the formal rank of subfamily and tribes.\n\n In his treatment of this family, he divided it first into four subfamiles.\n\n Within subfamily Amarylloideae he then divided his sixteen tribes into two infrafamilies, Amarylloidinae (12 tribes) and Pancratioidinae (4 tribes), both of which were subsequently demonstrated to be polyphyletic, and hence were abandoned by Dahlgren, who used no rank between family and tribe.\n\n On the other hand, he also used a much more restricted Amaryllidaceae corresponding to Traub's subfamily Amarylloideae.\n\n Thus Traub's Amarylloideae most closely resembles subfamily Amaryllidoideae \"sensu\" APGIII.",
+    "Aspidistra\nAspidistra is a genus of flowering plants in the family Asparagaceae, subfamily Nolinoideae, native to eastern and southeastern Asia, particularly China and Vietnam.\n\n They grow in shade under trees and shrubs.\n\n Their leaves arise more or less directly from ground level, where their flowers also appear.\n\n The number of species known has increased considerably from the 1980s onwards, with around 100 accepted as of July 2013 . \"\n\nAspidistra elatior\" is common worldwide as a foliage house plant that is very tolerant of neglect.\n\n It and other species can also be grown in shade outside, where they are generally hardy to -5 C .",
+    "The entries describe diverse flowering plants and groups, chiefly from Africa. Ice plants (Aizoaceae) include South African Aloinopsis and Conophytum, and southern African Conicosia, whose wet-opening capsules release tiny seeds. Other genera span many families and regions: African irises and bulbous amaryllids; Asian toad lilies and Rodgersia; European and North African Coronilla; and aquatic Alismataceae. Vascular plants are defined by xylem",
+    "Hippeastrinae\nHippeastrinae is a subtribe of plants classified under the tribe Hippeastreae.\n\n It belongs to the subfamily Amaryllidoideae of the Amaryllis family (Amaryllidaceae).",
+    "Clinantheae\nClinantheae is a tribe (in the family Amaryllidaceae, subfamily Amaryllidoideae), where it forms part of the Andean clade, one of two American clades.\n\n The tribe was described in 2000 by Alan Meerow \"et al.\" as a result of a molecular phylogenetic study of the American Amaryllidoideae.\n\n This demonstrated that the Stenomesseae tribe, including the type genus \"Stenomesson\" was polyphyletic.\n\n Part of the tribe segregated with the Eucharideae and were submerged into it, while the other part formed a unique subclade.\n\n Since the type species of \"Stenomesson\" was not part of the second sublclade it was necessary to form a new name for the remaining species together with the other genera that remained.\n\n This was \"Clinanthus\", the oldest name for these species, and consequently the tribe Clinantheae.",
+    "Cyrtanthus\nCyrtanthus is a genus of perennial, herbaceous and bulbous plants in the family Amaryllidaceae, subfamily Amaryllidoideae."
+   ]
+  },
+  {
+   "id": "b093cddabef351a1",
+   "gold": [
+    {
+     "sentence": " Her favorite events are 800 metres and 1500 metres.",
+     "facts": {
+      "0.0": "This person's favorite events are the 800 metres.",
+      "0.1": "This person's favorite events are the 1500 metres."
+     }
+    },
+    {
+     "sentence": " The distance has been contested at the Summer Olympics since 1896 and the World Championships in Athletics since 1983.",
+     "facts": {
+      "1.0": "The distance has been contested at the Summer Olympics since 1896.",
+      "1.1": "The distance has been contested at the World Championships in Athletics since 1983."
+     }
+    }
+   ],
+   "items": [
+    "Sinimole Paulose\nSinimol Paulose (born 24 June 1983) is an Indian middle distance runner.\n\n Her favorite events are 800 metres and 1500 metres.\n\n In 2009, she received Arjuna Award for her contribution to the Indian athletics.\n\n Sinimol was born in Piravom in Ernakulam district of Kerala state.\n\n She represented India at Beijing Olympics.",
+    "Ross MacKenzie (athlete)\nRoss MacKenzie (born 18 July 1946) is a Canadian sprinter.\n\n He competed in the men's 400 metres at the 1968 Summer Olympics.\n\n He finished second in the 1967 Pan American Games 4 × 400 metres relay (with Brian MacLaren, Bill Crothers, and Robert McLaren).\n\n MacKenzie also finished fifth in the 1967 Pan American Games 400 metres.\n\n He won a silver medal in the 1966 British Empire and Commonwealth Games 4 x 440 yards relay with Don Domansky, Brian MacLaren and Bill Crothers.",
+    "Siegmar Ohlemann\nSiegmar (\"Sig\") Ohlemann (born May 11, 1938) is a retired middle distance runner, who represented Canada in three events (800 metres, 4 × 100 metres and 4 × 400 metres) at the 1960 Summer Olympics in Rome, Italy.\n\n He claimed the silver medal in 800 metres at the 1963 Pan American Games in Brazil, behind fellow Canadian Don Bertoia.",
+    "European 10,000m Cup\nThe European 10,000m Cup is an annual 10,000 metres race for European athletes which was first held in 1997.\n\n The competition is organised by the European Athletics Association and first began as the European 10000 Metres Challenge after the event was removed from the European Cup programme.\n\n The competition has roots in the Iberian 10,000 metres Championships – a competition between Spanish and Portuguese athletes that was held between 1991 and 1996 – and the first five editions of the European 10000 Metres Challenge were held in the Iberian Peninsula.\n\n The event was first held under its current title in 2005.",
+    "Mary Chemweno\nMary Chemweno Koskei is a former Kenyan middle distance runner who specialised in 400 m, 800 m and 1500 m events.\n\n She won the gold medal in the inaugural 1979 African Championships in 800 metres, and another gold medal six years later in 1500 metres at the 1985 edition.\n\n She is also a three-time Kenyan national champion, having won both the 400 and 800 metres events in 1981 as well as the 800 m event again in 1986.\n\n Mid-career, in the early 1980s, she married long-distance runner Kipsubai Koskei.",
+    "K. M. Binu\nKalayathumkuzhi Mathews Binu (born 20 December 1980) is an Indian track and field athlete from Kerala who specializes in 400 metres and 800 metres.\n\n He holds the current 400 metres national record of 45.48 s set at the 2004 Athens Olympics on 20 August 2004.\n\n He broke the 44-year-old Olympics mark (by an Indian) held by Milkha Singh who set an Indian National Record with a timing of 45.73 s at the 1960 Rome Olympics.\n\n He and his elder sister K. M. Beenamol made history when they became the first Indian siblings to win medals in a major international competition.\n\n They won medals at the Busan Asian Games (2002).\n\n While Binu won the men's 800 metres silver, his sister won the gold medal in the women's event.\n\n Binu received the Arjuna Award for the year 2006 for his achievements in the Indian athletics.",
+    "Caster Semenya\nMokgadi Caster Semenya Bronze OIB (born 7 January 1991) is a South African middle-distance runner and 2016 Olympic gold medallist.\n\n Semenya won gold in the women's 800 metres at the 2009 World Championships with a time of 1:55.45 and at the 2017 World Championships in her new personal best, 1:55.16.\n\n Semenya also won silver medals at the 2011 World Championships and the 2012 Summer Olympics, both in the 800 metres.\n\n She was the winner of the gold medal in the 800 metre event at the 2016 Summer Olympics.",
+    "John Lindsay (Paralympian)\nJohn Lindsay, OAM (born 29 January 1970) is an Australian Paralympic athlete from Melbourne.\n\n He competed in the 1988 Seoul games in distances ranging from 100 m to 800 m, but did not win any medals.\n\n At the 1992 Barcelona Games, he won a gold medal in the Men's 200 m TW3 event, for which he received a Medal of the Order of Australia, a silver medal in the Men's 100 m TW3 event and a bronze medal in the Men's 400 m TW3 event.\n\n That year, he had a Victorian Institute of Sport scholarship.",
+    "John Lindsay (Paralympian)\nThat year, he had a Victorian Institute of Sport scholarship.\n\n He was also working as a fitness instructor in 1992, held world records in the 100 m and 200 m events, and was ranked 6th in the world in the 400 m.\n\n He won a gold medal in the men's athletics 100 m T52 event at the 1996 Summer Paralympics with a time of 15.22, a silver medal in the 200 m T52 event with a time of 27.38, and a bronze medal in the 400 m T52 event with a time of 52.93.\n\n At the 2000 Sydney Games, he won a gold medal in the Men's 100 m T53 event, a silver medal as part of the Men's 4x100 m Relay T54 team, and a bronze medal in the Men's 200 m T53 event; he was also part of the Men's 4x400 m Relay T54 team, which was the only one to qualify in its heat, but it did not make it to the finals.",
+    "1500 metres\nThe 1500 metres or 1,500-metre run (typically pronounced 'fifteen-hundred metres') is the foremost middle distance track event in athletics.\n\n The distance has been contested at the Summer Olympics since 1896 and the World Championships in Athletics since 1983.\n\n It is equivalent to 1.5 kilometers or approximately ⁄  miles."
+   ]
+  },
+  {
+   "id": "ccfd56495df74a67",
+   "gold": [
+    {
+     "sentence": " After some time spent in general practice, he became a Lecturer, Senior Lecturer and Principal Lecturer in animal behaviour at De Montfort University, and subsequently the University of Lincoln, where he has been Head of the Department of Biological Sciences.",
+     "facts": {
+      "0.0": "He spent some time in general practice.",
+      "0.1": "He became a Lecturer in animal behaviour at De Montfort University.",
+      "0.2": "He became a Senior Lecturer in animal behaviour at De Montfort University.",
+      "0.3": "He became a Principal Lecturer in animal behaviour at De Montfort University.",
+      "0.4": "He subsequently moved to the University of Lincoln.",
+      "0.5": "He has been Head of the Department of Biological Sciences at the University of Lincoln."
+     }
+    },
+    {
+     "sentence": " Individuals who have earned a Doctor of Philosophy degree may, in most jurisdictions, use the title of \"Doctor\" (often abbreviated \"Dr\") or, in non-English speaking countries, variants such as \"Dr. phil.\"",
+     "facts": {
+      "1.0": "People who have earned a Doctor of Philosophy degree may, in most jurisdictions, use the title 'Doctor'.",
+      "1.1": "The title 'Doctor' is often abbreviated 'Dr'.",
+      "1.2": "In non-English speaking countries, people with a Doctor of Philosophy degree may use variants such as 'Dr. phil.'"
+     }
+    }
+   ],
+   "items": [
+    "Duncan Haldane\nFrederick Duncan Michael Haldane {'1': \", '2': \", '3': \", '4': \"} (born 14 September 1951), known as F. Duncan Haldane, is a British born physicist who is Eugene Higgins Professor of Physics at the physics department of Princeton University, and a Distinguished Visiting Research Chair at Perimeter Institute for Theoretical Physics.\n\n He won the 2016 Nobel Prize in Physics with David J. Thouless and John Michael Kosterlitz.",
+    "David M. Sever\nDavid M. Sever is an American herpetologist, histologist, anatomist and reproductive biologist.\n\n He has been a professor and department head in the Department of Biological Sciences at Southeastern Louisiana University since 2004, and held the Kenneth Dyson Endowed Professorship in Biological Sciences from 2012 to 2015.\n\n He is well known for over 30 years of research on the secondary sexual characteristics of salamanders and more generally on comparative histoanatomy of the urogenital systems of vertebrates.\n\n and was recognized as the 2013 Distinguished Herpetologist of the Year by the Herpetologists' League.",
+    "Richard F. Wilson\nRichard F. Wilson was selected to be Illinois Wesleyan University's 18th President on April 6, 2004 and took office on July 1, 2004.\n\n He was inaugurated on April 9, 2005.\n\n He had spent the previous 26 years at the University of Illinois at Urbana-Champaign, leaving as associate chancellor for development and vice president of the University of Illinois Foundation.\n\n Mr. Wilson is a Ph.D. graduate of the University of Michigan.\n\n Wilson announced his intended retirement from Illinois Wesleyan, to take place around June 2015 or whenever a successor is named and transitioned.",
+    "Ekhard Salje\nEkhard Karl Hermann Salje, FRS (born 1946) is Professor of Mineralogy and Petrology and former Head of the Department of Earth Sciences, Cambridge University.",
+    "Steven K. Galson\nSteven Kenneth Galson (born 1956) is an American public health physician.\n\n He is currently Senior Vice President for Global Regulatory Affairs at Amgen, the S. California-based innovative global biopharmaceutical company.\n\n He is also Professor-at-Large at the Keck Graduate Institute for Applied Life Sciences in Clarmont, California.\n\n He is a retired rear admiral in the United States Public Health Service Commissioned Corps and public health administrator who served as the acting Surgeon General of the United States from October 1, 2007 – October 1, 2009.\n\n He served concurrently as acting Assistant Secretary for Health from January 22, 2009 to June 25, 2009, and as the Deputy Director and Director of the Center for Drug Evaluation and Research (CDER) at the Food and Drug Administration from 2001 to 2007.\n\n As the Acting Surgeon General, he was the commander of the United States Public Health Service Commissioned Corps and, while serving as the Assistant Secretary for Health, was the operational head of the Public Health Service.",
+    "Graph query row:\nperson: Daniel Simon Mills\nprofessional_title: ['biologist', 'Professor of Veterinary Behavioural Medicine', 'Lecturer', 'Senior Lecturer', 'Principal Lecturer', 'Head of the Department of Biological Sciences']",
+    "Richard W. Aldrich\nRichard Warren Aldrich is an American neuroscientist who is currently the Karl Folkers Chair of Interdisciplinary Medical Research and Professor of Neurobiology in the School of Biological Sciences at the University of Texas.\n\n Graduating from the University of Arizona with a BS in Biological Sciences (1975), Aldrich went on to earn a Ph. D. in Neuroscience from Stanford University (1980).\n\n After completing a post-doctoral fellowship in physiology at Yale University under the direction of W. Knox Chandler and Charles F. Stevens, Aldrich was hired to teach at Yale, instructing in the Department of Molecular Neurobiology.\n\n In 1985, Aldrich returned to Stanford to teach neurobiology and physiology, eventually serving as Chair of the Department of Molecular and Cellular Physiology from 2001 to 2004.\n\n He was an Investigator in the Howard Hughes Medical Institute from 1990 until 2006.\n\n Aldrich's research has focused on the \"molecular mechanisms of ion channel function and their role in electrical signaling.\"\n\n Aldrich has served as the President of the Society of General Physiologists and the Biophysical Society.",
+    "Alan Kamil\nAlan C. \"Al\" Kamil is an American experimental psychologist.\n\n He is the Director, School of Biological Sciences and George Holmes Professor of Biological Sciences and Psychology at the University of Nebraska, Lincoln.\n\n Kamil's work focusses on the evolution of memory and adaptive specializations of learning in many animal species, especially the Clark's nutcracker and other birds.\n\n Kamil has published peer reviewed articles on both theoretical aspects of comparative psychology and animal cognition, and on empirical studies of animal learning and memory.\n\n In 2013 Kamil was honoured by the Comparative Cognition Society for his contributions to the study of animal cognition.",
+    "Daniel Mills (biologist)\nDaniel Simon Mills, FRCVS (born 21 Aug 1966) is an English biologist and the UK's first Professor of Veterinary Behavioural Medicine based at the University of Lincoln, United Kingdom.\n\n He attended St Edmund's College, Ware before studying at the University of Bristol where he received his BVSc degree and completed his Ph.D. degree in animal behaviour from De Montfort University.\n\n After some time spent in general practice, he became a Lecturer, Senior Lecturer and Principal Lecturer in animal behaviour at De Montfort University, and subsequently the University of Lincoln, where he has been Head of the Department of Biological Sciences.\n\n His research has focused on the assessment of emotion in companion animals and the use of semiochemicals to manage their problem behaviour (pheromonatherapy).",
+    "William McGinnis\nWilliam \"Bill\" McGinnis, Ph.D. is a molecular biologist and professor of biology at the University of California San Diego.\n\n At UC San Diego he has also served as the Chairman of the Department of Biology from July 1998 - June 1999, as Associate Dean of the Division of Natural Sciences from July 1, 1999 - June 2000, and as Interim Dean of the newly established Division of Biological Sciences from July 1, 2000 - February 1, 2001.\n\n Dr. McGinnis was appointed Dean of the Divisional Biological Sciences on July 1, 2013"
+   ]
+  },
+  {
+   "id": "8eac92a3f25e99a5",
+   "gold": [
+    {
+     "sentence": " Formed by Corgan and guitarist James Iha in Chicago, Illinois, in 1988, the band quickly gained steam with the addition of bassist D'arcy Wretzky and drummer Jimmy Chamberlin.",
+     "facts": {
+      "0.0": "The band was formed by Corgan and guitarist James Iha.",
+      "0.1": "The band was formed in Chicago, Illinois, in 1988.",
+      "0.2": "The band quickly gained steam with the addition of bassist D'arcy Wretzky.",
+      "0.3": "The band quickly gained steam with the addition of drummer Jimmy Chamberlin."
+     }
+    },
+    {
+     "sentence": "Greek Fire is an American rock band from St. Louis, Missouri.",
+     "facts": {
+      "1.0": "Greek Fire is an American rock band.",
+      "1.1": "Greek Fire is from St. Louis, Missouri."
+     }
+    }
+   ],
+   "items": [
+    "Greek Fire (band)\nGreek Fire is an American rock band from St. Louis, Missouri.\n\n The band was formed in 2008 by members of Story of the Year and Maybe Today.\n\n Since formation, Greek Fire has released a self-titled EP, a single titled \"Doesn't Matter Anyway\", on August 16, 2011, they released their debut, full-length album, \"Deus Ex Machina\", and have recently announced a new addition to the \"Lost/Found\" EPs titled \"Broken\" set to be released before \"Found\".",
+    "Mike Byrne (musician)\nMichael William Byrne (born February 6, 1990) is a drummer who was a member of the band The Smashing Pumpkins.\n\n When Pumpkins frontman Billy Corgan called for rehearsals to replace Jimmy Chamberlin, Byrne auditioned and was chosen out of thousands of applicants.\n\n He played drums in Sky Saxon tribute band Spirits in the Sky for 6 shows in August 2009, along with Corgan, Kerry Brown, Kevin Dippold, Mark Tulin, Linda Strawberry, Ysanne Spevack, Mark Weitz, and Dave Navarro, and also performs drums on the ongoing Pumpkins 44-song project, \"Teargarden by Kaleidyscope\".\n\n As a part of \"Teargarden\", Mike contributed drumming duties on \"Oceania\", the Pumpkins' eighth full-length album.\n\n On April 17, 2010, Byrne played his first show under the Smashing Pumpkins moniker in celebration of Record Store Day.",
+    "Jimmy Chamberlin\nJames Joseph Chamberlin (born June 10, 1964) is an American drummer and record producer.\n\n He is best known as the drummer for the alternative rock band The Smashing Pumpkins.\n\n Following the 2000 breakup of the band, Chamberlin joined Pumpkins frontman Billy Corgan in the supergroup Zwan and also formed his own group, the Jimmy Chamberlin Complex.\n\n In 2005, Chamberlin joined Corgan in reforming The Smashing Pumpkins; he eventually left the group in March 2009, though he returned again in 2015 for a summer tour.\n\n He performed in the group Skysaw until 2012.\n\n He is currently active under the Jimmy Chamberlin Complex name.\n\n In addition to his current work as CEO, Chamberlin has joined Chicago jazz saxophonist Frank Catalano for a string of 2013–15 performances in the Chicago area.\n\n An EP by Catalano and Chamberlin \"Love Supreme Collective - EP\" was released on the 29th of July 2014.",
+    "List of the Smashing Pumpkins band members\nThe Smashing Pumpkins are an alternative rock band formed in Chicago, Illinois in 1988.\n\n The band was formed by guitarist/vocalist Billy Corgan and guitarist James Iha after the demise of Corgan's first band, The Marked.\n\n Since its inception, The Smashing Pumpkins has gone through multiple line-up changes, with Corgan the only consistent member.",
+    "The Aeroplane Flies High\nThe Aeroplane Flies High is a five-disc box set released by American alternative rock band The Smashing Pumpkins in 1996.\n\n It contains expanded versions of the five singles from their album \"Mellon Collie and the Infinite Sadness\" and also included a 44-page booklet with pictures and writings by the band's lead singer Billy Corgan, as well as lyrics.\n\n A limited edition release, the box reached number 42 on the \"Billboard\" charts, and sold 300,000 units (1.5 million discs in all), generating a platinum disc for the band.\n\n Originally intended to be limited to 200,000 copies, Virgin Records produced more after the original run sold out due to overwhelming and unexpected demand.\n\n The album was remastered in 2013 under the supervision of frontman Billy Corgan and reissued on vinyl and as a CD/DVD box set.",
+    "Zeitgeist (The Smashing Pumpkins album)\nZeitgeist is the seventh album by American alternative rock band The Smashing Pumpkins, released on July 10, 2007 in the United States and Canada.\n\n It was the first album The Smashing Pumpkins released after their 2000 disbandment and 2005 reunion.\n\n The album was produced by Roy Thomas Baker, Billy Corgan, Jimmy Chamberlin, and Terry Date.\n\n The album would be Chamberlin's last with the band before his departure in 2009.\n\n The album debuted strongly, but sales soon decreased, and critical reception was mixed.\n\n It was certified Gold in the United States on February 1, 2008.",
+    "Muzzle (song)\n\"Muzzle\" is a song by American alternative rock band The Smashing Pumpkins from their third album, \"Mellon Collie and the Infinite Sadness\".\n\n It was one of the last songs written by Billy Corgan for \"Mellon Collie\", with the song's lyrics referring to what Corgan thought the public's perception was of him at the time.\n\n It was rumored to be the Smashing Pumpkins fifth and final single from this album, as is evidenced by the fact that a promotional single for the song was issued to radio stations worldwide.\n\n However, the song \"Thirty-Three\" was released as the fifth and final single instead.",
+    "1979 (song)\n\"1979\" is a song by American alternative rock band the Smashing Pumpkins.\n\n Released in 1996 as the second single from their third studio album, \"Mellon Collie and the Infinite Sadness\", \"1979\" was written by frontman Billy Corgan, and features loops and samples that were uncharacteristic of previous Smashing Pumpkins songs.\n\n The song was written as a coming of age story by Corgan.\n\n In the year 1979, Corgan was 12 and this is what he considered his transition into adolescence.\n\n The song was popular with critics and fans; Allmusic's Amy Hanson called it a \"somewhat surprising hit\".\n\n The song was nominated for the Record of the Year and Best Rock Performance by a Duo or Group with Vocal at the 39th Annual Grammy Awards, and won an MTV Video Music Award for Best Alternative Video.\n\n In 2012, it was voted the second-best Smashing Pumpkins song by Rolling Stone magazine readers.",
+    "Pinhead Gunpowder\nPinhead Gunpowder is an American punk rock band that formed in East Bay, California, in 1990.\n\n The band currently consists of Aaron Cometbus (drums, lyrics), Bill Schneider (bass), Billie Joe Armstrong (guitar, vocals) and Jason White (guitar, vocals).\n\n The band's name comes from a brand of \"high octane\" green tea served at the Arcata co-op and discovered by Aaron Cometbus during one of his many dumpster diving adventures.",
+    "Billy Corgan\nWilliam Patrick \"Billy\" Corgan Jr. (born March 17, 1967) is an American musician, songwriter, producer, poet, and entrepreneur.\n\n He is best known as the lead singer, primary songwriter, guitarist, and sole permanent member of The Smashing Pumpkins.\n\n Formed by Corgan and guitarist James Iha in Chicago, Illinois, in 1988, the band quickly gained steam with the addition of bassist D'arcy Wretzky and drummer Jimmy Chamberlin.\n\n Strong album sales and large-scale tours propelled the band's increasing fame in the 1990s until their break-up in 2000.\n\n Corgan started a new band called Zwan, and after their quick demise, he released a solo album (\"TheFutureEmbrace\") and a collection of poetry (\"Blinking with Fists\") before setting his sights on reforming Smashing Pumpkins."
+   ]
+  },
+  {
+   "id": "56feff746e63d542",
+   "gold": [
+    {
+     "sentence": "Mulled wine is a beverage usually made with red wine along with various mulling spices and sometimes raisins.",
+     "facts": {
+      "0.0": "Mulled wine is a beverage.",
+      "0.1": "Mulled wine is usually made with red wine.",
+      "0.2": "Mulled wine is usually made with various mulling spices.",
+      "0.3": "Mulled wine is sometimes made with raisins."
+     }
+    },
+    {
+     "sentence": " It is served hot or warm and is alcoholic, although there are non-alcoholic versions of mulled wine.",
+     "facts": {
+      "1.0": "Mulled wine is served hot or warm.",
+      "1.1": "Mulled wine is alcoholic.",
+      "1.2": "There are non-alcoholic versions of mulled wine."
+     }
+    },
+    {
+     "sentence": "Blue Lagoon is a popular summer cocktail featuring blue Curaçao.",
+     "facts": {
+      "2.0": "Blue Lagoon is a popular summer cocktail.",
+      "2.1": "Blue Lagoon features blue Curaçao."
+     }
+    }
+   ],
+   "items": [
+    "Flaming volcano\nThe flaming volcano is a large tropical group cocktail made of rum, brandy, pineapple juice, orange juice, almond syrup, and sometimes other ingredients.\n\n It is usually a multi-user drink, served to a group in a special, ritual vessel known as a volcano bowl, which is a decorative ceramic bowl (typically of about 32 USoz capacity) designed with a rising central hub feature usually resembling a crude volcano cone.\n\n The cone includes a second, much smaller central pit or \"crater\" which is partially filled with rum or other flammable high-alcohol liquor.\n\n The \"crater\" liquor is then ignited, creating a mild volcanic ambience with its central blue flame.",
+    "Volcano bowl\nVolcano bowls are ceramic drinkware originally associated with mid-20th century American tiki bars and tropical-themed restaurants.\n\n Drinks served in volcano bowls are typically rum-based, mixed with tropical fruit juices and other liquors such as brandy, vodka, and triple sec, and garnished with fruit.\n\n The Flaming Volcano cocktail is especially associated with this drinkware.",
+    "The Blue Lagoon (novel)\nThe Blue Lagoon is a romance novel written by Henry De Vere Stacpoole and was first published by T. Fisher Unwin in 1908.\n\n It is the first novel of the \"Blue Lagoon\" trilogy, which also includes \"The Garden of God\" (1923) and \"The Gates of Morning\" (1925).\n\n The novel has inspired several film adaptations, most notably \"The Blue Lagoon\" starring Brooke Shields as Emmeline and Christopher Atkins as Richard (\"Dicky\" in the book).",
+    "Flaming beverage\nFlaming beverages include cocktails and other mixed drinks that contain flammable, high-proof alcohol, which is ignited prior to consumption.\n\n The alcohol may be an integral part of the drink, or it may be floated as a thin layer across the top of the drink.\n\n The flames are mostly for dramatic flair.\n\n However, in combination with certain ingredients, the flavor of the drink is altered.\n\n Some flavors are enhanced, and it may impart a toasted flavor to some drinks.",
+    "Feuerzangenbowle\nFeuerzangenbowle (] ) is a traditional German alcoholic drink for which a rum-soaked sugarloaf is set on fire and drips into mulled wine.\n\n It is often part of a Christmas or New Year's Eve tradition.\n\n The name translates literally to \"fire-tongs punch\".",
+    "Mulled wine\nMulled wine is a beverage usually made with red wine along with various mulling spices and sometimes raisins.\n\n It is served hot or warm and is alcoholic, although there are non-alcoholic versions of mulled wine.\n\n It is a traditional drink during winter, especially around Christmas.",
+    "Blue Lagoon (cocktail)\nBlue Lagoon is a popular summer cocktail featuring blue Curaçao.",
+    "Mulling spices\nMulling spices is a spice mixture used in drink recipes.\n\n The spices are usually used to spice hot apple cider, mulled wine, wassail, and other drinks (such as juices) during the autumn or winter.\n\n A \"mulled\" drink is a drink which has been prepared with these spices (usually through heating the drink in a pot with mulling spices and then straining).\n\n Mulling spices may also be added to the brewing process to make spiced beer.",
+    "Joulupöytä\nJoulupöytä (translated \"Yule table\") is the traditional assortment of foods served at Christmas in Finland, similar to the Swedish julbord.\n\n It contains many different dishes, most of them typical for the season.\n\n The main dish is usually a large Christmas ham, which is eaten with mustard or bread along with the other dishes.\n\n Fish is also served (often lutefisk and gravlax), and the ham is served with \"laatikko\"s, casseroles made with swede, potato and carrot, occasionally liver.\n\n The traditional Christmas beverage is either alcoholic or non-alcoholic mulled wine (\"glögi\" in Finnish).",
+    "Oz and Hugh Drink to Christmas\nOz and Hugh Drink to Christmas is a BBC television programme in which wine personality Oz Clarke and comedian Hugh Dennis travel through Britain to sample a wide array of seasonal Christmas beverages, including whisky, winter ales, mulled wine, wassail, sloe gin, Buck's Fizz, Port wine and Sherry.\n\n Upon its 20 December 2009 broadcast on BBC Two, it had a viewership of approximately 2.4 million with an audience share of 9%."
+   ]
+  },
+  {
+   "id": "4e3d4863ec72de00",
+   "gold": [
+    {
+     "sentence": " His siblings were Abby, Nelson, Laurance, Winthrop, and David.",
+     "facts": {
+      "0.0": "Abby was his sibling.",
+      "0.1": "Nelson was his sibling.",
+      "0.2": "Laurance was his sibling.",
+      "0.3": "Winthrop was his sibling.",
+      "0.4": "David was his sibling."
+     }
+    },
+    {
+     "sentence": "David Rockefeller (June 12, 1915 – March 20, 2017) was an American banker who was chairman and chief executive of Chase Manhattan Corporation.",
+     "facts": {
+      "1.0": "David Rockefeller lived from June 12, 1915 to March 20, 2017.",
+      "1.1": "David Rockefeller was an American banker.",
+      "1.2": "David Rockefeller was chairman of Chase Manhattan Corporation.",
+      "1.3": "David Rockefeller was chief executive of Chase Manhattan Corporation."
+     }
+    }
+   ],
+   "items": [
+    "David Rockefeller\nDavid Rockefeller (June 12, 1915 – March 20, 2017) was an American banker who was chairman and chief executive of Chase Manhattan Corporation.\n\n He was the oldest living member of the Rockefeller family and family patriarch from August 2004 until his death in March 2017.\n\n Rockefeller was a son of John D. Rockefeller Jr. and Abby Aldrich Rockefeller, and a grandson of John D. Rockefeller and Laura Spelman Rockefeller.",
+    "Alida Rockefeller Messinger\nAlida Ferry Rockefeller (born 1948) is an American philanthropist.\n\n She is the youngest daughter of John Davison Rockefeller III (1906–1978) and Blanchette Ferry Hooker (1909–1992), and a fourth-generation member of the Rockefeller family.\n\n Her brother is former Senator John Davison \"Jay\" Rockefeller IV (born 1937).\n\n According to an account in \"The New York Times\", Alida was only five years old when her father began to teach her about philanthropy.\n\n She said:",
+    "Rockefeller family\nThe Rockefeller family ( ) is an American industrial, political, and banking family that made one of the world's largest fortunes in the oil business during the late 19th and early 20th centuries, with John D. Rockefeller and his brother William Rockefeller primarily through Standard Oil.\n\n The family is also known for its long association with and control of Chase Manhattan Bank.\n\n They are considered to be one of the most powerful families, if not the most powerful family, in the history of the United States.",
+    "Chase Bank\nJPMorgan Chase Bank, N.A., doing business as Chase Bank, is a national bank that constitutes the consumer and commercial banking subsidiary of the U.S. multinational banking and financial services holding company, JPMorgan Chase.\n\n The bank was known as Chase Manhattan Bank until it merged with J.P. Morgan & Co. in 2000.\n\n Chase Manhattan Bank was formed by the merger of the Chase National Bank and The Manhattan Company in 1955.\n\n The bank has been headquartered in Columbus, Ohio since its merger with Bank One Corporation in 2004.\n\n The bank acquired the deposits and most assets of Washington Mutual.",
+    "JPMorgan Chase\nJPMorgan Chase & Co. is a U.S. multinational banking and financial services holding company headquartered in New York City.\n\n It is the largest bank in the United States, the world's sixth largest bank by total assets, with total assets of US$2.5 trillion, and the world's second most valuable bank by market capitalization, after ICBC.\n\n It is a major provider of financial services, and according to \"Forbes\" magazine is the world's sixth largest public company based upon a composite ranking.\n\n The hedge fund unit of JPMorgan Chase is the second largest hedge fund in the United States.\n\n The company was formed in 2000, when Chase Manhattan Corporation merged with J.P. Morgan & Co.",
+    "John D. Rockefeller III\nJohn Davison Rockefeller III (March 21, 1906 – July 10, 1978) was a philanthropist and third-generation member of the prominent Rockefeller family.\n\n He was the eldest son of philanthropists John D. Rockefeller Jr. and Abby Aldrich Rockefeller.\n\n His siblings were Abby, Nelson, Laurance, Winthrop, and David.",
+    "Hope Aldrich Rockefeller\nHope Aldrich Rockefeller (born May 17, 1938) is an American newspaper publisher.\n\n She is the eldest daughter of philanthropist John Davison Rockefeller III (1906–1978) and Blanchette Ferry Hooker (1909–1992).\n\n Her elder brother is former Senator John Davison \"Jay\" Rockefeller IV (born 1937).",
+    "William B. Harrison Jr.\nWilliam B. Harrison Jr., born August 12, 1943, in Rocky Mount, North Carolina, is the former CEO and chairman of JPMorgan Chase.\n\n He attended high school at Virginia Episcopal School, where he was a basketball star.\n\n He attended the University of North Carolina at Chapel Hill, where he was admitted to the Zeta Psi fraternity.\n\n Having risen through the ranks of Chemical Bank before succeeding Walter V. Shipley during the Chemical Bank takeover of the Chase Manhattan Corporation, he and Douglas A. Warner III, then CEO of J.P. Morgan & Co., were the principal architects of the US$30.9 billion Chase and J.P. Morgan & Co. merger of 2000.\n\n Harrison has been a director of the Firm or a predecessor institution since 1991.\n\n Harrison is also a director of Merck & Co., Inc.",
+    "Rockefeller Brothers Fund\nThe Rockefeller Brothers Fund (RBF) is a philanthropic foundation created and run by members of the Rockefeller family.\n\n It was founded in New York City in 1940 as the primary philanthropic vehicle for the five third-generation Rockefeller brothers: John D. Rockefeller III, Nelson, Laurance, Winthrop and David.\n\n It is distinct from the Rockefeller Foundation.\n\n The Rockefellers are an industrial, political, and banking family that made one of the world's largest fortunes in the oil business during the late 19th and early 20th centuries.",
+    "Walter V. Shipley\nWalter V. Shipley (born November 2, 1935) was the former Chairman and Chief Executive Officer of Chase Manhattan Bank and, before that, the company with which it merged Chemical Bank.\n\n Shipley was named chief executive of Chemical in 1981 and held the position through 1999 and remained at the bank as chairman through January 2000, just prior to the bank's merger with J.P. Morgan & Co..\n\n During his 18-year tenure, Shipley oversaw Chemical's mergers with Texas Commerce Bank in 1987, Manufacturers Hanover in 1991 and Chase Manhattan Bank in 1996."
+   ]
+  },
+  {
+   "id": "06b0b9e809440d3c",
+   "gold": [
+    {
+     "sentence": "Akademisches Kunstmuseum (English:Academic Art Museum) is an art museum in Bonn, Germany.",
+     "facts": {
+      "0.0": "Akademisches Kunstmuseum is also known in English as the Academic Art Museum.",
+      "0.1": "Akademisches Kunstmuseum is an art museum.",
+      "0.2": "Akademisches Kunstmuseum is located in Bonn, Germany."
+     }
+    },
+    {
+     "sentence": "The Federal City of Bonn (] ) is a city on the banks of the Rhine in the German state of North Rhine-Westphalia, with a population of over 300,000.",
+     "facts": {
+      "1.0": "The Federal City of Bonn is a city.",
+      "1.1": "The Federal City of Bonn is on the banks of the Rhine.",
+      "1.2": "The Federal City of Bonn is in the German state of North Rhine-Westphalia.",
+      "1.3": "The Federal City of Bonn has a population of over 300,000."
+     }
+    }
+   ],
+   "items": [
+    "University of Copenhagen\nThe University of Copenhagen (UCPH) (Danish: \"Københavns Universitet\" ) is the oldest university and research institution in Denmark.\n\n Founded in 1479 as a studium generale, it is the second oldest institution for higher education in Scandinavia after Uppsala University (1477).\n\n The university has 23,473 undergraduate students, 17,398 postgraduate students, 2,968 doctoral students and over 9,000 employees.\n\n The university has four campuses located in and around Copenhagen, with the headquarters located in central Copenhagen.\n\n Most courses are taught in Danish; however, many courses are also offered in English and a few in German.\n\n The university has several thousands of foreign students, about half of whom come from Nordic countries.",
+    "Akademisches Kunstmuseum\nAkademisches Kunstmuseum (English:Academic Art Museum) is an art museum in Bonn, Germany.\n\n It is the oldest museum in Bonn and houses the antique collection of the University of Bonn with more than 500 antique statues and reliefs, and over 2,000 originals.\n\n It is located in a neoclassical building at the southern end of the Hofgarten, near the Electoral Palace.",
+    "National Museum, Kraków\nThe National Museum in Kraków (Polish: \"Muzeum Narodowe w Krakowie\" ), popularly abbreviated as MNK, established in 1879, is the main branch of Poland's National Museum, which has several independent branches with permanent collections around the country.\n\n The Museum consists of 21 departments which are divided by art period; 11 galleries, 2 libraries, and 12 conservation workshops.\n\n It holds some 780,000 art objects, spanning from classical archeology to modern art, with special focus on Polish painting.\n\n<ref name=\"culture.pl/muzea\"> </ref><ref name=\"muzeum/Zbiory\"> </ref>",
+    "Riverview, New Brunswick\nRiverview is a Canadian town in Albert County, New Brunswick, Canada.\n\n Riverview is located on the south side of the Petitcodiac River, across from the larger cities of Moncton and Dieppe.\n\n Riverview has an area of 34 km2 , and a population density of 564.6 PD/km2 .\n\n Riverview's slogan is \"A Great Place To Grow\".\n\n With a population of 19,667, Riverview is the fifth largest municipality in New Brunswick, having a larger population than the cities of Edmundston, Bathurst, Campbellton, and Miramichi, despite its designation of \"town\".",
+    "Bonn\nThe Federal City of Bonn (] ) is a city on the banks of the Rhine in the German state of North Rhine-Westphalia, with a population of over 300,000.\n\n About 24 km south-southeast of Cologne, Bonn is in the southernmost part of the Rhine-Ruhr region, Germany's largest metropolitan area, with over 11 million inhabitants.",
+    "Ecclesiastical Province of Freiburg\nThe Ecclesiastical Province of Freiburg (\"Kirchenprovinz Freiburg\") or Upper Rhenish Ecclesiastical Province (\"Oberrheinische Kirchenprovinz\") is an ecclesiastical province of the Roman Catholic Church in the Upper Rhine area of Germany, centring on Freiburg im Breisgau.\n\n It covers the Roman Catholic Archdiocese of Freiburg, the Roman Catholic Diocese of Mainz and the Roman Catholic Diocese of Rottenburg-Stuttgart, covering large areas of Baden-Württemberg and Hesse and small parts of Rhineland-Palatinate.\n\n Its metropolitan bishop is the Archbishop of Freiburg - that Archdiocese and the Province were both set up in 1821 in the wake of the 1801 Concordat and the 1815 Congress of Vienna.",
+    "Croatian Natural History Museum\nThe Croatian Natural History Museum (Croatian: \"Hrvatski prirodoslovni muzej\" ) is the oldest and biggest natural history museum and the main body for natural history research, preservation and collection in Croatia.\n\n Located on Dimitrije Demeter Street in Gornji Grad, one of the oldest neighbourhoods of the Croatian capital Zagreb, it owns one of the biggest museum collections in Croatia, with over 2 million artefacts, including over 1.1 million animal specimens.\n\n It was founded in 1846 as the \"National Museum\".\n\n The National Museum was later split up into five museums, three of which were in 1986 merged as departments of the newly named Croatian Natural History Museum.\n\n The museum contains a large scientific library open to the public, and publishes the first Croatian natural history scientific journal, \"Natura Croatica\".",
+    "List of Kerala cities by population\nThe article lists major cities in Kerala based on the total population in city corporations or municipalities and their outgrowths.\n\n This list is based on the latest census data.\n\n Population of cities after major mergers post to latest census are also included.",
+    "National Museum of Poland\n\"National Museum of Poland\" is the common name for several of the country's largest and most notable museums. Poland's National Museum comprises several independent branches, each operating a number of smaller museums.\n\n The main branch is the National Museum in Kraków (Polish: \"Muzeum Narodowe w Krakowie\" ), established in 1879 with permanent collections consisting of several hundred thousand items – kept in big part at the Main Building (along the 3 Maja St.), but also in the eight of its divisions around the city.",
+    "Harris Museum\nThe Harris Museum, Art Gallery & Preston Free Public Library is a Grade I listed museum building in Preston."
+   ]
+  }
+ ]
+}

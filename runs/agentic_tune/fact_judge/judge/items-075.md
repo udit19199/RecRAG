@@ -1,0 +1,837 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 3 items.
+
+=== ITEM id=9784e10ce7d5d25c ===
+Gold sentences and facts:
+Sentence 0: The Springboks took a 12-3 lead after 34 minutes when the All Blacks once again failed to release on their goal line.
+  Fact 0.0: The Springboks took a 12-3 lead after 34 minutes.
+  Fact 0.1: The Springboks took the lead when the All Blacks once again failed to release on their goal line.
+Sentence 1: Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide.
+  Fact 1.0: The All Blacks sensed an opportunity to strike against 14 men.
+  Fact 1.1: The All Blacks kicked for the corner on a couple occasions out wide.
+Sentence 2: It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney.
+  Fact 2.0: Argentina knocked over the All Blacks last year in Christchurch.
+  Fact 2.1: Argentina also inflicted a maiden defeat on the All Blacks in 2020 in Sydney.
+  Fact 2.2: This comes despite Argentina's earlier wins over the All Blacks.
+
+Retrieved items:
+<item 1>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+Advertisement
+
+“In the game in 2020 there were things you could pinpoint. You can’t say that one game means we can do it as there are a lot of games where we haven’t.
+
+“That moment has to be just a part of it. What we have done since then, all the success and failures [matters in our preparation]. The other team are heavy
+favourites, everyone is expecting a New Zealand and South Africa final. We just have to focus on what is required.”
+
+Cheika has maintained that his Los Pumas side was too tight earlier in the tournament but has begun to free themselves up since qualifying for the knockout
+stages – and rewarding their fans by doing so.
+
+On inspiring the country?
+
+“It’s not easy,” he said.
+
+“We want to inspire not just by our results but by our ambition, by our ability to get back up and overcome obstacles.
+
+Graph facts:
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Sam Cane
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Sam Whitelock
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Brodie Retallick
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Mark Telea
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Johnny Sexton
+
+Entities: ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand, Cheika, Los Pumas, South Africa, All
+Blacks, New Zealand, The Roar
+</item 1>
+
+<item 2>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+Pressure? The South African laughs at the notion of what pressure is compared to the inequality and challenges the Rainbow Nation continues to experience.
+
+Advertisement
+
+The question is: how can New Zealand’s All Blacks withstand and overcome the hitherto unshakable wave of momentum and spirit the Springboks play with under
+Erasmus in this weekend’s World Cup final?
+
+It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone – and the generation of players and
+leaders that will call time on their international careers at week’s end.
+
+The backlash and toxicity that followed their historic home series loss to Ireland was a humbling and public reminder of the expectation of being an All Black.
+
+It’s why Saturday’s World Cup final is personal for the men wearing black.
+
+All Blacks social media managers were forced to delete a thousand comments an hour following the humbling series loss in Wellington.
+
+Graph facts:
+- THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final -MENTIONS-> Springboks
+- Liverpool vs Everton begins epic Saturday with World Cup semi-final as well as Chelsea vs Arsenal – and it could end with a bang -MENTIONS-> Springboks
+- Rassie Erasmus -WORKS_FOR-> Springboks
+- Jacques Nienaber -WORKS_FOR-> Springboks
+- Springboks -PARTICIPATED_IN-> World Cup
+
+Entities: Springboks, World Cup final, South Africa, Erasmus, Wellington, historic home series loss to Ireland, challenges, Legacy vs ego: The Springboks are
+playing for South Africa, the All Blacks are playing for themselves, inequality, All Blacks, Ireland, New Zealand, The Roar
+</item 2>
+
+<item 3>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+The All Blacks are 18-point favourites for the opening semi-final.
+
+It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney.
+
+“The past sets us up beautifully for both teams,” Foster said.
+
+“We do know each other but we don’t know each other terms of a Rugby World Cup, so at this stage in the tournament it’s new territory for us and as we’ve seen
+World Cups are very different.”
+
+“We have learnt to greatly respect Argentina. They have a rich history of overachieving at the World Cup and have done a fantastic job to get here at the same
+level we are, so it is going to be a heck of a game.”
+
+Advertisement
+
+Foster said the All Blacks, who suffered a shock semi-final loss to Eddie Jones’ England in 2019, never consider themselves favourites.
+
+“Firstly, you’ve never heard us say we’re favourites,” he said.
+
+Graph facts:
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Sam Cane
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Sam Whitelock
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Brodie Retallick
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Mark Telea
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Johnny Sexton
+
+Entities: ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand, Christchurch, Opening semi-final,
+Argentina-All Blacks match last year, Argentina-All Blacks match, All Blacks-England semi-final, England, Foster, Sydney, Rugby World Cup, Eddie Jones, All
+Blacks, Argentina, New Zealand, The Roar
+</item 3>
+
+<item 4>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+PARIS – The All Blacks have downplayed Rieko Ioane’s gestures towards Ireland fans and retiring great Johnny Sexton, as the three-time world champions said they
+have learned to “respect Argentina” ahead of their semi-final on Saturday (6am AEDT).
+
+It comes as Michael Cheika embraced the underdog status and said he was hoping Los Pumas “inspired” Argentina “not by our results but by our ambition”, as the
+former Wallabies coach readies for another clash against the All Blacks and a second semi-final.
+
+Facebook Twitter Whatsapp Reddit Email Share
+
+Ioane copped a spray from Sexton following their 28-24 nail-biting win over Ireland.
+
+It came after the lethal back cupped his ear at Irish supporters at the Stade de France after the final whistle, as well as putting his finger to his lips in a
+‘shush gesture’.
+
+Graph facts:
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Sam Whitelock
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Brodie Retallick
+- Thirty-seven phases of agony define Ireland’s greatest heartbreak as curse continues -MENTIONS-> Johnny Sexton
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Sam Cane
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Mark Telea
+
+Entities: Johnny Sexton, Michael Cheika, semi-final, 28-24 win over Ireland, ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on
+‘favourites’ New Zealand, Paris, Stade de France, Wallabies, All Blacks, Argentina, Ireland, Rieko Ioane, The Roar
+</item 4>
+
+<item 5>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+Advertisement
+
+“To inspire is not about results, it’s not just one player who played well; no, it’s about our behaviour in general, our ability to be ready to come back from
+difficult times and seizing our opportunities.
+
+“There are not a lot of opportunities in life – us playing in a semi-final is even rarer and we want to have no regrets.”
+
+Graph facts:
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Sam Cane
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Sam Whitelock
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Brodie Retallick
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Mark Telea
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Johnny Sexton
+
+Entities: ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand, Cheika, All Blacks, The Roar
+</item 5>
+
+<item 6>
+THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final (The Roar | Sports Writers Blog,
+2023-10-28T21:06:03+00:00)
+Minutes later and Kolisi was off, as he cannoned into Savea. He would later return, much to the anger of the New Zealanders in the crowd who were calling for
+justice.
+
+Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide. It came back to haunt them, as their
+usually silky and composed skill sets failed them.
+
+That much was true when the TMO intervened after Smith thought he had a try in his final Test, but an error at the lineout cancelled out the five-pointer.
+
+Advertisement
+
+Eventually the All Blacks did have a try, as Mark Telea, the All Blacks’ best and biggest attacking threat all night, managed to get on the outside and draw in
+two defenders before offloading to Beauden Barrett. But Mo’unga missed the conversion to leave them trailing by a point.
+
+Graph facts:
+- Beauden Barrett -PARTICIPATED_IN-> World Cup final
+- Beauden Barrett -PARTICIPATED_IN-> Test match
+- Thirty-seven phases of agony define Ireland’s greatest heartbreak as curse continues -MENTIONS-> Beauden Barrett
+- Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves -MENTIONS-> Beauden Barrett
+- Savea -PARTICIPATED_IN-> World Cup final
+
+Entities: Boks, Beauden Barrett, Savea, THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final, RWC
+final, Mo’unga, Kolisi, Smith, Mark Telea, All Blacks, The Roar | Sports Writers Blog
+</item 6>
+
+<item 7>
+Graph query row:
+article: THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final
+relationship: MENTIONS
+entity: All Blacks
+</item 7>
+
+<item 8>
+THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final (The Roar | Sports Writers Blog,
+2023-10-28T21:06:03+00:00)
+Advertisement
+
+Robertson will have an almighty task on his hand, with multiple generational players including Dane Coles, Sam Whitelock, Brodie Retallick and Aaron Smith to
+call time on their international careers. Others like Ardie Savea, Mo’unga, Beauden Barrett and Shannon Frizell will also head to Japan.
+
+While Foster didn’t want to take anything away from the Springboks’ win, he said the game had some issues to sort out regarding the officiating.
+
+“I’m proud of our guys, to go down to that red card so early and fight our way back and give ourselves a chance is pretty special,” the departing All Blacks
+coach said.
+
+“I don’t think it went wrong in any clear [place on the pitch], it was a real arm wrestle, both teams have their moment, incredibly proud of the way we fought
+and to get within a whisker of pulling it off is heart-breaking.
+
+Graph facts:
+- Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves -MENTIONS-> Springboks
+- Liverpool vs Everton begins epic Saturday with World Cup semi-final as well as Chelsea vs Arsenal – and it could end with a bang -MENTIONS-> Springboks
+- Ardie Savea -PARTICIPATED_IN-> World Cup quarter-final
+- Thirty-seven phases of agony define Ireland’s greatest heartbreak as curse continues -MENTIONS-> Ardie Savea
+- Rassie Erasmus -WORKS_FOR-> Springboks
+
+Entities: Ardie Savea, Springboks, Beauden Barrett, THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic
+final, Robertson, Sam Whitelock, Brodie Retallick, Shannon Frizell, officiating, RWC final, Mo’unga, Dane Coles, Foster, Japan, All Blacks
+</item 8>
+
+<item 9>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+“Firstly, you’ve never heard us say we’re favourites,” he said.
+
+‘We know these games are do or die. We’re going to have to improve our performance. The stage gets bigger at this time in the tournament and you’ve got to grow
+your game. That’s our strong focus. The best team on the night wins – Argentina has done that to us.”
+
+Cheika however was happy to remind the All Blacks who were favourites.
+
+“”New Zealand has always been an example in rugby, a benchmark. They make you think of high-level skills in a really open game but there are always threats in
+the lineout, mauls and rucks,” said Cheika, whose Wallabies lost in the 2015 final.
+
+“You have to take the moments you are in the game and see them coming at you at different times.
+
+Advertisement
+
+“In the game in 2020 there were things you could pinpoint.
+
+Graph facts:
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Sam Cane
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Sam Whitelock
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Brodie Retallick
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Mark Telea
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Johnny Sexton
+
+Entities: ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand, Cheika, Argentina, 2015 final, game in
+2020, Wallabies, rugby, All Blacks, New Zealand, The Roar
+</item 9>
+
+<item 10>
+THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final (The Roar | Sports Writers Blog,
+2023-10-28T21:06:03+00:00)
+Sam Cane – the All Blacks captain – was forced to watch the match from the sidelines for 53 minutes after having his yellow card for a high shot on Jesse Kriel
+upgraded to red. His opposite in the number seven jersey, Siya Kolisi, was later shown a yellow card for a high shot on Ardie Savea, but returned.
+
+Cheslin Kolbe – the magnificent winger who sealed their World Cup triumph four years earlier against England – meanwhile couldn’t bare to watch from the
+sidelines after being shown a yellow card for a deliberate knockdown in the 73rd minute.
+
+Advertisement
+
+It was that kind of evening, where the margins were tiny and the outcomes almighty.
+
+“There are no ways I can explain it,” Kolisi said.
+
+“I want to give credit to the All Blacks. They took us to the end, they took us to a dark place. It shows what kind of team they are, to fight with a man down
+from early in the game.
+
+Graph facts:
+- Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal -MENTIONS-> Jesse Kriel
+- Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal -MENTIONS-> Siya Kolisi
+- Sam Cane -SAID-> Players’ personalities and emotions running high
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Sam Cane
+- Thirty-seven phases of agony define Ireland’s greatest heartbreak as curse continues -MENTIONS-> Ardie Savea
+
+Entities: Boks, Sam Cane, Jesse Kriel, Siya Kolisi, Ardie Savea, Cheslin Kolbe, high shot, THE GREATEST! Boks beat All Blacks in instant classic to claim record
+FOURTH RWC in controversial, dramatic final, RWC final, England, All Blacks, The Roar | Sports Writers Blog
+</item 10>
+=== END ITEM id=9784e10ce7d5d25c ===
+
+=== ITEM id=1c441acc95804cec ===
+Gold sentences and facts:
+Sentence 0: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 0.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 0.1: The defense argued that the FTX founder acted in good faith.
+  Fact 0.2: The defense argued that the FTX founder never meant to commit fraud or steal.
+  Fact 0.3: The defense argued that the FTX founder basically got in over his head.
+Sentence 1: It was Bankman-Fried’s decision, she said, as he was the CEO of FTX.
+  Fact 1.0: The speaker said the decision was Bankman-Fried's.
+  Fact 1.1: Bankman-Fried was the CEO of FTX.
+
+Retrieved items:
+<item 1>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+When he was evaluating the exchange, he thought the sheer volume of users was important, too — at the time, FTX was among the top three biggest exchanges. Plus,
+major VC firms had invested, and “they don’t commit hundreds of millions without doing due diligence, checking the books, the accountancy of the firm, going
+through several compliance process[es], so that was a vote of confidence for me,” Juilliard said. (Evidently he had not paid attention to the Elizabeth Holmes
+trial.)
+
+He also noted FTX’s glossy ads — featuring Gisele Bündchen, for instance — suggested a very high budget. It wouldn’t make sense to spend that much money unless
+FTX had very strong financials, Juilliard figured. He opened an account, transferred in both regular money and cryptocurrency, and used the exchange to execute
+his plan: buying Bitcoin to sell back in five to ten years at higher prices.
+
+Graph facts:
+- The FTX trial is bigger than Sam Bankman-Fried -MENTIONS-> defense
+- Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand -MENTIONS-> Bitcoin
+- SBF’s trial starts soon, but how did he — and FTX — get here? -MENTIONS-> Gisele Bündchen
+- Israel's defense undone by reliance on technology -MENTIONS-> defense
+- Patrick Kane destinations: Sabres, Red Wings among potential landing spots for free agent winger -MENTIONS-> defense
+
+Entities: Gisele Bündchen, Bitcoin, defense, Elizabeth Holmes, cryptocurrency, Is Sam Bankman-Fried’s defense even trying to win?, Juilliard, major VC firms,
+Elizabeth Holmes trial, FTX, Sam Bankman-Fried, The Verge
+</item 1>
+
+<item 2>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Perhaps you are wondering, was the jury also there? Reader, it was.
+
+Bankman-Fried denied he knew about the effectively infinite line of credit Alameda Research received from FTX. This argument was peculiar; essentially my
+take-away was that the CEO of a financial company simply didn’t pay attention to finances.
+
+FTX couldn’t get bank accounts right away. Bankman-Fried anticipated it would take a year or two. Rather than wait, he decided to use Alameda as the “payment
+provider” for bank transfers. “My understanding at the time was that there were teams managing the process,” he said. “At the time, I wasn’t entirely sure what
+was happening.”
+
+Well, sure, understandable! He’s an introvert!
+
+Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the line” to $1 billion
+
+In 2021, FTX was growing to millions of users, with $1 billion of revenue.
+
+Graph facts:
+- The jury finally hears from Sam Bankman-Fried -MENTIONS-> Gary Wang
+- The jury finally hears from Sam Bankman-Fried -MENTIONS-> Caroline Ellison
+- The jury finally hears from Sam Bankman-Fried -MENTIONS-> Mark Cohen
+- The jury finally hears from Sam Bankman-Fried -MENTIONS-> Adam Yedidia
+- The jury finally hears from Sam Bankman-Fried -MENTIONS-> Securities and Exchange Commission
+
+Entities: The jury finally hears from Sam Bankman-Fried, Alameda Research, jury hears from Sam Bankman-Fried, Singh, FTX, Sam Bankman-Fried, The Verge
+</item 2>
+
+<item 3>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+It is easy to lie with words and harder to lie with money. Bankman-Fried went around telling people that he wanted to make a lot of money to give it away, an
+idea of the Effective Altruism movement that Bankman-Fried affiliated himself with — but the amount of money he funneled to his Paper Bird vehicle alone was ten
+times the size of his philanthropic spending as outlined by Easton. And it was all vastly outweighed by his investments — the places where he could prove he was
+very smart by investing in the right companies early.
+
+And in brief, explosive testimony, former FTX lawyer Can Sun demonstrated what Bankman-Fried’s tactic was. During the days in November when the exchange
+imploded, Bankman-Fried was trying to raise money from Apollo, the private equity group. Apollo wanted an explanation for what had happened, and so
+Bankman-Fried came to Sun to ask him to come up with justifications for the missing funds.
+
+Graph facts:
+- SBF Trial: The latest updates from the FTX collapse’s courtroom drama -MENTIONS-> Easton
+- Easton -PARTICIPATED_IN-> SBF Trial
+- SBF’s trial starts soon, but how did he — and FTX — get here? -MENTIONS-> Bankman-Fried
+- Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier -MENTIONS-> Bankman-Fried
+- Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court -MENTIONS-> Bankman-Fried
+
+Entities: Easton, Bankman-Fried, In the end, the FTX trial was about the friends screwed along the way, Paper Bird, Effective Altruism movement, Can Sun,
+Apollo, missing funds, FTX trial, FTX, The Verge
+</item 3>
+
+<item 4>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+If it seems like his peer group supported him, or worse, fawned over him, that’s a real problem for the industry’s reputation.”
+
+After FTX declared bankruptcy, Bankman-Fried went on an extensive media tour, doing interviews with The New York Times’ Andrew Ross Sorkin and Good Morning
+America. Even under house arrest, he did interviews, including with The New Yorker. Bankman-Fried seemed to think that if he just explained things, everyone
+would understand that what he did was a mistake, not a crime.
+
+Graph facts:
+- He’s Hockey’s Brightest Young Star. This Is What Makes His Shot So Special. -PUBLISHED_BY-> The New York Times
+- How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea -PUBLISHED_BY-> The New York Times
+- After a Stunning Snub, College Football Is Facing an Identity Crisis -PUBLISHED_BY-> The New York Times
+- N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders -PUBLISHED_BY-> The New York Times
+- Which M.L.B. Playoff Team Has the Most Daunting Home Field? We Ranked Them. -PUBLISHED_BY-> The New York Times
+
+Entities: The New York Times, FTX trial, The FTX trial is bigger than Sam Bankman-Fried, extensive media tour, interviews, Andrew Ross Sorkin, Good Morning
+America, The New Yorker, FTX, Sam Bankman-Fried, The Verge
+</item 4>
+
+<item 5>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Bankman-Fried is accused of using “billions of dollars in misappropriated FTX customer deposits” to help buy more than $200 million of real estate for himself,
+make billions of dollars of investments for his own interest, and repay Alameda’s lenders, according to the indictment, Additionally, Bankman-Fried allegedly
+used more than $100 million of customer funds to make political contributions; prosecutors can show evidence of those contributions in this trial, even though
+they aren’t part of the charges brought. A second trial is scheduled for March 2024, with additional charges.
+
+Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry. He was also very interested
+in publicity, sitting for many interviews both before and after the fall of FTX. The quick rise of FTX as an industry force was at least in part due to
+Bankman-Fried’s appetite for attention.
+
+Graph facts:
+- SBF’s trial starts soon, but how did he — and FTX — get here? -MENTIONS-> crypto
+- SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run -MENTIONS-> crypto
+- Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand -MENTIONS-> crypto
+- Sam Bankman-Fried was a terrible boyfriend -MENTIONS-> crypto
+- SBF Trial: The latest updates from the FTX collapse’s courtroom drama -MENTIONS-> crypto
+
+Entities: crypto, Alameda, FTX trial, second trial, misappropriated FTX customer deposits, political contributions, The FTX trial is bigger than Sam
+Bankman-Fried, real estate, FTX, Sam Bankman-Fried, The Verge
+</item 5>
+
+<item 6>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both
+companies, he said. Bankman-Fried handed the company off to Caroline Ellison and Sam Trabucco, who immediately after being named co-CEO promptly drifted away to
+early retirement. (Quiet quitting king!) Bankman-Fried did remain involved in hedging and risk at Alameda, though.
+
+About that $1 billion of revenue in 2021: Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the
+line” to $1 billion. See, he’d just asked his employees to check and see if there was any source of funds that was missing to get to $1 billion. This testimony
+was especially rambling.
+
+Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?
+
+Graph facts:
+- SBF Trial: The latest updates from the FTX collapse’s courtroom drama -MENTIONS-> Caroline Ellison
+- Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand -MENTIONS-> Caroline Ellison
+- SBF’s trial starts soon, but how did he — and FTX — get here? -MENTIONS-> Caroline Ellison
+- Sam Bankman-Fried didn’t ask where the $8 billion went -MENTIONS-> Caroline Ellison
+- Sam Bankman-Fried was a terrible boyfriend -MENTIONS-> Caroline Ellison
+
+Entities: Caroline Ellison, The jury finally hears from Sam Bankman-Fried, Alameda, Sam Trabucco, MobileCoin loss, Singh, FTX, Wang, Sam Bankman-Fried,
+MobileCoin, The Verge
+</item 6>
+
+<item 7>
+Sam Bankman-Fried didn’t ask where the $8 billion went (The Verge, 2023-10-31T19:52:07+00:00)
+Oh, but he was testifying to Congress about keeping customer funds safe.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+
+Who was making decisions to spend $8 billion of customer funds? Bankman-Fried couldn’t recall knowing anything about it. Were there rules or requirements for
+how money borrowed from FTX would be returned? Were there rules for risk management? “I was concerned with overall risk management,” Bankman-Fried said.
+
+But it was the testimony about June 2022 that resonated the most to me. Didn’t Bankman-Fried ask what “fiat@ftx” was? He did.
+
+Graph facts:
+- The jury finally hears from Sam Bankman-Fried -MENTIONS-> Securities and Exchange Commission
+- Sam Bankman-Fried was a terrible boyfriend -MENTIONS-> Securities and Exchange Commission
+- How is it still getting worse for Sam Bankman-Fried? -MENTIONS-> Securities and Exchange Commission
+- Coinbase rallies more than 60% in same month that FTX and Binance founders brace for prison -MENTIONS-> Securities and Exchange Commission
+- The jury finally hears from Sam Bankman-Fried -MENTIONS-> misappropriation of customer funds
+
+Entities: Securities and Exchange Commission, misappropriation of customer funds, Sam Bankman-Fried didn’t ask where the $8 billion went, risk management,
+fiat@ftx, Sam Bankman-Fried trial, wire fraud, conspiracy, Congress, FTX, Sam Bankman-Fried, fraud, The Verge
+</item 7>
+
+<item 8>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Alameda’s credit line — which was taken in increments of $100,000 to $10 million at a time — was used for trading. Using the effectively unlimited funds
+“allowed us to make profitable trades we couldn’t have made otherwise,” Ellison testified.
+
+Customer funds were also used when Bankman-Fried bought back FTX shares from Binance, an early investor, in the summer of 2021. Bankman-Fried told Ellison it
+was “really important,” otherwise “Binance would do things to mess with FTX.” Ellison says she told him Alameda didn’t have the money. So Bankman-Fried took $1
+billion of FTX customer funds to buy out Binance, the first time Ellison recalled an amount that large. It was Bankman-Fried’s decision, she said, as he was the
+CEO of FTX.
+
+FTT was one of several “Sam coins”
+
+There was also the FTT token, which was created by Bankman-Fried and Wang.
+
+Graph facts:
+- SBF’s trial starts soon, but how did he — and FTX — get here? -MENTIONS-> Alameda
+- SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run -MENTIONS-> Alameda
+- Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand -MENTIONS-> Alameda
+- The jury finally hears from Sam Bankman-Fried -MENTIONS-> Alameda
+- SBF Trial: The latest updates from the FTX collapse’s courtroom drama -MENTIONS-> Alameda
+
+Entities: Alameda, Sam Bankman-Fried was a terrible boyfriend, FTT, Ellison, FTX, Wang, Sam Bankman-Fried, Binance, The Verge
+</item 8>
+
+<item 9>
+Graph query row:
+publisher: The Verge
+article: In the end, the FTX trial was about the friends screwed along the way
+relationship: MENTIONS
+entity: Easton
+</item 9>
+
+<item 10>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+A substantial chunk had been spent on various investments, including in the celebrity-connected venture firm K5, trading firm Modulo (co-founded by one of
+Bankman-Fried’s ex-girlfriends), and AI company Anthropic.
+
+Another $413 million had gone directly to Bankman-Fried himself, through his wholly-owned company Paper Bird. “Outflows to insiders,” which suggested Singh’s
+not-quite-loans were included, was $192 million; real estate was another $228 million; and the donations to Gabe Bankman-Fried’s Guarding Against Pandemics,
+combined with the philanthropy from the FTX Foundation, totaled less than $40 million.
+
+It is easy to lie with words and harder to lie with money.
+
+Graph facts:
+- Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier -MENTIONS-> Bankman-Fried
+- SBF’s trial starts soon, but how did he — and FTX — get here? -MENTIONS-> Bankman-Fried
+- Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court -MENTIONS-> Bankman-Fried
+- Today the FTX jury suffered through a code review -MENTIONS-> Bankman-Fried
+- Bankman-Fried -SAID-> Alameda Research
+
+Entities: Bankman-Fried, In the end, the FTX trial was about the friends screwed along the way, Guarding Against Pandemics, Gabe Bankman-Fried, Singh, K5,
+Modulo, Paper Bird, FTX Foundation, FTX trial, FTX, Anthropic, The Verge
+</item 10>
+=== END ITEM id=1c441acc95804cec ===
+
+=== ITEM id=23a205ba6c05c14f ===
+Gold sentences and facts:
+Sentence 0: Because GPT-4 is more likely to follow the instructions of “jailbreaking” prompts, the co-authors claim that GPT-4 can be more easily prompted than other LLMs to spout toxic, biased text.
+  Fact 0.0: GPT-4 is more likely to follow the instructions of 'jailbreaking' prompts.
+  Fact 0.1: The co-authors claim that GPT-4 can be more easily prompted than other LLMs to spout toxic, biased text.
+  Fact 0.2: The co-authors claim GPT-4 can be more easily prompted to spout toxic, biased text because it is more likely to follow jailbreaking prompts.
+Sentence 1: Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war.
+  Fact 1.0: The entity's earlier actions were focused on concerns about the spread of illegal content related to the Israel-Hamas war.
+  Fact 1.1: The entity's earlier actions were focused on concerns about the spread of disinformation related to the Israel-Hamas war.
+
+Retrieved items:
+<item 1>
+Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design (TechCrunch, 2023-12-18T13:04:56+00:00)
+EU regulators are also set to assess Musk & co’s claims that replacing a formal content moderation function with crowdsourced opinions is a valid approach to
+tackling diverse information risks; and, consequently, to look into how much Musk’s gutting of content moderation teams and processes has cost X’s users in
+terms of harm exposure.
+
+To say the Commission’s investigation looks fascinating and timely is an understatement.
+
+EU lawmakers can certainly bask in the glow of being prepared for the possibility of an erratic billionaire running a wrecking ball through a major social
+platform. But of course they will need to follow through — and it’s clear the real work is just starting. So this probe looks set to be a test of how much
+stomach the EU has to actually enforce the rules it loves to lay down on paper.
+
+The investigation may also test Musk’s mettle for what could be an expensive head-on clash with EU regulators.
+
+Graph facts:
+- EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks -MENTIONS-> EU
+- Amazon’s iRobot purchase sucks up formal competition concerns in EU -MENTIONS-> EU
+- ChatGPT: Everything you need to know about the AI-powered chatbot -MENTIONS-> EU
+- Biden’s AI EO hailed as broad, but not deep without legislation to match -MENTIONS-> EU
+- After warning, the EU opens investigation into X over alleged disinformation -MENTIONS-> EU
+
+Entities: EU, content moderation, TechCrunch, deceptive UX design, Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation,
+transparency and deceptive UX design, first DSA probe in EU, illegal content risks, X, EU regulators, the Commission, crowdsourced opinions, diverse information
+risks, harm exposure, Elon Musk, EU lawmakers
+</item 1>
+
+<item 2>
+EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks (TechCrunch, 2023-10-10T23:47:38+00:00)
+But at the time of writing, Musk had engaged in a bit of a dance of his own with the news of the EU’s warning by responding to a critical tweet posted to X by
+journalist Glenn Greenwald, who attacked the EU’s new “censorship law,” as he dubbed the DSA — which he claimed would be used to “punish X.”
+
+In reply to Greenwald, Musk avoided expressing the same trenchant criticism of the EU’s approach but invited yet more relativism — writing: “Let the public hear
+exactly what this disinformation consists of and decide for themselves.”
+
+He then went on to sew doubt that disinformation is something that can be independently arbitrated at all, implying fact-checking is just a convenient exercise
+for targeting different opinions — so essentially echoing Greenwald’s position — by claiming that “many times” the “official fact-checker” has been found making
+false statements, before adding a rhetorically empty offer that “Maybe this is the case here, maybe not” for good, plausible deniability measure.
+
+Graph facts:
+- The Israel-Hamas War Is Drowning X in Disinformation -MENTIONS-> disinformation
+- After warning, the EU opens investigation into X over alleged disinformation -MENTIONS-> disinformation
+- How ego and fear fuelled the rise of artificial intelligence -MENTIONS-> disinformation
+- One year later, ChatGPT is still alive and kicking -MENTIONS-> disinformation
+- How the conspiracy-fueled Epoch Times went mainstream and made millions -MENTIONS-> disinformation
+
+Entities: disinformation, EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks, illegal content, Glenn
+Greenwald, fact-checking, EU, TechCrunch, Hamas attacks, X, Elon Musk, Hamas, DSA
+</item 2>
+
+<item 3>
+Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design (TechCrunch, 2023-12-18T13:04:56+00:00)
+Per the Commission, the EU’s investigation of X focuses on the following areas and issues:
+
+Compliance with DSA obligations related to countering the dissemination of illegal content in the EU — “ notably in relation to the risk assessment and
+mitigation measures adopted by X to counter the dissemination of illegal content in the EU, as well as the functioning of the notice and action mechanism for
+illegal content in the EU mandated by the DSA, including in light of X’s content moderation resources
+
+— “ The effectiveness of measures taken by X to combat info manipulation — with a focus on the effectiveness of its “Community Notes” system of crowdsourcing
+fact-checking to aggregated views of users, who may vote to label disputed tweets with additional context.
+
+Graph facts:
+- After warning, the EU opens investigation into X over alleged disinformation -MENTIONS-> illegal content
+- Why Mozilla is betting on a decentralized social networking future -MENTIONS-> illegal content
+- EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks -MENTIONS-> illegal content
+- Meta says it’s prioritizing livestreaming checks during Israel-Hamas war -MENTIONS-> illegal content
+- The UK just laid out new rules for the internet — it only gets harder from here -MENTIONS-> illegal content
+
+Entities: illegal content, fact-checking, moderation, TechCrunch, EU investigation of X, deceptive UX design, info manipulation, Elon Musk’s X faces first DSA
+probe in EU over illegal content risks, moderation, transparency and deceptive UX design, X, EU, Elon Musk, transparency, Community Notes, Commission, DSA
+</item 3>
+
+<item 4>
+EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks (TechCrunch, 2023-10-10T23:47:38+00:00)
+It also puts legal obligation on larger platforms — including X — to mitigate risks from disinformation. So the fast-moving and bloody events unfolding in
+Israel and Gaza are offering a real-world test of whether the EU’s rebooted rulebook is big and beefy enough to tackle X’s most notorious shitposter. Who, since
+last fall, is also the platform’s owner.
+
+Since taking over Twitter (as it was then), Musk has painted the largest target on X when it comes to DSA enforcement on account of a series of changes he’s
+pushed out that make it harder for users to locate quality information on X.
+
+This includes ending legacy account verification and turning the Blue Check system into a game of pay-to-play.
+
+Graph facts:
+- The Israel-Hamas War Is Drowning X in Disinformation -MENTIONS-> disinformation
+- After warning, the EU opens investigation into X over alleged disinformation -MENTIONS-> disinformation
+- How ego and fear fuelled the rise of artificial intelligence -MENTIONS-> disinformation
+- One year later, ChatGPT is still alive and kicking -MENTIONS-> disinformation
+- How the conspiracy-fueled Epoch Times went mainstream and made millions -MENTIONS-> disinformation
+
+Entities: disinformation, EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks, Blue Check system, legacy
+account verification, illegal content, EU, TechCrunch, Hamas attacks, X, Elon Musk, Hamas, Israel, DSA, Gaza
+</item 4>
+
+<item 5>
+Graph query row:
+article: After warning, the EU opens investigation into X over alleged disinformation
+published_on: 2023-10-13T00:38:56+00:00
+publisher: TechCrunch
+connected_entities: ['Investigation into X over alleged disinformation', 'complaint handling', 'risk assessment', 'terrorist and violent content', 'hate
+speech', 'Saturday’s attacks', 'Commission services', 'digital services and platforms', 'T&Cs', 'the regulation', 'crisis response mechanism', 'Article 36',
+'serious threat', 'systemic risks', 'gender-based violence', 'Saturday’s attacks in Israel', 'a clip', 'a video game', 'the platform’s profitability', 'Linda
+Yaccarino', 'Europol', 'Global Government Affairs', 'terrorist attack on Israel', 'disinformation', 'extremism', 'EU investigation into X', 'Hamas’ attack',
+'Israel’s retaliatory strikes', 'Gaza Ministry of Health', 'crisis response protocol', 'Article 66', 'formal opening of proceedings', 'fines', 'investigation
+into X', 'Code of Practice', 'Breton', 'illegal content', 'Musk', 'EU', 'content moderation', 'Meta', 'violence', 'war', 'formal request for information', 'X',
+'Elon Musk', 'Israel-Hamas war', 'terrorism', 'European Union', 'Hamas', 'human rights', 'TikTok', 'Community Notes', 'Commission', 'Israel', 'DSA', 'Digital
+Services Act', 'investigation', 'Thierry Breton', 'fundamental rights', 'Interpol', 'Twitter', 'Gaza', 'Israeli military']
+article_evidence: ['After warning, the EU opens investigation into X over alleged disinformation (TechCrunch, 2023-10-13T00:38:56+00:00)\nEU turns up the heat
+on X over illegal content in wake of Israel-Hamas war\n\nThe European Union is cranking up the heat on Elon Musk-owned X. Late Thursday, the Commission sent the
+company a formal request for more information — after issuing a public warning Wednesday about reports that illegal content and disinformation targeting the
+Israel-Hamas war is circulating on the platform, and Twitter’s CEO sending a high-level (non specific) response to that warning.\n\nThe move could prefigure the
+opening of a formal investigation of X under the bloc’s content moderation rulebook, the Digital Services Act (DSA). If the Commission moves ahead on that, it
+will be the first investigation opened under the DSA since a compliance deadline for so called “very large online platforms” (aka VLOPs) kicked in this
+summer.\n\nNon-compliance under DSA rules, meanwhile, could trigger fines of up to 6% of annual turnover, plus potential blocking of a service for repeated
+infringements. X owner Elon Musk last projected revenues of about $3 billion for this year.', 'After warning, the EU opens investigation into X over alleged
+disinformation (TechCrunch, 2023-10-13T00:38:56+00:00)\nX owner Elon Musk last projected revenues of about $3 billion for this year. It’s anyone’s guess if
+that’s accurate now, but as an example, that would result in a fine of up to $180 million.\n\nIndirectly, an investigation will also be a key way for the public
+to have significantly more transparency around how X is being used (and abused): since Musk took Twitter private, the company no longer produces quarterly
+earnings reports and is not held to account as closely as a result.\n\nEU officials confirmed to TechCrunch that an investigation has not been taken at this
+point. Clearly, though, yesterday’s development (and the pace at which regulators are moving) is a strong indication of the bloc’s direction of travel.\n\nThe
+Commission said it is looking at X’s compliance with the DSA across a number of areas — including with regard to its policies and practices regarding notices on
+illegal content; complaint handling; risk assessment and measures to mitigate the risks identified.', 'After warning, the EU opens investigation into X over
+alleged disinformation (TechCrunch, 2023-10-13T00:38:56+00:00)\nOn Wednesday, in an “urgent” letter to Musk, the EU’s internal market commissioner Thierry
+Breton said the bloc had seen “indications” from “qualified sources” that X is being used to disseminate illegal content and disinformation in the EU” following
+Saturday’s attacks — before reminding X of the DSA’s “very precise obligations” vis-à-vis content moderation.\n\n“When you receive notices of illegal content in
+the EU, you must be timely, diligent and objective in taking action and removing the relevant content when warranted,” Breton also warned then.\n\nIn its latest
+press release, the EU said it has sent X a formal request for information under the DSA.\n\n“This request follows indications received by the Commission
+services of the alleged spreading of illegal content and disinformation, in particular the spreading of terrorist and violent content and hate speech,” it
+wrote, adding that the ask also addresses other aspects of DSA compliance.\n\nThe pan-EU regulation puts a series of governance obligations on digital services
+and platforms with the aim of ensuring companies are responding to reports of illegal content.', 'After warning, the EU opens investigation into X over alleged
+disinformation (TechCrunch, 2023-10-13T00:38:56+00:00)\nThey must also clearly communicate their T&Cs to users and be able to demonstrate proper
+enforcement.\n\nLarger platforms like X also have additional obligations to identify and mitigate systemic risks such as disinformation, gender-based violence
+or negative effects on the exercise of fundamental rights.\n\nAdditionally, the regulation includes a “crisis response” mechanism (Article 36) which enables the
+Commission to adopt rapid-fire measures on larger platforms in situations of “serious threat”, such as war.\n\nSince Saturday’s attacks in Israel, posts
+identified as false have been spotted circulating on X — including, in one example, a clip that purported to show Hamas missile attacks on Israel but was
+actually footage from a video game.\n\nMeanwhile X’s ability to respond internally to reports of content problems have been drastically pared back after Musk’s
+takeover last year — which saw major layoffs, including in content moderation and human rights as part of the new billionaire owner’s bid to improve the
+platform’s profitability.', 'After warning, the EU opens investigation into X over alleged disinformation (TechCrunch, 2023-10-13T00:38:56+00:00)\nIn response
+to the EU’s warning earlier this week, X CEO Linda Yaccarino released a letter saying that a leadership group had been convened to consider X’s response and
+“tens of thousands” of pieces of content had been removed, along with “thousands” of posts and “hundreds” of accounts linked to terrorist groups, violence or
+extremism.\n\nShe also said the company formerly known as Twitter is responding to law enforcement requests but claimed it had not received any requests from
+Europol at the time.\n\nToday @lindayaX responded to @ThierryBreton’s letter detailing our work in response to the terrorist attack on Israel.
+pic.twitter.com/yZtaOVGpHG — Global Government Affairs (@GlobalAffairs) October 12, 2023\n\nIn further remarks via X’s safety account, the company reported that
+there had been more than 50 million posts globally over the past two days that referenced the weekend’s terrorist attack, underlining the scope of content
+generated.', 'After warning, the EU opens investigation into X over alleged disinformation (TechCrunch, 2023-10-13T00:38:56+00:00)\nX has been pushing a
+so-called Community Notes feature — which crowdsources additional context to add to questionable tweets — as its main response to disinformation risks.\n\nBy
+Thursday afternoon, Hamas’ attack had killed more than 1,200 people, per the Israeli Military, and at least 1,537 people had been killed in Gaza by Israel’s
+retaliatory strikes, according to the Gaza Ministry of Health.\n\nReturning to the EU process, X has until October 18 to provide the bloc with information about
+“the activation and functioning of X’s crisis response protocol”; and until October 31 to respond to its other requests.\n\n“Based on the assessment of X
+replies, the Commission will assess next steps,” the Commission wrote. “This could entail the formal opening of proceedings pursuant to Article 66 of the
+DSA.”\n\nIt also noted the regulation includes powers to impose fines for “incorrect, incomplete or misleading information in response to a request for
+information”.\n\n“In case of failure to reply by X, the Commission may decide to request the information by decision.', 'After warning, the EU opens
+investigation into X over alleged disinformation (TechCrunch, 2023-10-13T00:38:56+00:00)\nIn this case, failure to reply by the deadline could lead to the
+imposition of period penalties,” the EU added.\n\nEarlier this year, Musk pulled out of the EU’s Code of Practice on online disinformation. In a response to X
+leaving the voluntary Code, Breton warned: “Obligations remain. You can run but you can’t hide.”\n\nIn recent days, TikTok and Meta have also been warned by the
+EU over disinformation related to the Israel-Hamas war. But back in September, a study commissioned via the EU’s Code of Practice suggested X is the worst of
+the major platforms when it comes to spreading disinformation.\n\nThis report was substantially revised to clarify a number of aspects, including — most
+saliently — that the EU has sent a formal request for information to X at this point. This could prefigure a formal announcement of an investigation but is not,
+yet, that formal technical step.', 'After warning, the EU opens investigation into X over alleged disinformation (TechCrunch, 2023-10-13T00:38:56+00:00)\nWe
+also clarified the scale of financial penalties possible under the DSA if a breach is confirmed; and added details of the regulation’s crisis response
+mechanism. We also fixed an error in the original report which referred to Interpol, rather than Europol.']
+</item 5>
+
+<item 6>
+Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design (TechCrunch, 2023-12-18T13:04:56+00:00)
+The EU said the probe will also look at the effectiveness of “related policies mitigating risks to civic discourse and electoral processes”
+
+— with a focus on the effectiveness of its “Community Notes” system of crowdsourcing fact-checking to aggregated views of users, who may vote to label disputed
+tweets with additional context. The EU said the probe will also look at the Transparency requirements — with a focus on “suspected shortcomings” by X in giving
+researchers access to publicly accessible data as mandated by Article 40 of the DSA, and suspected shortcomings in its ads repository (aka the ads transparency
+library the regulation also mandates)
+
+— with a focus on “suspected shortcomings” by X in giving researchers access to publicly accessible data as mandated by Article 40 of the DSA, and suspected
+shortcomings in its ads repository (aka the ads transparency library the regulation also mandates) Suspected deceptive design elements in X’s user interface —
+“notably in relation to checkmarks linked to certain subscription products, the so-called Blue checks”
+
+“If proven,
+
+Graph facts:
+- Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices -MENTIONS-> moderation
+- Deepfake election risks trigger EU call for more generative AI safeguards -MENTIONS-> fact-checking
+- EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks -MENTIONS-> fact-checking
+- Why Mozilla is betting on a decentralized social networking future -MENTIONS-> moderation
+- Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society -MENTIONS-> moderation
+
+Entities: fact-checking, moderation, EU, TechCrunch, deceptive UX design, Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation,
+transparency and deceptive UX design, first DSA probe in EU, illegal content risks, civic discourse, electoral processes, Article 40 of the DSA, ads repository,
+Blue checks, user interface, subscription products
+</item 6>
+
+<item 7>
+After warning, the EU opens investigation into X over alleged disinformation (TechCrunch, 2023-10-13T00:38:56+00:00)
+X owner Elon Musk last projected revenues of about $3 billion for this year. It’s anyone’s guess if that’s accurate now, but as an example, that would result in
+a fine of up to $180 million.
+
+Indirectly, an investigation will also be a key way for the public to have significantly more transparency around how X is being used (and abused): since Musk
+took Twitter private, the company no longer produces quarterly earnings reports and is not held to account as closely as a result.
+
+EU officials confirmed to TechCrunch that an investigation has not been taken at this point. Clearly, though, yesterday’s development (and the pace at which
+regulators are moving) is a strong indication of the bloc’s direction of travel.
+
+The Commission said it is looking at X’s compliance with the DSA across a number of areas — including with regard to its policies and practices regarding
+notices on illegal content; complaint handling; risk assessment and measures to mitigate the risks identified.
+
+Graph facts:
+- After warning, the EU opens investigation into X over alleged disinformation -MENTIONS-> hate speech
+- After warning, the EU opens investigation into X over alleged disinformation -MENTIONS-> Saturday’s attacks
+- After warning, the EU opens investigation into X over alleged disinformation -MENTIONS-> terrorist and violent content
+- Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design -MENTIONS-> risk assessment
+- After warning, the EU opens investigation into X over alleged disinformation -MENTIONS-> Commission services
+
+Entities: Investigation into X over alleged disinformation, complaint handling, risk assessment, After warning, the EU opens investigation into X over alleged
+disinformation, disinformation, illegal content, EU, TechCrunch, X, Elon Musk, Commission, DSA, Twitter
+</item 7>
+
+<item 8>
+X (formerly Twitter) is worst for disinformation, per EU analysis (TechCrunch, 2023-09-26T13:02:43+00:00)
+This is a very valuable industry proposal that has great potential while it has to be still further developed.
+
+“Here, signatories have decided to run a pilot phase in three Member States to evaluate the methodology on two of those indicators. X, former Twitter, who is
+not under the Code any more is the platform with the largest ratio of mis/disinformation posts.”
+
+The Elon Musk-owned platform exited the EU’s Code of Practice on Disinformation back in May, shortly after EU lawmakers warned that policy shifts executed after
+Musk’s takeover were boosting Kremlin propaganda and criticised the company for patchy reporting. The EU’s top diplomat also took a public shot at Twitter for
+ending free access to its APIs for researchers, saying the action could threaten the study of disinformation.
+
+Last year the Commission also warned Musk over “huge work” ahead if the platform was to avoid falling foul of the incoming DSA.
+
+Graph facts:
+- The Israel-Hamas War Is Drowning X in Disinformation -MENTIONS-> disinformation
+- EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks -MENTIONS-> disinformation
+- How ego and fear fuelled the rise of artificial intelligence -MENTIONS-> disinformation
+- One year later, ChatGPT is still alive and kicking -MENTIONS-> disinformation
+- After warning, the EU opens investigation into X over alleged disinformation -MENTIONS-> disinformation
+
+Entities: disinformation, TechCrunch, X, Elon Musk, EU lawmakers, EU’s top diplomat, Code of Practice on Disinformation, Kremlin propaganda, Twitter APIs,
+Commission, X (formerly Twitter) is worst for disinformation, per EU analysis, DSA
+</item 8>
+
+<item 9>
+EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks (TechCrunch, 2023-10-10T23:47:38+00:00)
+A rule of law clash between Musk and the EU has looked increasingly inevitable in recent months — and, indeed, has been predicted by some industry watchers
+since rumors of the erratic billionaire’s plan to take over Twitter emerged last year.
+
+Reminder: Penalties for confirmed breaches of the DSA can be as high as 6% of global annual turnover. The bloc also has powers, in extremis, which could result
+in access to X being shut off in the region if the platform repeatedly fails to correct course. So if Musk fails to satisfy EU regulators, he could face serious
+consequences for what remains a highly indebted business.
+
+In his letter to Musk, Breton writes that the EU has “indications” that X is being used to disseminate illegal content and disinformation in the EU” following
+Saturday’s attacks. He then goes on to remind the company of the DSA’s “very precise obligations” vis-à-vis content moderation.
+
+Graph facts:
+- The Israel-Hamas War Is Drowning X in Disinformation -MENTIONS-> disinformation
+- After warning, the EU opens investigation into X over alleged disinformation -MENTIONS-> disinformation
+- How ego and fear fuelled the rise of artificial intelligence -MENTIONS-> disinformation
+- One year later, ChatGPT is still alive and kicking -MENTIONS-> disinformation
+- How the conspiracy-fueled Epoch Times went mainstream and made millions -MENTIONS-> disinformation
+
+Entities: disinformation, EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks, Breton, illegal content, EU,
+content moderation, TechCrunch, Hamas attacks, X, Elon Musk, DSA
+</item 9>
+
+<item 10>
+Deepfake election risks trigger EU call for more generative AI safeguards (TechCrunch, 2023-09-26T17:26:57+00:00)
+“In this context, 832 videos related to the war have been fact-checked, of which 211 have been removed,” Jourova noted.
+
+The EU also flagged reporting by Microsoft that told it Bing Search had either promoted information or downgraded questionable information in relation to almost
+800,000 search queries related to the Ukraine crisis.
+
+Jourova’s speech also highlighted a couple of other areas where she urged Code signatories to go further — calling (yet again) for more consistent moderation
+and investment in fact-checking, especially in smaller Member States and languages.
+
+She also criticized platforms over access to data, saying they must step up efforts to make sure researchers are empowered to scrutinize disinformation flows
+“and contribute to the necessary transparency”.
+
+Both are areas where X/Twitter under new owner, Elon Musk, has moved out of step with EU expectations on countering disinformation.
+
+Twitter (now X) was an original signatory to the disinformation Code but Musk took the platform out of the initiative back in May, as critical scrutiny of his
+actions dialled up in the EU.
+
+Graph facts:
+- EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks -MENTIONS-> EU
+- Amazon’s iRobot purchase sucks up formal competition concerns in EU -MENTIONS-> EU
+- ChatGPT: Everything you need to know about the AI-powered chatbot -MENTIONS-> EU
+- Biden’s AI EO hailed as broad, but not deep without legislation to match -MENTIONS-> EU
+- After warning, the EU opens investigation into X over alleged disinformation -MENTIONS-> EU
+
+Entities: EU, Microsoft, TechCrunch, X/Twitter, Elon Musk, Jourova, Deepfake election risks trigger EU call for more generative AI safeguards, generative AI
+safeguards, Bing Search, Ukraine crisis, disinformation Code
+</item 10>
+=== END ITEM id=23a205ba6c05c14f ===

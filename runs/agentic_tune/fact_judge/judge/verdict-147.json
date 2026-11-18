@@ -1,0 +1,50 @@
+[
+{"id": "0d48c5845742d736", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "We identify with his struggles"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "We identify with his struggles and his little glimmers of connection and triumph"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "which makes him the perfect superhero for Thanksgiving"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Apart from the food - arguably the main component of the day"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Apart from the food - arguably the main component of the day - the holiday is a beloved time of year"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "when Americans come together to celebrate what they are thankful for"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "thankful for, either with family or friends."}]}
+]},
+{"id": "c737c6fb94e8d8ef", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "92de5437eb299d32", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "But by the age of 16, she is public property"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "But by the age of 16, she is public property – incapable of going outside without being mobbed"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "But by the age of 16, she is public property – incapable of going outside without being mobbed, and her love of singing and dancing now a lucrative resource."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "It was almost like this very strange, subtle clue to the media"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "subtle clue to the media that they don't know everything that happened in that relationship"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "I can have something really major and traumatic happen to me and they don't know about it"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "she told NPR."}]}
+]},
+{"id": "50eb7a178935b20c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "The winger came firing out of the gate"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "the outlook has changed for the Devils in recent days"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "after losing the superstar center Hughes to injury"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Having to depend much on his weaker arm"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Having to depend much on his weaker arm, Hamlin stayed in contention for the championship four race"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Hamlin stayed in contention for the championship four race until the final race in Martinsville"}]}
+]},
+{"id": "60aa08d53c6c2275", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Alameda Research’s former CEO Caroline Ellison"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "who claimed she took $14 billion from customers to repay debts to lenders"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "who claimed she took $14 billion from customers to repay debts to lenders"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 7, "quote": "depicted SBF and his colleagues as in over their heads"}]}
+]}
+]

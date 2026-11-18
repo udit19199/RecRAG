@@ -1,0 +1,32 @@
+[
+{"id": "82ccf3c0a5465716", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Jim Harbaugh suspended for the remaining three regular season games."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Despite the suspension, Jim Harbaugh held his usual weekly news conference Monday"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "though he mostly avoided addressing the only topic on anyone's mind."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday"}, {"item": 3, "quote": "The Friday ruling is the next chapter in an NCAA investigation into Michigan"}]},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "e25ac877c72684c3", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "As an added bonus, Harris is also the preferred goal-line back, scoring in three of those games."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "As an added bonus, Harris is also the preferred goal-line back, scoring in three of those games."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "As an added bonus, Harris is also the preferred goal-line back, scoring in three of those games."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "14dffbfa28c9ba38", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "We continue to work through the process with the European Commission"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]}
+]}
+]

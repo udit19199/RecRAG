@@ -1,0 +1,546 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "cb2f41551e859f00",
+   "kind": "answer",
+   "question": "What profession did Willi Forst and Elmer Clifton share?",
+   "gold_answers": [
+    "actor"
+   ],
+   "model_answer": "Actor and film director"
+  },
+  {
+   "id": "fe0706e42d3c9ebf",
+   "kind": "answer",
+   "question": "Where is the transportation company that owns Talbot based in?",
+   "gold_answers": [
+    "Montreal"
+   ],
+   "model_answer": "Rueil-Malmaison, France\n"
+  },
+  {
+   "id": "4ed106fc7f41a98f",
+   "kind": "answer",
+   "question": "Where are Teide National Park and Garajonay National Park located?",
+   "gold_answers": [
+    "Canary Islands, Spain"
+   ],
+   "model_answer": "The Canary Islands, Spain (Teide on Tenerife and Garajonay on La Gomera)"
+  },
+  {
+   "id": "1a12b31157406afc",
+   "kind": "answer",
+   "question": "What is in both the Lithocarpus and Duranta species?",
+   "gold_answers": [
+    "trees"
+   ],
+   "model_answer": "Flavonoids"
+  },
+  {
+   "id": "6a12206c6341fcb4",
+   "kind": "answer",
+   "question": "Are York Minster and Brentwood Cathedral in the same country?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both are in England."
+  },
+  {
+   "id": "7f26a64d87c2b970",
+   "kind": "answer",
+   "question": "Where is the county seat for people living in Henderson Point, Mississippi?",
+   "gold_answers": [
+    "Gulfport, Biloxi"
+   ],
+   "model_answer": "Biloxi and Gulfport"
+  },
+  {
+   "id": "a1f6bc2ee4ba8f97",
+   "kind": "answer",
+   "question": "Which airport, Salt Lake City International Airport or Brainerd Lakes Regional Airport, serves as a commercial airline and is closest to it's respective downtown city?",
+   "gold_answers": [
+    "Brainerd Lakes Regional Airport"
+   ],
+   "model_answer": "Salt Lake City International Airport"
+  },
+  {
+   "id": "2de18da1fcae8a4c",
+   "kind": "answer",
+   "question": "Adam Fox was one of the first members of an informal literary discussion group associated with what University?",
+   "gold_answers": [
+    "University of Oxford, England"
+   ],
+   "model_answer": "University of Oxford"
+  },
+  {
+   "id": "d14b9e8fc86e3e07",
+   "kind": "answer",
+   "question": "KSCW-DT is part of a duopoly with which virtual channel 12 in Wichita?",
+   "gold_answers": [
+    "KWCH-DT"
+   ],
+   "model_answer": "KWCH-DT (channel 12)"
+  },
+  {
+   "id": "e69412c3df2e589d",
+   "kind": "answer",
+   "question": "What did the second First Lady to be born outside the United States or areas that would become part of the United States do before marrying?",
+   "gold_answers": [
+    "fashion model"
+   ],
+   "model_answer": "Worked as a fashion model."
+  },
+  {
+   "id": "66be2e57454c6b53",
+   "kind": "answer",
+   "question": "Operalia, The World Opera Competition helped launch the career of an operatic soprano of what nationality?",
+   "gold_answers": [
+    "Bulgarian"
+   ],
+   "model_answer": "American, Mexican, or Chinese"
+  },
+  {
+   "id": "3638d824d11952a3",
+   "kind": "answer",
+   "question": "Kresy, which roughly was a part of the land beyond the so-called Curson Line, was drawn for what reason?",
+   "gold_answers": [
+    "demarcation line between the newly emerging states, the Second Polish Republic, and the Soviet Union"
+   ],
+   "model_answer": "As a proposed border between Poland and the Soviet Union."
+  },
+  {
+   "id": "146d53451735f89e",
+   "kind": "answer",
+   "question": "Why is Minister Pool important to Black Country and the West Midlands in England?",
+   "gold_answers": [
+    "defence of the Cathedral"
+   ],
+   "model_answer": "It is a historic landmark and wildlife habitat in the West Midlands."
+  },
+  {
+   "id": "b0482d7deabadec4",
+   "kind": "answer",
+   "question": "What are the professions of Tom Johnston and Daryl Palumbo?",
+   "gold_answers": [
+    "American musician"
+   ],
+   "model_answer": "Musicians (guitarist/vocalist and frontman)"
+  },
+  {
+   "id": "df4c881fe447c7b4",
+   "kind": "answer",
+   "question": "What are some other areas that share a common deer species with the forests of Mara and Mondrem?",
+   "gold_answers": [
+    "New Zealand, Canada, the United States, the Falkland Islands, and Peru."
+   ],
+   "model_answer": "The New Forest, Epping Forest, and Richmond Park."
+  },
+  {
+   "id": "59bbd2c3d3b8e93a",
+   "kind": "answer",
+   "question": "The \"unofficial national anthem\" of Australia is the basis for the nickname of what soccer team?",
+   "gold_answers": [
+    "Australian women's national soccer team"
+   ],
+   "model_answer": "The Matildas\n"
+  },
+  {
+   "id": "25fe8a8475f4fbaf",
+   "kind": "answer",
+   "question": "What are the professions of Tom Johnston and Daryl Palumbo?",
+   "gold_answers": [
+    "American musician"
+   ],
+   "model_answer": "Musicians and vocalists"
+  },
+  {
+   "id": "1f2ce0afe980e595",
+   "kind": "answer",
+   "question": "What made the man who abolished the Consell in 1718 resume the throne?",
+   "gold_answers": [
+    "upon his son's death"
+   ],
+   "model_answer": "His son Louis’s death in 1724."
+  },
+  {
+   "id": "47b59cf13cf276e5",
+   "kind": "answer",
+   "question": "What is the population of the city where the Akademisches Kunstmuseum is?",
+   "gold_answers": [
+    "300,000"
+   ],
+   "model_answer": "About 335,000 people."
+  },
+  {
+   "id": "b82927fa7e075ef0",
+   "kind": "answer",
+   "question": "While at the University of Michigan, Louis Smith played with what American jazz trumpeter, bandleader, and composer?",
+   "gold_answers": [
+    "Miles Dewey Davis III"
+   ],
+   "model_answer": "Thad Jones"
+  },
+  {
+   "id": "510383d57acd86da",
+   "kind": "answer",
+   "question": "What does Age of Chance and Vector share in common? ",
+   "gold_answers": [
+    "was a rock band"
+   ],
+   "model_answer": "Both are mobile games."
+  },
+  {
+   "id": "bc5650ee22b9a286",
+   "kind": "answer",
+   "question": "How many more singles titles did Kim Warwick win than Jorge Lozano?",
+   "gold_answers": [
+    "three singles titles"
+   ],
+   "model_answer": "3 titles"
+  },
+  {
+   "id": "c76eff239427e0d4",
+   "kind": "answer",
+   "question": "Who had more pen names, George Orwell or Nelson DeMille?",
+   "gold_answers": [
+    "Nelson Richard DeMille"
+   ],
+   "model_answer": "George Orwell"
+  },
+  {
+   "id": "5b0acc41444a33ab",
+   "kind": "answer",
+   "question": "The brother of Ferdinand Alfred Friedrich Jodl served as what position in World War II?",
+   "gold_answers": [
+    "Chief of the Operations Staff of the Armed Forces High Command"
+   ],
+   "model_answer": "Chief of the Operations Staff of the Armed Forces High Command (OKW)"
+  },
+  {
+   "id": "d327a3504d707376",
+   "kind": "answer",
+   "question": "What type of art does The Consul and Arlecchino have in common?",
+   "gold_answers": [
+    "music"
+   ],
+   "model_answer": "Paintings"
+  },
+  {
+   "id": "6fbd5b88dcb4988c",
+   "kind": "answer",
+   "question": "The university where Rolf Martin Theodor Dahlgren worked as a professor has how many employees?",
+   "gold_answers": [
+    "9,000"
+   ],
+   "model_answer": "Approximately 10,000 employees"
+  },
+  {
+   "id": "e14fbca861b69c2a",
+   "kind": "answer",
+   "question": "Mr. Wilson's Cabinet of Wonder: Pronged Ants, Horned Humans, Mice on Toast, and Other Marvels of Jurassic Technology is a book about a museum that is located in which city ?",
+   "gold_answers": [
+    "Los Angeles"
+   ],
+   "model_answer": "Los Angeles, California"
+  },
+  {
+   "id": "0367129b88b2eb11",
+   "kind": "answer",
+   "question": "Are both Trace Cyrus and Jizzy Pearl vocalists?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both are vocalists."
+  },
+  {
+   "id": "6958249c7511b6f9",
+   "kind": "answer",
+   "question": "What is a luxury goods company long Northern Boulevard in the Miracle Mile?",
+   "gold_answers": [
+    "Gucci"
+   ],
+   "model_answer": "Americana Manhasset"
+  },
+  {
+   "id": "f6351b23ef90d989",
+   "kind": "answer",
+   "question": "Was Suzanne Chun Oakland a member of the upper of lower chamber of the Hawaii State Legislature?",
+   "gold_answers": [
+    "lower chamber"
+   ],
+   "model_answer": "Upper chamber (State Senate)"
+  },
+  {
+   "id": "c2959f1c771c9450",
+   "kind": "answer",
+   "question": "What man won an Academy Award for his work on a drama based on the life of Rocky Graziano?",
+   "gold_answers": [
+    "Francis Keogh Gleason"
+   ],
+   "model_answer": "James Wong Howe"
+  },
+  {
+   "id": "f0acd7633c911dff",
+   "kind": "answer",
+   "question": "Have singers Yang Yo-seob and Kim Tae-yeon both appeared in group bands?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both have."
+  },
+  {
+   "id": "2522fb66b09208eb",
+   "kind": "answer",
+   "question": "What was the Volvo S70 essentially modeled after and was the first all wheel drive Volvo?",
+   "gold_answers": [
+    "Volvo 850"
+   ],
+   "model_answer": "A facelifted 850 saloon; the 850 was Volvo’s first all-wheel-drive model."
+  },
+  {
+   "id": "4cda8fb0bef64f1c",
+   "kind": "answer",
+   "question": "Have Jelena Janković and Marat Safin both played tennis professionally?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both played tennis professionally."
+  },
+  {
+   "id": "5749e13b54e4b518",
+   "kind": "answer",
+   "question": "What type of diet does the author of Eat to Live: The Amazing Nutrient-Rich Program for Fast and Sustained Weight Loss advocate?",
+   "gold_answers": [
+    "micronutrient-rich"
+   ],
+   "model_answer": "A micronutrient-rich diet"
+  },
+  {
+   "id": "fcbaa1f8a589e0f8",
+   "kind": "answer",
+   "question": "Are Buried Country and South of the Border both films turned into stage performances?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No—only Buried Country is also a stage show."
+  },
+  {
+   "id": "db65176554c45e0f",
+   "kind": "answer",
+   "question": "Erving Goffman was cited as higher than a literary critic on which guide?",
+   "gold_answers": [
+    "The Times Higher Education Guide"
+   ],
+   "model_answer": "Google Scholar citation rankings"
+  },
+  {
+   "id": "13a4ab64cba67401",
+   "kind": "answer",
+   "question": "when was Quiet in Heaven/Song of Liberty recorded?",
+   "gold_answers": [
+    "Before settling on their current name in 1982"
+   ],
+   "model_answer": "1968"
+  },
+  {
+   "id": "bd8fdc1fb0aa1566",
+   "kind": "answer",
+   "question": "Do both Adventist World and Girls' Life have a headquarter or editor based in Maryland?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both have a Maryland connection."
+  },
+  {
+   "id": "02ec05c09cd08f42",
+   "kind": "answer",
+   "question": "What is in both the Lithocarpus and Duranta species?",
+   "gold_answers": [
+    "trees"
+   ],
+   "model_answer": "They’re both flowering plants."
+  },
+  {
+   "id": "a84947c11a906d29",
+   "kind": "answer",
+   "question": "What organization affiliated with the National Collegiate Athletic Association Division were the 2012 Hawaii Warriors football team first year members of?",
+   "gold_answers": [
+    "Mountain West Conference"
+   ],
+   "model_answer": "Mountain West Conference (MW)"
+  },
+  {
+   "id": "e4f6a0011125acd5",
+   "kind": "answer",
+   "question": "In what year did both Orson Scott Card's novel \"Ender's Game\" and Keri Hulme's \"The Bone People\" come out?",
+   "gold_answers": [
+    "1985"
+   ],
+   "model_answer": "Ender’s Game: 1985; The Bone People: 1984"
+  },
+  {
+   "id": "6cf942f635180896",
+   "kind": "answer",
+   "question": "Was Talking Heads and Man or Astro-man? formed further north?",
+   "gold_answers": [
+    "Talking Heads"
+   ],
+   "model_answer": "Yes—Talking Heads formed farther north."
+  },
+  {
+   "id": "06ac1b397bba77d3",
+   "kind": "answer",
+   "question": "The brother of Ferdinand Alfred Friedrich Jodl served as what position in World War II?",
+   "gold_answers": [
+    "Chief of the Operations Staff of the Armed Forces High Command"
+   ],
+   "model_answer": "Chief of Operations Staff of the German Armed Forces High Command (OKW)"
+  },
+  {
+   "id": "f0d81bce93864f75",
+   "kind": "answer",
+   "question": "Suicide's 1977 released album features a song based on what brand's comic character?",
+   "gold_answers": [
+    "Marvel"
+   ],
+   "model_answer": "Marvel Comics’ Ghost Rider"
+  },
+  {
+   "id": "fc02dcdd0c4f0c3e",
+   "kind": "answer",
+   "question": "What current NHL team owner played for the team that won the Stanley cup in 1992?",
+   "gold_answers": [
+    "Mario Lemieux"
+   ],
+   "model_answer": "Mario Lemieux (Pittsburgh Penguins)"
+  },
+  {
+   "id": "f97eaaf75da41dc9",
+   "kind": "answer",
+   "question": "Leonard Logsdail had a cameo role in the biographical film directed by whom?",
+   "gold_answers": [
+    "Martin Scorsese"
+   ],
+   "model_answer": "Tom Hooper"
+  },
+  {
+   "id": "ebcbe462ec38adda",
+   "kind": "answer",
+   "question": "Between Frederick King Keller and Ian Schneider, which filmmaker had more diverse job experiences?",
+   "gold_answers": [
+    "Frederick King Keller"
+   ],
+   "model_answer": "Ian Schneider"
+  },
+  {
+   "id": "387af412855d542b",
+   "kind": "answer",
+   "question": "What is a luxury goods company long Northern Boulevard in the Miracle Mile?",
+   "gold_answers": [
+    "Gucci"
+   ],
+   "model_answer": "Dior"
+  },
+  {
+   "id": "4b8bc29053c2eb09",
+   "kind": "answer",
+   "question": "Are both Aloinopsis and Eriogonum ice plants?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No—Aloinopsis is an ice plant; Eriogonum is not."
+  },
+  {
+   "id": "f908157bdf4cd3b1",
+   "kind": "answer",
+   "question": "Where are Teide National Park and Garajonay National Park located?",
+   "gold_answers": [
+    "Canary Islands, Spain"
+   ],
+   "model_answer": "The Canary Islands, Spain—Teide on Tenerife and Garajonay on La Gomera."
+  },
+  {
+   "id": "b52f9b28f813dd7b",
+   "kind": "answer",
+   "question": "In between The Bears and I and Oceans which was released on July 31, 1974, by Buena Vista Distribution?",
+   "gold_answers": [
+    "The Bears and I"
+   ],
+   "model_answer": "The Castaway Cowboy"
+  },
+  {
+   "id": "7030f180713d7849",
+   "kind": "answer",
+   "question": "What is the title of the person who is Head of the Department of Biological Sciences at the University of Lincoln",
+   "gold_answers": [
+    "Doctor"
+   ],
+   "model_answer": "Professor of Veterinary Behavioural Medicine"
+  },
+  {
+   "id": "16c232013d9f9fa2",
+   "kind": "answer",
+   "question": "Pirates Plunge, at the Grace O'Malley-inspired Pirates Adventure Park in Westport, holds which notable record?",
+   "gold_answers": [
+    "first flume ride in Ireland"
+   ],
+   "model_answer": "Ireland’s longest log flume ride."
+  },
+  {
+   "id": "b6147665ab9fc2b9",
+   "kind": "answer",
+   "question": " Both Vitas Gerulaitis and Heather Watson play what sport?",
+   "gold_answers": [
+    "tennis player"
+   ],
+   "model_answer": "Tennis"
+  },
+  {
+   "id": "de980115dd16cff5",
+   "kind": "answer",
+   "question": "Are the 1908 Ex parte Young and 1948 McCollum v. Board of Education United States Supreme Court cases related to each other in any way?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No direct relationship."
+  },
+  {
+   "id": "1adc655328e5eb61",
+   "kind": "answer",
+   "question": "What is the name of the largest shipping facility in the Northeastern United States, where the Boston Red Socks play?",
+   "gold_answers": [
+    "Port of Boston"
+   ],
+   "model_answer": "Conley Container Terminal"
+  },
+  {
+   "id": "b8570d964110a447",
+   "kind": "answer",
+   "question": "What time did the show, in which Gordon Burns was the host, usually air on Monday?",
+   "gold_answers": [
+    "7pm"
+   ],
+   "model_answer": "7:00 p.m."
+  },
+  {
+   "id": "00b76eb38aa15854",
+   "kind": "answer",
+   "question": "Between Joe Orton and Henry James, which author is the adjective \"Ortonesque\" used to refer to his work?",
+   "gold_answers": [
+    "John Kingsley \"Joe\" Orton"
+   ],
+   "model_answer": "Joe Orton"
+  },
+  {
+   "id": "b397fe94f7740348",
+   "kind": "answer",
+   "question": "Which American cable news and talk radio host was the former GOP representative",
+   "gold_answers": [
+    "Charles Joseph"
+   ],
+   "model_answer": "Joe Scarborough"
+  }
+ ],
+ "evidence": []
+}

@@ -1,0 +1,404 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "c64c766eb121ce57",
+   "gold": [
+    {
+     "sentence": " The ground was home to the Boston Reds, that played in the Players' League in 1890 and the American Association in 1891.",
+     "facts": {
+      "0.0": "The ground was home to the Boston Reds.",
+      "0.1": "The Boston Reds played in the Players' League in 1890.",
+      "0.2": "The Boston Reds played in the American Association in 1891."
+     }
+    },
+    {
+     "sentence": " It is home to the Port of Boston, a major shipping facility in the northeastern United States.",
+     "facts": {
+      "1.0": "The ground is home to the Port of Boston.",
+      "1.1": "The Port of Boston is a major shipping facility.",
+      "1.2": "The Port of Boston is in the northeastern United States."
+     }
+    }
+   ],
+   "items": [
+    "Transportation in Boston\nThe Boston transportation system includes roadway, subway, regional rail, air, and sea options for passenger and freight transit in Boston, Massachusetts.\n\n The Massachusetts Port Authority (Massport) operates the Port of Boston, which includes a container shipping facility in South Boston, and Logan International Airport, in East Boston.\n\n The Massachusetts Bay Transportation Authority (MBTA) operates bus, subway, short distance rail, and water ferry passenger services throughout the city and region.\n\n Amtrak operates passenger rail service to and from major northeastern cities.\n\n A major bus terminal at South Station is served by varied intercity bus companies.\n\n The city is bisected by major highways I-90 and I-93, the intersection of which has undergone a major renovation, nicknamed the Big Dig.",
+    "Braves Field\nBraves Field was a baseball park in the Northeastern United States, located in Boston, Massachusetts.\n\n Today the site is home to Nickerson Field on the campus of Boston University.\n\n The stadium was home of the Boston Braves of the National League from 1915–1952, prior to the Braves' move to Milwaukee in 1953.\n\n The stadium hosted the 1936 Major League Baseball All-Star Game and Braves home games during the 1948 World Series.\n\n The Boston Red Sox used Braves Field for their home games in the 1915 and 1916 World Series since the stadium had a larger seating capacity than Fenway Park.\n\n Braves Field was the site of Babe Ruth's final season, playing for the Braves in 1935.\n\n From 1929 to 1932, the Boston Red Sox played select regular season games periodically at Braves Field.\n\n On May 1, 1926, Braves Field hosted the longest baseball game in history – 26 Innings.\n\n The game ended in a 1–1 tie.",
+    "New Bedford Bay Sox\nThe New Bedford Bay Sox are a baseball team that plays in the New England Collegiate Baseball League, a collegiate summer baseball league located in the northeastern United States region of New England.\n\n The team is located in New Bedford, Massachusetts.\n\n New Bedford's Paul Walsh Field serves as the home field of the Bay Sox.\n\n Th NECBL's players use wooden bats, as opposed to aluminum, and are college baseball players recruited from the top intercollegiate baseball programs in the United States.\n\n The franchise has appeared in league finals four times in their history, all as the Torrington Twisters (1997, 1998, 2003, 2006), and have twice played host to the NECBL All-Star Game as the Twisters (1998, 2008).\n\n Pat and Beth O'Connor, owners of Little Fenway and Little Wrigley joined the ownership team of the New Bedford Bay Sox in October, 2011, and signed a 3-year lease to play at Paul Walsh Field.\n\n In November 2011, former MLB player Rick Miller was announced as the 2012 Bay Sox manager.",
+    "Deering Oaks\nDeering Oaks is a 55 acre public park in Portland, Maine, which has a baseball diamond, tennis courts, a playground, and a pond.\n\n It is located west of downtown Portland and is bordered by Deering Avenue on the west, Forest Avenue on the east, Park Avenue to the south and Interstate 295 to the north.\n\n State Street bisects the park.\n\n Access is from State Street, Deering Avenue, or Park Avenue.\n\n The Portland Farmers Market is located on the Park Avenue side of the park.\n\n The park is listed on the National Register of Historic Places.",
+    "Newark Bay\nNewark Bay is a tidal bay at the confluence of the Passaic and Hackensack Rivers in northeastern New Jersey.\n\n It is home to the Port Newark-Elizabeth Marine Terminal, the largest container shipping facility in Port of New York and New Jersey, the third largest and one of the busiest in the United States.\n\n An estuary, it is periodically dredged to accommodate ocean-going ships.",
+    "Congress Street Grounds\nCongress Street Grounds is a former baseball ground located in Boston, Massachusetts.\n\n The ballpark, as the name implies, was along Congress Street, near the intersection of Thompson Place, and not far from the Fort Point Channel on South Boston Flats, a newly filled in piece of land on Boston Harbor.\n\n The ground was home to the Boston Reds, that played in the Players' League in 1890 and the American Association in 1891.",
+    "New Bedford Bay Sox\nMiller was succeeded as manager prior to the 2015 season by Westport, MA native and former Boston Red Sox draft pick Kyle Fernandes.\n\n Fernandes has led the Bay Sox to back-to-back postseason appearances in his two seasons as manager, most recently losing in a three-game series to the eventual NECBL Champions the Mystic Schooners.",
+    "Boston Harbor\nBoston Harbor is a natural harbor and estuary of Massachusetts Bay, and is located adjacent to the city of Boston, Massachusetts.\n\n It is home to the Port of Boston, a major shipping facility in the northeastern United States.",
+    "The Sports Museum\nThe Sports Museum (also known as The Sports Museum of New England) is a non-profit museum currently located in the TD Garden in Boston, Massachusetts.\n\n The museum was founded in 1977 in nearby Cambridge, Massachusetts before eventually moving to Boston to the Garden, which has been home to Celtics and Bruins for twenty years.\n\n The museum's exhibits focus on the history of various sports in the Boston area, including the Boston Bruins, Boston Celtics, Boston Red Sox, New England Patriots, Boston Marathon, New England Revolution, boxing, college sports, and others.\n\n The museum features diverse sports memorabilia, curiosities, and life-size sculptures of Bobby Orr, Larry Bird, Carl Yastrzemski and Ted Williams by Rhode Island sculptor Armand LaMontagne.\n\n The museum is normally open daily between 10 AM and 4 PM, but may close when an event or game is scheduled in the Garden.\n\n It is located on a subway stop.",
+    "TD Garden\nTD Garden, often called Boston Garden and \"The Garden\", is a multi-purpose arena in Boston, Massachusetts.\n\n It is named after its sponsor, TD Bank, a subsidiary of Canada's Toronto-Dominion Bank.\n\n It opened in 1995 as a replacement for the original Boston Garden and has been known as Shawmut Center, FleetCenter, and TD Banknorth Garden.\n\n The arena is located directly above the MBTA's North Station."
+   ]
+  },
+  {
+   "id": "bc97ebc600b6a03d",
+   "gold": [
+    {
+     "sentence": "Gasland is a 2010 American documentary written and directed by Josh Fox.",
+     "facts": {
+      "0.0": "Gasland is a documentary.",
+      "0.1": "Gasland is from 2010.",
+      "0.2": "Gasland is American.",
+      "0.3": "Gasland was written by Josh Fox.",
+      "0.4": "Gasland was directed by Josh Fox."
+     }
+    },
+    {
+     "sentence": "To Shoot an Elephant is a 2009 documentary film about the 2008-2009 Gaza War directed by Alberto Arce and Mohammad Rujailahk.",
+     "facts": {
+      "1.0": "To Shoot an Elephant is a 2009 documentary film.",
+      "1.1": "To Shoot an Elephant is about the 2008-2009 Gaza War.",
+      "1.2": "To Shoot an Elephant was directed by Alberto Arce.",
+      "1.3": "To Shoot an Elephant was directed by Mohammad Rujailahk."
+     }
+    }
+   ],
+   "items": [
+    "Hunting Elephants\nHunting Elephants (Hebrew: לצוד פילים‎ ‎ , \"Latzud Pilim\", \"lit.\"\n\n To Hunt Elephants) is a 2013 Israeli crime comedy film directed by Reshef Levi.\n\n It stars, among others, Sasson Gabai, Moni Moshonov and Patrick Stewart.\n\n It was released to theaters in Israel on July 4, 2013.",
+    "Olympia (1938 film)\nOlympia is a 1938 German documentary film written, directed and produced by Leni Riefenstahl, documenting the 1936 Summer Olympics, held in the Olympic Stadium in Berlin, Germany.\n\n The film was released in two parts: \"Olympia 1.\n\n Teil — Fest der Völker\" (Festival of Nations) and \"Olympia 2.\n\n Teil — Fest der Schönheit\" (Festival of Beauty).\n\n It was the first documentary feature film of the Olympic Games ever made.\n\n Many advanced motion picture techniques, which later became industry standards but which were groundbreaking at the time, were employed —including unusual camera angles, smash cuts, extreme close-ups, placing tracking shot rails within the bleachers, and the like.\n\n The techniques employed are almost universally admired, but the film is controversial due to its political context.\n\n Nevertheless, the film appears on many lists of the greatest films of all time, including \"Time\" magazine's \"All-Time 100 Movies.\"",
+    "South of the Border (2009 film)\nSouth of the Border is a 2009 American documentary film directed by Oliver Stone.\n\n The documentary premiered at the 2009 Venice Film Festival.\n\n Writer for the project Tariq Ali calls the documentary \"a political road movie\".\n\n Stone stated that he hopes the film will help people better understand a leader who is wrongly ridiculed \"as a strongman, as a buffoon, as a clown.\"",
+    "Gasland\nGasland is a 2010 American documentary written and directed by Josh Fox.\n\n Nominated for an Academy Award for Best Documentary in 2011, the film focuses on communities in the United States affected by natural gas drilling and, specifically, a method of horizontal drilling into shale formations known as hydraulic fracturing.\n\n The film was a key mobilizer for the anti-fracking movement, and \"brought the term 'hydraulic fracturing' into the nation's living rooms\" according to \"The New York Times\".\n\n The film was nominated for the Academy Award for Best Documentary Feature.",
+    "Elephant (album)\nElephant is the fourth album by the American alternative rock duo The White Stripes.\n\n Released on April 1, 2003 on V2 Records, its release garnered near unanimous critical acclaim and commercial success, garnering a nomination for Album of the Year and a win for Best Alternative Music Album at the 46th Grammy Awards in 2004, peaking at No. 6 in the US \"Billboard\" charts and topping the UK album charts.",
+    "The Last Lions\nThe Last Lions is a 2011 African nature documentary film by National Geographic Society, videotaped and directed by Dereck and Beverly Joubert.\n\n It was shot at the Okavango Delta in Botswana.\n\n The film premiered at the Palm Springs International Film Festival in January 2011 and was released in select theaters on February 18, 2011.\n\n The film follows in the tradition of other National Geographic big cat films, such as \"India: Land of the Tiger\" and \"Eye of the Leopard\".",
+    "The entries survey documentaries, films, TV, and film-related concepts: Los Angeles hip-hop, Aboriginal country music, Latin American politics, oceans, nerd culture, Iraqi life and war, Bougainville, education, disability, poetry, surfing, and family relationships. Featured works include *Gasland*, *Baghdad ER*, *War/Dance*, *First Life*, and *The Coconut Revolution*. Several received major awards or nominations. The material also profiles filmmaker Wayne Coles-Janess and defines",
+    "List of accolades received by The Hurt Locker\n\"The Hurt Locker\" is a 2009 Iraq War film written by Mark Boal and directed by Kathryn Bigelow.\n\n The film premiered on September 4, 2008 at the 65th Venice International Film Festival, where it competed with \"The Wrestler\" for the Golden Lion award.\n\n It was released in Italy by Warner Bros.\n\n Pictures on October 10, 2008.\n\n Following a showing at the 33rd Toronto International Film Festival, Summit Entertainment picked the film up for distribution in the United States.\n\n \"The Hurt Locker\" was released in the United States on June 26, 2009, with a limited release at four theaters in Los Angeles and New York City.\n\n The film grossed over $145,000 on its opening weekend, averaging around $36,000 per theater.\n\n The following weekend, beginning July 3, the film grossed over $131,000 at nine theaters.\n\n It held the highest per-screen average of any movie playing theatrically in the United States for the first two weeks of its release, gradually moving into the top 20 chart.\n\n Summit Entertainment then released \"The Hurt Locker\" to more screens.",
+    "First Kill\nFirst Kill is a 2001 Dutch documentary film that revolves around the psychology of war.\n\n Important turning points in the Vietnam War are used to illustrate the effect of war on body and mind.\n\n The documentary consists of interviews with Michael Herr and several Vietnam veterans.\n\n The depth of the interviews provides insight into the feelings that accompany violence, fear, hate, seduction and pleasure.",
+    "To Shoot an Elephant\nTo Shoot an Elephant is a 2009 documentary film about the 2008-2009 Gaza War directed by Alberto Arce and Mohammad Rujailahk."
+   ]
+  },
+  {
+   "id": "c5f91ec2e73330d7",
+   "gold": [
+    {
+     "sentence": " Levitt & Sons developed the Monmouth Heights section from 1965-1969.",
+     "facts": {
+      "0.0": "Levitt & Sons developed the Monmouth Heights section from 1965 to 1969."
+     }
+    },
+    {
+     "sentence": " The company is most famous for having built the town of Levittown, New York.",
+     "facts": {
+      "1.0": "Levitt & Sons is most famous for having built the town of Levittown, New York."
+     }
+    }
+   ],
+   "items": [
+    "Taylors Mills, New Jersey\nTaylors Mills is an unincorporated community located within Manalapan Township in Monmouth County, New Jersey, United States.\n\n The main road that runs through the area is named for the community, Taylors Mills Road.",
+    "Monmouth Heights at Marlboro, New Jersey\nMonmouth Heights at Marlboro is an unincorporated community located within Marlboro Township in Monmouth County, New Jersey, United States.\n\n The housing development was created in the 1960s by Levitt & Sons though some protests occurred by long-time residents of Marlboro Township at the time of its creation.\n\n The community is located along New Jersey Route 79 across the highway from Marlboro High School.",
+    "Oakland Mills, New Jersey\nOakland Mills is an unincorporated community located within Manalapan Township in Monmouth County, New Jersey, United States.\n\n The area is named for Oakland Mill, a mill along the Manalapan Brook operated by the Boo family.\n\n Some areas within the Manalapan Brook valley and surround forestland are preserved while the remainder of the area surrounding Oakland Mills has since been developed into housing developments.",
+    "Hanbys Corner, Delaware\nHanbys Corner is an unincorporated community in New Castle County, Delaware, United States.\n\n It is located at the intersection of Delaware Route 3 (Marsh Road) and Delaware Route 92 (Naamans Road), in Brandywine Hundred.\n\n The area is named for Richard G. Hanby, who first purchased the 125 acre parcel from the descendants of William Penn in 1753.\n\n His descendants included several notable figures in the local political scene including Samuel Winfield Hanby (1817-1892) who was elected as a State Representative in 1874, Jacob Klose Hanby (1839-1932) who was Samuel's son and was elected State Representative in 1904, Robert Johnson Hanby (1834-1898), who served in the 124th PA infantry during the Civil War and was elected State Senator in 1896, and Florence Wood Hanby (1870-1963), who was Robert's daughter-in-law and was the first woman elected to the Delaware House of Representatives in 1924.\n\n In addition Wayne Hanby and James Hanby have both served as Justices of the Peace for New Castle County.",
+    "HMS Monmouth\nSeven ships of the Royal Navy have been named HMS \"Monmouth\".\n\n Monmouth was the name of a castle and is now the name of a town in Wales; the name also recognises James Scott, 1st Duke of Monmouth, the \"Black Duke\".\n\n The first HMS \"Monmouth\" was named after the town but whilst the second one was being used the Monmouth Rebellion took place and this caused some concern to the crew.\n\n Since that time, all of \"Monmouth\"s have had their names painted in black and the name and the crest are covered because of the shame of the Duke of Monmouth's execution.\n\n Today the officers of the latest HMS \"Monmouth\" carry black handkerchiefs and the ship is known as the Black Duke.\n\n However the town of Monmouth still gives the freedom of the town to the ship's crew and talks of the \"enduring link\" between the town and the ship.",
+    "Riverton, New York\nHowever, only a small portion of this was built along Scottsville-West Henrietta Rd.\n\n Created as part of the community were Riverton Knolls, a moderately priced townhouse subdivision, the Riverton Golf Club, a small 9-hole golf course, and the Riverton Park, which included a playground, baseball diamond, river front benches, walking trail, and a volleyball court.\n\n Also nestled in a bend in the Genesee was a 28 acre forested nature park.",
+    "Province of New Jersey\nThe Province of New Jersey was one of the Middle Colonies of Colonial America and became the U.S. state of New Jersey in 1776.\n\n The province had originally been settled by Europeans as part of New Netherland, but came under English rule after the surrender of Fort Amsterdam in 1664, becoming a proprietary colony.\n\n The English then renamed the province after the Isle of Jersey in the English Channel.\n\n The Dutch Republic reasserted control for a brief period in 1673–1674.\n\n After that it consisted of two political divisions, East Jersey and West Jersey, until they were united as a royal colony in 1702.\n\n The original boundaries of the province were slightly larger than the current state, extending into a part of the present state of New York, until the border was finalized in 1773.",
+    "Riverview, New Brunswick\nRiverview is a Canadian town in Albert County, New Brunswick, Canada.\n\n Riverview is located on the south side of the Petitcodiac River, across from the larger cities of Moncton and Dieppe.\n\n Riverview has an area of 34 km2 , and a population density of 564.6 PD/km2 .\n\n Riverview's slogan is \"A Great Place To Grow\".\n\n With a population of 19,667, Riverview is the fifth largest municipality in New Brunswick, having a larger population than the cities of Edmundston, Bathurst, Campbellton, and Miramichi, despite its designation of \"town\".",
+    "Great Neck, NY, encompasses nine North Hempstead villages/hamlets (~40,000 residents), five ZIP codes and one school district; Saddle Rock is its Blue Ribbon K–5 school. Floral Park village had 15,863 residents in 2010. Old Country Road serves central Nassau shopping and partly borders Hempstead/North Hempstead. Long Island’s 75-mile outer barrier separates lagoons from the Atlantic. The Nassau Herald serves Five Towns. Other entries describe",
+    "Monmouth Heights at Manalapan, New Jersey\nMonmouth Heights at Manalapan is an unincorporated community located within Manalapan Township in Monmouth County, New Jersey, United States.\n\n Levitt & Sons developed the Monmouth Heights section from 1965-1969.\n\n Residents of the 685 homes in the development are required to join the Monmouth Heights Community Association, which provides pools and other amenities."
+   ]
+  },
+  {
+   "id": "74e16b5623962535",
+   "gold": [
+    {
+     "sentence": "Am Rong (1929 – May 1975) was a Cambodian soldier and filmmaker, who acted as a spokesman on military matters for the Khmer Republic during the Cambodian Civil War.",
+     "facts": {
+      "0.0": "Am Rong was born in 1929.",
+      "0.1": "Am Rong died in May 1975.",
+      "0.2": "Am Rong was Cambodian.",
+      "0.3": "Am Rong was a soldier.",
+      "0.4": "Am Rong was a filmmaker.",
+      "0.5": "Am Rong acted as a spokesman on military matters for the Khmer Republic.",
+      "0.6": "Am Rong acted as a spokesman during the Cambodian Civil War."
+     }
+    },
+    {
+     "sentence": "Ava Marie DuVernay ( ; born August 24, 1972) is an American director, screenwriter, film marketer, and film distributor.",
+     "facts": {
+      "1.0": "Ava Marie DuVernay was born August 24, 1972.",
+      "1.1": "Ava Marie DuVernay is American.",
+      "1.2": "Ava Marie DuVernay is a director.",
+      "1.3": "Ava Marie DuVernay is a screenwriter.",
+      "1.4": "Ava Marie DuVernay is a film marketer.",
+      "1.5": "Ava Marie DuVernay is a film distributor."
+     }
+    }
+   ],
+   "items": [
+    "Ava DuVernay\nAva Marie DuVernay ( ; born August 24, 1972) is an American director, screenwriter, film marketer, and film distributor.\n\n At the 2012 Sundance Film Festival, DuVernay won the Best Director Prize for her second feature film \"Middle of Nowhere\", becoming the first African-American woman to win the award.\n\n For her work in \"Selma\" (2014), DuVernay was the first black female director to be nominated for a Golden Globe Award.\n\n With \"Selma\", she was also the first black female director to have her film nominated for the Academy Award for Best Picture.\n\n In 2017, she was nominated for the Academy Award for Best Documentary Feature for her film \"13th\" (2016).",
+    "Annie Belle\nAnnie Brilland (born 10 December 1956) is a French actress and social worker.\n\n Her acting career began in 1974 and throughout the seventies, has had a series of varied roles in both French and Italian cinema, working with such directors as Jean Rollin, Ruggero Deodato and Joe D'Amato.",
+    "Spencer Averick\nSpencer Averick is an American film editor and producer.\n\n Best known for his work an editor on critically acclaimed films \"Middle of Nowhere\" (2012), \"Selma\" (2014) and for producing 2016 acclaimed documentary \"13th\" for which he received Academy Award for Best Documentary Feature nominations at 89th Academy Awards, that he shared with director Ava DuVernay and co-producer Howard Barish.",
+    "Graph query row:\nperson: Am Rong\nbirth_date: 1929",
+    "Am Rong\nAm Rong (1929 – May 1975) was a Cambodian soldier and filmmaker, who acted as a spokesman on military matters for the Khmer Republic during the Cambodian Civil War.\n\n Western journalists commented on the irony of his name as he gave briefings which \"painted a rosy picture of the increasingly desperate situation on the ground\" during the war.",
+    "Dana Ivey\nDana Robins Ivey (born August 12, 1941) is an American actress.\n\n She is a five-time Tony Award nominee for her work on Broadway, and won the 1997 Drama Desk Award for Outstanding Featured Actress in a Play for her work in both \"Sex and Longing\" and \"The Last Night of Ballyhoo\".\n\n Her film appearances include \"The Color Purple\" (1985), \"Dirty Rotten Scoundrels\" (1988), \"The Addams Family\" (1991), \"Two Weeks Notice\" (2002), \"Rush Hour 3\" (2007) and \"The Help\" (2011).",
+    "A Wrinkle in Time (2018 film)\nA Wrinkle in Time is an upcoming American science-fiction fantasy adventure film directed by Ava DuVernay and written by Jennifer Lee.\n\n It is based on the 1963 novel of the same name by Madeleine L'Engle.\n\n The film stars Oprah Winfrey, Reese Witherspoon, Mindy Kaling, Storm Reid, Zach Galifianakis and Chris Pine.\n\n Principal photography on the film began on November 2, 2016, in Los Angeles, California.",
+    "Emayatzy Corinealdi\nEmayatzy Evett Corinealdi ( ; born January 14, 1980) is an American actress.\n\n She is best known for her leading role in the Ava DuVernay film \"Middle of Nowhere\" (2012).",
+    "Howard Barish\nHoward Barish is an Oscar nominated, Emmy award winning producer and director known for his producing partnership with acclaimed director, writer Ava DuVernay.\n\n Their most recognized project to date, \"13TH\", is a 2016 American documentary from Netflix directed by DuVernay.\n\n Centered on race in the United States criminal justice system, the critically lauded film is titled after the Thirteenth Amendment to the United States Constitution, which outlawed slavery (unless as punishment for a crime).\n\n It argues that slavery is being effectively perpetuated through mass incarceration.",
+    "Graph query row:\nperson: Ava DuVernay\nbirth_date: August 24, 1972"
+   ]
+  },
+  {
+   "id": "ffa929e68e289748",
+   "gold": [
+    {
+     "sentence": "John André (2 May 1750 – 2 October 1780) was a British Army officer hanged as a spy by the Continental Army during the American Revolutionary War for assisting Benedict Arnold's attempted surrender of the fort at West Point, New York to the British.",
+     "facts": {
+      "0.0": "John André lived from 2 May 1750 to 2 October 1780.",
+      "0.1": "John André was a British Army officer.",
+      "0.2": "John André was hanged as a spy by the Continental Army during the American Revolutionary War.",
+      "0.3": "John André was hanged for assisting Benedict Arnold's attempted surrender of the fort at West Point, New York, to the British."
+     }
+    },
+    {
+     "sentence": "Benedict Arnold (January 14, 1741 [O.S. January 3, 1740] June 14, 1801) was a general during the American Revolutionary War, who fought for the American Continental Army, and later defected to the British Army.",
+     "facts": {
+      "1.0": "Benedict Arnold lived from January 14, 1741 (Old Style: January 3, 1740) to June 14, 1801.",
+      "1.1": "Benedict Arnold was a general during the American Revolutionary War.",
+      "1.2": "Benedict Arnold fought for the American Continental Army.",
+      "1.3": "Benedict Arnold later defected to the British Army."
+     }
+    }
+   ],
+   "items": [
+    "John André\nJohn André (2 May 1750 – 2 October 1780) was a British Army officer hanged as a spy by the Continental Army during the American Revolutionary War for assisting Benedict Arnold's attempted surrender of the fort at West Point, New York to the British.",
+    "Siege of Yorktown\nThe Siege of Yorktown, also known as the Battle of Yorktown, the Surrender at Yorktown, German Battle or the Siege of Little York, ending on October 19, 1781, at Yorktown, Virginia, was a decisive victory by a combined force of American Continental Army troops led by General George Washington and French Army troops led by the Comte de Rochambeau over a British Army commanded by British peer and Lieutenant General Charles Cornwallis.\n\n The culmination of the Yorktown campaign, the siege proved to be the last major land battle of the American Revolutionary War in the North American theater, as the surrender by Cornwallis, and the capture of both him and his army, prompted the British government to negotiate an end to the conflict.\n\n The battle boosted faltering American morale and revived French enthusiasm for the war, as well as undermining popular support for the conflict in Great Britain.",
+    "William Farrar Smith\nWilliam Farrar Smith (February 17, 1824 – February 28, 1903), known as ‘Baldy’ Smith, was a Union general in the American Civil War, notable for attracting the extremes of glory and blame.\n\n He was praised for his gallantry in the Seven Days Battles and the Battle of Antietam, but was demoted for insubordination after the disastrous defeat at the Battle of Fredericksburg.\n\n As chief engineer of the Army of the Cumberland, he achieved recognition by restoring a supply line that saved that army from starvation and surrender, known the “Cracker Line”, that helped Union troops to success in the Chattanooga Campaign in the autumn of 1863.\n\n Leading the first operation against Petersburg, Smith’s hesitation, possibly illness-related, cost the Union a prime opportunity for a quick end to the war, and he was relieved of command.",
+    "Battle of Germantown\nThe Battle of Germantown was a major engagement in the Philadelphia campaign of the American Revolutionary War.\n\n It was fought on October 4, 1777, at Germantown, Pennsylvania, between the British Army led by Sir William Howe, and the American Continental Army, with the 2nd Canadian Regiment, under George Washington.",
+    "Lewis Nicola\nLewis Nicola (1717 – August 9, 1807) was an Irish-born American military officer, merchant, and writer who held various military and civilian positions throughout his career.\n\n Nicola is most notable for authoring the Newburgh letter, which urged George Washington to assume a royal title.\n\n Born in Dublin, Ireland, Nicola had been an officer in the British Army, serving in Europe before immigrating to the Thirteen Colonies.\n\n Establishing a residence in Philadelphia with his family, Nicola opened a library in 1767 and was active in colonial philosophical organizations.\n\n As a result of his work to establish the American Philosophical Society, he was elected as one of its curators.\n\n When the American Revolution broke out, Nicola offered his services to the colonial government, which eventually appointed him to various positions with local forces.",
+    "John F. Anderson\nJohn Francis Anderson was an officer in the Union Army during the American Civil War.\n\n When the war broke out, Anderson who was the son of Maine's former Governor Hugh J. Anderson was initially commissioned First Lieutenant in the militia; and on September 2, 1861, Anderson became the adjutant of the 24th Regiment Massachusetts Volunteer Infantry.\n\n He was appointed to Maj. Gen. John G. Foster's staff as a major and an aide-de-camp on June 9, 1863 and served with that officer for most of the remainder of the war, resigning on March 27, 1865.\n\n On December 11, 1866, President Andrew Johnson nominated Major Anderson to the honorary grade of brevet brigadier general, to rank from March 13, 1865 and the United States Senate confirmed the award on February 6, 1867.",
+    "Benedict Arnold\nBenedict Arnold (January 14, 1741 [O.S. January 3, 1740] June 14, 1801) was a general during the American Revolutionary War, who fought for the American Continental Army, and later defected to the British Army.\n\n While a general on the American side, he obtained command of the fortifications at West Point, New York (which after 1802 would become the site of the U.S. Military Academy), overlooking the cliffs at the Hudson River (upriver from British-occupied New York City), and planned to surrender them to British forces.\n\n This plan was exposed in September 1780.\n\n He was commissioned into the British Army as a brigadier general.",
+    "Benjamin Logan\nBenjamin Logan (c.1742 – December 11, 1802) was an American pioneer, soldier, and politician from Shelby County, Kentucky.\n\n As colonel of the Kentucky County, Virginia militia during the American Revolutionary War, he was second-in-command of all the militia in Kentucky.\n\n He was also a leader in Kentucky's efforts to become a state.\n\n His brother, John Logan, was the first state treasurer of Kentucky.",
+    "List of Continental Army units\nThe Continental Army was the national army of first the Thirteen Colonies, and then the independent United States, during the American Revolutionary War, established by a resolution of the Congress on June 14, 1775, three days before the Battle of Bunker Hill, where it saw its first action under that title.\n\n.\n\n The Continental Congress took a number of steps in the spring of 1775 to create the army in response to the Battles of Lexington and Concord in April and the seizure of Fort Ticonderoga in May.\n\n The units composing the Continental Army changed frequently, especially in the first two years of the war.\n\n From 1777 to the close of the war, the organization of the Continental Army became progressively more systematic and sophisticated.\n\n The Continental Army that served at Yorktown in 1781 bore very little resemblance to the Continental Army that blockaded Boston in 1775.",
+    "Benjamin Lincoln\nBenjamin Lincoln (January 24, 1733 (O.S. January 13, 1732) – May 9, 1810) was an American army officer.\n\n He served as a major general in the Continental Army during the American Revolutionary War.\n\n Lincoln is notable for being involved in three major surrenders during the war: his participation in the Battles of Saratoga (sustaining a wound shortly afterward) contributed to John Burgoyne's surrender of a British army, he oversaw the largest American surrender of the war at the 1780 Siege of Charleston, and, as George Washington's second in command, he formally accepted the British surrender at Yorktown."
+   ]
+  },
+  {
+   "id": "54a670bb244f5710",
+   "gold": [
+    {
+     "sentence": " The trains were built between 1994 and 2009 – for the most part by Talbot, part of Bombardier Inc., with some railcars built by De Dietrich.",
+     "facts": {
+      "0.0": "The trains were built between 1994 and 2009.",
+      "0.1": "The trains were built for the most part by Talbot.",
+      "0.2": "Talbot is part of Bombardier Inc.",
+      "0.3": "Some railcars were built by De Dietrich."
+     }
+    },
+    {
+     "sentence": "Bombardier Inc. (] ) is a multinational aerospace and transportation company based in Montreal, Quebec, Canada.",
+     "facts": {
+      "1.0": "Bombardier Inc. is a multinational aerospace and transportation company.",
+      "1.1": "Bombardier Inc. is based in Montreal, Quebec, Canada."
+     }
+    }
+   ],
+   "items": [
+    "Transportation in Jacksonville, Florida\nThe Jacksonville transportation network includes ground, air, and sea options for passenger and freight transit.\n\n The Jacksonville Port Authority (Jaxport) operates the Port of Jacksonville, which includes container shipping facilities at \"Blount Island Marine Terminal\", the \"Talleyrand Marine Terminal\" and the \"Dames Point Marine Terminal\".\n\n Jacksonville Aviation Authority managers Jacksonville International Airport in Northside, as well as several smaller airports.\n\n The Jacksonville Transportation Authority (JTA) operates bus, people mover, and park-n-ride services throughout the city and region.\n\n A major bus terminal at the intermodal Rosa Parks Transit Station serves as JTA's main transit hub.\n\n Various intercity bus companies terminate near Central Station.\n\n Amtrak operates passenger rail service to and from major cities throughout North America.\n\n The city is bisected by major highways, I-95 and I-10, I-295 creates a full beltway around the city.",
+    "Northern Transportation Company\nNorthern Transportation Company Limited (NTCL) is a marine transportation company in the Canadian and American Arctic owned by Norterra, a holding company that is owned by the Inuvialuit of the Northwest Territories.\n\n While primarily a marine freight hauler on Canadian rivers, like the Mackenzie and the Hay and along the Arctic coast of Canada, they are also a petroleum wholesaler.\n\n Its head office is now in the town of Hay River, Northwest Territories.\n\n Today, it primarily utilizes tugs and barges.",
+    "Transportation Building\nThe Transportation Building is a 44-story office building located at 225 Broadway on the corner of Barclay Street in the Civic Center neighborhood of Lower Manhattan in New York City.\n\n It also carries the address 2-4 Barclay Street.\n\n It was built in 1927 and was designed by the architecture firm of York & Sawyer, in the Renaissance Revival style, using setbacks common to skyscrapers built after the adoption of the 1916 Zoning Resolution.\n\n It sits across Barclay Street from the Woolworth Building.",
+    "Bombardier Inc.\nBombardier Inc. (] ) is a multinational aerospace and transportation company based in Montreal, Quebec, Canada.\n\n Starting as a maker of snow machines or snowmobiles, over the years it has grown into a large manufacturer of regional airliners, business jets, mass transportation equipment, and recreational equipment, and a provider of financial services.",
+    "Marquette Transportation Company\nThe Marquette Transportation Company is a marine transportation company based in Paducah, Kentucky, United States.",
+    "Toland, Pennsylvania\nToland is less than 1/4 of a mile long, and it is located less than half a mile from the Appalachian trail crossing.\n\n The closest town is Mount Holly Springs, Pennsylvania located (3 miles north of Toland).\n\n The village is roughly 10 miles south of Carlisle, Pennsylvania, 7 miles south east of Boiling Springs, Pennsylvania, and 15 miles South of Gettysburg, Pennsylvania.\n\n The only business in Toland is the Cherokee Campground formerly known as the Tagg Run Campground.\n\n The campground restaurant is now closed.\n\n Toland Mission is a small non-denominational church that can hold up to 74 persons.\n\n It was originally built by the owner of Beetem Lumber Company in Carlisle for the families of the community of Toland.\n\n A one-room school house near the church originally served the community, but it was converted to a home when residents' children were transported to a township school.\n\n Local people in Toland usually travel to the town of Mount Holly Springs for necessities such as gas, food, and toiletries.",
+    "Toland, Pennsylvania\nToland is an unincorporated community in Cumberland County, Pennsylvania, United States.\n\n The very small village is located on Pine Grove Road, east of Mountain Creek Campground.\n\n Michaux State Forest, the site of Laurel Lake, Fuller Lake and Pine Grove Furnace State Park lie a few miles to the west near the intersection of Pine Grove Road and PA route 233.\n\n Toland has a mailing address of Gardners Pennsylvania, because the size of the community doesn't warrant a post-office, nor an official incorporated name.\n\n What is now a sand pit operation was originally a clay bank mining operation that was the reason for the location of the village of Toland.\n\n Less than 50 people reside in the close-knit community, which was built for the clay bank company workers in the first quarter of the 20th century.\n\n The original community of Toland, Pennsylvania consisted of 11 duplex houses, built side by side along Pine Grove Road, with less than 0.17 of an acre of land to each.\n\n Additional homes have been built since.\n\n When the community was originally built there was only a common well with a hand pump for all of the families to draw from.",
+    "New York Transportation Company\nThe New York Transportation Company (originally New York Electrical Vehicle Transportation Company) was a company incorporated in New Jersey in 1899 as the 'New York Electrical Vehicle Transportation Company' which changed its name to the \"New York Transportation Company\" in 1902 and was wound up in 1936.\n\n From 1922 it was controlled by the 'Fifth Avenue Bus Securities Corporation' which was incorporated in Delaware in 1922 which was controlled by The Omnibus Corporation also incorporated in Delaware.",
+    "Merchants Transportation Company\nThe Merchants Transportation Company was a shipping firm that operated on Puget Sound from 1905 to 1929.\n\n This company should not be confused with the similarly named Merchants Transportation Company of Olympia, formed in 1874 and a completely separate firm.",
+    "Shaver Transportation Company\nThe Shaver Transportation Company is an inland water freight transportation company based in Portland, Oregon, United States.\n\n The company was founded in 1880 and played a major role in the development of freight transport in the Portland area and along the Columbia."
+   ]
+  },
+  {
+   "id": "5bc7d74603de44c2",
+   "gold": [
+    {
+     "sentence": "Warrel Dane (born March 7, 1969) is the lead singer of the American power metal band Sanctuary.",
+     "facts": {
+      "0.0": "Warrel Dane was born on March 7, 1969.",
+      "0.1": "Warrel Dane is the lead singer of the band Sanctuary.",
+      "0.2": "Sanctuary is an American power metal band."
+     }
+    },
+    {
+     "sentence": "Roy Sætre Khantatat (born March 12, 1970), is a Norwegian singer-songwriter.",
+     "facts": {
+      "1.0": "Roy Sætre Khantatat was born on March 12, 1970.",
+      "1.1": "Roy Sætre Khantatat is a Norwegian singer-songwriter."
+     }
+    }
+   ],
+   "items": [
+    "Warrel Dane\nWarrel Dane (born March 7, 1969) is the lead singer of the American power metal band Sanctuary.\n\n He is also known as the former lead singer of currently inactive progressive metal band Nevermore.\n\n He is a natural baritone, though he was known for his high-pitched vocals with Serpent's Knight and on the first two Sanctuary albums.\n\n Later in his career, Dane became more notable for his distinctively deep, dramatic voice.",
+    "Peter Wichers\nPeter Wichers is best known as one of the founding members of Swedish melodic death metal band, Soilwork.\n\n From 1995 until late 2005, when he announced his departure from the band, he was known as the lead guitarist and also a songwriter, especially on their \"Stabbing the Drama\" album., He rejoined Soilwork in 2008 and played on 2010s The Panic Broadcast and in June 2012 he quit Soilwork for the second time.\n\n After leaving Soilwork, he filled in for Adam Dutkiewicz when he was injured on Killswitch Engage's European tour.\n\n More recently, he has collaborated with singers from across the melodic death metal genre including Anders Fridén, former band mate Björn \"Speed\" Strid and John Bush (vocalist of Anthrax) to make a CD much in the same style as \"Roadrunner United\", entitled \"Nuclear Blast All-Stars\".\n\n He also co-wrote Warrel Dane's solo record \"Praises to the War Machine\".",
+    "Praises to the War Machine\nPraises to the War Machine is the debut and only solo release/album by heavy metal vocalist Warrel Dane from Nevermore, released on April 25, 2008.\n\n The album was produced by Peter Wichers, who was tapped by Dane to work on the album while Wichers was still a member of Soilwork.\n\n After leaving that band in 2007, Wichers co-wrote the album with Dane and played on eight of its tracks.\n\n Soilwork drummer Dirk Verbeuren and former Himsa guitarist Matt Wicklund also played on the album.\n\n Nevermore guitarist Jeff Loomis and the band's touring guitarist at the time Chris Broderick make guest appearances, along with James Murphy, who had performed on the Nevermore album \"This Godless Endeavor\".\n\n \"Praises to the War Machine\" includes two cover songs, The Sisters of Mercy's \"Lucretia My Reflection\" and \"Patterns\" by Paul Simon.\n\n Dane had previously covered a Simon song on Nevermore's album \"Dead Heart in a Dead World\".",
+    "Graph query row:\nperson: Warrel Dane\nbirth_date: March 7, 1969\nrelationship: MEMBER_OF\nrelated_entity: Nevermore",
+    "Scott Weiland\nScott Richard Weiland ( ; born Scott Richard Kline; October 27, 1967 – December 3, 2015) was an American musician, singer and songwriter.\n\n During a career spanning three decades, Weiland was best known as the lead singer of the band Stone Temple Pilots from 1989 to 2002 and 2008 to 2013.\n\n He was also a member of supergroup Velvet Revolver from 2003 to 2008 and recorded one album with another supergroup, Art of Anarchy.\n\n He established himself as a solo artist as well, releasing three studio albums, two cover albums, and collaborations with several other musicians throughout his career.",
+    "Doug Grean\nDoug Grean is an American record producer, audio engineer, guitarist, based in Los Angeles.\n\n He has worked with artists Sheryl Crow, Ricki Lee Jones, Glen Campbell, Scott Weiland, Slash, Velvet Revolver, Stone Temple Pilots, The Crystal Method, Tim McGraw, Cyndi Lauper, Annabella Lwin (Bow Wow Wow), Corey Glover (Living Color), Camp Freddy, DJ Hurricane and John Taylor (Duran Duran).\n\n Grean was formerly the lead guitarist and touring musical director for Scott Weiland and the Wildabouts.\n\n Some of Grean's television appearances with Weiland include: VH1 Legends, Last Call with Carson Daly, The Tonight Show with Jay Leno, and the Grammy awards with Velvet Revolver as keyboardist, performing \"All Across the Universe\" with Stevie Wonder, Norah Jones, Bono, Steven Tyler, Brian Wilson, and Alison Krauss.",
+    "Sanctuary (band)\nSanctuary is an American heavy metal band founded in Seattle in 1985.\n\n They split up in 1992, but reformed 18 years later.\n\n The band consists of Warrel Dane (vocals), Lenny Rutledge (guitar), Nick Cordle (guitar), George Hernandez (bass), and Dave Budbill (drums).\n\n To date, they have released four studio albums and one live EP.",
+    "Nevermore (album)\nNevermore is the eponymous debut studio album by American heavy metal band Nevermore, released on February 14, 1995 by Century Media Records.\n\n It was singer Warrel Dane and bassist Jim Sheppard's first release after departing from their previous band, Sanctuary, in 1994.\n\n Having recruited drummer Van Williams and former Sanctuary touring guitarist Jeff Loomis, they formed the band Nevermore and began anew.",
+    "Roy Khan\nRoy Sætre Khantatat (born March 12, 1970), is a Norwegian singer-songwriter.\n\n Commonly known as Roy Khan or simply Khan, he was the lead vocalist for the symphonic power metal band Kamelot from 1997 to his departure in 2011.\n\n He co-wrote most of Kamelot's songs with the band's guitarist and founder Thomas Youngblood during his tenure.\n\n Prior to joining Kamelot, Khan was lead singer for the Norwegian progressive metal band Conception from 1991 until 1997 when they disbanded.",
+    "Graph query row:\nperson: Roy Sætre Khantatat\nbirth_date: March 12, 1970\nrelationship: MEMBER_OF\nrelated_entity: Kamelot"
+   ]
+  },
+  {
+   "id": "3b188bf578f05aec",
+   "gold": [
+    {
+     "sentence": " They were first year members of the Mountain West Conference.",
+     "facts": {
+      "0.0": "They were first-year members of the Mountain West Conference."
+     }
+    },
+    {
+     "sentence": "The Mountain West Conference (MW) is one of the collegiate athletic conferences affiliated with the National Collegiate Athletic Association (NCAA) Division I Football Bowl Subdivision (FBS) (formerly I-A).",
+     "facts": {
+      "1.0": "The Mountain West Conference (MW) is a collegiate athletic conference.",
+      "1.1": "The Mountain West Conference is one of the collegiate athletic conferences affiliated with the National Collegiate Athletic Association (NCAA).",
+      "1.2": "The Mountain West Conference is affiliated with the NCAA Division I Football Bowl Subdivision (FBS).",
+      "1.3": "The Football Bowl Subdivision (FBS) was formerly called I-A."
+     }
+    }
+   ],
+   "items": [
+    "2012–13 Wagner Seahawks men's basketball team\nThe 2012–13 Wagner Seahawks men's basketball team represented Wagner College during the 2012–13 NCAA Division I men's basketball season.\n\n The Seahawks were led by the youngest men's head coach in NCAA Division I, Bashir Mason, who was 28 when he was elevated from an assistant position in March 2012 following the departure of Dan Hurley for Rhode Island.\n\n The Seahawks played their home games at Spiro Sports Center and were members of the Northeast Conference.\n\n They finished the season 19–12, 12–6 in NEC play to finish in a three way tie for second place.\n\n They advanced to the semifinals of the Northeast Tournament where they lost to Long Island.\n\n For the second consecutive year, despite a winning record, Wagner choose not to participate in a post season tournament.",
+    "Women's National Collegiate Athletic Association\nThe Women's National Collegiate Athletic Association (WNCAA) is an athletic association in the Philippines exclusively for women.\n\n It was founded in 1970.\n\n Competition is divided into three divisions: Seniors for college students, Juniors for high school students, and Midgets for grade school and first year high school students.\n\n Its men's counterpart is the Men's National Collegiate Athletic Association, founded in 2004.",
+    "Men's National Collegiate Athletic Association\nThe Men's National Collegiate Athletic Association is an athletic association in the Philippines, and is the direct counterpart of the older Women's National Collegiate Athletic Association (founded in 1970).\n\n The Men's National Collegiate Athletic Association (MNCAA) is exclusive for men.\n\n The MNCAA was founded in 2004.\n\n Competition is divided into three divisions: Seniors for college students, Juniors for high school students, and Midgets for grade school and first year high school students.\n\n The competing sports of the tournament are Basketball, Volleyball, Futsal, Table Tennis, Badminton and Streetdance.",
+    "Wayne State Warriors football\nThe Wayne State Warriors football team is the college football team at Wayne State University in Detroit, Michigan.\n\n The Wayne State football team played their first game in October 1918.\n\n The Wayne State Warriors have competed in the Great Lakes Intercollegiate Athletic Conference since 1999 (and previously from 1975-1989), and are currently a Division II member of the National Collegiate Athletic Association (NCAA).\n\n Wayne State plays their home games at Tom Adams Field at Wayne State Stadium.\n\n All Wayne State games are broadcast on WDTK radio.",
+    "Mountain West Conference\nThe Mountain West Conference (MW) is one of the collegiate athletic conferences affiliated with the National Collegiate Athletic Association (NCAA) Division I Football Bowl Subdivision (FBS) (formerly I-A).\n\n The MW officially began operations in July 1999.\n\n Geographically, the MW covers a broad expanse of the Western United States, with member schools located in California, Colorado, Hawaii, Idaho, Nevada, New Mexico, Utah, and Wyoming.\n\n Craig Thompson has served as Commissioner of the MW since its founding in 1999.",
+    "2012 Hawaii Warriors football team\nThe 2012 Hawaii Warriors football team represented the University of Hawaii at Manoa in the 2012 NCAA Division I FBS football season.\n\n They were led by first-year head coach Norm Chow and played their home games at Aloha Stadium.\n\n They were first year members of the Mountain West Conference.\n\n They finished the season 3–9, 1–7 in Mountain West play to finish in a tie for ninth place.",
+    "List of Pacific Tigers head football coaches\nThe Pacific Tigers college football team represented University of the Pacific (CA).\n\n The Tigers competed in the National Collegiate Athletic Association (NCAA) College Division in the years 1937–1968.\n\n In 1969, the team moved to National Collegiate Athletic Association (NCAA) Division I and stayed there until disbanding after the 1995 season.",
+    "The entries span college and professional football, plus other athletics. Georgia Southern won six FCS titles, 10 SoCon championships, and the Sun Belt outright in its 2014 FBS debut. Featured season records include Alabama (1997: 4–7; 1983: 8–4; 1906: 5–1; 1905: 6–4), Auburn’s inaugural team (1892: 2–2), and Connecticut Aggies (189",
+    "2011–12 Wagner Seahawks men's basketball team\nThe 2011–12 Wagner Seahawks men's basketball team represented Wagner College during the 2011–12 NCAA Division I men's basketball season.\n\n The Seahawks, led by second year head coach Dan Hurley, played their home games at Spiro Sports Center and are members of the Northeast Conference.\n\n They finished the season 25–6, 15–3 in NEC play to finish in second place.\n\n They lost in the semifinals of the NEC Basketball Tournament to Robert Morris.\n\n Despite having 25 wins, the Seahawks did not accept an invitation to a post season tournament.",
+    "Hawaii Rainbow Warriors baseball\nThe Hawaii Rainbow Warriors baseball team is a varsity intercollegiate athletic team of the University of Hawaii at Manoa in Honolulu, Hawaii, United States.\n\n The team is a member of the Big West Conference, which is part of the National Collegiate Athletic Association's Division I.\n\n Hawaii's first baseball team was fielded in 1923.\n\n The team plays its home games at Les Murakami Stadium in Honolulu, Hawaii.\n\n The Rainbow Warriors are coached by Mike Trapasso."
+   ]
+  },
+  {
+   "id": "e83f2f313b1cb1cd",
+   "gold": [
+    {
+     "sentence": "Ecopack Ltd is a PET bottles blowing company in Pakistan.",
+     "facts": {
+      "0.0": "Ecopack Ltd is a PET bottles blowing company.",
+      "0.1": "Ecopack Ltd is located in Pakistan."
+     }
+    },
+    {
+     "sentence": "Polyethylene terephthalate (sometimes written poly(ethylene terephthalate)), commonly abbreviated PET, PETE, or the obsolete PETP or PET-P, is the most common thermoplastic polymer resin of the polyester family and is used in fibers for clothing, containers for liquids and foods, thermoforming for manufacturing, and in combination with glass fiber for engineering resins.",
+     "facts": {
+      "1.0": "Polyethylene terephthalate is also written as poly(ethylene terephthalate).",
+      "1.1": "Polyethylene terephthalate is commonly abbreviated as PET.",
+      "1.2": "Polyethylene terephthalate is commonly abbreviated as PETE.",
+      "1.3": "Polyethylene terephthalate is sometimes abbreviated as PETP, which is obsolete.",
+      "1.4": "Polyethylene terephthalate is sometimes abbreviated as PET-P, which is obsolete.",
+      "1.5": "Polyethylene terephthalate is the most common thermoplastic polymer resin of the polyester family.",
+      "1.6": "Polyethylene terephthalate is used in fibers for clothing.",
+      "1.7": "Polyethylene terephthalate is used in containers for liquids and foods.",
+      "1.8": "Polyethylene terephthalate is used in thermoforming for manufacturing.",
+      "1.9": "Polyethylene terephthalate is used in combination with glass fiber for engineering resins."
+     }
+    }
+   ],
+   "items": [
+    "Polyethylene naphthalate\nPolyethylene naphthalate (poly(ethylene 2,6-naphthalate or PEN) is a polyester with good barrier properties (even better than Polyethylene terephthalate).\n\n Because it provides a very good oxygen barrier, it is particularly well-suited for bottling beverages that are susceptible to oxidation, such as beer.\n\n It is also used in making high performance sailcloth.\n\n It also has been found to show supreme scintillation properties and is expected to replace classic plastic scintillators.",
+    "Polyethylene 2,5-furandicarboxylate\nPolyethylene 2,5-furandicarboxylate, also named poly(ethylene 2,5-furandicarboxylate), polyethylene furanoate and poly(ethylene furanoate) and generally abbreviated as PEF, is a polymer that can be produced by polycondensation of 2,5-furandicarboxylic acid (FDCA) and monoethylene glycol (MEG).\n\n As an aromatic polyester from ethylene glycol it is a chemical analogue of polyethylene terephthalate (PET) and polyethylene naphthalate (PEN).\n\n PEF has been described in (patent) literature since 1951, but has gained renewed attention since the US department of energy proclaimed its building block, FDCA, as a potential bio-based replacement for purified terephthalic acid (PTA) in 2004.",
+    "Polyethylene terephthalate\nPolyethylene terephthalate (sometimes written poly(ethylene terephthalate)), commonly abbreviated PET, PETE, or the obsolete PETP or PET-P, is the most common thermoplastic polymer resin of the polyester family and is used in fibers for clothing, containers for liquids and foods, thermoforming for manufacturing, and in combination with glass fiber for engineering resins.",
+    "Ecopack\nEcopack Ltd is a PET bottles blowing company in Pakistan.",
+    "Two-liter bottle\nThe two-liter bottle is a common container for soft drinks.\n\n These bottles are produced from polyethylene terephthalate, also known as PET plastic, using the blow molding process.\n\n Bottle labels consist of a printed, tight-fitted plastic sleeve.\n\n A resealable screw-top allows the contents to be used at various times while retaining carbonation.",
+    "Xenoy\nXenoy is a blend of plastics with many industrially-useful properties.\n\n It is typically polyester (polybutylene terephthalate, PBT, or polyethylene terephthalate, PET) and polycarbonate (PC): it is often labeled PBT+PC or PET+PC.",
+    "PTT, made from 1,3-propanediol and terephthalic acid or dimethyl terephthalate, is used in carpet fibers. PEF, produced from FDCA and ethylene glycol, is a PET/PEN analogue attracting interest as a potentially bio-based alternative. PET is widely used for fibers, packaging, and bottles; two-liter soft-drink bottles are blow-molded PET with sleeves and resealable caps. BoPET is a",
+    "Polytrimethylene terephthalate\nPolytrimethylene terephthalate (PTT), is a polyester synthesized and patented in 1941.\n\n It is produced by a method called condensation polymerization or transesterification.\n\n The two monomer units used in producing this polymer are: 1,3-propanediol and terephthalic acid or dimethyl terephthalate.\n\n Similar to polyethylene terephthalate, the PTT is used to make carpet fibers.",
+    "BoPET\nBoPET (Biaxially-oriented polyethylene terephthalate) is a polyester film made from stretched polyethylene terephthalate (PET) and is used for its high tensile strength, chemical and dimensional stability, transparency, reflectivity, gas and aroma barrier properties, and electrical insulation.",
+    "Polycyclohexylenedimethylene terephthalate\nPolycyclohexylenedimethylene terephthalate (PCT) is a thermoplastic polyester formed from the polycondensation of terephthalic acid and cyclohexanedimethanol.\n\nIts chemical structure is similar to that of polyethylene terephthalate (PET), with which it shares properties like dimensional stability and chemical resistance.\n\n PCT is also particularly resistant to high temperatures and hydrolysis.\n\n The melting point is 545 °F (285 °C).\n\n Common brand names are \"Thermx\" (Ticona), \"Eastar\" (Eastman) and \"SkyPURA\" (SK Chemicals)."
+   ]
+  },
+  {
+   "id": "c039c9aead424a8d",
+   "gold": [
+    {
+     "sentence": "Old Smokey is a euphemistic name given to the state prison electric chair in New Jersey, which is on display at the New Jersey State Police Museum.",
+     "facts": {
+      "0.0": "Old Smokey is a euphemistic name for the state prison electric chair in New Jersey.",
+      "0.1": "The New Jersey state prison electric chair, called Old Smokey, is on display at the New Jersey State Police Museum."
+     }
+    },
+    {
+     "sentence": " The chair's most notorious victim was Richard Hauptmann, the man executed in the chair after being found guilty of abducting and killing Charles Augustus Lindbergh, Jr. in 1932, the 20-month-old son of famous aviators Charles Lindbergh and Anne Morrow Lindbergh \"(see Lindbergh kidnapping)\".",
+     "facts": {
+      "1.0": "The chair's most notorious victim was Richard Hauptmann.",
+      "1.1": "Richard Hauptmann was executed in the chair.",
+      "1.2": "Richard Hauptmann was found guilty of abducting and killing Charles Augustus Lindbergh, Jr.",
+      "1.3": "The abduction and killing of Charles Augustus Lindbergh, Jr. happened in 1932.",
+      "1.4": "Charles Augustus Lindbergh, Jr. was 20 months old.",
+      "1.5": "Charles Augustus Lindbergh, Jr. was the son of famous aviators Charles Lindbergh and Anne Morrow Lindbergh.",
+      "1.6": "The case is referred to as the Lindbergh kidnapping (see Lindbergh kidnapping)."
+     }
+    },
+    {
+     "sentence": " The Lindbergh kidnapping became known as \"The Crime of the Century\".",
+     "facts": {
+      "2.0": "The Lindbergh kidnapping became known as 'The Crime of the Century'."
+     }
+    }
+   ],
+   "items": [
+    "Convicted (1950 film)\nConvicted is a 1950 American crime film noir directed by Henry Levin starring Glenn Ford and Broderick Crawford.\n\n It was the third Columbia Pictures film adaptation of the 1929 stage play \"The Criminal Code\" by Martin Flavin, following Howard Hawk's \"The Criminal Code\" (1931) and John Brahm's \"Penitentiary\" (1938).",
+    "Smiley face murder theory\nThe Smiley face murder theory (variations include Smiley face murders, Smiley face killings, Smiley face gang, and others) is a theory advanced by two retired New York City detectives, Kevin Gannon and Anthony Duarte, that a number of young men found dead in bodies of water across several Midwestern American states over the last decade did not accidentally drown, as concluded by law enforcement agencies, but were victims of a serial killer or killers.\n\n The term \"smiley face\" became connected to the alleged murders when it was made public that the police had discovered graffiti depicting a smiley face near locations where they think the killer dumped the bodies in at least a dozen of the cases.\n\n The response of law enforcement investigators and other experts to Gannon and Duarte's theory has been largely skeptical.",
+    "The Big House (1930 film)\nThe Big House is a 1930 American Pre-Code crime drama film directed by George W. Hill, released by Metro-Goldwyn-Mayer, and starring Chester Morris, Wallace Beery, Lewis Stone and Robert Montgomery.\n\n The supporting cast features Leila Hyams, George F. Marion, J. C. Nugent, Karl Dane and Tom Kennedy.\n\n The story and dialogue were written by Frances Marion, with additional dialogue by Joe Farnham and Martin Flavin.\n\n The story was inspired by a spate of prison riots in 1929 and resulting federal investigation.\n\n In response, George Hill wrote a twenty-seven page story treatment called \"The Reign of Terror: A Story of Crime and Punishment\".\n\n Irving Thalberg gave the go ahead for the screenplay and assigned Frances Marion to work with George Hill.",
+    "Old Smokey\nOld Smokey is a euphemistic name given to the state prison electric chair in New Jersey, which is on display at the New Jersey State Police Museum.\n\n The chair's most notorious victim was Richard Hauptmann, the man executed in the chair after being found guilty of abducting and killing Charles Augustus Lindbergh, Jr. in 1932, the 20-month-old son of famous aviators Charles Lindbergh and Anne Morrow Lindbergh \"(see Lindbergh kidnapping)\".",
+    "Sten Forshufvud\nSten Gabriel Bernhard Forshufvud (9 February 1903 – 25 June 1985) was a Swedish dentist and physician, and amateur toxicologist (expert on poisons) who formulated and supported the controversial theory that Napoleon was assassinated by a member of his entourage while in exile.\n\n He wrote a book, in Swedish, about this in 1961, which was translated the following year as \"Who Killed Napoleon?\"\n\n He later published his ideas in English, in the 1983 book \"Assassination At St. Helena: The Poisoning Of Napoleon Bonaparte,\" a book on whose authorship Ben Weider, co-author (with David Hapgood) of the book \"The Murder Of Napoleon,\" published the year earlier, which also advanced Forshufvud's ideas, collaborated.",
+    "The Last Mile (play)\nThe Last Mile is a Broadway play by John Wexley that ran for 289 performances from February 13, 1930 to October 1930 at the Sam H. Harris Theatre.\n\n It was produced by Herman Shumlin and staged by Chester Erskine.\n\n It is set in the death row wing of a prison.\n\n The lead role of John \"Killer\" Mears was first played by Spencer Tracy, and it was the role that bought him to the attention of Hollywood.\n\n It was later played for a time by Clark Gable.\n\n The play was adapted into a 1932 film starring Preston Foster and into a 1959 film starring Mickey Rooney.",
+    "The Journalist and the Murderer\nThe Journalist and the Murderer is a study by Janet Malcolm about the ethics of journalism, published by Alfred A. Knopf/Random House in 1990.\n\n It is an examination of the professional choices that shape a work of non-fiction, as well as a rumination on the morality that underpins the journalistic enterprise.\n\n The journalist in question is Joe McGinniss; the murderer is the former Special Forces captain Dr. Jeffrey R. MacDonald, who became the subject of McGinniss' 1983 book \"Fatal Vision\".",
+    "Johnny Jack Nounes\nJohnny Jack Nounes, also known as the \"Beau Brummell of Galveston\", was an organized crime boss in Galveston, Texas, United States, during the early 1900s.\n\n He, with one-armed George Musey, led the Downtown Gang, one of the two gangs which controlled most of the Galveston Crime Syndicate until the early 1930s.\n\n They fought for control of the island against the rival Beach Gang led by Ollie Quinn and Dutch Voight.\n\n As the prohibition era began, his gang came to be one of the dominant forces in the Galveston Crime Syndicate.\n\n Galveston became the main port of entry for liquor supply in Texas and many parts of the Midwest.",
+    "Richard Hauptmann\nBruno Richard Hauptmann (November 26, 1899 – April 3, 1936) was a German-born carpenter who was convicted of the abduction and murder of the 20-month-old son of aviator Charles Lindbergh and his wife Anne Morrow Lindbergh.\n\n The Lindbergh kidnapping became known as \"The Crime of the Century\".\n\n Hauptmann proclaimed his innocence to the end, but he was convicted of first degree murder and executed in 1936 in the electric chair at the New Jersey State Prison.",
+    "Old Sparky\nOld Sparky is the nickname of the electric chairs in Arkansas, Connecticut, Florida, Georgia, Illinois, Kentucky, Nebraska, New York, Ohio, Oklahoma, South Carolina, Texas, Virginia, and West Virginia.\n\n Old Smokey was the nickname of the electric chairs used in New Jersey, Pennsylvania, and Tennessee."
+   ]
+  },
+  {
+   "id": "eeeb38b624293a41",
+   "gold": [
+    {
+     "sentence": " Although called a \"city\", Qionghai refers to a large land area in Hainan - an area which was once a county.",
+     "facts": {
+      "0.0": "Qionghai is called a city.",
+      "0.1": "Qionghai refers to a large land area in Hainan.",
+      "0.2": "The area of Qionghai in Hainan was once a county."
+     }
+    },
+    {
+     "sentence": " It has an area of 1692 km2 and in 2010, it had a population of 483,217.",
+     "facts": {
+      "1.0": "Qionghai has an area of 1692 km2.",
+      "1.1": "Qionghai had a population of 483,217 in 2010."
+     }
+    },
+    {
+     "sentence": "Suining (; Sichuanese Pinyin: Xunin; Sichuanese pronunciation: ; ) is a prefecture-level city of eastern Sichuan province in Southwest China.",
+     "facts": {
+      "2.0": "Suining has the Sichuanese Pinyin Xunin.",
+      "2.1": "Suining is a prefecture-level city.",
+      "2.2": "Suining is in eastern Sichuan province.",
+      "2.3": "Sichuan province is in Southwest China."
+     }
+    },
+    {
+     "sentence": " In 2002, Suining had a population of 658,798.",
+     "facts": {
+      "3.0": "Suining had a population of 658,798 in 2002."
+     }
+    }
+   ],
+   "items": [
+    "Dongtai\nDongtai () is a coastal county-level city under the administration of Yancheng, Jiangsu province, China.\n\n It has a population of roughly 1,170,000 estimated for 2007.\n\n Out of the total population, about 260,000 live in the Dongtai urban core, others are distributed in the 23 suburban towns and rural regions (Some famous towns include Touzao, Anfeng, Qingdong, Sancang, Qianggang, Fu'an, Tangyang, etc.).\n\n With some Yellow Sea coast, it borders the prefecture-level cities of Nantong to the south and Taizhou to the west, and is the southernmost county-level division of Yancheng.",
+    "Qinghe District, Tieling\nQinghe District () is a district of Tieling, Liaoning province, People's Republic of China.\n\n However, it is located closer to Kaiyuan City than it is to downtown Tieling, which lies 39 km to the southwest.",
+    "Dujiangyan City\nDujiangyan () is a county-level city, a subdivision of Chengdu, the capital of Sichuan Province, People's Republic of China.\n\n Its north-west region forms a border with sourthern Ngawa Tibetan and Qiang Autonomous Prefecture.\n\n It has an area of 1208 km2 and had a population of 600,000 in 2003.",
+    "Kaiyuan, Liaoning\nKaiyuan () is a county-level city in the northeast of Liaoning, People's Republic of China, bordering Jilin for a small section to the north.\n\n It is under the administration of Tieling City, the centre of which lies 33 km to the southwest.",
+    "Xingcheng\nXingcheng (), former name Ningyuan (宁远), is a county-level city of southwest Liaoning province, China, with a population of approximately 140,000 urban inhabitants, and is located on the Liaodong Bay, i.e. the northern coast of the Bohai Sea.\n\n Currently under the administration of Huludao City, the area is steeped in history, and contains one of the best preserved Ming Dynasty towns in China, as well as functioning as a laidback summer resort.",
+    "Suining\nSuining (; Sichuanese Pinyin: Xunin; Sichuanese pronunciation: ; ) is a prefecture-level city of eastern Sichuan province in Southwest China.\n\n In 2002, Suining had a population of 658,798.",
+    "Ezhou\nEzhou () is a prefecture-level city in eastern Hubei Province, China.\n\n As of the 2010 census, the city had a population of 1,048,668, of which 668,727 lived in the core Echeng District.\n\n The Ezhou - Huanggang built-up (\"or metro\") area was home to 1,035,496 inhabitants from the Echeng and Huangzhou, Huanggang Districts.",
+    "Daying County\nDaying County () is a county of Sichuan province, China, under the administration of Suining City and in the central part of the Sichuan Basin.\n\n In 2002, it had a population of 520,000 residing in an area of 703 km2 .\n\n Daying is remarkable for being the home of the \"Chinese Dead Sea\", a tourist attraction that is based on a salt lake with 9 times the salinity of the ocean and which constitutes the largest indoor water park in China.\n\n The G42 Shanghai–Chengdu Expressway and Dazhou–Chengdu Railway (达成铁路) traverses east–west through the entire length of the county.",
+    "Qionghai\nQionghai () is one of the seven county-level cities of Hainan province, China.\n\n Although called a \"city\", Qionghai refers to a large land area in Hainan - an area which was once a county.\n\n Within this area is the main city, Qionghai City.\n\n It is located in the east of the island at the mouth of the Wanquan River, 86 km from the provincial capital of Haikou.\n\n It has an area of 1692 km2 and in 2010, it had a population of 483,217.",
+    "Longkou\nLongkou (), formerly Huang County (), is a port city in northeastern Shandong province, China, facing the Bohai Sea to the north and the Laizhou Bay to the west.\n\n Longkou, a county-level city, is administered by the prefecture-level city of Yantai.\n\n The total population of Longkou is 620,000."
+   ]
+  }
+ ]
+}

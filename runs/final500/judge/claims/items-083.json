@@ -1,0 +1,77 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5a8d40715542994ba4e3dc3a",
+   "sentences": [
+    "The Night of the Arts (Finnish: \"Taiteiden yö\" , Swedish: \"Konstens natt\" ) is an annual event held in several major cities in Finland, in late August.",
+    " It is one of many White Night festivals held worldwide.",
+    "The White Nights are a kind of all-night arts festival held in many cities in the summer.",
+    " The \"white nights\" is the name given in areas of high latitude to the weeks around the summer solstice in June during which sunsets are late, sunrises are early and darkness is never complete."
+   ]
+  },
+  {
+   "id": "-4553359052770918451",
+   "sentences": [
+    "The Eastern Coastal Plains refers to a wide stretch of landmass of India , lying between the Eastern Ghats and the Bay of Bengal . It is wider and leveled than the western coastal plains and stretches from Tamil Nadu in the south to West Bengal in the north through Andhra Pradesh and Odisha . Chilka Lake is a brackish water lake along the eastern coastal plain . It lies in the state of Odisha and stretches to the south of the Mahanadi Delta .",
+    "It is locally known as Utkal Plains in the Northern part between Cossye and Rushikulya Rivers , Northern Circars in the Central part between Rushikulya and Krishna Rivers and , as Coromandel Coast in the Southern part from the south of river Krishna till the Southern tip of Mainland India at Cape Comorin where it merges with the Western Coastal Plains ."
+   ]
+  },
+  {
+   "id": "2374750245195224966",
+   "sentences": [
+    "`` For What It 's Worth ( Stop , Hey What 's That Sound ) '' ( often referred to as simply `` For What It 's Worth '' ) is a song written by Stephen Stills . It was performed by Buffalo Springfield , recorded on December 5 , 1966 , and released as a single on Atco Records in January 1967 . The single peaked at number seven on the Billboard Hot 100 chart . This song is currently ranked number 63 on Rolling Stone 's list of The 500 Greatest Songs of All Time as well as the eighth best song of 1967 by Acclaimed Music ."
+   ]
+  },
+  {
+   "id": "5ab741005542992aa3b8c800",
+   "sentences": [
+    " Dan Hurley is the son of Hall of Fame high school coach Bob Hurley and younger brother of former Duke and Sacramento Kings guard Bobby Hurley.",
+    "Robert Matthew Hurley (born June 28, 1971) is an American basketball coach, and former college and professional player.",
+    " Hurley is currently the head coach of the Arizona State men's team."
+   ]
+  },
+  {
+   "id": "5a7aa0a55542990198eaf165",
+   "sentences": [
+    " His experimental works are well known and appropriately discussed in Malayalam Cinema industry and his debut movie Jalachhayam (2010) was well discussed according to its experimental approach.",
+    "Jacques Feyder (] ; 21 July 1885 – 24 May 1948) was a Belgian actor, screenwriter and film director who worked principally in France, but also in the USA, Britain and Germany."
+   ]
+  },
+  {
+   "id": "5ab56e32554299637185c594",
+   "sentences": [
+    "The Random House Tower, also known as the Park Imperial Apartments, is a 52-story mixed-use tower in New York City, United States, that is used as the headquarters of book publisher Random House and a luxury apartment complex.",
+    " It currently carries the Vornado Realty Trust corporate headquarters."
+   ]
+  },
+  {
+   "id": "5ac097b05542996f0d89cc18",
+   "sentences": [
+    "Ruggero Deodato (born 7 May 1939) is an Italian film director, screenwriter, and actor.",
+    "Alejandro Springall is a Mexican film director and producer."
+   ]
+  },
+  {
+   "id": "-3310154792386934413",
+   "sentences": [
+    "The Astros played in the NL from 1962 to 2012 . They played in the West Division from 1969 to 1993 , and the Central Division from 1994 to 2012 . While a member of the NL , the Astros played in one World Series , in 2005 , against the Chicago White Sox , in which they were swept in four games . In 2017 , they became the first franchise in MLB history to have won a pennant in both the NL and the AL , when they defeated the New York Yankees in the ALCS . They subsequently won the 2017 World Series against the Los Angeles Dodgers , winning four games to three , earning the team , and Texas , its first World Series title ."
+   ]
+  },
+  {
+   "id": "5a8b91d25542995d1e6f13fc",
+   "sentences": [
+    "Carly Gullickson (born November 26, 1986) is a former American professional tennis player.",
+    "Francesca Schiavone (] ; born 23 June 1980 in Milan) is an Italian tennis player who turned professional in 1998."
+   ]
+  },
+  {
+   "id": "5ac4efa85542991943173a04",
+   "sentences": [
+    " It flows in a west to east direction from the western part of the state in the Everglades past the Miami International Airport to a salinity control center near the Miami River.",
+    "The Genesee River is a tributary of Lake Ontario flowing northward through the Twin Tiers of Pennsylvania and New York in the United States."
+   ]
+  }
+ ]
+}

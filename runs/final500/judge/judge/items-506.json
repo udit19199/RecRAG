@@ -1,0 +1,436 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "ce9282f8c4c75415",
+   "gold": [
+    {
+     "sentence": "Hayley Nichole Williams (born December 27, 1988) is an American singer, songwriter and musician.",
+     "facts": {
+      "0.0": "Hayley Nichole Williams was born on December 27, 1988.",
+      "0.1": "Hayley Nichole Williams is an American singer.",
+      "0.2": "Hayley Nichole Williams is an American songwriter.",
+      "0.3": "Hayley Nichole Williams is an American musician."
+     }
+    },
+    {
+     "sentence": " The band consists of Hayley Williams, Zac Farro and Taylor York.",
+     "facts": {
+      "1.0": "The band consists of Hayley Williams.",
+      "1.1": "The band consists of Zac Farro.",
+      "1.2": "The band consists of Taylor York."
+     }
+    },
+    {
+     "sentence": "Terrence Lee Glaze (born November 29, 1964, Columbus), known as Terry Lee, is a Texas-raised singer and guitarist who is most known for his work in American heavy metal bands Lord Tracy and Pantera.",
+     "facts": {
+      "2.0": "Terrence Lee Glaze was born on November 29, 1964, in Columbus.",
+      "2.1": "Terrence Lee Glaze is known as Terry Lee.",
+      "2.2": "Terry Lee is a Texas-raised singer.",
+      "2.3": "Terry Lee is a Texas-raised guitarist.",
+      "2.4": "Terry Lee is most known for his work in the American heavy metal band Lord Tracy.",
+      "2.5": "Terry Lee is most known for his work in the American heavy metal band Pantera."
+     }
+    }
+   ],
+   "items": [
+    "Zac Farro\nZachary Wayne \"Zac\" Farro (born June 4, 1990) is an American musician and drummer of the rock band Paramore.\n\n He is also the younger brother of Josh Farro, who is Paramore's former lead guitarist and backing vocalist.\n\n After he and his brother exited Paramore in 2010, Josh formed a band named Novel American, which Zac was also a part of.\n\n Zac is currently the sole member of the band HalfNoise.\n\n Farro rejoined Paramore on February 2, 2017.",
+    "Terry Ray (actor)\nHe wrote and starred in two more shows at the Dorothy Chandler Pavilion, one co-starring Amanda Bynes and the other Hilary Duff.\n\n<br><br>Terry is also the voice of the \"Gaydar Gun\", a spinoff toy from the film Gaydar.",
+    "Sunshine Becker\nSunshine Becker (born Sunshine Flower Garcia on July 1, 1972) is an American singer who performed backing vocals for the band Furthur.\n\n Despite her maiden name, Garcia, she is not related to Jerry Garcia, an incorrect assumption made by some because of her involvement with Furthur, a post-Garcia incarnation of the Grateful Dead.\n\n Similarly, despite her first name, Sunshine, she is not to be confused with Sunshine Kesey, daughter of Ken Kesey and Carolyn Adams (aka Mountain Girl or MG), Jerry Garcia's second wife.",
+    "Jason White (musician)\nJason White (born November 11, 1973) is an American musician, best known as the current touring guitarist for the American punk rock band Green Day.\n\n He has played as a touring member of Green Day since 1999.\n\n However, in 2012, he was promoted to being an official member of the band before demoting himself back to his touring guitarist role in 2016.\n\n He is also the guitarist/vocalist for the Californian punk band Pinhead Gunpowder, lead guitarist/lead vocalist for California, and co-founder of Adeline Records alongside Billie Joe Armstrong.",
+    "Terry Glaze\nTerrence Lee Glaze (born November 29, 1964, Columbus), known as Terry Lee, is a Texas-raised singer and guitarist who is most known for his work in American heavy metal bands Lord Tracy and Pantera.",
+    "Hayley Williams (ice hockey)\nHayley Williams (born June 3, 1990) is an American professional ice hockey player for the Brampton Thunder of the Canadian Women's Hockey League (CWHL).\n\n Williams has previously played for the Buffalo Beauts in the National Women's Hockey League (NWHL).",
+    "Paramore\nParamore is an American rock band from Franklin, Tennessee, formed in 2004.\n\n The band currently consists of lead vocalist Hayley Williams, guitarist Taylor York and drummer Zac Farro.",
+    "Tony Hiller\nAnthony Toby \"Tony\" Hiller (born 30 July 1927) is a British songwriter.\n\n He began his musical career as a member of the song and dance duo The Hiller Brothers, sharing the stage with his brother Irving.\n\n The Hiller Brothers appeared with many artists of the time including Alma Cogan, Tommy Cooper, Val Doonican, Matt Monro, The Shadows, Bernard Manning, Kathy Kirby, Roger Whittaker, Rip Taylor, Gene Vincent, Lance Percival, Tessie O'Shea, Frank Ifield, Deep River Boys, The Dallas Boys, Clark Brothers, Paul Melba and Ray Burns.",
+    "Hayley Williams\nHayley Nichole Williams (born December 27, 1988) is an American singer, songwriter and musician.\n\n She serves as the lead vocalist, primary songwriter and occasional keyboardist of the rock band Paramore.\n\n The band was formed in 2004 by Josh Farro, Zac Farro, Jeremy Davis and Williams.\n\n The band consists of Hayley Williams, Zac Farro and Taylor York.\n\n The band has five studio albums: \"All We Know Is Falling\" (2005), \"Riot!\n\n\" (2007), \"Brand New Eyes\" (2009), \"Paramore\" (2013) and \"After Laughter\" (2017).",
+    "Terry Ray (actor)\nTerry Ray (born February 12, 1961) is an American actor, screenwriter, and producer.\n\n Some of his work includes \"Gaydar\" and \"Cost of Living\" (2009).\n\n Ray is the creator and writer of \"here!\n\n TV\"'s sitcom \"From Here on OUT\", the first original gay sitcom created by a gay network.\n\n Terry stars in the sitcom, along with Juliet Mills, Suzanne Whang and T.J. Hoban.\n\n<br><br>Terry Ray's 1987 appearance on Scrabble (game show) is noted as number 3 in the \"10 Great Gay Moments in Game Show History\", after Charles Nelson Reilly and Paul Lynde.\n\n In the same appearance, Terry was also named as one of the \"5 Weirdest Game Show Contestants Ever\", by Movieline.\n\n<br><br>Terry’s first professional writing job was the stage performance “Hollywood Goes Classical\" at the venerable Dorothy Chandler Pavilion starring Mickey Rooney, Michael York, Dean Jones, Rhonda Fleming and several other classic film stars."
+   ]
+  },
+  {
+   "id": "30f6f4f3b3bfd938",
+   "gold": [
+    {
+     "sentence": " It is most known through the 1989 single by Kathy Mattea, released in conjunction with her album \"Willow in the Wind\", though the song was first recorded and released on the 1987 Don Williams album \"Traces\" and also released in 1988 by Clark's husband on his album \"Old Friends\".",
+     "facts": {
+      "0.0": "This song is most known through the 1989 single by Kathy Mattea.",
+      "0.1": "The 1989 single by Kathy Mattea was released in conjunction with her album Willow in the Wind.",
+      "0.2": "This song was first recorded and released on the 1987 Don Williams album Traces.",
+      "0.3": "This song was also released in 1988 by Clark's husband on his album Old Friends."
+     }
+    },
+    {
+     "sentence": "This is a detailed discography for American country music artist Don Williams.",
+     "facts": {
+      "1.0": "The discography is detailed.",
+      "1.1": "The discography is for American country music artist Don Williams."
+     }
+    }
+   ],
+   "items": [
+    "Hjärtats trakt\nHjärtats trakt was released on 20 April 1993 and is a compilation album from Swedish pop artist Per Gessle.\n\n The album includes songs taken from Gessle's solo albums \"Per Gessle\" and \"Scener\".\n\n It was also released under license by the British record company Pickwick and it is the only Gessle album released by another label than EMI.\n\n In 1998 the album was re-released by the Dutch record company Disky Communications B.V. which is a subsidiary of EMI.",
+    "Streets of Heaven (song)\n\"Streets of Heaven\" is a song co-written and recorded by Australian country music artist Sherrié Austin.\n\n It was released in June 2003 as the first single and title track from her album \"Streets of Heaven\".\n\n Austin wrote the song with Paul Duncan and Al Kasha.",
+    "Come On (Earl King song)\n\"Come On\" (often called \"Let the Good Times Roll\") is a song written by New Orleans rhythm and blues artist Earl King.\n\n He first recorded the song as \"Darling Honey Angel Child\" in 1960 for the Ace Records subsidiary Rex.\n\n Later that year, he recorded it as a two-part song for Imperial Records using some new lyrics.\n\n Retitled \"Come On\", it was released in 1960 with \"Come On - Part I” as the A-side backed with “Come On - Part II” (Imperial 5713).",
+    "Leave Them Boys Alone\n\"Leave Them Boys Alone\" is a song recorded by American country music artist Hank Williams Jr. with Waylon Jennings and Ernest Tubb.\n\n It was released in May 1983 as the second single from Williams' album \"Strong Stuff\".\n\n The song reached number 6 on the \"Billboard\" Hot Country Singles chart.\n\n It was written by Williams, Dean Dillon, Gary Stewart and Tanya Tucker.\n\n The song is notable for its combination of two singers associated with the outlaw movement with a country legend from the honky tonk days and golden age of the Grand Ole Opry.\n\n Outlaw singers like Williams and Jennings saw themselves as taking country music back to its raw, honky tonk roots, and recording an up tempo song with Tubb (who would never have received radio airplay in the late 1970s and early 80's) and reaching #6 was a slap in the face to the proponents of the country pop sound.\n\n The lyrics of the song, much like Williams' \"Family Tradition\" echo the sentiment that the outlaw singers and their current escapades were predated by the hard living honky tonkers of the 1950s such as Hank Williams, Sr.",
+    "Night Is Fallin' in My Heart\n\"Night Is Fallin' in My Heart\" is a song written by Dennis Linde.\n\n The song was first recorded by Country music artist J.P. Pennington for his 1991 album, \"Whatever It Takes\".\n\n It was later recorded and released as a single in October 1994 by American country music group Diamond Rio.\n\n It was the second single released from their third album, \"Love a Little Stronger\".\n\n It peaked at number 9 in the United States, and number 6 in Canada.",
+    "Come from the Heart\n\"Come from the Heart\" is a country music song written by Richard Leigh and Susanna Clark and published in 1987.\n\n It is most known through the 1989 single by Kathy Mattea, released in conjunction with her album \"Willow in the Wind\", though the song was first recorded and released on the 1987 Don Williams album \"Traces\" and also released in 1988 by Clark's husband on his album \"Old Friends\".",
+    "Don Williams discography\nThis is a detailed discography for American country music artist Don Williams.",
+    "The Closer You Get...\nThe Closer You Get... is the seventh studio album by country music band Alabama, released in 1983.\n\n All three singles from this album — \"The Closer You Get\", \"Lady Down on Love\" and \"Dixieland Delight\" — reached Number One on the Hot Country Songs charts in 1983.\n\n \"She Put the Sad in All His Songs\" was also recorded by Ronnie Dunn (who formed the duo Brooks & Dunn with Kix Brooks in 1991) and was released by him as a single in 1983.",
+    "Every Beat of My Heart (song)\n\"Every Beat of My Heart\" is a rhythm and blues song by Johnny Otis.\n\n It was first recorded in 1954 by his group, The Royals (later to be known as The Midnighters).\n\n In 1961 Gladys Knight & the Pips recorded the song for their debut single on the Vee-Jay label.\n\n Credited to The Pips, it was the first of eleven releases by the group to make it to number one on the R&B/soul chart.\n\n It was also the group's first top ten on the \"Billboard\" Hot 100.\n\n \"Every Beat of My Heart\" was first recorded for the Huntom label, who later sold the master to Vee-Jay.\n\n At the time of the song's release, The Pips were on the Fury label where they re-recorded the song without piano.\n\n In an unusual occurrence, the Fury recording of the song also made the top twenty on the R&B Sides chart and also made the Hot 100.",
+    "Hate to See Your Heart Break\n\"Hate to See Your Heart Break\" is a song by American rock band Paramore, recorded for their 2013 self-titled fourth album \"Paramore\".\n\n It was re-recorded to feature vocals by Joy Williams (formerly of The Civil Wars) for the 2014 deluxe edition of the album, the first time Paramore has collaborated with another artist or group on a studio recording."
+   ]
+  },
+  {
+   "id": "283ee71e6eb211b4",
+   "gold": [
+    {
+     "sentence": "Sleepless in Seattle is a 1993 American romantic comedy-drama film directed and co-written by Nora Ephron, based on a story by Jeff Arch.",
+     "facts": {
+      "0.0": "Sleepless in Seattle is a 1993 film.",
+      "0.1": "Sleepless in Seattle is an American film.",
+      "0.2": "Sleepless in Seattle is a romantic comedy-drama film.",
+      "0.3": "Sleepless in Seattle was directed by Nora Ephron.",
+      "0.4": "Sleepless in Seattle was co-written by Nora Ephron.",
+      "0.5": "Sleepless in Seattle is based on a story by Jeff Arch."
+     }
+    },
+    {
+     "sentence": " It stars Tom Hanks and Meg Ryan, alongside a supporting cast featuring Bill Pullman, Ross Malinger, Rob Reiner, Rosie O'Donnell, Gaby Hoffmann, Victor Garber, and Rita Wilson.",
+     "facts": {
+      "1.0": "Sleepless in Seattle stars Tom Hanks.",
+      "1.1": "Sleepless in Seattle stars Meg Ryan.",
+      "1.2": "Sleepless in Seattle has a supporting cast featuring Bill Pullman.",
+      "1.3": "Sleepless in Seattle has a supporting cast featuring Ross Malinger.",
+      "1.4": "Sleepless in Seattle has a supporting cast featuring Rob Reiner.",
+      "1.5": "Sleepless in Seattle has a supporting cast featuring Rosie O'Donnell.",
+      "1.6": "Sleepless in Seattle has a supporting cast featuring Gaby Hoffmann.",
+      "1.7": "Sleepless in Seattle has a supporting cast featuring Victor Garber.",
+      "1.8": "Sleepless in Seattle has a supporting cast featuring Rita Wilson."
+     }
+    },
+    {
+     "sentence": "Roseann O'Donnell (born March 21, 1962) is an American comedian, actress, author, and television personality.",
+     "facts": {
+      "2.0": "Roseann O'Donnell was born on March 21, 1962.",
+      "2.1": "Roseann O'Donnell is an American comedian.",
+      "2.2": "Roseann O'Donnell is an American actress.",
+      "2.3": "Roseann O'Donnell is an American author.",
+      "2.4": "Roseann O'Donnell is an American television personality."
+     }
+    }
+   ],
+   "items": [
+    "Dennis Fimple\nDennis Clarke Fimple (November 11, 1940 – August 23, 2002) was an American character actor.\n\n He appeared in a variety of TV shows including \"Here Come the Brides\", \"Petticoat Junction\", \"Matt Houston\", \"M*A*S*H\", \"Centennial\", \"Simon & Simon\", \"Sledge Hammer!\n\n\", \"Knight Rider\", \"Quantum Leap\" and \"ER\".\n\n He also had roles in films such as \"Truck Stop Women\" (1974), \"The Apple Dumpling Gang\" (1975), \"Mackintosh and T.J.\" (1975), \"Stay Hungry\" (1976), \"King Kong\" (1976), \"The Shadow of Chikara\" (1977), \"Goin' South\" (1978), \"The Wild Women of Chastity Gulch\" (1982) and \"Maverick\" (1994), and shared the lead in \"Bootleggers\" (1974) and \"Creature from Black Lake\" (1976).",
+    "The 'Burbs\nThe 'Burbs is a 1989 American comedy thriller film directed by Joe Dante starring Tom Hanks, Bruce Dern, Carrie Fisher, Rick Ducommun, Corey Feldman, Wendy Schaal and Henry Gibson.\n\n The film was written by Dana Olsen, who also has a cameo in the movie.\n\n The film pokes fun at suburban environments and their eccentric dwellers.",
+    "Matthew Perry\nMatthew Langford Perry (born August 19, 1969) is a Canadian-American actor, best known for his role as Chandler Bing on the long-running NBC television sitcom \"Friends\", as well as his portrayal of Ron Clark in the 2006 television movie \"The Ron Clark Story\".",
+    "Marty Belafsky\nMarty Belafsky (born September 19, 1975) is an American actor/comedian born in Los Angeles, California.\n\n He began acting professionally at age 13 and was soon cast as Louis Plumb on the short-lived NBC series \"Hull High\".\n\n Shortly thereafter, Belafsky landed the role of Crutchy in the Disney musical film, \"Newsies\".\n\n He continued acting through his teens, making appearances in such television shows as \"The Wonder Years\", \"Great Scott\" and \"Step By Step\" and the film \"Wrestling Ernest Hemingway\".\n\n Belafsky also voiced Kent Swanson in the video game series \"Dead Rising\" released in 2006.",
+    "In My Sleep\nIn My Sleep is a 2010 suspense thriller film written, directed and produced by film director Allen Wolf.\n\n It stars Philip Winchester, Lacey Chabert, Tim Draxl, Abigail Spencer and Kelly Overton.\n\n It also features Kirsten Vangsness from Criminal Minds in a cameo role and Tony Hale from Veep in a cameo as well.\n\n The story is about a massage therapist with chronic insomnia who fears he may have murdered a good friend while sleepwalking.",
+    "Carrie Fisher\nCarrie Frances Fisher (October 21, 1956 – December 27, 2016) was an American actress, writer, and humorist.\n\n Fisher was known for playing Princess Leia in the \"Star Wars\" films; a role for which she was nominated for three Saturn Awards.\n\n Her other film roles included \"Shampoo\" (1975), \"The Blues Brothers\" (1980), \"Hannah and Her Sisters\" (1986), \"The 'Burbs\" (1989), \"When Harry Met Sally...\" (1989), \"Soapdish\" (1991) and \"The Women\" (2008 film).\n\n She was nominated twice for the Primetime Emmy Award for Outstanding Guest Actress in a Comedy Series for her performances on the television series \"30 Rock\" and \"Catastrophe\".\n\n She was posthumously made a Disney Legend in 2017.",
+    "Christopher Guest\nChristopher Haden-Guest, 5th Baron Haden-Guest (born February 5, 1948), simply known as Christopher Guest, is an English-American screenwriter, composer, musician, director, actor, and comedian who holds dual British and American citizenship.\n\n Guest is most widely known in Hollywood for having written, directed and starred in his series of comedy films shot in mock-documentary (mockumentary) style.\n\n Many scenes and character backgrounds in Guest's films are written and directed, although actors have no rehearsal time and the ensemble improvise scenes while filming them.\n\n The series of films began with \"This Is Spinal Tap\" (directed by Rob Reiner), and continued with \"Waiting for Guffman\", \"Best In Show\", \"A Mighty Wind\", \"For Your Consideration\", and \"Mascots\".",
+    "Rosie O'Donnell\nRoseann O'Donnell (born March 21, 1962) is an American comedian, actress, author, and television personality.\n\n She has been a magazine editor and continues to be a celebrity blogger, a lesbian rights activist, a television producer, and a collaborative partner in the LGBT family vacation company, R Family Vacations.",
+    "Terry Ray (actor)\nTerry Ray (born February 12, 1961) is an American actor, screenwriter, and producer.\n\n Some of his work includes \"Gaydar\" and \"Cost of Living\" (2009).\n\n Ray is the creator and writer of \"here!\n\n TV\"'s sitcom \"From Here on OUT\", the first original gay sitcom created by a gay network.\n\n Terry stars in the sitcom, along with Juliet Mills, Suzanne Whang and T.J. Hoban.\n\n<br><br>Terry Ray's 1987 appearance on Scrabble (game show) is noted as number 3 in the \"10 Great Gay Moments in Game Show History\", after Charles Nelson Reilly and Paul Lynde.\n\n In the same appearance, Terry was also named as one of the \"5 Weirdest Game Show Contestants Ever\", by Movieline.\n\n<br><br>Terry’s first professional writing job was the stage performance “Hollywood Goes Classical\" at the venerable Dorothy Chandler Pavilion starring Mickey Rooney, Michael York, Dean Jones, Rhonda Fleming and several other classic film stars.",
+    "Sleepless in Seattle\nSleepless in Seattle is a 1993 American romantic comedy-drama film directed and co-written by Nora Ephron, based on a story by Jeff Arch.\n\n It stars Tom Hanks and Meg Ryan, alongside a supporting cast featuring Bill Pullman, Ross Malinger, Rob Reiner, Rosie O'Donnell, Gaby Hoffmann, Victor Garber, and Rita Wilson.\n\n The film was a critical and commercial success, grossing over $220 million worldwide."
+   ]
+  },
+  {
+   "id": "93577ebdbd8a567a",
+   "gold": [
+    {
+     "sentence": "Steve Rash is an American film director and producer best known for directing such films as \"The Buddy Holly Story\", \"Can't Buy Me Love\", \"Queens Logic\", \"\" and \"\".",
+     "facts": {
+      "0.0": "Steve Rash is an American film director.",
+      "0.1": "Steve Rash is an American producer.",
+      "0.2": "Steve Rash is best known for directing The Buddy Holly Story.",
+      "0.3": "Steve Rash is best known for directing Can't Buy Me Love.",
+      "0.4": "Steve Rash is best known for directing Queens Logic.",
+      "0.5": "Steve Rash is best known for directing two further films whose titles are blank in the source text."
+     }
+    },
+    {
+     "sentence": "Can't Buy Me Love is a 1987 American teen romantic comedy feature film starring Patrick Dempsey and Amanda Peterson in a story about a nerd at a high school in Tucson, Arizona who gives a cheerleader $1,000 to pretend to be his girlfriend for a month.",
+     "facts": {
+      "1.0": "Can't Buy Me Love is a 1987 American film.",
+      "1.1": "Can't Buy Me Love is a teen romantic comedy feature film.",
+      "1.2": "Can't Buy Me Love stars Patrick Dempsey.",
+      "1.3": "Can't Buy Me Love stars Amanda Peterson.",
+      "1.4": "The story of Can't Buy Me Love is about a nerd at a high school in Tucson, Arizona.",
+      "1.5": "In Can't Buy Me Love, the nerd gives a cheerleader $1,000 to pretend to be his girlfriend for a month."
+     }
+    }
+   ],
+   "items": [
+    "Howard Rosenman\nHoward Rosenman (born February 1, 1945), also known as Zvi Howard Rosenman, is an American producer and motion picture executive.\n\n He specializes in producing romantic comedy films and documentary films.\n\n Some of his most popular productions include \"Father of the Bride\" (1991) starring Steve Martin and Diane Keaton, Joss Whedon's \"Buffy the Vampire Slayer\" (1992) and \"The Family Man\" (2000) starring Nicolas Cage.\n\n Rosenman's documentary film \"\" won the Peabody Award and the 1990 Academy Award for Best Documentary Feature; his film \"The Celluloid Closet\" also won the Peabody Award.",
+    "Can't Buy Me Love (film)\nCan't Buy Me Love is a 1987 American teen romantic comedy feature film starring Patrick Dempsey and Amanda Peterson in a story about a nerd at a high school in Tucson, Arizona who gives a cheerleader $1,000 to pretend to be his girlfriend for a month.\n\n The film was directed by Steve Rash and takes its title from a Beatles song with the same title.",
+    "Just Friends\nJust Friends is a 2005 American romantic comedy film directed by Roger Kumble, written by Adam 'Tex' Davis and starring Ryan Reynolds, Amy Smart, Anna Faris, Chris Klein and Christopher Marquette.\n\n The plot focuses on a formerly overweight high school nerd (Reynolds) who attempts to free himself from the friend zone after reconnecting with his lifelong crush and best friend (Smart) while visiting his hometown for Christmas.",
+    "Marty Belafsky\nMarty Belafsky (born September 19, 1975) is an American actor/comedian born in Los Angeles, California.\n\n He began acting professionally at age 13 and was soon cast as Louis Plumb on the short-lived NBC series \"Hull High\".\n\n Shortly thereafter, Belafsky landed the role of Crutchy in the Disney musical film, \"Newsies\".\n\n He continued acting through his teens, making appearances in such television shows as \"The Wonder Years\", \"Great Scott\" and \"Step By Step\" and the film \"Wrestling Ernest Hemingway\".\n\n Belafsky also voiced Kent Swanson in the video game series \"Dead Rising\" released in 2006.",
+    "Bring It On: All or Nothing\nBring It On: All or Nothing (previously known as Bring It On Yet Again) is a 2006 cheerleading comedy film directed by Steve Rash and starring Hayden Panettiere and Solange Knowles.\n\n It is the third installment in the \"Bring it On\" series of films that revolves around high school cheerleading.\n\n The film was released direct-to-DVD on August 8, 2006.",
+    "Brian Ralston\nBrian Ralston (born April 12, 1974) is a composer and musician living in Los Angeles.\n\n Ralston is a graduate of the University of Arizona and the USC Thornton School of Music Scoring for Motion Pictures and Television program.\n\n Brian's latest film is the 2017 drama Rose starring Cybill Shepherd, James Brolin and Pam Grier.\n\n In 2012 he scored the 20th Century Fox inspirational sports film Crooked Arrows, starring Brandon Routh, directed by Steve Rash.\n\n He has also composed music for the television series \"Angel\" (Season 4) and scores to the theatrical motion pictures \"9/Tenths\", directed by Bob Degus (\"Pleasantville\") starring Gabrielle Anwar, Henry Ian Cusick and Dave Ortiz, the Magnolia Pictures teen heist movie Graduation directed by Mike Mayer and starring Adam Arkin, Shannon Lucio, Chris Marquette, Riley Smith and Chris Lowell, and the dramatic feature Don't Fade Away directed by Luke Kasdan, starring Beau Bridges, Mischa Barton and Ryan Kwanten.",
+    "Steve Rash\nSteve Rash is an American film director and producer best known for directing such films as \"The Buddy Holly Story\", \"Can't Buy Me Love\", \"Queens Logic\", \"\" and \"\".",
+    "American Pie Presents: Band Camp\nAmerican Pie Presents: Band Camp (also known as American Pie: Band Camp) is a 2005 direct-to-DVD sex comedy film.\n\n It is the first installment in the \"American Pie Presents\" series and the fourth installment in the \"American Pie\" franchise.\n\n It was directed by Steve Rash and written by Brad Riddell.\n\n The film centers on Matt Stifler, younger brother of Steve Stifler.\n\n In this film, Matt is sent to the infamous band camp, where he is compelled to change his ways.",
+    "Jimmy Tatro\nJames Richard Tatro (born February 16, 1992) is an American actor, comedian, writer and YouTube personality.\n\n He is the creator and star of the YouTube channel \"LifeAccordingToJimmy\", which has about 2.7 million subscribers and over 440 million video views.\n\n Tatro writes, produces and directs each of his video sketches with his friend, Christian A. Pierce.\n\n Tatro has appeared in \"Divergent\", \"Grown Ups 2\", \"22 Jump Street\" and \"\", and will appear in the film \"Camp Manna\" alongside Gary Busey, set to be released in 2017.\n\n He is also starring in the true-crime satire, \"American Vandal\", in which he plays Dylan Maxwell, the accused vandal.\n\n He will also appear in the movie, Action No. 1, a film about a group of people who attempt to steal the first comic book with Superman off the actor Nicholas Cage.",
+    "Bring It On: In It to Win It\nBring It On: In It to Win It is a 2007 teen film directed by Steve Rash and starring Ashley Benson, Cassie Scerbo and Michael Copon."
+   ]
+  },
+  {
+   "id": "73fb398e5226f5db",
+   "gold": [
+    {
+     "sentence": " The album includes collaborations with Popcaan, Zhu, Leikeli47, Dreezy, Flume and Pell.",
+     "facts": {
+      "0.0": "The album includes a collaboration with Popcaan.",
+      "0.1": "The album includes a collaboration with Zhu.",
+      "0.2": "The album includes a collaboration with Leikeli47.",
+      "0.3": "The album includes a collaboration with Dreezy.",
+      "0.4": "The album includes a collaboration with Flume.",
+      "0.5": "The album includes a collaboration with Pell."
+     }
+    },
+    {
+     "sentence": "Steven Zhu (born 1989), known professionally as Zhu ( or ), is a Chinese American electronic musician and singer who has been active since the beginning of 2014, signed to Mind of a Genius Records and Columbia Records.",
+     "facts": {
+      "1.0": "Steven Zhu was born in 1989.",
+      "1.1": "Steven Zhu is known professionally as Zhu.",
+      "1.2": "Zhu is a Chinese American electronic musician.",
+      "1.3": "Zhu is a Chinese American singer.",
+      "1.4": "Zhu has been active since the beginning of 2014.",
+      "1.5": "Zhu is signed to Mind of a Genius Records.",
+      "1.6": "Zhu is signed to Columbia Records."
+     }
+    }
+   ],
+   "items": [
+    "Vektroid\nRamona Andra Xavier (born August 19, 1992, known by her primary alias Vektroid) is an American electronic musician from Portland, Oregon.\n\n She has released music under her primary Vektroid alias, as well as others, such as dstnt, Laserdisc Visions, New Dreams Ltd., Macintosh Plus, Virtual Information Desk, and PrismCorp Virtual Enterprises.\n\n Xavier played a prominent role in the popularization of the vaporwave subgenre with the release of her only studio album under her Macintosh Plus alias, \"Floral Shoppe\", in 2011.\n\n The album helped popularize the vaporwave genre throughout the Internet.\n\n Since then, she has continued to release music through Bandcamp and other online platforms, and has recently collaborated with rapper Siddiq on two albums, \"Midnight Run\" and \"Palacio Del Rio\" (both from 2016).",
+    "I Remember (AlunaGeorge album)\nI Remember is the second studio album by English electronic music duo AlunaGeorge.\n\n It was released on 16 September 2016 by Island Records.\n\n The album includes collaborations with Popcaan, Zhu, Leikeli47, Dreezy, Flume and Pell.\n\n The album's lead single, \"I'm in Control\", was released in February 2016, featuring vocals from rapper Popcaan, and peaked at number 39 on the UK Singles Chart.",
+    "Greg Davis (musician)\nGreg Davis is an American electronic musician who has recorded albums drawing from a wide variety of sources, including guitar, field recording, various world/ethnic/traditional instruments, percussion, and voice, all processed through digital manipulation.\n\n After years of experience in hip-hop groups, jazz combos, free improvisation, and experimental composition, Davis moved toward computer-based music in 1997.\n\n At Depaul University in Chicago, he studied classical and jazz guitar alongside composition and jazz studies.\n\n In 1997, he started his own label, Autumn Records, to release his own music and the music of others.\n\n Davis moved to Boston in 1999 to pursue a master's degree in composition (which he received in June 2001) while independently immersing himself in the study of electronic music.\n\n Since 2001, he has played shows all around the world and released records on a number of different labels.\n\n He has collaborated with Keith Fullerton Whitman, Ben Vida, Sebastien Roux, Chris Weisman, Steven Hess, Jeph Jerman, Akron/Family, Toby Aronson (as Harmonizer), and Zach Wallace (as Sun Circle).",
+    "Zhu (musician)\nSteven Zhu (born 1989), known professionally as Zhu ( or ), is a Chinese American electronic musician and singer who has been active since the beginning of 2014, signed to Mind of a Genius Records and Columbia Records.\n\n Until mid-2014, Zhu remained anonymous, asking to be judged by his music alone.\n\n His debut album, \"Generationwhy\", was released on 29 July 2016.",
+    "King Electric\nKing Electric is Chris Isepp and Peter Hartwig.\n\n They took their first musical attempts at the end of 1980s / beginning 1990s and first met each other at the upcoming and flourishing Viennese techno scene back in '92.\n\n While Hartwig was touring with the well known noise-pop band the Basket Boys, Isepp made first attentions as Electro DJ & Producer.",
+    "Lingdian\nZero Band () are a Chinese rock band from Inner Mongolia.\n\n The lead singer is Zhou Xiaoou (周晓鸥).\n\n The English name \"Zero Band\" was used in Beijing concert advertisements, though the band did not originally use an English name; the name has also been translated as \"Point Zero\" in some older English publications.\n\n The band appeared on the Jingwen label in China, but were licensed outside China by JVC.\n\n One of the top Beijing bands at the end of the 1990s, Lingdian originally suffered the same resistance from government-owned venues as other indigenous PRC rock bands.",
+    "Candy Chen\nCandy Chen (陳斯亞 born January 3, 1993) is a dancer, actress, host, singer, rapper and a model.\n\n She is featured on the Taiwanese variety shows: Blackie's Teenage Club and Blackie Lollipop.\n\n Candy was a member of the Taiwanese girl group Hey Girl from 2010 to 2011, and a member of from 2013 to 2016.\n\n She is 1/8th Dutch.\n\n She changed her name to Chen Yi-Ling in July 2012 to follow her mother's maiden name.\n\n Her English name becomes Nina Chen.\n\n In November 2013, she changed her name to Candy Chen (English Name) and Chen Si Ya (Chinese Name).",
+    "Kid Confucius\nKid Confucius were an eight-piece Australian band from Sydney, Australia.\n\n They formed in 2001 and have since played well over 400 live shows around the country, including major festivals as well as their own headline shows at venues such as The Annandale Hotel and The Metro Theatre.\n\n In 2005 the band released a self-titled album and two singles \"Words\" and \"Skintight.\"\n\n The album, a mish-mash of soul, hip-hop, pop and funk, received great critical acclaim, most notably from Rolling Stone who hailed the album as one of the standout local releases of the year.\n\n \"Words\" also enjoyed some solid months of radio and TV play.\n\n The band released its second album Stripes in 2007 with three singles \"Closer\", \"Last Straw\" and \"Moment\".\n\n Stripes was the band's attempt at making a Detroit-era Motown soul album and it was quick to earn rave reviews from press around the country as well as a publishing deal with Mushroom.\n\n \"Moment\" has enjoyed good radio play on triple j. Kid Confucius is set to release its third album in October 2008.\n\n The first single from this album, \"Good Luck\", is out now.",
+    "Graph query row:\nperson: Steven Zhu\nbirth_date: 1989\nrelationship: None\nalbum: I Remember",
+    "Cherushii\nCherushii (Chelsea Faith Dolan) (September 14, 1983 – December 2, 2016) was an American electronic music producer, DJ, live performer, and radio host based in San Francisco.\n\n Influenced by house music, Detroit techno, and disco, she released several recordings on the independent dance music label 100% Silk, including \"Queen of Cups\", \"Far Away So Close\", and \"Memory of Water\", reissued in 2017.\n\n KQED named Cherushii's album \"Meow Wolf’s Arcade Soundtracks: Wiggy’s Plasma Plex\" one of the 10 best bay area albums of 2016.\n\n While Cherushii has received little recognition from mainstream media, her music is of enormous influence in the underground music scene.\n\n Fellow electronic musician Maria Minerva has called Cherushii criminally underrated."
+   ]
+  },
+  {
+   "id": "67c085bc3b05f0a8",
+   "gold": [
+    {
+     "sentence": "Mediastan is a 2013 documentary film about the 2010 United States diplomatic cables leak, directed by Johannes Wahlström and produced by Julian Assange, Rebecca O'Brien and Lauren Dark.",
+     "facts": {
+      "0.0": "Mediastan is a documentary film.",
+      "0.1": "Mediastan was released in 2013.",
+      "0.2": "Mediastan is about the 2010 United States diplomatic cables leak.",
+      "0.3": "Mediastan was directed by Johannes Wahlström.",
+      "0.4": "Mediastan was produced by Julian Assange.",
+      "0.5": "Mediastan was produced by Rebecca O'Brien.",
+      "0.6": "Mediastan was produced by Lauren Dark."
+     }
+    },
+    {
+     "sentence": "Julian Paul Assange ( ; born Julian Paul Hawkins, 3 July 1971) is an Australian computer programmer and the founder of WikiLeaks, an organisation which he founded in 2006.",
+     "facts": {
+      "1.0": "Julian Paul Assange was born Julian Paul Hawkins.",
+      "1.1": "Julian Paul Assange was born on 3 July 1971.",
+      "1.2": "Julian Paul Assange is Australian.",
+      "1.3": "Julian Paul Assange is a computer programmer.",
+      "1.4": "Julian Paul Assange is the founder of WikiLeaks.",
+      "1.5": "WikiLeaks is an organisation.",
+      "1.6": "Julian Paul Assange founded WikiLeaks in 2006."
+     }
+    }
+   ],
+   "items": [
+    "Aryanto Yuniawan\nAryanto Yuniawan (born June 18, 1977 in Magelang; age 40) is Chief Executive Officer of PT Mataram Surya Visi Sinema, a multimedia and animation movie company located in Jogja Indonesia.\n\n Ary (his nickname) is best known as a director of Battle of Surabaya, the first 2D animation movie in Indonesia which got some awards i.e. Gold Remi Award USA 2016, GrandPrize Winner of SICAF 2016 in South Korea, Winner of Nice International Filmmaker Festival 2017 in France, Winner of Nioda International Film Festival in India and others.\n\n He is also acclaimed as a writer, a producer, and currently working on several articles and books related to his job and hobby.\n\n He started his career from directing and producing independent animation films including music videos.\n\n He was trusted to be one of the juries of several film festivals such as Festival Film Indonesia (FFI 2016), Noida International Film Festival (NIFF 2016), and Seoul International Cartoon and Animation Festival (SICAF 2017).",
+    "Ebba Witt-Brattström\nEbba Witt-Brattström (born 1953) is a Swedish scholar in comparative literature.\n\n She is Professor of Literature and head of department at Södertörn University outside Stockholm, and a well-known feminist.\n\n In the 1970s she was a member of the feminist organisation Grupp 8, and in 2005 she was one of the founders of the feminist political organisation and party Feministiskt Initiativ, although she later distanced herself from the organisation and criticized its alleged strong left-wing tendencies.",
+    "Loveleen Tandan\nLoveleen Tandan is an Indian film director and casting director.\n\n She is the \"Co-Director: India\" of the four time Golden Globe, seven time BAFTA Award and eight Academy Award winning (including best picture) \"Slumdog Millionaire\" (2008), for which she shared a New York Film Critics Online Award, Rotterdam International Film Festival Award and Amanda Awards, Norway, of \"Best Director\" with Danny Boyle.\n\n She has also been the Casting Director for several other films, including the Golden Lion winning and Golden Globe nominated \"Monsoon Wedding\" (2001) and the BAFTA Award nominated \"Brick Lane\" (2007).\n\n She has been a Casting Consultant for the Gotham Award and Independent Spirit Award nominated film \"The Namesake\" (2007).",
+    "Shamal Sabri\nShamal Sabri (Kurdish: شه‌مال سه‌بری), (born 9 November 1985), is an independent Kurdish award-winning film producer and Duhok International Film Festival Artistic Director, graduated from Duhok University with BA in English Literature.\n\n.\n\n He was born in the city of Duhok (Kurdish: دهوك) in Iraqi Kurdistan.\n\n Apart from being one of the co-founders of Duhok IFF in 2009, he has worked in many other fields of video productions, produced many commercials and music videos in NV Production and Vin TV.\n\n Throughout his film carrier, he has contributed in many award-winning films as an assistant director, production manager, assistant producer and line producer.\n\n His latest contributions were in many films such as \"Before Snowfall\" by Hisham Zaman, \"The Swallow\" by Mano Khalil, \"Memories on Stone\" by Shawkat Amin Korki and Michael by Kurdo Duski.",
+    "Faraz Anwar (film)\nFaraz Anwar – Documentary is a 2005 documentary film directed and produced by Haroon Sheikh.\n\n The documentary film follows the experience of Faraz Anwar, lead guitarist and vocalist of the Pakistani progressive rock band Mizraab, in the music industry.\n\n The documentary was released on November, 2005, by Poison Wood Productions.",
+    "Mediastan\nMediastan is a 2013 documentary film about the 2010 United States diplomatic cables leak, directed by Johannes Wahlström and produced by Julian Assange, Rebecca O'Brien and Lauren Dark.",
+    "Shajoon Kariyal\nHe debuted as a director with \"Rajaputhran\" (1996), starring Suresh Gopi, Shobhana and Vikram.\n\n He has directed many films, including the commercially successful \"Thachiledathu Chundan\" (1999) and the critically acclaimed \"Vadakkumnadhan\" (2006).\n\n After \"Vadakkumnadhan\", he planned two films, \"Raman Police\" and \"Talkies\", but both the projects did not work out.\n\n In 2012, he directed \"Chettayees\" which he also co-produced, as one of the five partners of the newly launched production house Thakkaali Films.\n\n His latest film is \"Sir C. P.\" (2015).",
+    "Shamal Sabri\nHe has proven himself over and over as an important player in Kurdistan's developing film industry and eventually earned the position of Artistic Director of Duhok IFF in 2016.\n\n Shamal is the head of submission committee for films representing Iraq in the Asia Pacific Screen Awards.",
+    "Julian Assange\nJulian Paul Assange ( ; born Julian Paul Hawkins, 3 July 1971) is an Australian computer programmer and the founder of WikiLeaks, an organisation which he founded in 2006.\n\n He has won accolades including the Sam Adams Award and Martha Gellhorn Prize for Journalism.",
+    "Admir Čavalić\nAdmir Čavalić is the Director of Association \"Multi\", a non-profit organization dedicated to promoting libertarian ideals in Bosnia and Herzegovina.\n\n \"Multi\" is the first non-profit organization registered in Bosnia and Herzegovina that advocates libertarian ideas.\n\n Čavalić is the director of OPEN Fest, biggest libertarian festival in Europe.\n\n Čavalić also works at Faculty of Economics University of Tuzla, as an assistant teacher.\n\n Čavalić with Dženan Smajić wrote \"Islam and Free Market\" in 2014.\n\n The book, that was published in Bosnian, provides arguments for Islam's connection with the ideas of economic liberalism.\n\n Čavalić made first bosnian documentary about economics, titled \"Economy\"."
+   ]
+  },
+  {
+   "id": "91c0c7e5eec43863",
+   "gold": [
+    {
+     "sentence": "George Albert Smith Sr. (April 4, 1870 – April 4, 1951) was an American religious leader who served as the eighth president of The Church of Jesus Christ of Latter-day Saints (LDS Church).",
+     "facts": {
+      "0.0": "George Albert Smith Sr. was born on April 4, 1870.",
+      "0.1": "George Albert Smith Sr. died on April 4, 1951.",
+      "0.2": "George Albert Smith Sr. was an American religious leader.",
+      "0.3": "George Albert Smith Sr. served as the eighth president of The Church of Jesus Christ of Latter-day Saints (LDS Church)."
+     }
+    },
+    {
+     "sentence": "Wong Jing ( born 3 May 1955) is a Hong Kong film director, producer, actor, presenter, and screenwriter.",
+     "facts": {
+      "1.0": "Wong Jing was born on 3 May 1955.",
+      "1.1": "Wong Jing is a Hong Kong film director.",
+      "1.2": "Wong Jing is a Hong Kong film producer.",
+      "1.3": "Wong Jing is a Hong Kong actor.",
+      "1.4": "Wong Jing is a Hong Kong presenter.",
+      "1.5": "Wong Jing is a Hong Kong screenwriter."
+     }
+    }
+   ],
+   "items": [
+    "What of the Mormons?\nHinckley wrote \"What of the Mormons?\"\n\n while he was employed as the Executive Secretary to the Church Radio, Publicity, and Mission Literature Committee.\n\n As part of the celebration of the 100th anniversary of the Mormon pioneers arriving in the Salt Lake Valley, Hinckley had been asked by church president George Albert Smith to write a book that would introduce the LDS Church to non-members.",
+    "Smith Fieldhouse\nThe George Albert Smith Fieldhouse is a 5,000 seat multi-purpose arena in Provo, Utah.\n\n Built in 1951, it is the home of the Brigham Young University Cougars volleyball teams and most home gymnastics meets.\n\n It was named for George Albert Smith, the eighth president of The Church of Jesus Christ of Latter-day Saints, who died the year the fieldhouse opened.\n\n Prior to the Marriott Center opening in 1971 it was home to the basketball teams.\n\n At that time, the arena held 10,500 people.\n\n Smith Fieldhouse also has a track and several offices used by BYU's athletic department.",
+    "D. Arthur Haycock\nDavid Arthur Haycock (September 4, 1916 – February 25, 1994) was a personal secretary to several twentieth-century presidents of The Church of Jesus Christ of Latter-day Saints (LDS Church), including George Albert Smith, Joseph Fielding Smith, Harold B. Lee, Spencer W. Kimball and Ezra Taft Benson.",
+    "Albert Smith Medal\nThe Albert Smith Memorial Medal is the award given to the Man of the Match in the final of the Camanachd Cup, the blue riband trophy of the sport of shinty.\n\n It has been presented every year since 1972 by the Smith family of Fort William in honour of Albert Smith Sr. (Born in 1888, Lochuanagan, Fort Augustus.)\n\n The widow of his only son, Albert Smith Jr. currently presents the medal.\n\n Albert Sr.'s grandson, Victor Smith is a former player for Fort William Shinty Club but never won the medal despite featuring as a key player in several Fort William wins.",
+    "Wong Jing\nWong Jing ( born 3 May 1955) is a Hong Kong film director, producer, actor, presenter, and screenwriter.\n\n A prolific filmmaker with strong instincts for crowd-pleasing and publicity, Wong Jin has played a prominent role in the Hong Kong cinema of the last quarter-century.",
+    "The X-Rays\nThe X-Rays (also known as The X-Ray Fiend) is a 1897 British short silent comedy film, directed by George Albert Smith, featuring a courting couple exposed to X-rays.\n\n The trick film, according to Michael Brooke of BFI Screenonline, \"contains one of the first British examples of special effects created by means of jump cuts\" Smith employs the jump-cut twice; first to transform his courting couple via \"X rays,\" dramatized by means of the actors donning black bodysuits decorated with skeletons, and then to return them to normal.\n\n The couple in question were played by Smith's wife Laura Bayley and Tom Green (a Brighton comedian).",
+    "George A. Smith\nGeorge Albert Smith (June 26, 1817 – September 1, 1875) (known throughout his life as George A. Smith) was an early leader in the Latter-day Saint movement.\n\n He served in the Quorum of the Twelve Apostles and as a member of the First Presidency of The Church of Jesus Christ of Latter-day Saints (LDS Church).",
+    "George Albert Smith\nGeorge Albert Smith Sr. (April 4, 1870 – April 4, 1951) was an American religious leader who served as the eighth president of The Church of Jesus Christ of Latter-day Saints (LDS Church).",
+    "Ba-Jia-Jiang\nBa Jia Jiang (八家將) originated from the Chinese folk beliefs and myths, and usually generally refers to eight members of the godly realm.\n\n The general understanding of the origin of Ba Jia Jiang is that it is derived from the existence of eight generals who performed exorcism of evil spirits for the Wufu Emperor (五福大帝).\n\n These eight generals became revered as the gods of the underworld, and are represented as the bodyguards or attendants for the temples of the nether Gods such as the Dongyue Emperor (東獄大帝), Yama (King of Hell, 閻羅王) and Cheng Huang (the City Gods, 城隍).\n\n Gradually Ba Jia Jiang evolved to appear also as bodyguards to Wang Ye (Royal Lord, 王爺) and Matsu (媽祖), and at many other temples.\n\n Later on, believers at those temples dressed up as Ba Jia Jiang in order to defend the Gods.",
+    "Laura Bayley\nLaura Eugenia Bayley (1864 – 1938) was a British actress and filmmaker, active in the Brighton School of early cinema pioneers.\n\n Born in Ramsgate, Bayley performed onstage in Victorian burlesques, revues, and pantomimes, often with her three sisters.\n\n After marrying the showman George Albert Smith, she entered the world of early experiments with motion picture film; she played main roles in many of the most important films Smith made between 1897 and 1903, including \"The Kiss in the Tunnel\" (1899) and \"Mary Jane's Mishap\" (1903)."
+   ]
+  },
+  {
+   "id": "89e905cbac2333dc",
+   "gold": [
+    {
+     "sentence": "Miltoniopsis, abbreviated Mltnps in horticultural trade, is a genus of orchids native to Costa Rica, Panama, Venezuela, Colombia, Ecuador, and Peru.",
+     "facts": {
+      "0.0": "Miltoniopsis is a genus of orchids.",
+      "0.1": "Miltoniopsis is abbreviated Mltnps in horticultural trade.",
+      "0.2": "Miltoniopsis is native to Costa Rica, Panama, Venezuela, Colombia, Ecuador, and Peru."
+     }
+    },
+    {
+     "sentence": "Strobilanthes is a genus of about 350 species of flowering plants in the family Acanthaceae, mostly native to tropical Asia and Madagascar, but with a few species extending north into temperate regions of Asia.",
+     "facts": {
+      "1.0": "Strobilanthes is a genus of about 350 species of flowering plants.",
+      "1.1": "Strobilanthes is in the family Acanthaceae.",
+      "1.2": "Strobilanthes is mostly native to tropical Asia and Madagascar.",
+      "1.3": "A few Strobilanthes species extend north into temperate regions of Asia."
+     }
+    }
+   ],
+   "items": [
+    "Clinantheae\nClinantheae is a tribe (in the family Amaryllidaceae, subfamily Amaryllidoideae), where it forms part of the Andean clade, one of two American clades.\n\n The tribe was described in 2000 by Alan Meerow \"et al.\" as a result of a molecular phylogenetic study of the American Amaryllidoideae.\n\n This demonstrated that the Stenomesseae tribe, including the type genus \"Stenomesson\" was polyphyletic.\n\n Part of the tribe segregated with the Eucharideae and were submerged into it, while the other part formed a unique subclade.\n\n Since the type species of \"Stenomesson\" was not part of the second sublclade it was necessary to form a new name for the remaining species together with the other genera that remained.\n\n This was \"Clinanthus\", the oldest name for these species, and consequently the tribe Clinantheae.",
+    "Hemigraphis\nHemigraphis is a genus of plants in the family Acanthaceae, consisting of about 30 species native to tropical Asia.\n\n \"Hemigraphis\" is sometimes included in the genus \"Strobilanthes\"",
+    "Tritoniopsis\nTritoniopsis is a genus of flowering plants in the family Iridaceae, first described as a genus in 1926.\n\n The entire genus is endemic to Cape Province in South Africa.\n\n The genus name refers to the African genus \"Tritonia\" and is combined with the Greek word \"opsis\", meaning \"look-alike\".",
+    "Strobilanthes\nStrobilanthes is a genus of about 350 species of flowering plants in the family Acanthaceae, mostly native to tropical Asia and Madagascar, but with a few species extending north into temperate regions of Asia.\n\n Many species are cultivated for their 2-lipped, hooded flowers in shades of blue, pink, white and purple.\n\n Most are frost-tender and require protection in frost-prone areas.",
+    "Miltoniopsis vexillaria\nMiltoniopsis vexillaria (\"the flag-like \"Miltoniopsis\"\") is a species of epiphytic orchid in the genus Miltoniopsis.",
+    "Stephanocereus\nStephanocereus is genus of cactus from Brazil, related to \"Arrojadoa\".\n\n This genus was monotypic until \"Pilosocereus luetzelburgii\" was included here, resulting in the combination \"Stephanocereus luetzelburgii\".",
+    "Nepenthes\nNepenthes ( ), also known as tropical pitcher plants, is a genus of carnivorous plants in the monotypic family Nepenthaceae.\n\n The genus comprises roughly 150 species, and numerous natural and many cultivated hybrids.\n\n They are mostly liana-forming plants of the Old World tropics, ranging from South China, Indonesia, Malaysia and the Philippines; westward to Madagascar (two species) and the Seychelles (one); southward to Australia (three) and New Caledonia (one); and northward to India (one) and Sri Lanka (one).\n\n The greatest diversity occurs on Borneo, Sumatra, and the Philippines, with many endemic species.\n\n Many are plants of hot, humid, lowland areas, but the majority are tropical montane plants, receiving warm days but cool to cold, humid nights year round.\n\n A few are considered tropical alpine, with cool days and nights near freezing.\n\n The name \"monkey cups\" refers to the fact that monkeys have been observed drinking rainwater from these plants.",
+    "Miltoniopsis\nMiltoniopsis, abbreviated Mltnps in horticultural trade, is a genus of orchids native to Costa Rica, Panama, Venezuela, Colombia, Ecuador, and Peru.\n\n This genus comprises 5 species.\n\n Miltoniopsis's common name is Pansy Orchid.",
+    "Strobilanthes japonica\nStrobilanthes japonica is a flowering herbaceous perennial plant from Asia, one of around 350 plants of the genus \"Strobilanthes\".\n\n The 20–50 cm ornamental plant is cultivated in Japan and China, and blooms in autumn with 1.5 cm purple to white funnel-shaped flowers.",
+    "Myrsine\nMyrsine is a genus of flowering plants in the family Primulaceae.\n\n It was formerly placed in the family Myrsinaceae before this was merged into the Primulaceae.\n\n It is found nearly worldwide, primarily in tropical and subtropical areas.\n\n It contains about 200 species, including several notable radiations, such as the matipo of New Zealand and the kōlea of Hawaiʻ i (the New Zealand \"black matipo\", \"Pittosporum tenuifolium\", is not related to \"Myrsine\").\n\n In the United States, members of this genus are known as colicwood.\n\n Some species, especially \"M. africana\", are grown as ornamental shrubs."
+   ]
+  },
+  {
+   "id": "7a51de69bb8f4de2",
+   "gold": [
+    {
+     "sentence": "The Washington City Canal operated from 1815 until the mid-1850s in Washington, D.C. The canal connected the Anacostia River, called the \"Eastern Branch\" at that time, to Tiber Creek, the Potomac River, and later the Chesapeake and Ohio Canal (C&O).",
+     "facts": {
+      "0.0": "The Washington City Canal operated from 1815 until the mid-1850s.",
+      "0.1": "The Washington City Canal operated in Washington, D.C.",
+      "0.2": "The Washington City Canal connected the Anacostia River to Tiber Creek.",
+      "0.3": "The Washington City Canal connected the Anacostia River to the Potomac River.",
+      "0.4": "The Washington City Canal later connected the Anacostia River to the Chesapeake and Ohio Canal (C&O).",
+      "0.5": "The Anacostia River was called the 'Eastern Branch' at that time."
+     }
+    },
+    {
+     "sentence": "The Whitewater Canal, which was built between 1836 and 1847, spanned a distance of seventy-six miles and stretched from Lawrenceburg, Indiana on the Ohio River to Hagerstown, Indiana.",
+     "facts": {
+      "1.0": "The Whitewater Canal was built between 1836 and 1847.",
+      "1.1": "The Whitewater Canal spanned a distance of seventy-six miles.",
+      "1.2": "The Whitewater Canal stretched from Lawrenceburg, Indiana.",
+      "1.3": "Lawrenceburg, Indiana is on the Ohio River.",
+      "1.4": "The Whitewater Canal stretched to Hagerstown, Indiana."
+     }
+    }
+   ],
+   "items": [
+    "Washington City Canal\nThe Washington City Canal operated from 1815 until the mid-1850s in Washington, D.C. The canal connected the Anacostia River, called the \"Eastern Branch\" at that time, to Tiber Creek, the Potomac River, and later the Chesapeake and Ohio Canal (C&O).\n\n The canal fell into disuse in the late 19th century and the city government covered over or filled in various sections.",
+    "The entries cover historic U.S. canals, waterways, water systems, and sites. Transport canals include Beaver–Erie (136 miles), Delaware (60), Whitewater (76), and Susquehanna–Tidewater (43), plus interstate and regional routes; many declined with railroad competition. The Dismal Swamp Canal, opened in 1805 and closed in 2016, served the Intracoastal Waterway; nearby park and refuge protect the swamp.",
+    "Cincinnati and Whitewater Canal Tunnel\nThe Cincinnati and Whitewater Canal Tunnel is a historic yet abandoned canal tunnel in the southwestern corner of the U.S. state of Ohio.\n\n Located within the village of Cleves near Cincinnati, it was constructed in 1837 as part of the Whitewater Canal system.\n\n Since the canal's closure, it has largely been forgotten, but it has been designated a historic site.",
+    "Duck Creek Aqueduct\nDuck Creek Aqueduct, also known as the Metamora Aqueduct and Whitewater Canal Aqueduct, is a historic aqueduct carrying the Whitewater Canal over Duck Creek in Metamora Township, Franklin County, Indiana.\n\n It is the only surviving covered wood aqueduct in the United States as such it is a form of covered bridge.\n\n It is a single-span Burr through truss aqueduct and measures approximately 90 feet long, 25 feet wide, and 25 feet deep.\n\n The original aqueduct was built between 1839 and 1843.\n\n The present structure was built in 1846, after the original aqueduct was washed out in a flood.\n\n It was strengthened in 1868, and repaired in 1901.\n\n After abandonment and deterioration, the Duck Creek Aqueduct was restored to its present appearance in 1946-1949.",
+    "Dismal Swamp Canal\nThe Dismal Swamp Canal is located along the eastern edge of the Great Dismal Swamp in Virginia and North Carolina in the United States.\n\n It is the oldest continually operating man-made canal in the United States, opened in 1805, and closed in October 2016.\n\n It is part of the Intracoastal Waterway, an inland route, which parallels the east coast and offers boaters shelter from the Atlantic Ocean from Manasquan Inlet, New Jersey, to Brownsville, Texas.\n\n The route runs through bays, lakes, rivers, streams, and canals, and includes the Intracoastal Waterway running from Norfolk, Virginia, to the Florida Keys.",
+    "Pennsylvania and Ohio Canal\nThe Pennsylvania and Ohio Canal, also known as the P & O Canal, the Cross Cut Canal and the Mahoning Canal was a shipping canal which operated from 1840 until 1877 (though the canal was completely abandoned by 1872).\n\n It was unique in that it served to connect canals in two states (the Ohio and Erie Canal in Ohio and the Beaver and Erie Canal in Pennsylvania) and was funded by private interests.",
+    "New York’s Erie Canal heritage includes Lock 52 (1849–53), canal buildings and archaeological sites; the 1836–42 Broad Street Aqueduct later became a road and subway route. The 1905 song “Low Bridge” recalls mule-powered canal traffic. The 525-mile state canal system includes the Erie, Oswego, Cayuga–Seneca and Champlain canals. The Genesee River and tributaries Black Creek and Oatka Creek drain western New",
+    "Whitewater Canal\nThe Whitewater Canal, which was built between 1836 and 1847, spanned a distance of seventy-six miles and stretched from Lawrenceburg, Indiana on the Ohio River to Hagerstown, Indiana.",
+    "Brunswick–Altamaha canal\nThe Brunswick–Altamaha Canal was a 12-mile-long canal built to connect the Altamaha River to the city of Brunswick, Georgia at the Turtle River to transport goods from Brunswick's port to areas farther north and inland.\n\n It included locks on both ends of the canal.\n\n The canal was originally proposed in 1798 and after two failed charters (1826 and 1830), construction was started in 1836 by Thomas Butler King.\n\n The project was estimated to cost $450,000.\n\n The canal was finished and opened in 1854; however, by that time the canal was obsolete because of new railroads.\n\n The canal was closed by 1860.\n\n The Columbian mammoth was discovered during the construction of the canal.",
+    "Susquehanna and Tidewater Canal\nThe Susquehanna and Tidewater Canal between Wrightsville, Pennsylvania, and Havre de Grace, Maryland, at the head of Chesapeake Bay, provided an interstate shipping alternative to 19th-century arks, rafts, and boats plying the difficult waters of the lower Susquehanna River.\n\n Built between 1836 and 1840, it ran 43 mi along the west bank of the river and rendered obsolete an older, shorter canal along the east bank.\n\n Of its total length, 30 mi were in Pennsylvania and 13 mi in Maryland.\n\n Though rivalry between Philadelphia, Pennsylvania, and Baltimore, Maryland, delayed its construction, the finished canal brought increased shipments of coal and other raw materials to both cities from Pennsylvania's interior.\n\n Competition from railroads was a large factor in the canal's decline after 1855.\n\n Canal remnants, including a lock keeper's house, have been preserved in Maryland, and locks 12 and 15 have been preserved in Pennsylvania."
+   ]
+  },
+  {
+   "id": "c899bb76cf4a4a4e",
+   "gold": [
+    {
+     "sentence": "Vytautas Kevin Gerulaitis (July 26, 1954 – September 17, 1994) was an American professional tennis player.",
+     "facts": {
+      "0.0": "Vytautas Kevin Gerulaitis was born on July 26, 1954.",
+      "0.1": "Vytautas Kevin Gerulaitis died on September 17, 1994.",
+      "0.2": "Vytautas Kevin Gerulaitis was an American professional tennis player."
+     }
+    },
+    {
+     "sentence": "Heather Miriam Watson (born 19 May 1992) is a British tennis player and a Wimbledon Mixed Doubles Champion.",
+     "facts": {
+      "1.0": "Heather Miriam Watson was born on 19 May 1992.",
+      "1.1": "Heather Miriam Watson is a British tennis player.",
+      "1.2": "Heather Miriam Watson is a Wimbledon Mixed Doubles Champion."
+     }
+    }
+   ],
+   "items": [
+    "1977 Italian Open (tennis)\nThe 1977 Italian Open was a combined men's and women's tennis tournament that was played by men on outdoor clay courts at the Foro Italico in Rome, Italy.\n\n The men's tournament was part of the Colgate-Palmolive Grand Prix circuit while the women's tournament was part of the Colgate Series.\n\n The tournament was held from 16 May through 22 May 1977.\n\n The singles titles were won by eight-seeded Vitas Gerulaitis and fifth-seeded Janet Newberry who earned $21,000 and $6,000 first-prize money respectively.\n\n Gerulaitis competed despite being contracted to play for the Indiana Loves World Team Tennis (WTT) franchise and was fined $19,000 for failing to play Björn Borg in the weekend of the final.",
+    "Vitas Gerulaitis\nVytautas Kevin Gerulaitis (July 26, 1954 – September 17, 1994) was an American professional tennis player.\n\n In 1975, Gerulaitis won the men's doubles title at Wimbledon, partnering with Sandy Mayer.\n\n He won the men's singles title at one of the two Australian Open tournaments held in 1977 (Gerulaitis won the tournament that was held in December, while Roscoe Tanner won the earlier January tournament).\n\n Gerulaitis also won two Italian Open titles, in 1977 and 1979, and the WCT Finals in Dallas, in 1978.",
+    "Heather Watson\nHeather Miriam Watson (born 19 May 1992) is a British tennis player and a Wimbledon Mixed Doubles Champion.\n\n She is a former British No.1 and current British No. 2 behind Johanna Konta.",
+    "Michael Venus (tennis)\nMichael Venus (born 16 October 1987) is a New Zealand professional tennis player.\n\n He reached a career high singles ranking of 274 in July 2011, but is much better known as a leading doubles player with a huge serve.\n\n His highest ranking in this discipline is 12, gained in July 2017.\n\n He won the final of the 2017 French Open partnering with American Ryan Harrison, and followed that with a runner-up finish in the 2017 US Open mixed doubles with Chan Hao-ching of Chinese Taipei as his partner.",
+    "Victoria Azarenka career statistics\nThis is a list of the main career statistics of Belarusian professional tennis player, Victoria Azarenka.\n\n To date, Azarenka has won twenty WTA singles titles including two grand slam singles titles, six WTA Premier Mandatory singles titles and three WTA Premier 5 singles titles.\n\n She was also the runner-up at the 2011 WTA Tour Championships, 2012 US Open and 2013 US Open.\n\n Among other achievements, Azarenka was the bronze medalist in women's singles and Gold medalist in mixed doubles with her compatriot, Max Mirnyi at the 2012 London Olympics.",
+    "Kim Warwick\nKim Warwick (born 8 April 1952) is an Australian former professional male tennis player who competed on the ATP Tour from 1970–1987 reaching the final of the singles Australian Open in 1980.\n\n He defeated over 35 players ranked in the top 10 including Guillermo Vilas, Raul Ramerez, Vitas Gerulaitis, Jan Kodeš, Bob Lutz and Arthur Ashe.\n\n Warwick's career-high singles ranking was World No. 15, achieved in 1981.\n\n He won three singles titles and 26 doubles, including Australian Open 1978 (with Wojtek Fibak) and Australian Open 1980 and 1981, Roland Garros 1986 and also a runner-up in Australian Open 1985, all of them partnering fellow countryman Mark Edmondson.\n\n Partnering with Evonne Goolagong, he won the French Open 1972, defeating Françoise Dürr and Jean-Claude Barclay in the final 6–2, 6–4.\n\n Evonne and Kim were finalists in 1972 at Wimbledon against Rosie Casals and Ilie Năstase who won 6–4, 6–4.",
+    "Sharon Walraven\nSharon Walraven (born 19 June 1970, Schaesberg) is a Dutch wheelchair tennis player.\n\n She became paraplegic at age 23 after complications following a fall while she was ice-skating.\n\n She has won seven Grand Slams doubles titles partnering compatriot Esther Vergeer.\n\n At the 2008 Paralympics in Beijing she won the Gold medal in the women's doubles competition.\n\n At the 2000 Paralympics in Sydney she won a Silver medal in the women's singles competition.\n\n Walraven has a highest ranking of No.2 in singles and No.1 in doubles.",
+    "Iveta Benešová\nIveta Benešová (] ) (formerly Melzer, Czech: Melzerová ; born 1 February 1983) is a Czech former professional tennis player.\n\n She began playing tennis at age of 7 and turned professional in 1998 in Prague.\n\n She has won two WTA Tour events and one Grand Slam in mixed doubles partnering with Jürgen Melzer at the 2011 Wimbledon Championships.\n\n On 14 September 2012 she married Jürgen Melzer and adopted his family name.\n\n She announced her retirement from professional tennis via her Facebook page 13/08/2014.\n\n In 2015, she divorced Melzer and reverted to using her maiden name.",
+    "1974 Stadthalle Open – Singles\nVitas Gerulaitis won in the final 6–4, 3–6, 6–3, 6–2 against Andrew Pattison.",
+    "1979 World Championship Tennis Finals – Singles\nVitas Gerulaitis was the defending champion but lost in the semifinals to Björn Borg."
+   ]
+  },
+  {
+   "id": "7c867e6820ad36fe",
+   "gold": [
+    {
+     "sentence": "Martin Degville is (born 27 January 1961 in Walsall) is the lead singer and co-songwriter of the UK pop band, Sigue Sigue Sputnik – which had a worldwide hit single in 1986 with \"Love Missile F1-11\" – and six other EMI single releases.",
+     "facts": {
+      "0.0": "Martin Degville was born 27 January 1961 in Walsall.",
+      "0.1": "Martin Degville is the lead singer of the UK pop band Sigue Sigue Sputnik.",
+      "0.2": "Martin Degville is a co-songwriter of Sigue Sigue Sputnik.",
+      "0.3": "Sigue Sigue Sputnik had a worldwide hit single in 1986 with 'Love Missile F1-11'.",
+      "0.4": "Sigue Sigue Sputnik has six other EMI single releases."
+     }
+    },
+    {
+     "sentence": "Paul Richard \"Richie\" Furay (born May 9, 1944) is an American singer, songwriter, and Rock & Roll Hall of Fame member who is best known for forming the bands Buffalo Springfield with Stephen Stills, Neil Young, Bruce Palmer, and Dewey Martin, and Poco with Jim Messina, Rusty Young, George Grantham and Randy Meisner.",
+     "facts": {
+      "1.0": "Paul Richard 'Richie' Furay was born May 9, 1944.",
+      "1.1": "Richie Furay is an American singer.",
+      "1.2": "Richie Furay is an American songwriter.",
+      "1.3": "Richie Furay is a Rock & Roll Hall of Fame member.",
+      "1.4": "Richie Furay is best known for forming Buffalo Springfield with Stephen Stills, Neil Young, Bruce Palmer, and Dewey Martin.",
+      "1.5": "Richie Furay is best known for forming Poco with Jim Messina, Rusty Young, George Grantham, and Randy Meisner."
+     }
+    }
+   ],
+   "items": [
+    "Souther–Hillman–Furay Band\nThe Souther Hillman Furay Band (SHF) was a country rock supergroup led by singer-songwriters Richie Furay (Buffalo Springfield, Poco), Chris Hillman (The Byrds, The Flying Burrito Brothers, Manassas), and J.D. Souther (Longbranch Pennywhistle, noted songwriter for Linda Ronstadt and the Eagles).\n\n The band recorded two albums during the 1970s before breaking up due to disagreements between the members.",
+    "Dean Martin Sings\nDean Martin Sings is the first studio album by Italian-American singer Dean Martin, released in 1953.\n\n It is the first long-play 10-inch album recorded by Martin for Capitol Records during two sessions recorded on the evening of November 20, 1952.\n\n The first session was recorded between 5 and 8 PM and it produced five songs featuring string arrangements.\n\n \"There's My Lover\" was recorded but not released.\n\n After a ninety-minute break, Martin was joined by a brass arrangement to record the remaining four songs.\n\n Seven of the eight songs on this album appeared in the Martin & Lewis film, \"The Stooge\".\n\n Two years later, the songs from this 10-inch album would be combined with four newly popular songs recorded between 1951 and 1953 to create a full-length 12-inch album.\n\n The 2005 Collectors' Choice reissue added four bonus songs recorded between 1949 and 1953 and was released with alternative cover artwork.",
+    "Richie Furay\nPaul Richard \"Richie\" Furay (born May 9, 1944) is an American singer, songwriter, and Rock & Roll Hall of Fame member who is best known for forming the bands Buffalo Springfield with Stephen Stills, Neil Young, Bruce Palmer, and Dewey Martin, and Poco with Jim Messina, Rusty Young, George Grantham and Randy Meisner.\n\n His best known song (originally written during his tenure in Buffalo Springfield, but eventually performed by Poco, as well) was \"Kind Woman\", which he wrote for his wife, Nancy.",
+    "Sunshine Becker\nSunshine Becker (born Sunshine Flower Garcia on July 1, 1972) is an American singer who performed backing vocals for the band Furthur.\n\n Despite her maiden name, Garcia, she is not related to Jerry Garcia, an incorrect assumption made by some because of her involvement with Furthur, a post-Garcia incarnation of the Grateful Dead.\n\n Similarly, despite her first name, Sunshine, she is not to be confused with Sunshine Kesey, daughter of Ken Kesey and Carolyn Adams (aka Mountain Girl or MG), Jerry Garcia's second wife.",
+    "Sandy Rothman\nSandy Rothman (born January 30, 1946, Miami, Florida) is a San Francisco Bay Area bluegrass multi-instrumentalist and record producer.\n\n He plays mandolin, dobro and banjo, and he also sings.\n\n Rothman was a friend and colleague of Grateful Dead bandleader Jerry Garcia, and a member of the Jerry Garcia Acoustic Band.\n\n He played bluegrass with Garcia and David Nelson as the Black Mountain Boys in 1964, and has played with Bill Monroe and his Blue Grass Boys, Earl Taylor, Red Allen, Jimmie Skinner, Larry Sparks, the Kentucky Colonels, Country Joe McDonald, Kathy Kallick and Clarence White, among other musicians.\n\n He has been described as \"one of the chief biscuits when and where bluegrass music is discussed, scribed, or performed in northern California.\"",
+    "Dean Martin\nDean Martin (born Dino Paul Crocetti; June 7, 1917 – December 25, 1995) was an American singer, actor, comedian, and film producer.\n\n One of the most popular and enduring American entertainers of the mid-20th century, Martin was nicknamed the \"King of Cool\" for his seemingly effortless charisma and self-assurance.",
+    "Martin Degville\nMartin Degville is (born 27 January 1961 in Walsall) is the lead singer and co-songwriter of the UK pop band, Sigue Sigue Sputnik – which had a worldwide hit single in 1986 with \"Love Missile F1-11\" – and six other EMI single releases.\n\n Sputnik was formed with ex-Generation X bassist Tony James.",
+    "Jerry Garcia\nJerome John Garcia (August 1, 1942 – August 9, 1995) was an American singer-songwriter and guitarist, best known for his work as the lead guitarist and as a vocalist with the band the Grateful Dead, which came to prominence during the counterculture era in the 1960s.\n\n Although he disavowed the role, Garcia was viewed by many as the leader or \"spokesman\" of the group.",
+    "Poco: The Songs of Richie Furay\nPoco: The Songs of Richie Furay is a compilation album consisting of songs by Richie Furay during his tenure with the band Poco, released in 1980.",
+    "Lonesome Pine Fiddlers\nThe Lonesome Pine Fiddlers (1938- 1966) were an early bluegrass band which included such notable \"first generation\" bluegrass musicians as Ezra Cline, Bobby Osborne, Paul Williams, Melvin Goins, Charlie Cline, Curly Ray Cline, Larry Richardson and for a short time Jimmy Martin.\n\n The group was started by Ezra Cline and Curly Ray Cline and was originally named \"Cousin Ezra and the Lonesome Pine Fiddlers\".\n\n The Clines came from a large family consisting of musically talented people.\n\n Ray and Charlie's father, Charlie, was a talented banjo player and the women in the family, Geraldine and Bobbi, were great singers.\n\n For reasons unknown, Bobbi and Geraldine never joined the band on the road but often joined in at home, especially when notable Country singers, such as Bill Monroe, Lester Flatt and Earl Scruggs, and Hank Williams, came visiting.\n\n None of them ever had a music lesson yet excelled on every instrument they touched."
+   ]
+  }
+ ]
+}

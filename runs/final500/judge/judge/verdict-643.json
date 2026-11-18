@@ -1,0 +1,108 @@
+[
+{"id": "edf048a04fe0fa61", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "US Airways Flight 1549 was an Airbus A320-214"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "three minutes after takeoff from New York City's LaGuardia Airport on January 15, 2009"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "three minutes after takeoff from New York City's LaGuardia Airport on January 15, 2009"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "three minutes after takeoff from New York City's LaGuardia Airport on January 15, 2009, struck a flock of Canada geese"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 6, "quote": "Canada geese just northeast of the George Washington Bridge"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 6, "quote": "consequently lost all engine power"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Unable to reach any airport, pilots Chesley Sullenberger and Jeffrey Skiles glided the plane to a ditching in the Hudson River off Midtown Manhattan"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Unable to reach any airport, pilots Chesley Sullenberger and Jeffrey Skiles glided the plane to a ditching in the Hudson River off Midtown Manhattan"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "Unable to reach any airport, pilots Chesley Sullenberger and Jeffrey Skiles glided the plane to a ditching in the Hudson River off Midtown Manhattan"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "Chesley Burnett \"Sully\" Sullenberger III (born 1951)"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "Chesley Burnett \"Sully\" Sullenberger III (born 1951) is an American retired airline captain"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "celebrated for the January 15, 2009 water landing of US Airways Flight 1549 in the Hudson River off Manhattan"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "after the plane was disabled by striking a flock of Canada geese immediately after takeoff"}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 2, "quote": "all 155 people aboard survived"}]}
+]},
+{"id": "d668654190f345d2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Yucca is a genus of perennial shrubs and trees in the family Asparagaceae, subfamily Agavoideae"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Yucca is a genus of perennial shrubs and trees in the family Asparagaceae, subfamily Agavoideae"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Yucca is a genus of perennial shrubs and trees in the family Asparagaceae, subfamily Agavoideae"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Rodgersia is a genus of flowering plants in the Saxifragaceae family"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Rodgersia is a genus of flowering plants in the Saxifragaceae family"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "\"Rodgersia\" are herbaceous perennials originating from east Asia"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "\"Rodgersia\" are herbaceous perennials originating from east Asia"}]}
+]},
+{"id": "f41536f81ff5d7e2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Stephen Lawrence \"Steve\" Winwood (born 12 May 1948) is an English musician"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Stephen Lawrence \"Steve\" Winwood (born 12 May 1948) is an English musician"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "whose genres include rock, blue-eyed soul, rhythm and blues, blues rock, pop rock, and jazz"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Per \"Pelle\" Almqvist (born 29 May 1978), also known as Howlin' Pelle Almqvist, is a Swedish singer and songwriter"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Per \"Pelle\" Almqvist (born 29 May 1978), also known as Howlin' Pelle Almqvist, is a Swedish singer and songwriter"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "Per \"Pelle\" Almqvist (born 29 May 1978), also known as Howlin' Pelle Almqvist, is a Swedish singer and songwriter"}]}
+]},
+{"id": "a17ab7a383b04687", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Mr. Wilson's Cabinet of Wonder: Pronged Ants, Horned Humans, Mice on Toast, and Other Marvels of Jurassic Technology is a book by Lawrence Weschler"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Mr. Wilson's Cabinet of Wonder: Pronged Ants, Horned Humans, Mice on Toast, and Other Marvels of Jurassic Technology is a book by Lawrence Weschler"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "is a book by Lawrence Weschler primarily about the Museum of Jurassic Technology and, more broadly, the history and role of museums"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "is a book by Lawrence Weschler primarily about the Museum of Jurassic Technology and, more broadly, the history and role of museums"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The Museum of Jurassic Technology is a museum located at 9341 Venice Boulevard in the Palms district of Los Angeles, California"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "The Museum of Jurassic Technology is a museum located at 9341 Venice Boulevard in the Palms district of Los Angeles, California"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "The Museum of Jurassic Technology is a museum located at 9341 Venice Boulevard in the Palms district of Los Angeles, California"}]}
+]},
+{"id": "1c7d72a5a213df5a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "The Wire Fox Terrier is a breed of dog, one of many terrier breeds"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "The Wire Fox Terrier is a breed of dog, one of many terrier breeds"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "The West Siberian Laika or \"WSL\", is a breed of hunting dog and a breed of spitz type"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "The West Siberian Laika or \"WSL\", is a breed of hunting dog and a breed of spitz type"}]}
+]},
+{"id": "34b920c73fa0f6c4", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Fastbacks were a Seattle, Washington, punk rock band"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Fastbacks were a Seattle, Washington, punk rock band"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Local Natives (previously known as Cavil at Rest) is an American indie rock band based in Silver Lake, Los Angeles, California, United States"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Local Natives (previously known as Cavil at Rest) is an American indie rock band based in Silver Lake, Los Angeles, California, United States"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Local Natives (previously known as Cavil at Rest) is an American indie rock band based in Silver Lake, Los Angeles, California, United States"}]}
+]},
+{"id": "54900031cad8e876", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The first of the books was optioned by Universal Pictures after a bidding war over the manuscript"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "The first of the books was optioned by Universal Pictures after a bidding war over the manuscript"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "The company was founded in 1912 by Carl Laemmle, Mark Dintenfass, Charles O. Baumann, Adam Kessel, Pat Powers, William Swanson, David Horsley, Robert H. Cochrane, and Jules Brulatour"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "The company was founded in 1912 by Carl Laemmle, Mark Dintenfass, Charles O. Baumann, Adam Kessel, Pat Powers, William Swanson, David Horsley, Robert H. Cochrane, and Jules Brulatour"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "and is the oldest surviving film studio in the United States"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "the world's fourth oldest after Gaumont, Pathé and Nordisk Film"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 1, "quote": "and the oldest in terms of the overall film market"}]}
+]},
+{"id": "1486b8ad5bb1426f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "It occupies 40 km (15 sq mi) and it extends into each of the six municipalities on the island"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "It occupies 40 km (15 sq mi) and it extends into each of the six municipalities on the island"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Sierra de Guadarrama National Park (in Spanish: \"Parque Nacional de la Sierra de Guadarrama\") is a national park in Spain, covering nearly 34,000 hectares, the fifth largest in Spain's national parks system"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Sierra de Guadarrama National Park (in Spanish: \"Parque Nacional de la Sierra de Guadarrama\") is a national park in Spain, covering nearly 34,000 hectares, the fifth largest in Spain's national parks system"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Sierra de Guadarrama National Park (in Spanish: \"Parque Nacional de la Sierra de Guadarrama\") is a national park in Spain, covering nearly 34,000 hectares, the fifth largest in Spain's national parks system"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "Sierra de Guadarrama National Park (in Spanish: \"Parque Nacional de la Sierra de Guadarrama\") is a national park in Spain, covering nearly 34,000 hectares, the fifth largest in Spain's national parks system"}]}
+]},
+{"id": "14909a52ad178a4f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Dr. Seuss' The Cat in the Hat is a 2003 American family comedy film directed by Bo Welch"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Dr. Seuss' The Cat in the Hat is a 2003 American family comedy film directed by Bo Welch"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Dr. Seuss' The Cat in the Hat is a 2003 American family comedy film directed by Bo Welch"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "Dr. Seuss' The Cat in the Hat is a 2003 American family comedy film directed by Bo Welch"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "Dr. Seuss' The Cat in the Hat is a 2003 American family comedy film directed by Bo Welch"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Robert W. \"Bo\" Welch III (born November 30, 1951) is an American production designer and director"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Robert W. \"Bo\" Welch III (born November 30, 1951) is an American production designer and director"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Robert W. \"Bo\" Welch III (born November 30, 1951) is an American production designer and director"}]}
+]},
+{"id": "f008a6d5e5ae835c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Robert Harry Philibosian (born 1940) is an American politician"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Robert Harry Philibosian (born 1940) is an American politician"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "David R. Ignatius (May 26, 1950), is an American journalist and novelist"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "David R. Ignatius (May 26, 1950), is an American journalist and novelist"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "David R. Ignatius (May 26, 1950), is an American journalist and novelist"}]}
+]},
+{"id": "4d33d8e812472f6e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Cars 2 is a 2011 American computer-animated action comedy spy film produced by Pixar Animation Studios for Walt Disney Pictures"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Cars 2 is a 2011 American computer-animated action comedy spy film produced by Pixar Animation Studios for Walt Disney Pictures"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "Cars 2 is a 2011 American computer-animated action comedy spy film produced by Pixar Animation Studios for Walt Disney Pictures"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "Cars 2 is a 2011 American computer-animated action comedy spy film produced by Pixar Animation Studios for Walt Disney Pictures"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 6, "quote": "Cars 2 is a 2011 American computer-animated action comedy spy film produced by Pixar Animation Studios for Walt Disney Pictures"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 6, "quote": "Cars 2 is a 2011 American computer-animated action comedy spy film produced by Pixar Animation Studios for Walt Disney Pictures"}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 6, "quote": "Cars 2 is a 2011 American computer-animated action comedy spy film produced by Pixar Animation Studios for Walt Disney Pictures"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Lin-Manuel Miranda ( ; born January 16, 1980) is an American composer, lyricist, playwright, and actor best known for creating and starring in the Broadway musicals \"Hamilton\" and \"In the Heights\""}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Lin-Manuel Miranda ( ; born January 16, 1980) is an American composer, lyricist, playwright, and actor best known for creating and starring in the Broadway musicals \"Hamilton\" and \"In the Heights\""}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "Lin-Manuel Miranda ( ; born January 16, 1980) is an American composer, lyricist, playwright, and actor best known for creating and starring in the Broadway musicals \"Hamilton\" and \"In the Heights\""}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "Lin-Manuel Miranda ( ; born January 16, 1980) is an American composer, lyricist, playwright, and actor best known for creating and starring in the Broadway musicals \"Hamilton\" and \"In the Heights\""}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 1, "quote": "Lin-Manuel Miranda ( ; born January 16, 1980) is an American composer, lyricist, playwright, and actor best known for creating and starring in the Broadway musicals \"Hamilton\" and \"In the Heights\""}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "He co-wrote the songs for Disney's \"Moana\" soundtrack (2016) and is set to star in their upcoming film \"Mary Poppins Returns\""}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "He co-wrote the songs for Disney's \"Moana\" soundtrack (2016) and is set to star in their upcoming film \"Mary Poppins Returns\""}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "He co-wrote the songs for Disney's \"Moana\" soundtrack (2016) and is set to star in their upcoming film \"Mary Poppins Returns\""}]}
+]}
+]

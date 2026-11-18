@@ -1,0 +1,813 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=77f66c8c67a52b81 ===
+Gold sentences and facts:
+Sentence 0: In the 12th century , luxury increased and bedsteads were made of wood much decorated with inlaid , carved , and painted ornamentation . They also used folding beds , which served as couches by day and had cushions covered with silk laid upon leather . At night a linen sheet was spread and pillows placed , while silk - covered skins served as coverlets . The Carolingian manuscripts show metal bedsteads much higher at the head than at the feet , and this shape continued in use until the 13th century in France , many cushions being added to raise the body to a sloping position . In 12th - century manuscripts , the bedsteads appear much richer , with inlays , carving , and painting , and with embroidered coverlets and mattresses in harmony . Curtains were hung above the bed and a small hanging lamp is often shown .
+  Fact 0.0: In the 12th century, luxury increased.
+  Fact 0.1: In the 12th century, bedsteads were made of wood.
+  Fact 0.2: The wooden bedsteads were much decorated with inlaid, carved, and painted ornamentation.
+  Fact 0.3: Folding beds were used.
+  Fact 0.4: The folding beds served as couches by day.
+  Fact 0.5: The folding beds had cushions covered with silk laid upon leather.
+  Fact 0.6: At night a linen sheet was spread on the bed.
+  Fact 0.7: At night pillows were placed on the bed.
+  Fact 0.8: At night silk-covered skins served as coverlets.
+  Fact 0.9: Carolingian manuscripts show metal bedsteads much higher at the head than at the feet.
+  Fact 0.10: The shape of the metal bedsteads with a higher head continued in use until the 13th century in France.
+  Fact 0.11: Many cushions were added to raise the body to a sloping position.
+  Fact 0.12: In 12th-century manuscripts, bedsteads appear much richer.
+  Fact 0.13: The richer 12th-century bedsteads have inlays, carving, and painting.
+  Fact 0.14: The richer 12th-century bedsteads have embroidered coverlets and mattresses in harmony.
+  Fact 0.15: Curtains were hung above the bed.
+  Fact 0.16: A small hanging lamp is often shown.
+
+Retrieved items:
+<item 1>
+Bed
+Silk , velvet , and even cloth of gold were frequently used . Inventories from the beginning of the 14th century give details of these hangings lined with fur
+and richly embroidered . It was then that the Four poster bed ( also known as a tester bed ) made its first appearance , the bed being slung from the ceiling or
+fastened to the walls , a form which developed later into a room within a room , shut in by double curtains , sometimes even to exclude all drafts . The space
+between bed and wall was called the ruelle , and very intimate friends were received there . The 14th century is also the time when feather beds became highly
+prized possessions . In the 15th century beds became very large , reaching 7 to 8 feet ( 2.1 to 2.4 m ) by 6 to 7 feet ( 1.8 to 2.1 m ) . The mattresses were
+often filled with pea - shucks , straw , or feathers .
+</item 1>
+
+<item 2>
+Bed
+Southampton Medieval Merchant 's House bedroom In the 12th century , luxury increased and bedsteads were made of wood much decorated with inlaid , carved , and
+painted ornamentation . They also used folding beds , which served as couches by day and had cushions covered with silk laid upon leather . At night a linen
+sheet was spread and pillows placed , while silk - covered skins served as coverlets . The Carolingian manuscripts show metal bedsteads much higher at the head
+than at the feet , and this shape continued in use until the 13th century in France , many cushions being added to raise the body to a sloping position . In
+12th - century manuscripts , the bedsteads appear much richer , with inlays , carving , and painting , and with embroidered coverlets and mattresses in harmony
+. Curtains were hung above the bed and a small hanging lamp is often shown . In the 14th century the woodwork became of less importance , generally being
+entirely covered by hangings of rich materials . Silk , velvet , and even cloth of gold were frequently used .
+</item 2>
+
+<item 3>
+Bed
+During the 17th century this curious custom became general , perhaps to avoid the tiresome details of etiquette . Portable beds were used in high society in
+France till the end of the Ancien Régime . The earliest of which mention has been found belonged to Charles the Bold . They had curtains over a light framework
+, and were in their way as fine as the stationary beds . Iron beds appear in the 18th century ; the advertisements declare them as free from the insects which
+sometimes infested wooden bedsteads . Elsewhere , there was also the closed bed with sliding or folding shutters , and in England -- where beds were commonly
+quite simple in form -- the four poster was the usual citizen 's bed until the middle of the 19th century . Bed sizes Main article : Bed size Bed sizes vary
+considerably around the world , with most countries having their own standards and terminology . While the `` double '' size appears to be standard among
+English speaking countries , based on the imperial measurement of 4 ft 6 in by 6 ft 3 in ( 137 cm x 190 cm ) , the sizes for other bed types tend to vary .
+</item 3>
+
+<item 4>
+Bed
+The mattresses were often filled with pea - shucks , straw , or feathers . At this time great personages were in the habit of carrying most of their property
+about with them , including beds and bed - hangings , and for this reason the bedsteads were for the most part mere frameworks to be covered up ; but about the
+beginning of the 16th century bedsteads were made lighter and more decorative , since the lords remained in the same place for longer periods . Renaissance and
+modern Europe In the 17th century , which has been called `` the century of magnificent beds '' , the style a la duchesse , with tester and curtains only at the
+head , replaced the more enclosed beds in France , though they lasted much longer in England . Louis XIV had an enormous number of sumptuous beds , as many as
+413 being described in the inventories of his palaces . Some of them had embroideries enriched with pearls , and figures on a silver or golden ground . The
+great bed at Versailles had crimson velvet curtains on which `` The Triumph of Venus '' was embroidered . So much gold was used that the velvet scarcely showed
+.
+</item 4>
+
+<item 5>
+Bed
+Most often , the difference is 2 - 5 inches . Notable examples The Great Bed of Ware , one of the largest beds in the world One of the largest beds in the world
+is the Great Bed of Ware , made in about 1580 . It is 3.26 metres ( 10.7 ft ) wide , 3.38 metres ( 11.1 ft ) long . The bed is mentioned by Shakespeare in
+Twelfth Night . It is now in the Victoria and Albert Museum ( V&A ) in London . Another bed in the V&A is the Golden Bed created by William Burges in 1879 . In
+1882 , an Indian Maharajah had a bed made of solid silver . At each corner of the bed there was a life - sized statue of a naked woman holding a fan . When the
+Maharajah lay on the bed , his weight started a mechanism that made the women wave their fans . In 1865 , a convertible bed in the form of an upright piano was
+available , which could provide home entertainment while saving space . Types This section does not cite any sources . Please help improve this section by
+adding citations to reliable sources .
+</item 5>
+
+<item 6>
+Bed
+Bed - wikipedia Bed This is the latest accepted revision , reviewed on 10 January 2018 . Jump to : navigation , search For other uses , see Bed ( disambiguation
+) . Bedroom on the Detmold Open - air Museum premises A bed is a piece of furniture which is used as a place to sleep or relax . Most modern beds consist of a
+soft , cushioned mattress on a bed frame , the mattress resting either on a solid base , often wood slats , or a sprung base . Many beds include a box spring
+inner - sprung base , which is a large mattress - sized box containing wood and springs that provide additional support and suspension for the mattress . Beds
+are available in many sizes , ranging from infant - sized bassinets and cribs , to small beds for a single person or adult , to large queen and king - size beds
+designed for two people . While most beds are single mattresses on a fixed frame , there are other varieties , such as the murphy bed , which folds into a wall
+, the sofa bed , which folds out of a sofa , and the bunk bed , which provides two mattresses on two tiers .
+</item 6>
+
+<item 7>
+Bed
+So much gold was used that the velvet scarcely showed . Napoleon I 's bed In the 18th century feather pillows were first used as coverings in Germany , which in
+the fashions of the bed and the curious etiquette connected with the bedchamber followed France for the most part . The beds were a la duchesse , but in France
+itself there was great variety both of name and shape . The custom of the `` bed of justice '' upon which the king of France reclined when he was present in
+parliament , the princes being seated , the great officials standing , and the lesser officials kneeling , was held to denote the royal power even more than the
+throne . Louis XI is credited with its first use and the custom lasted till the end of the monarchy . In the chambre de parade , where the ceremonial bed was
+placed , certain persons , such as ambassadors or great lords , whom it was desired to honour , were received in a more intimate fashion than the crowd of
+courtiers . At Versailles women received their friends in their beds , both before and after childbirth , during periods of mourning , and even directly after
+marriage -- in fact in any circumstances which were thought deserving of congratulation or condolence .
+</item 7>
+
+<item 8>
+Bed
+Please help improve this section by adding citations to reliable sources . Unsourced material may be challenged and removed . ( April 2015 ) ( Learn how and
+when to remove this template message ) See also : Category : Beds Lit à la Polonaise ( Polish style bed ) , Royal Castle in Warsaw , 18th century . Patent #
+322,177 , on 14 July 1885 issued to Sarah E. Goode for a cabinet bed Drawing of a candle - lit mourning bed ( Trauergerüst ) for abbess Franziska Christine von
+Pfalz - Sulzbach , 1776 Chinese style beds There are many varieties of beds : An adjustable bed is a bed that can be adjusted to a number of different positions
+. Most hospital beds are adjustable , so that a patient can have different parts of her body elevated for medical reasons . Some people have adjustable beds in
+private homes . Some adjustable beds are designed for couples ; they use two separate mattresses and adjustment mechanisms . This permits one partner to be
+lying flat to sleep while the other has the head and shoulders elevated to watch television or read .
+</item 8>
+
+<item 9>
+Bed
+Contents ( hide ) 1 History 1.1 Ancient world 1.2 Medieval Europe 1.3 Renaissance and modern Europe 2 Bed sizes 3 Notable examples 4 Types 5 Frames 6 See also 7
+References 8 External links History Ancient world Tutankhamun 's gilded bed from the 14th century BC Early beds were little more than piles of straw or some
+other natural material ( e.g. a heap of palm leaves , animal skins , or dried bracken ) . An important change was raising them off the ground , to avoid drafts
+, dirt , and pests . Bedding dated around to 3600 BC was discovered in Sibudu Cave , South Africa . The bedding consists of sedge and other monocotyledons
+topped with the leaves of Cryptocarya woodii Engl . Beds found in a preserved northern Scottish village , which were raised boxes made of stone and likely
+topped with comfortable fillers , were dated to between 3200 BC and 2200 BC . The Egyptians had high bedsteads which were ascended by steps , with bolsters or
+pillows , and curtains to hang around .
+</item 9>
+
+<item 10>
+Bed
+Ancient Romans had various kinds of beds for repose . These included : lectus cubicularis , or chamber bed , for normal sleeping lectus genialis , the marriage
+bed , it was much decorated , and was placed in the atrium opposite the door lectus discubitorius , or table bed , on which they ate -- for they ate while lying
+on their left sides -- there usually being three people to one bed , with the middle place accounted the most honorable position lectus lucubratorius , for
+studying and a lectus funebris , or emortualis , on which the dead were carried to the pyre Medieval Europe The ancient Germans lay on the floor on beds of
+leaves covered with skins , or in a kind of shallow chest filled with leaves and moss . In the early Middle Ages they laid carpets on the floor or on a bench
+against the wall , placed upon them mattresses stuffed with feathers , wool , or hair , and used skins as a covering . Curtains were hung from the ceiling or
+from an iron arm projecting from the wall . They appear to have generally lain naked in bed , wrapping themselves in large linen sheets which were stretched
+over the cushions .
+</item 10>
+=== END ITEM id=77f66c8c67a52b81 ===
+
+=== ITEM id=cd4f4b6e019fe573 ===
+Gold sentences and facts:
+Sentence 0: The story of Shakespeare 's Hamlet was derived from the legend of Amleth , preserved by 13th - century chronicler Saxo Grammaticus in his Gesta Danorum , as subsequently retold by the 16th - century scholar François de Belleforest . Shakespeare may also have drawn on an earlier Elizabethan play known today as the Ur - Hamlet , though some scholars believe he himself wrote the Ur - Hamlet , later revising it to create the version of Hamlet we now have . He almost certainly wrote his version of the title role for his fellow actor , Richard Burbage , the leading tragedian of Shakespeare 's time . In the 400 years since its inception , the role has been performed by numerous highly acclaimed actors in each successive century .
+  Fact 0.0: The story of Shakespeare's Hamlet was derived from the legend of Amleth.
+  Fact 0.1: The legend of Amleth was preserved by the 13th-century chronicler Saxo Grammaticus in his Gesta Danorum.
+  Fact 0.2: The legend of Amleth was subsequently retold by the 16th-century scholar François de Belleforest.
+  Fact 0.3: Shakespeare may also have drawn on an earlier Elizabethan play known today as the Ur-Hamlet.
+  Fact 0.4: Some scholars believe Shakespeare himself wrote the Ur-Hamlet and later revised it to create the version of Hamlet we have today.
+  Fact 0.5: Shakespeare almost certainly wrote his version of the title role for his fellow actor Richard Burbage.
+  Fact 0.6: Richard Burbage was the leading tragedian of Shakespeare's time.
+  Fact 0.7: In the 400 years since the role of Hamlet was created, it has been performed by numerous highly acclaimed actors.
+  Fact 0.8: The role of Hamlet has been performed by highly acclaimed actors in each successive century for 400 years.
+
+Retrieved items:
+<item 1>
+Hamlet
+In the 400 years since its inception , the role has been performed by numerous highly acclaimed actors in each successive century . Three different early
+versions of the play are extant : the First Quarto ( Q1 , 1603 ) ; the Second Quarto ( Q2 , 1604 ) ; and the First Folio ( F1 , 1623 ) . Each version includes
+lines and entire scenes missing from the others . The play 's structure and depth of characterisation have inspired much critical scrutiny . One such example is
+the centuries - old debate about Hamlet 's hesitation to kill his uncle , which some see as merely a plot device to prolong the action , but which others argue
+is a dramatisation of the complex philosophical and ethical issues that surround cold - blooded murder , calculated revenge , and thwarted desire . More
+recently , psychoanalytic critics have examined Hamlet 's unconscious desires , while feminist critics have re-evaluated and attempted to rehabilitate the often
+maligned characters of Ophelia and Gertrude . Contents ( hide ) 1 Characters 2 Plot 2.1 Act I 2.2 Act II 2.3 Act III 2.
+</item 1>
+
+<item 2>
+Hamlet
+He is dethroned by the spectre of an actor , and we shall never be able to keep the usurper out of our dreams . Maurice Maeterlinck in La Jeune Belgique ( 1890
+) . Shakespeare 's day to the Interregnum ( edit ) Shakespeare almost certainly wrote the role of Hamlet for Richard Burbage . He was the chief tragedian of the
+Lord Chamberlain 's Men , with a capacious memory for lines and a wide emotional range . Judging by the number of reprints , Hamlet appears to have been
+Shakespeare 's fourth most popular play during his lifetime -- only Henry IV Part 1 , Richard III and Pericles eclipsed it . Shakespeare provides no clear
+indication of when his play is set ; however , as Elizabethan actors performed at the Globe in contemporary dress on minimal sets , this would not have affected
+the staging . Firm evidence for specific early performances of the play is scant .
+</item 2>
+
+<item 3>
+Hamlet
+Hamlet - wikipedia Hamlet Jump to : navigation , search This article is about the play by William Shakespeare . For other uses , see Hamlet ( disambiguation ) .
+The American actor Edwin Booth as Hamlet , ca . 1870 The Tragedy of Hamlet , Prince of Denmark , often shortened to Hamlet ( / ˈhæmlɪt / ) , is a tragedy
+written by William Shakespeare at an uncertain date between 1599 and 1602 . Set in Denmark , the play dramatises the revenge Prince Hamlet is called to wreak
+upon his uncle , Claudius , by the ghost of Hamlet 's father , King Hamlet . Claudius had murdered his own brother and seized the throne , also marrying his
+deceased brother 's widow . Hamlet is Shakespeare 's longest play , and is considered among the most powerful and influential works of world literature , with a
+story capable of `` seemingly endless retelling and adaptation by others '' .
+</item 3>
+
+<item 4>
+Hamlet
+Possibly written by Thomas Kyd or even William Shakespeare , the Ur - Hamlet would have existed by 1589 , and would have incorporated a ghost . Shakespeare 's
+company , the Chamberlain 's Men , may have purchased that play and performed a version for some time , which Shakespeare reworked . However , since no copy of
+the Ur - Hamlet has survived , it is impossible to compare its language and style with the known works of any of its putative authors . Consequently , there is
+no direct evidence that Kyd wrote it , nor any evidence that the play was not an early version of Hamlet by Shakespeare himself . This latter idea -- placing
+Hamlet far earlier than the generally accepted date , with a much longer period of development -- has attracted some support . The upshot is that scholars can
+not assert with any confidence how much material Shakespeare took from the Ur - Hamlet ( if it even existed ) , how much from Belleforest or Saxo , and how much
+from other contemporary sources ( such as Kyd 's The Spanish Tragedy ) . No clear evidence exists that Shakespeare made any direct references to Saxo 's version
+.
+</item 4>
+
+<item 5>
+Hamlet
+Firm evidence for specific early performances of the play is scant . What is known is that the crew of the ship Red Dragon , anchored off Sierra Leone ,
+performed Hamlet in September 1607 ; that the play toured in Germany within five years of Shakespeare 's death ; and that it was performed before James I in
+1619 and Charles I in 1637 . Oxford editor George Hibbard argues that , since the contemporary literature contains many allusions and references to Hamlet (
+only Falstaff is mentioned more , from Shakespeare ) , the play was surely performed with a frequency that the historical record misses . All theatres were
+closed down by the Puritan government during the Interregnum . Even during this time , however , playlets known as drolls were often performed illegally ,
+including one called The Grave - Makers based on Act 5 , Scene 1 of Hamlet . Restoration and 18th century ( edit ) Title page and frontispiece for Hamlet ,
+Prince of Denmark : A Tragedy . As it is now acted at the Theatres - Royal in Drury - Lane and Covent - Garden . London , 1776 The play was revived early in the
+Restoration .
+</item 5>
+
+<item 6>
+Hamlet
+Jenkins suggests that any personal satire may be found in the name `` Polonius '' , which might point to a Polish or Polonian connection . G.R. Hibbard
+hypothesised that differences in names ( Corambis / Polonius : Montano / Raynoldo ) between the First Quarto and other editions might reflect a desire not to
+offend scholars at Oxford University . Date ( edit ) John Barrymore as Hamlet ( 1922 ) `` Any dating of Hamlet must be tentative '' , cautions the New Cambridge
+editor , Phillip Edwards . The earliest date estimate relies on Hamlet 's frequent allusions to Shakespeare 's Julius Caesar , itself dated to mid-1599 . The
+latest date estimate is based on an entry , of 26 July 1602 , in the Register of the Stationers ' Company , indicating that Hamlet was `` latelie Acted by the
+Lo : Chamberleyne his servantes '' . In 1598 , Francis Meres published his Palladis Tamia , a survey of English literature from Chaucer to its present day ,
+within which twelve of Shakespeare 's plays are named .
+</item 6>
+
+<item 7>
+Graph query row:
+Shakespeare: codes hidden in Shakespearean literature
+work: The Tragedy of Hamlet, Prince of Denmark
+work_connections: None
+Richard_Burbage: Richard Burbage
+connection: RELATED_TO
+role: None
+fact: was the first Hamlet
+relationship: None
+relation: None
+connected_to: Hamlet
+</item 7>
+
+<item 8>
+Hamlet
+Hamlet is not among them , suggesting that it had not yet been written . As Hamlet was very popular , Bernard Lott , the series editor of New Swan , believes it
+`` unlikely that he ( Meres ) would have overlooked ... so significant a piece '' . The phrase `` little eyases '' in the First Folio ( F1 ) may allude to the
+Children of the Chapel , whose popularity in London forced the Globe company into provincial touring . This became known as the War of the Theatres , and
+supports a 1601 dating . Katherine Duncan - Jones accepts a 1600 -- 1 attribution for the date Hamlet was written , but notes that the Lord Chamberlain 's Men ,
+playing Hamlet in the 3000 - capacity Globe , were unlikely to be put to any disadvantage by an audience of `` barely one hundred '' for the Children of the
+Chapel 's equivalent play , Antonio 's Revenge ; she believes that Shakespeare , confident in the superiority of his own work , was making a playful and
+charitable allusion to his friend John Marston 's very similar piece .
+</item 8>
+
+<item 9>
+Hamlet
+It was probably one of Shakespeare 's most popular works during his lifetime , and still ranks among his most performed , topping the performance list of the
+Royal Shakespeare Company and its predecessors in Stratford - upon - Avon since 1879 . It has inspired many other writers -- from Johann Wolfgang von Goethe and
+Charles Dickens to James Joyce and Iris Murdoch -- and has been described as `` the world 's most filmed story after Cinderella '' . The story of Shakespeare 's
+Hamlet was derived from the legend of Amleth , preserved by 13th - century chronicler Saxo Grammaticus in his Gesta Danorum , as subsequently retold by the 16th
+- century scholar François de Belleforest . Shakespeare may also have drawn on an earlier Elizabethan play known today as the Ur - Hamlet , though some scholars
+believe he himself wrote the Ur - Hamlet , later revising it to create the version of Hamlet we now have . He almost certainly wrote his version of the title
+role for his fellow actor , Richard Burbage , the leading tragedian of Shakespeare 's time .
+</item 9>
+
+<item 10>
+Hamlet
+Analysis and criticism ( edit ) Main article : Critical approaches to Hamlet Critical History ( edit ) From the early 17th century , the play was famous for its
+ghost and vivid dramatisation of melancholy and insanity , leading to a procession of mad courtiers and ladies in Jacobean and Caroline drama . Though it
+remained popular with mass audiences , late 17th - century Restoration critics saw Hamlet as primitive and disapproved of its lack of unity and decorum . This
+view changed drastically in the 18th century , when critics regarded Hamlet as a hero -- a pure , brilliant young man thrust into unfortunate circumstances . By
+the mid-18th century , however , the advent of Gothic literature brought psychological and mystical readings , returning madness and the ghost to the forefront
+. Not until the late 18th century did critics and performers begin to view Hamlet as confusing and inconsistent . Before then , he was either mad , or not ;
+either a hero , or not ; with no in - betweens . These developments represented a fundamental change in literary criticism , which came to focus more on
+character and less on plot .
+</item 10>
+=== END ITEM id=cd4f4b6e019fe573 ===
+
+=== ITEM id=92f4469480e2c293 ===
+Gold sentences and facts:
+Sentence 0: After their plane crashes in the woods , Dr. Meredith Grey ( Ellen Pompeo ) , Dr. Lexie Grey ( Chyler Leigh ) , Dr. Cristina Yang ( Sandra Oh ) , Dr. Arizona Robbins ( Jessica Capshaw ) , Dr. Derek Shepherd ( Patrick Dempsey ) , and Dr. Mark Sloan ( Eric Dane ) desperately fight to stay alive . Meredith is relatively unscathed , while the rest have serious injuries : the pilot , Jerry ( James LeGros ) , has a major spine injury , and Yang dislocates her arm . Robbins ' femur is broken and sticking through the skin , Sloan has serious internal injuries ; though initially adrenaline keeps him on his feet . Shepherd is sucked out the side of the plane and awakens alone in the wood ; his mangled hand having been pushed through the door of the plane . However , none are in as bad shape as Lexie , who is crushed under a piece of the plane . While Meredith searches for Shepherd , Yang and Sloan try to move the debris off Lexie . Eventually , the two realize that they can not save her , so Sloan holds her hand while she dies , telling her that he loves her . As Sloan tells her of the life the two were meant to have together , Lexie dies with a smile on her face just as Meredith and Yang are approaching .
+  Fact 0.0: After their plane crashes in the woods, six doctors desperately fight to stay alive.
+  Fact 0.1: Dr. Meredith Grey is played by Ellen Pompeo.
+  Fact 0.2: Dr. Lexie Grey is played by Chyler Leigh.
+  Fact 0.3: Dr. Cristina Yang is played by Sandra Oh.
+  Fact 0.4: Dr. Arizona Robbins is played by Jessica Capshaw.
+  Fact 0.5: Dr. Derek Shepherd is played by Patrick Dempsey.
+  Fact 0.6: Dr. Mark Sloan is played by Eric Dane.
+  Fact 0.7: Meredith is relatively unscathed.
+  Fact 0.8: The other doctors have serious injuries.
+  Fact 0.9: The pilot, Jerry (played by James LeGros), has a major spine injury.
+  Fact 0.10: Yang dislocates her arm.
+  Fact 0.11: Robbins' femur is broken and sticking through the skin.
+  Fact 0.12: Sloan has serious internal injuries.
+  Fact 0.13: Initially, adrenaline keeps Sloan on his feet.
+  Fact 0.14: Shepherd is sucked out the side of the plane and awakens alone in the woods.
+  Fact 0.15: Shepherd's mangled hand was pushed through the door of the plane.
+  Fact 0.16: No one is in as bad shape as Lexie.
+  Fact 0.17: Lexie is crushed under a piece of the plane.
+  Fact 0.18: While Meredith searches for Shepherd, Yang and Sloan try to move the debris off Lexie.
+  Fact 0.19: Eventually, Yang and Sloan realize they cannot save Lexie.
+  Fact 0.20: Sloan holds Lexie's hand while she dies.
+  Fact 0.21: Sloan tells Lexie that he loves her.
+  Fact 0.22: Sloan tells Lexie about the life the two were meant to have together.
+  Fact 0.23: Lexie dies with a smile on her face.
+  Fact 0.24: Meredith and Yang are approaching just as Lexie dies.
+Sentence 1: `` Flight '' is the twenty - fourth and final episode of the eighth season of the American television medical drama Grey 's Anatomy , and the show 's 172nd episode overall . It was written by series creator Shonda Rhimes , and directed by Rob Corn . The episode was originally broadcast on the American Broadcasting Company ( ABC ) in the United States on May 17 , 2012 . In the episode , six doctors from Seattle Grace Mercy West Hospital who are victims of an aviation accident fight to stay alive , but Dr. Lexie Grey ( Chyler Leigh ) ultimately dies . Other storylines occur in Seattle where Dr. Richard Webber ( James Pickens , Jr . ) plans his annual dinner for the departing residents , Dr. Owen Hunt ( Kevin McKidd ) fires Dr. Teddy Altman ( Kim Raver ) , and Dr. Miranda Bailey ( Chandra Wilson ) gets engaged .
+  Fact 1.0: 'Flight' is the twenty-fourth and final episode of the eighth season of the American television medical drama Grey's Anatomy.
+  Fact 1.1: 'Flight' is the show's 172nd episode overall.
+  Fact 1.2: 'Flight' was written by series creator Shonda Rhimes.
+  Fact 1.3: 'Flight' was directed by Rob Corn.
+  Fact 1.4: 'Flight' was originally broadcast on the American Broadcasting Company (ABC) in the United States on May 17, 2012.
+  Fact 1.5: In the episode, six doctors from Seattle Grace Mercy West Hospital who are victims of an aviation accident fight to stay alive.
+  Fact 1.6: In the episode, Dr. Lexie Grey (played by Chyler Leigh) ultimately dies.
+  Fact 1.7: Other storylines occur in Seattle.
+  Fact 1.8: Dr. Richard Webber (played by James Pickens, Jr.) plans his annual dinner for the departing residents.
+  Fact 1.9: Dr. Owen Hunt (played by Kevin McKidd) fires Dr. Teddy Altman (played by Kim Raver).
+  Fact 1.10: Dr. Miranda Bailey (played by Chandra Wilson) gets engaged.
+
+Retrieved items:
+<item 1>
+Flight (Grey's Anatomy)
+Mark Sloan ) 's . `` Flight '' earned Rhimes an NAACP Image Award nomination and it was also nominated under several categories of Entertainment Weekly 's
+finale awards . Upon its initial airing , the episode was viewed in the United States by 11.44 million people , garnered a 4.1 / 11 Nielsen rating / share in
+the 18 -- 49 demographic , ranking fourth for the night in terms of viewership , and registering as Thursday 's highest - rated drama . Contents ( hide ) 1 Plot
+2 Production 3 Reception 4 References 5 External links Plot ( edit ) After their plane crashes in the woods , Dr. Meredith Grey ( Ellen Pompeo ) , Dr. Lexie
+Grey ( Chyler Leigh ) , Dr. Cristina Yang ( Sandra Oh ) , Dr. Arizona Robbins ( Jessica Capshaw ) , Dr. Derek Shepherd ( Patrick Dempsey ) , and Dr. Mark Sloan
+( Eric Dane ) desperately fight to stay alive .
+</item 1>
+
+<item 2>
+Flight (Grey's Anatomy)
+In the episode , six doctors from Seattle Grace Mercy West Hospital who are victims of an aviation accident fight to stay alive , but Dr. Lexie Grey ( Chyler
+Leigh ) ultimately dies . Other storylines occur in Seattle where Dr. Richard Webber ( James Pickens , Jr . ) plans his annual dinner for the departing
+residents , Dr. Owen Hunt ( Kevin McKidd ) fires Dr. Teddy Altman ( Kim Raver ) , and Dr. Miranda Bailey ( Chandra Wilson ) gets engaged . The episode marked
+Leigh 's and Raver 's final appearance to the series . Exterior filming of the accident took place at Big Bear Lake , California . Jason George reprised his
+role as a guest star , whereas James LeGros made his first appearance . The episode opened to mixed reviews from television critics , with some criticizing the
+death of Lexie , but praising Leigh 's performance , in addition to Ellen Pompeo ( Dr. Meredith Grey ) 's and Eric Dane ( Dr. Mark Sloan ) 's .
+</item 2>
+
+<item 3>
+Flight (Grey's Anatomy)
+`` ' Grey 's Anatomy ' recap : Major death in season finale ' Flight ' '' . Digital Spy . Nat Mags . Retrieved May 22 , 2012 . Jump up ^ Stransky , Tanner ( May
+18 , 2012 ) . `` ' Grey 's Anatomy ' season finale recap : A Grey Goes Down '' . Entertainment Weekly . Time Inc . Retrieved May 22 , 2012 . Jump up ^ Bierly ,
+Mandi ( May 29 , 2012 ) . `` Grey 's Anatomy , Chyler Leigh , ... TV Season Finale Awards : YOUR 2012 Winners ! Photo 9 of 20 '' . Entertainment Weekly . Time
+Inc . Retrieved June 17 , 2012 . Jump up ^ Bierly , Mandi ( May 29 , 2012 ) . `` Grey 's Anatomy , Ellen Pompeo TV Season Finales TV Season Finale Awards : YOUR
+2012 Winners ! Photo 12 of 20 '' . Entertainment Weekly . Time Inc . Retrieved June 18 , 2012 .
+</item 3>
+
+<item 4>
+Flight (Grey's Anatomy)
+Lexie 's death devastates Meredith , who is still desperately trying to find her husband . Eventually , she and Shepherd reunite and they fix his hand as best
+as they can . Meanwhile , back at Seattle Grace Mercy West Hospital , no one is aware of what has happened to the other doctors . Dr. Richard Webber ( James
+Pickens , Jr . ) prepares the annual dinner for the departing residents , which Dr. Alex Karev ( Justin Chambers ) , Dr. Jackson Avery ( Jesse Williams ) , and
+Dr. April Kepner ( Sarah Drew ) are dreading . Avery makes the choice to take a job offer at Tulane Medical Center , and he and Kepner share a moment . Dr. Ben
+Warren ( Jason George ) and Dr. Miranda Bailey ( Chandra Wilson ) decide to get married , even though Warren is going to start his surgical internship in Los
+Angeles . After realizing Dr. Teddy Altman ( Kim Raver ) was offered a chief position at United States Army Medical Command ( MEDCOM ) and is refusing to leave
+Seattle out of loyalty , Dr.
+</item 4>
+
+<item 5>
+Flight (Grey's Anatomy)
+Mark Sloan ( Eric Dane ) desperately fight to stay alive . Meredith is relatively unscathed , while the rest have serious injuries : the pilot , Jerry ( James
+LeGros ) , has a major spine injury , and Yang dislocates her arm . Robbins ' femur is broken and sticking through the skin , Sloan has serious internal
+injuries ; though initially adrenaline keeps him on his feet . Shepherd is sucked out the side of the plane and awakens alone in the wood ; his mangled hand
+having been pushed through the door of the plane . However , none are in as bad shape as Lexie , who is crushed under a piece of the plane . While Meredith
+searches for Shepherd , Yang and Sloan try to move the debris off Lexie . Eventually , the two realize that they can not save her , so Sloan holds her hand
+while she dies , telling her that he loves her . As Sloan tells her of the life the two were meant to have together , Lexie dies with a smile on her face just
+as Meredith and Yang are approaching . Lexie 's death devastates Meredith , who is still desperately trying to find her husband .
+</item 5>
+
+<item 6>
+Flight (Grey's Anatomy)
+Owen Hunt ( Kevin McKidd ) , the chief of surgery , fires her to free her from the hospital where her husband died . As the episode ends , Hunt picks up his
+messages to discover the surgical team never made it to Boise . The residents , finally excited to celebrate at Webber 's dinner , are left waiting for their
+stranded friends . The remaining crash survivors are left struggling to stay awake as their last match goes out . In the closing monologue , Meredith repeats
+the opening to the speech that Webber gave in the pilot episode of the series . Production ( edit ) `` It was so hard . It was physically and emotionally
+challenging because you 're constantly at extremely high stakes . The physicality for Cristina , she had to do a lot of things with one arm , and I had to do a
+lot of things with one shoe . You 're running around the mountain with one shoe and one arm basically and doing things that way . And it 's like we 've had this
+cushy time on stages and in the hospital . But being out in the open on the side of a mountain was exhilarating ; you can not beat location work .
+</item 6>
+
+<item 7>
+Flight (Grey's Anatomy)
+Jump up ^ Writer : Rhimes , Shonda . Director : Corn , Rob ( May 17 , 2012 ) . `` Flight '' . Grey 's Anatomy . Season 8 . American Broadcasting Company . Jump
+up ^ `` Season 8 , Episode : 24 `` Flight '' Music `` . TV Fanatic . SheKnows Entertainment . Retrieved July 22 , 2012 . Jump up ^ Dos Santos , Kristin ( May 1
+, 2012 ) . `` Spoiler Chat Daily : American Horror Story Season Two Scoop ! Plus , Grey 's , True Blood and More ! '' . E ! Online . NBCUniversal . Retrieved
+July 21 , 2012 . Jump up ^ Hilton , Perez ( June 24 , 2010 ) . `` Chyler Leigh Describes Filming Deets Behind Grey 's Anatomy Death ! '' . PerezHilton.com .
+Retrieved July 21 , 2012 . Jump up ^ Goldberg , Lesley ( April 26 , 2012 ) .
+</item 7>
+
+<item 8>
+Flight (Grey's Anatomy)
+I mean , how awful was it to watch one of Grey 's longest - running characters pass away so quickly -- and rather unceremoniously ? I get that Ms. Rhimes had to
+do what she had to do -- and every show needs to be shaken up once in a while -- but I do n't love that Lexie was the one to die . Could it have been someone
+less important somehow ? I guess it would have been too obvious to do Kepner . And you probably just do n't kill off a hottie like Mark Sloan , right ? ''
+Stransky also complained about Robbins ' screams at the beginning of the episode , but enjoyed Bailey 's story . In an Entertainment Weekly poll that judged all
+the television season finales of the year , Lexie 's death was voted the `` Top Tissue Moment '' , while Robbins ' injured leg and Shepherd 's mangled hand were
+voted the `` Most Disturbing Image '' . The ending of the episode was also considered as the `` Best Ending to an Otherwise So - So Season '' .
+</item 8>
+
+<item 9>
+Flight (Grey's Anatomy)
+Grey 's Anatomy has once again managed to shock with its season finale . '' While she appreciated the `` realism and authenticity that Grey 's is known for '' ,
+she found the episode was `` almost too much '' as it was `` extremely gory and difficult to watch , initially because of the grisly wounds '' but later because
+of the `` heavy and emotional things that transpired '' . She thought Pompeo gave one of her best performances when her character learned that her sister was
+dead . Digital Spy 's Ben Lee found Leigh 's and Dane 's performances `` phenomenal '' and added that he had probably never seen a better performance from Dane
+. He described the moment the two actors shared as `` truly poignant '' . To him , Lexie 's death felt like a finale , which was thus too early . As for what
+was happening in Seattle Grace , he thought it was `` a bit pointless '' and `` uninteresting '' except Altman 's departure , which he deemed `` the most
+significant moment at the hospital '' . Entertainment Weekly 's Tanner Stransky commented of Lexie 's death : `` It was an intense death .
+</item 9>
+
+<item 10>
+Flight (Grey's Anatomy)
+Everybody was very accommodating -- the crew , cast . And I opted to stay underneath ( the wreckage ) for the most part over two days rather than trying to get
+in and out . '' In regard to the episode , Rhimes commented before it originally aired that it was difficult to write , largely because of the death of a main
+character . She compared it to writing the season six finale , by explaining that the former was `` more painful '' to write . After the episode aired , Rhimes
+repeated in a tweet that it was hard for her to write the finale , adding : `` I did not enjoy it . It made me sick and it made me sad . '' Rhimes also
+explained the departure of Leigh , whose character died after the plane crash , by saying that the two came to an agreement on the decision to kill Lexie ,
+after extensive discussion . Speaking of Raver 's departure whose character left Seattle Grace for MEDCOM , Rhimes elaborated that Raver was offered a contract
+renewal , but declined . Reception ( edit ) Chyler Leigh 's performance was deemed `` phenomenal '' .
+</item 10>
+=== END ITEM id=92f4469480e2c293 ===
+
+=== ITEM id=d50fea517d3af59b ===
+Gold sentences and facts:
+Sentence 0: In episode 3 , `` Hugs Can Be Deceiving '' , Suzanne 's backstory is revealed via a flashback . She was adopted by white parents and raised in the suburbs , but her mental instability alienated her classmates and their parents alike . Her adoptive mother pushed her to excel at everything she did to prove that she was as good as everyone else ; ironically , the constant pressure only made Suzanne 's psychological problems worse . In the same episode , it is revealed that Suzanne had run outside and knocked Chapman unconscious after Chapman had beaten Tiffany `` Pennsatucky '' Doggett ( Taryn Manning ) unconscious at the end of season 1 .
+  Fact 0.0: In episode 3, titled 'Hugs Can Be Deceiving', Suzanne's backstory is revealed via a flashback.
+  Fact 0.1: Suzanne was adopted by white parents.
+  Fact 0.2: Suzanne was raised in the suburbs.
+  Fact 0.3: Suzanne's mental instability alienated her classmates.
+  Fact 0.4: Suzanne's mental instability alienated her classmates' parents.
+  Fact 0.5: Suzanne's adoptive mother pushed her to excel at everything she did, to prove she was as good as everyone else.
+  Fact 0.6: Ironically, the constant pressure from Suzanne's adoptive mother made Suzanne's psychological problems worse.
+  Fact 0.7: In the same episode, it is revealed that Suzanne had run outside.
+  Fact 0.8: In the same episode, Suzanne knocked Chapman unconscious.
+  Fact 0.9: Suzanne knocked Chapman unconscious after Chapman had beaten Tiffany 'Pennsatucky' Doggett (Taryn Manning) unconscious.
+  Fact 0.10: Chapman beat Doggett unconscious at the end of season 1.
+
+Retrieved items:
+<item 1>
+Crazy Eyes (character)
+She continues to believe that Poussey 's spirit is trying to talk to her and performs a seance on the spot in the cafeteria where Poussey died . Lorna and Nicky
+take over the dispensation of meds ; Lorna refuses to give Suzanne hers , pressuring her to believe she no longer needs them . As a result , Suzanne 's grasp on
+reality soon spirals out of control , especially when she tears down fiberboard in the dorm ceiling , trying to find `` heaven '' . Cindy intervenes but , not
+knowing the correct prescriptions , feeds Suzanne lithium instead . Suzanne becomes catatonic but is subsequently revived by an epipen . Critical commentary (
+edit ) According to Tom Meltzer of The Guardian , `` Shakespeare - quoting loner ' Crazy Eyes ' invites pity , shock , reproach and belly - laughs in equal
+measure . '' The Huffington Post Canada entertainment editor Chris Jancelewicz , noted that after the first six episodes of season two , he was impressed by
+this appropriately nicknamed character : `` Girl is crazy , and Aduba is genuinely frightening in the role .
+</item 1>
+
+<item 2>
+Crazy Eyes (character)
+September 17 , 2017 . Retrieved September 20 , 2017 . ( hide ) Orange Is the New Black Characters Piper Chapman Alex Vause Crazy Eyes Nicky Nichols Tiffany
+Doggett Lorna Morello Miss Rosa Poussey Washington Seasons `` Lesbian Request Denied '' 5 Related Piper Kerman Orange Is the New Black : My Year in a Women 's
+Prison `` You 've Got Time '' Retrieved from `` https://en.wikipedia.org/w/index.php?title=Crazy_Eyes_(character)&oldid=814872296 '' Categories : Orange Is the
+New Black characters Fictional adoptees Fictional African - American people Fictional characters introduced in 2013 Fictional criminals Fictional lesbians
+Fictional prison escapees Fictional writers Fictional LGBT characters in television Fictional inmates in American federal prisons Hidden categories : Use mdy
+dates from September 2016 Articles needing additional references from June 2017 All articles needing additional references Talk Contents About Wikipedia Türkçe
+Edit links This page was last edited on 11 December 2017 , at 12 : 19 . About Wikipedia
+</item 2>
+
+<item 3>
+Crazy Eyes (character)
+In the season finale , Suzanne assists Poussey and Taystee in caring for Brook Soso , whom they discover unconscious from a drug overdose , and develops a
+closer bond with Maureen in the final scene , owing to a misunderstanding over a turtle that bites Maureen 's foot . Season 4 ( edit ) In season 4 it is
+revealed that Suzanne 's crime was kidnapping and accidental manslaughter of a child she grew friendly with while working as a store greeter . Believing that
+she and the boy were simply being friends , she did not realize the implications of her actions when she came across him playing in the park and invited him to
+her apartment for ice cream and video games . The boy went willingly , but soon became frightened and wanted to call his dad . While Suzanne is out of the room
+preparing for what she plans as more fun , he calls 911 . Suzanne becomes agitated as she tells him that 911 should only be called when there is an emergency .
+The child panics and tries to get away . He goes onto the fire escape and falls to his death . It is mentioned that she took a plea deal .
+</item 3>
+
+<item 4>
+Crazy Eyes (character)
+It is mentioned that she took a plea deal . When the inmates take advantage of a temporary lack of security and enjoy the nearby lake and woods , Kukudio
+insists that she and Suzanne run away together . Suzanne refuses and their relationship becomes rocky . In `` People Persons , CO Humphrey commands the two of
+them to fight . Suzanne rejects this but Maureen , who wants to fight , provokes her by launching into a stream of insults . Suzanne fully retaliates by
+throwing Maureen to the ground and beating her repeatedly , until the Dominicans pull her off . This fight leads her to extreme guilt and a wish to punish
+herself . She demonstrates this especially when a peaceful protest in the jail cafeteria turns into a chaotic scene and Poussey Washington dies by suffocation .
+Whilst the inmates grieve over her death , Suzanne believes that Poussey is alive and tries numerous times to suffocate herself . Finally , she is sent to
+Medical and is placed in a bed next to Kukudio . Season 5 ( edit ) In season five , Suzanne continues to recover from her injuries and also goes out of her way
+to help Maureen , whose injuries are severe .
+</item 4>
+
+<item 5>
+Crazy Eyes (character)
+Suzanne nicknames Chapman `` Dandelion '' , because of her blonde hair and puts in a request to become Chapman 's bunkmate . Nonetheless , Chapman resists her
+advances . As a result , Suzanne urinates on the floor in Chapman 's bunk quarters . In episode 9 , `` Fucksgiving '' , her white adoptive parents , Pat and
+Dennis Warren , are introduced . Season 2 ( edit ) As she rebounds from her unrequited love for Chapman , Suzanne is befriended by veteran inmate Yvonne `` Vee
+'' Parker ( Lorraine Toussaint ) as Vee develops her powerbase in the prison . Vee takes advantage of Suzanne 's desperation for affection , and Suzanne becomes
+Vee 's fanatically loyal right - hand woman . Suzanne serves Vee as muscle , even beating up her friend Poussey Washington ( Samira Wiley ) on Vee 's orders .
+When Vee attacks prison matriarch Galina `` Red '' Reznikov ( Kate Mulgrew ) and puts her in the hospital ward , she manipulates Suzanne into believing that she
+committed the crime .
+</item 5>
+
+<item 6>
+Crazy Eyes (character)
+Jump up ^ Schaefer , Megan ( June 3 , 2014 ) . `` ' Orange Is The New Black ' Season 1 Recap : Everything To Know Before The Season 2 Premiere '' .
+International Business Times . Retrieved September 6 , 2014 . Jump up ^ Foster , Lewis ( June 19 , 2014 ) . `` Visual Summary : Orange Is The New Black Season 1
+'' . Paste . Retrieved September 6 , 2014 . Jump up ^ O'Sullivan , Erin ( August 14 , 2013 ) . `` Orange Is The New Black : Uzo Aduba ( Suzanne Warren )
+Promoted To Series Regular '' . Access Hollywood . Retrieved September 6 , 2014 . Jump up ^ Henderson , Danielle ( August 16 , 2013 ) . `` Orange Is the New
+Black Episode Nine Recap : We Finally Experience the SHU '' . Vulture . Retrieved September 6 , 2014 . Jump up ^ `` Orange is the New Black Season 1 Episode 9 :
+F * cksgiving : Episode Cast & Crew '' . TV.com .
+</item 6>
+
+<item 7>
+Crazy Eyes (character)
+Deadline.com . Retrieved September 5 , 2014 . Jump up ^ Kohan , Jenji ( writer / creator ) ; Herrmann , Tara ( producer ) ; Burley , Mark ( producer ) ( May 13
+, 2014 ) . Orange Is the New Black : Season 1 -- `` I Was n't Ready '' audio commentary ( Blu - ray ) . Lionsgate . Event occurs at 37 : 00 -- 37 : 30 . Jump up
+^ `` Uzo Aduba '' . Internet Movie Database . Retrieved June 12 , 2015 . Jump up ^ `` Orange is the New Black Season 2 Episode 3 : Hugs Can Be Deceiving '' .
+TV.com . Retrieved September 5 , 2014 . Jump up ^ Potts , Kimberly ( June 18 , 2014 ) . `` The 10 Best ' Orange Is the New Black ' Character Backstories '' .
+Yahoo ! TV . Retrieved September 5 , 2014 . Jump up ^ White , Chelsea F.C. ( October 2 , 2013 ) . `` Spot the difference !
+</item 7>
+
+<item 8>
+Crazy Eyes (character)
+Crazy Eyes ( character ) - wikipedia Crazy Eyes ( character ) Jump to : navigation , search Suzanne `` Crazy Eyes '' Warren Orange Is the New Black character
+Uzo Aduba as Suzanne `` Crazy Eyes '' Warren in a promotional poster for season 2 of Orange Is the New Black First appearance `` I Was n't Ready '' Season 1 ,
+episode 1 July 11 , 2013 Portrayed by Uzo Aduba Eden Wiggins ( at age 10 ) Taliyah Whitaker ( at age 5 ) Information Significant other ( s ) Maureen Kukudio (
+ex-girlfriend ) Parents Pat and Dennis Warren Suzanne `` Crazy Eyes '' Warren is a fictional character played by Uzo Aduba on the Netflix series Orange Is the
+New Black . Warren is portrayed as intelligent , but lacking in social skills , and prone to spiral into emotional outbursts when agitated . The character is
+the only role that has received Emmy Award recognition both in the comedy and drama genres from the same show and only the second character to earn Emmy
+recognition in both genres .
+</item 8>
+
+<item 9>
+Crazy Eyes (character)
+Suzanne gives a statement to prison officials confessing to the attack , but inmate counselor Sam Healy ( Michael J. Harney ) produces evidence that exonerates
+her . When she realizes that Vee used her , she breaks into tears . In episode 3 , `` Hugs Can Be Deceiving '' , Suzanne 's backstory is revealed via a
+flashback . She was adopted by white parents and raised in the suburbs , but her mental instability alienated her classmates and their parents alike . Her
+adoptive mother pushed her to excel at everything she did to prove that she was as good as everyone else ; ironically , the constant pressure only made Suzanne
+'s psychological problems worse . In the same episode , it is revealed that Suzanne had run outside and knocked Chapman unconscious after Chapman had beaten
+Tiffany `` Pennsatucky '' Doggett ( Taryn Manning ) unconscious at the end of season 1 . Season 3 ( edit ) In season 3 , Taystee has her hands full trying to
+control Suzanne , who is still grieving Vee 's death and is unstable , prone to losing her temper and constantly fighting with Poussey .
+</item 9>
+
+<item 10>
+Crazy Eyes (character)
+Eventually , she turns to new prison counsellor Berdie Rogers 's drama class . There , she begins writing a surrealistic science - fiction erotica series called
+`` The Time Hump Chronicles '' which , although considered obscene and strange by both Rogers and Taystee , becomes an instant hit amongst the inmates .
+Although they prove to be therapeutic for her mental health , Suzanne becomes stressed and irritated with the constant harassment by the other inmates for more
+material , the persistent ideas that are being floated past her and the fan - fiction that is left at her bunk or lying around . Soon , some of the extracts
+find their way into the hands of the COs , resulting in Officer Donaldson being mocked by both his colleagues and the inmates alike upon the realization that he
+is the inspiration for one of the characters . This leads to Rogers ' suspension . Meanwhile , Suzanne is taken by surprise when she discovers that one of her
+more prolific fans , Maureen Kukudio , is actually interested in her romantically . Suzanne seeks advice from Lorna about how to respond ; she admits she finds
+Maureen attractive , but she has never had a girlfriend before and subsequently feels she must back away from a sexual liaison .
+</item 10>
+=== END ITEM id=d50fea517d3af59b ===
+
+=== ITEM id=9903b401b495d36e ===
+Gold sentences and facts:
+Sentence 0: The term `` spirit '' in reference to alcohol stems from Middle Eastern alchemy . These alchemists were more concerned with medical elixirs than with transmuting lead into gold . The vapor given off and collected during an alchemical process ( as with distillation of alcohol ) was called a spirit of the original material .
+  Fact 0.0: The term spirit used for alcohol stems from Middle Eastern alchemy.
+  Fact 0.1: Middle Eastern alchemists were more concerned with medical elixirs than with transmuting lead into gold.
+  Fact 0.2: The vapor given off and collected during an alchemical process was called a spirit of the original material.
+  Fact 0.3: Distillation of alcohol is an example of such an alchemical process.
+
+Retrieved items:
+<item 1>
+Distilled beverage
+Thus began the `` national '' drinks of Europe : jenever ( Belgium and the Netherlands ) , gin ( England ) , Schnaps ( Germany ) , grappa ( Italy ) , borovička
+( Slovakia ) , horilka ( Ukraine ) , akvavit / snaps ( Scandinavia ) , vodka ( Poland and Russia ) , ouzo ( Greece ) , rakia ( the Balkans ) , and poitín (
+Ireland ) . The actual names emerged only in the 16th century , but the drinks were well known prior to then . Government regulation ( edit ) It is legal to
+distill beverage alcohol as a hobby for personal use in some countries , including New Zealand and the Netherlands . In the United States , it is illegal to
+distill beverage alcohol without a license . In some parts of the U.S. , it is also illegal to sell a still without a license . However , all states allow
+unlicensed individuals to make their own beer , and some also allow unlicensed individuals to make their own wine ( although making beer and wine is also
+prohibited in some local jurisdictions ) .
+</item 1>
+
+<item 2>
+Distilled beverage
+Retrieved 2016 - 07 - 10 . The earliest possible period seems to be the Eastern Han dynasty ... the most likely period for the beginning of true distillation of
+spirits for drinking in China is during the Jin and Southern Song dynasties Jump up ^ Taylor , F. Sherwood ( 1945 ) . `` The Evolution of the Still '' . Annals
+of Science . 5 ( 3 ) : 186 . doi : 10.1080 / 00033794500201451 . ISSN 0003 - 3790 . ^ Jump up to : Ahmad Y. al - Hassan ( 2001 ) , Science and Technology in
+Islam : Technology and applied sciences , pages 65 - 69 , UNESCO Jump up ^ Hassan , Ahmad Y. `` Alcohol and the Distillation of Wine in Arabic Sources '' .
+History of Science and Technology in Islam . Retrieved 2014 - 04 - 19 . Jump up ^ The Economist : `` Liquid fire - The Arabs discovered how to distil alcohol .
+</item 2>
+
+<item 3>
+Distilled beverage
+These all have a relatively low alcohol content , typically less than 15 % . Brandy is a spirit produced by the distillation of wine , and has an ABV of over 35
+% . Other examples of distilled beverages include vodka , baijiu , gin , rum , tequila , mezcal , and whisky . ( Also see list of alcoholic drinks , and liquors
+by national origin . ) Contents ( hide ) 1 Nomenclature 2 Etymology 3 History of distillation 3.1 Precursors 3.2 True distillation 3.3 Government regulation 3.4
+Microdistilling 4 Flammability 5 Serving 6 Alcohol consumption by country 7 Health effects 7.1 Short - term effects 7.2 Long - term effects 8 See also 9
+References 10 Bibliography 11 External links Nomenclature ( edit ) The term spirit refers to a distilled beverage that contains no added sugar and has at least
+20 % alcohol by volume ( ABV ) . Distilled beverages bottled with added sugar and added flavorings , such as Grand Marnier , Frangelico , and American schnapps
+, are known instead as liqueurs .
+</item 3>
+
+<item 4>
+Distilled beverage
+Distilled beverages generally have an alcohol concentration higher than 30 % . Beer and wine , which are not distilled beverages , are limited to a maximum
+alcohol content of about 20 % ABV , as most yeasts can not reproduce when the concentration of alcohol is above this level ; as a consequence , fermentation
+ceases at that point . Etymology ( edit ) The origin of `` liquor '' and its close relative `` liquid '' was the Latin verb liquere , meaning `` to be fluid ''
+. According to the Oxford English Dictionary , an early use of the word in the English language , meaning simply `` a liquid '' , can be dated to 1225 . The
+first use the OED mentions of its meaning `` a liquid for drinking '' occurred in the 14th century . Its use as a term for `` an intoxicating alcoholic drink ''
+appeared in the 16th century . The term `` spirit '' in reference to alcohol stems from Middle Eastern alchemy . These alchemists were more concerned with
+medical elixirs than with transmuting lead into gold . The vapor given off and collected during an alchemical process ( as with distillation of alcohol ) was
+called a spirit of the original material .
+</item 4>
+
+<item 5>
+Distilled beverage
+Forbes , Robert ( 1997 ) . Short History of the Art of Distillation from the Beginnings up to the Death of Cellier Blumenthal . Brill Academic Publishers . ISBN
+90 - 04 - 00617 - 6 . Multhauf , Robert ( 1993 ) . The Origins of Chemistry . Gordon & Breach Science Publishers . ISBN 2 - 88124 - 594 - 3 . External links (
+edit ) Wikimedia Commons has media related to Distilled beverages . History and Taxonomy of Distilled Spirits ( hide ) Alcoholic drinks History and production
+History of alcohol History of alcoholic beverages History of beer History of wine History of Bordeaux wine History of Champagne History of Chianti History of
+French wine History of Portuguese wine History of Rioja wine History of Sherry History of South African wine Production Alcohol industry Brewing Distillation
+Drinking establishments Fermentation Winemaking Alcoholic drinks Fermented drink Beer Cider Mead Rice wine Sake Wine Other fermented drinks Distilled drink
+Brandy Gin Liqueur Rum Tequila Vodka Whisky Other distilled drinks Fortified wine Madeira wine Marsala wine Port wine Sherry Vermouth Other fortified wines
+Distilled drinks by
+</item 5>
+
+<item 6>
+Distilled beverage
+The History of Science and Technology . Houghton Mifflin Harcourt . p. 88 . ISBN 0 - 618 - 22123 - 9 . Jump up ^ Marcelin Berthelot Collection des anciens
+alchimistes grecs ( 3 vol. , Paris , 1887 -- 1888 , p. 161 ) ^ Jump up to : Irfan Habib ( 2011 ) , Economic History of Medieval India , 1200 - 1500 , page 55 ,
+Pearson Education ^ Jump up to : Haw , Stephen G. ( 2006 ) . `` Wine , women and poison '' . Marco Polo in China . Routledge . pp. 147 -- 148 . ISBN 978 - 1 -
+134 - 27542 - 7 . Retrieved 2016 - 07 - 10 .
+</item 6>
+
+<item 7>
+Distilled beverage
+Consult your doctor on the benefits and risks of consuming alcohol in moderation . '' See also ( edit ) Liquor portal Drink portal Absinthe Akvavit Aguardiente
+Alcoholic beverage Arak Arrack Awamori Baijiu / Shōchū / Soju Brandy Borovička Cachaça Eau de vie Er guo tou Fenny Freeze distillation Gin ( and Jenever )
+Horilka Liquor store List of beverages Mamajuana Mezcal Moonshine Neutral grain spirit Orujo Pálinka Pisco Poitín Rakı Rakia Rum Rượu đế Schnapps Slivovitz
+Vodka Whisky Tsikoudia Tsipouro References ( edit ) Jump up ^ `` distilled spirit - alcoholic beverage '' . Encyclopædia Britannica . Jump up ^ E. Gildemeister
+and Fr . Hoffman , translated by Edward Kremers ( 1913 ) . The Volatile Oils. 1 . New York : Wiley . p. 203 . Jump up ^ Bryan H. Bunch and Alexander Hellemans (
+2004 ) . The History of Science and Technology .
+</item 7>
+
+<item 8>
+Distilled beverage
+Distilled beverage - wikipedia Distilled beverage Jump to : navigation , search `` Liquor '' redirects here . For sweetened and flavored alcoholic beverages ,
+see Liqueur . For the novel series , see Liquor ( novel series ) . An old whiskey still A display of various distilled beverages in a supermarket Some single -
+drink distilled beverage bottles available in Germany A distilled beverage , spirit , liquor , hard liquor or hard alcohol is an alcoholic beverage produced by
+distillation of liquid drinks made with grains , fruit , or vegetables that have already gone through alcoholic fermentation . The distillation process purifies
+the liquid and removes diluting components like water , for the purpose of increasing its proportion of alcohol content ( commonly expressed as alcohol by
+volume , ABV ) . As distilled beverages contain significantly more alcohol , they are considered `` harder '' -- in North America , the term hard liquor is used
+to distinguish distilled beverages from undistilled ones . As examples , this term does not include beverages such as beer , wine , mead , sake , or cider , as
+they are fermented but not distilled . These all have a relatively low alcohol content , typically less than 15 % .
+</item 8>
+
+<item 9>
+Distilled beverage
+History of distillation ( edit ) Main article : Distillation Precursors ( edit ) Distillation equipment used by the 3rd century alchemist Zosimos of Panopolis ,
+from the Byzantine Greek manuscript Parisinus graces . Distillation was known in the ancient Indian subcontinent , evident from baked clay retorts and receivers
+found at Taxila and Charsadda in modern Pakistan , dating back to the early centuries of the Christian era . These `` Gandhara stills '' were only capable of
+producing very weak liquor , as there was no efficient means of collecting the vapors at low heat . The Chinese may have independently developed the process in
+the early centuries after Christ , during the Eastern Han dynasty . Distilled water was described in the 2nd century AD by Alexander of Aphrodisias . Alchemists
+in Roman Egypt were using a distillation alembic or still device in the 3rd century . Freeze distillation involves freezing the alcoholic beverage and then
+removing the ice . The freezing technique had limitations in geography and implementation limiting how widely this method was put to use .
+</item 9>
+
+<item 10>
+Distilled beverage
+The production method was written in code , suggesting that it was being kept secret . In 1437 , `` burned water '' ( brandy ) was mentioned in the records of
+the County of Katzenelnbogen in Germany . It was served in a tall , narrow glass called a Goderulffe . Claims upon the origin of specific beverages are
+controversial , often invoking national pride , but they are plausible after the 12th century AD , when Irish whiskey and German brandy became available . These
+spirits would have had a much lower alcohol content ( about 40 % ABV ) than the alchemists ' pure distillations , and they were likely first thought of as
+medicinal elixirs . Consumption of distilled beverages rose dramatically in Europe in and after the mid-14th century , when distilled liquors were commonly used
+as remedies for the Black Death . Around 1400 , methods to distill spirits from wheat , barley , and rye beers , a cheaper option than grapes , were discovered
+.
+</item 10>
+=== END ITEM id=9903b401b495d36e ===
+
+=== ITEM id=cc03f4ef13ee9d3e ===
+Gold sentences and facts:
+Sentence 0: Philippe Petit ( French pronunciation : ​ ( filip pəti ) ; born 13 August 1949 ) is a French high - wire artist who gained fame for his high - wire walk between the Twin Towers of the World Trade Center in New York City , on the morning of August 7 , 1974 as well as his high wire walk between the Notre Dame cathedral in Paris , 1971 . For his unauthorized feat 400 metres ( 1,000 feet ) above the ground -- which he referred to as `` le coup '' -- he rigged a 200 - kilogram ( 440 - pound ) cable and used a custom - made 8 - metre ( 30 - foot ) long , 25 - kilogram ( 55 - pound ) balancing pole . He performed for 45 minutes , making eight passes along the wire . The following week , he celebrated his 25th birthday . All charges were dismissed in exchange for him doing a performance in Central Park for children .
+  Fact 0.0: Philippe Petit is French.
+  Fact 0.1: Philippe Petit was born on 13 August 1949.
+  Fact 0.2: Philippe Petit is a high-wire artist.
+  Fact 0.3: Philippe Petit gained fame for his high-wire walk between the Twin Towers of the World Trade Center in New York City.
+  Fact 0.4: Philippe Petit's Twin Towers walk took place on the morning of 7 August 1974.
+  Fact 0.5: Philippe Petit made a high-wire walk between the Notre Dame cathedral in Paris in 1971.
+  Fact 0.6: Philippe Petit's feat was unauthorized.
+  Fact 0.7: Philippe Petit's feat took place 400 metres (1,000 feet) above the ground.
+  Fact 0.8: Philippe Petit referred to the feat as 'le coup'.
+  Fact 0.9: Philippe Petit rigged a 200-kilogram (440-pound) cable.
+  Fact 0.10: Philippe Petit used a custom-made balancing pole.
+  Fact 0.11: The balancing pole was 8 metres (30 feet) long.
+  Fact 0.12: The balancing pole weighed 25 kilograms (55 pounds).
+  Fact 0.13: Philippe Petit performed for 45 minutes.
+  Fact 0.14: Philippe Petit made eight passes along the wire.
+  Fact 0.15: Philippe Petit celebrated his 25th birthday the following week.
+  Fact 0.16: All charges against Philippe Petit were dismissed.
+  Fact 0.17: The charges were dismissed in exchange for Philippe Petit doing a performance in Central Park for children.
+
+Retrieved items:
+<item 1>
+Philippe Petit
+The Port Authority of New York and New Jersey gave Petit a lifetime pass to the Twin Towers ' Observation Deck . He autographed a steel beam close to the point
+where he began his walk . Petit 's high - wire walk is credited with bringing the Twin Towers much needed attention and even affection , as they initially had
+been unpopular . Critics such as historian Lewis Mumford had regarded them as ugly and utilitarian in design , and too large a development for the area . The
+Port Authority was having trouble renting out all of the office space . Mordicai Gerstein wrote and illustrated a children 's book , The Man Who Walked Between
+The Towers ( 2003 ) , which won a Caldecott Medal for his art . It was adapted and produced as an animated short film by the same title , directed by Michael
+Sporn and released in 2005 , which won several awards . The documentary film Man on Wire ( 2008 ) by UK director James Marsh is about Petit and his 1974 WTC
+performance ; it won both the World Cinema Jury and Audience awards at the Sundance Film Festival 2008 .
+</item 1>
+
+<item 2>
+Philippe Petit
+I learned the backward somersault , the front somersault , the unicycle , the bicycle , the chair on the wire , jumping through hoops . But I thought , `` What
+is the big deal here ? It looks almost ugly . '' So I started to discard those tricks and to reinvent my art . In June 1971 , Petit secretly installed a cable
+between the two towers of Notre Dame de Paris . On the morning of June 26 , 1971 , he `` juggled balls '' and `` pranced back and forth '' as the crowd below
+applauded . World Trade Center walk ( edit ) Before his Twin Towers walk , Petit was known to New Yorkers for his frequent tightrope - walking performances and
+magic shows in the parks of New York , especially Washington Square Park . Petit 's most famous performance was in August 1974 , conducted on a wire between the
+roofs of the Twin Towers of the World Trade Center in Manhattan , a quarter mile above the ground . He performed for 45 minutes , making eight passes along the
+wire , during which he walked , danced , lay down on the wire , and saluted watchers from a kneeling position .
+</item 2>
+
+<item 3>
+Philippe Petit
+In planning for the Twin Towers walk , Petit had to learn how to accommodate such issues as the swaying of the high towers due to wind , which was part of their
+design ; effects of wind and weather on the wire at that height , how to rig a 200 ft ( 61 m ) steel cable across the 138 ft ( 42 m ) gap between the towers (
+at a height of 1,368 ft ( 417 m ) ) , and how to gain entry with his collaborators , first to scope out the conditions and lastly , to stage the project . They
+had to get heavy equipment to the rooftops . He traveled to New York on numerous occasions to make first - hand observations . Since the towers were still under
+construction , Petit and one of his collaborators , New York - based photographer Jim Moore , rented a helicopter to take aerial photographs of the buildings .
+Jean - François and Jean - Louis helped him practice in a field in France , and accompanied him to take part in the final rigging of the project , as well as to
+photograph it . Francis Brunn , a German juggler , provided financial support for the proposed project and its planning .
+</item 3>
+
+<item 4>
+Philippe Petit
+The New York Times . Retrieved 18 April 2008 . Combining the cunning of a second - story man with the nerve of an Evel Knievel , a French high - wire artist
+sneaked past guards at the World Trade center , ran a cable between the tops of its twin towers and tightrope - walked across it yesterday morning . ^ Jump up
+to : Marsh , James ( Director ) ( 2008 ) . Man on Wire ( Documentary ) . Jump up ^ Tomkins , Calvin , `` The Man Who Walks on Air , '' New Yorker Magazine ,
+1999 , excerpted in Life Story , by David Remnick , Modern Library Paperback edition , 2001 . Jump up ^ `` Sneaky Juggler Has Ball Up In Sky At Notre Dame '' .
+The Ogden - Standard Examiner ( AP story ) . June 27 , 1971 . p. 1 . Jump up ^ `` WGBH American Experience . New York : The Center of the World - PBS '' . Jump
+up ^ Man On Wire DVD , `` Philippe Petit 's Sydney Harbor Bridge Crossing '' bonus feature .
+</item 4>
+
+<item 5>
+Philippe Petit
+Office workers , construction crews and policemen cheered him on . Planning ( edit ) Petit conceived his `` coup '' when he was 18 , when he first read about
+the proposed construction of the Twin Towers and saw drawings of the project in a magazine , which he read while sitting at a dentist 's office in 1968 . Petit
+was seized by the idea of performing there , and began collecting articles on the Towers whenever he could . What was called the `` artistic crime of the
+century '' took Petit six years of planning , during which he learned everything he could about the buildings and their construction . In the same period , he
+began to perform high wire walking at other famous places . Rigging his wire secretly , he performed as a combination of circus act and public display . In 1971
+, he performed his first such walk between the towers of the cathedral of Notre Dame de Paris , while priests were simultaneously being ordained inside the
+building . In 1973 , he walked a wire rigged between the two north pylons of the Sydney Harbour Bridge , in Sydney , Australia .
+</item 5>
+
+<item 6>
+Philippe Petit
+9 - 11 : Artists Respond feature entitled `` He Walks on Air 110 Stories High '' ( DC Comics , 2002 ) ISBN 978 - 1 - 56389 - 881 - 5 Ralph Keyes , Chancing It :
+Why We Take Risks ( Little , Brown & Company , 1985 ) ISBN 0 - 316 - 49132 - 2 Angus K. Gillespie , Twin Towers : the Life of New York City 's World Trade
+Center ( Rutgers University Press , 1999 ) ISBN 978 - 0 - 8135 - 2742 - 0 James Glanz and Eric Lipton , City in the Sky ( New York : Times Book , 2003 ) ISBN 0
+- 8050 - 7691 - 3 Colum McCann , Let the Great World Spin ( New York : Random House , 2009 ) ISBN 978 - 0 - 8129 - 7399 - 0 Articles and interviews ( edit )
+Rosenthal , Adam ( 1 September 2012 ) . `` Suspended Reading : Man on Wire , 9 / 11 and the Logic of the High - Wire . ''
+</item 6>
+
+<item 7>
+Philippe Petit
+Besides paying tribute to those who were killed , Petit also called for a rebuilding of the towers , promising that `` When the towers again twin - tickle the
+clouds , I offer to walk again , to be the expression of the builders ' collective voice . Together , we will rejoice in an aerial song of victory . ''
+Notwithstanding Petit 's wishes , the Twin Towers were eventually replaced by a different complex of buildings , thus precluding the possibility of Petit ( or
+anyone else ) repeating a similar feat at the World Trade Center site . Legacy and honors ( edit ) James Park Morton Interfaith Award Streb Action Maverick
+Award The Byrdcliffe Award Works and performances ( edit ) Major high - wire performances ( edit ) This section does not cite any sources . Please help improve
+this section by adding citations to reliable sources . Unsourced material may be challenged and removed . ( August 2017 ) ( Learn how and when to remove this
+template message ) Year Walk Location Notes 1971 Vallauris Vallauris , Alpes - Maritimes , France performance for artist Pablo Picasso 's 90th birthday Notre
+Dame Cathedral Notre Dame Cathedral Paris ,
+</item 7>
+
+<item 8>
+Philippe Petit
+Among those who have associated with some of his projects are such artists as : Mikhail Baryshnikov , Werner Herzog , Annie Leibovitz , Miloš Forman , Volker
+Schlöndorff , Twyla Tharp , Peter Beard , Marcel Marceau , Paul Auster , Paul Winter , Debra Winger , Robin Williams and Sting . Director James Signorelli
+assisted with the creation of the book To Reach the Clouds ( 2002 ) , about the Twin Towers walk . In the book , Petit not only wrote about his spectacular feat
+, and the events of his life which led up to it , but also expressed his feelings following the September 11 attacks during which the Twin Towers were destroyed
+. He wrote that on that morning , `` My towers became our towers . I saw them collapse -- hurling , crushing thousands of lives . Disbelief preceded sorrow for
+the obliteration of the buildings , perplexity descended before rage at the unbearable loss of life . ''
+</item 8>
+
+<item 9>
+Philippe Petit
+Philippe Petit - wikipedia Philippe Petit Jump to : navigation , search Philippe Petit Petit at the 81st Academy Awards in February 2009 ( 1949 - 08 - 13 ) 13
+August 1949 ( age 68 ) Nemours , Seine - et - Marne , France Occupation High - wire artist Philippe Petit ( French pronunciation : ​ ( filip pəti ) ; born 13
+August 1949 ) is a French high - wire artist who gained fame for his high - wire walk between the Twin Towers of the World Trade Center in New York City , on
+the morning of August 7 , 1974 as well as his high wire walk between the Notre Dame cathedral in Paris , 1971 . For his unauthorized feat 400 metres ( 1,000
+feet ) above the ground -- which he referred to as `` le coup '' -- he rigged a 200 - kilogram ( 440 - pound ) cable and used a custom - made 8 - metre ( 30 -
+foot ) long , 25 - kilogram ( 55 - pound ) balancing pole . He performed for 45 minutes , making eight passes along the wire .
+</item 9>
+
+<item 10>
+Philippe Petit
+MSA - The Man Who Walked Between The Towers . Co-produced by Michael Sporn Animation and Weston Woods Studios Philippe Petit Signature visible in the 1980s
+photos of Philippe Petit crossing the Twin Towers along with others Philippe Petit : The journey across the high wire , TED2012 , Filmed Mar 2012 , Posted May
+2012 . Retrieved from `` https://en.wikipedia.org/w/index.
+</item 10>
+=== END ITEM id=cc03f4ef13ee9d3e ===

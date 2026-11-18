@@ -1,0 +1,41 @@
+[
+  {
+    "id": "499e8e530d7b123d",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "5bffeb526c3ff739",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "We continue to work through the process with the European Commission"}]},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "We continue to work through the process with the European Commission"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "dissemination of illegal content in the context of Hamas’ terrorist attacks against Israel"}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks"}]}
+    ]
+  },
+  {
+    "id": "e8ca42ba388038ce",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "all of that, all of it, was built on lies,"}, {"item": 6, "quote": "stole customer funds to facilitate his jet-setting lifestyle, donate millions to political candidates, and finance risky bets."}, {"item": 1, "quote": "“The defendant lied to the world,” Rehn alleged."}]},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "missing", "evidence": []}
+    ]
+  }
+]

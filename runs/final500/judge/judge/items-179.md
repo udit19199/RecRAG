@@ -1,0 +1,886 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=099468fbcb305c9c ===
+Gold sentences and facts:
+Sentence 0: The artists’ groups noted in their statement on Tuesday that the European Commission “has on several occasions acknowledged concerns about the impact of the ruling and made clear its intention to find a balanced solution.
+  Fact 0.0: The artists' groups noted in their statement on Tuesday that the European Commission has on several occasions acknowledged concerns about the impact of the ruling.
+  Fact 0.1: The artists' groups noted in their statement on Tuesday that the European Commission made clear its intention to find a balanced solution.
+Sentence 1: We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage.
+  Fact 1.0: The speaker continues to work through the process with the European Commission.
+  Fact 1.1: The speaker is focused on addressing the European Commission's questions at this stage.
+  Fact 1.2: The speaker is focused on addressing any identified concerns at this stage.
+Sentence 2: And some of these staff will also be deployed within the European Commission,” they added.
+  Fact 2.0: The speaker added that some of these staff will also be deployed within the European Commission.
+Sentence 3: Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war.
+  Fact 3.0: Earlier actions by the entity referred to as 'its' were focused on concerns about the spread of illegal content.
+  Fact 3.1: Earlier actions by the entity referred to as 'its' were focused on concerns about disinformation related to the Israel-Hamas war.
+
+Retrieved items:
+<item 1>
+Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design (TechCrunch, 2023-12-18T13:04:56+00:00)
+Reached for a response to the EU probe, X’s Joe Benarroch — who was brought into the company by CEO Linda Yaccarino relatively recently to work on business
+operations — said:
+
+X remains committed to complying with the Digital Services Act, and is cooperating with the regulatory process. It is important that this process remains free
+of political influence and follows the law. X is focused on creating a safe and inclusive environment for all users on our platform, while protecting freedom of
+expression, and we will continue to work tirelessly towards this goal.
+
+While X under Musk has very evidently been flying the ship in the opposite direction to the responsible governance the DSA intends to encourage — hence
+attracting so many warnings from EU lawmakers, even long before today’s formal probe — it’s notable X recently started offering a research program for outsiders
+to get data to systemic risks arising on the platform in the EU. However the Commission obviously has doubts X has gone far enough on the transparency front to
+meet the DSA’s bar.
+</item 1>
+
+<item 2>
+Warner Music Group boss Robert Kyncl on AI, why labels still exist, and 2 other things we learned from his Q&A at the Code Conference (Music Business Worldwide,
+2023-09-28T23:37:22+00:00)
+MBW Reacts is a series of analytical commentaries from Music Business Worldwide written in response to major recent entertainment events or news stories. MBW
+Reacts is supported by JKBX , a technology platform that offers consumers access to music royalties as an asset class.
+
+In recent months, Warner Music Group CEO Robert Kyncl has been keeping a close eye on AI in the music industry – not surprising, given that he came to the music
+biz from ‘Big Tech’, namely YouTube, where he was Chief Business Officer.
+
+Nor is it surprising, given his current role, that he has been pushing for price hikes at music streaming services.
+
+Both of these topics came up during Kyncl’s Q&A session at the Code Conference in Laguna Niguel, California, on Tuesday (September 26).
+</item 2>
+
+<item 3>
+Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design (TechCrunch, 2023-12-18T13:04:56+00:00)
+Confirmed breaches of the online governance regime can face a range of major sanctions, including fines of up to 6% of global annual turnover.
+
+The EU can also apply interim measures where it believes there’s a risk of serious harm for users and may even seek to have access to infringing services
+temporarily blocked. Although its announcement today is careful to caveat the development by affirming no conclusions have yet been reached.
+
+There is also no confirmed timeline for the probe to conclude. But the fact of it being opened means other tools are put within reach of regulators and could be
+applied if the EU sees the need to act quickly — such as the aforementioned interim measures. So the Commission’s official scrutiny of X could have real world
+implications for how the platform operates sooner rather than later.
+</item 3>
+
+<item 4>
+Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design (TechCrunch, 2023-12-18T13:04:56+00:00)
+Per the Commission, the EU’s investigation of X focuses on the following areas and issues:
+
+Compliance with DSA obligations related to countering the dissemination of illegal content in the EU — “ notably in relation to the risk assessment and
+mitigation measures adopted by X to counter the dissemination of illegal content in the EU, as well as the functioning of the notice and action mechanism for
+illegal content in the EU mandated by the DSA, including in light of X’s content moderation resources
+
+— “ The effectiveness of measures taken by X to combat info manipulation — with a focus on the effectiveness of its “Community Notes” system of crowdsourcing
+fact-checking to aggregated views of users, who may vote to label disputed tweets with additional context.
+</item 4>
+
+<item 5>
+Amazon’s iRobot purchase sucks up formal competition concerns in EU (TechCrunch, 2023-11-27T23:29:10+00:00)
+At the time the EU’s then competition chief, Margrethe Vestager, trumpeted the outcome as setting what she dubbed “new rules for how Amazon operates its
+business in Europe” — arguing the settlement meant the ecommerce giant could “no longer abuse its dual role” as marketplace operator and own brand retailer; and
+further claiming the outcome would ensure “competing independent retailers and carriers as well as consumers will benefit from these changes opening up new
+opportunities and choice.”
+
+Given the commitments the EU already extracted from Amazon after those earlier investigations it’s interesting to see the bloc remains concerned over levers the
+ecommerce behemoth still has its disposal to potentially influence competitive outcomes on its marketplace vis-à-vis iRobot vs rival robot vacs.
+
+Since then Amazon has also been named a gatekeeper under the EU’s shiny new ex ante competition regulation, the Digital Markets Act — which lists its
+marketplace as a core platform service. This designation means Amazon must comply with a series of up-front obligations, which include restrictions on self
+preferencing.
+</item 5>
+
+<item 6>
+After warning, the EU opens investigation into X over alleged disinformation (TechCrunch, 2023-10-13T00:38:56+00:00)
+X owner Elon Musk last projected revenues of about $3 billion for this year. It’s anyone’s guess if that’s accurate now, but as an example, that would result in
+a fine of up to $180 million.
+
+Indirectly, an investigation will also be a key way for the public to have significantly more transparency around how X is being used (and abused): since Musk
+took Twitter private, the company no longer produces quarterly earnings reports and is not held to account as closely as a result.
+
+EU officials confirmed to TechCrunch that an investigation has not been taken at this point. Clearly, though, yesterday’s development (and the pace at which
+regulators are moving) is a strong indication of the bloc’s direction of travel.
+
+The Commission said it is looking at X’s compliance with the DSA across a number of areas — including with regard to its policies and practices regarding
+notices on illegal content; complaint handling; risk assessment and measures to mitigate the risks identified.
+</item 6>
+
+<item 7>
+Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design (TechCrunch, 2023-12-18T13:04:56+00:00)
+It’s official! Elon Musk’s X marks the spot of the first confirmed investigation opened by the European Union under its rebooted digital rulebook, the Digital
+Services Act (DSA).
+
+Announcing the opening of a “formal proceeding” today, the European Commission said the investigation will look at whether the social networking platform may
+have breached rules linked to risk management, content moderation, dark patterns, advertising transparency and data access for researchers.
+
+The opening of a formal DSA investigation on X comes hard on the heels of a complaint against X’s adtech by privacy rights group, noyb — although today’s formal
+proceeding is unlikely to be directly linked as the Commission has been probing the platform for months via a flurry of requests for information. Its earlier
+actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war.
+
+Back in October the Commission sent Musk’s company an “urgent” formal request for information about how it was responding to information risks arising out of
+the conflict.
+</item 7>
+
+<item 8>
+Sony Music has issued nearly 10,000 deepfake takedowns… and other things we learned from Dennis Kooker’s speech about AI (Music Business Worldwide,
+2023-11-30T21:28:03+00:00)
+(In our report, MBW suggested that YouTube parent Google‘s recent submission to The United States Copyright Office (USCO) – in response to a request for written
+submissions as part of a study around copyright law and policy issues raised by AI systems – may have influenced Sony’s absence from Dream Track.)
+
+Google was just one of various tech giants and AI companies that submitted responses to the USCO, amongst them, Anthropic and Stability AI.
+
+Anthropic, in its submission to the USCO, also argued that training (large language models) LLM’s on copyrighted material is fair use.
+
+Stability AI made a similar argument. Its position on the issue of “Fair Use” concerning AI and copyrighted content resulted in the resignation of prominent
+generative AI executive Ed Newton-Rex from the company.
+
+As reported by MBW last week, Universal Music Group submitted its response to the USCO.
+</item 8>
+
+<item 9>
+Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design (TechCrunch, 2023-12-18T13:04:56+00:00)
+EU regulators are also set to assess Musk & co’s claims that replacing a formal content moderation function with crowdsourced opinions is a valid approach to
+tackling diverse information risks; and, consequently, to look into how much Musk’s gutting of content moderation teams and processes has cost X’s users in
+terms of harm exposure.
+
+To say the Commission’s investigation looks fascinating and timely is an understatement.
+
+EU lawmakers can certainly bask in the glow of being prepared for the possibility of an erratic billionaire running a wrecking ball through a major social
+platform. But of course they will need to follow through — and it’s clear the real work is just starting. So this probe looks set to be a test of how much
+stomach the EU has to actually enforce the rules it loves to lay down on paper.
+
+The investigation may also test Musk’s mettle for what could be an expensive head-on clash with EU regulators.
+</item 9>
+
+<item 10>
+Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design (TechCrunch, 2023-12-18T13:04:56+00:00)
+The EU also said then it was looking at X’s compliance across a number of areas, including policies and practices regarding notices on illegal content,
+complaint handling, risk assessment and measures to mitigate the risks identified — and it gave X until the end of October to respond.
+
+“On the basis of the preliminary investigation conducted so far, including on the basis of an analysis of the risk assessment report submitted by X in
+September, X’s Transparency report published on 3 November, and X’s replies to a formal request for information, which, among others, concerned the
+dissemination of illegal content in the context of Hamas’ terrorist attacks against Israel, the Commission has decided to open formal infringement proceedings
+against X under the Digital Services Act,” the EU said today.
+</item 10>
+=== END ITEM id=099468fbcb305c9c ===
+
+=== ITEM id=47390aa7a4637cb5 ===
+Gold sentences and facts:
+Sentence 0: Hundreds of women have filed lawsuits against Uber claiming the company hasn’t done enough to prevent instances of sexual assault by drivers.
+  Fact 0.0: Hundreds of women have filed lawsuits against Uber.
+  Fact 0.1: The women's lawsuits claim Uber hasn't done enough to prevent instances of sexual assault by drivers.
+Sentence 1: In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income.
+  Fact 1.0: In the third quarter, Uber generated $394 million in operating income.
+  Fact 1.1: In the third quarter, Uber generated $219 million worth of net income.
+
+Retrieved items:
+<item 1>
+Uber sexual assault survivors call for in-car cameras, tech upgrades (TechCrunch, 2023-10-13T19:26:48+00:00)
+Uber hasn’t released safety data for 2021 and 2022, and won’t say when it plans to do so. Older data backs up some of Abrams’ claims.
+
+Uber has published two safety reports — one containing data from 2017 to 2018 and another with data from 2019 to 2020. The ride-hail company claims that the
+rate of sexual assault reported on the app decreased 38% between its first and second reports.
+
+While the rate decrease is positive, not all the data delivers the same message. Over that same time period, the total number of sexual assault reports across
+five categories fell from 5,981 to 3,824. That drop could be explained by the decrease of trips from 1.4 billion in 2019 to 650 million in 2020.
+
+And while the total number of incidents as a percentage of total number of rides does decrease through the years, the number of incidents in certain categories
+actually increases.
+</item 1>
+
+<item 2>
+Uber sexual assault survivors call for in-car cameras, tech upgrades (TechCrunch, 2023-10-13T19:26:48+00:00)
+The number of incidents increased in the categories of nonconsensual kissing, nonconsensual touching and nonconsensual penetration, or rape, between 2017 and
+2019.
+
+The total number of rape incidents also rose from 2017 to 2019. And while the number of reported rapes dropped in 2020, the rate has remained the same since
+2017. In other words, there has not been an improvement in the rate of rapes on the platform.
+
+Sexual assaults are an ongoing problem for Uber
+
+Uber has been sued numerous times over the past few years by passengers who claim they were sexually assaulted during a ride. Lyft has faced similar lawsuits
+and accusations.
+
+Under Uber’s terms of use, class action lawsuits can’t be filed against the company in cases of sexual assault, so each case has to be heard individually. This
+has prevented survivors from advocating for themselves collectively.
+
+Judge Charles Breyer in the Northern District of California will preside over pretrial hearings.
+</item 2>
+
+<item 3>
+Uber’s Q3 numbers include impressive profitability gains, slower-than-expected growth (TechCrunch, 2023-11-07T17:03:41+00:00)
+The combined impact of those two items was 8 percentage points of growth.
+
+The profit perspective
+
+From bookings to revenues to profits: How did the main portions of Uber’s business generate black ink?
+
+Turning to what Uber calls “segment adjusted EBITDA,” it’s not hard to see how the company managed to rack up more income in its most recent quarter.
+Ride-hailing adjusted profit rose to $1.29 billion, up 43% from $898 million in the year-ago quarter, while delivery saw its own profitability skyrocket from
+$181 million in Q3 2022 to $413 million in its most recent fiscal period.
+
+Uber did spend more during Q3 2023 when compared to its Q3 2022 result, but the 5% gain in “Corporate G&A and Platform R&D” costs to $595 million was far less
+than the gains we saw above. So, Uber’s adjusted EBITDA rose from $516 million in aggregate to $1.09 billion in the third quarter of this year.
+</item 3>
+
+<item 4>
+Cruise hits the brakes on driverless, UAW makes progress and more EV backpedaling (TechCrunch, 2023-10-30T10:15:24+00:00)
+A Google spokesperson said the ability to see live traffic conditions and business information was halted temporarily out of “consideration for the safety of
+local communities.” Google did something similar in 2022 amid the Russian invasion of Ukraine because the apps were being used to track military movements.
+
+XPeng, often called the Chinese challenger to Tesla, has removed high-definition mapping in its XNGP assisted driving feature following its rival’s lead.
+
+Ride-hailing and car-sharing
+
+Rapido, the eight-year-old Indian bike taxi startup, is expanding into the cab market in the South Asian nation, where Uber and its homegrown competitor Ola
+dominate.
+
+Peer-to-peer car-sharing marketplace Turo has introduced a buy-now-pay-later option. Now you can reserve a car without immediately paying for it until seven
+days before a trip. Turo says it built the BNPL option in-house.
+
+UAW strike
+
+Progress was made as the United Autoworkers strike wrapped up its sixth week.
+</item 4>
+
+<item 5>
+Uber’s Q3 numbers include impressive profitability gains, slower-than-expected growth (TechCrunch, 2023-11-07T17:03:41+00:00)
+Of course, adjusted EBITDA is to profit as hidden heels in men’s shoes are to height, so we’ll want some harder figures as well. In the third quarter, Uber
+generated $394 million in operating income and $219 million worth of net income. Mix in $966 million worth of positive operating cash flow, and Uber looks very
+healthy, given that all of the figures in this paragraph were improvements on its year-ago results.
+
+But while food delivery and scooting humans about town were profitable for Uber in the quarter, the final major portion of its business had a more lackluster
+quarter.
+
+Freight falls
+
+One area that continues to drag on Uber is its freight business.
+
+While Uber’s ride-hailing and delivery business saw an uptick in gross bookings in the third quarter, Uber Freight experienced a 27% drop year-over-year.
+Revenue, as a result, had a similar fall.
+
+The business unit reported revenue of $1.3 billion in the third quarter, a 27% drop from the same period last year.
+</item 5>
+
+<item 6>
+Tesla ‘digs its own grave with the Cybertruck,’ Convoy collapses and Rivian scores a win at Rebelle (TechCrunch, 2023-10-22T19:15:29+00:00)
+Future of flight
+
+EVTOL company Archer Aviation plans to start air taxi operations in Abu Dhabi in 2026. From there, Archer says it will expand across the UAE as part of a
+memorandum of understanding with the Abu Dhabi Investment Office.
+
+Miscellaneous
+
+The United Auto Workers strike is affecting CES. Stellantis canceled its planned presentations for the tech trade show in January, citing the cost of ongoing
+UAW strikes.
+
+Zipcar is getting hit with a fine from the NHTSA for “renting vehicles with open, unrepaired recalls.” One recall concerns 2015–2017 Ford Transit Vans, which
+continued to appear on Zipcar’s platform despite safety issues with the vehicles.
+
+People
+
+Autobrains hired Uri Yacovy, a former SVP at Mobileye, as its chief operating officer.
+
+Logistics company Flexport is laying off 20% of workers, or about 600 people, topping off a spate of staff upheavals at the company.
+</item 6>
+
+<item 7>
+Uber’s Q3 numbers include impressive profitability gains, slower-than-expected growth (TechCrunch, 2023-11-07T17:03:41+00:00)
+Uber reported third-quarter earnings on Tuesday that show a profitable ride-hail and delivery company that’s chugging along in spite of slowing growth in some
+sectors.
+
+The company reported revenue of $9.3 billion, an 11% increase year over year. Investors had expected Uber to report revenues of around $9.5 billion (FactSet,
+Refinitiv), meaning that despite the company’s growth, it fell short of estimates. Turning to profitability, Uber reported net income of $221 million in the
+third quarter, or 10 cents per share, compared with a net loss of $1.2 billion, or 61 cents per share, in the same quarter last year. Again, the company fell
+short of expectations that it would generate 12 cents in per-share profit.
+
+Looking ahead, Uber anticipates gross bookings of $36.5 billion to $37.5 billion, up just 6% at the top-end from its Q3 result.
+</item 7>
+
+<item 8>
+Cruise hits the brakes on driverless, UAW makes progress and more EV backpedaling (TechCrunch, 2023-10-30T10:15:24+00:00)
+Either way, Cruise said it’s now going to examine “processes, systems, and tools and reflect on how we can better operate in a way that will earn public trust.”
+
+That might be a hefty challenge, especially in California. As the Cruise drama unfolded, opposition against robotaxis grew in cities like Los Angeles. And two
+of the biggest groups to oppose robotaxi expansion in California are now formally working together.
+
+Want to reach out with a tip, comment or complaint? Email Kirsten at kirsten.korosec@techcrunch.com or Rebecca at rebecca.techcrunch@gmail.com.
+
+Reminder that you can drop us a note at tips@techcrunch.com. If you prefer to remain anonymous, click here to contact us, which includes SecureDrop
+(instructions here) and various encrypted messaging apps.
+
+Micromobbin’
+
+Taiwanese battery swapping giant Gogoro came to play at the Japan Mobility Show 2023, showing off how its scooter batteries can also be used to power a tiny
+car.
+</item 8>
+
+<item 9>
+Uber’s Q3 numbers include impressive profitability gains, slower-than-expected growth (TechCrunch, 2023-11-07T17:03:41+00:00)
+In business segment terms, Uber generated $17.9 billion in ride-hailing bookings (+31% year over year), and $16.1 billion worth of delivery bookings (+18%).
+Those key business groups at the company generated $5.1 billion and $2.9 billion in revenue, respectively, during the September quarter.
+
+There’s nuance to the revenue figures that we need to consider as the rule-changes in question do affect startups that operate in related categories. On the
+ride-hailing front, Uber told its investors that its Q3 2023 revenue was “negatively impacted by business model changes in some countries that classified
+certain sales and marketing costs as contra revenue by $161 million.” That was not the only legal change that led to Uber’s results changing shape. Under its
+delivery business results, the company added that its revenue result was “negatively impacted by business model changes that classified certain sales and
+marketing costs as contra revenue by $360 million.”
+
+The combined impact of those two items was 8 percentage points of growth.
+</item 9>
+
+<item 10>
+Uber’s Q3 numbers include impressive profitability gains, slower-than-expected growth (TechCrunch, 2023-11-07T17:03:41+00:00)
+After reporting, shares of Uber are up 1.6% in trading, after an up-and-down morning of shares exchange.
+
+Against a backdrop of macroeconomic uncertainty, the former startup darling’s results can be viewed as an indication that its business model has matured and is
+now in a stable, profitable and cash-generating position. On the other hand, under-performing demand results from a company as global as Uber could indicate
+that consumer spend is coming in lighter than anticipated.
+
+For startups in the transport and on-demand sectors, Uber’s earnings are a regular informational zeitgeist. So let’s work to understand where Uber’s revenue
+came from in the third quarter, and how each of its top-line sources converted — or not — to bottom-line results.
+
+Where did the money come from?
+
+In the third quarter, Uber saw total bookings rise from $29.1 billion to $35.3 billion, a gain of around 21%.
+</item 10>
+=== END ITEM id=47390aa7a4637cb5 ===
+
+=== ITEM id=8a2ac9d29a15b181 ===
+Gold sentences and facts:
+Sentence 0: Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns.
+  Fact 0.0: Harbaugh reportedly watched the game from the team hotel.
+  Fact 0.1: The leading piece of drama returns.
+Sentence 1: The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley.
+  Fact 1.0: The Big Ten suspended coach Jim Harbaugh for three games.
+  Fact 1.1: The Big Ten suspended Jim Harbaugh on Friday.
+  Fact 1.2: The team was on a plane en route to Penn State when the suspension happened.
+  Fact 1.3: Michigan had hoped to block the suspension.
+  Fact 1.4: The Wolverines (Michigan) will be without their coach on the sidelines in Happy Valley.
+
+Retrieved items:
+<item 1>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+However, the primary difference is Michigan is accused of using in-person scouting, which has been prohibited under NCAA rules for nearly 30 years, to acquire
+its information.
+
+Monday, Nov. 6
+
+No connection between Buckeyes coach, Michigan investigation
+
+Ohio State coach Ryan Day and his family have no connection to the Big Ten and NCAA investigations into Michigan, Yahoo Sports reported.
+
+A report emerged over the weekend indicating Day may have had some involvement in the probe into the Buckeyes' arch-rivals, but the NCAA told the Big Ten there
+are no ties that it knows of between the Ohio State coach and the investigation.
+
+NCAA shares findings with Big Ten as Harbaugh suspension looms
+
+Yahoo Sports reported Monday that the NCAA shared its investigation findings with the Big Ten, noting that the findings "do not connect the in-person scouting
+and recording of opponents’ sidelines to Harbaugh."
+
+Still, the conference is considering a suspension for Harbaugh and could hand down punishments before the end of the week.
+</item 1>
+
+<item 2>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+🗣️ "Bet" pic.twitter.com/ENB7O8MyPv — The Sporting News (@sportingnews) November 10, 2023
+
+Michigan announces intention to dispute suspension
+
+Michigan has released a statement expressing frustration with the Big Ten's process and says it plans to seek a court order to block Harbaugh's suspension from
+taking effect.
+
+NEWS: Michigan says it intends to seek a court order with Jim Harbaugh preventing disciplinary action from taking effect.
+
+
+
+Full statement: pic.twitter.com/p92yUCLsTX — Matt Fortuna (@Matt_Fortuna) November 10, 2023
+
+Big Ten claims no evidence Harbaugh was aware of scheme
+
+While the Big Ten says it's "proven" that an illegal sign-stealing scheme existed, the conference could not prove that Harbaugh knew about it. So, why was
+Harbaugh suspended? The Big Ten asserts that, because he is the head coach, he has a responsibility for preventing this kind of scheme from taking place.
+</item 2>
+
+<item 3>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Although the Big Ten has closed its investigation, we are continuing to cooperate with the NCAA as it moves forward with its ongoing investigation. Consistent
+with our commitment to integrity, we will continue to take the appropriate actions, including disciplinary measures, based on information we obtain. Earlier
+today, Michigan Athletics relieved Chris Partridge of his duties as a member of the Michigan Football staff. Due to employee privacy laws, we are unable to
+comment further."
+
+Because Michigan and Harbaugh on Thursday dropped their litigation against the Big Ten, he will not be on Michigan's sideline this week against Maryland and
+next week against Ohio State to end the regular season.
+
+Former Wolverines assistant and Harbaugh confidant Biff Poggi on Friday offered his former boss an invitation. Poggi, in his first year as Charlotte's head
+coach, asked Harbaugh to join the 49ers for their games vs. Rice on Saturday and at South Florida on Nov. 25.
+</item 3>
+
+<item 4>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Michigan noted that regarding evidence, there is nothing it is aware of to claim athletics personnel at Michigan committed the allegations, and said the rule
+pertaining to electronic recordings of games is limited to the use of field equipment used by the institution for the game it is currently playing. It also said
+Michigan has not seen much evidence, but rather has just heard a summary of second- and third-hand information.
+
+The letter also said given the use of sign decoding by other universities, there is little reason to believe Stalions' efforts proved meaningful, and pointed
+out the teams' average margin of victory since Stalions was suspended. It said the information obtained is "at most a reflection of information that teams can
+and easily do obtain through public and permissible sources," and because of that it is "highly dubious" that Stalions' observations would have a "material
+effect on the integrity of the competition."
+</item 4>
+
+<item 5>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+On the field, Michigan is in the midst of what could be a historic season. Off the field, the the focus has rarely been on the team's success.
+
+An investigation into Michigan's alleged sign-stealing scheme, centered on now-fired staffer Connor Stalions, continues to evolve by the hour, with one update
+after another adding another wrinkle to the saga that began in October. The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a
+plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy
+Valley.
+
+The Sporting News is tracking the latest updates from the Michigan sign-stealing scandal. Follow along with the newest developments below.
+
+MORE ON MICHIGAN SIGN-STEALING:
+
+Michigan sign-stealing scandal updates
+
+Friday, Nov.
+</item 5>
+
+<item 6>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Public reprimands/fines are common penalties under B1G sportsmanship policy. — Adam Rittenberg (@ESPNRittenberg) November 9, 2023
+
+Michigan's 10-page letter to Big Ten released
+
+Yahoo Sports' Dan Wetzel posted Michigan's full 10-page letter to the Big Ten on X (formerly Twitter). The letter outlines Michigan's belief that the Big Ten
+would be acting too hastily in suspending Harbaugh or levying any punishment toward Michigan before the completion of a full NCAA investigation.
+
+In the letter, Michigan said the university has not had the chance to review all the evidence and respond, which oversteps the due process allowed for Michigan.
+It said Pettiti should not have unilateral authority to punish violations without first having a completed investigation and then a response from the Compliance
+and Reinstatement Committee, which would recommend penalties for rules violations.
+</item 6>
+
+<item 7>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Within it, the school warned Big Ten commissioner Tony Pettiti against levying "premature" disciplinary action against Jim Harbaugh and alleged that in-person
+scouting and sign-stealing are commonplace across the NCAA.
+
+"The conference should act cautiously when setting precedent given the reality that in-person scouting, collusion among opponents, and other questionable
+practices may well be far more prevalent than believed," the letter read.
+
+Michigan also included with the letter "two attached documents of Michigan's offensive and defensive signs allegedly stolen and shared by other Big Ten teams,"
+per Yahoo Sports.
+
+Conference awaits Michigan response
+
+The Big Ten expects a formal response from Michigan to the notice of discipline by the end of the day Wednesday, ESPN's Pete Thamel reports. His colleague Adam
+Rittenberg adds that a ruling is expected to come down Thursday.
+
+Sources: The Big Ten expects a response from Michigan on the notice of discipline by the end of day on Wednesday. Don’t expect any ruling by the Big Ten on
+Wednesday, as they are expected to take time to absorb Michigan’s response.
+</item 7>
+
+<item 8>
+Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a different game (Sporting News, 2023-11-11T21:32:44+00:00)
+Was this old-school Big Ten football or Big Ten West football in disguise?
+
+Michigan's defense clamped on Penn State quarterback Drew Allar (10 of 22, 70 yards, TD), and the Nittany Lions had one play of more than 20 yards. Corum closed
+the drama with a 30-yard TD.
+
+The same-old questions about Nittany Lions coach James Franklin in big games resurfaced, but those are back-page headlines in the Big Ten East race. The quirky
+tiebreaker involving Big Ten West opponents? That's out the door. The winner-take-all showdown between Ohio State and Michigan? There are a full two weeks of
+anticipation for that now.
+
+Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns. Moore's postgame emotion was a headline, but there is a
+reality that set in through a brutal watch of a second half.
+
+McCarthy is a leader.
+</item 8>
+
+<item 9>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+pic.twitter.com/Qm9iehYVTR — Pete Thamel (@PeteThamel) November 11, 2023
+
+Harbaugh will not be on the sidelines vs. Penn State
+
+Michigan filed a temporary restraining order against the Big Ten on Friday night, hoping to block Harbaugh's suspension. But there will not be a ruling before
+the Wolverines' game vs. Penn State, with the hearing scheduled for Friday, Nov. 17.
+
+No ruling on Michigan’s TRO filing today, so Jim Harbaugh will not coach vs. Penn State.
+
+
+
+Statement from the school: “We look forward to presenting our case next week where we intend to demonstrate that the Big Ten has not acted legally or fairly.”
+</item 9>
+
+<item 10>
+Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a different game (Sporting News, 2023-11-11T21:32:44+00:00)
+Will Harbaugh be on the field before the end of the regular season? The Big Ten made a Friday ruling that will prohibit Harbaugh from being on the field for the
+final three regular-season games as a result of the in-person scouting and sign-stealing scandal that led to the resignation of staffer Conor Stallions. ESPN
+reported there will be a temporary restraining order hearing on Nov. 17 that will answer that question.
+
+On the field, Michigan answered the question about its College Football Playoff. Sort of. The Wolverines proved they could beat Penn State (8-2, 5-2) in a
+20-yard box. Neither team completed a pass of 20 yards or more. Michigan trailed 3-0 after the first quarter. The Wolverines had eight carries for 10 yards, and
+Penn State's Abdul Carter set the tone with a jarring hit on Blake Corum that nearly resulted in a fumble.
+
+Michigan took control with the running game.
+</item 10>
+=== END ITEM id=8a2ac9d29a15b181 ===
+
+=== ITEM id=369ddb6d61c5a09f ===
+Gold sentences and facts:
+Sentence 0: Valve has announced a new Steam Deck and — double surprise — we’ve already reviewed it.
+  Fact 0.0: Valve has announced a new Steam Deck.
+  Fact 0.1: The announcement of the new Steam Deck was a surprise.
+  Fact 0.2: The writing outlet has already reviewed the new Steam Deck.
+Sentence 1: And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration.
+  Fact 1.0: Valve made a number of minor physical upgrades with its new Steam Deck iteration.
+  Fact 1.1: The minor physical upgrades were made alongside big improvements.
+Sentence 2: For now, Griffais explained, it's important to Valve that developers don't need to "split their attention" between different performance targets.
+  Fact 2.0: Griffais explained that it is important to Valve that developers do not need to "split their attention" between different performance targets.
+  Fact 2.1: Griffais said this is important to Valve for now.
+Sentence 3: The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day.
+  Fact 3.0: The Steam Deck OLED will go on sale on November 16 at 1pm ET.
+  Fact 3.1: Valve has Steam Deck OLED units ready to ship on November 16.
+
+Retrieved items:
+<item 1>
+Apple 16-inch M3 Max MacBook Pro review: A desktop among laptops (TechCrunch, 2023-11-06T14:00:15+00:00)
+There were still a few during the event, but four-year-old non-proprietary chips are no longer the main point of comparison. Enough time and upgrades have
+elapsed since the M1 arrived. In fact, this Friday marks three years since it was announced. Apple again,
+
+Rendering speeds are now up to 2.5x faster than on the M1 family of chips. The CPU performance cores and efficiency cores are 30 percent and 50 percent faster
+than those in M1, respectively, and the Neural Engine is 60 percent faster than the Neural Engine in the M1 family of chips.
+
+It’s worth pointing out here that Apple’s chip numbering system isn’t as straight forward as it seems at first blush. For instance, while the M3 represents an
+advance over the M2, you can still expect to see, say, the M2 Ultra to outperform the M3. Pros, Maxes and Ultras are progressively larger versions of their
+baseline chip, containing more CPU, GPU and neural engine cores.
+</item 1>
+
+<item 2>
+If your startup doesn’t seem impossible at first, it’s not hard enough (TechCrunch, 2023-11-03T19:05:30+00:00)
+The focus of the M3 chips is enhanced graphical capabilities. Compared to the previous M1 chip, Apple asserts that the M3 renders at 2.5 times the speed and has
+a CPU that is 30% faster. The event’s videos looked great (of course they did — they were produced by Apple), but one delightful quirk was that they were all
+shot on iPhones, showing off that the phones are becoming more and more capable, even for professional work.
+
+Magic Leap, an augmented reality hardware company, has replaced its CEO Peggy Johnson with Ross Rosenberg, marking the completion of its enterprise pivot.
+Johnson joined Magic Leap in August 2020 and led the shift in business strategy. Her successor previously served as executive at Belden and First Solar, and
+will now guide the company through its next period, as the company faces the daunting challenge of achieving profitability.
+
+More from hardware land:
+
+Is it a bird? Is it a plane?: Shield AI, a startup specializing in autonomous flying systems for the U.S.
+</item 2>
+
+<item 3>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+And if you have, our thanks. Now, let’s get on with the news.
+
+Most read
+
+Altman backs teen entrepreneurs: Sam Altman is among the backers of an AI startup, founded by two teenagers, that’s aiming to assist businesses in automating
+workflows in “previously unexplored” ways. Manish writes that Induced AI, founded this year, lets businesses input their back-office tasks in plain English and
+converts the instructions to pseudo-code in real time.
+
+Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on.
+Christine wrote up a thorough roundup of the news, which included updates on the Pixel 8 and Pixel 8 Pro, Pixel Fold, Android 14, Pixel Buds, Google Assistant,
+Bard, Pixel Watch 2 and other goodies.
+</item 3>
+
+<item 4>
+Apple 16-inch M3 Max MacBook Pro review: A desktop among laptops (TechCrunch, 2023-11-06T14:00:15+00:00)
+The triangle computer shader makes processing complex geometrical images more efficient. That, in turn, allows for higher-quality graphics and more scene
+detail.
+
+The results are impressive. I’ve been spending a bit of time with the Soulslike title, Lies of P. It’s basically Pinocchio with more swords. It’s of a small –
+but increasing – number of day-and-date releases for macOS. A couple of years ago, it would have been inconceivable for the operating system to get the game the
+same day as PS5, Xbox Series X/S and Windows. That said, the macOS gaming library still has a long way to go.
+
+Indeed, the gameplay was smooth and detailed – something that also would have seemed impossible not all that long ago. Sony’s PS5 DualShock controller connects
+seamlessly and makes for a fun portable gaming experience.
+
+One thing I noticed during last week’s presentation is that Apple is leaning less heavily on Intel comparisons.
+</item 4>
+
+<item 5>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+Not Sonos fast there: Audio company Sonos scored a big $32.5 million win against Google a while back. Now it transpires that the company’s patents were deemed
+unenforceable and invalid. Whoops. A federal judge threw out the $32.5 million win this week.
+
+When it clicks, it really clicks: We took a deep look at Pixel 8, and our team discovered that it delivers solid performance and design upgrades. The camera got
+a particularly enthusiastic shout-out, with Darrell declaring that Google’s Pixel 8 Pro camera is the new mobile photography champ, and Brian waxing lyrical
+about the phone’s picture-snapper in “The camera’s still the thing.”
+
+Who needs computers anyway?: It seems like all our mobile devices may be starting to cannibalize sales of personal computers — Ron reports that PC shipments
+decline slows in Q3 2023 and that Apple’s sales plunge over 23%.
+
+Let’s get together
+
+Reddit’s API-powered chaos continues, but it appears that things are starting to resolve a little.
+</item 5>
+
+<item 6>
+Apple 16-inch M3 Max MacBook Pro review: A desktop among laptops (TechCrunch, 2023-11-06T14:00:15+00:00)
+GPU updates were the centerpiece of the news for several reasons. One is a feature the company calls Dynamic Caching. Apple writes,
+
+With Dynamic Caching, only the exact amount of memory needed is used for each task. This is an industry first, transparent to developers, and the cornerstone of
+the new GPU architecture. It dramatically increases the average utilization of the GPU, which significantly increases performance for the most demanding pro
+apps and games.
+
+More simply put, the idea is allocating just the right amount of local memory to a given task. It’s something Apple has been working on for a while. The other
+two additions should be more familiar for anyone who’s spent time behind a game controller. The first is ray tracing, a feature designed to bring added realism
+to the gaming experience, though more accurate depictions of lighting and reflections.
+
+That feature is now hardware-accelerated, along with mesh shading. The triangle computer shader makes processing complex geometrical images more efficient.
+</item 6>
+
+<item 7>
+The Steam Deck OLED arrives November 16 with an improved screen and longer battery life (Engadget, 2023-11-09T18:00:32+00:00)
+Surprise! Valve has announced a new Steam Deck and — double surprise — we’ve already reviewed it. It might not look like a big change from the outside, but the
+Steam Deck OLED is a thorough mid-cycle refresh of a machine that’s not even two years old. At the same time, Valve is also adjusting the configuration of its
+entry-level model, making it a far more compelling option. Apologies to anyone who literally bought a Steam Deck yesterday.
+
+At an event held for press prior to the device's launch, Greg Coomer, a product designer at Valve, called the new model "the definitive version of the Steam
+Deck." He explained that the device contains many things the company wanted to include at the LCD model's launch but wasn't able to, along with some additions
+based on community feedback.
+
+As its name suggests, the most noticeable upgrade to the Steam Deck OLED is the display. The original Steam Deck had a 7-inch 800p LCD running at 60Hz.
+</item 7>
+
+<item 8>
+If your startup doesn’t seem impossible at first, it’s not hard enough (TechCrunch, 2023-11-03T19:05:30+00:00)
+Security researchers found that the feature, introduced in iOS 14, was not working as intended.
+
+$400 million security acquisition: At a time when the tech industry in Israel is disrupted due to political events, Palo Alto Networks is acquiring Israeli tech
+company Dig Security for an estimated $400 million. This acquisition will bolster Palo Alto’s cloud security-focused Prisma business.
+
+I guess we gotta pay up: Paying off hackers in the event of a ransomware attack is pretty common practice, but it comes with a ton of pitfalls: You are trusting
+anonymous criminals to do what they promised, and you may potentially be violating U.S. sanctions laws along the way.
+
+What’s brewing on the silicon farm?
+
+Apple’s “Scary Fast” October event saw the announcement of their new M3 chip lineup that includes M3, M3 Pro, and M3 Max. These chips, which were the highlight
+of the event, will be integrated into the new 24-inch iMac and the new MacBook Pros.
+</item 8>
+
+<item 9>
+The Steam Deck OLED arrives November 16 with an improved screen and longer battery life (Engadget, 2023-11-09T18:00:32+00:00)
+The range still tops out at $649, but you’re getting a lot more for your money: All of the hardware improvements, 1TB of storage instead of 512GB and an
+improved carry case that can pop out into a slimmer shell that’s smaller and easier to fit in a bag. As mentioned, it also has the same anti-glare etched glass
+as the outgoing 512GB LCD model.
+
+Finally, there’s also a Limited Edition version of the 1TB model, with a translucent shell and a customized carry case, which will be sold at $679. We imagine
+stocks will not last very long, as it looks pretty rad:
+
+Valve
+
+While there are no concrete updates on future hardware developments, Valve engineer Pierre-Loup Griffais noted that, so long as interest in handheld gaming
+remains high, the company has "plans for successive generations of handhelds." For now, Griffais explained, it's important to Valve that developers don't need
+to "split their attention" between different performance targets.
+</item 9>
+
+<item 10>
+What we expect at Apple's Scary Fast event: M3-powered MacBook Pros and new iMacs (Engadget, 2023-10-26T19:15:49+00:00)
+Apple has at least one more trick — or possibly a treat — up its sleeve this year. On October 30, the night before Halloween, the company is hosting another
+event. This one is dubbed “Scary Fast,” which is a strong indicator that Apple will have some speedy new hardware to show off. Unusually, Apple is holding this
+event in the evening. It starts at 8PM ET.
+
+This year's iPhones and Apple Watches are out in the wild already, but Apple has a bunch of other product categories that it could focus on here. There's always
+the chance that we might get iPad updates. But, if rumors are to be believed, Apple's focus during the Scary Fast event will be on Macs and a fresh batch of
+chipsets to power them.
+
+M3 chip
+
+Apple won't be talking about speed advancements without having new hardware to discuss. That could all start with upgraded chipsets.
+</item 10>
+=== END ITEM id=369ddb6d61c5a09f ===
+
+=== ITEM id=064362853fba0832 ===
+Gold sentences and facts:
+Sentence 0: In the long term, scientists also point to a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and effectively.
+  Fact 0.0: Scientists point to a number of recent developments in the long term.
+  Fact 0.1: The recent developments have raised hopes that dementia may be possible to tackle more directly.
+  Fact 0.2: The recent developments have raised hopes that dementia may be possible to tackle more effectively.
+Sentence 1: Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies.
+  Fact 1.0: Health coach Susan Saunders found herself parenting her mother.
+  Fact 1.1: Susan Saunders's mother had dementia.
+  Fact 1.2: Susan Saunders's own daughters were babies at the time.
+
+Retrieved items:
+<item 1>
+New Alzheimer’s drugs bring hope of slowing disease for UK patients (The Guardian, 2023-12-17T10:00:23+00:00)
+In the long term, scientists also point to a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and
+effectively. One major challenge they have faced is the problem of getting drugs to pass through the blood-brain barrier, which controls the movement of ions
+and molecules from our bodies to our brains. That makes it difficult to get drugs into the central nervous system to tackle problems such as amyloid plaques.
+
+“However, researchers are developing active transport methods for getting drugs across the blood-brain barrier,” said Mummery. “For example, we are now
+exploring ways of helping drugs get into the brain much more efficiently, and that could have a major impact.”
+
+Such developments will take years to realise, scientists caution, and a great deal needs to be done in the short term to deal with dementia.
+
+“It is clear we have taken a step in the right direction but there is much more to do before we can have successfully dealt with these processes that are
+happening to our brains,” said Thomas.
+</item 1>
+
+<item 2>
+New Alzheimer’s drugs bring hope of slowing disease for UK patients (The Guardian, 2023-12-17T10:00:23+00:00)
+People in Britain could benefit from a key medical breakthrough next year. They may be given access to the first drugs ever developed to slow the impact of
+Alzheimer’s disease.
+
+The first of these medicines – lecanemab – was recently approved in the US and Japan, where treatments using it have already been launched. A second drug,
+donanemab, is expected to follow soon, and next year it is anticipated that the UK medical authorities will consider both of them for approval in Britain.
+
+The prospect has raised hopes that, after years of effort, scientists may be closing in on ways to directly tackle the UK’s dementia crisis. About a million
+people are living with the condition in this country, and this is expected to rise to about 1.7 million by 2040 – with potentially grim consequences. Last year
+dementia took the lives of 66,000 people in England and Wales, and it is now the leading cause of death in Britain, with Alzheimer’s accounting for two-thirds
+of cases.
+</item 2>
+
+<item 3>
+New Alzheimer’s drugs bring hope of slowing disease for UK patients (The Guardian, 2023-12-17T10:00:23+00:00)
+“Meanwhile, we have got to get the NHS to a state where it is much more focused and better organised in getting better and earlier dementia diagnoses. That will
+be crucial in our battle against the condition.”
+
+Mummery agreed: “By the time you have dementia, you will have had Alzheimer’s disease developing in your brain for at least 20 years. Dementia is the latest
+stage; we need to pick up signals much earlier. So we need to be thinking about how to diagnose people at the very earliest stages of disease, when they may
+only have very, very subtle symptoms.
+
+We are now exploring ways of helping drugs get into the brain much more efficiently, and that could have a major impact Cath Mummery
+
+“Our current service isn’t good for doing that, and we need to develop brain health clinics where we can pinpoint the disease much earlier, then help to build
+resilience against dementia in a patient when it is only in a very early stage.”
+</item 3>
+
+<item 4>
+Walks, tech and protein: how to parent your own parents (The Guardian, 2023-10-10T09:00:35+00:00)
+“Anyone with older parents should be urging them out for a walk five days a week – and when they have a companion, the walk also doubles as a social occasion,”
+he explained. “If they can walk for longer than 20 minutes, even better. Our study showed that the risk of depression fell in proportion to the time spent
+walking.”
+
+As well as a daily walk, Laird recommends vitamin D and B12 supplements – both of which appear to moderate the chance of depression in older people. “Depression
+matters,” he added. “Not just because it reduces quality of life, but because in older people there seems to be a link between depression and dementia which
+we’re still unpacking.”
+
+Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies. “I’d advise anyone with a parent in the
+early stages of dementia to investigate all the available research trials. Start by joining Dementia Research, a nationwide register that matches volunteers to
+research programmes.”
+</item 4>
+
+<item 5>
+New Alzheimer’s drugs bring hope of slowing disease for UK patients (The Guardian, 2023-12-17T10:00:23+00:00)
+“It is a challenge, and a very important one.”
+</item 5>
+
+<item 6>
+New Alzheimer’s drugs bring hope of slowing disease for UK patients (The Guardian, 2023-12-17T10:00:23+00:00)
+It took 10 years for Mike Mackenzie-Smith to get a diagnosis of young-onset Alzheimer’s.
+
+Another grim illustration of the problem facing patients is provided by Graeme Armstrong. His wife, Trina, began having trouble recognising faces and reading
+telephone numbers in 2006 and was told, after a CT scan three years later, that she had probably had a stroke – although her symptoms did not suggest such a
+diagnosis. It took another three years before she was diagnosed with posterior cortical atrophy, a rare variant of Alzheimer’s disease that affects the way the
+brain interprets information from the eyes.
+
+“Had we had an accurate diagnosis four years earlier, Trina could have been placed on the correct medication, which may have been more effective and helped her
+day to day,” Armstrong said.
+
+One solution sought by doctors involves the creation of blood tests which could pinpoint the disease quickly and effectively. “These are under research, but we
+are several years away from having them in widespread use,” said Thomas.
+</item 6>
+
+<item 7>
+New Alzheimer’s drugs bring hope of slowing disease for UK patients (The Guardian, 2023-12-17T10:00:23+00:00)
+Both drugs are to be considered for approval in the UK next year. The Medicines & Healthcare products Regulatory Agency (MHRA) will first decide if they are
+safe and effective, then the National Institute for Health and Care Excellence (Nice) will rule on whether they offer value for money.
+
+Both medicines are expensive – lecanemab costs about $25,000 (£19,700) a year – and are given by regular intravenous infusions. “That is a challenge from a
+health-service point of view, because you need to find the space and time to put someone in an infusion suite to treat them,” added Thomas.
+
+However, the main problem facing doctors is the difficulty involved in pinpointing dementia not just in its early stages but even in its later phases. Most
+cases are first presented to GPs, who will then refer patients to memory clinics for a dementia test. However there are long waiting times – up to two years on
+average – for appointments at these centres.
+</item 7>
+
+<item 8>
+New Alzheimer’s drugs bring hope of slowing disease for UK patients (The Guardian, 2023-12-17T10:00:23+00:00)
+However there are long waiting times – up to two years on average – for appointments at these centres.
+
+In addition, diagnosing Alzheimer’s and other forms of dementia is usually based on pen-and-paper tests, followed by lumbar punctures and brain scans before a
+final diagnosis.
+
+About 65% of cases are confirmed this way. The remaining third of dementia cases are never diagnosed. Yet patients can only expect to receive treatments –
+including the new drugs – if their condition is identified.
+
+Eleanor Mackenzie-Smith’s father, Mike, has young-onset Alzheimer’s. His first symptoms were spotted 17 years ago, when Eleanor was 11. “However, it took over
+10 years from the start of his symptoms and four separate tests between 2009 and 2017 to get my dad’s final diagnosis, when he was 65. It was distressing not
+knowing what was happening. Too many families, like mine, have had to watch as dementia takes hold of our loved ones while we are left without a diagnosis and
+the support and access to treatments.”
+</item 8>
+
+<item 9>
+New Alzheimer’s drugs bring hope of slowing disease for UK patients (The Guardian, 2023-12-17T10:00:23+00:00)
+“It has been a very long, hard road, but finally we have something positive to look at. That is very welcome.”
+
+Alzheimer’s disease is triggered by the buildup of a protein called amyloid in the brain, although symptoms may not appear for decades after this accretion has
+started. Scientists have tried for more than 20 years to find ways to stop amyloid from forming these plaques, in the hope this would stop the progression of
+the disease.
+
+Lecanemab, which is produced by Japanese pharmaceutical company Eisai, and donanemab, produced by Eli Lilly of the US, are the first medicines to achieve this
+aim – though they only slow but do not ultimately halt the disease’s progression.
+
+Graeme Armstrong with wife Trina, who has a rare form of Alzheimer’s.
+
+Both drugs are to be considered for approval in the UK next year.
+</item 9>
+
+<item 10>
+New Alzheimer’s drugs bring hope of slowing disease for UK patients (The Guardian, 2023-12-17T10:00:23+00:00)
+Until now doctors have only been able to prescribe medicines that help patients manage their symptoms, so the arrival of the first drugs that treat the actual
+cause of the condition has been welcomed – although experts have warned that their use should be treated with some caution.
+
+After decades of research, these are the first drugs to improve patients’ lives directly. If nothing else, they suggest we’re on the right road to tackling
+Alzheimer’s
+
+“The new drugs slow down the development of Alzheimer’s by six months to a year and are useful only for those in the early stages of the condition, so they are
+certainly not miracle medicines,” said David Thomas, head of policy at Alzheimer’s Research UK.
+
+“However, after decades of research, they are the first to improve patients’ lives directly, and that is a justifiable cause for excitement. If nothing else,
+they suggest we are probably on the right road to tackling Alzheimer’s.”
+
+This point was backed by neurologist Cath Mummery, of the Dementia Research Centre at University College London.
+</item 10>
+=== END ITEM id=064362853fba0832 ===

@@ -1,0 +1,404 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "fced22ad913cfa0f",
+   "gold": [
+    {
+     "sentence": "Janet Williams is an American soprano who has won international critical acclaim for performances at the Metropolitan Opera, Berlin Staatsoper, Paris Opera, Théâtre des Champs-Élysées, Opera de Lyon, Nice Opera, Théâtre Royal de la Monnaie, Opera Geneva, Frankfurt Opera, Cologne Opera, Leipzig Opera, San Francisco Opera, Washington Opera, Dallas Opera, and Michigan Opera Theatre as well as in concerts throughout Europe, North America, Canada, Israel and Japan with conductors including Vladimir Ashkenazy, Daniel Barenboim, Myung-whun Chung, Philippe Herreweghe, René Jacobs, Marek Janowski, Neeme Järvi, Raymond Leppard, Fabio Luisi, Sir Neville Marriner, Nicholas McGegan, Zubin Mehta, Kent Nagano, John Nelson, Donald Runnicles, Gerard Schwarz and Michael Tilson Thomas.",
+     "facts": {
+      "0.0": "Janet Williams is an American soprano.",
+      "0.1": "Janet Williams has won international critical acclaim for performances at the Metropolitan Opera, Berlin Staatsoper, Paris Opera, Theatre des Champs-Elysees, Opera de Lyon, Nice Opera, Theatre Royal de la Monnaie, Opera Geneva, Frankfurt Opera, Cologne Opera, Leipzig Opera, San Francisco Opera, Washington Opera, Dallas Opera, and Michigan Opera Theatre.",
+      "0.2": "Janet Williams has performed in concerts throughout Europe, North America, Canada, Israel and Japan.",
+      "0.3": "Janet Williams has performed with conductors including Vladimir Ashkenazy, Daniel Barenboim, Myung-whun Chung, Philippe Herreweghe, Rene Jacobs, Marek Janowski, Neeme Jarvi, Raymond Leppard, Fabio Luisi, Sir Neville Marriner, Nicholas McGegan, Zubin Mehta, Kent Nagano, John Nelson, Donald Runnicles, Gerard Schwarz and Michael Tilson Thomas."
+     }
+    },
+    {
+     "sentence": "Vladimir Davidovich Ashkenazy (Russian: Влади́мир Дави́дович Ашкена́зи , \"Vladimir Davidovich Ashkenazi\"; born 6 July 1937) is an internationally recognized solo pianist, chamber music performer, and conductor.",
+     "facts": {
+      "1.0": "Vladimir Davidovich Ashkenazy's Russian name is Vladimir Davidovich Ashkenazi.",
+      "1.1": "Vladimir Davidovich Ashkenazy was born on 6 July 1937.",
+      "1.2": "Vladimir Davidovich Ashkenazy is an internationally recognized solo pianist.",
+      "1.3": "Vladimir Davidovich Ashkenazy is an internationally recognized chamber music performer.",
+      "1.4": "Vladimir Davidovich Ashkenazy is an internationally recognized conductor."
+     }
+    },
+    {
+     "sentence": " His recordings have earned him five Grammy awards plus Iceland's Order of the Falcon.",
+     "facts": {
+      "2.0": "Vladimir Davidovich Ashkenazy's recordings have earned him five Grammy awards.",
+      "2.1": "Vladimir Davidovich Ashkenazy has received Iceland's Order of the Falcon."
+     }
+    }
+   ],
+   "items": [
+    "David M. Arden\nDavid M. Arden (born September 6, 1949) is an American concert pianist whose performing and recording career has focused predominantly on contemporary and American classical repertoire, including premiere performances and first recordings of piano works by a number of notable contemporary composers, such as Henryk Górecki, Luciano Berio, Earle Brown, Carson Kievman and David Lang.\n\n The Russian composer Galina Ustvolskaya named Arden's recording of her 12 Preludes for Piano as her preferred recording of that work.",
+    "The Impeccable Mr. Wilson\nThe Impeccable Mr. Wilson is an album by American jazz pianist Teddy Wilson featuring performances recorded in 1956 for the Norgran label.",
+    "Don Williams discography\nThis is a detailed discography for American country music artist Don Williams.",
+    "Fred Hersch\nFred Hersch (born October 21, 1955) is an American jazz pianist and educator.\n\n He has performed solo and led his own groups, including the Pocket Orchestra consisting of piano, trumpet, voice, and percussion.\n\n He was the first person to play weeklong engagements as a solo pianist at the Village Vanguard in New York City.\n\n He has recorded more than 70 of his jazz compositions.\n\n Hersch has been nominated for several Grammy Awards, and, as of December 2014, had been on the Jazz Studies faculty of the New England Conservatory since 1980 (with breaks).",
+    "Grammy Award for Best Male Rap Solo Performance\nThe Grammy Award for Best Male Rap Solo Performance was an honor presented to male recording artists at the 45th Grammy Awards in 2003 and the 46th Grammy Awards in 2004 for quality rap solo performances.\n\n The Grammy Awards, an annual ceremony that was established in 1958, and originally called the Gramophone Awards, are presented by the National Academy of Recording Arts and Sciences of the United States to \"honor artistic achievement, technical proficiency and overall excellence in the recording industry, without regard to album sales or chart position\".",
+    "Elton John\nSir Elton Hercules John, (born Reginald Kenneth Dwight; 25 March 1947), is an English singer, pianist, and composer.\n\n He has worked with lyricist Bernie Taupin as his songwriting partner since 1967; they have collaborated on more than 30 albums to date.\n\n In his five-decade career Elton John has sold more than 300million records, making him one of the best-selling music artists in the world.\n\n He has more than fifty Top 40 hits, including seven consecutive No. 1 US albums, 58 \"Billboard\" Top 40 singles, 27 Top 10, four No. 2 and nine No. 1.\n\n For 31 consecutive years (1970–2000) he had at least one song in the \"Billboard\" Hot 100.\n\n His tribute single, re-penned in dedication to the late Princess Diana, \"Candle in the Wind 1997\" sold over 33million copies worldwide and is the best-selling single in the history of the UK and US singles charts.\n\n He has also composed music, produced records, and has occasionally acted in films.",
+    "Vladimir Ashkenazy\nVladimir Davidovich Ashkenazy (Russian: Влади́мир Дави́дович Ашкена́зи , \"Vladimir Davidovich Ashkenazi\"; born 6 July 1937) is an internationally recognized solo pianist, chamber music performer, and conductor.\n\n He is originally from Russia and has held Icelandic citizenship since 1972.\n\n He has lived in Switzerland since 1978.\n\n Ashkenazy has collaborated with well-known orchestras and soloists.\n\n In addition, he has recorded a large storehouse of classical and romantic works.\n\n His recordings have earned him five Grammy awards plus Iceland's Order of the Falcon.",
+    "Grammy Award for Best Female Rap Solo Performance\nThe Grammy Award for Best Female Rap Solo Performance was an honor presented to female recording artists at the 45th Grammy Awards in 2003 and the 46th Grammy Awards in 2004 for quality rap solo performances.\n\n The Grammy Awards, an annual ceremony that was established in 1958 and originally called the Gramophone Awards, are presented by the National Academy of Recording Arts and Sciences of the United States to \"honor artistic achievement, technical proficiency and overall excellence in the recording industry, without regard to album sales or chart position\".",
+    "Janet Williams (soprano)\nJanet Williams is an American soprano who has won international critical acclaim for performances at the Metropolitan Opera, Berlin Staatsoper, Paris Opera, Théâtre des Champs-Élysées, Opera de Lyon, Nice Opera, Théâtre Royal de la Monnaie, Opera Geneva, Frankfurt Opera, Cologne Opera, Leipzig Opera, San Francisco Opera, Washington Opera, Dallas Opera, and Michigan Opera Theatre as well as in concerts throughout Europe, North America, Canada, Israel and Japan with conductors including Vladimir Ashkenazy, Daniel Barenboim, Myung-whun Chung, Philippe Herreweghe, René Jacobs, Marek Janowski, Neeme Järvi, Raymond Leppard, Fabio Luisi, Sir Neville Marriner, Nicholas McGegan, Zubin Mehta, Kent Nagano, John Nelson, Donald Runnicles, Gerard Schwarz and Michael Tilson Thomas.",
+    "Robert Glasper\nRobert Glasper (born April 6, 1978, in Houston, Texas) is an American pianist and record producer.\n\n He has been nominated for 6 Grammys, has won 3 Grammy Awards and is currently nominated for an Emmy Award.\n\n His 2012 album \"Black Radio\" won the Grammy Award for Best R&B Album at the 55th Grammy Awards.\n\n His 2014 album \"Black Radio 2\" won the Grammy Award for Best Traditional R&B Performance at the 56th Grammy Awards.\n\n The song \"These Walls\" from Kendrick Lamar's album \"To Pimp A Butterfly\" won Best Rap/Sung Collaboration at the 57th Grammy Awards, on which Glasper plays keys.\n\n The soundtrack for the film \"Miles Ahead\" won Best Soundtrack Compilation at the 58th Grammy Awards, for which Glasper was a producer.\n\n The song \"Letter To The Free\", written with Common, is nominated for an Emmy Award for Best Original Song in the Ava Duvernay documentary film \"13th\" (Netflix) at the 2017 Emmys."
+   ]
+  },
+  {
+   "id": "b1c306df0afc5dda",
+   "gold": [
+    {
+     "sentence": " He is mainly known for his spells at Real Sociedad where his offensive partnership with Nihat Kahveci was one of the best in Spain.",
+     "facts": {
+      "0.0": "He is mainly known for his spells at Real Sociedad.",
+      "0.1": "His offensive partnership with Nihat Kahveci at Real Sociedad was one of the best in Spain."
+     }
+    },
+    {
+     "sentence": "Nihat Kahveci (born 23 November 1979) is a Turkish former footballer who played as a forward.",
+     "facts": {
+      "1.0": "Nihat Kahveci was born on 23 November 1979.",
+      "1.1": "Nihat Kahveci is a Turkish former footballer.",
+      "1.2": "Nihat Kahveci played as a forward."
+     }
+    }
+   ],
+   "items": [
+    "2013–14 Real Sociedad season\nThe 2013–14 season was Real Sociedad's 67th season in La Liga.\n\n Real Sociedad finished 7th in the league and reached the semifinals of the Copa del Rey.\n\n The Basque failed to make it out of the group stages of the UEFA Champions League.",
+    "Ivan Toplak\nIvan Toplak (Serbian Cyrillic: Ивaн Toплaк; born September 21, 1931 in Belgrade) is a former Yugoslavian football player and manager.\n\n He earned 1 cap for Yugoslavia.\n\n He started his career at Branik in Maribor, where his family moved in 1943 from Belgrade.",
+    "José Antonio Santamaría Mikel Vaqueriza\nJosé Antonio Santamaría Mikel Vaqueriza (born 16 March 1946 in San Sebastián, Guipúzcoa, Spain; died 19 January 1993) was a Spanish footballer.\n\n During his career as a professional footballer, Santamaría played for SD Eibar (1963 to 1964), Real Sociedad (1964 to 1967), Real Sociedad (1967 to 1971), Hercules CF (1971 to 1974) finishing his career at CE Sabadell FC (1974 to 1975).\n\n After retiring from football he had a career as an entrepreneur in the hospitality sector.\n\n He was killed in an attack committed by ETA in 1993.",
+    "Lippo Hertzka\nLippo Hertzka (19 November 1904 – 14 March 1951) was a Hungarian football player and manager.\n\n He played for Essener Turnerbund, MTK Budapest and Real Sociedad.\n\n After retiring, he coached seven teams, including Real Sociedad and Real Madrid, a team which he coached for 2 years (1930–1932) and led to an undefeated La Liga championship during the 1931-32 season, which meant the first La Liga title for the \"white\" squad.\n\n He also won two league titles in Portugal for Benfica.",
+    "Darko Kovačević\nDarko Kovačević (] ; Serbian Cyrillic: ; born 18 November 1973) is a Serbian former footballer who played as a forward.\n\n He began his career in Serbia with Proleter Zrenjanin and subsequently played for Red Star Belgrade, with whom he won a Yugoslav League title and two Yugoslav Cups.\n\n His prolific performances earned him a move to Premier League side Sheffield Wednesday, although his time in England was less successful.\n\n He is mainly known for his spells at Real Sociedad where his offensive partnership with Nihat Kahveci was one of the best in Spain.\n\n Kovačević also had positive spells with Italian club Juventus and Greek side Olympiacos.\n\n At international level, he represented Yugoslavia at the 1998 FIFA World Cup and at UEFA Euro 2000.",
+    "Admir Čavalić\nAdmir Čavalić is the Director of Association \"Multi\", a non-profit organization dedicated to promoting libertarian ideals in Bosnia and Herzegovina.\n\n \"Multi\" is the first non-profit organization registered in Bosnia and Herzegovina that advocates libertarian ideas.\n\n Čavalić is the director of OPEN Fest, biggest libertarian festival in Europe.\n\n Čavalić also works at Faculty of Economics University of Tuzla, as an assistant teacher.\n\n Čavalić with Dženan Smajić wrote \"Islam and Free Market\" in 2014.\n\n The book, that was published in Bosnian, provides arguments for Islam's connection with the ideas of economic liberalism.\n\n Čavalić made first bosnian documentary about economics, titled \"Economy\".",
+    "C.D. Real Sociedad\nClub Deportivo Real Sociedad, commonly known as Real Sociedad (] ), is a Honduran football club based on Tocoa, Colón, Honduras.",
+    "Real Sociedad\nReal Sociedad de Fútbol, S.A.D., more commonly referred to as Real Sociedad (] ; \"Royal Society\") or La Real, is a Spanish football club based in the city of San Sebastián, Basque Country, founded on 7 September 1909.\n\n It plays its home matches at the 32,000-capacity Anoeta Stadium.\n\n Real Sociedad won the Liga title in 1980–81 and 1981–82, and last finished runners-up in 2002–03.\n\n The club has also won the Copa del Rey twice, in 1909 and 1987.\n\n It contests the Basque derby against rivals Athletic Bilbao.\n\n Real Sociedad were founder members of La Liga in 1928, and its longest spell in the top flight was for 40 seasons, from 1967 to 2007.",
+    "Graph query row:\nperson: Darko Kovačević\nconnection: ['FROM_CHUNK', 'FROM_CHUNK']\nconnected_person: Nihat Kahveci\nnationality: Turkish",
+    "Nihat Kahveci\nNihat Kahveci (born 23 November 1979) is a Turkish former footballer who played as a forward."
+   ]
+  },
+  {
+   "id": "8c6a7855dc0add0a",
+   "gold": [
+    {
+     "sentence": "Rosario Castellanos Figueroa (] ; 25 May 1925 – 7 August 1974) was a Mexican poet and author.",
+     "facts": {
+      "0.0": "Rosario Castellanos Figueroa was born on 25 May 1925.",
+      "0.1": "Rosario Castellanos Figueroa died on 7 August 1974.",
+      "0.2": "Rosario Castellanos Figueroa was a Mexican poet.",
+      "0.3": "Rosario Castellanos Figueroa was a Mexican author."
+     }
+    },
+    {
+     "sentence": "Lucy Maud Montgomery {'1': \", '2': \", '3': \", '4': \"} (November 30, 1874 – April 24, 1942) published as L.M. Montgomery, was a Canadian author best known for a series of novels beginning in 1908 with \"Anne of Green Gables\".",
+     "facts": {
+      "1.0": "Lucy Maud Montgomery was born on November 30, 1874.",
+      "1.1": "Lucy Maud Montgomery died on April 24, 1942.",
+      "1.2": "Lucy Maud Montgomery published as L.M. Montgomery.",
+      "1.3": "Lucy Maud Montgomery was a Canadian author.",
+      "1.4": "Lucy Maud Montgomery is best known for a series of novels.",
+      "1.5": "The series of novels began in 1908 with Anne of Green Gables."
+     }
+    }
+   ],
+   "items": [
+    "L.M. Montgomery's Anne of Green Gables\nL.M. Montgomery's Anne of Green Gables is a Canadian television film based on Lucy Maud Montgomery's novel of the same name.\n\n It first aired on YTV on February 15, 2016 and starred Ella Ballentine, Martin Sheen and Sara Botsford.\n\n Montgomery's granddaughter, Kate Macdonald Butler, was one of the film's executive producers.\n\n The film's world premiere was held February 2, 2016 at the Canadian Museum of History.",
+    "Emily's Quest\nEmily's Quest is a novel and the last of the \"Emily\" trilogy by Lucy Maud Montgomery.\n\n After finishing \"Emily Climbs\", Montgomery suspended writing \"Emily's Quest\" and published \"The Blue Castle\"; she resumed writing and published in 1927.",
+    "Anne Shirley\nAnne Shirley is a fictional character introduced in the 1908 novel \"Anne of Green Gables\" by Lucy Maud Montgomery.\n\n Montgomery wrote in her journal that the idea for Anne's story came from relatives who, planning to adopt an orphaned boy, received a girl instead.\n\n Anne Shirley's appearance was inspired by a photograph which Montgomery clipped from the Metropolitan Magazine and kept, unaware of the model's identity as the 1900s Gibson Girl Evelyn Nesbit.",
+    "Alice Munro\nAlice Ann Munro ( , \"née\" Laidlaw ; born 10 July 1931) is a Canadian short story writer and Nobel Prize winner.\n\n Munro's work has been described as having revolutionized the architecture of short stories, especially in its tendency to move forward and backward in time.\n\n Her stories have been said to \"embed more than announce, reveal more than parade.\"",
+    "Anne of Green Gables\nAnne of Green Gables is a 1908 novel by Canadian author Lucy Maud Montgomery (published as L. M. Montgomery).\n\n Written for all ages, it has been considered a children's novel since the mid-twentieth century.\n\n It recounts the adventures of Anne Shirley, an 11-year-old orphan girl who is mistakenly sent to Matthew and Marilla Cuthbert, a middle-aged brother and sister who had intended to adopt a boy to help them on their farm in the fictional town of Avonlea on Prince Edward Island.\n\n The novel recounts how Anne makes her way with the Cuthberts, in school, and within the town.",
+    "Rea Wilmshurst\nRea Wilmshurst (August 10, 1941 – March 22, 1996) graduated from the University of Toronto with a degree in English in 1970.\n\n She went on to edit eight volumes of Lucy Maud Montgomery's previously unknown short stories and publish them through McClelland & Stewart.\n\n In 1985, she published a bibliography of Montgomery's short stories, poems, and articles.\n\n Wilmshurst was also an editorial assistant for the projects that compiled the Collected Works of John Stuart Mill and the Collected Works of Samuel Taylor Coleridge.",
+    "Mollie Gillen\nMollie Gillen (née Woolnough; 1908–2009) was an Australian historian, researcher, writer and novelist.\n\n Her work on the First Fleet, in \"The search for John Small,\" \"First Fleeter\" and The Founders of Australia: A Biographical Dictionary of the First Fleet, explored the idea that many of the founding families of Australia were descended from the convict population, rather than those sent to guard them.\n\n Gillen's article Maud Montgomery: The Girl Who Wrote Green Gables instigated a new era in scholarship on Lucy Maud Montgomery.",
+    "Rosario Castellanos\nRosario Castellanos Figueroa (] ; 25 May 1925 – 7 August 1974) was a Mexican poet and author.\n\n Along with the other members of the Generation of 1950 (the poets who wrote following the Second World War, influenced by César Vallejo and others), she was one of Mexico's most important literary voices in the last century.\n\n Throughout her life, she wrote eloquently about issues of cultural and gender oppression, and her work has influenced feminist theory and cultural studies.\n\n Though she died young, she opened the door of Mexican literature to women, and left a legacy that still resonates today.",
+    "Lucy Maud Montgomery\nLucy Maud Montgomery {'1': \", '2': \", '3': \", '4': \"} (November 30, 1874 – April 24, 1942) published as L.M. Montgomery, was a Canadian author best known for a series of novels beginning in 1908 with \"Anne of Green Gables\".\n\n The book was an immediate success.\n\n The central character, Anne Shirley, an orphaned girl, made Montgomery famous in her lifetime and gave her an international following.",
+    "Anne of Ingleside\nAnne of Ingleside is a children's novel by Canadian author Lucy Maud Montgomery.\n\n It was first published in July 1939 by McClelland and Stewart (Toronto) and the Frederick A. Stokes Company (New York).\n\n It is the tenth of eleven books that feature the character of Anne Shirley, and Montgomery's final published novel.\n\n (Two novels that occur later in the \"Anne\" chronology were actually published years earlier.\n\n As well, the short story collection \"The Blythes Are Quoted\", written in 1941/42, but not published until 2009, concludes the Anne chronology.)"
+   ]
+  },
+  {
+   "id": "dd1cb233707ce697",
+   "gold": [
+    {
+     "sentence": "The University of California, Santa Barbara (commonly referred to as UC Santa Barbara or UCSB) is a public research university and one of the 10 campuses of the University of California system.",
+     "facts": {
+      "0.0": "The University of California, Santa Barbara is commonly referred to as UC Santa Barbara or UCSB",
+      "0.1": "The University of California, Santa Barbara is a public research university",
+      "0.2": "The University of California, Santa Barbara is one of the 10 campuses of the University of California system"
+     }
+    },
+    {
+     "sentence": " Tracing its roots back to 1891 as an independent teachers' college, UCSB joined the University of California system in 1944 and is the third-oldest general-education campus in the system.",
+     "facts": {
+      "1.0": "UCSB traces its roots back to 1891",
+      "1.1": "UCSB's roots as an independent teachers' college date to 1891",
+      "1.2": "UCSB joined the University of California system in 1944",
+      "1.3": "UCSB is the third-oldest general-education campus in the University of California system"
+     }
+    },
+    {
+     "sentence": " It was founded in 1991 by the renowned philanthropist Hakim Said of the Hamdard Foundation.",
+     "facts": {
+      "2.0": "UCSB was founded in 1991",
+      "2.1": "UCSB was founded by the renowned philanthropist Hakim Said",
+      "2.2": "Hakim Said is a philanthropist of the Hamdard Foundation"
+     }
+    }
+   ],
+   "items": [
+    "University of California, Santa Barbara Library\nThe University of California, Santa Barbara Library is the university library system of the University of California, Santa Barbara in Santa Barbara, California.\n\n The Library includes four facilities: Two libraries (the Main Library and the Music Library) and two annexes (Annex I and Annex II).\n\n The library has some three million print volumes, 30,000 electronic journals, 34,450 e-books, 900,055 digitized items, five million cartographic items (including some 467,000 maps and 3.2 million satellite and aerial images), more than 3.7 million pieces of microform, 167,500 sound recordings, and 4,100 manuscripts.\n\n The Library states that it holds 3.2 mi of manuscript and archival collections.\n\n According to data collected by the American Library Association, as of July 2010 the UC Santa Barbara Library holds the 99th largest library collection in America, reporting 2,948,999 volumes.",
+    "Hamdard University\nHamdard University (Urdu: ) is a private research university with campuses in Karachi and Islamabad, Pakistan.\n\n It was founded in 1991 by the renowned philanthropist Hakim Said of the Hamdard Foundation.\n\n Hamdard is one of the first and the oldest private institutions of higher education in Pakistan.\n\n In Karachi, Hamdard University is the largest private research university with a campus area of over 350 acres.",
+    "The text profiles diverse educational and related institutions worldwide. Highlights include Berat University (Albania), founded in 2009 and expanding to four faculties; Rotman (Toronto), established in 1950; Auburn, Arizona, Debrecen, Copenhagen, Dalhousie and other research universities; specialist schools such as Falmouth and Aalborghus; and private or state colleges across Ghana, Malaysia, Norway, Pakistan and elsewhere. It also covers Syracuse sororities, a",
+    "University of Copenhagen\nThe University of Copenhagen (UCPH) (Danish: \"Københavns Universitet\" ) is the oldest university and research institution in Denmark.\n\n Founded in 1479 as a studium generale, it is the second oldest institution for higher education in Scandinavia after Uppsala University (1477).\n\n The university has 23,473 undergraduate students, 17,398 postgraduate students, 2,968 doctoral students and over 9,000 employees.\n\n The university has four campuses located in and around Copenhagen, with the headquarters located in central Copenhagen.\n\n Most courses are taught in Danish; however, many courses are also offered in English and a few in German.\n\n The university has several thousands of foreign students, about half of whom come from Nordic countries.",
+    "Santa Barbara City College\nSanta Barbara City College (SBCC) is a two-year community college that opened in 1909 and is located on a 74 acre campus in the city of Santa Barbara, California, USA.\n\n SBCC was named co-winner of the 2013 Aspen Institute Prize for Community College Excellence, earning it a #1 national ranking.\n\n The college was recognized for its quality and focus in four areas: facilitating underrepresented and minority student success, student learning outcomes, degree completion and transfer rates, and labor market success in securing good jobs after college.\n\n Santa Barbara City College was established by the Santa Barbara High School District in 1909, making it one of the oldest community colleges in California.\n\n The college was discontinued shortly after World War I, and its work largely taken over by the Santa Barbara State Normal School, which became the Santa Barbara State College, and later, the University of California, Santa Barbara.",
+    "Dalhousie University\nDalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick.\n\n Dalhousie offers more than 4,000 courses and 180 degree programs in twelve undergraduate, graduate, and professional faculties.\n\n The university is a member of the U15, a group of research-intensive universities in Canada.",
+    "University of Arizona\nThe University of Arizona (also referred to as U of A, UA, or Arizona) is a public research university in Tucson, Arizona, United States.\n\n Founded in 1885, the UA was the first university in the Arizona Territory.\n\n The university operates two medical schools (University of Arizona College of Medicine - Tucson and the University of Arizona College of Medicine - Phoenix) and is affiliated with the region's only academic medical centers (Banner - University Medical Center Tucson and Banner - University Medical Center Phoenix).\n\n The university is also home to the James E. Rogers College of Law and numerous other nationally ranked graduate and professional schools.\n\n During the 2016–2017 academic year, there was a total enrollment of 43,625 students, including 34,072 undergraduates The University of Arizona is governed by the Arizona Board of Regents.\n\n The University of Arizona is one of the elected members of the Association of American Universities (an organization of North America's premier research institutions) and is the only representative from the state of Arizona to this group.",
+    "Mission Santa Barbara\nMission Santa Barbara, also known as Santa Barbara Mission, is a Spanish mission founded by the Franciscan order near present-day Santa Barbara, California.\n\n It was founded by Padre Fermín Lasuén on December 4, 1786, the feast day of Saint Barbara, as the tenth mission for the religious conversion of the indigenous local Chumash-Barbareño tribe of Native American people.\n\n The mission is the namesake of the city of Santa Barbara as well as of Santa Barbara County.",
+    "University of California, Santa Barbara\nThe University of California, Santa Barbara (commonly referred to as UC Santa Barbara or UCSB) is a public research university and one of the 10 campuses of the University of California system.\n\n The main campus is located on a 1022 acre site near Isla Vista, California, United States, 8 mi from Santa Barbara and 100 mi northwest of Los Angeles.\n\n Tracing its roots back to 1891 as an independent teachers' college, UCSB joined the University of California system in 1944 and is the third-oldest general-education campus in the system.",
+    "Santa Barbara High School\nSanta Barbara Senior High School, \"Home of the Dons,\" is situated on a 40 acre campus in Santa Barbara, California and is part of the Santa Barbara Unified School District.\n\n One of the oldest high schools in California, it was established in 1875, and moved to its current site in 1924.\n\n Until the creation of two rival high schools in 1959 and 1966, it was the sole public high school serving the city of Santa Barbara.\n\n In November 2005, its 18th-century Spanish influenced design was named an official California and City historic landmark.\n\n Today, Santa Barbara High School has an enrollment of roughly 2,200 pupils and certified staff numbering 108."
+   ]
+  },
+  {
+   "id": "b448c4a5f38ebf32",
+   "gold": [
+    {
+     "sentence": "Batman is a 1989 American superhero film directed by Tim Burton and produced by Jon Peters and Peter Guber, based on the DC Comics character of the same name.",
+     "facts": {
+      "0.0": "Batman is a 1989 American superhero film.",
+      "0.1": "Batman was directed by Tim Burton.",
+      "0.2": "Batman was produced by Jon Peters and Peter Guber.",
+      "0.3": "Batman is based on the DC Comics character of the same name."
+     }
+    },
+    {
+     "sentence": " He is Chairman and CEO of Mandalay Entertainment.",
+     "facts": {
+      "1.0": "The person referred to as 'he' is Chairman of Mandalay Entertainment.",
+      "1.1": "The person referred to as 'he' is CEO of Mandalay Entertainment."
+     }
+    }
+   ],
+   "items": [
+    "Batman (1989 film)\nBatman is a 1989 American superhero film directed by Tim Burton and produced by Jon Peters and Peter Guber, based on the DC Comics character of the same name.\n\n It is the first installment of Warner Bros.' initial \"Batman\" film series.\n\n The film stars Michael Keaton as Bruce Wayne/Batman and Jack Nicholson as The Joker, alongside Kim Basinger, Robert Wuhl, Pat Hingle, Billy Dee Williams, Michael Gough and Jack Palance.\n\n The film takes place early in the title character's war on crime, and depicts a battle with his arch-nemesis the Joker.",
+    "Crazy for You (Madonna song)\n\"Crazy for You\" is a song by American singer Madonna from the soundtrack album to the 1985 film \"Vision Quest\".\n\n It was released on March 2, 1985 by Geffen Records as the first single from the soundtrack.\n\n The song appears remixed on the greatest hits compilation \"The Immaculate Collection\" (1990) and was re-released on February 24, 1991 by Sire Records to promote the album.\n\n The song was also included on the ballads compilation \"Something to Remember\" (1995) and the greatest hits compilation \"Celebration\" (2009).\n\n Producers Jon Peters and Peter Guber, along with music director Phil Ramone, decided to use Madonna after listening to her previous recordings, employing John Bettis and Jon Lind to write the song.\n\n After reading the script of the film, Bettis and Lind wrote the song about the situation in which the lead characters meet at a nightclub.\n\n Initial recording sessions did not impress Bettis and Lind, and they felt that \"Crazy for You\" would be dropped from the soundtrack.\n\n However, a new version was recorded to their liking.",
+    "The Man Who Falls\n\"The Man Who Falls\" is a 1989 comic book story by Dennis O'Neil and Dick Giordano.\n\n It is an overview of Bruce Wayne's early life, including his parents' murder, his time spent traveling and training throughout the world, and his return to Gotham City to become Batman.\n\n Sixteen years later, the story became the structural basis for \"Batman Begins\", which rebooted the Batman film franchise in 2005.",
+    "Batman (album)\nBatman is the eleventh studio album by American recording artist Prince and the soundtrack album to the 1989 film \"Batman\".\n\n It was released on June 20, 1989 by Warner Bros.\n\n Records.\n\n As a Warner Bros. stablemate, Prince's involvement in the soundtrack was designed to leverage the media company's contract-bound talent as well as fulfill the artist's need for a commercial (if not critical) revival.\n\n The result was yet another multi-platinum successful cross-media enterprise by Warner Bros., in the vein of \"Purple Rain\".\n\n The album was No. 1 on the \"Billboard\" albums chart for six consecutive weeks.\n\n It has sold over eleven million copies worldwide.\n\n In 2016, film critic Matt Zoller Seitz praised Prince's songs and music videos for \"Batman\", more so than the film itself, stating that his songs \"suggest a goofy, perverse, sensuous, somewhat introverted Batman film that so far we've never gotten from anyone\", and arguing that Prince's music videos \"are more psychologically perceptive than any of the Batman films.\"",
+    "Batman (score)\nBatman: Original Motion Picture Score is the score album for the 1989 film \"Batman\" by Danny Elfman.\n\n According to the \"Batman\" DVD Special Edition, Elfman said that producer Jon Peters was not sure about him as a composer until Tim Burton made him play the main titles.\n\n Elfman admitted he was stunned when Peters announced that the score would be released on its own album, as releasing a separate score album for a film was something that was rarely done in the 1980s.\n\n Elfman's \"The Batman Theme\" went on to become an iconic piece.\n\n It served as the basis for the theme music of \"\", which premiered in 1992, although this was later changed.\n\n Some parts of the Elfman score are also heard in \"\", \"\" and \"\".\n\n Parts are also played in the queue, and on the station platform of Batman the Ride at various Six Flags theme parks.",
+    "Walt Disney Studios Motion Pictures\nWalt Disney Studios Motion Pictures (formerly Buena Vista Pictures Distribution and Buena Vista Film Distribution Company) is an American film distributor owned by The Walt Disney Company.\n\n Established in 1953 as Buena Vista Film Distribution Company, the company handles theatrical distribution, marketing and promotion for films produced and released by the Walt Disney Studios, including Walt Disney Pictures, Walt Disney Animation Studios, Pixar Animation Studios, DisneyToon Studios, Marvel Studios, Lucasfilm, Disneynature, and Touchstone Pictures.\n\n The division took on its current name in late 2007, which before that had been Buena Vista Pictures Distribution since 1987.",
+    "God Loves, Man Kills (album)\nGod Loves, Man Kills was One King Down's second release but first full-length album.\n\n It was released on December 8, 1998, through Equal Vision Records.\n\n Featuring new singer Jon Peters (who would eventually be replaced by original One King Down vocalist, Rob Fusco, this record saw One King Down attempt to merge funk and skiffle into their sound.\n\n The results received mixed reactions.",
+    "Batman: Return of the Joker\nBatman: Return of the Joker, known in Japan as Dynamite Batman (ダイナマイトバットマン , Dainamaito Battoman ) , is a 1991 platform video game, the follow-up to Sunsoft's on the Nintendo Entertainment System.\n\n Unlike that game, which was based on the 1989 Batman film directed by Tim Burton, \"Return of the Joker\" is entirely self-contained and based more on the modern comic book iteration of Batman.\n\n However, Batman mans the Batmobile from the 1989 film.\n\n A remake of \"Return of the Joker\", titled Batman: Revenge of the Joker, was released on the Sega Genesis by Ringler Studios in 1992.\n\n A Super NES version of \"Revenge of the Joker\" was in development, but never released.",
+    "Batman vs. Two-Face\nBatman vs. Two-Face is an upcoming 2017 American animated direct-to-video superhero film produced by Warner Bros.\n\n Animation and distributed by Warner Bros.\n\n Home Entertainment.\n\n It is a sequel to \"\".\n\n It will premiere at the New York Comic Con on October 8, 2017 and will be followed by a digital release on October 10, 2017 and on DVD and Blu-ray on October 17, 2017.\n\n Based on the 1960s \"Batman\" TV series, the film stars Adam West (in his final role before his death), Burt Ward and Julie Newmar reprising their roles of Batman, Robin and Catwoman from the series.\n\n The film will show a tribute to the late Adam West.\n\n This could also be the final time Warner Bros.\n\n Animation would make a 1960s Batman film.",
+    "Peter Guber\nHoward Peter Guber (born March 1, 1942) is an executive, entrepreneur, educator, and author.\n\n He is Chairman and CEO of Mandalay Entertainment.\n\n Guber's most recent films from Mandalay Entertainment include \"The Kids Are All Right\", \"Soul Surfer\", and \"Bernie\".\n\n He has also produced \"Batman\", \"The Witches of Eastwick\", and \"Flashdance.\"\n\n Guber's films have earned over $3 billion worldwide and 50 Academy Award nominations."
+   ]
+  },
+  {
+   "id": "c14091156560c9b8",
+   "gold": [
+    {
+     "sentence": " The event was broadcast live on BBC One and was hosted by Graham Norton.",
+     "facts": {
+      "0.0": "The event was broadcast live on BBC One.",
+      "0.1": "Graham Norton hosted the event."
+     }
+    },
+    {
+     "sentence": "Graham William Walker (born 4 April 1963), better known as Graham Norton, is an Irish television and radio presenter, DJ, comedian, actor, and writer.",
+     "facts": {
+      "1.0": "Graham William Walker was born on 4 April 1963.",
+      "1.1": "Graham William Walker is better known as Graham Norton.",
+      "1.2": "Graham Norton is an Irish television presenter.",
+      "1.3": "Graham Norton is an Irish radio presenter.",
+      "1.4": "Graham Norton is an Irish DJ.",
+      "1.5": "Graham Norton is an Irish comedian.",
+      "1.6": "Graham Norton is an Irish actor.",
+      "1.7": "Graham Norton is an Irish writer."
+     }
+    }
+   ],
+   "items": [
+    "British Academy Television Awards\nThe British Academy Television Awards, also known as the BAFTA Television Awards, are presented in an annual award show hosted by the British Academy of Film and Television Arts (BAFTA).\n\n They have been awarded annually since 1955.\n\n It is the British equivalent to the Emmy Awards in the United States and Logie Awards in Australia.",
+    "British Academy Television Awards 1997\nThe 1997 British Academy Television Awards were held on 29 April at the Royal Albert Hall in London, as a joint ceremony with the British Academy Film Awards.\n\n To date, it is the last occasion upon which the two sets awards have been given jointly at the same event; from 1998, the Film and Television Awards were given at separate ceremonies, for the first time since 1968.",
+    "2012 British Academy Television Awards\nThe 2012 British Academy Television Awards (formally known as the Arqiva British Academy Television Awards) were held on 27 May 2012 at the Royal Festival Hall in London.",
+    "British Academy Children's Awards\nThe British Academy Children's Awards are presented in an annual award show hosted by the British Academy of Film and Television Arts (BAFTA).\n\n They have been awarded annually since 1996.\n\n Before that, children's awards were a part of the main British Academy Television Awards.",
+    "The text surveys awards and broadcasters: the Soap Opera Digest Hottest Male Star award ran from 1993–1999. BAFTA Television Awards began in 1955; Best Actress became performance-based in 1969, nominees were listed from 1970, and the category split in 2010. It notes ceremony details for 1997–2009 and 2012, plus the separate Children’s Awards (since 1996) and BAFTA Scotland (formed 1986",
+    "Graham Norton\nGraham William Walker (born 4 April 1963), better known as Graham Norton, is an Irish television and radio presenter, DJ, comedian, actor, and writer.\n\n He is a five-time BAFTA TV Award winner for his comedy chat show \"The Graham Norton Show\".\n\n Previously shown on BBC Two, it took the prestigious Friday night slot on BBC One from \"The Jonathan Ross Show\" in 2010.",
+    "British Academy Television Awards 2009\nThe 2009 British Academy Television Awards were held on 26 April at the Royal Festival Hall in London.\n\n The event was broadcast live on BBC One and was hosted by Graham Norton.\n\n The nominations were announced on 24 March.\n\n Winners in bold.",
+    "British Academy Television Award for Best Actress\nThis is a list of the British Academy Television Awards for Best Actress.\n\n The British Academy Television Awards began in 1955.\n\n The Best Actress award was initially given as an 'individual honour' without credit to a particular performance until 1969 when Wendy Craig won for her performance in \"Not in Front of the Children\".\n\n Since 1970, nominees have been announced in addition to the winner and are listed with the winner highlighted in blue.\n\n The Actress category was split into Leading Actress and Supporting Actress starting in 2010.",
+    "British Academy Television Awards 1998\nThe 1998 British Academy Television Awards were held on 18 May at the Prince of Wales Theatre in London.\n\n The ceremony was broadcast on ITV, hosted by Bob Monkhouse, and it was the first occasion since 1968 that the Television Awards had been held separately from the British Academy Film Awards, instead of as a joint ceremony.",
+    "BAFTA Scotland\nBAFTA in Scotland is the Scottish branch of the British Academy of Film and Television Arts.\n\n Formed in 1986, the branch holds two annual awards ceremonies recognising the achievement by performers and production staff in Scottish film, television and video games.\n\n These Awards are separate from the British Academy Television Awards and British Academy Film Awards."
+   ]
+  },
+  {
+   "id": "178632ec49b0fe98",
+   "gold": [
+    {
+     "sentence": " Programming is simulcast on WANH (91.5 FM) in Meredith, serving the Lakes Region.",
+     "facts": {
+      "0.0": "Programming is simulcast on WANH (91.5 FM).",
+      "0.1": "WANH (91.5 FM) is located in Meredith.",
+      "0.2": "WANH serves the Lakes Region."
+     }
+    },
+    {
+     "sentence": " The area comprises all of Belknap County, the southern portion of Carroll County, the eastern portion of Grafton County, and the northern portions of Strafford County and Merrimack County.",
+     "facts": {
+      "1.0": "The area comprises all of Belknap County.",
+      "1.1": "The area comprises the southern portion of Carroll County.",
+      "1.2": "The area comprises the eastern portion of Grafton County.",
+      "1.3": "The area comprises the northern portion of Strafford County.",
+      "1.4": "The area comprises the northern portion of Merrimack County."
+     }
+    }
+   ],
+   "items": [
+    "KRBT\nKRBT (1340 AM) is a radio station broadcasting a sports format.\n\n Licensed to Eveleth, Minnesota, United States, the station serves the Iron Range area.\n\n The station is currently owned by Range Broadcasting, Inc., and features programming from the Red Zone Radio Network.\n\n Originally a stand alone music station with call letters WEVE, then a simulcast music station with WEVE-FM, the station changed it's call letters to KRBT for \"Range's Best Talk\" in June of 1998 and discontinued simulcast with WEVE-FM to become a talk station.\n\n The format change to sports/talk was made following the death of previous owner, Lew Latto, Iron Range Broadcasting, Inc.\n\n President on August, 24 2011 and subsequent sale to Red Rock Radio in March 2012, and has been retained by the new owner as of July 2017, Range Broadcasting, Inc.",
+    "KKBN\nKKBN (93.5 FM) The Cabin a radio station since 1986 broadcasting a Country music format since March 2000.\n\n Licensed to Twain Harte, California, United States, the station serves the greater Mother Lode area comprising Tuolumne and Calaveras Counties with a combined population of approximately 110,000.\n\n The station is currently owned by Clarke Broadcasting Corporation.",
+    "KMBC-TV\nKMBC-TV, virtual channel 9 (UHF digital channel 29), is the ABC-affiliated television station licensed to Kansas City, Missouri, United States and also serving Kansas City, Kansas.\n\n The station is owned by the Hearst Television subsidiary of the Hearst Corporation, as part of a duopoly with CW affiliate KCWE (channel 29).\n\n The two stations share studio facilities located at the Winchester Business Center on Winchester Avenue and East 63rd Street (near Swope Park, off of I-435) in southeastern Kansas City, Missouri; KMBC-TV maintains transmitter facilities located near the Blue River in eastern Kansas City.\n\n On cable, KMBC-TV is available on Charter Spectrum, Comcast Xfinity and Consolidated Communications channel 12, and Google Fiber and AT&T U-verse channel 9.\n\n There is a high definition feed provided on Spectrum digital channel 1200, Xfinity channel 812, Consolidated channel 610 and U-verse channel 1009.",
+    "KLIK\nKLIK (1240 AM), branding as Newstalk 1240, is a radio station broadcasting a News Talk Information format.\n\n Licensed to Jefferson City, Missouri, United States, the station serves the Columbia, Missouri area.\n\n The station is currently owned by Cumulus Media and features programing from ABC Radio and Westwood One.\n\n KLIK also operates a local news operation with sister station KFRU (1400 AM in Columbia, Missouri).\n\n From 1954 until September 8, 1999, KLIK was located at 950 AM, transmitting with a daytime power of 5000 watts and a nighttime power of 500 watts (directional) from a four tower array about 3.2 miles south of Jefferson City.\n\n Early owners of KLIK broadcast a varied format of news and talk programs including music programs of middle of the road, top 40, adult contemporary and country music as 95 KLIK.\n\n For many years, KLIK and KJFF as the two largest regional radio stations (the most powerful AM and FM station in the region) dominated radio listenership in cumulative market share in the Columbia-Jeff City Market of Central Missouri.",
+    "WLMR\nWLMR (1450 AM) is a radio station broadcasting a religious format.\n\n Licensed to Chattanooga, Tennessee, USA, the station serves the Chattanooga area.\n\n The station is currently owned by Wilkins Communications Network, Inc. and features programming from USA Radio Network.\n\n In the early 1980s, the station was automated and played country music from studios in a strip mall on Brainerd Rd.\n\n It was also Chattanooga's first talk radio station when it held the WZRA call letters.\n\n WZRA was the first home of Jeff Styles, and also featured well known personalities such as Kelly McCoy and Robert T. Nash.",
+    "KWXL-LP\nKWXL-LP (98.7 FM) is a high school radio station broadcasting a variety format.\n\n Licensed to Tucson, Arizona, United States, the station serves the Tucson area.\n\n The station is currently owned by the Tucson Unified School District.\n\n KWXL-LP is Tucson's only high school radio station.\n\n It is also a news radio station for students who attend Pueblo High Magnet School.\n\n Students broadcasting over the radio station are enrolled in a \"Writing/Reporting for Broadcasting\" class with instructor Sarah Walson.\n\n Originally started by Douglas Potter, who retired in 2006.\n\n Listeners can also find FM 98.7, KWXL on iTunes.",
+    "WVNH\nWVNH (91.1 FM) is a radio station broadcasting a Christian radio format.\n\n Licensed to Concord, New Hampshire, United States, the station serves the Concord area.\n\n The station is currently owned by New Hampshire Gospel Radio, Inc.\n\n Programming is simulcast on WANH (91.5 FM) in Meredith, serving the Lakes Region.",
+    "KVKI-FM\nKVKI-FM (96.5 FM) is a radio station broadcasting an adult contemporary music format.\n\n Licensed to Shreveport, Louisiana, United States, the station serves the Shreveport area.\n\n The station is currently owned by Townsquare Media.\n\n Its studios are shared with its other five sister stations in West Shreveport (one mile west of Shreveport Regional Airport), and the transmitter is in Blanchard, Louisiana.\n\n The call letters were originally KBCL, and later became religious station KEPT, before the call letters were changed to KVKI to be similar to the call letters of the popular KVIL radio station in Dallas, Texas.",
+    "KXMB-TV\nKXMB-TV, channel 12, is the CBS-affiliated television station for Bismarck, North Dakota.\n\n It broadcasts a high definition digital signal on VHF channel 12 (or virtual channel 12.1 via PSIP) from a transmitter near St. Anthony.\n\n The station can also be seen on Midcontinent cable channel 11 in Bismarck-Mandan, and cable channel 12 in most other areas.\n\n There is a high definition feed provided on Midcontinent digital channel 611.",
+    "Lakes Region (New Hampshire)\nThe Lakes Region of New Hampshire is the mid-state region surrounding Lake Winnipesaukee, Winnisquam Lake, Squam Lake, and Newfound Lake.\n\n The area comprises all of Belknap County, the southern portion of Carroll County, the eastern portion of Grafton County, and the northern portions of Strafford County and Merrimack County.\n\n The largest municipality is the city of Laconia."
+   ]
+  },
+  {
+   "id": "cf184a2ec231dac5",
+   "gold": [
+    {
+     "sentence": "Mr. Wilson's Cabinet of Wonder: Pronged Ants, Horned Humans, Mice on Toast, and Other Marvels of Jurassic Technology is a book by Lawrence Weschler primarily about the Museum of Jurassic Technology and, more broadly, the history and role of museums.",
+     "facts": {
+      "0.0": "Mr. Wilson's Cabinet of Wonder: Pronged Ants, Horned Humans, Mice on Toast, and Other Marvels of Jurassic Technology is a book.",
+      "0.1": "Lawrence Weschler wrote Mr. Wilson's Cabinet of Wonder.",
+      "0.2": "Mr. Wilson's Cabinet of Wonder is primarily about the Museum of Jurassic Technology.",
+      "0.3": "Mr. Wilson's Cabinet of Wonder is more broadly about the history and role of museums."
+     }
+    },
+    {
+     "sentence": "The Museum of Jurassic Technology is a museum located at 9341 Venice Boulevard in the Palms district of Los Angeles, California.",
+     "facts": {
+      "1.0": "The Museum of Jurassic Technology is a museum.",
+      "1.1": "The Museum of Jurassic Technology is located at 9341 Venice Boulevard.",
+      "1.2": "The Museum of Jurassic Technology is in the Palms district of Los Angeles, California."
+     }
+    }
+   ],
+   "items": [
+    "Harris Museum\nThe Harris Museum, Art Gallery & Preston Free Public Library is a Grade I listed museum building in Preston.",
+    "Mr. Wilson's Cabinet of Wonder\nMr. Wilson's Cabinet of Wonder: Pronged Ants, Horned Humans, Mice on Toast, and Other Marvels of Jurassic Technology is a book by Lawrence Weschler primarily about the Museum of Jurassic Technology and, more broadly, the history and role of museums.",
+    "Imperial War Museum\nImperial War Museums (IWM) is a British national museum organisation with branches at five locations in England, three of which are in London.\n\n Founded as the Imperial War Museum in 1917, the museum was intended to record the civil and military war effort and sacrifice of Britain and its Empire during the First World War.\n\n The museum's remit has since expanded to include all conflicts in which British or Commonwealth forces have been involved since 1914.\n\n As of 2012, the museum aims \"to provide for, and to encourage, the study and understanding of the history of modern war and 'wartime experience'\".",
+    "Museum of Jurassic Technology\nThe Museum of Jurassic Technology is a museum located at 9341 Venice Boulevard in the Palms district of Los Angeles, California.\n\n It was founded by David Hildebrand Wilson and Diana Drake Wilson (husband and wife) in 1988.",
+    "Rice Northwest Museum of Rocks and Minerals\nThe Rice Northwest Museum of Rocks and Minerals is a non-profit museum in Hillsboro, Oregon, United States.\n\n Located just north of the Sunset Highway on the northern edge of Hillsboro, the earth science museum is in the Portland metropolitan area.\n\n Opened in 1997, the museum’s collections date to the 1930s with the museum housed in a home built to display the rock and mineral collections of the museum founders.\n\n The ranch style home is listed on the National Register of Historic Places, the first of its kind listed in Oregon.\n\n In 2015 the museum became a Smithsonian Affiliate museum.",
+    "David Hildebrand Wilson\nDavid Hildebrand Wilson is the co-founder, along with his wife, Diana Wilson, of the enigmatic Museum of Jurassic Technology in Los Angeles, California.\n\n After high school, Wilson enrolled at Kalamazoo College where he majored in urban entomology with a minor in art.\n\n He received an MFA in Experimental Animation from the California Institute of the Arts in 1976.\n\n He was awarded the MacArthur Fellowship and the Creative Capital Moving Image Award in 2001.\n\n He and his museum are the subject of the book, \"Mr. Wilson's Cabinet of Wonder\", published in 1995.",
+    "Black Country Living Museum\nThe Black Country Living Museum (formerly The Black Country Museum) is an open-air museum of rebuilt historic buildings in Dudley in the West Midlands of England.\n\n It is located in the centre of the Black Country, 10 miles west of Birmingham.\n\n The museum occupies 105000 m2 of former industrial land partly reclaimed from a former railway goods yard, disused lime kilns, canal arm and former coal pits.",
+    "Graph query row:\nmuseum: Museum of Jurassic Technology\nconnection: ['FROM_CHUNK', 'FROM_CHUNK']\nwork: Mr. Wilson's Cabinet of Wonder\ncity: Los Angeles",
+    "John G. Wilson\nJohn Guy Wilson (1842–1892) was a Manchester, UK patent agent and the founder of Wilson Gunn, one of the oldest firms of Patent and Trade Mark Attorneys in the UK.\n\n John G. Wilson built up the business until his death in the 1890s.\n\n As a side line he acted as agent to the Alliance Insurance Company.\n\n There is no record that Mr. Wilson ever became a member of the Chartered Institute of Patent Agents.",
+    "Imperial War Museum (disambiguation)\nThe Imperial War Museum is a British national museum organisation with branches at five locations in England."
+   ]
+  },
+  {
+   "id": "2fb85b7575495807",
+   "gold": [
+    {
+     "sentence": "of Montreal is an American experimental pop band from Athens, Georgia.",
+     "facts": {
+      "0.0": "of Montreal is an American band.",
+      "0.1": "of Montreal is an experimental pop band.",
+      "0.2": "of Montreal is from Athens, Georgia."
+     }
+    },
+    {
+     "sentence": "Vib Gyor was a band that was formed in Leeds, England.",
+     "facts": {
+      "1.0": "Vib Gyor was a band.",
+      "1.1": "Vib Gyor was formed in Leeds, England."
+     }
+    }
+   ],
+   "items": [
+    "The Flowers of Romance (band)\nThe Flowers of Romance were an early punk band, formed in mid-1976 by Jo Faull and Sarah Hall.\n\n The band never played live or released any recordings, and, like London SS and Masters of the Backside, are more famed for the number of band members that later became well known, including: Sid Vicious of the Sex Pistols, Keith Levene (an early member of The Clash and later of Public Image Ltd) and Palmolive and Viv Albertine, who went on to play in The Slits.\n\n Despite never playing live, they were interviewed by a fanzine named \"SKUM\", in which Sid Vicious proclaimed \"I'll just be the yob that I am now\".",
+    "The V.I.P.s (band)\nThe V.I.P.s were a British R&B musical ensemble formed in Carlisle, Cumberland, (North West England) in late 1963, out of an earlier outfit known as The Ramrods, who had formed in Carlisle in 1960.\n\n After a change of personnel in April 1967, the band changed their name to \"Art\", and released the album \"Supernatural Fairy Tales\".\n\n They also participated to a psychedelic bizarre album called \"Featuring The Human Host And The Heavy Metal Kids\" by a collective known as Hapshash and the Coloured Coat, formed by Guy Stevens and an influential British graphic design and avant-garde musical partnership between Michael English and Nigel Waymouth.\n\n The musicians involved in that project were Mike Harrison on keys and vocals, Luther Grosvenor on guitars, Greg Ridley on bass and Mike Kellie on drums, as well as performances by Stevens, English and Waymouth.\n\n It was the first time that the term \"heavy metal\" was ever used in music, even though that album had nothing to do with heavy metal music, being closer to psychedelic music.",
+    "Fallen (Vib Gyor song)\n\"Fallen\" was the first single from the Leeds band Vib Gyor.\n\n It was first given limited release in July 2006, and has attained critical acclaim and a large amount of radio play on both sides of the atlantic.",
+    "The White EP (Vib Gyor EP)\nThe \"White EP\" is a promo EP from the Leeds band Vib Gyor.\n\n It was first sold on their UK tour with American band Transfer and was released through their My Space page and official web-site on 13 November 2007.\n\n It is the follow-up to their The Secret EP.\n\n It was recorded in Rockfield studios in South Wales and produced by Ken Thomas.",
+    "Bloc Party\nBloc Party are an English indie rock band, currently composed of Kele Okereke (lead vocals, rhythm guitar, keyboards, sampler), Russell Lissack (lead guitar, keyboards), Justin Harris (bass guitar, keyboards, saxophones, backing vocals) and Louise Bartle (drums, percussion).\n\n Former members Matt Tong and Gordon Moakes left the band in 2013 and 2015 respectively.\n\n Their brand of music, whilst rooted in rock, retains elements of other genres such as electronica and house music.\n\n The band was formed at the 1999 Reading Festival by Okereke and Lissack.\n\n They went through a variety of names before settling on Bloc Party in 2003.\n\n Moakes joined the band after answering an advert in \"NME\" magazine, while Tong was picked via an audition.\n\n Bloc Party got their break by giving BBC Radio 1 DJ Steve Lamacq and Franz Ferdinand's lead singer, Alex Kapranos, a copy of their demo \"She's Hearing Voices\".",
+    "The Secret (Vib Gyor EP)\nThe Secret EP is the EP from the Leeds band Vib Gyor.\n\n It was released on 5 March 2007, and is the follow-up to their well-received debut single, \"Fallen\".\n\n It was recorded in Bath and produced by Paul Corkett.\n\n It also has a hidden fifth instrumental track - which the band recently revealed was called <:.\n\n~.\n\n:>",
+    "Vib Gyor\nVib Gyor was a band that was formed in Leeds, England.\n\n The name was derived from the first letters of all the colours in the rainbow, in order from the shortest to longest wavelengths.",
+    "Of Montreal\nof Montreal is an American experimental pop band from Athens, Georgia.\n\n It was founded by frontman Kevin Barnes in 1996, named after a failed romance between Barnes and a woman \"of Montreal.\"\n\n The band is identified as part of the Elephant 6 collective.\n\n Throughout its existence, of Montreal's musical style has evolved considerably and drawn inspiration from numerous 1960s psychedelic pop acts.",
+    "Electric Guitars\nElectric Guitars were an English band formed early in 1980 by Neil Davenport (vocals, lyrics) and Richard Hall (bass, vocals) who were both studying English at Bristol University.\n\n The band soon increased to a five-man line-up, with Andy Saunders (guitar, vocals), Matt Salt (drums) and Dick Truscott (keyboards), they also later added two backing singers: Sara and Wendy Patridge.\n\n Their first single \"Health\" / \"Continental Shelf\" was released on local label Fried Egg Records in 1980.",
+    "Bullmoose\nBullmoose (aka Zach Dobbins) is a Canadian rock band formed in Elgin, Ontario in 1996.\n\n Three of the original members continue in the band, which today is based in Montreal.\n\n They include twin brothers Jeff Cowan (drums/vocals) and Seamus Cowan (bass/vocals) from Westport, Ontario and Eric Lawrance (guitar/vocals) from Delta, Ontario, who launched the band when they attended school at Montreal.\n\n The band performs in the rock music genre, citing experimental influences of the late 1960s and early 1970s."
+   ]
+  },
+  {
+   "id": "cc998f859a5fc7bd",
+   "gold": [
+    {
+     "sentence": "During World War II, Operation Cold Comfort was a failed SAS raid that began with a parachute drop north of Verona on February 17, 1945.",
+     "facts": {
+      "0.0": "Operation Cold Comfort was a failed SAS raid.",
+      "0.1": "Operation Cold Comfort took place during World War II.",
+      "0.2": "Operation Cold Comfort began with a parachute drop.",
+      "0.3": "The parachute drop of Operation Cold Comfort was north of Verona.",
+      "0.4": "The parachute drop of Operation Cold Comfort was on February 17, 1945."
+     }
+    },
+    {
+     "sentence": " The SAS was founded in 1941 as a regiment, and later reconstituted as a corps in 1950.",
+     "facts": {
+      "1.0": "The SAS was founded in 1941 as a regiment.",
+      "1.1": "The SAS was later reconstituted as a corps.",
+      "1.2": "The SAS was reconstituted as a corps in 1950."
+     }
+    }
+   ],
+   "items": [
+    "Special Operations Force (Singapore)\nThe Special Operations Force (SOF) is the Republic's Army Special Forces composed of highly trained elite soldiers within the Singapore Armed Forces Commando Formation and an essential component of the joint special forces unit Special Operations Task Force (SOTF).\n\n According to the Principles of Special Forces, the Republic's special forces thrive on their exceptional qualities and advanced skills, consisting highly adaptive individuals who are independent and can operate independently, and the Republic's special forces soldiers cannot be mass-produced and must be managed carefully.",
+    "Special Air Service\nThe Special Air Service (SAS) is a special forces unit of the British Army.\n\n The SAS was founded in 1941 as a regiment, and later reconstituted as a corps in 1950.\n\n The unit undertakes a number of roles including covert reconnaissance, counter-terrorism, direct action and hostage rescue.",
+    "Operation Cold Comfort\nDuring World War II, Operation Cold Comfort was a failed SAS raid that began with a parachute drop north of Verona on February 17, 1945.\n\n It was later renamed Zombie.",
+    "Operation Lighthouse (1937)\nOperation Lighthouse was the name given to the failed experimental launch of four Aggregate 3 liquid-fuel rockets by Wernher von Braun and Walter Dornberger on the German island of Greifswalder Oie in December 1937.",
+    "Operation Barras\nOperation Barras was a British Army operation that took place in Sierra Leone on 10 September 2000, during the late stages of that nation's civil war.\n\n The operation aimed to release five British soldiers of the Royal Irish Regiment who had been held by a militia group known as the \"West Side Boys\".\n\n The soldiers were part of a patrol that was returning from a visit to Jordanian peacekeepers attached to the United Nations Mission in Sierra Leone (UNAMSIL) at Masiaka on 25 August 2000 when they turned off the main road and down a track towards the village of Magbeni.\n\n There the patrol was overwhelmed by a large number of heavily armed rebels, taken prisoner, and transported to Gberi Bana on the opposite side of Rokel Creek.",
+    "Orlov let\nOrlov let (\"Eagle's Flight\") was the name of an anti-terrorist operation conducted by the Montenegrin police to arrest a group of Albanians who planned terrorist attacks and an armed conflict in Albanian-inhabited parts of Montenegro.\n\n The group of 17 people planned operations from 2004 to their arrest on the night of 10/11 September 2006.\n\n Weapons and explosive material were found in police raids.\n\n The group's main operative was the destroying of cultural and religious buildings (Orthodox) in Albanian-inhabited territory.\n\n The group was organised by an Albanian association based in Detroit, and members of the Kosovo Liberation Army, from which they received financial aid and smuggled arms into Montenegro.\n\n The group was given a total sentence of 51 years of prison.\n\n Relations between the state and the Albanian minority strained after the event.",
+    "Jan Breytenbach\nJan Dirk Breytenbach {'1': \", '2': \", '3': \", '4': \"} (born 4 July 1933) was appointed by General Fritz Loots, the founder of the South African Special Forces Brigade, as the first commander of 1 Reconnaissance Commando, the first unit founded within the South African Special Forces.\n\n He was also appointed as the first commander of the 32 Battalion, known colloquially as \"Buffalo Battalion\", as well as 44 Parachute Brigade.",
+    "Simultaneous action selection\nSimultaneous action selection, or SAS, is a game mechanic that occurs when players of a game take action (such as moving their pieces) at the same time.\n\n An example of a game that uses this type of movement is the game Diplomacy.\n\n Typically, a \"secret yet binding\" method of committing to one's move is necessary, so that as players' moves are revealed and implemented, others do not change their moves in light of the new information.\n\n Thus, in Diplomacy, players write down their moves and then reveal them simultaneously.\n\n Because no player gets the first move, this potentially arbitrary source of advantage is not present.\n\n It is also possible for simultaneous movement games to proceed relatively quickly, because players are acting at the same time, rather than waiting for their turn.\n\n Simultaneous action selection is easily implemented in card games such as Apples to Apples in which players simply select cards and throw them face-down into the center.",
+    "Cold Comfort (Inside No. 9)\n\"Cold Comfort\" is the fourth episode of the second series of the British dark comedy anthology television programme \"Inside No. 9\".\n\n The episode, which was written and directed by Steve Pemberton and Reece Shearsmith, was first broadcast on 16 April 2015 on BBC Two.\n\n Most of \"Cold Comfort\" is composed of a stream from a fixed camera on the desk of Andy, the protagonist, with smaller pictures on the side of the screen, in the style of a CCTV feed.\n\n \"Cold Comfort\" was filmed over two and a half days in Twickenham, and was, like \"A Quiet Night In\" from \"Inside No. 9\"'s first series, highly experimental.\n\n It was Pemberton and Shearsmith's directorial debut.",
+    "Joint Special Operations Command (Jordan)\nThe Special Operation Forces of the Jordanian Armed Forces serve as Jordan's premiere special forces unit.\n\n Founded on April 15, 1963 on the orders of the late King Hussein, its primary roles include reconnaissance, counter-terrorism, search and evacuation, intelligence gathering combat, and the protection of key sites.\n\n The Special Operation Forces are also charged with carrying out precision strikes against critical enemy targets.\n\n The 14,000-strong unit are equipped and trained to be able to operate behind enemy lines for long periods without any logistical support, and is considered one of the finest special forces units in the world."
+   ]
+  },
+  {
+   "id": "13c546bfdab944a0",
+   "gold": [
+    {
+     "sentence": "The Washington City Canal operated from 1815 until the mid-1850s in Washington, D.C. The canal connected the Anacostia River, called the \"Eastern Branch\" at that time, to Tiber Creek, the Potomac River, and later the Chesapeake and Ohio Canal (C&O).",
+     "facts": {
+      "0.0": "The Washington City Canal operated from 1815 until the mid-1850s.",
+      "0.1": "The Washington City Canal operated in Washington, D.C.",
+      "0.2": "The Washington City Canal connected the Anacostia River to Tiber Creek.",
+      "0.3": "The Washington City Canal connected the Anacostia River to the Potomac River.",
+      "0.4": "The Washington City Canal later connected the Anacostia River to the Chesapeake and Ohio Canal (C&O).",
+      "0.5": "The Anacostia River was called the 'Eastern Branch' at that time."
+     }
+    },
+    {
+     "sentence": "The Whitewater Canal, which was built between 1836 and 1847, spanned a distance of seventy-six miles and stretched from Lawrenceburg, Indiana on the Ohio River to Hagerstown, Indiana.",
+     "facts": {
+      "1.0": "The Whitewater Canal was built between 1836 and 1847.",
+      "1.1": "The Whitewater Canal spanned a distance of seventy-six miles.",
+      "1.2": "The Whitewater Canal stretched from Lawrenceburg, Indiana.",
+      "1.3": "Lawrenceburg, Indiana is on the Ohio River.",
+      "1.4": "The Whitewater Canal stretched to Hagerstown, Indiana."
+     }
+    }
+   ],
+   "items": [
+    "Brunswick–Altamaha canal\nThe Brunswick–Altamaha Canal was a 12-mile-long canal built to connect the Altamaha River to the city of Brunswick, Georgia at the Turtle River to transport goods from Brunswick's port to areas farther north and inland.\n\n It included locks on both ends of the canal.\n\n The canal was originally proposed in 1798 and after two failed charters (1826 and 1830), construction was started in 1836 by Thomas Butler King.\n\n The project was estimated to cost $450,000.\n\n The canal was finished and opened in 1854; however, by that time the canal was obsolete because of new railroads.\n\n The canal was closed by 1860.\n\n The Columbian mammoth was discovered during the construction of the canal.",
+    "Susquehanna and Tidewater Canal\nThe Susquehanna and Tidewater Canal between Wrightsville, Pennsylvania, and Havre de Grace, Maryland, at the head of Chesapeake Bay, provided an interstate shipping alternative to 19th-century arks, rafts, and boats plying the difficult waters of the lower Susquehanna River.\n\n Built between 1836 and 1840, it ran 43 mi along the west bank of the river and rendered obsolete an older, shorter canal along the east bank.\n\n Of its total length, 30 mi were in Pennsylvania and 13 mi in Maryland.\n\n Though rivalry between Philadelphia, Pennsylvania, and Baltimore, Maryland, delayed its construction, the finished canal brought increased shipments of coal and other raw materials to both cities from Pennsylvania's interior.\n\n Competition from railroads was a large factor in the canal's decline after 1855.\n\n Canal remnants, including a lock keeper's house, have been preserved in Maryland, and locks 12 and 15 have been preserved in Pennsylvania.",
+    "Pennsylvania and Ohio Canal\nThe Pennsylvania and Ohio Canal, also known as the P & O Canal, the Cross Cut Canal and the Mahoning Canal was a shipping canal which operated from 1840 until 1877 (though the canal was completely abandoned by 1872).\n\n It was unique in that it served to connect canals in two states (the Ohio and Erie Canal in Ohio and the Beaver and Erie Canal in Pennsylvania) and was funded by private interests.",
+    "Whitewater River (Great Miami River)\nThe Whitewater River is a 101 mi southerly flowing right tributary of the Great Miami River in southeastern Indiana and southwestern Ohio in the United States.\n\n It is formed by the confluence of two forks, the West Fork and East Fork.\n\n The name is a misnomer, as there is no true white water on the river.\n\n However, there are many rapids due to the steep gradient present - the river falls an average of 6 ft/mile .\n\n The gradient rendered upstream navigation impossible, and in the mid-nineteenth century resulted in the construction of the Whitewater Canal paralleling the river from north of Connersville, Indiana, to the Ohio River.",
+    "Tiber Creek\nTiber Creek or Tyber Creek is a tributary of the Potomac River in Washington, D.C. In the 19th century it was modified to become part of the Washington City Canal, and subsequently was enclosed in a tunnel.",
+    "Duck Creek Aqueduct\nDuck Creek Aqueduct, also known as the Metamora Aqueduct and Whitewater Canal Aqueduct, is a historic aqueduct carrying the Whitewater Canal over Duck Creek in Metamora Township, Franklin County, Indiana.\n\n It is the only surviving covered wood aqueduct in the United States as such it is a form of covered bridge.\n\n It is a single-span Burr through truss aqueduct and measures approximately 90 feet long, 25 feet wide, and 25 feet deep.\n\n The original aqueduct was built between 1839 and 1843.\n\n The present structure was built in 1846, after the original aqueduct was washed out in a flood.\n\n It was strengthened in 1868, and repaired in 1901.\n\n After abandonment and deterioration, the Duck Creek Aqueduct was restored to its present appearance in 1946-1949.",
+    "Dismal Swamp Canal\nThe Dismal Swamp Canal is located along the eastern edge of the Great Dismal Swamp in Virginia and North Carolina in the United States.\n\n It is the oldest continually operating man-made canal in the United States, opened in 1805, and closed in October 2016.\n\n It is part of the Intracoastal Waterway, an inland route, which parallels the east coast and offers boaters shelter from the Atlantic Ocean from Manasquan Inlet, New Jersey, to Brownsville, Texas.\n\n The route runs through bays, lakes, rivers, streams, and canals, and includes the Intracoastal Waterway running from Norfolk, Virginia, to the Florida Keys.",
+    "Whitewater Canal\nThe Whitewater Canal, which was built between 1836 and 1847, spanned a distance of seventy-six miles and stretched from Lawrenceburg, Indiana on the Ohio River to Hagerstown, Indiana.",
+    "Washington City Canal\nThe Washington City Canal operated from 1815 until the mid-1850s in Washington, D.C. The canal connected the Anacostia River, called the \"Eastern Branch\" at that time, to Tiber Creek, the Potomac River, and later the Chesapeake and Ohio Canal (C&O).\n\n The canal fell into disuse in the late 19th century and the city government covered over or filled in various sections.",
+    "Cincinnati and Whitewater Canal Tunnel\nThe Cincinnati and Whitewater Canal Tunnel is a historic yet abandoned canal tunnel in the southwestern corner of the U.S. state of Ohio.\n\n Located within the village of Cleves near Cincinnati, it was constructed in 1837 as part of the Whitewater Canal system.\n\n Since the canal's closure, it has largely been forgotten, but it has been designated a historic site."
+   ]
+  }
+ ]
+}

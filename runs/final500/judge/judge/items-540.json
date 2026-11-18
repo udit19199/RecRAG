@@ -1,0 +1,441 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "46a8af990cd5fddc",
+   "gold": [
+    {
+     "sentence": "German Spitz is used to refer to both a breed of dog and category or type of dog.",
+     "facts": {
+      "0.0": "German Spitz is used to refer to a breed of dog.",
+      "0.1": "German Spitz is used to refer to a category or type of dog."
+     }
+    },
+    {
+     "sentence": " Several modern breeds have been developed from the German Spitz, and are either registered as separate breeds or as varieties of German Spitz.",
+     "facts": {
+      "1.0": "Several modern breeds have been developed from the German Spitz.",
+      "1.1": "These modern breeds are either registered as separate breeds.",
+      "1.2": "These modern breeds are either registered as varieties of German Spitz."
+     }
+    },
+    {
+     "sentence": " The term was used to designate springer type spaniels that were neither Sussex nor Clumber Spaniels, and attempts were made to use it to specify a breed that would later become known as the English Springer Spaniel.",
+     "facts": {
+      "2.0": "The term was used to designate springer type spaniels that were neither Sussex nor Clumber Spaniels.",
+      "2.1": "Attempts were made to use the term to specify a breed that would later become known as the English Springer Spaniel."
+     }
+    }
+   ],
+   "items": [
+    "King Charles Spaniel\nThe King Charles Spaniel (also known as the English Toy Spaniel) is a small dog breed of the spaniel type.\n\n In 1903, the Kennel Club combined four separate toy spaniel breeds under this single title.\n\n The other varieties merged into this breed were the Blenheim, Ruby and Prince Charles Spaniels, each of which contributed one of the four colours available in the breed.",
+    "American Cocker Spaniel\nThe American Cocker Spaniel is a breed of sporting dog.\n\n It is a spaniel type dog that is closely related to the English Cocker Spaniel; the two breeds diverged during the 20th century due to differing breed standards in America and the UK.\n\n In the United States, the breed is usually called the Cocker Spaniel, while elsewhere in the world, it is called the American Cocker Spaniel in order to differentiate between it and its English cousin, which was already known as \"Cocker Spaniel\" before the American variety was created.\n\n The word \"cocker\" is commonly held to stem from their use to hunt woodcock in England, while \"spaniel\" is thought to be derived from the type's origins in Spain.",
+    "English Springer Spaniel\nThe English Springer Spaniel is a breed of gun dog in the Spaniel family traditionally used for flushing and retrieving game.\n\n It is an affectionate, excitable breed with a typical lifespan of twelve to fourteen years.\n\n They are very similar to the Welsh Springer Spaniel and are descended from the Norfolk or Shropshire Spaniels of the mid-19th century; the breed has diverged into separate show and working lines.\n\n The breed suffers from average health complaints.\n\n The show-bred version of the breed has been linked to \"rage syndrome\", although the disorder is very rare.\n\n It is closely related to the Welsh Springer Spaniel and very closely to the English Cocker Spaniel; less than a century ago, springers and cockers would come from the same litter.\n\n The smaller \"cockers\" hunted woodcock while the larger littermates were used to flush, or \"spring,\" game.\n\n In 1902, The Kennel Club recognized the English Springer Spaniel as a distinct breed.\n\n They are used as sniffer dogs on a widespread basis.\n\n The term \"Springer\" comes from the historic hunting role, where the dog would flush (spring) birds into the air.",
+    "German Spitz (Klein)\nThe German Spitz Klein is a breed of dog of the German Spitz type.\n\n They are usually classed as a toy or utility breed.",
+    "Picardy Spaniel\nThe Picardy Spaniel is a breed of dog developed in France for use as a gundog.\n\n It is related to the Blue Picardy Spaniel, and still has many similarities, but the Picardy Spaniel is the older of the two breeds.\n\n It is thought to be one of the two oldest continental spaniel breeds and was favoured by the French nobility, remaining popular for hunting after the French Revolution due to its weather resistant coat that enabled it to hunt in a variety of conditions and terrain.\n\n However its popularity waned following the influx of English hunting breeds in the early 20th century.\n\n Slightly smaller than an English Setter but larger than most of its spaniel cousins, it has no major health issues although as with many breeds with pendulous ears, it can be prone to ear infections.",
+    "American Eskimo Dog\nThe American Eskimo Dog is a breed of companion dog originating in Germany.\n\n The American Eskimo is a member of the Spitz family.\n\n The breed's progenitors were German Spitz, but due to anti-German prejudice during the First World War, it was renamed \"American Eskimo Dog\".\n\n Although modern American Eskimos have been exported as German Spitz Gross (or Mittel, depending on the dog's height), the breeds have diverged and the standards are significantly different.\n\n In addition to serving as a watchdog and companion, the American Eskimo Dog also achieved a high degree of popularity in the United States in the 1930s and 1940s as a circus performer.",
+    "Welsh Springer Spaniel\nThe Welsh Springer Spaniel is a breed of dog and a member of the spaniel family.\n\n Thought to be comparable to the old Land Spaniel, they are similar to the English Springer Spaniel and historically have been referred to as both the Welsh Spaniel and the Welsh Cocker Spaniel.\n\n They were relatively unknown until a succession of victories in dog trials by the breed increased its popularity.\n\n Following recognition by The Kennel Club in 1902, the breed gained the modern name of Welsh Springer Spaniel.\n\n The breed's coat only comes in a single colour combination of white with red markings, usually in a piebald pattern.\n\n Loyal and affectionate, they can become very attached to family members and are wary of strangers.\n\n Health conditions are limited to those common among many breeds of dog, although they are affected more than average by hip dysplasia and some eye conditions.\n\n They are a working dog, bred for hunting, and while not as rare as some varieties of spaniel, they are rarer than the more widely known English Springer Spaniel with which they are sometimes confused.",
+    "German Spitz\nGerman Spitz is used to refer to both a breed of dog and category or type of dog.\n\n Several modern breeds have been developed from the German Spitz, and are either registered as separate breeds or as varieties of German Spitz.\n\n All the \"German Spitz type\" dogs are dogs of the Spitz type of German origin.\n\n The Großspitz, Mittelspitz, and Kleinspitz breeds of \"German Spitz type\" are also called the German Spitz in English.",
+    "Fox Terrier\nFox Terriers are two different breeds of the terrier dog type: the Smooth Fox Terrier and the Wire Fox Terrier.\n\n Both of these breeds originated in the 19th century from a handful of dogs who are descended from earlier varieties of British terriers, and are related to other modern white terrier breeds.\n\n In addition, a number of breeds have diverged from these two main types of fox terrier and have been recognised separately, including the Jack Russell Terrier, Miniature Fox Terrier and Rat Terrier.\n\n The Wire and Smooth Fox Terriers share similar characteristics, the main differences being in the coat and markings.\n\n They have been successful in conformation shows, more prominently in America than their homeland.",
+    "Norfolk Spaniel\nThe Norfolk Spaniel or Shropshire Spaniel is an extinct breed of dog since the early 20th century.\n\n It was originally thought to have originated from the work of one of the Dukes of Norfolk, but this theory was disproven after being in doubt during the later part of the 19th century.\n\n The term was used to designate springer type spaniels that were neither Sussex nor Clumber Spaniels, and attempts were made to use it to specify a breed that would later become known as the English Springer Spaniel."
+   ]
+  },
+  {
+   "id": "f1aaba618cfaaf72",
+   "gold": [
+    {
+     "sentence": "The 2012 United States Libertarian National Convention, in which delegates of the Libertarian Party (LP) chose the party's nominees for President of the United States and Vice President of the United States in the 2012 general election, was held May 2–6, 2012 in Las Vegas, Nevada at the Red Rock Resort Spa and Casino.",
+     "facts": {
+      "0.0": "The 2012 United States Libertarian National Convention was a convention of the Libertarian Party (LP).",
+      "0.1": "Delegates of the Libertarian Party chose the party's nominees at the 2012 United States Libertarian National Convention.",
+      "0.2": "The nominees chosen at the 2012 United States Libertarian National Convention were for President of the United States.",
+      "0.3": "The nominees chosen at the 2012 United States Libertarian National Convention were for Vice President of the United States.",
+      "0.4": "The nominees were chosen for the 2012 general election.",
+      "0.5": "The 2012 United States Libertarian National Convention was held May 2-6, 2012.",
+      "0.6": "The 2012 United States Libertarian National Convention was held in Las Vegas, Nevada.",
+      "0.7": "The 2012 United States Libertarian National Convention was held at the Red Rock Resort Spa and Casino."
+     }
+    },
+    {
+     "sentence": " Former Governor of New Mexico Gary Johnson won the presidential nomination on the first ballot.",
+     "facts": {
+      "1.0": "Gary Johnson is a former Governor of New Mexico.",
+      "1.1": "Gary Johnson won the presidential nomination.",
+      "1.2": "Gary Johnson won the presidential nomination on the first ballot."
+     }
+    },
+    {
+     "sentence": "Gary Earl Johnson (born January 1, 1953) is an American businessman, author, and politician.",
+     "facts": {
+      "2.0": "Gary Earl Johnson was born on January 1, 1953.",
+      "2.1": "Gary Earl Johnson is an American businessman.",
+      "2.2": "Gary Earl Johnson is an American author.",
+      "2.3": "Gary Earl Johnson is an American politician."
+     }
+    },
+    {
+     "sentence": " He was the 29th Governor of New Mexico from 1995 to 2003 as a member of the Republican Party.",
+     "facts": {
+      "3.0": "Gary Johnson was the 29th Governor of New Mexico.",
+      "3.1": "Gary Johnson was Governor of New Mexico from 1995 to 2003.",
+      "3.2": "Gary Johnson was a member of the Republican Party as Governor of New Mexico."
+     }
+    }
+   ],
+   "items": [
+    "Mark Hinkle\nMark Hinkle (born January 28, 1951) is an American libertarian activist and businessperson.\n\n He was the National Chairman of the United States Libertarian Party until 2012.\n\n He was elected by the delegates of the 2010 Libertarian National Convention in St. Louis, Missouri on May 30, 2010.",
+    "Libertarian Party presidential primaries, 2016\nThe 2016 Libertarian Party presidential primaries and caucuses allowed electors to indicate non-binding preferences for the Libertarian Party's presidential candidate.\n\n These differed from the Republican or Democratic presidential primaries and caucuses in that they did not appoint delegates to represent a candidate at the party's convention to select the party's nominee for the United States presidential election.\n\n The party's nominee for the 2016 presidential election was chosen directly by registered delegates at the 2016 Libertarian National Convention, which ran from May 26 to 30, 2016.\n\n The delegates nominated former New Mexico Governor Gary Johnson and former Massachusetts Governor Bill Weld.",
+    "2012 Libertarian National Convention\nThe 2012 United States Libertarian National Convention, in which delegates of the Libertarian Party (LP) chose the party's nominees for President of the United States and Vice President of the United States in the 2012 general election, was held May 2–6, 2012 in Las Vegas, Nevada at the Red Rock Resort Spa and Casino.\n\n Former Governor of New Mexico Gary Johnson won the presidential nomination on the first ballot.\n\n Retired California state court judge Jim Gray won the vice-presidential nomination, also on the first ballot.\n\n The convention also chose to replace most of the Libertarian National Committee party officers and members-at-large.",
+    "Libertarian National Committee\nThe Libertarian National Committee (LNC) controls and manages the affairs, properties, and funds of the United States Libertarian Party.\n\n It is composed of the party officers, five at-large representatives elected every two years at the national convention, and a theoretical maximum of 10 regional representatives.\n\n The current chair, elected in June 2014, is Nicholas Sarwark.\n\n The Executive Director is Wes Benedict.",
+    "Gary Johnson presidential campaign, 2012\nThe 2012 presidential campaign of Gary Johnson, the 29th Governor of New Mexico, was announced on April 21, 2011.\n\n He declared his candidacy for the 2012 Republican Party nomination for President of the United States.\n\n On December 28, 2011, Johnson withdrew his candidacy for the Republican nomination, and declared his candidacy for the 2012 presidential nomination of the Libertarian Party.\n\n The 2012 Libertarian National Convention was held during the first weekend of May 2012.\n\n On May 5, 2012, after promoting his libertarian-oriented political positions to delegates, Johnson received the most votes at the convention and became the official 2012 Libertarian presidential nominee.\n\n On November 6, 2012, Johnson received just under 1% of the popular vote in the general election, amounting to more than 1.2 million votes, more than double what the Barr/Root ticket received in 2008.\n\n This was the most successful result for a third-party presidential candidacy since 2000, and the best in the Libertarian Party's history by vote number at the time.\n\n (Johnson ran again in 2016 and received nearly four times his 2012 vote total.)",
+    "Political positions of Gary Johnson\nGary Johnson was the governor of New Mexico from 1995 to 2003 and ran for president in 2012 and 2016.\n\n In December 2011 he announced he would pursue the presidential nomination of the Libertarian Party for the 2012 general election.\n\n The Libertarian National Convention in May, 2012 chose Johnson as the party's candidate.\n\n In November 2014, Johnson announced he would pursue the presidential nomination of the Libertarian Party for the 2016 general election.\n\n Johnson has taken positions on many political issues as revealed through his public comments, his gubernatorial record, his Our America Initiative and his campaigns to win the Republican and Libertarian nominations.",
+    "Gary Johnson\nGary Earl Johnson (born January 1, 1953) is an American businessman, author, and politician.\n\n He was the 29th Governor of New Mexico from 1995 to 2003 as a member of the Republican Party.\n\n He was also the Libertarian Party nominee for President of the United States in the 2012 and 2016 elections.",
+    "David Bergland\nDavid Peter Bergland (born June 4, 1935) is an American politician who was the United States Libertarian Party's nominee at the 1983 Libertarian National Convention for President of the United States in the 1984 presidential election.",
+    "Wayne W. Lambert\nThe Brigadier General retired from the US Air Force in 1989.\n\n Lambert also holds an MBA from Chapman College (’76).\n\n In retirement, Lambert publicly supported U.S. presidential candidate Mitt Romney and U.S. vice presidential candidate Paul Ryan in the 2012 general election.",
+    "Libertarian National Convention\nThe Libertarian National Convention is held every two years by the Libertarian Party (United States) to choose members of the Libertarian National Committee (LNC), and to conduct other party business.\n\n In presidential election years, the convention delegates enact a platform and nominate the Libertarian presidential and vice-presidential candidates who then face the nominees of other parties in the November general election."
+   ]
+  },
+  {
+   "id": "e6a105f687816af2",
+   "gold": [
+    {
+     "sentence": "Bumble and bumble Products, LLC is one of 27 brands owned by Estée Lauder Companies, Inc.",
+     "facts": {
+      "0.0": "Bumble and bumble Products, LLC is one of 27 brands.",
+      "0.1": "The 27 brands are owned by Estée Lauder Companies, Inc.",
+      "0.2": "Bumble and bumble Products, LLC is owned by Estée Lauder Companies, Inc."
+     }
+    },
+    {
+     "sentence": " The company owns a diverse portfolio of brands, distributed internationally through retail channels and digital commerce, and has its headquarters in Midtown Manhattan, New York City.",
+     "facts": {
+      "1.0": "Estée Lauder Companies, Inc. owns a diverse portfolio of brands.",
+      "1.1": "The brand portfolio is distributed internationally through retail channels.",
+      "1.2": "The brand portfolio is distributed internationally through digital commerce.",
+      "1.3": "Estée Lauder Companies, Inc. has its headquarters in Midtown Manhattan, New York City."
+     }
+    }
+   ],
+   "items": [
+    "Bumble and bumble\nBumble and bumble Products, LLC is one of 27 brands owned by Estée Lauder Companies, Inc.\n\n It was founded as a New York City hair salon in 1977 by hairdresser and entrepreneur Michael Gordon.\n\n The company operates two flagship salons in Manhattan: a midtown location on East 56th Street and on the top two floors of The House of Bumble in the Meatpacking District.",
+    "Dun &amp; Bradstreet\nDun & Bradstreet, Inc. () is a company that provides commercial data, analytics and insights for business, headquartered in Short Hills, a community in Millburn, New Jersey, US.\n\n It offers a wide range of products, and services for risk and finance, operations and supply, and sales and marketing professionals, as well as research and insights on global business issues, serving customers in government and industries such as communications, technology, strategic financial services, and retail/telecommunications/manufacturing markets.\n\n Often referred to as D&B, the company’s database contains more than 265 million business records worldwide.",
+    "Stanley Bing\nStanley Bing is the pen name of Gil Schwartz (born May 20, 1951 in New York, NY), a business humorist and novelist.\n\n He has written a column for \"Fortune\" magazine for more than twenty years, after having spent a decade at \"Esquire\".\n\n He is the author of thirteen books including \"What Would Machiavelli Do?\"\n\n and \"The Curriculum\", a satirical textbook for a business school that also offers lessons on the Web.\n\n Schwartz is the senior executive vice president of corporate communications and Chief Communications Officer for CBS.",
+    "Universal Pictures\nUniversal Pictures (also referred to as Universal Studios or simply Universal) is an American film studio owned by Comcast through the Universal Filmed Entertainment Group division of its wholly owned subsidiary NBCUniversal.\n\n The company was founded in 1912 by Carl Laemmle, Mark Dintenfass, Charles O. Baumann, Adam Kessel, Pat Powers, William Swanson, David Horsley, Robert H. Cochrane, and Jules Brulatour, and is the oldest surviving film studio in the United States, the world's fourth oldest after Gaumont, Pathé and Nordisk Film, and the oldest in terms of the overall film market .\n\n Its studios are located in Universal City, California, and its corporate offices are located in New York City.",
+    "Buena Vista (brand)\nBuena Vista is a brand name which was historically often used for divisions and subsidiaries of The Walt Disney Company, whose primary studios, the Walt Disney Studios, are located on Buena Vista Street in Burbank, California.\n\n (The studio lot is also home to the Company's corporate headquarters, the Team Disney Burbank building.)\n\n The logos for the various Buena Vista brands featured the \"Buena Vista\" wordmark superimposed over the Disney Castle image to signal the affiliation between Buena Vista and Disney.\n\n The name literally means \"good view\" in Spanish.",
+    "Bombardier Inc.\nBombardier Inc. (] ) is a multinational aerospace and transportation company based in Montreal, Quebec, Canada.\n\n Starting as a maker of snow machines or snowmobiles, over the years it has grown into a large manufacturer of regional airliners, business jets, mass transportation equipment, and recreational equipment, and a provider of financial services.",
+    "A. H. Belo\nA. H. Belo Corporation is a Dallas-based media company that owns newspapers in North Texas.\n\n The current corporation was formed when Belo Corporation separated its broadcasting and publishing operations into two corporations.\n\n A. H. Belo also owns a part interest in Classified Ventures.\n\n Its CEO is Robert Decherd who had headed Belo before the spin-off.\n\n The company has its headquarters in the Belo Building in Downtown Dallas.",
+    "Rubin Schron\nRubin Schron, who goes by Ruby, is a New York City real estate investor, landlord and the founder of Cammeby's International Group.\n\n He has a personal net worth of well over $10 billion, according to data company Real Capital Analytics.\n\n The portfolio of Cammeby's, which Schron founded in 1967, includes office buildings, market-rate and government-subsidized apartment complexes, nursing homes, the 16-building complex in Sunset Park now known as Industry City, a stake in the bottom half of Woolworth Building and industrial properties scattered across Long Island.\n\n In 2013, Schron made an unsolicited and unsuccessful offer to buy the Empire State Building for $2 billion, but he has not had problems closing many other deals throughout his long career.\n\n In 2003, an investment group led by Schron paid $600 million for a portfolio of about 6,000 outer-borough apartments from Donald Trump.",
+    "Estée Lauder Companies\nThe Estée Lauder Companies Inc. ( ) is an American manufacturer and marketer of prestige skincare, makeup, fragrance and hair care products.\n\n The company owns a diverse portfolio of brands, distributed internationally through retail channels and digital commerce, and has its headquarters in Midtown Manhattan, New York City.",
+    "Walt Disney Studios Motion Pictures\nWalt Disney Studios Motion Pictures (formerly Buena Vista Pictures Distribution and Buena Vista Film Distribution Company) is an American film distributor owned by The Walt Disney Company.\n\n Established in 1953 as Buena Vista Film Distribution Company, the company handles theatrical distribution, marketing and promotion for films produced and released by the Walt Disney Studios, including Walt Disney Pictures, Walt Disney Animation Studios, Pixar Animation Studios, DisneyToon Studios, Marvel Studios, Lucasfilm, Disneynature, and Touchstone Pictures.\n\n The division took on its current name in late 2007, which before that had been Buena Vista Pictures Distribution since 1987."
+   ]
+  },
+  {
+   "id": "8d8ec917a7df25de",
+   "gold": [
+    {
+     "sentence": "Jelena Janković (Serbian Cyrillic: Јелена Јанковић, ] , born 28 February 1985) is a Serbian professional tennis player.",
+     "facts": {
+      "0.0": "Jelena Janković was born on 28 February 1985.",
+      "0.1": "Jelena Janković's name is written in Serbian Cyrillic as Јелена Јанковић.",
+      "0.2": "Jelena Janković is a Serbian professional tennis player."
+     }
+    },
+    {
+     "sentence": "Marat Mubinovich Safin (Russian: Мара́т Муби́нович Са́фин ; ] , Tatar: Марат Мөбин улы Сафин \"Marat Möbin uğlı Safin\" ; born 27 January 1980) is a Russian politician and retired professional tennis player.",
+     "facts": {
+      "1.0": "Marat Mubinovich Safin's name is written in Russian as Мара́т Муби́нович Са́фин.",
+      "1.1": "Marat Mubinovich Safin's name is written in Tatar as Марат Мөбин улы Сафин.",
+      "1.2": "Marat Mubinovich Safin's Tatar name is romanized as Marat Möbin uğlı Safin.",
+      "1.3": "Marat Mubinovich Safin was born on 27 January 1980.",
+      "1.4": "Marat Mubinovich Safin is a Russian politician.",
+      "1.5": "Marat Mubinovich Safin is a retired professional tennis player."
+     }
+    }
+   ],
+   "items": [
+    "Ivanovic–Janković rivalry\nSerbian tennis players Ana Ivanovic and Jelena Janković are both former world No. 1 and have met 12 times so far.\n\n Their overall head-to-head series is 9–3, in Ivanovic's favor.\n\n Janković is two years older than Ivanovic, so their paths connect them to play each other.\n\n They are the first female players to achieve major successes for independent Serbia.",
+    "Jelena Janković\nJelena Janković (Serbian Cyrillic: Јелена Јанковић, ] , born 28 February 1985) is a Serbian professional tennis player.\n\n Janković is a former World No. 1 in singles, a ranking achieved preceding her finals appearance at the 2008 US Open.\n\n Janković's career highlights include winning the 2007 Wimbledon Mixed Doubles title with Jamie Murray, the 2010 Indian Wells Masters, the Internazionali BNL d'Italia twice, in 2007 and 2008, and the aforementioned appearance in the finals of the 2008 US Open.\n\n She is coached by her brother Marko.",
+    "Ana Ivanovic career statistics\nThis is a list of the main career statistics of Serbian professional tennis player, Ana Ivanovic.\n\n Ivanovic won fifteen WTA singles titles including one grand slam singles title at the 2008 French Open and three WTA Tier I singles titles.\n\n She was also the runner-up at the 2007 French Open and 2008 Australian Open and a semi-finalist at the 2007 Wimbledon Championships and 2007 WTA Tour Championships.\n\n On June 9, 2008 Ivanovic became the world No. 1 for the first time in her career.",
+    "2014 Rogers Cup – Women's Doubles\nJelena Janković and Katarina Srebotnik were the defending champions, but they chose not to compete together.\n\n Janković played alongside Klára Koukalová, but lost in the second round to Michaëlla Krajicek and Barbora Záhlavová-Strýcová.\n\n Srebotnik teamed up with Květa Peschke, but lost in the second round to Chan Hao-ching and Chan Yung-jan.\n\n<br>",
+    "2008 Wimbledon Championships – Mixed Doubles\nJamie Murray and Jelena Janković were the defending champions, but Janković chose not to participate, and only Murray competed that year.",
+    "Jelenin svet\nJelenin svet (\"Jelena's World\") is a 2008 independent documentary film written and directed by Tanja Brzaković, about former World No. 1 female tennis player, Jelena Janković.",
+    "Graph query row:\nperson1: Jelena Janković\nperson1_occupation: professional tennis player\nperson1_nationality: Serbian\nperson2: Marat Safin\nperson2_occupation: ['politician', 'retired professional tennis player']\nperson2_nationality: Russian\nconnecting_entity: None\nrelationship_from_person1: None\nrelationship_to_person2: None",
+    "Dinara Safina career statistics\nThis is a list of the main career statistics of retired, Russian professional tennis player, Dinara Safina.\n\n Throughout her career, Safina won twelve WTA singles titles including three Tier I singles titles at the 2008 Qatar Telecom German Open, Rogers Cup and Toray Pan Pacific Open respectively; one Premier Mandatory singles title at the 2009 Mutua Madrileña Madrid Open and one Premier 5 singles title at the 2009 Internazionali BNL d'Italia.\n\n She was also the runner-up at the 2008 French Open and the 2009 Australian Open and French Open as well as a silver medalist in singles at the 2008 Beijing Olympics.",
+    "Jelena Janković career statistics\nThis is a list of the main career statistics of Serbian professional tennis player and former World No. 1, Jelena Janković.\n\n To date, Janković has won 15 WTA singles titles including four WTA Tier I singles titles, one WTA Premier Mandatory singles title and one WTA Premier 5 singles title.\n\n Janković was also the runner-up in singles at the 2008 US Open, a semi-finalist at the year-ending WTA Tour Championships in 2008, 2009 and 2013 and a quarterfinalist at the 2008 Beijing Olympics.",
+    "Marat Safin\nMarat Mubinovich Safin (Russian: Мара́т Муби́нович Са́фин ; ] , Tatar: Марат Мөбин улы Сафин \"Marat Möbin uğlı Safin\" ; born 27 January 1980) is a Russian politician and retired professional tennis player.\n\n He achieved the Association of Tennis Professionals (ATP) world No. 1 singles ranking on November 20, 2000.\n\n Nobody taller than Safin has ever reached his world number-one ranking.\n\n Safin is the older brother of former world No. 1 WTA player, Dinara Safina.\n\n They are the first and only brother–sister tandem in tennis history who have both achieved No. 1 rankings.\n\n On court, Safin was famous for his emotional outbursts and sometimes fiery temper."
+   ]
+  },
+  {
+   "id": "11bca91ee0a12b9e",
+   "gold": [
+    {
+     "sentence": "Ruggero Deodato (born 7 May 1939) is an Italian film director, screenwriter, and actor.",
+     "facts": {
+      "0.0": "Ruggero Deodato was born on 7 May 1939.",
+      "0.1": "Ruggero Deodato is an Italian film director.",
+      "0.2": "Ruggero Deodato is an Italian screenwriter.",
+      "0.3": "Ruggero Deodato is an Italian actor."
+     }
+    },
+    {
+     "sentence": "Alejandro Springall is a Mexican film director and producer.",
+     "facts": {
+      "1.0": "Alejandro Springall is a Mexican film director.",
+      "1.1": "Alejandro Springall is a Mexican producer."
+     }
+    }
+   ],
+   "items": [
+    "Alejandro Springall\nAlejandro Springall is a Mexican film director and producer.",
+    "Stefan Ruzowitzky\nStefan Ruzowitzky (born 25 December 1961) is an Austrian film director and screenwriter.",
+    "Tinto Brass\nGiovanni \"Tinto\" Brass (born 26 March 1933) is an Italian filmmaker.\n\n In the 1960s and 1970s, he directed many critically acclaimed avant-garde films of various genres.\n\n Today, he is mainly known for his later work in the erotic genre, with films such as \"Caligula\", \"Così fan tutte\" (released under the English title \"All Ladies Do It\"), \"Paprika\", \"Monella\" (\"Frivolous Lola\") and \"Trasgredire\".",
+    "Antonio De Carlo\nAntonio De Carlo, born (1967--) 4, 1967 (age 50 ) in Tijuana, Baja California, Mexico, is a Mexican actor also known as Antonio in the late 1980s and early 1990s.\n\n He won an Emmy Award in 2005-2006.\n\n He is president and founder of the \"Fundación Cultura Sin Fronteras AC\".\n\n After twelve years out of show business, in 2012 he returned to the soap operas performing \"Magic Dragon\" one of the main characters for \"Miss XV\", a co-production from Televisa México and Nickelodeon directed and produced by Pedro Damian.\n\n He is also part of the cast of \"Muchacha Italiana Viene a Casarse\", directed by Pedro Damian (Televisa, México).",
+    "Ruggero Deodato\nRuggero Deodato (born 7 May 1939) is an Italian film director, screenwriter, and actor.",
+    "Hercules, Prisoner of Evil\nHercules, Prisoner of Evil (Italian: \"Ursus il terrore dei Kirghisi\" , 'Ursus, Terror of the Kirghiz' ) is a 1964 Italian \"peplum\" film directed by Antonio Margheriti and an uncredited Ruggero Deodato.\n\n Deodato, the official assistant director, replaced Margheriti as he was busy with the completion of the film \"The Fall of Rome\".\n\n Deodato actually directed most of the film in actuality but Margheriti was credited as the director.\n\n The film is filled with a variety of horrific themes and elements, featuring a killer werewolf, and is as much a horror film as it is a peplum.",
+    "Dan Ouellette\nDan Ouellette is an American artist, illustrator, director, author and production designer.\n\n He began drawing as a child inspired by Escher, Dalí and Moebius.\n\n His drawings usually begin with very rough sketches and are intended to capture a moment of tension or eroticism.\n\n His art pushes his audience into areas where people feel less than comfortable, stating that the \"US which is so puritanical, our bodies are usually a great source of anxiety and fear\".\n\n As a production designer, he has designed over fifteen independent feature films in the past decade as well as numerous commercials and music videos.\n\n He is best known as the director for the music videos \"Blue\" and \"Looking Glass\" by The Birthday Massacre, receiving over 4 million combined views on YouTube, and has directed music videos for the industrial band Android Lust.\n\n He has done production design for many films over the years including \"Chasing Sleep\" starring Jeff Daniels.\n\n Dan's artwork is strongly themed around surrealism and mostly done in pencil.\n\n As an artist he has exhibited widely.\n\n He has been published in numerous anthology art books including \"Bio-Mannerism\" which also features work by H.R.",
+    "John Steiner\nHe found himself in demand in Italy and moved there, appearing in a great number of Italian exploitation and B-films including police actioners (\"Violent Rome\"), westerns (\"Mannaja\"), war films (\"The Last Hunter\"), nazisploitation (\"Deported Women of the SS Special Section\"), sci-fi adventure films (\"Yor, the Hunter from the Future\"), and horror films, such as Mario Bava's \"Shock\", Dario Argento's \"Tenebrae\", and Ruggero Deodato's \"Body Count\".\n\n He also became a favourite of famed Italian filmmaker Tinto Brass, featuring in \"Salon Kitty\", the infamous \"Caligula\", \"Action\", and \"Paprika\".",
+    "Cannibal Holocaust\nCannibal Holocaust is a 1980 Italian cannibal horror film directed by Ruggero Deodato from a screenplay by Gianfranco Clerici.\n\n It stars Carl Gabriel Yorke, Robert Kerman, Francesca Ciardi, Perry Pirkanen, and Luca Barbareschi.\n\n Influenced by the works of Mondo director Gualtiero Jacopetti, the film was inspired by Italian media reporting of Red Brigade terrorism.\n\n The coverage included news reports Deodato believed to be staged, an idea which became an integral aspect of the film's story.\n\n \"Cannibal Holocaust\" was filmed primarily in the Amazon rainforest of Colombia with indigenous tribes interacting with American and Italian actors.",
+    "Victor Salva\nVictor Ronald Salva (born March 29, 1958) is an American film director and screenwriter.\n\n He directed the films \"Powder\" (1995) and \"Jeepers Creepers\" (2001).\n\n The latter of these has been expanded into a franchise with two sequels that he has also directed."
+   ]
+  },
+  {
+   "id": "5b620d3ad3bf5bb0",
+   "gold": [
+    {
+     "sentence": " It was released as the lead single from their fourth studio album, \"Elephant\", in March 2003, and reached number one on the Modern Rock Tracks—maintaining that position for three weeks.",
+     "facts": {
+      "0.0": "The song was released as the lead single from the fourth studio album of its act, \"Elephant.\"",
+      "0.1": "The song was released in March 2003.",
+      "0.2": "The song reached number one on the Modern Rock Tracks.",
+      "0.3": "The song maintained its number one position on the Modern Rock Tracks for three weeks."
+     }
+    },
+    {
+     "sentence": " Released on April 1, 2003 on V2 Records, its release garnered near unanimous critical acclaim and commercial success, garnering a nomination for Album of the Year and a win for Best Alternative Music Album at the 46th Grammy Awards in 2004, peaking at No. 6 in the US \"Billboard\" charts and topping the UK album charts.",
+     "facts": {
+      "1.0": "The album \"Elephant\" was released on April 1, 2003.",
+      "1.1": "The album \"Elephant\" was released on V2 Records.",
+      "1.2": "The album \"Elephant\" garnered near unanimous critical acclaim.",
+      "1.3": "The album \"Elephant\" garnered commercial success.",
+      "1.4": "The album \"Elephant\" received a nomination for Album of the Year at the 46th Grammy Awards in 2004.",
+      "1.5": "The album \"Elephant\" won Best Alternative Music Album at the 46th Grammy Awards in 2004.",
+      "1.6": "The album \"Elephant\" peaked at No. 6 on the US \"Billboard\" charts.",
+      "1.7": "The album \"Elephant\" topped the UK album charts."
+     }
+    }
+   ],
+   "items": [
+    "Elephant (album)\nElephant is the fourth album by the American alternative rock duo The White Stripes.\n\n Released on April 1, 2003 on V2 Records, its release garnered near unanimous critical acclaim and commercial success, garnering a nomination for Album of the Year and a win for Best Alternative Music Album at the 46th Grammy Awards in 2004, peaking at No. 6 in the US \"Billboard\" charts and topping the UK album charts.",
+    "Seven (Poco album)\nSeven is the sixth studio album (seventh overall) by American country rock band Poco.\n\n It is the first album they made after leader Richie Furay left the band.\n\n The front cover was designed by Phil Hartman.",
+    "The White Stripes\nThe White Stripes were an American rock duo formed in 1997 in Detroit, Michigan.\n\n The group consisted of Jack White (songwriter, vocals, guitar, piano, and mandolin) and Meg White (drums and vocals).\n\n After releasing several singles and three albums within the Detroit music scene, The White Stripes rose to prominence in 2002, as part of the garage rock revival scene.\n\n Their successful and critically acclaimed albums \"White Blood Cells\" and \"Elephant\" drew attention from a large variety of media outlets in the United States and the United Kingdom, with the single \"Seven Nation Army\" and its guitar line becoming their signature song.\n\n The band recorded two more albums, \"Get Behind Me Satan\" in 2005 and \"Icky Thump\" in 2007, and dissolved in 2011 after a lengthy hiatus from performing and recording.",
+    "Seven Nation Army\n\"Seven Nation Army\" (also stylized as \"7 Nation Army\") is a song by American rock duo The White Stripes.\n\n It was released as the lead single from their fourth studio album, \"Elephant\", in March 2003, and reached number one on the Modern Rock Tracks—maintaining that position for three weeks.\n\n It also became the third best-performing song of the decade on the same chart.\n\n It was well received commercially as well, and won the Grammy Award for Best Rock Song.",
+    "The Boys Are Back (The Oak Ridge Boys album)\nThe Boys Are Back is the thirtieth studio album of country music group The Oak Ridge Boys.\n\n It was released in 2009 under the Spring Hill Music Group label.\n\n The album marked the group's return to secular country music after releasing gospel albums since 1992.\n\n The track \"Seven Nation Army,\" a cover of The White Stripes's 2003 song from their album \"Elephant\", was released as the album's first single.",
+    "7 Seconds (film)\n7 Seconds is a 2005 American crime film directed by Simon Fellows, starring Wesley Snipes and Tamzin Outhwaite.\n\n The film was released on Direct-to-DVD in the United States on June 28, 2005.\n\n The title refers to the timers at the beginning of the film, which are set at 00:07 (7 seconds).",
+    "Meg White\nMegan Martha \"Meg\" White (born December 10, 1974) is an American drummer and occasional singer known for her work with Jack White in the Detroit rock duo The White Stripes.\n\n On an impulse, she played on Jack's drums in 1997.\n\n The two decided to form a band and began performing two months later, calling themselves The White Stripes because of their last name and Meg's affinity for peppermint candy.\n\n The band quickly became a Detroit underground favorite, before reaching national, then international fame.\n\n White has been nominated for various awards as a part of the White Stripes, and has received four Grammy Awards.",
+    "Grammy Award for Best Male Rap Solo Performance\nThe Grammy Award for Best Male Rap Solo Performance was an honor presented to male recording artists at the 45th Grammy Awards in 2003 and the 46th Grammy Awards in 2004 for quality rap solo performances.\n\n The Grammy Awards, an annual ceremony that was established in 1958, and originally called the Gramophone Awards, are presented by the National Academy of Recording Arts and Sciences of the United States to \"honor artistic achievement, technical proficiency and overall excellence in the recording industry, without regard to album sales or chart position\".",
+    "Late Night Tales: The Flaming Lips\nLate Night Tales: The Flaming Lips is a compilation album compiled by the members of The Flaming Lips, featuring songs by various artists.\n\n The album was released on March 7, 2005 and it features one new Flaming Lips recording, a cover of the White Stripes' \"Seven Nation Army\".",
+    "Premio Lo Nuestro 2003\nPremio Lo Nuestro 2003 was the 15th anniversary of the awards.\n\n the show was hosted by Mexican presenters Marco Antonio Regil and Adal Ramones.\n\n Juanes, Thalía, Marc Anthony, Pilar Montenegro, Sin Bandera, Banda el Recodo and other Latin music greats gave electrifying performances.\n\n In the show, there was 36 awards winners with 135 nominations.\n\n In Pop genre, Awards was given for : Album of the Year, Best Male Artist, Best Female Artist, Best Group or duo, Best New Artist and Song of the Year.\n\n In Rock Genre : Best Rock Album and Best rock Performer of the Year.\n\n In Tropical genre : Best Tropical Album of the Year, Best Tropical Male Artist, Best Tropical Female Artist, Best Tropical Group or Duo of the Year, Best Tropical New Artist, Tropical Song of the Year, Best Merengue Performance, Best Salsa Performance and Best Traditional Performance.\n\n Juanes was the biggest winner of night, took home four awards Best Pop Male Artist, Best Music Video, Best Rock Performance, and Pop Song of the Year ."
+   ]
+  },
+  {
+   "id": "23bb2e5673187852",
+   "gold": [
+    {
+     "sentence": "Eric Arthur Blair (25 June 1903 – 21 January 1950), better known by his pen name George Orwell, was an English novelist, essayist, journalist, and critic.",
+     "facts": {
+      "0.0": "Eric Arthur Blair was born on 25 June 1903.",
+      "0.1": "Eric Arthur Blair died on 21 January 1950.",
+      "0.2": "Eric Arthur Blair's pen name was George Orwell.",
+      "0.3": "Eric Arthur Blair is better known as George Orwell.",
+      "0.4": "Eric Arthur Blair was an English novelist.",
+      "0.5": "Eric Arthur Blair was an English essayist.",
+      "0.6": "Eric Arthur Blair was an English journalist.",
+      "0.7": "Eric Arthur Blair was an English critic."
+     }
+    },
+    {
+     "sentence": "Nelson Richard DeMille (born August 23, 1943) is an American author of action adventure and suspense novels.",
+     "facts": {
+      "1.0": "Nelson Richard DeMille was born on August 23, 1943.",
+      "1.1": "Nelson Richard DeMille is an American author.",
+      "1.2": "Nelson Richard DeMille writes action adventure novels.",
+      "1.3": "Nelson Richard DeMille writes suspense novels."
+     }
+    },
+    {
+     "sentence": " DeMille has also written under the pen names Jack Cannon, Kurt Ladner, Ellen Kay and Brad Matthews.",
+     "facts": {
+      "2.0": "Nelson Richard DeMille has written under the pen name Jack Cannon.",
+      "2.1": "Nelson Richard DeMille has written under the pen name Kurt Ladner.",
+      "2.2": "Nelson Richard DeMille has written under the pen name Ellen Kay.",
+      "2.3": "Nelson Richard DeMille has written under the pen name Brad Matthews."
+     }
+    }
+   ],
+   "items": [
+    "The Panther (novel)\nThe Panther is a 2012 novel by American author Nelson DeMille.\n\n It is the sixth of DeMille's novels to feature Detective John Corey, now working as a contractor for the fictional FBI Anti-Terrorist Task Force in New York City.\n\n The novel is the sequel to \"The Lion\".\n\n The Panther is followed by DeMille’s 2015 novel, \"Radiant Angel\".\n\n Also featured in this novel is DeMille’s other fictional character, Paul Brenner, who appears in The General's Daughter and Up Country.",
+    "George Orwell: A Life in Pictures\nGeorge Orwell: A Life in Pictures is a 2003 BBC Television docudrama telling the life story of the British author George Orwell.\n\n Chris Langham plays the part of Orwell.\n\n No surviving sound recordings or video of the real George Orwell have been found.",
+    "George Orwell bibliography\nThe bibliography of George Orwell includes journalism, essays, novels and non-fiction books written by the British writer Eric Blair (1903–50), either under his own name or, more usually, under his pen name George Orwell.\n\n Orwell was a prolific writer on topics related to contemporary English society and literary criticism, whom the British newsweekly \"The Economist\" in 2008 declared \"perhaps the 20th century's best chronicler of English culture.\"\n\n His non-fiction cultural and political criticism constitutes the majority of his work, but Orwell also wrote in several genres of fictional literature.",
+    "Nelson DeMille\nNelson Richard DeMille (born August 23, 1943) is an American author of action adventure and suspense novels.\n\n His novels include \"Plum Island\", \"The Charm School\", and \"The Gold Coast\".\n\n DeMille has also written under the pen names Jack Cannon, Kurt Ladner, Ellen Kay and Brad Matthews.",
+    "The Lion's Game\nThe Lion's Game is a 2000 novel by American author Nelson DeMille.\n\n It is the second of DeMille's novels to feature the detective John Corey, now working as a contractor for the fictional FBI Anti-Terrorist Task Force in New York City.\n\n The 2000 novel The Lion’s Game is the sequel to Plum Island and is followed by the 2004 book Night Fall.\n\n The book also briefly mentions events from other DeMille novels like \"The Charm School\" and \"The Gold Coast\", that aren't strictly part of the Corey-universe.",
+    "The Lion (2010 novel)\nThe Lion is a 2010 novel by American author Nelson DeMille.\n\n It is the fifth of DeMille's novels to feature Detective John Corey, now working as a contractor for the fictional FBI Anti-Terrorist Task Force in New York City.\n\n The novel is the sequel to \"Wild Fire\".\n\n The Lion is followed by DeMille’s 2012 novel, \"The Panther\".",
+    "George Orwell\nEric Arthur Blair (25 June 1903 – 21 January 1950), better known by his pen name George Orwell, was an English novelist, essayist, journalist, and critic.\n\n His work is marked by lucid prose, awareness of social injustice, opposition to totalitarianism, and outspoken support of democratic socialism.",
+    "Wild Fire (novel)\nWild Fire is a 2006 novel by American author, Nelson DeMille.\n\n It is the fourth of DeMille's novels to feature Detective John Corey, now working as a contractor for the fictional FBI Anti-Terrorist Task Force in New York City.\n\n The novel is the sequel to Night Fall and takes place approximately one year later.\n\n Wild Fire is followed by DeMille’s 2010 novel, The Lion.",
+    "Stephen R. Donaldson\nStephen Reeder Donaldson (born May 13, 1947) is an American fantasy, science fiction and mystery novelist, most famous for \"The Chronicles of Thomas Covenant\", his ten-novel fantasy series.\n\n His work is characterized by psychological complexity, conceptual abstractness, moral bleakness, and the use of an arcane vocabulary, and has attracted critical praise for its \"imagination, vivid characterizations, and fast pace\".\n\n He earned his bachelor's degree from The College of Wooster and a Master's degree from Kent State University.\n\n He currently resides in New Mexico.",
+    "Lionel Snell\nRamsey Dukes is the current and most well-known pen name of Lionel Snell, a contemporary English magician, publisher and author on magic and philosophy.\n\n He has also under the pen names Lemuel Johnston.\n\n Angerford and Lea, Adamai Philotunus and Per Anum Ad Astra.\n\n His regular satirical column \"The Satanist's Diary\" was published in the magazine \"Aquarian Arrow\" during the 1980s and early 1990s under the pen name The Hon Hugo C StJ l'Estrange and included a multitude of other pen names as contributors."
+   ]
+  },
+  {
+   "id": "c3685a59366adaf8",
+   "gold": [
+    {
+     "sentence": "The Livesey Hall War Memorial commemorates the fallen of World War I and World War II who had been employed by the South Suburban Gas Company of London.",
+     "facts": {
+      "0.0": "The Livesey Hall War Memorial commemorates the fallen of World War I.",
+      "0.1": "The Livesey Hall War Memorial commemorates the fallen of World War II.",
+      "0.2": "The commemorated fallen had been employed by the South Suburban Gas Company of London."
+     }
+    },
+    {
+     "sentence": " Over 60 million people were killed, which was about 3% of the 1940 world population (est. 2.3 billion).",
+     "facts": {
+      "1.0": "Over 60 million people were killed.",
+      "1.1": "The deaths were about 3% of the 1940 world population.",
+      "1.2": "The estimated 1940 world population was 2.3 billion."
+     }
+    }
+   ],
+   "items": [
+    "Livesey Hall War Memorial\nThe Livesey Hall War Memorial commemorates the fallen of World War I and World War II who had been employed by the South Suburban Gas Company of London.\n\n It is also a tribute to those employees who served in the wars.\n\n The monument was designed and executed by British sculptor Sydney March, of the March family of artists.",
+    "Vietnam War Memorial, Hanoi\nThe War Memorial in Hanoi is located across the Ba Dinh Square, across the Ho Chi Minh Mausoleum and close to Hanoi Citadel.\n\n Constructed in 1993 in a fusion of traditional Vietnamese and modernist architecture, the memorial commemorates men and women who sacrificed themselves during the Second Indochina War.\n\n The war is known by many names, e.g. as the American War in Vietnam.\n\n The memorial is a focal point for state functions, commemorating the war dead.",
+    "Wood Green War Memorial\nThe Wood Green War Memorial is located on the High Road, Wood Green, in the London Borough of Haringey.\n\n It was erected in 1920 and paid for by public subscription of the people of Wood Green to remember the men of the area who died during the First World War.\n\n It was subsequently adapted to include the dead of the Second World War.\n\n It is grade II listed with Historic England.",
+    "Rainham War Memorial\nThe Rainham War Memorial commemorates soldiers killed in both World Wars as well as civilian casualties of World War II.",
+    "Alamein Memorial\nThe Alamein Memorial is a Commonwealth War Graves Commission war memorial in the El Alamein War Cemetery, El Alamein, Egypt.\n\n The memorial commemorates 11,866 Commonwealth forces members who died during World War II.\n\n The memorial was designed by Hubert Worthington and unveiled by Viscount Montgomery of Alamein on 24 October 1954.",
+    "World War II casualties\nWorld War II was the deadliest military conflict in history in absolute terms of total casualties.\n\n Over 60 million people were killed, which was about 3% of the 1940 world population (est. 2.3 billion).\n\n The tables below give a detailed country-by-country count of human losses.\n\n World War II fatality statistics vary, with estimates of total deaths ranging from 50 million to more than 80 million.\n\n The higher figure of over 80 million includes deaths from war-related disease and famine.\n\n Civilians killed totalled 50 to 55 million, including 19 to 28 million from war-related disease and famine.\n\n Military deaths from all causes totalled 21 to 25 million, including deaths in captivity of about 5 million prisoners of war.",
+    "Portsmouth Naval Memorial\nThe Portsmouth Naval Memorial, sometimes known as Southsea Naval Memorial, is a war memorial in Portsmouth, Hampshire, England, on Southsea Common beside Clarence Esplanade, between Clarence Pier and Southsea Castle.\n\n The memorial commemorates approximately 25,000 British and Commonwealth sailors who were lost in the World Wars, around 10,000 sailors in the First World War and 15,000 in the Second World War.\n\n The memorial features a central obelisk, with names of the dead on bronze plaques arranged around the memorial according to the year of death.",
+    "Tower Hill Memorial\nThe Tower Hill Memorial is a Commonwealth War Graves Commission war memorial on the south side of Trinity Square Gardens, in London, England.\n\n The memorial commemorates those from the Merchant Navy and fishing fleets who died during both world wars and have \"no grave but the sea\".\n\n The memorial was designed by Edwin Lutyens with sculpture work by William Reid Dick, the Second World War extension was designed by Edward Maufe with sculpture work by Charles Wheeler.",
+    "Freetown Memorial\nThe Freetown Memorial is a Commonwealth War Graves Commission war memorial located outside the Secretariate Building in Freetown, Sierra Leone.\n\n The memorial generally commemorates Soldiers from Sierra Leone who died whilst serving with the Royal West African Frontier Force in West Africa and whose graves are not known.\n\n The Freetown Memorial commemorates 1,109 First World War casualties and 247 from the Second World War.",
+    "Arras Flying Services Memorial\nThe Arras Flying Services Memorial Commonwealth War Graves Commission war memorial in the Faubourg d'Amiens Cemetery, Arras, France.\n\n The memorial commemorates nearly 1,000 airmen from forces of the Commonwealth who were killed on the Western Front during World War I and who have no known grave.\n\n The memorial was designed by Edwin Lutyens, sculpted by William Reid Dick and unveiled by Hugh Trenchard, 1st Viscount Trenchard, Marshal of the Royal Air Force on 31 July 1932."
+   ]
+  },
+  {
+   "id": "6141aa021f97724e",
+   "gold": [
+    {
+     "sentence": " This episode represents a milestone in the history of the series as Snowball II is killed off, which, excluding the death of Homer's mother in season 19's \"Mona Leaves-a\", is to date the closest thing to an actual Simpson family member actually being killed off.",
+     "facts": {
+      "0.0": "This episode is a milestone in the history of the series.",
+      "0.1": "In this episode, Snowball II is killed off.",
+      "0.2": "Homer's mother died in season 19's Mona Leaves-a.",
+      "0.3": "Excluding the death of Homer's mother, the killing of Snowball II is to date the closest thing to an actual Simpson family member being killed off."
+     }
+    },
+    {
+     "sentence": "Mona Penelope Simpson (née Olsen) is a recurring fictional character in the animated television series \"The Simpsons\".",
+     "facts": {
+      "1.0": "Mona Penelope Simpson's maiden name is Olsen.",
+      "1.1": "Mona Penelope Simpson is a recurring fictional character.",
+      "1.2": "Mona Penelope Simpson is a character in the animated television series The Simpsons."
+     }
+    }
+   ],
+   "items": [
+    "Moe Szyslak\nMorris \"Moe\" Szyslak is a fictional character from the American animated television series \"The Simpsons\".\n\n He is voiced by Hank Azaria and first appeared in the series premiere episode \"Simpsons Roasting on an Open Fire\".\n\n Moe is the proprietor and bartender of Moe's Tavern, a Springfield bar frequented by Homer Simpson, Barney Gumble, Carl Carlson, Lenny Leonard, Sam, Larry, and others.",
+    "Mona Simpson (The Simpsons)\nMona Penelope Simpson (née Olsen) is a recurring fictional character in the animated television series \"The Simpsons\".\n\n She has been voiced by several actresses, including Maggie Roswell, Tress MacNeille, Pamela Hayden, and most prominently, Glenn Close.\n\n Glenn Close's performances as Mona have been well received by critics and she was named one of the top 25 guest stars on the show by IGN.",
+    "Moho House\n\"Moho House\" is the twenty first episode of the twenty-eighth season of the animated television series \"The Simpsons\", and the 617th episode of the series overall.\n\n It aired in the United States on Fox on May 7, 2017.",
+    "My Mother the Carjacker\n\"My Mother the Carjacker\" is the second episode of \"The Simpsons\"<nowiki>'</nowiki> fifteenth season.\n\n It first aired on the Fox network in the United States on November 9, 2003.\n\n Homer receives a cryptic message in the newspaper informing him to come to a certain place at midnight, and soon discovers that the person who wrote the message is his mother, Mona Simpson.\n\n It was written by Michael Price and directed by Nancy Kruse.\n\n Glenn Close makes her second of six guest spots as Homer's mother.\n\n It has a direct link from the season seven episode, \"Mother Simpson\".\n\n It was nominated for a Writers Guild of America Award in 2004.\n\n In its original run, the episode received 12.4 million viewers.",
+    "Girly Edition\n\"Girly Edition\" is the twenty-first episode in the ninth season of the American animated television series \"The Simpsons\".\n\n It originally aired on the Fox network in the United States on April 19, 1998.\n\n In the episode, Lisa and Bart Simpson must co-anchor a new news program, though when Bart is seen as a more successful news anchor, Lisa becomes jealous and seeks revenge.\n\n Meanwhile, in the subplot, Homer Simpson gets a monkey helper because of his laziness.\n\n \"Girly Edition\" was the first episode written by Larry Doyle and was directed by Mark Kirkland.\n\n Much of the subplot was inspired by the film \"Monkey Shines\".\n\n Critics gave the episode positive reviews and it was well received by Lisa's voice actress Yeardley Smith.",
+    "Mona Leaves-a\n\"Mona Leaves-a\" is the nineteenth episode of \"The Simpsons\"<nowiki>'</nowiki> nineteenth season.\n\n It originally aired on the Fox network in the United States on May 11, 2008.\n\n The episode features the death of Homer's mother, Mona Simpson.\n\n Homer is reunited with his mother, Mona, but is not willing to forgive her for all the times she left him as a child.\n\n When she dies, a guilt-ridden Homer attempts to make it up to her by fulfilling her final wishes.\n\n It was written by Joel H. Cohen and directed by Mike B. Anderson and Ralph Sosa.\n\n Glenn Close makes her third appearance as Mona Simpson, and Lance Armstrong has a cameo as himself.",
+    "The Squirt and the Whale\n\"The Squirt and the Whale\" is the nineteenth episode of \"The Simpsons\" twenty-first season.\n\n The 460th episode of the series overall, it originally aired on the Fox network in the United States on April 25, 2010.\n\n In the episode, the Simpson family attempt to save a beached whale that washed up onshore, only for it to die.",
+    "Homer Simpson, This Is Your Wife\n\"Homer Simpson, This Is Your Wife\" is the fifteenth episode of the seventeenth season of the American animated television sitcom \"The Simpsons\".\n\n It originally aired on the Fox network in the United States on March 26, 2006, and was watched by around ten million people during that broadcast.\n\n In the episode, Homer signs the Simpson family up for a reality show in which the mothers of two families switch places.\n\n Marge gets to live with a friendly man named Charles and his perfect son, while Homer, Bart, and Lisa must spend time with Charles' strict wife Verity.",
+    "Lisa the Drama Queen\n\"Lisa the Drama Queen\" is the ninth episode of the twentieth season of \"The Simpsons\".\n\n It originally aired on the Fox network in the United States on January 25, 2009 and guest starred Emily Blunt as Juliet.\n\n A special version of the end credits theme was performed by Fall Out Boy, although they do not guest star in the actual episode.\n\n This was the last episode in the series to be presented only in standard definition, the first regular episode to begin right after the opening credits without a commercial break, with an episode now having four segments, and the last episode to use the original opening sequence starting from Season 2.\n\n Brian Kelley returns as a writer after five seasons of being absent from the show.\n\n The episode is very loosely based on the 1994 film \"Heavenly Creatures\".",
+    "I, (Annoyed Grunt)-bot\n\"I, (Annoyed Grunt)-Bot\", also known as \"\"I, D'oh-Bot\"\", is the ninth episode of \"The Simpsons\"<nowiki>'</nowiki> fifteenth season.\n\n It originally aired on the Fox network in the United States on January 11, 2004.\n\n This episode represents a milestone in the history of the series as Snowball II is killed off, which, excluding the death of Homer's mother in season 19's \"Mona Leaves-a\", is to date the closest thing to an actual Simpson family member actually being killed off."
+   ]
+  },
+  {
+   "id": "55fab257da1f90d5",
+   "gold": [
+    {
+     "sentence": "Doris May Lessing, CH (\"née\" Tayler; 22 October 1919  – 17 November 2013) was a British novelist, poet, playwright, librettist, biographer and short story writer.",
+     "facts": {
+      "0.0": "Doris May Lessing, CH, was born Doris May Tayler (née Tayler).",
+      "0.1": "Doris May Lessing was born on 22 October 1919.",
+      "0.2": "Doris May Lessing died on 17 November 2013.",
+      "0.3": "Doris May Lessing was a British novelist.",
+      "0.4": "Doris May Lessing was a British poet.",
+      "0.5": "Doris May Lessing was a British playwright.",
+      "0.6": "Doris May Lessing was a British librettist.",
+      "0.7": "Doris May Lessing was a British biographer.",
+      "0.8": "Doris May Lessing was a British short story writer."
+     }
+    },
+    {
+     "sentence": "Philip Kindred Dick (December 16, 1928 – March 2, 1982) was an American writer notable for publishing works of science fiction.",
+     "facts": {
+      "1.0": "Philip Kindred Dick was born on December 16, 1928.",
+      "1.1": "Philip Kindred Dick died on March 2, 1982.",
+      "1.2": "Philip Kindred Dick was an American writer.",
+      "1.3": "Philip Kindred Dick is notable for publishing works of science fiction."
+     }
+    }
+   ],
+   "items": [
+    "Stephen R. Donaldson\nStephen Reeder Donaldson (born May 13, 1947) is an American fantasy, science fiction and mystery novelist, most famous for \"The Chronicles of Thomas Covenant\", his ten-novel fantasy series.\n\n His work is characterized by psychological complexity, conceptual abstractness, moral bleakness, and the use of an arcane vocabulary, and has attracted critical praise for its \"imagination, vivid characterizations, and fast pace\".\n\n He earned his bachelor's degree from The College of Wooster and a Master's degree from Kent State University.\n\n He currently resides in New Mexico.",
+    "Doris Lessing\nDoris May Lessing, CH (\"née\" Tayler; 22 October 1919  – 17 November 2013) was a British novelist, poet, playwright, librettist, biographer and short story writer.\n\n Her novels include \"The Grass Is Singing\" (1950), the sequence of five novels collectively called \"Children of Violence\" (1952–69), \"The Golden Notebook\" (1962), \"The Good Terrorist\" (1985), and five novels collectively known as \"Canopus in Argos: Archives\" (1979–1983).",
+    "Philip K. Dick Award\nThe Philip K. Dick Award is a science fiction award given annually at Norwescon sponsored by the Philadelphia Science Fiction Society and (since 2005) supported by the Philip K. Dick Trust, and named after science fiction and fantasy writer Philip K. Dick.\n\n It has been awarded since 1983, the year after Dick's death.\n\n Works that have received the award are identified on their covers as \"Best Original SF Paperback\".\n\n They are awarded to the best original paperback published each year in the US.",
+    "The Good Terrorist\nThe Good Terrorist is a 1985 political novel written by the British novelist Doris Lessing.\n\n It was first published in September that year by Jonathan Cape in the United Kingdom and by Alfred A. Knopf in the United States.\n\n The book's protagonist is the naïve drifter Alice, who squats with a group of radicals in London and is drawn into their terrorist activities.",
+    "Jenny Diski\nJenny Diski FRSL (née Simmonds; 8 July 1947 – 28 April 2016) was an English writer.\n\n She had a troubled childhood, but was rescued by the older novelist Doris Lessing; she lived in Lessing's house for four years.\n\n Diski was educated at University College London, and worked as a teacher during the 1970s and early 1980s.",
+    "The Father-Thing (collection)\nThe Father-Thing is a collection of science fiction stories by American writer Philip K. Dick.\n\n It was first published by Gollancz in 1989 and reprints Volume III of \"The Collected Stories of Philip K. Dick\".\n\n It had not previously been published as a stand-alone volume.\n\n Many of the stories had originally appeared in the magazines \"If\", \"Science Fiction Adventures\", \"Science Fiction Stories\", \"Orbit\", \"Fantasy and Science Fiction\", \"Imagination\", \"Future\", \"Galaxy Science Fiction\", \"Beyond Fantasy Fiction\", \"Satellite\", \"Science Fiction Quarterly\" and \"Imaginative Tales\".",
+    "Adjustment Team\n\"Adjustment Team\" is a science fiction short story by American writer Philip K. Dick.\n\n It was first published in \"Orbit Science Fiction\" (September–October 1954, No. 4) with illustration by Faragasso.\n\n It was later reprinted in \"The Sands of Mars and Other Stories\" (Australian) in 1958, \"The Book of Philip K. Dick\" in 1973, \"The Turning Wheel and Other Stories\" (United Kingdom) in 1977, \"The Collected Stories of Philip K. Dick\" in 1987 (Underwood–Miller), 1988 (Gollancz, United Kingdom), 1990 (Citadel Twilight, United States), \"Selected Stories of Philip K. Dick\" in 2002 and in \"The Early Work of Philip K. Dick, Volume One: The Variable Man & Other Stories\" in 2009.",
+    "Philip K. Dick\nPhilip Kindred Dick (December 16, 1928 – March 2, 1982) was an American writer notable for publishing works of science fiction.",
+    "The Days of Perky Pat (collection)\nThe Days of Perky Pat is a collection of science fiction stories by American writer Philip K. Dick.\n\n It was first published by Gollancz in 1990 and reprints Volume IV of \"The Collected Stories of Philip K. Dick\".\n\n It had not previously been published as a stand-alone volume.\n\n The stories had originally appeared in the magazines \"Galaxy Science Fiction\", \"Science Fiction Stories\", \"If\", \"Fantastic Universe\", \"Fantasy and Science Fiction\", \"Fantastic\", \"Worlds of Tomorrow\", \"Escapade\" and \"Amazing Stories\".",
+    "The Philip K. Dick Reader\nThe Philip K. Dick Reader is a collection of science fiction stories by American writer Philip K. Dick.\n\n It was first published by Citadel Twilight in 1997.\n\n Many of the stories had originally appeared in the magazines \"If\", \"Science Fiction Adventures\", \"Science Fiction Stories\", \"Orbit\", \"Fantasy and Science Fiction\", \"Imagination\", \"Future\", \"Galaxy Science Fiction\", \"Beyond Fantasy Fiction\", \"Satellite\", \"Imaginative Tales\", \"Fantastic Universe\" and \"Space Science Fiction\".\n\n It is identical in content and order to the edition of volume 3 of the Collected Stories of Philip K. Dick produced by the same publisher apart from the substitution of three stories in positions 21-23 of 24 and the omission of the end notes in the Collected Stories edition.\n\n At press time, stories 21 and 24 had already been made into successful movie adaptations and stories 22 and 23 had been optioned."
+   ]
+  },
+  {
+   "id": "f56adf533f17e35a",
+   "gold": [
+    {
+     "sentence": "Pinocchio is a 1940 American animated musical fantasy film produced by Walt Disney Productions and based on the Italian children's novel \"The Adventures of Pinocchio\" by Carlo Collodi.",
+     "facts": {
+      "0.0": "Pinocchio is a 1940 American film.",
+      "0.1": "Pinocchio is an animated musical fantasy film.",
+      "0.2": "Pinocchio was produced by Walt Disney Productions.",
+      "0.3": "Pinocchio is based on the Italian children's novel 'The Adventures of Pinocchio'.",
+      "0.4": "The novel 'The Adventures of Pinocchio' was written by Carlo Collodi."
+     }
+    },
+    {
+     "sentence": " It was the second animated feature film produced by Disney, made after the success of \"Snow White and the Seven Dwarfs\" (1937).",
+     "facts": {
+      "1.0": "Pinocchio was the second animated feature film produced by Disney.",
+      "1.1": "Pinocchio was made after the success of 'Snow White and the Seven Dwarfs'.",
+      "1.2": "Snow White and the Seven Dwarfs is from 1937."
+     }
+    },
+    {
+     "sentence": "Home on the Range is a 2004 American animated musical western comedy film produced by Walt Disney Feature Animation and released by Walt Disney Pictures.",
+     "facts": {
+      "2.0": "Home on the Range is a 2004 American film.",
+      "2.1": "Home on the Range is an animated musical western comedy film.",
+      "2.2": "Home on the Range was produced by Walt Disney Feature Animation.",
+      "2.3": "Home on the Range was released by Walt Disney Pictures."
+     }
+    }
+   ],
+   "items": [
+    "Return to Never Land\nReturn to Never Land (also known as Peter Pan 2 or Peter Pan In: Return to Never Land) is a 2002 American animated musical fantasy-adventure film produced by Walt Disney Television Animation, and released by Walt Disney Pictures and distributed by Walt Disney Studios Motion Pictures.\n\n The film is a sequel to Walt Disney Feature Animation 1953 film \"Peter Pan\", It is based on J. M. Barrie's novel \"Peter and Wendy\", and had a worldwide gross of $109 million.",
+    "Pinocchio (1957 TV-musical)\nPinocchio, a 1957 television production of \"Pinocchio\", is a live (and live-action) musical version starring Mickey Rooney in the title role of the puppet who wishes to become a real boy.\n\n Based on the novel by Carlo Collodi which also inspired the classic Walt Disney animated film, this version featured a now-forgotten new score by Alec Wilder and William Engvick.\n\n It was telecast once on NBC as a television special, and, as far as is known, never rebroadcast by NBC, or even restaged with a different cast as was Rodgers and Hammerstein's \"Cinderella\".\n\n Nor has it ever been issued on VHS or DVD.\n\n Other notable actors who appeared in the special included Walter Slezak (as Geppetto), Fran Allison (as the Blue Fairy), Martyn Green (as the Fox), Jerry Colonna (as a Ringmaster), and Stubby Kaye as a Town Crier, a role he repeated in Wilder and Engvick's 1958 television musical, \"Hansel and Gretel\".\n\n \"Pinocchio\" was directed by noted Broadway choreographer Hanya Holm.",
+    "Bambi\nBambi is a 1942 American animated film directed by David Hand (supervising a team of sequence directors), produced by Walt Disney and based on the book \"Bambi, a Life in the Woods\" by Austrian author Felix Salten.\n\n The film was released by RKO Radio Pictures on August 13, 1942, and is the fifth Disney animated feature film.",
+    "Graph query row:\nfirst_work: Pinocchio\nfirst_kind: film\nfirst_published_on: 1940\nsecond_work: Home on the Range\nsecond_kind: film\nsecond_published_on: 2004\nchronological_order: Pinocchio before Home on the Range\nconnection_types: None\nconnected_entities: None",
+    "The Rescuers Down Under\nThe Rescuers Down Under is a 1990 American animated comedy-drama adventure film produced by Walt Disney Feature Animation and released by Walt Disney Pictures on November 16, 1990.\n\n The 29th Disney animated feature film, the film is the sequel to the 1977 animated film \"The Rescuers\", which was based on the novels of Margery Sharp.\n\n Set in the Australian Outback, the film centers on Bernard and Bianca traveling to Australia to save a boy named Cody from a villainous poacher in pursuit of an endangered bird of prey.",
+    "Mickey's Christmas Carol\nMickey's Christmas Carol is a 1983 American animated featurette produced by Walt Disney Productions and released by Buena Vista Distribution.\n\n It was directed and produced by Burny Mattinson.\n\n The cartoon is an adaptation of Charles Dickens' \"A Christmas Carol\", starring Scrooge McDuck as Ebenezer Scrooge.\n\n Many other Disney characters, primarily from the Mickey Mouse universe, \"Robin Hood\", and \"The Adventures of Ichabod and Mr. Toad\", were cast throughout the film.",
+    "Pinocchio (1940 film)\nPinocchio is a 1940 American animated musical fantasy film produced by Walt Disney Productions and based on the Italian children's novel \"The Adventures of Pinocchio\" by Carlo Collodi.\n\n It was the second animated feature film produced by Disney, made after the success of \"Snow White and the Seven Dwarfs\" (1937).",
+    "Home on the Range (2004 film)\nHome on the Range is a 2004 American animated musical western comedy film produced by Walt Disney Feature Animation and released by Walt Disney Pictures.\n\n The 45th Disney animated feature film, it was the last 2D animated Disney film released until \"The Princess and the Frog\" in 2009.\n\n Named after the popular country song of the same name, \"Home on the Range\" features the voices of Roseanne Barr, Judi Dench, Jennifer Tilly, Cuba Gooding Jr., Randy Quaid, and Steve Buscemi.\n\n The film is set in the Old West, and centers on a mismatched trio of dairy cows—brash, adventurous Maggie; prim, proper Mrs. Caloway; and ditzy, happy-go-lucky Grace.\n\n The three cows must capture an infamous cattle rustler named Alameda Slim for his bounty in order to save their idyllic farm from foreclosure.\n\n Aiding them in their quest is Lucky Jack, a feisty, peg-legged rabbit, but a selfish horse named Buck, eagerly working in the service of Rico, a famous bounty hunter, seeks the glory for himself.",
+    "Get a Horse!\nGet a Horse!\n\n is a 2013 American 3D animated slapstick comedy short film, produced by Walt Disney Animation Studios.\n\n Combining black-and-white hand-drawn animation and color CGI animation, the short features the characters of the late 1920s \"Mickey Mouse\" cartoons, and features archival recordings of Walt Disney in his posthumous role as Mickey Mouse.\n\n It is the first original Mickey Mouse theatrical animated short since \"Runaway Brain\" (1995), and the first appearance of Oswald the Lucky Rabbit in a Disney animated production in 85 years.",
+    "Off His Rockers\nOff His Rockers is an animated short film produced by Walt Disney Feature Animation and released in 1992.\n\n It was released theatrically accompanying the film \"Honey, I Blew Up the Kid\".\n\n The film started as a side project of director Barry Cook, who, at the time, was working at Walt Disney Feature Animation Florida.\n\n Starting with a core of six people, the project ended up involving most of the Florida studio's staff of 73 (and some in California), all of whom \"donated\" their time to the project beyond their official duties."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+[
+ {
+  "id": "multihop-rag-503",
+  "sentences": [
+   ["The full model, Gemini Ultra, was not released.", "Only a “lite” version called Gemini Pro was released."],
+   ["Google’s public documentation says Google uses three categories to rank results that are local to a searcher.", "The three categories are relevance, distance, and prominence."],
+   ["The case was filed by Arkansas-based publisher Helena World Chronicle.", "The case argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."]
+  ]
+ },
+ {
+  "id": "multihop-rag-508",
+  "sentences": [
+   ["Wang testified that Wang heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account.", "The condition was that the amount withdrawn was less than FTX’s total trading revenue."],
+   ["Bankman-Fried used Caroline Ellison as a front.", "Caroline Ellison was Bankman-Fried’s on-again off-again girlfriend.", "Caroline Ellison was the CEO of Alameda.", "The government claimed Bankman-Fried had “secret access” to customer money, both cash and crypto."],
+   ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.", "The defense argued that the FTX founder acted in good faith.", "The defense argued that the FTX founder never meant to commit fraud or steal.", "The defense argued that the FTX founder basically got in over his head."]
+  ]
+ },
+ {
+  "id": "multihop-rag-513",
+  "sentences": [
+   ["SBF is the known name of the person who has pleaded not guilty to some seven charges of fraud and conspiracy.", "SBF has pleaded not guilty to some seven charges of fraud and conspiracy."],
+   ["FTX had grown so much.", "Because FTX had grown so much, SBF could no longer run both companies.", "SBF said he could no longer run both companies because FTX had grown so much."],
+   ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.", "The defense argued that the FTX founder acted in good faith.", "The defense argued that the FTX founder never meant to commit fraud or steal.", "The defense argued that the FTX founder basically got in over his head."]
+  ]
+ },
+ {
+  "id": "multihop-rag-574",
+  "sentences": [
+   ["Erik ten Hag is a top coach from Ajax.", "A top blueprint is needed not only for now but for the next five years.", "Work should be done towards that top blueprint.", "On that journey there are sometimes hard moments when the right results are not achieved.", "Sometimes the right results are not achieved even when the right things are being done."],
+   ["Manchester United are out of Europe altogether.", "Manchester United gave a limp display against Bayern at Old Trafford.", "Kingsley Coman sealed a 1-0 win at Old Trafford for Thomas Tuchel’s side."]
+  ]
+ },
+ {
+  "id": "multihop-rag-595",
+  "sentences": [
+   ["Wang testified that Wang heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account.", "The condition was that the amount withdrawn was less than FTX’s total trading revenue."],
+   ["Before his fall, Bankman-Fried presented himself as the Good Boy of crypto.", "Bankman-Fried presented himself as the trustworthy face of a sometimes-shady industry."],
+   ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.", "The defense argued that the FTX founder acted in good faith.", "The defense argued that the FTX founder never meant to commit fraud or steal.", "The defense argued that the FTX founder basically got in over his head."]
+  ]
+ },
+ {
+  "id": "multihop-rag-623",
+  "sentences": [
+   ["Changpeng Zhao is the CEO of Binance.", "Changpeng Zhao announced on Twitter that Changpeng Zhao intended to acquire FTX.", "Ellison confessed the theft of customer funds to Changpeng Zhao and a few other employees after Changpeng Zhao made that announcement.", "Drappi said that Ellison confessed the theft of customer funds to Changpeng Zhao and a few other employees."],
+   ["Ellison was CEO of Alameda Research.", "Ellison’s tenure as CEO of Alameda Research was an exercise in optics.", "Ellison testified that her tenure as CEO of Alameda Research was an exercise in optics."],
+   ["Drappi specifically pointed the finger at Ellison.", "Ellison is the former CEO of Alameda.", "Drappi said Ellison did not adequately protect her hedge fund from the inherent risk of the crypto markets."]
+  ]
+ },
+ {
+  "id": "multihop-rag-662",
+  "sentences": [
+   ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.", "The defense argued that the FTX founder acted in good faith.", "The defense argued that the FTX founder never meant to commit fraud or steal.", "The defense argued that the FTX founder basically got in over his head."],
+   ["Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance.", "Bankman-Fried did not admit being told about that money until Judge Lewis Kaplan intervened.", "Bankman-Fried admitted he had been told about that money, in words or in substance."]
+  ]
+ },
+ {
+  "id": "multihop-rag-674",
+  "sentences": [
+   ["Swift was seen enthusiastically cheering on an athlete in the box seats at Arrowhead Stadium.", "The sighting came before the post.", "The sighting fuelled speculation that Swift and the athlete are dating."],
+   ["Swifties were immediately on high alert.", "Some Swifties captured Swift and Kelce leaving the stadium together."]
+  ]
+ },
+ {
+  "id": "multihop-rag-677",
+  "sentences": [
+   ["This will probably come up later in the trial.", "Epic chose to focus more on simply painting Google as the bad guy on day one."],
+   ["Epic will attempt to argue that Google restrains competition within two separate markets.", "The two markets are the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."],
+   ["The case was filed by Arkansas-based publisher Helena World Chronicle.", "The case argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."]
+  ]
+ },
+ {
+  "id": "multihop-rag-723",
+  "sentences": [
+   ["The victory has the Swans challenging for a top-eight spot.", "The Swans are challenging for a top-eight spot alongside Gold Coast, Geelong, Collingwood, St Kilda and Carlton."],
+   ["Only 0.4 of a percentage point separates Sydney in ninth from St Kilda in eighth.", "The win assured the Swans of retaking eighth spot."],
+   ["The speaker said her team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids.", "The speaker said the team has had a local focus in promoting its games."]
+  ]
+ }
+]

@@ -1,0 +1,37 @@
+[
+  {"id": "c6df136f4a7a8fb4", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "7194b1d1c7447529", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "anticompetitive by making deals with Apple and others. The DOJ doubled down on this"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "the deal between Google and Apple"}]},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 9, "quote": "by making deals with Apple and others"}]},
+    {"fact": "0.5", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "63dfc4f45cc2662d", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Fed’s main interest rate, which is above 5.25 per cent and at its highest level since 2001."}]},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "The Fed put such pressure on the economy intentionally, hoping to starve inflation of its fuel."}, {"item": 1, "quote": "Higher rates and yields slow the economy, hurt prices for investments"}]}
+  ]}
+]

@@ -1,0 +1,45 @@
+[
+{"id": "8582aa7dfb95119e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+{"fact": "0.1", "status": "contradicted", "evidence": [{"item": 7, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}, {"item": 8, "quote": "Uber reported net income of $221 million in the third quarter, or 10 cents per share"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]}
+]},
+{"id": "354481026c464aad", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "COWBOYS: Dallas' defense lost top cornerback Trevon Diggs and they're still red hot."}]}
+]},
+{"id": "1035c65e8b2691ab", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "This finally brings us to the fated sighting of Swift at Arrowhead Stadium"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "fated sighting of Swift at Arrowhead Stadium on Monday"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "she’s focused on being there for her partner. She specified that she isn’t trying to hide her relationship from the public eye."}]}
+]},
+{"id": "d17f9764bff3afa1", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "As such, they’re never going to replace the need for reducing emissions of CO 2 and other greenhouse gases."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "As such, they’re never going to replace the need for reducing emissions of CO 2 and other greenhouse gases."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "He stopped flying, became a vegetarian and ditched gasoline-powered cars (he drives a Tesla), cutting his personal emissions by about 90%, according to his math."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "He stopped flying, became a vegetarian and ditched gasoline-powered cars (he drives a Tesla), cutting his personal emissions by about 90%, according to his math."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "He stopped flying, became a vegetarian and ditched gasoline-powered cars (he drives a Tesla), cutting his personal emissions by about 90%, according to his math."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "He stopped flying, became a vegetarian and ditched gasoline-powered cars (he drives a Tesla), cutting his personal emissions by about 90%, according to his math."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 2, "quote": "He stopped flying, became a vegetarian and ditched gasoline-powered cars (he drives a Tesla), cutting his personal emissions by about 90%, according to his math."}]}
+]},
+{"id": "989ff0c0bf481c0d", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]}
+]

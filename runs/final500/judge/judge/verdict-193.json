@@ -1,0 +1,420 @@
+[
+ {
+  "id": "20e4bad9e2e4e70f",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Google will counter this as well"
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "saying it has provided the court with thousands of chat logs and millions of documents"
+     }
+    ]
+   },
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "saying it has provided the court with thousands of chat logs and millions of documents"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "65f00963ccaecbc3",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.1",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "04d0e688b853121a",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Even with those tools, some of the businesses selling on Amazon might still choose to set prices that aren’t competitive,” Zapolsky said."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "That means eBay will give you an eBay coupon for the difference in price between what you bought the item for and what the competitor is selling it for"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "plus an additional 10 percent of that price difference."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "211419441435334c",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "His 31-yard field goal is good, and the Buffs take the first lead of the game on their first drive."
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "His 31-yard field goal is good, and the Buffs take the first lead of the game on their first drive."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "9b24771599f3c8d8",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front"
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."
+     }
+    ]
+   },
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."
+     }
+    ]
+   },
+   {
+    "fact": "2.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.5",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.6",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "1b7b7e590aeaf6bc",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers"
+     },
+     {
+      "item": 6,
+      "quote": "The promo codes on this page are for new customers only."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers"
+     },
+     {
+      "item": 6,
+      "quote": "The promo codes on this page are for new customers only."
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers"
+     },
+     {
+      "item": 6,
+      "quote": "The promo codes on this page are for new customers only."
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers"
+     },
+     {
+      "item": 6,
+      "quote": "The promo codes on this page are for new customers only."
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers"
+     },
+     {
+      "item": 6,
+      "quote": "The promo codes on this page are for new customers only."
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers"
+     },
+     {
+      "item": 6,
+      "quote": "The promo codes on this page are for new customers only."
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers"
+     },
+     {
+      "item": 6,
+      "quote": "The promo codes on this page are for new customers only."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Collect your welcome bonus: As a new customer, you’ll receive a welcome bonus."
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Collect your welcome bonus: As a new customer, you’ll receive a welcome bonus."
+     }
+    ]
+   }
+  ]
+ }
+]

@@ -1,0 +1,65 @@
+[
+{"id": "3d3bfd4a924c9667", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "She’s got the Eras Tour booked all through next year, and she’d rather die than cancel a show."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "She’s got the Eras Tour booked all through next year, and she’d rather die than cancel a show."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "contradicted", "evidence": [{"item": 9, "quote": "including Sunday's game agains the Chargers"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 4, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 4, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]}
+]},
+{"id": "aa7c96ddfb78ecd5", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Another factor that can affect the spread odds is the occurrence of unexpected events, such as injuries to key players"}]},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "c3230ec1e823e874", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Johnny Cardoso had to pull out of the September camp due to an ankle injury, but he has returned to action with Brazilian club Internacional, indicating a return to fitness, and has been included on the squad."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Johnny Cardoso had to pull out of the September camp due to an ankle injury, but he has returned to action with Brazilian club Internacional, indicating a return to fitness, and has been included on the squad."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Johnny Cardoso had to pull out of the September camp due to an ankle injury, but he has returned to action with Brazilian club Internacional, indicating a return to fitness, and has been included on the squad."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "Johnny Cardoso had to pull out of the September camp due to an ankle injury, but he has returned to action with Brazilian club Internacional, indicating a return to fitness, and has been included on the squad."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "05e55db3fa0e2f5b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "The former CEO of FTX oversaw a supposedly thriving crypto exchange"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []},
+{"fact": "3.2", "status": "missing", "evidence": []},
+{"fact": "3.3", "status": "missing", "evidence": []}
+]},
+{"id": "a6a3837bd8daff73", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "While Israel has granted permits to about 17,000 Gaza residents to enter and work in Israel, the food, fuel and medical supplies that people in Gaza use all first pass through Israel."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "While Israel has granted permits to about 17,000 Gaza residents to enter and work in Israel, the food, fuel and medical supplies that people in Gaza use all first pass through Israel."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."}]},
+{"fact": "2.0", "status": "missing", "evidence": []}
+]},
+{"id": "b75a66b2d4bcf13a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "But they've also seen the fourth-lowest ADOT from tight ends (5.0 yards per target), almost as if teams know they won't be able to succeed on downfield shots against them (zero completions of 20-plus yards from tight ends)."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "But they've also seen the fourth-lowest ADOT from tight ends (5.0 yards per target), almost as if teams know they won't be able to succeed on downfield shots against them (zero completions of 20-plus yards from tight ends)."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "But they've also seen the fourth-lowest ADOT from tight ends (5.0 yards per target), almost as if teams know they won't be able to succeed on downfield shots against them (zero completions of 20-plus yards from tight ends)."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "But they've also seen the fourth-lowest ADOT from tight ends (5.0 yards per target), almost as if teams know they won't be able to succeed on downfield shots against them (zero completions of 20-plus yards from tight ends)."}]}
+]}
+]

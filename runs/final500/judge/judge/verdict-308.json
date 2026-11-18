@@ -1,0 +1,82 @@
+[
+{"id": "8a9e4dcda31911bf", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []},
+{"fact": "3.2", "status": "missing", "evidence": []},
+{"fact": "3.3", "status": "missing", "evidence": []},
+{"fact": "3.4", "status": "missing", "evidence": []}
+]},
+{"id": "7f733bb510352272", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Because Flexport makes money by charging fees for the transportation of goods, the company's business was getting hammered."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Because Flexport makes money by charging fees for the transportation of goods, the company's business was getting hammered."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "The mixed messaging from the 43-year-old Flexport founder underscores the dysfunction surrounding the sudden firing of Clark"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "Clark, who previously spent 23 years at Amazon and built its mammoth logistics network"}]},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []},
+{"fact": "2.6", "status": "missing", "evidence": []},
+{"fact": "2.7", "status": "stated", "evidence": [{"item": 5, "quote": "A source close to Petersen told CNBC that the meeting went poorly for Clark because a so-called whistleblower — identified as a senior finance executive — stepped forward shortly before it began"}]},
+{"fact": "2.8", "status": "missing", "evidence": []},
+{"fact": "2.9", "status": "stated", "evidence": [{"item": 7, "quote": "The company was valued at $8 billion by private investors in early 2022"}]}
+]},
+{"id": "c2ce4ef34fc33f63", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."}]}
+]},
+{"id": "f810f3859ac293a5", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "while Google spent most of its first day attempting to explain complicated ins and outs of business, Epic was able to paint a black-and-white picture of good and evil with itself as the clear underdog."}, {"item": 9, "quote": "He did so by basically calling Google a bully and a cheat"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "49ef6f0db3f99ba2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "the generation of players and leaders that will call time on their international careers at week’s end."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]}
+]},
+{"id": "b575d25199e957c8", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "Google compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "Google compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "Google compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old."}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google"}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "3.2", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "3.3", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]}
+]

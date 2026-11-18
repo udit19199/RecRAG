@@ -1,0 +1,578 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 1 items.
+
+=== ITEM id=1be1be16366d12e6 ===
+Gold sentences and facts:
+Sentence 0: Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns.
+  Fact 0.0: Harbaugh reportedly watched the game from the team hotel.
+  Fact 0.1: The leading piece of drama now returns.
+Sentence 1: The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley.
+  Fact 1.0: The Big Ten suspended coach Jim Harbaugh for three games.
+  Fact 1.1: The Big Ten suspended Harbaugh on Friday.
+  Fact 1.2: The team was on a plane en route to Penn State when the suspension happened.
+  Fact 1.3: Michigan had hoped to block the suspension.
+  Fact 1.4: The Wolverines will be without their coach on the sidelines in Happy Valley.
+
+Retrieved items:
+<item 1>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Michigan noted that regarding evidence, there is nothing it is aware of to claim athletics personnel at Michigan committed the allegations, and said the rule
+pertaining to electronic recordings of games is limited to the use of field equipment used by the institution for the game it is currently playing. It also said
+Michigan has not seen much evidence, but rather has just heard a summary of second- and third-hand information.
+
+The letter also said given the use of sign decoding by other universities, there is little reason to believe Stalions' efforts proved meaningful, and pointed
+out the teams' average margin of victory since Stalions was suspended. It said the information obtained is "at most a reflection of information that teams can
+and easily do obtain through public and permissible sources," and because of that it is "highly dubious" that Stalions' observations would have a "material
+effect on the integrity of the competition."
+</item 1>
+
+<item 2>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+🗣️ "Bet" pic.twitter.com/ENB7O8MyPv — The Sporting News (@sportingnews) November 10, 2023
+
+Michigan announces intention to dispute suspension
+
+Michigan has released a statement expressing frustration with the Big Ten's process and says it plans to seek a court order to block Harbaugh's suspension from
+taking effect.
+
+NEWS: Michigan says it intends to seek a court order with Jim Harbaugh preventing disciplinary action from taking effect.
+
+
+
+Full statement: pic.twitter.com/p92yUCLsTX — Matt Fortuna (@Matt_Fortuna) November 10, 2023
+
+Big Ten claims no evidence Harbaugh was aware of scheme
+
+While the Big Ten says it's "proven" that an illegal sign-stealing scheme existed, the conference could not prove that Harbaugh knew about it. So, why was
+Harbaugh suspended? The Big Ten asserts that, because he is the head coach, he has a responsibility for preventing this kind of scheme from taking place.
+</item 2>
+
+<item 3>
+Michigan sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti (Sporting News, 2023-11-11T22:50:13+00:00)
+Will Harbaugh finally take the parachute to the NFL? Those are questions bound to come up at the end of the 2023 season.
+
+BENDER: Michigan will need Jim Harbaugh against Ohio State
+
+Big Ten
+
+This is the fourth football scandal in less than a calendar year.
+
+Three former Iowa football players and a student manager were charged in an illegal sports wagering scandal. Several student-athletes face allegations of
+placing bets on games in which they played in. Northwestern coach Pat Fitzgerald was fired on July 10 after a hazing investigation into the program. Fitzgerald
+is suing the university for wrongful termination. Michigan State fired Mel Tucker on Sept. 27 after allegations of sexual misconduct from Brenda Tracy, a
+speaker on sexual assault awareness.
+
+Now, Michigan has a scandal on the field, and they countered with allegations that Ohio State and Rutgers leaked Michigan's signs to Purdue in last year's Big
+Ten championship game.
+</item 3>
+
+<item 4>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+However, the primary difference is Michigan is accused of using in-person scouting, which has been prohibited under NCAA rules for nearly 30 years, to acquire
+its information.
+
+Monday, Nov. 6
+
+No connection between Buckeyes coach, Michigan investigation
+
+Ohio State coach Ryan Day and his family have no connection to the Big Ten and NCAA investigations into Michigan, Yahoo Sports reported.
+
+A report emerged over the weekend indicating Day may have had some involvement in the probe into the Buckeyes' arch-rivals, but the NCAA told the Big Ten there
+are no ties that it knows of between the Ohio State coach and the investigation.
+
+NCAA shares findings with Big Ten as Harbaugh suspension looms
+
+Yahoo Sports reported Monday that the NCAA shared its investigation findings with the Big Ten, noting that the findings "do not connect the in-person scouting
+and recording of opponents’ sidelines to Harbaugh."
+
+Still, the conference is considering a suspension for Harbaugh and could hand down punishments before the end of the week.
+</item 4>
+
+<item 5>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+On the field, Michigan is in the midst of what could be a historic season. Off the field, the the focus has rarely been on the team's success.
+
+An investigation into Michigan's alleged sign-stealing scheme, centered on now-fired staffer Connor Stalions, continues to evolve by the hour, with one update
+after another adding another wrinkle to the saga that began in October. The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a
+plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy
+Valley.
+
+The Sporting News is tracking the latest updates from the Michigan sign-stealing scandal. Follow along with the newest developments below.
+
+MORE ON MICHIGAN SIGN-STEALING:
+
+Michigan sign-stealing scandal updates
+
+Friday, Nov.
+</item 5>
+
+<item 6>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+— Nicole Auerbach (@NicoleAuerbach) November 11, 2023
+
+Harbaugh hearing coming down to wire before Penn State game
+
+ESPN's Pete Thamel reported it's unclear Harbaugh will be granted a hearing in time to be able to coach against Penn State. With kickoff scheduled for noon ET,
+Thamel said "the drama's going to go right up 'till noon."
+
+Latest from ⁦@CollegeGameDay⁩ on Jim Harbaugh’s TRO legal filing. Will he coach Michigan at Penn State today? pic.twitter.com/bz3R1eYxI9 — Pete Thamel
+(@PeteThamel) November 11, 2023
+
+The case is reportedly in the hands of Judge Carol Kunhke, a Michigan alumnus.
+
+Harbaugh was not on the Michigan team bus with other coaches and players when it arrived at Beaver Stadium Saturday morning.
+
+Michigan players and coaches arrive. No Jim Harbaugh on the bus.
+</item 6>
+
+<item 7>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+— Pete Thamel (@PeteThamel) November 8, 2023
+
+Tuesday, Nov. 7
+
+Michigan says three other Big Ten schools shared decoded Wolverines signals
+
+While Michigan tries to navigate the storm around its program, the Wolverines are also trying to make one thing clear: they're hardly alone in trying to
+decipher opponents' signals.
+
+Michigan has shared evidence with the Big Ten and NCAA showing staff members at Ohio State, Purdue and Rutgers shared intelligence on the Wolverines' signals
+prior to last year's Michigan-Purdue Big Ten Championship Game, The Athletic reported.
+
+Documents breaking down Michigan's signals for numerous plays were compiled by Purdue staffers ahead of the game based on information provided by Ohio State and
+Rutgers football personnel, the report says. The person who supplied the documents told The Athletic he spent 10 to 12 hours per week trying to decode signals
+based on game video and said the practice of sharing decoded signals with other schools is common.
+</item 7>
+
+<item 8>
+Graph query row:
+article: Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a different game
+publisher: Sporting News
+passages: [{'page': "Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a different game (Sporting News, 2023-11-11T21:32:44+00:00)",
+'passage': 'Michigan didn\'t need Jim Harbaugh against Penn State, but Ohio State is a different game (Sporting News, 2023-11-11T21:32:44+00:00)\nDid Michigan
+really need Jim Harbaugh on Saturday?\n\nPerhaps the result provides the short-term answer. No. 3 Michigan beat No. 10 Penn State 24-15 at Beaver Stadium on
+Saturday. The Wolverines threw one pass in the second half – and that didn\'t even technically count – in a risk-averse game plan under acting coach Sherrone
+Moore. The defense smothered the Nittany Lions, and that will lead to more buildup ahead of the showdown with No. 1 Ohio State on Nov. 25.\n\nThen Moore let it
+all there in the Fox postgame interview with Jenny Taft. Even if the answer is no, Harbaugh was ever-present.\n\n"I want to thank the Lord and I want to thank
+Coach Harbaugh," Moore said. "I f------ love you man. I love the s--- out of you, man. I did this for you, for this university, the president, our AD.'},
+{'page': "Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a different game (Sporting News, 2023-11-11T21:32:44+00:00)", 'passage':
+'Michigan didn\'t need Jim Harbaugh against Penn State, but Ohio State is a different game (Sporting News, 2023-11-11T21:32:44+00:00)\nI did this for you, for
+this university, the president, our AD. We\'ve got the best players, best university, and the best alumni in the country. I love these guys. These f------ guys
+right here. These guys right here. These guys did it."\n\nMORE: Sherrone Moore gives tearful interview after Penn State win\n\nWhoa, let\'s add the FCC
+standards to the Wolverines\' list of potential violations. If Michigan (10-0, 7-0 Big Ten) was not the college football heel heading into the final two weeks
+of the regular season, then they are public enemy No. 1 now. It might be “Michigan vs. Everybody,” and everybody has the same question.\n\nWill Harbaugh be on
+the field before the end of the regular season?'}, {'page': "Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a different game (Sporting
+News, 2023-11-11T21:32:44+00:00)", 'passage': "Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a different game (Sporting News,
+2023-11-11T21:32:44+00:00)\nWill Harbaugh be on the field before the end of the regular season? The Big Ten made a Friday ruling that will prohibit Harbaugh
+from being on the field for the final three regular-season games as a result of the in-person scouting and sign-stealing scandal that led to the resignation of
+staffer Conor Stallions. ESPN reported there will be a temporary restraining order hearing on Nov. 17 that will answer that question.\n\nOn the field, Michigan
+answered the question about its College Football Playoff. Sort of. The Wolverines proved they could beat Penn State (8-2, 5-2) in a 20-yard box. Neither team
+completed a pass of 20 yards or more. Michigan trailed 3-0 after the first quarter. The Wolverines had eight carries for 10 yards, and Penn State's Abdul Carter
+set the tone with a jarring hit on Blake Corum that nearly resulted in a fumble.\n\nMichigan took control with the running game."}, {'page': "Michigan didn't
+need Jim Harbaugh against Penn State, but Ohio State is a different game (Sporting News, 2023-11-11T21:32:44+00:00)", 'passage': "Michigan didn't need Jim
+Harbaugh against Penn State, but Ohio State is a different game (Sporting News, 2023-11-11T21:32:44+00:00)\nWas this old-school Big Ten football or Big Ten West
+football in disguise?\n\nMichigan's defense clamped on Penn State quarterback Drew Allar (10 of 22, 70 yards, TD), and the Nittany Lions had one play of more
+than 20 yards. Corum closed the drama with a 30-yard TD.\n\nThe same-old questions about Nittany Lions coach James Franklin in big games resurfaced, but those
+are back-page headlines in the Big Ten East race. The quirky tiebreaker involving Big Ten West opponents? That's out the door. The winner-take-all showdown
+between Ohio State and Michigan? There are a full two weeks of anticipation for that now.\n\nHarbaugh reportedly watched the game from the team hotel, and now
+the leading piece of drama returns. Moore's postgame emotion was a headline, but there is a reality that set in through a brutal watch of a second
+half.\n\nMcCarthy is a leader."}, {'page': "Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a different game (Sporting News,
+2023-11-11T21:32:44+00:00)", 'passage': "Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a different game (Sporting News,
+2023-11-11T21:32:44+00:00)\nMcCarthy is a leader. Corum (26–145, 2 TDs) and Edwards (10-52, TD) can grind on anybody. The defense now has allowed just 7.5
+points per game.\n\nBut the Wolverines will not be able to beat Ohio State the same way they beat Penn State. That 20-yard box will stretch across the entire
+country, and it requires a coach ready to make those legacy-defining decisions. The Buckeyes have Heisman Trophy candidate Marvin Harrison Jr., and he was the
+separator when Ohio State beat Penn State 20-12 on Oct. 21. The Buckeyes have a top-five defense, too, and all of the back-and-forth rage between those rivals
+will reach a 1970s pitch – 1973 for those who know – as they barrel toward another 11-0 vs. 11-0 showdown at the Big House.\n\nWho is the good guy? Who is the
+villain?"}, {'page': "Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a different game (Sporting News, 2023-11-11T21:32:44+00:00)",
+'passage': "Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a different game (Sporting News, 2023-11-11T21:32:44+00:00)\nWho is the good
+guy? Who is the villain? Ohio State and Michigan locked in their answers a long time ago. More than 17 million people watched last year's matchup – a 45-23
+Michigan victory where Stalions' involvement continues to be scrutinized through a double-barrel Big Ten and NCAA investigation. Big Ten commissioner Tony
+Petitti's ruling sent a shockwave through the conference Friday, mainly because the third game means Harbaugh will not be on the sideline for The Game. Early
+forecasts say 20 million will tune in for The Game this year.\n\nWill Harbaugh really not be there? That is for the courts to decide, but Moore’s comments
+suggest Harbaugh, president Santa Ono and athletic director Warde Manuel are on a united front; consequences be damned in 2024 and beyond.\n\nIn the short term?
+The College Football Playoff committee could slide Michigan up to No. 2 now, and the debate with the Buckeyes and No."}, {'page': "Michigan didn't need Jim
+Harbaugh against Penn State, but Ohio State is a different game (Sporting News, 2023-11-11T21:32:44+00:00)", 'passage': "Michigan didn't need Jim Harbaugh
+against Penn State, but Ohio State is a different game (Sporting News, 2023-11-11T21:32:44+00:00)\n2 now, and the debate with the Buckeyes and No. 1 Georgia is
+going to perk up more than ever. They are the three best teams in the country, but only one has uncertainty with the head coach.\n\nWhether they admit it or
+not, Michigan still needs Harbaugh for those moments, especially in two weeks.\n\nThe reality is he might not be present for that one either."}]
+connected_entities: [{'entity': 'Sporting News', 'relationship': 'PUBLISHED_BY'}, {'entity': 'Fox', 'relationship': 'MENTIONS'}, {'entity': 'Michigan',
+'relationship': 'MENTIONS'}, {'entity': 'college football', 'relationship': 'MENTIONS'}, {'entity': 'Penn State', 'relationship': 'MENTIONS'}, {'entity':
+'Beaver Stadium', 'relationship': 'MENTIONS'}, {'entity': 'Sherrone Moore', 'relationship': 'MENTIONS'}, {'entity': 'temporary restraining order hearing',
+'relationship': 'MENTIONS'}, {'entity': 'Big Ten', 'relationship': 'MENTIONS'}, {'entity': 'Santa Ono', 'relationship': 'MENTIONS'}, {'entity': 'Blake Corum',
+'relationship': 'MENTIONS'}, {'entity': 'ESPN', 'relationship': 'MENTIONS'}, {'entity': 'Stalions', 'relationship': 'MENTIONS'}, {'entity': 'Jim Harbaugh',
+'relationship': 'MENTIONS'}, {'entity': 'Penn State win', 'relationship': 'MENTIONS'}, {'entity': 'Warde Manuel', 'relationship': 'MENTIONS'}, {'entity': 'the
+game', 'relationship': 'MENTIONS'}, {'entity': 'Ohio State', 'relationship': 'MENTIONS'}, {'entity': 'Conor Stallions', 'relationship': 'MENTIONS'}, {'entity':
+'Marvin Harrison Jr.', 'relationship': 'MENTIONS'}, {'entity': 'McCarthy', 'relationship': 'MENTIONS'}, {'entity': 'Corum', 'relationship': 'MENTIONS'},
+{'entity': 'College Football Playoff', 'relationship': 'MENTIONS'}, {'entity': 'Jenny Taft', 'relationship': 'MENTIONS'}, {'entity': 'Michigan-Ohio State
+showdown', 'relationship': 'MENTIONS'}, {'entity': 'FCC', 'relationship': 'MENTIONS'}, {'entity': 'FCC standards', 'relationship': 'MENTIONS'}, {'entity':
+'potential violations', 'relationship': 'MENTIONS'}, {'entity': 'in-person scouting and sign-stealing scandal', 'relationship': 'MENTIONS'}, {'entity': 'Abdul
+Carter', 'relationship': 'MENTIONS'}, {'entity': 'Michigan-Penn State game', 'relationship': 'MENTIONS'}, {'entity': 'Drew Allar', 'relationship': 'MENTIONS'},
+{'entity': 'James Franklin', 'relationship': 'MENTIONS'}, {'entity': 'Big Ten West', 'relationship': 'MENTIONS'}, {'entity': 'Heisman Trophy', 'relationship':
+'MENTIONS'}, {'entity': 'Ohio State beat Penn State 20-12', 'relationship': 'MENTIONS'}, {'entity': '11-0 vs. 11-0 showdown', 'relationship': 'MENTIONS'},
+{'entity': 'Big House', 'relationship': 'MENTIONS'}, {'entity': 'College Football Playoff committee', 'relationship': 'MENTIONS'}, {'entity': "last year's
+matchup", 'relationship': 'MENTIONS'}, {'entity': 'Big Ten East', 'relationship': 'MENTIONS'}, {'entity': 'Georgia', 'relationship': 'MENTIONS'}, {'entity':
+'Edwards', 'relationship': 'MENTIONS'}, {'entity': 'Moore', 'relationship': 'MENTIONS'}, {'entity': 'Tony Petitti', 'relationship': 'MENTIONS'}, {'entity':
+'NCAA', 'relationship': 'MENTIONS'}, {'entity': 'football', 'relationship': 'MENTIONS'}]
+</item 8>
+
+<item 9>
+Graph query row:
+article: Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation
+publisher: Sporting News
+passages: [{'page': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)', 'passage': "Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating
+investigation (Sporting News, 2023-11-06T23:58:04+00:00)\nOn the field, Michigan is in the midst of what could be a historic season. Off the field, the the
+focus has rarely been on the team's success.\n\nAn investigation into Michigan's alleged sign-stealing scheme, centered on now-fired staffer Connor Stalions,
+continues to evolve by the hour, with one update after another adding another wrinkle to the saga that began in October. The Big Ten suspended coach Jim
+Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will
+be without their coach on the sidelines in Happy Valley.\n\nThe Sporting News is tracking the latest updates from the Michigan sign-stealing scandal. Follow
+along with the newest developments below.\n\nMORE ON MICHIGAN SIGN-STEALING:\n\nMichigan sign-stealing scandal updates\n\nFriday, Nov."}, {'page': 'Michigan
+sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)',
+'passage': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)\n17\n\nMichigan fires coach connected to destroying evidence in investigation\n\nYahoo Sports\' Ross Dellenger and Dan Wetzel
+reported on Friday that the NCAA\'s investigation into the sign-stealing and advanced scouting operation has found that Stalions was at least partially funded
+by a Michigan booster, named as "Uncle T," and that linebackers coach Chris Partridge, who was fired by Michigan on Friday, is alleged to have destroyed
+evidence on a computer pertaining to the sign-stealing allegations.\n\nThe report states Partridge is not believed to have had prior knowledge of the
+sign-stealing operation, but then later worked to cover it up. In a statement on his firing, Michigan appeared to indicate a connection between Partridge and
+the NCAA\'s investigation, which Dellenger and Wetzel reported is still in the early stage:\n\nFrom the outset, our focus has been on seeking due process and
+allowing the NCAA to conduct a fair and deliberate investigation.'}, {'page': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh
+suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)', 'passage': 'Michigan sign-stealing scandal news: Latest updates on
+possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)\nAlthough the Big Ten has closed its investigation,
+we are continuing to cooperate with the NCAA as it moves forward with its ongoing investigation. Consistent with our commitment to integrity, we will continue
+to take the appropriate actions, including disciplinary measures, based on information we obtain. Earlier today, Michigan Athletics relieved Chris Partridge of
+his duties as a member of the Michigan Football staff. Due to employee privacy laws, we are unable to comment further."\n\nBecause Michigan and Harbaugh on
+Thursday dropped their litigation against the Big Ten, he will not be on Michigan\'s sideline this week against Maryland and next week against Ohio State to end
+the regular season.\n\nFormer Wolverines assistant and Harbaugh confidant Biff Poggi on Friday offered his former boss an invitation. Poggi, in his first year
+as Charlotte\'s head coach, asked Harbaugh to join the 49ers for their games vs. Rice on Saturday and at South Florida on Nov. 25.'}, {'page': 'Michigan
+sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)',
+'passage': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)\nRice on Saturday and at South Florida on Nov. 25.\n\nI am extending an open invitation to Jim Harbaugh to join me on the sidelines
+for the next two Charlotte football games. It would be my honor to stand next to you again as we did for three years — Biff poggi (@BiffPoggi) November 17,
+2023\n\nThursday, Nov. 16\n\nMichigan accepts Harbaugh\'s three-game suspension\n\nMichigan has dropped its litigation against the Big Ten over Harbaugh\'s
+three-game suspension, and it will accept the punishment levied against the head coach.\n\nFrom Michigan:\n\n"This morning, the University, Coach Harbaugh, and
+the Big Ten resolved their pending litigation. The Conference agreed to close its investigation, and the University and Coach Harbaugh agreed to accept the
+three-game suspension. Coach Harbaugh, with the University\'s support, decided to accept this sanction to return the focus to our student-athletes and their
+performance on the field.'}, {'page': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation
+(Sporting News, 2023-11-06T23:58:04+00:00)', 'passage': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA
+cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)\nThe Conference has confirmed that it is not aware of any information suggesting Coach
+Harbaugh\'s involvement in the allegations. The University continues to cooperate fully with the NCAA\'s investigation.\n\nFrom the Big Ten:\n\n"The Big Ten
+Conference\'s commitment to student-athletes, sportsmanship and the commissioner\'s duty to protect the integrity of competition will never waver. Today\'s
+decision by the University of Michigan to withdraw its legal challenge against the conference\'s November 10th notice of disciplinary action is indicative of
+the high standards and values that the conference and the university seek to uphold, the University of Michigan is a valued member of the Big Ten Conference and
+the conference will continue to work cooperatively with the university and the NCAA during this process."\n\nMonday, Nov. 13\n\nHarbaugh says he\'ll state his
+case at Friday hearing\n\nDespite the suspension, Jim Harbaugh held his usual weekly news conference Monday, though he mostly avoided addressing the only topic
+on anyone\'s mind.'}, {'page': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation
+(Sporting News, 2023-11-06T23:58:04+00:00)', 'passage': "Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA
+cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)\nHe initially told reporters he would speak during a scheduled hearing Friday, but then
+backtracked a bit and sounded as if he wasn't committed to that course, pending legal advice.\n\nHarbaugh said he will speak at the hearing on Friday. He said
+he’s looking for “due process.” Mentioned a civics class he took 40 years ago. “You’re innocent until proven guilty. I’d like that opportunity.” — Nicole
+Auerbach (@NicoleAuerbach) November 13, 2023\n\nHarbaugh clarifies that he’s not sure whether he’ll testify Friday. “That’s not my dance floor,” he says. “I’ve
+watched a lot of shows. I’ve watched Judge Judy a lot.” — Austin Meek (@byAustinMeek) November 13, 2023\n\nSunday, Nov."}, {'page': 'Michigan sign-stealing
+scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)', 'passage':
+'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)\n12\n\nU-M president praises Wolverines for handling \'challenges and adversity\'\n\nThe day after the Penn State win, University of
+Michigan President Santa Ono posted on social media, praising the team\'s ability to "respond to any challenge head on with a conviction to do better and to
+emerge even stronger."\n\nCountless members of the University of Michigan family have reached out to me over the weekend and I wanted to express my
+appreciation. Like any community, we face our share of challenges and adversity. There have been many such moments in our history. But as our team showed so… —
+Santa Ono (@SantaJOno) November 12, 2023\n\nThe post drew immediate and extensive blowback on social media and beyond, as observers questioned Ono\'s tone with
+Michigan in the midst of a self-inflicted controversy.\n\nSaturday, Nov. 11\n\nWarde Manuel issues strong statement against Big Ten\n\nMichigan athletic
+director Warde Manuel did not mince words in a statement on the Big Ten\'s suspension of Harbaugh.'}, {'page': 'Michigan sign-stealing scandal news: Latest
+updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)', 'passage': 'Michigan sign-stealing
+scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)\nHe said while the
+program has been disappointed to hear about the allegations, it also feels that the conference skipped due process of a complete investigation in suspending
+Harbaugh on Friday.\n\nManuel described the suspension as "completely unethical" and "an assault on the rights of everyone (especially in the Big Ten) to be
+judged by a fair and complete investigation."\n\n"All of the Head Coaches in the Big Ten (some who have been accused of actively participating in the trading of
+signals of opponents) and my Big Ten AD colleagues can rejoice today that someone was \'held accountable,\' but they should be worried about the new standard of
+judgment (without complete investigation) that has been unleashed in this conference," Manuel said.\n\nStatement from Michigan AD Warde Manuel. “I find that
+completely unethical, insulting to a well-established process within the NCAA, and an assault on the rights of everyone (especially in the Big Ten) to be judged
+by a fair and complete investigation.”'}, {'page': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating
+investigation (Sporting News, 2023-11-06T23:58:04+00:00)', 'passage': "Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension
+from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)\npic.twitter.com/Qm9iehYVTR — Pete Thamel (@PeteThamel) November 11,
+2023\n\nHarbaugh will not be on the sidelines vs. Penn State\n\nMichigan filed a temporary restraining order against the Big Ten on Friday night, hoping to
+block Harbaugh's suspension. But there will not be a ruling before the Wolverines' game vs. Penn State, with the hearing scheduled for Friday, Nov. 17.\n\nNo
+ruling on Michigan’s TRO filing today, so Jim Harbaugh will not coach vs. Penn State.\n\n\n\nStatement from the school: “We look forward to presenting our case
+next week where we intend to demonstrate that the Big Ten has not acted legally or fairly.”"}, {'page': 'Michigan sign-stealing scandal news: Latest updates on
+possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)', 'passage': 'Michigan sign-stealing scandal news:
+Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)\n— Nicole Auerbach
+(@NicoleAuerbach) November 11, 2023\n\nHarbaugh hearing coming down to wire before Penn State game\n\nESPN\'s Pete Thamel reported it\'s unclear Harbaugh will
+be granted a hearing in time to be able to coach against Penn State. With kickoff scheduled for noon ET, Thamel said "the drama\'s going to go right up \'till
+noon."\n\nLatest from \u2066@CollegeGameDay\u2069 on Jim Harbaugh’s TRO legal filing. Will he coach Michigan at Penn State today? pic.twitter.com/bz3R1eYxI9 —
+Pete Thamel (@PeteThamel) November 11, 2023\n\nThe case is reportedly in the hands of Judge Carol Kunhke, a Michigan alumnus.\n\nHarbaugh was not on the
+Michigan team bus with other coaches and players when it arrived at Beaver Stadium Saturday morning.\n\nMichigan players and coaches arrive. No Jim Harbaugh on
+the bus.'}, {'page': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)', 'passage': "Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating
+investigation (Sporting News, 2023-11-06T23:58:04+00:00)\nMichigan players and coaches arrive. No Jim Harbaugh on the bus. pic.twitter.com/wnGzqAxwcp — Adam
+Rittenberg (@ESPNRittenberg) November 11, 2023\n\nMichigan offensive coordinator Sherrone Moore will serve as acting head coach if Harbaugh is not
+available.\n\nFriday, Nov. 10\n\nMichigan files temporary restraining order against the Big Ten\n\nIn an effort to delay Harbaugh's suspension, the university
+filed a temporary restraining order in Washtenaw County Trial Court on Friday night. If granted, the suspension would be delayed, but the clock is ticking
+before the Wolverines' game vs. Penn State on Saturday.\n\nMichigan's temporary restraining order request has been filed.\n\n\n\nPlaintiffs: Jim Harbaugh, U-M
+regents\n\nDefendants: Big Ten, Tony Petitti\n\n\n\nJudicial officer: Timothy P. Connors"}, {'page': 'Michigan sign-stealing scandal news: Latest updates on
+possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)', 'passage': 'Michigan sign-stealing scandal news:
+Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)\nJudicial officer: Timothy P.
+Connors\n\n\n\nConnors is a U-M lecturer, adjunct professor at Wayne State and Vermont. pic.twitter.com/WR4G4WTtfH — Chris Vannini (@ChrisVannini) November 11,
+2023\n\nMichigan players respond to Harbaugh suspension\n\nJ.J. McCarthy and a handful of other Michigan players tweeted "Bet" at the same time on Friday night,
+hours after Harbaugh was suspended for the remainder of the regular season. McCarthy wore a shirt that said "Free Harbaugh" when the 59-year-old was serving a
+separate suspension at the start of the season.\n\nMichigan players had a simple message on social media following Jim Harbaugh\'s suspension 👀'}, {'page':
+'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)', 'passage': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating
+investigation (Sporting News, 2023-11-06T23:58:04+00:00)\n🗣️ "Bet" pic.twitter.com/ENB7O8MyPv — The Sporting News (@sportingnews) November 10, 2023\n\nMichigan
+announces intention to dispute suspension\n\nMichigan has released a statement expressing frustration with the Big Ten\'s process and says it plans to seek a
+court order to block Harbaugh\'s suspension from taking effect.\n\nNEWS: Michigan says it intends to seek a court order with Jim Harbaugh preventing
+disciplinary action from taking effect.\n\n\n\nFull statement: pic.twitter.com/p92yUCLsTX — Matt Fortuna (@Matt_Fortuna) November 10, 2023\n\nBig Ten claims no
+evidence Harbaugh was aware of scheme\n\nWhile the Big Ten says it\'s "proven" that an illegal sign-stealing scheme existed, the conference could not prove that
+Harbaugh knew about it. So, why was Harbaugh suspended? The Big Ten asserts that, because he is the head coach, he has a responsibility for preventing this kind
+of scheme from taking place.'}, {'page': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating
+investigation (Sporting News, 2023-11-06T23:58:04+00:00)', 'passage': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension
+from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)\nThe Big Ten is also asserting that they are not actually sanctioning Harbaugh, for
+whom they have no proof of wrongdoing, but that he "embodies the university for purposes of its football program." pic.twitter.com/S660G6zQaa — Stewart Mandel
+(@slmandel) November 10, 2023\n\nJim Harbaugh suspended for remainder of regular season\n\nThe Big Ten has officially announced a suspension for Jim Harbaugh
+for the remaining three games of the regular season, including the Wolverines\' rivalry game with Ohio State.\n\nIn a statement, the Big Ten said Michigan
+conducted an "impermissible, in-person scouting operation over multiple years."\n\nOFFICIAL: Jim Harbaugh suspended for the remaining three regular season
+games.'}, {'page': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)', 'passage': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating
+investigation (Sporting News, 2023-11-06T23:58:04+00:00)\nOFFICIAL: Jim Harbaugh suspended for the remaining three regular season games.\n\n\n\n"Michigan has
+been found in violation of the Big Ten Sportsmanship Policy for conducting an impermissible, in-person scouting operation over multiple years..."
+https://t.co/htnUkshmnF — Chris Vannini (@ChrisVannini) November 10, 2023\n\nJim Harbaugh joins Michigan for trip to State College\n\nAccording to the sleuths
+on the ground in Ann Arbor, Harbaugh is on the team bus and heading to the airport with his team as Michigan awaits word on a potential suspension.\n\nJim
+Harbaugh boarding the bus pic.twitter.com/CWBJbwEEhi — Austin Meek (@byAustinMeek) November 10, 2023\n\nMichigan still awaiting word from Big Ten\n\nAccording
+to ESPN\'s Adam Rittenberg, Michigan still hasn\'t heard about an impending punishment from the Big Ten as its 1 p.m. ET flight looms.'}, {'page': 'Michigan
+sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)',
+'passage': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)\nET flight looms.\n\nMichigan\'s administration has not heard from the Big Ten as of this hour, per sources. The team will begin its
+preparations to leave for Penn State around 1 p.m. ET. Really going down to the wire with any discipline, which, as several sources noted, isn\'t really fair to
+players. — Adam Rittenberg (@ESPNRittenberg) November 10, 2023\n\nHarbaugh still expected to fly to State College\n\nDinich reported earlier on Friday that
+punishment to Michigan could come around the time the team is expected to get on a plane and fly to Pennsylvania for its game against Penn State. But regardless
+of when the punishment is announced, Harbaugh\'s attorney, Tom Mars, reportedly told ESPN the coach will be headed to State College.\n\n"I\'m confident he\'s
+going to be on that plane one way or another," Mars reportedly told ESPN.'}, {'page': 'Michigan sign-stealing scandal news: Latest updates on possible Jim
+Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)', 'passage': 'Michigan sign-stealing scandal news: Latest
+updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)\nJim Harbaugh’s attorney, Tom Mars,
+tells ESPN he fully expects Jim Harbaugh to fly with the team to Penn State. “I’m confident he’s going to be on that plane one way or another," Mars said. —
+Pete Thamel (@PeteThamel) November 10, 2023\n\nPunishment options for Michigan\n\nDinich has reported the punishment could be anything, ranging from "indefinite
+suspension to public reprimand or lofty fine." However, she also reported that there is potentially a limit to what the conference can do without permission
+from an executive board. Anything more than two games or a fine of $10,000 would require special permission.\n\nPlease remember the Big Ten has considered a
+WIDE range of punishments - everything from indefinite suspension to public reprimand or lofty fine, sources tell me n @ESPNRittenberg … no assumptions. We have
+to wait for the news, but a suspension is certainly on the table.'}, {'page': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh
+suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)', 'passage': "Michigan sign-stealing scandal news: Latest updates on
+possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)\nWe have to wait for the news, but a suspension is
+certainly on the table. — Heather Dinich (@CFBHeather) November 10, 2023\n\nIf it’s more than 2 games or $10k, the Big Ten will need special permission from an
+executive board composed of league reps https://t.co/6Z7jb2zqH4 — Heather Dinich (@CFBHeather) November 10, 2023\n\nPunishment expected on Friday\n\nThe college
+football world will wait with bated breath on Friday as it awaits what Michigan and Jim Harbaugh will face from the Big Ten. ESPN's Heather Dinich reported the
+punishment is expected to be announced early Friday afternoon. She noted the team is leaving for State College at 1 p.m. CT for the Penn State game on
+Saturday.\n\nsources indicate a Big Ten response is coming early this afternoon."}, {'page': 'Michigan sign-stealing scandal news: Latest updates on possible
+Jim Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)', 'passage': 'Michigan sign-stealing scandal news: Latest
+updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)\nsources indicate a Big Ten response is
+coming early this afternoon. Michigan leaves at 1 and flies midafternoon out of Detroit after getting through security checks, per usual routine. — Heather
+Dinich (@CFBHeather) November 10, 2023\n\nThursday, Nov. 9\n\nBig Ten considering \'range of possibilities\' for Harbaugh\n\nESPN\'s Adam Rittenberg reported
+there are a "range of possibilities" the Big Ten is considering as punishment for Harbaugh. The possibility of a suspension has often garnered most of the
+headlines, but Rittenberg reported the conference is also considering a significant fine.\n\nWhile we wait ... although Big Ten has considered a suspension for
+Michigan coach Jim Harbaugh, it is considering a range of possibilities, including a significant fine, sources told @CFBHeather and me. Public reprimands/fines
+are common penalties under B1G sportsmanship policy.'}, {'page': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from
+NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)', 'passage': "Michigan sign-stealing scandal news: Latest updates on possible Jim
+Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)\nPublic reprimands/fines are common penalties under B1G
+sportsmanship policy. — Adam Rittenberg (@ESPNRittenberg) November 9, 2023\n\nMichigan's 10-page letter to Big Ten released\n\nYahoo Sports' Dan Wetzel posted
+Michigan's full 10-page letter to the Big Ten on X (formerly Twitter). The letter outlines Michigan's belief that the Big Ten would be acting too hastily in
+suspending Harbaugh or levying any punishment toward Michigan before the completion of a full NCAA investigation.\n\nIn the letter, Michigan said the university
+has not had the chance to review all the evidence and respond, which oversteps the due process allowed for Michigan. It said Pettiti should not have unilateral
+authority to punish violations without first having a completed investigation and then a response from the Compliance and Reinstatement Committee, which would
+recommend penalties for rules violations."}, {'page': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA
+cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)', 'passage': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh
+suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)\nMichigan noted that regarding evidence, there is nothing it is aware of
+to claim athletics personnel at Michigan committed the allegations, and said the rule pertaining to electronic recordings of games is limited to the use of
+field equipment used by the institution for the game it is currently playing. It also said Michigan has not seen much evidence, but rather has just heard a
+summary of second- and third-hand information.\n\nThe letter also said given the use of sign decoding by other universities, there is little reason to believe
+Stalions\' efforts proved meaningful, and pointed out the teams\' average margin of victory since Stalions was suspended. It said the information obtained is
+"at most a reflection of information that teams can and easily do obtain through public and permissible sources," and because of that it is "highly dubious"
+that Stalions\' observations would have a "material effect on the integrity of the competition."'}, {'page': 'Michigan sign-stealing scandal news: Latest
+updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)', 'passage': 'Michigan sign-stealing
+scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)\nHere is Michigan’s
+10-page letter to the Big Ten responding to the sportsmanship investigation, reporting with @RossDellenger 1/3 pic.twitter.com/P0oYgIbS67 — Dan Wetzel
+(@DanWetzel) November 9, 2023\n\nNo timetable for Big Ten decision\n\nThe Big Ten is reviewing the "lengthy" official response from Michigan and Jim Harbaugh
+and it\'s unclear when a potential ruling might come down, says ESPN\'s Pete Thamel. His colleague Adam Rittenberg reported Wednesday that a decision was
+expected by Thursday.\n\nSource: The Big Ten is reviewing the lengthy written responses from both Michigan and Jim Harbaugh. There’s no indication of any
+timetable on a decision on potential Big Ten discipline in the case of Michigan’s alleged illegal signal stealing.'}, {'page': 'Michigan sign-stealing scandal
+news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)', 'passage': "Michigan
+sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)\n—
+Pete Thamel (@PeteThamel) November 9, 2023\n\nBig Ten commissioner to miss College Football Playoff meeting Thursday\n\nTony Pettiti is set to be absent from
+the College Football Playoff meeting set to take place in Dallas on Thursday. That leads to further speculation that punishment could be coming soon in
+Michigan's sign-stealing scandal.\n\nBig Ten commish Tony Petitti will NOT be in Dallas for today’s @CFBPlayoff meeting. — Heather Dinich (@CFBHeather) November
+9, 2023\n\nWednesday, Nov. 8\n\nOhio State denies having shared Michigan's play signals with Purdue\n\nOhio State coach Ryan Day was asked about the allegations
+that Ohio State had given information about Michigan's signs to Purdue before the Big Ten championship game in 2022. He denied them forthright.\n\n“I can tell
+you this right now that nobody here did any of that,” Day said, per the Columbus Dispatch."}, {'page': 'Michigan sign-stealing scandal news: Latest updates on
+possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)', 'passage': 'Michigan sign-stealing scandal news:
+Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)\n“We went through and made sure
+we asked all the questions and got our compliance people involved. None of that came back at all. I can answer very strongly that that did not
+happen.”\n\nMichigan submits response to Big Ten\n\nIn the latest step toward a resolution, Michigan has submitted its response to the Big Ten\'s notice of
+discipline. ESPN reported earlier Wednesday that no ruling from the conference is expected until Thursday, as the Big Ten is planning to "take time to absorb"
+what Michigan has to say.\n\nMichigan has sent its response to the Big Ten, a school official tells ESPN. Commissioner Tony Petitti now must decide how to
+proceed with potential discipline. — Adam Rittenberg (@ESPNRittenberg) November 8, 2023\n\nYahoo Sports obtained a copy of the 10-page letter sent by Michigan
+to the Big Ten.'}, {'page': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting
+News, 2023-11-06T23:58:04+00:00)', 'passage': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating
+investigation (Sporting News, 2023-11-06T23:58:04+00:00)\nWithin it, the school warned Big Ten commissioner Tony Pettiti against levying "premature"
+disciplinary action against Jim Harbaugh and alleged that in-person scouting and sign-stealing are commonplace across the NCAA.\n\n"The conference should act
+cautiously when setting precedent given the reality that in-person scouting, collusion among opponents, and other questionable practices may well be far more
+prevalent than believed," the letter read.\n\nMichigan also included with the letter "two attached documents of Michigan\'s offensive and defensive signs
+allegedly stolen and shared by other Big Ten teams," per Yahoo Sports.\n\nConference awaits Michigan response\n\nThe Big Ten expects a formal response from
+Michigan to the notice of discipline by the end of the day Wednesday, ESPN\'s Pete Thamel reports. His colleague Adam Rittenberg adds that a ruling is expected
+to come down Thursday.\n\nSources: The Big Ten expects a response from Michigan on the notice of discipline by the end of day on Wednesday. Don’t expect any
+ruling by the Big Ten on Wednesday, as they are expected to take time to absorb Michigan’s response.'}, {'page': 'Michigan sign-stealing scandal news: Latest
+updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)', 'passage': "Michigan sign-stealing
+scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)\n— Pete Thamel
+(@PeteThamel) November 8, 2023\n\nTuesday, Nov. 7\n\nMichigan says three other Big Ten schools shared decoded Wolverines signals\n\nWhile Michigan tries to
+navigate the storm around its program, the Wolverines are also trying to make one thing clear: they're hardly alone in trying to decipher opponents'
+signals.\n\nMichigan has shared evidence with the Big Ten and NCAA showing staff members at Ohio State, Purdue and Rutgers shared intelligence on the
+Wolverines' signals prior to last year's Michigan-Purdue Big Ten Championship Game, The Athletic reported.\n\nDocuments breaking down Michigan's signals for
+numerous plays were compiled by Purdue staffers ahead of the game based on information provided by Ohio State and Rutgers football personnel, the report says.
+The person who supplied the documents told The Athletic he spent 10 to 12 hours per week trying to decode signals based on game video and said the practice of
+sharing decoded signals with other schools is common."}, {'page': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from
+NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)', 'passage': 'Michigan sign-stealing scandal news: Latest updates on possible Jim
+Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)\nHowever, the primary difference is Michigan is accused of using
+in-person scouting, which has been prohibited under NCAA rules for nearly 30 years, to acquire its information.\n\nMonday, Nov. 6\n\nNo connection between
+Buckeyes coach, Michigan investigation\n\nOhio State coach Ryan Day and his family have no connection to the Big Ten and NCAA investigations into Michigan,
+Yahoo Sports reported.\n\nA report emerged over the weekend indicating Day may have had some involvement in the probe into the Buckeyes\' arch-rivals, but the
+NCAA told the Big Ten there are no ties that it knows of between the Ohio State coach and the investigation.\n\nNCAA shares findings with Big Ten as Harbaugh
+suspension looms\n\nYahoo Sports reported Monday that the NCAA shared its investigation findings with the Big Ten, noting that the findings "do not connect the
+in-person scouting and recording of opponents’ sidelines to Harbaugh."\n\nStill, the conference is considering a suspension for Harbaugh and could hand down
+punishments before the end of the week.'}, {'page': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating
+investigation (Sporting News, 2023-11-06T23:58:04+00:00)', 'passage': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension
+from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)\nYahoo says a multi-game suspension for Harbaugh is on the table, though Michigan is
+fully expected to fight a ban if one is handed down. It would be Harbaugh\'s second suspension of the season, as the Wolverines self-imposed a three-game ban on
+Harbaugh to start the season amid an NCAA investigation that found Harbaugh lied to investigators.\n\nSaturday, Nov. 4\n\nHarbaugh \'likely\' to be
+suspended\n\nAccording to The Athletic\'s Pete Thamel, the Big Ten might be getting closer to handing down a suspension for Harbaugh.\n\n"Over the past few
+days, Petitti has spoken with the athletic directors, he\'s spoken with the presidents, he\'s spoken with the coaches. And the next steps appear that there will
+be some type of punishment for Michigan. The most likely scenario here is some type of suspension for Jim Harbaugh," Thamel said on ESPN\'s "College
+GameDay."'}, {'page': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)', 'passage': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating
+investigation (Sporting News, 2023-11-06T23:58:04+00:00)\nMORE: Why Jim Harbaugh won\'t find refuge in the NFL\n\nIt was reported earlier in the week that
+coaches were putting pressure on the Big Ten to hit Michigan with some form of punishment, with Purdue\'s Ryan Walters publicly calling for action and claiming
+the allegations are no longer simply allegations.\n\nHarbaugh was already suspended three games at the start of the season, in a ban imposed by the school
+itself in an attempt to ward off a separate NCAA investigation.\n\nFriday, Nov. 3\n\nSuspended football analyst Connor Stalions resigns\n\nMichigan football
+analyst Connor Stalions, the focus of the NCAA\'s investigation, resigned on Friday night, the university confirmed.\n\nStatement from Michigan (confirming
+earlier reports that Connor Stalions is no longer with the program): "Connor Stalions resigned his position with Michigan Athletics this afternoon. We are
+unable to comment further regarding this personnel matter."'}, {'page': 'Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension
+from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)', 'passage': 'Michigan sign-stealing scandal news: Latest updates on possible Jim
+Harbaugh suspension from NCAA cheating investigation (Sporting News, 2023-11-06T23:58:04+00:00)\nWe are unable to comment further regarding this personnel
+matter." — Jesse Dougherty (@dougherty_jesse) November 4, 2023\n\nIn a statement, Stalions\' lawyer said that his client hoped to avoid creating more
+distractions for Michigan and denied that any Wolverines staffer "told anyone to break any rules."\n\nMORE: Who is Connor Stalions?\n\nStalions is accused of
+buying numerous tickets to scout future opponents in-person, which is against NCAA rules. The NCAA is also investigating the possibility that Stalions appeared
+on Central Michigan\'s sideline in Chippewas gear for a game against Michigan State.\n\nStalions was suspended by Michigan when the news of his alleged
+involvement first broke.'}]
+connected_entities: [{'entity': 'Sporting News', 'relationship': 'PUBLISHED_BY'}, {'entity': 'Detroit', 'relationship': 'MENTIONS'}, {'entity': 'NFL',
+'relationship': 'MENTIONS'}, {'entity': 'The Athletic', 'relationship': 'MENTIONS'}, {'entity': 'Michigan', 'relationship': 'MENTIONS'}, {'entity': 'in-person
+scouting', 'relationship': 'MENTIONS'}, {'entity': 'Nicole Auerbach', 'relationship': 'MENTIONS'}, {'entity': 'sign-stealing scandal', 'relationship':
+'MENTIONS'}, {'entity': 'Michigan sign-stealing scandal', 'relationship': 'MENTIONS'}, {'entity': 'college football', 'relationship': 'MENTIONS'}, {'entity':
+'Penn State', 'relationship': 'MENTIONS'}, {'entity': 'College Football Playoff', 'relationship': 'MENTIONS'}, {'entity': 'Beaver Stadium', 'relationship':
+'MENTIONS'}, {'entity': 'Sherrone Moore', 'relationship': 'MENTIONS'}, {'entity': 'Maryland', 'relationship': 'MENTIONS'}, {'entity': 'Rutgers', 'relationship':
+'MENTIONS'}, {'entity': 'Big Ten', 'relationship': 'MENTIONS'}, {'entity': 'Santa Ono', 'relationship': 'MENTIONS'}, {'entity': 'J.J. McCarthy', 'relationship':
+'MENTIONS'}, {'entity': 'suspension', 'relationship': 'MENTIONS'}, {'entity': 'ESPN', 'relationship': 'MENTIONS'}, {'entity': 'X', 'relationship': 'MENTIONS'},
+{'entity': 'Happy Valley', 'relationship': 'MENTIONS'}, {'entity': 'Michigan sign-stealing scheme investigation', 'relationship': 'MENTIONS'}, {'entity': 'Jim
+Harbaugh suspension', 'relationship': 'MENTIONS'}, {'entity': 'Yahoo Sports', 'relationship': 'MENTIONS'}, {'entity': 'Ross Dellenger', 'relationship':
+'MENTIONS'}, {'entity': 'Dan Wetzel', 'relationship': 'MENTIONS'}, {'entity': 'sign-stealing and advanced scouting operation', 'relationship': 'MENTIONS'},
+{'entity': 'Stalions', 'relationship': 'MENTIONS'}, {'entity': 'Uncle T', 'relationship': 'MENTIONS'}, {'entity': 'Chris Partridge', 'relationship':
+'MENTIONS'}, {'entity': 'destroying evidence', 'relationship': 'MENTIONS'}, {'entity': 'NCAA investigation into the sign-stealing and advanced scouting
+operation', 'relationship': 'MENTIONS'}, {'entity': 'cover-up', 'relationship': 'MENTIONS'}, {'entity': 'Michigan Football', 'relationship': 'MENTIONS'},
+{'entity': 'Biff Poggi', 'relationship': 'MENTIONS'}, {'entity': 'Charlotte', 'relationship': 'MENTIONS'}, {'entity': 'South Florida', 'relationship':
+'MENTIONS'}, {'entity': 'Jim Harbaugh', 'relationship': 'MENTIONS'}, {'entity': 'three-game suspension', 'relationship': 'MENTIONS'}, {'entity': 'pending
+litigation', 'relationship': 'MENTIONS'}, {'entity': 'NCAA cheating investigation', 'relationship': 'MENTIONS'}, {'entity': 'Big Ten Conference',
+'relationship': 'MENTIONS'}, {'entity': 'University of Michigan', 'relationship': 'MENTIONS'}, {'entity': 'University of Michigan legal challenge withdrawal',
+'relationship': 'MENTIONS'}, {'entity': 'University of Michigan notice of disciplinary action', 'relationship': 'MENTIONS'}, {'entity': 'Jim Harbaugh news
+conference', 'relationship': 'MENTIONS'}, {'entity': 'Jim Harbaugh hearing', 'relationship': 'MENTIONS'}, {'entity': 'due process', 'relationship': 'MENTIONS'},
+{'entity': 'Judge Judy', 'relationship': 'MENTIONS'}, {'entity': 'Wolverines', 'relationship': 'MENTIONS'}, {'entity': 'Penn State win', 'relationship':
+'MENTIONS'}, {'entity': 'Big Ten suspension of Harbaugh', 'relationship': 'MENTIONS'}, {'entity': 'Warde Manuel', 'relationship': 'MENTIONS'}, {'entity':
+'suspension of Jim Harbaugh', 'relationship': 'MENTIONS'}, {'entity': 'Michigan game vs. Penn State', 'relationship': 'MENTIONS'}, {'entity': 'Carol Kunhke',
+'relationship': 'MENTIONS'}, {'entity': 'Harbaugh hearing', 'relationship': 'MENTIONS'}, {'entity': 'TRO legal filing', 'relationship': 'MENTIONS'}, {'entity':
+'temporary restraining order filing', 'relationship': 'MENTIONS'}, {'entity': 'U-M regents', 'relationship': 'MENTIONS'}, {'entity': 'Washtenaw County Trial
+Court', 'relationship': 'MENTIONS'}, {'entity': "Wolverines' game vs. Penn State", 'relationship': 'MENTIONS'}, {'entity': 'Timothy P. Connors', 'relationship':
+'MENTIONS'}, {'entity': 'Chris Vannini', 'relationship': 'MENTIONS'}, {'entity': 'U-M', 'relationship': 'MENTIONS'}, {'entity': 'Wayne State', 'relationship':
+'MENTIONS'}, {'entity': 'Vermont', 'relationship': 'MENTIONS'}, {'entity': 'Michigan players', 'relationship': 'MENTIONS'}, {'entity': "Harbaugh's suspension
+for the remainder of the regular season", 'relationship': 'MENTIONS'}, {'entity': "Harbaugh's separate suspension at the start of the season", 'relationship':
+'MENTIONS'}, {'entity': '"Bet"', 'relationship': 'MENTIONS'}, {'entity': 'Matt Fortuna', 'relationship': 'MENTIONS'}, {'entity': 'court order', 'relationship':
+'MENTIONS'}, {'entity': 'Stewart Mandel', 'relationship': 'MENTIONS'}, {'entity': 'impermissible, in-person scouting operation over multiple years',
+'relationship': 'MENTIONS'}, {'entity': 'Jim Harbaugh suspension for the remaining three regular season games', 'relationship': 'MENTIONS'}, {'entity':
+"Wolverines' rivalry game with Ohio State", 'relationship': 'MENTIONS'}, {'entity': 'Big Ten Sportsmanship Policy', 'relationship': 'MENTIONS'}, {'entity':
+'impermissible, in-person scouting operation', 'relationship': 'MENTIONS'}, {'entity': 'Austin Meek', 'relationship': 'MENTIONS'}, {'entity': 'Ann Arbor',
+'relationship': 'MENTIONS'}, {'entity': 'State College', 'relationship': 'MENTIONS'}, {'entity': 'game against Penn State', 'relationship': 'MENTIONS'},
+{'entity': 'Tom Mars', 'relationship': 'MENTIONS'}, {'entity': 'Dinich', 'relationship': 'MENTIONS'}, {'entity': 'executive board', 'relationship': 'MENTIONS'},
+{'entity': 'ESPNRittenberg', 'relationship': 'MENTIONS'}, {'entity': 'punishment', 'relationship': 'MENTIONS'}, {'entity': 'Heather Dinich', 'relationship':
+'MENTIONS'}, {'entity': 'punishment announcement', 'relationship': 'MENTIONS'}, {'entity': 'Penn State game', 'relationship': 'MENTIONS'}, {'entity': 'Adam
+Rittenberg', 'relationship': 'MENTIONS'}, {'entity': 'cheating investigation', 'relationship': 'MENTIONS'}, {'entity': 'significant fine', 'relationship':
+'MENTIONS'}, {'entity': 'sportsmanship policy', 'relationship': 'MENTIONS'}, {'entity': 'public reprimands', 'relationship': 'MENTIONS'}, {'entity': 'range of
+possibilities', 'relationship': 'MENTIONS'}, {'entity': 'Pettiti', 'relationship': 'MENTIONS'}, {'entity': 'Compliance and Reinstatement Committee',
+'relationship': 'MENTIONS'}, {'entity': 'rules violations', 'relationship': 'MENTIONS'}, {'entity': "Michigan's 10-page letter to the Big Ten", 'relationship':
+'MENTIONS'}, {'entity': 'sign decoding', 'relationship': 'MENTIONS'}, {'entity': 'electronic recordings of games', 'relationship': 'MENTIONS'}, {'entity':
+'sportsmanship investigation', 'relationship': 'MENTIONS'}, {'entity': 'illegal signal stealing', 'relationship': 'MENTIONS'}, {'entity': 'Tony Pettiti',
+'relationship': 'MENTIONS'}, {'entity': 'Columbus Dispatch', 'relationship': 'MENTIONS'}, {'entity': 'College Football Playoff meeting', 'relationship':
+'MENTIONS'}, {'entity': "Michigan's sign-stealing scandal", 'relationship': 'MENTIONS'}, {'entity': "Ohio State sharing Michigan's play signals with Purdue",
+'relationship': 'MENTIONS'}, {'entity': 'Michigan submits response to Big Ten', 'relationship': 'MENTIONS'}, {'entity': 'collusion among opponents',
+'relationship': 'MENTIONS'}, {'entity': 'questionable practices', 'relationship': 'MENTIONS'}, {'entity': 'Michigan-Purdue Big Ten Championship Game',
+'relationship': 'MENTIONS'}, {'entity': 'decoded signals', 'relationship': 'MENTIONS'}, {'entity': 'Big Ten investigation into Michigan', 'relationship':
+'MENTIONS'}, {'entity': 'NCAA investigation into Michigan', 'relationship': 'MENTIONS'}, {'entity': 'possible suspension for Jim Harbaugh', 'relationship':
+'MENTIONS'}, {'entity': 'recording of opponents’ sidelines', 'relationship': 'MENTIONS'}, {'entity': 'NCAA rules', 'relationship': 'MENTIONS'}, {'entity':
+'Yahoo', 'relationship': 'MENTIONS'}, {'entity': 'three-game ban', 'relationship': 'MENTIONS'}, {'entity': 'Pete Thamel', 'relationship': 'MENTIONS'},
+{'entity': 'Petitti', 'relationship': 'MENTIONS'}, {'entity': 'College GameDay', 'relationship': 'MENTIONS'}, {'entity': 'Connor Stalions', 'relationship':
+'MENTIONS'}, {'entity': 'Michigan Athletics', 'relationship': 'MENTIONS'}, {'entity': 'Connor Stalions resignation', 'relationship': 'MENTIONS'}, {'entity':
+'Jesse Dougherty', 'relationship': 'MENTIONS'}, {'entity': 'buying numerous tickets to scout future opponents in-person', 'relationship': 'MENTIONS'},
+{'entity': 'game against Michigan State', 'relationship': 'MENTIONS'}, {'entity': 'Big Ten championship game', 'relationship': 'MENTIONS'}, {'entity': 'Ryan
+Day', 'relationship': 'MENTIONS'}, {'entity': 'Ohio State', 'relationship': 'MENTIONS'}, {'entity': 'hearing', 'relationship': 'MENTIONS'}, {'entity': 'Michigan
+State', 'relationship': 'MENTIONS'}, {'entity': 'Pennsylvania', 'relationship': 'MENTIONS'}, {'entity': 'Rice', 'relationship': 'MENTIONS'}, {'entity': '49ers',
+'relationship': 'MENTIONS'}, {'entity': 'Tony Petitti', 'relationship': 'MENTIONS'}, {'entity': 'sign-stealing scheme', 'relationship': 'MENTIONS'}, {'entity':
+'sign-stealing', 'relationship': 'MENTIONS'}, {'entity': 'sign-stealing allegations', 'relationship': 'MENTIONS'}, {'entity': 'NCAA investigation',
+'relationship': 'MENTIONS'}, {'entity': 'Central Michigan', 'relationship': 'MENTIONS'}, {'entity': 'NCAA', 'relationship': 'MENTIONS'}, {'entity': 'Ryan
+Walters', 'relationship': 'MENTIONS'}, {'entity': 'Purdue', 'relationship': 'MENTIONS'}, {'entity': 'Dallas', 'relationship': 'MENTIONS'}]
+</item 9>
+
+<item 10>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+17
+
+Michigan fires coach connected to destroying evidence in investigation
+
+Yahoo Sports' Ross Dellenger and Dan Wetzel reported on Friday that the NCAA's investigation into the sign-stealing and advanced scouting operation has found
+that Stalions was at least partially funded by a Michigan booster, named as "Uncle T," and that linebackers coach Chris Partridge, who was fired by Michigan on
+Friday, is alleged to have destroyed evidence on a computer pertaining to the sign-stealing allegations.
+
+The report states Partridge is not believed to have had prior knowledge of the sign-stealing operation, but then later worked to cover it up. In a statement on
+his firing, Michigan appeared to indicate a connection between Partridge and the NCAA's investigation, which Dellenger and Wetzel reported is still in the early
+stage:
+
+From the outset, our focus has been on seeking due process and allowing the NCAA to conduct a fair and deliberate investigation.
+</item 10>
+=== END ITEM id=1be1be16366d12e6 ===

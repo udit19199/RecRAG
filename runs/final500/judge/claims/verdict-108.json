@@ -1,0 +1,159 @@
+[
+ {"id": "-4234103220698127642", "sentences": [[
+   "The Regulatory Reform (Fire Safety) Order 2005 is officially listed as The Regulatory Reform (Fire Safety) Order 2005 S.I. 2005 No. 1541.",
+   "The Regulatory Reform (Fire Safety) Order 2005 is a statutory instrument.",
+   "The Regulatory Reform (Fire Safety) Order 2005 applies only in England and Wales.",
+   "The Regulatory Reform (Fire Safety) Order 2005 places the responsibility on individuals within an organisation to carry out risk assessments.",
+   "The risk assessments required by the Regulatory Reform (Fire Safety) Order 2005 identify, manage and reduce the risk of fire.",
+   "The Regulatory Reform (Fire Safety) Order 2005 was made into law on 7 June 2005.",
+   "The Regulatory Reform (Fire Safety) Order 2005 came into force on 1 October 2006."
+ ]]},
+ {"id": "5a7759fc5542993569682d60", "sentences": [
+   [
+     "The Spanish name of Teide National Park is 'Parque nacional del Teide'.",
+     "Teide National Park is a national park.",
+     "Teide National Park is located in Tenerife.",
+     "Tenerife is in the Canary Islands, Spain."
+   ],
+   [
+     "The Spanish name of Garajonay National Park is 'Parque nacional de Garajonay'.",
+     "Garajonay National Park is located in the center of the island of La Gomera.",
+     "Garajonay National Park is located in the north of the island of La Gomera.",
+     "La Gomera is one of the Canary Islands in Spain."
+   ]
+ ]},
+ {"id": "5a729fa15542994cef4bc397", "sentences": [
+   [
+     "Underdog is a 2007 American film.",
+     "Underdog is a family superhero comedy film.",
+     "Underdog is based on the 1960s cartoon series of the same name."
+   ],
+   [
+     "Bambi is a 1942 American animated film.",
+     "Bambi was directed by David Hand.",
+     "David Hand supervised a team of sequence directors on Bambi.",
+     "Bambi was produced by Walt Disney.",
+     "Bambi is based on the book 'Bambi, a Life in the Woods'.",
+     "The book 'Bambi, a Life in the Woods' was written by Austrian author Felix Salten."
+   ]
+ ]},
+ {"id": "multihop-rag-1080", "sentences": [
+   [
+     "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have 'off the record' chats.",
+     "Google will counter the suggestion that it hid items from discovery.",
+     "Google will say it has provided the court with thousands of chat logs.",
+     "Google will say it has provided the court with millions of documents."
+   ],
+   [
+     "A trial hearing held on Monday revealed several details about Google.",
+     "Google spent $26.3 billion in 2021 making itself the default search engine across platforms.",
+     "Google tried to take its default search engine position further.",
+     "Google tried to have Chrome preinstalled on iPhones.",
+     "The Monday trial hearing revealed further details beyond these."
+   ],
+   [
+     "The developer did not release the full model, Gemini Ultra.",
+     "The developer released only a 'lite' version called Gemini Pro."
+   ],
+   [
+     "The case was filed by Arkansas-based publisher Helena World Chronicle.",
+     "The case argues that Google 'siphons off' news publishers' content.",
+     "The case argues that Google siphons off news publishers' readers.",
+     "The case argues that Google siphons off news publishers' ad revenue.",
+     "The case argues that these actions are carried out through anticompetitive means."
+   ]
+ ]},
+ {"id": "multihop-rag-1538", "sentences": [
+   [
+     "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account.",
+     "The withdrawal condition was that the amount withdrawn was less than FTX's total trading revenue."
+   ],
+   [
+     "Caroline Ellison was Bankman-Fried's on-again off-again girlfriend.",
+     "Caroline Ellison was the CEO of Alameda.",
+     "The government claimed that Bankman-Fried used Caroline Ellison as a front.",
+     "The government claimed that Bankman-Fried had 'secret access' to customer money.",
+     "The government claimed that the customer money included both cash and crypto."
+   ],
+   [
+     "The speaker said that a person was the richest person in the world under 30.",
+     "The speaker said that a person was going to spend his wealth to save humanity from extinction."
+   ],
+   [
+     "The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud.",
+     "The prosecution said the fraud was committed to achieve great wealth, power and influence.",
+     "The defense countered that the FTX founder acted in good faith.",
+     "The defense countered that the FTX founder never meant to commit fraud.",
+     "The defense countered that the FTX founder never meant to steal.",
+     "The defense countered that the FTX founder basically got in over his head."
+   ]
+ ]},
+ {"id": "multihop-rag-1767", "sentences": [
+   [
+     "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza's 2.3 million residents on Oct. 10, 2023.",
+     "Israel is reportedly preparing for a ground invasion."
+   ],
+   [
+     "Ortal says the understandings Israel reached with Hamas in 2012 were made to stop the fighting.",
+     "Ortal says the understandings Israel reached with Hamas in 2012 were made to get life back to normal as quickly as possible."
+   ],
+   [
+     "Another user said that no one can carry out such a major attack against Israel without intelligence support."
+   ]
+ ]},
+ {"id": "-4066663322214191458", "sentences": [[
+   "It was suggested that the interior of the 45 metre (147 ft) wide dome should be covered with a mosaic decoration.",
+   "The mosaic decoration was suggested to make the most of the available light coming through the circular windows of the drum.",
+   "The mosaic decoration was suggested to make the most of the available light coming through the lantern.",
+   "Brunelleschi had proposed that the vault glimmer with resplendent gold.",
+   "Brunelleschi died in 1446.",
+   "Brunelleschi's death in 1446 put an end to the gold vault project.",
+   "The walls of the dome were whitewashed.",
+   "Grand Duke Cosimo I de' Medici decided to have the dome painted with a representation of The Last Judgment.",
+   "The painting of The Last Judgment covers 3,600 square metres (38,750 square feet) of painted surface.",
+   "The painting of The Last Judgment was started in 1568 by Giorgio Vasari and Federico Zuccari.",
+   "The painting of The Last Judgment would last until 1579.",
+   "The upper portion of the painting, near the lantern, represents The 24 Elders of Apoc. 4.",
+   "Vasari finished the upper portion of the painting before his death in 1574.",
+   "Federico Zuccari and a number of collaborators, such as Domenico Cresti, finished the other portions of the painting.",
+   "The other portions, from top to bottom, are Choirs of Angels; Christ, Mary and Saints; Virtues, Gifts of the Holy Spirit and Beatitudes; and at the bottom of the cupola, Capital Sins and Hell.",
+   "The frescoes are considered Zuccari's greatest work.",
+   "The quality of the work is uneven because of the input of different artists and the different techniques.",
+   "Vasari had used true fresco.",
+   "Zuccari had painted in secco.",
+   "The restoration work ended in 1995.",
+   "During the restoration work, the entire pictorial cycle of The Last Judgment was photographed with specially designed equipment.",
+   "All the information collected during the restoration was put into a catalogue.",
+   "All the restoration information, along with reconstructed images of the frescos, was stored and managed in the Thesaurus Florentinus computer system."
+ ]]},
+ {"id": "multihop-rag-1255", "sentences": [
+   [
+     "He also believes that after everything on social media becomes perfectly curated for us, our brains will start to crave things that are not.",
+     "He believes that social media becomes perfectly curated for us."
+   ],
+   [
+     "What we have done since then, including all the success and failures, matters in our preparation."
+   ]
+ ]},
+ {"id": "-3088831012491766629", "sentences": [[
+   "The eighth and final season of the fantasy drama television series Game of Thrones was announced by HBO in July 2016.",
+   "The first six seasons of Game of Thrones each had ten episodes.",
+   "The seventh season of Game of Thrones had seven episodes.",
+   "The eighth season of Game of Thrones will have only six episodes.",
+   "Like the previous season, the eighth season will largely consist of original content not found currently in George R.R. Martin's A Song of Ice and Fire series.",
+   "The eighth season will instead adapt material Martin has revealed to showrunners about the upcoming novels in the series.",
+   "The upcoming novels in the series are The Winds of Winter and A Dream of Spring."
+ ]]},
+ {"id": "6928004204659089755", "sentences": [
+   [
+     "Vaugier appeared in Need for Speed: Carbon as Nikki.",
+     "Nikki is the girlfriend of the antagonist in Need for Speed: Carbon.",
+     "Nikki is the love interest of the protagonist in Need for Speed: Carbon."
+   ],
+   [
+     "The filmography table lists a 2006 role as Nikki in Need for Speed: Carbon, with notes Voice, Mo-Cap, & Likeness.",
+     "The filmography table lists a 2015 role as Jade in Dying Light, with notes Mo-Cap.",
+     "The filmography table lists a 2015 role as Maine, The Female Kin in Hellraid, with notes Voice."
+   ]
+ ]}
+]

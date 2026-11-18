@@ -1,0 +1,119 @@
+[
+  {"id": "f8c753a511e2e253", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Warrel Dane (born March 7, 1969) is the lead singer of the American power metal band Sanctuary."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Warrel Dane (born March 7, 1969) is the lead singer of the American power metal band Sanctuary."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Warrel Dane (born March 7, 1969) is the lead singer of the American power metal band Sanctuary."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Roy Sætre Khantatat (born March 12, 1970), is a Norwegian singer-songwriter."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Roy Sætre Khantatat (born March 12, 1970), is a Norwegian singer-songwriter."}]}
+  ]},
+  {"id": "fc73a4eb655e0985", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Christopher Haden-Guest, 5th Baron Haden-Guest (born February 5, 1948), simply known as Christopher Guest, is an English-American screenwriter, composer,"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Christopher Haden-Guest, 5th Baron Haden-Guest (born February 5, 1948), simply known as Christopher Guest, is an English-American screenwriter, composer,"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Christopher Haden-Guest, 5th Baron Haden-Guest (born February 5, 1948), simply known as Christopher Guest, is an English-American screenwriter, composer,"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "Christopher Haden-Guest, 5th Baron Haden-Guest (born February 5, 1948), simply known as Christopher Guest, is an English-American screenwriter, composer,"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "Christopher Haden-Guest, 5th Baron Haden-Guest (born February 5, 1948), simply known as Christopher Guest, is an English-American screenwriter, composer,"}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 4, "quote": "Christopher Haden-Guest, 5th Baron Haden-Guest (born February 5, 1948), simply known as Christopher Guest, is an English-American screenwriter, composer,"}, {"item": 4, "quote": "musician, director, actor, and comedian who holds dual British and American citizenship."}]},
+    {"fact": "0.6", "status": "stated", "evidence": [{"item": 4, "quote": "Christopher Haden-Guest, 5th Baron Haden-Guest (born February 5, 1948), simply known as Christopher Guest, is an English-American screenwriter, composer,"}, {"item": 4, "quote": "musician, director, actor, and comedian who holds dual British and American citizenship."}]},
+    {"fact": "0.7", "status": "stated", "evidence": [{"item": 4, "quote": "Christopher Haden-Guest, 5th Baron Haden-Guest (born February 5, 1948), simply known as Christopher Guest, is an English-American screenwriter, composer,"}, {"item": 4, "quote": "musician, director, actor, and comedian who holds dual British and American citizenship."}]},
+    {"fact": "0.8", "status": "stated", "evidence": [{"item": 4, "quote": "Christopher Haden-Guest, 5th Baron Haden-Guest (born February 5, 1948), simply known as Christopher Guest, is an English-American screenwriter, composer,"}, {"item": 4, "quote": "musician, director, actor, and comedian who holds dual British and American citizenship."}]},
+    {"fact": "0.9", "status": "stated", "evidence": [{"item": 4, "quote": "musician, director, actor, and comedian who holds dual British and American citizenship."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Guest is most widely known in Hollywood for having written, directed and starred in his series of comedy films shot in mock-documentary (mockumentary) style."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Guest is most widely known in Hollywood for having written, directed and starred in his series of comedy films shot in mock-documentary (mockumentary) style."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Guest is most widely known in Hollywood for having written, directed and starred in his series of comedy films shot in mock-documentary (mockumentary) style."}]},
+    {"fact": "2.0", "status": "contradicted", "evidence": [{"item": 5, "quote": "He also directed dark comedies, children's movies, and historical pictures."}]},
+    {"fact": "2.1", "status": "contradicted", "evidence": [{"item": 5, "quote": "He also directed dark comedies, children's movies, and historical pictures."}]},
+    {"fact": "2.2", "status": "contradicted", "evidence": [{"item": 5, "quote": "He also directed dark comedies, children's movies, and historical pictures."}]}
+  ]},
+  {"id": "03075803bb336a8f", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "The Wire Fox Terrier is a breed of dog, one of many terrier breeds."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "The Wire Fox Terrier is a breed of dog, one of many terrier breeds."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "The West Siberian Laika or \"WSL\", is a breed of hunting dog and a breed of spitz type."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "The West Siberian Laika or \"WSL\", is a breed of hunting dog and a breed of spitz type."}]}
+  ]},
+  {"id": "3e14d76101a280fc", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "He is best known for the roles of Dan Rydell on \"Sports Night;\" Will Gardner on \"The Good Wife\", which earned him two Primetime Emmy Award nominations; and his"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "He is best known for the roles of Dan Rydell on \"Sports Night;\" Will Gardner on \"The Good Wife\", which earned him two Primetime Emmy Award nominations; and his"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "He is best known for the roles of Dan Rydell on \"Sports Night;\" Will Gardner on \"The Good Wife\", which earned him two Primetime Emmy Award nominations; and his"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "He is best known for the roles of Dan Rydell on \"Sports Night;\" Will Gardner on \"The Good Wife\", which earned him two Primetime Emmy Award nominations; and his"}, {"item": 2, "quote": "early work as Knox Overstreet in \"Dead Poets Society\"."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Dead Poets Society is a 1989 American drama film directed by Peter Weir, written by Tom Schulman, and starring Robin Williams."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Dead Poets Society is a 1989 American drama film directed by Peter Weir, written by Tom Schulman, and starring Robin Williams."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Dead Poets Society is a 1989 American drama film directed by Peter Weir, written by Tom Schulman, and starring Robin Williams."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "Dead Poets Society is a 1989 American drama film directed by Peter Weir, written by Tom Schulman, and starring Robin Williams."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "Set in 1959 at the fictional elite conservative Vermont boarding school Welton Academy, it tells the story of an English teacher who inspires his students"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "Set in 1959 at the fictional elite conservative Vermont boarding school Welton Academy, it tells the story of an English teacher who inspires his students"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 5, "quote": "Set in 1959 at the fictional elite conservative Vermont boarding school Welton Academy, it tells the story of an English teacher who inspires his students"}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 5, "quote": "Set in 1959 at the fictional elite conservative Vermont boarding school Welton Academy, it tells the story of an English teacher who inspires his students"}, {"item": 5, "quote": "through his teaching of poetry."}]}
+  ]},
+  {"id": "44d0a11b4c020376", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Awolnation is an American alternative rock band, formed and fronted by Aaron Bruno, formerly of Under the Influence of Giants, Home Town Hero, and Insurgence."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Awolnation is an American alternative rock band, formed and fronted by Aaron Bruno, formerly of Under the Influence of Giants, Home Town Hero, and Insurgence."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Awolnation is an American alternative rock band, formed and fronted by Aaron Bruno, formerly of Under the Influence of Giants, Home Town Hero, and Insurgence."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Awolnation is an American alternative rock band, formed and fronted by Aaron Bruno, formerly of Under the Influence of Giants, Home Town Hero, and Insurgence."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "Awolnation is an American alternative rock band, formed and fronted by Aaron Bruno, formerly of Under the Influence of Giants, Home Town Hero, and Insurgence."}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 8, "quote": "Awolnation is an American alternative rock band, formed and fronted by Aaron Bruno, formerly of Under the Influence of Giants, Home Town Hero, and Insurgence."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "This Mortal Coil was a music collective led by Ivo Watts-Russell, founder of the British record label 4AD."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "This Mortal Coil was a music collective led by Ivo Watts-Russell, founder of the British record label 4AD."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "This Mortal Coil was a music collective led by Ivo Watts-Russell, founder of the British record label 4AD."}]}
+  ]},
+  {"id": "8e8a17ac395e6d51", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "The Night of the Arts (Finnish: \"Taiteiden yö\" , Swedish: \"Konstens natt\" ) is an annual event held in several major cities in Finland, in late August."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "The Night of the Arts (Finnish: \"Taiteiden yö\" , Swedish: \"Konstens natt\" ) is an annual event held in several major cities in Finland, in late August."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "The Night of the Arts (Finnish: \"Taiteiden yö\" , Swedish: \"Konstens natt\" ) is an annual event held in several major cities in Finland, in late August."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "The Night of the Arts (Finnish: \"Taiteiden yö\" , Swedish: \"Konstens natt\" ) is an annual event held in several major cities in Finland, in late August."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 1, "quote": "The Night of the Arts (Finnish: \"Taiteiden yö\" , Swedish: \"Konstens natt\" ) is an annual event held in several major cities in Finland, in late August."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "The Night of the Arts (Finnish: \"Taiteiden yö\" , Swedish: \"Konstens natt\" ) is an annual event held in several major cities in Finland, in late August."}, {"item": 1, "quote": "It is one of many White Night festivals held worldwide."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "It is one of many White Night festivals held worldwide."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "The White Nights are a kind of all-night arts festival held in many cities in the summer."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "The White Nights are a kind of all-night arts festival held in many cities in the summer."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 6, "quote": "The White Nights are a kind of all-night arts festival held in many cities in the summer."}]},
+    {"fact": "3.0", "status": "stated", "evidence": [{"item": 6, "quote": "The \"white nights\" is the name given in areas of high latitude to the weeks around the summer solstice in June during which sunsets are late, sunrises are early and darkness is never complete."}]},
+    {"fact": "3.1", "status": "stated", "evidence": [{"item": 6, "quote": "The \"white nights\" is the name given in areas of high latitude to the weeks around the summer solstice in June during which sunsets are late, sunrises are early and darkness is never complete."}]},
+    {"fact": "3.2", "status": "stated", "evidence": [{"item": 6, "quote": "The \"white nights\" is the name given in areas of high latitude to the weeks around the summer solstice in June during which sunsets are late, sunrises are early and darkness is never complete."}]},
+    {"fact": "3.3", "status": "stated", "evidence": [{"item": 6, "quote": "The \"white nights\" is the name given in areas of high latitude to the weeks around the summer solstice in June during which sunsets are late, sunrises are early and darkness is never complete."}]}
+  ]},
+  {"id": "270c4542c0ab9fb3", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "He has had a cameo acting role as a tailor in The Wolf of Wall Street, and The Good Shepherd."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "He has had a cameo acting role as a tailor in The Wolf of Wall Street, and The Good Shepherd."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "The Wolf of Wall Street is a 2013 American biographical black comedy crime film directed by Martin Scorsese and written by Terence Winter, based on the memoir of the same name by Jordan Belfort."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "The Wolf of Wall Street is a 2013 American biographical black comedy crime film directed by Martin Scorsese and written by Terence Winter, based on the memoir of the same name by Jordan Belfort."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "The Wolf of Wall Street is a 2013 American biographical black comedy crime film directed by Martin Scorsese and written by Terence Winter, based on the memoir of the same name by Jordan Belfort."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "The Wolf of Wall Street is a 2013 American biographical black comedy crime film directed by Martin Scorsese and written by Terence Winter, based on the memoir of the same name by Jordan Belfort."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 1, "quote": "The Wolf of Wall Street is a 2013 American biographical black comedy crime film directed by Martin Scorsese and written by Terence Winter, based on the memoir of the same name by Jordan Belfort."}]},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 1, "quote": "The Wolf of Wall Street is a 2013 American biographical black comedy crime film directed by Martin Scorsese and written by Terence Winter, based on the memoir of the same name by Jordan Belfort."}]}
+  ]},
+  {"id": "86c05fca3ed75826", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Jan Kodeš and Margaret Court won the singles titles."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Jan Kodeš and Margaret Court won the singles titles."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "db8fc358f74cf9a6", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "The University of Delaware (colloquially \"UD\") is the largest university in Delaware."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "The University of Delaware (colloquially \"UD\") is the largest university in Delaware."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "The University of Debrecen (Hungarian: \"Debreceni Egyetem\" ) is a university located in Debrecen, Hungary."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "The University of Debrecen (Hungarian: \"Debreceni Egyetem\" ) is a university located in Debrecen, Hungary."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "The University of Debrecen (Hungarian: \"Debreceni Egyetem\" ) is a university located in Debrecen, Hungary."}]}
+  ]},
+  {"id": "57567eaf5aeaa1ff", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Hydrangea ( ; common names hydrangea or hortensia) is a genus of 70–75 species of flowering plants native to southern and eastern Asia (China, Japan, Korea, the Himalayas, and Indonesia) and the Americas."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Hydrangea ( ; common names hydrangea or hortensia) is a genus of 70–75 species of flowering plants native to southern and eastern Asia (China, Japan, Korea, the Himalayas, and Indonesia) and the Americas."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Hydrangea ( ; common names hydrangea or hortensia) is a genus of 70–75 species of flowering plants native to southern and eastern Asia (China, Japan, Korea, the Himalayas, and Indonesia) and the Americas."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "Hydrangea ( ; common names hydrangea or hortensia) is a genus of 70–75 species of flowering plants native to southern and eastern Asia (China, Japan, Korea, the Himalayas, and Indonesia) and the Americas."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 1, "quote": "Hydrangea ( ; common names hydrangea or hortensia) is a genus of 70–75 species of flowering plants native to southern and eastern Asia (China, Japan, Korea, the Himalayas, and Indonesia) and the Americas."}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 1, "quote": "Hydrangea ( ; common names hydrangea or hortensia) is a genus of 70–75 species of flowering plants native to southern and eastern Asia (China, Japan, Korea, the Himalayas, and Indonesia) and the Americas."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Abrus is a genus of flowering plants in the pea family, Fabaceae and the only genus found in the tribe Abreae."}, {"item": 4, "quote": "It contains, 13–18 species, but is best known for a single species, Jequirity (\"A. precatorius\")."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Abrus is a genus of flowering plants in the pea family, Fabaceae and the only genus found in the tribe Abreae."}, {"item": 4, "quote": "It contains, 13–18 species, but is best known for a single species, Jequirity (\"A. precatorius\")."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Abrus is a genus of flowering plants in the pea family, Fabaceae and the only genus found in the tribe Abreae."}, {"item": 4, "quote": "It contains, 13–18 species, but is best known for a single species, Jequirity (\"A. precatorius\")."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "Abrus is a genus of flowering plants in the pea family, Fabaceae and the only genus found in the tribe Abreae."}, {"item": 4, "quote": "It contains, 13–18 species, but is best known for a single species, Jequirity (\"A. precatorius\")."}]}
+  ]},
+  {"id": "5b0d5b47009bf7ce", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Dr. Seuss' The Cat in the Hat is a 2003 American family comedy film directed by Bo Welch."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Dr. Seuss' The Cat in the Hat is a 2003 American family comedy film directed by Bo Welch."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Dr. Seuss' The Cat in the Hat is a 2003 American family comedy film directed by Bo Welch."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Dr. Seuss' The Cat in the Hat is a 2003 American family comedy film directed by Bo Welch."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "Dr. Seuss' The Cat in the Hat is a 2003 American family comedy film directed by Bo Welch."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Robert W. \"Bo\" Welch III (born November 30, 1951) is an American production designer and director."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Robert W. \"Bo\" Welch III (born November 30, 1951) is an American production designer and director."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Robert W. \"Bo\" Welch III (born November 30, 1951) is an American production designer and director."}]}
+  ]}
+]

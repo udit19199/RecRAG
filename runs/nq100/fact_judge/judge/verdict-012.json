@@ -1,0 +1,57 @@
+[
+  {"id": "f78f3e3c8c6b61cb", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "contradicted", "evidence": [{"item": 8, "quote": "and is the span 1.6 -- 30 MHz"}]},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "missing", "evidence": []},
+    {"fact": "1.6", "status": "missing", "evidence": []}
+  ]},
+  {"id": "a0afc2fe000dd42a", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Subjects are all taken on the same level"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "there is no higher or standard grade as in the past"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 11, "quote": "There are three pass levels , each with different pass requirements."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 11, "quote": "First is a pass with Higher certificate"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 11, "quote": "First is a pass with Higher certificate , one must obtain 40 % in home language"}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 11, "quote": "First is a pass with Higher certificate , one must obtain 40 % in home language , 40 % in two other subjects"}]},
+    {"fact": "0.6", "status": "stated", "evidence": [{"item": 11, "quote": "must obtain 30 % in three other subjects"}]},
+    {"fact": "0.7", "status": "stated", "evidence": [{"item": 11, "quote": "A learner who passed matric with higher certificate level , can not enroll for a University Degree"}]},
+    {"fact": "0.8", "status": "stated", "evidence": [{"item": 11, "quote": "A learner who passed matric with higher certificate level , can not enroll for a University Degree nor a Diploma at an institute of higher learning"}]},
+    {"fact": "0.9", "status": "stated", "evidence": [{"item": 11, "quote": "The mean mark in any subject is usually about 55"}]},
+    {"fact": "0.10", "status": "stated", "evidence": [{"item": 11, "quote": "Only a small proportion of candidates score an ' A ' in any subject"}]},
+    {"fact": "0.11", "status": "stated", "evidence": [{"item": 11, "quote": "Only a small proportion of candidates score an ' A ' in any subject ( from as little as 2 % to a maximum of about 10 % in subjects taken by highly select groups"}]},
+    {"fact": "0.12", "status": "stated", "evidence": [{"item": 11, "quote": "from as little as 2 % to a maximum of about 10 % in subjects taken by highly select groups"}]},
+    {"fact": "0.13", "status": "stated", "evidence": [{"item": 11, "quote": "A further 8 -- 15 % are likely to gain a ' B '"}]},
+    {"fact": "0.14", "status": "stated", "evidence": [{"item": 11, "quote": "and about 20 -- 25 % achieve a ' C ' grade"}]},
+    {"fact": "0.15", "status": "stated", "evidence": [{"item": 11, "quote": "The National Senior Certificate is a group certificate"}]},
+    {"fact": "0.16", "status": "stated", "evidence": [{"item": 11, "quote": "The National Senior Certificate is a group certificate and records an aggregate mark"}]}
+  ]},
+  {"id": "775a6fcc52a2c362", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "With the Intertropical Convergence Zone ( ITCZ ) swinging northward over West Africa from the Southern Hemisphere in April"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "heavy showers coming from pre-monsoonal convective clouds mainly in the form of squall lines also known as the north easterlies formed mainly as a result of the interactions of the two dominant airmasses in Nigeria known as the Maritime tropical ( south westerlies ) and the Continental tropical ( north easterlies ) , begins in central Nigeria"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "formed mainly as a result of the interactions of the two dominant airmasses in Nigeria known as the Maritime tropical ( south westerlies ) and the Continental tropical ( north easterlies )"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "while the Monsoons from the south atlantic ocean arrives in central Nigeria in July"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 1, "quote": "while the Monsoons from the south atlantic ocean arrives in central Nigeria in July bringing with it high humidity , heavy cloud cover and heavy rainfall"}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 1, "quote": "heavy rainfall which can be daily occurrence lasting till September"}]},
+    {"fact": "0.6", "status": "stated", "evidence": [{"item": 1, "quote": "can be daily occurrence lasting till September when the monsoons gradually begin retreating southward to the southern part of Nigeria"}]},
+    {"fact": "0.7", "status": "stated", "evidence": [{"item": 1, "quote": "Rainfall totals in central Nigeria varies from 1,100 mm ( 43.3 in ) in the lowlands of the river Niger Benue trough"}]},
+    {"fact": "0.8", "status": "stated", "evidence": [{"item": 1, "quote": "Rainfall totals in central Nigeria varies from 1,100 mm ( 43.3 in ) in the lowlands of the river Niger Benue trough to over 2,000 mm ( 78.7 in ) along the south western escarpment of the Jos Plateau"}]}
+  ]},
+  {"id": "0aac149f4926c02d", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Health or vitality is an attribute assigned to entities , such as the player character , enemies and objects within a role - playing or video game"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "such as the player character , enemies and objects within a role - playing or video game"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "that indicates its state in combat"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "Health is usually measured in hit points or health points , shortened to HP"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "Health is usually measured in hit points or health points , shortened to HP"}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 5, "quote": "When the HP of a player character reaches zero , the player may lose a life"}]},
+    {"fact": "0.6", "status": "stated", "evidence": [{"item": 5, "quote": "When the HP of a player character reaches zero , the player may lose a life or their character might become incapacitated or die"}]},
+    {"fact": "0.7", "status": "stated", "evidence": [{"item": 5, "quote": "When the HP of an enemy reaches zero , it may be defeated or die"}]},
+    {"fact": "0.8", "status": "stated", "evidence": [{"item": 5, "quote": "When the HP of an enemy reaches zero , it may be defeated or die and the player is usually rewarded in some way"}]}
+  ]}
+]

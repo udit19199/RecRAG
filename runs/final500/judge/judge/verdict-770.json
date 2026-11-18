@@ -1,0 +1,3573 @@
+[
+ {
+  "id": "9dbd468f54219652",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Unix , Unix - like , POSIX / etc / hosts"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Microsoft Windows 3.1 % WinDir % \\ HOSTS"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "95 , 98 , ME % WinDir % \\ hosts"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "NT , 2000 , XP , 2003 , Vista , 2008 , 7 , 2012 , 8 , 10 % SystemRoot % \\ System32 \\ drivers \\ etc \\ hosts"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Windows Mobile , Windows Phone Registry key under HKEY_LOCAL_MACHINE \\ Comm \\ Tcpip \\ Hosts"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Apple Macintosh 9 and earlier Preferences or System folder"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Mac OS X 10.0 -- 10.1."
+     },
+     {
+      "item": 6,
+      "quote": "5 ( Added through NetInfo or niload )"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Mac OS X 10.2 and newer / etc / hosts ( a symbolic link to / private / etc / hosts )"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Novell NetWare SYS : etc \\ hosts"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "OS / 2 & eComStation `` bootdrive '' : \\ mptn \\ etc \\"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Symbian OS 6.1 -- 9.0 C : \\ system \\ data \\ hosts"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Symbian OS 9.1 + C : \\ private \\ 10000882 \\ hosts"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "MorphOS NetStack ENVARC : sys / net / hosts"
+     }
+    ]
+   },
+   {
+    "fact": "0.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "AmigaOS < 4 AmiTCP : db / hosts DEVS : Internet / hosts"
+     }
+    ]
+   },
+   {
+    "fact": "0.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "AROS ENVARC : AROSTCP / db / hosts"
+     }
+    ]
+   },
+   {
+    "fact": "0.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Android / etc / hosts ( a symbolic link to / system / etc / hosts )"
+     }
+    ]
+   },
+   {
+    "fact": "0.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "iOS 2.0 and newer / etc / hosts ( a symbolic link to / private / etc / hosts )"
+     }
+    ]
+   },
+   {
+    "fact": "0.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "TOPS - 20 < SYSTEM > HOSTS."
+     },
+     {
+      "item": 5,
+      "quote": "TXT"
+     }
+    ]
+   },
+   {
+    "fact": "0.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Plan 9 / lib / ndb / hosts"
+     }
+    ]
+   },
+   {
+    "fact": "0.19",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "BeOS / boot / beos / etc / hosts"
+     }
+    ]
+   },
+   {
+    "fact": "0.20",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Haiku / boot / common / settings / network / hosts"
+     }
+    ]
+   },
+   {
+    "fact": "0.21",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "OpenVMS UCX UCX $ HOST"
+     }
+    ]
+   },
+   {
+    "fact": "0.22",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "TCPware TCPIP $ HOST"
+     }
+    ]
+   },
+   {
+    "fact": "0.23",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "RISC OS 3.7 , 5 ! Boot. Resources. ! Internet. files. Hosts later boot sequence"
+     }
+    ]
+   },
+   {
+    "fact": "0.24",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "! Boot. Choices. Hardware. Disabled. Internet. Files. Hosts"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "78ebfc3a3831b6fe",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Nintendo claims that the design of the Pro Controller is an `` enhanced version '' of the Classic Controller and `` offers a richer experience ''"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Nintendo claims that the design of the Pro Controller is an `` enhanced version '' of the Classic Controller and `` offers a richer experience ''"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Certain games with flexible control schemes , such as Call of Duty : Black Ops II and Trine 2 : Director 's Cut , are also compatible with the Classic Controller"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Certain games with flexible control schemes , such as Call of Duty : Black Ops II and Trine 2 : Director 's Cut , are also compatible with the Classic Controller"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Certain games with flexible control schemes , such as Call of Duty : Black Ops II and Trine 2 : Director 's Cut , are also compatible with the Classic Controller"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "The Wii U Pro Controller is not compatible with previous - generation Wii games ."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The Wii U Pro Controller ( Wii U PRO コントローラー ) is a video game controller produced by Nintendo for the Wii U video game console"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The Wii U Pro Controller ( Wii U PRO コントローラー ) is a video game controller produced by Nintendo for the Wii U video game console"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The Wii U Pro Controller ( Wii U PRO コントローラー ) is a video game controller produced by Nintendo for the Wii U video game console"
+     }
+    ]
+   },
+   {
+    "fact": "2.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The controller functions as a secondary controller released for the console , available separately"
+     },
+     {
+      "item": 4,
+      "quote": "produced by Nintendo for the Wii U video game console"
+     }
+    ]
+   },
+   {
+    "fact": "2.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The controller functions as a secondary controller released for the console , available separately"
+     }
+    ]
+   },
+   {
+    "fact": "2.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The controller functions as a secondary controller released for the console , available separately"
+     }
+    ]
+   },
+   {
+    "fact": "2.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "The Wii U system can be connected to up to four Wii U Pro Controllers at one time"
+     }
+    ]
+   },
+   {
+    "fact": "2.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "however Super Smash Bros. for Wii U allows the usage of more than 4"
+     }
+    ]
+   },
+   {
+    "fact": "2.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Like more traditional controllers , it features standard analog sticks and face buttons"
+     }
+    ]
+   },
+   {
+    "fact": "2.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Like more traditional controllers , it features standard analog sticks and face buttons"
+     }
+    ]
+   },
+   {
+    "fact": "2.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Like the Wii U GamePad and Classic Controller Pro and unlike other eighth generation controllers ( i.e. , the DualShock 4 and the Xbox One Controller ) , the triggers are digital ( i.e. , not analog )"
+     }
+    ]
+   },
+   {
+    "fact": "2.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Like the Wii U GamePad and Classic Controller Pro and unlike other eighth generation controllers ( i.e. , the DualShock 4 and the Xbox One Controller ) , the triggers are digital ( i.e. , not analog )"
+     }
+    ]
+   },
+   {
+    "fact": "2.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Like the Wii U GamePad and Classic Controller Pro and unlike other eighth generation controllers ( i.e. , the DualShock 4 and the Xbox One Controller ) , the triggers are digital ( i.e. , not analog )"
+     }
+    ]
+   },
+   {
+    "fact": "2.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Like the Wii U GamePad and Classic Controller Pro and unlike other eighth generation controllers ( i.e. , the DualShock 4 and the Xbox One Controller ) , the triggers are digital ( i.e. , not analog )"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "59a2edf0859c48d7",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Yadava ( Golla )"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "f1fc59d38caa3305",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.5",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.6",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.7",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.8",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.9",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.10",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.11",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.12",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.13",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.14",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.15",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.16",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.17",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.18",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.19",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.20",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.21",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.22",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.23",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.24",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.25",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.26",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.27",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.28",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.29",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.30",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.31",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.32",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.33",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.34",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.35",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.36",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.37",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.38",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.39",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.40",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.41",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.42",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.43",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.44",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.45",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.46",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.47",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.48",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.49",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.50",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.51",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.52",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.53",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.54",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.55",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.56",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.57",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.58",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.59",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.60",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.61",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.62",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.63",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.64",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.65",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.66",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.67",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.68",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.69",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.70",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.71",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.72",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.73",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.74",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.75",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.76",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.77",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.78",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.79",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.80",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.81",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.82",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.83",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.84",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.85",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.86",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.87",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.88",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.89",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.90",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.91",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.92",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.93",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.94",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.95",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.96",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.97",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.98",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.99",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.100",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.101",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.102",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.103",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.104",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.105",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.106",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.107",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.108",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.109",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.110",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.111",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.112",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.113",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.114",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.115",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.116",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.117",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.118",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.119",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.120",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.121",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.122",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.123",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.124",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.125",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.126",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.127",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.128",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.129",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.130",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.131",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.132",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.133",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.134",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.135",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.136",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.137",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.138",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Llwellyn Chisholm Dalton 14 March 1925"
+     }
+    ]
+   },
+   {
+    "fact": "0.139",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Lewis Matthew Maartensz 18 February 1935"
+     }
+    ]
+   },
+   {
+    "fact": "0.140",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Maas Thajoon Akbar 1880 - 1944"
+     }
+    ]
+   },
+   {
+    "fact": "0.141",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Maas Thajoon Akbar 1880 - 1944 -- -- -- University of Cambridge"
+     }
+    ]
+   },
+   {
+    "fact": "0.142",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Maas Thajoon Akbar 1880 - 1944 -- -- -- University of Cambridge Solicitor General of Ceylon"
+     }
+    ]
+   },
+   {
+    "fact": "0.143",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Charles Ernest St. John Branch 1865 - 1939"
+     }
+    ]
+   },
+   {
+    "fact": "0.144",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Charles Ernest St. John Branch 1865 - 1939 3 July 1925 -- 25 May 1926 3 July 1925 -- 25 May 1926 326 326"
+     }
+    ]
+   },
+   {
+    "fact": "0.145",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Charles Ernest St. John Branch 1865 - 1939 3 July 1925 -- 25 May 1926 3 July 1925 -- 25 May 1926 326 326 Durham University"
+     }
+    ]
+   },
+   {
+    "fact": "0.146",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Stanley Fisher 1867 - 11 December 1926"
+     }
+    ]
+   },
+   {
+    "fact": "0.147",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Stanley Fisher 1867 - 11 December 1926 -- 1930"
+     }
+    ]
+   },
+   {
+    "fact": "0.148",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Stanley Fisher 1867 - 11 December 1926 -- 1930 11 December 1926 -- 1930 Chief Justice of Trinidad and Tobago"
+     }
+    ]
+   },
+   {
+    "fact": "0.149",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Robert William Lyall Grant 17 February 1926"
+     }
+    ]
+   },
+   {
+    "fact": "0.150",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Allen Drieberg 19 September 1927"
+     }
+    ]
+   },
+   {
+    "fact": "0.151",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Eugene Wilfred Jayewardene Western 1874 - 1932"
+     }
+    ]
+   },
+   {
+    "fact": "0.152",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Eugene Wilfred Jayewardene Western 1874 - 1932 May 1928"
+     }
+    ]
+   },
+   {
+    "fact": "0.153",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Eugene Wilfred Jayewardene Western 1874 - 1932 May 1928 -- -- -- Fletcher Member of the Colombo Municipal Council"
+     }
+    ]
+   },
+   {
+    "fact": "0.154",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.155",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.156",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.157",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.158",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.159",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.160",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.161",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.162",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.163",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.164",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.165",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.166",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.167",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.168",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.169",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.170",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.171",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.172",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.173",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.174",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.175",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.176",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.177",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.178",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.179",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.180",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.181",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.182",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.183",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.184",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.185",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.186",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.187",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.188",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.189",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.190",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.191",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.192",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.193",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.194",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.195",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.196",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.197",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.198",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.199",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.200",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.201",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.202",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.203",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.204",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.205",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.206",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.207",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.208",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.209",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.210",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.211",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.212",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.213",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.214",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.215",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.216",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.217",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.218",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.219",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.220",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.221",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.222",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.223",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.224",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.225",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.226",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.227",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.228",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.229",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.230",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.231",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.232",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.233",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.234",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.235",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.236",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.237",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.238",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.239",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.240",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.241",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.242",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.243",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.244",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.245",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.246",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.247",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.248",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.249",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.250",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.251",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.252",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.253",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.254",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.255",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.256",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.257",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Christopher Weeramantry Western 1926 - 1967"
+     }
+    ]
+   },
+   {
+    "fact": "0.258",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Christopher Weeramantry Western 1926 - 1967 -- 30 April 1972"
+     }
+    ]
+   },
+   {
+    "fact": "0.259",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Christopher Weeramantry Western 1926 - 1967 -- 30 April 1972 -- -- Senanayake University of Ceylon University of London Commissioner of Assize"
+     }
+    ]
+   },
+   {
+    "fact": "0.260",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Christopher Weeramantry Western 1926 - 1967 -- 30 April 1972 -- -- Senanayake University of Ceylon University of London Commissioner of Assize"
+     }
+    ]
+   },
+   {
+    "fact": "0.261",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Oswald Leslie De Kretser III Western 1910 - 1968"
+     }
+    ]
+   },
+   {
+    "fact": "0.262",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Oswald Leslie De Kretser III Western 1910 - 1968 -- 21 January 1972"
+     }
+    ]
+   },
+   {
+    "fact": "0.263",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Oswald Leslie De Kretser III Western 1910 - 1968 -- 21 January 1972 -- -- Senanayake University College , Colombo University of London"
+     }
+    ]
+   },
+   {
+    "fact": "0.264",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Oswald Leslie De Kretser III Western 1910 - 1968 -- 21 January 1972 -- -- Senanayake University College , Colombo University of London Judge of the District Court of Panadura"
+     }
+    ]
+   },
+   {
+    "fact": "0.265",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Samarapilimudalige Wijayatilake Central 1912 - 1990"
+     }
+    ]
+   },
+   {
+    "fact": "0.266",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Samarapilimudalige Wijayatilake Central 1912 - 1990 1968 -- 16 May 1975"
+     }
+    ]
+   },
+   {
+    "fact": "0.267",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.268",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.269",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.270",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.271",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.272",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.273",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.274",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.275",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.276",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.277",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.278",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.279",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.280",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.281",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.282",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.283",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.284",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.285",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.286",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.287",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.288",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.289",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.290",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.291",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.292",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.293",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.294",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.295",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.296",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.297",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.298",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.299",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.300",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.301",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.302",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.303",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.304",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.305",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.306",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.307",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.308",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.309",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.310",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.311",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.312",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.313",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.314",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.315",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.316",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.317",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.318",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.319",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.320",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.321",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.322",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.323",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.324",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.325",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.326",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.327",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.328",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.329",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.330",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.331",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.332",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.333",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.334",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.335",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.336",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "A.R.N. Fernando -- -- --"
+     }
+    ]
+   },
+   {
+    "fact": "0.337",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Ameer Ismail 1990 -- 1994"
+     }
+    ]
+   },
+   {
+    "fact": "0.338",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Ameer Ismail 1990 -- 1994 -- -- Premadasa University of Ceylon Ceylon Law College"
+     }
+    ]
+   },
+   {
+    "fact": "0.339",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Ameer Ismail 1990 -- 1994 -- -- Premadasa University of Ceylon Ceylon Law College President of the Court of Appeal of Sri Lanka"
+     }
+    ]
+   },
+   {
+    "fact": "0.340",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Andrew Ranjan Perera -- -- --"
+     }
+    ]
+   },
+   {
+    "fact": "0.341",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Pathmanathan Ramanathan 1932 - 2006"
+     }
+    ]
+   },
+   {
+    "fact": "0.342",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Pathmanathan Ramanathan 1932 - 2006 -- -- -- University of Wales"
+     }
+    ]
+   },
+   {
+    "fact": "0.343",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Pathmanathan Ramanathan 1932 - 2006 -- -- -- University of Wales President of the Court of Appeal of Sri Lanka"
+     }
+    ]
+   },
+   {
+    "fact": "0.344",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "K.M.M.B. Kulatunge -- -- --"
+     }
+    ]
+   },
+   {
+    "fact": "0.345",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "G.P.S. de Silva -- 1991 -- 1999"
+     }
+    ]
+   },
+   {
+    "fact": "0.346",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Sarath N. Silva 1995 -- 16 September 1999 16 September 1999 -- 7 June 2009 3,552"
+     }
+    ]
+   },
+   {
+    "fact": "0.347",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Sarath N. Silva 1995 -- 16 September 1999 16 September 1999 -- 7 June 2009 3,552 Kumaratunga"
+     }
+    ]
+   },
+   {
+    "fact": "0.348",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Sarath N. Silva 1995 -- 16 September 1999 16 September 1999 -- 7 June 2009 3,552 Kumaratunga Sri Lanka Law College University of Brussels"
+     }
+    ]
+   },
+   {
+    "fact": "0.349",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Sarath N. Silva 1995 -- 16 September 1999 16 September 1999 -- 7 June 2009 3,552 Kumaratunga Sri Lanka Law College University of Brussels President of the Court of Appeal of Sri Lanka"
+     }
+    ]
+   },
+   {
+    "fact": "0.350",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Shirani Bandaranayake North Western 1958 - 30 October 1996"
+     }
+    ]
+   },
+   {
+    "fact": "0.351",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Shirani Bandaranayake North Western 1958 - 30 October 1996 -- 13 January 2013 28 January 2015 -- 29 January 2015 18 May 2011 -- 13 January 2013 28 January 2015 -- 29 January 2015 5,919 + 1 606 + 1 Kumaratunga"
+     }
+    ]
+   },
+   {
+    "fact": "0.352",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Shirani Bandaranayake North Western 1958 - 30 October 1996 -- 13 January 2013 28 January 2015 -- 29 January 2015 18 May 2011 -- 13 January 2013 28 January 2015 -- 29 January 2015 5,919 + 1 606 + 1 Kumaratunga University of Colombo University of London"
+     }
+    ]
+   },
+   {
+    "fact": "0.353",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Shirani Bandaranayake North Western 1958 - 30 October 1996 -- 13 January 2013 28 January 2015 -- 29 January 2015 18 May 2011 -- 13 January 2013 28 January 2015 -- 29 January 2015 5,919 + 1 606 + 1 Kumaratunga University of Colombo University of London Lawyer"
+     }
+    ]
+   },
+   {
+    "fact": "0.354",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "C.V. Vigneswaran Western 1939 - March 2001"
+     }
+    ]
+   },
+   {
+    "fact": "0.355",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "C.V. Vigneswaran Western 1939 - March 2001 -- October 2004"
+     }
+    ]
+   },
+   {
+    "fact": "0.356",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "C.V. Vigneswaran Western 1939 - March 2001 -- October 2004 -- -- Kumaratunga"
+     }
+    ]
+   },
+   {
+    "fact": "0.357",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "C.V. Vigneswaran Western 1939 - March 2001 -- October 2004 -- -- Kumaratunga University of Ceylon Ceylon Law College"
+     }
+    ]
+   },
+   {
+    "fact": "0.358",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "C.V. Vigneswaran Western 1939 - March 2001 -- October 2004 -- -- Kumaratunga University of Ceylon Ceylon Law College Judge of the Court of Appeal"
+     }
+    ]
+   },
+   {
+    "fact": "0.359",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Asoka de Silva 1946 - 1 August 2001"
+     }
+    ]
+   },
+   {
+    "fact": "0.360",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Asoka de Silva 1946 - 1 August 2001 -- 17 May 2011"
+     }
+    ]
+   },
+   {
+    "fact": "0.361",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Asoka de Silva 1946 - 1 August 2001 -- 17 May 2011 8 June 2009 -- 17 May 2011 3,"
+     },
+     {
+      "item": 9,
+      "quote": "576 708"
+     }
+    ]
+   },
+   {
+    "fact": "0.362",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Asoka de Silva 1946 - 1 August 2001 -- 17 May 2011 8 June 2009 -- 17 May 2011"
+     },
+     {
+      "item": 9,
+      "quote": "576 708"
+     }
+    ]
+   },
+   {
+    "fact": "0.363",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Asoka de Silva 1946 - 1 August 2001"
+     },
+     {
+      "item": 9,
+      "quote": "576 708 Kumaratunga"
+     }
+    ]
+   },
+   {
+    "fact": "0.364",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "576 708 Kumaratunga University of Peradeniya University of Colombo University of Illinois at Urbana -- Champaign"
+     }
+    ]
+   },
+   {
+    "fact": "0.365",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "576 708 Kumaratunga University of Peradeniya University of Colombo University of Illinois at Urbana -- Champaign President of the Court of Appeal of Sri Lanka"
+     }
+    ]
+   },
+   {
+    "fact": "0.366",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Nihal Jayasinghe 19 February 2003 -- 29 February 2008 -- 1,836"
+     }
+    ]
+   },
+   {
+    "fact": "0.367",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Nihal Jayasinghe 19 February 2003 -- 29 February 2008 -- 1,836 -- Kumaratunga"
+     }
+    ]
+   },
+   {
+    "fact": "0.368",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Nihal Jayasinghe 19 February 2003 -- 29 February 2008 -- 1,836 -- Kumaratunga University of Colombo"
+     }
+    ]
+   },
+   {
+    "fact": "0.369",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Nihal Jayasinghe 19 February 2003 -- 29 February 2008 -- 1,836 -- Kumaratunga University of Colombo Judge of the Court of Appeal"
+     }
+    ]
+   },
+   {
+    "fact": "0.370",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Nimal Dissanayake -- 23 April 2008"
+     }
+    ]
+   },
+   {
+    "fact": "0.371",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Nimal Dissanayake -- 23 April 2008 -- -- Kumaratunga"
+     }
+    ]
+   },
+   {
+    "fact": "0.372",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Shiranee Tilakawardane 19 February 2003 - 5 April 2014 -- 1,901"
+     }
+    ]
+   },
+   {
+    "fact": "0.373",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Shiranee Tilakawardane 19 February 2003 - 5 April 2014 -- 1,901 -- Kumaratunga"
+     }
+    ]
+   },
+   {
+    "fact": "0.374",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Shiranee Tilakawardane 19 February 2003 - 5 April 2014 -- 1,901 -- Kumaratunga Sri Lanka Law College"
+     }
+    ]
+   },
+   {
+    "fact": "0.375",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Shiranee Tilakawardane 19 February 2003 - 5 April 2014 -- 1,901 -- Kumaratunga Sri Lanka Law College President of the Court of Appeal of Sri Lanka"
+     }
+    ]
+   },
+   {
+    "fact": "0.376",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Nimal Gamini Amaratunga January 2005 -- March 2014"
+     }
+    ]
+   },
+   {
+    "fact": "0.377",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Nimal Gamini Amaratunga January 2005 -- March 2014 -- -- Kumaratunga"
+     }
+    ]
+   },
+   {
+    "fact": "0.378",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Nimal Gamini Amaratunga January 2005 -- March 2014 -- -- Kumaratunga University of Colombo International Maritime Law Institute"
+     }
+    ]
+   },
+   {
+    "fact": "0.379",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Nimal Gamini Amaratunga January 2005 -- March 2014 -- -- Kumaratunga University of Colombo International Maritime Law Institute Judge of the Court of Appeal"
+     }
+    ]
+   },
+   {
+    "fact": "0.380",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Saleem Marsoof February 2005 -- 2014"
+     }
+    ]
+   },
+   {
+    "fact": "0.381",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Saleem Marsoof February 2005 -- 2014 -- -- Kumaratunga"
+     }
+    ]
+   },
+   {
+    "fact": "0.382",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.383",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.384",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.385",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.386",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.387",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.388",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.389",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.390",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.391",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.392",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.393",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.394",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.395",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.396",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.397",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.398",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.399",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.400",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.401",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.402",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.403",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.404",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.405",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.406",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.407",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.408",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.409",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.410",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "R.K.S. Suresh Chandra 17 June 2010"
+     }
+    ]
+   },
+   {
+    "fact": "0.411",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "R.K.S. Suresh Chandra 17 June 2010 -- -- -- Rajapaksa"
+     }
+    ]
+   },
+   {
+    "fact": "0.412",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Sathya Hettige 10 July 2011 -- 18 April 2014 -- 1,013"
+     }
+    ]
+   },
+   {
+    "fact": "0.413",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Sathya Hettige 10 July 2011 -- 18 April 2014 -- 1,013 -- Rajapaksa"
+     }
+    ]
+   },
+   {
+    "fact": "0.414",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Sathya Hettige 10 July 2011 -- 18 April 2014 -- 1,013 -- Rajapaksa University of Colombo"
+     }
+    ]
+   },
+   {
+    "fact": "0.415",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Sathya Hettige 10 July 2011 -- 18 April 2014 -- 1,013 -- Rajapaksa University of Colombo President of the Court of Appeal of Sri Lanka"
+     }
+    ]
+   },
+   {
+    "fact": "0.416",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Priyasath Dep † 10 July 2011 -- present"
+     }
+    ]
+   },
+   {
+    "fact": "0.417",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Priyasath Dep † 10 July 2011 -- present 02 March 2017 - present"
+     }
+    ]
+   },
+   {
+    "fact": "0.418",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Priyasath Dep † 10 July 2011 -- present 02 March 2017 - present -- 7003248200000000000 ♠ 2,482 -- Rajapaksa"
+     }
+    ]
+   },
+   {
+    "fact": "0.419",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Priyasath Dep † 10 July 2011 -- present 02 March 2017 - present -- 7003248200000000000 ♠ 2,482 -- Rajapaksa University of Colombo International Institute of Social Studies"
+     }
+    ]
+   },
+   {
+    "fact": "0.420",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Priyasath Dep † 10 July 2011 -- present 02 March 2017 - present -- 7003248200000000000 ♠ 2,482 -- Rajapaksa University of Colombo International Institute of Social Studies Solicitor General of Sri Lanka"
+     }
+    ]
+   },
+   {
+    "fact": "0.421",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Eva Wansundera † North Western"
+     }
+    ]
+   },
+   {
+    "fact": "0.422",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Eva Wansundera † North Western 7 July 2012 -- present"
+     }
+    ]
+   },
+   {
+    "fact": "0.423",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Eva Wansundera † North Western 7 July 2012 -- present -- 7003211900000000000 ♠ 2,"
+     },
+     {
+      "item": 7,
+      "quote": "119 -- Rajapaksa"
+     }
+    ]
+   },
+   {
+    "fact": "0.424",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Eva Wansundera † North Western 7 July 2012 -- present -- 7003211900000000000 ♠ 2,"
+     },
+     {
+      "item": 7,
+      "quote": "119 -- Rajapaksa Sri Lanka Law College University of Leicester"
+     }
+    ]
+   },
+   {
+    "fact": "0.425",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Eva Wansundera † North Western"
+     },
+     {
+      "item": 7,
+      "quote": "119 -- Rajapaksa Sri Lanka Law College University of Leicester Attorney General of Sri Lanka"
+     }
+    ]
+   },
+   {
+    "fact": "0.426",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Mohan Peiris ♠ 15 January 2013 -- 28 January 2015 15 January 2013 -- 28 January 2015 743"
+     }
+    ]
+   },
+   {
+    "fact": "0.427",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Mohan Peiris ♠ 15 January 2013 -- 28 January 2015 15 January 2013 -- 28 January 2015 743 743 Rajapaksa"
+     }
+    ]
+   },
+   {
+    "fact": "0.428",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Mohan Peiris ♠ 15 January 2013 -- 28 January 2015 15 January 2013 -- 28 January 2015 743 743 Rajapaksa Sri Lanka Law College"
+     }
+    ]
+   },
+   {
+    "fact": "0.429",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Mohan Peiris ♠ 15 January 2013 -- 28 January 2015 15 January 2013 -- 28 January 2015 743 743 Rajapaksa Sri Lanka Law College Attorney General of Sri Lanka"
+     }
+    ]
+   },
+   {
+    "fact": "0.430",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Rohini Marasinghe 26 April 2013 -- 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.431",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Rohini Marasinghe 26 April 2013 -- 2015 -- -- Rajapaksa"
+     }
+    ]
+   },
+   {
+    "fact": "0.432",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Rohini Marasinghe 26 April 2013 -- 2015 -- -- Rajapaksa University of Hartford"
+     }
+    ]
+   },
+   {
+    "fact": "0.433",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Rohini Marasinghe 26 April 2013 -- 2015 -- -- Rajapaksa University of Hartford Judge of the Court of Appeal"
+     }
+    ]
+   },
+   {
+    "fact": "0.434",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Buwaneka Aluwihare † 4 December 2013 -- present"
+     }
+    ]
+   },
+   {
+    "fact": "0.435",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Buwaneka Aluwihare † 4 December 2013 -- present -- 7003160400000000000 ♠ 1,604 -- Rajapaksa"
+     }
+    ]
+   },
+   {
+    "fact": "0.436",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Buwaneka Aluwihare † 4 December 2013 -- present -- 7003160400000000000 ♠ 1,604 -- Rajapaksa University of London"
+     }
+    ]
+   },
+   {
+    "fact": "0.437",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Buwaneka Aluwihare † 4 December 2013 -- present -- 7003160400000000000 ♠ 1,604 -- Rajapaksa University of London Additional Solicitor General of Sri Lanka"
+     }
+    ]
+   },
+   {
+    "fact": "0.438",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Sisira de Abrew † Western"
+     }
+    ]
+   },
+   {
+    "fact": "0.439",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Sisira de Abrew † Western 7 May 2014 -- present"
+     }
+    ]
+   },
+   {
+    "fact": "0.440",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.441",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.442",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.443",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Sarath de Abrew 1953 -- 2016"
+     }
+    ]
+   },
+   {
+    "fact": "0.444",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Sarath de Abrew 1953 -- 2016 7 May 2014 -- January 2016"
+     }
+    ]
+   },
+   {
+    "fact": "0.445",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Sarath de Abrew 1953 -- 2016 7 May 2014 -- January 2016 -- -- Rajapaksa"
+     }
+    ]
+   },
+   {
+    "fact": "0.446",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Sarath de Abrew 1953 -- 2016 7 May 2014 -- January 2016 -- -- Rajapaksa Sri Lanka Law College"
+     }
+    ]
+   },
+   {
+    "fact": "0.447",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Sarath de Abrew 1953 -- 2016 7 May 2014 -- January 2016 -- -- Rajapaksa Sri Lanka Law College Judge of the Court of Appeal"
+     }
+    ]
+   },
+   {
+    "fact": "0.448",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Priyantha Jayawardena † 7 May 2014 -- present"
+     }
+    ]
+   },
+   {
+    "fact": "0.449",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Priyantha Jayawardena † 7 May 2014 -- present -- 7003145000000000000 ♠ 1,450 -- Rajapaksa"
+     }
+    ]
+   },
+   {
+    "fact": "0.450",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Priyantha Jayawardena † 7 May 2014 -- present -- 7003145000000000000 ♠ 1,450 -- Rajapaksa Sri Lanka Law College University of Aberdeen"
+     }
+    ]
+   },
+   {
+    "fact": "0.451",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Upali Abeyratne † 17 December 2014 -- present"
+     }
+    ]
+   },
+   {
+    "fact": "0.452",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Upali Abeyratne † 17 December 2014 -- present -- 7003122600000000000 ♠ 1,226 -- Rajapaksa"
+     }
+    ]
+   },
+   {
+    "fact": "0.453",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Upali Abeyratne † 17 December 2014 -- present -- 7003122600000000000 ♠ 1,226 -- Rajapaksa Judge of the Court of Appeal"
+     }
+    ]
+   },
+   {
+    "fact": "0.454",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Anil Goonaratne † 30 January 2015 -- present"
+     }
+    ]
+   },
+   {
+    "fact": "0.455",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.456",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.457",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.458",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.459",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.460",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.461",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.462",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.463",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.464",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.465",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.466",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.467",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.468",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "934a384b9b36202b",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Mumbai ( Marathi : मुंबई ) , from Bombay , renamed in 1995"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Mumbai ( Marathi : मुंबई ) , from Bombay , renamed in 1995"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Mumbai ( Marathi : मुंबई ) , from Bombay , renamed in 1995"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "f8bde41f7ddb2d1b",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "In the United States , there is an Animal Welfare Act that was produced in 1966 ."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "In the United States , there is an Animal Welfare Act that was produced in 1966 ."
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "This law protects animals in acts of research , transportation , and sale ."
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Generally , animals are protected from any torture , neglect , or killing ."
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "There have been many amendments made towards this act to keep it updated ."
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "In order to be charged for animal abuse , there has to be prosecution and a trial ."
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "While there is only one act covering the entire United States"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "there are more current laws surrounding animal rights , which vary by state ."
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Even though there are policies and severe consequences"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "the laws are not normally enforced with as much force or timeliness as regular crime ."
+     }
+    ]
+   }
+  ]
+ }
+]

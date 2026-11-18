@@ -1,0 +1,678 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [],
+ "evidence": [
+  {
+   "id": "19b5780e8b1f22a7",
+   "kind": "evidence",
+   "question": "Who is the individual facing a criminal trial on charges of fraud and conspiracy, as reported by TechCrunch, and is also alleged by the prosecution to have committed these acts to gain wealth, power, and influence?",
+   "gold_sentences": [
+    "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he\u2019s guilty of seven counts of fraud and conspiracy."
+   ],
+   "evidence": "{\"person\": \"Sam Bankman-Fried\", \"article\": \"SBF Trial: The latest updates from the FTX collapse\u2019s courtroom drama\", \"publisher\": \"TechCrunch\", \"relationship\": \"MENTIONS\", \"related\": \"Josh Naftalis\"}"
+  },
+  {
+   "id": "838b087af4ac2756",
+   "kind": "evidence",
+   "question": "Does the 'Fortune' article suggest that Israel's actions are defensive by mentioning a warning to Gaza residents to relocate due to a potential ground invasion, while the 'Business Today | Latest Stock Market And Economy News India' article implies that Israel was caught off-guard by a Hamas attack, indicating a lack of intelligence support?",
+   "gold_sentences": [
+    "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."
+   ],
+   "evidence": "{\"article\": \"'Massive intel failure by Mossad': Hamas' surprise attack on Israel shocks internet\", \"relationship\": \"MENTIONS\", \"connected_entity\": \"IDF\"}"
+  },
+  {
+   "id": "af7d114f4b05620e",
+   "kind": "evidence",
+   "question": "Which company was depicted as an antagonist by Epic Games in a legal case reported by The Verge, is considered by Apple as the only viable option for search engine services according to a court defense also covered by The Verge, and is accused in a class action antitrust suit reported by TechCrunch of harming news publishers' revenues and readership through its business practices?",
+   "gold_sentences": [
+    "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one.",
+    "\u201cCertainly there wasn\u2019t a valid alternative to Google at the time,\u201d Cue said.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google \u201csiphons off\u201d news publishers\u2019 content, their readers and ad revenue through anticompetitive means."
+   ],
+   "evidence": "{\"article\": \"200+ of the best deals from Amazon's Cyber Monday sale\", \"publisher\": \"Mashable\", \"named_companies\": [\"Microsoft\", \"Apple\", \"Bose\", \"Intel\", \"Amazon\"]}"
+  },
+  {
+   "id": "6895a0a61747174f",
+   "kind": "evidence",
+   "question": "Was there inconsistency in the TechCrunch reports on Google's engagement in anticompetitive behavior between the report on Epic Games' antitrust battle with Google published on November 6, 2023, and the report on the news publisher's antitrust suit against Google published on December 15, 2023?",
+   "gold_sentences": [
+    "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google \u201csiphons off\u201d news publishers\u2019 content, their readers and ad revenue through anticompetitive means."
+   ],
+   "evidence": "{\"article\": \"News publisher files class action antitrust suit against Google, citing AI\u2019s harms to their bottom line\", \"published_on\": \"2023-12-15T17:56:02+00:00\", \"passages\": [\"News publisher files class action antitrust suit against Google, citing AI\u2019s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)\\nA new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google \u201csiphons off\u201d news publishers\u2019 content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI technologies like Google\u2019s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.\\n\\nIn the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is \u201cstarving the free press\u201d by sharing publishers\u2019 content on Google, losing them \u201cbillions of dollars.\u201d\\n\\nIn addition to new AI technologies, the suit points to Google\u2019s older question-and-answer technologies, like the \u201cKnowledge Graph\u201d launched in May 2012, as part of the problem.\", \"News publisher files class action antitrust suit against Google, citing AI\u2019s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)\\n\u201cWhen a user searches for information on a topic, Google displays a \u2018Knowledge Panel\u2019 to the right of the search results. This panel contains a summary of content drawn from the Knowledge Graph database,\u201d the complaint states. \u201cGoogle compiled this massive database by extracting information from Publishers\u2019 websites \u2014 what Google calls \u2018materials shared across the web\u2019 \u2014and from \u2018open source and licensed databases,'\u201d it says.\\n\\nBy 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the \u201ccollective intelligence\u201d that Google tapped into was content \u201cmisappropriated from Publishers,\u201d the complaint alleges.\\n\\nOther Google technologies, like \u201cFeatured Snippets\u201d where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from publishers\u2019 websites.\\n\\nMore importantly, perhaps, is the suit\u2019s tackling of how AI will impact publishers\u2019 businesses. The problem was recently detailed in a report on Thursday by The Wall Street Journal, which led with a shocking statistic.\", \"News publisher files class action antitrust suit against Google, citing AI\u2019s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)\\nWhen online magazine The Atlantic modeled what would happen if Google integrated AI into search, it found that 75% of the time the AI would answer the user\u2019s query without requiring a click-through to its website, losing it traffic. This could have a major impact on publishers\u2019 traffic going forward, as Google today drives nearly 40% of their traffic, according to data from Similarweb.\\n\\nSome publishers are now trying to get ahead of the problem. For example, Axel Springer just this week inked a deal with OpenAI to license its news for AI model training. But overall, publishers believe they\u2019ll lose somewhere between 20-40% of their website traffic when Google\u2019s AI products fully roll out, The WSJ\u2019s report noted.\\n\\nThe lawsuit reiterates this concern, claiming that Google\u2019s recent advances in AI-based search were implemented with \u201cthe goal of discouraging end-users from visiting the websites of Class members who are part of the digital news and publishing line of commerce.\u201d\", \"News publisher files class action antitrust suit against Google, citing AI\u2019s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)\\nSGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google\u2019s \u201cwalled garden\u201d as it \u201cplagiarizes\u201d their content. Publishers also can\u2019t block SGE because it uses the same web crawler as Google\u2019s general search service, GoogleBot.\\n\\nPlus, it says Google\u2019s Bard AI was trained on a dataset that included \u201cnews, magazine and digital publications,\u201d citing both a 2023 report from the News Media Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found that News and Media sites were the third largest category of AI training data.)\\n\\nThe case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google\u2019s part, by its destruction of chat messages \u2014 an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.\", \"News publisher files class action antitrust suit against Google, citing AI\u2019s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)\\nThe case also arrives alongside the filing of the U.S. Justice Department\u2019s lawsuit against Google for monopolizing digital ad technologies, and references the 2020 Justice Department\u2019s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent suit).\\n\\n\u201cThe anticompetitive effects of Google\u2019s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,\u201d reads an announcement posted to the website of the law firm handling the case, Hausfeld.\\n\\n\u201cPlaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,\u201d it states.\\n\\nA Google spokesperson offered a statement on the lawsuit, saying \u201cThis lawsuit is meritless.\"], \"connections\": [{\"entity\": \"TechCrunch\", \"relationship\": \"PUBLISHED_BY\"}, {\"entity\": \"Alphabet\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"Helena World Chronicle\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"U.S. District Court in D.C.\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"Search Generative Experience\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"Bard AI chatbot\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"Knowledge Graph\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"anticompetitive behavior\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"U.S. antitrust law\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"Sherman Act\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"Arkansas\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"question-and-answer technologies\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"Publishers\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"Knowledge Panel\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"Featured Snippets\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"class action antitrust suit\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"misappropriation of Publishers\u2019 content\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"The Wall Street Journal\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"report on Thursday\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"deal to license news for AI model training\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"SGE\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"Google Bard AI\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"GoogleBot\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"Google general search service\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"AdSense\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"News Media Alliance\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"Washington Post\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"Epic Games lawsuit against Google over app store antitrust issues\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"app store antitrust issues\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"U.S. Justice Department\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"Hausfeld\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"Helena World Chronicle, LLC\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"class action antitrust suit against Google\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"U.S. Justice Department lawsuit against Google\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"2020 Justice Department civil antitrust suit over search and search advertising\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"digital ad technologies\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"Clayton Act\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"search and search advertising\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"digital news and reference publishing\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"class-wide monetary and injunctive relief\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"free marketplace of ideas\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"free press\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"Epic Games\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"antitrust\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"The Atlantic\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"Axel Springer\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"Allen Institute for AI\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"class action lawsuit\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"consumers\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"AI\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"AI technologies\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"Similarweb\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"Google\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"artificial intelligence\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"D.C.\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"OpenAI\", \"relationship\": \"MENTIONS\"}, {\"entity\": \"labor\", \"relationship\": \"MENTIONS\"}]}"
+  },
+  {
+   "id": "e424daeacb3f4f6d",
+   "kind": "evidence",
+   "question": "Does the TechCrunch article claim that Google's release of the Gemini Pro model is a limited version compared to the full Gemini Ultra model, while The Verge article discusses Google's search engine deals with companies, and another TechCrunch article alleges Google's anticompetitive behavior towards news publishers, indicating different types of alleged actions by Google in each case?",
+   "gold_sentences": [
+    "The Justice Department is focused on the deals Google makes \u2014 with Apple but also with Samsung and Mozilla and many others \u2014 to ensure it is the default search engine on practically every platform.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google \u201csiphons off\u201d news publishers\u2019 content, their readers and ad revenue through anticompetitive means."
+   ],
+   "evidence": "{\"article\": \"Apple defends Google Search deal in court: \u2018There wasn\u2019t a valid alternative\u2019\", \"publisher\": \"The Verge\", \"relationship\": \"PUBLISHED_BY\", \"connected_entity\": \"The Verge\", \"passage\": \"Apple defends Google Search deal in court: \u2018There wasn\u2019t a valid alternative\u2019 (The Verge, 2023-09-26T17:01:22+00:00)\\nEddy Cue, in a dark suit, peered down at the monitor in front of him. The screens in the Washington, DC, courtroom had briefly malfunctioned and left witnesses with only binders, but now the tech was up and running \u2014 showing an image of three iPhones, each demonstrating a part of the phone\u2019s setup process. Cue squinted down at the screen.\\n\\n\u201cThe resolution on this is terrible,\u201d he said. \u201cYou should get a Mac.\u201d That got some laughs in an otherwise staid and quiet courtroom. Judge Amit Mehta, presiding over the case, leaned into his microphone and responded, \u201cIf Apple would like to make a donation\u2026\u201d That got even bigger laughs. Then everybody got back down to business.\\n\\nCue was on the stand as a witness in US v. Google, the landmark antitrust trial over Google\u2019s search business.\"}"
+  },
+  {
+   "id": "df13c296e34647b2",
+   "kind": "evidence",
+   "question": "What team, which has players like Steve Smith and Aaron Finch contributing to a score of 328 for 7 wickets in a 2015 World Cup semi-final and also won a match against India by just one run, recently experienced their first four-day game loss since January 2014 during a tour of India, as reported by 'The Roar | Sports Writers Blog' and 'Zee Business'?",
+   "gold_sentences": [
+    "The current tour of India is not a multi-format series, but the defeat in the one-off Test marks Australia\u2019s first loss in a four-day game since January 2014.",
+    "This was one of the closest matches that have been played between these two sides, as Australia won the match by just one run."
+   ],
+   "evidence": "{\"source\": \"The Roar | Sports Writers Blog\", \"article\": \"THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final\", \"passages\": [\"THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final (The Roar | Sports Writers Blog, 2023-10-28T21:06:03+00:00)\\nSTADE DE FRANCE \u2013 Twenty-eight years between drinks and drama was always on the cards between these two great foes. Little did we know just how much.\\n\\nBut just like that famous win at Ellis Park where Nelson Mandela handed over the William Webb Ellis Cup to Francois Pienaar, it was the Springboks who once again prevailed 12-11 in an instant classic.\\n\\nUnlike the blue skies that greeted Johannesburg and the Boeing 747 plane that sent shivers down the spines of everyone in attendance in 1995, rain and dampness poured down on the Stade de France.\\n\\nFacebook Twitter Whatsapp Reddit Email Share\\n\\nYet, nothing was going to dampen this evening as 80,065 fans poured in.\\n\\nIn a match of controversy, where cards of yellow and red were handed out quicker than a game of Uno, thundering shots both legal and illegal were put on by rugby\u2019s two greatest sides.\", \"THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final (The Roar | Sports Writers Blog, 2023-10-28T21:06:03+00:00)\\nSam Cane \u2013 the All Blacks captain \u2013 was forced to watch the match from the sidelines for 53 minutes after having his yellow card for a high shot on Jesse Kriel upgraded to red. His opposite in the number seven jersey, Siya Kolisi, was later shown a yellow card for a high shot on Ardie Savea, but returned.\\n\\nCheslin Kolbe \u2013 the magnificent winger who sealed their World Cup triumph four years earlier against England \u2013 meanwhile couldn\u2019t bare to watch from the sidelines after being shown a yellow card for a deliberate knockdown in the 73rd minute.\\n\\nAdvertisement\\n\\nIt was that kind of evening, where the margins were tiny and the outcomes almighty.\\n\\n\u201cThere are no ways I can explain it,\u201d Kolisi said.\\n\\n\u201cI want to give credit to the All Blacks. They took us to the end, they took us to a dark place. It shows what kind of team they are, to fight with a man down from early in the game.\", \"THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final (The Roar | Sports Writers Blog, 2023-10-28T21:06:03+00:00)\\nThey put us under so much pressure.\\n\\n\u201cCredit to my boys too for the fight. I am just grateful we could pull it off.\u201d\\n\\nSpeaking of mighty, Pieter-Steph du Toit \u2013 the 2019 World Rugby player of the year \u2013 played his best match in four years as he spearheaded the Springboks\u2019 physical onslaught. The back-rower made 28 tackles, each as bone-crunching as the next.\\n\\nAdvertisement\\n\\nBy claiming their third one-point knockout victory in a row, the Springboks moved into uncharted territory by leapfrogging the All Blacks by sealing their fourth World Cup. It was the second straight tournament the Springboks won in France, having beaten England at the same venue in 2007.\", \"THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final (The Roar | Sports Writers Blog, 2023-10-28T21:06:03+00:00)\\nA missed Richie Mo\u2019unga conversion following Beauden Barrett\u2019s 58th minute try \u2013 the only five-pointer of the match \u2013 ultimately proved the difference, as Handre Pollard\u2019s four three-pointers led the Springboks to World Cup glory.\\n\\nThe All Blacks had their chances, but their usual safe handling, a feature throughout the World Cup after their first-up loss to France, evaded them against the Springboks\u2019 blitz defence in the wet conditions.\\n\\nAll night the All Blacks\u2019 timing was off and the forced ball from Savea out wide just as the men in black saw space and looked to open up the Springboks in the 80th minute proved to be killer blow.\\n\\nWayne Barnes, who was booed relentlessly, called a scrum reset as the seconds ticked by.\\n\\nAdvertisement\\n\\nMoments later, their hearts sunk as the Springboks managed to win the scrum and then hang onto the ball.\", \"THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final (The Roar | Sports Writers Blog, 2023-10-28T21:06:03+00:00)\\nThe victory was the perfect sign-off for the Springboks\u2019 management, with director of rugby Rassie Erasmus set to follow head coach Jacques Nienaber out.\\n\\nThe duo will go down as the greatest coaching duo in rugby history, having led the Springboks to back-to-back World Cup triumphs.\\n\\n\u201cWe came a long way with the players. We always planned for this World Cup, since 2018,\u201d Nienaber said.\\n\\n\u201cMassive credit to our fans. They were special from South Africa, 62 million people, the videos we had to play from them. It was unbelievable.\u201d\\n\\nVeteran back-rower Duane Vermeulen will also call time on his illustrious career.\\n\\nAll Blacks coach Ian Foster\u2019s tenure in charge has also come to an end, with Scott Robertson to take over following a bumpy four years in charge.\", \"THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final (The Roar | Sports Writers Blog, 2023-10-28T21:06:03+00:00)\\nAdvertisement\\n\\nRobertson will have an almighty task on his hand, with multiple generational players including Dane Coles, Sam Whitelock, Brodie Retallick and Aaron Smith to call time on their international careers. Others like Ardie Savea, Mo\u2019unga, Beauden Barrett and Shannon Frizell will also head to Japan.\\n\\nWhile Foster didn\u2019t want to take anything away from the Springboks\u2019 win, he said the game had some issues to sort out regarding the officiating.\\n\\n\u201cI\u2019m proud of our guys, to go down to that red card so early and fight our way back and give ourselves a chance is pretty special,\u201d the departing All Blacks coach said.\\n\\n\u201cI don\u2019t think it went wrong in any clear [place on the pitch], it was a real arm wrestle, both teams have their moment, incredibly proud of the way we fought and to get within a whisker of pulling it off is heart-breaking.\", \"THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final (The Roar | Sports Writers Blog, 2023-10-28T21:06:03+00:00)\\n\u201cThis group is very proud to be All Blacks, very proud to play for their country and have worked incredibly hard to get here.\\n\\n\u201cWhile I am so proud of what we did and how we worked we have to give it to South Africa, they are a quality team. They have had a few close victories in this tournament and are a different class. It\u2019s special for them but it equally hurts for us. I can\u2019t ask for much more than we did, we couldn\u2019t put more out on the park.\u201d\\n\\nAdvertisement\\n\\nControversy was on display from the outset, as Frizell was shown a yellow card for an illegal cleanout on Springboks hooker Bongi Mbonambi. The incident saw the hooker, who was cleared earlier in the week by World Rugby following an alleged racial slur on England back-rower Tom Curry, replaced by Deon Fourie in the third minute.\\n\\nThe penalty allowed Pollard to step up and bang over three points.\", \"THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final (The Roar | Sports Writers Blog, 2023-10-28T21:06:03+00:00)\\nThe penalty allowed Pollard to step up and bang over three points.\\n\\nThe All Blacks were on the backfoot much of the opening quarter and, after Ethan de Groot was pinged for not rolling away, the Springboks moved further ahead after 12 minutes.\\n\\nA wicked bounce following a lovely Jordie Barrett chip kick denied Savea a try soon after. But the All Blacks were on the scoreboard via Mo\u2019unga moments later as Barnes was playing advantage.\\n\\nBut the Springboks restored their six-point lead soon after as Savea was pinged for not releasing. Barnes later apologised, with the No.8 having a split-second separation.\\n\\nThe Springboks\u2019 rush defence caused the All Blacks problems all evening, as Damian de Allende and Kriel forced their opponents into errors. Will Jordan, the impressive young outside back who scored eight tries, had a difficult night and was replaced midway through the second half.\", \"THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final (The Roar | Sports Writers Blog, 2023-10-28T21:06:03+00:00)\\nThe biggest error was around the corner, as Kriel stepped back into the defence and Cane failed to drop his body height and clocked the centre in the jaw. He didn\u2019t return.\\n\\nAdvertisement\\n\\nThe Springboks took a 12-3 lead after 34 minutes when the All Blacks once again failed to release on their goal line. Pollard licked his lips and said \u2018thanks\u2019.\\n\\nThe All Blacks managed to cut the deficit to 12-6 after 37 minutes when Eben Etzebeth was caught offside and denied his opponents some quick ball.\\n\\nFoster\u2019s men breathed a sigh of relief when Kolisi blew a chance out wide when he tucked the ball under his arms and went himself after Beauden Barrett failed to collect a high ball in the 42nd minute.\\n\\nMinutes later and Kolisi was off, as he cannoned into Savea.\", \"THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final (The Roar | Sports Writers Blog, 2023-10-28T21:06:03+00:00)\\nMinutes later and Kolisi was off, as he cannoned into Savea. He would later return, much to the anger of the New Zealanders in the crowd who were calling for justice.\\n\\nSensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide. It came back to haunt them, as their usually silky and composed skill sets failed them.\\n\\nThat much was true when the TMO intervened after Smith thought he had a try in his final Test, but an error at the lineout cancelled out the five-pointer.\\n\\nAdvertisement\\n\\nEventually the All Blacks did have a try, as Mark Telea, the All Blacks\u2019 best and biggest attacking threat all night, managed to get on the outside and draw in two defenders before offloading to Beauden Barrett. But Mo\u2019unga missed the conversion to leave them trailing by a point.\", \"THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final (The Roar | Sports Writers Blog, 2023-10-28T21:06:03+00:00)\\nBut Mo\u2019unga missed the conversion to leave them trailing by a point.\\n\\nThat lone point would prove the difference, as the Springboks celebrated a remarkable victory by a remarkable side.\"], \"connected_entities\": [\"The Roar\", \"1995 win at Ellis Park\", \"Nelson Mandela\", \"Francois Pienaar\", \"William Webb Ellis Cup\", \"Boeing 747\", \"Boks\", \"Sam Cane\", \"Jesse Kriel\", \"Siya Kolisi\", \"Ardie Savea\", \"Cheslin Kolbe\", \"high shot\", \"Pieter-Steph du Toit\", \"Springboks\", \"France\", \"World Cup\", \"Richie Mo\u2019unga\", \"Beauden Barrett\", \"Handre Pollard\", \"Savea\", \"Wayne Barnes\", \"World Cup final\", \"Rassie Erasmus\", \"Jacques Nienaber\", \"Duane Vermeulen\", \"Scott Robertson\", \"Robertson\", \"Sam Whitelock\", \"Brodie Retallick\", \"Shannon Frizell\", \"officiating\", \"Frizell\", \"Bongi Mbonambi\", \"Tom Curry\", \"Deon Fourie\", \"illegal cleanout\", \"racial slur\", \"RWC final\", \"Ethan de Groot\", \"Jordie Barrett\", \"Mo\u2019unga\", \"Barnes\", \"Damian de Allende\", \"Kriel\", \"Will Jordan\", \"Cane\", \"Kolisi\", \"Smith\", \"Mark Telea\", \"South Africa\", \"Stade de France\", \"Eben Etzebeth\", \"England\", \"Dane Coles\", \"Ellis Park\", \"Foster\", \"Japan\", \"Johannesburg\", \"Pollard\", \"World Rugby\", \"All Blacks\", \"Ian Foster\", \"Aaron Smith\"]}"
+  },
+  {
+   "id": "0b2fbb33368712fe",
+   "kind": "evidence",
+   "question": "After the report by Fortune on October 4, 2023, regarding Sam Bankman-Fried's use of a front for secret access to customer funds, and the subsequent report by TechCrunch on October 7, 2023, alleging that Sam Bankman-Fried knowingly committed fraud, did The Verge report on Sam Bankman-Fried's trial indicate consistent or inconsistent information regarding his actions related to customer funds?",
+   "gold_sentences": [
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX\u2019s total trading revenue.",
+    "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had \u201csecret access\u201d to customer money\u2014both cash and crypto\u2014the government claimed.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "the verge's courtroom coverage portrays sam bankman-fried's defense as increasingly damaging. on the stand, he struggled to answer questions, admitted failing to create a risk team or safeguards against alameda spending ftx customer funds, and said he did not investigate an $8 billion shortfall despite warnings. prosecutors highlighted testimony from caroline ellison and others tying him to customer-fund misuse and deception; defense cross-examination was described as ineffective. bankman-fried was ultimately convicted on seven counts, including"
+  },
+  {
+   "id": "582ab4285e56ec07",
+   "kind": "evidence",
+   "question": "After the report by Fortune on October 4, 2023, regarding Sam Bankman-Fried's use of a front for secret access to customer funds, and the subsequent report by TechCrunch on October 7, 2023, alleging that Sam Bankman-Fried knowingly committed fraud, did The Verge report on Sam Bankman-Fried's trial indicate consistent or inconsistent information regarding his actions related to customer funds?",
+   "gold_sentences": [
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX\u2019s total trading revenue.",
+    "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had \u201csecret access\u201d to customer money\u2014both cash and crypto\u2014the government claimed.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "at his ftx fraud trial, sam bankman-fried portrayed himself as overworked and largely unaware of alameda's finances, customer-fund borrowing, and an $8 billion liability. the verge contrasted these claims with testimony and evidence: alameda alone had a code-enabled negative balance, avoided liquidation, and received a credit line that grew to $65 billion. former executives described customer money being used, losses concealed, and ftx's insurance fund misrepresented. bankman-fried's"
+  },
+  {
+   "id": "01ee1f586e903a3b",
+   "kind": "evidence",
+   "question": "After the report by Fortune on October 4, 2023, regarding Sam Bankman-Fried's use of a front for secret access to customer funds, and the subsequent report by TechCrunch on October 7, 2023, alleging that Sam Bankman-Fried knowingly committed fraud, did The Verge report on Sam Bankman-Fried's trial indicate consistent or inconsistent information regarding his actions related to customer funds?",
+   "gold_sentences": [
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX\u2019s total trading revenue.",
+    "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had \u201csecret access\u201d to customer money\u2014both cash and crypto\u2014the government claimed.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "at sam bankman-fried's 2023 trial, prosecutors said he secretly used ftx customer funds through alameda research for risky bets, political donations, and personal purposes, while misleading customers, lenders, and investors. his lawyer portrayed him as a good-faith startup founder whose businesses failed amid crypto-market turmoil, blaming alameda ceo caroline ellison's risk management. a customer testified he could not withdraw nearly $100,000; former friend and employee adam yedidia said he feared code"
+  },
+  {
+   "id": "c0a6f0a985f9d70a",
+   "kind": "evidence",
+   "question": "Between the TechCrunch report on Sam Bankman-Fried's legal situation published after October 2, 2023, and The Verge's coverage of Sam Bankman-Fried's testimony, was there a change in the narrative regarding his ability to manage FTX and Alameda Research?",
+   "gold_sentences": [
+    "SBF, as he\u2019s known, has pleaded not-guilty to some seven charges of fraud and conspiracy.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "at his ftx fraud trial, sam bankman-fried portrayed himself as overworked and largely unaware of alameda's finances, customer-fund borrowing, and an $8 billion liability. the verge contrasted these claims with testimony and evidence: alameda alone had a code-enabled negative balance, avoided liquidation, and received a credit line that grew to $65 billion. former executives described customer money being used, losses concealed, and ftx's insurance fund misrepresented. bankman-fried's"
+  },
+  {
+   "id": "68390a6fa2c60ffb",
+   "kind": "evidence",
+   "question": "Between the report from Fortune published on October 4, 2023, which discussed Mark Cohen's claims about Caroline Ellison, and the subsequent reports from The Verge regarding statements made by Caroline Ellison, was there a change in the narrative concerning her role and actions as the CEO of Alameda Research?",
+   "gold_sentences": [
+    "When Changpeng Zhao, the CEO of Binance, announced on Twitter that he intended to acquire FTX, Ellison confessed the theft of customer funds to him and a few other employees, Drappi said.",
+    "In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from the inherent risk of the crypto markets."
+   ],
+   "evidence": "at sam bankman-fried's fraud trial, former alameda ceo and ex-girlfriend caroline ellison testified that he directed her to commit crimes and concealed alameda's dependence on ftx customer funds. she described an undocumented $65 billion credit line, customer money used to buy binance's ftx stake, and misleading valuations of ftt and other tokens. a spreadsheet she prepared showed alameda might be unable to repay loans-and would certainly fail if it invested $3 billion-even assuming access to"
+  },
+  {
+   "id": "103c5e8b354283b2",
+   "kind": "evidence",
+   "question": "Between the TechCrunch report on Sam Bankman-Fried's actions published before October 31, 2023, and The Verge report on Sam Bankman-Fried's acknowledgment of financial discrepancies, was there a change in the narrative regarding Sam Bankman-Fried's awareness of the financial issues?",
+   "gold_sentences": [
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.",
+    "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he\u2019d been told."
+   ],
+   "evidence": "the verge's courtroom coverage portrays sam bankman-fried's defense as increasingly damaging. on the stand, he struggled to answer questions, admitted failing to create a risk team or safeguards against alameda spending ftx customer funds, and said he did not investigate an $8 billion shortfall despite warnings. prosecutors highlighted testimony from caroline ellison and others tying him to customer-fund misuse and deception; defense cross-examination was described as ineffective. bankman-fried was ultimately convicted on seven counts, including"
+  },
+  {
+   "id": "555127e17c45c0bf",
+   "kind": "evidence",
+   "question": "Was there inconsistency in the TechCrunch reports on Google's engagement in anticompetitive behavior between the report on Epic Games' antitrust battle with Google published on November 6, 2023, and the report on the news publisher's antitrust suit against Google published on December 15, 2023?",
+   "gold_sentences": [
+    "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google \u201csiphons off\u201d news publishers\u2019 content, their readers and ad revenue through anticompetitive means."
+   ],
+   "evidence": "epic games' antitrust trial against google began nov. 6, 2023, after google settled with match and u.s. states. epic alleges google's play store commissions and agreements with device makers and developers suppress rival app stores and payment services, citing sideloading barriers, android restrictions, and deals such as project hug. google says android permits sideloading, competes with apple and other stores, and offers developers billing discounts; it argues its policies support security and innovation."
+  },
+  {
+   "id": "faa0a7c17845590d",
+   "kind": "evidence",
+   "question": "Did Mashable report on the Echelon Connect Sport being on sale for less than $400 off during Black Friday before Fortune mentioned that Delta SkyMiles\u00ae Gold Business American Express Card cardholders receive a 20% statement credit on eligible in-flight purchases with Delta?",
+   "gold_sentences": [
+    "And for Black Friday, it's on sale for over $400 off, knocking the price down to a super impressive $297."
+   ],
+   "evidence": "the delta skymiles gold business amex suits small-business owners who fly delta often. it offers 75,000 miles after $6,000 in purchases within six months; a first-year $0 annual fee, then $99; a free checked bag and priority boarding on delta; and no foreign-transaction fees. earn 2x miles on delta purchases, select u.s. advertising, u.s. shipping, and dining; 1x elsewhere. it has no lounge access. less"
+  },
+  {
+   "id": "60c7bcd373565060",
+   "kind": "evidence",
+   "question": "Between the Sporting News report on NBA Rookie of the Year odds published on October 4, 2023, and the Sporting News report on line shopping in sports betting published on November 6, 2023, was there a change in how Sportsbooks adjust and tighten betting lines based on gathered information?",
+   "gold_sentences": [
+    "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook.",
+    "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."
+   ],
+   "evidence": "the october 2023 article named victor wembanyama the early nba rookie of the year favorite, citing his elite size, defense and offensive potential. scoot henderson and chet holmgren were other leading contenders. roty futures are available before and during the season; betting early may offer better value but carries greater uncertainty, while waiting provides more performance data but typically worse odds. the article outlines sportsbook sign-up and wagering steps, urges legal betting, and lists draftkings,"
+  },
+  {
+   "id": "a3574a6dd893f040",
+   "kind": "evidence",
+   "question": "After Sporting News reported on Najee Harris being the preferred goal-line back for the Steelers with touchdowns in three recent games on December 7, 2023, did Rivals report any touchdowns by Jonah Coleman for the Wildcats in the game against Utah before that date?",
+   "gold_sentences": [
+    "As an added bonus, Harris is also the preferred goal-line back, scoring in three of those games.",
+    "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."
+   ],
+   "evidence": "week 5: sit najee harris against baltimore. despite improved efficiency (4.3 yards per carry, strong explosive-run and tackle-avoidance rates), he has no touchdowns and little goal-line opportunity on a steelers offense starved of red-zone plays. the ravens allow 4.0 yards per carry and no rb rushing touchdowns. harris remains a low-end option; consider higher-upside alternatives. rhamondre stevenson has received at least 16 touches every game but has yet to reach"
+  },
+  {
+   "id": "40638f604f6267de",
+   "kind": "evidence",
+   "question": "After Sporting News reported on Najee Harris being the preferred goal-line back for the Steelers with touchdowns in three recent games on December 7, 2023, did Rivals report any touchdowns by Jonah Coleman for the Wildcats in the game against Utah before that date?",
+   "gold_sentences": [
+    "As an added bonus, Harris is also the preferred goal-line back, scoring in three of those games.",
+    "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."
+   ],
+   "evidence": "sporting news' week 14 running-back rankings place several players in the mid-to-lower tiers, including jerome ford, alexander mattison, najee harris, james cook, zack moss and keaton mitchell. in ppr, jaylen warren remains ahead of harris, but harris is a confident start and high-ceiling rb2: he's running well, contributes as a receiver and should get screens and checkdowns with kenny pickett out. keaton mitchell is highlighted as a potential"
+  },
+  {
+   "id": "581390a3b4a71bec",
+   "kind": "evidence",
+   "question": "After Sporting News reported on Najee Harris being the preferred goal-line back for the Steelers with touchdowns in three recent games on December 7, 2023, did Rivals report any touchdowns by Jonah Coleman for the Wildcats in the game against Utah before that date?",
+   "gold_sentences": [
+    "As an added bonus, Harris is also the preferred goal-line back, scoring in three of those games.",
+    "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."
+   ],
+   "evidence": "the nov. 17, 2023 cbs sports mock draft projected cincinnati taking florida state wr keon coleman (no. 18) to replace likely-departing tee higgins with a big-play target. new orleans would select ohio state edge jt tuimoloau (no. 19) as cam jordan's eventual successor. arizona would add penn state edge chop robinson (no. 20), and minnesota would draft lsu qb jayden daniels (no. 21) amid uncertainty over kirk"
+  },
+  {
+   "id": "afb71e1f46c09131",
+   "kind": "evidence",
+   "question": "After Sporting News reported on Najee Harris being the preferred goal-line back for the Steelers with touchdowns in three recent games on December 7, 2023, did Rivals report any touchdowns by Jonah Coleman for the Wildcats in the game against Utah before that date?",
+   "gold_sentences": [
+    "As an added bonus, Harris is also the preferred goal-line back, scoring in three of those games.",
+    "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."
+   ],
+   "evidence": "sporting news' week 12 advice highlighted rhamondre stevenson as a sleeper after 231 scrimmage yards and a touchdown over two games, and urged starting kyren williams once activated from injured reserve against a weak cardinals defense. derrick henry remained startable against carolina, but his recent 64 yards on 23 touches warranted caution; tyjae spears was suggested as insurance. week 12 and 14 ranking excerpts list several low-ranked backs, including jamaal williams, samaje perine,"
+  },
+  {
+   "id": "24f613e54ed659a6",
+   "kind": "evidence",
+   "question": "Has the focus of the European Commission's involvement reported by TechCrunch changed from addressing competition concerns in Amazon's iRobot purchase to facilitating dialogue and assessing issues with Meta's ad-free subscription service to probing Elon Musk's X over illegal content risks and moderation practices?",
+   "gold_sentences": [
+    "The process also loops in the European Commission to help facilitate dialogue, assess issues and bring pressure to bear on unfair practices.",
+    "We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage."
+   ],
+   "evidence": "the european commission opened its first confirmed formal investigation under the digital services act, targeting elon musk's x. it will examine the platform's handling of illegal-content risks, content moderation, deceptive design (\"dark patterns\"), advertising transparency, and researcher data access. the probe follows months of commission inquiries, including urgent questions about illegal content and disinformation related to the israel-hamas war; it is not necessarily connected to a recent privacy-group complaint about x's adtech."
+  },
+  {
+   "id": "777598bfd0bbdbba",
+   "kind": "evidence",
+   "question": "Has the focus of the European Commission's involvement reported by TechCrunch changed from addressing competition concerns in Amazon's iRobot purchase to facilitating dialogue and assessing issues with Meta's ad-free subscription service to probing Elon Musk's X over illegal content risks and moderation practices?",
+   "gold_sentences": [
+    "The process also loops in the European Commission to help facilitate dialogue, assess issues and bring pressure to bear on unfair practices.",
+    "We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage."
+   ],
+   "evidence": "the eu has launched its first digital services act probe into x, examining illegal-content risks, content moderation, transparency and potentially deceptive design. regulators will assess whether crowdsourced opinions can replace formal moderation and whether cuts to x's moderation teams increased users' exposure to harm. the investigation will test the eu's resolve to enforce its rules-and could lead to an expensive confrontation with elon musk."
+  },
+  {
+   "id": "cd072b1fb7381348",
+   "kind": "evidence",
+   "question": "Has the focus of the European Commission's involvement reported by TechCrunch changed from addressing competition concerns in Amazon's iRobot purchase to facilitating dialogue and assessing issues with Meta's ad-free subscription service to probing Elon Musk's X over illegal content risks and moderation practices?",
+   "gold_sentences": [
+    "The process also loops in the European Commission to help facilitate dialogue, assess issues and bring pressure to bear on unfair practices.",
+    "We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage."
+   ],
+   "evidence": "the eu is signaling a possible investigation into x under the digital services act, though officials told techcrunch no formal investigation had begun. the commission is scrutinizing x's handling of illegal-content notices and complaints, risk assessments, and mitigation measures. an investigation could improve public transparency, as x stopped publishing quarterly reports after going private. a fine could reach 6% of annual revenue-about $180 million if musk's projected $3 billion revenue is accurate."
+  },
+  {
+   "id": "6a9f1522b6b2af8e",
+   "kind": "evidence",
+   "question": "Has the approach of Sportsbooks in adjusting betting lines and odds, as reported by Sporting News before October 4, 2023, and before November 1, 2023, remained consistent?",
+   "gold_sentences": [
+    "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response.",
+    "If a significant amount of money is being placed on one team or participant, sportsbooks might adjust the odds to balance their liability."
+   ],
+   "evidence": "sports bets include spreads (favorites must win by more than the handicap; underdogs cover by staying within it or winning), moneylines (outright winner), totals (combined scoring or other results above/below a line), and props (specific events or statistics). exact-line ties usually push and refund stakes; half-points avoid pushes. odds use american, decimal, or fractional formats and shift with wagers, injuries, news, and live action. compare sportsbooks before betting: line shopping can improve prices"
+  },
+  {
+   "id": "4c72261333582d3b",
+   "kind": "evidence",
+   "question": "Between the TechCrunch report on Google's antitrust battle with Epic Games published on November 6, 2023, and the TechCrunch report on a class action antitrust suit filed against Google by a news publisher published on December 15, 2023, was there inconsistency in the portrayal of Google's involvement in anticompetitive practices?",
+   "gold_sentences": [
+    "But it didn\u2019t release the full model, Gemini Ultra \u2014 only a \u201clite\u201d version called Gemini Pro.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google \u201csiphons off\u201d news publishers\u2019 content, their readers and ad revenue through anticompetitive means."
+   ],
+   "evidence": "epic games' antitrust trial against google began nov. 6, 2023, after google settled with match and u.s. states. epic alleges google's play store commissions and agreements with device makers and developers suppress rival app stores and payment services, citing sideloading barriers, android restrictions, and deals such as project hug. google says android permits sideloading, competes with apple and other stores, and offers developers billing discounts; it argues its policies support security and innovation."
+  },
+  {
+   "id": "33785fef1265ac6b",
+   "kind": "evidence",
+   "question": "Between the TechCrunch report on Meta's moderation issues published on October 19, 2023, and the TechCrunch report on Meta's legislative proposal regarding teen app downloads published on November 15, 2023, was there a change in the type of challenges Meta is addressing in the public sphere, moderation bias or parental control over app downloads?",
+   "gold_sentences": [
+    "Al Saadi said that her frustration with Meta is common among Palestinians, both in occupied territories and across the diaspora."
+   ],
+   "evidence": "meta backed federal legislation requiring parental approval for under-16s' app downloads, arguing app stores should enforce protections amid inconsistent state laws. critics say this shifts responsibility from meta, whose teen-safety practices face scrutiny. a lawsuit by 42 states and d.c. alleges meta knowingly allowed under-13s on instagram and facebook, collected their data without parental consent, and minimized the problem. cited internal records include millions of young users and fewer than 164,000 of 402,000 reported"
+  },
+  {
+   "id": "91d6550dec666319",
+   "kind": "evidence",
+   "question": "After TechCrunch reported on the shutdown of Pebble, the Twitter alternative previously known as T2, on October 24, 2023, did the role of social media as highlighted by FOX News - Health in the \"Save Lucas\" campaign by The Goeller family on December 9, 2023, remain consistent or inconsistent with the importance of social media's role as mentioned in the TechCrunch article?",
+   "gold_sentences": [
+    "The Goellers are now seeking support again, launching the \"Save Lucas\" campaign across social media."
+   ],
+   "evidence": "pebble, formerly t2, is shutting down after failing to gain sufficient traction: it peaked at 3,000 daily users among 20,000 registered, then fell to 1,000 after rebranding. founders cited crowded competition, x's enduring network effects, no native app, a weaker brand and a community that may have been too focused on safety to foster lively debate and breaking news. despite promising early retention and invite conversion, the team ran out of time. users"
+  },
+  {
+   "id": "fd092b793ea85210",
+   "kind": "evidence",
+   "question": "Between the report from The Age on October 22, 2023, claiming that Google manipulates Search to minimize ad revenue, and the report from TechCrunch on December 15, 2023, alleging that Google \"siphons off\" news publishers' content and ad revenue through anticompetitive means, is there consistency in the portrayal of Google's influence on ad revenue and content distribution?",
+   "gold_sentences": [
+    "Google\u2019s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence."
+   ],
+   "evidence": "the verge argues that google has shaped and controlled the internet for roughly 25 years, making editorial choices about what people see while presenting itself as neutral. seo tactics further distort information, but their influence pales beside google's advertising-driven power and profits. the result falls short of the internet's promise as a public library: truth, scams, and propaganda appear together, fueling distrust. the article calls for recognizing search engines' influence and the conflicts between public information needs and corporate interests."
+  },
+  {
+   "id": "8cf6f4f291e81ec2",
+   "kind": "evidence",
+   "question": "Between the report from The Age on October 22, 2023, claiming that Google manipulates Search to minimize ad revenue, and the report from TechCrunch on December 15, 2023, alleging that Google \"siphons off\" news publishers' content and ad revenue through anticompetitive means, is there consistency in the portrayal of Google's influence on ad revenue and content distribution?",
+   "gold_sentences": [
+    "Google\u2019s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence."
+   ],
+   "evidence": "the article argues that google's search experience has changed through ads and efforts to keep users within its product ecosystem, while aggressive seo has further degraded results. google says its core criteria have barely changed and labels tactics it dislikes as spam; though it has improved at detecting manipulation, the boundary between acceptable and prohibited seo remains blurry and enforcement inconsistent, fueling industry frustration."
+  },
+  {
+   "id": "49fecbc449fbfaa6",
+   "kind": "evidence",
+   "question": "Between the report by Business Today | Latest Stock Market And Economy News India on Israel's intelligence situation published on October 7, 2023, and the report by Fortune on the humanitarian conditions in Gaza published on October 13, 2023, was there no change in the portrayal of Israel's security and humanitarian actions?",
+   "gold_sentences": [
+    "Another user said that no one can carry out such a major attack against Israel without intelligence support."
+   ],
+   "evidence": "before the october 2023 war, gaza's emerging tech sector supported startups, training and international outsourcing, including work for nvidia, apple and microsoft. the article reports that israeli bombardment and blockade damaged offices, universities, telecoms and power infrastructure, leaving gaza's tech industry largely unable to function. workers faced displacement, danger and communications blackouts; west bank businesses also slowed amid insecurity. the destruction threatens years of growth, investment and employment. the report situates this amid israel's response to hamas"
+  },
+  {
+   "id": "44eed3d3d09cd304",
+   "kind": "evidence",
+   "question": "Between the report from The Verge on September 28, 2023, concerning Sam Bankman-Fried's image before the collapse of FTX, and the report from The Verge on October 31, 2023, regarding Sam Bankman-Fried's knowledge of financial discrepancies, was there a change in the portrayal of Sam Bankman-Fried's awareness of the financial issues within FTX?",
+   "gold_sentences": [
+    "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he\u2019d been told.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "at his ftx fraud trial, sam bankman-fried portrayed himself as overworked and largely unaware of alameda's finances, customer-fund borrowing, and an $8 billion liability. the verge contrasted these claims with testimony and evidence: alameda alone had a code-enabled negative balance, avoided liquidation, and received a credit line that grew to $65 billion. former executives described customer money being used, losses concealed, and ftx's insurance fund misrepresented. bankman-fried's"
+  },
+  {
+   "id": "052447e0c4ab1bf3",
+   "kind": "evidence",
+   "question": "After Seeking Alpha recommended a Hold rating for GitLab Inc. on December 3, 2023, due to valuation concerns, did TechCrunch's report on December 18, 2023, regarding the significant pressure on tech companies' valuations reflect a consistent or inconsistent viewpoint on the valuation pressures faced by tech companies like GitLab Inc.?",
+   "gold_sentences": [
+    "The first of these is the fact that tech companies continue to see huge pressure on their valuations."
+   ],
+   "evidence": "techcrunch's feb. 2023 roundup reported layoffs across nine tech companies: twitter cut 200+ employees (headcount down over 70% since musk's takeover); poshmark affected under 2%; green labs may cut at least 50%; chipper cash cut about 100, nearly a third, after an earlier 12.5% reduction. github planned a 10% reduction; yahoo cut 1,600 adtech jobs (20%); gitlab cut"
+  },
+  {
+   "id": "648f6e4600929b7e",
+   "kind": "evidence",
+   "question": "After Seeking Alpha recommended a Hold rating for GitLab Inc. on December 3, 2023, due to valuation concerns, did TechCrunch's report on December 18, 2023, regarding the significant pressure on tech companies' valuations reflect a consistent or inconsistent viewpoint on the valuation pressures faced by tech companies like GitLab Inc.?",
+   "gold_sentences": [
+    "The first of these is the fact that tech companies continue to see huge pressure on their valuations."
+   ],
+   "evidence": "techcrunch's oct. 13 newsletter says a survey of 50+ founders found no consensus on whether events pay off; value depends on circumstances. it also covers ai's risks and creative-economy debate, meta quest 3, pixel 8, sonos's overturned $32.5m award, reddit apps, creator platforms, and google making passkeys the default. nov. 3 argues startups should tackle difficult, defensible problems. early-stage high-growth firms may still raise"
+  },
+  {
+   "id": "49073ab8dd690a77",
+   "kind": "evidence",
+   "question": "Between the TechCrunch report on Sam Bankman-Fried's trial and the subsequent report by the same source on the prosecution's allegations against him, was there inconsistency in the portrayal of the charges he is facing?",
+   "gold_sentences": [
+    "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he\u2019s guilty of seven counts of fraud and conspiracy.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "the verge's courtroom coverage portrays sam bankman-fried's defense as increasingly damaging. on the stand, he struggled to answer questions, admitted failing to create a risk team or safeguards against alameda spending ftx customer funds, and said he did not investigate an $8 billion shortfall despite warnings. prosecutors highlighted testimony from caroline ellison and others tying him to customer-fund misuse and deception; defense cross-examination was described as ineffective. bankman-fried was ultimately convicted on seven counts, including"
+  },
+  {
+   "id": "fd378e658950a330",
+   "kind": "evidence",
+   "question": "Between the report from The Verge on Google's impact on the internet's appearance published on November 1, 2023, and the report from TechCrunch on a class action antitrust suit against Google published later, was there a change in the portrayal of Google's influence on the digital ecosystem?",
+   "gold_sentences": [
+    "The company did accomplish that goal, but in doing so, it inadvertently and profoundly changed how the internet looked.",
+    "This whole line of argument is called \u201cmarket definition.\u201d If the court decides the relevant market is phones and app stores, not specifically Android ones, then Google\u2019s on the road to victory.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google \u201csiphons off\u201d news publishers\u2019 content, their readers and ad revenue through anticompetitive means."
+   ],
+   "evidence": "the verge argues that google has shaped and controlled the internet for roughly 25 years, making editorial choices about what people see while presenting itself as neutral. seo tactics further distort information, but their influence pales beside google's advertising-driven power and profits. the result falls short of the internet's promise as a public library: truth, scams, and propaganda appear together, fueling distrust. the article calls for recognizing search engines' influence and the conflicts between public information needs and corporate interests."
+  },
+  {
+   "id": "cdcaf18265870f23",
+   "kind": "evidence",
+   "question": "Did Apple, after The Verge reported on September 26, 2023, that it criticized its Google Search deal by stating there was a valid alternative, and TechCrunch later reported on November 13, 2023, that Google spent less than $26.3 billion in 2021 to secure its position as the default search engine on various platforms, maintain a rationale for its Google Search deal that is inconsistent with Google's aggressive spending to maintain default search engine status across platforms? (The Verge/TechCrunch)",
+   "gold_sentences": [
+    "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."
+   ],
+   "evidence": "the doj argues google's default-search deals and platform control suppress competition and deprive rivals of data; google says users prefer its superior product. trial revelations included $26.3 billion spent on defaults in 2021; android agreements requiring app preloads and, separately, default search/chrome; and lucrative queries such as iphone, insurance and travel. expedia said google ads became costlier while traffic stagnated as google promoted its own travel listings. evidence suggested a \u20ac5 billion eu fine prompted search"
+  },
+  {
+   "id": "df0b564fbac7ebae",
+   "kind": "evidence",
+   "question": "Did Apple, after The Verge reported on September 26, 2023, that it criticized its Google Search deal by stating there was a valid alternative, and TechCrunch later reported on November 13, 2023, that Google spent less than $26.3 billion in 2021 to secure its position as the default search engine on various platforms, maintain a rationale for its Google Search deal that is inconsistent with Google's aggressive spending to maintain default search engine status across platforms? (The Verge/TechCrunch)",
+   "gold_sentences": [
+    "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."
+   ],
+   "evidence": "apple executive eddy cue defended apple's long-running agreement making google the default search engine on apple devices, saying google was the best product and there was \"no valid alternative.\" he said apple never seriously considered switching or building search, and preferred not to add search-engine choices during iphone setup. the doj argued the lucrative deal entrenches google's dominance and conflicts with apple's privacy concerns. cue acknowledged apple viewed its privacy protections as stronger, while google's lawyer emphasized the partnership's history, product integration"
+  },
+  {
+   "id": "03467346cc47d7be",
+   "kind": "evidence",
+   "question": "After Sporting News reported on Alejandro Mata's successful 31-yard field goal for Colorado on October 28, 2023, did the same news source report a successful or unsuccessful field goal attempt by Jayden Fielding in a later article?",
+   "gold_sentences": [
+    "The Buckeyes settled for a 52-yard field goal late in the first half, which Jayden Fielding missed wide left."
+   ],
+   "evidence": "colorado edged arizona state 27-24 in tempe, earning its first pac-12 win and snapping an eight-game conference losing streak to improve to 4-2. after trailing 17-14 entering the fourth quarter, colorado took a 24-17 lead, then asu tied it with 50 seconds left. shedeur sanders' 43-yard completion to javon antonio set up alejandro mata's winning 43-yard field goal with 12 seconds remaining. sanders threw for"
+  },
+  {
+   "id": "9903c90a25faa62f",
+   "kind": "evidence",
+   "question": "After Sporting News reported on Alejandro Mata's successful 31-yard field goal for Colorado on October 28, 2023, did the same news source report a successful or unsuccessful field goal attempt by Jayden Fielding in a later article?",
+   "gold_sentences": [
+    "The Buckeyes settled for a 52-yard field goal late in the first half, which Jayden Fielding missed wide left."
+   ],
+   "evidence": "late in the first half, jaguars coach doug pederson called a successful fake punt: logan cooke completed a 17-yard pass to tim jones, keeping jacksonville's drive alive. with 34 seconds left, trevor lawrence was intercepted near the saints' goal line by marcus lattimore while targeting agnew; officials reviewed whether lattimore maintained possession. on fourth down, mcmanus came on for a field goal."
+  },
+  {
+   "id": "a9d4801d8e3a6f2a",
+   "kind": "evidence",
+   "question": "Was there inconsistency in the portrayal of Sam Bankman-Fried's legal challenges between the TechCrunch report published on October 1, 2023, and the TechCrunch report on October 7, 2023, and was there disagreement between the TechCrunch report on October 1, 2023, and the report by Cnbc | World Business News Leader on Sam Bankman-Fried's approach to the board composition for FTX?",
+   "gold_sentences": [
+    "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts.",
+    "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he\u2019s guilty of seven counts of fraud and conspiracy.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "ahead of sam bankman-fried's fraud trial, michael lewis's book *going infinite* and a 60 minutes interview renewed debate over whether coverage portrays the ftx founder too sympathetically. lewis described sbf's rapid rise, celebrity endorsements, political fundraising, and an alleged $5 billion figure for persuading trump not to run again; its source and whether any payment occurred are unclear. ftx and sister firm alameda collapsed amid financial discrepancies, devastating customers and damaging crypto's reputation. s"
+  },
+  {
+   "id": "685632db52a2f2b2",
+   "kind": "evidence",
+   "question": "Between the TechCrunch report on Epic Games' antitrust battle with Google published before November 6, 2023, and the TechCrunch report on the class action antitrust suit filed against Google by a news publisher published before December 15, 2023, was there a consistent portrayal of Google's involvement in anticompetitive practices?",
+   "gold_sentences": [
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google \u201csiphons off\u201d news publishers\u2019 content, their readers and ad revenue through anticompetitive means."
+   ],
+   "evidence": "epic games' antitrust trial against google began nov. 6, 2023, after google settled with match and u.s. states. epic alleges google's play store commissions and agreements with device makers and developers suppress rival app stores and payment services, citing sideloading barriers, android restrictions, and deals such as project hug. google says android permits sideloading, competes with apple and other stores, and offers developers billing discounts; it argues its policies support security and innovation."
+  },
+  {
+   "id": "25db4cb27f47b506",
+   "kind": "evidence",
+   "question": "Between the report from Cnbc | World Business News Leader on Sam Bankman-Fried's intentions for FTX's board composition and the report from The Verge on Sam Bankman-Fried's denial regarding financial discrepancies, was there a change in the narrative concerning Sam Bankman-Fried's awareness and management decisions?\n\nBetween the allegations reported by TechCrunch in favor of Sam Bankman-Fried and the subsequent report from The Verge, is there consistency in the portrayal of Sam Bankman-Fried's knowledge of the financial issues?",
+   "gold_sentences": [
+    "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts.",
+    "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he\u2019d been told.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "at his ftx fraud trial, sam bankman-fried portrayed himself as overworked and largely unaware of alameda's finances, customer-fund borrowing, and an $8 billion liability. the verge contrasted these claims with testimony and evidence: alameda alone had a code-enabled negative balance, avoided liquidation, and received a credit line that grew to $65 billion. former executives described customer money being used, losses concealed, and ftx's insurance fund misrepresented. bankman-fried's"
+  },
+  {
+   "id": "d2878fedd4bbb34d",
+   "kind": "evidence",
+   "question": "Has the reporting style on players achieving first downs in Sporting News articles remained consistent between the article featuring Anthony Hankerson on October 7, 2023, and the one highlighting A.J. Dillon on December 3, 2023?",
+   "gold_sentences": [
+    "10:03 p.m.: Love hits Dillon out in the front, who makes his defender miss before racing beyond the marker for a first down.",
+    "7:06 p.m. \u2013 Anthony Hankerson gets two first downs for the Buffs on a four-yard run and a 12-yard run."
+   ],
+   "evidence": "the material compiles sporting news and cbs sports coverage across sports. it contrasts the nba's christmas audience (4.27 million average) with the nfl's record thanksgiving average (34.1 million), noting preference determines which tradition is \"better.\" most items offer 2023 nfl fantasy, dfs, betting, and lineup advice: rankings, start/sit calls, picks, props, and player stacks, shaped by matchups, injuries, bye weeks, and scoring rules. other coverage previews bowl games and"
+  },
+  {
+   "id": "868adc15447dec50",
+   "kind": "evidence",
+   "question": "Has the reporting style on players achieving first downs in Sporting News articles remained consistent between the article featuring Anthony Hankerson on October 7, 2023, and the one highlighting A.J. Dillon on December 3, 2023?",
+   "gold_sentences": [
+    "10:03 p.m.: Love hits Dillon out in the front, who makes his defender miss before racing beyond the marker for a first down.",
+    "7:06 p.m. \u2013 Anthony Hankerson gets two first downs for the Buffs on a four-yard run and a 12-yard run."
+   ],
+   "evidence": "sporting news' dec. 7, 2023 week 14 superdraft lineup combines fanduel and draftkings picks, centered on a justin fields-dj moore stack: fields (1.2x), christian mccaffrey (1x), joe mixon (1.3x), moore (1.25x), michael pittman jr. (1.2x), mike evans (1.1x), gerald everett (1.6x), and alvin kam"
+  },
+  {
+   "id": "291f2e325fe123d5",
+   "kind": "evidence",
+   "question": "Has the reporting style on players achieving first downs in Sporting News articles remained consistent between the article featuring Anthony Hankerson on October 7, 2023, and the one highlighting A.J. Dillon on December 3, 2023?",
+   "gold_sentences": [
+    "10:03 p.m.: Love hits Dillon out in the front, who makes his defender miss before racing beyond the marker for a first down.",
+    "7:06 p.m. \u2013 Anthony Hankerson gets two first downs for the Buffs on a four-yard run and a 12-yard run."
+   ],
+   "evidence": "sporting news' week 12 advice highlighted rhamondre stevenson as a sleeper after 231 scrimmage yards and a touchdown over two games, and urged starting kyren williams once activated from injured reserve against a weak cardinals defense. derrick henry remained startable against carolina, but his recent 64 yards on 23 touches warranted caution; tyjae spears was suggested as insurance. week 12 and 14 ranking excerpts list several low-ranked backs, including jamaal williams, samaje perine,"
+  },
+  {
+   "id": "95b5df2200456bae",
+   "kind": "evidence",
+   "question": "Has the reporting style on players achieving first downs in Sporting News articles remained consistent between the article featuring Anthony Hankerson on October 7, 2023, and the one highlighting A.J. Dillon on December 3, 2023?",
+   "gold_sentences": [
+    "10:03 p.m.: Love hits Dillon out in the front, who makes his defender miss before racing beyond the marker for a first down.",
+    "7:06 p.m. \u2013 Anthony Hankerson gets two first downs for the Buffs on a four-yard run and a 12-yard run."
+   ],
+   "evidence": "sporting news published fanduel nfl dfs lineup-advice articles for weeks 14 (dec. 7, 2023) and 15 (dec. 13). both offer tournament picks for fans seeking daily-fantasy action as the season-long fantasy season winds down; the week 15 piece specifically targets those who missed the playoffs. fanduel scoring includes four points per passing touchdown and half-point ppr."
+  },
+  {
+   "id": "00df4b32fd7c2d66",
+   "kind": "evidence",
+   "question": "Has the reporting style on players achieving first downs in Sporting News articles remained consistent between the article featuring Anthony Hankerson on October 7, 2023, and the one highlighting A.J. Dillon on December 3, 2023?",
+   "gold_sentences": [
+    "10:03 p.m.: Love hits Dillon out in the front, who makes his defender miss before racing beyond the marker for a first down.",
+    "7:06 p.m. \u2013 Anthony Hankerson gets two first downs for the Buffs on a four-yard run and a 12-yard run."
+   ],
+   "evidence": "sporting news' week 14 dfs preview presents each nfl week as a fresh opportunity for fantasy players. draftkings uses full-point ppr, four-point passing tds, and three-point bonuses for 100 rushing/receiving yards or 300 passing yards. superdraft allows unrestricted player selection and uses half-point ppr, four-point passing tds, and two-point yardage bonuses; the article also advertises a $20 deposit match."
+  },
+  {
+   "id": "b53f2a38a4446ba6",
+   "kind": "evidence",
+   "question": "Has the reporting style on players achieving first downs in Sporting News articles remained consistent between the article featuring Anthony Hankerson on October 7, 2023, and the one highlighting A.J. Dillon on December 3, 2023?",
+   "gold_sentences": [
+    "10:03 p.m.: Love hits Dillon out in the front, who makes his defender miss before racing beyond the marker for a first down.",
+    "7:06 p.m. \u2013 Anthony Hankerson gets two first downs for the Buffs on a four-yard run and a 12-yard run."
+   ],
+   "evidence": "with five weeks left in the 2023 season, sporting news recommended small bets on award longshots: c.j. stroud or jared goff for mvp, ceedee lamb for opoy, danielle hunter for dpoy, sean payton for coach of the year, and russell wilson for comeback player. favorites included purdy, prescott, hurts, tyreek hill, parsons, garrett, watt, dan campbell, and damar hamlin. a yardbarker"
+  },
+  {
+   "id": "dc1441a5120c968e",
+   "kind": "evidence",
+   "question": "Between the Sporting News report on Kenneth Walker III's injury impact for fantasy football published on November 21, 2023, and the Sporting News report on the fantasy implications if Kenneth Walker III remains out with his oblique injury published on December 7, 2023, was there consistency in how the potential absence of Kenneth Walker III was addressed in terms of fantasy football strategy?",
+   "gold_sentences": [
+    "You're probably starting him if Kenneth Walker III remains out with his oblique injury, but consider other options if you have the depth.",
+    "With Kenneth Walker III's oblique injury comes opportunity for the rookie, who already looked strong in the month leading up to Seattle's narrow Week 11 loss to the Rams."
+   ],
+   "evidence": "sporting news' week 12 standard-league rb rankings aim to help managers set lineups as the fantasy regular season enters its final three weeks. with trade deadlines largely passed, teams must rely on their existing rosters. no nfl teams are on bye, and games span thursday, friday, sunday and monday-but short turnarounds, possible weather issues and injuries still complicate decisions. a full 16-game slate offers more options, but also makes it easier to make the wrong start/sit call"
+  },
+  {
+   "id": "e0a415a236a7a46d",
+   "kind": "evidence",
+   "question": "Between the Sporting News report on Kenneth Walker III's injury impact for fantasy football published on November 21, 2023, and the Sporting News report on the fantasy implications if Kenneth Walker III remains out with his oblique injury published on December 7, 2023, was there consistency in how the potential absence of Kenneth Walker III was addressed in terms of fantasy football strategy?",
+   "gold_sentences": [
+    "You're probably starting him if Kenneth Walker III remains out with his oblique injury, but consider other options if you have the depth.",
+    "With Kenneth Walker III's oblique injury comes opportunity for the rookie, who already looked strong in the month leading up to Seattle's narrow Week 11 loss to the Rams."
+   ],
+   "evidence": "week 14 rb rankings emphasize injury-driven handcuffs: jonathan taylor's thumb surgery sidelines him for weeks, making zack moss a strong start after multiple top-10 outings. kenneth walker (oblique) and zach charbonnet (knee) are both uncertain; deejay dallas would lead seattle's backfield if neither plays. aaron jones remains week-to-week with an mcl sprain. derrick henry, d'onta foreman and d'andre swift are also questionable; rhamond"
+  },
+  {
+   "id": "b2275c803241b86d",
+   "kind": "evidence",
+   "question": "Did Yardbarker's coverage on December 24, 2023, contradict The Age's report on Travis Kelce's Super Bowl victories on September 26, 2023, regarding Travis Kelce's performance expectations?",
+   "gold_sentences": [
+    "Even so, Kelce's 81.3 average receiving yards per game against the Raiders since 2019 suggests the All-Pro tight end is in line for a productive outing and could potentially snap his four-game scoring drought.",
+    "The first link between Swift and Kelce was established in 2016, when Kelce \u2013 who helped bring his team to Super Bowl victory in both 2020 and 2023 \u2013 played the classic game \u201cKiss, Marry, Kill\u201d."
+   ],
+   "evidence": "the nfl's heavy focus on taylor swift and travis kelce has irritated some longtime fans; kelce agreed the coverage was excessive, though the league says it reflects a positive cultural crossover. it has also boosted attention: the chiefs-jets game drew about 27 million viewers, kelce's jersey sales reportedly rose 400%, and teen-girl viewership increased 53%. the coverage may help the nfl pursue its $27 billion revenue goal, alongside international games and safety initiatives. the article compares this growth"
+  },
+  {
+   "id": "82c7e00572258fab",
+   "kind": "evidence",
+   "question": "Between the report from 'The Verge' on 2023-11-24 and the report from 'Wired' on 2023-11-25, is there inconsistency in the focus on the utility of charging devices such as 'Universal travel adapters' and '10,000-mAh capacity power bank' during Black Friday sales?",
+   "gold_sentences": [
+    "With a 10,000-mAh capacity, WIRED contributor Simon Hill says it charged his iPhone 14 Pro once and then delivered an additional 64 percent the second time before tapping out."
+   ],
+   "evidence": "the 2023 apple black friday roundup highlights wireless chargers and accessories. a 5,000-mah usb-c power bank includes a short cable but may not work well with thick phone cases. belkin's compact, t-shaped 3-in-1 charger suspends two devices and has a cooling fan. courant's linen-wrapped catch:2 charges two devices, with status lights and nonslip feet, though phone placement must be precise. a recommended 2-in-1 magsafe"
+  },
+  {
+   "id": "df54371e3a09ef49",
+   "kind": "evidence",
+   "question": "Between the report from 'The Verge' on 2023-11-24 and the report from 'Wired' on 2023-11-25, is there inconsistency in the focus on the utility of charging devices such as 'Universal travel adapters' and '10,000-mAh capacity power bank' during Black Friday sales?",
+   "gold_sentences": [
+    "With a 10,000-mAh capacity, WIRED contributor Simon Hill says it charged his iPhone 14 Pro once and then delivered an additional 64 percent the second time before tapping out."
+   ],
+   "evidence": "the 2023 wired apple black friday guide highlights several charging deals: a compact, reliable hub with two usb-a ports, two usb-c ports, and three ac outlets; a 24,000-mah power bank that charges in about an hour and outputs up to 140w; and a foldable belkin duo for charging iphone and apple watch together. the 26,800-mah zendure supertank pro offers four ports and up to 100w, making it a favorite for"
+  },
+  {
+   "id": "9ada6f6de16f159c",
+   "kind": "evidence",
+   "question": "Between the report from 'The Verge' on 2023-11-24 and the report from 'Wired' on 2023-11-25, is there inconsistency in the focus on the utility of charging devices such as 'Universal travel adapters' and '10,000-mAh capacity power bank' during Black Friday sales?",
+   "gold_sentences": [
+    "With a 10,000-mAh capacity, WIRED contributor Simon Hill says it charged his iPhone 14 Pro once and then delivered an additional 64 percent the second time before tapping out."
+   ],
+   "evidence": "a wired black friday 2023 roundup highlighted a baseus charger with a stand, four 100-watt usb-c ports, and its lowest tracked price; apply the coupon at checkout. a baseus 10,000-mah power bank was also discounted: it charged an iphone 14 pro once plus 64% more, and includes a usb-c cable. its 6,000-mah version was $30 ($20 off). these offers required amazon prime. apple's dual-port"
+  },
+  {
+   "id": "0600102e2d349813",
+   "kind": "evidence",
+   "question": "Did the 'Sporting News' report on the U.S. men's national team's friendly match against Ghana before 'The Roar | Sports Writers Blog' reported on Tasmania's second win over Sydney this season?",
+   "gold_sentences": [
+    "Fellow import Milton Doyle and Majok Deng each scored 17 for Tasmania, who recorded their second win over Sydney in as many attempts this season."
+   ],
+   "evidence": "gregg berhalter named a 23-player usmnt squad for october friendlies: germany in hartford on oct. 14, julian nagelsmann's first match as coach, and ghana in nashville on oct. 17. gio reyna returned after injury and his 2022 world cup fallout with berhalter; lennard maloney earned his first senior call-up. tyler adams and antonee robinson were unavailable through injury, while malik tillman withdrew and alex zende"
+  },
+  {
+   "id": "0e9476e055d03d80",
+   "kind": "evidence",
+   "question": "After Sporting News reported on Johnny Cardoso's inclusion in the USMNT squad post-injury on October 4, 2023, and CBSSports.com announced De'Von Achane's move to Injured Reserve on October 12, 2023, which player's status changed between the two reports, Johnny Cardoso or De'Von Achane?",
+   "gold_sentences": [
+    "He and his fresh legs are back just in time as rookie sensation De'Von Achane hit Injured Reserve this week with a knee injury."
+   ],
+   "evidence": "gregg berhalter named a 23-player usmnt squad for october friendlies: germany in hartford on oct. 14, julian nagelsmann's first match as coach, and ghana in nashville on oct. 17. gio reyna returned after injury and his 2022 world cup fallout with berhalter; lennard maloney earned his first senior call-up. tyler adams and antonee robinson were unavailable through injury, while malik tillman withdrew and alex zende"
+  },
+  {
+   "id": "c996a5f70a0c07ef",
+   "kind": "evidence",
+   "question": "Between the report from BBC News - Entertainment & Arts published on October 13, 2023, regarding Taylor Swift's experiences with the media, and the report from The Independent - Life and Style published on December 6, 2023, concerning Taylor Swift's openness about her relationship, was there a change in the reporting of Taylor Swift's approach to personal disclosures?",
+   "gold_sentences": [
+    "\u201cShe\u2019s got the Eras Tour booked all through next year, and she\u2019d rather die than cancel a show."
+   ],
+   "evidence": "time named taylor swift its 2023 person of the year, citing her influence on headlines and unprecedented cultural and commercial impact. her eras tour was estimated to gross over $1.4 billion, while its concert film exceeded $250 million worldwide. swift described the year as her happiest and most creatively fulfilling. she detailed intensive tour preparation and discussed re-recording her first six albums after their masters were sold, releasing four \"taylor's version\" albums. the article also notes a fan's death at"
+  },
+  {
+   "id": "2c07ad93baaae18a",
+   "kind": "evidence",
+   "question": "After TechCrunch reported on the U.K. Judicial Office issuing guidance for judges on the responsible use of AI tools like ChatGPT on September 28, 2023, and Music Business Worldwide discussed YouTube's investment in AI-powered technology to protect its community from trademark and copyright abuse on November 23, 2023, is the stance on the use of AI for regulatory or protective purposes within these reports consistent or inconsistent?",
+   "gold_sentences": [
+    "They promised \u201cinvest[ment] in the AI-powered technology\u201d that, amongst other things, would help YouTube \u201cprotect our community of viewers, creators, artists and songwriters\u2026 [from] trademark and copyright abuse\u201d ."
+   ],
+   "evidence": "the accounts highlight disputes over ai's use of creative work: sony and nmpa seek consent, compensation, credit, licensing and protections against voice cloning, while google argues training is fair use. labels differ on youtube's licensed voice-cloning trial but favor artist choice and rights-tracking. governments are developing risk-based ai rules, transparency and safeguards, though stronger laws remain uncertain. openai's leadership crisis and copyright, privacy and safety concerns intensified calls for accountability and open alternatives. meanwhile, firms and institutions"
+  },
+  {
+   "id": "3d6e4bb0da6cc86e",
+   "kind": "evidence",
+   "question": "After TechCrunch reported on the U.K. Judicial Office issuing guidance for judges on the responsible use of AI tools like ChatGPT on September 28, 2023, and Music Business Worldwide discussed YouTube's investment in AI-powered technology to protect its community from trademark and copyright abuse on November 23, 2023, is the stance on the use of AI for regulatory or protective purposes within these reports consistent or inconsistent?",
+   "gold_sentences": [
+    "They promised \u201cinvest[ment] in the AI-powered technology\u201d that, amongst other things, would help YouTube \u201cprotect our community of viewers, creators, artists and songwriters\u2026 [from] trademark and copyright abuse\u201d ."
+   ],
+   "evidence": "techcrunch predicted 2024 would test ai hype against reality: openai would become more commercially driven, promoting its gpt store; ai agents and generated video/music would find experimental niches; monolithic llms would reveal limits and face diminishing returns; weak ai products would lose customers, trigger lawsuits, or consolidate; apple would enter with practical, personalized ai; legal battles and misuse cases would grow; companies would invest in compliance as rules emerge, while u.s. federal regulation stalls;"
+  },
+  {
+   "id": "eaf1b3e70014a652",
+   "kind": "evidence",
+   "question": "After The Verge reported on Google's local search ranking criteria on October 26, 2023, and TechCrunch detailed Google's expenditure to remain the default search engine on various platforms on November 13, 2023, did TechCrunch's subsequent report on a class action antitrust suit against Google on December 15, 2023, indicate a consistent portrayal of Google's business practices by the news source?",
+   "gold_sentences": [
+    "Google\u2019s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google \u201csiphons off\u201d news publishers\u2019 content, their readers and ad revenue through anticompetitive means."
+   ],
+   "evidence": "the doj argues google's default-search deals and platform control suppress competition and deprive rivals of data; google says users prefer its superior product. trial revelations included $26.3 billion spent on defaults in 2021; android agreements requiring app preloads and, separately, default search/chrome; and lucrative queries such as iphone, insurance and travel. expedia said google ads became costlier while traffic stagnated as google promoted its own travel listings. evidence suggested a \u20ac5 billion eu fine prompted search"
+  },
+  {
+   "id": "a2581019131c095d",
+   "kind": "evidence",
+   "question": "Between the TechCrunch article published on October 31, 2023, regarding Google's financial strategies to maintain its default search engine status, and the TechCrunch article on November 13, 2023, covering similar aspects of Google's expenditures for default search engine positioning, was there agreement in the reported amount Google spent in 2021?",
+   "gold_sentences": [
+    "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google \u201csiphons off\u201d news publishers\u2019 content, their readers and ad revenue through anticompetitive means."
+   ],
+   "evidence": "the doj argues google's default-search deals and platform control suppress competition and deprive rivals of data; google says users prefer its superior product. trial revelations included $26.3 billion spent on defaults in 2021; android agreements requiring app preloads and, separately, default search/chrome; and lucrative queries such as iphone, insurance and travel. expedia said google ads became costlier while traffic stagnated as google promoted its own travel listings. evidence suggested a \u20ac5 billion eu fine prompted search"
+  },
+  {
+   "id": "2f39e69ee183f9fb",
+   "kind": "evidence",
+   "question": "Has the portrayal of Google's business practices in TechCrunch articles shown consistency after the report on Epic Games' antitrust battle with Google on November 6, 2023, compared to the subsequent class action antitrust suit reported on December 15, 2023?",
+   "gold_sentences": [
+    "Google\u2019s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google \u201csiphons off\u201d news publishers\u2019 content, their readers and ad revenue through anticompetitive means."
+   ],
+   "evidence": "epic games' antitrust trial against google began nov. 6, 2023, after google settled with match and u.s. states. epic alleges google's play store commissions and agreements with device makers and developers suppress rival app stores and payment services, citing sideloading barriers, android restrictions, and deals such as project hug. google says android permits sideloading, competes with apple and other stores, and offers developers billing discounts; it argues its policies support security and innovation."
+  },
+  {
+   "id": "d46898678a1d2148",
+   "kind": "evidence",
+   "question": "Was there inconsistency in the portrayal of Sam Bankman-Fried's actions related to the allegations of fraud between the report from Fortune published on October 4, 2023, and the report from TechCrunch?",
+   "gold_sentences": [
+    "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ],
+   "evidence": "ahead of sam bankman-fried's fraud trial, michael lewis's book *going infinite* and a 60 minutes interview renewed debate over whether coverage portrays the ftx founder too sympathetically. lewis described sbf's rapid rise, celebrity endorsements, political fundraising, and an alleged $5 billion figure for persuading trump not to run again; its source and whether any payment occurred are unclear. ftx and sister firm alameda collapsed amid financial discrepancies, devastating customers and damaging crypto's reputation. s"
+  },
+  {
+   "id": "8a51bac8abd3af8c",
+   "kind": "evidence",
+   "question": "Between the Polygon article published on September 28, 2023, discussing \"Hellraiser (film)\" and the FOX News - Lifestyle article published on October 30, 2023, mentioning \"The Exorcist (book and movie),\" is there consistency in reporting the adaptation sequence of the original works into films?",
+   "gold_sentences": [
+    "Doe's story was adapted into the 1971 book \"The Exorcist\" by William Peter Blatty, which was then made into the 1973 movie starring Ellen Burstyn and Linda Blair.",
+    "Clive Barker\u2019s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."
+   ],
+   "evidence": "polygon's oct. 31 halloween pick is *the exorcist iii* (available on prime video and criterion channel), william peter blatty's 1990 sequel to *the exorcist*. lt. kinderman investigates gruesome murders resembling a serial killer's work and encounters a suspect who looks like his deceased friend father karras. despite a troubled production-including director changes and studio-mandated reshoots-the film is praised as a fascinating, terrifying work with literary dialogue and bold choices"
+  },
+  {
+   "id": "268c692f6c47ead1",
+   "kind": "evidence",
+   "question": "Between the Polygon article published on September 28, 2023, discussing \"Hellraiser (film)\" and the FOX News - Lifestyle article published on October 30, 2023, mentioning \"The Exorcist (book and movie),\" is there consistency in reporting the adaptation sequence of the original works into films?",
+   "gold_sentences": [
+    "Doe's story was adapted into the 1971 book \"The Exorcist\" by William Peter Blatty, which was then made into the 1973 movie starring Ellen Burstyn and Linda Blair.",
+    "Clive Barker\u2019s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."
+   ],
+   "evidence": "polygon's 2023 halloween countdown adds 31 at-home horror picks throughout october, opening with *messiah of evil* and ending with *the exorcist iii*, alongside *apostle* and *overlord*. separately, actor jonathan roumie promoted hallow's advent prayer challenge, crediting prayer with easing anxiety and changing his life. nashville exorcist fr. dan reehil warns ouija boards can invite demonic influence and urges people to avoid occult practices."
+  },
+  {
+   "id": "d120be98fdd693b0",
+   "kind": "evidence",
+   "question": "Between the Polygon article published on September 28, 2023, discussing \"Hellraiser (film)\" and the FOX News - Lifestyle article published on October 30, 2023, mentioning \"The Exorcist (book and movie),\" is there consistency in reporting the adaptation sequence of the original works into films?",
+   "gold_sentences": [
+    "Doe's story was adapted into the 1971 book \"The Exorcist\" by William Peter Blatty, which was then made into the 1973 movie starring Ellen Burstyn and Linda Blair.",
+    "Clive Barker\u2019s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."
+   ],
+   "evidence": "the excerpts cover danny elfman's return to live performance, connecting *nightmare before christmas* concerts, his eclectic coachella set and ongoing *big mess* work. polygon's halloween guide offers 31 horror picks-from *messiah of evil* to *the exorcist iii*-and highlights jump-scare pioneer *cat people*, queer grief in *ahs: nyc*, and varied newcomer-friendly and experimental fare. other pieces discuss prayer and occult warnings, inclusive trick-or-treat buckets"
+  },
+  {
+   "id": "904744e23f59817b",
+   "kind": "evidence",
+   "question": "Between the Polygon article published on September 28, 2023, discussing \"Hellraiser (film)\" and the FOX News - Lifestyle article published on October 30, 2023, mentioning \"The Exorcist (book and movie),\" is there consistency in reporting the adaptation sequence of the original works into films?",
+   "gold_sentences": [
+    "Doe's story was adapted into the 1971 book \"The Exorcist\" by William Peter Blatty, which was then made into the 1973 movie starring Ellen Burstyn and Linda Blair.",
+    "Clive Barker\u2019s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."
+   ],
+   "evidence": "polygon's halloween countdown recommends carpenter's *prince of darkness* for oct. 7 (peacock): college researchers investigate a mysterious church-basement canister whose release unleashes apocalyptic evil, including bug-people, zombies, and an extradimensional satan. though largely set in one building, it delivers relentless, unsettling imagery, ambitious mythology, and a final scare. the excerpt also notes *dracula 2000* leads into *dracula ii: ascension*, featuring jason scott lee"
+  },
+  {
+   "id": "5493483909714d7e",
+   "kind": "evidence",
+   "question": "Between the Polygon article published on September 28, 2023, discussing \"Hellraiser (film)\" and the FOX News - Lifestyle article published on October 30, 2023, mentioning \"The Exorcist (book and movie),\" is there consistency in reporting the adaptation sequence of the original works into films?",
+   "gold_sentences": [
+    "Doe's story was adapted into the 1971 book \"The Exorcist\" by William Peter Blatty, which was then made into the 1973 movie starring Ellen Burstyn and Linda Blair.",
+    "Clive Barker\u2019s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."
+   ],
+   "evidence": "polygon's 2023 halloween countdown recommends 31 horror films. it praises *messiah of evil* as a satisfying mix of accidental silliness, genuine terror, lovecraftian horror, and romero-style anti-consumerist allegory. *ginger snaps* (oct. 2), available on several streaming services, combines werewolf gore, puberty/body-horror themes, and a compelling sister relationship. *creepshow* (oct. 3), on kanopy, offers"
+  },
+  {
+   "id": "a0ec5c5baca93862",
+   "kind": "evidence",
+   "question": "Between the report by The Age on October 22, 2023, claiming that Google manipulates Search to maximize ad revenue, and the TechCrunch report on December 15, 2023, alleging that Google \"siphons off\" news publishers' content, readers, and ad revenue through anticompetitive means, was there consistency in the portrayal of Google's business practices by these news sources?",
+   "gold_sentences": [
+    "In blog posts and press materials, Google touted Gemini\u2019s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI\u2019s GPT-4."
+   ],
+   "evidence": "the verge argues that google has shaped and controlled the internet for roughly 25 years, making editorial choices about what people see while presenting itself as neutral. seo tactics further distort information, but their influence pales beside google's advertising-driven power and profits. the result falls short of the internet's promise as a public library: truth, scams, and propaganda appear together, fueling distrust. the article calls for recognizing search engines' influence and the conflicts between public information needs and corporate interests."
+  },
+  {
+   "id": "a008d8c5f68164c1",
+   "kind": "evidence",
+   "question": "Between the report by The Age on October 22, 2023, claiming that Google manipulates Search to maximize ad revenue, and the TechCrunch report on December 15, 2023, alleging that Google \"siphons off\" news publishers' content, readers, and ad revenue through anticompetitive means, was there consistency in the portrayal of Google's business practices by these news sources?",
+   "gold_sentences": [
+    "In blog posts and press materials, Google touted Gemini\u2019s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI\u2019s GPT-4."
+   ],
+   "evidence": "the article argues that google's search experience has changed through ads and efforts to keep users within its product ecosystem, while aggressive seo has further degraded results. google says its core criteria have barely changed and labels tactics it dislikes as spam; though it has improved at detecting manipulation, the boundary between acceptable and prohibited seo remains blurry and enforcement inconsistent, fueling industry frustration."
+  }
+ ]
+}

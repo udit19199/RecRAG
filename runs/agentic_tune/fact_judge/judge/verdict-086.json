@@ -1,0 +1,24 @@
+[
+  {
+    "id": "3685620baf89a0c6",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Ketamine is primarily used as an anesthetic during surgical procedures"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "but in recent years it's been used as a remedy for treatment-resistant depression"}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "57509167bfd3d18f",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "contradicted", "evidence": [{"item": 7, "quote": "14th over: West Indies 112-4 (Hope 27, Powell 10)"}]},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []}
+    ]
+  }
+]

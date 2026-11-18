@@ -1,0 +1,958 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=7d2fd793f2be23bd ===
+Gold sentences and facts:
+Sentence 0: “It was the millionaires of the Premier League against the youngsters of the Championship,” reflected the former Denmark forward.
+  Fact 0.0: A former Denmark forward reflected on a match.
+  Fact 0.1: The former Denmark forward said it was the millionaires of the Premier League against the youngsters of the Championship.
+Sentence 1: MLB Network's Jon Morosi reports the superstar is "likely to decide on a team within the next week," according to a source.
+  Fact 1.0: MLB Network's Jon Morosi reports that the superstar is likely to decide on a team within the next week.
+  Fact 1.1: Jon Morosi's report is according to a source.
+
+Retrieved items:
+<item 1>
+World Series Game 2: Arizona Diamondbacks v Texas Rangers – live (The Guardian, 2023-10-28T23:00:28+00:00)
+29 Oct 2023 02.37 GMT Diamondbacks 7-1 Rangers, bottom 8th Andrew Saalfrank is pitching now for Arizona as Kelly gets a well-earned rest. Rivera stays in the
+game, playing third base. Lowe is at the plate for the Rangers and he promptly grounds out to second.
+
+
+
+29 Oct 2023 02.36 GMT Me earlier: “I’m going to guess this ends with a score like Diamondbacks 6-2 Rangers.” If this holds up, I want to claim partial credit.
+
+
+
+29 Oct 2023 02.34 GMT Diamondbacks 7-1 Rangers, top 8th Moreno strikes out on three pitches to finally end the inning, but the damage is done and this one feels
+all but out of reach for Texas. Still, the game must go on and we head to the bottom of the 8th inning.
+</item 1>
+
+<item 2>
+World Series Game 2: Arizona Diamondbacks v Texas Rangers – live (The Guardian, 2023-10-28T23:00:28+00:00)
+29 Oct 2023 02.09 GMT Diamondbacks 4-1 Rangers, bottom 7th Two out, nobody on in the bottom of the seventh. Heim is up to the plate for Texas and he gets ahead
+of the count 2-0 before looking at his first strike. 2-1. Kelly’s next pitch is a ball, 3-1. Could this be a rare walk? Nope, Heim watches two straight strikes
+to end the inning. The Rangers have just six outs to play with to score three runs. Can they pull of late-inning magic again?
+</item 2>
+
+<item 3>
+World Series Game 2: Arizona Diamondbacks v Texas Rangers – live (The Guardian, 2023-10-28T23:00:28+00:00)
+29 Oct 2023 02.16 GMT Diamondbacks 4-1 Rangers, top 8th Gurriel Jr. is up next. He bunts and I’m just getting sick of this. Pham is on second base with one out
+now.
+
+
+
+29 Oct 2023 02.15 GMT Diamondbacks 4-1 Rangers, top 8th Chris Stratton is the next Rangers reliever. He has absolutely no room for error given that there’s a
+huge difference between a three-run deficit and a four-run deficit. It’s the entire basis of the archaic “save” rule! He’s here to face Pham, who puts him to
+work by running up a full count on eight pitches before hitting a single to start of the top of the eighth. He’s 4-to-4 on the day.
+</item 3>
+
+<item 4>
+World Series Game 2: Arizona Diamondbacks v Texas Rangers – live (The Guardian, 2023-10-28T23:00:28+00:00)
+29 Oct 2023 02.25 GMT Diamondbacks 4-1 Rangers, top 8th What if you appeared in a World Series game and didn’t get a chance to hit? Well, it looks like Emmanuel
+Rivera is in to hit with Pérez in the game. Ah, managerial chess matches, how I loathe thee. Once again, that runner is still on second and there are still two
+outs. Pérez gets a strike on his first pitch to Rivera and then uncorks three straight pitches that aren’t in the zone before Rivera swings and misses to make
+it a full count. He waits for the next pitch and takes a walk. So that’s runners on first and second with two outs now.
+
+
+
+29 Oct 2023 02.21 GMT Diamondbacks 4-1 Rangers, top 8th Oh hey, a rare Diamondbacks pinch-hitter. Welcome to the World Series, Pavin Smith! Meanwhile, Stratton
+is out of the game now and pitcher Martín Pérez is coming in.
+</item 4>
+
+<item 5>
+World Series Game 2: Arizona Diamondbacks v Texas Rangers – live (The Guardian, 2023-10-28T23:00:28+00:00)
+29 Oct 2023 02.28 GMT Diamondbacks 4-1 Rangers, top 8th Pérez faces Perdomo who looks at two straight strikes. He fouls off a 0-2 pitch to stay alive before
+taking a ball. 1-2. He doesn’t offer at another ball. 2-2. Pérez tries a sinker and doesn’t get the call. 3-2. The crowd boos, it does look like a borderline
+pitch but Pérez isn’t really showing great command. And, yeah, he throws another ball to walk the bases loaded.
+</item 5>
+
+<item 6>
+World Series Game 2: Arizona Diamondbacks v Texas Rangers – live (The Guardian, 2023-10-28T23:00:28+00:00)
+29 Oct 2023 02.50 GMT Diamondbacks 7-1 Rangers, top 9th Thomas is up with two on and one out. He grounds out on two pitches, moving the runners into scoring
+position.
+
+
+
+29 Oct 2023 02.49 GMT Diamondbacks 7-1 Rangers, top 9th Gurriel hits a single to centerfield, Peterson advances on the play.
+
+
+
+29 Oct 2023 02.48 GMT Diamondbacks 7-1 Rangers, top 9th Jace Peterson is getting a pinch-hitting opportunity here for Arizona. It’s kind of like a basketball
+game now here where the coaches empty out the bench. Peterson works a full count before hitting into a fielder’s choice. Walker is erased on the play. So it’s
+one down with Peterson on first.
+</item 6>
+
+<item 7>
+World Series Game 2: Arizona Diamondbacks v Texas Rangers – live (The Guardian, 2023-10-28T23:00:28+00:00)
+29 Oct 2023 03.21 GMT Final thoughts Okay, we officially have a series! Assuming one has no rooting interest in either of the remaining teams, there’s no
+greater start to a World Series than a split in the first two games. A 1-1 split is an ideal situation for the casual fan as it usually portends a longer
+series. It is, of course, a less than ideal situation for the Rangers. Today, their weaknesses were exposed and they know their two-game home stand could have
+gone worse: they needed plenty of late-inning drama just to pull off a come-from-behind win in Game 1. What happens next is anybody’s guess. The World Series
+heads to Arizona for Monday’s Game 3 where Rangers’ Max Scherzer and the Diamondbacks’ Brandon Pfaadt are currently penciled in as the probable starters. Stay
+tuned to the Guardian for further coverage of the 2023 World Series as it develops but this will wrap up today’s Game 2 liveblog.
+</item 7>
+
+<item 8>
+World Series Game 2: Arizona Diamondbacks v Texas Rangers – live (The Guardian, 2023-10-28T23:00:28+00:00)
+29 Oct 2023 02.33 GMT RBI single! (Carroll) Diamondbacks 7-1 Rangers Diamondbacks 7-1 Rangers, top 8th Carroll singles here and scores Perdomo! The Diamondbacks
+are just teeing off on these relievers.
+
+
+
+29 Oct 2023 02.31 GMT Two-run single! (Marte) Diamondbacks 6-1 Rangers Diamondbacks 6-1 Rangers, top 8th This is more like the Rangers bullpen I was expecting.
+Ketel Marte is up next with the bases loaded and a chance to make the rest of this game entirely irrelevant. Pérez’s first pitch is yet another ball, this one
+that barely misses the ground. 1-0. Marte takes a huge swing and the next pitch, he doesn’t make contact. However, on the next pitch, he knocks in a base hit
+that’s a two-run, two-out single and the Diamondbacks have a five-run lead!
+</item 8>
+
+<item 9>
+World Series Game 2: Arizona Diamondbacks v Texas Rangers – live (The Guardian, 2023-10-28T23:00:28+00:00)
+29 Oct 2023 02.20 GMT Diamondbacks 4-1 Rangers, top 8th To be fair, that’s not a terrible bunt, again it’s a situation where one more run might put this one out
+of reach. It’s also weird because Stratton doesn’t seem sharp. He gets ahead of Thomas 0-2 and just can’t put him away. Thomas works a full count and then
+starts to foul off fastballs to stay alive. On pitch number nine, however, Stratton gets him to look at a curve that just hits the corner for strike three.
+That’s now two out with a runner on second. The announcers note that this was the first time an Arizona hitter struck out this game, which is maybe the number
+one reason why the Diamondbacks are in front.
+</item 9>
+
+<item 10>
+World Series Game 2: Arizona Diamondbacks v Texas Rangers – live (The Guardian, 2023-10-28T23:00:28+00:00)
+29 Oct 2023 02.58 GMT Diamondbacks 9-1 Rangers, bottom 9th Luis Frías is coming into the game to get the final two outs for Arizona, possibly against Rangers
+pinch-hitter Robbie Grossman. Stay tuned.
+
+Updated at 03.00 GMT
+
+29 Oct 2023 02.57 GMT Diamondbacks 9-1 Rangers, bottom 9th Seager is up next. He hits a long flyball that’s caught in centerfield. The Rangers are down to their
+last two outs of Game 2.
+</item 10>
+=== END ITEM id=7d2fd793f2be23bd ===
+
+=== ITEM id=5b67330da24dc969 ===
+Gold sentences and facts:
+Sentence 0: The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy.
+  Fact 0.0: The criminal trial of Sam Bankman-Fried was highly anticipated.
+  Fact 0.1: Sam Bankman-Fried is the former CEO of FTX.
+  Fact 0.2: FTX is a crypto exchange that is bankrupt.
+  Fact 0.3: The criminal trial of Sam Bankman-Fried started on a Tuesday.
+  Fact 0.4: The criminal trial determines whether Sam Bankman-Fried is guilty of seven counts of fraud and conspiracy.
+Sentence 1: Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth).
+  Fact 1.0: Sam Bankman-Fried was compared to Warren Buffet.
+  Fact 1.1: Many people called Sam Bankman-Fried the white horse of crypto.
+  Fact 1.2: TechCrunch never called Sam Bankman-Fried the white horse of crypto.
+Sentence 2: SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy.
+  Fact 2.0: Sam Bankman-Fried, known as SBF, has pleaded not guilty.
+  Fact 2.1: Sam Bankman-Fried has pleaded not guilty to some seven charges of fraud and conspiracy.
+Sentence 3: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 3.0: The prosecution portrayed Sam Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 3.1: The defense argued that the FTX founder acted in good faith.
+  Fact 3.2: The defense argued that the FTX founder never meant to commit fraud or steal.
+  Fact 3.3: The defense argued that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that
+Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy
+and sell cryptocurrencies.
+
+In an analogy he employed throughout his opening statement, he said that “working at a startup is like building a plane as you’re flying it” and that businesses
+sometimes fail. In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from
+the inherent risk of the crypto markets.
+
+When the walls came closing in and the aforementioned plane approached the “eye of the storm,” Bankman-Fried did not act like someone who was guilty. Rather, he
+was willing to give up his personal wealth to make customers whole, Cohen argued.
+</item 1>
+
+<item 2>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Alameda Research, a crypto hedge fund he also owned, argued Rehn. Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,
+Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+
+Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and
+investors. “The defendant lied to the world,” Rehn alleged.
+
+And who was this defendant? Not a crypto “boy” genius, as so many in the media (Fortune included) have written, but a “man” who “stole billions of dollars from
+thousands of victims,” Rehn said. “You will see the full picture.”
+
+…or a well-meaning founder?
+</item 2>
+
+<item 3>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried, the disgraced cryptocurrency entrepreneur accused of
+orchestrating “one of the biggest financial frauds in American history”: the multibillion-dollar collapse of FTX, the crypto exchange he founded and led.
+
+SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy. But, as we wait to hear both his version and the government’s version
+of what happened, there will be another tale recounting how things played out: “Going Infinite,” a book by Michael Lewis chronicling the rise and fall of SBF,
+is set to debut on the first day of the trial.
+
+The episode has fired up a lot of people, indignant at what they feel was too-easy treatment for someone who many believe brought down the whole crypto house.
+
+60 Minutes got rightly community noted here.
+</item 3>
+
+<item 4>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+How much? Almost $100,000, he said. And was he ever able to? “Never,” he told prosecutors.
+
+Shortly afterward, as the trial neared late afternoon, the government called Adam Yedidia to the stand. A fast-talking graduate of MIT, he and Bankman-Fried
+were close friends in college, he said. And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in
+finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.
+
+When Yedidia first took the stand, Danielle Sassoon, one of the lead prosecutors, said that the college friend of Bankman-Fried had legal immunity during his
+testimony. Why did he make such a deal with the government, she asked.
+
+“I was concerned that I had unwittingly written code that contributed to a crime,” he said.
+</item 4>
+
+<item 5>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“One year ago, it looked like the defendant was on the top of the world,” began Thane Rehn, a prosecutor for the government, in his opening statement. The
+former CEO of FTX oversaw a supposedly thriving crypto exchange, jetted between international locales, and hobnobbed with celebrities like Tom Brady and Larry
+David. He repeatedly emphasized to customers that their money was safe and secure.
+
+But “all of that, all of it, was built on lies,” Rehn declared to the jury. “Behind the curtains, he was not what he appeared to be.” What followed was a
+roughly 30-minute story that repeatedly emphasized how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to
+political candidates, and finance risky bets.
+
+The key to his alleged scheme? Alameda Research, a crypto hedge fund he also owned, argued Rehn.
+</item 5>
+
+<item 6>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“I was concerned that I had unwittingly written code that contributed to a crime,” he said.
+
+Soon, however, the clock neared 4:30 p.m., and court adjourned for the day. Yedidia will continue his testimony on Thursday, followed by Matt Huang, a former
+partner at the high-powered venture capital firm Sequoia Capital, and then Gary Wang, a key Bankman-Fried lieutenant and one of the government’s star witnesses.
+</item 6>
+
+<item 7>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Rather, he was willing to give up his personal wealth to make customers whole, Cohen argued.
+
+“In the end, Sam started and built two billion-dollar businesses,” he concluded. “He didn’t steal any money.”
+
+A Frenchman who lives in London testifies in New York
+
+After lawyers from both sides depicted two very different Bankman-Frieds, the prosecution called its first two witnesses to the stand—and they weren’t
+blockbuster names or former lieutenants-turned-government-cooperators, like Ellison.
+
+The first was a victim: Marc-Antoine Julliard, a Paris-born cocoa trader who lives in London. In 2021, Julliard, who had coiffed hair and spoke with a strong
+French accent, decided to invest in crypto and landed on FTX as his exchange of choice, where he traded cryptocurrencies like Bitcoin and Dogecoin.
+
+On Nov. 8, in the crypto exchange’s final few days, he tried to pull out his cash and crypto.
+</item 7>
+
+<item 8>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX? Is he a liar and a fraud? Or did he act in good faith, and like many a startup founder, fly too
+close to the sun?
+
+That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very
+different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.
+
+Here’s what happened on the second day of the trial, which featured pointed allegations, a friend from MIT, and an audience replete with big names, including
+Bankman-Fried’s professorial parents and Damian Williams, U.S. attorney for the Southern District of New York.
+
+A conscious criminal…
+
+The prosecution’s account of the alleged crimes by Bankman-Fried, who spent most of his day in court staring into a laptop while seated between his two
+attorneys, featured a study in contrasts.
+</item 8>
+
+<item 9>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“You will see the full picture.”
+
+…or a well-meaning founder?
+
+But Bankman-Fried, whose cheekbones were more prominent after spending about seven weeks in a Brooklyn prison, was no liar, according to Mark Cohen, one of his
+lawyers. “Sam didn’t defraud anyone,” he said early on in his opening statement.
+
+What the jury will see is a nerdy startup founder who acted in “good faith,” not the prosecution’s “cartoon of a villain.” (Cohen repeatedly harped on
+Bankman-Fried’s allegedly good-faith actions throughout his address to the jury.)
+
+Alameda was not subterranean or shady. It was a successful hedge fund, he said. FTX was no Ponzi scheme. It was a “very innovative, successful company.”
+</item 9>
+
+<item 10>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+U.S. Attorney Damian Williams called Bankman-Fried’s alleged crimes “one of the biggest financial frauds in American history,” in a press conference.
+
+The aftermath
+
+FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges
+in relation to the FTX collapse. They’re also facing civil penalties from the U.S. Securities and Exchange Commission (SEC) and Commodity Futures Trading
+Commission (CFTC) alongside the criminal charges. Wang and Ellison plan to cooperate with prosecutors and will be major witnesses in the trial, given their
+close ties to Bankman-Fried, FTX and Alameda.
+
+In January, Bankman-Fried pleaded not guilty to all counts, which include wire fraud, conspiracy to commit money laundering and conspiracy to misuse customer
+funds. He could face up to 115 years in jail if convicted on all charges.
+</item 10>
+=== END ITEM id=5b67330da24dc969 ===
+
+=== ITEM id=910a461901c94aed ===
+Gold sentences and facts:
+Sentence 0: If the debt continues to rise more than the economy, risks will increase, and the government may “crowd out” private investment as it competes with the private sector for funds to service its debt.
+  Fact 0.0: If the debt continues to rise more than the economy, risks will increase.
+  Fact 0.1: If the debt continues to rise more than the economy, the government may 'crowd out' private investment.
+  Fact 0.2: The government may crowd out private investment as it competes with the private sector for funds to service its debt.
+Sentence 1: And yet, “We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr. told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023).
+  Fact 1.0: President Ferdinand Marcos, Jr. said 'We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63%'.
+  Fact 1.1: President Ferdinand Marcos, Jr. said the Philippines' debt-to-GDP ratio of about 63% is a little high for the country and is not ideal.
+  Fact 1.2: President Ferdinand Marcos, Jr. said this to members of the US-ASEAN Business Council who visited Malacañang.
+  Fact 1.3: ABS-CBN reported this on Aug. 9, 2023.
+
+Retrieved items:
+<item 1>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+“After extensive deliberations and negotiations, the House of Representatives on Wednesday (Sept. 27) approved on third and final reading the P5.768-trillion
+national budget for next year, just before Congress adjourns for a month-long break,” the Press and Public Affairs Bureau of Congress announced on its website,
+congress.gov.ph. The 310-strong legislative chamber voted 296 against three, with zero abstentions, to approve House Bill (HB) No. 8980 or the 2024 national
+budget on third and final reading. Almost unanimously.
+
+House Speaker Ferdinand Martin G. Romualdez noted that the budgeting process was marked by rigorous discussions, particularly concerning confidential and
+intelligence funds, which the House meticulously scrutinized to ensure accountability and responsible utilization. He lauded “the timely passage of the 2024
+General Appropriations Bill (GAB),” stating that it not only “demonstrated the commitment of the House to upholding its constitutional role but also underscored
+its dedication to serving the Filipino people with transparency and accountability.”
+</item 1>
+
+<item 2>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+The Department of Budget and Management (DBM) defines the government budget as “the financial plan of the government…which shows what its resources are, and how
+they will be generated and used over the fiscal period. It refers to the income, expenditures and sources of borrowings of the National Government (NG) that are
+used to achieve national objectives, strategies and programs.”
+
+Section 22, Article VII of the Constitution states that: “The President shall submit to the Congress within 30 days from the opening of every regular session,
+as the basis of the general appropriation bill, a budget of expenditures and sources of financing including receipts from existing and proposed revenue
+measures.”
+
+The National Government (NG) budget is the totality of the budgets of all government entities, namely the National Government, the non-financial
+government-owned and -controlled corporations (which usually includes only the 14 major GOCCs), government financial institutions (GFIs), local government units
+(LGUs), the social security institutions (the Government Service Insurance System or GSIS, the Social Security System or SSS, the military pensions, PhilHealth,
+etc.
+</item 2>
+
+<item 3>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+The surplus budget policy is important to encourage economic growth,” the DBM said.
+
+The exhortations of the national budget managers must be quoted word for word to educate the non-economists and questioning common people about how a surplus
+budget is necessary versus a deficit budget:
+
+“The less the government borrow from the public, the lesser the pressure on interest and inflation rates and the more funds are made available in the financial
+market. Such funds may be used by businessmen to build factories, hire workers, buy equipment and open more employment opportunities. By keeping more funds in
+the hands of the private sector rather than competing for credit, the government helps make financing available for families who want to own homes, buy cars, or
+support their children’s education. The government also needs to generate a budget surplus to repay the huge debt it has accumulated over the years. The
+reduction of the national budget debt will correspondingly lessen government’s requirements for interest and principal payments. This becomes important
+particularly during periods of rising interest rates and unstable exchange rates” (dbm.gov.ph).
+</item 3>
+
+<item 4>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023).
+
+Whom are we to believe, but inflation — which independently says it as it is.
+
+“While inflation in the Philippines has been on a downward trend since January, the country needs to achieve a 3.7% average inflation rate for the next five
+months for the country to hit the BSP’s forecast of 5.5% inflation for 2023, Assistant National Statistician Rachel Lacsa said (Ibid.). Some economists say that
+deficit budgets and the remedies — monetary (borrowings increasing money supply) and fiscal (like raising taxes) increase inflation, and stubborn inflation
+further entrenches structural deficits in the system. It is a vicious cycle.”
+
+National budgets might not be innocent of political agendas (call them plans and programs) that can divert money from the proper socio-economic goals of
+equilibrium as a balanced budget might work towards.
+</item 4>
+
+<item 5>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+But traditional politicians (called “trapo” in the Philippines) might have it in their hearts to think about the country and the welfare of future generations.
+
+How many generations will pay for the monstrous debt incurred for the dubious objectives and vanities of some today?
+
+Amelia H. C. Ylagan is a doctor of Business Administration from the University of the Philippines.
+
+ahcylagan@yahoo.com
+</item 5>
+
+<item 6>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+During the Congressional budget hearing, Finance Secretary Benjamin Diokno optimistically provided updates on the government’s fiscal and revenue collection
+performances and presented sources of funding for the national budget. Tax revenue is projected to increase from P3.5 trillion in 2023 to P6.5 trillion in 2028,
+while non-tax revenues are expected to decline from P191 billion in 2023 to P184 billion in 2028, Diokno told the Philippine News Agency (pna.gov.ph, Aug. 10).
+
+Diokno said the Finance department aims to gradually reduce net financing or new debt from P1.42 trillion in 2022 to P1.22 trillion in 2024, which will help
+bring the country’s debt-to-GDP ratio to almost below 60% by 2025. And yet, “We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63%
+and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr.
+</item 6>
+
+<item 7>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+This plan gradually narrows the deficit to 3% of GDP by 2028, down from 7.3% in 2022, such that the debt-to-GDP ratio is reduced from nearly 61% in 2022 to a
+more sustainable level of at most 53% by 2028.
+
+DEBT MANAGEMENT
+
+The National Government’s debt was less than 40% before the pandemic struck. It expended much of its fiscal space combatting the pandemic, incurring debt and
+large budget deficits. While the current 61% debt-to-GDP ratio may be manageable for an emerging economy like the Philippines for some time, the country may not
+have the fiscal space to respond to another potential domestic or external shock. If the debt continues to rise more than the economy, risks will increase, and
+the government may “crowd out” private investment as it competes with the private sector for funds to service its debt.
+
+The planned fiscal consolidation entails harmonizing the revenue needs with the promotion of investment through the structure and administration of the reformed
+incentive system.
+</item 7>
+
+<item 8>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+the government borrows money either from foreign sources or from the domestic capital market which increases the debt stock of the NG and its debt servicing
+requirements; b.) the government borrows money from the Bangko Sentral ng Pilipinas; or, c.) the government withdraws funds from its cash balances in the
+Treasury. Historically, National Government expenditures have always exceeded total revenues resulting in annual budget deficits, the DBM declared. “Thus, the
+National Government had to resort to borrowing to cover said deficits which resulted in the ballooning of foreign and domestic debts,” the budget office
+admitted.
+
+“However, in 1994, the government broke the deficit trend by posting a budget surplus of P16 billion through an aggressive privatization and revenue generation
+program and a prudent expenditure program. Since then, the government has been exerting efforts to maintain the surplus budget policy. The surplus budget policy
+is important to encourage economic growth,” the DBM said.
+</item 8>
+
+<item 9>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+Why then, do we have a deficit budget for 2024?
+
+The national budget for 2024 is at P5.768 trillion, 9.5% higher than the current (2023) budget of P5.268 trillion. Observers note that this first budget fully
+prepared by the current administration accounts for 21.7% of gross domestic product (GDP). The 2024 expenditure program is higher by P499.6 billion or a
+year-on-year growth rate of 9.5% as compared to the 2023 level of P5.268 trillion. The P5.768-trillion budget, to be supported mainly by P3.5-trillion tax
+revenues (based on 2023 tax revenue projections), would mean a budget deficit of some P2.268 trillion, to be funded by additional borrowings. This could
+increase government debt from the current P14.24 trillion (as of July) to P16+ trillion by the end of 2024.
+</item 9>
+
+<item 10>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+The National Government plans to raise more revenue to finance the country’s socio-economic needs, largely through a progressive and simplified tax system, more
+efficient and effective tax collection measures through digitalization and, to some extent, from policy measures such as value-added tax on digital service
+providers and excise tax on sweetened beverages and junk food.
+
+Achieving fiscal stability presupposes the sustainability of fiscal policy, and fiscal stability helps “crowd in” private investment.
+
+PRICE STABILITY AND INFLATION
+
+In his second State of the Nation Address (SONA), President Ferdinand Marcos, Jr. singled out inflation as the country’s most pressing problem. In the first
+nine months of 2023, inflation averaged 6.6% — far above the upper end of the target range of 2-4% set by the BSP. If left unchecked, inflation could undermine
+growth. Not only does this increase costs to organizations, but it also sets in motion second-round effects as workers start demanding higher wages,
+consequently increasing business costs and discouraging investments.
+</item 10>
+=== END ITEM id=910a461901c94aed ===
+
+=== ITEM id=c69a912e887cd16e ===
+Gold sentences and facts:
+Sentence 0: The feature is currently available in France, Germany, Japan, the U.K. and the U.S., with plans for further expansion.
+  Fact 0.0: The feature is currently available in France.
+  Fact 0.1: The feature is currently available in Germany.
+  Fact 0.2: The feature is currently available in Japan.
+  Fact 0.3: The feature is currently available in the U.K.
+  Fact 0.4: The feature is currently available in the U.S.
+  Fact 0.5: There are plans for further expansion of the feature.
+Sentence 1: LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes.
+  Fact 1.0: LinkedIn leans into AI tools.
+  Fact 1.1: LinkedIn this week unveiled a string of new AI features.
+  Fact 1.2: The new LinkedIn AI features span its job hunting products.
+  Fact 1.3: The new LinkedIn AI features span its marketing products.
+  Fact 1.4: The new LinkedIn AI features span its sales products.
+  Fact 1.5: Ingrid writes about LinkedIn's new AI features.
+
+Retrieved items:
+<item 1>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+Do you expect startups to build striated solutions for individual layers of the LLM stack, or pursue a more vertical approach?
+
+While there are startups specializing in parts of the stack (like Pinecone), Valor’s focus is on applied AI, which we define as AI that is solving a customer
+problem. Saile.ai is a good example — it uses AI to generate closeable leads for the Fortune 500. Or Funding U using its own trained dataset to create a more
+useful credit risk score. Or Allelica, using AI on treatment solutions applied to individual DNA to find the best medical treatment for you personally in a
+given situation.
+
+Companies like Datadog are building products to support the expanding AI market, including releasing an LLM observability tool. Will efforts like what Datadog
+has built (and similar output from large/incumbent tech powers) curtail the market area where startups can build and compete?
+
+Tools like Datadog can only help the acceptance of AI tools if they succeed in monitoring AI performance bottlenecks.
+</item 1>
+
+<item 2>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+When Google bought DeepMind, it bought the whole thing. Musk was out. Financially, he had come out ahead, but he was unhappy. Three Google executives now firmly
+in control of DeepMind were there: Page; Sergey Brin, a Google co-founder and Tesla investor; and Eric Schmidt, Google’s chair. Among the other attendees were
+Reid Hoffman, another PayPal founder; and Toby Ord, an Australian philosopher studying “existential risk”.
+
+The DeepMind founders reported that they were pushing ahead with their work but that they were aware the technology carried serious risks. Suleyman, the
+DeepMind co-founder, gave a presentation called “The Pitchforkers Are Coming.” AI could lead to an explosion in disinformation, he told the board. He fretted
+that as the technology replaced countless jobs in the coming years, the public would accuse Google of stealing their livelihoods. Google would need to share its
+wealth with the millions who could no longer find work and provide a “universal basic income,” he argued. Musk agreed.
+</item 2>
+
+<item 3>
+If your startup doesn’t seem impossible at first, it’s not hard enough (TechCrunch, 2023-11-03T19:05:30+00:00)
+The latest funding round brings QI Tech’s total capital raised to $262 million.
+
+New Web Summit CEO appointed: Former Wikimedia Foundation CEO Katherine Maher has been appointed as the new CEO of Web Summit, following the controversial
+departure of its previous leader, Paddy Cosgrave. Maher’s appointment comes as the tech conference faces a challenge to rebuild relationships and trust within
+the tech community.
+
+Top reads on TechCrunch this week
+
+Shinier, smarter maps: Google is rolling out a variety of updates for Maps, incorporating AI technology to enhance user experience. The feature is currently
+available in France, Germany, Japan, the U.K. and the U.S., with plans for further expansion.
+
+From stop-and-start to charging ahead: Over on TC+, Tim has had it with U.S. automakers hesitating on EVs, as Ford and GM are showing signs of backing away from
+their commitment to electric vehicles. Cowards.
+</item 3>
+
+<item 4>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+For $4.99, subscribers get an ad-free experience on TikTok — no other strings attached. But don’t look for the option to arrive anytime soon. TikTok says that
+it’s piloting the plan in a single, English-speaking market outside the U.S. for now.
+
+LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes.
+They include a big update to its Recruiter talent sourcing platform, with AI assistance built into it throughout; an AI-powered LinkedIn Learning coach; and a
+new AI-powered tool for marketing campaigns.
+
+Musk comes clean about X’s metrics — maybe: In September, Elon Musk said that X users were generating a lot of content — creating 100 million to 200 million
+posts every day, excluding retweets. But speaking at an event this week, X CEO Linda Yaccarino offered a contradictory figure.
+</item 4>
+
+<item 5>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+(Spoiler alert: Yes.)
+
+Rumors are swilling that OpenAI may be considering developing its own AI chips. That’s going to get interesting, especially if you’ll recall that Nvidia’s
+ongoing stock market rally is likely driven by the current boom in AI. The company’s ChatGPT’s mobile app hit a record $4.6 million in revenue last month, but
+growth is slowing. Oh, and there’s no need to shed tears for Nvidia quite yet; Brian’s piece breaking down how Nvidia became a major player in robotics is super
+interesting.
+
+Adobe has doubled down on its Firefly generative AI models. This week, Frederic covered how the software can now generate more realistic images and can help
+artists create vector graphics in Illustrator. Neato.
+
+More on the AI front
+
+If AI can’t go to the mountain, the mountain will come to AI: Dutch startup Tidalflow exits stealth with backing from Google’s Gradient Ventures. It is aiming
+to help any software play nice with ChatGPT and other LLM ecosystems.
+</item 5>
+
+<item 6>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+This got the attention of another Silicon Valley powerhouse, Google, and specifically Page. He saw a demonstration of DeepMind’s machine playing Atari games. He
+wanted in. The talent auction In the spring of 2012, Geoffrey Hinton, a 64-year-old professor at the University of Toronto, and two graduate students published
+a research paper that showed the world what AI could do. They trained a neural network to recognise common objects such as flowers, dogs and cars.
+
+Scientists were surprised by the accuracy of the technology built by Hinton and his students. One who took particular notice was Yu Kai, an AI researcher who
+had met Hinton at a research conference and had recently started working for Baidu, a giant Chinese internet company. Baidu offered Hinton and his students
+$US12 million to join the company in Beijing, according to three people familiar with the offer. Hinton turned Baidu down, but the money got his attention.
+</item 6>
+
+<item 7>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+It is aiming to help any software play nice with ChatGPT and other LLM ecosystems.
+
+What big eyes you have: Adobe continues to push for easier image editing, showing off its Project Stardust as a sneak preview of its next-gen AI photo editing
+engine.
+
+Holding back the tide: Creatives across industries are strategizing in a campaign that targets potential corporate abuse of AI technology. The conglomeration is
+realistic about the ways that musicians and some other creatives could benefit on an individual level from automating parts of their work. The goal is that AI
+tools “become ways for individual humans to make more money, work less, and compete with the corporations that exploit them.”
+
+Tech you can touch
+
+A while back I argued that Apple’s new AR headset is a game-changer for startups. It seems that’s likely the case at the high end. But more in the realm of
+affordability, Meta Quest 3 takes a step closer to mainstream AR/VR, Brian reports.
+</item 7>
+
+<item 8>
+Meta and IBM form an AI Alliance, but to what end? (TechCrunch, 2023-12-05T13:58:12+00:00)
+Now, those companies have a clear horse in the race and perhaps regulatory capture on the mind… but they’re not wrong entirely. Meta continues to take
+calculated open sourcing risks (within the bounds of regulators’ tolerances), releasing text-generating models like Llama that bad actors have gone on to abuse
+but which plenty of developers have built useful apps upon.
+
+“The platform that will win will be the open one,” Yann LeCun, Meta’s chief AI scientist, was quoted as saying in an interview with The New York Times — and
+who’s among the more than 70 influential signers of a letter calling for more openness in AI development. LeCun has a point; according to one estimate,
+Stability AI’s open source AI-powered image generator, Stable Diffusion, released last August, is now responsible for 80% of all AI-generated imagery.
+
+But wait, you might say — what does IBM gain from the AI Alliance? It’s a co-founder with Meta after all.
+</item 8>
+
+<item 9>
+Meta and IBM form an AI Alliance, but to what end? (TechCrunch, 2023-12-05T13:58:12+00:00)
+It’s a co-founder with Meta after all. I’d venture to guess more exposure for its burgeoning generative AI platform. IBM’s most recent earnings were boosted by
+enterprises’ interest in generative AI, but the company has stiff competition in Microsoft and OpenAI (and to a lesser extent Google), which are jointly
+developing enterprise-focused AI services that directly compete with IBM’s.
+
+I’ve asked IBM’s PR, which first informed me of the AI Alliance’s founding, about the curious omissions from the early membership, like Stanford (which has a
+prominent AI research lab, Stanford HAI), MIT (which is at the forefront of robotics research) and high-profile AI startups like Anthropic, Cohere and Adept. A
+press rep didn’t respond as of publication time. But the same philosophical differences that kept Google and Microsoft away likely were at play; I’d wager it’s
+no accident that Anthropic, Cohere and Adept have relatively few open source AI projects to their names.
+</item 9>
+
+<item 10>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+You cannot escape conversations about AI no matter how far or fast you run. Hyperbole abounds around what current AI tech will be able to do (revolutionize
+every industry!) and what current AI tech will be able to do (take over the world!). Closer to the ground, TechCrunch+ is working to understand where startups
+might find footholds in the market by levering large language models (LLMs), a recent and impactful new method of creating artificially intelligent software.
+
+How AI will play in startup land is not a new topic of conversation. A few years back, one venture firm asked how AI-focused startups would monetize and whether
+they would suffer from impaired margins due to costs relating to running models on behalf of customers. That conversation died down, only to come roaring back
+in recent quarters as it became clear that while LLM technology is quickly advancing, it’s hardly cheap to run in its present form.
+
+But costs are only one area where we have unanswered questions.
+</item 10>
+=== END ITEM id=c69a912e887cd16e ===
+
+=== ITEM id=6d7512644bd38bc6 ===
+Gold sentences and facts:
+Sentence 0: “Certainly there wasn’t a valid alternative to Google at the time,” Cue said.
+  Fact 0.0: Cue said there was not a valid alternative to Google at the time.
+Sentence 1: In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones.
+  Fact 1.0: The last roundup covered how Google spent $26.3 billion in 2021 making itself the default search engine across platforms.
+  Fact 1.1: The last roundup covered how Google tried to have Chrome preinstalled on iPhones.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: Arkansas-based publisher Helena World Chronicle filed a case against Google.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content.
+  Fact 2.2: The case argues that Google 'siphons off' news publishers' readers and ad revenue.
+  Fact 2.3: The case argues that Google's 'siphoning off' happens through anticompetitive means.
+
+Retrieved items:
+<item 1>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 1>
+
+<item 2>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+When online magazine The Atlantic modeled what would happen if Google integrated AI into search, it found that 75% of the time the AI would answer the user’s
+query without requiring a click-through to its website, losing it traffic. This could have a major impact on publishers’ traffic going forward, as Google today
+drives nearly 40% of their traffic, according to data from Similarweb.
+
+Some publishers are now trying to get ahead of the problem. For example, Axel Springer just this week inked a deal with OpenAI to license its news for AI model
+training. But overall, publishers believe they’ll lose somewhere between 20-40% of their website traffic when Google’s AI products fully roll out, The WSJ’s
+report noted.
+
+The lawsuit reiterates this concern, claiming that Google’s recent advances in AI-based search were implemented with “the goal of discouraging end-users from
+visiting the websites of Class members who are part of the digital news and publishing line of commerce.”
+</item 2>
+
+<item 3>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+That doesn’t make its actions illegal, the company says.
+
+Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in
+2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more.
+
+Google paid $26 billion in 2021 to be everyone’s default search engine
+
+When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple
+browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports.
+
+About $18 billion of that total amount went directly to Apple, according to a New York Times report published earlier this month. Google has had its deal with
+Apple in place since 2003.
+
+When questioned on the amount of money Google spends to get first pick of search engines, Pichai said that the decision was made with the consumer in mind.
+</item 3>
+
+<item 4>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 4>
+
+<item 5>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 5>
+
+<item 6>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+In addition to damages, the suit is asking for an injunction that would require Google to obtain consent from publishers to use their website data to train its
+general artificial intelligence products including Google’s own and those of rivals. It also asks Google to allow publishers who opt out of SGE to still show up
+in Google search results, among other things.
+
+The U.S. lawsuit follows an agreement Google reached last month with the Canadian government which would see the search giant paying Canadian media for use of
+their content. Under the terms of the deal, Google will provide $73.5 million (100 million Canadian dollars) every year to news organizations in the country,
+with funds distributed based on the news outlets’ headcount. Negotiations with Meta are still unresolved, though Meta began blocking news in Canada in August,
+in light of the pressure to pay for the content under the new Canadian law.
+
+The case also arrives alongside the filing of the U.S.
+</item 6>
+
+<item 7>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 7>
+
+<item 8>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Discussion of specific numbers was reserved for closed court sessions, but Cue wanted Apple to get a higher percentage, while Pichai wanted to keep the deal as
+it was. They eventually compromised on some other number we weren’t told in court, and Google has been paying Apple that amount since.
+
+“I always felt like it was in Google’s best interest, and our best interest, to get a deal done.”
+
+Meagan Bellshaw, a Justice Department lawyer, asked Cue if he would have walked away from the deal if the two sides couldn’t agree on a revenue-share figure.
+Cue said he’d never really considered that an option: “I always felt like it was in Google’s best interest, and our best interest, to get a deal done.” Cue also
+argued that the deal was about more than economics and that Apple never seriously considered switching to another provider or building its own search product.
+“Certainly there wasn’t a valid alternative to Google at the time,” Cue said. He said there still isn’t one.
+</item 8>
+
+<item 9>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+But the questions put to Cue were the same ones the DOJ is going to keep asking: is Google really the best search engine, or is it just the one writing the
+biggest checks? And if those checks went away, what would the search engine market look like? Cue said Apple’s never really thought about it. Google said Apple
+would be silly to do so. And the Justice Department thinks it’s about time Apple starts doing so.
+</item 9>
+
+<item 10>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 10>
+=== END ITEM id=6d7512644bd38bc6 ===
+
+=== ITEM id=5407a7c3dfe1287f ===
+Gold sentences and facts:
+Sentence 0: The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports.
+  Fact 0.0: The ride-hail company claims the rate of sexual assault reported on the app decreased 38%.
+  Fact 0.1: The 38% decrease is between its first and second reports.
+Sentence 1: The survivors in the joined lawsuit also allege that Uber’s “fast and shallow background checks” are substandard and designed to make it as easy as possible for drivers to sign up quickly.
+  Fact 1.0: Survivors in the joined lawsuit allege that Uber's 'fast and shallow background checks' are substandard.
+  Fact 1.1: Survivors allege the background checks are designed to make it as easy as possible for drivers to sign up quickly.
+Sentence 2: Uber has attempted to address sexual assaults by drivers — which the lawsuits claim Uber has known about since 2014 — through new safety features in its app, like a 911 button and the ability to share location with a friend.
+  Fact 2.0: Uber has attempted to address sexual assaults by drivers through new safety features in its app.
+  Fact 2.1: The lawsuits claim Uber has known about sexual assaults by drivers since 2014.
+  Fact 2.2: One of Uber's new safety features is a 911 button.
+  Fact 2.3: Another of Uber's new safety features is the ability to share location with a friend.
+Sentence 3: In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income.
+  Fact 3.0: In the third quarter, Uber generated $394 million in operating income.
+  Fact 3.1: In the third quarter, Uber generated $219 million worth of net income.
+
+Retrieved items:
+<item 1>
+Uber sexual assault survivors call for in-car cameras, tech upgrades (TechCrunch, 2023-10-13T19:26:48+00:00)
+And so if they don’t have drivers, they don’t make money.”
+
+Many drivers install their own dash cams to record trips, usually as backup evidence for insurance claims or to defend themselves against unfair deactivations
+from Uber’s platform. Uber is also piloting a new video recording feature for drivers that allows them to record video on their smartphones. But in those cases,
+the driver can decide what and when to record, and when to share that data.
+
+Other demands
+
+The survivors in the joined lawsuit also allege that Uber’s “fast and shallow background checks” are substandard and designed to make it as easy as possible for
+drivers to sign up quickly. Uber uses third-party companies like Checkr and Appriss to do background checks, which Sergio Avedian, senior contributor at The
+Rideshare Guy, says “are at best watered down and not guaranteed of bad apples from falling through the cracks.”
+
+The lawsuit calls on Uber to also include fingerprinting, which would run prospective drivers through FBI databases.
+</item 1>
+
+<item 2>
+Uber sexual assault survivors call for in-car cameras, tech upgrades (TechCrunch, 2023-10-13T19:26:48+00:00)
+Hundreds of women have filed lawsuits against Uber claiming the company hasn’t done enough to prevent instances of sexual assault by drivers. Now a panel of
+judges has ruled that more than 80 cases can be consolidated into federal court.
+
+The stakes are high for both parties with implications extending to future Uber riders and drivers. The outcome of the case could result in sweeping changes to
+Uber’s platform, which plaintiffs argue will reduce sexual assault and also raise new concerns over privacy.
+
+The upshot? Technology lies at the center of this very human story.
+
+Uber has attempted to address sexual assaults by drivers — which the lawsuits claim Uber has known about since 2014 — through new safety features in its app,
+like a 911 button and the ability to share location with a friend. Yet survivors, and their attorneys, say that response has been inadequate, and they’re
+calling for better technological solutions like in-vehicle surveillance cameras.
+</item 2>
+
+<item 3>
+Uber sexual assault survivors call for in-car cameras, tech upgrades (TechCrunch, 2023-10-13T19:26:48+00:00)
+The lawsuit calls on Uber to also include fingerprinting, which would run prospective drivers through FBI databases.
+
+“This is a very intentional and deliberate decision as evidenced by Uber’s active lobbying and resistance against municipalities and regulatory bodies
+implementing any kind of biometric fingerprinting requirements for drivers,” said Kevin Conway, managing partner at Peiffer Wolf Carr Kane Conway & Wise.
+
+Uber has lobbied against additional background requirements for drivers, which has given the company authority to conduct its own background checks with little
+or no oversight, unlike most taxi operators.
+
+Uber and Lyft say smudged fingerprints can lead to inaccurate results and that fingerprint checks reference historical arrest records, which can have
+discriminatory effects on some minority communities that face disproportionately high arrest rates. An Uber spokesperson told CNN arrest records are incomplete
+and often lack information about whether a person has been convicted of a crime.
+</item 3>
+
+<item 4>
+Uber sexual assault survivors call for in-car cameras, tech upgrades (TechCrunch, 2023-10-13T19:26:48+00:00)
+Aside from in-vehicle surveillance and more extensive background checks, the survivors are asking Uber to implement driver training on interactions with
+passengers, a zero-tolerance policy for drivers, sexual harassment education and training, and a more adequate system to encourage customer reporting and
+monitor customer complaints.
+
+Are Uber’s in-app safety features working?
+
+Abrams argues that Uber’s safety features are insufficient because they’re all app-based and only potentially useful if a rider has access to their own phone.
+
+“The majority of clients I represent and the women I’ve spoken to who have been sexually assaulted have experienced: (A) someone else ordered the ride for them;
+(B) their phone is dead or they can’t locate their phone to use the safety shield; or (C) if they could use their phone, they’re incapacitated,” said Abrams.
+
+The lawyer says she has interviewed upward of 5,000 survivors over the course of several years and has seen no difference in the number of attacks before or
+after implementation of these in-app features.
+</item 4>
+
+<item 5>
+Uber’s Q3 numbers include impressive profitability gains, slower-than-expected growth (TechCrunch, 2023-11-07T17:03:41+00:00)
+Uber reported third-quarter earnings on Tuesday that show a profitable ride-hail and delivery company that’s chugging along in spite of slowing growth in some
+sectors.
+
+The company reported revenue of $9.3 billion, an 11% increase year over year. Investors had expected Uber to report revenues of around $9.5 billion (FactSet,
+Refinitiv), meaning that despite the company’s growth, it fell short of estimates. Turning to profitability, Uber reported net income of $221 million in the
+third quarter, or 10 cents per share, compared with a net loss of $1.2 billion, or 61 cents per share, in the same quarter last year. Again, the company fell
+short of expectations that it would generate 12 cents in per-share profit.
+
+Looking ahead, Uber anticipates gross bookings of $36.5 billion to $37.5 billion, up just 6% at the top-end from its Q3 result.
+</item 5>
+
+<item 6>
+Uber’s Q3 numbers include impressive profitability gains, slower-than-expected growth (TechCrunch, 2023-11-07T17:03:41+00:00)
+The question is whether Uber believes in the long-term income potential of freight.
+
+So what?
+
+When discussing Uber’s results internally, our vibe was that it is a very profitable and healthy company today, albeit one that is not growing as fast as the
+market had hoped. The fact that Uber’s share price is up as we write this indicates that investors are content thus far to excuse the small Q3 misses and keep
+their eyes more focused on its year-over-year improvements and forward guidance. More when we get Lyft’s numbers.
+</item 6>
+
+<item 7>
+Uber sexual assault survivors call for in-car cameras, tech upgrades (TechCrunch, 2023-10-13T19:26:48+00:00)
+The number of incidents increased in the categories of nonconsensual kissing, nonconsensual touching and nonconsensual penetration, or rape, between 2017 and
+2019.
+
+The total number of rape incidents also rose from 2017 to 2019. And while the number of reported rapes dropped in 2020, the rate has remained the same since
+2017. In other words, there has not been an improvement in the rate of rapes on the platform.
+
+Sexual assaults are an ongoing problem for Uber
+
+Uber has been sued numerous times over the past few years by passengers who claim they were sexually assaulted during a ride. Lyft has faced similar lawsuits
+and accusations.
+
+Under Uber’s terms of use, class action lawsuits can’t be filed against the company in cases of sexual assault, so each case has to be heard individually. This
+has prevented survivors from advocating for themselves collectively.
+
+Judge Charles Breyer in the Northern District of California will preside over pretrial hearings.
+</item 7>
+
+<item 8>
+Uber sexual assault survivors call for in-car cameras, tech upgrades (TechCrunch, 2023-10-13T19:26:48+00:00)
+In-vehicle cameras as a deterrent
+
+Abrams cited data from studies of taxis equipped with in-vehicle cameras, which she says has drastically reduced instances of sexual assaults against
+passengers, as well as assault of passengers against drivers.
+
+“These are predatory, opportunistic drivers taking advantage of vulnerable women, so if they’re on film, they likely wouldn’t commit the crime,” Abrams told
+TechCrunch.
+
+Uber didn’t respond to TechCrunch’s request for more information about why it hasn’t mandated the use of cameras in ride-hail vehicles, but as with any
+surveillance, there are privacy issues. The legality of mandating cameras also varies across local and state laws.
+
+Abrams has her own theory as to why Uber has been slow to implement security cameras.
+
+“Cost isn’t the issue,” she said. “It’s that it would deter drivers because a lot of drivers don’t want cameras. And so if they don’t have drivers, they don’t
+make money.”
+</item 8>
+
+<item 9>
+Uber sexual assault survivors call for in-car cameras, tech upgrades (TechCrunch, 2023-10-13T19:26:48+00:00)
+Uber hasn’t released safety data for 2021 and 2022, and won’t say when it plans to do so. Older data backs up some of Abrams’ claims.
+
+Uber has published two safety reports — one containing data from 2017 to 2018 and another with data from 2019 to 2020. The ride-hail company claims that the
+rate of sexual assault reported on the app decreased 38% between its first and second reports.
+
+While the rate decrease is positive, not all the data delivers the same message. Over that same time period, the total number of sexual assault reports across
+five categories fell from 5,981 to 3,824. That drop could be explained by the decrease of trips from 1.4 billion in 2019 to 650 million in 2020.
+
+And while the total number of incidents as a percentage of total number of rides does decrease through the years, the number of incidents in certain categories
+actually increases.
+</item 9>
+
+<item 10>
+Uber sexual assault survivors call for in-car cameras, tech upgrades (TechCrunch, 2023-10-13T19:26:48+00:00)
+Aside from the 911 button and location-sharing feature, which were both introduced in 2018, Uber has added other features to the app over the last five years.
+In 2021, Uber introduced a feature that allows riders and drivers to record audio during a trip. The following year, Uber launched a pilot to provide passengers
+with live help from an ADT safety agent, as well as PIN verifications to ensure passengers are connected to the correct driver.
+
+Rachel Abrams — a sexual assault attorney and partner at law firm Peiffer Wolf Carr Kane Conway & Wise, one of the law firms working on the multidistrict
+litigation, who filed the petition to consolidate the various actions in federal court — argues the app-based solutions are half-measures that haven’t quelled
+instances of sexual violence against passengers on the platform. Mandatory in-vehicle cameras in Uber cars is “essential for safety,” she says.
+
+Uber told TechCrunch it cannot comment on pending litigation but said it remains committed to the safety of all users on its platform.
+</item 10>
+=== END ITEM id=5407a7c3dfe1287f ===

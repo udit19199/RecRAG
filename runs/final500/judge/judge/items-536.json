@@ -1,0 +1,411 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "d01842bcf3defcf5",
+   "gold": [
+    {
+     "sentence": "German Spitz is used to refer to both a breed of dog and category or type of dog.",
+     "facts": {
+      "0.0": "German Spitz is used to refer to a breed of dog.",
+      "0.1": "German Spitz is used to refer to a category or type of dog."
+     }
+    },
+    {
+     "sentence": " Several modern breeds have been developed from the German Spitz, and are either registered as separate breeds or as varieties of German Spitz.",
+     "facts": {
+      "1.0": "Several modern breeds have been developed from the German Spitz.",
+      "1.1": "These modern breeds are either registered as separate breeds.",
+      "1.2": "These modern breeds are either registered as varieties of German Spitz."
+     }
+    },
+    {
+     "sentence": " The term was used to designate springer type spaniels that were neither Sussex nor Clumber Spaniels, and attempts were made to use it to specify a breed that would later become known as the English Springer Spaniel.",
+     "facts": {
+      "2.0": "The term was used to designate springer type spaniels that were neither Sussex nor Clumber Spaniels.",
+      "2.1": "Attempts were made to use the term to specify a breed that would later become known as the English Springer Spaniel."
+     }
+    }
+   ],
+   "items": [
+    "American Eskimo Dog\nThe American Eskimo Dog is a breed of companion dog originating in Germany.\n\n The American Eskimo is a member of the Spitz family.\n\n The breed's progenitors were German Spitz, but due to anti-German prejudice during the First World War, it was renamed \"American Eskimo Dog\".\n\n Although modern American Eskimos have been exported as German Spitz Gross (or Mittel, depending on the dog's height), the breeds have diverged and the standards are significantly different.\n\n In addition to serving as a watchdog and companion, the American Eskimo Dog also achieved a high degree of popularity in the United States in the 1930s and 1940s as a circus performer.",
+    "King Charles Spaniel\nThe King Charles Spaniel (also known as the English Toy Spaniel) is a small dog breed of the spaniel type.\n\n In 1903, the Kennel Club combined four separate toy spaniel breeds under this single title.\n\n The other varieties merged into this breed were the Blenheim, Ruby and Prince Charles Spaniels, each of which contributed one of the four colours available in the breed.",
+    "Norfolk Spaniel\nThe Norfolk Spaniel or Shropshire Spaniel is an extinct breed of dog since the early 20th century.\n\n It was originally thought to have originated from the work of one of the Dukes of Norfolk, but this theory was disproven after being in doubt during the later part of the 19th century.\n\n The term was used to designate springer type spaniels that were neither Sussex nor Clumber Spaniels, and attempts were made to use it to specify a breed that would later become known as the English Springer Spaniel.",
+    "German Spitz (Klein)\nThe German Spitz Klein is a breed of dog of the German Spitz type.\n\n They are usually classed as a toy or utility breed.",
+    "Picardy Spaniel\nThe Picardy Spaniel is a breed of dog developed in France for use as a gundog.\n\n It is related to the Blue Picardy Spaniel, and still has many similarities, but the Picardy Spaniel is the older of the two breeds.\n\n It is thought to be one of the two oldest continental spaniel breeds and was favoured by the French nobility, remaining popular for hunting after the French Revolution due to its weather resistant coat that enabled it to hunt in a variety of conditions and terrain.\n\n However its popularity waned following the influx of English hunting breeds in the early 20th century.\n\n Slightly smaller than an English Setter but larger than most of its spaniel cousins, it has no major health issues although as with many breeds with pendulous ears, it can be prone to ear infections.",
+    "American Cocker Spaniel\nThe American Cocker Spaniel is a breed of sporting dog.\n\n It is a spaniel type dog that is closely related to the English Cocker Spaniel; the two breeds diverged during the 20th century due to differing breed standards in America and the UK.\n\n In the United States, the breed is usually called the Cocker Spaniel, while elsewhere in the world, it is called the American Cocker Spaniel in order to differentiate between it and its English cousin, which was already known as \"Cocker Spaniel\" before the American variety was created.\n\n The word \"cocker\" is commonly held to stem from their use to hunt woodcock in England, while \"spaniel\" is thought to be derived from the type's origins in Spain.",
+    "Welsh Springer Spaniel\nThe Welsh Springer Spaniel is a breed of dog and a member of the spaniel family.\n\n Thought to be comparable to the old Land Spaniel, they are similar to the English Springer Spaniel and historically have been referred to as both the Welsh Spaniel and the Welsh Cocker Spaniel.\n\n They were relatively unknown until a succession of victories in dog trials by the breed increased its popularity.\n\n Following recognition by The Kennel Club in 1902, the breed gained the modern name of Welsh Springer Spaniel.\n\n The breed's coat only comes in a single colour combination of white with red markings, usually in a piebald pattern.\n\n Loyal and affectionate, they can become very attached to family members and are wary of strangers.\n\n Health conditions are limited to those common among many breeds of dog, although they are affected more than average by hip dysplasia and some eye conditions.\n\n They are a working dog, bred for hunting, and while not as rare as some varieties of spaniel, they are rarer than the more widely known English Springer Spaniel with which they are sometimes confused.",
+    "German Spitz\nGerman Spitz is used to refer to both a breed of dog and category or type of dog.\n\n Several modern breeds have been developed from the German Spitz, and are either registered as separate breeds or as varieties of German Spitz.\n\n All the \"German Spitz type\" dogs are dogs of the Spitz type of German origin.\n\n The Großspitz, Mittelspitz, and Kleinspitz breeds of \"German Spitz type\" are also called the German Spitz in English.",
+    "Fox Terrier\nFox Terriers are two different breeds of the terrier dog type: the Smooth Fox Terrier and the Wire Fox Terrier.\n\n Both of these breeds originated in the 19th century from a handful of dogs who are descended from earlier varieties of British terriers, and are related to other modern white terrier breeds.\n\n In addition, a number of breeds have diverged from these two main types of fox terrier and have been recognised separately, including the Jack Russell Terrier, Miniature Fox Terrier and Rat Terrier.\n\n The Wire and Smooth Fox Terriers share similar characteristics, the main differences being in the coat and markings.\n\n They have been successful in conformation shows, more prominently in America than their homeland.",
+    "English Springer Spaniel\nThe English Springer Spaniel is a breed of gun dog in the Spaniel family traditionally used for flushing and retrieving game.\n\n It is an affectionate, excitable breed with a typical lifespan of twelve to fourteen years.\n\n They are very similar to the Welsh Springer Spaniel and are descended from the Norfolk or Shropshire Spaniels of the mid-19th century; the breed has diverged into separate show and working lines.\n\n The breed suffers from average health complaints.\n\n The show-bred version of the breed has been linked to \"rage syndrome\", although the disorder is very rare.\n\n It is closely related to the Welsh Springer Spaniel and very closely to the English Cocker Spaniel; less than a century ago, springers and cockers would come from the same litter.\n\n The smaller \"cockers\" hunted woodcock while the larger littermates were used to flush, or \"spring,\" game.\n\n In 1902, The Kennel Club recognized the English Springer Spaniel as a distinct breed.\n\n They are used as sniffer dogs on a widespread basis.\n\n The term \"Springer\" comes from the historic hunting role, where the dog would flush (spring) birds into the air."
+   ]
+  },
+  {
+   "id": "ef662a2651c576d7",
+   "gold": [
+    {
+     "sentence": " He was awarded the 2012 Nobel Prize in Physics, jointly with Serge Haroche, for \"ground-breaking experimental methods that enable measuring and manipulation of individual quantum systems.\"",
+     "facts": {
+      "0.0": "The recipient was awarded the 2012 Nobel Prize in Physics.",
+      "0.1": "The recipient shared the 2012 Nobel Prize in Physics jointly with Serge Haroche.",
+      "0.2": "The 2012 Nobel Prize in Physics was awarded for ground-breaking experimental methods that enable measuring and manipulation of individual quantum systems."
+     }
+    },
+    {
+     "sentence": " Since 2001, Haroche is a Professor at the Collège de France and holds the Chair of Quantum Physics.",
+     "facts": {
+      "1.0": "Since 2001, Serge Haroche has been a Professor at the Collège de France.",
+      "1.1": "Since 2001, Serge Haroche has held the Chair of Quantum Physics."
+     }
+    }
+   ],
+   "items": [
+    "François Englert\nHe is the recipient of the 2013 Prince of Asturias Award in technical and scientific research, together with Peter Higgs and the CERN.",
+    "List of Nobel laureates in Chemistry\nThe Nobel Prize in Chemistry (Swedish: \"Nobelpriset i kemi\" ) is awarded annually by the Royal Swedish Academy of Sciences to scientists in the various fields of chemistry.\n\n It is one of the five Nobel Prizes established by the 1895 will of Alfred Nobel, who died in 1896.\n\n These prizes are awarded for outstanding contributions in chemistry, physics, literature, peace, and physiology or medicine.\n\n As dictated by Nobel's will, the award is administered by the Nobel Foundation and awarded by a committee that consists of five members elected by the Royal Swedish Academy of Sciences.\n\n The first Nobel Prize in Chemistry was awarded in 1901 to Jacobus Henricus van 't Hoff, of the Netherlands.\n\n Each recipient receives a medal, a diploma and a monetary award prize that has varied throughout the years.\n\n In 1901, van 't Hoff received 150,782 SEK, which is equal to 7,731,004 SEK in December 2007.\n\n The award is presented in Stockholm at an annual ceremony on December 10, the anniversary of Nobel's death.",
+    "François Englert\nFrançois Baron Englert (] ; born 6 November 1932) is a Belgian theoretical physicist and 2013 Nobel prize laureate (shared with Peter Higgs).\n\n He is Professor emeritus at the Université libre de Bruxelles (ULB) where he is member of the Service de Physique Théorique.\n\n He is also a Sackler Professor by Special Appointment in the School of Physics and Astronomy at Tel Aviv University and a member of the Institute for Quantum Studies at Chapman University in California.\n\n He was awarded the 2010 J. J. Sakurai Prize for Theoretical Particle Physics (with Gerry Guralnik, C. R. Hagen, Tom Kibble, Peter Higgs, and Robert Brout), the Wolf Prize in Physics in 2004 (with Brout and Higgs) and the High Energy and Particle Prize of the European Physical Society (with Brout and Higgs) in 1997 for the mechanism which unifies short and long range interactions by generating massive gauge vector bosons.\n\n He has made contributions in statistical physics, quantum field theory, cosmology, string theory and supergravity.",
+    "List of Nobel laureates in Physiology or Medicine\nEach recipient receives a medal, a diploma and a monetary award that has varied throughout the years.\n\n In 1901, von Behring received 150,782 SEK, which is equal to 7,731,004 SEK in December 2008.\n\n In 2013, the prize was awarded to James E. Rothman, Randy W. Schekman and Thomas C. Südhof; they were recognised \"after discovering how cells precisely transport material\".\n\n The award is presented in Stockholm at an annual ceremony on December 10, the anniversary of Nobel's death.",
+    "List of female Nobel laureates\nThe Nobel Prizes are awarded annually by the Royal Swedish Academy of Sciences, the Swedish Academy, the Karolinska Institute, and the Norwegian Nobel Committee to individuals who make outstanding contributions in the fields of Chemistry, Physics, Literature, Peace, Physiology or Medicine and Economics.\n\n All but the economics prize were established by the 1895 will of Alfred Nobel, which dictates that the awards should be administered by the Nobel Foundation.\n\n The Nobel prize in Economics, or The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel, was established in 1968 by the Sveriges Riksbank, the central bank of Sweden, for outstanding contributions in the field of Economics.\n\n Each prize is awarded by a separate committee; the Royal Swedish Academy of Sciences awards the Prizes in Physics, Chemistry, and Economics, the Swedish Academy awards the Prize in Literature, the Karolinska Institute awards the Prize in Physiology or Medicine, and the Norwegian Nobel Committee awards the Prize in Peace.\n\n Each recipient receives a medal, a diploma and a cash prize that has varied throughout the years.",
+    "David J. Wineland\nDavid Jeffrey Wineland (born February 24, 1944) is an American Nobel-laureate physicist at the National Institute of Standards and Technology (NIST) physics laboratory.\n\n His work has included advances in optics, specifically laser cooling trapped ions and using ions for quantum computing operations.\n\n He was awarded the 2012 Nobel Prize in Physics, jointly with Serge Haroche, for \"ground-breaking experimental methods that enable measuring and manipulation of individual quantum systems.\"",
+    "Serge Haroche\nSerge Haroche (born 11 September 1944) is a French physicist who was awarded the 2012 Nobel Prize for Physics jointly with David J. Wineland for \"ground-breaking experimental methods that enable measuring and manipulation of individual quantum systems\", a study of the particle of light, the photon.\n\n This and his other works developed laser spectroscopy.\n\n Since 2001, Haroche is a Professor at the Collège de France and holds the Chair of Quantum Physics.\n\n In 1971 he defended his doctoral thesis in physics at the University of Paris VI, his research has been conducted under the direction of Claude Cohen-Tannoudji.",
+    "Brian Josephson\nBrian David Josephson, {'1': \", '2': \", '3': \", '4': \"} (born 4 January 1940), is a Welsh theoretical physicist and professor emeritus of physics at the University of Cambridge.\n\n Best known for his pioneering work on superconductivity and quantum tunnelling, he was awarded the Nobel Prize in Physics in 1973 for his prediction of the Josephson effect, made in 1962 when he was a 22-year-old PhD student at Cambridge University.\n\n Josephson is the only Welshman to have won a Nobel Prize in Physics.\n\n He shared the prize with physicists Leo Esaki and Ivar Giaever, who jointly received half the award for their own work on quantum tunnelling.",
+    "Duncan Haldane\nFrederick Duncan Michael Haldane {'1': \", '2': \", '3': \", '4': \"} (born 14 September 1951), known as F. Duncan Haldane, is a British born physicist who is Eugene Higgins Professor of Physics at the physics department of Princeton University, and a Distinguished Visiting Research Chair at Perimeter Institute for Theoretical Physics.\n\n He won the 2016 Nobel Prize in Physics with David J. Thouless and John Michael Kosterlitz.",
+    "Nobel Prize in Physics\nThe Nobel Prize in Physics (Swedish: \"Nobelpriset i fysik\" ) is a yearly award given by the Royal Swedish Academy of Sciences for those who conferred the most outstanding contributions for mankind in the field of physics.\n\n It is one of the five Nobel Prizes established by the will of Alfred Nobel in 1895 and awarded since 1901; the others being the Nobel Prize in Chemistry, Nobel Prize in Literature, Nobel Peace Prize, and Nobel Prize in Physiology or Medicine."
+   ]
+  },
+  {
+   "id": "5172c0f72ab63d4f",
+   "gold": [
+    {
+     "sentence": "The Celluloid Closet is a 1995 American documentary film directed and written by Rob Epstein and Jeffrey Friedman.",
+     "facts": {
+      "0.0": "The Celluloid Closet is a 1995 American documentary film.",
+      "0.1": "The Celluloid Closet was directed by Rob Epstein and Jeffrey Friedman.",
+      "0.2": "The Celluloid Closet was written by Rob Epstein and Jeffrey Friedman."
+     }
+    },
+    {
+     "sentence": "Station to Station is the 2014 film of Doug Aitken's 2013 \"Nomadic Happening\", the film is made up of 62 one-minute films.",
+     "facts": {
+      "1.0": "Station to Station is the 2014 film of Doug Aitken's 2013 \"Nomadic Happening\".",
+      "1.1": "The film Station to Station is made up of 62 one-minute films."
+     }
+    }
+   ],
+   "items": [
+    "The Boxer (Kele Okereke album)\nThe Boxer is the debut solo album by Kele Okereke, the lead singer of British indie rock band Bloc Party.\n\n Okereke released the album under the professional name of Kele on 21 June 2010.\n\n As promotion, he uploaded the songs \"Rise\" and \"Walk Tall\" to his personal website on 13 May.\n\n The first single from \"The Boxer\" was \"Tenderoni\", released on 14 June, and the second, \"Everything You Wanted\", on 16 August.\n\n The album's third single \"On The Lam\" was released on 25 October.",
+    "Information (Berlin album)\nInformation is the first album by Berlin, released in 1980 by Vinyl Records.\n\n It was recorded during the period when Terri Nunn had temporarily left the band to pursue an acting career and Virginia Macolino performed the lead vocals.\n\n Several songs were written by previous lead singer Toni Childs who went solo prior to the album's release.",
+    "From the Sea to the Land Beyond\nFrom The Sea to the Land Beyond: Britain's Coast on Film is a documentary feature film directed by Penny Woolcock, with an original soundtrack by British indie-rock band British Sea Power.\n\n The project was originally produced by Crossover and Sheffield Doc/Fest as part of The Space project from the BBC and the Arts Council England.\n\n The film was edited by Alex Fry.",
+    "I Shot Andy Warhol\nI Shot Andy Warhol is a 1996 American-British independent film about the life of Valerie Solanas and her relationship with the artist Andy Warhol.\n\n The film marked the debut of Canadian director Mary Harron.\n\n The film stars Lili Taylor as Valerie, Jared Harris as Andy Warhol, and Martha Plimpton as Valerie's friend Stevie.\n\n Stephen Dorff plays Warhol superstar Candy Darling.\n\n John Cale of The Velvet Underground wrote the film's score despite protests from former band member Lou Reed.\n\n Yo La Tengo plays an anonymous band that is somewhat reminiscent of the group.",
+    "Romance of Celluloid\nThe Romance of Celluloid is a 1937 short black and white documentary film, narrated by Frank Whitbeck, which goes behind the scenes to look at the manufacture of film and the making of motion pictures.\n\n The film was the first of the studio's \"Romance of Celluloid\" series, which also included;",
+    "Panic Stations (album)\nPanic Stations is the sixth and final studio album by American rock band Motion City Soundtrack.\n\n Produced by John Agnello, the album was released on September 18, 2015 by Epitaph Records.\n\n Following an extended touring cycle in which the group performed several past albums in full, Motion City Soundtrack lost one of its longest-serving members: drummer Tony Thaxton, who resigned from the group in 2013.\n\n The band continued to tour with new drummer Claudio Rivera over the ensuing year while writing new material for a sixth album.",
+    "Station to Station (film)\nStation to Station is the 2014 film of Doug Aitken's 2013 \"Nomadic Happening\", the film is made up of 62 one-minute films.\n\n It was distributed internationally in 2015 following its release at the Sundance Film Festival.",
+    "The Celluloid Closet\nThe Celluloid Closet is a 1995 American documentary film directed and written by Rob Epstein and Jeffrey Friedman.\n\n The film is based on Vito Russo's book of the same name first published in 1981 and on lecture and film clip presentations he gave in 1972–1982.\n\n Russo had researched the history of how motion pictures, especially Hollywood films, had portrayed gay, lesbian, bisexual and transgender characters.",
+    "Vito (film)\nVito is a 2011 documentary produced and directed by Jeffrey Schwarz of the Los Angeles-based production company Automat Pictures.\n\n The film documents the life of Vito Russo, gay activist, film scholar, and author of \"The Celluloid Closet\".",
+    "Love in Motion (song)\n\"Love in Motion\" is the first new material released by the Australian rock synthpop band Icehouse as a 7\" vinyl single-only in October 1981 on Regular Records for the Australian market.\n\n The band had been known as Flowers until 27 June 1981 after which they changed their name to Icehouse, they had signed to Chrysalis Records and most of Flowers' material was released under the new name into Europe, UK and US markets.\n\n \"Love in Motion\" peaked at #10 on the Australian singles charts.\n\n The B-side, \"Goodnight, Mr. Matthews\" was included on the 1982 album \"Primitive Man\" with \"Love in Motion\" included on the Chrysalis Records US / European versions of the album, the UK 1983 version of the album was re-titled \"Love in Motion\"."
+   ]
+  },
+  {
+   "id": "46db64e4ce8e24ac",
+   "gold": [
+    {
+     "sentence": "\", \"My Life As A Teenage Robot\" and \"The Replacements\" and he also did the voice of Knotty in \"\" (1992) and he also did additional voices in films \"Fantasia 2000\" (1999) and \"Sing\" (2016)",
+     "facts": {
+      "0.0": "This person did voice work for My Life As A Teenage Robot.",
+      "0.1": "This person did voice work for The Replacements.",
+      "0.2": "This person did the voice of Knotty in a 1992 work whose title is blank in the sentence.",
+      "0.3": "This person did additional voices in the film Fantasia 2000 (1999).",
+      "0.4": "This person did additional voices in the film Sing (2016)."
+     }
+    },
+    {
+     "sentence": " It was directed and written by Garth Jennings, co-directed by Christophe Lourdelet, and starring the voices of Matthew McConaughey, Reese Witherspoon, Seth MacFarlane, Scarlett Johansson, John C. Reilly, Taron Egerton, and Tori Kelly.",
+     "facts": {
+      "1.0": "The film was directed by Garth Jennings.",
+      "1.1": "The film was written by Garth Jennings.",
+      "1.2": "The film was co-directed by Christophe Lourdelet.",
+      "1.3": "The film starred the voices of Matthew McConaughey.",
+      "1.4": "The film starred the voices of Reese Witherspoon.",
+      "1.5": "The film starred the voices of Seth MacFarlane.",
+      "1.6": "The film starred the voices of Scarlett Johansson.",
+      "1.7": "The film starred the voices of John C. Reilly.",
+      "1.8": "The film starred the voices of Taron Egerton.",
+      "1.9": "The film starred the voices of Tori Kelly."
+     }
+    }
+   ],
+   "items": [
+    "Sing (2016 American film)\nSing is a 2016 American 3D computer-animated musical comedy film produced by Illumination Entertainment.\n\n It was directed and written by Garth Jennings, co-directed by Christophe Lourdelet, and starring the voices of Matthew McConaughey, Reese Witherspoon, Seth MacFarlane, Scarlett Johansson, John C. Reilly, Taron Egerton, and Tori Kelly.\n\n The film is about a group of anthropomorphic animals that enter a singing competition, hosted by a koala hoping to save his theater.",
+    "Radio Cape Cod\nRadio Cape Cod is a 2008 film directed and produced by Andrew Silver.\n\n It stars Tamzin Outhwaite as a radio interviewer coming to terms with the loss of her husband and a new love entering her life.\n\n She also must cope with her teenage daughter, played by Tamzin Merchant, who is experiencing her first love.\n\n The film also stars O. T. Fagbenle.\n\n The film won several festival awards.",
+    "The Jane Austen Book Club (film)\nThe Jane Austen Book Club is a 2007 American romantic drama film written and directed by Robin Swicord.\n\n The screenplay, adapted from the 2004 novel of the same name by Karen Joy Fowler, focuses on a book club formed specifically to discuss the six novels written by Jane Austen.\n\n As they delve into Austen's literature, the club members find themselves dealing with life experiences that parallel the themes of the books they are reading.",
+    "Zooey Deschanel filmography\nAmerican actress Zooey Deschanel made her film debut in the 1999 comedy feature \"Mumford\".\n\n She went on to gained public attention by co-starred in the comedy-drama \"Almost Famous\" (2000), the independent drama \"Manic\" (2001), opposite Joseph Gordon-Levitt, and the comedy-drama \"The Good Girl\" (2002).\n\n She landed her first major role as a 18-year-old virgin in the romantic drama \"All the Real Girls\" (2003), for which she was nominated for an Independent Spirit Award for Best Female Lead.\n\n Deschanel's biggest commercial success, as of 2017, came with the Christmas-fantasy film \"Elf\" (also in 2003), which grossed over $220 million worldwide.",
+    "Deep Dark Canyon\nDeep Dark Canyon is a 2012 American independent dramatic thriller film by husband and wife writer/director team Abe Levy and Silver Tree.\n\n The film stars Ted Levine, Nick Eversman and Spencer Treat Clark.\n\n The film was originally called \"Lawless\" and was shot on location in the rural town of Guerneville, California.",
+    "Hotline (2014 film)\nHotline is a 2014 documentary feature film written and directed by Tony Shaff.\n\n The film explores the intense connections that are made between strangers over the telephone, and explores these anonymous conversations people are often too hesitant to have with the people closest to them.\n\n The film stars Miss Cleo, Jeff Ragsdale, Jamie Blaine, and Tonya Jone Miller.",
+    "James Dooley (composer)\nJames Michael \"Jim\" Dooley (born August 22, 1976 in New York City, New York) is an American film score composer.\n\n Dooley studied music at New York University, majoring in music composition.\n\n After finishing the university he moved to Los Angeles, where he studied music with prolific film score composers Christopher Young, Elmer Bernstein and Leonard Rosenman.\n\n In 1999, he started working for Hans Zimmer as his chief technical assistant.\n\n He works in Santa Monica, in Hans Zimmer's film music studio Remote Control Productions (formerly \"Media Ventures\").\n\n He composed, arranged, and orchestrated music for films like \"\" and \"The Da Vinci Code\".\n\n He also composed music for \"inFAMOUS 2\", the Epic Mickey series and worked with Celldweller and Tarja Turunen.\n\n He released his debut album, \"Veiled Nation\", in 2013.",
+    "Girl 6\nGirl 6 is a 1996 American comedy-drama film by director Spike Lee about a phone sex operator.\n\n Theresa Randle played the title character, and playwright Suzan-Lori Parks wrote the screenplay.\n\n The soundtrack is composed entirely of songs written by Prince.\n\n The film was screened in the Un Certain Regard section at the 1996 Cannes Film Festival.\n\n Directors Quentin Tarantino and Ron Silver make cameo appearances as film directors at a pair of interesting auditions.\n\n It is the first film directed by Lee in which he did not write the screenplay.",
+    "Town Without Pity\nTown Without Pity (German: Stadt ohne Mitleid) is a 1961 American, Swiss, and West German international co-production drama film directed by Gottfried Reinhardt.\n\n Produced by The Mirisch Corporation, the film stars Kirk Douglas, Christine Kaufmann, and E. G. Marshall.\n\n Coincidentally, this movie came out the same year that John A. Bennett, to this day the last man executed by the U.S. Army, was hanged for raping an 11-year-old girl.",
+    "Small Apartments\nSmall Apartments is a 2012 American comedy film directed by Jonas Åkerlund.\n\n It tells the story of Franklin Franklin, played by Matt Lucas, who by mistake kills his landlord, Mr. Olivetti, played by Peter Stormare.\n\n The cast co-stars Dolph Lundgren, Johnny Knoxville, James Caan, Billy Crystal, Juno Temple, Rebel Wilson, Saffron Burrows and Amanda Plummer.\n\n The screenplay was written by Chris Millis and adapted from his own novella.\n\n The film premiered at the South by Southwest Film Festival on March 10, 2012."
+   ]
+  },
+  {
+   "id": "be366c7cfdfdd952",
+   "gold": [
+    {
+     "sentence": " It was driven by Eddie Irvine, who was in his second year with the team, and Luciano Burti, who had deputised for Irvine at the 2000 Austrian Grand Prix.",
+     "facts": {
+      "0.0": "The car described in this sentence was driven by Eddie Irvine.",
+      "0.1": "Eddie Irvine was in his second year with the team.",
+      "0.2": "The car described in this sentence was also driven by Luciano Burti.",
+      "0.3": "Luciano Burti had deputised for Eddie Irvine at the 2000 Austrian Grand Prix."
+     }
+    },
+    {
+     "sentence": "Edmund Irvine Jr. (born 10 November 1965) is a retired British racing driver from Northern Ireland.",
+     "facts": {
+      "1.0": "Edmund Irvine Jr. was born on 10 November 1965.",
+      "1.1": "Edmund Irvine Jr. is a retired British racing driver.",
+      "1.2": "Edmund Irvine Jr. is from Northern Ireland."
+     }
+    }
+   ],
+   "items": [
+    "Eddie Irvine\nEdmund Irvine Jr. (born 10 November 1965) is a retired British racing driver from Northern Ireland.\n\n He was a Formula One driver between 1993 and 2002, and runner-up in the 1999 World Drivers' Championship, driving for Scuderia Ferrari.",
+    "- **2001 Monaco GP (May 27):** Michael Schumacher won for Ferrari; Rubens Barrichello was second and Eddie Irvine third, earning Jaguar its first podium.\n- **1997 Argentine GP (Apr 13):** Jacques Villeneuve won from pole; Irvine and Ralf Schumacher completed the podium. It was the 600th World Championship event.\n- **1997 Japanese GP (Oct 12):** Michael Schumacher won; Heinz-H",
+    "Eddie Irvine (born 10 November 1965) is a retired Northern Irish Formula One driver who raced from 1993 to 2002 and finished runner-up in the 1999 championship with Ferrari. He drove Jordan’s 1994 and 1995 cars alongside Rubens Barrichello, then Jaguar’s R2 in 2001 and R3 in 2002, partnering Luciano Burti and later Pedro de la Rosa in 2001. The Jordan 194",
+    "1997 Argentine Grand Prix\nThe 1997 Argentine Grand Prix was a Formula One motor race held at Autódromo Oscar Alfredo Gálvez in Buenos Aires, Argentina on 13 April 1997.\n\n It was the third race of the 1997 Formula One season and the 600th World Championship event.\n\n The 72-lap race was won by Williams driver Jacques Villeneuve after he started from pole position.\n\n Eddie Irvine finished second for the Ferrari team and Jordan driver Ralf Schumacher came in third.",
+    "Spyker F1\nThe Spyker F1 Team, known as the Etihad Aldar Spyker F1 Team for sponsorship reasons was a Formula One team that competed in the 2007 Formula One World Championship, and was created by Spyker Cars after their buyout of the short-lived Midland F1 (formerly Jordan Grand Prix) team.\n\n The change to the Spyker name was accompanied by a switch in racing livery from the red and white previously used by Midland, to an orange and silver scheme—already seen on the Spyker Spyder GT2-R—orange being the national colour and the auto racing colour of the Netherlands.\n\n At the end of the 2007 season the team was sold and renamed Force India.",
+    "Jaguar R2\nThe Jaguar R2 was the car with which the Jaguar team competed in the Formula One season.\n\n It was driven by Eddie Irvine, who was in his second year with the team, and Luciano Burti, who had deputised for Irvine at the 2000 Austrian Grand Prix.\n\n However, the Brazilian was replaced by Pedro de la Rosa after only four Grands Prix.",
+    "Jaguar R3\nThe Jaguar R3 is a Formula One racing car with which Jaguar Racing competed in the 2002 Formula One season.\n\n The car was launched on January 4, 2002.\n\n It was driven by Eddie Irvine and Pedro de la Rosa, both retained from 2001.",
+    "Jordan 195\nThe Jordan 195 was a Formula One car for the 1995 season.\n\n The number 14 seat was taken by Rubens Barrichello and the number 15 seat was taken by Eddie Irvine.\n\n The team never employed a test driver.\n\n The engine was a Peugeot A10 3.0 V10.\n\n The team's main sponsor was Total.",
+    "Jordan 194\nThe Jordan 194 was a Formula One car for the 1994 season.\n\n The number 14 seat was taken by Rubens Barrichello and the number 15 seat was taken by Eddie Irvine.\n\n Kelvin Burt was named as test driver, but his mileage in the car was limited.\n\n The engine was a Hart 1035 3.5 V10, a developed version of the engine which had proved promising in 1993.\n\n The team's main sponsor was Sasol, with additional financial support coming from Arisco, the Irish government and other smaller sponsors.\n\n With driver aids such as traction control and active suspension banned for the 1994 season, the car used a conventional semi-automatic gearbox and pushrod double wishbone suspension.\n\n The simpler technical regulations of 1994 seemed to benefit Jordan and the 194 recaptured the level of performance seen in the team's debut season, 1991.\n\n Indeed, the cut-down airbox and drooping front wing of the 194 recalled the design features of the 1991 car.",
+    "1983 Volvo International – Doubles\nSherwood Stewart and Ferdi Taygan were the defending champions but they competed with different partners that year, Stewart with Mark Edmondson and Taygan with Cássio Motta."
+   ]
+  },
+  {
+   "id": "812db96a18f7b3f4",
+   "gold": [
+    {
+     "sentence": "Buried Country is a highly regarded documentary film, book and soundtrack album and now also a stageshow as well.",
+     "facts": {
+      "0.0": "Buried Country is a highly regarded documentary film",
+      "0.1": "Buried Country is a highly regarded book",
+      "0.2": "Buried Country is a highly regarded soundtrack album",
+      "0.3": "Buried Country is now also a stageshow"
+     }
+    },
+    {
+     "sentence": "South of the Border is a 2009 American documentary film directed by Oliver Stone.",
+     "facts": {
+      "1.0": "South of the Border is a documentary film",
+      "1.1": "South of the Border is American",
+      "1.2": "South of the Border is from 2009",
+      "1.3": "South of the Border was directed by Oliver Stone"
+     }
+    }
+   ],
+   "items": [
+    "The Colleen Bawn\nThe Colleen Bawn, or The Brides of Garryowen is a melodramatic play written by Irish playwright Dion Boucicault.\n\n It was first performed at Miss Laura Keene's Theatre, New York, on 27 March 1860 with Laura Keene playing Anne Chute and Boucicault playing Myles na Coppaleen.\n\n It was most recently performed in Dublin at the Project Arts Centre in July and August 2010.\n\n Several film versions have also been made.",
+    "Buried Country\nBuried Country is a highly regarded documentary film, book and soundtrack album and now also a stageshow as well.\n\n It is a prosopography, created by noted writer Clinton Walker, that tells the story of Australian country music in the Aboriginal community by focussing on the genre's most important stars.",
+    "The Last Mile (play)\nThe Last Mile is a Broadway play by John Wexley that ran for 289 performances from February 13, 1930 to October 1930 at the Sam H. Harris Theatre.\n\n It was produced by Herman Shumlin and staged by Chester Erskine.\n\n It is set in the death row wing of a prison.\n\n The lead role of John \"Killer\" Mears was first played by Spencer Tracy, and it was the role that bought him to the attention of Hollywood.\n\n It was later played for a time by Clark Gable.\n\n The play was adapted into a 1932 film starring Preston Foster and into a 1959 film starring Mickey Rooney.",
+    "South of the Border (2009 film)\nSouth of the Border is a 2009 American documentary film directed by Oliver Stone.\n\n The documentary premiered at the 2009 Venice Film Festival.\n\n Writer for the project Tariq Ali calls the documentary \"a political road movie\".\n\n Stone stated that he hopes the film will help people better understand a leader who is wrongly ridiculed \"as a strongman, as a buffoon, as a clown.\"",
+    "Simon Bent\nSimon Bent is a British screenwriter and playwright, notable for work including BBC TV drama \"\" (2006), the screenplay for the feature film \"Christie Malry's Own Double-Entry\" (2000), and the Joe Orton biographical play \"Prick Up Your Ears\" based on John Lahr's book.",
+    "Plain Clothes Theatre Productions\nPlain Clothes Theatre Productions is a Bristol-based theatre company producing contemporary plays from around the globe.\n\n Formed in 2003 by artistic director Sam Berger, the company has produced work in London, Bristol, Cheltenham, Toronto and Vancouver.\n\n Their work has included plays by Joe Orton, Laura Wade and David Mamet, and their style is based around the teachings of American acting coach Sanford Meisner.",
+    "Marisha Chamberlin\nMarisha Anne Chamberlain (born January 6, 1952) is an American writer.\n\n Her most recent work, the libretto for \"Mortals & Angels\", a collaboration with American composer Carol Barnett, premiered at Carnegie Hall in 2016, a companion piece to their widely produced collaborative piece, \"The World Beloved: A Bluegrass Mass\".\n\n Her stage plays, both original works and adaptations are widely produced.\n\n Her debut novel, \"The Rose Variations\", was published by Soho Press in 2009.\n\n Her play, \"Scheherazade\", won the Dramatists Guild/CBS National Award, and in her screenplay version, played on public television across the country, and was screened at the British Film Institute Festival in the category of Best of American Public Television.",
+    "Cinema of Uruguay\nThe cinema of Uruguay has a role in the culture of Uruguay and is a part of Latin American cinema.\n\n Since the late 1990s, the Uruguayan cinema undergoes a process of evolution, during which its films have received positive reviews and been internationally recognized.\n\n Over 120 films, fictions and non-fictions, have been produced since then.",
+    "Bruce Rowland\nBruce Rowland (born May 9, 1942 in Melbourne) is a well-known Australian composer.\n\n He composed the soundtrack for the 1982 movie \"The Man from Snowy River\", as well as the soundtrack for its 1988 sequel \"The Man from Snowy River II\" (which has the United States title of \"Return to Snowy River\", and the United Kingdom title of \"The Untamed\").\n\n Both films were based on Banjo Paterson's poem The Man from Snowy River.\n\n His other film scores include \"Now and Forever\" (1983), \"Phar Lap\" (1983), \"Bushfire Moon\" (1987), \"Cheetah\" (1989), \"Weekend with Kate\" (1990), \"Gross Misconduct\" (1993), \"Andre\" (1994), \"Lightning Jack\" (1994), \"Zeus and Roxanne\" (1997) and the TV movie \"\" (1997).",
+    "In Country\nIn Country is a 1989 American drama film produced and directed by Norman Jewison, starring Bruce Willis and Emily Lloyd.\n\n The screenplay by Frank Pierson and Cynthia Cidre was based on the novel by Bobbie Ann Mason.\n\n The original music score was composed by James Horner.\n\n Willis earned a best supporting actor Golden Globe nomination for his role."
+   ]
+  },
+  {
+   "id": "215b4c4e006c8dc4",
+   "gold": [
+    {
+     "sentence": "Homer Jay Simpson is a fictional character and the main protagonist of the American animated television series \"The Simpsons\" as the patriarch of the eponymous family.",
+     "facts": {
+      "0.0": "Homer Jay Simpson is a fictional character.",
+      "0.1": "Homer Jay Simpson is the main protagonist of the American animated television series 'The Simpsons'.",
+      "0.2": "Homer Jay Simpson is the patriarch of the Simpson family, the family the show is named after."
+     }
+    },
+    {
+     "sentence": " He is voiced by Dan Castellaneta and first appeared on television, along with the rest of his family, in \"The Tracey Ullman Show\" short \"Good Night\" on April 19, 1987.",
+     "facts": {
+      "1.0": "Homer Simpson is voiced by Dan Castellaneta.",
+      "1.1": "Homer Simpson first appeared on television along with the rest of his family.",
+      "1.2": "Homer Simpson's first television appearance was in the short 'Good Night' from 'The Tracey Ullman Show'.",
+      "1.3": "Homer Simpson's first television appearance was on April 19, 1987."
+     }
+    },
+    {
+     "sentence": "Daniel Louis Castellaneta ( ; born October 29, 1957) is an American actor, voice actor, comedian and screenwriter.",
+     "facts": {
+      "2.0": "Daniel Louis Castellaneta was born October 29, 1957.",
+      "2.1": "Daniel Louis Castellaneta is an American actor.",
+      "2.2": "Daniel Louis Castellaneta is a voice actor.",
+      "2.3": "Daniel Louis Castellaneta is a comedian.",
+      "2.4": "Daniel Louis Castellaneta is a screenwriter."
+     }
+    }
+   ],
+   "items": [
+    "Dan Castellaneta\nDaniel Louis Castellaneta ( ; born October 29, 1957) is an American actor, voice actor, comedian and screenwriter.\n\n Noted for his long-running role as Homer Simpson on the animated television series \"The Simpsons\", he also voices many other characters for the show, including Abraham \"Grampa\" Simpson, Barney Gumble, Krusty the Clown, Sideshow Mel, Groundskeeper Willie, Mayor Quimby and Hans Moleman.",
+    "Ned Flanders\nNedward \"Ned\" Flanders, Jr. is a recurring fictional character in the animated television series \"The Simpsons\".\n\n He is voiced by Harry Shearer, and first appeared in the series premiere episode \"Simpsons Roasting on an Open Fire\".\n\n He is the good-natured, cheery next-door neighbor to the Simpson family and is generally loathed by Homer Simpson.\n\n A devout Evangelical Christian with an annoyingly perfect family, he is among the friendliest and most compassionate of Springfield's residents and is generally considered a pillar of the Springfield community.",
+    "Homer to the Max\n\"Homer to the Max\" is the thirteenth episode of \"The Simpsons\"<nowiki>'</nowiki> tenth season.\n\n It originally aired on the Fox network in the United States on February 7, 1999.\n\n In the episode, Homer discovers that a new television show, \"Police Cops\", has a hero also named Homer Simpson.\n\n He is delighted with the positive attention he receives because of his name, but when the television character is rewritten from a hero to a bumbling idiot, he is mocked and taunted, so he changes his name to \"Max Power\" to rid himself of the negative attention.\n\n Max gains new friends, and is forced into a protest to prevent a forest from being knocked down.\n\n In the end, he changes his name back to Homer Simpson.",
+    "Homer Simpson, This Is Your Wife\n\"Homer Simpson, This Is Your Wife\" is the fifteenth episode of the seventeenth season of the American animated television sitcom \"The Simpsons\".\n\n It originally aired on the Fox network in the United States on March 26, 2006, and was watched by around ten million people during that broadcast.\n\n In the episode, Homer signs the Simpson family up for a reality show in which the mothers of two families switch places.\n\n Marge gets to live with a friendly man named Charles and his perfect son, while Homer, Bart, and Lisa must spend time with Charles' strict wife Verity.",
+    "Homer Simpson\nHomer Jay Simpson is a fictional character and the main protagonist of the American animated television series \"The Simpsons\" as the patriarch of the eponymous family.\n\n He is voiced by Dan Castellaneta and first appeared on television, along with the rest of his family, in \"The Tracey Ullman Show\" short \"Good Night\" on April 19, 1987.\n\n Homer was created and designed by cartoonist Matt Groening while he was waiting in the lobby of James L. Brooks' office.\n\n Groening had been called to pitch a series of shorts based on his comic strip \"Life in Hell\" but instead decided to create a new set of characters.\n\n He named the character after his father, Homer Groening.\n\n After appearing for three seasons on \"The Tracey Ullman Show\", the Simpson family got their own series on Fox that debuted December 17, 1989.",
+    "Citizen Joe\n\"Citizen Joe\" is the fifteenth episode for season eight of the Canadian-American military science fiction television series \"Stargate SG-1\".\n\n The episode features known voice actor Dan Castellaneta, who voices Homer Simpson in \"The Simpsons\".\n\n The episode was written by executive producer Robert C. Cooper, the episode was directed by Andy Mikita.\n\n The episode received a below average Nielsen household rating and received no syndication rating to compare.\n\n The episode got strong reviews from major media publishers worldwide.",
+    "Moe Szyslak\nMorris \"Moe\" Szyslak is a fictional character from the American animated television series \"The Simpsons\".\n\n He is voiced by Hank Azaria and first appeared in the series premiere episode \"Simpsons Roasting on an Open Fire\".\n\n Moe is the proprietor and bartender of Moe's Tavern, a Springfield bar frequented by Homer Simpson, Barney Gumble, Carl Carlson, Lenny Leonard, Sam, Larry, and others.",
+    "The Itchy &amp; Scratchy Show\n(voiced by Alex Rocco, and, later, Hank Azaria), who runs the studio and produces the show.",
+    "Grampa Simpson\nAbraham Jedediah Simpson II, often known as Grampa, is a fictional character in the animated television series \"The Simpsons\".\n\n He made his first appearance in the episode entitled \"Grampa and the Kids\", a Simpsons short on \"The Tracey Ullman Show\".\n\n Voiced by Dan Castellaneta, he is the father of Homer Simpson and the grandfather of Bart, Lisa and Maggie Simpson.\n\n In the 1000th issue of \"Entertainment Weekly\", Grampa was selected as the Grandpa for \"The Perfect TV Family\".",
+    "Mona Simpson (The Simpsons)\nMona Penelope Simpson (née Olsen) is a recurring fictional character in the animated television series \"The Simpsons\".\n\n She has been voiced by several actresses, including Maggie Roswell, Tress MacNeille, Pamela Hayden, and most prominently, Glenn Close.\n\n Glenn Close's performances as Mona have been well received by critics and she was named one of the top 25 guest stars on the show by IGN."
+   ]
+  },
+  {
+   "id": "e532ccb413d6ea9d",
+   "gold": [
+    {
+     "sentence": "Edward Benjamin Britten, Baron Britten {'1': \", '2': \", '3': \", '4': \"} (22 November 1913 – 4 December 1976) was an English composer, conductor and pianist.",
+     "facts": {
+      "0.0": "Edward Benjamin Britten, Baron Britten, lived from 22 November 1913 to 4 December 1976.",
+      "0.1": "Edward Benjamin Britten, Baron Britten, was an English composer.",
+      "0.2": "Edward Benjamin Britten, Baron Britten, was an English conductor.",
+      "0.3": "Edward Benjamin Britten, Baron Britten, was an English pianist."
+     }
+    },
+    {
+     "sentence": "Béla Viktor János Bartók ( ; ] ; 25 March 1881 – 26 September 1945) was a Hungarian composer, pianist and an ethnomusicologist.",
+     "facts": {
+      "1.0": "Béla Viktor János Bartók lived from 25 March 1881 to 26 September 1945.",
+      "1.1": "Béla Viktor János Bartók was a Hungarian composer.",
+      "1.2": "Béla Viktor János Bartók was a Hungarian pianist.",
+      "1.3": "Béla Viktor János Bartók was a Hungarian ethnomusicologist."
+     }
+    }
+   ],
+   "items": [
+    "Benjamin Britten\nEdward Benjamin Britten, Baron Britten {'1': \", '2': \", '3': \", '4': \"} (22 November 1913 – 4 December 1976) was an English composer, conductor and pianist.\n\n He was a central figure of 20th-century British classical music, with a range of works including opera, other vocal music, orchestral and chamber pieces.\n\n His best-known works include the opera \"Peter Grimes\" (1945), the \"War Requiem\" (1962) and the orchestral showpiece \"The Young Person's Guide to the Orchestra\" (1945).",
+    "List of string quartets by Béla Bartók\n1 and 28 both owe a great deal to Bartók's quartets (; ), György Ligeti, whose two string quartets both owe a great deal to Bartók’s quartets (; ), Bruno Maderna , George Perle, who credits the Bartók Fourth and Fifth Quartets as precedents for his use of arrays of chords related to one another by different types of symmetry , Walter Piston (; ), Kim Dzmitrïyevich Tsesakow , Wilfried Westerlinck , Stefan Wolpe, who explained in a public lecture how he had derived ideas from Bartók’s Fourth Quartet , and Xu Yongsan .",
+    "String Quartet No. 6 (Bartók)\nThe String Quartet No. 6, Sz.\n\n 114, BB 119, was the final string quartet that Béla Bartók wrote before his death.\n\n It was begun in August 1939 in Saanen, Switzerland, where Bartók was a guest of his patron, the conductor Paul Sacher.\n\n Shortly after he completed the Divertimento for String Orchestra on the 17th, he started on a commission for his friend, the violinist Zoltán Székely.\n\n Székely was acting as intermediary for the \"New Hungarian Quartet\", who had given the Budapest premiere of the String Quartet No. 5.\n\n With the outbreak of World War II and his mother's illness, Bartók returned to Budapest, where the quartet was finished in November.\n\n After his mother's death, Bartók decided to leave with his family for the United States.",
+    "List of string quartets by Béla Bartók\nThe Hungarian composer Béla Bartók wrote six string quartets, each for the usual forces of two violins, viola and cello.\n\n Notable composers who have been influenced by them include Benjamin Britten, particularly in the Sonata in C for Cello and Piano (; ), Elliott Carter, who refers in the opening of his own First String Quartet to Bartók’s Sixth Quartet , Chen Yi , Edison Denisov, whose Second Quartet is closely related to Bartók’s Fifth Quartet , Franco Donatoni, who was deeply impressed when he heard a broadcast of Bartók's Fourth Quartet , Robert Fripp, who mentions them as an influence upon King Crimson , Miloslav Ištvan , György Kurtág, whose Opp.",
+    "Bluebeard's Castle\nBluebeard's Castle (Hungarian: A kékszakállú herceg vára ; literally: \"The Blue-Bearded Duke's Castle\") is a one-act opera by Hungarian composer Béla Bartók.\n\n The libretto was written by Béla Balázs, a poet and friend of the composer, and is written in Hungarian, based on the French literary tale \"La Barbe bleue\" by Charles Perrault.\n\n The opera lasts only a little over an hour and there are only two singing characters onstage: Bluebeard (\"Kékszakállú \"), and his new wife Judith (\"Judit \" ); the two have just eloped and Judith is coming home to Bluebeard's castle for the first time.",
+    "Béla Bartók\nBéla Viktor János Bartók ( ; ] ; 25 March 1881 – 26 September 1945) was a Hungarian composer, pianist and an ethnomusicologist.\n\n He is considered one of the most important composers of the 20th century; he and Liszt are regarded as Hungary's greatest composers .\n\n Through his collection and analytical study of folk music, he was one of the founders of comparative musicology, which later became ethnomusicology.",
+    "List of compositions by Béla Bartók\nThis aspires to be a complete list of compositions by Béla Bartók.\n\n The catalogue numbering by András Szőllősy (Sz.)\n\n, László Somfai (BB.)\n\n and Denijs Dille (DD.)\n\n are provided, as well as Bartók's own opus numbers.\n\n Note that Bartók started three times anew with opus numbers, here indicated with \"(list 1)\", \"(list 2)\" and \"(list 3)\" respectively.\n\n The pieces from the third listing are by far best known; opus lists 1 and 2 are early works.\n\n The year of composition and instrumentation (including voice) are included.\n\n See the main article on Béla Bartók for more details.",
+    "String Quartet No. 6 (Bartók)\nDue to the difficulties of the war, communication between Bartók and Székely was difficult, and the quartet was not premiered until 20 January 1941, when the Kolisch Quartet, to whom the work is dedicated, gave its premiere at the Town Hall in New York City.",
+    "Béla Bartók Music High School\nBéla Bartók Music High School (Bartók Béla Zeneművészeti Szakközépiskola) is situated in the Palace of Music (Zenepalota) in Bartók square Miskolc, Hungary.\n\nIt is a famous Music school named after the famous Hungarian composer Béla Bartók.\n\nIt was founded in 1966.",
+    "Suite, Op. 14 (Bartók)\nThe Suite, Op. 14, Sz.\n\n 62, BB 70 is a piece for solo piano written by Béla Bartók.\n\n It was written in February 1916, published in 1918, and debuted by the composer on April 21, 1919, in Budapest.\n\n The Suite is one of Bartók's most significant works for piano, only comparable with his 1926 Piano Sonata.\n\n Though much of Bartók's work makes frequent use of Eastern European folk music, this suite is one of the few pieces without melodies of folk origin.\n\n However, Romanian, Arabic, and North African rhythmic influences can still be found in some movements.\n\n Originally intending the suite to be a five-movement work, Bartók later decided against the idea and discarded the second movement, the \"Andante\", which was published only posthumously in the October 1955 issue of \"Új Zenei Szemle\" (New Musical Review)."
+   ]
+  },
+  {
+   "id": "0f0acf29d374ce41",
+   "gold": [
+    {
+     "sentence": "Nikolay Mitrofanovich Krylov (Russian: Никола́й Митрофа́нович Крыло́в , Ukrainian: Микола Митрофанович Крилов ) (29 November [O.S. 17 November] 1879 – May 11, 1955) was a Russian and Soviet mathematician known for works on interpolation, non-linear mechanics, and numerical methods for solving equations of mathematical physics.",
+     "facts": {
+      "0.0": "Nikolay Mitrofanovich Krylov was born on 29 November [O.S. 17 November] 1879.",
+      "0.1": "Nikolay Mitrofanovich Krylov died on May 11, 1955.",
+      "0.2": "Nikolay Mitrofanovich Krylov's Russian name is Николай Митрофанович Крылов.",
+      "0.3": "Nikolay Mitrofanovich Krylov's Ukrainian name is Микола Митрофанович Крилов.",
+      "0.4": "Nikolay Mitrofanovich Krylov was a Russian mathematician.",
+      "0.5": "Nikolay Mitrofanovich Krylov was a Soviet mathematician.",
+      "0.6": "Nikolay Mitrofanovich Krylov is known for works on interpolation.",
+      "0.7": "Nikolay Mitrofanovich Krylov is known for works on non-linear mechanics.",
+      "0.8": "Nikolay Mitrofanovich Krylov is known for works on numerical methods for solving equations of mathematical physics."
+     }
+    },
+    {
+     "sentence": "Anatoly Timofeevich Fomenko (Russian: Анато́лий Тимофе́евич Фоме́нко ) (born 13 March 1945 in Stalino, USSR) is a Soviet and Russian mathematician, professor at Moscow State University, well known as a topologist, and a member of the Russian Academy of Sciences.",
+     "facts": {
+      "1.0": "Anatoly Timofeevich Fomenko's Russian name is Анатолий Тимофеевич Фоменко.",
+      "1.1": "Anatoly Timofeevich Fomenko was born on 13 March 1945 in Stalino, USSR.",
+      "1.2": "Anatoly Timofeevich Fomenko is a Soviet mathematician.",
+      "1.3": "Anatoly Timofeevich Fomenko is a Russian mathematician.",
+      "1.4": "Anatoly Timofeevich Fomenko is a professor at Moscow State University.",
+      "1.5": "Anatoly Timofeevich Fomenko is well known as a topologist.",
+      "1.6": "Anatoly Timofeevich Fomenko is a member of the Russian Academy of Sciences."
+     }
+    }
+   ],
+   "items": [
+    "Anatoly Maltsev\nAnatoly Ivanovich Maltsev (also: Malcev, Mal'cev; Russian: Анато́лий Ива́нович Ма́льцев; 27 November N.S./14 November O.S. 1909, Moscow Governorate – 7 June 1967, Novosibirsk) was born in Misheronsky, near Moscow, and died in Novosibirsk, USSR.\n\n He was a mathematician noted for his work on the decidability of various algebraic groups. Malcev algebras (generalisations of Lie algebras) are named after him.",
+    "Lev Kuleshov\nLev Vladimirovich Kuleshov (Russian: Лев Влади́мирович Кулешо́в ; 13 January [O.S. 1 January] 1899 – 29 March 1970) was a Russian and Soviet filmmaker and film theorist, one of the founders of the world's first film school, the Moscow Film School.\n\n He was given the title People's Artist of the RSFSR in 1969.\n\n He was intimately involved in development of the style of film making known as Soviet montage, especially it's psychological underpinning, including the use of editing and the cut to emotionally influence the audience, a principle known as the Kuleshov effect.\n\n He also developed the theory of creative geography, which is the use of the action around a cut to connect otherwise disparate settings into a cohesive narrative.",
+    "Martemyan Ryutin\nMartemyan Nikitich Ryutin (Russian: Мартемья́н Ники́тич Рю́тин ) (1890–1937) was a Russian Marxist revolutionary, and a political functionary of the Russian Communist Party.\n\n Ryutin is best remembered as the leader of a pro-peasant political faction organized against Soviet leader Joseph Stalin in the early 1930s and as the primary author of a 200-page oppositional platform.\n\n Ryutin was arrested by the Soviet secret police, along with his co-thinkers, in what has come to be known as the Ryutin Affair.\n\n He was executed in January 1937 as part of the Yezhovshchina (Great Purge) conducted against political oppositionists and suspected economic \"wreckers\" and spies.",
+    "Vladimir Arnold\nVladimir Igorevich Arnold (alternative spelling Arnol'd, Russian: Влади́мир И́горевич Арно́льд , 12 June 1937 – 3 June 2010) was a Soviet and Russian mathematician.\n\n While he is best known for the Kolmogorov–Arnold–Moser theorem regarding the stability of integrable systems, he made important contributions in several areas including dynamical systems theory, catastrophe theory, topology, algebraic geometry, symplectic geometry, differential equations, classical mechanics, hydrodynamics and singularity theory, including posing the ADE classification problem, since his first main result—the solution of Hilbert's thirteenth problem in 1957 at the age of 19.",
+    "Semyon Aranovich Gershgorin\nSemyon Aronovich Gershgorin (August 24, 1901 – May 30, 1933) was a Soviet (born in Pruzhany, Belarus, Russian Empire) mathematician.\n\n He began as a student at the Petrograd Technological Institute in 1923, became a Professor in 1930, and was given an appointment at the Leningrad Mechanical Engineering Institute in the same year.\n\n His contributions include the Gershgorin circle theorem.",
+    "Nicolai V. Krylov\nBellman equations), which were examined with stochastic methods.\n\n This led to the Evans-Krylov theory, for which he received with Lawrence C. Evans in 2004 the Leroy P. Steele Prize of the American Mathematical Society (for work done simultaneously and independently by both Krylov and Evans).\n\n They proved the second order differentiability (Hölder continuity of the second derivative) of the solutions of convex, completely nonlinear, second order elliptical partial differential equations and thus the existence of \"classical solutions\" (Theorem of Evans-Krylov).\n\n He was in 1978 at Helsinki and in 1986 at Berkeley an Invited Speaker for the ICM.\n\n He received the Humboldt Research Award in 2001.\n\n In 1993 he was elected a member of the American Academy of Arts and Sciences (1993).\n\n He should not be confused with the mathematician Nikolay M. Krylov.",
+    "Nicolai V. Krylov\nNicolai Vladimirovich Krylov (Russian: Никола́й Влади́мирович Крыло́в ; born 5 June 1941) is a Russian mathematician specializing in partial differential equations, particularly stochastic partial differential equations and diffusion processes.\n\n Krylov studied at Lomonosov University, where he in 1966 under E. B. Dynkin attained a doctoral candidate title (similar to a PhD) and in 1973 a Russian doctoral degree (somewhat more prestigious than a PhD).\n\n He taught from 1966 to 1990 at the Lomonosov University and is since 1990 a professor at the University of Minnesota.\n\n At the beginning of his career (starting from 1963) he, in collaboration with Dynkin, worked on nonlinear stochastic control theory, making advances in the study of convex, nonlinear partial equations of 2nd order (\"i.e.\" Bellman equations), which were examined with stochastic methods.",
+    "Anatoly Lunacharsky\nAnatoly Vasilyevich Lunacharsky (Russian: Анато́лий Васи́льевич Лунача́рский , , 23 November [O.S. 11 November] 1875 – 26 December 1933) was a Russian Marxist revolutionary and the first Soviet People's Commissar of Education responsible for culture and education.\n\n He was active as an art critic and journalist throughout his career.",
+    "Nikolay Mitrofanovich Krylov\nNikolay Mitrofanovich Krylov (Russian: Никола́й Митрофа́нович Крыло́в , Ukrainian: Микола Митрофанович Крилов ) (29 November [O.S. 17 November] 1879 – May 11, 1955) was a Russian and Soviet mathematician known for works on interpolation, non-linear mechanics, and numerical methods for solving equations of mathematical physics.",
+    "Anatoly Fomenko\nAnatoly Timofeevich Fomenko (Russian: Анато́лий Тимофе́евич Фоме́нко ) (born 13 March 1945 in Stalino, USSR) is a Soviet and Russian mathematician, professor at Moscow State University, well known as a topologist, and a member of the Russian Academy of Sciences.\n\n He is author of a pseudoscientific theory known as New Chronology.\n\n He is also a member of the Russian Academy of Natural Sciences (1991)."
+   ]
+  },
+  {
+   "id": "5e84b951c56ae38b",
+   "gold": [
+    {
+     "sentence": " One of only three writers to win the Pulitzer Prize for Fiction more than once (the others were Booth Tarkington and William Faulkner), Updike published more than twenty novels, more than a dozen short-story collections, as well as poetry, art and literary criticism and children's books during his career.",
+     "facts": {
+      "0.0": "Updike was one of only three writers to win the Pulitzer Prize for Fiction more than once.",
+      "0.1": "The other two writers who won the Pulitzer Prize for Fiction more than once were Booth Tarkington and William Faulkner.",
+      "0.2": "Updike published more than twenty novels during his career.",
+      "0.3": "Updike published more than a dozen short-story collections during his career.",
+      "0.4": "Updike published poetry during his career.",
+      "0.5": "Updike published art and literary criticism during his career.",
+      "0.6": "Updike published children's books during his career."
+     }
+    },
+    {
+     "sentence": " Seventeen of his novels were bestsellers, and more than 100 million copies of his books are in print.",
+     "facts": {
+      "1.0": "Seventeen of Updike's novels were bestsellers.",
+      "1.1": "More than 100 million copies of Updike's books are in print."
+     }
+    }
+   ],
+   "items": [
+    "Tom Clancy's Rainbow 6: Patriots\nTom Clancy's Rainbow 6: Patriots is a cancelled first-person shooter video game, part of the \"Tom Clancy's Rainbow Six\" series, announced on the cover of the December 2011 issue of \"Game Informer\".\n\n It was to be published by Ubisoft, and was developed by the company's Montreal studio, with additional development by Ubisoft Toronto and Red Storm Entertainment.\n\n Due to the death of Tom Clancy in October 2013, concern was raised that this game would become the last to bear his name.\n\n Ubisoft has since stated that they will continue putting Tom Clancy's name on future Tom Clancy titles out of respect for the late author.",
+    "John Updike\nJohn Hoyer Updike (March 18, 1932 – January 27, 2009) was an American novelist, poet, short story writer, art critic, and literary critic.\n\n One of only three writers to win the Pulitzer Prize for Fiction more than once (the others were Booth Tarkington and William Faulkner), Updike published more than twenty novels, more than a dozen short-story collections, as well as poetry, art and literary criticism and children's books during his career.",
+    "Tom Clancy\nThomas Leo \"Tom\" Clancy Jr. (April 12, 1947 – October 1, 2013) was an American novelist best known for his technically detailed espionage and military-science story lines set during and after the Cold War.\n\n Seventeen of his novels were bestsellers, and more than 100 million copies of his books are in print.\n\n His name was also used on movie scripts written by ghost writers, nonfiction books on military subjects, and video games.\n\n He was a part-owner of the Baltimore Orioles and vice-chairman of their community activities and public affairs committees.",
+    "Joe McGinniss\nJoseph R. McGinniss, Sr. (December 9, 1942 – March 10, 2014), known as Joe McGinniss, was an American non-fiction writer and novelist.\n\n The author of twelve books, he first came to prominence with the best-selling \"The Selling of the President 1968\" which described the marketing of then-presidential candidate Richard Nixon.\n\n He is popularly known for his trilogy of bestselling true crime books — \"Fatal Vision\", \"Blind Faith\" and \"Cruel Doubt\" — which were adapted into TV miniseries in the 1980s and 90s.\n\n His last book was \"The Rogue: Searching for the Real Sarah Palin\", an account of Sarah Palin, the former governor of Alaska who was the 2008 Republican vice-presidential nominee.",
+    "*The 39 Clues: Doublecross*, the series’ fourth installment, follows a divided Cahill family. Ian Kabra’s leadership is challenged by a coup led by the Outcast, who forces the family to avert historical disasters; revelations include Grace’s cruelty and the Outcast’s identity as Nathaniel Hartford.\n\n*Net Force Explorers* is a Tom Clancy–Steve Pieczenik young-adult spin-off; titles listed include *Deathworld*, *Safe House*,",
+    "David Ignatius\nDavid R. Ignatius (May 26, 1950), is an American journalist and novelist.\n\n He is an associate editor and columnist for \"The Washington Post\".\n\n He also co-hosts PostGlobal, an online discussion of international issues at Washingtonpost.com, with Fareed Zakaria.\n\n He has written nine novels, including \"Body of Lies\", which director Ridley Scott adapted into a film.\n\n He is a former Adjunct Lecturer at the Kennedy School of Government at Harvard University and currently Senior Fellow to the Future of Diplomacy Program.\n\n He has received numerous honors, including the Legion of Honor from the French Republic, the Urbino World Press Award from the Italian Republic, and a lifetime achievement award from the International Committee for Foreign Journalism.",
+    "The entries profile writers, artists, scholars, and public figures across literature, journalism, film, and politics. Highlights include Thomas Merton, the Catholic monk and writer honored by a peace award and studied by an international society; W. Somerset Maugham, whose namesake prize supports young writers’ travel; and notable authors such as Mencken, Orwell, Updike, Malamud, Chatwin, and Gass. Other topics include literary awards, bibliographies, influential editors, Camb",
+    "Stephen R. Donaldson\nStephen Reeder Donaldson (born May 13, 1947) is an American fantasy, science fiction and mystery novelist, most famous for \"The Chronicles of Thomas Covenant\", his ten-novel fantasy series.\n\n His work is characterized by psychological complexity, conceptual abstractness, moral bleakness, and the use of an arcane vocabulary, and has attracted critical praise for its \"imagination, vivid characterizations, and fast pace\".\n\n He earned his bachelor's degree from The College of Wooster and a Master's degree from Kent State University.\n\n He currently resides in New Mexico.",
+    "Tom Clancy's Net Force Explorers: Gameprey\nTom Clancy's Net Force Explorers or Net Force Explorers is a series of young adult novels created by Tom Clancy and Steve Pieczenik as a spin-off of the military fiction series Tom Clancy's Net Force.",
+    "Tom Clancy's Net Force Explorers: Duel Identity\nTom Clancy's Net Force Explorers or Net Force Explorers is a series of young adult novels created by Tom Clancy and Steve Pieczenik as a spin-off of the military fiction series Tom Clancy's Net Force."
+   ]
+  },
+  {
+   "id": "262924de0000da7d",
+   "gold": [
+    {
+     "sentence": "A Summer in the Cage is a 2007 documentary film about a man's experiences with bipolar disorder.",
+     "facts": {
+      "0.0": "A Summer in the Cage is a documentary film.",
+      "0.1": "A Summer in the Cage was released in 2007.",
+      "0.2": "A Summer in the Cage is about a man's experiences with bipolar disorder."
+     }
+    },
+    {
+     "sentence": "American Hardcore: The History of American Punk Rock 1980-1986 is a documentary directed by Paul Rachman and written by Steven Blush.",
+     "facts": {
+      "1.0": "American Hardcore: The History of American Punk Rock 1980-1986 is a documentary.",
+      "1.1": "American Hardcore: The History of American Punk Rock 1980-1986 was directed by Paul Rachman.",
+      "1.2": "American Hardcore: The History of American Punk Rock 1980-1986 was written by Steven Blush."
+     }
+    }
+   ],
+   "items": [
+    "Hardcore (1979 film)\nHardcore is a 1979 American crime drama film written and directed by Paul Schrader and starring George C. Scott, Peter Boyle and Season Hubley.\n\n The story concerns a father searching for his daughter, who has vanished only to appear in a pornographic film.\n\n Writer-director Schrader had previously written the screenplay for Martin Scorsese's \"Taxi Driver\", and both films share a theme of exploring an unseen subculture.",
+    "Deadfall (1993 film)\nDeadfall is a 1993 crime drama film directed by Christopher Coppola.\n\n Coppola co-wrote the script with Nick Vallelonga.\n\n The film stars Michael Biehn, Nicolas Cage, Charlie Sheen, James Coburn, and Peter Fonda.\n\n It is also the prime influence on the song 'Deadfall', written by the American hardcore punk band Snot.\n\n A prequel/sequel, \"Arsenal\", starring Nicolas Cage as his character Eddie King, was released in 2017.",
+    "Combat Zone Wrestling\nCombat Zone Wrestling (CZW) is an American independent wrestling promotion.\n\n In 1999, John Zandig and five of his students, Ric Blade, T.C.K, Lobo, Nick Gage, and Justice Pain (along with trainer Jon Dahmer) began to run professional wrestling shows in New Jersey and Delaware, showcasing a brand of hardcore wrestling dubbed as \"ultraviolence\".\n\n Ladders, tables, steel folding chairs, thumbtacks, barbed wire, weed whackers, light tubes, panes of glass, and fire are all common elements of \"ultraviolent wrestling\" in CZW.\n\n The company filled a niche for hardcore wrestling fans that had been left open by the folding of Extreme Championship Wrestling (ECW).\n\n CZW established themselves as the leading American hardcore wrestling promotion at the ECW Arena with their \"Cage of Death 3\" show in 2001, the year ECW folded.",
+    "Film genre\nA film genre is a motion picture category based on similarities in either the narrative elements or the emotional response to the film (namely, serious, comic, etc.).\n\n Most theories of film genre are borrowed from literary genre criticism.\n\n The basic genres include fiction and documentary, from which subgenres have emerged, such as docufiction and docudrama.\n\n Other subgenres include the courtroom and trial-focused drama known as the legal drama.\n\n Types of fiction which may seem unrelated can also be combined to form hybrid subgenres, such as the melding of horror and comedy in the \"Evil Dead\" films.\n\n Other popular combinations are the romantic comedy and the action comedy film.",
+    "American Pie Presents: Band Camp\nAmerican Pie Presents: Band Camp (also known as American Pie: Band Camp) is a 2005 direct-to-DVD sex comedy film.\n\n It is the first installment in the \"American Pie Presents\" series and the fourth installment in the \"American Pie\" franchise.\n\n It was directed by Steve Rash and written by Brad Riddell.\n\n The film centers on Matt Stifler, younger brother of Steve Stifler.\n\n In this film, Matt is sent to the infamous band camp, where he is compelled to change his ways.",
+    "Hellfest (American music festival)\nHellfest was an American hardcore punk festival.\n\n Named for the intense summer heat at the show, the festival originally began featuring hardcore bands before crossing into several genres later on.\n\n Hellfest was known for its fan-friendly atmosphere, (including a lack of barriers, providing easy access to the stage for stage diving) and for its high social-awareness, focusing on such causes as animal rights, with many attendees following the straight edge and/or vegan lifestyle.\n\n It continued as an annual event until it was cancelled in 2005.\n\n After its cancellation less than thirty-six hours before doors were scheduled to open on the festival's ninth year, some fans, unhappy with the inadequate processing of refunds, filed small claims court lawsuits against promoter Keith Allen.",
+    "A Summer in the Cage\nA Summer in the Cage is a 2007 documentary film about a man's experiences with bipolar disorder.\n\n The film follows the filmmaker's friend Sam and features an interview with mental health scholar Kay Redfield Jamison.\n\n It was directed by Benjamin Selkow.\n\n The documentary debuted on the Sundance Channel in 2007.",
+    "Punk's Not Dead (2007 film)\nPunk's Not Dead is a 2007 documentary film directed by Susan Dynner, an American hardcore punk fan.\n\n The film claims to infiltrate American clubs, malls, recording studios, etc. where it sets out to claim hardcore punk and pop punk music is \"thriving\" from an American perspective.\n\n Its content features performances largely from 1980s hardcore bands and MTV skate punk and pop punk/rock acts.\n\n It also includes various interviews and behind-the-scenes footage with the bands, labels and fans.",
+    "All Ages: The Boston Hardcore Film\nAll Ages: The Boston Hardcore Film, a Gallery East Production in association with Stone Films/NYC, is a documentary directed by Drew Stone, which had its world premier at the Independent Film Festival of Boston on April 27, 2012.\n\n The film features interviews, archival footage and the music of Boston’s early hardcore bands including Deep Wound, DYS, Gang Green, Impact Unit, Jerry's Kids, Negative FX, SS Decontrol, The Freeze and The F.U.'s.\n\n Also featured in the film are interviews with renowned author Michael Patrick MacDonald (\"Easter Rising\", \"All Souls\"), Actress Christine Elise McCarthy, Advertising Executive Jonathan Anastas, Thrasher Magazine Editor Jake Phelps, \"American Hardcore\" Director Paul Rachman, and Newbury Comics owner Michael Dreese.\n\n \"All Ages\" has been released on DVD with numerous extras and director's commentary.",
+    "American Hardcore (film)\nAmerican Hardcore: The History of American Punk Rock 1980-1986 is a documentary directed by Paul Rachman and written by Steven Blush.\n\n It is based on the book \"\" also written by Blush.\n\n It was released on September 22, 2006 on a limited basis.\n\n The film features some early pioneers of the hardcore punk music scene including Bad Brains, Black Flag, D.O.A., Minor Threat, Minutemen, SSD, and others.\n\n It was released on DVD by Sony Pictures Home Entertainment on February 20, 2007."
+   ]
+  }
+ ]
+}

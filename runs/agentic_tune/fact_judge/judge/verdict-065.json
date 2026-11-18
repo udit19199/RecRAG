@@ -1,0 +1,30 @@
+[
+  {"id": "37a6e7391faba682", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]}
+  ]},
+  {"id": "f07c522c027365b4", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "The updated display is the highlight of the device, while things like faster charging, improved antennas and smoother haptics are welcome bonuses."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "The updated display is the highlight of the device, while things like faster charging, improved antennas and smoother haptics are welcome bonuses."}, {"item": 3, "quote": "The thumbsticks have also been made 1mm taller"}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+  ]},
+  {"id": "5ec52fe90598d936", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights"}]},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Dominant wins over Argentina, Japan and Chile sealed passage to the last eight"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "Dominant wins over Argentina, Japan and Chile sealed passage to the last eight"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "Dominant wins over Argentina, Japan and Chile sealed passage to the last eight"}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 7, "quote": "the narrow wins over both Samoa and Fiji in their last two games"}]},
+    {"fact": "0.6", "status": "stated", "evidence": [{"item": 7, "quote": "the narrow wins over both Samoa and Fiji in their last two games"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "S﻿AINT-ETIENNE: The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com as their Rugby World Cup fate is decided by Fiji and Portugal in Toulouse."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com as their Rugby World Cup fate is decided by Fiji and Portugal in Toulouse."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com as their Rugby World Cup fate is decided by Fiji and Portugal in Toulouse."}]}
+  ]}
+]

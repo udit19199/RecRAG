@@ -1,0 +1,96 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "5fd1251d42f90dea",
+   "kind": "answer",
+   "question": "Considering the features highlighted in an article from The Verge about the iPhone 14's camera capabilities and the pricing strategy discussed in a Bloomberg report, which letter represents the starting character of the feature that is both highly praised for its innovation in the first article and is a significant factor in the pricing strategy mentioned in the second article?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "P"
+  },
+  {
+   "id": "8d723bdddcb4d0c2",
+   "kind": "answer",
+   "question": "Does the TechCrunch article suggest that Sam Bankman-Fried's intentions for his wealth were different from the portrayal of his actions in the Fortune article, and do both these characterizations align with the allegations of fraud mentioned in another TechCrunch article?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No."
+  },
+  {
+   "id": "00b571ae2ad798c9",
+   "kind": "answer",
+   "question": "Considering the information from an article in The New York Times and another in The Guardian about Rami Osman, which character from a popular TV series, mentioned in both articles, shares similarities with Osman's reported strategic approach to business negotiations?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "Harvey Specter."
+  },
+  {
+   "id": "8581c2a1745c47c5",
+   "kind": "answer",
+   "question": "Given that Junction Analytics has been featured in a recent Forbes article highlighting their innovative use of AI in market analysis, and a Bloomberg piece discussing their strategic partnership with a major tech firm, which CEO, as per these articles, has led the company through both advancements and is known for their unique approach to data science?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "I can’t verify a CEO matching those articles; the premise appears unsupported."
+  },
+  {
+   "id": "30ae3443ab4120a7",
+   "kind": "answer",
+   "question": "Considering the information from a New York Times article detailing DH Corporation's latest strategic partnership and a Wall Street Journal report on the financial performance of DH Corporation in the last quarter, which division head, known for their innovative approach and also mentioned as the key speaker at the recent industry conference covered by Forbes, is expected to lead the company's expansion into new markets?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "John McKinley"
+  },
+  {
+   "id": "8ed70f4efc171938",
+   "kind": "answer",
+   "question": "Considering the information from a Wall Street Journal article and a New York Times piece on Andrew Beaton, which NFL team, known for its distinct helmet design, was the subject of Beaton's analysis regarding their strategic decisions in the off-season as reported by the Wall Street Journal, and also mentioned in the New York Times for their unexpected player trade move?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "New York Jets"
+  },
+  {
+   "id": "455278608c500ce7",
+   "kind": "answer",
+   "question": "Does the TechCrunch article claim that Google's release of the Gemini Pro model was incomplete compared to the full Gemini Ultra model, while the same TechCrunch article accuses Google of anticompetitive behavior towards news publishers, and does The Verge article also discuss Google's dominance but in the context of there being no valid alternative search engine according to Eddy Cue?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "f60cbc53dc98b66a",
+   "kind": "answer",
+   "question": "Considering the economic strategies discussed in the first article from The Australian Financial Review and the technological advancements highlighted in the second article from the same source, which company, represented by a single letter on the stock exchange, is positioned to benefit from both the economic and technological trends mentioned?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "Ford (NYSE: F)"
+  },
+  {
+   "id": "40cbc454559852fd",
+   "kind": "answer",
+   "question": "Which institution, highlighted in articles from 'The Sydney Morning Herald', is considered to have significant influence on global financial markets and is anticipated to potentially alter its interest rate policy based on incoming economic data, leading to a change in market conditions and affecting the outlook of Wall Street?",
+   "gold_answers": [
+    "The Federal Reserve"
+   ],
+   "model_answer": "The US Federal Reserve (Fed)"
+  },
+  {
+   "id": "6a3b418fa6cad10a",
+   "kind": "answer",
+   "question": "Which company, covered by multiple TechCrunch articles, is not only criticized for its purportedly anticompetitive spending of $26.3 billion to maintain default search engine status but also for the alleged harms its AI, claimed to surpass competitors like GPT-4 in architecture, has inflicted on news publishers' content and revenue?",
+   "gold_answers": [
+    "Google"
+   ],
+   "model_answer": "Google (Alphabet)"
+  }
+ ],
+ "evidence": []
+}

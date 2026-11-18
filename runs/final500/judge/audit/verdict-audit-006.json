@@ -1,0 +1,16 @@
+[
+{"id": "a011-0a83ab65e13773eb", "facts": [{"fact": "2.1", "status": "missing", "evidence": []}]},
+{"id": "a004-c69a912e887cd16e", "facts": [{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features"}]}]},
+{"id": "a027-96470ce8765b24f2", "facts": [{"fact": "1.1", "status": "missing", "evidence": []}]},
+{"id": "a064-e070f707fc774413", "facts": [{"fact": "2.2", "status": "missing", "evidence": []}]},
+{"id": "a116-98cc0b9220a49e55", "facts": [{"fact": "0.2", "status": "missing", "evidence": []}]},
+{"id": "a007-1351cc41c77902d0", "facts": [{"fact": "2.3", "status": "stated", "evidence": [{"item": 3, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}]},
+{"id": "a074-4452e3686daea931", "facts": [{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Ghost Rider is a song by the protopunk band Suicide appearing on their debut album."}]}]},
+{"id": "a093-07e9700412bf7c5b", "facts": [{"fact": "3.0", "status": "stated", "evidence": [{"item": 4, "quote": "The flaming volcano is a large tropical group cocktail"}, {"item": 4, "quote": "It is usually a multi-user drink, served to a group"}]}]},
+{"id": "a024-f1fd3c37c75acc84", "facts": [{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights."}]}]},
+{"id": "a018-0c8a2340c6f18c41", "facts": [{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]}]},
+{"id": "a012-6e62022cb37dde13", "facts": [{"fact": "0.0", "status": "missing", "evidence": []}]},
+{"id": "a101-7a50832fe857fe9e", "facts": [{"fact": "1.0", "status": "missing", "evidence": []}]},
+{"id": "a038-5fb881294ba578c9", "facts": [{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday"}]}]},
+{"id": "a082-75f9d4dd30eb4b33", "facts": [{"fact": "2.0", "status": "missing", "evidence": []}]}
+]

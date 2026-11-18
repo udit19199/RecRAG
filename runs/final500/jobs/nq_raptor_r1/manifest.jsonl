@@ -1,0 +1,1 @@
+{"dataset": "natural_questions", "method": "raptor", "rep": "1", "shard": 0, "shards": 1, "exit": 0, "run_dir": "/data/workspace/RecRAG/runs/final500/natural_questions/raptor/20261114T024221837298Z", "log": "/data/workspace/RecRAG/runs/final500/jobs/nq_raptor_r1/natural_questions_raptor_r1_s0.log"}

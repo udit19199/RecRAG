@@ -1,0 +1,4224 @@
+[
+ {
+  "id": "67cad35d88b0085e",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Beatrice Straight , Best Supporting Actress winner"
+     },
+     {
+      "item": 10,
+      "quote": "Beatrice Straight -- Network as Louise Schumacher"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.7",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.8",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "Best Picture Best Director Rocky -- Robert Chartoff and Irwin"
+     },
+     {
+      "item": 9,
+      "quote": "John G. Avildsen -- Rocky"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "8346f2372a0020a3",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   },
+   {
+    "fact": "0.13",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   },
+   {
+    "fact": "0.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   },
+   {
+    "fact": "0.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   },
+   {
+    "fact": "0.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   },
+   {
+    "fact": "0.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   },
+   {
+    "fact": "0.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   },
+   {
+    "fact": "0.19",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   },
+   {
+    "fact": "0.20",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   },
+   {
+    "fact": "0.21",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   },
+   {
+    "fact": "0.22",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   },
+   {
+    "fact": "0.23",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   },
+   {
+    "fact": "0.24",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   },
+   {
+    "fact": "0.25",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   },
+   {
+    "fact": "0.26",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "The states that have legislatively adopted stand - your - ground laws are Alabama , Alaska , Arizona , Florida , Georgia , Idaho , Indiana , Iowa , Kansas , Kentucky , Louisiana , Michigan , Mississippi , Missouri , Montana , Nevada , New Hampshire , North Carolina , Oklahoma , Pennsylvania , South Carolina , South Dakota , Tennessee , Texas , Utah , West Virginia , and Wyoming ."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "244322febf66f347",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "1960 1960 NFL Western 7th 0 11 Tom Landry"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.5",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.6",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.7",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.8",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.9",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.10",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.11",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.12",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.13",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.14",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.15",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.16",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Conference Playoffs ( Browns ) 38 -- 14 Calvin Hill ( OROY )"
+     }
+    ]
+   },
+   {
+    "fact": "0.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "1970 1970 NFL NFC East 1st 10 0 Won Divisional Playoffs ( Lions ) 5 -- 0 Won Conference Championship ( 49ers ) 17 -- 10 Lost Super Bowl V ( Colts ) 16 -- 13 Chuck Howley ( SB MVP ) Tom Landry"
+     }
+    ]
+   },
+   {
+    "fact": "0.19",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Won Divisional Playoffs ( Lions ) 5 -- 0"
+     }
+    ]
+   },
+   {
+    "fact": "0.20",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Won Conference Championship ( 49ers ) 17 -- 10"
+     }
+    ]
+   },
+   {
+    "fact": "0.21",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Lost Super Bowl V ( Colts ) 16 -- 13"
+     }
+    ]
+   },
+   {
+    "fact": "0.22",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Chuck Howley ( SB MVP )"
+     }
+    ]
+   },
+   {
+    "fact": "0.23",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "1971 1971 NFL NFC East 1st 11 0 Won Divisional Playoffs ( Vikings ) 20 -- 12 Won Conference Championship ( 49ers ) 14 -- 3 Won Super Bowl VI ( 1 ) ( Dolphins ) 24 -- 3 Roger Staubach ( SB MVP ) Tom Landry"
+     }
+    ]
+   },
+   {
+    "fact": "0.24",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Won Divisional Playoffs ( Vikings ) 20 -- 12"
+     }
+    ]
+   },
+   {
+    "fact": "0.25",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Won Conference Championship ( 49ers ) 14 -- 3"
+     }
+    ]
+   },
+   {
+    "fact": "0.26",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Won Super Bowl VI ( 1 ) ( Dolphins ) 24 -- 3"
+     }
+    ]
+   },
+   {
+    "fact": "0.27",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Roger Staubach ( SB MVP )"
+     }
+    ]
+   },
+   {
+    "fact": "0.28",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "1972 1972 NFL NFC East 2nd 10 0 Won Divisional Playoffs ( 49ers ) 30 -- 28 Lost Conference Championship ( Redskins ) 26 -- 3 Tom Landry"
+     }
+    ]
+   },
+   {
+    "fact": "0.29",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Won Divisional Playoffs ( 49ers ) 30 -- 28"
+     }
+    ]
+   },
+   {
+    "fact": "0.30",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Lost Conference Championship ( Redskins ) 26 -- 3"
+     }
+    ]
+   },
+   {
+    "fact": "0.31",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "1973 1973 NFL NFC East 1st 10 0 Won Divisional Playoffs ( Rams ) 27 -- 26 Lost Conference Championship ( Vikings ) 27 -- 10 Tom Landry"
+     }
+    ]
+   },
+   {
+    "fact": "0.32",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Won Divisional Playoffs ( Rams ) 27 -- 26"
+     }
+    ]
+   },
+   {
+    "fact": "0.33",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Lost Conference Championship ( Vikings ) 27 -- 10"
+     }
+    ]
+   },
+   {
+    "fact": "0.34",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Tom Landry NFL NFC East 3rd 8 6 0 Tom Landry"
+     }
+    ]
+   },
+   {
+    "fact": "0.35",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "NFL NFC East 2nd 10 0 Won Divisional Playoffs ( Vikings ) 17 -- 14"
+     }
+    ]
+   },
+   {
+    "fact": "0.36",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Won Divisional Playoffs ( Vikings ) 17 -- 14"
+     }
+    ]
+   },
+   {
+    "fact": "0.37",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Won Conference Championship ( Rams ) 37 -- 7"
+     }
+    ]
+   },
+   {
+    "fact": "0.38",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Lost Super Bowl X ( Steelers ) 21 -- 17"
+     }
+    ]
+   },
+   {
+    "fact": "0.39",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "1976 1976 NFL NFC East 1st 11 0 Lost Divisional Playoffs ( Rams ) 14 -- 12 Tom Landry"
+     }
+    ]
+   },
+   {
+    "fact": "0.40",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Lost Divisional Playoffs ( Rams ) 14 -- 12"
+     }
+    ]
+   },
+   {
+    "fact": "0.41",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "1977 1977 NFL NFC East 1st 12 0 Won Divisional Playoffs ( Bears ) 37 -- 7 Won Conference Championship ( Vikings ) 23 -- 6 Won Super Bowl XII ( 2 ) ( Broncos ) 27 -- 10 Tony Dorsett ( OROY ) Harvey Martin ( DPOY , SB MVP ) Randy White ( SB MVP ) Tom Landry"
+     }
+    ]
+   },
+   {
+    "fact": "0.42",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Won Divisional Playoffs ( Bears ) 37 -- 7"
+     }
+    ]
+   },
+   {
+    "fact": "0.43",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Won Conference Championship ( Vikings ) 23 -- 6"
+     }
+    ]
+   },
+   {
+    "fact": "0.44",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Won Super Bowl XII ( 2 ) ( Broncos ) 27 -- 10"
+     }
+    ]
+   },
+   {
+    "fact": "0.45",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Tony Dorsett ( OROY )"
+     }
+    ]
+   },
+   {
+    "fact": "0.46",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Harvey Martin ( DPOY , SB MVP )"
+     }
+    ]
+   },
+   {
+    "fact": "0.47",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Randy White ( SB MVP )"
+     }
+    ]
+   },
+   {
+    "fact": "0.48",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "1978 1978 NFL NFC East 1st 12 0 Won Divisional Playoffs ( Falcons ) 27 -- 20 Won Conference Championship ( Rams ) 28 -- 0 Lost Super Bowl XIII ( Steelers ) 35 -- 31 Tom Landry"
+     }
+    ]
+   },
+   {
+    "fact": "0.49",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Won Divisional Playoffs ( Falcons ) 27 -- 20"
+     }
+    ]
+   },
+   {
+    "fact": "0.50",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Won Conference Championship ( Rams ) 28 -- 0"
+     }
+    ]
+   },
+   {
+    "fact": "0.51",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Lost Super Bowl XIII ( Steelers ) 35 -- 31"
+     }
+    ]
+   },
+   {
+    "fact": "0.52",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.53",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.54",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.55",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.56",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.57",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.58",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.59",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.60",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.61",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.62",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.63",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.64",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.65",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.66",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.67",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.68",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.69",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.70",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.71",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.72",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.73",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.74",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.75",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.76",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.77",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.78",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.79",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.80",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.81",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.82",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Won Conference Championship ( 49ers ) 30 -- 20"
+     }
+    ]
+   },
+   {
+    "fact": "0.83",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Won Super Bowl XXVII ( 3 ) ( Bills ) 52 -- 17"
+     }
+    ]
+   },
+   {
+    "fact": "0.84",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Troy Aikman ( SB MVP )"
+     }
+    ]
+   },
+   {
+    "fact": "0.85",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "1993 1993 NFL NFC East 1st 12 0 Won Divisional Playoffs ( Packers ) 27 -- 17 Won Conference Championship ( 49ers ) 38 -- 21 Won Super Bowl XXVIII ( 4 ) ( Bills ) 30 -- 13 Emmitt Smith ( MVP , SB MVP ) Jimmy Johnson"
+     }
+    ]
+   },
+   {
+    "fact": "0.86",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Won Divisional Playoffs ( Packers ) 27 -- 17"
+     }
+    ]
+   },
+   {
+    "fact": "0.87",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Won Conference Championship ( 49ers ) 38 -- 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.88",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Won Super Bowl XXVIII ( 4 ) ( Bills ) 30 -- 13"
+     }
+    ]
+   },
+   {
+    "fact": "0.89",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Emmitt Smith ( MVP , SB MVP )"
+     }
+    ]
+   },
+   {
+    "fact": "0.90",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "1994 1994 NFL NFC East 1st 12 0 Won Divisional Playoffs ( Packers ) 35 -- 9 Lost Conference Championship ( 49ers ) 38 -- 28 Barry Switzer"
+     }
+    ]
+   },
+   {
+    "fact": "0.91",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Won Divisional Playoffs ( Packers ) 35 -- 9"
+     }
+    ]
+   },
+   {
+    "fact": "0.92",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Lost Conference Championship ( 49ers ) 38 -- 28"
+     }
+    ]
+   },
+   {
+    "fact": "0.93",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "1995 1995 NFL NFC East 1st 12 0 Won Divisional Playoffs ( Eagles ) 30 -- 11 Won Conference Championship ( Packers ) 38 -- 27 Won Super Bowl XXX ( 5 ) ( Steelers ) 27 -- 17 Larry Brown ( SB MVP ) Barry Switzer"
+     }
+    ]
+   },
+   {
+    "fact": "0.94",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Won Divisional Playoffs ( Eagles ) 30 -- 11"
+     }
+    ]
+   },
+   {
+    "fact": "0.95",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Won Conference Championship ( Packers ) 38 -- 27"
+     }
+    ]
+   },
+   {
+    "fact": "0.96",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Won Super Bowl XXX ( 5 ) ( Steelers ) 27 -- 17"
+     }
+    ]
+   },
+   {
+    "fact": "0.97",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Larry Brown ( SB MVP )"
+     }
+    ]
+   },
+   {
+    "fact": "0.98",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Barry Switzer NFL NFC East 1st 10 6 0"
+     }
+    ]
+   },
+   {
+    "fact": "0.99",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.100",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.101",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.102",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.103",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.104",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.105",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.106",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.107",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.108",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.109",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.110",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.111",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.112",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.113",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.114",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.115",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.116",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.117",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.118",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.119",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.120",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.121",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.122",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.123",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.124",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.125",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Jason Witten ( WP MOY )"
+     }
+    ]
+   },
+   {
+    "fact": "0.126",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "2013 2013 NFL NFC East 2nd 8 8 0 Jason Garrett"
+     }
+    ]
+   },
+   {
+    "fact": "0.127",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "2014 2014 NFL NFC East 1st 12 0 Won Wild Card Playoffs ( Lions ) 24 -- 20 Lost Divisional Playoffs ( Packers ) 26 -- 21 DeMarco Murray ( OPOY ) Jason Garrett"
+     }
+    ]
+   },
+   {
+    "fact": "0.128",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Won Wild Card Playoffs ( Lions ) 24 -- 20"
+     }
+    ]
+   },
+   {
+    "fact": "0.129",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Lost Divisional Playoffs ( Packers ) 26 -- 21"
+     }
+    ]
+   },
+   {
+    "fact": "0.130",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "DeMarco Murray ( OPOY )"
+     }
+    ]
+   },
+   {
+    "fact": "0.131",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "2015 2015 NFL NFC East 4th 12 0 Jason Garrett"
+     }
+    ]
+   },
+   {
+    "fact": "0.132",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "2016 2016 NFL NFC East 1st 13 0 Lost Divisional Playoffs ( Packers ) 34 -- 31 Dak Prescott ( OROY ) Jason Garrett ( COY ) Jason Garrett"
+     }
+    ]
+   },
+   {
+    "fact": "0.133",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Lost Divisional Playoffs ( Packers ) 34 -- 31"
+     }
+    ]
+   },
+   {
+    "fact": "0.134",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Dak Prescott ( OROY )"
+     }
+    ]
+   },
+   {
+    "fact": "0.135",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Jason Garrett ( COY )"
+     }
+    ]
+   },
+   {
+    "fact": "0.136",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "2017 2017 NFL NFC East 2nd 9 7 0 Jason Garrett"
+     }
+    ]
+   },
+   {
+    "fact": "0.137",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Total 502 374 6"
+     }
+    ]
+   },
+   {
+    "fact": "0.138",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "All - time regular season record ( 1960 -- 2017 ) 34 27 0"
+     }
+    ]
+   },
+   {
+    "fact": "0.139",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "All - time postseason record ( 1960 -- 2017 ) 536 401 6"
+     }
+    ]
+   },
+   {
+    "fact": "0.140",
+    "status": "contradicted",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Division championships ( 23 )"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "e3507191c9a5000e",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Sir Edmund Barton ( 1849 -- 1920 ) Protectionist 1 January 1901 24 September 1903"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Sir Edmund Barton ( 1849 -- 1920 ) Protectionist 1 January 1901 24 September 1903"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Hunter , NSW , 1901 -- 1903 ( resigned )"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Hunter , NSW , 1901 -- 1903 ( resigned ) 1901 Barton"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "1901 Barton"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Deakin ( 1856 -- 1919 ) Protectionist 24 September 1903 27 April 1904"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Deakin ( 1856 -- 1919 ) Protectionist 24 September 1903 27 April 1904"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Ballaarat , Vic , 1901 -- 1913 ( retired )"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "1903 1st Deakin"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "1903 1st Deakin"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Chris Watson ( 1867 -- 1941 ) Labour 27 April 1904 18 August 1904"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Chris Watson ( 1867 -- 1941 ) Labour 27 April 1904 18 August 1904"
+     }
+    ]
+   },
+   {
+    "fact": "0.12",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.13",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.14",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.15",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.16",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.17",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.18",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.19",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.20",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.21",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.22",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.23",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.24",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.25",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.26",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.27",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.28",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.29",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.30",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.31",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.32",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.33",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.34",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.35",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.36",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.37",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.38",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.39",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.40",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.41",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.42",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.43",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.44",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.45",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.46",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.47",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.48",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.49",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.50",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.51",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "He subsequently continued on as prime minister at the head of the new National Labor Party"
+     },
+     {
+      "item": 10,
+      "quote": "provided confidence and supply until February 1917"
+     }
+    ]
+   },
+   {
+    "fact": "0.52",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.53",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.54",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.55",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.56",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.57",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.58",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.59",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.60",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.61",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.62",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.63",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.64",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.65",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.66",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.67",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.68",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.69",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.70",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.71",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.72",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.73",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.74",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.75",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.76",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "died suddenly in April 1939 , the governor - general , Lord Gowrie , called on Sir Earle Page to become caretaker Prime Minister"
+     }
+    ]
+   },
+   {
+    "fact": "0.77",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 9,
+      "quote": "leader of the smaller party in the governing coalition , the Country Party"
+     }
+    ]
+   },
+   {
+    "fact": "0.78",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.79",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.80",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Sir Robert Menzies , who served in office twice : from 26 April 1939 to 28 August 1941"
+     }
+    ]
+   },
+   {
+    "fact": "0.81",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "He served under the United Australia Party and the Liberal Party respectively"
+     }
+    ]
+   },
+   {
+    "fact": "0.82",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.83",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "-- 1st Menzies 2nd Menzies 1940 3rd Menzies"
+     }
+    ]
+   },
+   {
+    "fact": "0.84",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "-- 1st Menzies 2nd Menzies 1940 3rd Menzies"
+     }
+    ]
+   },
+   {
+    "fact": "0.85",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "-- 1st Menzies 2nd Menzies 1940 3rd Menzies"
+     }
+    ]
+   },
+   {
+    "fact": "0.86",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Arthur Fadden ( 1894 -- 1973 ) Country ( Coalition ) 28 August 1941 7 October 1941"
+     }
+    ]
+   },
+   {
+    "fact": "0.87",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Arthur Fadden ( 1894 -- 1973 ) Country ( Coalition )"
+     }
+    ]
+   },
+   {
+    "fact": "0.88",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Darling Downs , Qld 1936 -- 1949"
+     }
+    ]
+   },
+   {
+    "fact": "0.89",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "McPherson , Qld 1949 -- 1958 ( retired )"
+     }
+    ]
+   },
+   {
+    "fact": "0.90",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "McPherson , Qld 1949 -- 1958 ( retired ) -- Fadden"
+     }
+    ]
+   },
+   {
+    "fact": "0.91",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "John Curtin ( 1885 -- 1945 ) Labor 7 October 1941 5 July 1945"
+     }
+    ]
+   },
+   {
+    "fact": "0.92",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "John Curtin ( 1885 -- 1945 ) Labor 7 October 1941 5 July 1945"
+     }
+    ]
+   },
+   {
+    "fact": "0.93",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Fremantle , WA , 1928 -- 1931 ( defeated ) ; 1934 -- 1945 ( died )"
+     }
+    ]
+   },
+   {
+    "fact": "0.94",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Fremantle , WA , 1928 -- 1931 ( defeated ) ; 1934 -- 1945 ( died )"
+     }
+    ]
+   },
+   {
+    "fact": "0.95",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "1st Curtin 1943 2nd Curtin"
+     }
+    ]
+   },
+   {
+    "fact": "0.96",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "1st Curtin 1943 2nd Curtin"
+     }
+    ]
+   },
+   {
+    "fact": "0.97",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Frank Forde ( 1890 -- 1983 ) Labor 6 July 1945 13 July 1945"
+     }
+    ]
+   },
+   {
+    "fact": "0.98",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Frank Forde ( 1890 -- 1983 ) Labor 6 July 1945 13 July 1945"
+     }
+    ]
+   },
+   {
+    "fact": "0.99",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Capricornia , Qld , 1922 -- 1946 ( defeated )"
+     }
+    ]
+   },
+   {
+    "fact": "0.100",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Capricornia , Qld , 1922 -- 1946 ( defeated ) -- Forde"
+     }
+    ]
+   },
+   {
+    "fact": "0.101",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Ben Chifley ( 1885 -- 1951 ) Labor 13 July 1945 19 December 1949"
+     }
+    ]
+   },
+   {
+    "fact": "0.102",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Ben Chifley ( 1885 -- 1951 ) Labor 13 July 1945 19 December 1949"
+     }
+    ]
+   },
+   {
+    "fact": "0.103",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.104",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.105",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.106",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.107",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "again from 19 December 1949 to 26 January 1966"
+     }
+    ]
+   },
+   {
+    "fact": "0.108",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "He served under the United Australia Party and the Liberal Party respectively"
+     }
+    ]
+   },
+   {
+    "fact": "0.109",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.110",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.111",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.112",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.113",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.114",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.115",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.116",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.117",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.118",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.119",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The governor - general , Lord Casey , commissioned the Leader of the Country Party , John McEwen"
+     }
+    ]
+   },
+   {
+    "fact": "0.120",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.121",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.122",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.123",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.124",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.125",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.126",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.127",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.128",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.129",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.130",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.131",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.132",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.133",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.134",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.135",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "dismissed the Labor Party 's Gough Whitlam as Prime Minister"
+     }
+    ]
+   },
+   {
+    "fact": "0.136",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.137",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.138",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.139",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.140",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.141",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Liberal leader Malcolm Fraser"
+     }
+    ]
+   },
+   {
+    "fact": "0.142",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.143",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.144",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.145",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.146",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.147",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.148",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.149",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.150",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.151",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.152",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.153",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.154",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.155",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.156",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.157",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.158",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.159",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.160",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.161",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.162",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.163",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.164",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.165",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.166",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.167",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.168",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.169",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.170",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.171",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.172",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.173",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.174",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.175",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.176",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.177",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.178",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.179",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.180",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.181",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.182",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.183",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Malcolm Turnbull has held the office of Prime Minister since 15 September 2015"
+     }
+    ]
+   },
+   {
+    "fact": "0.184",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "as the leader of the Liberal Party , the dominant party in the Coalition government"
+     }
+    ]
+   },
+   {
+    "fact": "0.185",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.186",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.187",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.188",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Federation occurred on 1 January 1901"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "elections for the first parliament were not scheduled until late March"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "an unelected caretaker government was necessary"
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "In what is now known as the Hopetoun Blunder"
+     }
+    ]
+   },
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "the governor - general , Lord Hopetoun , invited Sir William Lyne , the premier of the most populous state , New South Wales , to form a government"
+     }
+    ]
+   },
+   {
+    "fact": "1.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "William Lyne , the premier of the most populous state , New South Wales"
+     }
+    ]
+   },
+   {
+    "fact": "1.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "the most populous state , New South Wales"
+     }
+    ]
+   },
+   {
+    "fact": "1.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Lyne was unable to do so and returned his commission in favour"
+     }
+    ]
+   },
+   {
+    "fact": "1.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Lyne was unable to do so and returned his commission in favour of Edmund Barton"
+     }
+    ]
+   },
+   {
+    "fact": "1.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Edmund Barton , who became the first Prime Minister"
+     }
+    ]
+   },
+   {
+    "fact": "1.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "led the inaugural government into and beyond the election"
+     }
+    ]
+   },
+   {
+    "fact": "1.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "led the inaugural government into and beyond the election"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "18642325b465a274",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Rhapsody Developer Release Grail1Z4 / Titan1U 32 - bit PowerPC 32 - bit PowerPC 32 - bit Unknown August 31 , 1997 DR2 ( May 14 , 1998 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Rhapsody Developer Release Grail1Z4 / Titan1U 32 - bit PowerPC 32 - bit PowerPC 32 - bit Unknown August 31 , 1997 DR2 ( May 14 , 1998 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Rhapsody Developer Release Grail1Z4 / Titan1U 32 - bit PowerPC 32 - bit PowerPC 32 - bit Unknown August 31 , 1997 DR2 ( May 14 , 1998 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Rhapsody Developer Release Grail1Z4 / Titan1U 32 - bit PowerPC 32 - bit PowerPC 32 - bit Unknown August 31 , 1997 DR2 ( May 14 , 1998 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Rhapsody Developer Release Grail1Z4 / Titan1U 32 - bit PowerPC 32 - bit PowerPC 32 - bit Unknown August 31 , 1997 DR2 ( May 14 , 1998 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Mac OS X Server 1.0 Hera Unknown March 16 , 1999 1.2 v3 ( October 27 , 2000 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Mac OS X Server 1.0 Hera Unknown March 16 , 1999 1.2 v3 ( October 27 , 2000 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Mac OS X Server 1.0 Hera Unknown March 16 , 1999 1.2 v3 ( October 27 , 2000 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Mac OS X Developer Preview Unknown May 11 , 1998 March 16 , 1999 DP4 ( April 5 , 2000 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Mac OS X Developer Preview Unknown May 11 , 1998 March 16 , 1999 DP4 ( April 5 , 2000 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Mac OS X Public Beta Kodiak"
+     }
+    ]
+   },
+   {
+    "fact": "0.11",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.12",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.13",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "10.0 Cheetah"
+     }
+    ]
+   },
+   {
+    "fact": "0.15",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.16",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.17",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "10.1 Puma"
+     }
+    ]
+   },
+   {
+    "fact": "0.19",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.20",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.21",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.22",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.23",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "10.2 Jaguar"
+     }
+    ]
+   },
+   {
+    "fact": "0.24",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.25",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.26",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.27",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.28",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.29",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "10.3 Panther"
+     }
+    ]
+   },
+   {
+    "fact": "0.30",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.31",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.32",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.33",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.34",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.35",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "10.4 Tiger"
+     }
+    ]
+   },
+   {
+    "fact": "0.36",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.37",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.38",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.39",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.40",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.41",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "10.5 Leopard"
+     }
+    ]
+   },
+   {
+    "fact": "0.42",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.43",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.44",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.45",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.46",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.47",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "10.6 Snow Leopard"
+     }
+    ]
+   },
+   {
+    "fact": "0.48",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.49",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.50",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.51",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.52",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.53",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.54",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "10.7 Lion"
+     }
+    ]
+   },
+   {
+    "fact": "0.55",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.56",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.57",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.58",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.59",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.60",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "10.8 Mountain Lion"
+     }
+    ]
+   },
+   {
+    "fact": "0.61",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.62",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.63",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.64",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.65",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.66",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "OS X 10.9 Mavericks 13 June 10 , 2013 October 22 , 2013"
+     }
+    ]
+   },
+   {
+    "fact": "0.67",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "OS X 10.9 Mavericks 13 June 10 , 2013 October 22 , 2013"
+     }
+    ]
+   },
+   {
+    "fact": "0.68",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "OS X 10.9 Mavericks 13 June 10 , 2013 October 22 , 2013"
+     }
+    ]
+   },
+   {
+    "fact": "0.69",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "OS X 10.9 Mavericks 13 June 10 , 2013 October 22 , 2013"
+     }
+    ]
+   },
+   {
+    "fact": "0.70",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "10.9. 5 ( 13F1112 ) ( September 18 , 2014 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.71",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "OS X 10.10 Yosemite 14 June 2 , 2014 October 16 , 2014 10.10. 5 ( 14F27 ) ( August 13 , 2015 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.72",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "OS X 10.10 Yosemite 14 June 2 , 2014 October 16 , 2014 10.10. 5 ( 14F27 ) ( August 13 , 2015 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.73",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "OS X 10.10 Yosemite 14 June 2 , 2014 October 16 , 2014 10.10. 5 ( 14F27 ) ( August 13 , 2015 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.74",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "OS X 10.10 Yosemite 14 June 2 , 2014 October 16 , 2014 10.10. 5 ( 14F27 ) ( August 13 , 2015 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.75",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "OS X 10.10 Yosemite 14 June 2 , 2014 October 16 , 2014 10.10. 5 ( 14F27 ) ( August 13 , 2015 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.76",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "OS X 10.11 El Capitan 15 June 8 , 2015 September 30 , 2015 10.11. 6 ( 15G31 ) ( July 18 , 2016 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.77",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "OS X 10.11 El Capitan 15 June 8 , 2015 September 30 , 2015 10.11. 6 ( 15G31 ) ( July 18 , 2016 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.78",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "OS X 10.11 El Capitan 15 June 8 , 2015 September 30 , 2015 10.11. 6 ( 15G31 ) ( July 18 , 2016 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.79",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "OS X 10.11 El Capitan 15 June 8 , 2015 September 30 , 2015 10.11. 6 ( 15G31 ) ( July 18 , 2016 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.80",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "OS X 10.11 El Capitan 15 June 8 , 2015 September 30 , 2015 10.11. 6 ( 15G31 ) ( July 18 , 2016 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.81",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "macOS 10.12 Sierra 16 June 13 , 2016 September 20 , 2016 10.12. 6 ( 16G29 ) ( July 19 , 2017 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.82",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "macOS 10.12 Sierra 16 June 13 , 2016 September 20 , 2016 10.12. 6 ( 16G29 ) ( July 19 , 2017 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.83",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "macOS 10.12 Sierra 16 June 13 , 2016 September 20 , 2016 10.12. 6 ( 16G29 ) ( July 19 , 2017 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.84",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "macOS 10.12 Sierra 16 June 13 , 2016 September 20 , 2016 10.12. 6 ( 16G29 ) ( July 19 , 2017 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.85",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "macOS 10.12 Sierra 16 June 13 , 2016 September 20 , 2016 10.12. 6 ( 16G29 ) ( July 19 , 2017 )"
+     }
+    ]
+   },
+   {
+    "fact": "0.86",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "macOS 10.13 High Sierra 17 June 5 , 2017 September 25 , 2017"
+     }
+    ]
+   },
+   {
+    "fact": "0.87",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "macOS 10.13 High Sierra 17 June 5 , 2017 September 25 , 2017"
+     }
+    ]
+   },
+   {
+    "fact": "0.88",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "macOS 10.13 High Sierra 17 June 5 , 2017 September 25 , 2017"
+     }
+    ]
+   },
+   {
+    "fact": "0.89",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "macOS 10.13 High Sierra 17 June 5 , 2017 September 25 , 2017"
+     }
+    ]
+   },
+   {
+    "fact": "0.90",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Developer Apple , Inc ."
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Written in C++ Objective - C Swift"
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "OS family Macintosh , Unix"
+     }
+    ]
+   },
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Working state Current"
+     }
+    ]
+   },
+   {
+    "fact": "1.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Source model Closed source ( with open source components )"
+     }
+    ]
+   },
+   {
+    "fact": "1.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Initial release March 24 , 2001"
+     }
+    ]
+   },
+   {
+    "fact": "1.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Latest release 10.13. 4 ( 17E202 ) ( April 24 , 2018"
+     }
+    ]
+   },
+   {
+    "fact": "1.7",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.8",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.9",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.10",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.11",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.12",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.13",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.14",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "PowerPC ( 10.0 -- 10.5. 8 ; discontinued )"
+     }
+    ]
+   },
+   {
+    "fact": "1.15",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Kernel type Hybrid ( XNU )"
+     }
+    ]
+   },
+   {
+    "fact": "1.16",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Default user interface Graphical ( Aqua )"
+     }
+    ]
+   },
+   {
+    "fact": "1.17",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "License Commercial software , proprietary software"
+     }
+    ]
+   },
+   {
+    "fact": "1.18",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Preceded by Classic Mac OS"
+     }
+    ]
+   },
+   {
+    "fact": "1.19",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Official website www.apple.com/macos"
+     }
+    ]
+   },
+   {
+    "fact": "1.20",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "Support status Supported"
+     }
+    ]
+   },
+   {
+    "fact": "2.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "macOS is the second major series of Macintosh operating systems"
+     }
+    ]
+   },
+   {
+    "fact": "2.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The first is colloquially called the `` classic '' Mac OS"
+     }
+    ]
+   },
+   {
+    "fact": "2.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "which was introduced in 1984"
+     }
+    ]
+   },
+   {
+    "fact": "2.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "the final release of which was Mac OS 9 in 1999"
+     }
+    ]
+   },
+   {
+    "fact": "2.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "The first desktop version , Mac OS X 10.0 , was released in March 2001"
+     }
+    ]
+   },
+   {
+    "fact": "2.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 7,
+      "quote": "with its first update , 10.1 , arriving later that year"
+     }
+    ]
+   },
+   {
+    "fact": "2.6",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "After this , Apple began naming its releases after big cats , which lasted until OS X 10.8 Mountain Lion"
+     }
+    ]
+   },
+   {
+    "fact": "2.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Since OS X 10.9 Mavericks , releases have been named after landmarks in California"
+     }
+    ]
+   },
+   {
+    "fact": "2.8",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Apple shortened the name to `` OS X '' in 2012"
+     }
+    ]
+   },
+   {
+    "fact": "2.9",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "changed it to `` macOS '' in 2016"
+     }
+    ]
+   },
+   {
+    "fact": "2.10",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "adopting the nomenclature that it uses for their other operating systems , iOS , watchOS , and tvOS"
+     }
+    ]
+   },
+   {
+    "fact": "2.11",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "The latest version is macOS High Sierra , which was publicly released in September 2017"
+     }
+    ]
+   },
+   {
+    "fact": "2.12",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "The latest version is macOS High Sierra , which was publicly released in September 2017"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "6c10434e2ff52a54",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.5",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.6",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.7",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.8",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.9",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.10",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.11",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.12",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.13",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.14",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.15",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.16",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.17",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.18",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.19",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.20",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.21",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "2017 ( 2017 - 10 - 26 ) 704 4.88"
+     }
+    ]
+   },
+   {
+    "fact": "0.22",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "2017 ( 2017 - 10 - 26 ) 704 4.88"
+     }
+    ]
+   },
+   {
+    "fact": "0.23",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "2017 ( 2017 - 10 - 26 ) 704 4.88"
+     }
+    ]
+   },
+   {
+    "fact": "0.24",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "111 5 `` Adventures in Babysitting '' Oliver Bokelberg Serveriano Canales & Tia Napolitano November 2 , 2017 ( 2017 - 11 - 02 ) 705 4.89"
+     }
+    ]
+   },
+   {
+    "fact": "0.25",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "111 5 `` Adventures in Babysitting '' Oliver Bokelberg Serveriano Canales & Tia Napolitano November 2 , 2017 ( 2017 - 11 - 02 ) 705 4.89"
+     }
+    ]
+   },
+   {
+    "fact": "0.26",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "111 5 `` Adventures in Babysitting '' Oliver Bokelberg Serveriano Canales & Tia Napolitano November 2 , 2017 ( 2017 - 11 - 02 ) 705 4.89"
+     }
+    ]
+   },
+   {
+    "fact": "0.27",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "111 5 `` Adventures in Babysitting '' Oliver Bokelberg Serveriano Canales & Tia Napolitano November 2 , 2017 ( 2017 - 11 - 02 ) 705 4.89"
+     }
+    ]
+   },
+   {
+    "fact": "0.28",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "111 5 `` Adventures in Babysitting '' Oliver Bokelberg Serveriano Canales & Tia Napolitano November 2 , 2017 ( 2017 - 11 - 02 ) 705 4.89"
+     }
+    ]
+   },
+   {
+    "fact": "0.29",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "111 5 `` Adventures in Babysitting '' Oliver Bokelberg Serveriano Canales & Tia Napolitano November 2 , 2017 ( 2017 - 11 - 02 ) 705 4.89"
+     }
+    ]
+   },
+   {
+    "fact": "0.30",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "112 6 `` Vampires and Bloodsuckers '' Jann Turner Chris Van Dusen & Tia Napolitano November 9 , 2017 ( 2017 - 11 - 09 ) 706 5.00"
+     }
+    ]
+   },
+   {
+    "fact": "0.31",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "112 6 `` Vampires and Bloodsuckers '' Jann Turner Chris Van Dusen & Tia Napolitano November 9 , 2017 ( 2017 - 11 - 09 ) 706 5.00"
+     }
+    ]
+   },
+   {
+    "fact": "0.32",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "112 6 `` Vampires and Bloodsuckers '' Jann Turner Chris Van Dusen & Tia Napolitano November 9 , 2017 ( 2017 - 11 - 09 ) 706 5.00"
+     }
+    ]
+   },
+   {
+    "fact": "0.33",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "112 6 `` Vampires and Bloodsuckers '' Jann Turner Chris Van Dusen & Tia Napolitano November 9 , 2017 ( 2017 - 11 - 09 ) 706 5.00"
+     }
+    ]
+   },
+   {
+    "fact": "0.34",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "112 6 `` Vampires and Bloodsuckers '' Jann Turner Chris Van Dusen & Tia Napolitano November 9 , 2017 ( 2017 - 11 - 09 ) 706 5.00"
+     }
+    ]
+   },
+   {
+    "fact": "0.35",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "112 6 `` Vampires and Bloodsuckers '' Jann Turner Chris Van Dusen & Tia Napolitano November 9 , 2017 ( 2017 - 11 - 09 ) 706 5.00"
+     }
+    ]
+   },
+   {
+    "fact": "0.36",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "113 7 `` Something Borrowed '' Sharat Raju Mark Fish November 16 , 2017 ( 2017 - 11 - 16 ) 707 4.97"
+     }
+    ]
+   },
+   {
+    "fact": "0.37",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "113 7 `` Something Borrowed '' Sharat Raju Mark Fish November 16 , 2017 ( 2017 - 11 - 16 ) 707 4.97"
+     }
+    ]
+   },
+   {
+    "fact": "0.38",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "113 7 `` Something Borrowed '' Sharat Raju Mark Fish November 16 , 2017 ( 2017 - 11 - 16 ) 707 4.97"
+     }
+    ]
+   },
+   {
+    "fact": "0.39",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "113 7 `` Something Borrowed '' Sharat Raju Mark Fish November 16 , 2017 ( 2017 - 11 - 16 ) 707 4.97"
+     }
+    ]
+   },
+   {
+    "fact": "0.40",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "113 7 `` Something Borrowed '' Sharat Raju Mark Fish November 16 , 2017 ( 2017 - 11 - 16 ) 707 4.97"
+     }
+    ]
+   },
+   {
+    "fact": "0.41",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "113 7 `` Something Borrowed '' Sharat Raju Mark Fish November 16 , 2017 ( 2017 - 11 - 16 ) 707 4.97"
+     }
+    ]
+   },
+   {
+    "fact": "0.42",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "114 8 `` Robin '' Daryn Okada Juan Carlos Fernandez January 18 , 2018 ( 2018 - 01 - 18 ) 709 5.17"
+     }
+    ]
+   },
+   {
+    "fact": "0.43",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "114 8 `` Robin '' Daryn Okada Juan Carlos Fernandez January 18 , 2018 ( 2018 - 01 - 18 ) 709 5.17"
+     }
+    ]
+   },
+   {
+    "fact": "0.44",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "114 8 `` Robin '' Daryn Okada Juan Carlos Fernandez January 18 , 2018 ( 2018 - 01 - 18 ) 709 5.17"
+     }
+    ]
+   },
+   {
+    "fact": "0.45",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "114 8 `` Robin '' Daryn Okada Juan Carlos Fernandez January 18 , 2018 ( 2018 - 01 - 18 ) 709 5.17"
+     }
+    ]
+   },
+   {
+    "fact": "0.46",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "114 8 `` Robin '' Daryn Okada Juan Carlos Fernandez January 18 , 2018 ( 2018 - 01 - 18 ) 709 5.17"
+     }
+    ]
+   },
+   {
+    "fact": "0.47",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "114 8 `` Robin '' Daryn Okada Juan Carlos Fernandez January 18 , 2018 ( 2018 - 01 - 18 ) 709 5.17"
+     }
+    ]
+   },
+   {
+    "fact": "0.48",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "115 9 `` Good People '' Nzingha Stewart Shonda Rhimes , Jess Brownell & Nicholas Nardini"
+     }
+    ]
+   },
+   {
+    "fact": "0.49",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "115 9 `` Good People '' Nzingha Stewart Shonda Rhimes , Jess Brownell & Nicholas Nardini"
+     }
+    ]
+   },
+   {
+    "fact": "0.50",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "115 9 `` Good People '' Nzingha Stewart Shonda Rhimes , Jess Brownell & Nicholas Nardini"
+     }
+    ]
+   },
+   {
+    "fact": "0.51",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.52",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.53",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.54",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.55",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.56",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.57",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.58",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.59",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.60",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.61",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.62",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.63",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.64",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.65",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.66",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.67",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.68",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.69",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.70",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.2",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.3",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.4",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.5",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ }
+]

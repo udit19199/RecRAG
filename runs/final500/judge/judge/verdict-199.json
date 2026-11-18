@@ -1,0 +1,58 @@
+[
+{"id": "07db44b8881ebf42", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1)"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030)"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "while San Francisco's unit ranks second in points (16.7)"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)"}]}
+]},
+{"id": "c343d5dee7b68b5e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "he told Fox News Digital"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house"}]}
+]},
+{"id": "b2bf93defe1d94d7", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "she and husband Will Smith have been separated for the last seven years"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Of course, outsiders aren’t fully aware of the “heavy-duty work” that Jada and Will have done throughout their marriage"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Of course, outsiders aren’t fully aware of the “heavy-duty work” that Jada and Will have done throughout their marriage"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years"}]},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []},
+{"fact": "3.2", "status": "missing", "evidence": []},
+{"fact": "3.3", "status": "missing", "evidence": []}
+]},
+{"id": "d2e93eba21a2e2ca", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "30 mins to kickoff: Paraguay have a new manager"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss"}]}
+]},
+{"id": "5b9a1d3f6f101700", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]}
+]},
+{"id": "d52dcda80ec00c6c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 6, "quote": "Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "And for Black Friday, it's on sale for over $400 off, knocking the price down to a super impressive $297"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "And for Black Friday, it's on sale for over $400 off, knocking the price down to a super impressive $297"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "And for Black Friday, it's on sale for over $400 off, knocking the price down to a super impressive $297"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "And for Black Friday, it's on sale for over $400 off, knocking the price down to a super impressive $297"}]}
+]}
+]

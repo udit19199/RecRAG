@@ -1,0 +1,1496 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 11 items.
+
+=== ITEM id=093f38f791043094 ===
+Gold sentences and facts:
+Sentence 0: Triumph of the Will (German: Triumph des Willens ) is a 1935 German propaganda film directed, produced, edited, and co-written by Leni Riefenstahl.
+  Fact 0.0: Triumph of the Will's German title is Triumph des Willens.
+  Fact 0.1: Triumph of the Will is a 1935 German propaganda film.
+  Fact 0.2: Leni Riefenstahl directed Triumph of the Will.
+  Fact 0.3: Leni Riefenstahl produced Triumph of the Will.
+  Fact 0.4: Leni Riefenstahl edited Triumph of the Will.
+  Fact 0.5: Leni Riefenstahl co-wrote Triumph of the Will.
+Sentence 1: The End of America is a 2008 documentary film directed by Annie Sundberg and Ricki Stern, adapted from Naomi Wolf's 2007 book, "".
+  Fact 1.0: The End of America is a 2008 documentary film.
+  Fact 1.1: Annie Sundberg directed The End of America.
+  Fact 1.2: Ricki Stern directed The End of America.
+  Fact 1.3: The End of America is adapted from Naomi Wolf's 2007 book.
+
+Retrieved items:
+<item 1>
+The entries cover American and British films from 1917–1950, spanning silent adventures, Westerns, musicals, comedies, mysteries, dramas, and film noir. Notable
+works include *The Razor’s Edge*, *The Little Foxes*, *The Big House*, and *The Sea Beast*, a commercially successful *Moby-Dick* adaptation with a happy
+ending. Directors featured include Arthur Lubin, Millard Webb, Lowell Sherman, Alan Crosland, and Elmer Cl
+</item 1>
+
+<item 2>
+Austrian director-screenwriter Stefan Ruzowitzky made *The Inheritors* (1998), Austria’s unsuccessful Oscar submission, and *The Counterfeiters* (2007), a WWII
+drama about Nazi forgery at Sachsenhausen that won the foreign-language-film Oscar; Devid Striesow played Bernhard Krüger. German director Wolfgang Becker is
+known for *Good Bye, Lenin!* (2003), starring Daniel Brühl and Katrin Saß. Other entries
+</item 2>
+
+<item 3>
+The entries cover diverse films and careers: crime drama *Deadfall* and its *Arsenal* follow-up; *Rogue One*’s rebels stealing Death Star plans; Mel Gibson,
+Nicolas Cage, James Garner and Tom Cruise filmographies; Everest disaster drama *Everest*; integration-themed sports films *Remember the Titans* and *McFarland,
+USA*; acclaimed *True Grit* and *The Hurt Locker*; espionage film *The Ipcress File*; Vietnam
+</item 3>
+
+<item 4>
+Town Without Pity
+Town Without Pity (German: Stadt ohne Mitleid) is a 1961 American, Swiss, and West German international co-production drama film directed by Gottfried
+Reinhardt.
+
+ Produced by The Mirisch Corporation, the film stars Kirk Douglas, Christine Kaufmann, and E. G. Marshall.
+
+ Coincidentally, this movie came out the same year that John A. Bennett, to this day the last man executed by the U.S. Army, was hanged for raping an
+11-year-old girl.
+</item 4>
+
+<item 5>
+The entries survey European films and music drama, 1913–1961. Swedish director Mauritz Stiller’s works include *The Blizzard* (a student saves his family
+estate), *Erotikon* (a professor’s wife attracts suitors), and *The Saga of Gösta Berling*, Greta Garbo’s breakout film. Hungarian director Béla Gaál made
+comedies including *The Dream Car*. Other highlights: *Triumph of the Will*, Riefenstahl’s
+</item 5>
+
+<item 6>
+Empire (1964 film)
+Empire is a 1964 American black and white silent film written, produced, and directed by Andy Warhol.
+
+ It consists of eight hours and five minutes of continuous slow motion footage of the Empire State Building in New York City.
+
+ Abridged showings of the film were never allowed, and supposedly the unwatchability of the film was an important part of the reason the film was created.
+
+ However, a legitimate Italian VHS produced in association with the Andy Warhol Museum in 2000 contains only an extract of 60 minutes.
+
+ Its use of the long take "in extremis" is an extension of Warhol's earlier work the previous year with "Sleep".
+
+ Warhol employed Rob Trains to be the projectionist for a screening of the film.
+
+ Trains miscalculated and mixed the order and speed of the reels for the eight-hour movie.
+
+ After a positive review in "The New York Times", Warhol actually liked the "mistake" and employed Trains for the entire summer.
+</item 6>
+
+<item 7>
+Olympia (1938 film)
+Olympia is a 1938 German documentary film written, directed and produced by Leni Riefenstahl, documenting the 1936 Summer Olympics, held in the Olympic Stadium
+in Berlin, Germany.
+
+ The film was released in two parts: "Olympia 1.
+
+ Teil — Fest der Völker" (Festival of Nations) and "Olympia 2.
+
+ Teil — Fest der Schönheit" (Festival of Beauty).
+
+ It was the first documentary feature film of the Olympic Games ever made.
+
+ Many advanced motion picture techniques, which later became industry standards but which were groundbreaking at the time, were employed —including unusual
+camera angles, smash cuts, extreme close-ups, placing tracking shot rails within the bleachers, and the like.
+
+ The techniques employed are almost universally admired, but the film is controversial due to its political context.
+
+ Nevertheless, the film appears on many lists of the greatest films of all time, including "Time" magazine's "All-Time 100 Movies."
+</item 7>
+
+<item 8>
+The End of America (film)
+The End of America is a 2008 documentary film directed by Annie Sundberg and Ricki Stern, adapted from Naomi Wolf's 2007 book, "".
+
+ The film analyzes policy changes made during the Bush Administration, and makes the case that these changes threaten American democracy.
+</item 8>
+
+<item 9>
+Triumph of the Will
+Triumph of the Will (German: Triumph des Willens ) is a 1935 German propaganda film directed, produced, edited, and co-written by Leni Riefenstahl.
+
+ It chronicles the 1934 Nazi Party Congress in Nuremberg, which was attended by more than 700,000 Nazi supporters.
+
+ The film contains excerpts from speeches given by Nazi leaders at the Congress, including Adolf Hitler, Rudolf Hess and Julius Streicher, interspersed with
+footage of massed Sturmabteilung (SA) and Schutzstaffel (SS) troops and public reaction.
+
+ Hitler commissioned the film and served as an unofficial executive producer; his name appears in the opening titles.
+
+ The film's overriding theme is the return of Germany as a great power, with Hitler as the leader who will bring glory to the nation.
+
+ Because the film was made after the 1934 Night of the Long Knives (on 30 June) many prominent Sturmabteilung (SA) members are absent—they were murdered in that
+Party purge, organised and orchestrated by Hitler to replace the SA with the Schutzstaffel (SS) as his main paramilitary force.
+</item 9>
+
+<item 10>
+Love Begins at 20
+Love Begins at 20 is a 1936 American comedy film directed by Frank McDonald and written by Dalton Trumbo and Tom Reed, based on the 1929 play "Broken Dishes" by
+Martin Flavin.
+
+ The film stars Hugh Herbert, Patricia Ellis, Warren Hull, Hobart Cavanaugh, Dorothy Vaughan and Clarence Wilson.
+
+ The film was released by Warner Bros. on August 22, 1936.
+</item 10>
+=== END ITEM id=093f38f791043094 ===
+
+=== ITEM id=aadc183e95d4fa75 ===
+Gold sentences and facts:
+Sentence 0: Karl Hermann Frank (24 January 1898 – 22 May 1946) was a prominent Sudeten German Nazi official in Czechoslovakia prior to and during World War II and an SS-"Obergruppenführer".
+  Fact 0.0: Karl Hermann Frank's life dates are 24 January 1898 to 22 May 1946.
+  Fact 0.1: Karl Hermann Frank was a prominent Sudeten German Nazi official in Czechoslovakia.
+  Fact 0.2: Karl Hermann Frank was a Nazi official in Czechoslovakia prior to World War II.
+  Fact 0.3: Karl Hermann Frank was a Nazi official in Czechoslovakia during World War II.
+  Fact 0.4: Karl Hermann Frank was an SS-Obergruppenführer.
+Sentence 1:  Until April 1942, it was the highest commissioned SS rank, inferior only to "Reichsführer-SS" (Heinrich Himmler or RFSS, which was the internal SS-abbreviation for Himmler) Translated as "senior group leader", the rank of "Obergruppenführer" was senior to "Gruppenführer".
+  Fact 1.0: Until April 1942, the Obergruppenführer rank was the highest commissioned SS rank.
+  Fact 1.1: Until April 1942, the Obergruppenführer rank was inferior only to Reichsführer-SS.
+  Fact 1.2: Reichsführer-SS was the SS rank held by Heinrich Himmler.
+  Fact 1.3: RFSS was the internal SS abbreviation for Himmler.
+  Fact 1.4: Obergruppenführer translates as senior group leader.
+  Fact 1.5: The rank of Obergruppenführer was senior to Gruppenführer.
+
+Retrieved items:
+<item 1>
+Friedrich Jeckeln
+Friedrich Jeckeln (2 February 1895 – 3 February 1946) was a high-ranking official in the SS of Nazi Germany who served as an SS and Police Leader in the
+occupied Soviet Union during World War II.
+
+ Jeckeln was the commander of one of the largest collection of "Einsatzgruppen" and was personally responsible for ordering and organizing the deaths of over
+100,000 Jews, Slavs, Romani, and other "undesirables".
+
+ After the end of World War II, Jeckeln was convicted for his crimes by a Soviet military tribunal in Riga, Latvia and executed in 1946.
+</item 1>
+
+<item 2>
+Herbert Büchs
+Herbert Büchs (20 November 1913 – 19 May 1996) was a Lieutenant General of the German Air Force and a former Luftwaffe staff officer in Nazi Germany's
+Oberkommando der Wehrmacht (OKW) during World War II.
+
+ As second adjutant to General Alfred Jodl with the rank of Major he is notable for being present in the conference room when the 20 July plot bomb exploded in
+1944.
+</item 2>
+
+<item 3>
+Karl Hermann Frank
+Karl Hermann Frank (24 January 1898 – 22 May 1946) was a prominent Sudeten German Nazi official in Czechoslovakia prior to and during World War II and an
+SS-"Obergruppenführer".
+
+ He was tried, convicted and executed after World War II for his role in organizing the massacres of the people of the Czech villages of Lidice and Ležáky.
+</item 3>
+
+<item 4>
+List of Generalobersts
+Generaloberst, in English Colonel General, was, in Germany and Austria-Hungary—the German "Reichswehr" and "Wehrmacht", the Austro-Hungarian Common Army, and
+the East German National People's Army, as well as the respective police services—the second highest general officer rank, ranking above full general but below
+general field marshal.
+
+ It was equivalent to "Generaladmiral" in the "Kriegsmarine" until 1945, or to Flottenadmiral in the "Volksmarine" until 1990.
+
+ The rank was the highest ordinary military rank and the highest military rank awarded in peacetime; the higher rank of general field marshal was only awarded
+in wartime by the head of state.
+
+ In general, a Generaloberst had the same privileges as a general field marshal.
+</item 4>
+
+<item 5>
+Frank A. Armstrong
+Frank Alton Armstrong Jr. (May 24, 1902 – August 20, 1969) was a lieutenant general of the United States Air Force.
+
+ As a brigadier general in the United States Army Air Forces during World War II, he was the inspiration for the main character in the novel and subsequent
+film, "Twelve O'Clock High."
+
+ After the war, he held a variety of senior leadership positions prior to and following the establishment of the USAF as an independent service in 1947.
+
+ Promoted to major general in 1950, he advanced to lieutenant general in 1956 and retired at that rank in 1962.
+</item 5>
+
+<item 6>
+Ludwig Beck
+Ludwig August Theodor Beck (29 June 1880 – 21 July 1944) was a German general and Chief of the German General Staff during the early years of the Nazi regime in
+Germany before World War II.
+
+ Ludwig Beck was never a member of the Nazi Party, though in the early 1930s he supported Adolf Hitler's forceful denunciation of the Versailles Treaty and
+belief in the need for Germany to rearm.
+
+ Beck had grave misgivings regarding the Nazi demand that all German officers swear an oath of fealty to the person of Hitler in 1934, though he believed that
+Germany needed strong government and that Hitler could successfully provide this so long as he was influenced by traditional elements within the military rather
+than the SA and SS.
+</item 6>
+
+<item 7>
+Obergruppenführer
+Obergruppenführer (] , "senior group leader") was a Nazi Party paramilitary rank that was first created in 1932 as a rank of the "Sturmabteilung" (SA), and
+adopted by the "Schutzstaffel" (SS) one year later.
+
+ Until April 1942, it was the highest commissioned SS rank, inferior only to "Reichsführer-SS" (Heinrich Himmler or RFSS, which was the internal SS-abbreviation
+for Himmler) Translated as "senior group leader", the rank of "Obergruppenführer" was senior to "Gruppenführer".
+
+ A similarly named rank of "Untergruppenführer" existed in the SA from 1929 to 1930 and as a title until 1933.
+
+ In April 1942, the new rank of "SS-Oberst-Gruppenführer" was created which was above "Obergruppenführer" and below "Reichsführer-SS".
+</item 7>
+
+<item 8>
+Franz Halder
+Franz Halder (30 June 1884 – 2 April 1972) was a German general and the chief of the "Oberkommando des Heeres" staff (OKH, Army High Command) from 1938 until
+September 1942, when he was dismissed after frequent disagreements with Adolf Hitler.
+
+ Until December 1941 Halder's military position corresponded to the old Chief of the General Staff position, which during World War I had been the highest
+military office in the German Imperial Army.
+
+ Halder's diary during his time as chief of OKH General Staff has been a source for authors that have written about such subjects as Hitler, World War II and
+the Nazi Party.
+
+ In William Shirer's "The Rise and Fall of the Third Reich", Halder's diary is cited hundreds of times.
+</item 8>
+
+<item 9>
+Ferdinand Jodl
+Ferdinand Alfred Friedrich Jodl (28 November 1896 – 9 June 1956) was a German general during World War II who commanded the Mountain Corps Norway during the
+Petsamo–Kirkenes Offensive.
+
+ He was the brother of Alfred Jodl, Chief of the Operations Staff of the OKW.
+
+ Ferdinand Jodl was acquitted by a German court.
+</item 9>
+
+<item 10>
+Alfred Jodl
+Alfred Josef Ferdinand Jodl (   ; 10 May 1890 – 16 October 1946) was a German general and war criminal during World War II, who served as the Chief of the
+Operations Staff of the Armed Forces High Command (Oberkommando der Wehrmacht).
+</item 10>
+=== END ITEM id=aadc183e95d4fa75 ===
+
+=== ITEM id=6801ee9785a6269b ===
+Gold sentences and facts:
+Sentence 0:  The pool lies directly south of Lichfield Cathedral and historically has been important to the defence of the Cathedral Close.
+  Fact 0.0: The pool lies directly south of Lichfield Cathedral.
+  Fact 0.1: The pool has historically been important to the defence of the Cathedral Close.
+Sentence 1:  The Diocese of Lichfield covers all of Staffordshire, much of Shropshire and part of the Black Country and West Midlands.
+  Fact 1.0: The Diocese of Lichfield covers all of Staffordshire.
+  Fact 1.1: The Diocese of Lichfield covers much of Shropshire.
+  Fact 1.2: The Diocese of Lichfield covers part of the Black Country.
+  Fact 1.3: The Diocese of Lichfield covers part of the West Midlands.
+
+Retrieved items:
+<item 1>
+Lichfield Cathedral
+Lichfield Cathedral is situated in Lichfield, Staffordshire, England.
+
+ It is the only medieval English cathedral with three spires.
+
+ The Diocese of Lichfield covers all of Staffordshire, much of Shropshire and part of the Black Country and West Midlands.
+
+ The 99th and current Bishop of Lichfield is Michael Ipgrave who was appointed on 10 June 2016.
+</item 1>
+
+<item 2>
+Walsall
+Walsall ( ) is an industrial town in the West Midlands of England.
+
+ It is located 8 miles north-west of the City of Birmingham and 6 miles east of the City of Wolverhampton.
+
+ Historically a part of Staffordshire, Walsall is a component area of the West Midlands conurbation, and part of the Black Country.
+</item 2>
+
+<item 3>
+Black Country Living Museum
+The Black Country Living Museum (formerly The Black Country Museum) is an open-air museum of rebuilt historic buildings in Dudley in the West Midlands of
+England.
+
+ It is located in the centre of the Black Country, 10 miles west of Birmingham.
+
+ The museum occupies 105000 m2 of former industrial land partly reclaimed from a former railway goods yard, disused lime kilns, canal arm and former coal pits.
+</item 3>
+
+<item 4>
+Minster Pool
+Minster Pool is a reservoir located between Bird Street and Dam Street in the heart of the city of Lichfield, Staffordshire in the United Kingdom.
+
+ The pool lies directly south of Lichfield Cathedral and historically has been important to the defence of the Cathedral Close.
+
+ The pool was originally formed in the 11th century when a boggy stream was dammed at its eastern end to drive a mill on Dam Street.
+
+ The pool was used as a mill pond and fishery until 1856 when the mill was demolished; it has since been retained for public amenity.
+</item 4>
+
+<item 5>
+Ryan's Gig Guide
+Ryan's Gig Guide is an independent incisive band friendly gig guide and music magazine based in The Black Country, England and distributed throughout the West
+Midlands United Kingdom.
+
+ The printed publication is not just a list of gigs each month, but the finger on the pulse of the Birmingham and the Black Country music scene.
+</item 5>
+
+<item 6>
+Tipton
+Tipton is a town in the borough of Sandwell, West Midlands, England, with a population of around 38,777 at the 2011 UK Census.
+
+ Tipton is located about halfway between Birmingham and Wolverhampton.
+
+ It is a part of the West Midlands conurbation and is a part of the Black Country.
+</item 6>
+
+<item 7>
+Brierley Hill
+Brierley Hill is a small town and electoral ward of the Dudley Metropolitan Borough, in the West Midlands of England, and is situated approximately 2.5 miles
+south of central Dudley and 2 miles north of Stourbridge.
+
+ Part of the Black Country, and in a heavily industrialised area of the Dudley Borough, it has a population of 13,935 at the 2011 census, and is best known for
+glass and steel manufacturing, although the industry has declined considerably since the 1970s.
+
+ One of the largest factories in the area was the Round Oak Steelworks, which was closed down and redeveloped in the 1980s to become the Merry Hill Shopping
+Centre.
+
+ Brierley Hill was originally in Staffordshire, but is now part of the West Midlands metropolitan county since its creation in 1974.
+</item 7>
+
+<item 8>
+Black Country Rangers F.C.
+Black Country Rangers Football Club is a football club based in Rowley Regis in the West Midlands.
+
+ They are currently members of the West Midlands (Regional) League Premier Division and play at the Beeches in Cradley, groundsharing with Cradley Town.
+</item 8>
+
+<item 9>
+List of railway stations in the West Midlands
+This is a list of railway stations within the West Midlands, a metropolitan county in central England which includes the cities of Birmingham, Coventry and
+Wolverhampton.
+
+ It includes all railway stations in the West Midlands that currently have regular timetabled train services, as well as certain stations outside the county
+which are within the area supported by Transport for West Midlands (TfWM), formerly known as Centro.
+
+ Transport within the West Midlands is subsidised by TfWM, who since 2006 have used the brand name Network West Midlands to demonstrate the 'joined-up' nature
+of the regions bus and rail networks.
+</item 9>
+
+<item 10>
+Dudley Zoo
+Dudley Zoological Gardens is a 40 acre zoo located within the grounds of Dudley Castle in the town of Dudley, in the Black Country region of the West Midlands,
+England.
+
+ The Zoo opened to the public on 18 May 1937.
+
+ Dudley Zoo is owned and operated by Dudley and West Midlands Zoological Society, founded in 1935 and a registered charity.
+</item 10>
+=== END ITEM id=6801ee9785a6269b ===
+
+=== ITEM id=119dcde89801693b ===
+Gold sentences and facts:
+Sentence 0: Summer Magic is a 1963 Walt Disney Productions film starring Hayley Mills, Burl Ives, and Dorothy McGuire in a story about a Boston widow and her children taking up residence in a small town in Maine.
+  Fact 0.0: Summer Magic is a 1963 Walt Disney Productions film.
+  Fact 0.1: Summer Magic stars Hayley Mills.
+  Fact 0.2: Summer Magic stars Burl Ives.
+  Fact 0.3: Summer Magic stars Dorothy McGuire.
+  Fact 0.4: Summer Magic is a story about a Boston widow and her children.
+  Fact 0.5: In Summer Magic, the Boston widow and her children take up residence in a small town in Maine.
+Sentence 1: Around the World in 80 Days is a 2004 American action-adventure comedy family film based on Jules Verne's novel of the same name.
+  Fact 1.0: Around the World in 80 Days is a 2004 American film.
+  Fact 1.1: Around the World in 80 Days is an action-adventure comedy family film.
+  Fact 1.2: Around the World in 80 Days is based on Jules Verne's novel of the same name.
+
+Retrieved items:
+<item 1>
+Around the World in 80 Days (2004 film)
+Around the World in 80 Days is a 2004 American action-adventure comedy family film based on Jules Verne's novel of the same name.
+
+ It stars Jackie Chan, Steve Coogan and Cécile de France.
+
+ The film is set in 19th-century Britain and centers on Phileas Fogg (Steve Coogan), here reimagined as an eccentric inventor, and his efforts to circumnavigate
+the globe in 80 days.
+
+ During the trip, he is accompanied by his Chinese valet, Passepartout (Jackie Chan).
+
+ For comedic reasons, the film intentionally deviated wildly from the novel and included a number of anachronistic elements.
+
+ With production costs of about $110 million and estimated marketing costs of $30 million, it earned $24 million at the U.S. box office and $72 million
+worldwide, making it a box office flop.
+
+ It was Arnold Schwarzenegger's last film before he took a hiatus from acting to become Governor of California until 2010's "The Expendables".
+</item 1>
+
+<item 2>
+Michael Palin: Around the World in 80 Days
+Around the World in 80 Days is a 7-part BBC television travel series first broadcast on BBC1 in 1989.
+
+ It was presented by comedian and actor Michael Palin.
+
+ The show was inspired by Jules Verne's classic novel "Around the World in Eighty Days", in which a character named Phileas Fogg accepts a wager to
+circumnavigate the globe in eighty days or less.
+
+ Palin was given the same deadline, and not allowed to use aircraft, which did not exist in Jules Verne's time and would make completing the journey far too
+easy.
+
+ He followed Phileas Fogg's route as closely as possible.
+
+ Along the way he commented on the sights and cultures he encountered.
+
+ Palin encountered several setbacks during his voyage, partly because he travelled with a five-person film crew, who are collectively named after Passepartout,
+Phileas Fogg's manservant.
+</item 2>
+
+<item 3>
+Around the World in 80 Days (1988 film)
+Around the World in 80 Days is an Australian 48-minute direct-to-video animated film from Burbank Films Australia.
+
+ It was originally released in 1988.
+
+ The film is based on Jules Verne's classic French novel, "Around the World in 80 Days", first published in 1873, and was adapted by Leonard Lee.
+
+ It was produced by Roz Phillips and featured original music by Simon Walker.
+
+ The film imitated BRB Internacional's Spanish 1981 series, "La vuelta al mundo de Willy Fog", in its use of anthropomorphic animals in the human roles.
+
+ The copyright in this film is now owned by Pulse Distribution and Entertainment and administered by digital rights management firm NuTech Digital.
+</item 3>
+
+<item 4>
+Around the World (1956 song)
+"Around the World" was the theme tune from the 1956 movie "Around the World in 80 Days" In the film, only an instrumental version of the song appeared, although
+the vocal version has become by far the better known one.
+
+ The song was written by Harold Adamson and Victor Young; Young died in 1956, several weeks after the film's release and he received the Academy Award for Best
+Music, Scoring of a Dramatic or Comedy Picture posthumously.
+
+ Young's orchestral version was a #13 hit on the Billboard charts in 1957.
+
+ The recording by Bing Crosby was the B-side of the Victor Young version in 1957, on Festival SP45-1274 in Australia, and was a joint charting success.
+</item 4>
+
+<item 5>
+Around the World in 80 Days (1956 film)
+Around the World in 80 Days (sometimes spelled as Around the World in Eighty Days) is a 1956 American epic adventure-comedy film starring Cantinflas and David
+Niven , produced by the Michael Todd Company and released by United Artists.
+</item 5>
+
+<item 6>
+Around the World in Eighty Days
+Around the World in Eighty Days (French: "Le tour du monde en quatre-vingts jours" ) is a classic adventure novel by the French writer Jules Verne, published in
+1873.
+
+ In the story, Phileas Fogg of London and his newly employed French valet Passepartout attempt to circumnavigate the world in 80 days on a £20,000 wager (the
+approximate equivalent of £2 million in 2016) set by his friends at the Reform Club.
+
+ It is one of Verne's most acclaimed works .
+</item 6>
+
+<item 7>
+Summer Magic
+Summer Magic is a 1963 Walt Disney Productions film starring Hayley Mills, Burl Ives, and Dorothy McGuire in a story about a Boston widow and her children
+taking up residence in a small town in Maine.
+
+ The film was based on the novel "Mother Carey's Chickens" by Kate Douglas Wiggin and was directed by James Neilson.
+
+ This was the fourth of six film Mills did for Disney, and the young actress received a Golden Globe nomination for her work here.
+</item 7>
+
+<item 8>
+Summer Holiday (1963 film)
+Summer Holiday is a British CinemaScope and Technicolor musical film featuring singer Cliff Richard.
+
+ The film was directed by Peter Yates (his debut), produced by Kenneth Harper.
+
+ The original screenplay was written by Peter Myers and Ronald Cass (who also wrote most of the song numbers and lyrics).
+
+ The cast includes Lauri Peters, Melvyn Hayes, Teddy Green, Jeremy Bulloch, Una Stubbs, Pamela Hart, Jacqueline Daryl, Lionel Murton, Madge Ryan, David Kossoff,
+Nicholas Phipps, Ron Moody and The Shadows.
+
+ Herbert Ross choreographed the musical numbers.
+</item 8>
+
+<item 9>
+James Poe
+James Poe (October 4, 1921 – January 24, 1980) was an American film and television screenwriter.
+
+ He is best known for his work on the movies "Around the World in 80 Days" for which he jointly won an Academy Award in 1956, "Cat on a Hot Tin Roof", "Summer
+and Smoke", "Lilies of the Field", and "They Shoot Horses, Don't They?
+
+".
+</item 9>
+
+<item 10>
+A Boy Scout Around the World
+A Boy Scout Around the World (Danish: "Jorden Rundt i 44 dage", literally: "Around the World in 44 Days") is a travel description published in October 1928 and
+written by Danish Boy Scout and later actor Palle Huld at the age of 15 following his travel around the world in spring 1928.
+
+ His trip was sponsored by a Danish newspaper and made on the occasion of the 100 birthday of Jules Verne a French author of adventure and science fiction.
+
+ Palle Huld was chosen after having answered to an ad in the newspaper; applicants had to be boys, 15 years old, able to manage in English and German and of
+good health.
+
+ Like the characters in Jules Verne’s novel "Around the World in 80 days" he was only allowed to travel by land and sea, not by air.
+
+ The travel (on first class) went from Denmark to Great Britain, across the Atlantic Ocean to Canada.
+
+ From the American west coast he continued to Japan, China, Soviet Union, Poland, Germany and back to Denmark.
+</item 10>
+=== END ITEM id=119dcde89801693b ===
+
+=== ITEM id=fc7efd1da142a48f ===
+Gold sentences and facts:
+Sentence 0:  It is an annual event hosted by the Department of Urology at the University of Virginia, and the Charlottesville Track Club.
+  Fact 0.0: The event is an annual event.
+  Fact 0.1: The event is hosted by the Department of Urology at the University of Virginia.
+  Fact 0.2: The event is hosted by the Charlottesville Track Club.
+Sentence 1: Panera Bread Company is an American chain of bakery-café fast casual restaurants in the United States and Canada.
+  Fact 1.0: Panera Bread Company is an American chain.
+  Fact 1.1: Panera Bread Company operates bakery-café fast casual restaurants.
+  Fact 1.2: Panera Bread Company's restaurants are in the United States.
+  Fact 1.3: Panera Bread Company's restaurants are in Canada.
+
+Retrieved items:
+<item 1>
+Bill Steers Men's 4-Miler
+The Bill Steers Men's 4-Miler (formerly Charlottesville Men's Four Miler) is the only all men's run in the Charlottesville area.
+
+ The race was rededicated as a tribute to William D. Steers in 2015.
+
+ It is an annual event hosted by the Department of Urology at the University of Virginia, and the Charlottesville Track Club.
+
+ The event has also been sponsored by Panera Bread, BMW of Charlottesville, Starbucks, Pepsi and the City of Charlottesville.
+
+ The City of Charlottesville also hosts the Women's Four Miler to benefit the UVA Cancer Center Breast Care Program.
+
+ The event, held continuously since 2004, was conceived by William D. Steers with the purpose of raising awareness on men's health issues; to encourage men to
+take control of their health, and become more physically active.
+</item 1>
+
+<item 2>
+Aladdin's Eatery
+Aladdin's Eatery is a chain of franchised restaurants in the American Midwest and South-East, specializing in Lebanese cuisine.
+
+ Adapted to American tastes, the sites are fast casual restaurants that also offer take out.
+</item 2>
+
+<item 3>
+Gino's Hamburgers
+Gino's Hamburgers was a fast-food restaurant chain founded in Baltimore, Maryland, by Baltimore Colts defensive end Gino Marchetti and running back Alan Ameche,
+along with their close friend Louis Fischer, in 1957.
+
+ A new group of restaurants under the Gino's name involving some of the principals of the original chain was started in 2010.
+</item 3>
+
+<item 4>
+List of fast food restaurant chains
+The following is a list of notable current and former fast food restaurant chains, as distinct from fast casual restaurants (see List of casual dining
+restaurant chains), coffeehouses (see List of coffeehouse chains), ice cream parlors (see List of ice cream parlor chains), and pizzerias (see List of pizza
+chains).
+</item 4>
+
+<item 5>
+McAlister's Deli
+McAlister's Deli is an American chain of fast casual restaurants founded in 1989 in Oxford, Mississippi by retired dentist Dr. Don Newcomb.
+
+ There are currently over 400 locations in 26 states, ranging from Virginia in the East to Florida in the South to Arizona in West to Michigan in the North.
+
+ The menu includes deli sandwiches, "Texas-size" spuds (baked potatoes), soups, salads, and desserts, as well as catering items such as sandwich trays and boxed
+lunches.
+
+ The chain is also known for its McAlister's Famous Sweet Tea, which is available by the glass or by the gallon.
+</item 5>
+
+<item 6>
+Tudor's Biscuit World
+Tudor's Biscuit World is a restaurant chain based in Huntington, West Virginia, most commonly found in West Virginia.
+
+ Many West Virginia locations share a building with Gino's Pizza and Spaghetti, although the chain is more extensive than Gino's (which is exclusive to West
+Virginia), having locations in southern Ohio, eastern Kentucky, and southwestern Virginia.
+
+ In 2016 a franchise was opened in Panama City, Florida.
+
+ Tudor's serves biscuits, biscuit sandwiches, homestyle breakfasts and dinners, muffins, and several side dishes.
+
+ The chain was originally based in Charleston, West Virginia and many of the biscuit sandwiches are named for sports teams of interest in that area, including
+teams at Marshall University, West Virginia University, and The University of Charleston.
+</item 6>
+
+<item 7>
+Panera Bread
+Panera Bread Company is an American chain of bakery-café fast casual restaurants in the United States and Canada.
+
+ Its headquarters are in Sunset Hills, Missouri, a suburb of St. Louis, and operates as Saint Louis Bread Company in the St. Louis metropolitan area.
+
+ Offerings include soups, salads, pasta, sandwiches, specialty drinks, and bakery items.
+</item 7>
+
+<item 8>
+William D. Steers
+Dr. William D. Steers, August 19, 1955 – April 10, 2015, was a Paul Mellon professor and Chair of the Department of Urology at the School of Medicine of the
+University of Virginia.
+
+ Dr. Steers is past President of the American Board of Urology (ABU) and Editor of the "Journal of Urology".
+
+ In 2003, the University of Virginia awarded Dr. Steers the Hovey Dabney Professorship.
+
+ In 2004 Dr. Steers initiated the Charlottesville Men’s Four Miler road race in Virginia to raise funds for men’s health.
+
+ Dr. Steers was a viticulturist aficionado, he co-owned Well Hung Vineyard in Charlottesville.
+
+ He also authored YOURometer an iPhone app.
+
+ used to record urological related symptoms.
+</item 8>
+
+<item 9>
+Team Hole in the Wall
+Team Hole in the Wall is an athletic fundraising initiative managed by the Hole in the Wall Gang Camp.
+
+ Amateur athletes join up to raise a specified amount of funds and receive entrance to a marathon, bike ride or other athletic event in support of seriously ill
+children served by The Hole in the Wall Gang Camp or one of its associated camps around the world.
+
+ Established in 2005, Team Hole in the Wall offers entrance into more than two dozen marathons and cycling events, including the New York City Marathon, Boston
+Marathon and AngelRide cycling event in Connecticut.
+
+ New Canaan resident and Newman's Own Vice President of Marketing Michael “Mike” Havard ran in the ING New York City Marathon prior to 2004, but in that year he
+decided to use his participation to raise funds for The Hole in the Wall Gang Camp, raising nearly $40,000.
+
+ The next year, he served as captain of the first Team Hole in the Wall team of 40 runners, raising $150,000.
+
+ The number of Team Hole in the Wall members and events has risen each year since.
+
+ In 2010, more than 1,800 Team Hole in the Wall members are expected to participate in 20 athletic events.
+</item 9>
+
+<item 10>
+Terry Baker
+Terry Wayne Baker (born May 5, 1941) is a former American football and basketball player.
+
+ He played college football and college basketball at the Oregon State University.
+
+ He played as a quarterback for the Oregon State Beavers football team from 1960 to 1962, winning the Heisman Trophy as senior.
+
+ In the spring of his senior year, he played in the Final Four of the 1963 NCAA Men's Division I Basketball Tournament with the Oregon State Beavers men's
+basketball team.
+
+ To date, he is the only athlete to win a Heisman Trophy and play in the Final Four.
+
+ Baker was the first overall pick in the 1963 NFL draft and played with the Los Angeles Rams of the National Football League (NFL) from 1963 to 1965.
+
+ He then played for one season in the Canadian Football League (CFL) with the Edmonton Eskimos, in 1966.
+
+ Baker was inducted into the College Football Hall of Fame in 1982.
+</item 10>
+=== END ITEM id=fc7efd1da142a48f ===
+
+=== ITEM id=8f0a980d05bd445c ===
+Gold sentences and facts:
+Sentence 0: The Appenzeller Sennenhund is a medium-size breed of dog, one of the four regional breeds of Sennenhund-type dogs from the Swiss Alps.
+  Fact 0.0: The Appenzeller Sennenhund is a medium-size breed of dog.
+  Fact 0.1: The Appenzeller Sennenhund is one of the four regional breeds of Sennenhund-type dogs.
+  Fact 0.2: The Sennenhund-type dogs come from the Swiss Alps.
+Sentence 1:  The name Sennenhund refers to people called "Senn", herders in the Appenzell region of Switzerland.
+  Fact 1.0: The name Sennenhund refers to people called "Senn".
+  Fact 1.1: The Senn people are herders in the Appenzell region of Switzerland.
+Sentence 2: The Drentsche Patrijshond is a versatile spaniel-type hunting dog from the Dutch province of Drenthe.
+  Fact 2.0: The Drentsche Patrijshond is a versatile spaniel-type hunting dog.
+  Fact 2.1: The Drentsche Patrijshond is from the Dutch province of Drenthe.
+
+Retrieved items:
+<item 1>
+Bernese Mountain Dog
+The Bernese Mountain Dog (German: "Berner Sennenhund" ) is a large-sized breed of dog, one of the four breeds of Sennenhund-type dogs from the Swiss Alps.
+
+ The name "Sennenhund" is derived from the German "Senne" ("alpine pasture") and "Hund" ("dog"), as they accompanied the alpine herders and dairymen called
+"Senn".
+
+ "Berner" (or "Bernese" in English) refers to the area of the breed’s origin, in the canton of Bern.
+
+ This mountain dog was originally kept as a general farm dog.
+
+ Large Sennenhunde in the past were also used as draft animals, pulling carts.
+
+ The breed was officially established in 1907.
+
+ In 1937, the American Kennel Club recognized it; today, the club classifies it as a member of the Working Group.
+</item 1>
+
+<item 2>
+Belgian Shepherd
+The Belgian Shepherd (also known as the Belgian Sheepdog or Chien de Berger Belge) is a breed of medium-to-large-sized herding dog.
+
+ It originated in Belgium and is similar to other sheep herding dogs from that region, including the Dutch Shepherd, the German Shepherd, the Briard, and
+others.
+
+ Four types have been identified by various registries as separate breeds or varieties: Groenendael, Laekenois, Tervuren, and Malinois.
+</item 2>
+
+<item 3>
+Greater Swiss Mountain Dog
+The Greater Swiss Mountain Dog (German: "Grosser Schweizer Sennenhund" or French: "Grand Bouvier Suisse" ) is a dog breed which was developed in the Swiss Alps.
+
+ The name "Sennenhund" refers to people called "Senn" or "Senner", dairymen and herders in the Swiss Alps.
+
+ Greater Swiss Mountain Dogs are almost certainly the result of indigenous dogs mating with large mastiff types brought to Switzerland by foreign settlers.
+
+ At one time, the breed was believed to have been among the most popular in Switzerland.
+
+ It was assumed to have almost died out by the late 19th century, since its work was being done by other breeds or machines, but was rediscovered in the early
+1900s.
+</item 3>
+
+<item 4>
+Appenzeller (chicken)
+The Appenzeller is a breed of chicken originating in Appenzell region of Switzerland.
+
+ The Appenzeller comes in two varieties.
+
+ The Spitzhauben variety, meaning "pointed hood", has a V-comb and feather crests in males and females.
+
+ The word 'spitzhauben' derives from the frilly hat worn by the women in the Appenzeller region in Switzerland.
+
+ The breed was imported into America by a doctor.
+
+ The Barthuhner ("bearded hen") has a rose comb and no crest.
+
+ Both types appear in either black, golden spangled and silver spangled plumage.
+
+ They are mostly a show breed, but are decent egg layers.
+
+ They lay small white eggs about 5 times per week.
+</item 4>
+
+<item 5>
+Swiss mountain dog
+Sennenhund, called Swiss mountain dogs or Swiss cattle dogs in English, are a type of dog originating in the Swiss Alps.
+
+ The Sennenhund are farm dogs of the general molosser type.
+
+ There are four breeds of Sennenhund, all sporting a unique tricolor coat.
+
+ While the two larger ones share a heavy build and a calm temperament, the two smaller ones are more agile.
+
+ The breeds range from medium in size to very large.
+
+ The name Sennenhund refers to people called "Senn" or Senner, Swiss alpine herdsmen and dairymen, and does not translate as "mountain" or "cattle".
+</item 5>
+
+<item 6>
+Drentse Patrijshond
+The Drentsche Patrijshond is a versatile spaniel-type hunting dog from the Dutch province of Drenthe.
+
+ Called the Dutch Partridge Dog (or "Drent" for Drenthe) in English, approximately 5,000 dogs are registered with the breed club in the Netherlands, and breed
+clubs operate in Belgium, Denmark, Scandinavia and North America.
+
+ The Drentsche Patrijshond bears some resemblance to both spaniel and setter types of dog.
+
+ An excellent pointer and retriever, this dog is often used to hunt fowl and adapts equally well to the field or marshes.
+</item 6>
+
+<item 7>
+Entlebucher Mountain Dog
+The Entlebucher Sennenhund or Entlebucher Mountain Dog is a medium-sized herding dog, it is the smallest of the four Sennenhunds, a dog type that includes four
+regional breeds.
+
+ The name Sennenhund refers to people called "Senn", herders in the Swiss Alps.
+
+ Entlebuch is a region in the canton of Lucerne in Switzerland.
+
+ The breed is also known in English as the Entelbuch Mountain Dog, Entelbucher Cattle Dog, and similar combinations.
+</item 7>
+
+<item 8>
+Schutzhund
+Schutzhund (German for "protection dog") is a dog sport that was developed in Germany in the early 1900s as a breed suitability test for the German Shepherd
+breed.
+
+ The test would determine if the dog displayed the appropriate traits and characteristics of a proper working German Shepherd.
+
+ Today, it is used as a sport where many breeds other than German Shepherd Dogs can compete, but it is such a demanding test that few dogs can pass.
+</item 8>
+
+<item 9>
+Dutch Shepherd
+The Dutch Shepherd is a herding dog of Dutch origin.
+
+ They were used by shepherds and farmers who needed a versatile dog, with few demands, and a dog that was able to adapt to a harsh and meager existence.
+</item 9>
+
+<item 10>
+Appenzeller Sennenhund
+The Appenzeller Sennenhund is a medium-size breed of dog, one of the four regional breeds of Sennenhund-type dogs from the Swiss Alps.
+
+ The name Sennenhund refers to people called "Senn", herders in the Appenzell region of Switzerland.
+</item 10>
+=== END ITEM id=8f0a980d05bd445c ===
+
+=== ITEM id=3abf82bcf2ef1eac ===
+Gold sentences and facts:
+Sentence 0: Chester Erskine (November 29, 1905 – April 7, 1986) was a Hollywood and Broadway director, writer, and producer.
+  Fact 0.0: Chester Erskine was born on November 29, 1905.
+  Fact 0.1: Chester Erskine died on April 7, 1986.
+  Fact 0.2: Chester Erskine was a Hollywood and Broadway director.
+  Fact 0.3: Chester Erskine was a Hollywood and Broadway writer.
+  Fact 0.4: Chester Erskine was a Hollywood and Broadway producer.
+Sentence 1: Sam Taylor (August 13, 1895, New York City – March 6, 1958, Santa Monica) was a film director, screenwriter, and producer, most active in the silent film era.
+  Fact 1.0: Sam Taylor was born on August 13, 1895, in New York City.
+  Fact 1.1: Sam Taylor died on March 6, 1958, in Santa Monica.
+  Fact 1.2: Sam Taylor was a film director.
+  Fact 1.3: Sam Taylor was a screenwriter.
+  Fact 1.4: Sam Taylor was a film producer.
+  Fact 1.5: Sam Taylor was most active in the silent film era.
+
+Retrieved items:
+<item 1>
+Harry Sweet
+Harry Sweet (October 2, 1901 – June 18, 1933) was an American actor, director and screenwriter.
+
+ He appeared in 57 films between 1919 and 1932.
+
+ He also directed 54 films between 1920 and 1933, including one Harry Langdon short, two of the Tay Garnett- penned comedies Stan Laurel made for Joe Rock, and
+fifteen of the earliest entries in the Edgar Kennedy "Average Man" series.
+</item 1>
+
+<item 2>
+Sam Taylor (director)
+Sam Taylor (August 13, 1895, New York City – March 6, 1958, Santa Monica) was a film director, screenwriter, and producer, most active in the silent film era.
+
+ Taylor is best known for his comedic directorial work with Harold Lloyd and Mary Pickford, and also later worked with Laurel and Hardy.
+</item 2>
+
+<item 3>
+William Farrar Smith
+William Farrar Smith (February 17, 1824 – February 28, 1903), known as ‘Baldy’ Smith, was a Union general in the American Civil War, notable for attracting the
+extremes of glory and blame.
+
+ He was praised for his gallantry in the Seven Days Battles and the Battle of Antietam, but was demoted for insubordination after the disastrous defeat at the
+Battle of Fredericksburg.
+
+ As chief engineer of the Army of the Cumberland, he achieved recognition by restoring a supply line that saved that army from starvation and surrender, known
+the “Cracker Line”, that helped Union troops to success in the Chattanooga Campaign in the autumn of 1863.
+
+ Leading the first operation against Petersburg, Smith’s hesitation, possibly illness-related, cost the Union a prime opportunity for a quick end to the war,
+and he was relieved of command.
+</item 3>
+
+<item 4>
+Mary Elizabeth Bliss
+Mary Elizabeth "Betty" Taylor Bliss Dandridge, born Mary Elizabeth Taylor (April 20, 1824 – July 25, 1909), was the youngest of the three surviving daughters of
+President Zachary Taylor (1849-1850) and Margaret Mackall Smith Taylor.
+</item 4>
+
+<item 5>
+Elizabeth Taylor
+Dame Elizabeth Rosemond Taylor, DBE (February 27, 1932 – March 23, 2011) was a British-American actress, businesswoman, and humanitarian.
+
+ She began her career as a child actress in the early 1940s, and was one of the most popular stars of classical Hollywood cinema in the 1950s.
+
+ She continued her career successfully into the 1960s, and remained a well known public figure for the rest of her life.
+
+ In 1999, the American Film Institute named her the seventh-greatest female screen legend.
+</item 5>
+
+<item 6>
+Speedy West
+Wesley Webb West (January 25, 1924 – November 15, 2003), better known as Speedy West, was an American pedal steel guitarist and record producer.
+
+ He frequently played with Jimmy Bryant, both in their own duo and as part of the regular Capitol Records backing band for Tennessee Ernie Ford and many others.
+
+ He also played on Loretta Lynn's first single.
+</item 6>
+
+<item 7>
+Chester Erskine
+Chester Erskine (November 29, 1905 – April 7, 1986) was a Hollywood and Broadway director, writer, and producer.
+</item 7>
+
+<item 8>
+Dick Herrick
+The Very Rev Richard William Herrick (3 December 1913 - 5 May 1981) was an eminent Anglican priest in the 20th century.
+
+ He was educated at King Edward VI School Retford and Leeds University and was initially a civil servant.
+
+ He was ordained after a period of study at the College of the Resurrection, Mirfield in 1940.
+
+ he held curacies at Duston and Portsea, Portsmouth before being appointed Vicar of St Michael’s, Northampton in 1947, a post he held for a decade.
+
+ He was then a Canon Residentiary of Chelmsford Cathedral until 1978 when he was appointed Provost of Chelmsford.
+
+ He died in post.
+</item 8>
+
+<item 9>
+Clare Taylor
+Clare Elizabeth Taylor MBE (born 22 May 1965) is an English sportswoman, the first woman to have played on a World Cup team in both cricket and football.
+
+ She represented England at both cricket, as a member of the winning World Cup cricket team in 1993, and football (World Cup 1995).
+
+ She was awarded the MBE in the Queen's Birthday Honours in 2000 for her services to women’s sport.
+
+ Taylor attended Moor End High School and still has her name on the athletics records board.
+</item 9>
+
+<item 10>
+Buford Abner
+James Buford Abner (November 10, 1917 - November 19, 2011) was an American songwriter, musician and singer who worked during the early days of country music,
+working in both secular and gospel country music genres.
+
+ With his brother Merle Abner, his uncle Stacy Abner, George Hughes and Billy Carrier, he was a member of the Swanee River Boys.
+
+ He was inducted into the Southern Gospel Music Association Hall of Fame in 2002 and the Atlanta Country Music Hall of Fame as a member of the Swanee River
+Boys.
+</item 10>
+=== END ITEM id=3abf82bcf2ef1eac ===
+
+=== ITEM id=f5eb5a8b8b20e233 ===
+Gold sentences and facts:
+Sentence 0: Toshimitsu Deyama (出山利三 , Deyama Toshimitsu , born October 10, 1965 in Tateyama, Chiba) , known exclusively by his stage name Toshi, is a Japanese singer and songwriter.
+  Fact 0.0: Toshimitsu Deyama was born October 10, 1965 in Tateyama, Chiba.
+  Fact 0.1: Toshimitsu Deyama's Japanese name is 出山利三.
+  Fact 0.2: Toshimitsu Deyama's name is also written as Deyama Toshimitsu.
+  Fact 0.3: Toshimitsu Deyama is known exclusively by his stage name Toshi.
+  Fact 0.4: Toshimitsu Deyama is a Japanese singer and songwriter.
+Sentence 1:  He is best known as the lead vocalist and a co-founder of the heavy metal band X Japan, which disbanded in 1997.
+  Fact 1.0: Toshimitsu Deyama is best known as the lead vocalist of the heavy metal band X Japan.
+  Fact 1.1: Toshimitsu Deyama is a co-founder of X Japan.
+  Fact 1.2: X Japan disbanded in 1997.
+Sentence 2: Warrel Dane (born March 7, 1969) is the lead singer of the American power metal band Sanctuary.
+  Fact 2.0: Warrel Dane was born March 7, 1969.
+  Fact 2.1: Warrel Dane is the lead singer of the American power metal band Sanctuary.
+
+Retrieved items:
+<item 1>
+Graph query row:
+person: Toshimitsu Deyama
+organization: Sanctuary
+is_member: False
+relationship: None
+</item 1>
+
+<item 2>
+Peter Wichers
+Peter Wichers is best known as one of the founding members of Swedish melodic death metal band, Soilwork.
+
+ From 1995 until late 2005, when he announced his departure from the band, he was known as the lead guitarist and also a songwriter, especially on their
+"Stabbing the Drama" album., He rejoined Soilwork in 2008 and played on 2010s The Panic Broadcast and in June 2012 he quit Soilwork for the second time.
+
+ After leaving Soilwork, he filled in for Adam Dutkiewicz when he was injured on Killswitch Engage's European tour.
+
+ More recently, he has collaborated with singers from across the melodic death metal genre including Anders Fridén, former band mate Björn "Speed" Strid and
+John Bush (vocalist of Anthrax) to make a CD much in the same style as "Roadrunner United", entitled "Nuclear Blast All-Stars".
+
+ He also co-wrote Warrel Dane's solo record "Praises to the War Machine".
+</item 2>
+
+<item 3>
+Sanctuary (band)
+Sanctuary is an American heavy metal band founded in Seattle in 1985.
+
+ They split up in 1992, but reformed 18 years later.
+
+ The band consists of Warrel Dane (vocals), Lenny Rutledge (guitar), Nick Cordle (guitar), George Hernandez (bass), and Dave Budbill (drums).
+
+ To date, they have released four studio albums and one live EP.
+</item 3>
+
+<item 4>
+Nevermore
+Nevermore is an American progressive metal band from Seattle, Washington, United States.
+
+ Formed in 1991, they are known to incorporate elements from various styles such as power metal, modern hard rock, classic heavy metal and technical thrash
+metal.
+
+ The band has been on hiatus since 2011, due to personal issues between the band members.
+
+ In April 2015, lead singer Warrel Dane confirmed that Nevermore has not disbanded, and there is a possibility for them to continue in the next two years with
+another album.
+</item 4>
+
+<item 5>
+Nevermore (album)
+Nevermore is the eponymous debut studio album by American heavy metal band Nevermore, released on February 14, 1995 by Century Media Records.
+
+ It was singer Warrel Dane and bassist Jim Sheppard's first release after departing from their previous band, Sanctuary, in 1994.
+
+ Having recruited drummer Van Williams and former Sanctuary touring guitarist Jeff Loomis, they formed the band Nevermore and began anew.
+</item 5>
+
+<item 6>
+Praises to the War Machine
+Praises to the War Machine is the debut and only solo release/album by heavy metal vocalist Warrel Dane from Nevermore, released on April 25, 2008.
+
+ The album was produced by Peter Wichers, who was tapped by Dane to work on the album while Wichers was still a member of Soilwork.
+
+ After leaving that band in 2007, Wichers co-wrote the album with Dane and played on eight of its tracks.
+
+ Soilwork drummer Dirk Verbeuren and former Himsa guitarist Matt Wicklund also played on the album.
+
+ Nevermore guitarist Jeff Loomis and the band's touring guitarist at the time Chris Broderick make guest appearances, along with James Murphy, who had performed
+on the Nevermore album "This Godless Endeavor".
+
+ "Praises to the War Machine" includes two cover songs, The Sisters of Mercy's "Lucretia My Reflection" and "Patterns" by Paul Simon.
+
+ Dane had previously covered a Simon song on Nevermore's album "Dead Heart in a Dead World".
+</item 6>
+
+<item 7>
+Into the Mirror Live
+Into The Mirror Live / Black Reflections is live promotional EP of the band Sanctuary recorded on May 12, 1990 at The Country Club in Reseda, California, during
+their "Into the Mirror Black" tour.
+
+ Approximately 1000 CD copies of this were made and less than 500 were ever distributed to radio stations and record stores.
+
+ Because of contractual problems with Epic Records, the full version was never released for public consumption.
+
+ Epic Records destroyed 500+ copies of this CD.
+
+ Warrel Dane has stated on several occasions that he has the master tapes and copyrights of the full show and intended to have it finally released.
+
+ To date that has not happened.
+
+ This CD has been heavily pirated over the years as a 2-on-1 CD with the Satan's Host "Metal From Hell" album on the notorious Reborn Classics record label.
+</item 7>
+
+<item 8>
+Toshi (musician)
+Toshimitsu Deyama (出山利三 , Deyama Toshimitsu , born October 10, 1965 in Tateyama, Chiba) , known exclusively by his stage name Toshi, is a Japanese singer and
+songwriter.
+
+ He is best known as the lead vocalist and a co-founder of the heavy metal band X Japan, which disbanded in 1997.
+
+ Toshi then went on to have an extensive solo career.
+
+ In 2007, X Japan reunited and began an ongoing world tour in 2010.
+
+ His distinctive, impassioned tenor vocals have been compared to those of Steve Perry.
+</item 8>
+
+<item 9>
+Graph query row:
+person: Warrel Dane
+organization: Sanctuary
+is_member: True
+relationship: MEMBER_OF
+</item 9>
+
+<item 10>
+Warrel Dane
+Warrel Dane (born March 7, 1969) is the lead singer of the American power metal band Sanctuary.
+
+ He is also known as the former lead singer of currently inactive progressive metal band Nevermore.
+
+ He is a natural baritone, though he was known for his high-pitched vocals with Serpent's Knight and on the first two Sanctuary albums.
+
+ Later in his career, Dane became more notable for his distinctively deep, dramatic voice.
+</item 10>
+=== END ITEM id=f5eb5a8b8b20e233 ===
+
+=== ITEM id=a7d5cbf28eb0fc14 ===
+Gold sentences and facts:
+Sentence 0: Jack and Jill is an American bimonthly magazine for children 7 to 12 years old that takes its title from the nursery rhyme of the same name.
+  Fact 0.0: Jack and Jill is an American magazine for children.
+  Fact 0.1: Jack and Jill is published bimonthly.
+  Fact 0.2: Jack and Jill is for children 7 to 12 years old.
+  Fact 0.3: The title of Jack and Jill comes from the nursery rhyme of the same name.
+Sentence 1: Paper, stylized as PAPER, is a New York City-based independent magazine focusing on fashion, popular culture, nightlife, music, art and film.
+  Fact 1.0: Paper, stylized as PAPER, is a New York City-based magazine.
+  Fact 1.1: Paper is an independent magazine.
+  Fact 1.2: Paper focuses on fashion.
+  Fact 1.3: Paper focuses on popular culture.
+  Fact 1.4: Paper focuses on nightlife.
+  Fact 1.5: Paper focuses on music.
+  Fact 1.6: Paper focuses on art.
+  Fact 1.7: Paper focuses on film.
+
+Retrieved items:
+<item 1>
+SexIs
+SexIs Magazine is a quarterly print publication and daily webzine devoted to sex and sexual culture, founded in 2008 by Web Merchants, parent company of sex toy
+e-tailer EdenFantasys.com.
+
+ The first print issue debuted in November 2009, distributed nationwide as an insert in "BUST magazine".
+
+ The website publishes articles, columns, video presentations and news items daily.
+</item 1>
+
+<item 2>
+Essence (magazine)
+Essence is a monthly magazine for African American women between the ages of 18 and 49.
+
+ It is the only magazine that focuses on reaching an audience of black women, revolves around the black woman experience, and has remained for a long period of
+time.
+
+ The magazine covers fashion, lifestyle and beauty, with an intimate girlfriend-to-girlfriend tone, and its slogan "Fierce, Fun, and Fabulous" suggests the
+magazine's goal of empowering African-American women.
+
+ The topics the magazine discusses range from celebrities, to fashion, to point-of-view pieces addressing current issues in the African-American community.
+
+ A number of its readers engage closely and personally with the publication, and it claims to be the magazine "for and about Black women".
+</item 2>
+
+<item 3>
+Jack and Jill (magazine)
+Jack and Jill is an American bimonthly magazine for children 7 to 12 years old that takes its title from the nursery rhyme of the same name.
+
+ It features stories and educational activities.
+</item 3>
+
+<item 4>
+Paper (magazine)
+Paper, stylized as PAPER, is a New York City-based independent magazine focusing on fashion, popular culture, nightlife, music, art and film.
+
+ Past cover models include Kim Kardashian, Demi Lovato, Katy Perry, Miley Cyrus, Prince, CL, and Jennifer Lopez.
+</item 4>
+
+<item 5>
+VIVmag
+VIVmag is one of the earliest exclusively digital, interactive women's lifestyle magazines.
+
+ Launched in 2006 and backed by Canadian industrialist David Harrison Gilmour (the founder of FIJI Water LLC), the bimonthly magazine is distributed by Zinio
+Systems, Inc.
+
+ The first issue appeared in January-February 2007.
+
+ There is no print version.
+
+ The paperless title can be viewed in most browsers or downloaded to your computer and read via the Zinio Reader.
+
+ The magazine is based in Thousand Oaks, California.
+</item 5>
+
+<item 6>
+PC Magazine
+PC Magazine (shortened as PCMag) is an American computer magazine published by Ziff Davis.
+
+ A print edition was published from 1982 to January 2009.
+
+ Publication of online editions started in late 1994 and continues to this day.
+</item 6>
+
+<item 7>
+Graph query row:
+magazine: Paper
+relationship: FOCUSES_ON
+related_entity: nightlife
+</item 7>
+
+<item 8>
+Mighty Jill Off
+Mighty Jill Off is a 2D platform independently developed freeware video game designed by Anna Anthropy, with art by James Harvey and music by Andrew Toups.
+
+ It stars a submissive named Jill, who has a boot fetish and is forced to climb up a tower after her Queen kicks her down it as punishment.
+
+ Jill does this by jumping and slowly descending over obstacles.
+
+ Jill can be defeated in one hit by these obstacles, but will return to the last check point.
+
+ The game serves as an homage to the 1986 arcade game "Mighty Bomb Jack".
+
+ It had follow-ups, such as "Mighty Jill Off - Jill Off Harder Edition" and "Jill Off With One Hand".
+
+ Jill made a cameo appearance in the 2010 video game "Super Meat Boy" as a playable character.
+</item 8>
+
+<item 9>
+Shape (magazine)
+Shape is a monthly English language fitness magazine started by Weider Publications in 1981, founded by Christine MacIntyre (a pioneer in women's free weight
+fitness) and became the number one women's fitness magazine.
+
+ At that time, Weider Enterprises consisted primarily of the bodybuilding magazine "Muscle & Fitness".
+
+ Joe Weider and Christine MacIntyre had differing views of how to present "Shape", Weider endorsing a less journalistic and more commercial approach to
+articles, MacIntyre endorsing a more academic, doctor-based magazine.
+
+ Weider also endorsed a sexier approach to editorial while MacIntyre endorsed a healthier look for women, eschewing sexiness in the models and the copy.
+
+ MacIntyre largely won that battle, editing a magazine that required that every byline have an advanced medical degree, that cover models should look healthy
+rather than sexy, and that sexist language be avoided.
+
+ Christine MacIntyre was the editor-in-chief until her death in 1988.
+
+ Tara Kraft is the current editor-in-chief.
+
+ "Shape" found a readership based on that formula.
+</item 9>
+
+<item 10>
+Golf Digest
+Golf Digest is a monthly golf magazine published by Condé Nast Publications in the United States.
+
+ It is a generalist golf publication covering recreational golf and men's and women's competitive golf.
+
+ Condé Nast Publications also publishes the more specialized "Golf for Women", "Golf World" and "Golf World Business".
+
+ The magazine started in 1950, and was sold to The New York Times Company in 1969.
+
+ The Times company sold their magazine division to Condé Nast in 2001.
+
+ The headquarters of "Golf Digest" is in Des Moines, Iowa.
+</item 10>
+=== END ITEM id=a7d5cbf28eb0fc14 ===
+
+=== ITEM id=ad9b06ad0ffc4e6d ===
+Gold sentences and facts:
+Sentence 0: Georg Ferdinand Ludwig Philipp Cantor ( ; ] ; March 3 [O.S. February 19] 1845  – January 6, 1918) was a German mathematician.
+  Fact 0.0: Georg Ferdinand Ludwig Philipp Cantor was born on March 3, 1845.
+  Fact 0.1: The birth date of Georg Ferdinand Ludwig Philipp Cantor is also given as February 19, 1845 in the Old Style calendar.
+  Fact 0.2: Georg Ferdinand Ludwig Philipp Cantor died on January 6, 1918.
+  Fact 0.3: Georg Ferdinand Ludwig Philipp Cantor was a German mathematician.
+Sentence 1: Vladimir Igorevich Arnold (alternative spelling Arnol'd, Russian: Влади́мир И́горевич Арно́льд , 12 June 1937 – 3 June 2010) was a Soviet and Russian mathematician.
+  Fact 1.0: Vladimir Igorevich Arnold is also spelled Arnol'd.
+  Fact 1.1: Vladimir Igorevich Arnold's name in Russian is Влади́мир И́горевич Арно́льд.
+  Fact 1.2: Vladimir Igorevich Arnold was born on 12 June 1937.
+  Fact 1.3: Vladimir Igorevich Arnold died on 3 June 2010.
+  Fact 1.4: Vladimir Igorevich Arnold was a Soviet mathematician.
+  Fact 1.5: Vladimir Igorevich Arnold was a Russian mathematician.
+
+Retrieved items:
+<item 1>
+Jónsson–Tarski algebra
+In mathematics, a Jónsson–Tarski algebra or Cantor algebra is an algebraic structure encoding a bijection from an infinite set "X" onto the product "X"×"X".
+
+ They were introduced by .
+
+ , named them after Georg Cantor because of Cantor's pairing function and Cantor's theorem that an infinite set "X" has the same number of elements as "X"×"X";
+the term "Cantor algebra" is also occasionally used to mean the Boolean algebra of all clopen subsets of the Cantor set, or the Boolean algebra of Borel subsets
+of the reals modulo meager sets (sometimes called the Cohen algebra).
+</item 1>
+
+<item 2>
+Georg Cantor's first set theory article
+Georg Cantor's first set theory article was published in 1874 and contains the first theorems of transfinite set theory, which studies infinite sets and their
+properties.
+
+ One of these theorems is "Cantor's revolutionary discovery" that the set of all real numbers is uncountably, rather than countably, infinite.
+
+ This theorem is proved using Cantor's first uncountability proof, which differs from the more familiar proof using his diagonal argument.
+
+ The title of the article, "On a Property of the Collection of All Real Algebraic Numbers" ("Ueber eine Eigenschaft des Inbegriffes aller reellen algebraischen
+Zahlen "), refers to its first theorem: the set of real algebraic numbers is countable.
+</item 2>
+
+<item 3>
+Anatoly Maltsev
+Anatoly Ivanovich Maltsev (also: Malcev, Mal'cev; Russian: Анато́лий Ива́нович Ма́льцев; 27 November N.S./14 November O.S. 1909, Moscow Governorate – 7 June
+1967, Novosibirsk) was born in Misheronsky, near Moscow, and died in Novosibirsk, USSR.
+
+ He was a mathematician noted for his work on the decidability of various algebraic groups. Malcev algebras (generalisations of Lie algebras) are named after
+him.
+</item 3>
+
+<item 4>
+Alfred von Arneth
+Alfred Ritter von Arneth (10 July 181930 July 1897) was an Austrian historian.
+
+ His principal scholarly work is a ten-volume biography of the Habsburg Empress Maria Theresa, first published in installments from 1863 to 1879 and still
+regarded as the standard work on the subject.
+
+ Born at Vienna, he was the son of Joseph Calasanza von Arneth (1791–1863), a well-known historian and archaeologist, who wrote a history of the Austrian Empire
+(Vienna, 1827) and several works on numismatics and brother of Doctor Franz Hektor von Arneth (1818–1907).
+</item 4>
+
+<item 5>
+Cantor–Bernstein theorem
+In set theory and order theory, the Cantor–Bernstein theorem states that the cardinality of the second type class, the class of countable order types, equals
+the cardinality of the continuum.
+
+ It was used by Felix Hausdorff and named by him after Georg Cantor and Felix Bernstein.
+
+ Cantor constructed a family of countable order types with the cardinality of the continuum, and in his 1901 inaugural dissertation Bernstein proved that such a
+family can have no higher cardinality.
+</item 5>
+
+<item 6>
+Cantor space
+In mathematics, a Cantor space, named for Georg Cantor, is a topological abstraction of the classical Cantor set: a topological space is a Cantor space if it is
+homeomorphic to the Cantor set.
+
+ In set theory, the topological space 2 is called "the" Cantor space.
+
+ Note that, commonly, 2 is referred to simply as the Cantor set, while the term Cantor space is reserved for the more general construction of "D" for a finite
+set "D" and a set "S" which might be finite, countable or possibly uncountable.
+</item 6>
+
+<item 7>
+Graph query row:
+person: Georg Cantor
+death_date: January 6, 1918
+</item 7>
+
+<item 8>
+Vladimir Arnold
+Vladimir Igorevich Arnold (alternative spelling Arnol'd, Russian: Влади́мир И́горевич Арно́льд , 12 June 1937 – 3 June 2010) was a Soviet and Russian
+mathematician.
+
+ While he is best known for the Kolmogorov–Arnold–Moser theorem regarding the stability of integrable systems, he made important contributions in several areas
+including dynamical systems theory, catastrophe theory, topology, algebraic geometry, symplectic geometry, differential equations, classical mechanics,
+hydrodynamics and singularity theory, including posing the ADE classification problem, since his first main result—the solution of Hilbert's thirteenth problem
+in 1957 at the age of 19.
+</item 8>
+
+<item 9>
+Graph query row:
+person: Vladimir Igorevich Arnold
+death_date: 3 June 2010
+</item 9>
+
+<item 10>
+Georg Cantor
+Georg Ferdinand Ludwig Philipp Cantor ( ; ] ; March 3 [O.S. February 19] 1845  – January 6, 1918) was a German mathematician.
+
+ He invented set theory, which has become a fundamental theory in mathematics.
+
+ Cantor established the importance of one-to-one correspondence between the members of two sets, defined infinite and well-ordered sets, and proved that the
+real numbers are more numerous than the natural numbers.
+
+ In fact, Cantor's method of proof of this theorem implies the existence of an "infinity of infinities".
+
+ He defined the cardinal and ordinal numbers and their arithmetic.
+
+ Cantor's work is of great philosophical interest, a fact of which he was well aware.
+</item 10>
+=== END ITEM id=ad9b06ad0ffc4e6d ===
+
+=== ITEM id=cf7063fbb7ad0368 ===
+Gold sentences and facts:
+Sentence 0: Robert Harry Philibosian (born 1940) is an American politician.
+  Fact 0.0: Robert Harry Philibosian was born in 1940.
+  Fact 0.1: Robert Harry Philibosian is an American politician.
+Sentence 1: David R. Ignatius (May 26, 1950), is an American journalist and novelist.
+  Fact 1.0: David R. Ignatius was born on May 26, 1950.
+  Fact 1.1: David R. Ignatius is an American journalist.
+  Fact 1.2: David R. Ignatius is an American novelist.
+
+Retrieved items:
+<item 1>
+Andrew Benjamin
+Andrew Benjamin (born 1952, Australia) is an Australian philosopher.
+
+ Currently he holds two academic posts: Distinguished Professor of Philosophy and the Humanities at Kingston University, London and Professor of Philosophy and
+Jewish Thought in the Department of Philosophy and the Australian Centre for Jewish Civilization at Monash University, Melbourne, Australia.
+
+ Benjamin first came to critical attention with his writings in continental philosophy, writing articles and editing books on the thinking of Martin Heidegger,
+Theodor Adorno, Walter Benjamin, Julia Kristeva and Jean-François Lyotard.
+
+ Benjamin has become involved in the field of architecture, to the extent that he has also taught in various schools of architecture in UK, US and Australia.
+</item 1>
+
+<item 2>
+Mark Krikorian
+Mark Krikorian has been the executive director of the Center for Immigration Studies, a think-tank in Washington, D. C., since 1995.
+
+ The Center describes itself as an "independent, non-partisan research organization" in Washington, D. C., that examines and critiques the impact of immigration
+on the United States.
+
+ Animated by a "pro-immigrant, low-immigration vision which seeks fewer immigrants, but a warmer welcome for those admitted", the Center was established in 1985
+to provide immigration research.
+
+ Krikorian is a regular contributor to the conservative publication "National Review", and is a regular participant at "National Review Online's" "The Corner."
+</item 2>
+
+<item 3>
+David Ignatius
+David R. Ignatius (May 26, 1950), is an American journalist and novelist.
+
+ He is an associate editor and columnist for "The Washington Post".
+
+ He also co-hosts PostGlobal, an online discussion of international issues at Washingtonpost.com, with Fareed Zakaria.
+
+ He has written nine novels, including "Body of Lies", which director Ridley Scott adapted into a film.
+
+ He is a former Adjunct Lecturer at the Kennedy School of Government at Harvard University and currently Senior Fellow to the Future of Diplomacy Program.
+
+ He has received numerous honors, including the Legion of Honor from the French Republic, the Urbino World Press Award from the Italian Republic, and a lifetime
+achievement award from the International Committee for Foreign Journalism.
+</item 3>
+
+<item 4>
+David I. Walsh
+David Ignatius Walsh (November 11, 1872June 11, 1947) was a United States politician from Massachusetts.
+
+ A member of the Democratic Party, he served as the 46th Governor of Massachusetts before serving several terms in the United States Senate.
+</item 4>
+
+<item 5>
+Robert Philibosian
+Robert Harry Philibosian (born 1940) is an American politician.
+
+ He served as Los Angeles County District Attorney from 1982 to 1984.
+
+ He received his B.A. in history from Stanford University and his law degree from Southwestern Law School, and was admitted to the California State Bar in 1968.
+
+ He is now Of counsel at the law firm of Sheppard, Mullin, Richter & Hampton.
+</item 5>
+
+<item 6>
+Philip K. Dick
+Philip Kindred Dick (December 16, 1928 – March 2, 1982) was an American writer notable for publishing works of science fiction.
+</item 6>
+
+<item 7>
+Richard Ziser
+Richard Ziser is a Nevada Real Estate Investor, Socially Conservative Political activist and U.S. Republican Politician.
+
+ He was born June 7, 1953, in Pomona, CA., and has resided in Las Vegas Nevada since 1991.
+
+ He graduated from California State Polytechnic University, Pomona (Cal Poly Pomona) with a BS in Industrial Engineering, 1976; then subsequently from Simon
+Greenleaf University in Santa Ana, Ca.
+
+ (now a campus of Trinity International University, with an MA in Christian Apologetics in 1989.
+</item 7>
+
+<item 8>
+Jim Geraghty
+Jim Geraghty is a conservative blogger and regular contributor to "National Review Online" and "National Review".
+
+ In addition to writing columns for "National Review", Geraghty also blogs for National Review Online and is a former reporter for States News Service.
+</item 8>
+
+<item 9>
+Lewis Nicola
+Lewis Nicola (1717 – August 9, 1807) was an Irish-born American military officer, merchant, and writer who held various military and civilian positions
+throughout his career.
+
+ Nicola is most notable for authoring the Newburgh letter, which urged George Washington to assume a royal title.
+
+ Born in Dublin, Ireland, Nicola had been an officer in the British Army, serving in Europe before immigrating to the Thirteen Colonies.
+
+ Establishing a residence in Philadelphia with his family, Nicola opened a library in 1767 and was active in colonial philosophical organizations.
+
+ As a result of his work to establish the American Philosophical Society, he was elected as one of its curators.
+
+ When the American Revolution broke out, Nicola offered his services to the colonial government, which eventually appointed him to various positions with local
+forces.
+</item 9>
+
+<item 10>
+Phil Driscoll
+Phil Driscoll (born November 9, 1947) is a trumpeter, singer, composer, and producer.
+
+ He performs in varying music genres and styles which include rock and roll, rhythm and blues, and patriotic music, and is best known for his work in Christian
+music and his longterm Christian ministry.
+
+ In 1985, Driscoll won the Grammy Award for Best Gospel Performance – Duo/Group for a duet with Debby Boone on "Keep the Flame Burning", and he has been
+nominated for three additional Grammys, two for Best Gospel Performance – Male and one for Best Gospel/Pop Album.
+
+ He has also won three Dove Awards for his music, and the 1999 Christian Country Music Association Award for Best Musician.
+
+ In 2006, Driscoll was found guilty on 2 counts of tax evasion and one count of conspiracy, and was sentenced to serve one year in Federal prison, beginning on
+March 14, 2007.
+</item 10>
+=== END ITEM id=cf7063fbb7ad0368 ===

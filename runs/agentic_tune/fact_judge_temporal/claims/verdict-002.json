@@ -1,0 +1,47 @@
+[
+ {"id": "multihop-rag-890", "sentences": [
+   ["Epic chose to focus more on simply painting Google as the bad guy on day one.", "The matter referred to as 'this' will probably come up later in the trial."],
+   ["Google did not release the full model, Gemini Ultra.", "Google released only a 'lite' version called Gemini Pro."],
+   ["The case was filed by Arkansas-based publisher Helena World Chronicle.", "The case argues that Google 'siphons off' news publishers' content, their readers and ad revenue through anticompetitive means."]
+ ]},
+ {"id": "multihop-rag-891", "sentences": [
+   ["Scientists also point to a number of recent developments in the long term.", "The recent developments have raised hopes that it may be possible to tackle dementia more directly and effectively."],
+   ["Health coach Susan Saunders found herself 'parenting' her mother.", "Susan Saunders's mother had dementia.", "Susan Saunders's daughters were babies at the time."]
+ ]},
+ {"id": "multihop-rag-924", "sentences": [
+   ["The case was filed by Arkansas-based publisher Helena World Chronicle.", "The case argues that Google 'siphons off' news publishers' content, their readers and ad revenue through anticompetitive means."],
+   ["Google unveiled new hardware.", "Google held its annual hardware event this week.", "Google is a search and consumer tech giant.", "At the event, Google showed off what it has been working on."]
+ ]},
+ {"id": "multihop-rag-926", "sentences": [
+   ["Erik ten Hag is a top coach from Ajax.", "Ten Hag's club needs a top blueprint not only for now but for the next five years.", "The club should work towards that blueprint.", "On that journey there are sometimes hard moments when you don't get the right results.", "Sometimes you are doing the right things even though you don't get the right results."],
+   ["Manchester United are out of Europe altogether after a limp display against Bayern.", "Manchester United's display against Bayern was at Old Trafford.", "Kingsley Coman sealed a 1-0 win at Old Trafford.", "Kingsley Coman's goal sealed a 1-0 win for Thomas Tuchel's side."]
+ ]},
+ {"id": "multihop-rag-941", "sentences": [
+   ["Jim Harbaugh was suspended.", "Despite the suspension, Jim Harbaugh held his usual weekly news conference on Monday.", "Jim Harbaugh mostly avoided addressing the only topic on anyone's mind."],
+   ["The suspension in question would be Harbaugh's second suspension of the season.", "The Wolverines self-imposed a three-game ban on Harbaugh to start the season.", "The three-game ban was imposed amid an NCAA investigation.", "The NCAA investigation found that Harbaugh lied to investigators."],
+   ["Harbaugh reportedly watched the game from the team hotel.", "The leading piece of drama returns now."]
+ ]},
+ {"id": "multihop-rag-952", "sentences": [
+   ["Harris is also the preferred goal-line back.", "Being the preferred goal-line back is an added bonus for Harris.", "Harris scored in three of those games."],
+   ["The Wildcats scored a touchdown on their first drive.", "The first drive was a seven-play, 61-yard drive.", "Running back Jonah Coleman made a 25-yard dash on the drive before diving into the end zone."]
+ ]},
+ {"id": "multihop-rag-961", "sentences": [
+   ["The process also involves the European Commission.", "The European Commission helps facilitate dialogue.", "The European Commission helps assess issues.", "The European Commission helps bring pressure to bear on unfair practices."],
+   ["The speaker continues to work through the process with the European Commission.", "The speaker is focused on addressing the European Commission's questions.", "The speaker is focused on addressing any identified concerns at this stage."],
+   ["The European Commission's earlier actions were focused on concerns about the spread of illegal content.", "The European Commission's earlier actions were focused on concerns about the spread of disinformation related to the Israel-Hamas war."]
+ ]},
+ {"id": "multihop-rag-966", "sentences": [
+   ["Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account.", "Bankman-Fried said it was okay to continue withdrawing money from the account as long as the amount was less than FTX's total trading revenue."],
+   ["During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue.", "Huang said Paradigm was told by Bankman-Fried that he didn't want investors as directors.", "Huang said Bankman-Fried did plan on having a board with experts."],
+   ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.", "The defense countered that the FTX founder acted in good faith.", "The defense argued that the FTX founder never meant to commit fraud or steal.", "The defense argued that the FTX founder basically got in over his head."]
+ ]},
+ {"id": "multihop-rag-970", "sentences": [
+   ["Google's search head Prabhakar Raghavan testified in court on October 28.", "Prabhakar Raghavan revealed that Google had paid $26.3 billion in 2021 to multiple browsers, phones and platforms.", "The payees included companies such as Apple, Samsung and Mozilla.", "The Verge reports this revelation."],
+   ["The case will attempt to argue that Google restrains competition within two separate markets.", "One of the two markets is the distribution of apps to Android users.", "The other of the two markets is the market for payment processing solutions for content inside Android apps."],
+   ["The case was filed by Arkansas-based publisher Helena World Chronicle.", "The case argues that Google 'siphons off' news publishers' content, their readers and ad revenue through anticompetitive means."]
+ ]},
+ {"id": "multihop-rag-1003", "sentences": [
+   ["Miami has five remaining opponents.", "Four of Miami's five remaining opponents have pass defenses ranked in the league's top eight."],
+   ["Tyreek Hill missed last week's game.", "Tyreek Hill needs to average 152.67 yards per game in his final three games to reach his stated goal, which is almost 153 yards per game.", "Tyreek Hill's stated goal is 2,000 receiving yards this season."]
+ ]}
+]

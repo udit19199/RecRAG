@@ -1,0 +1,80 @@
+[
+  {"id": "273833ee9d4e5100", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Caroline Ellison, who claimed she took $14 billion from customers to"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "Caroline Ellison, who claimed she took $14 billion from customers to"}, {"item": 10, "quote": "repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 10, "quote": "repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 10, "quote": "repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "In January, Bankman-Fried pleaded not guilty to all counts"}, {"item": 7, "quote": "sentencing for seven counts tied to fraud and money laundering."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads"}]}
+  ]},
+  {"id": "a0eddf91a0c98b61", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "During cross-examination, Huang said Paradigm pressed"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "During cross-examination, Huang said Paradigm pressed"}, {"item": 10, "quote": "Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "It was Bankman-Fried’s decision, she said, as he was the"}, {"item": 5, "quote": "CEO of FTX."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "It was Bankman-Fried’s decision, she said, as he was the"}, {"item": 5, "quote": "CEO of FTX."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+    {"fact": "3.0", "status": "missing", "evidence": []},
+    {"fact": "3.1", "status": "missing", "evidence": []},
+    {"fact": "3.2", "status": "missing", "evidence": []},
+    {"fact": "3.3", "status": "missing", "evidence": []},
+    {"fact": "3.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "e3e6fb73725361d7", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "then left the game for"}, {"item": 9, "quote": "further evaluation in the locker room."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 9, "quote": "further evaluation in the locker room."}]}
+  ]},
+  {"id": "4a3b1066c6462bc6", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 6, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 6, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]}
+  ]},
+  {"id": "35ccf7b1a23ac1aa", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]}
+  ]},
+  {"id": "fcfcdaa602428965", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "That answer ultimately lies with the jury"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very"}, {"item": 3, "quote": "different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "the high-frequency trading firm where the former billionaire got his start in"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "the high-frequency trading firm where the former billionaire got his start in"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "the high-frequency trading firm where the former billionaire got his start in"}, {"item": 4, "quote": "finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 4, "quote": "And after Bankman-Fried left Jane Street"}, {"item": 4, "quote": "he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX."}]},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 4, "quote": "he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "The prosecution painted Bankman-Fried as someone who knowingly"}, {"item": 9, "quote": "committed fraud to achieve great wealth, power and influence,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "never meant to commit fraud"}, {"item": 9, "quote": "or steal and basically got in over his head."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "or steal and basically got in over his head."}]}
+  ]}
+]

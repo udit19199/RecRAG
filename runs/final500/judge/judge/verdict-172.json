@@ -1,0 +1,68 @@
+[
+  {"id": "ac3b40781c105508", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "For instance, if a star quarterback is announced as injured just days before a big game, the point spread might shift in favor of the opposing team."}]},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "1df69c43f5110724", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."}]}
+  ]},
+  {"id": "a6d3b16ef9d0b3c4", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "The DOJ argues Google’s default-search deals and platform control suppress competition and deprive rivals of data"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "As part of its search deal with Apple, Google agreed not to promote Chrome to Safari users"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Rosenberg explained how Google gets manufacturers to sign a mobile app distribution agreement (MADA) that requires Android smartphone makers (like Samsung or Oppo) to pre-load a bundle of 11 Google apps on the device"}]},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 7, "quote": "making itself the default search engine across platforms"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 8, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 8, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 8, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "dbacc6177a71e0af", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "But “all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "colleague: Sam Bankman-Fried former_employer: Jane Street"}]},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []},
+    {"fact": "3.0", "status": "missing", "evidence": []},
+    {"fact": "3.1", "status": "missing", "evidence": []},
+    {"fact": "3.2", "status": "missing", "evidence": []},
+    {"fact": "3.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "41caae0de9dac187", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 8, "quote": "Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 8, "quote": "Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 8, "quote": "Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 8, "quote": "Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 8, "quote": "Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 2, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 8, "quote": "Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "8561e46c5d8556f5", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "The pastor went on to explain that Jesus brought more positivity than anyone — which is why it's important to keep faith aligned with that practice of positive thinking."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "The pastor went on to explain that Jesus brought more positivity than anyone — which is why it's important to keep faith aligned with that practice of positive thinking."}]},
+    {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 3, "quote": "Roumie said that building a habit of prayer"}, {"item": 3, "quote": "As you consistently tap into that habit, you find your relationship with Jesus growing deeper and deeper, just automatically."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "you find your relationship with Jesus growing deeper and deeper, just automatically"}]}
+  ]}
+]

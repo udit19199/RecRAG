@@ -1,0 +1,72 @@
+[
+  {"id": "82becf261efceaaa", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 9, "quote": "browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "d41ac375c4b419d7", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX?"}]},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 3, "quote": "is on trial for seven counts of wire fraud and conspiracy"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 8, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 8, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal"}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 8, "quote": "never meant to commit fraud or steal and basically got in over his head"}]}
+  ]},
+  {"id": "103ea61bc8e1b566", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 1, "quote": "The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 1, "quote": "The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]}
+  ]},
+  {"id": "355c187c36d1bc3b", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "3.0", "status": "missing", "evidence": []},
+    {"fact": "3.1", "status": "missing", "evidence": []},
+    {"fact": "3.2", "status": "missing", "evidence": []},
+    {"fact": "3.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "1160776d609362e1", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]}
+  ]},
+  {"id": "44127b20ad4533d2", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]}
+]

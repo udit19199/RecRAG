@@ -1,0 +1,397 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "7af37468327be6a0",
+   "gold": [
+    {
+     "sentence": "Minersville School District v. Gobitis, 310 U.S. 586 (1940) , was a decision by the Supreme Court of the United States involving the religious rights of public school students under the First Amendment to the United States Constitution.",
+     "facts": {
+      "0.0": "Minersville School District v. Gobitis, 310 U.S. 586 (1940), was a decision by the Supreme Court of the United States.",
+      "0.1": "Minersville School District v. Gobitis involved the religious rights of public school students.",
+      "0.2": "Minersville School District v. Gobitis involved religious rights under the First Amendment to the United States Constitution."
+     }
+    },
+    {
+     "sentence": "Gravel v. United States, 408 U.S. 606 (1972), was a case regarding the protections offered by the Speech or Debate Clause of the United States Constitution.",
+     "facts": {
+      "1.0": "Gravel v. United States, 408 U.S. 606 (1972), was a case.",
+      "1.1": "Gravel v. United States concerned the protections offered by the Speech or Debate Clause of the United States Constitution."
+     }
+    }
+   ],
+   "items": [
+    "Forest Grove School District v. T. A.\nForest Grove School District v. T. A., 557 U.S. 230 (2009), is a case in which the United States Supreme Court held that the Individuals with Disabilities Education Act (IDEA) authorizes reimbursement for private special education services when a public school fails to provide a \"free appropriate public education\" (FAPE) and the private school placement is appropriate, regardless of whether the child previously received special education services through the public school.",
+    "Minersville School District v. Gobitis\nMinersville School District v. Gobitis, 310 U.S. 586 (1940) , was a decision by the Supreme Court of the United States involving the religious rights of public school students under the First Amendment to the United States Constitution.\n\n The Court ruled that public schools could compel students—in this case, Jehovah's Witnesses—to salute the American Flag and recite the Pledge of Allegiance despite the students' religious objections to these practices.\n\n This decision led to increased persecution of Witnesses in the United States.\n\n The Supreme Court overruled this decision a mere three years later, in \"West Virginia State Board of Education v. Barnette\", 319 U.S. 624 (1943).",
+    "Owasso Independent School District v. Falvo\nOwasso Independent School District v. Falvo, 534 U.S. 426 (2002) , was a case in which the United States Supreme Court held in favor of the school district that students scoring each other's tests and calling out the grades do not violate the Family Educational Rights and Privacy Act of 1974 (FERPA).\n\n Justice Kennedy wrote the opinion for the unanimous court.\n\n Justice Scalia wrote a concurring opinion in which he agreed with the ruling, but took issue with parts of Kennedy's opinion.",
+    "Bethel School District v. Fraser\nBethel School District v. Fraser, 478 U.S. 675 (1986), was a landmark decision by the United States Supreme Court involving free speech in public schools.\n\n High school student Matthew Fraser was suspended from school in the Bethel School District for making a speech including sexual double entendres at a school assembly.\n\n The Supreme Court held that his suspension did not violate the First Amendment.",
+    "McCollum v. Board of Education\nMcCollum v. Board of Education, 333 U.S. 203 (1948), was a landmark 1948 United States Supreme Court case related to the power of a state to use its tax-supported public school system to aid religious instruction.\n\n The case was a test of the separation of church and state with respect to education.",
+    "Cedar Rapids Community School Dist. v. Garret F.\nCedar Rapids Community School District v. Garret F., 526 U.S. 66 (1999) , was a United States Supreme Court case in which the Court ruled that the related services provision in the Individuals with Disabilities Education Act (IDEA) required public school districts to fund \"continuous, one-on-one nursing care for disabled children\" despite arguments from the school district concerning the costs of the services.\"\n\n The judges relied heavily on Irving Independent School Dist.\n\n v. Tatro, 468 U. S. 883 (1984).\n\n Under the Court's reading of the IDEA's relevant provisions, medical treatments such as suctioning, ventilator checks, catheterization, and others which can be administered by non-physician personnel come within the parameters of the special education law's related services.\n\n Disability advocates considered the Court decision to be a \"substantial victory for families of children with disabilities.\"\n\n Amendments were made in the Education Flexibility Partnership Act of 1999 to increase IDEA funding as a result of the case.",
+    "Abington School District v. Schempp\nAbington School District v. Schempp, 374 U.S. 203 (1963) , was a United States Supreme Court case in which the Court decided 8–1 in favor of the respondent, Edward Schempp, and declared school-sponsored Bible reading in public schools in the United States to be unconstitutional.\n\n The Chief Justice of the Supreme Court during this case was Earl Warren.",
+    "Gravel v. United States\nGravel v. United States, 408 U.S. 606 (1972), was a case regarding the protections offered by the Speech or Debate Clause of the United States Constitution.\n\n In the case, the Supreme Court of the United States held that the privileges and immunities of the Constitution's Speech or Debate Clause enjoyed by members of Congress also extend to Congressional aides, but not to activity outside the legislative process.",
+    "Safford Unified School District v. Redding\nSafford Unified School District v. Redding, 557 U.S. 364 (2009) , was a United States Supreme Court case in which the Court held that a strip search of a middle schooler violated the Fourth Amendment to the United States Constitution where the school lacked reasons to suspect either that the drugs (Ibuprofen) presented a danger or that they were concealed in her underwear.\n\n The court also held, however, that because this was not clearly established law prior to the court's decision, the officials involved were shielded from liability by qualified immunity.",
+    "Elk Grove Unified School District v. Newdow\nElk Grove Unified School District v. Newdow, 542 U.S. 1 (2004), was a case decided by the U.S. Supreme Court.\n\n The lawsuit, originally filed as Newdow v. United States Congress, Elk Grove Unified School District, et al. in 2000, led to a 2002 ruling by the United States Court of Appeals for the Ninth Circuit that the words \"under God\" in the Pledge of Allegiance are an endorsement of religion and therefore violate the Establishment Clause of the First Amendment to the United States Constitution.\n\n After an initial decision striking the congressionally added \"one nation under God\" language, [Newdow v. U.S. Congress, 292 F.3d 597 (9th Cir.\n\n 2002), the superseding opinion on denial of rehearing en banc was more limited, holding that compelled recitation of the language by school teachers to students was invalid.\n\n [328 F.3d 466 (9th Cir.\n\n 2003)."
+   ]
+  },
+  {
+   "id": "eaf1b9cd550d3bf3",
+   "gold": [
+    {
+     "sentence": " One of only three writers to win the Pulitzer Prize for Fiction more than once (the others were Booth Tarkington and William Faulkner), Updike published more than twenty novels, more than a dozen short-story collections, as well as poetry, art and literary criticism and children's books during his career.",
+     "facts": {
+      "0.0": "Updike was one of only three writers to win the Pulitzer Prize for Fiction more than once.",
+      "0.1": "The other two writers who won the Pulitzer Prize for Fiction more than once were Booth Tarkington and William Faulkner.",
+      "0.2": "Updike published more than twenty novels during his career.",
+      "0.3": "Updike published more than a dozen short-story collections during his career.",
+      "0.4": "Updike published poetry during his career.",
+      "0.5": "Updike published art and literary criticism during his career.",
+      "0.6": "Updike published children's books during his career."
+     }
+    },
+    {
+     "sentence": " Seventeen of his novels were bestsellers, and more than 100 million copies of his books are in print.",
+     "facts": {
+      "1.0": "Seventeen of Updike's novels were bestsellers.",
+      "1.1": "More than 100 million copies of Updike's books are in print."
+     }
+    }
+   ],
+   "items": [
+    "Tom Clancy's Net Force Explorers: Gameprey\nTom Clancy's Net Force Explorers or Net Force Explorers is a series of young adult novels created by Tom Clancy and Steve Pieczenik as a spin-off of the military fiction series Tom Clancy's Net Force.",
+    "John Updike\nJohn Hoyer Updike (March 18, 1932 – January 27, 2009) was an American novelist, poet, short story writer, art critic, and literary critic.\n\n One of only three writers to win the Pulitzer Prize for Fiction more than once (the others were Booth Tarkington and William Faulkner), Updike published more than twenty novels, more than a dozen short-story collections, as well as poetry, art and literary criticism and children's books during his career.",
+    "Tom Clancy's Net Force Explorers: Duel Identity\nTom Clancy's Net Force Explorers or Net Force Explorers is a series of young adult novels created by Tom Clancy and Steve Pieczenik as a spin-off of the military fiction series Tom Clancy's Net Force.",
+    "Tom Clancy's Net Force Explorers: High Wire\nTom Clancy's Net Force Explorers or Net Force Explorers is a series of young adult novels created by Tom Clancy and Steve Pieczenik as a spin-off of the military fiction series Tom Clancy's Net Force.",
+    "Simon Bloom\nSimon Bloom is a series of young adult novels by Michael Reisman.\n\n Set in the fictional town of Lawnville, New Jersey, it is about a boy who finds a book that lets him control the laws of physics.\n\n The first of the books was optioned by Universal Pictures after a bidding war over the manuscript.",
+    "Tom Clancy's Net Force Explorers: Deathworld\nTom Clancy's Net Force Explorers or Net Force Explorers is a series of young adult novels created by Tom Clancy and Steve Pieczenik as a spin-off of the military fiction series Tom Clancy's Net Force.",
+    "Stephen R. Donaldson\nStephen Reeder Donaldson (born May 13, 1947) is an American fantasy, science fiction and mystery novelist, most famous for \"The Chronicles of Thomas Covenant\", his ten-novel fantasy series.\n\n His work is characterized by psychological complexity, conceptual abstractness, moral bleakness, and the use of an arcane vocabulary, and has attracted critical praise for its \"imagination, vivid characterizations, and fast pace\".\n\n He earned his bachelor's degree from The College of Wooster and a Master's degree from Kent State University.\n\n He currently resides in New Mexico.",
+    "Tom Clancy's Net Force Explorers: Safe House\nTom Clancy's Net Force Explorers or Net Force Explorers is a series of young adult novels created by Tom Clancy and Steve Pieczenik as a spin-off of the military fiction series Tom Clancy's Net Force.",
+    "Tom Clancy's Rainbow 6: Patriots\nTom Clancy's Rainbow 6: Patriots is a cancelled first-person shooter video game, part of the \"Tom Clancy's Rainbow Six\" series, announced on the cover of the December 2011 issue of \"Game Informer\".\n\n It was to be published by Ubisoft, and was developed by the company's Montreal studio, with additional development by Ubisoft Toronto and Red Storm Entertainment.\n\n Due to the death of Tom Clancy in October 2013, concern was raised that this game would become the last to bear his name.\n\n Ubisoft has since stated that they will continue putting Tom Clancy's name on future Tom Clancy titles out of respect for the late author.",
+    "Tom Clancy\nThomas Leo \"Tom\" Clancy Jr. (April 12, 1947 – October 1, 2013) was an American novelist best known for his technically detailed espionage and military-science story lines set during and after the Cold War.\n\n Seventeen of his novels were bestsellers, and more than 100 million copies of his books are in print.\n\n His name was also used on movie scripts written by ghost writers, nonfiction books on military subjects, and video games.\n\n He was a part-owner of the Baltimore Orioles and vice-chairman of their community activities and public affairs committees."
+   ]
+  },
+  {
+   "id": "8d588f4346cc90b5",
+   "gold": [
+    {
+     "sentence": " The women's events are the Vans Hawaiian Pro at Haleiwa Ali'i Beach Park; the Roxy Pro at Sunset Beach; and the Billabong Pro Maui at Honolua Bay, Maui.",
+     "facts": {
+      "0.0": "The women's events include the Vans Hawaiian Pro at Haleiwa Ali'i Beach Park.",
+      "0.1": "The women's events include the Roxy Pro at Sunset Beach.",
+      "0.2": "The women's events include the Billabong Pro Maui at Honolua Bay, Maui."
+     }
+    },
+    {
+     "sentence": "Haleʻ iwa is a North Shore community and census-designated place (CDP) in the Waialua District of the island of Oʻ ahu, City and County of Honolulu.",
+     "facts": {
+      "1.0": "Haleʻiwa is a North Shore community.",
+      "1.1": "Haleʻiwa is a census-designated place (CDP).",
+      "1.2": "Haleʻiwa is in the Waialua District of the island of Oʻahu.",
+      "1.3": "Haleʻiwa is in the City and County of Honolulu."
+     }
+    }
+   ],
+   "items": [
+    "1988 Volvo International – Doubles\nJorge Lozano and Todd Witsken won in the final 6–3, 7–6 against Pieter Aldrich and Danie Visser.",
+    "Offshore Festival\nThe Offshore Festival was a camp-out rock and alternative music festival held during Easter at a farm near Torquay, Victoria, Australia from the late 1990s to 2001.\n\n It was run by the same organisers as the Falls Festival, held at nearby Lorne on New Year's Eve.\n\n It interlinked with the Rip Curl Pro surfing event, held at nearby Bells Beach, and festival ticketholders had free admission to the surfing event.",
+    "World Match Racing Tour\nThe World Match Racing Tour is an annual match racing tour and World Championship in the match racing event of sailing.\n\n The World Match Racing Tour has \"special event\"-status from the International Sailing Federation.\n\n The Tour awards over US$1.5 million in prize money, with points awarded at each event culminating in the crowning of the ISAF Match Racing World Champion.\n\n A US$500,000 overall prize pool for the Championship is now on offer.",
+    "Dana Brown\nDana Brown (born December 11, 1959 in Dana Point, California) is an American surfer and filmmaker, and is the oldest son of filmmaker Bruce Brown.\n\n His films include \"The Endless Summer Revisited\" (2000) which is made up of unused footage from \"The Endless Summer\" (1964) and \"The Endless Summer II\" (1994), as well as some original interviews with the stars of those films.\n\n His first all-original film was \"Step Into Liquid\" (2003) followed by a documentary on the Baja 1000 titled \"Dust to Glory\" (2005).\n\n In 2009, he debuted a new film called \"Highwater\" during the 100th anniversary of the Santa Monica Pier; the film follows life on the North Shore and the surfers who compete in the Vans Triple Crown of Surfing.\n\n In 2014, the movie \"On Any Sunday, The Next Chapter\" continues the saga of motocross documentaries which began with the 1972 Academy Award for Documentary Feature nominated film \"On Any Sunday\" (1971).",
+    "Sport Mundi Tournament\nThe Sport Mundi Tournament is a Spanish pre-season women's football invitational charitable tournament held every August in Irun since 2005.\n\n It is contested by four teams, usually including regional powerhouses Athletic Bilbao and Real Sociedad.\n\n Athletic is the most successful team in the competition with four titles, followed by Levante UD and Real Sociedad with two each.",
+    "Ocean City Open\nThe Ocean City Open is a defunct tennis tournament that was played on the Grand Prix tennis circuit in 1977.\n\n The event was held in Ocean City, Maryland.\n\n Vitas Gerulaitis won the singles title while Alex Metreveli and Bill Scanlon partnered to win the doubles title.",
+    "Triple Crown of Surfing\nThe Vans Triple Crown of Surfing is a Hawaiian specialty series of professional surfing events, offering three events to men and three events to women.\n\n For the men, those events are the Reef Hawaiian Pro at Haleiwa Ali'i Beach Park; the O'Neill World Cup of Surfing at Sunset Beach; and the Billabong Pipeline Masters at the Banzai Pipeline.\n\n The women's events are the Vans Hawaiian Pro at Haleiwa Ali'i Beach Park; the Roxy Pro at Sunset Beach; and the Billabong Pro Maui at Honolua Bay, Maui.",
+    "2012 Monterrey Open\nThe 2012 Monterrey Open was a women's tennis tournament played on outdoor hard courts.\n\n It was the 4th edition of the Monterrey Open and was an International tournament on the 2012 WTA Tour.\n\n It took place at the Sierra Madre Tennis Club in Monterrey, Mexico, from 20 to 26 February.\n\n Tímea Babos won the singles title.",
+    "2001–02 Volvo Ocean Race\nThe 2001–02 Volvo Ocean Race was the eighth edition of the around-the-world sailing event Volvo Ocean Race, and the first under the name Volvo Ocean Race.\n\n For the 2001–02 the sponsorship of the race was taken over by Volvo and Volvo Cars.\n\n The race was renamed the Volvo Ocean Race.\n\n Stopovers were added in Germany, France, and Sweden being the Volvo's three biggest car markets in Europe.\n\n In addition the points system had been modified significantly in an effort to keep the race competitive until the final leg.\n\n The previous \"points\" race having been effectively won two full legs before the final gun.",
+    "Reef Hawaiian Pro\nThe Reef Hawaiian Pro is a surfing event held annually on the North Shore, Oahu, Hawaii.\n\n It is currently the first leg of the Triple Crown of Surfing.\n\n Surfers compete for a share of $135,000 (men) or $35,000 (women) prize money.\n\n Since it carries a 6-star rating, the event is critical for those who want to qualify for the ASP World Tour."
+   ]
+  },
+  {
+   "id": "e4fcdace99e7cf2c",
+   "gold": [
+    {
+     "sentence": "Broughtonia is a genus of orchids (family Orchidaceae) native to the Bahamas and the Greater Antilles.",
+     "facts": {
+      "0.0": "Broughtonia is a genus of orchids.",
+      "0.1": "Broughtonia belongs to the family Orchidaceae.",
+      "0.2": "Broughtonia is native to the Bahamas.",
+      "0.3": "Broughtonia is native to the Greater Antilles."
+     }
+    },
+    {
+     "sentence": "Perilla is a genus consisting of one major Asiatic crop species \"P. frutescens\" and a few recognized wild species in nature, belonging to the mint family, Lamiaceae.",
+     "facts": {
+      "1.0": "Perilla is a genus.",
+      "1.1": "Perilla consists of one major Asiatic crop species, P. frutescens.",
+      "1.2": "Perilla includes a few recognized wild species in nature.",
+      "1.3": "Perilla belongs to the mint family, Lamiaceae."
+     }
+    }
+   ],
+   "items": [
+    "Monardella lanceolata\nMonardella lanceolata is a species of flowering plant in the mint family known by the common names mustang mint and mustang monardella.\n\n It is native to the mountains of California and Baja California, where it grows in chaparral, woodland, rocky slopes, and often disturbed habitat types.",
+    "Lamiaceae (mint family) includes aromatic culinary, medicinal, ornamental, seed, and tuber crops. Perilla comprises cross-fertile Asian herbs, notably Korean perilla and red or green shiso; its perilla ketone can cause fatal pulmonary edema in grazing cattle and horses. Ocimum includes basil and holy basil. Other described mints include California’s shortspike hedgenettle and mustang mint, and western North America’s medicinal nettleleaf giant hyss",
+    "Shiso\nPerilla frutescens var.\n\n \"crispa\", also called shiso ( , from Japanese シソ ) is a variety of species \"Perilla frutescens\" of the genus \"Perilla\", belonging to the mint family, Lamiaceae.\n\n The plant occurs in red (purple-leaved) or green-leaved forms.\n\n Shiso is a perennial plant that may be cultivated as an annual in temperate climates, and occurs in both red- (or purple-) leaved and green forms.\n\n There are also frilly, ruffled-leaved forms called \"chirimen-jiso\" and forms that are red only on top, called \"katamen-jiso\".",
+    "Perilla ketone\nPerilla ketone is a natural terpenoid that consists of a furan ring with a six-carbon side chain containing a ketone functional group.\n\n It is a colorless oil that is sensitive to oxygen, becoming colored upon standing.\n\n The ketone was identified in 1943 by Sebe as the main component of the essential oil of Perilla frutescens.\n\n Perilla ketone is present in the leaves and seeds of purple mint (\"Perilla frutescens\"), which is toxic to some animals.\n\n When cattle and horses consume purple mint when grazing in fields in which it grows, the perilla ketone causes pulmonary edema leading to a condition sometimes called perilla mint toxicosis.",
+    "Butea\nButea is a genus of flowering plants belonging to the pea family, Fabaceae.\n\n It is sometimes considered to have only two species, \"B. monosperma\" and \"B. superba\", or is expanded to include four or five species.",
+    "Broughtonia\nBroughtonia is a genus of orchids (family Orchidaceae) native to the Bahamas and the Greater Antilles.\n\n The genus is abbreviated Bro in trade journals.",
+    "Lamiaceae\nor Labiatae is a family of flowering plants commonly known as the mint or deadnettle family.\n\n Many of the plants are aromatic in all parts and include widely used culinary herbs, such as basil, mint, rosemary, sage, savory, marjoram, oregano, hyssop, thyme, lavender, and perilla.\n\n Some species are shrubs, trees (such as teak), or, rarely, vines.\n\n Many members of the family are widely cultivated, not only for their aromatic qualities but also their ease of cultivation, since they are readily propagated by stem cuttings.\n\n Besides those grown for their edible leaves, some are grown for decorative foliage, such as \"Coleus\".\n\n Others are grown for seed, such as \"Salvia hispanica\" (chia), or for their edible tubers, such as \"Plectranthus edulis\", \"Plectranthus esculentus\", \"Plectranthus rotundifolius\", and \"Stachys affinis\" (Chinese artichoke).",
+    "Perilla frutescens\nPerilla frutescens, commonly called perilla or Korean perilla, is a species of \"Perilla\" in the mint family Lamiaceae.\n\n It is an annual plant native to Southeast Asia and Indian highlands, and grown in the Korean peninsula, Southern China and India.\n\n Known as \"deulkkae\" (들깨 ) in Korean, the plant was introduced into Korea before the Unified Silla era, when it started to be widely cultivated.",
+    "Perilla\nPerilla is a genus consisting of one major Asiatic crop species \"P. frutescens\" and a few recognized wild species in nature, belonging to the mint family, Lamiaceae.\n\n It encompasses several distinct varieties of Asian herb, seed, and vegetable crop, including \"P. frutescens\" (deulkkae) and \"P. frutescens\" var.\n\n \"crispa\" (shiso).\n\n The genus name \"Perilla\" is also a frequently employed common name (\"perilla\"), applicable to all varieties.\n\n Perilla varieties are cross-fertile and intra-specific hybridization occurs naturally.\n\n Some varieties are considered invasive.",
+    "Broussaisia\nBroussaisia arguta, the kanawao, is a species of perennial flowering plant in the \"Hydrangea\" family, Hydrangeaceae, that is endemic to Hawaiʻ i.\n\n It is the only species in the monotypic genus Broussaisia."
+   ]
+  },
+  {
+   "id": "721e6d1b3e254e04",
+   "gold": [
+    {
+     "sentence": " Most figures are all shaped with the body of Mickey Mouse but have different themed markings, colors, and patterns.",
+     "facts": {
+      "0.0": "Most figures are shaped with the body of Mickey Mouse.",
+      "0.1": "Most figures have different themed markings.",
+      "0.2": "Most figures have different themed colors.",
+      "0.3": "Most figures have different themed patterns."
+     }
+    },
+    {
+     "sentence": " He was created by Walt Disney and Ub Iwerks at the Walt Disney Studios in 1928.",
+     "facts": {
+      "1.0": "Mickey Mouse was created by Walt Disney.",
+      "1.1": "Mickey Mouse was created by Ub Iwerks.",
+      "1.2": "Mickey Mouse was created at the Walt Disney Studios.",
+      "1.3": "Mickey Mouse was created in 1928."
+     }
+    }
+   ],
+   "items": [
+    "Hagop Sandaldjian\nHagop Sandaldjian (1931–1990) was an Egyptian-born Armenian American musician and microminiature sculptor, best known for his tiny art pieces displayed at the Museum of Jurassic Technology in Los Angeles, California.\n\n Sandaldjian's creations included a carving of Mount Ararat on a grain of rice; a crucifix in which a minute golden figure of Jesus hangs upon a cross made from a bisected strand of Sandaldjian's own hair; and recreations of Disney figures (Snow White and the Seven Dwarfs or Mickey Mouse, for example) or historical figures (such as Napoleon or Pope John Paul II) presented in the eye or on the tip of a needle.",
+    "Donald Duck\nDonald Duck is a cartoon character created in 1934 at Walt Disney Productions.\n\n Donald is an anthropomorphic white duck with a yellow-orange bill, legs, and feet.\n\n He typically wears a sailor shirt and cap with a bow tie.\n\n Donald is most famous for his semi-intelligible speech and his mischievous and temperamental personality.\n\n Along with his friend Mickey Mouse, Donald is one of the most popular Disney characters and was included in TV Guide's list of the 50 greatest cartoon characters of all time in 2002.\n\n He has appeared in more films than any other Disney character, and is the most published comic book character in the world outside of the superhero genre.",
+    "Felix the Cat\nFelix the Cat is a funny-animal cartoon character created in the silent film era.\n\n The anthropomorphic black cat with his black body, white eyes, and giant grin, coupled with the surrealism of the situations in which his cartoons place him, combine to make Felix one of the most recognized cartoon characters in film history.\n\n Felix was the first character from animation to attain a level of popularity sufficient to draw movie audiences.",
+    "Manimal Vinyl\nManimal Vinyl is a Calabasas based record label founded in 2006 by experimental musician and fashion stylist, Paul Beahan.\n\n They were originally known as a psychedelic folk label that makes semi-annual tribute records for worldwide charities, having eventually switched to dance music and progressive underground.\n\n They are the label who has release debut records from act ranging from Warpaint to Bat for Lashes and exclusive singles from Moby, Duran Duran, Carla Bruni, Edward Sharpe and the Magnetic Zeros.\n\n In 2008, they founded the annual Manimal Festival in Pioneertown, California which ran from 2008-2010.\n\n The festival has featured line-ups with Edward Sharpe and the Magnetic Zeros, Warpaint, Ariel Pink and papercranes.\n\n Manimal has offices in Los Angeles and New York City.",
+    "Bill Barretta\nWilliam Paul \"Bill\" Barretta (born June 19, 1964) is an American puppeteer and producer who has been performing with The Muppets since 1991, when he puppeteered the body of Sinclair family patriarch, Earl Sinclair on \"Dinosaurs\".\n\n He later developed several new characters on \"Muppets Tonight\", including Pepe the King Prawn, Johnny Fiama, Big Mean Carl and Bobo the Bear.\n\n Along with having his own Muppet characters, Barretta has taken over several of Jim Henson's roles, such as Dr. Teeth, Rowlf the Dog, Mahna Mahna and Swedish Chef, and briefly took over Jerry Nelson's role of Lew Zealand.\n\n His film debut as a principal puppeteer was in 1996's \"Muppet Treasure Island\" as Clueless Morgan.\n\n In addition, Barretta has produced two of the Muppets' television films, \"It's a Very Merry Muppet Christmas Movie\" (2002) and \"The Muppets' Wizard of Oz\" (2005).\n\n Barretta also provides additional voices on \"Kim Possible\".",
+    "Jerry Beck\nJerry Beck (born February 9, 1955 in New York City) is an American animation historian, author, blogger, and video producer.\n\n The author and/or editor of several books on classic American animation and classic characters, including \"The 50 Greatest Cartoons\" (1994), \"The Animated Movie Guide\" (2005), \"Not Just Cartoons: Nicktoons!\"\n\n (2007), \"The Flintstones: The Official Guide to the Cartoon Classic\" (2011), \"The Hanna-Barbera Treasury: Rare Art Mementos from Your Favorite Cartoon Classics\" (2007), \"The SpongeBob SquarePants Experience: A Deep Dive into the World of Bikini Bottom\" (2013), \"Pink Panther: The Ultimate Guide\" (2005), and \"Looney Tunes and Merrie Melodies: A Complete Illustrated Guide to the Warner Bros.\n\n Cartoons\" (with Will Friedwald, 1989) alongside \"The 100 Greatest Looney Tunes Cartoons\" (2010).\n\n He is also an authority on the making of modern films, with his books detailing the art of \"Mr.",
+    "Townsend Coleman\nTownsend Putnam Coleman III (born May 28, 1954) is an American voice actor who performed in many animated series and TV commercials beginning in the early 1980s.\n\n Among his most notable roles are Michaelangelo from \"Teenage Mutant Ninja Turtles\", Wayne Gretzky on \"ProStars\" and the title character in \"Where's Waldo?\n\n\" and the eponymous \"The Tick\" and he also did additional voices in \"Dexter's Laboratory\", \"The Powerpuff Girls\", \"Adventure Time\", \"Animaniacs\", \"The Buzz on Maggie\", \"Camp Lazlo\", \"CatDog\", \"Catscratch\", \"Danny Phantom\", \"Dave the Barbarian\", \"\", \"The Fairly OddParents\", \"Foster's Home for Imaginary Friends\", \"Gravity Falls\", \"Hi Hi Puffy AmiYumi\", \"\", \"The Loud House\", \"The Mighty B!\n\n\", \"My Life As A Teenage Robot\" and \"The Replacements\" and he also did the voice of Knotty in \"\" (1992) and he also did additional voices in films \"Fantasia 2000\" (1999) and \"Sing\" (2016)",
+    "Vinylmation\nVinylmation is a brand of 1.5\", 3\", and 9\" vinyl collectibles sold at Disney theme parks, select Disney Stores, and the online Disney Store.\n\n The name \"Vinylmation\" is a combination of the word \"Animation\" and \"Vinyl\".\n\n Most figures are all shaped with the body of Mickey Mouse but have different themed markings, colors, and patterns.\n\n This means that all figures have round mouse ears, whether or not the painted character has them.\n\n This is accommodated by painting the ears with backgrounds - stars, stripes, rainbows - to match the painted character.\n\n The series exception is the Park Starz series which does not resemble Mickey at all, and more closely resembles iconic figures from the parks.\n\n Vinylmation was first introduced in July 2008, and the first figures were introduced in November 2008.",
+    "Pete (Disney)\nPete (also called Peg-Leg Pete, Pistol Pete and Black Pete, among other names) is an anthropomorphic cartoon character created in 1925 by Walt Disney and Ub Iwerks.\n\n He is a character of The Walt Disney Company and often appears as a nemesis and the main antagonist in Mickey Mouse universe stories.\n\n He was originally an anthropomorphic bear but with the advent of Mickey Mouse in 1928, he was defined as a cat.\n\n Pete is the oldest continuing Disney character, having debuted three years before Mickey Mouse in the cartoon \"Alice Solves the Puzzle\" (1925).",
+    "Mickey Mouse\nMickey Mouse is a funny animal cartoon character and the official mascot of The Walt Disney Company.\n\n He was created by Walt Disney and Ub Iwerks at the Walt Disney Studios in 1928.\n\n An anthropomorphic mouse who typically wears red shorts, large yellow shoes, and white gloves, Mickey has become one of the world's most recognizable characters."
+   ]
+  },
+  {
+   "id": "63d9c5a79712ab8c",
+   "gold": [
+    {
+     "sentence": " Dan Hurley is the son of Hall of Fame high school coach Bob Hurley and younger brother of former Duke and Sacramento Kings guard Bobby Hurley.",
+     "facts": {
+      "0.0": "Dan Hurley is the son of Bob Hurley.",
+      "0.1": "Bob Hurley is a Hall of Fame high school coach.",
+      "0.2": "Dan Hurley is the younger brother of Bobby Hurley.",
+      "0.3": "Bobby Hurley is a former Duke guard.",
+      "0.4": "Bobby Hurley is a former Sacramento Kings guard."
+     }
+    },
+    {
+     "sentence": "Robert Matthew Hurley (born June 28, 1971) is an American basketball coach, and former college and professional player.",
+     "facts": {
+      "1.0": "Robert Matthew Hurley was born on June 28, 1971.",
+      "1.1": "Robert Matthew Hurley is an American basketball coach.",
+      "1.2": "Robert Matthew Hurley is a former college player.",
+      "1.3": "Robert Matthew Hurley is a former professional player."
+     }
+    },
+    {
+     "sentence": " Hurley is currently the head coach of the Arizona State men's team.",
+     "facts": {
+      "2.0": "Hurley is currently the head coach of the Arizona State men's team."
+     }
+    }
+   ],
+   "items": [
+    "Rudy Lavik\nRudolph H. \"Rudy\" Lavik (April 30, 1892 – September 29, 1979) was an American football and basketball coach and college athletics administrator.\n\n He served as the head football coach at Concordia College in Moorhead, Minnesota from 1920 to 1921, at Arizona State Teacher's College of Flagstaff—now Northern Arizona University—from 1928 to 1932, and at Arizona State Teachers College at Tempe—now Arizona State University—from 1933 to 1937, compiling a career college football record of 37–42–7.\n\n Lavik was also the head basketball coach at Arizona State Flagstaff (1927–1931) and Arizona State Tempe (1933–1935, 1939–1948), tallying a career college basketball mark of 146–137.\n\n In addition he served as the athletic director at Arizona State from 1933 to 1949.\n\n He was a graduate of Springfield College in Springfield, Massachusetts.",
+    "Bob Hurley\nRobert Emmet Hurley, Sr. (born July 31, 1947) is a basketball coach at St. Anthony High School in Jersey City, New Jersey.\n\n Hurley has amassed 28 state championships and more than 1000 wins in 39 years as a coach.\n\n On February 2, 2011, Hurley became the tenth coach in high school history to win 1000 games.\n\n He is featured in the documentary \"The Street Stops Here\".\n\n Five of his teams have gone undefeated.\n\n On April 5, 2010, he was announced as the only coach to be inducted into the Naismith Memorial Basketball Hall of Fame that year and only the third high school coach in history to be so honored; he was formally inducted on August 13 of that year.\n\n Hurley is the father of Bobby Hurley, a former All-American point guard at Duke and the head basketball coach at Arizona State, and Dan Hurley, who was hired in February 2012 to coach the University of Rhode Island after two years of coaching at Wagner College and nine years coaching at Newark's Saint Benedict's Preparatory School, also one of the top high school programs in the nation.",
+    "Tim Esmay\nTim Esmay is an American baseball coach.\n\n He is the former head coach of the Arizona State Sun Devils baseball team.\n\n He was the head coach of the Arizona State Sun Devils baseball team from prior to the 2010 season until the end of the 2014 season, when he announced his resignation.\n\n Esmay is an Arizona State alumnus, and he played baseball there from 1986–1987.\n\n After graduating from Arizona State in 1987, Esmay served as an assistant at Arizona State, Grand Canyon, and Utah.\n\n He was Utah's head coach from 1997–2004, before he was hired as an assistant at Arizona State prior to the 2005 season.",
+    "Dan Hurley\nDaniel S. Hurley (born January 16, 1973) is currently the head basketball coach at the University of Rhode Island.\n\n He was named head coach on March 20, 2012 after a two-year stint at Wagner College.\n\n Prior to Wagner, Hurley had a standout career as head coach of Saint Benedict's Preparatory School, where he built the New Jersey school into one of the top high school basketball programs in America.\n\n Dan Hurley is the son of Hall of Fame high school coach Bob Hurley and younger brother of former Duke and Sacramento Kings guard Bobby Hurley.",
+    "Aaron McCreary\nAaron Monroe \"Mac\" McCreary (September 15, 1892 – ?)\n\n was an American football, basketball, and baseball player, coach, and college athletics administrator.\n\n He served as the head football coach at Tempe State Teachers College, known at Arizona State Teachers College by 1929 and now called Arizona State University, compiling a career college football record of 25–17–4.\n\n McCreary was also the head basketball coach at Tempe/Arizona State Teachers from 1923 to 1930 and at Arizona State Teacher's College of Flagstaff, now Northern Arizona University, amassing a career college basketball record of 140–149.\n\n In addition, he coached baseball at Tempe/Arizona State Teachers (1924–1926, 1928, 1930–1931) and at Arizona State Teacher's Flagstaff in 1959, tallying a career college baseball mark of 22–56–1.",
+    "Rhode Island Rams men's basketball\nThe Rhode Island Rams men's basketball team is a college basketball program that competes in NCAA Division I and the Atlantic 10 Conference representing the University of Rhode Island.\n\n The team is under the direction of head coach Dan Hurley, who was hired on March 20, 2012.\n\n The Rams play their home games at the Ryan Center (capacity 7,657).",
+    "Basketball coach David Hobbs served as Alabama head coach (1992–98) and now assists Iowa State. St. John’s Jack Kaiser led baseball to 11 postseason appearances, helped establish the Big East, and is honored by its tournament award and stadium. Drake’s Dolph Pulliam reached the 1969 Final Four; his No. 5 was retired. NBA All-Star John Wall was the 2010 top draft pick; high-school standout Zion Williamson drew attention for dunks.",
+    "David Hobbs (basketball)\nDavid A. Hobbs (born April 25, 1949) is an American basketball coach.\n\n Hobbs currently serves as a special assistant to Iowa State's head coach Steve Prohm.\n\n He was the men's head coach at the University of Alabama from 1992 to 1998 and also was an assistant coach at Alabama, the University of Kentucky and Virginia Commonwealth University.",
+    "Bobby Hurley\nRobert Matthew Hurley (born June 28, 1971) is an American basketball coach, and former college and professional player.\n\n Hurley is currently the head coach of the Arizona State men's team.\n\n He was previously the head coach at Buffalo.\n\n Before becoming a head coach he was an assistant coach for Wagner and an associate head coach for Rhode Island on the staffs of his younger brother Dan.",
+    "Nate Oats\nNathanael \"Nate\" Oats (born October 13, 1974) is an American basketball coach.\n\n He is currently the head basketball coach at the State University of New York at Buffalo, following two seasons as an assistant coach under Bobby Hurley.\n\n Oats was named head coach on April 11, 2015 after Hurley was hired by Arizona State as head coach.\n\n In only his first season as head coach, he took the Buffalo Bulls to their second straight NCAA Tournament bid after winning the Mid-American Conference Championship."
+   ]
+  },
+  {
+   "id": "3802d113bf3b7bab",
+   "gold": [
+    {
+     "sentence": " In Crash, there is no betting, as in Brag, but rather players aim to reach a total of 11 points, gained over successive deals.",
+     "facts": {
+      "0.0": "In Crash, there is no betting, unlike in Brag.",
+      "0.1": "In Crash, players aim to reach a total of 11 points.",
+      "0.2": "In Crash, the 11 points are gained over successive deals."
+     }
+    },
+    {
+     "sentence": "Three-card brag is a 16th-century British card game, and the British national representative of the vying or \"bluffing\" family of gambling games.",
+     "facts": {
+      "1.0": "Three-card brag is a 16th-century British card game.",
+      "1.1": "Three-card brag is the British national representative of the vying or 'bluffing' family of gambling games."
+     }
+    }
+   ],
+   "items": [
+    "Three card brag\nThree-card brag is a 16th-century British card game, and the British national representative of the vying or \"bluffing\" family of gambling games.\n\n Brag is a direct descendant of the Elizabethan game of Primero and one of the several ancestors to poker, just varying in betting style and hand rankings.",
+    "Ombre\nThe historical importance of Ombre in the field of playing cards is the fact that it was the first card game in which a trump suit was established by bidding rather than by the random process of turning the first card of the stock.\n\n This game developed from Triunfo, though it was from L'Hombre that the idea of bidding was adopted into other card games such as Skat, and Tarot, which owes Hombre a good portion of its betting system as well.\n\n The game continued to be in vogue almost in every corner of Europe from the late 17th through the 18th centuries.",
+    "Écarté\nÉcarté is a two-player card game originating from France, the word literally meaning \"discarded\".\n\n It is a trick-taking game, similar to whist, but with a special and eponymous discarding phase.\n\n It is closely related to Euchre, a card game played mainly in the United States.\n\n Écarté was popular in the 19th century, but is now rarely played.",
+    "Attack! (board game)\nAttack!\n\n is a board game created by Glenn Drover and published by Eagle Games in 2003.\n\n It is a light war game that is midway between \"Risk\" and \"Axis and Allies\" in complexity.\n\n The game is loosely set in the 1930s and includes plastic pieces featuring tanks, planes, infantry, and artillery.\n\n \"Attack!\"\n\n won the Origins Award for \"Best Historical Game 2003\".",
+    "Gleek (card game)\nGleek is an English card game for three persons.\n\n It is played with a 44-card pack and was popular from the 16th century through the 18th century.",
+    "Put (card game)\nPut is an English tavern trick-taking card game first recorded in the 16th century and later castigated by 17th century moralists as one of ill repute.\n\n It belongs to a very ancient family of card games and clearly relates to a group known as Trut, \"Truque\", also \"Tru\", and the South American game Truco.\n\n Its more elaborate version is the Spanish game of Truc, which is still much played in many parts of Southern France and Spain.",
+    "Quadrille (card game)\nQuadrille is a card game that was popular in the 18th century.\n\n A variant of the Spanish card game Ombre, it is played by four players in pairs, with a deck of 40 cards (the 8's, 9's and 10's being removed).\n\n By the end of the 19th century, the card game had fallen out of fashion.",
+    "Triomphe\nTriomphe (French for triumph) is a card game dating from the late 15th century.\n\n It most likely originated in France or Spain (as triunfo) and later spread to the rest of Europe.\n\n When the game arrived in Italy, it shared a similar name with the pre-existing game and deck known as \"trionfi\" (tarot).\n\n While trionfi has a fifth suit that acts as permanent trumps, triomphe randomly selects one of the existing four suits as trumps.\n\n Another common feature of this game is the robbing of the stock.\n\n Triomphe became so popular that during the 16th century the earlier game of trionfi was gradually renamed tarocchi, tarot, or tarock.\n\n This game is the origin of the English word \"trump\" and is the ancestor of many trick-taking games like Euchre (via Écarté) and Whist (via Ruff and Honours).",
+    "Can't Stop (board game)\nCan't Stop is a board game designed by Sid Sackson originally published by Parker Brothers in 1980, and was long out of print in the United States.\n\n It was reprinted by Face 2 Face Games in 2007.\n\n An iOS version was developed by Playdek and released in 2012.\n\n The goal of the game is to \"claim\" (get to the top of) three of the columns before any of the other players can.\n\n But the more that the player risks rolling the dice during a turn, the greater the risk of losing the advances made during that turn.",
+    "Crash (card game)\nCrash is a British card game extension of Nine-card Brag.\n\n In Crash, there is no betting, as in Brag, but rather players aim to reach a total of 11 points, gained over successive deals."
+   ]
+  },
+  {
+   "id": "c5dbf1eceb1fbdcc",
+   "gold": [
+    {
+     "sentence": "Chalk and Cheese was a short lived sitcom television show, featuring Michael Crawford and Robin Hawdon.",
+     "facts": {
+      "0.0": "Chalk and Cheese was a short-lived sitcom television show",
+      "0.1": "Chalk and Cheese featured Michael Crawford",
+      "0.2": "Chalk and Cheese featured Robin Hawdon"
+     }
+    },
+    {
+     "sentence": "Michael Patrick Smith, {'1': \", '2': \", '3': \", '4': \"} (born 19 January 1942), known as Michael Crawford, is an English actor, comedian and singer.",
+     "facts": {
+      "1.0": "Michael Patrick Smith is known as Michael Crawford",
+      "1.1": "Michael Patrick Smith was born 19 January 1942",
+      "1.2": "Michael Crawford is English",
+      "1.3": "Michael Crawford is an actor",
+      "1.4": "Michael Crawford is a comedian",
+      "1.5": "Michael Crawford is a singer"
+     }
+    }
+   ],
+   "items": [
+    "A Cream Cracker under the Settee\n\"A Cream Cracker Under The Settee\" is a dramatic monologue written by Alan Bennett in 1987 for television, as part of his \"Talking Heads\" series for the BBC.\n\n The series became very popular, moving onto BBC Radio, international theatre, becoming one of the best-selling audio book releases of all time and included as part of both the A-level and GCSE English syllabus.\n\n It was the sixth and final episode of the first series of \"Talking Heads\".",
+    "Chalk and Cheese\nChalk and Cheese was a short lived sitcom television show, featuring Michael Crawford and Robin Hawdon.",
+    "Matthew Perry\nMatthew Langford Perry (born August 19, 1969) is a Canadian-American actor, best known for his role as Chandler Bing on the long-running NBC television sitcom \"Friends\", as well as his portrayal of Ron Clark in the 2006 television movie \"The Ron Clark Story\".",
+    "Dan Clark\nDaniel Gregory Clark (born 3 July 1976 in Bromley, London) is an English actor, comedian, writer, director, and singer.\n\n He is best known for playing Don Danbury on the BBC Three sitcom \"How Not to Live Your Life\", which he also wrote, co-produced, and sometimes directed.\n\n He has been a regular on the British comedy scene as both a sketch and stand-up comedian.",
+    "Robin Chalk\nRobin Chalk (born 1981) is an English actor, best known for his role as Neil Kellerman in the West End production of \"Dirty Dancing\" and his work on British science-fiction film \"Moon\" directed by Duncan Jones.",
+    "The entries profile actors and television productions. Tommy Knight is known for The Sarah Jane Adventures and Doctor Who; Mark Benton played Daniel Chalk in Waterloo Road; Robin Chalk appeared in Dirty Dancing and Moon. Tamzin Outhwaite starred in EastEnders, Red Cap, Paradox, Vital Signs and Inside No. 9’s “Empty Orchestra.” Dominic West is known for The Wire and Appropriate Adult; John Altman played Nick Cotton in EastEnders. Other entries cover children’s",
+    "John Altman (actor)\nJohn Clarkson Stewart (born 2 March 1952), known as John Altman, is an English actor and singer, perhaps best known for playing \"Nasty\" Nick Cotton in the popular BBC soap opera \"EastEnders\".\n\n He was among the show's original cast members appearing in the very first episode in February 1985 and appeared on the show on and off as a recurring character.\n\n His character was killed off in the 30th anniversary episode of the show which aired in February 2015.\n\n Altman has also appeared in several other television series and appeared in many stage productions.\n\n In 2010 he became the new frontman of the band Heavy Metal Kids following the death of former frontman Gary Holton in 1985.",
+    "The collection profiles entertainers, creators, and fictional characters across film, television, music, comedy, and magic. Highlights include magician Criss Angel’s Las Vegas shows; actors such as Michael Crawford, Matthew Perry, Josh Charles, and Glenn Quinn; comedians and creators behind *In Living Color*, *Upright Citizens Brigade*, and *Family Guy*; and performers including Nat and Alex Wolff and MatPat. It also covers productions such as *American Pie Presents: Band Camp* and *",
+    "Ken Barrie\nLeslie Hulme (9 January 1933 – 29 July 2016), known professionally as Ken Barrie, was an English voice actor and singer best known for narrating, and singing the theme tune of the BBC television programmes \"Postman Pat\" and \"Charlie Chalk\".\n\n He was also responsible for providing the voices of several of the series' characters.",
+    "Richard Cheese\nRichard Cheese & Lounge Against the Machine is a cover band and comedy act, performing popular songs in a lounge/swing style, reminiscent of Frank Sinatra, Dean Martin, and Tony Bennett.\n\n Lounge singer Richard Cheese is a character created and portrayed by Los Angeles-based actor/comedian Mark Jonathan Davis."
+   ]
+  },
+  {
+   "id": "a8d2e67acd14625b",
+   "gold": [
+    {
+     "sentence": "Season of Migration to the North (Arabic: موسم الهجرة إلى الشمال‎ ‎ Mawsim al-Hiǧra ilā ash-Shamāl ) is a classic post-colonial Sudanese novel by the novelist Tayeb Salih.",
+     "facts": {
+      "0.0": "Season of Migration to the North is a classic post-colonial Sudanese novel.",
+      "0.1": "Season of Migration to the North is written by the novelist Tayeb Salih.",
+      "0.2": "The Arabic title of Season of Migration to the North is موسم الهجرة إلى الشمال, transliterated Mawsim al-Hiǧra ilā ash-Shamāl."
+     }
+    },
+    {
+     "sentence": " The novel is a counter narrative to \"Heart of Darkness\".",
+     "facts": {
+      "1.0": "Season of Migration to the North is a counter narrative to Heart of Darkness."
+     }
+    },
+    {
+     "sentence": "Heart of Darkness (1899) is a novella by Polish-British novelist Joseph Conrad, about a voyage up the Congo River into the Congo Free State, in the heart of Africa, by the story's narrator Charles Marlow.",
+     "facts": {
+      "2.0": "Heart of Darkness is dated 1899.",
+      "2.1": "Heart of Darkness is a novella.",
+      "2.2": "Heart of Darkness is by Polish-British novelist Joseph Conrad.",
+      "2.3": "Heart of Darkness is about a voyage up the Congo River into the Congo Free State.",
+      "2.4": "The voyage in Heart of Darkness goes into the heart of Africa.",
+      "2.5": "The narrator of Heart of Darkness is Charles Marlow."
+     }
+    }
+   ],
+   "items": [
+    "The Happy Journey to Trenton and Camden\nThe Happy Journey to Trenton and Camden is a one act play by American novelist and playwright Thornton Wilder written in 1931.\n\n It was first published in \"The Long Christmas Dinner and Other Plays in One Act\" (New York: Coward-McCann, 1931).",
+    "Season of Migration to the North\nSeason of Migration to the North (Arabic: موسم الهجرة إلى الشمال‎ ‎ Mawsim al-Hiǧra ilā ash-Shamāl ) is a classic post-colonial Sudanese novel by the novelist Tayeb Salih.\n\n Originally published in Arabic in 1966, it has since been translated into more than twenty languages.\n\n Salih was fluent in both English and Arabic, but chose to pen this novel in Arabic.\n\n The English translation was published in 1969 as part of the influential Heinemann African Writers Series.\n\n The novel is a counter narrative to \"Heart of Darkness\".\n\n It was described by Edward Said as one of the six great novels in Arabic literature.\n\n In 2001 it was selected by a panel of Arab writers and critics as the most important Arab novel of the twentieth century.",
+    "First North Americans\nFirst North Americans are a series of historical fiction novels published by Tor and written by husband and wife co-authors W. Michael Gear & Kathleen O'Neal Gear.\n\n The series, which began with 1990's \"People of the Wolf\", explores various civilizations and cultures in prehistoric North America.\n\n It is comparable to Jean M. Auel's \"Earth's Children\" series, set in prehistoric Europe, but each of its books focuses on a different time period, location, and set of characters.\n\n The first four novels form a coherent, more or less linear narrative, from the initial migration of Siberian peoples into what is now Canada and Alaska (People of the Wolf) through the florescence of the Mississippian semi-urban mound-building culture, considered the \"high-water mark\" of North American pre-Columbian civilization, around 1000 AD.\n\n The remaining novels cover a wide variety of times and settings, in no particular order, ranging from tropical Florida in the 6th millennium BC to the Chaco Empire of the Southwest in the 13th century AD.",
+    "Graph query row:\nwork: Season of Migration to the North\nrelation_to_Heart_of_Darkness: None\ncreator: Tayeb Salih\nrelated_work: Heart of Darkness\nrelated_work_creator: Joseph Conrad\nJoseph_Conrad: Joseph Conrad\nConrad_relation: CREATED_BY",
+    "The Chinese Agent\nThe Chinese Agent (1970) is a comic novel by Michael Moorcock.\n\n It is a revision of \"Somewhere in the Night\", which Moorcock published in 1966 under the pseudonym Bill Barclay.\n\n Although Moorcock is best known as the author of fantasy fiction and science fiction-based parables such as \"Behold the Man\" and \"The Dancers at the End of Time\", here he writes a light-hearted caper that parodies the spy novel genre.",
+    "Merlin's Wood\nMerlin's Wood; or, The Vision of Magic is a short novel by British writer Robert Holdstock, first published in the United Kingdom in 1994.\n\n The novel is considered part of the \"Mythago Wood\" cycle, but takes place in Brittany, France instead of Herefordshire, England.\n\n The work has all new characters and focuses on the mythical birthplace and burial site of Merlin, the magical wood Brocéliande.\n\n Brocéliande is a smaller version of Ryhope wood where British myth predominates.",
+    "John Howard (author)\nJohn Howard is an English author, born in London in 1961.\n\n His fiction has appeared in anthologies, magazines, and the collections \"The Silver Voices\", \"Written by Daylight\", and \"Cities and Thrones and Powers\".\n\n The majority of Howard's stories have central and eastern European settings; many are set in the fictional Romanian town of Steaua de Munte.\n\n \"The Defeat of Grief\" is a novella set in Steaua de Munte and the real Black Sea resort of Balcic; the novellas \"The Fatal Vision\" (in \"Cities and Thrones and Powers\") and \"The Lustre of Time\" form part of an ongoing series with Steaua de Munte architect and academic Cristian Luca as protagonist.\n\n \"Numbered as Sand or the Stars\" attempts a 'secret history' of Hungary between the World Wars.",
+    "First North Americans\nThe novels take into account new developments in North American archaeology such as the discovery of Kennewick Man and the development of the coastal-route model as a possible alternative or supplement to overland migration across Beringia.",
+    "The Stranger (novel)\nL’Étranger (The Outsider [UK], or The Stranger [US]) is a 1942 novel by French author Albert Camus.\n\n Its theme and outlook are often cited as examples of Camus' philosophy of the absurd and existentialism, though Camus personally rejected the latter label.",
+    "Some Kind of Fairy Tale\nSome Kind of Fairy Tale is a 2012 novel by the British author Graham Joyce.\n\n A work of speculative fiction, it won the British Fantasy Society's Fantasy Novel of the Year award (the Robert Holdstock Award) in 2013.\n\n Film rights to the novel have been sold and a potential movie is in the development stage."
+   ]
+  },
+  {
+   "id": "b67f7d1156867d3e",
+   "gold": [
+    {
+     "sentence": "The Wire Fox Terrier is a breed of dog, one of many terrier breeds.",
+     "facts": {
+      "0.0": "The Wire Fox Terrier is a breed of dog.",
+      "0.1": "The Wire Fox Terrier is one of many terrier breeds."
+     }
+    },
+    {
+     "sentence": "The West Siberian Laika or \"WSL\", is a breed of hunting dog and a breed of spitz type.",
+     "facts": {
+      "1.0": "The West Siberian Laika, also called WSL, is a breed of hunting dog.",
+      "1.1": "The West Siberian Laika, also called WSL, is a breed of spitz type."
+     }
+    }
+   ],
+   "items": [
+    "Teddy Roosevelt Terrier\nThe Teddy Roosevelt Terrier is a small to medium-sized American hunting terrier.\n\n Lower-set with shorter legs, more muscular, and heavier bone density than its cousin the American Rat Terrier.\n\n There is much diversity in the history of the Teddy Roosevelt Terrier breed and it shares a common early history with the American Rat Terrier, Fox Paulistinha and Tenterfield Terrier.\n\n It is said the Rat Terrier background stems from the terriers or other dogs that were brought over by early English and other working class immigrants.\n\n Since the breed was a farm, hunting and utility dog there was little to no planned breeding other than breeding dogs with agreeable traits to each other in order to produce the desired work ethic in the dog.\n\n It is assumed that the Feist (dog), Bull Terrier, Smooth Fox Terrier, Manchester Terrier, Whippet, Italian Greyhound, the now extinct English White Terrier, Turnspit dog and or Wry Legged Terrier all share in the Teddy Roosevelt Terrier's ancestry.\n\n These early Ratting Terriers were then most likely bred to the Beagle or Beagle cross bred dogs (for increased scenting ability) and other dogs.",
+    "German Spitz\nGerman Spitz is used to refer to both a breed of dog and category or type of dog.\n\n Several modern breeds have been developed from the German Spitz, and are either registered as separate breeds or as varieties of German Spitz.\n\n All the \"German Spitz type\" dogs are dogs of the Spitz type of German origin.\n\n The Großspitz, Mittelspitz, and Kleinspitz breeds of \"German Spitz type\" are also called the German Spitz in English.",
+    "Wire Fox Terrier\nThe Wire Fox Terrier is a breed of dog, one of many terrier breeds.\n\n It is a fox terrier, and although it bears a resemblance to the smooth fox terrier, they are believed to have been developed separately.",
+    "Fox Terrier\nFox Terriers are two different breeds of the terrier dog type: the Smooth Fox Terrier and the Wire Fox Terrier.\n\n Both of these breeds originated in the 19th century from a handful of dogs who are descended from earlier varieties of British terriers, and are related to other modern white terrier breeds.\n\n In addition, a number of breeds have diverged from these two main types of fox terrier and have been recognised separately, including the Jack Russell Terrier, Miniature Fox Terrier and Rat Terrier.\n\n The Wire and Smooth Fox Terriers share similar characteristics, the main differences being in the coat and markings.\n\n They have been successful in conformation shows, more prominently in America than their homeland.",
+    "West Siberian Laika\nThe West Siberian Laika or \"WSL\", is a breed of hunting dog and a breed of spitz type.\n\n Russian publications indicate that the term West Siberian Laika loosely applied to hunting dogs originating with the Mansi and Khanty people in Ural and West Siberia, but there were no standards or registrations of WSL as such until 1930.\n\n Then WWll disrupted it for a while, but \"systematic breeding with registrations\" resumed after the war ended, in 1946.\n\n This was the time the breed began taking modern shape.\n\n Before that hunters only knew of Mansi Laika and Khanty Laika.\n\n In early 1960 many hunters in Ural still preferred the term Mansi Laika, when speaking of West Siberian Laika.\n\n In Russian language, the term Laika originated from the word \"layat\" that means to bark.\n\n The word Laika simply means \"barker\".\n\n Any hunting Laika is a bark pointer (pointing at animal of interest by barking and staying with the animal ).\n\n It is a versatile dog depending on use and environment, but in certain parts of the country they have become more specialized.",
+    "Old Jock\nOld Jock (1859–1871), was a Fox Terrier famous during the late 19th and early 20th centuries.\n\n A mostly white dog, he ran briefly with a hunting kennel before becoming a show dog, most notably with a victory at the show which popularised the Fox Terrier.\n\n His main show rivalry was with a dog named Tartar, and along with a dog named Trap, the three were popular sires of the Fox Terrier breed.\n\n He was also involved in the early formation of the Jack Russell Terrier and the Dandie Dinmont Terrier breeds.",
+    "Signal Circuit of Halleston\nSignal Circuit of Halleston was a Wire Fox Terrier and winner of the 1926 Westminster Kennel Club Dog Show.\n\n This was the 50th Westminster show, and the fourth Fox Terrier to win best in show.",
+    "German Spitz (Klein)\nThe German Spitz Klein is a breed of dog of the German Spitz type.\n\n They are usually classed as a toy or utility breed.",
+    "Chien Français Blanc et Noir\nThe Chien Français Blanc et Noir (FCI No.220) translated into English as the French White and Black Hound, is a breed of dog of the scenthound type, originating in France.\n\n The breed is used for hunting in packs and descends from the old Hound of Saintonge type of large hunting dog.",
+    "Bulldog\nThe Bulldog is a medium-sized breed of dog commonly referred to as the English Bulldog or British Bulldog.\n\n Other scent-hound breeds include the Small Greek Domestic Dog, Irish Wolfhound, Bluetick Coonhound, Finnish Lapphund, and the Basset Hound.\n\n The Bulldog is a muscular, hefty dog with a wrinkled face and a distinctive pushed-in nose.\n\n The American Kennel Club (AKC), The Kennel Club (UK), and the United Kennel Club (UKC) oversee breeding records.\n\n Bulldogs were the fourth most popular purebreed in the US in 2007 according to the American Kennel Club."
+   ]
+  },
+  {
+   "id": "9e3dc35cbfe5e96b",
+   "gold": [
+    {
+     "sentence": "Jelena Janković (Serbian Cyrillic: Јелена Јанковић, ] , born 28 February 1985) is a Serbian professional tennis player.",
+     "facts": {
+      "0.0": "Jelena Janković was born on 28 February 1985.",
+      "0.1": "Jelena Janković's name is written in Serbian Cyrillic as Јелена Јанковић.",
+      "0.2": "Jelena Janković is a Serbian professional tennis player."
+     }
+    },
+    {
+     "sentence": "Marat Mubinovich Safin (Russian: Мара́т Муби́нович Са́фин ; ] , Tatar: Марат Мөбин улы Сафин \"Marat Möbin uğlı Safin\" ; born 27 January 1980) is a Russian politician and retired professional tennis player.",
+     "facts": {
+      "1.0": "Marat Mubinovich Safin's name is written in Russian as Мара́т Муби́нович Са́фин.",
+      "1.1": "Marat Mubinovich Safin's name is written in Tatar as Марат Мөбин улы Сафин.",
+      "1.2": "Marat Mubinovich Safin's Tatar name is romanized as Marat Möbin uğlı Safin.",
+      "1.3": "Marat Mubinovich Safin was born on 27 January 1980.",
+      "1.4": "Marat Mubinovich Safin is a Russian politician.",
+      "1.5": "Marat Mubinovich Safin is a retired professional tennis player."
+     }
+    }
+   ],
+   "items": [
+    "Jelena Janković career statistics\nThis is a list of the main career statistics of Serbian professional tennis player and former World No. 1, Jelena Janković.\n\n To date, Janković has won 15 WTA singles titles including four WTA Tier I singles titles, one WTA Premier Mandatory singles title and one WTA Premier 5 singles title.\n\n Janković was also the runner-up in singles at the 2008 US Open, a semi-finalist at the year-ending WTA Tour Championships in 2008, 2009 and 2013 and a quarterfinalist at the 2008 Beijing Olympics.",
+    "2008 Wimbledon Championships – Mixed Doubles\nJamie Murray and Jelena Janković were the defending champions, but Janković chose not to participate, and only Murray competed that year.",
+    "Dinara Safina career statistics\nThis is a list of the main career statistics of retired, Russian professional tennis player, Dinara Safina.\n\n Throughout her career, Safina won twelve WTA singles titles including three Tier I singles titles at the 2008 Qatar Telecom German Open, Rogers Cup and Toray Pan Pacific Open respectively; one Premier Mandatory singles title at the 2009 Mutua Madrileña Madrid Open and one Premier 5 singles title at the 2009 Internazionali BNL d'Italia.\n\n She was also the runner-up at the 2008 French Open and the 2009 Australian Open and French Open as well as a silver medalist in singles at the 2008 Beijing Olympics.",
+    "Iveta Benešová\nIveta Benešová (] ) (formerly Melzer, Czech: Melzerová ; born 1 February 1983) is a Czech former professional tennis player.\n\n She began playing tennis at age of 7 and turned professional in 1998 in Prague.\n\n She has won two WTA Tour events and one Grand Slam in mixed doubles partnering with Jürgen Melzer at the 2011 Wimbledon Championships.\n\n On 14 September 2012 she married Jürgen Melzer and adopted his family name.\n\n She announced her retirement from professional tennis via her Facebook page 13/08/2014.\n\n In 2015, she divorced Melzer and reverted to using her maiden name.",
+    "Ana Ivanovic career statistics\nThis is a list of the main career statistics of Serbian professional tennis player, Ana Ivanovic.\n\n Ivanovic won fifteen WTA singles titles including one grand slam singles title at the 2008 French Open and three WTA Tier I singles titles.\n\n She was also the runner-up at the 2007 French Open and 2008 Australian Open and a semi-finalist at the 2007 Wimbledon Championships and 2007 WTA Tour Championships.\n\n On June 9, 2008 Ivanovic became the world No. 1 for the first time in her career.",
+    "Marat Safin\nMarat Mubinovich Safin (Russian: Мара́т Муби́нович Са́фин ; ] , Tatar: Марат Мөбин улы Сафин \"Marat Möbin uğlı Safin\" ; born 27 January 1980) is a Russian politician and retired professional tennis player.\n\n He achieved the Association of Tennis Professionals (ATP) world No. 1 singles ranking on November 20, 2000.\n\n Nobody taller than Safin has ever reached his world number-one ranking.\n\n Safin is the older brother of former world No. 1 WTA player, Dinara Safina.\n\n They are the first and only brother–sister tandem in tennis history who have both achieved No. 1 rankings.\n\n On court, Safin was famous for his emotional outbursts and sometimes fiery temper.",
+    "Jelenin svet\nJelenin svet (\"Jelena's World\") is a 2008 independent documentary film written and directed by Tanja Brzaković, about former World No. 1 female tennis player, Jelena Janković.",
+    "2014 Rogers Cup – Women's Doubles\nJelena Janković and Katarina Srebotnik were the defending champions, but they chose not to compete together.\n\n Janković played alongside Klára Koukalová, but lost in the second round to Michaëlla Krajicek and Barbora Záhlavová-Strýcová.\n\n Srebotnik teamed up with Květa Peschke, but lost in the second round to Chan Hao-ching and Chan Yung-jan.\n\n<br>",
+    "Jelena Janković\nJelena Janković (Serbian Cyrillic: Јелена Јанковић, ] , born 28 February 1985) is a Serbian professional tennis player.\n\n Janković is a former World No. 1 in singles, a ranking achieved preceding her finals appearance at the 2008 US Open.\n\n Janković's career highlights include winning the 2007 Wimbledon Mixed Doubles title with Jamie Murray, the 2010 Indian Wells Masters, the Internazionali BNL d'Italia twice, in 2007 and 2008, and the aforementioned appearance in the finals of the 2008 US Open.\n\n She is coached by her brother Marko.",
+    "Ivanovic–Janković rivalry\nSerbian tennis players Ana Ivanovic and Jelena Janković are both former world No. 1 and have met 12 times so far.\n\n Their overall head-to-head series is 9–3, in Ivanovic's favor.\n\n Janković is two years older than Ivanovic, so their paths connect them to play each other.\n\n They are the first female players to achieve major successes for independent Serbia."
+   ]
+  }
+ ]
+}

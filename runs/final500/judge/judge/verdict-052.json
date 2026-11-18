@@ -1,0 +1,76 @@
+[
+  {"id": "b876c0612846dc37", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "That answer ultimately lies with the jury"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "which was selected on Wednesday morning"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "lawyers for the government and then Bankman-Fried swapped two very different stories"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 9, "quote": "different stories of the former crypto mogul’s sudden rise and almost instantaneous fall"}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX?"}, {"item": 3, "quote": "Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "has been found guilty on seven counts including charges of wire fraud"}, {"item": 2, "quote": "Bankman-Fried is charged with seven counts: two counts of wire fraud and five conspiracy charges"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal"}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 1, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]}
+  ]},
+  {"id": "1429f08030a8784d", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "With this sale, they offer some of the best value in their class"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "they offer some of the best value in their class from one of the top names in the business"}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "fb5b2a88a9dd4b10", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "it was ChatGPT’s explosion into public consciousness that thrust Altman into the spotlight as a face of generative AI"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "spotlight as a face of generative AI — technology that can produce novel imagery, passages of text and other media"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "There was no attempt to remove Sam Altman from OpenAI by the co-founders of Anthropic,” said an Anthropic spokesperson, Sally Aldous."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "Sam is one of the most generous and caring people I know."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know."}]},
+    {"fact": "3.0", "status": "stated", "evidence": [{"item": 10, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+    {"fact": "3.1", "status": "stated", "evidence": [{"item": 10, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+    {"fact": "3.2", "status": "stated", "evidence": [{"item": 10, "quote": "this is the prevailing theory floating around right now"}]}
+  ]},
+  {"id": "6603f4784c9576da", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Altman backs teen entrepreneurs: Sam Altman is among the backers of an AI startup, founded by two teenagers"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "This week was Google’s annual hardware event"}]},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "In the year since Altman catapulted ChatGPT to global fame"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "he has become Silicon Valley’s sought-after voice on the promise and potential dangers of artificial intelligence"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "he has become Silicon Valley’s sought-after voice on the promise and potential dangers of artificial intelligence"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "his sudden and mostly unexplained exit brought uncertainty to the industry’s future"}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "3.0", "status": "stated", "evidence": [{"item": 6, "quote": "this is the prevailing theory floating around right now"}]},
+    {"fact": "3.1", "status": "stated", "evidence": [{"item": 6, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now"}]},
+    {"fact": "3.2", "status": "stated", "evidence": [{"item": 6, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now"}]}
+  ]},
+  {"id": "612a3fdd8c3ec702", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "That answer ultimately lies with the jury"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "which was selected on Wednesday morning"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal"}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 4, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]}
+  ]},
+  {"id": "93b88150d536b3fc", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue"}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]}
+]

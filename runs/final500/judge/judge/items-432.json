@@ -1,0 +1,404 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "47a27ddb307b1b86",
+   "gold": [
+    {
+     "sentence": "Akademisches Kunstmuseum (English:Academic Art Museum) is an art museum in Bonn, Germany.",
+     "facts": {
+      "0.0": "Akademisches Kunstmuseum is also known in English as the Academic Art Museum.",
+      "0.1": "Akademisches Kunstmuseum is an art museum.",
+      "0.2": "Akademisches Kunstmuseum is located in Bonn, Germany."
+     }
+    },
+    {
+     "sentence": "The Federal City of Bonn (] ) is a city on the banks of the Rhine in the German state of North Rhine-Westphalia, with a population of over 300,000.",
+     "facts": {
+      "1.0": "The Federal City of Bonn is a city.",
+      "1.1": "The Federal City of Bonn is on the banks of the Rhine.",
+      "1.2": "The Federal City of Bonn is in the German state of North Rhine-Westphalia.",
+      "1.3": "The Federal City of Bonn has a population of over 300,000."
+     }
+    }
+   ],
+   "items": [
+    "National Museum, Kraków\nThe National Museum in Kraków (Polish: \"Muzeum Narodowe w Krakowie\" ), popularly abbreviated as MNK, established in 1879, is the main branch of Poland's National Museum, which has several independent branches with permanent collections around the country.\n\n The Museum consists of 21 departments which are divided by art period; 11 galleries, 2 libraries, and 12 conservation workshops.\n\n It holds some 780,000 art objects, spanning from classical archeology to modern art, with special focus on Polish painting.\n\n<ref name=\"culture.pl/muzea\"> </ref><ref name=\"muzeum/Zbiory\"> </ref>",
+    "Alutiiq Museum\nThe Alutiiq Museum or Alutiiq Museum and Archaeological Repository is a non-profit museum and cultural center dedicated to preserving and sharing the cultural traditions of the Koniag Alutiiq branch of Sugpiaq ~ Alutiiq of the Alaska Native people.\n\n The museum is a state-of-the-art facility and is located on the first floor of the \"Alutiiq Center\" of Kodiak, Alaska.\n\n Alutiiq Museum is one of three museums in Kodiak.\n\n The museum is the seventh museum in Alaska and the second \"tribal museum\" in the United States to be accredited.\n\n The museum provides tours of its exhibits, laboratory and collections storage facilities to educational groups.\n\n The museum will accept materials relevant to the prehistoric, historic, and contemporary cultural history of the Native peoples who settled the Koniag Alutiiq Nation.\n\n Such materials include, but are not limited to, archaeological, ethnological, photographic, film, audio, archival, and natural history specimens.",
+    "Croatian Natural History Museum\nThe Croatian Natural History Museum (Croatian: \"Hrvatski prirodoslovni muzej\" ) is the oldest and biggest natural history museum and the main body for natural history research, preservation and collection in Croatia.\n\n Located on Dimitrije Demeter Street in Gornji Grad, one of the oldest neighbourhoods of the Croatian capital Zagreb, it owns one of the biggest museum collections in Croatia, with over 2 million artefacts, including over 1.1 million animal specimens.\n\n It was founded in 1846 as the \"National Museum\".\n\n The National Museum was later split up into five museums, three of which were in 1986 merged as departments of the newly named Croatian Natural History Museum.\n\n The museum contains a large scientific library open to the public, and publishes the first Croatian natural history scientific journal, \"Natura Croatica\".",
+    "Alutiiq Museum\nThis cultural center features a gallery, storage for more than 190,000 local artifacts, including faunal materials, ethnobotanical samples, sediment samples, field notes, photographs, and maps and a research laboratory.\n\n The Alutiiq Museum is a small repository, but we care for a very large collection with nearly 250,000 items.\n\n As a newly founded institution, the Alutiiq Museum sought to develop its policies and practices in professional ways.\n\n The Alutiiq Museum also uses its collections for community-building among the Alutiiq.\n\n The Alutiiq Museum is supported and governed by the Alutiiq Heritage Foundation and is dedicated to preserving and sharing Alutiiq heritage.",
+    "University of Copenhagen\nThe University of Copenhagen (UCPH) (Danish: \"Københavns Universitet\" ) is the oldest university and research institution in Denmark.\n\n Founded in 1479 as a studium generale, it is the second oldest institution for higher education in Scandinavia after Uppsala University (1477).\n\n The university has 23,473 undergraduate students, 17,398 postgraduate students, 2,968 doctoral students and over 9,000 employees.\n\n The university has four campuses located in and around Copenhagen, with the headquarters located in central Copenhagen.\n\n Most courses are taught in Danish; however, many courses are also offered in English and a few in German.\n\n The university has several thousands of foreign students, about half of whom come from Nordic countries.",
+    "- **J. Robert Donnelly Husky Heritage Sports Museum:** UConn campus museum opened 2002; celebrates Huskies athletics with trophies, memorabilia, video displays, and a basketball championship exhibit.\n- **Jeonju National Museum:** South Korean national museum opened in 1990.\n- **Croatian Natural History Museum:** Zagreb institution founded in 1846; Croatia’s largest natural-history museum, with over 2 million items and a public scientific library.\n- **National",
+    "Akademisches Kunstmuseum\nAkademisches Kunstmuseum (English:Academic Art Museum) is an art museum in Bonn, Germany.\n\n It is the oldest museum in Bonn and houses the antique collection of the University of Bonn with more than 500 antique statues and reliefs, and over 2,000 originals.\n\n It is located in a neoclassical building at the southern end of the Hofgarten, near the Electoral Palace.",
+    "Animal Demography Unit\nThe Animal Demography Unit (ADU) is a formally recognized research unit of the University of Cape Town (UCT) located within the Department of Biological Sciences of UCT.\n\n (The Department of Biological Sciences was formed from the merger of the Department of Botany and the Department of Zoology at the start of the 2013 academic year).\n\n The Animal Demography Unit, popularly known as the ADU, was responsible for the management of the First and Second Southern African Bird Atlas Projects SABAP1 and SABAP2.\n\n The unit has submitted over eight million georeferenced biodiversity records to GBIF.",
+    "National Museum of Poland\n\"National Museum of Poland\" is the common name for several of the country's largest and most notable museums. Poland's National Museum comprises several independent branches, each operating a number of smaller museums.\n\n The main branch is the National Museum in Kraków (Polish: \"Muzeum Narodowe w Krakowie\" ), established in 1879 with permanent collections consisting of several hundred thousand items – kept in big part at the Main Building (along the 3 Maja St.), but also in the eight of its divisions around the city.",
+    "Bonn\nThe Federal City of Bonn (] ) is a city on the banks of the Rhine in the German state of North Rhine-Westphalia, with a population of over 300,000.\n\n About 24 km south-southeast of Cologne, Bonn is in the southernmost part of the Rhine-Ruhr region, Germany's largest metropolitan area, with over 11 million inhabitants."
+   ]
+  },
+  {
+   "id": "6fc730cccd5c436f",
+   "gold": [
+    {
+     "sentence": "The Appenzeller Sennenhund is a medium-size breed of dog, one of the four regional breeds of Sennenhund-type dogs from the Swiss Alps.",
+     "facts": {
+      "0.0": "The Appenzeller Sennenhund is a medium-size breed of dog.",
+      "0.1": "The Appenzeller Sennenhund is one of the four regional breeds of Sennenhund-type dogs.",
+      "0.2": "The Sennenhund-type dogs come from the Swiss Alps."
+     }
+    },
+    {
+     "sentence": " The name Sennenhund refers to people called \"Senn\", herders in the Appenzell region of Switzerland.",
+     "facts": {
+      "1.0": "The name Sennenhund refers to people called \"Senn\".",
+      "1.1": "The Senn people are herders in the Appenzell region of Switzerland."
+     }
+    },
+    {
+     "sentence": "The Drentsche Patrijshond is a versatile spaniel-type hunting dog from the Dutch province of Drenthe.",
+     "facts": {
+      "2.0": "The Drentsche Patrijshond is a versatile spaniel-type hunting dog.",
+      "2.1": "The Drentsche Patrijshond is from the Dutch province of Drenthe."
+     }
+    }
+   ],
+   "items": [
+    "Dutch Shepherd\nThe Dutch Shepherd is a herding dog of Dutch origin.\n\n They were used by shepherds and farmers who needed a versatile dog, with few demands, and a dog that was able to adapt to a harsh and meager existence.",
+    "Swiss mountain dog\nSennenhund, called Swiss mountain dogs or Swiss cattle dogs in English, are a type of dog originating in the Swiss Alps.\n\n The Sennenhund are farm dogs of the general molosser type.\n\n There are four breeds of Sennenhund, all sporting a unique tricolor coat.\n\n While the two larger ones share a heavy build and a calm temperament, the two smaller ones are more agile.\n\n The breeds range from medium in size to very large.\n\n The name Sennenhund refers to people called \"Senn\" or Senner, Swiss alpine herdsmen and dairymen, and does not translate as \"mountain\" or \"cattle\".",
+    "Greater Swiss Mountain Dog\nThe Greater Swiss Mountain Dog (German: \"Grosser Schweizer Sennenhund\" or French: \"Grand Bouvier Suisse\" ) is a dog breed which was developed in the Swiss Alps.\n\n The name \"Sennenhund\" refers to people called \"Senn\" or \"Senner\", dairymen and herders in the Swiss Alps.\n\n Greater Swiss Mountain Dogs are almost certainly the result of indigenous dogs mating with large mastiff types brought to Switzerland by foreign settlers.\n\n At one time, the breed was believed to have been among the most popular in Switzerland.\n\n It was assumed to have almost died out by the late 19th century, since its work was being done by other breeds or machines, but was rediscovered in the early 1900s.",
+    "American Eskimo: German Spitz-derived companion/watchdog, renamed amid WWI prejudice; popular U.S. circus performer. English Springer: affectionate gun dog for flushing/retrieving, also sniffer; recognized 1902, with show/working lines. German Spitz Klein: small German Spitz-type toy/utility dog. Picardy Spaniel: older French hunting spaniel, weatherproof; now less popular, prone to ear infections. Welsh Springer: red-and-white hunting dog, loyal",
+    "Appenzeller cheese is Swiss hard cow’s-milk cheese cured with herbal brine. Swiss Sennenhunde are four tricolored Alpine farm-dog breeds; the Greater Swiss was revived in the early 1900s, while the Entlebucher is smallest, Bernese served as farm and draft dog, and Appenzeller is medium-sized. Switzerland’s Appenzell also produced two chicken varieties. Australia has about 123 million hectares of native forest. Canine degenerative my",
+    "Entlebucher Mountain Dog\nThe Entlebucher Sennenhund or Entlebucher Mountain Dog is a medium-sized herding dog, it is the smallest of the four Sennenhunds, a dog type that includes four regional breeds.\n\n The name Sennenhund refers to people called \"Senn\", herders in the Swiss Alps.\n\n Entlebuch is a region in the canton of Lucerne in Switzerland.\n\n The breed is also known in English as the Entelbuch Mountain Dog, Entelbucher Cattle Dog, and similar combinations.",
+    "Drentse Patrijshond\nThe Drentsche Patrijshond is a versatile spaniel-type hunting dog from the Dutch province of Drenthe.\n\n Called the Dutch Partridge Dog (or \"Drent\" for Drenthe) in English, approximately 5,000 dogs are registered with the breed club in the Netherlands, and breed clubs operate in Belgium, Denmark, Scandinavia and North America.\n\n The Drentsche Patrijshond bears some resemblance to both spaniel and setter types of dog.\n\n An excellent pointer and retriever, this dog is often used to hunt fowl and adapts equally well to the field or marshes.",
+    "Bernese Mountain Dog\nThe Bernese Mountain Dog (German: \"Berner Sennenhund\" ) is a large-sized breed of dog, one of the four breeds of Sennenhund-type dogs from the Swiss Alps.\n\n The name \"Sennenhund\" is derived from the German \"Senne\" (\"alpine pasture\") and \"Hund\" (\"dog\"), as they accompanied the alpine herders and dairymen called \"Senn\".\n\n \"Berner\" (or \"Bernese\" in English) refers to the area of the breed’s origin, in the canton of Bern.\n\n This mountain dog was originally kept as a general farm dog.\n\n Large Sennenhunde in the past were also used as draft animals, pulling carts.\n\n The breed was officially established in 1907.\n\n In 1937, the American Kennel Club recognized it; today, the club classifies it as a member of the Working Group.",
+    "Appenzeller Sennenhund\nThe Appenzeller Sennenhund is a medium-size breed of dog, one of the four regional breeds of Sennenhund-type dogs from the Swiss Alps.\n\n The name Sennenhund refers to people called \"Senn\", herders in the Appenzell region of Switzerland.",
+    "Appenzeller (chicken)\nThe Appenzeller is a breed of chicken originating in Appenzell region of Switzerland.\n\n The Appenzeller comes in two varieties.\n\n The Spitzhauben variety, meaning \"pointed hood\", has a V-comb and feather crests in males and females.\n\n The word 'spitzhauben' derives from the frilly hat worn by the women in the Appenzeller region in Switzerland.\n\n The breed was imported into America by a doctor.\n\n The Barthuhner (\"bearded hen\") has a rose comb and no crest.\n\n Both types appear in either black, golden spangled and silver spangled plumage.\n\n They are mostly a show breed, but are decent egg layers.\n\n They lay small white eggs about 5 times per week."
+   ]
+  },
+  {
+   "id": "567291af6ad37fc6",
+   "gold": [
+    {
+     "sentence": "Chalk and Cheese was a short lived sitcom television show, featuring Michael Crawford and Robin Hawdon.",
+     "facts": {
+      "0.0": "Chalk and Cheese was a short-lived sitcom television show",
+      "0.1": "Chalk and Cheese featured Michael Crawford",
+      "0.2": "Chalk and Cheese featured Robin Hawdon"
+     }
+    },
+    {
+     "sentence": "Michael Patrick Smith, {'1': \", '2': \", '3': \", '4': \"} (born 19 January 1942), known as Michael Crawford, is an English actor, comedian and singer.",
+     "facts": {
+      "1.0": "Michael Patrick Smith is known as Michael Crawford",
+      "1.1": "Michael Patrick Smith was born 19 January 1942",
+      "1.2": "Michael Crawford is English",
+      "1.3": "Michael Crawford is an actor",
+      "1.4": "Michael Crawford is a comedian",
+      "1.5": "Michael Crawford is a singer"
+     }
+    }
+   ],
+   "items": [
+    "A Cream Cracker under the Settee\n\"A Cream Cracker Under The Settee\" is a dramatic monologue written by Alan Bennett in 1987 for television, as part of his \"Talking Heads\" series for the BBC.\n\n The series became very popular, moving onto BBC Radio, international theatre, becoming one of the best-selling audio book releases of all time and included as part of both the A-level and GCSE English syllabus.\n\n It was the sixth and final episode of the first series of \"Talking Heads\".",
+    "Robin Chalk\nRobin Chalk (born 1981) is an English actor, best known for his role as Neil Kellerman in the West End production of \"Dirty Dancing\" and his work on British science-fiction film \"Moon\" directed by Duncan Jones.",
+    "Christopher Guest\nChristopher Haden-Guest, 5th Baron Haden-Guest (born February 5, 1948), simply known as Christopher Guest, is an English-American screenwriter, composer, musician, director, actor, and comedian who holds dual British and American citizenship.\n\n Guest is most widely known in Hollywood for having written, directed and starred in his series of comedy films shot in mock-documentary (mockumentary) style.\n\n Many scenes and character backgrounds in Guest's films are written and directed, although actors have no rehearsal time and the ensemble improvise scenes while filming them.\n\n The series of films began with \"This Is Spinal Tap\" (directed by Rob Reiner), and continued with \"Waiting for Guffman\", \"Best In Show\", \"A Mighty Wind\", \"For Your Consideration\", and \"Mascots\".",
+    "Michael Crawford\nMichael Patrick Smith, {'1': \", '2': \", '3': \", '4': \"} (born 19 January 1942), known as Michael Crawford, is an English actor, comedian and singer.\n\n He has received great critical acclaim and won numerous awards during his career, which covers radio, television, film, and stagework on both London's West End and on Broadway in New York City.",
+    "Binomial pair\nIn linguistics, a binomial pair or binomial is a sequence of two or more words or phrases belonging to the same grammatical category, having some semantic relationship and joined by some syntactic device such as \"and\" or \"or\".\n\n Examples in English include \"through and through\", \"(without) let or hindrance\", and \"chalk and cheese\".",
+    "Dan Clark\nDaniel Gregory Clark (born 3 July 1976 in Bromley, London) is an English actor, comedian, writer, director, and singer.\n\n He is best known for playing Don Danbury on the BBC Three sitcom \"How Not to Live Your Life\", which he also wrote, co-produced, and sometimes directed.\n\n He has been a regular on the British comedy scene as both a sketch and stand-up comedian.",
+    "Richard Cheese\nRichard Cheese & Lounge Against the Machine is a cover band and comedy act, performing popular songs in a lounge/swing style, reminiscent of Frank Sinatra, Dean Martin, and Tony Bennett.\n\n Lounge singer Richard Cheese is a character created and portrayed by Los Angeles-based actor/comedian Mark Jonathan Davis.",
+    "Roger Kitter\nRoger Kitter (20 October 1949 – 3 January 2015) was an English actor best known for playing Captain Alberto Bertorelli in series 7 of the British sitcom TV series \"'Allo 'Allo!\n\n\".\n\n He had previously appeared weekly with Lulu throughout the 10-week run of her 1973 BBC1 series \"It's Lulu\".\n\n With Kaplan Kaye he also recorded a song \"Chalk Dust – the Umpire Strikes Back\" using the moniker 'The Brat'.\n\n Released on the Hansa label, it entered the UK Singles Chart on 10 July 1982; it reached a peak of number 19, and remained in the chart for 8 weeks.\n\n The song was a Top 10 hit in the Netherlands, Belgium and South Africa, and lampooned John McEnroe complaining about line calls in tennis (\"The ball's in, everyone can see that the ball's in!\")\n\n.\n\n He was also an impressionist, who provided the voice of Tommy Cooper in the Lego 'Kipper' advertisement.",
+    "Ken Barrie\nLeslie Hulme (9 January 1933 – 29 July 2016), known professionally as Ken Barrie, was an English voice actor and singer best known for narrating, and singing the theme tune of the BBC television programmes \"Postman Pat\" and \"Charlie Chalk\".\n\n He was also responsible for providing the voices of several of the series' characters.",
+    "Chalk and Cheese\nChalk and Cheese was a short lived sitcom television show, featuring Michael Crawford and Robin Hawdon."
+   ]
+  },
+  {
+   "id": "a32b7c9ed03b5f76",
+   "gold": [
+    {
+     "sentence": "Not Richard, But Dick is the seventh studio album by The Dead Milkmen, released in 1993 by Hollywood Records.",
+     "facts": {
+      "0.0": "Not Richard, But Dick is the seventh studio album by The Dead Milkmen.",
+      "0.1": "Not Richard, But Dick was released in 1993.",
+      "0.2": "Not Richard, But Dick was released by Hollywood Records."
+     }
+    },
+    {
+     "sentence": "The Dead Milkmen are an American punk rock band formed in 1983 in Philadelphia, Pennsylvania.",
+     "facts": {
+      "1.0": "The Dead Milkmen are an American punk rock band.",
+      "1.1": "The Dead Milkmen were formed in 1983.",
+      "1.2": "The Dead Milkmen were formed in Philadelphia, Pennsylvania."
+     }
+    }
+   ],
+   "items": [
+    "RPA &amp; The United Nations of Sound\nThe band played in Australia also during the Splendour in the Grass Festival in late July.\n\n The band's debut album as Richard's backing lineup, entitled \"United Nations of Sound\", was released on 19 July 2010.\n\n \"Born Again\", the first proper single, was officially released the same day of the album as a digital download.",
+    "Ricky Wilson (American musician)\nRicky Helton Wilson (March 19, 1953 – October 12, 1985) was an American musician best known as the original guitarist and founding member of rock band the B-52's.\n\n Born in Athens, Georgia, Wilson was the brother of fellow member Cindy Wilson.\n\n The B-52's was founded in 1977, when Ricky, his sister Cindy, Kate Pierson, Keith Strickland and Fred Schneider shared a tropical flaming volcano drink at a Chinese restaurant and, after an impromptu music session at the home of their friend Owen Scott III, played for the first time at a Valentine's Day party for friends.\n\n.\n\n Wilson's unusual guitar tunings were a large contribution to the band's quirky sound .",
+    "Richard Cheese\nRichard Cheese & Lounge Against the Machine is a cover band and comedy act, performing popular songs in a lounge/swing style, reminiscent of Frank Sinatra, Dean Martin, and Tony Bennett.\n\n Lounge singer Richard Cheese is a character created and portrayed by Los Angeles-based actor/comedian Mark Jonathan Davis.",
+    "The J. Geils Band\nThe J. Geils Band was an American rock band formed in 1968, in Worcester, Massachusetts, under the leadership of guitarist John \"J.\" Geils.\n\n The other band members included vocalist Peter Wolf, harmonica player Richard \"Magic Dick\" Salwitz, drummer Stephen Bladd, vocalist/keyboardist Seth Justman and bassist Danny Klein.\n\n Wolf and Justman served as principal songwriters.\n\n The band played R&B-influenced blues rock during the 1970s and soon achieved commercial success before moving towards a more mainstream radio-friendly sound in the early 1980s, which brought the band to its commercial peak.\n\n After Wolf left the band in 1983 to pursue a solo career, the band released one more album in 1984 with Justman on lead vocals before breaking up in 1985.\n\n Beginning in 1999, the band had several reunions prior to the death of its namesake founder J. Geils on April 11, 2017.",
+    "The White Stripes\nThe White Stripes were an American rock duo formed in 1997 in Detroit, Michigan.\n\n The group consisted of Jack White (songwriter, vocals, guitar, piano, and mandolin) and Meg White (drums and vocals).\n\n After releasing several singles and three albums within the Detroit music scene, The White Stripes rose to prominence in 2002, as part of the garage rock revival scene.\n\n Their successful and critically acclaimed albums \"White Blood Cells\" and \"Elephant\" drew attention from a large variety of media outlets in the United States and the United Kingdom, with the single \"Seven Nation Army\" and its guitar line becoming their signature song.\n\n The band recorded two more albums, \"Get Behind Me Satan\" in 2005 and \"Icky Thump\" in 2007, and dissolved in 2011 after a lengthy hiatus from performing and recording.",
+    "The V.I.P.s (band)\nThe V.I.P.s were a British R&B musical ensemble formed in Carlisle, Cumberland, (North West England) in late 1963, out of an earlier outfit known as The Ramrods, who had formed in Carlisle in 1960.\n\n After a change of personnel in April 1967, the band changed their name to \"Art\", and released the album \"Supernatural Fairy Tales\".\n\n They also participated to a psychedelic bizarre album called \"Featuring The Human Host And The Heavy Metal Kids\" by a collective known as Hapshash and the Coloured Coat, formed by Guy Stevens and an influential British graphic design and avant-garde musical partnership between Michael English and Nigel Waymouth.\n\n The musicians involved in that project were Mike Harrison on keys and vocals, Luther Grosvenor on guitars, Greg Ridley on bass and Mike Kellie on drums, as well as performances by Stevens, English and Waymouth.\n\n It was the first time that the term \"heavy metal\" was ever used in music, even though that album had nothing to do with heavy metal music, being closer to psychedelic music.",
+    "Dick Delicious and The Tasty Testicles\nDick Delicious and The Tasty Testicles are a comedy / metal band from Atlanta, Georgia.\n\n The band formed in 1992 and released 3 albums between 1995 and 2003.\n\n In 2003 the Dick Delicious received the \"Howard Stern Award for Musical Excellence\" and broke up shortly afterward.",
+    "Graph query row:\nalbum: Not Richard, But Dick\nband: The Dead Milkmen\ncity: Philadelphia",
+    "Not Richard, But Dick\nNot Richard, But Dick is the seventh studio album by The Dead Milkmen, released in 1993 by Hollywood Records.\n\n After being out of print for years, Hollywood Records decided to release the album for digital download as of April 2, 2013.",
+    "Electric Guitars\nElectric Guitars were an English band formed early in 1980 by Neil Davenport (vocals, lyrics) and Richard Hall (bass, vocals) who were both studying English at Bristol University.\n\n The band soon increased to a five-man line-up, with Andy Saunders (guitar, vocals), Matt Salt (drums) and Dick Truscott (keyboards), they also later added two backing singers: Sara and Wendy Patridge.\n\n Their first single \"Health\" / \"Continental Shelf\" was released on local label Fried Egg Records in 1980."
+   ]
+  },
+  {
+   "id": "94afc570d68ed94d",
+   "gold": [
+    {
+     "sentence": " He has been involved in numerous television projects as director, writer, producer and animator.",
+     "facts": {
+      "0.0": "The person described has been involved in numerous television projects.",
+      "0.1": "The person described has worked on television projects as a director.",
+      "0.2": "The person described has worked on television projects as a writer.",
+      "0.3": "The person described has worked on television projects as a producer.",
+      "0.4": "The person described has worked on television projects as an animator."
+     }
+    },
+    {
+     "sentence": "Béla Gaál (2 January 1893 – 18 February 1945) was a Hungarian film director.",
+     "facts": {
+      "1.0": "Bela Gaal was born on 2 January 1893.",
+      "1.1": "Bela Gaal died on 18 February 1945.",
+      "1.2": "Bela Gaal was a Hungarian film director."
+     }
+    }
+   ],
+   "items": [
+    "Ralph Bakshi\nRalph Bakshi (born October 29, 1938) is an American director of animated and live-action films.\n\n In the 1970s, he established an alternative to mainstream animation through independent and adult-oriented productions.\n\n Between 1972 and 2015, he directed ten theatrically released feature films, six of which he wrote.\n\n He has been involved in numerous television projects as director, writer, producer and animator.",
+    "Béla Gaál\nBéla Gaál (2 January 1893 – 18 February 1945) was a Hungarian film director.\n\n His 1930 film \"Csak egy kislány van a világon\" was the first sound film to be made in Hungary.",
+    "The entries span film, art, and music: *Cool and the Crazy* (1994) is Ralph Bakshi’s first live-action feature, about an unfaithful 1950s couple; *No eres tú, soy yo* (2010) is a Mexican remake of an Argentine comedy; and *The Straight Story* (1999) follows Alvin Straight’s 240-mile tractor journey to visit his estranged, ill brother. Other films include *Lilly the Witch",
+    "Tales of Budapest\nTales Of Budapest (Hungarian: \"Pesti mese\" ) is a 1937 Hungarian comedy film directed by Béla Gaál.",
+    "Dan Ouellette\nGiger and Beksinski, and he has been featured in magazines internationally.\n\n David Bowie commented while looking at Dan's art that he has noticed a strong influence of science fiction on contemporary art.\n\n Giger saw a different aspect, saying simply \"Very bony.\"\n\n He grew to adore the cinema of Fellini and later to marvel at Lynch's \"Eraserhead\".\n\n Rather than pursue a formal education in the fine arts he chose to study the craft of film making and after college he became a production designer working on feature films in New York City starting with his work as a production designer for Hal Hartley in 1990 with Trust and then, in 1992, with Simple Men.",
+    "Cool and the Crazy\nCool and the Crazy is a 1994 American drama film written and directed by Ralph Bakshi and starring Jared Leto and Alicia Silverstone.\n\n The story revolves around an unhappily married couple in the late 1950s who both lead separate affairs.\n\n The film was Bakshi's first feature-length live-action film, being primarily known as a director of animated films which heavily utilize live-action sequences, such as \"Fritz the Cat\", \"Heavy Traffic\", \"Wizards\", \"American Pop\" and \"The Lord of the Rings\".",
+    "The entries span adult animation, comedy, drama, westerns, science fiction, family films, and television. Ralph Bakshi’s *Fritz the Cat* (1972), the first U.S. animated feature rated X, and *Fire and Ice* (1983) contrast with his live-action *Cool and the Crazy*. Disney titles include *The Apple Dumpling Gang* films, *Darby O’Gill*, and *Home on the Range*. Other franchises include *The Naked",
+    "Fritz the Cat (film)\nFritz the Cat is a 1972 American adult animated comedy film written and directed by Ralph Bakshi.\n\n It was Bakshi's feature film debut and is loosely based on the Fritz the Cat comic strips by Robert Crumb.\n\n It was the first animated feature film to receive an X rating in the United States.",
+    "Fire and Ice (1983 film)\nFire and Ice is a 1983 American adult animated epic high fantasy adventure film directed by Ralph Bakshi.\n\n The film, a collaboration between Bakshi and Frank Frazetta, was distributed by 20th Century Fox, which also distributed Bakshi's 1977 release, \"Wizards\".\n\n The animated feature, based on characters Bakshi and Frazetta co-created, was made using the process of rotoscoping, in which scenes were shot in live action and then traced onto animation cels.",
+    "Heavy Traffic\nHeavy Traffic is a 1973 American adult animated comedy-drama film written and directed by Ralph Bakshi.\n\n The film, which begins, ends, and occasionally combines with live-action, explores the often surreal fantasies of a young New York cartoonist named Michael Corleone, using pinball imagery as a metaphor for inner-city life.\n\n \"Heavy Traffic\" was Bakshi and producer Steve Krantz's follow-up to the film \"Fritz the Cat\".\n\n Though producer Krantz made varied attempts to produce an R-rated film, \"Heavy Traffic\" was given an X rating by the MPAA.\n\n The film received positive reviews and is widely considered to be Bakshi's biggest critical success."
+   ]
+  },
+  {
+   "id": "91b2af8f5d55ad21",
+   "gold": [
+    {
+     "sentence": " The first of the books was optioned by Universal Pictures after a bidding war over the manuscript.",
+     "facts": {
+      "0.0": "The first of the books was optioned by Universal Pictures.",
+      "0.1": "The option followed a bidding war over the manuscript."
+     }
+    },
+    {
+     "sentence": " The company was founded in 1912 by Carl Laemmle, Mark Dintenfass, Charles O. Baumann, Adam Kessel, Pat Powers, William Swanson, David Horsley, Robert H. Cochrane, and Jules Brulatour, and is the oldest surviving film studio in the United States, the world's fourth oldest after Gaumont, Pathé and Nordisk Film, and the oldest in terms of the overall film market .",
+     "facts": {
+      "1.0": "The company was founded in 1912.",
+      "1.1": "The company was founded by Carl Laemmle, Mark Dintenfass, Charles O. Baumann, Adam Kessel, Pat Powers, William Swanson, David Horsley, Robert H. Cochrane, and Jules Brulatour.",
+      "1.2": "The company is the oldest surviving film studio in the United States.",
+      "1.3": "The company is the world's fourth oldest film studio, after Gaumont, Pathé and Nordisk Film.",
+      "1.4": "The company is the oldest film studio in terms of the overall film market."
+     }
+    }
+   ],
+   "items": [
+    "Bogle-L'Ouverture Publications\nBogle-L’Ouverture Publications (BLP) is a radical London-based publishing company founded in 1968 by Guyanese activists Jessica Huntley (23 February 1927 – 13 October 2013) and Eric Huntley (born 25 September 1929).\n\n Named in honour of two outstanding liberation fighters in Caribbean history, Toussaint L'Ouverture and Paul Bogle, the company began operating during a period in the UK when \"books by Black authors or written with a sympathetic view of Black people’s history and culture were rare in mainstream bookshops in the UK.\"\n\n Alongside New Beacon Books (founded in 1966) and Allison & Busby (founded in 1967), BLP was one of the first black-owned independent publishing companies in the UK.\n\n BLP has been described as \"a small, unorthodox, self-financing venture that brought a radical perspective to non-fiction, fiction, poetry and children's books.\"",
+    "Applewood Books\nApplewood Books is a book publishing company founded by Phil Zuckerman in 1976.\n\n They specialize in publishing exacting recreations of historic books, including complex reprints of children's art and pop-up books and other books published by methods which duplicate antique publishing techniques.\n\n They have more than 2000 titles in print.\n\n In recent years, the company has been working to increase the number of reprints it publishes.\n\n In 2007, the company published over 300 titles.",
+    "Joshua Bloom\nJoshua Simon Bloom (born June 8, 1974 in Washington, D.C.) is an American astrophysicist, full professor of astronomy at the University of California, Berkeley, and was the CTO and co-founder of the machine-learning company wise.io (acquired by General Electric, 2016).\n\n He received a Bachelor of Arts in astronomy and astrophysics and physics from the Harvard College in 1996, an M.Phil from Cambridge University in 1997, and a PhD in astronomy from the California Institute of Technology in 2002.\n\n He was a Junior Fellow of the Harvard Society of Fellows from 2002 to 2005.\n\n His astronomy research focuses on gamma-ray bursts and other astrophysical transients such as supernovae and tidal disruption events.\n\n He is author of the book \"What Are Gamma-Ray Bursts?\"\n\n published by Princeton University Press in 2011.",
+    "The entries profile publishers, periodicals, and literary figures: Random House imprints Villard and Simon & Schuster; Macedonian weekly *Makedonsko Sonce*; Nepalese regent and pioneering author Queen Tripurasundari; print-on-demand firm Mimeo; stamp reference Minkus; radical Black British publisher Bogle-L’Ouverture; spiritual media company Sounds True; historical reprint specialist Applewood; podsafe music network PMN; speculative-fiction zine *LC",
+    "Simon Bent\nSimon Bent is a British screenwriter and playwright, notable for work including BBC TV drama \"\" (2006), the screenplay for the feature film \"Christie Malry's Own Double-Entry\" (2000), and the Joe Orton biographical play \"Prick Up Your Ears\" based on John Lahr's book.",
+    "John Dunning (film producer)\nJohn Dunning (April 27, 1927–September 19, 2011) was a pioneering Canadian film producer from Montreal who co-founded the Canadian film production company Cinépix and produced early works by notable Canadian directors David Cronenberg and Ivan Reitman.\n\n Dunning launched Cinépix with partner André Link in Montreal in the early 1960s.\n\n Their biggest commercial success—and the first Canadian box office hit—came with Reitman’s \"Meatballs\" (1979).",
+    "Field Enterprises\nField Enterprises was a private holding company founded on August 31, 1944, by Marshall Field III and others whose main asset was the \"Chicago Sun\".\n\n That same year the company acquired the book publishers Simon & Schuster and Pocket Books.",
+    "Some Kind of Fairy Tale\nSome Kind of Fairy Tale is a 2012 novel by the British author Graham Joyce.\n\n A work of speculative fiction, it won the British Fantasy Society's Fantasy Novel of the Year award (the Robert Holdstock Award) in 2013.\n\n Film rights to the novel have been sold and a potential movie is in the development stage.",
+    "Simon &amp; Schuster\nSimon & Schuster, Inc. ( ), a subsidiary of CBS Corporation, is an American publishing company founded in New York City in 1924 by Richard Simon and Max Schuster.\n\n As of 2016, Simon & Schuster publishes 2,000 titles annually under 35 different imprints.",
+    "Simon Bloom\nSimon Bloom is a series of young adult novels by Michael Reisman.\n\n Set in the fictional town of Lawnville, New Jersey, it is about a boy who finds a book that lets him control the laws of physics.\n\n The first of the books was optioned by Universal Pictures after a bidding war over the manuscript."
+   ]
+  },
+  {
+   "id": "ad9d6a2be8e52175",
+   "gold": [
+    {
+     "sentence": "Catcha Lake is a Canadian lake located in the central part of Nova Scotia's Halifax Regional Municipality.",
+     "facts": {
+      "0.0": "Catcha Lake is a Canadian lake",
+      "0.1": "Catcha Lake is located in the central part of Nova Scotia's Halifax Regional Municipality"
+     }
+    },
+    {
+     "sentence": "The Hedley Mascot Mine was a gold mine in Hedley, British Columbia, Canada.",
+     "facts": {
+      "1.0": "The Hedley Mascot Mine was a gold mine",
+      "1.1": "The Hedley Mascot Mine was in Hedley, British Columbia, Canada"
+     }
+    }
+   ],
+   "items": [
+    "Electoral district of Bass\nThe Electoral district of Bass is an electoral district of the Victorian Legislative Assembly.\n\n It covers an area of 1,383 sqkm south east of Melbourne, stretching from outer suburban Pakenham through rural areas to the coast at Inverloch and Phillip Island.\n\n It includes the towns of Bass, Cape Patterson, Corinella, Cowes, Grantville, Inverloch, Kilcunda, Koo Wee Rup, Lang Lang, Rhyll, San Remo, Ventnor, Wonthaggi, and part of suburban Pakenham.\n\n It lies within the Eastern Victoria Region of the upper house, the Legislative Council.",
+    "Lake Shore Mine\nThe Lake Shore Mine is a gold mine located in Kirkland Lake, Ontario.\n\n In July 1912, Harry Oakes staked claims L-2605-6 which were in the lake itself and had reverted for non-performance of work.\n\n On September 6, 1912, he registered the transfer of claim L-1557 that Melville McDougall had staked for Oakes previously.\n\n On September 23, 1911, Harry Oakes registered the transfer of claim T-16635 from George Minaker and named the property Lake Shore.\n\n In production from 1918 to 1965, the mine produced almost 8.5 million ounces of gold and represented over a third of the gold produced in the entire camp.",
+    "Beaconsfield, Victoria\nBeaconsfield is a satellite suburb of Melbourne, Victoria, Australia, 46 km south-east of Melbourne's Central Business District, located within the Shire of Cardinia local government area.\n\n Beaconsfield recorded a population of 6,714 at the 2016 Census.",
+    "Hounsfield Heights/Briar Hill, Calgary\nHounsfield Heights/Briar Hill is an inner suburban neighbourhood in northwest Calgary, Alberta, Canada.\n\n Located north of the Hillhurst and West Hillhurst communities, the boundaries of the district are 16th Avenue N (Trans-Canada Highway)to the north; 14th Street W to the east; Lane north of 7th Avenue N to 19th Street W and 8th Avenue N to the south; and Crowchild Trail, 12th Avenue N, Juniper Road, and 22nd Street W to the west.\n\n Lions Park C-Train station is located within the community.\n\n The community is built on an escarpment and is popular for its views of downtown to the south and the Rocky Mountains to the west.",
+    "Hedley Mascot Mine\nThe Hedley Mascot Mine was a gold mine in Hedley, British Columbia, Canada.\n\n Gold was first discovered in the Nickel Plate Mountain area in 1897 and several small mines were developed over the years.\n\n The Hedley Mascot Mine operated between 1936 and 1949 and was one of the most unusual mining operations in the world, being built entirely on the side of a mountain, 5,000 feet above the town of Hedley or seven thousand feet above sea level.\n\n In the 1990s, the British Columbia government was going to burn the site down because it posed a safety risk, but the Minister of Tourism at the time intervened and, in 1995, steps were taken to preserve the site as a Provincial Heritage resource.",
+    "Catcha Lake\nCatcha Lake is a Canadian lake located in the central part of Nova Scotia's Halifax Regional Municipality.",
+    "Hedley, British Columbia\nHedley is an unincorporated town in southern British Columbia, Canada, named after Robert R. Hedley, the manager of the Hall Smelter in Nelson.\n\n Hedley is located at the foot of Nickel Plate Mountain in the Similkameen.\n\n The town had a population of approximately 400 as of 2005.\n\n In the early 1900s, Hedley's population peaked over 1,000 people, primarily due to the gold mining industry.\n\n The Hedley Museum and the Mascot Mine Museum display artifacts and photographs from this era.",
+    "Leviathan Mine\nLeviathan Mine is a United States superfund site (CERCLIS ID: CAD98067685) at an abandoned open-pit sulfur mine located in Alpine County, California.\n\n The mine is located at on the eastern slope of the Sierra Nevada at about 7,000 ft elevation, 6 mi east of Markleeville and 24 mi southeast of Lake Tahoe.\n\n The mine site comprises approximately 250 acre of land surrounded by the Toiyabe National Forest, which is only accessible a few months a year.\n\n The approximately 22 million tons of sulfur ore-containing crushed rock at the mine are responsible for contaminating the Leviathan and Aspen Creek, which join with Mountaineer Creek to form Bryant Creek which ultimately empties into the East Fork of the Carson River.\n\n These water bodies are listed as 303(d) impaired.\n\n The site location is seismically active.",
+    "Victor Diamond Mine\nThe Victor Diamond Mine is the first Canadian diamond mine located in Ontario, and De Beers' second diamond mine in Canada (after the Snap Lake Diamond Mine).\n\n It is located in the Northern Ontario Ring of Fire, in the James Bay Lowlands 90 km west of Attawapiskat in the remote northern part of the province.\n\n In June 2005, the Attawapiskat First Nation voted in favour (85.5%) of ratifying the Impact Benefit Agreement (IBA).\n\n Construction of the mine began in February 2006 which created 3200 positions; mining and operations will create around 400 permanent positions.\n\n The Victor Mine is an open-pit mine, with a processing plant, workshops, and an airstrip located on site.\n\n By 2013-2014 royalties collected from De Beers Victor Diamond Mine amounted to $226.\n\n At that time De Beers was continuing to pay off its \"$1 billion investment to build the mine and from now until it closes, the company expects to pay tens of millions of dollars in royalties.\"",
+    "Alpine National Park\nThe Alpine National Park is a national park located in the Central Highlands and Alpine regions of Victoria, Australia.\n\n The 646000 ha national park is located northeast of Melbourne.\n\n It is the largest National Park in Victoria, and covers much of the higher areas of the Great Dividing Range in Victoria, including Victoria's highest point, Mount Bogong at 1986 m and the associated subalpine woodland and grassland of the Bogong High Plains.\n\n The park's north-eastern boundary is along the border with New South Wales, where it abuts the Kosciuszko National Park.\n\n On 7 November 2008 the Alpine National Park was added to the Australian National Heritage List as one of eleven areas constituting the Australian Alps National Parks and Reserves."
+   ]
+  },
+  {
+   "id": "79c50c2d0e316f1f",
+   "gold": [
+    {
+     "sentence": "On February 25, 2017 he lost to Jarrett Hurd for the International Boxing Federation light middleweight world title.",
+     "facts": {
+      "0.0": "On February 25, 2017, this person lost to Jarrett Hurd.",
+      "0.1": "The February 25, 2017 loss was for the International Boxing Federation light middleweight world title."
+     }
+    },
+    {
+     "sentence": "Jarrett Hurd (born August 31, 1990) is an American light middleweight boxer from Accokeek, Maryland.",
+     "facts": {
+      "1.0": "Jarrett Hurd was born on August 31, 1990.",
+      "1.1": "Jarrett Hurd is an American light middleweight boxer.",
+      "1.2": "Jarrett Hurd is from Accokeek, Maryland."
+     }
+    }
+   ],
+   "items": [
+    "Steve Foster (boxer)\nSteve \"The Viking\" Foster ( (1960--) 28 1960 (age 56 ) ) born in Salford is a retired English professional boxer of the 1980s and '90s who won the Commonwealth light middleweight title and IBF Inter-Continental light middleweight title, and was a challenger for the World Boxing Association (WBA) Inter-Continental light middleweight title against Shaun Cummins, BBBofC British light middleweight title against Robert McCracken, International Boxing Federation (IBF) Inter-Continental light middleweight title against Bahre Ahmeti, World Boxing Organization (WBO) light middleweight title against Ronald \"Winky\" Wright, BBBofC British middleweight title against Howard Eastman, World Boxing Federation (WBF) middleweight title against Cornelius Carr, and International Boxing Organization (IBO) middleweight title against Mpush Makambi, his professional fighting weight varied from 146 lb , i.e. welterweight to 167 lb , i.e. super middleweight.",
+    "Nedal Hussein\nNedal \"Skinny\" Hussein (born 1 December 1977) is an Australian professional bantam/super bantam/feather/super feather/Lightweight boxer of the 1990s and 2000s who won the Australian super bantamweight title, Australian bantamweight title, International Boxing Federation (IBF) Pan Pacific featherweight title, World Boxing Federation (WBF) featherweight title, World Boxing Union (WBU) super bantamweight title, World Boxing Organization (WBO) Asia Pacific super featherweight title, International Boxing Federation (IBF) Pan Pacific super featherweight title, International Boxing Organization (IBO) Inter-Continental super featherweight title, and Commonwealth super bantamweight title, and was a challenger for the World Boxing Council (WBC) International super bantamweight title against Manny Pacquiao, World Boxing Council (WBC) super bantamweight title against Óscar Larios, World Boxing Organization (WBO) featherweight title against Scott Harrison, Oriental and Pacific Boxing Federation (OPBF) featherweight title against Hiroyuki Enoki,",
+    "Jack Marshman\nJack \"Hammer\" Marshman (born December 19, 1989) is a Welsh mixed martial artist.\n\n He was the Middleweight Cage Warriors Fighting Championship (CWFC) champion and Lonsdale Middleweight Champion.\n\n He currently competes in Middleweight division in the Ultimate Fighting Championship(UFC).",
+    "Scott Dixon (boxer)\nfeatherweight to 167+1/2 lb , i.e. Super middleweight.",
+    "Richard Williams (boxer)\nRichard \"The Secret\" Williams ( (1971--) 09 1971 (age (2017)-(1971)-((11)<(05)or(11)==(05)and(30)<(09)) ) is an English professional light middle/middle/super middleweight boxer of the 1990s, 2000s and 2010s who won the International Boxing Organization (IBO) light middleweight title, and Commonwealth light middleweight title (twice), and was a challenger for the International Boxing Organization (IBO) light middleweight title against Sergio Gabriel Martinez, and British Boxing Board of Control (BBBofC) British middleweight title against Howard Eastman, his professional fighting weight varied from 149+3/4 lb , i.e. light middleweight to 162+1/4 lb , i.e. super middleweight.\n\n Richard Williams is trained by Brian Lawrence, and managed by Barry Hearn, and John Rooney.",
+    "Kevin Kelly (boxer)\nKevin \"Bones\" Kelly (born August 7, 1969 in La Perouse, New South Wales) is an Australian retired professional welter/light middle/middleweight boxer of the 1990s and 2000s who won the South Australia State welterweight title, New South Wales (Australia) State welterweight title, New South Wales (Australia) State light middleweight title, Australian light middleweight title, Pan Asian Boxing Association (PABA) light middleweight title, World Boxing Union (WBU) middleweight title, and Commonwealth light middleweight title (twice), and was a challenger for the World Boxing Association (WBA) World light middleweight title against David Reid, and World Boxing Organization (WBO) Inter-Continental light middleweight title against Gary Lockett, his professional fighting weight varied from 142 lb , i.e. welterweight to 158+1/4 lb , i.e. middleweight.",
+    "Scott Dixon (boxer)\n\"Super\" Scott Dixon ( (1976--) 28 1976 (age (2017)-(1976)-((11)<(09)or(11)==(09)and(30)<(28)) ) ) born in Hamilton is a Scottish professional feather/super feather/light/light welter/welter/light middle/middle/super middleweight boxer of the 1990s, 2000s and 2010s, who won the British Boxing Board of Control (BBBofC) Scottish Area welterweight title, World Boxing Board (WBB) welterweight title, World Boxing Union (German Version) super middleweight title, and Commonwealth welterweight title, and was a challenger for the World Athletic Association (WAA) welterweight title against Michael Carruth, BBBofC British welterweight title against Derek Roche, World Boxing Federation (WBF) light middleweight title against Steve Roberts, World Boxing Organization (WBO) Inter-Continental light middleweight title against Anthony Farnell, and World Boxing Union (WBU) light middleweight title against Mehrdad Takalobigashi, his professional fighting weight varied from 125 lb , i.e.",
+    "Tony Harrison (boxer)\nOn February 25, 2017 he lost to Jarrett Hurd for the International Boxing Federation light middleweight world title.\n\n The fight was originally supposed to be a title eliminator for the right to fight Jermall Charlo, but when Charlo vacated the title, the fight was elevated to be for the vacant title.\n\n Harrison boxed well for majority of the first half of the fight but began to fade thereafter the finish came in round 9 when Hurd landed a right hand that floored Harrison,",
+    "Nedal Hussein\nOriental and Pacific Boxing Federation (OPBF) featherweight title against Hiroyuki Enoki, and Oriental and Pacific Boxing Federation (OPBF) super featherweight title against Takashi Uchiyama, his professional fighting weight varied from 117+1/4 lb , i.e. bantamweight to 132+3/4 lb , i.e. lightweight.",
+    "Jarrett Hurd\nJarrett Hurd (born August 31, 1990) is an American light middleweight boxer from Accokeek, Maryland."
+   ]
+  },
+  {
+   "id": "af9020a6e2dbff71",
+   "gold": [
+    {
+     "sentence": "Stephen Reeder Donaldson (born May 13, 1947) is an American fantasy, science fiction and mystery novelist, most famous for \"The Chronicles of Thomas Covenant\", his ten-novel fantasy series.",
+     "facts": {
+      "0.0": "Stephen Reeder Donaldson was born on May 13, 1947.",
+      "0.1": "Stephen Reeder Donaldson is an American novelist.",
+      "0.2": "Stephen Reeder Donaldson writes fantasy novels.",
+      "0.3": "Stephen Reeder Donaldson writes science fiction novels.",
+      "0.4": "Stephen Reeder Donaldson writes mystery novels.",
+      "0.5": "Stephen Reeder Donaldson is most famous for \"The Chronicles of Thomas Covenant\".",
+      "0.6": "\"The Chronicles of Thomas Covenant\" is a ten-novel fantasy series.",
+      "0.7": "\"The Chronicles of Thomas Covenant\" is a series by Stephen Reeder Donaldson."
+     }
+    },
+    {
+     "sentence": "Michael John Moorcock (born 18 December 1939) is an English writer, primarily of science fiction and fantasy, who has also published literary novels.",
+     "facts": {
+      "1.0": "Michael John Moorcock was born on 18 December 1939.",
+      "1.1": "Michael John Moorcock is an English writer.",
+      "1.2": "Michael John Moorcock is primarily a writer of science fiction.",
+      "1.3": "Michael John Moorcock is primarily a writer of fantasy.",
+      "1.4": "Michael John Moorcock has also published literary novels."
+     }
+    }
+   ],
+   "items": [
+    "Robert Holdstock\nRobert Paul Holdstock (2 August 1948 – 29 November 2009) was an English novelist and author best known for his works of Celtic, Nordic, Gothic and Pictish fantasy literature, predominantly in the fantasy subgenre of mythic fiction.",
+    "Orson Scott Card\nOrson Scott Card (born August 24, 1951) is an American novelist, critic, public speaker, essayist, and columnist.\n\n He writes in several genres but is known best for science fiction.\n\n His novel \"Ender's Game\" (1985) and its sequel \"Speaker for the Dead\" (1986) both won Hugo and Nebula Awards, making Card the only author to win both science fiction's top U.S. prizes in consecutive years.\n\n A feature film adaptation of \"Ender's Game\", which Card co-produced, was released in late October 2013 in Europe and on November 1, 2013, in North America.",
+    "Douglas Hill\nDouglas Arthur Hill (6 April 1935 – 21 June 2007) was a Canadian science fiction author, editor and reviewer.\n\n He was born in Brandon, Manitoba, the son of a railroad engineer, and was raised in Prince Albert, Saskatchewan.\n\n An avid science fiction reader from an early age, he studied English at the University of Saskatchewan (where he earned an Honours B.A. in 1957) and at the University of Toronto.\n\n He married fellow writer and U. of S. alumna Gail Robinson (writer) in 1958; they moved to Britain in 1959, where he worked as a freelance writer and editor for Aldus Books.\n\n In 1967–1968 he served as Assistant Editor of the controversial \"New Worlds\" science fiction magazine under Michael Moorcock.",
+    "Warlord of the Air\nThe Warlord of the Air is a 1971 British alternate history science fiction novel written by Michael Moorcock.\n\n It concerns the adventures of Oswald Bastable, an Edwardian era soldier stationed in India, and his adventures in an alternate universe, in his own future, wherein the First World War never happened.\n\n It is the first part of Moorcock's 'A Nomad of the Time Streams' trilogy and, in its use of speculative technology (such as airships) juxtaposed against an Edwardian setting, it is widely considered to be one of the first steampunk novels.\n\n The novel was first published by Ace Books as part of their Ace Science Fiction Specials series.",
+    "Stephen R. Donaldson\nStephen Reeder Donaldson (born May 13, 1947) is an American fantasy, science fiction and mystery novelist, most famous for \"The Chronicles of Thomas Covenant\", his ten-novel fantasy series.\n\n His work is characterized by psychological complexity, conceptual abstractness, moral bleakness, and the use of an arcane vocabulary, and has attracted critical praise for its \"imagination, vivid characterizations, and fast pace\".\n\n He earned his bachelor's degree from The College of Wooster and a Master's degree from Kent State University.\n\n He currently resides in New Mexico.",
+    "The Final Programme\nThe Final Programme is a novel by British science fiction and fantasy writer Michael Moorcock.\n\n Written in 1965 as the underground culture was beginning to emerge, it was not published for several years.\n\n Moorcock has stated that publishers at the time considered it was \"too freaky\".",
+    "A Cure for Cancer\nA Cure for Cancer is a novel by British fantasy and science fiction writer Michael Moorcock, first published in London 1971 by Allison and Busby.\n\n The book is part of Moorcock's long-running Jerry Cornelius series.",
+    "Michael Moorcock\nMichael John Moorcock (born 18 December 1939) is an English writer, primarily of science fiction and fantasy, who has also published literary novels.\n\n He is best known for his novels about the character Elric of Melniboné, a seminal influence on the field of fantasy in the 1960s and 1970s.",
+    "Epic Pooh\n\"Epic Pooh\" is a 1978 article by the British science fiction writer Michael Moorcock, which reviews the field of epic fantasy, with a particular focus on epic fantasy written for children.\n\n In it Moorcock critiques J. R. R. Tolkien's \"The Lord of the Rings\" for its politically conservative assumptions and for being escapist literature.",
+    "The Chinese Agent\nThe Chinese Agent (1970) is a comic novel by Michael Moorcock.\n\n It is a revision of \"Somewhere in the Night\", which Moorcock published in 1966 under the pseudonym Bill Barclay.\n\n Although Moorcock is best known as the author of fantasy fiction and science fiction-based parables such as \"Behold the Man\" and \"The Dancers at the End of Time\", here he writes a light-hearted caper that parodies the spy novel genre."
+   ]
+  },
+  {
+   "id": "936b072abb70d629",
+   "gold": [
+    {
+     "sentence": "Pennsylvania Route 145 (PA 145) is a 20.89 mi long north–south state highway in the Lehigh Valley area of eastern Pennsylvania.",
+     "facts": {
+      "0.0": "Pennsylvania Route 145 (PA 145) is a state highway.",
+      "0.1": "Pennsylvania Route 145 is 20.89 miles long.",
+      "0.2": "Pennsylvania Route 145 runs north-south.",
+      "0.3": "Pennsylvania Route 145 is in the Lehigh Valley area of eastern Pennsylvania."
+     }
+    },
+    {
+     "sentence": " MacArthur Road is a divided highway; between U.S. Route 22 (US 22) and Eberhart Road, it is six lanes wide with a Jersey barrier and jughandles while the remainder of the road a four-lane divided highway.",
+     "facts": {
+      "1.0": "MacArthur Road is a divided highway.",
+      "1.1": "Between U.S. Route 22 (US 22) and Eberhart Road, MacArthur Road is six lanes wide.",
+      "1.2": "Between U.S. Route 22 and Eberhart Road, MacArthur Road has a Jersey barrier.",
+      "1.3": "Between U.S. Route 22 and Eberhart Road, MacArthur Road has jughandles.",
+      "1.4": "The remainder of MacArthur Road is a four-lane divided highway."
+     }
+    },
+    {
+     "sentence": " Plastic water-filled barriers of the same general shape are also now commonly called Jersey barriers.",
+     "facts": {
+      "2.0": "Plastic water-filled barriers of the same general shape are also now commonly called Jersey barriers."
+     }
+    }
+   ],
+   "items": [
+    "Breadon Field\nBreadon Field was a minor league ballpark in Whitehall Township, Pennsylvania, located on the east side of MacArthur Road, about 0.5 mile north of the U.S. Route 22 interchange.",
+    "Ocean To Ocean Bridge\nThe Ocean To Ocean Bridge is a through truss bridge spanning the Colorado River in Yuma, Arizona.\n\n Built in 1915, it was the first highway crossing of the lower Colorado and is the earliest example of a through truss bridge in Arizona.\n\n It is also the only example of a Pennsylvania truss within Arizona.\n\n Originally the bridge carried the transcontinental Ocean-to-Ocean Highway and later carried its successor, US 80 until a new bridge was built to the west in 1956.\n\n Between 1988 and 2001, the bridge was closed to vehicular traffic and only traversable by pedestrians and bicyclists.\n\n After a major restoration, the bridge was rehabilitated and reopened to vehicular traffic in 2002, with a re-dedication by the Quechan nation and Yuma Crossing National Heritage Area.",
+    "Pennsylvania Canal (Delaware Division)\nas part of the solution to the United States' first energy crisis.\n\n The Commonwealth of Pennsylvania built the Delaware canal to feed anthracite stone coal to energy-hungry Philadelphia as part of its transportation infrastructure building plan known as the Main Line of Public Works—a legislative initiative creating a collection of self-reinforcing internal improvements to commercial transportation capabilities.",
+    "Pennsylvania Route 145\nMacArthur Road is the location of the main commercial center of the Lehigh Valley.\n\n North of Eagle Point, PA 145 becomes a two-lane undivided road that parallels the Lehigh River, crossing the river into Northampton County at Treichlers.\n\n The route continues along the east bank of the river and passes through Walnutport before reaching its northern terminus.\n\n PA 145 is dedicated as the Battle of the Bulge Veterans Memorial Highway in honor of the veterans who fought in the Battle of the Bulge.",
+    "Susquehanna and Tidewater Canal\nA copy of a detailed survey blueprint of the entire canal system including structures and property ownership details was donated (date unknown) by the Safe Harbor Water Power Corporation to Millersville University (assessed on 10/06/2016 in the MU Archives at Sp.\n\n Coll.\n\n Map 386.409748 S128 Folio).\n\n The survey consists of 67 pages, 98 x 30 cm.\n\n and is undated but the assumption is the original was created while the canal was in use.",
+    "The entries cover historic U.S. canals, waterways, water systems, and sites. Transport canals include Beaver–Erie (136 miles), Delaware (60), Whitewater (76), and Susquehanna–Tidewater (43), plus interstate and regional routes; many declined with railroad competition. The Dismal Swamp Canal, opened in 1805 and closed in 2016, served the Intracoastal Waterway; nearby park and refuge protect the swamp.",
+    "Pennsylvania Route 145\nPennsylvania Route 145 (PA 145) is a 20.89 mi long north–south state highway in the Lehigh Valley area of eastern Pennsylvania.\n\n It connects Interstate 78 (I-78) and PA 309 in Lanark, Lehigh County to PA 248 in Weiders Crossing, Northampton County.\n\n PA 145 is the main north-south arterial into Allentown, the third-largest city in the state.\n\n The route enters the city on South 4th Street and follows multiple streets to downtown, where it follows the one-way pair of 6th Street northbound and 7th Street southbound.\n\n North of Allentown in Whitehall Township, a seven-mile (11.2 km) portion of PA 145 is known as MacArthur Road, named in honor of General Douglas MacArthur.\n\n MacArthur Road is a divided highway; between U.S. Route 22 (US 22) and Eberhart Road, it is six lanes wide with a Jersey barrier and jughandles while the remainder of the road a four-lane divided highway.\n\n MacArthur Road is the location of the main commercial center of the Lehigh Valley.",
+    "Pennsylvania Canal (Delaware Division)\nThe Delaware Division of the Pennsylvania Canal, more commonly called the Delaware Canal, runs for 60 mi parallel to the right bank of the Delaware River from the entry locks near the mouth of the Lehigh River and terminal end of the Lehigh Canal at Easton south to Bristol.\n\n At Easton, which today is the home of The National Canal Museum, the Delaware Canal also connected with the Morris Canal built to carry anthracite coal to energy starved New Jersey industries.\n\n Later, with a crossing-lock constructed at New Hope, the New Hope 'outlet lock' (1847) connected by Cable Ferry to a feeder navigation/canal at Bull's Island along the opposite shore from Lumberville, which ran over 22 mi south along the left bank through Trenton to Bordentown, the west end of the Delaware and Raritan Canal (1834) to New York City via New Brunswick.\n\n as part of the solution to the United States' first energy crisis.",
+    "Susquehanna and Tidewater Canal\nThe Susquehanna and Tidewater Canal between Wrightsville, Pennsylvania, and Havre de Grace, Maryland, at the head of Chesapeake Bay, provided an interstate shipping alternative to 19th-century arks, rafts, and boats plying the difficult waters of the lower Susquehanna River.\n\n Built between 1836 and 1840, it ran 43 mi along the west bank of the river and rendered obsolete an older, shorter canal along the east bank.\n\n Of its total length, 30 mi were in Pennsylvania and 13 mi in Maryland.\n\n Though rivalry between Philadelphia, Pennsylvania, and Baltimore, Maryland, delayed its construction, the finished canal brought increased shipments of coal and other raw materials to both cities from Pennsylvania's interior.\n\n Competition from railroads was a large factor in the canal's decline after 1855.\n\n Canal remnants, including a lock keeper's house, have been preserved in Maryland, and locks 12 and 15 have been preserved in Pennsylvania.",
+    "Jersey barrier\nA Jersey barrier or Jersey wall is a modular concrete or plastic barrier employed to separate lanes of traffic.\n\n It is designed to minimize vehicle damage in cases of incidental contact while still preventing the crossover case of a head-on collision.\n\n Jersey barriers are also used to reroute traffic and protect pedestrians and workers during highway construction, as well as temporary and semi-permanent protections against landborne attack such as suicide vehicle bombs.\n\n A Jersey barrier is also known in the western United States as K-rail, or K-wall, a term borrowed from the California Department of Transportation specification for temporary concrete traffic barriers, or colloquially as a Jersey bump.\n\n Plastic water-filled barriers of the same general shape are also now commonly called Jersey barriers."
+   ]
+  },
+  {
+   "id": "95d82858419c6c76",
+   "gold": [
+    {
+     "sentence": "The Nashville Tribute Band is a Mormon music group founded by Jason Deere and Dan Truman, the pianist of the popular country group Diamond Rio.",
+     "facts": {
+      "0.0": "The Nashville Tribute Band is a Mormon music group.",
+      "0.1": "The Nashville Tribute Band was founded by Jason Deere.",
+      "0.2": "The Nashville Tribute Band was founded by Dan Truman.",
+      "0.3": "Dan Truman is the pianist of the popular country group Diamond Rio."
+     }
+    },
+    {
+     "sentence": "Diamond Rio is an American country and Christian country music band.",
+     "facts": {
+      "1.0": "Diamond Rio is an American country music band.",
+      "1.1": "Diamond Rio is a Christian country music band."
+     }
+    },
+    {
+     "sentence": " The band was founded in 1982 as an attraction for the Opryland USA theme park in Nashville, Tennessee, and was originally known as the Grizzly River Boys, then the Tennessee River Boys.",
+     "facts": {
+      "2.0": "Diamond Rio was founded in 1982.",
+      "2.1": "Diamond Rio was founded as an attraction for the Opryland USA theme park in Nashville, Tennessee.",
+      "2.2": "Diamond Rio was originally known as the Grizzly River Boys.",
+      "2.3": "Diamond Rio was later known as the Tennessee River Boys."
+     }
+    }
+   ],
+   "items": [
+    "The Highwaymen (country supergroup)\nThe Highwaymen was a country music supergroup composed of four of the genre's biggest artists well known for their pioneering influence on the outlaw country subgenre: Johnny Cash, Waylon Jennings, Willie Nelson, and Kris Kristofferson.\n\n Active as a group between 1985 and 1995, these four artists recorded three major label albums as The Highwaymen: two on Columbia Records and one for Liberty Records.\n\n Their Columbia works produced three chart singles, including the number one \"Highwayman\" in 1985.",
+    "Confederate Railroad\nConfederate Railroad is an American country rock–Southern rock band founded in 1987 in Marietta, Georgia, by Danny Shirley (lead vocals, rhythm guitar), Michael Lamb (lead guitar), Mark Dufresne (drums), Chris McDaniel (keyboards), Warren \"Gates\" Nichols (steel guitar) and Wayne Secrest (bass guitar).\n\n After serving as a backing band for outlaw country acts David Allan Coe and Johnny Paycheck, the band signed to a recording contract with Atlantic Records, releasing their self-titled debut album that year.\n\n In the 1990s, they released four more albums for Atlantic.",
+    "Creedence Clearwater Revisited\nCreedence Clearwater Revisited is an American rock band formed in 1995 by two former members of Creedence Clearwater Revival – a much more well-known band with a very similar name.\n\n It is known for playing the music that was originally made famous by Creedence Clearwater Revival.\n\n The two common band members are Stu Cook (bass) and Doug \"Cosmo\" Clifford (drums).",
+    "Nashville Tribute Band\nThe Nashville Tribute Band is a Mormon music group founded by Jason Deere and Dan Truman, the pianist of the popular country group Diamond Rio.",
+    "Lonesome Pine Fiddlers\nThis most talented family of musicians were the best, surpassed by none.\n\n Finally, on October 1, 2009, The Lonesome Pine Fiddlers got their due when they were inducted into the International Bluegrass Hall of Fame at the Ryman Theater (the original home of the Grand Ole Opry).\n\n Bobby Osborne, Melvin Goins and Paul Williams were there to receive the bands award.\n\n In the crowd of a sold out theater was the son of Ezra Cline, Scotty Ireland Cline, who recalled being in that same theater as a child sitting on stage and watching the Fiddlers play.\n\n (At the time, the Opry had bleachers for family just off stage).\n\n The final act of the evening at the IBMA Awards was the playing of \"Pain in my Heart\" by Osborne, Goins and Williams along with a Song from the Dillards, who were also inducted the same evening.",
+    "Bullmoose\nBullmoose (aka Zach Dobbins) is a Canadian rock band formed in Elgin, Ontario in 1996.\n\n Three of the original members continue in the band, which today is based in Montreal.\n\n They include twin brothers Jeff Cowan (drums/vocals) and Seamus Cowan (bass/vocals) from Westport, Ontario and Eric Lawrance (guitar/vocals) from Delta, Ontario, who launched the band when they attended school at Montreal.\n\n The band performs in the rock music genre, citing experimental influences of the late 1960s and early 1970s.",
+    "The Boys Are Back (The Oak Ridge Boys album)\nThe Boys Are Back is the thirtieth studio album of country music group The Oak Ridge Boys.\n\n It was released in 2009 under the Spring Hill Music Group label.\n\n The album marked the group's return to secular country music after releasing gospel albums since 1992.\n\n The track \"Seven Nation Army,\" a cover of The White Stripes's 2003 song from their album \"Elephant\", was released as the album's first single.",
+    "Souther–Hillman–Furay Band\nThe Souther Hillman Furay Band (SHF) was a country rock supergroup led by singer-songwriters Richie Furay (Buffalo Springfield, Poco), Chris Hillman (The Byrds, The Flying Burrito Brothers, Manassas), and J.D. Souther (Longbranch Pennywhistle, noted songwriter for Linda Ronstadt and the Eagles).\n\n The band recorded two albums during the 1970s before breaking up due to disagreements between the members.",
+    "The Studdogs\nThe Studdogs was a rock band from Orlando, Florida.\n\n The band's music contains elements of punk, blues rock, garage rock, and noise rock.\n\n The band was formed in 2000 and stayed active until 2005.\n\n They released a lot of material, particularly the full-length album, \"The Gospel According to the Studdogs\" and the 7\" vinyl 3-song EP, and gained local and national notoriety.\n\n They were featured in several national music magazines, including Magnet and Amplifier.\n\n Comparisons were made to the Stooges, Dead Boys, and it was said they sounded \"like absolute victory by way of slurring, Rolling Stones-y garage rock from nowhere in particular.\"\n\n Their drunken, abrasive live shows often ended with someone bleeding or being thrown out of the venue.\n\n Their live shows were said to be \"what Howling Wolf would sound like through a wall of noise and distortion.\"",
+    "Diamond Rio\nDiamond Rio is an American country and Christian country music band.\n\n The band was founded in 1982 as an attraction for the Opryland USA theme park in Nashville, Tennessee, and was originally known as the Grizzly River Boys, then the Tennessee River Boys.\n\n It was founded by Matt Davenport, Danny Gregg, and Ty Herndon, the last of whom became a solo artist in the mid-1990s.\n\n After undergoing several membership changes in its initial years, the band has consisted of the same six members since 1989: Marty Roe (lead vocals, rhythm guitar), Gene Johnson (mandolin, guitar, fiddle, tenor vocals), Jimmy Olander (lead guitar, Dobro, banjo), Brian Prout (drums), Dan Truman (keyboards, organ, synthesizer), and Dana Williams (bass guitar, baritone vocals)."
+   ]
+  }
+ ]
+}

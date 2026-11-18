@@ -1,0 +1,38 @@
+[
+  {
+    "id": "6aa6946aef8d5050",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Because FTX had grown so much, he could no longer run both"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal"}]},
+      {"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]}
+    ]
+  },
+  {
+    "id": "bec29bbd503649cb",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "After missing last week's game, Tyreek Hill now needs to"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "his stated goal of 2,000 receiving yards this season"}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]}
+    ]
+  },
+  {
+    "id": "b961fce5268b97df",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "152.67 -- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "After missing last week's game, Tyreek Hill now needs to"}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "to reach his stated goal of 2,000 receiving yards this season."}]},
+      {"fact": "1.4", "status": "stated", "evidence": [{"item": 9, "quote": "Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]}
+    ]
+  }
+]

@@ -1,0 +1,479 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "7e1f3eaf9ae748fa",
+   "gold": [
+    {
+     "sentence": " His siblings were Abby, Nelson, Laurance, Winthrop, and David.",
+     "facts": {
+      "0.0": "Abby was his sibling.",
+      "0.1": "Nelson was his sibling.",
+      "0.2": "Laurance was his sibling.",
+      "0.3": "Winthrop was his sibling.",
+      "0.4": "David was his sibling."
+     }
+    },
+    {
+     "sentence": "David Rockefeller (June 12, 1915 – March 20, 2017) was an American banker who was chairman and chief executive of Chase Manhattan Corporation.",
+     "facts": {
+      "1.0": "David Rockefeller lived from June 12, 1915 to March 20, 2017.",
+      "1.1": "David Rockefeller was an American banker.",
+      "1.2": "David Rockefeller was chairman of Chase Manhattan Corporation.",
+      "1.3": "David Rockefeller was chief executive of Chase Manhattan Corporation."
+     }
+    }
+   ],
+   "items": [
+    "David Rockefeller\nDavid Rockefeller (June 12, 1915 – March 20, 2017) was an American banker who was chairman and chief executive of Chase Manhattan Corporation.\n\n He was the oldest living member of the Rockefeller family and family patriarch from August 2004 until his death in March 2017.\n\n Rockefeller was a son of John D. Rockefeller Jr. and Abby Aldrich Rockefeller, and a grandson of John D. Rockefeller and Laura Spelman Rockefeller.",
+    "Hope Aldrich Rockefeller\nHope Aldrich Rockefeller (born May 17, 1938) is an American newspaper publisher.\n\n She is the eldest daughter of philanthropist John Davison Rockefeller III (1906–1978) and Blanchette Ferry Hooker (1909–1992).\n\n Her elder brother is former Senator John Davison \"Jay\" Rockefeller IV (born 1937).",
+    "William B. Harrison Jr.\nWilliam B. Harrison Jr., born August 12, 1943, in Rocky Mount, North Carolina, is the former CEO and chairman of JPMorgan Chase.\n\n He attended high school at Virginia Episcopal School, where he was a basketball star.\n\n He attended the University of North Carolina at Chapel Hill, where he was admitted to the Zeta Psi fraternity.\n\n Having risen through the ranks of Chemical Bank before succeeding Walter V. Shipley during the Chemical Bank takeover of the Chase Manhattan Corporation, he and Douglas A. Warner III, then CEO of J.P. Morgan & Co., were the principal architects of the US$30.9 billion Chase and J.P. Morgan & Co. merger of 2000.\n\n Harrison has been a director of the Firm or a predecessor institution since 1991.\n\n Harrison is also a director of Merck & Co., Inc.",
+    "JPMorgan Chase\nJPMorgan Chase & Co. is a U.S. multinational banking and financial services holding company headquartered in New York City.\n\n It is the largest bank in the United States, the world's sixth largest bank by total assets, with total assets of US$2.5 trillion, and the world's second most valuable bank by market capitalization, after ICBC.\n\n It is a major provider of financial services, and according to \"Forbes\" magazine is the world's sixth largest public company based upon a composite ranking.\n\n The hedge fund unit of JPMorgan Chase is the second largest hedge fund in the United States.\n\n The company was formed in 2000, when Chase Manhattan Corporation merged with J.P. Morgan & Co.",
+    "Rockefeller Brothers Fund\nThe Rockefeller Brothers Fund (RBF) is a philanthropic foundation created and run by members of the Rockefeller family.\n\n It was founded in New York City in 1940 as the primary philanthropic vehicle for the five third-generation Rockefeller brothers: John D. Rockefeller III, Nelson, Laurance, Winthrop and David.\n\n It is distinct from the Rockefeller Foundation.\n\n The Rockefellers are an industrial, political, and banking family that made one of the world's largest fortunes in the oil business during the late 19th and early 20th centuries.",
+    "John D. Rockefeller III\nJohn Davison Rockefeller III (March 21, 1906 – July 10, 1978) was a philanthropist and third-generation member of the prominent Rockefeller family.\n\n He was the eldest son of philanthropists John D. Rockefeller Jr. and Abby Aldrich Rockefeller.\n\n His siblings were Abby, Nelson, Laurance, Winthrop, and David.",
+    "Walter V. Shipley\nWalter V. Shipley (born November 2, 1935) was the former Chairman and Chief Executive Officer of Chase Manhattan Bank and, before that, the company with which it merged Chemical Bank.\n\n Shipley was named chief executive of Chemical in 1981 and held the position through 1999 and remained at the bank as chairman through January 2000, just prior to the bank's merger with J.P. Morgan & Co..\n\n During his 18-year tenure, Shipley oversaw Chemical's mergers with Texas Commerce Bank in 1987, Manufacturers Hanover in 1991 and Chase Manhattan Bank in 1996.",
+    "Rockefeller family\nThe Rockefeller family ( ) is an American industrial, political, and banking family that made one of the world's largest fortunes in the oil business during the late 19th and early 20th centuries, with John D. Rockefeller and his brother William Rockefeller primarily through Standard Oil.\n\n The family is also known for its long association with and control of Chase Manhattan Bank.\n\n They are considered to be one of the most powerful families, if not the most powerful family, in the history of the United States.",
+    "Chase Bank\nJPMorgan Chase Bank, N.A., doing business as Chase Bank, is a national bank that constitutes the consumer and commercial banking subsidiary of the U.S. multinational banking and financial services holding company, JPMorgan Chase.\n\n The bank was known as Chase Manhattan Bank until it merged with J.P. Morgan & Co. in 2000.\n\n Chase Manhattan Bank was formed by the merger of the Chase National Bank and The Manhattan Company in 1955.\n\n The bank has been headquartered in Columbus, Ohio since its merger with Bank One Corporation in 2004.\n\n The bank acquired the deposits and most assets of Washington Mutual.",
+    "383 Madison Avenue\n383 Madison Avenue is an office building owned and occupied by JP Morgan Chase in New York City on a full block bound by Madison Avenue and Vanderbilt Avenue between East 46th and 47th Streets.\n\n Formerly known as the Bear Stearns Building, it housed the world headquarters of the now-defunct Bear Stearns from the building's completion until Bear's collapse and sale to JPMorgan Chase in 2008.\n\n The building now houses the New York offices for J.P. Morgan's investment banking division, which formerly occupied 277 Park Avenue.\n\n Both 383 Madison and 277 Park are adjacent to JPMorgan Chase's world headquarters at 270 Park Avenue."
+   ]
+  },
+  {
+   "id": "4b5d80d5a74f3f18",
+   "gold": [
+    {
+     "sentence": "Leycesteria is a genus of flowering plants in the honeysuckle family Caprifoliaceae, native to temperate Asia in the Himalaya and southwestern China.",
+     "facts": {
+      "0.0": "Leycesteria is a genus of flowering plants.",
+      "0.1": "Leycesteria is in the honeysuckle family Caprifoliaceae.",
+      "0.2": "Leycesteria is native to temperate Asia in the Himalaya.",
+      "0.3": "Leycesteria is native to southwestern China."
+     }
+    },
+    {
+     "sentence": "Anigozanthos is a small genus of Australian plants in the Bloodwort family Haemodoraceae.",
+     "facts": {
+      "1.0": "Anigozanthos is a small genus of Australian plants.",
+      "1.1": "Anigozanthos is in the Bloodwort family Haemodoraceae."
+     }
+    }
+   ],
+   "items": [
+    "Anigozanthos manglesii\nAnigozanthos manglesii, commonly known as the red-and-green kangaroo paw, Mangles kangaroo paw, Kurulbrang(Noongar) is a plant species endemic to Western Australia, and the floral emblem of that state.",
+    "Anigozanthos humilis\nAnigozanthos humilis is a species of \"Anigozanthos\" in the family Haemodoraceae, known as common cat's paw or catspaw.\n\n This flowering perennial plant is endemic to Southwest Australia and widespread in its open forests.",
+    "Alopecurus\nAlopecurus, or foxtail grass, is a common and widespread genus of plants in the grass family.\n\n It is common across temperate and subtropical parts of Eurasia, northern Africa, and the Americas, as well as naturalized in Australia and on various islands.",
+    "Anigozanthos preissii\nAnigozanthos preissii, the Albany cat's paw, is a herbaceous plant species in the family Haemodoraceae, endemic to Western Australia.",
+    "Leycesteria formosa\nLeycesteria formosa (Himalayan honeysuckle, flowering nutmeg, Himalaya nutmeg or pheasant berry) is a deciduous shrub in the family Caprifoliaceae, native to the Himalaya and southwestern China.\n\n It is considered a noxious invasive species in Australia, New Zealand, the neighboring islands of Micronesia, and some other places.",
+    "Mulga Island\nMulga Island is a small island 3 nmi off the coast and 5 nmi northeast of Kirkby Head, Enderby Land in Antarctica.\n\n Plotted from air photos taken from ANARE (Australian National Antarctic Research Expeditions) aircraft in 1956.\n\n Mulga is the vernacular name for species of Acacia found in semi-desert areas of Australia.",
+    "Lepidozamia\nLepidozamia is a genus of two species of cycad, both endemic to Australia.\n\n The name, derived from the Greek word lepidos, meaning scaly, refers to the scale-like structure of the stem and leaf bases.\n\n They are native to rainforest climates in eastern Queensland and eastern New South Wales.\n\n They have a chromosome number of 2n = 18.",
+    "Leycesteria\nLeycesteria is a genus of flowering plants in the honeysuckle family Caprifoliaceae, native to temperate Asia in the Himalaya and southwestern China.",
+    "Anigozanthos\nAnigozanthos is a small genus of Australian plants in the Bloodwort family Haemodoraceae.\n\n The 11 species and several subspecies are commonly known as kangaroo paw and catspaw depending on the shape of their flowers.\n\n A further species, previously identified as \"Anigozanthos fuliginosus\" and commonly known as the black kangaroo paw, has been transferred to its own monotypic genus and is now known as \"Macropidia fuliginosa\".",
+    "Anigozanthos flavidus\nAnigozanthos flavidus is a species of plant found in Southwest Australia.\n\n It is member of the Haemodoraceae family.\n\n It is commonly known as the tall, yellow, or evergreen, kangaroo paw.\n\n The specific epithet, \"flavidus\", refers to the yellow flowers of this plant."
+   ]
+  },
+  {
+   "id": "562899da95322791",
+   "gold": [
+    {
+     "sentence": " It consists of three shots, two Sourz Apple and one Cherry Brandy.",
+     "facts": {
+      "0.0": "The described drink consists of three shots.",
+      "0.1": "The described drink has two shots of Sourz Apple.",
+      "0.2": "The described drink has one shot of Cherry Brandy."
+     }
+    },
+    {
+     "sentence": " Each shot is taken from an average shot glass which is around 1.5 ounces (roughly 45 ml).",
+     "facts": {
+      "1.0": "Each shot is taken from an average shot glass.",
+      "1.1": "An average shot glass holds around 1.5 ounces (roughly 45 ml)."
+     }
+    },
+    {
+     "sentence": "The flaming volcano is a large tropical group cocktail made of rum, brandy, pineapple juice, orange juice, almond syrup, and sometimes other ingredients.",
+     "facts": {
+      "2.0": "The flaming volcano is a large tropical group cocktail.",
+      "2.1": "The flaming volcano is made of rum, brandy, pineapple juice, orange juice and almond syrup.",
+      "2.2": "The flaming volcano is sometimes made with other ingredients."
+     }
+    },
+    {
+     "sentence": " It is usually a multi-user drink, served to a group in a special, ritual vessel known as a volcano bowl, which is a decorative ceramic bowl (typically of about 32 USoz capacity) designed with a rising central hub feature usually resembling a crude volcano cone.",
+     "facts": {
+      "3.0": "The flaming volcano is usually a multi-user drink.",
+      "3.1": "The flaming volcano is served to a group in a special ritual vessel known as a volcano bowl.",
+      "3.2": "A volcano bowl is a decorative ceramic bowl.",
+      "3.3": "A volcano bowl typically has a capacity of about 32 USoz.",
+      "3.4": "A volcano bowl is designed with a rising central hub feature.",
+      "3.5": "The rising central hub feature of a volcano bowl usually resembles a crude volcano cone."
+     }
+    }
+   ],
+   "items": [
+    "Volcano bowl\nVolcano bowls are ceramic drinkware originally associated with mid-20th century American tiki bars and tropical-themed restaurants.\n\n Drinks served in volcano bowls are typically rum-based, mixed with tropical fruit juices and other liquors such as brandy, vodka, and triple sec, and garnished with fruit.\n\n The Flaming Volcano cocktail is especially associated with this drinkware.",
+    "Flaming Moe's\n\"Flaming Moe's\" is the tenth episode of \"The Simpsons\"' third season.\n\n It first aired on the Fox network in the United States on November 21, 1991.\n\n In the episode, Homer tells Moe Szyslak of a secret alcoholic cocktail that includes cough medicine and fire that he calls \"Flaming Homer\".\n\n Moe steals the recipe from Homer, renames the drink the \"Flaming Moe\" and begins selling it at his tavern.\n\n The drink is a success and boosts business and patronage, but Homer is angry at Moe for his betrayal, and seeks revenge.",
+    "Man-eating tree\nMan-eating tree can refer to any of the various legendary carnivorous plants large enough to kill and consume a person or other large animal.\n\n The carnivorous plant with the largest known traps is probably Nepenthes rajah, which produces pitchers up to 41 cm tall with a volume up to 3.5 l .\n\n The pitcher of this species are designed to trap arthropods.\n\n However, the same bait may also attract rodents like the summit rat (\"Rattus baluensis\") and the Mountain treeshrew (\"Tupaia montana\").\n\n Only very rarely will the rodents fall into the large pitchers of this species.\n\n Other large carnivorous plants that have similar properties include Nepenthes robcantleyi and Nepenthes attenboroughi.",
+    "Volcanic bomb\nA volcanic bomb is a mass of molten rock (tephra) larger than 64 mm (2.5 inches) in diameter, formed when a volcano ejects viscous fragments of lava during an eruption.\n\n They cool into solid fragments before they reach the ground.\n\n Because volcanic bombs cool after they leave the volcano, they are extrusive igneous rocks.\n\n Volcanic bombs can be thrown many kilometres from an erupting vent, and often acquire aerodynamic shapes during their flight.\n\n Bombs can be extremely large; the 1935 eruption of Mount Asama in Japan expelled bombs measuring 5–6 m in diameter up to 600 m from the vent.\n\n Volcanic bombs are a significant volcanic hazard, and can cause severe injuries and death to people in an eruption zone.\n\n One such incident occurred at Galeras volcano in Colombia in 1993; six people near the summit were killed and several seriously injured by lava bombs when the volcano erupted unexpectedly.",
+    "Tweed Volcano\nTweed Volcano is a partially eroded Early Miocene shield volcano located in northeastern New South Wales, which formed when this region of Australia passed over the East Australia hotspot around 23 million years ago.\n\n Mount Warning, Lamington Plateau and the Border Ranges between New South Wales and Queensland are among the remnants of this volcano that was originally over 100 km in diameter and nearly twice the height of Mount Warning today, at 1156 m .\n\n Despite its size, Tweed Volcano was not a supervolcano; other shield volcanoes - such as on Hawaii - are much larger.\n\n In the 23 million years since the volcano was active, erosion has been extensive, forming a large erosion caldera around the volcanic plug of Mount Warning.\n\n Its erosion caldera is the largest in the Southern Hemisphere.",
+    "Flaming volcano\nThe flaming volcano is a large tropical group cocktail made of rum, brandy, pineapple juice, orange juice, almond syrup, and sometimes other ingredients.\n\n It is usually a multi-user drink, served to a group in a special, ritual vessel known as a volcano bowl, which is a decorative ceramic bowl (typically of about 32 USoz capacity) designed with a rising central hub feature usually resembling a crude volcano cone.\n\n The cone includes a second, much smaller central pit or \"crater\" which is partially filled with rum or other flammable high-alcohol liquor.\n\n The \"crater\" liquor is then ignited, creating a mild volcanic ambience with its central blue flame.",
+    "Apple-Kneel\nThe Apple-Kneel is a cocktail.\n\n It consists of three shots, two Sourz Apple and one Cherry Brandy.\n\n Each shot is taken from an average shot glass which is around 1.5 ounces (roughly 45 ml).\n\n Firstly, you put two shots of Sourz Apple into a glass and then put in one shot of Cherry Brandy in and mix.\n\n It is customary to sip this cocktail.\n\n It can be served 'neat' or 'on the rocks'.",
+    "Flaming Doctor Pepper\nA Flaming Doctor Pepper is a flaming cocktail said to taste like the soft drink Dr Pepper, although Dr Pepper is not one of its ingredients.",
+    "Hotlum Glacier\nThe Hotlum Glacier is a glacier situated on the northeast flank of Mount Shasta, in the US state of California.\n\n It is the largest and most voluminous glacier in California, although not as thick or long as the nearby Whitney Glacier.\n\n The Hotlum Glacier flows from a large cirque on the northeast side of Mount Shasta's main summit below the Hotlum Headwall at roughly 13600 ft .\n\n It flows northeastward down the steep slope, forming three lobes which terminate near 10400 ft .",
+    "Flaming beverage\nFlaming beverages include cocktails and other mixed drinks that contain flammable, high-proof alcohol, which is ignited prior to consumption.\n\n The alcohol may be an integral part of the drink, or it may be floated as a thin layer across the top of the drink.\n\n The flames are mostly for dramatic flair.\n\n However, in combination with certain ingredients, the flavor of the drink is altered.\n\n Some flavors are enhanced, and it may impart a toasted flavor to some drinks."
+   ]
+  },
+  {
+   "id": "6fb23798171b4641",
+   "gold": [
+    {
+     "sentence": "Elizabeth Austin (born 1958) is an American writer living in Oak Park, Illinois.",
+     "facts": {
+      "0.0": "Elizabeth Austin was born in 1958.",
+      "0.1": "Elizabeth Austin is an American writer.",
+      "0.2": "Elizabeth Austin lives in Oak Park, Illinois."
+     }
+    },
+    {
+     "sentence": " She has also written for \"The Washington Monthly, Ladies Home Journal, Good Housekeeping, Self\", and \"Shape\".",
+     "facts": {
+      "1.0": "Elizabeth Austin has also written for The Washington Monthly.",
+      "1.1": "Elizabeth Austin has also written for Ladies Home Journal.",
+      "1.2": "Elizabeth Austin has also written for Good Housekeeping.",
+      "1.3": "Elizabeth Austin has also written for Self.",
+      "1.4": "Elizabeth Austin has also written for Shape."
+     }
+    },
+    {
+     "sentence": "Shape is a monthly English language fitness magazine started by Weider Publications in 1981, founded by Christine MacIntyre (a pioneer in women's free weight fitness) and became the number one women's fitness magazine.",
+     "facts": {
+      "2.0": "Shape is a monthly English language fitness magazine.",
+      "2.1": "Shape was started by Weider Publications in 1981.",
+      "2.2": "Shape was founded by Christine MacIntyre.",
+      "2.3": "Christine MacIntyre is a pioneer in women's free weight fitness.",
+      "2.4": "Shape became the number one women's fitness magazine."
+     }
+    }
+   ],
+   "items": [
+    "Football World\nFootball World, later renamed \"Athletic World\", was an American magazine devoted to the coverage of inter-collegiate sports.\n\n Its masthead described it as \"A Magazine With a Mission to Serve the College Man,\" a publication \"devoted to Inter-collegiate Athletics and sports of Amateur standing only.\"\n\n It was founded in 1921 by J. D. Fetzer.\n\n The name of the magazine was later changed to \"Athletic World\" as the coverage extended to a broader range of sports, including women's swimming.\n\n Unlike other sports magazines of the era, which focused on promoting a healthy lifestyle, \"Football World/Athletic World\" celebrated the entertainment value of sports with a special emphasis on the personalities of famous athletes.\n\n The magazine was renamed \"Outing\" in December 1924, reflecting a change in its focus.",
+    "Wendy Austin\nDr Wendy Elizabeth Austin Hewitt, Wendy Austin is a BBC journalist and broadcaster in BBC Northern Ireland, and former presenter of BBC Radio Ulster’s current affairs programme \"Talkback\".",
+    "Elle (magazine)\nElle is a worldwide lifestyle magazine of French origin that focuses on fashion, beauty, health, and entertainment.\n\n \"Elle\" is also the world's best-selling fashion magazine.\n\n It was founded by Pierre Lazareff and his wife Hélène Gordon in 1945.\n\n The title, in French, means \"she\" or \"her\".",
+    "Muscle &amp; Fitness (British magazine)\nMuscle & Fitness is a British fitness magazine, which contains articles on strength and fitness training, diet plans and strategies for men and women, and tips and advice.",
+    "Shape (magazine)\nShape is a monthly English language fitness magazine started by Weider Publications in 1981, founded by Christine MacIntyre (a pioneer in women's free weight fitness) and became the number one women's fitness magazine.\n\n At that time, Weider Enterprises consisted primarily of the bodybuilding magazine \"Muscle & Fitness\".\n\n Joe Weider and Christine MacIntyre had differing views of how to present \"Shape\", Weider endorsing a less journalistic and more commercial approach to articles, MacIntyre endorsing a more academic, doctor-based magazine.\n\n Weider also endorsed a sexier approach to editorial while MacIntyre endorsed a healthier look for women, eschewing sexiness in the models and the copy.\n\n MacIntyre largely won that battle, editing a magazine that required that every byline have an advanced medical degree, that cover models should look healthy rather than sexy, and that sexist language be avoided.\n\n Christine MacIntyre was the editor-in-chief until her death in 1988.\n\n Tara Kraft is the current editor-in-chief.\n\n \"Shape\" found a readership based on that formula.",
+    "Memphis Sport\nMemphis Sport is a sports and fitness magazine featuring articles on local and regional teams, players and events.\n\n In addition, \"Memphis Sport\" focuses on health and fitness for an active lifestyle.\n\n The magazine debuted in Memphis, Tennessee in July 2006.\n\n Local franchises covered include the University of Memphis Tigers, Memphis Redbirds, Mississippi Riverkings and Tennessee Titans.",
+    "Ingrid Romero\nIngrid Romero (born July 10, 1985) is an international fitness model, fitness competitor, and fitness coach.\n\n Training & Fitness Magazine called her \"one of the most recognized faces in the fitness industry,\" and \"one of the most accomplished female fitness stars ever.\"",
+    "Graph query row:\nentity: Shape\nrelationship: CREATED_BY\nrelated: Christine MacIntyre",
+    "Anais Zanotti\nAnais Zanotti (born January 8, 1986 in Saint-Tropez) is a French model and stunt woman of French and Italian ancestry who lives in Miami, Florida.\n\n She has been featured in magazines such as \"Playboy\", \"FHM\", \"Maxim\", \"GQ\", \"Cosmopolitan\", \"Vogue\", and \"People\", Men's Fitness magazine, Muscle and Fitness, Women Fitness magazine and more.\n\n She has over 40 magazine covers.\n\n Zanotti is also a certified skydiver with over 1250 jumps.GS .",
+    "Elizabeth Austin (writer)\nElizabeth Austin (born 1958) is an American writer living in Oak Park, Illinois.\n\n Austin has lived in the Midwestern United States all her life.\n\n She began her journalism career at the now-defunct City News Bureau of Chicago and has written articles for national news magazines such as \"Newsweek\" and \"Time\", in addition to a wide range of other national and regional publications, such as \"People\", and the \"Chicago Tribune\".\n\n She has also written for \"The Washington Monthly, Ladies Home Journal, Good Housekeeping, Self\", and \"Shape\".\n\n She has often written about medicine and health care.\n\n Austin also has been heard on WBEZ, the National Public Radio station in Chicago, as well as the BBC in the UK and Scotland.\n\n She has appeared on the Today Show and on ITV in Europe."
+   ]
+  },
+  {
+   "id": "abd25b0ab1ade93f",
+   "gold": [
+    {
+     "sentence": " The body that was to become the Gran i General Consell was founded in 1249, and the Consell was abolished on 22 July 1718 by Philip V, empowered by the Nova Planta Decree of Majorca and Ibiza (28 November 1715).",
+     "facts": {
+      "0.0": "The body that was to become the Gran i General Consell was founded in 1249.",
+      "0.1": "The Consell was abolished on 22 July 1718.",
+      "0.2": "The Consell was abolished by Philip V.",
+      "0.3": "Philip V was empowered by the Nova Planta Decree of Majorca and Ibiza.",
+      "0.4": "The Nova Planta Decree of Majorca and Ibiza is dated 28 November 1715."
+     }
+    },
+    {
+     "sentence": "Philip V (Spanish: \"Felipe V\" , French: \"Philippe\" , Italian: \"Filippo\" ; 19 December 1683 – 9 July 1746) was King of Spain from 1 November 1700 to 15 January 1724, when he abdicated in favour of his son Louis, and from 6 September 1724, when he reassumed the throne upon his son's death, to his own death 9 July 1746.",
+     "facts": {
+      "1.0": "Philip V's Spanish name is Felipe V.",
+      "1.1": "Philip V's French name is Philippe.",
+      "1.2": "Philip V's Italian name is Filippo.",
+      "1.3": "Philip V was born on 19 December 1683.",
+      "1.4": "Philip V died on 9 July 1746.",
+      "1.5": "Philip V was King of Spain from 1 November 1700 to 15 January 1724.",
+      "1.6": "Philip V abdicated in favour of his son Louis on 15 January 1724.",
+      "1.7": "Philip V reassumed the Spanish throne on 6 September 1724, upon his son's death.",
+      "1.8": "Philip V was King of Spain from 6 September 1724 until his death on 9 July 1746."
+     }
+    }
+   ],
+   "items": [
+    "Line of succession to the former Romanian throne\nThe succession order to the throne of the Romanian monarchy, abolished since 1947, was regulated by the monarchical constitution of 1923 and the 1884 Law of the Romanian Royal House Rules enacted pursuant to the 1866 Constitution of Romania which had confirmed the enthronement of Prince Karl (Carol) of Hohenzollern-Sigmaringen.\n\n The defunct 1923 Constitution stipulated Salic law, according to which the throne was hereditary in King Carol I's legitimate descent and, if his male issue failed, in the descent of his brothers of the Sigmaringen princely branch of the House of Hohenzollern, according to agnatic primogeniture and to the perpetual exclusion of females and their descendants.\n\n The last monarch to reign in Romania was King Michael I, who was born in 1921, abdicated his throne on 30 December 1947 under coercion, and went into exile in Switzerland.",
+    "House of Hanover\nThe House of Hanover (or the Hanoverians ; German: \"Haus Hannover\" ) is a German royal dynasty that ruled the Electorate and then the Kingdom of Hanover, and that also provided monarchs of Great Britain and Ireland from 1714 and ruled the United Kingdom until the death of Queen Victoria in 1901.\n\n Upon Victoria's death, the British throne passed to her eldest son Edward VII, a member of the House of Saxe-Coburg and Gotha through his father.",
+    "Viscount Galway\nViscount Galway is a title that has been created once in the Peerage of England and thrice in the Peerage of Ireland.\n\n The first creation came in the Peerage of England in 1628 in favour of Richard Burke, 4th Earl of Clanricarde.\n\n He was made Earl of St Albans at the same time (see the Earl of Clanricarde for more information on this creation).\n\n The second creation came in the Peerage of Ireland in 1687 in favour of Ulick Bourke.\n\n He was made Baron Tyaquin at the same time, also in the Peerage of Ireland.\n\n However, both titles became extinct on his early death in 1691.\n\n The third creation came in the Peerage of Ireland in 1692 in favour of the French soldier and diplomat Henry de Massue, Marquis de Ruvigny.\n\n He was made Earl of Galway in 1697.\n\n However, both titles became extinct on his death in 1720.",
+    "Philip V of Spain\nPhilip V (Spanish: \"Felipe V\" , French: \"Philippe\" , Italian: \"Filippo\" ; 19 December 1683 – 9 July 1746) was King of Spain from 1 November 1700 to 15 January 1724, when he abdicated in favour of his son Louis, and from 6 September 1724, when he reassumed the throne upon his son's death, to his own death 9 July 1746.",
+    "Succession to the British throne\nSuccession to the British throne is determined by descent, gender (for people born before October 2011), legitimacy, and religion.\n\n Under common law, the Crown is inherited by a sovereign's children or by a childless sovereign's nearest collateral line.\n\n The Bill of Rights 1689 and the Act of Settlement 1701, restrict succession to the throne to the legitimate Protestant descendants of Sophia of Hanover that are in \"communion with the Church of England\".\n\n Spouses of Roman Catholics were disqualified from 1689 until the law was amended in 2015.\n\n Protestant descendants of those excluded for being Roman Catholics are eligible.",
+    "Ernest Augustus, King of Hanover\nErnest Augustus (5 June 1771 – 18 November 1851) was King of Hanover from 20 June 1837 until his death.\n\n He was the fifth son and eighth child of King George III of the United Kingdom and Hanover.\n\n As a fifth son, Ernest seemed unlikely to become a monarch, but none of his four elder brothers had a legitimate son who survived infancy.\n\n The Salic Law, which barred succession to or through a female, prevailed in Hanover; therefore, when his elder brother King William IV died in 1837, Ernest succeeded him as King of Hanover.\n\n In the United Kingdom the succession to the monarchy was determined by primogeniture and his niece Victoria succeeded to the throne, thus ending the personal union between the British Isles and Hanover that had existed since 1714.",
+    "Eric III of Denmark\nEric III Lamb (Danish: \"Erik III Lam\" ) (  1120 – 27 August 1146) was the King of Denmark from 1137 until 1146.\n\n He was the grandson of Eric I of Denmark and the nephew of Eric II of Denmark, whom he succeeded on the throne.\n\n He abdicated in 1146, as the first and only Danish monarch to do so.\n\n His succession led to a period of civil war between Sweyn III, Canute V, and Valdemar I.",
+    "Gran i General Consell\nThe Gran i General Consell (Catalan: \"Great and General Council\") was the supreme political, administrative, and representative organ of the Kingdom of Majorca.\n\n Since the Kingdom of Majorca did not have courts, the Gran i General Consell took over most of the functions they would otherwise have had, including the role of a representative body.\n\n The Gran i General Consell evolved from the Catalan municipal councils, especially that of the City of Majorca (present-day Palma de Mallorca.\n\n The body that was to become the Gran i General Consell was founded in 1249, and the Consell was abolished on 22 July 1718 by Philip V, empowered by the Nova Planta Decree of Majorca and Ibiza (28 November 1715).\n\n At the same time, all other separate Majorcan institutions were dissolved.",
+    "Duke of Bedford\nHe regained the earldom in 1485 when his nephew Henry VII came to the throne and was elevated to the dukedom the same year.\n\n He had no legitimate children and the titles became extinct on his death in 1495.",
+    "Duke of Bedford\nDuke of Bedford (named after Bedford, England) is a title that has been created six times (for five distinct people) in the Peerage of England.\n\n The first and second creations came in 1414 in favour of Henry IV's third son, John, who later served as regent of France.\n\n He was made Earl of Kendal at the same time and was made Earl of Richmond later the same year.\n\n The titles became extinct on his death in 1435.\n\n The third creation came in 1470 in favour of George Neville, nephew of Warwick the Kingmaker.\n\n He was deprived of the title by Act of Parliament in 1478.\n\n The fourth creation came 1478 in favour of George, the third son of Edward IV.\n\n He died the following year at the age of two.\n\n The fifth creation came in 1485 in favour of Jasper Tudor, half-brother of Henry VI and uncle of Henry VII.\n\n He had already been created Earl of Pembroke in 1452.\n\n However, as he was a Lancastrian, his title was forfeited between 1461 and 1485 during the predominance of the House of York."
+   ]
+  },
+  {
+   "id": "2e950419fb2d4a41",
+   "gold": [
+    {
+     "sentence": "Keisuke Kuwata (桑田 佳祐 , Kuwata Keisuke , born February 26, 1956) is a Japanese multi-instrumentalist, singer-songwriter, and frontman for the Southern All Stars, as well of his own solo band, the Kuwata band.",
+     "facts": {
+      "0.0": "Keisuke Kuwata's name is written 桑田 佳祐 (Kuwata Keisuke).",
+      "0.1": "Keisuke Kuwata was born February 26, 1956.",
+      "0.2": "Keisuke Kuwata is a Japanese multi-instrumentalist.",
+      "0.3": "Keisuke Kuwata is a Japanese singer-songwriter.",
+      "0.4": "Keisuke Kuwata is frontman for the Southern All Stars.",
+      "0.5": "Keisuke Kuwata has his own solo band, the Kuwata band."
+     }
+    },
+    {
+     "sentence": "Moya Brennan, born Máire Ní Bhraonáin (] ), also known as Máire Brennan (born 4 August 1952), is an Irish folk singer, songwriter, harpist, and philanthropist.",
+     "facts": {
+      "1.0": "Moya Brennan was born Máire Ní Bhraonáin.",
+      "1.1": "Moya Brennan is also known as Máire Brennan.",
+      "1.2": "Moya Brennan was born 4 August 1952.",
+      "1.3": "Moya Brennan is an Irish folk singer.",
+      "1.4": "Moya Brennan is an Irish songwriter.",
+      "1.5": "Moya Brennan is an Irish harpist.",
+      "1.6": "Moya Brennan is an Irish philanthropist."
+     }
+    }
+   ],
+   "items": [
+    "Bruce Yonemoto\nBruce Yonemoto (born 1949) is a Japanese-American multimedia artist.\n\n His work has been recognized by the National Endowment for the Arts, the American Film Institute, The Rockefeller Foundation, the Maya Deren Award for Experimental Film and Video, and a mid-career survey show at the Japanese American National Museum, in addition to major solo exhibitions at the InterCommunication Center in Tokyo, the Institute of Contemporary Art the University of Pennsylvania, and the Kemper Museum in Kansas City, MO.\n\n Yonemoto was featured in the 2002 Corcoran Gallery Bienniel, in Washington D.C. Yonemoto was also a recipient of the Creative Capital Visual Arts Award in 2008.",
+    "Keisuke Kuwata\nKeisuke Kuwata (桑田 佳祐 , Kuwata Keisuke , born February 26, 1956) is a Japanese multi-instrumentalist, singer-songwriter, and frontman for the Southern All Stars, as well of his own solo band, the Kuwata band.\n\n He has also done significant amount of scoring music for films.\n\n He went to Aoyama Gakuin University.",
+    "Kevin Mayer\nKevin Mayer (] , ] or ] , born 10 February 1992) is a French athlete specializing in combined events.\n\n A native of Drôme in southeast France, Mayer excelled in combined events from a young age; highlights from his youth career include winning gold medals in the octathlon at the 2009 World Youth Championships and in the decathlon at the 2010 World Junior Championships and at the 2011 European Athletics Junior Championships, establishing a new national junior record at the latter.",
+    "My Match Is a Makin'\nMy Match Is A Makin' (English translation of opening track title) is a music album by Irish musicians Moya Brennan and Cormac de Barra.\n\n This is Moya's eighth studio album to be released.\n\n It was released on 14 April 2010 exclusively to concert goers on her Spring 2010 tour of the Netherlands.\n\n The album was re-released to a wider audience under the title Voices & Harps.",
+    "Keiko Utoku\nKeiko Utoku (宇徳敬子 , \"Utoku Keiko\" , born April 7, 1967 in Izumi, Kagoshima, Japan) is a Japanese singer and songwriter under UK Sweet label.Keiko made first debut with chorus part in band B.B.Queens then joined with J-pop female band Mi-Ke from 1991 to 1993, before starting a solo career.\n\n As a child, Utoku listened to a lot of music, including music made by Momoe Yamaguchi.\n\n She has written and sung many songs, such as \"Wasurenagusa\", and Sonic the Hedgehog fans remember her for her vocal work in the original version of the Sonic CD video game's opening and closing themes in Japan and Europe, \"Sonic – You Can Do Anything\" and \"Cosmic Eternity – Believe In Yourself\" in 1993.\n\n In addition, she also provided Sonic's vocals in the game.\n\n At recent dates, she has released 15 singles, 5 digital singles, 4 studio albums, 1 mini and 2 best albums.",
+    "Moya Brennan\nMoya Brennan, born Máire Ní Bhraonáin (] ), also known as Máire Brennan (born 4 August 1952), is an Irish folk singer, songwriter, harpist, and philanthropist.\n\n She is the older sister of Enya and Brídín Brennan.\n\n She began performing professionally in 1970 when her family formed the band Clannad, and is considered as the \"First Lady of Celtic Music\".\n\n Moya released her first solo album in 1992 called \"Máire\", a successful venture.\n\n She has been nominated for two Grammys and has won an Emmy Award.\n\n She has recorded music for several soundtracks, including \"Titanic\", \"To End All Wars\" and \"King Arthur\".",
+    "2014 Monterrey Open – Doubles\nTímea Babos and Kimiko Date-Krumm were the defending champions, but chose not to participate together.\n\n Babos played alongside Olga Govortsova, while Date-Krumm teamed up with Karolína Plíšková.\n\n The two teams were scheduled to meet in the semifinals, but Date-Krumm withdrew with a right leg injury.\n\n<br>",
+    "Kate O'Beirne\nKate Walsh O'Beirne (September 23, 1949 – April 23, 2017) was the President of National Review Institute.\n\n She was the Washington editor of \"National Review\".\n\n Her column, \"Bread and Circuses,\" covered Congress, politics, and U.S. domestic policy.",
+    "Two Horizons\nTwo Horizons is the fifth solo album by Irish singer Moya Brennan.\n\n It is her first full-length release under the name \"Moya Brennan\", as opposed to \"Máire Brennan\".\n\n The album was predominantly recorded in her home studio in Dublin and was nominated for a Grammy award.\n\n The album was recorded between 2002–2003 and first became available on 23 October 2003.\n\n It is also Brennan's first non-Christian album since her 1993 recording Misty Eyed Adventures.\n\n It is the most successful of her solo albums to date and the second to be Grammy-nominated.",
+    "Koi Kaze\nKoi Kaze (Japanese: 恋風 , lit.\n\n \"Love Wind\") is a Japanese manga series written and illustrated by Motoi Yoshida.\n\n It premiered in the September 2001 issue of \"Evening\" and ran for 29 chapters until its conclusion in the October 2004 issue.\n\n The individual chapters were collected and published in five \"tankōbon\" volumes by Kodansha.\n\n The series tells of the love affair that develops between 27-year-old Koshiro, and his 15-year-old sister, Nanoka."
+   ]
+  },
+  {
+   "id": "c4e79837eaca83a2",
+   "gold": [
+    {
+     "sentence": " The journalist in question is Joe McGinniss; the murderer is the former Special Forces captain Dr. Jeffrey R. MacDonald, who became the subject of McGinniss' 1983 book \"Fatal Vision\".",
+     "facts": {
+      "0.0": "The journalist in question is Joe McGinniss.",
+      "0.1": "The murderer is the former Special Forces captain Dr. Jeffrey R. MacDonald.",
+      "0.2": "Dr. Jeffrey R. MacDonald became the subject of Joe McGinniss' 1983 book 'Fatal Vision'."
+     }
+    },
+    {
+     "sentence": "Jeffrey Robert MacDonald (born October 12, 1943) is an American medical doctor who was convicted in 1979 of murdering his pregnant wife and two daughters in February 1970.",
+     "facts": {
+      "1.0": "Jeffrey Robert MacDonald was born on October 12, 1943.",
+      "1.1": "Jeffrey Robert MacDonald is an American medical doctor.",
+      "1.2": "Jeffrey Robert MacDonald was convicted in 1979 of murdering his pregnant wife.",
+      "1.3": "Jeffrey Robert MacDonald was convicted in 1979 of murdering his two daughters.",
+      "1.4": "The murders took place in February 1970."
+     }
+    }
+   ],
+   "items": [
+    "Jeffrey R. MacDonald\nJeffrey Robert MacDonald (born October 12, 1943) is an American medical doctor who was convicted in 1979 of murdering his pregnant wife and two daughters in February 1970.",
+    "Joe McGinniss\nJoseph R. McGinniss, Sr. (December 9, 1942 – March 10, 2014), known as Joe McGinniss, was an American non-fiction writer and novelist.\n\n The author of twelve books, he first came to prominence with the best-selling \"The Selling of the President 1968\" which described the marketing of then-presidential candidate Richard Nixon.\n\n He is popularly known for his trilogy of bestselling true crime books — \"Fatal Vision\", \"Blind Faith\" and \"Cruel Doubt\" — which were adapted into TV miniseries in the 1980s and 90s.\n\n His last book was \"The Rogue: Searching for the Real Sarah Palin\", an account of Sarah Palin, the former governor of Alaska who was the 2008 Republican vice-presidential nominee.",
+    "The Journalist and the Murderer\nThe Journalist and the Murderer is a study by Janet Malcolm about the ethics of journalism, published by Alfred A. Knopf/Random House in 1990.\n\n It is an examination of the professional choices that shape a work of non-fiction, as well as a rumination on the morality that underpins the journalistic enterprise.\n\n The journalist in question is Joe McGinniss; the murderer is the former Special Forces captain Dr. Jeffrey R. MacDonald, who became the subject of McGinniss' 1983 book \"Fatal Vision\".",
+    "Fatal Vision (disambiguation)\nFatal Vision is the 1983 true crime book by Joe McGinniss which lies at the center of the \"Fatal Vision\" controversy.",
+    "Convicted (1950 film)\nConvicted is a 1950 American crime film noir directed by Henry Levin starring Glenn Ford and Broderick Crawford.\n\n It was the third Columbia Pictures film adaptation of the 1929 stage play \"The Criminal Code\" by Martin Flavin, following Howard Hawk's \"The Criminal Code\" (1931) and John Brahm's \"Penitentiary\" (1938).",
+    "Edward Fitzgerald (barrister)\nEdward Hamilton Fitzgerald CBE QC is an English barrister who specialises in criminal law, public law, and international human rights law.\n\n His work against the death penalty has led him to represent despised criminals such as: Myra Hindley, a perpetrator in the Moors murders; Mary Bell, a child killer; Maxine Carr; Jon Venables, one of James Bulger's killers; various IRA prisoners; and Abu Hamza, the controversial Muslim cleric.\n\n Fitzgerald is currently the joint head of Doughty Street Chambers along with Geoffrey Robertson QC.\n\n Fitzgerald has been called to the Bar in a number of jurisdictions including Belize, Grenada and St Vincent, and has been granted rights of audience to appear in cases in Hong Kong, Trinidad and Tobago, St Lucia, Bahamas, and the British Virgin Islands.\n\n He is also a trustee and patron of a number of charities including The Death Penalty Project and The Longford Trust.",
+    "Fatal Vision controversy\nThe controversy over Fatal Vision, journalist and author Joe McGinniss's best-selling 1983 true crime book, is a decades-long dispute spanning several court cases and discussed in several other published works.",
+    "Fatal Vision (miniseries)\nFatal Vision is a 1984 American television miniseries based on the account, in the book of the same name, of the murders in 1970 at Fort Bragg of the wife and daughters of U.S. Army officer Jeffrey R. MacDonald.",
+    "Richard Hauptmann\nBruno Richard Hauptmann (November 26, 1899 – April 3, 1936) was a German-born carpenter who was convicted of the abduction and murder of the 20-month-old son of aviator Charles Lindbergh and his wife Anne Morrow Lindbergh.\n\n The Lindbergh kidnapping became known as \"The Crime of the Century\".\n\n Hauptmann proclaimed his innocence to the end, but he was convicted of first degree murder and executed in 1936 in the electric chair at the New Jersey State Prison.",
+    "Going to Extremes (book)\nGoing to Extremes is a non-fiction book by Joe McGinniss.\n\n It was first published in 1980.\n\n The book is about McGinniss' travels through Alaska for a year.\n\n The book became a best-seller."
+   ]
+  },
+  {
+   "id": "f9de25aaa232aece",
+   "gold": [
+    {
+     "sentence": "The Cathedral Church of the Holy Spirit, Guildford is the Anglican cathedral at Guildford, Surrey, England.",
+     "facts": {
+      "0.0": "The Cathedral Church of the Holy Spirit, Guildford is an Anglican cathedral.",
+      "0.1": "The Cathedral Church of the Holy Spirit, Guildford is located at Guildford, Surrey, England."
+     }
+    },
+    {
+     "sentence": "St Paul's Cathedral, London, is an Anglican cathedral, the seat of the Bishop of London and the mother church of the Diocese of London.",
+     "facts": {
+      "1.0": "St Paul's Cathedral, London is an Anglican cathedral.",
+      "1.1": "St Paul's Cathedral, London is the seat of the Bishop of London.",
+      "1.2": "St Paul's Cathedral, London is the mother church of the Diocese of London."
+     }
+    }
+   ],
+   "items": [
+    "Lincoln Cathedral\nLincoln Cathedral or the Cathedral Church of the Blessed Virgin Mary of Lincoln, and sometimes St. Mary's Cathedral in Lincoln, England is the seat of the Anglican bishop.\n\n Building commenced in 1088 and continued in several phases throughout the medieval period.\n\n It was the tallest building in the world for 238 years (1311–1549), and the first building to hold that title after the Great Pyramid of Giza.\n\n The central spire collapsed in 1549 and was not rebuilt.\n\n The cathedral is the third largest in Britain (in floor area) after St Paul's and York Minster, being 484 by .\n\n It is highly regarded by architectural scholars; the eminent Victorian writer John Ruskin declared: \"I have always held... that the cathedral of Lincoln is out and out the most precious piece of architecture in the British Isles and roughly speaking worth any two other cathedrals we have.\"",
+    "Guildford Cathedral, designed by Edward Maufe and built 1936–1961 on land donated by Lord Onslow, is the Church of England Diocese of Guildford’s seat. Its exterior features sculpture by notable mid-century artists. Dean Dianna Gwilliams leads its chapter; Lanesborough School is its choir school. Barry Rose established its choir and daily sung worship, while organist Katherine Dienes is the first woman to hold a Church of England cathedral’s senior musical post. The",
+    "The entries cover British and Australian church heritage. London’s St Paul’s, founded on the site of a church dating to 604, is Wren’s Grade I-listed Baroque cathedral, rebuilt after the Great Fire. Rockhampton’s St Paul’s Cathedral (1883–1953) and adjacent hall (built circa 1900) are Queensland-listed. Augustine became Canterbury’s first archbishop in 597. Other cathedrals include medieval Lichfield (England’s only",
+    "Exterior sculpture of Guildford Cathedral\nThe Exterior sculpture of Guildford Cathedral provides many artistic features, including sculptures, engravings and more by some of England’s finest sculptors and craftsmen of the 1950s and 1960s.\n\n The people who worked on the cathedral include: Edward Maufe, Alan Collins, Vernon Hill, Eric Gill, John Hutton, Dennis Huntley and others.",
+    "St Chad's Cathedral, Birmingham\nThe Metropolitan Cathedral Church and Basilica of Saint Chad is the mother church of the Archdiocese of Birmingham and province of the Catholic Church in Great Britain and is dedicated to Saint Chad of Mercia.\n\n Built by Augustus Welby Pugin and substantially complete by 1841, St Chad's is one of the first four Catholic churches that were constructed after the English Reformation and raised to cathedral status in 1852.\n\n It is one of only four minor basilicas in England (the others being Downside Abbey, the National Shrine of Our Lady at Walsingham and Corpus Christi Priory, this last now disused).\n\n St Chad's is a Grade II* listed building.\n\n The cathedral is located in a public greenspace near St Chad's Queensway, in central Birmingham.\n\n s of 2014 the Archbishop was Bernard Longley and the Dean Canon Gerry Breen.",
+    "St Paul's Cathedral\nSt Paul's Cathedral, London, is an Anglican cathedral, the seat of the Bishop of London and the mother church of the Diocese of London.\n\n It sits on Ludgate Hill at the highest point of the City of London and is a Grade 1 listed building.\n\n Its dedication to Paul the Apostle dates back to the original church on this site, founded in AD 604.\n\n The present cathedral, dating from the late 17th century, was designed in the English Baroque style by Sir Christopher Wren.\n\n Its construction, completed in Wren's lifetime, was part of a major rebuilding programme in the City after the Great Fire of London.",
+    "St Philip's Cathedral, Birmingham\nThe Cathedral Church of Saint Philip is the Church of England cathedral and the seat of the Bishop of Birmingham.\n\n Built as a parish church and consecrated in 1715, St Philip's became the cathedral of the newly formed Diocese of Birmingham in 1905.\n\n St Philip's was built in the early 18th century in the Baroque style by Thomas Archer and is located on Colmore Row, Birmingham, England.\n\n The cathedral is a Grade I listed building.\n\n St Philip's is the third smallest cathedral in England after Derby and Chelmsford.",
+    "St Paul's Cathedral, Rockhampton\nSt Paul's Anglican Cathedral is a heritage-listed cathedral at 89 William Street, Rockhampton, Rockhampton Region, Queensland, Australia.\n\n It was designed principally by Annersley Voysey and built from 1883 to 1953.\n\n It is also known as St Paul's Church of England and St Paul's Church of England Cathedral.\n\n It was added to the Queensland Heritage Register on 21 October 1992.\n\n The associated hall and offices were listed on the Queensland Heritage Register on 23 June 2000.",
+    "Guildford Cathedral\nThe Cathedral Church of the Holy Spirit, Guildford is the Anglican cathedral at Guildford, Surrey, England.\n\n The Lord Onslow donated the land on which the Cathedral was built with a covenant for this purpose.\n\n Designed by Sir Edward Maufe and built between 1936 and 1961, it is the seat of the Diocese of Guildford.",
+    "Diocese of Guildford\nThe Diocese of Guildford is a Church of England diocese covering nine of the eleven districts in Surrey, much of north-east Hampshire and a parish in Greater London.\n\n The cathedral is Guildford Cathedral and the bishop is the Bishop of Guildford.\n\n Of the two provinces of the church it falls within the Province of Canterbury."
+   ]
+  },
+  {
+   "id": "c197edfab128c03d",
+   "gold": [
+    {
+     "sentence": "Colonel Charles Hastings Judd (September 8, 1835 – April 18, 1890) was an American businessman, rancher, courtier and politician of the Kingdom of Hawaii.",
+     "facts": {
+      "0.0": "Charles Hastings Judd was a Colonel.",
+      "0.1": "Charles Hastings Judd was born on September 8, 1835.",
+      "0.2": "Charles Hastings Judd died on April 18, 1890.",
+      "0.3": "Charles Hastings Judd was an American businessman.",
+      "0.4": "Charles Hastings Judd was an American rancher.",
+      "0.5": "Charles Hastings Judd was an American courtier.",
+      "0.6": "Charles Hastings Judd was an American politician of the Kingdom of Hawaii.",
+      "0.7": "Charles Hastings Judd was a businessman, rancher, courtier and politician of the Kingdom of Hawaii."
+     }
+    },
+    {
+     "sentence": " He served as Chamberlain and Colonel of the military staff of King Kalākaua and traveled with the monarch on his 1881 world tour.",
+     "facts": {
+      "1.0": "Charles Hastings Judd served as Chamberlain to King Kalakaua.",
+      "1.1": "Charles Hastings Judd served as Colonel of the military staff of King Kalakaua.",
+      "1.2": "Charles Hastings Judd traveled with King Kalakaua on his 1881 world tour."
+     }
+    },
+    {
+     "sentence": "Kalākaua (November 16, 1836 – January 20, 1891), born David Laʻ amea Kamananakapu Mahinulani Naloiaehuokalani Lumialani Kalākaua and sometimes called The Merrie Monarch, was the last king (and second to last monarch) of the Kingdom of Hawaiʻ i.",
+     "facts": {
+      "2.0": "Kalakaua was born on November 16, 1836.",
+      "2.1": "Kalakaua died on January 20, 1891.",
+      "2.2": "Kalakaua was born David La'amea Kamananakapu Mahinulani Naloiaehuokalani Lumialani Kalakaua.",
+      "2.3": "Kalakaua is sometimes called The Merrie Monarch.",
+      "2.4": "Kalakaua was the last king of the Kingdom of Hawaii.",
+      "2.5": "Kalakaua was the second-to-last monarch of the Kingdom of Hawaii."
+     }
+    }
+   ],
+   "items": [
+    "Kenneth Anderson (British Army officer)\nGeneral Sir Kenneth Arthur Noel Anderson, (25 December 1891 – 29 April 1959) was a senior British Army officer who saw service in both World wars.\n\n He is mainly remembered as the commander of the British First Army during Operation Torch, the Allied invasion of North Africa.\n\n He had an outwardly reserved character and did not court popularity either with his superiors or with the public.\n\n His American superior, General Dwight D. Eisenhower, wrote that he was \"blunt, at times to the point of rudeness\".\n\n In consequence he is less well known than many of his contemporaries.\n\n Richard Mead wrote that \"He handled a difficult campaign more competently than his critics suggest, but competence without flair was not good enough for a top commander in 1944\".",
+    "George W. Macfarlane\nGeorge Walter Hunter Macfarlane (March 1, 1849 – February 20, 1921) was a British businessman, courtier and politician of the Kingdom of Hawaii.\n\n He served Colonel of the military staff of King Kalākaua, traveling with the monarch on his 1881 world tour.\n\n He also served as his final chamberlain of king and was at his deathbed in 1891.",
+    "Charles Hastings Judd\nColonel Charles Hastings Judd (September 8, 1835 – April 18, 1890) was an American businessman, rancher, courtier and politician of the Kingdom of Hawaii.\n\n He served as Chamberlain and Colonel of the military staff of King Kalākaua and traveled with the monarch on his 1881 world tour.",
+    "German General Staff\nThe German General Staff, originally the Prussian General Staff and officially Great General Staff (\"Großer Generalstab\"), was a full-time body at the head of the Prussian Army and later, the German Army, responsible for the continuous study of all aspects of war, and for drawing up and reviewing plans for mobilization or campaign.\n\n It existed unofficially from 1806, and was formally established by law in 1814, the first general staff in existence.\n\n It was distinguished by the formal selection of its officers by intelligence and proven merit rather than patronage or wealth, and by the exhaustive and rigorously structured training which its staff officers undertook.\n\n Its rise and development gave the German armed forces a decisive strategic advantage over their adversaries for nearly a century and a half.",
+    "Marisha Chamberlin\nMarisha Anne Chamberlain (born January 6, 1952) is an American writer.\n\n Her most recent work, the libretto for \"Mortals & Angels\", a collaboration with American composer Carol Barnett, premiered at Carnegie Hall in 2016, a companion piece to their widely produced collaborative piece, \"The World Beloved: A Bluegrass Mass\".\n\n Her stage plays, both original works and adaptations are widely produced.\n\n Her debut novel, \"The Rose Variations\", was published by Soho Press in 2009.\n\n Her play, \"Scheherazade\", won the Dramatists Guild/CBS National Award, and in her screenplay version, played on public television across the country, and was screened at the British Film Institute Festival in the category of Best of American Public Television.",
+    "William K. MacNulty\nWilliam Kirk MacNulty (May 22, 1892 - August 3, 1964) was a U. S. Marine with a long and distinguished record.\n\n He was a young U.S. Marine Corps Second Lieutenant during World War One and saw action at the Battle of the Argonne Forest.\n\n He served as a captain during the Second U.S. Nicaraguan Campaign (1926–33).\n\n During the Second World War as Lieutenant Colonel he commanded the U.S. Marine Corps defense of Guam against overwhelming Imperial Japanese forces during the First Battle of Guam.\n\n He was incarcerated by the Japanese as a prisoners of war.\n\n He was promoted to Brigadier General during captivity and retired from military service in 1946.\n\n He is buried at the Golden Gate National Cemetery in San Bruno, San Mateo County, California.",
+    "Merrie Monarch Festival\nThe Merrie Monarch Festival is a week-long cultural festival that takes place annually in Hilo, Hawaii during the week after Easter.\n\n It honors King David Kalākaua, who was called the \"Merrie Monarch\" for his patronage of the arts and is credited with restoring many Hawaiian cultural traditions during his reign, including the hula.\n\n Many \"hālau hula\" (schools), including some from the U.S. mainland and some international performers, attend the festival each year to participate in exhibitions and competitions.\n\n The festival has received worldwide attention and is considered the most prestigious of all hula contests.",
+    "Franz Halder\nFranz Halder (30 June 1884 – 2 April 1972) was a German general and the chief of the \"Oberkommando des Heeres\" staff (OKH, Army High Command) from 1938 until September 1942, when he was dismissed after frequent disagreements with Adolf Hitler.\n\n Until December 1941 Halder's military position corresponded to the old Chief of the General Staff position, which during World War I had been the highest military office in the German Imperial Army.\n\n Halder's diary during his time as chief of OKH General Staff has been a source for authors that have written about such subjects as Hitler, World War II and the Nazi Party.\n\n In William Shirer's \"The Rise and Fall of the Third Reich\", Halder's diary is cited hundreds of times.",
+    "Kalākaua\nKalākaua (November 16, 1836 – January 20, 1891), born David Laʻ amea Kamananakapu Mahinulani Naloiaehuokalani Lumialani Kalākaua and sometimes called The Merrie Monarch, was the last king (and second to last monarch) of the Kingdom of Hawaiʻ i.\n\n He reigned from February 12, 1874 until his death in San Francisco, California, on January 20, 1891.\n\n Kalākaua had a convivial personality and enjoyed entertaining guests with his singing and ukulele playing.\n\n At his coronation and his birthday jubilee, the hula that had been banned from public in the kingdom became a celebration of Hawaiian culture.",
+    "Arthur Tedder, 1st Baron Tedder\nMarshal of the Royal Air Force Arthur William Tedder, 1st Baron Tedder, {'1': \", '2': \", '3': \", '4': \"} (11 July 1890 – 3 June 1967) was a senior Royal Air Force commander.\n\n He was a pilot and squadron commander in the Royal Flying Corps in the First World War and he went on to serve as a senior officer in the Royal Air Force during the inter-war years when he served in Turkey, Great Britain and the Far East.\n\n During the Second World War, as Air Officer Commanding RAF Middle East Command, Tedder directed air operations in the Mediterranean and North Africa, including the evacuation of Crete and \"Operation Crusader\" in North Africa.\n\n His bombing tactics became known as the \"Tedder Carpet\".\n\n Later in the war Tedder took command of Mediterranean Air Command and in that role was closely involved in the planning of the Allied invasion of Sicily and then the Allied invasion of Italy.\n\n When Operation Overlord—the invasion of France—came to be planned, Tedder was appointed Deputy Supreme Commander at Supreme Headquarters Allied Expeditionary Force under General Eisenhower."
+   ]
+  },
+  {
+   "id": "cf57053e016d6424",
+   "gold": [
+    {
+     "sentence": "Dorian Gray is the main character of the novel \"The Picture of Dorian Gray\" (1890) by Oscar Wilde.",
+     "facts": {
+      "0.0": "Dorian Gray is the main character of the novel The Picture of Dorian Gray.",
+      "0.1": "The Picture of Dorian Gray was published in 1890.",
+      "0.2": "The Picture of Dorian Gray was written by Oscar Wilde."
+     }
+    },
+    {
+     "sentence": "The Picture of Dorian Gray is a philosophical novel by Oscar Wilde, first published complete in the July 1890 issue of \"Lippincott's Monthly Magazine\".",
+     "facts": {
+      "1.0": "The Picture of Dorian Gray is a philosophical novel.",
+      "1.1": "The Picture of Dorian Gray was written by Oscar Wilde.",
+      "1.2": "The Picture of Dorian Gray was first published complete.",
+      "1.3": "The Picture of Dorian Gray was first published complete in the July 1890 issue of Lippincott's Monthly Magazine."
+     }
+    },
+    {
+     "sentence": " The magazine's editor feared the story was indecent, and without Wilde's knowledge, deleted roughly five hundred words before publication.",
+     "facts": {
+      "2.0": "The editor of Lippincott's Monthly Magazine feared the story was indecent.",
+      "2.1": "The editor of Lippincott's Monthly Magazine, without Wilde's knowledge, deleted roughly five hundred words before publication."
+     }
+    }
+   ],
+   "items": [
+    "The Picture of Dorian Gray (1945 film)\nThe Picture of Dorian Gray is a 1945 American horror-drama film based on Oscar Wilde's 1890 novel of the same name.\n\n Released in March 1945 by Metro-Goldwyn-Mayer, the film is directed by Albert Lewin and stars George Sanders as Lord Henry Wotton and Hurd Hatfield as Dorian Gray.\n\n Shot primarily in black-and-white, the film features four inserts in 3-strip Technicolor of Dorian's portrait as a special effect (the first two of his portrait's original state, and the second two after a major period of degeneration).",
+    "The Picture of Dorian Gray (1910 film)\nThe Picture of Dorian Gray (1910), a.k.a. Dorian Grays Portræt, is a Danish silent film based on the novel \"The Picture of Dorian Gray\" by Oscar Wilde.",
+    "A Portrait of Dorian Gray\nA Portrait of Dorian Gray (2005) is the fashion designer and photographer Karl Lagerfeld's rendition of Oscar Wilde's novel \"The Picture of Dorian Gray\" (1891) in photography.\n\n The models, Larry Scott and Eva Herzigová, star as Mr. and Mrs. Dorian Gray.",
+    "The Picture of Dorian Gray (1917 film)\nThe Picture of Dorian Gray (German: Das Bildnis des Dorian Gray) is a 1917 German silent fantasy film directed by Richard Oswald and starring Bernd Aldor, Ernst Pittschau, and Ernst Ludwig.\n\n The film is based on the novel \"The Picture of Dorian Gray\" by Oscar Wilde.",
+    "Dorian Gray (1970 film)\nDorian Gray (Italian: \"Il dio chiamato Dorian\") aka \"The Sins of Dorian Gray\" is a 1970 movie adaptation of Oscar Wilde's novel \"The Picture of Dorian Gray\" starring Helmut Berger.\n\n The Italian title translates as \"A God Called Dorian\".",
+    "The Picture of Dorian Gray\nThe Picture of Dorian Gray is a philosophical novel by Oscar Wilde, first published complete in the July 1890 issue of \"Lippincott's Monthly Magazine\".\n\n The magazine's editor feared the story was indecent, and without Wilde's knowledge, deleted roughly five hundred words before publication.\n\n Despite that censorship, \"The Picture of Dorian Gray\" offended the moral sensibilities of British book reviewers, some of whom said that Oscar Wilde merited prosecution for violating the laws guarding the public morality.\n\n In response, Wilde aggressively defended his novel and art in correspondence with the British press, although he personally made excisions of some of the most controversial material when revising and lengthening the story for book publication the following year.",
+    "Dorian Gray (disambiguation)\nDorian Gray is the main character of the novel \"The Picture of Dorian Gray\" (1890) by Oscar Wilde.",
+    "Dorian Gray (character)\nDorian Gray is the main character in Oscar Wilde's novel The Picture of Dorian Gray.\n\n Dorian Gray is a handsome, susceptible, wealthy young Victorian gentleman.\n\n He falls in love with and devotes himself to Sibyl Vane.\n\n Dorian has two friends, Basil and Henry.\n\n Basil is an artist who draws a portrait of Dorian that emphasizes his youthful, noble, and natural beauty.\n\n Henry is a friend who has a cynical nature and who shares various thoughts with Dorian.",
+    "El retrato de Dorian Gray\nThe Picture of Dorian Gray (\"El retrato de Dorian Gray\"), is a Mexican telenovela, based on \"The Picture of Dorian Gray\", the novel written by Oscar Wilde.\n\n The main character is the handsome young man called Dorian Gray (played by late Enrique Álvarez Félix).\n\n This telenovela was made in 1969.",
+    "Graph query row:\nentity: The Picture of Dorian Gray\nrelationship: CREATED_BY\nrelated: Oscar Wilde\nkind: philosophical novel\ngenre: fantasy"
+   ]
+  },
+  {
+   "id": "dd6518bb19548edb",
+   "gold": [
+    {
+     "sentence": "Dieffenbachia is a genus of tropical flowering plants in the family Araceae.",
+     "facts": {
+      "0.0": "Dieffenbachia is a genus of flowering plants.",
+      "0.1": "Dieffenbachia is a genus of tropical flowering plants.",
+      "0.2": "Dieffenbachia is in the family Araceae."
+     }
+    },
+    {
+     "sentence": "Carlina is a genus of flowering plants in the aster family, Asteraceae.",
+     "facts": {
+      "1.0": "Carlina is a genus of flowering plants.",
+      "1.1": "Carlina is in the aster family.",
+      "1.2": "Carlina is in the family Asteraceae."
+     }
+    }
+   ],
+   "items": [
+    "Dictyosperma\nDictyosperma is a monotypic genus of flowering plant in the palm family found in the Mascarene Islands in the Indian Ocean (Mauritius, Réunion and Rodrigues).\n\n The sole species, Dictyosperma album, is widely cultivated in the tropics but has been farmed to near extinction in its native habitat.\n\n It is commonly called princess palm or hurricane palm, the latter owing to its ability to withstand strong winds by easily shedding leaves.\n\n It is closely related to, and resembles, palms in the \"Archontophoenix\" genus.\n\n The genus is named from two Greek words meaning \"net\" and \"seed\" and the epithet is Latin for \"white\", the common color of the crownshaft at the top of the trunk.",
+    "Carlina\nCarlina is a genus of flowering plants in the aster family, Asteraceae.\n\n It is distributed from Madeira and the Canary Islands across Europe and northern Africa to Siberia and northwestern China.",
+    "Caladium\nCaladium is a genus of flowering plants in the family Araceae.\n\n They are often known by the common name elephant ear (which they share with the closely related genera \"Alocasia\", \"Colocasia\", and \"Xanthosoma\"), Heart of Jesus, and Angel Wings.\n\n There are over 1000 named cultivars of \"Caladium bicolor\" from the original South American plant.",
+    "Conophytum\nConophytum is a genus of South African and Namibian succulent plants that belong to the Aizoaceae family.\n\n The name is derived from the Latin “conus” (cone) and Greek “phytum” (plant).\n\n The plants are also known as knopies (buttons), waterblasies (water blisters), sphaeroids, conos, cone plants, dumplings, or button plants.",
+    "Bognera\nBognera is a monotypic genus of flowering plants in the Araceae family.\n\n The single species that makes up the genus is Bognera recondita.\n\n The word \"recondita\" means \"hidden\" referring to the fact that the plant is only found in remote areas of Amazonian Brazil near the Peruvian border.\n\n The species was discovered in the late 1970s and was originally placed in the genus \"Ulearum\".\n\n In 1984 a new genus, \"Bognera\" named after the German Aroid specialist Josef Bogner, was created for it.\n\n \"Bognera\" is believed to be closely related to \"Dieffenbachia\".",
+    "Caryophyllales\nCaryophyllales ( ) is an order of flowering plants that includes the cacti, carnations, amaranths, ice plants, beets, and many carnivorous plants.\n\n Many members are succulent, having fleshy stems or leaves.",
+    "Vascular plant\nVascular plants (from Latin \"vasculum\": duct), also known as tracheophytes (from the equivalent Greek term \"trachea\") and also higher plants, form a large group of plants (c. 308,312 accepted known species ) that are defined as those land plants that have lignified tissues (the xylem) for conducting water and minerals throughout the plant.\n\n They also have a specialized non-lignified tissue (the phloem) to conduct products of photosynthesis.\n\n Vascular plants include the clubmosses, horsetails, ferns, gymnosperms (including conifers) and angiosperms (flowering plants).\n\n Scientific names for the group include Tracheophyta and Tracheobionta.",
+    "Dieffenbachia\nDieffenbachia is a genus of tropical flowering plants in the family Araceae.\n\n It is native to the New World Tropics from Mexico and the West Indies south to Argentina.\n\n Some species are widely cultivated as ornamental plants, especially as houseplants, and have become naturalized on a few tropical islands.",
+    "Coronilla\nThe genus Coronilla contains about 20 species of flowering plants native to Europe and North Africa.",
+    "Cassytha\nCassytha is a genus of some two dozen species of obligately parasitic vines in the family Lauraceae.\n\n Superficially, and in some aspects of their ecology, they closely resemble plants in the unrelated genus \"Cuscuta\", the dodders.\n\n When fruit and flowers are absent in the field, the physical resemblance is so close that few people without technical training can tell them apart.\n\n In this respect and in their ecology the two genera present a spectacular example of convergent evolution.\n\n In its divergence from habits typical of the Lauraceae, \"Cassytha\" also presents examples of mosaic evolution"
+   ]
+  },
+  {
+   "id": "75af4d84b171388e",
+   "gold": [
+    {
+     "sentence": "Hydrangea ( ; common names hydrangea or hortensia) is a genus of 70–75 species of flowering plants native to southern and eastern Asia (China, Japan, Korea, the Himalayas, and Indonesia) and the Americas.",
+     "facts": {
+      "0.0": "Hydrangea is a genus of flowering plants.",
+      "0.1": "Hydrangea's common names are hydrangea or hortensia.",
+      "0.2": "The Hydrangea genus has 70 to 75 species.",
+      "0.3": "Hydrangea plants are native to southern and eastern Asia.",
+      "0.4": "Hydrangea plants are native to China, Japan, Korea, the Himalayas, and Indonesia.",
+      "0.5": "Hydrangea plants are native to the Americas."
+     }
+    },
+    {
+     "sentence": " It contains, 13–18 species, but is best known for a single species, Jequirity (\"A. precatorius\").",
+     "facts": {
+      "1.0": "The subject of this sentence contains 13 to 18 species.",
+      "1.1": "The subject of this sentence is best known for a single species.",
+      "1.2": "That single species is Jequirity.",
+      "1.3": "Jequirity is also called A. precatorius."
+     }
+    }
+   ],
+   "items": [
+    "Hydrangea paniculata\nHydrangea paniculata, the panicled hydrangea, is a species of flowering plant in the family Hydrangeaceae native to southern and eastern China, Korea, Japan and Russia (Sakhalin).\n\n It was first formally described by Philipp Franz von Siebold in 1829.\n\n It is a deciduous shrub or small tree, 1 - tall by 2.5 m broad, growing in sparse forests or thickets in valleys or on mountain slopes.",
+    "Hydrangea macrophylla\nHydrangea macrophylla is a species of flowering plant in the family Hydrangeaceae, native to Japan.\n\n It is a deciduous shrub growing to 2 m tall by 2.5 m broad with large heads of pink or blue flowers in summer and autumn.\n\n Common names include bigleaf hydrangea, French hydrangea, lacecap hydrangea, mophead hydrangea, penny mac and hortensia.\n\n It is widely cultivated in many parts of the world in many climates.\n\n It is not to be confused with \"H. aspera\" 'Macrophylla'.",
+    "Hydrangea heteromalla\nHydrangea heteromalla is a species of \"Hydrangea\" flower, native to the Himalayas and China.\n\n Average height is 10'-15' with inflorescences that are 5\"-8\" across and bloom May-June,full flowering only occurs in full sun.Is a very adaptable plant that is hardy to USDA zones (4)5-7.\n\n This plant is seldom seen in American gardens although there is nice specimen at the Hillier Arboretum.",
+    "Hydrangea arborescens\nHydrangea arborescens, commonly known as smooth hydrangea, wild hydrangea, or sevenbark, is a species of flowering plant in the family Hydrangeaceae.\n\n It is a small- to medium-sized, deciduous shrub up to 3 m tall that is native to the eastern United States.",
+    "Hydrangea\nHydrangea ( ; common names hydrangea or hortensia) is a genus of 70–75 species of flowering plants native to southern and eastern Asia (China, Japan, Korea, the Himalayas, and Indonesia) and the Americas.\n\n By far the greatest species diversity is in eastern Asia, notably China, Japan, and Korea.\n\n Most are shrubs 1 to 3 meters tall, but some are small trees, and others lianas reaching up to 30 m by climbing up trees.\n\n They can be either deciduous or evergreen, though the widely cultivated temperate species are all deciduous.",
+    "Abrus canescens\nAbrus canescens is a species of flowering plant belonging to the legume family, native to Africa.\n\n It is considered almost extinct.",
+    "Deutzia\nDeutzia ( or ) is a genus of about 60 species of flowering plants in the family Hydrangeaceae, native to eastern and central Asia (from the Himalayas east to Japan and the Philippines), and Central America and also Europe.\n\n By far the highest species diversity is in China, where 50 species occur.",
+    "Hydrangea serrata\nHydrangea serrata is a species of flowering plant in the family Hydrangeaceae, native to mountainous regions of Korea and Japan.\n\n Common names include mountain hydrangea and tea of heaven.\n\n Growing to 1.2 m tall and broad, it is a deciduous shrub with oval leaves and panicles of blue and pink flowers in summer and autumn (fall).\n\n It is widely cultivated as an attractive ornamental shrub throughout the world in areas with suitable climate and soil.",
+    "Abrus\nAbrus is a genus of flowering plants in the pea family, Fabaceae and the only genus found in the tribe Abreae.\n\n It contains, 13–18 species, but is best known for a single species, Jequirity (\"A. precatorius\").\n\n The highly toxic seeds of that species are used to make jewellery.",
+    "Hydrangea quercifolia\nHydrangea quercifolia, commonly known by its translation oakleaf hydrangea or oak-leaved hydrangea, is a species of flowering plant native to the Southeastern United States, in woodland habitats from North Carolina west to Tennessee, and south to Florida and Louisiana.\n\n A deciduous shrub with white showy flower heads, it is a commonly grown garden plant.\n\n Numerous cultivars are available commercially."
+   ]
+  }
+ ]
+}

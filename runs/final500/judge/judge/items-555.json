@@ -1,0 +1,404 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "d41f5e97cf509922",
+   "gold": [
+    {
+     "sentence": "Liu Ailing (; born June 2, 1967) is a Chinese former footballer who played for the China national team at the 1991, 1995 and 1999 editions of the FIFA Women's World Cup.",
+     "facts": {
+      "0.0": "Liu Ailing was born on June 2, 1967.",
+      "0.1": "Liu Ailing is a Chinese former footballer.",
+      "0.2": "Liu Ailing played for the China national team at the 1991 FIFA Women's World Cup.",
+      "0.3": "Liu Ailing played for the China national team at the 1995 FIFA Women's World Cup.",
+      "0.4": "Liu Ailing played for the China national team at the 1999 FIFA Women's World Cup."
+     }
+    },
+    {
+     "sentence": "The FIFA Women's World Cup is an international football competition contested by the senior women's national teams of the members of \"Fédération Internationale de Football Association\" (FIFA), the sport's global governing body.",
+     "facts": {
+      "1.0": "The FIFA Women's World Cup is an international football competition.",
+      "1.1": "The FIFA Women's World Cup is contested by the senior women's national teams of the members of FIFA.",
+      "1.2": "FIFA stands for Fédération Internationale de Football Association.",
+      "1.3": "FIFA is the sport's global governing body."
+     }
+    }
+   ],
+   "items": [
+    "Women's football at the 2015 Pacific Games\nThe 2015 Pacific Games women's football tournament was the 4th edition of the Pacific Games women's football tournament.\n\n The women's football tournament was held in Port Moresby, Papua New Guinea between 6–16 July 2015 as part of the 2015 Pacific Games.\n\n The tournament was open to full women's national teams (unlike the men's tournament, which was age-restricted).",
+    "EAFF E-1 Football Championship\nEAFF E-1 Football Championship, known as the East Asian Football Championship from 2003 to 2010, and the EAFF East Asian Cup for the 2013 and 2015 editions, is a men's international football competition in East Asia for member nations of the East Asian Football Federation (EAFF).\n\n Before the EAFF was founded in 2002, the Dynasty Cup was held between the East Asian top four teams, and was regarded as the unofficial East Asian Championship.\n\n There is a separate competition for both men (first held in 2003) and women (first held in 2005).\n\n There was also a combined points competition in 2005, where the results of the men's and women's teams are added together (not including qualifiers).",
+    "Australia women's national soccer team\nThe Australian women's national soccer team represents Australia in international women's soccer at the senior level.\n\n The team is overseen by the governing body for soccer in Australia, Football Federation Australia (FFA), which is currently a member of the Asian Football Confederation (AFC) and the regional ASEAN Football Federation (AFF) since leaving the Oceania Football Confederation (OFC) in 2006.\n\n The team's official nickname is the Matildas (from the Australian folk song \"Waltzing Matilda\"), having been known as the Female Socceroos before 1995.\n\n The current team manager is Alen Stajcic.",
+    "Women's Nordic Football Championship\nWomen's Nordic Football Championship was an international football competition contested by the women's national football teams of the Nordic countries.\n\n The tournament was held annually between 1974 and 1982.\n\n Finland, Denmark and Sweden competed from the start, Norway joined the tournament in 1978.\n\n Iceland and Faroe Islands did not take part at the competition.",
+    "Geri Donnelly\nGeraldine \"Geri\" Donnelly (born 30 November 1965) is a Canadian former soccer player.\n\n A midfielder, she represented Canada at the 1995 and 1999 editions of the FIFA Women's World Cup and was named Canadian Player of the Year in 1996 and 1999.\n\n Donnelly was part of the Canadian squad who won the 1998 CONCACAF Women's Championship.\n\n She was selected as a member of the Canadian Soccer Hall of Fame in 2014.",
+    "Liu Ailing\nLiu Ailing (; born June 2, 1967) is a Chinese former footballer who played for the China national team at the 1991, 1995 and 1999 editions of the FIFA Women's World Cup.\n\n She won a silver medal at the 1996 Atlanta Olympics and participated at the 2000 Sydney Olympics.\n\n A playmaking midfielder, she played professional club football in Japan and the United States.",
+    "1999 Italian Open – Women's Doubles\nThe 1999 Italian Open – Doubles was the doubles event of the fifty-fifth edition of the tennis tournament played at Rome, Italy, the most prestigious tennis tournament in Southern Europe.\n\n It was the fifth WTA Tier I tournament of the year, and part of the European claycourt season.\n\n Virginia Ruano Pascual and Paola Suárez were the defending champions, but lost to Martina Hingis and Anna Kournikova in the quarterfinals.",
+    "Gambia women's national football team\nThe Gambia women's national football team represents the Gambia in international football competition.\n\n The team, however, has not competed in a match recognised by FIFA, the sport's international governing body, despite that organised women's football has been played in the country since 1998.\n\n The Gambia has two youth teams, an under-17 side that has competed in FIFA U-17 Women's World Cup qualifiers, and an under-19 side that withdrew from regional qualifiers for an under-19 World Cup.\n\n The development of a national team faces challenges similar to those across Africa, although the national football association has four staff members focusing on women's football.",
+    "EAFF E-1 Football Championship (women)\nEAFF E-1 Football Championship is an international football competition in East Asia for national teams of the East Asian Football Federation (EAFF).\n\n The competition between women's national teams is held alongside men's competition.",
+    "FIFA Women's World Cup\nThe FIFA Women's World Cup is an international football competition contested by the senior women's national teams of the members of \"Fédération Internationale de Football Association\" (FIFA), the sport's global governing body.\n\n The competition has been held every four years since 1991, when the inaugural tournament, then called the Women's World Championship, was held in China."
+   ]
+  },
+  {
+   "id": "d67586236d582601",
+   "gold": [
+    {
+     "sentence": "Bertalan Farkas (born August 2, 1949) is the first Hungarian cosmonaut and the first Esperantist in space.",
+     "facts": {
+      "0.0": "Bertalan Farkas was born on August 2, 1949.",
+      "0.1": "Bertalan Farkas is the first Hungarian cosmonaut.",
+      "0.2": "Bertalan Farkas is the first Esperantist in space."
+     }
+    },
+    {
+     "sentence": "Hans Wilhelm Schlegel (Überlingen, 3 August 1951) is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions.",
+     "facts": {
+      "1.0": "Hans Wilhelm Schlegel was born in Überlingen on 3 August 1951.",
+      "1.1": "Hans Wilhelm Schlegel is a German physicist.",
+      "1.2": "Hans Wilhelm Schlegel is an ESA astronaut.",
+      "1.3": "Hans Wilhelm Schlegel is a veteran of two NASA Space Shuttle missions."
+     }
+    }
+   ],
+   "items": [
+    "Helmuth von Moltke the Younger\nHelmuth Johann Ludwig von Moltke (] ; 23 May 1848 – 18 June 1916), also known as Moltke the Younger, was a nephew of \"Generalfeldmarschall\" (Field Marshal) Helmuth Karl Bernhard von Moltke and served as the Chief of the German General Staff from 1906 to 1914.\n\n The two are often differentiated as \"Moltke the Elder\" and \"Moltke the Younger\".",
+    "Karl Wilhelm Friedrich Schlegel\nKarl Wilhelm Friedrich (after 1814: von) Schlegel (10 March 1772 – 12 January 1829), usually cited as Friedrich Schlegel, was a German poet, literary critic, philosopher, philologist and Indologist.\n\n With his older brother, August Wilhelm Schlegel, he was one of the main figures of the Jena romantics.\n\n He was a zealous promoter of the Romantic movement and inspired Samuel Taylor Coleridge, Adam Mickiewicz and Kazimierz Brodziński.\n\n Schlegel was a pioneer in Indo-European studies, comparative linguistics, morphological typology, and was the first to notice what became known as Grimm's law.",
+    "Hans von Hentig\nHans von Hentig (9 June 1887 in Berlin – 6 July 1974 in Bad Tölz) was a German criminal psychologist and politician.He was the second son of lawyer Otto von Hentig (1852–1934) .\n\nHis older brother was later diplomat Werner Otto von Hentig.\n\n Otto von Hentig was one of the leading lawyers in Berlin.\n\n Hans von Hentig was instrumental in the setting up of a short-lived Bavarian Soviet Republic in 1919.\n\n During the 1920s he was a prominent exponent of National Bolshevism.\n\n He emigrated to United States in 1935.\n\n Hans von Hentig worked on Yale University.",
+    "Bertalan Farkas\nBertalan Farkas (born August 2, 1949) is the first Hungarian cosmonaut and the first Esperantist in space.\n\n He is currently the president of Airlines Service and Trade.\n\n With Charles Simonyi's travel, Farkas is no longer the only Hungarian who has been to space (he is still the only astronaut, as Simonyi flew as a space tourist).",
+    "Bernhard Bötel\nBernhard Bötel (1883–1953) was a German operatic tenor and actor who had an active career in Germany and Austria during the first half of the 20th century.\n\n He made recordings for several record labels during the early years of the recording industry, including His Master's Voice, Odeon Records, Polydor Records, Tri-Ergon, and Vox Records.\n\n On the stage he sang a variety of roles in operas and operettas from leading parts to comprimario roles.",
+    "François Englert\nFrançois Baron Englert (] ; born 6 November 1932) is a Belgian theoretical physicist and 2013 Nobel prize laureate (shared with Peter Higgs).\n\n He is Professor emeritus at the Université libre de Bruxelles (ULB) where he is member of the Service de Physique Théorique.\n\n He is also a Sackler Professor by Special Appointment in the School of Physics and Astronomy at Tel Aviv University and a member of the Institute for Quantum Studies at Chapman University in California.\n\n He was awarded the 2010 J. J. Sakurai Prize for Theoretical Particle Physics (with Gerry Guralnik, C. R. Hagen, Tom Kibble, Peter Higgs, and Robert Brout), the Wolf Prize in Physics in 2004 (with Brout and Higgs) and the High Energy and Particle Prize of the European Physical Society (with Brout and Higgs) in 1997 for the mechanism which unifies short and long range interactions by generating massive gauge vector bosons.\n\n He has made contributions in statistical physics, quantum field theory, cosmology, string theory and supergravity.",
+    "Hans Aschenborn\nHans Anton Aschenborn (1 February 1888 – 10 April 1931) was a renowned animal painter of African wildlife.\n\n He worked both in Germany and in southern Africa.\n\n His work is featured in the older German Thieme-Becker or Saur art encyclopedia.\n\n A Master of Arts thesis by Karin Skawran concerning the graphic works of Hans Anton Aschenborn was published in the South African art and culture periodical, \"Lantern\" in 1965.)\n\n In 1963 the University of Pretoria published a book about Aschenborn as an artist entitled, \"Hans Anton Aschenborn : Mens en Kunstenaar\".\n\n In 1970 another one followed by the Pretoria Art Museum (South Africa).\n\n Other publications on Aschenborn feature his etchings and linocuts.",
+    "Richard Genée\nFranz Friedrich Richard Genée (February 7, 1823 – June 15, 1895) was a Prussian born Austrian librettist, playwright, and composer.\n\n He is most famous for the libretto of \"Die Fledermaus\", Johann Strauss II's most famous operetta.\n\n He co-wrote the libretto without having met top-billed librettist Karl Haffner, who constructed the new story based on a play by Henri Meilhac and Ludovic Halévy, which was considered too shocking to perform outside Paris.\n\n Genée, however, wrote the operetta's actual text and drew nothing from Haffner beyond the names of the characters.",
+    "Béla Bartók\nBéla Viktor János Bartók ( ; ] ; 25 March 1881 – 26 September 1945) was a Hungarian composer, pianist and an ethnomusicologist.\n\n He is considered one of the most important composers of the 20th century; he and Liszt are regarded as Hungary's greatest composers .\n\n Through his collection and analytical study of folk music, he was one of the founders of comparative musicology, which later became ethnomusicology.",
+    "Hans Schlegel\nHans Wilhelm Schlegel (Überlingen, 3 August 1951) is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions."
+   ]
+  },
+  {
+   "id": "0b79cd3cc9edc847",
+   "gold": [
+    {
+     "sentence": " The daughter of the American Consul in London, she was the first First Lady to be born outside the United States, or outside areas that were later to become part of the United States, such as the Thirteen Colonies – a distinction that would not be replicated until 192 years later by Melania Trump.",
+     "facts": {
+      "0.0": "She was the daughter of the American Consul in London.",
+      "0.1": "She was the first First Lady to be born outside the United States.",
+      "0.2": "She was the first First Lady to be born outside areas that were later to become part of the United States.",
+      "0.3": "Such areas include the Thirteen Colonies.",
+      "0.4": "The distinction of being the first First Lady born outside these areas was not replicated for 192 years.",
+      "0.5": "Melania Trump replicated this distinction 192 years later."
+     }
+    },
+    {
+     "sentence": " Before marrying future President Donald Trump in 2005, she worked as a fashion model; by 2016 she considered herself a \"full-time mom.\"",
+     "facts": {
+      "1.0": "Before marrying future President Donald Trump in 2005, she worked as a fashion model.",
+      "1.1": "By 2016, she considered herself a 'full-time mom.'"
+     }
+    }
+   ],
+   "items": [
+    "Loreta Janeta Velázquez\nLoreta Janeta Velázquez (June 26, 1842 – 1923), was a Cuban-born woman who masqueraded as a male Confederate soldier during the American Civil War.\n\n After her soldier husband's accidental death, she enlisted in the Confederate States Army in 1861.\n\n She then fought at Bull Run, Ball's Bluff, and Fort Donelson, but was discharged when her gender was discovered while in New Orleans.\n\n Undeterred, she reenlisted and fought at Shiloh, until unmasked once more.\n\n She then became a Confederate spy, working in both male and female guises, and as a double agent also reporting to the U.S. Secret Service.\n\n She remarried three more times, being widowed in each instance.\n\n According to William C Davis, she died in January 1923 under the name Loretta J. Beard after many years away from the public eye in a public psychiatric facility, St. Elizabeths Hospital.\n\n She spied on the Union for about 5 years.",
+    "Office of the First Lady of the United States\nThe Office of the First Lady of the United States is the staff accountable to the First Lady of the United States.\n\n The office and its responsibilities, while not mandated, have grown as the role of the First Lady has grown and formalized through the history of the United States.\n\n The Office of the First Lady is an entity of the White House Office, part of the Executive Office of the President.",
+    "Anna Harrison\nAnna Tuthill Symmes Harrison (July 25, 1775 – February 25, 1864), wife of President William Henry Harrison and grandmother of President Benjamin Harrison, was nominally First Lady of the United States during her husband's one-month term in 1841, but she never entered the White House.\n\n At the age of 65 years during her husband's presidential term, she is the oldest woman ever to become First Lady, as well as having the distinction of holding the title for the shortest length of time, and the first person to be widowed while holding the title.\n\n She was the last First Lady to have been born in British America.",
+    "List of current United States first spouses\nIn the United States, the first spouse (first lady for women, first gentleman for men) is the term used to refer to the spouse of a chief executive - that is, of the spouse of the President of the United States (the First Lady of the United States and the First Gentleman of the United States) and the spouses of the governors of the 50 U.S. states and U.S. territories (Guam, Northern Mariana Islands, Puerto Rico, American Samoa, and the United States Virgin Islands) and the spouse of the mayor of the District of Columbia.\n\n (The spouses of many mayors are often called the \"first lady\" or \"first gentleman\" of the city as well, and the use of the terms sometimes extends even to the spouses of college presidents).",
+    "Vicki Risch\nVicki Risch is the former First Lady of Idaho and the wife of U.S. Sen. Jim Risch, who served as Governor of Idaho in 2006.\n\n She became First Lady on May 26, 2006, when her husband succeeded former Gov. Dirk Kempthorne, who resigned to become United States Secretary of the Interior.\n\n Mrs. Risch succeeded former First Lady Patricia Kempthorne who had held the post for over seven years.\n\n Mrs. Risch served as First Lady until January 2007, as her husband did not seek a full term as governor, but rather was reelected to his old post as lieutenant governor.",
+    "List of First Ladies of the United States\nThe First Lady of the United States is the hostess of the White House.\n\n The position is traditionally filled by the wife of the President of the United States, but, on occasion, the title has been applied to women who were not presidents’ wives, such as when the president was a bachelor or widower, or when the wife of the president was unable to fulfill the duties of the First Lady herself.\n\n The First Lady is not an elected position; it carries no official duties and receives no salary.\n\n Nonetheless, she attends many official ceremonies and functions of state either along with or in place of the president.\n\n Traditionally, the First Lady does not hold outside employment while occupying the office.\n\n She has her own staff, including the White House Social Secretary, the Chief of Staff, the Press Secretary, the Chief Floral Designer, and the Executive Chef.\n\n The Office of the First Lady is also in charge of all social and ceremonial events of the White House, and is a branch of the Executive Office of the President.",
+    "Melania Trump\nMelania Trump ( ; born Melanija Knavs; ] , Germanized to Melania Knauss; April 26, 1970) is the current First Lady of the United States.\n\n Before marrying future President Donald Trump in 2005, she worked as a fashion model; by 2016 she considered herself a \"full-time mom.\"",
+    "Doreen Ketchens\nDoreen Ketchens (born October 3, 1966 in New Orleans, Louisiana) is a jazz clarinetist, who performs Dixieland and Trad Jazz.\n\n She is one of the first and few female bandleaders in New Orleans, and a musical educator.\n\n She has performed at concert halls and music festivals, at U.S. Embassies and decades of weekly performances in Dixieland's tradition in the Royal Street Performing Arts Zone in the French Quarter of New Orleans with her band, Doreen's Jazz New Orleans.\n\n Ketchens has performed for four U.S. Presidents: Bill Clinton, George Bush Sr., Ronald Reagan and Jimmy Carter, and is widely considered one of the cultural ambassadors of New Orleans and of the traditional music",
+    "Abigail Adams\nAbigail Adams (\"née\" Smith; November 22  1744 – October 28, 1818) was the closest advisor and wife of John Adams, as well as the mother of John Quincy Adams.\n\n She is sometimes considered to have been a Founder of the United States, and is now designated as the first Second Lady and second First Lady of the United States, although these titles were not in use at the time.",
+    "Louisa Adams\nLouisa Catherine Johnson Adams (February 12, 1775 – May 15, 1852), wife of John Quincy Adams, was First Lady of the United States from 1825 to 1829.\n\n The daughter of the American Consul in London, she was the first First Lady to be born outside the United States, or outside areas that were later to become part of the United States, such as the Thirteen Colonies – a distinction that would not be replicated until 192 years later by Melania Trump."
+   ]
+  },
+  {
+   "id": "511d03523c2d08aa",
+   "gold": [
+    {
+     "sentence": " His experimental works are well known and appropriately discussed in Malayalam Cinema industry and his debut movie Jalachhayam (2010) was well discussed according to its experimental approach.",
+     "facts": {
+      "0.0": "His experimental works are well known in the Malayalam Cinema industry.",
+      "0.1": "His experimental works are appropriately discussed in the Malayalam Cinema industry.",
+      "0.2": "His debut movie is Jalachhayam.",
+      "0.3": "Jalachhayam was released in 2010.",
+      "0.4": "Jalachhayam was well discussed according to its experimental approach."
+     }
+    },
+    {
+     "sentence": "Jacques Feyder (] ; 21 July 1885 – 24 May 1948) was a Belgian actor, screenwriter and film director who worked principally in France, but also in the USA, Britain and Germany.",
+     "facts": {
+      "1.0": "Jacques Feyder was born on 21 July 1885.",
+      "1.1": "Jacques Feyder died on 24 May 1948.",
+      "1.2": "Jacques Feyder was a Belgian actor.",
+      "1.3": "Jacques Feyder was a Belgian screenwriter.",
+      "1.4": "Jacques Feyder was a Belgian film director.",
+      "1.5": "Jacques Feyder worked principally in France.",
+      "1.6": "Jacques Feyder also worked in the USA.",
+      "1.7": "Jacques Feyder also worked in Britain.",
+      "1.8": "Jacques Feyder also worked in Germany."
+     }
+    }
+   ],
+   "items": [
+    "Sathish Kalathil\nSathish Kalathil (മലയാളം: ) is an Indian film and documentary Director and Producer in malayalam.\n\n He is also Story Writer, and Lyricist.\n\n His experimental works are well known and appropriately discussed in Malayalam Cinema industry and his debut movie Jalachhayam (2010) was well discussed according to its experimental approach.\n\n Actually, his first venture was in 2008 named Veena Vaadanam, a documentary film about Art (Painting) and that was his first experimental entry in movie.\n\n In 2012, he directed Laloorinu Parayanullathu, a social committed documentary film about Municipal solid waste.",
+    "T. Muthuraj\nT. MuthuRaj (born July 29, 1969, Coimbatore, India) is an Indian film production designer.\n\n He entered the film industry after completing his B.Sc.\n\n degree in fine arts as first assistant to Sabu Cyril after which he has served as production designer in critically acclaimed and celebrated films in major Indian languages.\n\n His big break came in the 1997 Malayalam film \"Guru\" starring Mohanlal and Suresh Gopi, directed by Rajiv Anchal, for which he received the Kerala State Film Award for Best Art Director.\n\n Muthuraj has since worked in such path breaking hits as \"Arputha Theevu\", \"Angaditheru\", \"Pazhasi Raja\", \"Irumbukottai Murattu Singham\" and \"Avan Ivan\".\n\n He has contributed to the success of 43 feature films and 185 commercials.\n\n He has won many film awards for best art direction and for his creative works.\n\n His latest work is \"Nanban\" (2012) directed by Shankar, which has won huge appreciation from all quarters.",
+    "Kerala School Kalolsavam\nSchool Arts Festival of Kerala (Malayalam: കേരള സ്കൂൾ കലോത്സവം) is an annual event conducted by the state government of Kerala, featuring several art competitions for high school and higher secondary school students of Kerala.\n\n The festival was started in 1956, and till 2008, it was called as \"Kerala State School Youth Festival\".\n\n The participants are students from classes 8th to 12th.\n\n Winners from different revenue districts for a particular event will be competing in state level competition.\n\n The event is usually conducted in December–January months of a year and is considered to be the biggest cultural event of Asia.\n\n 57th edition of Kerala School Kalolsavam 2017 is scheduled for January 16 to 22 at Kannur.",
+    "Jacques Feyder\nJacques Feyder (] ; 21 July 1885 – 24 May 1948) was a Belgian actor, screenwriter and film director who worked principally in France, but also in the USA, Britain and Germany.\n\n He was a leading director of silent films during the 1920s, and in the 1930s he became associated with the style of poetic realism in French cinema.\n\n He adopted French nationality in 1928.",
+    "Shafiq Syed\nShafiq Syed (born 1976) is a former Indian child actor turned auto rickshaw driver.\n\n At the age of twelve, he starred in a lead role in the Mira Nair's Academy Award-nominated film \"Salaam Bombay!\n\n\" (1988), for which he also received the 1989 National Film Award for Best Child Artist at the 36th National Film Awards.\n\n He drives an auto rickshaw in Bangalore and also works as an assistant in television production units.",
+    "Alain Jessua\nAlain Jessua (born 16 January 1932) is a French film director and screenwriter.\n\n He directed ten films between 1956 and 1997.\n\n He worked as assistant director for Jacques Becker on the set of \"Casque d'or\", with Max Ophüls for \"Madame de...\" and \"Lola Montès\" and with Marcel Carné on \"Wasteland\". \"\n\nLéon la lune\" his first short film won the influential Prix Jean Vigo in 1957.\n\n He directed first feature film in 1963 \"La vie à l'envers\" that won Best First Film at Venice Film Festival, in 1964.",
+    "Shajoon Kariyal\nHe debuted as a director with \"Rajaputhran\" (1996), starring Suresh Gopi, Shobhana and Vikram.\n\n He has directed many films, including the commercially successful \"Thachiledathu Chundan\" (1999) and the critically acclaimed \"Vadakkumnadhan\" (2006).\n\n After \"Vadakkumnadhan\", he planned two films, \"Raman Police\" and \"Talkies\", but both the projects did not work out.\n\n In 2012, he directed \"Chettayees\" which he also co-produced, as one of the five partners of the newly launched production house Thakkaali Films.\n\n His latest film is \"Sir C. P.\" (2015).",
+    "K. M. Binu\nKalayathumkuzhi Mathews Binu (born 20 December 1980) is an Indian track and field athlete from Kerala who specializes in 400 metres and 800 metres.\n\n He holds the current 400 metres national record of 45.48 s set at the 2004 Athens Olympics on 20 August 2004.\n\n He broke the 44-year-old Olympics mark (by an Indian) held by Milkha Singh who set an Indian National Record with a timing of 45.73 s at the 1960 Rome Olympics.\n\n He and his elder sister K. M. Beenamol made history when they became the first Indian siblings to win medals in a major international competition.\n\n They won medals at the Busan Asian Games (2002).\n\n While Binu won the men's 800 metres silver, his sister won the gold medal in the women's event.\n\n Binu received the Arjuna Award for the year 2006 for his achievements in the Indian athletics.",
+    "Jalachhayam\nJalachhayam (മലയാളം: ) is a 2010 Indian Malayalam-language Experimental film, produced and directed by Sathish Kalathil under the banner of 'The People's Films'.\n\n The story was written by Sujith Aalungal and describes the warm relationship between a village man and an artist (painter) from the city.",
+    "Bandi Sailu\nBandi Sailu (1928 – 15 July 2000) or Sayilu Saayilu was a Marxist revolutionary born in a Dalit family in Mandapelli village, Duggondi mandal, Narsampeta Thalukh in the Warangal district of Andhra Pradesh, India."
+   ]
+  },
+  {
+   "id": "ec1bda06bffecc9c",
+   "gold": [
+    {
+     "sentence": " It is the third installment of the \"Naked\" series \"Naked Killer\" (1992) and \"Naked Weapon\" (2002).",
+     "facts": {
+      "0.0": "The work is the third installment of the 'Naked' series.",
+      "0.1": "'Naked Killer' is a work in the 'Naked' series released in 1992.",
+      "0.2": "'Naked Weapon' is a work in the 'Naked' series released in 2002."
+     }
+    },
+    {
+     "sentence": "Naked Weapon (赤裸特工) is a 2002 Hong Kong action-thriller film directed by action choreographer Tony Ching and starring Maggie Q, Anya Wu and Daniel Wu.",
+     "facts": {
+      "1.0": "Naked Weapon is also titled 赤裸特工.",
+      "1.1": "Naked Weapon is a 2002 film.",
+      "1.2": "Naked Weapon is a Hong Kong film.",
+      "1.3": "Naked Weapon is an action-thriller film.",
+      "1.4": "Naked Weapon was directed by action choreographer Tony Ching.",
+      "1.5": "Naked Weapon stars Maggie Q.",
+      "1.6": "Naked Weapon stars Anya Wu.",
+      "1.7": "Naked Weapon stars Daniel Wu."
+     }
+    }
+   ],
+   "items": [
+    "The Naked Gun 2½: The Smell of Fear\nThe Naked Gun 2½: The Smell of Fear is a 1991 comedy film.\n\n It is the sequel to the 1988 film \"\" and the second installment in \"The Naked Gun\" film series.\n\n The film stars Leslie Nielsen as the comically bumbling Police Lt. Frank Drebin of \"Police Squad!\n\n\".\n\n Priscilla Presley plays the role of Jane, with O. J. Simpson as Nordberg and George Kennedy as police captain Ed Hocken.\n\n The film also features Robert Goulet (who previously made a \"special guest star\" appearance on \"Police Squad!\")\n\n as the villainous Quentin Hapsburg and Richard Griffiths as renewable fuel advocate Dr. Albert S. Meinheimer (as well as his evil double, Earl Hacker).\n\n Zsa Zsa Gabor, Mel Tormé and members of the Chicago Bears have cameo roles.",
+    "Naked Weapon\nNaked Weapon (赤裸特工) is a 2002 Hong Kong action-thriller film directed by action choreographer Tony Ching and starring Maggie Q, Anya Wu and Daniel Wu.",
+    "Naked City (TV series)\nNaked City is a police drama series from Screen Gems which was broadcast from 1958 to 1959 and from 1960 to 1963 on the ABC television network.\n\n It was inspired by the 1948 motion picture \"The Naked City\" and mimics its dramatic \"semi-documentary\" format.\n\n As in the film, each episode concluded with a narrator intoning the iconic line: \"There are eight million stories in the naked city.\n\n This has been one of them.\"",
+    "Naked Soldier\nNaked Soldier (絕色武器) is a 2012 Hong Kong action film directed by Marco Mak and starring Jennifer Tse.\n\n It is the third installment of the \"Naked\" series \"Naked Killer\" (1992) and \"Naked Weapon\" (2002).",
+    "The Human Centipede 2 (Full Sequence)\nThe Human Centipede 2 (Full Sequence) is a 2011 Dutch black and white exploitation-horror film written, directed, and co-produced by Dutch filmmaker Tom Six.\n\n The sequel to Six's 2009 film \"The Human Centipede (First Sequence)\", the film stars Laurence R. Harvey as a mentally impaired English man who watches and becomes obsessed with the first \"Human Centipede\" film, and decides to make his own \"centipede\" consisting of twelve people, including Ashlynn Yennie, an actress from the first film.",
+    "American Pie Presents: The Naked Mile\nAmerican Pie Presents: The Naked Mile (also known as American Pie: The Naked Mile) is a 2006 American sex comedy film released by Universal Pictures.\n\n It is the second installment in the \"American Pie Presents\" series and the fifth installment in the \"American Pie\" franchise.\n\n The film begins a story arc that concludes with \"\" (2007).\n\n John White stars as Erik Stifler, a high school senior who is given a \"guilt free pass\" by his girlfriend, Tracy Sterling (Jessy Schram), and so visits the Beta House fraternity led by his cousin, Dwight Stifler (Steve Talley), to run a mile naked.\n\n Christopher McDonald co-stars as Erik's father, Harry, and Eugene Levy once again plays Jim's Dad, who turns out to be a family friend of both Erik's and Tracy's.\n\n Also, it is in this film that his name is revealed to be \"Noah Levenstein\".",
+    "The Conman\nThe Conman is a 1998 Hong Kong action comedy film directed by Wong Jing and starring Andy Lau, Athena Chu and Nick Cheung.\n\n Despite the Chinese title, which translates as \"Knight of Gamblers 1999\", Andy Lau does not reprise his role as the \"Knight of Gamblers\" from the \"God of Gamblers\" series, which was also directed by Wong Jing.\n\n The film was followed by a sequel \"The Conmen in Vegas\", which Lau and Cheung return with new cast members Natalis Chan, Kelly Lin, Meggie Yu and Alex Man.",
+    "Die Hard with a Vengeance\nDie Hard with a Vengeance is a 1995 American action film and the third in the \"Die Hard\" film series.\n\n It was co-produced and directed by John McTiernan (who directed \"Die Hard\"), written by Jonathan Hensleigh, and stars Bruce Willis as New York City Police Department Lieutenant John McClane, Samuel L. Jackson as McClane's reluctant partner Zeus Carver, and Jeremy Irons as Simon Gruber.\n\n It was released on May 19, 1995, five years after \"Die Hard 2\", becoming the highest-grossing film at the worldwide box-office that year, but received mixed reviews.\n\n It was followed by \"Live Free or Die Hard\" and \"A Good Day to Die Hard\" in 2007 and 2013, respectively.",
+    "Mel Gibson filmography\nFive years later he played Martin Riggs in the buddy cop action comedy \"Lethal Weapon\" alongside Danny Glovera role he later reprised in its sequels \"Lethal Weapon 2\" (1989), \"Lethal Weapon 3\" (1992), and \"Lethal Weapon 4\" (1998).",
+    "Naked Gun 33⅓: The Final Insult\nNaked Gun 33⅓: The Final Insult is a 1994 comedy film, and the third and final installment in \"The Naked Gun\" film series, which was based on the \"Police Squad!\n\n\" television series."
+   ]
+  },
+  {
+   "id": "1a4ba8e5b085aa9e",
+   "gold": [
+    {
+     "sentence": "A Summer in the Cage is a 2007 documentary film about a man's experiences with bipolar disorder.",
+     "facts": {
+      "0.0": "A Summer in the Cage is a documentary film.",
+      "0.1": "A Summer in the Cage was released in 2007.",
+      "0.2": "A Summer in the Cage is about a man's experiences with bipolar disorder."
+     }
+    },
+    {
+     "sentence": "American Hardcore: The History of American Punk Rock 1980-1986 is a documentary directed by Paul Rachman and written by Steven Blush.",
+     "facts": {
+      "1.0": "American Hardcore: The History of American Punk Rock 1980-1986 is a documentary.",
+      "1.1": "American Hardcore: The History of American Punk Rock 1980-1986 was directed by Paul Rachman.",
+      "1.2": "American Hardcore: The History of American Punk Rock 1980-1986 was written by Steven Blush."
+     }
+    }
+   ],
+   "items": [
+    "Graph query row:\nfilm: American Hardcore\nkind: documentary feature film\nrelationship: CREATED_BY\nconnected_entity: Paul Rachman",
+    "Deadfall (1993 film)\nDeadfall is a 1993 crime drama film directed by Christopher Coppola.\n\n Coppola co-wrote the script with Nick Vallelonga.\n\n The film stars Michael Biehn, Nicolas Cage, Charlie Sheen, James Coburn, and Peter Fonda.\n\n It is also the prime influence on the song 'Deadfall', written by the American hardcore punk band Snot.\n\n A prequel/sequel, \"Arsenal\", starring Nicolas Cage as his character Eddie King, was released in 2017.",
+    "Combat Zone Wrestling\nCombat Zone Wrestling (CZW) is an American independent wrestling promotion.\n\n In 1999, John Zandig and five of his students, Ric Blade, T.C.K, Lobo, Nick Gage, and Justice Pain (along with trainer Jon Dahmer) began to run professional wrestling shows in New Jersey and Delaware, showcasing a brand of hardcore wrestling dubbed as \"ultraviolence\".\n\n Ladders, tables, steel folding chairs, thumbtacks, barbed wire, weed whackers, light tubes, panes of glass, and fire are all common elements of \"ultraviolent wrestling\" in CZW.\n\n The company filled a niche for hardcore wrestling fans that had been left open by the folding of Extreme Championship Wrestling (ECW).\n\n CZW established themselves as the leading American hardcore wrestling promotion at the ECW Arena with their \"Cage of Death 3\" show in 2001, the year ECW folded.",
+    "Hellfest (American music festival)\nHellfest was an American hardcore punk festival.\n\n Named for the intense summer heat at the show, the festival originally began featuring hardcore bands before crossing into several genres later on.\n\n Hellfest was known for its fan-friendly atmosphere, (including a lack of barriers, providing easy access to the stage for stage diving) and for its high social-awareness, focusing on such causes as animal rights, with many attendees following the straight edge and/or vegan lifestyle.\n\n It continued as an annual event until it was cancelled in 2005.\n\n After its cancellation less than thirty-six hours before doors were scheduled to open on the festival's ninth year, some fans, unhappy with the inadequate processing of refunds, filed small claims court lawsuits against promoter Keith Allen.",
+    "American Pie Presents: Band Camp\nAmerican Pie Presents: Band Camp (also known as American Pie: Band Camp) is a 2005 direct-to-DVD sex comedy film.\n\n It is the first installment in the \"American Pie Presents\" series and the fourth installment in the \"American Pie\" franchise.\n\n It was directed by Steve Rash and written by Brad Riddell.\n\n The film centers on Matt Stifler, younger brother of Steve Stifler.\n\n In this film, Matt is sent to the infamous band camp, where he is compelled to change his ways.",
+    "Hardcore (1979 film)\nHardcore is a 1979 American crime drama film written and directed by Paul Schrader and starring George C. Scott, Peter Boyle and Season Hubley.\n\n The story concerns a father searching for his daughter, who has vanished only to appear in a pornographic film.\n\n Writer-director Schrader had previously written the screenplay for Martin Scorsese's \"Taxi Driver\", and both films share a theme of exploring an unseen subculture.",
+    "A Summer in the Cage\nA Summer in the Cage is a 2007 documentary film about a man's experiences with bipolar disorder.\n\n The film follows the filmmaker's friend Sam and features an interview with mental health scholar Kay Redfield Jamison.\n\n It was directed by Benjamin Selkow.\n\n The documentary debuted on the Sundance Channel in 2007.",
+    "Punk's Not Dead (2007 film)\nPunk's Not Dead is a 2007 documentary film directed by Susan Dynner, an American hardcore punk fan.\n\n The film claims to infiltrate American clubs, malls, recording studios, etc. where it sets out to claim hardcore punk and pop punk music is \"thriving\" from an American perspective.\n\n Its content features performances largely from 1980s hardcore bands and MTV skate punk and pop punk/rock acts.\n\n It also includes various interviews and behind-the-scenes footage with the bands, labels and fans.",
+    "All Ages: The Boston Hardcore Film\nAll Ages: The Boston Hardcore Film, a Gallery East Production in association with Stone Films/NYC, is a documentary directed by Drew Stone, which had its world premier at the Independent Film Festival of Boston on April 27, 2012.\n\n The film features interviews, archival footage and the music of Boston’s early hardcore bands including Deep Wound, DYS, Gang Green, Impact Unit, Jerry's Kids, Negative FX, SS Decontrol, The Freeze and The F.U.'s.\n\n Also featured in the film are interviews with renowned author Michael Patrick MacDonald (\"Easter Rising\", \"All Souls\"), Actress Christine Elise McCarthy, Advertising Executive Jonathan Anastas, Thrasher Magazine Editor Jake Phelps, \"American Hardcore\" Director Paul Rachman, and Newbury Comics owner Michael Dreese.\n\n \"All Ages\" has been released on DVD with numerous extras and director's commentary.",
+    "American Hardcore (film)\nAmerican Hardcore: The History of American Punk Rock 1980-1986 is a documentary directed by Paul Rachman and written by Steven Blush.\n\n It is based on the book \"\" also written by Blush.\n\n It was released on September 22, 2006 on a limited basis.\n\n The film features some early pioneers of the hardcore punk music scene including Bad Brains, Black Flag, D.O.A., Minor Threat, Minutemen, SSD, and others.\n\n It was released on DVD by Sony Pictures Home Entertainment on February 20, 2007."
+   ]
+  },
+  {
+   "id": "04957e2e6c4ef02c",
+   "gold": [
+    {
+     "sentence": " One nunatak was first roughly mapped and named \"Moltke Nunatak\" by the Second German Antarctic Expedition of 1911–12 under Wilhelm Filchner.",
+     "facts": {
+      "0.0": "A nunatak was first roughly mapped by the Second German Antarctic Expedition of 1911–12",
+      "0.1": "The Second German Antarctic Expedition of 1911–12 was under Wilhelm Filchner",
+      "0.2": "The Second German Antarctic Expedition named the nunatak Moltke Nunatak"
+     }
+    },
+    {
+     "sentence": " He named it for General Helmuth von Moltke, Chief of the German General Staff and Secretary of State for Home Affairs.",
+     "facts": {
+      "1.0": "The nunatak was named for General Helmuth von Moltke",
+      "1.1": "General Helmuth von Moltke was Chief of the German General Staff",
+      "1.2": "General Helmuth von Moltke was Secretary of State for Home Affairs"
+     }
+    },
+    {
+     "sentence": "Helmuth Johann Ludwig von Moltke (] ; 23 May 1848 – 18 June 1916), also known as Moltke the Younger, was a nephew of \"Generalfeldmarschall\" (Field Marshal) Helmuth Karl Bernhard von Moltke and served as the Chief of the German General Staff from 1906 to 1914.",
+     "facts": {
+      "2.0": "Helmuth Johann Ludwig von Moltke was born 23 May 1848",
+      "2.1": "Helmuth Johann Ludwig von Moltke died 18 June 1916",
+      "2.2": "Helmuth Johann Ludwig von Moltke is also known as Moltke the Younger",
+      "2.3": "Helmuth Johann Ludwig von Moltke was a nephew of Generalfeldmarschall (Field Marshal) Helmuth Karl Bernhard von Moltke",
+      "2.4": "Helmuth Johann Ludwig von Moltke served as Chief of the German General Staff from 1906 to 1914"
+     }
+    }
+   ],
+   "items": [
+    "Franz Halder\nFranz Halder (30 June 1884 – 2 April 1972) was a German general and the chief of the \"Oberkommando des Heeres\" staff (OKH, Army High Command) from 1938 until September 1942, when he was dismissed after frequent disagreements with Adolf Hitler.\n\n Until December 1941 Halder's military position corresponded to the old Chief of the General Staff position, which during World War I had been the highest military office in the German Imperial Army.\n\n Halder's diary during his time as chief of OKH General Staff has been a source for authors that have written about such subjects as Hitler, World War II and the Nazi Party.\n\n In William Shirer's \"The Rise and Fall of the Third Reich\", Halder's diary is cited hundreds of times.",
+    "Helmuth von Moltke the Younger\nHelmuth Johann Ludwig von Moltke (] ; 23 May 1848 – 18 June 1916), also known as Moltke the Younger, was a nephew of \"Generalfeldmarschall\" (Field Marshal) Helmuth Karl Bernhard von Moltke and served as the Chief of the German General Staff from 1906 to 1914.\n\n The two are often differentiated as \"Moltke the Elder\" and \"Moltke the Younger\".",
+    "Ludwig Beck\nLudwig August Theodor Beck (29 June 1880 – 21 July 1944) was a German general and Chief of the German General Staff during the early years of the Nazi regime in Germany before World War II.\n\n Ludwig Beck was never a member of the Nazi Party, though in the early 1930s he supported Adolf Hitler's forceful denunciation of the Versailles Treaty and belief in the need for Germany to rearm.\n\n Beck had grave misgivings regarding the Nazi demand that all German officers swear an oath of fealty to the person of Hitler in 1934, though he believed that Germany needed strong government and that Hitler could successfully provide this so long as he was influenced by traditional elements within the military rather than the SA and SS.",
+    "List of Generalobersts\nGeneraloberst, in English Colonel General, was, in Germany and Austria-Hungary—the German \"Reichswehr\" and \"Wehrmacht\", the Austro-Hungarian Common Army, and the East German National People's Army, as well as the respective police services—the second highest general officer rank, ranking above full general but below general field marshal.\n\n It was equivalent to \"Generaladmiral\" in the \"Kriegsmarine\" until 1945, or to Flottenadmiral in the \"Volksmarine\" until 1990.\n\n The rank was the highest ordinary military rank and the highest military rank awarded in peacetime; the higher rank of general field marshal was only awarded in wartime by the head of state.\n\n In general, a Generaloberst had the same privileges as a general field marshal.",
+    "Ferdinand Jodl\nFerdinand Alfred Friedrich Jodl (28 November 1896 – 9 June 1956) was a German general during World War II who commanded the Mountain Corps Norway during the Petsamo–Kirkenes Offensive.\n\n He was the brother of Alfred Jodl, Chief of the Operations Staff of the OKW.\n\n Ferdinand Jodl was acquitted by a German court.",
+    "Alfred Jodl\nAlfred Josef Ferdinand Jodl (   ; 10 May 1890 – 16 October 1946) was a German general and war criminal during World War II, who served as the Chief of the Operations Staff of the Armed Forces High Command (Oberkommando der Wehrmacht).",
+    "German General Staff\nThe German General Staff, originally the Prussian General Staff and officially Great General Staff (\"Großer Generalstab\"), was a full-time body at the head of the Prussian Army and later, the German Army, responsible for the continuous study of all aspects of war, and for drawing up and reviewing plans for mobilization or campaign.\n\n It existed unofficially from 1806, and was formally established by law in 1814, the first general staff in existence.\n\n It was distinguished by the formal selection of its officers by intelligence and proven merit rather than patronage or wealth, and by the exhaustive and rigorously structured training which its staff officers undertook.\n\n Its rise and development gave the German armed forces a decisive strategic advantage over their adversaries for nearly a century and a half.",
+    "Herbert Büchs\nHerbert Büchs (20 November 1913 – 19 May 1996) was a Lieutenant General of the German Air Force and a former Luftwaffe staff officer in Nazi Germany's Oberkommando der Wehrmacht (OKW) during World War II.\n\n As second adjutant to General Alfred Jodl with the rank of Major he is notable for being present in the conference room when the 20 July plot bomb exploded in 1944.",
+    "Walter Dornberger\nMajor-General Dr. Walter Robert Dornberger (6 September 1895 – 27 June 1980) was a German Army artillery officer whose career spanned World War I and World War II.\n\n He was a leader of Nazi Germany's V-2 rocket program and other projects at the Peenemünde Army Research Center.",
+    "Moltke Nunataks\nThe Moltke Nunataks ( ) are a chain of north–south trending nunataks close to the northeastern end of the Filchner Ice Shelf, Antarctica.\n\n One nunatak was first roughly mapped and named \"Moltke Nunatak\" by the Second German Antarctic Expedition of 1911–12 under Wilhelm Filchner.\n\n He named it for General Helmuth von Moltke, Chief of the German General Staff and Secretary of State for Home Affairs.\n\n Surveys during the mid-1950s by British, Argentine and United States expeditions indicate that a group of four or five nunataks exist in the area."
+   ]
+  },
+  {
+   "id": "4c2590feb62d9b7f",
+   "gold": [
+    {
+     "sentence": " All matches were played at HC Davos's home arena, Eisstadion Davos.",
+     "facts": {
+      "0.0": "All matches were played at the home arena of HC Davos.",
+      "0.1": "The home arena of HC Davos is Eisstadion Davos."
+     }
+    },
+    {
+     "sentence": "Hockey Club Davos is a professional Swiss ice hockey club based in Davos, Switzerland.",
+     "facts": {
+      "1.0": "Hockey Club Davos is a professional Swiss ice hockey club.",
+      "1.1": "Hockey Club Davos is based in Davos, Switzerland."
+     }
+    }
+   ],
+   "items": [
+    "HC Davos\nHockey Club Davos is a professional Swiss ice hockey club based in Davos, Switzerland.\n\n Davos plays in the National League (NL).\n\n The team is usually a strong force in the league and often bolster their roster with Swiss national team players and players who once played for National Hockey League teams.\n\n HC Davos also has hosted the annual Spengler Cup tournament, an invitational competition, since 1923.",
+    "2016 Spengler Cup\nThe 90th Spengler Cup was an ice hockey competition being held in Davos, Switzerland between 26 and 31 December 2016.\n\n All matches were played at HC Davos's home known as Vaillant Arena.\n\n Six competing teams were split into two groups of three (in the round-robin series).\n\n The two groups, named Torriani and Cattini, are named after legendary Swiss hockey players Richard 'Bibi' Torriani and the Cattini brothers, Hans and Ferdinand.",
+    "Spengler Cup\nThe Spengler Cup is an annual invitational ice hockey tournament held in Davos, Switzerland.\n\n First held in 1923, the Spengler Cup is often cited as the oldest invitational ice hockey tournament in the world.\n\n The event is hosted by the Swiss team HC Davos and played each year in Davos, Switzerland, between Christmas (December 25) and New Year's Day.\n\n Currently, all games are held at Vaillant Arena.",
+    "2015 Spengler Cup\nThe 89th Spengler Cup was an ice hockey competition held in Davos, Switzerland between 26 and 31 December 2015.\n\n All matches were played at HC Davos's home known as Vaillant Arena.\n\n Six competing teams were split into two groups of three (in the round-robin series).\n\n The two groups, named Torriani and Cattini, are named after legendary Swiss hockey players Richard 'Bibi' Torriani and the Cattini brothers, Hans and Ferdinand.",
+    "1992 Stanley Cup Finals\nThe 1992 Stanley Cup Finals NHL championship series was contested by the Prince of Wales Conference and defending Stanley Cup champion Pittsburgh Penguins and the Clarence Campbell Conference champion Chicago Blackhawks.\n\n The Blackhawks were appearing in their first Finals since .\n\n After the Blackhawks jumped to an early 4–1 lead in the first game of the series, Mario Lemieux and the Penguins came back to win the game, sweep the series in four games, and win their second consecutive and second overall Stanley Cup.\n\n It was the 99th year of the Stanley Cup, and the first to extend into the month of June.\n\n It was the last final for Chicago Stadium as it closed in 1994.",
+    "1992 Spengler Cup\nThe 1992 Spengler Cup was held in Davos, Switzerland, between December 26, 1992, and December 31, 1992.\n\n All matches were played at HC Davos's home arena, Eisstadion Davos.\n\n The final was won 6-5 by Team Canada over Färjestad BK.",
+    "Vaillant Arena\nVaillant Arena (Eisstadion Davos) is an arena in Davos, Switzerland.\n\n It is primarily used for ice hockey and is the home arena of HC Davos.\n\n It holds 7,080 people, of which 3,280 are seated.\n\n Every year the Spengler Cup is played in this arena.",
+    "Stadio del Ghiaccio Gianmario Scola\nStadio del Ghiaccio Gianmario Scola is an indoor sporting arena in Canazei, Italy.\n\n The capacity of the arena is 3,500 spectators.\n\n It is the home arena of the Sportiva Hockey Club Fassa ice hockey team of the Serie A ice hockey league.\n\n The arena also hosted games during the 1994 World Ice Hockey Championships along with the Forum di Assago in Milan and the PalaOnda in Bolzano.",
+    "1982 Donnay Indoor Championships\nThe 1982 Donnay Indoor Championships was a men's tennis tournament played on indoor carpet courts in Brussels in Belgium the event was part of the 1982 Volvo Grand Prix.\n\n The tournament was held from 8 March through 14 March 1982.\n\n Third-seeded Vitas Gerulaitis won the singles title.",
+    "Fife Flyers\nFife Flyers Ice Hockey Club is the oldest professional ice hockey club in the UK, established in 1938.\n\n The Flyers play their home games at Fife Ice Arena in Kirkcaldy which has a capacity of just Over 3000 (seated and standing).\n\n The arena is home to not only Fife Flyers, who play in the Elite Ice Hockey League but also to Kirkcaldy Junior Ice Hockey Club.\n\n Traditionally many of the Flyers' players have come up through the junior ranks to play at a professional level."
+   ]
+  },
+  {
+   "id": "b94e0a301c60cffa",
+   "gold": [
+    {
+     "sentence": "Darby O'Gill and the Little People is a 1959 Walt Disney Productions feature film starring Albert Sharpe, Janet Munro, Sean Connery and Jimmy O'Dea, in a tale about a wily Irishman and his battle of wits with leprechauns.",
+     "facts": {
+      "0.0": "Darby O'Gill and the Little People is a feature film.",
+      "0.1": "Darby O'Gill and the Little People was made by Walt Disney Productions.",
+      "0.2": "Darby O'Gill and the Little People was released in 1959.",
+      "0.3": "Darby O'Gill and the Little People stars Albert Sharpe.",
+      "0.4": "Darby O'Gill and the Little People stars Janet Munro.",
+      "0.5": "Darby O'Gill and the Little People stars Sean Connery.",
+      "0.6": "Darby O'Gill and the Little People stars Jimmy O'Dea.",
+      "0.7": "Darby O'Gill and the Little People tells a tale about a wily Irishman.",
+      "0.8": "The Irishman in Darby O'Gill and the Little People has a battle of wits with leprechauns."
+     }
+    },
+    {
+     "sentence": " Produced by Walt Disney Pictures, Aamir Khan Productions and UTV Motion Pictures, it stars Aamir Khan as the father.",
+     "facts": {
+      "1.0": "The film named in this sentence was produced by Walt Disney Pictures.",
+      "1.1": "The film named in this sentence was produced by Aamir Khan Productions.",
+      "1.2": "The film named in this sentence was produced by UTV Motion Pictures.",
+      "1.3": "Aamir Khan stars as the father in the film named in this sentence."
+     }
+    }
+   ],
+   "items": [
+    "Dangal (film)\nDangal (English: \"Wrestling competition\" ) is a 2016 Indian Hindi-language biographical sports drama film loosely based on the story of Mahavir Singh Phogat, an amateur wrestler, who trains his daughters Geeta Phogat and Babita Kumari to be world-class wrestlers.\n\n It was directed by Nitesh Tiwari.\n\n Produced by Walt Disney Pictures, Aamir Khan Productions and UTV Motion Pictures, it stars Aamir Khan as the father.\n\n Both daughters go on to win medals at the 2010 Commonwealth Games.\n\n Babita won a silver medal at the Games, in the 51 kg class and gold at the 2014 Glasgow Games in the 55 kg class.\n\n In 2012, Geeta became the first Indian female wrestler to qualify for the Olympics.\n\n Mahavir's efforts inspired dozens of Indian women to take to wrestling.\n\n Fatima Sana Shaikh and Sanya Malhotra play the older selves of the sisters while Sakshi Tanwar plays their mother and Aparshakti Khurana, their cousin.",
+    "List of Walt Disney Pictures films\nThis is a list of films released theatrically under the Walt Disney Pictures banner (known as that since 1983, with \"Never Cry Wolf\" as its first release) and films released before that under the former name of the parent company, Walt Disney Productions (1929–1983).\n\n Most films listed here were distributed in the United States by the company's distribution division, Walt Disney Studios Motion Pictures (formerly known as Buena Vista Distribution Company [1953–1987] and Buena Vista Pictures Distribution [1987–2007]).\n\n The Disney features produced before \"Peter Pan\" (1953) were originally distributed by RKO Radio Pictures, and are now distributed by Walt Disney Studios Motion Pictures.",
+    "Pinocchio (1940 film)\nPinocchio is a 1940 American animated musical fantasy film produced by Walt Disney Productions and based on the Italian children's novel \"The Adventures of Pinocchio\" by Carlo Collodi.\n\n It was the second animated feature film produced by Disney, made after the success of \"Snow White and the Seven Dwarfs\" (1937).",
+    "Toy Story\nToy Story is a 1995 American computer-animated buddy comedy adventure film produced by Pixar Animation Studios for Walt Disney Pictures.\n\n The directorial debut of John Lasseter, \"Toy Story\" was the first feature-length computer-animated film and the first feature film produced by Pixar.\n\n Taking place in a world where anthropomorphic toys pretend to be lifeless whenever humans are present, the film's plot focuses on the relationship between Woody, an old-fashioned pullstring cowboy doll (voiced by Tom Hanks), and Buzz Lightyear, an astronaut action figure (voiced by Tim Allen), as they evolve from rivals competing for the affections of Andy, their owner, to friends who work together to be reunited with Andy as his family prepares to move to a new home.\n\n The screenplay was written by Joss Whedon, Andrew Stanton, Joel Cohen and Alec Sokolow, based on a story by Lasseter, Pete Docter, Stanton and Joe Ranft.\n\n The film features music by Randy Newman, and was executive-produced by Steve Jobs and Edwin Catmull.",
+    "Walt Disney's Treasury of Classic Tales\nWalt Disney's Treasury of Classic Tales is an American Sunday comic strip, which ran in newspapers from 13 July 1952 until 15 February 1987.\n\n Each story adapted a different Disney film, such as Darby O'Gill and the Little People, Peter Pan, or Davy Crockett.\n\n It was run in relatively few papers with 58 in 1957 and 55 in 1966 and was principally a vehicle for promoting new and re-released Disney films.",
+    "Disney Renaissance\nIn the history of The Walt Disney Company, the Disney Renaissance refers to the era from 1989 to 1999 during which Walt Disney Feature Animation (renamed Walt Disney Animation Studios in 2006) experienced a creative resurgence in producing successful animated films based on well-known stories, which restored public and critical interest in The Walt Disney Company as a whole.\n\n During this era, the studio produced and released ten animated films: \"The Little Mermaid\" (1989), \"The Rescuers Down Under\" (1990), \"Beauty and the Beast\" (1991), \"Aladdin\" (1992), \"The Lion King\" (1994), \"Pocahontas\" (1995), \"The Hunchback of Notre Dame\" (1996), \"Hercules\" (1997), \"Mulan\" (1998) and \"Tarzan\" (1999).",
+    "Darby O'Gill and the Little People\nDarby O'Gill and the Little People is a 1959 Walt Disney Productions feature film starring Albert Sharpe, Janet Munro, Sean Connery and Jimmy O'Dea, in a tale about a wily Irishman and his battle of wits with leprechauns.\n\n The film was directed by Robert Stevenson and its screenplay written by Lawrence Edward Watkin after the books of Herminie Templeton Kavanagh.",
+    "Walt Disney Studios Motion Pictures\nWalt Disney Studios Motion Pictures (formerly Buena Vista Pictures Distribution and Buena Vista Film Distribution Company) is an American film distributor owned by The Walt Disney Company.\n\n Established in 1953 as Buena Vista Film Distribution Company, the company handles theatrical distribution, marketing and promotion for films produced and released by the Walt Disney Studios, including Walt Disney Pictures, Walt Disney Animation Studios, Pixar Animation Studios, DisneyToon Studios, Marvel Studios, Lucasfilm, Disneynature, and Touchstone Pictures.\n\n The division took on its current name in late 2007, which before that had been Buena Vista Pictures Distribution since 1987.",
+    "Frankie Darro\nFrankie Darro (born Frank Johnson, Jr.\n\n December 22, 1917 – December 25, 1976) was an American actor and later in his career a stuntman.\n\n He began his career as a child actor in silent films, progressed to lead roles and co-starring roles in adventure, western, dramatic, and comedy films, and later became a character actor and voice-over artist.\n\n He is known for his role as Lampwick, the unlucky boy turned into a donkey in Walt Disney's 2nd animated feature, \"Pinocchio\", which was originally released in February 1940.",
+    "Walt Disney Pictures\nWalt Disney Pictures, Inc. is an American film production company and a subsidiary of Walt Disney Studios, owned by The Walt Disney Company.\n\n The division is based at the Walt Disney Studios in Burbank, California, and is the main producer of live-action feature films within the Walt Disney Studios unit.\n\n It took on its current name in 1983.\n\n Today, in conjunction with the other units of Walt Disney Studios, Walt Disney Pictures is classified as one of Hollywood's \"Big Six\" film studios.\n\n Films produced by Walt Disney Animation Studios and Pixar Animation Studios are also released under this brand."
+   ]
+  },
+  {
+   "id": "6946316904cf63a1",
+   "gold": [
+    {
+     "sentence": " He earned 1 cap under Jack Charlton for the Irish national team.",
+     "facts": {
+      "0.0": "The player earned 1 cap for the Irish national team.",
+      "0.1": "The player earned that cap under Jack Charlton."
+     }
+    },
+    {
+     "sentence": " He was part of the England team that won the 1966 World Cup.",
+     "facts": {
+      "1.0": "The player was part of the England team that won the 1966 World Cup.",
+      "1.1": "The England team won the 1966 World Cup."
+     }
+    }
+   ],
+   "items": [
+    "1929–30 British Home Championship\nThe 1929-30 British Home Championship was an edition of the annual international football tournament played between the British Home Nations.\n\n 1930 was the year in which the tournament finally gained a serious rival as the premier international football competition, with the inception of the 1930 FIFA World Cup, held in Uruguay.\n\n The Home Nations were not however members of FIFA due to disputes over the growing professionalism in continental and South American football.\n\n As a result, they were not able to attend and indicated that even if they were invited they would have no interest in attending, deeming foreign opposition too weak for serious contest.\n\n It is interesting to speculate what would have happened had the Home Nations entered the tournament, especially as the tide of world football was changing against Britain.\n\n The England team, which dominated the 1930 championship, had lost to Spain the year before in the first defeat by a foreign football team, and in the same year they only managed draws with Germany and Austria.\n\n The Scottish side, which had won most of the previous ten championships, was likewise unprepared, only playing its first game outside the British Isles in 1929, and being heavily defeated on tour in 1931 by both the Austrians and the Italians.",
+    "Arthur Milton\nClement Arthur Milton (10 March 1928 – 25 April 2007) was an English cricketer and footballer.\n\n He played County cricket for Gloucestershire from 1948 to 1974, playing six Test matches for England in 1958 and 1959.\n\n He also played domestic football for Arsenal between 1951 and 1955, and then for a brief period for Bristol City.\n\n He played one match for England in 1951, against Austria at Wembley.\n\n He was the last man, and the last survivor, of the twelve people to have played at the highest international level for both England's football and cricket teams.",
+    "William McCourty\nWilliam McCourty (1884 – 10 December 1917) was an English professional footballer born in Morpeth, Northumberland, who played in the Football League for Birmingham.\n\n McCourty, a former coal miner who played at left half, joined Birmingham in May 1909.\n\n He made his debut in the Second Division on 13 September 1909, deputising for the injured Tommy Daykin in a home game against Glossop which finished as a 2–2 draw, and was never picked again, returning to non-league football the following year.",
+    "Barry Murphy (footballer, born 1959)\nBarry Murphy (born 1 April 1959 in Dublin) was an Irish soccer player during the 1980s.\n\n He earned 1 cap under Jack Charlton for the Irish national team.",
+    "Gordon Burns: Scottish ex-player and Troon manager; played for Ayr. Jack Charlton: England’s 1966 World Cup-winning defender, Leeds legend and record appearance-holder; Bobby’s brother. Barry Murphy: Irish international, one cap under Charlton. Adnan Januzaj: Belgian winger at Real Sociedad; former Manchester United player and 2014 World Cup participant. Arthur Milton: England footballer and cricketer, with six Test caps. Leatherbarrow, McC",
+    "Billy Morgan (footballer, born 1891)\nWilliam Albert L. Morgan (3 November 1891 – after 1927) was an English professional footballer born in Old Hill, Cradley Heath, Staffordshire, who played either at outside left or inside left.\n\n He played for Birmingham, Coventry City and Crystal Palace in the Football League, and was capped once for a Football League representative side.",
+    "Canadian athletes Ross MacKenzie and Brian MacLaren earned 1966 Commonwealth and 1967 Pan American relay silver; both competed in Olympic 400m. Guyanese Harry Prowell set a marathon record and remains Guyana’s sole Olympic marathoner. Canadian miler Dave Bailey broke four minutes and won Pan Am bronze; Siegmar Ohlemann won Pan Am 800m silver. Geri Donnelly and China’s Liu Ailing were World Cup footballers; Liu also",
+    "Jack Charlton\nJohn Charlton, OBE, DL (born 8 May 1935) is an English former footballer and manager who played as a defender.\n\n He was part of the England team that won the 1966 World Cup.\n\n He is the elder brother of former Manchester United forward Bobby Charlton, who was also a teammate in England's World Cup final victory.\n\n He spent his entire club career with Leeds United from 1950 to 1973, helping the club to the Second Division title (1963–64), First Division title (1968–69), FA Cup (1972), League Cup (1968), Charity Shield (1969), Inter-Cities Fairs Cup (1968 and 1971), as well as one other promotion from the Second Division (1955–56) and five second-place finishes in the First Division, two FA Cup final defeats and one Inter-Cities Fairs Cup final defeat.\n\n His 629 league and 762 total competitive appearances are club records.\n\n In 2006, Leeds United supporters voted Charlton into the club's greatest ever XI.",
+    "Clare Taylor\nClare Elizabeth Taylor MBE (born 22 May 1965) is an English sportswoman, the first woman to have played on a World Cup team in both cricket and football.\n\n She represented England at both cricket, as a member of the winning World Cup cricket team in 1993, and football (World Cup 1995).\n\n She was awarded the MBE in the Queen's Birthday Honours in 2000 for her services to women’s sport.\n\n Taylor attended Moor End High School and still has her name on the athletics records board.",
+    "Walter Ward (footballer)\nWalter Ward (1869 – after 1890) was an English professional footballer born in Birmingham who played in the Football Alliance for Small Heath.\n\n During the 1890–91 season, Ward deputised for regular goalkeeper Chris Charsley when Charsley's duties as a serving police officer demanded his absence from the side."
+   ]
+  },
+  {
+   "id": "7070eda2cf3e88a3",
+   "gold": [
+    {
+     "sentence": " It is the fourth and final film in the original \"Superman\" film series, and the first film in that series not to be produced by Alexander and Ilya Salkind, but rather by Golan-Globus' Cannon Films, in association with Warner Bros. Gene Hackman returned as Lex Luthor, who creates an evil solar-powered version of Superman called Nuclear Man.",
+     "facts": {
+      "0.0": "The film is the fourth and final film in the original Superman film series.",
+      "0.1": "The film is the first film in the original Superman series not produced by Alexander and Ilya Salkind.",
+      "0.2": "The film was produced by Golan-Globus' Cannon Films.",
+      "0.3": "The film was produced in association with Warner Bros.",
+      "0.4": "Gene Hackman returned as Lex Luthor in the film.",
+      "0.5": "Lex Luthor creates an evil solar-powered version of Superman called Nuclear Man."
+     }
+    },
+    {
+     "sentence": "Eugene Allen \"Gene\" Hackman (born January 30, 1930) is a retired American actor and novelist.",
+     "facts": {
+      "1.0": "Eugene Allen 'Gene' Hackman was born on January 30, 1930.",
+      "1.1": "Gene Hackman is a retired American actor.",
+      "1.2": "Gene Hackman is a retired American novelist."
+     }
+    }
+   ],
+   "items": [
+    "Superman IV: The Quest for Peace\nSuperman IV: The Quest for Peace is a 1987 American superhero film directed by Sidney J. Furie, based on the DC Comics character Superman.\n\n It is the fourth and final film in the original \"Superman\" film series, and the first film in that series not to be produced by Alexander and Ilya Salkind, but rather by Golan-Globus' Cannon Films, in association with Warner Bros. Gene Hackman returned as Lex Luthor, who creates an evil solar-powered version of Superman called Nuclear Man.",
+    "Charles A. Agemian\nCharles A. Agemian (July 22, 1909 – March 30, 1996) was an American banker who took early retirement from Chase Manhattan Bank, where he was executive vice president of operations, to become chairman and chief executive officer of the Hackensack Trust Co., which later was renamed Garden State National Bank.",
+    "Superman Returns\nSuperman Returns is a 2006 American superhero film directed and produced by Bryan Singer.\n\n It is based on the DC Comics character Superman and serves as an homage sequel to the motion pictures \"Superman\" (1978) and \"Superman II\" (1980), while ignoring the events of \"Superman III\" (1983) and \"\" (1987).\n\n The film stars Brandon Routh as Clark Kent/Superman, Kate Bosworth as Lois Lane, Kevin Spacey as Lex Luthor, with James Marsden, Frank Langella, and Parker Posey.\n\n The film tells the story of the title character returning to Earth after a five-year absence.\n\n He finds that his love interest Lois Lane has moved on with her life, and that his archenemy Lex Luthor is plotting a scheme that will destroy Superman and the world.",
+    "Lionel Luthor\nLionel Luthor is a fictional character portrayed by John Glover in the television series \"Smallville\".\n\n The character was initially a recurring guest in season one, and became a series regular in season two and continued until being written out of the show in season seven.\n\n The character returned to the show in season ten again as a recurring guest role as a parallel universe (Earth-2) version of the character.\n\n In \"Smallville\", Lionel Luthor is the father of Lex Luthor (Michael Rosenbaum), and founder and CEO of LuthorCorp.\n\n Lex Luthor's father was first introduced in \"Superman\" comics by Jerry Siegel in 1961 and has since appeared in other Superman-related media under different names.\n\n \"Smallville\" is the first appearance in which the character has been an intricate part of a Superman adaptation.\n\n Series developers Alfred Gough and Miles Millar created Lionel Luthor for \"Smallville\" to provide an antithesis to the parenting style of Jonathan Kent (John Schneider) and Martha Kent (Annette O'Toole).",
+    "Harry Sweet\nHarry Sweet (October 2, 1901 – June 18, 1933) was an American actor, director and screenwriter.\n\n He appeared in 57 films between 1919 and 1932.\n\n He also directed 54 films between 1920 and 1933, including one Harry Langdon short, two of the Tay Garnett- penned comedies Stan Laurel made for Joe Rock, and fifteen of the earliest entries in the Edgar Kennedy \"Average Man\" series.",
+    "Lex Luthor: Man of Steel\nLex Luthor: Man of Steel (later collected as simply Luthor) is a five-issue monthly American comic book limited series written by Brian Azzarello and illustrated by Lee Bermejo, which features Superman's nemesis Lex Luthor as the protagonist.",
+    "Superman: A Tale of Five Cities\nSuperman og Fredsbomben (translation: Superman and the Peace Bomb) or Superman: A Tale of Five Cities is a large prestige format 48-page graphic novel published by Danish publisher Interpresse in 1990.\n\n In celebration of Superman's 50th anniversary in 1988, DC Comics incentived overseas publishers to produce an original story with the Man of Steel.\n\n Only the Interpresse editors from Denmark attended the call, comic book translator and writer Niels Søndergaard wrote the story featuring Clark Kent and Lois Lane in a cold war adventure where Superman needs to devise a Lex Luthor plan to control all Nuclear Bombs in Europe.\n\n The storyline presents the Man of Steel visiting five capitals from northern Europe and Scandinavia: Amsterdam, Copenhagen, Oslo, Stockholm and Helsinki.\n\n The art and colors are provided by Teddy Kristiansen and the lettering by Rebecca Løwe.\n\n It was dedicated to danish editors Henning Kure and Ove Høyer, pioneers of the super-heroes comics in Denmark.",
+    "Alternative versions of Lex Luthor\nThe fictional character Lex Luthor has appeared in a number of media, always as the archenemy of Superman.\n\n Each version of the work typically establishes its own continuity, and sometimes introduces parallel universes, to the point where distinct differences in the portrayal of the character can be identified.\n\n In addition, the DC Universe has been rewritten a number of times, establishing additional versions of the character.\n\n This article details and lists various versions of Lex Luthor depicted in works including DC Comics \"Multiverse\", \"Elseworlds\", television and film.",
+    "Lex Luthor (Smallville)\nLex Luthor is a fictional character from the television series \"Smallville\".\n\n He was a series regular from the pilot episode until the season seven finale, and has been played continuously by Michael Rosenbaum, with various actors portraying the character as a child throughout the series.\n\n The character of Lex Luthor, first created for comic books by Jerry Siegel and Joe Shuster in 1940 as nemesis of Superman, was adapted to television in 2001 by Alfred Gough and Miles Millar—this is only the third time the character has been adapted to a live action television series.\n\n The character has also appeared in various literature based on the \"Smallville\" television series, none of which directly continues from or into the television episodes.",
+    "Gene Hackman\nEugene Allen \"Gene\" Hackman (born January 30, 1930) is a retired American actor and novelist.\n\n In a career spanning nearly five decades, Hackman was nominated for five Academy Awards, winning Best Actor in \"The French Connection\" and Best Supporting Actor in \"Unforgiven\".\n\n He won three Golden Globes and two BAFTAs."
+   ]
+  }
+ ]
+}

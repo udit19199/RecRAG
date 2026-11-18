@@ -1,0 +1,77 @@
+[
+{"id": "2e78980c55377313", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Second-year Seahawks back Kenneth Walker III suffered an oblique injury in Week 11"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "KW3 has a better chance of missing multiple weeks than he does at suiting up for Seattle's Thanksgiving Day game"}]},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Second-year Seahawks back Kenneth Walker III suffered an oblique injury in Week 11"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Rookie Zach Charbonnet, who entered Week 11 with just over 200 rushing yards on the year, replaced Walker as Seattle's top ball carrier."}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "Second-year Seahawks back Kenneth Walker III suffered an oblique injury in Week 11"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 6, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 6, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]}
+]},
+{"id": "038dec94b9c02df2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Wired removed the article for not meeting its standards"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "the degree to which it was shared on social media"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "it was shared on social media and boosted in write-ups at other outlets"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "from companies including Apple, Samsung and Mozilla, The Verge reports."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "Google compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "Google compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "Google compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old."}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 7, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "3.2", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "3.3", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "3.4", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "f27cc5cf56c52e0e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "especially since he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "especially since he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "especially since he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "f8cf2d6eb4f725b4", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "But “all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 1, "quote": "repeatedly emphasized how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to political candidates, and finance risky bets."}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 3, "quote": "Bankman-Fried did not act like someone who was guilty. Rather, he was willing to give up his personal wealth to make customers whole, Cohen argued."}]},
+{"fact": "3.2", "status": "missing", "evidence": []},
+{"fact": "3.3", "status": "missing", "evidence": []}
+]},
+{"id": "ff7a06b80cc2d642", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "After already raising its main interest rate to the highest level since 2001"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "After already raising its main interest rate to the highest level since 2001"}, {"item": 7, "quote": "The Fed put such pressure on the economy intentionally, hoping to starve inflation of its fuel."}]},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "c0f6583a6aeac86d", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]}
+]

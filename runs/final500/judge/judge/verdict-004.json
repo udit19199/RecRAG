@@ -1,0 +1,54 @@
+[
+  {"id": "6de77dfa3eb0d826", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "22f6fdbb6a27a6c9", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "3.0", "status": "stated", "evidence": [{"item": 8, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence,"}]},
+    {"fact": "3.1", "status": "stated", "evidence": [{"item": 8, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud"}]},
+    {"fact": "3.2", "status": "stated", "evidence": [{"item": 8, "quote": "never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "3.3", "status": "stated", "evidence": [{"item": 8, "quote": "never meant to commit fraud or steal and basically got in over his head."}]}
+  ]},
+  {"id": "4c7294e8a14cc350", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her,"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her,"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "seemingly expressing his interest in Swift."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []}
+  ]},
+  {"id": "83440c698b7e4009", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]}
+  ]},
+  {"id": "471fd370e55bd6d9", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep, but not all of them are effective and none are foolproof."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep, but not all of them are effective and none are foolproof."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep, but not all of them are effective and none are foolproof."}]}
+  ]}
+]

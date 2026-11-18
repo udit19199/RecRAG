@@ -1,0 +1,46 @@
+[
+  {"id": "5add95035542990dbb2f7e77", "sentences": [
+    ["Cherie Ann Currie was born November 30, 1959.", "Cherie Ann Currie is an American musician.", "Cherie Ann Currie is an instrumentalist, singer, and songwriter.", "Cherie Ann Currie is an actress.", "Cherie Ann Currie is an artist."],
+    ["Steve Augeri was born January 30, 1959.", "Steve Augeri is an American rock singer.", "Steve Augeri is best known for his work with Tall Stories.", "Steve Augeri is best known for his work with Tyketto.", "Steve Augeri is best known for his work with Journey."]
+  ]},
+  {"id": "multihop-rag-1222", "sentences": [
+    ["Bankman-Fried was compared to Warren Buffet.", "Many people called Bankman-Fried the white horse of crypto.", "TechCrunch never compared Bankman-Fried to Warren Buffet or called him the white horse of crypto."],
+    ["The highly anticipated criminal trial of Sam Bankman-Fried started on a Tuesday.", "Sam Bankman-Fried is the former CEO of FTX.", "FTX is a crypto exchange.", "FTX is bankrupt.", "The trial determines whether Sam Bankman-Fried is guilty of seven counts of fraud and conspiracy."],
+    ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power, and influence.", "The defense argued that the FTX founder acted in good faith.", "The defense argued that the FTX founder never meant to commit fraud or steal.", "The defense argued that the FTX founder basically got in over his head."]
+  ]},
+  {"id": "multihop-rag-1827", "sentences": [
+    ["Al Saadi said her frustration with Meta is common among Palestinians.", "Al Saadi said her frustration with Meta is common among Palestinians in occupied territories.", "Al Saadi said her frustration with Meta is common among Palestinians across the diaspora."],
+    ["Meta wants to shift the burden of monitoring teens' social media usage back to the app stores.", "Meta wants to shift the burden of monitoring teens' social media usage back to parents."]
+  ]},
+  {"id": "5ab97cd0554299753720f81a", "sentences": [
+    ["Elizabeth Austin was born in 1958.", "Elizabeth Austin is an American writer.", "Elizabeth Austin lives in Oak Park, Illinois."],
+    ["Elizabeth Austin has also written for The Washington Monthly.", "Elizabeth Austin has also written for Ladies Home Journal.", "Elizabeth Austin has also written for Good Housekeeping.", "Elizabeth Austin has also written for Self.", "Elizabeth Austin has also written for Shape."],
+    ["Shape is a monthly English language fitness magazine.", "Shape was started by Weider Publications in 1981.", "Shape was founded by Christine MacIntyre.", "Christine MacIntyre is a pioneer in women's free weight fitness.", "Shape became the number one women's fitness magazine."]
+  ]},
+  {"id": "5a89e4585542992e4fca8454", "sentences": [
+    ["Reed is one of the players most often mentioned as being the greatest running back in CFL history.", "Mike Pringle is one of the players most often mentioned as being the greatest running back in CFL history.", "Johnny Bright is one of the players most often mentioned as being the greatest running back in CFL history."],
+    ["Johnny D. Bright was born June 11, 1930.", "Johnny D. Bright died December 14, 1983.", "Johnny D. Bright was a professional Canadian football player.", "Johnny D. Bright played in the Canadian Football League."],
+    ["Johnny D. Bright played college football at Drake University."]
+  ]},
+  {"id": "5ae056c755429945ae959319", "sentences": [
+    ["The subject of this sentence portrayed Bret Maverick in the series Maverick from 1957 to 1962.", "The subject of this sentence portrayed Bret Maverick in the series Bret Maverick from 1981 to 1982.", "The subject of this sentence portrayed Jim Rockford in the series The Rockford Files from 1974 to 1980.", "The subject of this sentence portrayed Jim Egan in the series 8 Simple Rules from 2003 to 2005."],
+    ["The Notebook is a 2004 film.", "The Notebook is an American romantic drama film.", "The Notebook was directed by Nick Cassavetes.", "The Notebook is based on a 1996 novel.", "The 1996 novel has the same name as the film The Notebook.", "The 1996 novel was written by Nicholas Sparks."]
+  ]},
+  {"id": "5ae39fb85542990afbd1e197", "sentences": [
+    ["Longkou was formerly known as Huang County.", "Longkou is a port city.", "Longkou is in northeastern Shandong province, China.", "Longkou faces the Bohai Sea to the north.", "Longkou faces the Laizhou Bay to the west."],
+    ["The district faces the East China Sea.", "The district is connected to Mawei district by the Min River."]
+  ]},
+  {"id": "multihop-rag-1346", "sentences": [
+    ["The Justice Department is focused on the deals Google makes.", "Google makes deals with Apple.", "Google makes deals with Samsung.", "Google makes deals with Mozilla.", "Google makes deals with many others.", "The deals are meant to ensure Google is the default search engine on practically every platform."],
+    ["The Google deals will probably come up later in the trial.", "Epic chose to focus more on simply painting Google as the bad guy on day one."],
+    ["The case was filed by Arkansas-based publisher Helena World Chronicle.", "The case argues that Google siphons off news publishers' content through anticompetitive means.", "The case argues that Google siphons off news publishers' readers through anticompetitive means.", "The case argues that Google siphons off news publishers' ad revenue through anticompetitive means."]
+  ]},
+  {"id": "5a831af855429954d2e2ec1e", "sentences": [
+    ["Ex parte Young is a United States Supreme Court case.", "Ex parte Young is cited as 209 U.S. 123.", "Ex parte Young is dated 1908.", "Ex parte Young allows suits in federal courts against officials acting on behalf of states of the union.", "Ex parte Young allows such suits to proceed despite the state's sovereign immunity.", "Ex parte Young allows such suits when the state acted unconstitutionally."],
+    ["The Ex parte Young case was a test of the separation of church and state.", "The test of church and state separation in the Ex parte Young case concerned education."]
+  ]},
+  {"id": "5ae4ad3155429913cc2044cb", "sentences": [
+    ["Editors are based in Silver Spring, Maryland.", "Editors are based in Seoul, Korea."],
+    ["The magazine is headquartered in Baltimore, Maryland."]
+  ]}
+]

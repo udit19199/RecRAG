@@ -1,0 +1,57 @@
+[
+  {
+    "id": "18a25d5cfa781931",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "She admits that she may have misinterpreted the evidence"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "maintains that Google manipulates Search to maximise ad revenue."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "filed by Arkansas-based publisher Helena World Chronicle"}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+    ]
+  },
+  {
+    "id": "2d2f5c159ed838a5",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights."}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "And for Black Friday, it's on sale for over $400 off, knocking the price down to a super impressive $297."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "And for Black Friday, it's on sale for over $400 off, knocking the price down to a super impressive $297."}]}
+    ]
+  },
+  {
+    "id": "0674275e2cb0dce3",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "William (Rufus Kampa) is left heartbroken"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa)"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry"}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The latest installment takes place between the late 1990s to mid-2000s"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "The latest installment takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]}
+    ]
+  },
+  {
+    "id": "9787a8993ab6a722",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "he confessed on his podcast that he tried and failed to give her a friendship bracelet with his phone number on it during one of her Eras Tour shows."}]},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]}
+    ]
+  },
+  {
+    "id": "dc1c1aeae9e5cb36",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock"}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "the Red Table Talk host revealed that she and the actor have been separated since 2016."}]},
+      {"fact": "1.1", "status": "missing", "evidence": []}
+    ]
+  }
+]

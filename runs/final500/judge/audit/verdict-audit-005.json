@@ -1,0 +1,267 @@
+[
+ {
+  "id": "a006-95d34b6d8e57ec32",
+  "facts": [
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "sometimes on that journey there are hard moments when you don't get the right results"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a050-6c83344732b43510",
+  "facts": [
+   {
+    "fact": "2.0",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a111-f13390d87cd4df81",
+  "facts": [
+   {
+    "fact": "1.4",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a073-aeadb475a8697fef",
+  "facts": [
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 3,
+      "quote": "Georg Ferdinand Ludwig Philipp Cantor ( ; ] ; March 3 [O.S. February 19] 1845  – January 6, 1918) was a German mathematician."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a112-52bc10fb5f907841",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a126-5796400f96ae6d43",
+  "facts": [
+   {
+    "fact": "2.0",
+    "status": "contradicted",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Tracing its roots back to 1891 as an independent teachers' college, UCSB joined the University of California system in 1944"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a107-189d9bd04d97ffed",
+  "facts": [
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "Jean-François André Clervoy (born 19 November 1958) is a French engineer and a CNES and ESA astronaut."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a080-4c187a602bba002a",
+  "facts": [
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a028-cd9274d392051358",
+  "facts": [
+   {
+    "fact": "0.2",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a015-1b980e2c3ea000ce",
+  "facts": [
+   {
+    "fact": "1.2",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a072-db4373cf78f7d41e",
+  "facts": [
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 4,
+      "quote": "Garajonay National Park (Spanish: \"Parque nacional de Garajonay\" , ] ) is located in the center and north of the island of La Gomera"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a105-d99adf8e3ab2b8f3",
+  "facts": [
+   {
+    "fact": "0.5",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 10,
+      "quote": "Rick Husband Amarillo International Airport (IATA: AMA, ICAO: KAMA, FAA LID: AMA) is a public airport six miles (10 km) east of downtown Amarillo, in Potter and Randall Counties, Texas, United States."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a125-ff4ad07848c4134a",
+  "facts": [
+   {
+    "fact": "3.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "Dame Elizabeth Rosemond Taylor, DBE (February 27, 1932 – March 23, 2011) was a British-American actress"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a054-a6a5735879b24793",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a070-376b964c318c6cda",
+  "facts": [
+   {
+    "fact": "0.7",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 1,
+      "quote": "Robert Paul Holdstock (2 August 1948 – 29 November 2009) was an English novelist and author best known for his works of Celtic, Nordic, Gothic and Pictish fantasy literature"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a120-63f048bd030cdbe8",
+  "facts": [
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Penelope Fitzgerald (17 December 1916 – 28 April 2000) was an English Booker Prize-winning novelist"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a030-5897d9a8897e45cc",
+  "facts": [
+   {
+    "fact": "2.2",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "a008-a314cf73ea8aa699",
+  "facts": [
+   {
+    "fact": "1.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats, but Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a053-10249954203c6ed2",
+  "facts": [
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "a055-8e523ee0e7b74476",
+  "facts": [
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 6,
+      "quote": "While its usual hours of operation are from 6am to 9pm, stores’ opening and closing times on the holiday vary based on location."
+     }
+    ]
+   }
+  ]
+ }
+]

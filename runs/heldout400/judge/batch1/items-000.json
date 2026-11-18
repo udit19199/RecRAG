@@ -1,0 +1,726 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Topic overlap is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "bd95bcc86851e49a",
+   "kind": "answer",
+   "question": "Does the TechCrunch article claim that Google's release of the Gemini Pro model is a limited version compared to the full Gemini Ultra model, while The Verge article discusses Google's search engine deals with companies, and another TechCrunch article alleges Google's anticompetitive behavior towards news publishers, indicating different types of alleged actions by Google in each case?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "1fc42e6d7b17cb4a",
+   "kind": "answer",
+   "question": "Does the TechCrunch article discussing Google's spending to become the default search engine on various platforms report the same amount of $26.3 billion in 2021 as the claim made in another TechCrunch article covering the US v Google trial, or do they report different amounts?",
+   "gold_answers": [
+    "Same"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "a9d36b8223ab7ab8",
+   "kind": "answer",
+   "question": "Does the 'Business World' article suggesting that the 'Philippines government' could hinder private investment due to rising national debt align with the concern over the 'Philippines' debt-to-GDP ratio' expressed in another 'Business World' article, or do they present differing implications for the country's economy?",
+   "gold_answers": [
+    "Align"
+   ],
+   "model_answer": "They align: both express concern that the Philippines’ high debt-to-GDP ratio poses economic risks."
+  },
+  {
+   "id": "5e49d0175de2f827",
+   "kind": "answer",
+   "question": "Does the Sporting News article attribute the Minnesota Vikings' improved performance after a 1-4 start to Danielle Hunter's high-level performance, while the CBSSports.com article credits the Vikings' defense, specifically their ability to limit downfield shots against tight ends, for the team's success?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "5c88b9508e1814fe",
+   "kind": "answer",
+   "question": "Does the TechCrunch article on Uber's third-quarter financial performance report a different amount of operating and net income compared to the claim about Uber's profitability in the same period?",
+   "gold_answers": [
+    "No"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "fb64abfb1195824f",
+   "kind": "answer",
+   "question": "Does the article from The Verge suggest that Sam Bankman-Fried set withdrawal permissions based on FTX's total trading revenue, while the TechCrunch articles allege that Sam Bankman-Fried committed fraud for personal gain and is facing a criminal trial for fraud and conspiracy, indicating different aspects of the legal issues he is involved in?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "57e63a9cd8c2b5ca",
+   "kind": "answer",
+   "question": "Do both articles from Sporting News suggest that bettors can find value in NBA prop bets by considering team performance, with one discussing the value in player and team props and the other detailing options like a team leading at the end of a quarter or total points scored?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "ea1402676b02d8c5",
+   "kind": "answer",
+   "question": "Does the Fortune article suggest that Sam Bankman-Fried's actions were the primary cause of FTX's success being built on lies, while the TechCrunch article implies that comments by Changpeng Zhao were a contributing factor to the collapse of FTX?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "ce24cfaefec128ed",
+   "kind": "answer",
+   "question": "Does The Verge's article suggest that Google has the capability to address issues with Android app distribution and in-app payment systems, while TechCrunch's first article implies that Google is being transparent with legal documents in its antitrust battle, and TechCrunch's second article accuses Google of anticompetitive behavior towards news publishers?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "74220f9faf4bb9d3",
+   "kind": "answer",
+   "question": "Does the TechCrunch article that discusses the expected debut of DeepMind's next-generation chatbot Gemini by the end of the year align with the TechCrunch article mentioning Google's release of only the \"lite\" version known as Gemini Pro, or do they refer to different stages or versions of the Gemini project?",
+   "gold_answers": [
+    "Different stages or versions"
+   ],
+   "model_answer": "Different stages: Gemini was expected to debut, while Gemini Pro was the “lite” version released first."
+  },
+  {
+   "id": "ebb7cc99f76bfc32",
+   "kind": "answer",
+   "question": "Does the 'Essentially Sports' article suggest that Canelo Alvarez's wealth accumulation is on a similar trajectory as Floyd Mayweather's, while the 'TechCrunch' article discusses Sam Bankman-Fried's wealth in the context of his altruistic intentions, without comparing it to another individual's wealth trajectory?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "18a18e9b64faa08a",
+   "kind": "answer",
+   "question": "Does 'The Verge' article suggest that Sam Bankman-Fried's inability to manage FTX and Alameda Research was due to the companies' growth, while 'Fortune' focuses on his successful persuasion of Adam Yedidia to join his ventures, and 'TechCrunch' alleges that Sam Bankman-Fried committed fraud for personal gain, indicating different aspects of his leadership and actions?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "557a448d61624803",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Both show gameplay challenges, but in different situations."
+  },
+  {
+   "id": "2a4c666593ec9a40",
+   "kind": "answer",
+   "question": "Does the TechCrunch article on GPT-4 suggest a different level of susceptibility to producing toxic text compared to other large language models, while the TechCrunch article on the European Commission's probe into Elon Musk’s X focuses on concerns about illegal content and disinformation in a different context?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "085fa816f7cd324d",
+   "kind": "answer",
+   "question": "Does the CBSSports.com article suggest that the Tampa Bay Buccaneers could have success with a Michigan quarterback similar to past achievements, while the Sporting News article indicates that The Big Ten is currently engaged in a review process concerning Michigan and Jim Harbaugh, without implying any success with a quarterback?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "e86a05ca056dde41",
+   "kind": "answer",
+   "question": "Does 'The Guardian' describe Shai Hope's performance against legspin bowling in the first T20 international differently from his innings performance in the fifth T20 international, with one article suggesting a struggle and the other praising the performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "d2981b526f8dd82d",
+   "kind": "answer",
+   "question": "Does the article from Fortune suggest that the Federal Reserve's interest rate hikes are a response to past conditions, such as booming home prices, while The Sydney Morning Herald article indicates that the Federal Reserve's future interest rate decisions will be based on incoming economic data?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "dc7df19039badd63",
+   "kind": "answer",
+   "question": "Does the Queensland Rugby Union's stance on maintaining control over their high-performance model, as reported by The Roar | Sports Writers Blog, align with Rugby Australia's efforts to centralize high-performance programs across Super Rugby teams, or are their approaches different?",
+   "gold_answers": [
+    "Different"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "0ebc2f61ebe28da4",
+   "kind": "answer",
+   "question": "Does the Sporting News article that discusses Michigan's performance against Penn State without Jim Harbaugh suggest a different involvement of Harbaugh during the game compared to the Sporting News article regarding the sign-stealing scandal and his suspension?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "181ccde4da85e696",
+   "kind": "answer",
+   "question": "Who is the individual whose trial is imminent, as reported by TechCrunch, was once considered a reliable representative of the cryptocurrency sector according to The Verge, is accused of fraud and conspiracy involving a financial discrepancy acknowledged after a judge's intervention, also mentioned by The Verge, and is alleged by the prosecution to have pursued wealth, power, and influence through deliberate fraudulent actions, a claim further discussed by TechCrunch?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "5d9b2e52a6f57dbf",
+   "kind": "answer",
+   "question": "Who is the individual facing a criminal trial on charges of fraud and conspiracy, as reported by TechCrunch, and is also alleged by the prosecution to have committed these acts to gain wealth, power, and influence?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "71faa0eeb27db579",
+   "kind": "answer",
+   "question": "What team, which has players like Steve Smith and Aaron Finch contributing to a score of 328 for 7 wickets in a 2015 World Cup semi-final and also won a match against India by just one run, recently experienced their first four-day game loss since January 2014 during a tour of India, as reported by 'The Roar | Sports Writers Blog' and 'Zee Business'?",
+   "gold_answers": [
+    "Australia's cricket team"
+   ],
+   "model_answer": "Australia"
+  },
+  {
+   "id": "9210e022686b9642",
+   "kind": "answer",
+   "question": "Considering the reported details from 'The Independent - Life and Style' regarding Jada Pinkett Smith's memoir, the undisclosed efforts in their relationship, the timeframe of their separation mentioned at the 2022 Academy Awards, and Jada's pre-marital views on divorce, what longstanding Hollywood couple's union embodies these aspects and has faced public scrutiny despite a commitment made before their marriage to remain under the same roof?",
+   "gold_answers": [
+    "Will Smith and Jada Pinkett Smith"
+   ],
+   "model_answer": "Will and Jada Pinkett Smith’s marriage"
+  },
+  {
+   "id": "b42726d248c4f03d",
+   "kind": "answer",
+   "question": "What entities, as reported by Sporting News, are known to modify their point spread, moneyline, and NBA Rookie of the Year betting lines in response to news, betting patterns, liability, and events such as injuries or roster changes?",
+   "gold_answers": [
+    "Sportsbooks"
+   ],
+   "model_answer": "Sportsbooks and oddsmakers."
+  },
+  {
+   "id": "d71f69162911ffbf",
+   "kind": "answer",
+   "question": "Who is the individual whose alleged fraudulent activities led to the success of a crypto exchange, persuaded a former colleague from Jane Street to join his ventures, and is facing charges of fraud and conspiracy according to reports from both Fortune and TechCrunch?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "475f2bbf25322fc6",
+   "kind": "answer",
+   "question": "Who is the individual facing legal scrutiny, where contrasting narratives of his circumstances are being presented in court, who also claimed the rapid expansion of his cryptocurrency exchange made it difficult to manage alongside a research firm, and is accused by the prosecution of committing fraud for personal gains, as reported by Fortune, The Verge, and TechCrunch?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "327dc43b51aee6fe",
+   "kind": "answer",
+   "question": "Who is the individual associated with the cryptocurrency industry who, before the collapse of FTX, portrayed himself as a reliable figure, planned to establish a board with experts for the company without investor directors, was accused of using customer funds to buy out a competitor, and is alleged by the prosecution to have committed fraud for personal gain, with these events being reported by The Verge, CNBC, and TechCrunch?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "00454a447a9c7d23",
+   "kind": "answer",
+   "question": "Who is the individual under 30, previously known for their wealth and intention to save humanity from extinction, that is currently facing legal scrutiny with contrasting stories presented by their legal representatives and the government's lawyers, as covered by both Fortune and TechCrunch?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "431cc064bdc18106",
+   "kind": "answer",
+   "question": "Who is the individual accused of fraud and conspiracy, as reported by TechCrunch, who also sought to establish a board with experts for a company according to Cnbc | World Business News Leader, and made a billion-dollar decision involving customer funds as per The Verge?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "cbf193ca8eb7b8f5",
+   "kind": "answer",
+   "question": "Which country, according to a Peace Studies scholar, faces a starvation risk in a region under its blockade, has previously reached understandings to cease hostilities and return life to normal, and is considered to have experienced a massive intelligence failure due to a surprise attack, as reported by sources including 'Fortune', 'Globes English | Israel Business Arena', and 'Business Today | Latest Stock Market And Economy News India'?",
+   "gold_answers": [
+    "Gaza"
+   ],
+   "model_answer": "Israel"
+  },
+  {
+   "id": "1df1be5a6874d240",
+   "kind": "answer",
+   "question": "Who is the individual implicated in a scandal involving a $14 billion misappropriation at a crypto exchange, which was reported by both TechCrunch and Fortune, and is accused of achieving his status through deceitful means according to allegations mentioned in articles from TechCrunch?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "f94e8c6919e82aad",
+   "kind": "answer",
+   "question": "Considering an article from The New York Times discussing Ron DeSantis's stance on education policy and another from The Washington Post detailing his potential strategies for the 2024 presidential race, what is the first letter of the state that DeSantis governs?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "F"
+  },
+  {
+   "id": "3c8331f50e1f2819",
+   "kind": "answer",
+   "question": "Considering the information from an ESPN article detailing the performance of a cricket team at the DY Patil Sports Academy and a Cricbuzz report on the same team's historical achievements, which team, known for its blue jersey, won a significant match at the DY Patil Sports Academy and also secured a championship title in an ICC event held in 2011?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "India"
+  },
+  {
+   "id": "8323b52df478a0fe",
+   "kind": "answer",
+   "question": "Considering the information from a New York Times article discussing Meta Platforms' financial performance and a Wall Street Journal report on the company's strategic shifts, which single letter represents both the beginning of the CEO's first name and the first letter of the product that Meta is heavily investing in as part of its future growth strategy?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "M"
+  },
+  {
+   "id": "5d81c5abb792067c",
+   "kind": "answer",
+   "question": "Considering the information from an article on Forbes about the latest software analytics tools added to Microsoft Azure Marketplace and another article from The Verge detailing a new partnership between Microsoft Azure and a major data visualization company, which letter represents the first initial of the CEO who oversaw both the expansion of the Marketplace's offerings and the initiation of this new partnership?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "S"
+  },
+  {
+   "id": "616e64ee7e33148f",
+   "kind": "answer",
+   "question": "Did the 'Sporting News' report on the Michigan sign-stealing scandal involving the Wolverines indicate a consistent or inconsistent portrayal of the situation compared to the earlier report by 'The New York Times' on the reactions of college football coaches to the alleged espionage?",
+   "gold_answers": [
+    "Consistent"
+   ],
+   "model_answer": "Inconsistent."
+  },
+  {
+   "id": "e0b62eb9b2ca7295",
+   "kind": "answer",
+   "question": "Between the Sporting News report on the Michigan sign-stealing scandal involving Jim Harbaugh published on November 6, 2023, and the Sporting News report on Michigan's game against Penn State with Jim Harbaugh on November 11, 2023, was the reporting on Jim Harbaugh's absence from the team consistent?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "0cd165725eb43356",
+   "kind": "answer",
+   "question": "Between the report from The Age on October 22, 2023, claiming that Google manipulates Search to minimize ad revenue, and the report from TechCrunch on December 15, 2023, alleging that Google \"siphons off\" news publishers' content and ad revenue through anticompetitive means, is there consistency in the portrayal of Google's influence on ad revenue and content distribution?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "04c07a4a6e7ef347",
+   "kind": "answer",
+   "question": "Between the report from The Verge on Google's impact on the internet's appearance published on November 1, 2023, and the report from TechCrunch on a class action antitrust suit against Google published later, was there a change in the portrayal of Google's influence on the digital ecosystem?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from shaping search results and user experience to allegedly harming publishers’ businesses and traffic through its data and AI practices."
+  },
+  {
+   "id": "229d72f83d8a99fa",
+   "kind": "answer",
+   "question": "According to Fortune, has the perspective on 'Housing affordability' in the housing market changed between the article published on October 6, 2023, which mentioned that affordability would improve as inflation fades and the Federal Reserve cuts interest rates, and the article published on October 20, 2023, which reported that housing affordability is worse now than during the Great Financial Crisis?",
+   "gold_answers": [
+    "No"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "20cd59d8e04eb0c9",
+   "kind": "answer",
+   "question": "Did the Polygon report on the Steam Deck OLED improvements, published before November 9, 2023, and the Engadget review of the Steam Deck OLED published shortly after, disagree on the enhancements made to the new iteration of the Steam Deck by Valve?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "fb5c47c3598e06ba",
+   "kind": "answer",
+   "question": "Does the 'Business World' article suggesting that the 'Philippines government' could hinder private investment due to rising national debt align with the concern over the 'Philippines' debt-to-GDP ratio' expressed in another 'Business World' article, or do they present differing implications for the country's economy?",
+   "gold_answers": [
+    "Align"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "4b3d2c8a7797c28f",
+   "kind": "answer",
+   "question": "Does the TechCrunch article that discusses the expected debut of DeepMind's next-generation chatbot Gemini by the end of the year align with the TechCrunch article mentioning Google's release of only the \"lite\" version known as Gemini Pro, or do they refer to different stages or versions of the Gemini project?",
+   "gold_answers": [
+    "Different stages or versions"
+   ],
+   "model_answer": "They refer to different stages or versions."
+  },
+  {
+   "id": "b7ecadc20456aa96",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Both portray challenges, but in different situations: past losses to Argentina and a difficult, close final against South Africa."
+  },
+  {
+   "id": "8c21254c026ba766",
+   "kind": "answer",
+   "question": "Do the Polygon article discussing Jess and Bill Walker and the FOX News - Lifestyle article about the holidays both suggest that their respective subjects emphasize the importance of maintaining family connections?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "54f11f7fada525d3",
+   "kind": "answer",
+   "question": "Which company, recently discussed in articles from The Verge and TechCrunch, is implicated in both the ability to address Android app distribution and in-app payment system issues, and in harming news publishers' bottom lines by siphoning off their content, readers, and ad revenue?",
+   "gold_answers": [
+    "Google"
+   ],
+   "model_answer": "Google (Alphabet)"
+  },
+  {
+   "id": "dcdde88dec58f74f",
+   "kind": "answer",
+   "question": "Which team, known for their safe handling throughout a World Cup and previously defeated by Argentina in Sydney in 2020, was involved in a controversial and dramatic final that was influenced by blitz defence and wet conditions according to articles from 'The Roar | Sports Writers Blog'?",
+   "gold_answers": [
+    "All Blacks"
+   ],
+   "model_answer": "New Zealand All Blacks"
+  },
+  {
+   "id": "172545a4c4a9806e",
+   "kind": "answer",
+   "question": "What company is associated with the AI model Gemini, which claims to rival the performance of GPT-4, and is also the subject of a class action antitrust suit reported by TechCrunch for harming news publishers' revenues and content through alleged anticompetitive practices?",
+   "gold_answers": [
+    "Google"
+   ],
+   "model_answer": "Google (Alphabet)"
+  },
+  {
+   "id": "681bca14487c9f50",
+   "kind": "answer",
+   "question": "Considering the reported details from 'The Independent - Life and Style' regarding Jada Pinkett Smith's memoir, the undisclosed efforts in their relationship, the timeframe of their separation mentioned at the 2022 Academy Awards, and Jada's pre-marital views on divorce, what longstanding Hollywood couple's union embodies these aspects and has faced public scrutiny despite a commitment made before their marriage to remain under the same roof?",
+   "gold_answers": [
+    "Will Smith and Jada Pinkett Smith"
+   ],
+   "model_answer": "Will Smith and Jada Pinkett Smith’s marriage."
+  },
+  {
+   "id": "bdd4af150f793b41",
+   "kind": "answer",
+   "question": "What entities, as reported by Sporting News, are known to modify their point spread, moneyline, and NBA Rookie of the Year betting lines in response to news, betting patterns, liability, and events such as injuries or roster changes?",
+   "gold_answers": [
+    "Sportsbooks"
+   ],
+   "model_answer": "Sportsbooks (oddsmakers)"
+  },
+  {
+   "id": "45b6db9bd79f470f",
+   "kind": "answer",
+   "question": "Who is the individual facing a criminal trial on seven counts of fraud and conspiracy, previously likened to a financial icon but not by TechCrunch, and is accused by the prosecution of committing fraud for wealth, power, and influence?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "a56ea4bbc609d114",
+   "kind": "answer",
+   "question": "Who is the individual under 30, previously considered the wealthiest in that age group, who is accused of using a colleague as a front for unauthorized access to customer funds and told a trader that withdrawals were permissible within certain limits, and is now facing allegations of committing fraud for personal gain, as reported by The Verge, Fortune, and TechCrunch?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "a2f26282737e83eb",
+   "kind": "answer",
+   "question": "Who is the individual under 30 who became the richest in the world, reportedly with the intention of using their wealth for the preservation of humanity, but is now facing allegations of fraud and deceit regarding the operations of a crypto exchange, as reported by Fortune, The Verge, and TechCrunch?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "0e34efa01fca23a8",
+   "kind": "answer",
+   "question": "Who is the individual whose alleged fraudulent path to success, including the creation of a thriving crypto exchange, is under judicial scrutiny, with testimonies from legal representatives revealing contrasting narratives and an admission of awareness of financial discrepancies? This person is also implicated by the prosecution in seeking wealth, power, and influence through deceitful means, as reported by sources such as Fortune, The Verge, and TechCrunch.",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "ac9e59eb266a46bc",
+   "kind": "answer",
+   "question": "Who is the individual implicated in instructing Caroline Ellison to use $14 billion of customer funds to repay debts, as reported by TechCrunch, and is also alleged by the prosecution to have committed fraud for personal gain, according to another article from TechCrunch?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "08751079a025d1f9",
+   "kind": "answer",
+   "question": "Considering the information from an article by The Verge and another by Search Engine Land on Danny Sullivan, which letter represents both the first initial of the search engine company he joined after retiring from his publication and the first letter of the feature he helped to introduce that allows public figures to post directly on the search results page?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "G"
+  },
+  {
+   "id": "813e3e0399972fde",
+   "kind": "answer",
+   "question": "Does the TechCrunch article discussing Google's spending to become the default search engine on various platforms report the same amount of $26.3 billion in 2021 as the claim made in another TechCrunch article covering the US v Google trial, or do they report different amounts?",
+   "gold_answers": [
+    "Same"
+   ],
+   "model_answer": "Same amount: $26.3 billion."
+  },
+  {
+   "id": "7e36cb925f211474",
+   "kind": "answer",
+   "question": "Do the articles from Sporting News discussing MLB, NBA, and general sports betting all agree that Sportsbooks adjust their policies or odds in response to external events such as weather conditions, player injuries, or other significant information?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "8588b699e7d5847e",
+   "kind": "answer",
+   "question": "Does the article from The Verge suggest that Alameda Research was involved in manipulating FTX's balance sheet, while the article from Cnbc | World Business News Leader indicates Sam Bankman-Fried's intentions regarding the composition of FTX's board, and are these claims about different aspects of FTX's corporate governance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "84e4822dc124c6a5",
+   "kind": "answer",
+   "question": "Does the 'Sporting News' article claim that the England national rugby union team has had a different path to the Rugby World Cup semifinal compared to the path of The Wallabies (Australian national rugby union team) as implied by the 'Wide World Of Sports' article, with England defeating specific teams and The Wallabies' fate depending on a match between other teams?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "a966a76a7a7e62da",
+   "kind": "answer",
+   "question": "Does the TechCrunch article that discusses the expected debut of DeepMind's next-generation chatbot Gemini by the end of the year align with the TechCrunch article mentioning Google's release of only the \"lite\" version known as Gemini Pro, or do they refer to different stages or versions of the Gemini project?",
+   "gold_answers": [
+    "Different stages or versions"
+   ],
+   "model_answer": "They refer to different stages and versions of the Gemini project."
+  },
+  {
+   "id": "30e4864bcb21f6fd",
+   "kind": "answer",
+   "question": "Does the 'Sporting News' article claim that the Bears' defense sacked Joshua Dobbs, while the 'Yardbarker' article discusses the Baltimore Ravens defense's ranking in points allowed per game and total yards in the current NFL season?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "47079bb2b6f90eee",
+   "kind": "answer",
+   "question": "Does the article from The Verge suggest that Sam Bankman-Fried set withdrawal permissions based on FTX's trading revenue, while the Cnbc | World Business News Leader article discusses his intentions for FTX's board composition, and the TechCrunch article alleges that Sam Bankman-Fried committed fraud for personal gain, indicating different aspects of his professional conduct?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "b7e65b56ad4d9c10",
+   "kind": "answer",
+   "question": "Does the article from The Verge discussing the Microsoft Elite Series 2 “Core” version mention an increase in features compared to the standard model, and does the article from The Verge on MacBook Pros indicate a reduction in prices for the new models?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No; yes."
+  },
+  {
+   "id": "455278608c500ce7",
+   "kind": "answer",
+   "question": "Does the TechCrunch article claim that Google's release of the Gemini Pro model was incomplete compared to the full Gemini Ultra model, while the same TechCrunch article accuses Google of anticompetitive behavior towards news publishers, and does The Verge article also discuss Google's dominance but in the context of there being no valid alternative search engine according to Eddy Cue?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "e4d27e46b02f7b6a",
+   "kind": "answer",
+   "question": "Does the Sporting News article suggest that Tyreek Hill may not achieve 2,000-plus receiving yards due to the strong pass defenses of the Miami Dolphins' remaining opponents, while the CBSSports.com article claims that Tyreek Hill needs to average almost 153 yards per game in his final three games to reach his goal of 2,000 receiving yards, indicating a difference in the perceived challenges he faces?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "bfc0538395ad61a6",
+   "kind": "answer",
+   "question": "Does the TechCrunch article suggest that Apple has restrictive practices regarding browser selection on iPhones, while The Verge articles indicate that Apple is facing legal challenges both for its Apple Watch and for enforcing uniform terms through its store and payment system?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "ef16cae6e135b624",
+   "kind": "answer",
+   "question": "Which company, recently discussed in articles from The Verge and TechCrunch, is implicated in both the ability to address Android app distribution and in-app payment system issues, and in harming news publishers' bottom lines by siphoning off their content, readers, and ad revenue?",
+   "gold_answers": [
+    "Google"
+   ],
+   "model_answer": "Google (and its parent company, Alphabet)"
+  },
+  {
+   "id": "e20547e5516b9b66",
+   "kind": "answer",
+   "question": "Who is the individual that communicated to Paradigm about intending to establish a board with specialists for a cryptocurrency exchange, while preferring not to have investors as directors, and is also the same person who, during a court proceeding with Judge Lewis Kaplan, conceded to being aware of a significant financial discrepancy, and is accused by the prosecution of deliberately engaging in fraudulent activities to gain wealth, power, and influence, as reported by Cnbc | World Business News Leader, The Verge, and TechCrunch?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "43cebe55c4e17d21",
+   "kind": "answer",
+   "question": "Which company, recently compared for its product's performance with OpenAI's GPT-3.5 by TechCrunch, is also accused by The Age of manipulating its primary service to maximize ad revenue and is the subject of a class-action antitrust suit reported by TechCrunch for harming news publishers' bottom lines through anticompetitive practices?",
+   "gold_answers": [
+    "Google"
+   ],
+   "model_answer": "Google (Alphabet)"
+  },
+  {
+   "id": "c404a4b9c222ddc4",
+   "kind": "answer",
+   "question": "Who is the individual whose trial is scrutinized by Fortune and The Verge for actions contrasted by lawyers and portrayed as a trustworthy cryptocurrency figure, and is also mentioned by TechCrunch as being accused of committing fraud to gain wealth, power, and influence, and convinced a former Jane Street trader to join him at Alameda and FTX?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "c4e48427492a4346",
+   "kind": "answer",
+   "question": "Who is the individual that was portrayed as a trustworthy cryptocurrency figure, allegedly built a successful exchange on falsehoods, and is accused of using customer funds for a buyout and committing fraud for personal gain, as reported by Fortune, The Verge, and TechCrunch?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "9c4b422ccf3bdbc5",
+   "kind": "answer",
+   "question": "Who is the individual that, according to reports from The Verge and TechCrunch, faced challenges managing the growth of FTX and Alameda Research, allegedly used FTX customer funds to buy out Binance, was informed about a financial discrepancy after a judge's intervention, and is accused by the prosecution of committing fraud for personal gain?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "2a0e7f483c07d111",
+   "kind": "answer",
+   "question": "Who is the individual facing a criminal trial on multiple counts of fraud and conspiracy, once likened to a prominent investor but not by TechCrunch, and has also entered a not-guilty plea, according to allegations reported by TechCrunch?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "011f607c74cefe04",
+   "kind": "answer",
+   "question": "Which national rugby team, highlighted in articles from 'The Independent - Sports' and 'The Roar | Sports Writers Blog', suffered defeats in their home country as well as in Sydney and Christchurch, against opponents including Ireland, South Africa, and Argentina?",
+   "gold_answers": [
+    "New Zealand All Blacks"
+   ],
+   "model_answer": "The All Blacks (New Zealand)"
+  },
+  {
+   "id": "389b29c6e368434f",
+   "kind": "answer",
+   "question": "Who is the individual facing a criminal trial on fraud and conspiracy charges, whose alleged success with a crypto exchange is claimed to be based on falsehoods, admitted to being informed of a significant financial discrepancy after judicial prompting, and is accused by the prosecution of intentionally committing fraud for personal gain, as reported by TechCrunch, Fortune, The Verge, and again by TechCrunch?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "250d2e63d779b987",
+   "kind": "answer",
+   "question": "Who is the individual associated with the crypto exchange FTX, whose purported success was questioned in a Fortune article, who admitted to being informed of financial discrepancies as reported by The Verge, and is alleged by the prosecution to have committed fraud for personal gain according to TechCrunch?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "eb67f7e410433f3a",
+   "kind": "answer",
+   "question": "Considering the information from a Bloomberg article discussing Visa Inc.'s financial performance in the last quarter and a Reuters report on Visa Inc.'s strategic partnerships formed within the same period, which single letter represents the credit card network's stock symbol on the New York Stock Exchange?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "V"
+  },
+  {
+   "id": "70c5acf6bd45a973",
+   "kind": "answer",
+   "question": "Considering the information from a Forbes article detailing the philanthropic efforts of the PayPal Mafia and a Bloomberg piece discussing the business ventures of the same group post-PayPal, which member of the PayPal Mafia, known for his investments in space exploration according to Forbes, also founded a financial services company that Bloomberg credits with revolutionizing online payments?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "Elon Musk"
+  },
+  {
+   "id": "50223420d9d52baa",
+   "kind": "answer",
+   "question": "What is the first letter of the startup, featured in both The Economic Times and YourStory, that received significant funding from a major venture capital firm and is also collaborating with a well-known tech giant on a project to enhance urban mobility solutions?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "H"
+  }
+ ],
+ "evidence": []
+}

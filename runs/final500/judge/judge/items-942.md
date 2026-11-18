@@ -1,0 +1,963 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=3e9c1c5f5f28ecd1 ===
+Gold sentences and facts:
+Sentence 0: The Cylinder 's text has traditionally been seen by biblical scholars as corroborative evidence of Cyrus ' policy of the repatriation of the Jewish people following their Babylonian captivity ( an act that the Book of Ezra attributes to Cyrus ) , as the text refers to the restoration of cult sanctuaries and repatriation of deported peoples . This interpretation has been disputed , as the text identifies only Mesopotamian sanctuaries , and makes no mention of Jews , Jerusalem , or Judea . The Cylinder has also been referred to by Mohammad Reza Pahlavi , the last Shah of Iran as the first declaration of universal human rights , a view rejected by some historians as anachronistic and a misunderstanding of the Cylinder 's generic nature as a typical statement made by a new monarch at the beginning of his reign . Neil MacGregor , Director of the British Museum , has stated that the cylinder was `` the first attempt we know about running a society , a state with different nationalities and faiths -- a new kind of statecraft . '' It was adopted as a national symbol of Iran by the Imperial State which put it on display in Tehran in 1971 to commemorate 2,500 year celebration of the Persian Empire . On October 14 , the Mohammad Reza Shah 's sister , Princess Ashraf Pahlavi , presented the United Nations Secretary General U Thant with a replica of the Cylinder . The princess asserted that `` the heritage of Cyrus was the heritage of human understanding , tolerance , courage , compassion and , above all , human liberty '' .
+  Fact 0.0: The Cylinder's text has traditionally been seen by biblical scholars as corroborative evidence of Cyrus' policy of repatriating the Jewish people after their Babylonian captivity.
+  Fact 0.1: The Book of Ezra attributes the repatriation of the Jewish people after their Babylonian captivity to Cyrus.
+  Fact 0.2: The Cylinder's text refers to the restoration of cult sanctuaries.
+  Fact 0.3: The Cylinder's text refers to the repatriation of deported peoples.
+  Fact 0.4: The interpretation of the Cylinder's text as evidence of Cyrus' repatriation policy has been disputed.
+  Fact 0.5: The Cylinder's text identifies only Mesopotamian sanctuaries.
+  Fact 0.6: The Cylinder's text makes no mention of Jews, Jerusalem, or Judea.
+  Fact 0.7: Mohammad Reza Pahlavi, the last Shah of Iran, referred to the Cylinder as the first declaration of universal human rights.
+  Fact 0.8: Some historians reject the view that the Cylinder is the first declaration of universal human rights.
+  Fact 0.9: Some historians consider the view that the Cylinder is the first declaration of universal human rights anachronistic.
+  Fact 0.10: Some historians consider the view that the Cylinder is the first declaration of universal human rights a misunderstanding of the Cylinder's generic nature.
+  Fact 0.11: The Cylinder is a typical statement made by a new monarch at the beginning of his reign.
+  Fact 0.12: Neil MacGregor, Director of the British Museum, has stated that the Cylinder was "the first attempt we know about running a society, a state with different nationalities and faiths -- a new kind of statecraft."
+  Fact 0.13: The Imperial State of Iran adopted the Cylinder as a national symbol of Iran.
+  Fact 0.14: The Imperial State put the Cylinder on display in Tehran in 1971.
+  Fact 0.15: The 1971 display in Tehran commemorated the 2,500 year celebration of the Persian Empire.
+  Fact 0.16: On October 14, Princess Ashraf Pahlavi, the sister of Mohammad Reza Shah, presented United Nations Secretary General U Thant with a replica of the Cylinder.
+  Fact 0.17: Princess Ashraf Pahlavi asserted that "the heritage of Cyrus was the heritage of human understanding, tolerance, courage, compassion and, above all, human liberty."
+
+Retrieved items:
+<item 1>
+John Locke’s *Two Treatises of Government*, published anonymously in 1689 (dated 1690), defended the Glorious Revolution and challenged divine-right monarchy.
+The First Treatise refutes Robert Filmer’s patriarchal theory; the Second presents government as founded on consent and tasked with protecting natural
+rights—life, liberty, and property. People may resist or replace governments that violate those rights. The work later influenced liberal and revolutionary
+politics, including American debates, though scholars dispute its historical impact and
+</item 1>
+
+<item 2>
+United States Bill of Rights
+Bordewich , Fergus M. The First Congress : How James Madison , George Washington , and a Group of Extraordinary Men Invented the Government ( 2016 ) on 1789 --
+1791 . Cogan , Neil H. ( 2015 ) . The Complete Bill of Rights : The Drafts , Debates , Sources , and Origins . Second edition . New York : Oxford University
+Press . Schwartz , Bernard ( 1992 ) . The great rights of mankind : a history of the American Bill of Rights . Rowman & Littlefield . ISBN 978 - 0 - 945612 - 28
+- 5 -- via Google Books . Smith , Rich ( 2007 ) . The Bill of Rights : Defining Our Freedoms . ABDO . ISBN 978 - 1 - 59928 - 913 - 7 -- via Google Books . Stair
+, Nancy L. ( 2003 ) . The Bill of Rights : a primary source investigation into the first ten amendments of the Constitution . The Rosen Publishing Group . p. 53
+.
+</item 2>
+
+<item 3>
+Fundamental rights in India
+They are covered in Part III ( Articles 12 to 35 ) of Indian constitution . Contents ( hide ) 1 Genesis 2 Significance and characteristics 3 Right to equality 4
+Right to freedom 5 Right against exploitation 6 Right to freedom of religion 7 Right to life 8 Cultural and Educational rights 9 Right to constitutional
+remedies 10 Right to Privacy 11 Critical analysis 12 Amendments 13 Fundamental rights not sacrosanct 13.1 Validity of Article 31B 13.2 Amendment to Article 31C
+13.3 Right to property 13.4 Right to education 14 See also 15 References 16 Footnotes Genesis ( edit ) The development of constitutionally guaranteed
+fundamental human rights in India was inspired by historical examples such as England 's Bill of Rights ( 1689 ) , the United States Bill of Rights ( approved
+on 17 September 1787 , final ratification on 15 December 1791 ) and France 's Declaration of the Rights of Man ( created during the revolution of 1789 , and
+ratified on 26 August 1789 ) .
+</item 3>
+
+<item 4>
+The Bill of Rights was designed partly to answer Anti-Federalist concerns, guaranteeing personal freedoms, limiting federal powers, and reserving undelegated
+powers to states or the people. Its principles drew on earlier documents, including the Virginia and English declarations of rights and Magna Carta. James
+Madison proposed amendments in 1789; Congress submitted 12 articles to the states. Ten were ratified in 1791, one became the Twenty-seventh Amendment in 1992,
+and one remains pending
+</item 4>
+
+<item 5>
+Fundamental rights in India
+A notable development during that period having significant effect on the Indian constitution took place on 10 December 1948 when the United Nations General
+Assembly adopted the Universal Declaration of Human Rights and called upon all member states to adopt these rights in their respective constitutions . The
+fundamental rights were included in the First Draft Constitution ( February 1948 ) , the Second Draft Constitution ( 17 October 1948 ) and final Third Draft
+Constitution ( 26 November 1949 ) , prepared by the Drafting Committee . Significance and characteristics ( edit ) The fundamental rights were included in the
+constitution because they were considered essential for the development of the personality of every individual and to preserve human dignity . The writers of
+the constitution regarded democracy of no avail if civil liberties , like freedom of speech and religion were not recognised and protected by the State .
+According to them , `` democracy '' is , in essence , a government by opinion and therefore , the means of formulating public opinion should be secured to the
+people of a democratic nation . For this purpose , the constitution guaranteed to all the citizens of India the freedom of speech and expression and various
+other freedoms in the form of the fundamental rights .
+</item 5>
+
+<item 6>
+Cyrus Cylinder
+Pahlavi Iranian government 's view ( edit ) Cyrus Cylinder at the center of the official emblem of 2,500 year celebration of the Persian Empire at Pahlavi
+Iranian imperial era The Cyrus Cylinder was dubbed the `` first declaration of human rights '' by the pre-Revolution Iranian government , a reading prominently
+advanced by Shah Mohammed Reza Pahlavi , in a 1967 book , The White Revolution of Iran . The Shah identified Cyrus as a key figure in government ideology and
+associated his government with the Achaemenids . He wrote that `` the history of our empire began with the famous declaration of Cyrus , which , for its
+advocacy of humane principles , justice and liberty , must be considered one of the most remarkable documents in the history of mankind . '' The Shah described
+Cyrus as the first ruler in history to give his subjects `` freedom of opinion and other basic rights '' . In 1968 , the Shah opened the first United Nations
+Conference on Human Rights in Tehran by saying that the Cyrus Cylinder was the precursor to the modern Universal Declaration of Human Rights .
+</item 6>
+
+<item 7>
+India’s Fundamental Rights are enshrined in Part III (Articles 12–35) of the Constitution. Inspired by England’s Bill of Rights, the US Bill of Rights, France’s
+Declaration of the Rights of Man, and the 1948 Universal Declaration of Human Rights, they appeared in successive constitutional drafts and were adopted in
+1949. They protect human dignity, individual development, democracy, and civil liberties, including equality, freedoms, protection from exploitation, religious
+freedom, cultural and educational rights
+</item 7>
+
+<item 8>
+Cyrus Cylinder
+121 ( author unknown ) ; Jump up ^ Damien Kingsbury , Human Rights in Asia : A Reassessment of the Asian Values Debate ( Macmillan , 2008 ) page 21 ; Sabine C.
+Carey , The Politics of Human Rights : The Quest for Dignity ( 2010 ) p 19 ; Paul Gordon Lauren , The Evolution of International Human Rights ( 2003 ) Page 11 ;
+Willem Adriaan Veenhoven , Case Studies on Human Rights and Fundamental Freedoms : A World Survey : Volume 1 ( 1975 ) Page 244 Jump up ^ Decolonisation ,
+Globalisation : Language - in - Education Policy and Practice , Peter W. Martin , p. 99 Jump up ^ Talbott , W.J. Which Rights Should be Universal ? , p. 40 .
+Oxford University Press US , 2005 . ISBN 978 - 0 - 19 - 517347 - 5 Jump up ^ Abtahi , pp. 1 -- 38 . Jump up ^ Cited in Shabani , p.
+</item 8>
+
+<item 9>
+United States Bill of Rights
+Several sought to protect individual personal rights by limiting various Constitutional powers of Congress . Like Washington , Madison urged Congress to keep
+the revision to the Constitution `` a moderate one '' , limited to protecting individual rights . Madison was deeply read in the history of government and used
+a range of sources in composing the amendments . The English Magna Carta of 1215 inspired the right to petition and to trial by jury , for example , while the
+English Bill of Rights of 1689 provided an early precedent for the right to keep and bear arms ( although this applied only to Protestants ) and prohibited
+cruel and unusual punishment . The greatest influence on Madison 's text , however , was existing state constitutions . Many of his amendments , including his
+proposed new preamble , were based on the Virginia Declaration of Rights drafted by Anti-Federalist George Mason in 1776 . To reduce future opposition to
+ratification , Madison also looked for recommendations shared by many states . He did provide one , however , that no state had requested : `` No state shall
+violate the equal rights of conscience , or the freedom of the press , or the trial by jury in criminal cases . ''
+</item 9>
+
+<item 10>
+United States Bill of Rights
+`` American Indians and the Constitution '' . Encyclopedia of the American Constitution . -- via HighBeam Research ( subscription required ) . Retrieved July 16
+, 2013 . Jump up ^ `` Primary Documents in American History '' , Library of Congress ^ Jump up to : Jeffrey Jowell and Jonathan Cooper ( 2002 ) . Understanding
+Human Rights Principles . Oxford and Portland , Oregon : Hart Publishing . p. 180 . ISBN 9781847313157 . Retrieved 16 March 2017 . ^ Jump up to : Loveland , Ian
+( 2002 ) . `` Chapter 18 -- Human Rights I : Traditional Perspectives '' . Constitutional Law , Administrative Law , and Human Rights : A Critical Introduction
+( Seventh ed . ) . London : Oxford University Press . p. 559 . ISBN 9780198709039 . Retrieved 16 March 2017 . ^ Jump up to : Jayawickrama , Nihal ( 2002 ) . The
+Judicial Application of Human Rights Law : National , Regional and International Jurisprudence . Cambridge : Cambridge University Press . p.
+</item 10>
+=== END ITEM id=3e9c1c5f5f28ecd1 ===
+
+=== ITEM id=435bc042ca5f513b ===
+Gold sentences and facts:
+Sentence 0: Third Generation ( GK Series ) Overview Production 2013 -- present Model years 2014 -- present Assembly Yorii , Japan Sumaré , Brazil Ayutthaya , Thailand Pingtung , Taiwan Karawang , Indonesia Malacca , Malaysia Guangzhou , China ( Guangqi Honda ) Celaya , Guanajuato , Mexico ( from Feb 2014 ) Tapukara , India ( from Jan 2015 ) Designer Riku Wada ( 2010 ) Body and chassis Related Honda City Honda HR - V Honda Freed Honda Shuttle Acura CDX Powertrain Engine 1.2 L L12B i - VTEC I4 petrol 1.3 L L13B Earth Dreams i - VTEC I4 1.5 L L15A I4 ( petrol ) 1.5 L L15B1 I4 ( petrol ) 1.5 L L15B Earth Dreams i - VTEC I4 1.5 L i - DTEC diesel Transmission 5 - speed manual ( China Only ) 6 - speed manual 7 - speed semi-automatic ( DCT ) CVT automatic Dimensions Wheelbase 2,530 mm ( 99.6 in ) Length 3,955 mm ( 155.7 in ) Width 1,695 mm ( 66.7 in ) Height 1,525 -- 1,550 mm ( 60.0 -- 61.0 in ) Curb weight 1,020 -- 1,080 kg ( 2,249 -- 2,381 lb ) 1,080 -- 1,170 kg ( 2,381 -- 2,579 lb ) ( Hybrid )
+  Fact 0.0: The Third Generation (GK Series) has production from 2013 to the present.
+  Fact 0.1: The Third Generation (GK Series) has model years from 2014 to the present.
+  Fact 0.2: The Third Generation (GK Series) is assembled in Yorii, Japan.
+  Fact 0.3: The Third Generation (GK Series) is assembled in Sumaré, Brazil.
+  Fact 0.4: The Third Generation (GK Series) is assembled in Ayutthaya, Thailand.
+  Fact 0.5: The Third Generation (GK Series) is assembled in Pingtung, Taiwan.
+  Fact 0.6: The Third Generation (GK Series) is assembled in Karawang, Indonesia.
+  Fact 0.7: The Third Generation (GK Series) is assembled in Malacca, Malaysia.
+  Fact 0.8: The Third Generation (GK Series) is assembled in Guangzhou, China (Guangqi Honda).
+  Fact 0.9: The Third Generation (GK Series) is assembled in Celaya, Guanajuato, Mexico, from February 2014.
+  Fact 0.10: The Third Generation (GK Series) is assembled in Tapukara, India, from January 2015.
+  Fact 0.11: The Third Generation (GK Series) was designed by Riku Wada in 2010.
+  Fact 0.12: The Third Generation (GK Series) is related to the Honda City.
+  Fact 0.13: The Third Generation (GK Series) is related to the Honda HR-V.
+  Fact 0.14: The Third Generation (GK Series) is related to the Honda Freed.
+  Fact 0.15: The Third Generation (GK Series) is related to the Honda Shuttle.
+  Fact 0.16: The Third Generation (GK Series) is related to the Acura CDX.
+  Fact 0.17: The Third Generation (GK Series) has a 1.2 L L12B i-VTEC I4 petrol engine.
+  Fact 0.18: The Third Generation (GK Series) has a 1.3 L L13B Earth Dreams i-VTEC I4 engine.
+  Fact 0.19: The Third Generation (GK Series) has a 1.5 L L15A I4 petrol engine.
+  Fact 0.20: The Third Generation (GK Series) has a 1.5 L L15B1 I4 petrol engine.
+  Fact 0.21: The Third Generation (GK Series) has a 1.5 L L15B Earth Dreams i-VTEC I4 engine.
+  Fact 0.22: The Third Generation (GK Series) has a 1.5 L i-DTEC diesel engine.
+  Fact 0.23: The 5-speed manual transmission is available in China only.
+  Fact 0.24: The Third Generation (GK Series) has a 6-speed manual transmission.
+  Fact 0.25: The Third Generation (GK Series) has a 7-speed semi-automatic (DCT) transmission.
+  Fact 0.26: The Third Generation (GK Series) has a CVT automatic transmission.
+  Fact 0.27: The Third Generation (GK Series) has a wheelbase of 2,530 mm (99.6 in).
+  Fact 0.28: The Third Generation (GK Series) has a length of 3,955 mm (155.7 in).
+  Fact 0.29: The Third Generation (GK Series) has a width of 1,695 mm (66.7 in).
+  Fact 0.30: The Third Generation (GK Series) has a height of 1,525 to 1,550 mm (60.0 to 61.0 in).
+  Fact 0.31: The Third Generation (GK Series) has a curb weight of 1,020 to 1,080 kg (2,249 to 2,381 lb).
+  Fact 0.32: The hybrid version of the Third Generation (GK Series) has a curb weight of 1,080 to 1,170 kg (2,381 to 2,579 lb).
+
+Retrieved items:
+<item 1>
+Honda Fit
+( April 28 , 2014 ) . `` Smaller , Larger '' . Autoweek. 64 ( 9 ) : 28 . Jump up ^ `` Honda Jazz 2014 specifications ( Thailand ) '' ( PDF ) . Jump up ^ `` 2015
+US - spec Honda Fit launched in Detroit '' . worldcarfans . Retrieved 2014 - 04 - 16 . ^ Jump up to : `` New Honda Fit introduced with `` Earth Dreams '' engine
+, CVT , new body construction `` . sae.org . Jump up ^ `` Honda Fit specs in Japan '' . Retrieved 2014 - 04 - 16 . Jump up ^ `` Honda Worldwide - September 5 ,
+2013 `` Honda to Release all - New Fit and Fit Hybrid in Japan '' `` . honda.com . Archived from the original on December 2 , 2013 . Jump up ^
+http://www.extremetech.com/extreme/174741-2015-honda-fit-brings-more-tech-to-the-subcompact-market-navigation-for-60-anyone The 2015 Fit was manufactured in
+Honda 's new Mexico plant .
+</item 1>
+
+<item 2>
+Honda Fit
+Japan JDM - spec Honda Fit . Two engines ( 1.3 i - DSI and 1.5 VTEC ) were offered , each with a number of trim lines ranging from the basic `` Y '' to the
+sporty `` S '' . The 1.3 L i - DSI was available with only the regular CVT automatic . The 1.5 L VTEC model with the CVT - 7 was added in September 2002 . A
+five - speed manual was added in June 2004 for FWD model with the larger engine . Unique to the Japanese market , the Fit is also available in 4WD . Starting at
+a price of about JPY1 , 123,000 is the basic 1.3 Y model . At the top of the range is the 1.5 W four - wheel - drive version for JPY1 , 743,000 . A bewildering
+range of options and accessories are available at most levels , including Honda 's HDD GPS Navigation System called Internavi with its 6.5 - inch ( 170 mm )
+colour screen . This system incorporates TV and FM radio .
+</item 2>
+
+<item 3>
+Honda Fit
+Retrieved 2010 - 01 - 20 . Jump up ^ `` Honda Adds a 1.5 L Model to the Popular `` Fit '' Small Car Line - up `` . Honda . 2002 - 09 - 12 . Archived from the
+original on 2016 - 03 - 02 . Retrieved 2010 - 01 - 20 . Jump up ^ `` Top Gear Survey 2006 - Honda Jazz '' . Archived from the original on 2007 - 10 - 11 .
+Retrieved 2008 - 01 - 14 . Jump up ^ `` Honda Begins Production of `` Fit '' Hatchback in China `` . Honda . 2004 - 09 - 13 . Archived from the original on 2016
+- 03 - 02 . Retrieved 2010 - 01 - 20 . Jump up ^ `` 2008 Honda Fit Review '' . JB car pages . Retrieved 2009 - 03 - 09 . Jump up ^ Chris Vander Doelen , Windsor
+Star ( April 5 , 2007 ) .
+</item 3>
+
+<item 4>
+Honda Fit
+525 -- 1,550 mm ( 60.0 -- 61.0 in ) Curb weight 1,020 -- 1,080 kg ( 2,249 -- 2,381 lb ) 1,080 -- 1,170 kg ( 2,381 -- 2,579 lb ) ( Hybrid ) The third generation
+Fit retains the overall design concept of previous generations , notably the center - located fuel tank and multi-configuration interior concept , marketed as
+Magic Seating . Honda 's all - new `` Global Small Car Platform '' employing ultra-high strength 780 MPa yield steel for 27 % of its bodywork -- and a shorter
+overall length ( - 1.6 inches ) , longer wheelbase ( + 1.2 inch ) increased rear legroom ( + 4.8 inches ) and increased passenger volume ( + 4.9 cu ft )
+compared to its previous generation . Body panels are both welded and bolted to the frame in a hybrid monocoque and spaceframe fusion -- and rear torsion beam
+suspension is more compact , no longer using an anti-sway bar to maximize interior and cargo space . The HR - V shares its platform with the Fit .
+</item 4>
+
+<item 5>
+Honda Fit
+Indonesia Santa Rosa , Philippines Guangzhou , China ( Guangqi Honda ) Sumaré , Brazil ( Honda Brazil ) Designer Mitsuhiro Honda ( 1999 ) Body and chassis
+Related Honda Airwave Honda City / Fit Aria Powertrain Engine 1.2 L L12A I4 ( petrol ) 1.3 L L13A I4 ( petrol ) 1.5 L L15A I4 ( petrol ) Transmission 5 - speed
+manual 5 - speed automatic CVT automatic Dimensions Wheelbase 2,450 mm ( 96.5 in ) Length 3,845 mm ( 151.4 in ) ( Worldwide ) 4,000 mm ( 157.4 in ) ( U.S. &
+Canada ) Width 1,675 mm ( 65.9 in ) Height 1,525 mm ( 60.0 in ) Curb weight 1,084 kg ( 2,390 lb ) The Honda Fit debuted in June 2001 in Japan and immediately
+became a big hit . At its introduction in 2001 , it won the Car of the Year Japan Award .
+</item 5>
+
+<item 6>
+Honda Fit
+A total of 56,432 Fits were sold in the United States in 2007 . The 2008 Honda Fit was largely unchanged from the 2007 with the exception of the TPMS and new
+windshield wipers that abandon the large rubber blade design to a more traditional rigid plastic with thin rubber blade design . MSRP was also increased by
+roughly US $100 . Total sales in the United States for the year were 79,794 , an increase of almost 41 % over previous year . Reception Honda marketed the Fit
+as `` Small is the New Big '' . Car and Driver magazine described that `` ( n ) ot only is it endowed with an impressive array of standard features and an
+upscale interior , but its dynamics rival the responses of cars with much fancier pedigrees and price tags . '' The magazine even cited its lane - change number
+of 71.4 mph edged the best run by a Ferrari F430 Spider F1 tested . And the car was included in Car and Driver 's 10 Best Lists for three times . In May 2006 ,
+Fit was placed first in a Car and Driver comparison of seven economy cars that included Nissan Versa and Toyota Yaris .
+</item 6>
+
+<item 7>
+Honda Fit
+National Highway Traffic Safety Administration ( NHTSA ) crash test ratings . The engine is a 1.5 L ( 92 cu in ) i - VTEC 4 - cylinder with 117 horsepower at
+6600 rpm mated to a five - speed manual transmission or a five - speed automatic transmission . The second generation Honda Fit went on sale in North America
+around August 26 , 2008 , for the 2009 model year . It was considered the most expensive within the subcompact class when equipped as such , but was also
+described as modestly priced . It was reported in September 2009 that Honda is considering producing the Fit in North America in response to the increasing
+strength of the Japanese yen against the U.S. dollar . For the 2011 models , Vehicle Stability Assist , cruise control , remote entry and USB audio interface
+became standard across all trim levels . In addition , the Fit Sport now comes with carpeted floor mats .
+</item 7>
+
+<item 8>
+Honda Fit
+The base model receives body - color exterior mirrors ( previously black ) , standard security system and new wheel covers for 2012 . Canadian trims include the
+DX ( two speakers , black door handles and side mirrors ) , DX - A ( adds factory - installed air conditioning ) , LX ( adds among other things , body - colored
+door handles and side mirrors , 15 - inch lightweight alloy wheels from the 2006 -- 11 Civic Hybrid and DX - G , rear spoiler , power locks and remote entry ,
+two speakers for a total of four , cruise control ) , and Fit Sport ( adds USB jack and Vehicle Stability Assist ) . The Fit Sport is similar to its American
+counterpart , however a navigation system is not offered as an option . There are plans to build subcompact cars , which many rumoured to be Fit , in Honda 's
+new plant in Mexico . NHTSA Crash Test Ratings : Frontal Driver and Passenger : Side Driver Impact : Side Rear Passenger Impact : Rollover : Brazil The Sumare -
+built new Fit was introduced in October 2008 in Brazil at the Sao Paulo Auto Show .
+</item 8>
+
+<item 9>
+Honda Fit
+3 L L13A I4 ( petrol ) 1.5 L L15A I4 ( petrol ) Transmission 5 - speed manual 6 - speed manual 5 - speed automatic CVT automatic ( Japan ) Dimensions Wheelbase
+2,500 mm ( 98.4 in ) Length 3,985 mm ( 156.9 in ) ( 2009 -- 11 ) 4,100 mm ( 161.4 in ) ( 2012 -- 13 ) 4,410 mm ( 173.6 in ) ( Fit Shuttle ) Width 1,695 mm (
+66.7 in ) Height 1,525 mm ( 60.0 in ) 1,540 mm ( 60.6 in ) ( Fit Shuttle ) Curb weight 1,070 kg ( 2,359 lb ) The second generation Fit debuted on 17 October
+2007 at the Tokyo Motor Show . At its introduction in 2007 , it won the Car of the Year Japan Award for the second time . The vehicle offered a longer wheelbase
+than its predecessor and is wider and longer overall . Overall height is unchanged , while interior height increased by . 3 in .
+</item 9>
+
+<item 10>
+Honda Fit
+Gawker Media . Retrieved 2008 - 03 - 19 . Jump up ^ Bell , Damon . `` The Consumer Guide to 2009 Subcompact Cars '' . Consumer Guide Automotive . HowStuffWorks
+. Archived from the original on 2009 - 08 - 30 . Retrieved 2009 - 08 - 25 . The most expensive subcompact , the top - trim - level Honda Fit with an optional
+navigation system , has a still - modest base price of $18,760 . Jump up ^ `` Honda Fit production could shift to Ohio '' . The Columbus Dispatch . Archived
+from the original on 2013 - 01 - 21 . Retrieved 2009 - 10 - 22 . Jump up ^ `` 2011 Honda Fit Receives More Standard Features ; VSA Added to All Models '' .
+theautochannel.com . Jump up ^ `` 2009 Honda Fit Review '' . JB car pages . Retrieved 2009 - 03 - 09 . Jump up ^ `` 2012 Honda Fit Receives Updates and More
+Features '' ( Press release ) .
+</item 10>
+=== END ITEM id=435bc042ca5f513b ===
+
+=== ITEM id=3c850c4b7129b7ad ===
+Gold sentences and facts:
+Sentence 0: The current phrasing appears to have originated in the 1910 book Physics by Charles Riborg Mann and George Ransom Twiss . The question `` When a tree falls in a lonely forest , and no animal is near by to hear it , does it make a sound ? Why ? '' is posed along with many other questions to quiz readers on the contents of the chapter , and as such , is posed from a purely physical point of view .
+  Fact 0.0: The current phrasing of the tree-falling question appears to have originated in the 1910 book Physics.
+  Fact 0.1: The 1910 book Physics was written by Charles Riborg Mann and George Ransom Twiss.
+  Fact 0.2: The question "When a tree falls in a lonely forest, and no animal is near by to hear it, does it make a sound? Why?" is posed along with many other questions to quiz readers on the contents of the chapter.
+  Fact 0.3: The tree-falling question is posed from a purely physical point of view.
+Sentence 1: Philosopher George Berkeley , in his work , A Treatise Concerning the Principles of Human Knowledge ( 1710 ) , proposes , `` But , say you , surely there is nothing easier than for me to imagine trees , for instance , in a park ( ... ) and nobody by to perceive them . ( ... ) The objects of sense exist only when they are perceived ; the trees therefore are in the garden ( ... ) no longer than while there is somebody by to perceive them . '' ( It is worth noting that the quote from section 45 is arguably a statement of an objection to Berkeley 's view , and not a proclamation of it . ) Nevertheless , Berkeley never actually wrote about the question .
+  Fact 1.0: Philosopher George Berkeley wrote A Treatise Concerning the Principles of Human Knowledge, published in 1710.
+  Fact 1.1: In A Treatise Concerning the Principles of Human Knowledge, Berkeley proposes a passage that begins "But, say you, surely there is nothing easier than for me to imagine trees, for instance, in a park ... and nobody by to perceive them."
+  Fact 1.2: The passage quoted from Berkeley's treatise continues "The objects of sense exist only when they are perceived; the trees therefore are in the garden ... no longer than while there is somebody by to perceive them."
+  Fact 1.3: The quote from section 45 of Berkeley's treatise is arguably a statement of an objection to Berkeley's view, not a proclamation of it.
+  Fact 1.4: Berkeley never actually wrote about the tree-falling question.
+
+Retrieved items:
+<item 1>
+If a tree falls in a forest
+-- e.g. `` is sound only sound if a person hears it ? '' The most immediate philosophical topic that the riddle introduces involves the existence of the tree (
+and the sound it produces ) outside of human perception . If no one is around to see , hear , touch or smell the tree , how could it be said to exist ? What is
+it to say that it exists when such an existence is unknown ? Of course , from a scientific viewpoint , it exists . It is human beings that are able to perceive
+it . George Berkeley in the 18th century developed subjective idealism , a metaphysical theory to respond to these questions , coined famously as `` to be is to
+be perceived '' . Today meta - physicists are split . According to substance theory , a substance is distinct from its properties , while according to bundle
+theory , an object is merely its sense data . The definition of sound , simplified , is a hearable noise . The tree will make a sound , even if nobody heard it
+. The definition states that sound is a hearable noise . So the tree could have been heard , though nobody was around to do so .
+</item 1>
+
+<item 2>
+If a tree falls in a forest
+If there be no ears to hear , there will be no sound . '' Albert Einstein is reported to have asked his fellow physicist and friend Niels Bohr , one of the
+founding fathers of quantum mechanics , whether he realistically believed that ' the moon does not exist if nobody is looking at it . ' To this Bohr replied
+that however hard he ( Einstein ) may try , he would not be able to prove that it does , thus giving the entire riddle the status of a kind of an infallible
+conjecture -- one that can not be either proved or disproved . The current phrasing appears to have originated in the 1910 book Physics by Charles Riborg Mann
+and George Ransom Twiss . The question `` When a tree falls in a lonely forest , and no animal is near by to hear it , does it make a sound ? Why ? '' is posed
+along with many other questions to quiz readers on the contents of the chapter , and as such , is posed from a purely physical point of view . Metaphysics (
+edit ) The possibility of unperceived existence ( edit ) Main article : George Berkeley Can something exist without being perceived ? -- e.g.
+</item 2>
+
+<item 3>
+If a tree falls in a forest
+`` The mind is like akasa ( space ) . Just as there are the objects in the akasa , so there are thoughts in the mind . The akasa is the counterpart of the mind
+and objects are of thought . One can not hope to measure the universe and study the phenomena . It is impossible . For the objects are mental creations ... The
+universe is only an object created by the mind and has its being in the mind . '' ( Talks with Sri Ramana Maharshi , pp. 478 -- 479 ) . `` The shrutis ( a
+subdivision of the Vedas ) and the sages say that the objects are only mental creations . They have no substantive being . Investigate the matter and ascertain
+the truth of the statement . The result will be the conclusion that the objective world is in the subjective consciousness . '' ( TWSRM , p. 479 ) . In popular
+culture ( edit ) Canadian songwriter , social activist and environmentalist Bruce Cockburn poses the question in the chorus of his 1989 song `` If a Tree Falls
+'' and frames it with his lyrics as a pressing question regarding the cause and effect of deforestation .
+</item 3>
+
+<item 4>
+If a tree falls in a forest
+So the tree could have been heard , though nobody was around to do so . Knowledge of the unobserved world ( edit ) Main article : Observer - expectancy effect
+Can we assume the unobserved world functions the same as the observed world ? -- e.g. , `` does observation affect outcome ? '' A similar question does not
+involve whether or not an unobserved event occurs predictably , like it occurs when it is observed . The anthropic principle suggests that the observer , just
+in its existence , may impose on the reality observed . However , most people , as well as scientists , assume that the observer does n't change whether the
+tree - fall causes a sound or not , but this is an impossible claim to prove . However , many scientists would argue as follows , `` A truly unobserved event is
+one which realises no effect ( imparts no information ) on any other ( where ' other ' might be e.g. , human , sound - recorder or rock ) , it therefore can
+have no legacy in the present ( or ongoing ) wider physical universe .
+</item 4>
+
+<item 5>
+If a tree falls in a forest
+Washington - state - based wilderness conservatory Northwest Trek used a shortened form of the quote in its mid-1970s television advertisement , as such : ``
+There is no sound unless someone is there to see it or hear it . Experience it at Northwest Trek . '' See also ( edit ) Counterfactual definiteness Descartes '
+dream argument Epistemology Object ( philosophy ) Observer effect ( physics ) Kōan Ontology Schrödinger 's cat Principle of locality References ( edit ) Jump up
+^ A Treatise Concerning the Principles of Human Knowledge , 1734 . section 23 . Jump up ^ A Treatise Concerning the Principles of Human Knowledge , 1734 .
+section 45 . Jump up ^ Whether Berkeley thought objects continued to exist when unperceived by finite minds , and if so , in what manner , is the subject of
+serious debate among Berkeley scholars . Jump up ^ The Chautauquan , June 1883 , Volume 3 , Issue 9 , p. 543 Jump up ^ Scientific American , April 5 , 1884 , pg
+218 .
+</item 5>
+
+<item 6>
+If a tree falls in a forest
+It may then be recognized that the unobserved event was absolutely identical to an event which did not occur at all . '' ( this apparent quote has no
+attribution or reference and none can be found online with reasonable effort ) . Of course , the fact that the tree is known to have changed state from '
+upright ' to ' fallen ' implies that the event must be observed to ask the question at all -- even if only by the supposed deaf onlooker . The British
+philosopher of science Roy Bhaskar , credited with developing critical realism has argued , in apparent reference to this riddle , that : If men ceased to exist
+sound would continue to travel and heavy bodies to fall to the earth in exactly the same way , though ex hypothesi there would be no - one to know it This
+existence of an unobserved real is integral to Bhaskar 's ontology , which contends ( in opposition to the various strains of positivism which have dominated
+both natural and social science in the twentieth century ) that ' real structures exist independently of and are often out of phase with the actual patterns of
+events ' .
+</item 6>
+
+<item 7>
+If a tree falls in a forest
+It is unknown whether the source of this question is Berkeley or not . In June 1883 in the magazine The Chautauquan , the question was put , `` If a tree were
+to fall on an island where there were no human beings would there be any sound ? '' They then went on to answer the query with , `` No . Sound is the sensation
+excited in the ear when the air or other medium is set in motion . '' This seems to imply that the question is posed not from a philosophical viewpoint , but
+from a purely scientific one . The magazine Scientific American corroborated the technical aspect of this question , while leaving out the philosophic side , a
+year later when they asked the question slightly reworded , `` If a tree were to fall on an uninhabited island , would there be any sound ? '' And gave a more
+technical answer , `` Sound is vibration , transmitted to our senses through the mechanism of the ear , and recognized as sound only at our nerve centers . The
+falling of the tree or any other disturbance will produce vibration of the air . If there be no ears to hear , there will be no sound . ''
+</item 7>
+
+<item 8>
+If a tree falls in a forest
+2.1 Hui - neng 's Flag 2.4. 2.2 Hui - neng Receives The Dharma 2.5 Hinduism 3 In popular culture 4 See also 5 References History ( edit ) Philosopher George
+Berkeley , in his work , A Treatise Concerning the Principles of Human Knowledge ( 1710 ) , proposes , `` But , say you , surely there is nothing easier than
+for me to imagine trees , for instance , in a park ( ... ) and nobody by to perceive them . ( ... ) The objects of sense exist only when they are perceived ;
+the trees therefore are in the garden ( ... ) no longer than while there is somebody by to perceive them . '' ( It is worth noting that the quote from section
+45 is arguably a statement of an objection to Berkeley 's view , and not a proclamation of it . ) Nevertheless , Berkeley never actually wrote about the
+question . Some years later , a similar question is posed . It is unknown whether the source of this question is Berkeley or not .
+</item 8>
+
+<item 9>
+If a tree falls in a forest
+155 -- 158 . Jump up ^ Watts 1962 , pp. 111 -- 113 Jump up ^ A Buddhist Bible , `` Sutra Spoken by The Sixth Patriarch '' Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=If_a_tree_falls_in_a_forest&oldid=812540716 '' Categories : Fictional trees Riddles Philosophical problems Thought
+experiments in philosophy of mind Talk Contents About Wikipedia Español فارسی עברית Македонски Nederlands Português Русский Svenska ไทย 中文 Edit links This page
+was last edited on 28 November 2017 , at 12 : 14 . Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply .
+By using this site , you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit
+organization . About Wikipedia
+</item 9>
+
+<item 10>
+If a tree falls in a forest
+If a tree falls in a forest - wikipedia If a tree falls in a forest Jump to : navigation , search For the 2011 documentary , see If a Tree Falls : A Story of
+the Earth Liberation Front . A fallen tree in a forest `` If a tree falls in a forest and no one is around to hear it , does it make a sound ? '' is a
+philosophical thought experiment that raises questions regarding observation and perception . Contents ( hide ) 1 History 2 Metaphysics 2.1 The possibility of
+unperceived existence 2.2 Knowledge of the unobserved world 2.3 The dissimilarity between sensation and reality 2.4 Buddhist perspectives 2.4. 1 Tibetan 2.4. 2
+Zen 2.4. 2.1 Hui - neng 's Flag 2.4.
+</item 10>
+=== END ITEM id=3c850c4b7129b7ad ===
+
+=== ITEM id=9c100d6d85218285 ===
+Gold sentences and facts:
+Sentence 0: On the November 19 , 1999 , episode of Millionaire , Carpenter proceeded to advance to the million - dollar question without using any lifelines . He then used his Phone - A-Friend to call his father not for help , but rather to tell him he was going to win the game . Carpenter answered the question correctly and became the show 's first millionaire . His win gave him national recognition and led to multiple talk show appearances , as well as reappearances on Millionaire itself .
+  Fact 0.0: On the November 19, 1999 episode of Millionaire, Carpenter advanced to the million-dollar question.
+  Fact 0.1: Carpenter advanced to the million-dollar question without using any lifelines.
+  Fact 0.2: Carpenter used Phone-A-Friend to call his father.
+  Fact 0.3: Carpenter did not call his father for help with the question.
+  Fact 0.4: Carpenter called his father to tell him he was going to win the game.
+  Fact 0.5: Carpenter answered the million-dollar question correctly.
+  Fact 0.6: Carpenter became the show's first millionaire.
+  Fact 0.7: Carpenter's win gave him national recognition.
+  Fact 0.8: Carpenter's win led to multiple talk show appearances.
+  Fact 0.9: Carpenter's win led to reappearances on Millionaire itself.
+
+Retrieved items:
+<item 1>
+John Carpenter (game show contestant)
+They married in August 1998 . At the time of his appearance on Millionaire , he was 31 years old . When he revealed his profession as an IRS officer on
+Millionaire , Carpenter was playfully booed by the audience . Who Wants to Be a Millionaire ( edit ) $1 million ( 15 of 15 ) - no time limit Which of these U.S.
+Presidents appeared on the television series `` Laugh - In '' ? A : Lyndon Johnson B : Richard Nixon C : Jimmy Carter D: Gerald Ford Carpenter was originally
+uninterested in Millionaire but eventually tuned in one night after dinner while having friends over at his house . When he found the show 's higher - tier
+questions to not be , in his words , `` any more difficult '' than the lower - tier ones , he decided to call in to the show 's hotline for a chance to become a
+contestant . Carpenter answered all of the hotline questions correctly and was on the show within two days . Host Regis Philbin described Carpenter as having ``
+cruised right through those first fourteen questions , '' he had proceeded to reach the final question without using any of his lifelines .
+</item 1>
+
+<item 2>
+John Carpenter (game show contestant)
+Carpenter answered the question correctly and became the show 's first millionaire . His win gave him national recognition and led to multiple talk show
+appearances , as well as reappearances on Millionaire itself . Contents ( hide ) 1 Career and family 2 Who Wants to Be a Millionaire 3 Later work 3.1 Other game
+show appearances 4 See also 5 References 6 External links Career and family ( edit ) Carpenter is from Northampton , Massachusetts . His father , Tom , worked
+as a computer program analyst for the Department of Veterans Affairs , while his mother , Gail , served as an administrative assistant for the Massachusetts
+Audubon Society . In 1986 , he enrolled at Rutgers University and graduated in 1990 with a degree in economics . In January 1991 , he joined the Internal
+Revenue Service after completing government exams and tests . In November 1996 , Carpenter met his future wife , Deborah , who was studying for a master 's
+degree at Southern Connecticut State University and worked as a manager of a Fleet Bank branch in New Haven . They married in August 1998 .
+</item 2>
+
+<item 3>
+John Carpenter (game show contestant)
+`` Miami ' Millionaire ' gets 2nd shot at final answer '' . St. Petersburg Times . Archived from the original on April 5 , 2008 . Retrieved October 9 , 2014 .
+Jump up ^ Bracht , Mel ( May 26 , 2000 ) . `` Money is n't the root of happiness : Tulsan has more fun in 2nd Millionaire gig '' . NewsOK . Oklahoma Publishing
+Company . Archived from the original on March 13 , 2017 . Retrieved October 9 , 2014 . Jump up ^ Super Millionaire . Season 1 . Episode 2 . February 23 , 2004 .
+ABC . Jump up ^ 1 vs. 100 . Season 1 . Episode 3 . October 27 , 2006 . NBC . Jump up ^ Owen , Rob ( August 2 , 2007 ) . `` Dennis Miller rallies around game
+show all - stars '' . Pittsburgh Post-Gazette . p . WE - 33 .
+</item 3>
+
+<item 4>
+John Carpenter (game show contestant)
+He explained to Kiplinger 's Personal Finance that `` after the taxes , it 's not change - your - life kind of money if you want to eat every day . '' Carpenter
+also described the fame as having a bigger impact on his life than the money , later stating : `` The money does n't change your life . What happens afterwards
+might . '' Later work ( edit ) Shortly after winning on Millionaire , Carpenter played himself in a Saturday Night Live skit . Donald Trump , played by Darrell
+Hammond , announced that Carpenter would be his running - mate in the presidential election . Afterward , Carpenter pretended to call his father , then shouted
+, `` Live from New York , it 's Saturday Night ! '' Carpenter also appeared on Good Morning America , Oprah Winfrey Show , Live with Regis and Kathie Lee , and
+Late Show with David Letterman . Carpenter appeared as himself in the second half of the fourth season of Oz . He plays a contestant in a fictional TV game show
+called Up Your Ante that the prisoners in Em City are watching .
+</item 4>
+
+<item 5>
+John Carpenter (game show contestant)
+The $1 million question was , `` Which of these U.S. Presidents appeared on the television series ' Laugh - In ' ? '' , with the choices being A ) Lyndon
+Johnson , B) Richard Nixon , C ) Jimmy Carter , and D ) Gerald Ford . Carpenter used his Phone - A-Friend lifeline to call his father not for help , but rather
+to inform him that he knew the answer . Carpenter later explained , `` I thought I 'd look so cocky if I did n't use any lifelines , so I faked it . '' With his
+win , Carpenter became the first contestant in the worldwide Millionaire franchise to win the show 's top prize . He said that the only question that had
+flustered him was one which asked for the location of the Gunfight at the O.K. Corral . Carpenter eventually remembered that the film Tombstone included the
+gunfight , and he replied correctly with the answer ' Tombstone , Arizona ' . While taking a vacation after his win , Carpenter considered quitting his job with
+the IRS , but eventually decided against it .
+</item 5>
+
+<item 6>
+John Carpenter (game show contestant)
+The show within the show is hosted by Gordon Elliott , with Eartha Kitt and Didi Conn appearing as celebrity participants . With Rod L. Evans , Carpenter
+co-authored a trivia book titled Matching Wits With the Million - Dollar Mind : The World 's Hardest Trivia Quizzes From America 's First Quiz Show Millionaire
+. The book was published by Berkley Books in 2002 . Other game show appearances ( edit ) In 2000 , Carpenter appeared in the Who Wants to Be a Millionaire
+Champions Edition , in which previous contestants who won $250,000 -- $1,000,000 played again , with half of their additional winnings from the Champions
+Edition going to a charity of their choice . Carpenter won $250,000 , bringing his total Millionaire winnings to $1,250,000 . In 2004 , Carpenter participated
+in Super Millionaire , as one of the `` Three Wise Men '' on the episode during which Robert `` Bob - O '' Essig won $1,000,000 . He later participated as part
+of the Mob on NBC 's 1 vs.
+</item 6>
+
+<item 7>
+John Carpenter (game show contestant)
+He later participated as part of the Mob on NBC 's 1 vs. 100 on October 27 , 2006 , and as a contestant on the Game Show Network game show Grand Slam .
+Carpenter appeared on the August 16 , 2009 episode of Millionaire in prime time for its tenth anniversary . In the audience with him were his father , his wife
+, and his son . Additionally , he was also the first expert in the `` Ask the Expert '' lifeline for the eighth season of the syndicated series . See also (
+edit ) Biography portal List of Who Wants to Be a Millionaire ? top prize winners References ( edit ) Jump up ^ `` Millionaire Makeovers ! '' . People . Vol. 54
+no . 20 . Time Inc . November 13 , 2000 . Archived from the original on September 11 , 2015 . Retrieved July 8 , 2015 . Jump up ^ Petrozello , Donna ( February
+3 , 2000 ) . `` Million - plu $ reply an educated guess '' . New York Daily News . p. 101 .
+</item 7>
+
+<item 8>
+John Carpenter (game show contestant)
+John Carpenter ( game show contestant ) - wikipedia John Carpenter ( game show contestant ) Jump to : navigation , search John Carpenter 1968 ( age 48 -- 49 )
+Education Rutgers University Occupation IRS agent Known for First top prize winner on Who Wants to Be a Millionaire Home town Northampton , Massachusetts John
+Carpenter ( born c. 1968 ) is an American game show contestant and IRS agent . He is best known for becoming the first top prize winner on the United States
+version of Who Wants to Be a Millionaire . He held the record for the largest single win in United States game show history , until it was broken by Rahim
+Oberholtzer who won $1.12 million on another U.S. quiz show , Twenty One . Carpenter was also the first top prize winner among all international versions of the
+Who Wants to Be a Millionaire ? series . On the November 19 , 1999 , episode of Millionaire , Carpenter proceeded to advance to the million - dollar question
+without using any lifelines . He then used his Phone - A-Friend to call his father not for help , but rather to tell him he was going to win the game .
+</item 8>
+
+<item 9>
+John Carpenter (game show contestant)
+, 15 Years After It Premiered '' . Huffington Post . Archived from the original on August 22 , 2015 . Retrieved July 9 , 2015 . Jump up ^ de Moraes , Lisa (
+November 23 , 1999 ) . `` Drab ' Millionaire ' Winner Emerges as a Media Animal '' . The Washington Post . p . C07 . Jump up ^ Moore , Frazier ( January 6 ,
+2001 ) . `` Wizard of ' Oz ' lives with permanent reminder of gritty show '' . The San Diego Union Tribune . p . E6 . Jump up ^ `` Matching Wits with the
+Million - Dollar Mind : The World ; s Hardest Trivia Quizzes from America 's First Quiz Show Millionaire '' . The Book Depository . Archived from the original
+on October 25 , 2015 . Retrieved October 24 , 2015 . Jump up ^ Deggans , Eric ( May 12 , 2000 ) . `` Miami ' Millionaire ' gets 2nd shot at final answer '' .
+St.
+</item 9>
+
+<item 10>
+John Carpenter (game show contestant)
+Retrieved September 6 , 2009 . ^ Jump up to : `` Who Wants to Be a Millionaire '' . Gameshow Hall of Fame . GSN . January 21 , 2007 . ^ Jump up to : Vigoda ,
+Arlene ( November 22 , 1999 ) . `` Million - dollar winner untaxed by celebrity '' . USA Today . Gannett Company . p. 1D . Jump up ^ `` Taxman scoops a million
+'' . BBC News . November 21 , 1999 . Archived from the original on June 21 , 2015 . Retrieved August 1 , 2014 . Jump up ^ Davis , Kristin ( November 2000 ) . ``
+I 'm Rich ! ( Now what ? ) '' . Kiplinger 's Personal Finance . pp. 93 -- 94 . ^ Jump up to : Duca , Lauren ( August 15 , 2014 ) . `` The Final Answer On Who
+Wants To Be A Millionaire ? , 15 Years After It Premiered '' .
+</item 10>
+=== END ITEM id=9c100d6d85218285 ===
+
+=== ITEM id=d4ebdfb1e44ca3e5 ===
+Gold sentences and facts:
+Sentence 0: No . overall No. in season Title Directed by Written by Original air date U.S. viewers ( millions ) `` Pilot '' Adam Davidson Robert Kirkman & Dave Erickson August 23 , 2015 ( 2015 - 08 - 23 ) 10.13 Nick awakens in a heroin den in an abandoned church , to find his girlfriend Gloria eating a corpse . While fleeing , he is hit by a car and hospitalized . The doctor tells Madison and Travis that Nick 's claims about the incident are heroin hallucinations , but Travis believes Nick after visiting the church himself . Alicia becomes more worried about Nick 's chemical dependency . The next day , school closes early due to the high levels of absenteeism and rumors of an epidemic . Nick escapes from the hospital and meets with Calvin , hoping to learn if the drugs Calvin sold him caused him to hallucinate in the church . Calvin tries to kill Nick to prevent him from exposing Calvin as a drug dealer or impugning the quality of his drugs . In the ensuing struggle , Calvin is mortally shot . After Travis and Madison arrive , the zombified Calvin attacks them . Nick runs over Calvin repeatedly with Travis ' truck , and the three watch in disbelief as the mutilated Calvin is still able to turn his head towards them . `` So Close , Yet So Far '' Adam Davidson Marco Ramirez August 30 , 2015 ( 2015 - 08 - 30 ) 8.18 After the run - in with zombified Calvin , Nick , Madison , and Travis choose to flee to the desert , and they want Alicia , Liza , and Chris to follow . Alicia finds Matt ill in his disheveled house . Travis arrives and sees a bite on Matt , who convinces Alicia to leave . The group returns to Madison 's home to gather supplies . Nick suffers from heroin withdrawal , so Madison drives to her school to get him Oxycodone . There , she encounters Tobias scavenging food . A zombified Artie tries to bite Tobias , so Madison kills Artie and drives Tobias home . Chris ' bus is trapped in a traffic jam caused by a zombie shooting by the police . He films the event and joins in a protest against that and other recent fatal police shootings , when Travis and Liza meet up with him . A riot erupts after police shoot down another zombie , but the three Manawas find refuge with the Salazars in their gated barbershop - home . Travis tells Madison to take the kids to the desert without him ; he will catch up . Alicia witnesses her zombified neighbor , Mr. Dawson , attacking Mrs. Cruz across the street , but Madison prevents her from intervening . The group inside the barbershop remains trapped , while the riot outside intensifies . `` The Dog '' Adam Davidson Jack LoGiudice September 13 , 2015 ( 2015 - 09 - 13 ) 7.19 While a riot rages outside , a mob sets fire to the store adjoining the barbershop , forcing the Salazars and Manawas to flee . The group reaches Travis ' truck and escapes , but not before Griselda is injured by a collapsing scaffold . Unable to reach a hospital , the group drives to Madison 's house , where Nick , Madison , and Alicia temporarily flee when the zombified Mr. Dawson attempts to enter , attracted by the barking dog Nick had let in . Nick leads Madison and Alicia to the Trans ' house next door , where they take a shotgun . Travis arrives and is attacked by Mr. Dawson , who is shot and killed by Daniel . All three families decide to stay the night and evacuate in the morning . Nurse Liza tends to Griselda 's injured foot but notes that Griselda will die if not treated by a doctor . Ofelia tells Daniel they should flee with Travis , but Daniel insists his family can survive alone and will join his cousin later . The next morning , as the Clarks and Manawas start driving away , the National Guard arrives and quarantines the block . While Travis says , `` It 's going to get better , '' Daniel laments that it 's , `` too late , '' as he watches a guardsman mark the neighboring house . `` Not Fade Away '' Kari Skogland Meaghan Oppenheimer September 20 , 2015 ( 2015 - 09 - 20 ) 6.62 Days after the National Guard quarantines the neighborhood into a Safe Zone , residents try to live normally . Tensions build under the military rule . Madison is stressed by extra work caused by her home 's being overcrowded and Travis ' new role as civilian liaison . Chris shows a video to Travis and Madison of a light signaling from the Dead Zone . Travis talks Doug into getting mental help . Liza medically helps neighbors . Nick steals morphine from Hector via IV drip . Ofelia kisses Adams , who was unable to get Griselda 's medicine . Madison exchanges signals with the flashing light in the Dead Zone . She sneaks outside the fence to investigate and finds evidence that the guardsmen killed civilians , even the uninfected . Travis learns that Doug has been hospitalized for his mental issues . Dr. Exner determines that Liza is not technically a nurse . Daniel warns Madison of his El Salvador experience , when the sick were taken under the guise of receiving hospitalization but instead killed . Soldiers take Griselda and Nick to a hospital , but Nick 's family protests his departure . Liza agrees to go to assist the medical team , despite not wanting to leave her son . Travis retreats to the roof and sees the signal from the Dead Zone . Seconds later , he sees and hears gunfire , followed by darkness . 5 5 `` Cobalt '' Kari Skogland David Wiener September 27 , 2015 ( 2015 - 09 - 27 ) 6.66 In a military cell , Strand bribes a guardsman to save feverish Nick from being moved . Liza helps Dr. Exner with patients at the hospital . Chris is devastated that Liza left voluntarily to help at the hospital , but Travis promises to bring her back . Madison discovers Daniel detaining Adams in the Trans ' basement . Alicia and Chris get drunk in and vandalize the abandoned home of a wealthy family . Strand recruits Nick for an escape plot . Travis convinces Moyers ' squad to take him to the hospital to check on his friends . While en route , Moyers encourages Travis to shoot a zombie , but Travis is emotionally unable to pull the trigger . The soldiers stop to assist another squad in a building infested by zombies , and most of those soldiers , including Moyers , are overcome . The few survivors flee and drop off Travis near the Safe Zone . Travis learns that Daniel tortured Adams into revealing what `` Cobalt '' means : in the morning , all civilians will be killed , and the guardsmen will evacuate the city . Griselda dies of septic shock at the hospital ; Liza shoots her brain to prevent reanimation . Daniel visits a nearby sports arena to verify Adams ' story that it was sealed with 2,000 now - zombified civilians inside . 6 6 `` The Good Man '' Stefan Schwartz Robert Kirkman & Dave Erickson October 4 , 2015 ( 2015 - 10 - 04 ) 6.86 The group drives to the National Guard 's headquarters to rescue Liza , Griselda , and Nick . Adams agrees to be their guide when let go by Travis . The group infiltrates the base after Daniel distracts the guards by leading a horde of walkers from the arena . Travis , Madison , Daniel , and Ofelia go inside , while Alicia and Chris stay behind . Meanwhile , the walkers breach the perimeter defenses and swarm the base . Travis ' group reach the holding cells and set the detainees free before reuniting with Nick , Liza , and Strand . They try to escape through the medical ward , where they discover Dr. Exner has euthanized all of the patients . Dr. Exner tells them of an escape route before presumably committing suicide . Before they can escape , the group encounters Adams , who shoots Ofelia in the arm . Enraged , Travis brutally beats Adams and leaves him for dead . Strand leads the group to his oceanside mansion , where he reveals to Nick that he owns a yacht which he plans to escape on , called the Abigail . On the beach , Liza reveals to Madison that she had been bitten during the escape . Liza pleads with Madison and Travis to euthanize her before she turns . Travis promises to protect Chris before shooting Liza .
+  Fact 0.0: The table lists each episode's overall number, season number, title, director, writer, original air date, and U.S. viewers in millions.
+  Fact 0.1: Episode 'Pilot' was directed by Adam Davidson and written by Robert Kirkman and Dave Erickson.
+  Fact 0.2: Episode 'Pilot' originally aired on August 23, 2015.
+  Fact 0.3: Episode 'Pilot' had 10.13 million U.S. viewers.
+  Fact 0.4: Nick awakens in a heroin den in an abandoned church, to find his girlfriend Gloria eating a corpse.
+  Fact 0.5: While fleeing, Nick is hit by a car and hospitalized.
+  Fact 0.6: The doctor tells Madison and Travis that Nick's claims about the incident are heroin hallucinations.
+  Fact 0.7: Travis believes Nick after Travis visits the church himself.
+  Fact 0.8: Alicia becomes more worried about Nick's chemical dependency.
+  Fact 0.9: The next day, school closes early due to high levels of absenteeism and rumors of an epidemic.
+  Fact 0.10: Nick escapes from the hospital and meets with Calvin, hoping to learn if the drugs Calvin sold him caused him to hallucinate in the church.
+  Fact 0.11: Calvin tries to kill Nick to prevent him from exposing Calvin as a drug dealer or impugning the quality of his drugs.
+  Fact 0.12: In the ensuing struggle, Calvin is mortally shot.
+  Fact 0.13: After Travis and Madison arrive, the zombified Calvin attacks them.
+  Fact 0.14: Nick runs over Calvin repeatedly with Travis's truck.
+  Fact 0.15: The three watch in disbelief as the mutilated Calvin is still able to turn his head towards them.
+  Fact 0.16: Episode 'So Close, Yet So Far' was directed by Adam Davidson and written by Marco Ramirez.
+  Fact 0.17: Episode 'So Close, Yet So Far' originally aired on August 30, 2015.
+  Fact 0.18: Episode 'So Close, Yet So Far' had 8.18 million U.S. viewers.
+  Fact 0.19: After the run-in with zombified Calvin, Nick, Madison, and Travis choose to flee to the desert.
+  Fact 0.20: Nick, Madison, and Travis want Alicia, Liza, and Chris to follow them to the desert.
+  Fact 0.21: Alicia finds Matt ill in his disheveled house.
+  Fact 0.22: Travis arrives and sees a bite on Matt.
+  Fact 0.23: Matt convinces Alicia to leave.
+  Fact 0.24: The group returns to Madison's home to gather supplies.
+  Fact 0.25: Nick suffers from heroin withdrawal, so Madison drives to her school to get him Oxycodone.
+  Fact 0.26: At the school, Madison encounters Tobias scavenging food.
+  Fact 0.27: A zombified Artie tries to bite Tobias, so Madison kills Artie and drives Tobias home.
+  Fact 0.28: Chris's bus is trapped in a traffic jam caused by a zombie shooting by the police.
+  Fact 0.29: Chris films the event and joins in a protest against that and other recent fatal police shootings, when Travis and Liza meet up with him.
+  Fact 0.30: A riot erupts after police shoot down another zombie.
+  Fact 0.31: The three Manawas find refuge with the Salazars in their gated barbershop-home.
+  Fact 0.32: Travis tells Madison to take the kids to the desert without him, and he will catch up.
+  Fact 0.33: Alicia witnesses her zombified neighbor, Mr. Dawson, attacking Mrs. Cruz across the street.
+  Fact 0.34: Madison prevents Alicia from intervening.
+  Fact 0.35: The group inside the barbershop remains trapped, while the riot outside intensifies.
+  Fact 0.36: Episode 'The Dog' was directed by Adam Davidson and written by Jack LoGiudice.
+  Fact 0.37: Episode 'The Dog' originally aired on September 13, 2015.
+  Fact 0.38: Episode 'The Dog' had 7.19 million U.S. viewers.
+  Fact 0.39: While a riot rages outside, a mob sets fire to the store adjoining the barbershop, forcing the Salazars and Manawas to flee.
+  Fact 0.40: The group reaches Travis's truck and escapes, but not before Griselda is injured by a collapsing scaffold.
+  Fact 0.41: Unable to reach a hospital, the group drives to Madison's house.
+  Fact 0.42: Nick, Madison, and Alicia temporarily flee when the zombified Mr. Dawson attempts to enter.
+  Fact 0.43: Mr. Dawson is attracted by the barking dog Nick had let in.
+  Fact 0.44: Nick leads Madison and Alicia to the Trans' house next door, where they take a shotgun.
+  Fact 0.45: Travis arrives and is attacked by Mr. Dawson.
+  Fact 0.46: Mr. Dawson is shot and killed by Daniel.
+  Fact 0.47: All three families decide to stay the night and evacuate in the morning.
+  Fact 0.48: Nurse Liza tends to Griselda's injured foot but notes that Griselda will die if not treated by a doctor.
+  Fact 0.49: Ofelia tells Daniel they should flee with Travis.
+  Fact 0.50: Daniel insists his family can survive alone and will join his cousin later.
+  Fact 0.51: The next morning, as the Clarks and Manawas start driving away, the National Guard arrives and quarantines the block.
+  Fact 0.52: Travis says 'It's going to get better.'
+  Fact 0.53: Daniel laments that it's 'too late' as he watches a guardsman mark the neighboring house.
+  Fact 0.54: Episode 'Not Fade Away' was directed by Kari Skogland and written by Meaghan Oppenheimer.
+  Fact 0.55: Episode 'Not Fade Away' originally aired on September 20, 2015.
+  Fact 0.56: Episode 'Not Fade Away' had 6.62 million U.S. viewers.
+  Fact 0.57: Days after the National Guard quarantines the neighborhood into a Safe Zone, residents try to live normally.
+  Fact 0.58: Tensions build under the military rule.
+  Fact 0.59: Madison is stressed by extra work caused by her home's being overcrowded.
+  Fact 0.60: Madison is stressed by Travis's new role as civilian liaison.
+  Fact 0.61: Chris shows a video to Travis and Madison of a light signaling from the Dead Zone.
+  Fact 0.62: Travis talks Doug into getting mental help.
+  Fact 0.63: Liza medically helps neighbors.
+  Fact 0.64: Nick steals morphine from Hector via IV drip.
+  Fact 0.65: Ofelia kisses Adams, who was unable to get Griselda's medicine.
+  Fact 0.66: Madison exchanges signals with the flashing light in the Dead Zone.
+  Fact 0.67: Madison sneaks outside the fence to investigate.
+  Fact 0.68: Madison finds evidence that the guardsmen killed civilians, even the uninfected.
+  Fact 0.69: Travis learns that Doug has been hospitalized for his mental issues.
+  Fact 0.70: Dr. Exner determines that Liza is not technically a nurse.
+  Fact 0.71: Daniel warns Madison of his El Salvador experience, when the sick were taken under the guise of receiving hospitalization but instead killed.
+  Fact 0.72: Soldiers take Griselda and Nick to a hospital, but Nick's family protests his departure.
+  Fact 0.73: Liza agrees to go to assist the medical team, despite not wanting to leave her son.
+  Fact 0.74: Travis retreats to the roof and sees the signal from the Dead Zone.
+  Fact 0.75: Seconds later, Travis sees and hears gunfire, followed by darkness.
+  Fact 0.76: Episode 'Cobalt' is overall number 5 and season number 5.
+  Fact 0.77: Episode 'Cobalt' was directed by Kari Skogland and written by David Wiener.
+  Fact 0.78: Episode 'Cobalt' originally aired on September 27, 2015.
+  Fact 0.79: Episode 'Cobalt' had 6.66 million U.S. viewers.
+  Fact 0.80: In a military cell, Strand bribes a guardsman to save feverish Nick from being moved.
+  Fact 0.81: Liza helps Dr. Exner with patients at the hospital.
+  Fact 0.82: Chris is devastated that Liza left voluntarily to help at the hospital.
+  Fact 0.83: Travis promises to bring Liza back.
+  Fact 0.84: Madison discovers Daniel detaining Adams in the Trans' basement.
+  Fact 0.85: Alicia and Chris get drunk in and vandalize the abandoned home of a wealthy family.
+  Fact 0.86: Strand recruits Nick for an escape plot.
+  Fact 0.87: Travis convinces Moyers' squad to take him to the hospital to check on his friends.
+  Fact 0.88: While en route, Moyers encourages Travis to shoot a zombie.
+  Fact 0.89: Travis is emotionally unable to pull the trigger.
+  Fact 0.90: The soldiers stop to assist another squad in a building infested by zombies.
+  Fact 0.91: Most of those soldiers, including Moyers, are overcome.
+  Fact 0.92: The few survivors flee and drop off Travis near the Safe Zone.
+  Fact 0.93: Travis learns that Daniel tortured Adams into revealing what 'Cobalt' means.
+  Fact 0.94: 'Cobalt' means that in the morning, all civilians will be killed, and the guardsmen will evacuate the city.
+  Fact 0.95: Griselda dies of septic shock at the hospital.
+  Fact 0.96: Liza shoots Griselda's brain to prevent reanimation.
+  Fact 0.97: Daniel visits a nearby sports arena to verify Adams' story that it was sealed with 2,000 now-zombified civilians inside.
+  Fact 0.98: Episode 'The Good Man' is overall number 6 and season number 6.
+  Fact 0.99: Episode 'The Good Man' was directed by Stefan Schwartz and written by Robert Kirkman and Dave Erickson.
+  Fact 0.100: Episode 'The Good Man' originally aired on October 4, 2015.
+  Fact 0.101: Episode 'The Good Man' had 6.86 million U.S. viewers.
+  Fact 0.102: The group drives to the National Guard's headquarters to rescue Liza, Griselda, and Nick.
+  Fact 0.103: Adams agrees to be their guide when let go by Travis.
+  Fact 0.104: The group infiltrates the base after Daniel distracts the guards by leading a horde of walkers from the arena.
+  Fact 0.105: Travis, Madison, Daniel, and Ofelia go inside, while Alicia and Chris stay behind.
+  Fact 0.106: Meanwhile, the walkers breach the perimeter defenses and swarm the base.
+  Fact 0.107: Travis's group reaches the holding cells and sets the detainees free.
+  Fact 0.108: Travis's group reunites with Nick, Liza, and Strand before trying to escape.
+  Fact 0.109: The group tries to escape through the medical ward.
+  Fact 0.110: The group discovers Dr. Exner has euthanized all of the patients in the medical ward.
+  Fact 0.111: Dr. Exner tells them of an escape route before presumably committing suicide.
+  Fact 0.112: Before they can escape, the group encounters Adams, who shoots Ofelia in the arm.
+  Fact 0.113: Enraged, Travis brutally beats Adams and leaves him for dead.
+  Fact 0.114: Strand leads the group to his oceanside mansion.
+  Fact 0.115: At the mansion, Strand reveals to Nick that he owns a yacht which he plans to escape on, called the Abigail.
+  Fact 0.116: On the beach, Liza reveals to Madison that she had been bitten during the escape.
+  Fact 0.117: Liza pleads with Madison and Travis to euthanize her before she turns.
+  Fact 0.118: Travis promises to protect Chris before shooting Liza.
+
+Retrieved items:
+<item 1>
+Fear the Walking Dead (season 1)
+Unable to reach a hospital , the group drives to Madison 's house , where Nick , Madison , and Alicia temporarily flee when the zombified Mr. Dawson attempts to
+enter , attracted by the barking dog Nick had let in . Nick leads Madison and Alicia to the Trans ' house next door , where they take a shotgun . Travis arrives
+and is attacked by Mr. Dawson , who is shot and killed by Daniel . All three families decide to stay the night and evacuate in the morning . Nurse Liza tends to
+Griselda 's injured foot but notes that Griselda will die if not treated by a doctor . Ofelia tells Daniel they should flee with Travis , but Daniel insists his
+family can survive alone and will join his cousin later . The next morning , as the Clarks and Manawas start driving away , the National Guard arrives and
+quarantines the block . While Travis says , `` It 's going to get better , '' Daniel laments that it 's , `` too late , '' as he watches a guardsman mark the
+neighboring house .
+</item 1>
+
+<item 2>
+Fear the Walking Dead (season 1)
+Chris ' bus is trapped in a traffic jam caused by a zombie shooting by the police . He films the event and joins in a protest against that and other recent
+fatal police shootings , when Travis and Liza meet up with him . A riot erupts after police shoot down another zombie , but the three Manawas find refuge with
+the Salazars in their gated barbershop - home . Travis tells Madison to take the kids to the desert without him ; he will catch up . Alicia witnesses her
+zombified neighbor , Mr. Dawson , attacking Mrs. Cruz across the street , but Madison prevents her from intervening . The group inside the barbershop remains
+trapped , while the riot outside intensifies . `` The Dog '' Adam Davidson Jack LoGiudice September 13 , 2015 ( 2015 - 09 - 13 ) 7.19 While a riot rages outside
+, a mob sets fire to the store adjoining the barbershop , forcing the Salazars and Manawas to flee . The group reaches Travis ' truck and escapes , but not
+before Griselda is injured by a collapsing scaffold .
+</item 2>
+
+<item 3>
+Fear the Walking Dead (season 1)
+Dr. Exner determines that Liza is not technically a nurse . Daniel warns Madison of his El Salvador experience , when the sick were taken under the guise of
+receiving hospitalization but instead killed . Soldiers take Griselda and Nick to a hospital , but Nick 's family protests his departure . Liza agrees to go to
+assist the medical team , despite not wanting to leave her son . Travis retreats to the roof and sees the signal from the Dead Zone . Seconds later , he sees
+and hears gunfire , followed by darkness . 5 5 `` Cobalt '' Kari Skogland David Wiener September 27 , 2015 ( 2015 - 09 - 27 ) 6.66 In a military cell , Strand
+bribes a guardsman to save feverish Nick from being moved . Liza helps Dr. Exner with patients at the hospital . Chris is devastated that Liza left voluntarily
+to help at the hospital , but Travis promises to bring her back . Madison discovers Daniel detaining Adams in the Trans ' basement . Alicia and Chris get drunk
+in and vandalize the abandoned home of a wealthy family .
+</item 3>
+
+<item 4>
+Fear the Walking Dead (season 1)
+On March 9 , 2015 , AMC announced it had ordered Fear the Walking Dead to series , with a two - season commitment . The second season , comprising 15 episodes ,
+premiered on April 10 , 2016 . The season follows a dysfunctional , blended family composed of high school guidance counselor Madison Clark , her English
+teacher fiancé Travis Manawa , her daughter Alicia , her drug - addicted son Nick , Travis ' son from a previous marriage , Chris , Chris ' mother Liza Ortiz ,
+and others who join their group at the onset of the zombie apocalypse . Contents ( hide ) 1 Cast 1.1 Main cast 1.2 Supporting cast 2 Episodes 3 Production 3.1
+Development 3.2 Casting 3.3 Filming 4 Reception 4.1 Critical response 4.2 Ratings 5 Home media releases 6 References 7 External links Cast ( edit ) Main cast (
+edit ) Kim Dickens as Madison Clark : A high school guidance counselor , Travis ' girlfriend , Alicia and Nick 's mother , and Chris ' stepmother .
+</item 4>
+
+<item 5>
+Fear the Walking Dead (season 1)
+6 6 `` The Good Man '' Stefan Schwartz Robert Kirkman & Dave Erickson October 4 , 2015 ( 2015 - 10 - 04 ) 6.86 The group drives to the National Guard 's
+headquarters to rescue Liza , Griselda , and Nick . Adams agrees to be their guide when let go by Travis . The group infiltrates the base after Daniel distracts
+the guards by leading a horde of walkers from the arena . Travis , Madison , Daniel , and Ofelia go inside , while Alicia and Chris stay behind . Meanwhile ,
+the walkers breach the perimeter defenses and swarm the base . Travis ' group reach the holding cells and set the detainees free before reuniting with Nick ,
+Liza , and Strand . They try to escape through the medical ward , where they discover Dr. Exner has euthanized all of the patients . Dr. Exner tells them of an
+escape route before presumably committing suicide . Before they can escape , the group encounters Adams , who shoots Ofelia in the arm . Enraged , Travis
+brutally beats Adams and leaves him for dead .
+</item 5>
+
+<item 6>
+Fear the Walking Dead (season 1)
+`` Not Fade Away '' Kari Skogland Meaghan Oppenheimer September 20 , 2015 ( 2015 - 09 - 20 ) 6.62 Days after the National Guard quarantines the neighborhood
+into a Safe Zone , residents try to live normally . Tensions build under the military rule . Madison is stressed by extra work caused by her home 's being
+overcrowded and Travis ' new role as civilian liaison . Chris shows a video to Travis and Madison of a light signaling from the Dead Zone . Travis talks Doug
+into getting mental help . Liza medically helps neighbors . Nick steals morphine from Hector via IV drip . Ofelia kisses Adams , who was unable to get Griselda
+'s medicine . Madison exchanges signals with the flashing light in the Dead Zone . She sneaks outside the fence to investigate and finds evidence that the
+guardsmen killed civilians , even the uninfected . Travis learns that Doug has been hospitalized for his mental issues . Dr. Exner determines that Liza is not
+technically a nurse .
+</item 6>
+
+<item 7>
+Fear the Walking Dead (season 1)
+Alicia and Chris get drunk in and vandalize the abandoned home of a wealthy family . Strand recruits Nick for an escape plot . Travis convinces Moyers ' squad
+to take him to the hospital to check on his friends . While en route , Moyers encourages Travis to shoot a zombie , but Travis is emotionally unable to pull the
+trigger . The soldiers stop to assist another squad in a building infested by zombies , and most of those soldiers , including Moyers , are overcome . The few
+survivors flee and drop off Travis near the Safe Zone . Travis learns that Daniel tortured Adams into revealing what `` Cobalt '' means : in the morning , all
+civilians will be killed , and the guardsmen will evacuate the city . Griselda dies of septic shock at the hospital ; Liza shoots her brain to prevent
+reanimation . Daniel visits a nearby sports arena to verify Adams ' story that it was sealed with 2,000 now - zombified civilians inside .
+</item 7>
+
+<item 8>
+Fear the Walking Dead (season 1)
+After Travis and Madison arrive , the zombified Calvin attacks them . Nick runs over Calvin repeatedly with Travis ' truck , and the three watch in disbelief as
+the mutilated Calvin is still able to turn his head towards them . `` So Close , Yet So Far '' Adam Davidson Marco Ramirez August 30 , 2015 ( 2015 - 08 - 30 )
+8.18 After the run - in with zombified Calvin , Nick , Madison , and Travis choose to flee to the desert , and they want Alicia , Liza , and Chris to follow .
+Alicia finds Matt ill in his disheveled house . Travis arrives and sees a bite on Matt , who convinces Alicia to leave . The group returns to Madison 's home to
+gather supplies . Nick suffers from heroin withdrawal , so Madison drives to her school to get him Oxycodone . There , she encounters Tobias scavenging food . A
+zombified Artie tries to bite Tobias , so Madison kills Artie and drives Tobias home . Chris ' bus is trapped in a traffic jam caused by a zombie shooting by
+the police .
+</item 8>
+
+<item 9>
+Fear the Walking Dead (season 1)
+overall No. in season Title Directed by Written by Original air date U.S. viewers ( millions ) `` Pilot '' Adam Davidson Robert Kirkman & Dave Erickson August
+23 , 2015 ( 2015 - 08 - 23 ) 10.13 Nick awakens in a heroin den in an abandoned church , to find his girlfriend Gloria eating a corpse . While fleeing , he is
+hit by a car and hospitalized . The doctor tells Madison and Travis that Nick 's claims about the incident are heroin hallucinations , but Travis believes Nick
+after visiting the church himself . Alicia becomes more worried about Nick 's chemical dependency . The next day , school closes early due to the high levels of
+absenteeism and rumors of an epidemic . Nick escapes from the hospital and meets with Calvin , hoping to learn if the drugs Calvin sold him caused him to
+hallucinate in the church . Calvin tries to kill Nick to prevent him from exposing Calvin as a drug dealer or impugning the quality of his drugs . In the
+ensuing struggle , Calvin is mortally shot . After Travis and Madison arrive , the zombified Calvin attacks them .
+</item 9>
+
+<item 10>
+Fear the Walking Dead (season 1)
+1 Talking Dead Fear the Walking Dead Episodes season 1 Web series The Walking Dead Torn Apart Cold Storage Fear the Walking Dead Flight 462 Miscellaneous Video
+games Season One `` 400 Days '' Two Michonne Three : A New Frontier Other games Survival Instinct Road to Survival Rides The Walking Dead : The Ride Novels Rise
+of the Governor The Road to Woodbury The Fall of the Governor Descent Invasion Search and Destroy Return to Woodbury Characters Lists Comic book series
+Television series Aaron Alden Amy Jessie Anderson Andrea Axel Tara Chambler Clementine Daryl Dixon Merle Dixon Dwight Rosita Espinosa Lee Everett King Ezekiel
+Abraham Ford Gareth The Governor Gregory Beth Greene Hershel Greene Maggie Greene Carl Grimes Lori Grimes Rick Grimes Dale Horvath Jadis Morgan Jones Lilly
+Milton Mamet Caesar Martinez Deanna Monroe Paul `` Jesus '' Monroe Spencer Monroe Morales Michonne Negan Olivia The Prisoners Carol Peletier Sophia Peletier
+Eugene Porter Glenn Rhee Lizzie and Mika Samuels Simon Gabriel Stokes Bob Stookey T - Dog Shane Walsh Sasha Williams Tyreese Williams Retrieved from ``
+https://en.wikipedia.org/w/index.
+</item 10>
+=== END ITEM id=d4ebdfb1e44ca3e5 ===
+
+=== ITEM id=984f4fffcd72338d ===
+Gold sentences and facts:
+Sentence 0: ABO and Rh blood type distribution by country ( population averages ) Country Population O+ A+ B+ AB+ O − A − B − AB − Argentina 44,270,440 45.4 % 34.26 % 8.59 % 2.64 % 8.4 % 0.44 % 0.21 % 0.06 % Armenia 2,931,568 29.0 % 46.3 % 12.0 % 5.6 % 2.0 % 3.7 % 1.0 % 0.4 % Australia 24,642,693 40.0 % 31.0 % 8.0 % 2.0 % 9.0 % 7.0 % 2.0 % 1.0 % Austria 8,592,470 30.0 % 33.0 % 12.0 % 6.0 % 7.0 % 8.0 % 3.0 % 1.0 % Bahrain 1,418,695 48.48 % 19.35 % 22.61 % 3.67 % 3.27 % 1.33 % 1.04 % 0.25 % Bangladesh 164,833,667 31.18 % 21.44 % 34.58 % 8.85 % 1.39 % 0.96 % 0.96 % 0.64 % Belgium 11,444,053 38.0 % 34.0 % 8.6 % 4.1 % 7.0 % 6.0 % 1.5 % 0.8 % Bolivia 11,053,376 51.53 % 29.45 % 10.11 % 1.15 % 4.39 % 2.73 % 0.54 % 0.1 % Bosnia and Herzegovina 3,792,730 31.0 % 36.0 % 12.0 % 6.0 % 5.0 % 7.0 % 2.0 % 1.0 % Brazil 211,248,418 36.0 % 34.0 % 8.0 % 2.5 % 9.0 % 8.0 % 2.0 % 0.5 % Bulgaria 7,045,097 28.0 % 37.0 % 13.0 % 7.0 % 5.0 % 7.0 % 2.0 % 1.0 % Cambodia 16,077,172 46.7 % 27.2 % 18.5 % 4.9 % 1.3 % 0.8 % 0.5 % 0.1 % Cameroon 24,515,533 42.8 % 38.8 % 12.0 % 3.3 % 1.4 % 1.2 % 0.4 % 0.1 % Canada 36,627,140 39.0 % 36.0 % 7.6 % 2.5 % 7.0 % 6.0 % 1.4 % 0.5 % Chile 18,314,060 85.5 % 8.7 % 3.35 % 1.0 % 1.2 % 0.1 % 0.05 % 0.1 % China 1,388,251,023 47.7 % 27.8 % 18.9 % 5.0 % 0.28 % 0.19 % 0.1 % 0.03 % Colombia 49,069,267 61.3 % 26.11 % 2.28 % 1.47 % 5.13 % 2.7 % 0.7 % 0.31 % Côte d'Ivoire 23,869,656 46.5 % 22.5 % 22.5 % 4.3 % 2.0 % 1.0 % 1.0 % 0.2 % Croatia 4,207,355 29.0 % 36.0 % 15.0 % 5.0 % 5.0 % 6.0 % 3.0 % 1.0 % Cuba 11,486,750 45.8 % 33.5 % 10.2 % 2.9 % 3.6 % 2.8 % 1.0 % 0.2 % Cyprus 1,189,395 35.22 % 40.35 % 11.11 % 4.72 % 3.85 % 3.48 % 0.87 % 0.40 % Czech Republic 10,555,152 27.0 % 36.0 % 15.0 % 7.0 % 5.0 % 6.0 % 3.0 % 1.0 % Denmark 5,711,902 35.0 % 37.0 % 8.0 % 4.0 % 6.0 % 7.0 % 2.0 % 1.0 % Dominican Republic 10,766,932 46.2 % 26.4 % 16.9 % 3.1 % 3.7 % 2.1 % 1.4 % 0.2 % Ecuador 16,665,756 75.0 % 14.0 % 7.1 % 0.5 % 2.38 % 0.7 % 0.3 % 0.02 % Egypt 95,220,838 52.0 % 24.0 % 12.4 % 3.8 % 5.0 % 2.0 % 0.6 % 0.2 % El Salvador 6,171,483 62.0 % 23.0 % 11.0 % 1.0 % 1.0 % 1.0 % 0.7 % 0.3 % Estonia 1,305,745 29.5 % 30.8 % 20.7 % 6.3 % 4.3 % 4.5 % 3.0 % 0.9 % Ethiopia 104,352,727 39.0 % 28.0 % 21.0 % 5.0 % 3.0 % 2.0 % 1.0 % 1.0 % Finland 5,541,328 27.0 % 38.0 % 15.0 % 7.0 % 4.0 % 6.0 % 2.0 % 1.0 % France 64,939,560 36.0 % 37.0 % 9.0 % 3.0 % 6.0 % 7.0 % 1.0 % 1.0 % Germany 80,635,980 35.0 % 37.0 % 9.0 % 4.0 % 6.0 % 6.0 % 2.0 % 1.0 % Greece 10,892,849 37.4 % 32.9 % 11.0 % 3.7 % 7.0 % 5.0 % 2.0 % 1.0 % Guinea 13,291,741 46.88 % 21.64 % 22.86 % 4.52 % 2.0 % 0.9 % 1.0 % 0.2 % Honduras 9,348,898 57.5 % 27.0 % 7.8 % 2.5 % 2.7 % 1.7 % 0.6 % 0.2 % Hong Kong 7,402,115 41.5 % 26.13 % 25.34 % 6.35 % 0.32 % 0.17 % 0.14 % 0.05 % Hungary 9,787,801 27.0 % 33.0 % 16.0 % 8.0 % 5.0 % 7.0 % 3.0 % 1.0 % Iceland 334,311 47.6 % 26.4 % 9.3 % 1.6 % 8.4 % 4.6 % 1.7 % 0.4 % India 1,342,561,902 27.85 % 20.8 % 38.14 % 8.93 % 1.43 % 0.57 % 1.79 % 0.49 % Indonesia 263,519,317 36.82 % 25.87 % 28.85 % 7.96 % 0.18 % 0.13 % 0.15 % 0.04 % Iran 80,982,137 33.5 % 27.0 % 22.2 % 7.0 % 4.0 % 3.0 % 2.5 % 0.8 % Iraq 38,657,787 32.1 % 25.0 % 25.6 % 7.4 % 3.6 % 2.7 % 2.7 % 0.9 % Ireland 4,749,263 47.0 % 26.0 % 9.0 % 2.0 % 8.0 % 5.0 % 2.0 % 1.0 % Israel 8,323,659 32.0 % 34.0 % 17.0 % 7.0 % 3.0 % 4.0 % 2.0 % 1.0 % Italy 59,797,969 39.0 % 36.0 % 7.5 % 2.5 % 7.0 % 6.0 % 1.5 % 0.5 % Jamaica 2,813,316 47.0 % 23.0 % 20.0 % 3.0 % 3.5 % 2.0 % 1.0 % 0.5 % Japan 126,044,340 29.9 % 39.8 % 19.9 % 9.9 % 0.15 % 0.2 % 0.1 % 0.05 % Kenya 48,470,780 45.6 % 25.2 % 21.28 % 4.2 % 1.8 % 1.0 % 0.9 % 0.02 % Latvia 1,944,122 30.6 % 31.0 % 17.0 % 6.0 % 5.4 % 6.0 % 3.0 % 1.0 % Lebanon 6,039,438 38.4 % 32.3 % 9.5 % 3.2 % 7.7 % 6.5 % 1.7 % 0.7 % Libya 6,408,990 42.64 % 28.86 % 11.19 % 4.5 % 6.26 % 4.24 % 1.64 % 0.67 % Lithuania 2,827,573 36.0 % 33.0 % 11.0 % 4.0 % 7.0 % 6.0 % 2.0 % 1.0 % Luxemburg 587,297 35.0 % 37.0 % 9.0 % 4.0 % 6.0 % 6.0 % 2.0 % 1.0 % Macao 606,413 41.5 % 26.1 % 25.4 % 6.3 % 0.33 % 0.17 % 0.15 % 0.05 % Macedonia 2,083,690 30.0 % 34.0 % 15.0 % 6.0 % 5.0 % 6.0 % 3.0 % 1.0 % Malaysia 31,165,480 34.32 % 30.35 % 27.37 % 7.46 % 0.17 % 0.15 % 0.14 % 0.04 % Mauritania 4,266,765 46.3 % 26.68 % 17.47 % 3.85 % 2.8 % 1.6 % 1.1 % 0.2 % Mauritius 1,267,303 38.3 % 26.0 % 25.0 % 6.7 % 1.7 % 1.0 % 1.0 % 0.3 % Mexico 130,227,836 55.79 % 29.9 % 8.0 % 1.63 % 2.7 % 1.5 % 0.4 % 0.08 % Mongolia 3,052,044 55.4 % 27.7 % 10.9 % 4.96 % 0.6 % 0.3 % 0.1 % 0.04 % Myanmar 53,507,932 35.7 % 23.8 % 32.7 % 6.95 % 0.3 % 0.2 % 0.3 % 0.05 % Nepal 29,188,100 35.2 % 28.3 % 27.1 % 8.6 % 0.3 % 0.2 % 0.2 % 0.1 % Netherlands 17,033,012 39.5 % 35.0 % 6.7 % 2.5 % 7.5 % 7.0 % 1.3 % 0.5 % New Zealand 4,604,996 38.0 % 32.0 % 9.0 % 3.0 % 9.0 % 6.0 % 2.0 % 1.0 % Nigeria 191,851,411 51.3 % 22.4 % 20.7 % 2.6 % 1.6 % 0.7 % 0.6 % 0.1 % Norway 5,330,986 33.0 % 41.5 % 6.8 % 3.4 % 6.0 % 7.5 % 1.2 % 0.6 % North Korea 25,432,033 27.15 % 31.08 % 30.15 % 11.32 % 0.08 % 0.1 % 0.1 % 0.03 % Pakistan 180,440,005 24.63 % 20.6 % 34.40 % 9.52 % 4.17 % 2.66 % 3.57 % 0.45 % Papua New Guinea 7,952,511 48.0 % 37.2 % 9.6 % 2.8 % 1.0 % 0.8 % 0.4 % 0.2 % Peru 32,167,717 70.0 % 18.4 % 7.8 % 1.6 % 1.4 % 0.5 % 0.28 % 0.02 % Philippines 103,801,747 36.9 % 28.9 % 26.9 % 6.97 % 0.1 % 0.1 % 0.1 % 0.03 % Poland 38,563,480 31.0 % 32.0 % 15.0 % 7.0 % 6.0 % 6.0 % 2.0 % 1.0 % Portugal 10,264,672 36.3 % 40.0 % 6.6 % 2.9 % 6.0 % 6.6 % 1.1 % 0.5 % Republic of Moldova 4,043,722 28.5 % 31.8 % 17.6 % 7.0 % 5.0 % 6.0 % 3.0 % 1.1 % Romania 19,237,087 28.0 % 37.0 % 14.0 % 7.0 % 5.0 % 6.0 % 2.0 % 1.0 % Russia 143,374,801 28.0 % 30.0 % 20.0 % 7.0 % 4.9 % 5.8 % 3.2 % 1.1 % Saudi Arabia 32,744,532 47.8 % 23.9 % 17.0 % 4.0 % 4.0 % 2.0 % 1.0 % 0.3 % Serbia 8,776,827 31.92 % 35.28 % 12.6 % 4.2 % 6.08 % 6.72 % 2.4 % 0.8 % Singapore 5,784,819 43.6 % 23.9 % 24.4 % 6.0 % 0.9 % 0.7 % 0.4 % 0.1 % Slovakia 5,432,265 27.2 % 35.7 % 15.3 % 6.8 % 4.8 % 6.3 % 2.7 % 1.2 % Slovenia 2,071,258 31.0 % 33.0 % 12.0 % 6.0 % 7.0 % 7.0 % 3.0 % 1.0 % South Africa 55,437,815 39.0 % 32.0 % 12.0 % 3.0 % 6.0 % 5.0 % 2.0 % 1.0 % South Korea 50,748,307 27.9 % 33.87 % 26.92 % 10.98 % 0.1 % 0.13 % 0.08 % 0.02 % Spain 46,070,163 36.0 % 34.0 % 8.0 % 2.5 % 9.0 % 8.0 % 2.0 % 0.5 % Sudan 40,827,975 48.0 % 27.7 % 15.2 % 2.8 % 3.5 % 1.8 % 0.8 % 0.2 % Sweden 9,920,843 32.0 % 37.0 % 10.0 % 5.0 % 6.0 % 7.0 % 2.0 % 1.0 % Switzerland 8,454,321 35.0 % 40.0 % 7.0 % 3.0 % 6.0 % 7.0 % 1.0 % 1.0 % Syria 18,920,698 43.0 % 30.0 % 14.0 % 3.7 % 5.0 % 3.0 % 1.0 % 0.3 % Taiwan 23,234,936 43.9 % 25.9 % 23.9 % 6.0 % 0.17 % 0.1 % 0.01 % 0.02 % Thailand 68,298,027 40.8 % 16.9 % 36.8 % 4.97 % 0.2 % 0.1 % 0.2 % 0.03 % Turkey 80,420,065 29.8 % 37.8 % 14.2 % 7.2 % 3.9 % 4.7 % 1.6 % 0.8 % Uganda 43,276,492 43.7 % 39.0 % 10.7 % 3.9 % 1.3 % 1.0 % 0.3 % 0.1 % Ukraine 44,404,078 32.0 % 34.0 % 15.0 % 5.0 % 5.0 % 6.0 % 2.0 % 1.0 % United Arab Emirates 3,398,017 44.1 % 21.9 % 20.9 % 4.3 % 4.3 % 2.1 % 2.0 % 0.4 % United Kingdom 65,512,375 37.0 % 35.0 % 8.0 % 3.0 % 7.0 % 7.0 % 2.0 % 1.0 % United States 326,481,533 37.4 % 35.7 % 8.5 % 3.4 % 6.6 % 6.3 % 1.5 % 0.6 % Venezuela 32,011,082 58.5 % 28.3 % 5.3 % 1.8 % 3.5 % 1.7 % 0.7 % 0.2 % Vietnam 95,414,640 41.7 % 21.9 % 30.8 % 4.98 % 0.3 % 0.1 % 0.2 % 0.02 % Zimbabwe 16,642,880 63.3 % 18.5 % 14.6 % 0.99 % 1.7 % 0.5 % 0.4 % 0.01 % World 6,635,281,257 38.67 % 27.42 % 22.02 % 5.88 % 2.55 % 1.99 % 1.11 % 0.36 %
+  Fact 0.0: The table gives ABO and Rh blood type distribution by country as population averages.
+  Fact 0.1: Each row lists a country, its population, and the percentages of O+, A+, B+, AB+, O−, A−, B−, and AB− blood types.
+  Fact 0.2: Argentina has a population of 44,270,440, with blood type percentages O+ 45.4, A+ 34.26, B+ 8.59, AB+ 2.64, O− 8.4, A− 0.44, B− 0.21, AB− 0.06.
+  Fact 0.3: Armenia has a population of 2,931,568, with blood type percentages O+ 29.0, A+ 46.3, B+ 12.0, AB+ 5.6, O− 2.0, A− 3.7, B− 1.0, AB− 0.4.
+  Fact 0.4: Australia has a population of 24,642,693, with blood type percentages O+ 40.0, A+ 31.0, B+ 8.0, AB+ 2.0, O− 9.0, A− 7.0, B− 2.0, AB− 1.0.
+  Fact 0.5: Austria has a population of 8,592,470, with blood type percentages O+ 30.0, A+ 33.0, B+ 12.0, AB+ 6.0, O− 7.0, A− 8.0, B− 3.0, AB− 1.0.
+  Fact 0.6: Bahrain has a population of 1,418,695, with blood type percentages O+ 48.48, A+ 19.35, B+ 22.61, AB+ 3.67, O− 3.27, A− 1.33, B− 1.04, AB− 0.25.
+  Fact 0.7: Bangladesh has a population of 164,833,667, with blood type percentages O+ 31.18, A+ 21.44, B+ 34.58, AB+ 8.85, O− 1.39, A− 0.96, B− 0.96, AB− 0.64.
+  Fact 0.8: Belgium has a population of 11,444,053, with blood type percentages O+ 38.0, A+ 34.0, B+ 8.6, AB+ 4.1, O− 7.0, A− 6.0, B− 1.5, AB− 0.8.
+  Fact 0.9: Bolivia has a population of 11,053,376, with blood type percentages O+ 51.53, A+ 29.45, B+ 10.11, AB+ 1.15, O− 4.39, A− 2.73, B− 0.54, AB− 0.1.
+  Fact 0.10: Bosnia and Herzegovina has a population of 3,792,730, with blood type percentages O+ 31.0, A+ 36.0, B+ 12.0, AB+ 6.0, O− 5.0, A− 7.0, B− 2.0, AB− 1.0.
+  Fact 0.11: Brazil has a population of 211,248,418, with blood type percentages O+ 36.0, A+ 34.0, B+ 8.0, AB+ 2.5, O− 9.0, A− 8.0, B− 2.0, AB− 0.5.
+  Fact 0.12: Bulgaria has a population of 7,045,097, with blood type percentages O+ 28.0, A+ 37.0, B+ 13.0, AB+ 7.0, O− 5.0, A− 7.0, B− 2.0, AB− 1.0.
+  Fact 0.13: Cambodia has a population of 16,077,172, with blood type percentages O+ 46.7, A+ 27.2, B+ 18.5, AB+ 4.9, O− 1.3, A− 0.8, B− 0.5, AB− 0.1.
+  Fact 0.14: Cameroon has a population of 24,515,533, with blood type percentages O+ 42.8, A+ 38.8, B+ 12.0, AB+ 3.3, O− 1.4, A− 1.2, B− 0.4, AB− 0.1.
+  Fact 0.15: Canada has a population of 36,627,140, with blood type percentages O+ 39.0, A+ 36.0, B+ 7.6, AB+ 2.5, O− 7.0, A− 6.0, B− 1.4, AB− 0.5.
+  Fact 0.16: Chile has a population of 18,314,060, with blood type percentages O+ 85.5, A+ 8.7, B+ 3.35, AB+ 1.0, O− 1.2, A− 0.1, B− 0.05, AB− 0.1.
+  Fact 0.17: China has a population of 1,388,251,023, with blood type percentages O+ 47.7, A+ 27.8, B+ 18.9, AB+ 5.0, O− 0.28, A− 0.19, B− 0.1, AB− 0.03.
+  Fact 0.18: Colombia has a population of 49,069,267, with blood type percentages O+ 61.3, A+ 26.11, B+ 2.28, AB+ 1.47, O− 5.13, A− 2.7, B− 0.7, AB− 0.31.
+  Fact 0.19: Côte d'Ivoire has a population of 23,869,656, with blood type percentages O+ 46.5, A+ 22.5, B+ 22.5, AB+ 4.3, O− 2.0, A− 1.0, B− 1.0, AB− 0.2.
+  Fact 0.20: Croatia has a population of 4,207,355, with blood type percentages O+ 29.0, A+ 36.0, B+ 15.0, AB+ 5.0, O− 5.0, A− 6.0, B− 3.0, AB− 1.0.
+  Fact 0.21: Cuba has a population of 11,486,750, with blood type percentages O+ 45.8, A+ 33.5, B+ 10.2, AB+ 2.9, O− 3.6, A− 2.8, B− 1.0, AB− 0.2.
+  Fact 0.22: Cyprus has a population of 1,189,395, with blood type percentages O+ 35.22, A+ 40.35, B+ 11.11, AB+ 4.72, O− 3.85, A− 3.48, B− 0.87, AB− 0.40.
+  Fact 0.23: Czech Republic has a population of 10,555,152, with blood type percentages O+ 27.0, A+ 36.0, B+ 15.0, AB+ 7.0, O− 5.0, A− 6.0, B− 3.0, AB− 1.0.
+  Fact 0.24: Denmark has a population of 5,711,902, with blood type percentages O+ 35.0, A+ 37.0, B+ 8.0, AB+ 4.0, O− 6.0, A− 7.0, B− 2.0, AB− 1.0.
+  Fact 0.25: Dominican Republic has a population of 10,766,932, with blood type percentages O+ 46.2, A+ 26.4, B+ 16.9, AB+ 3.1, O− 3.7, A− 2.1, B− 1.4, AB− 0.2.
+  Fact 0.26: Ecuador has a population of 16,665,756, with blood type percentages O+ 75.0, A+ 14.0, B+ 7.1, AB+ 0.5, O− 2.38, A− 0.7, B− 0.3, AB− 0.02.
+  Fact 0.27: Egypt has a population of 95,220,838, with blood type percentages O+ 52.0, A+ 24.0, B+ 12.4, AB+ 3.8, O− 5.0, A− 2.0, B− 0.6, AB− 0.2.
+  Fact 0.28: El Salvador has a population of 6,171,483, with blood type percentages O+ 62.0, A+ 23.0, B+ 11.0, AB+ 1.0, O− 1.0, A− 1.0, B− 0.7, AB− 0.3.
+  Fact 0.29: Estonia has a population of 1,305,745, with blood type percentages O+ 29.5, A+ 30.8, B+ 20.7, AB+ 6.3, O− 4.3, A− 4.5, B− 3.0, AB− 0.9.
+  Fact 0.30: Ethiopia has a population of 104,352,727, with blood type percentages O+ 39.0, A+ 28.0, B+ 21.0, AB+ 5.0, O− 3.0, A− 2.0, B− 1.0, AB− 1.0.
+  Fact 0.31: Finland has a population of 5,541,328, with blood type percentages O+ 27.0, A+ 38.0, B+ 15.0, AB+ 7.0, O− 4.0, A− 6.0, B− 2.0, AB− 1.0.
+  Fact 0.32: France has a population of 64,939,560, with blood type percentages O+ 36.0, A+ 37.0, B+ 9.0, AB+ 3.0, O− 6.0, A− 7.0, B− 1.0, AB− 1.0.
+  Fact 0.33: Germany has a population of 80,635,980, with blood type percentages O+ 35.0, A+ 37.0, B+ 9.0, AB+ 4.0, O− 6.0, A− 6.0, B− 2.0, AB− 1.0.
+  Fact 0.34: Greece has a population of 10,892,849, with blood type percentages O+ 37.4, A+ 32.9, B+ 11.0, AB+ 3.7, O− 7.0, A− 5.0, B− 2.0, AB− 1.0.
+  Fact 0.35: Guinea has a population of 13,291,741, with blood type percentages O+ 46.88, A+ 21.64, B+ 22.86, AB+ 4.52, O− 2.0, A− 0.9, B− 1.0, AB− 0.2.
+  Fact 0.36: Honduras has a population of 9,348,898, with blood type percentages O+ 57.5, A+ 27.0, B+ 7.8, AB+ 2.5, O− 2.7, A− 1.7, B− 0.6, AB− 0.2.
+  Fact 0.37: Hong Kong has a population of 7,402,115, with blood type percentages O+ 41.5, A+ 26.13, B+ 25.34, AB+ 6.35, O− 0.32, A− 0.17, B− 0.14, AB− 0.05.
+  Fact 0.38: Hungary has a population of 9,787,801, with blood type percentages O+ 27.0, A+ 33.0, B+ 16.0, AB+ 8.0, O− 5.0, A− 7.0, B− 3.0, AB− 1.0.
+  Fact 0.39: Iceland has a population of 334,311, with blood type percentages O+ 47.6, A+ 26.4, B+ 9.3, AB+ 1.6, O− 8.4, A− 4.6, B− 1.7, AB− 0.4.
+  Fact 0.40: India has a population of 1,342,561,902, with blood type percentages O+ 27.85, A+ 20.8, B+ 38.14, AB+ 8.93, O− 1.43, A− 0.57, B− 1.79, AB− 0.49.
+  Fact 0.41: Indonesia has a population of 263,519,317, with blood type percentages O+ 36.82, A+ 25.87, B+ 28.85, AB+ 7.96, O− 0.18, A− 0.13, B− 0.15, AB− 0.04.
+  Fact 0.42: Iran has a population of 80,982,137, with blood type percentages O+ 33.5, A+ 27.0, B+ 22.2, AB+ 7.0, O− 4.0, A− 3.0, B− 2.5, AB− 0.8.
+  Fact 0.43: Iraq has a population of 38,657,787, with blood type percentages O+ 32.1, A+ 25.0, B+ 25.6, AB+ 7.4, O− 3.6, A− 2.7, B− 2.7, AB− 0.9.
+  Fact 0.44: Ireland has a population of 4,749,263, with blood type percentages O+ 47.0, A+ 26.0, B+ 9.0, AB+ 2.0, O− 8.0, A− 5.0, B− 2.0, AB− 1.0.
+  Fact 0.45: Israel has a population of 8,323,659, with blood type percentages O+ 32.0, A+ 34.0, B+ 17.0, AB+ 7.0, O− 3.0, A− 4.0, B− 2.0, AB− 1.0.
+  Fact 0.46: Italy has a population of 59,797,969, with blood type percentages O+ 39.0, A+ 36.0, B+ 7.5, AB+ 2.5, O− 7.0, A− 6.0, B− 1.5, AB− 0.5.
+  Fact 0.47: Jamaica has a population of 2,813,316, with blood type percentages O+ 47.0, A+ 23.0, B+ 20.0, AB+ 3.0, O− 3.5, A− 2.0, B− 1.0, AB− 0.5.
+  Fact 0.48: Japan has a population of 126,044,340, with blood type percentages O+ 29.9, A+ 39.8, B+ 19.9, AB+ 9.9, O− 0.15, A− 0.2, B− 0.1, AB− 0.05.
+  Fact 0.49: Kenya has a population of 48,470,780, with blood type percentages O+ 45.6, A+ 25.2, B+ 21.28, AB+ 4.2, O− 1.8, A− 1.0, B− 0.9, AB− 0.02.
+  Fact 0.50: Latvia has a population of 1,944,122, with blood type percentages O+ 30.6, A+ 31.0, B+ 17.0, AB+ 6.0, O− 5.4, A− 6.0, B− 3.0, AB− 1.0.
+  Fact 0.51: Lebanon has a population of 6,039,438, with blood type percentages O+ 38.4, A+ 32.3, B+ 9.5, AB+ 3.2, O− 7.7, A− 6.5, B− 1.7, AB− 0.7.
+  Fact 0.52: Libya has a population of 6,408,990, with blood type percentages O+ 42.64, A+ 28.86, B+ 11.19, AB+ 4.5, O− 6.26, A− 4.24, B− 1.64, AB− 0.67.
+  Fact 0.53: Lithuania has a population of 2,827,573, with blood type percentages O+ 36.0, A+ 33.0, B+ 11.0, AB+ 4.0, O− 7.0, A− 6.0, B− 2.0, AB− 1.0.
+  Fact 0.54: Luxemburg has a population of 587,297, with blood type percentages O+ 35.0, A+ 37.0, B+ 9.0, AB+ 4.0, O− 6.0, A− 6.0, B− 2.0, AB− 1.0.
+  Fact 0.55: Macao has a population of 606,413, with blood type percentages O+ 41.5, A+ 26.1, B+ 25.4, AB+ 6.3, O− 0.33, A− 0.17, B− 0.15, AB− 0.05.
+  Fact 0.56: Macedonia has a population of 2,083,690, with blood type percentages O+ 30.0, A+ 34.0, B+ 15.0, AB+ 6.0, O− 5.0, A− 6.0, B− 3.0, AB− 1.0.
+  Fact 0.57: Malaysia has a population of 31,165,480, with blood type percentages O+ 34.32, A+ 30.35, B+ 27.37, AB+ 7.46, O− 0.17, A− 0.15, B− 0.14, AB− 0.04.
+  Fact 0.58: Mauritania has a population of 4,266,765, with blood type percentages O+ 46.3, A+ 26.68, B+ 17.47, AB+ 3.85, O− 2.8, A− 1.6, B− 1.1, AB− 0.2.
+  Fact 0.59: Mauritius has a population of 1,267,303, with blood type percentages O+ 38.3, A+ 26.0, B+ 25.0, AB+ 6.7, O− 1.7, A− 1.0, B− 1.0, AB− 0.3.
+  Fact 0.60: Mexico has a population of 130,227,836, with blood type percentages O+ 55.79, A+ 29.9, B+ 8.0, AB+ 1.63, O− 2.7, A− 1.5, B− 0.4, AB− 0.08.
+  Fact 0.61: Mongolia has a population of 3,052,044, with blood type percentages O+ 55.4, A+ 27.7, B+ 10.9, AB+ 4.96, O− 0.6, A− 0.3, B− 0.1, AB− 0.04.
+  Fact 0.62: Myanmar has a population of 53,507,932, with blood type percentages O+ 35.7, A+ 23.8, B+ 32.7, AB+ 6.95, O− 0.3, A− 0.2, B− 0.3, AB− 0.05.
+  Fact 0.63: Nepal has a population of 29,188,100, with blood type percentages O+ 35.2, A+ 28.3, B+ 27.1, AB+ 8.6, O− 0.3, A− 0.2, B− 0.2, AB− 0.1.
+  Fact 0.64: Netherlands has a population of 17,033,012, with blood type percentages O+ 39.5, A+ 35.0, B+ 6.7, AB+ 2.5, O− 7.5, A− 7.0, B− 1.3, AB− 0.5.
+  Fact 0.65: New Zealand has a population of 4,604,996, with blood type percentages O+ 38.0, A+ 32.0, B+ 9.0, AB+ 3.0, O− 9.0, A− 6.0, B− 2.0, AB− 1.0.
+  Fact 0.66: Nigeria has a population of 191,851,411, with blood type percentages O+ 51.3, A+ 22.4, B+ 20.7, AB+ 2.6, O− 1.6, A− 0.7, B− 0.6, AB− 0.1.
+  Fact 0.67: Norway has a population of 5,330,986, with blood type percentages O+ 33.0, A+ 41.5, B+ 6.8, AB+ 3.4, O− 6.0, A− 7.5, B− 1.2, AB− 0.6.
+  Fact 0.68: North Korea has a population of 25,432,033, with blood type percentages O+ 27.15, A+ 31.08, B+ 30.15, AB+ 11.32, O− 0.08, A− 0.1, B− 0.1, AB− 0.03.
+  Fact 0.69: Pakistan has a population of 180,440,005, with blood type percentages O+ 24.63, A+ 20.6, B+ 34.40, AB+ 9.52, O− 4.17, A− 2.66, B− 3.57, AB− 0.45.
+  Fact 0.70: Papua New Guinea has a population of 7,952,511, with blood type percentages O+ 48.0, A+ 37.2, B+ 9.6, AB+ 2.8, O− 1.0, A− 0.8, B− 0.4, AB− 0.2.
+  Fact 0.71: Peru has a population of 32,167,717, with blood type percentages O+ 70.0, A+ 18.4, B+ 7.8, AB+ 1.6, O− 1.4, A− 0.5, B− 0.28, AB− 0.02.
+  Fact 0.72: Philippines has a population of 103,801,747, with blood type percentages O+ 36.9, A+ 28.9, B+ 26.9, AB+ 6.97, O− 0.1, A− 0.1, B− 0.1, AB− 0.03.
+  Fact 0.73: Poland has a population of 38,563,480, with blood type percentages O+ 31.0, A+ 32.0, B+ 15.0, AB+ 7.0, O− 6.0, A− 6.0, B− 2.0, AB− 1.0.
+  Fact 0.74: Portugal has a population of 10,264,672, with blood type percentages O+ 36.3, A+ 40.0, B+ 6.6, AB+ 2.9, O− 6.0, A− 6.6, B− 1.1, AB− 0.5.
+  Fact 0.75: Republic of Moldova has a population of 4,043,722, with blood type percentages O+ 28.5, A+ 31.8, B+ 17.6, AB+ 7.0, O− 5.0, A− 6.0, B− 3.0, AB− 1.1.
+  Fact 0.76: Romania has a population of 19,237,087, with blood type percentages O+ 28.0, A+ 37.0, B+ 14.0, AB+ 7.0, O− 5.0, A− 6.0, B− 2.0, AB− 1.0.
+  Fact 0.77: Russia has a population of 143,374,801, with blood type percentages O+ 28.0, A+ 30.0, B+ 20.0, AB+ 7.0, O− 4.9, A− 5.8, B− 3.2, AB− 1.1.
+  Fact 0.78: Saudi Arabia has a population of 32,744,532, with blood type percentages O+ 47.8, A+ 23.9, B+ 17.0, AB+ 4.0, O− 4.0, A− 2.0, B− 1.0, AB− 0.3.
+  Fact 0.79: Serbia has a population of 8,776,827, with blood type percentages O+ 31.92, A+ 35.28, B+ 12.6, AB+ 4.2, O− 6.08, A− 6.72, B− 2.4, AB− 0.8.
+  Fact 0.80: Singapore has a population of 5,784,819, with blood type percentages O+ 43.6, A+ 23.9, B+ 24.4, AB+ 6.0, O− 0.9, A− 0.7, B− 0.4, AB− 0.1.
+  Fact 0.81: Slovakia has a population of 5,432,265, with blood type percentages O+ 27.2, A+ 35.7, B+ 15.3, AB+ 6.8, O− 4.8, A− 6.3, B− 2.7, AB− 1.2.
+  Fact 0.82: Slovenia has a population of 2,071,258, with blood type percentages O+ 31.0, A+ 33.0, B+ 12.0, AB+ 6.0, O− 7.0, A− 7.0, B− 3.0, AB− 1.0.
+  Fact 0.83: South Africa has a population of 55,437,815, with blood type percentages O+ 39.0, A+ 32.0, B+ 12.0, AB+ 3.0, O− 6.0, A− 5.0, B− 2.0, AB− 1.0.
+  Fact 0.84: South Korea has a population of 50,748,307, with blood type percentages O+ 27.9, A+ 33.87, B+ 26.92, AB+ 10.98, O− 0.1, A− 0.13, B− 0.08, AB− 0.02.
+  Fact 0.85: Spain has a population of 46,070,163, with blood type percentages O+ 36.0, A+ 34.0, B+ 8.0, AB+ 2.5, O− 9.0, A− 8.0, B− 2.0, AB− 0.5.
+  Fact 0.86: Sudan has a population of 40,827,975, with blood type percentages O+ 48.0, A+ 27.7, B+ 15.2, AB+ 2.8, O− 3.5, A− 1.8, B− 0.8, AB− 0.2.
+  Fact 0.87: Sweden has a population of 9,920,843, with blood type percentages O+ 32.0, A+ 37.0, B+ 10.0, AB+ 5.0, O− 6.0, A− 7.0, B− 2.0, AB− 1.0.
+  Fact 0.88: Switzerland has a population of 8,454,321, with blood type percentages O+ 35.0, A+ 40.0, B+ 7.0, AB+ 3.0, O− 6.0, A− 7.0, B− 1.0, AB− 1.0.
+  Fact 0.89: Syria has a population of 18,920,698, with blood type percentages O+ 43.0, A+ 30.0, B+ 14.0, AB+ 3.7, O− 5.0, A− 3.0, B− 1.0, AB− 0.3.
+  Fact 0.90: Taiwan has a population of 23,234,936, with blood type percentages O+ 43.9, A+ 25.9, B+ 23.9, AB+ 6.0, O− 0.17, A− 0.1, B− 0.01, AB− 0.02.
+  Fact 0.91: Thailand has a population of 68,298,027, with blood type percentages O+ 40.8, A+ 16.9, B+ 36.8, AB+ 4.97, O− 0.2, A− 0.1, B− 0.2, AB− 0.03.
+  Fact 0.92: Turkey has a population of 80,420,065, with blood type percentages O+ 29.8, A+ 37.8, B+ 14.2, AB+ 7.2, O− 3.9, A− 4.7, B− 1.6, AB− 0.8.
+  Fact 0.93: Uganda has a population of 43,276,492, with blood type percentages O+ 43.7, A+ 39.0, B+ 10.7, AB+ 3.9, O− 1.3, A− 1.0, B− 0.3, AB− 0.1.
+  Fact 0.94: Ukraine has a population of 44,404,078, with blood type percentages O+ 32.0, A+ 34.0, B+ 15.0, AB+ 5.0, O− 5.0, A− 6.0, B− 2.0, AB− 1.0.
+  Fact 0.95: United Arab Emirates has a population of 3,398,017, with blood type percentages O+ 44.1, A+ 21.9, B+ 20.9, AB+ 4.3, O− 4.3, A− 2.1, B− 2.0, AB− 0.4.
+  Fact 0.96: United Kingdom has a population of 65,512,375, with blood type percentages O+ 37.0, A+ 35.0, B+ 8.0, AB+ 3.0, O− 7.0, A− 7.0, B− 2.0, AB− 1.0.
+  Fact 0.97: United States has a population of 326,481,533, with blood type percentages O+ 37.4, A+ 35.7, B+ 8.5, AB+ 3.4, O− 6.6, A− 6.3, B− 1.5, AB− 0.6.
+  Fact 0.98: Venezuela has a population of 32,011,082, with blood type percentages O+ 58.5, A+ 28.3, B+ 5.3, AB+ 1.8, O− 3.5, A− 1.7, B− 0.7, AB− 0.2.
+  Fact 0.99: Vietnam has a population of 95,414,640, with blood type percentages O+ 41.7, A+ 21.9, B+ 30.8, AB+ 4.98, O− 0.3, A− 0.1, B− 0.2, AB− 0.02.
+  Fact 0.100: Zimbabwe has a population of 16,642,880, with blood type percentages O+ 63.3, A+ 18.5, B+ 14.6, AB+ 0.99, O− 1.7, A− 0.5, B− 0.4, AB− 0.01.
+  Fact 0.101: The World row has a population of 6,635,281,257, with blood type percentages O+ 38.67, A+ 27.42, B+ 22.02, AB+ 5.88, O− 2.55, A− 1.99, B− 1.11, AB− 0.36.
+
+Retrieved items:
+<item 1>
+Blood type distribution by country
+2 % El Salvador 6,171,483 62.0 % 23.0 % 11.0 % 1.0 % 1.0 % 1.0 % 0.7 % 0.3 % Estonia 1,305,745 29.5 % 30.8 % 20.7 % 6.3 % 4.3 % 4.5 % 3.0 % 0.9 % Ethiopia
+104,352,727 39.0 % 28.0 % 21.0 % 5.0 % 3.0 % 2.0 % 1.0 % 1.0 % Finland 5,541,328 27.0 % 38.0 % 15.0 % 7.0 % 4.0 % 6.0 % 2.0 % 1.0 % France 64,939,560 36.0 %
+37.0 % 9.0 % 3.0 % 6.0 % 7.0 % 1.0 % 1.0 % Germany 80,635,980 35.
+</item 1>
+
+<item 2>
+Blood type distribution by country
+7 % 15.3 % 6.8 % 4.8 % 6.3 % 2.7 % 1.2 % Slovenia 2,071,258 31.0 % 33.0 % 12.0 % 6.0 % 7.0 % 7.0 % 3.0 % 1.0 % South Africa 55,437,815 39.0 % 32.0 % 12.0 % 3.0
+% 6.0 % 5.0 % 2.0 % 1.0 % South Korea 50,748,307 27.9 % 33.87 % 26.92 % 10.98 % 0.1 % 0.13 % 0.08 % 0.02 % Spain 46,070,163 36.0 % 34.0 % 8.0 % 2.5 % 9.0 % 8.0
+% 2.0 % 0.5 % Sudan 40,827,975 48.0 % 27.7 % 15.2 % 2.
+</item 2>
+
+<item 3>
+Blood type distribution by country
+975 48.0 % 27.7 % 15.2 % 2.8 % 3.5 % 1.8 % 0.8 % 0.2 % Sweden 9,920,843 32.0 % 37.0 % 10.0 % 5.0 % 6.0 % 7.0 % 2.0 % 1.0 % Switzerland 8,454,321 35.0 % 40.0 %
+7.0 % 3.0 % 6.0 % 7.0 % 1.0 % 1.0 % Syria 18,920,698 43.0 % 30.0 % 14.0 % 3.7 % 5.0 % 3.0 % 1.0 % 0.3 % Taiwan 23,234,936 43.9 % 25.9 % 23.9 % 6.0 % 0.17 % 0.1
+% 0.01 % 0.02 % Thailand 68,298,027 40.8 % 16.9 % 36.
+</item 3>
+
+<item 4>
+Blood type distribution by country
+Retrieved 2017 - 11 - 23 . Jump up ^ `` Veregruppidest '' ( Blood groups ) . verekeskus.ee ( in Estonian ) . Retrieved 2017 - 11 - 23 . Jump up ^ ``
+Suomalaisten veriryhmäjakauma '' ( in Finnish ) . 2009 - 08 - 21 . Retrieved 2010 - 11 - 19 . Jump up ^ `` Les groupes sanguins ( système ABO ) '' . Centre
+Hospitalier Princesse GRACE - Monaco ( in French ) . C.H.P.G. MONACO. 2005 . Retrieved 2008 - 07 - 15 . Jump up ^ `` Blóðflokkar '' ( in Icelandic ) ...
+landspitali.is . Archived from the original on 2011 - 07 - 19 . Retrieved 2010 - 11 - 19 . Jump up ^ `` Blood Type Frequencies by Country including the Rh
+Factor '' .
+</item 4>
+
+<item 5>
+Blood type distribution by country
+Retrieved 2010 - 11 - 19 . Jump up ^ `` Federación Nacional de Donantes de Sangre / La sangre / Grupos '' . Donantesdesangre.net . Retrieved 2010 - 11 - 19 .
+Jump up ^ `` Frequency of major blood groups in the Swedish population '' . Geblod.nu. 2007 - 10 - 02 . Archived from the original on 24 November 2010 .
+Retrieved 2010 - 11 - 19 . Jump up ^ - BLUTSPENDE https://www.blutspende.ch/fr/don_de_sang/sanguin_groupe/groupe_sanguin - BLUTSPENDE Check url = value ( help )
+. Missing or empty title = ( help ) Jump up ^ `` Turkey Blood Group Site '' . Kangrubu.com . Archived from the original on 29 May 2010 . Retrieved 2010 - 11 -
+19 . Jump up ^ `` Blood Group Basics '' . Blood.co.uk . Retrieved 2017 - 07 - 30 .
+</item 5>
+
+<item 6>
+Blood type distribution by country
+Blood group A is associated with high frequencies in Europe , especially in Scandinavia and Central Europe , although its highest frequencies occur in some
+Australian Aboriginal populations and the Blackfoot Indians of Montana , the US . Maps of allele ABO among native populations ( edit ) Map of allele A among
+native populations Map of allele B among native populations Map of allele O among native populations References ( edit ) Jump up ^ CIA World Factbook Jump up ^
+`` Study of Blood Immunogenetical Markers in Armenian Population '' ( PDF ) . 1989 . Jump up ^ Blood Types - What Are They ? , Australian Red Cross Jump up ^ ``
+Austrian Red Cross - Blood Donor Information '' . Old.roteskreuz.at. 2006 - 03 - 21 . Retrieved 2010 - 11 - 19 . Jump up ^ `` Rode Kruis Wielsbeke - Blood Donor
+information material '' . Rodekruiswielsbeke.be . Archived from the original on 26 November 2010 . Retrieved 2010 - 11 - 19 .
+</item 6>
+
+<item 7>
+Blood type distribution by country
+0 % 5.0 % 6.0 % 2.0 % 1.0 % Russia 143,374,801 28.0 % 30.0 % 20.0 % 7.0 % 4.9 % 5.8 % 3.2 % 1.1 % Saudi Arabia 32,744,532 47.8 % 23.9 % 17.0 % 4.0 % 4.0 % 2.0 %
+1.0 % 0.3 % Serbia 8,776,827 31.92 % 35.28 % 12.6 % 4.2 % 6.08 % 6.72 % 2.4 % 0.8 % Singapore 5,784,819 43.6 % 23.9 % 24.4 % 6.0 % 0.9 % 0.7 % 0.4 % 0.1 %
+Slovakia 5,432,265 27.2 % 35.7 % 15.3 % 6.8 % 4.8 % 6.
+</item 7>
+
+<item 8>
+Blood type distribution by country
+40 11 Spanish 38 47 10 5 Sudanese 62 16 21 0 Swedish 38 47 10 5 Swiss 40 50 7 Tatars 28 30 29 13 Thais 37 22 33 8 Turks 43 34 18 6 Ukrainians 37 40 18 6 Black
+Americans 49 27 20 White Americans 45 40 11 Vietnamese 42 22 30 5 Mean 43.91 34.80 16.55 5.14 Standard deviation 16.87 13.80 9.97 3.41 Blood group B has its
+highest frequency in South Asia where it ranks first as the largest share of the earth 's population . In Southeast Asia the share of the population is high ,
+especially in Thailand and Indonesia , then in East Asia , Northern Asia and neighboring Central Asia , and its incidence diminishes both towards the east and
+the west , falling to single digit percentages in Netherlands , Norway , Portugal and Switzerland . It is believed to have been entirely absent from Native
+American and Australian Aboriginal populations prior to the arrival of Europeans in those areas .
+</item 8>
+
+<item 9>
+Blood type distribution by country
+In countries such as Austria , Denmark , Norway , and Switzerland , about 45 -- 50 % of the population have this blood type , whereas about 40 % of Poles and
+Ukrainians do so . The highest frequencies are found in small , unrelated populations . For example , about 80 % of the Blackfoot Indians of Montana have blood
+type A ... Jump up ^ Technical Monograph No. 2 : The ABO Blood Group System and ABO Subgroups ( PDF ) . Biotec . March 2005 . Archived from the original ( PDF )
+on 6 February 2007 ... The frequency of blood group A is quite high ( 25 -- 55 % ) in Europe , especially in Scandinavia and parts of central Europe . High
+group A frequency is also found in the Aboriginal people of South Australia ( up to 45 % ) and in certain American Indian tribes where the frequency reaches 35
+% ...
+</item 9>
+
+<item 10>
+Blood type distribution by country
+Jump up ^ `` Portuguese Blood Institute '' ( in Portuguese ) . ( assuming Rh and AB antigens are independent ) Jump up ^ Sanguina Jump up ^ BASHAWRI , Layla A.
+; AL - MULHIMiz , Abdul Az ; AHMAD , Malik S. ( 2001 ) . `` Frequency of ABO blood groups in the eastern region of Saudi Arabia '' . Saudi Medical Journal . 22
+( 11 ) : 1008 -- 1101 . ISSN 0379 - 5284 . PMID 11744976 . Jump up ^ `` Najčastejšie otázky '' ( Frequently Asked Questions ) ( in Slovak ) . Národná transfúzna
+služba SR . Retrieved 2017 - 09 - 22 . Jump up ^ `` What 's Your Type ? '' . South African National Blood Service . Archived from the original on 2010 - 02 - 06
+. Retrieved 2010 - 11 - 19 .
+</item 10>
+=== END ITEM id=984f4fffcd72338d ===

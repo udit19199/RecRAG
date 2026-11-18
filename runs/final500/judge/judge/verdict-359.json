@@ -1,0 +1,506 @@
+[
+  {
+    "id": "285f155ca9e55069",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "“all of that, all of it, was built on lies,” Rehn declared to the jury."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."
+          }
+        ]
+      },
+      {
+        "fact": "2.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "tying FTX CEO Sam Bankman-Fried to the conspiracy to take FTX customer funds."
+          }
+        ]
+      },
+      {
+        "fact": "3.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.3",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.4",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  },
+  {
+    "id": "a0f313012577e1da",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Google compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old."
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Google compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old."
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Google compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"
+          }
+        ]
+      },
+      {
+        "fact": "2.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+          }
+        ]
+      },
+      {
+        "fact": "2.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+          }
+        ]
+      },
+      {
+        "fact": "2.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+          }
+        ]
+      },
+      {
+        "fact": "2.4",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "0e9f71aca79aa459",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Google unveiled a new flagship AI model this week called Gemini. But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Google unveiled a new flagship AI model this week called Gemini. But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "anticompetitive by making deals with Apple and others. The DOJ doubled down on this"
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "including its deal with Apple and other partners to make Google the default search engine."
+          }
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "Google gets manufacturers to sign a mobile app distribution agreement (MADA) that requires Android smartphone makers (like Samsung or Oppo) to pre-load a bundle of 11 Google apps on the device"
+          }
+        ]
+      },
+      {
+        "fact": "1.3",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.4",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "including its deal with Apple and other partners to make Google the default search engine."
+          }
+        ]
+      },
+      {
+        "fact": "1.5",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.3",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.4",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  },
+  {
+    "id": "9b481fec50d5fdeb",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 1,
+            "quote": "In January, Bankman-Fried pleaded not guilty to all counts"
+          },
+          {
+            "item": 3,
+            "quote": "Bankman-Fried is charged with seven counts"
+          }
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "is on trial for seven counts of wire fraud and conspiracy."
+          }
+        ]
+      },
+      {
+        "fact": "2.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 1,
+            "quote": "Alameda Research’s former CEO, Caroline Ellison"
+          }
+        ]
+      },
+      {
+        "fact": "2.3",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.4",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.5",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.6",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.3",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.4",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "3.5",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bcfea06bd4da3b86",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "That answer ultimately lies with the jury"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "which was selected on Wednesday morning before lawyers for the government"
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "which was selected on Wednesday morning before lawyers for the government"
+          }
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX?"
+          }
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 1,
+            "quote": "Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy."
+          }
+        ]
+      },
+      {
+        "fact": "2.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"
+          }
+        ]
+      },
+      {
+        "fact": "2.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "the defense countered that the FTX founder acted in good faith"
+          }
+        ]
+      },
+      {
+        "fact": "2.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+          }
+        ]
+      },
+      {
+        "fact": "2.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+          }
+        ]
+      }
+    ]
+  }
+]

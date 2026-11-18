@@ -1,0 +1,412 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "ed88cac1f63437e8",
+   "gold": [
+    {
+     "sentence": " It is the third of Gluck's so-called reform operas for Vienna, following \"Alceste\" and \"Orfeo ed Euridice\", and the least often performed of the three.",
+     "facts": {
+      "0.0": "The work is the third of Gluck's so-called reform operas for Vienna.",
+      "0.1": "The work follows 'Alceste' and 'Orfeo ed Euridice' among Gluck's reform operas for Vienna.",
+      "0.2": "The work is the least often performed of the three reform operas for Vienna."
+     }
+    },
+    {
+     "sentence": "Orfeo ed Euridice (French version: Orphée et Eurydice ; English: \"Orpheus and Eurydice\") is an opera composed by Christoph Willibald Gluck based on the myth of Orpheus, set to a libretto by Ranieri de' Calzabigi.",
+     "facts": {
+      "1.0": "Orfeo ed Euridice is an opera composed by Christoph Willibald Gluck.",
+      "1.1": "Orfeo ed Euridice is based on the myth of Orpheus.",
+      "1.2": "Orfeo ed Euridice is set to a libretto by Ranieri de' Calzabigi.",
+      "1.3": "The French version of Orfeo ed Euridice is titled Orphée et Eurydice.",
+      "1.4": "The English title of Orfeo ed Euridice is 'Orpheus and Eurydice'."
+     }
+    },
+    {
+     "sentence": " The piece was first performed at the Burgtheater in Vienna on 5 October 1762 in the presence of Empress Maria Theresa.",
+     "facts": {
+      "2.0": "The piece was first performed at the Burgtheater in Vienna on 5 October 1762.",
+      "2.1": "The first performance of the piece was in the presence of Empress Maria Theresa."
+     }
+    }
+   ],
+   "items": [
+    "Gottlieb Muffat\nGottlieb Muffat (April 1690 – 9 December 1770), son of Georg Muffat, served as \"Hofscholar\" under Johann Fux in Vienna from 1711 and was appointed to the position of third court organist at the \"Hofkapelle\" in 1717.\n\n He acquired additional duties over time including the instruction of members of the Imperial family, among them the future Empress Maria Theresa.\n\n He was promoted to second organist in 1729 and first organist upon the accession of Maria Theresa to the throne in 1741.\n\n He retired from official duties at the court in 1763.",
+    "Paride ed Elena\nParide ed Elena (] ; \"Paris and Helen\") is an opera by Christoph Willibald Gluck.\n\n It is the third of Gluck's so-called reform operas for Vienna, following \"Alceste\" and \"Orfeo ed Euridice\", and the least often performed of the three.\n\n Like its predecessors, the libretto was written by Ranieri de' Calzabigi.\n\n The opera tells the story of the events between the Judgment of Paris and the flight of Paris and Helen to Troy.\n\n It was premiered at the Burgtheater in Vienna on 3 November 1770.",
+    "Romolo ed Ersilia (Hasse)\nRomolo ed Ersilia is an opera in three acts composed by Johann Adolph Hasse to an Italian-language libretto by Pietro Metastasio.\n\n The opera was commissioned by Empress Maria Theresa to celebrate the marriage of her son Leopold to Maria Luisa of Spain.\n\n The opera was first performed on 6 August 1765, the day after their wedding, in the court theatre of the Imperial Palace in Innsbruck.\n\n The opera received its first performance in modern times in 2011 during the Innsbruck Festival of Early Music.",
+    "Bernhard Bötel\nHis stage repertoire included Belmonte in Wolfgang Amadeus Mozart's \"Die Entführung aus dem Serail\", Chapelou in Adolphe Adam's \"Le postillon de Lonjumeau\", Count Almaviva in Gioachino Rossini's \"The Barber of Seville\", Daniel in Franz Lehár's \"The Merry Widow\", the Duke of Mantua in Giuseppe Verdi's \"Rigoletto\", Gabriel von Eisenstein in Johann Strauss II's \"Die Fledermaus\", Indigo in Strauss' \"Indigo und die vierzig Räuber\", Jeník in Bedřich Smetana's \"The Bartered Bride\", Paolino in Domenico Cimarosa's \"Il matrimonio segreto\", Pâris in Jacques Offenbach's \"La belle Hélène\", Pietro in Franz von Suppé's \"Boccaccio\", and Wilhelm Meister in Ambroise Thomas' \"Mignon\".",
+    "Orfeo ed Euridice\nOrfeo ed Euridice (French version: Orphée et Eurydice ; English: \"Orpheus and Eurydice\") is an opera composed by Christoph Willibald Gluck based on the myth of Orpheus, set to a libretto by Ranieri de' Calzabigi.\n\n It belongs to the genre of the \"azione teatrale\", meaning an opera on a mythological subject with choruses and dancing.\n\n The piece was first performed at the Burgtheater in Vienna on 5 October 1762 in the presence of Empress Maria Theresa.\n\n \"Orfeo ed Euridice\" is the first of Gluck's \"reform\" operas, in which he attempted to replace the abstruse plots and overly complex music of \"opera seria\" with a \"noble simplicity\" in both the music and the drama.",
+    "Operetta (film)\nOperetta (German: Operette) is a 1940 musical film directed by Willi Forst and starring Forst, Maria Holst and Dora Komar.\n\n The film was made by Wien-Film, a Vienna-based company set up after Austria had been incorporated into Greater Germany following the 1938 Anschluss.\n\n It is the first film in director Willi Forst's \"Viennese Trilogy\" followed by \"Vienna Blood\" (1942) and \"Viennese Girls\" (1945).\n\n The film portrays the life of Franz Jauner (1832–1900), a leading musical figure in the city.\n\n It is both an operetta film and a Wiener Film.",
+    "Die glückliche Hand\nDie glückliche Hand (\"The Hand of Fate\"), Op.\n\n 18, is a \"Drama mit Musik\" (\"drama with music\") by Arnold Schoenberg in four scenes.\n\n It was composed between 1910 and 1913.\n\n Like \"Erwartung\", composed a year earlier, it was heavily influenced by Otto Weininger's book \"Sex and Character\".\n\n Unlike \"Erwartung\", Schoenberg wrote the libretto for \"Die glückliche Hand\" himself.\n\n The first performance took place in Vienna on 24 October 1924.\n\n The underlying message of the piece is the idea that man continues to repeatedly make the same mistakes, and the plot is developed from events in Schoenberg’s personal life.",
+    "Daphne (opera)\nDaphne, Op.\n\n82, is an opera in one act by Richard Strauss, subtitled \"Bucolic Tragedy in One Act\".\n\n The German libretto was by Joseph Gregor.\n\n The opera is based loosely on the mythological figure Daphne from Ovid's \"Metamorphoses\" and includes elements taken from \"The Bacchae\" by Euripides.\n\n The opera premiered at the Semperoper in Dresden on 15 October 1938, originally intended as a double bill with Strauss' \"Friedenstag\", but as the scale of \"Daphne\" grew, that idea was abandoned.\n\n The conductor of the first performance was Karl Böhm, to whom the opera was dedicated.",
+    "Maria Theresa (film)\nMaria Theresa (German: Maria Theresia) is a 1951 Austrian historical drama film directed by  Emil E. Reinert and starring  Paula Wessely, Fred Liewehr and Marianne Schönauer.\n\n It portrays the life of the eighteenth century Habsburg Empress Maria Theresa.",
+    "Das geheime Königreich\nDas geheime Königreich (\"The Secret Kingdom\") is an opera in one act with words and music by Ernst Krenek, his Op.\n\n 50 and the second of three one-acters (with \"Der Diktator\" and \"Schwergewicht, oder Die Ehre der Nation\") which premiered on 6 May 1928 at the Hessisches Staatstheater Wiesbaden as part of the Mai-Festwoche Wiesbaden.\n\n It is subtitled \"Märchenoper in 1 Akt \" (fairy-tale opera in one act) and has been called a satirical fairy-tale opera."
+   ]
+  },
+  {
+   "id": "8cce8afdef5b3fb9",
+   "gold": [
+    {
+     "sentence": "Mr. Wilson's Cabinet of Wonder: Pronged Ants, Horned Humans, Mice on Toast, and Other Marvels of Jurassic Technology is a book by Lawrence Weschler primarily about the Museum of Jurassic Technology and, more broadly, the history and role of museums.",
+     "facts": {
+      "0.0": "Mr. Wilson's Cabinet of Wonder: Pronged Ants, Horned Humans, Mice on Toast, and Other Marvels of Jurassic Technology is a book.",
+      "0.1": "Lawrence Weschler wrote Mr. Wilson's Cabinet of Wonder.",
+      "0.2": "Mr. Wilson's Cabinet of Wonder is primarily about the Museum of Jurassic Technology.",
+      "0.3": "Mr. Wilson's Cabinet of Wonder is more broadly about the history and role of museums."
+     }
+    },
+    {
+     "sentence": "The Museum of Jurassic Technology is a museum located at 9341 Venice Boulevard in the Palms district of Los Angeles, California.",
+     "facts": {
+      "1.0": "The Museum of Jurassic Technology is a museum.",
+      "1.1": "The Museum of Jurassic Technology is located at 9341 Venice Boulevard.",
+      "1.2": "The Museum of Jurassic Technology is in the Palms district of Los Angeles, California."
+     }
+    }
+   ],
+   "items": [
+    "Imperial War Museum (disambiguation)\nThe Imperial War Museum is a British national museum organisation with branches at five locations in England.",
+    "Museum of Jurassic Technology\nThe Museum of Jurassic Technology is a museum located at 9341 Venice Boulevard in the Palms district of Los Angeles, California.\n\n It was founded by David Hildebrand Wilson and Diana Drake Wilson (husband and wife) in 1988.",
+    "Dudley Zoo\nDudley Zoological Gardens is a 40 acre zoo located within the grounds of Dudley Castle in the town of Dudley, in the Black Country region of the West Midlands, England.\n\n The Zoo opened to the public on 18 May 1937.\n\n Dudley Zoo is owned and operated by Dudley and West Midlands Zoological Society, founded in 1935 and a registered charity.",
+    "Rice Northwest Museum of Rocks and Minerals\nThe Rice Northwest Museum of Rocks and Minerals is a non-profit museum in Hillsboro, Oregon, United States.\n\n Located just north of the Sunset Highway on the northern edge of Hillsboro, the earth science museum is in the Portland metropolitan area.\n\n Opened in 1997, the museum’s collections date to the 1930s with the museum housed in a home built to display the rock and mineral collections of the museum founders.\n\n The ranch style home is listed on the National Register of Historic Places, the first of its kind listed in Oregon.\n\n In 2015 the museum became a Smithsonian Affiliate museum.",
+    "The Lost City (Dungeons &amp; Dragons)\nThe Lost City (B4) is a \"Dungeons & Dragons\" adventure module by Tom Moldvay.\n\n It was first published by TSR in 1982 and was designed as a stand-alone adventure for use with the \"Dungeons & Dragons Basic Set\".\n\n The working title for the module was \"The Lost City of Cynidecia\".\n\n Moldvay designed the module to give novice Dungeon Masters experience fleshing out adventures and is only partially complete.\n\n The module is described as a low-level scenario, in which the only hope of the player characters' survival can be found in a ruined city slowly rising out of the sands.\n\n The adventure is set inside a huge step pyramid, with the lower pyramid only sketched out and the city itself described with a list of the major areas and a map.\n\n The adventure’s main villain is Zargon, a giant one-eyed monster and his minions.\n\n The entire double pyramid, not including the city, contains over 100 rooms.",
+    "Witmer Stone\nWitmer Stone (September 22, 1866 – May 24, 1939) was an American ornithologist, botanist, and mammalogist, and was considered one of the last of the “great naturalists.”\n\n Stone is remembered principally as an ornithologist.\n\n He was president of the American Ornithologists’ Union (AOU) 1920–23, and was editor of the AOU’s periodical \"The Auk\" 1912–1936.\n\n He spearheaded the production of the 4th edition of the AOU checklist, published in 1931.\n\n He worked for over 50 years in the Ornithology Department at the Academy of Natural Sciences of Philadelphia, eventually serving as Director of the institution.\n\n Stone was one of the founding members of the Delaware Valley Ornithological Club (DVOC) in 1890 and was actively involved in the organization for the remainder of his life.\n\n Stone was one of only two scientists (Joseph Grinnell was the other) to serve as president of both the AOU and the American Society of Mammalogists, and he co-authored two popular books about mammals.",
+    "Primeval Whirl\nPrimeval Whirl is a steel wild mouse roller coaster at Disney's Animal Kingdom at the Walt Disney World Resort.\n\n The ride is a spinning roller coaster purchased from Reverchon Industries.\n\n The ride is part of Chester and Hester's Dino-Rama, which is itself part of DinoLand U.S.A. It is a roller coaster in the \"Mild But Wild Thrills\" category.\n\n It has cars that spin in circles while traveling on tracks, permitting the ride experience to vary greatly each time it is ridden.\n\n The ride features 13 cars, each seating up to 4 riders.",
+    "Mr. Wilson's Cabinet of Wonder\nMr. Wilson's Cabinet of Wonder: Pronged Ants, Horned Humans, Mice on Toast, and Other Marvels of Jurassic Technology is a book by Lawrence Weschler primarily about the Museum of Jurassic Technology and, more broadly, the history and role of museums.",
+    "David Hildebrand Wilson\nDavid Hildebrand Wilson is the co-founder, along with his wife, Diana Wilson, of the enigmatic Museum of Jurassic Technology in Los Angeles, California.\n\n After high school, Wilson enrolled at Kalamazoo College where he majored in urban entomology with a minor in art.\n\n He received an MFA in Experimental Animation from the California Institute of the Arts in 1976.\n\n He was awarded the MacArthur Fellowship and the Creative Capital Moving Image Award in 2001.\n\n He and his museum are the subject of the book, \"Mr. Wilson's Cabinet of Wonder\", published in 1995.",
+    "Merlin's Wood\nMerlin's Wood; or, The Vision of Magic is a short novel by British writer Robert Holdstock, first published in the United Kingdom in 1994.\n\n The novel is considered part of the \"Mythago Wood\" cycle, but takes place in Brittany, France instead of Herefordshire, England.\n\n The work has all new characters and focuses on the mythical birthplace and burial site of Merlin, the magical wood Brocéliande.\n\n Brocéliande is a smaller version of Ryhope wood where British myth predominates."
+   ]
+  },
+  {
+   "id": "c034278042f639ff",
+   "gold": [
+    {
+     "sentence": "August or Auguste Brancart (21 July 1851 - 1894?)",
+     "facts": {
+      "0.0": "August Brancart is also known as Auguste Brancart.",
+      "0.1": "August Brancart was born on 21 July 1851.",
+      "0.2": "The end date given for August Brancart is 1894, with a question mark."
+     }
+    },
+    {
+     "sentence": " He also published work of the Decadent movement such as \"Monsieur Vénus\" by Rachilde.",
+     "facts": {
+      "1.0": "Brancart published work of the Decadent movement.",
+      "1.1": "Brancart published \"Monsieur Vénus\" by Rachilde.",
+      "1.2": "\"Monsieur Vénus\" by Rachilde is an example of Decadent movement work."
+     }
+    },
+    {
+     "sentence": "The Decadent Movement was a late 19th-century artistic and literary movement, centered in Western Europe, that followed an aesthetic ideology of excess and artificiality.",
+     "facts": {
+      "2.0": "The Decadent Movement was an artistic and literary movement.",
+      "2.1": "The Decadent Movement was a late 19th-century movement.",
+      "2.2": "The Decadent Movement was centered in Western Europe.",
+      "2.3": "The Decadent Movement followed an aesthetic ideology of excess.",
+      "2.4": "The Decadent Movement followed an aesthetic ideology of artificiality."
+     }
+    }
+   ],
+   "items": [
+    "The Rebel (book)\nThe Rebel (French: \"L'Homme révolté\" ) is a 1951 book-length essay by Albert Camus, which treats both the metaphysical and the historical development of rebellion and revolution in societies, especially Western Europe.\n\n Camus relates writers and artists as diverse as Epicurus and Lucretius, Marquis de Sade, Georg Wilhelm Friedrich Hegel, Fyodor Dostoyevsky, Friedrich Nietzsche, Max Stirner, André Breton, and others in an integrated, historical portrait of man in revolt.\n\n Examining both rebellion and revolt, which may be seen as the same phenomenon in personal and social frames, Camus examines several 'countercultural' figures and movements from the history of Western thought and art, noting the importance of each in the overall development of revolutionary thought and philosophy.",
+    "Hermann Brunn\nKarl Hermann Brunn (1 August 1862 – 20 September 1939) was a German mathematician, known for his work in convex geometry (see Brunn–Minkowski inequality) and in knot theory.\n\n Brunnian links are named after him, as his 1892 article \"Über Verkettung\" included examples of such links.",
+    "Decadent movement\nThe Decadent Movement was a late 19th-century artistic and literary movement, centered in Western Europe, that followed an aesthetic ideology of excess and artificiality.\n\n The visual artist Félicien Rops's body of work and Joris-Karl Huysmans's novel \"Against Nature\" (1884) are considered the prime examples of the decadent movement.\n\n It first flourished in France and then spread throughout Europe and to the United States.\n\n The movement was characterized by self-disgust, sickness at the world, general skepticism, delight in perversion and employment of crude humor and a belief in the superiority of human creativity over logic and the natural world.",
+    "Christian de la Mazière\nChristian de la Mazière (August 22, 1922 in Tunis – February 15, 2006) was a journalist and member of the Charlemagne Division of the Waffen SS.\n\n He is known for discussing his role in the documentary \"The Sorrow and the Pity\" and also wrote a book titled \"The Captive Dreamer\".\n\n At the start of the war, he served in the French Army and was later retained in the military of Vichy France until 1942.\n\n After being discharged, he worked for the fascist newspaper \"Le Pays Libre\", joining the Charlemagne Division just before the Liberation of Paris in 1944.\n\n He was taken prisoner in Pomerania by Polish forces in the Red Army.",
+    "Marcel J. Melançon\nMarcel J. Mélançon is a Canadian philosopher and scientist.\n\n He was born in Saint-Barnabé, Quebec, in 1938, and is mostly known for his book on the French philosopher Albert Camus \"Albert Camus, An Analysis of his thought\" (Albert Camus.\n\n Analyse de sa pensée).\n\n He has mostly worked together with the biologist Richard D. Lambert.",
+    "Auguste Brancart\nAugust or Auguste Brancart (21 July 1851 - 1894?)\n\n was a Belgian publisher of pornographic literature, credited with the first publication of \"My Secret Life\".\n\n He published translations of English pornography into French and vice versa for English publishers such as Edward Avery.\n\n He also published work of the Decadent movement such as \"Monsieur Vénus\" by Rachilde.",
+    "Herbert Lottman\nHerbert Lottman (August 16, 1927, Brooklyn - August 27, 2014, Paris) was an American author who specialized in writing biographies on French subjects.\n\n An influential biographer, he published 17 biographies, 15 of which were related to French culture, commerce, or politics; including works on Albert Camus, Colette, Gustave Flaubert, Henri Philippe Pétain, Jules Verne, and the Rothschild banking family of France.\n\n He wrote that, just before dying, Albert Camus was pledged to marry.\n\n Camus's estate tried to block his book, partly because of this controversial statement.",
+    "Albert Camus\nAlbert Camus (] ; 7 November 1913 – 4 January 1960) was a French philosopher, author, and journalist.\n\n His views contributed to the rise of the philosophy known as absurdism.\n\n He wrote in his essay \"The Rebel\" that his whole life was devoted to opposing the philosophy of nihilism while still delving deeply into individual freedom.\n\n He won the Nobel Prize in Literature in 1957.",
+    "Donald Allen\nDonald Merriam Allen (Iowa, 1912 – San Francisco, August 29, 2004) was an influential editor, publisher, and translator of contemporary American literature.\n\n He is perhaps best known for his project \"The New American Poetry 1945-1960\" (1960), among the several important anthologies of contemporary American innovative writing he made available to the public.\n\n Allen began his working life as a Japanese translator within the US military, serving in WWII.\n\n After his military service, Allen became an editor at Grove Press, where he worked for sixteen years.\n\n He was one of the first translators of the Romanian-French Absurdist playwright Eugène Ionesco, and Allen's 1958 volume \"Four Plays of Eugène Ionesco\" helped to introduce the playwright to American audiences in the 1960s.",
+    "Cult MTL\nCult MTL is an English language arts, culture and news website and monthly print publication, based in Montreal, Quebec, Canada.\n\n Its first print edition appeared on 7 September 2012.\n\n It was created only a few months after Montreal's last English-language alternative weekly, \"Montreal Mirror\", was unceremoniously closed by its parent company, Quebecor.\n\n The founding editor's of \"Cult MTL\" were also involved with the \"Mirror\".\n\n In August 2013 the print version of the magazine was started."
+   ]
+  },
+  {
+   "id": "5ac7da74f0b86fbe",
+   "gold": [
+    {
+     "sentence": "Eenasul Fateh (Bengali: ঈনাসুল ফাতেহ ; born 3 April 1959), also known by his stage name Aladin, is a Bangladeshi-British cultural practitioner, magician, live artist and former international management consultant.",
+     "facts": {
+      "0.0": "Eenasul Fateh was born on 3 April 1959.",
+      "0.1": "Eenasul Fateh's Bengali name is ঈনাসুল ফাতেহ.",
+      "0.2": "Eenasul Fateh is also known by his stage name Aladin.",
+      "0.3": "Eenasul Fateh is a Bangladeshi-British cultural practitioner.",
+      "0.4": "Eenasul Fateh is a magician.",
+      "0.5": "Eenasul Fateh is a live artist.",
+      "0.6": "Eenasul Fateh is a former international management consultant."
+     }
+    },
+    {
+     "sentence": "Management consulting is the practice of helping organizations to improve their performance, operating primarily through the analysis of existing organizational problems and the development of plans for improvement.",
+     "facts": {
+      "1.0": "Management consulting is the practice of helping organizations improve their performance.",
+      "1.1": "Management consulting operates primarily through the analysis of existing organizational problems.",
+      "1.2": "Management consulting operates primarily through the development of plans for improvement."
+     }
+    }
+   ],
+   "items": [
+    "Management consulting\nManagement consulting is the practice of helping organizations to improve their performance, operating primarily through the analysis of existing organizational problems and the development of plans for improvement.\n\n Organizations may draw upon the services of management consultants for a number of reasons, including gaining external (and presumably objective) advice and access to the consultants' specialized expertise.",
+    "Alex Algard\nAlex Algard is an Internet entrepreneur.\n\n He is the founder and former CEO of CarDomain, the founder and former CEO of Whitepages.com, and the founder and current CEO of Hiya.",
+    "Allen Klein\nAllen Klein (December 18, 1931 July 4, 2009) was an American businessman, music publisher, writers' representative, filmmaker and record label executive, most noted for his tough persona and aggressive, innovative negotiation tactics, many of which established higher industry standards for compensating recording artists.\n\n He founded ABKCO Music & Records Incorporated.\n\n Klein revolutionized the income potential of recording artists, who previously had been routinely victimized by onerous record company contracts.\n\n He first scored massive monetary and contractual windfalls for Buddy Knox and Jimmy Bowen, one-hit rockabillies of the late 1950s, then parlayed his early successes into a position managing Sam Cooke, and eventually managed the Beatles and the Rolling Stones simultaneously, along with many other artists, becoming one of the most powerful individuals in the music industry during his era.",
+    "Da'ud Abu al-Fadl\nDa'ud Abu al-Fadl (1161–1242) was a Karaite Jewish physician who lived in the Ayyubid Egypt in the twelfth century CE.\n\n He born in Cairo in 1161 and died there about 1242.\n\n Having studied medicine under the Jewish physician Hibat Allah ibn Jami, and under Abu al-Fafa'il ibn Naqid, he became the court physician of the sultan al-Malik al-'Adil Abu Bakr ibn Ayyub, the brother and successor of Saladin.\n\n He was also chief professor at the al-Nasiri Hospital at Cairo, where he had a great many pupils, among them being the historian ibn Abi Usaibiyyah.\n\n The latter declared that Abu al-Fadl was the most skillful physician of the time and that his success in curing the sick was miraculous.\n\n Abu al-Fadl was the author of an Arabic pharmacopoeia in twelve chapters, entitled \"Aḳrabadhin\", and treating chiefly of antidotes.",
+    "Alan Kamil\nAlan C. \"Al\" Kamil is an American experimental psychologist.\n\n He is the Director, School of Biological Sciences and George Holmes Professor of Biological Sciences and Psychology at the University of Nebraska, Lincoln.\n\n Kamil's work focusses on the evolution of memory and adaptive specializations of learning in many animal species, especially the Clark's nutcracker and other birds.\n\n Kamil has published peer reviewed articles on both theoretical aspects of comparative psychology and animal cognition, and on empirical studies of animal learning and memory.\n\n In 2013 Kamil was honoured by the Comparative Cognition Society for his contributions to the study of animal cognition.",
+    "Eenasul Fateh\nEenasul Fateh (Bengali: ঈনাসুল ফাতেহ ; born 3 April 1959), also known by his stage name Aladin, is a Bangladeshi-British cultural practitioner, magician, live artist and former international management consultant.",
+    "Abdal\nAbdāl (\"lit\": substitutes, but which can also mean \"generous\" [\"karīm\"] and \"noble\" [\"sharīf\"]) is a term used in Islamic metaphysics and Islamic mysticism, both Sunni and Shiite, to refer to a particularly important group of God's saints.\n\n In the tradition of Sunni Islam in particular, the concept attained an especially important position in the writings of the Sunni mystics and theologians, whence it appears in the works of Sunni authorities as diverse as Abu Talib al-Makki (d. 956), Ali Hujwiri (d. 1072), Ibn Asakir (d. 1076), Khwaja Abdullah Ansari (d. 1088), and Ibn Khaldun (d. 1406).",
+    "Donald Allen\nDonald Merriam Allen (Iowa, 1912 – San Francisco, August 29, 2004) was an influential editor, publisher, and translator of contemporary American literature.\n\n He is perhaps best known for his project \"The New American Poetry 1945-1960\" (1960), among the several important anthologies of contemporary American innovative writing he made available to the public.\n\n Allen began his working life as a Japanese translator within the US military, serving in WWII.\n\n After his military service, Allen became an editor at Grove Press, where he worked for sixteen years.\n\n He was one of the first translators of the Romanian-French Absurdist playwright Eugène Ionesco, and Allen's 1958 volume \"Four Plays of Eugène Ionesco\" helped to introduce the playwright to American audiences in the 1960s.",
+    "Aladdin's Eatery\nAladdin's Eatery is a chain of franchised restaurants in the American Midwest and South-East, specializing in Lebanese cuisine.\n\n Adapted to American tastes, the sites are fast casual restaurants that also offer take out.",
+    "Abd Allah ibn al-Fadl\nLittle is known of his life, apart from what can be gleaned from manuscripts of his texts.\n\n He was a deacon and the grandson of a bishop.\n\n He received an excellent education in both Arabic and Greek, having studied Arabic grammar with the famous poet Abul ʿAla Al-Maʿarri.\n\n Several of his works and translations were commissioned by notables from Antioch and neighbouring cities in Muslim territory."
+   ]
+  },
+  {
+   "id": "d6880f63d44b7abf",
+   "gold": [
+    {
+     "sentence": "During World War II, Operation Cold Comfort was a failed SAS raid that began with a parachute drop north of Verona on February 17, 1945.",
+     "facts": {
+      "0.0": "Operation Cold Comfort was a failed SAS raid.",
+      "0.1": "Operation Cold Comfort took place during World War II.",
+      "0.2": "Operation Cold Comfort began with a parachute drop.",
+      "0.3": "The parachute drop of Operation Cold Comfort was north of Verona.",
+      "0.4": "The parachute drop of Operation Cold Comfort was on February 17, 1945."
+     }
+    },
+    {
+     "sentence": " The SAS was founded in 1941 as a regiment, and later reconstituted as a corps in 1950.",
+     "facts": {
+      "1.0": "The SAS was founded in 1941 as a regiment.",
+      "1.1": "The SAS was later reconstituted as a corps.",
+      "1.2": "The SAS was reconstituted as a corps in 1950."
+     }
+    }
+   ],
+   "items": [
+    "Cold Comfort (Inside No. 9)\n\"Cold Comfort\" is the fourth episode of the second series of the British dark comedy anthology television programme \"Inside No. 9\".\n\n The episode, which was written and directed by Steve Pemberton and Reece Shearsmith, was first broadcast on 16 April 2015 on BBC Two.\n\n Most of \"Cold Comfort\" is composed of a stream from a fixed camera on the desk of Andy, the protagonist, with smaller pictures on the side of the screen, in the style of a CCTV feed.\n\n \"Cold Comfort\" was filmed over two and a half days in Twickenham, and was, like \"A Quiet Night In\" from \"Inside No. 9\"'s first series, highly experimental.\n\n It was Pemberton and Shearsmith's directorial debut.",
+    "Jan Breytenbach\nJan Dirk Breytenbach {'1': \", '2': \", '3': \", '4': \"} (born 4 July 1933) was appointed by General Fritz Loots, the founder of the South African Special Forces Brigade, as the first commander of 1 Reconnaissance Commando, the first unit founded within the South African Special Forces.\n\n He was also appointed as the first commander of the 32 Battalion, known colloquially as \"Buffalo Battalion\", as well as 44 Parachute Brigade.",
+    "The passage profiles special forces worldwide: the Philippine Army’s airborne regiment trains with U.S. Green Berets; Britain’s SAS conducts reconnaissance, counterterrorism, direct action, and hostage rescue; Singapore’s SOF serves in the SOTF; Japan’s WWII Giretsu paratroopers targeted Allied air raids; Chile’s Iquique commandos belong to an armored brigade; Jordan’s 1963-founded forces perform intelligence, rescue, counterterrorism, and precision strikes; South African Jan B",
+    "Orlov let\nOrlov let (\"Eagle's Flight\") was the name of an anti-terrorist operation conducted by the Montenegrin police to arrest a group of Albanians who planned terrorist attacks and an armed conflict in Albanian-inhabited parts of Montenegro.\n\n The group of 17 people planned operations from 2004 to their arrest on the night of 10/11 September 2006.\n\n Weapons and explosive material were found in police raids.\n\n The group's main operative was the destroying of cultural and religious buildings (Orthodox) in Albanian-inhabited territory.\n\n The group was organised by an Albanian association based in Detroit, and members of the Kosovo Liberation Army, from which they received financial aid and smuggled arms into Montenegro.\n\n The group was given a total sentence of 51 years of prison.\n\n Relations between the state and the Albanian minority strained after the event.",
+    "Special Air Service\nThe Special Air Service (SAS) is a special forces unit of the British Army.\n\n The SAS was founded in 1941 as a regiment, and later reconstituted as a corps in 1950.\n\n The unit undertakes a number of roles including covert reconnaissance, counter-terrorism, direct action and hostage rescue.",
+    "Joint Special Operations Command (Jordan)\nThe Special Operation Forces of the Jordanian Armed Forces serve as Jordan's premiere special forces unit.\n\n Founded on April 15, 1963 on the orders of the late King Hussein, its primary roles include reconnaissance, counter-terrorism, search and evacuation, intelligence gathering combat, and the protection of key sites.\n\n The Special Operation Forces are also charged with carrying out precision strikes against critical enemy targets.\n\n The 14,000-strong unit are equipped and trained to be able to operate behind enemy lines for long periods without any logistical support, and is considered one of the finest special forces units in the world.",
+    "Operation Barras\nOperation Barras was a British Army operation that took place in Sierra Leone on 10 September 2000, during the late stages of that nation's civil war.\n\n The operation aimed to release five British soldiers of the Royal Irish Regiment who had been held by a militia group known as the \"West Side Boys\".\n\n The soldiers were part of a patrol that was returning from a visit to Jordanian peacekeepers attached to the United Nations Mission in Sierra Leone (UNAMSIL) at Masiaka on 25 August 2000 when they turned off the main road and down a track towards the village of Magbeni.\n\n There the patrol was overwhelmed by a large number of heavily armed rebels, taken prisoner, and transported to Gberi Bana on the opposite side of Rokel Creek.",
+    "Special Operations Force (Singapore)\nThe Special Operations Force (SOF) is the Republic's Army Special Forces composed of highly trained elite soldiers within the Singapore Armed Forces Commando Formation and an essential component of the joint special forces unit Special Operations Task Force (SOTF).\n\n According to the Principles of Special Forces, the Republic's special forces thrive on their exceptional qualities and advanced skills, consisting highly adaptive individuals who are independent and can operate independently, and the Republic's special forces soldiers cannot be mass-produced and must be managed carefully.",
+    "Operation Cold Comfort\nDuring World War II, Operation Cold Comfort was a failed SAS raid that began with a parachute drop north of Verona on February 17, 1945.\n\n It was later renamed Zombie.",
+    "The entries cover Allied operations across World War II and one ancient battle: the 1943 invasion of Italy (Salerno, Calabria, Taranto); Normandy’s 1944 Epsom offensive and Gold Beach landings; the 21st Army Group’s campaign in northwest Europe; and the 1945 Allied advance into Germany and southern Germany. Other events include Operation Barras’s 2000 rescue of British hostages in Sierra Leone, the deadly 1943 Naples post-office bombing"
+   ]
+  },
+  {
+   "id": "d0d04b5fdd7a80e4",
+   "gold": [
+    {
+     "sentence": " Her favorite events are 800 metres and 1500 metres.",
+     "facts": {
+      "0.0": "This person's favorite events are the 800 metres.",
+      "0.1": "This person's favorite events are the 1500 metres."
+     }
+    },
+    {
+     "sentence": " The distance has been contested at the Summer Olympics since 1896 and the World Championships in Athletics since 1983.",
+     "facts": {
+      "1.0": "The distance has been contested at the Summer Olympics since 1896.",
+      "1.1": "The distance has been contested at the World Championships in Athletics since 1983."
+     }
+    }
+   ],
+   "items": [
+    "Sinimole Paulose\nSinimol Paulose (born 24 June 1983) is an Indian middle distance runner.\n\n Her favorite events are 800 metres and 1500 metres.\n\n In 2009, she received Arjuna Award for her contribution to the Indian athletics.\n\n Sinimol was born in Piravom in Ernakulam district of Kerala state.\n\n She represented India at Beijing Olympics.",
+    "Athletics at the 2002 Asian Games\nAthletics was contested from October 7 to October 14 at the 2002 Asian Games in Busan Asiad Main Stadium, Busan, South Korea.\n\n A total of 460 athletes (comprising 281 men and 179 women) from 39 nations took part in the competition.\n\n Afghanistan, Bhutan, Brunei, Laos and Maldives were the only nations without a representative in the events.",
+    "1500 metres\nThe 1500 metres or 1,500-metre run (typically pronounced 'fifteen-hundred metres') is the foremost middle distance track event in athletics.\n\n The distance has been contested at the Summer Olympics since 1896 and the World Championships in Athletics since 1983.\n\n It is equivalent to 1.5 kilometers or approximately ⁄  miles.",
+    "European 10,000m Cup\nThe European 10,000m Cup is an annual 10,000 metres race for European athletes which was first held in 1997.\n\n The competition is organised by the European Athletics Association and first began as the European 10000 Metres Challenge after the event was removed from the European Cup programme.\n\n The competition has roots in the Iberian 10,000 metres Championships – a competition between Spanish and Portuguese athletes that was held between 1991 and 1996 – and the first five editions of the European 10000 Metres Challenge were held in the Iberian Peninsula.\n\n The event was first held under its current title in 2005.",
+    "Mary Chemweno\nMary Chemweno Koskei is a former Kenyan middle distance runner who specialised in 400 m, 800 m and 1500 m events.\n\n She won the gold medal in the inaugural 1979 African Championships in 800 metres, and another gold medal six years later in 1500 metres at the 1985 edition.\n\n She is also a three-time Kenyan national champion, having won both the 400 and 800 metres events in 1981 as well as the 800 m event again in 1986.\n\n Mid-career, in the early 1980s, she married long-distance runner Kipsubai Koskei.",
+    "Caster Semenya\nMokgadi Caster Semenya Bronze OIB (born 7 January 1991) is a South African middle-distance runner and 2016 Olympic gold medallist.\n\n Semenya won gold in the women's 800 metres at the 2009 World Championships with a time of 1:55.45 and at the 2017 World Championships in her new personal best, 1:55.16.\n\n Semenya also won silver medals at the 2011 World Championships and the 2012 Summer Olympics, both in the 800 metres.\n\n She was the winner of the gold medal in the 800 metre event at the 2016 Summer Olympics.",
+    "Siegmar Ohlemann\nSiegmar (\"Sig\") Ohlemann (born May 11, 1938) is a retired middle distance runner, who represented Canada in three events (800 metres, 4 × 100 metres and 4 × 400 metres) at the 1960 Summer Olympics in Rome, Italy.\n\n He claimed the silver medal in 800 metres at the 1963 Pan American Games in Brazil, behind fellow Canadian Don Bertoia.",
+    "John Lindsay (Paralympian)\nJohn Lindsay, OAM (born 29 January 1970) is an Australian Paralympic athlete from Melbourne.\n\n He competed in the 1988 Seoul games in distances ranging from 100 m to 800 m, but did not win any medals.\n\n At the 1992 Barcelona Games, he won a gold medal in the Men's 200 m TW3 event, for which he received a Medal of the Order of Australia, a silver medal in the Men's 100 m TW3 event and a bronze medal in the Men's 400 m TW3 event.\n\n That year, he had a Victorian Institute of Sport scholarship.",
+    "John Lindsay (Paralympian)\nThat year, he had a Victorian Institute of Sport scholarship.\n\n He was also working as a fitness instructor in 1992, held world records in the 100 m and 200 m events, and was ranked 6th in the world in the 400 m.\n\n He won a gold medal in the men's athletics 100 m T52 event at the 1996 Summer Paralympics with a time of 15.22, a silver medal in the 200 m T52 event with a time of 27.38, and a bronze medal in the 400 m T52 event with a time of 52.93.\n\n At the 2000 Sydney Games, he won a gold medal in the Men's 100 m T53 event, a silver medal as part of the Men's 4x100 m Relay T54 team, and a bronze medal in the Men's 200 m T53 event; he was also part of the Men's 4x400 m Relay T54 team, which was the only one to qualify in its heat, but it did not make it to the finals.",
+    "K. M. Binu\nKalayathumkuzhi Mathews Binu (born 20 December 1980) is an Indian track and field athlete from Kerala who specializes in 400 metres and 800 metres.\n\n He holds the current 400 metres national record of 45.48 s set at the 2004 Athens Olympics on 20 August 2004.\n\n He broke the 44-year-old Olympics mark (by an Indian) held by Milkha Singh who set an Indian National Record with a timing of 45.73 s at the 1960 Rome Olympics.\n\n He and his elder sister K. M. Beenamol made history when they became the first Indian siblings to win medals in a major international competition.\n\n They won medals at the Busan Asian Games (2002).\n\n While Binu won the men's 800 metres silver, his sister won the gold medal in the women's event.\n\n Binu received the Arjuna Award for the year 2006 for his achievements in the Indian athletics."
+   ]
+  },
+  {
+   "id": "e0e9031a1ca03602",
+   "gold": [
+    {
+     "sentence": " Related fields of study include Islamic philosophy and Sufism.",
+     "facts": {
+      "0.0": "Related fields of study include Islamic philosophy.",
+      "0.1": "Related fields of study include Sufism."
+     }
+    },
+    {
+     "sentence": "Sufism or Taṣawwuf (Arabic: الْتَّصَوُّف [sect]; personal noun: صُوفِيّ - \"ṣūfiyy\"/ \"ṣūfī\", مُتَصَوّف - \"mutaṣawwūf\"), which is often defined as \"Islamic mysticism\", \"the inward dimension of Islam\", or \"the phenomenon of mysticism within Islam\", is a mystical trend in Islam \"characterized ... [by particular] values, ritual practices, doctrines and institutions\" which began very early on in Islamic history and which represents \"the main manifestation and the most important and central crystallization of\" mystical practice in Islam.",
+     "facts": {
+      "1.0": "Sufism is also called Taṣawwuf.",
+      "1.1": "The Arabic name for Sufism is الْتَّصَوُّف [sect].",
+      "1.2": "The personal noun for a Sufi is صُوفِيّ, transliterated as 'ṣūfiyy' or 'ṣūfī'.",
+      "1.3": "The personal noun mutaṣawwūf is مُتَصَوّف.",
+      "1.4": "Sufism is often defined as 'Islamic mysticism'.",
+      "1.5": "Sufism is often defined as 'the inward dimension of Islam'.",
+      "1.6": "Sufism is often defined as 'the phenomenon of mysticism within Islam'.",
+      "1.7": "Sufism is a mystical trend in Islam.",
+      "1.8": "Sufism is characterized by particular values, ritual practices, doctrines and institutions.",
+      "1.9": "Sufism began very early on in Islamic history.",
+      "1.10": "Sufism represents the main manifestation of mystical practice in Islam.",
+      "1.11": "Sufism represents the most important and central crystallization of mystical practice in Islam."
+     }
+    }
+   ],
+   "items": [
+    "Madonna Studies\nMadonna Studies is a term which has been used to refer to a development of a field in several studios since late 1980s.\n\n One writer described the \"institutionalization of a major subdivision of American media studies into Madonna studies\".\n\n The field related to the study of and interpretation of the work of American pop musician Madonna using an interdisciplinary approach incorporating cultural studies and media studies.\n\n A notable compendium of essays titled \"The Madonna Connection\" was published in 1992.\n\n Controversy over this field of study stemmed from discussions over the intellectual worth of pursuing academic inquiry into a pop musician, with some arguing the field was nothing more than pop cultural commentary.",
+    "A Hidden Treasure\nHidden Treasure (Arabic: کنزاً مخفیاً‎ ‎ ) is a Hadith Qudsi that has a very prominent role in Islamic mysticism and Islamic philosophy.",
+    "Sufism\nSufism or Taṣawwuf (Arabic: الْتَّصَوُّف [sect]; personal noun: صُوفِيّ - \"ṣūfiyy\"/ \"ṣūfī\", مُتَصَوّف - \"mutaṣawwūf\"), which is often defined as \"Islamic mysticism\", \"the inward dimension of Islam\", or \"the phenomenon of mysticism within Islam\", is a mystical trend in Islam \"characterized ... [by particular] values, ritual practices, doctrines and institutions\" which began very early on in Islamic history and which represents \"the main manifestation and the most important and central crystallization of\" mystical practice in Islam.\n\n Although the overwhelming majority of Sufis, both pre-modern and modern, have been adherents of Sunni Islam, there nevertheless also developed certain strands of Sufi practice within the ambit of Shia Islam during the late medieval period.",
+    "Ovamir Anjum\nOvamir Anjum is the Imam Khattab Chair of Islamic Studies at the Department of Philosophy, University of Toledo.\n\n He studies the connections between theology, ethics, politics, and law in classical and medieval Islam, with a subfocus on its comparisons with western thought.\n\n Related fields of study include Islamic philosophy and Sufism.",
+    "Omid Safi\nOmid Safi is an American Professor of Asian and Middle Eastern Studies at Duke University, where he is the Director of Duke Islamic Studies Center, and a columnist for On Being.\n\n Dr. Safi specializes in Islamic mysticism (Sufism), contemporary Islamic thought and medieval Islamic history.\n\n He has served on the board of the Pluralism project at Harvard University and is the co-chair of the steering committee for the Study of Islam and the Islamic Mysticism Group at the American Academy of Religion.\n\n Before joining Duke University, Dr. Safi was a professor at the University of North Carolina Chapel Hill.",
+    "Moinuddin Chishti\n1325) and Amir Khusrow (d. 1325).\n\n As such, Muʿīn al-Dīn Chishtī's legacy rests primarily on his having been \"one of the most outstanding figures in the annals of Islamic mysticism.\"\n\n Additionally, Muʿīn al-Dīn Chishtī is also notable for having been one of the first major Islamic mystics to formally allow his followers to incorporate the \"use of music\" in their devotions, liturgies, and hymns to God, which he did so in order to make the foreign Arab faith more relatable to the indigenous peoples who had recently entered the religion or whom he sought to convert.",
+    "Animality studies\nAnimality studies is an emerging interdisciplinary academic field focused on the cultural study of animals and animality.\n\n It can be distinguished from animal studies and critical animal studies by its resistance to animal rights or animal welfare as an explicit justification for work in this field.\n\n According to Michael Lundblad, \"If animal studies can be seen as work that explores representations of animality and related discourses with an emphasis on advocacy for nonhuman animals, animality studies becomes work that emphasizes the history of animality in relation to human cultural studies, without an explicit call for nonhuman advocacy.\"",
+    "Irfan\nIn Islam, ‘Irfaan (Arabic/Persian/Urdu: عرفان ; Turkish: \"İrfan\" ), also spelt \"Irfaan\" and \"Erfan\", literally ‘knowledge, awareness, wisdom’, is gnosis.\n\n Islamic mysticism can be considered as a vast range that engulfs theoretical and practical and conventional mysticism and has been intertwined with sufism and in some cases they are assumed identical.\n\n however Islamic mysticism is assumed as one of the Islamic sciences alongside theology and philosophy.\n\n Islamic’s mysticism is cognition and knowledge that love has been intertwined through it with structure of revelation in Islam.",
+    "Dawud Tai\nAbu Solaiman Dawud ibn Nosair al-Ta’i, usually referred to as Dawud Tai, (died between 777 and 782) was a Islamic scholar and Sufi mystic.\n\n His disciples included many influential personalities of Islamic mysticism, e.g., Maruf Karkhi and Ahmad al-Buni.",
+    "Reynold A. Nicholson\nReynold Alleyne Nicholson, or R. A. Nicholson (18 August 1868 – 27 August 1945), was an eminent English orientalist, scholar of both Islamic literature and Islamic mysticism and widely regarded as one of the greatest Rumi (Mevlana or Mawlana) scholars and translators in the English language."
+   ]
+  },
+  {
+   "id": "38094abf58405da7",
+   "gold": [
+    {
+     "sentence": " The breed is used for hunting in packs and descends from the old Hound of Saintonge type of large hunting dog.",
+     "facts": {
+      "0.0": "The breed is used for hunting in packs.",
+      "0.1": "The breed descends from the old Hound of Saintonge type of large hunting dog."
+     }
+    },
+    {
+     "sentence": "The Kritikos Lagonikos (Cretan Hound) (Greek:Kρητικός Λαγωνικός) is a hunting breed of dog from the island of Crete, in Greece.",
+     "facts": {
+      "1.0": "The Kritikos Lagonikos, also called the Cretan Hound, is a hunting breed of dog.",
+      "1.1": "The Kritikos Lagonikos has the Greek name Κρητικός Λαγωνικός.",
+      "1.2": "The Kritikos Lagonikos is from the island of Crete, in Greece."
+     }
+    }
+   ],
+   "items": [
+    "Ariegeois\nThe Ariegeois is a breed of dog from the \"département\" of Ariège in the Midi-Pyrenées region of southern France.\n\n It is a medium-sized pack-hunting scenthound deriving from crossing of Grand Bleu de Gascogne and Grand Gascon-Saintongeois hounds with local Briquet dogs.\n\n It is used both as a courser and for driving game to waiting guns.\n\n While most successful with hares, it is also used for hunting deer and boar.\n\n It is distinguished by its friendly nature with other hounds and affection for human companions.",
+    "Grand Anglo-Français Blanc et Noir\nThe Grand Anglo-Français Blanc et Noir (FCI No.323) translated into English as the Great Anglo-French White and Black Hound, is a breed of dog used in hunting as a scenthound, usually in packs.\n\n It is one of the Anglo-French hound breeds which were created by crossing French scenthounds with English (Anglo) Foxhounds.",
+    "Braque Francais\nThe Braques français are hunting dogs, from a very old type of gun dog used for pointing the location of game birds for a hunter.\n\n There are two breeds of Braque français, both from the south of France, the Braque français, type Gascogne (French Pointing Dog - Gascogne type, larger size) and the Braque français, type Pyrénées (French Pointing Dog - Pyrenean type, smaller size) They are popular hunting dogs in France, but are seldom seen elsewhere.",
+    "Chien Français Tricolore\nThe Chien Français Tricolore (FCI No.219) translated into English as the French Tricolour Hound, is a breed of dog of the scenthound type, originating in France.\n\n The breed is used for hunting in packs.",
+    "Grand Bleu de Gascogne\nThe Grand Bleu de Gascogne (FCI No.22) is a breed of dog of the scenthound type, originating in France and used for hunting in packs.\n\n Today's breed is the descendant of a very old type of large hunting dog, and is an important breed in the ancestry of many other hounds.",
+    "Griffon Bleu de Gascogne\nThe Griffon Bleu de Gascogne (FCI No.32) Is a breed of dog of the scenthound type, originating in France, and is a versatile hunting dog, used on small and large game, in packs or individually.\n\n The Griffon Bleu de Gascogne has a speckled, rough coat.",
+    "Grand Anglo-Français Blanc et Orange\nThe Grand Anglo-Français Blanc et Orange (FCI No.324) translated into English as the Great Anglo-French White and Orange Hound, is a breed of dog used in hunting as a scenthound, usually in packs.\n\n It is one of the Anglo-French hound breeds which were created by crossing French scenthounds with English (Anglo) foxhounds.",
+    "Petit Bleu de Gascogne\nThe Petit Bleu de Gascogne (FCI No.31) Is a breed of dog of the scenthound type, originating in France and used for hunting in packs.\n\n Today's breed is the descendant of a very old type of large hunting dog.\n\n The Petit Bleu de Gascogne is not a small (petite) dog, the name comes from its use on small game.",
+    "Chien Français Blanc et Noir\nThe Chien Français Blanc et Noir (FCI No.220) translated into English as the French White and Black Hound, is a breed of dog of the scenthound type, originating in France.\n\n The breed is used for hunting in packs and descends from the old Hound of Saintonge type of large hunting dog.",
+    "Chien Français Blanc et Orange\nThe Chien Français Blanc et Orange (FCI No.316) is a breed of dog of the scenthound type, originating in France.\n\n The breed is used for hunting in packs and descends from the old Hound of Saintonge type of large hunting dog."
+   ]
+  },
+  {
+   "id": "d93c8c1a55d61657",
+   "gold": [
+    {
+     "sentence": "Martin Degville is (born 27 January 1961 in Walsall) is the lead singer and co-songwriter of the UK pop band, Sigue Sigue Sputnik – which had a worldwide hit single in 1986 with \"Love Missile F1-11\" – and six other EMI single releases.",
+     "facts": {
+      "0.0": "Martin Degville was born 27 January 1961 in Walsall.",
+      "0.1": "Martin Degville is the lead singer of the UK pop band Sigue Sigue Sputnik.",
+      "0.2": "Martin Degville is a co-songwriter of Sigue Sigue Sputnik.",
+      "0.3": "Sigue Sigue Sputnik had a worldwide hit single in 1986 with 'Love Missile F1-11'.",
+      "0.4": "Sigue Sigue Sputnik has six other EMI single releases."
+     }
+    },
+    {
+     "sentence": "Paul Richard \"Richie\" Furay (born May 9, 1944) is an American singer, songwriter, and Rock & Roll Hall of Fame member who is best known for forming the bands Buffalo Springfield with Stephen Stills, Neil Young, Bruce Palmer, and Dewey Martin, and Poco with Jim Messina, Rusty Young, George Grantham and Randy Meisner.",
+     "facts": {
+      "1.0": "Paul Richard 'Richie' Furay was born May 9, 1944.",
+      "1.1": "Richie Furay is an American singer.",
+      "1.2": "Richie Furay is an American songwriter.",
+      "1.3": "Richie Furay is a Rock & Roll Hall of Fame member.",
+      "1.4": "Richie Furay is best known for forming Buffalo Springfield with Stephen Stills, Neil Young, Bruce Palmer, and Dewey Martin.",
+      "1.5": "Richie Furay is best known for forming Poco with Jim Messina, Rusty Young, George Grantham, and Randy Meisner."
+     }
+    }
+   ],
+   "items": [
+    "Poco: The Songs of Richie Furay\nPoco: The Songs of Richie Furay is a compilation album consisting of songs by Richie Furay during his tenure with the band Poco, released in 1980.",
+    "Jerry Garcia\nJerome John Garcia (August 1, 1942 – August 9, 1995) was an American singer-songwriter and guitarist, best known for his work as the lead guitarist and as a vocalist with the band the Grateful Dead, which came to prominence during the counterculture era in the 1960s.\n\n Although he disavowed the role, Garcia was viewed by many as the leader or \"spokesman\" of the group.",
+    "Martin Degville\nMartin Degville is (born 27 January 1961 in Walsall) is the lead singer and co-songwriter of the UK pop band, Sigue Sigue Sputnik – which had a worldwide hit single in 1986 with \"Love Missile F1-11\" – and six other EMI single releases.\n\n Sputnik was formed with ex-Generation X bassist Tony James.",
+    "Sunshine Becker\nSunshine Becker (born Sunshine Flower Garcia on July 1, 1972) is an American singer who performed backing vocals for the band Furthur.\n\n Despite her maiden name, Garcia, she is not related to Jerry Garcia, an incorrect assumption made by some because of her involvement with Furthur, a post-Garcia incarnation of the Grateful Dead.\n\n Similarly, despite her first name, Sunshine, she is not to be confused with Sunshine Kesey, daughter of Ken Kesey and Carolyn Adams (aka Mountain Girl or MG), Jerry Garcia's second wife.",
+    "Doug Grean\nDoug Grean is an American record producer, audio engineer, guitarist, based in Los Angeles.\n\n He has worked with artists Sheryl Crow, Ricki Lee Jones, Glen Campbell, Scott Weiland, Slash, Velvet Revolver, Stone Temple Pilots, The Crystal Method, Tim McGraw, Cyndi Lauper, Annabella Lwin (Bow Wow Wow), Corey Glover (Living Color), Camp Freddy, DJ Hurricane and John Taylor (Duran Duran).\n\n Grean was formerly the lead guitarist and touring musical director for Scott Weiland and the Wildabouts.\n\n Some of Grean's television appearances with Weiland include: VH1 Legends, Last Call with Carson Daly, The Tonight Show with Jay Leno, and the Grammy awards with Velvet Revolver as keyboardist, performing \"All Across the Universe\" with Stevie Wonder, Norah Jones, Bono, Steven Tyler, Brian Wilson, and Alison Krauss.",
+    "Dean Martin\nDean Martin (born Dino Paul Crocetti; June 7, 1917 – December 25, 1995) was an American singer, actor, comedian, and film producer.\n\n One of the most popular and enduring American entertainers of the mid-20th century, Martin was nicknamed the \"King of Cool\" for his seemingly effortless charisma and self-assurance.",
+    "Richie Furay\nPaul Richard \"Richie\" Furay (born May 9, 1944) is an American singer, songwriter, and Rock & Roll Hall of Fame member who is best known for forming the bands Buffalo Springfield with Stephen Stills, Neil Young, Bruce Palmer, and Dewey Martin, and Poco with Jim Messina, Rusty Young, George Grantham and Randy Meisner.\n\n His best known song (originally written during his tenure in Buffalo Springfield, but eventually performed by Poco, as well) was \"Kind Woman\", which he wrote for his wife, Nancy.",
+    "Dean Martin Sings\nDean Martin Sings is the first studio album by Italian-American singer Dean Martin, released in 1953.\n\n It is the first long-play 10-inch album recorded by Martin for Capitol Records during two sessions recorded on the evening of November 20, 1952.\n\n The first session was recorded between 5 and 8 PM and it produced five songs featuring string arrangements.\n\n \"There's My Lover\" was recorded but not released.\n\n After a ninety-minute break, Martin was joined by a brass arrangement to record the remaining four songs.\n\n Seven of the eight songs on this album appeared in the Martin & Lewis film, \"The Stooge\".\n\n Two years later, the songs from this 10-inch album would be combined with four newly popular songs recorded between 1951 and 1953 to create a full-length 12-inch album.\n\n The 2005 Collectors' Choice reissue added four bonus songs recorded between 1949 and 1953 and was released with alternative cover artwork.",
+    "Souther–Hillman–Furay Band\nThe Souther Hillman Furay Band (SHF) was a country rock supergroup led by singer-songwriters Richie Furay (Buffalo Springfield, Poco), Chris Hillman (The Byrds, The Flying Burrito Brothers, Manassas), and J.D. Souther (Longbranch Pennywhistle, noted songwriter for Linda Ronstadt and the Eagles).\n\n The band recorded two albums during the 1970s before breaking up due to disagreements between the members.",
+    "Martin Flavin\nMartin Archer Flavin (November 2, 1883 – December 27, 1967) was an American playwright and novelist."
+   ]
+  },
+  {
+   "id": "f7fd7f56455aa1d2",
+   "gold": [
+    {
+     "sentence": " He was the brother of Alfred Jodl, Chief of the Operations Staff of the OKW.",
+     "facts": {
+      "0.0": "The person described in this sentence was the brother of Alfred Jodl.",
+      "0.1": "Alfred Jodl was Chief of the Operations Staff of the OKW."
+     }
+    },
+    {
+     "sentence": "Alfred Josef Ferdinand Jodl (   ; 10 May 1890 – 16 October 1946) was a German general and war criminal during World War II, who served as the Chief of the Operations Staff of the Armed Forces High Command (Oberkommando der Wehrmacht).",
+     "facts": {
+      "1.0": "Alfred Josef Ferdinand Jodl lived from 10 May 1890 to 16 October 1946.",
+      "1.1": "Alfred Jodl was a German general.",
+      "1.2": "Alfred Jodl was a war criminal during World War II.",
+      "1.3": "Alfred Jodl served as Chief of the Operations Staff of the Armed Forces High Command (Oberkommando der Wehrmacht)."
+     }
+    }
+   ],
+   "items": [
+    "Hasso von Wedel (general)\nHasso von Wedel (20 November 1898 – 3 January 1961) was a German general who commanded the Wehrmacht Propaganda Troops during World War II.\n\n He was directly subordinate to the head of OKW Operations Staff (\"Wehrmachtführungsstab, WFSt.\")\n\n, General Alfred Jodl.\n\n Wedel's Propaganda Department had control over the propaganda units and served to mediate between them and the Reich Propaganda Ministry of Joseph Goebbels.",
+    "List of Generalobersts\nGeneraloberst, in English Colonel General, was, in Germany and Austria-Hungary—the German \"Reichswehr\" and \"Wehrmacht\", the Austro-Hungarian Common Army, and the East German National People's Army, as well as the respective police services—the second highest general officer rank, ranking above full general but below general field marshal.\n\n It was equivalent to \"Generaladmiral\" in the \"Kriegsmarine\" until 1945, or to Flottenadmiral in the \"Volksmarine\" until 1990.\n\n The rank was the highest ordinary military rank and the highest military rank awarded in peacetime; the higher rank of general field marshal was only awarded in wartime by the head of state.\n\n In general, a Generaloberst had the same privileges as a general field marshal.",
+    "Alfred Jodl\nAlfred Josef Ferdinand Jodl (   ; 10 May 1890 – 16 October 1946) was a German general and war criminal during World War II, who served as the Chief of the Operations Staff of the Armed Forces High Command (Oberkommando der Wehrmacht).",
+    "Walter Dornberger\nMajor-General Dr. Walter Robert Dornberger (6 September 1895 – 27 June 1980) was a German Army artillery officer whose career spanned World War I and World War II.\n\n He was a leader of Nazi Germany's V-2 rocket program and other projects at the Peenemünde Army Research Center.",
+    "Ludwig Beck\nLudwig August Theodor Beck (29 June 1880 – 21 July 1944) was a German general and Chief of the German General Staff during the early years of the Nazi regime in Germany before World War II.\n\n Ludwig Beck was never a member of the Nazi Party, though in the early 1930s he supported Adolf Hitler's forceful denunciation of the Versailles Treaty and belief in the need for Germany to rearm.\n\n Beck had grave misgivings regarding the Nazi demand that all German officers swear an oath of fealty to the person of Hitler in 1934, though he believed that Germany needed strong government and that Hitler could successfully provide this so long as he was influenced by traditional elements within the military rather than the SA and SS.",
+    "Helmuth von Moltke the Younger\nHelmuth Johann Ludwig von Moltke (] ; 23 May 1848 – 18 June 1916), also known as Moltke the Younger, was a nephew of \"Generalfeldmarschall\" (Field Marshal) Helmuth Karl Bernhard von Moltke and served as the Chief of the German General Staff from 1906 to 1914.\n\n The two are often differentiated as \"Moltke the Elder\" and \"Moltke the Younger\".",
+    "Friedrich Jeckeln\nFriedrich Jeckeln (2 February 1895 – 3 February 1946) was a high-ranking official in the SS of Nazi Germany who served as an SS and Police Leader in the occupied Soviet Union during World War II.\n\n Jeckeln was the commander of one of the largest collection of \"Einsatzgruppen\" and was personally responsible for ordering and organizing the deaths of over 100,000 Jews, Slavs, Romani, and other \"undesirables\".\n\n After the end of World War II, Jeckeln was convicted for his crimes by a Soviet military tribunal in Riga, Latvia and executed in 1946.",
+    "Ferdinand Jodl\nFerdinand Alfred Friedrich Jodl (28 November 1896 – 9 June 1956) was a German general during World War II who commanded the Mountain Corps Norway during the Petsamo–Kirkenes Offensive.\n\n He was the brother of Alfred Jodl, Chief of the Operations Staff of the OKW.\n\n Ferdinand Jodl was acquitted by a German court.",
+    "Franz Halder\nFranz Halder (30 June 1884 – 2 April 1972) was a German general and the chief of the \"Oberkommando des Heeres\" staff (OKH, Army High Command) from 1938 until September 1942, when he was dismissed after frequent disagreements with Adolf Hitler.\n\n Until December 1941 Halder's military position corresponded to the old Chief of the General Staff position, which during World War I had been the highest military office in the German Imperial Army.\n\n Halder's diary during his time as chief of OKH General Staff has been a source for authors that have written about such subjects as Hitler, World War II and the Nazi Party.\n\n In William Shirer's \"The Rise and Fall of the Third Reich\", Halder's diary is cited hundreds of times.",
+    "Herbert Büchs\nHerbert Büchs (20 November 1913 – 19 May 1996) was a Lieutenant General of the German Air Force and a former Luftwaffe staff officer in Nazi Germany's Oberkommando der Wehrmacht (OKW) during World War II.\n\n As second adjutant to General Alfred Jodl with the rank of Major he is notable for being present in the conference room when the 20 July plot bomb exploded in 1944."
+   ]
+  },
+  {
+   "id": "f93b894826970184",
+   "gold": [
+    {
+     "sentence": "Wilmington International Airport (IATA: ILM, ICAO: KILM, FAA LID: ILM) is a public airport located just north of Wilmington, North Carolina, in unincorporated Wrightsboro, Cape Fear Township, New Hanover County.",
+     "facts": {
+      "0.0": "Wilmington International Airport has the IATA code ILM.",
+      "0.1": "Wilmington International Airport has the ICAO code KILM.",
+      "0.2": "Wilmington International Airport has the FAA LID ILM.",
+      "0.3": "Wilmington International Airport is a public airport.",
+      "0.4": "Wilmington International Airport is located just north of Wilmington, North Carolina.",
+      "0.5": "Wilmington International Airport is located in unincorporated Wrightsboro, Cape Fear Township, New Hanover County."
+     }
+    },
+    {
+     "sentence": "Texarkana Regional Airport (IATA: TXK, ICAO: KTXK, FAA LID: TXK) , also known as Webb Field, is a public use airport located three nautical miles (6 km) northeast of the central business district of Texarkana, a city in Miller County, Arkansas, United States.",
+     "facts": {
+      "1.0": "Texarkana Regional Airport has the IATA code TXK.",
+      "1.1": "Texarkana Regional Airport has the ICAO code KTXK.",
+      "1.2": "Texarkana Regional Airport has the FAA LID TXK.",
+      "1.3": "Texarkana Regional Airport is also known as Webb Field.",
+      "1.4": "Texarkana Regional Airport is a public use airport.",
+      "1.5": "Texarkana Regional Airport is located three nautical miles (6 km) northeast of the central business district of Texarkana.",
+      "1.6": "Texarkana is a city in Miller County, Arkansas, United States."
+     }
+    }
+   ],
+   "items": [
+    "Wilmington Airport (Delaware)\nWilmington Airport (IATA: ILG) (also known as Wilmington/Philadelphia Regional Airport, New Castle County Airport, or New Castle Airport) is an airport located in unincorporated New Castle County, Delaware near Wilmington, Delaware.\n\n Owned by the Delaware River and Bay Authority, it is five miles (8 km) south of Wilmington and about 30 miles (50 km) from Philadelphia.\n\n It is included in the Federal Aviation Administration (FAA) National Plan of Integrated Airport Systems for 2017–2021, in which it is categorized as a non-hub primary commercial service facility.",
+    "Sharp County Regional Airport\nSharp County Regional Airport (IATA: CKK, ICAO: KCVK, FAA LID: CVK) is a public-use airport in Sharp County, Arkansas, United States.\n\n It is located three nautical miles (4 mi, 6 km) northeast of the central business district of Ash Flat, Arkansas.\n\n The airport is owned by the Sharp County Regional Airport Authority.",
+    "Texarkana Regional Airport\nTexarkana Regional Airport (IATA: TXK, ICAO: KTXK, FAA LID: TXK) , also known as Webb Field, is a public use airport located three nautical miles (6 km) northeast of the central business district of Texarkana, a city in Miller County, Arkansas, United States.\n\n It is owned by the Texarkana Airport Authority.\n\n The airport is located within the city limits of Texarkana, roughly 3 miles east of State Line Avenue.\n\n The front gate opens to the northwest, at the intersection of Arkansas Boulevard and U.S. Route 67.\n\n A Union Pacific Railroad line runs parallel to US 67 on the side of the highway facing the airport.\n\n It is mostly used for general aviation, but is also served by American Eagle.",
+    "Wilmington International Airport\nWilmington International Airport (IATA: ILM, ICAO: KILM, FAA LID: ILM) is a public airport located just north of Wilmington, North Carolina, in unincorporated Wrightsboro, Cape Fear Township, New Hanover County.",
+    "Air Wisconsin\nAir Wisconsin Airlines is a regional airline based at Appleton International Airport in the town of Greenville, Wisconsin, United States, near Appleton.\n\n Air Wisconsin is the largest privately held regional airline in the United States.\n\n It currently operates regional jet flights as American Eagle under contract to American Airlines via a code sharing agreement, serving cities in the U.S. and Canada with hubs at Boston Logan International Airport (BOS), Charlotte Douglas International Airport (CLT), Philadelphia International Airport (PHL) and Ronald Reagan Washington National Airport (DCA) .\n\n Air Wisconsin previously operated United Express service on behalf of United Airlines followed by US Airways Express service on behalf of US Airways prior to becoming an American Eagle regional air carrier.\n\n The company has announced it will once again partner with United Airlines as a United Express code sharing air carrier with primary hubs to be located at Chicago O'Hare International Airport (ORD) and Washington Dulles International Airport (IAD) beginning in September 2017 and will be \"exclusively operating\" as United Express by March 2018.",
+    "Atlantic Southeast Airlines Flight 2311\nAtlantic Southeast Airlines Flight 2311 was a regularly scheduled commuter flight from Hartsfield–Jackson Atlanta International Airport to Glynco Jetport (since renamed Brunswick Golden Isles Airport) in Brunswick, Georgia on April 5, 1991.\n\n The flight, operated using a twin-turboprop Embraer EMB 120 Brasilia, crashed just north of Brunswick while approaching the airport for landing.\n\n All 23 people aboard the plane were killed, including passengers Sonny Carter and John Tower.\n\n Four years later, another Embraer Brasilia of ASA crashed in the Georgia countryside in similar circumstances, with nine fatalities.",
+    "Raleigh Executive Jetport\nRaleigh Exec: The Raleigh Executive Jetport @ Sanford-Lee County or Raleigh Exec Jetport at Sanford-Lee CountyFAA Airport Master Record for TTA (Form 5010 ) (ICAO: KTTA, FAA LID: TTA) is a public use airport located seven nautical miles (8 mi, 13 km) northeast of the central business district of Sanford, a city in Lee County, North Carolina, United States.\n\n It is owned by the Sanford-Lee County Regional Airport Authority and was previously known as Sanford-Lee County Regional Airport.\n\n This airport is included in the National Plan of Integrated Airport Systems for 2011–2015, which categorized it as a \"reliever airport\" for Raleigh-Durham International Airport.",
+    "Pensacola International Airport\nPensacola International Airport (IATA: PNS, ICAO: KPNS, FAA LID: PNS) , formerly Pensacola Gulf Coast Regional Airport and Pensacola Regional Airport (Hagler Field), is a public use airport three nautical miles (6 km) northeast of the central business district of Pensacola, in Escambia County, Florida, United States.\n\n It is owned by the City of Pensacola.\n\n Despite the name, this airport does not offer direct international flights.\n\n This airport is one of the five major airports in North Florida, others being: Northwest Florida Beaches International Airport, Destin-Fort Walton Beach Airport Tallahassee International Airport, and Jacksonville International Airport.",
+    "San Antonio International Airport\nSan Antonio International Airport (IATA: SAT, ICAO: KSAT, FAA LID: SAT) is an international airport located in San Antonio, Texas and serving the Greater San Antonio metropolitan area.\n\n It is located in Uptown Central San Antonio, about 8 miles north of Downtown.\n\n Its has three runways and covers 2,305 acres (933 ha).\n\n Its elevation is 809 ft above sea level.\n\n SAT is a Class C airport.",
+    "Dane County Regional Airport\nDane County Regional Airport (DCRA) (IATA: MSN, ICAO: KMSN, FAA LID: MSN) (Truax Field) is a civil-military airport located six miles northeast of downtown Madison, the capital of Wisconsin.\n\n In the Federal Aviation Administration (FAA) National Plan of Integrated Airport Systems for 2017–2021, it is categorized as a small-hub primary commercial service facility."
+   ]
+  }
+ ]
+}

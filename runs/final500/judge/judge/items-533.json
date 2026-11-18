@@ -1,0 +1,378 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "35fc844f12b61366",
+   "gold": [
+    {
+     "sentence": "Eucryphia is a small genus of trees and large shrubs native to the south temperate regions of South America and coastal eastern Australia.",
+     "facts": {
+      "0.0": "Eucryphia is a small genus.",
+      "0.1": "Eucryphia consists of trees and large shrubs.",
+      "0.2": "Eucryphia is native to the south temperate regions of South America.",
+      "0.3": "Eucryphia is native to coastal eastern Australia."
+     }
+    },
+    {
+     "sentence": " Sometimes placed in a family of their own, the Eucryphiaceae, more recent classifications place them in the Cunoniaceae.",
+     "facts": {
+      "1.0": "Eucryphia is sometimes placed in a family of its own, the Eucryphiaceae.",
+      "1.1": "More recent classifications place Eucryphia in the Cunoniaceae."
+     }
+    },
+    {
+     "sentence": " There are seven species, two in South America and five in Australia, and several named hybrids.",
+     "facts": {
+      "2.0": "Eucryphia has seven species.",
+      "2.1": "Two Eucryphia species are in South America.",
+      "2.2": "Five Eucryphia species are in Australia.",
+      "2.3": "Eucryphia has several named hybrids."
+     }
+    },
+    {
+     "sentence": "Lepidozamia is a genus of two species of cycad, both endemic to Australia.",
+     "facts": {
+      "3.0": "Lepidozamia is a genus of cycad.",
+      "3.1": "Lepidozamia has two species.",
+      "3.2": "Both Lepidozamia species are endemic to Australia."
+     }
+    }
+   ],
+   "items": [
+    "Cassiope\nCassiope is a genus of 9-12 small shrubby species in the family Ericaceae.\n\n They are native to the Arctic and north temperate montane regions.\n\n The genus is named after Cassiopeia of Greek mythology.\n\n Common names, shared with several other similar related genera, include heather and heath.\n\n They have scale-like leaves lying against the stems, and produce solitary bell-shaped flowers in late spring.\n\n Though hardy, flowers can be damaged by late frosts.",
+    "Lophodermium\nLophodermium is a genus of fungi within the family Rhytismataceae.\n\n The genus contains 145 species and has a global distribution.\n\n Species of this genus are usually observed producing zone lines, conidiomata and ascomata on dead fallen leaves, but at least some are known to colonize living leaves.\n\n In many cases they then live inside the colonized leaf as a symptomless endobiont, where they are regarded as detritivores utilising dead plant matter.\n\n In a few cases they may kill all or part of the leaf prematurely, and there is a substantial literature dealing with those species as plant pathogens.\n\n The genus infects many different plant families but with a notable concentration in the family Pinaceae; many \"Lophodermium\" species are restricted to a single host genus (or even species), but some, particularly those infecting grasses, may infect several genera.\n\n Some are economically important plant pathogens, such as those that cause needlecast disease in European Black Pine, Scots Pine and Red Pine in forestry and christmas tree plantations.",
+    "Eryngium\nEryngium is a genus of flowering plants in the family Apiaceae.\n\n There are about 250 species.\n\n The genus has a cosmopolitan distribution, with the center of diversity in South America.\n\n Common names include eryngo and amethyst sea holly (though the genus is not related to the true hollies, \"Ilex\").",
+    "Eucryphia\nEucryphia is a small genus of trees and large shrubs native to the south temperate regions of South America and coastal eastern Australia.\n\n Sometimes placed in a family of their own, the Eucryphiaceae, more recent classifications place them in the Cunoniaceae.\n\n There are seven species, two in South America and five in Australia, and several named hybrids.\n\n They are mostly evergreen though one species (\"E. glutinosa\") is usually deciduous.",
+    "Eucommia\nEucommia is a genus of small trees now native to China, with a fossil record that shows a much wider distribution.\n\n The single living species, \"Eucommia ulmoides\", is near threatened in the wild, but is widely cultivated in China for its bark, and is highly valued in herbology such as traditional Chinese medicine.",
+    "Zygotritonia\nZygotritonia is a genus of herbaceous, perennial and bulbous plants in the Iris family (Iridaceae).\n\n It contains four species distributed in Tropical Africa.\n\n The genus name is derived from the word zygomorphic (meaning bilabiate), and the apparent resemblance to some species in the genus \"Tritonia\".",
+    "Ammocharis\nAmmocharis is a small genus from sub-Saharan Africa, in the Amaryllidaceae family (subfamily Amaryllidoideae) which includes 7 species distributed in Africa.\n\n The plant grows as a succulent, above-ground bulb, preferring seasonally wet, hot, sandy soils and full sun.",
+    "Ericaceae\nThe Ericaceae are a family of flowering plants, commonly known as the heath or heather family, found most commonly in acid and infertile growing conditions.\n\n The family is large, with c. 4250 known species spread across 124 genera, making it the 14th most species-rich family of flowering plants.\n\n The many well-known and economically important members of the Ericaceae include the cranberry, blueberry, huckleberry, rhododendron (including azaleas), and various common heaths and heathers (\"Erica\", \"Cassiope\", \"Daboecia\", and \"Calluna\" for example).",
+    "Hydrangea\nHydrangea ( ; common names hydrangea or hortensia) is a genus of 70–75 species of flowering plants native to southern and eastern Asia (China, Japan, Korea, the Himalayas, and Indonesia) and the Americas.\n\n By far the greatest species diversity is in eastern Asia, notably China, Japan, and Korea.\n\n Most are shrubs 1 to 3 meters tall, but some are small trees, and others lianas reaching up to 30 m by climbing up trees.\n\n They can be either deciduous or evergreen, though the widely cultivated temperate species are all deciduous.",
+    "Lepidozamia\nLepidozamia is a genus of two species of cycad, both endemic to Australia.\n\n The name, derived from the Greek word lepidos, meaning scaly, refers to the scale-like structure of the stem and leaf bases.\n\n They are native to rainforest climates in eastern Queensland and eastern New South Wales.\n\n They have a chromosome number of 2n = 18."
+   ]
+  },
+  {
+   "id": "7e33d906e30f5adf",
+   "gold": [
+    {
+     "sentence": "Mauritz Stiller (17 July 1883 – 18 November 1928) was a Finnish-Swedish film director, best known for discovering Greta Garbo and bringing her to America.",
+     "facts": {
+      "0.0": "Mauritz Stiller was born on 17 July 1883.",
+      "0.1": "Mauritz Stiller died on 18 November 1928.",
+      "0.2": "Mauritz Stiller was a Finnish-Swedish film director.",
+      "0.3": "Mauritz Stiller was best known for discovering Greta Garbo.",
+      "0.4": "Mauritz Stiller brought Greta Garbo to America."
+     }
+    },
+    {
+     "sentence": "Johannes Grenzfurthner (] ; born 1975 in Vienna) is an award-winning Austrian artist, filmmaker, writer, actor, curator, theatre director and lecturer.",
+     "facts": {
+      "1.0": "Johannes Grenzfurthner was born in 1975 in Vienna.",
+      "1.1": "Johannes Grenzfurthner is an award-winning Austrian artist.",
+      "1.2": "Johannes Grenzfurthner is an Austrian filmmaker.",
+      "1.3": "Johannes Grenzfurthner is an Austrian writer.",
+      "1.4": "Johannes Grenzfurthner is an Austrian actor.",
+      "1.5": "Johannes Grenzfurthner is an Austrian curator.",
+      "1.6": "Johannes Grenzfurthner is an Austrian theatre director.",
+      "1.7": "Johannes Grenzfurthner is an Austrian lecturer."
+     }
+    }
+   ],
+   "items": [
+    "Austrian director-screenwriter Stefan Ruzowitzky made *The Inheritors* (1998), Austria’s unsuccessful Oscar submission, and *The Counterfeiters* (2007), a WWII drama about Nazi forgery at Sachsenhausen that won the foreign-language-film Oscar; Devid Striesow played Bernhard Krüger. German director Wolfgang Becker is known for *Good Bye, Lenin!* (2003), starring Daniel Brühl and Katrin Saß. Other entries",
+    "Devid Striesow\nDevid Striesow (born 1 October 1973 in Bergen auf Rügen) is a German actor.\n\n He starred as \"Sturmbannführer Herzog\" (Bernhard Krüger) in Stefan Ruzowitzky's 2007 film \"The Counterfeiters\", which was awarded the Academy Award for Best Foreign Language Film for that year.",
+    "John Steiner\nJohn Steiner (born 7 January 1941 in Chester, Cheshire) is an English actor.\n\n Tall, thin and gaunt, Steiner attended the Royal Academy of Dramatic Arts and worked for a few years at the BBC.\n\n Steiner featured in a lead role in a television production of \"Design for Living\" by Noël Coward.\n\n Later he found further work primarily in films including \"Marat/Sade\" (1967), and the original \"Bedazzled\" (1967) with Peter Cook and Dudley Moore.\n\n In 1969, Steiner was hired to play a part in the spaghetti western \"Tepepa\", and also appeared opposite Franco Nero in \"White Fang\", directed by Lucio Fulci.",
+    "Stefan Walz\nStefan Walz (born 1963) is a Swiss actor.\n\n His best known role is as Sigmund Jähn in the film \"Good Bye, Lenin!\n\n\".",
+    "Johannes Grenzfurthner\nJohannes Grenzfurthner (] ; born 1975 in Vienna) is an award-winning Austrian artist, filmmaker, writer, actor, curator, theatre director and lecturer.\n\n He is known as the founder, conceptualist and artistic director of monochrom, an international art and theory group.\n\n Most of his artworks are labelled \"monochrom\".",
+    "Mauritz Stiller\nMauritz Stiller (17 July 1883 – 18 November 1928) was a Finnish-Swedish film director, best known for discovering Greta Garbo and bringing her to America.",
+    "Traceroute (film)\nTraceroute is a 2016 Austrian/American documentary film directed by Johannes Grenzfurthner.\n\n The autobiographical documentary and road movie deals with the history, politics and impact of nerd culture.\n\n Grenzfurthner calls his film a \"personal journey into the uncharted depths of nerd culture, a realm full of dangers, creatures and more or less precarious working conditions\", an attempt to \"chase the ghosts of nerddom's past, present and future.\"\n\n The film was co-produced by art group monochrom and Reisenbauer Film.\n\n It features music by Kasson Crooker, Hans Nieswandt, and many others.",
+    "Stefan Ruzowitzky\nStefan Ruzowitzky (born 25 December 1961) is an Austrian film director and screenwriter.",
+    "Willi Forst\nWilli Forst, born Wilhelm Anton Frohs (7 April 1903 – 11 August 1980) was an Austrian actor, screenwriter, film director, film producer and singer.\n\n As a debonair actor he was a darling of the German-speaking film audiences, as a director, one of the most significant makers of the Viennese period musical melodramas and comedies of the 1930s known as \"Wiener Filme\".\n\n From the mid-1930s he also recorded many records, largely of sentimental Viennese songs, for the Odeon Records label owned by Carl Lindström AG.",
+    "The entries survey European films and music drama, 1913–1961. Swedish director Mauritz Stiller’s works include *The Blizzard* (a student saves his family estate), *Erotikon* (a professor’s wife attracts suitors), and *The Saga of Gösta Berling*, Greta Garbo’s breakout film. Hungarian director Béla Gaál made comedies including *The Dream Car*. Other highlights: *Triumph of the Will*, Riefenstahl’s"
+   ]
+  },
+  {
+   "id": "55c8ec0a49539d8a",
+   "gold": [
+    {
+     "sentence": " The name comes from the City of Starachowice, where the factory is located.",
+     "facts": {
+      "0.0": "The name comes from the City of Starachowice.",
+      "0.1": "The factory is located in the City of Starachowice."
+     }
+    },
+    {
+     "sentence": " It was sold in various countries for many years (not only in the Eastern Bloc; for example it was used by the Yemen Army).",
+     "facts": {
+      "1.0": "The item was sold in various countries for many years.",
+      "1.1": "The item was sold in countries beyond the Eastern Bloc.",
+      "1.2": "The item was used by the Yemen Army."
+     }
+    },
+    {
+     "sentence": "The Eastern Bloc was the group of socialist states of Central and Eastern Europe, generally the Soviet Union and the countries of the Warsaw Pact.",
+     "facts": {
+      "2.0": "The Eastern Bloc was the group of socialist states of Central and Eastern Europe.",
+      "2.1": "The Eastern Bloc generally included the Soviet Union.",
+      "2.2": "The Eastern Bloc generally included the countries of the Warsaw Pact."
+     }
+    }
+   ],
+   "items": [
+    "Kolejka (game)\nKolejka ( ; Polish for \"queue\" or \"line (of people)\") is a board game designed by Karol Madaj and launched in February 2011 by Poland's Institute of National Remembrance.\n\n It was designed to teach young generations about the hardships under communism (1945–1989), particularly the difficulty of acquiring consumer goods in the shortage economy.\n\n The game has been described as inspired by \"Monopoly\".",
+    "Monochrom’s fictional Soviet Unterzögersdorf, inspired by creator Johannes Grenzfurthner’s family stories, imagines the USSR’s last enclave in Austria. Liberal arts were skills for civic participation. The Eastern Bloc comprised Soviet-aligned socialist states; the Warsaw Pact was its military alliance. After WWII, about 31 million people, including Germans, were displaced across Central and Eastern Europe. The Curzon Line informed Poland’s eastern-border debate; Kresy, incorporated into Soviet republics",
+    "Leader Trucks\nLeader found their niche in the heavy transport market and built as a rigid 4x4 and 6x6 configuration for tray, tipper and agitator applications, they offered reliable machines in the industries of earth-moving and off-road construction.\n\n Leader was notable for being the first manufacturer to fit Caterpillar engines to trucks, to fit automatic transmissions to diesel trucks in assembly, and the first truck manufacturer in Australia to offer disc brakes.\n\n Leader boasted its components to be 80 percent Australian built with only the engine, transmission and steering box imported.\n\n By 1980, Leader had sold its 1000th truck in Australia and had also sold trucks to New Zealand, South Africa, Hong Kong, China and Indonesia.",
+    "Shaanxi Automobile Group\nShaanxi Automobile Group Co., Ltd. is a Chinese bus and truck manufacturer headquartered in Xi'an, Shaanxi.\n\n It employs around 23,000 employees.\n\n It manufactures heavy duty truck, buses (chassis), medium-size heavy truck and heavy duty axles for trucks.\n\n It utilizes Magna Steyr and MAN SE technologies.\n\n Its bus chassis are sold under the Eurostar Bus brand.",
+    "Daimler, once the world’s largest truckmaker, sold 3 million vehicles in 2016. Mouawad, founded in Beirut in 1891, is a Geneva/Dubai jeweler; Dior is controlled by Bernard Arnault and holds a major LVMH stake. Microsoft My Phone backed up Windows Mobile data (2009–11). Samsung products ranged from budget phones to Galaxy flagships and tablets. SAIC-GM-Wuling sold 1.445 million vehicles",
+    "J. A. Baczewski\nJ. A. Baczewski was a Polish company most well known for its fine spirits such as vodka and gin.\n\n The factory, dating back to the late 18th century, was based in Lwów (Lviv) and until 1939 was one of two most popular Polish export goods.",
+    "FSC Star\nFabryka Samochodów Ciężarowych \"Star\" was a Polish truck manufacturer.\n\n The name comes from the City of Starachowice, where the factory is located.\n\n Their first vehicle was the \"Star 20\" in 1948.\n\n The most popular product was the \"Star 266\".\n\n The 266 model offered very good quality and powerful engines for a low price.\n\n It was sold in various countries for many years (not only in the Eastern Bloc; for example it was used by the Yemen Army).\n\n For many years FSC Star was a state-owned company.\n\n Star is now owned by MAN AG who eliminated the brand in January 2009.",
+    "Optimus S.A.\nOptimus S.A. was a Polish company specializing in assembly of PCs, fiscal systems, and providing complex IT solutions for companies.In the 1990s Optimus was one of the leaders of the Polish computer market.",
+    "Kross SA\nKross is a Polish company within the sports industry that makes bicycles and bicycle frames.\n\n The company is currently the largest in Poland manufacturing bicycles sold in the Polish market.\n\n In 2005 the company sold almost 800,000 products, half of which were exported to 35 countries, 30 of which are in Europe.",
+    "Daimler AG\nDaimler AG (] ) is a German multinational automotive corporation.\n\n Daimler AG is headquartered in Stuttgart, Baden-Württemberg, Germany.\n\n As of 2014, Daimler owns or has shares in a number of car, bus, truck and motorcycle brands including Mercedes-Benz, Mercedes-AMG, Smart Automobile, Detroit Diesel, Freightliner, Western Star, Thomas Built Buses, Setra, BharatBenz, Mitsubishi Fuso, MV Agusta as well as shares in Denza, KAMAZ, Beijing Automotive Group.\n\n The luxury Maybach brand was terminated at the end of 2012, but revived in April 2015 as \"Mercedes-Maybach\" versions of the Mercedes-Benz S-Class and G-Class.\n\n In 2016 Daimler sold 3.0 million vehicles.\n\n By unit sales, Daimler is the thirteenth-largest car manufacturer and is the largest truck manufacturer in the world.\n\n In addition to automobiles, Daimler manufactures buses and provides financial services through its Daimler Financial Services arm.\n\n The company is a component of the Euro Stoxx 50 stock market index."
+   ]
+  },
+  {
+   "id": "37812ad806b01b7b",
+   "gold": [
+    {
+     "sentence": "\"Grow Some Funk of Your Own\" is a song by Elton John.",
+     "facts": {
+      "0.0": "'Grow Some Funk of Your Own' is a song by Elton John."
+     }
+    },
+    {
+     "sentence": "Sir Elton Hercules John, (born Reginald Kenneth Dwight; 25 March 1947), is an English singer, pianist, and composer.",
+     "facts": {
+      "1.0": "Sir Elton Hercules John was born Reginald Kenneth Dwight.",
+      "1.1": "Sir Elton Hercules John was born on 25 March 1947.",
+      "1.2": "Sir Elton Hercules John is an English singer.",
+      "1.3": "Sir Elton Hercules John is an English pianist.",
+      "1.4": "Sir Elton Hercules John is an English composer."
+     }
+    },
+    {
+     "sentence": " John owned Watford Football Club from 1976 to 1987, and 1997 to 2002.",
+     "facts": {
+      "2.0": "Elton John owned Watford Football Club from 1976 to 1987.",
+      "2.1": "Elton John owned Watford Football Club from 1997 to 2002."
+     }
+    }
+   ],
+   "items": [
+    "Elton John\nSir Elton Hercules John, (born Reginald Kenneth Dwight; 25 March 1947), is an English singer, pianist, and composer.\n\n He has worked with lyricist Bernie Taupin as his songwriting partner since 1967; they have collaborated on more than 30 albums to date.\n\n In his five-decade career Elton John has sold more than 300million records, making him one of the best-selling music artists in the world.\n\n He has more than fifty Top 40 hits, including seven consecutive No. 1 US albums, 58 \"Billboard\" Top 40 singles, 27 Top 10, four No. 2 and nine No. 1.\n\n For 31 consecutive years (1970–2000) he had at least one song in the \"Billboard\" Hot 100.\n\n His tribute single, re-penned in dedication to the late Princess Diana, \"Candle in the Wind 1997\" sold over 33million copies worldwide and is the best-selling single in the history of the UK and US singles charts.\n\n He has also composed music, produced records, and has occasionally acted in films.",
+    "Firm Biz\n\"Firm Biz\" is the first single by the Hip hop supergroup The Firm from their singular collaborative LP \"The Album\".\n\n The song was produced by L.E.S, who based the song's track on a sample of Teena Marie's 1981 hit \"Square Biz\".\n\n \"Firm Biz\" also features a chorus performed by former En Vogue singer Dawn Robinson, reworked from the \"Square Biz\" chorus.\n\n AZ raps the first verse of the song, Nas the second, and Foxy Brown the third and final verse.\n\n The song never reached any US chart positions, but was a UK Top 20 hit in 1997.\n\n A remix of the song was released, featuring a verse from Half-A-Mill and a chorus by Mary J. Blige.\n\n The word \"feds\" is censored in the explicit version, in verse 2, performed by Nas, when he says \"Never that though Black .4-4's for feds\".",
+    "The Happenings\nThe Happenings are a pop music group that originated in the 1960s.\n\n Members of the original group, created in the spring of 1961 and initially called \"The Four Grads\" because all had just graduated from high school in Paterson, New Jersey, were Bob Miranda, David Libert, Tom Giuliano, and Ralph DiVito.\n\n In 1968 DiVito was replaced by Bernie LaPorta and Lenny Conforti also joined to play drums in the touring band.\n\n Both LaPorta and Conforti took a hiatus from the northern New Jersey band, The Emerald Experience, to play and tour with The Happenings.\n\n That lineup performed mostly at colleges and universities until 1970, when Libert left the band to manage other groups, including George Clinton and Parliament-Funkadelic, Living Colour, Brian Auger, Vanilla Fudge, The Runaways (Cherie Currie, Joan Jett, Lita Ford), Mother's Finest, Alice Cooper and Evelyn \"Champagne\" King.",
+    "Beasts of Bourbon\nThe Cramps-influenced swamp-rock of old had been discarded for a more adventurous slab of gutbucket blues and avant-garde weirdness.\n\n Perkins' voice had matured into an authentic blues growl\".\n\n Their fifth studio album, \"Gone\" (January 1997), reached the Top 50 ARIA Albums Chart.\n\n Their seventh studio album, \"\"Little Animals\" (21 April 2007) on Albert Productions, which also peaked into the Top 50.",
+    "Doug Grean\nDoug Grean is an American record producer, audio engineer, guitarist, based in Los Angeles.\n\n He has worked with artists Sheryl Crow, Ricki Lee Jones, Glen Campbell, Scott Weiland, Slash, Velvet Revolver, Stone Temple Pilots, The Crystal Method, Tim McGraw, Cyndi Lauper, Annabella Lwin (Bow Wow Wow), Corey Glover (Living Color), Camp Freddy, DJ Hurricane and John Taylor (Duran Duran).\n\n Grean was formerly the lead guitarist and touring musical director for Scott Weiland and the Wildabouts.\n\n Some of Grean's television appearances with Weiland include: VH1 Legends, Last Call with Carson Daly, The Tonight Show with Jay Leno, and the Grammy awards with Velvet Revolver as keyboardist, performing \"All Across the Universe\" with Stevie Wonder, Norah Jones, Bono, Steven Tyler, Brian Wilson, and Alison Krauss.",
+    "Grow Some Funk of Your Own\n\"Grow Some Funk of Your Own\" is a song by Elton John.\n\n It was released as a single in 1976 and comes from his album \"Rock of the Westies\".\n\n It shared its A-side status with \"I Feel Like a Bullet (In the Gun of Robert Ford)\".\n\n The song is considered to be one of John's heavier rock songs.\n\n The song went to #14 on the \"Billboard\" Hot 100, but in Britain broke a five-year run of successful singles by failing to reach the Top 50 despite extensive radio play.\n\n Although the singles chart listed only \"Funk\" and not \"Bullet\", the latter song was given equal billing in later \"Billboard\" singles chart books.",
+    "John Alexander (footballer, born 1955)\nJohn Alexander (born 5 October 1955) is an English former footballer who holds the post of club secretary at Manchester United.\n\n Born in Liverpool, Alexander began his football career with a club called Ulysses, before being picked up by Millwall, for whom he made his league debut in 1976.\n\n After scoring twice in 15 appearances over the course of two years with Millwall, he moved to Reading; he enjoyed greater success with Reading, scoring nine goals in 25 games.\n\n In 1981, he joined Northampton Town, but spent just one season with them before retiring from football at the age of 26 in 1982.\n\n Upon retiring from football, Alexander got a job with the BBC, but he later returned to football as club secretary at Watford.\n\n In 2000, he took up the same post at Tottenham Hotspur, spending 10 years there before applying for the same job at Manchester United, where he would replace the retiring Ken Ramsden.\n\n He took over at Manchester United on 1 July 2010.\n\n He is the uncle of Liverpool player Trent Alexander-Arnold.",
+    "Elton John\nHe has also composed music, produced records, and has occasionally acted in films.\n\n John owned Watford Football Club from 1976 to 1987, and 1997 to 2002.\n\n He is an honorary Life President of the club, and in 2014 had a stand named after him at the club's home stadium.",
+    "Blitz Kids\nThe Blitz Kids were a group of young people who frequented the weekly Blitz club-night in Covent Garden, London in 1979-80, and are credited with launching the New Romantic subcultural movement.\n\n It was Andrew Czezowski (Ex manager of The Damned) and Susan Carrington who went on to start The Roxy club with Barry Jones that introduced Steve Strange and Rusty Egan to the Blitz in Covent Garden, which started the New Romantic Movement.\n\n Among the many attendees were Rusty Egan, Steve Strange, Boy George, Marilyn, Alice Temple, Perri Lister, Princess Julia, Philip Sallon, Carl Teper and Martin Degville (later to be the frontman of Tony James' Sigue Sigue Sputnik).\n\n Crucially, the club lay between two art colleges (St Martin's School and Central School) and became a testbed for student fashion designers who set London ablaze during the 1980s.",
+    "Knitting Factory Records\nKnitting Factory Records is an independent American music label that is notable for promoting a variety of artists, including the music of deceased Nigerian political activist Fela Kuti.\n\n The label promotes a variety of music artists including Ages and Ages, Ash Black Bufflo, Cuong Vu, Graham Haynes, Femi Kuti, Gary Lucas, Lumerians, Thomas Chapin, Patrolled By Radar, Joe Morris, Rachid Taha, Seun Kuti, and Shilpa Ray and her Happy Hookers."
+   ]
+  },
+  {
+   "id": "619709ccebed4d6a",
+   "gold": [
+    {
+     "sentence": "Henderson Point is a census-designated place (CDP) in Harrison County, Mississippi, United States.",
+     "facts": {
+      "0.0": "Henderson Point is a census-designated place (CDP).",
+      "0.1": "Henderson Point is in Harrison County, Mississippi, United States."
+     }
+    },
+    {
+     "sentence": " Along with the adjoining city of Gulfport, Biloxi is a county seat of Harrison County.",
+     "facts": {
+      "1.0": "Gulfport is a city adjoining Biloxi.",
+      "1.1": "Biloxi is a county seat of Harrison County."
+     }
+    }
+   ],
+   "items": [
+    "Henderson, Texas\nHenderson is a city in Rusk County, northeast Texas, United States.\n\n The population was 13,712 at the 2010 census.\n\n It is the county seat of Rusk County.\n\n Henderson is named for James Pinckney Henderson, the first governor of Texas.",
+    "Henderson Point, Mississippi\nHenderson Point is a census-designated place (CDP) in Harrison County, Mississippi, United States.\n\n It is part of the Gulfport–Biloxi Metropolitan Statistical Area.\n\n The population was 170 at the 2010 census.",
+    "Jasper County Community Unit School District 1\nJasper County Community Unit School District 1 is a unified school district based in Jasper County's county seat of Newton, Illinois; it is the only school district in the county and is, consequently, the main educational body in all of Jasper County, although it serves portions of Effingham County and Cumberland County as well.\n\n This school district is composed of six schools in total; four elementary schools, one junior high school, and one high school.\n\n There is also a prekindergarten program run at the high school of the district should parents wish to enroll their children early.\n\n Willow Hill Elementary School, which is located in the village of its namesake, serves only kindergarteners; its proximity to the county seat and central position in the county allows its students to dawn from all parts of the county and still have easy access to the elementary school they will attend.\n\n The principal of Willow Hill is Dave Parker.\n\n Grove Elementary School is located in Island Grove, Illinois, the highest point of elevation in the county.\n\n Grove Elementary School educates students from kindergarten to grade six, and it runs a prekindergarten program as well.\n\n Craig Carr is the principal of this school.",
+    "Henderson County, Kentucky\nHenderson County is a county located in the U.S. state of Kentucky.\n\n As of the 2010 census, the population was 46,250.\n\n The county seat is Henderson.\n\n The county was formed in 1798 and named for Colonel Richard Henderson who purchased 17,000,000 acre of land from the Cherokee Indians, part of which would eventually make up the county.",
+    "Paulding, Mississippi\nPaulding is an unincorporated community in and one of the two county seats of Jasper County, Mississippi.\n\n It is the only unincorporated county seat in Mississippi.\n\n Settled in 1833, it was named by United States settlers in honor of Revolutionary War hero John Paulding.\n\n After its citizens refused to contribute to a new railroad, the community was bypassed in favor of Bay Springs, Mississippi, which was designated a railroad stop to the west and the second county seat.\n\n It attracted more development and industry.",
+    "Raeford, North Carolina\nRaeford is a city in Hoke County, North Carolina, United States.\n\n The population was 4,626 at the 2010 census.\n\n It is the county seat of Hoke County.\n\n The county was named after Confederate General Robert F. Hoke, a North Carolina native.",
+    "Hendersonville, North Carolina\nHendersonville is a city in Henderson County, North Carolina United States.\n\n This city is 22 miles south of Asheville.\n\n It is the county seat of Henderson County.\n\n Like the county, the city is named for 19th-century North Carolina Supreme Court Chief Justice Leonard Henderson.",
+    "McIntosh County Seat War\nThe McIntosh County Seat War was a dispute in Oklahoma over the location of the McIntosh County seat that took place between 1907 and 1909.\n\n Following a pair of elections that resulted in the town of Checotah being designated as the new county seat, the people of Eufaula refused to hand over the county records.\n\n As a result, a group of heavily armed men from Chectotah attempted to seize the records, but were forced to surrender during the gunbattle that ensued.\n\n One year later, after another close election, Eufaula became the permanent county seat.",
+    "Piney Woods Country Life School\nThe Piney Woods Country Life School (or The Piney Woods School) is a co-educational independent historically African-American boarding school for grades 9-12 in Piney Woods, unincorporated Rankin County, Mississippi.\n\n It is 21 mi south of Jackson.\n\n It is one of four remaining historically African-American boarding schools in the United States.\n\n It is currently the largest African-American boarding school, as well as being the second oldest continually operating African-American boarding school.",
+    "Biloxi, Mississippi\nBiloxi ( ) is a city in Harrison County, Mississippi, United States.\n\n The 2010 United States Census recorded the population as 44,054, and in 2016 the estimated population was 45,975.\n\n Along with the adjoining city of Gulfport, Biloxi is a county seat of Harrison County."
+   ]
+  },
+  {
+   "id": "46d45a7f93ba3948",
+   "gold": [
+    {
+     "sentence": " Formed by Corgan and guitarist James Iha in Chicago, Illinois, in 1988, the band quickly gained steam with the addition of bassist D'arcy Wretzky and drummer Jimmy Chamberlin.",
+     "facts": {
+      "0.0": "The band was formed by Corgan and guitarist James Iha.",
+      "0.1": "The band was formed in Chicago, Illinois, in 1988.",
+      "0.2": "The band quickly gained steam with the addition of bassist D'arcy Wretzky.",
+      "0.3": "The band quickly gained steam with the addition of drummer Jimmy Chamberlin."
+     }
+    },
+    {
+     "sentence": "Greek Fire is an American rock band from St. Louis, Missouri.",
+     "facts": {
+      "1.0": "Greek Fire is an American rock band.",
+      "1.1": "Greek Fire is from St. Louis, Missouri."
+     }
+    }
+   ],
+   "items": [
+    "Greek Fire (band)\nGreek Fire is an American rock band from St. Louis, Missouri.\n\n The band was formed in 2008 by members of Story of the Year and Maybe Today.\n\n Since formation, Greek Fire has released a self-titled EP, a single titled \"Doesn't Matter Anyway\", on August 16, 2011, they released their debut, full-length album, \"Deus Ex Machina\", and have recently announced a new addition to the \"Lost/Found\" EPs titled \"Broken\" set to be released before \"Found\".",
+    "Zeitgeist (The Smashing Pumpkins album)\nZeitgeist is the seventh album by American alternative rock band The Smashing Pumpkins, released on July 10, 2007 in the United States and Canada.\n\n It was the first album The Smashing Pumpkins released after their 2000 disbandment and 2005 reunion.\n\n The album was produced by Roy Thomas Baker, Billy Corgan, Jimmy Chamberlin, and Terry Date.\n\n The album would be Chamberlin's last with the band before his departure in 2009.\n\n The album debuted strongly, but sales soon decreased, and critical reception was mixed.\n\n It was certified Gold in the United States on February 1, 2008.",
+    "1979 (song)\n\"1979\" is a song by American alternative rock band the Smashing Pumpkins.\n\n Released in 1996 as the second single from their third studio album, \"Mellon Collie and the Infinite Sadness\", \"1979\" was written by frontman Billy Corgan, and features loops and samples that were uncharacteristic of previous Smashing Pumpkins songs.\n\n The song was written as a coming of age story by Corgan.\n\n In the year 1979, Corgan was 12 and this is what he considered his transition into adolescence.\n\n The song was popular with critics and fans; Allmusic's Amy Hanson called it a \"somewhat surprising hit\".\n\n The song was nominated for the Record of the Year and Best Rock Performance by a Duo or Group with Vocal at the 39th Annual Grammy Awards, and won an MTV Video Music Award for Best Alternative Video.\n\n In 2012, it was voted the second-best Smashing Pumpkins song by Rolling Stone magazine readers.",
+    "List of the Smashing Pumpkins band members\nThe Smashing Pumpkins are an alternative rock band formed in Chicago, Illinois in 1988.\n\n The band was formed by guitarist/vocalist Billy Corgan and guitarist James Iha after the demise of Corgan's first band, The Marked.\n\n Since its inception, The Smashing Pumpkins has gone through multiple line-up changes, with Corgan the only consistent member.",
+    "The Aeroplane Flies High\nThe Aeroplane Flies High is a five-disc box set released by American alternative rock band The Smashing Pumpkins in 1996.\n\n It contains expanded versions of the five singles from their album \"Mellon Collie and the Infinite Sadness\" and also included a 44-page booklet with pictures and writings by the band's lead singer Billy Corgan, as well as lyrics.\n\n A limited edition release, the box reached number 42 on the \"Billboard\" charts, and sold 300,000 units (1.5 million discs in all), generating a platinum disc for the band.\n\n Originally intended to be limited to 200,000 copies, Virgin Records produced more after the original run sold out due to overwhelming and unexpected demand.\n\n The album was remastered in 2013 under the supervision of frontman Billy Corgan and reissued on vinyl and as a CD/DVD box set.",
+    "Mike Byrne (musician)\nMichael William Byrne (born February 6, 1990) is a drummer who was a member of the band The Smashing Pumpkins.\n\n When Pumpkins frontman Billy Corgan called for rehearsals to replace Jimmy Chamberlin, Byrne auditioned and was chosen out of thousands of applicants.\n\n He played drums in Sky Saxon tribute band Spirits in the Sky for 6 shows in August 2009, along with Corgan, Kerry Brown, Kevin Dippold, Mark Tulin, Linda Strawberry, Ysanne Spevack, Mark Weitz, and Dave Navarro, and also performs drums on the ongoing Pumpkins 44-song project, \"Teargarden by Kaleidyscope\".\n\n As a part of \"Teargarden\", Mike contributed drumming duties on \"Oceania\", the Pumpkins' eighth full-length album.\n\n On April 17, 2010, Byrne played his first show under the Smashing Pumpkins moniker in celebration of Record Store Day.",
+    "Muzzle (song)\n\"Muzzle\" is a song by American alternative rock band The Smashing Pumpkins from their third album, \"Mellon Collie and the Infinite Sadness\".\n\n It was one of the last songs written by Billy Corgan for \"Mellon Collie\", with the song's lyrics referring to what Corgan thought the public's perception was of him at the time.\n\n It was rumored to be the Smashing Pumpkins fifth and final single from this album, as is evidenced by the fact that a promotional single for the song was issued to radio stations worldwide.\n\n However, the song \"Thirty-Three\" was released as the fifth and final single instead.",
+    "Jimmy Chamberlin\nJames Joseph Chamberlin (born June 10, 1964) is an American drummer and record producer.\n\n He is best known as the drummer for the alternative rock band The Smashing Pumpkins.\n\n Following the 2000 breakup of the band, Chamberlin joined Pumpkins frontman Billy Corgan in the supergroup Zwan and also formed his own group, the Jimmy Chamberlin Complex.\n\n In 2005, Chamberlin joined Corgan in reforming The Smashing Pumpkins; he eventually left the group in March 2009, though he returned again in 2015 for a summer tour.\n\n He performed in the group Skysaw until 2012.\n\n He is currently active under the Jimmy Chamberlin Complex name.\n\n In addition to his current work as CEO, Chamberlin has joined Chicago jazz saxophonist Frank Catalano for a string of 2013–15 performances in the Chicago area.\n\n An EP by Catalano and Chamberlin \"Love Supreme Collective - EP\" was released on the 29th of July 2014.",
+    "Pinhead Gunpowder\nPinhead Gunpowder is an American punk rock band that formed in East Bay, California, in 1990.\n\n The band currently consists of Aaron Cometbus (drums, lyrics), Bill Schneider (bass), Billie Joe Armstrong (guitar, vocals) and Jason White (guitar, vocals).\n\n The band's name comes from a brand of \"high octane\" green tea served at the Arcata co-op and discovered by Aaron Cometbus during one of his many dumpster diving adventures.",
+    "Billy Corgan\nWilliam Patrick \"Billy\" Corgan Jr. (born March 17, 1967) is an American musician, songwriter, producer, poet, and entrepreneur.\n\n He is best known as the lead singer, primary songwriter, guitarist, and sole permanent member of The Smashing Pumpkins.\n\n Formed by Corgan and guitarist James Iha in Chicago, Illinois, in 1988, the band quickly gained steam with the addition of bassist D'arcy Wretzky and drummer Jimmy Chamberlin.\n\n Strong album sales and large-scale tours propelled the band's increasing fame in the 1990s until their break-up in 2000.\n\n Corgan started a new band called Zwan, and after their quick demise, he released a solo album (\"TheFutureEmbrace\") and a collection of poetry (\"Blinking with Fists\") before setting his sights on reforming Smashing Pumpkins."
+   ]
+  },
+  {
+   "id": "6ee1188a4d8980ad",
+   "gold": [
+    {
+     "sentence": " His television series credits include portraying Bret Maverick in \"Maverick\" (1957–1962) and \"Bret Maverick\" (1981–1982), Jim Rockford in \"The Rockford Files\" (1974–1980), and Jim Egan in \"8 Simple Rules\" (2003–2005).",
+     "facts": {
+      "0.0": "The subject of this sentence portrayed Bret Maverick in the series Maverick from 1957 to 1962.",
+      "0.1": "The subject of this sentence portrayed Bret Maverick in the series Bret Maverick from 1981 to 1982.",
+      "0.2": "The subject of this sentence portrayed Jim Rockford in the series The Rockford Files from 1974 to 1980.",
+      "0.3": "The subject of this sentence portrayed Jim Egan in the series 8 Simple Rules from 2003 to 2005."
+     }
+    },
+    {
+     "sentence": "The Notebook is a 2004 American romantic drama film directed by Nick Cassavetes and based on the 1996 novel of the same name by Nicholas Sparks.",
+     "facts": {
+      "1.0": "The Notebook is a 2004 film.",
+      "1.1": "The Notebook is an American romantic drama film.",
+      "1.2": "The Notebook was directed by Nick Cassavetes.",
+      "1.3": "The Notebook is based on a 1996 novel.",
+      "1.4": "The 1996 novel has the same name as the film The Notebook.",
+      "1.5": "The 1996 novel was written by Nicholas Sparks."
+     }
+    }
+   ],
+   "items": [
+    "Sleepless in Seattle\nSleepless in Seattle is a 1993 American romantic comedy-drama film directed and co-written by Nora Ephron, based on a story by Jeff Arch.\n\n It stars Tom Hanks and Meg Ryan, alongside a supporting cast featuring Bill Pullman, Ross Malinger, Rob Reiner, Rosie O'Donnell, Gaby Hoffmann, Victor Garber, and Rita Wilson.\n\n The film was a critical and commercial success, grossing over $220 million worldwide.",
+    "James Garner filmography\n(1969) with Walter Brennan, \"Murphy's Romance\" (1985) with Sally Field, \"Sunset\" (1988) with Bruce Willis, \"Maverick\" (1994) with Mel Gibson and Jodie Foster, \"Divine Secrets of the Ya-Ya Sisterhood\" (2002), and \"The Notebook\" (2004) with Ryan Gosling and Rachel McAdams.\n\n His television series credits include portraying Bret Maverick in \"Maverick\" (1957–1962) and \"Bret Maverick\" (1981–1982), Jim Rockford in \"The Rockford Files\" (1974–1980), and Jim Egan in \"8 Simple Rules\" (2003–2005).",
+    "Mister Buddwing\nMister Buddwing is a 1966 American film drama directed by Delbert Mann and starring James Garner.",
+    "The Notebook\nThe Notebook is a 2004 American romantic drama film directed by Nick Cassavetes and based on the 1996 novel of the same name by Nicholas Sparks.\n\n The film stars Ryan Gosling and Rachel McAdams as a young couple who fall in love in the 1940s.\n\n Their story is narrated from the present day by an elderly man (portrayed by James Garner) telling the tale to a fellow nursing home resident (played by Gena Rowlands, who is Cassavetes's mother).",
+    "Cash McCall\nCash McCall is a 1960 American romantic drama film in Technicolor from Warner Bros., produced by Henry Blanke, directed by Joseph Pevney, that stars James Garner and Natalie Wood.\n\n It is based upon the novel of the same name by Cameron Hawley about a man who buys moribund businesses in order to refurbish them and then sell them on at considerable profit.\n\n The film's screenplay is by Lenore J. Coffee and Marion Hargrove.",
+    "James Garner filmography\nThe following is the filmography for American actor James Garner.\n\n Garner was known for prominent roles in films such as \"Sayonara\" (1957) with Marlon Brando, \"Cash McCall\" (1960) with Natalie Wood, \"The Great Escape\" (1963) with Steve McQueen, \"The Thrill of It All\" (1963) with Doris Day, \"Move Over, Darling\" (1963) with Doris Day, \"The Wheeler Dealers\" (1963) with Lee Remick, Paddy Chayevsky's \"The Americanization of Emily\" (1964) with Julie Andrews, \"Hour of the Gun\" (1967), \"Marlowe\" (1969) with Bruce Lee, \"Support Your Local Sheriff!\n\n\"",
+    "List of American films of 2004\nA list of American films released in 2004. \"\n\nMillion Dollar Baby\" won the 2004 Academy Award for Best Picture and \"Crash\" won the 2005 Academy Award for Best Picture. \"\n\nThe Aviator\" won the BAFTA Award for Best Film and the Golden Globe Award for Best Motion Picture – Drama. \"\n\nSideways\" won the Golden Globe Award for Best Motion Picture – Musical or Comedy and the Satellite Award for Best Film – Musical or Comedy. \"\n\nHotel Rwanda\" won the Satellite Award for Best Film – Drama.",
+    "Bride and Prejudice\nBride and Prejudice is a 2004 romantic drama film directed by Gurinder Chadha.\n\n The screenplay by Chadha and Paul Mayeda Berges is a Bollywood-style adaptation of \"Pride and Prejudice\" by Jane Austen.\n\n It was filmed primarily in English, with some Hindi and Punjabi dialogue.\n\n The film released in the United States on 11 February 2005 and was well received by critics.",
+    "Milan (2004 film)\nMilan is a 2004 romantic drama film released under Star Cinema, ABS-CBN Film Productions, Inc. in the Philippines.\n\n It stars Claudine Barretto and Piolo Pascual.\n\n It is a love story written by Raymond Lee, and under Olivia Lamasan's direction.\n\n The movie made more than P100 million in the box office.",
+    "Moonstruck\nMoonstruck is a 1987 American romantic comedy film directed by Norman Jewison and written by John Patrick Shanley.\n\n It is about a widowed 37-year-old Italian-American woman (Cher) who falls in love with her fiancé's (Danny Aiello) estranged, hot-tempered younger brother (Nicolas Cage).\n\n Vincent Gardenia and Olympia Dukakis play supporting roles."
+   ]
+  },
+  {
+   "id": "10ff1c8291dd282a",
+   "gold": [
+    {
+     "sentence": " In 1972, a grant from the Eleanor and John Y. Brown Jr., Foundation led to the construction of the current facility.",
+     "facts": {
+      "0.0": "The Eleanor and John Y. Brown Jr. Foundation gave a grant in 1972.",
+      "0.1": "The 1972 grant from the Eleanor and John Y. Brown Jr. Foundation led to the construction of the current facility."
+     }
+    },
+    {
+     "sentence": " He served as the 55th governor of Kentucky from 1979 to 1983, although he may be best known for building Kentucky Fried Chicken (KFC) into a multimillion-dollar restaurant chain.",
+     "facts": {
+      "1.0": "The 55th governor of Kentucky served from 1979 to 1983.",
+      "1.1": "The 55th governor of Kentucky may be best known for building Kentucky Fried Chicken (KFC) into a multimillion-dollar restaurant chain."
+     }
+    }
+   ],
+   "items": [
+    "Rubin Schron\nOther buildings he owns include the Monterey, a 521-unit rental multifamily building on Manhattan's Upper East Side; over the decades, Schron has also amassed a portfolio of Mitchell-Lama apartment buildings whose values have been skyrocketing to record values, after reverting to market rates when government subsidies expired.\n\n In 2007, he sold nearly 4,000 units of former Mitchell-Lama properties in five complexes in Harlem and on Roosevelt Island for $940 million.\n\n Schron, who practices Orthodox Judaism, has eight children and 50 grandchildren.\n\n He and his family have lived in the same single-family home in Brooklyn for many decades.",
+    "Rubin Schron\nRubin Schron, who goes by Ruby, is a New York City real estate investor, landlord and the founder of Cammeby's International Group.\n\n He has a personal net worth of well over $10 billion, according to data company Real Capital Analytics.\n\n The portfolio of Cammeby's, which Schron founded in 1967, includes office buildings, market-rate and government-subsidized apartment complexes, nursing homes, the 16-building complex in Sunset Park now known as Industry City, a stake in the bottom half of Woolworth Building and industrial properties scattered across Long Island.\n\n In 2013, Schron made an unsolicited and unsuccessful offer to buy the Empire State Building for $2 billion, but he has not had problems closing many other deals throughout his long career.\n\n In 2003, an investment group led by Schron paid $600 million for a portfolio of about 6,000 outer-borough apartments from Donald Trump.",
+    "Rochelle Buffenstein\nRochelle (Shelley) Buffenstein is a staff scientist at Calico, an Alphabet, Inc. funded research outfit investigating aging.\n\n Previously, she had been a professor of Physiology at theBarshop Institute for Longevity and Aging Studies at the University of Texas Health Science Center at San Antonio.\n\n Her research focuses on comparative vertebrate physiology, energetics, cancer biology, and aging.\n\n She has worked with marsupials, mole-rats, tenrecs, bats, subterranean mammals, and primates.\n\n Her best known work involves exceptional aging -- specifically, why naked mole-rats live for so much longer than other rodents.\n\n Her lab has investigated theories of aging including oxidative damage theory, the advanced glycation end product theory, and the telomere theory.",
+    "Panera Bread\nPanera Bread Company is an American chain of bakery-café fast casual restaurants in the United States and Canada.\n\n Its headquarters are in Sunset Hills, Missouri, a suburb of St. Louis, and operates as Saint Louis Bread Company in the St. Louis metropolitan area.\n\n Offerings include soups, salads, pasta, sandwiches, specialty drinks, and bakery items.",
+    "Sanders–Brown Center on Aging\nThe Sanders–Brown Center on Aging at the University of Kentucky in Lexington, Kentucky, is responsible for research, education and service programs in aging.\n\n The program was founded in 1963 with the creation of the Council on Aging.\n\n In 1972, a grant from the Eleanor and John Y. Brown Jr., Foundation led to the construction of the current facility.\n\n The center was named for the Browns and his then-business partner, (Col.) Harlan Sanders.\n\n The four-story brick and concrete structure fronts South Limestone at the edge of the medical campus.\n\n The complex features 32 research laboratories that employs more than 150.",
+    "John Y. Brown Jr.\nJohn Young Brown Jr. (born December 28, 1933) is an American politician, entrepreneur, and businessman from the U.S. state of Kentucky.\n\n He served as the 55th governor of Kentucky from 1979 to 1983, although he may be best known for building Kentucky Fried Chicken (KFC) into a multimillion-dollar restaurant chain.",
+    "VIP's\nVIP's, alternatively written Vip's, is a defunct restaurant chain in the Western United States that operated from 1968 until the late 1980s, based in Salem, Oregon.\n\n With more than 50 locations, it was once the largest restaurant chain based in Oregon.\n\n It was a Denny's-style restaurant, a type that was commonly known at that time as a \"coffee shop\" but is now more commonly known as a casual dining restaurant.\n\n Most restaurants were located near freeways and were open 24 hours.\n\n At its peak, the chain had locations in five states: Oregon, Washington, Idaho, Nevada and northern California.",
+    "Benjamin A. Rogge\nRogge served for many years as a Liberty Fund trustee.\n\n Thomas Sowell gives Rogge credit for encouraging him to write a book on economics and race.\n\n Rogge also was a frequent presenter at the seminars of the Foundation for Economic Education (FEE).\n\n FEE's founder, Leonard Read, thought of Rogge as Read's eventual successor, an outcome prevented by Read outliving Rogge.\n\n An extended (but somewhat grainy) video clip of a Rogge FEE lecture on \"Competition and Monopoly\" on YouTube illustrates the dry wit that made him a popular speaker.\n\n Rogge attended 13 meetings of the influential international Mont Pelerin Society.\n\n Rogge helped produce, and narrated, a documentary on Adam Smith that was funded by Liberty Fund.\n\n Rogge wrote the introduction to a collection of quotations from Adam Smith.\n\n A collection of Rogge's speeches, often on topics in economics or education, was published under the title \"Can Capitalism Survive?\"\n\n Wabash College, where he taught for many years, established a speaker series in his honor.",
+    "McAlister's Deli\nMcAlister's Deli is an American chain of fast casual restaurants founded in 1989 in Oxford, Mississippi by retired dentist Dr. Don Newcomb.\n\n There are currently over 400 locations in 26 states, ranging from Virginia in the East to Florida in the South to Arizona in West to Michigan in the North.\n\n The menu includes deli sandwiches, \"Texas-size\" spuds (baked potatoes), soups, salads, and desserts, as well as catering items such as sandwich trays and boxed lunches.\n\n The chain is also known for its McAlister's Famous Sweet Tea, which is available by the glass or by the gallon.",
+    "Benjamin A. Rogge\nBenjamin A. Rogge (June 18, 1920 – November 17, 1980) was an American economist, college administrator, and libertarian writer, speaker and foundation advisor.\n\n Rogge received an A.B. degree from Hastings College and an M.A. from the University of Nebraska Lincoln.\n\n Rogge received his PhD in economics from Northwestern.\n\n At Wabash College, Rogge taught in the summer Institute for Professional Development, in addition to his usual teaching in economics.\n\n Rogge co-authored an economics principles textbook with John Van Sickle.\n\n One strength of the text is the account that it gives of Joseph Schumpeter's process of creative destruction.\n\n Rogge helped organize a series of lectures by Milton Friedman at Wabash that were eventually developed into Friedman's \"Capitalism and Freedom\" book.\n\n Much later, Rogge participated in a brainstorming session for Friedman's Free to Choose television series.\n\n Liberty Fund was founded with money from Pierre Goodrich, who sought advice from Rogge during the Fund's early years.\n\n Rogge served for many years as a Liberty Fund trustee."
+   ]
+  },
+  {
+   "id": "c94ebc224a822108",
+   "gold": [
+    {
+     "sentence": "Eat to Live: The Amazing Nutrient-Rich Program for Fast and Sustained Weight Loss is a book written in 2003 by Dr. Joel Fuhrman, which he revised in 2011.",
+     "facts": {
+      "0.0": "Eat to Live is a book.",
+      "0.1": "The full title of Eat to Live is 'Eat to Live: The Amazing Nutrient-Rich Program for Fast and Sustained Weight Loss'.",
+      "0.2": "Eat to Live was written in 2003.",
+      "0.3": "Eat to Live was written by Dr. Joel Fuhrman.",
+      "0.4": "Dr. Joel Fuhrman revised Eat to Live in 2011."
+     }
+    },
+    {
+     "sentence": "Joel Fuhrman (born December 2, 1953) is an American celebrity doctor who advocates what he calls a micronutrient-rich diet.",
+     "facts": {
+      "1.0": "Joel Fuhrman was born on December 2, 1953.",
+      "1.1": "Joel Fuhrman is American.",
+      "1.2": "Joel Fuhrman is a celebrity doctor.",
+      "1.3": "Joel Fuhrman advocates a diet that he calls a micronutrient-rich diet."
+     }
+    }
+   ],
+   "items": [
+    "Diet food\nDiet food (or dietetic food) refers to any food or beverage whose recipe is altered to reduce fat, carbohydrates, and/or sugar in order to make it part of a weight loss program or diet.\n\n Such foods are usually intended to assist in weight loss or a change in body type, although bodybuilding supplements are designed to aid in gaining weight or muscle.",
+    "Judy Mazel\nJudy Mazel (December 20, 1943 – October 12, 2007) was the American weight loss advocate and author of the \"\"The Beverly Hills Diet\"\", which became a 1981 best seller and a nationwide diet craze.\n\n Judy Mazel was a devout practicing Jew and was raised in a conservative Ashkenazi Jewish home.",
+    "Management of obesity\nManagement of obesity can include lifestyle changes, medications, or surgery.\n\n The main treatment for obesity consists of dieting and physical exercise.\n\n Diet programs may produce weight loss over the short term, but maintaining this weight loss is frequently difficult and often requires making exercise and a lower calorie diet a permanent part of an individual's lifestyle.\n\n Success rates of long-term weight loss maintenance with lifestyle changes are low, ranging from 2 to 20%.\n\n Dietary and lifestyle changes are effective in limiting excessive weight gain in pregnancy and improve outcomes for both the mother and the child.\n\n The National Institutes of Health recommend a weight loss goal of 5% to 10% of the person's current weight over six months.",
+    "Joel Fuhrman\nJoel Fuhrman (born December 2, 1953) is an American celebrity doctor who advocates what he calls a micronutrient-rich diet.",
+    "Eat Smart, Move More, Weigh Less\nEat Smart, Move More, Weigh Less is a 15-week adult weight management program that uses strategies based on evidence for weight loss and/or weight maintenance.\n\n The Eat Smart Move More Weigh Less classes focus on the 12 evidence-based eating and physical activity behaviors for weight management.\n\n The program does not provide a prescriptive diet plan, it teaches small lifetime changes.\n\n The program teaches mindfulness as a strategy to become more aware of eating and physical activity.\n\n Eat Smart, Move More, Weigh Less includes methods for planning and tracking healthy eating and physical activity behaviors.\n\n In 2007, Eat Smart, Move More, Weigh Less curriculum was developed by a writing team from NC State University and NC Division of Public Health.\n\n A complete listing of authors and their respective affiliations can be found on the program website.\n\n The 15-lesson curriculum was peer reviewed by state and local nutrition and physical activity professionals, representatives from the medical community, and a CDC project officer.",
+    "Weight loss\nWeight loss, in the context of medicine, health, or physical fitness, refers to a reduction of the total body mass, due to a mean loss of fluid, body fat or adipose tissue or lean mass, namely bone mineral deposits, muscle, tendon, and other connective tissue.\n\n Weight loss can either occur unintentionally due to malnourishment or an underlying disease or arise from a conscious effort to improve an actual or perceived overweight or obese state.\n\n \"Unexplained\" weight loss that is not caused by reduction in calorific intake or exercise is called cachexia and may be a symptom of a serious medical condition.\n\n Intentional weight loss is commonly referred to as slimming.",
+    "Eat to Live\nEat to Live: The Amazing Nutrient-Rich Program for Fast and Sustained Weight Loss is a book written in 2003 by Dr. Joel Fuhrman, which he revised in 2011.\n\n The book offers a formula: health = nutrients / calories.",
+    "Weight Wins\nWeight Wins is a UK weight loss business which has developed and commercialised the concept of personal contracts for weight loss.\n\n The company has attracted attention from UK and international media for its ‘Pounds for Pounds’ weight loss programme and for operating the first trial by the UK’s National Health Service (NHS) of a weight loss incentive programme.",
+    "Scarsdale diet\nThe Scarsdale diet is a fad diet designed for weight loss created in the 1970s by Herman Tarnower, named for the town in New York where he practiced cardiology, described in the book \"The Complete Scarsdale Medical Diet plus Dr. Tarnower's Lifetime Keep-Slim Program\", which Tarnower wrote with an author of self-help books, Sam Sinclair Baker.\n\n The diet carries potential health risks and does not instill the kind of healthy eating habits required for sustainable weight loss.",
+    "Very-low-calorie diet\nVery low calorie diet (VLCD) is a diet with very or extremely low daily food energy consumption.\n\n It is defined as a diet of 800 kcal per day or less.\n\n VLCDs are formulated, nutritionally complete, liquid meals containing 800 kilocalories or less per day.\n\n VLCDs also contain the recommended daily requirements for vitamins, minerals, trace elements, fatty acids and protein.\n\n Carbohydrate may be entirely absent, or substituted for a portion of the protein; this choice has important metabolic effects.\n\n The VLCD products are usually a powder which is mixed with water or another low-food-energy liquid.\n\n The VLCD is prescribed on a case to case basis for rapid weight loss (about 1.5 to 2.5 kilograms or 3 to 5 pounds per week) in people with Body Mass Index of 30 and above.\n\n The health care provider can recommend the diet to a patient with a BMI between 27 and 30 if the medical complications the patient has due to being overweight present serious health risks.\n\n It results in 4% more weight loss over the short term as compared to control."
+   ]
+  },
+  {
+   "id": "3e0fcabb3639139e",
+   "gold": [
+    {
+     "sentence": "Swingin' Down Yonder is the first full-length, 12-inch album recorded by Dean Martin for Capitol Records during three sessions in September and October 1954 and February 1955.",
+     "facts": {
+      "0.0": "Swingin' Down Yonder is the first full-length, 12-inch album recorded by Dean Martin for Capitol Records.",
+      "0.1": "Dean Martin recorded Swingin' Down Yonder during three sessions.",
+      "0.2": "The sessions for Swingin' Down Yonder took place in September 1954, October 1954 and February 1955."
+     }
+    },
+    {
+     "sentence": " One of the most popular and enduring American entertainers of the mid-20th century, Martin was nicknamed the \"King of Cool\" for his seemingly effortless charisma and self-assurance.",
+     "facts": {
+      "1.0": "Dean Martin was one of the most popular and enduring American entertainers of the mid-20th century.",
+      "1.1": "Dean Martin was nicknamed the 'King of Cool'.",
+      "1.2": "Dean Martin's nickname 'King of Cool' reflected his seemingly effortless charisma.",
+      "1.3": "Dean Martin's nickname 'King of Cool' reflected his seemingly effortless self-assurance."
+     }
+    }
+   ],
+   "items": [
+    "2120 South Michigan Ave.\n2120 South Michigan Ave. is the fifteenth studio album by George Thorogood and the Destroyers.\n\n It was released on June 14, 2011 on the Capitol Records label.\n\n The album peaked at #2 on the \"Billboard\" Top Blues Albums chart.\n\n The title refers to the address of the offices and recording studios of Chess Records in Chicago.\n\n The album contains ten covers of songs recorded on Chess Records by artists such as Chuck Berry, Bo Diddley, Willie Dixon, and Muddy Waters; plus a cover of The Rolling Stones' instrumental \"2120 South Michigan Avenue\" and two original songs about Chess Records artists.\n\n Capitol Records approached Thorogood with the idea for the album and selected most of the songs.\n\n Buddy Guy and Charlie Musselwhite perform on the album, although their work was added after primary recording was complete.",
+    "Willie and the Hand Jive\n\"Willie and the Hand Jive\" is a song written by Johnny Otis and originally released as a single in 1958 by Johnny Otis Show, reaching #9 on the \"Billboard\" Hot 100 chart and #5 on the Billboard R&B chart.\n\n The song has a Bo Diddley beat and was partly inspired by the music sung by a chain gang Otis heard while he was touring.\n\n The lyrics are about a man who became famous for doing a dance with his hands, but the song has been accused of glorifying masturbation.\n\n It has since been covered by numerous artists, including The Strangeloves, Eric Clapton, Cliff Richard, Kim Carnes, George Thorogood and The Grateful Dead.\n\n Clapton's 1974 version was also released as a single and also reached the Billboard Top 40, peaking at #26.\n\n Thorogood's 1985 version reached #25 on the Hot Mainstream Rock Tracks chart.",
+    "Swingin' Down Yonder\nSwingin' Down Yonder is the first full-length, 12-inch album recorded by Dean Martin for Capitol Records during three sessions in September and October 1954 and February 1955.\n\n According to the original sleeve notes, all the songs have a \"common geographical root: the American South.\"\n\n In 1963, Capitol Records re-released \"Swingin' Down Yonder\" under the titled \"Southern Style\".",
+    "Dean Martin Sings\nDean Martin Sings is the first studio album by Italian-American singer Dean Martin, released in 1953.\n\n It is the first long-play 10-inch album recorded by Martin for Capitol Records during two sessions recorded on the evening of November 20, 1952.\n\n The first session was recorded between 5 and 8 PM and it produced five songs featuring string arrangements.\n\n \"There's My Lover\" was recorded but not released.\n\n After a ninety-minute break, Martin was joined by a brass arrangement to record the remaining four songs.\n\n Seven of the eight songs on this album appeared in the Martin & Lewis film, \"The Stooge\".\n\n Two years later, the songs from this 10-inch album would be combined with four newly popular songs recorded between 1951 and 1953 to create a full-length 12-inch album.\n\n The 2005 Collectors' Choice reissue added four bonus songs recorded between 1949 and 1953 and was released with alternative cover artwork.",
+    "Collins &amp; Harlan\nCollins & Harlan, the team of Arthur Collins and Byron G. Harlan formed a popular comic duet between 1903 and 1926.\n\n They sang ragtime standards as well as what were known as \"Coon songs\" – music sung by white performers in a black dialect.\n\n Their material also employed many other stereotypes of the time including Irishmen and farmers.\n\n Fellow recording artist Billy Murray nicknamed them \"The Half-Ton Duo\" as both men were rather overweight.\n\n Collins and Harlan produced many number one hits with recordings of minstrel songs such as \"My Gal Irene\", \"I Know Dat I'll be Happy Til I Die\", \"Who Do You Love?\"\n\n and \"Down Among the Sugarcane\".\n\n Their song \"That Funny Jas Band from Dixieland\", recorded November 8, 1916, is among the first recorded uses of the word \"jas\" which eventually evolved to \"jass\", and to the current spelling \"jazz\".",
+    "Bigtop Records\nBigtop Records was an American record label started by music executive Johnny Bienstock and the major music publisher Hill & Range Music and was co-owned along with Big Top Record Distributors (sic).\n\n Hit artists included Del Shannon, Johnny and the Hurricanes, Lou Johnson, Sammy Turner, Don and Juan, and Toni Fisher.\n\n Big Top Record Distributors also distributed Paul Case's Dunes Records label in the early 60's, which had hits from Ray Peterson (\"Corrina, Corrina\") and Curtis Lee (\"Pretty Little Angel Eyes\"), both records produced by Phil Spector.\n\n Bell Records briefly distributed Bigtop prior to the label closing, around 1965.\n\n \"Bigtop\" also released two Mad Magazine music parody themed albums; \"Mad Twists Rock 'N' Roll\" and \"Fink Along With Mad\" in 1963.",
+    "Lil Ru\nSylvester Samuels better known by his stage name Lil Ru, is an American rapper from Ridgeway, South Carolina currently signed to Def Jam Recordings.\n\n His debut album, 21 & Up was released on August 25, 2009.\n\n The Ridgeway native was 16 when he made his professional foray into the music business.\n\n Inspired by New Orleans’ innovative Cash Money Crew, Ru began making a name for himself on his local music scene, doing live shows and pressing up his own CDs.\n\n His hard-hitting lyrics and entrepreneurial spirit caught the attention of fellow South Carolinian Angie Stone.\n\n Shortly after the neo-soul songstress helped him secure a deal with Elektra Records, Ru found himself unsigned again, among the artists lost in the shuffle after the label merged with Atlantic Records.\n\n Music fans first heard him on his 2001 debut single Will Destroy.\n\n He then released his 2002 follow up, Shawty What You Doin’.\n\n Both songs reached the Billboard R&B/Hip-Hop charts and helped land him at his next label home, Capitol Records.",
+    "One O'Clock Jump\n\"One O'Clock Jump\" is a jazz standard, a 12-bar blues instrumental, written by Count Basie in 1937.\n\n The melody derived from band members' riffs--Basie rarely wrote down musical ideas, so Eddie Durham and Buster Smith helped him crystallize his ideas.\n\n The original 1937 recording of the tune by Basie and his band is noted for the saxophone work of Herschel Evans and Lester Young, trumpet by Buck Clayton, Walter Page on bass and Basie himself on piano.",
+    "Cecil Gant\nCecil Gant (April 4, 1913 – February 4, 1951) was an American blues singer, songwriter and pianist, whose recordings of both ballads and \"fiery piano rockers\" were successful in the mid- and late 1940s, and influenced the early development of rock and roll.\n\n His biggest hit was the 1944 ballad, \"I Wonder\".",
+    "Speedy West\nWesley Webb West (January 25, 1924 – November 15, 2003), better known as Speedy West, was an American pedal steel guitarist and record producer.\n\n He frequently played with Jimmy Bryant, both in their own duo and as part of the regular Capitol Records backing band for Tennessee Ernie Ford and many others.\n\n He also played on Loretta Lynn's first single."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,417 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 1 items.
+
+=== ITEM id=4b14262e89f0ab32 ===
+Gold sentences and facts:
+Sentence 0: Al Saadi said that her frustration with Meta is common among Palestinians, both in occupied territories and across the diaspora.
+  Fact 0.0: Al Saadi said that her frustration with Meta is common among Palestinians.
+  Fact 0.1: Al Saadi said that her frustration with Meta is common among Palestinians in occupied territories.
+  Fact 0.2: Al Saadi said that her frustration with Meta is common among Palestinians across the diaspora.
+Sentence 1: Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents.
+  Fact 1.0: Meta wants to shift the burden of monitoring social media usage among teens back to the app stores.
+  Fact 1.1: Meta wants to shift the burden of monitoring social media usage among teens back to parents.
+
+Retrieved items:
+<item 1>
+Meta turned a blind eye to kids on its platforms for years, unredacted lawsuit alleges (TechCrunch, 2023-11-27T21:20:32+00:00)
+This law created very specific restrictions around young folks online, limiting data collection and requiring things like parental consent for various actions,
+but a lot of tech companies seem to consider it more suggestion than requirement.
+
+You know it is bad news for the company when they request pages and pages of redactions:
+
+This recently happened with Amazon as well, and it turned out they were trying to hide the existence of a price-hiking algorithm that skimmed billions from
+consumers. But it’s much worse when you’re redacting COPPA complaints.
+
+“We’re very bullish and confident in our COPPA allegations. Meta is knowingly taking steps that harm children, and lying about it,” AG Bonta told TechCrunch in
+an interview. “In the unredacted complaint we see that Meta knows that its social media platforms are used by millions of kids under 13, and they unlawfully
+collect their personal info. It shows that common practice where Meta says one thing in its public-facing comments to Congress and other regulators, while
+internally it says something else.”
+
+Graph facts:
+- Meta -MENTIONS-> Al-Aqsa Mosque
+- Meta -MENTIONS-> WhatsApp
+- Meta -MENTIONS-> Instagram Stories
+- Meta -MENTIONS-> Palestine
+- Meta -MENTIONS-> Colombia
+
+Entities: Meta, TechCrunch, Congress, Meta turned a blind eye to kids on its platforms for years, unredacted lawsuit alleges, AG Bonta, price-hiking algorithm,
+harm to children, lying about it, unlawful collection of children's personal information, COPPA, Amazon
+</item 1>
+
+<item 2>
+Meta seeks legislation that would require parents to approve teens’ app downloads (TechCrunch, 2023-11-15T17:13:10+00:00)
+The governor also signed a bill to prevent social media companies from adding features designed to addict minors to their platforms. A judge in Arkansas
+recently blocked a law that would have required parental permission for minors to create social media accounts.
+
+Beyond Meta, Montana also became the first state to ban TikTok, claiming it was being used by the Chinese Communist Party using TikTok to spy on Americans. But
+Meta’s threat, in terms of teen usage, isn’t one of a foreign power collecting private data on users, but rather risks to teen mental health, body comparison
+issues and exposure to sexual predators. Montana could easily turn its eyes to Meta next, after the TikTok bill went through.
+
+The overhead of managing apps to meet individual state regulations would be a headache for Meta, but Davis also argues it would lead to a lack of teen
+protection, in some cases.
+
+“U.S.
+
+Graph facts:
+- News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line -MENTIONS-> Arkansas
+- Northern Lights: Here are the best tips to help you spot the stunning display in the US and abroad -MENTIONS-> Arkansas
+- Pittsburgh boy, 10, needs second liver transplant to save his life: ‘Only possible through love’ -MENTIONS-> Arkansas
+- Helena World Chronicle -LOCATED_IN-> Arkansas
+- How the conspiracy-fueled Epoch Times went mainstream and made millions -MENTIONS-> Chinese Communist Party
+
+Entities: Arkansas, Chinese Communist Party, Meta, TechCrunch, sexual predators, teen mental health, body comparison issues, lack of teen protection, Meta seeks
+legislation that would require parents to approve teens’ app downloads, Davis, TikTok, U.S., Montana
+</item 2>
+
+<item 3>
+Meta seeks legislation that would require parents to approve teens’ app downloads (TechCrunch, 2023-11-15T17:13:10+00:00)
+His argument essentially was that the improvements and safety features Meta was implementing were not enough and not effective.
+
+However, a policy position like the one Meta announced today is not something that would have been rushed out in a matter of days as a PR response to Bejar’s
+claims, but something Meta has been stewing on for some time. After all, the app stores already have age guidelines, so it would seem to follow that they should
+also enforce them, if enforcement is to be regulated — or that seems to be Meta’s thinking.
+
+If anything, the call to bring the app stores into the fight is a response to the lack of action in Congress to pass online child safety regulations, like the
+hotly debated KOSA (the Kids Online Safety Act) leaving U.S. states to individually create laws due to a void of federal guidelines.
+
+Utah, for instance, passed a measure that will require social networks to give Utah parents access to their children’s posts, messages and comments, and would
+block social media access during certain hours.
+
+Graph facts:
+- Meta -MENTIONS-> Al-Aqsa Mosque
+- Meta -MENTIONS-> WhatsApp
+- Meta -MENTIONS-> Instagram Stories
+- Meta -MENTIONS-> Palestine
+- Meta -MENTIONS-> Colombia
+
+Entities: Meta, TechCrunch, Bejar, app stores, KOSA, online child safety regulations, social networks, parental approval of teens’ app downloads, age
+guidelines, Meta seeks legislation that would require parents to approve teens’ app downloads, Congress, Utah, U.S.
+</item 3>
+
+<item 4>
+Meta seeks legislation that would require parents to approve teens’ app downloads (TechCrunch, 2023-11-15T17:13:10+00:00)
+Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents. In a blog post published today, Meta’s
+global head of Safety, Antigone Davis, argues that parents should be responsible for approving their teens’ app downloads and staked Meta’s position in
+supporting federal legislation that would require parental approval for app downloads for users under the age of 16.
+
+Guiding its reasoning, Meta pointed to recent Pew research that indicated that 81% of U.S. adults were in favor of requiring parental consent for teens to
+create social media accounts. While this may speak to popular opinion around parental sentiment, it doesn’t mean that parents have thought through who should be
+responsible for preventing or allowing teens’ access to social media, or how those apps should operate to protect teens.
+
+A coalition of 42 states and D.C. are currently suing Meta over its harms to teens and young users, in part referencing findings from Meta whistleblower Frances
+Haugen.
+
+Graph facts:
+- Meta -MENTIONS-> Al-Aqsa Mosque
+- Meta -MENTIONS-> WhatsApp
+- Meta -MENTIONS-> Instagram Stories
+- Meta -MENTIONS-> Palestine
+- Meta -MENTIONS-> Colombia
+
+Entities: Meta, TechCrunch, Antigone Davis, coalition of 42 states and D.C., lawsuit against Meta over harms to teens and young users, Frances Haugen, harms to
+teens and young users, parental approval for teens’ app downloads, parental responsibility for approving teens’ app downloads, Meta seeks legislation that would
+require parents to approve teens’ app downloads, Pew Research
+</item 4>
+
+<item 5>
+Meta seeks legislation that would require parents to approve teens’ app downloads (TechCrunch, 2023-11-15T17:13:10+00:00)
+Meta’s position that apps are somehow different, then, is a fairly extreme position to take.
+
+“Instead of designing its products with kids’ safety and privacy in mind, Meta would rather push blame onto parents and other companies to obscure the damage
+they’ve already done to young people,” said Sacha Haworth, executive director of the Tech Oversight Project, a nonprofit devoted to reigning in Big Tech, in
+reaction to the news. “No one disputes that Google and Apple need to do more to protect children on their platforms, apps and devices. That fact does not
+absolve Mark Zuckerberg or Meta for years of willful negligence, and this announcement shows that the company’s outright hostility toward protecting kids is
+sewn into the fabric of its profit model.”
+
+Apple and Google did not return requests for comment.
+
+Updated, 11/15/23, 4:40 PM ET, with comment from Tech Oversight Project.
+
+Graph facts:
+- A comprehensive list of 2023 tech layoffs -MENTIONS-> Mark Zuckerberg
+- How ego and fear fuelled the rise of artificial intelligence -MENTIONS-> Mark Zuckerberg
+- Want to help your kids achieve their potential? This expert has some advice -MENTIONS-> Mark Zuckerberg
+- Meta turned a blind eye to kids on its platforms for years, unredacted lawsuit alleges -MENTIONS-> Mark Zuckerberg
+- Every movie and show coming to Netflix in November -MENTIONS-> Mark Zuckerberg
+
+Entities: Mark Zuckerberg, Apple, Meta, TechCrunch, Meta seeks legislation that would require parents to approve teens’ app downloads, Sacha Haworth, Tech
+Oversight Project, willful negligence, children’s safety and privacy, Google, big tech
+</item 5>
+
+<item 6>
+Meta seeks legislation that would require parents to approve teens’ app downloads (TechCrunch, 2023-11-15T17:13:10+00:00)
+“U.S. states are passing a patchwork of different laws, many of which require teens (of varying ages) to get their parent’s approval to use certain apps, and
+for everyone to verify their age to access them,” she wrote. “Teens move interchangeably between many websites and apps, and social media laws that hold
+different platforms to different standards in different states will mean teens are inconsistently protected,” Davis said.
+
+Meta’s proposed “better way” of requiring parents to manage a teen’s app downloads pushes the burden back to the app stores and to parents, who often today do
+not monitor or manage their teens’ smartphone use. But while it’s true that the app stores and smartphone makers would know the ages of their users, requiring
+parents to approve apps is the equivalent of overriding parental discretion and choice.
+
+Other entertainment ratings — like those for TV, movies or video games — are meant to be guidelines for parents, not laws. Meta’s position that apps are somehow
+different, then, is a fairly extreme position to take.
+
+Graph facts:
+- How OpenAI's ChatGPT has changed the world in just a year -MENTIONS-> legislation
+- Biden’s AI EO hailed as broad, but not deep without legislation to match -MENTIONS-> legislation
+- Meta -MENTIONS-> Colombia
+- Meta -MENTIONS-> Al-Aqsa Mosque
+- Meta -MENTIONS-> WhatsApp
+
+Entities: legislation, Meta, TechCrunch, app stores, Meta seeks legislation that would require parents to approve teens’ app downloads, U.S. states, Social
+media laws, Entertainment ratings, Video games, movies, TV, Davis, smartphones, apps
+</item 6>
+
+<item 7>
+Graph query row:
+article: Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices
+published_on: 2023-10-19T23:43:15+00:00
+passages: ['Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\nMeta has a
+moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices Instagram users suspect Meta of shadowbanning content about Palestine. The
+platform has a history of inherent bias.\n\nEarlier this year, Palestinian-American filmmaker Khitam Jabr posted a handful of Reels about her family’s trip to
+the West Bank. In the short travel vlogs, Jabr shared snippets of Palestinian culture, from eating decadent meals to dancing at her niece’s wedding.\n\n“I
+hadn’t been in a decade, so it’s just like, life abroad,” Jabr told TechCrunch.\n\n“I would get [anti-Palestine] comments,” she recalled. “And I couldn’t
+respond [to them] or use my account for 24 hours. I wasn’t even posting anything about the occupation. But fast forward to now and the same shit’s
+happening.”\n\nIn the aftermath of Hamas’ attack on Israelis, Israel’s retaliatory airstrikes and total blockade — cutting access to electricity, water and
+vital supplies — have devastated Gaza.', 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch,
+2023-10-19T23:43:15+00:00)\nIn response to the escalating violence, Meta said that it is closely monitoring its platforms for violations and may inadvertently
+flag certain content, but it never intends to “suppress a particular community or point of view.” Content praising or supporting Hamas, which governs Gaza and
+is designated as a terrorist organization by the United States and the European Union, is expressly forbidden on Meta’s platforms.\n\nAs the humanitarian crisis
+in Gaza grows more dire, many social media users suspect Instagram of censoring content about the besieged Palestinian territory, even if that content doesn’t
+support Hamas. Users have also complained that they’ve been harassed and reported for posting content about Palestine, regardless of whether or not it violates
+Meta’s policies. Jabr, for example, suspects that Instagram restricted her for 24 hours because other users reported her Palestine travel videos. Most recently,
+Instagram users accused Meta of “shadowbanning” their Stories about Palestine.', 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing
+Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\nMost recently, Instagram users accused Meta of “shadowbanning” their Stories about
+Palestine.\n\nIt’s the latest in a lengthy history of incidents on Meta platforms that reflect an inherent bias against Palestinian users in its processes, as
+documented by years of complaints from both inside and outside the company. The company may not intentionally suppress specific communities, but its moderation
+practices often disproportionately affect Palestinian users.\n\nFor instance, Meta struggles to navigate the cultural and linguistic nuances of Arabic, a
+language with over 25 dialects, and has been criticized for neglecting to adequately diversify its language resources. The company’s black-and-white policies
+often preclude it from effectively moderating any nuanced topic, like content that discusses violence without condoning it. Advocacy groups have also raised
+concerns that Meta’s partnerships with government agencies, such as the Israeli Cyber Unit, politically influence the platform’s policy decisions.', 'Meta has a
+moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\nDuring the last violent outbreak
+between Hamas and Israel in 2021, a report commissioned by Meta and conducted by a third party concluded that the company’s actions had an “adverse human rights
+impact” on Palestinian users’ right to freedom of expression and political participation.\n\nMeta communications director Andy Stone declined to comment on the
+record, and pointed TechCrunch to Meta’s newsroom post about the conflict, which was updated on Oct. 18 with a statement addressing the shadowbanning
+claims.\n\n“Our policies are designed to keep people safe on our apps while giving everyone a voice,” the post stated. “We apply these policies equally around
+the world and there is no truth to the suggestion that we are deliberately suppressing voice … We can make errors and that is why there is an appeals process
+for people to tell us when they think we have made the wrong decision, so we can look into it.”\n\nThe belief that Meta shadowbans, or limits the visibility of,
+content about Palestine is not new.', 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch,
+2023-10-19T23:43:15+00:00)\nIn an Instagram Story last year, supermodel and activist Bella Hadid, who is of Palestinian descent, alleged that Instagram
+“disabled” her from posting content on her Story “pretty much only when it is Palestine based.” She said she gets “immediately shadowbanned” when she posts
+about Palestine, and her Story views drop by “almost 1 million.”\n\nAs soon as Kehlani got super vocal and changed her profile picture to “i stand with
+Palestine” she got shadowbanned.\n\nJust as they did to Bella Hadid. The propaganda is insane.\n\nTHEY TRY TO SILENCE US. DON’T STOP!!\n\nFREE PALESTINE. 🇵🇸🇵🇸
+pic.twitter.com/4lUvZsUbiA — Sabby Targaryen 🐉 (@whoisitbad) October 14, 2023\n\nMeta blamed technical errors for the removal of posts about Palestine during
+the 2021 conflict.', 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\nWhen
+reached for comment about these recent claims of shadowbanning, a representative for the company pointed TechCrunch to a Threads post by Stone.\n\n“We
+identified a bug impacting all Stories that re-shared Reels and Feed posts, meaning they weren’t showing up properly in people’s Stories tray, leading to
+significantly reduced reach,” Stone said. “This bug affected accounts equally around the globe and had nothing to do with the subject matter of the content —
+and we fixed it as quickly as possible.”\n\nBut many are frustrated that Meta continues to disproportionately suppress Palestinian voices. Leen Al Saadi, a
+Palestinian journalist currently based in Jordan and host of the podcast “Preserving Palestine,” said she is used to “constantly being censored.” Her Instagram
+account was restricted last year after she posted a trailer for the podcast’s first episode, which discussed a documentary about Palestinian street art under
+occupation.\n\n“Palestinians are currently undergoing two wars,” Al Saadi said. “The first is with their legal occupier.', 'Meta has a moderation bias problem,
+not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\n“The first is with their legal occupier. The second war is with
+the entire Western media landscape, and when I say the entire landscape, I mean social media.”\n\nMeta’s alleged shadowbanning\n\nInstagram users accuse Meta of
+suppressing more than just Stories related to Palestine.\n\nCreators say engagement on their posts tanked specifically after they publicly condemned Israel’s
+response to the Hamas attack as excessively violent. Some, like Jabr, say they were restricted from posting or going live, while others say Instagram flagged
+their content as “sensitive,” limiting its reach. Users also allege their posts were flagged as “inappropriate” and removed, even if the content adhered to
+Instagram’s Community Guidelines.\n\nMeta’s representative didn’t address the other accusations of censorship beyond just Story visibility and did not respond
+to TechCrunch’s follow-up questions. When asked for comment, Stone directed TechCrunch to Meta’s updated newsroom post, which said Meta identified and fixed a
+“bug” that prevented users from going live.', 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch,
+2023-10-19T23:43:15+00:00)\n“This was also a global issue that was fixed within a few hours. We understand people rely on these tools and we’re sorry to anyone
+who felt the impact of these issues,” the post stated.\n\nIt’s unclear if this “bug” impacted accounts posting content unrelated to Gaza. Instagram users have
+posted screenshots showing that Stories about Palestine have received significantly fewer views than other Stories posted on the same day, and allege that their
+view counts went back up when they posted content unrelated to the conflict.\n\nofc IG’s hiding my stories about Palestine, y’all see the difference? lmaoaoaoao
+pic.twitter.com/1iYIIKBhtN — ༒︎ (@arxbprince) October 15, 2023\n\nA user based in Egypt, who asked to stay anonymous for fear of harassment, said her posts
+usually get around 300 views, but when she started posting pro-Palestine content after the Hamas attack earlier this month, her stories would only get one to
+two views.', 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\n“It happened
+to all my friends, too,” she continued. “Then we noticed that posting a random pic would get higher views. So by posting a random pic, then a pro-Palestine
+post, would increase the views.”\n\nAnother Instagram user based in the United Kingdom, who also asked to stay anonymous out of fear of harassment, said that
+his view count returned to normal when he posted a cat photo.\n\n“My stories went from 100s of views to zero or a handful,” he said. “I’ve had to post
+intermittent non-Gaza content in order to ‘release’ my stories to be viewed again.”\n\nIt isn’t just Stories. The Arab Center for Social Media Advancement
+(7amleh), which documents cases of Palestinian digital rights violations and works directly with social media companies to appeal violations, told TechCrunch it
+has received reports of Instagram inconsistently filtering comments containing the Palestinian flag emoji. Users report that Instagram has flagged comments
+containing the emoji as “potentially offensive,” hiding the comment.', 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian
+voices (TechCrunch, 2023-10-19T23:43:15+00:00)\nUsers report that Instagram has flagged comments containing the emoji as “potentially offensive,” hiding the
+comment.\n\nMeta initially did not respond to follow-up requests for comment. When asked for comment, Stone pointed TechCrunch to Meta’s updated newsroom post,
+which did not directly address issues related to comments containing the Palestinian flag.\n\nThe organization has also received countless reports of Meta
+flagging and restricting Arabic content, even if it’s posted by news outlets. Jalal Abukhater, 7amleh’s advocacy manager, said that the organization has
+documented multiple cases of journalists on Instagram reporting the same news in Arabic, Hebrew and English, but only getting flagged for their Arabic
+content.\n\n“It’s literally journalistic content, but the same wording in Hebrew and English does not get restricted,” Abukhater said. “As if there’s better
+moderation for those languages, and more careless moderation for Arabic content.”', 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing
+Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\n“As if there’s better moderation for those languages, and more careless moderation for Arabic
+content.”\n\nStone declined to comment on allegations of Meta disproportionately flagging Arabic news content, instead directing TechCrunch to the updated
+newsroom post — which did not directly address the allegations.\n\nAnd as the Intercept reported, Instagram and Facebook are flagging images of the al-Ahli
+Hospital, claiming that the content violates Meta’s Community Guidelines on nudity or sexual activity.\n\nThe Community Guidelines are enforced inconsistently,
+particularly when it comes to content related to Palestine. Al Saadi recently tried to report a comment that said she should be “raped” and “burned alive” —
+left in response to her comment on a CNN post about the conflict — but in screenshots reviewed by TechCrunch, Instagram said that it didn’t violate the
+platform’s Community Guidelines against violence or dangerous organizations.\n\n“The restrictions on content, especially the content that relates to Palestine,
+is heavily politicized,” Abukhater said. “It feeds into the bias against Palestinian narrative genuinely.', 'Meta has a moderation bias problem, not just a
+‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\n“It feeds into the bias against Palestinian narrative genuinely. It really
+takes the balance against Palestinians in a situation where there’s a huge asymmetry of power.”\n\nA history of suppression\n\nContent about Palestine is
+disproportionately scrutinized, as demonstrated during the last severe violent outbreak between Hamas and Israel two years ago. Amid the violence following the
+May 2021 court ruling to evict Palestinian families from Sheikh Jarrah, a neighborhood in occupied East Jerusalem, users across Facebook and Instagram accused
+Meta of taking down posts and suspending accounts that voiced support for Palestinians.\n\nThe digital rights nonprofit Electronic Frontier Foundation (EFF)
+described Meta’s actions in 2021 as “systemic censorship of Palestinian voices.” In its 2022 report of Palestinian digital rights, 7amleh said that Meta is
+“still the most restricting company” compared to other social media giants in the extent of its moderation of the Palestinian digital space.', 'Meta has a
+moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\nMeta forbids support of terrorist
+organizations, like most social media companies based in the U.S., but struggles to moderate content around it, from user discourse to journalistic updates.
+This policy, along with the company’s partnership with Israel to monitor posts that incite violence, complicates things for Palestinians living under Hamas’
+governance. As EFF points out, something as simple as Hamas’ flag in the background of an image can result in a strike.\n\nJillian York, the director for
+international freedom of expression for EFF, blames automation and decisions made by “minimally trained humans” for the inconsistency. Meta’s zero tolerance
+policy and imprecise enforcement often suppress content from or about conflict zones, she said. The site’s moderation issues have negatively affected multiple
+non-English speaking regions, including Libya, Syria and Ukraine.\n\n“These rules can prevent people from sharing documentation of human rights violations,
+documentation of war crimes, even just news about what’s happening on the ground,” York continued.', 'Meta has a moderation bias problem, not just a ‘bug,’
+that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\n“And so I think that is what is the most problematic right now about that
+particular rule, and the way that it’s enforced.”\n\nOver the 13 days leading up to the ceasefire between Hamas and Israel, 7amleh documented more than 500
+reports of Palestinian “digital rights violations,” including the removal and restriction of content, hashtags and accounts related to the conflict.\n\nMeta
+blamed some of the instances of perceived censorship to technical issues, like one that prevented users in Palestine and Colombia from posting Instagram
+Stories. It attributed others to human error, like blocking the hashtag for Al-Aqsa Mosque, the holy site where Israeli police clashed with Ramadan worshippers,
+because it was mistaken for a terrorist organization. The company also blocked journalists in Gaza from WhatsApp without explanation.\n\nThe same month, a group
+of Facebook employees filed internal complaints accusing the company of bias against Arab and Muslim users. In internal posts obtained by BuzzFeed News, an
+employee attributed the bias to “years and years of implementing policies that just don’t scale globally.”', 'Meta has a moderation bias problem, not just a
+‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\nAt the recommendation of its Oversight Board, Meta conducted a third-party
+due diligence report about the platform’s moderation during the May 2021 conflict. The report found that Arabic content was flagged as potentially violating at
+significantly higher rates than Hebrew content was, and was more likely to be erroneously removed. The report noted that Meta’s moderation system may not be as
+precise for Arabic content as it was for Hebrew content, because the latter is a “more standardized language,” and suggested that reviewers may lack the
+linguistic and cultural competence to understand less common Arabic dialects like Palestinian Arabic.\n\nHas anything improved?\n\nMeta committed to
+implementing policy changes based on the report’s recommendations, such as updating its keywords associated with dangerous organizations, disclosing government
+requests to remove content and launching a hostile speech classifier for Hebrew content. Abukhater added that Meta has improved its response to harassment, at
+least in comparison to other social media platforms like X (formerly Twitter).', 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing
+Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\nAlthough harassment and abuse are still rampant on Instagram and Facebook, he said, the company has
+been responsive to suspending accounts with patterns of targeting other users.\n\nThe company has also made more contact with regional Palestinian organizations
+since 2021, York added, but it’s been slow to implement recommendations from EFF and other advocacy groups. It’s “very clear” that Meta is not putting the same
+resources behind Arabic and other non-English languages, York said, compared to the attention Meta gives to countries that have the most regulatory pressure.
+Moderation of English and other European languages tends to be more comprehensive, for example, because the EU enforces the Digital Services Act.\n\nIn Meta’s
+response to the report, Miranda Sissons, the company’s director of human rights, said that Meta was “assessing the feasibility” of reviewing Arabic content by
+dialect. Sissons said that the company has “large and diverse teams” who understand “local cultural context across the region,” including in Palestine.', 'Meta
+has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\nResponding to the escalating
+violence earlier this month, Meta stated that it established a “special operations center” staffed with fluent Hebrew and Arabic speakers to closely monitor and
+respond to violating content.\n\nDespite Meta’s apparent efforts to diversify its language resources, Arabic is still disproportionately flagged as violating —
+like in the case of journalists reporting news in multiple languages.\n\n“The balance of power is very fixed, in reality, between Israelis and Palestinians,”
+Abukhater said. “And this is something that today is reflected heavily on platforms like Meta, even though they have human rights teams releasing reports and
+trying to improve upon their policies. Whenever an escalation like the one we’re experiencing now happens, things just go back to zero.”\n\nAnd at times, Meta’s
+Arabic translations are completely inaccurate. This week, multiple Instagram users raised concerns over the platform mistranslating the relatively common Arabic
+phrase “Alhamdulillah,” or “Praise be to God.”', 'Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch,
+2023-10-19T23:43:15+00:00)\nIn screen recordings posted online, users found that if they included “Palestinian” and the corresponding flag emoji in their
+Instagram bio along with the Arabic phrase, Instagram automatically translated their bio to “Palestinian terrorists – Praise be to Allah” or “Praise be to God,
+Palestinian terrorists are fighting for their freedom.” When users removed “Palestinian” and the flag emoji, Instagram translated the Arabic phrase to “Thank
+God.” Instagram users complained that the offensive mistranslation was active for hours before Meta appeared to correct it.\n\nShayaan Khan, a TikTok creator
+who posted a viral video about the mistranslation, told TechCrunch that Meta’s lack of cultural competence isn’t just offensive, it’s dangerous. He said that
+the “glitch” can fuel Islamophobic and racist rhetoric, which has already been exacerbated by the war in Gaza. Khan pointed to the fatal stabbing of Wadea
+Al-Fayoume, a Palestinian-American child whose death is being investigated as a hate crime.', 'Meta has a moderation bias problem, not just a ‘bug,’ that’s
+suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\nMeta did not respond to TechCrunch’s request for comment about the mistranslation.
+Abukhater said that Meta told 7amleh that a “bug” caused the mistranslation. In a statement to 404 Media, a Meta spokesperson said that the issue had been
+fixed.\n\n“We fixed a problem that briefly caused inappropriate Arabic translations in some of our products,” the statement said, “We sincerely apologize that
+this happened.”\n\nAs the war continues, social media users have tried to find ways around the alleged shadowbanning on Instagram. Supposed loopholes include
+misspelling certain words, like “p@lestine” instead of “Palestine,” in hopes of bypassing any content filters. Users also share information about Gaza in text
+superimposed over unrelated images, like a cat photo, so it won’t be flagged as graphic or violent content.', 'Meta has a moderation bias problem, not just a
+‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)\nCreators have tried to include an emoji of the Israeli flag or tag their
+posts and Stories with #istandwithisrael, even if they don’t support the Israeli government, in hopes of gaming engagement.\n\nAl Saadi said that her
+frustration with Meta is common among Palestinians, both in occupied territories and across the diaspora.\n\n“All we’re asking for is to give us the exact same
+rights,” she said. “We’re not asking for more. We’re literally just asking Meta, Instagram, every single broadcast channel, every single media outlet, to just
+give us the respect that we deserve.”\n\nDominic-Madori Davis contributed to this story’s reporting.']
+</item 7>
+
+<item 8>
+Meta turned a blind eye to kids on its platforms for years, unredacted lawsuit alleges (TechCrunch, 2023-11-27T21:20:32+00:00)
+One stated goal, according to the lawsuit, was specifically to “grow [Monthly Active People], [Daily Active People] and time spent among U13 kids.”
+
+It’s important to note here that while Meta does not permit accounts to be run by people under 13, there are plenty of ways it can lawfully and safely engage
+with that demographic. Some kids just want to watch videos from SpongeBob Official, and that’s fine. However, Meta must verify parental consent and the ways it
+can collect and use their data is limited.
+
+But the redactions suggest these under-13 users are not of the lawfully and safely engaged type. Reports of underage accounts are reported to be automatically
+ignored, and Meta “continues collecting the child’s personal information if there are no photos associated with the account.” Of 402,000 reports of accounts
+owned by users under 13 in 2021, fewer than 164,000 were disabled.
+
+Graph facts:
+- Meta -MENTIONS-> Al-Aqsa Mosque
+- Meta -MENTIONS-> WhatsApp
+- Meta -MENTIONS-> Instagram Stories
+- Meta -MENTIONS-> Palestine
+- Meta -MENTIONS-> Colombia
+
+Entities: Meta, TechCrunch, lawsuit, Meta turned a blind eye to kids on its platforms for years, unredacted lawsuit alleges, SpongeBob Official, Turning a blind
+eye to kids on Meta's platforms
+</item 8>
+
+<item 9>
+Meta turned a blind eye to kids on its platforms for years, unredacted lawsuit alleges (TechCrunch, 2023-11-27T21:20:32+00:00)
+A newly unredacted version of the multi-state lawsuit against Meta alleges a troubling pattern of deception and minimization in how the company handles kids
+under 13 on its platforms. Internal documents appear to show that the company’s approach to this ostensibly forbidden demographic is far more laissez-faire than
+it has publicly claimed.
+
+The lawsuit, filed last month, alleges a wide spread of damaging practices at the company relating to the health and well-being of younger people using it. From
+body image to bullying, privacy invasion to engagement maximization, all the purported evils of social media are laid at Meta’s door — perhaps rightly, but it
+also gives the appearance of a lack of focus.
+
+In one respect at least, however, the documentation obtained by the attorneys general of 42 states is quite specific, “and it is damning,” as AG Rob Bonta of
+California put it. That is in paragraphs 642 through 835, which mostly document violations of the Children’s Online Privacy Protection Act, or COPPA.
+
+Graph facts:
+- Meta -MENTIONS-> Al-Aqsa Mosque
+- Meta -MENTIONS-> WhatsApp
+- Meta -MENTIONS-> Instagram Stories
+- Meta -MENTIONS-> Palestine
+- Meta -MENTIONS-> Colombia
+
+Entities: Meta, TechCrunch, California, multi-state lawsuit against Meta, Rob Bonta, Children’s Online Privacy Protection Act, Meta turned a blind eye to kids
+on its platforms for years, unredacted lawsuit alleges
+</item 9>
+
+<item 10>
+Meta seeks legislation that would require parents to approve teens’ app downloads (TechCrunch, 2023-11-15T17:13:10+00:00)
+The former employee had provided to news outlets a treasure trove of documents that appeared to indicate Meta understood the harms it was causing — including
+things like body image issues among teens — but didn’t take action. Instagram head Adam Mosseri was later hauled before Congress in December 2021 to defend the
+app’s teen safety record, but so far, legislators have not come to any decision about how to regulate teen usage of these platforms.
+
+Instead, Meta began regulating itself, adding new defaults and features that would restrict teens’ access to content on its apps, protect their privacy and
+limit ad targeting to teens, as well as introducing parental controls.
+
+In more recent weeks, a second Meta whistleblower, Arturo Bejar, has come forward to express concerns that Instagram’s approach to protecting teens wasn’t
+working to keep them safe from sexual predators and unwanted sexual advances and harassment. Hired as a consultant on the matter, Bejar eventually blew the
+whistle on Meta after seeing issues remain unresolved following years of work.
+
+Graph facts:
+- Meta -MENTIONS-> Al-Aqsa Mosque
+- Meta -MENTIONS-> WhatsApp
+- Meta -MENTIONS-> Instagram Stories
+- Meta -MENTIONS-> Palestine
+- Meta -MENTIONS-> Colombia
+
+Entities: Meta, TechCrunch, Arturo Bejar, body image issues among teens, sexual predators, unwanted sexual advances and harassment, Adam Mosseri hauled before
+Congress, Meta seeks legislation that would require parents to approve teens’ app downloads, Congress, Instagram, teen safety, Adam Mosseri
+</item 10>
+=== END ITEM id=4b14262e89f0ab32 ===

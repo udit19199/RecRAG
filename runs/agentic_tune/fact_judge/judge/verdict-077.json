@@ -1,0 +1,23 @@
+[
+  {"id": "6056ae189b84927b", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "130ab1d7990b02d4", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "That allows sportsbooks to earn the profit built into the odds and lines without worrying about which side wins."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "That allows sportsbooks to earn the profit built into the odds and lines without worrying about which side wins."}]}
+  ]},
+  {"id": "5741eb57fc6fd6cd", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "if president of baseball operations Jerry Dipoto decided to move one for a bat."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "They’d all have significant value if president of baseball operations Jerry Dipoto decided to move one for a bat."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]}
+]
